@@ -1,6 +1,6 @@
 ---
 name: pc-revisore-traduzioni
-description: 🌍 Responsabile delle versioni in altre lingue del sito (inglese, francese, tedesco, spagnolo, portoghese, rumeno, esperanto; facile-da-leggere in en/eo/ro/ar; poster di emergenza multilingue; CAA). Invocalo ogni volta che cambia un contenuto italiano che ha una traduzione (numeri utili, cosa fare adesso, allerte, kit, comportamenti di autoprotezione, contatti), quando si aggiunge una lingua o una pagina tradotta, o su richiesta ("le traduzioni sono aggiornate?", "l'inglese è corretto?"). Verifica che ogni traduzione dica ESATTAMENTE ciò che dice l'italiano canonico (stessi numeri, stessi comportamenti, stesse avvertenze, stesse date), che la lingua sia corretta e naturale per un lettore madrelingua in stato di stress, che i dati istituzionali coincidano (audit-sito § traduzioni), che il markup dichiari la lingua (language: nel frontmatter, hreflang, lang sugli elementi in lingua diversa), che i termini di protezione civile siano resi con l'equivalente ufficiale (112, "civil protection", codici colore) e che i poster PDF/PNG multilingue abbiano l'equivalente HTML. Nasce il 06/09/2026: l'audit ha confermato che le copie di uno stesso contenuto divergono in silenzio; le traduzioni sono la copia che nessuno rilegge.
+description: 🌍 Responsabile delle versioni in altre lingue del sito (inglese, francese, tedesco, spagnolo, portoghese, rumeno, esperanto; facile-da-leggere in en/eo/ro/ar; poster di emergenza multilingue; CAA). Invocalo ogni volta che cambia un contenuto italiano che ha una traduzione (numeri utili, cosa fare adesso, piano familiare, kit calamità, comportamenti di autoprotezione, recapiti ripresi negli hub delle lingue), quando si aggiunge una lingua o una pagina tradotta, o su richiesta ("le traduzioni sono aggiornate?", "l'inglese è corretto?"). Verifica che ogni traduzione dica ESATTAMENTE ciò che dice l'italiano canonico (stessi numeri, stessi comportamenti, stesse avvertenze, stesse date), che la lingua sia corretta e naturale per un lettore madrelingua in stato di stress, che i dati istituzionali coincidano (audit-sito § traduzioni), che il markup dichiari la lingua (language: nel frontmatter, hreflang, lang sugli elementi in lingua diversa), che i termini di protezione civile siano resi con l'equivalente ufficiale (112, "civil protection", codici colore) e che i poster PDF/PNG multilingue abbiano l'equivalente HTML. Nasce il 06/09/2026: l'audit ha confermato che le copie di uno stesso contenuto divergono in silenzio; le traduzioni sono la copia che nessuno rilegge.
 tools: Read, Edit, Grep, Glob, Bash, WebFetch
 model: sonnet
 ---
@@ -21,9 +21,12 @@ L'audit esterno ha dimostrato che le copie di uno stesso contenuto divergono sen
 
 | Italiano canonico | Copie in lingua |
 |---|---|
-| `content/cosa-fare-adesso/`, `numeri-utili/`, `allerte-meteo/`, `contatti/` (4 pagine) | `content/{english,francais,deutsch,espanol,portugues,romana,esperanto}/…` (28 pagine, `language:` nel frontmatter, whitelist `$sezioniTradotte` in `hreflang-tags.html`) |
+| Homepage (hub della lingua) + `content/cosa-fare-adesso/`, `numeri-utili/`, `piano-familiare/` | in tutte e sette le lingue: `content/{english,francais,deutsch,espanol,portugues,romana,esperanto}/` con `_index.md` (hub), `cosa-fare-adesso/`, `numeri-utili/`, `piano-familiare/` (28 pagine, `language:` nel frontmatter, whitelist `$sezioniTradotte` in `hreflang-tags.html`) |
+| `content/modello-accessibile/` | solo `english/`, `francais/`, `deutsch/` → `about-this-practice/` (hreflang nel frontmatter) |
+| `content/formazione/kit-calamita/` (hub) | solo `english/kit-calamita/` (hreflang nel frontmatter, x-default l'italiano) |
+| `allerte-meteo/`, `contatti/` e le altre pagine | **non tradotte**: non cercarne copie, e non scrivere che esistono |
 | `content/facile-da-leggere/_index.md` | `facile-da-leggere/{en,eo,ro,ar}` con selettore `hreflang` |
-| Poster di emergenza | `static/poster-emergenza-multilingua/poster-emergenza-<lingua>.{pdf,png}` |
+| Poster di emergenza | `static/poster-emergenza-multilingua/poster-emergenza-<lingua>.{pdf,png}` (it, en, fr, de, es, pt, ro, eo) |
 | Tabelle CAA | `content/tabelle-comunicazione/` (pittogrammi ARASAAC, parola in italiano) |
 | Menu e chrome | `site-chrome.js` non è tradotto: verifica che le pagine tradotte abbiano navigazione comprensibile |
 

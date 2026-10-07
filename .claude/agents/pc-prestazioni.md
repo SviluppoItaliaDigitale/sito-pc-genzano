@@ -62,7 +62,7 @@ Altre soglie: spostamento cumulativo del layout ≤ 0,1; nessuna immagine di con
 ## Output atteso
 
 ```
-## Prestazioni — <data> — sito pubblicato (build <sha>), telefono, 3G lento
+## Prestazioni — <data> — sito pubblicato (build <SITE_BUILD_SHA letto da /build-info.js>), telefono, 3G lento
 
 | Pagina | Peso | Richieste | LCP | CLS | Blocco JS | Budget | Δ dall'ultima misura |
 |---|---|---|---|---|---|---|---|

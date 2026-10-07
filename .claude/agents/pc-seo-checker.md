@@ -67,14 +67,16 @@ Atteso: `(1200, 630)`. Se diverso, segnalare warning (il banner del sito è 1200
 - **`twitter:title`** e **`twitter:description`**: identici a OG.
 
 ### 6. JSON-LD Structured Data (Schema.org)
-Hugo via `partials/structured-data.html` emette JSON-LD `Article` su articoli `/comunicazioni/*`. Verifica:
+Dal 15/08/2026 l'entità di pagina **non** è più emessa da `partials/structured-data.html`: la fonte unica è `partials/jsonld-copyright.html` (rule `04a-hugo-shortcode-partial.md` § "Partial `jsonld-copyright`"), che produce `Article` sulle pagine con data reale (articoli `/comunicazioni/*`, capitoli del manuale, dossier) e `WebPage` sulle altre. In `structured-data.html` restano Organization/NGO, WebSite, BreadcrumbList, Event, FAQPage e HowTo: un `Article` emesso anche lì sarebbe un duplicato da segnalare. Verifica:
 - **`@type: "Article"`** (NON `NewsArticle`: non siamo testata giornalistica).
-- **`headline`**: title dell'articolo.
-- **`datePublished`** e **`dateModified`**: formato ISO 8601.
-- **`author`**: ente, `@type: "Organization"`, name = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".
-- **`publisher`**: stessa Organization + logo.
-- **`image`**: array con URL assoluto della cover.
-- **`mainEntityOfPage`**: URL canonical.
+- **`headline`** e **`description`**: titolo e descrizione dell'articolo.
+- **`datePublished`** e **`dateModified`**: formato data ISO 8601.
+- **`author`** e **`copyrightHolder`**: Organization «Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma».
+- **`license`**: CC BY 4.0 di default; `license:` nel frontmatter la sostituisce, `license: none` la omette.
+- **`speakable`**: `SpeakableSpecification` su `h1` e primo paragrafo del corpo.
+- **`publisher`**: Organization con logo; **`image`**: URL assoluto della cover; **`mainEntityOfPage`** e **`url`**: URL di produzione.
+
+Controllo deterministico sulla build (lo stesso che gira come gate in `validate-pr.yml`): `python3 scripts/check-jsonld.py public` — ogni blocco `ld+json` deve essere JSON parsabile e ogni pagina deve avere il blocco con `copyrightHolder`. Exit code = numero di pagine con problemi.
 
 Check via curl sulla pagina renderizzata:
 ```bash

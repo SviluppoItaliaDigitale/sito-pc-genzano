@@ -446,7 +446,7 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono **35 agenti custom** (dal 28/09/2026 anche `pc-calendario-editoriale`, il gate della data di uscita degli articoli programmati) ottimizzati per Claude Code (i 17 aggiunti il 6 settembre 2026, dopo un audit esterno, formano il sistema di affidabilità interno — fatti, materiali scolastici, scienza, cronaca, conformità legale, integrità tecnica, coerenza trasversale, codice, automazioni, sicurezza, traduzioni, dati e feed, esercitazione di emergenza, verifica visiva, usabilità, documentazione, audit interno mensile). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **50 agenti custom** (dal 28/09/2026 anche `pc-calendario-editoriale`, il gate della data di uscita degli articoli programmati; dal 07/10/2026 i tre che guardano il sito pubblicato da fuori e i dodici dell'organigramma per reparti, in `manuale/parte-19` § 19.0) ottimizzati per Claude Code (i 17 aggiunti il 6 settembre 2026, dopo un audit esterno, formano il sistema di affidabilità interno — fatti, materiali scolastici, scienza, cronaca, conformità legale, integrità tecnica, coerenza trasversale, codice, automazioni, sicurezza, traduzioni, dati e feed, esercitazione di emergenza, verifica visiva, usabilità, documentazione, audit interno mensile). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
 | Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|
@@ -465,7 +465,7 @@ In `.claude/agents/` ci sono **35 agenti custom** (dal 28/09/2026 anche `pc-cale
 | `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?" | Pre-push gate 26 check: Hugo build, YAML workflow, frontmatter, marker banditi, header sicurezza, mixed content, ordering articoli stesso giorno |
 | `pc-social-publisher` | "rivedi le bozze social", "controlla immagini Instagram" | Rivede tono, accessibilità, hashtag, struttura crisi ISO 22329 + CWA, valida immagini IG (1080×1080 post, 1080×1920 story). Mai pubblica |
 | `pc-print-card-qa` | "controlla le schede stampabili", "i puzzle sono giocabili?" | QA strutturale HTML + verifica giocabilità puzzle (labirinto BFS, word search, sudoku risolvibile, cruciverba celle ok) |
-| `pc-site-auditor` | "fammi un audit del sito", "controlla tutto" | Audit whole-site read-only: Hugo build, link interni (distingue rotti vs futuri), ordering, frontmatter, anti-pattern, coerenza cross-file |
+| `pc-site-auditor` | "fotografia tecnica del repo", "che bug ci sono?" | Fotografia rapida e in sola lettura del repository; l'audit completo è di `pc-audit-completo` |
 | `pc-fact-checker` | "verifica i dati/le fonti" — ogni contenuto con date, bilanci, cause, norme, dataset | 🔴 Gate dei fatti: fonte primaria per ogni affermazione, correzione in tutti i file che ripetono il dato, bloccante senza fonte su vittime/cause/istruzioni/norme |
 | `pc-didattica-reviewer` | schede stampabili, kit, rubriche, giochi nuovi o modificati | 🔴 Gate materiali scolastici: sicurezza DPC, pedagogia ed età, normativa scuola vigente, esercizi, avvertenze dentro l'area stampabile, parità dei 4 formati |
 | `pc-revisore-scientifico` | "è scientificamente corretto?" | Meccanismi, scale, fasi e tono della comunicazione del rischio; gerarchia delle fonti |
@@ -486,6 +486,18 @@ In `.claude/agents/` ci sono **35 agenti custom** (dal 28/09/2026 anche `pc-cale
 | `pc-collaudo-funzionale` | "funziona ancora tutto?" | Prova sul sito pubblicato ogni strumento interattivo: compito, caso limite, ricarico, tastiera, console, stampa |
 | `pc-prestazioni` | "il sito è lento?" | Peso e velocità per tipo di pagina su rete mobile lenta, budget e crescita |
 | `pc-audit-completo` | "fammi l'audit completo" (routine mensile) | Orchestratore: script + specialisti, rapporto in formato rilievi, correzioni fino a live; dal 07/10/2026 anche la fase «il sito visto da fuori» (indirizzi scritti a mano, file per motori e macchine con le linee guida attuali, decisioni del passato rimesse in discussione, debiti dichiarati con data) |
+| `pc-pianificatore-emergenza` | "le aree di attesa sono giuste?" | Coerenza del sito con il Piano di Emergenza Comunale: aree, COC, scenari |
+| `pc-cartografo-gis` | "le coordinate sono giuste?" | Dati geografici e mappe: coordinate, attribuzioni, alternativa testuale |
+| `pc-medico-emergenza` | "è corretto dal punto di vista sanitario?" | Primo soccorso (linee guida IRC), DAE, caldo, kit sanitari; mai consigli clinici individuali |
+| `pc-psicologo-emergenza` | "questo testo spaventa i bambini?" | Linguaggio delle emozioni, bambini, lutto, anniversari |
+| `pc-radiocomunicazioni` | articoli Radiocomunicazioni, vista RADIO | Frequenze da fonti verificate, mai quelle del Gruppo, solo ascolto |
+| `pc-volontariato-terzo-settore` | "come si diventa volontari?" | Requisiti, tutele e limiti di giorni dei volontari (D.Lgs. 1/2018, artt. 35 e 39) |
+| `pc-inclusione-fragilita` | "il kit serve a una persona con disabilità?" | Persone fragili in emergenza, CAA, facile da leggere |
+| `pc-comunicazione-crisi` | allerta o emergenza reale | Sei punti ISO 22329, barra di allerta, banner, Telegram, disinformazione |
+| `pc-ufficio-stampa` | "scrivi un comunicato stampa" | Comunicati per le testate, rettifiche, rassegna; l'invio è umano |
+| `pc-strategia-comunicazione` | "che cosa pubblichiamo il mese prossimo?" | Piano editoriale, campagne, pubblici, canali |
+| `pc-art-director` | "com'è venuta questa locandina?" | Grafiche istituzionali: 4 loghi con E10435833, niente aspetto da generatore |
+| `pc-produzione-multimediale` | "facciamo un Reel", podcast | Codifica, sottotitoli, trascrizioni, peso, metadati di audio e video |
 | `pc-materiali-publisher` | "pubblica gli output di NotebookLM per il tema X" | Pipeline pubblicazione automatica materiali NotebookLM su `/risorse-pronte/` (podcast, infografiche, presentazioni) |
 
 Quando l'utente fa una richiesta che corrisponde al trigger di uno di questi agenti, **applica i criteri descritti** anche se non puoi richiamare il sub-agent specifico.

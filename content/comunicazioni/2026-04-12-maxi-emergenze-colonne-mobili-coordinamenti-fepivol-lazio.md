@@ -199,9 +199,15 @@ Generalmente la durata del turno di missione varia dai **4 ai 7 giorni**, con qu
 
 - il volontario che parte deve **reggere con le proprie forze** per le prime 72 ore (autonomia della colonna)
 - dopo il primo cambio, i gruppi che sostituiscono trovano una logistica già attiva (mense, brandine, servizi igienici)
-- il **massimo continuativo per emergenze nazionali o estere** è di **60 giorni**, ai sensi dell'art. 39 del Codice di Protezione Civile
+- nelle **emergenze di rilievo nazionale** il volontario può restare impiegato fino a **60 giorni continuativi**, se il Dipartimento della protezione civile lo autorizza (art. 39 del Codice di Protezione Civile)
 
-Il **tetto annuale complessivo** è di **180 giorni** per attività di protezione civile (di cui massimo 60 continuativi), più ulteriori **10 giorni per formazione regionale ed esercitazioni**. Durante questi giorni il volontario mantiene **posto di lavoro e retribuzione**, e il datore di lavoro è successivamente rimborsato dal DPC o dalla Regione.
+L'art. 39 fissa tre limiti:
+
+- nel soccorso e nell'assistenza, fino a **30 giorni continuativi e 90 l'anno**;
+- nelle emergenze di rilievo nazionale, fino a **60 giorni continuativi e 180 l'anno**, solo su autorizzazione del Dipartimento della protezione civile e per i casi di effettiva necessità;
+- nella pianificazione, nelle esercitazioni e nella formazione, fino a **10 giorni continuativi e 30 l'anno**.
+
+Durante questi giorni il volontario mantiene **posto di lavoro e retribuzione**, e il datore di lavoro è successivamente rimborsato dal DPC o dalla Regione.
 
 ---
 

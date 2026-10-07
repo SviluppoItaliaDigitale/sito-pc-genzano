@@ -167,7 +167,7 @@ Gli enti e i volontari di protezione civile operano nel perimetro del **Codice d
 - **Art. 32** — Ruolo del **volontariato organizzato**, iscrizione agli elenchi territoriali e nazionali
 - **Art. 37** — Assicurazioni dei volontari durante l'attivazione ufficiale
 
-La **Direttiva PCM 30 aprile 2021** — *Indirizzi per la predisposizione dei piani provinciali e regionali di protezione civile* — integra le disposizioni sul flusso informativo, rafforzando il ruolo delle **telecomunicazioni** nella filiera dei soccorsi.
+La **Direttiva PCM 30 aprile 2021** — *Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali* — integra le disposizioni sul flusso informativo, rafforzando il ruolo delle **telecomunicazioni** nella filiera dei soccorsi.
 
 Per l'uso delle radio amatoriali in servizio di protezione civile si applica:
 

@@ -23,6 +23,28 @@ l'agente giusto.
 
 ---
 
+## 19.0 L'organigramma: un'azienda di specialisti (7 ottobre 2026)
+
+Su richiesta dell'utente (*«dobbiamo simulare una vera e propria azienda che ha al suo interno tutti gli specialisti possibili ed immaginabili che riguardano il nostro settore di protezione civile, inoltre specialisti in agenzie marketing e giornalistiche»*) gli agenti sono organizzati per reparti, come in un'azienda. Ognuno ha un compito solo: dove due agenti facevano la stessa cosa, il compito è stato assegnato a uno e l'altro rimanda a lui.
+
+**Chi dirige.** Un agente avviato da un altro agente non può avviarne a sua volta. La direzione è quindi la **sessione principale**: è lei che convoca gli specialisti, uno dopo l'altro, per un articolo, un audit o un materiale scolastico. Quando un agente ha bisogno di un collega che non può chiamare, esegue a mano i controlli essenziali leggendo il suo file, oppure scrive nel rapporto quale specialista va convocato. Un controllo non si salta mai in silenzio.
+
+| Reparto | Che cosa fa | Agenti |
+|---|---|---|
+| **Direzione e qualità** | audit, documentazione, fotografia tecnica | audit completo, documentazione, site auditor |
+| **Protezione civile tecnico-scientifica** | correttezza scientifica, norme, piano comunale, mappe, sanità, psicologia, radio | revisore scientifico, verificatore delle norme, pianificatore di emergenza, cartografo GIS, medico dell'emergenza, psicologo dell'emergenza, radiocomunicazioni |
+| **Sala operativa** | allerte ed emergenze reali, esercitazioni della catena | comunicazione di crisi, esercitazioni |
+| **Volontariato e inclusione** | volontari, persone fragili | volontariato e Terzo settore, inclusione e fragilità |
+| **Redazione giornalistica** | articoli, fatti, lingua, calendario, traduzioni, ufficio stampa | caporedattore AGID, desk di cronaca, fact-checker, revisore linguistico, correttore di bozze, calendario, linkografia, freschezza, coerenza, italiano semplice, traduzioni, ufficio stampa |
+| **Agenzia di comunicazione** | strategia, grafica, social, video e podcast, SEO | strategia di comunicazione, art director, social, produzione multimediale, SEO, materiali NotebookLM |
+| **Fotografia** | foto e didascalie | fotografo, verificatore delle didascalie |
+| **Scuola** | materiali didattici e schede | revisore didattico, controllo delle schede |
+| **Esperienza utente e collaudo** | accessibilità, usabilità, resa grafica, prove sul sito vero | accessibilità, usabilità, verifica visiva, visitatore reale, collaudo funzionale |
+| **Tecnologia** | codice, automazioni, sicurezza, integrità, dati, deploy, prestazioni, issue | revisore del codice, automazioni, sicurezza, integrità tecnica, dati e feed, validatore del deploy, prestazioni, issue |
+| **Legale** | privacy, accessibilità legale, licenze | conformità legale |
+
+**Ruoli non creati, e perché**: raccolta fondi, community manager, analista delle visite. Si creano quando c'è un lavoro reale che li richiede: con troppi agenti dai compiti vicini la sessione rischia di attivare quello sbagliato.
+
 ## 19.1 Gli agenti e quando si attivano
 
 ### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
@@ -598,6 +620,126 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 ---
 
+### 39. Pianificatore di emergenza comunale
+
+**Frasi naturali**: *"le aree di attesa sono giuste?"*, *"il sito dice le stesse cose del Piano comunale?"*.
+
+**Cosa fa**: confronta /piano-emergenza/, /aree-attesa/, i cartelli delle aree, il COC e gli scenari con il Piano di Emergenza Comunale e con il Codice della Protezione Civile; separa ciò che solo il Comune può confermare.
+
+**Identità tecnica**: `pc-pianificatore-emergenza`.
+
+---
+
+### 40. Cartografo GIS
+
+**Frasi naturali**: *"le coordinate sono giuste?"*, *"la mappa è accessibile?"*.
+
+**Cosa fa**: controlla i dati geografici (aree di emergenza, DAE, idranti, confini), l'ordine latitudine-longitudine, l'attribuzione di OpenStreetMap, l'alternativa testuale delle mappe e Leaflet caricato una sola volta per pagina.
+
+**Identità tecnica**: `pc-cartografo-gis`.
+
+---
+
+### 41. Medico dell'emergenza
+
+**Frasi naturali**: *"è corretto dal punto di vista sanitario?"*.
+
+**Cosa fa**: rivede primo soccorso (linee guida IRC), defibrillatori, caldo, pandemie, kit sanitari; mai consigli clinici individuali, sempre il 112; le schede sanitarie restano «da validare» finché non le firma un professionista.
+
+**Identità tecnica**: `pc-medico-emergenza`.
+
+---
+
+### 42. Psicologo dell'emergenza
+
+**Frasi naturali**: *"questo testo spaventa i bambini?"*, *"va bene per chi ha perso qualcuno?"*.
+
+**Cosa fa**: rivede storie, giochi, rubriche, kit e anniversari di tragedie: niente sicurezza assoluta promessa, niente paura come leva, reazioni normalizzate, rimandi ai servizi professionali.
+
+**Identità tecnica**: `pc-psicologo-emergenza`.
+
+---
+
+### 43. Specialista di radiocomunicazioni
+
+**Frasi naturali**: *"le frequenze sono giuste?"*.
+
+**Cosa fa**: cura gli articoli Radiocomunicazioni, il percorso formativo e la vista RADIO della Sala: frequenze solo da fonti verificate, mai quelle assegnate al Gruppo, solo ascolto.
+
+**Identità tecnica**: `pc-radiocomunicazioni`.
+
+---
+
+### 44. Consulente del volontariato
+
+**Frasi naturali**: *"come si diventa volontari?"*, *"quanti giorni può assentarsi dal lavoro un volontario?"*.
+
+**Cosa fa**: verifica requisiti, iscrizione, formazione, tutele e sicurezza dei volontari sul Codice della Protezione Civile (artt. 35 e 39, testo vigente su Normattiva).
+
+**Identità tecnica**: `pc-volontariato-terzo-settore`.
+
+---
+
+### 45. Esperto di inclusione e fragilità
+
+**Frasi naturali**: *"questo kit serve davvero a una persona con disabilità?"*.
+
+**Cosa fa**: valuta se kit, tabelle CAA, facile da leggere, LIS e piano familiare raggiungono e proteggono le persone fragili. La verifica tecnica WCAG resta all'accessibility auditor.
+
+**Identità tecnica**: `pc-inclusione-fragilita`.
+
+---
+
+### 46. Responsabile della comunicazione di crisi
+
+**Frasi naturali**: *allerta o emergenza reale, o un'esercitazione*.
+
+**Cosa fa**: applica i sei punti ISO 22329 ai messaggi, tiene insieme livello, titolo e descrizione della barra di allerta, cura banner, Telegram, post pubblicati a mano, smentite senza amplificare e chiusura con la voce nel registro della prevenzione.
+
+**Identità tecnica**: `pc-comunicazione-crisi`.
+
+---
+
+### 47. Ufficio stampa
+
+**Frasi naturali**: *"scrivi un comunicato stampa"*, *"un giornale ha scritto una cosa sbagliata"*.
+
+**Cosa fa**: prepara comunicati per le testate (registro non-AGID solo su richiesta), rettifiche e risposte; segue le riprese con il controllo settimanale delle copie. Non invia nulla: l'invio è di una persona.
+
+**Identità tecnica**: `pc-ufficio-stampa`.
+
+---
+
+### 48. Strategist della comunicazione
+
+**Frasi naturali**: *"che cosa pubblichiamo il mese prossimo?"*, *"come promuoviamo la ricerca di volontari?"*.
+
+**Cosa fa**: cura piano editoriale, campagne, pubblici e canali con tono istituzionale; legge le statistiche anonime di visita solo se l'utente le fornisce.
+
+**Identità tecnica**: `pc-strategia-comunicazione`.
+
+---
+
+### 49. Art director
+
+**Frasi naturali**: *"com'è venuta questa locandina?"*, *"prepara il brief per Canva"*.
+
+**Cosa fa**: giudica cover, immagini social, schede, deck e locandine: niente aspetto da generatore, esattamente quattro loghi con il Quality Label sempre accanto al codice E10435833, contrasti calcolati, licenze.
+
+**Identità tecnica**: `pc-art-director`.
+
+---
+
+### 50. Produttore audio e video
+
+**Frasi naturali**: *"ho un video da mettere"*, *"facciamo un Reel"*.
+
+**Cosa fa**: cura codifica, sottotitoli e trascrizioni, peso dei file, metadati, video per i social. Nasce dopo che 13 episodi di podcast erano rimasti a 257 kbps, fino a 54 MB l'uno.
+
+**Identità tecnica**: `pc-produzione-multimediale`.
+
+---
+
 ## 19.2 Esempi di workflow tipici
 
 ### Pubblicare un articolo nuovo (sequenza ideale)
@@ -714,6 +856,18 @@ problema"* — e Claude corregge.
 | `.claude/agents/pc-visitatore-reale.md` | Visitatore reale | 12 anni di test con gli utenti per servizi pubblici digitali (anziani, disabilità, stranieri, utenti sotto stress) |
 | `.claude/agents/pc-collaudo-funzionale.md` | Collaudatore degli strumenti interattivi | 10 anni di collaudo funzionale e di accettazione su portali pubblici, Playwright |
 | `.claude/agents/pc-prestazioni.md` | Prestazioni | 10 anni di ottimizzazione web per servizi pubblici e testate, Core Web Vitals e budget |
+| `.claude/agents/pc-pianificatore-emergenza.md` | Pianificatore di emergenza comunale | 15 anni di pianificazione comunale di protezione civile nel Lazio: piani, scenari, aree di emergenza, COC per funzioni (Metodo Augustus) |
+| `.claude/agents/pc-cartografo-gis.md` | Cartografo GIS | 12 anni di GIS per protezione civile ed enti locali: sistemi di riferimento, rilievi GPS, servizi OGC, Leaflet e QGIS |
+| `.claude/agents/pc-medico-emergenza.md` | Medico dell'emergenza | 18 anni fra pronto soccorso, centrale del 118 e igiene pubblica; istruttore di rianimazione, sanità nelle maxi-emergenze |
+| `.claude/agents/pc-psicologo-emergenza.md` | Psicologo dell'emergenza | 15 anni di supporto psicosociale dopo terremoti, alluvioni e lutti collettivi; primo soccorso psicologico (OMS, NCTSN) |
+| `.claude/agents/pc-radiocomunicazioni.md` | Specialista di radiocomunicazioni | 20 anni da radioamatore e operatore di sala: reti VHF/UHF e HF, modi digitali, procedure di traffico in emergenza |
+| `.claude/agents/pc-volontariato-terzo-settore.md` | Consulente del volontariato | 15 anni di gestione di organizzazioni di volontariato e gruppi comunali: elenchi, attivazioni, rimborsi, sicurezza |
+| `.claude/agents/pc-inclusione-fragilita.md` | Esperto di inclusione e fragilità | 15 anni di pianificazione inclusiva con associazioni di persone con disabilità, servizi sociali e strutture residenziali |
+| `.claude/agents/pc-comunicazione-crisi.md` | Responsabile della comunicazione di crisi | 15 anni di comunicazione del rischio in sale operative e uffici stampa di enti locali; ISO 22329, CAP |
+| `.claude/agents/pc-ufficio-stampa.md` | Ufficio stampa | 15 anni di ufficio stampa per enti locali e volontariato; comunicati, rettifiche, redazioni dei Castelli Romani |
+| `.claude/agents/pc-strategia-comunicazione.md` | Strategist della comunicazione | 12 anni in agenzia di comunicazione pubblica: piani editoriali, campagne di sensibilizzazione, misura senza tracciamento invasivo |
+| `.claude/agents/pc-art-director.md` | Art director | 15 anni di direzione artistica per enti pubblici e testate: identità visiva, tipografia, segnaletica, stampa |
+| `.claude/agents/pc-produzione-multimediale.md` | Produttore audio e video | 12 anni di produzione audio e video per enti pubblici e radio comunitarie: codifica, sottotitoli, podcast |
 
 I background sono "personae" usati per ancorare le valutazioni a standard
 verificabili (linee guida AGID, ISO 22329, WCAG, CWA, ecc.). Non sono persone

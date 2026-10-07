@@ -36,7 +36,7 @@ Ogni differenza è un rilievo: componente non documentato, o documentazione di u
 
 ### 2. Coerenza fra documenti
 
-- **CLAUDE.md** = indice operativo dei vincoli critici; **rules** = specifica; **manuale/** = versione per l'utente; **AGENTS.md** = versione per le AI esterne; **CONTESTO-PROGETTO.md** = export generato (`bash scripts/export-contesto-progetto.sh`). Una regola vive in tutti e quattro con lo stesso significato; i dettagli operativi (cron, id delle routine, nomi dei file) coincidono.
+- **CLAUDE.md** = indice operativo dei vincoli critici; **rules** = specifica; **manuale/** = versione per l'utente; **AGENTS.md** = versione per le AI esterne; **CONTESTO-PROGETTO.md** = export generato e non versionato (`bash scripts/export-contesto-progetto.sh`, file in `.gitignore`). Una regola vive in tutti e quattro con lo stesso significato; i dettagli operativi (cron, id delle routine, nomi dei file) coincidono.
 - Tabella agenti in CLAUDE.md ↔ Parte 19 §19.1 e §19.4 ↔ `description` dei file agente: stesse frasi di attivazione, stessa identità tecnica.
 - Tabella workflow in rule 10 ↔ `on:`/`cron:` reali ↔ manuale parte automazioni.
 - Routine CCR: id, cron (in UTC nel trigger, in ora italiana nel testo), mandato in punti, categorie A/B: uguali in rule 10 e nel prompt della routine.
@@ -52,7 +52,7 @@ Ogni differenza è un rilievo: componente non documentato, o documentazione di u
 
 ### 4. Quando intervieni
 
-Dopo ogni PR strutturale (rule 07: docs come parte del fix), nello **stesso** commit o in uno immediatamente successivo: aggiorna CLAUDE.md, la rule pertinente, la parte del manuale, AGENTS.md se riguarda anche le AI esterne, rigenera `CONTESTO-PROGETTO.md`, e — se è cambiata una sezione del sito o un dato istituzionale — il deck (`scripts/genera-presentazione.py`).
+Dopo ogni PR strutturale (rule 07: docs come parte del fix), nello **stesso** commit o in uno immediatamente successivo: aggiorna CLAUDE.md, la rule pertinente, la parte del manuale, AGENTS.md se riguarda anche le AI esterne, rigenera `CONTESTO-PROGETTO.md` (`bash scripts/export-contesto-progetto.sh`) per chi deve passarlo alle AI esterne — il file è in `.gitignore` insieme a `CONTESTO-PROGETTO-slim.md`, `CONTESTO-AI.md` e `CONTESTO-AI-slim.md`: si rigenera ma **non si committa**, e la sua assenza dal diff non è un difetto — e, se è cambiata una sezione del sito o un dato istituzionale — il deck (`scripts/genera-presentazione.py`).
 
 ## Cosa NON fare
 
@@ -71,7 +71,7 @@ Dopo ogni PR strutturale (rule 07: docs come parte del fix), nello **stesso** co
 | pc-fact-checker | ✅ | ✅ | rule 09 p.20 | Parte 19 §18 | ✅ | — |
 | scadenze-conformita.yml | ✅ | — | ❌ | ❌ | — | aggiunta riga rule 10 + manuale |
 
-CONTESTO-PROGETTO.md rigenerato: ✅ · Refusi: 0
+CONTESTO-PROGETTO.md rigenerato in locale (non committato): ✅ · Refusi: 0
 ```
 
 Quando tutto coincide: **«Documentazione allineata ai componenti reali; N componenti verificati»**.

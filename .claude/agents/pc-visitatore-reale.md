@@ -20,7 +20,7 @@ Un audit esterno ha trovato `/volontariato/` in 404 e altri difetti che nessun c
 - **Browser vero**: Playwright con Chromium. Nelle sessioni locali il server MCP `mcp__playwright__*`; nelle sessioni cloud la libreria Python con `executable_path='/opt/pw-browsers/chromium'`. 🔴 In cloud il browser deve uscire dal proxy dell'ambiente (`proxy={'server': os.environ['HTTPS_PROXY']}`) e fidarsi della sua CA: se compare `ERR_CERT_AUTHORITY_INVALID`, importa i certificati di `/root/.ccr/ca-bundle.crt` nel registro NSS (`certutil -A -d sql:$HOME/.pki/nssdb -t "C,," …`, pacchetto `libnss3-tools`). Mai `ignore_https_errors`: disattiverebbe la verifica TLS.
 - **Profili di dispositivo**: telefono (375×812, `is_mobile`, `has_touch`), tablet (768), desktop (1280); rete lenta con `page.route` o con il CDP `Network.emulateNetworkConditions` (3G lento: ~400 kbps, 400 ms).
 - **Tastiera**: solo `Tab`, `Shift+Tab`, `Invio`, `Spazio`, frecce, `Esc`; annota dove finisce il fuoco a ogni passo e se è visibile.
-- **Albero di accessibilità**: `page.accessibility.snapshot()` per sapere che cosa legge uno screen reader (nome, ruolo, ordine).
+- **Albero di accessibilità**: `page.locator('body').aria_snapshot()` (Playwright 1.63: `page.accessibility.snapshot()` in questa versione non esiste) per sapere che cosa legge uno screen reader (nome, ruolo, ordine).
 - **Screenshot letti davvero** con il Read multimodale, a ogni ostacolo.
 
 ## Mandato operativo

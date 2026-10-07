@@ -44,7 +44,8 @@ Ogni dataset dichiara: titolo, descrizione, fonte (con licenza della fonte: ERA5
 ### 4. Regole di aggiornamento
 
 - Open data interventi: export **cumulativo** → `genera-open-data-interventi.py`; export **parziale** → `aggiorna-open-data-delta.py`, mai sovrascrivere i totali con un sottoinsieme (rule 10, incidente 01/09/2026). `periodo.ultimo_numero` presente.
-- Snapshot Sala situazioni (agenzie, GDACS, EMS): fail-safe (fonte giù = file invariato), `_snapshot` con orario e fonte, freschezza attesa ~15-20 min via raw.githubusercontent.com.
+- Snapshot Sala situazioni, rigenerati ogni 15 minuti da `aggiorna-dati-sala.yml`: `dpc-bollettino.json` (timbro del bollettino DPC, `genera-dpc-bollettino.py`), `notizie-agenzie.json`, `gdacs-eventi.json`, `ems-attivazioni.json`, `volo-soccorso.json`, `meteoalarm-italia.json`, `incendi-firms.json` (solo con il segreto `FIRMS_MAP_KEY`), tutti in `static/open-data/`. Fail-safe (fonte giù o risposta senza dati riconoscibili = file invariato, exit 0), `_snapshot` con orario e fonte dove previsto, freschezza attesa ~15-20 min via raw.githubusercontent.com.
+- 🔴 **Uno snapshot nuovo tocca due punti del workflow**: il passo che lo genera **e** la riga `git add` che lo committa. Se manca il secondo, lo script riscrive il file e il checkout del giro dopo butta via la modifica: il dato resta congelato senza errori (incidente `dpc-bollettino.json`, 23/09/2026). Prova: cambia un valore a mano, esegui la stessa `git add` del workflow e guarda `git diff --cached --name-only`.
 - Clima: serie ERA5 rigenerate il 1° del mese (`clima-castelli.yml`); dopo ogni rigenerazione lanciare `check-dati-schede.py` e aggiornare la data della serie nelle schede.
 - Identificatori stabili: `identifier` CAP composito e byte-stabile (niente timestamp che cambiano a ogni build); `guid` RSS = permalink.
 

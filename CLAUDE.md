@@ -70,7 +70,7 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 3. **Attribuzione default = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".** Mai a terzi (FEPIVOL/Comune/DPC) solo perché nel task ci sono loro testi. Eccezioni con evidenza certa: pattern nome file social terzi, Wikimedia/NASA/USGS/NOAA via `pc-image-fixer`, foto storiche con autore noto.
 4. **Web check obbligato di OGNI entità citata** (associazione/ente/persona/sigla): WebFetch con denominazione tra virgolette. Se 0 risultati ed è associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare** (es. *"V.E.R. Formia"*, non *"E.R. Formia"*): cita la sigla come la leggi nella fonte.
 
-**Gate pre-commit con foto utente:** cover+`image:` ✓ · Read di tutte le foto ✓ · caption solo visibile ✓ · attribuzione Gruppo ✓ · web check entità ✓ · **nome mezzo/attrezzatura verificato in `content/chi-siamo/_index.md` § "I nostri mezzi"** (la livrea sul fianco non è il modello del veicolo — dettagli in rule 02 § "Nomi dei nostri mezzi") ✓ · gate AGID `pc-article-reviewer` ✓. Un solo punto non verificato → **non committare**.
+**Gate pre-commit con foto utente:** cover+`image:` ✓ · Read di tutte le foto ✓ · caption solo visibile ✓ · attribuzione Gruppo ✓ · web check entità ✓ · **nome mezzo/attrezzatura verificato in `content/chi-siamo/_index.md` § "Mezzi e attrezzature principali"** (la livrea sul fianco non è il modello del veicolo — dettagli in rule 02 § "Nomi dei nostri mezzi") ✓ · gate AGID `pc-article-reviewer` ✓. Un solo punto non verificato → **non committare**.
 
 ---
 
@@ -343,7 +343,26 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-38 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi:
+50 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi; i 12 aggiunti lo stesso giorno completano l'organigramma «azienda» chiesto dall'utente (*«tutti gli specialisti del settore protezione civile, più agenzia di marketing e giornalistica»*).
+
+🔴 **Chi dirige**: un agente avviato come sottoagente non può avviarne altri. La **sessione principale** è la direzione: convoca gli specialisti in sequenza (i gate degli articoli, l'audit completo, i materiali scolastici sono copioni che lei esegue). Un gate che non può essere convocato si esegue a mano leggendo il file dell'agente, e il rapporto lo dichiara; mai saltato in silenzio.
+
+**Organigramma per reparti** (dettaglio in `manuale/parte-19` § 19.0):
+
+| Reparto | Agenti |
+|---|---|
+| Direzione e qualità | `pc-audit-completo`, `pc-documentazione`, `pc-site-auditor` (fotografia rapida del repo) |
+| Protezione civile tecnico-scientifica | `pc-revisore-scientifico`, `pc-normative-verifier`, `pc-pianificatore-emergenza`, `pc-cartografo-gis`, `pc-medico-emergenza`, `pc-psicologo-emergenza`, `pc-radiocomunicazioni` |
+| Sala operativa | `pc-comunicazione-crisi`, `pc-esercitazione-emergenza` |
+| Volontariato e inclusione | `pc-volontariato-terzo-settore`, `pc-inclusione-fragilita` |
+| Redazione giornalistica | `pc-article-reviewer`, `pc-desk-giornalistico`, `pc-fact-checker`, `pc-revisore-linguistico`, `pc-correttore-bozze`, `pc-calendario-editoriale`, `pc-internal-linker`, `pc-content-freshness`, `pc-coerenza-trasversale`, `pc-italian-l2-writer`, `pc-revisore-traduzioni`, `pc-ufficio-stampa` |
+| Agenzia di comunicazione | `pc-strategia-comunicazione`, `pc-art-director`, `pc-social-publisher`, `pc-produzione-multimediale`, `pc-seo-checker`, `pc-materiali-publisher` |
+| Fotografia | `pc-image-fixer`, `pc-photo-caption-verifier` |
+| Scuola | `pc-didattica-reviewer`, `pc-print-card-qa` |
+| Esperienza utente e collaudo | `pc-accessibility-auditor`, `pc-usabilita`, `pc-verifica-visiva`, `pc-visitatore-reale`, `pc-collaudo-funzionale` |
+| Tecnologia | `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`, `pc-integrita-tecnica`, `pc-dati-e-feed`, `pc-deploy-validator`, `pc-prestazioni`, `pc-issue-triage` |
+| Legale | `pc-conformita-legale` |
+
 
 | Agent | Trigger naturali |
 |---|---|
@@ -360,7 +379,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-deploy-validator` | "verifica prima del push", "build OK?", "pubblico in sicurezza?" |
 | `pc-social-publisher` | "rivedi le bozze social", "immagini Instagram" |
 | `pc-print-card-qa` | "controlla le schede stampabili", "QA kit calamità" |
-| `pc-site-auditor` | "audit del sito", "incongruenze?", "pro e contro" |
+| `pc-site-auditor` | "fotografia tecnica del repo", "che bug ci sono?" — lettura rapida in sola lettura; l'audit completo è di `pc-audit-completo` |
 | `pc-materiali-publisher` | "pubblica output NotebookLM per il tema X" |
 | `pc-revisore-linguistico` | 🔴 gate linguistico obbligato richiamato da `pc-article-reviewer`: script deterministici (refusi + grammatica) **e** lettura sintattica per articoli mancanti, accordi, preposizioni. Riferimento Treccani |
 | `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
@@ -385,6 +404,18 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-collaudo-funzionale` | "funziona ancora tutto?", "il pulsante non fa niente" — prova sul sito pubblicato ogni strumento interattivo (assistente, giochi, quiz, cruscotto, Sala, Crea la mia lezione, Modalità Aula, salvataggi, ricerca, condivisione, stampa) |
 | `pc-prestazioni` | "il sito è lento?", "in emergenza si apre?" — peso e velocità per tipo di pagina su rete mobile lenta, budget e crescita rispetto alla misura precedente (registro in `riferimenti-interni/prestazioni/`) |
 | `pc-audit-completo` | "fammi l'audit completo", routine mensile — orchestra script e specialisti, rapporto in formato rilievi, correzioni fino a live |
+| `pc-pianificatore-emergenza` | "le aree di attesa sono giuste?", "il sito dice le stesse cose del Piano?" — coerenza con il Piano di Emergenza Comunale, aree, COC, scenari |
+| `pc-cartografo-gis` | "le coordinate sono giuste?", "la mappa è accessibile?" — dati geografici (aree, DAE, idranti), mappe Leaflet, attribuzioni |
+| `pc-medico-emergenza` | "è corretto dal punto di vista sanitario?" — primo soccorso (linee guida IRC), DAE, caldo, kit sanitari; mai consigli clinici individuali |
+| `pc-psicologo-emergenza` | "questo testo spaventa i bambini?", anniversari di tragedie — reazioni normalizzate, niente paura come leva, rimandi ai servizi |
+| `pc-radiocomunicazioni` | articoli Radiocomunicazioni, vista RADIO — frequenze solo da fonti verificate, mai quelle assegnate al Gruppo, solo ascolto |
+| `pc-volontariato-terzo-settore` | "come si diventa volontari?", tutele e limiti di giorni — Codice di protezione civile (artt. 35, 39), sicurezza dei volontari |
+| `pc-inclusione-fragilita` | "il kit serve davvero a una persona con disabilità?" — persone fragili in emergenza, CAA, facile da leggere (il codice WCAG resta all'accessibility auditor) |
+| `pc-comunicazione-crisi` | allerta o emergenza reale o simulata — sei punti ISO 22329, barra di allerta (livello, titolo e descrizione insieme), banner, Telegram, post a mano, disinformazione |
+| `pc-ufficio-stampa` | "scrivi un comunicato stampa", "chi ha ripreso il nostro articolo?" — comunicati per le testate (registro non-AGID su richiesta), rettifiche, rassegna |
+| `pc-strategia-comunicazione` | "che cosa pubblichiamo il mese prossimo?", campagne — piano editoriale, pubblici, canali, tono istituzionale |
+| `pc-art-director` | "com'è venuta questa locandina?", brief per grafiche — regola dei 4 loghi con E10435833, grafica.md, contrasti, licenze |
+| `pc-produzione-multimediale` | "ho un video da mettere", "facciamo un Reel", podcast — codifica, sottotitoli, trascrizioni, peso, metadati |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
 
@@ -423,7 +454,7 @@ Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. A
 | Meta-work su skill/agent | `skill-stocktake` · `agent-sort` · `agent-architecture-audit` |
 | Imparare dal lavoro | `continuous-learning-v2` |
 
-**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-calendario-editoriale` (se programmato) → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`; modifica a uno strumento interattivo o a CSS/JS comuni → `pc-revisore-codice` → `pc-collaudo-funzionale` → `pc-prestazioni`; menu, home o ricerca → `pc-usabilita` → `pc-visitatore-reale`.
+**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-calendario-editoriale` (se programmato) → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`; allerta o emergenza → `pc-comunicazione-crisi` → `pc-fact-checker` → `pc-psicologo-emergenza` (se tocca persone); contenuto sanitario → `pc-medico-emergenza` → `pc-fact-checker`; grafica istituzionale → `pc-art-director` → `pc-verifica-visiva`; modifica a uno strumento interattivo o a CSS/JS comuni → `pc-revisore-codice` → `pc-collaudo-funzionale` → `pc-prestazioni`; menu, home o ricerca → `pc-usabilita` → `pc-visitatore-reale`.
 
 ---
 

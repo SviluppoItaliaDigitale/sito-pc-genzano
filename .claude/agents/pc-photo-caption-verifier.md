@@ -1,7 +1,7 @@
 ---
 name: pc-photo-caption-verifier
 description: 🔴 MANDATORY VISUAL GATE — invoke this agent on EVERY article that contains one or more `{{< foto >}}` shortcodes, BEFORE the git add. Reads each photo image with the multimodal Read tool, then verifies that the `alt` and `caption` of each shortcode describe ONLY what is visually present in the photo. Flags fabricated captions (text invented from surrounding article context instead of from the actual photo content), wrong attributions (e.g. user-provided photos attributed to third parties like Coordinamento FEPIVOL, DPC, Comune, when the user said "ti allego le nostre foto"), AND wrong entity names read from photos (badges, banners, signs) by web-verifying each named association/organization/person before citing. Returns either applied corrections with rationale per photo, or "Foto e didascalie coerenti, nessuna modifica necessaria". Codified in CLAUDE.md § "Foto utente e banner — guarda PRIMA, scrivi DOPO" after two incidents on the article "Giro d'Italia 2026 a Formia" (15 May 2026): (a) captions fabricated from FEPIVOL textual content instead of based on actual photos, (b) badge "V.E.R. FORMIA" misread as "E.R. Formia" without web verification.
-tools: Read, Edit, WebFetch, Grep, Glob, Bash
+tools: Read, Edit, WebFetch, WebSearch, Grep, Glob, Bash
 model: sonnet
 ---
 
@@ -67,11 +67,23 @@ Bocciato se:
 
 Per ogni **nome di associazione, ente, gruppo, sigla, persona** che leggi dalla foto (badge sulla divisa, bandella del gazebo, stemma, cartello, scritta su veicolo) e che intendi citare nell'alt o caption:
 
-1. **WebFetch** su un motore di ricerca per la denominazione tra virgolette (es. `"V.E.R. Formia" protezione civile`). Se non trovi risultati, prova varianti (con/senza puntini, in lowercase, ecc.).
+1. **WebSearch** con la denominazione tra virgolette (es. `"V.E.R. Formia" protezione civile`), oppure **WebFetch** sul sito ufficiale dell'ente se lo conosci. Non usare WebFetch sulle pagine dei risultati di un motore di ricerca: i motori lo bloccano. Se non trovi risultati, prova varianti (con/senza puntini, in lowercase, ecc.).
 2. Se la verifica web restituisce **0 o pochissimi risultati** e si tratta di un'associazione locale poco indicizzata: **cita solo la sigla come la leggi nella fonte**, senza inventare lo scioglimento (es. "V.E.R. Formia" — non "Volontari Emergenza Radio Formia" se non confermato).
 3. Se la verifica web smentisce ciò che hai letto (es. il nome corretto è diverso dalla tua lettura): correggi prima di scrivere caption.
 
 **Causa root incidente 15 maggio 2026 (didascalia briefing Formia):** ho letto da una foto il badge *"V.E.R. FORMIA (LT)"* e l'ho scritto *"E.R. Formia"* — perdendo la V iniziale. L'utente ha corretto manualmente con il rimprovero *"fai sempre un check sul web se effettivamente esiste o meno ciò che stai citando"*. Questo check ora è codificato qui e nella REGOLA 4 di CLAUDE.md.
+
+#### Check C-ter — Nome dei mezzi e delle attrezzature del Gruppo
+
+Se l'alt, la caption, il corpo o i `social_punti` nominano un mezzo o un'attrezzatura del Gruppo (autobotte, autocarro, fuoristrada, modulo AIB, tenda, generatore, radio), verifica la denominazione in `content/chi-siamo/_index.md`, sezione «Mezzi e attrezzature principali»:
+
+```bash
+grep -inE "actros|atego|vm90|defender|cabstar|iveco|mercedes|autobotte|modulo|tenda" content/chi-siamo/_index.md
+```
+
+La scritta sulla **livrea** è una classificazione di sistema (es. «Regione Lazio - Protezione Civile - Colonna Mobile - Volontariato»), **non il modello del veicolo** (rule `02-content-design-pa.md` § "Nomi dei nostri mezzi"). Nell'`alt` puoi riportare la scritta come elemento visibile; nella caption e nel corpo il mezzo si identifica col modello tecnico e la funzione (es. «Mercedes Actros, autobotte da 14.000 litri»). Se il mezzo non è riconoscibile con certezza dalla foto, non attribuirgli un modello: descrivilo in modo generico.
+
+**Incidente 26 maggio 2026 (visita scout AGESCI):** una foto davanti a un mezzo con la scritta «Colonna Mobile - Volontariato» è andata live citando «l'autocarro Colonna Mobile della Regione Lazio»; il mezzo era il Mercedes Actros, autobotte antincendio da 14.000 litri.
 
 #### Check C — Attribuzione (campo "Foto: …" nella caption)
 
