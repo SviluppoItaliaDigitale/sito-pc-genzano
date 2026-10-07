@@ -44,7 +44,7 @@ python3 scripts/genera-chrome-menu.py --check
 python3 scripts/check-navigazione.py --public /tmp/public  # assistente e mappa coprono menu e piè di pagina, link vivi
 python3 scripts/check-dati-canonici.py                     # dati ripetuti uguali al registro data/dati_canonici.yaml
 python3 scripts/check-qualita-pagine.py /tmp/public        # title, h1, alt su tutte le pagine
-python3 scripts/check-fogli-stampa.py --public /tmp/public # fogli bianchi e ultimo foglio quasi vuoto (Chromium, A4)
+python3 scripts/check-fogli-stampa.py --public /tmp/public # fogli bianchi e foglio quasi vuoto in qualunque posizione (Chromium, A4)
 python3 scripts/check-fascicolo-esperimenti.py             # fascicolo esperimenti: un foglio per scheda, scritte intere
 python3 scripts/aggiungi-canonical-statiche.py --check     # URL preferito sulle pagine statiche di static/
 python3 scripts/genera-materiali-lezione.py --check        # catalogo di «Crea la mia lezione» allineato all'indice delle schede
