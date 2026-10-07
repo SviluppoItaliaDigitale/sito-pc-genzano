@@ -876,6 +876,7 @@
 @media print {
 :where([id="scheda-it-alert-primaria"]) { zoom: 0.94; }
 }
+:where([id="scheda-it-alert-primaria"]) .itl-speaker {width:1.5rem;height:1.5rem;vertical-align:-.25rem;margin-right:.3rem}
 
 :where([id="scheda-maremoto-comportamenti-primaria"]) .mare-segnali {
       display: grid;
@@ -913,6 +914,9 @@
 :where([id="scheda-maremoto-comportamenti-primaria"]) .scheda-footer { padding-top: 0; padding-bottom: 0; }
 :where([id="scheda-maremoto-comportamenti-primaria"]) .scheda-page { padding-bottom: 0; }
 }
+:where([id="scheda-maremoto-comportamenti-primaria"]) .mare-segnale .mare-emoji {display:flex;align-items:center;justify-content:center;font-size:0}
+:where([id="scheda-maremoto-comportamenti-primaria"]) .mare-segnale .mare-emoji img, :where([id="scheda-maremoto-comportamenti-primaria"]) .mare-segnale .mare-emoji svg {width:3.2rem;height:3.2rem;display:block;object-fit:contain}
+:where([id="scheda-maremoto-comportamenti-primaria"]) .mare-segnale .mare-emoji svg {fill:none;stroke:#111827;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 
 :where([id="scheda-sicurezza-scuolabus-primaria"]) .bus-tappe {
       display: grid;
@@ -1189,6 +1193,8 @@
 @media screen and (max-width: 580px) {
 :where([id="scheda-sillabe-protezione-civile-primaria"]) .parole-modello { grid-template-columns: 1fr; }
 }
+:where([id="scheda-sillabe-protezione-civile-primaria"]) .parola-modello-riga .emo {display:inline-flex;width:3rem;height:3rem;align-items:center;justify-content:center;font-size:0}
+:where([id="scheda-sillabe-protezione-civile-primaria"]) .parola-modello-riga .emo img {width:2.8rem;height:2.8rem;object-fit:contain;display:block}
 
 :where([id="scheda-completa-parola-primaria"]) .sezione-titolo {
       display: flex;
@@ -1325,6 +1331,8 @@
 @media screen and (max-width: 580px) {
 :where([id="scheda-completa-parola-primaria"]) .cp-traduci { grid-template-columns: 1fr; }
 }
+:where([id="scheda-completa-parola-primaria"]) .cp-riga .emo, :where([id="scheda-completa-parola-primaria"]) .indizio .emo {display:inline-flex;align-items:center;justify-content:center;font-size:0;flex-shrink:0}
+:where([id="scheda-completa-parola-primaria"]) .cp-riga .emo img, :where([id="scheda-completa-parola-primaria"]) .cp-riga .emo svg, :where([id="scheda-completa-parola-primaria"]) .indizio .emo img, :where([id="scheda-completa-parola-primaria"]) .indizio .emo svg {width:2.8rem;height:2.8rem;object-fit:contain;display:block}
 
 :where([id="scheda-copia-frase-primaria"]) .frase-blocco {
       margin: 0.5rem 0 0.85rem 0;
@@ -1398,6 +1406,8 @@
       line-height: 1.45;
     }
 :where([id="scheda-copia-frase-primaria"]) .istruzioni-maestra strong { color: #664d03; }
+:where([id="scheda-copia-frase-primaria"]) .emo img, :where([id="scheda-copia-frase-primaria"]) .emo svg {width:2.5rem;height:2.5rem;object-fit:contain;display:block}
+:where([id="scheda-copia-frase-primaria"]) .emo {display:inline-flex;align-items:center;justify-content:center;font-size:0}
 
 :where([id="scheda-ricalca-scrivi-parole-primaria"]) .rs-blocco {
       display: flex;
@@ -1430,6 +1440,8 @@
       letter-spacing: 0.2em;
       color: #cfd5db;
     }
+:where([id="scheda-ricalca-scrivi-parole-primaria"]) .rs-emo {display:flex;align-items:center;justify-content:center;font-size:0}
+:where([id="scheda-ricalca-scrivi-parole-primaria"]) .rs-emo img, :where([id="scheda-ricalca-scrivi-parole-primaria"]) .rs-emo svg {width:3rem;height:3rem;object-fit:contain;display:block}
 
 :where([id="scheda-maiuscolo-minuscolo-primaria"]) .sezione-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 1rem 0 0.5rem 0; }
 :where([id="scheda-maiuscolo-minuscolo-primaria"]) .sezione-titolo .num {
@@ -1511,6 +1523,8 @@
     }
 :where([id="scheda-prime-frasi-sicurezza-primaria"]) .pf-riga { border-bottom: 2px solid var(--scheda-bordo); min-height: 1.7rem; margin-top: 0.2rem; }
 :where([id="scheda-prime-frasi-sicurezza-primaria"]) .pf-libera .pf-riga { margin-top: 0.5rem; }
+:where([id="scheda-prime-frasi-sicurezza-primaria"]) .pf-emo-titolo .e {display:inline-flex;width:2rem;height:2rem;align-items:center;justify-content:center;font-size:0;vertical-align:middle}
+:where([id="scheda-prime-frasi-sicurezza-primaria"]) .pf-emo-titolo .e img, :where([id="scheda-prime-frasi-sicurezza-primaria"]) .pf-emo-titolo .e svg {width:1.9rem;height:1.9rem;object-fit:contain;display:block}
 
 :where([id="scheda-corsivo-parole-primaria"]) .cs-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.55rem 0; }
 :where([id="scheda-corsivo-parole-primaria"]) .cs-modello { display: flex; align-items: center; gap: 0.7rem; }
@@ -1526,6 +1540,8 @@
       border-bottom: 2px solid #2f6fd0;
       border-radius: 2px;
     }
+:where([id="scheda-corsivo-parole-primaria"]) .cs-modello .emo {display:inline-flex;width:2.5rem;height:2.5rem;align-items:center;justify-content:center;font-size:0}
+:where([id="scheda-corsivo-parole-primaria"]) .cs-modello .emo img, :where([id="scheda-corsivo-parole-primaria"]) .cs-modello .emo svg {width:2.4rem;height:2.4rem;object-fit:contain;display:block}
 
 :where([id="scheda-corsivo-frasi-primaria"]) .cf-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.6rem 0; }
 :where([id="scheda-corsivo-frasi-primaria"]) .cf-modello { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
@@ -1544,6 +1560,8 @@
 @media print {
 :where([id="scheda-corsivo-frasi-primaria"]) { zoom: 0.92; }
 }
+:where([id="scheda-corsivo-frasi-primaria"]) .cf-modello .emo {display:inline-flex;width:1.6rem;height:1.6rem;align-items:center;justify-content:center;font-size:0}
+:where([id="scheda-corsivo-frasi-primaria"]) .cf-modello .emo img, :where([id="scheda-corsivo-frasi-primaria"]) .cf-modello .emo svg {width:1.5rem;height:1.5rem;object-fit:contain;display:block}
 
 :where([id="scheda-dettato-frasi-brevi-primaria"]) .dt-item { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.7rem 0; }
 :where([id="scheda-dettato-frasi-brevi-primaria"]) .dt-num {
@@ -1955,58 +1973,6 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
 :where([id="scheda-eventi-pc-italiani-primaria"]) .istruzioni-maestra strong { color: #664d03; }
-
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .sez-titolo h2 { font-size: 1.1rem; color: var(--scheda-blu); margin: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .consegna { font-size: 0.92rem; margin: 0.2rem 0 0.4rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .abbina { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.4rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .abbina ol { margin: 0; padding: 0.5rem 0.7rem 0.5rem 2rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; font-size: 0.92rem; line-height: 1.45; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .abbina ol li { margin: 0 0 0.45rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .abbina .premi { list-style: upper-alpha; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .abbina .usi { list-style: decimal; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .abbina .colonna-tit { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin: 0 0 0.2rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .griglia-risposte { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.95rem; text-align: center; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .griglia-risposte th, :where([id="scheda-nobel-che-ci-proteggono-primaria"]) .griglia-risposte td { border: 1.5px solid var(--scheda-bordo); padding: 0.35rem; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .griglia-risposte th { background: var(--scheda-blu); color: #fff; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .griglia-risposte td { height: 1.8rem; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .kit { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.45rem; margin: 0.4rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .kit .oggetto {
-      border: 1.5px solid var(--scheda-bordo); border-radius: 50%;
-      aspect-ratio: 2 / 1; display: flex; align-items: center; justify-content: center;
-      text-align: center; font-size: 0.9rem; padding: 0.3rem; line-height: 1.2;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .testo-storia {
-      padding: 0.6rem 0.9rem; background: #f4f7fb;
-      border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0;
-      margin: 0.45rem 0; font-size: 0.95rem; line-height: 1.55;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .testo-storia p { margin: 0 0 0.35rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .testo-storia p:last-child { margin-bottom: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card {
-      padding: 0.5rem 0.75rem; background: #fff;
-      border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.4rem 0;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card .num-q {
-      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
-      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card .testo { font-size: 0.93rem; line-height: 1.4; flex: 1; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card .righe { display: grid; gap: 0.45rem; padding-left: 2rem; margin-top: 0.3rem; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.5rem; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .ricorda {
-      margin: 0.5rem 0; padding: 0.45rem 0.8rem; border: 2px solid var(--scheda-blu);
-      border-radius: 8px; font-size: 0.92rem; text-align: center;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .blocco-unito, :where([id="scheda-nobel-che-ci-proteggono-primaria"]) .domanda-card { break-inside: avoid; page-break-inside: avoid; }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .istruzioni-maestra {
-      margin-top: 0.7rem; padding: 0.5rem 0.85rem;
-      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
-      border-radius: 0 6px 6px 0; font-size: 0.8rem; color: #664d03; line-height: 1.45;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-primaria"]) .istruzioni-maestra ul { margin: 0.3rem 0 0 1rem; padding: 0; }
 
 :where([id="scheda-problemi-matematici-pc-primaria"]) .problema-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -2448,6 +2414,14 @@
     }
 @media (max-width: 580px) {
 :where([id="scheda-decodifica-bollettino-primaria"]) .quattro-colori { grid-template-columns: 1fr; }
+}
+:where([id="scheda-decodifica-bollettino-primaria"]) .allerta-dot {display:inline-block;width:1.05em;height:1.05em;border-radius:50%;border:1.5px solid #333;vertical-align:-.12em;margin-right:.25em}
+:where([id="scheda-decodifica-bollettino-primaria"]) .allerta-verde {background:#28a745}
+:where([id="scheda-decodifica-bollettino-primaria"]) .allerta-giallo {background:#ffd43b}
+:where([id="scheda-decodifica-bollettino-primaria"]) .allerta-arancione {background:#fd7e14}
+:where([id="scheda-decodifica-bollettino-primaria"]) .allerta-rosso {background:#dc3545}
+@media print {
+:where([id="scheda-decodifica-bollettino-primaria"]) .allerta-dot {-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 
 :where([id="scheda-labirinto-evacuazione-primaria"]) .scuola-mappa {
@@ -3843,8 +3817,8 @@
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
     <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola Primaria (142 fogli A4)">
-      🖨️ Stampa tutto (142 fogli A4)
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola Primaria (139 fogli A4)">
+      🖨️ Stampa tutto (139 fogli A4)
     </button>
   </header>
 
@@ -3852,7 +3826,7 @@
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Primaria</h1>
     <p>
       Questo pacchetto contiene tutte le <strong>schede stampabili</strong> della Scuola Primaria (6-11 anni):
-      in stampa occupa <strong>142 fogli A4</strong>.
+      in stampa occupa <strong>139 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -3907,7 +3881,6 @@
       <li><a href="#scheda-leggi-rispondi-pompiere-primaria">Leggi e rispondi — Flavio e il pompiere</a></li>
       <li><a href="#scheda-riordina-frasi-allerta-primaria">Riordina le frasi — Una giornata di allerta meteo</a></li>
       <li><a href="#scheda-eventi-pc-italiani-primaria">Gli eventi che hanno fatto la Protezione Civile italiana</a></li>
-      <li><a href="#scheda-nobel-che-ci-proteggono-primaria">I Nobel che ci proteggono</a> <span class="toc-meta">· 3 fogli</span></li>
       <li><a href="#scheda-problemi-matematici-pc-primaria">I problemi matematici della Protezione Civile</a></li>
       <li><a href="#scheda-geografia-sismica-italia-primaria">La geografia sismica dell'Italia</a></li>
       <li><a href="#scheda-costituzione-pc-primaria">La Costituzione e la Protezione Civile</a></li>
@@ -9312,126 +9285,6 @@
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Eventi PC italiani" · Primaria 3ª-5ª · storia · rev. 2026</span>
-    </footer>
-  </article>
-</section>
-
-<section id="scheda-nobel-che-ci-proteggono-primaria" class="pacchetto-scheda" aria-label="Scheda: I Nobel che ci proteggono">
-  <article class="scheda-page">
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">I Nobel che ci proteggono</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria, classi 3ª-5ª</div>
-      </div>
-    </header>
-
-    <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 8-11 anni</span>
-      <span><strong>Obiettivo:</strong> scoprire che alcune grandi scoperte aiutano ogni giorno chi soccorre</span>
-      <span><strong>Discipline:</strong> storia, scienze, ed. civica</span>
-    </div>
-
-    <p class="scheda-intro">
-      Alfred Nobel era un chimico svedese. Nel suo testamento lasciò i suoi soldi per un premio da dare
-      a chi aiuta l'umanità con le sue scoperte. Ogni anno, a ottobre, si annunciano i nuovi premiati.
-      Alcune di quelle scoperte le usano anche i soccorritori e le trovi nel kit di emergenza di casa.
-    </p>
-
-    <div class="sez-titolo"><span class="num">1</span><h2>Chi ha scoperto che cosa?</h2></div>
-    <p class="consegna">Leggi chi ha vinto il premio a sinistra. Trova a destra dove usiamo la sua scoperta. Scrivi il numero nella griglia.</p>
-    <div class="abbina">
-      <div>
-        <p class="colonna-tit">Il premio</p>
-        <ol class="premi">
-          <li><strong>Henry Dunant, 1901.</strong> Aiutò i soldati feriti in una battaglia e propose di formare gruppi di soccorritori.</li>
-          <li><strong>Guglielmo Marconi, 1909.</strong> Fece viaggiare i messaggi senza fili, attraverso l'aria.</li>
-          <li><strong>Karl Landsteiner, 1930.</strong> Scoprì che esistono diversi gruppi di sangue.</li>
-          <li><strong>Tre scienziati nati in Giappone, 2014.</strong> Inventarono il LED blu: grazie a lui le luci LED fanno una luce bianca forte che consuma poco.</li>
-          <li><strong>Tre scienziati, 2019.</strong> Svilupparono le batterie al litio, che si ricaricano tante volte.</li>
-        </ol>
-      </div>
-      <div>
-        <p class="colonna-tit">Dove la usiamo oggi</p>
-        <ol class="usi">
-          <li>La torcia del kit di emergenza.</li>
-          <li>Il sangue donato che, in ospedale, aiuta chi è ferito.</li>
-          <li>Il telefono e il power bank.</li>
-          <li>I volontari che soccorrono le persone.</li>
-          <li>La radio a pile che dà le notizie quando manca la corrente.</li>
-        </ol>
-      </div>
-    </div>
-    <table class="griglia-risposte" aria-label="Griglia delle risposte: sotto ogni lettera del premio scrivi il numero">
-      <thead><tr><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th><th scope="col">E</th></tr></thead>
-      <tbody><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody>
-    </table>
-
-  </article>
-  <article class="scheda-page">
-    <div class="blocco-unito">
-    <div class="sez-titolo"><span class="num">2</span><h2>Il kit di emergenza di casa</h2></div>
-    <p class="consegna">Questi oggetti servono in un'emergenza e stanno nel kit o si tengono carichi. <strong>Colora</strong> quelli che funzionano grazie a una scoperta dell'esercizio 1.</p>
-    <div class="kit">
-      <div class="oggetto">Torcia</div>
-      <div class="oggetto">Acqua</div>
-      <div class="oggetto">Radio a pile</div>
-      <div class="oggetto">Fischietto</div>
-      <div class="oggetto">Power bank</div>
-      <div class="oggetto">Coperta termica</div>
-      <div class="oggetto">Telefono</div>
-      <div class="oggetto">Cerotti</div>
-    </div>
-    <div class="ricorda"><strong>Ricorda:</strong> il kit si prepara prima, con la famiglia. In un'emergenza avvisa subito un adulto o chiama il <strong>112</strong>.</div>
-    </div>
-
-    <div class="sez-titolo"><span class="num">3</span><h2>La storia di Henry Dunant</h2></div>
-    <div class="testo-storia">
-      <p>Nel 1859, vicino al lago di Garda, ci fu la grande battaglia di Solferino. Molti soldati restarono feriti, senza nessuno che li curasse.</p>
-      <p>Henry Dunant, un uomo svizzero, arrivò lì per caso. Con le donne del vicino paese di Castiglione delle Stiviere aiutò i feriti di tutti gli eserciti, senza differenze.</p>
-      <p>Poi scrisse un libro. Propose che in ogni Paese ci fossero gruppi di volontari, preparati prima, pronti ad aiutare quando serve. Da quella idea nacque la <strong>Croce Rossa</strong>. Nel 1901 Dunant ricevette, insieme al francese Frédéric Passy, il primo Nobel per la pace.</p>
-    </div>
-
-    <div class="domanda-card">
-      <div class="header"><span class="num-q">1</span><span class="testo">Chi aiutò Henry Dunant a curare i feriti?</span></div>
-      <div class="righe"><span class="r"></span></div>
-    </div>
-    <div class="domanda-card">
-      <div class="header"><span class="num-q">2</span><span class="testo">Quali soldati curavano: solo quelli di un esercito o di tutti gli eserciti?</span></div>
-      <div class="righe"><span class="r"></span></div>
-    </div>
-    <div class="domanda-card">
-      <div class="header"><span class="num-q">3</span><span class="testo">Dunant voleva volontari «preparati prima». Anche i volontari di protezione civile si preparano prima. Scrivi una cosa che <strong>tu e la tua famiglia</strong> potete preparare prima di un'emergenza.</span></div>
-      <div class="righe"><span class="r"></span><span class="r"></span></div>
-    </div>
-
-  </article>
-  <article class="scheda-page">
-    <div class="blocco-unito">
-    <div class="istruzioni-maestra">
-      <strong>Per l'insegnante</strong>
-      <ul>
-        <li>Tempo: circa 45 minuti. Le informazioni sui premi sono riassunte dalle pagine ufficiali di nobelprize.org.</li>
-        <li>Esercizio 2: radio, torcia, power bank e telefono funzionano grazie a scoperte premiate, ma dentro ognuno ci sono anche tante altre invenzioni. Va bene se la classe ne discute.</li>
-        <li>Esercizio 3: la battaglia si racconta senza particolari. Il punto è l'aiuto dato a tutti e l'idea di prepararsi prima. Le cose da preparare sono quelle del kit e del piano familiare sul sito.</li>
-        <li>Per proiettare in classe: il dossier interattivo «I Nobel che ci proteggono» su protezionecivilegenzano.it/dossier/.</li>
-      </ul>
-    </div>
-    <div class="soluzione-capovolta" style="margin-top: 3mm; font-size: 9pt; padding: 3mm 4mm;">
-      <span class="titolo">Soluzioni (capovolte — per l'insegnante: gira il foglio)</span>
-      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Esercizio 1:</strong> A-4 · B-5 · C-2 · D-1 · E-3.</li>
-        <li><strong>Esercizio 2:</strong> torcia (LED blu), radio a pile (Marconi), power bank e telefono (batterie al litio).</li>
-        <li><strong>Esercizio 3:</strong> 1) le donne del paese di Castiglione delle Stiviere · 2) i soldati di tutti gli eserciti · 3) risposta libera: per esempio preparare il kit di emergenza, imparare il numero 112, scegliere con la famiglia un punto d'incontro.</li>
-      </ul>
-    </div>
-
-    </div>
-
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "I Nobel che ci proteggono" · Primaria 3ª-5ª · storia, scienze, ed. civica · rev. ottobre 2026</span>
     </footer>
   </article>
 </section>
