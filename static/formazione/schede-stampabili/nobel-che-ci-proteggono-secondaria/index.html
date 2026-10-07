@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: I Nobel che ci proteggono (Secondaria I)</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/nobel-che-ci-proteggono-secondaria/">
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di Primo Grado: otto premi Nobel da datare con gli indizi e mettere sulla linea del tempo, vero o falso con correzione, dalla scoperta al gesto di autoprotezione.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+    .consegna { font-size: 0.88rem; margin: 0.2rem 0 0.4rem 0; }
+
+    .indizi { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.84rem; }
+    .indizi th, .indizi td { border: 1.5px solid var(--scheda-bordo); padding: 0.3rem 0.5rem; vertical-align: top; }
+    .indizi th { background: var(--scheda-blu); color: #fff; text-align: left; }
+    .indizi td.lettera { width: 2rem; text-align: center; font-weight: 700; color: var(--scheda-blu); }
+    .indizi td.anno { width: 4.5rem; }
+
+    .linea { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0; margin: 0.5rem 0 0.2rem 0; position: relative; }
+    .linea::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px solid var(--scheda-blu); }
+    .linea span {
+      position: relative; margin: 0 0.3rem; height: 2.2rem; background: #fff;
+      border: 2px dashed var(--scheda-blu); border-radius: 6px;
+    }
+    .linea-etichette { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--scheda-blu); font-weight: 700; margin-bottom: 0.3rem; }
+
+    .classifica { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.85rem; }
+    .classifica th, .classifica td { border: 1.5px solid var(--scheda-bordo); padding: 0.35rem 0.5rem; vertical-align: top; }
+    .classifica th { background: var(--scheda-blu); color: #fff; text-align: left; }
+    .classifica td.casella { width: 3.2rem; }
+    .classifica td.correzione { width: 40%; }
+
+    .gesti { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.85rem; }
+    .gesti th, .gesti td { border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.5rem; vertical-align: top; }
+    .gesti th { background: var(--scheda-blu); color: #fff; text-align: left; }
+    .gesti td.vuota { height: 3.2rem; }
+    .gesti td.esempio { font-style: italic; color: #333; }
+
+    .domanda-card {
+      padding: 0.5rem 0.75rem; background: #fff;
+      border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin: 0.4rem 0;
+    }
+    .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .domanda-card .num-q {
+      width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+    }
+    .domanda-card .testo { font-size: 0.88rem; line-height: 1.4; flex: 1; }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+
+    .blocco-unito, .domanda-card { break-inside: avoid; page-break-inside: avoid; }
+
+    .istruzioni-docente {
+      margin-top: 0.7rem; padding: 0.5rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.8rem; color: #664d03; line-height: 1.45;
+    }
+    .istruzioni-docente ul { margin: 0.3rem 0 0 1rem; padding: 0; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">I Nobel che ci proteggono — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">I Nobel che ci proteggono</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di Primo Grado</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-14 anni</span>
+      <span><strong>Obiettivo:</strong> collegare scoperte premiate e strumenti della protezione civile; ragionare sulle date; correggere un'affermazione sbagliata</span>
+      <span><strong>Discipline:</strong> storia, scienze, matematica, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Alfred Nobel, chimico svedese, destinò la sua fortuna a premi per chi avesse portato «il maggior beneficio
+      all'umanità». I premi si assegnano dal 1901. Alcune scoperte premiate oggi lavorano per la nostra sicurezza:
+      nella radio dei soccorsi, nel defibrillatore, nel kit di emergenza di casa.
+    </p>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>Indovina l'anno, poi costruisci la linea del tempo</h2></div>
+    <p class="consegna">Usa gli indizi per trovare l'anno di ogni premio e scrivilo nella colonna «Anno». Alcuni indizi rimandano a un altro premio: comincia da quelli che puoi risolvere subito.</p>
+    <table class="indizi">
+      <thead><tr><th scope="col">&nbsp;</th><th scope="col">Premio e scoperta</th><th scope="col">Indizio</th><th scope="col">Anno</th></tr></thead>
+      <tbody>
+        <tr><td class="lettera">A</td><td><strong>Fisica.</strong> Akasaki, Amano e Nakamura: il LED blu, che ha reso possibile la luce bianca forte e a basso consumo.</td><td>Premiati 105 anni dopo la radio di Marconi.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">B</td><td><strong>Pace.</strong> Henry Dunant: l'aiuto ai soldati feriti di Solferino, da cui nasce la Croce Rossa.</td><td>Fu il primo Nobel per la pace della storia.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">C</td><td><strong>Fisica.</strong> Manabe e Hasselmann: i modelli fisici del clima della Terra.</td><td>Premiati due anni dopo le batterie al litio.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">D</td><td><strong>Medicina.</strong> Willem Einthoven: l'elettrocardiogramma, che registra l'attività elettrica del cuore.</td><td>Premiato sei anni prima dei gruppi sanguigni.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">E</td><td><strong>Chimica.</strong> Crutzen, Molina e Rowland: come si forma e si distrugge l'ozono.</td><td>Premiati otto anni dopo il Protocollo di Montreal, l'accordo del 1987 per eliminare i gas che distruggono l'ozono.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">F</td><td><strong>Fisica.</strong> Guglielmo Marconi e Ferdinand Braun: la telegrafia senza fili.</td><td>Tre anni dopo il premio, nel 1912, la radio del Titanic chiamò aiuto e la nave Carpathia salvò oltre 700 persone.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">G</td><td><strong>Chimica.</strong> Goodenough, Whittingham e Yoshino: le batterie agli ioni di litio.</td><td>Premiati cinque anni dopo il LED blu.</td><td class="anno"></td></tr>
+        <tr><td class="lettera">H</td><td><strong>Medicina.</strong> Karl Landsteiner: i gruppi sanguigni, che rendono sicure le trasfusioni.</td><td>Premiato 29 anni dopo il primo Nobel per la pace.</td><td class="anno"></td></tr>
+      </tbody>
+    </table>
+    <div class="blocco-unito">
+    <p class="consegna">Ora scrivi le lettere nelle caselle, dal premio più antico al più recente.</p>
+    <div class="linea" role="img" aria-label="Linea del tempo con otto caselle vuote, dal premio più antico a sinistra al più recente a destra"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="linea-etichette"><span>più antico</span><span>più recente</span></div>
+    </div>
+
+    <div class="blocco-unito">
+    <div class="sez-titolo"><span class="num">2</span><h2>Vero o falso? Correggi le frasi false</h2></div>
+    <p class="consegna">Scrivi <strong>V</strong> o <strong>F</strong>. Se la frase è falsa, riscrivila giusta nell'ultima colonna.</p>
+    <table class="classifica">
+      <thead><tr><th scope="col">Frase</th><th scope="col">V o F</th><th scope="col">Correzione</th></tr></thead>
+      <tbody>
+        <tr><td>I premi Nobel li assegna ogni anno il Parlamento italiano.</td><td class="casella"></td><td class="correzione"></td></tr>
+        <tr><td>Il defibrillatore automatico legge l'attività elettrica del cuore e decide da solo se serve una scarica.</td><td class="casella"></td><td class="correzione"></td></tr>
+        <tr><td>Grazie al Protocollo di Montreal il buco dell'ozono sopra l'Antartide è già sparito del tutto.</td><td class="casella"></td><td class="correzione"></td></tr>
+        <tr><td>Il buco dell'ozono è la causa del riscaldamento globale.</td><td class="casella"></td><td class="correzione"></td></tr>
+        <tr><td>Il Comitato internazionale della Croce Rossa ha ricevuto il Nobel per la pace tre volte.</td><td class="casella"></td><td class="correzione"></td></tr>
+        <tr><td>Prima della scoperta dei gruppi sanguigni ogni trasfusione era sicura.</td><td class="casella"></td><td class="correzione"></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="blocco-unito">
+    <div class="sez-titolo"><span class="num">3</span><h2>Dalla scoperta al gesto</h2></div>
+    <p class="consegna">Per ogni scoperta scrivi una cosa concreta che puoi fare tu, prima di un'emergenza. La prima riga è un esempio.</p>
+    <table class="gesti">
+      <thead><tr><th scope="col">La scoperta</th><th scope="col">Che cosa posso fare io</th></tr></thead>
+      <tbody>
+        <tr><td>Le batterie al litio (2019)</td><td class="esempio">Tengo carico un power bank nel kit, così posso usare il telefono anche se manca la corrente.</td></tr>
+        <tr><td>La telegrafia senza fili, cioè la radio (1909)</td><td class="vuota"></td></tr>
+        <tr><td>L'elettrocardiogramma, alla base del defibrillatore (1924)</td><td class="vuota"></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="blocco-unito">
+    <div class="sez-titolo"><span class="num">4</span><h2>Compito di realtà: il premio della classe</h2></div>
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Scegli un'invenzione che usi ogni giorno e che può servire in un'emergenza, ma che non compare in questa scheda. Spiega in tre righe che cosa fa e perché meriterebbe un premio. Indica <strong>dove hai trovato</strong> le informazioni.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+    </div>
+
+    <div class="istruzioni-docente">
+      <strong>Per il/la docente</strong>
+      <ul>
+        <li>Tempo: circa 50 minuti. Le motivazioni dei premi sono riassunte dalle pagine ufficiali di nobelprize.org.</li>
+        <li>Sezione 1: due indizi si risolvono subito (B e F); gli altri a catena. È un esercizio di ragionamento e di calcolo, non di memoria.</li>
+        <li>Sezione 3: la risposta sul defibrillatore deve partire dal 112. I ragazzi non devono pensare di sostituirsi ai soccorritori: possono sapere dove si trova il DAE più vicino e seguire un corso quando l'età lo consente.</li>
+        <li>Nel compito di realtà valutate la correttezza e la fonte, non la scelta: ogni invenzione motivata va bene.</li>
+        <li>Per proiettare in classe: il dossier interattivo «I Nobel che ci proteggono» su protezionecivilegenzano.it/dossier/.</li>
+      </ul>
+    </div>
+    <div class="soluzione-capovolta" style="margin-top: 3mm; font-size: 9pt; padding: 3mm 4mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Sezione 1, anni:</strong> A 2014 · B 1901 · C 2021 · D 1924 · E 1995 · F 1909 · G 2019 · H 1930. <strong>Linea del tempo:</strong> B · F · D · H · E · A · G · C.</li>
+        <li><strong>Sezione 2:</strong> 1) F, li assegnano istituzioni svedesi; quello per la pace il Comitato norvegese per il Nobel, a Oslo · 2) V · 3) F, si forma ancora ogni primavera ma si sta riducendo: secondo WMO e UNEP (2022) tornerà ai valori del 1980 intorno al 2066 · 4) F, sono due problemi distinti · 5) V, nel 1917, 1944 e 1963 · 6) F, una trasfusione di sangue non compatibile poteva uccidere; oggi la compatibilità si controlla sempre.</li>
+        <li><strong>Sezione 3:</strong> radio: nel kit metto una radio a pile o a manovella, per ascoltare le notizie ufficiali senza corrente · defibrillatore: imparo dove si trova il DAE più vicino; se una persona sta male gravemente si chiama subito il 112.</li>
+        <li><strong>Sezione 4:</strong> risposta libera. Criteri: descrizione corretta, legame chiaro con l'emergenza, almeno una fonte verificabile.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "I Nobel che ci proteggono" · Secondaria I · storia, scienze, ed. civica · rev. ottobre 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

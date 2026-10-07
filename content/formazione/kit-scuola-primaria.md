@@ -535,6 +535,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 **Schede di approfondimento per classi 3ª-5ª** — storia, matematica, geografia, ed. civica, comprensione testo, compito di realtà:
 
 - 👉 [**Eventi che hanno fatto la PC italiana**](/formazione/schede-stampabili/eventi-pc-italiani-primaria/) — 6 eventi storici (Vajont, Friuli, Irpinia, Sarno, L'Aquila, Amatrice) da abbinare all'anno e riordinare. Causa-conseguenza fra evento e legge. *(storia)*
+- 👉 [**I Nobel che ci proteggono**](/formazione/schede-stampabili/nobel-che-ci-proteggono-primaria/) — cinque scoperte premiate con il Nobel da abbinare agli oggetti del soccorso, il kit di emergenza da colorare, la storia di Henry Dunant e della Croce Rossa. Si accompagna al [dossier interattivo](/dossier/i-nobel-che-ci-proteggono/). *(storia, scienze, ed. civica)*
 - 👉 [**Problemi Matematici della PC**](/formazione/schede-stampabili/problemi-matematici-pc-primaria/) — 6 problemi con dati reali: pioggia in mm, evacuazione, kit, divisione volontari, raggio di emergenza, magnitudo. *(matematica)*
 - 👉 [**Geografia Sismica dell'Italia**](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) — mappa SVG con le 4 zone sismiche, abbina regione/zona, riflessione sulla Sardegna. *(geografia)*
 - 👉 [**La Costituzione e la PC**](/formazione/schede-stampabili/costituzione-pc-primaria/) — articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, sussidiarietà, volontariato. *(ed. civica, classi 4ª-5ª)*

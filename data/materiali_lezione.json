@@ -2191,6 +2191,22 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "I Nobel che ci proteggono",
+   "url": "/formazione/schede-stampabili/nobel-che-ci-proteggono-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 45,
+   "temi": [
+    "casa",
+    "natura",
+    "informazione"
+   ],
+   "desc": "Cinque scoperte premiate con il Nobel da abbinare agli oggetti del soccorso (radio, torcia, power bank, sangue donato), il kit di emergenza da colorare, la storia di Henry Dunant e della Croce Rossa.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "Intervista al Volontario PC",
    "url": "/formazione/schede-stampabili/intervista-volontario-primaria/",
    "fasce": [
@@ -2487,6 +2503,20 @@
     "volontariato"
    ],
    "desc": "Articoli 32, 117, 118 della Costituzione: testo originale + analisi + glossario costituzionale (concorrente, sussidiarietà, indigenti). domande di approfondimento.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I Nobel che ci proteggono",
+   "url": "/formazione/schede-stampabili/nobel-che-ci-proteggono-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "caldo"
+   ],
+   "desc": "Otto premi Nobel da datare con gli indizi e mettere sulla linea del tempo, vero o falso da correggere (ozono, clima, trasfusioni), dalla scoperta al gesto di autoprotezione.",
    "facilitata": false
   },
   {
