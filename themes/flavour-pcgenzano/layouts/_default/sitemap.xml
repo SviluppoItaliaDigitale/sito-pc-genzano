@@ -1,3 +1,9 @@
+{{- /* Niente changefreq e priority (audit esterno del 07/10/2026): Google li
+       ignora e Bing li tratta come indizi deboli, mentre i valori per sezione
+       davano l'impressione di una gerarchia che i motori non usano. Restano
+       loc e lastmod (data dell'ultima modifica in git), l'unico segnale utile.
+       I campi sitemap.priority nel frontmatter di alcune pagine non hanno più
+       effetto. */ -}}
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -12,12 +18,6 @@
     <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) $pagePath | safeHTML }}</loc>
     {{- if not .Lastmod.IsZero }}
     <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
-    {{- end }}
-    {{- with .Sitemap.ChangeFreq }}
-    <changefreq>{{ . }}</changefreq>
-    {{- end }}
-    {{- if ge .Sitemap.Priority 0.0 }}
-    <priority>{{ .Sitemap.Priority }}</priority>
     {{- end }}
   </url>
   {{- end }}
@@ -45,8 +45,6 @@
       {{- if $ok }}
   <url>
     <loc>{{ printf "%s/formazione/schede-stampabili/%s/" (strings.TrimRight "/" $prodBase) .Name | safeHTML }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
       {{- end }}
     {{- end }}
@@ -60,8 +58,6 @@
         {{- if and .IsDir (ne .Name "assets") }}
   <url>
     <loc>{{ printf "%s/giochi/%s/%s/" (strings.TrimRight "/" $prodBase) $fascia .Name | safeHTML }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
         {{- end }}
       {{- end }}
@@ -74,8 +70,6 @@
       {{- if and .IsDir (ne .Name "assets") }}
   <url>
     <loc>{{ printf "%s/abili-a-proteggere/%s/" (strings.TrimRight "/" $prodBase) .Name | safeHTML }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
       {{- end }}
     {{- end }}
@@ -85,8 +79,6 @@
   {{- range slice "giochi/" "giochi/infanzia/" "giochi/primaria/" "giochi/ragazzi/" "abili-a-proteggere/" "formazione/schede-stampabili/" "quizpc/" "formazionepc/" }}
   <url>
     <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) . | safeHTML }}</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   {{- end }}
 
@@ -103,8 +95,6 @@
         {{- if and (not .IsDir) (strings.HasSuffix .Name ".html") (ne .Name "index.html") (not (findRE `<meta[^>]+name="robots"[^>]+noindex` (readFile $f) 1)) }}
   <url>
     <loc>{{ printf "%s/%s/%s" (strings.TrimRight "/" $prodBase) $dir .Name | safeHTML }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
         {{- end }}
       {{- end }}

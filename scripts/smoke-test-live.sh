@@ -146,6 +146,25 @@ echo "$HTML" | grep -q "Piattaforma Formativa" && ok "Formazione PC: H1 presente
 HTML=$(fetch "$BASE/abili-a-proteggere/")
 echo "$HTML" | grep -q "Abili a Proteggere" && ok "Abili a Proteggere: H1 presente" || err "Abili a Proteggere: H1 mancante"
 
+# 4-bis. Indirizzi scritti a intuito (07/10/2026). Un audit esterno ha trovato
+# /volontariato/ in 404: nessun controllo provava gli indirizzi che un
+# cittadino scrive a mano, solo quelli linkati. Ognuno deve portare con un
+# 301 alla pagina giusta (RedirectMatch in .htaccess). Su GitHub Pages
+# .htaccess non vale: lì il controllo non ha senso e si salta.
+echo ""
+echo "## 4-bis. Indirizzi scritti a intuito"
+if echo "$BASE" | grep -q "protezionecivilegenzano.it"; then
+  for coppia in volontariato:diventa-volontario volontari:diventa-volontario \
+      piano-di-emergenza:piano-emergenza allerta:allerte-meteo meteo:allerte-meteo \
+      emergenze:emergenza contatto:contatti numeri:numeri-utili; do
+    da="${coppia%%:*}"; a_="${coppia#*:}"
+    loc=$(curl -s -o /dev/null -w "%{http_code} %{redirect_url}" --max-time 15 "$BASE/$da/" 2>/dev/null)
+    [ "$loc" = "301 $BASE/$a_/" ] && ok "/$da/ → /$a_/" || err "/$da/ non porta a /$a_/ ($loc)"
+  done
+else
+  ok "Saltato fuori da Aruba (.htaccess non attivo)"
+fi
+
 # 5. Header sicurezza
 echo ""
 echo "## 5. Header HTTP sicurezza"
