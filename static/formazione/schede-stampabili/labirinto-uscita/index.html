@@ -69,9 +69,9 @@
       background: #f8f9fa;
       border-radius: 12px;
     }
-    .lab-legenda-icon {
-      font-size: 1.2rem;
-    }
+    .lab-legenda-icon { width:1.5rem; height:1.5rem; display:inline-flex; align-items:center; justify-content:center; }
+    .lab-legenda-icon img { max-width:100%; max-height:100%; object-fit:contain; }
+    .lab-cella img { max-width:88%; max-height:88%; object-fit:contain; }
     @media print {
       .lab-griglia {
         grid-template-columns: repeat(11, 1.4cm);
@@ -140,13 +140,13 @@
 
     <div class="lab-griglia" role="img" aria-label="Labirinto 11 colonne per 9 righe. Bambino in alto a sinistra, uscita in basso a destra.">
       <!-- Riga 1 -->
-      <div class="lab-cella start">🧒</div>
+      <div class="lab-cella start"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Partenza"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
@@ -167,13 +167,13 @@
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella fuoco">🔥</div>
+      <div class="lab-cella fuoco"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt="Fuoco"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
       <!-- Riga 4 -->
       <div class="lab-cella muro"></div>
@@ -193,7 +193,7 @@
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella muro"></div>
@@ -219,7 +219,7 @@
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella ostacolo">🎒</div>
+      <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
@@ -246,14 +246,14 @@
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
       <div class="lab-cella"></div>
-      <div class="lab-cella end">🚪</div>
+      <div class="lab-cella end"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="Uscita"></div>
     </div>
 
     <div class="lab-legenda">
-      <span class="lab-legenda-item"><span class="lab-legenda-icon">🧒</span> Bambino (parti da qui)</span>
-      <span class="lab-legenda-item"><span class="lab-legenda-icon">🚪</span> Uscita (arriva qui)</span>
-      <span class="lab-legenda-item"><span class="lab-legenda-icon">🎒</span> Zaino (non passare)</span>
-      <span class="lab-legenda-item"><span class="lab-legenda-icon">🔥</span> Fuoco (pericolo)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></span> Partenza</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></span> Uscita (arriva qui)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></span> Zaino (non passare)</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt=""></span> Fuoco (pericolo)</span>
       <span class="lab-legenda-item">⬛ Muro</span>
     </div>
 
