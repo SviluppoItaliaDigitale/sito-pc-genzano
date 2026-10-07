@@ -24,7 +24,7 @@ social_punti:
 
 ## Un servizio di supporto tecnico
 
-Il servizio è cominciato poco dopo le 16, con il **Mercedes Atego**. È il mezzo polivalente del Gruppo, con impianto antincendio da 6.000 litri (gli altri sono nella pagina dei [mezzi del Gruppo](/chi-siamo/)). Nel registro degli interventi il servizio è annotato come **supporto tecnico** alla manifestazione.
+Il servizio è cominciato poco dopo le 16, con il **Mercedes Atego**. È il mezzo polivalente del Gruppo, con impianto antincendio da 6.000 litri. Gli altri mezzi sono nella pagina [Chi siamo](/chi-siamo/). Nel registro degli interventi il servizio è annotato come **supporto tecnico** alla manifestazione.
 
 Una foto della serata mostra il mezzo fermo in una strada di Marino, sotto le luminarie a grappoli d'uva. Il servizio si è chiuso **dopo mezzanotte**, dopo oltre otto ore.
 
