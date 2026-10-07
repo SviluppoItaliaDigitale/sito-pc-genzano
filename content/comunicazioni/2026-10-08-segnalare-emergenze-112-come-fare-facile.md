@@ -26,24 +26,24 @@ Nel Lazio chiami il **112** per ogni emergenza. Il 112 è il numero unico di eme
 Devi dare queste informazioni:
 
 **1. Cosa è successo**
-- Dì una frase semplice. Esempio: "c'è un incendio" o "una persona è caduta".
+- Di' una frase semplice. Esempio: "c'è un incendio" o "una persona è caduta".
 
 **2. Dove sei**
-- Dì la via e il numero. Esempio: "via Roma 5, Genzano".
+- Di' la via e il numero. Esempio: "via Roma 5, Genzano".
 - Se non sai l'indirizzo, dì un posto vicino. Esempio: "vicino alla farmacia centrale".
-- Dì anche il piano, se sei in un palazzo.
+- Di' anche il piano, se sei in un palazzo.
 
 **3. Quante persone sono in pericolo**
-- Dì: 1 persona, 2 persone, bambini, anziani.
-- Dì se le persone sono ferite o non rispondono.
+- Di': 1 persona, 2 persone, bambini, anziani.
+- Di' se le persone sono ferite o non rispondono.
 
 **4. Come stanno le persone**
 - Respirano? Parlano? Sono sveglie?
 - Hai visto sangue o difficoltà a respirare?
 
 **5. Chi sei tu**
-- Dì il tuo nome e cognome.
-- Dì il tuo numero di telefono.
+- Di' il tuo nome e cognome.
+- Di' il tuo numero di telefono.
 
 ## Cosa non fare
 
@@ -65,11 +65,11 @@ Leggi l'articolo: [Where Are U: l'app del 112](/comunicazioni/2026-04-27-app-whe
 
 ## Se sei in più persone
 
-Solo 1 persona chiama il 112. Dì ad alta voce chi deve chiamare. Esempio: "tu con la giacca rossa, chiama il 112". Le altre persone aiutano i feriti. Non aspettare che qualcun altro chiami.
+Solo 1 persona chiama il 112. Di' ad alta voce chi deve chiamare. Esempio: "tu con la giacca rossa, chiama il 112". Le altre persone aiutano i feriti. Non aspettare che qualcun altro chiami.
 
 ## Se non parli italiano
 
-Chiama il 112 lo stesso. Dì la tua lingua. Esempio: "English" o "français". L'operatore trova qualcuno che capisce la tua lingua.
+Chiama il 112 lo stesso. Di' la tua lingua. Esempio: "English" o "français". L'operatore trova qualcuno che capisce la tua lingua.
 
 ## Se chiami per sbaglio
 
