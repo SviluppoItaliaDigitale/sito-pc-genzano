@@ -101,6 +101,8 @@ Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome
 - `pc-deploy-validator` (Bash-only oggi) può aggiungere uno step opzionale di smoke test interattivo prima dell'OK al merge.
 - `browser-qa` skill globale ECC trova qui il backend operativo concreto.
 
+**Nelle sessioni cloud (dal 07/10/2026)** il server MCP non c'è: si usa la libreria Python di Playwright con il Chromium preinstallato (`executable_path='/opt/pw-browsers/chromium'`). Il browser deve uscire dal proxy dell'ambiente (`proxy={'server': os.environ['HTTPS_PROXY']}`) e fidarsi della sua autorità di certificazione: se compare `ERR_CERT_AUTHORITY_INVALID`, si importano i certificati di `/root/.ccr/ca-bundle.crt` nel registro NSS dell'utente (`certutil -A -d sql:$HOME/.pki/nssdb -t "C,," -n <nome> -i <certificato>`, pacchetto `libnss3-tools`; un certificato per volta se il bundle ne contiene più d'uno). 🔴 Mai `ignore_https_errors`: disattiverebbe la verifica TLS. Con questo assetto il 07/10/2026 si è letto il sito del Ministero della Salute, protetto da un servizio anti-bot, e si sono misurate le pagine del sito pubblicato. Lo usano `pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni` e `pc-verifica-visiva`.
+
 ---
 
 ## MinerU — estrazione di PDF ostici (OCR + tabelle) in Markdown

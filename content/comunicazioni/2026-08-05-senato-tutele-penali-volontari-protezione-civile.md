@@ -48,6 +48,10 @@ Due precisazioni importanti, per leggere la novità senza fraintendimenti:
 - **Non è un'immunità.** La colpa grave, l'imprudenza macroscopica e la violazione delle regole di settore restano penalmente rilevanti. Formazione, addestramento e rispetto delle procedure rimangono la prima tutela, per sé e per gli altri.
 - **Non è ancora legge.** Il testo deve completare l'esame della Camera. Aggiorneremo questa notizia quando il percorso parlamentare sarà concluso.
 
+### Aggiornamento del 7 ottobre 2026
+
+Il testo non è ancora legge. Alla Camera è l'atto **C. 3076**, «Disposizioni in materia di protezione civile», trasmesso dal Senato il 4 agosto. Lo esaminano insieme le Commissioni Affari costituzionali e Lavoro. L'ultima seduta indicata sul [sito della Camera](https://www.camera.it/leg19/126?leg=19&idDocumento=3076) è del 23 settembre 2026, con il rinvio del seguito dell'esame. Quando la Camera voterà il testo, lo riporteremo in questa pagina.
+
 ## Il quadro normativo
 
 La riforma interviene sul sistema disegnato dal **Codice della Protezione Civile** (decreto legislativo 2 gennaio 2018, n. 1), che definisce ruoli e responsabilità di sindaci, strutture operative e volontariato organizzato. Il sindaco è l'**autorità comunale di protezione civile**: su di lui ricadono decisioni delicate come allertamenti, chiusure e ordinanze urgenti.

@@ -40,7 +40,7 @@ Il piano dice come:
 
 ## Cosa succede adesso
 
-Ogni Regione deve adottare il piano entro 90 giorni. Anche la Regione Lazio deve farlo. Noi seguiremo le novità e le racconteremo qui.
+Ogni Regione doveva adottare il piano entro il 29 luglio 2026. Anche la Regione Lazio doveva farlo. Il 7 ottobre 2026 non abbiamo ancora trovato la decisione della Regione Lazio. Quando la Regione la pubblica, la scriviamo qui.
 
 ## Cosa puoi fare tu
 

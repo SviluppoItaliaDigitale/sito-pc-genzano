@@ -482,7 +482,10 @@ In `.claude/agents/` ci sono **35 agenti custom** (dal 28/09/2026 anche `pc-cale
 | `pc-verifica-visiva` | markup custom, schede, stampa | Screenshot mobile/desktop/stampa letti davvero |
 | `pc-usabilita` | menu, hub, percorsi | Architettura dell'informazione e percorsi critici per profilo |
 | `pc-documentazione` | dopo modifiche strutturali | Documentazione allineata ai componenti reali |
-| `pc-audit-completo` | "fammi l'audit completo" (routine mensile) | Orchestratore: script + specialisti, rapporto in formato rilievi, correzioni fino a live |
+| `pc-visitatore-reale` | "un anziano trova i numeri utili?", "si usa da telefono?" | Usa il sito pubblicato come persone diverse senza la mappa: indirizzi scritti a mano, ricerca con le parole della gente, compiti per profilo |
+| `pc-collaudo-funzionale` | "funziona ancora tutto?" | Prova sul sito pubblicato ogni strumento interattivo: compito, caso limite, ricarico, tastiera, console, stampa |
+| `pc-prestazioni` | "il sito è lento?" | Peso e velocità per tipo di pagina su rete mobile lenta, budget e crescita |
+| `pc-audit-completo` | "fammi l'audit completo" (routine mensile) | Orchestratore: script + specialisti, rapporto in formato rilievi, correzioni fino a live; dal 07/10/2026 anche la fase «il sito visto da fuori» (indirizzi scritti a mano, file per motori e macchine con le linee guida attuali, decisioni del passato rimesse in discussione, debiti dichiarati con data) |
 | `pc-materiali-publisher` | "pubblica gli output di NotebookLM per il tema X" | Pipeline pubblicazione automatica materiali NotebookLM su `/risorse-pronte/` (podcast, infografiche, presentazioni) |
 
 Quando l'utente fa una richiesta che corrisponde al trigger di uno di questi agenti, **applica i criteri descritti** anche se non puoi richiamare il sub-agent specifico.
