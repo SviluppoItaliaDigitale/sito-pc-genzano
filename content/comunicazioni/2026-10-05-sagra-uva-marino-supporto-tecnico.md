@@ -24,7 +24,7 @@ social_punti:
 
 ## Un servizio di supporto tecnico
 
-Il servizio è cominciato poco dopo le 16, con il **Mercedes Atego**, il mezzo polivalente del Gruppo con impianto antincendio da 6.000 litri (elenco completo nella pagina dei [mezzi del Gruppo](/chi-siamo/)). Nel registro degli interventi il servizio è annotato come **supporto tecnico** alla manifestazione.
+Il servizio è cominciato poco dopo le 16, con il **Mercedes Atego**. È il mezzo polivalente del Gruppo, con impianto antincendio da 6.000 litri (gli altri sono nella pagina dei [mezzi del Gruppo](/chi-siamo/)). Nel registro degli interventi il servizio è annotato come **supporto tecnico** alla manifestazione.
 
 Una foto della serata mostra il mezzo fermo in una strada di Marino, sotto le luminarie a grappoli d'uva. Il servizio si è chiuso **dopo mezzanotte**, dopo oltre otto ore.
 
@@ -36,7 +36,7 @@ Una foto della serata mostra il mezzo fermo in una strada di Marino, sotto le lu
 
 Sul posto c'erano anche la **Polizia Locale**, i **Carabinieri**, la **Polizia di Stato** e **altri gruppi di protezione civile**. La gestione del traffico e l'ordine pubblico spettano alle forze di polizia, non ai volontari.
 
-> ⚠️ Il volontariato di Protezione Civile **non può regolare il traffico, svolgere servizi di polizia stradale né usare palette dirigitraffico**. Questi compiti spettano solo alle Forze dell'Ordine e alla Polizia Locale. Lo stabiliscono gli articoli 11 e 12 del Codice della Strada (D.Lgs. 285/1992), e lo ribadisce la [Circolare del Dipartimento della Protezione Civile del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/).
+> ⚠️ Il volontariato di Protezione Civile **non può regolare il traffico, svolgere servizi di polizia stradale né usare palette dirigitraffico**. Questi compiti spettano solo alle Forze dell'Ordine e alla Polizia Locale. Lo stabiliscono gli articoli 11 e 12 del Codice della Strada (D.Lgs. 285/1992). Lo ribadisce la [Circolare del Dipartimento della Protezione Civile del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/).
 
 ## Per approfondire
 
