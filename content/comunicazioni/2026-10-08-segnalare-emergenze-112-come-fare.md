@@ -1,6 +1,6 @@
 ---
 title: "Chiamare il 112: come fare bene una segnalazione di emergenza"
-date: 2026-10-08
+date: 2026-10-08T00:01:00+02:00
 description: "Una chiamata al 112 ben fatta può salvare vite. Cosa dire, come dirlo, cosa NON dire. Una guida rapida."
 badge: "Informazione"
 priorita: "normale"

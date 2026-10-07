@@ -1,6 +1,6 @@
 ---
 title: "Come chiamare il 112 in emergenza"
-date: 2026-10-08
+date: 2026-10-08T00:01:00+02:00
 description: "Come chiamare il 112. Cosa dire all'operatore. Cosa non fare."
 badge: "Informazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Vajont, 9 ottobre 1963: la tragedia che la scienza aveva previsto"
-date: 2026-10-09
+date: 2026-10-09T00:01:00+02:00
 description: "Alle 22:39 del 9 ottobre 1963, quasi 270 milioni di metri cubi di roccia caddero nel bacino della diga del Vajont."
 badge: "Informazione"
 priorita: "normale"
