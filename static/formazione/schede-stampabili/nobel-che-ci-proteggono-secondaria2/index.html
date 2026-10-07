@@ -9,6 +9,9 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <!-- Scala di stampa: la prima pagina deve stare nel foglio insieme alla fascia delle affiliazioni
+       (controllo fogli di stampa, 07/10/2026). -->
+  <style>@media print { html { font-size: 94%; } }</style>
   <style>
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
