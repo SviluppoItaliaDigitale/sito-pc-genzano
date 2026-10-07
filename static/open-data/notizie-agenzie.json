@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-07T09:19:24+00:00",
+  "generato": "2026-10-07T16:49:41+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-07T09:13:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Messi, i regali per l’addio all’Argentina: dal 'bracciale della leggenda' ai cartellini dell'arbitro e... la Coppa America",
-   "url": "https://www.adnkronos.com/sport/messi-i-regali-per-laddio-allargentina-dal-bracciale-della-leggenda-ai-cartellini-dellarbitro-e-la-coppa-america_7ByREOXFlzJmEMLDNgUOyQ"
-  },
-  {
-   "data": "2026-10-07T09:11:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meghan Markle lancia il calendario dell'Avvento, spunta la proposta 'economica' del sacerdote",
-   "url": "https://www.adnkronos.com/internazionale/royalfamilynews/meghan-markle-sacerdote-calendario-avvento_7G0DWyuC35AuI6JyJght5m"
-  },
-  {
-   "data": "2026-10-07T09:03:47+00:00",
+   "data": "2026-10-07T16:44:38+00:00",
    "fonte": "ANSA",
-   "titolo": "Oggi i vincitori del Nobel per la Chimica",
-   "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/10/05/oggi-i-vincitori-del-nobel-per-la-chimica_f8f2b9cf-0b31-40e4-a001-c9e5a57670a5.html"
+   "titolo": "Addio a Barbara Spinelli, una vita tra europeismo e impegno civile",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/07/e-morta-barbara-spinelli_8f7b03d7-bc4a-4912-95e9-5bd3eddb7028.html"
   },
   {
-   "data": "2026-10-07T08:59:10+00:00",
+   "data": "2026-10-07T16:39:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il premier francese: 'Le parole degli studenti sono preziose, ora siano ascoltate'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/07/il-premier-francese-le-parole-degli-studenti-sono-preziose-ora-siano-ascoltate_3631eed7-1347-4d7b-b8b5-66126ea682f5.html"
+  },
+  {
+   "data": "2026-10-07T16:35:21+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Braccianti-schiavi clandestini nel Casertano, a lavoro per 14 ore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/braccianti-schiavi-clandestini-nel-casertano-a-lavoro-per-14-ore_f1a8cde9-e766-4435-9d97-f44d5c74e5b0.html"
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-10-07T08:58:00+00:00",
+   "data": "2026-10-07T16:32:45+00:00",
    "fonte": "ANSA",
-   "titolo": "Israele ricorda il 7 ottobre, il fallimento al centro delle elezioni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/israele-ricorda-il-7-ottobre-il-fallimento-al-centro-delle-elezioni_514950f2-d75c-4343-925e-b96c77b04ce8.html"
+   "titolo": "I giovani cinesi riscoprono Mao tra crisi immobiliare e futuro incerto",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/07/i-giovani-cinesi-riscoprono-mao-tra-crisi-immobiliare-e-futuro-incerto_24402652-56c2-4b43-ba8d-dfb35dffc108.html"
   },
   {
-   "data": "2026-10-07T08:57:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Garlasco, spunta test negativo al sangue sui pedali della bici di Stasi: nelle carte la conferma sul Dna",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-sangue-dna-bici-stasi-cosa-sappiamo_16UqLLYfdhfSqbB4JmnwcD"
-  },
-  {
-   "data": "2026-10-07T08:57:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella: 'Gli attacchi del 7 ottobre monito contro l'odio su base etnica e religiosa'. A Gaza devastazione umana e materiale di intollerabile gravità'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/07/mattarella-gli-attacchi-del-7-ottobre-monito-contro-lodio-su-base-etnica_5aa105aa-e997-4897-811a-b2ac86c18f23.html"
-  },
-  {
-   "data": "2026-10-07T08:54:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "++ Gimbe, 18,8 miliardi di tagli invisibili alla sanità tra 2023 e 2026 ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/10/07/gimbe-188-miliardi-di-tagli-invisibili-alla-sanita-tra-2023-e-2026_f6df953e-7566-4227-9137-70e5a0db51aa.html"
-  },
-  {
-   "data": "2026-10-07T08:51:43+00:00",
+   "data": "2026-10-07T16:31:40+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, spunta un altro test nullo per il sangue sui pedali",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/garlasco-spunta-un-altro-test-nullo-per-il-sangue-sui-pedali_2436fbc3-cd89-4259-a653-598d610d97ca.html"
+   "titolo": "Braccianti schiavi, 14 ore di lavoro per 80 centesimi a cassetta",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/braccianti-schiavi-clandestini-nel-casertano-a-lavoro-per-14-ore_54d321bf-c64e-4ddd-ab4c-dc782fc2b3d4.html"
   },
   {
-   "data": "2026-10-07T08:50:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Antonella Mosetti balla davanti al video dei genitori di Chiara Poggi, le scuse: \"Non sentivo la tv\"",
-   "url": "https://www.adnkronos.com/spettacoli/antonella-mosetti-garlasco-video-balla-genitori-chiara_55BjIcUbP3o4X8bpKxUZfN"
-  },
-  {
-   "data": "2026-10-07T08:44:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Persiste il tempo instabile sull'Italia, piogge e calo termico",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/persiste-il-tempo-instabile-sullitalia-piogge-e-calo-termico_e270809a-30de-44eb-8598-da725e28dfd7.html"
-  },
-  {
-   "data": "2026-10-07T08:41:01+00:00",
+   "data": "2026-10-07T16:30:55+00:00",
    "fonte": "ANSA",
-   "titolo": "Ft, 'SpaceX punta a raccogliere 40 miliardi per comprare chip Nvidia'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/07/ft-spacex-punta-a-raccogliere-40-miliardi-per-comprare-chip-nvidia_5469eaa6-f45c-44a4-a462-793de1549077.html"
+   "titolo": "La manovra cerca risorse, le banche dicono 'no ad altri contributi'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/07/la-manovra-cerca-risorse-le-banche-dicono-no-ad-altri-contributi_8c6f8afb-02e0-482f-ac9b-b18b01719939.html"
   },
   {
-   "data": "2026-10-07T08:40:26+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Risiede in Russia ma vive in Italia, scoperta evasione da 11 milioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/risiede-in-russia-ma-vive-in-italia-scoperta-evasione-da-11-milioni_3929339c-2859-4efd-83e6-6cadfa9c82bb.html"
-  },
-  {
-   "data": "2026-10-07T08:33:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "'The Voice Senior', si riparte il 9 ottobre: dal format alla novità Fiorella Mannoia, come sarà l'edizione 2026",
-   "url": "https://www.adnkronos.com/spettacoli/the-voice-senior-quando-comincia-fiorella-mannoia_sSzkSHecUssePJkEjNnzp"
-  },
-  {
-   "data": "2026-10-07T08:32:56+00:00",
+   "data": "2026-10-07T16:29:20+00:00",
    "fonte": "ANSA",
-   "titolo": "Wsj, 'Washington preme su Mosca, nota ufficiale sul decesso legato alla peste'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/07/wsj-washington-preme-su-mosca-nota-ufficiale-sul-decesso-legato-alla_2a87904c-6f40-4039-a5d0-9df75faa1800.html"
+   "titolo": "Due iniezioni letali, Christa Pike ha ripreso conoscenza e parla",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/due-iniezioni-letali-christa-pike-ha-ripreso-conoscenza-e-parla_bce4583f-1380-494d-b431-921fe2f8c54a.html"
   },
   {
-   "data": "2026-10-07T08:26:07+00:00",
+   "data": "2026-10-07T16:24:18+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Prezzi carburanti, nuova accisa sul diesel: aumenti per IP e Q8, frenata di Eni",
-   "url": "https://www.adnkronos.com/economia/carburanti-diesel-benzina-prezzi-oggi_1Qld5VbMjIc4bUM9lOIGiQ"
+   "titolo": "Simeone e la fortuna fuori dal campo: \"Possiede 180 appartamenti a Madrid\"",
+   "url": "https://www.adnkronos.com/sport/simeone-appartamenti-residenze-tesoro_7C6bLYuBFreYxQq6I0t0oL"
   },
   {
-   "data": "2026-10-07T08:17:51+00:00",
+   "data": "2026-10-07T16:20:51+00:00",
    "fonte": "ANSA",
-   "titolo": "Vodcast - Bar Futuro",
-   "url": "https://www.ansa.it/native/storie_digitali/hey_italia/2026/02/26/vodcast-bar-futuro_806a9831-5d24-4d0d-9d39-42ea5448f5b3.html"
+   "titolo": "Il Nobel per la Chimica a Kagan e Soai, registi delle molecole-specchio",
+   "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/10/07/il-nobel-per-la-chimica-a-kagan-e-soai-registi-delle-molecole-specchio_f8f2b9cf-0b31-40e4-a001-c9e5a57670a5.html"
   },
   {
-   "data": "2026-10-07T08:11:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scoperta maxifrode nel commercio delle materie plastiche: 18 misure cautelari e sequestro da 25 milioni di euro a Torino",
-   "url": "https://www.adnkronos.com/cronaca/maxi-frode-torino-marche-iva_71uWXPklAaSTTifd05AUlN"
-  },
-  {
-   "data": "2026-10-07T08:02:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "7 ottobre, Mattarella: \"Terrorismo mai giustificato\". E su Gaza: \"Devastazione di intollerabile gravità\"",
-   "url": "https://www.adnkronos.com/politica/7-ottobre-mattarella-meloni-attacchi-hamas-gaza_5bIvuK7XzgPZJoSeKTL3hR"
-  },
-  {
-   "data": "2026-10-07T07:57:38+00:00",
+   "data": "2026-10-07T16:19:08+00:00",
    "fonte": "ANSA",
-   "titolo": "La nuova tendenza in Corea del Sud è lo sleep maxxing",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/beauty_fitness/2026/10/07/la-nuova-tendenza-in-corea-del-sud-e-lo-sleep-maxxing_17d93d54-3762-4f12-b4ae-a55c38913ab0.html"
+   "titolo": "Assalto alla Cgil, confermate in appello le condanne a Fiore e Castellino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/assalto-alla-cgil-confermate-in-appello-condanne-a-fiore-e-castellino_209f9c05-ab7e-459e-be3d-b7e3d0d176c9.html"
   },
   {
-   "data": "2026-10-07T07:55:47+00:00",
+   "data": "2026-10-07T16:19:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tor Vergata Innovation day, impegno ateneo in progetti e competenze",
+   "url": "https://www.adnkronos.com/economia/tor-vergata-innovation-day-impegno-ateneo-in-progetti-e-competenze_40WiwULetF2Kh0zFnhwLRm"
+  },
+  {
+   "data": "2026-10-07T16:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giallo di Pietracatella, esclusa ingestione accidentale ricina: in sangue vittime grande quantità di veleno",
+   "url": "https://www.adnkronos.com/cronaca/giallo-di-pietracatella-ricina-pista-omicidio-ultime-news_5qfojrG3I0NiIKTaKo6Y9w"
+  },
+  {
+   "data": "2026-10-07T15:56:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Contro aggressioni mi muovo solo in auto e di giorno\": vita da rider, la storia di Gianluca",
+   "url": "https://www.adnkronos.com/cronaca/rider-gianluca-storia-racconto_4P0JRjHGNSWEhjvYjDkHuT"
+  },
+  {
+   "data": "2026-10-07T15:52:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La strage ferroviaria del 2016: la Cassazione conferma le due condanne, assolta Ferrotramviaria",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/lo-scontro-treni-nel-2016-la-cassazione-conferma-le-due-condanne-assolta-ferrotramviaria_f44b8e5e-0762-413a-bd23-5fb53a5dfd45.html"
+  },
+  {
+   "data": "2026-10-07T15:51:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Dilaga il vaping in Gb, oltre un milione che ne fa uso non ha mai fumato",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/stili_di_vita/2026/10/06/dilaga-il-vaping-in-gb-oltre-un-milione-ne-fa-uso-fra-chi-non-ha-mai-fumato_0687835d-87ae-47c2-99ba-61340bd03756.html"
+   "titolo": "Meloni: 'Valutiamo accise mobili, ma spero si ripristini pienamente il price cap'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/07/meloni-valutiamo-accise-mobili-ma-spero-si-ripristini-pienamente-il-price-cap_46fbd961-ef1b-4cd5-901a-9b66b19ca22d.html"
   },
   {
-   "data": "2026-10-07T07:50:08+00:00",
+   "data": "2026-10-07T15:42:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Umberto Marcucci, 'i Moretti sono senza vergogna con le loro richieste'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/umberto-marcucci-i-moretti-sono-senza-vergogna-con-le-loro-richieste_cd6bdb51-3924-48aa-87b3-944c26c2dc70.html"
+  },
+  {
+   "data": "2026-10-07T15:41:35+00:00",
    "fonte": "ANSA",
-   "titolo": "Zelensky: 'Solo oggi 11 morti in Ucraina, il regalo di compleanno dei russi per Putin'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/07/zelensky-solo-oggi-11-morti-in-ucraina-il-regalo-di-compleanno-dei-russi-per_0179c4ee-72e7-4b09-b874-77966ebcb880.html"
+   "titolo": "Israele ricorda il 7 ottobre, Netanyahu: 'Faremo i conti con tutti gli assassini'. Hamas: 'Un giorno glorioso'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/07/israele-ricorda-il-7-ottobre-netanyahu-faremo-i-conti-con-tutti-gli-assassini._514950f2-d75c-4343-925e-b96c77b04ce8.html"
   },
   {
-   "data": "2026-10-07T07:49:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Frode Iva internazionale su materie plastiche, 18 misure cautelari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/frode-iva-internazionale-su-materie-plastiche-18-misure-cautelari_acb081b0-4571-45fb-8161-0ac1b5a45cdc.html"
-  },
-  {
-   "data": "2026-10-07T07:34:00+00:00",
+   "data": "2026-10-07T15:40:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Lavoro, il Gruppo Magis ottiene la certificazione Top Employers 2026﻿",
-   "url": "https://www.adnkronos.com/economia/lavoro-il-gruppo-magis-ottiene-la-certificazione-top-employers-2026_7fHHQBAebC7VDmvaHxmQAg"
+   "titolo": "Strage di Crans Montana, Zurich: \"Infondata la richiesta di indennità di Jessica Moretti\"",
+   "url": "https://www.adnkronos.com/cronaca/crans-montana-jessica-moretti-assicurazione-indennita_78yJ4RR0IwKxsJsKkmjZR6"
   },
   {
-   "data": "2026-10-07T07:33:07+00:00",
+   "data": "2026-10-07T15:37:56+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Morto Freddie Jackson, il cantante di 'Rock Me Tonight' e 'You Are My Lady'",
-   "url": "https://www.adnkronos.com/spettacoli/freddie-jackson-morto_qoPuAnR3Pql077eNx7UPB"
+   "titolo": "'Tale e Quale Show', stasera nuovo appuntamento: le anticipazioni",
+   "url": "https://www.adnkronos.com/spettacoli/tale-e-quale-show-stasera-carlo-conti-ospiti-anticipazioni_7Mf8ZT4uZYtfrIGuekhOwn"
   },
   {
-   "data": "2026-10-07T07:25:31+00:00",
+   "data": "2026-10-07T15:34:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Colpito con un calcio a Roma, grave l'attore Davide Iacopini. Aperta un'indagine per tentato omicidio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/colpito-con-un-calcio-e-travolto-grave-lattore-davide-iacopini.-aperta-unindagine_5e3ba997-2015-446e-bb97-fcea81a0e872.html"
+  },
+  {
+   "data": "2026-10-07T15:33:49+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, Sempio: 'Non vivo più. La condanna di Alberto Stasi è giusta'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/garlasco-andrea-sempio-io-non-sto-vivendo_9a664235-97ae-475c-809f-34a949ed181d.html"
+   "titolo": "L'attore Iacopini colpito con un calcio, indagine per tentato omicidio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/lattore-iacopini-colpito-con-un-calcio-indagine-per-tentato-omicidio_0be0c75d-669c-40f8-99be-aea7d26fa689.html"
   },
   {
-   "data": "2026-10-07T07:24:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Jessica Moretti chiede l'indennità per la perdita di guadagno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/crans-montana-jessica-moretti-chiede-indennita-per-infortunio-nellincendio_6c8c1560-011c-4c3f-8986-3d998fab7192.html"
+   "data": "2026-10-07T15:33:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Intesa Sanpaolo insieme alle associazioni a sostegno delle piccole imprese",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/07/intesa-sanpaolo-insieme-alle-associazioni-a-sostegno-delle-piccole-imprese_3ac9be31-3c51-46ad-9d7a-28b6edcdc8d8.html"
   },
   {
-   "data": "2026-10-07T07:06:57+00:00",
+   "data": "2026-10-07T15:32:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Firmato il contratto dei dirigenti medici, fino a 560 euro al mese di aumento",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/10/07/firmato-contratto-per-dirigenti-medici-fino-a-560-euro-al-mese-in-piu_85d14c43-8838-4ed0-aa47-6e891d191676.html"
+  },
+  {
+   "data": "2026-10-07T15:31:47+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Meteo, Italia nella morsa del maltempo: pioggia e calo termico fino al weekend, le previsioni",
-   "url": "https://www.adnkronos.com/cronaca/meteo-previsioni-7-ottobre-quanto-dura-maltempo_2vT6K292D6vYwK1ljePM4U"
+   "titolo": "Trasporti: H2iseO, presidente Fontana e assessore Lucente in visita a impianti idrogeno",
+   "url": "https://www.adnkronos.com/economia/trasporti-h2iseo-presidente-fontana-e-assessore-lucente-in-visita-a-impianti-idrogeno_3FBw7QSWIbzFahf0Gbu81W"
   },
   {
-   "data": "2026-10-07T07:05:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Emergency, raccolta firme per legge di iniziativa popolare 'Io obietto la guerra'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/emergency-raccolta-firme-per-legge-di-iniziativa-popolare-io-obietto-la-guerra_13887234-caca-4909-9011-e5d06f372f21.html"
-  },
-  {
-   "data": "2026-10-07T06:40:00+00:00",
+   "data": "2026-10-07T15:29:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Addio a Eva Marie Saint, morta a 102 l'attrice che vinse l'Oscar per \"Fronte del Porto\"",
-   "url": "https://www.adnkronos.com/spettacoli/eva-marie-saint-morta-oscar_I0mGMDKY2qCygK86jV5IQ"
+   "titolo": "Scontro treni Andria, definitive condanne per capostazione e capotreno e assoluzioni ex dirigenti",
+   "url": "https://www.adnkronos.com/cronaca/scontro-treni-andria-disastro-2016-definitive-condanne-capostazione-capotreno-assoluzioni-ex-dirigenti_5XQ6pJZ2AFTn0d4daBE7ro"
+  },
+  {
+   "data": "2026-10-07T15:26:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, rider picchiato a bastonate e rapinato di bici e incasso",
+   "url": "https://www.adnkronos.com/cronaca/roma-rider-bastonate-rapinato_6SEpsqZaj5iZiAGLSiSbB"
+  },
+  {
+   "data": "2026-10-07T15:23:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Leclerc, imprevisto prima di Singapore: il volo privato è in ritardo e guida per 4 ore",
+   "url": "https://www.adnkronos.com/sport/lecrerc-jet-privato-ritardo-guida-auto_5qdlyBUF8mRrmQEE4A24uj"
+  },
+  {
+   "data": "2026-10-07T15:23:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "\"Tevere balneabile nel 2032\", al via in Campidoglio la fase operativa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/tevere-balneabile-nel-2032-al-via-in-campidoglio-la-fase-operativa_bff5152b-f0ab-4a59-b4f0-640eac87d7d6.html"
+  },
+  {
+   "data": "2026-10-07T15:22:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trasporti, Gibelli (Fnm): \"Val Camonica risuonerà nel mondo per treni a idrogeno\"",
+   "url": "https://www.adnkronos.com/economia/trasporti-gibelli-fnm-val-camonica-risuonera-nel-mondo-per-treni-a-idrogeno_46ORECyjIgU3oKCqRjwZvi"
+  },
+  {
+   "data": "2026-10-07T15:19:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trasporti, Fontana (Regione Lombardia): \"Nel 2027 prima corsa commerciale con treno a idrogeno\"",
+   "url": "https://www.adnkronos.com/economia/trasporti-fontana-regione-lombardia-nel-2027-prima-corsa-commerciale-con-treno-a-idrogeno_5gJjqdzOGODeBVG7fcmnSU"
   }
  ]
 }
