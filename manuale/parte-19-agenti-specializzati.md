@@ -544,6 +544,8 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 **Cosa fa**: esegue tutti gli script deterministici, invoca tutti gli specialisti, consolida i rilievi nel formato dell'audit esterno (prova, impatto, correzione, verifica, P1/P2/P3), corregge la Categoria A fino a live, lascia in PR la Categoria B, apre issue con responsabile per ciò che va validato da Comune, RPD, RSPP o docenti; rapporto in `riferimenti-interni/audit-interni/`.
 
+**Il sito visto da fuori (dal 7 ottobre 2026)**: dopo le verifiche interne c'è una fase che guarda il sito pubblicato come lo guarderebbe un auditor esterno: indirizzi scritti a mano (`/volontariato/`, `/meteo/`), file letti da motori e macchine confrontati con le linee guida attuali, almeno tre decisioni del passato rimesse in discussione, debiti dichiarati con una proposta e una data, una lettura da estraneo delle pagine principali. Nasce perché un audit esterno aveva trovato `/volontariato/` in 404 con tutti i controlli interni verdi. La eseguono in buona parte il visitatore reale, il collaudatore e il responsabile delle prestazioni (punti 36-38).
+
 **Identità tecnica**: `pc-audit-completo`.
 
 ---
@@ -557,6 +559,42 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 **Perché esiste (28 settembre 2026)**: un audit aveva corretto il termine della stagione AIB da 30 settembre a 15 ottobre dentro un articolo programmato per il 28 settembre, ma aveva lasciato la data di uscita. L'articolo è uscito a mezzanotte dicendo che i divieti antincendio finivano, diciassette giorni prima del vero. Tre controlli ora lo impediscono: la PR si blocca (`validate-pr.yml`), ogni sera alle 19:23 un workflow guarda i dieci giorni successivi (`controllo-data-uscita.yml`), e il gate dell'articolo invoca questo agente.
 
 **Identità tecnica**: `pc-calendario-editoriale`.
+
+---
+
+### 36. Visitatore reale
+
+**Frasi naturali**: *"un anziano trova i numeri utili?"*, *"il sito si usa da telefono?"*, *"se scrivo /volontariato/ dove arrivo?"*.
+
+**Cosa fa**: usa il sito **pubblicato**, con un browser vero, come lo userebbero persone che non ne conoscono la struttura: il cittadino in emergenza dal telefono con la rete lenta, la persona anziana con il testo ingrandito, lo straniero, chi naviga solo con la tastiera o con uno screen reader, il genitore, il docente, l'aspirante volontario, il giornalista. Scrive a mano gli indirizzi che verrebbero in mente, usa la ricerca con le parole della gente (refusi compresi), compie i compiti tipici contando i passi, e registra gli errori in console. Ogni indirizzo o ricerca corretti entrano in un controllo automatico.
+
+**Perché esiste (7 ottobre 2026)**: i controlli interni verificano ciò che il sito dichiara e collega; nessuno usava il sito come un estraneo.
+
+**Identità tecnica**: `pc-visitatore-reale`.
+
+---
+
+### 37. Collaudatore degli strumenti interattivi
+
+**Frasi naturali**: *"funziona ancora tutto?"*, *"il pulsante non fa niente"*, *"il gioco si blocca"*.
+
+**Cosa fa**: prova uno per uno, sul sito pubblicato, gli strumenti che il cittadino usa cliccando: SOS 112, assistente virtuale, ricerca, «Crea la mia lezione», Modalità Aula, giochi e quiz, storie, cruscotto e scheda terremoto, laboratorio meteo, Sala situazioni, cartografia, «I miei contenuti», piano familiare offline, pannello accessibilità, lettura ad alta voce, glossario, gallerie, dossier, condivisione e QR. Per ognuno compie il compito, prova un caso limite, ricarica, usa la tastiera e guarda la console; i percorsi che si rompono diventano prove ripetibili.
+
+**Perché esiste (7 ottobre 2026)**: build, link e ancore possono essere tutti verdi con un pulsante che non risponde.
+
+**Identità tecnica**: `pc-collaudo-funzionale`.
+
+---
+
+### 38. Responsabile delle prestazioni
+
+**Frasi naturali**: *"il sito è lento?"*, *"da telefono in emergenza si apre?"*, *"quanto pesa la home?"*.
+
+**Cosa fa**: misura sul sito pubblicato, con profilo telefono e rete 3G lenta, peso, richieste, tempi e spostamenti del layout per tipo di pagina; confronta con i budget e con la misura precedente (registro in `riferimenti-interni/prestazioni/`), trova la causa di ogni crescita e corregge ciò che è sicuro (immagini, caricamento differito, librerie caricate dove non servono). La cache resta disattivata (scelta del 12 settembre 2026): si lavora sul peso.
+
+**Perché esiste (7 ottobre 2026)**: la prima misura ha trovato home e numeri utili a circa 750 KB, di cui circa 620 KB di JavaScript, fogli di stile e font comuni a tutte le pagine, mentre la pagina leggera `/emergenza/` pesa 15 KB. Nessuno teneva il conto.
+
+**Identità tecnica**: `pc-prestazioni`.
 
 ---
 
@@ -673,6 +711,9 @@ problema"* — e Claude corregge.
 | `.claude/agents/pc-documentazione.md` | Documentazione | 13 anni technical writer e knowledge base docs-as-code |
 | `.claude/agents/pc-audit-completo.md` | Direttore audit interno | 20 anni audit di sistemi pubblici (ISO 19011/27001/22301) e verifiche accessibilità |
 | `.claude/agents/pc-calendario-editoriale.md` | Caporedattore del calendario | anni al desk agenda di un quotidiano regionale: ogni titolo riletto accanto alla data in testata |
+| `.claude/agents/pc-visitatore-reale.md` | Visitatore reale | 12 anni di test con gli utenti per servizi pubblici digitali (anziani, disabilità, stranieri, utenti sotto stress) |
+| `.claude/agents/pc-collaudo-funzionale.md` | Collaudatore degli strumenti interattivi | 10 anni di collaudo funzionale e di accettazione su portali pubblici, Playwright |
+| `.claude/agents/pc-prestazioni.md` | Prestazioni | 10 anni di ottimizzazione web per servizi pubblici e testate, Core Web Vitals e budget |
 
 I background sono "personae" usati per ancorare le valutazioni a standard
 verificabili (linee guida AGID, ISO 22329, WCAG, CWA, ecc.). Non sono persone
