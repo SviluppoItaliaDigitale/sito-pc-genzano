@@ -47,6 +47,8 @@ Fonti: Dipartimento della Protezione Civile, campagna «Io non rischio»; [Commi
 
 ## I tre kit da preparare
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/tre-kit-emergenza.svg" alt="Tre kit differenti: zaino leggero per l'evacuazione, scorte per casa e dotazioni di emergenza per auto." caption="Ogni kit ha uno scopo diverso: preparalo tenendo conto dei bisogni delle persone, della stagione e delle indicazioni ufficiali." >}}
+
 <div class="table-responsive">
 <table>
 <caption>Tipi di kit e quando usarli</caption>
