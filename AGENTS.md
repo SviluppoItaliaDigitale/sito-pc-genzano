@@ -10,6 +10,8 @@
 
 **Regola dell'utente (08/10/2026), valida per ogni intelligenza artificiale che lavora sul sito, ChatGPT compreso.** Ogni modifica va su un ramo di lavoro (`chatgpt/...` o `codex/...`) e arriva su `main` solo attraverso una pull request, dopo che i controlli automatici sono verdi. **Mai un commit o un push direttamente su `main`**, nemmeno per una correzione di una riga.
 
+**Prima di cominciare** leggi `COORDINAMENTO.md` (la bacheca degli avvisi fra le sessioni) e l'elenco delle pull request aperte: se un file che devi toccare è già in una PR aperta, non cambiarlo. Quando il tuo lavoro riguarda anche l'altra sessione, lascia lì un avviso.
+
 **Unica eccezione:** l'utente chiede espressamente, nel messaggio, di pubblicare direttamente su `main` (per esempio «pubblica direttamente su main, senza PR»). Vale solo per quella modifica. Un generico «pubblica», «vai» o «fallo» **non** è l'eccezione: vuol dire aprire la PR e unirla quando i controlli sono verdi.
 
 Perché: `main` è il sito pubblico, che si aggiorna in pochi minuti. Le modifiche arrivate su `main` senza PR l'08/10/2026 hanno saltato i controlli (otto illustrazioni con testi sopra i disegni) e annullato pubblicazioni di altre sessioni. Le automazioni del repository (`github-actions[bot]`: allerta, meteo, dati) restano fuori da questa regola.
