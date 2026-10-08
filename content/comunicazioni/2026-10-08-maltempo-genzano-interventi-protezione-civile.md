@@ -45,9 +45,9 @@ Nella stessa mattina, su richiesta del sindaco, la squadra è intervenuta per un
 
 Verso le 14, sempre su richiesta del sindaco, la squadra è intervenuta in largo Monsignor Grassi per un ramo che occupava parte della corsia.
 
-Nel pomeriggio la Polizia Locale ci ha chiesto due servizi tecnici. Verso le 15.30, in via Appia Vecchia, una betoniera aveva perso cemento sulla strada e la squadra ha pulito la carreggiata. Poco dopo le 16 c'è stato un breve servizio a Croce Santa.
+Nel pomeriggio la Polizia Locale ci ha chiesto due servizi tecnici. Verso le 15.30 un mezzo pesante, probabilmente una betoniera, aveva perso un impasto di cemento e breccia all'incrocio tra via Appia Vecchia e via Appia Antica. I volontari e gli agenti della Polizia Locale lo hanno tolto con pale e picconi prima che indurisse, mentre la pattuglia presidiava l'incrocio. Poco dopo le 16 c'è stato un breve servizio a Croce Santa.
 
-Secondo le cronache locali, tra Genzano e Lanuvio sono stati segnalati anche locali e abitazioni parzialmente allagati.
+Secondo le cronache locali, a Genzano l'acqua è entrata in alcune abitazioni e attività commerciali, dove i tombini non hanno retto. In via De Amicis i rami caduti hanno danneggiato in modo lieve anche la ringhiera della scuola. A Lanuvio l'acqua ha raggiunto in parte un locale scolastico.
 
 ## La sera dell'8 ottobre
 
@@ -84,6 +84,8 @@ Quando il terreno è asciutto, l'acqua tende a scorrere in superficie più che a
 **Le cronache locali:**
 
 - [Castelli Notizie — Maltempo a Genzano, una quindicina di interventi della Protezione Civile](https://www.castellinotizie.it/2026/10/08/maltempo-a-genzano-una-quindicina-di-interventi-della-protezione-civile-alberi-caduti-allagamenti-e-danni-alle-auto/)
+- [Castelli Notizie — Genzano, betoniera perde cemento sull'Appia Vecchia: Polizia Locale e Protezione Civile intervengono a tempo di record](https://www.castellinotizie.it/2026/10/08/genzano-betoniera-perde-cemento-sullappia-vecchia-polizia-locale-e-protezione-civile-intervengono-a-tempo-di-record/)
 - [Il Giornale dei Castelli Romani — Maltempo ai Castelli Romani e sul litorale, danni e centinaia di interventi](https://www.giornaleinfocastelliromani.it/maltempo-ai-castelli-romani-e-sul-litorale-danni-e-centinaia-di-interventi/)
+- [La Notizia Oggi — Nubifragio sui Castelli Romani e sul litorale: allagamenti, alberi caduti e auto danneggiate](https://www.lanotiziaoggi.it/61725/nubifragio-sui-castelli-romani-e-sul-litorale-allagamenti-alberi-caduti-e-auto-danneggiate/)
 
-*Articolo aggiornato il 9 ottobre 2026 con gli interventi della sera dell'8 ottobre, tratti dal nostro registro.*
+*Articolo aggiornato il 9 ottobre 2026 con gli interventi della sera dell'8 ottobre, tratti dal nostro registro, e con i fatti riportati dalle cronache locali.*
