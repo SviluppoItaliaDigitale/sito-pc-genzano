@@ -5,28 +5,46 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-07T21:49:03+00:00",
+  "generato": "2026-10-08T01:22:12+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-07T21:37:54+00:00",
+   "data": "2026-10-07T22:38:51+00:00",
    "fonte": "ANSA",
    "titolo": "Nobel Letteratura, favorite le scrittrici da Can Xue a Carson e Rivera Garza",
-   "url": "https://www.ansa.it/sito/notizie/cultura/libri/approfondimenti/2026/10/07/nobel-letteratura-favorite-le-scrittrici-da-can-xue-a-carson-e-rivera-garza_711ccace-fab0-4ec2-8d04-76fbfa86ee94.html"
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/approfondimenti/2026/10/08/nobel-letteratura-favorite-le-scrittrici-da-can-xue-a-carson-e-rivera-garza_711ccace-fab0-4ec2-8d04-76fbfa86ee94.html"
+  },
+  {
+   "data": "2026-10-07T22:23:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "È morta Maricarmen, il volto delle proteste per il diritto alla casa in Spagna",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/07/e-morta-maricarmen-il-volto-delle-proteste-per-il-diritto-alla-casa-in-spagna_cc495f85-22e2-404c-9b69-d2091b0ff22a.html"
+  },
+  {
+   "data": "2026-10-07T22:11:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Crisi energetica sul tavolo dell'Eurogruppo, cosa chiede l'Italia",
+   "url": "https://www.adnkronos.com/economia/eurogruppo-oggi-domani-crisi-energetica-meloni-italia_jvMRcuQae0eoiXrpd0az"
+  },
+  {
+   "data": "2026-10-07T22:03:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni da Spalato: \"Pronti a intervenire su accise. Legge elettorale? Serena, come sempre\"",
+   "url": "https://www.adnkronos.com/politica/meloni-spalato-caro-carburante-legge-elettorale_6otsrzCsmRRl8z3DpI9xwX"
+  },
+  {
+   "data": "2026-10-07T21:40:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Addio a Barbara Spinelli, una vita tra europeismo e impegno civile",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/07/e-morta-barbara-spinelli_8f7b03d7-bc4a-4912-95e9-5bd3eddb7028.html"
   },
   {
    "data": "2026-10-07T21:33:27+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Bloccato corteo pro Pal a Torino, la polizia usa l'idrante",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/bloccato-corteo-pro-pal-a-torino-la-polizia-usa-lidrante_e12894de-afc4-4ef6-98a1-e6b94d1cfdaf.html"
-  },
-  {
-   "data": "2026-10-07T21:17:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "È morta Maricarmen, il volto delle proteste per il diritto alla casa in Spagna",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/07/e-morta-maricarmen-il-volto-delle-proteste-per-il-diritto-alla-casa-in-spagna_cc495f85-22e2-404c-9b69-d2091b0ff22a.html"
   },
   {
    "data": "2026-10-07T21:02:34+00:00",
@@ -59,9 +77,9 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/07/dolore-e-proteste-contro-il-governo-a-tre-anni-dal-massacro-israele-spaccato_514950f2-d75c-4343-925e-b96c77b04ce8.html"
   },
   {
-   "data": "2026-10-07T19:43:07+00:00",
+   "data": "2026-10-07T19:43:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Allerta meteo arancione in Toscana, domani scuole chiuse in vari comuni",
+   "titolo": "Allerta meteo arancione in Toscana, scuole chiuse in vari comuni",
    "url": "https://www.adnkronos.com/cronaca/maltempo-toscana-allerta-arancione-scuole-chiuse-domani-dove_2GrvQlnH5DShT2YcBFdh7q"
   },
   {
@@ -171,24 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Ruba il cellulare alla figlia di Asia Argento e pubblica un video privato, denunciato",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/ruba-il-cellulare-alla-figlia-di-asia-argento-e-pubblica-un-video-privato-denunciato_3b3b2c64-2f98-4c8b-b648-0cda8933458e.html"
-  },
-  {
-   "data": "2026-10-07T18:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Argentina, Messi: \"Già mi manca la Nazionale, ma ho preso la decisione giusta\"",
-   "url": "https://www.adnkronos.com/sport/messi-argentina-addio-lettera-maradona_6qWvR8RDvAFQmbCSO8HZnF"
-  },
-  {
-   "data": "2026-10-07T17:59:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Zurich frena sull'indennità a Jessica Moretti: 'E' infondata'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/07/zurich-infondata-la-richiesta-di-indennita-di-moretti-pronti-a-resistere_80df47fe-73ce-4de1-89b2-f6b65659b413.html"
-  },
-  {
-   "data": "2026-10-07T17:59:35+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei, Roglic campione a cronometro a quasi 37 anni e con la radio fuori uso",
-   "url": "https://www.adnkronos.com/sport/primoz-roglic-oro-europei-ciclismo-a-cronometro-slovenia-37-anni_30h7SMSaalzcFBHVvHtnzq"
   }
  ]
 }
