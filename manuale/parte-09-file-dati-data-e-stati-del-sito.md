@@ -148,7 +148,7 @@ A ogni run vengono eseguiti **in sequenza** tre script:
 
 | Script | Cosa fa | Fonte |
 |---|---|---|
-| `scripts/check-allerta.py` | Criticità idrogeologica + pre-allerta `domani` | CSV opendatasicilia (primaria) → fallback PDF Regione Lazio se entrambi i CSV non rispondono |
+| `scripts/check-allerta.py` | Criticità idrogeologica + pre-allerta `domani` | CSV opendatasicilia (mirror DPC) **e**, a ogni giro dall'08/10/2026, bollettino PDF del Centro Funzionale della Regione Lazio: per ogni giorno vale il livello più alto |
 | `scripts/check-avvisi-meteo.py` | Avvisi meteo avversi (vento/neve/calore) | Parser PDF pagina `/bollettini/allertamenti` Regione Lazio |
 | `scripts/check-rischi-incendi.py` | Rischio incendi AIB Zona 9 | Parser PDF pagina `/bollettini/rischi-incendi` Regione Lazio (solo in campagna AIB) |
 
@@ -160,7 +160,7 @@ Allerta meteo: livello verde → gialla + avviso meteo: vento gialla + rischio i
 
 **Anti-flicker JS lato client:** la funzione `checkAllertaDPC()` in homepage rilegge il CSV opendatasicilia ad ogni page-load e ogni 30 minuti. Per evitare lo sfarfallio visivo del banner, il JS sovrascrive titolo/descrizione **solo se il livello calcolato è diverso** da quello già renderizzato server-side. Se i livelli combaciano, il banner resta intatto.
 
-**Fallback PDF Regione Lazio** (attivato solo se opendatasicilia non risponde): lo script `check-allerta.py` scarica il PDF firmato di criticità idrogeologica del giorno corrente (`tbl_bollettini_criticita/bollettino_DD_MM_YYYY.pdf`), parsa con `pdftotext -layout` ed estrae la Zona F (Bacini Costieri Sud = Genzano) per le due sezioni "Valutazioni per OGGI" e "Valutazioni per DOMANI". Output GH Actions estende il campo `source` a `opendatasicilia | pdf-regione-lazio | misto`.
+**Bollettino PDF della Regione Lazio, a ogni giro (dall'08/10/2026)**: lo script `check-allerta.py` scarica il bollettino di criticità del giorno corrente, o di ieri se quello di oggi non c'è ancora (`www.regione.lazio.it/sites/default/files/criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf`, con il vecchio percorso come ripiego), parsa con `pdftotext -layout` ed estrae la Zona F (Bacini Costieri Sud = Genzano) per le due sezioni "Valutazioni per OGGI" e "Valutazioni per DOMANI". Le sue righe si affiancano a quelle del CSV e per ogni giorno vale il livello più alto. Fino all'08/10/2026 il PDF si leggeva solo se il CSV non rispondeva: quel giorno il Centro Funzionale ha portato la Zona F ad arancione con il bollettino di mezzogiorno, mentre il CSV DPC del giorno prima diceva ancora gialla, e il sito è rimasto giallo per ore. Output GH Actions: campo `source` = `opendatasicilia | pdf-regione-lazio | misto`.
 
 **Timezone Europe/Rome dinamica:** tutti i timestamp di `allerta.json` usano `ZoneInfo("Europe/Rome")` che gestisce automaticamente CEST (+02:00, ora legale) e CET (+01:00, ora solare) senza intervento al cambio del fuso.
 
@@ -172,7 +172,7 @@ Nella maggior parte dei casi **non serve intervenire manualmente**.
 
 **Fonti dati ufficiali:**
 - Criticità idrogeologica/idraulica (primaria): `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-{oggi,domani}-comuni-latest.csv`
-- Criticità idrogeologica (fallback PDF): `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/criticita-idrogeologica-idraulica`
+- Criticità idrogeologica (bollettino regionale, letto a ogni giro; i PDF sono in `www.regione.lazio.it/sites/default/files/criticita-idrogeologica/AAAA/`): `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/criticita-idrogeologica-idraulica`
 - Allertamenti / avvisi meteo: `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/allertamenti`
 - Rischi incendi AIB: `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi`
 
