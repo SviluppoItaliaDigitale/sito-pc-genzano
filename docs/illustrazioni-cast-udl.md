@@ -27,3 +27,9 @@ Per ogni nuova illustrazione: identificare un bisogno didattico, verificare cont
 **Nota:** l'adozione dei criteri CAST non equivale a certificazione CAST o verifica completa WCAG. È necessaria una revisione periodica con utenti reali, docenti e persone con disabilità.
 
 Riferimento: https://udlguidelines.cast.org/representation/language-symbols/multiple-media/
+
+## Leggibilità su smartphone e anteprime
+- Una tavola orizzontale con più pannelli non deve essere usata come unica vista su telefono. Per le figure dense, creare una seconda versione SVG alta 720×1180/1440, con suffisso `-mobile.svg`; il shortcode la seleziona automaticamente.
+- Non presentare collage di più tavole come anteprima principale: mostrare ogni illustrazione singolarmente, a dimensioni utili. I pannelli verticali devono avere numeri e titoli leggibili e indicazioni anche nel testo vicino.
+- Un collegamento apre la figura originale ingrandita, anche in assenza di versione mobile. Su carta A4 controllare l'anteprima e la presenza di informazioni equivalenti nel corpo della pagina.
+- Le immagini non sostituiscono la revisione pedagogica, la verifica della sicurezza né la prova con lettori di schermo e persone reali.
