@@ -279,3 +279,31 @@ dati:
         perche: "Dal 2026/27 valgono le Indicazioni del D.M. 221/2025; il 2012 resta solo per le classi già avviate e va citato insieme al nuovo decreto."
         contesto: 'Indicazioni'
         finestra: 20
+      - regex: "Indicazioni [Nn]azionali per il curricolo della scuola dell.infanzia 2012"
+        perche: "Dal 2026/27 valgono le Indicazioni del D.M. 221/2025; il 2012 resta solo per le classi già avviate e va citato insieme al nuovo decreto."
+        contesto: 'Indicazioni'
+        finestra: 20
+
+  - id: educazione-civica-linee-guida
+    dato: "Linee guida per l'insegnamento dell'educazione civica"
+    valore: "D.M. 7 settembre 2024, n. 183 (sostituisce le Linee guida del D.M. 35/2020)"
+    fonti:
+      - nome: "Ministero dell'Istruzione e del Merito, D.M. 183/2024"
+        url: "https://www.mim.gov.it/"
+    vietati:
+      - regex: '(?<!quelle del )(?<!guida del )D\.M\.\s*(?:n\.\s*)?35/2020'
+        perche: "Le Linee guida del D.M. 35/2020 sono sostituite da quelle del D.M. 183/2024: citarle solo come superate."
+        contesto: 'Linee guida|educazione civica|Educazione Civica'
+        finestra: 200
+
+  - id: norma-nis-infrastrutture
+    dato: "Norma italiana sulla sicurezza informatica dei servizi essenziali"
+    valore: "D.Lgs. 4 settembre 2024, n. 138 (NIS2), che ha abrogato il D.Lgs. 65/2018"
+    fonti:
+      - nome: "Normattiva, D.Lgs. 138/2024"
+        url: "https://www.normattiva.it/eli/id/2024/10/01/24G00155/ORIGINAL"
+    vietati:
+      - regex: '(?<!abrogato il )D\.Lgs\.\s*65/2018'
+        perche: "Il D.Lgs. 65/2018 (NIS) è abrogato dal D.Lgs. 138/2024 (NIS2)."
+        contesto: 'NIS|infrastruttur|critic'
+        finestra: 200

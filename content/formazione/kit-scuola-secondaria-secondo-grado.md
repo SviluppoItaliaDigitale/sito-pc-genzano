@@ -8,7 +8,7 @@ risorse_tema: "kit-emergenza"
 
 Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** che intendono affrontare i temi della protezione civile in modo approfondito, integrando aspetti scientifici, normativi e di cittadinanza attiva.
 
-I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nelle attività PCTO.
+I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nei percorsi di formazione scuola-lavoro (fino al 2024/25 chiamati PCTO).
 
 > 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~382 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
@@ -23,7 +23,7 @@ Il percorso è costruito sul quadro normativo dell'**educazione civica** (Legge 
 Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione Civile è l'**articolo 3, lettera h) della Legge 92/2019**, che include esplicitamente la *"formazione di base in materia di protezione civile"* tra i temi dell'Educazione Civica. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) costituisce la cornice generale che descrive attività, organizzazione, pianificazione e ruolo del Servizio nazionale.
 
 È coerente con:
-- **Indicazioni Nazionali per i Licei** (D.P.R. 89/2010) e **Linee guida per gli Istituti Tecnici e Professionali** (2010/2018)
+- **Regolamento dei licei** (D.P.R. 89/2010) con le relative Indicazioni nazionali, e **Linee guida per gli istituti tecnici e professionali** (2010/2018). Dal 1° ottobre 2026 gli istituti tecnici si chiamano «licei tecnologici» e i professionali «licei professionali» ([D.L. 170/2026](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-30&atto.codiceRedazionale=26G00190), art. 9, in attesa di conversione in legge)
 - **Raccomandazione UE 2018/C 189/01** sulle 8 competenze chiave per l'apprendimento permanente
 - **Obiettivi Agenda 2030** n. 8 (lavoro dignitoso), 11 (città sostenibili), 13 (lotta al cambiamento climatico) e 15 (vita sulla terra)
 - **D.Lgs. 9 aprile 2008, n. 81** — Testo Unico sulla salute e sicurezza nei luoghi di lavoro, riferimento sostanziale per il modulo introdotto dalla L. 21/2025
@@ -643,7 +643,7 @@ Indicatori della [Rubrica Ed. Civica — Secondaria II](/formazione/schede-stamp
 
 ## Percorso PCTO strutturato con il Gruppo
 
-I **Percorsi per le Competenze Trasversali e l'Orientamento** (D.Lgs. 77/2005; D.Lgs. 62/2017 art. 13) con il Gruppo Comunale di Protezione Civile di Genzano sono un'opportunità formativa concreta, coerente con gli obiettivi dei licei (90 ore nel triennio) e degli istituti tecnici/professionali (150-210 ore).
+I percorsi di **formazione scuola-lavoro**, fino al 2024/25 chiamati Percorsi per le Competenze Trasversali e l'Orientamento (D.Lgs. 77/2005; L. 145/2018, art. 1, commi 784-785; D.L. 127/2025), con il Gruppo Comunale di Protezione Civile di Genzano sono un'opportunità formativa concreta, coerente con gli obiettivi dei licei (90 ore nel triennio) e degli istituti tecnici/professionali (150-210 ore).
 
 ### Profilo del PCTO
 

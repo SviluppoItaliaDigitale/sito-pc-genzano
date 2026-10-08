@@ -23,7 +23,7 @@ Ogni gioco è descritto con questi metadati:
 - **Età consigliata**: fascia di età target
 - **Durata media**: tempo di gioco realistico (può variare in base al ritmo)
 - **Tema**: rischio o competenza coperta
-- **Competenze di Educazione Civica**: collegate al **D.M. n. 35/2020** e alle **Linee guida 2024** per l'insegnamento dell'Educazione Civica
+- **Competenze di Educazione Civica**: collegate alle **Linee guida 2024** (D.M. 183/2024) per l'insegnamento dell'Educazione Civica
 - **Accessibilità**: supporto a tastiera, TTS, daltonismo, screen reader
 - **Criterio di completamento**: cosa significa "ho finito il gioco"
 
@@ -34,8 +34,7 @@ Tutti i giochi hanno il **Coach didattico** integrato (bottone "💡 Consigli pe
 I giochi sono allineati con:
 
 - **Legge 92/2019** — Introduzione dell'Educazione Civica nelle scuole
-- **D.M. n. 35/2020** — Linee guida per l'insegnamento dell'educazione civica
-- **D.M. n. 183/2024** — Aggiornamento Linee guida (33 ore annuali)
+- **D.M. n. 183/2024** — Linee guida per l'insegnamento dell'educazione civica (33 ore annuali), che sostituiscono quelle del D.M. 35/2020
 - **Indicazioni nazionali per il curricolo** (D.M. 221/2025, che dal 2026/27 sostituisce gradualmente il D.M. 254/2012)
 - **D.Lgs. 1/2018** — Codice della Protezione Civile, art. 2 (formazione e diffusione della cultura di PC)
 

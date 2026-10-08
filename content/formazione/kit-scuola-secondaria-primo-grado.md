@@ -728,7 +728,7 @@ R. Sì, l'Educazione Civica prevede voto in decimi. La rubrica qui proposta si c
 **D. Il volontario può portare attrezzature a scuola (radio, casco, divisa)?**
 R. Sì, previa autorizzazione del Dirigente. Vengono portate attrezzature in uso ordinario: radio VHF/UHF, casco da AIB, DPI, un piccolo kit di primo soccorso. Per armi o mezzi grandi servono autorizzazioni più complesse non sempre compatibili con la scuola.
 
-**D. Si può fare un PCTO (alternanza) con la Protezione Civile?**
+**D. Si può fare formazione scuola-lavoro (ex PCTO) con la Protezione Civile?**
 R. Sì, ma solo per la **scuola secondaria di secondo grado**. Il kit della secondaria di primo grado prevede al massimo una visita didattica o un'attività di service learning all'interno della scuola.
 
 **D. Come gestisco un alunno che ha subito un evento traumatico (terremoto, alluvione, perdita familiare)?**
