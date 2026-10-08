@@ -1,16 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-10-08T01:22:22+00:00",
+  "generato": "2026-10-08T07:51:54+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 59,
-  "scaduti_scartati": 14,
-  "in_corso": 30,
+  "avvisi": 55,
+  "scaduti_scartati": 18,
+  "in_corso": 34,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -23,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.134"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -86,32 +86,6 @@
    "fine": "2026-10-09T21:59:00+00:00",
    "emesso": "2026-10-07T09:00:58+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261007110057.143"
-  },
-  {
-   "in_corso": true,
-   "regione": "Friuli Venezia Giulia",
-   "fenomeno": "Temporali",
-   "livello": "arancione",
-   "evento_originale": "Orange Thunderstorm Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-07T08:00:00+00:00",
-   "fine": "2026-10-08T05:59:00+00:00",
-   "emesso": "2026-10-07T09:00:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261007110057.104"
-  },
-  {
-   "in_corso": true,
-   "regione": "Friuli Venezia Giulia",
-   "fenomeno": "Pioggia",
-   "livello": "arancione",
-   "evento_originale": "Orange Rain Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-07T08:00:00+00:00",
-   "fine": "2026-10-08T05:59:00+00:00",
-   "emesso": "2026-10-07T09:00:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261007110057.103"
   },
   {
    "in_corso": true,
@@ -192,7 +166,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.098"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -205,7 +179,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.138"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -270,7 +244,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.125"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -439,7 +413,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.100"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -478,7 +452,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.122"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -699,7 +673,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.101"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -723,32 +697,6 @@
    "fine": "2026-10-09T17:59:00+00:00",
    "emesso": "2026-10-07T09:00:57+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261007110057.127"
-  },
-  {
-   "in_corso": true,
-   "regione": "Valle d'Aosta",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-08T00:00:00+00:00",
-   "fine": "2026-10-08T05:59:00+00:00",
-   "emesso": "2026-10-07T09:00:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261007110057.091"
-  },
-  {
-   "in_corso": true,
-   "regione": "Valle d'Aosta",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-08T00:00:00+00:00",
-   "fine": "2026-10-08T05:59:00+00:00",
-   "emesso": "2026-10-07T09:00:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261007110057.090"
   },
   {
    "in_corso": true,
