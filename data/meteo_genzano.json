@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-08T13:02",
+  "aggiornato": "2026-10-08T14:03",
   "data_lunga": "giovedì 8 ottobre 2026",
-  "aggiornato_label": "giovedì 8 ottobre 2026, ore 13:02",
+  "aggiornato_label": "giovedì 8 ottobre 2026, ore 14:03",
   "alba": "07:13",
   "tramonto": "18:39",
   "corrente": {
-    "temp": 19.7,
-    "percepita": 21.0,
+    "temp": 19.9,
+    "percepita": 21.2,
     "cielo": "Temporale",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"26.4,42.4 36.0,42.4 28.8,58.4 32.8,45.6 24.8,45.6\" fill=\"#f6a800\"/></g>",
-    "umidita": 91,
-    "vento": 12,
-    "raffiche": 71
+    "umidita": 92,
+    "vento": 13,
+    "raffiche": 69
   },
   "giorni": [
     {
@@ -21,8 +21,8 @@
       "tmax": 20,
       "tmin": 17,
       "pioggia": 98,
-      "pioggia_mm": 37.3,
-      "raffiche": 71,
+      "pioggia_mm": 36.1,
+      "raffiche": 69,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -33,8 +33,8 @@
       "tmax": 18,
       "tmin": 15,
       "pioggia": 90,
-      "pioggia_mm": 33.1,
-      "raffiche": 38,
+      "pioggia_mm": 22.4,
+      "raffiche": 42,
       "uv": 3,
       "uv_label": "moderato"
     },
@@ -47,7 +47,7 @@
       "pioggia": 78,
       "pioggia_mm": 7.0,
       "raffiche": 20,
-      "uv": 3,
+      "uv": 4,
       "uv_label": "moderato"
     },
     {
