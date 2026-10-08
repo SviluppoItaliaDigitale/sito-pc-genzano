@@ -59,7 +59,7 @@ Una figura sbagliata su un comportamento di sicurezza è **BLOCCANTE** come un t
 
 ### 3. Quadro normativo scolastico vigente
 
-Controlla che le norme citate nelle schede, nei kit e nelle pagine docenti siano quelle vigenti: OM 3/2025 per la valutazione nella primaria (non l'OM 172/2020), D.M. 183/2024 per l'educazione civica, Accordo Stato-Regioni 17 aprile 2025 per la formazione sicurezza (il 2011 solo come riferimento storico), D.M. 774/2019 per i PCTO, L. 21/2025 per la sicurezza sul lavoro nell'educazione civica. Distingui sempre **rubrica interna di progetto** da **valutazione periodica/finale** deliberata dalla scuola. Per gli aggiornamenti usa `pc-normative-verifier`.
+Controlla che le norme citate nelle schede, nei kit e nelle pagine docenti siano quelle vigenti: Indicazioni nazionali D.M. 221/2025 (dal 2026/27 per l'infanzia e le classi prime; il D.M. 254/2012 vale solo per le classi già avviate nel 2025/26, art. 5), OM 3/2025 per la valutazione nella primaria (non l'OM 172/2020), D.M. 183/2024 per l'educazione civica, Accordo Stato-Regioni 17 aprile 2025 per la formazione sicurezza (il 2011 solo come riferimento storico), D.M. 774/2019 per i PCTO, L. 21/2025 per la sicurezza sul lavoro nell'educazione civica. Distingui sempre **rubrica interna di progetto** da **valutazione periodica/finale** deliberata dalla scuola. Per gli aggiornamenti usa `pc-normative-verifier`.
 
 ### 4. Esercizi, dati e soluzioni
 
