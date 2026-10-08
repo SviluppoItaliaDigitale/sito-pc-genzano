@@ -73,8 +73,9 @@ ISO7010=(
   # scaricava il file corrosivo e lo salvava col nome sbagliato
   # "caduta-massi.svg", inducendo il Memory primaria ad abbinare un
   # pittogramma corrosivo alla voce "Attento alle frane" (bug segnalato
-  # dall'utente). Per il concetto "frana" usare arasaac/frana.png
-  # (gia' nella libreria, semantica chiara).
+  # dall'utente). ARASAAC non ha un pittogramma della frana: il vecchio
+  # arasaac/frana.png (ricerca «valanga di fango») era uno stivale nel fango
+  # ed e' stato tolto l'8 ottobre 2026. Per la frana si usa un disegno nostro.
   "W024|pericolo-schiacciamento|Pericolo schiacciamento"
 
   # Obbligo (M)
@@ -107,7 +108,6 @@ ARASAAC=(
   "incendio|incendio|rischio"
   "fuoco|fuoco|rischio"
   "inondazione|alluvione|rischio"
-  "valanga di fango|frana|rischio"
   "pioggia|pioggia|meteo"
   "temporale|temporale|meteo"
   "fulmine|fulmine|meteo"
@@ -117,7 +117,7 @@ ARASAAC=(
   "tornado|tornado|meteo"
   "neve|neve|meteo"
   "ghiaccio|ghiaccio|meteo"
-  "caldo|caldo|meteo"
+  "calore|caldo|meteo"   # «caldo» darebbe una bevanda calda: «calore» dà il viso accaldato col sole (id 35561)
   "nebbia|nebbia|meteo"
   "fuga di gas|fuga-gas|rischio"
   "gas|gas|rischio"
@@ -135,7 +135,7 @@ ARASAAC=(
   "nascondersi|nascondersi|azione"
   "nascondersi sotto al tavolo|nascondersi-tavolo|azione"
   "uscire|uscire|azione"
-  "scappare|scappare|azione"
+  "scappare|scappare|azione|31015"
   "entrare in casa|entrare-casa|azione"
   "chiudere|chiudere|azione"
   "chiudere il gas|chiudere-gas|azione"
@@ -154,7 +154,7 @@ ARASAAC=(
   "aspettare|aspettare|azione"
   "evacuare|evacuare|azione"
   "lavarsi le mani|lavarsi-mani|azione"
-  "bere acqua|bere-acqua|azione"
+  "bere|bere-acqua|azione|2276"
 
   # Oggetti del kit emergenza
   "zaino|zaino|kit"
@@ -169,7 +169,7 @@ ARASAAC=(
   "farmaci|farmaci|kit"
   "documenti|documenti|kit"
   "carta di identità|carta-identita|kit"
-  "mascherina|mascherina|kit"
+  "mascherina|mascherina|kit|36791"
   "casco|casco|kit"
   "pile|pile|kit"
   "candela|candela|kit"
@@ -195,12 +195,12 @@ ARASAAC=(
   "medico|medico|persona"
   "infermiere|infermiere|persona"
   "poliziotto|poliziotto|persona"
-  "carabiniere|carabiniere|persona"
+  # «carabiniere» (id 3342) e' la Guardia Civil spagnola col tricorno: tolto l'8 ottobre 2026.
 
   # Luoghi
   "casa|casa|luogo"
   "scuola|scuola|luogo"
-  "ospedale|ospedale|luogo"
+  "ospedale|ospedale|luogo|3116"
   "strada|strada|luogo"
   "bosco|bosco|luogo"
   "foresta|foresta|luogo"
@@ -275,15 +275,22 @@ done
 echo ""
 echo "==> ARASAAC (api.arasaac.org)"
 for entry in "${ARASAAC[@]}"; do
-  IFS='|' read -r KEY NAME TEMA <<< "$entry"
+  IFS='|' read -r KEY NAME TEMA FIXID <<< "$entry"
   OUT="$DEST_ARA/$NAME.png"
   if [ -f "$OUT" ] && [ "$FORCE" -eq 0 ]; then
     SKIP_ARA=$((SKIP_ARA+1))
     continue
   fi
   KEY_ENC=$(printf '%s' "$KEY" | jq -sRr @uri)
-  RESP=$(curl -sf -A "$UA" "https://api.arasaac.org/api/pictograms/it/search/${KEY_ENC}" || echo "[]")
-  ID=$(printf '%s' "$RESP" | jq -r '.[0]._id // empty')
+  # Quarto campo facoltativo: identificativo fissato dopo averlo guardato. Serve
+  # dove il primo risultato della ricerca mostra altro (ottobre 2026: «scappare»
+  # era un detenuto che evade, «ospedale» aveva la stella di David).
+  if [ -n "$FIXID" ]; then
+    ID="$FIXID"
+  else
+    RESP=$(curl -sf -A "$UA" "https://api.arasaac.org/api/pictograms/it/search/${KEY_ENC}" || echo "[]")
+    ID=$(printf '%s' "$RESP" | jq -r '.[0]._id // empty')
+  fi
   if [ -z "$ID" ]; then
     FAIL_ARA=$((FAIL_ARA+1))
     FAILED_ITEMS+=("ARASAAC '$KEY' ($TEMA) — nessun risultato API")

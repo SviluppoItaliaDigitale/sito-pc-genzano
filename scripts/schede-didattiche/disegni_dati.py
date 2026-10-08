@@ -85,7 +85,7 @@ ALBUM = [
   sottotitolo="Album da colorare · Infanzia 4–6 anni e classe prima · 15–20 minuti a foglio · colori",
   intro="Dodici disegni delle cose che si fanno stando insieme. Guarda il disegno, ascolta la frase, poi colora come vuoi.",
   fogli=[
-   dict(img="dis-campo", tit="Il campo", alt="Due persone sedute davanti a un fuoco, in mezzo alle tende.",
+   dict(img="dis-campo", tit="Il campo", alt="Tre persone sedute intorno a un fuoco, in mezzo alle tende.",
         dida="Al campo si sta insieme anche la sera."),
    dict(img="dis-pentola", tit="La cucina del campo", alt="Pentola grande con il coperchio.",
         dida="Nella pentola grande si cucina per tutti."),
