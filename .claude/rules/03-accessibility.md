@@ -433,6 +433,23 @@ Da maggio 2026 (Punto 16 roadmap) ogni articolo del sito può avere una versione
 
 **Eccezione gate AGID obbligata:** la versione facile NON segue il linguaggio AGID standard, usa le regole **CEFR A2** (frasi 8-12 parole, lessico 2000 parole frequenti, sigle spiegate, niente subordinate concatenate). Non invocare `pc-article-reviewer` sui file `*-facile.md`. Specifiche complete: `manuale/parte-25-italiano-l2-versione-facile.md` + `rule 02-content-design-pa.md § "Versione italiano semplice"`.
 
+## Progettazione universale per l'apprendimento — CAST UDL 3.0 (dall'08/10/2026)
+
+🟢 I materiali didattici del sito (schede, kit per le scuole e kit calamità, percorsi, esperimenti, giochi, pagine rischio usate in classe) seguono le **linee guida UDL 3.0 del CAST** ([udlguidelines.cast.org](https://udlguidelines.cast.org/), luglio 2024). Non sono una norma né una certificazione: sono il riferimento internazionale per progettare un materiale che funzioni per tutta la classe fin dall'inizio, invece di adattarlo dopo per chi ha bisogni specifici. Si affiancano a WCAG (che dice se la pagina è *accessibile*) chiedendo se il materiale è *comprensibile e usabile* da chi impara in modi diversi.
+
+**Che cosa si applica, in pratica:**
+
+1. **Più forme della stessa informazione** (CAST 1, 2): l'istruzione chiave esiste come testo e, quando aiuta, come figura, pittogramma, audio (lettura ad alta voce) o versione facile. **Il testo resta sufficiente da solo**: nessuna informazione essenziale sta solo nell'immagine (WCAG 1.1.1, 1.4.5).
+2. **Una figura solo se fa capire qualcosa**: una relazione, una sequenza, un confronto giusto/sbagliato, un pericolo. Mai per decorare. Una pagina già chiara a parole resta senza figura.
+3. **Lessico e simboli chiariti** (CAST 2.1): termini tecnici spiegati o collegati al glossario, simboli non ambigui, segnali di sicurezza da ISO 7010.
+4. **Idee essenziali in evidenza** (CAST 3.2): passaggi numerati, colori che marcano una differenza reale e mai da soli, niente elementi di distrazione.
+5. **Più modi di rispondere** (CAST 5, 6): disegnare, indicare, dire, scrivere, fare; le rubriche valutano azioni osservabili (rule 02 e `pc-didattica-reviewer` § 2).
+6. **Coinvolgimento senza paura** (CAST 7, 9): scelte reali per l'alunno, collegamento al territorio, emozioni legittimate, mai la paura come leva.
+
+**Illustrazioni didattiche — shortcode `illustrazione-udl`.** SVG statici in `static/formazione/illustrazioni-udl/` (1200×620, senza JavaScript né font esterni, `role="img"` con `<title>` e `<desc>` in italiano), inseriti con `{{</* illustrazione-udl src="/formazione/illustrazioni-udl/<nome>.svg" alt="…" caption="…" */>}}` (`src` e `alt` obbligatori, altrimenti la build si ferma). Criteri ed elenco in `docs/illustrazioni-cast-udl.md`.
+
+🔴 **Illustrazioni fatte con strumenti esterni** (l'utente le fa preparare anche a ChatGPT): prima del commit (a) **Read** dell'immagine per vedere che cosa mostra davvero; (b) il gesto o la scena coincide con le indicazioni del DPC (`pc-didattica-reviewer` § 1, `pc-revisore-scientifico` per i fenomeni) — un disegno sbagliato insegna l'errore meglio di un testo sbagliato; (c) `alt`, `caption`, `<title>` e `<desc>` descrivono ciò che si vede, non ciò che si voleva disegnare; (d) **nessun riferimento all'IA** nel file: niente metadati, commenti o testi che citino lo strumento (CLAUDE.md § "Nessun riferimento all'IA"); (e) scritte dentro il `viewBox` e leggibili su telefono e su A4 (rule 09 § 15-ter); (f) nessun dato o luogo inventato presentato come reale.
+
 ## Divieti
 
 - Non eliminare il focus outline senza fornire un'alternativa visibile equivalente.
