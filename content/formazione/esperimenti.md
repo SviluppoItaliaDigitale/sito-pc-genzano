@@ -92,9 +92,11 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** è il motivo per cui gli **allagamenti urbani** colpiscono anche zone lontane dai fiumi.
 
 ### 9. Quanta pioggia è caduta? 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-pluviometro.svg" alt="Sezione di un semplice pluviometro: la pioggia entra nell'imbuto e viene raccolta in una bottiglia trasparente, dove se ne legge il livello con una scala graduata." caption="Misura la pioggia: una scala in millimetri va calibrata in base all'area dell'imbuto; un semplice righello indica soltanto l'altezza dell'acqua." >}}
 **La domanda:** Quando il bollettino dice «50 millimetri di pioggia», quanta acqua è caduta davvero?
 **Materiali:** Una bottiglia di plastica trasparente da 1,5 litri, forbici, un righello, nastro adesivo, un pennarello indelebile, qualche sasso.
-**Come si fa:** (1) Un adulto taglia la bottiglia all'altezza della spalla: sotto è il bicchiere, la parte di sopra capovolta fa da imbuto. (2) Metti i sassi sul fondo perché non voli via, incastra l'imbuto e fissa il righello fuori, con lo zero al fondo piatto. (3) Riempi d'acqua fino allo zero: è il livello di partenza, perché il fondo della bottiglia non è piatto davvero. (4) Mettilo all'aperto lontano da muri e alberi. Ogni giorno alla stessa ora leggi i millimetri, segnali in tabella e svuoti fino allo zero.
+**Come si fa:** (1) Un adulto taglia la bottiglia all'altezza della spalla: sotto è il bicchiere, la parte di sopra capovolta fa da imbuto. (2) Metti i sassi sul fondo perché non voli via, incastra l'imbuto e fissa il righello all'esterno, scegliendo un livello di riferimento leggibile. La scala in millimetri di pioggia deve essere calibrata in base alla superficie di raccolta dell'imbuto: un normale righello misura soltanto l'altezza dell'acqua nel recipiente. (3) Riempi d'acqua fino allo zero: è il livello di partenza, perché il fondo della bottiglia non è piatto davvero. (4) Mettilo all'aperto lontano da muri e alberi. Ogni giorno alla stessa ora, quando il tempo lo consente, leggi il livello dell'acqua; riporta i millimetri di pioggia solo se hai tarato lo strumento, poi riportalo al livello iniziale.
 **Cosa si cambia:** Solo la giornata: posizione, ora della lettura e livello di partenza restano uguali.
 **Che cosa aspettarsi:** In una pioggia normale salgono pochi millimetri; in un temporale forte anche 20-30 in poche ore.
 **Cosa si impara:** Un millimetro di pioggia è un litro d'acqua per ogni metro quadrato. Il numero del bollettino è una previsione, il tuo è una misura: confrontarli fa capire la differenza.
@@ -151,6 +153,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 ## Caldo, freddo, vento, temporali e siccità
 
 ### 15. Sole o ombra? Chiaro o scuro? 🟢🔵
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-superfici-calore.svg" alt="Due campioni uguali sotto lo stesso sole, uno bianco e uno nero. Termometri illustrativi mostrano minore e maggiore riscaldamento; nessuna temperatura numerica è assegnata." caption="Confronta superfici identiche sotto lo stesso sole: i materiali scuri generalmente assorbono più luce. Il disegno non mostra temperature misurate." >}}
 **Materiali:** due termometri (o uno solo, da spostare); un foglio bianco e uno nero; un posto al sole.
 **Come si fa:** al sole appoggia un termometro sotto il foglio nero e uno sotto il bianco; confronta dopo dieci minuti. Ripeti mettendo i due fogli all'ombra: la differenza quasi sparisce. Per misurare la temperatura **dell'aria**, invece, il termometro va tenuto all'ombra e ventilato.
 **Cosa si impara:** i colori scuri assorbono più luce del sole e si scaldano di più: è l'**irraggiamento**. Il termometro lasciato al sole misura quanto si è scaldato lui, non l'aria — per questo le stazioni meteo tengono i termometri all'ombra, dentro una casetta ventilata.
@@ -174,6 +178,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** ecco perché d'inverno si sparge il **sale sulle strade** ghiacciate. Attenzione al **ghiaccio nero**, sottile e quasi invisibile: rende le strade scivolose. Vedi [Il rischio da neve e gelo](/conoscere/catalogo-dei-rischi/rischio-neve-gelo/).
 
 ### 18. La forza del vento (la manica a vento) 🟢🔵
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-manica-vento.svg" alt="Confronto di due maniche a vento: quella poco gonfia indica vento debole, quella più distesa vento relativamente più intenso; frecce mostrano lo spostamento dell'aria." caption="La manica a vento indica la direzione verso cui l'aria scorre e dà una stima qualitativa dell'intensità: non misura i chilometri orari." >}}
 **Materiali:** un sacchetto di plastica leggero o un calzino, un cerchio di cartoncino, dello spago, un bastoncino.
 **Come si fa:** fissa l'apertura del sacchetto al cerchio di cartoncino, lega lo spago e appendi la "manica a vento" all'aperto. Osserva come si gonfia e in che direzione punta.
 **Cosa si impara:** la manica mostra **direzione** e **forza** del vento. Più si alza in orizzontale, più il vento è forte.
