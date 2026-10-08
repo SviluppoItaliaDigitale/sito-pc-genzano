@@ -12,6 +12,32 @@ File interno, non pubblicato (Hugo non legge la cartella principale del reposito
 
 Qui non vanno mai credenziali, dati personali o testi destinati al sito.
 
+## Chi fa che cosa
+
+Indicazioni dell'utente dell'8 ottobre 2026.
+
+- **Immagini e illustrazioni (di solito ChatGPT).** Si preparano su un ramo proprio e arrivano con una PR; nella bacheca un avviso «illustrazioni X pronte nella PR #N, da controllare». Prima dell'unione l'altra sessione le guarda renderizzate (vedi l'avviso sulle illustrazioni qui sotto). Se l'altra sessione non è disponibile, chi le ha fatte le rende e le guarda da sé, a 1200 px e a 720 px.
+- **Audit del sito (di solito ChatGPT).** Chi fa l'audit **non corregge**: scrive i rilievi in `riferimenti-interni/audit-esterni/AAAA-MM-GG-<argomento>.md` (formato nel README della cartella) e lascia un avviso qui. L'altra sessione verifica ogni rilievo, corregge quelli fondati con una PR e scrive l'esito accanto a ciascuno (corretto nella PR #N, non riprodotto, già a posto). Così l'utente non deve più copiare l'audit da una chat all'altra.
+- **Pubblicazioni urgenti quando l'altra sessione non c'è.** Si pubblica con una PR e i controlli verdi; direttamente su `main` solo se l'utente lo chiede espressamente. In entrambi i casi un avviso qui: «pubblicato in urgenza: file …, motivo …, PR o commit …». Alla prima sessione utile l'altra lo ripassa e archivia l'avviso con l'esito.
+
+## Richieste
+
+Lavori che una sessione chiede all'altra. L'utente avvisa la sessione destinataria («guarda le richieste in bacheca»): nessuna delle due legge la bacheca da sola finché non viene aperta. Chi prende in carico una richiesta scrive accanto «presa da …, PR #N»; a lavoro unito la sposta in «Archiviati».
+
+Formato per una richiesta di immagine:
+
+```markdown
+- **AAAA-MM-GG — da Claude a ChatGPT — Illustrazione <nome-file>.svg**
+  - Pagina: /percorso/della/pagina/ (sezione …)
+  - Che cosa deve far capire: …
+  - Che cosa deve mostrare: … (gesti e comportamenti come nelle indicazioni DPC citate nella pagina)
+  - Testi nell'immagine: … (pochi, brevi, mai sopra i disegni)
+  - Formato: SVG 1200×620 in static/formazione/illustrazioni-udl/, più la versione -mobile.svg 720×1180 se ci sono più riquadri
+  - Vincoli: title e desc in italiano su ciò che si vede; nessun riferimento allo strumento usato; nessun logo
+```
+
+Nessuna richiesta aperta.
+
 ## Avvisi
 
 - **08/10/2026, 21:45 — Claude.** Le illustrazioni in `static/formazione/illustrazioni-udl/` sono state controllate a vista e corrette (PR #1283, #1285, #1286, #1287, #1291). Prima di aggiungerne o modificarne una: rendila, guardala a 1200 px e, per le versioni `-mobile.svg`, a 720 px; nessun testo sopra un disegno; testo scuro solo su fondo chiaro; `<title>` e `<desc>` che descrivono ciò che si vede; `python3 scripts/check-illustrazioni-udl.py` verde.
