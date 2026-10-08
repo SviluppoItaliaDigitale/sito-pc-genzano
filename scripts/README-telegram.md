@@ -4,7 +4,7 @@ Sistema che invia messaggi al canale Telegram del Gruppo per **tre tipi di event
 
 1. **Cambi di livello allerta meteo** (`data/allerta.json`)
 2. **Attivazione/cessazione/aggiornamento emergenze** (`data/emergenza.json`)
-3. **Pubblicazione di articoli con badge urgente** (`content/comunicazioni/`): solo Allerta, Avviso, Emergenza, Aggiornamento
+3. **Pubblicazione di articoli di allerta o di emergenza** (`content/comunicazioni/`): solo badge Allerta ed Emergenza. Dall'08/10/2026 gli articoli Avviso e Aggiornamento non si notificano più: gli iscritti trovavano fastidiosi i messaggi non di emergenza.
 
 I messaggi più gravi (allerta arancione/rossa, emergenza attiva, articolo Allerta o Emergenza) vengono **fissati in cima al canale** automaticamente. Quando l'evento cessa, il pin viene rimosso.
 
@@ -106,8 +106,7 @@ Telegram permette **un solo messaggio pinnato** per canale (più tecnicamente s�
 | Emergenza aggiornata (durante attiva) | Unpin precedente + invio + pin nuovo |
 | Cessata emergenza | Unpin precedente + invio (no nuovo pin) |
 | Articolo `Allerta` o `Emergenza` | Invio + pin (sostituisce il pin precedente) |
-| Articolo `Avviso` o `Aggiornamento` | Solo invio, no pin |
-| Articolo altro badge | Niente notifica |
+| Articolo di qualunque altro badge, compresi `Avviso` e `Aggiornamento` | Niente notifica |
 
 In questo modo il messaggio più recente di natura critica resta sempre fissato in cima al canale, finché un altro evento critico lo sostituisce o cessa lo stato.
 

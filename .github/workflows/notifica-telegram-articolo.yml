@@ -1,11 +1,13 @@
-name: "📲 Notifica Telegram (nuovi articoli urgenti)"
+name: "📲 Notifica Telegram (nuovi articoli di allerta o emergenza)"
 
 # Manda notifica al canale Telegram quando viene pubblicato un nuovo
-# articolo con badge urgente (Allerta, Avviso, Emergenza, Aggiornamento).
+# articolo con badge Allerta o Emergenza. Dall'08/10/2026 Avviso e
+# Aggiornamento non si notificano più: il canale porta solo allerte ed
+# emergenze (istruzione dell'utente).
 #
 # Filtri (vedi scripts/notifica-telegram-articolo.py):
 #   - Solo articoli AGGIUNTI (Added) nel commit, non modificati
-#   - Solo badge: Allerta, Avviso, Emergenza, Aggiornamento
+#   - Solo badge: Allerta, Emergenza
 #   - Solo articoli con date <= oggi (i calendarizzati non vengono notificati)
 #   - Skip articoli draft:true
 #
@@ -15,8 +17,7 @@ name: "📲 Notifica Telegram (nuovi articoli urgenti)"
 # a messaggio testuale.
 #
 # Pin: i messaggi con badge Allerta o Emergenza vengono fissati in cima al
-# canale (sostituendo il pin precedente). Avviso e Aggiornamento sono inviati
-# senza pin.
+# canale (sostituendo il pin precedente).
 #
 # Skip-loop: i commit con [skip-telegram] nel messaggio non triggerano
 # il workflow.

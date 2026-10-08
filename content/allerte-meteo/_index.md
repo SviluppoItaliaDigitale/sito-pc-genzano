@@ -30,7 +30,7 @@ Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzi
 <div class="card border-info mb-4">
 <div class="card-body bg-info bg-opacity-10 p-4">
 <h2 class="h5 text-dark"><i class="bi bi-telegram me-2" aria-hidden="true"></i>Ricevi le allerte su Telegram</h2>
-<p class="mb-2">Iscriviti al <strong>canale Telegram ufficiale</strong> del Gruppo Comunale. Riceverai una notifica quando cambia il livello di allerta o quando vengono pubblicate comunicazioni operative importanti.</p>
+<p class="mb-2">Iscriviti al <strong>canale Telegram ufficiale</strong> del Gruppo Comunale. Riceverai una notifica quando cambia il livello di allerta o quando c'è un'emergenza in corso.</p>
 <p class="mb-2 small text-muted">L'iscrizione è anonima: Telegram gestisce la lista degli iscritti. Puoi lasciare il canale in qualsiasi momento.</p>
 <a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" class="btn btn-info">
   <i class="bi bi-telegram me-1" aria-hidden="true"></i> Iscriviti al canale Telegram
