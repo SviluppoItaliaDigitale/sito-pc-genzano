@@ -23,6 +23,8 @@ Se c'è pericolo:
 
 ## Terremoto
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/terremoto-tre-gesti.svg" alt="Una persona si abbassa, si ripara sotto un tavolo robusto proteggendo testa e collo e afferra una gamba del tavolo." caption="Tre gesti: abbassati, riparati, tieniti. Leggi anche le istruzioni qui sotto." >}}
+
 Il terremoto fa tremare il terreno e gli edifici.
 
 ### Se sei in casa o a scuola
@@ -43,6 +45,8 @@ Il terremoto fa tremare il terreno e gli edifici.
 Pagina completa: [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
 ## Pioggia forte e allagamenti
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/allagamento-luoghi-sicuri.svg" alt="A sinistra una persona al piano alto di una casa con cantina allagata; a destra un'auto su una strada allagata sbarrata da una croce rossa." caption="Acqua alta: sali a un piano sicuro, non scendere nei seminterrati e non attraversare strade allagate." >}}
 
 La pioggia forte può riempire strade, cantine, garage e sottopassi.
 

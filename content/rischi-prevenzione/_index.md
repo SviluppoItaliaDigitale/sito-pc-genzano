@@ -33,6 +33,8 @@ La preparazione non richiede tempo né soldi. Cinque azioni che puoi fare **oggi
 
 Un evento raramente arriva da solo. Un **temporale violento** può far cadere alberi e linee elettriche, causando un **blackout**; il blackout può fermare le **pompe dell'acqua** e i **dispositivi salvavita** a casa; una **frana** può interrompere una strada e isolare un quartiere. Preparati pensando alla catena, non al singolo evento: il [kit di emergenza](/rischi-prevenzione/kit-emergenza/) e una scorta minima di acqua, cibo e farmaci ti coprono in tutti questi scenari.
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/temporale-effetti-cascata.svg" alt="Quattro scene concatenate: temporale; danni alle linee; possibile blackout; possibili disservizi idrici e a dispositivi elettrici. La sequenza non è inevitabile." caption="Effetti a cascata: un problema può aggravare altri servizi essenziali, ma non tutte le conseguenze avvengono sempre." >}}
+
 ## Pagine di consultazione rapida
 
 Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecniche.
