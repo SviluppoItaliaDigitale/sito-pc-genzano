@@ -150,6 +150,18 @@ Due shortcode per le **tabelle di Comunicazione Aumentativa Alternativa (CAA)**:
 
 CSS sezione **TABELLE DI COMUNICAZIONE CAA v1.0** in `custom.css`: `.caa-grid` è CSS Grid responsive (`auto-fill, minmax(130px,1fr)`; 100px su mobile; 4 colonne in stampa), `.caa-board` ha `break-inside: avoid` (ogni tabella su una pagina A4), `.caa-cell` bordo 2px `#003366` + immagine `aspect-ratio 1/1 object-fit:contain`. 🔴 **Accessibilità**: i pittogrammi CAA **restano visibili anche con "Nascondi immagini"** del toolbar (`html.a11y-hide-images img.caa-cell-img { visibility: visible !important }`) perché qui sono **contenuto**, non decorazione. Attribuzione ARASAAC obbligatoria (CC BY-NC-SA 4.0, ereditata dalle tabelle stampate). Vedi `manuale/parte-40-comunicazione-emergenza-accessibile.md`.
 
+## Shortcode `illustrazione-udl` (figure didattiche CAST UDL, 08/10/2026)
+
+Inserisce un'illustrazione SVG da `static/formazione/illustrazioni-udl/` dentro pagine rischio, materiali didattici ed esperimenti:
+
+```go-html-template
+{{</* illustrazione-udl src="/formazione/illustrazioni-udl/terremoto-tre-gesti.svg"
+                       alt="Descrizione di ciò che la figura mostra"
+                       caption="Didascalia breve, con i limiti dello schema se servono." */>}}
+```
+
+`src` e `alt` obbligatori (`errorf` blocca la build), `caption` opzionale (markdown inline). Produce `<figure>` con `<img loading="lazy" decoding="async">` 1200×620 responsive. Il percorso passa per `strings.TrimPrefix "/" | relURL`, come gli altri shortcode, per il subpath di GitHub Pages. Quando usarlo e come controllare le figure (anche quelle preparate con strumenti esterni): rule 03 § «Progettazione universale per l'apprendimento» e `docs/illustrazioni-cast-udl.md`.
+
 ## Shortcode `scheda-terremoto` (scheda dettaglio evento sismico)
 
 `themes/flavour-pcgenzano/layouts/shortcodes/scheda-terremoto.html` rende la **scheda di dettaglio di un singolo terremoto** sul modello della pagina evento di `terremoti.ingv.it`. Usato dalla pagina `content/cruscotto/terremoto.md` (URL `/cruscotto/terremoto/`), che riceve l'ID evento via **hash** (`#46107472`) o query (`?event=46107472`).

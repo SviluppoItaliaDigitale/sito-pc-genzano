@@ -44,9 +44,22 @@ Lavori sui file che ti vengono indicati (o su tutto il perimetro se te lo chiedo
 - **Le emozioni non sono livelli**: paura, pianto, agitazione, bisogno di aiuto non possono comparire come indicatori di livello basso nelle rubriche né come regole («non avere paura»). Le rubriche descrivono **azioni osservabili** («riconosce il segnale», «chiede aiuto», «segue la sequenza con supporto») e **progressi rispetto al punto di partenza**, con adattamenti per bisogni educativi speciali.
 - Legittima la paura e insegna cosa fare anche quando si ha paura.
 
+### 2-bis. Progettazione universale per l'apprendimento (CAST UDL 3.0)
+
+Applica rule 03 § «Progettazione universale per l'apprendimento». Su ogni materiale chiedi:
+
+- L'istruzione chiave esiste **in più forme** (testo + figura o pittogramma, lettura ad alta voce, versione facile dove serve)? Il **testo basta da solo**, anche senza immagini?
+- Ogni figura (`illustrazione-udl`, pittogramma, schema) **fa capire qualcosa** — sequenza, confronto, relazione, pericolo — o decora? Se decora, va tolta.
+- La figura è **corretta**: il gesto coincide con il DPC, la scena non contraddice il testo, nessuna conseguenza presentata come inevitabile se non lo è. Leggila davvero con Read: `alt` e `<desc>` devono descrivere ciò che si vede.
+- L'alunno ha **più modi di rispondere** (indicare, disegnare, dire, fare) e qualche scelta reale?
+- Termini e simboli sono chiariti; i colori non sono l'unico veicolo di una differenza.
+- La figura rispetta i principi di Mayer (rule 03): niente elementi superflui, ciò che conta è segnalato, parola e figura stanno vicine, una procedura è divisa in passi, i termini nuovi sono spiegati prima; nei video la voce non è duplicata parola per parola a schermo (i sottotitoli restano).
+
+Una figura sbagliata su un comportamento di sicurezza è **BLOCCANTE** come un testo sbagliato (§ 1). Una figura che non aggiunge comprensione è un rilievo, non un bloccante.
+
 ### 3. Quadro normativo scolastico vigente
 
-Controlla che le norme citate nelle schede, nei kit e nelle pagine docenti siano quelle vigenti: OM 3/2025 per la valutazione nella primaria (non l'OM 172/2020), D.M. 183/2024 per l'educazione civica, Accordo Stato-Regioni 17 aprile 2025 per la formazione sicurezza (il 2011 solo come riferimento storico), D.M. 774/2019 per i PCTO, L. 21/2025 per la sicurezza sul lavoro nell'educazione civica. Distingui sempre **rubrica interna di progetto** da **valutazione periodica/finale** deliberata dalla scuola. Per gli aggiornamenti usa `pc-normative-verifier`.
+Controlla che le norme citate nelle schede, nei kit e nelle pagine docenti siano quelle vigenti: Indicazioni nazionali D.M. 221/2025 (dal 2026/27 per l'infanzia e le classi prime; il D.M. 254/2012 vale solo per le classi già avviate nel 2025/26, art. 5), OM 3/2025 per la valutazione nella primaria (non l'OM 172/2020), D.M. 183/2024 per l'educazione civica, Accordo Stato-Regioni 17 aprile 2025 per la formazione sicurezza (il 2011 solo come riferimento storico), D.M. 774/2019 per i PCTO, L. 21/2025 per la sicurezza sul lavoro nell'educazione civica. Distingui sempre **rubrica interna di progetto** da **valutazione periodica/finale** deliberata dalla scuola. Per gli aggiornamenti usa `pc-normative-verifier`.
 
 ### 4. Esercizi, dati e soluzioni
 

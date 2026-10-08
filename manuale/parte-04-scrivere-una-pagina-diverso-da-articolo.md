@@ -266,7 +266,7 @@ Il sito pubblica **Kit didattici** indirizzati alle scuole del territorio, uno p
 
 **Struttura comune a tutti e quattro i kit:**
 
-1. **Riferimenti normativi e curricolari** — Legge 92/2019 (educazione civica), D.M. 35/2020 e Linee guida 2024, art. 18 D.Lgs. 1/2018 (obbligo di informazione e formazione), Indicazioni Nazionali 2012 / Nuovi Scenari 2018 / Nuovi Orientamenti 2024 (infanzia).
+1. **Riferimenti normativi e curricolari** — Legge 92/2019 (educazione civica), D.M. 35/2020 e Linee guida 2024, art. 18 D.Lgs. 1/2018 (obbligo di informazione e formazione), Indicazioni nazionali per il curricolo (D.M. 221/2025; D.M. 254/2012 per le classi già avviate nel 2025/26) / Nuovi Scenari 2018 / Nuovi Orientamenti 2024 (infanzia).
 2. **Obiettivi di apprendimento formalizzati** — conoscenze, abilità, competenze chiave europee (Racc. UE 2018/C 189/01).
 3. **Raccordo con le discipline** — tabella che associa a ciascuna disciplina i traguardi di competenza e gli agganci con il curricolo.
 4. **Durata e tabella del percorso** — moduli con obiettivi, attività, materiali, tempi.

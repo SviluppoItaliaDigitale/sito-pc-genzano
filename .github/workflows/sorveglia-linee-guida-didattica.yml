@@ -1,0 +1,149 @@
+name: "Linee guida per l'apprendimento: controllo settimanale"
+
+# Controlla ogni settimana le pagine ufficiali delle linee guida che i
+# materiali didattici del sito applicano o citano (CAST UDL, WCAG e
+# accessibilità cognitiva del W3C, "Io non rischio", quadro UNESCO/GADRRRES
+# sulla sicurezza a scuola, facile da leggere di Inclusion Europe). Se una
+# pagina cambia, apre una issue con l'elenco di ciò che va riletto.
+#
+# Le norme (decreti del Ministero dell'Istruzione e del Merito, accordi,
+# ordinanze) non passano da qui: le legge ogni giorno normativa-watcher.yml
+# dalla Gazzetta Ufficiale, nella categoria «scuola».
+#
+# Nasce l'08/10/2026: le Indicazioni nazionali 2025 (D.M. 221/2025) e le
+# linee guida CAST UDL 3.0 le ha scoperte l'utente per caso, nessun controllo
+# del sito le sorvegliava.
+#
+# Stessa tecnica di aggiorna-manuale.yml (scripts/hash-fonte-agid.py: hash
+# del solo testo visibile). Una fonte nuova entra in silenzio al primo giro
+# e segnala dal secondo.
+
+on:
+  schedule:
+    # Lunedì 06:26 UTC, dopo aggiorna-manuale.yml (06:04).
+    - cron: "26 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  verifica-fonti:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v7
+
+      - name: "Setup Python"
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: "Installa dipendenze"
+        run: pip install --quiet beautifulsoup4
+
+      - name: "Verifica le pagine delle linee guida"
+        id: check
+        shell: bash
+        run: |
+          set -u
+          STATE_FILE=".manuale/fonti-didattica-hashes.json"
+          CHANGES_FILE="/tmp/didattica-changes.md"
+          ERR_FILE="/tmp/didattica-errori.md"
+          : > "$CHANGES_FILE"; : > "$ERR_FILE"
+          [ -f "$STATE_FILE" ] || echo '{"fonti":{}}' > "$STATE_FILE"
+
+          declare -A FONTI=(
+            ["cast_udl"]="https://udlguidelines.cast.org/"
+            ["w3c_wcag"]="https://www.w3.org/WAI/standards-guidelines/wcag/"
+            ["w3c_coga"]="https://www.w3.org/TR/coga-usable/"
+            ["dpc_io_non_rischio"]="https://iononrischio.protezionecivile.gov.it/it/"
+            ["gadrrres_cssf"]="https://gadrrres.net/comprehensive-school-safety-framework/"
+            ["inclusion_europe_easy_to_read"]="https://www.inclusion-europe.eu/easy-to-read/"
+          )
+
+          HAS_CHANGES="false"
+          NEW_JSON=$(jq -n --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '{
+            "_meta": {
+              "descrizione": "Hash del testo visibile delle pagine delle linee guida per l apprendimento, controllate ogni lunedì da .github/workflows/sorveglia-linee-guida-didattica.yml con scripts/hash-fonte-agid.py.",
+              "ultimo_aggiornamento": $ts,
+              "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
+            },
+            "fonti": {}
+          }')
+
+          for key in "${!FONTI[@]}"; do
+            url="${FONTI[$key]}"
+            echo "Verifica: $key -> $url"
+            if hash=$(python3 scripts/hash-fonte-agid.py "$url" 2>/dev/null); then :; else
+              hash="errore-download"
+              echo "- **$key** — [$url]($url)" >> "$ERR_FILE"
+            fi
+            prev=$(jq -r --arg k "$key" '.fonti[$k].hash // ""' "$STATE_FILE")
+            if [ -n "$prev" ] && [ "$prev" != "errore-download" ] \
+               && [ "$hash" != "errore-download" ] && [ "$prev" != "$hash" ]; then
+              HAS_CHANGES="true"
+              echo "- **$key** — [$url]($url)" >> "$CHANGES_FILE"
+            fi
+            # Se la pagina non risponde si conserva l'hash precedente, così il
+            # giro dopo confronta ancora con l'ultima lettura riuscita.
+            [ "$hash" = "errore-download" ] && [ -n "$prev" ] && hash="$prev"
+            NEW_JSON=$(echo "$NEW_JSON" | jq --arg k "$key" --arg u "$url" --arg h "$hash" \
+              --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '.fonti[$k] = {"url": $u, "hash": $h, "verificato": $ts}')
+          done
+
+          echo "$NEW_JSON" | jq --sort-keys '.' > "$STATE_FILE"
+          echo "has_changes=$HAS_CHANGES" >> "$GITHUB_OUTPUT"
+
+      - name: "Commit aggiornamento hash"
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- .manuale/fonti-didattica-hashes.json && git ls-files --error-unmatch .manuale/fonti-didattica-hashes.json >/dev/null 2>&1; then
+            echo "Nessuna modifica agli hash."
+          else
+            git add .manuale/fonti-didattica-hashes.json
+            git commit -m "Hash delle linee guida per l'apprendimento — controllo settimanale"
+            for tentativo in 1 2 3; do
+              if git push 2>&1; then break; fi
+              git pull --rebase origin main || exit 1
+              [ "$tentativo" = "3" ] && exit 1
+            done
+          fi
+
+      - name: "Apri issue se una linea guida è cambiata"
+        if: steps.check.outputs.has_changes == 'true'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const changes = fs.readFileSync('/tmp/didattica-changes.md', 'utf8');
+            const errori = fs.readFileSync('/tmp/didattica-errori.md', 'utf8');
+            const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Rome' });
+            const body = [
+              `## Linee guida per l'apprendimento cambiate — ${today}`,
+              ``,
+              `Dall'ultimo controllo sono cambiate queste pagine:`,
+              ``,
+              changes,
+              errori ? `\nNon raggiunte in questo giro (da ricontrollare):\n\n${errori}` : ``,
+              ``,
+              `### Cosa fare`,
+              `- [ ] Aprire ogni pagina e capire se è cambiata la sostanza (nuova versione, nuovi criteri) o solo la forma`,
+              `- [ ] Se cambia la sostanza: aggiornare \`.claude/rules/03-accessibility.md\` § «Progettazione universale per l'apprendimento», \`.claude/agents/pc-didattica-reviewer.md\`, \`AGENTS.md\` § 5.4-bis, \`docs/illustrazioni-cast-udl.md\` e il manuale (parte 21) **insieme**`,
+              `- [ ] Rileggere con \`pc-didattica-reviewer\` le schede, i kit e i percorsi che applicano quella linea guida, correggendo ciò che non è più allineato`,
+              `- [ ] Per «Io non rischio»: confrontare le istruzioni di autoprotezione delle schede e delle pagine rischio con le nuove indicazioni (\`pc-coerenza-trasversale\`)`,
+              `- [ ] Se è solo forma: chiudere questa issue con una riga di motivo`,
+              ``,
+              `Questa è manutenzione (Categoria A, rule 10): le correzioni vanno fino a live con un solo merge.`,
+              ``,
+              `_Issue generata da \`.github/workflows/sorveglia-linee-guida-didattica.yml\`._`
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: `Linee guida per l'apprendimento cambiate — ${today}`,
+              body, labels: ['automazione', 'didattica', 'revisione']
+            });

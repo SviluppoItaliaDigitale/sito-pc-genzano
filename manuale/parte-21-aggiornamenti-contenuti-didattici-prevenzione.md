@@ -168,3 +168,20 @@ Audit strutturale completo del sito (le 7 Fasi del modello di lavoro). Esiti pri
 - **Description >160 char** su 115 articoli: scelta editoriale del Gruppo, articoli storici lunghi richiedono description ricca. Non riscritti.
 - **Foto stock duplicate** scartate dalla pulizia: tra i 9 cluster di duplicati md5 ne restano 1 (3 file Centro Italia 2016 con caption divergenti — risolto col fix Amatrice ShakeMap) e archivio-storico. Decisione: archivio-storico preservato come tale.
 - **Verifiche browser** (mobile 320/375/768/1024 px, stampa A4 reale, Lighthouse score, regressioni JS interattive): da fare quando l'utente è davanti al sito live, fuori scope autonomia CLI.
+
+## Progettazione universale per l'apprendimento (CAST UDL 3.0) — dall'8 ottobre 2026
+
+I materiali didattici del sito seguono le linee guida UDL 3.0 del CAST (udlguidelines.cast.org). Non sono una legge né una certificazione: indicano come progettare un materiale che funzioni per tutta la classe fin dall'inizio.
+
+In pratica:
+
+- la stessa informazione esiste in più forme (testo, figura o pittogramma, lettura ad alta voce, versione facile), e il testo basta anche senza immagini;
+- una figura si mette solo se fa capire una sequenza, un confronto o un pericolo, mai per decorare;
+- termini e simboli sono spiegati, i colori non sono mai l'unico modo per distinguere;
+- l'alunno può rispondere in più modi (indicare, disegnare, dire, fare).
+
+Per costruire bene una figura si seguono anche i principi di apprendimento multimediale di Richard E. Mayer (*Multimedia Learning*, 3ª edizione, 2020): togliere ciò che non serve a capire, evidenziare ciò che conta con numeri o frecce oltre al colore, mettere le parole accanto alla parte di figura che descrivono, dividere una procedura in passi, spiegare i termini nuovi prima di usarli. Nei video la voce non va ripetuta parola per parola a schermo; i sottotitoli restano obbligatori.
+
+Le illustrazioni sono file SVG in `static/formazione/illustrazioni-udl/`, inserite con lo shortcode `illustrazione-udl` (`src` e `alt` obbligatori, `caption` facoltativa). Quando un'illustrazione viene preparata con uno strumento esterno, prima di pubblicarla si guarda che cosa mostra davvero, si controlla che il gesto coincida con le indicazioni del Dipartimento della Protezione Civile, si scrivono testo alternativo e didascalia su ciò che si vede, e si tolgono metadati o testi che citino lo strumento usato.
+
+Regola completa: `.claude/rules/03-accessibility.md` § «Progettazione universale per l'apprendimento»; criteri in `docs/illustrazioni-cast-udl.md`; controllo affidato a `pc-didattica-reviewer` § 2-bis.

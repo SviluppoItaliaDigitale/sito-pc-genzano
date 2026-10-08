@@ -85,7 +85,7 @@ Per foto, video e dati degli studenti il riferimento resta sempre il DPO dell'is
 | Riferimento | Cosa stabilisce | Dove incide |
 |---|---|---|
 | Raccomandazione Consiglio UE 22 maggio 2018 | Otto competenze chiave per l'apprendimento permanente. | Programmazione didattica |
-| Indicazioni Nazionali per il Curricolo, D.M. 254/2012 | Quadro pedagogico per infanzia, primaria e secondaria di primo grado. | Primo ciclo |
+| Indicazioni nazionali per il curricolo, [D.M. 9 dicembre 2025, n. 221](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-01-27&atto.codiceRedazionale=26G00021) (GU n. 21 del 27 gennaio 2026) | Quadro pedagogico per infanzia, primaria e secondaria di primo grado. Sostituisce il D.M. 254/2012 con gradualità: dal 2026/27 per tutta l'infanzia e per le classi prime di primaria e secondaria di primo grado. Le classi già avviate nel 2025/26 proseguono con il D.M. 254/2012 fino alla fine del corso (art. 5); per la storia, le terze della primaria passano al nuovo testo nel 2027/28. | Primo ciclo |
 | D.P.R. 87, 88 e 89/2010 | Regolamenti per professionali, tecnici e licei. | Secondaria II grado |
 | Agenda 2030 ONU | Obiettivi di sviluppo sostenibile. Il rischio di disastri è scritto nei traguardi 1.5, 3.d, 4.7, 11.5, 11.b, 13.1 e 13.3; in modo indiretto riguardano la protezione civile anche i Goal 6, 15, 16 e 17. Mappa completa in [Protezione civile e Agenda 2030](/conoscere/agenda-2030/). | Educazione civica e sostenibilità |
 
