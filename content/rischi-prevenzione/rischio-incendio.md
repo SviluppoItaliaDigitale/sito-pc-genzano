@@ -16,6 +16,8 @@ L'incendio boschivo divampa in aree vegetate — boschi, macchia mediterranea, t
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/incendio-boschivo-avvistamento.svg" alt="Fiamme e fumo sono lontani nel bosco, mentre una persona in un luogo sicuro telefona al 112 e comunica la località." caption="Se avvisti un incendio, allontanati e segnala il luogo al 112, senza avvicinarti alle fiamme." >}}
+
 {{< video src="/video/2026-09-24-incendi-boschivi-video.mp4"
           poster="/video/2026-09-24-incendi-boschivi-video-poster.webp"
           verticale="true"
