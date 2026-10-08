@@ -228,9 +228,11 @@ guasto dello stesso tipo, la prossima volta, si legge al primo colpo.
 ## 42.10 — Le altre due reti
 
 **Telegram** non passa da questo sistema e segue una regola sua, più stretta: il workflow
-`notifica-telegram-articolo.yml` manda sul canale un avviso solo per gli articoli **urgenti**
-(badge `Allerta`, `Avviso`, `Emergenza`, `Aggiornamento`), e solo quando l'articolo viene caricato
-già online: un articolo urgente calendarizzato non viene annunciato. È una segnalazione, non un
+`notifica-telegram-articolo.yml` manda sul canale un avviso solo per gli articoli di **allerta o
+di emergenza** (badge `Allerta` ed `Emergenza`; dall'08/10/2026 non più `Avviso` e `Aggiornamento`,
+che gli iscritti trovavano fastidiosi), e solo quando l'articolo viene caricato già online: un
+articolo calendarizzato non viene annunciato. I cambi di allerta e le emergenze arrivano comunque
+dai file di stato, con `notifica-telegram.yml`. È una segnalazione, non un
 post curato; la bozza `telegram.txt` resta per quando si vuole pubblicare qualcosa di più
 costruito.
 

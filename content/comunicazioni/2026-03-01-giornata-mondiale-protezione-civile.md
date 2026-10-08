@@ -51,7 +51,7 @@ La Giornata Mondiale è un'occasione per **agire come cittadino**. Tre proposte 
 
 2. **Verifica il tuo kit di emergenza domestico.** Acqua, cibo a lunga conservazione, torcia con pile cariche, radio a batteria, kit primo soccorso, copia documenti. Il [kit di emergenza](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/) è l'investimento di prevenzione più semplice ed economico.
 
-3. **Iscriviti al canale Telegram del Gruppo.** Per ricevere aggiornamenti su allerte, eventi formativi, attività del territorio: [t.me/pcalfagenzano](https://t.me/pcalfagenzano).
+3. **Iscriviti al canale Telegram del Gruppo.** Per ricevere le allerte meteo e le comunicazioni di emergenza: [t.me/pcalfagenzano](https://t.me/pcalfagenzano).
 
 ## A Genzano di Roma
 

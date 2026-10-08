@@ -246,6 +246,21 @@
             if (suf !== 'loading') levelServer = suf;
           }
         }
+        // Il browser legge solo il CSV del Dipartimento, mentre il livello
+        // del build combina quel CSV con il bollettino del Centro Funzionale
+        // della Regione Lazio (check-allerta.py, dall'08/10/2026). Quel giorno
+        // la Regione ha portato la Zona F ad arancione a mezzogiorno con il
+        // CSV DPC ancora fermo alla gialla: se il browser potesse abbassare il
+        // livello, la homepage avrebbe mostrato gialla a chi la apriva. Qui si
+        // può solo ALZARE il livello del build, mai abbassarlo: i declassamenti
+        // arrivano con il deploy urgente che check-allerta lancia a ogni
+        // cambio di livello, entro pochi minuti.
+        var ordine = { verde: 0, gialla: 1, arancione: 2, rossa: 3 };
+        var piuBasso = levelServer && ordine[levelServer] !== undefined && maxLevel < ordine[levelServer];
+        if (piuBasso) {
+          bar.classList.remove('allerta-bar-loading');
+          return;
+        }
         if (levelServer !== maxLiv) {
           bar.className = 'allerta-bar allerta-bar-' + maxLiv;
           var t = document.getElementById('allerta-titolo');
@@ -295,7 +310,13 @@
             domaniDate = inizioD;
           }
         }
-        if (barDomani) {
+        // Come per oggi: il browser non abbassa né nasconde la pre-allerta del build.
+        var domaniServer = 0;
+        if (barDomani && barDomani.style.display !== 'none') {
+          var mD = barDomani.className.match(/allerta-bar-domani-(gialla|arancione|rossa)/);
+          if (mD) domaniServer = { gialla: 1, arancione: 2, rossa: 3 }[mD[1]];
+        }
+        if (barDomani && domaniLevel >= domaniServer) {
           if (domaniLevel >= 1 && domaniDate) {
             var liv = names[domaniLevel];
             var titoloDom = { gialla: 'allerta gialla', arancione: 'allerta arancione', rossa: 'allerta rossa' }[liv];

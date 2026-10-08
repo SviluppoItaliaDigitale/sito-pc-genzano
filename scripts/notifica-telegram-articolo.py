@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Notifica Telegram al canale per nuovi articoli urgenti.
+Notifica Telegram al canale per nuovi articoli di allerta o di emergenza.
 
 Si triggera dal workflow notifica-telegram-articolo.yml su push che
 aggiunge file in content/comunicazioni/.
 
 Filtra per badge:
   - Allerta, Emergenza  → notifica + pin (messaggio critico fissato in cima)
-  - Avviso, Aggiornamento → notifica senza pin
-  - Tutti gli altri badge → no notifica (Comunicazione, Formazione, Volontariato,
-    Evento, Attività, Prevenzione, Esercitazione, Informazione, Radiocomunicazioni)
+  - Tutti gli altri badge → no notifica, compresi Avviso e Aggiornamento
+    (istruzione dell'utente dell'08/10/2026: gli iscritti al canale trovavano
+    fastidiosi i messaggi per avvisi e aggiornamenti non di emergenza; il
+    canale porta solo allerte ed emergenze)
 
 Filtro su data: articoli con `date` futura (calendarizzati) NON vengono
 notificati al momento del commit. La notifica è progettata per articoli
@@ -47,7 +48,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SITO_URL = "https://www.protezionecivilegenzano.it"
 
 BADGE_CRITICI = {"Allerta", "Emergenza"}                # notifica + pin
-BADGE_INFO = {"Avviso", "Aggiornamento"}                # notifica senza pin
+BADGE_INFO: set[str] = set()                            # dall'08/10/2026 nessuno
 BADGE_NOTIFICA = BADGE_CRITICI | BADGE_INFO
 
 EMOJI_BADGE = {

@@ -80,7 +80,7 @@ A ogni run il workflow esegue in sequenza tre script Python, ognuno responsabile
    - Filtra per validità temporale `data_validita_inizio ≤ now ≤ data_validita_fine` (timezone `Europe/Rome` dinamica, CET/CEST automatico)
    - Calcola MAX livello tra i bollettini validi (avviso_criticita, avviso_idrogeologico, avviso_temporali, avviso_idraulico)
    - Estrae il blocco `domani` separato come pre-allerta SE il bollettino-domani CSV punta a una data strettamente futura
-   - **Fallback PDF Regione Lazio** se ENTRAMBI i CSV opendatasicilia non rispondono: scarica `tbl_bollettini_criticita/bollettino_DD_MM_YYYY.pdf` del giorno corrente (o di ieri se 404), parsa con `pdftotext -layout`, estrae Zona F (Genzano)
+   - **Bollettino PDF della Regione Lazio a ogni giro** (dall'08/10/2026, prima solo se entrambi i CSV non rispondevano): scarica `criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf` del giorno corrente (o di ieri se manca), parsa con `pdftotext -layout`, estrae Zona F (Genzano) e, per ogni giorno, tiene il livello più alto fra PDF e CSV
    - Aggiorna i campi `livello`, `titolo`, `descrizione`, `ultimo_aggiornamento`, `ultimo_controllo`, `domani` di `data/allerta.json`
 
 2. **`scripts/check-avvisi-meteo.py` — avvisi meteo avversi (vento, neve, calore, gelate, mareggiate)**
