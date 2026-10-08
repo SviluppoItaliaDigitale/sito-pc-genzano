@@ -20,6 +20,8 @@ Conoscere il fuoco significa:
 - **sapere evacuare** in sicurezza in caso di incendio esteso
 - **sapere collaborare** con i Vigili del Fuoco al momento del loro arrivo
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/triangolo-del-fuoco.svg" alt="Il triangolo della combustione raffigura i tre elementi che sostengono una fiamma: combustibile, comburente e calore." caption="I tre elementi del fuoco. È uno schema per comprendere la combustione, non una procedura di spegnimento." >}}
+
 ## Struttura dell'area
 
 | Capitolo | Contenuto |
