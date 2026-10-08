@@ -46,7 +46,7 @@ Pagina completa: [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
 ## Pioggia forte e allagamenti
 
-{{< illustrazione-udl src="/formazione/illustrazioni-udl/allagamento-luoghi-sicuri.svg" alt="A sinistra una persona al piano alto di una casa con cantina allagata; a destra un'auto su una strada allagata sbarrata da una croce rossa." caption="Acqua alta: sali a un piano sicuro, non scendere nei seminterrati e non attraversare strade allagate." >}}
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/allagamento-luoghi-sicuri.svg" alt="A sinistra una persona al piano alto di una casa con cantina allagata; a destra un'auto e una persona su una strada allagata, entrambe sbarrate da una croce rossa." caption="Acqua alta: sali a un piano sicuro, non scendere nei seminterrati e non attraversare strade allagate." >}}
 
 La pioggia forte può riempire strade, cantine, garage e sottopassi.
 
