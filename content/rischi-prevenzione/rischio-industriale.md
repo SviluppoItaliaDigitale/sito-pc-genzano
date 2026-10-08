@@ -15,6 +15,9 @@ Un incidente chimico-industriale — un incendio, un'esplosione o il rilascio di
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/industriale-riparo-chiuso.svg" alt="Una nube industriale rimane all'esterno; in una casa sono chiusi porte e finestre, con ventilazione spenta e radio per ascoltare le istruzioni." caption="Se le autorità dispongono il riparo al chiuso, entra nell'edificio più vicino, chiudi le aperture, interrompi la ventilazione con presa d'aria esterna e segui le istruzioni ufficiali." >}}
+
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 
 Il territorio di Genzano di Roma non ospita grandi poli chimici, ma il rischio industriale non riguarda solo chi abita accanto a una fabbrica:
