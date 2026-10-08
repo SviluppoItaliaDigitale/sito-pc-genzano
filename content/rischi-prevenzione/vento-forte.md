@@ -16,6 +16,8 @@ Il vento forte colpisce spesso i Castelli Romani, soprattutto in autunno e in in
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/vento-balcone-oggetti.svg" alt="Confronto tra balcone con oggetti riposti al sicuro e balcone con vaso trascinato da vento forte e rischio di caduta." caption="Prima dell'allerta metti al riparo o fissa i vasi, le sedie e gli oggetti leggeri. Durante il vento forte non esporti per recuperarli." >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare durante le perturbazioni atlantiche. La presenza di alberature storiche lungo le strade comunali e nei parchi aumenta il rischio di caduta rami, soprattutto in caso di terreno inzuppato dalle piogge.
 
