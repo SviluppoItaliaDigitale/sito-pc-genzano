@@ -7,12 +7,17 @@ per Genzano di Roma (Zona F — Bacini Costieri Sud) leggendo:
    - bollettino-oggi-comuni-latest.csv
    - bollettino-domani-comuni-latest.csv
 
-2. Fonte di FALLBACK: PDF firmato Regione Lazio
-   /sites/.../tbl_bollettini_criticita/bollettino_DD_MM_AAAA.pdf
-   Attivato SOLO se opendatasicilia non risponde su entrambi i file CSV
-   (entrambi != raggiungibili, non solo uno). Il fallback parsa il PDF
-   con pdftotext -layout ed estrae le tabelle "Valutazioni per OGGI" e
-   "Valutazioni per DOMANI" per la Zona F.
+2. Bollettino del Centro Funzionale della Regione Lazio (PDF), letto A OGNI
+   GIRO dall'08/10/2026 e non più solo come ripiego:
+   www.regione.lazio.it/sites/default/files/criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf
+   Si parsa con pdftotext -layout ("Valutazioni per OGGI/DOMANI", riga della
+   Zona F) e le sue righe si affiancano a quelle del CSV: per ogni giorno vale
+   il livello PIÙ ALTO fra le due fonti. Nasce l'08/10/2026: il Centro
+   Funzionale ha portato la Zona F ad arancione con il bollettino di
+   mezzogiorno, mentre il CSV DPC del giorno prima diceva ancora gialla, e il
+   sito è rimasto giallo per ore. In Lazio l'allerta la emette il Centro
+   Funzionale regionale (rule 06): la sua valutazione non può restare
+   indietro rispetto al mirror nazionale.
 
 Logica: filtra per data_validita_inizio ≤ now ≤ data_validita_fine (tz
 Europe/Rome), prende il MAX livello tra i bollettini validi, espone anche
@@ -60,9 +65,12 @@ CSV_URLS = {
         "refs/heads/main/data/bollettini/bollettino-domani-comuni-latest.csv"
     ),
 }
-PDF_REGIONE_BASE = (
+# Indirizzo attuale dei bollettini (verificato l'08/10/2026); il vecchio
+# percorso del portale protezionecivile.regione.lazio.it resta come ripiego.
+PDF_REGIONE_URLS = (
+    "https://www.regione.lazio.it/sites/default/files/criticita-idrogeologica/{anno}/bollettino_{data}.pdf",
     "https://protezionecivile.regione.lazio.it/sites/default/files/binary/"
-    "rl_protezione_civile/tbl_bollettini_criticita/bollettino_"
+    "rl_protezione_civile/tbl_bollettini_criticita/bollettino_{data}.pdf",
 )
 
 COMUNE = "Genzano di Roma"
@@ -142,7 +150,8 @@ def costruisci_descrizione_ricca(row, livello, rischi_attivi):
         bol_data = f"{pub.day} {MESI_IT[pub.month]} {pub.year}"
         val_giorno = f"{val_inizio.day} {MESI_IT[val_inizio.month]}"
         val_h = f"{val_inizio.strftime('%H:%M')}–{val_fine.strftime('%H:%M')}"
-        parts.append(f"Bollettino DPC/Regione Lazio del {bol_data}, validità {val_giorno} {val_h}.")
+        prep = "dell'" if pub.day in (8, 11) else "del "
+        parts.append(f"Bollettino DPC/Regione Lazio {prep}{bol_data}, validità {val_giorno} {val_h}.")
 
     return " ".join(parts)
 
@@ -233,7 +242,9 @@ def parse_pdf_regione(testo, zona=ZONA_GENZANO):
 
     # Pattern riga zona: "F     VERDE    GIALLO   VERDE" (con spazi variabili)
     livelli_pat = r"(VERDE|GIALLO|GIALLA|ARANCIONE|ROSSO|ROSSA)"
-    row_pat = re.compile(rf"^\s*{zona}\s+{livelli_pat}\s+{livelli_pat}\s+{livelli_pat}\s*$", re.MULTILINE)
+    # La riga può iniziare con le lettere della cartina accanto alla tabella
+    # ("F   F   ARANCIONE ARANCIONE GIALLO"): conta la lettera seguita dai livelli.
+    row_pat = re.compile(rf"^[^\n]*?(?<![A-Za-z]){zona}\s+{livelli_pat}\s+{livelli_pat}\s+{livelli_pat}\s*$", re.MULTILINE)
 
     m1 = row_pat.search(sez_oggi)
     if m1:
@@ -259,16 +270,21 @@ def fallback_pdf_regione_lazio(now):
     pdf_text = None
     pdf_date = None
     for d in candidates_dates:
-        url = PDF_REGIONE_BASE + d.strftime("%d_%m_%Y") + ".pdf"
-        try:
-            pdf_bytes = http_get_bytes(url)
-            pdf_text = pdftotext_layout(pdf_bytes)
-            if pdf_text:
-                pdf_date = d
-                print(f"📄 Fallback: PDF Regione Lazio del {d.isoformat()} scaricato ({len(pdf_bytes)} bytes)")
-                break
-        except Exception as e:
-            print(f"  ⏭️  PDF del {d.isoformat()} non disponibile: {e}")
+        for modello in PDF_REGIONE_URLS:
+            url = modello.format(anno=d.year, data=d.strftime("%d_%m_%Y"))
+            try:
+                pdf_bytes = http_get_bytes(url)
+                if not pdf_bytes.startswith(b"%PDF"):
+                    raise ValueError("la risposta non è un PDF")
+                pdf_text = pdftotext_layout(pdf_bytes)
+                if pdf_text:
+                    pdf_date = d
+                    print(f"📄 PDF Regione Lazio del {d.isoformat()} scaricato ({len(pdf_bytes)} bytes) da {url}")
+                    break
+            except Exception as e:
+                print(f"  ⏭️  PDF del {d.isoformat()} non disponibile da {url}: {e}")
+        if pdf_text:
+            break
 
     if not pdf_text:
         return {}
@@ -294,16 +310,24 @@ def fallback_pdf_regione_lazio(now):
             if n == 3:
                 return "Elevata / ALLERTA ROSSA"
             return ""
-        inizio = data_str + "T00:00:00+02:00"
-        fine = data_str + "T23:59:59+02:00"
+        giorno = datetime.fromisoformat(data_str).replace(tzinfo=ROME_TZ)
+        inizio = giorno.isoformat()
+        fine = giorno.replace(hour=23, minute=59, second=59).isoformat()
+        nomi = [n for n, lv in (("rischio idrogeologico", idrogeo_n),
+                                ("temporali", temp_n),
+                                ("rischio idraulico", idraul_n)) if lv == max_n and max_n > 0]
+        grado = {1: "Ordinaria", 2: "Moderata", 3: "Elevata"}.get(max_n, "")
+        criticita = (f"{grado} per {' e '.join(nomi)} / {lev_to_str(max_n).split(' / ')[1]}"
+                     if max_n > 0 else lev_to_str(0))
         return {
             "comune_nome": COMUNE,
+            "data_pubblicazione": pdf_date.isoformat() + "T12:00:00+02:00",
             "data_validita_inizio": inizio,
             "data_validita_fine": fine,
             "avviso_idrogeologico": lev_to_str(idrogeo_n),
             "avviso_temporali": lev_to_str(temp_n, is_temp=True),
             "avviso_idraulico": lev_to_str(idraul_n),
-            "avviso_criticita": lev_to_str(max_n),
+            "avviso_criticita": criticita,
         }
 
     if parsed["oggi"] and parsed["data_oggi"]:
@@ -351,18 +375,26 @@ def main():
         if row:
             bollettini[label] = row
 
-    # ── 1-bis. Fallback PDF Regione Lazio se ENTRAMBI i CSV mancano ──
+    # ── 1-bis. Bollettino del Centro Funzionale Regione Lazio, a ogni giro ──
+    # Le sue righe si aggiungono come "reg_oggi"/"reg_domani": il MAX
+    # time-aware qui sotto sceglie il livello più alto fra le due fonti.
+    regionali = fallback_pdf_regione_lazio(now)
     source = "opendatasicilia"
     if not bollettini:
-        print("⚠️  Entrambi i CSV opendatasicilia irraggiungibili: attivo fallback PDF Regione Lazio")
-        bollettini = fallback_pdf_regione_lazio(now)
-        if bollettini:
+        print("⚠️  Entrambi i CSV opendatasicilia irraggiungibili: uso il solo bollettino della Regione Lazio")
+        if regionali:
+            bollettini = dict(regionali)
             source = "pdf-regione-lazio"
         else:
-            print("::warning::Anche il fallback PDF ha fallito. Non aggiorno allerta.json")
+            print("::warning::Anche il bollettino regionale non è leggibile. Non aggiorno allerta.json")
             gh_output(changed="false", sostanziale="false", source="none")
             sys.exit(0)
-    elif len(bollettini) < 2:
+    else:
+        for label, row in regionali.items():
+            bollettini["reg_" + label] = row
+        if regionali:
+            source = "misto"
+    if 0 < len([k for k in bollettini if not k.startswith("reg_")]) < 2:
         # Solo uno dei due CSV è arrivato. Tentiamo di completare via PDF
         # ma SOLO se possiamo (e ricomponendo: NON sovrascrivere il CSV
         # che c'è già). Strategia conservativa: NON attiviamo fallback per
@@ -385,7 +417,7 @@ def main():
             print(f"⏭️  Bollettino {label} fuori validità (inizio={inizio}, fine={fine})")
 
     if not attivi:
-        fallback_key = "domani" if "domani" in bollettini else ("oggi" if "oggi" in bollettini else None)
+        fallback_key = next((k for k in ("domani", "oggi", "reg_domani", "reg_oggi") if k in bollettini), None)
         if fallback_key:
             attivi = {fallback_key: bollettini[fallback_key]}
             print(f"::warning::Nessun bollettino in finestra di validità, uso {fallback_key} come fallback")
@@ -422,25 +454,35 @@ def main():
     print(f"📊 MAX level={livello}, dal bollettino '{bollettino_attivo_label}'")
 
     # ── 3-bis. Blocco "domani" SEPARATO se data_validita_inizio > today ──
+    # Fra le righe di domani (CSV DPC e bollettino regionale) vale la più alta.
     domani_block = None
-    if "domani" in bollettini:
-        row_d = bollettini["domani"]
+    today_in_rome = now.date()
+    righe_domani = []
+    for label in ("domani", "reg_domani", "reg_oggi"):
+        row_d = bollettini.get(label)
+        if not row_d:
+            continue
         inizio_d = parse_iso(row_d.get("data_validita_inizio", ""))
-        today_in_rome = now.date()
         if inizio_d and inizio_d.date() > today_in_rome:
+            righe_domani.append((inizio_d, row_d))
+    if righe_domani:
+        inizio_d = min(r[0] for r in righe_domani)
+        righe_domani = [r for r in righe_domani if r[0].date() == inizio_d.date()]
+        if True:
             max_dom = 0
             risks_dom_order = []
             risks_dom_set = set()
-            crit_d = extract_level(row_d.get("avviso_criticita", ""))
-            if crit_d > max_dom:
-                max_dom = crit_d
-            for field, risk_label in RISK_FIELDS.items():
-                lev_d = extract_level(row_d.get(field, ""))
-                if lev_d > 0 and risk_label not in risks_dom_set:
-                    risks_dom_set.add(risk_label)
-                    risks_dom_order.append(risk_label)
-                if lev_d > max_dom:
-                    max_dom = lev_d
+            for _, row_d in righe_domani:
+                crit_d = extract_level(row_d.get("avviso_criticita", ""))
+                if crit_d > max_dom:
+                    max_dom = crit_d
+                for field, risk_label in RISK_FIELDS.items():
+                    lev_d = extract_level(row_d.get(field, ""))
+                    if lev_d > 0 and risk_label not in risks_dom_set:
+                        risks_dom_set.add(risk_label)
+                        risks_dom_order.append(risk_label)
+                    if lev_d > max_dom:
+                        max_dom = lev_d
             liv_dom = LEVEL_NAME[max_dom]
             titolo_dom = {
                 "verde": "Previsto verde",
