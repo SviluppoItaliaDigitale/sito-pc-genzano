@@ -25,6 +25,8 @@ Per le procedure del servizio, ogni Comune e ogni istituto ha le proprie regole.
 
 ## Le regole di sempre, prima ancora dell'emergenza
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/scuolabus-tre-regole.svg" alt="Scuolabus fermo per salita o discesa; bambino seduto con cintura; adulto responsabile fornisce istruzioni." caption="Sul bus: aspetta che si fermi, resta seduto e indossa la cintura se presente, segui le indicazioni dell'autista o dell'accompagnatore." >}}
+
 Buone abitudini quotidiane rendono più sicuro qualsiasi imprevisto.
 
 - Sali e scendi con calma, uno alla volta, solo alla fermata.

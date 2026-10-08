@@ -15,6 +15,8 @@ Un blackout può durare ore. Gli eventi meteorologici estremi, i guasti alla ret
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/blackout-luce-sicura.svg" alt="A sinistra una torcia e una radio a pile sono indicate come soluzioni sicure; a destra candela accesa e generatore a combustibile in ambiente interno sono barrati." caption="Durante un blackout preferisci torce e radio a pile. Evita le candele e non utilizzare mai generatori a combustibile in ambienti chiusi." >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 A Genzano di Roma la rete di distribuzione attraversa aree boschive e collinari. Durante eventi meteo intensi, alberi e rami caduti sulle linee elettriche causano interruzioni frequenti.
 
