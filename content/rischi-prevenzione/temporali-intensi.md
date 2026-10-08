@@ -16,6 +16,8 @@ I temporali intensi portano piogge forti, fulmini, grandine e raffiche di vento 
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/fulmini-riparo-sicuro.svg" alt="Confronto: edificio solido e auto chiusa offrono riparo dai fulmini; un albero isolato, segnato con una croce, non è un riparo." caption="Riparati in un edificio solido o in un'automobile con tetto rigido e finestrini chiusi. Evita gli alberi isolati." >}}
+
 ## <i class="bi bi-lightning-charge-fill text-primary me-2" aria-hidden="true"></i>Fulmini in tempo reale {#fulmini-realtime}
 Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volontaria **Blitzortung / Lightning Maps**. Utile quando è in corso un temporale per capire dove si sta muovendo la cella e quanto è distante.
 
