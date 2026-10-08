@@ -36,7 +36,7 @@ I giochi sono allineati con:
 - **Legge 92/2019** — Introduzione dell'Educazione Civica nelle scuole
 - **D.M. n. 35/2020** — Linee guida per l'insegnamento dell'educazione civica
 - **D.M. n. 183/2024** — Aggiornamento Linee guida (33 ore annuali)
-- **Indicazioni Nazionali per il Curricolo** (MIM, 2012 e successive integrazioni)
+- **Indicazioni nazionali per il curricolo** (D.M. 221/2025, che dal 2026/27 sostituisce gradualmente il D.M. 254/2012)
 - **D.Lgs. 1/2018** — Codice della Protezione Civile, art. 2 (formazione e diffusione della cultura di PC)
 
 ## Giochi per la Scuola dell'Infanzia (3-6 anni)

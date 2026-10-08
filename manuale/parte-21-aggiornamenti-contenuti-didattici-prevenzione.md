@@ -180,6 +180,8 @@ In pratica:
 - termini e simboli sono spiegati, i colori non sono mai l'unico modo per distinguere;
 - l'alunno può rispondere in più modi (indicare, disegnare, dire, fare).
 
+Per costruire bene una figura si seguono anche i principi di apprendimento multimediale di Richard E. Mayer (*Multimedia Learning*, 3ª edizione, 2020): togliere ciò che non serve a capire, evidenziare ciò che conta con numeri o frecce oltre al colore, mettere le parole accanto alla parte di figura che descrivono, dividere una procedura in passi, spiegare i termini nuovi prima di usarli. Nei video la voce non va ripetuta parola per parola a schermo; i sottotitoli restano obbligatori.
+
 Le illustrazioni sono file SVG in `static/formazione/illustrazioni-udl/`, inserite con lo shortcode `illustrazione-udl` (`src` e `alt` obbligatori, `caption` facoltativa). Quando un'illustrazione viene preparata con uno strumento esterno, prima di pubblicarla si guarda che cosa mostra davvero, si controlla che il gesto coincida con le indicazioni del Dipartimento della Protezione Civile, si scrivono testo alternativo e didascalia su ciò che si vede, e si tolgono metadati o testi che citino lo strumento usato.
 
 Regola completa: `.claude/rules/03-accessibility.md` § «Progettazione universale per l'apprendimento»; criteri in `docs/illustrazioni-cast-udl.md`; controllo affidato a `pc-didattica-reviewer` § 2-bis.

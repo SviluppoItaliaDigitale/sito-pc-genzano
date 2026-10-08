@@ -53,6 +53,7 @@ Applica rule 03 § «Progettazione universale per l'apprendimento». Su ogni mat
 - La figura è **corretta**: il gesto coincide con il DPC, la scena non contraddice il testo, nessuna conseguenza presentata come inevitabile se non lo è. Leggila davvero con Read: `alt` e `<desc>` devono descrivere ciò che si vede.
 - L'alunno ha **più modi di rispondere** (indicare, disegnare, dire, fare) e qualche scelta reale?
 - Termini e simboli sono chiariti; i colori non sono l'unico veicolo di una differenza.
+- La figura rispetta i principi di Mayer (rule 03): niente elementi superflui, ciò che conta è segnalato, parola e figura stanno vicine, una procedura è divisa in passi, i termini nuovi sono spiegati prima; nei video la voce non è duplicata parola per parola a schermo (i sottotitoli restano).
 
 Una figura sbagliata su un comportamento di sicurezza è **BLOCCANTE** come un testo sbagliato (§ 1). Una figura che non aggiunge comprensione è un rilievo, non un bloccante.
 

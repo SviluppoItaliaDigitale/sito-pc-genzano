@@ -446,6 +446,18 @@ Da maggio 2026 (Punto 16 roadmap) ogni articolo del sito può avere una versione
 5. **Più modi di rispondere** (CAST 5, 6): disegnare, indicare, dire, scrivere, fare; le rubriche valutano azioni osservabili (rule 02 e `pc-didattica-reviewer` § 2).
 6. **Coinvolgimento senza paura** (CAST 7, 9): scelte reali per l'alunno, collegamento al territorio, emozioni legittimate, mai la paura come leva.
 
+**Come si costruisce la figura: principi di apprendimento multimediale (Mayer) e carico cognitivo.** Il CAST dice di dare più forme; la ricerca di Richard E. Mayer (*Multimedia Learning*, 3ª ed., Cambridge University Press, 2020) e la teoria del carico cognitivo di John Sweller dicono come farle perché aiutino invece di confondere. Per ogni figura, scheda o video:
+
+- **Coerenza**: togliere ciò che non serve a capire (decorazioni, sfondi, musiche, dettagli curiosi). Ogni elemento in più consuma attenzione.
+- **Segnalazione**: evidenziare ciò che conta (numeri dei passaggi, frecce, un colore per la differenza da notare), sempre insieme a un segnale non cromatico.
+- **Contiguità**: la parola sta accanto alla parte di figura che descrive e la figura accanto al paragrafo che spiega, non a pagine di distanza; in un video la voce dice la cosa mentre la si vede.
+- **Segmentazione**: una procedura si mostra a passi, uno per riquadro o schermata, non tutta in un disegno solo.
+- **Ridondanza**: nei video non ripetere a schermo, parola per parola, il testo che la voce sta leggendo; bastano parole chiave o sottotitoli (che restano obbligatori per l'accessibilità, WCAG 1.2.2).
+- **Pre-allenamento**: i termini nuovi (magnitudo, codice colore, COC) si spiegano prima della procedura che li usa.
+- **Tono personale**: «tu», voce attiva, frasi brevi, come già chiedono le regole AGID.
+
+Questi principi descrivono effetti medi misurati in ricerca: si applicano con giudizio all'età e al materiale. In conflitto con una regola WCAG o con un'istruzione di sicurezza del DPC, vincono queste.
+
 **Illustrazioni didattiche — shortcode `illustrazione-udl`.** SVG statici in `static/formazione/illustrazioni-udl/` (1200×620, senza JavaScript né font esterni, `role="img"` con `<title>` e `<desc>` in italiano), inseriti con `{{</* illustrazione-udl src="/formazione/illustrazioni-udl/<nome>.svg" alt="…" caption="…" */>}}` (`src` e `alt` obbligatori, altrimenti la build si ferma). Criteri ed elenco in `docs/illustrazioni-cast-udl.md`.
 
 🔴 **Illustrazioni fatte con strumenti esterni** (l'utente le fa preparare anche a ChatGPT): prima del commit (a) **Read** dell'immagine per vedere che cosa mostra davvero; (b) il gesto o la scena coincide con le indicazioni del DPC (`pc-didattica-reviewer` § 1, `pc-revisore-scientifico` per i fenomeni) — un disegno sbagliato insegna l'errore meglio di un testo sbagliato; (c) `alt`, `caption`, `<title>` e `<desc>` descrivono ciò che si vede, non ciò che si voleva disegnare; (d) **nessun riferimento all'IA** nel file: niente metadati, commenti o testi che citino lo strumento (CLAUDE.md § "Nessun riferimento all'IA"); (e) scritte dentro il `viewBox` e leggibili su telefono e su A4 (rule 09 § 15-ter); (f) nessun dato o luogo inventato presentato come reale.

@@ -409,6 +409,8 @@ I materiali didattici seguono le linee guida UDL 3.0 del CAST: la stessa informa
                       caption="Didascalia breve, con i limiti dello schema se servono." >}}
 ```
 
+Come costruirla (principi di apprendimento multimediale di Mayer): solo gli elementi che servono a capire, ciò che conta segnalato con numeri o frecce oltre al colore, parole accanto alla parte di figura che descrivono, una procedura divisa in passi, termini nuovi spiegati prima.
+
 Per ogni illustrazione che prepari: SVG 1200×620 senza JavaScript né font esterni, `role="img"` con `<title>` e `<desc>` in italiano; gesto e scena coerenti con le indicazioni del DPC; `alt` e didascalia su ciò che si vede davvero; nessun metadato, commento o testo che citi lo strumento usato (§ 3.6); scritte dentro il `viewBox` e leggibili su telefono e su A4. Regola completa in `.claude/rules/03-accessibility.md` § «Progettazione universale per l'apprendimento», criteri in `docs/illustrazioni-cast-udl.md`.
 
 ### 5.5 Niente conteggi inventario sul sito

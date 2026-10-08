@@ -10,6 +10,7 @@ Usare un'immagine **quando aiuta a capire una relazione, una procedura o un peri
 - **2.1 Lessico e simboli:** titoli leggibili e termini chiariti, niente simbologia ambigua.
 - **2.5 Più media:** figure collegate al paragrafo esplicativo o alla procedura descritta.
 - **3.2 Connessioni e idee essenziali:** colori al servizio delle differenze, passaggi numerati, niente distrazioni grafiche.
+- **Principi di Mayer (apprendimento multimediale):** coerenza (niente elementi superflui), segnalazione, contiguità fra parola e figura, segmentazione delle procedure, termini spiegati prima. Dettagli in `.claude/rules/03-accessibility.md`.
 - **Accessibilità WCAG:** descrizioni alternative, contrasto leggibile, messaggi non basati solo sul colore, testo vicino all'illustrazione.
 
 ## Asset
