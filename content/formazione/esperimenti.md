@@ -30,12 +30,16 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** vulcani diversi si monitorano in modo diverso, e le vie di evacuazione cambiano in base al tipo di rischio. Approfondisci con [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/).
 
 ### 2. Il terremoto di gelatina 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-terreno-rigido-gelatina.svg" alt="Confronto di due torrette identiche di marshmallow e stuzzicadenti, una su base rigida e una su gelatina. Una doppia freccia segnala oscillazioni possibili differenti." caption="Il tipo di terreno può modificare le oscillazioni. Il modello non permette di stabilire se un edificio reale sia sicuro." >}}
 **Materiali:** una teglia di gelatina solida e ben compatta, stuzzicadenti, marshmallow (o cubetti di formaggio).
 **Come si fa:** costruisci **due torrette identiche**. Appoggiane una sulla gelatina e l'altra accanto, sul fondo rigido della teglia o su un tagliere. Scuoti delicatamente sempre allo stesso modo, simulando le **onde sismiche** (ondulatorie, di lato, e sussultorie, dall'alto in basso), e guarda quale oscilla di più. Poi rifai la prova con due torri di altezza diversa, tutte e due sulla gelatina.
 **Cosa si impara:** il confronto mostra due cose diverse. La stessa torre oscilla molto di più sulla gelatina che sul fondo rigido: è il **terreno molle che amplifica** le scosse, e per questo la stessa scossa fa danni diversi in punti vicini. Fra due torri sulla stessa gelatina, poi, quella alta e stretta si muove più di quella bassa e larga. Questo **non** significa che una casa bassa sia sempre più sicura di una casa alta: conta come è costruita — fondazioni, materiali, collegamenti — non l'altezza da sola.
 **In chiave protezione civile:** il terremoto non si può impedire, ma **si possono costruire e rinforzare case capaci di reggerlo**. È il principio della **prevenzione edilizia** e dell'edilizia antisismica. Vedi [Il rischio sismico in Italia](/conoscere/catalogo-dei-rischi/rischio-sismico/).
 
 ### 3. Quando il terreno perde sostegno 🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-sabbia-liquefazione.svg" alt="Due vaschette con sabbia: a sinistra asciutta e biglia in superficie, a destra sabbia satura d'acqua con biglia che può scendere in caso di vibrazioni." caption="La dimostrazione serve a visualizzare un possibile comportamento della sabbia satura; l'esito dipende dal materiale e dall'intensità delle vibrazioni." >}}
 **La domanda:** Come fa un terreno solido a comportarsi come un liquido durante un terremoto?
 **Materiali:** Due contenitori trasparenti uguali, sabbia fine, acqua, due oggetti pesanti piccoli e uguali (due biglie di vetro o due dadi da brodo), un tavolo su cui battere.
 **Come si fa:** (1) Riempi il primo contenitore di sabbia asciutta e appoggia una biglia sulla superficie. (2) Riempi il secondo con la stessa sabbia e aggiungi acqua fino a bagnarla tutta, senza che resti uno strato d'acqua sopra; appoggia l'altra biglia. (3) Batti le mani sul tavolo vicino ai due contenitori, allo stesso modo per dieci secondi. (4) Guarda le due biglie: nella sabbia satura la biglia affonda, in quella asciutta resta dov'è.
@@ -47,6 +51,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Sicurezza:** Si batte sul tavolo, non sui contenitori. Asciuga subito l'acqua versata: il pavimento bagnato scivola.
 
 ### 4. Costruiamo un sismografo 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-sismografo.svg" alt="Scatola in cartone tagliata per mostrare un bicchiere zavorrato sospeso a uno spago, con pennarello che sfiora un nastro di carta; a lato tracciato ondulato." caption="Il pennarello registra lo spostamento relativo tra scatola e peso sospeso. Un sismografo registra movimenti, ma non prevede i terremoti." >}}
 **La domanda:** Come si fa a registrare un movimento che dura pochi secondi?
 **Materiali:** Una scatola di cartone robusta, un bicchiere di plastica, dello spago, un pennarello a punta fine, qualche sasso o monete, una striscia di carta lunga (va bene un rotolo da cassa).
 **Come si fa:** (1) Ritaglia una finestra sul lato della scatola e fai passare la striscia di carta da parte a parte, così puoi tirarla piano. (2) Buca il fondo del bicchiere, infilaci il pennarello con la punta che sfiora la carta e riempilo di sassi. (3) Appendi il bicchiere allo spago al centro della scatola: deve restare fermo e sospeso, sfiorando la carta. (4) Uno tira la striscia piano e sempre uguale, un altro scuote la scatola: prima poco, poi forte, poi di nuovo poco.
