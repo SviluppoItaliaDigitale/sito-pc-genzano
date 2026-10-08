@@ -1,4 +1,4 @@
-# Immagini e testi social per «Maltempo nella notte: una quindicina di interventi del Gruppo a Genzano»
+# Immagini e testi social per «Maltempo a Genzano: ventidue interventi del Gruppo tra la notte del 7 e la sera dell'8 ottobre»
 
 - **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-10-08-maltempo-genzano-interventi-protezione-civile/
 - **Data**: 2026-10-08
