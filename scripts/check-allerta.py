@@ -12,7 +12,8 @@ per Genzano di Roma (Zona F — Bacini Costieri Sud) leggendo:
    www.regione.lazio.it/sites/default/files/criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf
    Si parsa con pdftotext -layout ("Valutazioni per OGGI/DOMANI", riga della
    Zona F) e le sue righe si affiancano a quelle del CSV: per ogni giorno vale
-   il livello PIÙ ALTO fra le due fonti. Nasce l'08/10/2026: il Centro
+   il bollettino pubblicato più di recente (a parità di giorno, il livello
+   più alto). Nasce l'08/10/2026: il Centro
    Funzionale ha portato la Zona F ad arancione con il bollettino di
    mezzogiorno, mentre il CSV DPC del giorno prima diceva ancora gialla, e il
    sito è rimasto giallo per ore. In Lazio l'allerta la emette il Centro
@@ -402,6 +403,28 @@ def main():
         # comune (es. CDN GitHub temporaneamente). La logica MAX time-aware
         # downstream gestisce gracefully il caso "solo oggi" o "solo domani".
         print(f"ℹ️  Solo CSV {list(bollettini.keys())} disponibile, non attivo fallback (rumore CDN)")
+
+    # ── 1-ter. Per ogni giorno vale il bollettino PIÙ RECENTE ──
+    # Se Regione e DPC coprono lo stesso giorno, si tiene quello pubblicato
+    # per ultimo (per data di pubblicazione): così un declassamento o una
+    # cessazione del Centro Funzionale non resta coperta dal livello più alto
+    # di un bollettino del giorno prima. A parità di giorno di pubblicazione
+    # restano entrambi e vale il MAX (scelta prudente).
+    def _giorno(row, campo):
+        d = parse_iso(row.get(campo, ""))
+        return d.astimezone(ROME_TZ).date() if d else None
+    per_giorno = {}
+    for label, row in bollettini.items():
+        per_giorno.setdefault(_giorno(row, "data_validita_inizio"), []).append(label)
+    for giorno, labels in per_giorno.items():
+        if len(labels) < 2:
+            continue
+        pubb = {lb: _giorno(bollettini[lb], "data_pubblicazione") for lb in labels}
+        ultima = max((d for d in pubb.values() if d), default=None)
+        for lb in labels:
+            if ultima and pubb[lb] != ultima:
+                print(f"⏭️  Bollettino {lb} superato da uno più recente per il {giorno}")
+                del bollettini[lb]
 
     print(f"Fonte attiva: {source}, bollettini ricevuti: {list(bollettini.keys())}")
 
