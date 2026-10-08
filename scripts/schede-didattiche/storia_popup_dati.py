@@ -98,7 +98,7 @@ CAPITOLI = [
     },
     {
         "id": "cap5", "titolo": "Il vento porta via le cose", "stagione": "novembre",
-        "icona": ("oca-albero.png", "Icona: albero piegato dal vento"),
+        "icona": ("oca-albero.png", "Icona: un albero"),
         "testo": [
             "Un pomeriggio il vento si alzò fortissimo. Sul balcone un vaso cadde. Un "
             "cartellone volò via dalla strada come un aquilone.",
@@ -146,7 +146,7 @@ CAPITOLI = [
     },
     {
         "id": "cap8", "titolo": "Fumo in cucina", "stagione": "gennaio",
-        "icona": ("pop-strisciare.png", "Icona: bambino che avanza carponi"),
+        "icona": ("pop-strisciare.png", "Icona: bambino che avanza basso, vicino al pavimento"),
         "testo": [
             "Una domenica una padella dimenticata riempì il corridoio di fumo grigio. Il "
             "papà spense il fornello, ma il fumo era tanto e stava in alto, vicino al "

@@ -24,7 +24,7 @@ La Regione Lazio ha fatto una nuova regola per il caldo.
 
 Quando fa molto caldo, è vietato lavorare al sole. Il divieto vale dalle 12:30 alle 16:00. Vale solo nei giorni di caldo forte. La regola vale fino al 15 settembre 2026. Vale in tutto il Lazio.
 
-{{< pittogramma src="/pittogrammi/arasaac/caldo.png" alt="Pittogramma: sole con tanto caldo" caption="Quando fa molto caldo, il lavoro al sole si ferma." >}}
+{{< pittogramma src="/pittogrammi/arasaac/caldo.png" alt="Pittogramma: viso sudato sotto il sole, tanto caldo" caption="Quando fa molto caldo, il lavoro al sole si ferma." >}}
 
 ## Chi è protetto
 

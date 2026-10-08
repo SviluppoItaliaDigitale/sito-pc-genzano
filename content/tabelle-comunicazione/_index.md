@@ -59,7 +59,7 @@ I simboli restano visibili anche se attivi la preferenza *"Nascondi immagini"* d
 {{< caa-voce src="/pittogrammi/arasaac/vigile-fuoco.png" parola="Vigili del fuoco" >}}
 {{< caa-voce src="/pittogrammi/arasaac/ambulanza.png" parola="Ambulanza" >}}
 {{< caa-voce src="/pittogrammi/arasaac/medico.png" parola="Medico" >}}
-{{< caa-voce src="/pittogrammi/arasaac/carabiniere.png" parola="Carabinieri" >}}
+{{< caa-voce src="/pittogrammi/arasaac/poliziotto.png" parola="Polizia e carabinieri" >}}
 {{< caa-voce src="/pittogrammi/arasaac/volontario.png" parola="Volontario" >}}
 {{< /caa-tabella >}}
 
