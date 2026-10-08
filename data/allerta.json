@@ -1,9 +1,9 @@
 {
   "livello": "arancione",
   "titolo": "ALLERTA ARANCIONE — rischio idrogeologico, temporali, rischio idraulico",
-  "descrizione": "Moderata per rischio idrogeologico e temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio dell'8 ottobre 2026, validità 8 ottobre 00:00–23:59.",
+  "descrizione": "Moderata per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio dell'8 ottobre 2026, validità 8 ottobre 15:21–23:59.",
   "ultimo_aggiornamento": "2026-10-08T15:49:42+02:00",
-  "ultimo_controllo": "2026-10-08T15:49:42+02:00",
+  "ultimo_controllo": "2026-10-08T21:36:22+02:00",
   "domani": {
     "livello": "arancione",
     "titolo": "Previsto arancione",
