@@ -4,9 +4,21 @@
 {{- if or (not $src) (not $alt) -}}
   {{- errorf "illustrazione-udl: src e alt obbligatori in %s" .Page.File.Path -}}
 {{- end -}}
+{{- $mobile := replaceRE "\\.svg$" "-mobile.svg" $src -}}
+{{- $hasMobile := fileExists (printf "static%s" $mobile) -}}
 <figure class="figure my-4 w-100 text-center">
-  <img src="{{ $src | strings.TrimPrefix "/" | relURL }}" width="1200" height="620" alt="{{ $alt }}" loading="lazy" decoding="async" class="figure-img img-fluid rounded border" style="height:auto;max-width:100%;">
+  <picture>
+    {{- if $hasMobile }}
+    <source media="(max-width: 767px)" srcset="{{ $mobile | strings.TrimPrefix "/" | relURL }}" width="720" height="{{ if or (in $mobile "scuolabus") (in $mobile "tre-kit") }}1440{{ else }}1180{{ end }}">
+    {{- end }}
+    <img src="{{ $src | strings.TrimPrefix "/" | relURL }}" width="1200" height="620" alt="{{ $alt }}" loading="lazy" decoding="async" class="figure-img img-fluid rounded border" style="width:100%;height:auto;max-width:100%;">
+  </picture>
   {{- with $caption }}
   <figcaption class="figure-caption mt-2">{{ . | markdownify }}</figcaption>
   {{- end }}
+  <p class="small mt-2 mb-0"><a href="{{ $src | strings.TrimPrefix "/" | relURL }}" target="_blank" rel="noopener noreferrer">Apri l'illustrazione ingrandita</a>
+  {{- if $hasMobile }}
+    <span aria-hidden="true"> · </span><a href="{{ $mobile | strings.TrimPrefix "/" | relURL }}" target="_blank" rel="noopener noreferrer">Versione verticale leggibile su smartphone</a>
+  {{- end }}
+  </p>
 </figure>
