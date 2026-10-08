@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc"><title id="title">Sismografo di cartone: come nasce il tracciato</title><desc id="desc">Schema in sezione di una scatola di cartone scossa delicatamente, con bicchiere appeso a uno spago e penna che lascia un segno su una striscia di carta fatta scorrere. La linea ondulata è un esempio schematico.</desc><defs><linearGradient id="bg" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f8fcfd"/><stop offset="1" stop-color="#e8f2f7"/></linearGradient><linearGradient id="gel" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#a8dbe6"/><stop offset="1" stop-color="#4ea2b6"/></linearGradient><linearGradient id="sand" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#e6c497"/><stop offset="1" stop-color="#bb9462"/></linearGradient></defs><rect width="1200" height="620" rx="22" fill="url(#bg)"/><rect y="0" width="1200" height="13" fill="#176d8d"/><text x="40" y="67" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#153d59" text-anchor="start">Sismografo di cartone: come nasce il tracciato</text>
+<rect x="29" y="104" width="830" height="444" rx="18" fill="#f6f1e9" stroke="#d3c4b1" stroke-width="3"/><rect x="888" y="104" width="284" height="444" rx="18" fill="#ebf6fa" stroke="#b6d3e2" stroke-width="3"/>
+<text x="431" y="156" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#6b563f" text-anchor="middle">MODELLO IN SEZIONE</text><text x="1031" y="156" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#235d79" text-anchor="middle">TRACCIATO</text>
+<path d="M134 212 H715 V470 H134Z" fill="#f6e3c9" opacity=".5" stroke="#9b7d60" stroke-width="16"/>
+<path d="M135 211 H713" stroke="#ad906e" stroke-width="18"/><path d="M134 469 H715" stroke="#977b5c" stroke-width="18"/>
+<path d="M430 218 V327" stroke="#657985" stroke-width="6"/>
+<path d="M407 323 L449 323 L469 359 L450 397 H406 L389 361Z" fill="#e7e2db" stroke="#8f8273" stroke-width="6"/>
+<path d="M430 395 V448" stroke="#2b6683" stroke-width="12" stroke-linecap="round"/>
+<path d="M430 447 l-5 10 h10Z" fill="#294b67"/>
+<rect x="99" y="454" width="671" height="15" rx="6" fill="#fdfcf7" stroke="#8499a7" stroke-width="3"/>
+<path d="M131 461 H747" stroke="#6a8d9f" stroke-width="3"/>
+<path d="M196 461 Q224 440 251 464 T305 462 T359 460 T412 462 T466 459 T522 461 T576 461 T635 461" fill="none" stroke="#c35e49" stroke-width="4"/>
+<path d="M175 199 H77 L94 186 M77 199 l17 13 M734 199 H809 l-18 -13 M809 199 l-18 13" stroke="#b17750" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M769 463 H825 L808 450 M825 463 l-17 13" stroke="#2a7699" stroke-width="7" stroke-linecap="round" fill="none"/>
+<text x="547" y="279" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#435b69" text-anchor="start">spago</text><text x="542" y="369" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#435b69" text-anchor="start">peso e penna</text>
+<path d="M528 284 L433 256 M531 366 L470 368" stroke="#8295a2" stroke-width="4" fill="none"/>
+<path d="M944 420 H1114" stroke="#6a92a9" stroke-width="3"/>
+<path d="M950 391 L950 447" stroke="#6a92a9" stroke-width="3"/><path d="M950 421 Q974 420 988 405 T1019 438 T1050 396 T1083 424 T1111 419" fill="none" stroke="#bf5e49" stroke-width="7" stroke-linecap="round"/>
+<text x="1030" y="478" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#245e79" text-anchor="middle">Esempio illustrativo</text>
+<text x="599" y="583" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#3d596a" text-anchor="middle">Il modello registra oscillazioni già avvenute: non prevede i terremoti futuri.</text></svg>
