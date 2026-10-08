@@ -23,17 +23,17 @@ social_punti:
 
 Nella notte tra il 7 e l'8 ottobre 2026 una pioggia intensa ha colpito Genzano. La squadra del Gruppo è uscita verso le 23.30 e ha lavorato fin quasi alle 4. Altri interventi sono arrivati per tutta la giornata dell'8, fino a sera: **ventidue** in tutto, secondo il nostro registro.
 
-Con il bollettino del 7 ottobre il Centro Funzionale della Regione Lazio aveva previsto per l'8 un'**allerta gialla** nella Zona F — Bacini Costieri Sud, quella di Genzano. Con il bollettino di mezzogiorno dell'8 ha portato la zona ad **allerta arancione** per rischio idrogeologico e temporali, e l'arancione è previsto anche per **venerdì 9 ottobre**. Il livello aggiornato è sempre nella pagina [Allerte meteo](/allerte-meteo/).
+Genzano è nella Zona F — Bacini Costieri Sud. Con il bollettino del 7 ottobre il Centro Funzionale della Regione Lazio aveva previsto per l'8 un'**allerta gialla**. Con il bollettino di mezzogiorno dell'8 ha portato la zona ad **allerta arancione** per rischio idrogeologico e temporali. L'arancione è previsto anche per **venerdì 9 ottobre**. Il livello aggiornato è sempre nella pagina [Allerte meteo](/allerte-meteo/).
 
 ## La notte: tredici interventi in quattro ore
 
-La maggior parte del lavoro ha riguardato **rami caduti sulla carreggiata**. La squadra li ha rimossi in via Stati Uniti d'America, passata due volte, in via Lenin, in viale delle Regioni e in via della Selva. In via Edmondo De Amicis un ramo era caduto su un'auto. Lo abbiamo tolto su richiesta della Polizia di Stato, che ha fatto i rilievi sul posto.
+La maggior parte del lavoro ha riguardato **rami caduti sulla carreggiata**. La squadra li ha rimossi in via Stati Uniti d'America, dove è passata due volte. Poi in via Lenin, in viale delle Regioni e in via della Selva. In via Edmondo De Amicis un ramo era caduto su un'auto. Lo abbiamo tolto su richiesta della Polizia di Stato, che ha fatto i rilievi sul posto.
 
 Verso le 2.30 la squadra è arrivata in **via di Soriano**, dove un fulmine aveva colpito un grosso albero. I volontari hanno rimosso i detriti dell'albero, un lavoro di oltre un'ora.
 
-Nello stesso arco di tempo la squadra è intervenuta in quattro tratti di **strada allagata**: in via Appia Vecchia, al bivio per Lanuvio, in via Luigi Longo e in due punti di via Riccardo Lombardi.
+Nelle stesse ore la squadra è intervenuta in quattro tratti di **strada allagata**. Il primo era in via Appia Vecchia, al bivio per Lanuvio. Gli altri in via Luigi Longo e in due punti di via Riccardo Lombardi.
 
-La squadra ha rimesso a posto anche **due chiusini divelti**, cioè i coperchi dei pozzetti di scolo: uno in via Ginestreto, ad Ariccia, e uno in via Colle degli Ulivi.
+La squadra ha rimesso a posto anche **due chiusini divelti**, cioè i coperchi dei pozzetti di scolo. Uno era in via Ginestreto, ad Ariccia, l'altro in via Colle degli Ulivi.
 
 Per tutta la notte la squadra ha usato il pickup **EVO Cross 4**.
 
@@ -41,13 +41,13 @@ Per tutta la notte la squadra ha usato il pickup **EVO Cross 4**.
 
 Verso le 9 un cittadino ci ha segnalato un'auto in panne in mezzo all'acqua, in **via San Gennaro**. L'abbiamo messa in sicurezza con il verricello del pickup. Sul posto è intervenuto anche il Fiat Doblò.
 
-Nella stessa mattina, su richiesta del sindaco, la squadra è intervenuta per un allagamento in viale Fratelli Cervi. Prima delle 10 un altro cittadino ci ha chiesto di tornare in via di Soriano, per verificare i danni lasciati dall'albero colpito dal fulmine.
+Nella stessa mattina, su richiesta del sindaco, la squadra è intervenuta per un allagamento in viale Fratelli Cervi. Prima delle 10 un altro cittadino ci ha chiesto di tornare in via di Soriano. Bisognava verificare i danni lasciati dall'albero colpito dal fulmine.
 
-Verso le 14, sempre su richiesta del sindaco, la squadra è intervenuta in largo Monsignor Grassi per un ramo che occupava parte della corsia.
+Verso le 14 il sindaco ci ha segnalato un ramo in largo Monsignor Grassi. Occupava parte della corsia, e la squadra lo ha tagliato.
 
-Nel pomeriggio la Polizia Locale ci ha chiesto due servizi tecnici. Verso le 15.30 un mezzo pesante, probabilmente una betoniera, aveva perso un impasto di cemento e breccia all'incrocio tra via Appia Vecchia e via Appia Antica. I volontari e gli agenti della Polizia Locale lo hanno tolto con pale e picconi prima che indurisse, mentre la pattuglia presidiava l'incrocio. Poco dopo le 16 c'è stato un breve servizio a Croce Santa.
+Nel pomeriggio la Polizia Locale ci ha chiesto due servizi tecnici. Verso le 15.30 un mezzo pesante, probabilmente una betoniera, aveva perso cemento e breccia sulla strada. Era all'incrocio tra via Appia Vecchia e via Appia Antica. I volontari e gli agenti della Polizia Locale hanno tolto il cemento con pale e picconi, prima che indurisse. Intanto la pattuglia presidiava l'incrocio. Poco dopo le 16 c'è stato un breve servizio a Croce Santa.
 
-Secondo le cronache locali, a Genzano l'acqua è entrata in alcune abitazioni e attività commerciali, dove i tombini non hanno retto. In via De Amicis i rami caduti hanno danneggiato in modo lieve anche la ringhiera della scuola. A Lanuvio l'acqua ha raggiunto in parte un locale scolastico.
+Secondo le cronache locali, a Genzano alcuni tombini non hanno retto. L'acqua è entrata in alcune abitazioni e attività commerciali. In via De Amicis i rami caduti hanno danneggiato in modo lieve anche la ringhiera della scuola. A Lanuvio l'acqua ha raggiunto in parte un locale scolastico.
 
 ## La sera dell'8 ottobre
 
@@ -57,7 +57,7 @@ Verso le 22 un altro cittadino ci ha segnalato un **ramo caduto** in via Achille
 
 ## Perché una pioggia concentrata fa tanti danni
 
-Quando il terreno è asciutto, l'acqua tende a scorrere in superficie più che a infiltrarsi: lo abbiamo spiegato nell'[articolo del 22 settembre](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/). Se i tombini sono ostruiti da foglie e detriti, la rete di scolo smaltisce meno acqua. Con una pioggia concentrata in poche ore, la rete può non riuscire a smaltirla e l'acqua risale in superficie.
+Quando il terreno è asciutto, l'acqua tende a scorrere in superficie più che a infiltrarsi. Lo abbiamo spiegato nell'[articolo del 22 settembre](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/). Se i tombini sono ostruiti da foglie e detriti, la rete di scolo smaltisce meno acqua. Con una pioggia concentrata in poche ore, la rete può non riuscire a smaltirla e l'acqua risale in superficie.
 
 ## Cosa puoi fare tu
 
@@ -88,4 +88,4 @@ Quando il terreno è asciutto, l'acqua tende a scorrere in superficie più che a
 - [Il Giornale dei Castelli Romani — Maltempo ai Castelli Romani e sul litorale, danni e centinaia di interventi](https://www.giornaleinfocastelliromani.it/maltempo-ai-castelli-romani-e-sul-litorale-danni-e-centinaia-di-interventi/)
 - [La Notizia Oggi — Nubifragio sui Castelli Romani e sul litorale: allagamenti, alberi caduti e auto danneggiate](https://www.lanotiziaoggi.it/61725/nubifragio-sui-castelli-romani-e-sul-litorale-allagamenti-alberi-caduti-e-auto-danneggiate/)
 
-*Articolo aggiornato il 9 ottobre 2026 con gli interventi della sera dell'8 ottobre, tratti dal nostro registro, e con i fatti riportati dalle cronache locali.*
+*Articolo aggiornato il 9 ottobre 2026. Gli interventi della sera dell'8 ottobre vengono dal nostro registro, alcuni fatti dalle cronache locali.*
