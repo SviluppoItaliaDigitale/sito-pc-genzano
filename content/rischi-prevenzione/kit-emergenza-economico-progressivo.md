@@ -25,6 +25,9 @@ Molte cose sono già in casa: una torcia, una bottiglia d'acqua, farmaci abitual
 
 ## Fase 1 — Le cose più urgenti
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/kit-progressivo-tappe.svg" alt="Tre fasi di preparazione: prima riunire gli oggetti già disponibili, poi aggiungere scorte e radio, infine personalizzare il materiale per farmaci abituali e ausili." caption="Non serve comprare tutto subito: inizia con ciò che hai già, integra le scorte essenziali e personalizza il kit secondo i bisogni della famiglia." >}}
+
+
 La prima fase serve a coprire i bisogni immediati.
 
 Prepara:

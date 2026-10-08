@@ -16,6 +16,9 @@ Genzano di Roma non è un comune costiero, ma il litorale laziale è a circa mez
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/maremoto-via-di-fuga-quota.svg" alt="Sezione di una costa: il mare e il percorso in salita mostrano la fuga a piedi dalla spiaggia verso un punto elevato, lontano dall'acqua." caption="Se riconosci i segnali di un maremoto o ricevi l'allerta, allontanati rapidamente dalla costa e raggiungi un punto elevato. Non perdere tempo in automobile." >}}
+
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante anche per noi {#perche-rilevante}
 
 Il Mediterraneo è un mare sismicamente attivo: negli ultimi mille anni le coste italiane sono state colpite da varie decine di maremoti, alcuni distruttivi (Messina 1908, Stromboli 2002). Le coste del Lazio sono considerate a pericolosità più bassa rispetto al Sud Italia, ma **non a pericolosità zero**: un forte terremoto nel Tirreno o nel Mediterraneo occidentale può generare onde che raggiungono anche il nostro litorale.

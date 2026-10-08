@@ -39,6 +39,9 @@ jobs:
             exit 1
           fi
 
+      - name: "🎨 Integrità delle illustrazioni didattiche e testo alternativo"
+        run: python3 scripts/check-illustrazioni-udl.py
+
       - name: "🧾 Valida JSON-LD (paternità/licenza inclusa)"
         # Gate sui dati strutturati: ogni blocco ld+json del campione deve
         # essere JSON parsabile e ogni pagina deve avere il blocco di

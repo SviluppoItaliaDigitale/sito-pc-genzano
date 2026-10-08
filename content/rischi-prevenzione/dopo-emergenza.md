@@ -23,6 +23,9 @@ La pagina non sostituisce le istruzioni delle autorità durante un evento reale.
 
 ## Prima di tutto: la tua sicurezza
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/dopo-emergenza-rientro-sicuro.svg" alt="Tre passaggi: edificio con danni visibili e divieto di accesso; personale incaricato che esegue verifiche; rientro consentito soltanto dopo il via libera." caption="Il pericolo non sempre termina con l'evento: non entrare in strutture danneggiate, attendi i controlli e rispetta le indicazioni delle autorità." >}}
+
+
 Il primo errore dopo un'emergenza è avere fretta di tornare alla normalità.
 
 - Verifica che le persone con te stiano bene. Presta attenzione a bambini, anziani e persone fragili.

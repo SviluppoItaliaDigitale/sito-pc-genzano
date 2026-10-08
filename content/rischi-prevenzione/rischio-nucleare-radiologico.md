@@ -15,6 +15,9 @@ L'Italia non ha centrali nucleari in funzione, eppure un'emergenza radiologica �
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/radiologico-riparo-indicazioni.svg" alt="Durante uno scenario radiologico le persone si riparano al chiuso, tengono chiuse le aperture e ascoltano le autorità. La iodoprofilassi non va iniziata da soli." caption="In caso di emergenza radiologica segui le indicazioni ufficiali sul riparo al chiuso e sulle eventuali misure sanitarie. Non assumere ioduro di potassio di tua iniziativa." >}}
+
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante anche per noi {#perche-rilevante}
 
 Per il territorio di Genzano di Roma non esistono impianti nucleari né scenari locali specifici. Il rischio per il cittadino dei Castelli Romani è quindi **indiretto e a bassa probabilità**, ma reale a scala nazionale:
