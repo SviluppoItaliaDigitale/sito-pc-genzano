@@ -7063,6 +7063,18 @@ html.a11y-pause-anim .cruscotto-home-monitor { transition: none; }
 html.a11y-pause-anim .cruscotto-home-monitor:hover { transform: none; }
 
 @media print { .cruscotto-home { display: none; } }
+/* Stampa della homepage: la sezione «Comunità e canali» (pulsanti social,
+   iscrizione a IT-alert) in stampa non ha contenuto, ma il suo spazio
+   restava: l'08/10/2026, con l'allerta arancione in testa alla pagina, quel
+   margine finiva da solo su un foglio in più, bianco (controllo
+   check-fogli-stampa.py in CI). */
+@media print {
+  .homepage-comunita { display: none !important; }
+  /* niente margini dopo l'ultima fila di card: in stampa erano solo spazio
+     bianco in coda alla pagina */
+  .home-page .servizi-section { padding-bottom: 0 !important; }
+  .home-page .servizi-section .row > [class*="col-"]:nth-last-child(-n+2) { margin-bottom: 0 !important; }
+}
 
 /* ===========================================================================
    GRAFICI OPEN DATA v1.0 — shortcode grafico-csv (SVG inline, no JS)
