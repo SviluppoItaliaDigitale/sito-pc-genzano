@@ -76,12 +76,16 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** spiega perché esistono i livelli di **allerta meteo** (gialla, arancione, rossa) legati alla pioggia attesa. Vedi [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/) e le [Allerte meteo](/allerte-meteo/).
 
 ### 7. Le radici che tengono la terra 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/radici-erosione-terreno.svg" alt="Confronto di due pendii: uno coperto di vegetazione con radici, l'altro con terreno nudo soggetto a maggiore erosione durante la pioggia." caption="Le radici possono limitare l'erosione del terreno superficiale. Non possono impedire tutte le frane." >}}
 **Materiali:** due vaschette inclinate; in una solo terra nuda, nell'altra terra con una zolla di erba vera (con radici); due bottiglie con il tappo forato (per fare "pioggia").
 **Come si fa:** fai "piovere" con forza su entrambe e osserva l'acqua che esce dal fondo.
 **Cosa si impara:** dalla terra nuda esce acqua marrone e si formano solchi (**erosione**); dalla terra con l'erba esce acqua più pulita e il terreno resta fermo. Le radici trattengono il suolo.
 **In chiave protezione civile:** spiega perché disboscare o cementificare aumenta il rischio di frane e alluvioni. Il verde è una difesa del territorio.
 
 ### 8. Città di asfalto, città di prato 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/pioggia-prato-asfalto.svg" alt="La pioggia si infiltra in parte sotto un prato; su una strada asfaltata scorre soprattutto verso una caditoia." caption="Il terreno permeabile lascia infiltrare parte dell'acqua; le superfici impermeabili favoriscono il deflusso superficiale. Il modello è semplificato." >}}
 **Materiali:** due vassoi; su uno della terra o un panno spugnoso, sull'altro un foglio di plastica liscio (l'"asfalto"); una bottiglia d'acqua.
 **Come si fa:** inclina entrambi sopra un lavandino e versa la stessa acqua. Cronometra quanto impiega a scorrere via.
 **Cosa si impara:** sul terreno l'acqua si infiltra lentamente; sulla superficie liscia scorre tutta e subito. Più una città è coperta di asfalto e cemento (**consumo di suolo**), più l'acqua corre verso fognature e fossi, che si sovraccaricano.
