@@ -565,7 +565,7 @@ Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come e
 - 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-primaria/) — Etna, Stromboli, Vesuvio: i vulcani come bellezza e oggetti di studio. *(scienze/geografia)*
 - 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-primaria/) — il vulcano nascosto: monitoraggio scientifico e fiducia nelle istituzioni. *(scienze/geografia)*
 
-**Storie e racconti per leggere insieme — sezione 6-11 anni:** racconti di qualità letteraria (sei per la fascia 6-8 anni, sei per la fascia 9-11 anni) ispirati alla campagna DPC <em>Attimo Decisivo</em>: ogni storia ha un attimo in cui il protagonista sceglie e l'esito si rovescia. Sezione "Per il/la docente" su ogni storia con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni Nazionali 2012, L. 92/2019, D.Lgs. 1/2018).
+**Storie e racconti per leggere insieme — sezione 6-11 anni:** racconti di qualità letteraria (sei per la fascia 6-8 anni, sei per la fascia 9-11 anni) ispirati alla campagna DPC <em>Attimo Decisivo</em>: ogni storia ha un attimo in cui il protagonista sceglie e l'esito si rovescia. Sezione "Per il/la docente" su ogni storia con obiettivi di apprendimento, discipline coinvolte, competenze chiave europee, attività in classe, riferimenti curricolari (Indicazioni nazionali per il curricolo: D.M. 221/2025 e, per le classi già avviate nel 2025/26, D.M. 254/2012, L. 92/2019, D.Lgs. 1/2018).
 
 Per la fascia **6-8 anni** (lettura autonoma o accompagnata, 400-700 parole):
 

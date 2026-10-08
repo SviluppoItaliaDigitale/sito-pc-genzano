@@ -267,3 +267,15 @@ dati:
         perche: "30 e 90 giorni valgono per il soccorso e l'assistenza, non per le «attività ordinarie»."
         contesto: 'volontari|giorni consecutivi'
         finestra: 200
+
+  - id: indicazioni-nazionali-curricolo
+    dato: "Indicazioni nazionali per il curricolo dell'infanzia e del primo ciclo"
+    valore: "D.M. 9 dicembre 2025, n. 221 (dal 2026/27, con gradualità); D.M. 254/2012 solo per le classi già avviate nel 2025/26"
+    fonti:
+      - nome: "Gazzetta Ufficiale, Serie Generale n. 21 del 27 gennaio 2026 (artt. 1 e 5)"
+        url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-01-27&atto.codiceRedazionale=26G00021"
+    vietati:
+      - regex: 'Indicazioni [Nn]azionali(?: per il [Cc]urricolo)?(?: [Ii]nfanzia)?\**\s*\(?(?:MIM, )?2012\b'
+        perche: "Dal 2026/27 valgono le Indicazioni del D.M. 221/2025; il 2012 resta solo per le classi già avviate e va citato insieme al nuovo decreto."
+        contesto: 'Indicazioni'
+        finestra: 20

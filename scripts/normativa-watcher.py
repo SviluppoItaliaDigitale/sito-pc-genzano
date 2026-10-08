@@ -151,6 +151,24 @@ KW_RUMORE = [
     'toponomastica', 'numerazione civica', 'patrocinio',
 ]
 
+# Norme della SCUOLA che i materiali didattici del sito citano o applicano
+# (Indicazioni nazionali, educazione civica, valutazione, inclusione,
+# sicurezza a scuola). Non producono un articolo: diventano la categoria
+# «scuola», da recepire in schede, kit e pagine per i docenti. Valgono solo
+# per le fonti nazionali e regionali, mai per l'albo pretorio. Nate
+# l'08/10/2026: il D.M. 221/2025 sulle nuove Indicazioni nazionali era
+# uscito in Gazzetta a gennaio e nessun controllo lo aveva segnalato.
+KW_SCUOLA = [
+    "ministero dell'istruzione e del merito", 'indicazioni nazionali', 'curricolo',
+    'educazione civica', 'valutazione periodica e finale', 'valutazione degli apprendimenti',
+    'inclusione scolastica', 'alunni con disabilit*', 'piano educativo individualizzato',
+    'disturbi specifici di apprendimento', 'bisogni educativi speciali',
+    'competenze trasversali e per l\'orientamento', 'formazione scuola-lavoro',
+    'sicurezza nelle scuole', 'sicurezza degli edifici scolastici', 'edilizia scolastica',
+    'istituzioni scolastiche', 'scuola dell\'infanzia', 'primo ciclo di istruzione',
+    'secondo ciclo di istruzione', 'licei', 'istituti tecnici', 'istituti professionali',
+]
+
 _RE_CACHE = {}
 
 
@@ -172,7 +190,7 @@ def _trova(lista, testo, escludi=frozenset()):
 
 
 def classifica(testo, fonte_albo=False):
-    """Ritorna (rilevanza, motivi) con rilevanza in {'diretta','indiretta',None}.
+    """Ritorna (rilevanza, motivi) con rilevanza in {'diretta','indiretta','scuola',None}.
 
     Fonti nazionali/regionali: "Genzano"/"Castelli Romani" da soli valgono come
     rilevanza indiretta (serve anche un tema PC per la diretta). Albo pretorio:
@@ -193,6 +211,10 @@ def classifica(testo, fonte_albo=False):
         return 'indiretta', sorted(set(dirette + indirette))
     if indirette and (fonte_albo or not rumore):
         return 'indiretta', sorted(set(indirette))
+    if not fonte_albo:
+        scuola = _trova(KW_SCUOLA, t)
+        if scuola and not rumore:
+            return 'scuola', sorted(set(scuola))
     return None, []
 
 
@@ -700,7 +722,7 @@ def url_gia_segnalati_da_issue():
 # Corpo della issue (Markdown)
 # ---------------------------------------------------------------------------
 
-ETICHETTA_RILEVANZA = {'diretta': '🔴 diretta', 'indiretta': '🟡 indiretta'}
+ETICHETTA_RILEVANZA = {'diretta': '🔴 diretta', 'indiretta': '🟡 indiretta', 'scuola': '📘 scuola'}
 
 
 def corpo_issue(output):
@@ -723,11 +745,15 @@ def corpo_issue(output):
         if not items:
             return
         righe.append(f"\n## {titolo} ({len(items)})\n")
-        for r in ('diretta', 'indiretta'):
+        for r in ('diretta', 'indiretta', 'scuola'):
             sub = [i for i in items if i['rilevanza'] == r]
             if not sub:
                 continue
             righe.append(f"\n### Rilevanza {ETICHETTA_RILEVANZA[r]} ({len(sub)})\n")
+            if r == 'scuola':
+                righe.append("Norme della scuola: **non si scrive un articolo**. Si legge l'atto e si aggiornano schede, kit, "
+                             "storie, pagine per i docenti e `/formazione/quadro-normativo-scuola/` che citano la norma cambiata "
+                             "(`pc-didattica-reviewer`, `pc-normative-verifier`, `check-dati-canonici.py`). È manutenzione: fino a live.\n")
             for it in sub:
                 data = (it.get('published') or '')[:10]
                 t = it['titolo'].replace('|', '\\|').replace('\n', ' ')
@@ -830,12 +856,15 @@ def main():
     if args.escludi_url and os.path.exists(args.escludi_url):
         with open(args.escludi_url, encoding='utf-8') as fh:
             esclusi |= {l.strip() for l in fh if l.strip()}
+    # La categoria «scuola» vale per gli atti delle fonti primarie: dalla
+    # rassegna stampa porterebbe solo cronaca scolastica.
+    hits = [h for h in hits if not (h['rilevanza'] == 'scuola' and h['fonte_tipo'] != 'primaria')]
     prima = len(hits)
     if esclusi:
         hits = [h for h in hits if h['link'] not in esclusi]
     scartati = prima - len(hits)
 
-    ordine = {'diretta': 0, 'indiretta': 1}
+    ordine = {'diretta': 0, 'indiretta': 1, 'scuola': 2}
     hits.sort(key=lambda x: (0 if x['fonte_tipo'] == 'primaria' else 1, ordine.get(x['rilevanza'], 2), x.get('published') or ''), reverse=False)
     hits.sort(key=lambda x: x.get('published') or '', reverse=True)
     hits.sort(key=lambda x: (0 if x['fonte_tipo'] == 'primaria' else 1, ordine.get(x['rilevanza'], 2)))

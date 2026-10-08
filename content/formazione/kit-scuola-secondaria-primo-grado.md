@@ -946,7 +946,7 @@ Percorso di educazione alla sicurezza domestica su una sola regola, ripetuta in 
 - [Legge 20 agosto 2019 n. 92](https://www.normattiva.it/) — Introduzione dell'insegnamento dell'educazione civica (art. 3 lett. h *protezione civile*; lett. h-ter *sicurezza nei luoghi di lavoro* introdotta dalla L. 21/2025)
 - **D.M. 7 settembre 2024 n. 183 (Linee Guida nazionali per l'Educazione Civica, applicabili a decorrere dall'anno scolastico 2024/2025)** — Linee guida per l'insegnamento dell'educazione civica
 - **Legge 17 febbraio 2025, n. 21** — Conoscenze di base in materia di sicurezza nei luoghi di lavoro nell'Educazione Civica
-- **Indicazioni Nazionali per il Curricolo** (2012) + **Nuovi Scenari** (2018) — Scuola Secondaria di Primo Grado
+- **Indicazioni nazionali per il curricolo** (D.M. 221/2025, dalle classi prime nel 2026/27; D.M. 254/2012 per le classi già avviate) + **Nuovi Scenari** (2018) — Scuola Secondaria di Primo Grado
 - **Raccomandazione UE 2018/C 189/01** — Competenze chiave per l'apprendimento permanente
 - [D.Lgs. 2 gennaio 2018 n. 1](/normativa/testo-unico-protezione-civile/) — Codice della Protezione Civile (cornice generale del Servizio nazionale)
 - **D.M. 742/2017** — Certificazione delle competenze di fine primo ciclo

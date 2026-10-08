@@ -10,16 +10,16 @@ Usare un'immagine **quando aiuta a capire una relazione, una procedura o un peri
 - **2.1 Lessico e simboli:** titoli leggibili e termini chiariti, niente simbologia ambigua.
 - **2.5 Più media:** figure collegate al paragrafo esplicativo o alla procedura descritta.
 - **3.2 Connessioni e idee essenziali:** colori al servizio delle differenze, passaggi numerati, niente distrazioni grafiche.
+- **Principi di Mayer (apprendimento multimediale):** coerenza (niente elementi superflui), segnalazione, contiguità fra parola e figura, segmentazione delle procedure, termini spiegati prima. Dettagli in `.claude/rules/03-accessibility.md`.
 - **Accessibilità WCAG:** descrizioni alternative, contrasto leggibile, messaggi non basati solo sul colore, testo vicino all'illustrazione.
 
-## Asset consegnati
-- `terremoto-tre-gesti.svg`: sequenza abbassati-riparati-tieniti; riuso nella pagina facile da leggere e rischio sismico.
-- `allagamento-luoghi-sicuri.svg`: luogo alto contro cantina/strada allagata; testo esplicativo affiancato.
-- `temporale-effetti-cascata.svg`: successione di conseguenze **possibili**, non inevitabili.
-- `esperimento-viscosita-gas.svg`: modello didattico dei gas in fluidi di viscosità diversa.
-- `co2-spazi-confinati.svg`: accumulo possibile di CO₂, con avviso esplicito sui limiti del modello.
+## Asset
+Gli SVG stanno in `static/formazione/illustrazioni-udl/`; il nome del file dice che cosa mostrano. Prima di disegnarne uno nuovo, guarda se ne esiste già uno riusabile.
 
 Gli asset sono SVG statici locali, senza JavaScript o font esterni, con proporzioni 1200×620. Usare il shortcode `illustrazione-udl` con `src`, `alt` e `caption`. Il testo della pagina rimane sufficiente anche senza immagini.
+
+## Illustrazioni preparate con strumenti esterni
+Prima del commit: aprire e guardare l'immagine; verificare che gesto e scena coincidano con le indicazioni del DPC; scrivere `alt`, `caption`, `<title>` e `<desc>` su ciò che si vede davvero; togliere metadati, commenti o testi che citino lo strumento usato; controllare che le scritte restino dentro il `viewBox` e si leggano su telefono e su A4. Regola completa: `.claude/rules/03-accessibility.md` § «Progettazione universale per l'apprendimento».
 
 ## Regola di estensione
 Per ogni nuova illustrazione: identificare un bisogno didattico, verificare contenuti e sicurezza con fonti ufficiali, inserire una descrizione alternativa non ridondante, verificare leggibilità su smartphone e carta A4, controllare la resa del sito. Non aggiungere una figura se non aumenta la comprensione.
