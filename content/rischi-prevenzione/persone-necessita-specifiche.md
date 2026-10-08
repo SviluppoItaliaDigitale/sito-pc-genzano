@@ -21,6 +21,9 @@ La norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for p
 - **Persone con difficoltà linguistiche** (stranieri, turisti)
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Preparazione — cosa fare ora {#preparazione}
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/piano-inclusivo-emergenza.svg" alt="Tre elementi di un piano accessibile: identificare un percorso praticabile, concordare contatti di supporto con la persona interessata, preparare ausili e farmaci necessari." caption="Un piano di emergenza inclusivo parte dai bisogni espressi dalla persona: percorso accessibile, rete di supporto concordata e kit personalizzato." >}}
+
 ### Per le famiglie e i caregiver
 
 - Includi nel [Piano Familiare](/piano-familiare/) le esigenze specifiche di ogni componente
