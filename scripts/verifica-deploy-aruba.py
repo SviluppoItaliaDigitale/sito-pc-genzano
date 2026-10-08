@@ -76,6 +76,18 @@ CRITICHE = [
     "faq/index.html", "glossario/index.html", "normativa/index.html", "strumenti/index.html",
     "cartografia/index.html", "podcast/index.html", "allerta-cap.xml",
     "allerta-stato/index.json", "sitemap.xml",
+    # Pagine in cui le illustrazioni svolgono una funzione didattica, non decorativa.
+    "formazione/esperimenti/index.html", "formazione/rischio-incendio/index.html",
+    "rischi-prevenzione/rischio-sismico/index.html",
+    "rischi-prevenzione/rischio-idrogeologico/index.html",
+    "rischi-prevenzione/rischio-incendio/index.html",
+    "rischi-prevenzione/temporali-intensi/index.html",
+    "rischi-prevenzione/vento-forte/index.html",
+    "rischi-prevenzione/blackout/index.html",
+    "rischi-prevenzione/rischio-vulcanico/index.html",
+    "rischi-prevenzione/kit-emergenza/index.html",
+    "rischi-prevenzione/sicurezza-scuolabus/index.html",
+    "rischi-prevenzione/rischi-in-parole-semplici/index.html",
 ]
 
 UA = "PCGenzanoVerificaDeploy/2.0 (+https://www.protezionecivilegenzano.it/)"
@@ -371,6 +383,16 @@ def main() -> int:
     for rel in CRITICHE:
         if rel in file:
             da_controllare[rel] = "critica"
+
+    # Le tavole CAST/UDL sono una famiglia didattica a rilascio progressivo.
+    # Verificarle TUTTE a ogni giro, non solo se selezionate dal campione:
+    # l'FTP incrementale interrotto da merge ravvicinati può lasciare singole
+    # SVG mancanti pur avendo già caricato la pagina HTML che le richiama.
+    # La ricerca nel manifesto include automaticamente ogni tavola futura.
+    for rel in file:
+        if rel.startswith("formazione/illustrazioni-udl/") and rel.endswith(".svg") and verificabile(rel):
+            da_controllare[rel] = "illustrazione CAST/UDL"
+
     ua = ultimo_articolo(file)
     if ua:
         da_controllare[ua] = "ultimo articolo"
