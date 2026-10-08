@@ -16,6 +16,8 @@ Il terremoto non si può prevedere. L'unica difesa è prepararsi prima: sapere c
 
 {{< emergenza-ora >}}
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/terremoto-tre-gesti.svg" alt="Tre gesti per una scossa in un ambiente chiuso: abbassarsi, proteggersi sotto un tavolo robusto e tenerne saldamente una gamba." caption="Sequenza illustrata di autoprotezione in un locale interno. Evita finestre e mobili instabili; non precipitarti fuori durante la scossa." >}}
+
 ## <i class="bi bi-broadcast text-primary me-2" aria-hidden="true"></i>Terremoti recenti in Italia {#terremoti-recenti}
 Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)** — fonte scientifica ufficiale in Italia. La vista mostra tutti i terremoti localizzati sul territorio nazionale; usa il menu interno per filtrare per magnitudo, profondità e periodo.
 

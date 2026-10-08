@@ -45,6 +45,8 @@ I volontari già operativi partecipano ad aggiornamenti ed esercitazioni periodi
 
 ## Materiale didattico per le scuole
 
+Le illustrazioni didattiche sono affiancate da **testo esplicativo**, descrizioni alternative e indicazioni stampabili. Un'immagine aiuta a comprendere un passaggio, ma non deve essere l'unico modo per ottenere un'informazione importante.
+
 Il sito raccoglie materiali per docenti, studenti e famiglie. Sono disponibili kit per fasce d'età, schede stampabili, attività inclusive, giochi educativi, storie e percorsi pronti.
 
 ### Percorso guidato per scuole e famiglie

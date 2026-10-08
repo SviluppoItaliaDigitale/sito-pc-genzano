@@ -1,0 +1,12 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- if or (not $src) (not $alt) -}}
+  {{- errorf "illustrazione-udl: src e alt obbligatori in %s" .Page.File.Path -}}
+{{- end -}}
+<figure class="figure my-4 w-100 text-center">
+  <img src="{{ $src | relURL }}" width="1200" height="620" alt="{{ $alt }}" loading="lazy" decoding="async" class="figure-img img-fluid rounded border" style="height:auto;max-width:100%;">
+  {{- with $caption }}
+  <figcaption class="figure-caption mt-2">{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
