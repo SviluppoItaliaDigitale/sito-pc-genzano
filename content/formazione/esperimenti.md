@@ -22,6 +22,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 ## Terremoti e vulcani
 
 ### 1. Vulcano lento o vulcano esplosivo? 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-viscosita-gas.svg" alt="Confronto schematico fra due bicchieri: nel liquido più fluido le bolle salgono più facilmente; nella miscela più densa possono restare intrappolate." caption="Il modello mostra l'effetto della viscosità sul movimento delle bolle: non riproduce una vera eruzione." >}}
 **Materiali:** due bicchieri, una cannuccia, acqua, purè di patate denso (o ketchup).
 **Come si fa:** nel primo bicchiere metti l'acqua, nel secondo il purè denso. Soffia piano con la cannuccia in entrambi.
 **Cosa si impara:** nell'acqua (magma fluido) l'aria esce facilmente e in modo tranquillo; nel purè (magma **vischioso**) l'aria fa fatica, si accumula e poi "scoppia" schizzando. Attenzione a non confondere due cose diverse: la **viscosità** dice quanta fatica fa il magma a scorrere, la **densità** quanto pesa a parità di volume. E il soffio della cannuccia sta per i **gas disciolti** nel magma: in un magma fluido escono man mano, in uno vischioso restano intrappolati finché la pressione li fa esplodere. Sono i gas a rendere esplosiva un'eruzione; la viscosità decide se riescono a uscire ([USGS](https://www.usgs.gov/faqs/how-do-volcanoes-erupt)).
