@@ -279,7 +279,8 @@ dati:
         perche: "Dal 2026/27 valgono le Indicazioni del D.M. 221/2025; il 2012 resta solo per le classi già avviate e va citato insieme al nuovo decreto."
         contesto: 'Indicazioni'
         finestra: 20
-      - regex: "Indicazioni [Nn]azionali per il curricolo della scuola dell.infanzia 2012"
+      - regex: '(?i)Indicazioni nazionali[^.;\n]{0,90}?[\s*(]2012\b(?![^.;\n]{0,30}classi)'
+        nota: "Qualunque grafia: grassetti, parentesi, «Scuola dell'Infanzia** (2012)». Ammessa solo insieme alle «classi già avviate» (rilievo Codex sulla PR #1281)."
         perche: "Dal 2026/27 valgono le Indicazioni del D.M. 221/2025; il 2012 resta solo per le classi già avviate e va citato insieme al nuovo decreto."
         contesto: 'Indicazioni'
         finestra: 20
