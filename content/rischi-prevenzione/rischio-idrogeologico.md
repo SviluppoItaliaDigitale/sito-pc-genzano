@@ -63,6 +63,8 @@ Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** del sistema 
 
 > 🔎 **Il tuo indirizzo è in area a pericolosità?** La pericolosità da frana e da alluvione è mappata parcella per parcella. Per verificare un indirizzo specifico consulta la piattaforma nazionale **[IdroGEO di ISPRA](https://idrogeo.isprambiente.it/)** (Inventario IFFI e mappe di pericolosità), il **Piano di Assetto Idrogeologico (PAI)** dell'autorità di bacino competente e la nostra [Cartografia del territorio](/cartografia/). La pericolosità indica dove un fenomeno può avvenire: è un dato di base, diverso dall'allerta in corso.
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/pioggia-prato-asfalto.svg" alt="Due sezioni a confronto: sotto il prato parte dell'acqua piovana filtra nel terreno; sulla strada impermeabile si accumula e scorre verso uno scarico." caption="L'impermeabilizzazione del suolo può aumentare il deflusso superficiale. È uno dei fattori da considerare per capire gli allagamenti urbani." >}}
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 - Piogge intense e prolungate per diverse ore
 - Innalzamento rapido del livello dell'acqua nei fossi e nei canali
