@@ -1,12 +1,12 @@
 ---
-title: "Maltempo nella notte: diciassette interventi del Gruppo tra rami, allagamenti e chiusini"
+title: "Maltempo a Genzano: ventidue interventi del Gruppo tra la notte del 7 e la sera dell'8 ottobre"
 date: 2026-10-08T00:03:00+02:00
-description: "Dalla tarda sera del 7 ottobre al pomeriggio dell'8: rami sulle strade, un albero colpito da un fulmine, allagamenti e due chiusini divelti."
+description: "Dalla tarda sera del 7 ottobre alla sera dell'8: rami sulle strade, un albero colpito da un fulmine, allagamenti, un sottopasso e due chiusini divelti."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-08-maltempo-genzano-interventi-protezione-civile.webp"
-image_alt: "Cover dell'articolo: Maltempo nella notte: diciassette interventi del Gruppo tra rami, allagamenti e chiusini"
+image_alt: "Cover dell'articolo: Maltempo a Genzano: ventidue interventi del Gruppo tra la notte del 7 e la sera dell'8 ottobre"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -15,13 +15,13 @@ tts: true
 lis_section: "allerte-meteo"
 social_citazione: "La squadra del Gruppo è uscita verso le 23.30 e ha lavorato fin quasi alle 4."
 social_punti:
-  - "Diciassette interventi del Gruppo tra la notte del 7 ottobre e il pomeriggio dell'8, tredici dei quali prima delle 4."
+  - "Ventidue interventi del Gruppo tra la notte del 7 ottobre e la sera dell'8, tredici dei quali prima delle 4."
   - "Rami caduti sulle strade, un albero colpito da un fulmine in via di Soriano, strade allagate e due chiusini divelti."
   - "In via San Gennaro un'auto in panne nell'acqua è stata messa in sicurezza con il verricello del nostro pickup."
   - "Non attraversare una strada allagata. Se trovi un ramo caduto, fermati a distanza e chiama il 112."
 ---
 
-Nella notte tra il 7 e l'8 ottobre 2026 una pioggia intensa ha colpito Genzano. La squadra del Gruppo è uscita verso le 23.30 e ha lavorato fin quasi alle 4. Altri interventi sono arrivati la mattina e nel primo pomeriggio dell'8: **diciassette** in tutto, secondo il nostro registro.
+Nella notte tra il 7 e l'8 ottobre 2026 una pioggia intensa ha colpito Genzano. La squadra del Gruppo è uscita verso le 23.30 e ha lavorato fin quasi alle 4. Altri interventi sono arrivati per tutta la giornata dell'8, fino a sera: **ventidue** in tutto, secondo il nostro registro.
 
 Con il bollettino del 7 ottobre il Centro Funzionale della Regione Lazio aveva previsto per l'8 un'**allerta gialla** nella Zona F — Bacini Costieri Sud, quella di Genzano. Con il bollettino di mezzogiorno dell'8 ha portato la zona ad **allerta arancione** per rischio idrogeologico e temporali, e l'arancione è previsto anche per **venerdì 9 ottobre**. Il livello aggiornato è sempre nella pagina [Allerte meteo](/allerte-meteo/).
 
@@ -37,7 +37,7 @@ La squadra ha rimesso a posto anche **due chiusini divelti**, cioè i coperchi d
 
 Per tutta la notte la squadra ha usato il pickup **EVO Cross 4**.
 
-## La mattina e il pomeriggio dell'8 ottobre
+## La giornata dell'8 ottobre
 
 Verso le 9 un cittadino ci ha segnalato un'auto in panne in mezzo all'acqua, in **via San Gennaro**. L'abbiamo messa in sicurezza con il verricello del pickup. Sul posto è intervenuto anche il Fiat Doblò.
 
@@ -45,7 +45,15 @@ Nella stessa mattina, su richiesta del sindaco, la squadra è intervenuta per un
 
 Verso le 14, sempre su richiesta del sindaco, la squadra è intervenuta in largo Monsignor Grassi per un ramo che occupava parte della corsia.
 
+Nel pomeriggio la Polizia Locale ci ha chiesto due servizi tecnici. Verso le 15.30, in via Appia Vecchia, una betoniera aveva perso cemento sulla strada e la squadra ha pulito la carreggiata. Poco dopo le 16 c'è stato un breve servizio a Croce Santa.
+
 Secondo le cronache locali, tra Genzano e Lanuvio sono stati segnalati anche locali e abitazioni parzialmente allagati.
+
+## La sera dell'8 ottobre
+
+Verso le 20.30 la squadra è intervenuta per un **sottopasso ferroviario allagato** in via Montegiove. Poco prima delle 21.30 un cittadino ci ha chiesto un servizio tecnico al bivio per Lanuvio.
+
+Verso le 22 un altro cittadino ci ha segnalato un **ramo caduto** in via Achille Grandi, all'altezza del liceo Vailati. La squadra ha lavorato sul posto fin quasi alle 23.
 
 ## Perché una pioggia concentrata fa tanti danni
 
@@ -78,4 +86,4 @@ Quando il terreno è asciutto, l'acqua tende a scorrere in superficie più che a
 - [Castelli Notizie — Maltempo a Genzano, una quindicina di interventi della Protezione Civile](https://www.castellinotizie.it/2026/10/08/maltempo-a-genzano-una-quindicina-di-interventi-della-protezione-civile-alberi-caduti-allagamenti-e-danni-alle-auto/)
 - [Il Giornale dei Castelli Romani — Maltempo ai Castelli Romani e sul litorale, danni e centinaia di interventi](https://www.giornaleinfocastelliromani.it/maltempo-ai-castelli-romani-e-sul-litorale-danni-e-centinaia-di-interventi/)
 
-*Articolo aggiornato l'8 ottobre 2026 con il resoconto completo degli interventi del Gruppo, tratto dal nostro registro.*
+*Articolo aggiornato il 9 ottobre 2026 con gli interventi della sera dell'8 ottobre, tratti dal nostro registro.*
