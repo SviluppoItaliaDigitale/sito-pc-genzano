@@ -13,7 +13,7 @@ Questa pagina aiuta scuole e famiglie a trovare rapidamente i materiali giusti: 
 
 Scegli il tuo ruolo e parti dal percorso consigliato.
 
-{{< illustrazione-udl src="/formazione/illustrazioni-udl/scuole-percorsi-eta.svg" alt="Quattro percorsi didattici progressivi: infanzia con gioco e racconto, primaria con immagini e prove, secondaria di primo grado con esperimenti, secondaria di secondo grado con analisi dei rischi." caption="Percorsi orientativi per fascia scolastica: i materiali e le modalità di partecipazione vanno sempre adattati ai bisogni degli studenti." >}}
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/scuole-percorsi-eta.svg" alt="Quattro percorsi didattici progressivi: infanzia con gioco, racconto e un bambino riparato sotto un tavolo, primaria con immagini e prove, secondaria di primo grado con esperimenti, secondaria di secondo grado con analisi dei rischi." caption="Percorsi orientativi per fascia scolastica: i materiali e le modalità di partecipazione vanno sempre adattati ai bisogni degli studenti." >}}
 
 
 <div class="alert alert-info" role="note">

@@ -139,7 +139,7 @@ TAVOLE = [
             "Una volta fuori non rientrare: si torna dentro quando lo dicono i vigili del fuoco.",
         ],
         "pitto": ("alf-u-uscita.png", "Persona che esce da una porta aperta"),
-        "scena": ("pop-strisciare.png", "Persona che avanza carponi sotto il fumo"),
+        "scena": ("pop-strisciare.png", "Persona che avanza bassa, vicino al pavimento, sotto lo strato di fumo"),
         "scena_eti": "A CARPONI",
         "fonte": "articolo «Incendi domestici» del sito, che cita i Vigili del Fuoco",
     },
