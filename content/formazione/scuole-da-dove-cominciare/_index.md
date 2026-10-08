@@ -58,7 +58,7 @@ Materiali consigliati:
 
 ## Docente della scuola secondaria di secondo grado
 
-Per la secondaria di secondo grado puoi lavorare su comunicazione di crisi, sicurezza nei luoghi di lavoro, PCTO, normativa, responsabilità e cittadinanza digitale.
+Per la secondaria di secondo grado puoi lavorare su comunicazione di crisi, sicurezza nei luoghi di lavoro, formazione scuola-lavoro (ex PCTO), normativa, responsabilità e cittadinanza digitale.
 
 Materiali consigliati:
 

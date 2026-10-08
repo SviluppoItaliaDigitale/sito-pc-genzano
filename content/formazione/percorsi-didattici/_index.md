@@ -37,7 +37,7 @@ Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. Se hai un
   <a href="#tempo-progetto" class="tempo-card tempo-progetto" role="listitem" aria-label="Da 4 a 6 ore: progetto completo">
     <div class="tempo-card-tempo"><span class="tempo-numero">4-6</span><span class="tempo-unita">ore</span></div>
     <h3 class="tempo-card-titolo">Progetto completo</h3>
-    <p class="tempo-card-desc">Un'unità didattica trasversale, eventualmente con incontro con i volontari o PCTO: PC di base, sicurezza nei luoghi di lavoro, comunicazione di crisi.</p>
+    <p class="tempo-card-desc">Un'unità didattica trasversale, eventualmente con incontro con i volontari o formazione scuola-lavoro (ex PCTO): PC di base, sicurezza nei luoghi di lavoro, comunicazione di crisi.</p>
     <span class="tempo-card-cta">Vai ai progetti <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
   </a>
 
