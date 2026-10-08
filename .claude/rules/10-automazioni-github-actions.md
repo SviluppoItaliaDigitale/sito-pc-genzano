@@ -79,15 +79,17 @@ Rapporto con la routine generica delle issue (12:00 UTC): la rassegna gira prima
 
 ## Modello di priorità del deploy (31 maggio 2026)
 
-🔴 I deploy seguono **3 livelli di priorità** per dare precedenza a sicurezza e contenuti rispetto agli aggiornamenti di sfondo (frequenti). `deploy.yml` ha l'input `workflow_dispatch.inputs.priority` (default `urgent`) e una `concurrency` condizionale: `cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.priority != 'background' }}`. Significato: i deploy di contenuto (push merge PR) e i dispatch non-`background` (allerta, manuale) **preemptano** un deploy in corso; il deploy `background` (coalescer) **cede sempre**. Ogni deploy fa `checkout` di HEAD, quindi un deploy preemptato non perde nulla: il successivo ricarica tutto.
+🔴 I deploy seguono **3 livelli di priorità** per dare precedenza a sicurezza e contenuti rispetto agli aggiornamenti di sfondo (frequenti). `deploy.yml` ha l'input `workflow_dispatch.inputs.priority` (default `urgent`) e una `concurrency` condizionale: dall'08/10/2026 `cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background' }}`. Significato: solo i dispatch `urgent` (allerta, pubblicazione programmata, lancio manuale) **preemptano** un deploy in corso; i push di contenuto e il deploy `background` (coalescer) **si accodano**. Ogni deploy fa `checkout` di HEAD, quindi un deploy preemptato non perde nulla: il successivo ricarica tutto.
 
 | Livello | Trigger | Comportamento |
 |---|---|---|
 | 🔴 **Sicurezza** | `check-allerta.yml`, `pubblica-programmata.yml` → `gh workflow run deploy.yml -f priority=urgent` | **Immediato**, preempta. L'allerta meteo resta reattiva (~15 sec), mai coalescata. |
-| 🟦 **Contenuti** | merge PR articoli (evento `push`) | **Immediato**, preempta i deploy di sfondo. |
+| 🟦 **Contenuti** | merge PR articoli (evento `push`) | **Immediato** se nessun deploy è in corso; altrimenti **si accoda** (dall'08/10/2026: non annulla più il caricamento in corso). |
 | ⬜ **Sfondo** | `deploy-coalescer.yml` (`workflow_run` sui workflow meteo + cron `13,43 * * * *` come fallback) → `-f priority=background` | **Un solo deploy** che raccoglie tutti i commit dati non urgenti, lanciato appena un workflow di sfondo completa. Cede ad allerta/contenuti. |
 
 ### 🔴 Un merge per volta: non incatenare i merge (31/08/2026)
+
+🟢 **Dall'08/10/2026 il deploy si accoda da solo.** `deploy.yml` annulla un deploy in corso solo per i dispatch `urgent` (allerta, pubblicazione programmata del mattino); push di contenuti e dispatch `background` attendono. GitHub tiene **un solo** deploy in attesa, sempre l'ultimo, che pubblica `HEAD` con tutto ciò che è stato unito nel frattempo. Nasce perché quel giorno ChatGPT ha pubblicato su `main` tre volte in cinque minuti (due deploy annullati) e poi un'altra volta, annullando a metà il deploy della PR #1278. Il testo qui sotto resta come storia e come buona pratica: raggruppare resta meglio di incatenare.
 
 **Dopo un merge su `main`, aspetta che `deploy.yml` finisca prima di mergiare il successivo.** Se hai più modifiche pronte, **raggruppale in una sola PR** invece di mergiarne una dietro l'altra.
 

@@ -26,7 +26,17 @@ concurrency:
   # all'upload FTP. Prima ogni auto-commit push cancellava il deploy in corso e,
   # con push fitti, nessun deploy completava (incidente 2-3/07/2026: 7h di deploy
   # tutti cancellati, pagine nuove a 403 per cartella vuota da upload parziale).
-  cancel-in-progress: ${{ (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip-')) || (github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background') }}
+  #
+  # Dall'08/10/2026 anche i push di CONTENUTI si accodano: annullano un deploy
+  # in corso solo i dispatch urgent (allerta meteo, pubblicazione programmata
+  # del mattino). Motivo: con più sessioni (Claude e ChatGPT) che uniscono PR a
+  # pochi minuti di distanza, ogni merge annullava il caricamento FTP del
+  # precedente a metà e il sito restava servito a pezzi (08/10/2026: tre push
+  # in cinque minuti, due deploy annullati). Dal 01/10/2026 un deploy di
+  # contenuti dura ~5 minuti, quindi aspettare costa poco; GitHub tiene un solo
+  # deploy in attesa, sempre l'ultimo, che pubblica tutto ciò che è stato unito
+  # nel frattempo. La regola «un merge per volta» diventa automatica.
+  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background' }}
 
 jobs:
   build-and-deploy:

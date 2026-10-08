@@ -20,7 +20,7 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 Il percorso si inserisce pienamente nelle **33 ore annuali di Educazione Civica** previste dalla **Legge 20 agosto 2019 n. 92** (art. 1, 2 e 3) e dalle **Linee guida per l'insegnamento dell'educazione civica** (D.M. 7 settembre 2024 n. 183, **applicabili a decorrere dall'anno scolastico 2024/2025**), che individuano nella **sicurezza stradale, salute e benessere, Agenda 2030, cittadinanza digitale, conoscenza del territorio** i nuclei tematici da sviluppare.
 
-Il percorso risponde inoltre alle **Indicazioni Nazionali per il Curricolo della Scuola Secondaria di Primo Grado** (2012) e ai **Nuovi Scenari** (2018), in particolare ai traguardi delle discipline Scienze, Geografia, Tecnologia e al profilo di cittadinanza di fine primo ciclo.
+Il percorso risponde inoltre alle **Indicazioni nazionali per il curricolo della scuola secondaria di primo grado** (D.M. 221/2025; D.M. 254/2012 per le classi già avviate nel 2025/26) e ai **Nuovi Scenari** (2018), in particolare ai traguardi delle discipline Scienze, Geografia, Tecnologia e al profilo di cittadinanza di fine primo ciclo.
 
 Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione Civile è l'**articolo 3, lettera h) della Legge 92/2019**, che include esplicitamente la *"formazione di base in materia di protezione civile"* tra i temi dell'Educazione Civica. Il **D.Lgs. 1/2018** (Codice della Protezione Civile) costituisce la cornice generale che descrive attività, organizzazione, pianificazione e ruolo del Servizio nazionale.
 
@@ -728,7 +728,7 @@ R. Sì, l'Educazione Civica prevede voto in decimi. La rubrica qui proposta si c
 **D. Il volontario può portare attrezzature a scuola (radio, casco, divisa)?**
 R. Sì, previa autorizzazione del Dirigente. Vengono portate attrezzature in uso ordinario: radio VHF/UHF, casco da AIB, DPI, un piccolo kit di primo soccorso. Per armi o mezzi grandi servono autorizzazioni più complesse non sempre compatibili con la scuola.
 
-**D. Si può fare un PCTO (alternanza) con la Protezione Civile?**
+**D. Si può fare formazione scuola-lavoro (ex PCTO) con la Protezione Civile?**
 R. Sì, ma solo per la **scuola secondaria di secondo grado**. Il kit della secondaria di primo grado prevede al massimo una visita didattica o un'attività di service learning all'interno della scuola.
 
 **D. Come gestisco un alunno che ha subito un evento traumatico (terremoto, alluvione, perdita familiare)?**

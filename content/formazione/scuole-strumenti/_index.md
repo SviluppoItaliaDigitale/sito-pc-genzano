@@ -14,7 +14,7 @@ Questa pagina raccoglie moduli e fac-simile che il Gruppo Comunale Volontari di 
 I documenti sono divisi in due pacchetti:
 
 - **Pacchetto A — Attività scolastiche generiche:** incontri in classe, prove di evacuazione affiancate, interventi dei volontari, iniziative di plesso e uscite didattiche.
-- **Pacchetto B — PCTO:** percorsi per studenti della scuola secondaria di secondo grado, da attivare con convenzione, progetto formativo, tutoraggio e coperture previste dalla scuola.
+- **Pacchetto B — Formazione scuola-lavoro (ex PCTO):** percorsi per studenti della scuola secondaria di secondo grado, da attivare con convenzione, progetto formativo, tutoraggio e coperture previste dalla scuola.
 
 <div class="alert alert-warning" role="note">
 <p class="mb-0"><i class="bi bi-exclamation-triangle me-2" aria-hidden="true"></i><strong>Sono fac-simile editabili.</strong> Non sono testi legalmente vincolanti e non sono validati da Ministero, USR, USP o altri enti esterni. La scuola deve adattarli al proprio contesto, al PTOF, alle procedure interne e alle indicazioni di Dirigente scolastico, DSGA, RSPP e DPO.</p>
@@ -40,6 +40,8 @@ Il monte ore minimo triennale previsto dalla normativa è:
 - 90 ore nei licei;
 - 150 ore negli istituti tecnici;
 - 210 ore negli istituti professionali.
+
+Dal 1° ottobre 2026 istituti tecnici e professionali si chiamano «licei tecnologici» e «licei professionali» (D.L. 170/2026, art. 9, in attesa di conversione in legge); il monte ore non cambia. Dettagli nel [quadro normativo per la scuola](/formazione/quadro-normativo-scuola/#pcto).
 
 Un eventuale percorso con il Gruppo può coprire solo una parte di questo monte ore e deve essere approvato dalla scuola.
 

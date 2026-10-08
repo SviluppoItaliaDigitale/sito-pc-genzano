@@ -61,7 +61,7 @@ Materiali utili:
 
 ### Secondaria di secondo grado, 14-19 anni
 
-- Puoi introdurre normativa, comunicazione di crisi, PCTO, sicurezza nei luoghi di lavoro e cittadinanza attiva.
+- Puoi introdurre normativa, comunicazione di crisi, formazione scuola-lavoro (ex PCTO), sicurezza nei luoghi di lavoro e cittadinanza attiva.
 - Usa compiti di realtà: messaggi di allerta, analisi di notizie false, mini-campagne informative.
 
 ## Durante la lezione

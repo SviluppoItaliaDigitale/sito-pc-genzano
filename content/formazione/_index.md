@@ -60,7 +60,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 <a class="cr-card" href="#kit"><span class="cr-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span><span class="cr-corpo"><span class="cr-titolo">Per fascia d'età</span><span class="cr-desc">Kit dedicati per infanzia, primaria, secondaria di primo e secondo grado.</span></span></a>
 {{< link-card url="/formazione/scuole-checklist-docente/" icon="bi-check2-square" titolo="Prepara la lezione" desc="Parole e tempi giusti per spiegare i rischi senza creare allarmismo." >}}
 {{< link-card url="/formazione/educazione-civica/" icon="bi-bank" titolo="Educazione civica" desc="Collega le attività ai nuclei dell'insegnamento di educazione civica (D.M. 183/2024)." >}}
-{{< link-card url="/formazione/dirigenti-e-rspp/" icon="bi-clipboard-check" titolo="Dirigenti e RSPP" desc="Ruoli, limiti, responsabilità e percorsi per le competenze trasversali (PCTO)." >}}
+{{< link-card url="/formazione/dirigenti-e-rspp/" icon="bi-clipboard-check" titolo="Dirigenti e RSPP" desc="Ruoli, limiti, responsabilità e formazione scuola-lavoro (ex PCTO)." >}}
 {{< link-card url="/formazione/in-famiglia-dopo-la-lezione/" icon="bi-house-heart" titolo="A casa, in famiglia" desc="Azioni concrete per continuare a casa dopo la lezione." >}}
 {{< link-card url="/assistente/" icon="bi-chat-dots" titolo="Non sai cosa cercare?" desc="L'assistente guidato ti porta alla risposta giusta con poche domande." >}}
 </div>

@@ -1,12 +1,12 @@
 ---
 title: "Quadro normativo per la scuola"
-description: "Riepilogo delle norme principali per usare i materiali del Gruppo nelle scuole: educazione civica, PCTO, sicurezza, inclusione, privacy e accessibilità."
+description: "Le norme per usare a scuola i materiali del Gruppo: educazione civica, formazione scuola-lavoro (ex PCTO), sicurezza, inclusione, privacy, accessibilità."
 date: 2026-05-01
 draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-09-23"
+dataUltimaRevisione: "2026-10-08"
 ---
 
 Questa pagina raccoglie i principali riferimenti normativi utili per collaborazioni tra scuole e Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. È pensata per Dirigenti scolastici, DSGA, DPO, RSPP, ASPP e docenti referenti.
@@ -22,19 +22,20 @@ Questa pagina raccoglie i principali riferimenti normativi utili per collaborazi
 | D.Lgs. 2 gennaio 2018, n. 1 | Codice della protezione civile. Definisce ruoli, attività e principi del Servizio nazionale. | Quadro generale |
 | L. 20 agosto 2019, n. 92 | Introduce l'educazione civica. L'art. 3, lett. h, richiama la formazione di base in materia di protezione civile. | Tutti gli ordini di scuola |
 | D.M. 7 settembre 2024, n. 183 | Definisce le Linee guida nazionali per l'educazione civica dall'a.s. 2024/2025. | Tutti gli ordini di scuola |
-| L. 17 febbraio 2025, n. 21 | Aggiunge l'art. 3, lett. h-ter, alla L. 92/2019: conoscenze di base sulla sicurezza nei luoghi di lavoro nell'educazione civica. | Tutti gli ordini, con particolare rilevanza per la secondaria di II grado e l'alternanza scuola-lavoro |
+| L. 17 febbraio 2025, n. 21 | Aggiunge l'art. 3, lett. h-ter, alla L. 92/2019: conoscenze di base sulla sicurezza nei luoghi di lavoro nell'educazione civica. | Tutti gli ordini, con particolare rilevanza per la secondaria di II grado e la formazione scuola-lavoro |
 
 Per esempi didattici consulta [Educazione civica e protezione civile](/formazione/educazione-civica/).
 
-## PCTO
+## Formazione scuola-lavoro (ex PCTO) {#pcto}
 
 | Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| D.Lgs. 15 aprile 2005, n. 77 | Definisce l'alternanza scuola-lavoro, oggi PCTO. | Secondaria II grado |
-| L. 30 dicembre 2018, n. 145, art. 1 comma 785 | Stabilisce il monte ore minimo triennale: 90 ore licei, 150 tecnici, 210 professionali. | Secondaria II grado |
-| D.M. 4 settembre 2019, n. 774 | Linee guida PCTO: convenzione, progetto formativo, tutoraggio, valutazione e certificazione. | Secondaria II grado |
+| D.Lgs. 15 aprile 2005, n. 77 | Definisce l'alternanza scuola-lavoro, poi diventata PCTO e oggi formazione scuola-lavoro. | Secondaria II grado |
+| L. 30 dicembre 2018, n. 145, art. 1 commi 784-785 | Istituisce i percorsi per le competenze trasversali e per l'orientamento (PCTO) e fissa il monte ore minimo triennale: 90 ore licei, 150 tecnici, 210 professionali. | Secondaria II grado |
+| [D.L. 9 settembre 2025, n. 127](https://www.normattiva.it/eli/id/2025/09/09/25G00135/ORIGINAL), art. 1, c. 6, convertito dalla L. 30 ottobre 2025, n. 164 | Dall'a.s. 2025/2026 i PCTO si chiamano «formazione scuola-lavoro». Cambia il nome, non gli obblighi né il monte ore. | Secondaria II grado |
+| D.M. 4 settembre 2019, n. 774 | Linee guida dei percorsi (scritte quando si chiamavano PCTO): convenzione, progetto formativo, tutoraggio, valutazione e certificazione. | Secondaria II grado |
 | D.Lgs. 13 aprile 2017, n. 62 | Valutazione e certificazione delle competenze. | Percorsi formativi |
-| L. 13 luglio 2015, n. 107 | Prevede il curriculum dello studente, che include anche esperienze formative e PCTO. | Secondaria II grado |
+| L. 13 luglio 2015, n. 107 | Prevede il curriculum dello studente, che include anche le esperienze di formazione scuola-lavoro. | Secondaria II grado |
 
 I moduli proposti dal Gruppo possono essere inseriti nel monte ore complessivo dell'istituto, se approvati dalla scuola e formalizzati con gli atti necessari.
 
@@ -42,9 +43,9 @@ I moduli proposti dal Gruppo possono essere inseriti nel monte ore complessivo d
 
 | Norma | Cosa stabilisce | Dove incide |
 |---|---|---|
-| D.Lgs. 9 aprile 2008, n. 81 | Testo Unico su salute e sicurezza. Lo studente in PCTO è equiparato al lavoratore per gli aspetti di tutela. | PCTO e scuola |
-| Art. 37 D.Lgs. 81/2008 | Obbligo di formazione sulla sicurezza. | PCTO |
-| Accordo Stato-Regioni 17 aprile 2025 (Rep. atti n. 59/CSR, GU n. 119 del 24 maggio 2025) | Durata e contenuti minimi dei percorsi formativi sulla sicurezza (art. 37, comma 2, D.Lgs. 81/2008). In vigore dal 24 maggio 2025; sostituisce gli accordi del 21 dicembre 2011, del 22 febbraio 2012 e del 7 luglio 2016, con un periodo transitorio di 12 mesi (fino al 24 maggio 2026). Le FAQ del Ministero del Lavoro chiariscono i casi dubbi. | PCTO e lavoratori |
+| D.Lgs. 9 aprile 2008, n. 81 | Testo Unico su salute e sicurezza. Lo studente in formazione scuola-lavoro è equiparato al lavoratore per gli aspetti di tutela. | Formazione scuola-lavoro e scuola |
+| Art. 37 D.Lgs. 81/2008 | Obbligo di formazione sulla sicurezza. | Formazione scuola-lavoro |
+| Accordo Stato-Regioni 17 aprile 2025 (Rep. atti n. 59/CSR, GU n. 119 del 24 maggio 2025) | Durata e contenuti minimi dei percorsi formativi sulla sicurezza (art. 37, comma 2, D.Lgs. 81/2008). In vigore dal 24 maggio 2025; sostituisce gli accordi del 21 dicembre 2011, del 22 febbraio 2012 e del 7 luglio 2016, Il periodo transitorio di 12 mesi è terminato il 24 maggio 2026: da quella data vale solo l'Accordo 2025. Le FAQ del Ministero del Lavoro chiariscono i casi dubbi. | Formazione scuola-lavoro e lavoratori |
 | Accordo Stato-Regioni 21 dicembre 2011 | Riferimento storico: contenuti minimi della formazione generale e specifica fino all'entrata in vigore dell'Accordo 2025. | Storico |
 | D.M. 26 agosto 1992 | Norme di prevenzione incendi per l'edilizia scolastica. | Piani di emergenza e prove |
 | D.M. 18 dicembre 1975 | Norme tecniche per l'edilizia scolastica. | Edifici scolastici |
@@ -87,6 +88,7 @@ Per foto, video e dati degli studenti il riferimento resta sempre il DPO dell'is
 | Raccomandazione Consiglio UE 22 maggio 2018 | Otto competenze chiave per l'apprendimento permanente. | Programmazione didattica |
 | Indicazioni nazionali per il curricolo, [D.M. 9 dicembre 2025, n. 221](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-01-27&atto.codiceRedazionale=26G00021) (GU n. 21 del 27 gennaio 2026) | Quadro pedagogico per infanzia, primaria e secondaria di primo grado. Sostituisce il D.M. 254/2012 con gradualità: dal 2026/27 per tutta l'infanzia e per le classi prime di primaria e secondaria di primo grado. Le classi già avviate nel 2025/26 proseguono con il D.M. 254/2012 fino alla fine del corso (art. 5); per la storia, le terze della primaria passano al nuovo testo nel 2027/28. | Primo ciclo |
 | D.P.R. 87, 88 e 89/2010 | Regolamenti per professionali, tecnici e licei. | Secondaria II grado |
+| [D.L. 30 settembre 2026, n. 170](https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2026-09-30&atto.codiceRedazionale=26G00190), art. 9, c. 2 | Dal 1° ottobre 2026 gli istituti tecnici si chiamano «licei tecnologici» e gli istituti professionali «licei professionali», fermo restando il loro ordinamento. Il decreto deve essere convertito in legge entro il 29 novembre 2026: il testo può ancora cambiare. | Secondaria II grado |
 | Agenda 2030 ONU | Obiettivi di sviluppo sostenibile. Il rischio di disastri è scritto nei traguardi 1.5, 3.d, 4.7, 11.5, 11.b, 13.1 e 13.3; in modo indiretto riguardano la protezione civile anche i Goal 6, 15, 16 e 17. Mappa completa in [Protezione civile e Agenda 2030](/conoscere/agenda-2030/). | Educazione civica e sostenibilità |
 
 ## Stato dei materiali del Gruppo
