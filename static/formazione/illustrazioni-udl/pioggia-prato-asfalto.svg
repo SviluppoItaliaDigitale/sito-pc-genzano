@@ -7,6 +7,6 @@
 <path d="M168 340 V468 l-17 -21 M168 468 l17 -21 M313 338 V469 l-17 -21 M313 469 l17 -21 M455 341 V465 l-17 -20 M455 465 l17 -20" fill="none" stroke="#207da5" stroke-width="7" stroke-linejoin="round"/>
 <path d="M708 294 H1062 l-25 -18 M1062 294 l-25 19" stroke="#177ba9" stroke-width="12" fill="none" stroke-linejoin="round"/>
 <rect x="1085" y="299" width="57" height="35" fill="#354e61"/><path d="M1097 301 V332 M1110 301 V332 M1123 301 V332" stroke="#9ab5c7" stroke-width="5"/>
-<path d="M699 330 Q779 338 861 337 T1017 340" stroke="#6eb8da" stroke-width="11" fill="none"/>
+
 <text x="307" y="509" font-family="Arial,sans-serif" font-size="20" fill="#245e48" font-weight="700" text-anchor="middle">Una parte dell'acqua si infiltra</text><text x="893" y="509" font-family="Arial,sans-serif" font-size="20" fill="#315f7a" font-weight="700" text-anchor="middle">Più deflusso in superficie</text>
 <text x="603" y="589" font-family="Arial,sans-serif" font-size="17" fill="#3d586a" font-weight="400" text-anchor="middle">Schema semplificato: la quantità d'acqua assorbita dipende anche dal tipo e dallo stato del terreno.</text></svg>
