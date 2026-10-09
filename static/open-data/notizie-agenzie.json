@@ -5,16 +5,76 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-08T20:43:34+00:00",
+  "generato": "2026-10-09T00:40:58+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-10-08T22:06:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, oggi libere e pre-qualifiche Gp Indonesia: orario e dove vederle",
+   "url": "https://www.adnkronos.com/sport/motogp-gp-indonesia-prequalifiche_6C0SIMzwR19SZzyVdqT7wQ"
+  },
+  {
+   "data": "2026-10-08T22:04:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo Italia, maltempo fino a sabato: poi tregua e nuovo peggioramento",
+   "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-italia-previsioni-ultima-ora_44uKjSL03DmShxt3iFIHQA"
+  },
+  {
+   "data": "2026-10-08T22:03:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Kiev spezza l'assedio di Putin nel Donetsk. Gli inviati di Zelensky in Usa",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-donbass-guerra-isw-analisi_5U3ar3LhGQBVDSq0u1mDZl"
+  },
+  {
+   "data": "2026-10-08T22:03:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Legge elettorale, semaforo verde e Meloni esulta: \"Ora gli italiani potranno scegliere\"",
+   "url": "https://www.adnkronos.com/politica/legge-elettorale-meloni-schlein-conte-protesta_3hkkE0sKyRcP5oWap78Cec"
+  },
+  {
+   "data": "2026-10-08T21:50:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "La fucilazione dell'autore della strage di Fort Hood sarà pubblica e in streaming",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/la-fucilazione-dellautore-della-strage-di-fort-hood-sara-pubblica-e-in-streaming_82f5ecaf-fec1-4ee7-8e0f-507effc31551.html"
+  },
+  {
+   "data": "2026-10-08T21:25:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Barzotti (M5s) in Aula per la legge elettorale con la sua bimba, in piedi per cullarla",
+   "url": "https://www.ansa.it/donne/notizie/2026/10/08/barzotti-m5s-in-aula-per-la-legge-elettorale-con-la-sua-bimba-in-piedi_0ea2383c-2bc7-424c-b4dc-253fb7817c2b.html"
+  },
+  {
+   "data": "2026-10-08T21:19:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "I sindacati: 'Da lunedì sciopero nazionale ex Ilva di 24 ore'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/08/i-sindacati-da-lunedi-sciopero-nazionale-ex-ilva-di-24-ore_df14583b-44b1-4574-a8f3-c6ab01e5526e.html"
+  },
+  {
+   "data": "2026-10-08T20:52:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Garlasco, Andrea Sempio: 'La paura che sia vittima di un errore c'è assolutamente'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/garlasco-andrea-sempio-la-paura-che-sia-vittima-di-un-errore-ce-assolutamente_52ae364a-169a-4713-97da-d94c27aea538.html"
+  },
+  {
    "data": "2026-10-08T20:25:29+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "\"Peggio di Garlasco\", il figlio di Bossetti parla in tv: \"Mio padre non ha ucciso Yara\"",
    "url": "https://www.adnkronos.com/cronaca/omicidio-yara-bossetti-ergastolo-dna_7onVA5WAfc32YWMX0SMCwv"
+  },
+  {
+   "data": "2026-10-08T20:17:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "È morto Francesco Tedesco, storico collaboratore dell'ANSA a Napoli",
+   "url": "https://www.ansa.it/campania/notizie/2026/10/08/e-morto-francesco-tedesco-storico-collaboratore-dellansa-a-napoli_4434f6bc-bb67-4a16-b027-fa7d60ce7bc9.html"
+  },
+  {
+   "data": "2026-10-08T20:04:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid russo sui bus fa strage a Kramatorsk, almeno 33 morti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/raid-russo-sui-bus-fa-strage-a-kramatorsk-almeno-33-morti_018897e4-3f1d-4038-ae12-ebd2df011b00.html"
   },
   {
    "data": "2026-10-08T19:51:00+00:00",
@@ -27,12 +87,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Sondaggio politico, Fratelli d'Italia primo partito e pareggio tra le coalizioni",
    "url": "https://www.adnkronos.com/politica/sondaggio-tg3-intenzioni-voto-elezioni_4vEatFMX8c1Vc5BK5clW75"
-  },
-  {
-   "data": "2026-10-08T19:29:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ex Ilva, stop area a caldo Taranto e avvio cassa integrazione",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/08/ex-ilva-da-domani-stop-allarea-a-caldo-e-avvio-procedure-cig_df14583b-44b1-4574-a8f3-c6ab01e5526e.html"
   },
   {
    "data": "2026-10-08T19:21:18+00:00",
@@ -53,12 +107,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/giudici-su-caso-30-secondi-violenza-sessuale-prescinde-dal-tempo_e88362fa-9b8e-440d-bea0-b2d431227faf.html"
   },
   {
-   "data": "2026-10-08T19:06:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "È morto Francesco Tedesco, storico collaboratore dell'ANSA a Napoli",
-   "url": "https://www.ansa.it/campania/notizie/2026/10/08/e-morto-francesco-tedesco-storico-collaboratore-dellansa-a-napoli_4434f6bc-bb67-4a16-b027-fa7d60ce7bc9.html"
-  },
-  {
    "data": "2026-10-08T19:02:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Superenalotto, 5+1 vince 518mila euro: la combinazione vincente di oggi 8 ottobre",
@@ -75,12 +123,6 @@
    "fonte": "ANSA",
    "titolo": "La riforma elettorale è legge, l'opposizione: 'Una truffa'. Meloni: 'Centrodestra unito, avanti così'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/08/la-riforma-elettorale-e-legge-lopposizione-una-truffa.-meloni-centrodestra-unito-avanti_356b6a03-efcc-4966-982f-f363b3c3c7fc.html"
-  },
-  {
-   "data": "2026-10-08T18:43:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Raid russo sui bus fa strage a Kramatorsk, almeno 33 morti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/raid-russo-sui-bus-fa-strage-a-kramatorsk-almeno-33-morti_018897e4-3f1d-4038-ae12-ebd2df011b00.html"
   },
   {
    "data": "2026-10-08T18:41:34+00:00",
@@ -131,12 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/un-flop-la-stima-del-1960-sulla-crescita-record-della-popolazione_088963e2-b766-45fb-ad36-1d71f19a20e7.html"
   },
   {
-   "data": "2026-10-08T18:14:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Garlasco, Andrea Sempio: 'La paura che sia vittima di un errore c'è assolutamente'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/garlasco-andrea-sempio-la-paura-che-sia-vittima-di-un-errore-ce-assolutamente_52ae364a-169a-4713-97da-d94c27aea538.html"
-  },
-  {
    "data": "2026-10-08T18:02:55+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Ue, Dombrovskis: \"Esamineremo a fondo le richieste di Italia e Grecia, no a nuove forme di flessibilità\"",
@@ -153,42 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Nascita 'record' nel Modenese, partorito un bimbo di quasi 6 chili",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/nascita-record-nel-modenese-partorito-bimbo-di-quasi-6-chili_f36c8096-2f2a-4409-a199-a4880bb6e1f2.html"
-  },
-  {
-   "data": "2026-10-08T17:48:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Iacopini ancora grave, c'è un'altra vittima della minicar",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/unaltra-donna-denuncia-spinta-da-una-minicar-mentre-ero-in-bici_470b6508-1b9a-44c4-bf71-a5935c8f7d4c.html"
-  },
-  {
-   "data": "2026-10-08T17:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Si finge prof per insultare gli studenti: \"Mi annoiavo e odio i bambini\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/prof-insulti-studenti-arresto_2xrHyzjoYNE3TyOBCVDwEf"
-  },
-  {
-   "data": "2026-10-08T17:28:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nato, in Italia dal 13 al 23 ottobre l'esercitazione nucleare annuale",
-   "url": "https://www.adnkronos.com/internazionale/esteri/nato-esercitazione-nucleare-italia-ottobre_5BOukm0AG2fFH8XpQuwrr1"
-  },
-  {
-   "data": "2026-10-08T17:19:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Rapaccioli (Sobi Italia): \"Rare Means Care una luce su malattie renali rare\"",
-   "url": "https://www.adnkronos.com/cronaca/rapaccioli-sobi-italia-rare-means-care-una-luce-su-malattie-renali-rare_5dyGAKHvMVHoBj6a7A8G3l"
-  },
-  {
-   "data": "2026-10-08T17:19:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiocchi (Sobi Italia), 'con campagna Rare Means Care riflettori su malattie renali rare'",
-   "url": "https://www.adnkronos.com/cronaca/fiocchi-sobi-italia-con-campagna-rare-means-care-riflettori-su-malattie-renali-rare_18eEKuZPLVBnouIGxVbNIj"
-  },
-  {
-   "data": "2026-10-08T17:17:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Bolzano un gruppo di lavoro diocesano facilita il coming out",
-   "url": "https://www.ansa.it/trentino/notizie/2026/10/08/a-bolzano-un-gruppo-di-lavoro-diocesano-facilita-il-coming-out_5cc9ea94-d2e4-4195-bff5-ac18c6076ba6.html"
   }
  ]
 }
