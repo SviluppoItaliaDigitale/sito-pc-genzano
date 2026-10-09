@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-10-09T19:19:40+00:00",
+  "generato": "2026-10-09T23:25:14+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 33,
-  "scaduti_scartati": 23,
+  "avvisi": 39,
+  "scaduti_scartati": 17,
   "in_corso": 20,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -194,6 +194,19 @@
   {
    "in_corso": false,
    "regione": "Calabria",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-11T00:00:00+00:00",
+   "fine": "2026-10-11T21:59:00+00:00",
+   "emesso": "2026-10-09T08:43:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261009104343.092"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
    "fenomeno": "Pioggia",
    "livello": "gialla",
    "evento_originale": "Yellow Rain Warning",
@@ -255,6 +268,19 @@
    "fine": "2026-10-10T23:59:00+00:00",
    "emesso": "2026-10-09T08:43:43+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261009104343.072"
+  },
+  {
+   "in_corso": false,
+   "regione": "Marche",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-11T00:00:00+00:00",
+   "fine": "2026-10-11T06:59:00+00:00",
+   "emesso": "2026-10-09T08:43:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261009104343.069"
   },
   {
    "in_corso": false,
@@ -322,6 +348,32 @@
    "identificativo": "2.49.0.0.380.3.IT.261009104343.077"
   },
   {
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-11T00:00:00+00:00",
+   "fine": "2026-10-11T17:59:00+00:00",
+   "emesso": "2026-10-09T08:43:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261009104343.084"
+  },
+  {
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-11T00:00:00+00:00",
+   "fine": "2026-10-11T17:59:00+00:00",
+   "emesso": "2026-10-09T08:43:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261009104343.083"
+  },
+  {
    "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Pioggia",
@@ -333,6 +385,19 @@
    "fine": "2026-10-09T23:59:00+00:00",
    "emesso": "2026-10-09T08:43:43+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261009104343.080"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sardegna",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-11T00:00:00+00:00",
+   "fine": "2026-10-11T21:59:00+00:00",
+   "emesso": "2026-10-09T08:43:44+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261009104343.102"
   },
   {
    "in_corso": true,
@@ -398,6 +463,19 @@
    "fine": "2026-10-11T21:59:00+00:00",
    "emesso": "2026-10-09T08:43:43+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261009104343.097"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sicilia",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-11T00:00:00+00:00",
+   "fine": "2026-10-11T11:59:00+00:00",
+   "emesso": "2026-10-09T08:43:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261009104343.096"
   },
   {
    "in_corso": true,
