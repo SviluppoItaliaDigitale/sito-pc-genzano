@@ -5,7 +5,7 @@ layout: "single"
 toc: true
 image: ""
 date: 2026-05-29
-dataUltimaRevisione: "2026-09-14"
+dataUltimaRevisione: "2026-10-09"
 tts: true
 ---
 
@@ -76,6 +76,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 ## Frane, alluvioni e maremoti
 
 ### 6. La spugna e il fango 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-spugna-saturazione.svg" alt="Due prove con la stessa spugna inclinata e un po' di terra: a sinistra poche gocce vengono assorbite, a destra troppa acqua fa scorrere via una parte della terra nel piatto." caption="Con poca acqua la spugna assorbe; quando è piena, l'acqua in eccesso può scorrere trascinando particelle di terra. È un modello semplificato, non una previsione di frana." >}}
 **Materiali:** una spugna da cucina asciutta, un piatto, acqua, un po' di terra o sabbia.
 **Come si fa:** appoggia la spugna inclinata sul piatto e mettici sopra un po' di terra. Versa l'acqua prima goccia a goccia, poi tutta insieme.
 **Cosa si impara:** all'inizio la spugna assorbe; quando è **satura** non ce la fa più e l'acqua scorre via in fretta, trascinando la terra. Il terreno ha un limite di assorbimento: quando piove troppo e troppo in fretta, cede e può franare.
@@ -111,12 +113,16 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Sicurezza:** Il taglio lo fa un adulto. Non si esce a leggere durante il temporale: si aspetta che passi.
 
 ### 10. L'onda di maremoto 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-maremoto-fondale.svg" alt="Sezione del mare: al largo l'acqua è profonda e un'imbarcazione galleggia sopra un'onda bassa; avvicinandosi alla costa il fondale sale e l'onda cresce; una persona sulla terraferma si allontana verso un punto alto." caption="Le onde di maremoto possono crescere quando raggiungono acque poco profonde. Se sulla costa avverti una forte scossa o osservi un ritiro anomalo del mare, allontanati subito verso una zona elevata." >}}
 **Materiali:** una vaschetta lunga (o una teglia) con un po' d'acqua, un libretto o una paletta.
 **Come si fa:** metti un libro sotto un'estremità della vaschetta. Da quella parte il fondo si alza e l'acqua è **bassa**: è la spiaggia. All'estremità opposta l'acqua resta **profonda**: è il mare aperto. Dal lato profondo dai una spinta decisa all'acqua con la paletta, verso la spiaggia, e guarda l'onda correre verso il lato rialzato.
 **Cosa si impara:** l'onda nasce da uno **spostamento improvviso di tanta acqua** (un terremoto sottomarino, una frana, un'eruzione). Dove il mare è profondo corre veloce ed è bassa, tanto che una barca al largo quasi non la sente; **quando il fondale si alza verso riva rallenta e l'acqua si accumula in altezza**. Non è l'onda del vento, che muove solo la superficie: qui si muove tutta la colonna d'acqua, dal fondo alla superficie, e per questo ha molta più forza.
 **In chiave protezione civile:** se al mare senti un forte terremoto o vedi il mare ritirarsi all'improvviso, allontanati subito verso un punto alto. Vedi [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/).
 
 ### 11. Il tombino ostruito 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-tombino-ostruito.svg" alt="Tre prove da tavolo con bottiglia d'acqua, colino e contenitore: nella prima la griglia è libera, nella seconda è parzialmente coperta da foglie e nella terza è quasi ostruita, con sempre più acqua che rimane sopra." caption="Osserva la differenza fra griglia libera, parzialmente coperta e quasi chiusa. Ripeti la prova usando la stessa quantità d'acqua e lo stesso modo di versarla. L'esperimento si fa sul tavolo, mai in strada." >}}
 **La domanda:** Perché una strada si allaga anche quando i tombini ci sono?
 **Materiali:** Una bacinella, un colino o una retina, una bottiglia d'acqua, foglie secche (o pezzetti di carta), un cronometro.
 **Come si fa:** (1) Appoggia il colino sopra un contenitore vuoto: è il tombino, il contenitore è la fognatura. (2) Versa un litro d'acqua a velocità costante e conta i secondi che impiega a scendere tutta. (3) Ora copri metà del colino con le foglie e ripeti versando allo stesso modo, contando di nuovo i secondi. (4) Coprilo quasi del tutto e ripeti una terza volta. Segna i tre tempi e guarda quanta acqua resta sopra.
@@ -192,6 +198,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** con il vento forte gli oggetti volano e gli alberi possono cadere. Vedi [Cosa fare con il vento forte](/rischi-prevenzione/vento-forte/).
 
 ### 19. Quanto è lontano il temporale? 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-lampo-tuono.svg" alt="Un bambino al riparo dietro la finestra di casa conta sulle dita i secondi fra lampo e tuono; il disegno mostra un temporale lontano e l'esempio nove secondi diviso tre, circa tre chilometri." caption="La luce del lampo arriva prima del suono del tuono. Il conteggio è soltanto una stima della distanza: al primo tuono resta al chiuso e attendi almeno trenta minuti dopo l'ultimo tuono prima di uscire." >}}
 **Materiali:** solo gli occhi, le orecchie e un modo per contare (osservando da un luogo sicuro, al chiuso).
 **Come si fa:** con la registrazione di un temporale, o guardando dalla finestra di casa, conta i secondi fra il lampo e il tuono. Dividi per 3: ottieni più o meno la distanza del temporale in chilometri (la luce arriva subito, il suono molto più piano).
 **Cosa si impara:** se tra lampo e tuono passano pochi secondi, il temporale è vicino; se i secondi diminuiscono, si sta avvicinando. Il conteggio serve a questo, **non a decidere se si è al sicuro**: quando si sente il tuono il fulmine può già raggiungere chi ascolta, anche a diversi chilometri dal temporale ([National Weather Service](https://www.weather.gov/safety/lightning-safety-overview)).
