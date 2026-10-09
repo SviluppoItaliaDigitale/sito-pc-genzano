@@ -5,11 +5,119 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-09T00:40:58+00:00",
+  "generato": "2026-10-09T06:46:40+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-09T06:39:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cameriere denuncia: 'Picchiato per una foto a Fedez in discoteca'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/cameriere-denuncia-picchiato-per-una-foto-a-fedez-in-discoteca_a7a44817-f137-426b-97a0-ed8152dd6c17.html"
+  },
+  {
+   "data": "2026-10-09T06:35:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Pedopornografia, sette arresti in Lombardia, Veneto e Toscana",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/pedopornografia-sette-arresti-in-lombardia-veneto-e-toscana_e0df6cc4-11c9-4cc8-b942-5c32d30b7e03.html"
+  },
+  {
+   "data": "2026-10-09T06:31:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "TOMORROW/ Campo largo, tensioni nel centrosinistra: Conte insiste su primarie presto",
+   "url": "https://www.adnkronos.com/politica/elezioni-pd-m5s-schlein-conte-fratoianni-bonelli_7HpdPCHAqz1KMVpkkQoly7"
+  },
+  {
+   "data": "2026-10-09T06:30:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Uragano Isaias si rafforza e punta gli Usa: in corso evacuazioni lungo la costa del Golfo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/uragano-isaias-usa-evacuazioni-inondazioni_5kVMwl1q3O00vEpQyZjUdq"
+  },
+  {
+   "data": "2026-10-09T06:23:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "La fucilazione dell'autore della strage di Fort Hood sarà pubblica e in streaming",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/la-fucilazione-dellautore-della-strage-di-fort-hood-sara-pubblica-e-in-streaming_82f5ecaf-fec1-4ee7-8e0f-507effc31551.html"
+  },
+  {
+   "data": "2026-10-09T06:16:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "La riforma elettorale è legge, l'opposizione: 'Una truffa'. Meloni: 'Centrodestra unito, avanti così'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/08/la-riforma-elettorale-e-legge-lopposizione-una-truffa.-meloni-centrodestra-unito-avanti_356b6a03-efcc-4966-982f-f363b3c3c7fc.html"
+  },
+  {
+   "data": "2026-10-09T06:15:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Nyt: 'Il Pentagono elabora nuovi piani di attacco contro l'Iran'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/nyt-pentagono-elabora-nuovi-piani-di-attacco-contro-liran_18454653-f562-41e2-8f4d-9208b2f74f8b.html"
+  },
+  {
+   "data": "2026-10-09T06:11:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco russo su Zaporizhzhia, un morto e 5 feriti tra cui un bambino",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/attacco-russo-su-zaporizhzhia-un-morto-e-5-feriti-tra-cui-un-bambino_ed3f1c6f-010f-4696-82ee-31db0385799a.html"
+  },
+  {
+   "data": "2026-10-09T06:00:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Shanghai, oggi Djokovic-Hurkacz: precedenti e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/atp-shanghai-djokovic-hurkacz_3RoTnBlo8edKqDjVnVQkF9"
+  },
+  {
+   "data": "2026-10-09T05:54:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Maggioranza compatta, la riforma elettorale è legge con 227 sì",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/09/prime-pagine-maggioranza-compatta-la-riforma-elettorale-e-legge-con-227-si_4f5c1938-2910-422b-a3b6-231e0171a1a3.html"
+  },
+  {
+   "data": "2026-10-09T05:53:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "TOMORROW / Legge elettorale, opposizione all'attacco: lunedì i ricorsi alla Corte Costituzionale",
+   "url": "https://www.adnkronos.com/politica/legge-elettorale-ricorsi-corte-costituzionale_6HdW8M0foxQGHCNWZ4DeVG"
+  },
+  {
+   "data": "2026-10-09T05:52:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giovane trovato morto in strada a Roma, fermati un 19enne e una 24enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/giovane-trovato-morto-in-strada-a-roma-fermati-un-19enne-e-una-24enne_e70abb2a-5435-47e6-b86e-ee23a94dac53.html"
+  },
+  {
+   "data": "2026-10-09T05:52:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi prove libere e qualifiche sprint Gp Singapore: orario e dove vederle in tv",
+   "url": "https://www.adnkronos.com/sport/f1-gp-singapore-prove-libere-e-qualifiche-sprint_9kTkal3lz8syFyYds96aY"
+  },
+  {
+   "data": "2026-10-09T05:31:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa, fucilazione autore strage di Fort Hood sarà pubblica e trasmessa in diretta",
+   "url": "https://www.adnkronos.com/internazionale/esteri/fucilazione-autore-strage-fort-hood-streaming-pubblica_5AciGTImeJYLs6WoI8AABO"
+  },
+  {
+   "data": "2026-10-09T05:15:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ora solare 2026, è partito il conto alla rovescia: quando cambia e cosa fare",
+   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-data-cosa-fare_nYtoZJVGt0VHOg2Q7nN0s"
+  },
+  {
+   "data": "2026-10-09T05:06:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dostoevskij, gargoyle ed eroi che muoiono: Kid Yugi porta la sua 'biblioteca' a Milano",
+   "url": "https://www.adnkronos.com/spettacoli/kid-yugi-assago-milano-concerto_78VBKn0Q3AlZwjOYkP9vdd"
+  },
+  {
+   "data": "2026-10-09T05:04:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conti pubblici, Ue: \"Per Italia e Grecia regole già flessibili\"",
+   "url": "https://www.adnkronos.com/economia/italia-conti-pubblici-unione-europea-regole_7oWA7fHWYdLxz7PsdFCUNp"
+  },
+  {
+   "data": "2026-10-09T04:55:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump a caccia del voto degli italoamericani con Colombo e I Soprano per le elezioni di midterm",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-elezioni-midterm-italiani-voto_37ig777xjY1kH0UNFPQUTR"
+  },
   {
    "data": "2026-10-08T22:06:01+00:00",
    "fonte": "ADNKRONOS",
@@ -21,24 +129,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Meteo Italia, maltempo fino a sabato: poi tregua e nuovo peggioramento",
    "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-italia-previsioni-ultima-ora_44uKjSL03DmShxt3iFIHQA"
-  },
-  {
-   "data": "2026-10-08T22:03:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Kiev spezza l'assedio di Putin nel Donetsk. Gli inviati di Zelensky in Usa",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-donbass-guerra-isw-analisi_5U3ar3LhGQBVDSq0u1mDZl"
-  },
-  {
-   "data": "2026-10-08T22:03:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Legge elettorale, semaforo verde e Meloni esulta: \"Ora gli italiani potranno scegliere\"",
-   "url": "https://www.adnkronos.com/politica/legge-elettorale-meloni-schlein-conte-protesta_3hkkE0sKyRcP5oWap78Cec"
-  },
-  {
-   "data": "2026-10-08T21:50:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "La fucilazione dell'autore della strage di Fort Hood sarà pubblica e in streaming",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/la-fucilazione-dellautore-della-strage-di-fort-hood-sara-pubblica-e-in-streaming_82f5ecaf-fec1-4ee7-8e0f-507effc31551.html"
   },
   {
    "data": "2026-10-08T21:25:59+00:00",
@@ -59,34 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/garlasco-andrea-sempio-la-paura-che-sia-vittima-di-un-errore-ce-assolutamente_52ae364a-169a-4713-97da-d94c27aea538.html"
   },
   {
-   "data": "2026-10-08T20:25:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Peggio di Garlasco\", il figlio di Bossetti parla in tv: \"Mio padre non ha ucciso Yara\"",
-   "url": "https://www.adnkronos.com/cronaca/omicidio-yara-bossetti-ergastolo-dna_7onVA5WAfc32YWMX0SMCwv"
-  },
-  {
    "data": "2026-10-08T20:17:53+00:00",
    "fonte": "ANSA",
    "titolo": "È morto Francesco Tedesco, storico collaboratore dell'ANSA a Napoli",
    "url": "https://www.ansa.it/campania/notizie/2026/10/08/e-morto-francesco-tedesco-storico-collaboratore-dellansa-a-napoli_4434f6bc-bb67-4a16-b027-fa7d60ce7bc9.html"
-  },
-  {
-   "data": "2026-10-08T20:04:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Raid russo sui bus fa strage a Kramatorsk, almeno 33 morti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/raid-russo-sui-bus-fa-strage-a-kramatorsk-almeno-33-morti_018897e4-3f1d-4038-ae12-ebd2df011b00.html"
-  },
-  {
-   "data": "2026-10-08T19:51:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Campo largo, Conte in pressing: \"Subito programma e poi primarie\"",
-   "url": "https://www.adnkronos.com/politica/conte-schlein-primarie-m5s-pd_6tW8dbRgDuwYI9yRC1cXJl"
-  },
-  {
-   "data": "2026-10-08T19:41:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, Fratelli d'Italia primo partito e pareggio tra le coalizioni",
-   "url": "https://www.adnkronos.com/politica/sondaggio-tg3-intenzioni-voto-elezioni_4vEatFMX8c1Vc5BK5clW75"
   },
   {
    "data": "2026-10-08T19:21:18+00:00",
@@ -95,22 +161,10 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/08/la-ue-esaminiamo-le-richieste-delitalia-sulla-flessibilita-ma-serve-prudenza_acc6e3b4-48a3-4d6f-a6fe-45f9ceadf81b.html"
   },
   {
-   "data": "2026-10-08T19:16:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Garlasco, Sempio: \"La paura di essere vittima di un errore c'è\"",
-   "url": "https://www.adnkronos.com/cronaca/sempio-garlasco-porta-a-porta-intervista_6Qv5RtvxuUxAOYKBWnjKmP"
-  },
-  {
    "data": "2026-10-08T19:07:35+00:00",
    "fonte": "ANSA",
    "titolo": "Il caso dei 30 secondi: 'La violenza sessuale prescinde dal tempo'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/giudici-su-caso-30-secondi-violenza-sessuale-prescinde-dal-tempo_e88362fa-9b8e-440d-bea0-b2d431227faf.html"
-  },
-  {
-   "data": "2026-10-08T19:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, 5+1 vince 518mila euro: la combinazione vincente di oggi 8 ottobre",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-8-ottobre_164aRnrTIj9Mi9dAF44TA3"
   },
   {
    "data": "2026-10-08T18:59:32+00:00",
@@ -119,76 +173,22 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/garlasco-il-pm-non-autorizzo-garofano-ad-entrare-in-casa-poggi_9b8b6be8-e7f5-4436-9db9-88b01738f080.html"
   },
   {
-   "data": "2026-10-08T18:55:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "La riforma elettorale è legge, l'opposizione: 'Una truffa'. Meloni: 'Centrodestra unito, avanti così'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/08/la-riforma-elettorale-e-legge-lopposizione-una-truffa.-meloni-centrodestra-unito-avanti_356b6a03-efcc-4966-982f-f363b3c3c7fc.html"
-  },
-  {
    "data": "2026-10-08T18:41:34+00:00",
    "fonte": "ANSA",
    "titolo": "Claudio Baglioni: \"Ho temuto di non tornare più su un palco\"",
    "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/10/08/claudio-baglioni-ho-temuto-di-non-tornare-piu-su-un-palco_67067a7c-c7ba-43bc-b495-4ea9a691658e.html"
   },
   {
-   "data": "2026-10-08T18:39:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Gli Usa colpiranno l'Iran prima del voto', ma Trump nega",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/gli-usa-colpiranno-liran-prima-del-voto-ma-trump-nega_50ab2d75-0dbc-4da8-b5e2-96596b261150.html"
-  },
-  {
-   "data": "2026-10-08T18:38:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "I liceali francesi tornano in piazza, assedio alla Bastiglia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/08/i-liceali-francesi-tornano-in-piazza-assedio-alla-bastiglia_06cf4a15-b373-4cbb-ac91-3d721f75896b.html"
-  },
-  {
    "data": "2026-10-08T18:35:32+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Al via in Italia 'Steadfast Noon', l'esercitazione nucleare della Nato",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/al-via-in-italia-steadfast-noon-lesercitazione-nucleare-della-nato_e7f75d1f-0425-4383-972d-4f88770bdd85.html"
-  },
-  {
-   "data": "2026-10-08T18:34:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"De Luca satrapo\", archiviato il procedimento contro Saviano",
-   "url": "https://www.adnkronos.com/cronaca/saviano-de-luca-querela-processo_lz9FxeZEJEmvmNIq0bt79"
-  },
-  {
-   "data": "2026-10-08T18:32:09+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trevi, ok da cda su opa Webuild dopo incremento corrispettivo",
-   "url": "https://www.adnkronos.com/economia/trevi-ok-da-cda-su-opa-webuild-dopo-incremento-corrispettivo_2X0pulLmvF3iPmta5dKd4H"
   },
   {
    "data": "2026-10-08T18:21:05+00:00",
    "fonte": "ANSA",
    "titolo": "Il Nobel per la Letteratura a Anne Carson.: 'Darò i soldi del premio in beneficenza'",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/08/il-nobel-per-la-letteratura-a-anne-carson.-daro-i-soldi-del-premio-in-beneficenza_376d34cc-511a-4c1e-bc55-76483345431f.html"
-  },
-  {
-   "data": "2026-10-08T18:19:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Un flop la stima del 1960 sulla crescita record della popolazione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/un-flop-la-stima-del-1960-sulla-crescita-record-della-popolazione_088963e2-b766-45fb-ad36-1d71f19a20e7.html"
-  },
-  {
-   "data": "2026-10-08T18:02:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ue, Dombrovskis: \"Esamineremo a fondo le richieste di Italia e Grecia, no a nuove forme di flessibilità\"",
-   "url": "https://www.adnkronos.com/economia/ue-italia-conti-pubblici-inflazione_6pIJhUHhPYKQyADV2JvEJV"
-  },
-  {
-   "data": "2026-10-08T17:55:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Accoltellò professore, 34enne condannato a 5 anni e 6 mesi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/accoltello-professore-34enne-condannato-a-5-anni-e-6-mesi_d38510b6-ce02-42c6-94ad-eafd8eb0f6bc.html"
-  },
-  {
-   "data": "2026-10-08T17:52:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nascita 'record' nel Modenese, partorito un bimbo di quasi 6 chili",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/nascita-record-nel-modenese-partorito-bimbo-di-quasi-6-chili_f36c8096-2f2a-4409-a199-a4880bb6e1f2.html"
   }
  ]
 }
