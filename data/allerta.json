@@ -1,16 +1,7 @@
 {
   "livello": "gialla",
   "titolo": "ALLERTA GIALLA — rischio idrogeologico, rischio idraulico",
-  "descrizione": "Ordinaria per rischio idraulico, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 9 ottobre 2026, validità 9 ottobre 16:15–23:59.",
+  "descrizione": "Ordinaria per rischio idraulico, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 9 ottobre 2026, validità 10 ottobre 00:00–23:59.",
   "ultimo_aggiornamento": "2026-10-09T12:41:23+02:00",
-  "ultimo_controllo": "2026-10-09T18:31:43+02:00",
-  "domani": {
-    "livello": "gialla",
-    "titolo": "Previsto giallo",
-    "rischi": [
-      "rischio idrogeologico",
-      "rischio idraulico"
-    ],
-    "data": "2026-10-10"
-  }
+  "ultimo_controllo": "2026-10-10T00:01:46+02:00"
 }
