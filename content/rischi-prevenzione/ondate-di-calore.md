@@ -1,7 +1,7 @@
 ---
 
 title: "Ondate di Calore"
-dataUltimaRevisione: "2026-06-25"
+dataUltimaRevisione: "2026-10-09"
 description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini e persone fragili."
 tts: true
 weight: 6
@@ -41,6 +41,8 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - Contatta i vicini anziani o le persone sole per verificare il loro stato
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/ondate-di-calore-gesti.svg" alt="Quattro comportamenti illustrati contro il caldo: una persona beve acqua, una casa tiene le tapparelle abbassate, una persona cammina all'ombra con cappello e abiti chiari, un'automobile vuota al sole è contrassegnata dal divieto di lasciarvi persone o animali." caption="Quattro gesti da ricordare durante il caldo intenso. Le immagini aiutano a riconoscere i comportamenti corretti, mentre le indicazioni qui sotto li spiegano nel dettaglio." >}}
 - **Bevi molta acqua** anche se non senti sete, evita alcolici e bevande zuccherate
 - Non uscire nelle ore più calde (11:00-17:00)
 - Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole
