@@ -152,6 +152,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** è il principio dello spegnimento. Le **linee tagliafuoco** tolgono il combustibile; l'acqua toglie il calore. Vedi [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).
 **Sicurezza:** sconsigliata all'infanzia. Mai lasciare la fiamma incustodita; tenere lontani capelli, maniche e carta.
 
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/triangolo-del-fuoco.svg" alt="Il triangolo della combustione raffigura i tre elementi che sostengono una fiamma: combustibile, comburente e calore." caption="I tre elementi del fuoco. Nel barattolo l'ossigeno, cioè il comburente, scende troppo e la fiamma si spegne." >}}
+
 ### 14. Il bosco di tessere 🟢🔵
 **La domanda:** Perché a volte un incendio si ferma da solo e a volte no?
 **Materiali:** Una scatola di tessere del domino (o tessere di cartoncino che stiano in piedi).
@@ -278,7 +280,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 ### 29. La chiamata perfetta al 112 🔵🟠
 **Materiali:** due telefoni giocattolo (o spenti).
 **Come si fa:** l'adulto fa l'operatore del **112**, il bambino è il cittadino. L'adulto propone uno scenario (per esempio: *"Silvia vede del fumo salire dal bosco dietro casa"*) e fa domande; il bambino deve dire, con calma, **chi è, cosa vede e soprattutto dove si trova esattamente**.
-**Cosa si impara:** gli operatori hanno bisogno di **informazioni precise** per mandare i soccorsi giusti. Urlare o piangere non aiuta: la calma e la precisione sì.
+**Cosa si impara:** gli operatori hanno bisogno di **informazioni precise** per mandare i soccorsi giusti. Essere agitati è normale: si prende un respiro e si risponde una domanda alla volta, cominciando da dove ci si trova.
 **In chiave protezione civile:** il **112** è il **Numero Unico di Emergenza**, l'unico da chiamare nel Lazio. Prova anche il gioco digitale [La chiamata al 112](/giochi/) e leggi i [Numeri utili](/numeri-utili/).
 
 ### 30. Il messaggio arriva corretto? 🔵🟠
