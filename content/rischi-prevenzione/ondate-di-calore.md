@@ -8,7 +8,7 @@ weight: 6
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
 howto_prima: "Informati sulle previsioni e sui bollettini del Ministero della Salute. Assicurati di avere scorte d'acqua in casa. Verifica che ventilatori o condizionatori funzionino. Contatta i vicini anziani o le persone sole per verificare il loro stato. Prepara una lista dei farmaci da conservare al fresco e dei contatti di emergenza."
-howto_durante: "Bevi molta acqua anche se non senti sete, evita alcolici e bevande zuccherate. Non uscire nelle ore più calde (11:00-17:00). Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole. Rinfresca gli ambienti e abbassa le tapparelle nelle ore di sole diretto. Fai pasti leggeri privilegiando frutta e verdura. Non lasciare mai persone o animali in auto parcheggiate al sole."
+howto_durante: "Bevi molta acqua anche se non senti sete, evita alcolici e bevande zuccherate. Non uscire nelle ore più calde (dalle 11 alle 18). Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole. Rinfresca gli ambienti e abbassa le tapparelle nelle ore di sole diretto. Fai pasti leggeri privilegiando frutta e verdura. Non lasciare mai persone o animali in auto parcheggiate al sole."
 howto_dopo: "Se qualcuno mostra sintomi di colpo di calore, chiama il 112 immediatamente. In attesa dei soccorsi porta la persona in un luogo fresco, falla sdraiare con le gambe sollevate, applicale panni umidi su fronte e collo. Continua a idratarti anche quando la temperatura scende. Non sottovalutare i primi sintomi (sete intensa, stanchezza, mal di testa)."
 ---
 Il caldo estremo prolungato mette a rischio la vita, soprattutto degli anziani, dei bambini piccoli e di chi ha patologie croniche. Ogni estate il Ministero della Salute attiva la sorveglianza sulle ondate di calore: seguire i bollettini ufficiali e adottare pochi comportamenti corretti può prevenire conseguenze gravi.
@@ -44,7 +44,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/ondate-di-calore-gesti.svg" alt="Quattro comportamenti illustrati contro il caldo: una persona beve acqua, una casa tiene le tapparelle abbassate, una persona cammina all'ombra con cappello e abiti chiari, un'automobile vuota al sole è contrassegnata dal divieto di lasciarvi persone o animali." caption="Quattro gesti da ricordare durante il caldo intenso. Le immagini aiutano a riconoscere i comportamenti corretti, mentre le indicazioni qui sotto li spiegano nel dettaglio." >}}
 - **Bevi molta acqua** anche se non senti sete, evita alcolici e bevande zuccherate
-- Non uscire nelle ore più calde (11:00-17:00)
+- Non uscire nelle ore più calde (dalle 11 alle 18)
 - Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole
 - Rinfresca gli ambienti e abbassa le tapparelle nelle ore di sole diretto
 - Fai pasti leggeri privilegiando frutta e verdura
@@ -57,7 +57,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 
 {{< cosa-non-fare titolo="Cosa NON fare durante un'ondata di calore" >}}
 - **Non sottovalutare i primi sintomi** di malessere da calore (sete intensa, stanchezza, mal di testa)
-- **Non fare sforzi fisici intensi** nelle ore più calde (11-18)
+- **Non fare sforzi fisici intensi** nelle ore più calde (dalle 11 alle 18)
 - **Non bere bevande gelate in grandi quantità a stomaco pieno**: lo shock termico può causare malesseri digestivi. Bevi acqua fresca (non ghiacciata) a piccoli sorsi e spesso.
 - **Non lasciare farmaci esposti al calore** (alterano la loro efficacia)
 {{< /cosa-non-fare >}}
