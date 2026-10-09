@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-09T13:50:05+00:00",
+  "generato": "2026-10-09T19:19:32+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-10-01T07:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-10-09T12:40:19",
+   "lastUpdate": "2026-10-09T14:33:39.841715",
    "n_aois": 8,
    "n_products": 17,
    "name": "Flood in Crete, Greece"
@@ -430,7 +430,7 @@
   {
    "activationTime": "2026-07-26T00:05:00",
    "category": "Wildfire",
-   "centroid": "POINT (-0.296232827511763 39.90811806367239)",
+   "centroid": "POINT (-0.296232827511763 39.90811806367238)",
    "closed": true,
    "code": "EMSR905",
    "countries": [
@@ -438,7 +438,7 @@
    ],
    "eventTime": "2026-07-25T10:07:00",
    "gdacsId": "WF1029794",
-   "lastUpdate": "2026-08-04T13:54:50.092009",
+   "lastUpdate": "2026-08-04T13:54:50",
    "n_aois": 1,
    "n_products": 6,
    "name": "Wildfires in Plana Baixa, Spain"
