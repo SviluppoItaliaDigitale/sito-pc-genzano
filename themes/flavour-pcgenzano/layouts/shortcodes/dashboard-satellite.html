@@ -41,6 +41,27 @@
       <div id="sat-s3-next" aria-live="polite">Calcolo in corso…</div>
       <p class="dash-s3-nota">Calcolato qui dalle effemeridi pubbliche di CelesTrak: passaggio diurno con traccia a terra entro 600&nbsp;km (la fascia ripresa da OLCI è larga circa 1.270&nbsp;km). La scena entra nel mosaico qualche ora dopo il passaggio. Sentinel-3C è in orbita dal 2026 ma le sue immagini non sono ancora pubbliche.</p>
     </section>
+    <section aria-labelledby="sat-s3-cfr-tit">
+      <h3 id="sat-s3-cfr-tit" class="dash-s3-tit">Confronto prima e dopo</h3>
+      <p class="dash-s3-nota">Scegli due giorni e la stessa zona si confronta con un cursore. Le immagini a colori naturali cambiano anche per nuvole, luce e stagione: una differenza non è per forza un danno. Le zone non sorvolate quel giorno restano nere o vuote.</p>
+      <form class="dash-s3-cfr" id="sat-cfr-form">
+        <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa)</option></select></label>
+        <label>Prima <input type="date" id="sat-cfr-prima" required></label>
+        <label>Dopo <input type="date" id="sat-cfr-dopo" required></label>
+        <button type="submit" class="dash-s3-btn">Confronta</button>
+        <button type="button" class="dash-s3-btn" id="sat-cfr-chiudi" hidden>Chiudi confronto</button>
+      </form>
+      <div id="sat-cfr-ctl" hidden>
+        <label for="sat-cfr-mix" class="dash-s3-nota">Cursore: a sinistra «prima», a destra «dopo»</label>
+        <input type="range" id="sat-cfr-mix" min="0" max="100" value="100" step="5" aria-valuetext="dopo">
+        <div class="dash-s3-cfr-btn">
+          <button type="button" class="dash-s3-btn" data-mix="0">Prima</button>
+          <button type="button" class="dash-s3-btn" data-mix="100">Dopo</button>
+          <button type="button" class="dash-s3-btn" id="sat-cfr-alterna" aria-pressed="false">Alterna</button>
+        </div>
+        <p class="dash-s3-nota" id="sat-cfr-stato" aria-live="polite"></p>
+      </div>
+    </section>
     <section aria-labelledby="sat-s3-ems-tit">
       <h3 id="sat-s3-ems-tit" class="dash-s3-tit">Mappature d'emergenza Copernicus in Italia</h3>
       <div id="sat-s3-ems" aria-live="polite">Lettura…</div>
@@ -231,6 +252,76 @@
         }).join('')+'</ul>';
       }).catch(function(){ box.textContent='Effemeridi non raggiungibili in questo momento: il calcolo non è possibile.'; });
     }
+    /* ---- Confronto prima/dopo: due giorni, stessa zona, un cursore ----
+       Sentinel-3: lo stesso layer WMS con il parametro "time"; per un giorno passato
+       le 20:00Z restituiscono il mosaico completo (alle 06:00Z è ancora nero,
+       verificato il 10/10/2026), per il giorno corrente si lascia l'ultimo.
+       VIIRS: la tile GIBS con la data nell'indirizzo (archivio dal 2012). Il
+       "dopo" sta in un pane sopra al "prima" e il cursore ne regola l'opacità:
+       è il confronto a lampeggio con cui si cercano i cambiamenti. */
+    var cfr={attivo:false, prima:null, dopo:null, timer:null};
+    map.createPane('cfrDopo'); map.getPane('cfrDopo').style.zIndex=250;
+    var cfrForm=document.getElementById('sat-cfr-form'), cfrFonte=document.getElementById('sat-cfr-fonte');
+    var cfrPrima=document.getElementById('sat-cfr-prima'), cfrDopo=document.getElementById('sat-cfr-dopo');
+    var cfrCtl=document.getElementById('sat-cfr-ctl'), cfrMix=document.getElementById('sat-cfr-mix');
+    var cfrStato=document.getElementById('sat-cfr-stato'), cfrChiudi=document.getElementById('sat-cfr-chiudi');
+    var cfrAlterna=document.getElementById('sat-cfr-alterna');
+    var ridotto=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function isoGiorno(d){ return d.toISOString().slice(0,10); }
+    function cfrLimiti(){
+      var f=cfrFonte.value, oggi=new Date(), max=new Date(oggi);
+      if(f==='viirs') max.setUTCDate(max.getUTCDate()-GIBS_LAG_GIORNI);
+      var min=f==='viirs'?'2012-01-19':'2020-02-17';
+      cfrPrima.min=min; cfrDopo.min=min; cfrPrima.max=isoGiorno(max); cfrDopo.max=isoGiorno(max);
+      if(!cfrDopo.value||cfrDopo.value>cfrDopo.max) cfrDopo.value=isoGiorno(max);
+      if(!cfrPrima.value||cfrPrima.value>=cfrDopo.value){ var p=new Date(cfrDopo.value+'T12:00:00Z'); p.setUTCDate(p.getUTCDate()-7); cfrPrima.value=isoGiorno(p); }
+    }
+    cfrFonte.addEventListener('change',cfrLimiti); cfrLimiti();
+    function cfrLayer(fonte,giorno,pane){
+      var o=pane?{pane:pane}:{};
+      if(fonte==='viirs'){
+        return L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+giorno+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',Object.assign({maxNativeZoom:8,maxZoom:9,attribution:'Imagery © NASA EOSDIS GIBS'},o));
+      }
+      var par={layers:S3_LAYER, format:'image/png', transparent:false, version:'1.3.0', maxZoom:9, attribution:'Contiene dati Copernicus Sentinel modificati · © EUMETSAT'};
+      var fine=new Date(giorno+'T20:00:00Z'); if(fine.getTime()<Date.now()) par.time=giorno+'T20:00:00Z';
+      return L.tileLayer.wms(WMS,Object.assign(par,o));
+    }
+    function dataIt(g){ return new Date(g+'T12:00:00Z').toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}); }
+    function cfrApplica(v){
+      v=Math.max(0,Math.min(100,v|0)); cfrMix.value=v;
+      cfrMix.setAttribute('aria-valuetext', v===0?'prima':v===100?'dopo':'dopo al '+v+'%');
+      if(cfr.dopo) cfr.dopo.setOpacity(v/100);
+    }
+    function cfrFerma(){ if(cfr.timer){ clearInterval(cfr.timer); cfr.timer=null; } cfrAlterna.setAttribute('aria-pressed','false'); }
+    function cfrChiudiTutto(){
+      cfrFerma();
+      if(cfr.prima&&map.hasLayer(cfr.prima)) map.removeLayer(cfr.prima);
+      if(cfr.dopo&&map.hasLayer(cfr.dopo)) map.removeLayer(cfr.dopo);
+      cfr={attivo:false, prima:null, dopo:null, timer:null};
+      cfrCtl.hidden=true; cfrChiudi.hidden=true;
+    }
+    cfrForm.addEventListener('submit',function(e){
+      e.preventDefault(); cfrLimiti();
+      var a=cfrPrima.value, b=cfrDopo.value, f=cfrFonte.value;
+      if(!a||!b){ cfrStato.textContent='Scegli le due date.'; cfrCtl.hidden=false; return; }
+      if(a>=b){ cfrStato.textContent='La data «prima» deve venire prima della data «dopo».'; cfrCtl.hidden=false; return; }
+      if(b>cfrDopo.max||a<cfrPrima.min){ cfrStato.textContent='Date fuori dall\'archivio disponibile per questa fonte.'; cfrCtl.hidden=false; return; }
+      cfrChiudiTutto();
+      cfr={attivo:true, prima:cfrLayer(f,a), dopo:cfrLayer(f,b,'cfrDopo'), timer:null, a:a, b:b, f:f};
+      cfrCtl.hidden=false; cfrChiudi.hidden=false; cfrApplica(100);
+      cfrStato.textContent='Prima: '+dataIt(a)+' · Dopo: '+dataIt(b)+' · '+(f==='viirs'?'NASA VIIRS':'Sentinel-3')+'. Muovi il cursore o premi «Alterna».';
+      if(modo!=='sentinel'){ document.querySelector('.dash-pill[data-sat="sentinel"]').click(); } else { mostra(); }
+    });
+    cfrChiudi.addEventListener('click',function(){ cfrChiudiTutto(); cfrStato.textContent='Confronto chiuso: torna il mosaico più recente.'; mostra(); });
+    cfrMix.addEventListener('input',function(){ cfrFerma(); cfrApplica(cfrMix.value); });
+    cfrCtl.querySelectorAll('[data-mix]').forEach(function(b){ b.addEventListener('click',function(){ cfrFerma(); cfrApplica(b.dataset.mix); }); });
+    cfrAlterna.addEventListener('click',function(){
+      if(cfr.timer){ cfrFerma(); return; }
+      if(ridotto){ cfrApplica(cfrMix.value==='0'?100:0); return; } // niente lampeggio automatico con movimento ridotto
+      cfrAlterna.setAttribute('aria-pressed','true');
+      cfr.timer=setInterval(function(){ cfrApplica(cfrMix.value==='0'?100:0); },900);
+    });
+
     function s3Ems(){
       var box=document.getElementById('sat-s3-ems');
       fetch(EMS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
@@ -247,7 +338,8 @@
     }
 
     function mostra(){
-      [geocolour,hrfi,sentinel,gibs,confini].forEach(function(l){ if(map.hasLayer(l)) map.removeLayer(l); });
+      [geocolour,hrfi,sentinel,gibs,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
+      if(modo!=='sentinel') cfrFerma();
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
       if(modo==='geocolour'){
         geocolour.setParams({time:isoZ(t)}); geocolour.addTo(map); confini.addTo(map);
@@ -255,6 +347,10 @@
       } else if(modo==='hrfi'){
         hrfi.setParams({time:isoZ(t)}); hrfi.addTo(map); confini.addTo(map);
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
+      } else if(modo==='sentinel'&&cfr.attivo){
+        cfr.prima.addTo(map); cfr.dopo.addTo(map); confini.addTo(map); cfrApplica(cfrMix.value);
+        stato.textContent='Confronto: '+dataIt(cfr.a)+' → '+dataIt(cfr.b);
+        s3Pannello();
       } else if(modo==='sentinel'){
         sentinel.addTo(map); confini.addTo(map);
         stato.textContent=s3Etichetta();
