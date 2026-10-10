@@ -18,9 +18,9 @@
               '<nav aria-label="Navigazione enti istituzionali">' +
                 '<a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu-enti" role="button" aria-expanded="false" aria-controls="menu-enti"><span>Enti istituzionali</span><svg class="icon icon-sm"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg></a>' +
                 '<div class="link-list-wrapper collapse" id="menu-enti"><ul class="link-list" role="list">' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma" aria-label="Sito del Comune di Genzano di Roma (si apre in una nuova finestra)"><strong>Genzano di Roma</strong></a></li>' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile" aria-label="Dipartimento Nazionale della Protezione Civile (si apre in una nuova finestra)">DPC</a></li>' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio" aria-label="Agenzia Regionale di Protezione Civile del Lazio (si apre in una nuova finestra)">AR PC Lazio</a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma"><strong>Genzano di Roma</strong><span class="visually-hidden"> — sito del Comune (si apre in una nuova finestra)</span></a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile">DPC<span class="visually-hidden"> — Dipartimento della Protezione Civile (si apre in una nuova finestra)</span></a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio">AR PC Lazio<span class="visually-hidden"> — Agenzia regionale di Protezione Civile del Lazio (si apre in una nuova finestra)</span></a></li>' +
                 '</ul></div>' +
               '</nav>' +
             '</div>' +
@@ -42,12 +42,13 @@
         '<div class="row"><div class="col-12">' +
           '<div class="it-header-center-content-wrapper">' +
             '<div class="it-brand-wrapper">' +
-              '<a href="' + SITE_URL + '/" aria-label="Torna alla pagina iniziale">' +
+              '<a href="' + SITE_URL + '/">' +
                 '<img src="' + SITE_URL + '/images/logo-pc-genzano.png" alt="" width="82" height="82" aria-hidden="true">' +
                 '<div class="it-brand-text">' +
                   '<div class="it-brand-title">Protezione Civile</div>' +
                   '<div class="it-brand-tagline d-none d-md-block">Gruppo Comunale Volontari di Genzano di Roma</div>' +
                 '</div>' +
+                '<span class="visually-hidden"> — torna alla pagina iniziale</span>' +
               '</a>' +
             '</div>' +
             '<div class="it-right-zone">' +
