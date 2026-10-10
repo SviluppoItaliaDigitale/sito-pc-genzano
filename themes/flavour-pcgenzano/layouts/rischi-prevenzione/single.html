@@ -42,6 +42,7 @@
       {{ end }}
 
       {{/* ── TEMPO DI LETTURA + TTS + GLOSSARIO INLINE ── */}}
+      {{ partial "versione-facile-toggle.html" . }}
       {{ $ttsEnabled := and (ne .Params.tts false) (gt .WordCount 30) }}
       {{ if $ttsEnabled }}
       <div class="reading-meta d-flex flex-wrap align-items-center gap-2 mb-3" role="group" aria-label="Informazioni di lettura">

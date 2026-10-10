@@ -23,6 +23,31 @@
         </div>
       </div>
 
+      {{/* ── ALLERTA IN CORSO ────────────────────────────────
+           Se data/allerta.json non è verde, l'assistente lo dice per
+           primo e porta alla risposta del livello giusto (audit esterno
+           del 10/10/2026). Il dato è quello del build: check-allerta.yml
+           lancia un deploy urgente a ogni cambio di livello.          */}}
+      {{- with site.Data.allerta -}}
+      {{- $liv := lower (string .livello) -}}
+      {{- $nodo := "" -}}{{- $nome := "" -}}
+      {{- if strings.Contains $liv "ross" -}}{{- $nodo = "allerta_rossa" -}}{{- $nome = "rossa" -}}
+      {{- else if strings.Contains $liv "aranc" -}}{{- $nodo = "allerta_arancione" -}}{{- $nome = "arancione" -}}
+      {{- else if strings.Contains $liv "giall" -}}{{- $nodo = "allerta_gialla" -}}{{- $nome = "gialla" -}}
+      {{- end -}}
+      {{- if $nodo }}
+      <div class="alert alert-warning mb-4 assistente-allerta" role="region" aria-label="Allerta meteo in corso">
+        <div>
+          <p class="mb-2"><strong>Oggi a Genzano c'è l'allerta {{ $nome }}.</strong>{{ with .descrizione }} {{ . }}{{ end }}</p>
+          <p class="mb-0">
+            <a href="#{{ $nodo }}" class="btn btn-dark btn-sm me-2 mb-1">Cosa devo fare con l'allerta {{ $nome }}?</a>
+            <a href="{{ "allerte-meteo/" | relURL }}" class="btn btn-outline-dark btn-sm mb-1">Codici colore e bollettini</a>
+          </p>
+        </div>
+      </div>
+      {{- end }}
+      {{- end }}
+
       {{/* ── CERCA NEL SITO ──────────────────────────────────
            Campo di ricerca rapida sopra l'assistente: l'utente che gia'
            sa cosa cercare puo' digitare direttamente senza percorrere
@@ -1799,6 +1824,13 @@
 
   restoreFromHash();
   render();
+
+  // Un collegamento interno (es. il riquadro dell'allerta) cambia solo l'hash:
+  // si riparte dal nodo indicato senza ricaricare la pagina.
+  window.addEventListener('hashchange', function () {
+    var h = (location.hash || '').replace(/^#/, '');
+    if (h && NODES[h] && trail[trail.length - 1] !== h) { trail = ['start', h]; render(); }
+  });
 })();
 </script>
 

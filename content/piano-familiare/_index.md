@@ -157,6 +157,10 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato pu
 <strong>803&nbsp;555</strong> Sala Operativa Protezione Civile Lazio &mdash; segnalazioni secondo le indicazioni regionali<br>
 <small class="text-muted">Conservare in un luogo accessibile ai familiari ma protetto. Aggiornare almeno una volta all'anno.</small>
 </div>
+<div class="piano-qr d-flex align-items-center justify-content-center gap-3 mt-3">
+<img src="../qr/emergenza.png" alt="Codice QR che apre la pagina di emergenza del sito della Protezione Civile di Genzano" width="110" height="110">
+<p class="small mb-0 text-start">Inquadra il codice con il telefono: apre la pagina <strong>Emergenza</strong> del sito, con cosa fare subito, l'allerta del giorno e i numeri utili. Funziona anche con la rete lenta.</p>
+</div>
 <div id="piano-print-appendice"></div>
 </div>
 <div class="d-flex flex-wrap gap-2 mb-4 piano-buttons">
