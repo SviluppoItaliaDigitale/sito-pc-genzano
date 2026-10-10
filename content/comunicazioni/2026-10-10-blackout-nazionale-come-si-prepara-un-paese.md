@@ -12,6 +12,7 @@ area: ""
 allegati: []
 draft: false
 tts: true
+social_video: "/video/2026-10-10-blackout-nazionale-video.mp4"
 social_citazione: "Distacchi brevi, a rotazione e annunciati sono il contrario del blackout incontrollato: sono il modo per evitarlo."
 social_punti:
   - "28 settembre 2003: quasi tutta l'Italia al buio, esclusa la Sardegna. La Sicilia tornò alimentata alle 21:40."
@@ -21,6 +22,14 @@ social_punti:
 ---
 
 Nel 2003 è già successo in Italia. Nel 2025 il blackout di Spagna e Portogallo ci ha ricordato quanto dipendiamo dalla rete elettrica: trasporti, telecomunicazioni, pagamenti, ospedali e intere attività produttive possono fermarsi in pochi istanti. Come si prepara un Paese a un'emergenza del genere? Con piani precisi, scritti prima, che decidono chi resta acceso, chi si stacca e come si riparte dal buio.
+
+Il video qui sotto racconta in due minuti i due blackout e i piani che servono a evitarne un altro. Ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Tutto quello che dice è scritto anche in questa pagina.
+
+{{< video src="/video/2026-10-10-blackout-nazionale-video.mp4"
+          poster="/video/2026-10-10-blackout-nazionale-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: come si prepara un Paese a un blackout nazionale"
+          caption="Dal blackout italiano del 2003 a quello di Spagna e Portogallo del 2025, fino ai piani di difesa e di riaccensione della rete. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, su dati UCTE, ENTSO-E, ARERA e Terna." >}}
 
 ## 28 settembre 2003: la notte in cui l'Italia si spense
 
