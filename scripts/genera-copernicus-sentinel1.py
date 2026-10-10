@@ -41,7 +41,8 @@ UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/)"
 STAC = "https://stac.dataspace.copernicus.eu/v1/search"
 GENZANO = (41.7085, 12.6916)
 MEZZO_LATO_KM = 15.0      # riquadro di 30 km di lato
-RISOLUZIONE_M = 20.0      # 1500 x 1500 pixel
+RISOLUZIONE_M = 30.0      # 1000 x 1000 pixel: a 20 m il WebP pesava 1 MB (primo giro del 10/10/2026),
+                          # troppo per un telefono in emergenza; a 30 m i laghi e i versanti si leggono uguali
 GIORNI = 12
 
 
@@ -129,7 +130,7 @@ def ritaglia(href: str, ak: str, sk: str, dest: Path) -> dict:
     img = np.nan_to_num(img, nan=0.0)
     out = (img * 255).astype("uint8")
     IMG_DIR.mkdir(parents=True, exist_ok=True)
-    Image.fromarray(out, "L").save(dest, "WEBP", quality=80, method=6)
+    Image.fromarray(out, "L").save(dest, "WEBP", quality=72, method=6)
     s, w = gradi(xmin, ymin)
     n, e = gradi(xmax, ymax)
     return {"sud": round(s, 5), "ovest": round(w, 5), "nord": round(n, 5), "est": round(e, 5),

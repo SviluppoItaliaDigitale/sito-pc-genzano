@@ -128,8 +128,12 @@ def lst_genzano(s3, feat: dict, tmp: Path) -> dict | None:
         fin = np.ma.filled(lst[max(0, i - 1):i + 2, max(0, j - 1):j + 2].astype(float), np.nan)
         val = float(lst[i, j]) if not np.ma.is_masked(lst[i, j]) else float("nan")
     with netCDF4.Dataset(files["flags_in"]) as f:
-        conf = int(f["confidence_in"][i, j]) if "confidence_in" in f.variables else 0
-        cloud = int(f["cloud_in"][i, j]) if "cloud_in" in f.variables else 0
+        # i flag possono essere mascherati (pixel non valido): un masked non si
+        # converte in int — primo giro del 10/10/2026, scena S3B delle 10:52
+        conf = int(np.ma.filled(f["confidence_in"][i, j], 0)) if "confidence_in" in f.variables else 0
+        cloud = int(np.ma.filled(f["cloud_in"][i, j], 0)) if "cloud_in" in f.variables else 0
+        if np.ma.is_masked(f["confidence_in"][i, j]) if "confidence_in" in f.variables else False:
+            conf |= 1 << 14  # pixel senza flag: si tratta come non misurabile
         # bit del campo confidence_in (SLSTR L2 LST): 10 = giorno, 14 = summary_cloud
         giorno = bool(conf & (1 << 10))
         nuvola = bool(conf & (1 << 14)) or (cloud != 0)
