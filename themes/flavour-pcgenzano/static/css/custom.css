@@ -1278,6 +1278,10 @@ article:not(.card) p:has(img) + p:has(img) {
   margin-top: 1.25rem;
   margin-bottom: 0.6rem;
 }
+/* PIANO FAMILIARE — QR della pagina di emergenza (10/10/2026) */
+.piano-qr img { width: 110px; height: 110px; max-width: 110px; flex: 0 0 110px; }
+@media print { .piano-qr { break-inside: avoid; } .piano-qr img { width: 30mm !important; height: 30mm !important; max-width: 30mm !important; } }
+
 .piano-numeri {
   background: #f0f4f8;
   border: 1px solid #003366;

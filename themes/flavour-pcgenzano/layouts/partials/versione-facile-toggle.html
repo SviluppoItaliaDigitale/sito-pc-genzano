@@ -24,9 +24,10 @@
 
 {{- if $vf -}}
   {{/* Siamo sulla versione standard, mostra link alla versione facile */}}
-  {{- $facilePath := printf "/comunicazioni/%s/" $vf -}}
+  {{- $sez := .Section | default "comunicazioni" -}}
+  {{- $facilePath := printf "/%s/%s/" $sez $vf -}}
   <div class="versione-facile-banner mb-3" role="region" aria-label="Versione facile da leggere disponibile">
-    <a href="{{ $facilePath | relURL }}" class="btn btn-warning btn-sm">
+    <a href="{{ $facilePath | strings.TrimPrefix "/" | relURL }}" class="btn btn-warning btn-sm">
       <i class="bi bi-book me-2" aria-hidden="true"></i>
       <span>Leggi in italiano semplice</span>
       <span class="badge bg-light text-dark ms-1">A2</span>
@@ -42,7 +43,8 @@
 
 {{- if $vfdi -}}
   {{/* Siamo sulla versione facile, mostra link alla versione standard */}}
-  {{- $standardPath := printf "/comunicazioni/%s/" $vfdi -}}
+  {{- $sez := .Section | default "comunicazioni" -}}
+  {{- $standardPath := printf "/%s/%s/" $sez $vfdi -}}
   <div class="versione-facile-banner versione-facile-banner-easy mb-3" role="region" aria-label="Versione facile da leggere — torna alla versione completa">
     <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
       <span class="badge bg-warning text-dark">
@@ -53,9 +55,9 @@
     <p class="small mb-2">
       Questa è la <strong>versione facile da leggere</strong> dell'articolo.
       Frasi corte, parole comuni. Per il testo completo, con tutti i dettagli
-      e le fonti, leggi la <a href="{{ $standardPath | relURL }}">versione completa</a>.
+      e le fonti, leggi la <a href="{{ $standardPath | strings.TrimPrefix "/" | relURL }}">versione completa</a>.
     </p>
-    <a href="{{ $standardPath | relURL }}" class="btn btn-outline-primary btn-sm">
+    <a href="{{ $standardPath | strings.TrimPrefix "/" | relURL }}" class="btn btn-outline-primary btn-sm">
       <i class="bi bi-arrow-left me-2" aria-hidden="true"></i>
       Torna alla versione completa
     </a>

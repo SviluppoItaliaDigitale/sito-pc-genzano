@@ -11,6 +11,7 @@ lis_section: "allerte-meteo"
 howto_prima: "Informati sulle previsioni meteo e sullo stato di allerta. Evita di programmare attività all'aperto durante le allerte per temporali. Individua un luogo sicuro e coperto dove ripararti rapidamente. Assicurati che tombini e caditoie vicino casa siano liberi da foglie e detriti. Verifica lo stato del piano familiare per emergenza meteo."
 howto_durante: "Ripara in un edificio solido o in auto con i finestrini chiusi. Allontanati da alberi isolati, pali metallici, tralicci e recinzioni metalliche. Non ripararti sotto tettoie o strutture precarie. Se sei in auto, accosta in luogo sicuro lontano da alberi e corsi d'acqua; non attraversare sottopassaggi allagati. In casa scollega gli apparecchi elettrici e non usare il telefono fisso con filo durante i fulmini. Allontanati da finestre e porte finestre."
 howto_dopo: "Presta attenzione a cavi elettrici caduti o danneggiati. Non entrare in locali allagati dove sono presenti impianti elettrici. Verifica lo stato delle strade prima di metterti in viaggio. Segnala situazioni di pericolo al 112. Non ripararti sotto alberi isolati: sono bersagli naturali per i fulmini. Non attraversare mai strade allagate a piedi o in auto."
+versione_facile: "temporali-intensi-facile"
 ---
 I temporali intensi portano piogge forti, fulmini, grandine e raffiche di vento improvvise. Si formano in pochi minuti, soprattutto tra maggio e ottobre e durante i cambi di stagione.
 
