@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blackout nazionale: come si prepara un Paese — Protezione Civile Genzano di Roma</title>
+<style>
+/*FONTS*/
+:root{--bg:#0a1220;--az:#2e90fa;--ar:#f59e0b;--tx:#eef2f7;--dim:#93a1b5;
+  --verde:#34b25a;--gialla:#ffcc00;--arancione:#ff8a00;--rossa:#ef4136;
+  --luce:#ffd166;--spento:#22304a;--palo:#5d6b80}
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
+  background:radial-gradient(120% 60% at 50% 100%,#13223a 0%,var(--bg) 60%);overflow:hidden;
+  font-family:'Titillium Web',sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
+body.render #stage{left:0;top:0;transform:none!important}
+.scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
+  top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(26px*var(--k))}
+.txt{display:flex;flex-direction:column;gap:calc(22px*var(--k))}
+.ill{height:calc(var(--illh)*1px);flex:none;display:flex;align-items:center;justify-content:center}
+.ill svg{width:100%;height:100%;overflow:visible}
+[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:80px}
+[data-fmt="16x9"] .ill{order:2;width:46%;height:640px}
+[data-fmt="16x9"] .txt{order:1;width:54%}
+[data-fmt="16x9"] .grande{font-size:140px}
+[data-fmt="16x9"] .scena:last-child .txt{gap:14px}
+.chip{align-self:flex-start;font:700 calc(26px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ar);border:3px solid var(--ar);border-radius:999px;padding:.35em .9em}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.02;letter-spacing:-.01em}
+h1 .a{color:var(--ar)}
+.m{display:block;overflow:hidden;padding:.12em .22em;margin:-.12em -.22em}
+.m>.i{display:block;will-change:transform}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--dim);margin:0}
+.sotto b{color:var(--tx)}
+.lista{display:flex;flex-direction:column;gap:calc(16px*var(--k));margin:0;padding:0;list-style:none}
+.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:600;font-size:calc(42px*var(--k));line-height:1.18}
+.lista .ico{flex:none;width:calc(76px*var(--k));height:calc(76px*var(--k));border-radius:50%;background:rgba(245,158,11,.14);
+  display:flex;align-items:center;justify-content:center}
+.lista .ico svg{width:64%;height:64%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(22px*var(--k));width:100%}
+.tiles.t3{grid-template-columns:1fr 1fr 1fr}
+.tile{background:rgba(255,255,255,.05);border-radius:calc(26px*var(--k));padding:calc(18px*var(--k));
+  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center}
+.tile svg{width:calc(130px*var(--k));height:calc(130px*var(--k))}
+.tile .ora{font:700 calc(64px*var(--k)) 'Roboto Mono',monospace;color:var(--luce);line-height:1}
+.tile span{font-weight:700;font-size:calc(34px*var(--k));line-height:1.1}
+.nota{font:700 calc(28px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0}
+.nota b{color:var(--ar)}
+.mesi{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(14px*var(--k));width:100%}
+.mese{border-radius:calc(18px*var(--k));padding:calc(20px*var(--k)) 0;text-align:center;
+  font:700 calc(40px*var(--k)) 'Roboto Mono',monospace;background:rgba(255,255,255,.06);color:var(--dim)}
+.mese.on{background:var(--arancione);color:#0a1220}
+.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--ar)}
+.fonte{font:500 calc(24px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.04em;color:var(--dim);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:72px;display:flex;
+  align-items:center;gap:22px;padding:0 30px;border-radius:999px;background:rgba(255,255,255,.07);
+  font:700 24px 'Roboto Mono',monospace;letter-spacing:.16em;color:var(--dim)}
+#hud .dots{display:flex;gap:10px}
+#hud .dot{width:14px;height:14px;border-radius:50%;background:#33415a}
+#wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
+.banda{position:absolute;top:0;bottom:0;width:26%;opacity:0}
+#sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);bottom:calc((var(--H) - var(--subb))*1px);
+  background:rgba(10,18,32,.9);border:2px solid rgba(255,255,255,.12);border-radius:22px;padding:18px 26px;
+  font-weight:600;font-size:calc(43px*var(--ks));line-height:1.25;text-align:center;opacity:0}
+#ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
+#ui a{color:#eef2f7;background:#1d2a40;border-radius:999px;padding:8px 14px;text-decoration:none}
+#ui a[aria-current]{background:#2e90fa;color:#0a1220}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer}
+body.render #ui,body.render #avvio{display:none!important}
+</style>
+</head>
+<body>
+<div id="stage" role="img" aria-label="">
+  <div id="scene"></div>
+  <div id="wipe"></div>
+  <div id="bande"></div>
+  <div id="hud"><div class="dots"></div><span class="lab"></span></div>
+  <div id="sub" aria-hidden="true"></div>
+</div>
+<nav id="ui" aria-label="Formato"></nav>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
+<script>
+/* ===================== CONFIG — testi, tempi ===================== */
+/* Fonti: UCTE, Final Report of the Investigation Committee on the 28 September 2003
+   Blackout in Italy (aprile 2004): sequenza dei guasti, Sardegna non coinvolta,
+   orari di riaccensione (Nord prima delle 8, Centro ~12, resto della penisola 17,
+   Sicilia 21:40), black start. ENTSO-E, «Grid Incident in Spain and Portugal on
+   28 April 2025» (12:33 CEST, rapporto finale 20/03/2026). ARERA, deliberazione
+   401/2018/R/eel (PESSE: turni di rischio di 1,5 ore, massimo tre intervalli al giorno,
+   città divise in più gruppi). Reg. (UE) 2017/2196 (piani di difesa e di ripristino
+   obbligatori). Pagina del sito /rischi-prevenzione/blackout/ (torcia, radio a pile,
+   power bank, acqua, niente candele, 112). Articolo del 10/10/2026 sullo stesso tema. */
+const CONFIG = {
+  titolo: "Blackout nazionale: come si prepara un Paese a restare senza corrente",
+  hud: "BLACKOUT",
+  posterT: 0,
+  scene: [
+    { ill: "citta", illh: 520, dur: 5, chip: "Protezione Civile · Genzano di Roma",
+      righe: ["Blackout", "<span class='a'>nazionale</span>"], sotto: "Come si prepara un Paese<br><b>a restare senza corrente.</b>",
+      sottotitolo: "Blackout nazionale: come si prepara un Paese a restare senza corrente." },
+    { ill: "tralicci", illh: 420, dur: 8, chip: "28 settembre 2003",
+      righe: ["L'Italia", "al <span class='a'>buio</span>"], sotto: "Di notte cede una linea dalla Svizzera. <b>Poi le altre, a catena.</b>",
+      nota: "Non coinvolta: <b>la Sardegna</b>",
+      sottotitolo: "28 settembre 2003, poco dopo le tre di notte. Una linea dalla Svizzera cede, poi le altre, a catena. Quasi tutta l'Italia resta al buio. Solo la Sardegna non è coinvolta." },
+    { ill: "orari", illh: 470, dur: 8, chip: "La riaccensione",
+      righe: ["Serve", "una <span class='a'>giornata</span>"],
+      sottotitolo: "Per riaccendere il Paese serve una giornata. Il Nord torna prima delle 8, il Centro verso mezzogiorno, il resto della penisola alle 17. La Sicilia alle 21:40." },
+    { ill: "iberia", illh: 470, dur: 8, chip: "28 aprile 2025 · ore 12:33",
+      righe: ["Spagna e", "<span class='a'>Portogallo</span>"], sotto: "Si spegne <b>tutta la rete</b>, in pieno giorno.",
+      sottotitolo: "28 aprile 2025, alle 12:33. In Spagna e Portogallo si spegne tutta la rete: treni e metropolitane fermi, semafori spenti, telefoni e pagamenti in difficoltà." },
+    { ill: "bilancia", illh: 380, dur: 7, chip: "Come sta in piedi la rete",
+      righe: ["Produzione", "= <span class='a'>consumo</span>"], sotto: "Istante per istante. In Italia lo garantisce <b>Terna</b>.",
+      nota: "Il segnale è la frequenza: <b>50 hertz</b>",
+      sottotitolo: "Una rete elettrica sta in piedi se produzione e consumo restano in equilibrio, istante per istante. In Italia lo garantisce Terna. Il segnale è la frequenza: 50 hertz." },
+    { ill: "quartieri", illh: 400, dur: 7, chip: "Piano di difesa",
+      righe: ["Spegnere poco", "per salvare <span class='a'>tutto</span>"], sotto: "Le protezioni automatiche staccano una parte dei consumi <b>in una frazione di secondo</b>.",
+      sottotitolo: "Se la frequenza crolla, le protezioni automatiche staccano una parte dei consumi in una frazione di secondo. Qualche quartiere al buio, per non spegnere tutto il Paese." },
+    { ill: "turni", illh: 300, dur: 7, chip: "Distacchi programmati · PESSE",
+      righe: ["Turni da", "<span class='a'>un'ora e mezza</span>"], lista: [
+        ["rotazione", "A rotazione, gruppo per gruppo"],
+        ["orologio", "Al massimo tre turni al giorno"],
+        ["citta", "Le città divise in più gruppi"] ],
+      sottotitolo: "Se la carenza di energia si vede arrivare, scattano i distacchi programmati: turni di un'ora e mezza, a rotazione, al massimo tre al giorno." },
+    { ill: "diga", illh: 360, dur: 8, chip: "Piano di riaccensione",
+      righe: ["Ripartire", "dal <span class='a'>buio</span>"], sotto: "Si parte da centrali che <b>si accendono da sole</b>, spesso idroelettriche.",
+      nota: "Piani obbligatori in tutta l'<b>Unione europea</b>",
+      sottotitolo: "Dopo un blackout, la rete riparte da centrali capaci di accendersi da sole, spesso idroelettriche: una linea, poi un'area, fino a tutto il Paese. Questi piani sono obbligatori in tutta l'Unione europea." },
+    { ill: "kit", illh: 470, dur: 8, chip: "E tu, a casa?",
+      righe: ["Preparati", "<span class='a'>prima</span>"], nota: "Niente candele: <b>rischio d'incendio</b>",
+      sottotitolo: "E tu? Tieni in casa una torcia con le pile di ricambio, una radio a pile, una power bank carica e una scorta d'acqua. Evita le candele: possono causare un incendio." },
+    { ill: "telefono", illh: 280, dur: 7, chip: "Se c'è un pericolo",
+      righe: ["Chiama il <span class='a'>112</span>"], lista: [
+        ["ascensore", "Persone bloccate in ascensore"],
+        ["salvavita", "Un apparecchio salvavita senza corrente"] ],
+      sottotitolo: "Se c'è un pericolo reale, come persone bloccate in ascensore o un apparecchio salvavita senza corrente, chiama il 112." },
+    { ill: "riaccesa", illh: 220, dur: 7, chip: "Al buio sai già cosa fare", finale: true,
+      righe: ["Prepararsi", "prima fa la", "<span class='a'>differenza</span>"], sotto: "<b>protezionecivilegenzano.it</b>",
+      grande: "112", fonte: "Fonti: UCTE, ENTSO-E,<br>ARERA, Terna",
+      sottotitolo: "Prepararsi prima fa la differenza. In emergenza chiama il 112." }
+  ]
+};
+const DUR = /*DUR*/[];
+const AUDIO = /*AUDIO*/"";
+
+/* ===================== FORMATI e zone sicure ===================== */
+const FORMATI = {
+  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
+  "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
+  "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
+  "16x9": { W:1920, H:1080, hx:120, hy:56,  side:140, top:160, bot:890,  subb:1044, t:104, k:.95, ks:.9,  illk:1   }
+};
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.get("render") === "1";
+const FMT = FORMATI[Q.get("fmt")] ? Q.get("fmt") : "9x16";
+const L = FORMATI[FMT];
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.dataset.fmt = FMT;
+for (const k of ["W","H","side","top","bot","subb","hx","hy","t","k","ks"]) stage.style.setProperty("--" + k, L[k]);
+if (RENDER) document.body.classList.add("render");
+stage.setAttribute("aria-label", CONFIG.titolo);
+
+/* ===================== AIUTANTI (deterministici) ===================== */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outQuart = x => 1 - Math.pow(1 - x, 4);
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => { const c = 1.70158, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+const lerp = (a, b, x) => a + (b - a) * x;
+function reveal(el, p) { el.style.transform = `translateY(${(1 - outQuart(p)) * 115}%)`; }
+function fadeUp(el, p, d = 40) { const e = outCubic(p); el.style.opacity = e; el.style.transform = `translateY(${(1 - e) * d}px)`; }
+function pop(el, p) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `scale(${lerp(.6, 1, e)})`; }
+
+
+/* ===================== DISEGNI (SVG piatti, originali) ===================== */
+const LUCE = "#ffd166", SPENTO = "#22304a";
+const TRALICCIO = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})" stroke="#93a1b5" stroke-width="5" fill="none" stroke-linejoin="round">
+  <path d="M-34 0 L-8 -170 L8 -170 L34 0"/><path d="M-26 -50 L26 -50 M-18 -100 L18 -100 M-30 -10 L20 -50 M30 -10 L-20 -50 M-22 -60 L14 -100 M22 -60 L-14 -100"/>
+  <path d="M-46 -150 L46 -150 M-36 -128 L36 -128"/></g>`;
+/* palazzi con finestre: ogni finestra ha data-i per accenderla o spegnerla in ordine */
+const PALAZZI = (base, seed) => {
+  let s = "", n = 0;
+  [[20, 150], [90, 220], [170, 120], [230, 260], [320, 170], [390, 230], [470, 140], [530, 200]].forEach(([x, h], b) => {
+    const w = b % 2 ? 66 : 56;
+    s += `<rect x="${x}" y="${base - h}" width="${w}" height="${h}" fill="${b % 3 ? "#1a2740" : "#16223a"}"/>`;
+    for (let yy = base - h + 18; yy < base - 20; yy += 30) for (let xx = x + 10; xx < x + w - 14; xx += 20) {
+      if (hash(n + seed) < .82) s += `<rect class="fin" data-i="${n}" x="${xx}" y="${yy}" width="10" height="14" rx="2" fill="${LUCE}"/>`;
+      n++;
+    }
+  });
+  return s;
+};
+const CASETTA = (x, y, i) => `<g transform="translate(${x} ${y})"><path d="M0 -34 L34 -62 L68 -34 V18 H0Z" fill="#1a2740"/>
+  <rect class="fin q${i}" x="12" y="-24" width="16" height="18" rx="2" fill="${LUCE}"/><rect class="fin q${i}" x="40" y="-24" width="16" height="18" rx="2" fill="${LUCE}"/>
+  <rect class="fin q${i}" x="26" y="-2" width="16" height="20" rx="2" fill="${LUCE}"/></g>`;
+const ICONE = {
+  rotazione: `<svg viewBox="0 0 100 100"><g stroke="#f59e0b" stroke-width="9" fill="none" stroke-linecap="round"><path d="M80 50 A30 30 0 1 1 64 24"/><path d="M58 12 L68 26 L52 32"/></g></svg>`,
+  orologio: `<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="none" stroke="#f59e0b" stroke-width="8"/><path d="M50 30 V50 L64 60" stroke="#eef2f7" stroke-width="8" fill="none" stroke-linecap="round"/></svg>`,
+  citta: `<svg viewBox="0 0 100 100"><rect x="12" y="44" width="22" height="44" fill="#f59e0b"/><rect x="40" y="22" width="22" height="66" fill="#eef2f7"/><rect x="68" y="52" width="20" height="36" fill="#f59e0b"/></svg>`,
+  ascensore: `<svg viewBox="0 0 100 100"><rect x="22" y="10" width="56" height="80" rx="6" fill="none" stroke="#eef2f7" stroke-width="7"/><path d="M50 10 V90" stroke="#eef2f7" stroke-width="5"/><path d="M34 40 L40 30 L46 40Z M54 60 L60 70 L66 60Z" fill="#f59e0b"/></svg>`,
+  salvavita: `<svg viewBox="0 0 100 100"><path d="M50 86 C18 64 10 46 14 32 C18 18 38 14 50 30 C62 14 82 18 86 32 C90 46 82 64 50 86Z" fill="#2e90fa"/><path d="M20 50 H38 L44 38 L52 62 L58 50 H80" stroke="#eef2f7" stroke-width="6" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg>`,
+  treno: `<svg viewBox="0 0 100 100"><rect x="22" y="14" width="56" height="62" rx="14" fill="#5d6b80"/><rect x="30" y="24" width="40" height="22" rx="4" fill="#22304a"/><circle cx="36" cy="62" r="5" fill="#22304a"/><circle cx="64" cy="62" r="5" fill="#22304a"/><path d="M32 78 L22 92 M68 78 L78 92" stroke="#5d6b80" stroke-width="6" stroke-linecap="round"/></svg>`,
+  semaforo: `<svg viewBox="0 0 100 100"><rect x="34" y="8" width="32" height="76" rx="10" fill="#34435c"/><circle cx="50" cy="24" r="9" fill="#22304a"/><circle cx="50" cy="46" r="9" fill="#22304a"/><circle cx="50" cy="68" r="9" fill="#22304a"/><rect x="46" y="84" width="8" height="12" fill="#34435c"/></svg>`,
+  pagamento: `<svg viewBox="0 0 100 100"><rect x="12" y="26" width="76" height="50" rx="8" fill="#5d6b80"/><rect x="12" y="36" width="76" height="10" fill="#22304a"/><rect x="22" y="56" width="22" height="8" rx="3" fill="#22304a"/><g stroke="#ef4136" stroke-width="8" stroke-linecap="round"><path d="M64 52 L82 70 M82 52 L64 70"/></g></svg>`,
+  cellulare: `<svg viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="84" rx="8" fill="#5d6b80"/><rect x="36" y="18" width="28" height="56" rx="3" fill="#22304a"/><text x="50" y="54" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="22" fill="#93a1b5">?</text></svg>`,
+  torcia: `<svg viewBox="0 0 100 100"><path d="M60 10 L90 40 L54 76 L24 46Z" fill="#2e90fa"/><rect x="10" y="62" width="30" height="26" rx="6" transform="rotate(-45 25 75)" fill="#5d6b80"/><path d="M62 14 L86 38" stroke="#ffd166" stroke-width="8" stroke-linecap="round"/></svg>`,
+  radio: `<svg viewBox="0 0 100 100"><rect x="10" y="34" width="80" height="52" rx="10" fill="#f59e0b"/><circle cx="34" cy="60" r="14" fill="#0a1220"/><rect x="56" y="48" width="24" height="8" rx="3" fill="#0a1220"/><rect x="56" y="62" width="24" height="8" rx="3" fill="#0a1220"/><path d="M70 34 L84 8" stroke="#eef2f7" stroke-width="5" stroke-linecap="round"/></svg>`,
+  powerbank: `<svg viewBox="0 0 100 100"><rect x="26" y="10" width="48" height="80" rx="10" fill="#eef2f7"/><rect x="36" y="22" width="28" height="56" rx="4" fill="#0a1220"/><rect x="40" y="56" width="20" height="18" fill="#34b25a"/><rect x="40" y="36" width="20" height="16" fill="#34b25a"/><path d="M54 86 L46 98" stroke="#93a1b5" stroke-width="5" stroke-linecap="round"/></svg>`,
+  acqua: `<svg viewBox="0 0 100 100"><rect x="30" y="26" width="40" height="66" rx="12" fill="#2e90fa"/><rect x="40" y="8" width="20" height="18" rx="4" fill="#9fd0ff"/><path d="M34 54 Q50 46 66 54 V84 H34Z" fill="#9fd0ff" opacity=".55"/></svg>`
+};
+const tile = (ico, testo) => `<div class="tile">${ICONE[ico]}<span>${testo}</span></div>`;
+const tileOra = (ora, testo) => `<div class="tile"><b class="ora">${ora}</b><span>${testo}</span></div>`;
+const ILL = {
+  citta: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">
+    ${Array.from({ length: 22 }, (_, i) => `<circle cx="${(hash(i) * 600).toFixed(0)}" cy="${(hash(i + 50) * 150).toFixed(0)}" r="${1.5 + hash(i + 9) * 2}" fill="#eef2f7" opacity=".6"/>`).join("")}
+    ${PALAZZI(400, 3)}<rect x="0" y="400" width="600" height="20" fill="#13223a"/></svg>`,
+  tralicci: () => `<svg viewBox="0 140 600 280" preserveAspectRatio="xMidYMid meet">
+    <g class="cavi" stroke-width="5" fill="none">${[0, 1, 2].map(i => `<path class="cavo" data-i="${i}" d="M${70 + i * 155} 222 Q${147 + i * 155} 252 ${225 + i * 155} 222"/>`).join("")}</g>
+    ${[70, 225, 380, 535].map(x => TRALICCIO(x, 370, .9)).join("")}
+    <g class="scint">${[0, 1, 2].map(i => `<circle data-i="${i}" cx="${147 + i * 155}" cy="237" r="18" fill="#ffcc00"/>`).join("")}</g>
+    <rect x="0" y="370" width="600" height="50" fill="#13223a"/>
+    <g>${Array.from({ length: 30 }, (_, i) => `<rect class="fin" data-i="${i}" x="${12 + i * 19.5}" y="${384 + (i % 2) * 10}" width="10" height="10" rx="2" fill="${LUCE}"/>`).join("")}</g></svg>`,
+  orari: () => `<div class="tiles">${tileOra("&lt;8:00", "Nord")}${tileOra("12:00", "Centro")}${tileOra("17:00", "Resto della penisola")}${tileOra("21:40", "Sicilia")}</div>`,
+  iberia: () => `<div class="tiles">${tile("treno", "Treni fermi")}${tile("semaforo", "Semafori spenti")}${tile("pagamento", "Pagamenti bloccati")}${tile("cellulare", "Telefoni in difficoltà")}</div>`,
+  bilancia: () => `<svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid meet">
+    <path d="M300 120 L250 340 H350Z" fill="#34435c"/><rect x="220" y="330" width="160" height="22" rx="11" fill="#34435c"/>
+    <g class="trave"><rect x="80" y="110" width="440" height="16" rx="8" fill="#93a1b5"/>
+      <g transform="translate(130 118)"><path d="M0 0 L-50 110 M0 0 L50 110" stroke="#93a1b5" stroke-width="4"/><path d="M-70 110 H70 Q60 140 0 140 Q-60 140 -70 110Z" fill="#5d6b80"/>
+        <g transform="translate(-34 50) scale(.68)">${ICONE.citta.replace('<svg viewBox="0 0 100 100">', '').replace('</svg>', '').replace(/#eef2f7/g, '#93a1b5')}</g>
+        <text x="0" y="178" text-anchor="middle" font-family="Titillium Web" font-weight="700" font-size="28" fill="#eef2f7">consumo</text></g>
+      <g transform="translate(470 118)"><path d="M0 0 L-50 110 M0 0 L50 110" stroke="#93a1b5" stroke-width="4"/><path d="M-70 110 H70 Q60 140 0 140 Q-60 140 -70 110Z" fill="#5d6b80"/>
+        <path d="M-6 52 L-22 92 H-2 L-12 120 L22 76 H2 L12 52Z" fill="#ffd166"/>
+        <text x="0" y="178" text-anchor="middle" font-family="Titillium Web" font-weight="700" font-size="28" fill="#eef2f7">produzione</text></g></g>
+    <circle cx="300" cy="118" r="44" fill="#0a1220" stroke="#f59e0b" stroke-width="6"/>
+    <text x="300" y="128" text-anchor="middle" font-family="Roboto Mono" font-weight="700" font-size="26" fill="#f59e0b">50 Hz</text></svg>`,
+  quartieri: () => `<svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+    ${Array.from({ length: 12 }, (_, i) => CASETTA(30 + (i % 6) * 92, 150 + Math.floor(i / 6) * 160, i)).join("")}
+    <g class="taglio" stroke="#f59e0b" stroke-width="6" stroke-dasharray="14 10" fill="none"><rect x="190" y="70" width="210" height="122" rx="16"/></g></svg>`,
+  turni: () => `<svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet">
+    ${["A", "B", "C"].map((g, r) => `<g transform="translate(0 ${30 + r * 86})">
+      <text x="22" y="40" font-family="Roboto Mono" font-weight="700" font-size="30" fill="#93a1b5">${g}</text>
+      <rect x="70" y="10" width="510" height="44" rx="12" fill="${LUCE}" opacity=".85"/>
+      <rect class="buco" x="${70 + r * 170}" y="10" width="170" height="44" rx="12" fill="${SPENTO}"/></g>`).join("")}
+    <rect class="cursore" x="70" y="18" width="6" height="270" rx="3" fill="#eef2f7"/></svg>`,
+  diga: () => `<svg viewBox="0 120 600 280" preserveAspectRatio="xMidYMid meet">
+    <path d="M0 200 H100 V360 H0Z" fill="#2e90fa" opacity=".7"/><path d="M100 150 L150 150 L170 360 H100Z" fill="#93a1b5"/>
+    <path class="getto" d="M170 330 Q200 340 230 360" stroke="#9fd0ff" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <g class="cavi" stroke-width="5" fill="none">${[0, 1].map(i => `<path class="cavo" data-i="${i}" d="M${245 + i * 140} 222 Q${315 + i * 140} 250 ${385 + i * 140} 222"/>`).join("")}</g>
+    ${[245, 385, 525].map(x => TRALICCIO(x, 360, .8)).join("")}
+    <rect x="0" y="360" width="600" height="40" fill="#13223a"/>
+    ${[0, 1, 2].map(i => CASETTA(380 + i * 72, 352, "d" + i)).join("")}</svg>`,
+  kit: () => `<div class="tiles">${tile("torcia", "Torcia e pile")}${tile("radio", "Radio a pile")}${tile("powerbank", "Power bank carica")}${tile("acqua", "Scorta d'acqua")}</div>`,
+  telefono: () => `<svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
+    <g class="tel"><rect x="210" y="20" width="180" height="340" rx="30" fill="#1d2a40" stroke="#5d6b80" stroke-width="6"/>
+    <rect x="228" y="56" width="144" height="250" rx="10" fill="#0a1220"/>
+    <text x="300" y="200" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="84" fill="#f59e0b">112</text>
+    <circle cx="300" cy="330" r="14" fill="#5d6b80"/></g>
+    <g class="onde" stroke="#f59e0b" stroke-width="10" fill="none" stroke-linecap="round">
+      <path d="M420 110 q30 60 0 120"/><path d="M450 80 q48 90 0 180"/><path d="M180 110 q-30 60 0 120"/><path d="M150 80 q-48 90 0 180"/></g></svg>`,
+  riaccesa: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">${PALAZZI(400, 21)}<rect x="0" y="400" width="600" height="20" fill="#13223a"/></svg>`
+};
+/* ===================== SCENE ===================== */
+const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 : s.dur;
+const START = []; let acc = 0;
+CONFIG.scene.forEach((s, k) => { START[k] = acc; acc += durScena(s, k); });
+const TOTAL = acc;
+const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
+const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
+  { da: +VOICE_AT[k].toFixed(3), a: +(VOICE_AT[k] + DUR[k] + 0.2).toFixed(3), testo: s.sottotitolo }).filter(Boolean);
+
+const box = $("#scene"), NODI = [];
+const righe = arr => `<h1>${arr.map(r => `<span class="m"><span class="i">${r}</span></span>`).join("")}</h1>`;
+CONFIG.scene.forEach((s, k) => {
+  const el = document.createElement("section");
+  el.className = "scena"; el.style.opacity = 0;
+  el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
+  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t]) => `<li><span class="ico">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
+  el.innerHTML = `<div class="ill">${ILL[s.ill]()}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
+    ${s.sotto ? `<p class="sotto">${s.sotto}</p>` : ""}${lista}${s.nota ? `<p class="nota">${s.nota}</p>` : ""}
+    ${s.grande ? `<div class="grande">${s.grande}</div>` : ""}${s.fonte ? `<p class="fonte">${s.fonte}</p>` : ""}</div>`;
+  if (L.illk < .5 && s.lista) el.querySelector(".ill").style.display = "none";
+  box.appendChild(el); NODI.push(el);
+});
+const dots = $("#hud .dots");
+CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
+$("#hud .lab").textContent = CONFIG.hud;
+["verde", "gialla", "arancione", "rossa"].forEach((c, i) =>
+  $("#bande").insertAdjacentHTML("beforeend", `<div class="banda" style="left:${i * 25 - .5}%;background:var(--${c})"></div>`));
+
+
+/* finestre e cavi: tutto in funzione del tempo */
+const accesa = (el, on) => { el.setAttribute("fill", on ? LUCE : SPENTO); };
+const ANIM = {
+  citta: (el, u, t) => {
+    // all'inizio tutto acceso (anteprima); poi la città si spegne da sinistra a destra
+    el.querySelectorAll(".fin").forEach(f => {
+      const x = +f.getAttribute("x");
+      const off = prog(u, 1.4 + x / 600 * 1.6 + hash(+f.dataset.i) * .3, .05) >= 1;
+      accesa(f, !off);
+    });
+  },
+  tralicci: (el, u, t) => {
+    el.querySelectorAll(".cavo").forEach(c => {
+      const i = +c.dataset.i, rotto = u > 1 + i * .7;
+      c.setAttribute("stroke", rotto ? "#ef4136" : LUCE);
+      c.setAttribute("opacity", rotto ? (.35 + .2 * Math.sin(t * 6 + i)).toFixed(2) : 1);
+    });
+    el.querySelectorAll(".scint circle").forEach(s => {
+      const i = +s.dataset.i, p = prog(u, 1 + i * .7, .35);
+      s.setAttribute("opacity", (p > 0 && p < 1 ? 1 - p : 0).toFixed(2));
+      s.setAttribute("r", (10 + p * 30).toFixed(1));
+    });
+    el.querySelectorAll(".fin").forEach(f => accesa(f, u < 3.2 + hash(+f.dataset.i) * .4));
+  },
+  bilancia: (el, u, t) => {
+    const a = Math.sin(t * 1.6) * 3 * (1 - prog(u, 2, 2.5)) ;
+    el.querySelector(".trave").setAttribute("transform", `rotate(${a.toFixed(2)} 300 118)`);
+  },
+  quartieri: (el, u, t) => {
+    const scatta = u > 1.6;
+    el.querySelectorAll(".fin").forEach(f => {
+      const q = +[...f.classList].find(c => /^q\d+$/.test(c)).slice(1);
+      accesa(f, !(scatta && (q === 2 || q === 3)));
+    });
+    const tg = el.querySelector(".taglio");
+    tg.setAttribute("opacity", prog(u, 1.2, .4).toFixed(2));
+    tg.style.strokeDashoffset = (-t * 24).toFixed(1);
+  },
+  turni: (el, u, t) => {
+    const p = prog(u, .6, 5.2);
+    el.querySelector(".cursore").setAttribute("x", (70 + p * 504).toFixed(1));
+    el.querySelectorAll(".buco").forEach((b, r) => {
+      const x0 = 70 + r * 170, on = p * 510 >= r * 170;
+      b.setAttribute("opacity", on ? 1 : .25);
+    });
+  },
+  diga: (el, u, t) => {
+    el.querySelector(".getto").style.strokeDasharray = "16 12";
+    el.querySelector(".getto").style.strokeDashoffset = (-t * 40).toFixed(1);
+    el.querySelectorAll(".cavo").forEach(c => c.setAttribute("stroke", u > 1.2 + +c.dataset.i * .9 ? LUCE : "#34435c"));
+    el.querySelectorAll(".fin").forEach(f => {
+      const i = +[...f.classList].find(c => /^qd\d$/.test(c)).slice(2);
+      accesa(f, u > 3 + i * .5);
+    });
+  },
+  telefono: (el, u, t) => {
+    el.querySelectorAll(".onde path").forEach((p, i) => p.setAttribute("opacity", (.3 + .7 * Math.max(0, Math.sin(t * 5 - (i % 2) * 1.2))).toFixed(2)));
+  },
+  riaccesa: (el, u, t) => {
+    el.querySelectorAll(".fin").forEach(f => {
+      const x = +f.getAttribute("x");
+      accesa(f, u > .3 + x / 600 * 1.8 + hash(+f.dataset.i + 7) * .4);
+    });
+  }
+};
+/* ===================== RENDER(t) — unica fonte di verità ===================== */
+const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
+  NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
+  const el = NODI[k];
+  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .35, .35) : 1;
+
+  dots.querySelectorAll(".dot").forEach((d, i) => {
+    d.style.background = i < k ? "var(--az)" : i === k ? "var(--ar)" : "#33415a";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.45, outBack(prog(u, 0, .4))) : 1})`;
+  });
+
+  // transizione a cerchio dal pallino dell'HUD
+  const w = $("#wipe"), dp = dots.children[k];
+  if (k > 0 && !s.finale && u < .7) {
+    const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
+    w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
+    w.style.background = "var(--ar)";
+    w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
+    w.style.opacity = 1 - prog(u, .28, .4);
+  } else w.style.opacity = 0;
+
+  const primo = k === 0;
+  const q = x => primo ? 1 : x;  // il primo fotogramma è già completo (anteprima)
+  el.querySelectorAll("h1 .i").forEach((i, j) => reveal(i, q(prog(u, .15 + j * .1, .55))));
+  const chip = el.querySelector(".chip"); fadeUp(chip, q(prog(u, .1, .4)), 16);
+  el.querySelectorAll(".sotto").forEach((p, j) => fadeUp(p, primo ? 1 : prog(u, .7 + j * .3, .5)));
+  el.querySelectorAll(".lista li").forEach((li, j) => fadeUp(li, prog(u, .9 + j * .9, .5), 30));
+  el.querySelectorAll(".tile").forEach((ti, j) => pop(ti, prog(u, .5 + j * .45, .5)));
+  el.querySelectorAll(".mese").forEach((m, j) => pop(m, prog(u, .4 + j * .08, .4)));
+  const nota = el.querySelector(".nota"); if (nota) fadeUp(nota, prog(u, D * .55, .5), 20);
+  const g = el.querySelector(".grande"); if (g) pop(g, prog(u, 1.4, .5));
+  const fo = el.querySelector(".fonte"); if (fo) fadeUp(fo, prog(u, 1.9, .5), 16);
+  const ill = el.querySelector(".ill"); if (!primo && !s.lista) fadeUp(ill, prog(u, .2, .6), 30); else ill.style.opacity = 1;
+  if (ANIM[s.ill]) ANIM[s.ill](el, u, t);
+
+  // spazzata a 4 bande all'ingresso del finale
+  const sw = s.finale ? prog(u, 0, .9) : 1;
+  $("#bande").querySelectorAll(".banda").forEach((b, i) => {
+    const p = clamp(sw * 1.6 - i * .15);
+    b.style.opacity = sw < 1 ? 1 : 0;
+    b.style.transform = `translateY(${lerp(100, -100, inOutCubic(p))}%)`;
+  });
+
+  const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
+  else sub.style.opacity = 0;
+}
+
+/* ===================== AVVIO ===================== */
+window.TOTAL = TOTAL;
+window.VOICE_AT = VOICE_AT;
+window.SUBS = SUBS;
+window.POSTER_T = CONFIG.posterT;
+window.KEYFRAMES = [0, ...START.map((s, k) => +(s + durScena(CONFIG.scene[k], k) * .85).toFixed(2))];
+window.renderFrame = render;
+Promise.all(["400", "600", "700", "900"].map(p => document.fonts.load(`${p} 40px "Titillium Web"`))
+  .concat(["500", "700"].map(p => document.fonts.load(`${p} 20px "Roboto Mono"`))))
+  .then(() => document.fonts.ready).then(() => { render(0); window.__ready = true; if (!RENDER) anteprima(); });
+
+function anteprima() {
+  const fit = () => { const s = Math.min(innerWidth / L.W, (innerHeight - 50) / L.H);
+    stage.style.transform = `translate(-50%,calc(-50% - 20px)) scale(${s})`; };
+  fit(); addEventListener("resize", fit);
+  for (const f in FORMATI) {
+    const a = document.createElement("a"); a.href = `?fmt=${f}`; a.textContent = f.replace("x", ":");
+    if (f === FMT) a.setAttribute("aria-current", "true"); $("#ui").appendChild(a);
+  }
+  const au = AUDIO ? new Audio(AUDIO) : null;
+  let t0 = null, pausa = false, tp = 0;
+  const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL || (au && au.ended)) { if (au) { au.currentTime = 0; au.play(); } else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
+  stage.addEventListener("click", () => {
+    pausa = !pausa;
+    if (au) pausa ? au.pause() : au.play();
+    else if (pausa) tp = ora(); else t0 = performance.now() - tp * 1000;
+  });
+  if (au) { const b = $("#avvio"); b.style.display = "flex"; b.onclick = () => { b.style.display = "none"; parti(); }; }
+  else parti();
+}
+</script>
+</body>
+</html>
