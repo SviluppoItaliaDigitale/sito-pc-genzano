@@ -1,7 +1,7 @@
 ---
 title: "Maltempo, 9 ottobre: cinque interventi del Gruppo tra alberi, rami e un tombino"
 date: 2026-10-09T00:03:00+02:00
-description: "Venerdì 9 ottobre il Gruppo è intervenuto cinque volte a Genzano: un pino alla scuola Marchesi, rami in strada, un tombino divelto e un albero caduto in via Polonia."
+description: "Venerdì 9 ottobre il Gruppo è intervenuto cinque volte a Genzano: pino alla scuola Marchesi, rami in strada, tombino divelto e albero caduto in via Polonia."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
