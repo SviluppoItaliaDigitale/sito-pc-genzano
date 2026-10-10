@@ -43,7 +43,7 @@
     </section>
     <section aria-labelledby="sat-s3-cfr-tit">
       <h3 id="sat-s3-cfr-tit" class="dash-s3-tit">Confronto prima e dopo</h3>
-      <p class="dash-s3-nota">Scegli due giorni e la stessa zona si confronta con un cursore. Le immagini a colori naturali cambiano anche per nuvole, luce e stagione: una differenza non è per forza un danno. Le zone non sorvolate quel giorno restano nere o vuote.</p>
+      <p class="dash-s3-nota">Scegli due giorni: la cartina si divide con una linea verticale, a sinistra il giorno «prima» e a destra il giorno «dopo», e la linea si trascina. Le immagini a colori naturali cambiano anche per nuvole, luce e stagione: una differenza non è per forza un danno. Le zone non sorvolate quel giorno restano nere o vuote.</p>
       <form class="dash-s3-cfr" id="sat-cfr-form">
         <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa)</option></select></label>
         <label>Prima <input type="date" id="sat-cfr-prima" required></label>
@@ -52,12 +52,12 @@
         <button type="button" class="dash-s3-btn" id="sat-cfr-chiudi" hidden>Chiudi confronto</button>
       </form>
       <div id="sat-cfr-ctl" hidden>
-        <label for="sat-cfr-mix" class="dash-s3-nota">Cursore: a sinistra «prima», a destra «dopo»</label>
-        <input type="range" id="sat-cfr-mix" min="0" max="100" value="100" step="5" aria-valuetext="dopo">
+        <label for="sat-cfr-mix" class="dash-s3-nota">Linea di confronto: a sinistra della linea «prima», a destra «dopo». Trascinala sulla cartina o muovi questo cursore.</label>
+        <input type="range" id="sat-cfr-mix" min="0" max="100" value="50" step="2" aria-valuetext="a metà">
         <div class="dash-s3-cfr-btn">
-          <button type="button" class="dash-s3-btn" data-mix="0">Prima</button>
-          <button type="button" class="dash-s3-btn" data-mix="100">Dopo</button>
-          <button type="button" class="dash-s3-btn" id="sat-cfr-alterna" aria-pressed="false">Alterna</button>
+          <button type="button" class="dash-s3-btn" data-mix="100">Tutto «prima»</button>
+          <button type="button" class="dash-s3-btn" data-mix="50">A metà</button>
+          <button type="button" class="dash-s3-btn" data-mix="0">Tutto «dopo»</button>
         </div>
         <p class="dash-s3-nota" id="sat-cfr-stato" aria-live="polite"></p>
       </div>
@@ -252,21 +252,30 @@
         }).join('')+'</ul>';
       }).catch(function(){ box.textContent='Effemeridi non raggiungibili in questo momento: il calcolo non è possibile.'; });
     }
-    /* ---- Confronto prima/dopo: due giorni, stessa zona, un cursore ----
+    /* ---- Confronto prima/dopo: due giorni, stessa zona, una linea che scorre ----
        Sentinel-3: lo stesso layer WMS con il parametro "time"; per un giorno passato
        le 20:00Z restituiscono il mosaico completo (alle 06:00Z è ancora nero,
        verificato il 10/10/2026), per il giorno corrente si lascia l'ultimo.
-       VIIRS: la tile GIBS con la data nell'indirizzo (archivio dal 2012). Il
-       "dopo" sta in un pane sopra al "prima" e il cursore ne regola l'opacità:
-       è il confronto a lampeggio con cui si cercano i cambiamenti. */
-    var cfr={attivo:false, prima:null, dopo:null, timer:null};
-    map.createPane('cfrDopo'); map.getPane('cfrDopo').style.zIndex=250;
+       VIIRS: la tile GIBS con la data nell'indirizzo (archivio dal 2012).
+       Il "dopo" sta in un pane sopra al "prima", ritagliato con clip-path a
+       destra di una linea verticale: a sinistra si vede il "prima", a destra il
+       "dopo". Il ritaglio è in coordinate del pane (che si sposta con la
+       mappa), quindi si ricalcola a ogni movimento e zoom, come fa il plugin
+       leaflet-side-by-side. La linea si trascina col puntatore; il cursore
+       sotto la cartina e i tre pulsanti sono l'alternativa senza trascinamento
+       (WCAG 2.5.7) e da tastiera. */
+    var cfr={attivo:false, prima:null, dopo:null, r:0.5};
+    map.createPane('cfrDopo'); var cfrPane=map.getPane('cfrDopo'); cfrPane.style.zIndex=250;
     var cfrForm=document.getElementById('sat-cfr-form'), cfrFonte=document.getElementById('sat-cfr-fonte');
     var cfrPrima=document.getElementById('sat-cfr-prima'), cfrDopo=document.getElementById('sat-cfr-dopo');
     var cfrCtl=document.getElementById('sat-cfr-ctl'), cfrMix=document.getElementById('sat-cfr-mix');
     var cfrStato=document.getElementById('sat-cfr-stato'), cfrChiudi=document.getElementById('sat-cfr-chiudi');
-    var cfrAlterna=document.getElementById('sat-cfr-alterna');
-    var ridotto=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var mappaEl=document.getElementById('dash-sat-mappa');
+    var cfrLinea=L.DomUtil.create('div','dash-cfr-linea',mappaEl); cfrLinea.hidden=true;
+    cfrLinea.innerHTML='<div class="dash-cfr-manico" aria-hidden="true"><span></span></div>';
+    var cfrTagA=L.DomUtil.create('span','dash-cfr-tag dash-cfr-tag-a',mappaEl), cfrTagB=L.DomUtil.create('span','dash-cfr-tag dash-cfr-tag-b',mappaEl);
+    cfrTagA.hidden=true; cfrTagB.hidden=true; cfrTagA.setAttribute('aria-hidden','true'); cfrTagB.setAttribute('aria-hidden','true');
+    L.DomEvent.disableClickPropagation(cfrLinea); L.DomEvent.disableScrollPropagation(cfrLinea);
     function isoGiorno(d){ return d.toISOString().slice(0,10); }
     function cfrLimiti(){
       var f=cfrFonte.value, oggi=new Date(), max=new Date(oggi);
@@ -287,17 +296,26 @@
       return L.tileLayer.wms(WMS,Object.assign(par,o));
     }
     function dataIt(g){ return new Date(g+'T12:00:00Z').toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}); }
-    function cfrApplica(v){
-      v=Math.max(0,Math.min(100,v|0)); cfrMix.value=v;
-      cfrMix.setAttribute('aria-valuetext', v===0?'prima':v===100?'dopo':'dopo al '+v+'%');
-      if(cfr.dopo) cfr.dopo.setOpacity(v/100);
+    function dataBreve(g){ return new Date(g+'T12:00:00Z').toLocaleDateString('it-IT',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}); }
+    // ritaglio del pane "dopo" a destra della linea, in coordinate del pane
+    function cfrRitaglia(){
+      if(!cfr.attivo) return;
+      var sz=map.getSize(), nw=map.containerPointToLayerPoint([0,0]), se=map.containerPointToLayerPoint(sz);
+      var xc=sz.x*cfr.r, x=nw.x+xc;
+      cfrPane.style.clipPath='polygon('+x+'px '+nw.y+'px, '+se.x+'px '+nw.y+'px, '+se.x+'px '+se.y+'px, '+x+'px '+se.y+'px)';
+      cfrLinea.style.left=xc+'px';
     }
-    function cfrFerma(){ if(cfr.timer){ clearInterval(cfr.timer); cfr.timer=null; } cfrAlterna.setAttribute('aria-pressed','false'); }
+    map.on('move zoom zoomanim viewreset resize',cfrRitaglia);
+    function cfrPosiziona(pct){ // pct = percentuale "prima" visibile = posizione della linea da sinistra
+      pct=Math.max(0,Math.min(100,Number(pct)||0)); cfr.r=pct/100; cfrMix.value=Math.round(pct);
+      cfrMix.setAttribute('aria-valuetext', pct<=0?'tutto «dopo»':pct>=100?'tutto «prima»':pct===50?'a metà':'linea al '+Math.round(pct)+'% da sinistra');
+      cfrRitaglia();
+    }
     function cfrChiudiTutto(){
-      cfrFerma();
       if(cfr.prima&&map.hasLayer(cfr.prima)) map.removeLayer(cfr.prima);
       if(cfr.dopo&&map.hasLayer(cfr.dopo)) map.removeLayer(cfr.dopo);
-      cfr={attivo:false, prima:null, dopo:null, timer:null};
+      cfr={attivo:false, prima:null, dopo:null, r:cfr.r};
+      cfrPane.style.clipPath=''; cfrLinea.hidden=true; cfrTagA.hidden=true; cfrTagB.hidden=true;
       cfrCtl.hidden=true; cfrChiudi.hidden=true;
     }
     cfrForm.addEventListener('submit',function(e){
@@ -307,20 +325,24 @@
       if(a>=b){ cfrStato.textContent='La data «prima» deve venire prima della data «dopo».'; cfrCtl.hidden=false; return; }
       if(b>cfrDopo.max||a<cfrPrima.min){ cfrStato.textContent='Date fuori dall\'archivio disponibile per questa fonte.'; cfrCtl.hidden=false; return; }
       cfrChiudiTutto();
-      cfr={attivo:true, prima:cfrLayer(f,a), dopo:cfrLayer(f,b,'cfrDopo'), timer:null, a:a, b:b, f:f};
-      cfrCtl.hidden=false; cfrChiudi.hidden=false; cfrApplica(100);
-      cfrStato.textContent='Prima: '+dataIt(a)+' · Dopo: '+dataIt(b)+' · '+(f==='viirs'?'NASA VIIRS':'Sentinel-3')+'. Muovi il cursore o premi «Alterna».';
+      cfr={attivo:true, prima:cfrLayer(f,a), dopo:cfrLayer(f,b,'cfrDopo'), r:0.5, a:a, b:b, f:f};
+      cfrTagA.textContent='Prima · '+dataBreve(a); cfrTagB.textContent='Dopo · '+dataBreve(b);
+      cfrCtl.hidden=false; cfrChiudi.hidden=false;
+      cfrStato.textContent='Prima: '+dataIt(a)+' · Dopo: '+dataIt(b)+' · '+(f==='viirs'?'NASA VIIRS':'Sentinel-3')+'. Trascina la linea o muovi il cursore.';
       if(modo!=='sentinel'){ document.querySelector('.dash-pill[data-sat="sentinel"]').click(); } else { mostra(); }
     });
     cfrChiudi.addEventListener('click',function(){ cfrChiudiTutto(); cfrStato.textContent='Confronto chiuso: torna il mosaico più recente.'; mostra(); });
-    cfrMix.addEventListener('input',function(){ cfrFerma(); cfrApplica(cfrMix.value); });
-    cfrCtl.querySelectorAll('[data-mix]').forEach(function(b){ b.addEventListener('click',function(){ cfrFerma(); cfrApplica(b.dataset.mix); }); });
-    cfrAlterna.addEventListener('click',function(){
-      if(cfr.timer){ cfrFerma(); return; }
-      if(ridotto){ cfrApplica(cfrMix.value==='0'?100:0); return; } // niente lampeggio automatico con movimento ridotto
-      cfrAlterna.setAttribute('aria-pressed','true');
-      cfr.timer=setInterval(function(){ cfrApplica(cfrMix.value==='0'?100:0); },900);
-    });
+    cfrMix.addEventListener('input',function(){ cfrPosiziona(cfrMix.value); });
+    cfrCtl.querySelectorAll('[data-mix]').forEach(function(b){ b.addEventListener('click',function(){ cfrPosiziona(b.dataset.mix); }); });
+    // trascinamento della linea: il puntatore resta catturato dal manico, la mappa non si muove
+    (function(){
+      var manico=cfrLinea.firstElementChild, inCorso=false;
+      function daEvento(ev){ var r=mappaEl.getBoundingClientRect(); return (ev.clientX-r.left)/r.width*100; }
+      manico.addEventListener('pointerdown',function(ev){ inCorso=true; manico.setPointerCapture(ev.pointerId); map.dragging.disable(); cfrPosiziona(daEvento(ev)); ev.preventDefault(); });
+      manico.addEventListener('pointermove',function(ev){ if(inCorso) cfrPosiziona(daEvento(ev)); });
+      function fine(ev){ if(!inCorso) return; inCorso=false; try{ manico.releasePointerCapture(ev.pointerId); }catch(e){} map.dragging.enable(); }
+      manico.addEventListener('pointerup',fine); manico.addEventListener('pointercancel',fine);
+    })();
 
     function s3Ems(){
       var box=document.getElementById('sat-s3-ems');
@@ -339,7 +361,8 @@
 
     function mostra(){
       [geocolour,hrfi,sentinel,gibs,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
-      if(modo!=='sentinel') cfrFerma();
+      var inConfronto=(modo==='sentinel'&&cfr.attivo);
+      cfrLinea.hidden=!inConfronto; cfrTagA.hidden=!inConfronto; cfrTagB.hidden=!inConfronto;
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
       if(modo==='geocolour'){
         geocolour.setParams({time:isoZ(t)}); geocolour.addTo(map); confini.addTo(map);
@@ -348,7 +371,7 @@
         hrfi.setParams({time:isoZ(t)}); hrfi.addTo(map); confini.addTo(map);
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
       } else if(modo==='sentinel'&&cfr.attivo){
-        cfr.prima.addTo(map); cfr.dopo.addTo(map); confini.addTo(map); cfrApplica(cfrMix.value);
+        cfr.prima.addTo(map); cfr.dopo.addTo(map); confini.addTo(map); cfrPosiziona(cfr.r*100);
         stato.textContent='Confronto: '+dataIt(cfr.a)+' → '+dataIt(cfr.b);
         s3Pannello();
       } else if(modo==='sentinel'){

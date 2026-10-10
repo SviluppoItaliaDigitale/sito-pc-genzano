@@ -7956,4 +7956,11 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
 .dash-s3-btn:focus-visible, .dash-s3-cfr select:focus-visible, .dash-s3-cfr input:focus-visible, #sat-cfr-mix:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 #sat-cfr-mix { width: 100%; max-width: 520px; display: block; margin: .2rem 0 .4rem; accent-color: #003366; }
 .dash-s3-cfr-btn { display: flex; flex-wrap: wrap; gap: .4rem; }
-@media print { .dash-s3 { background: #fff; border-left-color: #000; } .dash-s3-cfr, #sat-cfr-ctl { display: none; } }
+/* linea di confronto sulla cartina: sopra i pane (z 250) e sotto i controlli Leaflet (1000) */
+.dash-cfr-linea { position: absolute; top: 0; bottom: 0; width: 0; z-index: 600; border-left: 3px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.55); margin-left: -1.5px; pointer-events: none; }
+.dash-cfr-manico { position: absolute; top: 50%; left: -20px; width: 40px; height: 40px; margin-top: -20px; border-radius: 50%; background: #fff; border: 2px solid #003366; box-shadow: 0 1px 4px rgba(0,0,0,.45); cursor: ew-resize; pointer-events: auto; touch-action: none; display: flex; align-items: center; justify-content: center; }
+.dash-cfr-manico span { width: 14px; height: 2px; background: #003366; box-shadow: 0 -4px 0 #003366, 0 4px 0 #003366; }
+.dash-cfr-tag { position: absolute; top: 10px; z-index: 600; background: rgba(0,51,102,.9); color: #fff; font-size: .8rem; font-weight: 600; padding: .2rem .55rem; border-radius: 4px; pointer-events: none; }
+.dash-cfr-tag-a { left: 50px; }
+.dash-cfr-tag-b { right: 10px; }
+@media print { .dash-s3 { background: #fff; border-left-color: #000; } .dash-s3-cfr, #sat-cfr-ctl, .dash-cfr-linea, .dash-cfr-tag { display: none; } }
