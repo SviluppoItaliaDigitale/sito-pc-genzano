@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-10T02:35:22+00:00",
+  "generato": "2026-10-10T09:03:01+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -17,11 +17,11 @@
     "Panama"
    ],
    "eventTime": "2026-10-09T17:56:00",
-   "gdacsId": null,
-   "lastUpdate": "2026-10-10T01:16:40.298831",
+   "gdacsId": "EQ1570339",
+   "lastUpdate": "2026-10-10T08:09:01.727691",
    "n_aois": 4,
    "n_products": 0,
-   "name": "Earthquake in Panama"
+   "name": "Earthquake in Los Santos, Panama"
   },
   {
    "activationTime": "2026-10-04T11:02:00",
@@ -187,7 +187,7 @@
   {
    "activationTime": "2026-08-15T17:57:00",
    "category": "Wildfire",
-   "centroid": "POINT (24.473423718902048 38.88160034017423)",
+   "centroid": "POINT (24.47342371890205 38.88160034017423)",
    "closed": true,
    "code": "EMSR923",
    "countries": [
@@ -195,7 +195,7 @@
    ],
    "eventTime": "2026-08-15T10:50:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-22T12:16:36.831468",
+   "lastUpdate": "2026-09-22T12:16:36",
    "n_aois": 1,
    "n_products": 3,
    "name": "Wildfire In Skyros, Greece"

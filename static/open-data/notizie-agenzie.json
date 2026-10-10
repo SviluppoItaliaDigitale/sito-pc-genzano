@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-10T02:35:20+00:00",
+  "generato": "2026-10-10T09:02:58+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-09T22:23:47+00:00",
+   "data": "2026-10-10T08:56:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Maltempo a Lipari, esondati torrenti: fango in strade e case allagate",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/10/maltempo-a-lipari-esondati-torrenti-fango-in-strade-e-case-allagate_c0960386-1816-4c41-8bf5-fd3668c877a1.html"
+  },
+  {
+   "data": "2026-10-10T08:51:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "La salute mentale un problema per 8 milioni italiani",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/stili_di_vita/2026/10/06/salute-mentale-un-problema-per-8-milioni-italiani.-il-10-ottobre-giornata-mondiale_6959ff84-1bea-4509-8364-f9812e91ca3c.html"
+  },
+  {
+   "data": "2026-10-10T08:50:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Unicef, nel mondo una ragazza su cinque data in sposa prima dei 18 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/unicef-nel-mondo-una-ragazza-su-cinque-data-in-sposa-prima-dei_4958d1cb-2f65-4b6e-8ff5-838860a84b89.html"
+  },
+  {
+   "data": "2026-10-10T08:48:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dopo i monopattini stretta su e-bike, arrivano bicivelox e multe fino a 15mila euro",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/dopo-monopattini-stretta-su-e-bike-arrivano-bicivelox-e-multe-fino-a-15mila-euro_5d9f1f39-e4eb-4fa0-bbd1-a4a17d303b26.html"
+  },
+  {
+   "data": "2026-10-10T08:46:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "La presidenza del Consiglio Ue propone un taglio di 141 miliardi al futuro Bilancio",
+   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/10/10/la-presidenza-del-consiglio-ue-propone-un-taglio-di-141-miliardi-al-futuro-bilancio_d72eaa4d-b6d3-480b-82d0-dc095e272e73.html"
+  },
+  {
+   "data": "2026-10-10T08:40:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Vannacci: 'L'Italia è fondata sul lavoro, non sul bivacco'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/10/vannacci-litalia-e-fondata-sul-lavoro-non-sul-bivacco_6521130d-b89b-4129-8938-f35506527a33.html"
+  },
+  {
+   "data": "2026-10-10T08:39:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Danneggia tre volte tomba ex sindaco della Bergamasca, denunciata 92enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/danneggia-tre-volte-tomba-ex-sindaco-della-bergamasca-denunciata-92enne_fe8f74a8-65d9-4420-89ba-8b2de2a5912c.html"
+  },
+  {
+   "data": "2026-10-10T08:39:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "In moto contro un'auto in sosta, gravi due ragazze di 16 e 17 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/in-moto-contro-unauto-in-sosta-gravi-due-ragazze-di-16-e-17-anni_e1413891-0cf2-4292-8186-281e8627fd5c.html"
+  },
+  {
+   "data": "2026-10-10T08:37:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco russo su Zaporizhzhia, almeno otto morti tra cui tre bambini",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/attacco-russo-su-zaporizhzhia-almeno-otto-morti-tra-cui-tre-bambini_ba53fd97-0381-4325-9e6e-88fd6b8cd3cc.html"
+  },
+  {
+   "data": "2026-10-10T08:36:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crans-Montana. \"Le spese mediche per gli italiani ammontano a 1,6 milioni\"",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/crans-montana.-le-spese-mediche-per-gli-italiani-ammontano-a-16-milioni_f294ae43-ec96-46dc-beee-d6702f9eed6f.html"
+  },
+  {
+   "data": "2026-10-10T08:32:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi gara sprint Gp Singapore: partenza rinviata per pioggia - Diretta",
+   "url": "https://www.adnkronos.com/sport/gp-singapore-oggi-gara-sprint-formula-1-live_6aOJ9EujraUYEKRgEweWxx"
+  },
+  {
+   "data": "2026-10-10T08:27:25+00:00",
    "fonte": "ANSA",
    "titolo": "Terremoto di magnitudo 7.6 a Panama, gli Usa escludono il rischio tsunami",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/terremoto-di-magnitudo-7.6-a-panama-gli-usa-escludono-il-rischio-tsunami_29887a85-8ecb-4253-8ce2-1c781863256c.html"
   },
   {
-   "data": "2026-10-09T22:20:20+00:00",
+   "data": "2026-10-10T08:15:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Maltempo, allerta meteo arancione oggi in Campania, Calabria, Puglia e Sicilia. L'elenco delle scuole chiuse",
-   "url": "https://www.adnkronos.com/cronaca/maltempo-allerta-temporali-raffiche-di-vento-sud_1FO4MrZPkEEiVpZ5N7bt3N"
+   "titolo": "Maltempo sull'Italia, bomba d'acqua nel Reggino. Frana a Mergellina: evacuati tre appartamenti",
+   "url": "https://www.adnkronos.com/cronaca/allerta-meteo-maltempo-campania-ultime-notizie-oggi_6mwJGTjr7i8oPT51LGaBBk"
   },
   {
-   "data": "2026-10-09T22:15:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ora solare, dalla zucca ai broccoli fino al melograno: i cibi autunnali per ritrovare l’equilibrio",
-   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-cosa-mangiare-equilibrio_5usHYF8Fb4mvLPJrnSBf15"
-  },
-  {
-   "data": "2026-10-09T22:08:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sgarbi sottoposto a tracheostomia. Il bollettino medico: condizioni stabili, migliora quadro polmonare",
-   "url": "https://www.adnkronos.com/cronaca/vittorio-sgarbi-tracheostomia-condizioni-stabili_1mC5H0aVeC2tfbwe9xWCk7"
-  },
-  {
-   "data": "2026-10-09T21:55:30+00:00",
+   "data": "2026-10-10T08:13:32+00:00",
    "fonte": "ANSA",
-   "titolo": "Trump: 'Con Meloni c'è un grande rapporto' e incassa l'accordo con Putin sul diesel",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/trump-con-meloni-ce-un-grande-rapporto-e-incassa-laccordo-con-putin-sul_5069bc7b-1078-4767-b47e-c09f4ae8c960.html"
+   "titolo": "Amerigo Vespucci torna a Trieste, a bordo incontri e conferenze",
+   "url": "https://www.ansa.it/sito/notizie/speciali/vespucci-villaggio-italia/2026/10/09/amerigo-vespucci-torna-a-trieste-a-bordo-incontri-e-conferenze_477878b2-f5de-4a61-86c3-6c8679ab2c83.html"
   },
   {
-   "data": "2026-10-09T20:16:46+00:00",
+   "data": "2026-10-10T07:59:40+00:00",
    "fonte": "ANSA",
-   "titolo": "Perù, Hitler Mussolini Simeón eletto sindaco a Queropalca",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/peru-hitler-mussolini-simeon-eletto-sindaco-a-queropalca_a263fe89-af15-4e2f-8d9f-7a7ee7ccdead.html"
+   "titolo": "Temporale a Lipari, esondati torrenti, fango in strade e case allagate",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/strade-e-case-allagate-nel-litorale-a-sud-di-roma-chiesto-stato-di-calamita_9c85a05b-b554-4cf2-9592-d9c514ee9113.html"
   },
   {
-   "data": "2026-10-09T20:05:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "La fucilazione del killer di Fort Hood in diretta streaming, per l'Onu è tortura",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/la-fucilazione-del-killer-di-fort-hood-in-diretta-streaming-per-lonu-e-tortura_82f5ecaf-fec1-4ee7-8e0f-507effc31551.html"
-  },
-  {
-   "data": "2026-10-09T19:47:34+00:00",
+   "data": "2026-10-10T07:56:30+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Carlucci da Vespa dopo il record di ascolti di Ballando: \"Bisogna fare gli scongiuri, mai gloriarsi\"",
-   "url": "https://www.adnkronos.com/spettacoli/milly-carlucci-ballando-con-le-stelle-vespa_2n0MEQZ1UUczTbSxZ4l8ft"
+   "titolo": "Marquez accelera, Bezzecchi e Fernandez cadono: cos'è successo in partenza in MotoGp",
+   "url": "https://www.adnkronos.com/sport/caduta-bezzecchi-fernandez-colpa-marquez-polemiche-gara-sprint-motogp_48nwhwCr52YTrj7v8FZdVJ"
   },
   {
-   "data": "2026-10-09T19:45:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il tribunale rigetta il ricorso di Ranucci per il reintegro a Report. Il giornalista: \"Rispetto la sentenza e la accetto serenamente\"",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/il-tribunale-rigetta-il-ricorso-di-ranucci.-il-giornalista-rispetto-la-sentenza-e-la-accetto-serenamente_14aee77c-f639-40ec-a44a-9925c06e78d9.html"
-  },
-  {
-   "data": "2026-10-09T19:22:43+00:00",
+   "data": "2026-10-10T07:52:44+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, numeri combinazione vincente di oggi 9 ottobre: due 5 da oltre 67mila euro",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-combinazione-vincente-oggi_5fVqjJ8k8TMpJuzqTydEDJ"
+   "titolo": "Morto dissanguato dopo coltellata a una gamba, arrestata la moglie",
+   "url": "https://www.adnkronos.com/cronaca/arezzo-morto-dissanguato-moglie-arrestata_1RdFqpACoEvMdubUwXThXh"
   },
   {
-   "data": "2026-10-09T19:18:15+00:00",
+   "data": "2026-10-10T07:49:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cinque finalisti al Premio enoletterario Vermentino, a Olbia il vincitore",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/09/cinque-finalisti-al-premio-enoletterario-vermentino-a-olbia-il-vincitore-_bdb7a8b2-7cf8-4b7a-8a9a-366507c7883d.html"
+  },
+  {
+   "data": "2026-10-10T07:44:18+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Morì cadendo da un capannone, arrestato il datore di lavoro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/mori-cadendo-da-capannone-arrestato-il-datore-di-lavoro_7e454dbd-413b-4fca-baa9-6ee15a751183.html"
+   "titolo": "Temporale a Lipari, esondati torrenti, fango in strade e case allagate",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/temporale-a-lipari-esondati-torrenti-fango-in-strade-e-case-allagate_8bde15af-30ab-4d51-9c06-6d6fc5b13e34.html"
   },
   {
-   "data": "2026-10-09T19:15:52+00:00",
+   "data": "2026-10-10T07:41:48+00:00",
    "fonte": "ANSA",
-   "titolo": "Madre e figlia morte avvelenate, disposta una perquisizione nella scuola delle sorelle Di Vita",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/morte-avvelenate-disposta-una-perquisizione-nella-scuola-delle-sorelle-di-vita_18eabdd3-cc4e-418c-860d-7405d65dc2be.html"
+   "titolo": "Next Generation Fest 2026, la 5/a edizione al teatro del Maggio a Firenze",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/09/next-generation-fest-2026-la-5a-edizione-al-teatro-del-maggio-a-firenze_562ed77a-b9c6-4baa-9a12-157582fc00ff.html"
   },
   {
-   "data": "2026-10-09T19:14:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Katie Zacharia sarà la nuova portavoce della Casa Bianca'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/katie-zacharia-sara-la-nuova-portavoce-della-casa-bianca_0eb0650e-2836-4986-8589-8c6df7e8f82f.html"
+   "data": "2026-10-10T07:41:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tu Si Que Vales, stasera nuovo appuntamento: gli ospiti e le anticipazioni",
+   "url": "https://www.adnkronos.com/spettacoli/tu-si-que-vales-stasera-anticipazioni_3GMXTeoVfa9yDwODuGTTq7"
   },
   {
-   "data": "2026-10-09T19:09:46+00:00",
+   "data": "2026-10-10T07:41:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, ordine d'arrivo gara Sprint Gp Indonesia e classifica Mondiale",
+   "url": "https://www.adnkronos.com/sport/marquez-gara-sprint-motogp-ordine-arrivo-gp-indonesia-classifica-mondiale_Esn6KU8pawv8iirx8xXBt"
+  },
+  {
+   "data": "2026-10-10T07:40:23+00:00",
    "fonte": "ANSA",
+   "titolo": "MotoGp: Marc Marquez vince la sprint in Indonesia ed è in testa al Mondiale",
+   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/10/10/indonesia-marc-marquez-vince-la-sprint-ed-e-in-testa-al-mondiale_9c1853c9-83cf-42d1-ac55-760ccb463d18.html"
+  },
+  {
+   "data": "2026-10-10T07:38:03+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Petrosino conta i danni del tornado, appello a governo e Regione per gli aiuti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/petrosino-conta-i-danni-del-tornado-appello-a-governo-e-regione-per-gli_02ef4366-220c-4ddf-9912-3938dacb901f.html"
+  },
+  {
+   "data": "2026-10-10T07:35:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dolomiti prese d'assalto, l'overtourism asiatico spinto da Tv e social",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/dolomiti-prese-dassalto-lovertourism-asiatico-spinto-da-tv-e-social_170fdafc-1f85-4e1c-b052-32594325f378.html"
+  },
+  {
+   "data": "2026-10-10T07:34:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Calabresi si candida a sindaco di Milano: \"Sono pronto per le primarie\"",
+   "url": "https://www.adnkronos.com/politica/calabresi-mario-candida-sindaco-milano-primarie-annuncio_3crwgZInj2Mmi3tRZgMOWA"
+  },
+  {
+   "data": "2026-10-10T07:32:53+00:00",
+   "fonte": "ANSA CRONACA",
    "titolo": "Salgono a sei i casi dalla banda della minicar, Iacopini resta grave&nbsp;",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/salgono-a-sei-i-casi-dalla-banda-della-minicar-iacopini-resta-gravenbsp_3d98a72b-ee37-4294-87b8-8eacba645393.html"
   },
   {
-   "data": "2026-10-09T19:08:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella ha promulgato la legge elettorale",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/09/mattarella-ha-promulgato-la-legge-elettorale_b3de459f-a11e-40e2-9dee-6d7e76f64be4.html"
-  },
-  {
-   "data": "2026-10-09T19:07:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Silvia, l'allevatrice rimasta a Ussita per salvare la pecora sopravissana dall'estinzione",
-   "url": "https://www.ansa.it/marche/notizie/2026/10/09/io-rimasta-a-ussita-per-salvare-la-pecora-dallestinzione_7b912bde-1d6f-426e-8d32-e04381fdadb6.html"
-  },
-  {
-   "data": "2026-10-09T19:01:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Maltempo: doppia tromba marina su Marsala. La sindaca: \"Scenario di guerra\"&nbsp;",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/maltempo-doppia-tromba-marina-nel-trapanese-danni-e-nove-feriti_8a1fb1c3-e77d-44de-ad4a-f0d636c72330.html"
-  },
-  {
-   "data": "2026-10-09T19:00:00+00:00",
+   "data": "2026-10-10T07:27:43+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Trump: \"Accordo con Putin, Russia fornirà gasolio agli Usa\". Zelensky: \"Regali a Mosca non portano la pace\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-accordo-usa-russia-gasolio_jxAT964Ic4OPqQRMzeovR"
+   "titolo": "Leonardo Maria Del Vecchio si racconta a Fedez: \"Ho avuto oltre 2mila donne\"",
+   "url": "https://www.adnkronos.com/cronaca/leonardo-maria-del-vecchio-donne-padre-droga_6nN3iM2SDr8k7cZNyPSu4E"
   },
   {
-   "data": "2026-10-09T18:57:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Panama, terremoto di magnitudo 7.6: scatta l'allerta tsunami",
-   "url": "https://www.adnkronos.com/internazionale/esteri/panama-terremoto-allarme-tsunami_6nSy2JKW33Uh8JXulnsxpm"
-  },
-  {
-   "data": "2026-10-09T18:55:35+00:00",
+   "data": "2026-10-10T07:25:36+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il racconto della prof di Marsala: 'Ho visto la morte, ho riparato i ragazzi'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/il-racconto-della-prof-di-marsala-ho-visto-la-morte-ho-riparato-i-ragazzi_72c1b11f-74b4-4440-bc5e-6cc24ff07cad.html"
+   "titolo": "Giornata della salute mentale, l'Unicef: un genitore su 2 ha pensato di chiedere aiuto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/giornata-della-salute-mentale-lunicef-un-genitore-su-2-ha-pensato-di-chiedere-aiuto_808f32d9-778e-4165-9f15-fdf91adda1dc.html"
   },
   {
-   "data": "2026-10-09T18:51:52+00:00",
+   "data": "2026-10-10T07:22:20+00:00",
    "fonte": "ANSA",
-   "titolo": "Trump celebra il Columbus Day: 'Pavarotti una star. L'Italia ci ha dato grandi talenti, da Stallone a Sinatra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/trump-celebra-il-columbus-day-pavarotti-una-star.-litalia-ci-ha-dato-grandi_11050078-c273-44d6-95de-498979879990.html"
-  },
-  {
-   "data": "2026-10-09T18:46:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Nobel per la Pace a Navi Pillay, l'ira di Netanyahu e Trump",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/il-nobel-per-la-pace-a-navi-pillay-lira-di-netanyahu-e-trump_1a002ce2-cdbd-4b9c-aebc-21767cd04154.html"
-  },
-  {
-   "data": "2026-10-09T18:33:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump festeggia Colombo alla Casa Bianca, caccia al voto degli italoamericani",
-   "url": "https://www.adnkronos.com/economia/trump-colombo-celebrazioni-comunita-italoamericana_3CXSGaI3f7gee00Rqw1Faf"
-  },
-  {
-   "data": "2026-10-09T18:32:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Quando la Nobel per la pace Pillay disse: \"C'è un genocidio a Gaza\"",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/09/quando-la-nobel-per-la-pace-pillay-disse-ce-un-genocidio-a-gaza_c1ee1e37-f1c4-4cd0-80cf-9da1fda61c23.html"
-  },
-  {
-   "data": "2026-10-09T18:14:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, parla la madre di Andrea Sempio: \"Ho paura che la verità non basti\"",
-   "url": "https://www.adnkronos.com/cronaca/andrea-sempio-madre-intervista-quarto-grado_KxffOFqPwEO41sAsLaFhR"
-  },
-  {
-   "data": "2026-10-09T17:59:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "La protesta degli studenti sconfina, guerriglia a Bruxelles",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/09/barricate-e-sassaiole-scontri-tra-studenti-e-polizia-a-bruxelles_c1c2dbe3-04ab-4bc6-be4c-e1ea4f29d92c.html"
-  },
-  {
-   "data": "2026-10-09T17:50:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giovane preso a ginocchiate da un agente a Parigi, indaga la polizia",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/09/giovane-preso-a-ginocchiate-da-un-agente-a-parigi-indaga-la-polizia_bcf40813-5610-4d40-903f-a47a58f93d8a.html"
-  },
-  {
-   "data": "2026-10-09T17:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ranucci, Tribunale respinge il ricorso del giornalista: no al reintegro a Report",
-   "url": "https://www.adnkronos.com/cronaca/sigfrido-ranucci-tribunale-respinge-ricorso_6ZMPgg4xUCaGBISoDuIgUE"
-  },
-  {
-   "data": "2026-10-09T17:43:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Garlasco, in 3 ore Dna su pedali passò da parziale a profilo vittima",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/09/garlasco-in-3-ore-dna-su-pedali-passo-da-parziale-a-profilo-vittima_91c4f151-2a11-4bd3-a183-b199effeef2e.html"
-  },
-  {
-   "data": "2026-10-09T17:42:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, Andrea Sempio: 'La paura che sia vittima di un errore c'è assolutamente'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/08/garlasco-andrea-sempio-la-paura-che-sia-vittima-di-un-errore-ce-assolutamente_52ae364a-169a-4713-97da-d94c27aea538.html"
+   "titolo": "Allude sui social a stragi e atti violenti a scuola, denunciato 14enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/allude-sui-social-a-stragi-e-atti-violenti-a-scuola-denunciato-14enne_c3571ba9-7190-461b-adc5-b8cfe98178ab.html"
   }
  ]
 }
