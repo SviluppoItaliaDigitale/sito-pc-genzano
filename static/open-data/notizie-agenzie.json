@@ -5,28 +5,100 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-10T19:18:10+00:00",
+  "generato": "2026-10-10T22:39:47+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-10T19:14:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump scarica Zelensky: 'Serve un nuovo presidente a Kiev per un accordo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/trump-scarica-zelensky-serve-un-nuovo-presidente-a-kiev-per-un-accordo_d50f315d-6dd5-4025-922d-638d7519a1b9.html"
+   "data": "2026-10-10T22:20:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Campo largo, Appendino contro Renzi: \"Ci fa perdere voti\"",
+   "url": "https://www.adnkronos.com/politica/renzi-campo-largo-m5s-attacco_7wPisj8Tcrz800WaJjeNYH"
   },
   {
-   "data": "2026-10-10T19:11:46+00:00",
+   "data": "2026-10-10T22:18:20+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: Napoli-Frosinone 0-0 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/10/serie-a-napoli-frosinone-0-0-diretta-e-foto_57206b56-039f-4610-9ef4-7db201bb9b37.html"
+   "titolo": "Missile Houthi sull'aeroporto di Riad, almeno 12 morti e oltre 300 feriti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/missile-houthi-sullaeroporto-di-riad-almeno-12-morti-e-scalo-chiuso_da022b8b-30f6-4fe4-9439-2ca256cef92f.html"
   },
   {
-   "data": "2026-10-10T19:10:24+00:00",
+   "data": "2026-10-10T22:11:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dignità della morte e niente spettacolo macabro, perché ultima esecuzione pubblica negli Usa risale al 1936",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-esecuzione-pubblica-hasan-perche-quando-ultima_6H7is0n90ly5VujkbEwitF"
+  },
+  {
+   "data": "2026-10-10T22:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Accordo Trump-Putin per gasolio russo agli Usa, intesa vera o solo annuncio? L'analisi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-accordo-usa-russia-diesel-analisi_6xbGb5VX7Ly8bHxrv5BnMk"
+  },
+  {
+   "data": "2026-10-10T21:53:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrosinistra, Renzi: \"Voto Schlein alle primarie ma senza Italia viva non vince le elezioni\"",
+   "url": "https://www.adnkronos.com/politica/renzi-primarie-pd-m5s-schlein-conte_18gsnN8eydefbXuJuLbuTR"
+  },
+  {
+   "data": "2026-10-10T21:43:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, scoppia la passione tra La Rocca e Muti. Poi il confronto con d'Urso: \"Di cosa dovrei essere gelosa?\"",
+   "url": "https://www.adnkronos.com/spettacoli/ornella-muti-pasquale-la-rocca-bacio-ballando-con-le-stelle_1qSA5hmBEZFwruC0YHn4W4"
+  },
+  {
+   "data": "2026-10-10T21:08:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "All'Inter bastano 30 minuti, Parma travolto 3-0 a S.Siro",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/10/allinter-bastano-30-minuti-parma-travolto-3-0-a-s.siro_3de142c7-04e2-4b64-b000-cc44ad95cfcf.html"
+  },
+  {
+   "data": "2026-10-10T20:54:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Eugenio Finardi si commuove a Ballando, l'abbraccio con Mariotto: \"Per me ha vinto\"",
+   "url": "https://www.adnkronos.com/spettacoli/eugenio-finardi-lacrime-figlia-ballando-con-le-stelle_1aLlKupDiQzL9udCcq7wpy"
+  },
+  {
+   "data": "2026-10-10T20:31:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, Carolyn svela il mistero della paletta sparita di d'Urso: \"Mea culpa\"",
+   "url": "https://www.adnkronos.com/spettacoli/carolyn-smith-barbara-durso-ballando-con-le-stelle_3lVMC9JbqfjuGAl5EO5jU4"
+  },
+  {
+   "data": "2026-10-10T19:37:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cinque escursionisti in difficoltà per il maltempo sulla Maiella",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/cinque-escursionisti-in-difficolta-per-il-maltempo-sulla-maiella_87384f44-6304-4b59-a1e9-942767c4dcbb.html"
+  },
+  {
+   "data": "2026-10-10T19:29:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dall'Asia per le 'gemme nascoste', l'overtourism sulle Dolomiti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/dallasia-per-le-gemme-nascoste-lovertourism-sulle-dolomiti_6626bef0-0466-46bf-99ca-68c9a668ae75.html"
+  },
+  {
+   "data": "2026-10-10T19:28:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Hojlund sbaglia il rigore, arbitro fa ripetere e De Bruyne segna: caos in Napoli-Frosinone",
+   "url": "https://www.adnkronos.com/sport/napoli-frosinone-hojlund-sbaglia-rigore-ribattere-cose-successo_3NfAo37miFLqZKSR0yAqko"
+  },
+  {
+   "data": "2026-10-10T19:21:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 10 ottobre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/estrazione-superenalotto-oggi-10-ottobre-numeri-vincite_21IIogMt1DHELdCudqPDW8"
+  },
+  {
+   "data": "2026-10-10T19:18:54+00:00",
    "fonte": "ANSA",
    "titolo": "L'Ue agli Usa: 'Ritirare le sanzioni alla Cpi, pronti a difenderla'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/lue-agli-usa-ritirare-le-sanzioni-alla-cpi-pronti-a-difenderla_26dac987-1d6b-4687-be63-a67170be2055.html"
+  },
+  {
+   "data": "2026-10-10T19:17:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump scarica Zelensky: 'Serve un nuovo presidente a Kiev per un accordo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/trump-scarica-zelensky-serve-un-nuovo-presidente-a-kiev-per-un-accordo_d50f315d-6dd5-4025-922d-638d7519a1b9.html"
   },
   {
    "data": "2026-10-10T18:58:49+00:00",
@@ -97,7 +169,7 @@
   {
    "data": "2026-10-10T17:59:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Napoli-Frosinone 1-0 - Diretta",
+   "titolo": "Napoli-Frosinone 3-0, Allegri torna a vincere con De Bruyne e Lang",
    "url": "https://www.adnkronos.com/sport/diretta-napoli-frosinone-oggi-serie-a-risultato-live_2ZHam8zU0MexZIita1h3NC"
   },
   {
@@ -117,78 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Morì dissanguato per una coltellata, arrestata la moglie",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/mori-dissanguato-la-moglie-arrestata-per-omicidio-preterintenzionale_17029689-f16d-4668-b1e8-c00af1a4b09d.html"
-  },
-  {
-   "data": "2026-10-10T17:41:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Missile Houthi sull'aeroporto di Riad, 5 feriti e scalo chiuso",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/missile-houthi-sullaeroporto-di-riad-5-feriti-e-scalo-chiuso_da022b8b-30f6-4fe4-9439-2ca256cef92f.html"
-  },
-  {
-   "data": "2026-10-10T17:34:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Procura di Sion apre inchiesta per fuga notizie su Crans-Montana",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/procura-di-sion-apre-inchiesta-per-fuga-notizie-su-crans-montana_152c6e78-ff15-46be-a517-1fc0a4c06b5c.html"
-  },
-  {
-   "data": "2026-10-10T17:20:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Arrestato Donadio boss del clan dei Casalesi sfuggito alla cattura tre giorni fa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/arrestato-donadio-boss-del-clan-dei-casalesi-sfuggito-alla-cattura_3c15fb40-ac78-4253-b268-49093605b77d.html"
-  },
-  {
-   "data": "2026-10-10T17:07:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In migliaia al corteo pro Gaza a Bologna, traffico bloccato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/in-migliaia-al-corteo-pro-gaza-a-bologna-traffico-bloccato_3a6010b8-c0da-44a1-8858-7a8b212887f9.html"
-  },
-  {
-   "data": "2026-10-10T17:06:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La banda della minicar, verifiche sulla denuncia di un'auto rubata",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/la-banda-della-minicar-verifiche-sulla-denuncia-di-unauto-rubata_3d98a72b-ee37-4294-87b8-8eacba645393.html"
-  },
-  {
-   "data": "2026-10-10T17:03:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vittorio Sgarbi, la figlia Evelina: \"Ho tanta paura per papà. Avevo ragione, non era solo depressione\"",
-   "url": "https://www.adnkronos.com/spettacoli/evelina-sgarbi-vittorio-verissimo-cosa-ha-detto_7cUcpQtZUlgFsqPuLkKZlt"
-  },
-  {
-   "data": "2026-10-10T17:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Trump contro Zelensky: \"E' ora di un nuovo presidente\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/donald-trump-attacco-zelensky-ucraina_7nbtUTntR96FVXhrDLqFJd"
-  },
-  {
-   "data": "2026-10-10T16:50:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ad Alessandria sfila il Sudario di Gaza per la Palestina",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/ad-alessandria-sfila-il-sudario-di-gaza-per-la-palestina_995646e5-26ed-4cde-bea9-76496cde0d7c.html"
-  },
-  {
-   "data": "2026-10-10T16:48:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Proposto un taglio da 141 miliardi nel nuovo Bilancio Ue, salve Pac e Coesione",
-   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/10/10/la-presidenza-del-consiglio-ue-propone-un-taglio-di-141-miliardi-al-futuro-bilancio_d72eaa4d-b6d3-480b-82d0-dc095e272e73.html"
-  },
-  {
-   "data": "2026-10-10T16:46:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fallo di Diego Carlos su Esposito, interviene il Var: giusto il rigore in Inter-Parma?",
-   "url": "https://www.adnkronos.com/sport/contatto-esposito-diego-carlos-rigore-cose-successo-inter-parma_3MmQIC2EvtEZ8tFbscwqQo"
-  },
-  {
-   "data": "2026-10-10T16:42:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Conte: \"Non è tutto bianco o nero\"",
-   "url": "https://www.adnkronos.com/politica/conte-ucraina-russia-putin-guerra-news_4dzWGye0z1471U3jHRy8GI"
-  },
-  {
-   "data": "2026-10-10T16:42:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bari, ragazzo denuncia presunte molestie sessuali: parroco ai domiciliari",
-   "url": "https://www.adnkronos.com/cronaca/presunti-abusi-parroco-domiciliari-bari_15yMYCvgvbNAngWCn9y7yw"
   }
  ]
 }

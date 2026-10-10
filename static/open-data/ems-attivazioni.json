@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-10T18:01:13+00:00",
+  "generato": "2026-10-10T22:39:50+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,9 +18,9 @@
    ],
    "eventTime": "2026-10-09T17:56:00",
    "gdacsId": "EQ1570339",
-   "lastUpdate": "2026-10-10T17:20:59.357593",
+   "lastUpdate": "2026-10-10T20:39:15.523907",
    "n_aois": 5,
-   "n_products": 0,
+   "n_products": 2,
    "name": "Earthquake in Los Santos, Panama"
   },
   {
