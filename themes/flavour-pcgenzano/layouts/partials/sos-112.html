@@ -12,9 +12,9 @@
   - ESC chiude
   - Bottone SOS sempre raggiungibile (z-index > tutto)
 */}}
-<button type="button" id="sos-button" class="sos-button" aria-label="Chiama il numero unico di emergenza 112 (con conferma)" aria-haspopup="dialog">
-  <span class="sos-icon" aria-hidden="true">SOS</span>
-  <span class="sos-label">112</span>
+<button type="button" id="sos-button" class="sos-button" aria-haspopup="dialog">
+  <span class="sos-icon">SOS</span>
+  <span class="sos-label">112</span><span class="visually-hidden"> — chiama il numero unico di emergenza (con conferma)</span>
 </button>
 
 <div id="sos-modal" class="sos-modal" role="dialog" aria-modal="true" aria-labelledby="sos-modal-title" aria-describedby="sos-modal-desc" hidden>
