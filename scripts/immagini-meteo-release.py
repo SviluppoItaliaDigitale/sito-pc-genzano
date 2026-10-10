@@ -8,12 +8,13 @@ stanno come allegati della release `immagini-meteo`, che si sovrascrive a ogni
 giro e non pesa sul repository; i metadati JSON restano in git.
 
 Uso (serve `gh` autenticato con GH_TOKEN, oppure in locale `gh auth login`):
-    python3 scripts/immagini-meteo-release.py scarica   # prima della build o dei generatori
+    python3 scripts/immagini-meteo-release.py scarica [--rigoroso]  # prima dei generatori; --rigoroso nel deploy
     python3 scripts/immagini-meteo-release.py carica ecmwf|sinottica  # dopo il generatore, solo i suoi file
 
-`scarica` è fail-safe: se la release non risponde ripiega sulle copie servite
-dal sito pubblicato, e se manca anche quella lo dice ed esce 0 (le immagini
-tornano al deploy successivo). `carica` crea la release se non esiste ancora.
+`scarica` ripiega sulle copie servite dal sito pubblicato se la release non
+risponde. Se manca anche quella esce 0 nei workflow dei generatori; con
+`--rigoroso` (nel deploy) esce 1, perché un caricamento FTP senza quelle
+immagini le cancellerebbe da Aruba. `carica` crea la release se non esiste ancora.
 """
 from __future__ import annotations
 
@@ -58,7 +59,7 @@ def dal_sito(percorso: str, dest: Path) -> bool:
     return True
 
 
-def scarica() -> int:
+def scarica(rigoroso: bool = False) -> int:
     with tempfile.TemporaryDirectory() as tmp:
         r = gh("release", "download", TAG, "--dir", tmp, "--clobber")
         if r.returncode != 0:
@@ -76,8 +77,14 @@ def scarica() -> int:
             else:
                 mancanti.append(percorso)
     if mancanti:
-        print("ATTENZIONE: immagini non recuperate, torneranno al prossimo deploy: "
-              + ", ".join(mancanti))
+        if rigoroso:
+            # Nel deploy: senza queste immagini il caricamento FTP cancellerebbe
+            # da Aruba le ultime copie buone. Meglio fermare il deploy e lasciare
+            # il sito com'è (succede solo se release e sito sono giù insieme).
+            print("ERRORE: immagini meteo non recuperate né dalla release né dal sito: "
+                  + ", ".join(mancanti) + ". Deploy fermato per non cancellarle da Aruba.")
+            return 1
+        print("ATTENZIONE: immagini non recuperate: " + ", ".join(mancanti))
     return 0
 
 
@@ -114,7 +121,7 @@ def carica(gruppo: str) -> int:
 if __name__ == "__main__":
     comando = sys.argv[1] if len(sys.argv) > 1 else ""
     if comando == "scarica":
-        sys.exit(scarica())
+        sys.exit(scarica(rigoroso="--rigoroso" in sys.argv))
     if comando == "carica" and len(sys.argv) > 2 and sys.argv[2] in ("ecmwf", "meteo-sinottica", "sinottica"):
         sys.exit(carica("meteo-sinottica" if sys.argv[2] == "sinottica" else sys.argv[2]))
     print(__doc__)
