@@ -62,6 +62,11 @@
         <p class="dash-s3-nota" id="sat-cfr-stato" aria-live="polite"></p>
       </div>
     </section>
+    <section aria-labelledby="sat-s3-mis-tit" id="sat-s3-mis-sez" hidden>
+      <h3 id="sat-s3-mis-tit" class="dash-s3-tit">Misure Sentinel-3: temperatura del suolo e fuochi</h3>
+      <p class="dash-s3-nota">Numeri letti dall'archivio Copernicus (strumento SLSTR), aggiornati ogni tre ore: la temperatura della <strong>superficie</strong> a Genzano misurata dal satellite, non quella dell'aria, e i fuochi attivi visti nel Lazio e dintorni con la loro potenza. Con le nuvole la temperatura non si misura.</p>
+      <div id="sat-s3-mis" aria-live="polite"></div>
+    </section>
     <section aria-labelledby="sat-s3-ems-tit">
       <h3 id="sat-s3-ems-tit" class="dash-s3-tit">Mappature d'emergenza Copernicus in Italia</h3>
       <div id="sat-s3-ems" aria-live="polite">Lettura…</div>
@@ -170,7 +175,7 @@
     var esc=function(x){ return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
     function s3Pannello(){
       if(s3Avviato) return; s3Avviato=true;
-      s3Passaggi(); s3Prossimo(); s3Ems();
+      s3Passaggi(); s3Prossimo(); s3Misure(); s3Ems();
     }
     function stacCerca(coll,ore,n){
       var a=new Date(Date.now()-ore*3600e3).toISOString().slice(0,19)+'Z';
@@ -343,6 +348,43 @@
       function fine(ev){ if(!inCorso) return; inCorso=false; try{ manico.releasePointerCapture(ev.pointerId); }catch(e){} map.dragging.enable(); }
       manico.addEventListener('pointerup',fine); manico.addEventListener('pointercancel',fine);
     })();
+
+    /* ---- Misure Sentinel-3 (Copernicus): snapshot generato in CI con le chiavi ----
+       Il browser legge solo il JSON della stessa origine; se il file non esiste
+       (chiavi non configurate) la sezione resta nascosta: niente dati di riempimento. */
+    var MIS_JSON='{{ "open-data/copernicus-sentinel3.json" | relURL }}';
+    function s3Misure(){
+      var sez=document.getElementById('sat-s3-mis-sez'), box=document.getElementById('sat-s3-mis');
+      fetch(MIS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
+        var gen=j&&j._snapshot&&j._snapshot.generato?new Date(j._snapshot.generato):null;
+        var vecchio=gen&&(Date.now()-gen.getTime()>12*3600e3);
+        var h='';
+        var suolo=(j&&j.suolo)||[];
+        if(suolo.length){
+          h+='<table class="dash-s3-tab dash-s3-tab-mis"><caption class="visually-hidden">Temperatura della superficie a Genzano per passaggio</caption><thead><tr><th scope="col">Passaggio</th><th scope="col">Satellite</th><th scope="col">Superficie</th><th scope="col">Cielo</th></tr></thead><tbody>';
+          suolo.forEach(function(r){
+            var d=new Date(r.quando);
+            h+='<tr><td>'+(isNaN(d)?'—':fmtOra(d))+(r.giorno===false?' (notte)':'')+'</td><td>'+esc(r.satellite||'—')+'</td><td>'+(typeof r.gradi==='number'?r.gradi.toLocaleString('it-IT')+' °C':'non misurabile')+'</td><td>'+(r.nuvola?'nuvoloso':'sereno')+'</td></tr>';
+          });
+          h+='</tbody></table>';
+        } else {
+          h+='<p class="dash-s3-nota">Nessun passaggio utile su Genzano nella finestra.</p>';
+        }
+        var fu=(j&&j.fuochi&&j.fuochi.punti)||[], scene=(j&&j.fuochi&&j.fuochi.scene)||0;
+        if(fu.length){
+          h+='<p class="dash-s3-nota"><strong>Fuochi attivi</strong> visti dal satellite nel Lazio e dintorni ('+fu.length+' in '+scene+' passaggi), dal più vicino:</p><ul class="dash-s3-list">';
+          fu.slice(0,8).forEach(function(f){
+            var d=new Date(f.quando);
+            h+='<li>'+f.distanza_km+' km a '+esc(f.direzione)+' di Genzano'+(typeof f.mw==='number'?', '+f.mw.toLocaleString('it-IT')+' MW':'')+' · '+(isNaN(d)?'':fmtOra(d))+' · <a href="https://www.openstreetmap.org/?mlat='+f.lat+'&mlon='+f.lon+'#map=12/'+f.lat+'/'+f.lon+'" target="_blank" rel="noopener noreferrer">sulla mappa<span class="visually-hidden"> (si apre in una nuova finestra)</span></a></li>';
+          });
+          h+='</ul><p class="dash-s3-nota">Un punto caldo non è per forza un incendio: può essere una fiaccola industriale o una bruciatura agricola. Per segnalare un incendio chiama il <a href="tel:112">112</a>.</p>';
+        } else {
+          h+='<p class="dash-s3-nota">Nessun fuoco attivo visto dal satellite nel Lazio e dintorni negli ultimi passaggi ('+scene+' scene lette).</p>';
+        }
+        h+='<p class="dash-s3-nota">Aggiornato '+(gen?fmtOra(gen):'—')+(vecchio?' · <strong>dato non aggiornato da oltre 12 ore</strong>':'')+'. '+esc((j&&j._snapshot&&j._snapshot.attribuzione)||'Contiene dati Copernicus Sentinel modificati')+'.</p>';
+        box.innerHTML=h; sez.hidden=false;
+      }).catch(function(){ sez.hidden=true; });
+    }
 
     function s3Ems(){
       var box=document.getElementById('sat-s3-ems');

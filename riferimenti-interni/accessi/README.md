@@ -86,6 +86,7 @@ contenuti sponsorizzati.
 | `FIRECRAWL_API_KEY` | lettura di siti istituzionali con JavaScript o anti-bot | 500 pagine al mese |
 | `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | avvisi sul canale: allerta e nuovi articoli | — |
 | `PEXELS_API_KEY`, `PIXABAY_API_KEY`, `UNSPLASH_ACCESS_KEY` | foto stock, usate di rado per scelta editoriale | — |
+| `CDSE_S3_ACCESS_KEY` + `CDSE_S3_SECRET_KEY` (dal 10/10/2026) | lettura dell'archivio del Copernicus Data Space Ecosystem via S3 (`eodata.dataspace.copernicus.eu`, bucket `eodata`): Sentinel-1/2/3/5P e prodotti CLMS, per gli snapshot `copernicus-*.json` del cruscotto | sola lettura: niente elaborazioni sul loro server (openEO e Sentinel Hub vogliono un client OIDC a parte); quota gratuita 10 TB/mese e 4 scarichi in parallelo; le chiavi si rigenerano dal gestore chiavi S3 dell'account (dataspace.copernicus.eu, «S3 keys manager»), la segreta si vede una volta sola |
 
 ## Limiti che non dipendono da un permesso
 
