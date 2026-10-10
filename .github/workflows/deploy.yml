@@ -160,6 +160,15 @@ jobs:
         # Auto-aggiornamento: ogni push → pacchetti riflettono lo stato corrente.
         run: python3 scripts/genera-pacchetti-schede.py
 
+      - name: "🌦️ Immagini meteo dalla release (carte ECMWF e sinottica)"
+        # Dal 10/10/2026 non sono più in git (crescevano la storia di ~2 GB
+        # l'anno): stanno nella release `immagini-meteo`. Se la release non
+        # risponde le prende dal sito pubblicato; se mancano anche lì il deploy
+        # si ferma, perché il caricamento FTP le cancellerebbe da Aruba.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/immagini-meteo-release.py scarica --rigoroso
+
       - name: "🏗️ Build per Aruba"
         # TZ Europe/Rome: gli orari mostrati al cittadino (utility-bar "Sito
         # aggiornato alle...", banner caldo stagionale) escono in ora italiana

@@ -60,3 +60,9 @@ motion/dist/
 motion/.cache/
 motion/voce/**/line_*.wav
 motion/voce/**/fonemi.txt
+
+# Immagini meteo generate più volte al giorno: stanno nella release
+# `immagini-meteo` e il deploy le scarica (scripts/immagini-meteo-release.py).
+static/images/ecmwf/*.webp
+static/images/meteo-sinottica-italia.webp
+static/images/meteo-sinottica-italia.png

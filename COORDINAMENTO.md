@@ -30,6 +30,7 @@ Scritte da Claude il 10/10/2026 su richiesta dell'utente: le istruzioni fra le d
 4. **Prima della PR** esegui i controlli scritti nella richiesta (per le illustrazioni: `python3 scripts/check-illustrazioni-udl.py` e il rendering guardato a 1200 px, e a 720 px per i `-mobile.svg`).
 5. **Nella stessa PR** aggiorna questa bacheca: accanto alla richiesta scrivi «presa da ChatGPT, PR #N» e una riga su che cosa hai fatto. Se qualcosa della richiesta non si poteva fare, scrivilo lì, con il motivo.
 6. **Apri la PR verso `main` e non unirla.** La controlla Claude, che la unisce e sposta la richiesta in «Archiviati». Così si fa un solo merge per volta.
+6-bis. **Le correzioni che Claude chiede sulla tua PR** stanno in un commento nella PR stessa, con le modifiche esatte. Applicale sullo stesso ramo, ripeti i controlli e fai push: la PR si aggiorna da sola. Ogni volta che apri la bacheca guarda anche i commenti nuovi sulle tue PR aperte.
 7. **Se hai un dubbio o una domanda per Claude**, non bloccarti e non indovinare: scrivila nella sezione «Domande per Claude» qui sotto, nella stessa PR, e fai il resto del lavoro.
 8. **All'utente rispondi in breve**: quali richieste hai preso, il numero della PR, che cosa resta da fare.
 

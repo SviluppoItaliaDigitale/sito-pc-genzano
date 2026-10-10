@@ -49,6 +49,15 @@ jobs:
       - name: "📦 Dipendenze"
         run: pip install --quiet pillow
 
+      - name: "📥 Carte dell'ultimo giro (dalla release, per il confronto)"
+        # Dal 10/10/2026 le carte non sono più in git: stanno nella release
+        # `immagini-meteo` (scripts/immagini-meteo-release.py). Si scaricano
+        # prima, così lo script le confronta e riscrive i metadati solo se
+        # ECMWF ha davvero pubblicato una corsa nuova.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/immagini-meteo-release.py scarica
+
       - name: "🌍 Scarica carte ECMWF OpenCharts"
         run: python3 scripts/genera-ecmwf-charts.py
 
@@ -63,11 +72,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          git add static/images/ecmwf data/ecmwf_charts.json
+          # Le immagini vanno nella release, in git solo i metadati: ogni
+          # versione committata restava per sempre nella storia del repository.
+          git add data/ecmwf_charts.json
           if git diff --cached --quiet; then
             echo "Nessun cambiamento — niente commit."
             exit 0
           fi
+          python3 scripts/immagini-meteo-release.py carica ecmwf
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(meteo): carte ECMWF OpenCharts aggiornate [skip-ecmwf]"

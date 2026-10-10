@@ -285,6 +285,11 @@ def cmd_mancanti(args) -> int:
         fm = S.leggi_frontmatter(p)
         if not fm or S.is_facile(p, fm) or not S.is_online(fm, ora):
             continue
+        # Immagini tolte dalla pulizia periodica (scripts/pulisci-social-bozze.py):
+        # l'articolo è uscito da mesi, i social non lo ripubblicano, quindi una
+        # modifica al testo non deve rigenerarle.
+        if (S.cartella_bozze(p.stem) / S.MARCATORE_PULITO).exists():
+            continue
         scelti[p] = S.online_dal(fm)  # type: ignore[assignment]
 
     n = 0

@@ -774,6 +774,19 @@ def main() -> int:
         out_dir = slug_dir(art["slug"])
         story_path = out_dir / "storia.jpg"
 
+        # Immagini tolte dalla pulizia periodica (scripts/pulisci-social-bozze.py):
+        # senza --force non si rigenerano, neppure con --all, altrimenti un
+        # lancio manuale annullerebbe la pulizia. Con --force si rigenerano e
+        # il marcatore si toglie.
+        marcatore = out_dir / ".immagini-rimosse"
+        if marcatore.exists():
+            if not args.force:
+                print(f"  IMMAGINI RIMOSSE dalla pulizia (--force per rigenerarle): {art['slug']}",
+                      file=sys.stderr)
+                saltati += 1
+                continue
+            marcatore.unlink()
+
         # Piano del carosello (ordine): titolo -> citazione -> punti -> foto -> affiliazioni.
         # Citazione e punti solo se presenti nel frontmatter (social_citazione /
         # social_punti). Affiliazioni: slide finale fissa con Quality Label ESC

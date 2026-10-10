@@ -65,7 +65,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          FILES="static/images/meteo-lazio-animata.svg data/meteo_animazione.json static/images/meteo-sinottica-italia.webp static/images/meteo-sinottica-italia.png data/meteo_sinottica.json"
+          # La sinottica (WebP e PNG) va nella release `immagini-meteo`, non in
+          # git (scripts/immagini-meteo-release.py): ogni versione committata
+          # restava per sempre nella storia. In git solo SVG e metadati.
+          if [ -s static/images/meteo-sinottica-italia.webp ]; then
+            python3 scripts/immagini-meteo-release.py carica sinottica || echo "Caricamento della sinottica non riuscito (non bloccante)"
+          fi
+          FILES="static/images/meteo-lazio-animata.svg data/meteo_animazione.json data/meteo_sinottica.json"
           if git diff --quiet -- $FILES; then
             echo "Nessun cambiamento — niente commit."
             exit 0

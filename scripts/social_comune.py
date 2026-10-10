@@ -49,6 +49,10 @@ BADGE_ESCLUSI_AUTO = frozenset({"Allerta", "Emergenza"})
 # repository privato non accoda più un articolo (non ripesca l'archivio).
 FINESTRA_RECUPERO_ORE = 72
 
+# Lasciato da scripts/pulisci-social-bozze.py nelle cartelle di cui ha tolto le
+# immagini: chi lo trova non le rigenera.
+MARCATORE_PULITO = ".immagini-rimosse"
+
 TESTI = ("x", "facebook", "instagram", "telegram")
 
 
