@@ -43,7 +43,7 @@ OUT_JSON = REPO / "static" / "open-data" / "copernicus-sentinel2.json"
 UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/)"
 STAC = "https://earth-search.aws.element84.com/v1/search"
 GENZANO = (41.7085, 12.6916)
-MEZZO_LATO_KM = 8.0       # 16 km di lato: dentro il solo tile 33TUG (laghi Albano e Nemi compresi)
+MEZZO_LATO_KM = 8.0       # 16 km di lato (laghi Albano e Nemi compresi); a cavallo del confine fra i tile 33TUG e 33TTG
 RISOLUZIONE_M = 10.0      # 1600 x 1600 pixel, WebP di circa 450 KB
 GIORNI = 60
 MAX_SCENE = 8
@@ -83,20 +83,26 @@ def stac_s2() -> list[dict]:
     req = urllib.request.Request(STAC + "?" + q, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as r:
         d = json.load(r)
-    buone = []
-    for f in d.get("features", []):
-        b = f.get("bbox") or []
-        a = f.get("assets", {})
-        # solo i tile che contengono l'intera finestra: una scena tagliata a metà
-        # lascerebbe una fascia nera che sembra un dato
-        if len(b) == 4 and b[0] <= o and b[1] <= s and b[2] >= e and b[3] >= n \
-                and a.get("visual", {}).get("href", "").startswith("https://") and a.get("scl", {}).get("href"):
-            buone.append(f)
-    # una scena per giorno (lo stesso passaggio sta in più tile/riprocessamenti)
-    per_giorno: dict[str, dict] = {}
+    def copre(f: dict) -> float:
+        """Quanta parte della finestra sta dentro il riquadro del tile (0..1)."""
+        b = f.get("bbox") or [0, 0, 0, 0]
+        return max(0.0, min(b[2], e) - max(b[0], o)) * max(0.0, min(b[3], n) - max(b[1], s)) / ((e - o) * (n - s))
+
+    buone = [f for f in d.get("features", [])
+             if len(f.get("bbox") or []) == 4 and copre(f) > 0
+             and f.get("assets", {}).get("visual", {}).get("href", "").startswith("https://")
+             and f.get("assets", {}).get("scl", {}).get("href")]
+    # Per giorno, tutti i tile dello stesso passaggio che toccano la finestra, dal
+    # piu' coprente in giu': la finestra di 16 km cade sul confine occidentale
+    # del tile 33TUG (E = 300.000 m UTM, rilievo di revisione del 10/10/2026),
+    # quindi un tile solo lascia sempre una striscia senza dati e si compone con
+    # il vicino (33TTG). I riprocessamenti dello stesso tile (_0, _1) restano in
+    # elenco: se il primo non copre, il secondo riempie.
+    per_giorno: dict[str, list[dict]] = {}
     for f in buone:
-        g = f["properties"]["datetime"][:10]
-        per_giorno.setdefault(g, f)
+        per_giorno.setdefault(f["properties"]["datetime"][:10], []).append(f)
+    for lst in per_giorno.values():
+        lst.sort(key=copre, reverse=True)
     return [per_giorno[g] for g in sorted(per_giorno, reverse=True)]
 
 
@@ -114,28 +120,50 @@ def leggi(href: str, lato: int, resampling):
                 return vrt.read()
 
 
-def elabora(f: dict, dest: Path) -> dict:
+def componi(feats: list[dict], chiave: str, lato: int, resampling):
+    """Legge la finestra dal primo tile e riempie i pixel senza dati (0) con i tile successivi."""
+    import numpy as np
+
+    out = None
+    usati = []
+    for f in feats:
+        a = leggi(f["assets"][chiave]["href"], lato, resampling)
+        if out is None:
+            out, usati = a, [f["id"]]
+        else:
+            vuoto = np.all(out == 0, axis=0)
+            if not vuoto.any():
+                break
+            out[:, vuoto] = a[:, vuoto]
+            usati.append(f["id"])
+        if not np.all(out == 0, axis=0).any():
+            break
+    return out, usati
+
+
+def elabora(feats: list[dict], dest: Path) -> dict:
     import numpy as np
     from PIL import Image
     from rasterio.enums import Resampling
 
-    a = f["assets"]
-    scl = leggi(a["scl"]["href"], 800, Resampling.nearest)[0]
+    scl, usati = componi(feats, "scl", 800, Resampling.nearest)
+    scl = scl[0]
     valido = scl > 0
     if valido.mean() < 0.9:
-        raise RuntimeError(f"finestra coperta solo al {valido.mean() * 100:.0f}%")
+        raise RuntimeError(f"finestra coperta solo al {valido.mean() * 100:.0f}% ({', '.join(usati)})")
     nuvole = float(np.isin(scl, SCL_NUVOLE)[valido].mean() * 100)
     if nuvole > NUVOLE_MAX:
-        return {"nuvole_pct": round(nuvole), "scartata": True}
+        return {"nuvole_pct": round(nuvole), "scartata": True, "tile": usati}
     lato = int(round(2 * MEZZO_LATO_KM * 1000 / RISOLUZIONE_M))
-    rgb = leggi(a["visual"]["href"], lato, Resampling.bilinear)
+    rgb, usati = componi(feats, "visual", lato, Resampling.bilinear)
     if rgb.shape[0] < 3:
         raise RuntimeError("immagine a colori con meno di 3 bande")
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(".nuovo.webp")
     Image.fromarray(np.moveaxis(rgb[:3], 0, -1).astype("uint8"), "RGB").save(tmp, "WEBP", quality=80, method=6)
     tmp.replace(dest)
-    return {"nuvole_pct": round(nuvole), "scartata": False, "pixel": lato}
+    return {"nuvole_pct": round(nuvole), "scartata": False, "pixel": lato, "tile": usati,
+            "coperta_pct": round(float(valido.mean() * 100), 1)}
 
 
 def main() -> int:
@@ -161,29 +189,30 @@ def main() -> int:
     scartate = set(prec.get("scartate", []))
     scene = dict(gia)
     nuove = 0
-    for f in feats:
-        if len(scene) >= massimo and all(g >= f["properties"]["datetime"][:10] for g in scene):
-            break  # le scene piu' vecchie non entrerebbero comunque
+    for tiles in feats:
+        f = tiles[0]
         p = f["properties"]
         g = p["datetime"][:10]
+        if len(scene) >= massimo and all(x >= g for x in scene):
+            break  # le scene piu' vecchie non entrerebbero comunque
         if g in scene or (g in scartate and not forza):
             continue
         dest = IMG_DIR / f"sentinel2-genzano-{g.replace('-', '')}.webp"
         try:
-            info = elabora(f, dest)
+            info = elabora(tiles, dest)
         except Exception as e:  # noqa: BLE001
-            log(f"Scena {f['id']} non letta ({e}): si riprova al giro dopo.")
+            log(f"Scena del {g} non letta ({e}): si riprova al giro dopo.")
             continue
         if info["scartata"]:
-            log(f"Scena {f['id']}: nuvole sul {info['nuvole_pct']}% della finestra, non si tiene.")
+            log(f"Scena del {g} ({', '.join(info['tile'])}): nuvole sul {info['nuvole_pct']}% della finestra, non si tiene.")
             scartate.add(g)
             continue
         nuove += 1
-        scene[g] = {"id": f["id"], "giorno": g, "quando": p["datetime"],
+        scene[g] = {"id": f["id"], "tile": info["tile"], "giorno": g, "quando": p["datetime"],
                     "satellite": str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel"),
                     "nuvole_pct": info["nuvole_pct"], "nuvole_scena_pct": round(float(p.get("eo:cloud_cover") or 0)),
-                    "immagine": "/images/sentinel/" + dest.name}
-        log(f"Scena {f['id']} scritta: nuvole sul {info['nuvole_pct']}% della finestra.")
+                    "coperta_pct": info["coperta_pct"], "immagine": "/images/sentinel/" + dest.name}
+        log(f"Scena del {g} scritta da {', '.join(info['tile'])}: finestra coperta al {info['coperta_pct']}%, nuvole sul {info['nuvole_pct']}%.")
     ordinate = [scene[g] for g in sorted(scene, reverse=True)][:massimo]
     tenute = {Path(s["immagine"]).name for s in ordinate}
     for vecchio in glob.glob(str(IMG_DIR / "sentinel2-genzano-*.webp")):
