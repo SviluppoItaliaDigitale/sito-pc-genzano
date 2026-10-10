@@ -361,7 +361,7 @@
         var h='';
         var suolo=(j&&j.suolo)||[];
         if(suolo.length){
-          h+='<table class="dash-s3-tab dash-s3-tab-mis"><caption class="visually-hidden">Temperatura della superficie a Genzano per passaggio</caption><thead><tr><th scope="col">Passaggio</th><th scope="col">Satellite</th><th scope="col">Superficie</th><th scope="col">Cielo</th></tr></thead><tbody>';
+          h+='<table class="dash-s3-tab dash-s3-tab-mis"><caption class="visually-hidden">Temperatura della superficie a Genzano per passaggio</caption><thead><tr><th scope="col">Passaggio</th><th scope="col">Satellite</th><th scope="col">Suolo</th><th scope="col">Cielo</th></tr></thead><tbody>';
           suolo.forEach(function(r){
             var d=new Date(r.quando);
             h+='<tr><td>'+(isNaN(d)?'—':fmtOra(d))+(r.giorno===false?' (notte)':'')+'</td><td>'+esc(r.satellite||'—')+'</td><td>'+(typeof r.gradi==='number'?r.gradi.toLocaleString('it-IT')+' °C':'non misurabile')+'</td><td>'+(r.nuvola?'nuvoloso':'sereno')+'</td></tr>';
