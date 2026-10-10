@@ -33,7 +33,7 @@
   <div class="dash-s3" id="sat-s3-box" hidden>
     <section aria-labelledby="sat-s3-pass-tit">
       <h3 id="sat-s3-pass-tit" class="dash-s3-tit">Passaggi usati per il mosaico (ultime 48 ore su Genzano)</h3>
-      <p class="dash-s3-nota">Dal catalogo pubblico Copernicus: ogni riga è una scena dello strumento OLCI che copre Genzano. Le nuvole sono la stima della scena intera, non del solo paese.</p>
+      <p class="dash-s3-nota">Dal catalogo pubblico Copernicus: ogni riga è una scena dello strumento OLCI che copre Genzano. Ore italiane; le nuvole sono la stima della scena intera, non del solo paese.</p>
       <div id="sat-s3-pass" aria-live="polite">Lettura del catalogo…</div>
     </section>
     <section aria-labelledby="sat-s3-next-tit">
@@ -188,7 +188,7 @@
         r[1].forEach(function(f){ var p=f.properties||{}; if(p.datetime&&typeof p['eo:cloud_cover']==='number') nuvole[p.datetime]=p['eo:cloud_cover']; });
         if(!scene.length){ box.textContent='Nessuna scena OLCI su Genzano nelle ultime 48 ore nel catalogo.'; return; }
         scene.sort(function(a,b){ return (b.properties.datetime||'').localeCompare(a.properties.datetime||''); });
-        var h='<table class="dash-s3-tab"><thead><tr><th scope="col">Satellite</th><th scope="col">Passaggio (ora italiana)</th><th scope="col">Nuvole sulla scena</th><th scope="col">Anteprima</th></tr></thead><tbody>';
+        var h='<table class="dash-s3-tab"><thead><tr><th scope="col">Satellite</th><th scope="col">Passaggio</th><th scope="col">Nuvole</th><th scope="col">Scena</th></tr></thead><tbody>';
         scene.forEach(function(f){
           var p=f.properties||{}, d=new Date(p.datetime), sat=String(p.platform||'').replace('sentinel-','Sentinel-').toUpperCase().replace('SENTINEL','Sentinel');
           var nv=nuvole[p.datetime]; var th=f.assets&&f.assets.thumbnail&&f.assets.thumbnail.href;
