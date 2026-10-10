@@ -1,10 +1,11 @@
 # Misure Sentinel-3 da Copernicus (temperatura del suolo a Genzano, fuochi nel
-# Lazio) per la scheda satellite del cruscotto. I numeri stanno nell'archivio
+# Lazio) e radar Sentinel-1 su Genzano (finestra di 30 km letta via S3 dal COG,
+# immagini nella release immagini-meteo) per la scheda satellite del cruscotto. I numeri stanno nell'archivio
 # del Copernicus Data Space Ecosystem, che si legge con chiavi S3 di sola
 # lettura (segreti CDSE_S3_ACCESS_KEY / CDSE_S3_SECRET_KEY): senza chiavi lo
 # script non scrive nulla. Ogni 3 ore: i prodotti NRT arrivano 2-3 ore dopo il
 # passaggio. Fail-safe: fonte giù = file invariato. Dettagli nello script.
-name: "🛰️ Misure Sentinel-3 (Copernicus)"
+name: "🛰️ Misure Sentinel-3 e radar Sentinel-1 (Copernicus)"
 
 on:
   schedule:
@@ -34,7 +35,7 @@ jobs:
           python-version: "3.x"
 
       - name: "📦 Dipendenze"
-        run: pip install -q boto3 netCDF4 numpy
+        run: pip install -q boto3 netCDF4 numpy rasterio pillow
 
       - name: "🛰️ Scarica e riassume"
         env:
@@ -47,17 +48,31 @@ jobs:
             *)        python3 scripts/genera-copernicus-sentinel3.py ;;
           esac
 
+      - name: "📡 Radar Sentinel-1 su Genzano (solo scene nuove)"
+        if: github.ref == 'refs/heads/main' && (github.event.inputs.modo == '' || github.event.inputs.modo == 'snapshot')
+        env:
+          CDSE_S3_ACCESS_KEY: ${{ secrets.CDSE_S3_ACCESS_KEY }}
+          CDSE_S3_SECRET_KEY: ${{ secrets.CDSE_S3_SECRET_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/immagini-meteo-release.py scarica || true
+          python3 scripts/genera-copernicus-sentinel1.py
+          if [ -f static/images/sentinel/sentinel1-genzano.webp ]; then
+            python3 scripts/immagini-meteo-release.py carica sentinel1 || echo "Caricamento nella release non riuscito: i metadati restano quelli precedenti."
+          fi
+
       - name: "💾 Commit solo se i dati sono cambiati"
         if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           [ -f static/open-data/copernicus-sentinel3.json ] && git add static/open-data/copernicus-sentinel3.json || true
+          [ -f static/open-data/copernicus-sentinel1.json ] && git add static/open-data/copernicus-sentinel1.json || true
           if git diff --cached --quiet; then
             echo "Snapshot invariato: nessun commit."
             exit 0
           fi
-          git commit -m "[skip-dati-sala] Misure Sentinel-3 (Copernicus): temperatura del suolo e fuochi"
+          git commit -m "[skip-dati-sala] Copernicus: misure Sentinel-3 e radar Sentinel-1"
           for try in 1 2 3; do
             if git pull --rebase --autostash origin main && git push origin HEAD:main; then
               echo "Snapshot pubblicato (tentativo $try)."; exit 0

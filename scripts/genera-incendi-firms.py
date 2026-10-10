@@ -37,7 +37,9 @@ UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/)"
 USCITA = pathlib.Path(__file__).resolve().parent.parent / "static" / "open-data" / "incendi-firms.json"
 # Riquadro dell'Italia: ovest,sud,est,nord (come vuole l'API).
 AREA = "6.4,35.2,18.8,47.2"
-SENSORI = ("VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT")
+# Suomi NPP cessa di consegnare dati il 2 novembre 2026 (avviso NASA Earthdata):
+# NOAA-21 e' il suo successore ed entra dal 10/10/2026; SNPP resta finche' risponde.
+SENSORI = ("VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT")
 GIORNI = 1  # solo le ultime 24 ore: oltre non è più "tempo reale"
 BASE = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/{key}/{sensore}/{area}/{giorni}"
 
@@ -114,7 +116,7 @@ def main() -> int:
     dati = {
         "_snapshot": {
             "generato": ora(),
-            "fonte": "NASA FIRMS — VIIRS (Suomi-NPP e NOAA-20), dati near real-time",
+            "fonte": "NASA FIRMS — VIIRS (Suomi-NPP, NOAA-20 e NOAA-21), dati near real-time",
             "fonte_url": "https://firms.modaps.eosdis.nasa.gov/",
             "sensori": sensori_ok,
             "finestra_ore": GIORNI * 24,
