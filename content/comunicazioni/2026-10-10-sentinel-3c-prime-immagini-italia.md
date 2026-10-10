@@ -30,7 +30,9 @@ L'immagine è stata ripresa il **30 settembre** dallo strumento che osserva il c
 
 Al centro si riconosce la **Pianura Padana**. A nord ci sono le **Alpi** già innevate. Lungo la costa adriatica il mare è più chiaro vicino alla riva: secondo l'ESA, probabilmente per i sedimenti che i fiumi portano in mare e che le correnti spostano lungo la costa. Il Tirreno appare più scuro, con la Sardegna e la Sicilia ben visibili. La Corsica è quasi tutta coperta dalle nuvole.
 
-L'immagine si può vedere intera, ad alta risoluzione, sulla [pagina dell'ESA](https://www.esa.int/ESA_Multimedia/Images/2026/10/Italy_and_beyond_imaged_by_Sentinel-3C).
+{{< foto src="/images/2026-10-10-sentinel-3c-italia-30-settembre.webp"
+         alt="Immagine satellitare a colori naturali dell'Italia e dei Paesi vicini: in alto le Alpi, in parte coperte da nuvole bianche, e la Pianura Padana velata. A destra il mare Adriatico, con acqua più chiara lungo la costa italiana, e la costa dei Balcani. A sinistra un'ampia fascia di nuvole sul mar Tirreno; in basso si riconoscono la Sardegna e la Sicilia."
+         caption="L'Italia ripresa da Sentinel-3C il 30 settembre 2026. Lungo la costa adriatica l'acqua più chiara è dovuta probabilmente ai sedimenti portati dai fiumi. Immagine: © ESA, contiene dati Copernicus Sentinel modificati (2026), elaborati dall'ESA. [Versione ad alta risoluzione sul sito dell'ESA](https://www.esa.int/ESA_Multimedia/Images/2026/10/Italy_and_beyond_imaged_by_Sentinel-3C)." >}}
 
 Nelle stesse giornate il satellite ha fotografato anche l'arcipelago artico canadese, a ovest della Groenlandia. Un'altra immagine mostra i Caraibi, con Cuba e le Bahamas.
 
