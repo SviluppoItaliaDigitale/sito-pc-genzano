@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-10T13:02",
+  "aggiornato": "2026-10-10T14:02",
   "data_lunga": "sabato 10 ottobre 2026",
-  "aggiornato_label": "sabato 10 ottobre 2026, ore 13:02",
+  "aggiornato_label": "sabato 10 ottobre 2026, ore 14:02",
   "alba": "07:15",
   "tramonto": "18:36",
   "corrente": {
-    "temp": 16.5,
-    "percepita": 17.0,
+    "temp": 16.3,
+    "percepita": 16.6,
     "cielo": "Rovesci",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
-    "umidita": 90,
-    "vento": 8,
-    "raffiche": 35
+    "umidita": 91,
+    "vento": 9,
+    "raffiche": 34
   },
   "giorni": [
     {
@@ -21,8 +21,8 @@
       "tmax": 16,
       "tmin": 14,
       "pioggia": 70,
-      "pioggia_mm": 7.3,
-      "raffiche": 36,
+      "pioggia_mm": 8.4,
+      "raffiche": 37,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -33,8 +33,8 @@
       "tmax": 21,
       "tmin": 14,
       "pioggia": 5,
-      "pioggia_mm": 0.2,
-      "raffiche": 56,
+      "pioggia_mm": 0.5,
+      "raffiche": 58,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -47,7 +47,7 @@
       "pioggia": 10,
       "pioggia_mm": 0,
       "raffiche": 16,
-      "uv": 4,
+      "uv": 5,
       "uv_label": "moderato"
     },
     {
