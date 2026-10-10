@@ -18,15 +18,15 @@
               '<nav aria-label="Navigazione enti istituzionali">' +
                 '<a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu-enti" role="button" aria-expanded="false" aria-controls="menu-enti"><span>Enti istituzionali</span><svg class="icon icon-sm"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg></a>' +
                 '<div class="link-list-wrapper collapse" id="menu-enti"><ul class="link-list" role="list">' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma" aria-label="Sito del Comune di Genzano di Roma (si apre in una nuova finestra)"><strong>Genzano di Roma</strong></a></li>' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile" aria-label="Dipartimento Nazionale della Protezione Civile (si apre in una nuova finestra)">DPC</a></li>' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio" aria-label="Agenzia Regionale di Protezione Civile del Lazio (si apre in una nuova finestra)">AR PC Lazio</a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma"><strong>Genzano di Roma</strong><span class="visually-hidden"> — sito del Comune (si apre in una nuova finestra)</span></a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile">DPC<span class="visually-hidden"> — Dipartimento della Protezione Civile (si apre in una nuova finestra)</span></a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio">AR PC Lazio<span class="visually-hidden"> — Agenzia regionale di Protezione Civile del Lazio (si apre in una nuova finestra)</span></a></li>' +
                 '</ul></div>' +
               '</nav>' +
             '</div>' +
             '<div class="it-header-slim-right-zone" role="navigation" aria-label="Link rapidi e social">' +
               '<a href="' + SITE_URL + '/facile-da-leggere/" class="btn btn-slim-header btn-easy-read me-2" aria-label="Vai alla versione facile da leggere del sito"><i class="bi bi-book-half me-1" aria-hidden="true"></i><span class="d-none d-md-inline">Facile da leggere</span><span class="d-md-none">Aa</span></a>' +
-              '<a href="' + SITE_URL + '/area-volontari/" class="btn btn-slim-header btn-area-volontari me-3" aria-label="Area Volontari: informazioni e accesso al gestionale"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i><span class="d-none d-sm-inline">Area Volontari</span><span class="d-sm-none">Accedi</span></a>' +
+              '<a href="' + SITE_URL + '/area-volontari/" class="btn btn-slim-header btn-area-volontari me-3"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i><span class="d-none d-sm-inline">Area Volontari</span><span class="d-sm-none">Accedi</span><span class="visually-hidden">: informazioni e accesso al gestionale dei volontari</span></a>' +
               '<span class="slim-header-divider d-none d-lg-inline" aria-hidden="true"></span>' +
               '<a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-white me-2"><i class="bi bi-facebook" aria-hidden="true"></i></a>' +
               '<a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-white me-2"><i class="bi bi-instagram" aria-hidden="true"></i></a>' +
@@ -42,12 +42,13 @@
         '<div class="row"><div class="col-12">' +
           '<div class="it-header-center-content-wrapper">' +
             '<div class="it-brand-wrapper">' +
-              '<a href="' + SITE_URL + '/" aria-label="Torna alla pagina iniziale">' +
+              '<a href="' + SITE_URL + '/">' +
                 '<img src="' + SITE_URL + '/images/logo-pc-genzano.png" alt="" width="82" height="82" aria-hidden="true">' +
                 '<div class="it-brand-text">' +
                   '<div class="it-brand-title">Protezione Civile</div>' +
                   '<div class="it-brand-tagline d-none d-md-block">Gruppo Comunale Volontari di Genzano di Roma</div>' +
                 '</div>' +
+                '<span class="visually-hidden"> — torna alla pagina iniziale</span>' +
               '</a>' +
             '</div>' +
             '<div class="it-right-zone">' +
@@ -263,9 +264,9 @@
      MARKUP DA TENERE ALLINEATO con i partial Hugo citati sopra.
      ---------------------------------------------------------------- */
   var SOS_HTML =
-    '<button type="button" id="sos-button" class="sos-button" aria-label="Chiama il numero unico di emergenza 112 (con conferma)" aria-haspopup="dialog">' +
-      '<span class="sos-icon" aria-hidden="true">SOS</span>' +
-      '<span class="sos-label">112</span>' +
+    '<button type="button" id="sos-button" class="sos-button" aria-haspopup="dialog">' +
+      '<span class="sos-icon">SOS</span>' +
+      '<span class="sos-label">112</span><span class="visually-hidden"> — chiama il numero unico di emergenza (con conferma)</span>' +
     '</button>' +
     '<div id="sos-modal" class="sos-modal" role="dialog" aria-modal="true" aria-labelledby="sos-modal-title" aria-describedby="sos-modal-desc" hidden>' +
       '<div class="sos-modal-backdrop" data-sos-close="true" aria-hidden="true"></div>' +

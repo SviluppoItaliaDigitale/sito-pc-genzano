@@ -41,21 +41,21 @@
     {{- range $videos }}
     {{- $canale := index $canali .canale }}
     <li class="video-correlati-item">
-      <a class="video-correlati-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-         aria-label="Apri su YouTube: {{ .titolo }} (si apre in nuova scheda)">
+      <a class="video-correlati-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
         <span class="video-correlati-icona" aria-hidden="true">
           <i class="bi bi-play-circle-fill"></i>
         </span>
         <span class="video-correlati-meta">
           <span class="video-correlati-titolo">
             {{ .titolo }}
-            {{- if .is_lis }} <span class="video-correlati-lis-badge" aria-label="Disponibile anche in Lingua Italiana dei Segni">in LIS</span>{{ end }}
+            {{- if .is_lis }} <span class="video-correlati-lis-badge">in LIS</span>{{ end }}
           </span>
           <span class="video-correlati-canale">
             {{- with $canale }}{{ .nome }}{{ else }}{{ $.canale }}{{ end }}
             <span class="video-correlati-arrow" aria-hidden="true">↗</span>
           </span>
         </span>
+        <span class="visually-hidden">(video su YouTube, si apre in una nuova scheda)</span>
       </a>
     </li>
     {{- end }}

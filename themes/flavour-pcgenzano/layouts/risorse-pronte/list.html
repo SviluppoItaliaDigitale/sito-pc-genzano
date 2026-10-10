@@ -148,10 +148,9 @@
                     {{ end }}
                     {{ if $fileUrl }}
                     <a href="{{ $fileUrl | relURL }}" class="btn btn-sm btn-outline-primary mt-auto"
-                       {{ if ne $tipo "podcast" }}download{{ end }}
-                       aria-label="Scarica {{ $titolo }}">
+                       {{ if ne $tipo "podcast" }}download{{ end }}>
                       <i class="bi bi-download me-1" aria-hidden="true"></i>
-                      {{ if eq $tipo "podcast" }}Scarica audio{{ else }}Scarica{{ end }}
+                      {{ if eq $tipo "podcast" }}Scarica audio{{ else }}Scarica{{ end }}<span class="visually-hidden">: {{ $titolo }}</span>
                     </a>
                     {{ end }}
                   </div>

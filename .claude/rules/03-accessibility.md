@@ -59,9 +59,9 @@ Il controllo si fa **eseguendo axe sulla pagina renderizzata, in ogni vista e a 
 
 ### Link e pulsanti
 - Nessun link con testo generico ("clicca qui", "leggi", "scopri di più") senza contesto
-- Icone-link o icone-pulsante con `aria-label` o `title` descrittivo
+- Icone-link o icone-pulsante con `aria-label` o `title` descrittivo **solo se non hanno testo visibile**. 🔴 Se il link o il pulsante ha testo visibile, il nome accessibile deve **cominciare con quel testo** (WCAG 2.5.3 *Label in Name*): niente `aria-label` che lo riscrive; il contesto in più per lo screen reader va **dopo**, in uno `<span class="visually-hidden">` dentro l'elemento (es. `DPC<span class="visually-hidden"> — Dipartimento della Protezione Civile (si apre in una nuova finestra)</span>`). Chi detta comandi vocali pronuncia ciò che vede: con un nome diverso, il comando non trova il pulsante. Lo controlla il gate `pa11y-ci.yml` (axe-core 4.14, regola `label-content-name-mismatch`): i nodi segnalati sono stati corretti il 10/10/2026 nei componenti comuni, in `/lis/`, `/risorse-pronte/` e nelle pagine statiche (issue #1218).
 - Link a documenti: indicare tipo e dimensione (es. "Ordinanza sindacale (PDF, 120 KB)")
-- Link che aprono nuova finestra: segnalarlo nel testo o con aria-label
+- Link che aprono nuova finestra: segnalarlo nel testo, visibile o in uno `<span class="visually-hidden">` dopo il testo del link (mai con un `aria-label` che sostituisce il testo visibile)
 
 ### Componenti dinamici
 - Componenti ARIA (modale, accordion, dropdown, tab) implementati con pattern corretti

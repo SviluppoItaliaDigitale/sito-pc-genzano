@@ -34,10 +34,9 @@
 {{- end -}}
 {{- if gt $n 0 -}}
 <div class="lis-badge-wrap" data-pagefind-ignore>
-  <a class="lis-badge" href="{{ printf "lis/#%s" $famKey | relURL }}"
-     aria-label="Contenuti su questo tema disponibili in Lingua Italiana dei Segni: {{ $n }} video — apri la sezione dedicata">
+  <a class="lis-badge" href="{{ printf "lis/#%s" $famKey | relURL }}">
     <span class="lis-badge-ico" aria-hidden="true">LIS</span>
-    <span>{{ $n }} video in LIS disponibili</span>
+    <span>{{ $n }} video in LIS disponibili</span><span class="visually-hidden"> — apri la sezione dedicata ai video in Lingua Italiana dei Segni su questo tema</span>
   </a>
 </div>
 {{- end -}}

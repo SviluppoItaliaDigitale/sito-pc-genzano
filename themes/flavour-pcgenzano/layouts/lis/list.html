@@ -75,8 +75,7 @@
           {{- $v := .v }}
           {{- $fonte := index $fonti $v.fonte }}
           <li class="lis-video-item">
-            <a class="lis-video-link" href="{{ $v.youtube_url }}" target="_blank" rel="noopener noreferrer"
-               aria-label="Apri su YouTube: {{ $v.titolo }} (si apre in nuova scheda)">
+            <a class="lis-video-link" href="{{ $v.youtube_url }}" target="_blank" rel="noopener noreferrer">
               <span class="lis-video-titolo">{{ $v.titolo }}</span>
               <span class="lis-video-meta">
                 {{- /* Durata nascosta per uniformità: è valorizzata solo su ~metà
@@ -87,6 +86,7 @@
                 <span class="lis-video-fonte">{{ $fonte.nome }}</span>
                 <span class="lis-video-arrow" aria-hidden="true">↗</span>
               </span>
+              <span class="visually-hidden">(video su YouTube, si apre in una nuova scheda)</span>
             </a>
             {{- with $v.note }}<p class="lis-video-note">{{ . }}</p>{{ end }}
           </li>

@@ -35,8 +35,7 @@
   <div class="row g-3">
     {{ range $correlati }}
     <div class="col-md-4">
-      <a class="articolo-correlato-card" href="{{ .RelPermalink }}"
-         aria-label="Leggi l'articolo: {{ .Title }}">
+      <a class="articolo-correlato-card" href="{{ .RelPermalink }}">
         {{ with .Params.image }}
         <div class="articolo-correlato-img">
           <img src="{{ . | relURL }}" alt="" aria-hidden="true" {{ partial "dimensioni-immagine.html" . }} loading="lazy">
