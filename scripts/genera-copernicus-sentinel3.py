@@ -264,6 +264,26 @@ def main() -> int:
         if not suolo and not scene_frp:
             log("Nessuna scena letta: snapshot lasciato com'era.")
             return 0
+        # Lo stesso fuoco compare sia nel CSV MWIR (1 km) sia in quello SWIR (500 m):
+        # si tiene una riga per punto (griglia di ~1 km, stesso passaggio), preferendo
+        # la rilevazione MWIR, che e' lo schema standard del prodotto.
+        unici: dict[tuple, dict] = {}
+        for f in sorted(fuochi, key=lambda x: 0 if x["canale"].startswith("MWIR") else 1):
+            k = (round(f["lat"], 2), round(f["lon"], 2), (f["quando"] or "")[:13])
+            unici.setdefault(k, f)
+        fuochi = list(unici.values())
+        # Nessuna scena FRP letta (fonte muta solo su quel prodotto): si conserva il
+        # blocco dei fuochi dello snapshot precedente invece di dichiarare «nessun
+        # fuoco», che sarebbe un'assenza inventata.
+        blocco_fuochi = {"scene": scene_frp, "punti": fuochi, "riquadro": BBOX_LAZIO}
+        if scene_frp == 0 and OUT.is_file():
+            try:
+                prec = json.loads(OUT.read_text(encoding="utf-8")).get("fuochi")
+                if isinstance(prec, dict) and prec.get("scene"):
+                    blocco_fuochi = dict(prec, conservato_da=json.loads(OUT.read_text(encoding="utf-8")).get("_snapshot", {}).get("generato"))
+                    log("Nessuna scena FRP letta: conservato il blocco dei fuochi precedente.")
+            except (OSError, ValueError):
+                pass
         fuochi.sort(key=lambda x: x["distanza_km"])
         out = {
             "_snapshot": {"generato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -271,7 +291,7 @@ def main() -> int:
                           "attribuzione": f"Contiene dati Copernicus Sentinel modificati {dt.date.today().year}",
                           "finestra_ore": ORE},
             "suolo": suolo,
-            "fuochi": {"scene": scene_frp, "punti": fuochi, "riquadro": BBOX_LAZIO},
+            "fuochi": blocco_fuochi,
         }
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         log(f"Snapshot scritto: {len(suolo)} letture di temperatura, {len(fuochi)} fuochi in {scene_frp} scene.")

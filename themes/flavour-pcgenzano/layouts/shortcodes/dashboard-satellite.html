@@ -387,9 +387,15 @@
       var sez=document.getElementById('sat-s3-mis-sez'), box=document.getElementById('sat-s3-mis');
       fetch(MIS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
         var gen=j&&j._snapshot&&j._snapshot.generato?new Date(j._snapshot.generato):null;
-        var vecchio=gen&&(Date.now()-gen.getTime()>12*3600e3);
-        var h='';
         var suolo=(j&&j.suolo)||[];
+        var fu=(j&&j.fuochi&&j.fuochi.punti)||[], scene=(j&&j.fuochi&&j.fuochi.scene)||0;
+        // la vetusta' si misura sull'ultima OSSERVAZIONE, non sull'ora in cui il
+        // workflow ha riscritto il file: un catalogo che risponde senza scene nuove
+        // rigenera lo snapshot ogni tre ore con dentro misure sempre piu' vecchie
+        var ultima=null;
+        suolo.concat(fu).forEach(function(r){ var d=new Date(r.quando); if(!isNaN(d)&&(!ultima||d>ultima)) ultima=d; });
+        var vecchio=!ultima||(Date.now()-ultima.getTime()>12*3600e3);
+        var h='';
         if(suolo.length){
           h+='<table class="dash-s3-tab dash-s3-tab-mis"><caption class="visually-hidden">Temperatura della superficie a Genzano per passaggio</caption><thead><tr><th scope="col">Passaggio</th><th scope="col">Satellite</th><th scope="col">Suolo</th><th scope="col">Cielo</th></tr></thead><tbody>';
           suolo.forEach(function(r){
@@ -400,8 +406,9 @@
         } else {
           h+='<p class="dash-s3-nota">Nessun passaggio utile su Genzano nella finestra.</p>';
         }
-        var fu=(j&&j.fuochi&&j.fuochi.punti)||[], scene=(j&&j.fuochi&&j.fuochi.scene)||0;
-        if(fu.length){
+        if(!scene){
+          h+='<p class="dash-s3-nota">Fuochi attivi: dato non disponibile in questo momento (nessuna scena letta dall\'archivio).</p>';
+        } else if(fu.length){
           h+='<p class="dash-s3-nota"><strong>Fuochi attivi</strong> visti dal satellite nel Lazio e dintorni ('+fu.length+' in '+scene+' passaggi), dal più vicino:</p><ul class="dash-s3-list">';
           fu.slice(0,8).forEach(function(f){
             var d=new Date(f.quando);
@@ -411,7 +418,7 @@
         } else {
           h+='<p class="dash-s3-nota">Nessun fuoco attivo visto dal satellite nel Lazio e dintorni negli ultimi passaggi ('+scene+' scene lette).</p>';
         }
-        h+='<p class="dash-s3-nota">Aggiornato '+(gen?fmtOra(gen):'—')+(vecchio?' · <strong>dato non aggiornato da oltre 12 ore</strong>':'')+'. '+esc((j&&j._snapshot&&j._snapshot.attribuzione)||'Contiene dati Copernicus Sentinel modificati')+'.</p>';
+        h+='<p class="dash-s3-nota">Ultima osservazione '+(ultima?fmtOra(ultima):'—')+(gen?', file aggiornato '+fmtOra(gen):'')+(vecchio?' · <strong>misure più vecchie di 12 ore</strong>':'')+'. '+esc((j&&j._snapshot&&j._snapshot.attribuzione)||'Contiene dati Copernicus Sentinel modificati')+'.</p>';
         box.innerHTML=h; sez.hidden=false;
       }).catch(function(){ sez.hidden=true; });
     }
