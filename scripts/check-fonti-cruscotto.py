@@ -136,6 +136,36 @@ def chk_stac_copernicus():
     return True, f"HTTP 200, {n} scene nelle ultime 72 ore"
 
 
+def chk_earth_search_s2():
+    # Catalogo Earth Search (Element 84, AWS Open Data) delle scene Sentinel-2 L2A
+    # su Genzano, da cui genera-copernicus-sentinel2.py ritaglia le immagini a
+    # 10 m. Un passaggio ogni 2-3 giorni e il prodotto esce il giorno dopo:
+    # dieci giorni senza scene sono un guasto. Si prova anche l'archivio COG
+    # con una richiesta parziale (i primi KB del primo file), perche' catalogo
+    # e archivio sono due servizi diversi.
+    a = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    url = ("https://earth-search.aws.element84.com/v1/search?collections=sentinel-2-l2a"
+           "&bbox=12.60,41.64,12.78,41.78&datetime=" + a + "/..&limit=5&sortby=-properties.datetime")
+    ok, det, _, j = _get(url, expect_json=True)
+    if not ok:
+        return ok, det
+    feats = j.get("features", []) if isinstance(j, dict) else []
+    if not feats:
+        return False, "HTTP 200 ma nessuna scena Sentinel-2 su Genzano negli ultimi 10 giorni"
+    href = feats[0].get("assets", {}).get("visual", {}).get("href", "")
+    if not href.startswith("https://"):
+        return False, "catalogo OK ma il primo elemento non ha l'immagine a colori (visual)"
+    try:
+        req = urllib.request.Request(href, headers={"User-Agent": UA, "Range": "bytes=0-1023"})
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            dati = r.read()
+        if r.status not in (200, 206) or len(dati) < 100:
+            return False, f"archivio COG: risposta {r.status} di {len(dati)} byte"
+    except Exception as e:  # noqa: BLE001
+        return False, f"catalogo OK ({len(feats)} scene), archivio COG non leggibile: {e}"
+    return True, f"HTTP 200, {len(feats)} scene negli ultimi 10 giorni, archivio COG leggibile"
+
+
 def chk_cams_eu():
     # CAMS Europe via WMS pubblico ECMWF (token=public). Bbox Italia, layer PM2.5.
     # Il server risponde HTTP 302 -> redirect al PNG renderizzato in CDN streaming.
@@ -393,6 +423,7 @@ SORGENTI = [
     ("Satellite alta risoluzione — EUMETSAT", "Satellite", lambda: chk_wms_getmap("mtg_fd:vis06_hrfi", "https://view.eumetsat.int/geoserver/wms")),
     ("Satellite Sentinel-3 — Copernicus/EUMETSAT", "Satellite", chk_sentinel3),
     ("Catalogo scene Sentinel-3 — Copernicus STAC", "Satellite", chk_stac_copernicus),
+    ("Scene Sentinel-2 — Earth Search/AWS Open Data", "Satellite", chk_earth_search_s2),
     ("Satellite suolo — NASA GIBS", "Satellite", chk_gibs),
     ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
