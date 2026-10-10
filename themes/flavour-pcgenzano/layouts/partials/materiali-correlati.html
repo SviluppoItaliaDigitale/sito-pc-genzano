@@ -74,7 +74,6 @@
                class="card materiali-correlati-card h-100 text-decoration-none"
                {{ if ne .tipo "podcast" }}download{{ end }}>
               <div class="card-body d-flex flex-column">
-                <span class="visually-hidden">Scarica: </span>
                 <div class="risorsa-tipo mb-2">
                   {{ if eq .tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
                   {{ else if eq .tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
@@ -91,6 +90,7 @@
                 {{ with .durata }}<small class="text-muted"><i class="bi bi-clock me-1" aria-hidden="true"></i>{{ . }}</small>{{ end }}
                 {{ with .dimensione }}<small class="text-muted ms-2">{{ . }}</small>{{ end }}
                 {{ with .licenza }}<small class="text-muted d-block mt-1">Licenza {{ . }}</small>{{ end }}
+                <span class="visually-hidden">({{ if eq .tipo "podcast" }}apri o scarica il file audio{{ else }}scarica il file{{ end }})</span>
               </div>
             </a>
           </div>
