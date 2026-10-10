@@ -192,7 +192,7 @@
         scene.forEach(function(f){
           var p=f.properties||{}, d=new Date(p.datetime), sat=String(p.platform||'').replace('sentinel-','Sentinel-').toUpperCase().replace('SENTINEL','Sentinel');
           var nv=nuvole[p.datetime]; var th=f.assets&&f.assets.thumbnail&&f.assets.thumbnail.href;
-          h+='<tr><td>'+esc(sat)+'</td><td>'+(isNaN(d)?'—':fmtOra(d))+'</td><td>'+(typeof nv==='number'?Math.round(nv)+'%':'—')+'</td><td>'+(th&&/^https:\/\//.test(th)?'<a href="'+esc(th)+'" target="_blank" rel="noopener noreferrer">miniatura<span class="visually-hidden"> della scena '+esc(sat)+' '+(isNaN(d)?'':fmtOra(d))+' (file scaricato, si apre in una nuova finestra)</span></a>':'—')+'</td></tr>';
+          h+='<tr><td>'+esc(sat)+'</td><td>'+(isNaN(d)?'—':fmtOra(d))+'</td><td>'+(typeof nv==='number'?Math.round(nv)+'%':'—')+'</td><td>'+(th&&/^https:\/\//.test(th)?'<a href="'+esc(th)+'" target="_blank" rel="noopener noreferrer">apri la scena<span class="visually-hidden"> '+esc(sat)+' '+(isNaN(d)?'':fmtOra(d))+' (file scaricato, si apre in una nuova finestra)</span></a>':'—')+'</td></tr>';
         });
         box.innerHTML=h+'</tbody></table>';
       }).catch(function(){ box.textContent='Catalogo Copernicus non raggiungibile in questo momento.'; });

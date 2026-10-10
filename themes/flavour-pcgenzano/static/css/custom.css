@@ -7940,7 +7940,7 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
 .dash-s3-tit { font-size: .95rem; font-weight: 600; color: #003366; margin: 0 0 .3rem; }
 .dash-s3-nota { font-size: .82rem; color: #495057; margin: .3rem 0 0; }
 .dash-s3-tab { width: 100%; border-collapse: collapse; font-size: .85rem; table-layout: fixed; } /* colonne uguali: su telefono 4 colonne libere sbordavano di 35 px */
-.dash-s3-tab td { overflow-wrap: anywhere; }
+.dash-s3-tab th:nth-child(1) { width: 27%; } .dash-s3-tab th:nth-child(2) { width: 26%; } .dash-s3-tab th:nth-child(3) { width: 19%; } /* "Sentinel-3A" va a capo dopo il trattino, non a meta' parola */
 .dash-s3-tab th, .dash-s3-tab td { padding: .3rem .4rem; text-align: left; border-bottom: 1px solid #dde4ec; vertical-align: top; }
 /* fondo e colore espliciti: la tabella sta dentro .article-body, che da' alle
    intestazioni il fondo blu, e un colore blu ereditato sparirebbe sul blu */
