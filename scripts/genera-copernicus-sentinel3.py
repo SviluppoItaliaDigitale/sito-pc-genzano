@@ -158,7 +158,11 @@ def frp_scene(s3, feat: dict, tmp: Path) -> list[dict]:
         if not href:
             continue
         f = scarica(s3, href, tmp / (feat["id"] + "-" + nome + ".csv"))
-        txt = f.read_text(encoding="utf-8", errors="replace")
+        # il CSV apre con righe di commento «#…» e una riga vuota, poi l'intestazione:
+        # lat(deg),lon(deg),day,time,D/N,FRP(MW),FRPerr(MW),used_channel,confidence(%),…
+        # (verificato sul prodotto del 10/10/2026)
+        txt = "\n".join(l for l in f.read_text(encoding="utf-8", errors="replace").splitlines()
+                        if l.strip() and not l.startswith("#"))
         righe = list(csv.DictReader(io.StringIO(txt)))
         for r in righe:
             k = {x.strip().lower(): x for x in r.keys()}
@@ -169,16 +173,30 @@ def frp_scene(s3, feat: dict, tmp: Path) -> list[dict]:
                 continue
             if not (BBOX_LAZIO[0] <= lon <= BBOX_LAZIO[2] and BBOX_LAZIO[1] <= lat <= BBOX_LAZIO[3]):
                 continue
-            frp = None
+            frp = conf = None
             for c in k:
-                if c.startswith("frp") and "unc" not in c:
+                if c.startswith("frp") and "err" not in c and "unc" not in c:
                     try:
                         frp = round(float(r[k[c]]), 1)
-                        break
                     except ValueError:
                         pass
-            out.append({"lat": round(lat, 4), "lon": round(lon, 4), "mw": frp, "canale": "SWIR 500 m" if "SWIR" in nome else "MWIR 1 km",
-                        "quando": p.get("datetime"), "satellite": sat,
+                    break
+            for c in k:
+                if c.startswith("confidence("):
+                    try:
+                        conf = round(float(r[k[c]]))
+                    except ValueError:
+                        pass
+                    break
+            quando = p.get("datetime")
+            if k.get("day") and k.get("time"):
+                try:
+                    quando = dt.datetime.strptime(r[k["day"]].strip() + " " + r[k["time"]].strip(), "%Y-%m-%d %H:%M:%S").strftime("%Y-%m-%dT%H:%M:%SZ")
+                except ValueError:
+                    pass
+            out.append({"lat": round(lat, 4), "lon": round(lon, 4), "mw": frp, "confidenza": conf,
+                        "canale": "SWIR 500 m" if "SWIR" in nome else "MWIR 1 km",
+                        "quando": quando, "satellite": sat,
                         "distanza_km": round(dist_km(lat, lon)), "direzione": rosa(lat, lon)})
     return out
 
