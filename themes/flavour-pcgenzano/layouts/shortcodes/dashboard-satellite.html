@@ -23,6 +23,7 @@
   <div class="dash-sisma-toolbar" role="group" aria-label="Tipo e risoluzione dell'immagine satellitare">
     <button type="button" class="dash-pill" data-sat="geocolour" aria-pressed="true"><i class="bi bi-cloud" aria-hidden="true"></i> Nuvole · colore (1&nbsp;km)</button>
     <button type="button" class="dash-pill" data-sat="hrfi" aria-pressed="false"><i class="bi bi-zoom-in" aria-hidden="true"></i> Alta risoluzione (500&nbsp;m)</button>
+    <button type="button" class="dash-pill" data-sat="sentinel" aria-pressed="false"><i class="bi bi-image" aria-hidden="true"></i> Sentinel-3 (300&nbsp;m)</button>
     <button type="button" class="dash-pill" data-sat="gibs" aria-pressed="false"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Suolo (NASA)</button>
     <span class="dash-sisma-stato" id="sat-stato" aria-live="polite"></span>
   </div>
@@ -32,6 +33,7 @@
   <noscript><div class="alert alert-warning mt-2" role="note">Per la mappa serve JavaScript.</div></noscript>
   <p class="small text-muted mt-2 mb-0" id="sat-fonte">
     {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
+    <strong>Sentinel-3</strong>: mosaico a colori naturali del giorno (strumento OLCI dei satelliti Sentinel-3A e 3B, programma <a href="https://www.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus</a>, distribuito da EUMETSAT), circa 300&nbsp;m; si compone con i passaggi del mattino, quindi le zone non ancora sorvolate restano vuote.
     <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS, mosaico più recente disponibile: in genere di 2 giorni fa).
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
@@ -86,6 +88,27 @@
       version:'1.3.0', time:isoZ(slotUTC()), opacity:1, maxZoom:9,
       attribution:'© EUMETSAT'
     });
+    // Sentinel-3A e 3B, OLCI a colori naturali: mosaico giornaliero ~300 m (Copernicus,
+    // via EUMETSAT, stesso WMS, CORS aperto). Senza "time" il server dà l'ultimo
+    // mosaico; l'ora dell'ultimo passaggio si legge dalle capabilities del solo layer
+    // (7 KB) per dichiararla. Sentinel-3C (lanciato nel 2026) non ha ancora dati pubblici.
+    var S3_LAYER='copernicus:daily_sentinel3ab_olci_l1_rgb_fulres';
+    var sentinel=L.tileLayer.wms(WMS,{
+      layers:S3_LAYER, format:'image/png', transparent:false,
+      version:'1.3.0', opacity:1, maxZoom:9,
+      attribution:'Contiene dati Copernicus Sentinel modificati · © EUMETSAT'
+    });
+    var s3Ora=null;
+    function s3Capabilities(){
+      return fetch('https://view.eumetsat.int/geoserver/copernicus/daily_sentinel3ab_olci_l1_rgb_fulres/ows?service=WMS&request=GetCapabilities&version=1.3.0')
+        .then(function(r){ return r.ok ? r.text() : ''; })
+        .then(function(x){ var m=/<Dimension[^>]*name="time"[^>]*default="([^"]+)"/.exec(x); if(m){ var d=new Date(m[1]); if(!isNaN(d)) s3Ora=d; } })
+        .catch(function(){});
+    }
+    function s3Etichetta(){
+      if(!s3Ora) return 'Sentinel-3 · mosaico più recente a colori naturali';
+      return 'Sentinel-3 · mosaico del '+s3Ora.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})+', ultimo passaggio alle '+s3Ora.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+    }
     var gibs=L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+GIBS_DATA_ISO+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',{
       maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Imagery © NASA EOSDIS GIBS'
     });
@@ -96,7 +119,7 @@
     var modo='geocolour';
 
     function mostra(){
-      [geocolour,hrfi,gibs,confini].forEach(function(l){ if(map.hasLayer(l)) map.removeLayer(l); });
+      [geocolour,hrfi,sentinel,gibs,confini].forEach(function(l){ if(map.hasLayer(l)) map.removeLayer(l); });
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
       if(modo==='geocolour'){
         geocolour.setParams({time:isoZ(t)}); geocolour.addTo(map); confini.addTo(map);
@@ -104,6 +127,10 @@
       } else if(modo==='hrfi'){
         hrfi.setParams({time:isoZ(t)}); hrfi.addTo(map); confini.addTo(map);
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
+      } else if(modo==='sentinel'){
+        sentinel.addTo(map); confini.addTo(map);
+        stato.textContent=s3Etichetta();
+        s3Capabilities().then(function(){ if(modo==='sentinel') stato.textContent=s3Etichetta(); });
       } else {
         gibs.addTo(map); confini.addTo(map);
         stato.textContent='Immagine del '+GIBS_DATA_LABEL;
@@ -118,7 +145,7 @@
       });
     });
 
-    function avvia(){ map.invalidateSize(); mostra(); setInterval(function(){ if(modo!=='gibs') mostra(); }, 300000); }
+    function avvia(){ map.invalidateSize(); mostra(); setInterval(function(){ if(modo==='geocolour'||modo==='hrfi') mostra(); }, 300000); }
     var box=document.getElementById('dash-sat-mappa');
     if(box.offsetParent!==null){ avvia(); }
     else { window.addEventListener('cruscotto:satellite', avvia, {once:true}); }
