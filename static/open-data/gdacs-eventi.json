@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-10-10T18:01:12+00:00",
+  "generato": "2026-10-10T19:18:11+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -40,6 +40,22 @@
    "todate": "2026-10-10T15:58:19"
   },
   {
+   "alertlevel": "Green",
+   "country": "Papua New Guinea",
+   "datemodified": "2026-10-10T19:04:23",
+   "description": "Earthquake in Papua New Guinea",
+   "episodeid": 1739028,
+   "eventid": 1570621,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-10T15:10:20",
+   "iso3": "PNG",
+   "lat": -3.7668,
+   "lon": 151.9827,
+   "name": "Earthquake in Papua New Guinea",
+   "severitytext": "Magnitude 4.6M, Depth:10km",
+   "todate": "2026-10-10T15:10:20"
+  },
+  {
    "alertlevel": "Orange",
    "country": "Mexico",
    "datemodified": "2026-10-10T16:27:32",
@@ -76,19 +92,34 @@
   {
    "alertlevel": "Green",
    "country": "Mexico",
-   "datemodified": "2026-10-10T15:13:40",
+   "datemodified": "2026-10-10T19:11:51",
    "description": "Tropical Cyclone RACHEL-26",
    "episodeid": 54,
    "eventid": 1001329,
    "eventname": "RACHEL-26",
    "eventtype": "TC",
    "fromdate": "2026-09-27T09:00:00",
-   "iso3": "MEX",
    "lat": 25.5,
    "lon": -119.6,
    "name": "Tropical Cyclone RACHEL-26",
    "severitytext": "Tropical Storm (maximum wind speed of 194 km/h)",
    "todate": "2026-10-10T15:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Panama",
+   "datemodified": "2026-10-10T18:37:26",
+   "description": "Earthquake in Panama",
+   "episodeid": 1739020,
+   "eventid": 1570607,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-10T14:59:23",
+   "iso3": "PAN",
+   "lat": 7.8256,
+   "lon": -81.3036,
+   "name": "Earthquake in Panama",
+   "severitytext": "Magnitude 4.5M, Depth:10km",
+   "todate": "2026-10-10T14:59:23"
   },
   {
    "alertlevel": "Green",
@@ -171,7 +202,7 @@
   },
   {
    "alertlevel": "Green",
-   "datemodified": "2026-10-10T14:27:41",
+   "datemodified": "2026-10-10T19:12:49",
    "description": "Tropical Cyclone KOGUMA-26",
    "episodeid": 23,
    "eventid": 1001333,
@@ -1570,38 +1601,6 @@
    "lon": 141.6865,
    "name": "Forest fires in Papua New Guinea",
    "severitytext": "Green impact for forestfire in 6810 ha",
-   "todate": "2026-10-10T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "China",
-   "datemodified": "2026-10-10T15:13:36",
-   "description": "Forest fires in China",
-   "episodeid": 8,
-   "eventid": 1032580,
-   "eventtype": "WF",
-   "fromdate": "2026-09-26T00:00:00",
-   "iso3": "CHN",
-   "lat": 37.2576,
-   "lon": 111.9498,
-   "name": "Forest fires in China",
-   "severitytext": "Green impact for forestfire in 8218 ha",
-   "todate": "2026-10-10T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Indonesia",
-   "datemodified": "2026-10-10T15:08:00",
-   "description": "Forest fires in Indonesia",
-   "episodeid": 16,
-   "eventid": 1032578,
-   "eventtype": "WF",
-   "fromdate": "2026-09-29T00:00:00",
-   "iso3": "IDN",
-   "lat": -3.5946,
-   "lon": 105.7548,
-   "name": "Forest fires in Indonesia",
-   "severitytext": "Green impact for forestfire in 10752 ha",
    "todate": "2026-10-10T00:00:00"
   }
  ]

@@ -5,28 +5,118 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-10T18:01:11+00:00",
+  "generato": "2026-10-10T19:18:10+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-10T17:52:58+00:00",
+   "data": "2026-10-10T19:14:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Il monito del Papa, 'la pena di morte è inammissibile'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/10/il-monito-del-papa-la-pena-di-morte-e-inammissibile_0f1d163f-6d14-4d85-97d3-741cbd0ae978.html"
+   "titolo": "Trump scarica Zelensky: 'Serve un nuovo presidente a Kiev per un accordo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/trump-scarica-zelensky-serve-un-nuovo-presidente-a-kiev-per-un-accordo_d50f315d-6dd5-4025-922d-638d7519a1b9.html"
+  },
+  {
+   "data": "2026-10-10T19:11:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Napoli-Frosinone 0-0 DIRETTA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/10/serie-a-napoli-frosinone-0-0-diretta-e-foto_57206b56-039f-4610-9ef4-7db201bb9b37.html"
+  },
+  {
+   "data": "2026-10-10T19:10:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Ue agli Usa: 'Ritirare le sanzioni alla Cpi, pronti a difenderla'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/lue-agli-usa-ritirare-le-sanzioni-alla-cpi-pronti-a-difenderla_26dac987-1d6b-4687-be63-a67170be2055.html"
+  },
+  {
+   "data": "2026-10-10T18:58:49+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La Procura di Sion apre un'inchiesta per fuga di notizie su Crans-Montana",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/la-procura-di-sion-apre-uninchiesta-per-fuga-di-notizie-su-crans-montana_1c883727-df88-46c2-8c58-1fb511255776.html"
+  },
+  {
+   "data": "2026-10-10T18:54:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bambina investita da un'auto nel cortile di casa, è grave",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/bambina-investita-da-unauto-nel-cortile-di-casa-e-grave-_ecd563f5-9abb-4014-94bb-2acccd0bab8c.html"
+  },
+  {
+   "data": "2026-10-10T18:51:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mosca, droni ucraini contro aeroporti impediscono l'atterraggio di Putin",
+   "url": "https://www.adnkronos.com/internazionale/esteri/droni-ucraina-russia-aeroporti-putin_4sSnRugbqtdaq4lieLvZ7V"
+  },
+  {
+   "data": "2026-10-10T18:40:43+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Maltempo in Calabria, danni e frane nel Reggino per le forti piogge",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/maltempo-in-calabria-danni-e-frane-nel-reggino-per-le-forti-piogge_8604780e-0f5d-4de9-81d0-f26fec2d29f0.html"
+  },
+  {
+   "data": "2026-10-10T18:39:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nubifragi, allagamenti e frane: il maltempo fa paura al Sud",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/nubifragi-allagamenti-e-frane-il-maltempo-fa-paura-al-sud_9c85a05b-b554-4cf2-9592-d9c514ee9113.html"
+  },
+  {
+   "data": "2026-10-10T18:37:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Evoca sui social una strage a scuola, denunciato un 14enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/evoca-sui-social-una-strage-a-scuola-denunciato-un-14enne_c3571ba9-7190-461b-adc5-b8cfe98178ab.html"
+  },
+  {
+   "data": "2026-10-10T18:30:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cortei pro-Pal in 50 città e c'è chi inneggia al 7 ottobre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/cortei-pro-pal-in-50-citta-e-ce-chi-inneggia-al-7-ottobre_10c194c9-d77a-4956-a3d1-9aa86a4d7cc2.html"
+  },
+  {
+   "data": "2026-10-10T18:28:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nasce il partito di Ruffini e Gabrielli, è sfida al centro",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/10/ruffini-al-campo-largo-ci-sia-uno-scatto-di-responsabilita-e-si-cerchi-un-terzo-nome_1aba98db-b912-4fa6-9d33-ccbbe7cdba12.html"
+  },
+  {
+   "data": "2026-10-10T18:28:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il 'Partito delle blatte' torna in piazza, arrestati i leader",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/proteste-a-new-delhi-migliaia-le-persone-fermate_fa29293d-9c19-4c11-80b1-5342323ae1f3.html"
+  },
+  {
+   "data": "2026-10-10T18:27:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Inaugurata a Torino la mostra ANSA 'Le donne della Repubblica'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/10/inaugurata-a-torino-la-mostra-ansa-le-donne-della-repubblica_73cf3e88-1b2b-4e20-af89-5bafa094906b.html"
+  },
+  {
+   "data": "2026-10-10T18:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scavalca il recinto e viene sbranato da una tigre allo zoo: tragedia nello Yorkshire",
+   "url": "https://www.adnkronos.com/internazionale/esteri/entra-nel-recinto-sbranato-tigre-zoo-yorkshire_4UPC8L1vKpGkqA8SIB4nDp"
+  },
+  {
+   "data": "2026-10-10T17:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, Napoli-Frosinone 1-0 - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-napoli-frosinone-oggi-serie-a-risultato-live_2ZHam8zU0MexZIita1h3NC"
+  },
+  {
+   "data": "2026-10-10T17:56:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "La squadra di Report: 'Mai sfiduciato Ranucci né chiesta la sua rimozione'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/10/la-squadra-di-report-mai-sfiduciato-ranucci-ne-chiesta-la-sua-rimozione_31660ebd-0619-4eb0-a3f2-501573925ca8.html"
+  },
+  {
+   "data": "2026-10-10T17:56:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Genova Book Pride, fiera dell'editoria indipendente",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/libro_in_piazza/2026/10/10/a-genova-book-pride-fiera-delleditoria-indipendente_8ff6aaf3-c00f-40ed-81cd-2f366bdfffa5.html"
   },
   {
    "data": "2026-10-10T17:52:45+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Morì dissanguato per una coltellata, arrestata la moglie",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/mori-dissanguato-la-moglie-arrestata-per-omicidio-preterintenzionale_17029689-f16d-4668-b1e8-c00af1a4b09d.html"
-  },
-  {
-   "data": "2026-10-10T17:43:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Inter-Parma 3-0 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/10/serie-a-inter-parma-3-0-diretta-e-foto_3de142c7-04e2-4b64-b000-cc44ad95cfcf.html"
   },
   {
    "data": "2026-10-10T17:41:29+00:00",
@@ -39,12 +129,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Procura di Sion apre inchiesta per fuga notizie su Crans-Montana",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/procura-di-sion-apre-inchiesta-per-fuga-notizie-su-crans-montana_152c6e78-ff15-46be-a517-1fc0a4c06b5c.html"
-  },
-  {
-   "data": "2026-10-10T17:33:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'All'Ucraina serve un nuovo leader, Zelensky vuole creare problemi al mondo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/trump-allucraina-serve-un-nuovo-leader-zelensky-vuole-creare-problemi-al-mondo_d50f315d-6dd5-4025-922d-638d7519a1b9.html"
   },
   {
    "data": "2026-10-10T17:20:14+00:00",
@@ -77,18 +161,6 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/donald-trump-attacco-zelensky-ucraina_7nbtUTntR96FVXhrDLqFJd"
   },
   {
-   "data": "2026-10-10T17:00:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nubifragi, allagamenti e frane, il maltempo sferza il Sud",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/nubifragi-allagamenti-e-frane-il-maltempo-sferza-il-sud_9c85a05b-b554-4cf2-9592-d9c514ee9113.html"
-  },
-  {
-   "data": "2026-10-10T16:55:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Pro-Pal a Torino, Trump e Netanyahu in fiamme: 'Li processiamo noi'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/pro-pal-a-torino-trump-e-netanyahu-in-fiamme-li-processiamo-noi_10c194c9-d77a-4956-a3d1-9aa86a4d7cc2.html"
-  },
-  {
    "data": "2026-10-10T16:50:48+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Ad Alessandria sfila il Sudario di Gaza per la Palestina",
@@ -117,78 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Bari, ragazzo denuncia presunte molestie sessuali: parroco ai domiciliari",
    "url": "https://www.adnkronos.com/cronaca/presunti-abusi-parroco-domiciliari-bari_15yMYCvgvbNAngWCn9y7yw"
-  },
-  {
-   "data": "2026-10-10T16:40:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Corteo Pro Palestina Torino, Netanyahu a testa in giù sui cartelli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/corteo-pro-palestina-torino-netanyahu-a-testa-in-giu-sui-cartelli_ced41102-2bc3-4131-b786-f714cd408796.html"
-  },
-  {
-   "data": "2026-10-10T16:39:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-10T16:37:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Anthropic ammette: 'Prima segnalazione falsa inviata dall'IA su un omicidio'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/anthropic-ammette-prima-falsa-segnalazione-ia-su-un-omicidio_2ed031b1-10e7-4976-b2ff-60b244aad01e.html"
-  },
-  {
-   "data": "2026-10-10T16:36:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Massimo Ranieri rilancia gli anni Sessanta: 'Oggi non si fanno più canzoni'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/10/massimo-ranieri-rilancia-gli-anni-sessanta-oggi-non-si-fanno-piu_8dd3c290-9c35-4ce7-9d84-86c6345e3ce0.html"
-  },
-  {
-   "data": "2026-10-10T16:32:45+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Genova 'Con Un calcio alla guerra - Kick war away' per ribadire impegno per la pace",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/a-genova-con-un-calcio-alla-guerra-kick-war-away-per-ribadire_dfb0bc19-5887-4e38-9c35-25004b236d75.html"
-  },
-  {
-   "data": "2026-10-10T16:29:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Christa Pike dimessa dall'ospedale dopo le due iniezioni letali fallite: torna in carcere",
-   "url": "https://www.adnkronos.com/internazionale/esteri/christa-pike-dimessa-ospedale-torna-in-carcere_1wVOh0j4tqqeq6bv6X8ulq"
-  },
-  {
-   "data": "2026-10-10T16:24:41+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Torino per Gaza al corteo pro-Pal, 'il 7 ottobre giornata di resistenza'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/torino-per-gaza-al-corteo-pro-pal-il-7-ottobre-giornata-di-resistenza_ef940cae-8e0e-4dd4-a905-192b314370ec.html"
-  },
-  {
-   "data": "2026-10-10T16:21:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Amerigo Vespucci torna a Trieste, a bordo incontri e conferenze",
-   "url": "https://www.ansa.it/sito/notizie/speciali/vespucci-villaggio-italia/2026/10/09/amerigo-vespucci-torna-a-trieste-a-bordo-incontri-e-conferenze_477878b2-f5de-4a61-86c3-6c8679ab2c83.html"
-  },
-  {
-   "data": "2026-10-10T16:15:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stangata sulle e-bike, arrivano i 'bicivelox' e multe fino a 15mila euro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/dopo-monopattini-stretta-su-e-bike-arrivano-bicivelox-e-multe-fino-a-15mila-euro_5d9f1f39-e4eb-4fa0-bbd1-a4a17d303b26.html"
-  },
-  {
-   "data": "2026-10-10T16:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Attacco Houthi all'aeroporto di Riad: missile colpisce lo scalo, diversi feriti di cui 5 gravi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/missile-houthi-ribelli-aeroporto-riad_5bGyholjPH6jligQjfRwlq"
-  },
-  {
-   "data": "2026-10-10T16:11:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bayern, uscita horror di Neuer e Augusta in vantaggio dopo 5 secondi",
-   "url": "https://www.adnkronos.com/sport/neuer-horror-bundesliga-gol-subito-5-secondi_4TJmtEOeopCodJsyOKhNA3"
-  },
-  {
-   "data": "2026-10-10T16:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giorgia Cardinaletti e Francesco Bechis hanno detto sì: le nozze a Fabriano e il look degli sposi",
-   "url": "https://www.adnkronos.com/spettacoli/cardinaletti-bechis-matrimonio-look_421U8oAEroweKwaXqmSg2H"
   }
  ]
 }
