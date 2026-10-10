@@ -9,7 +9,7 @@ giro e non pesa sul repository; i metadati JSON restano in git.
 
 Uso (serve `gh` autenticato con GH_TOKEN, oppure in locale `gh auth login`):
     python3 scripts/immagini-meteo-release.py scarica [--rigoroso]  # prima dei generatori; --rigoroso nel deploy
-    python3 scripts/immagini-meteo-release.py carica ecmwf|sinottica  # dopo il generatore, solo i suoi file
+    python3 scripts/immagini-meteo-release.py carica ecmwf|sinottica|sentinel1  # dopo il generatore, solo i suoi file
 
 `scarica` ripiega sulle copie servite dal sito pubblicato se la release non
 risponde. Se manca anche quella esce 0 nei workflow dei generatori; con
@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import subprocess
 import sys
+import urllib.error
 import tempfile
 import urllib.request
 from pathlib import Path
@@ -37,6 +38,9 @@ FILE = {
     "ecmwf-medium-cape-cin.webp": "images/ecmwf/medium-cape-cin.webp",
     "meteo-sinottica-italia.webp": "images/meteo-sinottica-italia.webp",
     "meteo-sinottica-italia.png": "images/meteo-sinottica-italia.png",
+    # radar Sentinel-1 su Genzano (scripts/genera-copernicus-sentinel1.py, dal 10/10/2026)
+    "sentinel1-genzano.webp": "images/sentinel/sentinel1-genzano.webp",
+    "sentinel1-genzano-prima.webp": "images/sentinel/sentinel1-genzano-prima.webp",
 }
 
 
@@ -44,11 +48,18 @@ def gh(*args: str) -> subprocess.CompletedProcess:
     return subprocess.run(["gh", *args], cwd=REPO_ROOT, capture_output=True, text=True)
 
 
-def dal_sito(percorso: str, dest: Path) -> bool:
+def dal_sito(percorso: str, dest: Path) -> bool | None:
+    """True = copiato; False = errore; None = il sito non ha mai avuto quel file (404)."""
     req = urllib.request.Request(f"{SITO}/{percorso}", headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             dati = r.read()
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            print(f"  [ -- ] {percorso}: non ancora pubblicato (404), nessuna copia da proteggere")
+            return None
+        print(f"  [ko ] {percorso} anche dal sito: {e}")
+        return False
     except Exception as e:  # noqa: BLE001
         print(f"  [ko ] {percorso} anche dal sito: {e}")
         return False
@@ -72,10 +83,13 @@ def scarica(rigoroso: bool = False) -> int:
             if sorgente.is_file() and sorgente.stat().st_size > 0:
                 dest.write_bytes(sorgente.read_bytes())
                 print(f"  [ok ] {percorso} (release)")
-            elif dal_sito(percorso, dest):
-                print(f"  [ok ] {percorso} (copia del sito)")
             else:
-                mancanti.append(percorso)
+                esito = dal_sito(percorso, dest)
+                if esito:
+                    print(f"  [ok ] {percorso} (copia del sito)")
+                elif esito is False:
+                    mancanti.append(percorso)
+                # None: file nuovo, mai pubblicato — il caricamento FTP non cancella nulla
     if mancanti:
         if rigoroso:
             # Nel deploy: senza queste immagini il caricamento FTP cancellerebbe
@@ -122,7 +136,7 @@ if __name__ == "__main__":
     comando = sys.argv[1] if len(sys.argv) > 1 else ""
     if comando == "scarica":
         sys.exit(scarica(rigoroso="--rigoroso" in sys.argv))
-    if comando == "carica" and len(sys.argv) > 2 and sys.argv[2] in ("ecmwf", "meteo-sinottica", "sinottica"):
+    if comando == "carica" and len(sys.argv) > 2 and sys.argv[2] in ("ecmwf", "meteo-sinottica", "sinottica", "sentinel1"):
         sys.exit(carica("meteo-sinottica" if sys.argv[2] == "sinottica" else sys.argv[2]))
     print(__doc__)
     sys.exit(2)
