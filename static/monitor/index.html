@@ -3513,7 +3513,7 @@ const ORB_GRUPPI=[
   ["weather",  "METEO",         true,  "satelliti meteorologici polari"],
   ["goes",     "METEO GEO",     true,  "meteorologici geostazionari"],
   ["resource", "OSSERVAZIONE",  true,  "osservazione della Terra: da queste immagini nascono le mappe Copernicus EMS"],
-  ["copernicus","COPERNICUS",    true,  "i Sentinel del programma europeo Copernicus, compresi quelli appena lanciati"],
+  ["copernicus","COPERNICUS",    true,  "ricerca per nome «SENTINEL» nel catalogo CelesTrak, non un gruppo della fonte: i Sentinel del programma europeo Copernicus, compresi quelli appena lanciati"],
   ["stations", "STAZIONI",      true,  "stazioni spaziali abitate, ISS compresa"],
   ["amateur",  "RADIOAMATORI",  true,  "satelliti radioamatoriali, usati anche nelle emergenze"],
   ["galileo",  "NAVIGAZIONE",   false, "costellazione europea Galileo"],
@@ -3522,6 +3522,9 @@ const ORB_GRUPPI=[
   ["visual",   "PIÙ LUMINOSI",  false, "i piu' luminosi, quelli che si vedono a occhio nudo"],
 ];
 const ORB_PC=ORB_GRUPPI.filter(g=>g[2]).map(g=>g[0]);
+// insiemi costruiti qui con una ricerca per nome: nei filtri stanno in una fila
+// a parte, cosi' non passano per gruppi definiti dalla fonte
+const ORB_PER_NOME=["copernicus"];
 // il nome della fonte ("sarsat", "active") non dice niente a chi legge:
 // si mostra l'etichetta che compare gia' sulle pastiglie dei filtri
 const orbEtichetta=g=>g==="active"?"CATALOGO COMPLETO":((ORB_GRUPPI.find(x=>x[0]===g)||[,g])[1]);
@@ -3809,7 +3812,8 @@ function orbPillole(){
     ["Che cosa mostrare", [["tutti","TUTTI",n],["pc","PROTEZIONE CIVILE",conta("pc")],
       ["sopra","SOPRA L'ORIZZONTE",conta("sopra")],["occhio","VISIBILI A OCCHIO NUDO",conta("occhio")]]],
     ["Dove si trovano adesso", Object.entries(ORB_AREE).map(([k,a])=>["a:"+k,a.eti,conta("a:"+k)])],
-    ["Gruppo della fonte", orbGruppiPresenti().map(g=>["g:"+g[0],g[1],g[2]])],
+    ["Gruppo della fonte", orbGruppiPresenti().filter(g=>!ORB_PER_NOME.includes(g[0])).map(g=>["g:"+g[0],g[1],g[2]])],
+    ["Ricerca per nome nella fonte", orbGruppiPresenti().filter(g=>ORB_PER_NOME.includes(g[0])).map(g=>["g:"+g[0],g[1],g[2]])],
     ["Fascia di orbita", orbFascePresenti().map(f=>["o:"+f[0],f[1],f[2]])],
   ];
   return file.filter(([,r])=>r.length).map(([tit,r])=>
