@@ -2,7 +2,9 @@
      Due fonti, entrambe pubbliche e senza chiave:
      - EUMETSAT (Meteosat) RGB colori naturali, slot ogni 15 min (vero quasi-realtime
        delle nuvole) via WMS view.eumetsat.int, layer msg_fes:rgb_natural;
-     - NASA GIBS true-color VIIRS (alta definizione del suolo) via WMTS.
+     - NASA GIBS true-color VIIRS (alta definizione del suolo) via WMTS, dal 10/10/2026
+       dal satellite NOAA-21 (Suomi NPP cessa il 2 novembre 2026);
+     - NASA GIBS pioggia IMERG ogni 30 min e luci notturne NOAA-20 (dal 10/10/2026).
      Le tile sono <img>: nessuna chiave, nessun workflow, niente terzi in iframe.
      Leaflet self-hosted. Onestà: l'immagine satellitare "live" è quella Meteosat
      (15 min di latenza tipica); il mosaico "best" di GIBS ha invece ~2 giorni di
@@ -25,6 +27,9 @@
     <button type="button" class="dash-pill" data-sat="hrfi" aria-pressed="false"><i class="bi bi-zoom-in" aria-hidden="true"></i> Alta risoluzione (500&nbsp;m)</button>
     <button type="button" class="dash-pill" data-sat="sentinel" aria-pressed="false"><i class="bi bi-image" aria-hidden="true"></i> Sentinel-3 (300&nbsp;m)</button>
     <button type="button" class="dash-pill" data-sat="gibs" aria-pressed="false"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Suolo (NASA)</button>
+    <button type="button" class="dash-pill" data-sat="imerg" aria-pressed="false"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i> Pioggia da satellite</button>
+    <button type="button" class="dash-pill" data-sat="radar" aria-pressed="false"><i class="bi bi-broadcast" aria-hidden="true"></i> Radar Sentinel-1</button>
+    <button type="button" class="dash-pill" data-sat="notte" aria-pressed="false"><i class="bi bi-moon-stars" aria-hidden="true"></i> Luci notturne</button>
     <span class="dash-sisma-stato" id="sat-stato" aria-live="polite"></span>
   </div>
   <div class="dash-incendi-box">
@@ -45,7 +50,7 @@
       <h3 id="sat-s3-cfr-tit" class="dash-s3-tit">Confronto prima e dopo</h3>
       <p class="dash-s3-nota">Scegli due giorni: la cartina si divide con una linea verticale, a sinistra il giorno «prima» e a destra il giorno «dopo», e la linea si trascina. Le immagini a colori naturali cambiano anche per nuvole, luce e stagione: una differenza non è per forza un danno. Le zone non sorvolate quel giorno restano nere o vuote.</p>
       <form class="dash-s3-cfr" id="sat-cfr-form">
-        <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa)</option></select></label>
+        <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa; NOAA-21 dal 2024, prima Suomi NPP)</option></select></label>
         <label>Prima <input type="date" id="sat-cfr-prima" required></label>
         <label>Dopo <input type="date" id="sat-cfr-dopo" required></label>
         <button type="submit" class="dash-s3-btn">Confronta</button>
@@ -62,6 +67,11 @@
         <p class="dash-s3-nota" id="sat-cfr-stato" aria-live="polite"></p>
       </div>
     </section>
+    <section aria-labelledby="sat-s3-mis-tit" id="sat-s3-mis-sez" hidden>
+      <h3 id="sat-s3-mis-tit" class="dash-s3-tit">Misure Sentinel-3: temperatura del suolo e fuochi</h3>
+      <p class="dash-s3-nota">Numeri letti dall'archivio Copernicus (strumento SLSTR), aggiornati ogni tre ore: la temperatura della <strong>superficie</strong> a Genzano misurata dal satellite, non quella dell'aria, e i fuochi attivi visti nel Lazio e dintorni con la loro potenza. Con le nuvole la temperatura non si misura.</p>
+      <div id="sat-s3-mis" aria-live="polite"></div>
+    </section>
     <section aria-labelledby="sat-s3-ems-tit">
       <h3 id="sat-s3-ems-tit" class="dash-s3-tit">Mappature d'emergenza Copernicus in Italia</h3>
       <div id="sat-s3-ems" aria-live="polite">Lettura…</div>
@@ -71,7 +81,8 @@
   <p class="small text-muted mt-2 mb-0" id="sat-fonte">
     {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
     <strong>Sentinel-3</strong>: mosaico a colori naturali del giorno (strumento OLCI dei satelliti Sentinel-3A e 3B, programma <a href="https://www.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus</a>, distribuito da EUMETSAT), circa 300&nbsp;m; si compone con i passaggi del mattino, quindi le zone non ancora sorvolate restano vuote.
-    <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS, mosaico più recente disponibile: in genere di 2 giorni fa).
+    <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS dal satellite NOAA-21, mosaico più recente disponibile: in genere di 2 giorni fa).
+    <strong>Pioggia da satellite</strong>: intensità di pioggia stimata dalla costellazione GPM (prodotto IMERG «Early» della NASA, ogni 30 minuti, disponibile con 4-6 ore di ritardo): copre anche dove il radar non arriva, ma è una stima a 10 km, non una misura. <strong>Radar Sentinel-1</strong>: ultima immagine radar (Copernicus) di 30 km attorno a Genzano, letta dall'archivio con le chiavi del Gruppo: vede attraverso le nuvole e di notte, l'acqua ferma appare scura; senza correzione del rilievo, quindi i versanti risultano un po' deformati. <strong>Luci notturne</strong>: banda giorno-notte del satellite NOAA-20 (mosaico della notte più recente): le nuvole coprono le luci, quindi un'area scura non è per forza un blackout.
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
@@ -85,7 +96,8 @@
     map.on('blur', function(){map.scrollWheelZoom.disable();});
 
     // sfondo geografico chiaro sotto al satellite, per i confini
-    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxZoom:8,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
+    // maxNativeZoom 8: oltre, le tessere OSM si ingrandiscono (serve al radar, a zoom 12)
+    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxNativeZoom:8,maxZoom:12,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
     var confini=L.geoJSON(null,{pane:'markerPane',style:{color:'#ffffff',weight:1,opacity:0.75,fillOpacity:0},attribution:'Confini: Natural Earth'});
     fetch('{{ "open-data/world-countries.geo.json" | relURL }}').then(function(r){return r.json();}).then(function(g){confini.addData(g);}).catch(function(){});
 
@@ -146,9 +158,46 @@
       if(!s3Ora) return 'Sentinel-3 · mosaico più recente a colori naturali';
       return 'Sentinel-3 · mosaico del '+s3Ora.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})+', ultimo passaggio alle '+s3Ora.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
     }
-    var gibs=L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+GIBS_DATA_ISO+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',{
+    // Dal 10/10/2026 il true-color viene dal satellite NOAA-21: Suomi NPP smette
+    // di consegnare dati il 2 novembre 2026 (avviso NASA Earthdata). L'archivio
+    // NOAA-21 su GIBS parte dal 2024: per le date precedenti (confronto prima/dopo)
+    // resta Suomi NPP, che continua a esistere come archivio.
+    var GIBS='https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/';
+    function viirsLayerId(giorno){ return giorno>='2024-02-29' ? 'VIIRS_NOAA21_CorrectedReflectance_TrueColor' : 'VIIRS_SNPP_CorrectedReflectance_TrueColor'; }
+    var gibs=L.tileLayer(GIBS+viirsLayerId(GIBS_DATA_ISO)+'/default/'+GIBS_DATA_ISO+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',{
       maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Imagery © NASA EOSDIS GIBS'
     });
+    // Pioggia IMERG (ogni 30 min) e luci notturne (NOAA-20): la parola «default»
+    // al posto dell'ora dà l'ultimo mosaico; l'ora vera si legge da DescribeDomains
+    // (45 KB, CORS aperto) per dichiararla in etichetta.
+    var imerg=L.tileLayer(GIBS+'IMERG_Precipitation_Rate_30min/default/default/GoogleMapsCompatible_Level6/{z}/{y}/{x}.png',{
+      maxNativeZoom:6, maxZoom:9, opacity:0.8, attribution:'Pioggia: NASA GPM IMERG via GIBS'
+    });
+    var notte=L.tileLayer(GIBS+'VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance/default/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png',{
+      maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Luci notturne: NASA VIIRS NOAA-20 via GIBS'
+    });
+    // Radar Sentinel-1: immagine e riquadro scritti in CI da genera-copernicus-sentinel1.py
+    var RADAR_JSON='{{ "open-data/copernicus-sentinel1.json" | relURL }}', RADAR_BASE='{{ "" | relURL }}';
+    var radarInfo=null, radarLayer=null, radarPrima=null;
+    function radarCarica(){
+      if(radarInfo) return Promise.resolve(radarInfo);
+      return fetch(RADAR_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
+        if(!j||!j.riquadro||!j.immagine) throw new Error('vuoto');
+        radarInfo=j; var b=[[j.riquadro.sud,j.riquadro.ovest],[j.riquadro.nord,j.riquadro.est]];
+        radarLayer=L.imageOverlay(RADAR_BASE+j.immagine.replace(/^\//,'')+'?v='+encodeURIComponent(j.id||''),b,{opacity:1,alt:'Immagine radar Sentinel-1 di 30 km attorno a Genzano di Roma',attribution:'Radar: Contiene dati Copernicus Sentinel modificati'});
+        return j;
+      });
+    }
+    var tempiGibs={};
+    function gibsUltimo(layer,tms){ // ultimo istante del dominio temporale del layer
+      if(tempiGibs[layer]) return Promise.resolve(tempiGibs[layer]);
+      return fetch('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi?SERVICE=WMTS&REQUEST=DescribeDomains&VERSION=1.0.0&LAYER='+layer+'&TILEMATRIXSET='+tms)
+        .then(function(r){ return r.ok ? r.text() : ''; })
+        .then(function(x){ var m=/<Domain>([^<]*)<\/Domain>/.exec(x); if(!m) return null;
+          var ultimo=m[1].split(',').pop().split('/')[1]||m[1].split(',').pop().split('/')[0];
+          var d=new Date(ultimo.length===10?ultimo+'T00:00:00Z':ultimo); if(isNaN(d)) return null; tempiGibs[layer]=d; return d; })
+        .catch(function(){ return null; });
+    }
 
     var stella=L.marker(GENZANO,{keyboard:true,icon:L.divIcon({className:'dash-stella',html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg><span class="visually-hidden">Genzano di Roma</span>',iconSize:[22,22],iconAnchor:[11,11]})}).bindPopup('<strong>Genzano di Roma</strong>');
 
@@ -170,7 +219,7 @@
     var esc=function(x){ return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
     function s3Pannello(){
       if(s3Avviato) return; s3Avviato=true;
-      s3Passaggi(); s3Prossimo(); s3Ems();
+      s3Passaggi(); s3Prossimo(); s3Misure(); s3Ems();
     }
     function stacCerca(coll,ore,n){
       var a=new Date(Date.now()-ore*3600e3).toISOString().slice(0,19)+'Z';
@@ -289,7 +338,7 @@
     function cfrLayer(fonte,giorno,pane){
       var o=pane?{pane:pane}:{};
       if(fonte==='viirs'){
-        return L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+giorno+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',Object.assign({maxNativeZoom:8,maxZoom:9,attribution:'Imagery © NASA EOSDIS GIBS'},o));
+        return L.tileLayer(GIBS+viirsLayerId(giorno)+'/default/'+giorno+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',Object.assign({maxNativeZoom:8,maxZoom:9,attribution:'Imagery © NASA EOSDIS GIBS'},o));
       }
       var par={layers:S3_LAYER, format:'image/png', transparent:false, version:'1.3.0', maxZoom:9, attribution:'Contiene dati Copernicus Sentinel modificati · © EUMETSAT'};
       var fine=new Date(giorno+'T20:00:00Z'); if(fine.getTime()<Date.now()) par.time=giorno+'T20:00:00Z';
@@ -344,6 +393,50 @@
       manico.addEventListener('pointerup',fine); manico.addEventListener('pointercancel',fine);
     })();
 
+    /* ---- Misure Sentinel-3 (Copernicus): snapshot generato in CI con le chiavi ----
+       Il browser legge solo il JSON della stessa origine; se il file non esiste
+       (chiavi non configurate) la sezione resta nascosta: niente dati di riempimento. */
+    var MIS_JSON='{{ "open-data/copernicus-sentinel3.json" | relURL }}';
+    function s3Misure(){
+      var sez=document.getElementById('sat-s3-mis-sez'), box=document.getElementById('sat-s3-mis');
+      fetch(MIS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
+        var gen=j&&j._snapshot&&j._snapshot.generato?new Date(j._snapshot.generato):null;
+        var suolo=(j&&j.suolo)||[];
+        var fu=(j&&j.fuochi&&j.fuochi.punti)||[], scene=(j&&j.fuochi&&j.fuochi.scene)||0;
+        // la vetusta' si misura sull'ultima OSSERVAZIONE, non sull'ora in cui il
+        // workflow ha riscritto il file: un catalogo che risponde senza scene nuove
+        // rigenera lo snapshot ogni tre ore con dentro misure sempre piu' vecchie
+        var ultima=null;
+        suolo.concat(fu).forEach(function(r){ var d=new Date(r.quando); if(!isNaN(d)&&(!ultima||d>ultima)) ultima=d; });
+        var vecchio=!ultima||(Date.now()-ultima.getTime()>12*3600e3);
+        var h='';
+        if(suolo.length){
+          h+='<table class="dash-s3-tab dash-s3-tab-mis"><caption class="visually-hidden">Temperatura della superficie a Genzano per passaggio</caption><thead><tr><th scope="col">Passaggio</th><th scope="col">Satellite</th><th scope="col">Suolo</th><th scope="col">Cielo</th></tr></thead><tbody>';
+          suolo.forEach(function(r){
+            var d=new Date(r.quando);
+            h+='<tr><td>'+(isNaN(d)?'—':fmtOra(d))+(r.giorno===false?' (notte)':'')+'</td><td>'+esc(r.satellite||'—')+'</td><td>'+(typeof r.gradi==='number'?r.gradi.toLocaleString('it-IT')+' °C':'non misurabile')+'</td><td>'+(r.nuvola?'nuvoloso':'sereno')+'</td></tr>';
+          });
+          h+='</tbody></table>';
+        } else {
+          h+='<p class="dash-s3-nota">Nessun passaggio utile su Genzano nella finestra.</p>';
+        }
+        if(!scene){
+          h+='<p class="dash-s3-nota">Fuochi attivi: dato non disponibile in questo momento (nessuna scena letta dall\'archivio).</p>';
+        } else if(fu.length){
+          h+='<p class="dash-s3-nota"><strong>Fuochi attivi</strong> visti dal satellite nel Lazio e dintorni ('+fu.length+' in '+scene+' passaggi), dal più vicino:</p><ul class="dash-s3-list">';
+          fu.slice(0,8).forEach(function(f){
+            var d=new Date(f.quando);
+            h+='<li>'+f.distanza_km+' km a '+esc(f.direzione)+' di Genzano'+(typeof f.mw==='number'?', '+f.mw.toLocaleString('it-IT')+' MW':'')+' · '+(isNaN(d)?'':fmtOra(d))+' · <a href="https://www.openstreetmap.org/?mlat='+f.lat+'&mlon='+f.lon+'#map=12/'+f.lat+'/'+f.lon+'" target="_blank" rel="noopener noreferrer">sulla mappa<span class="visually-hidden"> (si apre in una nuova finestra)</span></a></li>';
+          });
+          h+='</ul><p class="dash-s3-nota">Un punto caldo non è per forza un incendio: può essere una fiaccola industriale o una bruciatura agricola. Per segnalare un incendio chiama il <a href="tel:112">112</a>.</p>';
+        } else {
+          h+='<p class="dash-s3-nota">Nessun fuoco attivo visto dal satellite nel Lazio e dintorni negli ultimi passaggi ('+scene+' scene lette).</p>';
+        }
+        h+='<p class="dash-s3-nota">Ultima osservazione '+(ultima?fmtOra(ultima):'—')+(gen?', file aggiornato '+fmtOra(gen):'')+(vecchio?' · <strong>misure più vecchie di 12 ore</strong>':'')+'. '+esc((j&&j._snapshot&&j._snapshot.attribuzione)||'Contiene dati Copernicus Sentinel modificati')+'.</p>';
+        box.innerHTML=h; sez.hidden=false;
+      }).catch(function(){ sez.hidden=true; });
+    }
+
     function s3Ems(){
       var box=document.getElementById('sat-s3-ems');
       fetch(EMS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
@@ -360,7 +453,8 @@
     }
 
     function mostra(){
-      [geocolour,hrfi,sentinel,gibs,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
+      [geocolour,hrfi,sentinel,gibs,imerg,notte,radarLayer,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
+      map.setMaxZoom(modo==='radar'?12:9); // il radar e' una finestra di 30 km: va vista da vicino
       var inConfronto=(modo==='sentinel'&&cfr.attivo);
       cfrLinea.hidden=!inConfronto; cfrTagA.hidden=!inConfronto; cfrTagB.hidden=!inConfronto;
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
@@ -379,9 +473,26 @@
         stato.textContent=s3Etichetta();
         s3Capabilities().then(function(){ if(modo==='sentinel') stato.textContent=s3Etichetta(); });
         s3Pannello();
+      } else if(modo==='imerg'){
+        imerg.addTo(map); confini.addTo(map);
+        stato.textContent='Pioggia stimata da satellite · ultimo mosaico disponibile';
+        gibsUltimo('IMERG_Precipitation_Rate_30min','GoogleMapsCompatible_Level6').then(function(d){ if(d&&modo==='imerg') stato.textContent='Pioggia stimata da satellite · mezz\'ora fino alle '+new Date(d.getTime()+1800e3).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})+' (arriva con 4-6 ore di ritardo)'; });
+      } else if(modo==='radar'){
+        stato.textContent='Radar Sentinel-1 · lettura…';
+        radarCarica().then(function(j){
+          if(modo!=='radar') return;
+          radarLayer.addTo(map); confini.addTo(map); stella.addTo(map);
+          map.fitBounds(radarLayer.getBounds(),{animate:false});
+          var d=new Date(j.quando);
+          stato.textContent='Radar Sentinel-1 · '+(isNaN(d)?'':fmtOra(d))+' · '+esc(j.satellite||'')+(j.orbita?' · orbita '+(j.orbita==='ascending'?'ascendente (sera)':'discendente (mattina)'):'');
+        }).catch(function(){ if(modo==='radar') stato.textContent='Radar Sentinel-1 · immagine non ancora disponibile'; });
+      } else if(modo==='notte'){
+        notte.addTo(map); confini.addTo(map);
+        stato.textContent='Luci notturne · notte più recente disponibile';
+        gibsUltimo('VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance','GoogleMapsCompatible_Level8').then(function(d){ if(d&&modo==='notte') stato.textContent='Luci notturne · notte del '+d.toLocaleDateString('it-IT',{day:'2-digit',month:'long',timeZone:'UTC'}); });
       } else {
         gibs.addTo(map); confini.addTo(map);
-        stato.textContent='Immagine del '+GIBS_DATA_LABEL;
+        stato.textContent='Immagine del '+GIBS_DATA_LABEL+' (NOAA-21)';
       }
       stella.addTo(map);
       S3_BOX.hidden=(modo!=='sentinel');

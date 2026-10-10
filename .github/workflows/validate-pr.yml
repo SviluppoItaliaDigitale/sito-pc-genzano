@@ -65,7 +65,11 @@ jobs:
         # si verifica il caso e si riformula.
         shell: bash
         run: |
-          trovati=$(grep -rIilE '\bclaude\b|anthropic' public || true)
+          # Esclusi gli snapshot di NOTIZIE DI TERZI: il 10/10/2026 un titolo ANSA
+          # su un'azienda di IA, ripreso tale e quale in notizie-agenzie.json dalla
+          # Sala situazioni, ha fermato una PR che non c'entrava. Il controllo
+          # riguarda ciò che scriviamo noi, non i titoli delle agenzie.
+          trovati=$(grep -rIilE '\bclaude\b|anthropic' public --exclude=notizie-agenzie.json || true)
           if [ -n "$trovati" ]; then
             echo "::error::Il sito compilato nomina lo strumento in questi file:"
             echo "$trovati"

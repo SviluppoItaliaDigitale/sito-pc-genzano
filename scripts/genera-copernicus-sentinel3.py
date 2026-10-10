@@ -158,7 +158,11 @@ def frp_scene(s3, feat: dict, tmp: Path) -> list[dict]:
         if not href:
             continue
         f = scarica(s3, href, tmp / (feat["id"] + "-" + nome + ".csv"))
-        txt = f.read_text(encoding="utf-8", errors="replace")
+        # il CSV apre con righe di commento «#…» e una riga vuota, poi l'intestazione:
+        # lat(deg),lon(deg),day,time,D/N,FRP(MW),FRPerr(MW),used_channel,confidence(%),…
+        # (verificato sul prodotto del 10/10/2026)
+        txt = "\n".join(l for l in f.read_text(encoding="utf-8", errors="replace").splitlines()
+                        if l.strip() and not l.startswith("#"))
         righe = list(csv.DictReader(io.StringIO(txt)))
         for r in righe:
             k = {x.strip().lower(): x for x in r.keys()}
@@ -169,16 +173,30 @@ def frp_scene(s3, feat: dict, tmp: Path) -> list[dict]:
                 continue
             if not (BBOX_LAZIO[0] <= lon <= BBOX_LAZIO[2] and BBOX_LAZIO[1] <= lat <= BBOX_LAZIO[3]):
                 continue
-            frp = None
+            frp = conf = None
             for c in k:
-                if c.startswith("frp") and "unc" not in c:
+                if c.startswith("frp") and "err" not in c and "unc" not in c:
                     try:
                         frp = round(float(r[k[c]]), 1)
-                        break
                     except ValueError:
                         pass
-            out.append({"lat": round(lat, 4), "lon": round(lon, 4), "mw": frp, "canale": "SWIR 500 m" if "SWIR" in nome else "MWIR 1 km",
-                        "quando": p.get("datetime"), "satellite": sat,
+                    break
+            for c in k:
+                if c.startswith("confidence("):
+                    try:
+                        conf = round(float(r[k[c]]))
+                    except ValueError:
+                        pass
+                    break
+            quando = p.get("datetime")
+            if k.get("day") and k.get("time"):
+                try:
+                    quando = dt.datetime.strptime(r[k["day"]].strip() + " " + r[k["time"]].strip(), "%Y-%m-%d %H:%M:%S").strftime("%Y-%m-%dT%H:%M:%SZ")
+                except ValueError:
+                    pass
+            out.append({"lat": round(lat, 4), "lon": round(lon, 4), "mw": frp, "confidenza": conf,
+                        "canale": "SWIR 500 m" if "SWIR" in nome else "MWIR 1 km",
+                        "quando": quando, "satellite": sat,
                         "distanza_km": round(dist_km(lat, lon)), "direzione": rosa(lat, lon)})
     return out
 
@@ -246,6 +264,26 @@ def main() -> int:
         if not suolo and not scene_frp:
             log("Nessuna scena letta: snapshot lasciato com'era.")
             return 0
+        # Lo stesso fuoco compare sia nel CSV MWIR (1 km) sia in quello SWIR (500 m):
+        # si tiene una riga per punto (griglia di ~1 km, stesso passaggio), preferendo
+        # la rilevazione MWIR, che e' lo schema standard del prodotto.
+        unici: dict[tuple, dict] = {}
+        for f in sorted(fuochi, key=lambda x: 0 if x["canale"].startswith("MWIR") else 1):
+            k = (round(f["lat"], 2), round(f["lon"], 2), (f["quando"] or "")[:13])
+            unici.setdefault(k, f)
+        fuochi = list(unici.values())
+        # Nessuna scena FRP letta (fonte muta solo su quel prodotto): si conserva il
+        # blocco dei fuochi dello snapshot precedente invece di dichiarare «nessun
+        # fuoco», che sarebbe un'assenza inventata.
+        blocco_fuochi = {"scene": scene_frp, "punti": fuochi, "riquadro": BBOX_LAZIO}
+        if scene_frp == 0 and OUT.is_file():
+            try:
+                prec = json.loads(OUT.read_text(encoding="utf-8")).get("fuochi")
+                if isinstance(prec, dict) and prec.get("scene"):
+                    blocco_fuochi = dict(prec, conservato_da=json.loads(OUT.read_text(encoding="utf-8")).get("_snapshot", {}).get("generato"))
+                    log("Nessuna scena FRP letta: conservato il blocco dei fuochi precedente.")
+            except (OSError, ValueError):
+                pass
         fuochi.sort(key=lambda x: x["distanza_km"])
         out = {
             "_snapshot": {"generato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -253,7 +291,7 @@ def main() -> int:
                           "attribuzione": f"Contiene dati Copernicus Sentinel modificati {dt.date.today().year}",
                           "finestra_ore": ORE},
             "suolo": suolo,
-            "fuochi": {"scene": scene_frp, "punti": fuochi, "riquadro": BBOX_LAZIO},
+            "fuochi": blocco_fuochi,
         }
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         log(f"Snapshot scritto: {len(suolo)} letture di temperatura, {len(fuochi)} fuochi in {scene_frp} scene.")
