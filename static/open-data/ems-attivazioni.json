@@ -1,12 +1,28 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-09T23:25:07+00:00",
+  "generato": "2026-10-10T02:35:22+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
  "count": 50,
  "results": [
+  {
+   "activationTime": "2026-10-09T23:19:00",
+   "category": "Earthquake",
+   "centroid": "POINT (-80.67084785156305 8.006692455305458)",
+   "closed": false,
+   "code": "EMSR934",
+   "countries": [
+    "Panama"
+   ],
+   "eventTime": "2026-10-09T17:56:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-10-10T01:16:40.298831",
+   "n_aois": 4,
+   "n_products": 0,
+   "name": "Earthquake in Panama"
+  },
   {
    "activationTime": "2026-10-04T11:02:00",
    "category": "Flood",
@@ -795,22 +811,6 @@
    "n_aois": 4,
    "n_products": 4,
    "name": "Earthquake in the southern Philippines"
-  },
-  {
-   "activationTime": "2026-06-10T12:32:00",
-   "category": "Wildfire",
-   "centroid": "POINT (-7.039483327844973 37.46153506272564)",
-   "closed": true,
-   "code": "EMSR881",
-   "countries": [
-    "Spain"
-   ],
-   "eventTime": "2026-06-08T11:30:00",
-   "gdacsId": null,
-   "lastUpdate": "2026-06-22T12:10:26.379350",
-   "n_aois": 1,
-   "n_products": 3,
-   "name": "Forest fire in Huelva, Spain"
   }
  ]
 }
