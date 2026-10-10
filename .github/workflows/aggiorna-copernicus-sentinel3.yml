@@ -1,0 +1,66 @@
+# Misure Sentinel-3 da Copernicus (temperatura del suolo a Genzano, fuochi nel
+# Lazio) per la scheda satellite del cruscotto. I numeri stanno nell'archivio
+# del Copernicus Data Space Ecosystem, che si legge con chiavi S3 di sola
+# lettura (segreti CDSE_S3_ACCESS_KEY / CDSE_S3_SECRET_KEY): senza chiavi lo
+# script non scrive nulla. Ogni 3 ore: i prodotti NRT arrivano 2-3 ore dopo il
+# passaggio. Fail-safe: fonte giù = file invariato. Dettagli nello script.
+name: "🛰️ Misure Sentinel-3 (Copernicus)"
+
+on:
+  schedule:
+    - cron: "27 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "snapshot (default), verifica (solo accesso S3) o esplora (struttura dei file)"
+        default: "snapshot"
+
+concurrency:
+  group: aggiorna-copernicus-sentinel3
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: "📦 Dipendenze"
+        run: pip install -q boto3 netCDF4 numpy
+
+      - name: "🛰️ Scarica e riassume"
+        env:
+          CDSE_S3_ACCESS_KEY: ${{ secrets.CDSE_S3_ACCESS_KEY }}
+          CDSE_S3_SECRET_KEY: ${{ secrets.CDSE_S3_SECRET_KEY }}
+        run: |
+          case "${{ github.event.inputs.modo || 'snapshot' }}" in
+            verifica) python3 scripts/genera-copernicus-sentinel3.py --verifica ;;
+            esplora)  python3 scripts/genera-copernicus-sentinel3.py --esplora ;;
+            *)        python3 scripts/genera-copernicus-sentinel3.py ;;
+          esac
+
+      - name: "💾 Commit solo se i dati sono cambiati"
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          [ -f static/open-data/copernicus-sentinel3.json ] && git add static/open-data/copernicus-sentinel3.json || true
+          if git diff --cached --quiet; then
+            echo "Snapshot invariato: nessun commit."
+            exit 0
+          fi
+          git commit -m "[skip-dati-sala] Misure Sentinel-3 (Copernicus): temperatura del suolo e fuochi"
+          for try in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              echo "Snapshot pubblicato (tentativo $try)."; exit 0
+            fi
+            echo "Push fallito, ritento ($try)..."; sleep 6
+          done
