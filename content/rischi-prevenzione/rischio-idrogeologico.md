@@ -12,6 +12,7 @@ toc: true
 howto_prima: "Informati sullo stato di allerta consultando la pagina Allerte Meteo. Verifica che tombini e caditoie vicino casa siano liberi da foglie e detriti. Metti in sicurezza auto e beni che si trovano in locali interrati o a rischio allagamento. Non lasciare oggetti di valore in cantine o garage a rischio. Tieni pronto il kit di emergenza. Individua le zone più sicure dell'abitazione (i piani alti)."
 howto_durante: "Se sei in casa, chiudi immediatamente il contatore del gas e dell'elettricità se l'acqua raggiunge gli impianti. Spostati ai piani alti della casa. NON scendere mai in cantine, garage o locali interrati. Tieni chiuse le porte che danno verso i locali più bassi per rallentare l'ingresso dell'acqua. Se sei all'aperto, allontanati dai corsi d'acqua, dai fossi, dai ponti e dalle zone depresse. Non attraversare mai strade allagate, né a piedi né in auto."
 howto_dopo: "Non rientrare in casa finché le autorità non lo autorizzano. Non entrare in locali allagati dove sono presenti impianti elettrici. Non bere acqua del rubinetto finché non viene dichiarata potabile. Fai attenzione alle strade che potrebbero essere state danneggiate o rese scivolose dal fango. Segnala al 112 situazioni di pericolo (smottamenti, strade interrotte, persone in difficoltà). Documenta i danni con foto per le eventuali richieste di risarcimento."
+versione_facile: "rischio-idrogeologico-facile"
 ---
 Il rischio idrogeologico riguarda alluvioni, allagamenti, frane e smottamenti. Piogge intense e persistenti possono innescarli anche in poche ore.
 
