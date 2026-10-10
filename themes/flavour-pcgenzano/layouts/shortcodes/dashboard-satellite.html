@@ -357,7 +357,7 @@
       document.getElementById('sat-cfr-prima-l').hidden=s2; document.getElementById('sat-cfr-dopo-l').hidden=s2;
       cfrPrima.disabled=s2; cfrDopo.disabled=s2;
       [cfrS2a,cfrS2b].forEach(function(el){ el.disabled=!s2; el.parentNode.hidden=!s2; });
-      if(s2){ s2Carica().catch(function(){ cfrStato.textContent='Scene Sentinel-2 non ancora disponibili.'; cfrCtl.hidden=false; }); return; }
+      if(s2){ s2Carica().catch(function(){ if(!cfr.attivo) cfrCtl.hidden=true; }); return; }
       if(f==='viirs') max.setUTCDate(max.getUTCDate()-GIBS_LAG_GIORNI);
       var min=f==='viirs'?'2012-01-19':'2020-02-17';
       cfrPrima.min=min; cfrDopo.min=min; cfrPrima.max=isoGiorno(max); cfrDopo.max=isoGiorno(max);
@@ -406,6 +406,7 @@
       var f=cfrFonte.value, s2=(f==='s2');
       var a=s2?cfrS2a.value:cfrPrima.value, b=s2?cfrS2b.value:cfrDopo.value;
       if(!a||!b){ cfrStato.textContent=s2?'Scene Sentinel-2 non ancora disponibili.':'Scegli le due date.'; cfrCtl.hidden=false; return; }
+      if(s2&&s2Info&&s2Info.scene.length<2){ cfrStato.textContent='In archivio c\'è una sola scena Sentinel-2: il confronto sarà possibile dal prossimo passaggio sereno.'; cfrCtl.hidden=false; return; }
       if(a>=b){ cfrStato.textContent='La data «prima» deve venire prima della data «dopo».'; cfrCtl.hidden=false; return; }
       if(!s2&&(b>cfrDopo.max||a<cfrPrima.min)){ cfrStato.textContent='Date fuori dall\'archivio disponibile per questa fonte.'; cfrCtl.hidden=false; return; }
       var lp=cfrLayer(f,a), ld=cfrLayer(f,b,'cfrDopo');

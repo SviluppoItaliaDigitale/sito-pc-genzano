@@ -68,12 +68,18 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 scripts/genera-copernicus-sentinel2.py
-          # il JSON elenca solo scene che stanno nella release: se il caricamento
-          # fallisce si torna all'elenco precedente, altrimenti il deploy
-          # cercherebbe immagini che non esistono
-          if ls static/images/sentinel/sentinel2-genzano-*.webp >/dev/null 2>&1; then
-            python3 scripts/immagini-meteo-release.py carica sentinel2 || git checkout -- static/open-data/copernicus-sentinel2.json
+          # fail-safe: un errore qui non deve far perdere il commit dei dati S1 e S3
+          J=static/open-data/copernicus-sentinel2.json
+          PRIMA=$(sha256sum "$J" 2>/dev/null | cut -c1-16 || true)
+          python3 scripts/genera-copernicus-sentinel2.py || echo "Sentinel-2: script fallito, file lasciati com'erano."
+          DOPO=$(sha256sum "$J" 2>/dev/null | cut -c1-16 || true)
+          # si carica nella release solo se l'elenco e' cambiato (niente ricaricamenti
+          # a vuoto ogni 3 ore); il JSON elenca solo scene che stanno nella release:
+          # se il caricamento fallisce si torna all'elenco precedente (o lo si toglie,
+          # al primo giro), altrimenti il deploy cercherebbe immagini che non esistono
+          if [ -n "$DOPO" ] && [ "$PRIMA" != "$DOPO" ]; then
+            python3 scripts/immagini-meteo-release.py carica sentinel2 \
+              || git checkout -- "$J" 2>/dev/null || rm -f "$J"
           fi
 
       - name: "💾 Commit solo se i dati sono cambiati"

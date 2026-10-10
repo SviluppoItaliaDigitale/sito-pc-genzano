@@ -207,7 +207,9 @@ def main() -> int:
         "riquadro": {"sud": round(s, 5), "ovest": round(w, 5), "nord": round(n, 5), "est": round(e, 5)},
         "risoluzione_m": RISOLUZIONE_M, "pixel": int(round(2 * MEZZO_LATO_KM * 1000 / RISOLUZIONE_M)),
         "scene": ordinate,
-        "scartate": sorted(x for x in scartate if x >= ordinate[-1]["giorno"])[-20:],
+        # le date nuvolose si ricordano per tutta la finestra del catalogo, altrimenti
+        # ogni giro rileggerebbe la maschera SCL delle stesse scene scartate
+        "scartate": sorted(x for x in scartate if x >= (dt.date.today() - dt.timedelta(days=GIORNI)).isoformat())[-40:],
     }
     OUT_JSON.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     log(f"Sentinel-2: {len(ordinate)} scene in archivio, {nuove} nuove ({ordinate[0]['giorno']} la piu' recente).")
