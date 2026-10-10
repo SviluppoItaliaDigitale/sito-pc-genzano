@@ -7929,3 +7929,38 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
      schermo (classe messa da js/crea-lezione.js solo per quella stampa) */
   html.stampa-lezione .article-body > :not(#crea-lezione-esito) { display: none !important; }
 }
+
+/* ============================================================
+   SENTINEL-3 — RIQUADRO PASSAGGI v1.0 (10/10/2026)
+   Sotto la cartina del cruscotto, solo col pulsante Sentinel-3:
+   scene usate dal mosaico, prossimo passaggio, mappature EMS.
+   ============================================================ */
+.dash-s3 { margin: .6rem 0 .4rem; padding: .6rem .8rem; background: #f4f7fb; border-left: 4px solid #003366; border-radius: 6px; font-size: .9rem; }
+.dash-s3 section + section { margin-top: .7rem; padding-top: .6rem; border-top: 1px solid #dde4ec; }
+.dash-s3-tit { font-size: .95rem; font-weight: 600; color: #003366; margin: 0 0 .3rem; }
+.dash-s3-nota { font-size: .82rem; color: #495057; margin: .3rem 0 0; }
+.dash-s3-tab { width: 100%; border-collapse: collapse; font-size: .85rem; table-layout: fixed; } /* colonne uguali: su telefono 4 colonne libere sbordavano di 35 px */
+.dash-s3-tab th:nth-child(1) { width: 27%; } .dash-s3-tab th:nth-child(2) { width: 26%; } .dash-s3-tab th:nth-child(3) { width: 19%; } /* "Sentinel-3A" va a capo dopo il trattino, non a meta' parola */
+.dash-s3-tab th, .dash-s3-tab td { padding: .3rem .4rem; text-align: left; border-bottom: 1px solid #dde4ec; vertical-align: top; }
+/* fondo e colore espliciti: la tabella sta dentro .article-body, che da' alle
+   intestazioni il fondo blu, e un colore blu ereditato sparirebbe sul blu */
+.dash-s3-tab thead th { background: #003366; color: #fff; font-weight: 600; }
+.dash-s3-cfr select { max-width: 100%; }
+.dash-s3-list { margin: 0; padding-left: 1.2rem; }
+.dash-s3-list li + li { margin-top: .25rem; }
+.dash-s3-cfr { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: end; margin: .4rem 0; }
+.dash-s3-cfr label { display: flex; flex-direction: column; gap: .15rem; font-size: .85rem; color: #003366; font-weight: 600; }
+.dash-s3-cfr select, .dash-s3-cfr input[type="date"] { font-size: .9rem; font-weight: 400; color: #1a1a1a; padding: .3rem .4rem; border: 1px solid #8a9bb0; border-radius: 4px; background: #fff; min-height: 2.2rem; }
+.dash-s3-btn { border: 2px solid #003366; background: #fff; color: #003366; padding: .35rem .8rem; border-radius: 999px; font-size: .88rem; cursor: pointer; min-height: 2.2rem; }
+.dash-s3-btn[aria-pressed="true"] { background: #003366; color: #fff; }
+.dash-s3-btn:focus-visible, .dash-s3-cfr select:focus-visible, .dash-s3-cfr input:focus-visible, #sat-cfr-mix:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+#sat-cfr-mix { width: 100%; max-width: 520px; display: block; margin: .2rem 0 .4rem; accent-color: #003366; }
+.dash-s3-cfr-btn { display: flex; flex-wrap: wrap; gap: .4rem; }
+/* linea di confronto sulla cartina: sopra i pane (z 250) e sotto i controlli Leaflet (1000) */
+.dash-cfr-linea { position: absolute; top: 0; bottom: 0; width: 0; z-index: 600; border-left: 3px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.55); margin-left: -1.5px; pointer-events: none; }
+.dash-cfr-manico { position: absolute; top: 50%; left: -20px; width: 40px; height: 40px; margin-top: -20px; border-radius: 50%; background: #fff; border: 2px solid #003366; box-shadow: 0 1px 4px rgba(0,0,0,.45); cursor: ew-resize; pointer-events: auto; touch-action: none; display: flex; align-items: center; justify-content: center; }
+.dash-cfr-manico span { width: 14px; height: 2px; background: #003366; box-shadow: 0 -4px 0 #003366, 0 4px 0 #003366; }
+.dash-cfr-tag { position: absolute; top: 10px; z-index: 600; background: rgba(0,51,102,.9); color: #fff; font-size: .8rem; font-weight: 600; padding: .2rem .55rem; border-radius: 4px; pointer-events: none; }
+.dash-cfr-tag-a { left: 50px; }
+.dash-cfr-tag-b { right: 10px; }
+@media print { .dash-s3 { background: #fff; border-left-color: #000; } .dash-s3-cfr, #sat-cfr-ctl, .dash-cfr-linea, .dash-cfr-tag { display: none; } }

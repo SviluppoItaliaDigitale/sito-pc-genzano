@@ -3513,6 +3513,7 @@ const ORB_GRUPPI=[
   ["weather",  "METEO",         true,  "satelliti meteorologici polari"],
   ["goes",     "METEO GEO",     true,  "meteorologici geostazionari"],
   ["resource", "OSSERVAZIONE",  true,  "osservazione della Terra: da queste immagini nascono le mappe Copernicus EMS"],
+  ["copernicus","COPERNICUS",    true,  "ricerca per nome «SENTINEL» nel catalogo CelesTrak, non un gruppo della fonte: i Sentinel del programma europeo Copernicus, compresi quelli appena lanciati"],
   ["stations", "STAZIONI",      true,  "stazioni spaziali abitate, ISS compresa"],
   ["amateur",  "RADIOAMATORI",  true,  "satelliti radioamatoriali, usati anche nelle emergenze"],
   ["galileo",  "NAVIGAZIONE",   false, "costellazione europea Galileo"],
@@ -3521,6 +3522,9 @@ const ORB_GRUPPI=[
   ["visual",   "PIÙ LUMINOSI",  false, "i piu' luminosi, quelli che si vedono a occhio nudo"],
 ];
 const ORB_PC=ORB_GRUPPI.filter(g=>g[2]).map(g=>g[0]);
+// insiemi costruiti qui con una ricerca per nome: nei filtri stanno in una fila
+// a parte, cosi' non passano per gruppi definiti dalla fonte
+const ORB_PER_NOME=["copernicus"];
 // il nome della fonte ("sarsat", "active") non dice niente a chi legge:
 // si mostra l'etichetta che compare gia' sulle pastiglie dei filtri
 const orbEtichetta=g=>g==="active"?"CATALOGO COMPLETO":((ORB_GRUPPI.find(x=>x[0]===g)||[,g])[1]);
@@ -3540,9 +3544,14 @@ function orbCacheSalva(g,txt){
   // le stesse effemeridi a ogni visita.
   try{localStorage.setItem("pcgz-tle:"+g,JSON.stringify({t:Date.now(),txt:txt}))}catch(e){}
 }
+/* Il gruppo COPERNICUS non e' un gruppo della fonte: e' la ricerca per nome
+   "SENTINEL" in formato OMM (JSON). Serve il JSON perche' i satelliti con numero
+   di catalogo a sei cifre (Sentinel-3C e' il 100690) non entrano nel formato TLE,
+   che ne ha cinque: CelesTrak li omette dalle TLE, anche dal catalogo completo. */
+const ORB_URL={copernicus:"https://celestrak.org/NORAD/elements/gp.php?NAME=SENTINEL&FORMAT=JSON"};
 async function orbScarica(g){
   const c=orbCacheLeggi(g); if(c!==null)return c;
-  const r=await fetch(CT_BASE+encodeURIComponent(g),{cache:"no-store"});
+  const r=await fetch(ORB_URL[g]||CT_BASE+encodeURIComponent(g),{cache:"no-store"});
   if(!r.ok)throw new Error("HTTP "+r.status);
   const txt=await r.text();
   if(!/^\s*\S/.test(txt)||/Invalid query/i.test(txt))throw new Error("risposta non valida");
@@ -3550,6 +3559,7 @@ async function orbScarica(g){
 }
 // dalle tre righe di una TLE al record propagabile, tenendo il gruppo di origine
 function orbParse(txt,gruppo,mappa){
+  if(/^\s*\[/.test(txt))return orbParseOmm(txt,gruppo,mappa);
   const L=txt.split("\n"); let n=0;
   for(let i=0;i+2<L.length;i+=3){
     const nome=(L[i]||"").trim(), r1=L[i+1], r2=L[i+2];
@@ -3562,6 +3572,27 @@ function orbParse(txt,gruppo,mappa){
     let rec; try{rec=satellite.twoline2satrec(r1,r2)}catch(e){continue}
     if(!rec||rec.error)continue;
     mappa.set(id,{id,nome,rec,gruppi:gruppo?[gruppo]:[],epoca:orbEpoca(r1)});
+    n++;
+  }
+  return n;
+}
+// lo stesso dal formato OMM (JSON): stesso identificativo delle TLE (numero
+// di catalogo), cosi' un satellite presente in entrambi i gruppi non si doppia
+function orbParseOmm(txt,gruppo,mappa){
+  let d; try{d=JSON.parse(txt)}catch(e){return 0}
+  if(!Array.isArray(d))return 0;
+  let n=0;
+  for(const o of d){
+    if(!o||!o.OBJECT_NAME||o.NORAD_CAT_ID==null||!o.EPOCH)continue;
+    const id=String(o.NORAD_CAT_ID), nome=String(o.OBJECT_NAME).trim();
+    if(mappa.has(id)){
+      const g=mappa.get(id); if(gruppo&&!g.gruppi.includes(gruppo))g.gruppi.push(gruppo);
+      continue;
+    }
+    let rec; try{rec=satellite.json2satrec(o)}catch(e){continue}
+    if(!rec||rec.error)continue;
+    const ep=Date.parse(o.EPOCH+"Z");
+    mappa.set(id,{id,nome,rec,gruppi:gruppo?[gruppo]:[],epoca:Number.isFinite(ep)?ep:0});
     n++;
   }
   return n;
@@ -3781,7 +3812,8 @@ function orbPillole(){
     ["Che cosa mostrare", [["tutti","TUTTI",n],["pc","PROTEZIONE CIVILE",conta("pc")],
       ["sopra","SOPRA L'ORIZZONTE",conta("sopra")],["occhio","VISIBILI A OCCHIO NUDO",conta("occhio")]]],
     ["Dove si trovano adesso", Object.entries(ORB_AREE).map(([k,a])=>["a:"+k,a.eti,conta("a:"+k)])],
-    ["Gruppo della fonte", orbGruppiPresenti().map(g=>["g:"+g[0],g[1],g[2]])],
+    ["Gruppo della fonte", orbGruppiPresenti().filter(g=>!ORB_PER_NOME.includes(g[0])).map(g=>["g:"+g[0],g[1],g[2]])],
+    ["Ricerca per nome nella fonte", orbGruppiPresenti().filter(g=>ORB_PER_NOME.includes(g[0])).map(g=>["g:"+g[0],g[1],g[2]])],
     ["Fascia di orbita", orbFascePresenti().map(f=>["o:"+f[0],f[1],f[2]])],
   ];
   return file.filter(([,r])=>r.length).map(([tit,r])=>

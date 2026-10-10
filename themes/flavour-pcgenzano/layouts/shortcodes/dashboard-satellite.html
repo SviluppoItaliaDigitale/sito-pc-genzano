@@ -23,15 +23,54 @@
   <div class="dash-sisma-toolbar" role="group" aria-label="Tipo e risoluzione dell'immagine satellitare">
     <button type="button" class="dash-pill" data-sat="geocolour" aria-pressed="true"><i class="bi bi-cloud" aria-hidden="true"></i> Nuvole · colore (1&nbsp;km)</button>
     <button type="button" class="dash-pill" data-sat="hrfi" aria-pressed="false"><i class="bi bi-zoom-in" aria-hidden="true"></i> Alta risoluzione (500&nbsp;m)</button>
+    <button type="button" class="dash-pill" data-sat="sentinel" aria-pressed="false"><i class="bi bi-image" aria-hidden="true"></i> Sentinel-3 (300&nbsp;m)</button>
     <button type="button" class="dash-pill" data-sat="gibs" aria-pressed="false"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Suolo (NASA)</button>
     <span class="dash-sisma-stato" id="sat-stato" aria-live="polite"></span>
   </div>
   <div class="dash-incendi-box">
     <div id="dash-sat-mappa" role="application" aria-label="Mappa satellitare dell'Italia in tempo reale, con Genzano di Roma evidenziata."></div>
   </div>
+  <div class="dash-s3" id="sat-s3-box" hidden>
+    <section aria-labelledby="sat-s3-pass-tit">
+      <h3 id="sat-s3-pass-tit" class="dash-s3-tit">Passaggi usati per il mosaico (ultime 48 ore su Genzano)</h3>
+      <p class="dash-s3-nota">Dal catalogo pubblico Copernicus: ogni riga è una scena dello strumento OLCI che copre Genzano. Ore italiane; le nuvole sono la stima della scena intera, non del solo paese.</p>
+      <div id="sat-s3-pass" aria-live="polite">Lettura del catalogo…</div>
+    </section>
+    <section aria-labelledby="sat-s3-next-tit">
+      <h3 id="sat-s3-next-tit" class="dash-s3-tit">Prossimo passaggio di giorno sopra Genzano</h3>
+      <div id="sat-s3-next" aria-live="polite">Calcolo in corso…</div>
+      <p class="dash-s3-nota">Calcolato qui dalle effemeridi pubbliche di CelesTrak: passaggio diurno con traccia a terra entro 600&nbsp;km (la fascia ripresa da OLCI è larga circa 1.270&nbsp;km). La scena entra nel mosaico qualche ora dopo il passaggio. Sentinel-3C è in orbita dal 2026 ma le sue immagini non sono ancora pubbliche.</p>
+    </section>
+    <section aria-labelledby="sat-s3-cfr-tit">
+      <h3 id="sat-s3-cfr-tit" class="dash-s3-tit">Confronto prima e dopo</h3>
+      <p class="dash-s3-nota">Scegli due giorni: la cartina si divide con una linea verticale, a sinistra il giorno «prima» e a destra il giorno «dopo», e la linea si trascina. Le immagini a colori naturali cambiano anche per nuvole, luce e stagione: una differenza non è per forza un danno. Le zone non sorvolate quel giorno restano nere o vuote.</p>
+      <form class="dash-s3-cfr" id="sat-cfr-form">
+        <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa)</option></select></label>
+        <label>Prima <input type="date" id="sat-cfr-prima" required></label>
+        <label>Dopo <input type="date" id="sat-cfr-dopo" required></label>
+        <button type="submit" class="dash-s3-btn">Confronta</button>
+        <button type="button" class="dash-s3-btn" id="sat-cfr-chiudi" hidden>Chiudi confronto</button>
+      </form>
+      <div id="sat-cfr-ctl" hidden>
+        <label for="sat-cfr-mix" class="dash-s3-nota">Linea di confronto: a sinistra della linea «prima», a destra «dopo». Trascinala sulla cartina o muovi questo cursore.</label>
+        <input type="range" id="sat-cfr-mix" min="0" max="100" value="50" step="2" aria-valuetext="a metà">
+        <div class="dash-s3-cfr-btn">
+          <button type="button" class="dash-s3-btn" data-mix="100">Tutto «prima»</button>
+          <button type="button" class="dash-s3-btn" data-mix="50">A metà</button>
+          <button type="button" class="dash-s3-btn" data-mix="0">Tutto «dopo»</button>
+        </div>
+        <p class="dash-s3-nota" id="sat-cfr-stato" aria-live="polite"></p>
+      </div>
+    </section>
+    <section aria-labelledby="sat-s3-ems-tit">
+      <h3 id="sat-s3-ems-tit" class="dash-s3-tit">Mappature d'emergenza Copernicus in Italia</h3>
+      <div id="sat-s3-ems" aria-live="polite">Lettura…</div>
+    </section>
+  </div>
   <noscript><div class="alert alert-warning mt-2" role="note">Per la mappa serve JavaScript.</div></noscript>
   <p class="small text-muted mt-2 mb-0" id="sat-fonte">
     {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
+    <strong>Sentinel-3</strong>: mosaico a colori naturali del giorno (strumento OLCI dei satelliti Sentinel-3A e 3B, programma <a href="https://www.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus</a>, distribuito da EUMETSAT), circa 300&nbsp;m; si compone con i passaggi del mattino, quindi le zone non ancora sorvolate restano vuote.
     <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS, mosaico più recente disponibile: in genere di 2 giorni fa).
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
@@ -86,6 +125,27 @@
       version:'1.3.0', time:isoZ(slotUTC()), opacity:1, maxZoom:9,
       attribution:'© EUMETSAT'
     });
+    // Sentinel-3A e 3B, OLCI a colori naturali: mosaico giornaliero ~300 m (Copernicus,
+    // via EUMETSAT, stesso WMS, CORS aperto). Senza "time" il server dà l'ultimo
+    // mosaico; l'ora dell'ultimo passaggio si legge dalle capabilities del solo layer
+    // (7 KB) per dichiararla. Sentinel-3C (lanciato nel 2026) non ha ancora dati pubblici.
+    var S3_LAYER='copernicus:daily_sentinel3ab_olci_l1_rgb_fulres';
+    var sentinel=L.tileLayer.wms(WMS,{
+      layers:S3_LAYER, format:'image/png', transparent:false,
+      version:'1.3.0', opacity:1, maxZoom:9,
+      attribution:'Contiene dati Copernicus Sentinel modificati · © EUMETSAT'
+    });
+    var s3Ora=null;
+    function s3Capabilities(){
+      return fetch('https://view.eumetsat.int/geoserver/copernicus/daily_sentinel3ab_olci_l1_rgb_fulres/ows?service=WMS&request=GetCapabilities&version=1.3.0')
+        .then(function(r){ return r.ok ? r.text() : ''; })
+        .then(function(x){ var m=/<Dimension[^>]*name="time"[^>]*default="([^"]+)"/.exec(x); if(m){ var d=new Date(m[1]); if(!isNaN(d)) s3Ora=d; } })
+        .catch(function(){});
+    }
+    function s3Etichetta(){
+      if(!s3Ora) return 'Sentinel-3 · mosaico più recente a colori naturali';
+      return 'Sentinel-3 · mosaico del '+s3Ora.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})+', ultimo passaggio alle '+s3Ora.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+    }
     var gibs=L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+GIBS_DATA_ISO+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',{
       maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Imagery © NASA EOSDIS GIBS'
     });
@@ -95,8 +155,214 @@
     var stato=document.getElementById('sat-stato');
     var modo='geocolour';
 
+    /* ---- Riquadro Sentinel-3: che cosa ha elaborato, quando torna, mappature EMS ----
+       Tre letture avviate una sola volta, al primo clic sul pulsante Sentinel-3:
+       (a) il catalogo STAC pubblico di Copernicus (CORS aperto, senza account) per i
+           passaggi OLCI che coprono Genzano nelle ultime 48 ore; (b) le effemeridi
+           CelesTrak di Sentinel-3A/3B propagate qui con satellite.js (caricata solo
+           allora: 24 KB) per il prossimo passaggio diurno; (c) lo snapshot EMS già
+           generato per la Sala situazioni, filtrato sull'Italia. */
+    var S3_BOX=document.getElementById('sat-s3-box'), s3Avviato=false;
+    var STAC='https://stac.dataspace.copernicus.eu/v1/search';
+    var SAT_JS='{{ "vendor/satellite/satellite.min.js" | relURL }}';
+    var EMS_JSON='{{ "open-data/ems-attivazioni.json" | relURL }}';
+    var fmtOra=function(d){ return d.toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'}); };
+    var esc=function(x){ return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+    function s3Pannello(){
+      if(s3Avviato) return; s3Avviato=true;
+      s3Passaggi(); s3Prossimo(); s3Ems();
+    }
+    function stacCerca(coll,ore,n){
+      var a=new Date(Date.now()-ore*3600e3).toISOString().slice(0,19)+'Z';
+      var b=new Date(Date.now()+3600e3).toISOString().slice(0,19)+'Z';
+      // riquadro di 0,2° attorno a Genzano: basta che la scena lo tocchi
+      var u=STAC+'?collections='+coll+'&bbox=12.59,41.61,12.79,41.81&datetime='+a+'/'+b+'&limit='+n;
+      return fetch(u).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+        .then(function(j){ return (j&&j.features)||[]; });
+    }
+    function s3Passaggi(){
+      var box=document.getElementById('sat-s3-pass');
+      Promise.all([stacCerca('sentinel-3-olci-1-efr-nrt',48,20), stacCerca('sentinel-3-olci-2-wfr-nrt',48,20).catch(function(){return [];})])
+      .then(function(r){
+        var scene=r[0], nuvole={};
+        r[1].forEach(function(f){ var p=f.properties||{}; if(p.datetime&&typeof p['eo:cloud_cover']==='number') nuvole[p.datetime]=p['eo:cloud_cover']; });
+        if(!scene.length){ box.textContent='Nessuna scena OLCI su Genzano nelle ultime 48 ore nel catalogo.'; return; }
+        scene.sort(function(a,b){ return (b.properties.datetime||'').localeCompare(a.properties.datetime||''); });
+        var h='<table class="dash-s3-tab"><thead><tr><th scope="col">Satellite</th><th scope="col">Passaggio</th><th scope="col">Nuvole</th><th scope="col">Scena</th></tr></thead><tbody>';
+        scene.forEach(function(f){
+          var p=f.properties||{}, d=new Date(p.datetime), sat=String(p.platform||'').replace('sentinel-','Sentinel-').toUpperCase().replace('SENTINEL','Sentinel');
+          var nv=nuvole[p.datetime]; var th=f.assets&&f.assets.thumbnail&&f.assets.thumbnail.href;
+          h+='<tr><td>'+esc(sat)+'</td><td>'+(isNaN(d)?'—':fmtOra(d))+'</td><td>'+(typeof nv==='number'?Math.round(nv)+'%':'—')+'</td><td>'+(th&&/^https:\/\//.test(th)?'<a href="'+esc(th)+'" target="_blank" rel="noopener noreferrer">apri la scena<span class="visually-hidden"> '+esc(sat)+' '+(isNaN(d)?'':fmtOra(d))+' (file scaricato, si apre in una nuova finestra)</span></a>':'—')+'</td></tr>';
+        });
+        box.innerHTML=h+'</tbody></table>';
+      }).catch(function(){ box.textContent='Catalogo Copernicus non raggiungibile in questo momento.'; });
+    }
+    function caricaSatelliteJs(){
+      if(window.satellite) return Promise.resolve();
+      return new Promise(function(ok,ko){ var sc=document.createElement('script'); sc.src=SAT_JS; sc.onload=ok; sc.onerror=ko; document.head.appendChild(sc); });
+    }
+    function ommSentinel3(){
+      var k='pcgz-omm:sentinel-3';
+      try{ var c=JSON.parse(localStorage.getItem(k)||'null'); if(c&&c.t&&Date.now()-c.t<6*3600e3&&Array.isArray(c.d)) return Promise.resolve(c.d); }catch(e){}
+      return fetch('https://celestrak.org/NORAD/elements/gp.php?NAME=SENTINEL-3&FORMAT=JSON',{cache:'no-store'})
+        .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+        .then(function(d){ if(!Array.isArray(d)) throw new Error('formato'); try{ localStorage.setItem(k,JSON.stringify({t:Date.now(),d:d})); }catch(e){} return d; });
+    }
+    function s3Prossimo(){
+      var box=document.getElementById('sat-s3-next');
+      caricaSatelliteJs().then(ommSentinel3).then(function(omm){
+        var OBS={longitude:GENZANO[1]*Math.PI/180,latitude:GENZANO[0]*Math.PI/180,height:0.435};
+        var AU=149597870.7, R=6371, out=[], S3_GIORNI=5; // cinque giorni: fra un giorno e l'altro la traccia si sposta di ~550 km, e per un satellite solo possono passare 2-3 giorni senza un passaggio entro 600 km
+        function soleEl(t,gmst){
+          var jd=satellite.jday(t.getUTCFullYear(),t.getUTCMonth()+1,t.getUTCDate(),t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds());
+          var s=satellite.sunPos(jd), ecf=satellite.eciToEcf({x:s.rsun[0]*AU,y:s.rsun[1]*AU,z:s.rsun[2]*AU},gmst);
+          return satellite.ecfToLookAngles(OBS,ecf).elevation*180/Math.PI;
+        }
+        function distKm(lat,lon){ // ortodromica dalla verticale a terra a Genzano
+          var p1=GENZANO[0]*Math.PI/180,p2=lat*Math.PI/180,dl=(lon-GENZANO[1])*Math.PI/180;
+          return R*Math.acos(Math.min(1,Math.sin(p1)*Math.sin(p2)+Math.cos(p1)*Math.cos(p2)*Math.cos(dl)));
+        }
+        omm.filter(function(o){ return /^SENTINEL-3[AB]$/.test(o.OBJECT_NAME||''); }).forEach(function(o){
+          var rec; try{ rec=satellite.json2satrec(o); }catch(e){ return; }
+          if(!rec||rec.error) return;
+          var t0=Date.now(), best=null, dentro=false;
+          for(var ms=0; ms<=S3_GIORNI*86400e3; ms+=60e3){
+            var t=new Date(t0+ms), gmst=satellite.gstime(t), pv;
+            try{ pv=satellite.propagate(rec,t); }catch(e){ break; }
+            if(!pv||!pv.position) break;
+            var g=satellite.eciToGeodetic(pv.position,gmst);
+            var lat=satellite.degreesLat(g.latitude), lon=satellite.degreesLong(g.longitude), dk=distKm(lat,lon);
+            if(dk<600){
+              if(!dentro){ dentro=true; best={t:t,d:dk,lon:lon}; }
+              else if(dk<best.d){ best={t:t,d:dk,lon:lon}; }
+            } else if(dentro){
+              dentro=false;
+              if(soleEl(best.t,satellite.gstime(best.t))>5){ out.push({nome:o.OBJECT_NAME,t:best.t,d:best.d,lon:best.lon}); break; }
+              best=null;
+            }
+          }
+          if(!out.some(function(x){return x.nome===o.OBJECT_NAME;})) out.push({nome:o.OBJECT_NAME,t:null});
+        });
+        if(!out.length){ box.textContent='Effemeridi di Sentinel-3 non disponibili.'; return; }
+        out.sort(function(a,b){ return (a.t?a.t.getTime():Infinity)-(b.t?b.t.getTime():Infinity); });
+        box.innerHTML='<ul class="dash-s3-list">'+out.map(function(x){
+          var nome=x.nome.replace('SENTINEL','Sentinel');
+          if(!x.t) return '<li><strong>'+esc(nome)+'</strong>: nessun passaggio diurno entro 600 km nei prossimi 5 giorni.</li>';
+          return '<li><strong>'+esc(nome)+'</strong>: '+fmtOra(x.t)+', traccia a terra a circa '+Math.round(x.d/10)*10+' km a '+(x.lon<GENZANO[1]?'ovest':'est')+'.</li>';
+        }).join('')+'</ul>';
+      }).catch(function(){ box.textContent='Effemeridi non raggiungibili in questo momento: il calcolo non è possibile.'; });
+    }
+    /* ---- Confronto prima/dopo: due giorni, stessa zona, una linea che scorre ----
+       Sentinel-3: lo stesso layer WMS con il parametro "time"; per un giorno passato
+       le 20:00Z restituiscono il mosaico completo (alle 06:00Z è ancora nero,
+       verificato il 10/10/2026), per il giorno corrente si lascia l'ultimo.
+       VIIRS: la tile GIBS con la data nell'indirizzo (archivio dal 2012).
+       Il "dopo" sta in un pane sopra al "prima", ritagliato con clip-path a
+       destra di una linea verticale: a sinistra si vede il "prima", a destra il
+       "dopo". Il ritaglio è in coordinate del pane (che si sposta con la
+       mappa), quindi si ricalcola a ogni movimento e zoom, come fa il plugin
+       leaflet-side-by-side. La linea si trascina col puntatore; il cursore
+       sotto la cartina e i tre pulsanti sono l'alternativa senza trascinamento
+       (WCAG 2.5.7) e da tastiera. */
+    var cfr={attivo:false, prima:null, dopo:null, r:0.5};
+    map.createPane('cfrDopo'); var cfrPane=map.getPane('cfrDopo'); cfrPane.style.zIndex=250;
+    var cfrForm=document.getElementById('sat-cfr-form'), cfrFonte=document.getElementById('sat-cfr-fonte');
+    var cfrPrima=document.getElementById('sat-cfr-prima'), cfrDopo=document.getElementById('sat-cfr-dopo');
+    var cfrCtl=document.getElementById('sat-cfr-ctl'), cfrMix=document.getElementById('sat-cfr-mix');
+    var cfrStato=document.getElementById('sat-cfr-stato'), cfrChiudi=document.getElementById('sat-cfr-chiudi');
+    var mappaEl=document.getElementById('dash-sat-mappa');
+    var cfrLinea=L.DomUtil.create('div','dash-cfr-linea',mappaEl); cfrLinea.hidden=true;
+    cfrLinea.innerHTML='<div class="dash-cfr-manico" aria-hidden="true"><span></span></div>';
+    var cfrTagA=L.DomUtil.create('span','dash-cfr-tag dash-cfr-tag-a',mappaEl), cfrTagB=L.DomUtil.create('span','dash-cfr-tag dash-cfr-tag-b',mappaEl);
+    cfrTagA.hidden=true; cfrTagB.hidden=true; cfrTagA.setAttribute('aria-hidden','true'); cfrTagB.setAttribute('aria-hidden','true');
+    L.DomEvent.disableClickPropagation(cfrLinea); L.DomEvent.disableScrollPropagation(cfrLinea);
+    function isoGiorno(d){ return d.toISOString().slice(0,10); }
+    function cfrLimiti(){
+      var f=cfrFonte.value, oggi=new Date(), max=new Date(oggi);
+      if(f==='viirs') max.setUTCDate(max.getUTCDate()-GIBS_LAG_GIORNI);
+      var min=f==='viirs'?'2012-01-19':'2020-02-17';
+      cfrPrima.min=min; cfrDopo.min=min; cfrPrima.max=isoGiorno(max); cfrDopo.max=isoGiorno(max);
+      if(!cfrDopo.value||cfrDopo.value>cfrDopo.max) cfrDopo.value=isoGiorno(max);
+      if(!cfrPrima.value||cfrPrima.value>=cfrDopo.value){ var p=new Date(cfrDopo.value+'T12:00:00Z'); p.setUTCDate(p.getUTCDate()-7); cfrPrima.value=isoGiorno(p); }
+    }
+    cfrFonte.addEventListener('change',cfrLimiti); cfrLimiti();
+    function cfrLayer(fonte,giorno,pane){
+      var o=pane?{pane:pane}:{};
+      if(fonte==='viirs'){
+        return L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+giorno+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',Object.assign({maxNativeZoom:8,maxZoom:9,attribution:'Imagery © NASA EOSDIS GIBS'},o));
+      }
+      var par={layers:S3_LAYER, format:'image/png', transparent:false, version:'1.3.0', maxZoom:9, attribution:'Contiene dati Copernicus Sentinel modificati · © EUMETSAT'};
+      var fine=new Date(giorno+'T20:00:00Z'); if(fine.getTime()<Date.now()) par.time=giorno+'T20:00:00Z';
+      return L.tileLayer.wms(WMS,Object.assign(par,o));
+    }
+    function dataIt(g){ return new Date(g+'T12:00:00Z').toLocaleDateString('it-IT',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}); }
+    function dataBreve(g){ return new Date(g+'T12:00:00Z').toLocaleDateString('it-IT',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}); }
+    // ritaglio del pane "dopo" a destra della linea, in coordinate del pane
+    function cfrRitaglia(){
+      if(!cfr.attivo) return;
+      var sz=map.getSize(), nw=map.containerPointToLayerPoint([0,0]), se=map.containerPointToLayerPoint(sz);
+      var xc=sz.x*cfr.r, x=nw.x+xc;
+      cfrPane.style.clipPath='polygon('+x+'px '+nw.y+'px, '+se.x+'px '+nw.y+'px, '+se.x+'px '+se.y+'px, '+x+'px '+se.y+'px)';
+      cfrLinea.style.left=xc+'px';
+    }
+    map.on('move zoom zoomanim viewreset resize',cfrRitaglia);
+    function cfrPosiziona(pct){ // pct = percentuale "prima" visibile = posizione della linea da sinistra
+      pct=Math.max(0,Math.min(100,Number(pct)||0)); cfr.r=pct/100; cfrMix.value=Math.round(pct);
+      cfrMix.setAttribute('aria-valuetext', pct<=0?'tutto «dopo»':pct>=100?'tutto «prima»':pct===50?'a metà':'linea al '+Math.round(pct)+'% da sinistra');
+      cfrRitaglia();
+    }
+    function cfrChiudiTutto(){
+      if(cfr.prima&&map.hasLayer(cfr.prima)) map.removeLayer(cfr.prima);
+      if(cfr.dopo&&map.hasLayer(cfr.dopo)) map.removeLayer(cfr.dopo);
+      cfr={attivo:false, prima:null, dopo:null, r:cfr.r};
+      cfrPane.style.clipPath=''; cfrLinea.hidden=true; cfrTagA.hidden=true; cfrTagB.hidden=true;
+      cfrCtl.hidden=true; cfrChiudi.hidden=true;
+    }
+    cfrForm.addEventListener('submit',function(e){
+      e.preventDefault(); cfrLimiti();
+      var a=cfrPrima.value, b=cfrDopo.value, f=cfrFonte.value;
+      if(!a||!b){ cfrStato.textContent='Scegli le due date.'; cfrCtl.hidden=false; return; }
+      if(a>=b){ cfrStato.textContent='La data «prima» deve venire prima della data «dopo».'; cfrCtl.hidden=false; return; }
+      if(b>cfrDopo.max||a<cfrPrima.min){ cfrStato.textContent='Date fuori dall\'archivio disponibile per questa fonte.'; cfrCtl.hidden=false; return; }
+      cfrChiudiTutto();
+      cfr={attivo:true, prima:cfrLayer(f,a), dopo:cfrLayer(f,b,'cfrDopo'), r:0.5, a:a, b:b, f:f};
+      cfrTagA.textContent='Prima · '+dataBreve(a); cfrTagB.textContent='Dopo · '+dataBreve(b);
+      cfrCtl.hidden=false; cfrChiudi.hidden=false;
+      cfrStato.textContent='Prima: '+dataIt(a)+' · Dopo: '+dataIt(b)+' · '+(f==='viirs'?'NASA VIIRS':'Sentinel-3')+'. Trascina la linea o muovi il cursore.';
+      if(modo!=='sentinel'){ document.querySelector('.dash-pill[data-sat="sentinel"]').click(); } else { mostra(); }
+    });
+    cfrChiudi.addEventListener('click',function(){ cfrChiudiTutto(); cfrStato.textContent='Confronto chiuso: torna il mosaico più recente.'; mostra(); });
+    cfrMix.addEventListener('input',function(){ cfrPosiziona(cfrMix.value); });
+    cfrCtl.querySelectorAll('[data-mix]').forEach(function(b){ b.addEventListener('click',function(){ cfrPosiziona(b.dataset.mix); }); });
+    // trascinamento della linea: il puntatore resta catturato dal manico, la mappa non si muove
+    (function(){
+      var manico=cfrLinea.firstElementChild, inCorso=false;
+      function daEvento(ev){ var r=mappaEl.getBoundingClientRect(); return (ev.clientX-r.left)/r.width*100; }
+      manico.addEventListener('pointerdown',function(ev){ inCorso=true; manico.setPointerCapture(ev.pointerId); map.dragging.disable(); cfrPosiziona(daEvento(ev)); ev.preventDefault(); });
+      manico.addEventListener('pointermove',function(ev){ if(inCorso) cfrPosiziona(daEvento(ev)); });
+      function fine(ev){ if(!inCorso) return; inCorso=false; try{ manico.releasePointerCapture(ev.pointerId); }catch(e){} map.dragging.enable(); }
+      manico.addEventListener('pointerup',fine); manico.addEventListener('pointercancel',fine);
+    })();
+
+    function s3Ems(){
+      var box=document.getElementById('sat-s3-ems');
+      fetch(EMS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
+        var lim=Date.now()-60*86400e3, snap=j&&j._snapshot&&j._snapshot.generato;
+        var it=((j&&j.results)||[]).filter(function(a){ return Array.isArray(a.countries)&&a.countries.some(function(c){return /^ital(y|ia)$/i.test(c);})&&Date.parse(a.activationTime)>lim; });
+        it.sort(function(a,b){ return (b.activationTime||'').localeCompare(a.activationTime||''); });
+        var coda=' Fonte: Copernicus EMS Rapid Mapping, elenco aggiornato ogni 15 minuti.';
+        if(!it.length){ box.textContent='Nessuna mappatura Copernicus EMS attivata in Italia negli ultimi 60 giorni.'+coda; return; }
+        box.innerHTML='<ul class="dash-s3-list">'+it.map(function(a){
+          var d=new Date(a.activationTime);
+          return '<li><a href="https://mapping.emergency.copernicus.eu/activations/'+encodeURIComponent(a.code)+'" target="_blank" rel="noopener noreferrer">'+esc(a.code)+' — '+esc(a.name)+'<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>, attivata il '+(isNaN(d)?'—':fmtOra(d))+(a.closed?', chiusa':', in corso')+'.</li>';
+        }).join('')+'</ul><p class="dash-s3-nota mb-0">'+coda.trim()+'</p>';
+      }).catch(function(){ box.textContent='Elenco delle mappature non disponibile in questo momento.'; });
+    }
+
     function mostra(){
-      [geocolour,hrfi,gibs,confini].forEach(function(l){ if(map.hasLayer(l)) map.removeLayer(l); });
+      [geocolour,hrfi,sentinel,gibs,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
+      var inConfronto=(modo==='sentinel'&&cfr.attivo);
+      cfrLinea.hidden=!inConfronto; cfrTagA.hidden=!inConfronto; cfrTagB.hidden=!inConfronto;
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
       if(modo==='geocolour'){
         geocolour.setParams({time:isoZ(t)}); geocolour.addTo(map); confini.addTo(map);
@@ -104,11 +370,21 @@
       } else if(modo==='hrfi'){
         hrfi.setParams({time:isoZ(t)}); hrfi.addTo(map); confini.addTo(map);
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
+      } else if(modo==='sentinel'&&cfr.attivo){
+        cfr.prima.addTo(map); cfr.dopo.addTo(map); confini.addTo(map); cfrPosiziona(cfr.r*100);
+        stato.textContent='Confronto: '+dataIt(cfr.a)+' → '+dataIt(cfr.b);
+        s3Pannello();
+      } else if(modo==='sentinel'){
+        sentinel.addTo(map); confini.addTo(map);
+        stato.textContent=s3Etichetta();
+        s3Capabilities().then(function(){ if(modo==='sentinel') stato.textContent=s3Etichetta(); });
+        s3Pannello();
       } else {
         gibs.addTo(map); confini.addTo(map);
         stato.textContent='Immagine del '+GIBS_DATA_LABEL;
       }
       stella.addTo(map);
+      S3_BOX.hidden=(modo!=='sentinel');
     }
 
     document.querySelectorAll('.dash-pill[data-sat]').forEach(function(b){
@@ -118,7 +394,7 @@
       });
     });
 
-    function avvia(){ map.invalidateSize(); mostra(); setInterval(function(){ if(modo!=='gibs') mostra(); }, 300000); }
+    function avvia(){ map.invalidateSize(); mostra(); setInterval(function(){ if(modo==='geocolour'||modo==='hrfi') mostra(); }, 300000); }
     var box=document.getElementById('dash-sat-mappa');
     if(box.offsetParent!==null){ avvia(); }
     else { window.addEventListener('cruscotto:satellite', avvia, {once:true}); }
