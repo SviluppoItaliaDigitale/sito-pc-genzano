@@ -29,6 +29,7 @@
     <button type="button" class="dash-pill" data-sat="gibs" aria-pressed="false"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Suolo (NASA)</button>
     <button type="button" class="dash-pill" data-sat="imerg" aria-pressed="false"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i> Pioggia da satellite</button>
     <button type="button" class="dash-pill" data-sat="radar" aria-pressed="false"><i class="bi bi-broadcast" aria-hidden="true"></i> Radar Sentinel-1</button>
+    <button type="button" class="dash-pill" data-sat="s2" aria-pressed="false"><i class="bi bi-pin-map" aria-hidden="true"></i> Sentinel-2 (10&nbsp;m)</button>
     <button type="button" class="dash-pill" data-sat="notte" aria-pressed="false"><i class="bi bi-moon-stars" aria-hidden="true"></i> Luci notturne</button>
     <span class="dash-sisma-stato" id="sat-stato" aria-live="polite"></span>
   </div>
@@ -50,9 +51,11 @@
       <h3 id="sat-s3-cfr-tit" class="dash-s3-tit">Confronto prima e dopo</h3>
       <p class="dash-s3-nota">Scegli due giorni: la cartina si divide con una linea verticale, a sinistra il giorno «prima» e a destra il giorno «dopo», e la linea si trascina. Le immagini a colori naturali cambiano anche per nuvole, luce e stagione: una differenza non è per forza un danno. Le zone non sorvolate quel giorno restano nere o vuote.</p>
       <form class="dash-s3-cfr" id="sat-cfr-form">
-        <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa; NOAA-21 dal 2024, prima Suomi NPP)</option></select></label>
-        <label>Prima <input type="date" id="sat-cfr-prima" required></label>
-        <label>Dopo <input type="date" id="sat-cfr-dopo" required></label>
+        <label>Fonte <select id="sat-cfr-fonte"><option value="s3">Sentinel-3, 300 m (dal 17 febbraio 2020)</option><option value="viirs">NASA VIIRS, 750 m (dal 2012, fino a 2 giorni fa; NOAA-21 dal 2024, prima Suomi NPP)</option><option value="s2">Sentinel-2, 10 m (solo 16 km attorno a Genzano, ultime scene poco nuvolose)</option></select></label>
+        <label id="sat-cfr-prima-l">Prima <input type="date" id="sat-cfr-prima" required></label>
+        <label id="sat-cfr-dopo-l">Dopo <input type="date" id="sat-cfr-dopo" required></label>
+        <label id="sat-cfr-s2a-l" hidden>Prima <select id="sat-cfr-s2a" disabled required></select></label>
+        <label id="sat-cfr-s2b-l" hidden>Dopo <select id="sat-cfr-s2b" disabled required></select></label>
         <button type="submit" class="dash-s3-btn">Confronta</button>
         <button type="button" class="dash-s3-btn" id="sat-cfr-chiudi" hidden>Chiudi confronto</button>
       </form>
@@ -82,7 +85,7 @@
     {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
     <strong>Sentinel-3</strong>: mosaico a colori naturali del giorno (strumento OLCI dei satelliti Sentinel-3A e 3B, programma <a href="https://www.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus</a>, distribuito da EUMETSAT), circa 300&nbsp;m; si compone con i passaggi del mattino, quindi le zone non ancora sorvolate restano vuote.
     <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS dal satellite NOAA-21, mosaico più recente disponibile: in genere di 2 giorni fa).
-    <strong>Pioggia da satellite</strong>: intensità di pioggia stimata dalla costellazione GPM (prodotto IMERG «Early» della NASA, ogni 30 minuti, disponibile con 4-6 ore di ritardo): copre anche dove il radar non arriva, ma è una stima a 10 km, non una misura. <strong>Radar Sentinel-1</strong>: ultima immagine radar (Copernicus) di 30 km attorno a Genzano, letta dall'archivio con le chiavi del Gruppo: vede attraverso le nuvole e di notte, l'acqua ferma appare scura; senza correzione del rilievo, quindi i versanti risultano un po' deformati. <strong>Luci notturne</strong>: banda giorno-notte del satellite NOAA-20 (mosaico della notte più recente): le nuvole coprono le luci, quindi un'area scura non è per forza un blackout.
+    <strong>Pioggia da satellite</strong>: intensità di pioggia stimata dalla costellazione GPM (prodotto IMERG «Early» della NASA, ogni 30 minuti, disponibile con 4-6 ore di ritardo): copre anche dove il radar non arriva, ma è una stima a 10 km, non una misura. <strong>Radar Sentinel-1</strong>: ultima immagine radar (Copernicus) di 30 km attorno a Genzano, letta dall'archivio con le chiavi del Gruppo: vede attraverso le nuvole e di notte, l'acqua ferma appare scura; senza correzione del rilievo, quindi i versanti risultano un po' deformati. <strong>Sentinel-2 (10 m)</strong>: l'ultima scena a colori naturali poco nuvolosa di 16 km attorno a Genzano, alla scala delle strade e dei singoli edifici (archivio pubblico Copernicus, un passaggio ogni 2-3 giorni, online di norma il giorno dopo; la nuvolosità indicata è quella calcolata sulla finestra, non sulla scena intera); le stesse scene si confrontano «prima e dopo» a 10 m dal riquadro sotto la cartina. <strong>Luci notturne</strong>: banda giorno-notte del satellite NOAA-20 (mosaico della notte più recente): le nuvole coprono le luci, quindi un'area scura non è per forza un blackout.
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
@@ -97,7 +100,7 @@
 
     // sfondo geografico chiaro sotto al satellite, per i confini
     // maxNativeZoom 8: oltre, le tessere OSM si ingrandiscono (serve al radar, a zoom 12)
-    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxNativeZoom:8,maxZoom:12,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
+    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxNativeZoom:8,maxZoom:14,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
     var confini=L.geoJSON(null,{pane:'markerPane',style:{color:'#ffffff',weight:1,opacity:0.75,fillOpacity:0},attribution:'Confini: Natural Earth'});
     fetch('{{ "open-data/world-countries.geo.json" | relURL }}').then(function(r){return r.json();}).then(function(g){confini.addData(g);}).catch(function(){});
 
@@ -187,6 +190,21 @@
         radarLayer=L.imageOverlay(RADAR_BASE+j.immagine.replace(/^\//,'')+'?v='+encodeURIComponent(j.id||''),b,{opacity:1,alt:'Immagine radar Sentinel-1 di 30 km attorno a Genzano di Roma',attribution:'Radar: Contiene dati Copernicus Sentinel modificati'});
         return j;
       });
+    }
+    // Sentinel-2 a 10 m: scene (le ultime poco nuvolose) e riquadro scritti in CI
+    // da genera-copernicus-sentinel2.py; la stessa serie alimenta il confronto.
+    var S2_JSON='{{ "open-data/copernicus-sentinel2.json" | relURL }}';
+    var s2Info=null, s2Layer=null;
+    function s2Carica(){
+      if(s2Info) return Promise.resolve(s2Info);
+      return fetch(S2_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
+        if(!j||!j.riquadro||!j.scene||!j.scene.length) throw new Error('vuoto');
+        s2Info=j; s2Layer=s2Overlay(j.scene[0]); s2Riempi(); return j;
+      });
+    }
+    function s2Overlay(sc,pane){
+      var b=[[s2Info.riquadro.sud,s2Info.riquadro.ovest],[s2Info.riquadro.nord,s2Info.riquadro.est]];
+      return L.imageOverlay(RADAR_BASE+sc.immagine.replace(/^\//,'')+'?v='+encodeURIComponent(sc.id||''),b,Object.assign({opacity:1,alt:'Immagine Sentinel-2 a colori naturali di 16 km attorno a Genzano di Roma del '+dataIt(sc.giorno),attribution:'Sentinel-2: Contiene dati Copernicus Sentinel modificati'},pane?{pane:pane}:{}));
     }
     var tempiGibs={};
     function gibsUltimo(layer,tms){ // ultimo istante del dominio temporale del layer
@@ -326,8 +344,20 @@
     cfrTagA.hidden=true; cfrTagB.hidden=true; cfrTagA.setAttribute('aria-hidden','true'); cfrTagB.setAttribute('aria-hidden','true');
     L.DomEvent.disableClickPropagation(cfrLinea); L.DomEvent.disableScrollPropagation(cfrLinea);
     function isoGiorno(d){ return d.toISOString().slice(0,10); }
+    var cfrS2a=document.getElementById('sat-cfr-s2a'), cfrS2b=document.getElementById('sat-cfr-s2b');
+    // Sentinel-2: le date non sono libere, sono le scene in archivio (un passaggio
+    // ogni 2-3 giorni, solo quelle poco nuvolose): al posto dei calendari due elenchi
+    function s2Riempi(){
+      if(!s2Info||cfrS2a.options.length) return;
+      s2Info.scene.forEach(function(sc){ [cfrS2a,cfrS2b].forEach(function(sel){ var o=document.createElement('option'); o.value=sc.giorno; o.textContent=dataIt(sc.giorno)+' · nuvole '+sc.nuvole_pct+'%'; sel.appendChild(o); }); });
+      cfrS2b.selectedIndex=0; cfrS2a.selectedIndex=Math.min(1,cfrS2a.options.length-1);
+    }
     function cfrLimiti(){
-      var f=cfrFonte.value, oggi=new Date(), max=new Date(oggi);
+      var f=cfrFonte.value, s2=(f==='s2'), oggi=new Date(), max=new Date(oggi);
+      document.getElementById('sat-cfr-prima-l').hidden=s2; document.getElementById('sat-cfr-dopo-l').hidden=s2;
+      cfrPrima.disabled=s2; cfrDopo.disabled=s2;
+      [cfrS2a,cfrS2b].forEach(function(el){ el.disabled=!s2; el.parentNode.hidden=!s2; });
+      if(s2){ s2Carica().catch(function(){ cfrStato.textContent='Scene Sentinel-2 non ancora disponibili.'; cfrCtl.hidden=false; }); return; }
       if(f==='viirs') max.setUTCDate(max.getUTCDate()-GIBS_LAG_GIORNI);
       var min=f==='viirs'?'2012-01-19':'2020-02-17';
       cfrPrima.min=min; cfrDopo.min=min; cfrPrima.max=isoGiorno(max); cfrDopo.max=isoGiorno(max);
@@ -337,6 +367,10 @@
     cfrFonte.addEventListener('change',cfrLimiti); cfrLimiti();
     function cfrLayer(fonte,giorno,pane){
       var o=pane?{pane:pane}:{};
+      if(fonte==='s2'){
+        var sc=s2Info&&s2Info.scene.filter(function(x){ return x.giorno===giorno; })[0];
+        return sc?s2Overlay(sc,pane):null;
+      }
       if(fonte==='viirs'){
         return L.tileLayer(GIBS+viirsLayerId(giorno)+'/default/'+giorno+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',Object.assign({maxNativeZoom:8,maxZoom:9,attribution:'Imagery © NASA EOSDIS GIBS'},o));
       }
@@ -369,15 +403,18 @@
     }
     cfrForm.addEventListener('submit',function(e){
       e.preventDefault(); cfrLimiti();
-      var a=cfrPrima.value, b=cfrDopo.value, f=cfrFonte.value;
-      if(!a||!b){ cfrStato.textContent='Scegli le due date.'; cfrCtl.hidden=false; return; }
+      var f=cfrFonte.value, s2=(f==='s2');
+      var a=s2?cfrS2a.value:cfrPrima.value, b=s2?cfrS2b.value:cfrDopo.value;
+      if(!a||!b){ cfrStato.textContent=s2?'Scene Sentinel-2 non ancora disponibili.':'Scegli le due date.'; cfrCtl.hidden=false; return; }
       if(a>=b){ cfrStato.textContent='La data «prima» deve venire prima della data «dopo».'; cfrCtl.hidden=false; return; }
-      if(b>cfrDopo.max||a<cfrPrima.min){ cfrStato.textContent='Date fuori dall\'archivio disponibile per questa fonte.'; cfrCtl.hidden=false; return; }
+      if(!s2&&(b>cfrDopo.max||a<cfrPrima.min)){ cfrStato.textContent='Date fuori dall\'archivio disponibile per questa fonte.'; cfrCtl.hidden=false; return; }
+      var lp=cfrLayer(f,a), ld=cfrLayer(f,b,'cfrDopo');
+      if(!lp||!ld){ cfrStato.textContent='Scene non disponibili per queste date.'; cfrCtl.hidden=false; return; }
       cfrChiudiTutto();
-      cfr={attivo:true, prima:cfrLayer(f,a), dopo:cfrLayer(f,b,'cfrDopo'), r:0.5, a:a, b:b, f:f};
+      cfr={attivo:true, prima:lp, dopo:ld, r:0.5, a:a, b:b, f:f};
       cfrTagA.textContent='Prima · '+dataBreve(a); cfrTagB.textContent='Dopo · '+dataBreve(b);
       cfrCtl.hidden=false; cfrChiudi.hidden=false;
-      cfrStato.textContent='Prima: '+dataIt(a)+' · Dopo: '+dataIt(b)+' · '+(f==='viirs'?'NASA VIIRS':'Sentinel-3')+'. Trascina la linea o muovi il cursore.';
+      cfrStato.textContent='Prima: '+dataIt(a)+' · Dopo: '+dataIt(b)+' · '+(f==='viirs'?'NASA VIIRS':s2?'Sentinel-2 a 10 m, 16 km attorno a Genzano':'Sentinel-3')+'. Trascina la linea o muovi il cursore.';
       if(modo!=='sentinel'){ document.querySelector('.dash-pill[data-sat="sentinel"]').click(); } else { mostra(); }
     });
     cfrChiudi.addEventListener('click',function(){ cfrChiudiTutto(); cfrStato.textContent='Confronto chiuso: torna il mosaico più recente.'; mostra(); });
@@ -453,8 +490,10 @@
     }
 
     function mostra(){
-      [geocolour,hrfi,sentinel,gibs,imerg,notte,radarLayer,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
-      map.setMaxZoom(modo==='radar'?12:9); // il radar e' una finestra di 30 km: va vista da vicino
+      [geocolour,hrfi,sentinel,gibs,imerg,notte,radarLayer,s2Layer,confini,cfr.prima,cfr.dopo].forEach(function(l){ if(l&&map.hasLayer(l)) map.removeLayer(l); });
+      // il radar e' una finestra di 30 km e Sentinel-2 una di 16 km a 10 m: vanno viste da vicino
+      var cfrS2=(modo==='sentinel'&&cfr.attivo&&cfr.f==='s2');
+      map.setMaxZoom(modo==='radar'?12:(modo==='s2'||cfrS2)?14:9);
       var inConfronto=(modo==='sentinel'&&cfr.attivo);
       cfrLinea.hidden=!inConfronto; cfrTagA.hidden=!inConfronto; cfrTagB.hidden=!inConfronto;
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
@@ -465,8 +504,10 @@
         hrfi.setParams({time:isoZ(t)}); hrfi.addTo(map); confini.addTo(map);
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
       } else if(modo==='sentinel'&&cfr.attivo){
-        cfr.prima.addTo(map); cfr.dopo.addTo(map); confini.addTo(map); cfrPosiziona(cfr.r*100);
-        stato.textContent='Confronto: '+dataIt(cfr.a)+' → '+dataIt(cfr.b);
+        cfr.prima.addTo(map); cfr.dopo.addTo(map); confini.addTo(map);
+        if(cfrS2) map.fitBounds(cfr.dopo.getBounds(),{animate:false});
+        cfrPosiziona(cfr.r*100);
+        stato.textContent='Confronto'+(cfrS2?' Sentinel-2 (10 m)':'')+': '+dataIt(cfr.a)+' → '+dataIt(cfr.b);
         s3Pannello();
       } else if(modo==='sentinel'){
         sentinel.addTo(map); confini.addTo(map);
@@ -486,6 +527,15 @@
           var d=new Date(j.quando);
           stato.textContent='Radar Sentinel-1 · '+(isNaN(d)?'':fmtOra(d))+' · '+esc(j.satellite||'')+(j.orbita?' · orbita '+(j.orbita==='ascending'?'ascendente (sera)':'discendente (mattina)'):'');
         }).catch(function(){ if(modo==='radar') stato.textContent='Radar Sentinel-1 · immagine non ancora disponibile'; });
+      } else if(modo==='s2'){
+        stato.textContent='Sentinel-2 · lettura…';
+        s2Carica().then(function(j){
+          if(modo!=='s2') return;
+          s2Layer.addTo(map); confini.addTo(map); stella.addTo(map);
+          map.fitBounds(s2Layer.getBounds(),{animate:false});
+          var sc=j.scene[0], d=new Date(sc.quando);
+          stato.textContent='Sentinel-2 · '+(isNaN(d)?dataIt(sc.giorno):fmtOra(d))+' · '+(sc.satellite||'')+' · nuvole sul '+sc.nuvole_pct+'% della finestra';
+        }).catch(function(){ if(modo==='s2') stato.textContent='Sentinel-2 · scene non ancora disponibili'; });
       } else if(modo==='notte'){
         notte.addTo(map); confini.addTo(map);
         stato.textContent='Luci notturne · notte più recente disponibile';
