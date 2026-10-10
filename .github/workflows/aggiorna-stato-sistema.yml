@@ -249,7 +249,7 @@ jobs:
           SIZE_GB=$(( SIZE_KB / 1024 / 1024 ))
           echo "Dimensione repo (API GitHub): ${SIZE_GB} GB (${SIZE_KB} KB)"
           if [ "$SIZE_GB" -ge 3 ]; then
-            PROBLEMI="${PROBLEMI}### Repository oltre i 3 GB\n\nIl repo pesa **${SIZE_GB} GB**. Pianificare la migrazione dei podcast su Google Drive (decisione già prevista). L'indice Pagefind non è più nel repository dal 15/07/2026: la crescita residua viene dalla storia dei commit (podcast, presentazioni, snapshot dati e cartine).\n\n"
+            PROBLEMI="${PROBLEMI}### Repository oltre i 3 GB\n\nIl repo pesa **${SIZE_GB} GB**. Dal 10/10/2026 le immagini meteo non si committano più (release immagini-meteo) e la pulizia mensile toglie le immagini social vecchie. Passo successivo da decidere: presentazioni, podcast, video e carte CARG sul server Aruba fuori da git (come /documenti/), con copia nelle release. La storia dei commit si accorcia solo riscrivendola, con un intervento pianificato.\n\n"
           fi
 
           # ------------------------------------------------------------
