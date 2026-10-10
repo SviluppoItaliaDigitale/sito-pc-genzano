@@ -11,9 +11,9 @@
               </a>
               <div class="link-list-wrapper collapse" id="menu-enti">
                 <ul class="link-list" role="list">
-                  <li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma" aria-label="Sito del Comune di Genzano di Roma (si apre in una nuova finestra)"><strong>Genzano di Roma</strong></a></li>
-                  <li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile" aria-label="Dipartimento Nazionale della Protezione Civile (si apre in una nuova finestra)">DPC</a></li>
-                  <li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio" aria-label="Agenzia Regionale di Protezione Civile del Lazio (si apre in una nuova finestra)">AR PC Lazio</a></li>
+                  <li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma"><strong>Genzano di Roma</strong><span class="visually-hidden"> — sito del Comune (si apre in una nuova finestra)</span></a></li>
+                  <li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile">DPC<span class="visually-hidden"> — Dipartimento della Protezione Civile (si apre in una nuova finestra)</span></a></li>
+                  <li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio">AR PC Lazio<span class="visually-hidden"> — Agenzia regionale di Protezione Civile del Lazio (si apre in una nuova finestra)</span></a></li>
                 </ul>
               </div>
             </nav>
@@ -27,10 +27,10 @@
             </a>
             {{/* Area Riservata — posizione AGID standard. Punta alla pagina intermedia
                  /area-volontari/ che spiega cos'è, chi la gestisce e come accedere. */}}
-            <a href="{{ .Site.Params.areaVolontariUrl | relURL }}" class="btn btn-slim-header btn-area-volontari me-3" aria-label="Area Volontari: informazioni e accesso al gestionale">
+            <a href="{{ .Site.Params.areaVolontariUrl | relURL }}" class="btn btn-slim-header btn-area-volontari me-3">
               <i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i>
               <span class="d-none d-sm-inline">Area Volontari</span>
-              <span class="d-sm-none">Accedi</span>
+              <span class="d-sm-none">Accedi</span><span class="visually-hidden">: informazioni e accesso al gestionale dei volontari</span>
             </a>
             <span class="slim-header-divider d-none d-lg-inline" aria-hidden="true"></span>
             {{/* Social */}}
