@@ -30,6 +30,22 @@
   <div class="dash-incendi-box">
     <div id="dash-sat-mappa" role="application" aria-label="Mappa satellitare dell'Italia in tempo reale, con Genzano di Roma evidenziata."></div>
   </div>
+  <div class="dash-s3" id="sat-s3-box" hidden>
+    <section aria-labelledby="sat-s3-pass-tit">
+      <h3 id="sat-s3-pass-tit" class="dash-s3-tit">Passaggi usati per il mosaico (ultime 48 ore su Genzano)</h3>
+      <p class="dash-s3-nota">Dal catalogo pubblico Copernicus: ogni riga è una scena dello strumento OLCI che copre Genzano. Le nuvole sono la stima della scena intera, non del solo paese.</p>
+      <div id="sat-s3-pass" aria-live="polite">Lettura del catalogo…</div>
+    </section>
+    <section aria-labelledby="sat-s3-next-tit">
+      <h3 id="sat-s3-next-tit" class="dash-s3-tit">Prossimo passaggio di giorno sopra Genzano</h3>
+      <div id="sat-s3-next" aria-live="polite">Calcolo in corso…</div>
+      <p class="dash-s3-nota">Calcolato qui dalle effemeridi pubbliche di CelesTrak: passaggio diurno con traccia a terra entro 600&nbsp;km (la fascia ripresa da OLCI è larga circa 1.270&nbsp;km). La scena entra nel mosaico qualche ora dopo il passaggio. Sentinel-3C è in orbita dal 2026 ma le sue immagini non sono ancora pubbliche.</p>
+    </section>
+    <section aria-labelledby="sat-s3-ems-tit">
+      <h3 id="sat-s3-ems-tit" class="dash-s3-tit">Mappature d'emergenza Copernicus in Italia</h3>
+      <div id="sat-s3-ems" aria-live="polite">Lettura…</div>
+    </section>
+  </div>
   <noscript><div class="alert alert-warning mt-2" role="note">Per la mappa serve JavaScript.</div></noscript>
   <p class="small text-muted mt-2 mb-0" id="sat-fonte">
     {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
@@ -118,6 +134,118 @@
     var stato=document.getElementById('sat-stato');
     var modo='geocolour';
 
+    /* ---- Riquadro Sentinel-3: che cosa ha elaborato, quando torna, mappature EMS ----
+       Tre letture avviate una sola volta, al primo clic sul pulsante Sentinel-3:
+       (a) il catalogo STAC pubblico di Copernicus (CORS aperto, senza account) per i
+           passaggi OLCI che coprono Genzano nelle ultime 48 ore; (b) le effemeridi
+           CelesTrak di Sentinel-3A/3B propagate qui con satellite.js (caricata solo
+           allora: 24 KB) per il prossimo passaggio diurno; (c) lo snapshot EMS già
+           generato per la Sala situazioni, filtrato sull'Italia. */
+    var S3_BOX=document.getElementById('sat-s3-box'), s3Avviato=false;
+    var STAC='https://stac.dataspace.copernicus.eu/v1/search';
+    var SAT_JS='{{ "vendor/satellite/satellite.min.js" | relURL }}';
+    var EMS_JSON='{{ "open-data/ems-attivazioni.json" | relURL }}';
+    var fmtOra=function(d){ return d.toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'}); };
+    var esc=function(x){ return String(x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+    function s3Pannello(){
+      if(s3Avviato) return; s3Avviato=true;
+      s3Passaggi(); s3Prossimo(); s3Ems();
+    }
+    function stacCerca(coll,ore,n){
+      var a=new Date(Date.now()-ore*3600e3).toISOString().slice(0,19)+'Z';
+      var b=new Date(Date.now()+3600e3).toISOString().slice(0,19)+'Z';
+      // riquadro di 0,2° attorno a Genzano: basta che la scena lo tocchi
+      var u=STAC+'?collections='+coll+'&bbox=12.59,41.61,12.79,41.81&datetime='+a+'/'+b+'&limit='+n;
+      return fetch(u).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+        .then(function(j){ return (j&&j.features)||[]; });
+    }
+    function s3Passaggi(){
+      var box=document.getElementById('sat-s3-pass');
+      Promise.all([stacCerca('sentinel-3-olci-1-efr-nrt',48,20), stacCerca('sentinel-3-olci-2-wfr-nrt',48,20).catch(function(){return [];})])
+      .then(function(r){
+        var scene=r[0], nuvole={};
+        r[1].forEach(function(f){ var p=f.properties||{}; if(p.datetime&&typeof p['eo:cloud_cover']==='number') nuvole[p.datetime]=p['eo:cloud_cover']; });
+        if(!scene.length){ box.textContent='Nessuna scena OLCI su Genzano nelle ultime 48 ore nel catalogo.'; return; }
+        scene.sort(function(a,b){ return (b.properties.datetime||'').localeCompare(a.properties.datetime||''); });
+        var h='<table class="dash-s3-tab"><thead><tr><th scope="col">Satellite</th><th scope="col">Passaggio (ora italiana)</th><th scope="col">Nuvole sulla scena</th><th scope="col">Anteprima</th></tr></thead><tbody>';
+        scene.forEach(function(f){
+          var p=f.properties||{}, d=new Date(p.datetime), sat=String(p.platform||'').replace('sentinel-','Sentinel-').toUpperCase().replace('SENTINEL','Sentinel');
+          var nv=nuvole[p.datetime]; var th=f.assets&&f.assets.thumbnail&&f.assets.thumbnail.href;
+          h+='<tr><td>'+esc(sat)+'</td><td>'+(isNaN(d)?'—':fmtOra(d))+'</td><td>'+(typeof nv==='number'?Math.round(nv)+'%':'—')+'</td><td>'+(th&&/^https:\/\//.test(th)?'<a href="'+esc(th)+'" target="_blank" rel="noopener noreferrer">miniatura<span class="visually-hidden"> della scena '+esc(sat)+' '+(isNaN(d)?'':fmtOra(d))+' (file scaricato, si apre in una nuova finestra)</span></a>':'—')+'</td></tr>';
+        });
+        box.innerHTML=h+'</tbody></table>';
+      }).catch(function(){ box.textContent='Catalogo Copernicus non raggiungibile in questo momento.'; });
+    }
+    function caricaSatelliteJs(){
+      if(window.satellite) return Promise.resolve();
+      return new Promise(function(ok,ko){ var sc=document.createElement('script'); sc.src=SAT_JS; sc.onload=ok; sc.onerror=ko; document.head.appendChild(sc); });
+    }
+    function ommSentinel3(){
+      var k='pcgz-omm:sentinel-3';
+      try{ var c=JSON.parse(localStorage.getItem(k)||'null'); if(c&&c.t&&Date.now()-c.t<6*3600e3&&Array.isArray(c.d)) return Promise.resolve(c.d); }catch(e){}
+      return fetch('https://celestrak.org/NORAD/elements/gp.php?NAME=SENTINEL-3&FORMAT=JSON',{cache:'no-store'})
+        .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+        .then(function(d){ if(!Array.isArray(d)) throw new Error('formato'); try{ localStorage.setItem(k,JSON.stringify({t:Date.now(),d:d})); }catch(e){} return d; });
+    }
+    function s3Prossimo(){
+      var box=document.getElementById('sat-s3-next');
+      caricaSatelliteJs().then(ommSentinel3).then(function(omm){
+        var OBS={longitude:GENZANO[1]*Math.PI/180,latitude:GENZANO[0]*Math.PI/180,height:0.435};
+        var AU=149597870.7, R=6371, out=[], S3_GIORNI=5; // cinque giorni: fra un giorno e l'altro la traccia si sposta di ~550 km, e per un satellite solo possono passare 2-3 giorni senza un passaggio entro 600 km
+        function soleEl(t,gmst){
+          var jd=satellite.jday(t.getUTCFullYear(),t.getUTCMonth()+1,t.getUTCDate(),t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds());
+          var s=satellite.sunPos(jd), ecf=satellite.eciToEcf({x:s.rsun[0]*AU,y:s.rsun[1]*AU,z:s.rsun[2]*AU},gmst);
+          return satellite.ecfToLookAngles(OBS,ecf).elevation*180/Math.PI;
+        }
+        function distKm(lat,lon){ // ortodromica dalla verticale a terra a Genzano
+          var p1=GENZANO[0]*Math.PI/180,p2=lat*Math.PI/180,dl=(lon-GENZANO[1])*Math.PI/180;
+          return R*Math.acos(Math.min(1,Math.sin(p1)*Math.sin(p2)+Math.cos(p1)*Math.cos(p2)*Math.cos(dl)));
+        }
+        omm.filter(function(o){ return /^SENTINEL-3[AB]$/.test(o.OBJECT_NAME||''); }).forEach(function(o){
+          var rec; try{ rec=satellite.json2satrec(o); }catch(e){ return; }
+          if(!rec||rec.error) return;
+          var t0=Date.now(), best=null, dentro=false;
+          for(var ms=0; ms<=S3_GIORNI*86400e3; ms+=60e3){
+            var t=new Date(t0+ms), gmst=satellite.gstime(t), pv;
+            try{ pv=satellite.propagate(rec,t); }catch(e){ break; }
+            if(!pv||!pv.position) break;
+            var g=satellite.eciToGeodetic(pv.position,gmst);
+            var lat=satellite.degreesLat(g.latitude), lon=satellite.degreesLong(g.longitude), dk=distKm(lat,lon);
+            if(dk<600){
+              if(!dentro){ dentro=true; best={t:t,d:dk,lon:lon}; }
+              else if(dk<best.d){ best={t:t,d:dk,lon:lon}; }
+            } else if(dentro){
+              dentro=false;
+              if(soleEl(best.t,satellite.gstime(best.t))>5){ out.push({nome:o.OBJECT_NAME,t:best.t,d:best.d,lon:best.lon}); break; }
+              best=null;
+            }
+          }
+          if(!out.some(function(x){return x.nome===o.OBJECT_NAME;})) out.push({nome:o.OBJECT_NAME,t:null});
+        });
+        if(!out.length){ box.textContent='Effemeridi di Sentinel-3 non disponibili.'; return; }
+        out.sort(function(a,b){ return (a.t?a.t.getTime():Infinity)-(b.t?b.t.getTime():Infinity); });
+        box.innerHTML='<ul class="dash-s3-list">'+out.map(function(x){
+          var nome=x.nome.replace('SENTINEL','Sentinel');
+          if(!x.t) return '<li><strong>'+esc(nome)+'</strong>: nessun passaggio diurno entro 600 km nei prossimi 5 giorni.</li>';
+          return '<li><strong>'+esc(nome)+'</strong>: '+fmtOra(x.t)+', traccia a terra a circa '+Math.round(x.d/10)*10+' km a '+(x.lon<GENZANO[1]?'ovest':'est')+'.</li>';
+        }).join('')+'</ul>';
+      }).catch(function(){ box.textContent='Effemeridi non raggiungibili in questo momento: il calcolo non è possibile.'; });
+    }
+    function s3Ems(){
+      var box=document.getElementById('sat-s3-ems');
+      fetch(EMS_JSON).then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(function(j){
+        var lim=Date.now()-60*86400e3, snap=j&&j._snapshot&&j._snapshot.generato;
+        var it=((j&&j.results)||[]).filter(function(a){ return Array.isArray(a.countries)&&a.countries.some(function(c){return /^ital(y|ia)$/i.test(c);})&&Date.parse(a.activationTime)>lim; });
+        it.sort(function(a,b){ return (b.activationTime||'').localeCompare(a.activationTime||''); });
+        var coda=' Fonte: Copernicus EMS Rapid Mapping, elenco aggiornato ogni 15 minuti.';
+        if(!it.length){ box.textContent='Nessuna mappatura Copernicus EMS attivata in Italia negli ultimi 60 giorni.'+coda; return; }
+        box.innerHTML='<ul class="dash-s3-list">'+it.map(function(a){
+          var d=new Date(a.activationTime);
+          return '<li><a href="https://mapping.emergency.copernicus.eu/activations/'+encodeURIComponent(a.code)+'" target="_blank" rel="noopener noreferrer">'+esc(a.code)+' — '+esc(a.name)+'<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>, attivata il '+(isNaN(d)?'—':fmtOra(d))+(a.closed?', chiusa':', in corso')+'.</li>';
+        }).join('')+'</ul><p class="dash-s3-nota mb-0">'+coda.trim()+'</p>';
+      }).catch(function(){ box.textContent='Elenco delle mappature non disponibile in questo momento.'; });
+    }
+
     function mostra(){
       [geocolour,hrfi,sentinel,gibs,confini].forEach(function(l){ if(map.hasLayer(l)) map.removeLayer(l); });
       var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
@@ -131,11 +259,13 @@
         sentinel.addTo(map); confini.addTo(map);
         stato.textContent=s3Etichetta();
         s3Capabilities().then(function(){ if(modo==='sentinel') stato.textContent=s3Etichetta(); });
+        s3Pannello();
       } else {
         gibs.addTo(map); confini.addTo(map);
         stato.textContent='Immagine del '+GIBS_DATA_LABEL;
       }
       stella.addTo(map);
+      S3_BOX.hidden=(modo!=='sentinel');
     }
 
     document.querySelectorAll('.dash-pill[data-sat]').forEach(function(b){

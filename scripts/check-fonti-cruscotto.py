@@ -119,6 +119,23 @@ def chk_sentinel3():
     return True, f"HTTP 200, ultimo passaggio {ore:.0f} ore fa"
 
 
+def chk_stac_copernicus():
+    # Catalogo STAC pubblico di Copernicus: scene OLCI di Sentinel-3 che coprono
+    # Genzano, lette dal browser nel riquadro sotto la cartina Sentinel-3.
+    # Oltre a rispondere deve avere scene recenti: Sentinel-3A e 3B insieme
+    # passano di giorno quasi ogni giorno, tre giorni senza scene sono un guasto.
+    a = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=72)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    url = ("https://stac.dataspace.copernicus.eu/v1/search?collections=sentinel-3-olci-1-efr-nrt"
+           "&bbox=12.59,41.61,12.79,41.81&datetime=" + a + "/..&limit=5")
+    ok, det, _, j = _get(url, expect_json=True)
+    if not ok:
+        return ok, det
+    n = len(j.get("features", [])) if isinstance(j, dict) else 0
+    if n == 0:
+        return False, "HTTP 200 ma nessuna scena OLCI su Genzano nelle ultime 72 ore"
+    return True, f"HTTP 200, {n} scene nelle ultime 72 ore"
+
+
 def chk_cams_eu():
     # CAMS Europe via WMS pubblico ECMWF (token=public). Bbox Italia, layer PM2.5.
     # Il server risponde HTTP 302 -> redirect al PNG renderizzato in CDN streaming.
@@ -375,6 +392,7 @@ SORGENTI = [
     ("Satellite GeoColour — EUMETSAT", "Satellite", lambda: chk_wms_getmap("mtg_fd:rgb_geocolour", "https://view.eumetsat.int/geoserver/wms")),
     ("Satellite alta risoluzione — EUMETSAT", "Satellite", lambda: chk_wms_getmap("mtg_fd:vis06_hrfi", "https://view.eumetsat.int/geoserver/wms")),
     ("Satellite Sentinel-3 — Copernicus/EUMETSAT", "Satellite", chk_sentinel3),
+    ("Catalogo scene Sentinel-3 — Copernicus STAC", "Satellite", chk_stac_copernicus),
     ("Satellite suolo — NASA GIBS", "Satellite", chk_gibs),
     ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
