@@ -14,7 +14,13 @@ Contenuto:
   gradi), una riga per passaggio delle ultime 36 ore, con nuvola/sereno,
   giorno/notte e satellite;
 - `fuochi`: fuochi attivi rilevati nel Lazio e dintorni (prodotto SLSTR L2 FRP,
-  potenza radiativa in MW), con distanza da Genzano.
+  potenza radiativa in MW), con distanza da Genzano;
+- `laghi` (dall'11/10/2026): qualità dell'acqua dei laghi Albano e di Nemi dal
+  prodotto OLCI L2 WFR (300 m): clorofilla (CHL_NN, mg/m³, segnale di fioriture
+  algali) e solidi sospesi (TSM_NN, g/m³, torbidità), mediana sui pixel del lago
+  non coperti da nuvole; `null` quando il lago è sotto le nuvole. Sono stime da
+  rete neurale per acque di tipo 2, non misure di laboratorio: servono a vedere
+  un cambiamento, non a dare un valore di legge.
 
 Uso:
     python3 scripts/genera-copernicus-sentinel3.py            # snapshot
@@ -52,6 +58,13 @@ BBOX_LAZIO = (11.4, 40.7, 14.1, 42.9)
 # riquadro stretto su Genzano per la temperatura
 BBOX_GENZANO = (12.59, 41.61, 12.79, 41.81)
 ORE = 36
+# laghi dei Castelli: centro e raggio (km) entro cui i pixel OLCI contano come lago
+LAGHI = (
+    {"nome": "Lago Albano", "lat": 41.7467, "lon": 12.6628, "raggio_km": 2.2},
+    {"nome": "Lago di Nemi", "lat": 41.7148, "lon": 12.7033, "raggio_km": 0.65},
+)
+# flag WQSF che rendono il pixel inutilizzabile (nomi del prodotto OLCI L2)
+WQSF_SCARTA = ("INVALID", "LAND", "CLOUD", "CLOUD_AMBIGUOUS", "CLOUD_MARGIN", "SNOW_ICE", "OCNN_FAIL", "HIGHGLINT", "SATURATED", "COSMETIC", "SUSPECT")
 
 
 def log(msg: str) -> None:
@@ -148,6 +161,73 @@ def lst_genzano(s3, feat: dict, tmp: Path) -> dict | None:
         "giorno": giorno,
         "distanza_pixel_km": round(math.sqrt(float(d2[i, j])) * 111, 1),
     }
+
+
+# ----------------------------------------------------------------------- laghi
+def laghi_scena(s3, feat: dict, tmp: Path) -> list[dict]:
+    """Clorofilla e solidi sospesi (mediane) nei laghi, da una scena OLCI WFR.
+
+    La posizione si ricava dai punti di legame (tie-geo-coordinates, un file
+    piccolo, una colonna ogni 64 pixel) interpolati, invece delle coordinate
+    piene (decine di MB); clorofilla, torbidità e flag si scaricano interi.
+    """
+    import netCDF4
+    import numpy as np
+
+    a = feat.get("assets", {})
+    need = {k: a.get(k, {}).get("href") for k in ("tie-geo-coordinates", "chl-Nn", "tsm-Nn", "wqsf")}
+    if not all(need.values()):
+        return []
+    files = {k: scarica(s3, h, tmp / (feat["id"] + "-" + k.replace("-", "_") + ".nc")) for k, h in need.items()}
+    with netCDF4.Dataset(files["tie-geo-coordinates"]) as g:
+        tlat, tlon = np.ma.filled(g["latitude"][:].astype(float), np.nan), np.ma.filled(g["longitude"][:].astype(float), np.nan)
+        passo = int(getattr(g, "ac_subsampling_factor", 64) or 64)
+    righe, tcol = tlat.shape
+    col_tie = np.arange(tcol) * passo
+    out: list[dict] = []
+    p = feat.get("properties", {})
+    sat = str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel")
+    with netCDF4.Dataset(files["chl-Nn"]) as fc, netCDF4.Dataset(files["tsm-Nn"]) as ft, netCDF4.Dataset(files["wqsf"]) as fw:
+        chl_v, tsm_v, wq = fc["CHL_NN"], ft["TSM_NN"], fw["WQSF"]
+        log_chl = "lg" in str(getattr(chl_v, "units", "")).lower() or "log" in str(getattr(chl_v, "units", "")).lower()
+        log_tsm = "lg" in str(getattr(tsm_v, "units", "")).lower() or "log" in str(getattr(tsm_v, "units", "")).lower()
+        nomi = str(getattr(wq, "flag_meanings", "")).split()
+        maschere = [int(m) for m in np.atleast_1d(getattr(wq, "flag_masks", []))]
+        bit_scarta = 0
+        for n, m in zip(nomi, maschere):
+            if n in WQSF_SCARTA:
+                bit_scarta |= m
+        bit_inland = next((m for n, m in zip(nomi, maschere) if n == "INLAND_WATER"), 0)
+        ncol = chl_v.shape[1]
+        for lago in LAGHI:
+            d2 = (tlat - lago["lat"]) ** 2 + ((tlon - lago["lon"]) * math.cos(math.radians(lago["lat"]))) ** 2
+            d2 = np.where(np.isfinite(d2), d2, np.inf)
+            i, jt = np.unravel_index(int(np.argmin(d2)), d2.shape)
+            if math.sqrt(float(d2[i, jt])) * 111 > 6:  # la scena non copre il lago
+                continue
+            r_px = int(lago["raggio_km"] / 0.3) + 3
+            r0, r1 = max(0, i - r_px), min(righe, i + r_px + 1)
+            c0, c1 = max(0, int(col_tie[jt]) - r_px), min(ncol, int(col_tie[jt]) + r_px + 1)
+            cols = np.arange(c0, c1)
+            lat = np.vstack([np.interp(cols, col_tie, tlat[r]) for r in range(r0, r1)])
+            lon = np.vstack([np.interp(cols, col_tie, tlon[r]) for r in range(r0, r1)])
+            dist = np.sqrt((lat - lago["lat"]) ** 2 + ((lon - lago["lon"]) * math.cos(math.radians(lago["lat"]))) ** 2) * 111
+            dentro = dist <= lago["raggio_km"]
+            chl = np.ma.filled(chl_v[r0:r1, c0:c1].astype(float), np.nan)
+            tsm = np.ma.filled(tsm_v[r0:r1, c0:c1].astype(float), np.nan)
+            flag = np.ma.filled(wq[r0:r1, c0:c1], 0).astype("uint64")
+            ok = dentro & np.isfinite(chl) & ((flag & np.uint64(bit_scarta)) == 0)
+            n_inland = int(((flag & np.uint64(bit_inland)) != 0)[dentro].sum()) if bit_inland else None
+            riga = {"lago": lago["nome"], "quando": p.get("datetime"), "satellite": sat,
+                    "pixel_lago": int(dentro.sum()), "pixel_validi": int(ok.sum()), "pixel_acqua_interna": n_inland,
+                    "chl_mg_m3": None, "tsm_g_m3": None, "nuvola": bool(ok.sum() < 3)}
+            if ok.sum() >= 3:
+                c = float(np.nanmedian(chl[ok]))
+                t = float(np.nanmedian(tsm[ok])) if np.isfinite(tsm[ok]).any() else float("nan")
+                riga["chl_mg_m3"] = round(10 ** c if log_chl else c, 2)
+                riga["tsm_g_m3"] = None if not math.isfinite(t) else round(10 ** t if log_tsm else t, 2)
+            out.append(riga)
+    return out
 
 
 # ---------------------------------------------------------------------- fuochi
@@ -265,7 +345,14 @@ def main() -> int:
                     scene_frp += 1
                 except Exception as e:  # noqa: BLE001
                     log(f"FRP {f.get('id')}: {e}")
-        if not suolo and not scene_frp:
+            laghi, scene_laghi = [], 0
+            for f in stac("sentinel-3-olci-2-wfr-nrt", BBOX_GENZANO, ORE, 4):
+                try:
+                    laghi += laghi_scena(s3, f, tmp)
+                    scene_laghi += 1
+                except Exception as e:  # noqa: BLE001
+                    log(f"WFR {f.get('id')}: {e}")
+        if not suolo and not scene_frp and not scene_laghi:
             log("Nessuna scena letta: snapshot lasciato com'era.")
             return 0
         # Lo stesso fuoco compare sia nel CSV MWIR (1 km) sia in quello SWIR (500 m):
@@ -289,16 +376,28 @@ def main() -> int:
             except (OSError, ValueError):
                 pass
         fuochi.sort(key=lambda x: x["distanza_km"])
+        blocco_laghi: dict = {"scene": scene_laghi, "misure": laghi,
+                              "nota": "mediana di CHL_NN (clorofilla, mg/m3) e TSM_NN (solidi sospesi, g/m3) sui pixel OLCI del lago senza nuvole; stime per acque di tipo 2, utili per vedere un cambiamento"}
+        if scene_laghi == 0 and OUT.is_file():
+            try:
+                prec_tutto = json.loads(OUT.read_text(encoding="utf-8"))
+                prec_laghi = prec_tutto.get("laghi")
+                if isinstance(prec_laghi, dict) and prec_laghi.get("scene"):
+                    blocco_laghi = dict(prec_laghi, conservato_da=prec_tutto.get("_snapshot", {}).get("generato"))
+                    log("Nessuna scena WFR letta: conservato il blocco dei laghi precedente.")
+            except (OSError, ValueError):
+                pass
         out = {
             "_snapshot": {"generato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                          "fonte": "Copernicus Data Space Ecosystem — Sentinel-3 SLSTR L2 LST e FRP (NRT)",
+                          "fonte": "Copernicus Data Space Ecosystem — Sentinel-3 SLSTR L2 LST e FRP, OLCI L2 WFR (NRT)",
                           "attribuzione": f"Contiene dati Copernicus Sentinel modificati {dt.date.today().year}",
                           "finestra_ore": ORE},
             "suolo": suolo,
             "fuochi": blocco_fuochi,
+            "laghi": blocco_laghi,
         }
         OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
-        log(f"Snapshot scritto: {len(suolo)} letture di temperatura, {len(fuochi)} fuochi in {scene_frp} scene.")
+        log(f"Snapshot scritto: {len(suolo)} letture di temperatura, {len(fuochi)} fuochi in {scene_frp} scene, {len(laghi)} misure dei laghi in {scene_laghi} scene.")
         return 0
     except Exception as e:  # noqa: BLE001
         log(f"Copernicus non raggiungibile o chiavi non valide: {e}. File lasciato com'era.")

@@ -7952,6 +7952,15 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
 .dash-s3-cfr { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: end; margin: .4rem 0; }
 .dash-s3-cfr label { display: flex; flex-direction: column; gap: .15rem; font-size: .85rem; color: #003366; font-weight: 600; }
 .dash-s3-cfr label[hidden] { display: none; } /* con Sentinel-2 i calendari lasciano il posto agli elenchi delle scene */
+/* livelli tematici NASA, indici Sentinel-2 e cambiamenti radar (11/10/2026): seconda fila di
+   pulsanti, legenda scritta sotto la cartina con i quadratini di colore delle colormap */
+.dash-sat-temi { margin-top: -.3rem; }
+.dash-sat-temi-tit { font-size: .85rem; font-weight: 600; color: #003366; margin-right: .2rem; }
+.dash-sat-legenda { margin-top: .6rem; line-height: 1.7; }
+.dash-sw { display: inline-block; width: .95em; height: .95em; border: 1px solid #333; border-radius: 2px; vertical-align: -.12em; margin-right: .15em; }
+.dash-sw-blu { background: #005adc; }
+.dash-sw-ara { background: #ff8c00; }
+html.a11y-hide-images .dash-sw { visibility: visible; } /* non sono immagini: sono parte della legenda */
 .dash-s3-cfr select, .dash-s3-cfr input[type="date"] { font-size: .9rem; font-weight: 400; color: #1a1a1a; padding: .3rem .4rem; border: 1px solid #8a9bb0; border-radius: 4px; background: #fff; min-height: 2.2rem; }
 .dash-s3-btn { border: 2px solid #003366; background: #fff; color: #003366; padding: .35rem .8rem; border-radius: 999px; font-size: .88rem; cursor: pointer; min-height: 2.2rem; }
 .dash-s3-btn[aria-pressed="true"] { background: #003366; color: #fff; }

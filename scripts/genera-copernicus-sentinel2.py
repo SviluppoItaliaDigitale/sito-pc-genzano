@@ -14,11 +14,27 @@ classificazione del prodotto (SCL, 20 m): è il dato che serve, non la stima
 della scena intera (110 km di lato), che può dire «sereno» con Genzano sotto
 un cumulo. Le scene coperte oltre l'85% non si tengono: non mostrerebbero nulla.
 
+Dall'11/10/2026, per ogni scena si calcolano anche tre INDICI dalle bande del
+prodotto (rosso, verde, infrarosso vicino a 10 m; infrarosso a onde corte a
+20 m), con le nuvole mascherate dalla SCL:
+- NDVI (vegetazione): quanto è verde e viva la vegetazione;
+- NDWI (acqua): acqua in superficie (laghi, allagamenti, campi sommersi);
+- NBR (aree bruciate): l'indice con cui EFFIS e USGS mappano gli incendi.
+Fra la scena più recente e la precedente si calcola la MAPPA DEI CAMBIAMENTI:
+bruciato (dNBR ≥ SOGLIA_DNBR, severità almeno moderata-bassa secondo la scala
+USGS), vegetazione persa (NDVI in calo di almeno SOGLIA_DNDVI), acqua nuova
+(NDWI che passa da negativo a positivo), con le superfici in ettari. Sono
+candidati da verificare sul posto, non certezze: fra due scene cambiano anche
+stagione, luce e umidità del suolo, e la pagina lo dice.
+
 Scrive:
 - static/images/sentinel/sentinel2-genzano-AAAAMMGG.webp per le ultime MAX_SCENE
-  scene utili (release «immagini-meteo», non git: scripts/immagini-meteo-release.py);
+  scene utili (release «immagini-meteo», non git: scripts/immagini-meteo-release.py),
+  più sentinel2-genzano-AAAAMMGG-{ndvi,ndwi,nbr}.webp (indici colorati, con
+  trasparenza dove nuvole o dati mancanti) e sentinel2-genzano-cambi.webp;
 - static/open-data/copernicus-sentinel2.json (in git): elenco delle scene con
-  data, satellite, nuvole sulla finestra, riquadro in gradi per la cartina.
+  data, satellite, nuvole sulla finestra, riquadro in gradi per la cartina,
+  medie degli indici per scena e il blocco `cambi`.
 
 Uso: python3 scripts/genera-copernicus-sentinel2.py [--forza] [--max N]
 Fail-safe: catalogo giù = file invariati, exit 0; una scena che non si legge
@@ -49,6 +65,22 @@ GIORNI = 60
 MAX_SCENE = 8
 NUVOLE_MAX = 85           # oltre, la scena non si tiene
 SCL_NUVOLE = (3, 8, 9, 10)  # ombra di nuvola, nuvola media, nuvola alta, cirri sottili
+SCL_VALIDI = (4, 5, 6, 11)  # per gli indici: vegetazione, suolo nudo, acqua, neve (gli altri sono dubbi)
+MARGINE_NUVOLE_PX = 6      # 120 m attorno a nuvole e ombre, che la SCL sottostima ai bordi
+INDICI_PX = 800            # 20 m: la banda a onde corte (B12) del prodotto e' a 20 m
+BANDE = {"red": "B04", "green": "B03", "nir": "B08", "swir22": "B12"}
+ETTARI_PIXEL = (2 * MEZZO_LATO_KM * 1000 / INDICI_PX) ** 2 / 10000  # 0,04 ha a 20 m
+SOGLIA_DNBR = 0.27         # USGS FIREMON / EFFIS: da qui in su severita' almeno moderata-bassa
+SOGLIA_DNDVI = -0.20       # calo di vegetazione marcato (non stagionale)
+SOGLIA_NDWI_ACQUA = 0.0    # McFeeters: sopra lo zero e' acqua in superficie
+INDICI_BACKFILL = 3        # scene gia' in archivio senza indici da completare per giro
+# tappe di colore (valore -> rgb) per le immagini degli indici
+TAPPE = {
+    "ndvi": [(-0.2, (120, 80, 40)), (0.1, (230, 210, 150)), (0.3, (170, 200, 60)), (0.6, (30, 130, 20)), (0.9, (0, 50, 0))],
+    # acqua: la terra resta quasi trasparente (quarta componente = opacita'), cosi' sotto si vede la scena
+    "ndwi": [(-0.5, (200, 170, 120, 60)), (-0.1, (235, 235, 225, 60)), (0.1, (120, 180, 230, 230)), (0.5, (0, 40, 150, 240))],
+    "nbr": [(-0.5, (130, 0, 20)), (-0.2, (220, 80, 20)), (0.1, (240, 220, 120)), (0.4, (90, 170, 60)), (0.8, (0, 70, 20))],
+}
 
 
 def log(m: str) -> None:
@@ -141,12 +173,146 @@ def componi(feats: list[dict], chiave: str, lato: int, resampling):
     return out, usati
 
 
+def scala_banda(f: dict, chiave: str) -> tuple[float, float]:
+    """scale/offset della banda dal catalogo.
+
+    Dal processing baseline 04.00 i prodotti L2A portano un offset di -0,1 sulla
+    riflettanza, dichiarato in raster:bands; i COG di Earth Search pero' lo hanno
+    GIA' APPLICATO (proprieta' earthsearch:boa_offset_applied) e in quel caso non
+    va sottratto di nuovo: con l'offset doppio il lago Albano usciva con riflettanza
+    negativa e l'NDVI medio della finestra era 0,85 (verificato l'11/10/2026).
+    """
+    b = (f.get("assets", {}).get(chiave, {}).get("raster:bands") or [{}])[0]
+    offset = 0.0 if f.get("properties", {}).get("earthsearch:boa_offset_applied") else float(b.get("offset") or 0.0)
+    return float(b.get("scale") or 0.0001), offset
+
+
+def riflettanza(tiles: list[dict], chiave: str):
+    """Riflettanza (0..1) di una banda sulla finestra a INDICI_PX; nan dove manca il dato."""
+    import numpy as np
+    from rasterio.enums import Resampling
+
+    a, _ = componi(tiles, chiave, INDICI_PX, Resampling.bilinear)
+    sc, off = scala_banda(tiles[0], chiave)
+    r = a[0].astype("float32") * sc + off
+    r[a[0] == 0] = np.nan
+    return r
+
+
+def dilata(m, n: int):
+    """Allarga una maschera booleana di n pixel (8 vicini), senza scipy."""
+    import numpy as np
+
+    out = m.copy()
+    for _ in range(n):
+        p = np.pad(out, 1)
+        out = (p[:-2, :-2] | p[:-2, 1:-1] | p[:-2, 2:] | p[1:-1, :-2] | p[1:-1, 1:-1] | p[1:-1, 2:]
+               | p[2:, :-2] | p[2:, 1:-1] | p[2:, 2:])
+    return out
+
+
+def indici(tiles: list[dict], scl):
+    """NDVI, NDWI e NBR (float32, nan dove nuvole, ombre o dati mancanti) sulla finestra.
+
+    Si tengono solo i pixel che la SCL classifica con certezza (vegetazione, suolo,
+    acqua, neve) e si scarta una fascia di MARGINE_NUVOLE_PX attorno a tutto il resto:
+    ai bordi delle nuvole e delle ombre la maschera del prodotto e' ottimista, e
+    senza margine la mappa dei cambiamenti disegnava «bruciato» il contorno di ogni
+    cumulo (prima prova dell'11/10/2026: 977 ha bruciati in due giorni).
+    """
+    import numpy as np
+
+    valido = np.isin(scl, SCL_VALIDI) & ~dilata(~np.isin(scl, SCL_VALIDI), MARGINE_NUVOLE_PX)
+    b = {k: riflettanza(tiles, k) for k in BANDE}
+
+    def nd(x, y):
+        with np.errstate(divide="ignore", invalid="ignore"):
+            r = (x - y) / (x + y)
+        r = np.clip(r, -1, 1).astype("float32")
+        r[~valido | ~np.isfinite(r)] = np.nan
+        return r
+
+    return {"ndvi": nd(b["nir"], b["red"]), "ndwi": nd(b["green"], b["nir"]), "nbr": nd(b["nir"], b["swir22"])}
+
+
+def colora(v, tappe):
+    """Immagine RGBA uint8: colore interpolato fra le tappe, trasparente dove nan."""
+    import numpy as np
+
+    xs = np.array([t[0] for t in tappe], dtype="float32")
+    out = np.zeros(v.shape + (4,), dtype="uint8")
+    ok = np.isfinite(v)
+    vv = np.nan_to_num(v, nan=0.0)
+    for c in range(4):
+        ys = np.array([(t[1] + (230,))[c] for t in tappe], dtype="float32")
+        out[..., c] = np.where(ok, np.interp(vv, xs, ys), 0).astype("uint8")
+    return out
+
+
+def salva_rgba(arr, dest: Path) -> None:
+    from PIL import Image
+
+    IMG_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_suffix(".nuovo.webp")
+    Image.fromarray(arr, "RGBA").save(tmp, "WEBP", quality=75, method=6)
+    tmp.replace(dest)
+
+
+def riassunto_indici(ix: dict) -> dict:
+    import numpy as np
+
+    v = np.isfinite(ix["ndvi"])
+    out = {"validi_pct": round(float(v.mean() * 100), 1)}
+    if v.any():
+        out["ndvi_medio"] = round(float(np.nanmean(ix["ndvi"])), 3)
+        out["nbr_medio"] = round(float(np.nanmean(ix["nbr"])), 3)
+        out["acqua_pct"] = round(float((ix["ndwi"][v] > SOGLIA_NDWI_ACQUA).mean() * 100), 1)
+        out["acqua_ha"] = round(float((ix["ndwi"][v] > SOGLIA_NDWI_ACQUA).sum() * ETTARI_PIXEL))
+    return out
+
+
+def scrivi_indici(ix: dict, giorno: str) -> dict:
+    """Le tre immagini colorate di una scena; ritorna il blocco `indici` per il JSON."""
+    base = f"sentinel2-genzano-{giorno.replace('-', '')}"
+    imgs = {}
+    for k in ("ndvi", "ndwi", "nbr"):
+        dest = IMG_DIR / f"{base}-{k}.webp"
+        salva_rgba(colora(ix[k], TAPPE[k]), dest)
+        imgs[k] = "/images/sentinel/" + dest.name
+    return dict(riassunto_indici(ix), pixel=INDICI_PX, immagini=imgs)
+
+
+def cambiamenti(prima: dict, dopo: dict, g_prima: str, g_dopo: str) -> dict:
+    """Mappa dei cambiamenti fra due scene (stessa finestra, stesse soglie per tutti)."""
+    import numpy as np
+
+    v = np.isfinite(prima["nbr"]) & np.isfinite(dopo["nbr"]) & np.isfinite(prima["ndwi"]) & np.isfinite(dopo["ndwi"])
+    dnbr = prima["nbr"] - dopo["nbr"]
+    dndvi = dopo["ndvi"] - prima["ndvi"]
+    # bruciato: NBR crollato E basso dopo (un bosco verde che resta verde non e' bruciato)
+    bruciato = v & (dnbr >= SOGLIA_DNBR) & (dopo["nbr"] < 0.1) & (dopo["ndvi"] < prima["ndvi"])
+    acqua = v & (dopo["ndwi"] > 0.1) & (prima["ndwi"] < SOGLIA_NDWI_ACQUA) & ~bruciato
+    veg = v & (dndvi <= SOGLIA_DNDVI) & (dopo["ndvi"] < 0.4) & ~bruciato & ~acqua
+    rgba = np.zeros(v.shape + (4,), dtype="uint8")
+    rgba[bruciato] = (200, 20, 20, 210)
+    rgba[veg] = (255, 140, 0, 190)
+    rgba[acqua] = (0, 90, 220, 210)
+    dest = IMG_DIR / "sentinel2-genzano-cambi.webp"
+    salva_rgba(rgba, dest)
+    return {"prima": g_prima, "dopo": g_dopo, "validi_pct": round(float(v.mean() * 100), 1),
+            "bruciato_ha": round(float(bruciato.sum() * ETTARI_PIXEL)),
+            "vegetazione_persa_ha": round(float(veg.sum() * ETTARI_PIXEL)),
+            "acqua_nuova_ha": round(float(acqua.sum() * ETTARI_PIXEL)),
+            "soglie": {"dnbr": SOGLIA_DNBR, "dndvi": SOGLIA_DNDVI, "ndwi_acqua": 0.1},
+            "immagine": "/images/sentinel/" + dest.name}
+
+
 def elabora(feats: list[dict], dest: Path) -> dict:
     import numpy as np
     from PIL import Image
     from rasterio.enums import Resampling
 
-    scl, usati = componi(feats, "scl", 800, Resampling.nearest)
+    scl, usati = componi(feats, "scl", INDICI_PX, Resampling.nearest)
     scl = scl[0]
     valido = scl > 0
     if valido.mean() < 0.9:
@@ -162,8 +328,17 @@ def elabora(feats: list[dict], dest: Path) -> dict:
     tmp = dest.with_suffix(".nuovo.webp")
     Image.fromarray(np.moveaxis(rgb[:3], 0, -1).astype("uint8"), "RGB").save(tmp, "WEBP", quality=80, method=6)
     tmp.replace(dest)
+    ix = indici(feats, scl)
     return {"nuvole_pct": round(nuvole), "scartata": False, "pixel": lato, "tile": usati,
-            "coperta_pct": round(float(valido.mean() * 100), 1)}
+            "coperta_pct": round(float(valido.mean() * 100), 1), "indici": ix}
+
+
+def indici_scena(feats: list[dict]):
+    """Indici di una scena gia' in archivio (si rileggono le bande, qualche secondo)."""
+    from rasterio.enums import Resampling
+
+    scl, _ = componi(feats, "scl", INDICI_PX, Resampling.nearest)
+    return indici(feats, scl[0])
 
 
 def main() -> int:
@@ -189,6 +364,8 @@ def main() -> int:
     scartate = set(prec.get("scartate", []))
     scene = dict(gia)
     nuove = 0
+    arrays: dict[str, dict] = {}  # giorno -> indici in memoria, per la mappa dei cambiamenti
+    per_giorno = {t[0]["properties"]["datetime"][:10]: t for t in feats}
     for tiles in feats:
         f = tiles[0]
         p = f["properties"]
@@ -208,21 +385,57 @@ def main() -> int:
             scartate.add(g)
             continue
         nuove += 1
+        arrays[g] = info["indici"]
         scene[g] = {"id": f["id"], "tile": info["tile"], "giorno": g, "quando": p["datetime"],
                     "satellite": str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel"),
                     "nuvole_pct": info["nuvole_pct"], "nuvole_scena_pct": round(float(p.get("eo:cloud_cover") or 0)),
-                    "coperta_pct": info["coperta_pct"], "immagine": "/images/sentinel/" + dest.name}
-        log(f"Scena del {g} scritta da {', '.join(info['tile'])}: finestra coperta al {info['coperta_pct']}%, nuvole sul {info['nuvole_pct']}%.")
+                    "coperta_pct": info["coperta_pct"], "immagine": "/images/sentinel/" + dest.name,
+                    "indici": scrivi_indici(info["indici"], g)}
+        log(f"Scena del {g} scritta da {', '.join(info['tile'])}: finestra coperta al {info['coperta_pct']}%, nuvole sul {info['nuvole_pct']}%, NDVI medio {scene[g]['indici'].get('ndvi_medio')}.")
     ordinate = [scene[g] for g in sorted(scene, reverse=True)][:massimo]
+    # scene gia' in archivio senza indici (archivio nato prima dell'11/10/2026, o
+    # un giro interrotto): si completano poche per volta, le piu' recenti prima
+    completate = 0
+    for sc in ordinate:
+        g = sc["giorno"]
+        if completate >= INDICI_BACKFILL:
+            break
+        manca = not sc.get("indici") or not all((IMG_DIR / Path(x).name).is_file() for x in sc["indici"].get("immagini", {}).values())
+        if manca and g in per_giorno:
+            try:
+                arrays[g] = indici_scena(per_giorno[g])
+                sc["indici"] = scrivi_indici(arrays[g], g)
+                completate += 1
+                log(f"Indici calcolati per la scena del {g} gia' in archivio.")
+            except Exception as e:  # noqa: BLE001
+                log(f"Indici della scena del {g} non calcolati ({e}): si riprova al giro dopo.")
     tenute = {Path(s["immagine"]).name for s in ordinate}
+    tenute |= {Path(x).name for s in ordinate for x in (s.get("indici") or {}).get("immagini", {}).values()}
     for vecchio in glob.glob(str(IMG_DIR / "sentinel2-genzano-*.webp")):
-        if Path(vecchio).name not in tenute and re.fullmatch(r"sentinel2-genzano-\d{8}\.webp", Path(vecchio).name):
+        if Path(vecchio).name not in tenute and re.fullmatch(r"sentinel2-genzano-\d{8}(-ndvi|-ndwi|-nbr)?\.webp", Path(vecchio).name):
             os.remove(vecchio)
             log(f"Tolta la scena piu' vecchia: {Path(vecchio).name}")
     if not ordinate:
         log("Nessuna scena utile (tutte nuvolose o non leggibili): nessun file scritto.")
         return 0
-    if nuove == 0 and not forza and [s["giorno"] for s in prec.get("scene", [])] == [s["giorno"] for s in ordinate]:
+    # mappa dei cambiamenti fra le due scene piu' recenti, rifatta quando cambia la coppia
+    cambi = prec.get("cambi") if isinstance(prec.get("cambi"), dict) else None
+    coppia = [s["giorno"] for s in ordinate[:2]]
+    if len(coppia) == 2 and (forza or not cambi or [cambi.get("prima"), cambi.get("dopo")] != [coppia[1], coppia[0]]
+                             or not (IMG_DIR / "sentinel2-genzano-cambi.webp").is_file()):
+        try:
+            for g in coppia:
+                if g not in arrays:
+                    arrays[g] = indici_scena(per_giorno[g])
+            cambi = cambiamenti(arrays[coppia[1]], arrays[coppia[0]], coppia[1], coppia[0])
+            log(f"Cambiamenti {coppia[1]} -> {coppia[0]}: bruciato {cambi['bruciato_ha']} ha, vegetazione persa {cambi['vegetazione_persa_ha']} ha, acqua nuova {cambi['acqua_nuova_ha']} ha.")
+        except Exception as e:  # noqa: BLE001
+            log(f"Mappa dei cambiamenti non calcolata ({e}): si riprova al giro dopo.")
+            if cambi and [cambi.get("prima"), cambi.get("dopo")] != [coppia[1], coppia[0]]:
+                cambi = None  # una mappa di un'altra coppia non si spaccia per questa
+    elif len(coppia) < 2:
+        cambi = None
+    if nuove == 0 and completate == 0 and not forza and [s["giorno"] for s in prec.get("scene", [])] == [s["giorno"] for s in ordinate] and cambi == prec.get("cambi"):
         log("Nessuna scena nuova: file invariati.")
         return 0
     xmin, ymin, xmax, ymax = riquadro_3857()
@@ -232,10 +445,12 @@ def main() -> int:
         "_snapshot": {"generato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       "fonte": "Sentinel-2 L2A a colori naturali (TCI, 10 m), archivio Cloud Optimized GeoTIFF su AWS Open Data, catalogo Earth Search (Element 84)",
                       "attribuzione": f"Contiene dati Copernicus Sentinel modificati {dt.date.today().year}",
-                      "nota": "nuvole_pct e' la copertura calcolata sulla finestra dalla maschera SCL del prodotto; nuvole_scena_pct e' la stima della scena intera"},
+                      "nota": "nuvole_pct e' la copertura calcolata sulla finestra dalla maschera SCL del prodotto; nuvole_scena_pct e' la stima della scena intera; i cambiamenti sono candidati da verificare, non certezze"},
         "riquadro": {"sud": round(s, 5), "ovest": round(w, 5), "nord": round(n, 5), "est": round(e, 5)},
         "risoluzione_m": RISOLUZIONE_M, "pixel": int(round(2 * MEZZO_LATO_KM * 1000 / RISOLUZIONE_M)),
         "scene": ordinate,
+        "indici_nota": "NDVI, NDWI e NBR calcolati dalle bande L2A a 20 m con le nuvole mascherate dalla SCL; medie sui soli pixel validi",
+        "cambi": cambi,
         # le date nuvolose si ricordano per tutta la finestra del catalogo, altrimenti
         # ogni giro rileggerebbe la maschera SCL delle stesse scene scartate
         "scartate": sorted(x for x in scartate if x >= (dt.date.today() - dt.timedelta(days=GIORNI)).isoformat())[-40:],

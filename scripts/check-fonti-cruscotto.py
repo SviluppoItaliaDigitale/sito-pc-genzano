@@ -248,6 +248,38 @@ def chk_gibs():
     return ok, det
 
 
+def chk_gibs_tematici():
+    """Livelli tematici NASA GIBS della scheda satellite (dall'11/10/2026): per ciascuno
+    si chiede DescribeDomains (come fa il browser per datare il mosaico) e si
+    controlla che l'ultimo giorno del dominio non sia piu' vecchio di 7 giorni:
+    un livello che risponde ma non si aggiorna e' una scheda ferma, non una scheda sana."""
+    livelli = (("VIIRS_Combined_Flood_3-Day", "GoogleMapsCompatible_Level9"),
+               ("VIIRS_NOAA20_NDSI_Snow_Cover", "GoogleMapsCompatible_Level8"),
+               ("SMAP_L4_Analyzed_Surface_Soil_Moisture", "GoogleMapsCompatible_Level6"),
+               ("VIIRS_NOAA21_Land_Surface_Temp_Day", "GoogleMapsCompatible_Level7"),
+               ("MODIS_Terra_NDVI_8Day", "GoogleMapsCompatible_Level9"),
+               ("MODIS_Combined_Value_Added_AOD", "GoogleMapsCompatible_Level6"))
+    guasti = []
+    for layer, tms in livelli:
+        url = ("https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi?SERVICE=WMTS&REQUEST=DescribeDomains"
+               "&VERSION=1.0.0&LAYER=" + layer + "&TILEMATRIXSET=" + tms)
+        ok, det, _, body = _get(url)
+        if not ok:
+            guasti.append(layer + ": " + det)
+            continue
+        m = re.search(r"<Domain>([^<]*)</Domain>", (body or b"").decode("utf-8", "replace"))
+        ultimo = (m.group(1).split(",")[-1].split("/")[1] if m and "/" in m.group(1).split(",")[-1]
+                  else (m.group(1).split(",")[-1] if m else ""))[:10]
+        try:
+            eta = (datetime.date.today() - datetime.date.fromisoformat(ultimo)).days
+        except ValueError:
+            guasti.append(layer + ": dominio temporale non leggibile")
+            continue
+        if eta > 7:
+            guasti.append(layer + f": ultimo mosaico di {eta} giorni fa ({ultimo})")
+    return (False, "; ".join(guasti)) if guasti else (True, f"{len(livelli)} livelli aggiornati entro 7 giorni")
+
+
 def chk_obs_italiameteo():
     """API osservazioni MeteoHub: stazioni al suolo (temperatura, licenza CC BY)."""
     now = _utcnow()
@@ -425,6 +457,7 @@ SORGENTI = [
     ("Catalogo scene Sentinel-3 — Copernicus STAC", "Satellite", chk_stac_copernicus),
     ("Scene Sentinel-2 — Earth Search/AWS Open Data", "Satellite", chk_earth_search_s2),
     ("Satellite suolo — NASA GIBS", "Satellite", chk_gibs),
+    ("Livelli tematici (alluvioni, neve, suolo, vegetazione, aerosol) — NASA GIBS", "Satellite", chk_gibs_tematici),
     ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
     ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),

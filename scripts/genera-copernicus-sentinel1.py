@@ -11,12 +11,25 @@ controllo, non con una griglia regolare: la finestra si ottiene riproiettando
 in Web Mercator con quei punti (ordine 1), senza correzione del rilievo — sui
 Colli Albani i versanti appaiono un po' deformati, e la pagina lo dice.
 
+Dall'11/10/2026 c'è anche la MAPPA DEI CAMBIAMENTI: di ogni passaggio si
+conserva la misura in decibel (PNG a 60 m, quantizzato a 0,25 dB) e il nuovo
+passaggio si confronta con il più recente che ha la STESSA orbita relativa e la
+stessa direzione: senza correzione del rilievo, due orbite diverse guardano i
+versanti da angoli diversi e il confronto non avrebbe senso. Dove il segnale cala
+di almeno SOGLIA_DB (superficie diventata liscia: acqua ferma, campo allagato) il
+pixel è un candidato «acqua nuova»; dove sale, qualcosa di ruvido o metallico è
+comparso. Sono indizi da verificare: anche pioggia, vento sui laghi e arature
+cambiano il radar, e la pagina lo dice.
+
 Scrive:
-- static/images/sentinel/sentinel1-genzano.webp (ultima scena) e
-  static/images/sentinel/sentinel1-genzano-prima.webp (la precedente): stanno
-  nella release «immagini-meteo», non in git (scripts/immagini-meteo-release.py);
+- static/images/sentinel/sentinel1-genzano.webp (ultima scena),
+  sentinel1-genzano-prima.webp (la precedente), sentinel1-genzano-cambi.webp
+  (mappa dei cambiamenti) e sentinel1-genzano-db-AAAAMMGGTHHMM.png (misure in
+  decibel degli ultimi passaggi): stanno nella release «immagini-meteo», non
+  in git (scripts/immagini-meteo-release.py);
 - static/open-data/copernicus-sentinel1.json (in git): scena, satellite, orbita,
-  riquadro dell'immagine in gradi per sovrapporla alla cartina.
+  riquadro dell'immagine in gradi per sovrapporla alla cartina, lo storico dei
+  passaggi conservati e il blocco `cambi`.
 
 Uso: python3 scripts/genera-copernicus-sentinel1.py [--forza]
 Chiavi in CDSE_S3_ACCESS_KEY / CDSE_S3_SECRET_KEY: senza, non scrive nulla ed
@@ -44,6 +57,12 @@ MEZZO_LATO_KM = 15.0      # riquadro di 30 km di lato
 RISOLUZIONE_M = 30.0      # 1000 x 1000 pixel: a 20 m il WebP pesava 1 MB (primo giro del 10/10/2026),
                           # troppo per un telefono in emergenza; a 30 m i laghi e i versanti si leggono uguali
 GIORNI = 12
+GIORNI_STORICO = 40       # misure in decibel conservate per il confronto a parita' di orbita (ciclo di 12 giorni)
+STORICO_MAX = 8
+DB_PX = 750               # 40 m: basta per un campo allagato, e il PNG pesa qualche centinaio di KB
+DB_OFFSET, DB_PASSO = 20.0, 0.25  # quantizzazione: valore = DB_OFFSET + byte * DB_PASSO (20...83,75 dB)
+SOGLIA_DB = 3.0           # variazione minima perche' un pixel conti come cambiato
+FILTRO_PX = 5             # media mobile 5x5 (300 m) prima del confronto: il radar e' rumoroso (speckle)
 
 
 def log(m: str) -> None:
@@ -134,7 +153,92 @@ def ritaglia(href: str, ak: str, sk: str, dest: Path) -> dict:
     s, w = gradi(xmin, ymin)
     n, e = gradi(xmax, ymax)
     return {"sud": round(s, 5), "ovest": round(w, 5), "nord": round(n, 5), "est": round(e, 5),
-            "pixel": lato, "validi_pct": round(float(valido.mean() * 100)), "db_min": round(float(lo), 1), "db_max": round(float(hi), 1)}
+            "pixel": lato, "validi_pct": round(float(valido.mean() * 100)), "db_min": round(float(lo), 1), "db_max": round(float(hi), 1),
+            "db": db}
+
+
+# ------------------------------------------------- misure in decibel e cambiamenti
+def riduci(a, lato: int):
+    """Media a blocchi fino a lato x lato (nan ignorati)."""
+    import numpy as np
+
+    f = a.shape[0] // lato
+    if f <= 1:
+        return a
+    b = a[:lato * f, :lato * f].reshape(lato, f, lato, f)
+    ok = np.isfinite(b)
+    somma = np.where(ok, b, 0).sum(axis=(1, 3))
+    conto = ok.sum(axis=(1, 3))
+    with np.errstate(invalid="ignore", divide="ignore"):
+        m = somma / conto
+    m[conto == 0] = np.nan
+    return m
+
+
+def salva_db(db, dest: Path) -> None:
+    """PNG a 8 bit senza perdita: 0 = nessun dato, altrimenti DB_OFFSET + byte * DB_PASSO."""
+    import numpy as np
+    from PIL import Image
+
+    r = riduci(db, DB_PX)
+    q = np.clip(np.round((r - DB_OFFSET) / DB_PASSO), 1, 255)
+    q = np.where(np.isfinite(r), q, 0).astype("uint8")
+    Image.fromarray(q, "L").save(dest, "PNG", optimize=True)
+
+
+def leggi_db(src: Path):
+    import numpy as np
+    from PIL import Image
+
+    q = np.asarray(Image.open(src).convert("L"), dtype="float32")
+    db = DB_OFFSET + q * DB_PASSO
+    db[q == 0] = np.nan
+    return db
+
+
+def liscia(a, n: int):
+    """Media mobile n x n (nan ignorati), con le somme cumulate: niente scipy."""
+    import numpy as np
+
+    ok = np.isfinite(a).astype("float32")
+    v = np.nan_to_num(a, nan=0.0)
+    r = n // 2
+    def box(x):
+        c = np.pad(x, r + 1)[:-1, :-1].cumsum(0).cumsum(1)
+        return c[n:, n:] - c[:-n, n:] - c[n:, :-n] + c[:-n, :-n]
+    somma, conto = box(v), box(ok)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        m = somma / conto
+    m[conto < n * n * 0.5] = np.nan
+    return m
+
+
+def cambiamenti(prima_png: Path, dopo_png: Path, dest: Path) -> dict:
+    """Mappa dei cambiamenti fra due passaggi sulla stessa orbita (stessa geometria)."""
+    import numpy as np
+    from PIL import Image
+
+    a, b = liscia(leggi_db(prima_png), FILTRO_PX), liscia(leggi_db(dopo_png), FILTRO_PX)
+    if a.shape != b.shape:
+        raise RuntimeError(f"misure di dimensione diversa ({a.shape} e {b.shape})")
+    metri_px = 2 * MEZZO_LATO_KM * 1000 / a.shape[0]  # la superficie si misura sui pixel veri, non su una costante
+    ettari_px = metri_px ** 2 / 10000
+    v = np.isfinite(a) & np.isfinite(b)
+    d = b - a
+    # acqua nuova: segnale crollato E basso in assoluto (fra i piu' bassi della scena)
+    basso = np.nanpercentile(b[v], 25) if v.any() else -np.inf
+    scuro = v & (d <= -SOGLIA_DB) & (b <= basso)
+    chiaro = v & (d >= SOGLIA_DB)
+    rgba = np.zeros(v.shape + (4,), dtype="uint8")
+    rgba[scuro] = (0, 90, 220, 210)
+    rgba[chiaro] = (255, 140, 0, 190)
+    IMG_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_suffix(".nuovo.webp")
+    Image.fromarray(rgba, "RGBA").save(tmp, "WEBP", quality=75, method=6)
+    tmp.replace(dest)
+    return {"validi_pct": round(float(v.mean() * 100), 1), "acqua_nuova_ha": round(float(scuro.sum() * ettari_px)),
+            "piu_riflettente_ha": round(float(chiaro.sum() * ettari_px)), "soglia_db": SOGLIA_DB,
+            "filtro_m": round(FILTRO_PX * metri_px), "pixel_m": round(metri_px), "immagine": "/images/sentinel/" + dest.name}
 
 
 def main() -> int:
@@ -171,10 +275,43 @@ def main() -> int:
     # l'immagine precedente diventa il «prima» del confronto a 10 m... 20 m
     if dest.is_file() and prec.get("id") and prec.get("id") != f["id"]:
         dest.replace(IMG_DIR / "sentinel1-genzano-prima.webp")
-        prec_blocco = {kk: prec[kk] for kk in ("id", "quando", "satellite", "orbita", "riquadro") if kk in prec}
+        prec_blocco = {kk: prec[kk] for kk in ("id", "quando", "satellite", "orbita", "orbita_relativa", "riquadro") if kk in prec}
     else:
         prec_blocco = prec.get("precedente") or {}
     tmp.replace(dest)
+    # misura in decibel di questo passaggio, conservata per i confronti futuri
+    quando = p.get("datetime") or ""
+    nome_db = "sentinel1-genzano-db-" + dt.datetime.fromisoformat(quando.replace("Z", "+00:00")).strftime("%Y%m%dT%H%M") + ".png" if quando else None
+    storico = [r for r in (prec.get("storico") or []) if isinstance(r, dict) and r.get("db") and r.get("id") != f["id"]]
+    if nome_db:
+        salva_db(info.pop("db"), IMG_DIR / nome_db)
+        voce = {"id": f["id"], "quando": quando, "satellite": str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel"),
+                "orbita": p.get("sat:orbit_state"), "orbita_relativa": p.get("sat:relative_orbit"), "db": "/images/sentinel/" + nome_db}
+        storico = [voce] + storico
+    else:
+        info.pop("db", None)
+    limite = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=GIORNI_STORICO)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    storico = [r for r in storico if (r.get("quando") or "") >= limite][:STORICO_MAX]
+    tenuti = {Path(r["db"]).name for r in storico}
+    for vecchio in IMG_DIR.glob("sentinel1-genzano-db-*.png"):
+        if vecchio.name not in tenuti:
+            vecchio.unlink()
+            log(f"Tolta la misura piu' vecchia: {vecchio.name}")
+    # confronto col passaggio precedente sulla STESSA orbita (stessa geometria di vista)
+    cambi: dict | None = None
+    gemello = next((r for r in storico[1:] if r.get("orbita_relativa") == p.get("sat:relative_orbit") and r.get("orbita") == p.get("sat:orbit_state")
+                    and (IMG_DIR / Path(r["db"]).name).is_file()), None)
+    if nome_db and gemello:
+        try:
+            cambi = dict(cambiamenti(IMG_DIR / Path(gemello["db"]).name, IMG_DIR / nome_db, IMG_DIR / "sentinel1-genzano-cambi.webp"),
+                         prima=gemello["quando"], dopo=quando, satellite_prima=gemello.get("satellite"), orbita_relativa=p.get("sat:relative_orbit"))
+            log(f"Cambiamenti rispetto al {gemello['quando'][:16]} (orbita {p.get('sat:relative_orbit')}): acqua nuova {cambi['acqua_nuova_ha']} ha, piu' riflettente {cambi['piu_riflettente_ha']} ha.")
+        except Exception as e:  # noqa: BLE001
+            log(f"Mappa dei cambiamenti non calcolata ({e}).")
+    else:
+        motivo = "nessun passaggio precedente sulla stessa orbita in archivio" if not gemello else "misura del passaggio precedente non disponibile"
+        cambi = {"disponibile": False, "motivo": motivo, "dopo": quando, "orbita_relativa": p.get("sat:relative_orbit")}
+        log(f"Cambiamenti non calcolabili: {motivo}.")
     out = {
         "_snapshot": {"generato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       "fonte": "Copernicus Data Space Ecosystem — Sentinel-1 GRD IW (COG), polarizzazione VV",
@@ -182,9 +319,12 @@ def main() -> int:
                       "nota": "finestra riproiettata con i punti di controllo del prodotto, senza correzione del rilievo"},
         "id": f["id"], "quando": p.get("datetime"),
         "satellite": str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel"),
-        "orbita": p.get("sat:orbit_state"), "modo": p.get("sar:instrument_mode"),
+        "orbita": p.get("sat:orbit_state"), "orbita_relativa": p.get("sat:relative_orbit"), "modo": p.get("sar:instrument_mode"),
         "immagine": "/images/sentinel/sentinel1-genzano.webp", "riquadro": info,
         "precedente": dict(prec_blocco, immagine="/images/sentinel/sentinel1-genzano-prima.webp") if prec_blocco else None,
+        "db_scala": {"offset": DB_OFFSET, "passo": DB_PASSO, "pixel": DB_PX, "nota": "valore in dB = offset + byte * passo; byte 0 = nessun dato"},
+        "storico": storico,
+        "cambi": cambi,
     }
     OUT_JSON.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     log(f"Radar Sentinel-1 scritto: {f['id']} ({info['validi_pct']}% di pixel validi, {info['db_min']}…{info['db_max']} dB).")
