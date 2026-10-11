@@ -5,11 +5,95 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-11T18:56:19+00:00",
+  "generato": "2026-10-11T22:43:20+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-11T21:46:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lazio in testa con l'Inter, la Roma in 10 resiste al Como e il Cagliari si gode il quarto posto",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/11/la-lazio-sogna-in-testa-con-linter-la-roma-frena-a-como-e-il-cagliari-si-gode_21745bf3-445d-4509-b342-ba2a41ea71d7.html"
+  },
+  {
+   "data": "2026-10-11T21:18:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Trump spiazza Zelensky con la tregua energetica. Putin non conferma",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-trump-tregua-energetica-stop-armi_4y7oI7OBbVrTYkgoTUZbOn"
+  },
+  {
+   "data": "2026-10-11T21:17:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "David Rossi, il giallo dell'uomo nel vicolo: in Commissione approda perizia Ris sul video",
+   "url": "https://www.adnkronos.com/cronaca/caso-david-rossi-sagoma-misteriosa-vicolo-perizia-ris_54EySYCo9eL2UEKcSzhVdB"
+  },
+  {
+   "data": "2026-10-11T21:15:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "La salute dei Papi, da Giovanni Paolo I a Bergoglio: interventi, malattie e ricoveri degli ultimi pontefici",
+   "url": "https://www.adnkronos.com/cronaca/salute-papa-giovanni-paolo-francesco-leone_190M54hNVqyxsZ03fs6DNJ"
+  },
+  {
+   "data": "2026-10-11T21:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cagliari-Juve, nervi tesi al fischio finale ed espulsione per Spalletti e Pisacane",
+   "url": "https://www.adnkronos.com/sport/spalletti-pisacane-espulsione-lite-cagliari-juve-video_1ZyjtZZjbMOm5ynKXWkm2A"
+  },
+  {
+   "data": "2026-10-11T20:28:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Frana in una grotta in Sardegna, speleologo bloccato a dieci metri di profondità",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/frana-in-una-grotta-in-sardegna-speleologo-bloccato-a-dieci-metri-di-profondita_22b8f0a8-3695-4eff-a3cf-19be7c6166b6.html"
+  },
+  {
+   "data": "2026-10-11T20:05:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Frana in una grotta in Sardegna, è vivo lo speleologo bloccato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/frana-in-una-grotta-in-sardegna-e-vivo-lo-speleologo-bloccato_3565bab1-dced-43d2-a48d-75f8fa21a901.html"
+  },
+  {
+   "data": "2026-10-11T19:14:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Glucksmann trionfa alle primarie socialdemocratiche, 'ora avanti fino all'Eliseo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/in-francia-glucksmann-conquista-le-primarie-socialdemocratiche-gia-dal-primo-turno_f1e4eb00-07b8-4df3-8613-4b7082e28c98.html"
+  },
+  {
+   "data": "2026-10-11T19:11:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli Houthi tengono sotto scacco l'aeroporto di Riad, nuovo attacco",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/gli-houthi-tengono-sotto-scacco-laeroporto-di-riad-nuovo-attacco-_da022b8b-30f6-4fe4-9439-2ca256cef92f.html"
+  },
+  {
+   "data": "2026-10-11T19:10:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina, Trump annuncia tregua energetica ma nessuno conferma",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/ucraina-trump-annuncia-tregua-energetica-ma-nessuno-conferma_2822374d-dfd0-4b0b-9768-eb9f9b6f6578.html"
+  },
+  {
+   "data": "2026-10-11T19:03:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Garlasco, al via una settimana cruciale per Andrea Sempio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/garlasco-al-via-una-settimana-cruciale-per-andrea-sempio_663fcc18-46db-48d9-9e78-6035e31c2a0c.html"
+  },
+  {
+   "data": "2026-10-11T18:58:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "Verstappen bis a Singapore, Antonelli può diventare campione ad Austin",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/11/verstappen-bis-a-singapore-antonelli-puo-diventare-campione-ad-austin_edacdce0-88fa-4309-ba9e-4c1b533c7334.html"
+  },
+  {
+   "data": "2026-10-11T18:58:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Un'auto travolge un gruppo di ciclisti nel Fiorentino, sette feriti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/unauto-travolge-un-gruppo-di-ciclisti-7-in-ospedale.-due-in-prognosi-riservata_cbe6c769-1495-4c81-9e25-f1ac9d04052b.html"
+  },
+  {
+   "data": "2026-10-11T18:53:11+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Moto contro auto, un morto e quattro feriti nel Rodigino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/moto-contro-auto-un-morto-e-quattro-feriti-nel-rodigino_0bfeee87-bfd3-4f79-9d5a-fc079406737c.html"
+  },
   {
    "data": "2026-10-11T18:48:15+00:00",
    "fonte": "ADNKRONOS",
@@ -27,12 +111,6 @@
    "fonte": "ANSA",
    "titolo": "Stellantis svela l'auto del futuro, da Citroën 2 CV elettrica a Alfa Cuorerosso",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/11/stellantis-svela-auto-del-futuro-da-citroen-2-cv-elettrica-a-alfa-cuorerosso_90226951-0829-428b-acbd-373cee5a3112.html"
-  },
-  {
-   "data": "2026-10-11T18:41:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Trump annuncia tregua energetica ma nessuno conferma",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/ucraina-trump-annuncia-tregua-energetica-ma-nessuno-conferma_2822374d-dfd0-4b0b-9768-eb9f9b6f6578.html"
   },
   {
    "data": "2026-10-11T18:41:09+00:00",
@@ -65,12 +143,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/incidenti-in-montagna-nel-comasco-morti-due-escursionisti_bbfff84a-58bc-4686-ae6a-c8a3cacf3388.html"
   },
   {
-   "data": "2026-10-11T18:35:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Frana in una grotta in Sardegna, speleologo bloccato a dieci metri di profondità",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/frana-in-una-grotta-in-sardegna-speleologo-bloccato-a-dieci-metri-di-profondita_22b8f0a8-3695-4eff-a3cf-19be7c6166b6.html"
-  },
-  {
    "data": "2026-10-11T18:34:07+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Soprusi su un 15enne ad Halloween, la Procura contro l'assoluzione",
@@ -81,12 +153,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Roggero: 'Rntrare in carcere a 72 anni è stato molto devastante'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/roggero-rntrare-in-carcere-a-72-anni-e-stato-molto-devastante_bc588227-df71-4043-b631-0558fb3c363d.html"
-  },
-  {
-   "data": "2026-10-11T18:31:59+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, al via una settimana cruciale per Andrea Sempio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/garlasco-al-via-una-settimana-cruciale-per-andrea-sempio_663fcc18-46db-48d9-9e78-6035e31c2a0c.html"
   },
   {
    "data": "2026-10-11T18:27:08+00:00",
@@ -107,18 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/11/bolelli-vavassori-si-separa-la-coppia-doro-del-tennis-azzurro_2703fb28-4acc-4e2a-819a-28c680157555.html"
   },
   {
-   "data": "2026-10-11T18:21:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli Houthi tengono sotto scacco l'aeroporto di Riad, nuovo attacco",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/gli-houthi-tengono-sotto-scacco-laeroporto-di-riad-nuovo-attacco-_da022b8b-30f6-4fe4-9439-2ca256cef92f.html"
-  },
-  {
-   "data": "2026-10-11T18:20:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Verstappen bis a Singapore, Antonelli può diventare campione ad Austin",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/11/verstappen-bis-a-singapore-antonelli-puo-diventare-campione-ad-austin_edacdce0-88fa-4309-ba9e-4c1b533c7334.html"
-  },
-  {
    "data": "2026-10-11T18:15:17+00:00",
    "fonte": "ANSA",
    "titolo": "L'annuncio choc del Papa all'Angelus, 'ho un nodulo al polmone'",
@@ -127,68 +181,14 @@
   {
    "data": "2026-10-11T18:13:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Cagliari-Juve 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-cagliari-juve-oggi-serie-a-live-risultato-classifica_5DefrEuzyQx8n7DMlo4UTC"
-  },
-  {
-   "data": "2026-10-11T18:10:17+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Un'auto travolge un gruppo di ciclisti nel Fiorentino, sette feriti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/unauto-travolge-un-gruppo-di-ciclisti-7-in-ospedale.-due-in-prognosi-riservata_cbe6c769-1495-4c81-9e25-f1ac9d04052b.html"
+   "titolo": "Cagliari-Juve 1-1, Kolo Muani risponde a Maldini: i bianconeri agganciano il Como al sesto posto",
+   "url": "https://www.adnkronos.com/sport/cagliari-juve-oggi-serie-a-live-risultato-classifica_5DefrEuzyQx8n7DMlo4UTC"
   },
   {
    "data": "2026-10-11T18:08:34+00:00",
    "fonte": "ANSA",
    "titolo": "Fabrizio Corona aggredito e rapinato sotto casa sua a Milano",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/fabrizio-corona-aggredito-e-rapinato-sotto-casa-sua-a-milano_8b071229-7c52-4ff2-8c8b-c2ff29dc7ec1.html"
-  },
-  {
-   "data": "2026-10-11T17:59:09+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Casale Monferrato entra nella rete dello Sportello nazionale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/casale-monferrato-entra-nella-rete-dello-sportello-nazionale_d8230dca-16c1-489c-803e-76ff1f413557.html"
-  },
-  {
-   "data": "2026-10-11T17:57:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Aggredisce un medico in pronto soccorso a Torino, arrestato dalla polizia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/aggredisce-un-medico-in-pronto-soccorso-a-torino-arrestato-dalla-polizia_c0310065-8c5b-4389-89a4-78b0f9ffcfd7.html"
-  },
-  {
-   "data": "2026-10-11T17:57:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ferito da arma da fuoco nel bosco, soccorso un cacciatore in Friuli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/ferito-da-arma-da-fuoco-nel-bosco-soccorso-un-cacciatore-in-friuli_f286c47b-980b-4b45-9ebc-43e67b910276.html"
-  },
-  {
-   "data": "2026-10-11T17:56:50+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Caro carburante, agricoltori e autotrasportatori scendono in strada nel Foggiano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/caro-carburante-agricoltori-e-autotrasportatori-scendono-in-strada-nel-foggiano_7ea3a4e8-c8fa-445e-ab2a-219ce091bfaf.html"
-  },
-  {
-   "data": "2026-10-11T17:53:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Addio a Wilma De Angelis, dalle hit anni '50 e '60 alla cucina in tv",
-   "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/10/11/e-morta-wilma-de-angelis_14806ea2-75d9-40ca-aad8-f0f1bc2ed358.html"
-  },
-  {
-   "data": "2026-10-11T17:50:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Greca 28enne salvata con un trapianto record alle Molinette di Torino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/giovane-salvata-con-trapianto-di-fegato-allospedale-molinette-di-torino_e86f0db0-891f-4f10-9a2f-c1da67f5cbaa.html"
-  },
-  {
-   "data": "2026-10-11T17:49:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incinta al settimo mese, esce dall'ospedale e muore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/incinta-al-settimo-mese-muore-col-figlio-scatta-linchiesta_3dd09c21-e60f-43c1-9d99-f520ca61885d.html"
-  },
-  {
-   "data": "2026-10-11T17:46:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ft: 'Mosca vuole uccidere i vertici della difesa europea'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/ft-mosca-vuole-uccidere-i-vertici-della-difesa-europea_aff1e77d-6140-4ab2-91ff-7e2cc737cd8a.html"
   }
  ]
 }
