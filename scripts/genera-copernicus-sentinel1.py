@@ -266,7 +266,12 @@ def main() -> int:
             prec = json.loads(OUT_JSON.read_text(encoding="utf-8"))
         except ValueError:
             prec = {}
-    if prec.get("id") == f["id"] and "--forza" not in sys.argv and (IMG_DIR / "sentinel1-genzano.webp").is_file():
+    # la scena si rielabora anche se e' la stessa quando manca la sua misura in decibel
+    # (archivio nato prima dell'11/10/2026, o giro interrotto): altrimenti il primo
+    # confronto a parita' di orbita slitterebbe di un ciclo intero (rilievo Codex)
+    db_presente = any(r.get("id") == f["id"] and (IMG_DIR / Path(str(r.get("db", ""))).name).is_file()
+                      for r in (prec.get("storico") or []) if isinstance(r, dict))
+    if prec.get("id") == f["id"] and "--forza" not in sys.argv and (IMG_DIR / "sentinel1-genzano.webp").is_file() and db_presente:
         log("Ultima scena già elaborata: " + f["id"])
         return 0
     dest = IMG_DIR / "sentinel1-genzano.webp"
