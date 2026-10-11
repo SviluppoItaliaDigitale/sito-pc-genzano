@@ -59,10 +59,11 @@ RISOLUZIONE_M = 30.0      # 1000 x 1000 pixel: a 20 m il WebP pesava 1 MB (primo
 GIORNI = 12
 GIORNI_STORICO = 40       # misure in decibel conservate per il confronto a parita' di orbita (ciclo di 12 giorni)
 STORICO_MAX = 8
-DB_PX = 750               # 40 m: basta per un campo allagato, e il PNG pesa qualche centinaio di KB
+DB_PX = 500               # 60 m: basta per un campo allagato, e il PNG pesa ~250 KB (la finestra a 30 m e' 1000 px: si media 2x2)
 DB_OFFSET, DB_PASSO = 20.0, 0.25  # quantizzazione: valore = DB_OFFSET + byte * DB_PASSO (20...83,75 dB)
 SOGLIA_DB = 3.0           # variazione minima perche' un pixel conti come cambiato
-FILTRO_PX = 5             # media mobile 5x5 (300 m) prima del confronto: il radar e' rumoroso (speckle)
+FILTRO_PX = 5             # media mobile 5x5 (300 m a 60 m) prima del confronto: il radar e' rumoroso (speckle)
+PERCENTILE_GIA_SCURO = 15 # un pixel gia' fra i piu' scuri prima (laghi, nel 15% piu' basso) non puo' diventare «acqua nuova»
 
 
 def log(m: str) -> None:
@@ -183,7 +184,7 @@ def salva_db(db, dest: Path) -> None:
     r = riduci(db, DB_PX)
     q = np.clip(np.round((r - DB_OFFSET) / DB_PASSO), 1, 255)
     q = np.where(np.isfinite(r), q, 0).astype("uint8")
-    Image.fromarray(q, "L").save(dest, "PNG", optimize=True)
+    Image.fromarray(q).save(dest, "PNG", optimize=True)
 
 
 def leggi_db(src: Path):
@@ -204,7 +205,8 @@ def liscia(a, n: int):
     v = np.nan_to_num(a, nan=0.0)
     r = n // 2
     def box(x):
-        c = np.pad(x, r + 1)[:-1, :-1].cumsum(0).cumsum(1)
+        # somme cumulate in float64: in float32 l'errore sulla media 5x5 arriva a 0,5 dB
+        c = np.pad(x, r + 1)[:-1, :-1].astype("float64").cumsum(0).cumsum(1)
         return c[n:, n:] - c[:-n, n:] - c[n:, :-n] + c[:-n, :-n]
     somma, conto = box(v), box(ok)
     with np.errstate(invalid="ignore", divide="ignore"):
@@ -226,17 +228,19 @@ def cambiamenti(prima_png: Path, dopo_png: Path, dest: Path) -> dict:
     v = np.isfinite(a) & np.isfinite(b)
     d = b - a
     # acqua nuova: segnale crollato E basso in assoluto (fra i piu' bassi della scena)
+    # E non gia' scuro prima: i laghi, che passano da mossi a calmi, non sono acqua nuova
     basso = np.nanpercentile(b[v], 25) if v.any() else -np.inf
-    scuro = v & (d <= -SOGLIA_DB) & (b <= basso)
+    gia_scuro = np.nanpercentile(a[v], PERCENTILE_GIA_SCURO) if v.any() else np.inf
+    scuro = v & (d <= -SOGLIA_DB) & (b <= basso) & (a > gia_scuro)
     chiaro = v & (d >= SOGLIA_DB)
     rgba = np.zeros(v.shape + (4,), dtype="uint8")
     rgba[scuro] = (0, 90, 220, 210)
     rgba[chiaro] = (255, 140, 0, 190)
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(".nuovo.webp")
-    Image.fromarray(rgba, "RGBA").save(tmp, "WEBP", quality=75, method=6)
+    Image.fromarray(rgba).save(tmp, "WEBP", quality=75, method=6)
     tmp.replace(dest)
-    return {"validi_pct": round(float(v.mean() * 100), 1), "acqua_nuova_ha": round(float(scuro.sum() * ettari_px)),
+    return {"validi_pct": round(float(v.mean() * 100), 1), "pixel": int(a.shape[0]), "acqua_nuova_ha": round(float(scuro.sum() * ettari_px)),
             "piu_riflettente_ha": round(float(chiaro.sum() * ettari_px)), "soglia_db": SOGLIA_DB,
             "filtro_m": round(FILTRO_PX * metri_px), "pixel_m": round(metri_px), "immagine": "/images/sentinel/" + dest.name}
 
@@ -284,7 +288,12 @@ def main() -> int:
     nome_db = "sentinel1-genzano-db-" + dt.datetime.fromisoformat(quando.replace("Z", "+00:00")).strftime("%Y%m%dT%H%M") + ".png" if quando else None
     storico = [r for r in (prec.get("storico") or []) if isinstance(r, dict) and r.get("db") and r.get("id") != f["id"]]
     if nome_db:
-        salva_db(info.pop("db"), IMG_DIR / nome_db)
+        try:
+            salva_db(info.pop("db"), IMG_DIR / nome_db)
+        except Exception as e:  # noqa: BLE001
+            log(f"Misura in decibel non salvata ({e}): niente confronto per questo passaggio.")
+            nome_db = None
+    if nome_db:
         voce = {"id": f["id"], "quando": quando, "satellite": str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel"),
                 "orbita": p.get("sat:orbit_state"), "orbita_relativa": p.get("sat:relative_orbit"), "db": "/images/sentinel/" + nome_db}
         storico = [voce] + storico
@@ -316,13 +325,13 @@ def main() -> int:
         "_snapshot": {"generato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       "fonte": "Copernicus Data Space Ecosystem — Sentinel-1 GRD IW (COG), polarizzazione VV",
                       "attribuzione": f"Contiene dati Copernicus Sentinel modificati {dt.date.today().year}",
-                      "nota": "finestra riproiettata con i punti di controllo del prodotto, senza correzione del rilievo"},
+                      "nota": "finestra riproiettata con i punti di controllo del prodotto, senza correzione del rilievo; i cambiamenti sono candidati da verificare"},
         "id": f["id"], "quando": p.get("datetime"),
         "satellite": str(p.get("platform", "")).replace("sentinel-", "Sentinel-").upper().replace("SENTINEL", "Sentinel"),
         "orbita": p.get("sat:orbit_state"), "orbita_relativa": p.get("sat:relative_orbit"), "modo": p.get("sar:instrument_mode"),
         "immagine": "/images/sentinel/sentinel1-genzano.webp", "riquadro": info,
         "precedente": dict(prec_blocco, immagine="/images/sentinel/sentinel1-genzano-prima.webp") if prec_blocco else None,
-        "db_scala": {"offset": DB_OFFSET, "passo": DB_PASSO, "pixel": DB_PX, "nota": "valore in dB = offset + byte * passo; byte 0 = nessun dato"},
+        "db_scala": {"offset": DB_OFFSET, "passo": DB_PASSO, "pixel": DB_PX, "metri": round(2 * MEZZO_LATO_KM * 1000 / DB_PX), "nota": "valore in dB = offset + byte * passo; byte 0 = nessun dato"},
         "storico": storico,
         "cambi": cambi,
     }

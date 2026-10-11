@@ -116,7 +116,8 @@ def dal_sito(percorso: str, dest: Path) -> bool | None:
     except Exception as e:  # noqa: BLE001
         print(f"  [ko ] {percorso} anche dal sito: {e}")
         return False
-    if len(dati) < 1000:
+    # una mappa dei cambiamenti quasi tutta trasparente pesa poche centinaia di byte
+    if len(dati) < (120 if percorso.endswith("-cambi.webp") else 1000):
         print(f"  [ko ] {percorso} dal sito: risposta troppo piccola ({len(dati)} byte)")
         return False
     dest.write_bytes(dati)
@@ -130,6 +131,8 @@ def scarica(rigoroso: bool = False) -> int:
             print(f"Release {TAG} non disponibile ({r.stderr.strip()}): ripiego sul sito.")
         mancanti = []
         for nome, percorso in file_attesi().items():
+            if rigoroso and S1_NOME.fullmatch(nome):
+                continue  # le misure radar in decibel servono solo al generatore, non al sito
             dest = REPO_ROOT / "static" / percorso
             dest.parent.mkdir(parents=True, exist_ok=True)
             sorgente = Path(tmp) / nome

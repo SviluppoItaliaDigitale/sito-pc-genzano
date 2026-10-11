@@ -253,14 +253,16 @@ def chk_gibs_tematici():
     si chiede DescribeDomains (come fa il browser per datare il mosaico) e si
     controlla che l'ultimo giorno del dominio non sia piu' vecchio di 7 giorni:
     un livello che risponde ma non si aggiorna e' una scheda ferma, non una scheda sana."""
-    livelli = (("VIIRS_Combined_Flood_3-Day", "GoogleMapsCompatible_Level9"),
-               ("VIIRS_NOAA20_NDSI_Snow_Cover", "GoogleMapsCompatible_Level8"),
-               ("SMAP_L4_Analyzed_Surface_Soil_Moisture", "GoogleMapsCompatible_Level6"),
-               ("VIIRS_NOAA21_Land_Surface_Temp_Day", "GoogleMapsCompatible_Level7"),
-               ("MODIS_Terra_NDVI_8Day", "GoogleMapsCompatible_Level9"),
-               ("MODIS_Combined_Value_Added_AOD", "GoogleMapsCompatible_Level6"))
+    # (layer, tile matrix set, eta' massima in giorni): il composito NDVI a 8 giorni e'
+    # datato all'inizio del periodo, quindi «fresco» vuol dire fino a 12 giorni
+    livelli = (("VIIRS_Combined_Flood_3-Day", "GoogleMapsCompatible_Level9", 7),
+               ("VIIRS_NOAA20_NDSI_Snow_Cover", "GoogleMapsCompatible_Level8", 7),
+               ("SMAP_L4_Analyzed_Surface_Soil_Moisture", "GoogleMapsCompatible_Level6", 7),
+               ("VIIRS_NOAA21_Land_Surface_Temp_Day", "GoogleMapsCompatible_Level7", 7),
+               ("MODIS_Terra_NDVI_8Day", "GoogleMapsCompatible_Level9", 12),
+               ("MODIS_Combined_Value_Added_AOD", "GoogleMapsCompatible_Level6", 7))
     guasti = []
-    for layer, tms in livelli:
+    for layer, tms, max_giorni in livelli:
         url = ("https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi?SERVICE=WMTS&REQUEST=DescribeDomains"
                "&VERSION=1.0.0&LAYER=" + layer + "&TILEMATRIXSET=" + tms)
         ok, det, _, body = _get(url)
@@ -275,9 +277,9 @@ def chk_gibs_tematici():
         except ValueError:
             guasti.append(layer + ": dominio temporale non leggibile")
             continue
-        if eta > 7:
-            guasti.append(layer + f": ultimo mosaico di {eta} giorni fa ({ultimo})")
-    return (False, "; ".join(guasti)) if guasti else (True, f"{len(livelli)} livelli aggiornati entro 7 giorni")
+        if eta > max_giorni:
+            guasti.append(layer + f": ultimo mosaico di {eta} giorni fa ({ultimo}, limite {max_giorni})")
+    return (False, "; ".join(guasti)) if guasti else (True, f"{len(livelli)} livelli aggiornati entro il loro limite")
 
 
 def chk_obs_italiameteo():

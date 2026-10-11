@@ -168,8 +168,12 @@ def laghi_scena(s3, feat: dict, tmp: Path) -> list[dict]:
     """Clorofilla e solidi sospesi (mediane) nei laghi, da una scena OLCI WFR.
 
     La posizione si ricava dai punti di legame (tie-geo-coordinates, un file
-    piccolo, una colonna ogni 64 pixel) interpolati, invece delle coordinate
-    piene (decine di MB); clorofilla, torbidità e flag si scaricano interi.
+    piccolo: tutte le righe ma una colonna ogni 64 pixel, cioe' ogni ~19 km).
+    Il lago sta quasi sempre fra due colonne di legame, quindi NON si cerca il
+    punto di legame piu' vicino: si interpolano lat/lon su TUTTE le colonne
+    per una fascia di righe attorno al lago e si tengono i pixel entro il raggio
+    (rilievo di revisione dell'11/10/2026: la prima stesura guardava solo
+    attorno alla colonna di legame e trovava zero pixel di lago).
     """
     import netCDF4
     import numpy as np
@@ -177,6 +181,7 @@ def laghi_scena(s3, feat: dict, tmp: Path) -> list[dict]:
     a = feat.get("assets", {})
     need = {k: a.get(k, {}).get("href") for k in ("tie-geo-coordinates", "chl-Nn", "tsm-Nn", "wqsf")}
     if not all(need.values()):
+        log(f"WFR {feat.get('id')}: asset mancanti ({[k for k, v in need.items() if not v]})")
         return []
     files = {k: scarica(s3, h, tmp / (feat["id"] + "-" + k.replace("-", "_") + ".nc")) for k, h in need.items()}
     with netCDF4.Dataset(files["tie-geo-coordinates"]) as g:
@@ -197,28 +202,41 @@ def laghi_scena(s3, feat: dict, tmp: Path) -> list[dict]:
         for n, m in zip(nomi, maschere):
             if n in WQSF_SCARTA:
                 bit_scarta |= m
+        if not bit_scarta:
+            # senza i flag di nuvola e terra i pixel nuvolosi passerebbero per acqua: meglio nessun dato
+            log(f"WFR {feat.get('id')}: flag WQSF non riconosciuti, scena scartata")
+            return []
         bit_inland = next((m for n, m in zip(nomi, maschere) if n == "INLAND_WATER"), 0)
         ncol = chl_v.shape[1]
+        cols = np.arange(ncol)
         for lago in LAGHI:
-            d2 = (tlat - lago["lat"]) ** 2 + ((tlon - lago["lon"]) * math.cos(math.radians(lago["lat"]))) ** 2
+            cos_lat = math.cos(math.radians(lago["lat"]))
+            # riga: dal punto di legame piu' vicino (le righe sono a piena risoluzione);
+            # la fascia e' larga perche' lungo una colonna di legame la latitudine
+            # puo' scostarsi di qualche km rispetto al pixel vero del lago
+            d2 = (tlat - lago["lat"]) ** 2 + ((tlon - lago["lon"]) * cos_lat) ** 2
             d2 = np.where(np.isfinite(d2), d2, np.inf)
             i, jt = np.unravel_index(int(np.argmin(d2)), d2.shape)
-            if math.sqrt(float(d2[i, jt])) * 111 > 6:  # la scena non copre il lago
+            if math.sqrt(float(d2[i, jt])) * 111 > 15:  # oltre mezzo passo di legame: la scena non copre il lago
                 continue
-            r_px = int(lago["raggio_km"] / 0.3) + 3
+            r_px = int(lago["raggio_km"] / 0.3) + 25
             r0, r1 = max(0, i - r_px), min(righe, i + r_px + 1)
-            c0, c1 = max(0, int(col_tie[jt]) - r_px), min(ncol, int(col_tie[jt]) + r_px + 1)
-            cols = np.arange(c0, c1)
             lat = np.vstack([np.interp(cols, col_tie, tlat[r]) for r in range(r0, r1)])
             lon = np.vstack([np.interp(cols, col_tie, tlon[r]) for r in range(r0, r1)])
-            dist = np.sqrt((lat - lago["lat"]) ** 2 + ((lon - lago["lon"]) * math.cos(math.radians(lago["lat"]))) ** 2) * 111
+            dist = np.sqrt((lat - lago["lat"]) ** 2 + ((lon - lago["lon"]) * cos_lat) ** 2) * 111
             dentro = dist <= lago["raggio_km"]
-            chl = np.ma.filled(chl_v[r0:r1, c0:c1].astype(float), np.nan)
-            tsm = np.ma.filled(tsm_v[r0:r1, c0:c1].astype(float), np.nan)
-            flag = np.ma.filled(wq[r0:r1, c0:c1], 0).astype("uint64")
+            if not dentro.any():
+                continue
+            rr, cc = np.nonzero(dentro)
+            c0, c1 = int(cc.min()), int(cc.max()) + 1
+            rr0, rr1 = r0 + int(rr.min()), r0 + int(rr.max()) + 1
+            dentro = dentro[rr0 - r0:rr1 - r0, c0:c1]
+            chl = np.ma.filled(chl_v[rr0:rr1, c0:c1].astype(float), np.nan)
+            tsm = np.ma.filled(tsm_v[rr0:rr1, c0:c1].astype(float), np.nan)
+            flag = np.ma.filled(wq[rr0:rr1, c0:c1], 0).astype("uint64")
             ok = dentro & np.isfinite(chl) & ((flag & np.uint64(bit_scarta)) == 0)
             n_inland = int(((flag & np.uint64(bit_inland)) != 0)[dentro].sum()) if bit_inland else None
-            riga = {"lago": lago["nome"], "quando": p.get("datetime"), "satellite": sat,
+            riga = {"lago": lago["nome"], "quando": p.get("datetime"), "satellite": sat, "scena": feat.get("id"),
                     "pixel_lago": int(dentro.sum()), "pixel_validi": int(ok.sum()), "pixel_acqua_interna": n_inland,
                     "chl_mg_m3": None, "tsm_g_m3": None, "nuvola": bool(ok.sum() < 3)}
             if ok.sum() >= 3:
@@ -345,13 +363,28 @@ def main() -> int:
                     scene_frp += 1
                 except Exception as e:  # noqa: BLE001
                     log(f"FRP {f.get('id')}: {e}")
+            # scene WFR gia' lette al giro prima (70 MB l'una): si riusano le misure dal JSON
+            gia_laghi: dict[str, list] = {}
+            try:
+                for r in (json.loads(OUT.read_text(encoding="utf-8")).get("laghi") or {}).get("misure", []):
+                    if r.get("scena"):
+                        gia_laghi.setdefault(r["scena"], []).append(r)
+            except (OSError, ValueError):
+                pass
             laghi, scene_laghi = [], 0
             for f in stac("sentinel-3-olci-2-wfr-nrt", BBOX_GENZANO, ORE, 4):
-                try:
-                    laghi += laghi_scena(s3, f, tmp)
+                if f.get("id") in gia_laghi:
+                    laghi += gia_laghi[f["id"]]
                     scene_laghi += 1
+                    continue
+                try:
+                    r = laghi_scena(s3, f, tmp)
                 except Exception as e:  # noqa: BLE001
                     log(f"WFR {f.get('id')}: {e}")
+                    continue
+                if r:
+                    laghi += r
+                    scene_laghi += 1
         if not suolo and not scene_frp and not scene_laghi:
             log("Nessuna scena letta: snapshot lasciato com'era.")
             return 0

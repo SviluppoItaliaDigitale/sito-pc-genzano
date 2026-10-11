@@ -72,6 +72,7 @@ BANDE = {"red": "B04", "green": "B03", "nir": "B08", "swir22": "B12"}
 ETTARI_PIXEL = (2 * MEZZO_LATO_KM * 1000 / INDICI_PX) ** 2 / 10000  # 0,04 ha a 20 m
 SOGLIA_DNBR = 0.27         # USGS FIREMON / EFFIS: da qui in su severita' almeno moderata-bassa
 SOGLIA_DNDVI = -0.20       # calo di vegetazione marcato (non stagionale)
+CAMBI_MAX_GIORNI = 20      # oltre, fra due scene cambiano stagione e colture: il confronto non si fa
 SOGLIA_NDWI_ACQUA = 0.0    # McFeeters: sopra lo zero e' acqua in superficie
 INDICI_BACKFILL = 3        # scene gia' in archivio senza indici da completare per giro
 # tappe di colore (valore -> rgb) per le immagini degli indici
@@ -254,7 +255,7 @@ def salva_rgba(arr, dest: Path) -> None:
 
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(".nuovo.webp")
-    Image.fromarray(arr, "RGBA").save(tmp, "WEBP", quality=75, method=6)
+    Image.fromarray(arr).save(tmp, "WEBP", quality=75, method=6)
     tmp.replace(dest)
 
 
@@ -289,8 +290,9 @@ def cambiamenti(prima: dict, dopo: dict, g_prima: str, g_dopo: str) -> dict:
     v = np.isfinite(prima["nbr"]) & np.isfinite(dopo["nbr"]) & np.isfinite(prima["ndwi"]) & np.isfinite(dopo["ndwi"])
     dnbr = prima["nbr"] - dopo["nbr"]
     dndvi = dopo["ndvi"] - prima["ndvi"]
-    # bruciato: NBR crollato E basso dopo (un bosco verde che resta verde non e' bruciato)
-    bruciato = v & (dnbr >= SOGLIA_DNBR) & (dopo["nbr"] < 0.1) & (dopo["ndvi"] < prima["ndvi"])
+    # bruciato: NBR crollato E negativo dopo E vegetazione calata (un campo arato o
+    # raccolto resta con NBR attorno allo zero: rilievo di revisione dell'11/10/2026)
+    bruciato = v & (dnbr >= SOGLIA_DNBR) & (dopo["nbr"] < 0.0) & (dndvi <= -0.15)
     acqua = v & (dopo["ndwi"] > 0.1) & (prima["ndwi"] < SOGLIA_NDWI_ACQUA) & ~bruciato
     veg = v & (dndvi <= SOGLIA_DNDVI) & (dopo["ndvi"] < 0.4) & ~bruciato & ~acqua
     rgba = np.zeros(v.shape + (4,), dtype="uint8")
@@ -303,7 +305,7 @@ def cambiamenti(prima: dict, dopo: dict, g_prima: str, g_dopo: str) -> dict:
             "bruciato_ha": round(float(bruciato.sum() * ETTARI_PIXEL)),
             "vegetazione_persa_ha": round(float(veg.sum() * ETTARI_PIXEL)),
             "acqua_nuova_ha": round(float(acqua.sum() * ETTARI_PIXEL)),
-            "soglie": {"dnbr": SOGLIA_DNBR, "dndvi": SOGLIA_DNDVI, "ndwi_acqua": 0.1},
+            "soglie": {"dnbr": SOGLIA_DNBR, "nbr_dopo_max": 0.0, "dndvi_bruciato": -0.15, "dndvi": SOGLIA_DNDVI, "ndwi_acqua": 0.1, "giorni_max": CAMBI_MAX_GIORNI},
             "immagine": "/images/sentinel/" + dest.name}
 
 
@@ -324,11 +326,11 @@ def elabora(feats: list[dict], dest: Path) -> dict:
     rgb, usati = componi(feats, "visual", lato, Resampling.bilinear)
     if rgb.shape[0] < 3:
         raise RuntimeError("immagine a colori con meno di 3 bande")
+    ix = indici(feats, scl)  # prima di scrivere: se le bande non si leggono non resta una WebP orfana
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(".nuovo.webp")
-    Image.fromarray(np.moveaxis(rgb[:3], 0, -1).astype("uint8"), "RGB").save(tmp, "WEBP", quality=80, method=6)
+    Image.fromarray(np.moveaxis(rgb[:3], 0, -1).astype("uint8")).save(tmp, "WEBP", quality=80, method=6)
     tmp.replace(dest)
-    ix = indici(feats, scl)
     return {"nuvole_pct": round(nuvole), "scartata": False, "pixel": lato, "tile": usati,
             "coperta_pct": round(float(valido.mean() * 100), 1), "indici": ix}
 
@@ -421,13 +423,19 @@ def main() -> int:
     # mappa dei cambiamenti fra le due scene piu' recenti, rifatta quando cambia la coppia
     cambi = prec.get("cambi") if isinstance(prec.get("cambi"), dict) else None
     coppia = [s["giorno"] for s in ordinate[:2]]
-    if len(coppia) == 2 and (forza or not cambi or [cambi.get("prima"), cambi.get("dopo")] != [coppia[1], coppia[0]]
-                             or not (IMG_DIR / "sentinel2-genzano-cambi.webp").is_file()):
+    distanza = (dt.date.fromisoformat(coppia[0]) - dt.date.fromisoformat(coppia[1])).days if len(coppia) == 2 else None
+    if distanza is not None and distanza > CAMBI_MAX_GIORNI:
+        cambi = {"disponibile": False, "prima": coppia[1], "dopo": coppia[0], "giorni": distanza,
+                 "motivo": f"le due scene distano {distanza} giorni: oltre {CAMBI_MAX_GIORNI} cambiano stagione e colture, il confronto non si fa"}
+        if (IMG_DIR / "sentinel2-genzano-cambi.webp").is_file():
+            os.remove(IMG_DIR / "sentinel2-genzano-cambi.webp")
+    elif len(coppia) == 2 and (forza or not cambi or [cambi.get("prima"), cambi.get("dopo")] != [coppia[1], coppia[0]]
+                               or not (IMG_DIR / "sentinel2-genzano-cambi.webp").is_file()):
         try:
             for g in coppia:
                 if g not in arrays:
                     arrays[g] = indici_scena(per_giorno[g])
-            cambi = cambiamenti(arrays[coppia[1]], arrays[coppia[0]], coppia[1], coppia[0])
+            cambi = dict(cambiamenti(arrays[coppia[1]], arrays[coppia[0]], coppia[1], coppia[0]), giorni=distanza)
             log(f"Cambiamenti {coppia[1]} -> {coppia[0]}: bruciato {cambi['bruciato_ha']} ha, vegetazione persa {cambi['vegetazione_persa_ha']} ha, acqua nuova {cambi['acqua_nuova_ha']} ha.")
         except Exception as e:  # noqa: BLE001
             log(f"Mappa dei cambiamenti non calcolata ({e}): si riprova al giro dopo.")
@@ -435,6 +443,8 @@ def main() -> int:
                 cambi = None  # una mappa di un'altra coppia non si spaccia per questa
     elif len(coppia) < 2:
         cambi = None
+    if cambi and cambi.get("immagine") and not (IMG_DIR / Path(cambi["immagine"]).name).is_file():
+        cambi = None  # il JSON non deve puntare a un'immagine che non c'e'
     if nuove == 0 and completate == 0 and not forza and [s["giorno"] for s in prec.get("scene", [])] == [s["giorno"] for s in ordinate] and cambi == prec.get("cambi"):
         log("Nessuna scena nuova: file invariati.")
         return 0

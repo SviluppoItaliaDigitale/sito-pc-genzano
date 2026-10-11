@@ -50,7 +50,7 @@
   <div class="dash-incendi-box">
     <div id="dash-sat-mappa" role="application" aria-label="Mappa satellitare dell'Italia in tempo reale, con Genzano di Roma evidenziata."></div>
   </div>
-  <p class="dash-s3-nota dash-sat-legenda" id="sat-legenda" hidden aria-live="polite"></p>
+  <p class="dash-s3-nota dash-sat-legenda" id="sat-legenda" hidden></p>
   <div class="dash-s3" id="sat-s2-box" hidden>
     <section aria-labelledby="sat-s2-tit">
       <h3 id="sat-s2-tit" class="dash-s3-tit">Sentinel-2: che cosa guardare nella scena</h3>
@@ -62,17 +62,17 @@
         <button type="button" class="dash-pill" data-s2vista="nbr" aria-pressed="false">Aree bruciate</button>
         <button type="button" class="dash-pill" data-s2vista="cambi" aria-pressed="false">Cambiamenti</button>
       </div>
-      <div id="sat-s2-dati" aria-live="polite"></div>
+      <div id="sat-s2-dati"></div>
     </section>
   </div>
   <div class="dash-s3" id="sat-radar-box" hidden>
     <section aria-labelledby="sat-radar-tit">
       <h3 id="sat-radar-tit" class="dash-s3-tit">Radar: cambiamenti rispetto al passaggio precedente</h3>
-      <p class="dash-s3-nota">Il confronto si fa solo fra passaggi sulla <strong>stessa orbita</strong> (stesso angolo di vista, ogni 6-12 giorni): dove il segnale radar è calato di almeno 3&nbsp;dB ed è basso, la superficie è diventata liscia come l'acqua ferma (<span class="dash-sw dash-sw-blu" aria-hidden="true"></span> candidato «acqua nuova»: campo allagato, lago cresciuto); dove è salito, è comparso qualcosa di ruvido o metallico (<span class="dash-sw dash-sw-ara" aria-hidden="true"></span>). Anche pioggia sul terreno, vento sui laghi e arature cambiano il radar: indizi da verificare, non prove.</p>
+      <p class="dash-s3-nota">Il confronto si fa solo fra passaggi sulla <strong>stessa orbita</strong> (stesso angolo di vista, ogni 6-12 giorni): dove il segnale radar è calato di almeno 3&nbsp;dB ed è basso, la superficie è diventata liscia come l'acqua ferma (<span class="dash-sw dash-sw-blu" aria-hidden="true"></span> candidato «acqua nuova»: campo allagato, lago cresciuto); dove è salito, è comparso qualcosa di ruvido o metallico (<span class="dash-sw dash-sw-ara" aria-hidden="true"></span>). Anche pioggia sul terreno, vento sui laghi e arature cambiano il radar: indizi da verificare, non prove. I laghi, già scuri prima, non contano come «acqua nuova».</p>
       <div class="dash-sisma-toolbar" role="group" aria-label="Mappa dei cambiamenti radar">
         <button type="button" class="dash-pill" id="sat-radar-cambi" aria-pressed="false"><i class="bi bi-layers" aria-hidden="true"></i> Mostra i cambiamenti</button>
       </div>
-      <div id="sat-radar-dati" aria-live="polite"></div>
+      <div id="sat-radar-dati"></div>
     </section>
   </div>
   <div class="dash-s3" id="sat-s3-box" hidden>
@@ -261,19 +261,21 @@
        data vera da DescribeDomains, legenda scritta dalle colormap ufficiali ---- */
     var TEMI={
       alluvioni:{id:'VIIRS_Combined_Flood_3-Day',tms:'GoogleMapsCompatible_Level9',zn:9,op:0.9,nome:'Alluvioni viste dal satellite (VIIRS, finestra di 3 giorni)',
-        legenda:'<span class="dash-sw" style="background:#fa1e24"></span> acqua dove di solito non c\'è (allagamento rilevato) · <span class="dash-sw" style="background:#ffff00"></span> allagamento ricorrente · <span class="dash-sw" style="background:#32d2f5"></span> acqua abituale (laghi, fiumi, mare) · <span class="dash-sw" style="background:#000001"></span> asciutto · <span class="dash-sw" style="background:#afafaf"></span> dati insufficienti (nuvole). 375 m: non vede sotto gli alberi né dentro i centri abitati.',attr:'Alluvioni: NASA LANCE VIIRS Flood via GIBS'},
+        legenda:'<span class="dash-sw" aria-hidden="true" style="background:#fa1e24"></span> acqua dove di solito non c\'è (allagamento rilevato) · <span class="dash-sw" aria-hidden="true" style="background:#ffff00"></span> allagamento ricorrente · <span class="dash-sw" aria-hidden="true" style="background:#32d2f5"></span> acqua abituale (laghi, fiumi, mare) · <span class="dash-sw" aria-hidden="true" style="background:#000001"></span> asciutto · <span class="dash-sw" aria-hidden="true" style="background:#afafaf"></span> dati insufficienti (nuvole). 375 m: non vede sotto gli alberi né dentro i centri abitati.',attr:'Alluvioni: NASA LANCE VIIRS Flood via GIBS'},
       neve:{id:'VIIRS_NOAA20_NDSI_Snow_Cover',tms:'GoogleMapsCompatible_Level8',zn:8,op:0.85,nome:'Copertura di neve (indice NDSI, VIIRS NOAA-20)',
-        legenda:'<span class="dash-sw" style="background:#00ff00"></span> senza neve · dal <span class="dash-sw" style="background:#f0f080"></span> giallo al <span class="dash-sw" style="background:#f0968e"></span> rosa fino al <span class="dash-sw" style="background:#ff0000"></span> rosso: neve sempre più compatta (indice da 1 a 100) · <span class="dash-sw" style="background:#00bfff"></span> nuvole · <span class="dash-sw" style="background:#0000ff"></span> acqua interna · <span class="dash-sw" style="background:#bd00bd"></span> notte. Solo di giorno e con cielo sereno.',attr:'Neve: NASA VIIRS NOAA-20 NDSI via GIBS'},
+        legenda:'<span class="dash-sw" aria-hidden="true" style="background:#00ff00"></span> senza neve · dal <span class="dash-sw" aria-hidden="true" style="background:#f0f080"></span> giallo al <span class="dash-sw" aria-hidden="true" style="background:#f0968e"></span> rosa fino al <span class="dash-sw" aria-hidden="true" style="background:#ff0000"></span> rosso: neve sempre più compatta (indice da 1 a 100) · <span class="dash-sw" aria-hidden="true" style="background:#00bfff"></span> nuvole · <span class="dash-sw" aria-hidden="true" style="background:#0000ff"></span> acqua interna · <span class="dash-sw" aria-hidden="true" style="background:#bd00bd"></span> notte. Solo di giorno e con cielo sereno.',attr:'Neve: NASA VIIRS NOAA-20 NDSI via GIBS'},
       umidita:{id:'SMAP_L4_Analyzed_Surface_Soil_Moisture',tms:'GoogleMapsCompatible_Level6',zn:6,op:0.8,nome:'Umidità del suolo (SMAP, primi 5 cm, analisi a 9 km)',
-        legenda:'frazione d\'acqua nel suolo (m³ per m³): <span class="dash-sw" style="background:#ffa200"></span> 0 secco · <span class="dash-sw" style="background:#fffb00"></span> 0,1 · <span class="dash-sw" style="background:#249100"></span> 0,2 · <span class="dash-sw" style="background:#00ffff"></span> 0,35 · <span class="dash-sw" style="background:#0000e2"></span> 0,5 · <span class="dash-sw" style="background:#505050"></span> 0,7 saturo. Un suolo già bagnato assorbe meno la pioggia in arrivo.',attr:'Umidità del suolo: NASA SMAP L4 via GIBS'},
+        legenda:'frazione d\'acqua nel suolo (m³ per m³): <span class="dash-sw" aria-hidden="true" style="background:#ffa200"></span> 0 secco · <span class="dash-sw" aria-hidden="true" style="background:#fffb00"></span> 0,1 · <span class="dash-sw" aria-hidden="true" style="background:#249100"></span> 0,2 · <span class="dash-sw" aria-hidden="true" style="background:#00ffff"></span> 0,35 · <span class="dash-sw" aria-hidden="true" style="background:#0000e2"></span> 0,5 · <span class="dash-sw" aria-hidden="true" style="background:#505050"></span> 0,7 saturo. Un suolo già bagnato assorbe meno la pioggia in arrivo.',attr:'Umidità del suolo: NASA SMAP L4 via GIBS'},
       temperatura:{id:'VIIRS_NOAA21_Land_Surface_Temp_Day',tms:'GoogleMapsCompatible_Level7',zn:7,op:0.8,nome:'Temperatura della superficie di giorno (VIIRS NOAA-21, 1 km)',
-        legenda:'temperatura del suolo, non dell\'aria: <span class="dash-sw" style="background:#0033ff"></span> −38 °C · <span class="dash-sw" style="background:#00ffff"></span> −14 °C · <span class="dash-sw" style="background:#62ff1a"></span> 1 °C · <span class="dash-sw" style="background:#baff00"></span> 16 °C · <span class="dash-sw" style="background:#ffdc00"></span> 34 °C · <span class="dash-sw" style="background:#ff7f00"></span> 52 °C · <span class="dash-sw" style="background:#ff0100"></span> 77 °C. Sotto le nuvole non si misura (vuoto).',attr:'Temperatura del suolo: NASA VIIRS NOAA-21 via GIBS'},
-      vegetazione:{id:'MODIS_Terra_NDVI_8Day',tms:'GoogleMapsCompatible_Level9',zn:8,op:0.85,nome:'Vegetazione (NDVI MODIS Terra, media mobile di 8 giorni, 250 m)',
-        legenda:'<span class="dash-sw" style="background:#f1ecec"></span> 0 suolo nudo, roccia, città · <span class="dash-sw" style="background:#c8b5a6"></span> 0,15 · <span class="dash-sw" style="background:#96ba21"></span> 0,4 prati e coltivi · <span class="dash-sw" style="background:#217801"></span> 0,7 boschi · <span class="dash-sw" style="background:#001801"></span> 1. Un calo rispetto alla settimana prima vuol dire stress idrico, taglio, incendio o neve.',attr:'Vegetazione: NASA MODIS Terra NDVI via GIBS'},
+        legenda:'temperatura del suolo, non dell\'aria: <span class="dash-sw" aria-hidden="true" style="background:#0033ff"></span> −38 °C · <span class="dash-sw" aria-hidden="true" style="background:#00ffff"></span> −14 °C · <span class="dash-sw" aria-hidden="true" style="background:#62ff1a"></span> 1 °C · <span class="dash-sw" aria-hidden="true" style="background:#baff00"></span> 16 °C · <span class="dash-sw" aria-hidden="true" style="background:#ffdc00"></span> 34 °C · <span class="dash-sw" aria-hidden="true" style="background:#ff7f00"></span> 52 °C · <span class="dash-sw" aria-hidden="true" style="background:#ff0100"></span> 77 °C. Sotto le nuvole non si misura (vuoto).',attr:'Temperatura del suolo: NASA VIIRS NOAA-21 via GIBS'},
+      vegetazione:{id:'MODIS_Terra_NDVI_8Day',tms:'GoogleMapsCompatible_Level9',zn:9,op:0.85,nome:'Vegetazione (NDVI MODIS Terra, media mobile di 8 giorni, 250 m)',
+        legenda:'<span class="dash-sw" aria-hidden="true" style="background:#f1ecec"></span> 0 suolo nudo, roccia, città · <span class="dash-sw" aria-hidden="true" style="background:#c8b5a6"></span> 0,15 · <span class="dash-sw" aria-hidden="true" style="background:#96ba21"></span> 0,4 prati e coltivi · <span class="dash-sw" aria-hidden="true" style="background:#217801"></span> 0,7 boschi · <span class="dash-sw" aria-hidden="true" style="background:#001801"></span> 1. Un calo rispetto alla settimana prima vuol dire stress idrico, taglio, incendio o neve.',attr:'Vegetazione: NASA MODIS Terra NDVI via GIBS'},
       aerosol:{id:'MODIS_Combined_Value_Added_AOD',tms:'GoogleMapsCompatible_Level6',zn:6,op:0.8,nome:'Polveri e fumo (spessore ottico degli aerosol, MODIS Terra+Aqua, 10 km)',
-        legenda:'quanto gli aerosol attenuano la luce: <span class="dash-sw" style="background:#fffccd"></span> 0 aria limpida · <span class="dash-sw" style="background:#ff731e"></span> 0,4 foschia densa, polvere sahariana o fumo · <span class="dash-sw" style="background:#830016"></span> oltre 4 (incendi estremi). Solo di giorno e senza nuvole; il valore non è una concentrazione di PM10.',attr:'Aerosol: NASA MODIS AOD via GIBS'}
+        legenda:'quanto gli aerosol attenuano la luce: <span class="dash-sw" aria-hidden="true" style="background:#fffccd"></span> 0 aria limpida · <span class="dash-sw" aria-hidden="true" style="background:#ff731e"></span> 0,4 foschia densa, polvere sahariana o fumo · <span class="dash-sw" aria-hidden="true" style="background:#830016"></span> oltre 4 (incendi estremi). Solo di giorno e senza nuvole; il valore non è una concentrazione di PM10.',attr:'Aerosol: NASA MODIS AOD via GIBS'}
     };
     var temaLayer=null, temaCorrente=null;
+    // pane per gli strati calcolati (indici, cambiamenti) sopra l'immagine di base (overlayPane, z 400)
+    map.createPane('satExtra'); map.getPane('satExtra').style.zIndex=410;
     function temaTile(k){
       var t=TEMI[k];
       return L.tileLayer(GIBS+t.id+'/default/default/'+t.tms+'/{z}/{y}/{x}.png',{maxNativeZoom:t.zn,maxZoom:9,opacity:t.op,attribution:t.attr});
@@ -284,10 +286,10 @@
     /* ---- Sentinel-2: indici e cambiamenti (immagini scritte in CI, dall'11/10/2026) ---- */
     var S2_BOX=document.getElementById('sat-s2-box'), s2Vista='naturale', s2Extra=null;
     var LEG_S2={
-      ndvi:'Vegetazione (NDVI): <span class="dash-sw" style="background:#785028"></span> −0,2 acqua, roccia, asfalto · <span class="dash-sw" style="background:#e6d296"></span> 0,1 suolo nudo · <span class="dash-sw" style="background:#aac83c"></span> 0,3 prati, coltivi · <span class="dash-sw" style="background:#1e8214"></span> 0,6 boschi · <span class="dash-sw" style="background:#003200"></span> 0,9 · trasparente = nuvole, ombre o pixel incerti (con 120 m di margine).',
-      ndwi:'Acqua (NDWI): <span class="dash-sw" style="background:#78b4e6"></span> 0,1 acqua in superficie · <span class="dash-sw" style="background:#002896"></span> 0,5 acqua profonda o limpida · la terra resta quasi trasparente. Un campo che diventa blu dopo una pioggia è allagato.',
-      nbr:'Aree bruciate (NBR): <span class="dash-sw" style="background:#820014"></span> −0,5 bruciato di recente · <span class="dash-sw" style="background:#dc5014"></span> −0,2 · <span class="dash-sw" style="background:#f0dc78"></span> 0,1 suolo nudo, città · <span class="dash-sw" style="background:#5aaa3c"></span> 0,4 · <span class="dash-sw" style="background:#004614"></span> 0,8 bosco sano. Il valore conta rispetto alla scena precedente: un calo forte e improvviso è la firma di un incendio.',
-      cambi:'Cambiamenti fra le due scene più recenti: <span class="dash-sw" style="background:#c81414"></span> bruciato (NBR calato di almeno 0,27 e ora basso) · <span class="dash-sw" style="background:#ff8c00"></span> vegetazione persa (NDVI calato di almeno 0,2: taglio, raccolto, siccità) · <span class="dash-sw" style="background:#005adc"></span> acqua nuova (NDWI da negativo a positivo). Solo dove entrambe le scene sono senza nuvole.'
+      ndvi:'Vegetazione (NDVI): <span class="dash-sw" aria-hidden="true" style="background:#785028"></span> −0,2 acqua, roccia, asfalto · <span class="dash-sw" aria-hidden="true" style="background:#e6d296"></span> 0,1 suolo nudo · <span class="dash-sw" aria-hidden="true" style="background:#aac83c"></span> 0,3 prati, coltivi · <span class="dash-sw" aria-hidden="true" style="background:#1e8214"></span> 0,6 boschi · <span class="dash-sw" aria-hidden="true" style="background:#003200"></span> 0,9 · trasparente = nuvole, ombre o pixel incerti (con 120 m di margine).',
+      ndwi:'Acqua (NDWI): <span class="dash-sw" aria-hidden="true" style="background:#78b4e6"></span> 0,1 acqua in superficie · <span class="dash-sw" aria-hidden="true" style="background:#002896"></span> 0,5 acqua profonda o limpida · la terra resta quasi trasparente. Un campo che diventa blu dopo una pioggia è allagato.',
+      nbr:'Aree bruciate (NBR): <span class="dash-sw" aria-hidden="true" style="background:#820014"></span> −0,5 bruciato di recente · <span class="dash-sw" aria-hidden="true" style="background:#dc5014"></span> −0,2 · <span class="dash-sw" aria-hidden="true" style="background:#f0dc78"></span> 0,1 suolo nudo, città · <span class="dash-sw" aria-hidden="true" style="background:#5aaa3c"></span> 0,4 · <span class="dash-sw" aria-hidden="true" style="background:#004614"></span> 0,8 bosco sano. Il valore conta rispetto alla scena precedente: un calo forte e improvviso può indicare un incendio, ma anche un campo appena arato o raccolto.',
+      cambi:'Cambiamenti fra le due scene più recenti: <span class="dash-sw" aria-hidden="true" style="background:#c81414"></span> bruciato (NBR calato di almeno 0,27 e ora basso) · <span class="dash-sw" aria-hidden="true" style="background:#ff8c00"></span> vegetazione persa (NDVI calato di almeno 0,2: taglio, raccolto, siccità) · <span class="dash-sw" aria-hidden="true" style="background:#005adc"></span> acqua nuova (NDWI da negativo a positivo). Solo dove entrambe le scene sono senza nuvole.'
     };
     function s2Pannello(j){
       var box=document.getElementById('sat-s2-dati'), h='';
@@ -298,13 +300,13 @@
           var ix=sc.indici;
           h+='<tr><td>'+dataBreve(sc.giorno)+' · '+esc(sc.satellite||'')+'</td><td>'+sc.nuvole_pct+'%</td><td>'+ix.ndvi_medio.toLocaleString('it-IT')+'</td><td>'+(typeof ix.acqua_ha==='number'?ix.acqua_ha.toLocaleString('it-IT')+' ha ('+ix.acqua_pct.toLocaleString('it-IT')+'%)':'—')+'</td><td>'+ix.nbr_medio.toLocaleString('it-IT')+'</td></tr>';
         });
-        h+='</tbody></table><p class="dash-s3-nota">Medie sui soli pixel senza nuvole: due scene con nuvole diverse non si confrontano alla cifra. I laghi Albano e di Nemi insieme fanno circa 770 ettari: è il riferimento per la colonna «acqua».</p>';
+        h+='</tbody></table><p class="dash-s3-nota">Medie sui soli pixel senza nuvole: due scene con nuvole diverse non si confrontano alla cifra. Nella colonna «acqua» ci sono anzitutto i laghi Albano e di Nemi: conta il cambiamento da una scena all\'altra, non la cifra assoluta.</p>';
       } else {
         h+='<p class="dash-s3-nota">Gli indici di queste scene si stanno calcolando: compaiono al prossimo aggiornamento (ogni 3 ore).</p>';
       }
       var c=j.cambi;
       if(c&&c.immagine){
-        h+='<p class="dash-s3-nota"><strong>Cambiamenti dal '+dataIt(c.prima)+' al '+dataIt(c.dopo)+'</strong> (confrontabile il '+c.validi_pct.toLocaleString('it-IT')+'% della finestra): bruciato <strong>'+c.bruciato_ha.toLocaleString('it-IT')+' ha</strong>, vegetazione persa <strong>'+c.vegetazione_persa_ha.toLocaleString('it-IT')+' ha</strong>, acqua nuova <strong>'+c.acqua_nuova_ha.toLocaleString('it-IT')+' ha</strong>. Pochi ettari sparsi sono di norma campi raccolti o residui di nuvole; una macchia compatta merita un controllo sul posto. Un incendio o un allagamento si segnalano al <a href="tel:112">112</a>.</p>';
+        h+='<p class="dash-s3-nota"><strong>Cambiamenti dal '+dataIt(c.prima)+' al '+dataIt(c.dopo)+'</strong> (confrontabile il '+c.validi_pct.toLocaleString('it-IT')+'% della finestra): bruciato <strong>'+c.bruciato_ha.toLocaleString('it-IT')+' ha</strong>, vegetazione persa <strong>'+c.vegetazione_persa_ha.toLocaleString('it-IT')+' ha</strong>, acqua nuova <strong>'+c.acqua_nuova_ha.toLocaleString('it-IT')+' ha</strong>. Pochi ettari sparsi sono di norma campi raccolti o arati, o residui di nuvole; una macchia compatta merita un controllo sul posto. Il confronto si fa solo fra scene distanti al massimo 20 giorni. Un incendio o un allagamento si segnalano al <a href="tel:112">112</a>.</p>';
       } else if(j.scene.length<2){
         h+='<p class="dash-s3-nota">La mappa dei cambiamenti arriva con la seconda scena serena in archivio.</p>';
       }
@@ -317,7 +319,7 @@
       if(s2Vista==='cambi'&&j.cambi&&j.cambi.immagine){ src=j.cambi.immagine; alt='Mappa dei cambiamenti Sentinel-2 fra il '+dataIt(j.cambi.prima)+' e il '+dataIt(j.cambi.dopo); }
       else if(s2Vista!=='naturale'&&sc.indici&&sc.indici.immagini&&sc.indici.immagini[s2Vista]){ src=sc.indici.immagini[s2Vista]; alt='Indice '+s2Vista.toUpperCase()+' della scena Sentinel-2 del '+dataIt(sc.giorno); }
       if(src){
-        s2Extra=L.imageOverlay(RADAR_BASE+src.replace(/^\//,'')+'?v='+encodeURIComponent((j._snapshot&&j._snapshot.generato)||''),b,{opacity:1,alt:alt,pane:'cfrDopo',attribution:'Indici: elaborazione del Gruppo su dati Copernicus Sentinel'});
+        s2Extra=L.imageOverlay(RADAR_BASE+src.replace(/^\//,'')+'?v='+encodeURIComponent((j._snapshot&&j._snapshot.generato)||''),b,{opacity:1,alt:alt,pane:'satExtra',attribution:'Indici: elaborazione del Gruppo su dati Copernicus Sentinel'});
         s2Extra.addTo(map);
         legendaScrivi(LEG_S2[s2Vista]);
       } else {
@@ -352,8 +354,8 @@
       radarCambiLayer=null;
       if(!(radarCambi&&j.cambi&&j.cambi.immagine)){ legendaScrivi(''); return; }
       var b=[[j.riquadro.sud,j.riquadro.ovest],[j.riquadro.nord,j.riquadro.est]];
-      radarCambiLayer=L.imageOverlay(RADAR_BASE+j.cambi.immagine.replace(/^\//,'')+'?v='+encodeURIComponent(j.id||''),b,{opacity:1,pane:'cfrDopo',alt:'Mappa dei cambiamenti radar Sentinel-1 rispetto al passaggio precedente sulla stessa orbita',attribution:'Cambiamenti: elaborazione del Gruppo su dati Copernicus Sentinel'}).addTo(map);
-      legendaScrivi('Cambiamenti radar: <span class="dash-sw" style="background:#005adc"></span> segnale calato di almeno 3 dB ed è basso (candidato acqua nuova) · <span class="dash-sw" style="background:#ff8c00"></span> segnale salito di almeno 3 dB (superficie più ruvida o nuovi oggetti). Sul resto, nessun cambiamento sopra soglia.');
+      radarCambiLayer=L.imageOverlay(RADAR_BASE+j.cambi.immagine.replace(/^\//,'')+'?v='+encodeURIComponent(j.id||''),b,{opacity:1,pane:'satExtra',alt:'Mappa dei cambiamenti radar Sentinel-1 rispetto al passaggio precedente sulla stessa orbita',attribution:'Cambiamenti: elaborazione del Gruppo su dati Copernicus Sentinel'}).addTo(map);
+      legendaScrivi('Cambiamenti radar: <span class="dash-sw" aria-hidden="true" style="background:#005adc"></span> segnale calato di almeno 3 dB ed è basso (candidato acqua nuova) · <span class="dash-sw" aria-hidden="true" style="background:#ff8c00"></span> segnale salito di almeno 3 dB (superficie più ruvida o nuovi oggetti). Sul resto, nessun cambiamento sopra soglia.');
     }
     radarCambiBtn.addEventListener('click',function(){
       radarCambi=!radarCambi; radarCambiBtn.setAttribute('aria-pressed',radarCambi?'true':'false');
@@ -475,7 +477,11 @@
        sotto la cartina e i tre pulsanti sono l'alternativa senza trascinamento
        (WCAG 2.5.7) e da tastiera. */
     var cfr={attivo:false, prima:null, dopo:null, r:0.5};
-    map.createPane('cfrDopo'); var cfrPane=map.getPane('cfrDopo'); cfrPane.style.zIndex=250;
+    // Il «dopo» deve stare SOPRA l'overlayPane di Leaflet (z 400), dove vivono le
+    // imageOverlay di Sentinel-2 e del radar: a 250 (fino all'11/10/2026) il confronto
+    // Sentinel-2 mostrava sempre e solo la scena «prima», rilievo di revisione
+    // verificato leggendo i pixel. Per i tile (z 200) un valore alto va bene uguale.
+    map.createPane('cfrDopo'); var cfrPane=map.getPane('cfrDopo'); cfrPane.style.zIndex=450;
     var cfrForm=document.getElementById('sat-cfr-form'), cfrFonte=document.getElementById('sat-cfr-fonte');
     var cfrPrima=document.getElementById('sat-cfr-prima'), cfrDopo=document.getElementById('sat-cfr-dopo');
     var cfrCtl=document.getElementById('sat-cfr-ctl'), cfrMix=document.getElementById('sat-cfr-mix');
@@ -612,6 +618,16 @@
           h+='</ul><p class="dash-s3-nota">Un punto caldo non è per forza un incendio: può essere una fiaccola industriale o una bruciatura agricola. Per segnalare un incendio chiama il <a href="tel:112">112</a>.</p>';
         } else {
           h+='<p class="dash-s3-nota">Nessun fuoco attivo visto dal satellite nel Lazio e dintorni negli ultimi passaggi ('+scene+' scene lette).</p>';
+        }
+        var la=(j&&j.laghi&&j.laghi.misure)||[];
+        if(la.length){
+          h+='<table class="dash-s3-tab dash-s3-tab-mis"><caption class="visually-hidden">Qualità dell\'acqua dei laghi per passaggio</caption><thead><tr><th scope="col">Lago</th><th scope="col">Passaggio</th><th scope="col">Clorofilla</th><th scope="col">Solidi sospesi</th></tr></thead><tbody>';
+          la.forEach(function(r){
+            var d=new Date(r.quando);
+            h+='<tr><td>'+esc(r.lago)+'</td><td>'+(isNaN(d)?'—':fmtOra(d))+' · '+esc(r.satellite||'')+'</td><td>'+(typeof r.chl_mg_m3==='number'?r.chl_mg_m3.toLocaleString('it-IT')+' mg/m³':'sotto le nuvole')+'</td><td>'+(typeof r.tsm_g_m3==='number'?r.tsm_g_m3.toLocaleString('it-IT')+' g/m³':'—')+'</td></tr>';
+          });
+          h+='</tbody></table><p class="dash-s3-nota">Laghi Albano e di Nemi dallo strumento OLCI (300 m): la clorofilla cresce con le fioriture di alghe, i solidi sospesi con la torbidità. Sono stime di una rete neurale per acque interne, utili a vedere un cambiamento, non misure di laboratorio né valori di legge.</p>';
+          la.forEach(function(r){ var d=new Date(r.quando); if(!isNaN(d)&&(!ultima||d>ultima)) ultima=d; });
         }
         h+='<p class="dash-s3-nota">Ultima osservazione '+(ultima?fmtOra(ultima):'—')+(gen?', file aggiornato '+fmtOra(gen):'')+(vecchio?' · <strong>misure più vecchie di 12 ore</strong>':'')+'. '+esc((j&&j._snapshot&&j._snapshot.attribuzione)||'Contiene dati Copernicus Sentinel modificati')+'.</p>';
         box.innerHTML=h; sez.hidden=false;
