@@ -5,7 +5,7 @@
   "periodo": {
     "dal": "2026-04-04",
     "al": "2026-10-09",
-    "ultimo_numero": "205/2026"
+    "ultimo_numero": "206/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
   "generato_il": "2026-10-11",
@@ -16,7 +16,7 @@
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
-      "numero_interventi": 47
+      "numero_interventi": 48
     },
     {
       "tipologia": "Evento Locale",
