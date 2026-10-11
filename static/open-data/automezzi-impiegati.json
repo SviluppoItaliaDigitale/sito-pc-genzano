@@ -4,27 +4,27 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-10-06",
-    "ultimo_numero": "178/2026"
+    "al": "2026-10-09",
+    "ultimo_numero": "205/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-10-07",
+  "generato_il": "2026-10-11",
   "dati": [
     {
       "automezzo": "AB01 Atego (Mezzo speciale)",
-      "interventi": 69
+      "interventi": 70
     },
     {
       "automezzo": "M02 Defender 130 (Pickup)",
       "interventi": 61
     },
     {
-      "automezzo": "M05 Doblò (Autovettura)",
-      "interventi": 43
+      "automezzo": "M04 Evo (Pickup)",
+      "interventi": 52
     },
     {
-      "automezzo": "M04 Evo (Pickup)",
-      "interventi": 38
+      "automezzo": "M05 Doblò (Autovettura)",
+      "interventi": 44
     },
     {
       "automezzo": "AB02 Actros (Autobotte)",
@@ -40,7 +40,7 @@
     },
     {
       "automezzo": "AG01 Stralis (Autocarro)",
-      "interventi": 3
+      "interventi": 4
     }
   ]
 }
