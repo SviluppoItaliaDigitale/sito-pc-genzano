@@ -1,8 +1,10 @@
 # Misure Sentinel-3 da Copernicus (temperatura del suolo a Genzano, fuochi nel
-# Lazio), radar Sentinel-1 su Genzano (finestra di 30 km letta via S3 dal COG,
-# immagini nella release immagini-meteo) e scene Sentinel-2 a 10 m (16 km su
-# Genzano, archivio pubblico AWS Open Data, nessuna chiave) per la scheda
-# satellite del cruscotto. I numeri stanno nell'archivio
+# Lazio, qualita' dell'acqua dei laghi Albano e di Nemi), radar Sentinel-1 su
+# Genzano (finestra di 30 km letta via S3 dal COG, immagini e misure in decibel
+# nella release immagini-meteo, mappa dei cambiamenti a parita' di orbita) e
+# scene Sentinel-2 a 10 m (16 km su Genzano, archivio pubblico AWS Open Data,
+# nessuna chiave; indici di vegetazione, acqua e aree bruciate e mappa dei
+# cambiamenti fra le due scene piu' recenti) per la scheda satellite del cruscotto. I numeri stanno nell'archivio
 # del Copernicus Data Space Ecosystem, che si legge con chiavi S3 di sola
 # lettura (segreti CDSE_S3_ACCESS_KEY / CDSE_S3_SECRET_KEY): senza chiavi lo
 # script non scrive nulla. Ogni 3 ore: i prodotti NRT arrivano 2-3 ore dopo il
@@ -57,10 +59,19 @@ jobs:
           CDSE_S3_SECRET_KEY: ${{ secrets.CDSE_S3_SECRET_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # la release si scarica prima: le misure in decibel dei passaggi precedenti
+          # (storico nel JSON) servono al confronto a parita' di orbita
           python3 scripts/immagini-meteo-release.py scarica || true
-          python3 scripts/genera-copernicus-sentinel1.py
-          if [ -f static/images/sentinel/sentinel1-genzano.webp ]; then
-            python3 scripts/immagini-meteo-release.py carica sentinel1 || echo "Caricamento nella release non riuscito: i metadati restano quelli precedenti."
+          J=static/open-data/copernicus-sentinel1.json
+          PRIMA=$(sha256sum "$J" 2>/dev/null | cut -c1-16 || true)
+          python3 scripts/genera-copernicus-sentinel1.py || echo "Sentinel-1: script fallito, file lasciati com'erano."
+          DOPO=$(sha256sum "$J" 2>/dev/null | cut -c1-16 || true)
+          # si carica solo se e' cambiato qualcosa (fino all'11/10/2026 ricaricava le
+          # stesse immagini ogni 3 ore); se il caricamento fallisce il JSON torna
+          # indietro, perche' elenca misure che devono stare nella release
+          if [ -n "$DOPO" ] && [ "$PRIMA" != "$DOPO" ] && [ -f static/images/sentinel/sentinel1-genzano.webp ]; then
+            python3 scripts/immagini-meteo-release.py carica sentinel1 \
+              || { echo "Caricamento nella release non riuscito: i metadati restano quelli precedenti."; git checkout -- "$J" 2>/dev/null || true; }
           fi
 
       - name: "🗺️ Sentinel-2 a 10 m su Genzano (archivio pubblico, senza chiavi)"
@@ -71,7 +82,9 @@ jobs:
           # fail-safe: un errore qui non deve far perdere il commit dei dati S1 e S3
           J=static/open-data/copernicus-sentinel2.json
           PRIMA=$(sha256sum "$J" 2>/dev/null | cut -c1-16 || true)
-          python3 scripts/genera-copernicus-sentinel2.py || echo "Sentinel-2: script fallito, file lasciati com'erano."
+          # tetto di 7 minuti: un blocco di rete in GDAL non deve far scadere il job (15 min)
+          # e perdere il commit di S1 e S3
+          GDAL_HTTP_TIMEOUT=60 timeout 420 python3 scripts/genera-copernicus-sentinel2.py || echo "Sentinel-2: script fallito o fuori tempo, file lasciati com'erano."
           DOPO=$(sha256sum "$J" 2>/dev/null | cut -c1-16 || true)
           # si carica nella release solo se l'elenco e' cambiato (niente ricaricamenti
           # a vuoto ogni 3 ore); il JSON elenca solo scene che stanno nella release:

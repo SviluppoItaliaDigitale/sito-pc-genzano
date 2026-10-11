@@ -45,22 +45,38 @@ FILE = {
     # radar Sentinel-1 su Genzano (scripts/genera-copernicus-sentinel1.py, dal 10/10/2026)
     "sentinel1-genzano.webp": "images/sentinel/sentinel1-genzano.webp",
     "sentinel1-genzano-prima.webp": "images/sentinel/sentinel1-genzano-prima.webp",
+    # mappa dei cambiamenti radar (stessa orbita) e dei cambiamenti Sentinel-2, dall'11/10/2026
+    "sentinel1-genzano-cambi.webp": "images/sentinel/sentinel1-genzano-cambi.webp",
+    "sentinel2-genzano-cambi.webp": "images/sentinel/sentinel2-genzano-cambi.webp",
 }
 S2_JSON = REPO_ROOT / "static" / "open-data" / "copernicus-sentinel2.json"
-S2_NOME = re.compile(r"sentinel2-genzano-\d{8}\.webp")
+S1_JSON = REPO_ROOT / "static" / "open-data" / "copernicus-sentinel1.json"
+# nomi variabili: scene Sentinel-2 (colori naturali e indici) e misure radar
+# Sentinel-1 in decibel (una per passaggio, per il confronto a parita' di orbita)
+S2_NOME = re.compile(r"sentinel2-genzano-\d{8}(-ndvi|-ndwi|-nbr)?\.webp")
+S1_NOME = re.compile(r"sentinel1-genzano-db-\d{8}T\d{4}\.png")
+VARIABILI = {"sentinel2": S2_NOME, "sentinel1": S1_NOME}
+
+
+def _json(p: Path) -> dict:
+    try:
+        return json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
+    except ValueError:
+        return {}
 
 
 def file_attesi() -> dict[str, str]:
-    """FILE più le scene Sentinel-2 elencate dal JSON (nomi variabili, dal 10/10/2026)."""
+    """FILE più i nomi variabili elencati dai JSON (scene Sentinel-2, misure radar)."""
     attesi = dict(FILE)
-    if S2_JSON.is_file():
-        try:
-            for s in json.loads(S2_JSON.read_text(encoding="utf-8")).get("scene", []):
-                nome = Path(str(s.get("immagine", ""))).name
-                if S2_NOME.fullmatch(nome):
-                    attesi[nome] = "images/sentinel/" + nome
-        except ValueError:
-            pass
+    for s in _json(S2_JSON).get("scene", []):
+        for percorso in [s.get("immagine", "")] + list((s.get("indici") or {}).get("immagini", {}).values()):
+            nome = Path(str(percorso)).name
+            if S2_NOME.fullmatch(nome):
+                attesi[nome] = "images/sentinel/" + nome
+    for r in _json(S1_JSON).get("storico", []):
+        nome = Path(str(r.get("db", ""))).name
+        if S1_NOME.fullmatch(nome):
+            attesi[nome] = "images/sentinel/" + nome
     return attesi
 
 
@@ -100,7 +116,8 @@ def dal_sito(percorso: str, dest: Path) -> bool | None:
     except Exception as e:  # noqa: BLE001
         print(f"  [ko ] {percorso} anche dal sito: {e}")
         return False
-    if len(dati) < 1000:
+    # una mappa dei cambiamenti quasi tutta trasparente pesa poche centinaia di byte
+    if len(dati) < (120 if percorso.endswith("-cambi.webp") else 1000):
         print(f"  [ko ] {percorso} dal sito: risposta troppo piccola ({len(dati)} byte)")
         return False
     dest.write_bytes(dati)
@@ -114,6 +131,8 @@ def scarica(rigoroso: bool = False) -> int:
             print(f"Release {TAG} non disponibile ({r.stderr.strip()}): ripiego sul sito.")
         mancanti = []
         for nome, percorso in file_attesi().items():
+            if rigoroso and S1_NOME.fullmatch(nome):
+                continue  # le misure radar in decibel servono solo al generatore, non al sito
             dest = REPO_ROOT / "static" / percorso
             dest.parent.mkdir(parents=True, exist_ok=True)
             sorgente = Path(tmp) / nome
@@ -169,12 +188,12 @@ def carica(gruppo: str) -> int:
             print(f"Caricamento non riuscito: {r.stderr.strip()}")
             return 1
     print(f"Caricate {len(da_caricare)} immagini nella release {TAG}.")
-    if gruppo == "sentinel2":
-        # le scene uscite dall'archivio (le piu' vecchie di MAX_SCENE) si tolgono
-        # dalla release, altrimenti si accumulano per sempre
+    if gruppo in VARIABILI:
+        # i file usciti dall'archivio (scene piu' vecchie di MAX_SCENE, misure radar
+        # oltre la finestra) si tolgono dalla release, altrimenti si accumulano per sempre
         tenute = set(file_attesi())
         for nome, aid in asset_release().items():
-            if S2_NOME.fullmatch(nome) and nome not in tenute:
+            if VARIABILI[gruppo].fullmatch(nome) and nome not in tenute:
                 r = gh("api", "-X", "DELETE", f"repos/{repo_slug()}/releases/assets/{aid}")
                 print(f"  {'[ok ]' if r.returncode == 0 else '[ko ]'} tolta dalla release: {nome}")
     return 0
