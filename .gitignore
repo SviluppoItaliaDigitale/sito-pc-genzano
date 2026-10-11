@@ -66,5 +66,6 @@ motion/voce/**/fonemi.txt
 static/images/ecmwf/*.webp
 # radar Sentinel-1: nella release immagini-meteo, non in git (scripts/genera-copernicus-sentinel1.py)
 static/images/sentinel/*.webp
+static/images/sentinel/*.png
 static/images/meteo-sinottica-italia.webp
 static/images/meteo-sinottica-italia.png
