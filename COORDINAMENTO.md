@@ -1,50 +1,103 @@
-# Bacheca di coordinamento fra le sessioni che lavorano sul sito
+# Bacheca di coordinamento — sito della Protezione Civile di Genzano di Roma
 
-File interno, non pubblicato (Hugo non legge la cartella principale del repository). Lo usano Claude e ChatGPT per lasciarsi avvisi quando lavorano sul sito nello stesso periodo. Regola dell'utente dell'8 ottobre 2026.
+File interno, non pubblicato (Hugo non legge la cartella principale del repository). Lo usano Claude e ChatGPT per passarsi lavoro, istruzioni e avvisi. Nata l'8 ottobre 2026; dall'11 ottobre 2026 segue il protocollo comune a tutti i repository di Alessandro, qui sotto.
 
-## Come si usa
+<!-- PROTOCOLLO-COMUNE:INIZIO — testo identico in tutti i repository di Alessandro. Copia di riferimento: assistente-personale/COORDINAMENTO.md. Se lo cambi, cambialo in tutti e cinque i repository nello stesso lavoro. -->
 
-1. **Prima di cominciare** un lavoro leggi questa bacheca **e l'elenco delle pull request aperte**: le PR dicono quali file stanno cambiando. Se un file che vuoi toccare è già in una PR aperta, non cambiarlo: aspetta che quella PR sia unita, oppure scrivi qui che cosa ti serve.
-2. **Lascia un avviso** quando il tuo lavoro può riguardare l'altra sessione: file o cartelle che stai rifacendo, uno script o uno shortcode che hai cambiato, un file generato da rigenerare, un problema trovato nel lavoro dell'altra.
-3. **Formato**: una voce in cima alla sezione «Avvisi», con data e ora italiana, chi scrive e il testo. Frasi brevi, file nominati per percorso.
-4. **Quando un avviso non serve più**, chi lo ha scritto lo sposta in «Archiviati» con una riga su com'è finita.
-5. La bacheca cambia, come ogni altro file, **solo con una pull request** (vedi il riquadro in cima ad `AGENTS.md`). Per un avviso urgente scrivilo anche nella descrizione della tua PR, che l'altra sessione vede subito.
+## Protocollo comune Claude ⇄ ChatGPT (uguale in tutti i repository)
 
-Qui non vanno mai credenziali, dati personali o testi destinati al sito.
+Valido dall'11/10/2026 in tutti i repository di Alessandro: `sito-pc-genzano`, `social-pc-genzano`, `sito-misericordia-ariccia`, `cooprimavera`, `assistente-personale`. Il file si chiama sempre `COORDINAMENTO.md` e sta sempre nella cartella principale del repository. Questa prima parte è identica ovunque; la seconda parte, «Questo repository», cambia da repository a repository.
 
-## Chi fa che cosa
+### A che cosa serve
+
+Claude (Claude Code) e ChatGPT (chat con connettore GitHub, Codex) lavorano sugli stessi repository. La bacheca è il posto dove si passano lavoro, istruzioni e avvisi, così Alessandro non deve copiare testi da una chat all'altra e il lavoro continua anche quando una delle due non è disponibile (per esempio quando Claude ha finito i crediti).
+
+### Chi dà le istruzioni
+
+- **Alessandro**: in chat o scrivendo una richiesta qui. Le sue istruzioni prevalgono su tutto il resto.
+- **Claude o ChatGPT**: con una voce nella sezione «Richieste» di questo file, indirizzata all'altra.
+- Le regole del repository (`CLAUDE.md`, `.claude/rules/`, `AGENTS.md`) valgono per entrambe: chi lavora le segue anche quando l'altra non c'è.
+
+### Che cosa fa ChatGPT quando Alessandro scrive «guarda la bacheca» (o «continua il lavoro»)
+
+ChatGPT lavora **in autonomia fino alla pubblicazione**, senza aspettare Claude:
+
+1. **Leggi la versione di `main`** di questo file e l'elenco delle pull request aperte. Se un file che devi toccare è già in una PR aperta di un'altra sessione, non toccarlo: scrivilo in «Domande» e fai il resto.
+2. **Prendi le richieste aperte** indirizzate a ChatGPT (o a «chi è disponibile»), in ordine di data. Se non ce ne sono, rispondi in una riga: «Nessuna richiesta aperta per me in bacheca».
+3. **Apri un ramo tuo** da `main` aggiornato: `chatgpt/<argomento>-AAAAMMGG` (o `codex/...`). Non riprendere il ramo di un'altra sessione.
+4. **Fai il lavoro** seguendo le istruzioni della richiesta e le regole del repository. Leggi solo i file che servono a quel lavoro.
+5. **Fai i controlli del repository** elencati in «Questo repository» (build, script di controllo). Se Claude non c'è, la revisione che di solito fa Claude la fai tu: apri i file in `.claude/agents/` pertinenti e usali come lista di controllo, rendi e guarda le immagini, rileggi il testo.
+6. **Nella stessa PR aggiorna questa bacheca**: accanto alla richiesta scrivi «fatta da ChatGPT, PR #N» e una riga su che cosa hai fatto; se una parte non si poteva fare, scrivi il motivo.
+7. **Apri la PR verso `main`, aspetta i controlli automatici e, se sono verdi, uniscila tu** (squash) e verifica che la pubblicazione parta e finisca (scheda Actions). Questo vale salvo le eccezioni sotto e salvo quelle scritte in «Questo repository». Se il tuo strumento non può unire una PR, scrivi ad Alessandro una riga sola: «Unisci la PR #N: <link>».
+8. **Un merge per volta**: se hai più lavori pronti, mettili in una sola PR, oppure aspetta che la pubblicazione precedente sia finita prima di unire la successiva.
+9. **Rispondi ad Alessandro in breve**: che cosa hai fatto, numero della PR, link della pagina pubblicata, che cosa resta.
+
+### Quando ChatGPT non unisce e si ferma
+
+- I controlli automatici sono rossi e non sai correggerli: lascia la PR aperta e scrivi il problema in «Domande».
+- Il lavoro richiede credenziali, spese, invii a persone o enti (email, messaggi), cancellazioni definitive o post sui social fuori dalle automazioni già previste.
+- L'istruzione è ambigua su un fatto (dato, data, nome, norma): non indovinare, scrivi la domanda e fai il resto.
+- Lo dice una regola di «Questo repository».
+
+### Regole che valgono sempre
+
+- **Mai commit diretti su `main`**: sempre ramo + PR, salvo che Alessandro lo chieda espressamente per quella modifica.
+- **Mai dati inventati**: nomi, numeri, date, norme, recapiti si scrivono solo se verificati su una fonte. Se mancano, resta un campo «[da compilare]» o una domanda in bacheca.
+- **Mai segreti nel repository** (password, token, chiavi).
+- **Niente riferimenti all'intelligenza artificiale** nei contenuti pubblicati; nei repository della Protezione Civile (`sito-pc-genzano`, `social-pc-genzano`) nemmeno nei messaggi di commit, nei titoli e nei testi delle PR.
+- **Italiano corretto e chiaro** in file, commit e PR.
+- **Non cancellare quello che ha scritto l'altra**: si risponde sotto o si archivia con una riga di esito.
+
+### Formato delle voci
+
+- **Richiesta**: `- **AAAA-MM-GG — da <chi> a <chi> — <titolo>**` e sotto: che cosa serve, quali file, quali controlli, dove si pubblica. Chi la prende scrive accanto «presa da …, PR #N»; a lavoro pubblicato la sposta in «Archiviati» con l'esito.
+- **Avviso**: `- **GG/MM/AAAA — <chi>.** testo`, in cima alla sezione «Avvisi». Serve quando un lavoro riguarda anche l'altra sessione (file rifatti, script cambiati, file generati da rigenerare).
+- **Domanda**: in «Domande». Chi la legge risponde sotto, alla prima occasione.
+- **Consegna di fine sessione**: chi chiude una sessione con lavoro a metà scrive in «Lavori in corso» che cosa resta, su quale ramo e in quale PR, così l'altra può riprenderlo.
+
+<!-- PROTOCOLLO-COMUNE:FINE -->
+
+## Questo repository: sito-pc-genzano
+
+Il merge su `main` pubblica il sito su Aruba e GitHub Pages in pochi minuti (`deploy.yml`). Le regole complete sono in `AGENTS.md` (punto d'ingresso per ChatGPT) e in `CLAUDE.md`.
+
+### Controlli prima di unire una PR
+
+- `hugo --minify` senza errori, e i controlli bloccanti della PR verdi (`validate-pr.yml`, `pa11y-ci.yml`).
+- Articoli in `content/comunicazioni/`: il controllo di forma e dei fatti di `AGENTS.md` § 3.4 e § 3.5 (se Claude non c'è, usa come lista di controllo `.claude/agents/pc-article-reviewer.md`, `pc-fact-checker.md`, `pc-calendario-editoriale.md` per gli articoli programmati); cover generata con `python3 scripts/genera-cover.py <file>`; `python3 scripts/check-refusi.py <file>`; `python3 scripts/check-data-uscita.py`.
+- Schede, kit e giochi: `.claude/agents/pc-didattica-reviewer.md` come lista di controllo; `python3 scripts/check-parita-schede.py`; i pacchetti si rigenerano con gli script, mai a mano.
+- Illustrazioni: `python3 scripts/check-illustrazioni-udl.py` e il disegno guardato a 1200 px (a 720 px per i `-mobile.svg`).
+- Identità dei commit: `bash scripts/imposta-identita-git.sh` (nome Alessandro Cuollo). Nessuna riga che citi lo strumento nei commit e nelle PR.
+
+### Quando qui ChatGPT non unisce
+
+- Articoli che raccontano interventi o attività del Gruppo presi dalla stampa o da fonti non nostre: PR pronta ma **non unita**, perché i fatti vanno confrontati con il registro interventi (rule 10, punto 5-bis).
+- Allerte ed emergenze vere (`data/allerta.json`, `data/emergenza.json`, articoli `Allerta`/`Emergenza`): solo su istruzione esplicita di Alessandro.
+- Pagine legali (privacy, accessibilità, note legali): PR pronta, unisce Alessandro.
+
+### Chi fa che cosa
 
 Indicazioni dell'utente dell'8 ottobre 2026.
 
-- **Immagini e illustrazioni (di solito ChatGPT).** Si preparano su un ramo proprio e arrivano con una PR; nella bacheca un avviso «illustrazioni X pronte nella PR #N, da controllare». Prima dell'unione l'altra sessione le guarda renderizzate (vedi l'avviso sulle illustrazioni qui sotto). Se l'altra sessione non è disponibile, chi le ha fatte le rende e le guarda da sé, a 1200 px e a 720 px.
-- **Audit del sito (di solito ChatGPT).** Chi fa l'audit **non corregge**: scrive i rilievi in `riferimenti-interni/audit-esterni/AAAA-MM-GG-<argomento>.md` (formato nel README della cartella) e lascia un avviso qui. L'altra sessione verifica ogni rilievo, corregge quelli fondati con una PR e scrive l'esito accanto a ciascuno (corretto nella PR #N, non riprodotto, già a posto). Così l'utente non deve più copiare l'audit da una chat all'altra.
+- **Immagini e illustrazioni (di solito ChatGPT).** Si preparano su un ramo proprio e arrivano con una PR; nella bacheca un avviso «illustrazioni X pronte nella PR #N, da controllare». Chi le ha fatte le rende e le guarda a 1200 px e a 720 px, esegue i controlli e, se sono verdi, unisce la PR (protocollo comune, punto 7). Claude, quando c'è, le ripassa dopo.
+- **Audit del sito (di solito ChatGPT).** Chi fa l'audit **non corregge**: scrive i rilievi in `riferimenti-interni/audit-esterni/AAAA-MM-GG-<argomento>.md` (formato nel README della cartella) e lascia un avviso qui. L'altra sessione verifica ogni rilievo, corregge quelli fondati con una PR e scrive l'esito accanto a ciascuno (corretto nella PR #N, non riprodotto, già a posto). Così l'utente non deve più copiare l'audit da una chat all'altra. Se Claude non è disponibile e Alessandro chiede a ChatGPT di correggere, ChatGPT verifica e corregge i rilievi fondati con una PR, seguendo il protocollo comune.
 - **Pubblicazioni urgenti quando l'altra sessione non c'è.** Si pubblica con una PR e i controlli verdi; direttamente su `main` solo se l'utente lo chiede espressamente. In entrambi i casi un avviso qui: «pubblicato in urgenza: file …, motivo …, PR o commit …». Alla prima sessione utile l'altra lo ripassa e archivia l'avviso con l'esito.
 
-## Istruzioni fisse per ChatGPT — che cosa fare quando l'utente scrive «guarda la bacheca»
+## Domande
 
-Scritte da Claude il 10/10/2026 su richiesta dell'utente: le istruzioni fra le due sessioni passano da qui, l'utente non deve più copiarle a mano. Valgono a ogni apertura della bacheca, in quest'ordine.
-
-1. **Leggi la versione di `main`**, non una copia vecchia: `COORDINAMENTO.md` nella cartella principale del repository. Leggi anche l'elenco delle PR aperte.
-2. **Cerca nella sezione «Richieste» le voci «da Claude a ChatGPT»** che non hanno ancora accanto «presa da …». Se non ce ne sono, rispondi all'utente in una riga: «Nessuna richiesta aperta per me in bacheca».
-3. **Per ogni richiesta** apri un ramo tuo `chatgpt/<argomento>-AAAAMMGG` partendo da `main` aggiornato e lavora **solo sui file indicati** nella richiesta. Non toccare file che sono in una PR aperta.
-4. **Prima della PR** esegui i controlli scritti nella richiesta (per le illustrazioni: `python3 scripts/check-illustrazioni-udl.py` e il rendering guardato a 1200 px, e a 720 px per i `-mobile.svg`).
-5. **Nella stessa PR** aggiorna questa bacheca: accanto alla richiesta scrivi «presa da ChatGPT, PR #N» e una riga su che cosa hai fatto. Se qualcosa della richiesta non si poteva fare, scrivilo lì, con il motivo.
-6. **Apri la PR verso `main` e non unirla.** La controlla Claude, che la unisce e sposta la richiesta in «Archiviati». Così si fa un solo merge per volta.
-6-bis. **Le correzioni che Claude chiede sulla tua PR** stanno in un commento nella PR stessa, con le modifiche esatte. Applicale sullo stesso ramo, ripeti i controlli e fai push: la PR si aggiorna da sola. Ogni volta che apri la bacheca guarda anche i commenti nuovi sulle tue PR aperte.
-7. **Se hai un dubbio o una domanda per Claude**, non bloccarti e non indovinare: scrivila nella sezione «Domande per Claude» qui sotto, nella stessa PR, e fai il resto del lavoro.
-8. **All'utente rispondi in breve**: quali richieste hai preso, il numero della PR, che cosa resta da fare.
-
-Le regole di contenuto restano quelle di `AGENTS.md`: italiano, nessun riferimento allo strumento usato nei file, gesti e comportamenti come nelle indicazioni del DPC.
-
-## Domande per Claude
-
-Domande di ChatGPT a Claude. Claude risponde accanto, alla prima apertura della bacheca, e sposta la voce in «Archiviati» quando la risposta è applicata.
+Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla prima apertura della bacheca, e sposta la voce in «Archiviati» quando la risposta è applicata.
 
 - Nessuna domanda aperta.
 
+## Lavori in corso
+
+Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
+
+- Nessun lavoro a metà al 11/10/2026.
+
 ## Richieste
 
-Lavori che una sessione chiede all'altra. L'utente avvisa la sessione destinataria («guarda le richieste in bacheca»): nessuna delle due legge la bacheca da sola finché non viene aperta. Chi prende in carico una richiesta scrive accanto «presa da …, PR #N»; a lavoro unito la sposta in «Archiviati».
+Lavori che una sessione (o Alessandro) chiede all'altra. Alessandro avvisa la sessione destinataria («guarda la bacheca»): nessuna delle due legge la bacheca da sola finché non viene aperta. Formato nel protocollo comune.
 
 Formato per una richiesta di immagine:
 
