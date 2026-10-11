@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-11T07:17:00+00:00",
+  "generato": "2026-10-11T14:07:46+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-11T07:11:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ultime piogge al Centro-Sud, poi torna il sole con la classica 'ottobrata': le previsioni meteo per i prossimi giorni",
-   "url": "https://www.adnkronos.com/cronaca/meteo-previsioni-prossimi-giorni-ultime-notizie_vyELY9RMiyWD9OsDGzexV"
-  },
-  {
-   "data": "2026-10-11T07:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Napoli, donna incinta viene dimessa: torna in ospedale e muore insieme alla bimba",
-   "url": "https://www.adnkronos.com/cronaca/napoli-donna-incinta-e-bimba-morte_1h7xPWD8d0rpXOPX8NnKLs"
-  },
-  {
-   "data": "2026-10-11T06:57:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Casini: \"Lascio il Parlamento dopo 44 anni, non mi ricandido\"",
-   "url": "https://www.adnkronos.com/politica/casini-lascio-il-parlamento-dopo-44-anni-non-mi-ricandido_43XcrTiyYajPvnwV1wFmCQ"
-  },
-  {
-   "data": "2026-10-11T06:56:35+00:00",
+   "data": "2026-10-11T14:02:30+00:00",
    "fonte": "ANSA",
-   "titolo": "Missile Houthi sull'aeroporto di Riad, almeno 12 morti e oltre 300 feriti",
+   "titolo": "F1: Verstappen vince a Singapore davanti a Leclerc, Kimi terzo",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/11/f1-verstappen-vince-a-singapore-davanti-a-leclerc-kimi-terzo_edacdce0-88fa-4309-ba9e-4c1b533c7334.html"
+  },
+  {
+   "data": "2026-10-11T14:01:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa: 'Ho un nodulo al polmone, ho deciso di operarmi'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/10/11/il-papa-ho-un-nodulo-al-polmone-ho-deciso-di-operarmi_9bf07f99-d56c-4e01-8712-23974b08fc29.html"
+  },
+  {
+   "data": "2026-10-11T14:01:08+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Presunta falsa paternità per due figli, marescialla dei Carabinieri indagata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/presunta-falsa-paternita-per-due-figli-marescialla-dei-carabinieri-indagata_f837c902-c57f-4d30-a7cf-cb2af751180e.html"
+  },
+  {
+   "data": "2026-10-11T13:58:40+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Soprusi su un 15enne, la procura contro l'assoluzione",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/soprusi-su-un-15enne-la-procura-contro-lassoluzione_2443bf16-0538-48aa-a015-7f9f36204a8c.html"
+  },
+  {
+   "data": "2026-10-11T13:58:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Roggero, ex gioielliere: \"Entrare in carcere a 72 anni è stato devastante\"",
+   "url": "https://www.adnkronos.com/cronaca/caso-roggero-lettera-ex-gioielliere_7uKmw2PhzuDTg5dRdrt9mU"
+  },
+  {
+   "data": "2026-10-11T13:55:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Zelensky replica a Trump: 'Spetta agli ucraini scegliere il proprio leader'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/zelensky-replica-a-trump-spetta-agli-ucraini-scegliere-il-proprio-leader_2822374d-dfd0-4b0b-9768-eb9f9b6f6578.html"
+  },
+  {
+   "data": "2026-10-11T13:53:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Picchiato in piazza e deriso sui social, 33enne aggredito nel Pavese",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/picchiato-in-piazza-e-deriso-sui-social-33enne-aggredito-nel-pavese_658fa9f6-620f-4d0d-be2b-63b8866cbcc3.html"
+  },
+  {
+   "data": "2026-10-11T13:52:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa e il nodulo polmonare, ecco come si diagnostica e quando si interviene",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/10/11/il-papa-e-il-nodulo-polmonare-ecco-come-si-diagnostica-e-quando-si-interviene_1f66d3c3-a3cd-45c1-8f4e-6473d191f995.html"
+  },
+  {
+   "data": "2026-10-11T13:52:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lazio-Monza, espulsione per Lucchesi e proteste biancorosse: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/lazio-monza-espulsione-lucchesi-proteste-cosa-e-successo_5SnZZ1U0rWsz1ysHyc70PS"
+  },
+  {
+   "data": "2026-10-11T13:37:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Garlasco, al via una settimana cruciale per Andrea Sempio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/garlasco-al-via-una-settimana-cruciale-per-andrea-sempio_663fcc18-46db-48d9-9e78-6035e31c2a0c.html"
+  },
+  {
+   "data": "2026-10-11T13:31:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "Un'auto travolge un gruppo di ciclisti, 7 in ospedale. Due in prognosi riservata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/unauto-travolge-un-gruppo-di-ciclisti-7-in-ospedale.-due-in-prognosi-riservata_cbe6c769-1495-4c81-9e25-f1ac9d04052b.html"
+  },
+  {
+   "data": "2026-10-11T13:30:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: in campo Lecce-Bologna 0-1 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/09/serie-a-domenica-alle-15-in-campo-lecce-bologna-diretta_ffafc366-d863-40fc-90a6-59f9234222e1.html"
+  },
+  {
+   "data": "2026-10-11T13:28:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: in campo Lazio-Monza 2-0 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/11/serie-a-alle-15-in-campo-lazio-monza-0-0-diretta_ab7d0c1b-f7f6-4096-ac21-1b7d9a3aedfc.html"
+  },
+  {
+   "data": "2026-10-11T13:24:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il caso Reggio Children, la comunità ebraica di Milano: 'Metodi da Terzo Reich, l'amministrazione si dimetta'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/11/il-caso-reggio-children-la-comunita-ebraica-di-milano-metodi-da-terzo-reich-lamministrazione_efe33a06-d7dd-48e1-a4a5-702d5d3284ec.html"
+  },
+  {
+   "data": "2026-10-11T13:24:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli Houthi rinnovano le loro minacce contro aeroporti e spazio aereo sauditi. Ieri l'attacco allo scalo di Riad, almeno 12 morti e oltre 300 feriti",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/missile-houthi-sullaeroporto-di-riad-almeno-12-morti-e-scalo-chiuso_da022b8b-30f6-4fe4-9439-2ca256cef92f.html"
   },
   {
-   "data": "2026-10-11T06:56:35+00:00",
+   "data": "2026-10-11T13:19:34+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Intercettato drone diretto in carcere, carico recuperato ma velivolo fugge",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/intercettato-drone-diretto-in-carcere-carico-recuperato-ma-velivolo-fugge_aad103ac-5ea1-47d4-b7a1-0d6e31cd1725.html"
+   "titolo": "Auto travolge un gruppo di ciclisti, 7 feriti, per 2 prognosi riservata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/auto-travolge-un-gruppo-di-ciclisti-7-feriti-per-2-prognosi-riservata_472db383-9cdb-4686-999c-a2b90be0402f.html"
   },
   {
-   "data": "2026-10-11T06:46:43+00:00",
+   "data": "2026-10-11T13:19:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trapianto di fegato nell''ultimo giorno di vita', ragazza salvata all'ospedale Molinette di Torino",
+   "url": "https://www.adnkronos.com/cronaca/trapianto-fegato-ospedale-molinette-torino_6yu5KLh8sSxE5obX3Trxzy"
+  },
+  {
+   "data": "2026-10-11T13:07:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sinner, ritorno a casa e visita alla squadra del paese (con foto di gruppo)",
+   "url": "https://www.adnkronos.com/sport/sinner-torna-casa-sesto-pusteria-visita-squadra_2eCoDpEYPTBqMXCiTjw5E4"
+  },
+  {
+   "data": "2026-10-11T12:57:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nepal, nuove inondazioni: ponti e case spazzati via, ci sono dispersi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/nepal-nuove-inondazioni-dispersi-ponti-case-spazzati-via_6wdYZN4bVY9NzNY1d4GjA4"
+  },
+  {
+   "data": "2026-10-11T12:51:50+00:00",
    "fonte": "ANSA",
-   "titolo": "Unicef, nel mondo una ragazza su cinque data in sposa prima dei 18 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/unicef-nel-mondo-una-ragazza-su-cinque-data-in-sposa-prima-dei_4958d1cb-2f65-4b6e-8ff5-838860a84b89.html"
+   "titolo": "Una giovane greca salvata con un trapianto di fegato in tempi record a Torino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/giovane-salvata-con-trapianto-di-fegato-allospedale-molinette-di-torino_e86f0db0-891f-4f10-9a2f-c1da67f5cbaa.html"
   },
   {
-   "data": "2026-10-11T06:44:09+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Torna 'Che Tempo Che Fa', Sophie Marceau e Marco Mengoni tra gli ospiti della prima puntata",
-   "url": "https://www.adnkronos.com/spettacoli/torna-che-tempo-che-fa-sophie-marceau-e-marco-mengoni-tra-gli-ospiti-della-prima-puntata_1SP9oAlHkFNDpmhBNsBizt"
-  },
-  {
-   "data": "2026-10-11T06:42:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Amici 26, nuova edizione da oggi: anticipazioni, oltre a canto e ballo arriva lo sport",
-   "url": "https://www.adnkronos.com/spettacoli/amici-26-prima-puntata-nuova-edizione-oggi-concorrenti-anticipazioni_4P5wsp7JpsDrLz5NxEeCfJ"
-  },
-  {
-   "data": "2026-10-11T06:41:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Domenica In oggi, ospiti puntata 11 ottobre: Al Bano e due ragazzi sopravvissuti a tragedia Crans-Montana",
-   "url": "https://www.adnkronos.com/spettacoli/domenica-in-mara-venier-ospiti-puntata-oggi-11-ottobre_7kX6jlJsBof2kSYVTl9lGL"
-  },
-  {
-   "data": "2026-10-11T06:38:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Da noi... a ruota libera, gli ospiti e le interviste di oggi domenica 11 ottobre",
-   "url": "https://www.adnkronos.com/spettacoli/da-noi-a-ruota-libera-ospiti-interviste-oggi_1yKpuloKFCbrrc2vnZ7Ni0"
-  },
-  {
-   "data": "2026-10-11T06:36:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Riad: \"Houthi responsabili attacco aeroporto, reagiremo\". Raid sauditi contro i ribelli in Yemen",
-   "url": "https://www.adnkronos.com/internazionale/esteri/arabia-saudita-attacco-riad-houthi-ultime-news_GP3yaE1lT6Qhs0QL87jZu"
-  },
-  {
-   "data": "2026-10-11T06:32:12+00:00",
+   "data": "2026-10-11T12:49:05+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Donna di 34 anni con disabilità rapinata a Napoli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/donna-di-34-anni-con-disabilita-rapinata-a-napoli_bdb8877a-a37d-4f97-b64f-7e348a4f9a40.html"
+   "titolo": "Roggero, 'entrare in carcere a 72 anni è stato molto devastante'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/11/roggero-entrare-in-carcere-a-72-anni-e-stato-molto-devastante_bc588227-df71-4043-b631-0558fb3c363d.html"
   },
   {
-   "data": "2026-10-11T06:29:39+00:00",
+   "data": "2026-10-11T12:39:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "MotoGp, si corre Gp Indonesia: orario, griglia di partenza e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/motogp-gp-indonesia-orario-dove-vederla-tv-griglia-partenza_swz9Yssd652HuoTTpLxJS"
+   "titolo": "Maltempo, circolazione ferroviaria sospesa su linea Napoli-Salerno via Cava de' Tirreni per frana",
+   "url": "https://www.adnkronos.com/cronaca/maltempo-circolazione-ferroviaria-sospesa-linea-napoli-salerno-via-cava-de-tirreni-frana_1dzirE7LTOTdJHEFRd1YSI"
   },
   {
-   "data": "2026-10-11T06:19:00+00:00",
+   "data": "2026-10-11T12:35:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Nottingham il primo impegno pubblico congiunto in Gb per Harry e Meghan",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/11/a-nottingham-il-primo-impegno-pubblico-congiunto-in-gb-per-harry-e-meghan_4a05739f-cee0-4389-ab6a-7ccacd4ac9c6.html"
+  },
+  {
+   "data": "2026-10-11T12:33:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Motomondiale, oggi Gp Indonesia: Fernandez al comando su Bezzecchi e Martin - Diretta",
-   "url": "https://www.adnkronos.com/sport/oggi-diretta-gp-indonesia-a-mandalika_PZ4NPLaxbNBKYZAvKp8Io"
+   "titolo": "Lazio-Monza 2-0, gol di Nuno Tavares e Isaksen - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-lazio-monza-oggi-serie-a-live-risultato-classifica_6Ak3B53OfG644aCYSzGwwU"
   },
   {
-   "data": "2026-10-11T06:00:00+00:00",
+   "data": "2026-10-11T12:28:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da gennaio oltre 700 morti sul lavoro. Mattarella: 'La Carta tutela la sicurezza, serve prevenzione'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/11/anmil-da-gennaio-ad-oggi-oltre-700-morti-sul-lavoro-istituire-reato_cf73ab34-468f-42d1-9268-b01d5af2b0da.html"
+  },
+  {
+   "data": "2026-10-11T12:23:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Genoa, che rivincita su Ryanair: la risposta dopo la vittoria con la Fiorentina è da applausi",
-   "url": "https://www.adnkronos.com/sport/genoa-replica-a-ryanair-dopo-vittoria-su-fiorentina_2ZnQ5ore76OLExuc9i4TfW"
+   "titolo": "Sostenibilità, Piemontese: \"Nell'era dell'Ai giornalista deve andare sul posto per cogliere sfumature\"",
+   "url": "https://www.adnkronos.com/economia/sostenibilita-piemontese-nellera-dellai-giornalista-deve-andare-sul-posto-per-cogliere-sfumature_72l8mRfAtEMvr5x1sb0LRm"
   },
   {
-   "data": "2026-10-11T05:54:03+00:00",
+   "data": "2026-10-11T12:21:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Sassuolo-Milan: orario, probabili formazioni e dove vederla",
-   "url": "https://www.adnkronos.com/sport/sassuolo-milan-oggi-serie-a-orario-formazioni-dove-vederla-tv-streaming_1CMJQCOvYkyUuDWh1bzCMD"
+   "titolo": "Sostenibilità, Costarella (Conai): \"Raccolta differenziata ha valore ambientale ed economico ma va fatta bene\"",
+   "url": "https://www.adnkronos.com/economia/sostenibilita-costarella-conai-raccolta-differenziata-ha-valore-ambientale-ed-economico-ma-va-fatta-bene_1vtVaq5nt7zc6swhQiWEc0"
   },
   {
-   "data": "2026-10-11T05:20:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "La barbarie della morte in streaming",
-   "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/10/09/la-barbarie-della-morte-in-streaming_cfd4220c-748c-4efe-8a49-16035aff1da2.html"
+   "data": "2026-10-11T12:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sostenibilità Ricchiuti (RaiNews24): \"Verde urbano non è ornamentale ma parte della nostra vita\"",
+   "url": "https://www.adnkronos.com/economia/sostenibilita-ricchiuti-rainews24-verde-urbano-non-e-ornamentale-ma-parte-della-nostra-vita_5Tc2k5apgg5aiDnjas3kj6"
   },
   {
-   "data": "2026-10-11T04:57:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nubifragi, allagamenti e frane: il maltempo fa paura al Sud",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/nubifragi-allagamenti-e-frane-il-maltempo-fa-paura-al-sud_9c85a05b-b554-4cf2-9592-d9c514ee9113.html"
+   "data": "2026-10-11T12:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sostenibilità, 'Fenice Conai' per giornalismo ambientale giovane: vincono Piemontese e Ricchiuti",
+   "url": "https://www.adnkronos.com/economia/sostenibilita-fenice-conai-per-giornalismo-ambientale-giovane-vincono-piemontese-e-ricchiuti_5jw1WECMQAHkedIC2X8zCE"
   },
   {
-   "data": "2026-10-10T21:08:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "All'Inter bastano 30 minuti, Parma travolto 3-0 a S.Siro",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/10/allinter-bastano-30-minuti-parma-travolto-3-0-a-s.siro_3de142c7-04e2-4b64-b000-cc44ad95cfcf.html"
-  },
-  {
-   "data": "2026-10-10T19:37:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cinque escursionisti in difficoltà per il maltempo sulla Maiella",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/cinque-escursionisti-in-difficolta-per-il-maltempo-sulla-maiella_87384f44-6304-4b59-a1e9-942767c4dcbb.html"
-  },
-  {
-   "data": "2026-10-10T19:29:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Dall'Asia per le 'gemme nascoste', l'overtourism sulle Dolomiti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/dallasia-per-le-gemme-nascoste-lovertourism-sulle-dolomiti_6626bef0-0466-46bf-99ca-68c9a668ae75.html"
-  },
-  {
-   "data": "2026-10-10T19:18:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'Ue agli Usa: 'Ritirare le sanzioni alla Cpi, pronti a difenderla'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/lue-agli-usa-ritirare-le-sanzioni-alla-cpi-pronti-a-difenderla_26dac987-1d6b-4687-be63-a67170be2055.html"
-  },
-  {
-   "data": "2026-10-10T19:17:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump scarica Zelensky: 'Serve un nuovo presidente a Kiev per un accordo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/trump-scarica-zelensky-serve-un-nuovo-presidente-a-kiev-per-un-accordo_d50f315d-6dd5-4025-922d-638d7519a1b9.html"
-  },
-  {
-   "data": "2026-10-10T18:58:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La Procura di Sion apre un'inchiesta per fuga di notizie su Crans-Montana",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/la-procura-di-sion-apre-uninchiesta-per-fuga-di-notizie-su-crans-montana_1c883727-df88-46c2-8c58-1fb511255776.html"
-  },
-  {
-   "data": "2026-10-10T18:54:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bambina investita da un'auto nel cortile di casa, è grave",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/bambina-investita-da-unauto-nel-cortile-di-casa-e-grave-_ecd563f5-9abb-4014-94bb-2acccd0bab8c.html"
-  },
-  {
-   "data": "2026-10-10T18:40:43+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo in Calabria, danni e frane nel Reggino per le forti piogge",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/maltempo-in-calabria-danni-e-frane-nel-reggino-per-le-forti-piogge_8604780e-0f5d-4de9-81d0-f26fec2d29f0.html"
-  },
-  {
-   "data": "2026-10-10T18:37:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Evoca sui social una strage a scuola, denunciato un 14enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/evoca-sui-social-una-strage-a-scuola-denunciato-un-14enne_c3571ba9-7190-461b-adc5-b8cfe98178ab.html"
-  },
-  {
-   "data": "2026-10-10T18:30:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cortei pro-Pal in 50 città e c'è chi inneggia al 7 ottobre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/10/cortei-pro-pal-in-50-citta-e-ce-chi-inneggia-al-7-ottobre_10c194c9-d77a-4956-a3d1-9aa86a4d7cc2.html"
-  },
-  {
-   "data": "2026-10-10T18:28:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nasce il partito di Ruffini e Gabrielli, è sfida al centro",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/10/ruffini-al-campo-largo-ci-sia-uno-scatto-di-responsabilita-e-si-cerchi-un-terzo-nome_1aba98db-b912-4fa6-9d33-ccbbe7cdba12.html"
-  },
-  {
-   "data": "2026-10-10T18:28:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il 'Partito delle blatte' torna in piazza, arrestati i leader",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/10/proteste-a-new-delhi-migliaia-le-persone-fermate_fa29293d-9c19-4c11-80b1-5342323ae1f3.html"
+   "data": "2026-10-11T12:03:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Auto travolge un gruppo di ciclisti nel Fiorentino: otto feriti, tre sono gravi",
+   "url": "https://www.adnkronos.com/cronaca/incidente-oggi-auto-travolge-ciclisti-fiorentino-feriti_2U6PE1NIYW7lGYrdqZA3P2"
   }
  ]
 }
