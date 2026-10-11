@@ -1,43 +1,40 @@
 ---
-title: "Maltempo, 9 ottobre: cinque interventi del Gruppo tra alberi, rami e un tombino"
+title: "Maltempo, 9 ottobre: quattro interventi del Gruppo tra alberi, rami e un tombino"
 date: 2026-10-09T00:03:00+02:00
-description: "Venerdì 9 ottobre il Gruppo è intervenuto cinque volte a Genzano: pino alla scuola Marchesi, rami in strada, tombino divelto e albero caduto in via Polonia."
+description: "Il 9 ottobre quattro interventi approvati a Genzano: un pino alla scuola Marchesi, rami sulle strade e un tombino divelto."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-09-maltempo-genzano-interventi-9-ottobre.webp"
-image_alt: "Cover dell'articolo: Maltempo, 9 ottobre: cinque interventi del Gruppo tra alberi, rami e un tombino"
+image_alt: "Cover dell'articolo: Maltempo, 9 ottobre: quattro interventi del Gruppo tra alberi, rami e un tombino"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
 tts: true
 lis_section: "allerte-meteo"
-social_citazione: "Il lavoro più lungo è stato in via Polonia: un albero caduto, dal pomeriggio fino a sera."
+social_citazione: "Il 9 ottobre il registro riporta quattro interventi approvati, tra alberi, rami e un tombino divelto."
 social_punti:
-  - "Cinque interventi del Gruppo venerdì 9 ottobre, dopo i ventidue tra il 7 e l'8."
+  - "Quattro interventi del Gruppo venerdì 9 ottobre, dopo i ventidue tra il 7 e l'8."
   - "Un pino alla scuola Marchesi e un grosso ramo in via Unione Sovietica, al cavalcavia per Nemi."
   - "Un tombino divelto in via Garibaldi e rami sulla strada in via Roma."
-  - "In via Polonia un albero caduto: la squadra ha lavorato dalle 16 fin quasi alle 20."
 ---
 
-Tra il 7 e l'8 ottobre il Gruppo ha fatto ventidue interventi. Il maltempo ci ha tenuti impegnati anche **venerdì 9 ottobre**. Secondo il nostro registro, le uscite della giornata sono state **cinque**, quasi tutte per alberi e rami.
+Tra il 7 e l'8 ottobre il Gruppo ha fatto ventidue interventi. Il maltempo ci ha tenuti impegnati anche **venerdì 9 ottobre**. Il registro riporta **quattro interventi approvati**, quasi tutti per alberi e rami.
 
 Genzano è nella Zona F del Centro Funzionale della Regione Lazio. Il livello di allerta in vigore è sempre nella pagina [Allerte meteo](/allerte-meteo/).
 
 ## La mattina
 
-Poco dopo le 8.30 il sindaco ci ha chiesto di intervenire su un **pino alla scuola Marchesi**. Si trattava di verificare la pianta e, se necessario, di tagliarla. La squadra è rimasta impegnata per circa due ore.
+Poco dopo le 8.30 la squadra è intervenuta su un **pino alla scuola Marchesi**. Si trattava di verificare la pianta e, se necessario, di tagliarla. La squadra è rimasta impegnata per circa due ore.
 
-Negli stessi minuti la Polizia Locale ci ha segnalato un **grosso ramo a terra** in via Unione Sovietica. Era all'altezza del cavalcavia per Ville di Nemi. Anche qui la squadra è rimasta impegnata fino alle 10.30 circa, con il pickup del Gruppo.
+Negli stessi minuti un altro intervento ha riguardato un **grosso ramo** in via Unione Sovietica. Era all'altezza del cavalcavia per Ville di Nemi. Anche qui la squadra è rimasta impegnata fino alle 10.30 circa, con il pickup del Gruppo.
 
 Verso mezzogiorno un breve intervento ha riguardato un **tombino divelto** in via Garibaldi.
 
 ## Il pomeriggio
 
-Verso le 15, su richiesta del Comune, i volontari hanno rimosso dei **rami dalla carreggiata** in via Roma.
-
-Poco dopo le 16 la Polizia Locale ci ha segnalato un **albero caduto** in via Polonia. È stato l'intervento più lungo della giornata: la squadra ha lavorato fin quasi alle 20.
+Verso le 15 la squadra è intervenuta per dei **rami sulla carreggiata** in via Roma.
 
 ## Cosa puoi fare tu
 
