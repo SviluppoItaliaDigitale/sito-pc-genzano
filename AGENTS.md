@@ -6,11 +6,15 @@
 
 ---
 
+## 🔁 Continuità con Claude: la bacheca `COORDINAMENTO.md` (dall'11/10/2026)
+
+`COORDINAMENTO.md`, nella cartella principale, è la bacheca comune fra Claude e ChatGPT: lo stesso file, con la stessa prima parte, esiste in tutti i repository di Alessandro. Quando Alessandro scrive **«guarda la bacheca»** o **«continua il lavoro»**, segui il protocollo comune scritto lì: prendi le richieste aperte, lavora su un ramo tuo, fai i controlli, aggiorna la bacheca nella stessa PR e, **se i controlli sono verdi, unisci tu la PR e verifica il deploy**. Lavori in autonomia fino alla pubblicazione, seguendo le istruzioni di Alessandro o quelle che Claude ha lasciato in bacheca. Le eccezioni in cui non unisci sono elencate nella bacheca (§ «Quando ChatGPT non unisce» e § «Questo repository»). Se Claude non è disponibile, la revisione che fa di solito la fai tu, usando come lista di controllo i file di `.claude/agents/` pertinenti.
+
 ## ⛔ Prima di tutto: si pubblica solo con una pull request
 
 **Regola dell'utente (08/10/2026), valida per ogni intelligenza artificiale che lavora sul sito, ChatGPT compreso.** Ogni modifica va su un ramo di lavoro (`chatgpt/...` o `codex/...`) e arriva su `main` solo attraverso una pull request, dopo che i controlli automatici sono verdi. **Mai un commit o un push direttamente su `main`**, nemmeno per una correzione di una riga.
 
-**Prima di cominciare** leggi `COORDINAMENTO.md` (la bacheca degli avvisi fra le sessioni) e l'elenco delle pull request aperte: se un file che devi toccare è già in una PR aperta, non cambiarlo. Quando il tuo lavoro riguarda anche l'altra sessione, lascia lì un avviso. Immagini, audit e pubblicazioni urgenti hanno ciascuno la sua procedura nella sezione «Chi fa che cosa» della bacheca: un audit non corregge niente, scrive i rilievi in `riferimenti-interni/audit-esterni/`.
+**Prima di cominciare** leggi `COORDINAMENTO.md` (la bacheca comune fra le sessioni) e l'elenco delle pull request aperte: se un file che devi toccare è già in una PR aperta, non cambiarlo. Quando il tuo lavoro riguarda anche l'altra sessione, lascia lì un avviso. Immagini, audit e pubblicazioni urgenti hanno ciascuno la sua procedura nella sezione «Chi fa che cosa» della bacheca: un audit non corregge niente, scrive i rilievi in `riferimenti-interni/audit-esterni/`.
 
 **Unica eccezione:** l'utente chiede espressamente, nel messaggio, di pubblicare direttamente su `main` (per esempio «pubblica direttamente su main, senza PR»). Vale solo per quella modifica. Un generico «pubblica», «vai» o «fallo» **non** è l'eccezione: vuol dire aprire la PR e unirla quando i controlli sono verdi.
 
@@ -550,7 +554,7 @@ Quando una sessione Claude Code lavora dopo di te, può subito invocare le skill
 - **Gate sulle PR (dal 15/08/2026):** oltre al build, le PR passano il gate **pa11y/axe BLOCCANTE** (una violazione WCAG confermata = PR rossa; gli *incomplete* sono informativi) e il gate **JSON-LD** su tutte le pagine articolo.
 - **Workflow: convenzioni cogenti (15/08/2026):** ogni job ha `timeout-minutes` esplicito; le action di **terze parti** vanno pinnate a commit SHA (`uses: owner/action@<sha> # vX.Y.Z` — i tag sono mutabili e i workflow maneggiano i segreti FTP/Telegram/Gemini); **Dependabot** aggiorna i pin con PR settimanale, il merge resta umano.
 - **🔴 Mai pubblicare direttamente su `main` (dall'08/10/2026).** Anche per modifiche piccole: ramo di lavoro (`codex/...` o `chatgpt/...`) e PR. Unica eccezione: l'utente lo chiede espressamente per quella modifica (vedi il riquadro in cima al file). Solo così passano i controlli bloccanti (stampa delle schede, accessibilità, dati canonici, parità dei pacchetti). L'08/10/2026 quattro pubblicazioni dirette in mezz'ora hanno annullato tre deploy, uno dei quali di un'altra sessione.
-- **Lavoro in parallelo con Claude.** Sul sito lavorano anche sessioni di Claude Code. Ciascuna AI usa il **proprio** ramo e non riprende quello dell'altra. Prima di unire una PR riporta nel tuo ramo le novità di `main` (merge, non rebase). Nella descrizione della PR scrivi quali file tocchi, così l'altra sessione vede una sovrapposizione. Raggruppa le modifiche in una PR invece di unirne molte in fila.
+- **Lavoro in parallelo con Claude.** Sul sito lavorano anche sessioni di Claude Code. Ciascuna AI usa il **proprio** ramo e non riprende quello dell'altra. Prima di unire una PR riporta nel tuo ramo le novità di `main` (merge, non rebase). Nella descrizione della PR scrivi quali file tocchi, così l'altra sessione vede una sovrapposizione. Raggruppa le modifiche in una PR invece di unirne molte in fila. Le PR che chiudono una richiesta della bacheca le unisci tu a controlli verdi (protocollo comune di `COORDINAMENTO.md`), salvo le eccezioni lì elencate.
 - **🔴 I file generati non si correggono a mano in un conflitto.** Pacchetti «Stampa tutto» e ZIP (`scripts/genera-pacchetti-schede.py`, `genera-pacchetti-kit.py`), menu delle pagine statiche (`scripts/genera-chrome-menu.py`), catalogo di «Crea la mia lezione» (`scripts/genera-materiali-lezione.py`), cover e QR: si accetta una delle due versioni e si rigenerano con lo script, poi si ricontrolla (`check-parita-schede.py`, `genera-chrome-menu.py --check`, `genera-materiali-lezione.py --check`).
 - **Identità dei commit:** nome `Alessandro Cuollo`, email `65465537+SviluppoItaliaDigitale@users.noreply.github.com` (`bash scripts/imposta-identita-git.sh`), mai sigle come `IU0QVW` né identità dello strumento.
 - **Mai `git push --force` su `main`.** Su feature branch ok solo se sai cosa stai facendo.
@@ -666,7 +670,7 @@ R. Segnalalo all'utente. Non risolverlo autonomamente: la decisione su quale dei
 
 ---
 
-**Versione:** 1.3 — creato il 2026-05-06.
+**Versione:** 1.4 — creato il 2026-05-06; 2026-10-11 aggiunta la continuità con Claude tramite `COORDINAMENTO.md` (protocollo comune a tutti i repository).
 **Ultima revisione:** 2026-05-09 — invariante 9 «BANNER COL TITOLO INTOCCABILE» riscritta con anti-pattern espliciti per task di revisione AGID (incidente Giornata Europa); aggiunta Sezione 0 «Come usarmi» (anti-overload del GitHub connector); sezione 3.2 riscritta (parole-trigger ampliate, sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ).
 **Autorità:** allineato a `CLAUDE.md` v3.0 e a `.claude/rules/0*.md` (snapshot maggio 2026).
 **Manutenzione:** quando modifichi `CLAUDE.md` aggiorna anche questo file, e viceversa.
