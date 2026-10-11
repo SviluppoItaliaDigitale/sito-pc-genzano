@@ -1,6 +1,6 @@
-# AGENTS.md — Istruzioni per ChatGPT (e altri agenti OpenAI) su questo repo
+# AGENTS.md — Istruzioni per ChatGPT, Gemini e gli altri agenti su questo repo
 
-> **A chi è rivolto.** Questo file è la fonte di istruzioni operative quando ChatGPT (con GitHub Connector, Codex, agente OpenAI o Custom GPT) lavora **direttamente** sul repository del **Sito della Protezione Civile di Genzano di Roma**. È la versione "OpenAI-native" delle stesse regole che `CLAUDE.md` impone a Claude Code: stessi vincoli, stesso linguaggio, stessa governance.
+> **A chi è rivolto.** Questo file è la fonte di istruzioni operative quando ChatGPT (con GitHub Connector, Codex, agente OpenAI o Custom GPT) o Gemini (Jules, Gemini CLI) lavora **direttamente** sul repository del **Sito della Protezione Civile di Genzano di Roma**. È la versione "OpenAI-native" delle stesse regole che `CLAUDE.md` impone a Claude Code: stessi vincoli, stesso linguaggio, stessa governance.
 >
 > **Leggi anche:** `CLAUDE.md` nella root del repo (versione lunga) e i file in `.claude/rules/0*.md` (regole di dettaglio). Quando una rule di dettaglio si applica, citala per nome (es. *"per la regola `02-content-design-pa.md` § Frontmatter obbligatorio …"*).
 
