@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-10T22:39:47+00:00",
+  "generato": "2026-10-11T01:16:51+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-10T23:38:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le Stelle, Monica Guerritore e Luca Urso hanno vinto la puntata: la classifica",
+   "url": "https://www.adnkronos.com/spettacoli/classifica-ballando-con-le-stelle-chi-ha-vinto-ieri-sera_14258qipsIn3kxZmH6JBa0"
+  },
   {
    "data": "2026-10-10T22:20:34+00:00",
    "fonte": "ADNKRONOS",
@@ -165,12 +171,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Scavalca il recinto e viene sbranato da una tigre allo zoo: tragedia nello Yorkshire",
    "url": "https://www.adnkronos.com/internazionale/esteri/entra-nel-recinto-sbranato-tigre-zoo-yorkshire_4UPC8L1vKpGkqA8SIB4nDp"
-  },
-  {
-   "data": "2026-10-10T17:59:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Napoli-Frosinone 3-0, Allegri torna a vincere con De Bruyne e Lang",
-   "url": "https://www.adnkronos.com/sport/diretta-napoli-frosinone-oggi-serie-a-risultato-live_2ZHam8zU0MexZIita1h3NC"
   },
   {
    "data": "2026-10-10T17:56:54+00:00",
