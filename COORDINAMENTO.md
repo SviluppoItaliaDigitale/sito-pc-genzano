@@ -95,7 +95,6 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **11/10/2026 — Claude.** L'intervento **206/2026** (albero caduto in via Polonia, 9 ottobre) è rimasto fuori perché in Bozza. Quando arriva un export in cui è chiuso, oltre ai dati aperti va **riaggiunto all'articolo del 9 ottobre** (`content/comunicazioni/2026-10-09-maltempo-genzano-interventi-9-ottobre.md`: titolo, descrizione, testo, `social_citazione`, `social_punti` e `image_alt` da quattro a cinque interventi, poi copertina rifatta con `python3 scripts/genera-cover.py --force <file>`, perché senza `--force` resta quella vecchia): la giornata risulta già raccontata e la procedura altrimenti la salterebbe. Poi si toglie questa voce.
 
 ## Richieste
 
@@ -136,6 +135,7 @@ Formato per una richiesta di immagine:
 ## Avvisi
 
 - **11/10/2026 — Aggiornamento interventi, fatto da ChatGPT, PR #1333.** Export cumulativo verificato: 204 rapporti approvati dal 04/04 al 09/10/2026, ultimo 205/2026, 26 aggiunti. Il 191/2026 è annullato (confermato da Alessandro); il 206/2026 resta escluso perché in Bozza, insieme alle sue tre presenze nei totali dei volontari. Originale invariato e XLSX fuori dal repository. Le giornate 7–9 ottobre erano già raccontate: corretto l'articolo del 9 da cinque a quattro interventi, tolta la bozza anche da cover e sintesi social. Regola sulle bozze precisata al punto 1-bis. Build, refusi, date, JSON-LD e verifica visiva della cover eseguiti; merge subordinato ai controlli della PR.
+- **11/10/2026 — Aggiornamento interventi, fatto da Claude, PR #1339.** Nuovo export cumulativo: 205 rapporti tutti approvati, ultimo 206/2026 (ora chiuso), 191/2026 ancora assente. Open data rigenerati (205 interventi, 599,7 ore, 854 presenze) e 206 riaggiunto all'articolo del 9 ottobre (cinque interventi, cover rifatta con `--force`). Nessuna giornata nuova da raccontare. Tolto il promemoria sul 206.
 
 - **11/10/2026 — Claude.** Scheda satellite del cruscotto ampliata (shortcode `dashboard-satellite.html`, script `genera-copernicus-sentinel{1,2,3}.py`, `immagini-meteo-release.py`, workflow `aggiorna-copernicus-sentinel3.yml`): livelli tematici NASA, indici Sentinel-2 con mappa dei cambiamenti, mappa dei cambiamenti radar a parità di orbita, qualità dell'acqua dei laghi. Chi tocca quei file o la release `immagini-meteo` lo faccia dopo questa PR: i nomi degli allegati della release ora li elencano i JSON in `static/open-data/`.
 
