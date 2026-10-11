@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-11T01:17:00+00:00",
+  "generato": "2026-10-11T07:17:10+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 15,
-  "scaduti_scartati": 20,
-  "in_corso": 10,
+  "avvisi": 14,
+  "scaduti_scartati": 21,
+  "in_corso": 9,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -60,19 +60,6 @@
    "fine": "2026-10-11T17:59:00+00:00",
    "emesso": "2026-10-10T09:21:04+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261010112104.077"
-  },
-  {
-   "in_corso": true,
-   "regione": "Marche",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-11T00:00:00+00:00",
-   "fine": "2026-10-11T05:59:00+00:00",
-   "emesso": "2026-10-10T09:21:04+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261010112104.072"
   },
   {
    "in_corso": true,
