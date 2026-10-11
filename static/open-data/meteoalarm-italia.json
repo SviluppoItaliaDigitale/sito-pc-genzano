@@ -1,14 +1,40 @@
 {
  "_snapshot": {
-  "generato": "2026-10-11T18:56:32+00:00",
+  "generato": "2026-10-11T22:43:30+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 15,
-  "scaduti_scartati": 10,
+  "avvisi": 18,
+  "scaduti_scartati": 9,
   "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Pioggia",
+   "livello": "arancione",
+   "evento_originale": "Orange Rain Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-13T00:00:00+00:00",
+   "fine": "2026-10-13T21:59:00+00:00",
+   "emesso": "2026-10-11T08:59:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261011105941.040"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Temporali",
+   "livello": "arancione",
+   "evento_originale": "Orange Thunderstorm Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-13T00:00:00+00:00",
+   "fine": "2026-10-13T21:59:00+00:00",
+   "emesso": "2026-10-11T08:59:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261011105941.039"
+  },
   {
    "in_corso": false,
    "regione": "Calabria",
@@ -47,6 +73,19 @@
    "fine": "2026-10-11T23:59:00+00:00",
    "emesso": "2026-10-11T08:59:41+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261011105941.026"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sicilia",
+   "fenomeno": "Temporali",
+   "livello": "arancione",
+   "evento_originale": "Orange Thunderstorm Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-13T00:00:00+00:00",
+   "fine": "2026-10-13T21:59:00+00:00",
+   "emesso": "2026-10-11T08:59:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261011105941.041"
   },
   {
    "in_corso": false,
