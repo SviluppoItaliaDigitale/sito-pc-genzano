@@ -93,7 +93,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- Nessun lavoro a metà al 11/10/2026.
+- **11/10/2026 — Claude.** L'intervento **206/2026** (albero caduto in via Polonia, 9 ottobre) è rimasto fuori perché in Bozza. Quando arriva un export in cui è chiuso, oltre ai dati aperti va **riaggiunto all'articolo del 9 ottobre** (`content/comunicazioni/2026-10-09-maltempo-genzano-interventi-9-ottobre.md`: titolo, descrizione, testo, `social_citazione`, `social_punti` e `image_alt` da quattro a cinque interventi, poi copertina rifatta con `python3 scripts/genera-cover.py --force <file>`, perché senza `--force` resta quella vecchia): la giornata risulta già raccontata e la procedura altrimenti la salterebbe. Poi si toglie questa voce.
 
 ## Richieste
 
