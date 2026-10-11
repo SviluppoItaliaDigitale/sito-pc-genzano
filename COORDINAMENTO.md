@@ -93,7 +93,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- Nessun lavoro a metà al 11/10/2026.
+- **11/10/2026 — Claude.** L'intervento **206/2026** (albero caduto in via Polonia, 9 ottobre) è rimasto fuori perché in Bozza. Quando arriva un export in cui è chiuso, oltre ai dati aperti va **riaggiunto all'articolo del 9 ottobre** (`content/comunicazioni/2026-10-09-maltempo-genzano-interventi-9-ottobre.md`: titolo, descrizione, testo e `social_punti` da quattro a cinque interventi): la giornata risulta già raccontata e la procedura altrimenti la salterebbe. Poi si toglie questa voce.
 
 ## Richieste
 
