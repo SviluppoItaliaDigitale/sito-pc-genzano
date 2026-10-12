@@ -2079,3 +2079,6 @@ modellizzazione
 nudge
 ernobyl
 controfattuale
+# --- Routine cura schede didattiche 12/10/2026: termine di gioco (difficoltà) e termine clinico del triage ---
+matching
+refill
