@@ -50,6 +50,9 @@
     }
     .blp-kit li::before { content: "☐ "; color: var(--scheda-blu); font-size: 1.05rem; }
     @media (max-width: 600px) { .blp-kit { columns: 1; } }
+    /* Controllo fogli di stampa, 12/10/2026: l'ultimo foglio restava quasi
+       vuoto con la sola fascia delle affiliazioni. Solo in stampa. */
+    @media print { html { font-size: 94%; } }
   </style>
 </head>
 <body>

@@ -989,6 +989,9 @@
 @media (max-width: 600px) {
 :where([id="scheda-blackout-primaria"]) .blp-kit { columns: 1; }
 }
+@media print {
+:where([id="scheda-blackout-primaria"]) { zoom: 0.94; }
+}
 
 :where([id="scheda-vento-forte-primaria"]) .vfp-vf {
       width: 100%;
