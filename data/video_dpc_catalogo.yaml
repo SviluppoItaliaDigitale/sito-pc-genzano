@@ -3,19 +3,19 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8924 video (18 canali).
+# Totale: 8957 video (18 canali).
 
 canali:
   abili-a-proteggere:
     nome: Abili a Proteggere
     tematico_pc: true
     url: https://www.youtube.com/@abiliaproteggere4520/videos
-    video_count: 130
+    video_count: 131
   cicap:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 631
+    video_count: 632
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 953
+    video_count: 962
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -45,7 +45,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1342
+    video_count: 1348
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -70,7 +70,7 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1232
+    video_count: 1233
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1895
+    video_count: 1910
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -407,6 +407,11 @@ video:
     id: XHA2duGlElg
     titolo: Paolo Ruffini e gli attori della compagnia teatrale Mayor Von Frinzius
     url: https://youtu.be/XHA2duGlElg
+  abili-a-proteggere-XTYgQWLVHEU:
+    canale: abili-a-proteggere
+    id: XTYgQWLVHEU
+    titolo: 'Percorsi di protezione civile: un villaggio per conoscere il Servizio Nazionale'
+    url: https://youtu.be/XTYgQWLVHEU
   abili-a-proteggere-XVVayor2A34:
     canale: abili-a-proteggere
     id: XVVayor2A34
@@ -3617,6 +3622,11 @@ video:
     id: tgScTS5JjD0
     titolo: Sta per arrivare il CICAP Fest EDU - 2021
     url: https://youtu.be/tgScTS5JjD0
+  cicap-tm914CaNxhM:
+    canale: cicap
+    id: tm914CaNxhM
+    titolo: La Terra che spacca - con Giulio di Toro
+    url: https://youtu.be/tm914CaNxhM
   cicap-tmCCW-3RkPU:
     canale: cicap
     id: tmCCW-3RkPU
@@ -4742,6 +4752,11 @@ video:
     id: 3ojaWHFk2bM
     titolo: Open hour on the Second Order Draft Review of the Special Report on Climate Change and Cities
     url: https://youtu.be/3ojaWHFk2bM
+  cmcc-3plDN0mNIkQ:
+    canale: cmcc
+    id: 3plDN0mNIkQ
+    titolo: Digital Twins for Climate Resilience
+    url: https://youtu.be/3plDN0mNIkQ
   cmcc-3r2SDBbqj8U:
     canale: cmcc
     id: 3r2SDBbqj8U
@@ -5347,6 +5362,11 @@ video:
     id: C1osn6fzE2s
     titolo: How to achieve a rapid, fair, and efficient transformation to net zero emissions - NAVIGATE project
     url: https://youtu.be/C1osn6fzE2s
+  cmcc-C1w77ERsLoY:
+    canale: cmcc
+    id: C1w77ERsLoY
+    titolo: The Acceleration of Scientific Revolutions.The case of climate sciences - Institutional opening
+    url: https://youtu.be/C1w77ERsLoY
   cmcc-C450dwTLY-I:
     canale: cmcc
     id: C450dwTLY-I
@@ -5432,6 +5452,11 @@ video:
     id: D4Jw5st8EKQ
     titolo: 'Marcelo Gerlach: Mobilizing local stakeholders, multiplying impact | Naturance'
     url: https://youtu.be/D4Jw5st8EKQ
+  cmcc-D5C7YJrayAo:
+    canale: cmcc
+    id: D5C7YJrayAo
+    titolo: 'From Data to Predictions: Machine Learning Across the Earth System'
+    url: https://youtu.be/D5C7YJrayAo
   cmcc-D7O1F-NOfcc:
     canale: cmcc
     id: D7O1F-NOfcc
@@ -5577,6 +5602,11 @@ video:
     id: ET_7oHF0kZw
     titolo: 'Session 6: Next Steps - The CoastPredict Global Coastal Experiment.'
     url: https://youtu.be/ET_7oHF0kZw
+  cmcc-EVzzdGyWLjU:
+    canale: cmcc
+    id: EVzzdGyWLjU
+    titolo: 'The Climate–Biodiversity Nexus: Governing Within Planetary Boundaries'
+    url: https://youtu.be/EVzzdGyWLjU
   cmcc-EX05HjPmaeI:
     canale: cmcc
     id: EX05HjPmaeI
@@ -6132,6 +6162,11 @@ video:
     id: LhhFMWSu_io
     titolo: Regioni d'Europa fondamentali per affrontare i cambiamenti climatici
     url: https://youtu.be/LhhFMWSu_io
+  cmcc-Linj3C2nwvY:
+    canale: cmcc
+    id: Linj3C2nwvY
+    titolo: 'IPCC OPEN HOUR: How to Register as an Expert Reviewer for the 2027 SLCF Methodology Report'
+    url: https://youtu.be/Linj3C2nwvY
   cmcc-LmuYsMXwibY:
     canale: cmcc
     id: LmuYsMXwibY
@@ -7452,6 +7487,11 @@ video:
     id: dxVVKOnvF-A
     titolo: 'Marie Vandewalle - Innovation at the Biodiversity Science-Policy Interface: Eklipse'
     url: https://youtu.be/dxVVKOnvF-A
+  cmcc-eBpAvj8Pc1c:
+    canale: cmcc
+    id: eBpAvj8Pc1c
+    titolo: Bridging the Energy Balance Gap in Eddy-Covariance Measurements
+    url: https://youtu.be/eBpAvj8Pc1c
   cmcc-eDjMDTlxxdg:
     canale: cmcc
     id: eDjMDTlxxdg
@@ -7997,6 +8037,11 @@ video:
     id: kTjmUgW9LXc
     titolo: 'CoastPredict General Assembly 2024 | Session 3: GlobalCoast implementation'
     url: https://youtu.be/kTjmUgW9LXc
+  cmcc-k_ghxG43ZVk:
+    canale: cmcc
+    id: k_ghxG43ZVk
+    titolo: When Science meets policy and business
+    url: https://youtu.be/k_ghxG43ZVk
   cmcc-kiZK2HwTuF0:
     canale: cmcc
     id: kiZK2HwTuF0
@@ -8257,6 +8302,11 @@ video:
     id: oZqZpc9BSFw
     titolo: Mission-oriented research and innovation - Climate adaptation and societal transformation
     url: https://youtu.be/oZqZpc9BSFw
+  cmcc-oaKwM63GZ-s:
+    canale: cmcc
+    id: oaKwM63GZ-s
+    titolo: FERS Students | FERS – Climate Change Law & Science
+    url: https://youtu.be/oaKwM63GZ-s
   cmcc-oiGgm72VFHc:
     canale: cmcc
     id: oiGgm72VFHc
@@ -8347,6 +8397,11 @@ video:
     id: piokh2uPZYQ
     titolo: 'More systemic adaptation: Support policy development at all levels and sectors'
     url: https://youtu.be/piokh2uPZYQ
+  cmcc-pkjK0peNJwM:
+    canale: cmcc
+    id: pkjK0peNJwM
+    titolo: 'Carbon Neutrality: Integrating Monitoring, Modeling, and Management'
+    url: https://youtu.be/pkjK0peNJwM
   cmcc-posYQWqnFUk:
     canale: cmcc
     id: posYQWqnFUk
@@ -12317,6 +12372,11 @@ video:
     id: 0jliJLIrIl0
     titolo: 'Quicksand: Is it really as dangerous as the movies make it out to be? Why do people get stuck in ...'
     url: https://youtu.be/0jliJLIrIl0
+  geopop-0uBfpln1RB4:
+    canale: geopop
+    id: 0uBfpln1RB4
+    titolo: 'Il futuro di Venezia: 4 possibili scenari, dal Mose all’abbandono'
+    url: https://youtu.be/0uBfpln1RB4
   geopop-12gFqASWxlI:
     canale: geopop
     id: 12gFqASWxlI
@@ -12807,6 +12867,11 @@ video:
     id: 5hk3wTF3Ti0
     titolo: La "Porta dell'Inferno", come si è formata e perché dopo 50 anni brucia nel deserto in Turkmenistan?
     url: https://youtu.be/5hk3wTF3Ti0
+  geopop-5jfIiL42w3s:
+    canale: geopop
+    id: 5jfIiL42w3s
+    titolo: Le calotte glaciali di Groenlandia e Antartide hanno perso 11.309 miliardi di tonnellate di ghiaccio
+    url: https://youtu.be/5jfIiL42w3s
   geopop-5wqKPO6PyAQ:
     canale: geopop
     id: 5wqKPO6PyAQ
@@ -15087,6 +15152,11 @@ video:
     id: RSooxlN_HKw
     titolo: 'We tasted Surstromming: why does it smell so bad? The biochemistry of fermentation'
     url: https://youtu.be/RSooxlN_HKw
+  geopop-RdYCpVDPr20:
+    canale: geopop
+    id: RdYCpVDPr20
+    titolo: L’acqua che beviamo è la stessa che bevevano i T-Rex. Com’è possibile? È il ciclo dell’acqua.
+    url: https://youtu.be/RdYCpVDPr20
   geopop-RdomcSSu6PY:
     canale: geopop
     id: RdomcSSu6PY
@@ -16877,6 +16947,11 @@ video:
     id: hjzh6MY32vA
     titolo: 'The Conquest of Everest: Hillary and Norgay''s Impossible Feat 70 Years Ago, May 29, 1953'
     url: https://youtu.be/hjzh6MY32vA
+  geopop-hm6gOTm75Zg:
+    canale: geopop
+    id: hm6gOTm75Zg
+    titolo: Ha davvero senso assumere proteine in polvere?
+    url: https://youtu.be/hm6gOTm75Zg
   geopop-hqLJtR-4g-o:
     canale: geopop
     id: hqLJtR-4g-o
@@ -17657,6 +17732,11 @@ video:
     id: pQUXrHH-Ie0
     titolo: DIAMONDS 💎 THE 5 MOST PRECIOUS IN THE WORLD? | GeologiaPOP
     url: https://youtu.be/pQUXrHH-Ie0
+  geopop-pW_M50Qzzgo:
+    canale: geopop
+    id: pW_M50Qzzgo
+    titolo: 'La chitarra dei Queen costruita da un CAMINETTO: il suono della Red Special di Brian May'
+    url: https://youtu.be/pW_M50Qzzgo
   geopop-pZcUFk1fcsg:
     canale: geopop
     id: pZcUFk1fcsg
@@ -18517,6 +18597,11 @@ video:
     id: xUtCwhN8-pQ
     titolo: 'Il disastro del Vajont: l’analisi geologica e la ricostruzione della tragedia del 9 ottobre 1963'
     url: https://youtu.be/xUtCwhN8-pQ
+  geopop-xZCRXny5o6o:
+    canale: geopop
+    id: xZCRXny5o6o
+    titolo: È uscito "Figo! Non lo sapevo!" il nuovo libro di Geopop, a cura di Stefano Gandelli
+    url: https://youtu.be/xZCRXny5o6o
   geopop-xZiI-xXYZiA:
     canale: geopop
     id: xZiI-xXYZiA
@@ -27062,6 +27147,11 @@ video:
     id: x1lGXV1PrEY
     titolo: The MYSTERY of the SUPERNOVA remnant at the center of the MILKY WAY
     url: https://youtu.be/x1lGXV1PrEY
+  link4universe-x74Gv2ftY8Y:
+    canale: link4universe
+    id: x74Gv2ftY8Y
+    titolo: LIVE - RIENTRO ASTRONAUTI Crew 12 dalla ISS / SPACEX - NASA
+    url: https://youtu.be/x74Gv2ftY8Y
   link4universe-xD3BUVdhZts:
     canale: link4universe
     id: xD3BUVdhZts
@@ -31957,6 +32047,11 @@ video:
     id: 7w_BvkedTy8
     titolo: Sexist website operator identified
     url: https://youtu.be/7w_BvkedTy8
+  rai-news-7z7CfZepnN8:
+    canale: rai-news
+    id: 7z7CfZepnN8
+    titolo: Nodulo circoscritto al polmone, cos'è la patologia per la quale si opera il Papa
+    url: https://youtu.be/7z7CfZepnN8
   rai-news-80QRSYP0-1s:
     canale: rai-news
     id: 80QRSYP0-1s
@@ -32082,6 +32177,11 @@ video:
     id: 8svAnAt0bfc
     titolo: Il comignolo del Conclave sulla Cappella Sistina
     url: https://youtu.be/8svAnAt0bfc
+  rai-news-8vLsCaDSgrU:
+    canale: rai-news
+    id: 8vLsCaDSgrU
+    titolo: 'Barcolana 58: vele e incidenti alla prima boa, troppe imbarcazioni a caccia del vento'
+    url: https://youtu.be/8vLsCaDSgrU
   rai-news-8yAlJcnRoLA:
     canale: rai-news
     id: 8yAlJcnRoLA
@@ -32732,6 +32832,11 @@ video:
     id: DK1W2RnAy9M
     titolo: Trump orders lie detector tests for 50 Pentagon officials
     url: https://youtu.be/DK1W2RnAy9M
+  rai-news-DKaxgo2ZvKY:
+    canale: rai-news
+    id: DKaxgo2ZvKY
+    titolo: La liberazione dello speleologo bloccato in una grotta in Sardegna
+    url: https://youtu.be/DKaxgo2ZvKY
   rai-news-DKu_FrG3Oq4:
     canale: rai-news
     id: DKu_FrG3Oq4
@@ -33207,6 +33312,11 @@ video:
     id: GCHIS16y71Y
     titolo: 'Emanuela Orlandi: New investigative lead, Meneguzzi''s home searched'
     url: https://youtu.be/GCHIS16y71Y
+  rai-news-GGbX795lo1c:
+    canale: rai-news
+    id: GGbX795lo1c
+    titolo: Uragano Isaias, i fenicotteri rosa di Panama City trovano riparo in una toilette
+    url: https://youtu.be/GGbX795lo1c
   rai-news-GJ036hsH4YA:
     canale: rai-news
     id: GJ036hsH4YA
@@ -33687,6 +33797,11 @@ video:
     id: J9VIlDM7duc
     titolo: Guardiola lascia il Manchester City e l'Italia sogna
     url: https://youtu.be/J9VIlDM7duc
+  rai-news-JBGVUNXmIMU:
+    canale: rai-news
+    id: JBGVUNXmIMU
+    titolo: '"Trump Ocean" Donald Trump vuole ribattezzare l''Atlantico o il Pacifico con il suo nome'
+    url: https://youtu.be/JBGVUNXmIMU
   rai-news-JDlbtrsA_JI:
     canale: rai-news
     id: JDlbtrsA_JI
@@ -34667,6 +34782,11 @@ video:
     id: PYkZwagTIIM
     titolo: 'Italy-USA: An Indissoluble Alliance Marked by Historic Rifts and Diplomatic Crises'
     url: https://youtu.be/PYkZwagTIIM
+  rai-news-PZ--wQCH3YY:
+    canale: rai-news
+    id: PZ--wQCH3YY
+    titolo: 'L''annuncio a sorpresa del Papa: "Mi opero nei prossimi giorni per un nodulo al polmone"'
+    url: https://youtu.be/PZ--wQCH3YY
   rai-news-PZ3lqYDpFgI:
     canale: rai-news
     id: PZ3lqYDpFgI
@@ -34932,6 +35052,11 @@ video:
     id: RAe-kskDkYE
     titolo: The emotions of the cover night of the 2026 Sanremo Festival
     url: https://youtu.be/RAe-kskDkYE
+  rai-news-RDI-gVzi0Po:
+    canale: rai-news
+    id: RDI-gVzi0Po
+    titolo: Corsa contro il tempo per salvare uno speleologo in una grotta franata in Sardegna
+    url: https://youtu.be/RDI-gVzi0Po
   rai-news-RDcXrhkpj1Q:
     canale: rai-news
     id: RDcXrhkpj1Q
@@ -36502,6 +36627,11 @@ video:
     id: bHiTB-UurRs
     titolo: Syria, the pogrom on the Alawites, among the thousand dead also women and children
     url: https://youtu.be/bHiTB-UurRs
+  rai-news-bJqnZr1gn0A:
+    canale: rai-news
+    id: bJqnZr1gn0A
+    titolo: 'MappaMondi: Dal voto americano al mondo: cosa cambia se Trump perde il Congresso'
+    url: https://youtu.be/bJqnZr1gn0A
   rai-news-bN7bxGeIUME:
     canale: rai-news
     id: bN7bxGeIUME
@@ -36882,6 +37012,11 @@ video:
     id: e5Dup9gKE-o
     titolo: Gaza Peace Agreement at Risk
     url: https://youtu.be/e5Dup9gKE-o
+  rai-news-e6-ZvRZ24AE:
+    canale: rai-news
+    id: e6-ZvRZ24AE
+    titolo: I due messaggi di Papa Leone nell'annuncio della sua malattia
+    url: https://youtu.be/e6-ZvRZ24AE
   rai-news-e6dbT8IjW6M:
     canale: rai-news
     id: e6dbT8IjW6M
@@ -37052,6 +37187,11 @@ video:
     id: f8MZpVtZpmM
     titolo: The Faces of Work - TG2 Dossier
     url: https://youtu.be/f8MZpVtZpmM
+  rai-news-fA7Xw-2HEfk:
+    canale: rai-news
+    id: fA7Xw-2HEfk
+    titolo: 'Prete coraggio sfida la camorra, Don Coluccia col megafono sotto casa del boss: "Sei un vigliacco"'
+    url: https://youtu.be/fA7Xw-2HEfk
   rai-news-fCRIaJcV9PM:
     canale: rai-news
     id: fCRIaJcV9PM
@@ -37452,6 +37592,11 @@ video:
     id: hted0W83p78
     titolo: Nuovo raid USA su una barca di "narcos", tensioni con il Venezuela
     url: https://youtu.be/hted0W83p78
+  rai-news-hw9J2FH1Qds:
+    canale: rai-news
+    id: hw9J2FH1Qds
+    titolo: I piani segreti di Mosca per colpire i vertici della difesa europea
+    url: https://youtu.be/hw9J2FH1Qds
   rai-news-hy4uU16ociQ:
     canale: rai-news
     id: hy4uU16ociQ
@@ -37592,6 +37737,11 @@ video:
     id: jFVXF64Kp40
     titolo: L’incontro di David Attenborough con i gorilla che cambiò il modo di guardare la natura in tv
     url: https://youtu.be/jFVXF64Kp40
+  rai-news-jFYsVkk_wnA:
+    canale: rai-news
+    id: jFYsVkk_wnA
+    titolo: 'I corridori chiedono più sicurezza: partenza ritardata al Giro di Lombardia'
+    url: https://youtu.be/jFYsVkk_wnA
   rai-news-jG3AwF10gos:
     canale: rai-news
     id: jG3AwF10gos
@@ -37637,6 +37787,11 @@ video:
     id: jRV1VPrm4EY
     titolo: 'MappaMondi: Who will pay for the victims of Crans-Montana?'
     url: https://youtu.be/jRV1VPrm4EY
+  rai-news-jVHcC3iIRuA:
+    canale: rai-news
+    id: jVHcC3iIRuA
+    titolo: 'L''annuncio a sorpresa del Papa: "Mi opero nei prossimi giorni per un nodulo al polmone"'
+    url: https://youtu.be/jVHcC3iIRuA
   rai-news-jWkcGgkbmBQ:
     canale: rai-news
     id: jWkcGgkbmBQ
@@ -37752,6 +37907,11 @@ video:
     id: kNwJuzFoPqg
     titolo: Medici e infermieri in fuga dalla sanità pubblica
     url: https://youtu.be/kNwJuzFoPqg
+  rai-news-kRXvyGa6QwE:
+    canale: rai-news
+    id: kRXvyGa6QwE
+    titolo: Nepal, un ponte trascinato via come un giocattolo dalla furia dell'acqua
+    url: https://youtu.be/kRXvyGa6QwE
   rai-news-kT9jr-Fqk5Q:
     canale: rai-news
     id: kT9jr-Fqk5Q
@@ -38037,6 +38197,11 @@ video:
     id: mXvnC3XrxTo
     titolo: Afghanistan senza pace, cosa succede oggi nel Paese dei Talebani
     url: https://youtu.be/mXvnC3XrxTo
+  rai-news-mYMMbBjA2rM:
+    canale: rai-news
+    id: mYMMbBjA2rM
+    titolo: Don Coluccia col megafono sotto casa del boss
+    url: https://youtu.be/mYMMbBjA2rM
   rai-news-mYQNPs79o8w:
     canale: rai-news
     id: mYQNPs79o8w
