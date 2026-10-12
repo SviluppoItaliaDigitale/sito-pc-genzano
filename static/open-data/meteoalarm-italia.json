@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-11T22:43:30+00:00",
+  "generato": "2026-10-12T01:48:44+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 18,
-  "scaduti_scartati": 9,
-  "in_corso": 3,
+  "avvisi": 16,
+  "scaduti_scartati": 11,
+  "in_corso": 5,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -62,19 +62,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261011105941.034"
   },
   {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-11T08:00:00+00:00",
-   "fine": "2026-10-11T23:59:00+00:00",
-   "emesso": "2026-10-11T08:59:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261011105941.026"
-  },
-  {
    "in_corso": false,
    "regione": "Sicilia",
    "fenomeno": "Temporali",
@@ -114,7 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261011105941.036"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -153,7 +140,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261011105941.031"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -167,19 +154,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-11T17:00:00+00:00",
-   "fine": "2026-10-11T23:59:00+00:00",
-   "emesso": "2026-10-11T08:59:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261011105941.025"
-  },
-  {
-   "in_corso": false,
    "regione": "Marche",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -218,7 +192,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261011105941.033"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
