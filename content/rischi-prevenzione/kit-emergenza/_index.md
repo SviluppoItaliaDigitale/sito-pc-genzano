@@ -231,6 +231,8 @@ Per una verifica strutturata puoi usare la **[checklist A4 stampabile](/formazio
 
 ## Vedi anche
 
+- [Calcolatore della scorta per 72 ore](/calcolatore-scorta/) — acqua, pasti e farmaci per la tua casa, con la lista della spesa
+- [Piano di continuità domestica](/formazione/schede-stampabili/piano-continuita-domestica/) e [scheda da frigorifero](/formazione/schede-stampabili/scheda-frigorifero/) — due fogli A4 da compilare e tenere in vista
 - [Piano di emergenza familiare](/piano-familiare/) — prepara il piano per la tua famiglia
 - [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/) — azioni pratiche per scenario
 - [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) — anziani, persone con disabilità, terapie croniche

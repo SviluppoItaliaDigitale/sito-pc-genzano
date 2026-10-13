@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Avvento della sicurezza — 24 piccoli gesti dal 1° al 24 dicembre</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/avvento-della-sicurezza/">
+  <meta name="description" content="Calendario A4 da stampare: un piccolo gesto di prevenzione al giorno dal 1° al 24 dicembre, per arrivare alle feste con casa, kit e piano di famiglia pronti.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .av-intro {
+      font-size: 0.86rem;
+      line-height: 1.4;
+      margin: 0 0 0.5rem 0;
+    }
+    .av-griglia {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+      margin: 0.3rem 0 0.5rem 0;
+      list-style: none;
+      padding: 0;
+      counter-reset: giorno;
+    }
+    .av-giorno {
+      border: 1.5px solid var(--scheda-blu);
+      border-radius: 8px;
+      padding: 0.35rem 0.45rem 0.4rem 0.45rem;
+      background: #fcfcfc;
+      font-size: 0.74rem;
+      line-height: 1.3;
+      min-height: 5.1rem;
+      position: relative;
+      break-inside: avoid;
+    }
+    .av-giorno::before {
+      counter-increment: giorno;
+      content: counter(giorno);
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--scheda-blu);
+      margin-bottom: 0.1rem;
+    }
+    .av-giorno .av-fatto {
+      position: absolute;
+      top: 0.35rem;
+      right: 0.4rem;
+      width: 0.95rem;
+      height: 0.95rem;
+      border: 1.5px solid var(--scheda-blu);
+      border-radius: 3px;
+    }
+    .av-giorno.av-festa { background: #fff8e1; border-color: var(--scheda-oro); }
+    .av-giorno.av-festa::before { color: var(--scheda-oro); }
+    .av-fonte {
+      font-size: 0.72rem;
+      color: #495057;
+      line-height: 1.35;
+      margin: 0.2rem 0 0 0;
+    }
+    .av-fonte strong { color: var(--scheda-blu); }
+    @media (max-width: 600px) {
+      .av-griglia { grid-template-columns: 1fr 1fr; }
+      .av-giorno { min-height: 0; }
+    }
+    @media print {
+      body { background: #fff; }
+      .av-giorno { background: #fff; }
+      .av-giorno.av-festa { background: #fff; }
+    }
+    /* Controllo fogli di stampa: un solo foglio con la banda delle affiliazioni. */
+    @media print { html { font-size: 92%; } }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Avvento della sicurezza — A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Avvento della sicurezza</h1>
+        <div class="scheda-sottotitolo">Un piccolo gesto al giorno, dal 1° al 24 dicembre, per arrivare alle feste con la casa pronta</div>
+      </div>
+    </header>
+
+    <p class="av-intro">Ogni casella è un gesto che richiede pochi minuti. Fatelo insieme, spuntate la casella e il 24 dicembre avrete numeri, kit, piano di famiglia e una casa più preparata. Le pagine citate sono su <strong>protezionecivilegenzano.it</strong>.</p>
+
+    <ol class="av-griglia" aria-label="I 24 gesti dell'Avvento della sicurezza">
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Salva il <strong>112</strong> nel telefono di tutti e spiega ai bambini che è l'unico numero di emergenza da chiamare.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Prova la torcia: si accende? Metti le pile di scorta accanto.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Scegli il <strong>contatto fuori zona</strong> della famiglia e condividi il suo numero con tutti.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Stampa la <strong>scheda da frigorifero</strong> e appendila dove tutti la vedono.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Trova l'<strong>area di attesa</strong> più vicina a casa (pagina «Aree di attesa») e scrivila sulla scheda.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Carica il power bank e tienilo sempre carico da oggi in poi.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Fai il percorso di casa a luci spente con la torcia: dove sono gli ostacoli?</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Controlla le scadenze dei farmaci di casa e butta quelli scaduti in farmacia.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>La caldaia ha avuto la manutenzione? Se no, prenota il tecnico.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Luci a pile per le emergenze, non candele; le candele delle feste mai accese senza un adulto che le guardi.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>In auto: coperta, raschietto e catene o gomme invernali secondo l'ordinanza in vigore.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Leggi il bollettino di allerta di oggi nella pagina «Allerte meteo» e scopri che cosa dice la Zona F.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Prova del terremoto in famiglia: sotto il tavolo, testa protetta, si resta lì finché un adulto dice che la scossa è finita.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Controlla che corridoio, scale e uscite di casa siano liberi da ostacoli.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Metti le copie dei documenti in una busta impermeabile nel kit.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Acqua: circa 4 litri a persona al giorno per 3 giorni. Quanti litri servono a casa tua?</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Scrivi l'elenco delle terapie, delle allergie e dei medici di casa e mettilo nel kit.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Mostra a tutti dove si chiudono gas, acqua e interruttore generale.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Parla con i ragazzi dei petardi: le regole di Capodanno si decidono prima.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Attiva le notifiche di allerta dalla pagina «Allerte meteo» e salva la pagina tra i preferiti.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Prova la radio a pile: si sintonizza? È un modo per avere notizie senza corrente e senza rete.</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Bussa a un vicino che vive solo: ha il tuo numero? Tu hai il suo?</li>
+      <li class="av-giorno"><span class="av-fatto" aria-hidden="true"></span>Rileggete insieme il <strong>piano di famiglia</strong>: dove ci ritroviamo, chi chiama chi.</li>
+      <li class="av-giorno av-festa"><span class="av-fatto" aria-hidden="true"></span>Segna in agenda il controllo del kit al prossimo cambio dell'ora. Buone feste in sicurezza!</li>
+    </ol>
+
+    <p class="av-fonte">I gesti riprendono le pagine <strong>Piano di famiglia</strong>, <strong>Kit di emergenza</strong>, <strong>Blackout</strong>, <strong>Rischio sismico</strong> e <strong>Allerte meteo</strong> del sito; per il terremoto seguono la campagna «Io non rischio» del Dipartimento della Protezione Civile. Versione per l'estate: <strong>Estate sicura</strong>, 31 gesti per luglio.</p>
+
+    <footer class="scheda-footer">
+      <span>Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma</span>
+      <span class="scheda-site">protezionecivilegenzano.it/piano-familiare/</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

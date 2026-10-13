@@ -228,4 +228,5 @@ Per sviluppatori e altri enti: lo stato di allerta è disponibile anche come [fe
 - [Rischi e prevenzione](/rischi-prevenzione/) — cosa fare per ogni tipo di rischio
 - [Cartografia operativa](/cartografia/) — mappe del territorio e aree di emergenza
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
+- [Non è vero che](/non-e-vero-che/) — durante un evento, le voci false smentite con data, ora e fonte
 - [Piano di emergenza familiare](/piano-familiare/) — il piano per la tua famiglia

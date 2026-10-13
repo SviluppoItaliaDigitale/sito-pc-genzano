@@ -64,6 +64,11 @@ Il fumo dei rifiuti è diverso da quello dell'erba secca: può contenere sostanz
 
 Con questa uscita salgono a **206 gli interventi registrati dal 4 aprile**, data di adozione del registro operativo digitale: oltre **600 ore** e più di **10.300 chilometri**. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 
+## Cosa impariamo
+
+- **I rifiuti abbandonati sono combustibile.** Nel cumulo di via di Pozzi Bonelli c'erano mobili rotti, pannelli, pallet di legno, rami e canne. Lo spiega anche l'articolo sull'[incendio di Aprilia del 22 settembre](/comunicazioni/2026-09-22-incendio-sterpaglie-rifiuti-carano/): i rifiuti rendono più difficile lo spegnimento.
+- **Sul posto il Gruppo segue le indicazioni dei Vigili del Fuoco.** Con l'arrivo dei Vigili del Fuoco e della Polizia di Stato la squadra ha potuto entrare nel terreno recintato. I Vigili del Fuoco hanno chiesto di cambiare mezzo e hanno autorizzato la chiusura dell'intervento del Gruppo. La pagina sul [Servizio Nazionale della Protezione Civile](/conoscere/servizio-nazionale/) spiega chi interviene in un'emergenza.
+
 ## Cosa puoi fare tu
 
 - **Chiama il 112** appena vedi fumo o fiamme. È l'unico numero: la centrale smista l'intervento a Vigili del Fuoco e squadre antincendio.

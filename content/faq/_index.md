@@ -152,4 +152,5 @@ Per sigle e termini tecnici, consulta il [Glossario di Protezione Civile](/gloss
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
 - [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio
+- [Biblioteca delle idee sbagliate](/rischi-prevenzione/idee-sbagliate/) — i luoghi comuni sulle emergenze, con fonte e domanda di verifica
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Scheda da frigorifero — numeri, area di attesa e gesti essenziali</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/scheda-frigorifero/">
+  <meta name="description" content="Un A4 da compilare e tenere in vista: i numeri di emergenza, l'area di attesa del tuo quartiere a Genzano di Roma e tre gesti per ogni rischio.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .fr-numeri {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 0.5rem;
+      margin: 0.2rem 0 0.6rem 0;
+    }
+    .fr-numero {
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      padding: 0.4rem 0.6rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .fr-numero .fr-cifre {
+      display: block;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--scheda-blu);
+      letter-spacing: 0.04em;
+    }
+    .fr-numero.fr-112 {
+      background: #fde8ea;
+      border-color: var(--scheda-rosso);
+    }
+    .fr-numero.fr-112 .fr-cifre { color: var(--scheda-rosso); font-size: 2.4rem; }
+    .fr-numero .fr-nome { display: block; font-size: 0.8rem; font-weight: 700; }
+    .fr-numero .fr-nota { display: block; font-size: 0.72rem; color: #495057; }
+    .fr-numero.fr-compila { background: #f0f4f8; border-style: dashed; }
+    .fr-numero .fr-linea-box {
+      display: block;
+      border-bottom: 1.5px solid var(--scheda-blu);
+      height: 1.5rem;
+      margin: 0.2rem 0.3rem 0.25rem 0.3rem;
+    }
+    .fr-campi {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 1rem;
+      font-size: 0.82rem;
+      margin: 0.3rem 0 0.6rem 0;
+    }
+    .fr-campi div { display: flex; align-items: baseline; gap: 0.4rem; }
+    .fr-campi strong { color: var(--scheda-blu); white-space: nowrap; }
+    .fr-linea {
+      flex: 1;
+      border-bottom: 1.5px solid var(--scheda-bordo);
+      min-height: 1.25rem;
+    }
+    .fr-h2 {
+      color: var(--scheda-blu);
+      font-size: 0.98rem;
+      margin: 0.5rem 0 0.3rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+      padding-bottom: 0.15rem;
+    }
+    .fr-aree {
+      columns: 2;
+      column-gap: 1.2rem;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin: 0.2rem 0 0.4rem 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .fr-aree li { break-inside: avoid; margin: 0 0 0.12rem 0; padding-left: 1.3rem; position: relative; }
+    .fr-aree li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.12rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 1.5px solid var(--scheda-blu);
+      border-radius: 2px;
+    }
+    .fr-aree strong { color: var(--scheda-blu); }
+    .fr-gesti {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.45rem;
+      margin: 0.3rem 0 0.4rem 0;
+    }
+    .fr-gesto {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 8px;
+      padding: 0.4rem 0.55rem;
+      background: #fcfcfc;
+      break-inside: avoid;
+    }
+    .fr-gesto h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 0.88rem;
+      color: var(--scheda-blu);
+    }
+    .fr-gesto ol {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.76rem;
+      line-height: 1.3;
+    }
+    .fr-gesto ol li { margin: 0 0 0.15rem 0; }
+    .fr-fonte {
+      font-size: 0.7rem;
+      color: #495057;
+      margin: 0.3rem 0 0 0;
+      line-height: 1.3;
+    }
+    @media (max-width: 600px) {
+      .fr-numeri, .fr-campi { grid-template-columns: 1fr; }
+      .fr-gesti { grid-template-columns: 1fr; }
+      .fr-aree { columns: 1; }
+    }
+    @media print {
+      body { background: #fff; }
+      .fr-gesto { background: #fff; }
+    }
+    /* Controllo fogli di stampa: la scheda deve stare su un foglio con la
+       banda delle affiliazioni. Solo in stampa. */
+    @media print { html { font-size: 90%; } }
+    @media print { .scheda-page { padding: 1.1cm 1.5cm 0.6cm 1.5cm; } }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Scheda da frigorifero — A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Scheda da frigorifero</h1>
+        <div class="scheda-sottotitolo">Numeri, area di attesa e tre gesti per ogni rischio — da compilare e tenere in vista</div>
+      </div>
+    </header>
+
+    <div class="fr-numeri" role="list" aria-label="Numeri di emergenza">
+      <div class="fr-numero fr-112" role="listitem">
+        <span class="fr-cifre">112</span>
+        <span class="fr-nome">Numero Unico di Emergenza</span>
+        <span class="fr-nota">Qualsiasi emergenza: sanitaria, incendio, soccorso, ordine pubblico</span>
+      </div>
+      <div class="fr-numero" role="listitem">
+        <span class="fr-cifre">803 555</span>
+        <span class="fr-nome">Sala Operativa Protezione Civile Regione Lazio</span>
+        <span class="fr-nota">Segnalazioni non urgenti</span>
+      </div>
+      <div class="fr-numero fr-compila" role="listitem">
+        <span class="fr-nome">Il nostro contatto fuori zona</span>
+        <span class="fr-linea fr-linea-box" aria-hidden="true"></span>
+        <span class="fr-nota">Nome e numero: in emergenza tutti lo chiamano</span>
+      </div>
+    </div>
+
+    <div class="fr-campi">
+      <div><strong>Medico o pediatra:</strong><span class="fr-linea"></span></div>
+      <div><strong>Farmaci che non possono mancare:</strong><span class="fr-linea"></span></div>
+      <div><strong>Punto di ritrovo fuori casa:</strong><span class="fr-linea"></span></div>
+      <div><strong>Dove si chiudono gas, luce e acqua:</strong><span class="fr-linea"></span></div>
+    </div>
+
+    <h2 class="fr-h2">La nostra area di attesa: segna quella più vicina a casa</h2>
+    <ul class="fr-aree">
+      <li><strong>AA1</strong> Palazzo Sforza Cesarini — Piazza Tommaso Frasconi</li>
+      <li><strong>AA2</strong> Via Piave — parcheggio</li>
+      <li><strong>AA3</strong> Via Toscana — parcheggio incrocio Via Lazio</li>
+      <li><strong>AA4</strong> Via Enrico Mattei — parcheggio</li>
+      <li><strong>AA5</strong> Via Napoli — parcheggio incrocio Via Emilia Romagna</li>
+      <li><strong>AA6</strong> Palazzetto dello Sport — parcheggio Via G. di Vittorio</li>
+      <li><strong>AA7</strong> Scuola C. A. dalla Chiesa — parcheggio, Via Appia Vecchia</li>
+      <li><strong>AA8</strong> Zona Industriale — parcheggio Via del Lavoro</li>
+      <li><strong>AA9</strong> Colli di Cicerone — parcheggio Via Colli di Cicerone</li>
+      <li><strong>AA10</strong> Landi — Piazzale Frazione Landi</li>
+    </ul>
+    <p class="fr-fonte">Le aree di attesa sono i luoghi sicuri del Piano di emergenza comunale dove raccogliersi dopo un evento. Mappa e indicazioni: <strong>protezionecivilegenzano.it/aree-attesa/</strong></p>
+
+    <h2 class="fr-h2">Tre gesti per ogni rischio</h2>
+    <div class="fr-gesti">
+      <section class="fr-gesto">
+        <h3>Terremoto</h3>
+        <ol>
+          <li>Durante la scossa riparati sotto un tavolo robusto o vicino a un muro portante e proteggi la testa.</li>
+          <li>Durante la scossa non correre fuori e non usare scale né ascensore.</li>
+          <li>Finita la scossa esci con calma per le scale, mai in ascensore, e raggiungi l'area di attesa.</li>
+        </ol>
+      </section>
+      <section class="fr-gesto">
+        <h3>Incendio</h3>
+        <ol>
+          <li>Fuoco in casa: esci, chiudi la porta dietro di te, chiama il 112; niente ascensore.</li>
+          <li>Incendio di vegetazione: chiama il 112, di' dove sei e da che parte va il fumo; non avvicinarti alle fiamme.</li>
+          <li>Se il fuoco minaccia la casa e non puoi allontanarti: chiudi porte, finestre e prese d'aria.</li>
+        </ol>
+      </section>
+      <section class="fr-gesto">
+        <h3>Alluvione e temporale</h3>
+        <ol>
+          <li>Non attraversare mai strade o sottopassi allagati, a piedi o in auto.</li>
+          <li>Se l'acqua entra in casa sali ai piani alti; mai in cantina o garage.</li>
+          <li>Durante i fulmini stai al chiuso, lontano da alberi, pali e finestre.</li>
+        </ol>
+      </section>
+      <section class="fr-gesto">
+        <h3>Blackout</h3>
+        <ol>
+          <li>Usa la torcia elettrica, mai le candele.</li>
+          <li>Scollega gli elettrodomestici e lascia accesa una sola lampada.</li>
+          <li>Tieni chiusi frigorifero e congelatore; niente generatori, bracieri o fornelli da campeggio in locali chiusi.</li>
+        </ol>
+      </section>
+      <section class="fr-gesto">
+        <h3>Vento forte</h3>
+        <ol>
+          <li>Resta in casa, lontano da finestre e vetrate.</li>
+          <li>All'aperto allontanati da alberi, pali, impalcature e cartelloni.</li>
+          <li>In auto rallenta ed evita le strade alberate.</li>
+        </ol>
+      </section>
+      <section class="fr-gesto">
+        <h3>Caldo intenso</h3>
+        <ol>
+          <li>Bevi molta acqua anche senza sete; evita alcolici.</li>
+          <li>Evita di uscire nelle ore più calde, dalle 11 alle 18.</li>
+          <li>Mai persone o animali in auto parcheggiata al sole.</li>
+        </ol>
+      </section>
+    </div>
+
+    <p class="fr-fonte">I gesti riprendono le pagine <strong>protezionecivilegenzano.it/rischi-prevenzione/</strong>, che seguono le indicazioni del Dipartimento della Protezione Civile (per il terremoto, l'alluvione e l'incendio la campagna «Io non rischio») e, per il caldo, del Ministero della Salute. In caso di allerta meteo consulta <strong>protezionecivilegenzano.it/allerte-meteo/</strong>. Il Gruppo Comunale non si attiva direttamente dai cittadini: in emergenza chiama sempre il 112.</p>
+
+    <footer class="scheda-footer">
+      <span>Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma</span>
+      <span class="scheda-site">protezionecivilegenzano.it/piano-familiare/</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

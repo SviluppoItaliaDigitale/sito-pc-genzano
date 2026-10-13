@@ -59,6 +59,13 @@ Verso le 22 un altro cittadino ci ha segnalato un **ramo caduto** in via Achille
 
 Quando il terreno è asciutto, l'acqua tende a scorrere in superficie più che a infiltrarsi. Lo abbiamo spiegato nell'[articolo del 22 settembre](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/). Se i tombini sono ostruiti da foglie e detriti, la rete di scolo smaltisce meno acqua. Con una pioggia concentrata in poche ore, la rete può non riuscire a smaltirla e l'acqua risale in superficie.
 
+## Cosa impariamo
+
+- **L'allerta può cambiare nel corso della giornata.** Il bollettino del 7 ottobre prevedeva per l'8 un'allerta gialla. Quello di mezzogiorno dell'8 ha portato la Zona F ad allerta arancione. Il livello aggiornato si legge nella pagina [Allerte meteo](/allerte-meteo/).
+- **Con il maltempo cadono rami sulle strade.** Nella notte la squadra ha tolto rami dalla carreggiata in più vie. In via di Soriano ha rimosso i detriti di un grosso albero colpito da un fulmine. Lungo le strade alberate il rischio di caduta rami aumenta: [vento forte](/rischi-prevenzione/vento-forte/).
+- **L'acqua sulla strada può bloccare un'auto.** In via San Gennaro il Gruppo ha messo in sicurezza un'auto in panne in mezzo all'acqua. In serata è intervenuto per il sottopasso ferroviario allagato di via Montegiove. Come spiega la pagina sul [rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/), bastano pochi centimetri d'acqua per far perdere aderenza o spegnere il motore.
+- **Una pioggia concentrata può superare la capacità dei tombini.** In poche ore la rete di scolo può non smaltire tutta l'acqua, che risale in superficie. Se i tombini sono ostruiti da foglie e detriti, smaltiscono ancora meno acqua. Lo spiega l'articolo sulla [prima pioggia intensa d'autunno](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/).
+
 ## Cosa puoi fare tu
 
 - **Non attraversare un tratto di strada allagato**, a piedi o in auto. Non si vede cosa c'è sotto il livello dell'acqua: un tombino scoperchiato può essere invisibile.

@@ -57,6 +57,10 @@ dati:
         perche: "I Colli Albani sono un vulcano quiescente, non spento. Vale per il vulcano e per i suoi crateri-lago."
         contesto: 'Colli Albani|Vulcano Laziale|apparato vulcanico|cratere|crateri|distretto vulcanico'
         stessa_frase: true
+    escludi:
+      # La Biblioteca delle idee sbagliate cita «spento» come luogo comune da
+      # smentire, con la risposta «quiescente» subito sotto.
+      - "content/rischi-prevenzione/idee-sbagliate.md"
 
   - id: colli-albani-sorveglianza
     dato: "Chi sorveglia i Colli Albani"
@@ -172,9 +176,11 @@ dati:
         salvo_se_prima: '\b(?:non|mai|evita(?:re|te)?|niente)\s+(?:(?:devi|dovete|deve|si|più|di|bisogna|occorre|serve)\s+){0,2}$'
     escludi:
       # Esercizi che citano il vecchio numero per insegnare che è sbagliato:
-      # il vero/falso del kit primaria e la soluzione del cruciverba.
+      # il vero/falso del kit primaria, la soluzione del cruciverba e la
+      # Biblioteca delle idee sbagliate (voce «si chiama il 115»).
       - "content/formazione/kit-scuola-primaria.md"
       - "static/formazione/schede-stampabili/cruciverba-secondaria2/index.html"
+      - "content/rischi-prevenzione/idee-sbagliate.md"
 
   - id: genzano-zona-sismica
     dato: "Classificazione sismica di Genzano di Roma"

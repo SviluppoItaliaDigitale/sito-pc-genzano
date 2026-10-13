@@ -90,6 +90,7 @@ Per ogni link `[testo](/path/)` interno verifica con `find content -path "*<path
 ### 7. Strutture rigide
 - Pagine rischio in `/rischi-prevenzione/`: ordine fisso `Perché rilevante → PRIMA → DURANTE → DOPO → cosa-non-fare → chi-chiamare`. Non spostarle.
 - Pagine legali (privacy/note-legali/accessibilita/social-media-policy): se modifichi contenuto sostanziale, aggiorna `dataUltimaRevisione: AAAA-MM-GG`.
+- **Resoconti di interventi e attività del Gruppo** (badge `Attività`, `Aggiornamento`, `Esercitazione`; maltempo, incendi, ricerche, presìdi): sezione fissa `## Cosa impariamo` prima di «Cosa puoi fare tu» e «Per approfondire» (rule 02 § "Resoconti degli interventi", dal 13/10/2026): 2-4 lezioni di prevenzione ricavate solo da ciò che l'articolo racconta, ognuna con il link alla pagina del sito che la spiega, senza dati sensibili né giudizi su persone. Sezione assente → ⚠️ DA SISTEMARE (aggiungila); lezione con fatti non presenti nell'articolo o con nomi/targhe/indirizzi privati → ❌ BLOCCANTE.
 
 ### 8. Allegati e PDF
 Se l'utente ha fornito un PDF, deve essere in `static/allegati/AAAA/` o `static/manuali/` (mai in `static/documenti/` che non viene deployata). Frontmatter `allegati:` con `titolo`, `url`, `dimensione`.
