@@ -39,9 +39,9 @@ Per tutta la notte la squadra ha usato il pickup **EVO Cross 4**.
 
 ## La giornata dell'8 ottobre
 
-Verso le 9 un cittadino ci ha segnalato un'auto in panne in mezzo all'acqua, in **via San Gennaro**. L'abbiamo messa in sicurezza con il verricello del pickup. Sul posto è intervenuto anche il Fiat Doblò.
+Verso le 9 è arrivata la segnalazione di un'auto in panne in mezzo all'acqua, in **via San Gennaro**. L'abbiamo messa in sicurezza con il verricello del pickup. Sul posto è intervenuto anche il Fiat Doblò.
 
-Nella stessa mattina, su richiesta del sindaco, la squadra è intervenuta per un allagamento in viale Fratelli Cervi. Prima delle 10 un altro cittadino ci ha chiesto di tornare in via di Soriano. Bisognava verificare i danni lasciati dall'albero colpito dal fulmine.
+Nella stessa mattina, su richiesta del sindaco, la squadra è intervenuta per un allagamento in viale Fratelli Cervi. Prima delle 10 i volontari sono tornati in via di Soriano, per verificare i danni lasciati dall'albero colpito dal fulmine.
 
 Verso le 14 il sindaco ci ha segnalato un ramo in largo Monsignor Grassi. Occupava parte della corsia, e la squadra lo ha tagliato.
 
@@ -51,9 +51,9 @@ Secondo le cronache locali, a Genzano alcuni tombini non hanno retto. L'acqua è
 
 ## La sera dell'8 ottobre
 
-Verso le 20.30 la squadra è intervenuta per un **sottopasso ferroviario allagato** in via Montegiove. Poco prima delle 21.30 un cittadino ci ha chiesto un servizio tecnico al bivio per Lanuvio.
+Verso le 20.30 la squadra è intervenuta per un **sottopasso ferroviario allagato** in via Montegiove. Poco prima delle 21.30 c'è stato un servizio tecnico al bivio per Lanuvio.
 
-Verso le 22 un altro cittadino ci ha segnalato un **ramo caduto** in via Achille Grandi, all'altezza del liceo Vailati. La squadra ha lavorato sul posto fin quasi alle 23.
+Verso le 22 è arrivata la segnalazione di un **ramo caduto** in via Achille Grandi, all'altezza del liceo Vailati. La squadra ha lavorato sul posto fin quasi alle 23.
 
 ## Perché una pioggia concentrata fa tanti danni
 
