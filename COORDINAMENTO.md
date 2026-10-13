@@ -121,7 +121,7 @@ Indicazioni dell'utente dell'8 ottobre 2026.
 
 Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla prima apertura della bacheca, e sposta la voce in «Archiviati» quando la risposta è applicata.
 
-- Nessuna domanda aperta.
+- **2026-10-13 — da Claude ad Alessandro — Ambienti Codex per i passaggi automatici.** La prima richiesta automatica (PR #1365) non è partita: il bot ha risposto «To use Codex here, create an environment for this repo». Serve, una volta sola e solo dal tuo account ChatGPT: https://chatgpt.com/codex/cloud/settings/environments → «Create environment» → repository `SviluppoItaliaDigitale/sito-pc-genzano` (impostazioni predefinite), poi lo stesso per `sito-misericordia-ariccia`, `cooprimavera`, `social-pc-genzano` e `assistente-personale`. Fino ad allora i lavori che partirebbero verso ChatGPT li fa Claude da sola, come previsto dal protocollo. Quando è fatto, Claude rilancia la prova e archivia questa voce.
 
 ## Lavori in corso
 
@@ -131,6 +131,44 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 ## Richieste
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li avvia Claude da sola (protocollo comune, § «Passaggio automatico a ChatGPT»: voce qui sotto con la nota «passata in automatico» e PR in bozza); per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
+
+- **2026-10-13 — da Claude a ChatGPT — Illustrazione del temporale: versione verticale per telefono** (passata in automatico; PR #1365; ramo `chatgpt/illustrazione-temporale-mobile-20261013`) — **fatta, PR #1365**
+  - **Esito (13/10/2026, Claude).** Codex non ha potuto lavorare: sul repository non esiste ancora un ambiente Codex nell'account ChatGPT di Alessandro (risposta del bot sulla PR: «create an environment for this repo»); finché non viene creato, nessun passaggio automatico parte. Il file l'ha fatto Claude sullo stesso ramo (disegni del sorgente riusati a scala 0,68, resa controllata a 720 px, controlli dello script e build eseguiti) e la PR si chiude con `passa-a.py chiudi`.
+  - **1. Obiettivo.**
+    Creare la versione verticale per telefono dell'illustrazione didattica «Come un temporale può provocare altri problemi», così che sulla pagina `/rischi-prevenzione/` chi legge da smartphone veda i quattro riquadri impilati, con testi leggibili, invece della tavola orizzontale rimpicciolita.
+  - **2. File.**
+    - `static/formazione/illustrazioni-udl/temporale-effetti-cascata-mobile.svg` (nuovo; nessun altro file va toccato)
+    - Sorgente da cui partire, da non modificare: `static/formazione/illustrazioni-udl/temporale-effetti-cascata.svg`
+  - **3. Che cosa fare.**
+    1. Aprire il sorgente `temporale-effetti-cascata.svg` (1200×620): contiene quattro riquadri affiancati, ciascuno con una testata colorata, un disegno e una didascalia su due righe, tre frecce fra i riquadri, un titolo in alto e una nota in basso.
+    2. Scrivere il nuovo file con `width="720" height="1180" viewBox="0 0 720 1180"`, `role="img"`, `aria-labelledby="tit desc"`, e gli stessi `<title id="tit">` e `<desc id="desc">` del sorgente, parola per parola.
+    3. Sfondo: lo stesso rettangolo con gradiente `paper` (`#ffffff` → `#eff5f8`, `rx="24"`) a tutta tela e la stessa fascia blu `#126084` alta 14 px in testa.
+    4. Titolo «Come un temporale può provocare altri problemi» in alto, Arial grassetto, dimensione 30, colore `#123957`, su due righe se non sta in 720 px di larghezza (spezzare dopo «temporale»).
+    5. I quattro riquadri impilati in colonna, nell'ordine 1 → 4, ciascuno largo 640 px (margine 40 px a sinistra e a destra), con la stessa testata colorata del sorgente (`#17678e`, `#5e6476`, `#9c5b26`, `#087d80`) e gli stessi testi di testata: «1. TEMPORALE», «2. DANNI ALLE LINEE», «3. BLACKOUT», «4. ALTRI EFFETTI». Testata alta 56 px, testo Arial grassetto 24, bianco.
+    6. Dentro ogni riquadro, a sinistra, il disegno del sorgente riusato tale e quale: copiare i `<path>`, `<circle>` e `<rect>` del gruppo corrispondente (quelli dentro i `<g transform="translate(… 0)">` che seguono i quattro riquadri), senza ridisegnarli, applicando solo una traslazione e, se serve, una scala 0,85 perché stiano in un'area di circa 230×200 px. A destra del disegno la didascalia del sorgente, su due righe, Arial 24, colore `#123957`, allineata a sinistra: «Pioggia e vento / intensi», «Alberi o infrastrutture / possono danneggiarsi», «Possibile interruzione / della corrente», «Acqua e apparecchi / possono risentirne».
+    7. Fra un riquadro e il successivo una freccia verticale verso il basso, stesso tratto del sorgente (`#9aabb5`, spessore 5, estremi arrotondati), centrata orizzontalmente.
+    8. In fondo la nota del sorgente, Arial 20, colore `#3b5363`, centrata, su due righe: «Sono conseguenze POSSIBILI, non una catena inevitabile.» / «Prepararsi aiuta a ridurre gli effetti.»
+    9. Tutto deve stare dentro il `viewBox`: nessuna scritta tagliata ai bordi, nessun elemento sotto il fondo della tela; testi mai più piccoli di 20 px.
+  - **4. Vincoli.**
+    - Solo SVG statico: niente `<script>`, niente `<foreignObject>`, niente font esterni né risorse remote (`href` con `http`); font `Arial,sans-serif` come nel sorgente.
+    - Nessun logo e nessuna scritta aggiuntiva oltre a quelle elencate; nessun riferimento a strumenti nei commenti, nei metadati e nei messaggi di commit.
+    - Stessi colori e stesse parole del sorgente: è la stessa figura in formato verticale, non una figura nuova.
+    - Accessibilità: `<title>` e `<desc>` presenti e non vuoti, `role="img"` sulla radice.
+    - Identità dei commit: `Alessandro Cuollo <65465537+SviluppoItaliaDigitale@users.noreply.github.com>` (eseguire `bash scripts/imposta-identita-git.sh` prima del commit); messaggio di commit in italiano, per esempio «Illustrazione del temporale: versione verticale per telefono».
+  - **5. Controlli.**
+    - `python3 scripts/check-illustrazioni-udl.py` → deve stampare una riga che inizia con `OK:` e nessun errore.
+    - `python3 -c "import xml.etree.ElementTree as E; r=E.parse('static/formazione/illustrazioni-udl/temporale-effetti-cascata-mobile.svg').getroot(); print(r.get('viewBox'), r.get('width'), r.get('height'))"` → `0 0 720 1180 720 1180`.
+    - Rendere il file in PNG a 720 px di larghezza (per esempio con Chromium: `chromium --headless --screenshot=/tmp/mobile.png --window-size=720,1180 file:///…/temporale-effetti-cascata-mobile.svg`, oppure con `rsvg-convert` o Inkscape se disponibili) e guardare il risultato: quattro riquadri impilati, testi interi, nessuna sovrapposizione fra disegno e didascalia.
+    - `hugo --minify` deve completare senza errori (la pagina `/rischi-prevenzione/` userà da sola la versione mobile, perché lo shortcode cerca il suffisso `-mobile.svg`).
+  - **6. Consegna.**
+    - Commit sul ramo di questa pull request, con il solo file nuovo.
+    - In `COORDINAMENTO.md` § «Richieste», sullo stesso ramo, accanto alla voce con questo titolo aggiungere «fatta, PR #N» e una riga di esito.
+    - Un commento breve sulla pull request: che cosa è stato fatto, che cosa resta e perché.
+  - **7. Che cosa non fare.**
+    - Non unire la pull request e non segnarla pronta.
+    - Non aprire altre pull request e non creare altri rami.
+    - Non modificare il sorgente orizzontale, lo shortcode, la pagina o altri file.
+    - Non inventare testi o elementi nuovi: se un passo non è eseguibile, scriverlo nel commento e fermarsi lì.
 
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
   - **Quando**: Alessandro ti manda l'export del gestionale interventi (file `.xlsx`, di solito `gcpc-genzano-di-roma_global_reports_*.xlsx`) e scrive «aggiorna gli interventi» o simile. Lavora con **Codex** (serve eseguire gli script): il file va allegato al task.
