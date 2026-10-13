@@ -27,26 +27,9 @@ social_punti:
 
 In un terreno privato bruciavano **sterpaglie e sfalci**: erba secca, rami e canne accumulati, ai margini di un canneto.
 
-{{< galleria titolo="L'intervento in via di Pozzi Bonelli" >}}
 {{< foto src="/images/2026-10-12-pozzi-bonelli-fiamme-recinzione.webp"
          alt="Di notte, oltre una recinzione a rete con paletti di cemento, fiamme alte e fumo arancione fra alberi e sterpi; sullo sfondo le case illuminate di un centro abitato; in primo piano erba e alberi in luce blu e due sagome scure."
          caption="Le fiamme viste da fuori dalla recinzione, con le case illuminate sullo sfondo. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-10-12-pozzi-bonelli-rifiuti-braci.webp"
-         alt="Un mobile di legno rovesciato, un pallet e assi sull'erba accanto a un cumulo carbonizzato, con braci rosse e fumo."
-         caption="Braci e fumo accanto a un mobile di legno e a un pallet. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-10-12-pozzi-bonelli-vigili-fuoco-volontario.webp"
-         alt="Di notte un vigile del fuoco e un volontario in divisa rossa e blu, di spalle, dirigono una lancia verso una nube di fumo bianco e arancione; a destra un mezzo antincendio con il vano posteriore aperto e una persona che maneggia la manichetta."
-         caption="Vigili del Fuoco e volontari al lavoro sul fronte del fumo, con il Mercedes Atego del Gruppo. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-10-12-pozzi-bonelli-volontario-raffreddamento.webp"
-         alt="Un volontario in divisa rossa e blu con mascherina sul viso bagna con la lancia un cumulo di pannelli bianchi e legno da cui sale una grande nube di vapore."
-         caption="Il raffreddamento dei pannelli e del legno, avvolti da una nube di vapore e fumo. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-10-12-pozzi-bonelli-fiamme-canneto.webp"
-         alt="Fiamme e scintille escono da un ceppo bruciato e da un groviglio di materiale carbonizzato ai piedi di un canneto verde."
-         caption="Un focolaio rimasto acceso ai margini del canneto. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-10-12-pozzi-bonelli-vapore-pannelli.webp"
-         alt="Pannelli bianchi e assi annerite a terra davanti a una spessa nube di vapore illuminata da un faro; a destra le canne, al margine sinistro un getto d'acqua."
-         caption="Pannelli e assi bagnati che continuano a fumare durante il raffreddamento. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< /galleria >}}
 
 ## Come è andato l'intervento
 
@@ -54,7 +37,15 @@ Il terreno era recintato e privato. La squadra ha chiesto l'intervento dei **Vig
 
 Il Gruppo era arrivato con il **Land Rover Defender 130**, pickup 4x4 con modulo antincendio da 600 litri. Sul posto i Vigili del Fuoco hanno chiesto di sostituirlo con il **Mercedes Atego**, il mezzo polivalente con impianto antincendio da 6.000 litri. Lo stesso personale ha cambiato mezzo e ha proseguito il lavoro.
 
+{{< foto src="/images/2026-10-12-pozzi-bonelli-vigili-fuoco-volontario.webp"
+         alt="Di notte un vigile del fuoco e un volontario in divisa rossa e blu, di spalle, dirigono una lancia verso una nube di fumo bianco e arancione; a destra un mezzo antincendio con il vano posteriore aperto e una persona che maneggia la manichetta."
+         caption="Vigili del Fuoco e volontari al lavoro sul fronte del fumo, con il Mercedes Atego del Gruppo. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 Il compito del Gruppo è stato il **raffreddamento** dell'area bruciata. Terminate queste operazioni, con l'autorizzazione dei Vigili del Fuoco, la squadra ha comunicato alla Sala Operativa la fine dell'intervento per la parte di sua competenza. Il rientro in sede è avvenuto poco dopo l'una di notte.
+
+{{< foto src="/images/2026-10-12-pozzi-bonelli-fiamme-canneto.webp"
+         alt="Fiamme e scintille escono da un ceppo bruciato e da un groviglio di materiale carbonizzato ai piedi di un canneto verde."
+         caption="Un focolaio rimasto acceso ai margini del canneto. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Perché sterpaglie e sfalci bruciano così a lungo
 
