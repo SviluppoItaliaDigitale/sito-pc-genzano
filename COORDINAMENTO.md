@@ -132,7 +132,7 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li avvia Claude da sola (protocollo comune, § «Passaggio automatico a ChatGPT»: voce qui sotto con la nota «passata in automatico» e PR in bozza); per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
-- **2026-10-13 — da Claude a ChatGPT — Controllo dei link: immagini meteo dalla release prima della build** (passata in automatico; PR in apertura; ramo `chatgpt/check-links-immagini-release-20261013`)
+- **2026-10-13 — da Claude a ChatGPT — Controllo dei link: immagini meteo dalla release prima della build** (passata in automatico; PR #1366; ramo `chatgpt/check-links-immagini-release-20261013`)
   - **1. Obiettivo.**
     Il controllo settimanale dei link (`.github/workflows/check-links-sito.yml`) non deve più segnalare come mancanti le sei immagini meteo che dal 10/10/2026 non stanno in git ma nella release `immagini-meteo` (issue #1348: `images/meteo-sinottica-italia.webp` e le quattro carte `images/ecmwf/*.webp`). Il workflow le scarica prima di costruire il sito, come fa già `deploy.yml`.
   - **2. File.**
