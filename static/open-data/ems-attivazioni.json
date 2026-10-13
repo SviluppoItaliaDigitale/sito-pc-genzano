@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-13T06:51:43+00:00",
+  "generato": "2026-10-13T14:51:38+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -27,14 +27,14 @@
    "activationTime": "2026-10-04T11:02:00",
    "category": "Flood",
    "centroid": "POINT (24.978601792058495 35.22506250241993)",
-   "closed": false,
+   "closed": true,
    "code": "EMSR933",
    "countries": [
     "Greece"
    ],
    "eventTime": "2026-10-01T07:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-10-12T16:44:23.825381",
+   "lastUpdate": "2026-10-13T07:56:53.539027",
    "n_aois": 8,
    "n_products": 18,
    "name": "Flood in Crete, Greece"
