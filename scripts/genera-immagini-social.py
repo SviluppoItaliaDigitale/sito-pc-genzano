@@ -37,8 +37,10 @@ Ogni immagine porta lungo i bordi una cornice di microtesto con la provenienza
 
 Il testo non viene MAI tagliato (dal 13/10/2026): ogni blocco sceglie il corpo
 a cui entra intero, la sintesi si divide su più slide, e se il testo non entra
-lo stesso la generazione si ferma senza scrivere immagini (TestoIncompleto,
-uscita 1). Vedi la sezione «Testo sempre intero» e scripts/check-grafiche-social.py.
+lo stesso la generazione si ferma (TestoIncompleto, uscita 1): nessuna immagine
+nuova, e quelle di prima dell'articolo si tolgono, perché il repository social
+non le pubblichi al posto delle nuove. Vedi la sezione «Testo sempre intero» e
+scripts/check-grafiche-social.py.
 
 Dipendenze: Pillow (pip install Pillow), font-liberation (apt: fonts-liberation).
 """
@@ -97,6 +99,24 @@ def slug_dir(slug: str) -> Path:
     d = BOZZE_DIR / slug_to_path(slug)
     d.mkdir(parents=True, exist_ok=True)
     return d
+
+
+# Le immagini che questo script scrive in una cartella: i nomi attuali e quelli
+# vecchi (instagram-post*/instagram-story*, .webp di prima del 2 maggio 2026).
+IMMAGINI_GENERATE = ("feed-*.jpg", "storia.jpg",
+                     "instagram-post*.jpg", "instagram-post*.webp",
+                     "instagram-story*.jpg", "instagram-story*.webp")
+
+
+def togli_immagini(out_dir: Path) -> int:
+    """Toglie le immagini generate per un articolo; restituisce quante erano."""
+    tolte = 0
+    for pat in IMMAGINI_GENERATE:
+        for vecchia in out_dir.glob(pat):
+            vecchia.unlink()
+            tolte += 1
+    return tolte
+
 
 PRIMARY = (0, 51, 102)        # #003366 blu istituzionale
 PRIMARY_DARK = (0, 26, 51)    # #001a33
@@ -1127,8 +1147,17 @@ def main() -> int:
             ok += 1
         except TestoIncompleto as e:
             falliti += 1
-            msg = (f"testo che non entrerebbe intero nella grafica, nessuna immagine "
-                   f"scritta né sostituita: {e}")
+            # Le immagini che c'erano non corrispondono al testo di adesso: sono
+            # di una versione precedente o, se le ha fatte il generatore di prima
+            # del 13/10/2026, tagliate. Lasciarle significherebbe farle uscire: il
+            # repository social pubblica qualunque articolo abbia il feed e una
+            # didascalia, anche col giro orario e senza essere svegliato. Si
+            # tolgono, e l'articolo resta senza post finché il testo non entra.
+            tolte = togli_immagini(out_dir)
+            msg = "testo che non entrerebbe intero nella grafica: nessuna immagine nuova"
+            if tolte:
+                msg += f", tolte le {tolte} di prima perché non escano al posto delle nuove"
+            msg += f": {e}"
             print(f"  ✗ {art['slug']}: {msg}", file=sys.stderr)
             if os.environ.get("GITHUB_ACTIONS"):
                 print(f"::error file=content/comunicazioni/{art['slug']}.md::{msg}")
@@ -1168,7 +1197,8 @@ def piano_carosello(art: dict) -> list[tuple]:
 def genera_immagini(art: dict, slides: list[tuple], out_dir: Path) -> None:
     """Disegna carosello e storia in una cartella provvisoria e, SOLO se tutto
     è riuscito, sostituisce le immagini precedenti. Un errore a metà non lascia
-    mai un carosello incompleto né cancella quello che c'era."""
+    mai un carosello incompleto né mescola immagini nuove e vecchie; se l'errore
+    è un testo che non entra (TestoIncompleto), main() toglie anche le vecchie."""
     provvisoria = Path(tempfile.mkdtemp(prefix="immagini-social-"))
     try:
         for idx, (kind, data) in enumerate(slides, 1):
@@ -1190,15 +1220,9 @@ def genera_immagini(art: dict, slides: list[tuple], out_dir: Path) -> None:
         crea_story_verticale(art["cover"], art["title"], art["description"],
                              provvisoria / "storia.jpg", art["badge"], hero)
 
-        # Tutto riuscito: via le immagini precedenti (nomi attuali e vecchi:
-        # instagram-post*/instagram-story*, .webp di prima del 2 maggio 2026),
-        # dentro le nuove.
+        # Tutto riuscito: via le immagini precedenti, dentro le nuove.
         out_dir.mkdir(parents=True, exist_ok=True)
-        for pat in ("feed-*.jpg", "storia.jpg",
-                    "instagram-post*.jpg", "instagram-post*.webp",
-                    "instagram-story*.jpg", "instagram-story*.webp"):
-            for old in out_dir.glob(pat):
-                old.unlink()
+        togli_immagini(out_dir)
         for nuova in sorted(provvisoria.iterdir()):
             shutil.move(str(nuova), str(out_dir / nuova.name))
     finally:
