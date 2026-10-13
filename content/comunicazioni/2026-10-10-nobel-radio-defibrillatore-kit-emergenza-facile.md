@@ -33,7 +33,7 @@ Oggi, se il telefono e la corrente non funzionano, la radio spesso funziona anco
 
 Il medico olandese **Willem Einthoven** scopre come leggere l'attività elettrica del cuore. Nel 1924 vince il premio Nobel per la medicina.
 
-Il **defibrillatore (DAE)** funziona così: legge il segnale elettrico del cuore e decide da solo se serve una scarica. Anche una persona senza formazione medica può usarlo: basta seguire la voce del dispositivo.
+Il **defibrillatore automatico esterno (DAE)** funziona così: legge il segnale elettrico del cuore e decide da solo se serve una scarica. Anche una persona senza formazione medica può usarlo: basta seguire la voce del dispositivo.
 
 Se una persona ha un arresto cardiaco:
 
@@ -49,8 +49,8 @@ Il medico **Karl Landsteiner** scopre i **gruppi sanguigni**. Vince il premio No
 
 ## Torcia e power bank
 
-- La **torcia** di oggi fa luce bianca forte e consuma poco. Questo è possibile grazie al **LED blu**, una scoperta che ha vinto il Nobel per la fisica nel 2014.
-- Il **power bank** carica il telefono grazie alle **batterie al litio**, una scoperta che ha vinto il Nobel per la chimica nel 2019. Durante un blackout, un power bank carico tiene acceso il telefono per chiamare il 112.
+- La **torcia** di oggi fa luce bianca forte e consuma poco. Questo è possibile grazie al **LED blu**. Questa scoperta ha vinto il Nobel per la fisica nel 2014.
+- Il **power bank** carica il telefono grazie alle **batterie al litio**. Questa scoperta ha vinto il Nobel per la chimica nel 2019. Durante un blackout, un power bank carico tiene acceso il telefono per chiamare il 112.
 
 ## Cosa controllare nel tuo kit
 
@@ -58,6 +58,12 @@ Nel **kit di emergenza** di casa devono esserci: una torcia, una radio a pile, u
 
 ## Per saperne di più
 
+**Sul nostro sito**
+
 - [Il defibrillatore (DAE)](/formazione/primo-soccorso/defibrillatore-dae/)
 - [Il kit di emergenza](/rischi-prevenzione/kit-emergenza/)
 - [Cosa fare durante un blackout](/rischi-prevenzione/blackout/)
+
+**Fonti**
+
+- NobelPrize.org: [fisica 1909](https://www.nobelprize.org/prizes/physics/1909/summary/), [medicina 1924](https://www.nobelprize.org/prizes/medicine/1924/summary/), [medicina 1930](https://www.nobelprize.org/prizes/medicine/1930/summary/), [fisica 2014](https://www.nobelprize.org/prizes/physics/2014/summary/), [chimica 2019](https://www.nobelprize.org/prizes/chemistry/2019/summary/).
