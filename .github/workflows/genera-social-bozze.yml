@@ -190,7 +190,9 @@ jobs:
           fi
 
           # Dal 13/10/2026 il generatore non taglia più il testo: se per un
-          # articolo non entra intero, non scrive nessuna immagine ed esce con 1.
+          # articolo non entra intero, non scrive immagini nuove, toglie quelle
+          # vecchie (il repository social le pubblicherebbe al posto delle nuove)
+          # ed esce con 1.
           # Gli altri articoli vanno avanti e vengono committati; il giro finisce
           # in rosso nell'ultimo passo, così il guasto non resta silenzioso.
           FALLITI=0

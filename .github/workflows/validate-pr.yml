@@ -307,7 +307,7 @@ jobs:
           python3 scripts/check-data-uscita.py $changed
 
       # 13/10/2026: il post sul soccorso alpino è uscito su Instagram e Facebook
-      # con tre punti della sintesi tagliati a metà frase (e altri dieci prima).
+      # con tre punti della sintesi tagliati a metà frase (e altri otto prima).
       # Il generatore non taglia più e si ferma se il testo non entra: qui il
       # problema si vede sulla PR, prima che l'articolo vada online senza il suo
       # post. Se cambia il generatore, si ricontrollano tutti gli articoli.
