@@ -29,4 +29,4 @@ Le schede sono ispirate a riferimenti su salute materna e neonatale, gravidanza,
 - Sphere Standards — Sexual and reproductive health
 - SIGO, FNOPO, SIN — riferimenti italiani per gravidanza, ostetricia e neonatologia
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

@@ -14,7 +14,7 @@ L'**hub centrale** è in `/formazione/kit-calamita/` (`content/formazione/kit-ca
 
 | Kit | Standard di riferimento | Cartella content | Cartella static |
 |---|---|---|---|
-| 👧 Bambini 3-14 anni | NCTSN PFA Children + IFRC + WHO/UNHCR + Sphere 2018 | `content/formazione/kit-calamita-bambini/` | `static/formazione/kit-calamita-bambini/` |
+| 👧 Bambini 3-14 anni | Primo soccorso psicologico NCTSN/NCPTSD (2006) e OMS (2011) + IASC MHPSS + Sphere 2018 | `content/formazione/kit-calamita-bambini/` | `static/formazione/kit-calamita-bambini/` |
 | 👶 Neonati 0-3 anni | IFE Core Group v3.0 (2017) + WHO Code latte materno + Sphere | `content/formazione/kit-calamita-neonati/` | `static/formazione/kit-calamita-neonati/` |
 | 👴 Anziani in casa | HelpAge International + WHO mhGAP + SIGG/AIP | `content/formazione/kit-calamita-anziani/` | `static/formazione/kit-calamita-anziani/` |
 | 🤝 Caregiver familiari | L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022 + Zarit | `content/formazione/kit-calamita-caregiver-familiari/` | `static/formazione/kit-calamita-caregiver-familiari/` |

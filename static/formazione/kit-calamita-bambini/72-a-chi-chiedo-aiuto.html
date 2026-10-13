@@ -7,7 +7,7 @@
 <style>
   .matrice{display:grid;grid-template-columns:60mm 1fr;gap:0;margin-top:3mm;border:2px solid #1a1a1a;border-radius:6px;overflow:hidden}
   .matrice-header{background:#003366;color:#fff;font-weight:700;font-size:11pt;padding:3mm 4mm;text-align:center}
-  .matrice-row{display:grid;grid-template-columns:60mm 1fr;gap:0;border-top:1.5px solid #1a1a1a}
+  .matrice-row{display:grid;grid-template-columns:60mm 1fr;grid-column:1 / -1;gap:0;border-top:1.5px solid #1a1a1a}
   .matrice-row:first-of-type{border-top:none}
   .matrice-bisogno{padding:3mm 4mm;font-size:11pt;font-weight:700;color:#003366;border-right:1.5px solid #1a1a1a;background:#f4f7fb;display:flex;align-items:center}
   .matrice-chi{padding:3mm 4mm;font-size:11pt;line-height:1.4}
@@ -25,8 +25,8 @@
     <span class="kit-tag">Bambini · 8-14 anni</span>
   </header>
   <h1 class="scheda-title">A chi chiedo aiuto per cosa</h1>
-  <span class="scheda-eta">8-14 anni · mappa del help-seeking</span>
-  <div class="scheda-istruzione">🆘 <strong>Non c'è una persona sola che può aiutarti per tutto</strong>. A bisogni diversi corrispondono persone diverse. Questa tabella ti aiuta a sapere a chi rivolgerti, a seconda del problema. Tienila vicina al tuo diario o nello zainetto.</div>
+  <span class="scheda-eta">8-14 anni · a chi chiedere aiuto</span>
+  <div class="scheda-istruzione">🆘 <strong>Non c'è una persona sola che può aiutarti per tutto</strong>. A bisogni diversi corrispondono persone diverse. Questa tabella ti aiuta a sapere a chi rivolgerti, a seconda del problema. Tienila vicina al tuo diario o nello zainetto. Chiedere aiuto è normale.</div>
   <section class="scheda-attivita">
     <div class="matrice">
       <div class="matrice-header" style="border-right:1.5px solid #1a1a1a">Se mi sento o mi serve…</div>
@@ -37,23 +37,23 @@
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">😨 Ho paura, sono confuso, mi sento perso</div>
-        <div class="matrice-chi">Un adulto di fiducia (famiglia, maestra, volontario PC con la pettorina).</div>
+        <div class="matrice-chi">Un adulto di fiducia (un familiare, una maestra, un volontario PC con la pettorina).</div>
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">😢 Sono triste, voglio piangere</div>
-        <div class="matrice-chi">Un familiare, una persona cara, anche un amico se ti ascolta bene.</div>
+        <div class="matrice-chi">Una persona cara o un adulto di fiducia; anche un amico, se ti ascolta bene.</div>
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">😡 Sono arrabbiato, voglio urlare</div>
-        <div class="matrice-chi">Un adulto di fiducia (mamma, papà, allenatore). Cammina prima un po' se ti aiuta.</div>
+        <div class="matrice-chi">Un adulto di fiducia (un familiare, un allenatore, un educatore). Cammina prima un po' se ti aiuta.</div>
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">😴 Non riesco a dormire</div>
-        <div class="matrice-chi">Un familiare. Se dura più giorni, dillo al pediatra o al dottore.</div>
+        <div class="matrice-chi">Un adulto di fiducia. Se dura più giorni, dillo al pediatra o al dottore.</div>
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">🍽️ Non ho voglia di mangiare</div>
-        <div class="matrice-chi">Un familiare. Se dura più di una settimana, dillo al pediatra.</div>
+        <div class="matrice-chi">Un adulto di fiducia. Se non riesci a mangiare o a bere, dillo subito a un adulto o al medico del campo.</div>
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">🤔 Non capisco una cosa di scuola</div>
@@ -61,7 +61,7 @@
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">💭 Ho pensieri brutti che non passano</div>
-        <div class="matrice-chi">Un adulto di fiducia che possa accompagnarti dallo psicologo o dal dottore.</div>
+        <div class="matrice-chi">Un adulto di fiducia che possa accompagnarti dallo psicologo o dal dottore. Se ti vengono pensieri di farti male, dillo subito a un adulto o chiama il 112. Puoi anche chiamare Telefono Azzurro, 19696, gratis, giorno e notte.</div>
       </div>
       <div class="matrice-row">
         <div class="matrice-bisogno">⚠️ Vedo qualcuno in pericolo</div>
@@ -74,7 +74,7 @@
   </section>
   <footer class="scheda-footer">
     <span>Scheda 72 — A chi chiedo aiuto per cosa</span>
-    <span class="fonti">Help-Seeking Flowchart sviluppato dalle linee guida IASC — Mental Health and Psychosocial Support in Emergency Settings (modello "stepped care") e adattato per minori in contesti italiani con riferimento al NUE 112.</span>
+    <span class="fonti">Tabella di uso comune per sapere a chi chiedere aiuto (numero unico 112). Collegare bambini e ragazzi a chi può aiutarli è uno scopo del primo soccorso psicologico (PFA Field Operations Guide, NCTSN e National Center for PTSD, 2006, azioni «Connection with Social Supports» e «Linkage with Collaborative Services»). Non è una terapia. Per l'adulto: pensieri brutti che non passano, dolore o difficoltà a mangiare e bere non vanno rimandati: personale sanitario del campo, pediatra o servizi della ASL Roma 6; pericolo immediato: 112.</span>
     <span>www.protezionecivilegenzano.it</span>
   </footer>
 </article>

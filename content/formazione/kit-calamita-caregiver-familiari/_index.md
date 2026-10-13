@@ -30,4 +30,4 @@ Le schede sono ispirate a riferimenti su caregiver familiari, assistenza domicil
 - L. 33/2023 — deleghe in materia di politiche in favore delle persone anziane, attuata dal D.Lgs. 29/2024 (politiche in favore delle persone anziane)
 - SIGG, SICP, AIMA, FISH, FAND — società, associazioni e federazioni di riferimento
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

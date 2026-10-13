@@ -30,4 +30,4 @@ Le schede sono ispirate a riferimenti su comunicazione con le comunità, inclusi
 - L. 47/2017 — tutela dei minori stranieri non accompagnati
 - ARASAAC — pittogrammi per supporto linguistico e comunicazione accessibile
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

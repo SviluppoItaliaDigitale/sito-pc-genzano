@@ -41,7 +41,7 @@ Tieni il kit vicino all'uscita. E ogni sei mesi controlla scadenze e batterie.
 
 Preparalo oggi.
 
-Fonti: Dipartimento della Protezione Civile, campagna «Io non rischio»; [Commissione europea, Strategia dell'Unione per la preparazione](https://ec.europa.eu/commission/presscorner/detail/it/ip_25_856) (25 marzo 2025) per le 72 ore.
+Fonti: Dipartimento della Protezione Civile, campagna «Io non rischio»; [Commissione europea, Strategia dell'Unione per la preparazione](https://ec.europa.eu/commission/presscorner/detail/it/ip_25_856) (26 marzo 2025) per le 72 ore.
 
 </details>
 
