@@ -45,6 +45,8 @@ Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecni
 {{< link-card url="/rischi-prevenzione/sicurezza-scuolabus/" icon="bi-bus-front" titolo="Sicurezza sullo scuolabus" desc="Cosa fare in emergenza durante il tragitto: regole per bambini, autista e genitori." >}}
 {{< link-card url="/rischi-prevenzione/kit-emergenza-economico-progressivo/" icon="bi-bag-check" titolo="Kit di emergenza economico e progressivo" desc="Come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici." >}}
 {{< link-card url="/rischi-prevenzione/dopo-emergenza/" icon="bi-house-check" titolo="Dopo l'emergenza" desc="Rientro sicuro, verifica di gas, luce e acqua, animali e notizie false quando l'evento è passato." >}}
+{{< link-card url="/rischi-prevenzione/idee-sbagliate/" icon="bi-lightbulb-off" titolo="Biblioteca delle idee sbagliate" desc="I luoghi comuni sulle emergenze: perché sono sbagliati, la fonte e una domanda di verifica." >}}
+{{< link-card url="/calcolatore-scorta/" icon="bi-calculator" titolo="Calcolatore della scorta per 72 ore" desc="Acqua, pasti e farmaci per tre giorni, con la lista della spesa da spuntare e stampare." >}}
 </div>
 
 ## I più cercati

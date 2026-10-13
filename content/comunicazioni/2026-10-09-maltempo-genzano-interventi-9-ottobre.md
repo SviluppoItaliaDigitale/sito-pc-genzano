@@ -38,6 +38,12 @@ Verso le 15 la squadra è intervenuta per dei **rami sulla carreggiata** in via 
 
 Poco dopo le 16 la Polizia Locale ci ha chiesto di intervenire in via Polonia, dove era caduto un **albero di grosse dimensioni**. La pianta si divideva in più tronchi e la pendenza del terreno non consentiva un lavoro semplice: la squadra l'ha rimossa con tagli mirati, controllati da tutti i volontari presenti. Il Gruppo ha lavorato con tre mezzi. Sul posto c'erano anche i Vigili del Fuoco e la Polizia. Il lavoro è finito verso le 20.
 
+## Cosa impariamo
+
+- **Il maltempo può far cadere alberi e rami anche il giorno dopo.** Il 9 ottobre il Gruppo ha fatto altri cinque interventi, dopo i ventidue del 7 e dell'8. Quasi tutti riguardavano alberi e rami. Lungo le strade alberate il rischio di caduta rami aumenta: [vento forte](/rischi-prevenzione/vento-forte/).
+- **Un albero di grandi dimensioni richiede una squadra attrezzata.** In via Polonia la pianta si divideva in più tronchi e il terreno era in pendenza. La squadra l'ha rimossa con tre mezzi e tagli mirati, controllati da tutti i volontari presenti. Un albero caduto si segnala al 112, senza provare a spostarlo: [Numeri utili](/numeri-utili/).
+- **Un tombino aperto è un pericolo che l'acqua può nascondere.** In via Garibaldi il Gruppo è intervenuto per un tombino divelto. Come spiega la pagina sul [rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/), pochi centimetri d'acqua possono nascondere buche o tombini aperti.
+
 ## Cosa puoi fare tu
 
 - **Fermati a distanza se trovi un albero o un ramo caduto**, accendi le quattro frecce e chiama il 112. Non provare a spostarlo da solo.

@@ -1,0 +1,55 @@
+{{- /*
+  Shortcode smentite — elenco delle voci false smentite durante un evento in
+  corso (pagina /non-e-vero-che/). Legge data/smentite.yaml:
+    attivo: true/false   evento: "…"   aggiornato: "AAAA-MM-GGTHH:MM:SS" (ora italiana)
+    voci: [{data, voce, verita, fonte, url}]
+  Con attivo: false mostra lo stato di calma (nessuna voce da smentire).
+  Niente JavaScript: il contenuto è deciso al build, come la barra di allerta.
+  Una voce si pubblica solo se ha data valida, voce, verita e fonte: la fonte
+  non si inventa e un refuso nel file dei dati, scritto in fretta durante un
+  evento, non deve fermare la build (e con lei il deploy delle allerte), quindi
+  la voce incompleta si scarta e si segnala nel log di build.
+  Uso: {{< smentite >}}
+*/ -}}
+{{- $d := site.Data.smentite | default dict -}}
+{{- $fmt := "02/01/2006 alle 15:04" -}}
+{{- $righe := slice -}}
+{{- range $d.voci | default slice -}}
+  {{- $v := . -}}
+  {{- $t := false -}}
+  {{- with $v.data }}{{ with try (time . "Europe/Rome") }}{{ if not .Err }}{{ $t = .Value }}{{ end }}{{ end }}{{ end -}}
+  {{- if and $t $v.voce $v.verita $v.fonte -}}
+    {{- $righe = $righe | append (dict "t" $t "voce" $v.voce "verita" $v.verita "fonte" $v.fonte "url" $v.url) -}}
+  {{- else -}}
+    {{- warnf "smentite: voce scartata, servono data valida (AAAA-MM-GGTHH:MM:SS), voce, verita e fonte: %v" $v -}}
+  {{- end -}}
+{{- end -}}
+{{- $attivo := and $d.attivo (gt (len $righe) 0) -}}
+<section class="smentite" aria-labelledby="smentite-titolo">
+{{- if $attivo }}
+<div class="alert alert-warning border-start border-warning border-4" role="status">
+<h2 id="smentite-titolo" class="h5 mb-1"><i class="bi bi-megaphone-fill me-2" aria-hidden="true"></i>Evento in corso{{ with $d.evento }}: {{ . }}{{ end }}</h2>
+<p class="mb-0 small">
+{{- with $d.aggiornato }}{{ with try (time . "Europe/Rome") }}{{ if not .Err }}{{ $a := .Value }}Pagina aggiornata il <time datetime="{{ $a.Format "2006-01-02T15:04" }}">{{ $a.Format $fmt }}</time> (ora italiana). {{ else }}{{ warnf "smentite: 'aggiornato' non è una data valida (AAAA-MM-GGTHH:MM:SS): %v" $d.aggiornato }}{{ end }}{{ end }}{{ end -}}
+Le voci sono in ordine dalla più recente.</p>
+</div>
+<ol class="list-unstyled smentite-elenco" role="list">
+{{- range sort $righe "t" "desc" }}
+{{- $fonte := .fonte }}
+<li class="card border-danger mb-3">
+<div class="card-body">
+<p class="small text-muted mb-1"><time datetime="{{ .t.Format "2006-01-02T15:04" }}">{{ .t.Format $fmt }}</time></p>
+<h3 class="h5 card-title mb-2"><span class="text-danger">Non è vero che</span> {{ .voce }}</h3>
+<p class="card-text mb-2"><strong>Che cosa risulta:</strong> {{ .verita }}</p>
+<p class="card-text small mb-0"><strong>Fonte:</strong> {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $fonte }}<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>{{ else }}{{ $fonte }}{{ end }}</p>
+</div>
+</li>
+{{- end }}
+</ol>
+{{- else }}
+<div class="alert alert-success border-start border-success border-4" role="status">
+<h2 id="smentite-titolo" class="h5 mb-1"><i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>Nessuna voce da smentire in questo momento</h2>
+<p class="mb-0">Questa pagina si riempie solo durante un evento in corso, quando circolano notizie false da verificare. Per sapere se c'è un'allerta consulta <a href="{{ "allerte-meteo/" | relURL }}">Allerte meteo</a>; per i luoghi comuni di sempre c'è la <a href="{{ "rischi-prevenzione/idee-sbagliate/" | relURL }}">Biblioteca delle idee sbagliate</a>.</p>
+</div>
+{{- end }}
+</section>

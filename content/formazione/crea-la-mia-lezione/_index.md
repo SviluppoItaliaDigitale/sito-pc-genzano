@@ -16,5 +16,6 @@ Indica la classe, il tempo che hai e l'argomento. Il sito compone una lezione in
 - Le schede si stampano dal pulsante della scheda stessa; le storie e le pagine si possono proiettare con **Modalità Aula**.
 - Con «Proponi altri materiali» ottieni un'altra combinazione con la stessa classe e lo stesso argomento.
 - L'indirizzo della pagina conserva le tue scelte: puoi salvarlo o mandarlo a un collega.
+- Dalla classe 3ª della primaria in su, per trasformare la lezione in una prova in aula, con ruoli, imprevisti e discussione finale, apri la [Scatola delle esercitazioni](/formazione/scatola-delle-esercitazioni/).
 
 Per un percorso completo, con obiettivi e collegamenti all'educazione civica, vedi i [percorsi didattici pronti](/formazione/percorsi-didattici/) e il [kit della tua fascia](/formazione/).

@@ -1,0 +1,31 @@
+# Smentite in tempo reale: la pagina /non-e-vero-che/.
+#
+# Si compila SOLO durante un evento in corso (allerta arancione o rossa,
+# emergenza, incendio, blackout esteso) quando circolano voci false sui
+# social o nelle chat. Fuori dagli eventi resta "attivo: false" e la pagina
+# dice che non ci sono voci da smentire.
+#
+# Regole (rule 02 § comunicazione di crisi, rule 06):
+#   - ogni voce porta data e ora italiana nel formato AAAA-MM-GGTHH:MM:SS
+#     (i secondi servono: "2026-10-14T18:30:00");
+#   - "voce" è la voce che circola, riportata in breve e senza amplificarla
+#     (niente link alla fonte della voce, niente nomi di chi la diffonde);
+#   - "verita" è ciò che risulta alle fonti ufficiali, con prudenza:
+#     «non risulta», «al momento», mai certezze che non abbiamo;
+#   - "fonte" e "url" indicano chi lo conferma (Comune, Regione, DPC, VVF,
+#     il nostro registro) — senza fonte la voce non si pubblica;
+#   - a evento chiuso si rimette "attivo: false" e si svuotano le voci (la
+#     storia resta nel git); la voce nel registro della prevenzione la
+#     chiude.
+#
+# Esempio di voce:
+#   - data: "2026-10-14T18:30:00"
+#     voce: "le scuole di Genzano resteranno chiuse domani"
+#     verita: "Non risulta nessuna ordinanza di chiusura. Le chiusure le decide solo il Sindaco con ordinanza, pubblicata sull'albo pretorio."
+#     fonte: "Comune di Genzano di Roma, albo pretorio"
+#     url: "https://genzanodiroma.trasparenza-valutazione-merito.it/"
+
+attivo: false
+evento: ""
+aggiornato: ""
+voci: []

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Piano di continuità domestica — senza corrente, senza acqua, senza rete</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/piano-continuita-domestica/">
+  <meta name="description" content="Modello compilabile in due fogli A4: come la famiglia organizza bisogni, scorte, compiti e comunicazioni se mancano la corrente, l'acqua o la rete telefonica.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .pc-istruzioni {
+      background: #fff8e1;
+      border-left: 4px solid var(--scheda-oro);
+      padding: 0.45rem 0.8rem;
+      margin: 0 0 0.6rem 0;
+      font-size: 0.84rem;
+      line-height: 1.4;
+    }
+    .pc-h2 {
+      color: var(--scheda-blu);
+      font-size: 1rem;
+      margin: 0.55rem 0 0.3rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+      padding-bottom: 0.15rem;
+    }
+    .pc-h2 .pc-scenario-n {
+      display: inline-block;
+      background: var(--scheda-blu);
+      color: #fff;
+      border-radius: 50%;
+      width: 1.4rem;
+      height: 1.4rem;
+      line-height: 1.4rem;
+      text-align: center;
+      font-size: 0.85rem;
+      margin-right: 0.35rem;
+    }
+    .pc-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 1rem;
+      font-size: 0.82rem;
+      margin: 0.2rem 0 0.4rem 0;
+    }
+    .pc-griglia div, .pc-riga { display: flex; align-items: baseline; gap: 0.4rem; font-size: 0.82rem; }
+    .pc-griglia strong, .pc-riga strong { color: var(--scheda-blu); white-space: nowrap; }
+    .pc-linea { flex: 1; border-bottom: 1.5px solid var(--scheda-bordo); min-height: 1.2rem; }
+    .pc-riga { margin: 0.25rem 0; }
+    .pc-griglia-1 { grid-template-columns: 1fr; }
+    table.pc-tab {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin: 0.25rem 0 0.4rem 0;
+    }
+    table.pc-tab th, table.pc-tab td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.24rem 0.4rem;
+      vertical-align: top;
+      text-align: left;
+    }
+    table.pc-tab th { background: #f0f4f8; color: var(--scheda-blu); }
+    table.pc-tab .pc-ce { white-space: nowrap; width: 3.4rem; }
+    table.pc-tab td.pc-vuota { min-width: 7rem; height: 2.1rem; }
+    table.pc-tab td .pc-box {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border: 1.5px solid var(--scheda-blu);
+      border-radius: 2px;
+      vertical-align: middle;
+      margin-right: 0.3rem;
+    }
+    .pc-nota {
+      font-size: 0.76rem;
+      color: #495057;
+      line-height: 1.35;
+      margin: 0.15rem 0 0.4rem 0;
+    }
+    .pc-nota strong { color: var(--scheda-blu); }
+    .pc-ricorda {
+      background: #e7f1ff;
+      border: 1.5px solid var(--scheda-blu);
+      border-radius: 8px;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      margin: 0.3rem 0 0.4rem 0;
+      break-inside: avoid;
+    }
+    .pc-ricorda strong { color: var(--scheda-blu); }
+    @media (max-width: 600px) {
+      .pc-griglia { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #fff; }
+      .pc-istruzioni, .pc-ricorda { background: #fff; }
+      table.pc-tab, .pc-ricorda, .pc-griglia { break-inside: avoid; }
+    }
+    /* Controllo fogli di stampa: due fogli, ciascuno con la banda delle affiliazioni. */
+    @media print { html { font-size: 88%; } }
+    @media print { .scheda-page { padding: 1cm 1.5cm 0.4cm 1.5cm; } }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Piano di continuità domestica — 2 fogli A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Piano di continuità domestica</h1>
+        <div class="scheda-sottotitolo">Che cosa facciamo se mancano la corrente, l'acqua o la rete — foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="pc-istruzioni">
+      <strong>Come si usa</strong> (per ogni famiglia o convivenza, 30 minuti tutti insieme): i tre scenari sono quelli più frequenti e di solito durano da poche ore a qualche giorno. Per ciascuno scrivete che cosa vi serve, che cosa avete già e chi fa che cosa. Compilate a matita: il piano cambia quando cambia la famiglia. Tenete il foglio con il kit e una foto nel telefono.
+    </div>
+
+    <h2 class="pc-h2">Chi siamo e di che cosa abbiamo bisogno</h2>
+    <div class="pc-griglia">
+      <div><strong>Persone in casa:</strong><span class="pc-linea"></span></div>
+      <div><strong>Bambini piccoli o neonati:</strong><span class="pc-linea"></span></div>
+      <div><strong>Farmaci che non possono mancare:</strong><span class="pc-linea"></span></div>
+      <div><strong>Apparecchi elettromedicali:</strong><span class="pc-linea"></span></div>
+      <div><strong>Persone con difficoltà di movimento:</strong><span class="pc-linea"></span></div>
+      <div><strong>Animali:</strong><span class="pc-linea"></span></div>
+    </div>
+    <p class="pc-nota"><strong>Apparecchi elettromedicali:</strong> informa la tua Azienda sanitaria locale (ASL) e il fornitore di energia, perché esiste una lista di utenze non disalimentabili. Per le terapie salvavita segui le indicazioni del tuo centro di riferimento.</p>
+
+    <h2 class="pc-h2"><span class="pc-scenario-n" aria-hidden="true">1</span>Senza corrente</h2>
+    <table class="pc-tab">
+      <thead>
+        <tr><th scope="col">Bisogno</th><th scope="col">Come lo copriamo</th><th scope="col">Chi se ne occupa</th><th scope="col" class="pc-ce">C'è?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Luce</td><td>Torce e lampade a pile, pile di scorta (mai candele)</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Telefono</td><td>Power bank carico, caricabatterie da auto</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Notizie ufficiali</td><td>Radio a pile o a manovella</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Cibo</td><td>Alimenti pronti senza cottura, apriscatole manuale; frigorifero e congelatore restano chiusi</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Riscaldamento o fresco</td><td>Coperte e strati di vestiti; d'estate finestre schermate. Mai stufe portatili a combustione, bracieri, fornelli da campeggio o generatori in casa</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Elettrodomestici</td><td>Scollegarli al blackout; una sola lampada accesa per accorgersi del ritorno della corrente</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Ascensore</td><td>Non usarlo; se qualcuno resta bloccato preme l'allarme e aspetta</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+      </tbody>
+    </table>
+    <div class="pc-riga"><strong>Dove sono l'interruttore generale e le torce:</strong><span class="pc-linea"></span></div>
+
+    <h2 class="pc-h2"><span class="pc-scenario-n" aria-hidden="true">2</span>Senza acqua</h2>
+    <table class="pc-tab">
+      <thead>
+        <tr><th scope="col">Bisogno</th><th scope="col">Come lo copriamo</th><th scope="col">Chi se ne occupa</th><th scope="col" class="pc-ce">C'è?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Bere</td><td>Scorta di circa 4 litri a persona al giorno per 3 giorni (per <strong>______</strong> persone: <strong>______</strong> litri), bottiglie sigillate</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Igiene</td><td>Salviette, gel igienizzante, sapone; sacchi per i rifiuti</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Bambini e animali</td><td>Scorta dedicata in più: latte, acqua per gli animali</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+        <tr><td>Acqua non potabile</td><td>Secchi o bacinelle per lo sciacquone; usare solo acqua indicata dal Comune per bere e cucinare</td><td class="pc-vuota"></td><td class="pc-ce"><span class="pc-box"></span>sì</td></tr>
+      </tbody>
+    </table>
+    <div class="pc-riga"><strong>Dove si chiude il rubinetto generale dell'acqua:</strong><span class="pc-linea"></span></div>
+
+    <footer class="scheda-footer">
+      <span>Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma · foglio 1 di 2</span>
+      <span class="scheda-site">protezionecivilegenzano.it/rischi-prevenzione/blackout/</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Piano di continuità domestica</h2>
+        <div class="scheda-sottotitolo">Senza rete telefonica e internet, aiuto tra vicini, controlli — foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <h2 class="pc-h2"><span class="pc-scenario-n" aria-hidden="true">3</span>Senza rete telefonica e internet</h2>
+    <p class="pc-nota">Quando la rete è satura o assente le chiamate non passano, ma spesso un SMS arriva. Decidete <strong>prima</strong> come ritrovarvi: nel momento non potrete mettervi d'accordo.</p>
+    <table class="pc-tab">
+      <thead>
+        <tr><th scope="col">Che cosa facciamo</th><th scope="col">Il nostro accordo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Se non riusciamo a chiamarci</td><td class="pc-vuota">SMS breve («sto bene, sono a …») al contatto fuori zona:</td></tr>
+        <tr><td>Se siamo in posti diversi</td><td class="pc-vuota">Ci ritroviamo a (vicino a casa / area di attesa):</td></tr>
+        <tr><td>Chi va a prendere i bambini</td><td class="pc-vuota">Prima scelta / seconda scelta (la scuola ha il suo piano: i bambini restano con i docenti finché non arriva un adulto autorizzato):</td></tr>
+        <tr><td>Notizie ufficiali</td><td class="pc-vuota">Radio a pile; quando la rete torna, protezionecivilegenzano.it/allerte-meteo/</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="pc-h2">Aiuto tra vicini</h2>
+    <div class="pc-griglia pc-griglia-1">
+      <div><strong>Vicino che possiamo aiutare (nome e telefono):</strong><span class="pc-linea"></span></div>
+      <div><strong>Vicino a cui chiedere aiuto (nome e telefono):</strong><span class="pc-linea"></span></div>
+    </div>
+    <p class="pc-nota">Chi vive solo, è anziano o ha difficoltà di movimento è la prima persona da cercare quando mancano luce, acqua o telefono: un accordo preso prima vale più di mille buone intenzioni dopo. Scambiatevi i numeri.</p>
+
+    <h2 class="pc-h2">Dove sono le cose che servono</h2>
+    <div class="pc-griglia">
+      <div><strong>Kit casa 72 ore:</strong><span class="pc-linea"></span></div>
+      <div><strong>Zaino di evacuazione:</strong><span class="pc-linea"></span></div>
+      <div><strong>Valvola del gas:</strong><span class="pc-linea"></span></div>
+      <div><strong>Primo soccorso e documenti:</strong><span class="pc-linea"></span></div>
+    </div>
+
+    <div class="pc-ricorda">
+      <strong>In ogni scenario:</strong> in emergenza chiama il <strong>112</strong>; segnalazioni non urgenti alla Sala Operativa della Protezione Civile della Regione Lazio, <strong>803 555</strong>. Niente candele, generatori o barbecue in casa, niente strade allagate. Il Gruppo Comunale non si attiva direttamente dai cittadini.
+    </div>
+
+    <h2 class="pc-h2">Controllo ogni sei mesi</h2>
+    <table class="pc-tab">
+      <thead>
+        <tr><th scope="col">Che cosa</th><th scope="col">Primo controllo (data)</th><th scope="col">Secondo controllo (data)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Pile, torce, power bank e radio funzionano</td><td class="pc-vuota"></td><td class="pc-vuota"></td></tr>
+        <tr><td>Acqua, alimenti e farmaci non scaduti</td><td class="pc-vuota"></td><td class="pc-vuota"></td></tr>
+        <tr><td>Numeri e accordi ancora validi</td><td class="pc-vuota"></td><td class="pc-vuota"></td></tr>
+      </tbody>
+    </table>
+    <p class="pc-nota">Promemoria facile: il cambio dell'ora, a marzo e a ottobre. Il piano di famiglia completo, con le aree di attesa e il calcolo delle scorte: <strong>protezionecivilegenzano.it/piano-familiare/</strong>.</p>
+
+    <footer class="scheda-footer">
+      <span>Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma · foglio 2 di 2</span>
+      <span class="scheda-site">protezionecivilegenzano.it/piano-familiare/</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

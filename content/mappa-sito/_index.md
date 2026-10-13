@@ -131,6 +131,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">Crea e stampa il piano di emergenza della tua famiglia: numeri, punti di ritrovo, kit.</p>
   <span class="ms-card-arrow">Crea il piano →</span>
 </a>
+<a class="ms-card" href="/calcolatore-scorta/">
+  <div class="ms-card-icon"><i class="bi bi-calculator-fill"></i></div>
+  <p class="ms-card-title">Calcolatore della scorta per 72 ore</p>
+  <p class="ms-card-desc">Persone, bambini piccoli, animali e terapie: acqua, pasti e farmaci per tre giorni con la lista della spesa da spuntare e stampare.</p>
+  <span class="ms-card-arrow">Calcola →</span>
+</a>
 <a class="ms-card" href="/cartografia/">
   <div class="ms-card-icon"><i class="bi bi-map-fill"></i></div>
   <p class="ms-card-title">Cartografia Operativa</p>
@@ -159,6 +165,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Allerte Meteo</p>
   <p class="ms-card-desc">Codici colore, sistema di allertamento, widget Windy/Radar DPC/MeteoAM, fonti ufficiali.</p>
   <span class="ms-card-arrow">Apri →</span>
+</a>
+<a class="ms-card ms-emerg" href="/non-e-vero-che/">
+  <div class="ms-card-icon"><i class="bi bi-megaphone-fill"></i></div>
+  <p class="ms-card-title">Non è vero che</p>
+  <p class="ms-card-desc">Durante un evento in corso: le voci false che circolano e che cosa risulta davvero, con data, ora e fonte ufficiale.</p>
 </a>
 <a class="ms-card ms-emerg" href="/allerte-meteo/cosa-significa-a-genzano/">
   <div class="ms-card-icon"><i class="bi bi-palette-fill"></i></div>
@@ -264,6 +275,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Kit di emergenza</p>
   <p class="ms-card-desc">Cosa mettere nello zaino di emergenza domestico, lista completa e priorità.</p>
 </a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/idee-sbagliate/">
+  <div class="ms-card-icon"><i class="bi bi-lightbulb-off-fill"></i></div>
+  <p class="ms-card-title">Biblioteca delle idee sbagliate</p>
+  <p class="ms-card-desc">I luoghi comuni su terremoti, alluvioni, incendi, blackout, caldo e allerte: perché sono sbagliati, la fonte ufficiale e una domanda di verifica.</p>
+</a>
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/kit-emergenza-economico-progressivo/">
   <div class="ms-card-icon"><i class="bi bi-piggy-bank"></i></div>
   <p class="ms-card-title">Kit di emergenza economico e progressivo</p>
@@ -308,6 +324,21 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <div class="ms-card-icon"><i class="bi bi-magic"></i></div>
   <p class="ms-card-title">Crea la mia lezione</p>
   <p class="ms-card-desc">Scegli classe, minuti e argomento: il sito compone una lezione in fasi con schede, storie, giochi ed esperimenti già pubblicati.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/scatola-delle-esercitazioni/">
+  <div class="ms-card-icon"><i class="bi bi-box-seam-fill"></i></div>
+  <p class="ms-card-title">Scatola delle esercitazioni</p>
+  <p class="ms-card-desc">Dalla lezione alla prova in aula: scenari, ruoli per gli alunni, carte degli imprevisti, materiali e guida alla discussione finale.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/dalla-carta-al-territorio/">
+  <div class="ms-card-icon"><i class="bi bi-signpost-split-fill"></i></div>
+  <p class="ms-card-title">Dalla carta al territorio</p>
+  <p class="ms-card-desc">L'uscita sui luoghi del Piano: come prepararla in aula, cinque stazioni sul territorio (cartelli, aree di attesa, acqua, DAE) e la mappa della classe dopo.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/laboratorio-dati-reali/">
+  <div class="ms-card-icon"><i class="bi bi-graph-up"></i></div>
+  <p class="ms-card-title">Piccolo laboratorio di dati reali</p>
+  <p class="ms-card-desc">Un'estate di temperature e piogge di Genzano in un file: ipotesi da verificare, metodo in cinque passi e la differenza fra osservazione, correlazione e conclusione.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/percorsi-didattici/">
   <div class="ms-card-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>

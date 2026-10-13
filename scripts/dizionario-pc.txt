@@ -2082,3 +2082,9 @@ controfattuale
 # --- Routine cura schede didattiche 12/10/2026: termine di gioco (difficoltà) e termine clinico del triage ---
 matching
 refill
+# --- Scheda «Per i nostri ospiti» 13/10/2026: percorsi delle sezioni tradotte citati come indirizzi ---
+francais
+espanol
+portugues
+guests
+localStorage

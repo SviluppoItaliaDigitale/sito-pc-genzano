@@ -1,0 +1,24 @@
+{{- /*
+  Partial valore-csv — formatta un valore numerico letto da un CSV per la resa
+  in pagina (shortcode grafico-csv): gli interi restano interi («12»), i valori
+  con decimali si mostrano con la virgola e senza troncare («0,4», «21,3»).
+  Riceve la stringa del CSV. Un decimale scritto in modo semplice («10.20»)
+  si lavora come testo, senza passare dai numeri in virgola mobile: restano le
+  sue cifre, meno gli zeri finali. Il formato %g di Go, usato come ripiego per
+  le scritture insolite («1e-7»), passa alla notazione esponenziale sopra il
+  milione e sotto 0,0001, e un arrotondamento a cifre fisse mostrerebbe il
+  rumore del calcolo («9999999,9000000004»). 13/10/2026.
+*/ -}}
+{{- $s := printf "%v" . -}}
+{{- $r := "" -}}
+{{- if findRE `^-?[0-9]+\.[0-9]+$` $s -}}
+  {{- $r = replace (strings.TrimSuffix "." (strings.TrimRight "0" $s)) "." "," -}}
+{{- else -}}
+  {{- $v := float $s -}}
+  {{- if eq $v (math.Floor $v) -}}
+    {{- $r = printf "%d" (int $v) -}}
+  {{- else -}}
+    {{- $r = replace (printf "%g" $v) "." "," -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $r "-0" }}0{{ else }}{{ $r }}{{ end -}}

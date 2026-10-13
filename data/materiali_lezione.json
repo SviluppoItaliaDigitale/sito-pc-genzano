@@ -3687,6 +3687,25 @@
   },
   {
    "tipo": "storia",
+   "titolo": "Le filastrocche della sicurezza",
+   "url": "/formazione/storie-e-racconti/filastrocche-sicurezza/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 5,
+   "temi": [
+    "terremoto",
+    "incendi",
+    "meteo",
+    "caldo",
+    "112",
+    "casa"
+   ],
+   "desc": "Otto rime brevi con un gesto per ciascuna: terremoto, 112, temporale, fumo, blackout, zainetto, smarrimento, caldo",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
    "titolo": "Flavio e lo zaino rosso",
    "url": "/formazione/schede-stampabili/flavio-libro-popup/",
    "fasce": [
@@ -3862,6 +3881,21 @@
     "informazione"
    ],
    "desc": "Le parole della Protezione Civile crescono come piante: ognuna ha la sua stagione",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il giorno della prova",
+   "url": "/formazione/storie-e-racconti/recita-giorno-della-prova/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 15,
+   "temi": [
+    "terremoto",
+    "casa"
+   ],
+   "desc": "Copione teatrale in cinque scene per la recita di fine anno: la prova di evacuazione vista dai banchi",
    "facilitata": false
   },
   {
