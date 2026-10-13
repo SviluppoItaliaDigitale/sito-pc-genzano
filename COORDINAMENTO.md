@@ -132,6 +132,46 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li avvia Claude da sola (protocollo comune, § «Passaggio automatico a ChatGPT»: voce qui sotto con la nota «passata in automatico» e PR in bozza); per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
+- **2026-10-13 — da Claude a ChatGPT — Controllo dei link: immagini meteo dalla release prima della build** (passata in automatico; PR in apertura; ramo `chatgpt/check-links-immagini-release-20261013`)
+  - **1. Obiettivo.**
+    Il controllo settimanale dei link (`.github/workflows/check-links-sito.yml`) non deve più segnalare come mancanti le sei immagini meteo che dal 10/10/2026 non stanno in git ma nella release `immagini-meteo` (issue #1348: `images/meteo-sinottica-italia.webp` e le quattro carte `images/ecmwf/*.webp`). Il workflow le scarica prima di costruire il sito, come fa già `deploy.yml`.
+  - **2. File.**
+    .github/workflows/check-links-sito.yml
+  - **3. Che cosa fare.**
+    1. In `.github/workflows/check-links-sito.yml`, nel job `lychee`, aggiungi questo passo **subito dopo** il passo «🔧 Setup Hugo» e **prima** di «🏗️ Build sito produzione» (stessa indentazione degli altri passi):
+
+    ```yaml
+          - name: "🌦️ Immagini meteo dalla release (carte ECMWF e sinottica)"
+            # Dal 10/10/2026 non sono in git ma nella release `immagini-meteo`
+            # (vedi deploy.yml): senza questo passo lychee le segnalava come file
+            # mancanti (issue #1348). Senza --rigoroso: se la release non risponde
+            # lo script ripiega sulle copie del sito pubblicato ed esce 0.
+            env:
+              GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            run: python3 scripts/immagini-meteo-release.py scarica
+    ```
+
+    Non toccare altro nel file.
+  - **4. Vincoli.**
+    - Il file YAML deve restare valido e con la stessa indentazione a due spazi degli altri passi.
+    - Nessun riferimento a strumenti automatici nei file, nei messaggi di commit e nel commento sulla pull request.
+    - Identità dei commit: `Alessandro Cuollo <65465537+SviluppoItaliaDigitale@users.noreply.github.com>` (eseguire `bash scripts/imposta-identita-git.sh` prima del commit).
+    - Messaggi di commit in italiano.
+  - **5. Controlli.**
+    Prima del push, tutti con esito atteso:
+    - `python3 -c "import yaml; yaml.safe_load(open('.github/workflows/check-links-sito.yml'))"` → nessun errore.
+    - `grep -c "immagini-meteo-release.py scarica" .github/workflows/check-links-sito.yml` → `1`.
+    - `git diff --stat` → solo il file del punto 2.
+  - **6. Consegna.**
+    - Un commit sul ramo di questa pull request, messaggio: `Controllo dei link: immagini meteo dalla release prima della build`.
+    - In `COORDINAMENTO.md` § «Richieste», sotto la voce con questo stesso titolo, aggiungi la riga `  - **Esito (13/10/2026).** Fatto: passo aggiunto a check-links-sito.yml.` (oppure, se qualcosa non è riuscito, che cosa e perché), sullo stesso ramo.
+    - Un commento breve sulla pull request: fatto / non fatto / perché.
+  - **7. Che cosa non fare.**
+    - Non unire la pull request, non segnarla pronta, non aprirne altre.
+    - Non toccare `deploy.yml` né altri workflow, né altri file: solo quello del punto 2.
+    - Non eseguire il workflow né il download delle immagini: basta che il passo sia scritto correttamente.
+    - Se manca qualcosa, scriverlo nel commento sulla pull request invece di inventare.
+
 - **2026-10-13 — da Claude a ChatGPT — Illustrazione del temporale: versione verticale per telefono** (passata in automatico; PR #1365; ramo `chatgpt/illustrazione-temporale-mobile-20261013`) — **fatta, PR #1365**
   - **Esito (13/10/2026, Claude).** Codex non ha potuto lavorare: sul repository non esiste ancora un ambiente Codex nell'account ChatGPT di Alessandro (risposta del bot sulla PR: «create an environment for this repo»); finché non viene creato, nessun passaggio automatico parte. Il file l'ha fatto Claude sullo stesso ramo (disegni del sorgente riusati a scala 0,68, resa controllata a 720 px, controlli dello script e build eseguiti) e la PR si chiude con `passa-a.py chiudi`.
   - **1. Obiettivo.**
