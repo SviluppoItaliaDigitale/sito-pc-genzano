@@ -1235,3 +1235,17 @@
     - "MTG"
   definizione: "Meteosat di Terza Generazione: famiglia di satelliti meteorologici europei (ESA/EUMETSAT) con immagini più frequenti e sorveglianza dei fulmini."
   link: "/glossario/#mtg"
+
+- id: arera
+  termine: "ARERA"
+  varianti:
+    - "ARERA"
+  definizione: "Autorità di Regolazione per Energia, Reti e Ambiente: organo indipendente che regola i servizi di luce, gas e acqua e tutela i diritti degli utenti."
+  link: "/glossario/#arera"
+
+- id: dl
+  termine: "D.L."
+  varianti:
+    - "D.L."
+  definizione: "Decreto-Legge: atto con forza di legge adottato dal Governo in casi di urgenza, efficace da subito ma da convertire in legge entro 60 giorni."
+  link: "/glossario/#dl"

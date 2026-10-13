@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-08-17"
+dataUltimaRevisione: "2026-10-13"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
@@ -74,6 +74,10 @@ Azienda Regionale Emergenza Sanitaria del Lazio: gestisce il servizio 118 e l'el
 
 ### ARI {#ari}
 Associazione Radioamatori Italiani. Partner storico della protezione civile nelle radiocomunicazioni di emergenza.
+
+### ARERA {#arera}
+Autorità di Regolazione per Energia, Reti e Ambiente. Organo indipendente che regola i servizi di luce, gas e acqua e tutela i diritti degli utenti, compresa la continuità del servizio in caso di blackout o guasti.
+*Approfondisci: [Blackout](/rischi-prevenzione/blackout/).*
 
 ### ARPA Lazio
 Agenzia Regionale per la Protezione dell'Ambiente del Lazio. Monitora aria, acqua, rumore, radiazioni e altri dati ambientali.
@@ -229,6 +233,9 @@ Dipartimento di Epidemiologia del Lazio (ASL Roma 1). Ente di sanità pubblica c
 ### DICOMAC
 Direzione di Comando e Controllo. Struttura di coordinamento nazionale attivata nelle emergenze di rilievo nazionale.
 *Approfondisci: [Il modello di intervento](/conoscere/le-quattro-fasi/modello-di-intervento/).*
+
+### D.L. (Decreto-Legge) {#dl}
+Atto con forza di legge adottato dal Governo in casi di necessità e urgenza (art. 77 della Costituzione). È efficace da subito, ma perde effetto se il Parlamento non lo convertisce in legge entro 60 giorni. Diversi provvedimenti che riguardano la protezione civile e la sicurezza del territorio nascono come decreto-legge.
 
 ### Direttiva PCM {#direttiva-pcm}
 Atto di indirizzo del Presidente del Consiglio. Per la protezione civile la più rilevante è la Direttiva 30 aprile 2021 sul Servizio nazionale.
