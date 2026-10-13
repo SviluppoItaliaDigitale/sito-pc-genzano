@@ -601,7 +601,9 @@ def fetch_consiglio_lazio(cutoff, errori):
 # le pagine delle immagini dopo otto richieste in dieci secondi. Per questo:
 # una richiesta del feed per giro, una pagina ogni quattro secondi, al
 # massimo otto pagine, e al primo 429 le altre immagini si classificano dal
-# titolo e dal riassunto del feed. Se il feed non risponde, le cinque
+# titolo e dal riassunto del feed; le pagine non lette (429, errore, struttura
+# cambiata) vanno fra gli errori, così il workflow le segnala e la routine le
+# legge a mano. Se il feed non risponde, le cinque
 # immagini più recenti si leggono dall'elenco «Latest images of the day» che
 # chiude ogni pagina di immagine, partendo da una pagina che non cambia: con
 # la finestra di due giorni bastano, e se non la coprono lo si dichiara fra
@@ -762,6 +764,12 @@ def _eu_space_dettaglio(cli, link):
     i = pagina.find('aria-label="Image details"')
     j = pagina.find('</aside>', i) if i >= 0 else -1
     riquadro = pagina[i:j] if 0 <= i < j else ''
+    data = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})', riquadro)
+    if not data:
+        # Senza riquadro dei dettagli (o senza la sua data) la pagina non è più
+        # quella che il parser conosce: meglio un errore dichiarato che luogo,
+        # credito e categorie vuoti in silenzio.
+        raise RuntimeError('riquadro «Image details» senza data: struttura della pagina cambiata?')
     categorie = []
     for c in re.findall(r'<div class="eusp-tag">(.*?)</div>', riquadro, flags=re.S):
         c = solo_testo(c)
@@ -774,14 +782,13 @@ def _eu_space_dettaglio(cli, link):
         fine = [x for x in (pagina.find('<div class="paragraph', corpo.end()),
                             pagina.find('Latest images of the day', corpo.end())) if x > 0]
         testo = solo_testo(pagina[corpo.end():min(fine) if fine else corpo.end() + 8000])
-    data = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})', riquadro)
     return {
         'luogo': campo('Location'),
         'credito': campo('Credit'),
         'categorie': categorie,
         'immagine': urllib.parse.urljoin(EUSPACE_BASE, htmllib.unescape(file.group(1))) if file else '',
         'testo': testo,
-        'data': parse_data_iso(data.group(1)) if data else None,
+        'data': parse_data_iso(data.group(1)),
     }
 
 
@@ -801,6 +808,8 @@ def fetch_eu_space(cutoff, errori):
                               f'{min(date_viste).strftime("%d/%m/%Y")}: controllare a mano {EUSPACE_ELENCO}')
         aperte = 0
         limite = False
+        non_lette = []   # pagine nella finestra classificate senza luogo, credito e categorie
+        oltre_limite = 0  # pagine lasciate chiuse per il tetto di EUSPACE_MAX_DETTAGLI (scelta, non guasto)
         visti = set()
         for titolo, link, d, descrizione in voci:
             if not link or link in visti or (d and d < cutoff):
@@ -814,10 +823,16 @@ def fetch_eu_space(cutoff, errori):
                     dett = _eu_space_dettaglio(cli, link)
                 except urllib.error.HTTPError as e:
                     limite = e.code == 429
+                    non_lette.append(f'{link} ({e})')
                     print(f'  [warn] EU Space: pagina non letta ({link}): {e}'
                           + ('; le altre immagini si classificano dal titolo e dal riassunto' if limite else ''), file=sys.stderr)
                 except Exception as e:  # noqa: BLE001
+                    non_lette.append(f'{link} ({e})')
                     print(f'  [warn] EU Space: pagina non letta ({link}): {e}', file=sys.stderr)
+            elif limite:
+                non_lette.append(f'{link} (non aperta dopo il 429)')
+            else:
+                oltre_limite += 1
             d = d or dett.get('data')
             if not d or d < cutoff:
                 continue
@@ -832,10 +847,23 @@ def fetch_eu_space(cutoff, errori):
             v = voce('EU Space — Image of the day (Copernicus)', 'immagini', titolo, link, d,
                      tipo_atto='Immagine satellitare', ente='Commissione europea — EU Space',
                      sommario=descrizione or dett.get('testo', ''))
+            # «dettagli» dice se la pagina è stata letta: senza, luogo e credito
+            # vuoti non vogliono dire «non indicati dal portale», e la issue lo
+            # scrive voce per voce (il credito decide l'attribuzione CC BY 4.0).
             v.update({'rilevanza': rilevanza, 'motivi': motivi, 'luogo': dett.get('luogo', ''),
                       'credito': dett.get('credito', ''), 'categorie': dett.get('categorie', []),
-                      'immagine': dett.get('immagine', '')})
+                      'immagine': dett.get('immagine', ''), 'dettagli': bool(dett)})
             out.append(v)
+        if non_lette:
+            # Fra gli errori, non solo nel log: il workflow apre la segnalazione
+            # delle fonti e la routine legge a mano le pagine elencate.
+            errori.append(f'EU Space: {len(non_lette)} pagine di immagini non lette, classificate dal solo titolo e '
+                          f'riassunto (da leggere a mano): ' + '; '.join(non_lette))
+        if oltre_limite:
+            # Il tetto è una scelta di cortesia verso il portale, non un guasto:
+            # niente segnalazione delle fonti, ma le voci restano marcate.
+            print(f'  [info] EU Space: {oltre_limite} immagini oltre le {EUSPACE_MAX_DETTAGLI} pagine aperte per giro, '
+                  'classificate dal titolo e dal riassunto (segnate «pagina non letta» nella issue)', file=sys.stderr)
     except Exception as e:  # noqa: BLE001
         errori.append(f'EU Space (immagini del giorno): {e}')
         print(f'  [error] eu space: {e}', file=sys.stderr)
@@ -1063,10 +1091,16 @@ def corpo_issue(output):
             for it in sub:
                 data = (it.get('published') or '')[:10]
                 t = it['titolo'].replace('|', '\\|').replace('\n', ' ')
+                chiavi = ', '.join(it['motivi'])
+                if not it.get('dettagli', True):
+                    righe.append(f"- **{data}** — pagina non letta\n  [{t}]({it['link']})\n"
+                                 f"  <sub>⚠️ luogo, credito e file originale si leggono sulla pagina prima di usare "
+                                 f"l'immagine · parole chiave: {chiavi}</sub>")
+                    continue
                 dove = ' · '.join(x for x in [it.get('luogo'), ', '.join(it.get('categorie') or [])] if x)
                 file = f" · [file originale]({it['immagine']})" if it.get('immagine') else ''
                 righe.append(f"- **{data}** — {dove or 'luogo non indicato'}\n  [{t}]({it['link']})\n"
-                             f"  <sub>credito: {it.get('credito') or 'non indicato'}{file} · parole chiave: {', '.join(it['motivi'])}</sub>")
+                             f"  <sub>credito: {it.get('credito') or 'non indicato'}{file} · parole chiave: {chiavi}</sub>")
     if news:
         righe.append(f"\n## Rassegna stampa e feed ({len(news)})\n")
         righe.append("Le voci sotto vengono da Google News e feed: **verificare sempre la fonte originale** (possono essere riprese non istituzionali).\n")
