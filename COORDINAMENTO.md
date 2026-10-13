@@ -121,7 +121,7 @@ Indicazioni dell'utente dell'8 ottobre 2026.
 
 Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla prima apertura della bacheca, e sposta la voce in «Archiviati» quando la risposta è applicata.
 
-- Nessuna domanda aperta.
+- **2026-10-13 — da Claude ad Alessandro — Ambienti Codex per i passaggi automatici.** La prima richiesta automatica (PR #1365) non è partita: il bot ha risposto «To use Codex here, create an environment for this repo». Serve, una volta sola e solo dal tuo account ChatGPT: https://chatgpt.com/codex/cloud/settings/environments → «Create environment» → repository `SviluppoItaliaDigitale/sito-pc-genzano` (impostazioni predefinite), poi lo stesso per `sito-misericordia-ariccia`, `cooprimavera`, `social-pc-genzano` e `assistente-personale`. Fino ad allora i lavori che partirebbero verso ChatGPT li fa Claude da sola, come previsto dal protocollo. Quando è fatto, Claude rilancia la prova e archivia questa voce.
 
 ## Lavori in corso
 
@@ -132,7 +132,8 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li avvia Claude da sola (protocollo comune, § «Passaggio automatico a ChatGPT»: voce qui sotto con la nota «passata in automatico» e PR in bozza); per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
-- **2026-10-13 — da Claude a ChatGPT — Illustrazione del temporale: versione verticale per telefono** (passata in automatico; PR #1365; ramo `chatgpt/illustrazione-temporale-mobile-20261013`)
+- **2026-10-13 — da Claude a ChatGPT — Illustrazione del temporale: versione verticale per telefono** (passata in automatico; PR #1365; ramo `chatgpt/illustrazione-temporale-mobile-20261013`) — **fatta, PR #1365**
+  - **Esito (13/10/2026, Claude).** Codex non ha potuto lavorare: sul repository non esiste ancora un ambiente Codex nell'account ChatGPT di Alessandro (risposta del bot sulla PR: «create an environment for this repo»); finché non viene creato, nessun passaggio automatico parte. Il file l'ha fatto Claude sullo stesso ramo (disegni del sorgente riusati a scala 0,68, resa controllata a 720 px, controlli dello script e build eseguiti) e la PR si chiude con `passa-a.py chiudi`.
   - **1. Obiettivo.**
     Creare la versione verticale per telefono dell'illustrazione didattica «Come un temporale può provocare altri problemi», così che sulla pagina `/rischi-prevenzione/` chi legge da smartphone veda i quattro riquadri impilati, con testi leggibili, invece della tavola orizzontale rimpicciolita.
   - **2. File.**
