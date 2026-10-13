@@ -1,42 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-10-13T00:16:43+00:00",
+  "generato": "2026-10-13T06:51:51+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 16,
-  "scaduti_scartati": 17,
+  "avvisi": 11,
+  "scaduti_scartati": 22,
   "in_corso": 5,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
    "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Temporali",
-   "livello": "arancione",
-   "evento_originale": "Orange Thunderstorm Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-13T00:00:00+00:00",
-   "fine": "2026-10-13T05:59:00+00:00",
-   "emesso": "2026-10-12T08:53:22+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261012105321.041"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Temporali",
-   "livello": "arancione",
-   "evento_originale": "Orange Thunderstorm Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-13T00:00:00+00:00",
-   "fine": "2026-10-13T05:59:00+00:00",
-   "emesso": "2026-10-12T08:53:22+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261012105321.043"
-  },
-  {
-   "in_corso": false,
    "regione": "Abruzzo",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -62,7 +36,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261012105321.047"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -88,19 +62,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261012105321.050"
   },
   {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-13T00:00:00+00:00",
-   "fine": "2026-10-13T05:59:00+00:00",
-   "emesso": "2026-10-12T08:53:22+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261012105321.042"
-  },
-  {
    "in_corso": false,
    "regione": "Campania",
    "fenomeno": "Vento",
@@ -114,7 +75,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261012105321.046"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -140,7 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261012105321.045"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -168,19 +129,6 @@
   {
    "in_corso": true,
    "regione": "Puglia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-13T00:00:00+00:00",
-   "fine": "2026-10-13T05:59:00+00:00",
-   "emesso": "2026-10-12T08:53:22+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261012105321.040"
-  },
-  {
-   "in_corso": false,
-   "regione": "Puglia",
    "fenomeno": "Vento",
    "livello": "gialla",
    "evento_originale": "Yellow Wind Warning",
@@ -203,19 +151,6 @@
    "fine": "2026-10-14T17:59:00+00:00",
    "emesso": "2026-10-12T08:53:22+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261012105321.048"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-13T00:00:00+00:00",
-   "fine": "2026-10-13T05:59:00+00:00",
-   "emesso": "2026-10-12T08:53:22+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261012105321.044"
   }
  ]
 }
