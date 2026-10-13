@@ -1,4 +1,4 @@
-# Immagini e testi social per «Rifiuti in fiamme in via di Pozzi Bonelli: notte di lavoro con i Vigili del Fuoco»
+# Immagini e testi social per «Sterpaglie e sfalci in fiamme in via di Pozzi Bonelli: notte di lavoro con i Vigili del Fuoco»
 
 - **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-10-12-incendio-rifiuti-via-pozzi-bonelli/
 - **Data**: 2026-10-12
