@@ -185,7 +185,7 @@ Dove si colloca concretamente il Gruppo Comunale di Genzano di Roma?
 
 - **In via ordinaria**: è la **componente operativa del COC di Genzano**, attivabile dal Sindaco per esercitazioni, attività di prevenzione, interventi minori
 - **Nelle emergenze locali**: opera sotto il **14° COI** quando l'evento coinvolge più Comuni dei Castelli Romani
-- **Nelle maxi emergenze regionali o nazionali**: è inserito nelle **colonne mobili del FEPIVOL**, attivate dalla **SOUP** su richiesta del **DPC**
+- **Nelle maxi emergenze regionali o nazionali**: è inserito nelle **colonne mobili della FEPIVOL**, attivate dalla **SOUP** su richiesta del **DPC**
 
 In ogni scenario, il Gruppo non agisce mai in modo isolato: è sempre un **tassello di una filiera**, e deve conoscere a quale livello della catena sta operando per comunicare correttamente con i propri interlocutori.
 
