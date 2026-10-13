@@ -272,7 +272,7 @@ Ogni articolo che racconta un intervento o un'attività del Gruppo (badge `Attiv
 - **Resta scritto** chi ha attivato il Gruppo quando è un ente del sistema (Sindaco, Comune, Polizia Locale, Polizia di Stato, Carabinieri, Vigili del Fuoco, SOUP/Sala Operativa, COC): «su richiesta della Polizia Locale», «la SOUP attiva il Gruppo». E resta la frase di chiusura dei resoconti: «Il Gruppo Comunale non può essere attivato direttamente dai cittadini».
 - La frase sui cittadini che **chiamano il 112** per segnalare fumo o pericoli è corretta e va tenuta: è il comportamento che il sito insegna.
 
-Bonifica fatta il 13/10/2026 su dieci resoconti (PR #1361 e seguente). Il gate `pc-article-reviewer` lo controlla sui resoconti (§ 7).
+Bonifica fatta il 13/10/2026 su dieci resoconti (PR #1361 e #1363). Il gate `pc-article-reviewer` lo controlla sui resoconti (§ 7).
 
 ## Programmi di eventi — disclaimer obbligatorio "fai riferimento al sito ufficiale"
 
