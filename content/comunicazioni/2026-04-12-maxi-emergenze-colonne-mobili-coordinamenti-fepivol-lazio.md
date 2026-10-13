@@ -101,7 +101,7 @@ Nella Regione Lazio i gruppi comunali e le associazioni di volontariato sono org
 
 Il ruolo dei coordinamenti è **essenziale nel meccanismo di attivazione**: la **Sala Operativa Unificata Permanente (SOUP)** della Regione Lazio non chiama direttamente tutti i gruppi comunali della regione, sarebbe inefficiente. Chiama i **presidenti dei coordinamenti**, che a loro volta chiamano i gruppi aderenti e raccolgono le disponibilità.
 
-Il nostro Gruppo aderisce al **FEPIVOL**, la cui presidenza è dell'associazione ALFA di Aprilia.
+Il nostro Gruppo aderisce alla **FEPIVOL**, la cui presidenza è dell'associazione ALFA di Aprilia.
 
 ---
 
@@ -123,7 +123,7 @@ La SOUP chiama i presidenti dei coordinamenti regionali (FEPIVOL, COREIR, COV, e
 
 **4. I coordinamenti raccolgono le disponibilità**
 
-I presidenti dei coordinamenti, a loro volta, chiamano i gruppi aderenti (nel caso del nostro FEPIVOL: gruppi comunali, associazioni, squadre specialistiche). Ogni gruppo comunica **entro tempi stretti**:
+I presidenti dei coordinamenti, a loro volta, chiamano i gruppi aderenti (nel caso della nostra FEPIVOL: gruppi comunali, associazioni, squadre specialistiche). Ogni gruppo comunica **entro tempi stretti**:
 
 - disponibilità di volontari (quanti, con quali competenze)
 - disponibilità di mezzi (quali e in che configurazione)
@@ -141,7 +141,7 @@ La colonna parte. Durante il viaggio, il capocolonna è in contatto radio con la
 
 ## FEPIVOL: i gruppi di lavoro specializzati
 
-Il **FEPIVOL** è organizzato internamente in **gruppi di lavoro specialistici**. Si entra nei gruppi in base a competenze acquisite attraverso la formazione, sul campo o sul posto di lavoro. I principali sono:
+La **FEPIVOL** è organizzata internamente in **gruppi di lavoro specialistici**. Si entra nei gruppi in base a competenze acquisite attraverso la formazione, sul campo o sul posto di lavoro. I principali sono:
 
 - **Segreteria operativa e organizzativa** — gestione documentale, registrazione volontari, coordinamento amministrativo
 - **Pianificazione e gestione logistica di emergenza** — allestimento campi, gestione magazzini, flussi di materiali

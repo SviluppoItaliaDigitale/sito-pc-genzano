@@ -1,7 +1,7 @@
 ---
 title: "La Regione Lazio finanzia i Coordinamenti del volontariato di protezione civile per il 2026"
 date: 2026-10-13T00:02:00+02:00
-description: "Approvata la convenzione tra Regione Lazio e gli 8 Coordinamenti del volontariato di PC. Al FEPIVOL, il coordinamento del nostro Gruppo, 30.000 euro."
+description: "Approvata la convenzione tra Regione Lazio e gli 8 Coordinamenti del volontariato di PC. Alla FEPIVOL, il coordinamento del nostro Gruppo, 30.000 euro."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,16 +13,16 @@ allegati:
   - titolo: "Determinazione regionale G13519 del 5 ottobre 2026 — Convenzione Coordinamenti volontariato PC"
     url: "/allegati/2026/determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf"
     dimensione: "313 KB"
-social_citazione: "Il nostro Gruppo aderisce al FEPIVOL: le risorse che la Regione assegna al coordinamento sostengono anche la nostra operatività."
+social_citazione: "Il nostro Gruppo aderisce alla FEPIVOL: le risorse che la Regione assegna al coordinamento sostengono anche la nostra operatività."
 social_punti:
   - "Convenzione quadro Regione Lazio - Coordinamenti territoriali del volontariato di PC"
   - "254.000 euro complessivi per il 2026, suddivisi tra 8 coordinamenti"
-  - "Al FEPIVOL, il coordinamento del nostro Gruppo, 30.000 euro"
+  - "Alla FEPIVOL, il coordinamento del nostro Gruppo, 30.000 euro"
   - "Fondi per esercitazioni, prevenzione, assistenza e partecipazione a manifestazioni"
 draft: false
 ---
 
-La **Direzione regionale Emergenza, Protezione Civile e NUE 112** della Regione Lazio ha approvato lo schema di convenzione per il 2026. Finanzia gli **8 Coordinamenti territoriali delle Organizzazioni di volontariato di protezione civile** attivi sul territorio regionale. Tra questi c'è il **FEPIVOL**, la Federazione Pronto Intervento del Volontariato a cui aderisce anche il nostro Gruppo Comunale.
+La **Direzione regionale Emergenza, Protezione Civile e NUE 112** della Regione Lazio ha approvato lo schema di convenzione per il 2026. Finanzia gli **8 Coordinamenti territoriali delle Organizzazioni di volontariato di protezione civile** attivi sul territorio regionale. Tra questi c'è la **FEPIVOL**, la Federazione Pronto Intervento del Volontariato a cui aderisce anche il nostro Gruppo Comunale.
 
 La determinazione (n. G13519 del 5 ottobre 2026) è stata pubblicata sul [Bollettino Ufficiale della Regione Lazio](https://www.regione.lazio.it/bur) n. 82 del 13 ottobre 2026.
 
@@ -53,7 +53,7 @@ La spesa complessiva è di **254.000 euro**, impegnati sul capitolo di bilancio 
 | Coordinamento SECOV Lazio ODV (Ass. Naz. Carabinieri) | 18.000 € |
 | Coordinamento regionale Prociv Arci Lazio | 8.500 € |
 
-Il contributo al **FEPIVOL** è quello che riguarda più da vicino il nostro Gruppo, che a questo coordinamento aderisce. Sono 30.000 euro in totale: 25.000 per le attività generiche previste in convenzione, 5.000 per il supporto a esercitazioni e alle competenze istituzionali della Direzione.
+Il contributo alla **FEPIVOL** è quello che riguarda più da vicino il nostro Gruppo, che a questo coordinamento aderisce. Sono 30.000 euro in totale: 25.000 per le attività generiche previste in convenzione, 5.000 per il supporto a esercitazioni e alle competenze istituzionali della Direzione.
 
 ## Come vengono erogati i fondi
 
