@@ -23,7 +23,7 @@ Questo kit raccoglie schede semplici e stampabili per preparare in anticipo info
 
 Le schede sono ispirate a riferimenti su caregiver familiari, assistenza domiciliare, disabilità, non autosufficienza e supporto alla popolazione in emergenza. In caso di dubbio, seguire sempre le indicazioni dei professionisti e dei servizi competenti.
 
-- L. 205/2017, art. 1, c. 255 — riconoscimento del caregiver familiare in Italia
+- L. 205/2017, art. 1, c. 255 — definizione di caregiver familiare
 - Carta europea del caregiver familiare — Eurocarers
 - WHO — materiali su self-care, salute e benessere
 - L. 104/1992 — legge quadro per l'assistenza, l'integrazione sociale e i diritti delle persone con disabilità
