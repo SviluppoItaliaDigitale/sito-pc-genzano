@@ -4,7 +4,7 @@ description: "Schede stampabili A4 per orientamento, farmaci, contatti, bisogni 
 layout: "single"
 ---
 
-In emergenza le persone anziane possono avere bisogni specifici: farmaci da non interrompere, difficoltà di movimento, problemi di udito o vista, disorientamento, solitudine, paura di lasciare la propria casa o necessità di comunicare informazioni sanitarie importanti.
+In emergenza le persone anziane possono avere bisogni specifici: terapie da portare avanti secondo le indicazioni del medico, difficoltà di movimento, problemi di udito o vista, disorientamento, solitudine, paura di lasciare la propria casa o necessità di comunicare informazioni sanitarie importanti.
 
 Queste schede sono pensate per **anziani autonomi o parzialmente autonomi** che vivono in casa propria. Per anziani in strutture sanitarie o assistenziali — RSA, lungodegenze, hospice — è disponibile un kit dedicato: [Kit Calamità Strutture Sanitarie](/formazione/kit-calamita-strutture-sanitarie/).
 
@@ -28,7 +28,7 @@ Le schede sono **pronte da stampare in formato A4**, utilizzabili da volontari d
 | 2 | [Diario medicinali settimanale](/formazione/kit-calamita-anziani/02-diario-medicinali.html) | Promemoria 7 giorni × 3 fasce: mattino, pranzo, sera. Utile per non dimenticare farmaci abituali. |
 | 3 | [Calendario orientativo](/formazione/kit-calamita-anziani/03-calendario-orientativo.html) | Per ricordare data, luogo, persone presenti e attività della giornata. |
 | 4 | [Ricordi della mia vita](/formazione/kit-calamita-anziani/04-ricordi-vita.html) | Per raccontare ricordi, persone importanti, luoghi, tradizioni e momenti significativi. |
-| 5 | [Carta dei bisogni con pittogrammi](/formazione/kit-calamita-anziani/05-bisogni-caa.html) | 12 pittogrammi per comunicare bisogni essenziali quando parlare o sentire è difficile. |
+| 5 | [Carta dei bisogni con simboli](/formazione/kit-calamita-anziani/05-bisogni-caa.html) | 12 simboli per comunicare bisogni essenziali quando parlare o sentire è difficile. |
 | 6 | [La mia rete di supporto](/formazione/kit-calamita-anziani/06-rete-supporto.html) | Famiglia, vicini, medico, servizi, parrocchia, volontari e numeri utili. |
 | 7 | [Mandala per la calma](/formazione/kit-calamita-anziani/07-mandala-adulti.html) | Attività lenta e ripetitiva, utile per passare il tempo e ritrovare concentrazione. |
 | 8 | [Cruciverba della memoria](/formazione/kit-calamita-anziani/08-cruciverba-memoria.html) | 8 parole con riferimenti culturali familiari e quotidiani. |
@@ -53,7 +53,7 @@ Le schede sono ispirate a materiali e buone pratiche su anziani, fragilità, eme
 - WHO/OMS — materiali su salute mentale e supporto psicosociale in emergenza
 - Sphere Standards — inclusione delle persone vulnerabili nella risposta umanitaria
 - SIGG — Società Italiana di Gerontologia e Geriatria
-- AIP — Associazione Italiana Psicogeriatria
+- AIP — Associazione Italiana di Psicogeriatria
 - Dipartimento della Protezione Civile — materiali informativi e indicazioni operative per assistenza alla popolazione
 
-Per segnalare bisogni o suggerire nuove schede: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire nuove schede o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

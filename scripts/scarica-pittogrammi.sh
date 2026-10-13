@@ -34,6 +34,12 @@ declare -a FAILED_ITEMS=()
 # ---------------------------------------------------------------------------
 # ISO 7010 — formato: CODICE|nome-file|descrizione
 # ---------------------------------------------------------------------------
+# Il 13 ottobre 2026 dieci file risultavano salvati col nome di un altro
+# segnale (es. E009 «medico» chiamato lavaggio-occhi, E018 «ruotare in senso
+# antiorario» chiamato porta-tirare, W008 «caduta» chiamato pericolo-corrosivo):
+# i codici sono stati ricontrollati sulla voce ISO 7010 di Wikipedia e sui
+# file di Commons, e nome e descrizione ora corrispondono al codice. Prima di
+# aggiungere una voce, apri il file del codice e guarda che cosa mostra.
 ISO7010=(
   # Evacuazione e primo soccorso (E)
   "E001|uscita-emergenza-sinistra|Uscita di emergenza a sinistra"
@@ -41,33 +47,36 @@ ISO7010=(
   "E003|cassetta-primo-soccorso|Cassetta di primo soccorso"
   "E004|telefono-emergenza|Telefono di emergenza"
   "E007|punto-raccolta|Punto di raccolta"
-  "E009|lavaggio-occhi|Stazione lavaggio occhi"
+  "E009|medico|Medico"
   "E010|defibrillatore-dae|Defibrillatore (DAE)"
-  "E011|acqua-potabile|Acqua potabile"
+  "E011|lavaggio-occhi|Stazione lavaggio occhi"
   "E013|barella|Barella"
-  "E018|porta-tirare|Porta da aprire tirando"
-  "E019|porta-spingere|Porta da aprire spingendo"
-  "E024|punto-evacuazione|Punto di evacuazione"
+  "E015|acqua-potabile|Acqua potabile"
+  "E018|ruotare-in-senso-antiorario-per-aprire|Ruotare in senso antiorario per aprire"
+  "E019|ruotare-in-senso-orario-per-aprire|Ruotare in senso orario per aprire"
+  "E024|rifugio-temporaneo|Rifugio temporaneo per l'evacuazione"
 
   # Antincendio (F)
   "F001|estintore|Estintore"
   "F002|idrante-muro|Idrante a muro"
   "F003|scala-antincendio|Scala antincendio"
-  "F004|telefono-antincendio|Telefono per emergenze antincendio"
+  "F004|attrezzature-antincendio|Insieme di attrezzature antincendio"
   "F005|pulsante-allarme-antincendio|Pulsante di allarme antincendio"
+  "F006|telefono-antincendio|Telefono per emergenze antincendio"
 
   # Pericolo / Avvertimento (W)
   "W001|pericolo-generico|Pericolo generico"
   "W002|pericolo-esplosivo|Pericolo materiale esplosivo"
-  "W008|pericolo-corrosivo|Pericolo sostanze corrosive (W008 vecchia ed., conferma visiva)"
+  "W008|pericolo-caduta|Pericolo di caduta (dislivello)"
   "W009|pericolo-biologico|Pericolo biologico"
   "W010|pericolo-bassa-temperatura|Pericolo bassa temperatura"
   "W011|pavimento-scivoloso|Pavimento scivoloso"
   "W012|pericolo-elettrico|Pericolo elettrico"
   "W016|pericolo-tossico|Pericolo sostanze tossiche"
   "W017|superficie-calda|Superficie calda"
-  "W018|allarme-antincendio-automatico|Allarme antincendio automatico"
+  "W018|pericolo-avvio-automatico|Avvio automatico"
   "W021|materiale-infiammabile|Materiale infiammabile"
+  "W023|pericolo-corrosivo|Sostanza corrosiva"
   # NOTA: la voce "W023|caduta-massi" e' stata rimossa il 2 maggio 2026:
   # ISO 7010 W023 = Sostanza corrosiva (NON caduta massi). Lo script
   # scaricava il file corrosivo e lo salvava col nome sbagliato
@@ -86,9 +95,10 @@ ISO7010=(
   "M008|scarpe-protettive|Indossare scarpe protettive"
   "M009|guanti-protettivi|Indossare guanti protettivi"
   "M010|abito-protettivo|Indossare abito protettivo"
-  "M013|maschera-protettiva|Indossare maschera protettiva"
+  "M013|visiera-protettiva|Indossare visiera protettiva"
   "M014|casco-protettivo|Indossare casco protettivo"
   "M015|alta-visibilita|Indossare giubbotto ad alta visibilità"
+  "M016|maschera-protettiva|Indossare la mascherina"
 
   # Divieto (P)
   "P001|divieto-generico|Divieto generico"
@@ -96,7 +106,7 @@ ISO7010=(
   "P003|vietato-fuochi|Vietato accendere fuochi"
   "P004|vietato-pedoni|Vietato l'accesso ai pedoni"
   "P010|vietato-toccare|Vietato toccare"
-  "P022|vietato-bere|Acqua non potabile"
+  "P022|vietato-mangiare-e-bere|Vietato mangiare e bere"
 )
 
 # ---------------------------------------------------------------------------

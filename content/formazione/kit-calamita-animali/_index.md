@@ -6,7 +6,7 @@ layout: "single"
 
 Gli animali domestici fanno parte della vita di molte famiglie. In caso di evacuazione o accoglienza temporanea, preparare in anticipo documenti, trasportino, farmaci, cibo e contatti veterinari può evitare separazioni, ritardi e difficoltà organizzative.
 
-Il **Codice della Protezione Civile** richiama l’importanza di considerare anche gli animali nelle attività di pianificazione e assistenza. Questo kit offre schede pratiche per cane, gatto e altri animali da compagnia, ma **non sostituisce** indicazioni veterinarie, regolamenti dei centri di accoglienza o disposizioni delle autorità competenti.
+Il **Codice della Protezione Civile** indica fra gli scopi del Servizio nazionale la tutela anche degli animali (art. 1, c. 1). Questo kit offre schede pratiche per cane, gatto e altri animali da compagnia, ma **non sostituisce** indicazioni veterinarie, regolamenti dei centri di accoglienza o disposizioni delle autorità competenti.
 
 > Leggi prima la **[Guida operatori](/formazione/kit-calamita-animali/00-guida-operatori.html)**: contiene principi di base, indicazioni per accoglienza, trasporto, stress, sicurezza e gestione di animali con bisogni particolari.
 
@@ -20,10 +20,10 @@ Il **Codice della Protezione Civile** richiama l’importanza di considerare anc
 
 ## Riferimenti utili
 
-- Codice della Protezione Civile — pianificazione e assistenza alla popolazione, con attenzione anche agli animali da affezione
-- L. 281/1991 — animali d'affezione e prevenzione del randagismo
+- Codice della Protezione Civile (D.Lgs. 1/2018) — art. 1, c. 1: tutela anche degli animali
+- L. 281/1991 — legge quadro sugli animali di affezione e la prevenzione del randagismo
 - WSAVA — materiali su gestione degli animali in emergenza
 - ENPA, OIPA, LAV, LNDC — organizzazioni animaliste e materiali informativi
 - Servizi veterinari territoriali e autorità competenti
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

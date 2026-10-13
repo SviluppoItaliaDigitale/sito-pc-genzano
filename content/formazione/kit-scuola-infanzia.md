@@ -123,7 +123,7 @@ Ogni bambino disegna la figura di soccorso che lo ha colpito di più. Appendete 
 
 ### Racconto
 
-*"A volte la terra sotto i nostri piedi si muove un pochino. Si chiama terremoto. Non succede spesso, ma è importante sapere cosa fare. Non dobbiamo avere paura: dobbiamo diventare bravi come le tartarughe!"*
+*"A volte la terra sotto i nostri piedi si muove un pochino. Si chiama terremoto. Non succede spesso, ma è importante sapere cosa fare. Se ci spaventiamo va bene: i grandi sono con noi. Impariamo a fare come le tartarughe!"*
 
 ### La regola della tartaruga
 
@@ -150,7 +150,7 @@ Ripetere più volte, trasformandolo in un gioco. I bambini che eseguono bene i m
 Spiega con semplicità:
 - Non correre fuori
 - Non stare vicino alle finestre
-- Non piangere senza motivo: se sappiamo cosa fare, non ci fa più tanta paura!
+- Non restare da solo: se hai paura va bene, i grandi sono con te e ti aiutano
 
 ---
 
@@ -527,7 +527,7 @@ Materiale operativo pronto all'uso per estendere il percorso base. Le attività 
 Strumenti mnemonici per fissare i concetti chiave. Si possono cantare su melodie note (es. *Fra' Martino*, *Giro giro tondo*) o semplicemente recitate in cerchio.
 
 **Filastrocca della tartaruga (terremoto)**
-> La tartaruga piccolina / quando trema la cucina / si nasconde piano piano / sotto il tavolo o un divano. / Dentro il guscio sta al sicuro / e non ha proprio paura!
+> La tartaruga piccolina / quando trema la cucina / sotto il tavolo va in un lampo / e con le mani copre il capo. / Ferma aspetta, guscio chiuso, / finché il tremore è concluso. / Poi esce in fila, piano piano, / con la maestra mano nella mano.
 
 **Filastrocca del 112**
 > Uno, uno, due — il numero è per te! / Se c'è un grande guaio / chiama senza ritardo. / Vigili del fuoco, medici e carabinieri / vengono veloci, gli amici veri.
@@ -595,7 +595,7 @@ Obiettivo: il bambino capisce che al 112 bisogna dire **cosa è successo** e **d
 - "Se piove forte sto dentro casa" → 😊 (vero)
 - "Chiamo il 112 per dire che è bello il mio disegno" → 😟 (falso)
 
-**Scheda 10 — Il semaforo delle emozioni**: tre cerchi (rosso, giallo, verde) con sotto uno spazio per disegnare. Rosso = "quando ho molto paura cosa faccio?"; giallo = "quando sono preoccupato cosa dico?"; verde = "quando sono calmo come mi sento?". *Obiettivo*: gestione emotiva — imparare a riconoscere e comunicare la paura è parte integrante dell'autoprotezione.
+**Scheda 10 — Il semaforo delle emozioni**: tre cerchi (rosso, giallo, verde) con sotto uno spazio per disegnare. Rosso = "quando ho molta paura cosa faccio?"; giallo = "quando sono preoccupato cosa dico?"; verde = "quando sono calmo come mi sento?". *Obiettivo*: gestione emotiva — imparare a riconoscere e comunicare la paura è parte integrante dell'autoprotezione.
 
 ### Routine quotidiane di 5 minuti
 

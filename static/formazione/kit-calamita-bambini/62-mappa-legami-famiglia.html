@@ -18,6 +18,10 @@
   .testo-svg{font-family:'URW Gothic L',sans-serif;font-size:9px;font-weight:700;fill:#1a1a1a;text-anchor:middle}
   .testo-bianco{fill:#fff}
 .scheda-attivita{align-items:stretch}.scheda-attivita > *{max-width:100%;width:100%;box-sizing:border-box}@media print{.scheda{padding:8mm 10mm!important}.scheda-header{margin-bottom:3mm!important;padding-bottom:2.5mm!important}.scheda-header .logo{width:14mm!important;height:14mm!important}.scheda-title{font-size:17pt!important;margin-bottom:1.5mm!important}.scheda-eta{margin-bottom:3mm!important;font-size:8pt!important;padding:1mm 2mm!important}.scheda-istruzione{font-size:9.5pt!important;padding:2.5mm 3mm!important;margin-bottom:3.5mm!important;line-height:1.3!important}.scheda-attivita{gap:2.5mm!important}.scheda-footer{padding-top:2.5mm!important;font-size:7pt!important}.scheda-footer .fonti{font-size:6.5pt!important}}</style>
+  <!-- Stampa: un 4% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 13/10/2026, con la nota per l'adulto). -->
+  <style>@media print { .scheda { zoom: 0.96; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
@@ -30,11 +34,11 @@
   </header>
   <h1 class="scheda-title">La mappa dei miei legami</h1>
   <span class="scheda-eta">6-12 anni · rete di sostegno</span>
-  <div class="scheda-istruzione">🌐 <strong>Non sei mai veramente solo</strong>. Intorno a te ci sono persone che ti vogliono bene, anche se non le vedi tutti i giorni. Scrivi i loro nomi nei cerchi: i più vicini al centro sono quelli con cui parli ogni giorno, quelli più lontani vedi meno spesso ma esistono.</div>
+  <div class="scheda-istruzione">🌐 <strong>Intorno a te ci sono persone che possono starti vicino e aiutarti</strong>, anche se non le vedi tutti i giorni. Scrivi i loro nomi nei cerchi: i più vicini al centro sono quelli con cui parli ogni giorno, quelli più lontani li vedi meno spesso. Un cerchio può restare vuoto: va bene lo stesso.</div>
   <section class="scheda-attivita">
     <div class="legami-area">
       <div class="legami-svg">
-        <svg viewBox="0 0 400 240" role="img" aria-label="Mappa concentrica con tu al centro, cerchi per famiglia stretta, allargata, comunità">
+        <svg viewBox="0 0 400 240" role="img" aria-label="Mappa a cerchi con te al centro: cerchio 1, le persone più vicine; cerchio 2, amici e parenti; cerchio 3, la comunità. Nei cerchietti vuoti si scrivono i nomi">
           <circle class="s" cx="200" cy="120" r="105" stroke-dasharray="3 3"/>
           <circle class="s" cx="200" cy="120" r="70" stroke-dasharray="3 3"/>
           <circle class="s" cx="200" cy="120" r="35" stroke-dasharray="3 3"/>
@@ -61,25 +65,29 @@
           <circle class="cerchio-vuoto" cx="110" cy="190" r="10"/>
           <circle class="cerchio-vuoto" cx="95" cy="120" r="10"/>
           <circle class="cerchio-vuoto" cx="110" cy="50" r="10"/>
-          <!-- Etichette anelli -->
-          <text x="200" y="10" class="testo-svg" font-size="8" fill="#003366">comunità (vicini, scuola, gruppo PC)</text>
-          <text x="335" y="120" class="testo-svg" font-size="8" fill="#003366" text-anchor="start">amici / famiglia allargata</text>
-          <text x="200" y="232" class="testo-svg" font-size="8" fill="#003366">famiglia stretta</text>
+          <!-- Numeri dei cerchi, spiegati dalla legenda sotto (le etichette lunghe
+               finivano sopra i cerchietti, controllo a vista del 13/10/2026) -->
+          <circle cx="217.5" cy="89.7" r="7.5" fill="#003366"/>
+          <text x="217.5" y="92.9" class="testo-svg testo-bianco">1</text>
+          <circle cx="235.0" cy="59.4" r="7.5" fill="#003366"/>
+          <text x="235.0" y="62.6" class="testo-svg testo-bianco">2</text>
+          <circle cx="252.5" cy="29.1" r="7.5" fill="#003366"/>
+          <text x="252.5" y="32.3" class="testo-svg testo-bianco">3</text>
         </svg>
       </div>
       <div class="legenda-cerchi">
-        <div class="legenda-item"><strong>1° cerchio (vicino)</strong>Mamma, papà, fratelli, sorelle, chi vive con te.</div>
-        <div class="legenda-item"><strong>2° cerchio (medio)</strong>Nonni, zii, cugini, migliori amici, maestre preferite.</div>
-        <div class="legenda-item"><strong>3° cerchio (largo)</strong>Vicini di casa, compagni di squadra, animatori, volontari PC, parroco, dottoressa.</div>
+        <div class="legenda-item"><strong>Cerchio 1 (vicino)</strong>Chi vive con te o si prende cura di te: mamma, papà, fratelli, sorelle, altri adulti.</div>
+        <div class="legenda-item"><strong>Cerchio 2 (medio)</strong>Nonni, zii, cugini, migliori amici, maestre preferite.</div>
+        <div class="legenda-item"><strong>Cerchio 3 (largo)</strong>Vicini di casa, compagni di squadra, animatori, volontari PC, parroco, dottoressa.</div>
       </div>
     </div>
     <div class="nota">
-      💡 <strong>Quando hai bisogno di aiuto</strong>, parti dal cerchio più vicino. Se non lo trovi, vai a quello successivo. Se non c'è nessuno della tua mappa, cerca un volontario di Protezione Civile o un adulto con la pettorina.
+      💡 <strong>Quando hai bisogno di aiuto</strong>, parti dal cerchio più vicino. Se non lo trovi, vai a quello successivo. Se non c'è nessuno della tua mappa o non sai dove sono, cerca un volontario di Protezione Civile o un adulto con la pettorina.
     </div>
   </section>
   <footer class="scheda-footer">
     <span>Scheda 62 — Mappa dei miei legami</span>
-    <span class="fonti">Strumento "Family and Community Connection Map" raccomandato dalla WHO Psychological First Aid: Guide for Field Workers e dalle linee guida UNICEF MHPSS per minori, per rinforzare la rete di sostegno percepita.</span>
+    <span class="fonti">Mappa a cerchi dei propri sostegni: attività di uso comune che richiama la «catena di carta» del PFA Field Operations Guide (NCTSN e National Center for PTSD, 2006, azione «Connection with Social Supports»), dove il bambino scrive il nome di chi lo sostiene. Per l'adulto: il bambino scrive solo chi vuole; un cerchio vuoto o un pianto sono normali. Non promettere ricongiungimenti: se cerca qualcuno, avvisa chi coordina il campo. Disagio che dura: pediatra o servizi della ASL Roma 6. Pericolo immediato: 112.</span>
     <span>www.protezionecivilegenzano.it</span>
   </footer>
 </article>

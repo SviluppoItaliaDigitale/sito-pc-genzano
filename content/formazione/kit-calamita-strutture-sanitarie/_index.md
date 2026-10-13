@@ -54,17 +54,20 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 | Scheda | Quando usarla |
 |---|---|
-| [Carta del comfort sensoriale](/formazione/kit-calamita-strutture-sanitarie/18-comfort-sensoriale.html) | Musica, profumi, oggetti, trigger: una revisione Cochrane ne segnala i benefici su agitazione e BPSD. |
+| [Carta del comfort sensoriale](/formazione/kit-calamita-strutture-sanitarie/18-comfort-sensoriale.html) | Musica, profumi, oggetti, trigger: una revisione Cochrane segnala benefici della musica su umore e comportamento, non sull'agitazione. |
 | [Reminiscence box — la scatola dei ricordi](/formazione/kit-calamita-strutture-sanitarie/19-reminiscence-box.html) | Istruzioni per familiari: oggetti che evocano la vita. |
 | [Comunicazione pittografica minima](/formazione/kit-calamita-strutture-sanitarie/20-comunicazione-pittografica-minima.html) | Pittogrammi essenziali per MMSE basso. Caratteri 48pt. |
 
 ## Riferimenti istituzionali
 
-- **Ministero della Salute** — linee guida emergenza RSA
-- **AGENAS**, **WHO Hospital Safety Index**, **Sphere Standards 2018**
+- **D.Lgs. 81/2008** (artt. 43-46) e **D.M. 2 settembre 2021** — gestione delle emergenze nei luoghi di lavoro: piano di emergenza ed esercitazioni almeno annuali
+- **Regola tecnica di prevenzione incendi per le strutture sanitarie** — D.M. 18 settembre 2002, aggiornato dal D.M. 19 marzo 2015
+- **WHO/PAHO** — Hospital Safety Index, guida per i valutatori (2ª edizione); **Sphere Standards 2018**
 - Lezioni condivise dagli operatori del settore su emergenze reali (terremoto Centro Italia 2016, pandemia Covid-19 nelle RSA)
-- **ISS** — lezioni Covid-RSA
-- **SIGG**, **AIP**, **Cochrane Review** (2017 musica, 2018 reminiscence)
+- **ISS** — indagine nazionale sul contagio COVID-19 nelle strutture residenziali e sociosanitarie (2020)
+- **NICE** — linea guida CG103 sul delirium (aggiornata nel 2023) e NG97 sulla demenza (2018)
+- **Cochrane** — revisioni sulla musicoterapia (van der Steen e colleghi, 2018) e sulla reminiscenza (Woods e colleghi, 2018) nella demenza
+- **CDC/HICPAC** — prevenzione delle infezioni urinarie da catetere (2009); **ESPEN** — nutrizione enterale domiciliare (2020)
 - **Kitwood T**, **Feil N** (Validation Therapy), **EPUAP**
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

@@ -314,3 +314,15 @@ dati:
         perche: "Il D.Lgs. 65/2018 (NIS) è abrogato dal D.Lgs. 138/2024 (NIS2)."
         contesto: 'NIS|infrastruttur|critic'
         finestra: 200
+
+  - id: fepivol-genere
+    dato: "Genere grammaticale della FEPIVOL"
+    valore: "femminile («la FEPIVOL», è una federazione); al maschile solo con «Coordinamento» davanti («il Coordinamento FE.PI.VOL.»)"
+    fonti:
+      - nome: "Indicazione del Gruppo Comunale e del coordinatore, 13/10/2026"
+        url: "https://www.protezionecivilegenzano.it/chi-siamo/"
+    vietati:
+      - regex: '\b(?:[Ii]l|[Aa]l|[Dd]el|[Dd]al|[Nn]el|[Ss]ul|[Nn]ostro)\s+\**(?:FEPIVOL|FE\.PI\.VOL)'
+        perche: "La FEPIVOL è una federazione: articolo e preposizioni al femminile («la FEPIVOL», «alla FEPIVOL»). Il maschile vale solo con «Coordinamento» davanti."
+        contesto: 'FEPIVOL|FE\.PI\.VOL'
+        finestra: 40

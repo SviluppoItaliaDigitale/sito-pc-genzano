@@ -29,4 +29,4 @@ Le schede sono ispirate a materiali su servizi sanitari essenziali in emergenza,
 - ARERA — agevolazioni e registri collegati a dispositivi elettromedicali essenziali
 - SIN, AIOM, AIPO-ITS, CNT, UNIAMO, Telethon e reti regionali malattie rare — riferimenti specialistici
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

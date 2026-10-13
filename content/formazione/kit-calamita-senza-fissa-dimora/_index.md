@@ -29,4 +29,4 @@ Le schede sono ispirate a riferimenti su grave marginalità, inclusione, servizi
 - L. 1228/1954, art. 2 (come modificato dalla L. 94/2009) — residenza delle persone senza fissa dimora nel comune di domicilio
 - Servizi sociali comunali, servizi sanitari territoriali e reti locali di accoglienza
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.
