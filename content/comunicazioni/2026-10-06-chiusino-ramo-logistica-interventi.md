@@ -26,7 +26,7 @@ Tra **sabato 3 e martedì 6 ottobre 2026** i volontari del Gruppo sono usciti **
 
 Poco prima delle 10 la **Polizia Locale** ha chiesto un intervento in **via degli Ulivi**. Un **chiusino** era stato divelto e restava pericoloso per chi passava. La squadra lo ha ripristinato in poco più di un'ora. Ha usato l'**EVO Cross 4**, il pickup 4x4 per persone e materiali.
 
-Nel tardo pomeriggio c'è stato un servizio breve in **via Edmondo De Amicis**. Su richiesta di un cittadino, i volontari hanno verificato l'apertura di una porta in circa dieci minuti.
+Nel tardo pomeriggio c'è stato un servizio breve in **via Edmondo De Amicis**. Dopo una segnalazione, i volontari hanno verificato l'apertura di una porta in circa dieci minuti.
 
 ## Lunedì 5: un ramo sulla banchina
 

@@ -263,6 +263,17 @@ Ogni articolo che racconta un intervento o un'attività del Gruppo (badge `Attiv
 - Differenza con «Cosa puoi fare tu»: quella sezione dà le istruzioni operative per il cittadino nella stessa situazione; «Cosa impariamo» dice che cosa l'episodio insegna sul rischio e sulla preparazione. Se l'articolo è breve, le due sezioni possono fondersi sotto il titolo «Cosa impariamo».
 - L'archetype `archetypes/comunicazioni.md` porta lo scheletro della sezione; `pc-article-reviewer` la verifica sui resoconti (§ 7 della sua lista).
 
+## Resoconti degli interventi — chi ha chiesto l'intervento si racconta in forma neutra (dal 13/10/2026)
+
+🔴 **Istruzione dell'utente del 13/10/2026.** Nei rapportini di servizio i volontari scrivono spesso «richiesta di un cittadino», ma il sito dice ovunque (tabella «Chi chiamare», Numeri utili, Contatti, Biblioteca delle idee sbagliate, rule 06) che **il Gruppo non si attiva su chiamata diretta dei cittadini**: in emergenza si chiama il 112, e il Gruppo arriva perché lo attivano il Sindaco, il COC o la Sala Operativa regionale. Un resoconto che scrive «un cittadino ci ha chiesto di…» contraddice quelle pagine e pubblicizza un canale che non esiste.
+
+- **Forma neutra, sempre**: «è arrivata la segnalazione di un'auto in panne in via…», «viene segnalata una colonna di fumo», «dopo una segnalazione, i volontari hanno…», «c'è stato un servizio tecnico al bivio per…». Si racconta il fatto, non a chi è stata fatta la telefonata.
+- **Vietato** nel corpo, nella descrizione, nei `social_punti` e nella `social_citazione`: «un cittadino ci ha segnalato/chiesto/chiamato», «su richiesta di un cittadino», «la segnalazione di un cittadino», «chiamati da un residente/privato/automobilista» e varianti. Vale anche per il resoconto di un intervento che il rapportino attribuisce a un cittadino: il dato resta nel registro interno.
+- **Resta scritto** chi ha attivato il Gruppo quando è un ente del sistema (Sindaco, Comune, Polizia Locale, Polizia di Stato, Carabinieri, Vigili del Fuoco, SOUP/Sala Operativa, COC): «su richiesta della Polizia Locale», «la SOUP attiva il Gruppo». E resta la frase di chiusura dei resoconti: «Il Gruppo Comunale non può essere attivato direttamente dai cittadini».
+- La frase sui cittadini che **chiamano il 112** per segnalare fumo o pericoli è corretta e va tenuta: è il comportamento che il sito insegna.
+
+Bonifica fatta il 13/10/2026 su dieci resoconti (PR #1361 e #1363). Il gate `pc-article-reviewer` lo controlla sui resoconti (§ 7).
+
 ## Programmi di eventi — disclaimer obbligatorio "fai riferimento al sito ufficiale"
 
 🔴 **Ogni articolo che riporta il programma, il calendario o gli orari di un evento organizzato da un ente terzo** (Comune di Genzano di Roma, Comune di Marino, parrocchie, associazioni, ecc.) **DEVE includere un disclaimer** che:

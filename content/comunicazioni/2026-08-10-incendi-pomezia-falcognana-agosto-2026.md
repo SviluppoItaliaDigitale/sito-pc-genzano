@@ -60,7 +60,7 @@ Le indicazioni di base per chi abita o coltiva in una fascia di interfaccia sono
 
 ## 9 agosto: dieci ettari in via della Falcognana
 
-**Domenica 9 agosto** la segnalazione parte da un cittadino che vede una colonna di fumo importante. La SOUP attiva il Gruppo verso le 14.30 per una verifica; la squadra arriva sul posto poco dopo le 15. L'intervento si chiude verso le 20.30, dopo quasi sei ore.
+**Domenica 9 agosto** viene segnalata una colonna di fumo importante. La SOUP attiva il Gruppo verso le 14.30 per una verifica; la squadra arriva sul posto poco dopo le 15. L'intervento si chiude verso le 20.30, dopo quasi sei ore.
 
 Il bilancio riportato nel rapporto è di **circa dieci ettari percorsi dal fuoco**. Sul fronte principale sono intervenuti i mezzi aerei. A terra hanno operato i Vigili del Fuoco e diversi gruppi di volontariato di protezione civile.
 
@@ -124,7 +124,7 @@ Su fronti di queste dimensioni nessun gruppo lavora da solo. In via della Falcog
 
 ## Cosa può fare chi vede del fumo
 
-Le due attivazioni di questa settimana sono partite entrambe da una segnalazione: una dalla sala operativa regionale, una da un cittadino che ha visto la colonna di fumo. La segnalazione tempestiva resta lo strumento più efficace che abbiamo.
+Le due attivazioni di questa settimana sono arrivate entrambe dalla sala operativa regionale, la seconda dopo la segnalazione di una colonna di fumo. La segnalazione tempestiva resta lo strumento più efficace che abbiamo.
 
 - **Chiama subito il 112.** Nel Lazio è l'unico numero da comporre per qualsiasi emergenza: la centrale unica smista la chiamata ai Vigili del Fuoco e alle squadre antincendio.
 - **Di' dove sei con precisione.** Comune, via, numero civico o riferimento visibile (un incrocio, un capannone, un cartello). Sul fuoco in campagna il tempo si perde quasi sempre a cercare l'accesso giusto.

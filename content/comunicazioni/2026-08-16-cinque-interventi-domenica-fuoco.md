@@ -27,7 +27,7 @@ social_punti:
 
 - **Poco prima delle 11.30 — Ariccia, via Nettunense.** La prima chiamata è la più breve: il modulo antincendio spegne un focolaio di sterpaglie in **meno di mezz'ora**.
 - **Mezzogiorno — Falcognana.** Subito dopo, la squadra è dirottata sulla **Falcognana**, dove dalla prima mattina il fuoco era ripartito su più punti tra Divino Amore e Castel di Leva. **Quasi due ore** di lavoro in un'area che bruciava a intermittenza da cinque giorni.
-- **Poco prima delle 14 — Genzano, via Landi.** Un cittadino segnala un **incendio in partenza**: il **mezzo polivalente antincendio Mercedes Atego** lo spegne in **tre quarti d'ora**, prima che il fronte possa allargarsi. È l'unico intervento della giornata sul territorio comunale.
+- **Poco prima delle 14 — Genzano, via Landi.** Arriva la segnalazione di un **incendio in partenza**: il **mezzo polivalente antincendio Mercedes Atego** lo spegne in **tre quarti d'ora**, prima che il fronte possa allargarsi. È l'unico intervento della giornata sul territorio comunale.
 - **Metà pomeriggio — Pomezia, via di Spregamore.** Ancora una vecchia conoscenza: la zona dell'[incendio del 6 agosto](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/). **Due ore e mezza** di spegnimento e bonifica.
 - **Dalle 17 alle 21 — Monte Tuscolo.** La chiusura è sul versante di **via vicinale San Nicola**, a **Grottaferrata**: il Tuscolo, già [devastato dall'incendio dell'11 agosto](/comunicazioni/2026-08-12-incendio-monte-tuscolo-agosto-2026/), ha ripreso a bruciare nella zona di Pratarena. **Quasi quattro ore** di lavoro con pickup e mezzo polivalente, fianco a fianco con i gruppi di protezione civile arrivati da tutti i Castelli, i Vigili del Fuoco e i mezzi aerei.
 
@@ -39,7 +39,7 @@ Per il nostro Gruppo la giornata ha chiuso una settimana senza pause: gli interv
 
 ## Cosa può fare ciascuno di noi
 
-L'intervento di via Landi lo dimostra: la segnalazione **tempestiva** di un cittadino ha permesso di spegnere un incendio in partenza in meno di un'ora. Se vedi fumo o fiamme:
+L'intervento di via Landi lo dimostra: la segnalazione **tempestiva** ha permesso di spegnere un incendio in partenza in meno di un'ora. Se vedi fumo o fiamme:
 
 - **Chiama subito il 112**: nel Lazio è l'unico numero per qualsiasi emergenza.
 - **Indica con precisione** Comune, strada e un punto di riferimento visibile.

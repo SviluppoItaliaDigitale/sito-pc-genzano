@@ -25,7 +25,7 @@ Otto interventi in un giorno, tutti a Genzano, tutti legati alla stessa causa: l
 
 ## La mattina: il bivio per Lanuvio sott'acqua
 
-Poco prima di mezzogiorno un cittadino segnala **tombini allagati** su via Appia Vecchia, al bivio per Lanuvio. Quattro volontari con il **Fiat Doblò** intervengono in una ventina di minuti, con la **Polizia Locale** sul posto. Quasi in contemporanea arriva la seconda chiamata: **canne di bambù** finite sulla carreggiata lungo la via Appia in direzione Velletri. Anche qui mezz'ora per liberare la strada.
+Poco prima di mezzogiorno arriva la segnalazione di **tombini allagati** su via Appia Vecchia, al bivio per Lanuvio. Quattro volontari con il **Fiat Doblò** intervengono in una ventina di minuti, con la **Polizia Locale** sul posto. Quasi in contemporanea arriva la seconda chiamata: **canne di bambù** finite sulla carreggiata lungo la via Appia in direzione Velletri. Anche qui mezz'ora per liberare la strada.
 
 ## Il tardo pomeriggio: l'albero su via Diana
 
