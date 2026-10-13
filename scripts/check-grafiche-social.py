@@ -9,9 +9,10 @@ limite di 10 slide di Instagram; poi il titolo della cover del sito
 carattere: quelli che mancano (→ ≥ ≤ ≈, le emoji) uscirebbero come spazi vuoti.
 
 Nato il 13/10/2026: il post sul soccorso alpino è uscito su Instagram e Facebook
-con tre punti su quattro tagliati a metà frase, e il controllo dei post già
-usciti ne ha trovati altri dieci con lo stesso difetto dal 20/09/2026. Il
-generatore ora non taglia più e si ferma se il testo non entra: questo script
+con tre punti su quattro tagliati a metà frase, e guardando le immagini dei
+post già usciti se ne sono trovati altri otto con lo stesso difetto dal
+20/09/2026. Il generatore ora non taglia più, e se il testo non entra si ferma
+e toglie anche le immagini vecchie dell'articolo: questo script
 fa vedere il problema sulla pull request, prima che l'articolo vada online
 senza il suo post.
 
