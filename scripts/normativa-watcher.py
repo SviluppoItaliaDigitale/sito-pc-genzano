@@ -22,6 +22,15 @@ FONTI PRIMARIE (lette direttamente, ogni giorno) — "--fonti primarie"
   sulla PL 281 (parte civile della Regione anche per i volontari di PC) è
   stata vista quattro giorni dopo.
 
+FONTE ISTITUZIONALE EUROPEA (letta con le primarie, ogni giorno)
+- EU Space, «Image of the day» (eu-space.europa.eu/explore-euspace/images,
+  dal 13/10/2026): le immagini satellitari Copernicus pubblicate ogni giorno
+  dalla Commissione europea (alluvioni, incendi, eruzioni, siccità,
+  temporali). Si tengono gli eventi di rischio nel Lazio o in Italia
+  (diretta) e, come indirette, le immagini del Lazio senza un evento, i temi
+  climatici e gli eventi su scala europea o mediterranea; paesaggi ed eventi
+  di altri Paesi si scartano. "--fonti eu-space" legge solo questa fonte.
+
 FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Google News RSS con query tematiche e site:
 - Feed RSS istituzionali (TGR Lazio)
@@ -36,7 +45,7 @@ Ogni voce è classificata per RILEVANZA con un punteggio a parole chiave:
   primarie (rumore) e per le news.
 
 Uso:
-    python3 scripts/normativa-watcher.py [--days 2] [--fonti primarie|news|tutte]
+    python3 scripts/normativa-watcher.py [--days 2] [--fonti primarie|news|tutte|eu-space]
         [--out novita.json] [--issue-body corpo.md] [--dedup-issues]
         [--escludi-url file.txt]
 
@@ -58,9 +67,13 @@ import re
 import shutil
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
 
 ROMA = ZoneInfo("Europe/Rome")
@@ -573,6 +586,263 @@ def fetch_consiglio_lazio(cutoff, errori):
 
 
 # ---------------------------------------------------------------------------
+# FONTE ISTITUZIONALE EUROPEA — EU Space, «Image of the day» (Copernicus)
+# ---------------------------------------------------------------------------
+# Aggiunta il 13/10/2026 su richiesta dell'utente: «metti questo sito tra
+# quelli da visionare periodicamente per la pubblicazione di articoli che ci
+# riguardano». Il portale della Commissione europea pubblica ogni giorno
+# un'immagine satellitare Copernicus. Si legge il feed RSS che il portale
+# offre per i risultati della ricerca (filtrato per tipo e anno: una
+# richiesta), poi la pagina di ogni immagine nella finestra, che porta luogo,
+# credito, categorie e testo completo.
+#
+# Il portale limita le richieste per indirizzo (risposta 429): il 13/10/2026,
+# dall'uscita delle sessioni cloud, il feed ha risposto 429 a intermittenza e
+# le pagine delle immagini dopo otto richieste in dieci secondi. Per questo:
+# una richiesta del feed per giro, una pagina ogni quattro secondi, al
+# massimo otto pagine, e al primo 429 le altre immagini si classificano dal
+# titolo e dal riassunto del feed. Se il feed non risponde, le cinque
+# immagini più recenti si leggono dall'elenco «Latest images of the day» che
+# chiude ogni pagina di immagine, partendo da una pagina che non cambia: con
+# la finestra di due giorni bastano, e se non la coprono lo si dichiara fra
+# gli errori. I testi sono in inglese: la classificazione ha parole proprie.
+
+EUSPACE_BASE = 'https://eu-space.europa.eu'
+EUSPACE_ELENCO = EUSPACE_BASE + '/explore-euspace/images'
+EUSPACE_RSS = EUSPACE_BASE + '/explore-euspace/rss?type=defis_eusp_image_day&year={anno}'
+EUSPACE_INGRESSO = EUSPACE_BASE + '/components/earth-observation-copernicus/image-of-the-day/floods-lazio-region-italy'
+EUSPACE_MAX_DETTAGLI = 8    # pagine di immagini aperte per giro (in un giorno ne esce una)
+EUSPACE_PAUSA = 4           # secondi prima di ogni pagina
+
+# Territorio vicino: conta in qualunque punto della pagina.
+EU_VICINO = [
+    'lazio', 'latium', 'rome', 'roma', 'castelli romani', 'alban hills', 'colli albani',
+    'lake albano', 'lago albano', 'lake nemi', 'lago di nemi', 'genzano', 'ariccia', 'albano laziale',
+    'velletri', 'lanuvio', 'frascati', 'tiber', 'tevere', 'aniene', 'tivoli', 'fiumicino', 'ostia',
+    'anzio', 'nettuno', 'civitavecchia', 'bracciano', 'viterbo', 'rieti', 'frosinone', 'latina',
+    'pontine', 'agro pontino', 'circeo', 'sabaudia', 'terracina', 'gaeta',
+]
+# Italia: piena nel titolo o nel campo «Location», ridotta se compare solo nel testo.
+EU_ITALIA = [
+    'italy', 'italian', 'italia', 'tyrrhenian', 'sicily', 'sicilia', 'sardinia', 'sardegna',
+    'campania', 'calabria', 'apulia', 'puglia', 'basilicata', 'abruzzo', 'molise', 'marche',
+    'umbria', 'tuscany', 'toscana', 'emilia-romagna', 'emilia romagna', 'emilia', 'liguria',
+    'piedmont', 'piemonte', 'lombardy', 'lombardia', 'veneto', 'friuli', 'trentino', 'south tyrol',
+    'aosta', 'etna', 'vesuvius', 'vesuvio', 'stromboli', 'campi flegrei', 'phlegraean',
+    'aeolian islands', 'naples', 'napoli', 'po valley', 'po river', 'river po', 'apennine*',
+    'dolomites', 'venice', 'venezia', 'milan', 'milano', 'turin', 'torino', 'florence', 'firenze',
+    'genoa', 'genova', 'bologna', 'palermo', 'catania', 'bari', 'cagliari', 'lake garda',
+    'lake como', 'lake maggiore', 'gargano',
+]
+# Scala europea o mediterranea: solo nel titolo o nel campo «Location»,
+# perché quasi ogni testo cita «the European Union's Copernicus programme».
+EU_EUROPA = ['europe', 'european', 'mediterranean', 'adriatic', 'ionian']
+# Eventi di rischio.
+EU_RISCHI = [
+    'flood*', 'inundat*', 'overflow*', 'heavy rain*', 'extreme rain*', 'intense rain*', 'torrential',
+    'downpour*', 'storm*', 'thunderstorm*', 'windstorm*', 'strong wind*', 'hail', 'hailstorm*',
+    'tornado*', 'waterspout*', 'medicane*', 'cyclone*', 'hurricane*', 'typhoon*',
+    'wildfire*', 'forest fire*', 'fire', 'fires', 'burnt', 'burned', 'burn scar*', 'smoke',
+    'drought*', 'water scarcity', 'water shortage*', 'low water', 'dry riverbed*',
+    'heatwave*', 'heat wave*', 'extreme heat', 'heat stress',
+    'cold wave*', 'cold spell*', 'heavy snow*', 'snowstorm*', 'blizzard*', 'avalanche*',
+    'earthquake*', 'seismic*', 'quake*', 'aftershock*', 'tsunami*',
+    'erupt*', 'lava', 'volcanic ash', 'ash plume*', 'ash cloud*', 'volcanic activity', 'volcanic unrest',
+    'bradyseism*', 'ground uplift', 'ground deformation', 'subsidence',
+    'landslide*', 'mudslide*', 'mudflow*', 'debris flow*', 'rockfall*', 'sinkhole*',
+    'storm surge*', 'coastal flood*', 'coastal erosion', 'saharan dust', 'dust storm*', 'dust plume*',
+    'air quality', 'air pollution', 'oil spill*',
+    'emergency', 'emergencies', 'disaster*', 'civil protection', 'protezione civile', 'red alert*',
+    'orange alert*', 'evacuat*', 'damage*', 'casualt*', 'fatalit*', 'victim*',
+    'rapid mapping', 'emergency management service', 'cems', 'resceu', 'civil protection mechanism', 'ercc',
+]
+# Temi climatici: senza un evento valgono al massimo come rilevanza indiretta.
+EU_CLIMA = [
+    'climate change', 'global warming', 'warmest', 'hottest', 'record temperature*',
+    'temperature anomal*', 'glacier*', 'ice loss', 'snow cover', 'sea level', 'sea surface temperature*',
+]
+# Categorie del portale (campo dei tag della pagina), in minuscolo.
+EU_CATEGORIE_RISCHIO = {
+    'air pollution', 'cold waves', 'coastal erosion', 'drought', 'dust & haze', 'earthquakes', 'fires',
+    'floods', 'heat waves', 'hurricanes', 'severe storms', 'tornadoes', 'typhoons', 'volcanoes',
+}
+EU_CATEGORIE_CLIMA = {'climate change', 'glaciers'}
+
+
+def classifica_eu_space(titolo, luogo, testo, categorie):
+    """Rilevanza di un'immagine EU Space: ('diretta'|'indiretta'|None, motivi).
+
+    `testo` è il riassunto della pagina (il primo paragrafo), `categorie`
+    sono i tag del portale (Fires, Floods, Volcanoes…).
+
+    diretta   → un evento di rischio nel territorio vicino (Lazio, Roma, Castelli
+                Romani, anche nel solo riassunto) o in Italia (nel titolo o
+                nel luogo);
+    indiretta → il territorio vicino senza evento; l'Italia (titolo o luogo)
+                con un tema climatico; l'Italia citata nel solo testo con un
+                evento o un tema climatico; la scala europea o mediterranea
+                (titolo o luogo) con un evento o un tema climatico;
+    None      → il resto: paesaggi italiani senza rischio, eventi di altri
+                Paesi, paesaggi lontani.
+    """
+    forte = normalizza(f'{titolo} {luogo}')
+    tutto = normalizza(f'{titolo} {luogo} {testo}')
+    cat = {normalizza(c) for c in categorie}
+    rischi = _trova(EU_RISCHI, tutto) + sorted(cat & EU_CATEGORIE_RISCHIO)
+    clima = _trova(EU_CLIMA, tutto) + sorted(cat & EU_CATEGORIE_CLIMA)
+    vicino = _trova(EU_VICINO, tutto)
+    italia_forte = _trova(EU_ITALIA, forte)
+    italia_testo = _trova(EU_ITALIA, tutto)
+    europa = _trova(EU_EUROPA, forte)
+
+    def motivi(*liste):
+        return sorted({x for lista in liste for x in lista})
+
+    if vicino and rischi:
+        return 'diretta', motivi(vicino, rischi)
+    if italia_forte and rischi:
+        return 'diretta', motivi(italia_forte, rischi)
+    if vicino:
+        return 'indiretta', motivi(vicino, clima)
+    if italia_forte and clima:
+        return 'indiretta', motivi(italia_forte, clima)
+    if italia_testo and (rischi or clima):
+        return 'indiretta', motivi(italia_testo, rischi, clima)
+    if europa and (rischi or clima):
+        return 'indiretta', motivi(europa, rischi, clima)
+    return None, []
+
+
+def _eu_space_feed(cli, anni):
+    """Voci (titolo, link, data, descrizione) dal feed RSS delle immagini del giorno."""
+    voci = []
+    for anno in anni:
+        testo = cli.get(EUSPACE_RSS.format(anno=anno), referer=EUSPACE_ELENCO)
+        radice = ET.fromstring(testo.encode('utf-8'))
+        for it in radice.iter('item'):
+            d = None
+            try:
+                d = parsedate_to_datetime((it.findtext('pubDate') or '').strip()).astimezone(ROMA).date()
+            except (TypeError, ValueError):
+                pass
+            voci.append(((it.findtext('title') or '').strip(), (it.findtext('link') or '').strip(), d,
+                         solo_testo(it.findtext('description') or '')))
+    if not voci:
+        raise RuntimeError('feed RSS senza voci: struttura cambiata?')
+    return voci
+
+
+def _eu_space_ultime(cli):
+    """Ripiego: le cinque immagini più recenti elencate in fondo a ogni pagina di immagine."""
+    pagina = cli.get(EUSPACE_INGRESSO, referer=EUSPACE_ELENCO)
+    i = pagina.find('Latest images of the day')
+    if i < 0:
+        raise RuntimeError('elenco «Latest images of the day» assente: struttura della pagina cambiata?')
+    voci, visti = [], set()
+    for m in re.finditer(r'<div class="card__title">\s*<a href="([^"]+)"[^>]*>(.*?)</a>.*?<time datetime="(\d{4}-\d{2}-\d{2})',
+                         pagina[i:], flags=re.S):
+        link = urllib.parse.urljoin(EUSPACE_BASE, htmllib.unescape(m.group(1)).strip())
+        if link in visti:
+            continue
+        visti.add(link)
+        voci.append((solo_testo(m.group(2)), link, parse_data_iso(m.group(3)), ''))
+    if not voci:
+        raise RuntimeError('nessuna immagine nell\'elenco «Latest images of the day»: struttura cambiata?')
+    return voci
+
+
+def _eu_space_dettaglio(cli, link):
+    """Luogo, credito, categorie, file originale e testo completo di un'immagine."""
+    pagina = cli.get(link, referer=EUSPACE_ELENCO)
+
+    def campo(etichetta):
+        m = re.search(r'<dt[^>]*>\s*' + etichetta + r'\s*</dt>\s*<dd[^>]*>(.*?)</dd>', pagina, flags=re.S)
+        return solo_testo(m.group(1)) if m else ''
+
+    i = pagina.find('aria-label="Image details"')
+    j = pagina.find('</aside>', i) if i >= 0 else -1
+    riquadro = pagina[i:j] if 0 <= i < j else ''
+    categorie = []
+    for c in re.findall(r'<div class="eusp-tag">(.*?)</div>', riquadro, flags=re.S):
+        c = solo_testo(c)
+        if c and c not in categorie and c not in ('Earth Observation', 'Copernicus'):
+            categorie.append(c)
+    file = re.search(r'<a href="([^"]+)"\s+download=', riquadro)
+    corpo = re.search(r'<div class="[^"]*\bmw-text\b[^"]*">', pagina)
+    testo = ''
+    if corpo:
+        fine = [x for x in (pagina.find('<div class="paragraph', corpo.end()),
+                            pagina.find('Latest images of the day', corpo.end())) if x > 0]
+        testo = solo_testo(pagina[corpo.end():min(fine) if fine else corpo.end() + 8000])
+    data = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})', riquadro)
+    return {
+        'luogo': campo('Location'),
+        'credito': campo('Credit'),
+        'categorie': categorie,
+        'immagine': urllib.parse.urljoin(EUSPACE_BASE, htmllib.unescape(file.group(1))) if file else '',
+        'testo': testo,
+        'data': parse_data_iso(data.group(1)) if data else None,
+    }
+
+
+def fetch_eu_space(cutoff, errori):
+    out = []
+    cli = Cliente()
+    try:
+        try:
+            voci = _eu_space_feed(cli, range(cutoff.year, oggi_roma().year + 1))
+        except Exception as e:  # noqa: BLE001
+            print(f'  [warn] EU Space: feed RSS non letto ({e}); uso le ultime immagini elencate nelle pagine del portale',
+                  file=sys.stderr)
+            voci = _eu_space_ultime(cli)
+            date_viste = [d for _, _, d, _ in voci if d]
+            if date_viste and min(date_viste) > cutoff:
+                errori.append(f'EU Space: feed RSS non letto ({e}) e l\'elenco delle ultime immagini parte dal '
+                              f'{min(date_viste).strftime("%d/%m/%Y")}: controllare a mano {EUSPACE_ELENCO}')
+        aperte = 0
+        limite = False
+        visti = set()
+        for titolo, link, d, descrizione in voci:
+            if not link or link in visti or (d and d < cutoff):
+                continue
+            visti.add(link)
+            dett = {}
+            if aperte < EUSPACE_MAX_DETTAGLI and not limite:
+                aperte += 1
+                time.sleep(EUSPACE_PAUSA)
+                try:
+                    dett = _eu_space_dettaglio(cli, link)
+                except urllib.error.HTTPError as e:
+                    limite = e.code == 429
+                    print(f'  [warn] EU Space: pagina non letta ({link}): {e}'
+                          + ('; le altre immagini si classificano dal titolo e dal riassunto' if limite else ''), file=sys.stderr)
+                except Exception as e:  # noqa: BLE001
+                    print(f'  [warn] EU Space: pagina non letta ({link}): {e}', file=sys.stderr)
+            d = d or dett.get('data')
+            if not d or d < cutoff:
+                continue
+            # Si classifica sul riassunto (il primo paragrafo), non sul testo
+            # intero: più avanti le pagine citano spesso eventi storici
+            # («the eruption of AD 79») o enti con sede a Roma, e un paesaggio
+            # della Campania diventerebbe un'eruzione in corso.
+            rilevanza, motivi = classifica_eu_space(titolo, dett.get('luogo', ''),
+                                                    descrizione or dett.get('testo', '')[:600], dett.get('categorie', []))
+            if not rilevanza:
+                continue
+            v = voce('EU Space — Image of the day (Copernicus)', 'immagini', titolo, link, d,
+                     tipo_atto='Immagine satellitare', ente='Commissione europea — EU Space',
+                     sommario=descrizione or dett.get('testo', ''))
+            v.update({'rilevanza': rilevanza, 'motivi': motivi, 'luogo': dett.get('luogo', ''),
+                      'credito': dett.get('credito', ''), 'categorie': dett.get('categorie', []),
+                      'immagine': dett.get('immagine', '')})
+            out.append(v)
+    except Exception as e:  # noqa: BLE001
+        errori.append(f'EU Space (immagini del giorno): {e}')
+        print(f'  [error] eu space: {e}', file=sys.stderr)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # FONTI SECONDARIE — Google News, RSS istituzionali, DPC via Firecrawl
 # ---------------------------------------------------------------------------
 
@@ -724,19 +994,40 @@ def url_gia_segnalati_da_issue():
 
 ETICHETTA_RILEVANZA = {'diretta': '🔴 diretta', 'indiretta': '🟡 indiretta', 'scuola': '📘 scuola'}
 
+ISTRUZIONI_EU_SPACE = (
+    "Immagini del programma Copernicus pubblicate dalla Commissione europea. **Diretta** (un evento di rischio nel Lazio o in "
+    "Italia: alluvione, incendio, eruzione, terremoto, frana, temporale, siccità, ondata di calore): si scrive un articolo "
+    "(badge `Informazione`, `Aggiornamento` se l'evento è concluso) o, se il sito ha già un articolo sullo stesso evento, si "
+    "aggiunge l'immagine a quello. **Indiretta** (Lazio senza un evento, temi climatici, eventi su scala europea o "
+    "mediterranea): solo se arricchisce un articolo o una pagina che tratta già il tema, altrimenti si scarta con una riga "
+    "di motivo. **Testo**: i fatti della pagina si verificano sulle fonti italiane (DPC, INGV, Centro Funzionale, "
+    "ISPRA) e si riscrivono in italiano con parole nostre, mai tradotti alla lettera; la pagina EU Space va fra le fonti di "
+    "«Per approfondire». **Immagine**: contenuto dell'Unione europea con licenza CC BY 4.0 (avviso legale dell'UE), salvo "
+    "diversa indicazione nel campo «credito»; si scarica il file originale, si applica la fascia "
+    "(`bash scripts/applica-fascia-foto.sh`), si guarda l'immagine prima di scrivere `alt` e didascalia, si inserisce nel corpo "
+    "con `{{< foto >}}` (mai nel banner) e la didascalia riporta il credito, la licenza e «immagine modificata con l'aggiunta "
+    "della fascia».\n"
+)
+
 
 def corpo_issue(output):
     hits = output['novita']
     primarie = [h for h in hits if h['fonte_tipo'] == 'primaria']
+    immagini = [h for h in hits if h['fonte_tipo'] == 'immagini']
     news = [h for h in hits if h['fonte_tipo'] == 'news']
     oggi = datetime.now(ROMA).strftime('%d/%m/%Y')
     righe = []
-    if primarie:
+    if primarie or immagini:
         righe.append(f"# Rassegna normativa e albo pretorio — {oggi}\n")
     else:
         righe.append(f"# Novità normative e cronaca PC — settimana al {oggi}\n")
+    def quanti(n, uno, molti):
+        return f"**{n} {uno if n == 1 else molti}**"
+
     righe.append(f"Finestra: ultimi **{output['finestra_giorni']} giorni**. Fonti lette: {', '.join(output['fonti_lette'])}. "
-                 f"Trovati **{len(primarie)} atti** dalle fonti primarie e **{len(news)} notizie** dalla rassegna stampa"
+                 f"Trovati {quanti(len(primarie), 'atto', 'atti')} dalle fonti primarie, "
+                 f"{quanti(len(immagini), 'immagine satellitare', 'immagini satellitari')} di EU Space "
+                 f"e {quanti(len(news), 'notizia', 'notizie')} dalla rassegna stampa"
                  f"{' (' + str(output['scartati_gia_segnalati']) + ' già segnalati in issue precedenti, scartati)' if output.get('scartati_gia_segnalati') else ''}.\n")
     if output.get('errori'):
         righe.append("> ⚠️ Fonti non raggiunte in questo giro (da ricontrollare a mano): " + '; '.join(output['errori']) + "\n")
@@ -761,6 +1052,21 @@ def corpo_issue(output):
                 righe.append(f"- **{data}** — {it['fonte']}{' · ' + estremi if estremi else ''}\n  [{t}]({it['link']})\n  <sub>parole chiave: {', '.join(it['motivi'])}</sub>")
 
     blocco(primarie, "Atti dalle fonti primarie (albo pretorio · Gazzetta Ufficiale · Normattiva · BURL · Consiglio regionale)")
+    if immagini:
+        righe.append(f"\n## Immagini satellitari dell'Unione europea — EU Space, «Image of the day» ({len(immagini)})\n")
+        righe.append(ISTRUZIONI_EU_SPACE)
+        for r in ('diretta', 'indiretta'):
+            sub = [i for i in immagini if i['rilevanza'] == r]
+            if not sub:
+                continue
+            righe.append(f"\n### Rilevanza {ETICHETTA_RILEVANZA[r]} ({len(sub)})\n")
+            for it in sub:
+                data = (it.get('published') or '')[:10]
+                t = it['titolo'].replace('|', '\\|').replace('\n', ' ')
+                dove = ' · '.join(x for x in [it.get('luogo'), ', '.join(it.get('categorie') or [])] if x)
+                file = f" · [file originale]({it['immagine']})" if it.get('immagine') else ''
+                righe.append(f"- **{data}** — {dove or 'luogo non indicato'}\n  [{t}]({it['link']})\n"
+                             f"  <sub>credito: {it.get('credito') or 'non indicato'}{file} · parole chiave: {', '.join(it['motivi'])}</sub>")
     if news:
         righe.append(f"\n## Rassegna stampa e feed ({len(news)})\n")
         righe.append("Le voci sotto vengono da Google News e feed: **verificare sempre la fonte originale** (possono essere riprese non istituzionali).\n")
@@ -786,7 +1092,8 @@ def corpo_issue(output):
                  "(`pc-article-reviewer`, cover, versione facile se norma densa); aggiornare le pagine che citano la norma (`/normativa/`, manuale — opera viva); "
                  "se l'evento ha già un articolo, integrare quello invece di duplicare; "
                  "**pubblicazione fino a live** (PR + merge + verifica deploy, come da Routine quotidiana «Rassegna normativa e albo pretorio», rule 10) e commento qui con il link all'articolo. "
-                 "Atti che non riguardano il Gruppo (rumore delle parole chiave): dichiararlo in un commento e chiudere.")
+                 "Atti che non riguardano il Gruppo (rumore delle parole chiave): dichiararlo in un commento e chiudere. "
+                 "Per le immagini di EU Space valgono le indicazioni della loro sezione.")
     righe.append("\n_Issue generata da `.github/workflows/normativa-watcher.yml` (`scripts/normativa-watcher.py`)._")
     return '\n'.join(righe) + '\n'
 
@@ -798,8 +1105,9 @@ def corpo_issue(output):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--days', type=int, default=2, help='Finestra temporale in giorni (default 2)')
-    ap.add_argument('--fonti', choices=['primarie', 'news', 'tutte'], default='tutte',
-                    help='primarie = albo/GU/Normattiva/BURL/Consiglio regionale; news = Google News/RSS/Firecrawl; tutte (default)')
+    ap.add_argument('--fonti', choices=['primarie', 'news', 'tutte', 'eu-space'], default='tutte',
+                    help='primarie = albo/GU/Normattiva/BURL/Consiglio regionale + immagini EU Space; '
+                         'news = Google News/RSS/Firecrawl; tutte (default); eu-space = solo le immagini EU Space')
     ap.add_argument('--out', default='-', help='File output JSON (default stdout)')
     ap.add_argument('--issue-body', default=None, help='Scrive il corpo Markdown della issue in questo file')
     ap.add_argument('--dedup-issues', action='store_true', help='Scarta gli URL già comparsi nelle issue normativa-watcher (richiede gh)')
@@ -834,6 +1142,11 @@ def main():
             fonti_lette.append(nome)
             aggiungi(fn(cutoff, errori), nome)
 
+    if args.fonti in ('primarie', 'tutte', 'eu-space'):
+        nome = 'EU Space — immagini del giorno (Copernicus)'
+        fonti_lette.append(nome)
+        aggiungi(fetch_eu_space(cutoff, errori), nome)
+
     if args.fonti in ('news', 'tutte'):
         fonti_lette.append(f'Google News ({len(QUERIES_GOOGLE_NEWS)} query)')
         for query in QUERIES_GOOGLE_NEWS:
@@ -865,11 +1178,12 @@ def main():
     scartati = prima - len(hits)
 
     ordine = {'diretta': 0, 'indiretta': 1, 'scuola': 2}
-    hits.sort(key=lambda x: (0 if x['fonte_tipo'] == 'primaria' else 1, ordine.get(x['rilevanza'], 2), x.get('published') or ''), reverse=False)
+    ordine_tipo = {'primaria': 0, 'immagini': 1, 'news': 2}
     hits.sort(key=lambda x: x.get('published') or '', reverse=True)
-    hits.sort(key=lambda x: (0 if x['fonte_tipo'] == 'primaria' else 1, ordine.get(x['rilevanza'], 2)))
+    hits.sort(key=lambda x: (ordine_tipo.get(x['fonte_tipo'], 2), ordine.get(x['rilevanza'], 2)))
 
     primarie = [h for h in hits if h['fonte_tipo'] == 'primaria']
+    immagini = [h for h in hits if h['fonte_tipo'] == 'immagini']
     output = {
         "generato_il": datetime.now(timezone.utc).isoformat(),
         "finestra_giorni": args.days,
@@ -879,11 +1193,12 @@ def main():
         "scartati_gia_segnalati": scartati,
         "totale": len(hits),
         "totale_primarie": len(primarie),
+        "totale_immagini": len(immagini),
         "totale_dirette": len([h for h in hits if h['rilevanza'] == 'diretta']),
         "novita": hits,
     }
-    print(f"[info] Totale: {len(hits)} voci ({len(primarie)} da fonti primarie, {output['totale_dirette']} a rilevanza diretta); "
-          f"{scartati} già segnalate; {len(errori)} fonti in errore", file=sys.stderr)
+    print(f"[info] Totale: {len(hits)} voci ({len(primarie)} da fonti primarie, {len(immagini)} immagini EU Space, "
+          f"{output['totale_dirette']} a rilevanza diretta); {scartati} già segnalate; {len(errori)} fonti in errore", file=sys.stderr)
 
     if args.out == '-':
         print(json.dumps(output, ensure_ascii=False, indent=2))
