@@ -676,9 +676,13 @@ R. Applica la regola "Fine sessione su feature branch" (sezione 3.3): proponi me
 **D. Trovo un drift tra documentazione e codice (es. il manuale dice X, il codice fa Y).**
 R. Segnalalo all'utente. Non risolverlo autonomamente: la decisione su quale dei due è la verità è editoriale, non tecnica.
 
+## Code Review Rules
+
+- **Firma dei commit: non giudicarla dai commit del tuo ambiente.** I commit che vedi mentre rivedi una pull request li crea l'ambiente di revisione, con un'identità di servizio, e possono riportare la descrizione della pull request: non sono i commit della pull request. Non segnalare autore, committer o righe di firma dei commit: li controlla e li corregge chi unisce (`scripts/passa-a.py chiudi` riscrive a nome di Alessandro Cuollo i commit con un altro autore e toglie i trailer, regola `.claude/rules/firma-dei-lavori.md`). Segnala invece nomi di strumenti o righe di firma nei file modificati che vengono pubblicati; i file di governo interni (`CLAUDE.md`, `AGENTS.md`, `COORDINAMENTO.md`, `.claude/`, `memoria/`) ne parlano per forza.
+
 ---
 
-**Versione:** 1.6 — creato il 2026-05-06; 2026-10-11 aggiunta la continuità con Claude tramite `COORDINAMENTO.md` (protocollo comune a tutti i repository); 2026-10-13 passaggio delle richieste preparate da Claude; 2026-10-14 avvio in Codex Cloud con il testo di avvio e consegna con «Create PR» (il commento di avvio sulla PR resta solo per riprovare il canale).
+**Versione:** 1.6 — creato il 2026-05-06; 2026-10-11 aggiunta la continuità con Claude tramite `COORDINAMENTO.md` (protocollo comune a tutti i repository); 2026-10-13 passaggio delle richieste preparate da Claude; 2026-10-14 avvio in Codex Cloud con il testo di avvio e consegna con «Create PR» (il commento di avvio sulla PR resta solo per riprovare il canale); 2026-10-14 sezione «Code Review Rules» per la revisione automatica delle pull request.
 **Ultima revisione:** 2026-05-09 — invariante 9 «BANNER COL TITOLO INTOCCABILE» riscritta con anti-pattern espliciti per task di revisione AGID (incidente Giornata Europa); aggiunta Sezione 0 «Come usarmi» (anti-overload del GitHub connector); sezione 3.2 riscritta (parole-trigger ampliate, sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ).
 **Autorità:** allineato a `CLAUDE.md` v3.0 e a `.claude/rules/0*.md` (snapshot maggio 2026).
 **Manutenzione:** quando modifichi `CLAUDE.md` aggiorna anche questo file, e viceversa.
