@@ -1,6 +1,6 @@
 ---
 title: "Risparmio energetico e resilienza: come l'energia incide sulle emergenze"
-date: 2026-10-24
+date: 2026-10-24T00:01:00+02:00
 description: "Il risparmio energetico non è solo una questione economica. Una famiglia meno dipendente dal consumo è una famiglia più resiliente alle crisi."
 badge: "Prevenzione"
 priorita: "normale"

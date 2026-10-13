@@ -41,6 +41,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
       <p class="card-text">Ti servono il quadro normativo, le procedure e l'inquadramento per la scuola.</p>
       <ul class="list-unstyled small mb-3">
         <li>→ <a href="/formazione/dirigenti-e-rspp/">Quadro normativo per la scuola</a></li>
+        <li>→ <a href="/formazione/settimana-protezione-civile/">Settimana della protezione civile a scuola</a></li>
         <li>→ <a href="/formazione/educazione-civica/">Educazione civica e PC</a></li>
         <li>→ <a href="/piano-emergenza/">Piano di Emergenza Comunale</a></li>
         <li>→ <a href="/area-download/">Modulistica e documenti</a></li>
@@ -91,6 +92,7 @@ Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezioneciv
 ## Sezioni complete
 
 - [Formazione e scuole — hub completo](/formazione/) — tutti i materiali organizzati per tema
+- [Settimana della protezione civile a scuola](/formazione/settimana-protezione-civile/) — un programma pronto per tutto l'istituto, un tema al giorno
 - [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/) — un kit per ogni categoria vulnerabile
 - [Giochi della sicurezza](/giochi/) — quiz, memory, percorsi
 - [Storie e racconti](/formazione/storie-e-racconti/) — fiabe per fascia d'età

@@ -1,0 +1,379 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Protezione Civile Genzano di Roma//Calendario della prevenzione//
+ IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Calendario della prevenzione — Protezione Civile Genzano
+X-WR-CALDESC:Un promemoria al mese con i gesti di prevenzione per chi vive 
+ a Genzano di Roma\, più il controllo del kit al cambio dell'ora. Calendar
+ io completo: https://www.protezionecivilegenzano.it/calendario-prevenzione
+ /
+REFRESH-INTERVAL;VALUE=DURATION:P1W
+X-PUBLISHED-TTL:P1W
+BEGIN:VEVENT
+UID:calendario-prevenzione-gennaio@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260103
+DTEND;VALUE=DATE:20260104
+RRULE:FREQ=YEARLY;BYMONTH=1;BYDAY=1SA
+SUMMARY:Prevenzione di gennaio: si riparte dal piano di famiglia
+DESCRIPTION:Si riparte dal piano di famiglia.\n- Rileggete insieme il piano
+  di famiglia: il contatto fuori zona\, il punto di ritrovo\, chi va a pren
+ dere i bambini. https://www.protezionecivilegenzano.it/piano-familiare/\n-
+  Controllate che il 112 sia nella rubrica di tutti. Ai bambini spiegate ch
+ e cosa dire: dove sono\, che cosa è successo\, se qualcuno è ferito. htt
+ ps://www.protezionecivilegenzano.it/formazione/in-famiglia-dopo-la-lezione
+ /\n\nCalendario completo: https://www.protezionecivilegenzano.it/calendari
+ o-prevenzione/#mese-gennaio\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-gen
+ naio
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di gennaio
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-febbraio@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260207
+DTEND;VALUE=DATE:20260208
+RRULE:FREQ=YEARLY;BYMONTH=2;BYDAY=1SA
+SUMMARY:Prevenzione di febbraio: la strada fino all'area di attesa
+DESCRIPTION:La strada fino all'area di attesa.\n- Trovate l'area di attesa 
+ più vicina a casa\, ricordatene il codice e fate il percorso a piedi. htt
+ ps://www.protezionecivilegenzano.it/aree-attesa/\n- Guardate sulla mappa a
+ nche le aree vicine alla scuola e al lavoro. https://www.protezionecivileg
+ enzano.it/cartografia/\n\nCalendario completo: https://www.protezionecivil
+ egenzano.it/calendario-prevenzione/#mese-febbraio\nIn emergenza chiama il 
+ 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-feb
+ braio
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di febbraio
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-marzo@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260307
+DTEND;VALUE=DATE:20260308
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=1SA
+SUMMARY:Prevenzione di marzo: cambio dell'ora\, controllo del kit
+DESCRIPTION:Cambio dell'ora\, controllo del kit.\n- L'ultima domenica del m
+ ese si cambia l'ora: controllate pile\, torcia\, radio\, power bank e le s
+ cadenze di acqua\, cibo e farmaci. https://www.protezionecivilegenzano.it/
+ formazione/schede-stampabili/checklist-kit-emergenza/\n- Se avete un accor
+ do di aiuto con i vicini\, rivedetelo insieme. https://www.protezionecivil
+ egenzano.it/formazione/schede-stampabili/accordo-vicini/\n\nCalendario com
+ pleto: https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese
+ -marzo\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-mar
+ zo
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di marzo
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-aprile@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260405
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SA
+SUMMARY:Prevenzione di aprile: prima delle piogge di primavera
+DESCRIPTION:Prima delle piogge di primavera.\n- Liberate da foglie e detrit
+ i i tombini e le caditoie vicino a casa. https://www.protezionecivilegenza
+ no.it/rischi-prevenzione/rischio-idrogeologico/\n- Non lasciate oggetti di
+  valore in cantine e garage che possono allagarsi. https://www.protezionec
+ ivilegenzano.it/rischi-prevenzione/rischio-idrogeologico/\n\nCalendario co
+ mpleto: https://www.protezionecivilegenzano.it/calendario-prevenzione/#mes
+ e-aprile\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-apr
+ ile
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di aprile
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-maggio@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260502
+DTEND;VALUE=DATE:20260503
+RRULE:FREQ=YEARLY;BYMONTH=5;BYDAY=1SA
+SUMMARY:Prevenzione di maggio: prepararsi al caldo
+DESCRIPTION:Prepararsi al caldo.\n- Controllate che ventilatori e condizion
+ atori funzionino. https://www.protezionecivilegenzano.it/rischi-prevenzion
+ e/ondate-di-calore/\n- Sentite i vicini anziani o che vivono soli: chi li 
+ chiama nei giorni di caldo? https://www.protezionecivilegenzano.it/rischi-
+ prevenzione/persone-necessita-specifiche/\n\nCalendario completo: https://
+ www.protezionecivilegenzano.it/calendario-prevenzione/#mese-maggio\nIn eme
+ rgenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-mag
+ gio
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di maggio
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-giugno@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260606
+DTEND;VALUE=DATE:20260607
+RRULE:FREQ=YEARLY;BYMONTH=6;BYDAY=1SA
+SUMMARY:Prevenzione di giugno: comincia la stagione degli incendi
+DESCRIPTION:Comincia la stagione degli incendi.\n- Nel periodo di grave per
+ icolosità niente fuochi all'aperto né abbruciamenti: le date le fissa og
+ ni anno l'ordinanza del Sindaco. https://www.protezionecivilegenzano.it/ri
+ schi-prevenzione/rischio-incendio/\n- Tagliate l'erba secca intorno a casa
+ \, al giardino e al terreno. https://www.protezionecivilegenzano.it/rischi
+ -prevenzione/rischio-incendio/\n- Nei mesi caldi consultate ogni giorno il
+  bollettino sulle ondate di calore del Ministero della Salute. https://www
+ .protezionecivilegenzano.it/rischi-prevenzione/ondate-di-calore/\n\nCalend
+ ario completo: https://www.protezionecivilegenzano.it/calendario-prevenzio
+ ne/#mese-giugno\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-giu
+ gno
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di giugno
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-luglio@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+RRULE:FREQ=YEARLY;BYMONTH=7;BYDAY=1SA
+SUMMARY:Prevenzione di luglio: caldo\, i gesti di ogni giorno
+DESCRIPTION:Caldo\, i gesti di ogni giorno.\n- Bevete spesso anche senza se
+ te\, uscite prima delle 11 o dopo le 18\, mai persone o animali in auto al
+  sole. https://www.protezionecivilegenzano.it/rischi-prevenzione/ondate-di
+ -calore/\n- Vedete fumo o fiamme? Chiamate subito il 112 e dite dove siete
+  e da che parte va il fumo. https://www.protezionecivilegenzano.it/rischi-
+ prevenzione/rischio-incendio/\n- Un gesto al giorno per tutto il mese con 
+ la scheda da spuntare. https://www.protezionecivilegenzano.it/formazione/s
+ chede-stampabili/estate-sicura/\n\nCalendario completo: https://www.protez
+ ionecivilegenzano.it/calendario-prevenzione/#mese-luglio\nIn emergenza chi
+ ama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-lug
+ lio
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di luglio
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-agosto@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20260802
+RRULE:FREQ=YEARLY;BYMONTH=8;BYDAY=1SA
+SUMMARY:Prevenzione di agosto: in viaggio e in vacanza
+DESCRIPTION:In viaggio e in vacanza.\n- Prima di partire chiudete gas e acq
+ ua e scollegate gli elettrodomestici che non servono. https://www.protezio
+ necivilegenzano.it/formazione/schede-stampabili/estate-sicura/\n- Lasciate
+  un recapito ai vicini e\, se volete\, una copia delle chiavi a una person
+ a di fiducia. https://www.protezionecivilegenzano.it/formazione/schede-sta
+ mpabili/accordo-vicini/\n- Nel posto delle vacanze cercate l'area di attes
+ a più vicina e ditela a chi è con voi. https://www.protezionecivilegenza
+ no.it/formazione/schede-stampabili/estate-sicura/\n\nCalendario completo: 
+ https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-agosto
+ \nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-ago
+ sto
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di agosto
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-settembre@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260906
+RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=1SA
+SUMMARY:Prevenzione di settembre: prima delle piogge d'autunno
+DESCRIPTION:Prima delle piogge d'autunno.\n- Liberate di nuovo tombini e ca
+ ditoie: dopo l'estate il terreno secco assorbe poco\, e le prime piogge fo
+ rti allagano in fretta strade e scantinati. https://www.protezionecivilege
+ nzano.it/rischi-prevenzione/rischio-idrogeologico/\n- Ripassate i colori d
+ ell'allerta e scegliete come ricevere gli avvisi: canale Telegram\, notifi
+ che del browser\, pagina delle allerte. https://www.protezionecivilegenzan
+ o.it/allerte-meteo/\n- Ricomincia la scuola: chiedete come funziona il pia
+ no di emergenza della scuola e chi può andare a prendere i bambini. https
+ ://www.protezionecivilegenzano.it/scuole/\n\nCalendario completo: https://
+ www.protezionecivilegenzano.it/calendario-prevenzione/#mese-settembre\nIn 
+ emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-set
+ tembre
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di settembre
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-ottobre@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SA
+SUMMARY:Prevenzione di ottobre: secondo controllo del kit e Settimana della
+  protezione civile
+DESCRIPTION:Secondo controllo del kit e Settimana della protezione civile.\
+ n- L'ultima domenica del mese si torna all'ora solare: secondo controllo d
+ el kit\, come a marzo. https://www.protezionecivilegenzano.it/formazione/s
+ chede-stampabili/checklist-kit-emergenza/\n- Il 13 ottobre è la Giornata 
+ internazionale per la riduzione del rischio di disastri\; intorno a quella
+  data si tiene la Settimana nazionale della protezione civile. https://www
+ .protezionecivilegenzano.it/formazione/settimana-protezione-civile/\n- Pre
+ parate l'auto all'inverno: coperta\, raschietto e catene o gomme invernali
+  secondo l'ordinanza in vigore. https://www.protezionecivilegenzano.it/ris
+ chi-prevenzione/kit-emergenza/#kit-auto\n\nCalendario completo: https://ww
+ w.protezionecivilegenzano.it/calendario-prevenzione/#mese-ottobre\nIn emer
+ genza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-ott
+ obre
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di ottobre
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-novembre@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SA
+SUMMARY:Prevenzione di novembre: pioggia forte\, le regole da ricordare
+DESCRIPTION:Pioggia forte\, le regole da ricordare.\n- Mai attraversare sot
+ topassi o strade allagate\, a piedi o in auto: pochi centimetri d'acqua ba
+ stano a spegnere il motore. https://www.protezionecivilegenzano.it/rischi-
+ prevenzione/rischio-idrogeologico/\n- Con la pioggia forte non si scende i
+ n cantine\, garage e locali interrati. https://www.protezionecivilegenzano
+ .it/rischi-prevenzione/rischio-idrogeologico/\n- Quando è prevista un'all
+ erta\, caricate telefono e power bank. https://www.protezionecivilegenzano
+ .it/rischi-prevenzione/blackout/\n\nCalendario completo: https://www.prote
+ zionecivilegenzano.it/calendario-prevenzione/#mese-novembre\nIn emergenza 
+ chiama il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-nov
+ embre
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di novembre
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-dicembre@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+RRULE:FREQ=YEARLY;BYMONTH=12;BYDAY=1SA
+SUMMARY:Prevenzione di dicembre: casa calda e sicura
+DESCRIPTION:Casa calda e sicura.\n- La caldaia ha avuto la manutenzione? Se
+  no\, prenotate il tecnico. https://www.protezionecivilegenzano.it/formazi
+ one/schede-stampabili/avvento-della-sicurezza/\n- Per le emergenze\, luci 
+ a pile e non candele\; mai barbecue\, fornelli da campeggio o generatori i
+ n locali chiusi. https://www.protezionecivilegenzano.it/rischi-prevenzione
+ /blackout/\n- Un gesto al giorno dal 1° al 24 dicembre con la scheda da s
+ puntare. https://www.protezionecivilegenzano.it/formazione/schede-stampabi
+ li/avvento-della-sicurezza/\n\nCalendario completo: https://www.protezione
+ civilegenzano.it/calendario-prevenzione/#mese-dicembre\nIn emergenza chiam
+ a il 112.
+URL:https://www.protezionecivilegenzano.it/calendario-prevenzione/#mese-dic
+ embre
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:I gesti di prevenzione di dicembre
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-cambio-ora-marzo@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20260329
+DTEND;VALUE=DATE:20260330
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+SUMMARY:Cambio dell'ora: controllo del kit di emergenza
+DESCRIPTION:Si passa all'ora legale. Controllate pile\, torcia\, radio\, po
+ wer bank e le scadenze di acqua\, cibo e farmaci.\nChecklist del kit: http
+ s://www.protezionecivilegenzano.it/formazione/schede-stampabili/checklist-
+ kit-emergenza/\n\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/formazione/schede-stampabili/che
+ cklist-kit-emergenza/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cambio dell'ora: controllo del kit di emergenza
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-giornata-riduzione-disastri@protezionecivilegenz
+ ano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+RRULE:FREQ=YEARLY
+SUMMARY:Giornata internazionale per la riduzione del rischio di disastri
+DESCRIPTION:Intorno a questa data si tiene la Settimana nazionale della pro
+ tezione civile. Per le scuole c'è un programma pronto.\nSettimana della p
+ rotezione civile a scuola: https://www.protezionecivilegenzano.it/formazio
+ ne/settimana-protezione-civile/\n\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/formazione/settimana-protezione-
+ civile/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Giornata internazionale per la riduzione del rischio di disastr
+ i
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:calendario-prevenzione-cambio-ora-ottobre@protezionecivilegenzano.it
+DTSTAMP:20261014T000000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+SUMMARY:Cambio dell'ora: controllo del kit di emergenza
+DESCRIPTION:Si torna all'ora solare. Secondo controllo dell'anno: pile\, to
+ rcia\, radio\, power bank e scadenze di acqua\, cibo e farmaci.\nChecklist
+  del kit: https://www.protezionecivilegenzano.it/formazione/schede-stampab
+ ili/checklist-kit-emergenza/\n\nIn emergenza chiama il 112.
+URL:https://www.protezionecivilegenzano.it/formazione/schede-stampabili/che
+ cklist-kit-emergenza/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Cambio dell'ora: controllo del kit di emergenza
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

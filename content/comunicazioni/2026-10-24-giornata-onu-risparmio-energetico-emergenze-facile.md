@@ -1,6 +1,6 @@
 ---
 title: "Risparmiare energia ti aiuta in emergenza"
-date: 2026-10-24
+date: 2026-10-24T00:01:00+02:00
 description: "Usare meno energia ti rende più sicuro. Ecco cosa fare ogni giorno e in caso di emergenza."
 badge: "Prevenzione"
 priorita: "normale"
