@@ -122,22 +122,6 @@ def parse_frontmatter(md_path: Path) -> dict:
     return fm
 
 
-def wrap_title(title: str, max_chars: int = 28) -> list:
-    words = title.split()
-    lines = []
-    cur = ""
-    for w in words:
-        if len(cur) + len(w) + 1 <= max_chars:
-            cur = (cur + " " + w).strip()
-        else:
-            if cur:
-                lines.append(cur)
-            cur = w
-    if cur:
-        lines.append(cur)
-    return lines[:4]
-
-
 def _wrap_words(title: str, max_chars: int) -> list:
     words = title.split()
     lines = []
