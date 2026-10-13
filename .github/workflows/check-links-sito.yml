@@ -32,6 +32,18 @@ jobs:
           hugo-version: '0.154.5'
           extended: true
 
+      - name: "🌦️ Immagini meteo dalla release (carte ECMWF e sinottica)"
+        # Dal 10/10/2026 queste immagini non sono più in git (release
+        # `immagini-meteo`, vedi deploy.yml): senza questo passo la build
+        # di questo workflow le vede mancanti e lychee segnala 6 file://
+        # inesistenti che in produzione rispondono 200 (falso positivo
+        # strutturale, scoperto il 13/10/2026). Non --rigoroso: qui serve
+        # solo a evitare il falso positivo, non a bloccare il link-check se
+        # release e sito fossero entrambi irraggiungibili.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/immagini-meteo-release.py scarica
+
       - name: "🏗️ Build sito produzione"
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
