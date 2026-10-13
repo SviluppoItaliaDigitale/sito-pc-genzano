@@ -517,7 +517,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-bambini/">
   <div class="ms-card-icon"><i class="bi bi-emoji-smile"></i></div>
   <p class="ms-card-title">Kit Bambini 3-14 anni</p>
-  <p class="ms-card-desc">PFA Children NCTSN/IFRC/WHO/UNHCR/Sphere. 4 fasce + inclusione (autismo, L2, ipovisione).</p>
+  <p class="ms-card-desc">Primo soccorso psicologico NCTSN e OMS, Sphere. 4 fasce + inclusione (autismo, L2, ipovisione).</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-neonati/">
   <div class="ms-card-icon"><i class="bi bi-balloon-heart"></i></div>

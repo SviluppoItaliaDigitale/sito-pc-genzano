@@ -80,7 +80,7 @@ Hub centrale: `/formazione/kit-calamita/` — cruscotto cruscotto-style: il visi
 
 | Kit | Standard adottati |
 |---|---|
-| 👧 Bambini 3-14 anni | NCTSN PFA Children + IFRC + WHO/UNHCR + Sphere 2018 |
+| 👧 Bambini 3-14 anni | Primo soccorso psicologico NCTSN/NCPTSD (2006) e OMS (2011) + IASC MHPSS + Sphere 2018 |
 | 👶 Neonati 0-3 anni | IFE Core Group v3.0 + WHO Code latte materno + Sphere |
 | 👴 Anziani in casa | HelpAge International + WHO mhGAP + SIGG/AIP |
 | 🤝 Caregiver familiari | L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022 |
