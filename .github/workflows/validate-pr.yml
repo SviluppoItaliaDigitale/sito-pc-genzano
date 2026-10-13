@@ -306,6 +306,23 @@ jobs:
           fi
           python3 scripts/check-data-uscita.py $changed
 
+      # 13/10/2026: il post sul soccorso alpino è uscito su Instagram e Facebook
+      # con tre punti della sintesi tagliati a metà frase (e altri dieci prima).
+      # Il generatore non taglia più e si ferma se il testo non entra: qui il
+      # problema si vede sulla PR, prima che l'articolo vada online senza il suo
+      # post. Se cambia il generatore, si ricontrollano tutti gli articoli.
+      - name: "🖼️ Testi delle grafiche social interi"
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-liberation
+          pip install --quiet Pillow
+          base="origin/${{ github.base_ref }}"
+          if git diff --name-only "$base"...HEAD | grep -qE '^scripts/(genera-immagini-social|genera-cover|check-grafiche-social)\.py$'; then
+            python3 scripts/check-grafiche-social.py --tutti
+          else
+            python3 scripts/check-grafiche-social.py --da-git "$base"
+          fi
+
   italiano:
     name: "Italiano — refusi e grammatica"
     runs-on: ubuntu-latest

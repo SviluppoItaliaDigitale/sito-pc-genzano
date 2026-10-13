@@ -181,6 +181,7 @@ jobs:
           esac
 
       - name: "🖼️ Genera le immagini (Pillow)"
+        id: immagini
         if: steps.lista.outputs.modalita != 'nessuno'
         run: |
           FORCE=""
@@ -188,20 +189,26 @@ jobs:
             FORCE="--force"
           fi
 
+          # Dal 13/10/2026 il generatore non taglia più il testo: se per un
+          # articolo non entra intero, non scrive nessuna immagine ed esce con 1.
+          # Gli altri articoli vanno avanti e vengono committati; il giro finisce
+          # in rosso nell'ultimo passo, così il guasto non resta silenzioso.
+          FALLITI=0
           case "${{ steps.lista.outputs.modalita }}" in
             singolo)
-              python3 scripts/genera-immagini-social.py $FORCE "${{ steps.lista.outputs.articolo }}"
+              python3 scripts/genera-immagini-social.py $FORCE "${{ steps.lista.outputs.articolo }}" || FALLITI=1
               ;;
             batch)
-              python3 scripts/genera-immagini-social.py --all $FORCE
+              python3 scripts/genera-immagini-social.py --all $FORCE || FALLITI=1
               ;;
             lista)
               while IFS=$'\t' read -r f _riserva; do
                 [ -z "$f" ] && continue
-                python3 scripts/genera-immagini-social.py $FORCE "$f" || echo "  (errore non fatale)"
+                python3 scripts/genera-immagini-social.py $FORCE "$f" || FALLITI=1
               done <<< "${{ steps.lista.outputs.files }}"
               ;;
           esac
+          echo "falliti=$FALLITI" >> "$GITHUB_OUTPUT"
 
       - name: "💾 Commit risultati"
         if: steps.lista.outputs.modalita != 'nessuno'
@@ -274,3 +281,12 @@ jobs:
           gh workflow run sveglia-social.yml --repo "$GITHUB_REPOSITORY" --ref main -f attendi=true \
             && echo "Attesa affidata a sveglia-social.yml (prossima voce fra ${{ steps.sveglia.outputs.attesa_min }} min)." \
             || echo "::warning::Non sono riuscito ad affidare l'attesa: ci penseranno i giri programmati."
+
+      - name: "🛑 Grafiche non generate per testo che non entra"
+        # Ultimo passo apposta: il materiale degli altri articoli è già stato
+        # committato e la sveglia è già partita. Il giro rosso lo vede il
+        # controllo di salute giornaliero (aggiorna-stato-sistema.yml).
+        if: steps.immagini.outputs.falliti == '1'
+        run: |
+          echo "::error::Per almeno un articolo il testo non entrerebbe intero nelle grafiche social: per quell'articolo non è stata scritta nessuna immagine e il post non uscirà finché il frontmatter (titolo, social_citazione, social_punti o description) non viene accorciato. Il motivo è negli avvisi del passo «Genera le immagini»; la stessa verifica si fa con python3 scripts/check-grafiche-social.py <articolo>."
+          exit 1
