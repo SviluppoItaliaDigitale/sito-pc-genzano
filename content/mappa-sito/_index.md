@@ -125,6 +125,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">Assistente guidato passo-passo: rispondi a domande semplici, ricevi indicazioni in emergenza e orientati tra le pagine del sito.</p>
   <span class="ms-card-arrow">Apri assistente →</span>
 </a>
+<a class="ms-card" href="/vivo-qui-da-poco/">
+  <div class="ms-card-icon"><i class="bi bi-house-door-fill"></i></div>
+  <p class="ms-card-title">Vivo qui da poco</p>
+  <p class="ms-card-desc">Per chi è appena arrivato a Genzano: i rischi del territorio, come arrivano gli avvisi, l'area di attesa, i numeri da salvare e sei cose da fare nella prima settimana.</p>
+  <span class="ms-card-arrow">Apri →</span>
+</a>
 <a class="ms-card" href="/piano-familiare/">
   <div class="ms-card-icon"><i class="bi bi-house-heart"></i></div>
   <p class="ms-card-title">Piano Familiare</p>
@@ -136,6 +142,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Calcolatore della scorta per 72 ore</p>
   <p class="ms-card-desc">Persone, bambini piccoli, animali e terapie: acqua, pasti e farmaci per tre giorni con la lista della spesa da spuntare e stampare.</p>
   <span class="ms-card-arrow">Calcola →</span>
+</a>
+<a class="ms-card" href="/calendario-prevenzione/">
+  <div class="ms-card-icon"><i class="bi bi-calendar-check-fill"></i></div>
+  <p class="ms-card-title">Calendario della prevenzione</p>
+  <p class="ms-card-desc">Mese per mese, i gesti di prevenzione di stagione, con il file da aggiungere al calendario del telefono e il controllo del kit al cambio dell'ora.</p>
+  <span class="ms-card-arrow">Apri →</span>
 </a>
 <a class="ms-card" href="/cartografia/">
   <div class="ms-card-icon"><i class="bi bi-map-fill"></i></div>
@@ -324,6 +336,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <div class="ms-card-icon"><i class="bi bi-magic"></i></div>
   <p class="ms-card-title">Crea la mia lezione</p>
   <p class="ms-card-desc">Scegli classe, minuti e argomento: il sito compone una lezione in fasi con schede, storie, giochi ed esperimenti già pubblicati.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/settimana-protezione-civile/">
+  <div class="ms-card-icon"><i class="bi bi-calendar-week-fill"></i></div>
+  <p class="ms-card-title">Settimana della protezione civile a scuola</p>
+  <p class="ms-card-desc">Un programma pronto per tutto l'istituto: un tema al giorno per tutte le classi, le lezioni composte per età, il compito in famiglia e la prova di evacuazione del venerdì.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/scatola-delle-esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-box-seam-fill"></i></div>
@@ -684,6 +701,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <div class="ms-card-icon"><i class="bi bi-diagram-3"></i></div>
   <p class="ms-card-title">Per gli enti e le scuole</p>
   <p class="ms-card-desc">Come il Gruppo collabora con le scuole, con il Comune e con gli altri gruppi di protezione civile dei Castelli Romani.</p>
+</a>
+<a class="ms-card" href="/sala-stampa/">
+  <div class="ms-card-icon"><i class="bi bi-newspaper"></i></div>
+  <p class="ms-card-title">Sala stampa</p>
+  <p class="ms-card-desc">Per giornalisti e redazioni: chi siamo in breve, contatti, notizie e dati, foto e logo, come citare il Gruppo e le fonti ufficiali in emergenza.</p>
 </a>
 <a class="ms-card" href="/san-pio-da-pietrelcina/">
   <div class="ms-card-icon"><i class="bi bi-star"></i></div>

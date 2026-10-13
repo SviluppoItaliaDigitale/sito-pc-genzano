@@ -161,6 +161,16 @@ jobs:
           python3 scripts/genera-open-kit.py
           git diff --exit-code data/open_kit.json || { echo "::error::data/open_kit.json non aggiornato: esegui python3 scripts/genera-open-kit.py"; exit 1; }
 
+      - name: "📅 File del Calendario della prevenzione aggiornato"
+        # 14/10/2026: /calendario-prevenzione/ offre un file .ics ricavato da
+        # data/calendario_prevenzione.yaml. Se si cambia un mese o un gesto
+        # senza rigenerare il file, chi lo scarica riceve promemoria diversi
+        # da quelli della pagina. Lo script controlla anche che ogni gesto
+        # rimandi a una pagina che esiste.
+        run: |
+          pip install --quiet pyyaml
+          python3 scripts/genera-calendario-prevenzione.py --check
+
   fogli-stampa:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
     runs-on: ubuntu-latest

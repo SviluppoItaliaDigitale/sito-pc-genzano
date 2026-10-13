@@ -1,0 +1,203 @@
+# Calendario della prevenzione: un mese, pochi gesti.
+#
+# Lo leggono lo shortcode «calendario-prevenzione» (pagina
+# /calendario-prevenzione/) e scripts/genera-calendario-prevenzione.py, che ne
+# ricava il file static/calendario-prevenzione/calendario-prevenzione.ics.
+# Il file .ics è committato e validate-pr.yml controlla con --check che sia
+# uguale a quello che questo file produce: dopo ogni modifica qui si lancia
+#   python3 scripts/genera-calendario-prevenzione.py
+#
+# Regole:
+#   - ogni gesto riprende una pagina del sito (pagina canonica) e non dice
+#     niente che quella pagina non dica: se cambia la pagina, si cambia qui;
+#   - niente date che cambiano di anno in anno (la stagione degli incendi la
+#     fissa ogni anno un'ordinanza del Sindaco): solo regole fisse;
+#   - «aggiornato» diventa il DTSTAMP del file .ics: si cambia a ogni modifica.
+#
+# Nato il 14/10/2026 (proposta 20 della roadmap).
+
+aggiornato: "2026-10-14"
+
+# Il promemoria del mese cade il primo sabato del mese.
+mesi:
+  - id: gennaio
+    nome: "Gennaio"
+    titolo: "Si riparte dal piano di famiglia"
+    gesti:
+      - testo: "Rileggete insieme il piano di famiglia: il contatto fuori zona, il punto di ritrovo, chi va a prendere i bambini."
+        pagina: "/piano-familiare/"
+        etichetta: "Piano familiare"
+      - testo: "Controllate che il 112 sia nella rubrica di tutti. Ai bambini spiegate che cosa dire: dove sono, che cosa è successo, se qualcuno è ferito."
+        pagina: "/formazione/in-famiglia-dopo-la-lezione/"
+        etichetta: "In famiglia dopo la lezione"
+
+  - id: febbraio
+    nome: "Febbraio"
+    titolo: "La strada fino all'area di attesa"
+    gesti:
+      - testo: "Trovate l'area di attesa più vicina a casa, ricordatene il codice e fate il percorso a piedi."
+        pagina: "/aree-attesa/"
+        etichetta: "Aree di attesa"
+      - testo: "Guardate sulla mappa anche le aree vicine alla scuola e al lavoro."
+        pagina: "/cartografia/"
+        etichetta: "Cartografia"
+
+  - id: marzo
+    nome: "Marzo"
+    titolo: "Cambio dell'ora, controllo del kit"
+    gesti:
+      - testo: "L'ultima domenica del mese si cambia l'ora: controllate pile, torcia, radio, power bank e le scadenze di acqua, cibo e farmaci."
+        pagina: "/formazione/schede-stampabili/checklist-kit-emergenza/"
+        etichetta: "Checklist del kit"
+      - testo: "Se avete un accordo di aiuto con i vicini, rivedetelo insieme."
+        pagina: "/formazione/schede-stampabili/accordo-vicini/"
+        etichetta: "Accordo di aiuto fra vicini"
+
+  - id: aprile
+    nome: "Aprile"
+    titolo: "Prima delle piogge di primavera"
+    gesti:
+      - testo: "Liberate da foglie e detriti i tombini e le caditoie vicino a casa."
+        pagina: "/rischi-prevenzione/rischio-idrogeologico/"
+        etichetta: "Rischio idrogeologico"
+      - testo: "Non lasciate oggetti di valore in cantine e garage che possono allagarsi."
+        pagina: "/rischi-prevenzione/rischio-idrogeologico/"
+        etichetta: "Rischio idrogeologico"
+
+  - id: maggio
+    nome: "Maggio"
+    titolo: "Prepararsi al caldo"
+    gesti:
+      - testo: "Controllate che ventilatori e condizionatori funzionino."
+        pagina: "/rischi-prevenzione/ondate-di-calore/"
+        etichetta: "Ondate di calore"
+      - testo: "Sentite i vicini anziani o che vivono soli: chi li chiama nei giorni di caldo?"
+        pagina: "/rischi-prevenzione/persone-necessita-specifiche/"
+        etichetta: "Persone con necessità specifiche"
+
+  - id: giugno
+    nome: "Giugno"
+    titolo: "Comincia la stagione degli incendi"
+    gesti:
+      - testo: "Nel periodo di grave pericolosità niente fuochi all'aperto né abbruciamenti: le date le fissa ogni anno l'ordinanza del Sindaco."
+        pagina: "/rischi-prevenzione/rischio-incendio/"
+        etichetta: "Rischio incendio"
+      - testo: "Tagliate l'erba secca intorno a casa, al giardino e al terreno."
+        pagina: "/rischi-prevenzione/rischio-incendio/"
+        etichetta: "Rischio incendio"
+      - testo: "Nei mesi caldi consultate ogni giorno il bollettino sulle ondate di calore del Ministero della Salute."
+        pagina: "/rischi-prevenzione/ondate-di-calore/"
+        etichetta: "Ondate di calore"
+
+  - id: luglio
+    nome: "Luglio"
+    titolo: "Caldo, i gesti di ogni giorno"
+    gesti:
+      - testo: "Bevete spesso anche senza sete, uscite prima delle 11 o dopo le 18, mai persone o animali in auto al sole."
+        pagina: "/rischi-prevenzione/ondate-di-calore/"
+        etichetta: "Ondate di calore"
+      - testo: "Vedete fumo o fiamme? Chiamate subito il 112 e dite dove siete e da che parte va il fumo."
+        pagina: "/rischi-prevenzione/rischio-incendio/"
+        etichetta: "Rischio incendio"
+      - testo: "Un gesto al giorno per tutto il mese con la scheda da spuntare."
+        pagina: "/formazione/schede-stampabili/estate-sicura/"
+        etichetta: "Estate sicura"
+
+  - id: agosto
+    nome: "Agosto"
+    titolo: "In viaggio e in vacanza"
+    gesti:
+      - testo: "Prima di partire chiudete gas e acqua e scollegate gli elettrodomestici che non servono."
+        pagina: "/formazione/schede-stampabili/estate-sicura/"
+        etichetta: "Estate sicura"
+      - testo: "Lasciate un recapito ai vicini e, se volete, una copia delle chiavi a una persona di fiducia."
+        pagina: "/formazione/schede-stampabili/accordo-vicini/"
+        etichetta: "Accordo di aiuto fra vicini"
+      - testo: "Nel posto delle vacanze cercate l'area di attesa più vicina e ditela a chi è con voi."
+        pagina: "/formazione/schede-stampabili/estate-sicura/"
+        etichetta: "Estate sicura"
+
+  - id: settembre
+    nome: "Settembre"
+    titolo: "Prima delle piogge d'autunno"
+    gesti:
+      - testo: "Liberate di nuovo tombini e caditoie: dopo l'estate il terreno secco assorbe poco, e le prime piogge forti allagano in fretta strade e scantinati."
+        pagina: "/rischi-prevenzione/rischio-idrogeologico/"
+        etichetta: "Rischio idrogeologico"
+      - testo: "Ripassate i colori dell'allerta e scegliete come ricevere gli avvisi: canale Telegram, notifiche del browser, pagina delle allerte."
+        pagina: "/allerte-meteo/"
+        etichetta: "Allerte meteo"
+      - testo: "Ricomincia la scuola: chiedete come funziona il piano di emergenza della scuola e chi può andare a prendere i bambini."
+        pagina: "/scuole/"
+        etichetta: "Scuole"
+
+  - id: ottobre
+    nome: "Ottobre"
+    titolo: "Secondo controllo del kit e Settimana della protezione civile"
+    gesti:
+      - testo: "L'ultima domenica del mese si torna all'ora solare: secondo controllo del kit, come a marzo."
+        pagina: "/formazione/schede-stampabili/checklist-kit-emergenza/"
+        etichetta: "Checklist del kit"
+      - testo: "Il 13 ottobre è la Giornata internazionale per la riduzione del rischio di disastri; intorno a quella data si tiene la Settimana nazionale della protezione civile."
+        pagina: "/formazione/settimana-protezione-civile/"
+        etichetta: "Settimana della protezione civile a scuola"
+      - testo: "Preparate l'auto all'inverno: coperta, raschietto e catene o gomme invernali secondo l'ordinanza in vigore."
+        pagina: "/rischi-prevenzione/kit-emergenza/#kit-auto"
+        etichetta: "Kit auto"
+
+  - id: novembre
+    nome: "Novembre"
+    titolo: "Pioggia forte, le regole da ricordare"
+    gesti:
+      - testo: "Mai attraversare sottopassi o strade allagate, a piedi o in auto: pochi centimetri d'acqua bastano a spegnere il motore."
+        pagina: "/rischi-prevenzione/rischio-idrogeologico/"
+        etichetta: "Rischio idrogeologico"
+      - testo: "Con la pioggia forte non si scende in cantine, garage e locali interrati."
+        pagina: "/rischi-prevenzione/rischio-idrogeologico/"
+        etichetta: "Rischio idrogeologico"
+      - testo: "Quando è prevista un'allerta, caricate telefono e power bank."
+        pagina: "/rischi-prevenzione/blackout/"
+        etichetta: "Blackout"
+
+  - id: dicembre
+    nome: "Dicembre"
+    titolo: "Casa calda e sicura"
+    gesti:
+      - testo: "La caldaia ha avuto la manutenzione? Se no, prenotate il tecnico."
+        pagina: "/formazione/schede-stampabili/avvento-della-sicurezza/"
+        etichetta: "Avvento della sicurezza"
+      - testo: "Per le emergenze, luci a pile e non candele; mai barbecue, fornelli da campeggio o generatori in locali chiusi."
+        pagina: "/rischi-prevenzione/blackout/"
+        etichetta: "Blackout"
+      - testo: "Un gesto al giorno dal 1° al 24 dicembre con la scheda da spuntare."
+        pagina: "/formazione/schede-stampabili/avvento-della-sicurezza/"
+        etichetta: "Avvento della sicurezza"
+
+# Promemoria a data fissa. «giorno» è un numero oppure «ultima-domenica».
+promemoria:
+  - id: cambio-ora-marzo
+    quando: "Ultima domenica di marzo"
+    mese: 3
+    giorno: "ultima-domenica"
+    titolo: "Cambio dell'ora: controllo del kit di emergenza"
+    testo: "Si passa all'ora legale. Controllate pile, torcia, radio, power bank e le scadenze di acqua, cibo e farmaci."
+    pagina: "/formazione/schede-stampabili/checklist-kit-emergenza/"
+    etichetta: "Checklist del kit"
+
+  - id: giornata-riduzione-disastri
+    quando: "13 ottobre"
+    mese: 10
+    giorno: 13
+    titolo: "Giornata internazionale per la riduzione del rischio di disastri"
+    testo: "Intorno a questa data si tiene la Settimana nazionale della protezione civile. Per le scuole c'è un programma pronto."
+    pagina: "/formazione/settimana-protezione-civile/"
+    etichetta: "Settimana della protezione civile a scuola"
+
+  - id: cambio-ora-ottobre
+    quando: "Ultima domenica di ottobre"
+    mese: 10
+    giorno: "ultima-domenica"
+    titolo: "Cambio dell'ora: controllo del kit di emergenza"
+    testo: "Si torna all'ora solare. Secondo controllo dell'anno: pile, torcia, radio, power bank e scadenze di acqua, cibo e farmaci."
+    pagina: "/formazione/schede-stampabili/checklist-kit-emergenza/"
+    etichetta: "Checklist del kit"

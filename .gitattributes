@@ -1,0 +1,3 @@
+# I file iCalendar restano con la fine riga CRLF richiesta dalla RFC 5545:
+# nessuna conversione automatica, su nessun sistema.
+*.ics -text

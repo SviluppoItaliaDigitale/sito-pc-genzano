@@ -99,7 +99,7 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 <div class="card h-100">
 <div class="card-body">
 <h3 class="h5">Scuole, sito, media e collaborazioni</h3>
-<p class="mb-0">Per progetti scolastici, segnalazioni sul sito, richieste media o collaborazioni scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.</p>
+<p class="mb-0">Per progetti scolastici, segnalazioni sul sito, richieste media o collaborazioni scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>. Per giornalisti e redazioni c'è la <a href="/sala-stampa/">sala stampa</a>.</p>
 </div>
 </div>
 </div>
@@ -116,6 +116,7 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Diventa volontario](/diventa-volontario/) — iscrizione, requisiti e formazione
+- [Sala stampa](/sala-stampa/) — per giornalisti e redazioni: contatti, notizie, foto e logo
 - [Mappa del sito](/mappa-sito/) — tutte le sezioni del sito
 
 <!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->
