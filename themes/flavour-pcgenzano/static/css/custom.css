@@ -3019,6 +3019,36 @@ article:not(.card) p:has(img) + p:has(img) {
   font-style: italic;
   margin-top: 0.5rem;
 }
+/* Dentro .article-body la figure dello shortcode foto impone width:100%
+   all'immagine e la cornice con ombra: un pittogramma block (Biblioteca
+   delle idee sbagliate, 13/10/2026) diventava una figura da 600 px. Qui il
+   pittogramma riprende la sua misura e la figure resta un riquadro sobrio,
+   allineato a sinistra come il testo. */
+.article-body figure.pittogramma-figure {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1rem 0 1.25rem;
+  padding: 0.6rem 0.9rem;
+  box-shadow: none;
+  border: 1px solid rgba(0, 51, 102, 0.12);
+  border-radius: 0.5rem;
+}
+.article-body figure.pittogramma-figure img.pittogramma { display: block; margin: 0 auto; border-radius: 0; }
+.article-body figure.pittogramma-figure img.pittogramma-small  { width: 48px; }
+.article-body figure.pittogramma-figure img.pittogramma-medium { width: 96px; }
+.article-body figure.pittogramma-figure img.pittogramma-large  { width: 160px; }
+.article-body figure.pittogramma-figure img.pittogramma-xlarge { width: 240px; }
+.article-body figure.pittogramma-figure .figure-caption { max-width: 28rem; text-align: left; }
+/* le misure sopra hanno più peso delle regole generali: telefono e stampa
+   (più sotto) vanno ripetuti qui, altrimenti non arrivano al pittogramma */
+@media (max-width: 576px) {
+  .article-body figure.pittogramma-figure img.pittogramma-large  { width: 128px; }
+  .article-body figure.pittogramma-figure img.pittogramma-xlarge { width: 180px; }
+}
+@media print {
+  .article-body figure.pittogramma-figure { padding: 0; border: none; }
+}
 
 /* Compatibilita' con il toolbar di accessibilità:
    i pittogrammi sono FUNZIONALI, non decorativi.
@@ -7975,3 +8005,34 @@ html.a11y-hide-images .dash-sw { visibility: visible; } /* non sono immagini: so
 .dash-cfr-tag-a { left: 50px; }
 .dash-cfr-tag-b { right: 10px; }
 @media print { .dash-s3 { background: #fff; border-left-color: #000; } .dash-s3-cfr, #sat-cfr-ctl, .dash-cfr-linea, .dash-cfr-tag { display: none; } }
+
+/* ==========================================================================
+ * CALCOLATORE SCORTA 72 ORE v1.0 (13/10/2026) — shortcode calcolatore-scorta + js/calcolatore-scorta.js
+ * Pagina /calcolatore-scorta/: scorta per persone, bambini, animali e terapie,
+ * lista della spesa con caselle. Lo stato resta nel browser (localStorage).
+ * ========================================================================== */
+.calcolatore-scorta .form-label { color: #003366; }
+.cs-messaggio { margin: .5rem 0 0; }
+.cs-messaggio:empty { margin: 0; }
+.calcolatore-scorta-esito .cs-gruppo { border-top: 1px solid #d9dfe6; padding: .8rem 0 .4rem; }
+.calcolatore-scorta-esito .cs-gruppo h3 { color: #003366; margin-bottom: .2rem; break-after: avoid; }
+/* le caselle le disegna Bootstrap Italia sull'etichetta (il campo vero è
+   invisibile, anche in stampa) e di lì viene anche il fuoco da tastiera:
+   qui si regola solo lo spazio */
+.calcolatore-scorta-esito .form-check { padding-left: 1.9rem; margin-bottom: .35rem; }
+.calcolatore-scorta-esito .form-check-input { margin-left: -1.9rem; width: 1.2rem; height: 1.2rem; }
+.calcolatore-scorta-esito .cs-stato { color: #4d5a66; margin-top: .6rem; }
+/* barra di accessibilità: etichette, voci della lista e pulsanti con bordo
+   non hanno una regola generale per il contrasto invertito e per il giallo su nero */
+html.a11y-contrast-invert .calcolatore-scorta .form-label,
+html.a11y-contrast-invert .calcolatore-scorta-esito .form-check-label { color: #fff; }
+html.a11y-contrast-invert .calcolatore-scorta .btn-outline-secondary,
+html.a11y-contrast-invert .calcolatore-scorta-esito .btn-outline-primary { color: #fff; border-color: #fff; }
+html.a11y-contrast-yellow-black .calcolatore-scorta .form-label,
+html.a11y-contrast-yellow-black .calcolatore-scorta-esito .form-check-label { color: #ffff00; }
+@media print {
+  .calcolatore-scorta, .calcolatore-scorta-esito .d-print-none { display: none !important; }
+  /* «Stampa la lista» stampa solo la lista: il resto della pagina resta a
+     schermo (classe messa da js/calcolatore-scorta.js solo per quella stampa) */
+  html.stampa-scorta .article-body > :not(#cs-esito) { display: none !important; }
+}

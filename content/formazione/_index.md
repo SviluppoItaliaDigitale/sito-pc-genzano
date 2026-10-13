@@ -56,6 +56,9 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 <div class="consulta-rapida">
 {{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
 {{< link-card url="/formazione/crea-la-mia-lezione/" icon="bi-magic" titolo="Crea la mia lezione" desc="Classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti." >}}
+{{< link-card url="/formazione/scatola-delle-esercitazioni/" icon="bi-box-seam" titolo="Scatola delle esercitazioni" desc="Dalla lezione alla prova in aula: scenari, ruoli, carte degli imprevisti e discussione finale." >}}
+{{< link-card url="/formazione/dalla-carta-al-territorio/" icon="bi-signpost-split" titolo="Dalla carta al territorio" desc="L'uscita sui luoghi del Piano: cartelli, aree di attesa, acqua e DAE in cinque stazioni." >}}
+{{< link-card url="/formazione/laboratorio-dati-reali/" icon="bi-graph-up" titolo="Laboratorio di dati reali" desc="Temperature e piogge di un'estate a Genzano: ipotesi, verifica e il confine fra osservazione e conclusione." >}}
 {{< link-card url="/formazione/percorsi-didattici/" icon="bi-clock-history" titolo="Quanto tempo hai?" desc="Una lezione da un'ora, mezza giornata o un progetto: pacchetti con durata e obiettivi." >}}
 <a class="cr-card" href="#kit"><span class="cr-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span><span class="cr-corpo"><span class="cr-titolo">Per fascia d'età</span><span class="cr-desc">Kit dedicati per infanzia, primaria, secondaria di primo e secondo grado.</span></span></a>
 {{< link-card url="/formazione/scuole-checklist-docente/" icon="bi-check2-square" titolo="Prepara la lezione" desc="Parole e tempi giusti per spiegare i rischi senza creare allarmismo." >}}
@@ -91,7 +94,7 @@ Alcune persone hanno bisogno di indicazioni più semplici, tempi più lunghi o m
 
 Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza paura. I giochi educativi sono gratuiti, funzionano da computer, tablet e smartphone e non richiedono registrazione.
 
-- [Storie e racconti](/formazione/storie-e-racconti/) — letture ad alta voce, drammatizzazioni e conversazioni guidate.
+- [Storie e racconti](/formazione/storie-e-racconti/) — letture ad alta voce, drammatizzazioni e conversazioni guidate, con il copione [Il giorno della prova](/formazione/storie-e-racconti/recita-giorno-della-prova/) per la recita di fine anno e le [filastrocche della sicurezza](/formazione/storie-e-racconti/filastrocche-sicurezza/).
 - [Giochi della sicurezza](/giochi/) — giochi per infanzia, primaria, ragazzi e famiglie (Arena con badge e progressi).
 - [Catalogo dei giochi](/catalogo-giochi/) — scheda informativa di ogni gioco con fascia d'età, durata, obiettivo didattico e accessibilità.
 - [Esperimenti e attività di protezione civile](/formazione/esperimenti/) — esperimenti scientifici e giochi da fare a scuola o a casa, con materiali semplici, per capire i rischi e come ci si protegge.

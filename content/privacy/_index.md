@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-10-06"
+dataUltimaRevisione: "2026-10-13"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -88,6 +88,7 @@ Alcune funzioni ricordano le tue scelte nella memoria locale del browser (*local
 
 - le preferenze del pannello «Strumenti di accessibilità» e la velocità della lettura ad alta voce;
 - le pagine che salvi in [«I miei contenuti»](/i-miei-contenuti/);
+- i numeri e le caselle spuntate nel [calcolatore della scorta per 72 ore](/calcolatore-scorta/);
 - l'ultimo dato ricevuto dalle schede del cruscotto, mostrato se la fonte non risponde.
 
 Si cancellano cancellando i dati del sito dalle impostazioni del browser; le pagine salvate si possono togliere anche dalla pagina «I miei contenuti».

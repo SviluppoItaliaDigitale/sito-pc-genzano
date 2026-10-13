@@ -8,6 +8,9 @@
        tabella "true"|"false" - mostra la tabella-dati come alternativa testuale (default true)
      Accessibilita: <svg role="img"> con <title>/<desc>, valori scritti in chiaro,
      palette istituzionale, e la TABELLA resta come equivalente testuale (WCAG 1.1.1).
+     Valori: i numeri interi del CSV si mostrano interi; quelli con decimali si
+     mostrano con la virgola, mai troncati (13/10/2026: il laboratorio di dati
+     reali usa millimetri di pioggia con un decimale, e «0,4» non deve diventare «0»).
 */}}
 {{ $file := .Get "file" }}
 {{ $tipo := .Get "tipo" | default "barre" }}
@@ -41,7 +44,7 @@
   <svg class="grafico-svg" viewBox="0 0 {{ $W }} {{ $H }}" role="img"
        aria-labelledby="gt-{{ $id }}-b gd-{{ $id }}-b" preserveAspectRatio="xMinYMin meet">
     <title id="gt-{{ $id }}-b">{{ $titolo }} — grafico a barre</title>
-    <desc id="gd-{{ $id }}-b">{{ range $i, $r := $data }}{{ if $i }}; {{ end }}{{ index $r 0 }}: {{ int (float (index $r 1)) }}{{ with $unita }} {{ . }}{{ end }}{{ end }}.</desc>
+    <desc id="gd-{{ $id }}-b">{{ range $i, $r := $data }}{{ if $i }}; {{ end }}{{ index $r 0 }}: {{ partial "valore-csv" (index $r 1) }}{{ with $unita }} {{ . }}{{ end }}{{ end }}.</desc>
     {{ range $i, $r := $data }}
       {{ $label := index $r 0 }}
       {{ $v := float (index $r 1) }}
@@ -49,7 +52,7 @@
       {{ $bw := 0 }}{{ if gt $max 0.0 }}{{ $bw = int (math.Round (mul (div $v $max) $barMax)) }}{{ end }}
     <text x="{{ $left }}" y="{{ add $top 13 }}" class="g-lab">{{ $label }}</text>
     <rect x="{{ $left }}" y="{{ add $top 18 }}" width="{{ $bw }}" height="20" rx="2" class="g-bar" />
-    <text x="{{ add (add $left $bw) 7 }}" y="{{ add $top 33 }}" class="g-val">{{ int $v }}</text>
+    <text x="{{ add (add $left $bw) 7 }}" y="{{ add $top 33 }}" class="g-val">{{ partial "valore-csv" (index $r 1) }}</text>
     {{ end }}
   </svg>
   </figure>
@@ -85,7 +88,7 @@
     {{ range $i, $row := $data }}
       {{ $v := float (index $row 1) }}
       {{ $pct := 0 }}{{ if gt $total 0.0 }}{{ $pct = int (math.Round (mul (div $v $total) 100)) }}{{ end }}
-    <li><span class="grafico-swatch" style="background:{{ index $palette (mod $i (len $palette)) }}" aria-hidden="true"></span><span>{{ index $row 0 }} — <strong>{{ int $v }}</strong> ({{ $pct }}%)</span></li>
+    <li><span class="grafico-swatch" style="background:{{ index $palette (mod $i (len $palette)) }}" aria-hidden="true"></span><span>{{ index $row 0 }} — <strong>{{ partial "valore-csv" (index $row 1) }}</strong> ({{ $pct }}%)</span></li>
     {{ end }}
   </ul>
   </figure>
@@ -99,7 +102,7 @@
     <thead><tr><th scope="col">{{ index $head 0 | replaceRE "_" " " | humanize }}</th><th scope="col">{{ index $head 1 | replaceRE "_" " " | humanize }}</th></tr></thead>
     <tbody>
     {{ range $data }}
-      <tr><td>{{ index . 0 }}</td><td>{{ int (float (index . 1)) }}</td></tr>
+      <tr><td>{{ index . 0 }}</td><td>{{ partial "valore-csv" (index . 1) }}</td></tr>
     {{ end }}
     </tbody>
   </table>

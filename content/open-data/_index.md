@@ -4,7 +4,7 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-07-31"
+dataUltimaRevisione: "2026-10-13"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
@@ -21,6 +21,7 @@ I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in form
 | **Numeri utili di emergenza** | Numeri di emergenza validi nel Lazio | 2 | [CSV](/open-data/numeri-utili-emergenza.csv) · [JSON](/open-data/numeri-utili-emergenza.json) |
 | **Codici colore allerta** | Significato e comportamenti dei livelli di allerta meteo della Regione Lazio | 4 | [CSV](/open-data/codici-colore-allerta.csv) · [JSON](/open-data/codici-colore-allerta.json) |
 | **Timeline storica del rischio** | Eventi geologici, sismici, idrogeologici, normativi dei Castelli Romani, ognuno con fonte istituzionale | 12 | [CSV](/open-data/eventi-storici-castelli-romani.csv) · [JSON](/open-data/eventi-storici-castelli-romani.json) |
+| **Laboratorio di dati reali: estate 2026** | Temperatura massima, minima e pioggia di ogni giorno dal 1° giugno al 30 settembre 2026 per la cella ERA5 di Genzano (rianalisi Copernicus via Open-Meteo), con la pioggia per settimana; istantanea per uso didattico | 122 | [CSV](/open-data/laboratorio-genzano-estate-2026.csv) · [JSON](/open-data/laboratorio-genzano-estate-2026.json) · [settimane CSV](/open-data/laboratorio-genzano-estate-2026-settimane.csv) |
 
 > Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione, aree di ricovero e aree di ammassamento dei soccorritori).
 

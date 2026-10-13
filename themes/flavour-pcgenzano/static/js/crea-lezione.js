@@ -11,7 +11,10 @@
    - «Proponi altri materiali» rimescola le scelte;
    - la scelta resta nell'indirizzo della pagina (?classe=…), così
      la lezione si può riaprire o mandare a un collega;
-   - «Stampa la lezione» stampa solo il piano.
+   - «Stampa la lezione» stampa solo il piano;
+   - la fase di chiusura rimanda alla «Scatola delle esercitazioni»
+     (ruoli, imprevisti, discussione finale), dal 13/10/2026, solo
+     dalla primaria 3ª-5ª in su: per infanzia e prime classi non è adatta.
    ============================================================ */
 (function () {
   'use strict';
@@ -141,6 +144,14 @@
       } else if (f.nome === 'chiusura') {
         var c = el('p', null, 'Riprendete le risposte dell’introduzione: che cosa è cambiato? Ogni alunno dice o scrive una cosa da fare e una persona a cui raccontarla a casa.');
         corpo.appendChild(c);
+        if (l.classe !== 'infanzia' && l.classe !== 'primaria-bassa') {
+          // la scatola delle esercitazioni (ruoli, imprevisti, discussione) è pensata dalla 3ª primaria in su
+          var es = el('p', 'small');
+          es.appendChild(document.createTextNode('Per provare i gesti in classe, con ruoli, imprevisti e discussione finale: '));
+          es.appendChild(link({ url: '/formazione/scatola-delle-esercitazioni/', titolo: 'Scatola delle esercitazioni' }));
+          es.appendChild(document.createTextNode('.'));
+          corpo.appendChild(es);
+        }
         if (l.valutazione.length) {
           var v = el('p', 'small');
           v.appendChild(document.createTextNode('Per osservare e valutare: '));

@@ -1,0 +1,48 @@
+{{- /*
+  Shortcode calcolatore-scorta — calcolo della scorta per 72 ore (acqua,
+  pasti, farmaci, materiali per persona) e lista della spesa stampabile.
+  Markup qui, logica in static/js/calcolatore-scorta.js (vanilla, nessuna
+  richiesta di rete; lo stato resta nel browser con localStorage in try/catch).
+  I riferimenti numerici sono quelli delle pagine canoniche del sito:
+    - acqua: circa 4 litri a persona al giorno (Ready.gov/FEMA, ~3,8 L),
+      pagina /rischi-prevenzione/kit-emergenza/ e calcolatore dello zaino
+      in /piano-familiare/;
+    - farmaci abituali: scorta di almeno 7 giorni (checklist del kit, kit
+      per le terapie salvavita: 7-14 giorni).
+  Uso: {{< calcolatore-scorta >}}
+*/ -}}
+<div class="card border-primary shadow-sm p-4 mb-4 calcolatore-scorta d-print-none" id="cs-card">
+<form class="cs-form" id="cs-form" novalidate aria-describedby="cs-nota">
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <label for="cs-persone" class="form-label fw-semibold">Persone in casa</label>
+      <input type="number" class="form-control" id="cs-persone" name="persone" min="1" max="30" value="2" inputmode="numeric">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="cs-piccoli" class="form-label fw-semibold">Neonati o bambini piccoli (compresi nelle persone in casa)</label>
+      <input type="number" class="form-control" id="cs-piccoli" name="piccoli" min="0" max="30" value="0" inputmode="numeric">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="cs-animali" class="form-label fw-semibold">Animali domestici</label>
+      <input type="number" class="form-control" id="cs-animali" name="animali" min="0" max="30" value="0" inputmode="numeric">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="cs-farmaci" class="form-label fw-semibold">Persone con farmaci abituali</label>
+      <input type="number" class="form-control" id="cs-farmaci" name="farmaci" min="0" max="30" value="0" inputmode="numeric">
+    </div>
+  </div>
+  <div class="mt-3 d-flex flex-wrap gap-2">
+    <button type="submit" class="btn btn-primary"><i class="bi bi-calculator me-1" aria-hidden="true"></i> Calcola la scorta</button>
+    <button type="button" class="btn btn-outline-secondary" id="cs-azzera"><i class="bi bi-trash me-1" aria-hidden="true"></i> Cancella i dati salvati</button>
+  </div>
+</form>
+<p id="cs-messaggio" class="small cs-messaggio" role="status"></p>
+<p id="cs-nota" class="small mt-2 mb-0">Il calcolo resta nel tuo browser: niente viene inviato al sito. Le quantità sono orientative e seguono la pagina <a href="{{ "rischi-prevenzione/kit-emergenza/" | relURL }}">Kit di emergenza</a>.</p>
+</div>
+
+<div id="cs-esito" class="calcolatore-scorta-esito" hidden></div>
+
+<noscript><p>Per usare il calcolatore serve JavaScript attivo. Il riferimento è semplice: circa <strong>4 litri d'acqua a persona al giorno per 3 giorni</strong>, alimenti senza cottura per 9 pasti a persona, farmaci abituali per almeno 7 giorni. La lista completa è nella pagina <a href="{{ "rischi-prevenzione/kit-emergenza/" | relURL }}">Kit di emergenza</a>.</p></noscript>
+
+{{- $v := readFile "themes/flavour-pcgenzano/static/js/calcolatore-scorta.js" | hash.FNV32a }}
+<script src="{{ "js/calcolatore-scorta.js" | relURL }}?v={{ $v }}" defer></script>

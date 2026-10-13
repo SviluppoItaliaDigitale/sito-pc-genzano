@@ -267,7 +267,7 @@ Indica chi compone il nucleo familiare: il calcolatore stima l'**acqua** da tene
 
 <div id="z-acqua" class="alert alert-info" role="status" aria-live="polite"></div>
 
-<p class="small text-muted">Riferimento per l'acqua: circa <strong>4 litri a persona al giorno</strong> (Ready.gov/FEMA, ~3,8 litri arrotondati), per 3 giorni. Per <strong>neonati e animali</strong> serve una <strong>scorta dedicata in più</strong>: il fabbisogno varia e non è compreso nel totale. Quantità orientative e fonti complete nella pagina <a href="/rischi-prevenzione/kit-emergenza/">Kit di emergenza</a>.</p>
+<p class="small text-muted">Riferimento per l'acqua: circa <strong>4 litri a persona al giorno</strong> (Ready.gov/FEMA, ~3,8 litri arrotondati), per 3 giorni. Per <strong>neonati e animali</strong> serve una <strong>scorta dedicata in più</strong>: il fabbisogno varia e non è compreso nel totale. Quantità orientative e fonti complete nella pagina <a href="/rischi-prevenzione/kit-emergenza/">Kit di emergenza</a>. Per la lista della spesa completa, con pasti, farmaci e materiali, usa il <a href="/calcolatore-scorta/">calcolatore della scorta per 72 ore</a>; da stampare e tenere in vista ci sono la <a href="/formazione/schede-stampabili/scheda-frigorifero/">scheda da frigorifero</a> e il <a href="/formazione/schede-stampabili/piano-continuita-domestica/">piano di continuità domestica</a>.</p>
 
 <div class="d-flex justify-content-between align-items-center mb-2 mt-4">
 <strong>La mia lista di controllo</strong>

@@ -27,8 +27,10 @@
     if (sotto) parts.push(sotto.textContent.trim() + '.');
     var corpo = document.querySelector('.storia-corpo');
     if (corpo) {
-      // Solo i paragrafi <p>, ignora separatori decorativi
-      corpo.querySelectorAll('p, h2, h3').forEach(function (el) {
+      // Paragrafi, titoli, voci di elenco e il coro del copione (un <div>
+      // a righe separate da <br>); ignora separatori decorativi. Nessuna
+      // storia ha <p> dentro <li>: niente letture doppie.
+      corpo.querySelectorAll('p, h2, h3, li, .copione-coro').forEach(function (el) {
         var t = el.textContent.trim();
         if (t) parts.push(t);
       });

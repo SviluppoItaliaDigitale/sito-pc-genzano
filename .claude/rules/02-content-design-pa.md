@@ -253,6 +253,16 @@ date: 2026-04-30T00:02:00+02:00
 
 **Storia:** istruzione data il 28/08/2026 durante l'articolo sull'incendio in zona Molara; bonifica retroattiva di 9 articoli di luglio–agosto nella stessa giornata (PR #930). Sintesi operativa nella tabella "Automatismo totale" di `CLAUDE.md`, riga "Fonti giornalistiche".
 
+## Resoconti degli interventi — il paragrafo «Cosa impariamo» (dal 13/10/2026)
+
+Ogni articolo che racconta un intervento o un'attività del Gruppo (badge `Attività`, `Aggiornamento` ed `Esercitazione`, e i resoconti di maltempo, incendi, ricerche, presìdi) chiude il racconto con una sezione fissa **`## Cosa impariamo`**, prima di «Cosa puoi fare tu» e di «Per approfondire». Nasce dalla proposta 24 della roadmap (13/10/2026): chi legge un resoconto deve ricavarne una lezione di prevenzione, non solo la cronaca.
+
+- **Due-quattro punti brevi**, ciascuno una lezione generale che l'intervento rende evidente, collegata alla pagina del sito che la spiega (pagina rischio, kit, piano di famiglia, numeri utili). La lezione si ricava **solo da ciò che l'articolo già racconta**: niente fatti nuovi, niente ricostruzioni di cause che il registro non documenta.
+- **Senza dati sensibili**: niente nomi, targhe, indirizzi privati, condizioni di salute, responsabilità di persone o enti; niente giudizi su chi ha chiamato o su chi ha sbagliato. La lezione riguarda i comportamenti, non le persone.
+- **Tono**: sobrio, senza morale e senza retorica («la prevenzione salva vite»); frasi che un cittadino può applicare domani («un albero che si inclina si segnala prima che cada, chiamando il 112 solo se è un pericolo immediato»).
+- Differenza con «Cosa puoi fare tu»: quella sezione dà le istruzioni operative per il cittadino nella stessa situazione; «Cosa impariamo» dice che cosa l'episodio insegna sul rischio e sulla preparazione. Se l'articolo è breve, le due sezioni possono fondersi sotto il titolo «Cosa impariamo».
+- L'archetype `archetypes/comunicazioni.md` porta lo scheletro della sezione; `pc-article-reviewer` la verifica sui resoconti (§ 7 della sua lista).
+
 ## Programmi di eventi — disclaimer obbligatorio "fai riferimento al sito ufficiale"
 
 🔴 **Ogni articolo che riporta il programma, il calendario o gli orari di un evento organizzato da un ente terzo** (Comune di Genzano di Roma, Comune di Marino, parrocchie, associazioni, ecc.) **DEVE includere un disclaimer** che:

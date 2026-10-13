@@ -55,6 +55,11 @@ Un cumulo che cova fa molto fumo, irritante per gli occhi e per le vie respirato
 
 Con questa uscita salgono a **206 gli interventi registrati dal 4 aprile**, data di adozione del registro operativo digitale: oltre **600 ore** e più di **10.300 chilometri**. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 
+## Cosa impariamo
+
+- **Un cumulo di sfalci è combustibile che cova a lungo.** In via di Pozzi Bonelli bruciavano erba secca, rami e canne accumulati ai margini di un canneto: la fiamma si è spenta in fretta, le braci sotto la superficie hanno richiesto ore di raffreddamento. Un accumulo di sterpaglie vicino a case, recinzioni e canneti va tolto prima dell'estate: [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
+- **Sul posto il Gruppo segue le indicazioni dei Vigili del Fuoco.** Con l'arrivo dei Vigili del Fuoco e della Polizia di Stato la squadra ha potuto entrare nel terreno recintato. I Vigili del Fuoco hanno chiesto di cambiare mezzo e hanno autorizzato la chiusura dell'intervento del Gruppo. La pagina sul [Servizio Nazionale della Protezione Civile](/conoscere/servizio-nazionale/) spiega chi interviene in un'emergenza.
+
 ## Cosa puoi fare tu
 
 - **Chiama il 112** appena vedi fumo o fiamme. È l'unico numero: la centrale smista l'intervento a Vigili del Fuoco e squadre antincendio.

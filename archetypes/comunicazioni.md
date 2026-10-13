@@ -88,6 +88,20 @@ draft: false
 Scrivi qui il contenuto della comunicazione.
 
 <!--
+Per i RESOCONTI di interventi e attività del Gruppo (badge Attività,
+Aggiornamento, Esercitazione) chiudi il racconto con la sezione fissa
+«Cosa impariamo» (rule 02 § "Resoconti degli interventi"): 2-4 lezioni
+di prevenzione ricavate solo da ciò che l'articolo racconta, senza dati
+sensibili, ognuna collegata alla pagina del sito che la spiega. Poi, se
+serve, «Cosa puoi fare tu» e «Per approfondire».
+
+## Cosa impariamo
+
+- **La lezione in poche parole.** Perché l'episodio la rende evidente e la pagina del sito che la spiega: [pagina](/rischi-prevenzione/).
+- **Seconda lezione.** …
+-->
+
+<!--
 Per inserire foto evento nel corpo dell'articolo usa SEMPRE lo shortcode foto
 (click per ingrandire accessibile, figure/figcaption, alt obbligatorio).
 Non usare markdown ![...]() diretto per le foto evento.
