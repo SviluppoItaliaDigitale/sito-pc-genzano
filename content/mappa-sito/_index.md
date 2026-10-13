@@ -527,17 +527,17 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-anziani/">
   <div class="ms-card-icon"><i class="bi bi-person-arms-up"></i></div>
   <p class="ms-card-title">Kit Anziani in casa</p>
-  <p class="ms-card-desc">HelpAge + WHO mhGAP + SIGG/AIP. Carta identità, reminiscence, calendario orientativo.</p>
+  <p class="ms-card-desc">Riferimenti HelpAge International e WHO. Carta identità, ricordi di vita, calendario orientativo.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-caregiver-familiari/">
   <div class="ms-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
   <p class="ms-card-title">Kit Caregiver familiari</p>
-  <p class="ms-card-desc">L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022. Carta assistito, piano allettato.</p>
+  <p class="ms-card-desc">L. 205/2017 + Carta europea del caregiver (Eurocarers) + WHO Self-care 2022. Carta assistito, piano allettato.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-strutture-sanitarie/">
   <div class="ms-card-icon"><i class="bi bi-hospital-fill"></i></div>
   <p class="ms-card-title">Kit Strutture Sanitarie / RSA</p>
-  <p class="ms-card-desc">Min. Salute + AGENAS + WHO Hospital Safety Index. Triage SALT geriatrico, comfort BPSD.</p>
+  <p class="ms-card-desc">D.Lgs. 81/2008 + antincendio strutture sanitarie + WHO Hospital Safety Index. Triage ispirato a SALT, comfort sensoriale.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-disabilita-adulti/">
   <div class="ms-card-icon"><i class="bi bi-universal-access-circle"></i></div>
@@ -567,7 +567,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-animali/">
   <div class="ms-card-icon"><i class="bi bi-piggy-bank"></i></div>
   <p class="ms-card-title">Kit Animali domestici</p>
-  <p class="ms-card-desc">D.Lgs. 1/2018 art. 12 + L. 281/1991 + WSAVA. Lezione Katrina/PETS Act 2006.</p>
+  <p class="ms-card-desc">D.Lgs. 1/2018 art. 1 + L. 281/1991 + WSAVA. Lezione Katrina/PETS Act 2006.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-volontari-pc/">
   <div class="ms-card-icon"><i class="bi bi-shield-shaded"></i></div>
