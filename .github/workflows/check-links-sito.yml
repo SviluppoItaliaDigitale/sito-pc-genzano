@@ -32,6 +32,15 @@ jobs:
           hugo-version: '0.154.5'
           extended: true
 
+      - name: "🌦️ Immagini meteo dalla release (carte ECMWF e sinottica)"
+        # Dal 10/10/2026 non sono in git ma nella release `immagini-meteo`
+        # (vedi deploy.yml): senza questo passo lychee le segnalava come file
+        # mancanti (issue #1348). Senza --rigoroso: se la release non risponde
+        # lo script ripiega sulle copie del sito pubblicato ed esce 0.
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/immagini-meteo-release.py scarica
+
       - name: "🏗️ Build sito produzione"
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
