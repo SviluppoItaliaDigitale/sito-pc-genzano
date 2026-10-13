@@ -57,9 +57,9 @@
         {{- $alt := replace $name "-" " " | humanize -}}
         {{- /* Categoria ISO dedotta dal nome */ -}}
         {{- $cat := "iso-evacuazione" -}}
-        {{- if or (in $name "estintore") (in $name "idrante") (in $name "antincendio") (in $name "scala-antincendio") (in $name "infiammabile") -}}{{- $cat = "iso-antincendio" -}}{{- end -}}
-        {{- if or (in $name "pericolo-") (in $name "superficie-calda") (in $name "caduta-massi") (in $name "pavimento-scivoloso") -}}{{- $cat = "iso-avvertimento" -}}{{- end -}}
-        {{- if or (in $name "obbligo-") (in $name "protezione-") (in $name "scarpe-protettive") (in $name "guanti-") (in $name "abito-") (in $name "casco-") (in $name "alta-visibilita") (in $name "maschera-") (in $name "consultare-") -}}{{- $cat = "iso-obbligo" -}}{{- end -}}
+        {{- if or (in $name "estintore") (in $name "idrante") (in $name "antincendio") (in $name "scala-antincendio") -}}{{- $cat = "iso-antincendio" -}}{{- end -}}
+        {{- if or (in $name "pericolo-") (in $name "superficie-calda") (in $name "caduta-massi") (in $name "pavimento-scivoloso") (in $name "infiammabile") -}}{{- $cat = "iso-avvertimento" -}}{{- end -}}
+        {{- if or (in $name "obbligo-") (in $name "protezione-") (in $name "scarpe-protettive") (in $name "guanti-") (in $name "abito-") (in $name "casco-") (in $name "alta-visibilita") (in $name "maschera-") (in $name "visiera-") (in $name "consultare-") -}}{{- $cat = "iso-obbligo" -}}{{- end -}}
         {{- if or (in $name "vietato-") (in $name "divieto-") -}}{{- $cat = "iso-divieto" -}}{{- end -}}
         <figure class="pittogramma pittogramma-figure catalogo-card" role="listitem" data-name="{{ $name }}" data-cat="{{ $cat }}">
           <img src="{{ printf "pittogrammi/iso7010/%s" .Name | relURL }}"
