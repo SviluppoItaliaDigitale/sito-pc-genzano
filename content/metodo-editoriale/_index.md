@@ -71,3 +71,4 @@ I contenuti originali del sito sono pensati per essere utili e condivisibili. Do
 - [Trasparenza](/trasparenza/)
 - [Normativa di protezione civile](/normativa/)
 - [Note legali](/note-legali/)
+- [Sala stampa](/sala-stampa/)

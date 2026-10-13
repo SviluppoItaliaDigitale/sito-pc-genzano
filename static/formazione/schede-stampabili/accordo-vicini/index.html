@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Accordo di aiuto fra vicini — chi aiuta chi in caso di emergenza</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/accordo-vicini/">
+  <meta name="description" content="Un A4 da compilare fra vicini di casa a Genzano di Roma: chi aiuta chi con l'allerta, il caldo, il blackout, il terremoto o un'assenza, come ci si avvisa e chi tiene le chiavi. I dati restano sul foglio.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .av-istruzioni {
+      background: #fff8e1;
+      border-left: 4px solid var(--scheda-oro);
+      padding: 0.45rem 0.8rem;
+      margin: 0 0 0.55rem 0;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+    .av-h2 {
+      color: var(--scheda-blu);
+      font-size: 0.98rem;
+      margin: 0.5rem 0 0.3rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+      padding-bottom: 0.15rem;
+    }
+    table.av-tab {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+      margin: 0.2rem 0 0.35rem 0;
+    }
+    table.av-tab th, table.av-tab td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.22rem 0.4rem;
+      vertical-align: top;
+      text-align: left;
+      line-height: 1.3;
+    }
+    table.av-tab th { background: #f0f4f8; color: var(--scheda-blu); }
+    table.av-tab td.av-vuota { height: 1.85rem; min-width: 5.5rem; }
+    table.av-tab .av-chi { width: 8.5rem; }
+    table.av-tab .av-sit { width: 8rem; font-weight: 700; color: var(--scheda-blu); }
+    table.av-tab .av-linea-in {
+      display: inline-block;
+      min-width: 5.5rem;
+      border-bottom: 1.5px solid var(--scheda-bordo);
+      height: 0.95rem;
+      vertical-align: bottom;
+    }
+    .av-nota {
+      font-size: 0.74rem;
+      color: #495057;
+      line-height: 1.35;
+      margin: 0.1rem 0 0.35rem 0;
+    }
+    .av-nota strong { color: var(--scheda-blu); }
+    .av-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 1rem;
+      font-size: 0.8rem;
+      margin: 0.2rem 0 0.4rem 0;
+    }
+    .av-griglia div { display: flex; align-items: baseline; gap: 0.4rem; }
+    .av-griglia strong { color: var(--scheda-blu); }
+    .av-linea { flex: 1; border-bottom: 1.5px solid var(--scheda-bordo); min-height: 1.2rem; min-width: 4rem; }
+    .av-regole {
+      background: #fde8ea;
+      border: 2px solid var(--scheda-rosso);
+      border-radius: 8px;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.78rem;
+      line-height: 1.38;
+      margin: 0.35rem 0 0.35rem 0;
+      break-inside: avoid;
+    }
+    .av-regole h2 {
+      margin: 0 0 0.2rem 0;
+      font-size: 0.9rem;
+      color: var(--scheda-rosso);
+    }
+    .av-regole ul { margin: 0; padding-left: 1.05rem; }
+    .av-regole li { margin: 0 0 0.1rem 0; }
+    .av-regole strong { color: var(--scheda-rosso); }
+    .av-fonte {
+      font-size: 0.7rem;
+      color: #495057;
+      line-height: 1.3;
+      margin: 0.25rem 0 0 0;
+    }
+    .av-url { white-space: nowrap; }
+    .scheda-tabella-scorrevole:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+    @media (max-width: 600px) {
+      .av-griglia { grid-template-columns: 1fr; }
+    }
+    /* Stampa: tutto su un foglio A4 (controllo fogli di stampa). La scala del
+       testo resta al 90%: il resto si recupera stringendo gli spazi, così la
+       scheda regge anche i caratteri più larghi di altri sistemi. */
+    @media print {
+      body { background: #fff; }
+      html { font-size: 90%; }
+      .scheda-page { padding: 0.7cm 1.3cm 0.3cm 1.3cm; }
+      .av-istruzioni { background: #fff; padding: 0.3rem 0.6rem; margin-bottom: 0.35rem; line-height: 1.32; }
+      .av-h2 { margin: 0.3rem 0 0.15rem 0; }
+      table.av-tab th, table.av-tab td { padding: 0.15rem 0.35rem; line-height: 1.25; }
+      table.av-tab td.av-vuota { height: 1.7rem; }
+      table.av-tab .av-chi { width: 7rem; }
+      .av-nota { margin: 0.05rem 0 0.25rem 0; }
+      .av-griglia { gap: 0.25rem 1rem; }
+      .av-regole { padding: 0.3rem 0.6rem; margin: 0.3rem 0; line-height: 1.3; }
+      table.av-tab, .av-regole, .av-griglia { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Accordo di aiuto fra vicini — A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Accordo di aiuto fra vicini</h1>
+        <div class="scheda-sottotitolo">Chi aiuta chi, come ci avvisiamo, chi tiene le chiavi</div>
+      </div>
+    </header>
+
+    <div class="av-istruzioni">
+      <strong>Come si usa.</strong> Compilatelo insieme, una sera, con i vicini di pianerottolo o di palazzo. Ognuno scrive che cosa può offrire e di che cosa ha bisogno, solo se lo vuole. Fatene una copia per ogni famiglia e tenetela con il kit di emergenza. I dati restano su questo foglio: il Gruppo Comunale non li riceve e non li raccoglie.
+    </div>
+
+    <h2 class="av-h2" id="av-chi-siamo">Chi siamo</h2>
+    <div class="scheda-tabella-scorrevole" tabindex="0" role="group" aria-labelledby="av-chi-siamo">
+      <table class="av-tab">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Scala, piano, interno</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Chi c'è in casa (adulti, bambini, animali)</th>
+            <th scope="col">Che cosa è utile sapere</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td></tr>
+          <tr><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td></tr>
+          <tr><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td></tr>
+          <tr><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td><td class="av-vuota"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="av-nota"><strong>Che cosa è utile sapere:</strong> solo ciò che serve in emergenza e che la persona vuole far sapere, per esempio «usa la carrozzina», «non sente il campanello», «usa un apparecchio a corrente». Chi usa un apparecchio salvavita a corrente lo segnala anche alla propria Azienda sanitaria locale e al fornitore di energia.</p>
+
+    <h2 class="av-h2" id="av-situazioni">Che cosa facciamo, situazione per situazione</h2>
+    <div class="scheda-tabella-scorrevole" tabindex="0" role="group" aria-labelledby="av-situazioni">
+      <table class="av-tab">
+        <thead>
+          <tr>
+            <th scope="col">Situazione</th>
+            <th scope="col">Il nostro accordo</th>
+            <th scope="col" class="av-chi">Chi se ne occupa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="av-sit">Allerta arancione o rossa</td><td>Ci avvisiamo a vicenda e controlliamo che chi vive solo l'abbia saputo.</td><td class="av-vuota"></td></tr>
+          <tr><td class="av-sit">Caldo intenso</td><td>Una telefonata o una visita al giorno a chi è anziano o vive solo: sta bene? Beve abbastanza?</td><td class="av-vuota"></td></tr>
+          <tr><td class="av-sit">Senza corrente o senza acqua</td><td>Passiamo per primi da chi vive solo o usa apparecchi a corrente; chi ha una radio a pile condivide le notizie ufficiali.</td><td class="av-vuota"></td></tr>
+          <tr><td class="av-sit">Terremoto o evacuazione</td><td>Durante la scossa ognuno si protegge dove si trova. Dopo si esce con prudenza e ci si conta all'area di attesa. Chi ha difficoltà a muoversi viene aiutato da: <span class="av-linea-in"></span></td><td class="av-vuota"></td></tr>
+          <tr><td class="av-sit">Assenze e vacanze</td><td>Chi parte lo dice, lascia un recapito e, se vuole, una copia delle chiavi; prima di partire chiude gas e acqua.</td><td class="av-vuota"></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="av-h2">Chiavi, contatti, punti di riferimento</h2>
+    <div class="av-griglia">
+      <div><strong>Le chiavi di</strong><span class="av-linea"></span><strong>le tiene</strong><span class="av-linea"></span></div>
+      <div><strong>Le chiavi di</strong><span class="av-linea"></span><strong>le tiene</strong><span class="av-linea"></span></div>
+      <div><strong>Familiare da avvisare, fuori zona:</strong><span class="av-linea"></span></div>
+      <div><strong>Valvole generali di gas e acqua del palazzo:</strong><span class="av-linea"></span></div>
+      <div><strong>La nostra area di attesa (codice AA):</strong><span class="av-linea"></span></div>
+      <div><strong>Data dell'accordo:</strong><span class="av-linea"></span></div>
+    </div>
+
+    <section class="av-regole">
+      <h2>Le regole dell'accordo</h2>
+      <ul>
+        <li>In emergenza si chiama prima il <strong>112</strong>: questo accordo non sostituisce i soccorsi. Serve ad accorgersi prima di chi ha bisogno e a dire ai soccorritori chi manca e dove abita.</li>
+        <li>Nessuno si mette in pericolo per aiutare: niente scale o stanze piene di fumo, niente acqua alta, niente edifici danneggiati. Non si rientra in casa finché le autorità non lo consentono.</li>
+        <li>Segnalazioni non urgenti: Sala Operativa della Protezione Civile della Regione Lazio, <strong>803&nbsp;555</strong>. Una situazione che vi preoccupa, fuori dall'emergenza, si segnala al Comune o ai servizi sociali.</li>
+        <li>Il Gruppo Comunale di protezione civile non si attiva su chiamata diretta dei cittadini.</li>
+      </ul>
+    </section>
+
+    <p class="av-fonte">Rivedete l'accordo al cambio dell'ora, a marzo e a ottobre, insieme al controllo del kit. Aree di attesa: <span class="av-url">protezionecivilegenzano.it/aree-attesa/</span>. Fonti: le pagine del sito su persone con necessità specifiche, terremoto, caldo e blackout, basate sulle indicazioni del Dipartimento della Protezione Civile e, per il caldo, del Ministero della Salute.</p>
+
+    <footer class="scheda-footer">
+      <span>Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma</span>
+      <span class="scheda-site">protezionecivilegenzano.it/rischi-prevenzione/persone-necessita-specifiche/</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

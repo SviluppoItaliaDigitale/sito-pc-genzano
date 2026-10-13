@@ -291,6 +291,9 @@ Le scorte vanno controllate con regolarità: l'acqua va cambiata, farmaci e alim
 <button type="button" class="btn btn-primary" onclick="scaricaPromemoriaIcs()"><i class="bi bi-calendar-plus me-2" aria-hidden="true"></i>Aggiungi il promemoria al calendario</button>
 
 <p class="small text-muted mt-2">Scarichi un file standard <code>.ics</code> che si apre con Google Calendar, Apple Calendario o Outlook. Nessun dato viene inviato al sito.</p>
+
+Vuoi un promemoria ogni mese, con i gesti di stagione e il controllo del kit al cambio dell'ora? C'è il [Calendario della prevenzione](/calendario-prevenzione/).
+
 </div>
 
 </div>

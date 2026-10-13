@@ -1,0 +1,88 @@
+{{- /*
+  calendario-prevenzione — Calendario della prevenzione (14/10/2026, proposta 20).
+  Dati in data/calendario_prevenzione.yaml; il file .ics in
+  static/calendario-prevenzione/ lo scrive scripts/genera-calendario-prevenzione.py.
+  Parametro «mostra»:
+    mesi (predefinito) — i dodici mesi con i gesti; il mese della build è
+                         segnato con «questo mese» (testo, non solo colore);
+    file               — il riquadro per scaricare o sottoscrivere il file .ics;
+    date               — l'elenco dei promemoria a data fissa.
+  I link passano da relURL senza la barra iniziale (subpath di GitHub Pages).
+*/ -}}
+{{- $d := site.Data.calendario_prevenzione -}}
+{{- if not $d -}}{{- errorf "calendario-prevenzione: manca data/calendario_prevenzione.yaml (%s)" .Position -}}{{- end -}}
+{{- $mostra := .Get "mostra" | default "mesi" -}}
+{{- if not (.Page.Store.Get "calPrevCss") -}}
+{{- .Page.Store.Set "calPrevCss" true -}}
+<style>
+/* ===== CALENDARIO DELLA PREVENZIONE v1.0 (shortcode calendario-prevenzione) ===== */
+.cal-prev-salta { margin: 0 0 1rem 0; }
+.cal-prev-mesi { list-style: none; padding: 0; margin: 0 0 1.5rem 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.cal-prev-mese { background: #fff; border: 1px solid #c5ced8; border-left: 4px solid #003366; border-radius: 6px; padding: 0.85rem 1rem; }
+.cal-prev-mese h3 { font-size: 1.15rem; color: #003366; margin: 0 0 0.15rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.cal-prev-titolo { font-weight: 600; color: #1a1a1a; margin: 0 0 0.5rem 0; }
+.cal-prev-gesti { margin: 0; padding-left: 1.1rem; }
+.cal-prev-gesti li { margin: 0 0 0.45rem 0; line-height: 1.45; }
+.cal-prev-freccia { color: #003366; }
+.cal-prev-ora { display: inline-block; background: #ffbe2e; color: #1a1a1a; font-size: 0.78rem; font-weight: 700; border-radius: 999px; padding: 0.1rem 0.6rem; }
+.cal-prev-corrente { background: #e7f0fa; border-color: #003366; }
+.cal-prev-file { background: #f4f7fb; border: 1px solid #c5ced8; border-radius: 6px; padding: 1rem 1.1rem; margin: 0 0 1.5rem 0; }
+.cal-prev-file p:last-child { margin-bottom: 0; }
+.cal-prev-indirizzo { display: block; word-break: break-all; background: #fff; border: 1px solid #c5ced8; border-radius: 4px; padding: 0.35rem 0.6rem; margin: 0.35rem 0 0.6rem 0; color: #1a1a1a; }
+.cal-prev-date { padding-left: 1.2rem; }
+.cal-prev-date li { margin-bottom: 0.4rem; }
+@media print {
+  .cal-prev-salta, .cal-prev-file .btn, .cal-prev-ora { display: none !important; }
+  .cal-prev-mesi { grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+  .cal-prev-mese, .cal-prev-corrente { break-inside: avoid; padding: 0.35rem 0.5rem; background: #fff; border-color: #c5ced8; border-left-color: #003366; }
+  .cal-prev-mese h3 { font-size: 1rem; }
+  .cal-prev-gesti li { margin-bottom: 0.25rem; line-height: 1.35; }
+  /* Il foglio stampato resta appeso tutto l'anno: niente «questo mese», e al
+     posto dell'indirizzo completo dopo ogni link basta il nome della pagina
+     (gli indirizzi raddoppiavano l'altezza dei riquadri: sette fogli). */
+  .cal-prev-mesi .cal-prev-gesti a[href]::after { content: none; }
+}
+</style>
+{{- end -}}
+{{- if eq $mostra "file" -}}
+{{- $ics := "calendario-prevenzione/calendario-prevenzione.ics" -}}
+{{- $percorso := printf "static/%s" $ics -}}
+{{- if not (fileExists $percorso) -}}{{- errorf "calendario-prevenzione: manca %s, esegui scripts/genera-calendario-prevenzione.py (%s)" $percorso .Position -}}{{- end -}}
+{{- $kb := math.Ceil (div (float (os.Stat $percorso).Size) 1024.0) -}}
+{{- $abs := $ics | absURL -}}
+{{- $webcal := replaceRE "^https?://" "webcal://" $abs -}}
+<div class="cal-prev-file">
+<p><a class="btn btn-primary" href="{{ $ics | relURL }}" download="calendario-prevenzione-genzano.ics"><i class="bi bi-calendar-plus me-2" aria-hidden="true"></i>Scarica il calendario (file .ics, {{ printf "%.0f" $kb }} KB)</a></p>
+<p class="mb-1">Il file contiene un promemoria il primo sabato di ogni mese, con i gesti del mese, il controllo del kit nelle due domeniche del cambio dell'ora e la Giornata internazionale per la riduzione del rischio di disastri, il 13 ottobre. Si apre con il calendario del telefono o del computer.</p>
+<p class="mb-1">Per riceverlo sempre aggiornato, aggiungilo al calendario come calendario «da indirizzo» o «sottoscritto» (Google, Apple, Outlook) e incolla questo indirizzo:</p>
+<code class="cal-prev-indirizzo">{{ $abs }}</code>
+<p>Sul telefono puoi anche <a href="{{ $webcal | safeURL }}">aprire direttamente la sottoscrizione</a>. Il file non contiene dati personali e scaricarlo non ci comunica niente di te.</p>
+</div>
+{{- else if eq $mostra "date" -}}
+<ul class="cal-prev-date">
+{{- range $d.promemoria }}
+<li><strong>{{ .quando }}</strong> — {{ .titolo }}. {{ .testo }} <a href="{{ strings.TrimPrefix "/" .pagina | relURL }}">{{ .etichetta }}</a></li>
+{{- end }}
+</ul>
+{{- else -}}
+{{- $meseOggi := int (now.Format "1") -}}
+{{- range $i, $m := $d.mesi -}}
+{{- if eq (add $i 1) $meseOggi }}
+<p class="cal-prev-salta"><a href="#mese-{{ $m.id }}">Vai al mese in corso: {{ lower $m.nome }}</a></p>
+{{- end -}}
+{{- end }}
+<ol class="cal-prev-mesi">
+{{- range $i, $m := $d.mesi }}
+{{- $corrente := eq (add $i 1) $meseOggi }}
+<li class="cal-prev-mese{{ if $corrente }} cal-prev-corrente{{ end }}" id="mese-{{ $m.id }}">
+<h3>{{ $m.nome }}{{ if $corrente }} <span class="cal-prev-ora">questo mese</span>{{ end }}</h3>
+<p class="cal-prev-titolo">{{ $m.titolo }}</p>
+<ul class="cal-prev-gesti">
+{{- range $m.gesti }}
+<li>{{ .testo }} <span class="cal-prev-freccia" aria-hidden="true">→</span> <a href="{{ strings.TrimPrefix "/" .pagina | relURL }}">{{ .etichetta }}</a></li>
+{{- end }}
+</ul>
+</li>
+{{- end }}
+</ol>
+{{- end -}}

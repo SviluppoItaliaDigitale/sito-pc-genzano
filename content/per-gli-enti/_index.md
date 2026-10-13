@@ -17,6 +17,7 @@ Portiamo la cultura della protezione civile nelle **scuole di ogni ordine e grad
 Mettiamo a disposizione dei docenti materiali pronti, gratuiti e riutilizzabili:
 
 - [Kit didattici per le scuole](/formazione/) — percorsi per infanzia, primaria e secondaria.
+- [Settimana della protezione civile a scuola](/formazione/settimana-protezione-civile/) — un programma pronto per tutto l'istituto: un tema al giorno, uguale per tutte le classi.
 - [Schede didattiche stampabili](/formazione/schede-stampabili/) — attività fotocopiabili per la classe.
 - [Giochi della sicurezza](/giochi/) ed [esperimenti e attività](/formazione/esperimenti/) — imparare facendo.
 - [Storie e racconti](/formazione/storie-e-racconti/) — la prevenzione spiegata ai più piccoli.
@@ -63,3 +64,4 @@ Scuole, enti e associazioni possono contattare il Gruppo dalla pagina [Contatti]
 - [Chi siamo](/chi-siamo/) — storia, mezzi e organizzazione del Gruppo.
 - [Diventa volontario](/diventa-volontario/) — entra a far parte del Gruppo.
 - [Formazione](/formazione/) — tutti i materiali per le scuole.
+- [Sala stampa](/sala-stampa/) — contatti e materiali per giornalisti e redazioni.
