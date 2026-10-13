@@ -304,6 +304,8 @@ Non:
 | Numeri | Nel Lazio il cittadino chiama **solo il 112** (NUE). Altri riferimenti: 803 555 (Sala Operativa PC Lazio), 1530 (Guardia Costiera). |
 | Tono | Calmo, informativo, rassicurante. Mai allarmistico. Mai minimizzante. |
 | Autoprotezione | Per i comportamenti, cita sempre fonti ufficiali (DPC, Regione, Comune). |
+| Resoconti: «Cosa impariamo» (dal 13/10/2026) | Ogni resoconto di intervento o attività (badge `Attività`, `Aggiornamento`, `Esercitazione`) chiude con la sezione fissa `## Cosa impariamo`, prima di «Cosa puoi fare tu»: 2-4 lezioni di prevenzione ricavate solo dai fatti già raccontati, ciascuna con il link alla pagina del sito che la spiega, senza dati sensibili né giudizi sulle persone. |
+| Resoconti: chi ha chiesto l'intervento (dal 13/10/2026) | Il Gruppo non si attiva su chiamata diretta dei cittadini: mai «un cittadino ci ha segnalato/chiesto» o «su richiesta di un cittadino», anche se il rapportino lo scrive. Forma neutra: «è arrivata la segnalazione di…», «dopo una segnalazione…». Gli enti del sistema (Comune, Polizia Locale, SOUP, Vigili del Fuoco) si nominano; «i cittadini chiamano il 112» è corretto. |
 
 ### 2.23 — Livello qualitativo atteso quando rivedi un articolo (qualità ChatGPT 9.5/10)
 

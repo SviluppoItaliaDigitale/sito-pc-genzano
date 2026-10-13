@@ -21,11 +21,11 @@ social_punti:
   - "Se vedi fumo o fiamme chiama subito il 112: nel Lazio è l'unico numero per le emergenze."
 ---
 
-Giovedì 27 agosto 2026 le squadre del Gruppo sono uscite due volte. Al mattino una verifica rapida con il drone in **via del Lavoro**, per un fumo segnalato da un cittadino. La sera la chiamata più impegnativa: la [Sala Operativa Unificata Permanente (SOUP)](/glossario/#soup) regionale ha attivato il Gruppo per un **incendio alle pendici del Tuscolo**, in zona Molara. Cinque ore di lavoro, rientro in tarda serata. È la **quarta uscita in un mese** su quella montagna.
+Giovedì 27 agosto 2026 le squadre del Gruppo sono uscite due volte. Al mattino una verifica rapida con il drone in **via del Lavoro**, per un fumo segnalato in zona. La sera la chiamata più impegnativa: la [Sala Operativa Unificata Permanente (SOUP)](/glossario/#soup) regionale ha attivato il Gruppo per un **incendio alle pendici del Tuscolo**, in zona Molara. Cinque ore di lavoro, rientro in tarda serata. È la **quarta uscita in un mese** su quella montagna.
 
 ## La mattina: un fumo da verificare in via del Lavoro
 
-Poco prima delle 10 arriva la segnalazione di un cittadino: fumo in via del Lavoro. La squadra esce con il [Land Rover Defender 130](/chi-siamo/#mezzi-e-attrezzature-principali) e fa alzare il **drone** per guardare l'origine dall'alto senza avvicinarsi alla fonte. Il sorvolo chiarisce il quadro: non un principio di incendio, ma un **abbruciamento di frasca**, cioè residui di potatura bruciati in un terreno. Sul posto interviene la Polizia Locale per gli accertamenti di competenza. In poco più di un'ora la verifica è chiusa.
+Poco prima delle 10 arriva una segnalazione: fumo in via del Lavoro. La squadra esce con il [Land Rover Defender 130](/chi-siamo/#mezzi-e-attrezzature-principali) e fa alzare il **drone** per guardare l'origine dall'alto senza avvicinarsi alla fonte. Il sorvolo chiarisce il quadro: non un principio di incendio, ma un **abbruciamento di frasca**, cioè residui di potatura bruciati in un terreno. Sul posto interviene la Polizia Locale per gli accertamenti di competenza. In poco più di un'ora la verifica è chiusa.
 
 Un dettaglio non secondario: siamo ancora nel **periodo di massima pericolosità per gli incendi boschivi** dichiarato dalla Regione Lazio, dal 15 giugno al 15 ottobre 2026. In queste settimane bruciare residui vegetali è **vietato**: una fiamma "controllata" può sfuggire in pochi secondi e trasformarsi in un incendio di vegetazione, come quello che [il 24 agosto ha impegnato le squadre a Santa Palomba](/comunicazioni/2026-08-27-nove-attivazioni-cinque-giorni-fine-agosto/). Chi deve smaltire le potature le conferisce nei centri di raccolta, senza accenderle.
 

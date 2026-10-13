@@ -33,7 +33,7 @@ Gli incendi di **interfaccia** — quelli che dalla vegetazione minacciano le zo
 
 ## Le altre giornate sul fronte del fuoco
 
-- **25 luglio, Genzano (via Montecagnolo)** — un cittadino ha segnalato una colonna di fumo nella zona dell'Appia vecchia: circa 5.000 metri quadrati di sterpaglie bruciati **a ridosso di un'abitazione**, spenti con i Vigili del Fuoco.
+- **25 luglio, Genzano (via Montecagnolo)** — è stata segnalata una colonna di fumo nella zona dell'Appia vecchia: circa 5.000 metri quadrati di sterpaglie bruciati **a ridosso di un'abitazione**, spenti con i Vigili del Fuoco.
 - **26 luglio, periferia sud di Roma (Falcognana)** — verifica e spegnimento di un incendio di circa un ettaro di vegetazione.
 - **26 luglio, Albano Laziale (via Roncigliano)** — bonifica nell'area della discarica.
 - **27 luglio, tre interventi in un giorno** — all'alba l'autobotte Actros è partita per **via Laurentina**, dove le fiamme hanno percorso sterpaglie e vegetazione ad alto fusto per poi raggiungere una discarica: oltre sei ore di lavoro. Nel pomeriggio bonifica di circa 3 ettari in **via del Sassone** e, in serata, un ettaro di sterpaglie nei pressi della **Metro Anagnina**.
