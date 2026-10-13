@@ -257,6 +257,12 @@ Solo dopo la passata pulita procedi al commit. Vale anche per un singolo articol
 
 ---
 
+### 3.8 Resoconti degli interventi: la segnalazione si racconta in forma neutra (dal 13/10/2026)
+
+🔴 Il Gruppo non si attiva su chiamata diretta dei cittadini (si chiama il 112; attivano Sindaco, COC, Sala Operativa). Nei resoconti **mai** «un cittadino ci ha segnalato/chiesto», «su richiesta di un cittadino», «chiamati da un residente» (corpo, descrizione, `social_punti`), anche se il rapportino lo scrive: si usa la forma neutra «è arrivata la segnalazione di…», «dopo una segnalazione…». Gli enti del sistema (Polizia Locale, Comune, SOUP, VVF) si nominano. Dettagli in `.claude/rules/02-content-design-pa.md` § "Resoconti degli interventi — chi ha chiesto l'intervento".
+
+---
+
 ## 4. Le 16 invarianti del progetto (sintesi da CLAUDE.md)
 
 Ognuna è elaborata per esteso in `CLAUDE.md` sezione "Regole contenuti e qualità". Qui solo i punti operativi.

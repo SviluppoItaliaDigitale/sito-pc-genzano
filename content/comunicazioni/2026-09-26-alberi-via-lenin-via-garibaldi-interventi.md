@@ -26,7 +26,7 @@ Tra il **24 e il 26 settembre 2026** i volontari del Gruppo sono usciti **quattr
 
 Nel pomeriggio la **Polizia Locale** ha chiesto un intervento in **via Lenin**, dove alcuni rami erano finiti sul manto stradale. L'intervento è durato circa un'ora e mezza.
 
-Verso le 16 la seconda uscita, su segnalazione di un cittadino. Un **albero** era stato **divelto da un'autovettura**, nei pressi di una palestra. Sul posto c'era la Polizia Locale: l'albero è stato lasciato sul marciapiede su sua decisione.
+Verso le 16 la seconda uscita, dopo una segnalazione: un **albero** era stato **divelto da un'autovettura**, nei pressi di una palestra. Sul posto c'era la Polizia Locale: l'albero è stato lasciato sul marciapiede su sua decisione.
 
 Per entrambe le uscite la squadra ha usato l'**EVO Cross 4**, il pickup 4x4 per persone e materiali.
 

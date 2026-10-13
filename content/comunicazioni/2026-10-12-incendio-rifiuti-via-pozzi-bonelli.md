@@ -1,7 +1,7 @@
 ---
 title: "Sterpaglie e sfalci in fiamme in via di Pozzi Bonelli: notte di lavoro con i Vigili del Fuoco"
 date: 2026-10-12T00:03:00+02:00
-description: "La sera del 12 ottobre un cittadino ha segnalato un incendio a Montecagnoletto: bruciavano sterpaglie e sfalci. Raffreddamento fino all'una."
+description: "La sera del 12 ottobre è stato segnalato un incendio a Montecagnoletto: bruciavano sterpaglie e sfalci. Raffreddamento fino all'una."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -15,13 +15,13 @@ tts: true
 lis_section: "rischio-incendio"
 social_citazione: "La fiamma visibile si spegne in fretta, ma sotto la superficie le braci continuano a covare e possono riaccendersi anche dopo ore."
 social_punti:
-  - "Lunedì 12 ottobre, verso le 22, un cittadino ha segnalato un incendio in via di Pozzi Bonelli, a Montecagnoletto."
+  - "Lunedì 12 ottobre, verso le 22, è stato segnalato un incendio in via di Pozzi Bonelli, a Montecagnoletto."
   - "In un terreno privato bruciavano sterpaglie e sfalci."
   - "Su richiesta dei Vigili del Fuoco il Gruppo ha lavorato con il Mercedes Atego al raffreddamento dell'area."
   - "Se vedi fumo o fiamme chiama subito il 112, l'unico numero da comporre."
 ---
 
-**Lunedì 12 ottobre 2026**, poco dopo le 22, un cittadino ha segnalato un incendio in **via di Pozzi Bonelli**, nella zona di Montecagnoletto. La squadra del Gruppo è intervenuta e ha lavorato fino a dopo l'una di notte.
+**Lunedì 12 ottobre 2026**, poco dopo le 22, è stato segnalato un incendio in **via di Pozzi Bonelli**, nella zona di Montecagnoletto. La squadra del Gruppo è intervenuta e ha lavorato fino a dopo l'una di notte.
 
 ## Che cosa bruciava
 
