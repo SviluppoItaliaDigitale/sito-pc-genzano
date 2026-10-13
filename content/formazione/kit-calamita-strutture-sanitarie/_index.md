@@ -60,7 +60,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 ## Riferimenti istituzionali
 
-- **Ministero della Salute** — linee guida emergenza RSA
+- **Ministero della Salute** — indicazioni su emergenza nelle RSA (documento specifico da verificare)
 - **AGENAS**, **WHO Hospital Safety Index**, **Sphere Standards 2018**
 - Lezioni condivise dagli operatori del settore su emergenze reali (terremoto Centro Italia 2016, pandemia Covid-19 nelle RSA)
 - **ISS** — lezioni Covid-RSA
