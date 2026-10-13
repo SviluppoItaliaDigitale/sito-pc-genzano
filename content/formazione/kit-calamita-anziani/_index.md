@@ -56,4 +56,4 @@ Le schede sono ispirate a materiali e buone pratiche su anziani, fragilità, eme
 - AIP — Associazione Italiana Psicogeriatria
 - Dipartimento della Protezione Civile — materiali informativi e indicazioni operative per assistenza alla popolazione
 
-Per segnalare bisogni o suggerire nuove schede: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire nuove schede o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

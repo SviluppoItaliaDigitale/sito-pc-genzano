@@ -26,4 +26,4 @@ Il **Codice della Protezione Civile** indica fra gli scopi del Servizio nazional
 - ENPA, OIPA, LAV, LNDC — organizzazioni animaliste e materiali informativi
 - Servizi veterinari territoriali e autorità competenti
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

@@ -29,4 +29,4 @@ Le schede sono ispirate a materiali su supporto psicosociale, cura dei volontari
 - ProQOL — Professional Quality of Life Scale
 - Dipartimento della Protezione Civile — riferimenti su supporto psicosociale in emergenza
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

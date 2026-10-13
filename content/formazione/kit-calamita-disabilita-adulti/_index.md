@@ -27,4 +27,4 @@ Questo kit propone schede semplici e stampabili per preparare in anticipo inform
 - FISH, FAND, UICI, ENS, ANGSA — riferimenti associativi italiani per disabilità e accessibilità
 - Dipartimento della Protezione Civile — assistenza alla popolazione e pianificazione di emergenza
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

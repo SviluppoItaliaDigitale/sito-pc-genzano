@@ -189,4 +189,4 @@ Ogni scheda riporta nel piè di pagina la fonte specifica a cui si ispira o da c
 
 ## Aggiornamenti
 
-Il kit può crescere nel tempo. Per segnalare bisogni specifici o suggerire nuove schede, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Il kit può crescere nel tempo. Per suggerire nuove schede o segnalare un errore, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.
