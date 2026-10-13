@@ -31,7 +31,7 @@ Un dettaglio non secondario: siamo ancora nel **periodo di massima pericolosità
 
 ## La sera: il Tuscolo torna a bruciare
 
-Verso le 18 la SOUP attiva il Gruppo per un incendio in **zona Molara**, alle pendici del Tuscolo, nel territorio di Grottaferrata. Partite dalle sterpaglie, le fiamme hanno raggiunto alcune **strutture agricole** — un capanno degli attrezzi e una legnaia — e un'**automobile**. I residenti hanno udito **esplosioni**, forse causate da bombole di gas raggiunte dal fuoco. La colonna di fumo era visibile a chilometri di distanza: le segnalazioni dei cittadini sono arrivate da più punti dei Castelli.
+Verso le 18 la SOUP attiva il Gruppo per un incendio in **zona Molara**, alle pendici del Tuscolo, nel territorio di Grottaferrata. Partite dalle sterpaglie, le fiamme hanno raggiunto alcune **strutture agricole** — un capanno degli attrezzi e una legnaia — e un'**automobile**. I residenti hanno udito **esplosioni**, forse causate da bombole di gas raggiunte dal fuoco. La colonna di fumo era visibile a chilometri di distanza ed è stata segnalata da più punti dei Castelli.
 
 Da Genzano escono il **Mercedes Atego**, con l'impianto antincendio da 6.000 litri, e il Defender con il modulo da 600 litri. Sul posto lavorano i **Vigili del Fuoco** del distaccamento di Marino, i Carabinieri e la Polizia Locale. Con loro i volontari di protezione civile di Grottaferrata, Rocca di Papa e Genzano. Lo spegnimento e la bonifica impegnano le squadre fin oltre le 23.
 
