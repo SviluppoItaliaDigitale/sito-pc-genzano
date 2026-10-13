@@ -225,6 +225,20 @@ stesso messaggio d'errore fuorviante, `Only photo or video can be accepted as me
 Da lì la regola che resta: **il messaggio d'errore riporta l'indirizzo della prima immagine**. Un
 guasto dello stesso tipo, la prossima volta, si legge al primo colpo.
 
+### Il testo tagliato nelle grafiche (13/10/2026)
+
+Il post sul soccorso alpino è uscito su Instagram e Facebook con tre punti su quattro della slide
+«In sintesi» tagliati a metà frase. Il generatore delle immagini troncava ogni blocco di testo a un
+numero fisso di righe, in silenzio, e nessun controllo se ne accorgeva: il controllo dei post già
+usciti ne ha trovati altri dieci, dal 20 settembre. Il post è stato rifatto e ripubblicato la sera
+stessa. Da quel giorno il testo **non si taglia mai**: se un punto è lungo il corpo del carattere
+scende, se i punti sono tanti la sintesi passa su due slide («1/2», «2/2»), e se nemmeno così il
+testo entra intero il generatore **si ferma** senza produrre immagini, invece di consegnare una
+grafica con una frase a metà. Lo stesso calcolo gira su ogni modifica di un articolo prima del
+merge (`scripts/check-grafiche-social.py`): un `social_punti` troppo lungo si vede lì, quando si
+può ancora accorciare. Si ferma anche per i caratteri che il font del sito non sa disegnare
+(frecce, «≥», emoji), che uscirebbero come spazi vuoti: vanno scritti a parole.
+
 ## 42.10 — Le altre due reti
 
 **Telegram** non passa da questo sistema e segue una regola sua, più stretta: il workflow

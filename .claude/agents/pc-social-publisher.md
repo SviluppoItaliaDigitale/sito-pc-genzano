@@ -81,7 +81,8 @@ Possono essere narrativi, mostrare attività del Gruppo, raccontare formazione. 
 
 - Caption ≤2200 caratteri (limite tecnico).
 - **Link in bio**: IG non rende cliccabili gli URL nelle caption. Se la bozza rimanda al link in bio, ricorda all'utente che il bio va aggiornato a mano (la pubblicazione automatica non lo tocca).
-- **Carosello**: max 10 slide. Ordine: title card → citazione (`social_citazione`) → punti "In sintesi" (`social_punti`) → foto. La 1ª slide è la copertina (più gente vede solo quella).
+- **Carosello**: max 10 slide. Ordine: title card → citazione (`social_citazione`) → punti "In sintesi" (`social_punti`, su più slide «1/2», «2/2» se non entrano in una) → foto. La 1ª slide è la copertina (più gente vede solo quella).
+- **Testo mai tagliato** (dal 13/10/2026): guarda ogni slide fino all'ultima parola di ogni punto. Il generatore non tronca più e si ferma se il testo non entra (`TestoIncompleto`); se trovi comunque una frase a metà, è un difetto da segnalare subito e il post va fermato (`stato: saltato` in `coda-social.yaml` del repo privato). Verifica rapida: `python3 scripts/check-grafiche-social.py <articolo>`.
 - **Story**: 1 sola immagine 1080x1920, dura 24h. Per messaggi durevoli usa il feed.
 
 ### Specifico Telegram

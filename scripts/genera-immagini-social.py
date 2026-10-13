@@ -35,13 +35,23 @@ Uso:
 Ogni immagine porta lungo i bordi una cornice di microtesto con la provenienza
 (scripts/microtesto_cornice.py): invisibile da lontano, leggibile ingrandendo.
 
+Il testo non viene MAI tagliato (dal 13/10/2026): ogni blocco sceglie il corpo
+a cui entra intero, la sintesi si divide su più slide, e se il testo non entra
+lo stesso la generazione si ferma senza scrivere immagini (TestoIncompleto,
+uscita 1). Vedi la sezione «Testo sempre intero» e scripts/check-grafiche-social.py.
+
 Dipendenze: Pillow (pip install Pillow), font-liberation (apt: fonts-liberation).
 """
 
 import argparse
+import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
+import unicodedata
+from itertools import combinations
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -156,7 +166,10 @@ def parse_frontmatter(testo: str) -> tuple[dict, str]:
 
 def wrap_testo(draw: ImageDraw.ImageDraw, testo: str, font: ImageFont.FreeTypeFont,
                larghezza_max: int) -> list[str]:
-    """Spezza un testo in righe che entrano nella larghezza_max."""
+    """Spezza un testo in righe che entrano nella larghezza_max, misurata dal
+    punto in cui la riga viene disegnata al bordo destro dell'ultimo segno.
+    Non scarta mai parole: una parola più larga dello spazio resta da sola su
+    una riga, e la scarta poi il controllo di adatta_blocco (corpo più piccolo)."""
     parole = testo.split()
     if not parole:
         return []
@@ -164,14 +177,317 @@ def wrap_testo(draw: ImageDraw.ImageDraw, testo: str, font: ImageFont.FreeTypeFo
     riga = parole[0]
     for parola in parole[1:]:
         candidato = riga + " " + parola
-        bbox = draw.textbbox((0, 0), candidato, font=font)
-        if bbox[2] - bbox[0] <= larghezza_max:
+        if draw.textbbox((0, 0), candidato, font=font)[2] <= larghezza_max:
             riga = candidato
         else:
             righe.append(riga)
             riga = parola
     righe.append(riga)
     return righe
+
+
+# ---------------------------------------------------------------------------
+# Testo sempre intero (13/10/2026)
+# ---------------------------------------------------------------------------
+# Fino al 13/10/2026 ogni blocco di testo era troncato a un numero fisso di
+# righe: tre per ogni punto della sintesi, cinque, sei o otto per titoli e
+# citazione, 240 caratteri con i puntini per la descrizione della storia. Il
+# post sul soccorso alpino del 13/10/2026 è uscito su Instagram e Facebook con
+# tre punti su quattro tagliati a metà frase. Da quel giorno:
+#   - ogni blocco sceglie il corpo più grande a cui il testo entra INTERO nel
+#     suo riquadro, fino a un corpo minimo ancora leggibile da telefono;
+#   - la sintesi, se non entra in una slide, si divide su più slide, sempre a
+#     punti interi e nell'ordine dell'articolo;
+#   - prima di disegnare, ogni riga viene confrontata con il suo riquadro e il
+#     testo impaginato con quello originale, parola per parola;
+#   - se il testo non entra nemmeno così, o contiene un carattere che il font
+#     non sa disegnare, la generazione si ferma con TestoIncompleto e non
+#     scrive nessuna immagine: meglio nessun post che un post con una frase a
+#     metà. Lo stesso calcolo lo usa scripts/check-grafiche-social.py,
+#     bloccante sulle pull request, perché il problema si veda prima del merge.
+# Non rimettere limiti di righe con lo slicing ([:3], [:6]...) né tagli di
+# caratteri con i puntini: è esattamente il difetto che questa sezione elimina.
+
+# Corpo massimo (quello di sempre) e minimo leggibile di ogni blocco, in pixel.
+TITOLO_CORPO = (74, 52)
+CITAZIONE_CORPO = (60, 44)
+PUNTI_CORPO = (46, 38)
+STORIA_TITOLO_CORPO = (58, 46)
+STORIA_DESCR_CORPO = (30, 26)
+# Geometria fissa delle slide 1080×1350 e della storia 1080×1920.
+AREA_TESTO_FONDO = 1350 - 200      # sotto inizia la sfumatura con l'indirizzo
+PUNTI_X, PUNTI_Y, PUNTI_LARGHEZZA = 120, 340, 850
+STORIA_FONDO = 1920 - 250          # sotto c'è il richiamo «Leggi sul sito»
+MAX_SLIDE_CAROSELLO = 10           # limite di Instagram
+
+
+class TestoIncompleto(RuntimeError):
+    """Il testo non uscirebbe intero nella grafica: troppo lungo anche al corpo
+    minimo, oppure con caratteri che il font non sa disegnare."""
+
+
+# Caratteri senza disegno per natura (selettori di variante, spazi a larghezza
+# zero, segni combinanti): non vanno contati fra quelli mancanti.
+_SENZA_DISEGNO = {"Cf", "Mn", "Me"}
+_FONT_CACHE: dict = {}
+_MISURA = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+
+
+def carattere(peso: str, corpo: int) -> ImageFont.FreeTypeFont:
+    chiave = (peso, corpo)
+    if chiave not in _FONT_CACHE:
+        _FONT_CACHE[chiave] = ImageFont.truetype(str(find_font(peso)), corpo)
+    return _FONT_CACHE[chiave]
+
+
+def caratteri_mancanti(testo: str, ft: ImageFont.FreeTypeFont) -> list[str]:
+    """Caratteri che il font non sa disegnare: uscirebbero come uno spazio vuoto.
+    Titillium Web non ha, per esempio, → ≥ ≤ ≈ ‰ № e nessuna emoji."""
+    mancanti = []
+    for ch in dict.fromkeys(testo):
+        if ch.isspace() or unicodedata.category(ch) in _SENZA_DISEGNO:
+            continue
+        if ft.getmask(ch).getbbox() is None:
+            mancanti.append(ch)
+    return mancanti
+
+
+_PEDICI = str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789")
+
+
+def per_grafica(testo: str) -> str:
+    """Il testo come va disegnato: spazi normalizzati e pedici numerici resi con
+    cifre normali (CO₂ → CO2, PM₂.₅ → PM2.5), che Titillium Web non ha. Nessuna
+    parola si perde: cambia solo la grafia di quei segni."""
+    return " ".join(str(testo or "").translate(_PEDICI).split())
+
+
+def _controlla_caratteri(testo: str, peso: str, nome: str) -> None:
+    mancanti = caratteri_mancanti(per_grafica(testo), carattere(peso, 40))
+    if mancanti:
+        elenco = " ".join(f"«{c}» (U+{ord(c):04X})" for c in mancanti)
+        raise TestoIncompleto(
+            f"{nome}: caratteri che il font non sa disegnare, uscirebbero come "
+            f"spazi vuoti: {elenco}. Riscriverli a parole (per esempio «almeno», "
+            f"«oltre», «circa», «verso»).")
+
+
+def altezza_righe(n: int, ft: ImageFont.FreeTypeFont, passo: int) -> int:
+    """Ingombro verticale di n righe disegnate a passo costante: dalla linea
+    degli ascendenti della prima riga a quella dei discendenti dell'ultima."""
+    if n <= 0:
+        return 0
+    ascendente, discendente = ft.getmetrics()
+    return (n - 1) * passo + ascendente + discendente
+
+
+def _righe_entrano(righe: list[str], ft, larghezza: int) -> bool:
+    return all(_MISURA.textbbox((0, 0), r, font=ft)[2] <= larghezza for r in righe)
+
+
+def adatta_blocco(testo: str, peso: str, corpi: tuple, larghezza: int,
+                  altezza: int, interlinea: float, nome: str):
+    """Il corpo più grande, fra corpi[0] e corpi[1], a cui `testo` entra intero
+    nel riquadro larghezza × altezza. Ritorna (font, righe, passo); se non
+    entra nemmeno al corpo minimo, TestoIncompleto."""
+    testo = per_grafica(testo)
+    if not testo:
+        raise TestoIncompleto(f"{nome}: testo vuoto")
+    _controlla_caratteri(testo, peso, nome)
+    corpo_max, corpo_min = corpi
+    for corpo in range(corpo_max, corpo_min - 1, -2):
+        ft = carattere(peso, corpo)
+        righe = wrap_testo(_MISURA, testo, ft, larghezza)
+        passo = round(corpo * interlinea)
+        if (altezza_righe(len(righe), ft, passo) <= altezza
+                and _righe_entrano(righe, ft, larghezza)):
+            return ft, righe, passo
+    raise TestoIncompleto(
+        f"{nome}: troppo lungo per la grafica anche al corpo minimo "
+        f"({corpo_min} px): {len(testo)} caratteri. Accorciarlo nel frontmatter.")
+
+
+def controlla_integro(righe: list[str], testo: str, nome: str) -> None:
+    """Il testo impaginato deve essere quello originale, parola per parola."""
+    if " ".join(righe).split() != per_grafica(testo).split():
+        raise TestoIncompleto(f"{nome}: il testo impaginato non coincide con l'originale")
+
+
+def scrivi_righe(draw: ImageDraw.ImageDraw, x: int, y: int, righe: list[str],
+                 ft: ImageFont.FreeTypeFont, passo: int, riquadro: tuple,
+                 colore: tuple, nome: str) -> tuple:
+    """Disegna le righe solo dopo aver verificato che ognuna stia per intero
+    nel riquadro (x0, y0, x1, y1). Ritorna l'ingombro reale del blocco."""
+    x0, y0, x1, y1 = riquadro
+    scatole = []
+    for i, riga in enumerate(righe):
+        s = draw.textbbox((x, y + i * passo), riga, font=ft)
+        if s[0] < x0 or s[1] < y0 or s[2] > x1 or s[3] > y1:
+            raise TestoIncompleto(
+                f"{nome}: la riga «{riga}» uscirebbe dal suo spazio "
+                f"({s} fuori da {riquadro})")
+        scatole.append(s)
+    for i, riga in enumerate(righe):
+        draw.text((x, y + i * passo), riga, font=ft, fill=colore)
+    return (min(s[0] for s in scatole), min(s[1] for s in scatole),
+            max(s[2] for s in scatole), max(s[3] for s in scatole))
+
+
+def impagina_punti(punti: list) -> dict | None:
+    """Divide i punti della sintesi in slide e sceglie il corpo. Ogni slide
+    contiene punti interi, nell'ordine dell'articolo; si usa il minor numero di
+    slide possibile e, a parità, il corpo più grande e la divisione più
+    equilibrata. Ritorna {"corpo": int, "pagine": [[(testo, righe), ...], ...]}
+    oppure None se non ci sono punti."""
+    punti = [per_grafica(p) for p in punti if str(p).strip()]
+    if not punti:
+        return None
+    for i, p in enumerate(punti, 1):
+        _controlla_caratteri(p, "Semibold", f"social_punti, punto {i}")
+    altezza = AREA_TESTO_FONDO - PUNTI_Y
+    corpi = list(range(PUNTI_CORPO[0], PUNTI_CORPO[1] - 1, -2))
+    misure = {}
+    for corpo in corpi:
+        ft = carattere("Semibold", corpo)
+        passo, spazio = _passi_punti(corpo)
+        righe = [wrap_testo(_MISURA, p, ft, PUNTI_LARGHEZZA) for p in punti]
+        if not all(_righe_entrano(rr, ft, PUNTI_LARGHEZZA) for rr in righe):
+            continue  # una parola più larga dello spazio: corpo troppo grande
+        alt = [altezza_righe(len(rr), ft, passo) for rr in righe]
+        misure[corpo] = (righe, alt, spazio)
+
+    n = len(punti)
+    for k in range(1, n + 1):
+        migliore = None
+        for tagli in combinations(range(1, n), k - 1):
+            confini = (0, *tagli, n)
+            for corpo, (righe, alt, spazio) in misure.items():
+                altezze = [sum(alt[a:b]) + spazio * (b - a - 1)
+                           for a, b in zip(confini, confini[1:])]
+                if max(altezze) <= altezza:
+                    chiave = (corpo, -max(altezze))
+                    if migliore is None or chiave > migliore[0]:
+                        migliore = (chiave, corpo, confini)
+                    break  # i corpi sono in ordine decrescente
+        if migliore:
+            _, corpo, confini = migliore
+            righe = misure[corpo][0]
+            pagine = [[(punti[i], righe[i]) for i in range(a, b)]
+                      for a, b in zip(confini, confini[1:])]
+            return {"corpo": corpo, "pagine": pagine}
+    raise TestoIncompleto(
+        f"social_punti: un punto non entra in una slide nemmeno al corpo minimo "
+        f"({PUNTI_CORPO[1]} px), oppure contiene una parola più larga della slide. "
+        f"Accorciarlo nel frontmatter.")
+
+
+def _passi_punti(corpo: int) -> tuple[int, int]:
+    """Passo fra le righe e spazio fra i punti, in proporzione al corpo 46."""
+    return round(corpo * 60 / 46), round(corpo * 30 / 46)
+
+
+def piano_storia(titolo: str, descrizione: str, inizio: int,
+                 fondo: int = STORIA_FONDO, W: int = 1080) -> dict | None:
+    """Titolo e descrizione della storia, interi, fra `inizio` e `fondo`: prima
+    ai corpi pieni, poi riducendoli insieme. None se non entrano."""
+    larghezza = W - 140
+    titolo = per_grafica(titolo)
+    descrizione = per_grafica(descrizione)
+    t_max, t_min = STORIA_TITOLO_CORPO
+    d_max, d_min = STORIA_DESCR_CORPO
+    passi = max(t_max - t_min, d_max - d_min) // 2 + 1
+    for i in range(passi):
+        ct = max(t_min, t_max - 2 * i)
+        cd = max(d_min, d_max - round(2 * i * (d_max - d_min) / (t_max - t_min)))
+        ft_t = carattere("Bold", ct)
+        passo_t = round(ct * 74 / 58)
+        righe_t = wrap_testo(_MISURA, titolo, ft_t, larghezza)
+        if not _righe_entrano(righe_t, ft_t, larghezza):
+            continue
+        alt = altezza_righe(len(righe_t), ft_t, passo_t)
+        righe_d, ft_d, passo_d = [], None, 0
+        if descrizione:
+            ft_d = carattere("Regular", cd)
+            passo_d = round(cd * 44 / 30)
+            righe_d = wrap_testo(_MISURA, descrizione, ft_d, larghezza)
+            if not _righe_entrano(righe_d, ft_d, larghezza):
+                continue
+            alt += 26 + altezza_righe(len(righe_d), ft_d, passo_d)
+        if inizio + alt <= fondo:
+            return {"ft_t": ft_t, "righe_t": righe_t, "passo_t": passo_t,
+                    "ft_d": ft_d, "righe_d": righe_d, "passo_d": passo_d}
+    return None
+
+
+def _altezza_badge(badge: str) -> int:
+    """Altezza della pastiglia del badge: corpo 30 e 16 px sopra e sotto."""
+    tb = _MISURA.textbbox((0, 0), badge.upper(), font=carattere("Bold", 30))
+    return (tb[3] - tb[1]) + 32
+
+
+def _disegna_badge(d: ImageDraw.ImageDraw, badge: str, x: int, y: int) -> None:
+    ft = carattere("Bold", 30)
+    txt = badge.upper()
+    tb = d.textbbox((0, 0), txt, font=ft)
+    tw, th = tb[2] - tb[0], tb[3] - tb[1]
+    px, py = 30, 16
+    d.rounded_rectangle([(x, y), (x + tw + px * 2, y + th + py * 2)],
+                        radius=(th + py * 2) // 2, fill=_badge_colore(badge))
+    d.text((x + px, y + py - tb[1]), txt, font=ft, fill=WHITE)
+
+
+def piano_titolo(titolo: str, badge: str) -> dict:
+    """Impaginazione del titolo nella prima slide (sotto il badge)."""
+    area_top = 250 + (_altezza_badge(badge) + 56 if badge else 0)
+    nome = "titolo (prima slide)"
+    ft, righe, passo = adatta_blocco(titolo, "Bold", TITOLO_CORPO, 1080 - 200,
+                                     AREA_TESTO_FONDO - area_top, 90 / 74, nome)
+    controlla_integro(righe, titolo, nome)
+    return {"area_top": area_top, "ft": ft, "righe": righe, "passo": passo}
+
+
+def piano_citazione(testo: str) -> dict:
+    """Impaginazione della slide con social_citazione (sotto le virgolette)."""
+    area_top = 440
+    nome = "social_citazione"
+    ft, righe, passo = adatta_blocco(testo, "Semibold", CITAZIONE_CORPO, 1080 - 200,
+                                     AREA_TESTO_FONDO - area_top, 80 / 60, nome)
+    controlla_integro(righe, testo, nome)
+    return {"area_top": area_top, "ft": ft, "righe": righe, "passo": passo}
+
+
+STORIA_FOTO_H = 720   # altezza del riquadro della foto in evidenza nella storia
+
+
+def piano_storia_completo(titolo: str, descrizione: str, badge: str,
+                          con_foto: bool) -> dict:
+    """Impaginazione della storia con titolo e descrizione INTERI. Se con la
+    foto in evidenza non entrano nemmeno ai corpi minimi, la foto si toglie; se
+    ancora non entrano, si toglie la descrizione (resta il titolo, che è
+    l'informazione); altrimenti TestoIncompleto. Mai una frase a metà."""
+    _controlla_caratteri(titolo, "Bold", "titolo (storia)")
+    if descrizione:
+        _controlla_caratteri(descrizione, "Regular", "description (storia)")
+    inizio = 250 + (_altezza_badge(badge) + 44 if badge else 0)
+    tentativi = []
+    if con_foto:
+        tentativi.append((True, descrizione, inizio + STORIA_FOTO_H + 56))
+    tentativi.append((False, descrizione, inizio))
+    if descrizione:
+        tentativi.append((False, "", inizio))
+    for foto, descr, testo_da in tentativi:
+        piano = piano_storia(titolo, descr, testo_da)
+        if piano is None:
+            continue
+        controlla_integro(piano["righe_t"], titolo, "titolo (storia)")
+        if descr:
+            controlla_integro(piano["righe_d"], descr, "description (storia)")
+        piano.update(con_foto=foto, inizio=inizio,
+                     descrizione_tolta=bool(descrizione) and not descr)
+        return piano
+    raise TestoIncompleto(
+        f"titolo (storia): troppo lungo per la storia anche al corpo minimo "
+        f"({STORIA_TITOLO_CORPO[1]} px). Accorciarlo nel frontmatter.")
 
 
 # ---------------------------------------------------------------------------
@@ -307,28 +623,19 @@ def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
     d = ImageDraw.Draw(base)
     d.line([(60, 190), (W - 60, 190)], fill=(255, 255, 255, 55), width=2)
 
-    y = 250
+    # Titolo INTERO: il corpo scende da 74 a 52 px finché entra (mai troncato).
+    # Il piano si calcola prima di disegnare: se il titolo non entra, nessuna slide.
+    piano = piano_titolo(titolo, badge)
     if badge:
-        ft = ImageFont.truetype(str(find_font("Bold")), 30)
-        txt = badge.upper()
-        tb = d.textbbox((0, 0), txt, font=ft)
-        tw, th = tb[2] - tb[0], tb[3] - tb[1]
-        px, py = 30, 16
-        d.rounded_rectangle([(60, y), (60 + tw + px * 2, y + th + py * 2)],
-                            radius=(th + py * 2) // 2, fill=_badge_colore(badge))
-        d.text((60 + px, y + py - tb[1]), txt, font=ft, fill=WHITE)
-        y += th + py * 2 + 56
-
-    ft_tit = ImageFont.truetype(str(find_font("Bold")), 74)
-    righe = wrap_testo(d, titolo, ft_tit, W - 200)[:6]
-    line_h = 90
-    blocco_h = len(righe) * line_h
-    area_top, area_bot = y, H - 200
-    ty = area_top + max(0, (area_bot - area_top - blocco_h) // 2)
-    d.rectangle([(60, ty + 8), (72, ty + blocco_h - 12)], fill=ACCENT)
-    for r in righe:
-        d.text((100, ty), r, font=ft_tit, fill=WHITE)
-        ty += line_h
+        _disegna_badge(d, badge, 60, 250)
+    area_top, area_bot = piano["area_top"], AREA_TESTO_FONDO
+    ft_tit, righe, line_h = piano["ft"], piano["righe"], piano["passo"]
+    blocco_h = altezza_righe(len(righe), ft_tit, line_h)
+    ty = area_top + (area_bot - area_top - blocco_h) // 2
+    ingombro = scrivi_righe(d, 100, ty, righe, ft_tit, line_h,
+                            (100, area_top, W - 100, area_bot), WHITE,
+                            "titolo (prima slide)")
+    d.rectangle([(60, ingombro[1]), (72, ingombro[3])], fill=ACCENT)
 
     base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
     d.text((60, H - 92), "protezionecivilegenzano.it",
@@ -385,15 +692,14 @@ def crea_slide_citazione(testo: str, out_path: Path,
     # Virgoletta decorativa grande in accento
     d.text((66, 232), "“",
            font=ImageFont.truetype(str(find_font("Bold")), 180), fill=ACCENT)
-    ft = ImageFont.truetype(str(find_font("Semibold")), 60)
-    righe = wrap_testo(d, testo, ft, W - 200)[:8]
-    line_h = 80
-    blocco_h = len(righe) * line_h
-    area_top, area_bot = 440, H - 200
-    ty = area_top + max(0, (area_bot - area_top - blocco_h) // 2)
-    for r in righe:
-        d.text((100, ty), r, font=ft, fill=WHITE)
-        ty += line_h
+    # Citazione INTERA: il corpo scende da 60 a 44 px finché entra (mai troncata).
+    piano = piano_citazione(testo)
+    area_top, area_bot = piano["area_top"], AREA_TESTO_FONDO
+    ft, righe, line_h = piano["ft"], piano["righe"], piano["passo"]
+    blocco_h = altezza_righe(len(righe), ft, line_h)
+    ty = area_top + (area_bot - area_top - blocco_h) // 2
+    scrivi_righe(d, 100, ty, righe, ft, line_h,
+                 (100, area_top, W - 100, area_bot), WHITE, "social_citazione")
     base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
@@ -401,25 +707,30 @@ def crea_slide_citazione(testo: str, out_path: Path,
     return out_path
 
 
-def crea_slide_punti(punti: list, out_path: Path,
+def crea_slide_punti(pagina: list, out_path: Path, corpo: int = PUNTI_CORPO[0],
+                     numero: int = 1, totale: int = 1,
                      W: int = 1080, H: int = 1350) -> Path:
-    """Slide 'punti chiave': elenco di 2-5 punti brevi dall'articolo (frontmatter
-    social_punti). Marcatore accento + testo, mai inventato."""
+    """Slide 'In sintesi': i punti chiave dell'articolo (frontmatter social_punti),
+    mai inventati e mai tagliati. `pagina` viene da impagina_punti(): ogni punto
+    è intero e il corpo è già quello a cui tutti i punti della slide entrano;
+    se la sintesi occupa più slide, l'intestazione porta «1/2», «2/2»."""
     base = _sfondo_titolo(W, H)
     _barra_brand(base, W)
     d = ImageDraw.Draw(base)
     d.line([(60, 190), (W - 60, 190)], fill=(255, 255, 255, 55), width=2)
-    d.text((60, 238), "IN SINTESI",
+    intestazione = "IN SINTESI" if totale == 1 else f"IN SINTESI · {numero}/{totale}"
+    d.text((60, 238), intestazione,
            font=ImageFont.truetype(str(find_font("Bold")), 36), fill=ACCENT)
-    ft = ImageFont.truetype(str(find_font("Semibold")), 46)
-    y = 340
-    for p in punti[:5]:
-        righe = wrap_testo(d, p, ft, W - 230)[:3]
-        d.ellipse([(64, y + 18), (90, y + 44)], fill=ACCENT)
-        for r in righe:
-            d.text((120, y), r, font=ft, fill=WHITE)
-            y += 60
-        y += 30
+    ft = carattere("Semibold", corpo)
+    passo, spazio = _passi_punti(corpo)
+    diametro, scarto = round(corpo * 26 / 46), round(corpo * 18 / 46)
+    riquadro = (PUNTI_X, PUNTI_Y, PUNTI_X + PUNTI_LARGHEZZA, AREA_TESTO_FONDO)
+    y = PUNTI_Y
+    for testo, righe in pagina:
+        controlla_integro(righe, testo, "social_punti")
+        d.ellipse([(64, y + scarto), (64 + diametro, y + scarto + diametro)], fill=ACCENT)
+        scrivi_righe(d, PUNTI_X, y, righe, ft, passo, riquadro, WHITE, "social_punti")
+        y += altezza_righe(len(righe), ft, passo) + spazio
     base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
@@ -524,47 +835,50 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
     _barra_brand(base, W)
     d = ImageDraw.Draw(base)
 
+    # Titolo e descrizione INTERI (dal 13/10/2026 niente più tagli a 5 righe né
+    # descrizione accorciata con i puntini): vedi piano_storia_completo().
+    piano = piano_storia_completo(titolo, descrizione, badge, bool(featured))
+    if featured and not piano["con_foto"]:
+        print("  ! storia: testo lungo, tolgo la foto per farlo entrare intero",
+              file=sys.stderr)
+        featured = None
+    if piano["descrizione_tolta"]:
+        print("  ! storia: descrizione troppo lunga anche senza foto, la tolgo "
+              "(nessuna frase tagliata)", file=sys.stderr)
+
     # Badge sotto la barra brand (una volta sola)
-    testo_y = 250
     if badge:
-        ft = ImageFont.truetype(str(find_font("Bold")), 30)
-        txt = badge.upper()
-        tb = d.textbbox((0, 0), txt, font=ft)
-        tw, th = tb[2] - tb[0], tb[3] - tb[1]
-        px, py = 30, 16
-        d.rounded_rectangle([(70, testo_y), (70 + tw + px * 2, testo_y + th + py * 2)],
-                            radius=(th + py * 2) // 2, fill=_badge_colore(badge))
-        d.text((70 + px, testo_y + py - tb[1]), txt, font=ft, fill=WHITE)
-        testo_y += th + py * 2 + 44
+        _disegna_badge(d, badge, 70, 250)
+    testo_y = piano["inizio"]
+    box_h = STORIA_FOTO_H
 
     # Foto reale in evidenza (NON la cover tipografica, che ripeterebbe titolo).
     if featured:
         fsrc = Image.open(featured).convert("RGB")
-        box_w, box_h = W - 140, 720
+        box_w = W - 140
         fw, fh = fit_size(fsrc.width, fsrc.height, box_w, box_h)
         cov = fsrc.resize((fw, fh), Image.LANCZOS)
         cy = testo_y
         incolla_card(base, cov, (W - fw) // 2, cy + (box_h - fh) // 2)
         testo_y = cy + box_h + 56
 
-    ft_tit = ImageFont.truetype(str(find_font("Bold")), 58)
-    for r in wrap_testo(d, titolo, ft_tit, W - 140)[:5]:
-        d.text((70, testo_y), r, font=ft_tit, fill=WHITE)
-        testo_y += 74
-    testo_y += 26
-    if descrizione:
-        desc = descrizione[:240]
-        if len(descrizione) > 240:
-            desc = desc.rsplit(" ", 1)[0] + "…"
-        ft_d = ImageFont.truetype(str(find_font("Regular")), 30)
-        for r in wrap_testo(d, desc, ft_d, W - 140)[:6]:
-            d.text((70, testo_y), r, font=ft_d, fill=(223, 234, 245))
-            testo_y += 44
+    riquadro = (70, testo_y, W - 70, STORIA_FONDO)
+    scrivi_righe(d, 70, testo_y, piano["righe_t"], piano["ft_t"], piano["passo_t"],
+                 riquadro, WHITE, "titolo (storia)")
+    testo_y += altezza_righe(len(piano["righe_t"]), piano["ft_t"], piano["passo_t"]) + 26
+    if piano["righe_d"]:
+        scrivi_righe(d, 70, testo_y, piano["righe_d"], piano["ft_d"], piano["passo_d"],
+                     riquadro, (223, 234, 245), "description (storia)")
 
-    # CTA footer (dentro la safe-zone bassa)
+    # CTA footer (dentro la safe-zone bassa). La freccia è disegnata: il
+    # carattere «→» non esiste in Titillium Web e usciva come uno spazio vuoto.
     base.alpha_composite(scrim(W, 230, dall_alto=False, alpha_max=210), (0, H - 230))
-    d.text((70, H - 158), "→ Leggi sul sito",
-           font=ImageFont.truetype(str(find_font("Bold")), 38), fill=WHITE)
+    ft_cta = ImageFont.truetype(str(find_font("Bold")), 38)
+    _, sup, _, inf = d.textbbox((0, H - 158), "L", font=ft_cta)
+    cy = (sup + inf) // 2
+    d.line([(70, cy), (98, cy)], fill=WHITE, width=5)
+    d.polygon([(92, cy - 11), (108, cy), (92, cy + 11)], fill=WHITE)
+    d.text((124, H - 158), "Leggi sul sito", font=ft_cta, fill=WHITE)
     d.text((70, H - 100), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Regular")), 30), fill=(223, 234, 245))
 
@@ -764,6 +1078,7 @@ def main() -> int:
 
     ok = 0
     saltati = 0
+    falliti = 0
     for path in articoli:
         art = estrai_articolo(path)
         if not art:
@@ -777,94 +1092,117 @@ def main() -> int:
         # Immagini tolte dalla pulizia periodica (scripts/pulisci-social-bozze.py):
         # senza --force non si rigenerano, neppure con --all, altrimenti un
         # lancio manuale annullerebbe la pulizia. Con --force si rigenerano e
-        # il marcatore si toglie.
+        # il marcatore si toglie (solo a generazione riuscita).
         marcatore = out_dir / ".immagini-rimosse"
-        if marcatore.exists():
-            if not args.force:
-                print(f"  IMMAGINI RIMOSSE dalla pulizia (--force per rigenerarle): {art['slug']}",
-                      file=sys.stderr)
-                saltati += 1
-                continue
-            marcatore.unlink()
+        if marcatore.exists() and not args.force:
+            print(f"  IMMAGINI RIMOSSE dalla pulizia (--force per rigenerarle): {art['slug']}",
+                  file=sys.stderr)
+            saltati += 1
+            continue
 
-        # Piano del carosello (ordine): titolo -> citazione -> punti -> foto -> affiliazioni.
-        # Citazione e punti solo se presenti nel frontmatter (social_citazione /
-        # social_punti). Affiliazioni: slide finale fissa con Quality Label ESC
-        # (codice E10435833 obbligatorio, Reg. UE 2021/888) + SNPC Volontariato.
-        # Max 10 slide (limite Instagram): se ci sono troppe foto, l'affiliazione
-        # taglia in coda (ma viene sempre messa se c'è spazio).
-        slides = [("titolo", None)]
-        if art.get("citazione"):
-            slides.append(("citazione", art["citazione"]))
-        if art.get("punti"):
-            slides.append(("punti", art["punti"]))
-        for foto in art["carousel"][1:]:
-            slides.append(("foto", foto))
-        # Inserisci affiliazione come ultima slide, tagliando l'ultima foto se serve
-        if len(slides) >= 10:
-            slides = slides[:9]
-        slides.append(("affiliazioni", None))
-        n_slide = len(slides)
-
-        # Nomi a prova di errore: 1 sola slide -> feed-post.jpg; 2+ -> feed-carosello-N.jpg
-        primo = out_dir / ("feed-post.jpg" if n_slide == 1 else "feed-carosello-1.jpg")
-        if not args.force and primo.exists() and story_path.exists():
+        primo = out_dir / "feed-carosello-1.jpg"
+        if (not args.force and story_path.exists()
+                and (primo.exists() or (out_dir / "feed-post.jpg").exists())):
             print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
                   file=sys.stderr)
             saltati += 1
             continue
 
-        # --force: pulisci immagini precedenti, sia i nomi nuovi sia quelli
-        # vecchi (instagram-post*/instagram-story*, e .webp pre-2 maggio 2026).
-        if args.force:
-            for pat in ("feed-*.jpg", "storia.jpg",
-                        "instagram-post*.jpg", "instagram-post*.webp",
-                        "instagram-story*.jpg", "instagram-story*.webp"):
-                for old in out_dir.glob(pat):
-                    old.unlink()
+        try:
+            slides = piano_carosello(art)
+            genera_immagini(art, slides, out_dir)
+            if marcatore.exists():
+                marcatore.unlink()
+            scrivi_readme(out_dir, art, len(slides))
+            n_sintesi = sum(1 for k, _ in slides if k == "punti")
+            extra = []
+            if art.get("citazione"):
+                extra.append("citazione")
+            if n_sintesi:
+                extra.append("punti" if n_sintesi == 1 else f"punti su {n_sintesi} slide")
+            tipo = f"carosello x{len(slides)}"
+            if extra:
+                tipo += " +" + "/".join(extra)
+            print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)
+            ok += 1
+        except TestoIncompleto as e:
+            falliti += 1
+            msg = (f"testo che non entrerebbe intero nella grafica, nessuna immagine "
+                   f"scritta né sostituita: {e}")
+            print(f"  ✗ {art['slug']}: {msg}", file=sys.stderr)
+            if os.environ.get("GITHUB_ACTIONS"):
+                print(f"::error file=content/comunicazioni/{art['slug']}.md::{msg}")
+        except Exception as e:
+            falliti += 1
+            print(f"  ERRORE {art['slug']}: {e}", file=sys.stderr)
 
-        def _render(kind, data, dest):
+    print(f"\nFatto. OK={ok}, saltati={saltati}, falliti={falliti}", file=sys.stderr)
+    return 1 if falliti else 0
+
+
+def piano_carosello(art: dict) -> list[tuple]:
+    """Piano del carosello, in ordine: titolo → citazione → sintesi (una o più
+    slide) → foto → affiliazioni. Citazione e sintesi solo se presenti nel
+    frontmatter (social_citazione / social_punti). Affiliazioni: slide finale
+    fissa con Quality Label ESC (codice E10435833 obbligatorio, Reg. UE
+    2021/888) + SNPC Volontariato. Limite Instagram di 10 slide: se serve si
+    tolgono foto in coda (restano nell'articolo), MAI slide di testo; se le
+    slide di testo da sole superano il limite, TestoIncompleto."""
+    testo = [("titolo", None)]
+    if art.get("citazione"):
+        testo.append(("citazione", art["citazione"]))
+    sintesi = impagina_punti(art.get("punti") or [])
+    if sintesi:
+        totale = len(sintesi["pagine"])
+        for numero, pagina in enumerate(sintesi["pagine"], 1):
+            testo.append(("punti", (pagina, sintesi["corpo"], numero, totale)))
+    posti_foto = MAX_SLIDE_CAROSELLO - 1 - len(testo)
+    if posti_foto < 0:
+        raise TestoIncompleto(
+            f"le slide di testo ({len(testo)}) più quella delle affiliazioni superano "
+            f"il limite di {MAX_SLIDE_CAROSELLO} slide di Instagram: accorciare social_punti")
+    foto = [("foto", f) for f in art["carousel"][1:]][:posti_foto]
+    return testo + foto + [("affiliazioni", None)]
+
+
+def genera_immagini(art: dict, slides: list[tuple], out_dir: Path) -> None:
+    """Disegna carosello e storia in una cartella provvisoria e, SOLO se tutto
+    è riuscito, sostituisce le immagini precedenti. Un errore a metà non lascia
+    mai un carosello incompleto né cancella quello che c'era."""
+    provvisoria = Path(tempfile.mkdtemp(prefix="immagini-social-"))
+    try:
+        for idx, (kind, data) in enumerate(slides, 1):
+            dest = provvisoria / f"feed-carosello-{idx}.jpg"
             if kind == "titolo":
                 crea_slide_titolo(art["title"], art["badge"], dest)
             elif kind == "citazione":
                 crea_slide_citazione(data, dest)
             elif kind == "punti":
-                crea_slide_punti(data, dest)
+                pagina, corpo, numero, totale = data
+                crea_slide_punti(pagina, dest, corpo, numero, totale)
             elif kind == "affiliazioni":
                 crea_slide_affiliazioni(dest)
             else:
                 crea_slide_foto(data, dest)
 
-        try:
-            if n_slide == 1:
-                _render(*slides[0], out_dir / "feed-post.jpg")
-            else:
-                for idx, (kind, data) in enumerate(slides, 1):
-                    _render(kind, data, out_dir / f"feed-carosello-{idx}.jpg")
+        # Storia: foto reale (1ª inline) in evidenza se c'è, altrimenti titolo
+        hero = art["carousel"][1] if len(art["carousel"]) > 1 else None
+        crea_story_verticale(art["cover"], art["title"], art["description"],
+                             provvisoria / "storia.jpg", art["badge"], hero)
 
-            # Story: foto reale (1ª inline) in evidenza se c'è, altrimenti titolo
-            hero = art["carousel"][1] if len(art["carousel"]) > 1 else None
-            crea_story_verticale(art["cover"], art["title"], art["description"],
-                                 story_path, art["badge"], hero)
-
-            # README.md della cartella (mappa file -> destinazione)
-            scrivi_readme(out_dir, art, n_slide)
-
-            extra = []
-            if art.get("citazione"):
-                extra.append("citazione")
-            if art.get("punti"):
-                extra.append("punti")
-            tipo = "singolo" if n_slide == 1 else f"carosello x{n_slide}"
-            if extra:
-                tipo += " +" + "/".join(extra)
-            print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)
-            ok += 1
-        except Exception as e:
-            print(f"  ERRORE {art['slug']}: {e}", file=sys.stderr)
-
-    print(f"\nFatto. OK={ok}, saltati={saltati}", file=sys.stderr)
-    return 0
+        # Tutto riuscito: via le immagini precedenti (nomi attuali e vecchi:
+        # instagram-post*/instagram-story*, .webp di prima del 2 maggio 2026),
+        # dentro le nuove.
+        out_dir.mkdir(parents=True, exist_ok=True)
+        for pat in ("feed-*.jpg", "storia.jpg",
+                    "instagram-post*.jpg", "instagram-post*.webp",
+                    "instagram-story*.jpg", "instagram-story*.webp"):
+            for old in out_dir.glob(pat):
+                old.unlink()
+        for nuova in sorted(provvisoria.iterdir()):
+            shutil.move(str(nuova), str(out_dir / nuova.name))
+    finally:
+        shutil.rmtree(provvisoria, ignore_errors=True)
 
 
 if __name__ == "__main__":
