@@ -235,7 +235,7 @@ Direzione di Comando e Controllo. Struttura di coordinamento nazionale attivata 
 *Approfondisci: [Il modello di intervento](/conoscere/le-quattro-fasi/modello-di-intervento/).*
 
 ### D.L. (Decreto-Legge) {#dl}
-Atto con forza di legge adottato dal Governo in casi di necessità e urgenza (art. 77 della Costituzione). È efficace da subito, ma perde effetto se il Parlamento non lo convertisce in legge entro 60 giorni. Diversi provvedimenti che riguardano la protezione civile e la sicurezza del territorio nascono come decreto-legge.
+Atto con forza di legge adottato dal Governo in casi di necessità e urgenza (art. 77 della Costituzione). È efficace da subito, ma perde effetto se il Parlamento non lo converte in legge entro 60 giorni. Diversi provvedimenti che riguardano la protezione civile e la sicurezza del territorio nascono come decreto-legge.
 
 ### Direttiva PCM {#direttiva-pcm}
 Atto di indirizzo del Presidente del Consiglio. Per la protezione civile la più rilevante è la Direttiva 30 aprile 2021 sul Servizio nazionale.
