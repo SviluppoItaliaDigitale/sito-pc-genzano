@@ -50,6 +50,7 @@ Controllare ogni giorno una **fonte calda** (DPC, Regione, INGV) e ogni settiman
 | Fonte | Cosa cercare | URL |
 |---|---|---|
 | **Copernicus Emergency** | Mappe rapid mapping, rischi europei | emergency.copernicus.eu |
+| **EU Space — Image of the day** | Immagini satellitari Copernicus del giorno su alluvioni, incendi, eruzioni, siccità e temporali. Le legge ogni giorno la rassegna automatica (dal 13/10/2026): si usano per gli eventi nel Lazio e in Italia, con licenza CC BY 4.0 e il credito della pagina | eu-space.europa.eu/explore-euspace/images |
 | **EFFIS** | Incendi boschivi Europa, rischio stagionale | effis.jrc.ec.europa.eu |
 | **EMSC** | Terremoti europei in tempo reale | emsc-csem.org |
 | **UNDRR** | Giornate internazionali, cultura del rischio | undrr.org |
