@@ -32,9 +32,9 @@ Nel dibattito è intervenuta la consigliera **Michela Califano** (Pd), che ha ri
 
 ## Nella stessa seduta: campagna AIB e reclutamento volontari
 
-Illustrando la proposta, l'assessore Ciacciarelli ha anche ripercorso il bilancio della **campagna antincendio boschivo** in chiusura: tra le misure richiamate, **3,5 milioni di euro** destinati alle associazioni territoriali, la distribuzione di oltre cento pick-up con una nuova gara per ulteriori mezzi, e il noleggio degli elicotteri per **18 milioni di euro in tre anni**. Ha indicato come obiettivi il potenziamento della prevenzione — anche con l'impiego di droni — e una più tempestiva attivazione dei direttori delle operazioni di spegnimento.
+Illustrando la proposta, l'assessore Ciacciarelli ha anche ripercorso il bilancio della **campagna antincendio boschivo** in chiusura. Tra le misure richiamate: **3,5 milioni di euro** destinati alle associazioni territoriali e la distribuzione di oltre cento pick-up, con una nuova gara in arrivo per ulteriori mezzi. A questo si aggiunge il noleggio degli elicotteri, per **18 milioni di euro in tre anni**. Tra gli obiettivi indicati, il potenziamento della prevenzione, anche con l'impiego di droni. Prevista anche una più tempestiva attivazione dei direttori delle operazioni di spegnimento.
 
-Sul fronte della formazione, l'assessore ha annunciato l'attuazione della legge, approvata nella scorsa legislatura, che istituisce la **Scuola di alta formazione per la Protezione Civile**, organizzata su base provinciale. Ha riferito anche dell'avvio di una **campagna di reclutamento di nuovi volontari**, che ha già raccolto circa 800 richieste di accesso ai percorsi formativi.
+Sul fronte della formazione, l'assessore ha annunciato l'attuazione della legge, approvata nella scorsa legislatura, che istituisce la **Scuola di alta formazione per la Protezione Civile**. È organizzata su base provinciale. Ha riferito anche dell'avvio di una **campagna di reclutamento di nuovi volontari**: ha già raccolto circa 800 richieste di accesso ai percorsi formativi.
 
 ## Non è ancora legge
 
