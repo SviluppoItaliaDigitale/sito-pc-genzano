@@ -10,10 +10,10 @@
   .righe-scrittura { display: flex; flex-direction: column; gap: 6mm; }
   .righe-scrittura > div { border-bottom: 1px solid #1a1a1a; min-height: 5mm; }
 </style>
-  <!-- Stampa: un 2% in meno tiene l'ultimo foglio pieno; senza, la fascia
+  <!-- Stampa: un 10% in meno tiene l'ultimo foglio pieno; senza, la fascia
        delle affiliazioni o la riga finale andavano da sole su un foglio in più
-       (controllo fogli di stampa, 06/10/2026). -->
-  <style>@media print { .scheda { zoom: 0.98; } }</style>
+       (controllo fogli di stampa, 06/10/2026; 13/10/2026 con la nota per l'adulto). -->
+  <style>@media print { .scheda { zoom: 0.9; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>
@@ -26,15 +26,15 @@
   </header>
   <h1 class="scheda-title">Diario riflessivo</h1>
   <span class="scheda-eta">12-14 anni</span>
-  <div class="scheda-istruzione">📔 <strong>Una pagina per ragionare</strong> su quello che è successo. Non c'è giusto o sbagliato, è il tuo spazio.</div>
+  <div class="scheda-istruzione">📔 <strong>Una pagina tutta tua</strong>, se ti va, per mettere in ordine pensieri ed emozioni di questi giorni. Non c'è giusto o sbagliato: puoi saltare una domanda, fermarti quando vuoi e non mostrare il diario a nessuno.</div>
   <section class="scheda-attivita">
     <p style="font-size: 11pt; margin: 0 0 4mm;"><strong>Data:</strong> ___________ &nbsp;&nbsp;&nbsp; <strong>Luogo:</strong> ___________________________</p>
     <div class="domanda-box">
-      <div class="domanda-titolo">1. Cosa è successo (con parole tue)</div>
+      <div class="domanda-titolo">1. Se te la senti: cosa è successo, con parole tue (puoi saltare questa domanda)</div>
       <div class="righe-scrittura"><div></div><div></div><div></div></div>
     </div>
     <div class="domanda-box">
-      <div class="domanda-titolo">2. Come mi sono sentito/a quando è successo, e adesso?</div>
+      <div class="domanda-titolo">2. Come mi sento adesso? (Se ti va, anche come mi sentivo quando è successo)</div>
       <div class="righe-scrittura"><div></div><div></div><div></div></div>
     </div>
     <div class="domanda-box">
@@ -42,13 +42,13 @@
       <div class="righe-scrittura"><div></div><div></div></div>
     </div>
     <div class="domanda-box">
-      <div class="domanda-titolo">4. Una cosa che ho imparato di me stesso/a</div>
+      <div class="domanda-titolo">4. Una cosa che ho scoperto di me, se c'è (anche piccola)</div>
       <div class="righe-scrittura"><div></div><div></div></div>
     </div>
     <div class="domanda-box">
-      <div class="domanda-titolo">5. Una cosa per cui sono grato/a oggi</div>
+      <div class="domanda-titolo">5. Una cosa di oggi che mi ha fatto stare un po' meglio, se c'è</div>
       <div class="righe-scrittura"><div></div></div>
     </div>
   </section>
-  <footer class="scheda-footer"><span>Scheda 31 — Diario riflessivo</span><span class="fonti">Scrittura espressiva strutturata: protocollo Pennebaker validato per gestione trauma adolescenziale. 5 domande standard.</span><span>www.protezionecivilegenzano.it</span></footer>
+  <footer class="scheda-footer"><span>Scheda 31 — Diario riflessivo</span><span class="fonti">Scrittura libera e facoltativa, non una terapia: tenere un diario è fra i modi di affrontare lo stress del PFA Field Operations Guide (NCTSN e National Center for PTSD, 2006). Ispirata alla scrittura espressiva (Pennebaker e Beall, 1986): per i ragazzi di 10-18 anni una meta-analisi di 21 studi trova effetti positivi ma piccoli, con prove promettenti ma non decisive (Travagin, Margola e Revenson, 2015): qui è solo un'attività di prima accoglienza, non un protocollo validato. Per l'adulto: solo se il ragazzo la chiede, non nei primissimi giorni; non obbligare né leggere senza permesso; la domanda 1 è meglio con uno psicologo dell'emergenza accanto. Disagio forte o che dura: pediatra o servizi della ASL Roma 6; Telefono Azzurro 19696. Pericolo immediato: 112.</span><span>www.protezionecivilegenzano.it</span></footer>
 </article></body></html>

@@ -44,11 +44,10 @@
       explain: 'Il triangolo giallo col fulmine avvisa di alta tensione. Mai toccare cavi scoperti o pali della luce.' },
     { id: 'infiammabile', sign: 'materiale-infiammabile', name: 'Materiale infiammabile', action: 'Lontano da fiamme',
       explain: 'Liquidi che prendono fuoco facilmente: benzina, alcol, vernici. Mai accendere fiamme vicino.' },
-    // Nota: il file static/pittogrammi/iso7010/caduta-massi.svg scaricato da
-    // Wikimedia mostra in realta' il pittogramma W023 (sostanza corrosiva),
-    // non W022 (caduta massi). Bug della libreria. Per ora usiamo
-    // pavimento-scivoloso come 10a coppia: file corretto e concetto chiaro
-    // per primaria. TODO: sostituire caduta-massi.svg con il vero W022.
+    // Nota: fino al 2 maggio 2026 la libreria aveva un caduta-massi.svg che
+    // era in realta' W023 (sostanza corrosiva); la ISO 7010 non ha un segnale
+    // di caduta massi adatto alla primaria, quindi la decima coppia e'
+    // pavimento-scivoloso (W011), file corretto e concetto chiaro.
     { id: 'scivoloso', sign: 'pavimento-scivoloso', name: 'Pavimento scivoloso', action: 'Cammina piano, non correre',
       explain: 'Il segnale giallo con la persona che scivola avvisa che il pavimento e\' bagnato. Cammina piano, mai correre: cadute e fratture.' },
     { id: 'fuochi', sign: 'vietato-fuochi', name: 'Vietato accendere fuochi', action: 'Niente fiamme nel bosco',

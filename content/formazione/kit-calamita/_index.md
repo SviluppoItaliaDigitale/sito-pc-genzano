@@ -134,4 +134,4 @@ Se invece di una persona devi preparare **un'organizzazione** — un negozio, un
 
 ## Aggiornamenti e nuovi kit
 
-I kit possono essere migliorati nel tempo. Per segnalare bisogni, proporre nuove schede o indicare imprecisioni, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+I kit possono essere migliorati nel tempo. Per proporre nuove schede o segnalare un'imprecisione, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.

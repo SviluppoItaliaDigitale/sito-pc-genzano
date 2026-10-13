@@ -29,4 +29,4 @@ Le schede sono ispirate a buone pratiche e materiali su alimentazione infantile 
 - SIN — Società Italiana di Neonatologia
 - Dipartimento della Protezione Civile — assistenza alla popolazione in emergenza
 
-Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
+Per suggerire miglioramenti al kit o segnalare un errore: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). L'indirizzo non è un canale di emergenza: in caso di pericolo chiama il **112**.
