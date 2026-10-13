@@ -18,6 +18,7 @@ L'idea di fondo è semplice: le fasi della protezione civile non appartengono so
 Parti dall'essenziale: i numeri da chiamare, cosa fare nelle situazioni più comuni e dove si trovano le aree sicure.
 
 <div class="consulta-rapida">
+{{< link-card url="/vivo-qui-da-poco/" icon="bi-house-door" titolo="Vivo qui da poco" desc="I rischi di Genzano, come arrivano gli avvisi, l'area di attesa e sei cose da fare nella prima settimana." >}}
 {{< link-card url="/facile-da-leggere/" icon="bi-translate" titolo="Facile da leggere" desc="L'essenziale in linguaggio semplice, con pittogrammi. Disponibile anche in inglese, rumeno, arabo ed esperanto." >}}
 {{< link-card url="/numeri-utili/" icon="bi-telephone" titolo="Numeri utili" desc="Il 112 e gli altri numeri da salvare in rubrica: quale chiamare e in quali casi." >}}
 {{< link-card url="/cosa-fare-adesso/" icon="bi-signpost-2" titolo="Cosa fare adesso" desc="Indicazioni rapide per le situazioni più comuni: terremoto, maltempo, incendio, blackout." >}}

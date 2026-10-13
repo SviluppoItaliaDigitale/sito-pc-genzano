@@ -225,7 +225,7 @@ Controlla il kit almeno due volte l'anno, ad esempio in primavera e in autunno:
 - materiali per animali;
 - bisogni sanitari o assistenziali cambiati.
 
-Un promemoria pratico è collegare il controllo ai **cambi dell'ora legale e solare** (l'ultima domenica di marzo e l'ultima domenica di ottobre): due appuntamenti fissi all'anno, distanziati di circa sei mesi, che il calendario ricorda da solo.
+Un promemoria pratico è collegare il controllo ai **cambi dell'ora legale e solare** (l'ultima domenica di marzo e l'ultima domenica di ottobre): due appuntamenti fissi all'anno, distanziati di circa sei mesi, che il calendario ricorda da solo. Il [Calendario della prevenzione](/calendario-prevenzione/) li mette nel calendario del telefono, insieme ai gesti di stagione di ogni mese.
 
 Per una verifica strutturata puoi usare la **[checklist A4 stampabile](/formazione/schede-stampabili/checklist-kit-emergenza/)** da appendere accanto al kit.
 

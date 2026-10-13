@@ -1,6 +1,6 @@
 ---
 title: "Da oggi il buio alle 17: il primo giorno di ora solare"
-date: 2026-10-26T00:01:00+02:00
+date: 2026-10-25
 description: "Entra in vigore l'ora solare. Il sole tramonta prima. Come adattare la giornata e mantenere sicurezza ed efficienza."
 badge: "Informazione"
 priorita: "normale"
@@ -13,23 +13,25 @@ allegati: []
 draft: false
 ---
 
-È il **primo giorno** di ora solare. Oggi il sole tramonta intorno alle **17:00** e alle **17:30** è già buio. Un cambiamento **stagionale** normale, ma che richiede qualche adattamento pratico, specialmente per chi torna dal lavoro, dalla scuola o dall'attività fisica all'aperto.
+È il **primo giorno** di ora solare. Oggi il sole tramonta verso le **17:15** e prima delle **17:45** è già buio. Un cambiamento **stagionale** normale, ma che richiede qualche adattamento pratico, specialmente per chi torna dal lavoro, dalla scuola o dall'attività fisica all'aperto.
 
 ## Cambiamenti della giornata
 
 Oggi e nei giorni a venire, a Genzano di Roma:
 
-- **alba** intorno alle 6:50;
-- **tramonto** intorno alle 17:05;
-- **buio civile** alle 17:35;
-- **buio completo** dopo le 18:00;
-- **ore di luce**: circa 10 ore.
+- **alba** verso le 6:30;
+- **tramonto** verso le 17:15;
+- **fine del crepuscolo civile** verso le 17:40;
+- **buio completo** verso le 18:45;
+- **ore di luce**: circa 10 ore e 40 minuti.
 
-Proseguiremo a perdere **circa 2 minuti di luce al giorno** fino al solstizio del 21 dicembre.
+Gli orari sono calcolati per Genzano di Roma e arrotondati.
+
+Le giornate continueranno ad accorciarsi fino al **solstizio d'inverno del 21 dicembre**: a fine ottobre di circa due minuti e mezzo al giorno, poi sempre meno.
 
 ## Le novità del primo giorno
 
-- I **fari** delle auto devono essere accesi dalle 16:30 circa;
+- Le **luci** delle auto vanno accese da mezz'ora dopo il tramonto, oggi verso le 17:45 (fuori dai centri abitati sempre, anche di giorno);
 - Le **luci** delle case si accendono prima;
 - I **parchi** e i giardini pubblici si svuotano prima;
 - Le **passeggiate** al tramonto si fanno prima cena;
@@ -109,5 +111,6 @@ L'ora solare coincide con **clima tipicamente più piovoso**:
 - [Cambio ora solare — preparazione](/comunicazioni/2026-10-25-cambio-ora-solare-preparazione-sera/)
 - [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/)
 - [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
+- [Codice della strada, articoli 152 e 153 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285)
 
 In emergenza: **112**.

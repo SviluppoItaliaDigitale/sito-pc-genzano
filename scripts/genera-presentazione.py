@@ -685,6 +685,12 @@ content("Un minuto per proteggerti", [
     "Stampabili in formato A5 per casa, sede, bacheche scolastiche e banchetti informativi.",
 ], N())
 
+content("Prevenzione tutto l'anno e nuovi residenti", [
+    "Calendario della prevenzione: un gesto al mese e le date fisse, anche nel calendario del telefono.",
+    "Accordo di aiuto fra vicini: un foglio da compilare insieme per sapere chi aiuta chi; i dati restano sulla carta.",
+    "«Vivo qui da poco»: rischi del territorio, avvisi, aree di attesa e numeri da salvare per chi è appena arrivato.",
+], N())
+
 content("Kit pronti per situazioni vulnerabili", [
     "Schede operative per le categorie fragili: anziani, bambini, persone con disabilità, caregiver e altre.",
     "Materiali stampabili pronti all'uso.",
@@ -712,8 +718,8 @@ content("Kit didattici per fascia scolastica", [
 ], N())
 
 content("Percorsi didattici ed Educazione Civica", [
-    "Percorsi pronti all'uso per i docenti.",
-    "Collegamento esplicito all'Educazione Civica.",
+    "Percorsi pronti all'uso per i docenti, collegati all'Educazione Civica.",
+    "Settimana della protezione civile a scuola: un tema al giorno per tutto l'istituto e la prova di evacuazione del venerdì.",
     "Obiettivo: cultura della prevenzione fin da piccoli.",
 ], N())
 
@@ -906,9 +912,9 @@ content("Pagine legali e trasparenza", [
 divider("Comunicazione", N())
 
 content("Comunicazioni e notizie", [
-    "Sezione informativa costantemente aggiornata.",
-    "Distinzione chiara tra informazione, prevenzione, allerta ed emergenza.",
+    "Sezione informativa costantemente aggiornata, che distingue informazione, prevenzione, allerta ed emergenza.",
     "Ogni avviso rimanda alla fonte ufficiale di riferimento.",
+    "Sala stampa: contatti, dati, foto, logo e regole di citazione per giornalisti e redazioni.",
 ], N())
 
 content("Comunicazione di crisi e social", [

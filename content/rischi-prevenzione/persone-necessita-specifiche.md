@@ -66,9 +66,11 @@ La comunità è la prima risorsa in emergenza. Se conosci persone fragili nel tu
 - Offriti di verificare il loro stato in caso di allerta
 - Segnala eventuali situazioni critiche al Comune o ai servizi sociali
 - Nelle ondate di calore o nel freddo intenso, chiama o passa a trovarli: può fare la differenza.
+- Mettete per iscritto chi aiuta chi con l'[accordo di aiuto fra vicini](/formazione/schede-stampabili/accordo-vicini/): un foglio A4 da compilare insieme, che resta a voi.
 
 ## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse utili {#risorse}
 - [Piano Familiare — crea il tuo](/piano-familiare/)
 - [Kit di Emergenza — cosa preparare](/rischi-prevenzione/kit-emergenza/)
+- [Accordo di aiuto fra vicini — scheda da stampare](/formazione/schede-stampabili/accordo-vicini/)
 - [Piano di Emergenza Comunale — cosa prevede per Genzano di Roma](/piano-emergenza/)
 - [Numeri utili e contatti del Comune](/contatti/)
