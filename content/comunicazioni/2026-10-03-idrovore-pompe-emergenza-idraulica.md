@@ -93,6 +93,6 @@ Il Gruppo dispone di **motopompe e idrovore** per gli allagamenti di scantinati 
 
 - [Rischio idraulico urbano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/)
 - [Vigili del Fuoco — Interventi allagamenti](https://www.vigilfuoco.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In emergenza: **112**.

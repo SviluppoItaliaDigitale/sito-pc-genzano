@@ -12,7 +12,9 @@ campi classici della sinottica, focalizzata sull'Italia:
   - Barbe del vento a 500 hPa (corrente a getto)
   - Coste e confini da Natural Earth (Cartopy)
 
-Dati aperti Open-Meteo (modelli ECMWF, licenza CC-BY, nessuna chiave API).
+Dati aperti Open-Meteo (licenza CC BY, nessuna chiave API). Senza il parametro
+«models» Open-Meteo sceglie da sé i modelli più adatti, punto per punto: la fonte
+si cita come «Open-Meteo» (fino al 14/10/2026 era scritto «modelli ECMWF»).
 Output auto-ospitato, nessun embed di terzi (privacy-first).
 
 Output:
@@ -343,7 +345,7 @@ def main():
         cb2.ax.tick_params(labelsize=6)
         fig.text(0.5, 0.028, "Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
                  ha="center", fontsize=7.2, fontweight="bold", color="#003366")
-        fig.text(0.5, 0.011, "Dati: Open-Meteo (modelli ECMWF) · dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio",
+        fig.text(0.5, 0.011, "Dati: Open-Meteo · dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio",
                  ha="center", fontsize=6, color="#555555")
         fig.subplots_adjust(left=0.02, right=0.98, top=0.89, bottom=0.12)
 
@@ -368,7 +370,7 @@ def main():
         "dominio": {"lon": [LON_MIN, LON_MAX], "lat": [LAT_MIN, LAT_MAX]},
         "griglia": {"nlat": nlat, "nlon": nlon, "passo_gradi": DLON},
         "campi": list(HOURLY_VARS),
-        "fonte": "Open-Meteo (modelli ECMWF)",
+        "fonte": "Open-Meteo",
     }
     json.dump(meta, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 

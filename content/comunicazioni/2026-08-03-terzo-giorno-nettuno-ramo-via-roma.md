@@ -52,4 +52,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 **Fonti**
 
 - [Il Granchio — Incendio alla pineta della Campana a Nettuno, almeno sessanta ettari distrutti dalle fiamme](https://ilgranchio.it/2026/08/01/incendio-alla-pineta-della-campana-a-nettuno-almeno-sessanta-ettari-distrutti-delle-fiamme/)
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)

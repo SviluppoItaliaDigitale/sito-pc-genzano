@@ -74,7 +74,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 <li>Ne vous approchez <strong>pas</strong> des rivières ou torrents</li>
 <li>Mettez les objets de valeur et les appareils électriques aux étages</li>
 </ul>
-<p>Consultez l'alerte météo officielle sur le site de la <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Région du Latium</a>.</p>
+<p>Consultez l'alerte météo officielle sur le site de la <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Région du Latium</a>.</p>
 </div>
 
 <div class="en-card">

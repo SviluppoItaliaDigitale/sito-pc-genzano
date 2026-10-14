@@ -22,10 +22,10 @@ Il sistema nazionale distingue quattro livelli:
 
 | Livello | Significato |
 |---|---|
-| **Verde** | Nessuna allerta — situazione ordinaria |
-| **Giallo** | Allerta ordinaria — fenomeni di intensità moderata |
-| **Arancione** | Allerta elevata — fenomeni intensi con possibili effetti rilevanti |
-| **Rosso** | Allerta massima — fenomeni molto intensi con rischio elevato |
+| **Verde** | Nessuna allerta — assenza di fenomeni significativi prevedibili |
+| **Giallo** | Criticità ordinaria — fenomeni localizzati di intensità moderata |
+| **Arancione** | Criticità moderata — fenomeni diffusi e potenzialmente pericolosi |
+| **Rosso** | Criticità elevata — fenomeni molto intensi, con elevata probabilità di danni gravi |
 
 L'allerta si riferisce sempre a un **rischio specifico** (idrogeologico, idraulico, temporali, vento, neve) e a un'**area geografica** definita.
 

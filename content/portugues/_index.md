@@ -74,7 +74,7 @@ Esta página oferece-lhe as **informações essenciais** em português. O site c
 <li><strong>Não</strong> se aproxime de rios ou torrentes</li>
 <li>Coloque objetos de valor e equipamentos elétricos em andares mais altos</li>
 </ul>
-<p>Consulte o alerta meteorológico oficial no site da <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Região do Lácio</a>.</p>
+<p>Consulte o alerta meteorológico oficial no site da <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Região do Lácio</a>.</p>
 </div>
 
 <div class="en-card">

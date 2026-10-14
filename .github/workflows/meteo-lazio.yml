@@ -1,8 +1,8 @@
 name: "🌤️ Cartina meteo Lazio + riquadro Genzano"
 
 # Rigenera ogni ora la cartina del Lazio (aree colorate per provincia) e il
-# riquadro meteo di Genzano di Roma, da dati aperti Open-Meteo (modelli ECMWF,
-# licenza CC-BY, nessuna chiave API). Output:
+# riquadro meteo di Genzano di Roma, da dati aperti Open-Meteo
+# (licenza CC BY, nessuna chiave API). Output:
 #   - static/images/meteo-lazio.svg   (mappa choropleth temperatura + cielo)
 #   - data/meteo_genzano.json         (riquadro Genzano: oggi + prossimi giorni)
 # Mostrati in /allerte-meteo/ dallo shortcode {{< meteo-lazio >}}.

@@ -32,7 +32,7 @@ La miglior gestione di un allagamento è **non farlo accadere**. Alcuni gesti pr
 
 Quando il bollettino regionale indica **criticità idraulica** o **temporali intensi**:
 
-- **Leggi il bollettino** del [Centro Funzionale Lazio](https://protezionecivile.regione.lazio.it/).
+- **Leggi il bollettino** del [Centro Funzionale Lazio](https://www.regione.lazio.it/protezione-civile).
 - **Sposta oggetti di valore** ai piani alti, se abiti in aree basse.
 - **Non parcheggiare** l'auto in zone soggette ad allagamenti (sottopassi, piazze basse, parcheggi interrati).
 - **Evita spostamenti non necessari** nelle ore dell'evento previsto.
@@ -107,7 +107,7 @@ Fonti istituzionali:
 
 - [Io Non Rischio — Alluvione](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/).
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it).
+- [Regione Lazio — Centro Funzionale](https://www.regione.lazio.it/protezione-civile).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 Un allagamento urbano non è una catastrofe se si mantiene la lucidità. Le regole sono poche, chiare e funzionano: **non entrare nell'acqua**, **non attraversare con l'auto**, **sali ai piani alti**, **ascolta i canali ufficiali**.

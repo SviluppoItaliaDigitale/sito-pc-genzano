@@ -74,7 +74,7 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 <li>Nähern Sie sich <strong>nicht</strong> Flüssen oder Bächen</li>
 <li>Bringen Sie Wertsachen und elektrische Geräte in obere Stockwerke</li>
 </ul>
-<p>Prüfen Sie die offizielle Wetterwarnung der <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Region Latium</a>.</p>
+<p>Prüfen Sie die offizielle Wetterwarnung der <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Region Latium</a>.</p>
 </div>
 
 <div class="en-card">

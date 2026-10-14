@@ -80,6 +80,6 @@ Il Lazio registra ogni anno diverse decine di persone soccorse per fulminazione,
 
 - [Temporali pomeridiani nei Castelli](/comunicazioni/2026-08-05-temporali-pomeridiani-castelli-romani/)
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/)
-- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/centro-funzionale-regionale)
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale)
 
 In emergenza: **112**.

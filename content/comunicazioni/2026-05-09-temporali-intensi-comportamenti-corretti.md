@@ -31,7 +31,7 @@ I segnali che un temporale è in arrivo o in sviluppo:
 
 ## Dove consultare le previsioni
 
-Il **Centro Funzionale Regionale (CFR) del Lazio** pubblica ogni giorno bollettini di criticità che includono la previsione di temporali. Puoi consultarli sul [sito della Protezione Civile Regione Lazio](https://protezionecivile.regione.lazio.it/). Le app meteo commerciali danno informazioni utili, ma non sostituiscono i bollettini ufficiali per le decisioni di sicurezza.
+Il **Centro Funzionale Regionale (CFR) del Lazio** pubblica ogni giorno bollettini di criticità che includono la previsione di temporali. Puoi consultarli sul [sito della Protezione Civile Regione Lazio](https://www.regione.lazio.it/protezione-civile). Le app meteo commerciali danno informazioni utili, ma non sostituiscono i bollettini ufficiali per le decisioni di sicurezza.
 
 ## Cosa fare in casa
 
@@ -114,6 +114,6 @@ Risorse interne del sito:
 
 Fonti istituzionali:
 
-- [Centro Funzionale Regionale Lazio (CFR)](https://protezionecivile.regione.lazio.it/) — bollettini di criticità giornalieri
+- [Centro Funzionale Regionale Lazio (CFR)](https://www.regione.lazio.it/protezione-civile) — bollettini di criticità giornalieri
 - [Dipartimento della Protezione Civile (DPC)](https://www.protezionecivile.gov.it/) — campagne "Io non rischio", informazioni sui rischi naturali
 - [ISPRA — Istituto Superiore per la Protezione e la Ricerca Ambientale](https://www.isprambiente.gov.it/) — dati sul rischio idrogeologico nazionale

@@ -48,7 +48,7 @@ Ai sensi dell'articolo 4 della [Direttiva (UE) 2019/790](https://eur-lex.europa.
 Le informazioni pubblicate sul sito hanno **finalità divulgativa, formativa e di autoprotezione**. Il Gruppo le cura con la massima attenzione e secondo il [metodo editoriale](/metodo-editoriale/) dichiarato, ma il sito **non è un canale di emergenza**.
 
 - **In caso di pericolo immediato o emergenza in corso, chiama sempre il [112](tel:112) (Numero Unico Emergenze).**
-- **Per allerte meteo, ordinanze comunali e decisioni operative fanno fede esclusivamente le comunicazioni delle autorità competenti**: [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti), [Dipartimento Nazionale Protezione Civile](https://www.protezionecivile.gov.it/), Comune di Genzano di Roma, Prefettura.
+- **Per allerte meteo, ordinanze comunali e decisioni operative fanno fede esclusivamente le comunicazioni delle autorità competenti**: [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti), [Dipartimento Nazionale Protezione Civile](https://www.protezionecivile.gov.it/), Comune di Genzano di Roma, Prefettura.
 - Il Gruppo non risponde di eventuali errori, omissioni, ritardi di aggiornamento o disservizi tecnici del sito, né di danni derivanti dall'uso autonomo delle informazioni in assenza di verifica con le fonti ufficiali sopra indicate.
 
 ## Segnalazione di vulnerabilità {#segnalazione-di-vulnerabilita}

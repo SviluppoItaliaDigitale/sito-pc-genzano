@@ -33,7 +33,7 @@ Con la **DGR 865 del 26 novembre 2019** la Regione Lazio ha suddiviso il proprio
 - Tipologia di rilievi e versanti
 - Storicità degli eventi
 
-Le sette zone, secondo l'[allegato ufficiale alla DGR 865/2019](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf), sono:
+Le sette zone, secondo l'[allegato ufficiale alla DGR 865/2019](https://www.regione.lazio.it/sites/default/files/box-allegati-protezione-civile/2026/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019.pdf), sono:
 
 | Codice | Nome zona | Caratteristiche |
 |---|---|---|
@@ -47,7 +47,7 @@ Le sette zone, secondo l'[allegato ufficiale alla DGR 865/2019](https://protezio
 
 **Genzano di Roma ricade nella Zona F — Bacini Costieri Sud**, insieme ad Ariccia, Lanuvio, Lariano, Nemi, Velletri e ai comuni della pianura pontina.
 
-> La denominazione e la perimetrazione delle zone può essere aggiornata dalla Regione. Per la fonte ufficiale aggiornata consulta sempre il sito del [Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+> La denominazione e la perimetrazione delle zone può essere aggiornata dalla Regione. Per la fonte ufficiale aggiornata consulta sempre il sito del [Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 
 ## Il bollettino di criticità: come si legge
 
@@ -86,7 +86,7 @@ In questo caso la situazione da gestire con attenzione è **il temporale**, non 
 
 ## Dove consultare il bollettino
 
-- **Sito ufficiale del Centro Funzionale Lazio**: [protezionecivile.regione.lazio.it](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- **Sito ufficiale del Centro Funzionale Lazio**: [regione.lazio.it/protezione-civile](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti)
 - **Sito del Comune di Genzano di Roma**: riprende e rilancia le comunicazioni della Regione.
 - **Sito e social del Gruppo Comunale Volontari**: trovi le allerte nella pagina [Allerte Meteo](/allerte-meteo/).
 
@@ -118,8 +118,8 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- [Regione Lazio — Centro Funzionale](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 - [Dipartimento Protezione Civile — Rischio meteo](https://rischi.protezionecivile.gov.it/it/meteo-idro-0/).
-- [DGR Lazio 865/2019 — Tabella zone allerta](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf).
+- [DGR Lazio 865/2019 — Tabella zone allerta](https://www.regione.lazio.it/sites/default/files/box-allegati-protezione-civile/2026/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019.pdf).
 
 Un bollettino, letto correttamente, vale più di una consultazione rapida di un'app meteo. Il sistema di allertamento italiano è **uno dei migliori al mondo**: imparare a usarlo è un investimento in sicurezza personale e familiare.

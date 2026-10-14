@@ -89,6 +89,6 @@ Il **112** resta il numero da chiamare per segnalazioni di pericolo pubblico.
 
 - [ARPA Lazio — Previsioni vento](https://www.arpalazio.it/)
 - [Rischi e prevenzione](/rischi-prevenzione/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In emergenza: **112**.

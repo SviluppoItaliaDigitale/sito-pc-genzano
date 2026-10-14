@@ -89,7 +89,7 @@ Un'**allerta gialla** o **arancione** del Centro Funzionale Regionale Lazio non 
 ## Per approfondire
 
 - [ARPA Lazio — Previsioni e allerte](https://www.arpalazio.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Codici colore allerta](/allerte-meteo/)
 
 In emergenza: **112**.

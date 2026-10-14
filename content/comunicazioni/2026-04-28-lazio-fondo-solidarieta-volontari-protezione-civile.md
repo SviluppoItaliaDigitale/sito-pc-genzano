@@ -55,4 +55,4 @@ Molti volontari non conoscono questa possibilità. Per questo ne parliamo: un di
 
 **Fonte istituzionale:**
 
-- Deliberazione di Giunta regionale del Lazio n. 613/2025 (BUR Lazio n. 59 del 22 luglio 2025) — [portale della Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/)
+- Deliberazione di Giunta regionale del Lazio n. 613/2025 (BUR Lazio n. 59 del 22 luglio 2025) — [portale della Protezione Civile della Regione Lazio](https://www.regione.lazio.it/protezione-civile)

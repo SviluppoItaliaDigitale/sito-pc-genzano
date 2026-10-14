@@ -103,7 +103,7 @@ This page gives you **essential information** in English. The full website is in
 <li>Do <strong>not</strong> approach rivers or torrents</li>
 <li>Move valuables and electrical equipment to higher floors</li>
 </ul>
-<p>Check the official weather alert at <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Lazio Region</a>.</p>
+<p>Check the official weather alert at <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Lazio Region</a>.</p>
 </div>
 
 <div class="en-card">

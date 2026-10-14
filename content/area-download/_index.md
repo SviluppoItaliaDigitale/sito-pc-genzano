@@ -87,7 +87,7 @@ Pacchetti ZIP con il codice di alcune funzioni del sito (lettura ad alta voce, p
 <div class="card-body bg-primary bg-opacity-10 p-3">
 <h3 class="h6 text-primary mb-2"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Portale normativo ufficiale — Agenzia di Protezione Civile della Regione Lazio</h3>
 <p class="small mb-2">Regolamenti regionali, delibere di giunta e direttive in vigore. L'elenco è aggiornato direttamente dall'Agenzia regionale.</p>
-<a href="https://protezionecivile.regione.lazio.it/agenzia/normative/regolamenti-regionali-dgr" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+<a href="https://www.regione.lazio.it/protezione-civile/normativa" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
   Consulta la normativa regionale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
 </a>
 </div>

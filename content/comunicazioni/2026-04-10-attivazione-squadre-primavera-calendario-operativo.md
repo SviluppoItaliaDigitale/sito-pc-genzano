@@ -175,7 +175,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 La primavera del volontariato è fatta di molti piccoli passi. Passo dopo passo, la stagione è pronta.

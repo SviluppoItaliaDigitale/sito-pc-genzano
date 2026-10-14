@@ -16,7 +16,7 @@ dataUltimaRevisione: "2026-05-24"
 Questa pagina raccoglie strumenti online utili per consultare informazioni sul territorio: meteo, terremoti, incendi, qualità dell'aria, viabilità ed emergenze. Alcuni strumenti si aprono nel sito. Altri rimandano al sito ufficiale del fornitore.
 
 <div class="alert alert-warning" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Importante:</strong> questi strumenti aiutano a informarsi, ma non sostituiscono i bollettini ufficiali. Per Genzano di Roma la fonte di riferimento per le allerte meteo è il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>. In caso di emergenza chiama il <strong>112</strong>.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Importante:</strong> questi strumenti aiutano a informarsi, ma non sostituiscono i bollettini ufficiali. Per Genzano di Roma la fonte di riferimento per le allerte meteo è il <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>. In caso di emergenza chiama il <strong>112</strong>.</p>
 </div>
 
 ## Il cruscotto del territorio
@@ -265,7 +265,7 @@ Il modo più rapido per vedere tutto in un colpo d'occhio è il nostro **cruscot
 
 Per Genzano di Roma, le fonti istituzionali da consultare sono:
 
-- [Centro Funzionale Regionale Lazio — Bollettini di allerta](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [Centro Funzionale Regionale Lazio — Bollettini di allerta](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/)
 - [IT-alert](https://www.it-alert.it/)

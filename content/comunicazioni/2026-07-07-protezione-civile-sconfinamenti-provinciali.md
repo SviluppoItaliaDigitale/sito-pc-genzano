@@ -142,7 +142,7 @@ In eventi estesi collaborano:
 - Articolo: [Piano Comunale di PC](/piano-emergenza/)
 - Articolo: [Cartografia operativa del Piano](/comunicazioni/2026-06-25-cartografia-operativa-piano-comunale/)
 - [DPC — Sistema PC](https://servizio-nazionale.protezionecivile.gov.it/it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Prefettura di Roma](https://www.prefettura.it/roma)
 
 Una macchina di coordinamento che sembra complicata, ma funziona. Quando un'emergenza supera i confini comunali, il sistema è già pronto a riorganizzarsi.

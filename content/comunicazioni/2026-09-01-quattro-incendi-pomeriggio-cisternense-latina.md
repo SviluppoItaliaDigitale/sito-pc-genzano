@@ -76,7 +76,7 @@ Per questo si bagna a lungo terreno che sembra già spento, si rivolta la cenere
 
 ## Perché in questi giorni succede così spesso
 
-La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** Dopo i mesi caldi la vegetazione erbacea è secca, e ai margini delle strade basta poco per innescare un fronte. Quanto sia rischiosa una singola giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del Centro Funzionale Regionale, che classifica ogni giorno la nostra zona.
+La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** Dopo i mesi caldi la vegetazione erbacea è secca, e ai margini delle strade basta poco per innescare un fronte. Quanto sia rischiosa una singola giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) del Centro Funzionale Regionale, che classifica ogni giorno la nostra zona.
 
 Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio. Le attivazioni arrivano dalla **SOUP**, la Sala Operativa Unica Permanente regionale, che smista le squadre anche fuori dal territorio comunale. È il motivo per cui in un pomeriggio ci si può trovare sulla Cisternense e poco dopo a Latina.
 

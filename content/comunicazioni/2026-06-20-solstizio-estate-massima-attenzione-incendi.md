@@ -137,6 +137,6 @@ Il Gruppo comunale si attiva in estate con:
 - Articolo: [Mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/)
 - Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - [DPC — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
-- [Regione Lazio — AIB](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — AIB](https://www.regione.lazio.it/protezione-civile)
 
 Il solstizio non è solo il giorno più lungo dell'anno. È l'inizio di tre mesi in cui ogni comportamento individuale incide sulla sicurezza di tutti.

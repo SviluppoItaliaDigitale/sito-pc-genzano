@@ -149,5 +149,5 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 **Fonti istituzionali**
 
 - [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
-- [Bollettino di pericolosità da incendi boschivi del Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi)
+- [Bollettino di pericolosità da incendi boschivi del Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi)
 - [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)

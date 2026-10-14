@@ -59,7 +59,7 @@ EMOJI_LIVELLO = {
 HASHTAG_ALLERTA = "#PCGenzano #AllertaLazio #Genzano"
 HASHTAG_EMERGENZA = "#PCGenzano #Genzano"
 FONTE_CFR = ("Fonte: Centro Funzionale Regionale Lazio — "
-             "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti")
+             "https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti")
 PROSSIMO_AGG = ("Prossimo aggiornamento: su questo canale al cambio di livello; "
                 f"stato verificato in continuo su {SITO_URL}/allerte-meteo/")
 

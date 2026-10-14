@@ -70,5 +70,5 @@ In caso di **allerta arancione o rossa** sul nostro Comune (vedi sempre la barra
 ## Per saperne di più
 
 - [Memoria dell'alluvione di Genova — Comune di Genova](https://www.comune.genova.it/)
-- [Centro Funzionale Regione Lazio](https://protezionecivile.regione.lazio.it/)
+- [Centro Funzionale Regione Lazio](https://www.regione.lazio.it/protezione-civile)
 - Voce Wikipedia: [Alluvione di Genova del 4 novembre 2011](https://it.wikipedia.org/wiki/Alluvione_di_Genova_del_4_novembre_2011)

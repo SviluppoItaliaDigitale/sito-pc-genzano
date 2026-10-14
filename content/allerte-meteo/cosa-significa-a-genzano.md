@@ -68,6 +68,6 @@ L'allerta dice cosa può succedere **oggi**; la **pericolosità** dice dove un f
 
 **Fonti istituzionali:**
 
-- [Bollettino del Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — il dato ufficiale in tempo reale.
+- [Bollettino del Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) — il dato ufficiale in tempo reale.
 
 {{< chi-chiamare >}}

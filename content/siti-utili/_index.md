@@ -24,7 +24,7 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 ## Siti istituzionali
 
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/) — riferimento nazionale per attività, campagne informative, norme e comunicazioni ufficiali.
-- [Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/) — bollettini di allertamento, piani e informazioni per il Lazio.
+- [Agenzia di Protezione Civile della Regione Lazio](https://www.regione.lazio.it/protezione-civile) — bollettini di allertamento, piani e informazioni per il Lazio.
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — sito ufficiale dell'ente comunale.
 - [Normattiva](https://www.normattiva.it/) — consultazione gratuita della normativa italiana.
 - [Io non rischio](https://www.iononrischio.it/) — campagna nazionale sulle buone pratiche di prevenzione.
@@ -36,7 +36,7 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — previsioni meteorologiche ufficiali.
 - [ItaliaMeteo — Agenzia Nazionale per la Meteorologia e Climatologia](https://www.agenziaitaliameteo.it/) — servizio meteo civile nazionale: modelli ad alta risoluzione e piattaforma dati.
-- [Centro Funzionale Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — bollettini di allerta per il Lazio.
+- [Centro Funzionale Regione Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) — bollettini di allerta per il Lazio.
 - [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) — monitoraggio delle precipitazioni.
 - [AEGIS — Tempo reale Regione Lazio](https://temporeale.regione.lazio.it/aegis/map/map2d) — dati territoriali e operativi regionali.
 - [INGV — Terremoti in tempo reale](https://terremoti.ingv.it/) — eventi sismici registrati in Italia.
@@ -165,7 +165,7 @@ Le fonti seguenti sono utili per comunicazione pubblica, accessibilità e gestio
 
 ## Divulgazione scientifica
 
-- [Geopop](https://www.geopop.it/) — divulgazione scientifica indipendente con video, articoli e infografiche su scienze della Terra, fenomeni naturali, rischi geologici (terremoti, vulcani, frane, alluvioni), meteorologia e cambiamento climatico. Linguaggio accessibile a tutti, fonti citate, comunicazione visiva curata. Utile per approfondire i temi di Protezione Civile in chiave divulgativa, anche per scuole, famiglie e persone che si avvicinano per la prima volta a questi temi. **Non è un sito istituzionale**: in caso di allerta, emergenza o decisioni operative consulta sempre i bollettini e gli avvisi ufficiali del [Centro Funzionale della Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti), del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) e del Comune di Genzano di Roma.
+- [Geopop](https://www.geopop.it/) — divulgazione scientifica indipendente con video, articoli e infografiche su scienze della Terra, fenomeni naturali, rischi geologici (terremoti, vulcani, frane, alluvioni), meteorologia e cambiamento climatico. Linguaggio accessibile a tutti, fonti citate, comunicazione visiva curata. Utile per approfondire i temi di Protezione Civile in chiave divulgativa, anche per scuole, famiglie e persone che si avvicinano per la prima volta a questi temi. **Non è un sito istituzionale**: in caso di allerta, emergenza o decisioni operative consulta sempre i bollettini e gli avvisi ufficiali del [Centro Funzionale della Regione Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti), del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) e del Comune di Genzano di Roma.
 
 Altri canali di divulgazione scientifica affidabile, utili per gli approfondimenti (non istituzionali: non usarli per allerte o decisioni operative):
 

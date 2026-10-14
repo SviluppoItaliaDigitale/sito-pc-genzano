@@ -54,4 +54,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 **Fonti**
 
 - [Il Mamilio — Rocca di Papa, incendio boschivo nel pomeriggio nell'area di via dei Principi](https://www.ilmamilio.it/wp/2026/08/rocca-di-papa-incendio-boschivo-nel-pomeriggio-nellarea-di-via-dei-principi/)
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)

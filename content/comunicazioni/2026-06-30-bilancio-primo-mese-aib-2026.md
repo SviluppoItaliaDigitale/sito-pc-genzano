@@ -121,6 +121,6 @@ La **prevenzione partecipativa** è uno degli strumenti più efficaci, perché r
 - Articolo: [Triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
 - Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - [DPC — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 Un mese è passato. Ne restano tre in cui ogni gesto individuale pesa sulla sicurezza collettiva. Continuiamo con attenzione.

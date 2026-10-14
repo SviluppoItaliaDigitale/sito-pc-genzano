@@ -62,7 +62,7 @@ Per le previsioni meteo ufficiali guarda il sito dell'Aeronautica Militare.
 
 La Regione Lazio pubblica le allerte meteo e le allerte di rischio per la nostra zona.
 
-- Sito: [protezionecivile.regione.lazio.it](https://protezionecivile.regione.lazio.it/)
+- Sito: [regione.lazio.it/protezione-civile](https://www.regione.lazio.it/protezione-civile)
 
 ### ARPA Lazio
 

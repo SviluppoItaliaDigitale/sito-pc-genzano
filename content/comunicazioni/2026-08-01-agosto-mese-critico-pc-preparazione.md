@@ -52,7 +52,7 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma affronta ag
 ## Per approfondire
 
 - [Bilancio a fine luglio](/comunicazioni/2026-07-31-fine-luglio-bilancio-preparazione-agosto/)
-- [Protezione Civile Regione Lazio](https://protezionecivile.regione.lazio.it/)
+- [Protezione Civile Regione Lazio](https://www.regione.lazio.it/protezione-civile)
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/)
 
 In emergenza: **112**. Per aggiornamenti in tempo reale: sito del Gruppo e canale Telegram ufficiale.

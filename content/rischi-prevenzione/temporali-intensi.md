@@ -23,7 +23,7 @@ I temporali intensi portano piogge forti, fulmini, grandine e raffiche di vento 
 Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volontaria **Blitzortung / Lightning Maps**. Utile quando è in corso un temporale per capire dove si sta muovendo la cella e quanto è distante.
 
 <div class="alert alert-warning" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Strumento di consultazione:</strong> Blitzortung è una rete volontaria di rilevatori, scientificamente affidabile ma <strong>non istituzionale</strong>. Per le allerte temporali ufficiali consulta sempre il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Strumento di consultazione:</strong> Blitzortung è una rete volontaria di rilevatori, scientificamente affidabile ma <strong>non istituzionale</strong>. Per le allerte temporali ufficiali consulta sempre il <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</p>
 </div>
 
 {{< external-widget
@@ -86,7 +86,7 @@ L'area dei Castelli Romani è soggetta a temporali convettivi intensi, specialme
 **Fonti istituzionali**
 
 - [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischio meteo-idro
-- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti)
 - [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) — monitoraggio delle precipitazioni in tempo reale
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — previsioni meteorologiche ufficiali
 

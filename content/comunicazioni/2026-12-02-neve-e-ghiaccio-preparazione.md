@@ -203,7 +203,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
-- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it).
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/protezione-civile).
 - [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/).
 
 In emergenza: **112**.
