@@ -31,7 +31,7 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 - Verifica la stabilità di tende da sole, persiane, antenne e oggetti sui balconi.
 - Fissa o metti al riparo vasi, sedie e oggetti leggeri esposti al vento.
 - Parcheggia l'auto lontano da alberi, impalcature e strutture precarie.
-- Controlla lo stato di allerta su questa pagina o sul [Bollettino Regionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- Controlla lo stato di allerta su questa pagina o sul [Bollettino Regionale](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}
 - **Rimani in casa** se possibile, lontano da finestre e vetrate.
@@ -64,7 +64,7 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 **Fonti istituzionali**
 
 - [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischio meteo
-- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — avvisi per vento forte
+- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) — avvisi per vento forte
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — previsioni meteorologiche ufficiali
 
 **Approfondimenti divulgativi**

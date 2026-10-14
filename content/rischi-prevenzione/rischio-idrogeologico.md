@@ -134,7 +134,7 @@ Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** del sistema 
 **Fonti istituzionali**
 
 - [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — scheda nazionale sul rischio idrogeologico
-- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [Centro Funzionale Regione Lazio — bollettini di allertamento](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti)
 - [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — cartografia nazionale su frane e alluvioni
 - [CNR-IRPI](https://www.irpi.cnr.it/) — ricerca su frane, alluvioni e dissesti
 

@@ -67,5 +67,5 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/)

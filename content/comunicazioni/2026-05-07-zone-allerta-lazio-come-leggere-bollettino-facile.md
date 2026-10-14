@@ -62,7 +62,7 @@ Cosa vuol dire? Sono previsti temporali forti. Ci possono essere allagamenti loc
 
 Il bollettino esce ogni giorno entro le 14:00. Puoi trovarlo in 3 posti.
 
-- Sul sito del CFR, il Centro Funzionale Regionale, all'indirizzo [protezionecivile.regione.lazio.it](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- Sul sito del CFR, il Centro Funzionale Regionale, all'indirizzo [regione.lazio.it/protezione-civile](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 - Sul sito del Comune di Genzano di Roma.
 - Sulla pagina [Allerte Meteo](/allerte-meteo/) di questo sito.
 

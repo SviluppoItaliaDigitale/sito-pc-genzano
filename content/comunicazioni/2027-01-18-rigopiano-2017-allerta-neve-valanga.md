@@ -64,5 +64,5 @@ Genzano non è in territorio montano e il rischio valanghivo non ci riguarda. Ma
 ## Per saperne di più
 
 - [Memoria del disastro di Rigopiano — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
-- [Sistema di allertamento meteo regionale Lazio](https://protezionecivile.regione.lazio.it/)
+- [Sistema di allertamento meteo regionale Lazio](https://www.regione.lazio.it/protezione-civile)
 - Voce Wikipedia: [Disastro di Rigopiano](https://it.wikipedia.org/wiki/Disastro_di_Rigopiano)

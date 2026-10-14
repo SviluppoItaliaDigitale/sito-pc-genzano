@@ -44,7 +44,7 @@ Paradossalmente la diga **non cedette**: è ancora lì, integra, visibile oggi. 
 
 Il Vajont è il caso scuola della **comunicazione del rischio mancata**. Tre lezioni che orientano ancora oggi il lavoro della Protezione Civile:
 
-1. **La conoscenza scientifica deve diventare decisione pubblica.** Non basta che geologi e ingegneri sappiano: serve un sistema istituzionale che traduca i loro avvertimenti in azioni di tutela. Per questo oggi esistono il [Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/), il sistema [IT-alert](https://www.it-alert.it/), e la rete di Centri di Competenza nazionali.
+1. **La conoscenza scientifica deve diventare decisione pubblica.** Non basta che geologi e ingegneri sappiano: serve un sistema istituzionale che traduca i loro avvertimenti in azioni di tutela. Per questo oggi esistono il [Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile), il sistema [IT-alert](https://www.it-alert.it/), e la rete di Centri di Competenza nazionali.
 
 2. **Il cittadino ha diritto di sapere.** Una popolazione informata può scegliere come comportarsi. Una popolazione tenuta all'oscuro non può difendersi. Per questo i bollettini di allerta meteo sono pubblici e immediatamente accessibili: vedi [Allerte Meteo](/allerte-meteo/).
 

@@ -1002,8 +1002,8 @@ jobs:
           }
 
           # Portali normativi (citati in /area-download/, articoli normativa)
-          check_critical "https://protezionecivile.regione.lazio.it/agenzia/normative/regolamenti-regionali-dgr" \
-            "Normativa regionale Lazio (Agenzia PC Lazio)"
+          check_critical "https://www.regione.lazio.it/protezione-civile/normativa" \
+            "Normativa di protezione civile (Regione Lazio)"
           check_critical "https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/" \
             "Normativa nazionale (Dipartimento PC)"
 

@@ -63,6 +63,6 @@ Usare le parole giuste evita due errori opposti:
 
 - [Codici colore allerta meteo](/allerte-meteo/)
 - [Allerta gialla: cosa significa](/comunicazioni/2026-09-08-allerta-gialla-cosa-significa/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In emergenza: **112**.

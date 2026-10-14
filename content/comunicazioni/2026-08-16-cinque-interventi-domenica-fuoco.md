@@ -59,4 +59,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 
 - [Il Mamilio — Incendi, domenica di roghi anche ai Castelli Romani. Ancora fiamme sul Tuscolo](https://www.ilmamilio.it/wp/2026/08/incendi-domenica-di-roghi-anche-ai-castelli-romani-ancora-fiamme-sul-tuscolo/)
 - [Abitare a Roma — Roma nella morsa degli incendi: nuovo fronte di fuoco tra Falcognana e Divino Amore](https://abitarearoma.it/roma-nella-morsa-degli-incendi-nuovo-fronte-di-fuoco-tra-falcognana-e-divino-amore/)
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)

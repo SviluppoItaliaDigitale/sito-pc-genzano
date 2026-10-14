@@ -74,7 +74,7 @@ Esta página le ofrece la **información esencial** en español. La web completa
 <li><strong>No</strong> se acerque a ríos o torrentes</li>
 <li>Suba objetos de valor y aparatos eléctricos a pisos altos</li>
 </ul>
-<p>Consulte la alerta meteorológica oficial en la web de la <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Región del Lacio</a>.</p>
+<p>Consulte la alerta meteorológica oficial en la web de la <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Región del Lacio</a>.</p>
 </div>
 
 <div class="en-card">

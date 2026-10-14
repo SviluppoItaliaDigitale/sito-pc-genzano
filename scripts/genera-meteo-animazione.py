@@ -5,7 +5,9 @@ OPZIONE A — Animazione della cartina meteo del Lazio (choropleth animata).
 Estende la cartina statica `genera-meteo-lazio.py` aggiungendo il MOVIMENTO:
 mostra l'evoluzione della temperatura e del cielo previsti nelle prossime ~72 ore
 (frame ogni 6 ore) come **SVG animato** auto-ospitato, senza JavaScript e senza
-embed di terzi. Dati aperti Open-Meteo (modelli ECMWF, licenza CC-BY, nessuna chiave).
+embed di terzi. Dati aperti Open-Meteo (licenza CC BY, nessuna chiave): senza il
+parametro «models» Open-Meteo sceglie da sé i modelli più adatti, quindi la fonte si
+cita come «Open-Meteo» (fino al 14/10/2026 era scritto «modelli ECMWF»).
 
 Tecnica: un solo set di geometrie province (peso minimo), con il `fill` animato via
 SMIL `calcMode="discrete"` sui colori dei vari frame; le pillole (nome+icona+temp) e
@@ -219,7 +221,7 @@ def build(hourly, now):
     fonte = (f'<text x="{W/2:.0f}" y="{H-21:.0f}" font-size="10.5" font-weight="700" text-anchor="middle" '
              f'fill="#003366">Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</text>'
              f'<text x="{W/2:.0f}" y="{H-8:.0f}" font-size="8.5" text-anchor="middle" '
-             f'fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; dato indicativo, '
+             f'fill="#6c757d">Dati: Open-Meteo &#183; dato indicativo, '
              f'per le allerte vale il Centro Funzionale Regionale del Lazio</text>')
 
     aria = (f"Animazione della previsione meteo del Lazio per le prossime 72 ore: "
@@ -247,7 +249,7 @@ def build(hourly, now):
         "frame": nfr,
         "passo_ore": STEP_H,
         "durata_s": DUR_S,
-        "fonte": "Open-Meteo (modelli ECMWF)",
+        "fonte": "Open-Meteo",
         "span_da": parsed[indici[0]].strftime("%Y-%m-%dT%H:%M"),
         "span_a": parsed[indici[-1]].strftime("%Y-%m-%dT%H:%M"),
     }

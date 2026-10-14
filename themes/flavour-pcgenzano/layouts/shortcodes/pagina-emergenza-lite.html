@@ -113,7 +113,7 @@
   <p class="lite-domani lite-domani-{{ $dl }}" id="lite-domani" role="status"><strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong> allerta {{ $dl }}{{ with .rischi }} — {{ delimit . ", " }}{{ end }}</p>
   {{- end }}
   {{- end }}
-  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: <span id="lite-allerta-ver">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span> <span id="lite-allerta-nota">(dato dell'ultima pubblicazione del sito)</span> · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></p>
+  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: <span id="lite-allerta-ver">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span> <span id="lite-allerta-nota">(dato dell'ultima pubblicazione del sito)</span> · Fonte: <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></p>
 </div>
 {{- end }}
 

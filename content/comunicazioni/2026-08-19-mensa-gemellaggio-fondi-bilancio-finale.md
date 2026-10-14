@@ -37,7 +37,7 @@ Dietro questi numeri c'è la funzione vera della mensa: garantire ristoro ed ene
 
 ## Una macchina di coordinamento
 
-La mensa era il cuore del **campo base del gemellaggio AIB**, attivo a Fondi dal 5 luglio al 18 agosto ([Regione Lazio](https://protezionecivile.regione.lazio.it/), [NewTuscia](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)). Il campo ha accolto le colonne di volontari arrivate da Emilia-Romagna, Piemonte e Lombardia a rinforzo del dispositivo del Lazio meridionale. Il ringraziamento del Coordinamento è andato anche alla **Regione Lazio**, nella figura del direttore regionale Emergenza e Protezione Civile **Massimo La Pietra**, e all'**Associazione Falchi di Fondi**, che ha curato la logistica operativa delle squadre arrivate dal Nord Italia.
+La mensa era il cuore del **campo base del gemellaggio AIB**, attivo a Fondi dal 5 luglio al 18 agosto ([Regione Lazio](https://www.regione.lazio.it/protezione-civile), [NewTuscia](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)). Il campo ha accolto le colonne di volontari arrivate da Emilia-Romagna, Piemonte e Lombardia a rinforzo del dispositivo del Lazio meridionale. Il ringraziamento del Coordinamento è andato anche alla **Regione Lazio**, nella figura del direttore regionale Emergenza e Protezione Civile **Massimo La Pietra**, e all'**Associazione Falchi di Fondi**, che ha curato la logistica operativa delle squadre arrivate dal Nord Italia.
 
 Le 22 realtà che si sono alternate ai fornelli, come elencate nel bilancio del Coordinamento: DSE FIC Lazio, VVA, VER Sud Pontino Formia, Alfa Aprilia, GC Pontinia, GI Roccasecca, PC Petrucci, Acuto Odv, GC Alatri, Associazione Pegasus Vallecorsa, Base 2001, GC Ariccia, **GC Genzano**, GC Supino, AVER Frosinone, GC Frosinone, GC Ceprano, Le Orme di Askan, Centro Zeta, I Lupi Ciociari, Greccio 92 Evo e Associazione R2.
 
@@ -63,5 +63,5 @@ Il motto scelto dal Coordinamento per salutare l'iniziativa riassume bene un mes
 **Fonti**
 
 - Bilancio di chiusura della Mensa del Gemellaggio AIB diffuso dal Coordinamento FEPIVOL (18 agosto 2026)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [NewTuscia — Campagna antincendio boschivo 2026 della Regione Lazio](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)

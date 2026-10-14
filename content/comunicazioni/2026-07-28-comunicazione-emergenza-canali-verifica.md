@@ -54,7 +54,7 @@ Questo **"rumore"** è un pericolo di per sé.
 ## I canali ufficiali regionali (Lazio)
 
 ### Protezione Civile Lazio
-- **Sito**: protezionecivile.regione.lazio.it
+- **Sito**: regione.lazio.it/protezione-civile
 - **Bollettini** del Centro Funzionale Regionale.
 - **Allerte** meteo e idrogeologiche.
 - **Social** ufficiali.

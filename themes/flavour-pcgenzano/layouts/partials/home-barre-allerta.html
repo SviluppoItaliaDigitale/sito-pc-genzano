@@ -29,7 +29,7 @@
         <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
         <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
       </div>
-      <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
+      <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
         Bollettino Ufficiale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
       </a>
     </div>
@@ -38,7 +38,7 @@
     <div class="allerta-bar-meta">
       <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
       Verificato: <span id="allerta-controllo">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span>
-      <span class="text-nowrap">· Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></span>
+      <span class="text-nowrap">· Fonte: <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></span>
     </div>
   </div>
 </div>
@@ -171,7 +171,7 @@
     {{ if $incendiAib }}<span class="incendi-aib ms-2">(Zona AIB {{ $incendiZona }} — livello {{ $incendiAib }})</span>{{ end }}
     {{ if $incendiDataLeg }}<span class="incendi-validita ms-2">· Valido per il {{ $incendiDataLeg }}</span>{{ end }}
     {{ if $incendiDomAib }}<span class="incendi-domani d-none d-md-inline ms-2">· Domani: {{ $incendiDomAib }}</span>{{ end }}
-    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+    <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
   </div>
 </div>
 {{ end }}

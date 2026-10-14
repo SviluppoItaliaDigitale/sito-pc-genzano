@@ -160,6 +160,6 @@ La **flotta italiana** è stata recentemente rafforzata con acquisti di nuovi Ca
 - Articolo: [Corpo Forestale Carabinieri](/comunicazioni/2026-07-06-corpo-forestale-carabinieri-ruolo/)
 - [DPC — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
 - [Vigili del Fuoco](https://www.vigilfuoco.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 Dietro ogni Canadair che vedi passare in estate c'è una catena organizzativa complessa. Conoscerla aiuta ad apprezzare il lavoro che rende possibile la difesa del territorio.

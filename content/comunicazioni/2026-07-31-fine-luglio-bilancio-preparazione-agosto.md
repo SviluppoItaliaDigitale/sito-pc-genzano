@@ -279,7 +279,7 @@ Una sintesi di quanto si sente ripetere da chi coordina le sale operative: ad ag
 - Articolo: [Sagre e feste estive](/comunicazioni/2026-07-21-sagre-feste-patronali-sicurezza-eventi/)
 - Articolo: [Colpo di calore primo soccorso](/comunicazioni/2026-07-19-colpo-calore-riconoscere-primo-soccorso/)
 - [Open Data del Gruppo](/open-data/) — le statistiche aggregate degli interventi in formato aperto
-- [Protezione Civile Lazio](https://protezionecivile.regione.lazio.it/)
+- [Protezione Civile Lazio](https://www.regione.lazio.it/protezione-civile)
 - [Comune di Genzano](https://www.comune.genzanodiroma.roma.it/)
 
 Luglio si chiude. Agosto si apre. La Protezione Civile è sempre la stessa: **persone che scelgono di essere al servizio** di chi ne ha bisogno, senza clamori. A tutti, buon lavoro.

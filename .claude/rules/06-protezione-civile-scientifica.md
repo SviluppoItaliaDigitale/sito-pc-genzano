@@ -60,10 +60,12 @@ Il badge `Emergenza` è intenzionalmente raro. Un abuso ne riduce l'impatto comu
 
 | Colore | Significato |
 |---|---|
-| Verde | Nessuna allerta, situazione ordinaria |
-| Giallo | Allerta ordinaria — fenomeni previsti di intensità moderata |
-| Arancione | Allerta elevata — fenomeni intensi con possibili effetti rilevanti |
-| Rosso | Allerta massima — fenomeni molto intensi con rischio elevato per la popolazione |
+| Verde | Nessuna allerta — assenza di fenomeni significativi prevedibili |
+| Giallo | Allerta gialla — criticità ordinaria: fenomeni localizzati di intensità moderata |
+| Arancione | Allerta arancione — criticità moderata: fenomeni diffusi e potenzialmente pericolosi |
+| Rosso | Allerta rossa — criticità elevata: fenomeni molto intensi, con elevata probabilità di danni gravi |
+
+🔴 **Le etichette sono quelle dei bollettini di criticità** (indicazioni operative del Dipartimento della Protezione Civile) e coincidono con `data/codici_colore.yaml`, che alimenta le pagine del sito: giallo = criticità **ordinaria**, arancione = criticità **moderata**, rosso = criticità **elevata**. Non scrivere «allerta elevata» per l'arancione né «allerta massima» per il rosso: è stato corretto il 14/10/2026 qui, nella presentazione del sito, nell'articolo «Allerta gialla: cosa significa» con la versione facile, nel kit e nella scheda per la primaria.
 
 Il codice colore va sempre associato al tipo di rischio (idrogeologico, temporali, vento, neve, ecc.) e all'area geografica interessata.
 Non usare "massima allerta" o "allerta rossa" in modo improprio per fenomeni ordinari.

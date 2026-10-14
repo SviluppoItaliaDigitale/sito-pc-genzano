@@ -56,4 +56,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 **Fonti**
 
 - [Affaritaliani — Roma, quattro incendi a Ferragosto tra città e hinterland](https://www.affaritaliani.it/cronache/ferragosto-di-fuoco-quattro-incendi-in-poche-ore-tra-roma-e-hinterland.html)
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)

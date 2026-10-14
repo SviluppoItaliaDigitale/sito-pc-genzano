@@ -61,7 +61,7 @@ Per il Gruppo Comunale di PC questo è un momento operativo delicato: si chiude 
 ## Per approfondire
 
 - [ARPA Lazio — Meteo](https://www.arpalazio.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Rischi e prevenzione](/rischi-prevenzione/)
 
 In emergenza: **112**.

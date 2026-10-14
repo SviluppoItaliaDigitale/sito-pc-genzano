@@ -52,4 +52,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 **Fonti**
 
 - [RomaToday — Incendi a Roma oggi venerdì 14 agosto 2026](https://www.romatoday.it/cronaca/incendi-roma-oggi-14-agosto-2026.html)
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)

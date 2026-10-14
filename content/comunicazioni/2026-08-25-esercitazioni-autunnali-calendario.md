@@ -72,6 +72,6 @@ La cittadinanza può partecipare alle esercitazioni in diversi modi:
 
 - [Diventare volontari di PC](/comunicazioni/2026-08-20-volontariato-pc-reclutamento-autunno/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In emergenza: **112**.

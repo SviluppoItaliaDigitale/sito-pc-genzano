@@ -56,4 +56,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 **Fonti**
 
 - [Abitare a Roma — Rogo sulla via Ardeatina, il fuoco arriva vicino alle abitazioni: paura al Divino Amore](https://abitarearoma.it/rogo-sulla-via-ardeatina-il-fuoco-arriva-vicino-alle-abitazioni-paura-al-divino-amore/)
-- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Campagna antincendio boschivo — Regione Lazio Protezione Civile](https://www.regione.lazio.it/protezione-civile)

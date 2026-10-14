@@ -87,7 +87,7 @@ Tieni anche questi numeri:
 In emergenza, segui solo le informazioni ufficiali. Vai su questi siti:
 
 - Il sito del Comune di Genzano di Roma
-- Il sito della [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- Il sito della [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - Il sito e i social del nostro Gruppo Comunale
 - Il sito del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 

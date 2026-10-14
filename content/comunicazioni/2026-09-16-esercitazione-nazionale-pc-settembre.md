@@ -73,7 +73,7 @@ La **Regione Lazio** organizza annualmente esercitazioni regionali, spesso focal
 ## Per approfondire
 
 - [Dipartimento di Protezione Civile — Esercitazioni](https://www.protezionecivile.gov.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Calendario esercitazioni autunnali del Gruppo](/comunicazioni/2026-08-25-esercitazioni-autunnali-calendario/)
 
 In emergenza: **112**.

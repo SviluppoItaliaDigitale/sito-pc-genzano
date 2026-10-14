@@ -104,7 +104,7 @@ Il Gruppo non si attiva mai su chiamata diretta dei cittadini: interviene solo s
 
 **Fonti istituzionali:**
 
-- [Regione Lazio — Protezione Civile: campagna antincendio boschivo](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile: campagna antincendio boschivo](https://www.regione.lazio.it/protezione-civile)
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/)
 - [Comune di Nemi](https://comune.nemi.rm.it/)
 

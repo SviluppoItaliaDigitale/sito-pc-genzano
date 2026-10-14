@@ -64,7 +64,7 @@ Una persona anziana sola in casa, al terzo piano senza aria condizionata, durant
 ## Per approfondire
 
 - [Ministero della Salute — Caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore)
-- [Protezione Civile Lazio](https://protezionecivile.regione.lazio.it/)
+- [Protezione Civile Lazio](https://www.regione.lazio.it/protezione-civile)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 
 In caso di sintomi da colpo di calore (vertigini, nausea, confusione, temperatura corporea oltre 39 °C): **112**, subito.

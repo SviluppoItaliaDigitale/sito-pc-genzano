@@ -66,6 +66,6 @@ Un uso improprio di acqua (irrigazione notturna massiva, sprechi ornamentali) in
 
 - [Acea ATO 2](https://www.gruppo.acea.it/) — pronto intervento **800 130 335**
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In caso di emergenza idrica grave o rischio sanitario: **112**.

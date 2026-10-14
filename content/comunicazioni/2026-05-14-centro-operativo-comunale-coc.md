@@ -111,6 +111,6 @@ Fonti istituzionali:
 
 - [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [Dipartimento della Protezione Civile — Sistema nazionale](https://servizio-nazionale.protezionecivile.gov.it/it/).
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile).
 
 Il COC non è solo una sigla tecnica: è la struttura che permette al Comune di coordinare informazioni, risorse e decisioni durante un evento. Conoscerne il funzionamento aiuta i cittadini a seguire le indicazioni corrette e a usare i canali giusti.

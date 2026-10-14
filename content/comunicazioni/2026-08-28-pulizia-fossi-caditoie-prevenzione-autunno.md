@@ -85,7 +85,7 @@ chiamare **il 112** immediatamente.
 
 ## Per approfondire
 
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/)
 - [Comune di Genzano di Roma — Ufficio Tecnico](https://www.comune.genzanodiroma.roma.it/)
 

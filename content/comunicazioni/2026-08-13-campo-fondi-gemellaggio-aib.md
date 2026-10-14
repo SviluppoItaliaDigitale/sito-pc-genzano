@@ -27,7 +27,7 @@ Da **giovedì 13** a **domenica 16 agosto 2026** una squadra del Gruppo — nove
 
 Nell'ambito della campagna AIB 2026 la Regione Lazio ha riorganizzato a **Fondi** un campo base attivo **dal 5 luglio al 18 agosto**, cuore del cosiddetto **gemellaggio**. Qui arrivano colonne di volontari di protezione civile provenienti da altre regioni — Emilia-Romagna, Piemonte, Lombardia — e da organizzazioni nazionali. Le squadre si alternano per rinforzare il dispositivo antincendio del Lazio meridionale nelle settimane di massimo rischio.
 
-I numeri dell'edizione 2026 danno la misura dell'operazione: **circa 1.981 volontari** coinvolti complessivamente, di cui **circa 1.800 provenienti da altre regioni e organizzazioni**. La campagna regionale schiera **oltre 700 mezzi dedicati** e **7 elicotteri** ([Regione Lazio](https://protezionecivile.regione.lazio.it/), [NewTuscia](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)).
+I numeri dell'edizione 2026 danno la misura dell'operazione: **circa 1.981 volontari** coinvolti complessivamente, di cui **circa 1.800 provenienti da altre regioni e organizzazioni**. La campagna regionale schiera **oltre 700 mezzi dedicati** e **7 elicotteri** ([Regione Lazio](https://www.regione.lazio.it/protezione-civile), [NewTuscia](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)).
 
 ## Cosa significa "assistenza al campo"
 
@@ -53,5 +53,5 @@ Negli stessi giorni, le altre squadre del Gruppo hanno continuato a operare sugl
 
 **Fonti**
 
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [NewTuscia — Campagna antincendio boschivo 2026 della Regione Lazio](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)

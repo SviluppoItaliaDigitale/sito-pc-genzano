@@ -3,7 +3,7 @@ name: "🗺️ Cartine meteo extra (animazione Lazio + sinottica Italia)"
 # Rigenera le due cartine meteo in valutazione (pagina /meteo-confronto/):
 #   A) static/images/meteo-lazio-animata.svg   (animazione choropleth Lazio, SVG)
 #   B) static/images/meteo-sinottica-italia.webp (carta sinottica Italia, WebP animata)
-# Dati aperti Open-Meteo (modelli ECMWF, licenza CC-BY, nessuna chiave API).
+# Dati aperti Open-Meteo (licenza CC BY, nessuna chiave API).
 #
 # Isolato dal workflow meteo-lazio.yml (cartina live) per non metterne a rischio
 # l'affidabilità: se la sinottica (matplotlib+cartopy) fallisse, la cartina live

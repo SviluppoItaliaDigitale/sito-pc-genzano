@@ -31,7 +31,7 @@ La scala Beaufort descrive il vento in 13 gradi. Le soglie di attenzione:
 | Burrasca forte | 80-90 km/h | Alberi sradicati, tetti danneggiati |
 | Tempesta | > 90 km/h | Danni rilevanti e diffusi |
 
-In Italia il Servizio Meteorologico dell'Aeronautica e i servizi regionali di protezione civile pubblicano bollettini di vento quando previste raffiche significative. Nel Lazio il riferimento è il [Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/).
+In Italia il Servizio Meteorologico dell'Aeronautica e i servizi regionali di protezione civile pubblicano bollettini di vento quando previste raffiche significative. Nel Lazio il riferimento è il [Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile).
 
 ## Prima dell'evento
 
@@ -122,7 +122,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it).
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/protezione-civile).
 - [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) — bollettini di vigilanza meteorologica.
 

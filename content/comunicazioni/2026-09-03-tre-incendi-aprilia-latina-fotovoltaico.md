@@ -66,7 +66,7 @@ Dove le fiamme raggiungono un impianto fotovoltaico servono cautele in più, e l
 
 ## Perché a settembre succede ancora
 
-La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. Dopo i mesi caldi la vegetazione erbacea è secca e il vento fa il resto: un innesco ai margini di un campo incolto diventa un fronte in pochi minuti. Quanto sia rischiosa la giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del Centro Funzionale Regionale.
+La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. Dopo i mesi caldi la vegetazione erbacea è secca e il vento fa il resto: un innesco ai margini di un campo incolto diventa un fronte in pochi minuti. Quanto sia rischiosa la giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) del Centro Funzionale Regionale.
 
 Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/), ma le attivazioni della SOUP portano le squadre anche fuori dal territorio comunale, dove serve rinforzo. Con queste tre uscite salgono a **137 gli interventi registrati dal 4 aprile**, data di adozione del registro operativo digitale: oltre **450 ore** di servizio e **8.121 chilometri** percorsi. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 

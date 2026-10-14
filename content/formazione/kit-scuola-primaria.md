@@ -219,13 +219,13 @@ La Regione Lazio emette bollettini di allerta meteo con quattro colori:
 | Colore | Significato | Cosa fare |
 |---|---|---|
 | **Verde** | Nessuna allerta | Situazione normale |
-| **Giallo** | Allerta ordinaria | Presta attenzione, evita zone a rischio |
-| **Arancione** | Allerta elevata | Limita gli spostamenti, tieniti informato |
-| **Rosso** | Allerta massima | Segui le indicazioni delle autorità, preparati a un'eventuale evacuazione |
+| **Giallo** | Criticità ordinaria: fenomeni in alcune zone | Presta attenzione, evita zone a rischio |
+| **Arancione** | Criticità moderata: fenomeni diffusi, possono essere pericolosi | Limita gli spostamenti, tieniti informato |
+| **Rosso** | Criticità elevata: fenomeni molto intensi, danni gravi probabili | Segui le indicazioni delle autorità, preparati a un'eventuale evacuazione |
 
 ### Attività: leggiamo un bollettino
 
-Portate in classe un esempio di bollettino di allerta meteo (scaricabile dal sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/)) e analizzatelo insieme:
+Portate in classe un esempio di bollettino di allerta meteo (scaricabile dal sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://www.regione.lazio.it/protezione-civile)) e analizzatelo insieme:
 - Di che colore è l'allerta?
 - Quale zona riguarda?
 - Per quale rischio? (pioggia, vento, neve...)
