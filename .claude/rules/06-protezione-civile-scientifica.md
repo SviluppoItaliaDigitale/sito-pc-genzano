@@ -184,6 +184,18 @@ Il 16 maggio 2026 l'utente ha segnalato che la viabilità è esplicitamente viet
 - Per i comportamenti di autoprotezione, cita sempre fonti ufficiali (DPC, Regione, Comune).
 - Non pubblicare contenuti meteo o di rischio basati su fonti non istituzionali.
 
+## Clima e dati climatici — come se ne scrive (dal 14/10/2026)
+
+🔴 Lezioni della verifica del 14/10/2026 sul dossier «Il clima che cambia i rischi», dove una serie disomogenea e alcune attribuzioni senza fonte erano online da giugno.
+
+- **Serie omogenea o niente confronto.** Per confrontare anni o decenni con l'archivio Open-Meteo si chiede sempre `models=era5_seamless` (ERA5-Land per le temperature, ERA5 per pioggia e vento). Il modello predefinito passa all'IFS dal 2017: con quella serie luglio a Genzano risultava +2,5 °C invece di +1,6 °C. Dettagli in rule 10 (`clima-castelli.yml`) e manuale parte 37.
+- **I dati di una rianalisi sono ricostruiti, non misurati.** Mai «dati reali», «misurati», «letture»: sono valori medi su celle di circa dieci chilometri (25 per la pioggia ERA5). Un termometro in paese può segnare valori diversi, senza dire in che direzione se una fonte non lo dimostra.
+- **Vent'anni di una cella non sono un clima.** Le normali climatologiche dell'Organizzazione meteorologica mondiale sono di trent'anni: i numeri di Genzano si presentano insieme ai rapporti IPCC e Copernicus, non al loro posto. La differenza fra le medie di due decenni non è una velocità di riscaldamento («in dieci anni», «in una generazione»).
+- **IPCC sul Mediterraneo: estati più asciutte e siccità in aumento, non piogge estreme in aumento.** La scheda regionale Europa dell'AR6 prevede l'aumento delle piogge estreme «in tutte le regioni tranne il Mediterraneo». Per l'Italia il CMCC prevede, in estate e in autunno, una precipitazione massima giornaliera maggiore: si cita il CMCC, non l'IPCC, e si scrive che sono proiezioni.
+- **Un evento singolo non si attribuisce al clima** senza uno studio di attribuzione (Vaia, Emilia-Romagna 2023, il maltempo del 4 gennaio 2026 ai Castelli). E non si classifica un fenomeno (downburst, tromba d'aria) se nessuna fonte ufficiale lo ha classificato.
+- **Il clima non cambia «ogni rischio».** Sismico, vulcanico, maremoto, chimico-industriale e nucleare non dipendono dal clima: si scrive «i rischi legati al meteo».
+- **Soglie di caldo.** I bollettini del Ministero della Salute non usano una temperatura uguale per tutti: coprono 27 città, danno un livello da 0 a 3 calcolato per ciascuna, e Genzano non ha un bollettino suo (il più vicino è Roma). Il bollettino di Roma non si «corregge» per l'altitudine.
+
 ## Gerarchia delle fonti per la comunicazione del rischio e dell'emergenza
 
 Il Gruppo si attiene a un quadro di fonti **gerarchico**: in caso di conflitto teorico, prevale la fonte di livello superiore. Specifiche complete in `MANUALE-SITO.md` Parte 13.9.
