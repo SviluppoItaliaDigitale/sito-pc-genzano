@@ -1,6 +1,6 @@
 ---
 title: "Primo soccorso in famiglia: i gesti base che tutti dovremmo conoscere"
-date: 2026-10-14
+date: 2026-10-14T00:01:00+02:00
 description: "Dai tagli alle scottature, dalle ustioni al trauma da caduta: i gesti di primo soccorso base che ogni adulto dovrebbe saper fare."
 badge: "Prevenzione"
 priorita: "normale"
