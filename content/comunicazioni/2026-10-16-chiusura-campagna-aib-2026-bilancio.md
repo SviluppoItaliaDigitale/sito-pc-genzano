@@ -53,7 +53,7 @@ Il picco è nel primo pomeriggio, fra le 14 e le 16: 26 interventi. Fra mezzogio
 
 Le squadre hanno lavorato in **16 comuni**. Oltre a Genzano di Roma: Albano Laziale, Ariccia, Lanuvio, Nemi, Velletri, Lariano, Rocca di Papa, Grottaferrata, Marino, Roma, Pomezia, Ardea, Aprilia, Nettuno e Latina. Fuori dal nostro territorio le squadre hanno lavorato spesso alla Falcognana, a Pomezia e nell'area pontina.
 
-La gran parte delle uscite, 72 su 86, è partita su attivazione della **SOUP**, la Sala Operativa Unica Permanente della Regione Lazio, che coordina le squadre sul territorio regionale. Sul posto il Gruppo ha lavorato con i **Vigili del Fuoco** e, a seconda dei casi, con altri gruppi di volontariato, la Polizia Locale e i Carabinieri.
+La gran parte delle uscite, 72 su 86, è partita su attivazione della **SOUP**, la Sala Operativa Unificata Permanente della Regione Lazio, che coordina le squadre sul territorio regionale. Sul posto il Gruppo ha lavorato con i **Vigili del Fuoco** e, a seconda dei casi, con altri gruppi di volontariato, la Polizia Locale e i Carabinieri.
 
 A metà agosto una squadra del Gruppo ha anche prestato servizio al [campo base del gemellaggio antincendio di Fondi](/comunicazioni/2026-08-13-campo-fondi-gemellaggio-aib/), a supporto dei volontari impegnati nel sud pontino.
 
