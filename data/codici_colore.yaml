@@ -11,7 +11,7 @@ codici:
     icona: "bi-shield-check"
 
   - livello: "gialla"
-    titolo: "Allerta Gialla — Livello di Attenzione"
+    titolo: "Allerta Gialla — Criticità ordinaria"
     colore_bg: "#ffc107"
     colore_testo: "#000"
     significato: "Criticità ordinaria. Sono possibili fenomeni meteorologici localizzati e di intensità moderata."
@@ -19,7 +19,7 @@ codici:
     icona: "bi-exclamation-triangle"
 
   - livello: "arancione"
-    titolo: "Allerta Arancione — Livello di Preallarme"
+    titolo: "Allerta Arancione — Criticità moderata"
     colore_bg: "#fd7e14"
     colore_testo: "#000"  # nero su arancione = 8.17:1 (WCAG AA). Bianco su #fd7e14 = 2.57:1 FAIL (rule 03)
     significato: "Criticità moderata. I fenomeni previsti possono essere diffusi e potenzialmente pericolosi."
@@ -27,7 +27,7 @@ codici:
     icona: "bi-exclamation-triangle-fill"
 
   - livello: "rossa"
-    titolo: "Allerta Rossa — Livello di Allarme"
+    titolo: "Allerta Rossa — Criticità elevata"
     colore_bg: "#dc3545"
     colore_testo: "#fff"
     significato: "Criticità elevata. I fenomeni previsti sono molto intensi e con elevata probabilità di causare danni gravi."

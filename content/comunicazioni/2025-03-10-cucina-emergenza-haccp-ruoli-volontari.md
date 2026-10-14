@@ -25,9 +25,9 @@ Tutti i volontari che operano in cucina, a qualsiasi titolo, devono avere una fo
 - **HACCP** (Hazard Analysis and Critical Control Points — analisi dei rischi e punti critici di controllo). L'operatore deve essere formato alla gestione corretta degli alimenti, dei luoghi di stoccaggio, della preparazione e della conservazione dall'arrivo della merce fino alla somministrazione. **Chi ha in corso malattie trasmissibili** (anche una semplice influenza) **non può operare in cucina**.
 - **Addetto antincendio**. Verifica la presenza e l'idoneità degli estintori in cucina: CO₂ per fuochi elettrici, coperta antifiamma per le pentole in caso di fiammata.
 - **Addetto al Primo Soccorso**. Controlla la cassetta di Primo Soccorso di tipo B con allegato 1 (il contenuto minimo è fissato dal D.M. 388/2003, in attuazione dell'art. 45 del D.Lgs. 81/2008).
-- **Installatore qualificato GPL**. Verifica la corretta installazione e lo stoccaggio delle bombole secondo le norme UNI vigenti sugli impianti a GPL non alimentati da rete di distribuzione.
+- **Installatore qualificato GPL**. Verifica la corretta installazione delle bombole. Per le cucine da campo all'aperto, il riferimento è la [UNI/TS 11426:2021](https://store.uni.com/uni-ts-11426-2021). Vale per gli impianti non alimentati da rete di distribuzione, sotto strutture aperte e ventilate.
 
-> **Nota di aggiornamento (ottobre 2026).** La norma UNI/TR 11426:2011, citata nella prima versione di questo articolo, è stata ritirata il 14 ottobre 2021 e sostituita da un documento più recente. Per l'edizione in vigore si rimanda al [catalogo online UNI](https://store.uni.com/).
+> **Nota di aggiornamento (ottobre 2026).** La norma UNI/TR 11426:2011, citata nella prima versione di questo articolo, è stata ritirata il 14 ottobre 2021. Dalla stessa data è in vigore la [UNI/TS 11426:2021](https://store.uni.com/uni-ts-11426-2021). Riguarda lo stesso argomento: impianti GPL per manifestazioni temporanee all'aperto, non alimentati da rete. Il testo la cita ora al posto del documento ritirato. Per le cucine in strutture chiuse vale una normativa diversa, fuori dal campo di questa norma.
 
 ## I ruoli in cucina
 
