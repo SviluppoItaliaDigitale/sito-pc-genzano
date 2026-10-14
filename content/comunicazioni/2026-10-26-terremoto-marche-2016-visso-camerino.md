@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **dieci anni esatti**. Erano le **21:18 del 26 ottobre 2016**, quando una scossa di **magnitudo 5.9** della scala Richter scosse il **Maceratese**, in **Marche**. Esattamente **due mesi dopo Amatrice** (24 agosto 2016, magnitudo 6.0, oltre 300 vittime), la sequenza sismica del **Centro Italia** tornava attiva con grande violenza, spostandosi più a nord rispetto all'epicentro originario laziale-abruzzese.
+Sono passati **dieci anni esatti**. Erano le **21:18 del 26 ottobre 2016**, quando una scossa di **magnitudo 5.9** della scala Richter colpì il **Maceratese**, nelle **Marche**. Esattamente **due mesi dopo Amatrice** (24 agosto 2016, magnitudo 6.0, oltre 300 vittime), la sequenza sismica del **Centro Italia** tornava attiva con grande violenza, spostandosi più a nord rispetto all'epicentro originario laziale-abruzzese.
 
 {{< foto src="/images/2026-evento-norcia-2016-basilica-crollata.webp"
          alt="La basilica di San Benedetto a Norcia crollata dopo il terremoto del 30 ottobre 2016"
@@ -78,7 +78,7 @@ Per chi vive in zona sismica — e a Genzano di Roma, classificato **2B**, vale 
 
 1. **Conoscere la classe sismica della propria casa**. Edifici post-2008 (NTC 2008) o post-2018 (NTC 2018) sono progettati antisismicamente. Edifici precedenti possono essere stati o non essere stati adeguati.
 2. **Verificare la vulnerabilità dell'edificio**: è un'analisi tecnica che un ingegnere strutturista può eseguire (costo significativo ma necessario per chi vive in zone di sismicità medio-alta). Per gli edifici scolastici, il dato è pubblico (vedi anche [San Giuliano di Puglia 2002](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)).
-3. **Sapere riconoscere i segnali**: dopo una scossa, le **crepe nei muri di sostegno**, gli **infissi che non chiudono più**, **tegole o intonaci caduti**, **fessure orizzontali sulle pareti** sono segnali di compromissione strutturale. La **verifica di agibilità** spetta ai Vigili del Fuoco e ai tecnici comunali — non bisogna rientrare prima.
+3. **Saper riconoscere i segnali**: dopo una scossa, le **crepe nei muri di sostegno**, gli **infissi che non chiudono più**, **tegole o intonaci caduti**, **fessure orizzontali sulle pareti** sono segnali di compromissione strutturale. La **verifica di agibilità** spetta ai Vigili del Fuoco e ai tecnici comunali — non bisogna rientrare prima.
 4. **Comportamenti durante la scossa**: sotto il tavolo robusto, lontano da finestre e mobili alti, mai ascensore. Vedi [Friuli 1976: nascita della protezione civile italiana](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/) per il dettaglio operativo.
 
 ## Genzano e la sismicità della macroarea
