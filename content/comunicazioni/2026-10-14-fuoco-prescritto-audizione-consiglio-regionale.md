@@ -20,13 +20,15 @@ social_punti:
 draft: false
 ---
 
-La **XII Commissione** del Consiglio regionale del Lazio — Tutela del territorio, erosione costiera, emergenze e grandi rischi, protezione civile, ricostruzione — ha svolto il **13 ottobre 2026** un'audizione sulla reintroduzione della disciplina del **fuoco prescritto** nella normativa regionale. Il fuoco prescritto è la tecnica di applicazione controllata e pianificata del fuoco su superfici individuate, per ridurre la biomassa vegetale infiammabile e prevenire incendi boschivi più estesi. **Non è ancora una norma**: la raccontiamo perché riguarda la prevenzione degli incendi boschivi sul nostro territorio, la Zona 9 AIB di cui fa parte Genzano di Roma.
+La **XII Commissione** del Consiglio regionale del Lazio — Tutela del territorio, erosione costiera, emergenze e grandi rischi, protezione civile, ricostruzione — ha svolto il **13 ottobre 2026** un'audizione sulla disciplina del **fuoco prescritto**: la tecnica di applicazione controllata e pianificata del fuoco su superfici individuate, per ridurre la biomassa vegetale infiammabile e prevenire incendi boschivi più estesi. L'incontro, promosso dal consigliere Salvatore La Penna con il titolo di "audizione sulla reintroduzione della norma", non ha prodotto nessuna decisione formale: la raccontiamo perché riguarda la prevenzione degli incendi boschivi sul nostro territorio, la Zona 9 AIB di cui fa parte Genzano di Roma.
 
 ## Che cosa si è discusso
 
 L'audizione, condotta dal presidente **Nazzareno Neri**, è stata proposta dal consigliere **Salvatore La Penna** (Pd). Hanno partecipato l'assessore alle Politiche abitative, case popolari, politiche del mare e protezione civile **Pasquale Ciacciarelli**, il direttore regionale Emergenza, Protezione Civile e NUE 112 **Massimo La Pietra** e il dirigente regionale dell'area Geodiversità e monumenti naturali **Diego Montero**. C'erano anche rappresentanti di associazioni del territorio e i direttori e presidenti di diversi enti parco e riserve naturali del Lazio.
 
-Il consigliere La Penna ha ricordato che una norma sul fuoco prescritto esisteva già: il **comma 121**, poi abrogato dopo le modifiche all'articolo 64-bis della **legge regionale 39/2002**. Una base per ripartire resta, secondo La Penna: la delibera di Giunta regionale **228/2023** definisce già criteri d'intervento, aree bersaglio, fattori precauzionali e pianificazione locale. Su questa base si potrebbe costruire, nei prossimi mesi, la reintroduzione della norma, utile in particolare per i territori del Lazio a maggiore rischio di incendio, come quelli della provincia di Latina. Il consigliere ha indicato Toscana, Puglia, Piemonte e Campania tra le regioni che già applicano la tecnica.
+Il consigliere La Penna ha ricordato, nel suo intervento, una vicenda legislativa precedente legata al **comma 121** e alle modifiche all'articolo 64-bis della **legge regionale 39/2002**, auspicando che una nuova norma non venga "rimossa o ritoccata" come accaduto in passato. Una base per ripartire resta, secondo La Penna: la delibera di Giunta regionale **228/2023** — che approva il Piano regionale AIB 2023-2025 — definisce già criteri d'intervento, aree bersaglio, fattori precauzionali e pianificazione locale. Il consigliere ha indicato Toscana, Puglia, Piemonte e Campania tra le regioni che già applicano la tecnica, e ha segnalato come prioritari i territori del Lazio a maggiore rischio di incendio, come quelli della provincia di Latina.
+
+Il testo coordinato vigente della legge regionale 39/2002, consultabile sul sito del Consiglio regionale, mostra oggi l'**articolo 64-bis** ancora in vigore: fu inserito dall'articolo 9, comma 121, della legge regionale 19/2022, definisce il fuoco prescritto e impone alla Giunta di adottare un regolamento attuativo entro 30 giorni. Lo stesso testo riporta che la legge regionale 20/2024 ha poi modificato anche l'articolo 64, comma 2, lettera g), sulle modalità operative del fuoco prescritto nel piano regionale antincendi. Non risulta però, dalle fonti consultate, che il regolamento attuativo previsto dal comma 3 dell'articolo 64-bis sia stato effettivamente adottato: un punto che l'audizione lascia aperto e che la vicenda raccontata da La Penna, più complessa di come la riportiamo qui, non chiarisce del tutto.
 
 Il dirigente Montero ha richiamato l'uso del fuoco prescritto in altri paesi: Stati Uniti, Australia, Sudafrica e, in Europa, Spagna, Francia, Portogallo e Scandinavia. Ha segnalato che la tecnica richiede condizioni climatiche adatte, il rispetto della biodiversità e dei periodi di nidificazione, e il rispetto delle aree protette.
 
@@ -46,7 +48,7 @@ L'audizione si è conclusa senza decisioni formali. Il presidente Neri ha invita
 
 ## Perché ci interessa
 
-Genzano di Roma è nella **Zona 9 AIB** dei Castelli Romani: la prevenzione degli incendi boschivi riguarda direttamente il territorio su cui opera il nostro Gruppo. Il fuoco prescritto — come tecnica, non come norma — è già raccontato nel nostro dossier [«Il fuoco buono»](/dossier/il-fuoco-buono/), che ne spiega il funzionamento e i limiti. Le regole sugli abbruciamenti e i comportamenti da seguire in estate restano quelle della nostra scheda sul [rischio incendio](/rischi-prevenzione/rischio-incendio/): un'eventuale nuova norma regionale non cambia nulla, per ora, in quelle indicazioni.
+Genzano di Roma è nella **Zona 9 AIB** dei Castelli Romani: la prevenzione degli incendi boschivi riguarda direttamente il territorio su cui opera il nostro Gruppo. Il fuoco prescritto come tecnica è già raccontato nel nostro dossier [«Il fuoco buono»](/dossier/il-fuoco-buono/), che ne spiega il funzionamento e i limiti. Le regole sugli abbruciamenti e i comportamenti da seguire in estate restano quelle della nostra scheda sul [rischio incendio](/rischi-prevenzione/rischio-incendio/): quanto accadrà in Consiglio regionale su questa materia non cambia, per ora, quelle indicazioni.
 
 ## Per approfondire
 
@@ -59,4 +61,5 @@ Genzano di Roma è nella **Zona 9 AIB** dei Castelli Romani: la prevenzione degl
 **Fonti istituzionali:**
 
 - [Consiglio regionale del Lazio — Prevenzione antincendio, audizione sulla reintroduzione della norma sul fuoco prescritto](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=newsDettaglio&id=comm-4197)
+- [Legge regionale 39/2002, testo coordinato vigente — art. 64 e 64-bis](https://www.consiglio.regione.lazio.it/?id=8715&sv=vigente&vw=leggiregionalidettaglio)
 - [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
