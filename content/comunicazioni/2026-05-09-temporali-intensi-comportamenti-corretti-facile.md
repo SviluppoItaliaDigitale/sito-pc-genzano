@@ -100,7 +100,7 @@ Il 112 risponde sempre. È gratuito.
 
 ## Dove trovare le allerte meteo
 
-Il **CFR Lazio** (il Centro Funzionale Regionale del Lazio) pubblica ogni giorno le allerte meteo. Puoi leggerle sul [sito della Protezione Civile Regione Lazio](https://protezionecivile.regione.lazio.it/).
+Il **CFR Lazio** (il Centro Funzionale Regionale del Lazio) pubblica ogni giorno le allerte meteo. Puoi leggerle sul [sito della Protezione Civile Regione Lazio](https://www.regione.lazio.it/protezione-civile).
 
 Le allerte usano 4 colori:
 

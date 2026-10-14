@@ -82,6 +82,6 @@ Il volontariato di protezione civile, come il nostro Gruppo, contribuisce soprat
 ## Per approfondire — fonti istituzionali
 
 - [DPC — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/) (Dipartimento della Protezione Civile).
-- [Regione Lazio — Bollettino di pericolosità da incendi boschivi](https://protezionecivile.regione.lazio.it/) (Centro Funzionale Regionale).
+- [Regione Lazio — Bollettino di pericolosità da incendi boschivi](https://www.regione.lazio.it/protezione-civile) (Centro Funzionale Regionale).
 - [Arma dei Carabinieri — Carabinieri Forestali](https://www.carabinieri.it/) — tutela del patrimonio forestale.
 - [DPC, *La protezione civile in Italia. Testo per i docenti scolastici* (2020)](https://www.protezionecivile.gov.it/it/pubblicazione/la-protezione-civile-italia-testo-istituzionale-di-riferimento-i-docenti-scolastici/) — il volume istituzionale da cui è tratta parte di questa scheda.

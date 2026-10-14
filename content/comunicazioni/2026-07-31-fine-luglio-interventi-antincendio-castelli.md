@@ -80,5 +80,5 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Protezione Civile Regione Lazio](https://protezionecivile.regione.lazio.it/)
+- [Protezione Civile Regione Lazio](https://www.regione.lazio.it/protezione-civile)
 - [Vigili del Fuoco](https://www.vigilfuoco.it/)

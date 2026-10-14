@@ -36,6 +36,6 @@ codici:
 
 # Fonti ufficiali
 fonti:
-  bollettino_regionale: "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti"
+  bollettino_regionale: "https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti"
   dpc_nazionale: "https://www.protezionecivile.gov.it/it/"
   it_alert: "https://www.it-alert.it/it/"

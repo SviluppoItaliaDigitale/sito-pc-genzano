@@ -66,4 +66,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: intervie
 
 **Fonti istituzionali**
 
-- [Protezione Civile — Regione Lazio](https://protezionecivile.regione.lazio.it/)
+- [Protezione Civile — Regione Lazio](https://www.regione.lazio.it/protezione-civile)

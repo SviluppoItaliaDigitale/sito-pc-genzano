@@ -61,7 +61,7 @@ Alle otto e mezza parte una seconda squadra, in direzione opposta: l'**autocarro
 
 In entrambe le chiamate di Campoverde le fiamme visibili erano già state abbattute. Il lavoro lungo è quello che viene dopo: bagnare a fondo il terreno, rivoltare la cenere, controllare che nessuna brace riparta con il vento. Un canneto è pieno di cavità e di materiale secco che cova sotto la superficie. Lasciarlo a metà significa tornare il giorno dopo.
 
-Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio, ma le attivazioni della SOUP smistano le squadre anche fuori dal territorio comunale. La campagna antincendio boschivo copre l'estate e arriva fino all'autunno: quanto sia rischiosa ogni giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del Centro Funzionale Regionale.
+Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio, ma le attivazioni della SOUP smistano le squadre anche fuori dal territorio comunale. La campagna antincendio boschivo copre l'estate e arriva fino all'autunno: quanto sia rischiosa ogni giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) del Centro Funzionale Regionale.
 
 Con queste quattro uscite salgono a **134 gli interventi registrati dal 4 aprile**, data di adozione del registro operativo digitale: quasi **444 ore** di servizio e **7.955 chilometri** percorsi. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 

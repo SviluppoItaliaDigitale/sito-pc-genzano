@@ -55,7 +55,7 @@ Il sistema di allertamento è disciplinato dalla **Direttiva del 27 febbraio 200
 - **Livello nazionale**: il [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) e il Centro Funzionale Centrale valutano i fenomeni su scala italiana.
 - **Livello regionale**: ogni regione ha un **Centro Funzionale Decentrato** che traduce la previsione meteo in scenari di rischio per il proprio territorio.
 
-Per il nostro territorio il riferimento è il [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+Per il nostro territorio il riferimento è il [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 
 ### Perché due livelli?
 
@@ -120,7 +120,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
-- [Centro Funzionale Regionale Lazio — Bollettini](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- [Centro Funzionale Regionale Lazio — Bollettini](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 - [Servizio Meteorologico dell'Aeronautica Militare](https://www.meteoam.it/).
 - [CNR-ISAC — Istituto di Scienze dell'Atmosfera e del Clima](https://www.isac.cnr.it/).
 - [ECMWF — Centro Europeo Previsioni Meteo](https://www.ecmwf.int/).

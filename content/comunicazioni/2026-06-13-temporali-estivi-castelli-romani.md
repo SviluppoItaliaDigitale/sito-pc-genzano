@@ -105,7 +105,7 @@ In Italia ci sono circa **1,5 milioni di fulmini all'anno**; i decessi per fulmi
 - Articolo: [Allagamenti urbani — cosa fare](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
 - Articolo: [Temporali intensi — comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
-- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/)
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/protezione-civile)
 - [Aeronautica Militare — Meteo](https://www.meteoam.it/)
 - Divulgativo: [Geopop — Cosa fare in caso di fulmini e dove sono pericolosi: le linee guida della Protezione Civile](https://www.geopop.it/cosa-fare-in-caso-di-fulmini-e-dove-sono-pericolosi-linee-guida-della-protezione-civile-in-casa-e-allaperto/)
 

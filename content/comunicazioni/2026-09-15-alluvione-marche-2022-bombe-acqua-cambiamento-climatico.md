@@ -71,7 +71,7 @@ Negli anni successivi all'alluvione del 2022:
 
 Per chi vive in **zone collinari, lungo corsi d'acqua minori, in aree urbane con drenaggio insufficiente**, le regole base sono:
 
-1. **Conoscere i livelli di allerta**: verde, giallo, arancione, rosso. Si trovano sul portale **del Centro Funzionale Regionale** della propria Regione (per il Lazio: [protezionecivile.regione.lazio.it](https://protezionecivile.regione.lazio.it/)).
+1. **Conoscere i livelli di allerta**: verde, giallo, arancione, rosso. Si trovano sul portale **del Centro Funzionale Regionale** della propria Regione (per il Lazio: [regione.lazio.it/protezione-civile](https://www.regione.lazio.it/protezione-civile)).
 2. **Non sottovalutare l'allerta gialla**: non è "gialla" che vuol dire "non succede niente". Significa che è **possibile** un fenomeno significativo localizzato. È il livello con cui sono accadute molte tragedie (incluso il 2022 marchigiano).
 3. **Tenere il cellulare attivo e con la suoneria alta** durante temporali notturni. **IT-alert** può svegliarvi.
 4. **In caso di pioggia molto forte**: mai entrare in scantinati o garage allagati, mai attraversare strade allagate (ne abbiamo parlato in [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)), salire ai piani alti dell'edificio.

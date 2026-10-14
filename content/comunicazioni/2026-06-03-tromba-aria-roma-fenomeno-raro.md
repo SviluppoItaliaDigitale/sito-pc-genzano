@@ -84,7 +84,7 @@ Per le **emergenze** chiama sempre il **112**.
 
 **Fonti istituzionali:**
 
-- [Centro Funzionale Regionale Lazio — bollettini e allertamenti](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — allerte meteo ufficiali.
+- [Centro Funzionale Regionale Lazio — bollettini e allertamenti](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) — allerte meteo ufficiali.
 
 **Approfondimento divulgativo:**
 

@@ -53,5 +53,5 @@ La risposta è soprattutto **organizzativa e preventiva**:
 ## Per approfondire — fonti istituzionali
 
 - [DPC — Allertamento meteo-idrogeologico e idraulico](https://www.protezionecivile.gov.it/it/) (Dipartimento della Protezione Civile).
-- [Regione Lazio — Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/) — avvisi meteo per neve e gelate.
+- [Regione Lazio — Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile) — avvisi meteo per neve e gelate.
 - [DPC, *La protezione civile in Italia. Testo per i docenti scolastici* (2020)](https://www.protezionecivile.gov.it/it/pubblicazione/la-protezione-civile-italia-testo-istituzionale-di-riferimento-i-docenti-scolastici/).

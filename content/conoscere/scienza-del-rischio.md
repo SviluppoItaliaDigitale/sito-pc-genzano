@@ -68,5 +68,5 @@ Questo si lega al modello del rischio **R = Pericolosità × Vulnerabilità × E
 - [INGV](https://www.ingv.it/) — sorveglianza sismica e vulcanica.
 - [CNR-IRPI](https://www.irpi.cnr.it/) — ricerca su frane e alluvioni.
 - [ISPRA](https://www.isprambiente.gov.it/) — dati territoriali e ambientali.
-- [Regione Lazio — Centro Funzionale Regionale](https://protezionecivile.regione.lazio.it/) — bollettini e avvisi.
+- [Regione Lazio — Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile) — bollettini e avvisi.
 - [DPC, *La protezione civile in Italia. Testo per i docenti scolastici* (2020)](https://www.protezionecivile.gov.it/it/pubblicazione/la-protezione-civile-italia-testo-istituzionale-di-riferimento-i-docenti-scolastici/).

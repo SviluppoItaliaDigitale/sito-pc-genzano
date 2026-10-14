@@ -96,4 +96,4 @@ Conta i secondi tra il lampo e il tuono. Dividi per 3. Ottieni la distanza in km
 - [Allagamenti urbani: cosa fare](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
 - [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)
 - [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
-- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/)
+- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/protezione-civile)

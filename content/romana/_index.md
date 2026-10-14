@@ -74,7 +74,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 <li><strong>Nu</strong> vă apropiați de râuri sau torenți</li>
 <li>Mutați obiectele de valoare și aparatele electrice la etaje superioare</li>
 </ul>
-<p>Verificați alerta meteorologică oficială pe site-ul <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Regiunii Lazio</a>.</p>
+<p>Verificați alerta meteorologică oficială pe site-ul <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Regiunii Lazio</a>.</p>
 </div>
 
 <div class="en-card">

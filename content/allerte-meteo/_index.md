@@ -224,7 +224,7 @@ Per sviluppatori e altri enti: lo stato di allerta è disponibile anche come [fe
 
 ## Fonti ufficiali
 
-- [Bollettini e allertamenti — Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
+- [Bollettini e allertamenti — Regione Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/)
 - [Radar nazionale precipitazioni](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/)
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home)

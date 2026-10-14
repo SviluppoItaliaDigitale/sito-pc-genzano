@@ -76,7 +76,7 @@ Accanto al 112, tieni in agenda:
 I **canali ufficiali** da seguire in emergenza:
 
 - Sito del Comune
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Centro Funzionale](https://www.regione.lazio.it/protezione-civile)
 - Sito e social del nostro Gruppo Comunale
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 

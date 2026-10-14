@@ -27,7 +27,7 @@ Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Prote
 
 ### Dove trovo il bollettino ufficiale?
 
-Il bollettino ufficiale è pubblicato sul sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti). Lo stato dell'allerta è richiamato anche nella barra della [homepage](/).
+Il bollettino ufficiale è pubblicato sul sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti). Lo stato dell'allerta è richiamato anche nella barra della [homepage](/).
 
 ### Con allerta gialla devo restare a casa?
 

@@ -35,7 +35,7 @@ L'allerta meteo non è una previsione del tempo. È una valutazione di **critici
 | Ente | Ruolo | Dove consultare |
 |---|---|---|
 | **Dipartimento Protezione Civile (DPC)** | Previsioni e indirizzi nazionali; coordinamento del Sistema Nazionale | [protezionecivile.gov.it](https://www.protezionecivile.gov.it/) |
-| **Centro Funzionale Regionale Lazio** | Bollettino di criticità per le 7 zone di allerta del Lazio | [Bollettini Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) |
+| **Centro Funzionale Regionale Lazio** | Bollettino di criticità per le 7 zone di allerta del Lazio | [Bollettini Regione Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) |
 | **Comune di Genzano di Roma** | Recepimento bollettino + attivazione COC | Sito istituzionale del Comune |
 
 Sul nostro sito la barra in cima alla [homepage](/) mostra **il livello attuale** per Genzano, letto direttamente dal bollettino regionale e aggiornato automaticamente. Per la pagina con tutti i dettagli vedi [Allerte meteo](/allerte-meteo/).

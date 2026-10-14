@@ -78,7 +78,7 @@ In emergenza idraulica urbana, il Gruppo Comunale di PC:
 ## Per approfondire
 
 - [Pulizia fossi e caditoie — prevenzione](/comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno/)
-- [Regione Lazio — Piano di Assetto Idrogeologico](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Piano di Assetto Idrogeologico](https://www.regione.lazio.it/protezione-civile)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
 
 In emergenza: **112**.

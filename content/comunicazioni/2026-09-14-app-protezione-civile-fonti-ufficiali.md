@@ -43,7 +43,7 @@ In un mondo saturo di informazioni, **conoscere le fonti ufficiali** è essenzia
 ## I riferimenti — Regione Lazio
 
 ### Regione Lazio — Protezione Civile
-- sito: [protezionecivile.regione.lazio.it](https://protezionecivile.regione.lazio.it/)
+- sito: [regione.lazio.it/protezione-civile](https://www.regione.lazio.it/protezione-civile)
 - bollettini di criticità e allerte meteo;
 - Centro Funzionale Regionale.
 

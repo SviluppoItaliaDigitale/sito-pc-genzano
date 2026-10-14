@@ -75,7 +75,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 <li><strong>Ne</strong> proksimiĝu al riveroj aŭ torentoj</li>
 <li>Movu valoraĵojn kaj elektrajn aparatojn al pli altaj etaĝoj</li>
 </ul>
-<p>Konsultu la oficialan veteralarmon ĉe la retejo de la <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Regiono Lazio</a>.</p>
+<p>Konsultu la oficialan veteralarmon ĉe la retejo de la <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Regiono Lazio</a>.</p>
 </div>
 
 <div class="en-card">

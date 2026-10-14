@@ -39,7 +39,7 @@ Questi canali danno informazioni sicure.
 
 ## I canali ufficiali per il Lazio
 
-**La Protezione Civile Lazio** pubblica le allerte meteo. Il sito è protezionecivile.regione.lazio.it.
+**La Protezione Civile Lazio** pubblica le allerte meteo. Il sito è regione.lazio.it/protezione-civile.
 
 **ARPA Lazio** controlla l'aria e l'ambiente nel territorio.
 

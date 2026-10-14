@@ -57,7 +57,7 @@ I volontari si turnano per coprire tutto il mese. Sono presenti agli eventi in p
 
 ## Dove trovare informazioni
 
-- [Protezione Civile Regione Lazio](https://protezionecivile.regione.lazio.it/)
+- [Protezione Civile Regione Lazio](https://www.regione.lazio.it/protezione-civile)
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/)
 
 Se c'è un'emergenza chiama il **112**. Per notizie aggiornate leggi questo sito o il canale Telegram del Gruppo.

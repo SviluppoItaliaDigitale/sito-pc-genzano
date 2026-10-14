@@ -51,11 +51,11 @@ La Regione Lazio ha competenze rilevanti su pianificazione, prevenzione, allerta
 
 I riferimenti principali sono:
 
-- [Direzione Protezione Civile Lazio — Normative](https://protezionecivile.regione.lazio.it/direzione/normative) — pagina ufficiale con normativa nazionale e regionale, regolamenti, delibere, circolari, protocolli e direttive.
+- [Direzione Protezione Civile Lazio — Normative](https://www.regione.lazio.it/protezione-civile/normativa) — pagina ufficiale con normativa nazionale e regionale, regolamenti, delibere, circolari, protocolli e direttive.
 - [L.R. 26 febbraio 2014, n. 2](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9264&sv=vigente) — disciplina il sistema integrato regionale di protezione civile.
-- [DGR 26 novembre 2019, n. 865](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf) — suddivide il Lazio in zone di allerta meteo-idrogeologica. **Genzano di Roma rientra nella Zona F — Bacini Costieri Sud**.
-- [Bollettini di criticità e avvisi](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — pubblicati dal Centro Funzionale Regionale.
-- [Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/) — sito istituzionale con direttive, bandi, piani e modulistica.
+- [DGR 26 novembre 2019, n. 865](https://www.regione.lazio.it/sites/default/files/box-allegati-protezione-civile/2026/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019.pdf) — suddivide il Lazio in zone di allerta meteo-idrogeologica. **Genzano di Roma rientra nella Zona F — Bacini Costieri Sud**.
+- [Bollettini di criticità e avvisi](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) — pubblicati dal Centro Funzionale Regionale.
+- [Agenzia Regionale di Protezione Civile](https://www.regione.lazio.it/protezione-civile) — sito istituzionale con direttive, bandi, piani e modulistica.
 
 ## Standard tecnici internazionali (ISO)
 
@@ -87,7 +87,7 @@ Consulta sempre fonti ufficiali e aggiornate:
 - [Normattiva](https://www.normattiva.it/) — banca dati delle leggi italiane con testo vigente.
 - [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — pubblicazione ufficiale degli atti normativi.
 - [Dipartimento della Protezione Civile — normativa](https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/)
-- [Regione Lazio — Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Agenzia Regionale di Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Consiglio Regionale del Lazio — banca dati delle leggi regionali](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionali)
 
 ## Vedi anche

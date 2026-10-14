@@ -10,7 +10,7 @@
 {{- $vB := "" -}}{{- with .Site.Data.meteo_sinottica }}{{ with .aggiornato }}{{ $vB = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 
 <h2 id="cartina-animata" style="color:#003366"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Cartina animata del Lazio e carta sinottica dell'Italia</h2>
-<p>Due viste complementari, una nostra elaborazione su dati aperti Open-Meteo (modelli ECMWF), aggiornate automaticamente: l'<strong>animazione</strong> delle prossime 72 ore sul Lazio e la <strong>carta sinottica</strong> dell'Italia con precipitazioni, pressione e correnti.</p>
+<p>Due viste complementari, una nostra elaborazione su dati aperti Open-Meteo, aggiornate automaticamente: l'<strong>animazione</strong> delle prossime 72 ore sul Lazio e la <strong>carta sinottica</strong> dell'Italia con precipitazioni, pressione e correnti.</p>
 
 <div class="meteo-confronto">
   <div class="meteo-confronto-col">
@@ -18,7 +18,7 @@
     <figure>
       <img src="{{ $svgA }}{{ $vA }}" loading="lazy"
            alt="Animazione della previsione del Lazio per le prossime 72 ore: la temperatura e il cielo previsti nelle cinque province e a Genzano di Roma cambiano fotogramma dopo fotogramma, a passo di sei ore.">
-      <figcaption>Evoluzione della temperatura e del cielo previsti nel Lazio, frame ogni 6 ore. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati Open-Meteo (modelli ECMWF).</figcaption>
+      <figcaption>Evoluzione della temperatura e del cielo previsti nel Lazio, frame ogni 6 ore. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati Open-Meteo.</figcaption>
       <div class="cartina-azioni">
         <a class="btn btn-sm btn-outline-primary" href="{{ $svgA }}{{ $vA }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica</a>
         <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $svgA }}{{ $vA }}" data-title="Animazione meteo del Lazio — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
@@ -32,7 +32,7 @@
     <figure>
       <img src="{{ $webpB }}{{ $vB }}" loading="lazy"
            alt="Carta sinottica animata dell'Italia e del Mediterraneo centrale per le prossime 72 ore: temperatura a 850 hPa a colori, pressione al livello del mare con isobare nere, geopotenziale a 500 hPa con linee viola, vento a 500 hPa con barbe; Genzano di Roma è indicata da una stella.">
-      <figcaption>Carta sinottica in stile professionale: campo termico, isobare, saccature in quota e corrente a getto. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati Open-Meteo (modelli ECMWF).</figcaption>
+      <figcaption>Carta sinottica in stile professionale: campo termico, isobare, saccature in quota e corrente a getto. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati Open-Meteo.</figcaption>
       <div class="cartina-azioni">
         <a class="btn btn-sm btn-outline-primary" href="{{ $webpB }}{{ $vB }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica la clip</a>
         <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $webpB }}{{ $vB }}" data-title="Carta sinottica Italia — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
@@ -42,5 +42,5 @@
   </div>
 </div>
 
-<p class="meteo-confronto-nota">{{ partial "fonte-badge.html" "elaborazione" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Entrambe le cartine sono <strong>una nostra elaborazione</strong> su dati aperti <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (modelli ECMWF) e si aggiornano automaticamente. Sono un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+<p class="meteo-confronto-nota">{{ partial "fonte-badge.html" "elaborazione" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Entrambe le cartine sono <strong>una nostra elaborazione</strong> su dati aperti <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> e si aggiornano automaticamente. Sono un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
 <script src="{{ "js/condividi-cartina.js" | relURL }}" defer></script>

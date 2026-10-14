@@ -26,9 +26,9 @@ L'allerta gialla è un avviso. Non è un'emergenza. Ma devi fare attenzione.
 In Italia ci sono 4 livelli di allerta meteo. Il colore cambia con il pericolo.
 
 - **Verde**: nessuna allerta. Tutto normale.
-- **Giallo**: allerta ordinaria. Possibili piccoli problemi.
-- **Arancione**: allerta elevata. Fenomeni intensi. Fai attenzione.
-- **Rosso**: allerta massima. Pericolo elevato per tutti.
+- **Giallo**: possibili problemi in alcune zone. Fai attenzione.
+- **Arancione**: fenomeni forti in molte zone. Possono essere pericolosi.
+- **Rosso**: fenomeni molto forti. Sono probabili danni gravi.
 
 Ogni allerta riguarda un rischio preciso. Per esempio: pioggia forte, vento, neve. Riguarda anche una zona precisa.
 

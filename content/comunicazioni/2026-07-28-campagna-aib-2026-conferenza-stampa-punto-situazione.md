@@ -68,7 +68,7 @@ Per la campagna 2026 la Regione ha formato **circa 600 volontari AIB** con due c
 
 ## Cosa significa per Genzano
 
-Genzano di Roma è nella **Zona di allerta AIB 9** (Castelli Romani). Durante la campagna, il Centro Funzionale Regionale pubblica ogni giorno il [bollettino di pericolosità incendi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi). Quando la pericolosità della nostra zona sale, lo vedi anche nella barra allerta della nostra homepage e nel [cruscotto del territorio](/cruscotto/). Il nostro Gruppo Comunale opera nel settore antincendio boschivo con volontari formati e mezzi dedicati, nell'ambito del dispositivo regionale.
+Genzano di Roma è nella **Zona di allerta AIB 9** (Castelli Romani). Durante la campagna, il Centro Funzionale Regionale pubblica ogni giorno il [bollettino di pericolosità incendi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi). Quando la pericolosità della nostra zona sale, lo vedi anche nella barra allerta della nostra homepage e nel [cruscotto del territorio](/cruscotto/). Il nostro Gruppo Comunale opera nel settore antincendio boschivo con volontari formati e mezzi dedicati, nell'ambito del dispositivo regionale.
 
 Il gesto che conta di più resta quello del cittadino: se vedi fiamme o fumo, **chiama subito il 112**. Non avvicinarti, non tentare di spegnere da solo un fronte di fuoco e segui le [regole di autoprotezione per il rischio incendio](/rischi-prevenzione/rischio-incendio/).
 
@@ -83,6 +83,6 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Presentata la Campagna Antincendio Boschivo 2026 — Regione Lazio, 28 luglio 2026](https://www.regione.lazio.it/notizie/presentata-la-campagna-antincendio-boschivo-2026)
-- [Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/)
-- [Bollettino di pericolosità incendi boschivi — Regione Lazio](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi)
+- [Protezione Civile della Regione Lazio](https://www.regione.lazio.it/protezione-civile)
+- [Bollettino di pericolosità incendi boschivi — Regione Lazio](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi)
 - [Dipartimento della Protezione Civile — Incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)

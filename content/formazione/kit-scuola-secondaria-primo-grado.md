@@ -215,7 +215,7 @@ Il sistema di allertamento meteo-idrogeologico italiano è gestito dalla **rete 
 
 ### Attività: decodifica il bollettino
 
-Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/) e compilate questa scheda:
+Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Civile della Regione Lazio](https://www.regione.lazio.it/protezione-civile) e compilate questa scheda:
 
 | Domanda | Risposta |
 |---|---|

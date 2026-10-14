@@ -56,7 +56,7 @@ Una frana, spesso, dà segnali prima di innescarsi. Non sono sicuri al 100% ma v
 
 ## Cosa fa la Protezione Civile
 
-A livello regionale, il [Centro Funzionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) pubblica ogni giorno il **bollettino di criticità idrogeologica**. Il Comune attiva il proprio piano di emergenza quando l'allerta lo richiede. Il Gruppo Comunale Volontari può essere attivato per sopralluoghi, assistenza alla popolazione e supporto alle forze di pronto intervento.
+A livello regionale, il [Centro Funzionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) pubblica ogni giorno il **bollettino di criticità idrogeologica**. Il Comune attiva il proprio piano di emergenza quando l'allerta lo richiede. Il Gruppo Comunale Volontari può essere attivato per sopralluoghi, assistenza alla popolazione e supporto alle forze di pronto intervento.
 
 ## Conoscere è prevenire
 
@@ -82,7 +82,7 @@ Fonti istituzionali:
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
 - [Piattaforma IdroGEO ISPRA](https://idrogeo.isprambiente.it/).
 - [CNR-IRPI — Frane e alluvioni](https://www.irpi.cnr.it/).
-- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
+- [Regione Lazio — Centro Funzionale](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 Il rischio idrogeologico non è una novità e non è un'emergenza permanente. È una caratteristica del territorio che conosciamo e con cui possiamo convivere in sicurezza, se il Comune, i cittadini e il volontariato lavorano insieme.
