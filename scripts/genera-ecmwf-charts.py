@@ -72,29 +72,32 @@ PRODOTTI = [
     {
         "slug": "medium-mslp-wind850",
         "titolo": "Pressione e vento",
-        "descr": "Pressione al livello del mare e vento a 850 hPa: la classica carta "
-                 "sinottica con cicloni, anticicloni e flusso delle correnti.",
+        "descr": "Pressione al livello del mare (linee nere, in hPa) e vento a 850 hPa, "
+                 "cioè a circa 1.500 metri di quota (colori, in metri al secondo): la "
+                 "classica carta con cicloni, anticicloni e correnti.",
         "icona": "bi-hurricane",
     },
     {
         "slug": "medium-2mt-wind30",
         "titolo": "Temperatura e vento",
-        "descr": "Temperatura a 2 metri dal suolo e vento a 30 metri: caldo, freddo "
-                 "e ventilazione previsti sull'Europa.",
+        "descr": "Temperatura a 2 metri dal suolo (colori, in °C) e vento a 30 metri "
+                 "(frecce, in nodi): caldo, freddo e ventilazione previsti sull'Europa.",
         "icona": "bi-thermometer-half",
     },
     {
         "slug": "medium-precipitation-type",
         "titolo": "Precipitazioni",
-        "descr": "Tipo e intensità di precipitazione prevista (pioggia, neve, "
-                 "gelicidio): dove e quando è atteso il maltempo.",
+        "descr": "Tipo di precipitazione prevista in quell'istante (pioggia, neve, neve "
+                 "bagnata, pioggia mista a neve, gelicidio, granuli di ghiaccio): la carta "
+                 "dice che cosa cade, non quanto.",
         "icona": "bi-cloud-rain-heavy",
     },
     {
         "slug": "medium-cape-cin",
-        "titolo": "Temporali (CAPE/CIN)",
-        "descr": "Energia potenziale convettiva (CAPE) e inibizione (CIN): "
-                 "indicatori del rischio di temporali forti e fenomeni convettivi.",
+        "titolo": "Temporali (MUCAPE/MUCIN)",
+        "descr": "Energia disponibile per i temporali (MUCAPE, in J/kg, calcolata per "
+                 "l'aria più instabile) e freno che la contrasta (MUCIN): valori alti di "
+                 "MUCAPE indicano aria adatta a temporali forti, non che si formeranno.",
         "icona": "bi-cloud-lightning-rain",
     },
 ]
@@ -112,14 +115,28 @@ _MESI = {"Jan": "gennaio", "Feb": "febbraio", "Mar": "marzo", "Apr": "aprile",
          "May": "maggio", "Jun": "giugno", "Jul": "luglio", "Aug": "agosto",
          "Sep": "settembre", "Oct": "ottobre", "Nov": "novembre", "Dec": "dicembre"}
 
-# "Sun 31 May 2026 00 UTC" → ("domenica 31 maggio 2026, 00 UTC")
+# "Sun 31 May 2026 00 UTC" → "domenica 31 maggio 2026, ore 02:00 italiane (00 UTC)"
 _DATE_RE = r"(\w{3})\s+(\d{1,2})\s+(\w{3})\s+(\d{4})\s+(\d{2})\s+UTC"
+_NUM_MESI = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6, "Jul": 7,
+             "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
+_GIORNI_IT = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
 
 
 def _ita_data(m):
+    """Data in ora italiana, con l'ora UTC della fonte fra parentesi (dal 14/10/2026:
+    prima si scriveva solo «00 UTC», che chi legge prendeva per mezzanotte italiana)."""
     dow, day, mon, year, hh = m.group(1), m.group(2), m.group(3), m.group(4), m.group(5)
-    return "{} {} {} {}, {} UTC".format(
-        _GIORNI.get(dow, dow), int(day), _MESI.get(mon, mon), year, hh)
+    try:
+        from zoneinfo import ZoneInfo
+        utc = datetime.datetime(int(year), _NUM_MESI[mon], int(day), int(hh),
+                                tzinfo=datetime.timezone.utc)
+        it = utc.astimezone(ZoneInfo("Europe/Rome"))
+        return "{} {} {} {}, ore {:02d}:00 italiane ({} UTC)".format(
+            _GIORNI_IT[it.weekday()], it.day, list(_MESI.values())[it.month - 1],
+            it.year, it.hour, hh)
+    except Exception:  # noqa: BLE001
+        return "{} {} {} {}, {} UTC".format(
+            _GIORNI.get(dow, dow), int(day), _MESI.get(mon, mon), year, hh)
 
 
 def parse_descrizione(desc):

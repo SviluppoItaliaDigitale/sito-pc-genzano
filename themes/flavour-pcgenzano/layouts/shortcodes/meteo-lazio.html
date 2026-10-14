@@ -14,18 +14,19 @@
 <div class="meteo-lazio">
   <figure class="meteo-mappa">
     <img src="{{ $img }}{{ $ver }}" width="642" height="842" loading="lazy"
-         alt="Cartina del Lazio con la temperatura massima e il cielo previsti oggi per ogni provincia: Viterbo, Rieti, Roma, Latina, Frosinone. Genzano di Roma è evidenziata con una stella.">
-    <figcaption>Temperatura e cielo previsti oggi nelle province del Lazio, con il dettaglio per Genzano di Roma. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati aperti Open-Meteo (modelli ECMWF).</figcaption>
+         alt="Cartina del Lazio con la temperatura massima e il cielo previsti oggi per ogni provincia: Viterbo, Rieti, Roma, Latina, Frosinone. Genzano di Roma è il punto dorato collegato a un riquadro con i suoi dati; i valori sono scritti anche sotto la cartina.">
+    <figcaption>Temperatura e cielo previsti oggi nelle province del Lazio, con il dettaglio per Genzano di Roma. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati aperti Open-Meteo.</figcaption>
   </figure>
+{{- /* La cartina a parole (proposta «Mappe raccontate», 14/10/2026): gli stessi valori
+       che colorano le province, scritti per chi non vede l'immagine o non la sa leggere.
+       Il blocco «province» lo scrive scripts/genera-meteo-lazio.py; se manca, non compare. */ -}}
+{{- with $m }}{{ with .province }}
+  <p class="meteo-lazio-parole"><strong>La cartina a parole.</strong> Ogni provincia ha il colore della temperatura massima prevista oggi nel suo capoluogo, dal blu del freddo al rosso del caldo, su una scala da −6 a 42&nbsp;°C. Oggi: {{ range $i, $p := . }}{{ if $i }}; {{ end }}{{ $p.nome }} massima {{ $p.tmax }}&nbsp;°C{{ if ne $p.tmin nil }}, minima {{ $p.tmin }}&nbsp;°C{{ end }}, {{ lower $p.cielo }}{{ end }}. Genzano di Roma è il punto dorato collegato al riquadro blu con i suoi valori, che trovi anche qui sotto.</p>
+{{- end }}{{ end }}
 
 {{- with $m }}
 {{- $c := .corrente }}
 {{- $oggi := index .giorni 0 }}
-{{- /* descrizione estesa per screen reader: aggiunge i nuovi dati solo se presenti */ -}}
-{{- $extra := "" }}
-{{- with $c.raffiche }}{{ $extra = printf "%s Raffiche di vento fino a %v chilometri orari." $extra . }}{{ end }}
-{{- with $oggi.uv }}{{ $extra = printf "%s Indice UV di oggi %v, %s." $extra . $oggi.uv_label }}{{ end }}
-{{- if and .alba .tramonto }}{{ $extra = printf "%s Alba alle %s, tramonto alle %s." $extra .alba .tramonto }}{{ end }}
   {{/* Niente role=img qui: il box contiene link reali (Centro Funzionale, 112)
        che con role=img sarebbero focalizzabili ma nascosti agli screen reader
        (nested-interactive WCAG). Il contenuto è testo visibile autodescrittivo. */}}
@@ -56,15 +57,15 @@
       {{- $mm := .pioggia_mm }}
       <div class="meteo-gz-g">
         <div class="d">{{ .label }}</div>
-        <div class="e" aria-hidden="true"><svg viewBox="0 0 32 32" width="42" height="42">{{ .icona | safeHTML }}</svg></div>
+        <div class="e"><svg viewBox="0 0 32 32" width="42" height="42" aria-hidden="true">{{ .icona | safeHTML }}</svg>{{ with .cielo }}<span class="visually-hidden">{{ . }}</span>{{ end }}</div>
         <div class="t">{{ .tmax }}°<small>/{{ .tmin }}°</small></div>
-        {{- if or (gt $prob 20) $mm }}<div class="p"><i class="bi bi-umbrella" aria-hidden="true"></i> {{ if gt $prob 20 }}{{ $prob }}%{{ end }}{{ with $mm }}{{ if gt $prob 20 }} · {{ end }}{{ . }} mm{{ end }}</div>{{- end }}
-        {{- with .raffiche }}<div class="r"><i class="bi bi-wind" aria-hidden="true"></i> {{ . }} km/h</div>{{- end }}
+        {{- if or (gt $prob 20) $mm }}<div class="p"><i class="bi bi-umbrella" aria-hidden="true"></i><span class="visually-hidden">Pioggia:</span> {{ if gt $prob 20 }}{{ $prob }}%<span class="visually-hidden"> di probabilità</span>{{ end }}{{ with $mm }}{{ if gt $prob 20 }} · {{ end }}{{ . }} mm{{ end }}</div>{{- end }}
+        {{- with .raffiche }}<div class="r"><i class="bi bi-wind" aria-hidden="true"></i><span class="visually-hidden">Raffiche fino a</span> {{ . }} km/h</div>{{- end }}
       </div>
     {{- end }}
     </div>
     <div class="meteo-gz-fonte">
-      {{ partial "fonte-badge.html" "elaborazione" }}Aggiornato {{ with .aggiornato_label }}{{ . }}{{ else }}{{ .data_lunga }}{{ end }} · Dati: {{ .fonte }} · dato indicativo, per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a> · in emergenza chiama il <a href="tel:112">112</a>.
+      {{ partial "fonte-badge.html" "elaborazione" }}Aggiornato {{ with .aggiornato_label }}{{ . }}{{ else }}{{ .data_lunga }}{{ end }} · Dati: {{ .fonte }} · dato indicativo, per le allerte vale il <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> · in emergenza chiama il <a href="tel:112">112</a>.
     </div>
   </div>
 {{- else }}

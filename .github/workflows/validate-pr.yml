@@ -171,6 +171,16 @@ jobs:
           pip install --quiet pyyaml
           python3 scripts/genera-calendario-prevenzione.py --check
 
+      - name: "🗺️ Ogni scheda del cruscotto spiegata a parole"
+        # 14/10/2026 (proposta 64, «Mappe raccontate»): ogni scheda di
+        # /cruscotto/ ha la sua voce in data/mappe_raccontate.yaml, il riquadro
+        # sotto la scheda e il titolo nella pagina /cruscotto/mappe-raccontate/.
+        # Una scheda nuova senza spiegazione, o un titolo cambiato solo in un
+        # posto, fermano la PR.
+        run: |
+          pip install --quiet pyyaml
+          python3 scripts/check-mappe-raccontate.py
+
   fogli-stampa:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
     runs-on: ubuntu-latest

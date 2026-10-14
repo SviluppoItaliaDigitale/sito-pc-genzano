@@ -1,7 +1,10 @@
 {{/* Shortcode dashboard-satellite — vista satellitare dell'Italia in tempo reale.
-     Due fonti, entrambe pubbliche e senza chiave:
-     - EUMETSAT (Meteosat) RGB colori naturali, slot ogni 15 min (vero quasi-realtime
-       delle nuvole) via WMS view.eumetsat.int, layer msg_fes:rgb_natural;
+     Fonti pubbliche e senza chiave:
+     - EUMETSAT, satellite Meteosat di terza generazione (MTG), via WMS
+       view.eumetsat.int: GeoColour a circa 1 km (layer mtg_fd:rgb_geocolour, colori
+       naturali di giorno e nuvole e luci di notte) e canale visibile a 500 m
+       (mtg_fd:vis06_hrfi), una nuova immagine ogni 10 minuti; chiediamo l'ultima
+       immagine con 20 minuti di margine, perché la fonte la pubblica con quel ritardo;
      - NASA GIBS true-color VIIRS (alta definizione del suolo) via WMTS, dal 10/10/2026
        dal satellite NOAA-21 (Suomi NPP cessa il 2 novembre 2026);
      - NASA GIBS pioggia IMERG ogni 30 min e luci notturne NOAA-20 (dal 10/10/2026);
@@ -12,7 +15,7 @@
        parità di orbita; tutti con legenda scritta e con i numeri in chiaro.
      Le tile sono <img>: nessuna chiave, nessun workflow, niente terzi in iframe.
      Leaflet self-hosted. Onestà: l'immagine satellitare "live" è quella Meteosat
-     (15 min di latenza tipica); il mosaico "best" di GIBS ha invece ~2 giorni di
+     (circa 20 minuti di ritardo); il mosaico "best" di GIBS ha invece ~2 giorni di
      latenza di elaborazione (la data odierna e quella di ieri danno sistematicamente
      404, verificato 04/08/2026), quindi richiediamo e dichiariamo sempre la data di
      2 giorni fa anziché "oggi". */}}
@@ -26,7 +29,7 @@
      al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine. */}}
 {{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 <div class="dash-sat" aria-labelledby="dash-sat-tit">
-  <h2 id="dash-sat-tit" class="visually-hidden">Vista satellitare dell'Italia in tempo reale</h2>
+  <h2 id="dash-sat-tit" class="visually-hidden">Immagini da satellite dell'Italia e dei dintorni di Genzano di Roma</h2>
   <div class="dash-sisma-toolbar" role="group" aria-label="Tipo e risoluzione dell'immagine satellitare">
     <button type="button" class="dash-pill" data-sat="geocolour" aria-pressed="true"><i class="bi bi-cloud" aria-hidden="true"></i> Nuvole · colore (1&nbsp;km)</button>
     <button type="button" class="dash-pill" data-sat="hrfi" aria-pressed="false"><i class="bi bi-zoom-in" aria-hidden="true"></i> Alta risoluzione (500&nbsp;m)</button>
@@ -48,7 +51,7 @@
     <button type="button" class="dash-pill" data-sat="aerosol" aria-pressed="false"><i class="bi bi-wind" aria-hidden="true"></i> Polveri e fumo</button>
   </div>
   <div class="dash-incendi-box">
-    <div id="dash-sat-mappa" role="application" aria-label="Mappa satellitare dell'Italia in tempo reale, con Genzano di Roma evidenziata."></div>
+    <div id="dash-sat-mappa" role="application" aria-label="Mappa satellitare dell'Italia, con Genzano di Roma evidenziata."></div>
   </div>
   <p class="dash-s3-nota dash-sat-legenda" id="sat-legenda" hidden></p>
   <div class="dash-s3" id="sat-s2-box" hidden>
@@ -121,11 +124,11 @@
   </div>
   <noscript><div class="alert alert-warning mt-2" role="note">Per la mappa serve JavaScript.</div></noscript>
   <p class="small text-muted mt-2 mb-0" id="sat-fonte">
-    {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
-    <strong>Sentinel-3</strong>: mosaico a colori naturali del giorno (strumento OLCI dei satelliti Sentinel-3A e 3B, programma <a href="https://www.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus</a>, distribuito da EUMETSAT), circa 300&nbsp;m; si compone con i passaggi del mattino, quindi le zone non ancora sorvolate restano vuote.
-    <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS dal satellite NOAA-21, mosaico più recente disponibile: in genere di 2 giorni fa).
-    <strong>Pioggia da satellite</strong>: intensità di pioggia stimata dalla costellazione GPM (prodotto IMERG «Early» della NASA, ogni 30 minuti, disponibile con 4-6 ore di ritardo): copre anche dove il radar non arriva, ma è una stima a 10 km, non una misura. <strong>Radar Sentinel-1</strong>: ultima immagine radar (Copernicus) di 30 km attorno a Genzano, letta dall'archivio con le chiavi del Gruppo: vede attraverso le nuvole e di notte, l'acqua ferma appare scura; senza correzione del rilievo, quindi i versanti risultano un po' deformati. <strong>Sentinel-2 (10 m)</strong>: l'ultima scena a colori naturali poco nuvolosa di 16 km attorno a Genzano, alla scala delle strade e dei singoli edifici (archivio pubblico Copernicus, un passaggio ogni 2-3 giorni, online di norma il giorno dopo; la nuvolosità indicata è quella calcolata sulla finestra, non sulla scena intera); le stesse scene si confrontano «prima e dopo» a 10 m dal riquadro sotto la cartina. <strong>Luci notturne</strong>: banda giorno-notte del satellite NOAA-20 (mosaico della notte più recente): le nuvole coprono le luci, quindi un'area scura non è per forza un blackout.
-    <strong>Tematici (NASA)</strong>, tutti da <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> con la legenda scritta sotto la cartina: <strong>Alluvioni</strong> (acqua rilevata dal satellite VIIRS negli ultimi 3 giorni dove di solito non c'è, 375&nbsp;m, prodotto NASA LANCE: le nuvole nascondono il suolo e il sensore non vede sotto gli alberi); <strong>Neve</strong> (indice NDSI VIIRS NOAA-20, 375&nbsp;m, solo di giorno e senza nuvole); <strong>Umidità del suolo</strong> (SMAP, strato superficiale di 5&nbsp;cm, analisi a 9&nbsp;km con 2-3 giorni di ritardo); <strong>Temperatura del suolo</strong> (VIIRS NOAA-21 di giorno, 1&nbsp;km: temperatura della superficie, non dell'aria); <strong>Vegetazione</strong> (NDVI MODIS Terra, media mobile di 8 giorni, 250&nbsp;m); <strong>Polveri e fumo</strong> (spessore ottico degli aerosol MODIS, 10&nbsp;km: polveri sahariane, fumo di incendi, foschia). <strong>Indici Sentinel-2</strong> e <strong>cambiamenti</strong> (Sentinel-2 e radar): calcolati in automatico dal Gruppo sulle scene Copernicus, con soglie dichiarate; sono indizi da verificare sul posto.
+    {{ partial "fonte-badge.html" "ufficiale" }}Nuvole quasi in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (Meteosat di nuova generazione: una nuova immagine ogni 10&nbsp;minuti; qui si vede quella di 20-30&nbsp;minuti prima, l'ultima sicuramente pronta). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
+    <strong>Sentinel-3</strong>: mosaico a colori naturali del giorno (strumento OLCI dei satelliti Sentinel-3A e 3B, programma <a href="https://www.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>, distribuito da EUMETSAT), circa 300&nbsp;m; si compone con i passaggi del mattino, quindi le zone non ancora sorvolate restano vuote.
+    <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (true-color VIIRS dal satellite NOAA-21, mosaico più recente disponibile: in genere di 2 giorni fa).
+    <strong>Pioggia da satellite</strong>: intensità di pioggia stimata dalla costellazione GPM (prodotto IMERG «Early» della NASA, ogni 30 minuti, disponibile con alcune ore di ritardo, circa 4 secondo la NASA): copre anche dove il radar non arriva, ma è una stima a 10 km, non una misura; la scala dei colori, in millimetri all'ora, è scritta sotto la cartina. <strong>Radar Sentinel-1</strong>: ultima immagine radar (Copernicus) di 30 km attorno a Genzano, letta dall'archivio con le chiavi del Gruppo: vede attraverso le nuvole e di notte, l'acqua ferma appare scura; senza correzione del rilievo, quindi i versanti risultano un po' deformati. <strong>Sentinel-2 (10 m)</strong>: l'ultima scena a colori naturali poco nuvolosa di 16 km attorno a Genzano, alla scala delle strade e dei singoli edifici (archivio pubblico Copernicus, un passaggio ogni 2-3 giorni, online di norma il giorno dopo; la nuvolosità indicata è quella calcolata sulla finestra, non sulla scena intera); le stesse scene si confrontano «prima e dopo» a 10 m dal riquadro sotto la cartina. <strong>Luci notturne</strong>: banda giorno-notte del satellite NOAA-20 (mosaico della notte più recente): le nuvole coprono le luci, quindi un'area scura non è per forza un blackout.
+    <strong>Tematici (NASA)</strong>, tutti da <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> con la legenda scritta sotto la cartina: <strong>Alluvioni</strong> (acqua rilevata dal satellite VIIRS negli ultimi 3 giorni dove di solito non c'è, 375&nbsp;m, prodotto NASA LANCE: le nuvole nascondono il suolo e il sensore non vede sotto gli alberi); <strong>Neve</strong> (indice NDSI VIIRS NOAA-20, 375&nbsp;m, solo di giorno e senza nuvole); <strong>Umidità del suolo</strong> (SMAP, strato superficiale di 5&nbsp;cm, analisi a 9&nbsp;km con 2-3 giorni di ritardo); <strong>Temperatura del suolo</strong> (VIIRS NOAA-21 di giorno, 1&nbsp;km: temperatura della superficie, non dell'aria); <strong>Vegetazione</strong> (NDVI MODIS Terra, media mobile di 8 giorni, 250&nbsp;m); <strong>Polveri e fumo</strong> (spessore ottico degli aerosol MODIS, 10&nbsp;km: polveri sahariane, fumo di incendi, foschia). {{ partial "fonte-badge.html" "elaborazione" }}<strong>Indici Sentinel-2</strong> e <strong>cambiamenti</strong> (Sentinel-2 e radar): calcolati in automatico dal Gruppo sulle scene Copernicus, con soglie dichiarate; sono indizi da verificare sul posto.
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
@@ -140,7 +143,7 @@
 
     // sfondo geografico chiaro sotto al satellite, per i confini
     // maxNativeZoom 8: oltre, le tessere OSM si ingrandiscono (serve al radar, a zoom 12)
-    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxNativeZoom:8,maxZoom:14,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
+    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxNativeZoom:8,maxZoom:14,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
     var confini=L.geoJSON(null,{pane:'markerPane',style:{color:'#ffffff',weight:1,opacity:0.75,fillOpacity:0},attribution:'Confini: Natural Earth'});
     fetch('{{ "open-data/world-countries.geo.json" | relURL }}').then(function(r){return r.json();}).then(function(g){confini.addData(g);}).catch(function(){});
 
@@ -168,9 +171,11 @@
     var WMS='https://view.eumetsat.int/geoserver/wms';
     // MTG (Meteosat di nuova generazione) GeoColour: ~1 km, ogni 10 min,
     // true-color di giorno + luci/IR di notte. Più nitido del MSG (3 km).
+    // maxZoom 9 come la mappa: con 8, all'ultimo livello di zoom le nuvole
+    // sparivano e restava la sola base (il WMS disegna a qualunque scala).
     var geocolour=L.tileLayer.wms(WMS,{
       layers:'mtg_fd:rgb_geocolour', format:'image/png', transparent:false,
-      version:'1.3.0', time:isoZ(slotUTC()), opacity:0.95, maxZoom:8,
+      version:'1.3.0', time:isoZ(slotUTC()), opacity:0.95, maxZoom:9,
       attribution:'© EUMETSAT'
     });
     // MTG visibile alta risoluzione (HRFI): ~500 m, ogni 10 min. Più nitido,
@@ -199,7 +204,7 @@
     }
     function s3Etichetta(){
       if(!s3Ora) return 'Sentinel-3 · mosaico più recente a colori naturali';
-      return 'Sentinel-3 · mosaico del '+s3Ora.toLocaleDateString('it-IT',{day:'2-digit',month:'long'})+', ultimo passaggio alle '+s3Ora.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+      return 'Sentinel-3 · mosaico del '+s3Ora.toLocaleDateString('it-IT',{day:'2-digit',month:'long',timeZone:'Europe/Rome'})+', ultimo passaggio alle '+s3Ora.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'});
     }
     // Dal 10/10/2026 il true-color viene dal satellite NOAA-21: Suomi NPP smette
     // di consegnare dati il 2 novembre 2026 (avviso NASA Earthdata). L'archivio
@@ -216,6 +221,10 @@
     var imerg=L.tileLayer(GIBS+'IMERG_Precipitation_Rate_30min/default/default/GoogleMapsCompatible_Level6/{z}/{y}/{x}.png',{
       maxNativeZoom:6, maxZoom:9, opacity:0.8, attribution:'Pioggia: NASA GPM IMERG via GIBS'
     });
+    // Legenda scritta dalla colormap ufficiale del layer (GIBS GPM_Precipitation_Rate,
+    // letta il 14/10/2026): due scale in millimetri all'ora, una per la pioggia e una
+    // per la neve; sotto 0,1 mm/h la tessera è trasparente.
+    var LEG_IMERG='millimetri di pioggia all\'ora, media della mezz\'ora: <span class="dash-sw" aria-hidden="true" style="background:#00764e"></span> 0,1 · <span class="dash-sw" aria-hidden="true" style="background:#45c000"></span> 0,5 · <span class="dash-sw" aria-hidden="true" style="background:#c3e400"></span> 1 · <span class="dash-sw" aria-hidden="true" style="background:#ffb006"></span> 2 · <span class="dash-sw" aria-hidden="true" style="background:#ff4730"></span> 5 · <span class="dash-sw" aria-hidden="true" style="background:#e70000"></span> 10 · <span class="dash-sw" aria-hidden="true" style="background:#9c0000"></span> 20 · <span class="dash-sw" aria-hidden="true" style="background:#330000"></span> oltre 53. Dove il satellite stima neve la scala è un\'altra, sempre in millimetri d\'acqua all\'ora: dall\'azzurro chiaro <span class="dash-sw" aria-hidden="true" style="background:#b1faee"></span> 0,1 al blu <span class="dash-sw" aria-hidden="true" style="background:#4f73c4"></span> 1 e al viola <span class="dash-sw" aria-hidden="true" style="background:#770bd1"></span> 10. Sotto 0,1 mm all\'ora la mappa resta trasparente. È una stima da satellite su celle di circa 10 km, non una misura al suolo.';
     var notte=L.tileLayer(GIBS+'VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance/default/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png',{
       maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Luci notturne: NASA VIIRS NOAA-20 via GIBS'
     });
@@ -640,7 +649,7 @@
         var lim=Date.now()-60*86400e3, snap=j&&j._snapshot&&j._snapshot.generato;
         var it=((j&&j.results)||[]).filter(function(a){ return Array.isArray(a.countries)&&a.countries.some(function(c){return /^ital(y|ia)$/i.test(c);})&&Date.parse(a.activationTime)>lim; });
         it.sort(function(a,b){ return (b.activationTime||'').localeCompare(a.activationTime||''); });
-        var coda=' Fonte: Copernicus EMS Rapid Mapping, elenco aggiornato ogni 15 minuti.';
+        var coda=' Fonte: Copernicus EMS Rapid Mapping, elenco ricopiato dal sito più volte all\'ora.';
         if(!it.length){ box.textContent='Nessuna mappatura Copernicus EMS attivata in Italia negli ultimi 60 giorni.'+coda; return; }
         box.innerHTML='<ul class="dash-s3-list">'+it.map(function(a){
           var d=new Date(a.activationTime);
@@ -657,7 +666,7 @@
       map.setMaxZoom(modo==='radar'?12:(modo==='s2'||cfrS2)?14:9);
       var inConfronto=(modo==='sentinel'&&cfr.attivo);
       cfrLinea.hidden=!inConfronto; cfrTagA.hidden=!inConfronto; cfrTagB.hidden=!inConfronto;
-      var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+      var t=slotUTC(), ora=t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'});
       if(modo==='geocolour'){
         geocolour.setParams({time:isoZ(t)}); geocolour.addTo(map); confini.addTo(map);
         stato.textContent='Nuvole delle '+ora+' · colore, 1 km';
@@ -677,8 +686,9 @@
         s3Pannello();
       } else if(modo==='imerg'){
         imerg.addTo(map); confini.addTo(map);
+        legendaScrivi(LEG_IMERG);
         stato.textContent='Pioggia stimata da satellite · ultimo mosaico disponibile';
-        gibsUltimo('IMERG_Precipitation_Rate_30min','GoogleMapsCompatible_Level6').then(function(d){ if(d&&modo==='imerg') stato.textContent='Pioggia stimata da satellite · mezz\'ora fino alle '+new Date(d.getTime()+1800e3).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})+' (arriva con 4-6 ore di ritardo)'; });
+        gibsUltimo('IMERG_Precipitation_Rate_30min','GoogleMapsCompatible_Level6').then(function(d){ if(d&&modo==='imerg') stato.textContent='Pioggia stimata da satellite · mezz\'ora fino alle '+new Date(d.getTime()+1800e3).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'})+' (arriva con 4-6 ore di ritardo)'; });
       } else if(modo==='radar'){
         stato.textContent='Radar Sentinel-1 · lettura…';
         radarCarica().then(function(j){

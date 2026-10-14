@@ -2,7 +2,7 @@
 """Smoke-check delle fonti dati esterne del cruscotto (/cruscotto/).
 
 Le schede del cruscotto leggono dati live da servizi di terzi (INGV, Open-Meteo,
-DPC, EUMETSAT, NASA, EFFIS, ARPA Lazio, ItaliaMeteo/MeteoHub; la Sala situazioni
+DPC, EUMETSAT, NASA, EFFIS/GWIS, ARPA Lazio, ItaliaMeteo/MeteoHub; la Sala situazioni
 /monitor/ anche il ricevitore SDR OpenWebRX+ di IZ0FKE). Se uno di questi cambia endpoint o cade,
 la scheda diventa vuota SENZA errore visibile. Questo script verifica ogni fonte
 e stampa un report Markdown. Exit code = numero di fonti in errore (0 = tutto ok).
@@ -90,6 +90,26 @@ def chk_wms_getmap(layer, base):
            "&bbox=556597,4163881,2226390,5780349&width=64&height=64")
     ok, det, _, _ = _get(url, expect_image=True)
     return ok, det
+
+
+def chk_effis_focolai():
+    # Scheda Incendi: focolai degli ultimi 7 giorni (MODIS + VIIRS) dal WMS GWIS del
+    # servizio europeo Copernicus. Fino al 14/10/2026 la scheda chiedeva «viirs.hs» al
+    # WMS EFFIS senza data, e il servizio rispondeva con la sua data predefinita, il
+    # 1° gennaio 2020: l'immagine arrivava regolare e questo controllo era verde, ma i
+    # punti erano di sei anni prima. Ora si chiede «all.hs.week», che non ha dimensione
+    # temporale, e si controlla che l'immagine su Europa e Africa contenga davvero dei
+    # punti: in una settimana i focolai ci sono sempre (savane africane), e
+    # un'immagine trasparente pesa meno di 5 KB.
+    url = ("https://maps.effis.emergency.copernicus.eu/gwis?service=WMS&request=GetMap"
+           "&version=1.3.0&layers=all.hs.week&styles=&format=image/png&transparent=true"
+           "&crs=EPSG:3857&bbox=-2226390,-4163881,6679169,8399738&width=512&height=512")
+    ok, det, _, raw = _get(url, expect_image=True)
+    if not ok:
+        return ok, det
+    if raw is None or len(raw) < 5000:
+        return False, "immagine quasi vuota (%d byte): nessun focolaio in una settimana su Europa e Africa vuol dire un guasto della fonte" % (len(raw or b""))
+    return True, det + ", %d KB di focolai" % (len(raw) // 1024)
 
 
 def chk_sentinel3():
@@ -478,7 +498,7 @@ SORGENTI = [
     ("Scene Sentinel-2 — Earth Search/AWS Open Data", "Satellite", chk_earth_search_s2),
     ("Satellite suolo — NASA GIBS", "Satellite", chk_gibs),
     ("Livelli tematici (alluvioni, neve, suolo, vegetazione, aerosol) — NASA GIBS", "Satellite", chk_gibs_tematici),
-    ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
+    ("Incendi — GWIS/EFFIS Copernicus (focolai 7 giorni)", "Incendi", chk_effis_focolai),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
     ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
     ("Emergenze EU — Copernicus EMS Rapid Mapping", "Emergenze EU (EMS)", chk_ems_rapid),

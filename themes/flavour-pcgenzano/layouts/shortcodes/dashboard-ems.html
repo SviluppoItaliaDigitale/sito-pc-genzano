@@ -1,12 +1,14 @@
 {{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
-{{/* Shortcode dashboard-ems — attivazioni Copernicus EMS Rapid Mapping in Europa.
-     Fonte: API pubblica JSON rapidmapping.emergency.copernicus.eu (CORS aperto, niente
-     API key). Mostra le ultime mappature di emergenza attivate dalle autorità nazionali
-     europee (incendi, alluvioni, terremoti, frane, eventi pubblici), filtrabili per
-     categoria e per area (tutte / Italia / Mediterraneo). Lista pulita, no mappa
-     (le mappe sono già negli altri tab). Lazy-load via cruscotto:ems event. */}}
+{{/* Shortcode dashboard-ems — attivazioni Copernicus EMS Rapid Mapping (in Europa e
+     nel resto del mondo). Fonte: API pubblica JSON rapidmapping.emergency.copernicus.eu,
+     letta in CI e copiata in static/open-data/ems-attivazioni.json perché non espone il
+     CORS (rule 10). Mostra le ultime 50 mappature di emergenza (incendi, alluvioni,
+     terremoti, tempeste, attività vulcanica, frane), filtrabili per categoria e per area
+     (tutte / solo Italia). Lista, nessuna mappa. Lazy-load via cruscotto:ems event.
+     Dal 14/10/2026 «Altro» raccoglie ogni categoria senza pulsante proprio (prima
+     filtrava solo il valore esatto «Other» e dava sempre zero risultati). */}}
 <div class="dash-ems" aria-labelledby="dash-ems-tit">
-  <h2 id="dash-ems-tit" class="visually-hidden">Attivazioni Copernicus EMS Rapid Mapping in Europa</h2>
+  <h2 id="dash-ems-tit" class="visually-hidden">Attivazioni Copernicus EMS Rapid Mapping</h2>
 
   <div class="dash-sisma-toolbar" role="group" aria-label="Filtri categoria e area">
     <span class="dash-sisma-grp" role="group" aria-label="Categoria evento">
@@ -15,10 +17,10 @@
       <button type="button" class="dash-pill" data-emscat="Flood" aria-pressed="false"><i class="bi bi-water" aria-hidden="true"></i> Alluvioni</button>
       <button type="button" class="dash-pill" data-emscat="Storm" aria-pressed="false"><i class="bi bi-cloud-lightning-rain" aria-hidden="true"></i> Tempeste</button>
       <button type="button" class="dash-pill" data-emscat="Earthquake" aria-pressed="false"><i class="bi bi-activity" aria-hidden="true"></i> Terremoti</button>
-      <button type="button" class="dash-pill" data-emscat="Other" aria-pressed="false">Altro</button>
+      <button type="button" class="dash-pill" data-emscat="altro" aria-pressed="false">Altro</button>
     </span>
     <span class="dash-sisma-grp" role="group" aria-label="Area geografica">
-      <button type="button" class="dash-pill" data-emsarea="all" aria-pressed="true">Tutta Europa</button>
+      <button type="button" class="dash-pill" data-emsarea="all" aria-pressed="true">Tutte le aree</button>
       <button type="button" class="dash-pill" data-emsarea="italy" aria-pressed="false"><i class="bi bi-flag" aria-hidden="true"></i> Solo Italia</button>
     </span>
     <span class="dash-sisma-stato" id="ems-stato" aria-live="polite">Caricamento attivazioni…</span>
@@ -26,10 +28,10 @@
 
   <div id="dash-ems-lista" class="dash-ems-lista" aria-live="polite"></div>
 
-  <noscript><div class="alert alert-warning mt-2" role="note">Per consultare le attivazioni serve JavaScript. In alternativa: <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS Rapid Mapping</a>.</div></noscript>
+  <noscript><div class="alert alert-warning mt-2" role="note">Per consultare le attivazioni serve JavaScript. In alternativa: <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS Rapid Mapping<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.</div></noscript>
 
   <p class="small text-muted mt-3 mb-0">
-    {{ partial "fonte-badge.html" "ufficiale" }}Fonte: <a href="https://emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Emergency Management Service</a> — Rapid Mapping (servizio attivabile solo da autorità nazionali della protezione civile europee; le mappe pubblicate sono pubbliche e gratuite). I cartogrammi prodotti sono disponibili sul <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS</a>. Dato indicativo per consultazione: in emergenza chiama il <a href="tel:112">112</a>.
+    {{ partial "fonte-badge.html" "ufficiale" }}Fonte: <a href="https://emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Emergency Management Service<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> — Rapid Mapping. Il servizio si attiva solo su richiesta di utenti autorizzati (enti di livello nazionale, regionale, europeo e internazionale), che la inviano al Centro europeo di coordinamento della risposta alle emergenze; per chi lo chiede è gratuito. Le mappe prodotte si consultano sul <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>. «Aperta» vuol dire che l'attivazione non è ancora chiusa, non che l'evento sia ancora in atto. Dato indicativo per consultazione: in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
   <script>
@@ -39,6 +41,7 @@
     var lista=document.getElementById('dash-ems-lista');
     var stato=document.getElementById('ems-stato');
     var ATTIV=null, catSel='', areaSel='all';
+    var PRINCIPALI=['Wildfire','Flood','Storm','Earthquake'];   // le categorie con un pulsante proprio
 
     var icone={Wildfire:'bi-fire', Flood:'bi-water', Storm:'bi-cloud-lightning-rain', Earthquake:'bi-activity', 'Volcanic activity':'bi-triangle', Landslide:'bi-graph-down', Other:'bi-info-circle'};
     var nomi={Wildfire:'Incendio', Flood:'Alluvione', Storm:'Tempesta', Earthquake:'Terremoto', 'Volcanic activity':'Attività vulcanica', Landslide:'Frana', Other:'Altro'};
@@ -61,17 +64,17 @@
       var cat=a.category||'Other';
       var ico=icone[cat]||'bi-info-circle';
       var nomeCat=nomi[cat]||cat;
-      var stato=a.closed?'<span class="dash-ems-stato-badge dash-ems-stato-chiusa">Chiusa</span>':'<span class="dash-ems-stato-badge dash-ems-stato-aperta">In corso</span>';
-      var link='https://rapidmapping.emergency.copernicus.eu/'+escapeHtml(a.code);
+      var stato=a.closed?'<span class="dash-ems-stato-badge dash-ems-stato-chiusa"><span class="visually-hidden">Attivazione </span>Chiusa</span>':'<span class="dash-ems-stato-badge dash-ems-stato-aperta"><span class="visually-hidden">Attivazione </span>Aperta</span>';
+      var link='https://mapping.emergency.copernicus.eu/activations/'+encodeURIComponent(a.code||'')+'/';
       var nProd=(a.n_products||0)+' '+((a.n_products===1)?'prodotto':'prodotti');
       return ''+
         '<article class="dash-ems-item dash-ems-cat-'+escapeHtml(cat.toLowerCase().replace(/\s+/g,'-'))+'">'+
           '<div class="dash-ems-head">'+
             '<span class="dash-ems-cat"><i class="bi '+ico+'" aria-hidden="true"></i> '+escapeHtml(nomeCat)+'</span>'+
             stato+
-            '<span class="dash-ems-data">'+escapeHtml(fmtDate(a.eventTime||a.activationTime))+'</span>'+
+            '<span class="dash-ems-data">'+(a.eventTime?'evento del ':'attivata il ')+escapeHtml(fmtDate(a.eventTime||a.activationTime))+'</span>'+
           '</div>'+
-          '<h3 class="dash-ems-titolo"><a href="'+link+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(a.code)+' — '+escapeHtml(a.name||'')+'</a></h3>'+
+          '<h3 class="dash-ems-titolo"><a href="'+link+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(a.code)+' — '+escapeHtml(a.name||'')+'<span class="visually-hidden"> (si apre in una nuova finestra)</span></a></h3>'+
           '<p class="dash-ems-meta"><i class="bi bi-geo-alt" aria-hidden="true"></i> '+escapeHtml(paesi(a.countries))+' · '+nProd+'</p>'+
         '</article>';
     }
@@ -79,7 +82,9 @@
     function filtra(){
       if(!ATTIV){ return []; }
       return ATTIV.filter(function(a){
-        if(catSel && (a.category||'Other')!==catSel) return false;
+        var cat=a.category||'Other';
+        if(catSel==='altro'){ if(PRINCIPALI.indexOf(cat)>=0) return false; }
+        else if(catSel && cat!==catSel) return false;
         if(areaSel==='italy'){
           if(!a.countries || a.countries.indexOf('Italy')<0) return false;
         }
@@ -109,7 +114,7 @@
     function daCacheOErrore(){
       var c = window.pcCache && pcCache.leggi('ems', 72);
       if(c){ try{ ATTIV=c.d; rendi(); }catch(e){} stato.textContent=pcCache.frase(c.t); return; }
-      lista.innerHTML='<div class="alert alert-warning" role="note">Elenco non disponibile al momento: consulta il <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS Rapid Mapping</a>.</div>';
+      lista.innerHTML='<div class="alert alert-warning" role="note">Elenco non disponibile al momento: consulta il <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS Rapid Mapping<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.</div>';
       stato.textContent='Elenco non disponibile';
     }
     function carica(){
