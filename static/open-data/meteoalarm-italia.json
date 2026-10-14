@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-14T03:57:50+00:00",
+  "generato": "2026-10-14T09:21:36+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 6,
-  "scaduti_scartati": 16,
-  "in_corso": 6,
+  "avvisi": 5,
+  "scaduti_scartati": 15,
+  "in_corso": 5,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -17,10 +17,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-13T08:00:00+00:00",
+   "inizio": "2026-10-14T08:00:00+00:00",
    "fine": "2026-10-14T17:59:00+00:00",
-   "emesso": "2026-10-13T08:18:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261013101808.019"
+   "emesso": "2026-10-14T08:23:27+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261014102327.016"
   },
   {
    "in_corso": true,
@@ -30,10 +30,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-14T00:00:00+00:00",
+   "inizio": "2026-10-14T08:00:00+00:00",
    "fine": "2026-10-14T17:59:00+00:00",
-   "emesso": "2026-10-13T08:18:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261013101808.021"
+   "emesso": "2026-10-14T08:23:27+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261014102327.017"
   },
   {
    "in_corso": true,
@@ -43,10 +43,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-13T08:00:00+00:00",
+   "inizio": "2026-10-14T08:00:00+00:00",
    "fine": "2026-10-14T17:59:00+00:00",
-   "emesso": "2026-10-13T08:18:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261013101808.018"
+   "emesso": "2026-10-14T08:23:27+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261014102327.015"
   },
   {
    "in_corso": true,
@@ -56,23 +56,10 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-13T08:00:00+00:00",
+   "inizio": "2026-10-14T08:00:00+00:00",
    "fine": "2026-10-14T17:59:00+00:00",
-   "emesso": "2026-10-13T08:18:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261013101808.016"
-  },
-  {
-   "in_corso": true,
-   "regione": "Molise",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-13T08:00:00+00:00",
-   "fine": "2026-10-14T17:59:00+00:00",
-   "emesso": "2026-10-13T08:18:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261013101808.015"
+   "emesso": "2026-10-14T08:23:27+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261014102327.013"
   },
   {
    "in_corso": true,
@@ -82,10 +69,10 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-13T08:00:00+00:00",
+   "inizio": "2026-10-14T08:00:00+00:00",
    "fine": "2026-10-14T17:59:00+00:00",
-   "emesso": "2026-10-13T08:18:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261013101808.017"
+   "emesso": "2026-10-14T08:23:27+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261014102327.014"
   }
  ]
 }
