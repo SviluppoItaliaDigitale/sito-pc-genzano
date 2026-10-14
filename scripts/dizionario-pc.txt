@@ -2088,3 +2088,5 @@ espanol
 portugues
 guests
 localStorage
+# --- Dossier clima 14/10/2026: identificatore del modello Open-Meteo (era5_seamless) citato nelle fonti ---
+seamless

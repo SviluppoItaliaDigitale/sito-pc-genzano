@@ -755,11 +755,13 @@ content("Catalogo informativo dei giochi", [
     "Pensato per docenti, genitori, motori di ricerca e lettori di schermo.",
 ], N(), fonti="D.M. 183/2024 (Educazione Civica) · WCAG 2.2 AA")
 
+# Dal 14/10/2026: serie omogenea ERA5-Land/ERA5 (modello era5_seamless) e una
+# spiegazione a parole sotto ogni grafico, come per le schede del cruscotto.
 content("Laboratorio meteo — esplorare i dati del clima", [
     "Strumento interattivo: si scelgono luogo, periodo e variabile e si costruisce il grafico.",
-    "Dati storici reali dei Castelli Romani (rianalisi ERA5) ed esempi già pronti sul clima locale.",
-    "Ogni grafico ha la tabella dati, la stampa, il download (CSV e immagine) e un link condivisibile.",
-], N(), fonti="ERA5 · Open-Meteo (CC BY 4.0) · Copernicus Climate Data Store")
+    "Dati storici dei Castelli Romani (rianalisi ERA5-Land ed ERA5, serie omogenea) ed esempi già pronti.",
+    "Ogni grafico ha spiegazione a parole, tabella dati, stampa, download (CSV e immagine) e link condivisibile.",
+], N(), fonti="ERA5-Land · ERA5 · Copernicus Climate Change Service · Open-Meteo (CC BY 4.0)")
 
 content("Dossier interattivi — racconti visivi", [
     "Storie che si leggono scorrendo: immagini a tutto schermo, dati animati e mappe da esplorare.",

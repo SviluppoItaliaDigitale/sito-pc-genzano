@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Controllo delle «mappe raccontate»: ogni scheda del cruscotto ha la sua
-spiegazione a parole, sotto la scheda e nella pagina che le raccoglie tutte.
+Controllo delle «mappe raccontate»: ogni scheda del cruscotto e ogni grafico
+del Laboratorio meteo hanno la loro spiegazione a parole, sotto la mappa o il
+grafico e nella pagina che le raccoglie tutte.
 
 Confronta tre posti che devono dire la stessa cosa:
   - content/cruscotto/_index.md: le schede (pulsanti role="tab" e pannelli
@@ -13,6 +14,16 @@ Confronta tre posti che devono dire la stessa cosa:
   - content/cruscotto/mappe-raccontate.md: per ogni scheda, nell'ordine dei
     pulsanti, il titolo «## <titolo> {#scheda-<id>}» seguito dallo shortcode
     con pagina="true".
+
+Per il Laboratorio meteo (gruppo «laboratorio» del file dati, dal 14/10/2026):
+  - una voce per ogni esempio di static/open-data/clima-manifest.json (campo
+    «esempio» = file, titolo uguale a quello del manifesto) e per ogni opzione
+    del menu «Cosa vuoi vedere» del layout del Laboratorio (campo «variabile»,
+    titolo uguale all'etichetta), nello stesso ordine e nessuna in più;
+  - il layout contiene il contenitore #lab-raccontate che le scrive;
+  - la pagina ha la sezione «## … {#laboratorio-meteo}» con, nello stesso
+    ordine, «### <titolo> {#grafico-<id>}» seguito dallo shortcode con
+    gruppo="laboratorio" e pagina="true".
 
 Controlla la forma, non il contenuto: che le spiegazioni dicano il vero lo
 verifica chi modifica una scheda, aggiornando la sua voce nella stessa
@@ -26,6 +37,7 @@ Exit code 0 se tutto torna, 1 altrimenti. Python standard più PyYAML.
 from __future__ import annotations
 
 import html
+import json
 import re
 import sys
 from pathlib import Path
@@ -36,6 +48,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CRUSCOTTO = ROOT / "content" / "cruscotto" / "_index.md"
 DATI = ROOT / "data" / "mappe_raccontate.yaml"
 PAGINA = ROOT / "content" / "cruscotto" / "mappe-raccontate.md"
+MANIFEST = ROOT / "static" / "open-data" / "clima-manifest.json"
+LAYOUT_LAB = ROOT / "themes" / "flavour-pcgenzano" / "layouts" / "laboratorio-meteo" / "list.html"
 
 CAMPI_TESTO = ("titolo", "in_breve", "mostra", "aggiornamento", "fonte")
 CAMPI_ELENCO = ("colori", "limiti")
@@ -44,6 +58,11 @@ RE_TAB = re.compile(r'<button[^>]*\bdata-panel="([a-z0-9-]+)"[^>]*\brole="tab"[^
 RE_PANNELLO = re.compile(r'<div class="cruscotto-panel" id="panel-([a-z0-9-]+)"[^>]*>(.*?)\n</div>', re.S)
 RE_SHORTCODE = re.compile(r'\{\{<\s*mappa-raccontata\s+id="([a-z0-9-]+)"(\s+pagina="true")?\s*>\}\}')
 RE_TITOLO = re.compile(r'^## (.+?) \{#scheda-([a-z0-9-]+)\}\s*$', re.M)
+RE_SELECT = re.compile(r'<select id="lab-variabile"[^>]*>(.*?)</select>', re.S)
+RE_OPTION = re.compile(r'<option value="([a-z0-9-]+)"[^>]*>(.*?)</option>', re.S)
+RE_SEZIONE_LAB = re.compile(r'^## .+? \{#laboratorio-meteo\}\s*$(.*?)(?=^## |\Z)', re.M | re.S)
+RE_TITOLO_LAB = re.compile(r'^### (.+?) \{#grafico-([a-z0-9-]+)\}\s*$', re.M)
+RE_SHORTCODE_LAB = re.compile(r'\{\{<\s*mappa-raccontata\s+gruppo="laboratorio"\s+id="([a-z0-9-]+)"\s+pagina="true"\s*>\}\}')
 
 
 def etichetta(testo: str) -> str:
@@ -131,13 +150,94 @@ def main() -> int:
                 f"{{{{< mappa-raccontata id=\"{sid}\" pagina=\"true\" >}}}}"
             )
 
+    # 4. i grafici del Laboratorio meteo
+    errori += controlla_laboratorio(dati, pagina)
+
     if errori:
         for e in errori:
             print(f"::error::{e}")
         print(f"\n{len(errori)} {'problema' if len(errori) == 1 else 'problemi'}. Vedi la regola in testa a {DATI.relative_to(ROOT)}.")
         return 1
-    print(f"Mappe raccontate: {len(ordine)} schede, ognuna con voce, riquadro e titolo nella pagina.")
+    n_lab = len((dati.get("laboratorio") or {}))
+    print(f"Mappe raccontate: {len(ordine)} schede del cruscotto e {n_lab} grafici del Laboratorio, "
+          "ognuno con voce, riquadro e titolo nella pagina.")
     return 0
+
+
+def voce_incompleta(nome: str, voce: dict) -> list[str]:
+    errori = []
+    for campo in CAMPI_TESTO:
+        if not isinstance(voce.get(campo), str) or not voce[campo].strip():
+            errori.append(f"dati: «{nome}» senza il campo {campo}")
+    for campo in CAMPI_ELENCO:
+        v = voce.get(campo)
+        if not isinstance(v, list) or not v or not all(isinstance(x, str) and x.strip() for x in v):
+            errori.append(f"dati: «{nome}» senza l'elenco {campo} (almeno una voce di testo)")
+    return errori
+
+
+def controlla_laboratorio(dati: dict, pagina: str) -> list[str]:
+    """Esempi del manifesto e variabili del costruttore ↔ voci ↔ pagina."""
+    errori: list[str] = []
+    try:
+        manifesto = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        return [f"laboratorio: non riesco a leggere {MANIFEST.relative_to(ROOT)}: {e}"]
+    layout = LAYOUT_LAB.read_text(encoding="utf-8")
+    m = RE_SELECT.search(layout)
+    if not m:
+        return [f"laboratorio: nel layout {LAYOUT_LAB.relative_to(ROOT)} manca il menu id=\"lab-variabile\""]
+    if 'id="lab-raccontate"' not in layout:
+        errori.append("laboratorio: il layout non scrive più le spiegazioni (manca id=\"lab-raccontate\")")
+    attesi = [("esempio", e.get("file", ""), e.get("titolo", "")) for e in manifesto]
+    attesi += [("variabile", val, etichetta(lab)) for val, lab in RE_OPTION.findall(m.group(1))]
+
+    voci = dati.get("laboratorio") or {}
+    if not isinstance(voci, dict):
+        return errori + ["dati: il gruppo «laboratorio» deve essere un elenco di voci con chiave"]
+    usate: list[str] = []
+    for tipo, chiave, titolo in attesi:
+        trovate = [nome for nome, v in voci.items() if isinstance(v, dict) and v.get(tipo) == chiave]
+        if not trovate:
+            errori.append(f"dati: manca la voce del Laboratorio con {tipo}: \"{chiave}\" («{titolo}»)")
+            continue
+        nome = trovate[0]
+        usate.append(nome)
+        voce = voci[nome]
+        errori += voce_incompleta(nome, voce)
+        if isinstance(voce.get("titolo"), str) and voce["titolo"].strip() != titolo:
+            errori.append(f"dati: il titolo di «{nome}» è «{voce['titolo']}», il Laboratorio dice «{titolo}»")
+    for nome in voci:
+        if nome not in usate:
+            errori.append(f"dati: la voce «{nome}» non corrisponde a nessun esempio né variabile del Laboratorio")
+    if [n for n in voci if n in usate] != usate:
+        errori.append(f"dati: le voci del Laboratorio vanno nell'ordine degli esempi e del menu: {usate}")
+
+    sez = RE_SEZIONE_LAB.search(pagina)
+    if not sez:
+        return errori + ["pagina: manca la sezione «## … {#laboratorio-meteo}» con i grafici del Laboratorio"]
+    corpo = sez.group(1)
+    titoli = RE_TITOLO_LAB.findall(corpo)
+    if [gid for _, gid in titoli] != usate:
+        errori.append(
+            "pagina: i titoli «### … {#grafico-<id>}» devono seguire l'ordine delle voci del Laboratorio: "
+            f"atteso {usate}, trovato {[gid for _, gid in titoli]}"
+        )
+    for testo, gid in titoli:
+        voce = voci.get(gid)
+        if isinstance(voce, dict) and testo.strip() != str(voce.get("titolo", "")).strip():
+            errori.append(f"pagina: il titolo di «{gid}» è «{testo}», la voce dice «{voce.get('titolo')}»")
+    for blocco in re.split(r"^### ", corpo, flags=re.M)[1:]:
+        mm = re.match(r"(.+?) \{#grafico-([a-z0-9-]+)\}", blocco)
+        if not mm:
+            continue
+        gid = mm.group(2)
+        if RE_SHORTCODE_LAB.findall(blocco) != [gid]:
+            errori.append(
+                f"pagina: sotto il titolo di «{gid}» serve solo "
+                f"{{{{< mappa-raccontata gruppo=\"laboratorio\" id=\"{gid}\" pagina=\"true\" >}}}}"
+            )
+    return errori
 
 
 if __name__ == "__main__":

@@ -44,17 +44,17 @@
         0,
         0,
         0,
-        5,
-        0,
-        0,
         2,
         0,
-        2,
-        2,
-        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
       ]
     }
   ],
-  "fonte": "Rianalisi ERA5 via Open-Meteo (CC BY 4.0), allineata al Copernicus Climate Data Store."
+  "fonte": "Rianalisi ERA5-Land per le temperature ed ERA5 per la pioggia, del Copernicus Climate Change Service, via Open-Meteo (modello era5_seamless, CC BY 4.0)."
 }

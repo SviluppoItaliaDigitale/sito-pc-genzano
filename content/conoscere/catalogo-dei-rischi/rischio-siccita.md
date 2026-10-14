@@ -5,7 +5,7 @@ layout: "single"
 toc: true
 image: ""
 date: 2026-05-29
-dataUltimaRevisione: "2026-05-29"
+dataUltimaRevisione: "2026-10-14"
 ---
 
 La siccità non arriva con un boato come un terremoto né con un fronte d'acqua come un'alluvione: è un **rischio lento**, che si costruisce in settimane e mesi e si fa sentire quando l'acqua comincia a mancare. Questa è la pagina **«materia»**: spiega che cos'è il deficit idrico, come si misura, quali danni provoca e perché il cambiamento climatico lo rende più frequente.
@@ -28,7 +28,7 @@ Le cause di una crisi idrica non sono solo naturali. Secondo le analisi istituzi
 
 - la **scarsità di precipitazioni**, causa naturale di fondo;
 - gli **elevati prelievi** per usi civili, agricoli e industriali;
-- le **perdite delle reti** di distribuzione, che in Italia disperdono in media circa il **30%** dell'acqua immessa;
+- le **perdite delle reti** di distribuzione, fra tubi che perdono ed errori di misura: in Italia sono il **42,4%** dell'acqua immessa ([ISTAT](https://www.istat.it/it/files/2024/03/Report-GMA-Anno-2024.pdf), dato 2022);
 - gli **sprechi** e l'inadeguatezza delle infrastrutture.
 
 A questi si aggiunge il **cambiamento climatico**, che aggrava il quadro: l'aumento delle temperature fa crescere i consumi (per agricoltura, energia, acqua potabile), mentre le precipitazioni diventano più irregolari. Negli ultimi vent'anni la siccità non ha colpito solo il Mezzogiorno, ma anche il Centro e il Nord: le crisi idriche del **2003, 2006, 2007 e 2017** hanno interessato il bacino del **Po** e diverse regioni, **Lazio compreso**. Approfondiamo il tema dell'acqua nella scheda [Giornata mondiale dell'acqua: la rete idrica e la sua sicurezza](/comunicazioni/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza/).

@@ -24,13 +24,23 @@
 #
 # Campi: titolo (come sulla scheda), in_breve, mostra, colori (elenco), aggiornamento,
 # limiti (elenco, «Che cosa non dice»), fonte.
+#
+# Il gruppo «laboratorio», in fondo, spiega i grafici del Laboratorio meteo (proposta 1
+# della roadmap, «Atlante delle mappe spiegate», 14/10/2026): una voce per ogni esempio
+# pronto di static/open-data/clima-manifest.json (campo «esempio», titolo uguale a quello
+# del manifesto) e una per ogni variabile del costruttore (campo «variabile», titolo uguale
+# all'opzione del menu «Cosa vuoi vedere»), nell'ordine in cui compaiono. Il layout del
+# Laboratorio le scrive tutte nascoste e il suo JavaScript mostra quella del grafico
+# disegnato; la pagina /cruscotto/mappe-raccontate/ le raccoglie in fondo. Se cambia un
+# esempio (scripts/genera-clima-castelli.py) o il codice del grafico
+# (static/js/laboratorio-meteo.js), si aggiorna la voce nella stessa modifica.
 
 schede:
 
   terremoti:
     titolo: "Terremoti"
     in_breve: "La mappa e la tabella mostrano i terremoti registrati dall'INGV negli ultimi 7 giorni, o nelle ultime 24 ore, in Italia o nei Castelli Romani."
-    mostra: "Ogni cerchio è un terremoto, nel punto dell'epicentro. Con i pulsanti scegli il periodo, la magnitudo minima e la zona: tutta l'Italia oppure i Castelli Romani, un riquadro di circa 44 per 50 km attorno a Genzano. «tutti» vuol dire dalla magnitudo 1,5 in su. Sopra la mappa ci sono quattro numeri: quanti terremoti, la magnitudo più alta, quanti hanno magnitudo 3 o più e quanto tempo fa è avvenuto l'ultimo. Sotto, la tabella mostra 30 terremoti con ora italiana, magnitudo, zona, profondità e distanza da Genzano: all'inizio i più recenti. Toccando un'intestazione li riordini e le 30 righe cambiano: con «Magnitudo», per esempio, diventano le 30 scosse più forti. Toccando una riga si apre la scheda completa di quel terremoto."
+    mostra: "Ogni cerchio è un terremoto, nel punto dell'epicentro. Con i pulsanti scegli il periodo, la magnitudo minima e la zona: tutta l'Italia oppure i Castelli Romani, un riquadro di circa 44 per 50 km attorno a Genzano. Il pulsante «tutti» vuol dire dalla magnitudo 1,5 in su. Sopra la mappa ci sono quattro numeri: quanti terremoti, la magnitudo più alta, quanti hanno magnitudo 3 o più e quanto tempo fa è avvenuto l'ultimo. Sotto, la tabella mostra 30 terremoti con ora italiana, magnitudo, zona, profondità e distanza da Genzano: all'inizio i più recenti. Toccando un'intestazione li riordini e le 30 righe cambiano: con «Magnitudo», per esempio, diventano le 30 scosse più forti. Toccando una riga si apre la scheda completa di quel terremoto."
     colori:
       - "Il colore del cerchio dice la magnitudo: grigio sotto 2, giallo da 2 a 3, arancione da 3 a 4, rosso da 4 a 5, rosso scuro da 5 in su."
       - "Più il cerchio è grande, più la magnitudo è alta."
@@ -89,13 +99,13 @@ schede:
   satellite:
     titolo: "Satellite (EUMETSAT)"
     in_breve: "Le immagini da satellite dell'Italia: nuvole quasi in tempo reale, foto del suolo, pioggia stimata, luci notturne, radar e mappe tematiche."
-    mostra: "Si vede un livello alla volta, scelto con i pulsanti. «Nuvole · colore» e «Alta risoluzione» sono le immagini del satellite Meteosat: la prima a colori, di giorno e di notte, la seconda in bianco e nero e solo di giorno. «Sentinel-3» è il mosaico a colori naturali più recente; sotto la mappa compaiono i passaggi del satellite su Genzano, il prossimo passaggio, il confronto «prima e dopo» fra due giorni a scelta e, quando ci sono, alcune misure del satellite, come la temperatura della superficie a Genzano e i fuochi attivi nel Lazio. «Suolo» è l'immagine della NASA, di solito di due giorni prima. «Pioggia da satellite» è la pioggia stimata dallo spazio, anche dove i radar non arrivano. «Luci notturne» mostra le luci delle città viste di notte. «Radar Sentinel-1» è un'immagine radar di 30 km attorno a Genzano: il radar del satellite vede il suolo anche di notte e sotto le nuvole, e non misura la pioggia; il pulsante «Mostra i cambiamenti» lo confronta con il passaggio precedente. «Sentinel-2» mostra da vicino 16 km attorno a Genzano, con cinque viste: colori naturali, vegetazione, acqua, aree bruciate e cambiamenti. La seconda fila apre le mappe tematiche: alluvioni, neve, umidità e temperatura del suolo, vegetazione, polveri e fumo."
+    mostra: "Si vede un livello alla volta, scelto con i pulsanti. «Nuvole · colore» e «Alta risoluzione» sono le immagini del satellite Meteosat: la prima a colori, di giorno e di notte, la seconda in bianco e nero e solo di giorno. «Sentinel-3» è il mosaico a colori naturali più recente. Sotto la mappa compaiono i passaggi del satellite su Genzano, il prossimo passaggio e il confronto «prima e dopo» fra due giorni a scelta. Quando ci sono, si vedono anche alcune misure del satellite, come la temperatura della superficie a Genzano e i fuochi attivi nel Lazio. «Suolo» è l'immagine della NASA, di solito di due giorni prima. «Pioggia da satellite» è la pioggia stimata dallo spazio, anche dove i radar non arrivano. «Luci notturne» mostra le luci delle città viste di notte. «Radar Sentinel-1» è un'immagine radar di 30 km attorno a Genzano: il radar del satellite vede il suolo anche di notte e sotto le nuvole, e non misura la pioggia. Il pulsante «Mostra i cambiamenti» lo confronta con il passaggio precedente. «Sentinel-2» mostra da vicino 16 km attorno a Genzano, con cinque viste: colori naturali, vegetazione, acqua, aree bruciate e cambiamenti. La seconda fila apre le mappe tematiche: alluvioni, neve, umidità e temperatura del suolo, vegetazione, polveri e fumo."
     colori:
       - "Nelle immagini a colori naturali le nuvole sono bianche e il suolo ha i suoi colori; nel bianco e nero le nuvole sono chiare."
       - "Per la pioggia da satellite e per le mappe tematiche la scala dei colori, con i valori, compare sotto la mappa. La pioggia, per esempio, va dal verde (0,1 mm all'ora) al giallo, all'arancione e al rosso, fino al rosso scurissimo oltre i 53 mm all'ora; dove il satellite stima neve, la scala va dall'azzurro al viola."
       - "Nei riquadri Sentinel-2 e radar ogni colore delle mappe dei cambiamenti è spiegato nella legenda sotto la mappa."
       - "La stella gialla è Genzano di Roma."
-    aggiornamento: "Le nuvole di Meteosat mostrano il cielo di 20-30 minuti prima e la scheda le ricarica ogni 5 minuti. Il mosaico Sentinel-3 si compone con i passaggi del mattino: le zone non ancora sorvolate restano vuote. L'immagine «Suolo» è di solito di due giorni prima. La pioggia da satellite arriva con alcune ore di ritardo, circa 4 secondo la NASA. Le scene Sentinel-2 cambiano a ogni nuovo passaggio non troppo nuvoloso, quelle radar a ogni nuovo passaggio del satellite: la data è scritta accanto ai pulsanti."
+    aggiornamento: "Le nuvole di Meteosat mostrano il cielo di 20-30 minuti prima e la scheda le ricarica ogni 5 minuti. Il mosaico Sentinel-3 si compone con i passaggi del mattino: le zone non ancora sorvolate restano vuote. L'immagine «Suolo» è di solito di due giorni prima. La pioggia da satellite arriva con alcune ore di ritardo: circa 4, secondo la NASA. Le scene Sentinel-2 cambiano a ogni nuovo passaggio non troppo nuvoloso, quelle radar a ogni nuovo passaggio del satellite: la data è scritta accanto ai pulsanti."
     limiti:
       - "Le immagini delle nuvole non dicono quanto piove a terra. La pioggia da satellite è solo una stima, su celle di circa 10 km, con ore di ritardo e meno dettagli del radar."
       - "Gli indici di vegetazione, acqua e aree bruciate sono calcolati dal Gruppo sulla luce che il suolo riflette, anche quella che l'occhio non vede. Come le mappe dei cambiamenti, sono indizi da verificare sul posto, non certezze: il verde cala anche per un taglio o un raccolto."
@@ -120,7 +130,7 @@ schede:
   meteo:
     titolo: "Meteo"
     in_breve: "La cartina del Lazio con la temperatura massima e il cielo previsti oggi, e il riquadro con i dati di Genzano."
-    mostra: "Ogni provincia è colorata con la temperatura massima prevista oggi nel suo capoluogo; l'etichetta riporta massima, minima e un'icona del cielo. Il punto dorato collegato al riquadro blu è Genzano di Roma. Sotto la cartina gli stessi valori sono scritti a parole. Il riquadro di Genzano riporta temperatura e temperatura percepita, cioè come si sentono il caldo o il freddo tenendo conto di vento, umidità e sole; poi umidità, vento, raffiche, indice UV, alba, tramonto e la previsione di oggi e dei tre giorni successivi."
+    mostra: "Ogni provincia è colorata con la temperatura massima prevista oggi nel suo capoluogo; l'etichetta riporta massima, minima e un'icona del cielo. Il punto dorato collegato al riquadro blu è Genzano di Roma. Sotto la cartina gli stessi valori sono scritti a parole. Il riquadro di Genzano riporta temperatura e temperatura percepita, cioè come si sentono il caldo o il freddo tenendo conto di vento, umidità e sole. Seguono umidità, vento, raffiche, indice UV, alba, tramonto e la previsione di oggi e dei tre giorni successivi."
     colori:
       - "Il colore della provincia va dal blu del freddo al verde, al giallo, all'arancione e al rosso del caldo, su una scala da −6 a 42 °C."
       - "Le icone del cielo sono: sole, sole con nuvola, nuvola grigia, nuvola con gocce per la pioggia, nuvola con fiocchi per la neve, nuvola con fulmine per il temporale, linee grigie per la nebbia."
@@ -166,7 +176,7 @@ schede:
   obs-im:
     titolo: "Osservazioni ItaliaMeteo"
     in_breve: "Le misure delle stazioni meteo a terra delle reti regionali, raccolte dall'Agenzia ItaliaMeteo: temperatura dell'aria, umidità, vento e pioggia."
-    mostra: "Ogni punto è una stazione e il suo colore è l'ultimo valore misurato nelle ultime tre ore circa. Scegli la grandezza con i pulsanti: temperatura, umidità, velocità del vento, pioggia caduta nell'ultima ora. Toccando un punto leggi il nome della stazione, il valore e l'ora della misura. Ci sono solo le stazioni con licenza aperta."
+    mostra: "Ogni punto è una stazione e il suo colore è il valore più recente, misurato nelle ultime tre ore circa. Scegli la grandezza con i pulsanti: temperatura, umidità, velocità del vento, pioggia caduta nell'ultima ora. Toccando un punto leggi il nome della stazione, il valore e l'ora della misura. Ci sono solo le stazioni con licenza aperta."
     colori:
       - "La legenda in basso a destra della mappa cambia con la grandezza scelta."
       - "Temperatura: dal blu scuro, sotto 0 °C, ai blu più chiari fino a 15 °C, poi giallo chiaro, arancione e rosso, fino al rosso scuro oltre i 35 °C."
@@ -243,7 +253,7 @@ schede:
   ems:
     titolo: "Emergenze EU (EMS)"
     in_breve: "Le attivazioni recenti del servizio europeo di mappatura delle emergenze, in Europa e nel mondo."
-    mostra: "Ogni voce è un'attivazione del servizio di mappatura rapida di Copernicus: il tipo di evento, i Paesi, la data, il numero di prodotti realizzati e il link alla pagina ufficiale. Con i pulsanti filtri per tipo di evento (incendi, alluvioni, tempeste, terremoti, altro) e scegli tutte le aree oppure solo l'Italia. Il sito tiene le ultime 50 attivazioni: i filtri lavorano su queste e l'elenco ne mostra al massimo 15, le più recenti."
+    mostra: "Ogni voce è un'attivazione del servizio di mappatura rapida di Copernicus: il tipo di evento, i Paesi, la data, il numero di prodotti realizzati e il link alla pagina ufficiale. Con i pulsanti filtri l'elenco per tipo di evento (incendi, alluvioni, tempeste, terremoti, altro) e scegli tutte le aree oppure solo l'Italia. Il sito tiene le ultime 50 attivazioni: i filtri lavorano su queste e l'elenco ne mostra al massimo 15, le più recenti."
     colori:
       - "La barra colorata a sinistra di ogni voce indica il tipo di evento: arancione scuro gli incendi, blu le alluvioni, viola le tempeste, ocra i terremoti, grigio gli altri. Il tipo è sempre scritto anche a parole."
       - "«Aperta» vuol dire che l'attivazione non è ancora chiusa, non che l'evento sia ancora in corso."
@@ -280,3 +290,106 @@ schede:
       - "L'altezza è quella «significativa», la media del terzo delle onde più alte: singole onde possono essere più alte."
       - "È la previsione di un modello, non una misura: per la sicurezza in mare valgono gli avvisi della Guardia Costiera; per le emergenze in mare chiama il 1530."
     fonte: "Agenzia ItaliaMeteo, modello delle onde WW3 MEDITA, piattaforma MeteoHub."
+
+laboratorio:
+
+  esempio-luglio:
+    esempio: "clima-luglio-temperature-genzano.json"
+    titolo: "Estati sempre più calde?"
+    in_breve: "Il grafico mostra, anno per anno dal 2005 all'ultimo anno completo, la temperatura massima media di luglio a Genzano: serve a vedere se le estati si stanno scaldando."
+    mostra: "Ogni punto è un anno. Il suo valore è la media delle temperature massime dei 31 giorni di luglio, cioè quanto faceva caldo, in media, nelle ore più calde del mese. Una linea unisce i punti e sopra ogni punto c'è il valore. Toccando il grafico, o con le frecce della tastiera, leggi anno e valore; sotto c'è la tabella con tutti i numeri."
+    colori:
+      - "La linea e i punti sono rossi."
+      - "L'asse verticale è in gradi (°C) e va da poco sotto il luglio più fresco a poco sopra il più caldo, senza partire da zero. Così anche le differenze piccole sembrano grandi: per questo conviene leggere i valori."
+    aggiornamento: "I dati si ricalcolano il primo giorno di ogni mese. Un anno entra nel grafico con il ricalcolo di febbraio, quando la rianalisi ha anche gli ultimi giorni di dicembre."
+    limiti:
+      - "Sono valori di una rianalisi, cioè di un modello che ricostruisce il clima passato dalle osservazioni, su celle di circa dieci chilometri. Non sono il termometro di una via di Genzano, che può segnare valori diversi secondo la quota, l'esposizione e il cemento intorno."
+      - "Vent'anni sono pochi per descrivere un clima: l'Organizzazione meteorologica mondiale usa periodi di trent'anni. Da un anno all'altro il valore sale e scende; la tendenza si legge nell'insieme, non confrontando due anni vicini."
+      - "Non dice niente sul rischio del giorno: per il caldo valgono i bollettini del Ministero della Salute."
+    fonte: "Rianalisi ERA5-Land del Copernicus Climate Change Service, via Open-Meteo (licenza CC BY 4.0); medie calcolate dal Gruppo e scaricabili fra i [dati aperti](/open-data/) (file clima-luglio-temperature-genzano.json)."
+
+  esempio-pioggia:
+    esempio: "clima-pioggia-annuale-genzano.json"
+    titolo: "La pioggia anno per anno"
+    in_breve: "Il grafico mostra quanta pioggia è caduta in tutto, anno per anno, a Genzano dal 2005 all'ultimo anno completo."
+    mostra: "Ogni barra è un anno: la sua altezza è il totale della pioggia dell'anno, in millimetri. Un millimetro è un litro d'acqua caduto su un metro quadrato. Sopra ogni barra c'è il valore; toccando una barra, o con le frecce della tastiera, leggi anno e totale. Sotto c'è la tabella con tutti i numeri."
+    colori:
+      - "Le barre sono blu e partono da zero: l'altezza è proporzionale alla pioggia."
+    aggiornamento: "I dati si ricalcolano il primo giorno di ogni mese. Un anno entra nel grafico con il ricalcolo di febbraio, quando la rianalisi ha anche gli ultimi giorni di dicembre."
+    limiti:
+      - "Il totale dell'anno non dice come è caduta la pioggia: un anno con pochi temporali violenti e uno con tante piogge leggere possono avere lo stesso totale, con effetti molto diversi su frane, allagamenti e falda."
+      - "È la rianalisi ERA5, che lavora su celle di circa 25 chilometri: un temporale che scarica su un solo quartiere può non comparire, o comparire più debole."
+      - "Non è un bollettino: per le allerte vale il Centro Funzionale Regionale del Lazio."
+    fonte: "Rianalisi ERA5 del Copernicus Climate Change Service, via Open-Meteo (licenza CC BY 4.0); totali calcolati dal Gruppo e scaricabili fra i [dati aperti](/open-data/) (file clima-pioggia-annuale-genzano.json)."
+
+  esempio-30-gradi:
+    esempio: "clima-giorni-30-gradi-genzano.json"
+    titolo: "Le giornate da 30 °C"
+    in_breve: "Il grafico conta, anno per anno, i giorni in cui a Genzano la temperatura massima è arrivata almeno a 30 °C."
+    mostra: "Ogni barra è un anno: la sua altezza è il numero di giorni con una massima di almeno 30 °C. Sopra ogni barra c'è il numero; toccando una barra, o con le frecce della tastiera, leggi anno e giorni. Sotto c'è la tabella con tutti i numeri."
+    colori:
+      - "Le barre sono arancione scuro e partono da zero."
+    aggiornamento: "I dati si ricalcolano il primo giorno di ogni mese. Un anno entra nel grafico con il ricalcolo di febbraio, quando la rianalisi ha anche gli ultimi giorni di dicembre."
+    limiti:
+      - "I 30 °C sono un modo per contare le giornate calde, non un livello di allerta. I bollettini del Ministero della Salute sulle ondate di calore danno un livello di rischio per la salute città per città, senza una soglia di temperatura uguale per tutti."
+      - "La rianalisi dà valori medi su celle di circa dieci chilometri, che attenuano i picchi di un singolo punto. Per questo un termometro in paese può contare un numero diverso di giornate calde. La soglia è 30 °C perché i 35 °C, nella cella di Genzano, compaiono solo due giorni dal 2005 al 2025."
+      - "Non dice quanto sono state calde le notti, che nelle ondate di calore pesano molto sulla salute."
+    fonte: "Rianalisi ERA5-Land del Copernicus Climate Change Service, via Open-Meteo (licenza CC BY 4.0); conteggi del Gruppo scaricabili fra i [dati aperti](/open-data/) (file clima-giorni-30-gradi-genzano.json)."
+
+  esempio-anno:
+    esempio: "clima-anno-temperature-genzano.json"
+    titolo: "Un anno di temperature"
+    in_breve: "Il grafico mostra, mese per mese, la temperatura massima media e la minima media a Genzano nell'ultimo anno completo."
+    mostra: "Due linee attraversano i dodici mesi: in alto la media delle temperature massime di ogni mese, in basso la media delle minime. La distanza fra le due linee è la differenza media fra il caldo del giorno e il fresco della notte. Sopra ogni punto c'è il valore; toccando il grafico, o con le frecce della tastiera, leggi i due valori di ogni mese. Sotto c'è la tabella."
+    colori:
+      - "La massima è la linea rossa continua, la minima la linea blu tratteggiata: si distinguono anche senza i colori, dal tratto e dalla posizione."
+      - "L'asse verticale è in gradi (°C). Va da poco sotto il valore più basso a poco sopra il più alto delle due linee, su numeri tondi."
+    aggiornamento: "Si ricalcola il primo giorno di ogni mese; con il ricalcolo di febbraio passa all'anno appena finito."
+    limiti:
+      - "È un anno solo: non dice se è stato più caldo o più freddo del solito. Per il confronto fra gli anni c'è l'esempio «Estati sempre più calde?»."
+      - "Sono medie mensili di una rianalisi su celle di circa dieci chilometri: i singoli giorni più caldi e più freddi non si vedono."
+    fonte: "Rianalisi ERA5-Land del Copernicus Climate Change Service, via Open-Meteo (licenza CC BY 4.0); medie calcolate dal Gruppo e scaricabili fra i [dati aperti](/open-data/) (file clima-anno-temperature-genzano.json)."
+
+  costruttore-temperatura:
+    variabile: "temperatura"
+    titolo: "Temperatura (massime e minime)"
+    in_breve: "Il grafico mostra, giorno per giorno, la temperatura più alta e la più bassa nel luogo e nel periodo che hai scelto."
+    mostra: "Ogni punto è un giorno: in alto la temperatura massima, in basso la minima, calcolate a due metri dal suolo, l'altezza dei termometri delle stazioni meteo. Le date sono sull'asse orizzontale, i gradi su quello verticale. Se il periodo è di due settimane o meno, sopra ogni punto c'è il valore. Toccando il grafico, o con le frecce della tastiera, leggi i valori giorno per giorno; sotto c'è la tabella con tutti i dati, che puoi scaricare."
+    colori:
+      - "La massima è la linea rossa continua, la minima la linea blu tratteggiata."
+      - "L'asse verticale va da poco sotto il valore più basso a poco sopra il più alto del periodo, su numeri tondi. Non sempre parte da zero: per questo conviene leggere i valori."
+    aggiornamento: "I dati si scaricano quando premi «Crea il grafico». Il modello di previsione, usato per i periodi che cominciano negli ultimi tre mesi, copre fino a ieri; la rianalisi arriva a circa cinque giorni fa. Se gli ultimi giorni mancano, lo trovi scritto sotto il grafico."
+    limiti:
+      - "Per i periodi che cominciano negli ultimi tre mesi i valori vengono da un modello di previsione, non dalla rianalisi: sotto il grafico è scritto quale delle due fonti stai guardando. Per confrontare anni diversi usa periodi che cominciano più di tre mesi fa."
+      - "Sono valori di un modello su celle di alcuni chilometri, non il termometro di una via: due paesi vicini possono avere valori uguali, o differenze più piccole di quelle vere."
+      - "Non è una previsione: per le previsioni c'è la scheda Meteo del [cruscotto](/cruscotto/), per le allerte il Centro Funzionale Regionale del Lazio."
+    fonte: "Rianalisi ERA5-Land del Copernicus Climate Change Service oppure, per i periodi recenti, il modello di previsione ad alta risoluzione di Open-Meteo; dati via Open-Meteo, licenza CC BY 4.0."
+
+  costruttore-pioggia:
+    variabile: "pioggia"
+    titolo: "Pioggia (mm al giorno)"
+    in_breve: "Il grafico mostra quanta pioggia è caduta ogni giorno nel luogo e nel periodo che hai scelto."
+    mostra: "Ogni barra è un giorno: la sua altezza è la pioggia della giornata, in millimetri (un millimetro è un litro d'acqua su un metro quadrato). Nel totale entrano anche i rovesci e la neve, contata come l'acqua che si ottiene sciogliendola. Se i giorni sono 24 o meno, sopra ogni barra c'è il valore. Toccando una barra, o con le frecce della tastiera, leggi data e pioggia; sotto c'è la tabella con tutti i dati, che puoi scaricare."
+    colori:
+      - "Le barre sono blu e partono da zero."
+    aggiornamento: "I dati si scaricano quando premi «Crea il grafico». Il modello di previsione, usato per i periodi che cominciano negli ultimi tre mesi, copre fino a ieri; la rianalisi arriva a circa cinque giorni fa. Se gli ultimi giorni mancano, lo trovi scritto sotto il grafico."
+    limiti:
+      - "Un giorno a zero può aver avuto un breve rovescio in un quartiere: un modello su celle larghe chilometri non vede i temporali più piccoli, e ne vede altri più deboli del vero."
+      - "La pioggia di un giorno non dice quanto è stata intensa nelle singole ore: 30 millimetri in un'ora sono un nubifragio, in un giorno intero no."
+      - "Non è un bollettino: per le allerte vale il Centro Funzionale Regionale del Lazio."
+    fonte: "Rianalisi ERA5 del Copernicus Climate Change Service oppure, per i periodi recenti, il modello di previsione ad alta risoluzione di Open-Meteo; dati via Open-Meteo, licenza CC BY 4.0."
+
+  costruttore-vento:
+    variabile: "vento"
+    titolo: "Vento (velocità massima)"
+    in_breve: "Il grafico mostra, giorno per giorno, la velocità più alta del vento nel luogo e nel periodo che hai scelto."
+    mostra: "Ogni punto è un giorno: il suo valore è la velocità del vento più alta fra quelle delle singole ore della giornata, a dieci metri dal suolo, in chilometri all'ora. Se i giorni sono 28 o meno, sopra ogni punto c'è il valore. Toccando il grafico, o con le frecce della tastiera, leggi i valori giorno per giorno; sotto c'è la tabella con tutti i dati, che puoi scaricare."
+    colori:
+      - "La linea e i punti sono verdi."
+      - "L'asse verticale va da poco sotto il valore più basso a poco sopra il più alto del periodo, su numeri tondi. Non sempre parte da zero: per questo conviene leggere i valori."
+    aggiornamento: "I dati si scaricano quando premi «Crea il grafico». Il modello di previsione, usato per i periodi che cominciano negli ultimi tre mesi, copre fino a ieri; la rianalisi arriva a circa cinque giorni fa. Se gli ultimi giorni mancano, lo trovi scritto sotto il grafico."
+    limiti:
+      - "Non sono le raffiche: una raffica può essere molto più forte del valore del grafico."
+      - "Il vento cambia molto da un posto all'altro, fra crinali, valli e palazzi: il modello descrive celle di alcuni chilometri, fino a circa 25 nella rianalisi."
+      - "Non è un avviso: per il vento forte valgono gli avvisi del Centro Funzionale Regionale del Lazio."
+    fonte: "Rianalisi ERA5 del Copernicus Climate Change Service oppure, per i periodi recenti, il modello di previsione ad alta risoluzione di Open-Meteo; dati via Open-Meteo, licenza CC BY 4.0."

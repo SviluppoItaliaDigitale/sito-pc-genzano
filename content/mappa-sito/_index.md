@@ -167,6 +167,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">Dati di rischio in tempo reale in un'unica pagina: terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare.</p>
   <span class="ms-card-arrow">Apri il cruscotto →</span>
 </a>
+<a class="ms-card ms-tool" href="/cruscotto/mappe-raccontate/">
+  <div class="ms-card-icon"><i class="bi bi-chat-square-text"></i></div>
+  <p class="ms-card-title">Mappe e grafici spiegati a parole</p>
+  <p class="ms-card-desc">Ogni scheda del cruscotto e ogni grafico del Laboratorio meteo spiegati a parole: che cosa mostrano, come si leggono, che cosa non dicono. Da leggere o ascoltare.</p>
+  <span class="ms-card-arrow">Apri la pagina →</span>
+</a>
 </div>
 
 <div class="ms-section"><span class="ms-section-icon" style="background:#dc3545"><i class="bi bi-exclamation-triangle-fill"></i></span><h2>Allerte ed emergenze</h2></div>
@@ -400,7 +406,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/laboratorio-meteo/">
   <div class="ms-card-icon"><i class="bi bi-graph-up"></i></div>
   <p class="ms-card-title">Laboratorio meteo</p>
-  <p class="ms-card-desc">Strumento interattivo per esplorare i dati meteo e climatici dei Castelli Romani: scegli luogo, periodo e variabile, costruisci il grafico e leggi la tabella dei dati. Con esempi pronti sul clima locale (dati ERA5 / Open-Meteo).</p>
+  <p class="ms-card-desc">Strumento interattivo per esplorare i dati meteo e climatici dei Castelli Romani: scegli luogo, periodo e variabile, costruisci il grafico e leggi la tabella dei dati. Con esempi pronti sul clima locale (rianalisi ERA5-Land ed ERA5, via Open-Meteo).</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-infanzia/">
   <div class="ms-card-icon"><i class="bi bi-stars"></i></div>

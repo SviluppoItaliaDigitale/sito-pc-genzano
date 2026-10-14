@@ -1,0 +1,60 @@
+{{- /* Corpo comune della «spiegazione a parole» di una mappa o di un grafico: lo usano lo
+       shortcode mappa-raccontata (schede del cruscotto e pagina che le raccoglie) e il layout
+       del Laboratorio meteo. I testi stanno in data/mappe_raccontate.yaml.
+
+       Parametri (dict):
+         page     la pagina: serve a RenderString e a mettere una sola volta lo script di stampa
+         voce     la voce del file dati (titolo, in_breve, mostra, colori, aggiornamento,
+                  limiti, fonte)
+         dom      l'id dell'elemento
+         pagina   true: testo sempre visibile (pagina che le raccoglie);
+                  false: riquadro che si apre con un tocco, sotto la mappa o il grafico
+         link     dict "href" "testo": il collegamento in fondo al riquadro
+         grafico  facoltativo: chiave del grafico del Laboratorio («ex:<file>», «v:<variabile>»);
+                  il riquadro nasce nascosto e lo mostra il JavaScript del Laboratorio quando
+                  quel grafico è disegnato */ -}}
+{{- $p := .page -}}
+{{- $v := .voce -}}
+{{- if .pagina }}
+<div class="mappa-raccontata mappa-raccontata-pagina" id="{{ .dom }}">
+{{- else }}
+<details class="mappa-raccontata" id="{{ .dom }}"{{ with .grafico }} data-grafico="{{ . }}" hidden{{ end }}>
+  <summary><i class="bi bi-chat-square-text" aria-hidden="true"></i> Spiegazione a parole di «{{ $v.titolo }}»</summary>
+{{- end }}
+  <div class="mappa-raccontata-corpo">
+    <p class="mappa-raccontata-breve">{{ $p.RenderString $v.in_breve }}</p>
+    <dl>
+      <dt>Che cosa mostra</dt>
+      <dd>{{ $p.RenderString $v.mostra }}</dd>
+      <dt>Colori e simboli</dt>
+      <dd>{{ if eq (len $v.colori) 1 }}{{ $p.RenderString (index $v.colori 0) }}{{ else }}<ul>{{ range $v.colori }}<li>{{ $p.RenderString . }}</li>{{ end }}</ul>{{ end }}</dd>
+      <dt>Ogni quanto si aggiorna</dt>
+      <dd>{{ $p.RenderString $v.aggiornamento }}</dd>
+      <dt>Che cosa non dice</dt>
+      <dd>{{ if eq (len $v.limiti) 1 }}{{ $p.RenderString (index $v.limiti 0) }}{{ else }}<ul>{{ range $v.limiti }}<li>{{ $p.RenderString . }}</li>{{ end }}</ul>{{ end }}</dd>
+    </dl>
+    <p class="mappa-raccontata-fonte"><strong>Fonte:</strong> {{ $p.RenderString $v.fonte }}</p>
+    <p class="mappa-raccontata-link"><a href="{{ .link.href }}">{{ if .pagina }}<i class="bi bi-arrow-right-circle" aria-hidden="true"></i> {{ end }}{{ .link.testo }}</a></p>
+  </div>
+{{- if .pagina }}
+</div>
+{{- else }}
+</details>
+{{- end }}
+{{- /* In stampa il riquadro esce aperto: il foglio non ha un tasto da premere.
+       Il CSS fa lo stesso con ::details-content dove il browser lo conosce. */ -}}
+{{- if and (not .pagina) (not ($p.Store.Get "mappaRaccontataStampa")) }}{{ $p.Store.Set "mappaRaccontataStampa" true }}
+<script>
+(function(){
+  var aperti = [];
+  window.addEventListener('beforeprint', function(){
+    aperti = Array.prototype.slice.call(document.querySelectorAll('details.mappa-raccontata:not([open])'));
+    aperti.forEach(function(d){ d.open = true; });
+  });
+  window.addEventListener('afterprint', function(){
+    aperti.forEach(function(d){ d.open = false; });
+    aperti = [];
+  });
+})();
+</script>
+{{- end }}

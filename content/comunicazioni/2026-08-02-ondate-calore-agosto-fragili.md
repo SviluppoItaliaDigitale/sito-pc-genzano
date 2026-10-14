@@ -16,7 +16,7 @@ versione_facile: "2026-08-02-ondate-calore-agosto-fragili-facile"
 
 > ℹ️ Su questo tema la guida di riferimento, più completa, è **[15 giugno: ondate di calore, proteggere anziani e persone fragili](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)**.
 
-Le **ondate di calore** sono la prima causa di decessi evitabili fra le persone fragili durante l'estate italiana. A Genzano di Roma, pur godendo del microclima dei Castelli Romani, le temperature di agosto possono superare i 35 °C per più giorni consecutivi. Proteggere anziani, bambini piccoli e persone con patologie croniche è una responsabilità condivisa fra famiglie, vicinato, servizi sociali e Protezione Civile.
+Le **ondate di calore** sono la prima causa di decessi evitabili fra le persone fragili durante l'estate italiana. Anche a Genzano di Roma, nonostante il microclima dei Castelli Romani, possono durare più giorni. Proteggere anziani, bambini piccoli e persone con patologie croniche è una responsabilità condivisa fra famiglie, vicinato, servizi sociali e Protezione Civile.
 
 ## Chi è più a rischio
 
@@ -55,7 +55,7 @@ Le raccomandazioni del Ministero della Salute, della ASL Roma 6 e del Dipartimen
 
 ## Il bollettino calore
 
-Il Ministero della Salute pubblica ogni giorno un [bollettino ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore) per 27 città italiane, Roma compresa. Il dato romano è rappresentativo anche per Genzano, con aggiustamenti dovuti all'altitudine (circa 2-3 °C in meno).
+Il Ministero della Salute pubblica ogni giorno un [bollettino ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore) per 27 città italiane, Roma compresa. Genzano non ha un bollettino suo: il più vicino è quello di Roma. Quel bollettino dà il livello di rischio per la città, non la temperatura di Genzano. Quando il livello di Roma sale, segui comunque i consigli contro il caldo.
 
 ## Un appello al vicinato
 

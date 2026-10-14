@@ -338,3 +338,30 @@ dati:
         perche: "La FEPIVOL è una federazione: articolo e preposizioni al femminile («la FEPIVOL», «alla FEPIVOL»). Il maschile vale solo con «Coordinamento» davanti."
         contesto: 'FEPIVOL|FE\.PI\.VOL'
         finestra: 40
+
+  - id: perdite-idriche-reti
+    dato: "Perdite idriche totali delle reti comunali di distribuzione in Italia"
+    valore: "42,4% dell'acqua immessa in rete (dato 2022)"
+    fonti:
+      - nome: "ISTAT, «Le statistiche dell'Istat sull'acqua. Anni 2020-2023» (22 marzo 2024)"
+        url: "https://www.istat.it/it/files/2024/03/Report-GMA-Anno-2024.pdf"
+    vietati:
+      - regex: '\bcirca\s+(?:il\s+)?\**30\s?%'
+        perche: "Il dato ISTAT 2022 è 42,4%: «circa il 30%» non ha fonte (allineato il 14/10/2026)."
+        contesto: 'perdit|disperd|reti'
+        finestra: 160
+
+  - id: clima-genzano-luglio
+    dato: "Aumento della massima media di luglio a Genzano fra i decenni 2005-2014 e 2016-2025"
+    valore: "+1,6 °C (da 26,9 a 28,5 °C), rianalisi ERA5-Land via Open-Meteo, modello era5_seamless"
+    fonti:
+      - nome: "Dataset del sito, clima-luglio-temperature-genzano.json"
+        url: "https://www.protezionecivilegenzano.it/open-data/clima-luglio-temperature-genzano.json"
+    vietati:
+      # Il valore sbagliato veniva dalla serie mista (rianalisi fino al 2016,
+      # modello IFS dal 2017). Le note di correzione lo citano come superato.
+      - regex: '(?:2,46|2,5)\s*°C|due gradi e mezzo'
+        perche: "Sulla serie omogenea ERA5-Land l'aumento è di 1,6 °C; +2,5 °C era l'effetto del cambio di modello nel 2017."
+        contesto: '[Ll]uglio'
+        finestra: 250
+        salvo_se_frase: 'versione precedente|prima versione|risultava'

@@ -274,9 +274,12 @@ def cmd_mancanti(args) -> int:
     scelti: dict[Path, dt.datetime] = {}
     for p, _fm, d in S.articoli(args.ore, ora):
         scelti[p] = d
-    # File passati esplicitamente (articoli toccati da un push) e articoli
+    # File passati esplicitamente (articoli aggiunti da un push) e articoli
     # comparsi su main di recente (i retrodatati): valgono a qualunque età,
-    # purché online e non versioni facili.
+    # purché online e non versioni facili. Gli articoli soltanto modificati
+    # non arrivano qui (genera-social-bozze.yml passa solo gli aggiunti, dal
+    # 14/10/2026): se sono ancora nella finestra li trova la scansione sopra,
+    # altrimenti i social non li pubblicano più e il materiale non serve.
     recenti = [f"content/comunicazioni/{s}.md" for s in articoli_aggiunti_di_recente(args.ore)]
     for f in list(args.file) + recenti:
         p = (S.ROOT / f).resolve() if not Path(f).is_absolute() else Path(f)
@@ -571,7 +574,7 @@ def main() -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     m = sub.add_parser("mancanti", help="articoli online senza materiale social completo")
-    m.add_argument("file", nargs="*", help="articoli toccati da un push (qualunque età)")
+    m.add_argument("file", nargs="*", help="articoli aggiunti da un push (qualunque età)")
     m.add_argument("--ore", type=float, default=S.FINESTRA_RECUPERO_ORE,
                    help="quanto indietro guardare (predefinito: la finestra del repository social)")
     m.add_argument("--riserva-dopo-min", type=int, default=60,
