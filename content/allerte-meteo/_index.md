@@ -70,7 +70,7 @@ Cosa fare se l'acqua arriva davvero, in casa, all'aperto e in auto, lo spiega un
 - Non sono richieste azioni specifiche.
 - Resta informato attraverso i canali ufficiali.
 
-### <span class="badge badge-allerta-gialla">GIALLA</span> — Attenzione
+### <span class="badge badge-allerta-gialla">GIALLA</span> — Criticità ordinaria
 
 {{< pittogramma src="/pittogrammi/arasaac/attenzione.png" alt="Pittogramma: attenzione" size="small" inline="true" >}} Sono possibili fenomeni localizzati, anche intensi.
 
@@ -81,7 +81,7 @@ Cosa fare se l'acqua arriva davvero, in casa, all'aperto e in auto, lo spiega un
 - Non sostare lungo corsi d'acqua, fossi o sottopassaggi.
 - Fai attenzione ad alberi, impalcature e oggetti esposti al vento.
 
-### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Preallarme
+### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Criticità moderata
 
 {{< pittogramma src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: allarme" size="small" inline="true" >}} I fenomeni previsti possono essere diffusi e pericolosi.
 
@@ -92,7 +92,7 @@ Cosa fare se l'acqua arriva davvero, in casa, all'aperto e in auto, lo spiega un
 - Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 - Segui le indicazioni delle autorità.
 
-### <span class="badge badge-allerta-rossa">ROSSA</span> — Allarme
+### <span class="badge badge-allerta-rossa">ROSSA</span> — Criticità elevata
 
 {{< pittogramma src="/pittogrammi/arasaac/emergenza.png" alt="Pittogramma: emergenza" size="small" inline="true" >}} I fenomeni previsti sono molto intensi e possono causare danni gravi.
 

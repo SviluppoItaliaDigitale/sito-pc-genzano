@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-10-08"
+dataUltimaRevisione: "2026-10-14"
 toc: true
 ---
 
@@ -32,7 +32,7 @@ I contenuti sono redatti da volontari del Gruppo, coordinati da un Referente per
 
 I canali social del Gruppo sono presidiati, in tempo ordinario, **dal lunedì al venerdì, indicativamente dalle 9 alle 18**. Nei fine settimana e nei giorni festivi il presìdio è discontinuo.
 
-Dal 20 settembre 2026 **Instagram** e **Facebook** hanno anche una **pubblicazione programmata**: il post esce insieme all'articolo, appena la sua pagina è online sul sito. Se escono più articoli nello stesso momento, i post si distanziano di mezz'ora. Il testo del post nasce dall'articolo, che la redazione ha già rivisto. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post programmati i **commenti sono disattivati**, perché possono uscire anche fuori dagli orari di presìdio indicati sopra: la lettura e l'eventuale correzione dei contenuti restano comunque a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** resta pubblicato a mano dalla redazione; **Telegram** riceve soltanto le allerte meteo e le comunicazioni di emergenza.
+Dal 20 settembre 2026 **Instagram** e **Facebook** hanno anche una **pubblicazione programmata**: il post esce insieme all'articolo, appena la sua pagina è online sul sito. Se escono più articoli nello stesso momento, i post si distanziano di mezz'ora. Il testo del post nasce dall'articolo, che la redazione ha già rivisto. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post programmati, su **Instagram** i **commenti sono disattivati** (via API, al momento della pubblicazione), perché possono uscire anche fuori dagli orari di presìdio indicati sopra; su **Facebook** la disattivazione dei commenti si imposta dalle opzioni della Pagina, non via pubblicazione automatica. In entrambi i casi la lettura e l'eventuale correzione dei contenuti restano a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** resta pubblicato a mano dalla redazione; **Telegram** riceve soltanto le allerte meteo e le comunicazioni di emergenza.
 
 Durante eventi di **allerta** o **emergenza**, il canale Telegram ufficiale viene aggiornato in tempo reale 24 ore su 24 fino al termine dell'evento. Gli altri canali (Instagram, Facebook, X) vengono aggiornati a cadenza regolare durante le stesse fasi, sempre a cura della redazione.
 
