@@ -149,8 +149,8 @@ A ogni run vengono eseguiti **in sequenza** tre script:
 | Script | Cosa fa | Fonte |
 |---|---|---|
 | `scripts/check-allerta.py` | Criticità idrogeologica + pre-allerta `domani` | CSV opendatasicilia (mirror DPC) **e**, a ogni giro dall'08/10/2026, bollettino PDF del Centro Funzionale della Regione Lazio: per ogni giorno vale il livello più alto |
-| `scripts/check-avvisi-meteo.py` | Avvisi meteo avversi (vento/neve/calore) | Parser PDF pagina `/bollettini/allertamenti` Regione Lazio |
-| `scripts/check-rischi-incendi.py` | Rischio incendi AIB Zona 9 | Parser PDF pagina `/bollettini/rischi-incendi` Regione Lazio (solo in campagna AIB) |
+| `scripts/check-avvisi-meteo.py` | Avvisi meteo avversi (vento/neve/calore) | Parser PDF della pagina «Allertamenti» del Centro Funzionale (portale `www.regione.lazio.it`) |
+| `scripts/check-rischi-incendi.py` | Rischio incendi AIB Zona 9 | Parser PDF da `www.regione.lazio.it/sites/default/files/rischio-incendi/AAAA/` (solo in campagna AIB) |
 
 Ogni script aggiorna **solo il proprio blocco** in `allerta.json` (anti-spam per blocco). Lo script committa **solo se almeno uno** dei tre ha modificato il file. Messaggio commit combinato:
 
@@ -173,8 +173,10 @@ Nella maggior parte dei casi **non serve intervenire manualmente**.
 **Fonti dati ufficiali:**
 - Criticità idrogeologica/idraulica (primaria): `https://raw.githubusercontent.com/opendatasicilia/DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/data/bollettini/bollettino-{oggi,domani}-comuni-latest.csv`
 - Criticità idrogeologica (bollettino regionale, letto a ogni giro; i PDF sono in `www.regione.lazio.it/sites/default/files/criticita-idrogeologica/AAAA/`): `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/criticita-idrogeologica-idraulica`
-- Allertamenti / avvisi meteo: `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/allertamenti`
-- Rischi incendi AIB: `https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi`
+- Allertamenti / avvisi meteo: `https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-allertamenti` (dall'autunno 2026; il vecchio indirizzo su `protezionecivile.regione.lazio.it` rimanda alla home della protezione civile regionale)
+- Rischi incendi AIB: `https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi`
+- Criticità idrogeologica e idraulica: `https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica`
+- Il controllo settimanale delle fonti (`scripts/check-fonti-cruscotto.py`) verifica che le tre pagine elenchino ancora i PDF: se la Regione sposta di nuovo i bollettini, la issue arriva entro una settimana invece di restare un guasto silenzioso.
 
 ### 9.4 — `risk_cards.yaml` (Rischi e Prevenzione)
 
