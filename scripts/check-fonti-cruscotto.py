@@ -447,6 +447,24 @@ def chk_celestrak():
     return True, f"{det} · {len(righe)} oggetti nel gruppo stazioni"
 
 
+def chk_pagina_regione(url, cartella):
+    """Pagine dei bollettini della Regione Lazio: devono elencare almeno un PDF
+    nella cartella attesa. Il 14/10/2026 i vecchi indirizzi su
+    protezionecivile.regione.lazio.it rimandavano alla home della protezione
+    civile regionale (200, nessun PDF) e due script dell'allerta (avvisi meteo e
+    rischio incendi) smettevano di trovare i bollettini senza nessun errore."""
+    ok, det, _, raw = _get(url)
+    if not ok or raw is None:
+        return False, det
+    txt = raw.decode("utf-8", "replace") if isinstance(raw, bytes) else str(raw)
+    pdf = re.findall(r'href="[^"]*/sites/default/files/' + re.escape(cartella) +
+                     r'/[^"]*\.pdf"', txt, re.IGNORECASE)
+    if not pdf:
+        return False, (f"{det}, ma nessun PDF in «{cartella}»: la pagina è cambiata "
+                       "e lo script dell'allerta non trova più i bollettini")
+    return True, f"{det} · {len(set(pdf))} PDF in elenco"
+
+
 SORGENTI = [
     ("Terremoti — INGV FDSN", "Terremoti, Vulcani", chk_ingv),
     ("Meteo puntuale — Open-Meteo", "Meteo, cartine", lambda: chk_openmeteo("forecast", "api.open-meteo.com", "current=temperature_2m")),
@@ -478,6 +496,18 @@ SORGENTI = [
     ("Pronto soccorso — Regione Lazio", "Sala situazioni (EMERGENZE)", chk_pronto_soccorso),
     ("Effemeridi orbitali — CelesTrak", "Sala situazioni (SATELLITI)", chk_celestrak),
     ("Avvisi europei — MeteoAlarm", "Sala situazioni (ALLERTA)", chk_meteoalarm),
+    ("Allertamenti meteo — Regione Lazio (pagina dei PDF)", "Barra avvisi meteo in homepage",
+     lambda: chk_pagina_regione("https://www.regione.lazio.it/protezione-civile/"
+                                "centro-funzionale-regionale/bollettini-allertamenti",
+                                "allertamentiregionali-allegati")),
+    ("Bollettini incendi AIB — Regione Lazio (pagina dei PDF)", "Barra rischio incendi in homepage",
+     lambda: chk_pagina_regione("https://www.regione.lazio.it/protezione-civile/"
+                                "centro-funzionale-regionale/bollettini-rischi-incendi",
+                                "rischio-incendi")),
+    ("Bollettini di criticità — Regione Lazio (pagina dei PDF)", "Barra allerta in homepage",
+     lambda: chk_pagina_regione("https://www.regione.lazio.it/protezione-civile/"
+                                "centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica",
+                                "criticita-idrogeologica")),
 ]
 
 

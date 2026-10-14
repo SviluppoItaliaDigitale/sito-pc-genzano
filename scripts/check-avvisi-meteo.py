@@ -44,8 +44,25 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 ALLERTA_PATH = ROOT / "data" / "allerta.json"
 
-BASE_URL = "https://protezionecivile.regione.lazio.it"
-INDEX_URL = f"{BASE_URL}/gestione-emergenze/centro-funzionale/bollettini/allertamenti"
+# Dall'autunno 2026 gli allertamenti stanno sul portale www.regione.lazio.it
+# (pagina «Allertamenti del sistema regionale di Protezione Civile», PDF nella
+# cartella allertamentiregionali-allegati/<anno>/). Il vecchio indirizzo su
+# protezionecivile.regione.lazio.it rimanda alla home della protezione civile
+# regionale, dove non c'è nessun PDF: il 14/10/2026 lo script trovava «0 PDF
+# candidati» a ogni giro e non avrebbe mai visto un avviso. Si legge prima la
+# pagina nuova; quella vecchia resta come ripiego.
+BASE_URL = "https://www.regione.lazio.it"
+INDEX_URLS = [
+    "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-allertamenti",
+    "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/allertamenti",
+]
+# Link ai PDF: cartella nuova e cartella vecchia, relativi o assoluti.
+PDF_HREF = re.compile(
+    r'href="((?:https://[a-z.]+)?/sites/default/files/'
+    r'(?:allertamentiregionali-allegati/\d{4}|binary/rl_protezione_civile/tbl_avvisi_meteo_avverso)'
+    r'/[^"]*\.pdf)"',
+    re.IGNORECASE,
+)
 
 ROME_TZ = ZoneInfo("Europe/Rome")
 USER_AGENT = "PC-Genzano-Bot/1.0"
@@ -210,21 +227,43 @@ def save_allerta(data):
 
 def main():
     now = datetime.now(ROME_TZ)
-    print(f"[{now.isoformat(timespec='seconds')}] check-avvisi-meteo: scarico {INDEX_URL}")
 
-    try:
-        html = http_get_text(INDEX_URL)
-    except Exception as e:
-        print(f"::warning::Impossibile scaricare la pagina allertamenti: {e}")
+    pdf_paths = []
+    for index_url in INDEX_URLS:
+        print(f"[{now.isoformat(timespec='seconds')}] check-avvisi-meteo: scarico {index_url}")
+        try:
+            html = http_get_text(index_url)
+        except Exception as e:
+            print(f"::warning::Impossibile scaricare la pagina allertamenti: {e}")
+            continue
+        pdf_paths = list(dict.fromkeys(PDF_HREF.findall(html)))  # dedup mantenendo ordine
+        print(f"Trovati {len(pdf_paths)} PDF candidati nella pagina")
+        if pdf_paths:
+            break
+
+    if not pdf_paths:
+        # La pagina elenca sempre gli allertamenti passati: zero link non vuol dire
+        # «nessun avviso», vuol dire che la pagina è cambiata o non risponde. Lo stato
+        # resta com'era, salvo un avviso già scaduto, che si toglie comunque.
+        print("::error::Nessun PDF di allertamento nella pagina della Regione Lazio: "
+              "la pagina potrebbe essere cambiata. Stato dell'avviso lasciato com'era.")
+        allerta = load_allerta()
+        corrente = allerta.get("avviso_meteo")
+        scaduto = False
+        if corrente and corrente.get("validita_fine"):
+            try:
+                scaduto = now > datetime.fromisoformat(corrente["validita_fine"])
+            except ValueError:
+                scaduto = False
+        if scaduto:
+            print(f"⚠️  Avviso meteo scaduto ({corrente.get('validita_fine')}): lo tolgo")
+            del allerta["avviso_meteo"]
+            save_allerta(allerta)
+        gh_out = os.environ.get("GITHUB_OUTPUT", "")
+        if gh_out:
+            with open(gh_out, "a") as f:
+                f.write(f"changed={'true' if scaduto else 'false'}\n")
         return 0
-
-    # Estrai tutti i link PDF della cartella tbl_avvisi_meteo_avverso
-    pdf_paths = re.findall(
-        r'href="(/sites/default/files/binary/rl_protezione_civile/tbl_avvisi_meteo_avverso/[^"]*\.pdf)"',
-        html,
-    )
-    pdf_paths = list(dict.fromkeys(pdf_paths))  # dedup mantenendo ordine
-    print(f"Trovati {len(pdf_paths)} PDF candidati nella pagina")
 
     # Filtra per data dal nome (lookback)
     candidates = []
@@ -243,16 +282,18 @@ def main():
 
     avviso_attivo = None
     for data_pdf, path, filename in candidates:
-        full_url = BASE_URL + urllib.parse.quote(path)
-        # Quote rimette anche % di caratteri speciali, ma il path che abbiamo
-        # è già URL-style. Decodifico prima e ri-quoto correttamente.
-        full_url = BASE_URL + path  # spazi tipo "vento 30 03 2026" → urllib li gestisce con il quote sotto
+        # Il link può essere relativo o assoluto e contenere spazi
+        # («REGISTRO UFFICIALE(U)», «vento 30 03 2026»): si codificano solo quelli.
+        full_url = path if path.lower().startswith("http") else BASE_URL + path
         try:
             req = urllib.request.Request(full_url.replace(" ", "%20"), headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as r:
                 pdf_bytes = r.read()
         except Exception as e:
             print(f"  ⏭️  {filename}: impossibile scaricare ({e})")
+            continue
+        if not pdf_bytes.startswith(b"%PDF"):
+            print(f"  ⏭️  {filename}: la risposta non è un PDF ({len(pdf_bytes)} bytes)")
             continue
 
         testo = parse_pdf(pdf_bytes)

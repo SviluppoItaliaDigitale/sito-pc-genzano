@@ -84,7 +84,7 @@ A ogni run il workflow esegue in sequenza tre script Python, ognuno responsabile
    - Aggiorna i campi `livello`, `titolo`, `descrizione`, `ultimo_aggiornamento`, `ultimo_controllo`, `domani` di `data/allerta.json`
 
 2. **`scripts/check-avvisi-meteo.py` — avvisi meteo avversi (vento, neve, calore, gelate, mareggiate)**
-   - Scarica HTML della pagina `/bollettini/allertamenti` Regione Lazio
+   - Scarica HTML della pagina «Allertamenti» del Centro Funzionale (`www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-allertamenti`)
    - Estrae i link PDF degli ultimi 5 giorni (lookback window)
    - Per ogni PDF: scarica + parsa + identifica `PER I SEGUENTI RISCHI: <tipo>`
    - Salta i PDF di criticità idrogeologica (già coperti dallo script 1)
