@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-14T09:21:26+00:00",
+  "generato": "2026-10-14T14:37:45+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-14T09:16:54+00:00",
+   "data": "2026-10-14T14:27:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Totti e Vieri ricevono premio Eccellenza Euro Mediterraneo: \"Roma-Real Madrid? Gasperini giocherà per vincere\"",
+   "url": "https://www.adnkronos.com/sport/totti-vieri-roma-real-madrid-gasperini_3Puy1hlQgtfqLmBVTUdaDe"
+  },
+  {
+   "data": "2026-10-14T14:26:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il Papa operato di tumore, decorso post operatorio regolare. \"Ha mangiato e ha fatto fisioterapia\"",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/il-papa-operato-di-tumore-decorso-post-operatorio-regolare.-ha-mangiato-e-ha-fatto-fisioterapia_aea02c45-a756-4a98-91f9-de643ebdbcfe.html"
+  },
+  {
+   "data": "2026-10-14T14:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nominato nuovo Cda di Gre Spa, Marco Lazzarini presidente",
+   "url": "https://www.adnkronos.com/economia/nominato-nuovo-cda-di-gre-spa-marco-lazzarini-presidente_7umpoSnGLewegtP5EDV8h"
+  },
+  {
+   "data": "2026-10-14T14:23:46+00:00",
    "fonte": "ANSA",
-   "titolo": "Denunciati due componenti della banda della minicar, hanno confessato. Sono entrambi minorenni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/denunciati-due-componenti-della-banda-della-minicar-hanno-confessato.-sono_65555a49-3948-4536-8119-b7ad101d1c41.html"
+   "titolo": "Il caso Alaska alle Midterm, si sfidano due candidati con lo stesso cognome",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/14/il-caso-alaska-alle-midterm-si-sfidano-due-candidati-con-lo-stesso-cognome_2fa1982c-a566-43e5-b310-c929f02f984e.html"
   },
   {
-   "data": "2026-10-14T09:12:21+00:00",
+   "data": "2026-10-14T14:18:46+00:00",
    "fonte": "ANSA",
-   "titolo": "La notte per il Papa al Gemelli è trascorsa tranquillamente. Operato per un tumore al polmone, intervento riuscito",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/la-notte-per-il-papa-e-trascorsa-tranquillamente-_aea02c45-a756-4a98-91f9-de643ebdbcfe.html"
+   "titolo": "Meloni: 'L'intesa di Trump sul gasolio russo è rischiosa. Non siamo guerrafondai'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/14/meloni-lintesa-di-trump-sul-gasolio-russo-e-rischiosa.-non-siamo-guerrafondai_a88938b7-13d2-405b-959f-54aa581fe58c.html"
   },
   {
-   "data": "2026-10-14T09:11:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alessandro Benetton ospite di High Performance, il podcast internazionale da oltre 800mila iscritti su YouTube",
-   "url": "https://www.adnkronos.com/sport/alessandro-benetton-ospite-di-high-performance-il-podcast-internazionale-da-oltre-800mila-iscritti-su-youtube_3iEaYgGkrexxluZtd8hp1j"
-  },
-  {
-   "data": "2026-10-14T09:11:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il Papa al Gemelli, attesa e fedeli in preghiera dopo l'asportazione del tumore maligno al polmone - FOTO",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/il-papa-al-gemelli-attesa-e-fedeli-in-preghiera-dopo-lasportazione-del-tumore-maligno_2607a579-102e-44e7-a806-4cb834f4fee4.html"
-  },
-  {
-   "data": "2026-10-14T09:11:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Difesa di Sempio, impronta piede assassino più piccola di quella di Andrea",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/difesa-di-sempio-impronta-piede-assassino-piu-piccola-di-quella-di-andrea_f07a5b2e-0567-499f-8166-87fc968e0848.html"
-  },
-  {
-   "data": "2026-10-14T09:08:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ragazzo trovato morto nel bosco a Verona, fermato 50enne",
-   "url": "https://www.adnkronos.com/cronaca/verona-bosco-ragazzo-morto-fermato-uomo_217BfxbVutfX76ZFWPNVO1"
-  },
-  {
-   "data": "2026-10-14T09:00:51+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incinta a 12 anni, il padre arrestato per violenza sessuale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/incinta-a-12-anni-il-padre-arrestato-per-violenza-sessuale_2d8ab727-f522-4995-9f2e-df6581027b97.html"
-  },
-  {
-   "data": "2026-10-14T08:59:59+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Chi ha operato il Papa: equipe di 7 medici, guidati da Stefano Margaritora",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/chi-ha-operato-il-papa-equipe-di-7-medici-guidati-da-stefano-margaritora_7ea14283-049d-4c15-b48e-a506c6a1595a.html"
-  },
-  {
-   "data": "2026-10-14T08:54:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Individuati i due componenti della banda della minicar, hanno confessato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/individuati-i-due-componenti-della-banda-della-minicar-hanno-confessato_020c4421-3292-43d3-bd76-0aa6ebcd3bb9.html"
-  },
-  {
-   "data": "2026-10-14T08:51:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sonia Bruganelli, ultimo appuntamento con 'Come ti leggo': tra gli ospiti, Paolo Bonolis",
-   "url": "https://www.adnkronos.com/spettacoli/paolo-bonolis-sonia-bruganelli-come-ti-leggo-stasera_3vLHFhTC6C2Fnur1ueZ7zi"
-  },
-  {
-   "data": "2026-10-14T08:47:22+00:00",
+   "data": "2026-10-14T14:16:30+00:00",
    "fonte": "ANSA",
-   "titolo": "'A mano a mano' la nuova campagna istituzionale di Intesa Sanpaolo",
-   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/13/a-mano-a-mano-la-nuova-campagna-istituzionale-di-intesa-sanpaolo_1f67b2ef-d8eb-4cc9-a0a5-99874bf4e872.html"
+   "titolo": "Ucraina: Trump furioso, potrebbe interrompere l'intelligence con Kiev. Raid russi su sei centrali elettriche",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/14/trump-furioso-potrebbe-interrompere-lintelligence-con-kiev_7c4bcdf8-cc89-403e-b237-2b6b5ab2fd7b.html"
   },
   {
-   "data": "2026-10-14T08:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allarme minicar a Roma, sequestrata auto: denunciati due minorenni, hanno confessato. Il 17enne alla guida è figlio di un carabiniere",
-   "url": "https://www.adnkronos.com/cronaca/allarme-minicar-roma-auto-sequestrata-denunciati-confessione_3iRB61t3nn0S1ALgFmsHpP"
-  },
-  {
-   "data": "2026-10-14T08:42:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Estorsione dalla prigione di Favignana, ordinanza in carcere per 4",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/estorsione-dalla-prigione-di-favignana-ordinanza-in-carcere-per-4_7ac3b450-4c11-44e9-b16b-1ff8ab11103a.html"
-  },
-  {
-   "data": "2026-10-14T08:41:06+00:00",
+   "data": "2026-10-14T14:10:26+00:00",
    "fonte": "ANSA",
-   "titolo": "Maraini: 'La Torre di Pasolini resti a Gallinari, grottesco il suo sfratto'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/14/maraini-la-torre-di-pasolini-resti-a-gallinari-grottesco-il-suo-sfratto_50b6e504-55a1-4236-9771-645dafbf67c4.html"
+   "titolo": "Confessano i due minorenni della banda della minicar, uno è figlio di un carabiniere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/denunciati-due-componenti-della-banda-della-minicar.-i-due-minorenni-hanno_65555a49-3948-4536-8119-b7ad101d1c41.html"
   },
   {
-   "data": "2026-10-14T08:37:03+00:00",
+   "data": "2026-10-14T14:09:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Selvaggia Lucarelli, spunta un vecchio video di Ballando con le stelle dopo la frase al Grande Fratello Vip: cosa è successo",
-   "url": "https://www.adnkronos.com/spettacoli/lucarelli-marina-la-rosa-rossella-erra-grande-fratello-ballando-con-le-stelle_1yB6Pq4WlhQRWqmKTDQsEg"
+   "titolo": "Nappi (Ims): \"Menopausa tappa naturale ma importante dialogo con il medico\"",
+   "url": "https://www.adnkronos.com/cronaca/nappi-ims-menopausa-tappa-naturale-ma-importante-dialogo-con-il-medico_4nSnXy1KhZfaS2ZI94Q2iY"
   },
   {
-   "data": "2026-10-14T08:35:53+00:00",
+   "data": "2026-10-14T14:03:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "++ Lavoratori ex Ilva occupano la Prefettura di Genova ++",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/-lavoratori-ex-ilva-occupano-la-prefettura-di-genova-_6640b4a5-648a-48f3-a217-ba9d25b4129d.html"
+  },
+  {
+   "data": "2026-10-14T14:00:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa operato di tumore, decorso post operatorio regolare. \"Ha mangiato e ha fatto fisioterapia\"",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/papa-operato-di-tumore-decorso-post-operatorio-regolare_aea02c45-a756-4a98-91f9-de643ebdbcfe.html"
+  },
+  {
+   "data": "2026-10-14T13:56:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Via libera della Camera al ddl sui caregiver familiari, 153 sì",
+   "url": "https://www.ansa.it/responsabilmente/notizie/dalle_istituzioni/2026/10/14/via-libera-della-camera-al-ddl-sui-caregiver-familiari-153-si_84c71a52-d641-4124-b2e8-4f4da40eb064.html"
+  },
+  {
+   "data": "2026-10-14T13:55:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morto dopo fermo carabinieri a Lodi, sorella di Giuseppe Uva: \"Vicina a famiglia, conosco calvario\"",
+   "url": "https://www.adnkronos.com/cronaca/giuseppe-uva-sorella-agostino-conigliaro-lodi-fermo-carabinieri_1PToIL76pv6XU2AMBR7Enz"
+  },
+  {
+   "data": "2026-10-14T13:55:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Verso l'accordo Ue-Italia su neutralizzazione Ets su prezzo elettricità",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/14/verso-laccordo-ue-italia-su-neutralizzazione-ets-su-prezzo-elettricita-_2a3d9660-b515-46f9-b0ac-c3ea351ad1f8.html"
+  },
+  {
+   "data": "2026-10-14T13:55:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, vandalizzato il murale di Mourinho prima della sfida con il Real",
+   "url": "https://www.adnkronos.com/sport/murale-mourinho-sfregiato-roma-real-madrid_I4VedsS33OCf2dhUxjh5r"
+  },
+  {
+   "data": "2026-10-14T13:52:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Missione a Bruxelles, Latrofa porta in Europa le priorità del porto di Civitavecchia",
+   "url": "https://www.adnkronos.com/economia/missione-a-bruxelles-latrofa-porta-in-europa-le-priorita-del-porto-di-civitavecchia_57qSn0Hd0NG8wotIshT9Wo"
+  },
+  {
+   "data": "2026-10-14T13:49:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Indagine: \"Nel 2025 oltre 1,18 mln di certificati per patologie muscolo-scheletriche\"",
+   "url": "https://www.adnkronos.com/cronaca/indagine-nel-2025-oltre-1-18-mln-di-certificati-per-patologie-muscolo-scheletriche_Fgz9H9tHv1b40s7yOVOgw"
+  },
+  {
+   "data": "2026-10-14T13:48:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Decorso post-operatorio regolare per il Papa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/decorso-post-operatorio-regolare-per-il-papa_3ddb7509-975d-4943-9192-671590fc8d16.html"
+  },
+  {
+   "data": "2026-10-14T13:41:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Consiglio europeo del 15 e 16 ottobre, alla Camera la seduta sulle comunicazioni di Meloni",
+   "url": "https://www.ansa.it/sito/notizie/dirette_live/2026/10/14/consiglio-europeo-del-15-e-16-ottobre-le-comunicazioni-di-meloni-alla-camera_19ffc225-7ab4-4898-a320-34592d5bcf03.html"
+  },
+  {
+   "data": "2026-10-14T13:41:18+00:00",
    "fonte": "ANSA",
    "titolo": "Che tipo di tumore è l'adenocarcinoma che ha colpito Leone",
    "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/10/14/lesperto-le-prossime-24-48-ore-le-piu-delicate-per-il-papa_4055da88-cfae-4c68-ac0d-1eeda135d664.html"
   },
   {
-   "data": "2026-10-14T08:29:58+00:00",
+   "data": "2026-10-14T13:39:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Crosetto: 'Radar nei Balcani per difendere anche l'Italia'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/crosetto-radar-nei-balcani-per-difendere-anche-litalia_7c0f3356-32d1-4dd3-a0d7-3e65ea3f0aac.html"
+  },
+  {
+   "data": "2026-10-14T13:39:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Giallo di Pietracatella, oggi server pc e reti WIFI dello Scientifico di Riccia al setaccio",
-   "url": "https://www.adnkronos.com/cronaca/giallo-pietracatella-oggi-analisi-pc-server-scientifico-riccia_7igFz1OvNggdxFVgzgF4y5"
+   "titolo": "Università, oggi a Tor Vergata la 19ma edizione del Career Day",
+   "url": "https://www.adnkronos.com/economia/universita-oggi-a-tor-vergata-la-19ma-edizione-del-career-day_6gQzXHG6i1DhGvMvbPtnEp"
   },
   {
-   "data": "2026-10-14T08:29:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meloni: 'Energia il peso maggiore, serve risposta coordinata e rapida'. Sull'Ucraina la posizione del governo non cambia",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/14/comunicazioni-della-presidente-del-consiglio-meloni-in-vista-del-consiglio-europeo_a88938b7-13d2-405b-959f-54aa581fe58c.html"
-  },
-  {
-   "data": "2026-10-14T08:25:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Prima neve sulla Maiella, in Abruzzo registrati -2,1 gradi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/prima-neve-sulla-maiella-in-abruzzo-registrati-21-gradi_8e5288aa-6f10-439c-8f8f-2b5c7ff3557a.html"
-  },
-  {
-   "data": "2026-10-14T08:24:06+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Assalto a ditta orafa nell'Aretino, strade bloccate ma colpo fallisce",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/assalto-a-ditta-orafa-nellaretino-strade-bloccate-ma-colpo-fallisce_46c413c8-4b76-4a99-b7c4-18358faa04fa.html"
-  },
-  {
-   "data": "2026-10-14T08:22:00+00:00",
+   "data": "2026-10-14T13:39:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Usa, giudice frena Trump: Cnn, Politico e Ms Now tornano alla Casa Bianca",
-   "url": "https://www.adnkronos.com/internazionale/esteri/cnn-politico-ms-now-trump-tribunale-casa-bianca_UwlMfylNElUueyyaFynr"
+   "titolo": "Sbarbati (UniVr): \"Fibromialgia va portata dal piano individuale al piano sociale\"",
+   "url": "https://www.adnkronos.com/cronaca/sbarbati-univr-fibromialgia-va-portata-dal-piano-individuale-al-piano-sociale_78sKjdRpmiRL7vhQgAzXJC"
   },
   {
-   "data": "2026-10-14T08:14:54+00:00",
+   "data": "2026-10-14T13:38:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "E' italiano il vincitore del Wildlife Photographer of the Year",
+   "url": "https://www.ansa.it/canale_scienza/notizie/scienza_arte/2026/10/14/e-italiano-il-vincitore-del-wildlife-photographer-of-the-year-_195e87f6-a59f-4eee-aab1-adf387eeabb3.html"
+  },
+  {
+   "data": "2026-10-14T13:38:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'IA conquista la sfera emotiva, medici dei Serd: 'C'è rischio di dipendenza'",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/10/14/lia-conquista-la-sfera-emotiva-medici-dei-serd-ce-rischio-di-dipendenza_14edad18-ab64-4c63-aa6b-41ff7edd9386.html"
+  },
+  {
+   "data": "2026-10-14T13:37:55+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Agguato a Chivasso, due misure cautelari per tentato omicidio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/agguato-a-chivasso-due-misure-cautelari-per-tentato-omicidio_21c72233-896c-436c-95aa-9ee34eb33ce5.html"
+   "titolo": "Assolti in 23 per saluti romani, 'il solo gesto fascista non è pericoloso'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/assolti-in-23-per-saluti-romani-il-solo-gesto-fascista-non-e-pericoloso_38eb3eea-8fb5-4010-a8d4-d1b67a6c4571.html"
   },
   {
-   "data": "2026-10-14T08:04:00+00:00",
+   "data": "2026-10-14T13:37:50+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Nominato nuovo Cda di Gre Spa, Marzo Lazzarini presidente",
-   "url": "https://www.adnkronos.com/economia/nominato-nuovo-cda-di-gre-spa-marzo-lazzarini-presidente_7umpoSnGLewegtP5EDV8h"
+   "titolo": "Alessia Marcuzzi contro il tabù della menopausa: \"Mi vergognavo, mi sentivo meno donna e meno sexy\"",
+   "url": "https://www.adnkronos.com/spettacoli/alessia-marcuzzi-menopausa-racconto-cosa-ha-scritto_NEKa57gkP7tTni45kQvle"
   },
   {
-   "data": "2026-10-14T08:01:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il Papa al Gemelli, notte tranquilla dopo l'asportazione del tumore maligno al polmone - FOTO",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/il-papa-al-gemelli-notte-tranquilla-dopo-lasportazione-del-tumore-maligno-al-polmone_8c3419ff-a220-4577-ac2b-b861925cff98.html"
-  },
-  {
-   "data": "2026-10-14T08:00:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Investimenti e competitività al centro del Forum di ANSA Europa",
-   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/10/13/investimenti-e-competitivita-al-centro-domani-del-forum-di-ansa-europa_b5b87a77-4d8a-42d3-8d65-6fca58ea027c.html"
-  },
-  {
-   "data": "2026-10-14T07:54:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Operai lavoravano 7 giorni su 7 in ditta Prato, misure cautelari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/operai-lavoravano-7-giorni-su-7-in-ditta-prato-misure-cautelari_a6f73a5e-a126-4747-914e-a99d2db2ffba.html"
-  },
-  {
-   "data": "2026-10-14T07:46:18+00:00",
+   "data": "2026-10-14T13:36:58+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ex Ilva, terzo giorno di protesta: presidi davanti alla raffineria a Taranto, corteo a Genova",
-   "url": "https://www.adnkronos.com/economia/ex-ilva-proteste-taranto-genova-terzo-giorno-aggiornamenti_60QNf9XQ99UP4cxZ0bC4X6"
+   "titolo": "Brexit, l'esperto: \"Da Burnham solo confusione su interferenza russa, servono riscontri tangibili\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/brexit-russia-putin-burnham-gran-bretagna-esperto_5AY2ex16e0KtZZLL4B4kzj"
   },
   {
-   "data": "2026-10-14T07:45:54+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il re degli ottomila, 40 anni fa l'incoronazione di Reinhold Messner",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/il-re-degli-ottomila-40-anni-fa-lincoronazione-di-reinhold-messner_bcf4ed35-e52f-46aa-9cb1-c4cca1667a28.html"
+   "data": "2026-10-14T13:36:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "A Gattuso il Premio Eccellenza Euro Mediterraneo: \"I giovani vanno ascoltati, alla Lazio nessun alibi\"",
+   "url": "https://www.adnkronos.com/sport/gattuso-lazio-premio-eccellenza-euro-mediterraneo_3RTPP8jZPDzIZ9n5xFCVbi"
   },
   {
-   "data": "2026-10-14T07:44:04+00:00",
+   "data": "2026-10-14T13:32:41+00:00",
    "fonte": "ANSA",
-   "titolo": "Cnel, la relazione sui servizi pubblici 2026",
-   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/13/cnel-la-relazione-sui-servizi-pubblici-2026_e088feee-473d-4558-8884-f17fe8747c83.html"
+   "titolo": "Le triplicano l'affitto, 94enne invalida rischia di essere sfrattata a Firenze",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/le-triplicano-laffitto-94enne-invalida-rischia-di-essere-sfrattata-a-firenze_3c3c61f8-6ab1-4670-9b8c-7db3e34b7181.html"
   },
   {
-   "data": "2026-10-14T07:43:44+00:00",
+   "data": "2026-10-14T13:28:35+00:00",
    "fonte": "ANSA",
-   "titolo": "Raid russi contro l'Ucraina, almeno sei morti nella notte",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/14/raid-russi-contro-lucraina-almeno-sei-morti-nella-notte_ed328f3a-e5d6-4c73-ac41-a1841206cd06.html"
+   "titolo": "Incinta a 12 anni, il padre arrestato per violenza sessuale",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/incinta-a-12-anni-il-padre-arrestato-per-violenza-sessuale_f32b9e80-0f74-4580-8c3d-59244b8ea4f4.html"
   }
  ]
 }
