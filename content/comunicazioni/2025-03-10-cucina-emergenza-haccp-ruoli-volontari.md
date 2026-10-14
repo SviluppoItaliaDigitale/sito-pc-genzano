@@ -27,7 +27,7 @@ Tutti i volontari che operano in cucina, a qualsiasi titolo, devono avere una fo
 - **Addetto al Primo Soccorso**. Controlla la cassetta di Primo Soccorso di tipo B con allegato 1 (il contenuto minimo è fissato dal D.M. 388/2003, in attuazione dell'art. 45 del D.Lgs. 81/2008).
 - **Installatore qualificato GPL**. Verifica la corretta installazione e lo stoccaggio delle bombole secondo le norme UNI vigenti sugli impianti a GPL non alimentati da rete di distribuzione.
 
-> **Nota di aggiornamento (ottobre 2026).** La norma UNI/TR 11426:2011, citata nella prima versione di questo articolo, è stata ritirata il 14 ottobre 2021 e sostituita da un documento più recente. Per l'edizione in vigore si rimanda al [catalogo online UNI](https://store.uni.com/).
+> **Nota di aggiornamento (ottobre 2026).** La norma UNI/TR 11426:2011, citata nella prima versione di questo articolo, è stata ritirata il 14 ottobre 2021. Lo stesso giorno è entrata in vigore la [UNI/TS 11426:2021](https://store.uni.com/uni-ts-11426-2021), sullo stesso tema (impianti a GPL per manifestazioni temporanee non alimentati da rete di distribuzione): è l'edizione da seguire oggi.
 
 ## I ruoli in cucina
 
