@@ -72,7 +72,7 @@ Oltre alla caldaia:
 - **controllare** perdite di acqua;
 - **verificare** che le valvole termostatiche funzionino;
 - **pulire** superficie esterna (polvere riduce efficienza);
-- **controllare** che pareti dietro i termosifoni siano sane (macchie possono indicare perdite).
+- **controllare** che le pareti dietro i termosifoni siano sane (macchie possono indicare perdite).
 
 ## Sicurezza quotidiana
 
