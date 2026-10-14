@@ -36,7 +36,7 @@ Il **terremoto dell'Emilia 2012** confermò ciò che il 1996 aveva suggerito: la
 
 ## Cosa ci insegna oggi
 
-Il 1996 reggiano è caso scuola di **come la conoscenza scientifica anticipi la consapevolezza pubblica**. Tre lezioni:
+Il 1996 reggiano è un caso scuola di **come la conoscenza scientifica anticipi la consapevolezza pubblica**. Tre lezioni:
 
 1. **Tutto il territorio italiano è sismico, in misura diversa.** Il principio è oggi codificato nelle [Norme Tecniche per le Costruzioni (NTC 2018)](https://www.normattiva.it/) e nella classificazione sismica del territorio. Non esistono "zone sicure".
 

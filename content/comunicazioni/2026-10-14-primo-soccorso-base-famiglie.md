@@ -33,7 +33,7 @@ Prima di ogni azione:
 3. **comprimere** con garza sterile per fermare l'emorragia;
 4. **coprire** con medicazione;
 5. **verificare** vaccinazione antitetanica (ogni 10 anni);
-6. **andare al pronto soccorso** se: il taglio è profondo, non si ferma il sangue, è su viso, ci sono corpi estranei, è causato da animale.
+6. **andare al pronto soccorso** se: il taglio è profondo, non si ferma il sangue, è sul viso, ci sono corpi estranei, è causato da un animale.
 
 ## Ustioni
 
