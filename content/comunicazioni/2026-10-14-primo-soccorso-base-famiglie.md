@@ -80,8 +80,7 @@ Prima di ogni azione:
 
 ## Emorragie gravi
 
-- **premere** direttamente sulla ferita con un panno o garza spessa;
-- **sollevare** l'arto se possibile;
+- **premere** direttamente sulla ferita con un panno o garza spessa, senza staccarlo per controllare;
 - **112 subito**;
 - **non rimuovere** oggetti conficcati (comprimere attorno);
 - **laccio emostatico** solo se formati e solo in ultima istanza.
