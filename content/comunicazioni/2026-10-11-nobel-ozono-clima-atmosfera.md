@@ -44,7 +44,9 @@ Già nel 2007 il Nobel per la pace era andato all'**IPCC**, il gruppo intergover
 
 ## Che cosa cambia per la protezione civile
 
-Con un clima più caldo le **ondate di calore** tendono a essere più frequenti e intense, e i temporali possono scaricare più pioggia in poco tempo. Sono tendenze di lungo periodo: non permettono di attribuire al clima un singolo evento. Sono rischi che il nostro territorio conosce bene. Con i dati della rianalisi ERA5 per Genzano, la massima media di luglio del decennio 2016-2025 supera di quasi due gradi e mezzo quella del 2005-2014. Una rianalisi non è una misura di stazione: la trovi spiegata nel dossier [Il clima che cambia i rischi](/dossier/il-clima-che-cambia-i-rischi/).
+Con un clima più caldo le **ondate di calore** tendono a essere più frequenti e intense, e i temporali possono scaricare più pioggia in poco tempo. Sono tendenze di lungo periodo: non permettono di attribuire al clima un singolo evento. Sono rischi che il nostro territorio conosce bene. Con i dati della rianalisi ERA5-Land per Genzano, la massima media di luglio del decennio 2016-2025 supera di 1,6 °C quella del 2005-2014. Una rianalisi non è una misura di stazione: la trovi spiegata nel dossier [Il clima che cambia i rischi](/dossier/il-clima-che-cambia-i-rischi/).
+
+> **Nota di aggiornamento (14 ottobre 2026).** La prima versione di questo articolo indicava un aumento di quasi due gradi e mezzo, calcolato su un archivio che dal 2017 cambia modello. Ricalcolato su una serie omogenea, l'aumento è di 1,6 °C.
 
 Per difendersi servono le stesse cose di sempre, fatte meglio: seguire le [allerte meteo](/allerte-meteo/), sapere [cosa fare con il caldo](/rischi-prevenzione/ondate-di-calore/) e [con i temporali intensi](/rischi-prevenzione/temporali-intensi/).
 

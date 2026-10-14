@@ -817,6 +817,8 @@
 :where([id="scheda-siccita-castelli-secondaria"]) .lab-box .titolo-l { font-weight: 700; color: #0f5132; margin-bottom: 0.2rem; font-size: 0.93rem; }
 :where([id="scheda-siccita-castelli-secondaria"]) .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
 :where([id="scheda-siccita-castelli-secondaria"]) .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
+:where([id="scheda-siccita-castelli-secondaria"]) .domanda-card, :where([id="scheda-siccita-castelli-secondaria"]) .nozione-box, :where([id="scheda-siccita-castelli-secondaria"]) .dati-tabella, :where([id="scheda-siccita-castelli-secondaria"]) .lab-box { break-inside: avoid; page-break-inside: avoid; }
+:where([id="scheda-siccita-castelli-secondaria"]) .scheda-h2 { break-after: avoid; page-break-after: avoid; }
 
 :where([id="scheda-cronaca-recente-secondaria"]) .articolo-box {
       background: #f4f7fb; border: 1.5px solid var(--scheda-bordo);
@@ -5593,18 +5595,18 @@ e canali ufficiali del Comune.</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h1 class="scheda-titolo-principale">La siccità ai Castelli Romani: leggere i dati</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di primo grado (11-13 anni)</div>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di primo grado (11-14 anni)</div>
       </div>
     </header>
 
     <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 11-13 anni</span>
-      <span><strong>Obiettivo:</strong> leggere una serie di dati climatici reali, calcolare media e scarto, discutere il risparmio idrico</span>
+      <span><strong>Destinatari:</strong> 11-14 anni</span>
+      <span><strong>Obiettivo:</strong> leggere una serie di dati climatici ricostruiti, calcolare media e scarto, discutere il risparmio idrico</span>
       <span><strong>Discipline:</strong> matematica, scienze, geografia, ed. civica</span>
     </div>
 
     <p class="scheda-intro">
-      La <strong>siccità</strong> è un rischio diverso dagli altri: non arriva con un boato, ma si costruisce in <strong>mesi</strong> di pioggia scarsa. Per accorgersene bisogna saper <strong>leggere i dati</strong>. In questa scheda usi numeri veri: la pioggia caduta ogni anno a <strong>Genzano di Roma</strong> e i giorni in cui la temperatura massima ha raggiunto almeno 35 °C, ricavati dalla rianalisi climatica <strong>ERA5</strong>. Gli stessi dati che trovi, in forma di grafico, nel <strong>Laboratorio meteo</strong> del nostro sito.
+      La <strong>siccità</strong> è un rischio diverso dagli altri: non arriva con un boato, ma si costruisce in <strong>mesi</strong> di pioggia scarsa. Per accorgersene bisogna saper <strong>leggere i dati</strong>. In questa scheda lavori su dati climatici <strong>ricostruiti</strong> per la zona di <strong>Genzano di Roma</strong>: la pioggia di ogni anno e i giorni in cui la temperatura massima ha raggiunto almeno 30 °C. Vengono dalle rianalisi <strong>ERA5</strong> ed <strong>ERA5-Land</strong>. Non sono le letture di una stazione meteo: sono stime su una griglia di celle larghe oltre dieci chilometri. Vanno bene per confrontare gli anni fra loro. Gli stessi dati li trovi, in forma di grafico, nel <strong>Laboratorio meteo</strong> del nostro sito.
     </p>
 
     <h2 class="scheda-h2">💧 Cos'è la siccità (e perché ne esistono due "tipi")</h2>
@@ -5616,39 +5618,39 @@ e canali ufficiali del Comune.</div>
 
     <div class="nozione-box">
       <div class="titolo-n">Perché riguarda i Castelli Romani</div>
-      I Castelli Romani dipendono in larga parte dalla <strong>falda vulcanica dei Colli Albani</strong>, alimentata <strong>dalle piogge</strong>: anni di precipitazioni scarse e prelievi elevati ne abbassano il livello, come mostra anche il calo storico dei laghi di <strong>Albano</strong> e di <strong>Nemi</strong>. Le crisi idriche del <strong>2017</strong> e degli anni successivi hanno interessato anche il Lazio, con misure di contenimento dei consumi. In più, in Italia le reti idriche disperdono in media circa il <strong>30%</strong> dell'acqua immessa: la falda si ricarica in <strong>anni</strong>, non in giorni, quindi ogni spreco pesa a lungo.
-      <div class="fonte">Fonti: pagina "Siccità e crisi idrica" del nostro sito; ISPRA; CMCC.</div>
+      I Castelli Romani dipendono in larga parte dalla <strong>falda vulcanica dei Colli Albani</strong>, alimentata <strong>dalle piogge</strong>: anni di precipitazioni scarse e prelievi elevati ne abbassano il livello, come mostra anche il calo storico dei laghi di <strong>Albano</strong> e di <strong>Nemi</strong>. Le crisi idriche del <strong>2017</strong> e degli anni successivi hanno interessato anche il Lazio, con misure di contenimento dei consumi. Poi ci sono gli sprechi: nel 2022, secondo l'ISTAT, le reti idriche italiane hanno perso in media circa il <strong>42%</strong> dell'acqua immessa (tubi vecchi o rotti, ma anche contatori imprecisi e allacci abusivi). La falda si ricarica lentamente, spesso in <strong>anni</strong> e non in giorni: per questo ogni spreco pesa a lungo.
+      <div class="fonte">Fonti: pagina "Siccità e crisi idrica" del nostro sito; ISPRA; CMCC; ISTAT, «Le statistiche sull'acqua. Anni 2020-2024» (marzo 2025).</div>
     </div>
 
-    <h2 class="scheda-h2">📊 I dati veri di Genzano (2016-2025)</h2>
+    <h2 class="scheda-h2">📊 I dati climatici di Genzano (2016-2025)</h2>
     <table class="dati-tabella">
-      <caption>Dati: rianalisi ERA5 via Open-Meteo (CC BY 4.0), allineata al Copernicus Climate Data Store. Valori interi, trascritti dagli open data del sito (pioggia in millimetri; 1 mm = 1 litro per metro quadrato).</caption>
+      <caption>Dati ricostruiti per la zona di Genzano (non letti da una stazione): rianalisi ERA5 (pioggia) ed ERA5-Land (temperature) del Copernicus Climate Change Service, via Open-Meteo (CC BY 4.0). Valori interi, dai dati aperti del sito (serie 2005-2025, ricalcolata a ottobre 2026). Pioggia in millimetri: 1 mm = 1 litro per metro quadrato.</caption>
       <thead>
-        <tr><th>Anno</th><th>Pioggia totale (mm)</th><th>Giorni con massima ≥ 35 °C</th></tr>
+        <tr><th>Anno</th><th>Pioggia totale (mm)</th><th>Giorni con massima di almeno 30 °C</th></tr>
       </thead>
       <tbody>
-        <tr><td>2016</td><td class="num">982</td><td class="num">0</td></tr>
-        <tr><td>2017</td><td class="num">908</td><td class="num">5</td></tr>
-        <tr><td>2018</td><td class="num">1530</td><td class="num">0</td></tr>
-        <tr><td>2019</td><td class="num">1317</td><td class="num">0</td></tr>
-        <tr><td>2020</td><td class="num">1178</td><td class="num">2</td></tr>
-        <tr><td>2021</td><td class="num">1174</td><td class="num">0</td></tr>
-        <tr><td>2022</td><td class="num">962</td><td class="num">2</td></tr>
-        <tr><td>2023</td><td class="num">1162</td><td class="num">2</td></tr>
-        <tr><td>2024</td><td class="num">1078</td><td class="num">2</td></tr>
-        <tr><td>2025</td><td class="num">1206</td><td class="num">0</td></tr>
+        <tr><td>2016</td><td class="num">982</td><td class="num">4</td></tr>
+        <tr><td>2017</td><td class="num">737</td><td class="num">24</td></tr>
+        <tr><td>2018</td><td class="num">1360</td><td class="num">5</td></tr>
+        <tr><td>2019</td><td class="num">1260</td><td class="num">16</td></tr>
+        <tr><td>2020</td><td class="num">970</td><td class="num">9</td></tr>
+        <tr><td>2021</td><td class="num">1021</td><td class="num">17</td></tr>
+        <tr><td>2022</td><td class="num">801</td><td class="num">38</td></tr>
+        <tr><td>2023</td><td class="num">1014</td><td class="num">24</td></tr>
+        <tr><td>2024</td><td class="num">1000</td><td class="num">44</td></tr>
+        <tr><td>2025</td><td class="num">925</td><td class="num">21</td></tr>
       </tbody>
     </table>
     <p style="font-size: 0.82rem; color: #495057; margin: 0.15rem 0 0.4rem; font-style: italic;">
-      Come si legge: ogni riga è un anno. La seconda colonna dice quanta pioggia è caduta in tutto l'anno; la terza conta le giornate "molto calde". Un anno con poca pioggia <em>e</em> molte giornate calde mette sotto stress la falda due volte: entra meno acqua e se ne consuma di più.
+      Come si legge: ogni riga è un anno. La seconda colonna dice quanta pioggia risulta in tutto l'anno; la terza conta le giornate con almeno 30 °C. <strong>Ipotesi da verificare</strong> (questi dati non la dimostrano): un anno con poca pioggia <em>e</em> molte giornate calde può mettere sotto stress la falda due volte, perché entra meno acqua e di solito se ne consuma di più.
     </p>
 
     <h2 class="scheda-h2">📖 Glossario dei dati</h2>
     <dl class="glossario-mini">
-      <dt>Serie storica</dt><dd>lo stesso dato misurato anno dopo anno. Serve a vedere le tendenze, non il singolo anno.</dd>
+      <dt>Serie storica</dt><dd>lo stesso dato, rilevato o ricostruito, anno dopo anno. Serve a vedere le tendenze, non il singolo anno.</dd>
       <dt>Media</dt><dd>somma dei valori divisa per quanti sono. Dice il valore "tipico" di un periodo.</dd>
       <dt>Scarto dalla media</dt><dd>differenza fra un valore e la media (con segno + o −). Dice se un anno è stato sopra o sotto il "tipico".</dd>
-      <dt>Rianalisi ERA5</dt><dd>ricostruzione scientifica del clima passato, punto per punto sul territorio, prodotta dal programma europeo Copernicus.</dd>
+      <dt>Rianalisi ERA5 ed ERA5-Land</dt><dd>ricostruzioni del clima passato prodotte dal programma europeo Copernicus combinando osservazioni e modelli, su una griglia di celle larghe da circa 11 a circa 25 chilometri.</dd>
       <dt>mm di pioggia</dt><dd>millimetri: 1 mm = 1 litro d'acqua caduto su 1 metro quadrato.</dd>
     </dl>
 
@@ -5661,7 +5663,7 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">2</span><strong>Calcola la media della pioggia dei tre anni 2016, 2017 e 2018. Poi calcola lo scarto dalla media di ciascuno dei tre anni (valore − media, con segno). Che cosa noti sommando i tre scarti?</strong>
+      <span class="num-q">2</span><strong>Calcola la media della pioggia dei tre anni 2017, 2018 e 2019. Poi calcola lo scarto dalla media di ciascuno dei tre anni (valore − media, con segno). Che cosa noti sommando i tre scarti?</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
       <div class="calcolo"></div>
     </div>
@@ -5673,34 +5675,35 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">4</span><strong>Ora la colonna dei giorni molto caldi. Quale anno ne ha avuti di più? Quanti giorni ≥ 35 °C ci sono stati in totale nel decennio? Nota qualcosa di particolare sull'anno "campione" dei giorni caldi: com'era la sua pioggia rispetto agli altri anni?</strong>
-      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+      <span class="num-q">4</span><strong>Ora la colonna delle giornate con almeno 30 °C.<br>a) Quale anno ne ha avute di più? Quante ce ne sono state in tutto nel decennio?<br>b) Guarda i due anni con meno pioggia (2017 e 2022): come sono le loro giornate calde rispetto agli altri anni?<br>c) Confronta il 2016 e il 2024: la pioggia è simile (982 e 1000 mm), le giornate calde no (4 e 44). Che cosa ne ricavi sul legame fra poca pioggia e caldo?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">5</span><strong>Discussione in classe (senza soluzione unica): un anno con poca pioggia e tante giornate calde mette in difficoltà la falda dei Castelli. Quali gesti concreti di risparmio idrico possiamo fare a casa e a scuola? Scrivi almeno 3 proposte e confrontale con i compagni.</strong>
+      <span class="num-q">5</span><strong>Discussione in classe (senza soluzione unica): un anno con poca pioggia e tante giornate calde può mettere in difficoltà la falda dei Castelli. Quali gesti concreti di risparmio idrico possiamo fare a casa e a scuola? Scrivi almeno 3 proposte e confrontale con i compagni.</strong>
       <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
     </div>
 
     <div class="lab-box">
       <div class="titolo-l">🌐 Costruisci il tuo grafico nel Laboratorio meteo</div>
-      Questi numeri diventano grafici interattivi nel <strong>Laboratorio meteo</strong> del nostro sito: <strong>protezionecivilegenzano.it/laboratorio-meteo/</strong>. Trovi gli esempi pronti "La pioggia anno per anno" e "Le giornate molto calde", e puoi costruire da solo un grafico nuovo con i dati climatici live: scegli le variabili, confronta gli anni e verifica i risultati di questi esercizi.
+      Questi numeri diventano grafici interattivi nel <strong>Laboratorio meteo</strong> del nostro sito: <strong>protezionecivilegenzano.it/laboratorio-meteo/</strong>. Trovi gli esempi pronti "La pioggia anno per anno" e "Le giornate da 30 °C", e puoi costruire da solo un grafico nuovo con i dati climatici live: scegli le variabili, confronta gli anni e verifica i risultati di questi esercizi.
     </div>
 
     <div class="soluzione-capovolta">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
-      <p style="margin: 0 0 2mm;"><strong>(1)</strong> Anno più piovoso: <strong>2018</strong> con 1530 mm; meno piovoso: <strong>2017</strong> con 908 mm. Differenza: 1530 − 908 = <strong>622 mm</strong>.</p>
-      <p style="margin: 0 0 2mm;"><strong>(2)</strong> Media 2016-2018: (982 + 908 + 1530) : 3 = 3420 : 3 = <strong>1140 mm</strong>. Scarti: 2016 → 982 − 1140 = <strong>−158 mm</strong>; 2017 → 908 − 1140 = <strong>−232 mm</strong>; 2018 → 1530 − 1140 = <strong>+390 mm</strong>. La somma dei tre scarti fa <strong>zero</strong> (−158 − 232 + 390 = 0): è una proprietà della media.</p>
-      <p style="margin: 0 0 2mm;"><strong>(3)</strong> Somma del decennio: 11.497 mm; media: 11.497 : 10 = 1149,7 ≈ <strong>1150 mm</strong>. Anni sotto la media: <strong>4</strong> — 2016 (982), 2017 (908), 2022 (962) e 2024 (1078).</p>
-      <p style="margin: 0;"><strong>(4)</strong> L'anno con più giorni molto caldi è il <strong>2017</strong> (5 giorni). Totale del decennio: 5 + 2 + 2 + 2 + 2 = <strong>13 giorni</strong>. Particolarità: il 2017 è anche l'anno <strong>meno piovoso</strong> del decennio (908 mm) — non a caso il 2017 fu un anno di crisi idrica anche nel Lazio.</p>
+      <p style="margin: 0 0 2mm;"><strong>(1)</strong> Anno più piovoso: <strong>2018</strong> con 1360 mm; meno piovoso: <strong>2017</strong> con 737 mm. Differenza: 1360 − 737 = <strong>623 mm</strong>.</p>
+      <p style="margin: 0 0 2mm;"><strong>(2)</strong> Media 2017-2019: (737 + 1360 + 1260) : 3 = 3357 : 3 = <strong>1119 mm</strong>. Scarti: 2017 → 737 − 1119 = <strong>−382 mm</strong>; 2018 → 1360 − 1119 = <strong>+241 mm</strong>; 2019 → 1260 − 1119 = <strong>+141 mm</strong>. La somma dei tre scarti fa <strong>zero</strong> (−382 + 241 + 141 = 0): è una proprietà della media.</p>
+      <p style="margin: 0 0 2mm;"><strong>(3)</strong> Somma del decennio: 10.070 mm; media: 10.070 : 10 = <strong>1007 mm</strong> (la divisione è esatta). Anni sotto la media: <strong>6</strong> — 2016 (982), 2017 (737), 2020 (970), 2022 (801), 2024 (1000) e 2025 (925). Il 2024 è appena sotto la media: 1000 contro 1007 mm.</p>
+      <p style="margin: 0;"><strong>(4)</strong> <strong>a)</strong> L'anno con più giornate con almeno 30 °C è il <strong>2024</strong> (44). Totale del decennio: 4 + 24 + 5 + 16 + 9 + 17 + 38 + 24 + 44 + 21 = <strong>202 giornate</strong> (media 20,2 l'anno). <strong>b)</strong> I due anni meno piovosi hanno più giornate calde della media: il <strong>2017</strong> (737 mm) ne ha 24, il <strong>2022</strong> (801 mm) ne ha 38. <em>Fatto</em>: in quei due anni poca pioggia e caldo sono capitati insieme. <em>Ipotesi</em>: insieme possono mettere la falda sotto stress due volte (entra meno acqua, se ne consuma di più). <em>Cautela</em>: due anni non bastano per una regola. <strong>c)</strong> Il 2016 (982 mm) e il 2024 (1000 mm) hanno piogge simili ma 4 e 44 giornate calde, e il 2025 (925 mm) ne ha 21, vicino alla media: in questi dieci anni il legame fra poca pioggia e caldo si vede solo in parte. Nella serie completa dal 2005 le giornate calde sono in media 9,4 l'anno nel 2005-2014 e 20,2 nel 2016-2025 (il 2015 è escluso per confrontare due periodi di dieci anni): è uno spunto sulla tendenza, da discutere senza allarmismo.</p>
     </div>
 
     <div class="istruzioni-prof">
       <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Origine dei dati</strong>: open data del sito (<em>/open-data/clima-pioggia-annuale-genzano.json</em> e <em>/open-data/clima-giorni-molto-caldi-genzano.json</em>), rianalisi ERA5 via Open-Meteo (CC BY 4.0). La serie completa parte dal 2005: nella serie 2005-2025 <em>tutti</em> i giorni ≥ 35 °C cadono dal 2017 in poi — ottimo spunto per parlare di tendenza al riscaldamento senza allarmismo.</li>
+        <li><strong>Origine dei dati</strong>: open data del sito (<em>/open-data/clima-pioggia-annuale-genzano.json</em> e <em>/open-data/clima-giorni-30-gradi-genzano.json</em>), rianalisi ERA5 ed ERA5-Land via Open-Meteo (CC BY 4.0). La serie completa parte dal 2005: il confronto fra decenni è nella soluzione 4, come spunto per parlare di tendenza senza allarmismo.</li>
+        <li><strong>Numeri ricalcolati a ottobre 2026</strong> su una serie omogenea, cioè con lo stesso modello per tutti gli anni. Le copie stampate prima del 14 ottobre 2026 hanno valori diversi: usate questa versione.</li>
         <li><strong>Domanda 5</strong> (aperta): spunti dalla pagina del sito "Siccità e crisi idrica" — riparare i rubinetti che gocciolano, doccia breve invece della vasca, riduttori di flusso, lavatrice/lavastoviglie a pieno carico, chiudere il rubinetto mentre ci si lava i denti, riusare l'acqua di lavaggio delle verdure per le piante, segnalare le perdite in strada al gestore.</li>
-        <li><strong>Attenzione metodologica</strong>: un decennio è una finestra breve; la singola annata non "dimostra" il cambiamento climatico. Il ragionamento corretto è sulle <em>tendenze</em> di serie lunghe (rimandare al Laboratorio meteo per la serie completa dal 2005).</li>
+        <li><strong>Attenzione metodologica</strong>: un decennio è una finestra breve; la singola annata non "dimostra" il cambiamento climatico. Il ragionamento corretto è sulle <em>tendenze</em> di serie lunghe (rimandare al Laboratorio meteo per la serie completa dal 2005). I valori sono ricostruiti su una cella della griglia: servono a confrontare gli anni fra loro, non a descrivere un singolo temporale.</li>
         <li><strong>Estensione</strong>: pagine del sito <a href="/rischi-prevenzione/siccita/">Siccità e crisi idrica</a> e <a href="/conoscere/catalogo-dei-rischi/rischio-siccita/">Il rischio da deficit idrico</a>; scheda <a href="/formazione/schede-stampabili/statistica-rischi-secondaria/">Statistica dei rischi</a> per altri esercizi sui dati.</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni nazionali 2025 (2012 per le classi già avviate) — Matematica (dati e previsioni), Scienze, Geografia. Legge 92/2019. D.M. 183/2024 — Sostenibilità (Agenda 2030, Goal 6 e 13).</li>
       </ul>
@@ -5708,7 +5711,7 @@ e canali ufficiali del Comune.</div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "La siccità ai Castelli Romani" · Secondaria I · matematica/scienze/geografia · rev. 2026-08</span>
+      <span>Scheda "La siccità ai Castelli Romani" · Secondaria I · matematica/scienze/geografia · rev. 2026-10</span>
     </footer>
   </article>
 </section>

@@ -2,7 +2,7 @@
   {
     "titolo": "Estati sempre più calde?",
     "file": "clima-luglio-temperature-genzano.json",
-    "descr": "Temperatura massima media di luglio a Genzano, dal 2005 a oggi."
+    "descr": "Temperatura massima media di luglio a Genzano, dal 2005 al 2025."
   },
   {
     "titolo": "La pioggia anno per anno",
@@ -10,9 +10,9 @@
     "descr": "Totale di pioggia caduta ogni anno a Genzano."
   },
   {
-    "titolo": "Le giornate molto calde",
-    "file": "clima-giorni-molto-caldi-genzano.json",
-    "descr": "Quanti giorni all'anno superano i 35 °C a Genzano."
+    "titolo": "Le giornate da 30 °C",
+    "file": "clima-giorni-30-gradi-genzano.json",
+    "descr": "Quanti giorni all'anno la massima arriva ad almeno 30 °C a Genzano."
   },
   {
     "titolo": "Un anno di temperature",

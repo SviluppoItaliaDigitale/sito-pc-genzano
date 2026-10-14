@@ -6,11 +6,11 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-10-13"
+dataUltimaRevisione: "2026-10-14"
 tts: true
 ---
 
-Questo laboratorio dà alla classe un **insieme di dati veri**: le temperature massime e minime e la pioggia di ogni giorno dal **1° giugno al 30 settembre 2026** per la zona di Genzano di Roma, 122 righe in tutto. Con questi dati gli studenti formulano ipotesi, le verificano e imparano a dire che cosa un numero dimostra e che cosa no. Vengono dalla stessa fonte del [Laboratorio meteo](/laboratorio-meteo/) del sito, fermati in un file per poterci lavorare con calma.
+Questo laboratorio dà alla classe un **insieme di dati veri**: le temperature massime e minime e la pioggia di ogni giorno dal **1° giugno al 30 settembre 2026** per la zona di Genzano di Roma, 122 righe in tutto. Con questi dati gli studenti formulano ipotesi, le verificano e imparano a dire che cosa un numero dimostra e che cosa no. Vengono dall'archivio storico di Open-Meteo, lo stesso servizio del [Laboratorio meteo](/laboratorio-meteo/) del sito, fermati in un file per poterci lavorare con calma.
 
 ## I dati
 
@@ -27,7 +27,7 @@ Questo laboratorio dà alla classe un **insieme di dati veri**: le temperature m
 </table>
 </div>
 
-**Da dove vengono.** Dalla rianalisi climatica **ERA5** del programma europeo Copernicus (Copernicus Climate Change Service, gestito dal Centro europeo per le previsioni meteorologiche a medio termine, ECMWF), scaricata con il servizio Open-Meteo (licenza CC BY 4.0), lo stesso usato dal Laboratorio meteo. Il punto richiesto è il centro di Genzano (41,706° N, 12,690° E, quota 444 m secondo il modello di quota di Open-Meteo); i valori restituiti sono quelli della **cella di griglia** della rianalisi che lo contiene, con centro a 41,72° N, 12,76° E, e descrivono un'area di diversi chilometri di lato. Il file è un'**istantanea** estratta il 13 ottobre 2026: non si aggiorna da solo.
+**Da dove vengono.** Dall'archivio storico di Open-Meteo (licenza CC BY 4.0). Per gli anni dal 2017, se non si sceglie un modello, l'archivio usa il modello **IFS** del Centro europeo per le previsioni meteorologiche a medio termine (ECMWF), su una griglia di circa 9 chilometri. L'IFS non è una rianalisi come ERA5: è il modello con cui il Centro europeo fa ogni giorno le previsioni, partendo dalle osservazioni. Il punto richiesto è il centro di Genzano (41,706° N, 12,690° E, quota 444 m secondo il modello di quota di Open-Meteo). I valori sono quelli della **cella di griglia** che Open-Meteo sceglie per quel punto. La cella ha il centro a 41,72° N, 12,76° E, a circa sei chilometri dal punto richiesto, e descrive un'area di alcuni chilometri di lato. Il file è un'**istantanea** estratta il 13 ottobre 2026: non si aggiorna da solo. I suoi numeri non vanno confrontati con quelli del [Laboratorio meteo](/laboratorio-meteo/), che usa un'altra fonte (vedi «Come aprire i dati»).
 
 <div class="alert alert-info" role="note">
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>La prima cosa da discutere in classe:</strong> questi numeri non sono il termometro di una via di Genzano. Sono il risultato di un modello che combina osservazioni e calcolo su una griglia. Un termometro in cortile può segnare un grado in più o in meno, e in un temporale estivo può piovere forte in un quartiere e niente in quello accanto. Sapere <em>che cosa misura</em> un dato è il primo passo per usarlo bene.</p>
@@ -35,7 +35,7 @@ Questo laboratorio dà alla classe un **insieme di dati veri**: le temperature m
 
 ### La pioggia settimana per settimana
 
-{{< grafico-csv file="static/open-data/laboratorio-genzano-estate-2026-settimane.csv" tipo="barre" titolo="Pioggia a blocchi di sette giorni, estate 2026, cella ERA5 di Genzano di Roma" unita="mm" >}}
+{{< grafico-csv file="static/open-data/laboratorio-genzano-estate-2026-settimane.csv" tipo="barre" titolo="Pioggia a blocchi di sette giorni, estate 2026, cella del modello IFS vicina a Genzano di Roma" unita="mm" >}}
 
 ### I mesi in sintesi
 
@@ -43,7 +43,7 @@ Questa tabella è calcolata dal file giornaliero: ogni numero si può rifare a m
 
 <div class="table-responsive" tabindex="0" role="region" aria-labelledby="cap-sintesi-mensile">
 <table>
-<caption id="cap-sintesi-mensile">Sintesi mensile, estate 2026, cella ERA5 di Genzano di Roma (medie arrotondate al decimo; la tabella scorre in orizzontale sugli schermi stretti)</caption>
+<caption id="cap-sintesi-mensile">Sintesi mensile, estate 2026, cella del modello IFS vicina a Genzano di Roma (medie arrotondate al decimo; la tabella scorre in orizzontale sugli schermi stretti)</caption>
 <thead>
 <tr><th scope="col">Mese</th><th scope="col">Massima media (°C)</th><th scope="col">Massima più alta</th><th scope="col">Minima media (°C)</th><th scope="col">Giorni con massima ≥ 30 °C</th><th scope="col">Giorni ≥ 35 °C</th><th scope="col">Pioggia totale (mm)</th><th scope="col">Giorni con almeno 1 mm</th><th scope="col">Pioggia massima in un giorno</th></tr>
 </thead>
@@ -56,7 +56,7 @@ Questa tabella è calcolata dal file giornaliero: ogni numero si può rifare a m
 </table>
 </div>
 
-In tutta l'estate: **129,1 mm** di pioggia, **32 giorni** con almeno 1 mm, **70 giorni** con massima di almeno 30 °C e **5 giorni** oltre i 35 °C; la serie più lunga senza pioggia (meno di 1 mm al giorno) è durata **15 giorni**, dal 4 giugno.
+In tutta l'estate: **129,1 mm** di pioggia, **32 giorni** con almeno 1 mm, **70 giorni** con massima di almeno 30 °C e **5 giorni** con almeno 35 °C. La serie più lunga senza pioggia (meno di 1 mm al giorno) è durata **15 giorni**, dal 4 giugno.
 
 Un dettaglio da discutere quando rifate i conti: la minima media di giugno è esattamente **18,15 °C**. Arrotondata al decimo fa 18,2, ma alcuni programmi la mostrano come 18,1, perché nei calcolatori i numeri con la virgola sono approssimati. Non è un errore di nessuno: è un buon motivo per scrivere sempre quante cifre si tengono.
 
@@ -127,7 +127,7 @@ Il passo 7 chiude il cerchio: quanti giorni molto caldi ci sono stati dice quant
 
 - **Foglio di calcolo** (anche gratuito): si apre il CSV, si ordina per colonna, si usano le funzioni media, somma, conta.se, max.
 - **Carta e penna**, per la primaria: si scelgono dieci giorni, si disegnano le massime come colonne colorate e la pioggia come gocce; le domande restano le stesse.
-- **Il Laboratorio meteo** del sito, per la secondaria: la stessa fonte, ma su molti anni; gli esempi pronti coprono le stagioni passate, e per l'estate 2026 si usano i dati di questo file.
+- **Il Laboratorio meteo** del sito, per la secondaria: lo stesso servizio, ma con le rianalisi ERA5-Land ed ERA5, calcolate allo stesso modo per tutti gli anni. Se si costruisce lì il grafico dell'estate 2026, si trovano numeri un po' diversi da quelli di questo file. Sono due ricostruzioni della stessa estate, fatte con modelli diversi: è il motivo per cui si dichiara sempre la fonte. Per confrontare l'estate 2026 con quelle passate si usa il Laboratorio, non questo file.
 
 ## Per il docente
 
@@ -135,5 +135,5 @@ Il passo 7 chiude il cerchio: quanti giorni molto caldi ci sono stati dice quant
 - **Discipline:** matematica, scienze, geografia, educazione civica; tecnologia per il foglio di calcolo.
 - **Che cosa si valuta:** la correttezza del calcolo e, soprattutto, la frase del passo 5: chi distingue un'osservazione da una conclusione ha capito il laboratorio, anche se il suo numero era sbagliato.
 - **Bisogni educativi speciali:** le tabelle si possono ridurre a dieci giorni scelti insieme; per chi fatica con le cifre vale il lavoro su carta con colonne colorate e gocce; il foglio di calcolo, con i filtri e le funzioni già pronte, è uno strumento compensativo e non un ostacolo. La scheda di lavoro si compila anche a voce, con il docente che scrive.
-- **Fonti:** Copernicus Climate Change Service, rianalisi ERA5; [Open-Meteo, Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api); le pagine del sito citate sopra per i comportamenti di protezione civile.
+- **Fonti:** Centro europeo per le previsioni meteorologiche a medio termine (ECMWF), modello IFS; [Open-Meteo, Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api); le pagine del sito citate sopra per i comportamenti di protezione civile.
 - **Collegamenti:** [Esperimenti e attività](/formazione/esperimenti/) (il pluviometro e la spugna che si satura), [Dalla carta al territorio](/formazione/dalla-carta-al-territorio/) (dove va l'acqua nel quartiere), [Biblioteca delle idee sbagliate](/rischi-prevenzione/idee-sbagliate/) (per allenare lo stesso sguardo sui luoghi comuni).

@@ -1,10 +1,10 @@
 {
  "titolo": "Laboratorio di dati reali: estate 2026 a Genzano di Roma",
- "descrizione": "Temperatura massima, temperatura minima e pioggia giornaliera dal 1° giugno al 30 settembre 2026 per la cella della rianalisi ERA5 che contiene Genzano di Roma.",
- "fonte": "Rianalisi ERA5 (Copernicus Climate Change Service, ECMWF) via Open-Meteo Historical Weather API, licenza CC BY 4.0.",
+ "descrizione": "Temperatura massima, temperatura minima e pioggia giornaliera dal 1° giugno al 30 settembre 2026 per la cella del modello IFS dell'ECMWF che Open-Meteo sceglie per il centro di Genzano di Roma.",
+ "fonte": "Modello IFS del Centro europeo per le previsioni meteorologiche a medio termine (ECMWF), dall'archivio Open-Meteo Historical Weather API (modello predefinito «best match», che dal 2017 usa IFS), licenza CC BY 4.0.",
  "fonte_url": "https://open-meteo.com/en/docs/historical-weather-api",
- "modello": "ERA5 (rianalisi globale del Copernicus Climate Change Service, ECMWF), variabili giornaliere temperature_2m_max, temperature_2m_min, precipitation_sum",
- "attribuzione": "Contiene dati Copernicus Climate Change Service (ERA5) modificati, 2026, ottenuti tramite Open-Meteo.com (CC BY 4.0). Elaborazione: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.",
+ "modello": "ECMWF IFS, griglia di circa 9 km (non è la rianalisi ERA5), variabili giornaliere temperature_2m_max, temperature_2m_min, precipitation_sum",
+ "attribuzione": "Contiene dati ECMWF (modello IFS) modificati, 2026, ottenuti tramite Open-Meteo.com (CC BY 4.0). Elaborazione: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.",
  "licenza": {
   "nome": "CC BY 4.0",
   "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
@@ -20,15 +20,17 @@
    "lon": 12.69,
    "quota_m_modello": 444.0
   },
-  "cella_era5": {
+  "cella_modello": {
    "lat": 41.722317,
    "lon": 12.76411
   },
-  "nota": "ERA5 è un modello di rianalisi su griglia: i valori descrivono la cella di diversi chilometri di lato che contiene il punto richiesto, non il termometro di una via di Genzano. La quota è quella usata da Open-Meteo per il punto richiesto."
+  "nota": "IFS è un modello su griglia: i valori descrivono la cella di alcuni chilometri di lato che Open-Meteo sceglie per il punto richiesto, a circa 6 km dal centro di Genzano, non il termometro di una via. La quota è quella usata da Open-Meteo per il punto richiesto. Il Laboratorio meteo del sito usa invece le rianalisi ERA5-Land ed ERA5: i suoi valori per la stessa estate sono un po' diversi."
  },
  "fuso_orario": "Europe/Rome",
  "estratto_il": "2026-10-13",
  "aggiornamento": "istantanea fissa per uso didattico: non si aggiorna da sola",
+ "corretto_il": "2026-10-14",
+ "nota_correzione": "Fino al 14/10/2026 i metadati indicavano la rianalisi ERA5: i valori, invariati, vengono invece dal modello IFS, che l'archivio di Open-Meteo usa per impostazione dal 2017.",
  "unita": {
   "time": "iso8601",
   "temperature_2m_max": "°C",

@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~761 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~762 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -516,7 +516,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Costituzione e PC — Analisi**](/formazione/schede-stampabili/costituzione-pc-secondaria/) — articoli 32, 117, 118 con testo originale + glossario costituzionale + domande di approfondimento. *(ed. civica)*
 - 👉 [**I Nobel che ci proteggono**](/formazione/schede-stampabili/nobel-che-ci-proteggono-secondaria/) — otto premi Nobel da datare con gli indizi e mettere sulla linea del tempo, vero o falso da correggere su ozono, clima e trasfusioni, dalla scoperta al gesto di autoprotezione. Si accompagna al [dossier interattivo](/dossier/i-nobel-che-ci-proteggono/). *(storia, scienze, matematica)*
 - 👉 [**Vulcanologia dei Castelli Romani**](/formazione/schede-stampabili/vulcanologia-castelli-secondaria/) — il Vulcano Laziale: caldera, fumarole, monitoraggio INGV. Schema della caldera con i due laghi. *(scienze)*
-- 👉 [**La siccità ai Castelli Romani — leggere i dati**](/formazione/schede-stampabili/siccita-castelli-secondaria/) — i dati climatici reali di Genzano (pioggia annua e giorni molto caldi, rianalisi ERA5): media, scarti e lettura delle serie, con aggancio al [Laboratorio meteo](/laboratorio-meteo/) del sito. *(matematica, scienze, geografia)*
+- 👉 [**La siccità ai Castelli Romani — leggere i dati**](/formazione/schede-stampabili/siccita-castelli-secondaria/) — i dati climatici di Genzano ricostruiti dalle rianalisi ERA5 ed ERA5-Land (pioggia annua e giornate con almeno 30 °C): media, scarti e lettura delle serie, con aggancio al [Laboratorio meteo](/laboratorio-meteo/) del sito. *(matematica, scienze, geografia)*
 - 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + domande critiche. *(italiano)*
 - 👉 [**Articolo, Comunicato Stampa e Post Social**](/formazione/schede-stampabili/articolo-stampa-social-secondaria/) — piramide rovesciata + 5W+1H. Lo stesso evento PC in 3 formati (articolo, comunicato stampa, post Instagram) con esempio modello e hashtag strategici. *(italiano, giornalismo)*
 

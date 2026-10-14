@@ -4,7 +4,7 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-10-13"
+dataUltimaRevisione: "2026-10-14"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
@@ -21,7 +21,8 @@ I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in form
 | **Numeri utili di emergenza** | Numeri di emergenza validi nel Lazio | 2 | [CSV](/open-data/numeri-utili-emergenza.csv) · [JSON](/open-data/numeri-utili-emergenza.json) |
 | **Codici colore allerta** | Significato e comportamenti dei livelli di allerta meteo della Regione Lazio | 4 | [CSV](/open-data/codici-colore-allerta.csv) · [JSON](/open-data/codici-colore-allerta.json) |
 | **Timeline storica del rischio** | Eventi geologici, sismici, idrogeologici, normativi dei Castelli Romani, ognuno con fonte istituzionale | 12 | [CSV](/open-data/eventi-storici-castelli-romani.csv) · [JSON](/open-data/eventi-storici-castelli-romani.json) |
-| **Laboratorio di dati reali: estate 2026** | Temperatura massima, minima e pioggia di ogni giorno dal 1° giugno al 30 settembre 2026 per la cella ERA5 di Genzano (rianalisi Copernicus via Open-Meteo), con la pioggia per settimana; istantanea per uso didattico | 122 | [CSV](/open-data/laboratorio-genzano-estate-2026.csv) · [JSON](/open-data/laboratorio-genzano-estate-2026.json) · [settimane CSV](/open-data/laboratorio-genzano-estate-2026-settimane.csv) |
+| **Clima di Genzano (Laboratorio meteo)** | Serie dal 2005 all'ultimo anno concluso per le coordinate di Genzano: temperatura massima media di luglio, pioggia annua, giorni con massima di almeno 30 °C e di almeno 35 °C, più le medie mensili dell'ultimo anno. Rianalisi ERA5-Land (temperature) ed ERA5 (pioggia) del Copernicus Climate Change Service, via Open-Meteo: una ricostruzione su celle di circa dieci chilometri (25 per la pioggia), non le letture di una stazione | 21 anni | [luglio](/open-data/clima-luglio-temperature-genzano.json) · [pioggia](/open-data/clima-pioggia-annuale-genzano.json) · [30 °C](/open-data/clima-giorni-30-gradi-genzano.json) · [35 °C](/open-data/clima-giorni-molto-caldi-genzano.json) · [mesi](/open-data/clima-anno-temperature-genzano.json) (JSON) |
+| **Laboratorio di dati reali: estate 2026** | Temperatura massima, minima e pioggia di ogni giorno dal 1° giugno al 30 settembre 2026 per una cella vicina a Genzano dell'archivio Open-Meteo, che dal 2017 usa il modello IFS del Centro europeo ECMWF (non una rianalisi), con la pioggia per settimana; istantanea per uso didattico | 122 | [CSV](/open-data/laboratorio-genzano-estate-2026.csv) · [JSON](/open-data/laboratorio-genzano-estate-2026.json) · [settimane CSV](/open-data/laboratorio-genzano-estate-2026-settimane.csv) |
 
 > Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione, aree di ricovero e aree di ammassamento dei soccorritori).
 
@@ -107,6 +108,8 @@ Eventuali microdati sensibili sono **aggregati** a livello mensile o di macro-ar
 | `interventi-per-tipologia.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `automezzi-impiegati.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `statistiche-volontari.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
+| `clima-*.json` | ogni mese (il 1°); da febbraio comprende l'anno appena concluso | **pubblicato** |
+| `laboratorio-genzano-estate-2026*.{csv,json}` | istantanea dell'estate 2026, non si aggiorna | **pubblicato** |
 
 ## Strumenti di consultazione
 
