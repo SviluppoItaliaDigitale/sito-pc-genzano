@@ -34,7 +34,7 @@ Le giornate continueranno ad accorciarsi fino al **solstizio d'inverno del 21 di
 - Le **luci** delle auto vanno accese da mezz'ora dopo il tramonto, oggi verso le 17:45 (fuori dai centri abitati sempre, anche di giorno);
 - Le **luci** delle case si accendono prima;
 - I **parchi** e i giardini pubblici si svuotano prima;
-- Le **passeggiate** al tramonto si fanno prima cena;
+- Le **passeggiate** al tramonto si fanno prima di cena;
 - Le **scuole superiori** escono in alcuni orari con luce già ridotta.
 
 ## Abitudini da modificare
@@ -51,7 +51,7 @@ Le giornate continueranno ad accorciarsi fino al **solstizio d'inverno del 21 di
 - **rientrare** attrezzi prima del buio.
 
 ### Commissioni e spostamenti
-- **pianificare** giornata con buio precoce in mente;
+- **pianificare** la giornata tenendo presente il buio precoce;
 - **evitare** rientri a piedi in zone scarsamente illuminate;
 - **gruppi** di studio serali con rientro accompagnato per adolescenti.
 
@@ -101,7 +101,7 @@ Anche per chi opera in emergenza il buio anticipato conta: gli interventi serali
 
 L'ora solare coincide con **clima tipicamente più piovoso**:
 
-- **ottobre-novembre** sono mesi di piena autunnale;
+- **ottobre-novembre** sono mesi di piena stagione autunnale;
 - **rischio idrogeologico** aumentato;
 - **monitoraggio** dei bollettini meteo;
 - **attenzione** ai fossi del territorio.

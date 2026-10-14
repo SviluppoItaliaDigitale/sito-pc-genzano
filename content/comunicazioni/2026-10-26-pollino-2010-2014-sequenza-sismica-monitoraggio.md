@@ -52,7 +52,7 @@ Il Pollino ha lasciato lezioni operative ancora valide:
 
 1. **La sismicità lenta è anche sismicità.** Una sequenza di mesi o anni può accumulare stress senza che ci sia "il grande evento". Eppure la fatica strutturale degli edifici, il logorio psicologico della popolazione, l'usura economica del territorio sono **conseguenze reali** che il sistema deve gestire.
 
-2. **La comunicazione del rischio è skill da costruire.** Spiegare a una comunità che sta vivendo uno sciame sismico cosa sta succedendo (perché ci sono tante scosse? è preavviso del "grande terremoto"? come ci si comporta?) richiede comunicatori formati. La **risk communication** è oggi disciplina specifica nella formazione PC.
+2. **La comunicazione del rischio è una competenza da costruire.** Spiegare a una comunità che sta vivendo uno sciame sismico cosa sta succedendo (perché ci sono tante scosse? è preavviso del "grande terremoto"? come ci si comporta?) richiede comunicatori formati. La **risk communication** è oggi disciplina specifica nella formazione PC.
 
 3. **Il monitoraggio è prevenzione.** Gli investimenti nella **rete sismica nazionale**, nei centri di calcolo INGV, nel **CAT (Centro Allerta Tsunami)**, nei centri funzionali regionali sono prevenzione strutturale: trasformano la conoscenza scientifica in capacità di gestire le emergenze.
 
