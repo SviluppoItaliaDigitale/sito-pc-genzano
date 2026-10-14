@@ -35,15 +35,19 @@ In media un intervento è durato poco meno di tre ore. Ventidue sono durati quat
 
 ## Mese per mese
 
-| Mese | Interventi per incendi |
-|---|---|
-| Giugno (dal 15) | 7 |
-| Luglio | 21 |
-| Agosto | 37 |
-| Settembre | 20 |
-| Ottobre (fino al 12) | 1 |
+{{< grafico-interattivo dati="campagna_aib_2026" grafico="mesi" titolo="Interventi per incendi mese per mese" nota="Le ore di servizio sommano il tempo di ogni volontario presente." >}}
 
 Agosto è stato il mese più pesante, come avevamo raccontato nel [bilancio di agosto](/comunicazioni/2026-09-01-bilancio-agosto-2026-numeri/). Domenica 16 agosto le squadre sono uscite cinque volte in un giorno. Settembre però non è stato tranquillo: venti interventi, con quattro uscite nel solo 1° settembre. Dopo il 22 settembre non ci sono state uscite fino al 12 ottobre.
+
+Il calendario mostra la stagione giorno per giorno. Le settimane più fitte sono quella di Ferragosto, con 14 interventi, e quella a cavallo fra agosto e settembre, con 16.
+
+{{< grafico-interattivo dati="campagna_aib_2026" grafico="calendario" titolo="La campagna giorno per giorno, dal 15 giugno al 12 ottobre" >}}
+
+## A che ora partivano le squadre
+
+{{< grafico-interattivo dati="campagna_aib_2026" grafico="orari" titolo="Interventi per ora di inizio" >}}
+
+Il picco è nel primo pomeriggio, fra le 14 e le 16: 26 interventi. Fra mezzogiorno e le 20 ne sono partiti 73 su 86.
 
 ## Dove siamo intervenuti
 
@@ -56,6 +60,8 @@ A metà agosto una squadra del Gruppo ha anche prestato servizio al [campo base 
 ## I mezzi più usati
 
 Il mezzo più impiegato è stato il **Mercedes Atego**, con impianto antincendio da 6.000 litri: è uscito in 61 interventi. Lo seguono il **Land Rover Defender 130** con modulo da 600 litri (43 interventi), il pickup **EVO Cross 4** (12) e il **Fiat Doblò** (11). L'autobotte **Mercedes Actros** da 14.000 litri è servita in 10 interventi.
+
+{{< grafico-interattivo dati="campagna_aib_2026" grafico="mezzi" titolo="In quanti interventi è uscito ciascun mezzo" nota="In un intervento possono uscire più mezzi insieme." >}}
 
 ## Cosa impariamo
 

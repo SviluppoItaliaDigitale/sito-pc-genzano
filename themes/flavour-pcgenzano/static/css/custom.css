@@ -8140,3 +8140,76 @@ html.a11y-contrast-yellow-black .calcolatore-scorta-esito .form-check-label { co
      schermo (classe messa da js/calcolatore-scorta.js solo per quella stampa) */
   html.stampa-scorta .article-body > :not(#cs-esito) { display: none !important; }
 }
+
+/* ==========================================================================
+   GRAFICI INTERATTIVI v1.0 (14/10/2026) — shortcode grafico-interattivo
+   Barre in HTML (leggibili anche senza JavaScript) e calendario giorno per
+   giorno. Colori dalla scala del blu istituzionale; l'informazione non passa
+   mai dal solo colore: valori scritti, dettaglio del giorno e tabella.
+   ========================================================================== */
+.gi { margin: 2rem 0; padding: 1.25rem 1.25rem 1rem; border: 1px solid #d4dce6; border-left: 4px solid #003366; border-radius: 6px; background: #fff; max-width: 100%; }
+.article-body figure.gi { max-width: 100%; box-shadow: none; padding: 1.25rem 1.25rem 1rem; }
+.article-body figure.gi figcaption.gi-titolo, .gi-titolo { border: 0; padding: 0; font-weight: 700; color: #003366; font-size: 1.1rem; margin-bottom: .75rem; font-style: normal; text-align: left; }
+.gi-sintesi { font-size: .95rem; margin-bottom: .75rem; }
+.gi-fonte { font-size: .82rem; color: #4a5562; margin: .9rem 0 0; }
+.gi-misure { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+.gi-misura { border: 2px solid #003366; background: #fff; color: #003366; border-radius: 999px; padding: .3rem .85rem; font-size: .9rem; font-weight: 600; cursor: pointer; min-height: 2.25rem; }
+.gi-misura[aria-pressed="true"] { background: #003366; color: #fff; }
+.gi-misura:focus-visible, .gi-cal:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.article-body ul.gi-barre { list-style: none; padding: 0; margin: 0; }
+.article-body ul.gi-barre li.gi-riga { display: grid; grid-template-columns: minmax(8rem, 15rem) 1fr auto; gap: .35rem .75rem; align-items: center; margin: 0 0 .55rem; }
+.gi-etichetta { font-size: .95rem; }
+.gi-traccia { display: block; height: 1.15rem; background: #eef2f7; border-radius: 3px; overflow: hidden; }
+.gi-barra { display: block; height: 100%; background: #003366; border-radius: 3px; transition: width .35s ease; }
+.gi-valore { font-size: .92rem; white-space: nowrap; min-width: 6.5rem; }
+@media (max-width: 575.98px) {
+  .article-body ul.gi-barre li.gi-riga { grid-template-columns: 1fr auto; }
+  .gi-etichetta { grid-column: 1 / -1; margin-bottom: -.2rem; }
+  .gi-valore { min-width: 0; }
+}
+.gi-cal-wrap { display: flex; gap: .4rem; overflow-x: auto; padding: 3px 3px 6px; }
+.gi-cal-colonna { display: flex; flex-direction: column; gap: 4px; }
+.gi-cal-riga { display: flex; gap: .4rem; }
+.gi-cal-mesi { display: grid; grid-auto-flow: column; grid-auto-columns: 1rem; gap: 3px; margin-left: 2.1rem; font-size: .72rem; color: #4a5562; height: 1rem; line-height: 1rem; }
+.gi-cal-mesi span { white-space: nowrap; overflow: visible; }
+.gi-cal-giorni { width: 1.7rem; }
+.gi-cal-giorni { display: grid; grid-template-rows: repeat(7, 1rem); row-gap: 3px; font-size: .7rem; color: #4a5562; line-height: 1rem; }
+.gi-cal { display: grid; grid-template-rows: repeat(7, 1rem); grid-auto-flow: column; grid-auto-columns: 1rem; gap: 3px; border-radius: 4px; }
+.gi-cella { display: inline-block; width: 1rem; height: 1rem; border-radius: 3px; box-sizing: border-box; }
+.gi-cal .gi-cella { cursor: pointer; }
+.gi-cal .gi-vuota { cursor: default; }
+.gi-l0 { background: #eef2f7; border: 1px solid #c9d3df; }
+.gi-l1 { background: #a9c1dc; }
+.gi-l2 { background: #5f8fc0; }
+.gi-l3 { background: #23598f; }
+.gi-l4 { background: #002147; }
+.gi-cal .gi-scelta { outline: 2px solid #d9364f; outline-offset: 1px; }
+.gi-legenda { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .8rem; font-size: .82rem; color: #4a5562; margin-top: .6rem; }
+.gi-legenda span { display: inline-flex; align-items: center; gap: .3rem; }
+.gi-legenda i { width: .85rem; height: .85rem; }
+.gi-dettaglio { margin: .7rem 0 0; font-weight: 600; color: #003366; min-height: 1.5em; }
+.gi-tabella { margin-top: .8rem; font-size: .92rem; }
+.gi-tabella summary { cursor: pointer; color: #003366; font-weight: 600; }
+.gi-tabella table { margin-top: .5rem; }
+@media (prefers-reduced-motion: reduce) { .gi-barra { transition: none; } }
+html.a11y-pause-anim .gi-barra { transition: none; }
+html.a11y-contrast-invert .gi, html.a11y-contrast-yellow-black .gi { background: transparent; border-color: currentColor; }
+html.a11y-contrast-invert .gi-barra, html.a11y-contrast-yellow-black .gi-barra { background: #ffbe2e; }
+html.a11y-contrast-invert .gi-titolo, html.a11y-contrast-yellow-black .gi-titolo,
+html.a11y-contrast-invert .gi-dettaglio, html.a11y-contrast-yellow-black .gi-dettaglio,
+html.a11y-contrast-invert .gi-fonte, html.a11y-contrast-yellow-black .gi-fonte,
+html.a11y-contrast-invert .gi-legenda, html.a11y-contrast-yellow-black .gi-legenda { color: inherit; }
+@media print {
+  .gi { break-inside: avoid; border-color: #000; }
+  .gi-misure, .gi-dettaglio { display: none !important; }
+  .gi-barra { background: #003366 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .gi-cella { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+@media (max-width: 575.98px) {
+  .gi { padding: 1rem .75rem .9rem; }
+  .gi-cal, .gi-cal-mesi { grid-auto-columns: .72rem; gap: 2px; }
+  .gi-cal, .gi-cal-giorni { grid-template-rows: repeat(7, .72rem); row-gap: 2px; }
+  .gi-cal-giorni { line-height: .72rem; font-size: .62rem; width: 1.5rem; }
+  .gi-cal .gi-cella { width: .72rem; height: .72rem; border-radius: 2px; }
+  .gi-cal-mesi { margin-left: 1.9rem; font-size: .65rem; }
+}
