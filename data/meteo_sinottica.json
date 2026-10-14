@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-14T01:46",
+  "aggiornato": "2026-10-14T09:36",
   "frame": 12,
   "passo_ore": 6,
   "dominio": {
@@ -26,5 +26,5 @@
     "precipitation",
     "snowfall"
   ],
-  "fonte": "Open-Meteo (modelli ECMWF)"
+  "fonte": "Open-Meteo"
 }
