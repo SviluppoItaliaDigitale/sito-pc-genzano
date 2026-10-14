@@ -55,6 +55,10 @@ Un cumulo che cova fa molto fumo, irritante per gli occhi e per le vie respirato
 
 Con questa uscita salgono a **206 gli interventi registrati dal 4 aprile**, data di adozione del registro operativo digitale: oltre **600 ore** e più di **10.300 chilometri**. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 
+## Il seguito: denuncia per il proprietario del terreno
+
+Secondo le cronache locali, nel pomeriggio successivo all'intervento sono proseguiti sul posto i rilievi del commissariato di zona, con il supporto della Squadra Scientifica dei Castelli Romani Sud. Sul terreno sono state trovate anche alcune buche, che secondo gli agenti servivano a interrare e bruciare il materiale vegetale. Il proprietario del terreno, un uomo di 55 anni residente in zona, è stato denunciato a piede libero per combustione non autorizzata di rifiuti e inquinamento ambientale: è una denuncia, non una condanna, e la responsabilità andrà accertata dall'autorità giudiziaria.
+
 ## Cosa impariamo
 
 - **Un cumulo di sfalci è combustibile che cova a lungo.** In via di Pozzi Bonelli bruciavano erba secca, rami e canne accumulati ai margini di un canneto: la fiamma si è spenta in fretta, le braci sotto la superficie hanno richiesto ore di raffreddamento. Un accumulo di sterpaglie vicino a case, recinzioni e canneti va tolto prima dell'estate: [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
@@ -83,3 +87,7 @@ Con questa uscita salgono a **206 gli interventi registrati dal 4 aprile**, data
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/)
 - [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
+
+**Le cronache locali:**
+
+- [Il Giornale dei Castelli Romani — Genzano, denunciato per combustione di rifiuti non autorizzata e inquinamento ambientale il proprietario dei terreni che hanno preso fuoco](https://www.giornaleinfocastelliromani.it/genzano-denunciato-per-combustione-di-rifiuti-non-autorizzata-e-inquinamento-ambientale-il-proprietario-dei-terreni-che-hanno-preso-fuoco-stanotte/)
