@@ -131,7 +131,7 @@ def main(argv: list[str]) -> int:
                             intorno = testo[a:b]
                         else:
                             intorno = testo[max(0, m.start() - finestra): m.end() + finestra]
-                        if not re.search(contesto, intorno):
+                        if not re.search(contesto, intorno, re.I):
                             continue
                     salvo = regola.get("salvo_se_frase")
                     if salvo:
