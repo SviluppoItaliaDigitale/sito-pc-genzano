@@ -1,6 +1,6 @@
 ---
 title: "Risk communication: come si comunica un rischio senza creare panico"
-date: 2026-10-16
+date: 2026-10-16T00:01:00+02:00
 description: "La comunicazione del rischio è una disciplina scientifica. Le regole seguite dalla Protezione Civile per informare senza allarmare."
 badge: "Informazione"
 priorita: "normale"
