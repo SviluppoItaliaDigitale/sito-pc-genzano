@@ -25,7 +25,7 @@ Una ferita che sanguina abbondantemente è un'emergenza. Gli obiettivi sono:
 
 - **Proteggi te stesso**: se possibile, indossa guanti monouso prima di toccare sangue o ferite
 - **Chiama il 112** se la ferita è profonda, il sangue non si ferma o la persona è pallida, sudata, confusa
-- Fai **sdraiare** la persona e **solleva la parte ferita**, se non si sospetta una frattura
+- Fai **sdraiare** la persona
 
 ### La compressione diretta è la prima arma
 
