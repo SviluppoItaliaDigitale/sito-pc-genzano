@@ -486,12 +486,13 @@ def slide_cruscotto(num):
              PRIMARY, shadow=True)
     grad_fill(cb, BLUE2, PRIMARY_D, ang=120)
     # Dal 14/10/2026: ogni scheda ha la sua spiegazione a parole
-    # (/cruscotto/mappe-raccontate/) e le licenze sono quelle di ciascuna
-    # fonte (il radar ItaliaMeteo è CC BY-SA), non una sola CC BY 4.0.
+    # (/cruscotto/mappe-raccontate/) e dichiara la sua fonte; la licenza è
+    # quella di ciascuna fonte, scritta dove la fonte la indica (il radar
+    # ItaliaMeteo è CC BY-SA), non una sola CC BY 4.0 per tutto.
     put(cb, [("Cruscotto del territorio", 15, WHITE, True),
              ("Aggregazione privacy-first", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
              ("Ogni scheda spiegata a parole", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
-             ("Fonte e licenza di ogni dato", 11, RGBColor(0xCF, 0xDD, 0xEC), False)])
+             ("Fonte dichiarata per ogni scheda", 11, RGBColor(0xCF, 0xDD, 0xEC), False)])
     shp(s, MSO_SHAPE.RIGHT_ARROW, Inches(8.5), Inches(3.85), Inches(0.62), Inches(0.36), ACCENT)
     # Etichette come data/codici_colore.yaml (bollettini di criticità DPC).
     al = [("Verde — nessuna allerta", GREEN, WHITE), ("Giallo — criticità ordinaria", YELLOW, PRIMARY_D),
