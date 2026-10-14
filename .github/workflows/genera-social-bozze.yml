@@ -8,7 +8,7 @@ name: "📱 Genera bozze social automatiche"
 # Regola dell'utente (21/09/2026): ogni articolo che esce sul sito esce anche
 # sui social, in concomitanza. Per questo il workflow gira in quattro casi:
 #
-#   - push su main di un articolo: gli articoli toccati, più il recupero;
+#   - push su main di un articolo: gli articoli aggiunti dal push, più il recupero;
 #   - al termine di ogni deploy: deploy.yml lo chiama con `recupero=true`
 #     subito dopo il caricamento su Aruba, che e' l'istante in cui un articolo
 #     calendarizzato diventa davvero online;
@@ -115,15 +115,21 @@ jobs:
             exit 0
           fi
 
-          # Articoli aggiunti o modificati dal push: valgono a qualunque età.
+          # Articoli AGGIUNTI dal push: valgono a qualunque età (i retrodatati, che
+          # la sola data farebbe cadere fuori dalla finestra). Quelli soltanto
+          # modificati no (14/10/2026): un articolo di settimane fa a cui si
+          # corregge un link non esce più sui social, e rigenerarne testi e
+          # immagini appesantiva il repository per niente (11 articoli in un
+          # colpo solo il 14/10). Le modifiche agli articoli ancora dentro la
+          # finestra di 72 ore le trova comunque il recupero.
           CHANGED=""
           if [ "${{ github.event_name }}" = "push" ]; then
-            CHANGED=$(git diff --name-only --diff-filter=AM \
+            CHANGED=$(git diff --name-only --diff-filter=A \
               "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null \
               | grep -E '^content/comunicazioni/[0-9].+\.md$' || true)
           fi
 
-          # Articoli online a cui manca il materiale: quelli toccati dal push
+          # Articoli online a cui manca il materiale: quelli aggiunti dal push
           # e quelli andati online nelle ultime 72 ore (i calendarizzati).
           # Riga per riga: percorso<TAB>1 se sono ammessi i testi di riserva.
           # shellcheck disable=SC2086

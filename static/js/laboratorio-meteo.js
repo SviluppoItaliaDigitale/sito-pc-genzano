@@ -1,11 +1,20 @@
 /* Laboratorio meteo — costruttore di grafici client-side.
-   Dati live: archivio ERA5 via Open-Meteo (CC BY 4.0). Esempi pre-cotti: /open-data/clima-*.json.
+   Dati live: archivio delle rianalisi ERA5-Land ed ERA5 via Open-Meteo (CC BY 4.0), oppure il
+   modello di previsione per i periodi recenti. Esempi pre-cotti: /open-data/clima-*.json.
+   Sotto ogni grafico mostra la sua «spiegazione a parole» (data/mappe_raccontate.yaml, voci
+   «laboratorio», rese dal layout e qui solo mostrate o nascoste).
    Niente librerie esterne: rendering SVG vanilla + tabella dati equivalente (WCAG 1.1.1 / 1.4.1). */
 (function () {
   'use strict';
 
   var ARCHIVE = 'https://archive-api.open-meteo.com/v1/archive';   // ERA5: storico, latenza ~5 gg
   var FORECAST = 'https://api.open-meteo.com/v1/forecast';         // copre il recente passato fino a ieri
+  // Modello dell'archivio, sempre esplicito: senza, Open-Meteo usa il «best match», che fino
+  // al 2016 dà ERA5-Land ed ERA5 e dal 2017 il modello IFS dell'ECMWF, più caldo e più piovoso
+  // a Genzano. La serie cambierebbe fonte a metà e mostrerebbe tendenze che sono solo il cambio
+  // di modello (verificato il 14/10/2026). «era5_seamless» = ERA5-Land per le temperature,
+  // ERA5 per pioggia e vento, uguale per tutti gli anni.
+  var MODELLO_STORICO = 'era5_seamless';
   var OPENDATA = (window.LAB_OPENDATA || '/open-data/');
 
   // Luoghi dei Castelli Romani (coordinate indicative del centro abitato).
@@ -26,7 +35,7 @@
   // Variabili selezionabili → parametri Open-Meteo + come renderizzarle.
   var VARIABILI = {
     temperatura: {
-      etichetta: 'Temperatura', unita: '°C', tipo: 'line',
+      etichetta: 'Temperatura', unita: '°C', tipo: 'line', rianalisi: 'ERA5-Land',
       daily: ['temperature_2m_max', 'temperature_2m_min'],
       serie: [
         { campo: 'temperature_2m_max', nome: 'Massima', colore: '#c1121f', tratto: 'solid' },
@@ -34,12 +43,12 @@
       ]
     },
     pioggia: {
-      etichetta: 'Pioggia', unita: 'mm', tipo: 'bar',
+      etichetta: 'Pioggia', unita: 'mm', tipo: 'bar', rianalisi: 'ERA5',
       daily: ['precipitation_sum'],
       serie: [{ campo: 'precipitation_sum', nome: 'Pioggia', colore: '#003366', tratto: 'solid' }]
     },
     vento: {
-      etichetta: 'Vento', unita: 'km/h', tipo: 'line',
+      etichetta: 'Vento', unita: 'km/h', tipo: 'line', rianalisi: 'ERA5',
       daily: ['wind_speed_10m_max'],
       serie: [{ campo: 'wind_speed_10m_max', nome: 'Velocità max', colore: '#15803d', tratto: 'solid' }]
     }
@@ -86,16 +95,18 @@
     var usaForecast = new Date(da) >= limite;
     var endpoint = usaForecast ? FORECAST : ARCHIVE;
     var fonte = usaForecast
-      ? 'Open-Meteo, modello di previsione ad alta risoluzione (serie recente, non rianalisi ERA5)'
-      : 'Rianalisi ERA5 via Open-Meteo';
+      ? 'Open-Meteo, modello di previsione ad alta risoluzione (serie recente, non rianalisi)'
+      : 'Rianalisi ' + v.rianalisi + ' del programma europeo Copernicus, via Open-Meteo';
     var url = endpoint + '?latitude=' + luogo.lat + '&longitude=' + luogo.lon +
       '&start_date=' + da + '&end_date=' + a +
-      '&daily=' + v.daily.join(',') + '&timezone=Europe%2FRome';
+      '&daily=' + v.daily.join(',') + '&timezone=Europe%2FRome' +
+      (usaForecast ? '' : '&models=' + MODELLO_STORICO);
 
     $('lab-output').hidden = false;
     stato('Sto scaricando i dati di ' + luogo.nome + '…', false, true);
     $('lab-grafico-wrap').hidden = true;
     $('lab-tabella-blocco').hidden = true;
+    mostraSpiegazione(null);
 
     fetch(url).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -105,7 +116,21 @@
         throw new Error('Nessun dato per questo periodo.');
       }
       var d = j.daily;
+      // La rianalisi arriva a circa cinque giorni fa: se il periodo arriva fino a ieri, gli
+      // ultimi giorni tornano vuoti. Lo si scrive, invece di lasciare un buco senza spiegazione.
+      if (!usaForecast) {
+        var vuoti = 0;
+        for (var k = d.time.length - 1; k >= 0; k--) {
+          var tutti = v.serie.every(function (s) { var x = (d[s.campo] || [])[k]; return x === null || x === undefined; });
+          if (!tutti) break;
+          vuoti++;
+        }
+        if (vuoti === d.time.length) throw new Error('la rianalisi non ha ancora dati per questo periodo');
+        if (vuoti === 1) fonte += '. L\'ultimo giorno del periodo non è ancora nella rianalisi, che arriva a circa cinque giorni fa';
+        else if (vuoti > 1) fonte += '. Gli ultimi ' + vuoti + ' giorni del periodo non sono ancora nella rianalisi, che arriva a circa cinque giorni fa';
+      }
       var dati = {
+        chiave: 'v:' + varKey,
         titolo: v.etichetta + ' a ' + luogo.nome,
         sottotitolo: 'Dal ' + fmtData(da) + ' al ' + fmtData(a),
         tipo: v.tipo, unita: v.unita, fonte: fonte,
@@ -121,6 +146,7 @@
       stato('Non sono riuscito a caricare i dati (' + e.message + '). Riprova tra qualche istante o cambia periodo.', true);
       $('lab-grafico-wrap').hidden = true;
       $('lab-tabella-blocco').hidden = true;
+      mostraSpiegazione(null);
     });
   }
 
@@ -128,10 +154,11 @@
   function disegna(dati) {
     ultimoDati = dati;
     $('lab-output').hidden = false;
+    mostraSpiegazione(dati.chiave);
     $('lab-grafico-titolo').textContent = dati.titolo + (dati.sottotitolo ? ' — ' + dati.sottotitolo : '');
     var fEl = $('lab-fonte-serie');
     if (fEl) {
-      if (dati.fonte) { fEl.textContent = 'Fonte di questa serie: ' + dati.fonte + '.'; fEl.hidden = false; }
+      if (dati.fonte) { fEl.textContent = 'Fonte di questa serie: ' + String(dati.fonte).replace(/[.\s]+$/, '') + '.'; fEl.hidden = false; }
       else { fEl.hidden = true; }
     }
     var box = $('lab-grafico');
@@ -142,6 +169,22 @@
     $('lab-grafico-wrap').hidden = false;
     costruisciTabella(dati);
     $('lab-tabella-blocco').hidden = false;
+  }
+
+  // ---- Spiegazione a parole del grafico mostrato ---------------------------
+  // Le voci le scrive il layout, una per esempio e una per variabile, tutte nascoste:
+  // qui si mostra quella del grafico appena disegnato (chiave «ex:<file>» o «v:<variabile>»).
+  function mostraSpiegazione(chiave) {
+    var box = $('lab-raccontate');
+    if (!box) return;
+    var trovata = false;
+    Array.prototype.forEach.call(box.querySelectorAll('[data-grafico]'), function (el) {
+      var giusta = el.getAttribute('data-grafico') === chiave;
+      el.hidden = !giusta;
+      if (!giusta && el.tagName === 'DETAILS') el.open = false;
+      if (giusta) trovata = true;
+    });
+    box.hidden = !trovata;
   }
 
   // ---- Scale ----------------------------------------------------------------
@@ -160,8 +203,21 @@
       });
     });
     if (min === Infinity) { min = 0; max = 1; }
-    if (min === max) { min -= 1; max += 1; }
+    if (min === max) { if (min === 0) { max = 1; } else { min -= 1; max += 1; } }
     return { min: min, max: max };
+  }
+
+  // Passo «tondo» dell'asse (1, 2, 2,5 o 5 per una potenza di dieci), scelto per avere
+  // circa cinque intervalli: le tacche cadono su numeri che si leggono (0, 10, 20…)
+  // invece che su 8,8 o 17,6 (revisione del 14/10/2026).
+  function passoTondo(ampiezza) {
+    var meglio = null;
+    var base = Math.pow(10, Math.floor(Math.log(ampiezza / 5) / Math.LN10));
+    [1, 2, 2.5, 5, 10].forEach(function (m) {
+      var passo = m * base, intervalli = ampiezza / passo;
+      if (meglio === null || Math.abs(intervalli - 5) < Math.abs(meglio.intervalli - 5)) meglio = { passo: passo, intervalli: intervalli };
+    });
+    return meglio.passo;
   }
 
   function el(name, attrs, text) {
@@ -184,14 +240,20 @@
     return svg;
   }
 
+  // Allarga gli estremi al passo tondo più vicino (li modifica: il grafico li legge
+  // dopo) e disegna le tacche, con i numeri scritti all'italiana (virgola, punto
+  // delle migliaia).
   function assiY(svg, ex, unita) {
-    var n = 5;
+    var passo = passoTondo(ex.max - ex.min);
+    ex.min = Math.floor(ex.min / passo + 1e-9) * passo;
+    ex.max = Math.ceil(ex.max / passo - 1e-9) * passo;
+    var n = Math.round((ex.max - ex.min) / passo);
     for (var i = 0; i <= n; i++) {
-      var val = ex.min + (ex.max - ex.min) * i / n;
+      var val = ex.min + passo * i;
       var y = M.t + plotH() - plotH() * i / n;
       svg.appendChild(el('line', { x1: M.l, y1: y, x2: M.l + plotW(), y2: y, stroke: '#e0e6ee', 'stroke-width': 1 }));
       svg.appendChild(el('text', { x: M.l - 8, y: y + 4, 'text-anchor': 'end', class: 'lab-svg-tick' },
-        (Math.round(val * 10) / 10) + ''));
+        (Math.round(val * 100) / 100).toLocaleString('it-IT')));
     }
     svg.appendChild(el('text', {
       x: 14, y: M.t + plotH() / 2, 'text-anchor': 'middle', class: 'lab-svg-axis',
@@ -314,7 +376,7 @@
             r.hover.appendChild(el('circle', { cx: gx, cy: r.py(v), r: 5, fill: s.colore, stroke: '#fff', 'stroke-width': 2 }));
           }
         }
-        html += '<br><span class="lab-tip-pall" style="background:' + s.colore + '"></span>' + escapeHtml(s.nome) + ': <strong>' + escapeHtml(testo) + '</strong>';
+        html += '<br><span class="lab-tip-pall" style="background:' + coloreSicuro(s.colore) + '"></span>' + escapeHtml(s.nome) + ': <strong>' + escapeHtml(testo) + '</strong>';
       });
       tip.innerHTML = html;
       tip.hidden = false;
@@ -424,13 +486,41 @@
     });
   }
 
+  // Un esempio è solo il nome di un file .json della cartella dei dati aperti, mai un
+  // percorso o un indirizzo: un link con ?ex=//altro-sito/… farebbe disegnare dati di
+  // terzi, con il rischio di codice dentro il colore (revisione del 14/10/2026).
+  var NOME_ESEMPIO = /^[a-z0-9][a-z0-9_-]*\.json$/i;
+  function coloreSicuro(c) { return /^#[0-9a-f]{3,8}$/i.test(String(c || '')) ? String(c) : '#003366'; }
+  function movimentoRidotto() {
+    try {
+      if (document.documentElement.classList.contains('a11y-pause-anim')) return true;
+      return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    } catch (e) { return false; }
+  }
+
   function apriEsempio(file) {
-    var path = file.charAt(0) === '/' ? file : (OPENDATA + file);
     $('lab-output').hidden = false;
+    if (!NOME_ESEMPIO.test(String(file || ''))) {
+      stato('Esempio non disponibile.', true);
+      $('lab-grafico-wrap').hidden = true;
+      $('lab-tabella-blocco').hidden = true;
+      mostraSpiegazione(null);
+      return;
+    }
     stato("Apro l'esempio…", false, true);
-    fetch(path).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (dati) { disegna(dati); stato(''); aggiornaUrl({ ex: file }); $('lab-output').scrollIntoView({ behavior: 'smooth', block: 'start' }); })
-      .catch(function (e) { stato('Esempio non disponibile (' + e.message + ').', true); });
+    fetch(OPENDATA + file).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (dati) {
+        (dati.serie || []).forEach(function (s) { s.colore = coloreSicuro(s.colore); });
+        dati.chiave = 'ex:' + file;
+        disegna(dati); stato(''); aggiornaUrl({ ex: file });
+        $('lab-output').scrollIntoView({ behavior: movimentoRidotto() ? 'auto' : 'smooth', block: 'start' });
+      })
+      .catch(function (e) {
+        stato('Esempio non disponibile (' + e.message + ').', true);
+        $('lab-grafico-wrap').hidden = true;
+        $('lab-tabella-blocco').hidden = true;
+        mostraSpiegazione(null);
+      });
   }
 
   // ---- URL condivisibile + scarica PNG + stampa + condividi ----------------
@@ -579,10 +669,13 @@
       var luogo = LUOGHI.filter(function (l) { return l.id === p.get('l'); })[0];
       if (luogo) {
         sel.value = luogo.id;
-        if (VARIABILI[p.get('v')]) $('lab-variabile').value = p.get('v');
+        if (Object.prototype.hasOwnProperty.call(VARIABILI, p.get('v'))) $('lab-variabile').value = p.get('v');
         $('lab-da').value = p.get('da'); $('lab-a').value = p.get('a');
         caricaLive(luogo, $('lab-variabile').value, p.get('da'), p.get('a'));
       }
+    } else if (p.get('v') && Object.prototype.hasOwnProperty.call(VARIABILI, p.get('v'))) {
+      // Dalla pagina delle spiegazioni: preseleziona la variabile senza scaricare nulla.
+      $('lab-variabile').value = p.get('v');
     }
   }
 

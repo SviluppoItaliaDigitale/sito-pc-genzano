@@ -2436,7 +2436,7 @@
     "acqua",
     "caldo"
    ],
-   "desc": "La siccità spiegata con i dati climatici reali di Genzano (pioggia annua e giorni molto caldi, rianalisi ERA5): lettura della tabella, medie, scarti e discussione sul risparmio idrico.",
+   "desc": "La siccità spiegata con i dati climatici di Genzano ricostruiti dalle rianalisi ERA5 ed ERA5-Land (pioggia annua e giornate con almeno 30 °C): lettura della tabella, medie, scarti e discussione sul risparmio idrico.",
    "facilitata": false
   },
   {
@@ -2866,7 +2866,7 @@
     "meteo",
     "caldo"
    ],
-   "desc": "Analisi guidata della serie di pioggia annua di Genzano (dati ERA5/Open-Meteo): deficit idrico, differenza fra siccità meteorologica e idrologica, la siccità come rischio che cresce.",
+   "desc": "Analisi guidata della serie di pioggia annua di Genzano (rianalisi ERA5 via Open-Meteo): deficit idrico, differenza fra siccità meteorologica e idrologica, la siccità come rischio che cresce.",
    "facilitata": false
   },
   {

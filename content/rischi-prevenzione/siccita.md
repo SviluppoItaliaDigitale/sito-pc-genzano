@@ -1,6 +1,6 @@
 ---
 title: "Siccità e Crisi Idrica: Cosa Fare"
-dataUltimaRevisione: "2026-06-10"
+dataUltimaRevisione: "2026-10-14"
 description: "La siccità è un rischio lento ma concreto anche ai Castelli Romani: come ridurre i consumi, prepararsi alle limitazioni e affrontare una crisi idrica."
 tts: true
 weight: 14
@@ -41,7 +41,7 @@ Con il cambiamento climatico le estati diventano più calde e le piogge più irr
 - Installa **riduttori di flusso** (frangigetto) su rubinetti e doccia: costano pochi euro e riducono i consumi fino a metà.
 - Usa **lavatrice e lavastoviglie a pieno carico**; preferisci la doccia breve alla vasca.
 - Se hai orto o giardino: **innaffia la sera**, usa pacciamatura, valuta la raccolta dell'acqua piovana dove consentito dai regolamenti.
-- **Segnala al gestore idrico le perdite in strada**: in Italia le reti disperdono in media circa il 30% dell'acqua immessa.
+- **Segnala al gestore idrico le perdite in strada**: in Italia le perdite totali delle reti di distribuzione sono il 42,4% dell'acqua immessa ([ISTAT](https://www.istat.it/it/files/2024/03/Report-GMA-Anno-2024.pdf), dato 2022). Nel dato rientrano i tubi che perdono e gli errori di misura.
 - Tieni la scorta minima d'acqua del [kit di emergenza](/rischi-prevenzione/kit-emergenza/) (utile anche per blackout e altri eventi).
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}

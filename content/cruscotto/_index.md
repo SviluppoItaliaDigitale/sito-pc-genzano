@@ -10,7 +10,7 @@ aliases:
 
 Un'unica pagina per consultare i dati di rischio del territorio, da **fonti ufficiali e aperte**. Scegli il tema con i pulsanti qui sotto. Sono dati **indicativi**: per le allerte valgono i bollettini del [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti), in emergenza chiama il **112**.
 
-Sotto ogni scheda c'è la sua **spiegazione a parole**: che cosa mostra, come si leggono i colori e i simboli, ogni quanto si aggiorna e che cosa non dice. Le spiegazioni di tutte le schede sono raccolte anche in una pagina sola, da leggere o ascoltare: [Le mappe del cruscotto spiegate a parole](/cruscotto/mappe-raccontate/).
+Sotto ogni scheda c'è la sua **spiegazione a parole**: che cosa mostra, come si leggono i colori e i simboli, ogni quanto si aggiorna e che cosa non dice. Le spiegazioni di tutte le schede, insieme a quelle dei grafici del Laboratorio meteo, sono raccolte anche in una pagina sola, da leggere o ascoltare: [Le mappe e i grafici spiegati a parole](/cruscotto/mappe-raccontate/).
 
 <div class="cruscotto-callout" role="note"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> <span>Vuoi <strong>esplorare i dati nel tempo</strong>? Nel <a href="/laboratorio-meteo/">Laboratorio meteo</a> costruisci grafici di temperatura, pioggia e vento dei Castelli Romani, con tabella dei dati e download.</span></div>
 

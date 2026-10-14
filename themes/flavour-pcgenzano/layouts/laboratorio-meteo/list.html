@@ -99,6 +99,19 @@
           </div>
         </figure>
 
+        {{/* Spiegazione a parole del grafico (proposta 1 della roadmap, 14/10/2026): una voce
+             per esempio pronto e per variabile, in data/mappe_raccontate.yaml (gruppo
+             «laboratorio»). Nascono tutte nascoste; il JS mostra quella del grafico disegnato. */}}
+        {{- with .Site.Data.mappe_raccontate }}{{ with .laboratorio }}
+        <div class="lab-raccontate" id="lab-raccontate" hidden>
+          {{- range $id, $v := . }}
+            {{- $chiave := "" }}
+            {{- if $v.esempio }}{{ $chiave = printf "ex:%s" $v.esempio }}{{ else if $v.variabile }}{{ $chiave = printf "v:%s" $v.variabile }}{{ else }}{{ errorf "mappe_raccontate.yaml, gruppo laboratorio: la voce %q non ha né esempio né variabile" $id }}{{ end }}
+            {{- partial "mappa-raccontata.html" (dict "page" $ "voce" $v "dom" (printf "mappa-raccontata-lab-%s" $id) "pagina" false "grafico" $chiave "link" (dict "href" (printf "cruscotto/mappe-raccontate/#grafico-%s" $id | relURL) "testo" "Tutti i grafici del Laboratorio e le schede del cruscotto spiegati a parole, in una pagina da leggere o ascoltare")) }}
+          {{- end }}
+        </div>
+        {{- end }}{{ end }}
+
         <div class="lab-tabella-blocco" id="lab-tabella-blocco" hidden>
           <div class="lab-tabella-azioni">
             <h3 id="lab-tabella-h">Tabella dei dati</h3>
@@ -121,11 +134,13 @@
       </noscript>
 
       <p class="lab-fonte small text-muted mt-4">
-        Fonte dati: rianalisi <strong>ERA5</strong> via <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
-        (licenza CC BY 4.0), allineata ai dati del <a href="https://cds.climate.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Climate Data Store</a>.
-        Per gli <strong>ultimi tre mesi</strong>, che la rianalisi non copre ancora, i dati arrivano invece dal modello di previsione
-        ad alta risoluzione di Open-Meteo: sotto ogni grafico è scritto quale delle due fonti stai guardando. Per confrontare
-        climi su più decenni usa periodi interamente coperti da ERA5, così la serie è omogenea.
+        Fonte dati: rianalisi <strong>ERA5-Land</strong> (temperature) ed <strong>ERA5</strong> (pioggia e vento) del
+        <a href="https://cds.climate.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Climate Change Service</a>,
+        via <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (licenza CC BY 4.0), calcolate
+        allo stesso modo per tutti gli anni. Per i periodi che cominciano negli <strong>ultimi tre mesi</strong> i dati vengono invece
+        dal modello di previsione ad alta risoluzione di Open-Meteo, che arriva fino a ieri (la rianalisi si ferma a circa cinque
+        giorni fa). Sotto ogni grafico è scritto quale delle due fonti stai guardando. Per confrontare anni diversi usa periodi
+        che cominciano più di tre mesi fa, così la serie è omogenea.
         Per costruire il grafico in tempo reale, il tuo browser contatta direttamente <code>open-meteo.com</code>: nessun cookie, nessun tracciamento
         (vedi <a href="{{ "/privacy/" | relURL }}">Privacy</a>). Dati indicativi a scopo didattico.
       </p>
