@@ -4,8 +4,9 @@ Aggiorna data/allerta.json con il blocco "rischio_incendi" leggendo il
 "Bollettino di Pericolosità da Incendi Boschivi" della Regione Lazio
 (campagna AIB, di norma giugno-ottobre).
 
-Fonte: https://protezionecivile.regione.lazio.it/.../tbl_rischio_incendi/
-       Bollettino AIB Lazio_DD_MM_YYYY.pdf
+Fonte: https://www.regione.lazio.it/sites/default/files/rischio-incendi/<anno>/
+       Bollettino AIB Lazio_DD_MM_YYYY.pdf (elenco nella pagina
+       https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi)
 
 Struttura del PDF:
 - Pagina "Previsioni per oggi DD-MM-YYYY": tabella con 14 Zone AIB
@@ -60,10 +61,18 @@ PDF_NAME_PATTERNS = [
     "Bollettino AIB Lazio_{date}.pdf",
     "BollettinoAIB_{date}.pdf",
 ]
-PDF_BASE_URL = (
+# Dall'autunno 2026 i bollettini stanno sul portale www.regione.lazio.it, nella
+# cartella rischio-incendi/<anno>/ (pagina «Bollettini di Pericolosità incendi
+# boschivi»). Il vecchio indirizzo su protezionecivile.regione.lazio.it risponde
+# con la home della protezione civile regionale (200, HTML) e lo script la
+# scambiava per il PDF: il 14/10/2026 il blocco rischio_incendi non si aggiornava
+# più, senza errori. Si prova prima l'indirizzo nuovo, poi quello vecchio, e si
+# accetta solo una risposta che comincia con %PDF.
+PDF_BASE_URLS = [
+    "https://www.regione.lazio.it/sites/default/files/rischio-incendi/{anno}/",
     "https://protezionecivile.regione.lazio.it/sites/default/files/binary/"
-    "rl_protezione_civile/tbl_rischio_incendi/"
-)
+    "rl_protezione_civile/tbl_rischio_incendi/",
+]
 
 LIVELLI_AIB = {"BASSO": 0, "MEDIO": 1, "MODERATO": 2, "ELEVATO": 3}
 LIVELLO_PC = {0: "verde", 1: "gialla", 2: "arancione", 3: "rossa"}
@@ -102,18 +111,25 @@ def scarica_pdf_aib(now):
     candidates = [now.date(), (now - timedelta(days=1)).date()]
     for d in candidates:
         date_str = d.strftime("%d_%m_%Y")
-        for pat in PDF_NAME_PATTERNS:
-            url = PDF_BASE_URL + urllib.parse.quote(pat.format(date=date_str))
-            try:
-                pdf_bytes = http_get_bytes(url)
-                print(f"📄 PDF AIB {date_str} scaricato ({len(pdf_bytes)} bytes) da {pat}")
-                return pdf_bytes, d
-            except urllib.error.HTTPError as e:
-                if e.code == 404:
+        for base in PDF_BASE_URLS:
+            base = base.format(anno=d.year)
+            for pat in PDF_NAME_PATTERNS:
+                url = base + urllib.parse.quote(pat.format(date=date_str))
+                try:
+                    pdf_bytes = http_get_bytes(url)
+                except urllib.error.HTTPError as e:
+                    if e.code == 404:
+                        continue
+                    print(f"::warning::Errore HTTP {e.code} per {url}")
                     continue
-                print(f"::warning::Errore HTTP {e.code} per {url}")
-            except Exception as e:
-                print(f"::warning::Errore scaricamento {url}: {e}")
+                except Exception as e:
+                    print(f"::warning::Errore scaricamento {url}: {e}")
+                    continue
+                if not pdf_bytes.startswith(b"%PDF"):
+                    print(f"  ⏭️  {url}: la risposta non è un PDF ({len(pdf_bytes)} bytes)")
+                    continue
+                print(f"📄 PDF AIB {date_str} scaricato ({len(pdf_bytes)} bytes) da {url}")
+                return pdf_bytes, d
     return None, None
 
 
