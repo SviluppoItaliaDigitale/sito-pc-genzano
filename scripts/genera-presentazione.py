@@ -485,12 +485,17 @@ def slide_cruscotto(num):
     cb = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, Inches(5.32), Inches(2.7), Inches(3.05), Inches(2.6),
              PRIMARY, shadow=True)
     grad_fill(cb, BLUE2, PRIMARY_D, ang=120)
+    # Dal 14/10/2026: ogni scheda ha la sua spiegazione a parole
+    # (/cruscotto/mappe-raccontate/) e le licenze sono quelle di ciascuna
+    # fonte (il radar ItaliaMeteo è CC BY-SA), non una sola CC BY 4.0.
     put(cb, [("Cruscotto del territorio", 15, WHITE, True),
              ("Aggregazione privacy-first", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
-             ("Dati aperti (CC BY 4.0)", 11, RGBColor(0xCF, 0xDD, 0xEC), False)])
+             ("Ogni scheda spiegata a parole", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
+             ("Fonte e licenza di ogni dato", 11, RGBColor(0xCF, 0xDD, 0xEC), False)])
     shp(s, MSO_SHAPE.RIGHT_ARROW, Inches(8.5), Inches(3.85), Inches(0.62), Inches(0.36), ACCENT)
-    al = [("Verde — nessuna allerta", GREEN, WHITE), ("Giallo — ordinaria", YELLOW, PRIMARY_D),
-          ("Arancione — elevata", ORANGE, WHITE), ("Rosso — massima", RED, WHITE)]
+    # Etichette come data/codici_colore.yaml (bollettini di criticità DPC).
+    al = [("Verde — nessuna allerta", GREEN, WHITE), ("Giallo — criticità ordinaria", YELLOW, PRIMARY_D),
+          ("Arancione — criticità moderata", ORANGE, WHITE), ("Rosso — criticità elevata", RED, WHITE)]
     ax, aw, ah, ay0, agp = Inches(9.35), Inches(3.3), 0.62, 2.4, 0.22
     for i, (t, c, tc) in enumerate(al):
         b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, ax, Inches(ay0 + i * (ah + agp)), aw, Inches(ah), c, shadow=True)
@@ -509,10 +514,12 @@ def slide_allerte(num):
     setrun(it.paragraphs[0].add_run(),
            "Quattro livelli ufficiali del Centro Funzionale Regionale del Lazio. La previsione (allerta) è distinta dall'evento in corso (emergenza).",
            14, DARK)
-    bars = [("VERDE", "Nessuna allerta — situazione ordinaria", GREEN, WHITE),
-            ("GIALLO", "Allerta ordinaria — fenomeni di intensità moderata", YELLOW, PRIMARY_D),
-            ("ARANCIONE", "Allerta elevata — fenomeni intensi, effetti rilevanti", ORANGE, WHITE),
-            ("ROSSO", "Allerta massima — fenomeni molto intensi, rischio elevato", RED, WHITE)]
+    # Livelli come data/codici_colore.yaml: i bollettini parlano di criticità
+    # ordinaria, moderata ed elevata (allineato il 14/10/2026).
+    bars = [("VERDE", "Nessuna allerta — nessun fenomeno significativo previsto", GREEN, WHITE),
+            ("GIALLO", "Criticità ordinaria — fenomeni localizzati di intensità moderata", YELLOW, PRIMARY_D),
+            ("ARANCIONE", "Criticità moderata — fenomeni diffusi e potenzialmente pericolosi", ORANGE, WHITE),
+            ("ROSSO", "Criticità elevata — fenomeni molto intensi, danni gravi probabili", RED, WHITE)]
     x, w, h, y0, gp = Inches(0.85), Inches(11.6), 0.78, 2.55, 0.2
     for i, (lv, d, c, tc) in enumerate(bars):
         b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(y0 + i * (h + gp)), w, Inches(h), c, shadow=True)
