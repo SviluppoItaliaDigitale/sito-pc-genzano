@@ -164,6 +164,20 @@ Il calendario della prevenzione (proposta 20 della roadmap) mette in fila, mese 
 
 🔴 **Il file `static/calendario-prevenzione/calendario-prevenzione.ics` non si scrive a mano**: lo genera `scripts/genera-calendario-prevenzione.py` dallo stesso YAML (RFC 5545: righe CRLF ripiegate a 75 byte, UID stabili, `DTSTAMP` = `aggiornato`, eventi di un giorno con `RRULE` annuale, primo sabato del mese per i gesti e ultima domenica per il cambio dell'ora, promemoria alle 9). `--check` lo confronta byte per byte ed è **bloccante** in `validate-pr.yml` (job `pacchetti-schede`): cambiando il YAML si rigenera il file nello stesso commit, e si aggiorna `aggiornato`. `.gitattributes` tiene `*.ics` fuori dalla conversione dei fine riga, che romperebbe il formato. Ogni gesto rimanda a una pagina esistente (lo script lo verifica) e ripete ciò che quella pagina dice: niente date che cambiano ogni anno (l'ordinanza antincendio del Sindaco, per esempio, si cita senza date).
 
+## Shortcode `grafico-interattivo` — grafici dei bilanci (14/10/2026)
+
+Grafici accessibili e interattivi per gli articoli di bilancio (nato con la chiusura della campagna antincendio 2026). I dati stanno in un file di `data/` (es. `data/campagna_aib_2026.json`: `fonte`, `aggiornato`, `giorni` con `d`/`n`/`ore`, `serie.<chiave>` con `etichette` e `misure` — `nome`, `unita`, `unita1` per il singolare, `valori`), sempre **aggregati e anonimi**, mai nomi o targhe.
+
+```go-html-template
+{{</* grafico-interattivo dati="campagna_aib_2026" grafico="mesi" titolo="…" nota="…" */>}}
+{{</* grafico-interattivo dati="campagna_aib_2026" grafico="calendario" titolo="…" */>}}
+```
+
+- **Barre** (`grafico="<chiave della serie>"`): elenco HTML con barra, etichetta e valore scritto, leggibile senza JavaScript; con più misure compaiono i pulsanti (`aria-pressed`) che cambiano misura e lo annunciano (`aria-live`).
+- **Calendario** (`grafico="calendario"`): una casella per giorno in colonne-settimana, cinque livelli del blu istituzionale con legenda, nomi dei mesi sopra; un solo punto di tabulazione, frecce/Inizio/Fine, mouse e dito scelgono il giorno e il dettaglio è scritto sotto. Il colore non è mai l'unica informazione: c'è la tabella dei giorni con interventi in un `<details>`.
+- Script `static/js/grafico-interattivo.js` caricato una volta per pagina (guardia `.Page.Store "graficoInterattivoJs"`; col server di sviluppo la guardia sopravvive ai rebuild e lo script sparisce: si riavvia il server). CSS sezione **GRAFICI INTERATTIVI v1.0** (varianti per contrasti del pannello accessibilità, movimento ridotto, stampa). Verificato con Playwright a 1280 e 375 e con axe, senza violazioni.
+- I numeri del file `data/` si ricavano dall'export del gestionale con lo stesso criterio dell'articolo e si ricontrollano a mano (somme dei mesi = totale).
+
 ## Shortcode `illustrazione-udl` (figure didattiche CAST UDL, 08/10/2026)
 
 Inserisce un'illustrazione SVG da `static/formazione/illustrazioni-udl/` dentro pagine rischio, materiali didattici ed esperimenti:

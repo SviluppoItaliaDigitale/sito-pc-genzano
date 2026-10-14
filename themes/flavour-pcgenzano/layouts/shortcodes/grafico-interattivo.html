@@ -1,0 +1,97 @@
+{{/* Grafico interattivo accessibile da un file in data/ (14/10/2026, bilancio
+     della campagna antincendio). Due forme:
+       grafico="calendario"  una casella per giorno (campo "giorni": d, n, ore)
+       grafico="<chiave>"    barre orizzontali da "serie.<chiave>" (etichette +
+                             misure; con più misure compaiono i pulsanti per
+                             cambiare misura)
+     Parametri: dati (nome del file in data/, obbligatorio), grafico
+     (obbligatorio), titolo (obbligatorio), nota (facoltativa).
+     Senza JavaScript il grafico resta leggibile: barre e valori sono HTML,
+     il calendario ha la tabella dei giorni con interventi. Lo script
+     /js/grafico-interattivo.js aggiunge il cambio di misura e l'esplorazione
+     del calendario con mouse, dito e frecce. */}}
+{{ $chiave := .Get "dati" }}
+{{ $g := .Get "grafico" }}
+{{ $titolo := .Get "titolo" }}
+{{ if not (and $chiave $g $titolo) }}{{ errorf "grafico-interattivo: servono dati, grafico e titolo (%s)" .Position }}{{ end }}
+{{ $d := index site.Data $chiave }}
+{{ if not $d }}{{ errorf "grafico-interattivo: file data/%s non trovato (%s)" $chiave .Position }}{{ end }}
+{{ $id := printf "gi-%s-%s" $chiave $g | urlize }}
+{{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
+{{ $gs := slice "domenica" "lunedì" "martedì" "mercoledì" "giovedì" "venerdì" "sabato" }}
+{{ if not (.Page.Store.Get "graficoInterattivoJs") }}{{ .Page.Store.Set "graficoInterattivoJs" true }}<script src="{{ "js/grafico-interattivo.js" | relURL }}" defer></script>{{ end }}
+
+<figure class="gi" id="{{ $id }}" aria-labelledby="{{ $id }}-t">
+  <figcaption class="gi-titolo" id="{{ $id }}-t">{{ $titolo }}</figcaption>
+
+{{ if eq $g "calendario" }}
+  {{ $giorni := $d.giorni }}
+  {{ $primo := time (index $giorni 0).d }}
+  {{ $vuoti := int ($primo.Weekday) }}{{ $vuoti = mod (add $vuoti 6) 7 }}
+  {{ $tot := 0 }}{{ $attivi := 0 }}{{ range $giorni }}{{ $tot = add $tot (int .n) }}{{ if gt .n 0 }}{{ $attivi = add $attivi 1 }}{{ end }}{{ end }}
+  <p class="gi-sintesi">{{ $tot }} interventi in {{ $attivi }} giornate su {{ len $giorni }}. Ogni casella è un giorno, dal lunedì alla domenica dall'alto in basso: più è scura, più interventi ci sono stati.</p>
+  {{ $ncol := div (add (add $vuoti (len $giorni)) 6) 7 }}
+  <div class="gi-cal-wrap">
+    <div class="gi-cal-colonna">
+    <div class="gi-cal-mesi" aria-hidden="true">
+      {{ range $c := seq 0 (sub $ncol 1) }}{{ $lab := "" }}
+        {{ range $k := seq 0 6 }}{{ $i := sub (add (mul $c 7) $k) $vuoti }}{{ if and (ge $i 0) (lt $i (len $giorni)) }}{{ $t := time (index $giorni $i).d }}{{ if or (eq $t.Day 1) (and (eq $c 0) (eq $lab "")) }}{{ $lab = substr (index $mesi (int $t.Month)) 0 3 }}{{ end }}{{ end }}{{ end }}
+      <span>{{ $lab }}</span>{{ end }}
+    </div>
+    <div class="gi-cal-riga">
+    <div class="gi-cal-giorni" aria-hidden="true"><span>lun</span><span></span><span>mer</span><span></span><span>ven</span><span></span><span>dom</span></div>
+    <div class="gi-cal" data-gi-cal tabindex="-1" role="group" aria-label="Calendario degli interventi giorno per giorno: usa le frecce per spostarti fra i giorni" aria-describedby="{{ $id }}-det">
+      {{ range seq $vuoti }}<span class="gi-cella gi-vuota" aria-hidden="true"></span>{{ end }}
+      {{ range $giorni }}
+        {{ $t := time .d }}{{ $n := int .n }}
+        {{ $liv := cond (ge $n 4) 4 $n }}
+        {{ $frase := printf "%s %d %s: " (index $gs (int $t.Weekday)) $t.Day (index $mesi (int $t.Month)) }}
+        {{ if eq $n 0 }}{{ $frase = printf "%snessun intervento" $frase }}{{ else if eq $n 1 }}{{ $frase = printf "%s1 intervento, %s ore" $frase (replace (string .ore) "." ",") }}{{ else }}{{ $frase = printf "%s%d interventi, %s ore" $frase $n (replace (string .ore) "." ",") }}{{ end }}
+        <span class="gi-cella gi-l{{ $liv }}{{ if eq $t.Day 1 }} gi-inizio-mese{{ end }}" data-frase="{{ $frase }}" aria-hidden="true"></span>
+      {{ end }}
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="gi-legenda" aria-hidden="true">Interventi nel giorno:
+    <span><i class="gi-cella gi-l0"></i>0</span><span><i class="gi-cella gi-l1"></i>1</span><span><i class="gi-cella gi-l2"></i>2</span><span><i class="gi-cella gi-l3"></i>3</span><span><i class="gi-cella gi-l4"></i>4 o più</span>
+  </div>
+  <p class="gi-dettaglio" id="{{ $id }}-det" aria-live="polite" hidden></p>
+  <details class="gi-tabella">
+    <summary>Tabella dei giorni con interventi</summary>
+    <div class="table-responsive"><table>
+      <caption class="visually-hidden">{{ $titolo }}: giorni con almeno un intervento</caption>
+      <thead><tr><th scope="col">Giorno</th><th scope="col">Interventi</th><th scope="col">Ore di intervento</th></tr></thead>
+      <tbody>
+      {{ range $giorni }}{{ if gt .n 0 }}{{ $t := time .d }}
+        <tr><td>{{ index $gs (int $t.Weekday) }} {{ $t.Day }} {{ index $mesi (int $t.Month) }}</td><td>{{ int .n }}</td><td>{{ replace (string .ore) "." "," }}</td></tr>
+      {{ end }}{{ end }}
+      </tbody>
+    </table></div>
+  </details>
+
+{{ else }}
+  {{ $s := index $d.serie $g }}
+  {{ if not $s }}{{ errorf "grafico-interattivo: serie %s assente in data/%s (%s)" $g $chiave .Position }}{{ end }}
+  {{ $m0 := index $s.misure 0 }}
+  {{ $max := 0 }}{{ range $m0.valori }}{{ if gt . $max }}{{ $max = . }}{{ end }}{{ end }}
+  {{ if gt (len $s.misure) 1 }}
+  <div class="gi-misure" role="group" aria-label="Scegli che cosa misurare" hidden>
+    {{ range $i, $m := $s.misure }}<button type="button" class="gi-misura" data-indice="{{ $i }}" aria-pressed="{{ cond (eq $i 0) "true" "false" }}">{{ $m.nome }}</button>{{ end }}
+  </div>
+  {{ end }}
+  <ul class="gi-barre" data-gi-barre="{{ $s.misure | jsonify }}">
+    {{ range $i, $e := $s.etichette }}
+      {{ $v := index $m0.valori $i }}
+      {{ $w := 0 }}{{ if gt $max 0 }}{{ $w = div (mul $v 1000) $max }}{{ end }}
+    <li class="gi-riga">
+      <span class="gi-etichetta">{{ $e }}</span>
+      <span class="gi-traccia" aria-hidden="true"><span class="gi-barra" style="width: {{ div $w 10.0 }}%"></span></span>
+      <span class="gi-valore"><strong>{{ $v }}</strong> {{ cond (and (eq (int $v) 1) $m0.unita1) $m0.unita1 $m0.unita }}</span>
+    </li>
+    {{ end }}
+  </ul>
+  <p class="gi-annuncio visually-hidden" aria-live="polite"></p>
+{{ end }}
+  <p class="gi-fonte">Fonte: {{ $d.fonte }}, aggiornati al {{ (time $d.aggiornato).Day }} {{ index $mesi (int (time $d.aggiornato).Month) }} {{ (time $d.aggiornato).Year }}.{{ with .Get "nota" }} {{ . }}{{ end }}</p>
+</figure>
