@@ -74,8 +74,7 @@ Cosa fare:
 - **Verificare** stato di vaccinazione antitetanica.
 
 ### Emorragie
-- **Comprimi** direttamente con garza pulita.
-- **Solleva** l'arto se possibile.
+- **Comprimi** direttamente con garza pulita, senza staccarla per controllare.
 - **Non rimuovere** garze già applicate, aggiungi sopra.
 - **Chiama il 112** per emorragie importanti.
 

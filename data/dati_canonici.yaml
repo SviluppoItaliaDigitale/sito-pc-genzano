@@ -322,7 +322,7 @@ dati:
       - nome: "Italian Resuscitation Council, Linee Guida RCP 2025, Capitolo 12 — Primo soccorso, § «Controllo di un'emorragia pericolosa per la vita»"
         url: "https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_12-PRIMO-SOCCORSO_15.04.2026.pdf"
     vietati:
-      - regex: "solleva(?:re|)\\s+(?:l['’]arto|la parte ferita)"
+      - regex: "(?i)solleva(?:re|)\\s+(?:l['’]arto|la parte ferita)"
         perche: "Verificato il 14/10/2026 sul capitolo 12 delle Linee Guida RCP 2025 (audit interno F17, issue #1200): l'elevazione dell'arto non è più fra le azioni raccomandate per il controllo del sanguinamento."
         contesto: "emorrag|sanguin|ferita"
         finestra: 150
