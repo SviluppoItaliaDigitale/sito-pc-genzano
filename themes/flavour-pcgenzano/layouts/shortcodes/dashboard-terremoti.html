@@ -65,16 +65,18 @@
     </div>
   </div>
 
-  <div class="dash-sisma-legenda" aria-hidden="true">
-    <span><i style="background:#9aa7b4"></i> M&lt;2</span>
-    <span><i style="background:#f7e359"></i> 2–3</span>
-    <span><i style="background:#f5a623"></i> 3–4</span>
-    <span><i style="background:#e8412b"></i> 4–5</span>
-    <span><i style="background:#7f1d1d"></i> ≥5</span>
+  <div class="dash-sisma-legenda">
+    <span>Colore dei cerchi, per magnitudo:</span>
+    <span><i aria-hidden="true" style="background:#9aa7b4"></i> sotto 2</span>
+    <span><i aria-hidden="true" style="background:#f7e359"></i> da 2 a 3</span>
+    <span><i aria-hidden="true" style="background:#f5a623"></i> da 3 a 4</span>
+    <span><i aria-hidden="true" style="background:#e8412b"></i> da 4 a 5</span>
+    <span><i aria-hidden="true" style="background:#7f1d1d"></i> 5 e oltre</span>
+    <span>· più grande il cerchio, più forte la scossa.</span>
   </div>
 
-  <noscript><div class="alert alert-warning mt-2" role="note">Per il cruscotto serve JavaScript. Dati ufficiali su <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">terremoti.ingv.it</a>.</div></noscript>
-  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Dati: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV — Istituto Nazionale di Geofisica e Vulcanologia</a> (FDSN, open data). Aggiornamento automatico. In emergenza chiama il <a href="tel:112">112</a>.</p>
+  <noscript><div class="alert alert-warning mt-2" role="note">Per il cruscotto serve JavaScript. Dati ufficiali su <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">terremoti.ingv.it<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.</div></noscript>
+  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Dati: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV — Istituto Nazionale di Geofisica e Vulcanologia<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (FDSN, open data). Aggiornamento automatico. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
   {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
@@ -196,7 +198,7 @@
       var tbody=document.getElementById('dash-sisma-tbody');
       var cnt=document.getElementById('dash-conteggio');
       if(!eventi.length){
-        tbody.innerHTML='<tr><td colspan="7" class="dash-vuoto"><strong>Nessun terremoto</strong> nel periodo e nell\'area selezionati. Nessuna scossa registrata: una buona notizia.</td></tr>';
+        tbody.innerHTML='<tr><td colspan="7" class="dash-vuoto"><strong>Nessun terremoto</strong> sopra la magnitudo scelta, nel periodo e nell\'area selezionati.</td></tr>';
         cnt.textContent='Nessun terremoto trovato';
         return;
       }

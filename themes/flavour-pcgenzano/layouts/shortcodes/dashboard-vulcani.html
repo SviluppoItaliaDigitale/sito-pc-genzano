@@ -1,30 +1,38 @@
 {{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-vulcani — monitoraggio del Distretto Vulcanico dei Colli Albani,
      il distretto vulcanico quiescente su cui sorge Genzano di Roma. Niente "stato vulcanico" inventato:
-     mostriamo il parametro realmente monitorato dall'INGV per le caldere quiescenti, cioè la
-     SISMICITÀ locale (ultimi 30 giorni) via INGV FDSN (CORS aperto), più i link ufficiali.
-     Solo indicatori, nessuna mappa (la mappa sismica è nella scheda Terremoti). */}}
+     l'INGV sorveglia il vulcano con le reti della sismicità e delle deformazioni del suolo e con
+     misure periodiche di acque e gas (DPC, scheda «Colli Albani»); qui mostriamo il dato che si può
+     leggere in tempo reale, la SISMICITÀ locale degli ultimi 30 giorni via INGV FDSN (CORS aperto),
+     più i link ufficiali. Solo indicatori, nessuna mappa (la mappa sismica è nella scheda Terremoti). */}}
 <div class="dash-vulcani" aria-labelledby="dash-vulc-tit">
   <h2 id="dash-vulc-tit" class="visually-hidden">Monitoraggio del Distretto Vulcanico dei Colli Albani</h2>
-  <p class="dash-aria-nota mb-2">Genzano di Roma sorge sul <strong>Distretto Vulcanico dei Colli Albani</strong>, un distretto vulcanico <strong>quiescente</strong> (non in eruzione, ma non estinto). Il parametro che l'INGV monitora di continuo è la <strong>sismicità</strong> dell'area: qui i numeri degli <strong>ultimi 30 giorni</strong>.</p>
+  <p class="dash-aria-nota mb-2">Genzano di Roma sorge sul <strong>Distretto Vulcanico dei Colli Albani</strong>, un vulcano <strong>quiescente</strong>: non è in eruzione, ma non è spento né estinto. La Sezione di Roma dell'INGV lo sorveglia con le reti che misurano i terremoti e i movimenti del suolo, e con misure periodiche di acque e gas. Qui trovi i numeri dei terremoti degli <strong>ultimi 30 giorni</strong>.</p>
   <div class="dash-sisma-kpi">
     <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-num">—</span><span class="dash-kpi-lab">Terremoti 30 giorni (Colli Albani)</span></div>
     <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-max">—</span><span class="dash-kpi-lab">Magnitudo massima</span></div>
     <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-ult">—</span><span class="dash-kpi-lab">Ultimo evento</span></div>
     <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-prof">—</span><span class="dash-kpi-lab">Profondità tipica</span></div>
   </div>
-  <p class="small text-muted mt-2 mb-0" id="vulc-stato"></p>
+  <p class="small text-muted mt-2 mb-0" id="vulc-stato" aria-live="polite"></p>
   <p class="small text-muted mt-1 mb-0">
-    {{ partial "fonte-badge.html" "ufficiale" }}Dati sismici: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV</a> (FDSN, open data), area Colli Albani.
-    Approfondimenti: <a href="https://www.ingv.it/" target="_blank" rel="noopener noreferrer">INGV</a>,
-    <a href="https://rischi.protezionecivile.gov.it/it/vulcanico/" target="_blank" rel="noopener noreferrer">rischio vulcanico — Protezione Civile</a>.
-    Una sismicità di fondo è <strong>normale</strong> per questo vulcano quiescente (l'INGV parla di sciami ricorrenti di scosse poco profonde); non indica da sola un'eruzione imminente. In emergenza: <a href="tel:112">112</a>.
+    {{ partial "fonte-badge.html" "ufficiale" }}Dati sismici: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (FDSN, open data), area Colli Albani.
+    Approfondimenti: <a href="https://www.ingv.it/" target="_blank" rel="noopener noreferrer">INGV<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>,
+    <a href="https://rischi.protezionecivile.gov.it/it/vulcanico/" target="_blank" rel="noopener noreferrer">rischio vulcanico — Protezione Civile<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.
+    Il Dipartimento della Protezione Civile descrive questo vulcano come caratterizzato da <strong>sciami sismici</strong>, deformazioni del suolo ed emissioni di gas: la sismicità fa parte del suo comportamento abituale. Che cosa significano questi numeri lo valutano l'INGV e il Dipartimento. In emergenza: <a href="tel:112">112</a>.
   </p>
   <script>
   (function(){
     var FDSN='https://webservices.ingv.it/fdsnws/event/1/query';
     var BBOX='&minlatitude=41.6&maxlatitude=41.85&minlongitude=12.5&maxlongitude=12.85';
-    function pad(n){return('0'+n).slice(-2);}
+    // INGV scrive l'ora in UTC senza indicare il fuso: letta così com'è, il browser
+    // la prendeva per ora italiana e «Ultimo evento» risultava più vecchio di un'ora
+    // (ora solare) o di due (ora legale).
+    function parseINGVDate(iso){
+      if(typeof iso==='number') return new Date(iso);
+      var s=String(iso||'').trim();
+      return new Date(s ? (/(Z|[+-]\d\d:?\d\d)$/i.test(s)?s:s+'Z') : NaN);
+    }
     function carica(retry){
       retry = retry || 0;
       var from=new Date(Date.now()-30*86400000).toISOString().slice(0,19);
@@ -46,13 +54,13 @@
     }
     function mostra(j){
         var f=(j.features||[]).map(function(x){var p=x.properties,g=x.geometry.coordinates;return{time:p.time,mag:p.mag,depth:g[2]};}).filter(function(e){return typeof e.mag==='number';});
-        var num=f.length, maxM=0, prof=[];
+        var num=f.length, maxM=-Infinity, prof=[];   // le microscosse possono avere magnitudo negativa
         f.forEach(function(e){ if(e.mag>maxM)maxM=e.mag; if(e.depth!=null)prof.push(e.depth); });
         document.getElementById('vulc-num').textContent=num;
         document.getElementById('vulc-max').textContent=num?('M '+maxM.toFixed(1)):'—';
         if(num){
-          var ult=f.slice().sort(function(a,b){return new Date(b.time)-new Date(a.time);})[0];
-          var mins=Math.round((Date.now()-new Date(ult.time).getTime())/60000);
+          var ult=f.slice().sort(function(a,b){return parseINGVDate(b.time)-parseINGVDate(a.time);})[0];
+          var mins=Math.max(0,Math.round((Date.now()-parseINGVDate(ult.time).getTime())/60000));
           document.getElementById('vulc-ult').textContent= mins<60?(mins+' min fa') : mins<2880?(Math.round(mins/60)+' ore fa') : (Math.round(mins/1440)+' gg fa');
           prof.sort(function(a,b){return a-b;});
           document.getElementById('vulc-prof').textContent=prof.length?(Math.round(prof[Math.floor(prof.length/2)])+' km'):'—';
@@ -60,10 +68,10 @@
           document.getElementById('vulc-ult').textContent='nessuno';
           document.getElementById('vulc-prof').textContent='—';
         }
-        var oraAgg='alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes())+'.';
+        var oraAgg='alle '+new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'})+'.';
         document.getElementById('vulc-stato').textContent = num
-          ? ('Aggiornato '+oraAgg)
-          : ('Nessun terremoto negli ultimi 30 giorni nel distretto. Aggiornato '+oraAgg);
+          ? ('Dati letti '+oraAgg)
+          : ('Nessun terremoto negli ultimi 30 giorni nel distretto. Dati letti '+oraAgg);
     }
     // lazy: fetch solo quando la scheda Vulcani diventa visibile
     function avvia(){ carica(); setInterval(carica, 600000); }

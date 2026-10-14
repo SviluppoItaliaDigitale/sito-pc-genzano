@@ -15,7 +15,7 @@
   <h2 id="radar-dpc-titolo" class="h3 mt-4 mb-3" style="color:#003366">
     <i class="bi bi-cloud-rain-heavy-fill me-2" aria-hidden="true"></i>Radar pioggia in tempo reale (Protezione Civile)
   </h2>
-  <p class="mb-2">Pioggia rilevata in questo momento dalla rete radar nazionale del Dipartimento della Protezione Civile. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
+  <p class="mb-2">Pioggia rilevata dalla rete radar nazionale del Dipartimento della Protezione Civile: la mappa mostra l'ultimo rilevamento disponibile, e accanto ai pulsanti trovi l'ora in cui è stato fatto. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.</p>
 
   {{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
   <style>
@@ -29,15 +29,15 @@
   @media (max-width:575px){#radar-dpc-mappa{height:460px}}
   .radar-dpc-mappa-box{position:relative}
   .radar-dpc-overlay{position:absolute;top:10px;left:12px;z-index:600;background:rgba(11,33,56,.82);color:#fff;padding:.3rem .6rem;border-radius:6px;font-size:.85rem;font-weight:700;pointer-events:none}
-  .radar-dpc-legenda{margin-top:.6rem}
-  .radar-dpc-legenda-barra{display:flex;height:18px;border-radius:4px;overflow:hidden;border:1px solid #adb5bd}
-  .radar-dpc-legenda-barra i{flex:1}
-  .radar-dpc-legenda-et{display:flex;justify-content:space-between;font-size:.72rem;color:#495057;margin-top:.15rem}
+  .radar-dpc-legenda{margin-top:.6rem;max-width:640px}
+  .radar-dpc-legenda-tit{font-size:.85rem;font-weight:600;color:#003366;margin:0 0 .2rem}
+  .radar-dpc-legenda-barra{height:16px;border-radius:3px;border:1px solid #6c757d}
+  .radar-dpc-legenda-et{display:flex;justify-content:space-between;font-size:.75rem;color:#1a1a1a;margin-top:.15rem}
   </style>
 
   <div class="radar-dpc-toolbar" role="group" aria-label="Prodotto e sfondo del radar">
     <button type="button" class="radar-dpc-filter" data-layer="radar:sri" aria-pressed="true">Pioggia al suolo (SRI)</button>
-    <button type="button" class="radar-dpc-filter" data-layer="radar:vmi" aria-pressed="false">Intensità in quota (VMI)</button>
+    <button type="button" class="radar-dpc-filter" data-layer="radar:vmi" aria-pressed="false">Eco radar più forte (VMI)</button>
     <button type="button" class="radar-dpc-filter" id="radar-dpc-base" aria-pressed="true"><i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro</button>
     <button type="button" class="radar-dpc-filter" id="radar-dpc-refresh"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Aggiorna</button>
     <span class="radar-dpc-stato" id="radar-dpc-stato" aria-live="polite"></span>
@@ -48,21 +48,21 @@
     <div class="radar-dpc-overlay" id="radar-dpc-prodotto-lbl" aria-hidden="true">Pioggia al suolo (SRI)</div>
   </div>
 
-  <div class="radar-dpc-legenda" aria-hidden="true">
-    <div class="radar-dpc-legenda-barra">
-      <i style="background:#a6d8ff"></i><i style="background:#2ecc71"></i><i style="background:#a8e05f"></i><i style="background:#f7e359"></i><i style="background:#f5a623"></i><i style="background:#e8412b"></i><i style="background:#b5179e"></i>
-    </div>
-    <div class="radar-dpc-legenda-et"><span>debole</span><span>moderato</span><span>intenso</span><span>forte</span><span>molto forte</span></div>
+  <div class="radar-dpc-legenda">
+    <p class="radar-dpc-legenda-tit" id="radar-dpc-legenda-tit">Intensità della pioggia al suolo (millimetri all'ora)</p>
+    <p class="visually-hidden" id="radar-dpc-legenda-testo">Scala dei colori del Dipartimento: dall'azzurro chiaro, pioggia debole, al verde, al giallo, all'arancione e al rosso, fino al viola, pioggia molto forte. Dove il radar non vede pioggia resta solo un leggero velo, che segna l'area coperta dai radar.</p>
+    <div class="radar-dpc-legenda-barra" id="radar-dpc-barra" aria-hidden="true" style="background-image:linear-gradient(90deg,#bfd9ff,#00ccff 8%,#00cc33 20%,#ffff00,#ffa500 40%,#ff0000,#9900cc)"></div>
+    <div class="radar-dpc-legenda-et" aria-hidden="true"><span>debole</span><span>moderato</span><span>intenso</span><span>forte</span><span>molto forte</span></div>
   </div>
 
   <noscript>
     <div class="alert alert-warning mt-3" role="note">
       <strong>JavaScript disattivato:</strong> apri il radar ufficiale su
-      <a href="https://radar.protezionecivile.it/" target="_blank" rel="noopener noreferrer">radar.protezionecivile.it</a>.
+      <a href="https://radar.protezionecivile.it/" target="_blank" rel="noopener noreferrer">radar.protezionecivile.it<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.
     </div>
   </noscript>
 
-  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Mosaico radar nazionale <strong>grezzo</strong>: ai bordi della copertura (per esempio sul mare presso la Sardegna) possono comparire echi non meteorologici. Per la versione validata e l'animazione apri il <a href="https://radar.protezionecivile.it/" target="_blank" rel="noopener noreferrer">radar ufficiale DPC</a>. Fonte: <a href="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/" target="_blank" rel="noopener noreferrer">Radar-DPC</a> © Dipartimento della Protezione Civile (WMTS open-data CC BY-SA) — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Mosaico radar nazionale <strong>grezzo</strong>: ai bordi della copertura (per esempio sul mare presso la Sardegna) possono comparire echi non meteorologici. Per la versione validata e l'animazione apri il <a href="https://radar.protezionecivile.it/" target="_blank" rel="noopener noreferrer">radar ufficiale DPC<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>. Fonte: <a href="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/" target="_blank" rel="noopener noreferrer">Radar-DPC<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> © Dipartimento della Protezione Civile (WMTS open-data CC BY-SA) — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
   {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
@@ -100,7 +100,8 @@
       maxZoom: 12, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' });
     baseScura.addTo(map);
 
-    var radar = L.tileLayer(urlFor(prodotto), { opacity: 0.78, maxZoom: 11, maxNativeZoom: 9, tileSize: 256, bounds: ITALIA });
+    // maxZoom 12 come la base: con 11, all'ultimo livello di zoom il radar spariva.
+    var radar = L.tileLayer(urlFor(prodotto), { opacity: 0.78, maxZoom: 12, maxNativeZoom: 9, tileSize: 256, bounds: ITALIA });
     radar.addTo(map);
 
     var stella = L.marker(GENZANO, { keyboard: true, icon: L.divIcon({ className: 'radar-dpc-stella',
@@ -124,6 +125,24 @@
         stato.textContent = 'Ultimo rilevamento ' + d.toLocaleTimeString('it-IT',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit'}) + ' (' + Math.max(0,mins) + ' min fa)' + (mins>15?' · dato in ritardo':'');
       }).catch(function(){ if(tipo === prodotto.split(':')[1].toUpperCase())stato.textContent = 'Orario del rilevamento non verificabile'; });
     }
+    // Scale di colore della piattaforma radar del Dipartimento (radar.protezionecivile.it,
+    // lette il 14/10/2026): la fonte non dà valori numerici, solo i cinque gradi da
+    // «debole» a «molto forte». SRI in millimetri all'ora, VMI in dBZ.
+    var SCALA = {
+      'radar:sri': { tit: 'Intensità della pioggia al suolo (millimetri all\'ora)',
+        grad: 'linear-gradient(90deg,#bfd9ff,#00ccff 8%,#00cc33 20%,#ffff00,#ffa500 40%,#ff0000,#9900cc)',
+        testo: 'Scala dei colori del Dipartimento: dall\'azzurro chiaro, pioggia debole, al verde, al giallo, all\'arancione e al rosso, fino al viola, pioggia molto forte. Dove il radar non vede pioggia resta solo un leggero velo, che segna l\'area coperta dai radar.' },
+      'radar:vmi': { tit: 'Eco radar più forte sopra ogni punto, a qualsiasi altezza (riflettività in dBZ)',
+        grad: 'linear-gradient(90deg,#00fafa 10%,#00fa00 28%,#fafa00 50%,#fa6400 60%,#fa0000)',
+        testo: 'Scala dei colori del Dipartimento: dall\'azzurro, echi deboli, al verde, al giallo e all\'arancione, fino al rosso, echi molto forti. Dove il radar non vede pioggia resta solo un leggero velo, che segna l\'area coperta dai radar.' }
+    };
+    var legTit = document.getElementById('radar-dpc-legenda-tit');
+    var legTesto = document.getElementById('radar-dpc-legenda-testo');
+    var legBarra = document.getElementById('radar-dpc-barra');
+    function legenda(){
+      var sc = SCALA[prodotto]; if (!sc) return;
+      legTit.textContent = sc.tit; legTesto.textContent = sc.testo; legBarra.style.backgroundImage = sc.grad;
+    }
     function refresh(){ radar.setUrl(urlFor(prodotto, true)); aggiornaOrario(); }
     aggiornaOrario();
     setInterval(refresh, 300000); // ogni 5 minuti il DPC pubblica un nuovo campione
@@ -135,6 +154,7 @@
         prodotto = btn.dataset.layer;
         prodLbl.textContent = btn.textContent.trim();
         radar.setUrl(urlFor(prodotto));
+        legenda();
         aggiornaOrario();
       });
     });
@@ -142,10 +162,10 @@
     var baseBtn = document.getElementById('radar-dpc-base');
     baseBtn.addEventListener('click', function(){
       baseDark = !baseDark;
-      if (baseDark){ map.removeLayer(baseChiara); baseScura.addTo(map); baseScura.bringToBack();
-        baseBtn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro'; }
-      else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack();
-        baseBtn.innerHTML = '<i class="bi bi-sun" aria-hidden="true"></i> Sfondo chiaro'; }
+      // il nome resta «Sfondo scuro» e cambia solo lo stato premuto: un interruttore
+      // che cambia anche il nome si legge al contrario con lo screen reader
+      if (baseDark){ map.removeLayer(baseChiara); baseScura.addTo(map); baseScura.bringToBack(); }
+      else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack(); }
       baseBtn.setAttribute('aria-pressed', baseDark ? 'true' : 'false');
       radar.bringToFront();
     });

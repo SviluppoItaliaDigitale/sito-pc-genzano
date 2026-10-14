@@ -1,0 +1,79 @@
+{{- /* Shortcode mappa-raccontata — una scheda del cruscotto spiegata a parole
+       (proposta 64 della roadmap, «Mappe raccontate», 14/10/2026).
+
+       Che cosa mostra, come si leggono colori e simboli, ogni quanto si aggiorna
+       e che cosa non dice: per chi non vede la mappa e per chi non la sa leggere
+       (WCAG 1.1.1 e 1.4.1, l'informazione non passa solo dall'immagine e dal
+       colore). I testi stanno in data/mappe_raccontate.yaml, una voce per scheda
+       con la stessa chiave del pannello del cruscotto (#panel-<id>).
+
+       Uso:
+         {{< mappa-raccontata id="terremoti" >}}
+             sotto la scheda: riquadro che si apre con un tocco;
+         {{< mappa-raccontata id="terremoti" pagina="true" >}}
+             nella pagina /cruscotto/mappe-raccontate/: testo sempre visibile,
+             sotto un titolo «## <titolo> {#scheda-<id>}» scritto nella pagina.
+
+       Un id che manca nel file dati ferma la build: un riquadro vuoto sotto una
+       mappa sarebbe peggio di nessun riquadro. scripts/check-mappe-raccontate.py
+       controlla che ogni scheda del cruscotto abbia voce, riquadro e titolo. */ -}}
+{{- $id := .Get "id" -}}
+{{- $schede := dict -}}
+{{- with .Site.Data.mappe_raccontate }}{{ with .schede }}{{ $schede = . }}{{ end }}{{ end -}}
+{{- if not $id -}}
+  {{- errorf "mappa-raccontata: manca il parametro id (%s)" .Position -}}
+{{- else if not (index $schede $id) -}}
+  {{- errorf "mappa-raccontata: la scheda %q non è in data/mappe_raccontate.yaml (%s)" $id .Position -}}
+{{- end -}}
+{{- $pagina := eq (.Get "pagina") "true" -}}
+{{- $p := .Page -}}
+{{- with index $schede $id }}
+{{- $titolo := .titolo }}
+{{- if $pagina }}
+<div class="mappa-raccontata mappa-raccontata-pagina" id="mappa-raccontata-{{ $id }}">
+{{- else }}
+<details class="mappa-raccontata" id="mappa-raccontata-{{ $id }}">
+  <summary><i class="bi bi-chat-square-text" aria-hidden="true"></i> Spiegazione a parole di «{{ $titolo }}»</summary>
+{{- end }}
+  <div class="mappa-raccontata-corpo">
+    <p class="mappa-raccontata-breve">{{ $p.RenderString .in_breve }}</p>
+    <dl>
+      <dt>Che cosa mostra</dt>
+      <dd>{{ $p.RenderString .mostra }}</dd>
+      <dt>Colori e simboli</dt>
+      <dd>{{ if eq (len .colori) 1 }}{{ $p.RenderString (index .colori 0) }}{{ else }}<ul>{{ range .colori }}<li>{{ $p.RenderString . }}</li>{{ end }}</ul>{{ end }}</dd>
+      <dt>Ogni quanto si aggiorna</dt>
+      <dd>{{ $p.RenderString .aggiornamento }}</dd>
+      <dt>Che cosa non dice</dt>
+      <dd>{{ if eq (len .limiti) 1 }}{{ $p.RenderString (index .limiti 0) }}{{ else }}<ul>{{ range .limiti }}<li>{{ $p.RenderString . }}</li>{{ end }}</ul>{{ end }}</dd>
+    </dl>
+    <p class="mappa-raccontata-fonte"><strong>Fonte:</strong> {{ $p.RenderString .fonte }}</p>
+    {{- if $pagina }}
+    <p class="mappa-raccontata-link"><a href="{{ printf "cruscotto/#panel-%s" $id | relURL }}"><i class="bi bi-arrow-right-circle" aria-hidden="true"></i> Apri la scheda «{{ $titolo }}» nel cruscotto</a></p>
+    {{- else }}
+    <p class="mappa-raccontata-link"><a href="{{ printf "cruscotto/mappe-raccontate/#scheda-%s" $id | relURL }}">Tutte le schede del cruscotto spiegate a parole, in una pagina da leggere o ascoltare</a></p>
+    {{- end }}
+  </div>
+{{- if $pagina }}
+</div>
+{{- else }}
+</details>
+{{- end }}
+{{- end }}
+{{- /* In stampa il riquadro esce aperto: il foglio non ha un tasto da premere.
+       Il CSS fa lo stesso con ::details-content dove il browser lo conosce. */ -}}
+{{- if and (not $pagina) (not ($p.Store.Get "mappaRaccontataStampa")) }}{{ $p.Store.Set "mappaRaccontataStampa" true }}
+<script>
+(function(){
+  var aperti = [];
+  window.addEventListener('beforeprint', function(){
+    aperti = Array.prototype.slice.call(document.querySelectorAll('details.mappa-raccontata:not([open])'));
+    aperti.forEach(function(d){ d.open = true; });
+  });
+  window.addEventListener('afterprint', function(){
+    aperti.forEach(function(d){ d.open = false; });
+    aperti = [];
+  });
+})();
+</script>
+{{- end }}
