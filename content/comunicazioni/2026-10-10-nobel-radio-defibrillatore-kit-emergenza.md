@@ -11,6 +11,7 @@ scadenza: ""
 area: ""
 allegati: []
 tts: true
+versione_facile: "2026-10-10-nobel-radio-defibrillatore-kit-emergenza-facile"
 social_citazione: "Apri un kit di emergenza e qualche premio Nobel lo trovi."
 social_punti:
   - "1909, Marconi: la telegrafia senza fili, la radio dei soccorsi."
