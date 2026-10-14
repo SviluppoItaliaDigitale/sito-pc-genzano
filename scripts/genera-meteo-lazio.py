@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
 Genera la cartina meteo del Lazio (aree colorate per provincia) e il riquadro
-meteo di Genzano di Roma, a partire dai dati aperti Open-Meteo (modelli ECMWF,
-licenza CC-BY, nessuna chiave API).
+meteo di Genzano di Roma, a partire dai dati aperti Open-Meteo (licenza CC BY,
+nessuna chiave API). Senza il parametro «models» Open-Meteo sceglie da sé, punto per
+punto, i modelli meteorologici più adatti: per questo la fonte si cita come «Open-Meteo»
+e non come un modello in particolare (fino al 14/10/2026 era scritto «modelli ECMWF»).
 
 Output:
   - static/images/meteo-lazio.svg     mappa choropleth (temperatura + cielo per provincia)
-  - data/meteo_genzano.json           dati del riquadro Genzano (oggi + prossimi giorni)
+  - data/meteo_genzano.json           dati del riquadro Genzano (oggi + prossimi giorni) e,
+                                      in «province», i valori che colorano la cartina, per
+                                      la descrizione a parole sotto l'immagine (dal 14/10/2026)
 
 Geometria: data/meteo-lazio-geo.json (province del Lazio + contesto regioni confinanti),
 estratto una tantum dai confini ISTAT (openpolis/geojson-italy), così il generatore
@@ -89,6 +93,19 @@ def _cloud(cx, cy, s, fill="#cfd8e0", stroke="#9aa7b4"):
         f'</g>'
     )
 
+def _flakes(cx, cy, s, col="#3a78c2"):
+    # tre fiocchi a stella (tre segmenti incrociati) sotto la nuvola, dove la pioggia
+    # ha le gocce: fino al 14/10/2026 la neve aveva l'icona della sola nuvola
+    f = ""
+    for dx in (-s*0.8, 0, s*0.8):
+        x = cx + dx; y = cy + s*1.45; r = s*0.27
+        for k in range(3):
+            a = math.radians(90 + k * 60)
+            f += (f'<line x1="{x - math.cos(a)*r:.1f}" y1="{y - math.sin(a)*r:.1f}" '
+                  f'x2="{x + math.cos(a)*r:.1f}" y2="{y + math.sin(a)*r:.1f}" '
+                  f'stroke="{col}" stroke-width="{s*0.16:.1f}" stroke-linecap="round"/>')
+    return f
+
 def _drops(cx, cy, s, col="#3a78c2"):
     d = ""
     for dx in (-s*0.7, 0, s*0.7):
@@ -105,6 +122,8 @@ def icona_svg(key, cx, cy, s):
         return f'<g>{_cloud(cx, cy, s)}</g>'
     if key == "pioggia":
         return f'<g>{_cloud(cx, cy-s*0.2, s*0.95)}{_drops(cx, cy+s*0.3, s*0.8)}</g>'
+    if key == "neve":
+        return f'<g>{_cloud(cx, cy-s*0.2, s*0.95)}{_flakes(cx, cy+s*0.3, s*0.8)}</g>'
     if key == "temporale":
         bolt = (f'<polygon points="{cx-s*0.1:.1f},{cy+s*0.9:.1f} {cx+s*0.5:.1f},{cy+s*0.9:.1f} '
                 f'{cx+s*0.05:.1f},{cy+s*1.9:.1f} {cx+s*0.3:.1f},{cy+s*1.1:.1f} {cx-s*0.2:.1f},{cy+s*1.1:.1f}" '
@@ -350,7 +369,7 @@ def build_svg(map_data, card_data, oggi):
         f'<rect x="0" y="{HEAD+Hmap:.0f}" width="{W:.0f}" height="{FOOT+PAD}" fill="#ffffff"/>'
         f'<g>{leg}</g>'
         f'<text x="{W/2:.0f}" y="{H-22:.0f}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#003366">Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</text>'
-        f'<text x="{W/2:.0f}" y="{H-8:.0f}" font-size="8.5" text-anchor="middle" fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio</text>'
+        f'<text x="{W/2:.0f}" y="{H-8:.0f}" font-size="8.5" text-anchor="middle" fill="#6c757d">Dati: Open-Meteo &#183; dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio</text>'
     )
     # cornice di microtesto attorno a tutto (banda dedicata, non sovrapposta al contenuto)
     F = 13
@@ -379,6 +398,26 @@ def uv_label(v):
 def _hhmm(iso):
     # "2026-05-23T05:39" -> "05:39"
     return iso.split("T")[1][:5] if iso and "T" in iso else (iso or "")
+
+def build_province(map_data):
+    """Valori dei capoluoghi che colorano la cartina, nello stesso ordine di CAPOLUOGHI.
+    Servono alla descrizione a parole sotto l'immagine (proposta «Mappe raccontate»,
+    14/10/2026): chi non vede la cartina legge gli stessi numeri. Un capoluogo senza
+    dati si salta, non si inventa."""
+    out = []
+    for i, (nome, _lat, _lon) in enumerate(CAPOLUOGHI):
+        try:
+            d = map_data[i]["daily"]
+            tmax = d["temperature_2m_max"][0]
+            tmin = (d.get("temperature_2m_min") or [None])[0]
+            cielo, _ico = wmo(d["weather_code"][0])
+        except (KeyError, IndexError, TypeError, ValueError):
+            continue
+        if tmax is None:
+            continue
+        out.append({"nome": nome, "tmax": round(tmax),
+                    "tmin": None if tmin is None else round(tmin), "cielo": cielo})
+    return out
 
 def build_card(card_data, now):
     cur = card_data["current"]
@@ -418,7 +457,7 @@ def build_card(card_data, now):
             "raffiche": round(cur["wind_gusts_10m"] or 0),
         },
         "giorni": giorni,
-        "fonte": "Open-Meteo (modelli ECMWF)",
+        "fonte": "Open-Meteo",
     }
 
 def main():
@@ -435,6 +474,7 @@ def main():
     open(OUT_SVG, "w", encoding="utf-8").write(svg)
 
     card = build_card(card_data, now)
+    card["province"] = build_province(map_data)
     json.dump(card, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
     print(f"OK  {OUT_SVG} ({len(svg)} byte)")

@@ -14,7 +14,7 @@ sitemap:
   priority: 0.9
   changefreq: daily
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-10-14"
 ---
 
 Le allerte meteo indicano i possibili effetti al suolo di pioggia, temporali, vento e altri fenomeni. Servono a prepararsi prima che la situazione diventi pericolosa.
@@ -24,6 +24,8 @@ Le allerte meteo indicano i possibili effetti al suolo di pioggia, temporali, ve
 Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzionale Regionale del Lazio** per il Comune di Genzano di Roma. È lo stesso valore mostrato nella barra in cima alla [homepage](/) e aggiornato automaticamente quando cambia il livello.
 
 {{< allerta-stato-attuale >}}
+
+{{< mappa-raccontata id="allerta" >}}
 
 <div id="notifiche-allerta-toggle" data-pagefind-ignore></div>
 
@@ -104,9 +106,11 @@ Cosa fare se l'acqua arriva davvero, in casa, all'aperto e in auto, lo spiega un
 
 ## Previsione meteo di oggi
 
-Temperatura massima e cielo previsti **oggi** nelle cinque province del Lazio, con il dettaglio per Genzano di Roma e i prossimi giorni. La cartina è una **nostra elaborazione** su dati aperti [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), aggiornata ogni ora. È un dato **indicativo**: per le allerte valgono i bollettini ufficiali del Centro Funzionale Regionale del Lazio.
+Temperatura massima e cielo previsti **oggi** nelle cinque province del Lazio, con il dettaglio per Genzano di Roma e i prossimi giorni. La cartina è una **nostra elaborazione** su dati aperti [Open-Meteo](https://open-meteo.com/), aggiornata ogni ora. È un dato **indicativo**: per le allerte valgono i bollettini ufficiali del Centro Funzionale Regionale del Lazio.
 
 {{< meteo-lazio >}}
+
+{{< mappa-raccontata id="meteo" >}}
 
 {{< meteo-anteprime >}}
 
@@ -131,6 +135,8 @@ La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri mete
     widgetId="meteo-windy" >}}
 
 {{< radar-dpc >}}
+
+{{< mappa-raccontata id="radar" >}}
 
 ## Previsione meteo per Genzano di Roma
 

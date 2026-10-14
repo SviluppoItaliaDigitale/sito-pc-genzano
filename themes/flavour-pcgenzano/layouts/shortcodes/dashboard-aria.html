@@ -29,15 +29,15 @@
   </div>
 
   <p class="small text-muted mt-2 mb-0" id="aria-stato"></p>
-  <p class="small text-muted mt-1 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Dato puntuale su Genzano di Roma: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> / servizio europeo <a href="https://atmosphere.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus CAMS</a>. Indicativo.</p>
+  <p class="small text-muted mt-1 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Dato puntuale su Genzano di Roma: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> su dati del servizio europeo <a href="https://atmosphere.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus CAMS<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (griglia di circa 11 km). Indicativo.</p>
 
-  <h3 class="dash-aria-h3">Previsione regionale <span class="dash-aria-nota">(mappe ufficiali ARPA Lazio — modello CHIMERE)</span></h3>
+  <h3 class="dash-aria-h3">Previsione regionale <span class="dash-aria-nota">(mappe ufficiali ARPA Lazio — modello FARM)</span></h3>
   <div class="dash-sisma-toolbar" role="group" aria-label="Mappa di previsione regionale della qualità dell'aria">
     <span class="dash-sisma-grp" role="group" aria-label="Inquinante">
       <button type="button" class="dash-pill" data-inq="mean_pm10" aria-pressed="true">PM10</button>
       <button type="button" class="dash-pill" data-inq="max_no2" aria-pressed="false">NO₂</button>
       <button type="button" class="dash-pill" data-inq="max8hr_o3" aria-pressed="false">Ozono</button>
-      <button type="button" class="dash-pill" data-inq="mean_dust" aria-pressed="false">Polveri sahariane</button>
+      <button type="button" class="dash-pill" data-inq="mean_dust" aria-pressed="false">Polveri del deserto</button>
     </span>
     <span class="dash-sisma-grp" role="group" aria-label="Giorno previsto">
       <button type="button" class="dash-pill" data-h="0" aria-pressed="true">Oggi</button>
@@ -51,12 +51,12 @@
     <img id="arpa-map" src="" alt="Mappa di previsione della qualità dell'aria nel Lazio (ARPA Lazio)" loading="lazy" width="900" height="700">
     <figcaption class="dash-aria-nota mt-1" id="arpa-cap"></figcaption>
   </figure>
-  <p class="small text-muted mt-1 mb-0">Mappe di previsione: <a href="https://qa.arpalazio.net/" target="_blank" rel="noopener noreferrer">ARPA Lazio — Qualità dell'aria</a> (modello CHIMERE). La legenda dei colori è riportata sulla mappa. Per le soglie sanitarie ufficiali e i dati delle centraline vedi il <a href="https://qa.arpalazio.net/" target="_blank" rel="noopener noreferrer">portale ARPA Lazio</a>.</p>
+  <p class="small text-muted mt-1 mb-0">Mappe di previsione: <a href="https://qa.arpalazio.net/" target="_blank" rel="noopener noreferrer">ARPA Lazio — Qualità dell'aria<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (modello FARM). Legenda, unità di misura e giorno della previsione sono scritti sulla mappa: «Oggi» è il primo giorno dell'ultima previsione pubblicata, e la data esatta è quella scritta sulla mappa. Per le soglie sanitarie ufficiali e i dati delle centraline vedi il <a href="https://qa.arpalazio.net/" target="_blank" rel="noopener noreferrer">portale ARPA Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.</p>
 
   <script>
   (function(){
     var inq='mean_pm10', h='0';
-    var lab={mean_pm10:'PM10 (media giornaliera)',max_no2:'biossido d’azoto NO₂ (massimo orario)',max8hr_o3:'ozono O₃ (massimo della media su 8 ore)',mean_dust:'polveri sahariane (media)'};
+    var lab={mean_pm10:'PM10 (media giornaliera)',max_no2:'biossido d’azoto NO₂ (massimo orario)',max8hr_o3:'ozono O₃ (massimo della media su 8 ore)',mean_dust:'polveri del deserto (media giornaliera)'};
     var giorno={'0':'oggi','24':'domani','48':'tra 2 giorni','72':'tra 3 giorni','96':'tra 4 giorni'};
     var img=document.getElementById('arpa-map'), cap=document.getElementById('arpa-cap');
     function upd(){
@@ -64,7 +64,7 @@
       img.src='https://qa.arpalazio.net/img/qa/forecast/LAZIO/plots/'+inq+'_'+h+'.gif?_='+bust;
       var testo=lab[inq]+' — '+giorno[h];
       img.alt='Mappa di previsione ARPA Lazio della qualità dell’aria nel Lazio: '+testo;
-      cap.textContent='Previsione '+testo+' per il Lazio (mappa ufficiale ARPA Lazio).';
+      cap.textContent='Previsione '+testo+' per il Lazio (mappa ufficiale ARPA Lazio): la data esatta è scritta sulla mappa.';
     }
     document.querySelectorAll('.dash-pill[data-inq]').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.dash-pill[data-inq]').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');inq=b.dataset.inq;upd();});});
     document.querySelectorAll('.dash-pill[data-h]').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.dash-pill[data-h]').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');h=b.dataset.h;upd();});});
@@ -78,11 +78,11 @@
     function aqiInfo(v){
       if(v==null)return['#9aa7b4','non disponibile'];
       if(v<=20)return['#2ecc71','Buona'];
-      if(v<=40)return['#a8e05f','Discreta'];
+      if(v<=40)return['#a8e05f','Abbastanza buona'];
       if(v<=60)return['#f7e359','Moderata'];
       if(v<=80)return['#f5a623','Scarsa'];
-      if(v<=100)return['#e8412b','Scadente'];
-      return['#7f1d1d','Pessima'];
+      if(v<=100)return['#e8412b','Molto scarsa'];
+      return['#7f1d1d','Estremamente scarsa'];
     }
     function set(id,v,suf){ var e=document.getElementById(id); if(e) e.textContent=(v==null?'n.d.':Math.round(v)+(suf||'')); }
     function mostra(j){
@@ -92,14 +92,18 @@
         document.getElementById('aria-aqi').textContent=(c.european_aqi==null?'n.d.':Math.round(c.european_aqi));
         document.getElementById('aria-aqilab').textContent='Qualità dell’aria: '+info[1]+' (indice europeo AQI)';
         hero.style.borderColor=info[0];
-        document.getElementById('aria-aqi').style.color=info[0];
         set('aria-pm10',c.pm10); set('aria-pm25',c.pm2_5); set('aria-o3',c.ozone); set('aria-no2',c.nitrogen_dioxide);
         set('pol-grass',c.grass_pollen); set('pol-olive',c.olive_pollen); set('pol-ragweed',c.ragweed_pollen); set('pol-birch',c.birch_pollen);
-        var t=c.time?new Date(c.time):new Date();
-        document.getElementById('aria-stato').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
+        // con timezone=Europe/Rome il campo time è già in ora italiana (senza fuso)
+        var ora=(typeof c.time==='string' && c.time.length>=16) ? c.time.slice(11,16) : '';
+        document.getElementById('aria-stato').textContent = ora ? ('Valori delle ore '+ora+', ora italiana.') : '';
     }
     function carica(){
-      fetch(API).then(function(r){return r.json();}).then(function(j){
+      fetch(API).then(function(r){
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        return r.json();
+      }).then(function(j){
+        if(!j || !j.current) throw new Error('risposta senza valori attuali');
         mostra(j);
         if(window.pcCache) pcCache.salva('aria', j);
       }).catch(function(){

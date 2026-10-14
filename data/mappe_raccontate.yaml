@@ -1,0 +1,282 @@
+# Le schede del cruscotto spiegate a parole (proposta 64 della roadmap, «Mappe
+# raccontate», 14/10/2026).
+#
+# Una voce per ogni scheda di /cruscotto/, con la stessa chiave del pannello
+# (#panel-<chiave>). Lo shortcode «mappa-raccontata» la mostra sotto la scheda, in un
+# riquadro che si apre, e per intero nella pagina /cruscotto/mappe-raccontate/, che si
+# può anche ascoltare. Servono a chi non vede la mappa e a chi non la sa leggere
+# (WCAG 1.1.1 e 1.4.1: l'informazione non passa solo dall'immagine e dal colore).
+#
+# Regole per chi modifica:
+#   - si descrive ciò che la scheda fa davvero (il suo shortcode) e ciò che dice la
+#     fonte, mai a memoria; niente valori del giorno, che la scheda mostra già;
+#   - se cambia una scheda (colori, fonte, pulsanti, frequenza di aggiornamento), si
+#     aggiorna la sua voce nella stessa modifica. scripts/check-mappe-raccontate.py
+#     controlla che ogni scheda abbia la sua voce, il riquadro e il titolo nella
+#     pagina; il contenuto lo controlla chi modifica;
+#   - frasi brevi, «tu» al cittadino, nessuna sigla senza spiegazione. I campi
+#     accettano il Markdown in linea (grassetto, link).
+#
+# Verifica del 14/10/2026: ogni affermazione confrontata con il codice della scheda e,
+# per i fatti esterni, con la fonte primaria (cataloghi ItaliaMeteo e MeteoHub,
+# INGV e Dipartimento sui Colli Albani, FAQ NASA FIRMS, pagina italiana dell'Agenzia
+# europea dell'ambiente sull'indice della qualità dell'aria, documentazione Radar-DPC).
+#
+# Campi: titolo (come sulla scheda), in_breve, mostra, colori (elenco), aggiornamento,
+# limiti (elenco, «Che cosa non dice»), fonte.
+
+schede:
+
+  terremoti:
+    titolo: "Terremoti"
+    in_breve: "La mappa e la tabella mostrano i terremoti registrati dall'INGV negli ultimi 7 giorni, o nelle ultime 24 ore, in Italia o nei Castelli Romani."
+    mostra: "Ogni cerchio è un terremoto, nel punto dell'epicentro. Con i pulsanti scegli il periodo, la magnitudo minima e la zona: tutta l'Italia oppure i Castelli Romani, un riquadro di circa 44 per 50 km attorno a Genzano. «tutti» vuol dire dalla magnitudo 1,5 in su. Sopra la mappa ci sono quattro numeri: quanti terremoti, la magnitudo più alta, quanti hanno magnitudo 3 o più e quanto tempo fa è avvenuto l'ultimo. Sotto, la tabella mostra 30 terremoti con ora italiana, magnitudo, zona, profondità e distanza da Genzano: all'inizio i più recenti. Toccando un'intestazione li riordini e le 30 righe cambiano: con «Magnitudo», per esempio, diventano le 30 scosse più forti. Toccando una riga si apre la scheda completa di quel terremoto."
+    colori:
+      - "Il colore del cerchio dice la magnitudo: grigio sotto 2, giallo da 2 a 3, arancione da 3 a 4, rosso da 4 a 5, rosso scuro da 5 in su."
+      - "Più il cerchio è grande, più la magnitudo è alta."
+      - "La stella blu è Genzano di Roma."
+    aggiornamento: "La scheda rilegge i dati dell'INGV ogni 5 minuti e a ogni cambio di filtro; accanto ai pulsanti c'è l'ora dell'ultima lettura. Se il servizio non risponde, compare l'ultimo elenco letto su questo dispositivo con gli stessi filtri, se ha meno di 48 ore, con la data di quella lettura."
+    limiti:
+      - "La magnitudo misura l'energia liberata dal terremoto, non i suoi effetti: la scheda non dice se a Genzano la scossa si è sentita né se ha fatto danni."
+      - "La distanza da Genzano è in linea d'aria fino all'epicentro: non tiene conto della profondità."
+      - "La mappa racconta i terremoti già avvenuti: oggi nessuno sa prevedere dove, quando e con quale forza arriverà un terremoto."
+    fonte: "INGV, Istituto Nazionale di Geofisica e Vulcanologia: servizio dati aperti FDSN, licenza CC BY 4.0."
+
+  vulcani:
+    titolo: "Vulcani"
+    in_breve: "Quattro numeri sui terremoti degli ultimi 30 giorni nell'area dei Colli Albani, il vulcano su cui sorge Genzano. È un vulcano quiescente: non è in eruzione, ma non è spento."
+    mostra: "La scheda non ha una mappa. Conta i terremoti registrati dall'INGV negli ultimi 30 giorni in un riquadro di circa 28 per 29 km attorno ai laghi Albano e di Nemi, comprese le microscosse con magnitudo sotto lo zero. I numeri sono quattro: quanti terremoti, la magnitudo più alta, quanto tempo fa è avvenuto l'ultimo e la profondità tipica. La profondità tipica è la mediana: metà delle scosse è avvenuta più in alto, metà più in basso."
+    colori:
+      - "La scheda non usa colori: i valori sono scritti in cifre."
+    aggiornamento: "La scheda rilegge i dati ogni 10 minuti; sotto i numeri c'è l'ora dell'ultima lettura."
+    limiti:
+      - "Non dice in che stato è il vulcano: mostra solo i terremoti, mentre la Sezione di Roma dell'INGV lo sorveglia anche con le misure dei movimenti del suolo e con campionamenti periodici di acque e gas."
+      - "Il Dipartimento della Protezione Civile descrive questo vulcano con sciami sismici, movimenti del suolo ed emissioni di gas: la sismicità fa parte del suo comportamento abituale. Che cosa significano questi numeri lo valutano l'INGV e il Dipartimento, non la scheda."
+      - "Non misura i gas che escono dal suolo, come l'anidride carbonica e l'idrogeno solforato: secondo l'INGV e il Dipartimento sono il pericolo principale legato a questo vulcano. L'anidride carbonica è più pesante dell'aria e, senza vento, può ristagnare vicino al suolo."
+      - "I numeri non coincidono con la vista Castelli Romani della scheda Terremoti: qui il riquadro è più piccolo, il periodo è di 30 giorni e contano anche le scosse più deboli."
+    fonte: "INGV, servizio dati aperti FDSN, licenza CC BY 4.0; descrizione del vulcano dalle pagine dell'INGV e del Dipartimento della Protezione Civile."
+
+  radar:
+    titolo: "Radar pioggia"
+    in_breve: "L'ultima immagine della pioggia vista dalla rete radar nazionale del Dipartimento della Protezione Civile."
+    mostra: "Con il primo pulsante, «Pioggia al suolo (SRI)», vedi l'intensità della pioggia al suolo, che il Dipartimento stima mettendo insieme radar e pluviometri. Con il secondo, «Eco radar più forte (VMI)», vedi l'eco più forte che il radar riceve sopra ogni punto, a qualsiasi altezza: può segnalare un temporale intenso, ma non dice quanta pioggia arriva a terra. È un'immagine sola, la più recente: l'animazione è sul radar ufficiale del Dipartimento. La stella gialla è Genzano di Roma."
+    colori:
+      - "La barra sotto la mappa riprende quella del radar ufficiale. Per la pioggia al suolo va dall'azzurro chiaro (debole) al verde, al giallo, all'arancione e al rosso, fino al viola (molto forte)."
+      - "Per l'eco più forte va dall'azzurro (debole) al verde, al giallo e all'arancione, fino al rosso (molto forte)."
+      - "La fonte non dà valori numerici, solo cinque gradi da «debole» a «molto forte». La pioggia al suolo si misura in millimetri all'ora: 1 mm di pioggia è 1 litro d'acqua su ogni metro quadrato. L'eco radar si misura in dBZ."
+      - "Dove il radar non vede pioggia resta un leggero velo, che segna l'area coperta dai radar."
+    aggiornamento: "Il Dipartimento pubblica un nuovo rilevamento ogni 5 minuti e la scheda lo ricarica con lo stesso ritmo. Accanto ai pulsanti c'è l'ora del rilevamento: se ha più di 15 minuti, la scheda lo segnala."
+    limiti:
+      - "Non dice quanta pioggia è caduta in tutto: mostra l'intensità nel momento del rilevamento."
+      - "Il radar può mostrare anche echi che non sono pioggia, per esempio ai bordi della zona coperta."
+      - "Non dice se c'è un'allerta: per Genzano valgono i bollettini del Centro Funzionale Regionale del Lazio, nella scheda Allerta."
+    fonte: "Dipartimento della Protezione Civile, piattaforma Radar-DPC, dati aperti con licenza CC BY-SA."
+
+  radar-im:
+    titolo: "Radar ItaliaMeteo"
+    in_breve: "L'ultima immagine dell'intensità della pioggia al suolo, elaborata dall'Agenzia ItaliaMeteo con i radar della rete nazionale del Dipartimento della Protezione Civile."
+    mostra: "La mappa mostra il prodotto SRI, cioè l'intensità della pioggia stimata al suolo, nell'ultimo rilevamento pubblicato dall'Agenzia. È un confronto utile con il radar del Dipartimento, nella scheda Radar pioggia. La stella gialla è Genzano di Roma."
+    colori:
+      - "Sotto la mappa c'è la scala con i valori, in millimetri all'ora: 1 mm di pioggia è 1 litro d'acqua su ogni metro quadrato. Le tracce di pioggia, sotto 0,1 mm all'ora, sono un grigio semitrasparente."
+      - "Poi i colori vanno dall'azzurro e dal verde della pioggia debole al giallo e all'arancione, fino al rosso, al fucsia e al viola delle intensità più alte, oltre i 75 mm all'ora."
+    aggiornamento: "L'Agenzia pubblica un nuovo rilevamento ogni 5 minuti e la scheda lo chiede con lo stesso ritmo, quando è aperta. Accanto ai pulsanti c'è l'ora del rilevamento: se ha più di mezz'ora, la scheda avverte che il dato è in ritardo."
+    limiti:
+      - "Non dice quanta pioggia è caduta in tutto: mostra l'intensità di quell'istante."
+      - "È una stima fatta con i radar: le misure delle stazioni a terra sono nella scheda Osservazioni ItaliaMeteo."
+      - "Non dice se c'è un'allerta: per Genzano valgono i bollettini del Centro Funzionale Regionale del Lazio."
+    fonte: "Agenzia nazionale per la meteorologia e climatologia ItaliaMeteo, piattaforma MeteoHub, licenza CC BY-SA."
+
+  satellite:
+    titolo: "Satellite (EUMETSAT)"
+    in_breve: "Le immagini da satellite dell'Italia: nuvole quasi in tempo reale, foto del suolo, pioggia stimata, luci notturne, radar e mappe tematiche."
+    mostra: "Si vede un livello alla volta, scelto con i pulsanti. «Nuvole · colore» e «Alta risoluzione» sono le immagini del satellite Meteosat: la prima a colori, di giorno e di notte, la seconda in bianco e nero e solo di giorno. «Sentinel-3» è il mosaico a colori naturali più recente; sotto la mappa compaiono i passaggi del satellite su Genzano, il prossimo passaggio, il confronto «prima e dopo» fra due giorni a scelta e, quando ci sono, alcune misure del satellite, come la temperatura della superficie a Genzano e i fuochi attivi nel Lazio. «Suolo» è l'immagine della NASA, di solito di due giorni prima. «Pioggia da satellite» è la pioggia stimata dallo spazio, anche dove i radar non arrivano. «Luci notturne» mostra le luci delle città viste di notte. «Radar Sentinel-1» è un'immagine radar di 30 km attorno a Genzano: il radar del satellite vede il suolo anche di notte e sotto le nuvole, e non misura la pioggia; il pulsante «Mostra i cambiamenti» lo confronta con il passaggio precedente. «Sentinel-2» mostra da vicino 16 km attorno a Genzano, con cinque viste: colori naturali, vegetazione, acqua, aree bruciate e cambiamenti. La seconda fila apre le mappe tematiche: alluvioni, neve, umidità e temperatura del suolo, vegetazione, polveri e fumo."
+    colori:
+      - "Nelle immagini a colori naturali le nuvole sono bianche e il suolo ha i suoi colori; nel bianco e nero le nuvole sono chiare."
+      - "Per la pioggia da satellite e per le mappe tematiche la scala dei colori, con i valori, compare sotto la mappa. La pioggia, per esempio, va dal verde (0,1 mm all'ora) al giallo, all'arancione e al rosso, fino al rosso scurissimo oltre i 53 mm all'ora; dove il satellite stima neve, la scala va dall'azzurro al viola."
+      - "Nei riquadri Sentinel-2 e radar ogni colore delle mappe dei cambiamenti è spiegato nella legenda sotto la mappa."
+      - "La stella gialla è Genzano di Roma."
+    aggiornamento: "Le nuvole di Meteosat mostrano il cielo di 20-30 minuti prima e la scheda le ricarica ogni 5 minuti. Il mosaico Sentinel-3 si compone con i passaggi del mattino: le zone non ancora sorvolate restano vuote. L'immagine «Suolo» è di solito di due giorni prima. La pioggia da satellite arriva con alcune ore di ritardo, circa 4 secondo la NASA. Le scene Sentinel-2 cambiano a ogni nuovo passaggio non troppo nuvoloso, quelle radar a ogni nuovo passaggio del satellite: la data è scritta accanto ai pulsanti."
+    limiti:
+      - "Le immagini delle nuvole non dicono quanto piove a terra. La pioggia da satellite è solo una stima, su celle di circa 10 km, con ore di ritardo e meno dettagli del radar."
+      - "Gli indici di vegetazione, acqua e aree bruciate sono calcolati dal Gruppo sulla luce che il suolo riflette, anche quella che l'occhio non vede. Come le mappe dei cambiamenti, sono indizi da verificare sul posto, non certezze: il verde cala anche per un taglio o un raccolto."
+      - "La temperatura del suolo è quella della superficie vista dal satellite, non quella dell'aria; polveri e fumo sono stimati su tutta l'altezza dell'aria, non solo vicino al suolo."
+      - "Un punto caldo o un'area scura non sono per forza un incendio o un blackout: le nuvole coprono il suolo e le luci."
+      - "Non è un sistema di allarme: un incendio o un allagamento si segnalano al 112."
+    fonte: "EUMETSAT; programma europeo Copernicus (Sentinel-1, 2 e 3); NASA (GIBS e GPM IMERG); elaborazioni del Gruppo sulle scene Copernicus."
+
+  satellite-im:
+    titolo: "Satellite ItaliaMeteo"
+    in_breve: "Le immagini delle nuvole dei satelliti Meteosat, lette direttamente da EUMETSAT, l'organizzazione europea dei satelliti meteorologici."
+    mostra: "Due pulsanti scelgono l'immagine e «Aggiorna» la ricarica. «Nuvole · colore» è l'immagine a colori di circa 1 km, di giorno e di notte. «Alta risoluzione» è il canale visibile a 500 m, in bianco e nero, che funziona solo di giorno. La stella gialla è Genzano di Roma."
+    colori:
+      - "Nell'immagine a colori, di giorno, le nuvole sono bianche e il suolo ha i suoi colori naturali; di notte le nuvole sono ricavate dall'infrarosso e sullo sfondo compaiono le luci delle città."
+      - "Nel bianco e nero le nuvole sono chiare e il mare è scuro; di notte l'immagine è tutta scura."
+    aggiornamento: "Meteosat scatta una nuova immagine ogni 10 minuti. La scheda mostra quella di 20-30 minuti prima, l'ultima sicuramente pronta, e la ricarica ogni 5 minuti, oppure quando premi «Aggiorna». L'ora dell'immagine è scritta accanto ai pulsanti."
+    limiti:
+      - "Il satellite vede le nuvole dall'alto: non dice se e quanto piove a Genzano."
+      - "Non è una previsione: mostra il cielo di 20-30 minuti prima."
+    fonte: "EUMETSAT, satelliti Meteosat di terza generazione."
+
+  meteo:
+    titolo: "Meteo"
+    in_breve: "La cartina del Lazio con la temperatura massima e il cielo previsti oggi, e il riquadro con i dati di Genzano."
+    mostra: "Ogni provincia è colorata con la temperatura massima prevista oggi nel suo capoluogo; l'etichetta riporta massima, minima e un'icona del cielo. Il punto dorato collegato al riquadro blu è Genzano di Roma. Sotto la cartina gli stessi valori sono scritti a parole. Il riquadro di Genzano riporta temperatura e temperatura percepita, cioè come si sentono il caldo o il freddo tenendo conto di vento, umidità e sole; poi umidità, vento, raffiche, indice UV, alba, tramonto e la previsione di oggi e dei tre giorni successivi."
+    colori:
+      - "Il colore della provincia va dal blu del freddo al verde, al giallo, all'arancione e al rosso del caldo, su una scala da −6 a 42 °C."
+      - "Le icone del cielo sono: sole, sole con nuvola, nuvola grigia, nuvola con gocce per la pioggia, nuvola con fiocchi per la neve, nuvola con fulmine per il temporale, linee grigie per la nebbia."
+    aggiornamento: "La cartina e il riquadro si rigenerano ogni ora; l'ora dell'aggiornamento è scritta nel riquadro."
+    limiti:
+      - "Il colore di ogni provincia viene da un solo punto, il capoluogo: per la provincia di Roma è il centro di Roma, non Genzano. I valori di Genzano sono nel riquadro."
+      - "Sono valori previsti da modelli meteorologici, non misurati da una stazione: le misure sono nella scheda Osservazioni ItaliaMeteo."
+      - "Non dice se c'è un'allerta: per Genzano valgono i bollettini del Centro Funzionale Regionale del Lazio."
+    fonte: "Elaborazione del Gruppo su dati aperti Open-Meteo."
+
+  previsioni-im:
+    titolo: "Previsioni ItaliaMeteo"
+    in_breve: "Le cartine di previsione del modello ICON-2I dell'Agenzia ItaliaMeteo: otto grandezze, dall'ora attuale fino a due giorni avanti."
+    mostra: "Scegli una grandezza: temperatura, precipitazione o neve previste nelle 3 ore che finiscono all'ora indicata, raffiche di vento, nuvolosità, umidità, pressione al livello del mare, quota dello zero termico. Lo zero termico è la quota a cui l'aria arriva a 0 °C: più in alto è sotto zero. Poi scegli l'ora: «Adesso» è l'ora di previsione più vicina a quella attuale, poi tra 12, 24 e 48 ore. Accanto ai pulsanti c'è scritto per quale giorno e ora vale la cartina. Il modello calcola il tempo su celle di circa 2 km. La stella gialla è Genzano di Roma."
+    colori:
+      - "Sotto la mappa c'è la scala della grandezza scelta, con i valori e l'unità di misura: gradi per la temperatura, millimetri per la precipitazione, chilometri all'ora per le raffiche, metri per lo zero termico. La neve è in millimetri d'acqua: in media 1 mm d'acqua fa circa 1 cm di neve fresca, ma dipende dal tipo di neve."
+      - "Per precipitazione, neve e nuvolosità i valori più bassi non hanno colore: dove la mappa resta trasparente, il valore previsto è sotto la soglia scritta vicino alla scala."
+      - "La temperatura va dal viola e dal blu del freddo al verde, al giallo, all'arancione e al rosso del caldo; oltre i 32 °C il rosso diventa molto scuro e, oltre i 36 °C, schiarisce verso il rosa."
+    aggiornamento: "Il modello riparte due volte al giorno, dai dati delle 00 e delle 12 UTC, e ogni corsa copre le 72 ore successive; le cartine nuove arrivano qualche ora dopo. La scheda sceglie da sola l'ora disponibile più vicina a quella chiesta e scrive da che ora a che ora arrivano le cartine."
+    limiti:
+      - "È la previsione di un modello, non un bollettino: per le allerte valgono quelli del Centro Funzionale Regionale del Lazio."
+      - "Le celle sono di circa 2 km: le differenze fra un quartiere e l'altro non si vedono."
+      - "Precipitazione e neve sono quelle previste nelle 3 ore che finiscono all'ora indicata, non il totale della giornata."
+    fonte: "Agenzia ItaliaMeteo, modello ICON-2I, piattaforma MeteoHub, licenza CC BY."
+
+  ecmwf:
+    titolo: "Meteo Europa (ECMWF)"
+    in_breve: "Quattro carte del Centro europeo per le previsioni meteorologiche con il quadro del tempo sull'Europa a circa tre giorni."
+    mostra: "Le carte sono quattro: pressione e vento, temperatura e vento, tipo di precipitazione, temporali. Ognuna vale per un solo istante, scritto sotto la carta in ora italiana e in ora UTC. Sono il quadro generale: servono a vedere dove sono le alte e le basse pressioni e da dove arrivano le correnti, non il tempo di Genzano."
+    colori:
+      - "Pressione e vento: le linee nere uniscono i punti con la stessa pressione, in ettopascal; i colori sono la velocità del vento a circa 1.500 metri di quota, in metri al secondo (1 metro al secondo è 3,6 km all'ora)."
+      - "Temperatura e vento: i colori sono la temperatura a 2 metri dal suolo, in gradi; le frecce sono il vento a 30 metri, in nodi (1 nodo è circa 1,85 km all'ora)."
+      - "Precipitazioni: i colori dicono il tipo di precipitazione prevista, non la quantità: pioggia, neve, neve bagnata, pioggia mista a neve, gelicidio, cioè pioggia che gela al suolo, e granuli di ghiaccio."
+      - "Temporali: i colori sono l'energia disponibile per i temporali, in joule per chilogrammo. Più è alta, più l'aria è instabile, ma non vuol dire che il temporale arrivi. La carta mostra anche l'inibizione, il «freno» che rende più difficile la nascita dei temporali."
+      - "Le scritte e le legende dentro le carte sono in inglese, come le pubblica la fonte."
+    aggiornamento: "Il sito controlla le carte quattro volte al giorno, ma cambiano solo quando il Centro europeo pubblica una nuova corsa del modello. Sotto le carte c'è scritto da quale corsa vengono."
+    limiti:
+      - "Genzano non è segnata: è una carta di tutta l'Europa. Per la previsione locale ci sono le schede Meteo e Previsioni ItaliaMeteo."
+      - "Ogni carta mostra un solo istante: quello che succede prima e dopo non si vede."
+      - "Non dice se c'è un'allerta: per Genzano valgono i bollettini del Centro Funzionale Regionale del Lazio."
+    fonte: "ECMWF, Centro europeo per le previsioni meteorologiche a medio termine, OpenCharts, licenza CC BY 4.0."
+
+  obs-im:
+    titolo: "Osservazioni ItaliaMeteo"
+    in_breve: "Le misure delle stazioni meteo a terra delle reti regionali, raccolte dall'Agenzia ItaliaMeteo: temperatura dell'aria, umidità, vento e pioggia."
+    mostra: "Ogni punto è una stazione e il suo colore è l'ultimo valore misurato nelle ultime tre ore circa. Scegli la grandezza con i pulsanti: temperatura, umidità, velocità del vento, pioggia caduta nell'ultima ora. Toccando un punto leggi il nome della stazione, il valore e l'ora della misura. Ci sono solo le stazioni con licenza aperta."
+    colori:
+      - "La legenda in basso a destra della mappa cambia con la grandezza scelta."
+      - "Temperatura: dal blu scuro, sotto 0 °C, ai blu più chiari fino a 15 °C, poi giallo chiaro, arancione e rosso, fino al rosso scuro oltre i 35 °C."
+      - "Umidità: dal rosso dell'aria secca, sotto il 30%, all'arancione e al giallo, fino ai blu dell'aria quasi satura, oltre il 95%."
+      - "Vento: dal giallo chiaro della calma, sotto 5 km/h, al verde, all'arancione e al rosso, oltre i 70 km/h."
+      - "Pioggia: dall'azzurro chiarissimo di nessuna pioggia o di tracce, fino a 0,2 mm, ai blu sempre più scuri, fino al viola oltre i 15 mm in un'ora. 1 mm di pioggia è 1 litro d'acqua su ogni metro quadrato."
+      - "Lo stesso colore vuol dire cose diverse a seconda della grandezza: il rosso, per esempio, è il caldo, l'aria secca o il vento forte."
+    aggiornamento: "La scheda rilegge i dati ogni 30 minuti, oppure quando premi «Aggiorna». Accanto ai pulsanti c'è l'ora della misura più recente, in ora italiana; alcune stazioni possono avere dati più vecchi."
+    limiti:
+      - "Non c'è un valore unico per Genzano: tocca i punti più vicini per leggere le misure della zona."
+      - "Il vento è la velocità misurata, non la raffica più forte."
+      - "Sono dati in tempo reale: un valore molto diverso da quelli vicini può essere un guasto della stazione, ma anche un fenomeno locale vero, come un temporale."
+    fonte: "Agenzia ItaliaMeteo, piattaforma MeteoHub, stazioni delle reti regionali con licenza CC BY."
+
+  allerta:
+    titolo: "Allerta"
+    in_breve: "Il livello di allerta di oggi per Genzano di Roma, letto dai bollettini ufficiali di criticità idrogeologica, idraulica e per temporali."
+    mostra: "Il riquadro dice il livello di oggi, la descrizione dei fenomeni previsti e, se c'è, l'allerta di domani. Il livello è il più alto previsto per Genzano fra rischio idrogeologico, idraulico e per temporali, nella zona di allerta F, Bacini Costieri Sud. Sotto ci sono l'ora della verifica e il pulsante per aprire il bollettino ufficiale."
+    colori:
+      - "Verde: nessuna allerta. Non sono previsti fenomeni significativi, ma un temporale locale e improvviso resta possibile."
+      - "Giallo: allerta gialla, criticità ordinaria."
+      - "Arancione: allerta arancione, criticità moderata."
+      - "Rosso: allerta rossa, criticità elevata."
+      - "Il livello è sempre scritto anche a parole. L'icona è uno scudo con la spunta per il verde, un triangolo di pericolo per il giallo e per l'arancione, un ottagono per il rosso."
+    aggiornamento: "Un controllo automatico legge i bollettini più volte all'ora e, se il livello cambia, aggiorna subito il sito. L'ora accanto a «Verificato» è quella dell'ultima verifica registrata: il sito la riscrive circa ogni 6 ore, oppure subito se il livello cambia. Se ha più di 12 ore, il riquadro avverte che il dato potrebbe non essere quello in vigore."
+    limiti:
+      - "Riguarda solo la criticità idrogeologica, idraulica e per temporali. Gli avvisi per vento, neve, caldo, gelo e mareggiate e il rischio di incendi boschivi compaiono nelle barre in cima alla homepage."
+      - "Non dice che cosa fare: le azioni per ogni livello sono nella pagina [Allerte meteo](/allerte-meteo/)."
+      - "Fa fede il bollettino ufficiale del Centro Funzionale Regionale del Lazio: in caso di dubbio, aprilo con il pulsante."
+    fonte: "Centro Funzionale Regionale del Lazio e Dipartimento della Protezione Civile, bollettini di criticità."
+
+  incendi:
+    titolo: "Incendi"
+    in_breve: "I punti caldi rilevati dai satelliti negli ultimi 7 giorni, che possono indicare incendi in corso o appena spenti."
+    mostra: "Ogni simbolo è un'anomalia di calore vista dai sensori MODIS e VIIRS: ogni satellite passa in genere due volte al giorno. Lo sfondo è una foto da satellite; con il pulsante passi alla mappa stradale. La stella gialla è Genzano di Roma."
+    colori:
+      - "Il colore dice quando è stato rilevato il punto: viola nelle ultime 6 ore, rosa fra 6 e 12 ore prima, rosso fra 12 e 24 ore prima, arancione da 1 a 7 giorni prima."
+      - "La forma dice il satellite: i triangoli sono MODIS (punta in giù il satellite Aqua, punta in su Terra); quadrati, cerchi e rombi sono VIIRS, sui satelliti Suomi NPP, NOAA-20 e NOAA-21."
+    aggiornamento: "I punti arrivano qualche ora dopo il passaggio del satellite. La scheda rilegge la mappa ogni 10 minuti; accanto al pulsante c'è l'ora in cui è stata chiesta."
+    limiti:
+      - "Un punto caldo non è per forza un incendio di bosco: può essere una bruciatura nei campi, un impianto industriale, la fiamma di un pozzo di gas o un riflesso del sole. Un incendio piccolo, nascosto da nuvole o fumo, o nato e spento fra due passaggi del satellite può invece non comparire."
+      - "Non dice se l'incendio è ancora attivo né se è stato spento."
+      - "La mappa non avvisa nessuno: per segnalare un incendio chiama il 112."
+    fonte: "Copernicus, servizio europeo per la gestione delle emergenze: EFFIS e GWIS, sensori MODIS e VIIRS dei satelliti della NASA e della NOAA."
+
+  aria:
+    titolo: "Aria e pollini"
+    in_breve: "La qualità dell'aria e i pollini stimati per Genzano, e le mappe di previsione dell'ARPA Lazio per tutta la regione."
+    mostra: "In alto c'è l'indice europeo di qualità dell'aria per Genzano, con la sua fascia scritta a parole. Sotto ci sono le polveri sottili PM10 e PM2.5, l'ozono e il biossido di azoto, in microgrammi per metro cubo, e i pollini di graminacee, olivo, ambrosia e betulla, in grani per metro cubo. Più in basso c'è la mappa dell'ARPA Lazio con la previsione di un inquinante: con i pulsanti scegli quale e per che giorno."
+    colori:
+      - "L'indice europeo ha sei fasce: fino a 20 buona, fino a 40 abbastanza buona, fino a 60 moderata, fino a 80 scarsa, fino a 100 molto scarsa, oltre 100 estremamente scarsa. La fascia è scritta a parole; il colore del bordo del riquadro va dal verde al rosso scuro."
+      - "Inquinanti e pollini sono solo numeri, senza colori."
+      - "Nella mappa dell'ARPA Lazio la scala dei colori, con i valori, è disegnata sulla mappa stessa, in inglese; le zone con i valori più bassi restano bianche."
+    aggiornamento: "I valori di Genzano si rileggono ogni 30 minuti; sotto c'è l'ora a cui si riferiscono. Le mappe dell'ARPA Lazio escono una volta al giorno: «Oggi» è il primo giorno dell'ultima previsione pubblicata e la data esatta è scritta sulla mappa."
+    limiti:
+      - "I valori di Genzano sono stimati da un modello su celle di circa 11 km, non misurati da una centralina: le misure ufficiali sono sul portale dell'ARPA Lazio."
+      - "L'indice è una sintesi: dipende dall'inquinante peggiore e non coincide con i limiti di legge, che si controllano sulle misure delle centraline dell'ARPA Lazio."
+      - "I pollini si stimano solo nella stagione dei pollini: fuori stagione possono mancare."
+    fonte: "Open-Meteo su dati del servizio europeo Copernicus CAMS; ARPA Lazio, modello FARM."
+
+  aria-cams:
+    titolo: "Aria Europa (CAMS)"
+    in_breve: "Le mappe di previsione della qualità dell'aria in Europa del servizio Copernicus CAMS, dall'ora attuale a tre giorni avanti."
+    mostra: "Scegli l'inquinante: polveri sottili PM2.5 e PM10, ozono, biossido di azoto, biossido di zolfo, polveri del deserto. Poi scegli quando: «Ora» è la previsione per l'ora più vicina a quella attuale, poi tra 6, 24, 48 e 72 ore. Accanto ai pulsanti c'è scritto per quale giorno e ora vale la mappa. La stella gialla è Genzano di Roma."
+    colori:
+      - "Sotto la mappa c'è la legenda ufficiale, in microgrammi per metro cubo d'aria: va dall'azzurro dei valori bassi al rosso scuro dei più alti."
+      - "Le soglie cambiano con l'inquinante: per le polveri sottili la scala arriva a 500, per le polveri del deserto a 2.000."
+    aggiornamento: "Il servizio europeo pubblica una nuova previsione ogni giorno, ora per ora. Con «Ora» selezionato la scheda si riallinea da sola ogni 30 minuti."
+    limiti:
+      - "È una previsione per tutta l'Europa: i valori stimati per Genzano sono nella scheda Aria e pollini, le misure nelle centraline dell'ARPA Lazio."
+      - "Sono valori previsti da un modello, non misure: i limiti di legge si controllano sulle misure delle centraline dell'ARPA Lazio."
+    fonte: "Copernicus Atmosphere Monitoring Service (CAMS), servizio di mappe del Centro europeo ECMWF."
+
+  ems:
+    titolo: "Emergenze EU (EMS)"
+    in_breve: "Le attivazioni recenti del servizio europeo di mappatura delle emergenze, in Europa e nel mondo."
+    mostra: "Ogni voce è un'attivazione del servizio di mappatura rapida di Copernicus: il tipo di evento, i Paesi, la data, il numero di prodotti realizzati e il link alla pagina ufficiale. Con i pulsanti filtri per tipo di evento (incendi, alluvioni, tempeste, terremoti, altro) e scegli tutte le aree oppure solo l'Italia. Il sito tiene le ultime 50 attivazioni: i filtri lavorano su queste e l'elenco ne mostra al massimo 15, le più recenti."
+    colori:
+      - "La barra colorata a sinistra di ogni voce indica il tipo di evento: arancione scuro gli incendi, blu le alluvioni, viola le tempeste, ocra i terremoti, grigio gli altri. Il tipo è sempre scritto anche a parole."
+      - "«Aperta» vuol dire che l'attivazione non è ancora chiusa, non che l'evento sia ancora in corso."
+    aggiornamento: "Il sito ricopia l'elenco dal servizio europeo più volte all'ora e la scheda lo rilegge ogni ora."
+    limiti:
+      - "Non dice nulla su Genzano: sono emergenze in Europa e nel mondo per cui un ente ha chiesto le mappe."
+      - "Il servizio parte solo su richiesta di enti autorizzati: un evento senza richiesta non compare, anche se è grave."
+    fonte: "Copernicus Emergency Management Service, servizio di mappatura rapida."
+
+  mare:
+    titolo: "Mare"
+    in_breve: "Altezza, periodo e provenienza delle onde al largo di Anzio e Nettuno, sul litorale a sud di Roma, con lo stato del mare a parole."
+    mostra: "I valori sono quattro: l'altezza delle onde in metri, lo stato del mare, il periodo delle onde in secondi, cioè il tempo medio fra un'onda e la successiva, e la direzione da cui arrivano. Sono calcolati da un modello per l'ora in corso, non misurati da una boa; l'ora è scritta sotto, in ora italiana. L'altezza è quella «significativa», la media del terzo delle onde più alte."
+    colori:
+      - "La scheda non usa colori. Lo stato del mare è calcolato dal Gruppo con la scala Douglas: calmo, quasi calmo, poco mosso fino a 0,5 m, mosso fino a 1,25 m, molto mosso fino a 2,5 m, agitato fino a 4 m, poi molto agitato, grosso, molto grosso e tempestoso."
+      - "La direzione è uno degli otto punti cardinali (N, NE, E, SE, S, SO, O, NO) ed è quella da cui arrivano le onde."
+    aggiornamento: "La scheda rilegge i valori ogni 30 minuti."
+    limiti:
+      - "È il mare al largo di Anzio e Nettuno, non Genzano, che è nell'entroterra, a una ventina di chilometri dalla costa più vicina."
+      - "Vicino alla costa i modelli delle onde sono meno precisi: non è un dato adatto alla navigazione."
+      - "Per la balneazione e gli avvisi in mare valgono le fonti ufficiali; per le emergenze in mare chiama il 1530 della Guardia Costiera."
+    fonte: "Open-Meteo Marine, licenza CC BY 4.0; stato del mare calcolato dal Gruppo."
+
+  mare-im:
+    titolo: "Mare ItaliaMeteo"
+    in_breve: "Le cartine di previsione delle onde sui mari italiani del modello dell'Agenzia ItaliaMeteo."
+    mostra: "Scegli fra l'altezza delle onde e il loro periodo, e fra l'ora attuale e le previsioni tra 12, 24 e 48 ore. Accanto ai pulsanti c'è scritto per quale giorno e ora vale la cartina. La stella gialla è Genzano di Roma: il mare più vicino è a una ventina di chilometri, sul litorale fra Torvaianica e Anzio."
+    colori:
+      - "Sotto la mappa c'è la scala con i valori. L'altezza delle onde, in metri, va dall'azzurro del mare calmo al blu, al verde e al giallo, fino all'arancione, al rosso, al rosa e al viola delle onde più alte."
+      - "Sotto la scala dell'altezza c'è anche la scala Douglas: fino a 0,5 m mare poco mosso, fino a 1,25 m mosso, fino a 2,5 m molto mosso, fino a 4 m agitato; oltre i 4 m il mare è molto agitato, grosso o peggio."
+      - "Il periodo medio delle onde, in secondi, va dall'azzurro delle onde corte al verde e al giallo, fino al rosso e al viola di quelle più lunghe."
+    aggiornamento: "La scheda usa la corsa più recente pubblicata dall'Agenzia, sceglie da sola l'ora disponibile più vicina a quella chiesta e scrive da che giorno a che giorno arriva la previsione."
+    limiti:
+      - "L'altezza è quella «significativa», la media del terzo delle onde più alte: singole onde possono essere più alte."
+      - "È la previsione di un modello, non una misura: per la sicurezza in mare valgono gli avvisi della Guardia Costiera; per le emergenze in mare chiama il 1530."
+    fonte: "Agenzia ItaliaMeteo, modello delle onde WW3 MEDITA, piattaforma MeteoHub."

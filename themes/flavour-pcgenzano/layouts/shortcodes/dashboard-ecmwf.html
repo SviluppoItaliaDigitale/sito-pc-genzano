@@ -40,14 +40,14 @@
   <noscript><div class="alert alert-warning mt-2" role="note">Per cambiare carta serve JavaScript: tutte le carte sono comunque caricate qui sopra.</div></noscript>
 
   <p class="small text-muted mt-2 mb-0">
-    {{ partial "fonte-badge.html" "ufficiale" }}Previsioni europee a <strong>medio termine</strong> (quadro sinottico a circa <strong>3 giorni</strong>):
-    <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts</a>
+    {{ partial "fonte-badge.html" "ufficiale" }}Previsioni europee a <strong>medio termine</strong> (quadro sinottico a circa <strong>tre giorni</strong>; il giorno e l'ora esatti sono scritti sotto ogni carta):
+    <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>
     (Centro europeo per le previsioni meteo a medio termine), licenza <strong>CC BY 4.0</strong> —
     <em>based on data and products of the European Centre for Medium-Range Weather Forecasts (ECMWF)</em>.
-    {{ with .corsa }}Corsa del modello delle <strong>{{ . }}</strong>; aggiornamento automatico.{{ else }}Aggiornamento automatico.{{ end }}
+    {{ with .corsa }}Corsa del modello: <strong>{{ . }}</strong>; le carte si aggiornano da sole quando ne esce una nuova.{{ else }}Le carte si aggiornano da sole.{{ end }} Le scritte dentro le carte sono in inglese, come le pubblica la fonte.
     Sono il <strong>contesto sinottico</strong>, non il bollettino locale: per la previsione puntuale
     su Genzano vedi le schede <strong>Meteo</strong> e <strong>Previsioni ItaliaMeteo</strong>;
-    per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.
+    per le allerte vale il <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.
     Dato indicativo: in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
@@ -76,7 +76,7 @@
   {{ else }}
   <div class="alert alert-info" role="note">
     Le carte di previsione europee ECMWF sono in fase di prima generazione e compariranno qui al prossimo aggiornamento automatico.
-    Nel frattempo puoi consultarle sul portale ufficiale <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts</a>.
+    Nel frattempo puoi consultarle sul portale ufficiale <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.
   </div>
   {{ end }}
 </div>

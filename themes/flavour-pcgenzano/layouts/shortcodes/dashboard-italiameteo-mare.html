@@ -1,8 +1,11 @@
 {{/* Shortcode dashboard-italiameteo-mare — previsioni del mare ItaliaMeteo
      (modello d'onda WW3 MEDITA) come layer Leaflet WMS dal servizio pubblico
      maps.mistralportal.it. Fonte: Agenzia nazionale per la meteorologia e
-     climatologia «ItaliaMeteo» (CC BY 4.0). Privacy-first: solo immagini WMS,
-     nessun iframe, nessun cookie di terzi. Layer verificati il 25/05/2026. */}}
+     climatologia «ItaliaMeteo» (CC BY 4.0). Privacy-first: solo immagini WMS e
+     due letture di servizio (capabilities e stile), nessun iframe, nessun cookie.
+     Dal 14/10/2026 l'ora chiesta è sempre una di quelle pubblicate (pc-wms.js):
+     prima «Adesso» lasciava scegliere al server la prima ora della corsa, anche
+     di due giorni prima, e «+48 h» poteva cadere oltre la fine. */}}
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
@@ -10,7 +13,7 @@
   <h2 id="dimm-titolo" class="h3 mt-4 mb-3" style="color:#003366">
     <i class="bi bi-water me-2" aria-hidden="true"></i>Previsioni del mare ItaliaMeteo (onde)
   </h2>
-  <p class="mb-2">Altezza e periodo delle onde previsti dal modello <strong>WW3 MEDITA</strong> dell'<strong>Agenzia ItaliaMeteo</strong> per i mari italiani. Utile per la costa laziale. Sono dati <strong>indicativi</strong>: per la sicurezza in mare valgono gli avvisi della <a href="https://www.guardiacostiera.gov.it/" target="_blank" rel="noopener noreferrer">Guardia Costiera</a> (emergenze in mare: <strong>1530</strong>).</p>
+  <p class="mb-2">Altezza e periodo delle onde previsti dal modello <strong>WW3 MEDITA</strong> dell'<strong>Agenzia ItaliaMeteo</strong> per i mari italiani. Utile per la costa laziale. Sono dati <strong>indicativi</strong>: per la sicurezza in mare valgono gli avvisi della <a href="https://www.guardiacostiera.gov.it/" target="_blank" rel="noopener noreferrer">Guardia Costiera<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> (emergenze in mare: <strong>1530</strong>).</p>
 
   {{/* Leaflet una sola volta per pagina: il cruscotto monta nove schede con la mappa e
      fino al 14/09/2026 ognuna ripeteva link e script, dieci copie in una pagina sola.
@@ -30,16 +33,13 @@
   @media (max-width:575px){#dimm-mappa{height:460px}}
   .dimm-mappa-box{position:relative}
   .dimm-overlay{position:absolute;top:10px;left:12px;z-index:600;background:rgba(0,51,102,.85);color:#fff;padding:.3rem .6rem;border-radius:6px;font-size:.85rem;font-weight:700;pointer-events:none;max-width:70%}
-  .dimm-legenda{position:absolute;top:10px;right:12px;z-index:600;background:rgba(255,255,255,.92);border:1px solid #adb5bd;border-radius:6px;padding:.3rem;max-height:72%;display:flex}
-  .dimm-legenda img{max-height:100%;width:auto;height:auto}
-  @media (max-width:575px){.dimm-legenda{max-height:55%;top:auto;bottom:10px}}
   </style>
 
-  <div class="dimm-toolbar" role="group" aria-label="Grandezza del mare e periodo della previsione">
+  <div class="dimm-toolbar" role="group" aria-label="Grandezza del mare e ora della previsione">
     <button type="button" class="dimm-filter" data-layer="meteohub:ww3_hs-hs" aria-pressed="true">Altezza onde</button>
     <button type="button" class="dimm-filter" data-layer="meteohub:ww3_t01-t01" aria-pressed="false">Periodo onde</button>
     <span class="dimm-sep"></span>
-    <button type="button" class="dimm-filter dimm-time" data-off="" aria-pressed="true">Adesso</button>
+    <button type="button" class="dimm-filter dimm-time" data-off="0" aria-pressed="true">Adesso</button>
     <button type="button" class="dimm-filter dimm-time" data-off="12" aria-pressed="false">+12 h</button>
     <button type="button" class="dimm-filter dimm-time" data-off="24" aria-pressed="false">+24 h</button>
     <button type="button" class="dimm-filter dimm-time" data-off="48" aria-pressed="false">+48 h</button>
@@ -48,39 +48,44 @@
   </div>
 
   <div class="dimm-mappa-box">
-    <div id="dimm-mappa" role="application" aria-label="Cartina di previsione delle onde ItaliaMeteo, centrata sui mari italiani."></div>
+    <div id="dimm-mappa" role="application" aria-label="Cartina di previsione delle onde ItaliaMeteo, centrata sui mari italiani, con Genzano di Roma evidenziata."></div>
     <div class="dimm-overlay" id="dimm-prodotto-lbl" aria-hidden="true">Altezza onde</div>
-    <div class="dimm-legenda" aria-hidden="true"><img id="dimm-legenda-img" src="" alt=""></div>
   </div>
+  <div class="wms-legenda" id="dimm-legenda"></div>
+  <p class="wms-legenda-nota" id="dimm-intervallo"></p>
 
   <noscript>
     <div class="alert alert-warning mt-3" role="note">
       <strong>JavaScript disattivato:</strong> apri le previsioni del mare su
-      <a href="https://www.agenziaitaliameteo.it/mare/previsioni-mare/ww3-medita/" target="_blank" rel="noopener noreferrer">agenziaitaliameteo.it</a>.
+      <a href="https://www.agenziaitaliameteo.it/mare/previsioni-mare/ww3-medita/" target="_blank" rel="noopener noreferrer">agenziaitaliameteo.it<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.
     </div>
   </noscript>
 
-  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Modello d'onda <strong>WW3 MEDITA</strong>, aggiornato dall'Agenzia ItaliaMeteo. Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/marine" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>. Emergenze in mare: <a href="tel:1530">1530</a>.</p>
+  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Modello d'onda <strong>WW3 MEDITA</strong> dell'Agenzia ItaliaMeteo: sotto la cartina sono scritte le ore che la corsa più recente copre. Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/marine" target="_blank" rel="noopener noreferrer">MeteoHub<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0<span class="visually-hidden"> (si apre in una nuova finestra)</span></a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>. Emergenze in mare: <a href="tel:1530">1530</a>.</p>
 
   {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
+  {{ if not (.Page.Store.Get "pcWmsJs") }}{{ .Page.Store.Set "pcWmsJs" true }}<script src="{{ "js/pc-wms.js" | relURL }}?v={{ readFile "themes/flavour-pcgenzano/static/js/pc-wms.js" | hash.FNV32a }}"></script>{{ end }}
   <script>
   (function(){
-    if (typeof L === 'undefined') return;
+    if (typeof L === 'undefined' || !window.pcWms) return;
+    var W = window.pcWms;
     var WMS = 'https://maps.mistralportal.it/wms';
-    var layer = 'meteohub:ww3_hs-hs', timeOff = '', baseDark = false;
+    var CAPS = WMS + '?service=WMS&request=GetCapabilities&version=1.3.0';
+    var GENZANO = [41.7085, 12.6916];
+    // Altezza significativa (hs) in metri; t01 è il periodo medio Tm01 di
+    // WAVEWATCH III, in secondi. I confini dell'altezza scritti sotto la barra
+    // (0,1 · 0,5 · 1,25 · 2,5 · 4 · 6 · 9 · 14) sono quelli della scala Douglas.
+    var SCALE = {
+      'meteohub:ww3_hs-hs':   { titolo: 'Altezza significativa delle onde (metri)', unita: 'm', inizio: 0,
+        nota: 'Scala Douglas: fino a 0,5 m mare poco mosso, fino a 1,25 m mosso, fino a 2,5 m molto mosso, fino a 4 m agitato, oltre i 4 m molto agitato o peggio.' },
+      'meteohub:ww3_t01-t01': { titolo: 'Periodo medio delle onde (secondi)', unita: 's', dec: 0 }
+    };
+    var layer = 'meteohub:ww3_hs-hs', nome = 'Altezza onde', off = 0, baseDark = false, giro = 0;
     var stato = document.getElementById('dimm-stato');
     var prodLbl = document.getElementById('dimm-prodotto-lbl');
-    var legImg = document.getElementById('dimm-legenda-img');
-
-    function isoHour(off){
-      if (off === '' || off === null) return '';
-      var d = new Date(); d.setUTCMinutes(0,0,0);
-      d.setUTCHours(d.getUTCHours() + parseInt(off,10));
-      return d.toISOString();
-    }
-    function legendUrl(l){
-      return WMS + '?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer=' + encodeURIComponent(l);
-    }
+    var legEl = document.getElementById('dimm-legenda');
+    var interv = document.getElementById('dimm-intervallo');
+    var box = document.getElementById('dimm-mappa');
 
     var map = L.map('dimm-mappa', { center: [41.5, 12.8], zoom: 6, scrollWheelZoom: false });
     map.on('focus', function(){ map.scrollWheelZoom.enable(); });
@@ -97,25 +102,54 @@
       opacity: 0.82, maxZoom: 12,
       attribution: 'Fonte: Agenzia ItaliaMeteo (CC BY 4.0)'
     });
-    wms.addTo(map);
+    W.tessere(wms, function(ok, ko){
+      if (ko > 0 && ok === 0) stato.textContent = nome + ': la fonte non ha inviato la cartina per quest\'ora. Riprova più tardi o scegli un altro orario.';
+    });
+
+    L.marker(GENZANO, { keyboard: true, icon: L.divIcon({ className: 'dim-stella',
+      html: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg><span class="visually-hidden">Genzano di Roma</span>',
+      iconSize: [26,26], iconAnchor: [13,13] }) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+
+    function legenda(){
+      var l = layer;
+      W.stile(WMS, l).then(function(voci){
+        if (l === layer) W.legenda(legEl, voci, SCALE[l]);
+      }).catch(function(){
+        if (l === layer) legEl.innerHTML = '<p class="wms-legenda-nota">Scala dei colori non disponibile: la fonte non ha risposto.</p>';
+      });
+    }
+
+    function mostra(ms, nota){
+      wms.setParams({ layers: layer, time: W.iso(ms) });
+      if (!map.hasLayer(wms)) wms.addTo(map);
+      var q = W.quando(ms);
+      stato.textContent = nome + ': previsione per ' + q + (nota ? ' (' + nota + ')' : '') + '.';
+      prodLbl.textContent = nome + ' · ' + q;
+    }
 
     function applica(){
-      var p = { layers: layer };
-      var t = isoHour(timeOff);
-      p.time = t ? t : null;
-      wms.setParams(p);
-      legImg.src = legendUrl(layer);
-      stato.textContent = timeOff === '' ? 'previsione corrente' : 'previsione tra ' + timeOff + ' ore';
+      var mio = ++giro, obiettivo = Date.now() + off * 3600000;
+      stato.textContent = 'Lettura delle ore disponibili…';
+      legenda();
+      W.tempi(CAPS, layer).then(function(t){
+        if (mio !== giro) return;
+        var s = W.istante(t.lista, obiettivo);
+        mostra(s.ms, s.limite === 'ultima' ? 'ultima ora disponibile' : (s.limite === 'prima' ? 'prima ora disponibile' : ''));
+        interv.textContent = 'Ore disponibili nella corsa più recente: da ' + W.quando(t.lista[0]) + ' a ' + W.quando(t.lista[t.lista.length - 1]) + ', ora italiana.';
+      }).catch(function(){
+        if (mio !== giro) return;
+        var d = new Date(obiettivo); d.setUTCMinutes(0, 0, 0);
+        mostra(d.getTime(), 'ora non verificata: la fonte non ha risposto');
+        interv.textContent = '';
+      });
     }
-    legImg.src = legendUrl(layer);
-    stato.textContent = 'previsione corrente';
 
     document.querySelectorAll('.dimm-filter[data-layer]').forEach(function(btn){
       btn.addEventListener('click', function(){
         document.querySelectorAll('.dimm-filter[data-layer]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
         btn.setAttribute('aria-pressed','true');
         layer = btn.dataset.layer;
-        prodLbl.textContent = btn.textContent.trim();
+        nome = btn.textContent.trim();
         applica();
       });
     });
@@ -123,23 +157,22 @@
       btn.addEventListener('click', function(){
         document.querySelectorAll('.dimm-filter.dimm-time').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
         btn.setAttribute('aria-pressed','true');
-        timeOff = btn.dataset.off;
+        off = parseInt(btn.dataset.off, 10) || 0;
         applica();
       });
     });
+    // Interruttore: il nome resta «Sfondo scuro», lo stato lo dice aria-pressed.
     var baseBtn = document.getElementById('dimm-base');
     baseBtn.addEventListener('click', function(){
       baseDark = !baseDark;
-      if (baseDark){ map.removeLayer(baseChiara); baseScura.addTo(map); baseScura.bringToBack();
-        baseBtn.innerHTML = '<i class="bi bi-sun" aria-hidden="true"></i> Sfondo chiaro'; }
-      else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack();
-        baseBtn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro'; }
+      if (baseDark){ map.removeLayer(baseChiara); baseScura.addTo(map); baseScura.bringToBack(); }
+      else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack(); }
       baseBtn.setAttribute('aria-pressed', baseDark ? 'true' : 'false');
       wms.bringToFront();
     });
 
     window.addEventListener('resize', function(){ map.invalidateSize(); });
-    window.addEventListener('cruscotto:mare-im', function(){ map.invalidateSize(); map.setView([41.5, 12.8], 6); }, { once: true });
+    W.aperta(box, 'cruscotto:mare-im', function(){ map.invalidateSize(); map.setView([41.5, 12.8], 6); applica(); });
   })();
   </script>
 </div>

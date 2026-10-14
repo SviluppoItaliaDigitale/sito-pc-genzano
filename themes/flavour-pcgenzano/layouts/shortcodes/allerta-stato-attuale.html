@@ -64,7 +64,8 @@
       <i class="bi {{ $icon }} fs-3 me-3 allerta-stato-icona" aria-hidden="true"></i>
       <div>
         <h2 class="h5 mb-0 allerta-stato-titolo">Stato attuale: {{ $allerta.titolo }}</h2>
-        <p class="mb-0 small allerta-stato-sotto">Livello {{ $liv | title }} · Comune di Genzano di Roma</p>
+        {{- $etich := dict "verde" "Codice verde" "gialla" "Allerta gialla" "arancione" "Allerta arancione" "rossa" "Allerta rossa" }}
+        <p class="mb-0 small allerta-stato-sotto">{{ index $etich $liv }} · Comune di Genzano di Roma</p>
       </div>
     </div>
     {{- with $allerta.descrizione }}
@@ -86,15 +87,16 @@
            adiacente. Ora il banner dichiara lo stesso fatto, con lo stesso
            timestamp; il JS aggiunge le ore trascorse quando lo rivela. */}}
       <span>L'ultima verifica automatica della fonte risale <strong>al {{ printf "%02d/%02d alle %02d:%02d" $t.Day (int $t.Month) $t.Hour $t.Minute }}<span class="allerta-stantia-ore"></span></strong>: lo stato mostrato potrebbe non rispecchiare il bollettino in vigore.
-      Controlla la situazione attuale sul <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</span>
+      Controlla la situazione attuale sul <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.</span>
     </div>
     <p class="small allerta-stato-sotto mb-2">
       {{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-clock-history me-1" aria-hidden="true"></i>
       Verificato: <strong>{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</strong>
-      · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale Lazio</a>
+      · Fonte: <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>
     </p>
-    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
-      <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Bollettino ufficiale Regione Lazio
+    <p class="small allerta-stato-sotto mb-2">Il livello riguarda la criticità idrogeologica, idraulica e per temporali. Gli avvisi per vento, neve, caldo, gelo e mareggiate e il rischio di incendi boschivi compaiono nelle barre in cima alla homepage.</p>
+    <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+      <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Bollettino ufficiale Regione Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span>
     </a>
   </div>
 </div>
@@ -118,6 +120,6 @@
 {{- else -}}
 <div class="alert alert-secondary" role="note">
   <strong>Stato allerta non disponibile.</strong> Consulta direttamente il
-  <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.
+  <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>.
 </div>
 {{- end -}}
