@@ -1,16 +1,16 @@
 {
-  "aggiornato": "2026-10-14T20:02",
+  "aggiornato": "2026-10-14T21:02",
   "data_lunga": "mercoledì 14 ottobre 2026",
-  "aggiornato_label": "mercoledì 14 ottobre 2026, ore 20:02",
-  "alba": "07:19",
+  "aggiornato_label": "mercoledì 14 ottobre 2026, ore 21:02",
+  "alba": "07:20",
   "tramonto": "18:29",
   "corrente": {
-    "temp": 17.0,
-    "percepita": 15.7,
+    "temp": 18.0,
+    "percepita": 16.9,
     "cielo": "Sereno",
     "icona": "<g><line x1=\"44.8\" y1=\"28.0\" x2=\"52.8\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"39.9\" x2=\"45.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"44.8\" x2=\"28.0\" y2=\"52.8\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"39.9\" x2=\"10.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"11.2\" y1=\"28.0\" x2=\"3.2\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"16.1\" x2=\"10.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"11.2\" x2=\"28.0\" y2=\"3.2\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"16.1\" x2=\"45.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><circle cx=\"28.0\" cy=\"28.0\" r=\"16.0\" fill=\"#f6a800\"/></g>",
-    "umidita": 62,
-    "vento": 8,
+    "umidita": 57,
+    "vento": 6,
     "raffiche": 31
   },
   "giorni": [
@@ -18,11 +18,11 @@
       "label": "Oggi",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 21,
-      "tmin": 12,
+      "tmax": 22,
+      "tmin": 13,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 35,
+      "raffiche": 38,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -30,11 +30,11 @@
       "label": "Gio 15",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 22,
-      "tmin": 14,
+      "tmax": 23,
+      "tmin": 15,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 31,
+      "raffiche": 32,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -46,7 +46,7 @@
       "tmin": 15,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 37,
+      "raffiche": 35,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -54,12 +54,12 @@
       "label": "Sab 17",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 19,
-      "tmin": 15,
-      "pioggia": 0,
+      "tmax": 20,
+      "tmin": 16,
+      "pioggia": 8,
       "pioggia_mm": 0,
       "raffiche": 28,
-      "uv": 3,
+      "uv": 4,
       "uv_label": "moderato"
     }
   ],
@@ -73,9 +73,9 @@
     },
     {
       "nome": "Rieti",
-      "tmax": 26,
-      "tmin": 7,
-      "cielo": "Prevalentemente sereno"
+      "tmax": 24,
+      "tmin": 10,
+      "cielo": "Coperto"
     },
     {
       "nome": "Roma",
