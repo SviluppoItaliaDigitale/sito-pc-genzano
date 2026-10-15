@@ -8142,10 +8142,12 @@ html.a11y-contrast-yellow-black .calcolatore-scorta-esito .form-check-label { co
 }
 
 /* ==========================================================================
-   GRAFICI INTERATTIVI v1.0 (14/10/2026) — shortcode grafico-interattivo
-   Barre in HTML (leggibili anche senza JavaScript) e calendario giorno per
-   giorno. Colori dalla scala del blu istituzionale; l'informazione non passa
-   mai dal solo colore: valori scritti, dettaglio del giorno e tabella.
+   GRAFICI INTERATTIVI v2.0 (14/10/2026, v2 il 15/10/2026) — shortcode
+   grafico-interattivo. Barre in HTML (leggibili anche senza JavaScript) e
+   calendario giorno per giorno. Colori dalla scala del blu istituzionale;
+   l'informazione non passa mai dal solo colore: valori scritti, dettaglio del
+   giorno e tabella. v2: mesi come filtro dei grafici della pagina, dettaglio
+   del giorno con uscite e racconto, «Rivivi la campagna», scarica i dati.
    ========================================================================== */
 .gi { margin: 2rem 0; padding: 1.25rem 1.25rem 1rem; border: 1px solid #d4dce6; border-left: 4px solid #003366; border-radius: 6px; background: #fff; max-width: 100%; }
 .article-body figure.gi { max-width: 100%; box-shadow: none; padding: 1.25rem 1.25rem 1rem; }
@@ -8187,26 +8189,80 @@ html.a11y-contrast-yellow-black .calcolatore-scorta-esito .form-check-label { co
 .gi-legenda { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .8rem; font-size: .82rem; color: #4a5562; margin-top: .6rem; }
 .gi-legenda span { display: inline-flex; align-items: center; gap: .3rem; }
 .gi-legenda i { width: .85rem; height: .85rem; }
-.gi-dettaglio { margin: .7rem 0 0; font-weight: 600; color: #003366; min-height: 1.5em; }
+.gi-dettaglio { margin: .7rem 0 0; }
+.gi-det-titolo { font-weight: 600; color: #003366; min-height: 1.5em; margin: 0; }
+.article-body ul.gi-det-lista { margin: .3rem 0 0; padding-left: 1.2rem; font-size: .92rem; }
+.article-body ul.gi-det-lista li { margin: .15rem 0; }
+.gi-det-racconto { margin: .35rem 0 0; font-size: .92rem; }
 .gi-tabella { margin-top: .8rem; font-size: .92rem; }
 .gi-tabella summary { cursor: pointer; color: #003366; font-weight: 600; }
 .gi-tabella table { margin-top: .5rem; }
+.gi-suggerimento { font-size: .88rem; color: #4a5562; margin: 0 0 .6rem; }
+.article-body ul.gi-barre li.gi-riga.gi-riga-filtro { display: block; margin: 0 0 .3rem; }
+.gi-riga-btn { display: grid; grid-template-columns: minmax(8rem, 15rem) 1fr auto; gap: .35rem .75rem; align-items: center; width: 100%; margin: 0; padding: .3rem .45rem; border: 1px solid transparent; border-radius: 5px; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.gi-riga-btn:hover { background: #f4f7fb; border-color: #d4dce6; }
+.gi-riga-btn[aria-pressed="true"] { background: #e7f0fa; border-color: #003366; box-shadow: inset 4px 0 0 #003366; }
+.gi-riga-btn[aria-pressed="true"] .gi-etichetta { font-weight: 700; }
+.gi-riepilogo { font-size: .9rem; color: #003366; margin: .5rem 0 0; min-height: 1.4em; }
+.gi-filtro { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; margin: -.2rem 0 .8rem; padding: .45rem .7rem; background: #e7f0fa; border-radius: 5px; font-size: .92rem; }
+.gi-azzera, .gi-scarica, .gi-play { border: 2px solid #003366; background: #fff; color: #003366; border-radius: 999px; padding: .25rem .8rem; font-size: .88rem; font-weight: 600; cursor: pointer; }
+.gi-azzera:hover, .gi-scarica:hover, .gi-play:hover { background: #003366; color: #fff; }
+.gi-riga-btn:focus-visible, .gi-azzera:focus-visible, .gi-scarica:focus-visible, .gi-play:focus-visible, .gi-cursore:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.gi-azioni { margin: .6rem 0 0; }
+.gi-cal .gi-fuori { opacity: .22; }
+.gi-cal .gi-dopo { opacity: .12; }
+.gi-rivivi { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed #c9d3df; }
+.gi-rivivi-titolo { font-weight: 700; color: #003366; font-size: .95rem; margin: 0 0 .4rem; }
+.gi-rivivi-comandi { display: flex; align-items: center; gap: .75rem; }
+.gi-cursore { flex: 1; min-width: 8rem; accent-color: #003366; }
+.gi-contatore { font-size: .92rem; margin: .4rem 0 0; font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .gi-barra { transition: none; } }
 html.a11y-pause-anim .gi-barra { transition: none; }
 html.a11y-contrast-invert .gi, html.a11y-contrast-yellow-black .gi { background: transparent; border-color: currentColor; }
 html.a11y-contrast-invert .gi-barra, html.a11y-contrast-yellow-black .gi-barra { background: #ffbe2e; }
 html.a11y-contrast-invert .gi-titolo, html.a11y-contrast-yellow-black .gi-titolo,
-html.a11y-contrast-invert .gi-dettaglio, html.a11y-contrast-yellow-black .gi-dettaglio,
+html.a11y-contrast-invert .gi-det-titolo, html.a11y-contrast-yellow-black .gi-det-titolo,
+html.a11y-contrast-invert .gi-riepilogo, html.a11y-contrast-yellow-black .gi-riepilogo,
+html.a11y-contrast-invert .gi-rivivi-titolo, html.a11y-contrast-yellow-black .gi-rivivi-titolo,
+html.a11y-contrast-invert .gi-suggerimento, html.a11y-contrast-yellow-black .gi-suggerimento,
 html.a11y-contrast-invert .gi-fonte, html.a11y-contrast-yellow-black .gi-fonte,
 html.a11y-contrast-invert .gi-legenda, html.a11y-contrast-yellow-black .gi-legenda { color: inherit; }
+html.a11y-contrast-invert .gi-riga-btn:hover, html.a11y-contrast-yellow-black .gi-riga-btn:hover { background: transparent; border-color: currentColor; }
+html.a11y-contrast-yellow-black .gi { color: #ffff00; }
+html.a11y-contrast-invert .gi { color: #fff; }
+html.a11y-contrast-invert .gi-riga-btn[aria-pressed="true"] .gi-etichetta::before, html.a11y-contrast-yellow-black .gi-riga-btn[aria-pressed="true"] .gi-etichetta::before { content: "▸ " / ""; }
+html.a11y-contrast-invert .article-body ul.gi-barre li.gi-riga.gi-riga-filtro, html.a11y-contrast-yellow-black .article-body ul.gi-barre li.gi-riga.gi-riga-filtro { margin-bottom: .65rem; }
+html.a11y-contrast-invert .gi-cal-mesi, html.a11y-contrast-yellow-black .gi-cal-mesi,
+html.a11y-contrast-invert .gi-cal-giorni, html.a11y-contrast-yellow-black .gi-cal-giorni,
+html.a11y-contrast-invert .gi-tabella summary, html.a11y-contrast-yellow-black .gi-tabella summary { color: inherit; }
+html.a11y-contrast-invert .gi-cursore, html.a11y-contrast-yellow-black .gi-cursore { accent-color: currentColor; }
+html.a11y-contrast-invert .gi-l0, html.a11y-contrast-yellow-black .gi-l0 { background: transparent; border: 1px solid #8a8a8a; }
+html.a11y-contrast-invert .gi-l1 { background: #4d4d4d; }
+html.a11y-contrast-invert .gi-l2 { background: #808080; }
+html.a11y-contrast-invert .gi-l3 { background: #b3b3b3; }
+html.a11y-contrast-invert .gi-l4 { background: #fff; }
+html.a11y-contrast-yellow-black .gi-l1 { background: #4d4d00; }
+html.a11y-contrast-yellow-black .gi-l2 { background: #808000; }
+html.a11y-contrast-yellow-black .gi-l3 { background: #b3b300; }
+html.a11y-contrast-yellow-black .gi-l4 { background: #ffff00; }
+html.a11y-contrast-invert .gi-riga-btn[aria-pressed="true"], html.a11y-contrast-yellow-black .gi-riga-btn[aria-pressed="true"] { background: transparent; box-shadow: none; outline: 3px solid currentColor; outline-offset: 2px; }
+html.a11y-contrast-invert .article-body figure.gi figcaption.gi-titolo, html.a11y-contrast-yellow-black .article-body figure.gi figcaption.gi-titolo { color: inherit; }
+html.a11y-contrast-invert .gi-filtro, html.a11y-contrast-yellow-black .gi-filtro { background: transparent; border: 1px solid currentColor; }
+html.a11y-contrast-invert .gi-azzera, html.a11y-contrast-yellow-black .gi-azzera,
+html.a11y-contrast-invert .gi-scarica, html.a11y-contrast-yellow-black .gi-scarica,
+html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { background: transparent; color: inherit; border-color: currentColor; }
 @media print {
   .gi { break-inside: avoid; border-color: #000; }
-  .gi-misure, .gi-dettaglio { display: none !important; }
+  .gi-misure, .gi-dettaglio, .gi-rivivi, .gi-filtro, .gi-azioni, .gi-suggerimento, .gi-riepilogo { display: none !important; }
+  .gi-riga-btn { border: 0 !important; background: none !important; box-shadow: none !important; padding: 0 !important; }
+  .gi-cal .gi-fuori, .gi-cal .gi-dopo { opacity: 1 !important; }
   .gi-barra { background: #003366 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .gi-cella { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 @media (max-width: 575.98px) {
   .gi { padding: 1rem .75rem .9rem; }
+  .gi-riga-btn { grid-template-columns: 1fr auto; padding: .3rem .35rem; }
+  .gi-rivivi-comandi { flex-wrap: wrap; }
   .gi-cal, .gi-cal-mesi { grid-auto-columns: .72rem; gap: 2px; }
   .gi-cal, .gi-cal-giorni { grid-template-rows: repeat(7, .72rem); row-gap: 2px; }
   .gi-cal-giorni { line-height: .72rem; font-size: .62rem; width: 1.5rem; }
