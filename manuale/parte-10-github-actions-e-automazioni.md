@@ -171,7 +171,7 @@ Dopo i tre script, lo step di commit:
    - documenti cambiati, righe cambiate e confronto dei commit;
    - pagine web cambiate, con il link;
    - checklist di revisione (manuale, regole, verifica finale, skill dei testi).
-4. Se una fonte non si legge, tiene l'ultimo hash buono e lo scrive nella Issue «⚠️ Fonti del manuale operativo non raggiungibili», che si chiude da sola.
+4. Se una fonte non si legge, tiene l'ultimo hash buono e lo scrive nella Issue «⚠️ Fonti del manuale operativo non raggiungibili», che si chiude da sola dopo un controllo arrivato in fondo con tutte le fonti leggibili.
 
 **Permessi**: `contents: write`, `issues: write`.
 
