@@ -1,12 +1,12 @@
 ---
-title: "Primo mese di campagna AIB: il punto al 30 giugno"
+title: "Le prime settimane di campagna AIB: il punto al 30 giugno"
 date: 2026-06-30
 description: "A fine giugno, un primo bilancio della campagna antincendio boschivo 2026 e un richiamo ai comportamenti per i mesi più caldi."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-30-bilancio-primo-mese-aib-2026.webp"
-image_alt: "Elicottero regionale in volo sopra le colline dei Castelli Romani durante una missione antincendio"
+image_alt: "Cover dell'articolo: Le prime settimane di campagna AIB: il punto al 30 giugno"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -123,4 +123,4 @@ La **prevenzione partecipativa** è uno degli strumenti più efficaci, perché r
 - [DPC — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
 - [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
-Un mese è passato. Ne restano tre in cui ogni gesto individuale pesa sulla sicurezza collettiva. Continuiamo con attenzione.
+Le prime due settimane sono passate. Restano i mesi più caldi, in cui ogni gesto individuale pesa sulla sicurezza collettiva. Continuiamo con attenzione.
