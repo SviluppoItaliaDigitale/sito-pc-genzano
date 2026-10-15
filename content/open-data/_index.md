@@ -4,7 +4,7 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-10-14"
+dataUltimaRevisione: "2026-10-16"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
@@ -45,13 +45,27 @@ Il feed CAP è generato automaticamente da `data/allerta.json` (a sua volta alim
 
 {{< statistiche-attivita >}}
 
+#### Mese per mese e giorno per giorno
+
+I grafici di questa sezione sono collegati. Scegli un mese nel primo: il calendario e i grafici di tipologie, ore di inizio e mezzi mostreranno solo quel mese. Nel calendario ogni casella è un giorno: sceglilo per sapere quanti interventi ci sono stati e, quando c'è, leggere l'articolo che li racconta. Ogni grafico ha il pulsante per scaricarne i dati in CSV.
+
+Per non rendere riconoscibile il singolo intervento, il calendario dice solo quanti interventi ci sono stati ogni giorno e quante ore sono durati. Tipologie, ore di inizio e mezzi sono contati mese per mese.
+
+{{< grafico-interattivo dati="open_data_interventi" grafico="mesi" titolo="Interventi mese per mese" nota="Le ore di servizio sommano il tempo di ogni volontario presente." >}}
+
+{{< grafico-interattivo dati="open_data_interventi" grafico="calendario" titolo="Gli interventi giorno per giorno" >}}
+
 #### Interventi per tipologia
 
-{{< grafico-csv file="static/open-data/interventi-per-tipologia.csv" tipo="barre,torta" titolo="Interventi per tipologia" unita="interventi" >}}
+{{< grafico-interattivo dati="open_data_interventi" grafico="tipologie" titolo="Interventi per tipologia" nota="Le voci sono quelle del registro: dove manca la tipologia si usa il motivo dell'uscita, per questo alcune voci si somigliano." >}}
+
+#### Ora di inizio degli interventi
+
+{{< grafico-interattivo dati="open_data_interventi" grafico="orari" titolo="Interventi per ora di inizio" >}}
 
 #### Automezzi impiegati
 
-{{< grafico-csv file="static/open-data/automezzi-impiegati.csv" tipo="barre" titolo="Automezzi impiegati (numero di interventi per mezzo)" unita="interventi" >}}
+{{< grafico-interattivo dati="open_data_interventi" grafico="mezzi" titolo="Automezzi impiegati (numero di interventi per mezzo)" nota="In un intervento possono uscire più mezzi insieme." >}}
 
 Il periodo coperto e la data di aggiornamento sono indicati nel riquadro in cima alle statistiche e nel campo `periodo` di ogni dataset. I dati sono **generati automaticamente** dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
 
