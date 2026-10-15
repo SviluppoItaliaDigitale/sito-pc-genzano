@@ -1,15 +1,20 @@
 {{/* Grafico interattivo accessibile da un file in data/ (14/10/2026, bilancio
-     della campagna antincendio). Due forme:
+     della campagna antincendio; v2 il 15/10/2026). Due forme:
        grafico="calendario"  una casella per giorno (campo "giorni": d, n, ore)
        grafico="<chiave>"    barre orizzontali da "serie.<chiave>" (etichette +
                              misure; con più misure compaiono i pulsanti per
                              cambiare misura)
      Parametri: dati (nome del file in data/, obbligatorio), grafico
      (obbligatorio), titolo (obbligatorio), nota (facoltativa).
+     Se il file ha anche "interventi" (un record anonimo per uscita: d, fascia,
+     ore, volontari, mezzi) i grafici della pagina si collegano: la serie con
+     "chiavi" (mesi) filtra calendario e barre; "racconti" (giorno -> pagine)
+     porta nel dettaglio del giorno il link all'articolo, col titolo letto
+     dalla pagina a ogni build.
      Senza JavaScript il grafico resta leggibile: barre e valori sono HTML,
      il calendario ha la tabella dei giorni con interventi. Lo script
-     /js/grafico-interattivo.js aggiunge il cambio di misura e l'esplorazione
-     del calendario con mouse, dito e frecce. */}}
+     /js/grafico-interattivo.js aggiunge cambio di misura, filtro per mese,
+     dettaglio e cursore del calendario, scaricamento dei dati. */}}
 {{ $chiave := .Get "dati" }}
 {{ $g := .Get "grafico" }}
 {{ $titolo := .Get "titolo" }}
@@ -20,8 +25,17 @@
 {{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
 {{ $gs := slice "domenica" "lunedì" "martedì" "mercoledì" "giovedì" "venerdì" "sabato" }}
 {{ if not (.Page.Store.Get "graficoInterattivoJs") }}{{ .Page.Store.Set "graficoInterattivoJs" true }}<script src="{{ "js/grafico-interattivo.js" | relURL }}" defer></script>{{ end }}
+{{ with $d.interventi }}{{ $kd := printf "graficoInterattivoDati-%s" $chiave }}{{ if not ($.Page.Store.Get $kd) }}{{ $.Page.Store.Set $kd true }}
+  {{ $racc := dict }}
+  {{ range $giorno, $percorsi := $d.racconti }}
+    {{ $lista := slice }}
+    {{ range $percorsi }}{{ with site.GetPage (printf "/%s" .) }}{{ $lista = $lista | append (dict "t" .Title "u" .RelPermalink) }}{{ else }}{{ errorf "grafico-interattivo: racconto %s non trovato in data/%s" . $chiave }}{{ end }}{{ end }}
+    {{ $racc = merge $racc (dict $giorno $lista) }}
+  {{ end }}
+<script type="application/json" class="gi-dati" data-gi-chiave="{{ $chiave }}">{{ dict "interventi" . "racconti" $racc | jsonify | safeJS }}</script>
+{{ end }}{{ end }}
 
-<figure class="gi" id="{{ $id }}" aria-labelledby="{{ $id }}-t">
+<figure class="gi" id="{{ $id }}" aria-labelledby="{{ $id }}-t" data-gi-chiave="{{ $chiave }}" data-gi-grafico="{{ $g }}">
   <figcaption class="gi-titolo" id="{{ $id }}-t">{{ $titolo }}</figcaption>
 
 {{ if eq $g "calendario" }}
@@ -29,7 +43,7 @@
   {{ $primo := time (index $giorni 0).d }}
   {{ $vuoti := int ($primo.Weekday) }}{{ $vuoti = mod (add $vuoti 6) 7 }}
   {{ $tot := 0 }}{{ $attivi := 0 }}{{ range $giorni }}{{ $tot = add $tot (int .n) }}{{ if gt .n 0 }}{{ $attivi = add $attivi 1 }}{{ end }}{{ end }}
-  <p class="gi-sintesi">{{ $tot }} interventi in {{ $attivi }} giornate su {{ len $giorni }}. Ogni casella è un giorno, dal lunedì alla domenica dall'alto in basso: più è scura, più interventi ci sono stati.</p>
+  <p class="gi-sintesi"><span class="gi-sintesi-numeri">{{ $tot }} interventi in {{ $attivi }} giornate su {{ len $giorni }}.</span> Ogni casella è un giorno, dal lunedì alla domenica dall'alto in basso: più è scura, più interventi ci sono stati.</p>
   {{ $ncol := div (add (add $vuoti (len $giorni)) 6) 7 }}
   <div class="gi-cal-wrap">
     <div class="gi-cal-colonna">
@@ -45,9 +59,7 @@
       {{ range $giorni }}
         {{ $t := time .d }}{{ $n := int .n }}
         {{ $liv := cond (ge $n 4) 4 $n }}
-        {{ $frase := printf "%s %d %s: " (index $gs (int $t.Weekday)) $t.Day (index $mesi (int $t.Month)) }}
-        {{ if eq $n 0 }}{{ $frase = printf "%snessun intervento" $frase }}{{ else if eq $n 1 }}{{ $frase = printf "%s1 intervento, %s ore" $frase (replace (string .ore) "." ",") }}{{ else }}{{ $frase = printf "%s%d interventi, %s ore" $frase $n (replace (string .ore) "." ",") }}{{ end }}
-        <span class="gi-cella gi-l{{ $liv }}{{ if eq $t.Day 1 }} gi-inizio-mese{{ end }}" data-frase="{{ $frase }}" aria-hidden="true"></span>
+        <span class="gi-cella gi-l{{ $liv }}{{ if eq $t.Day 1 }} gi-inizio-mese{{ end }}" data-d="{{ .d }}" data-n="{{ $n }}" data-ore="{{ .ore }}" aria-hidden="true"></span>
       {{ end }}
     </div>
     </div>
@@ -56,7 +68,19 @@
   <div class="gi-legenda" aria-hidden="true">Interventi nel giorno:
     <span><i class="gi-cella gi-l0"></i>0</span><span><i class="gi-cella gi-l1"></i>1</span><span><i class="gi-cella gi-l2"></i>2</span><span><i class="gi-cella gi-l3"></i>3</span><span><i class="gi-cella gi-l4"></i>4 o più</span>
   </div>
-  <p class="gi-dettaglio" id="{{ $id }}-det" aria-live="polite" hidden></p>
+  <div class="gi-rivivi" hidden>
+    <p class="gi-rivivi-titolo" id="{{ $id }}-riv">Rivivi la campagna giorno per giorno</p>
+    <div class="gi-rivivi-comandi">
+      <button type="button" class="gi-play"><span class="gi-play-segno" aria-hidden="true">▶</span> <span class="gi-play-testo">Avvia</span></button>
+      <input type="range" class="gi-cursore" min="0" max="{{ sub (len $giorni) 1 }}" value="{{ sub (len $giorni) 1 }}" step="1" aria-labelledby="{{ $id }}-riv">
+    </div>
+    <p class="gi-contatore"></p>
+  </div>
+  <div class="gi-dettaglio" hidden>
+    <p class="gi-det-titolo" id="{{ $id }}-det" aria-live="polite"></p>
+    <ul class="gi-det-lista" hidden></ul>
+    <p class="gi-det-racconto" hidden></p>
+  </div>
   <details class="gi-tabella">
     <summary>Tabella dei giorni con interventi</summary>
     <div class="table-responsive"><table>
@@ -84,7 +108,7 @@
     {{ range $i, $e := $s.etichette }}
       {{ $v := index $m0.valori $i }}
       {{ $w := 0 }}{{ if gt $max 0 }}{{ $w = div (mul $v 1000) $max }}{{ end }}
-    <li class="gi-riga">
+    <li class="gi-riga"{{ with $s.chiavi }} data-chiave="{{ index . $i }}"{{ end }}>
       <span class="gi-etichetta">{{ $e }}</span>
       <span class="gi-traccia" aria-hidden="true"><span class="gi-barra" style="width: {{ div $w 10.0 }}%"></span></span>
       <span class="gi-valore"><strong>{{ $v }}</strong> {{ cond (and (eq (int $v) 1) $m0.unita1) $m0.unita1 $m0.unita }}</span>
