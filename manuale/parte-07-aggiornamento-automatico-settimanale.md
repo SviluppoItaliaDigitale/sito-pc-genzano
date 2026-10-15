@@ -8,17 +8,20 @@ apre un'**Issue** sul repository con la checklist dei punti da controllare.
 
 ### Come funziona
 
-1. La Action fetcha:
-   - Le pagine principali di Designers Italia e AGID.
-   - L'ultimo release tag di Bootstrap Italia via API GitHub.
-2. Calcola un hash SHA-256 del contenuto.
-3. Confronta con gli hash memorizzati in `.manuale/sources-hashes.json`.
-4. Se qualche hash è cambiato (o se l'Issue settimanale non esiste), apre un'Issue con:
-   - Lista delle fonti cambiate.
-   - Nuova versione di Bootstrap Italia (se disponibile).
-   - Checklist di punti da controllare nel manuale.
-5. Aggiorna il file `.manuale/sources-hashes.json` con i nuovi hash.
-6. Commit automatico del file hashes (solo quel file).
+1. Scarica dai repository ufficiali su GitHub il testo dei manuali di scrittura: Fondamenti del
+   design system .italia (Contenuti, Linguaggio, Microtesti, Tono di voce), Guida alle parole
+   della PA, Linee guida di design, Manuale operativo di design (`scripts/manuali-agid.py`).
+   La copia sta in `.manuale/manuali-agid/` e si rinnova da sola.
+2. Legge le pagine web di Designers Italia, AGID, Bootstrap Italia e DPC e calcola un hash
+   SHA-256 del testo visibile, confrontandolo con `.manuale/sources-hashes.json`.
+3. Se un manuale o una pagina è cambiato, apre un'Issue con:
+   - i documenti cambiati, con le righe cambiate e il confronto dei commit;
+   - le pagine web cambiate;
+   - la checklist di punti da controllare nel manuale, nelle regole e nella skill dei testi.
+4. Se una fonte non si legge (pagina spostata, sito che rifiuta le richieste, pagina senza
+   testo leggibile), lo scrive nell'Issue «⚠️ Fonti del manuale operativo non raggiungibili»,
+   che si aggiorna ogni settimana e si chiude da sola quando la fonte torna leggibile.
+5. Commit automatico degli hash e della copia dei manuali (solo `.manuale/`).
 
 ### Come agire sull'Issue
 
@@ -46,7 +49,7 @@ Per riattivare: ripristina la sezione.
 
 Puoi triggerare la Action a mano:
 
-1. Vai su GitHub → Actions → "Aggiorna manuale di stile".
+1. Vai su GitHub → Actions → "Aggiornamento MANUALE-SITO.md".
 2. Clicca "Run workflow" → "Run workflow".
 3. Attendi ~1 minuto. Se ci sono novità, apparirà una nuova Issue.
 

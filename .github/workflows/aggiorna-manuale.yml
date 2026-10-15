@@ -1,11 +1,21 @@
 name: "Aggiornamento MANUALE-SITO.md"
 
-# Controllo settimanale delle fonti AGID / Designers Italia / Bootstrap Italia.
-# Se una pagina ufficiale cambia, apre una issue con checklist di revisione.
+# Controllo settimanale delle fonti del manuale operativo, in due parti:
+# 1. pagine AGID / Designers Italia / Bootstrap Italia / DPC: hash del solo
+#    testo visibile (scripts/hash-fonte-agid.py);
+# 2. testo dei manuali di scrittura (Fondamenti del design system .italia,
+#    Guida alle parole della PA, Linee guida di design, Manuale operativo di
+#    design), letto dai repository ufficiali su GitHub con
+#    scripts/manuali-agid.py: copia in .manuale/manuali-agid/ e righe cambiate
+#    nella issue. Dal 15/10/2026 sostituisce gli hash delle pagine del Writing
+#    Toolkit, del Content Toolkit e delle Linee guida AGID, che dal 04/05/2026
+#    non si scaricavano più (le pagine si sono spostate).
+# Se qualcosa cambia apre la issue di revisione. Se una fonte non si legge lo
+# dice in una issue che si aggiorna a ogni giro e si chiude da sola.
 
 on:
   schedule:
-    # Ogni lunedi alle 06:00 UTC (08:00 Europe/Rome in ora legale, 07:00 in ora solare)
+    # Ogni lunedi alle 06:04 UTC (08:04 Europe/Rome in ora legale, 07:04 in ora solare)
     - cron: "4 6 * * 1"
   workflow_dispatch:
 
@@ -16,7 +26,7 @@ permissions:
 jobs:
   verifica-fonti:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@v7
@@ -27,7 +37,7 @@ jobs:
           python-version: "3.x"
 
       - name: "Installa dipendenze"
-        run: pip install --quiet beautifulsoup4
+        run: pip install --quiet beautifulsoup4 pyyaml
 
       - name: "Verifica fonti ufficiali e calcola hash"
         id: check
@@ -35,20 +45,21 @@ jobs:
         run: |
           set -u
           STATE_FILE=".manuale/sources-hashes.json"
-          CHANGES_FILE="/tmp/manuale-changes.md"
+          CHANGES_FILE="$RUNNER_TEMP/manuale-changes.md"
+          ERRORI_FILE="$RUNNER_TEMP/fonti-errori.md"
           : > "$CHANGES_FILE"
+          : > "$ERRORI_FILE"
 
           # Versione dell'algoritmo di hashing. Se diversa da quella nel manifesto
           # esistente, è in corso una migrazione (es. v1 sed → v2 BeautifulSoup):
           # NON segnaliamo cambiamenti, solo re-baseline silenziosa.
           ALGORITMO="v2-text-only"
 
+          # Writing Toolkit, Content Toolkit e Linee guida AGID non sono più qui:
+          # il loro testo lo controlla il passo successivo, dai repository ufficiali.
           declare -A FONTI=(
-            ["linee_guida_design_pa"]="https://www.agid.gov.it/it/design-servizi/linee-guida-design-servizi-web-pa"
             ["designers_italia_home"]="https://designers.italia.it/"
             ["designers_italia_guide"]="https://designers.italia.it/risorse-per-progettare/"
-            ["writing_toolkit"]="https://designers.italia.it/risorse-per-progettare/content-design/writing-toolkit/"
-            ["content_toolkit"]="https://designers.italia.it/risorse-per-progettare/content-design/"
             ["ui_kit"]="https://designers.italia.it/kit/ui-kit/"
             ["bootstrap_italia_docs"]="https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/"
             ["accessibilita_agid"]="https://www.agid.gov.it/it/design-servizi/accessibilita"
@@ -65,12 +76,13 @@ jobs:
           fi
 
           HAS_CHANGES="false"
+          ADESSO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           NEW_JSON=$(jq -n \
-            --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --arg ts "$ADESSO" \
             --arg algo "$ALGORITMO" \
             '{
               "_meta": {
-                "descrizione": "Hash SHA-256 del solo testo visibile (main/body) delle fonti AGID / Designers Italia monitorate settimanalmente dal workflow .github/workflows/aggiorna-manuale.yml. Lo script scripts/hash-fonte-agid.py rimuove script, style, header, footer, cookie banner e pattern volatili (timestamp, fingerprint asset) prima dell hashing, così le modifiche puramente cosmetiche non scattano falsi positivi.",
+                "descrizione": "Hash SHA-256 del solo testo visibile (main/body) delle pagine AGID / Designers Italia / Bootstrap Italia / DPC controllate ogni settimana dal workflow .github/workflows/aggiorna-manuale.yml. Lo script scripts/hash-fonte-agid.py rimuove script, style, header, footer, cookie banner e pattern volatili (timestamp, fingerprint asset) prima dell hashing, così le modifiche puramente cosmetiche non scattano falsi positivi. Se una pagina non si legge resta l ultimo hash buono, con la data dell errore in ultimo_errore. Il testo dei manuali di scrittura è in .manuale/manuali-agid/.",
                 "algoritmo": $algo,
                 "ultimo_aggiornamento": $ts,
                 "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
@@ -83,53 +95,87 @@ jobs:
             echo "Verifica: $key -> $url"
 
             # Lo script Python gestisce internamente download, parsing, normalizzazione
-            # e hashing. Stampa l'hash su stdout o scrive errore su stderr ed esce 2.
-            if hash=$(python3 scripts/hash-fonte-agid.py "$url" 2>/dev/null); then
-              :
+            # e hashing. Stampa l'hash su stdout o scrive il motivo su stderr ed esce 2.
+            if hash=$(python3 scripts/hash-fonte-agid.py "$url" 2>"$RUNNER_TEMP/hash-errore.txt"); then
+              motivo=""
             else
-              echo "  ATTENZIONE: impossibile elaborare $url"
+              motivo=$(tail -n 1 "$RUNNER_TEMP/hash-errore.txt" | cut -c1-200)
+              echo "  ATTENZIONE: impossibile elaborare $url ($motivo)"
               hash="errore-download"
             fi
 
             prev_hash=$(jq -r --arg k "$key" '.fonti[$k].hash // ""' "$STATE_FILE" 2>/dev/null || echo "")
+            prev_verificato=$(jq -r --arg k "$key" '.fonti[$k].verificato // ""' "$STATE_FILE" 2>/dev/null || echo "")
 
+            if [ "$hash" = "errore-download" ]; then
+              # Una fonte che non si legge non è una fonte che non cambia: lo si dice
+              # nella issue delle fonti e si tiene l'ultimo hash buono, così al ritorno
+              # il confronto vale ancora.
+              echo "- **$key** — [$url]($url): ${motivo:-errore sconosciuto}" >> "$ERRORI_FILE"
+              if [ -n "$prev_hash" ] && [ "$prev_hash" != "errore-download" ]; then
+                NEW_JSON=$(echo "$NEW_JSON" | jq --arg k "$key" --arg u "$url" --arg h "$prev_hash" \
+                  --arg v "$prev_verificato" --arg ts "$ADESSO" \
+                  '.fonti[$k] = {"url": $u, "hash": $h, "verificato": $v, "ultimo_errore": $ts}')
+              else
+                NEW_JSON=$(echo "$NEW_JSON" | jq --arg k "$key" --arg u "$url" --arg ts "$ADESSO" \
+                  '.fonti[$k] = {"url": $u, "hash": "errore-download", "verificato": $ts, "ultimo_errore": $ts}')
+              fi
+              continue
+            fi
+
+            # Cambiamento solo rispetto a un hash buono: una fonte che torna leggibile
+            # dopo un errore vecchio riparte da qui, senza falsi allarmi.
             if [ "$BASELINE" = "false" ] \
                && [ -n "$prev_hash" ] \
-               && [ "$prev_hash" != "$hash" ] \
-               && [ "$hash" != "errore-download" ]; then
+               && [ "$prev_hash" != "errore-download" ] \
+               && [ "$prev_hash" != "$hash" ]; then
               HAS_CHANGES="true"
               echo "- **$key** — [$url]($url)" >> "$CHANGES_FILE"
             fi
 
-            NEW_JSON=$(echo "$NEW_JSON" | jq \
-              --arg k "$key" \
-              --arg u "$url" \
-              --arg h "$hash" \
-              --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            NEW_JSON=$(echo "$NEW_JSON" | jq --arg k "$key" --arg u "$url" --arg h "$hash" --arg ts "$ADESSO" \
               '.fonti[$k] = {"url": $u, "hash": $h, "verificato": $ts}')
           done
 
           echo "$NEW_JSON" | jq '.' > "$STATE_FILE"
-
           echo "has_changes=$HAS_CHANGES" >> "$GITHUB_OUTPUT"
-          if [ "$HAS_CHANGES" = "true" ]; then
-            {
-              echo "changes<<EOF"
-              cat "$CHANGES_FILE"
-              echo "EOF"
-            } >> "$GITHUB_OUTPUT"
+
+      - name: "Controlla il testo dei manuali di scrittura (repository ufficiali su GitHub)"
+        id: manuali
+        shell: bash
+        run: |
+          set -u
+          RESOCONTO="$RUNNER_TEMP/manuali-agid.md"
+          LOG="$RUNNER_TEMP/manuali-agid.log"
+          # «aggiorna» riscrive la copia in .manuale/manuali-agid/ e, se un testo è
+          # cambiato, scrive il resoconto con le righe cambiate; se non è cambiato
+          # niente il resoconto non esiste.
+          if python3 scripts/manuali-agid.py aggiorna --uscita .manuale/manuali-agid \
+               --cache "$RUNNER_TEMP/manuali-agid-cache" --resoconto "$RESOCONTO" > "$LOG" 2>&1; then
+            cat "$LOG"
+            if [ -s "$RESOCONTO" ]; then
+              echo "cambiati=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "cambiati=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            cat "$LOG"
+            # Niente copie a metà nel commit: si torna alla versione salvata.
+            git checkout -- .manuale/manuali-agid 2>/dev/null || true
+            echo "cambiati=false" >> "$GITHUB_OUTPUT"
+            echo "- **Manuali di scrittura** (repository ufficiali di AgID e Designers Italia su GitHub): $(tail -n 1 "$LOG" | cut -c1-300)" >> "$RUNNER_TEMP/fonti-errori.md"
           fi
 
-      - name: "Commit aggiornamento hash"
+      - name: "Commit aggiornamento hash e copia dei manuali"
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet .manuale/sources-hashes.json; then
-            echo "Nessuna modifica agli hash."
+          git add .manuale/sources-hashes.json .manuale/manuali-agid
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica agli hash né ai manuali."
           else
-            git add .manuale/sources-hashes.json
-            git commit -m "Aggiornamento hash fonti manuale — verifica settimanale"
+            git commit -m "Verifica settimanale delle fonti del manuale: hash e copia dei manuali AgID"
             # Retry+rebase per evitare conflitti di concorrenza con altri workflow
             for tentativo in 1 2 3; do
               if git push 2>&1; then break; fi
@@ -140,28 +186,45 @@ jobs:
           fi
 
       - name: "Apri issue di revisione se ci sono cambiamenti"
-        if: steps.check.outputs.has_changes == 'true'
+        if: steps.check.outputs.has_changes == 'true' || steps.manuali.outputs.cambiati == 'true'
         uses: actions/github-script@v9
         with:
           script: |
+            const fs = require('fs');
+            const leggi = (nome) => {
+              const percorso = `${process.env.RUNNER_TEMP}/${nome}`;
+              return fs.existsSync(percorso) ? fs.readFileSync(percorso, 'utf8').trim() : '';
+            };
+            const pagine = '${{ steps.check.outputs.has_changes }}' === 'true' ? leggi('manuale-changes.md') : '';
+            const manuali = '${{ steps.manuali.outputs.cambiati }}' === 'true' ? leggi('manuali-agid.md') : '';
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
-            const changes = `${{ steps.check.outputs.changes }}`;
             const body = [
               `## Revisione settimanale del manuale operativo — ${today}`,
               ``,
               `Il controllo automatico ha rilevato modifiche nelle fonti ufficiali AGID / Designers Italia.`,
-              `Le pagine seguenti sono cambiate dall'ultima verifica:`,
               ``,
-              changes,
-              ``,
-              `> **Nota struttura (da maggio 2026):** il manuale e' diviso in 18 file separati nella cartella \`manuale/\` (1 file per Parte). \`MANUALE-SITO.md\` nella root resta come indice. Le modifiche vanno fatte sul file specifico della Parte interessata.`,
+              ...(manuali ? [
+                `### Testo dei manuali di scrittura (AgID e Designers Italia)`,
+                ``,
+                manuali,
+                ``,
+                `La copia aggiornata è in \`.manuale/manuali-agid/\`, salvata dal commit automatico di questo controllo: la cronologia della cartella mostra ogni modifica.`,
+                ``,
+              ] : []),
+              ...(pagine ? [
+                `### Pagine web cambiate dall'ultima verifica`,
+                ``,
+                pagine,
+                ``,
+              ] : []),
+              `> **Nota struttura (da maggio 2026):** il manuale e' diviso in file separati nella cartella \`manuale/\` (1 file per Parte). \`MANUALE-SITO.md\` nella root resta come indice. Le modifiche vanno fatte sul file specifico della Parte interessata.`,
               ``,
               `### Checklist di revisione`,
               ``,
               `**A) Manuale operativo (cartella \`manuale/\`)**`,
-              `- [ ] Aprire ogni URL cambiato e annotare le modifiche rilevanti`,
+              `- [ ] Leggere le righe cambiate o aprire ogni pagina cambiata e annotare le modifiche rilevanti`,
               `- [ ] Valutare l'impatto sulle Parti del manuale (vedi \`manuale/README.md\` per indice)`,
-              `- [ ] Aggiornare regole AGID in \`manuale/parte-02-le-regole-agid-in-dettaglio.md\` se il Writing Toolkit / Content Toolkit / Linee guida PA sono cambiati`,
+              `- [ ] Aggiornare le regole AGID in \`manuale/parte-02-le-regole-agid-in-dettaglio.md\` se sono cambiati i manuali di scrittura (Fondamenti del design system, Guida alle parole della PA, Linee guida di design, Manuale operativo di design)`,
               `- [ ] Aggiornare specifiche immagini in \`manuale/parte-03-immagini-per-gli-articoli.md\` se il UI Kit e' cambiato`,
               `- [ ] Verificare che gli esempi di codice Bootstrap Italia siano ancora validi`,
               `- [ ] Verificare la dichiarazione di accessibilita`,
@@ -169,9 +232,9 @@ jobs:
               `- [ ] Rivedere \`manuale/parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md\` se cambia la normativa su trasparenza o comunicazione pubblica`,
               `- [ ] Aggiornare il changelog in \`MANUALE-SITO.md\` (indice) con la data e le modifiche`,
               ``,
-              `**B) Regole interne lette da Claude Code in ogni sessione (CRITICO — facile dimenticarsi)**`,
+              `**B) Regole interne lette in ogni sessione di lavoro (CRITICO — facile dimenticarsi)**`,
               ``,
-              `Quando Writing Toolkit, Content Toolkit, Linee guida AGID o accessibilita AGID cambiano, le novita' devono essere riportate **in coerenza** anche nei file che Claude Code legge come \`@import\` automatico nel mandato, altrimenti l'AI continua ad applicare regole obsolete in redazione articoli e revisioni AGID:`,
+              `Quando cambiano i manuali di scrittura, le Linee guida AGID o l'accessibilita AGID, le novita' devono essere riportate **in coerenza** anche nei file che ogni sessione di lavoro legge in automatico, altrimenti si continuano ad applicare regole obsolete in redazione articoli e revisioni AGID:`,
               ``,
               `- [ ] \`.claude/rules/02-content-design-pa.md\` — sezioni "Principi di scrittura", "Regole lessicali", "Livello qualitativo della redazione", "Regole editoriali"`,
               `- [ ] \`.claude/rules/03-accessibility.md\` — se cambia accessibilita AGID o WCAG`,
@@ -180,13 +243,19 @@ jobs:
               `- [ ] \`.claude/agents/pc-social-publisher.md\` — se cambiano le regole social PA`,
               `- [ ] \`.claude/agents/pc-deploy-validator.md\` — se cambiano vincoli di accessibilita / sicurezza headers`,
               ``,
-              `> **Regola di coerenza obbligatoria**: il manuale operativo (utente) e le rules Claude (AI) devono dire **la stessa cosa** sulla stessa regola AGID. Se aggiorni l'uno senza l'altro, il sito avra' due fonti di verita' divergenti e Claude continuera' ad applicare le vecchie regole in tutte le sessioni successive.`,
+              `> **Regola di coerenza obbligatoria**: il manuale operativo e le regole in \`.claude/\` devono dire **la stessa cosa** sulla stessa regola AGID. Se aggiorni l'uno senza l'altro, il sito avra' due fonti di verita' divergenti e le sessioni successive continueranno ad applicare le vecchie regole.`,
               ``,
               `**C) Verifica finale**`,
               `- [ ] Diff finale: \`grep -rn "AAAA-MM-GG" manuale/ .claude/rules/ CLAUDE.md\` con la data della modifica`,
               `- [ ] Build Hugo pulito (\`hugo --quiet --minify\`)`,
               `- [ ] Chiudere questa issue con il riferimento al commit di aggiornamento`,
               ``,
+              ...(manuali ? [
+                `**D) Skill dei testi \`scrittura-pubblica-amministrazione\`**`,
+                `- [ ] La skill installata se ne accorge da sola al primo uso (\`manuali.py controlla\`) e riscarica i testi; dove la sua cartella è di sola lettura, va caricato il pacchetto che lo script prepara con \`aggiorna --pacchetto scrittura-pubblica-amministrazione.skill\``,
+                `- [ ] Se il resoconto elenca regole spente, rivedere le regole dello script (elenco REGOLE) nella skill e copiare lo script aggiornato anche in \`scripts/manuali-agid.py\``,
+                ``,
+              ] : []),
               `---`,
               `*Issue generata automaticamente dal workflow \`aggiorna-manuale.yml\` lunedi mattina.*`
             ].join('\n');
@@ -198,3 +267,38 @@ jobs:
               body: body,
               labels: ['manuale', 'documentazione', 'revisione']
             });
+
+      - name: "Fonti non leggibili: issue che si aggiorna e si chiude da sola"
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -u
+          TITOLO="⚠️ Fonti del manuale operativo non raggiungibili"
+          ERRORI="$RUNNER_TEMP/fonti-errori.md"
+          APERTA=$(gh issue list --state open --label manuale --limit 100 --json number,title \
+            --jq ".[] | select(.title == \"$TITOLO\") | .number" | head -n 1)
+          if [ -s "$ERRORI" ]; then
+            {
+              echo "Il controllo settimanale del manuale operativo ($(date -u +%d/%m/%Y)) non è riuscito a leggere queste fonti:"
+              echo
+              cat "$ERRORI"
+              echo
+              echo "Finché una fonte non si legge, le sue modifiche non arrivano nella issue di revisione: su quella fonte il controllo è cieco."
+              echo
+              echo "Cosa fare:"
+              echo "- [ ] Aprire ogni indirizzo. Se la pagina si è spostata, trovare quella nuova sul sito dell'ente, verificarla e sostituire l'indirizzo in \`.github/workflows/aggiorna-manuale.yml\` (mai un indirizzo costruito a indovinare)."
+              echo "- [ ] Se la pagina c'è ma non ha testo leggibile senza JavaScript o rifiuta le richieste automatiche, usare una fonte equivalente (per esempio il repository ufficiale su GitHub) o toglierla dall'elenco, scrivendo il motivo nel workflow."
+              echo "- [ ] Manuali di scrittura: se lo script dice che un manuale «non è più dove lo cercavo», aggiornare FONTI o DOCUMENTI in \`scripts/manuali-agid.py\` e nella skill \`scrittura-pubblica-amministrazione\`."
+              echo
+              echo "Questa issue si aggiorna a ogni controllo e si chiude da sola quando tutte le fonti tornano leggibili."
+            } > "$RUNNER_TEMP/fonti-issue.md"
+            if [ -n "$APERTA" ]; then
+              gh issue edit "$APERTA" --body-file "$RUNNER_TEMP/fonti-issue.md"
+            else
+              gh issue create --title "$TITOLO" --label manuale --label automazione --body-file "$RUNNER_TEMP/fonti-issue.md"
+            fi
+          elif [ -n "$APERTA" ]; then
+            gh issue close "$APERTA" --comment "Tutte le fonti del manuale operativo sono di nuovo leggibili (controllo del $(date -u +%d/%m/%Y))."
+          fi
