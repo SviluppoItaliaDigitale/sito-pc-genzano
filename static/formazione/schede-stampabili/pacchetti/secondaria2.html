@@ -607,6 +607,9 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+@media print {
+:where([id="scheda-economia-rischio-secondaria2"]) { zoom: 0.9; }
+}
 
 :where([id="scheda-caso-aquila-secondaria2"]) .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
 :where([id="scheda-caso-aquila-secondaria2"]) .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -4197,8 +4200,10 @@ e canali ufficiali del Comune.</div>
       • <strong>+1,5-2 °C</strong> nel bacino del Mediterraneo (l'Italia si scalda di più della media).<br>
       • <strong>Eventi meteo estremi</strong> più frequenti e intensi: ondate di calore, piogge violente, siccità.<br>
       • <strong>Medicane</strong> (cicloni mediterranei): pochi eventi storici, oggi più frequenti.</p>
-      <p>Dato chiave: l'<strong>Italia</strong> ha registrato negli ultimi 30 anni un aumento del
-      <strong>+19% di eventi estremi</strong> documentati (fonte: Legambiente, ISPRA).</p>
+      <p>Dato chiave: l'Osservatorio CittàClima di <strong>Legambiente</strong> registra un aumento marcato
+      degli eventi meteorologici estremi in Italia nell'ultimo decennio: da <strong>60 eventi nel 2015</strong> a
+      <strong>351 nel 2024</strong>, un aumento del <strong>+485%</strong> (fonte: Legambiente, Osservatorio
+      CittàClima, rapporto di fine anno 2024, realizzato con il Gruppo Unipol).</p>
     </div>
 
     <div class="sez-titolo"><span class="num">2</span><h2>Eventi PC italiani recenti correlati al clima</h2></div>
@@ -4207,14 +4212,17 @@ e canali ufficiali del Comune.</div>
         <tr><th>Evento</th><th>Anno</th><th>Tipo</th><th>Caratteristica climatica</th></tr>
       </thead>
       <tbody>
-        <tr><td>Alluvione Sardegna (Olbia)</td><td class="num">2013</td><td>Pioggia intensa</td><td>440 mm in 12h, ciclone tropical-like</td></tr>
-        <tr><td>Tempesta Vaia (Triveneto)</td><td class="num">2018</td><td>Vento</td><td>Raffiche &gt; 200 km/h, 14 milioni di alberi caduti</td></tr>
+        <tr><td>Alluvione Sardegna (Olbia e Gallura)</td><td class="num">2013</td><td>Pioggia intensa</td><td>fino a 450 mm in 12h nelle zone più colpite, ciclone «Cleopatra»<sup>1</sup></td></tr>
+        <tr><td>Tempesta Vaia (Triveneto)</td><td class="num">2018</td><td>Vento</td><td>Raffiche &gt; 200 km/h, circa 14 milioni di alberi abbattuti</td></tr>
         <tr><td>Acqua Granda (Venezia)</td><td class="num">2019</td><td>Acqua alta</td><td>187 cm: 2° valore storico</td></tr>
         <tr><td>Marmolada (crollo seracco)</td><td class="num">2022</td><td>Caldo</td><td>10 °C sulla vetta il giorno prima: la temperatura più alta mai registrata lassù</td></tr>
-        <tr><td>Alluvione Emilia-Romagna</td><td class="num">2023</td><td>Pioggia intensa</td><td>500 mm in 36h dopo siccità prolungata</td></tr>
-        <tr><td>Alluvione Toscana</td><td class="num">2023</td><td>Pioggia intensa</td><td>tempesta Ciaran, > 100 mm/h locale</td></tr>
+        <tr><td>Alluvione Emilia-Romagna</td><td class="num">2023</td><td>Pioggia intensa</td><td>fino a 260 mm in 2 giorni (16-17 maggio) sul bacino del Senio, dopo un primo evento già eccezionale a inizio mese<sup>2</sup></td></tr>
+        <tr><td>Alluvione Toscana</td><td class="num">2023</td><td>Pioggia intensa</td><td>tempesta Ciaran, oltre 100 mm/h in alcune zone</td></tr>
       </tbody>
     </table>
+    <p style="font-size: 0.76rem; color: var(--scheda-grigio); margin: 0.2rem 0 0 0; line-height: 1.5;">
+      <strong>Fonti puntuali</strong> — <sup>1</sup> Amponsah et al., «The flash-flood of November 2013 in NE Sardinia (Italy): post-event documentation and hydrological modelling», CNR, 2014 (picco regionale); Regione Autonoma della Sardegna, Agenzia regionale del Distretto Idrografico, «Prima valutazione idrologica delle precipitazioni», aggiornamento del 17/12/2013 (picco giornaliero di 469,6 mm alla stazione di Monte Novo, Villagrande Strisaili; a Olbia 117,6 mm il 18 novembre). <sup>2</sup> Arpae Emilia-Romagna, «Rapporto degli eventi meteorologici di piena e di frana del 16-18 maggio 2023» (picchi di 260,8 mm a Monte Albano, Casola Valsenio, bacino del Senio, e 254,8 mm a Trebbio, Modigliana, bacino del Lamone).
+    </p>
 
     <div class="sez-titolo"><span class="num">3</span><h2>Costruisci il grafico</h2></div>
     <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
@@ -4588,7 +4596,7 @@ e canali ufficiali del Comune.</div>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Sismabonus</dt><dd style="margin: 0;">L. 232/2016: detrazione fiscale per adeguamento sismico edifici. Riducono il rischio in modo incrementale ma a regime decennale.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">PNRR Missione 2</dt><dd style="margin: 0;">"Rivoluzione verde e transizione ecologica" — Componente C4 sulla gestione del rischio idrogeologico: ~2,5 miliardi euro 2021-2026.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Casa Italia</dt><dd style="margin: 0;">programma 2017 post-Amatrice: piano nazionale di prevenzione sismica e idrogeologica. Da 0,15% PIL stimato necessario.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Costo medio ricostruzione</dt><dd style="margin: 0;">Italia 1968-2018: oltre 290 miliardi € complessivi (vedi sopra). Solo i 6 grandi eventi qui sotto sommano ~136 miliardi: Belice (3,5) + Friuli (12) + Irpinia (70) + Aquila (13,7) + Emilia (12) + Centro Italia (25). Fonte CRESME.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Costo medio ricostruzione</dt><dd style="margin: 0;">Italia 1968-2018: oltre 290 miliardi € complessivi (vedi sopra). I sei grandi terremoti, da soli, superano i 130 miliardi (valori attualizzati): Belice 1968 (9,2) + Friuli 1976 (18,5) + Irpinia 1980 (52) + Aquila 2009 (13,7) + Emilia 2012 (13,3) + Centro Italia 2016-17 (23,5). Fonti: CNI/CGIA Mestre (dati 2016) e Dipartimento della Protezione Civile (Centro Italia, 2017) — dettaglio e fonti nella tabella del paragrafo 2.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">RC Catastrofale (DDL 213/2023)</dt><dd style="margin: 0;">Legge di bilancio 2024: obbligo assicurazione contro calamità per le imprese. Modello francese CatNat. Aspettativa di estensione a privati.</dd>
     </dl>
 
@@ -4608,15 +4616,15 @@ e canali ufficiali del Comune.</div>
         <tr><th>Evento</th><th>Anno</th><th>Costi diretti (€ mld)</th><th>Note</th></tr>
       </thead>
       <tbody>
-        <tr><td>Friuli</td><td>1976</td><td class="num">4,5</td><td>Modello virtuoso di ricostruzione</td></tr>
-        <tr><td>Irpinia</td><td>1980</td><td class="num">52</td><td>Lunga, criticata</td></tr>
-        <tr><td>L'Aquila</td><td>2009</td><td class="num">13,7</td><td>Centro storico ancora in cantiere a 15 anni</td></tr>
-        <tr><td>Centro Italia (Amatrice)</td><td>2016-17</td><td class="num">23,5</td><td>Quattro regioni colpite</td></tr>
-        <tr><td>Alluvione Emilia-Romagna</td><td>2023</td><td class="num">8,8</td><td>Stima preliminare</td></tr>
+        <tr><td>Friuli</td><td>1976</td><td class="num">18,5</td><td>Modello virtuoso di ricostruzione — valore attualizzato<sup>1</sup></td></tr>
+        <tr><td>Irpinia</td><td>1980</td><td class="num">52</td><td>Lunga, criticata — valore attualizzato<sup>1</sup></td></tr>
+        <tr><td>L'Aquila</td><td>2009</td><td class="num">13,7</td><td>Centro storico ancora in cantiere a 15 anni<sup>1</sup></td></tr>
+        <tr><td>Centro Italia (Amatrice)</td><td>2016-17</td><td class="num">23,5</td><td>Quattro regioni colpite — stima dei danni<sup>2</sup></td></tr>
+        <tr><td>Alluvione Emilia-Romagna</td><td>2023</td><td class="num">8,8</td><td>Prima stima regionale, 15 giugno 2023<sup>3</sup></td></tr>
       </tbody>
     </table>
-    <p style="font-size: 0.8rem; color: var(--scheda-grigio); margin-top: 0.2rem;">
-      <em>Stime indicative aggregate (fonti: DPC, CNI, MEF, Regioni). Esclusi costi indiretti (PIL perso, vite umane).</em>
+    <p style="font-size: 0.78rem; color: var(--scheda-grigio); margin-top: 0.2rem; line-height: 1.5;">
+      <strong>Fonti puntuali</strong> — <sup>1</sup> CNI, elaborazione CGIA di Mestre, 2016 (valori attualizzati; il dato nominale dell'epoca per il Friuli era di circa 4,8 mld). <sup>2</sup> Dipartimento della Protezione Civile, relazione alla Commissione europea per il Fondo di Solidarietà UE, febbraio 2017. <sup>3</sup> Regione Emilia-Romagna, prima valutazione dei danni, 15 giugno 2023 (stima provvisoria, poi rivista al rialzo). Esclusi i costi indiretti (PIL perso, vite umane).
     </p>
 
     <div class="sez-titolo"><span class="num">3</span><h2>Il rapporto costi-benefici (BCR)</h2></div>
