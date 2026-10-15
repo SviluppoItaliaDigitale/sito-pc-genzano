@@ -68,6 +68,10 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
   </style>
+  <!-- Stampa: le fonti puntuali aggiunte alla tabella del paragrafo 2 (correzione
+       fonti F18, audit 03/10/2026) spingevano un foglio quasi vuoto in fondo;
+       una scala ridotta tiene il fascicolo compatto (controllo fogli di stampa). -->
+  <style>@media print { html { font-size: 90%; } }</style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
@@ -107,7 +111,7 @@
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Sismabonus</dt><dd style="margin: 0;">L. 232/2016: detrazione fiscale per adeguamento sismico edifici. Riducono il rischio in modo incrementale ma a regime decennale.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">PNRR Missione 2</dt><dd style="margin: 0;">"Rivoluzione verde e transizione ecologica" — Componente C4 sulla gestione del rischio idrogeologico: ~2,5 miliardi euro 2021-2026.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Casa Italia</dt><dd style="margin: 0;">programma 2017 post-Amatrice: piano nazionale di prevenzione sismica e idrogeologica. Da 0,15% PIL stimato necessario.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Costo medio ricostruzione</dt><dd style="margin: 0;">Italia 1968-2018: oltre 290 miliardi € complessivi (vedi sopra). Solo i 6 grandi eventi qui sotto sommano ~136 miliardi: Belice (3,5) + Friuli (12) + Irpinia (70) + Aquila (13,7) + Emilia (12) + Centro Italia (25). Fonte CRESME.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Costo medio ricostruzione</dt><dd style="margin: 0;">Italia 1968-2018: oltre 290 miliardi € complessivi (vedi sopra). I sei grandi terremoti, da soli, superano i 130 miliardi (valori attualizzati): Belice 1968 (9,2) + Friuli 1976 (18,5) + Irpinia 1980 (52) + Aquila 2009 (13,7) + Emilia 2012 (13,3) + Centro Italia 2016-17 (23,5). Fonti: CNI/CGIA Mestre (dati 2016) e Dipartimento della Protezione Civile (Centro Italia, 2017) — dettaglio e fonti nella tabella del paragrafo 2.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">RC Catastrofale (DDL 213/2023)</dt><dd style="margin: 0;">Legge di bilancio 2024: obbligo assicurazione contro calamità per le imprese. Modello francese CatNat. Aspettativa di estensione a privati.</dd>
     </dl>
 
@@ -127,15 +131,15 @@
         <tr><th>Evento</th><th>Anno</th><th>Costi diretti (€ mld)</th><th>Note</th></tr>
       </thead>
       <tbody>
-        <tr><td>Friuli</td><td>1976</td><td class="num">4,5</td><td>Modello virtuoso di ricostruzione</td></tr>
-        <tr><td>Irpinia</td><td>1980</td><td class="num">52</td><td>Lunga, criticata</td></tr>
-        <tr><td>L'Aquila</td><td>2009</td><td class="num">13,7</td><td>Centro storico ancora in cantiere a 15 anni</td></tr>
-        <tr><td>Centro Italia (Amatrice)</td><td>2016-17</td><td class="num">23,5</td><td>Quattro regioni colpite</td></tr>
-        <tr><td>Alluvione Emilia-Romagna</td><td>2023</td><td class="num">8,8</td><td>Stima preliminare</td></tr>
+        <tr><td>Friuli</td><td>1976</td><td class="num">18,5</td><td>Modello virtuoso di ricostruzione — valore attualizzato<sup>1</sup></td></tr>
+        <tr><td>Irpinia</td><td>1980</td><td class="num">52</td><td>Lunga, criticata — valore attualizzato<sup>1</sup></td></tr>
+        <tr><td>L'Aquila</td><td>2009</td><td class="num">13,7</td><td>Centro storico ancora in cantiere a 15 anni<sup>1</sup></td></tr>
+        <tr><td>Centro Italia (Amatrice)</td><td>2016-17</td><td class="num">23,5</td><td>Quattro regioni colpite — stima dei danni<sup>2</sup></td></tr>
+        <tr><td>Alluvione Emilia-Romagna</td><td>2023</td><td class="num">8,8</td><td>Prima stima regionale, 15 giugno 2023<sup>3</sup></td></tr>
       </tbody>
     </table>
-    <p style="font-size: 0.8rem; color: var(--scheda-grigio); margin-top: 0.2rem;">
-      <em>Stime indicative aggregate (fonti: DPC, CNI, MEF, Regioni). Esclusi costi indiretti (PIL perso, vite umane).</em>
+    <p style="font-size: 0.78rem; color: var(--scheda-grigio); margin-top: 0.2rem; line-height: 1.5;">
+      <strong>Fonti puntuali</strong> — <sup>1</sup> CNI, elaborazione CGIA di Mestre, 2016 (valori attualizzati; il dato nominale dell'epoca per il Friuli era di circa 4,8 mld). <sup>2</sup> Dipartimento della Protezione Civile, relazione alla Commissione europea per il Fondo di Solidarietà UE, febbraio 2017. <sup>3</sup> Regione Emilia-Romagna, prima valutazione dei danni, 15 giugno 2023 (stima provvisoria, poi rivista al rialzo). Esclusi i costi indiretti (PIL perso, vite umane).
     </p>
 
     <div class="sez-titolo"><span class="num">3</span><h2>Il rapporto costi-benefici (BCR)</h2></div>

@@ -2090,3 +2090,7 @@ guests
 localStorage
 # --- Dossier clima 14/10/2026: identificatore del modello Open-Meteo (era5_seamless) citato nelle fonti ---
 seamless
+# --- Correzione fonti F18 audit 03/10/2026: titolo EN dell'articolo CNR citato come fonte (Amponsah et al. 2014) ---
+documentation
+hydrological
+modelling
