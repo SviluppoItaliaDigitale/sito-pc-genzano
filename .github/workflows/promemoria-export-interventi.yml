@@ -55,8 +55,8 @@ jobs:
 
           **Procedura (ripetibile, ~mezz'ora con Claude Code):**
           1. Scarica l'export dal gestionale (file \`gcpc-genzano-di-roma_global_reports_*.xlsx\`) in \`~/Scrivania\`, possibilmente **senza filtro di data** (cumulativo).
-          2. Se l'export è cumulativo lancia \`python3 scripts/genera-open-data-interventi.py\` (ricalcola i dataset aggregati e anonimi in \`static/open-data/\`). Se invece è **parziale** (filtrato a un periodo) lancia \`python3 scripts/aggiorna-open-data-delta.py <file.xlsx>\`, che aggiunge ai dataset pubblicati solo gli interventi nuovi: mai rigenerare da un export filtrato, cancellerebbe i mesi precedenti.
-          3. In sessione Claude Code: **un articolo per ogni giornata di intervento non ancora raccontata**, retrodatato alla data reale (orari arrotondati, niente nomi/targhe per privacy, fonti giornalistiche a supporto, gate \`pc-article-reviewer\`). Le giornate già coperte da articoli esistenti non si duplicano.
+          2. Se l'export è cumulativo lancia \`python3 scripts/genera-open-data-interventi.py\` (ricalcola i dataset aggregati e anonimi in \`static/open-data/\` e i dati dei grafici in \`data/open_data_interventi.json\`). Se invece è **parziale** (filtrato a un periodo) lancia \`python3 scripts/aggiorna-open-data-delta.py <file.xlsx>\`, che aggiunge ai dataset pubblicati e ai grafici solo gli interventi nuovi: mai rigenerare da un export filtrato, cancellerebbe i mesi precedenti.
+          3. In sessione Claude Code: **un articolo per ogni giornata di intervento non ancora raccontata**, retrodatato alla data reale (orari arrotondati, niente nomi/targhe per privacy, fonti giornalistiche a supporto, gate \`pc-article-reviewer\`). Le giornate già coperte da articoli esistenti non si duplicano. Per ogni giornata raccontata aggiungi la riga giorno → articolo in \`data/racconti_interventi.json\` (il generatore elenca le giornate ancora senza racconto).
           4. Build pulita → PR → merge → verifica deploy.
           5. Il file .xlsx NON va committato (contiene nomi dei volontari). Questa issue si chiude da sola al prossimo controllo, quando il dataset risulta fresco.
 

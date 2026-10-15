@@ -6,11 +6,18 @@
                              cambiare misura)
      Parametri: dati (nome del file in data/, obbligatorio), grafico
      (obbligatorio), titolo (obbligatorio), nota (facoltativa).
-     Se il file ha anche "interventi" (un record anonimo per uscita: d, fascia,
-     ore, volontari, mezzi) i grafici della pagina si collegano: la serie con
-     "chiavi" (mesi) filtra calendario e barre; "racconti" (giorno -> pagine)
-     porta nel dettaglio del giorno il link all'articolo, col titolo letto
-     dalla pagina a ogni build.
+     Se il file ha "interventi" o "racconti", i grafici della pagina si
+     collegano: la serie con "chiavi" (mesi) filtra calendario e barre.
+     Le barre seguono il filtro con "per_mese" della propria serie (chiave
+     del mese -> valori, come nei dati aperti) oppure, se manca, contando le
+     uscite di "interventi" (un record anonimo per uscita: d, fascia, ore,
+     volontari, mezzi; elencate anche nel dettaglio del giorno). "racconti"
+     (giorno -> pagine) porta nel dettaglio del giorno il link all'articolo,
+     col titolo letto dalla pagina a ogni build; può anche essere il nome di
+     un altro file di data/ che contiene la stessa mappa (open data:
+     "racconti_interventi"). "testi" (facoltativo) cambia le parole per il
+     periodo intero: tutto ("tutta la campagna") e rivivi ("Rivivi la
+     campagna giorno per giorno").
      Senza JavaScript il grafico resta leggibile: barre e valori sono HTML,
      il calendario ha la tabella dei giorni con interventi. Lo script
      /js/grafico-interattivo.js aggiunge cambio di misura, filtro per mese,
@@ -24,18 +31,26 @@
 {{ $id := printf "gi-%s-%s" $chiave $g | urlize }}
 {{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
 {{ $gs := slice "domenica" "lunedì" "martedì" "mercoledì" "giovedì" "venerdì" "sabato" }}
+{{ $tutto := "tutta la campagna" }}{{ $rivivi := "Rivivi la campagna giorno per giorno" }}
+{{ with $d.testi }}{{ with .tutto }}{{ $tutto = . }}{{ end }}{{ with .rivivi }}{{ $rivivi = . }}{{ end }}{{ end }}
 {{ if not (.Page.Store.Get "graficoInterattivoJs") }}{{ .Page.Store.Set "graficoInterattivoJs" true }}<script src="{{ "js/grafico-interattivo.js" | relURL }}" defer></script>{{ end }}
-{{ with $d.interventi }}{{ $kd := printf "graficoInterattivoDati-%s" $chiave }}{{ if not ($.Page.Store.Get $kd) }}{{ $.Page.Store.Set $kd true }}
+{{ if or $d.interventi $d.racconti }}{{ $kd := printf "graficoInterattivoDati-%s" $chiave }}{{ if not (.Page.Store.Get $kd) }}{{ .Page.Store.Set $kd true }}
+  {{ $mappa := $d.racconti }}
+  {{ if eq (printf "%T" $mappa) "string" }}{{ $nome := $mappa }}{{ $mappa = index site.Data $nome }}{{ if not $mappa }}{{ errorf "grafico-interattivo: data/%s (racconti di data/%s) non trovato" $nome $chiave }}{{ end }}{{ end }}
   {{ $racc := dict }}
-  {{ range $giorno, $percorsi := $d.racconti }}
+  {{ range $giorno, $percorsi := $mappa }}
     {{ $lista := slice }}
-    {{ range $percorsi }}{{ with site.GetPage (printf "/%s" .) }}{{ $lista = $lista | append (dict "t" .Title "u" .RelPermalink) }}{{ else }}{{ errorf "grafico-interattivo: racconto %s non trovato in data/%s" . $chiave }}{{ end }}{{ end }}
+    {{/* Un articolo programmato (data futura) non è ancora nel sito: si salta e comparirà al build del suo giorno. Un percorso sbagliato ferma la build. */}}
+    {{ range $percorsi }}{{ with site.GetPage (printf "/%s" .) }}{{ $lista = $lista | append (dict "t" .Title "u" .RelPermalink) }}{{ else }}{{ if not (fileExists (printf "content/%s.md" .)) }}{{ errorf "grafico-interattivo: racconto %s non trovato (racconti di data/%s)" . $chiave }}{{ end }}{{ end }}{{ end }}
+    {{ if not $lista }}{{ continue }}{{ end }}
     {{ $racc = merge $racc (dict $giorno $lista) }}
   {{ end }}
-<script type="application/json" class="gi-dati" data-gi-chiave="{{ $chiave }}">{{ dict "interventi" . "racconti" $racc | jsonify | safeJS }}</script>
+  {{ $blocco := dict "racconti" $racc }}
+  {{ with $d.interventi }}{{ $blocco = merge $blocco (dict "interventi" .) }}{{ end }}
+<script type="application/json" class="gi-dati" data-gi-chiave="{{ $chiave }}">{{ $blocco | jsonify | safeJS }}</script>
 {{ end }}{{ end }}
 
-<figure class="gi" id="{{ $id }}" aria-labelledby="{{ $id }}-t" data-gi-chiave="{{ $chiave }}" data-gi-grafico="{{ $g }}">
+<figure class="gi" id="{{ $id }}" aria-labelledby="{{ $id }}-t" data-gi-chiave="{{ $chiave }}" data-gi-grafico="{{ $g }}" data-gi-tutto="{{ $tutto }}">
   <figcaption class="gi-titolo" id="{{ $id }}-t">{{ $titolo }}</figcaption>
 
 {{ if eq $g "calendario" }}
@@ -69,7 +84,7 @@
     <span><i class="gi-cella gi-l0"></i>0</span><span><i class="gi-cella gi-l1"></i>1</span><span><i class="gi-cella gi-l2"></i>2</span><span><i class="gi-cella gi-l3"></i>3</span><span><i class="gi-cella gi-l4"></i>4 o più</span>
   </div>
   <div class="gi-rivivi" hidden>
-    <p class="gi-rivivi-titolo" id="{{ $id }}-riv">Rivivi la campagna giorno per giorno</p>
+    <p class="gi-rivivi-titolo" id="{{ $id }}-riv">{{ $rivivi }}</p>
     <div class="gi-rivivi-comandi">
       <button type="button" class="gi-play"><span class="gi-play-segno" aria-hidden="true">▶</span> <span class="gi-play-testo">Avvia</span></button>
       <input type="range" class="gi-cursore" min="0" max="{{ sub (len $giorni) 1 }}" value="{{ sub (len $giorni) 1 }}" step="1" aria-labelledby="{{ $id }}-riv">
@@ -104,7 +119,7 @@
     {{ range $i, $m := $s.misure }}<button type="button" class="gi-misura" data-indice="{{ $i }}" aria-pressed="{{ cond (eq $i 0) "true" "false" }}">{{ $m.nome }}</button>{{ end }}
   </div>
   {{ end }}
-  <ul class="gi-barre" data-gi-barre="{{ $s.misure | jsonify }}">
+  <ul class="gi-barre" data-gi-barre="{{ $s.misure | jsonify }}"{{ with $s.per_mese }} data-gi-per-mese="{{ . | jsonify }}"{{ end }}>
     {{ range $i, $e := $s.etichette }}
       {{ $v := index $m0.valori $i }}
       {{ $w := 0 }}{{ if gt $max 0 }}{{ $w = div (mul $v 1000) $max }}{{ end }}

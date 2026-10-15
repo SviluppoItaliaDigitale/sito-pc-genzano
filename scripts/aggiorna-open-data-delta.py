@@ -8,7 +8,9 @@ i totali pubblicati con un sottoinsieme, cancellando i mesi precedenti.
 
 Questo script fa il contrario: prende i dataset GIÀ PUBBLICATI in
 static/open-data/ e vi AGGIUNGE le sole righe nuove dell'export parziale
-(il "delta"), con la stessa logica di aggregazione del generatore.
+(il "delta"), con la stessa logica di aggregazione del generatore. Lo stesso
+vale per data/open_data_interventi.json, i dati dei grafici interattivi della
+pagina /open-data/ (per giorno e per mese), con le funzioni del generatore.
 
 Uso:  python3 scripts/aggiorna-open-data-delta.py <export-parziale.xlsx> [--dry-run]
                                                    [--volontari-nuovi N]
@@ -226,6 +228,25 @@ def main():
     gen.write_rows("automezzi-impiegati", ["automezzo", "interventi"],
                    sorted(([k, n] for k, n in mez.items()), key=lambda x: -x[1]), periodo_new)
     gen.write_kv("statistiche-volontari", vol_new, periodo_new)
+
+    # grafici interattivi di /open-data/: stessa somma, per giorno e per mese
+    if os.path.exists(gen.DATI_GRAFICI):
+        agg = gen.grafici_da_file()
+        for r in nuove:
+            rec = gen.record_grafico(r, col)
+            if rec["d"]:
+                gen.aggiungi_grafico(agg, rec)
+        g = gen.scrivi_grafici(agg, periodo_new)
+        s = g["serie"]
+        assert sum(x["n"] for x in g["giorni"]) == v["Interventi registrati"] + len(nuove), \
+            "grafici: interventi diversi dal totale"
+        assert dict(zip(s["tipologie"]["etichette"], s["tipologie"]["misure"][0]["valori"])) == tip, \
+            "grafici: tipologie diverse dal dataset"
+        assert dict(zip(s["mezzi"]["etichette"], s["mezzi"]["misure"][0]["valori"])) == mez, \
+            "grafici: automezzi diversi dal dataset"
+    else:
+        print(f"  {gen.DATI_GRAFICI} assente: i grafici si creano con un export cumulativo "
+              "(genera-open-data-interventi.py).")
     print("\nDataset aggiornati per delta. Il file .xlsx NON va committato.")
 
 
