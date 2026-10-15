@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-14T22:07:06+00:00",
+  "generato": "2026-10-15T00:32:43+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-14T22:35:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni, pressing sull'Ue per l'energia e critica a Trump: \"Rischiosa intesa su gasolio russo\"",
+   "url": "https://www.adnkronos.com/politica/meloni-consiglio-ue-discorso-camere_HMQyEn0xXZ7UBf66J7OSp"
+  },
+  {
+   "data": "2026-10-14T22:31:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "l Papa 'si è alzato ed è di buon umore', al via il recupero. Trump: 'Spero che il pontefice si rimetta'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/l-papa-si-e-alzato-ed-e-di-buon-umore-al-via-il-recupero.-trump-spero-che-il-pontefice_c5870a60-a48c-48be-8f6f-569525ab0fc1.html"
+  },
   {
    "data": "2026-10-14T22:01:00+00:00",
    "fonte": "ADNKRONOS",
@@ -29,10 +41,10 @@
    "url": "https://www.adnkronos.com/sport/champions-roma-real-gasperini_xnud2LPxA8JrmrJufKwUZ"
   },
   {
-   "data": "2026-10-14T21:25:09+00:00",
+   "data": "2026-10-14T21:32:21+00:00",
    "fonte": "ANSA",
-   "titolo": "Champions: Roma sconfitta amara, avanti 3-1 il Real la ribalta in 8 minuti",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/14/champions-roma-sconfitta-amara-avanti-3-1-il-real-la-ribalta-in-8-minuti_d32e57f1-7e06-4727-a272-394e02130a10.html"
+   "titolo": "Sconfitta amara per la Roma, avanti 3-1 il Real Madrid la ribalta in otto minuti: finisce 4-3",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/14/sconfitta-amara-per-la-roma-avanti-3-1-il-real-madrid-la-ribalta-in-otto-minuti_d32e57f1-7e06-4727-a272-394e02130a10.html"
   },
   {
    "data": "2026-10-14T21:19:12+00:00",
@@ -51,12 +63,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Mastella e la lotta al tumore: \"Ho iniziato le cure tra medicina e fede\"",
    "url": "https://www.adnkronos.com/politica/mastella-tumore-cure-come-sta_5Jld5OC4awd2HgtaJJ542c"
-  },
-  {
-   "data": "2026-10-14T20:10:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa 'si è alzato ed è di buon umore', al via il recupero",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/il-papa-si-e-alzato-ed-e-di-buon-umore-al-via-il-recupero_c5870a60-a48c-48be-8f6f-569525ab0fc1.html"
   },
   {
    "data": "2026-10-14T20:09:06+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Uno dei minorenni della banda della minicar: 'Era uno scherzo'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/uno-dei-minorenni-della-banda-della-minicar-era-uno-scherzo_65555a49-3948-4536-8119-b7ad101d1c41.html"
-  },
-  {
-   "data": "2026-10-14T18:31:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Prima neve sulla Maiella, in Abruzzo registrati -2,1 gradi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/prima-neve-sulla-maiella-in-abruzzo-registrati-21-gradi_8e5288aa-6f10-439c-8f8f-2b5c7ff3557a.html"
   }
  ]
 }
