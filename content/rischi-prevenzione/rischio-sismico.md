@@ -67,17 +67,17 @@ Il rischio nasce dall'incontro di tre fattori: la **pericolosità** (quanto fort
 | Fattore | Valore a Genzano | Confronto nazionale |
 |---|---|---|
 | Pericolosità (accelerazione attesa al suolo, 10% di probabilità in 50 anni) | 0,163 g (16,3% dell'accelerazione di gravità) | il 29% dei comuni italiani ha una pericolosità maggiore |
-| Edifici ad alta vulnerabilità | 10% (circa 1 su 10) | l'80% dei comuni italiani ha una vulnerabilità maggiore |
+| Edifici ad alta vulnerabilità | 5% (circa 1 su 20) | il 69% dei comuni italiani ha una vulnerabilità maggiore |
 
 **Danni probabili in 50 anni (rischio atteso)**
 
 | Tipo di perdita | Stima a 50 anni | Confronto nazionale |
 |---|---|---|
-| Vittime | meno dell'1% della popolazione (circa 1 ogni 2.117 persone) | il 35% dei comuni ha un rischio maggiore |
-| Edifici inagibili | 6% (circa 1 su 16) | il 38% dei comuni ha un rischio maggiore |
-| Perdite economiche | 3% del valore degli edifici (circa 34,3 milioni di euro) | il 34% dei comuni ha un rischio maggiore |
+| Vittime | meno dell'1% della popolazione (circa 1 ogni 1.617 persone) | il 30% dei comuni ha un rischio maggiore |
+| Edifici inagibili | 10% (circa 1 su 10) | il 35% dei comuni ha un rischio maggiore |
+| Perdite economiche | 5% del valore degli edifici (circa 53,6 milioni di euro) | il 27% dei comuni ha un rischio maggiore |
 
-Nel confronto con il resto d'Italia, Genzano si colloca **al di sotto della media** per quasi tutti gli indicatori: molti comuni italiani hanno un rischio sismico più alto. Resta comunque un territorio sismico, e i danni stimati si riducono con la prevenzione: edifici a norma, arredi fissati alle pareti, [kit di emergenza](/rischi-prevenzione/kit-emergenza/) pronto e [piano familiare](/piano-familiare/) condiviso.
+Nel confronto con il resto d'Italia, gli edifici di Genzano sono **meno vulnerabili** di quelli di due comuni su tre. La pericolosità e il rischio atteso, invece, sono **più alti** di quelli di circa due comuni italiani su tre: Genzano è un territorio sismico a tutti gli effetti. I danni stimati si riducono con la prevenzione: edifici a norma, arredi fissati alle pareti, [kit di emergenza](/rischi-prevenzione/kit-emergenza/) pronto e [piano familiare](/piano-familiare/) condiviso.
 
 > ℹ️ **Fonte:** [SicuroPiù — scheda di Genzano di Roma](https://www.sicuropiu.it/rischio.xhtml?istat=12058043&type=umane) (Dipartimento della Protezione Civile · Fondazione EUCENTRE · Consorzio ReLUIS), su dati INGV e ISTAT 2011. Sul portale puoi consultare anche le **cartine interattive** di pericolosità, vulnerabilità ed esposizione del territorio.
 
