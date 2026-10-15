@@ -1463,6 +1463,7 @@ raster
 rasterizza
 rasterizzati
 rasterizzato
+rastri
 rastro
 rating
 ray
