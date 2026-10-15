@@ -10,6 +10,11 @@
     "titolo": "Pericolosità BASSA",
     "zona_aib": 9,
     "data": "2026-10-15",
-    "fonte": "Regione Lazio — Centro Funzionale (modello RISICOLazio + Fondazione CIMA)"
+    "fonte": "Regione Lazio — Centro Funzionale (modello RISICOLazio + Fondazione CIMA)",
+    "domani": {
+      "livello": "verde",
+      "livello_aib": "BASSO",
+      "data": "2026-10-16"
+    }
   }
 }
