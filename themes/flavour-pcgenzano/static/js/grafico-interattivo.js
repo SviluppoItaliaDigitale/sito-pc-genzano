@@ -7,7 +7,10 @@
    uscite del giorno, se il file le ha, e l'articolo che le racconta; il
    cursore «Rivivi» scorre i giorni. Ogni grafico ha «Scarica i dati» (CSV).
    Le parole per il periodo intero («tutta la campagna», «tutto il periodo»)
-   arrivano da data-gi-tutto. Senza questo script i grafici restano leggibili. */
+   arrivano da data-gi-tutto. Senza questo script i grafici restano leggibili.
+   Correzioni del 16/10/2026: scegliendo un mese il giorno selezionato passa
+   dentro quel mese e il calendario lo porta in vista; «Pausa animazioni»
+   ferma e nasconde «Rivivi» anche a pagina già aperta. */
 (function () {
   'use strict';
 
@@ -19,9 +22,24 @@
   function maiuscola(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
   function minuscola(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
   function lista(nodi) { return Array.prototype.slice.call(nodi); }
+  /* Movimento ridotto: impostazione del sistema oppure «Pausa animazioni» del
+     pannello accessibilità, che scrive su <html> sia a11y-pause-animations
+     sia a11y-pause-anim (si leggono tutte e due). */
   function movimentoRidotto() {
+    var h = document.documentElement.classList;
     return (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ||
-      document.documentElement.classList.contains('a11y-pause-anim');
+      h.contains('a11y-pause-anim') || h.contains('a11y-pause-animations');
+  }
+  /* Richiama fn quando la preferenza può essere cambiata a pagina aperta. */
+  function alCambioMovimento(fn) {
+    if (window.MutationObserver) {
+      new MutationObserver(fn).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    }
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (mq.addEventListener) mq.addEventListener('change', fn);
+      else if (mq.addListener) mq.addListener(fn);
+    }
   }
   function dataLunga(iso) {
     var p = iso.split('-');
@@ -300,6 +318,29 @@
         scorrevole.scrollLeft = x + r.width + 32 - scorrevole.clientWidth;
       }
     }
+    /* Mese scelto nel grafico dei mesi (null = periodo intero). */
+    var meseFiltro = null;
+    function nelMese(c) { return !meseFiltro || c.getAttribute('data-d').indexOf(meseFiltro) === 0; }
+    /* Primo giorno con interventi del mese mostrato, altrimenti il primo giorno. */
+    function primoGiorno() {
+      var primo = -1;
+      for (var k = 0; k < celle.length; k++) {
+        if (!nelMese(celle[k])) continue;
+        if (primo < 0) primo = k;
+        if (celle[k].getAttribute('data-n') !== '0') return k;
+      }
+      return primo < 0 ? 0 : primo;
+    }
+    /* Porta in vista un mese intero: se la sua prima o la sua ultima casella
+       sono fuori dal riquadro, il mese si allinea a sinistra. */
+    function mostraMese(primo, ultimo) {
+      if (!scorrevole || scorrevole.scrollWidth <= scorrevole.clientWidth) return;
+      var w = scorrevole.getBoundingClientRect();
+      var a = celle[primo].getBoundingClientRect(), z = celle[ultimo].getBoundingClientRect();
+      if (a.left >= w.left + 4 && z.right <= w.right - 4) return;
+      var x = a.left - w.left + scorrevole.scrollLeft - 32;
+      scorrevole.scrollLeft = x < 48 ? 0 : x;
+    }
     cal.tabIndex = 0;
     dettaglio.hidden = false;
     pulsanteCsv(fig, function () {
@@ -351,9 +392,9 @@
     cal.addEventListener('mouseleave', function () { if (fissato >= 0 && fissato !== corrente) scegli(fissato); });
     cal.addEventListener('focus', function () {
       if (corrente >= 0) return;
-      for (var k = 0; k < celle.length; k++) { if (celle[k].getAttribute('data-n') !== '0') { fissato = k; scegli(k); return; } }
-      fissato = 0;
-      scegli(0);
+      fissato = primoGiorno();
+      scegli(fissato);
+      inVista(celle[fissato]);
     });
     cal.addEventListener('keydown', function (ev) {
       var passi = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 7, ArrowLeft: -7 };
@@ -375,11 +416,14 @@
     document.addEventListener('gi:filtro', function (ev) {
       if (ev.detail.chiave !== chiave || !dati) return;
       var mese = ev.detail.mese;
-      var n = 0, attivi = 0, giorni = 0;
-      celle.forEach(function (c) {
-        var dentro = !mese || c.getAttribute('data-d').indexOf(mese) === 0;
+      meseFiltro = mese;
+      var n = 0, attivi = 0, giorni = 0, primo = -1, ultimo = -1;
+      celle.forEach(function (c, i) {
+        var dentro = nelMese(c);
         c.classList.toggle('gi-fuori', !dentro);
         if (!dentro) return;
+        if (primo < 0) primo = i;
+        ultimo = i;
         var k = parseInt(c.getAttribute('data-n'), 10);
         giorni++;
         n += k;
@@ -387,6 +431,15 @@
       });
       if (numeri) numeri.textContent = mese ? maiuscola(ev.detail.etichetta) + ': ' + quante(n, 'intervento', 'interventi') + ' in ' + quante(attivi, 'giornata', 'giornate') + ' su ' + giorni + '.' : numeriTutti;
       mostraAvviso(ev.detail.etichetta);
+      if (!mese || primo < 0) return;
+      /* Il giorno scelto non resta fuori dal mese mostrato: passa al primo
+         giorno con interventi del mese, e lì torna anche quando il mouse esce. */
+      if (corrente >= 0 && !nelMese(celle[corrente])) {
+        var nuovo = primoGiorno();
+        if (fissato >= 0) fissato = nuovo;
+        scegli(nuovo);
+      }
+      mostraMese(primo, ultimo);
     });
 
     /* Rivivi il periodo giorno per giorno. */
@@ -437,7 +490,15 @@
       }, passo);
     });
     document.addEventListener('visibilitychange', function () { if (document.hidden) ferma(); });
-    if (movimentoRidotto()) play.hidden = true;
+    /* Con movimento ridotto il cursore resta, Avvia no; vale anche se la
+       preferenza cambia a pagina aperta (e ferma la riproduzione in corso). */
+    function aggiornaMovimento() {
+      var ridotto = movimentoRidotto();
+      if (ridotto) ferma();
+      play.hidden = ridotto;
+    }
+    aggiornaMovimento();
+    alCambioMovimento(aggiornaMovimento);
     rivivi.hidden = false;
     posiziona(celle.length - 1);
     window.addEventListener('beforeprint', function () {

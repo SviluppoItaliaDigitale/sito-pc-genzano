@@ -92,7 +92,7 @@
     else if(p.contrast==='blue-cream')add('a11y-contrast-blue-cream');
     if(p.grayscale)add('a11y-grayscale');
     if(p.hideImages)add('a11y-hide-images');
-    if(p.pauseAnimations)add('a11y-pause-animations');
+    if(p.pauseAnimations){add('a11y-pause-animations');add('a11y-pause-anim');}
     if(p.highlightLinks)add('a11y-highlight-links');
     if(p.bigCursor)add('a11y-big-cursor');
     if(p.hideTranslateButton){add('a11y-hide-translate-button');h.setAttribute('translate','no');add('notranslate');var m=document.createElement('meta');m.setAttribute('name','google');m.setAttribute('content','notranslate');document.head.appendChild(m);}
