@@ -1,12 +1,143 @@
 {
  "_snapshot": {
-  "generato": "2026-10-14T18:57:14+00:00",
+  "generato": "2026-10-15T09:56:09+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 0,
-  "scaduti_scartati": 20,
+  "avvisi": 10,
+  "scaduti_scartati": 5,
   "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
- "avvisi": []
+ "avvisi": [
+  {
+   "in_corso": false,
+   "regione": "Emilia e Romagna",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T00:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.006"
+  },
+  {
+   "in_corso": false,
+   "regione": "Lombardia",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T00:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.003"
+  },
+  {
+   "in_corso": false,
+   "regione": "Marche",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T18:00:00+00:00",
+   "fine": "2026-10-17T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.012"
+  },
+  {
+   "in_corso": false,
+   "regione": "Marche",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-15T19:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.011"
+  },
+  {
+   "in_corso": false,
+   "regione": "Piemonte",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T00:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.001"
+  },
+  {
+   "in_corso": false,
+   "regione": "Toscana",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T18:00:00+00:00",
+   "fine": "2026-10-16T23:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.010"
+  },
+  {
+   "in_corso": false,
+   "regione": "Toscana",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T00:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.009"
+  },
+  {
+   "in_corso": false,
+   "regione": "Umbria",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T18:00:00+00:00",
+   "fine": "2026-10-17T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.014"
+  },
+  {
+   "in_corso": false,
+   "regione": "Umbria",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T00:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.013"
+  },
+  {
+   "in_corso": false,
+   "regione": "Veneto",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-16T00:00:00+00:00",
+   "fine": "2026-10-16T08:59:00+00:00",
+   "emesso": "2026-10-15T08:11:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261015101156.005"
+  }
+ ]
 }
