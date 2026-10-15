@@ -8,7 +8,7 @@ sitemap:
   changefreq: monthly
 aliases:
   - /allerte-meteo/livelli-a-genzano/
-dataUltimaRevisione: "2026-06-15"
+dataUltimaRevisione: "2026-10-15"
 ---
 
 I codici colore dell'allerta meteo — verde, giallo, arancione, rosso — sono uguali in tutta Italia. Ma **cosa cambia concretamente per chi vive a Genzano** quando il livello sale? Questa pagina traduce ogni colore nel nostro territorio: cosa significa, quali zone sono più delicate, cosa fai tu e cosa fa il Comune con il Gruppo.
@@ -26,7 +26,7 @@ Perché conta il territorio: Genzano sorge sul bordo di un antico cratere del Vu
 | **Cosa fai tu** | Vita normale. Resta informato seguendo i canali ufficiali. |
 | **Cosa fa il Comune e il Gruppo** | Monitoraggio ordinario. Il Centro Operativo Comunale (COC) non è attivo. |
 
-## 🟡 Giallo — Criticità ordinaria (attenzione)
+## 🟡 Giallo — Criticità ordinaria (almeno attenzione)
 
 | | |
 |---|---|
@@ -35,7 +35,7 @@ Perché conta il territorio: Genzano sorge sul bordo di un antico cratere del Vu
 | **Cosa fai tu** | Attenzione ai sottopassi e ai corsi d'acqua. Non sostare sotto alberi isolati. Tieni d'occhio i bollettini. |
 | **Cosa fa il Comune e il Gruppo** | Il Comune valuta il bollettino. Di norma il COC non si attiva per il solo giallo, ma il Gruppo resta in pre-allerta. |
 
-## 🟠 Arancione — Criticità moderata (preallarme)
+## 🟠 Arancione — Criticità moderata (almeno attenzione)
 
 | | |
 |---|---|
@@ -44,14 +44,18 @@ Perché conta il territorio: Genzano sorge sul bordo di un antico cratere del Vu
 | **Cosa fai tu** | Limita gli spostamenti allo stretto necessario. Metti in sicurezza i beni nei locali interrati e non scendere in cantine o garage. Controlla i familiari fragili. Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/). |
 | **Cosa fa il Comune e il Gruppo** | Il Comune può attivare il COC. Con il COC attivo, il Gruppo può essere convocato per turni di presidio e supporto. |
 
-## 🔴 Rosso — Criticità elevata (allarme)
+## 🔴 Rosso — Criticità elevata (almeno preallarme)
 
 | | |
 |---|---|
 | **Cosa significa a Genzano** | Fenomeni molto intensi con elevata probabilità di danni: possibili frane sui versanti, allagamenti estesi nelle zone basse, strade interrotte. |
 | **Zone più delicate** | Tutte quelle dei livelli precedenti, con rischio aggravato: versanti, fossi, zone depresse, sottopassi, piani interrati. |
 | **Cosa fai tu** | Resta in luogo sicuro, ai piani alti. Non uscire se non per un'evacuazione disposta dall'autorità. Non attraversare strade allagate né sottopassi. Segui solo fonti ufficiali e tieni il telefono carico. Se devi evacuare, raggiungi la tua [area di attesa](/aree-attesa/). |
-| **Cosa fa il Comune e il Gruppo** | Il COC è attivo. Il Gruppo opera su turni di presidio e supporto, su mandato del Comune. Possibile attivazione delle aree di attesa. |
+| **Cosa fa il Comune e il Gruppo** | Il Comune attiva almeno la fase di preallarme, spesso il COC pieno. Il Gruppo opera su turni di presidio e supporto, su mandato del Comune. Possibile attivazione delle aree di attesa. |
+
+## Il colore non dice da solo quale fase del Comune
+
+Il livello di allerta (verde, giallo, arancione, rosso) lo decide il Centro Funzionale Regionale: dice **cosa può succedere**. Le fasi operative del Comune (attenzione, preallarme, allarme) le decide il **Sindaco**, in base alla situazione reale: dicono **cosa fa l'amministrazione**. Le indicazioni operative del Dipartimento della Protezione Civile del 10 febbraio 2016 — richiamate anche dalla Regione Lazio nella [DGR 1145/2024](https://www.regione.lazio.it/sites/default/files/documentazione/2026/DGR-1145-23-12-2024-Allegato3-tabella-allerte-criticita-valanghe.pdf) — fissano solo una corrispondenza minima, non biunivoca: con allerta gialla o arancione il Comune attiva **almeno** la fase di attenzione, con allerta rossa **almeno** la fase di preallarme. La fase di allarme non dipende dal colore dell'allerta: si attiva quando l'evento è già in corso.
 
 ## Il tuo indirizzo è in zona a pericolosità?
 
