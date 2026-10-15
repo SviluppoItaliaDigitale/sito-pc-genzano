@@ -58,7 +58,7 @@ Il programma completo dei talk è nel [PDF pubblicato dal Dipartimento](https://
 
 Nel Lazio la Settimana coincide con **CASSINUM_EXE_2026**, l'esercitazione regionale di protezione civile, a Cassino da venerdì 16 a domenica 18 ottobre. La promuove la Direzione regionale Emergenza, Protezione Civile e NUE 112 della Regione Lazio, con la Prefettura di Frosinone, il Comune di Cassino, l'INGV e l'Università di Cassino e del Lazio Meridionale. Lo scenario è un terremoto simulato: si mettono alla prova il piano comunale, i centri di coordinamento, l'evacuazione e l'accoglienza della popolazione, la colonna mobile regionale e le organizzazioni di volontariato.
 
-Le informazioni vengono dal comunicato della Regione Lazio. Perché si fanno le esercitazioni e come si valutano lo spieghiamo nell'articolo sulla [norma ISO 22398](/comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile/).
+Tra le organizzazioni di volontariato attivate c'è il Coordinamento FE.PI.VOL., a cui aderisce il nostro Gruppo: ne parliamo nell'articolo dedicato a [Cassinum Exe 2026](/comunicazioni/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino/). Perché si fanno le esercitazioni e come si valutano lo spieghiamo nell'articolo sulla [norma ISO 22398](/comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile/).
 
 ## La mostra «Terremoti d'Italia» a Palmanova
 
@@ -83,6 +83,7 @@ Chi vuole dedicare l'intera settimana alla protezione civile trova sul nostro si
 
 - [Settimana della protezione civile a scuola: il programma pronto](/formazione/settimana-protezione-civile/)
 - [Rischio sismico: cosa fare prima, durante e dopo](/rischi-prevenzione/rischio-sismico/)
+- [Cassinum Exe 2026: a Cassino l'esercitazione regionale con il Coordinamento FE.PI.VOL.](/comunicazioni/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino/)
 - [Le esercitazioni di protezione civile e la norma ISO 22398](/comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile/)
 - [Abili a proteggere](/abili-a-proteggere/)
 
