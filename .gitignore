@@ -21,6 +21,9 @@ package-lock.json
 # Claude Code (impostazioni locali)
 .claude/settings.local.json
 
+# Claude Code (worktree isolati di sessioni/agenti in background)
+.claude/worktrees/
+
 # Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-progetto.sh)
 CONTESTO-PROGETTO.md
 CONTESTO-PROGETTO-slim.md
