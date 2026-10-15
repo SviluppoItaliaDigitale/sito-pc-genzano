@@ -5,11 +5,12 @@ Tiene aggiornati dentro la skill i testi dei manuali e controlla una pagina con 
 Comandi:
   versioni     di quando sono i manuali che la skill sta usando
   controlla    confronta con i manuali su GitHub: codice 0 aggiornati, 1 cambiati, 2 non raggiungibili
-  aggiorna     scarica i manuali e riscrive references/manuali (o --uscita), dice cosa è cambiato; --pacchetto crea il file .skill
+  aggiorna     scarica i manuali e riscrive la copia in uso (o --uscita), dice cosa è cambiato; --pacchetto crea il file .skill
   testo FILE   controlla pagine Markdown (anche con front matter Hugo) e cita per ogni segnalazione la sezione del manuale
 Serve git per scaricare; «aggiorna» usa anche PyYAML per le pagine dei Fondamenti. --autotest prova tutto senza rete.
 Lo stesso file è nel repository del sito della PC Genzano come scripts/manuali-agid.py: il workflow aggiorna-manuale.yml lo usa
 ogni lunedì con «aggiorna --uscita .manuale/manuali-agid --resoconto» e mette le righe cambiate nell'issue di revisione.
+La copia in uso è references/manuali nella skill e .manuale/manuali-agid nel repository del sito.
 """
 from __future__ import annotations
 
@@ -27,8 +28,17 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 
+try:  # ora italiana anche dove l'orologio è in UTC (il workflow del sito gira su GitHub)
+    from zoneinfo import ZoneInfo
+    FUSO = ZoneInfo("Europe/Rome")
+except Exception:  # senza la banca dati dei fusi orari vale l'ora del computer
+    FUSO = None
+
 CARTELLA_SKILL = Path(__file__).resolve().parent.parent
-MANUALI = CARTELLA_SKILL / "references" / "manuali"
+# Nella skill i manuali stanno in references/manuali; nel repository del sito (niente SKILL.md accanto a scripts/) stanno nella
+# copia che il controllo del lunedì tiene in .manuale/manuali-agid. Il file .skill si crea solo dentro la skill.
+DENTRO_LA_SKILL = (CARTELLA_SKILL / "SKILL.md").is_file()
+MANUALI = CARTELLA_SKILL / ("references/manuali" if DENTRO_LA_SKILL else ".manuale/manuali-agid")
 CACHE = Path(os.environ.get("MANUALI_AGID_CACHE") or Path.home() / ".cache" / "manuali-agid")
 BASE_DI = "https://designers.italia.it"
 MOD_URL = "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/"
@@ -974,7 +984,7 @@ def aggiorna(uscita: Path, cache: Path, fonti: dict = FONTI, documenti: list[dic
         vecchie = carica_json(confronto) or {"fonti": {}, "documenti": {}}
     else:
         vecchie = carica_json(uscita / "versioni.json") or carica_json(MANUALI / "versioni.json") or {"fonti": {}, "documenti": {}}
-    oggi = adesso or datetime.now().strftime("%d/%m/%Y %H:%M")
+    oggi = adesso or datetime.now(FUSO).strftime("%d/%m/%Y %H:%M")
     copie = {fid: copia_aggiornata(fid, fonte, cache, documenti) for fid, fonte in fonti.items()}
     resoconto = {"documenti": [], "regole_spente": [], "regole_spente_ora": [], "design_system": None, "novita_design_system": []}
     nuove = {"aggiornato_il": oggi, "fonti": {}, "documenti": {}, "design_system": None}
@@ -1114,9 +1124,9 @@ def comando_controlla(argomenti) -> int:
         print(json.dumps(esito, ensure_ascii=False, indent=1))
     elif esito["stato"] == "aggiornati":
         extra = " (i repository hanno novità che non riguardano questi testi)" if esito["fonti_cambiate"] else ""
-        print(f"Manuali aggiornati: i testi della skill (scaricati il {versioni['aggiornato_il']}) sono uguali a quelli online{extra}.")
+        print(f"Manuali aggiornati: i testi in uso (scaricati il {versioni['aggiornato_il']}) sono uguali a quelli online{extra}.")
     elif esito["stato"] == "cambiati":
-        print(f"I manuali sono cambiati rispetto ai testi della skill (scaricati il {versioni['aggiornato_il']}):")
+        print(f"I manuali sono cambiati rispetto ai testi in uso (scaricati il {versioni['aggiornato_il']}):")
         for c in esito["cambiati"]:
             print(f"  - {c['titolo']} ({c['nota']}): {c['url']}")
         print(f"Lancia «{COMANDO} aggiorna» e leggi le parti cambiate prima di scrivere.")
@@ -1128,7 +1138,7 @@ def comando_controlla(argomenti) -> int:
 
 def testo_issue(esito: dict, versioni: dict) -> str:
     righe = [f"I manuali per scrivere i testi della PA sono cambiati rispetto alla copia della skill scrittura-pubblica-amministrazione "
-             f"(testi scaricati il {versioni.get('aggiornato_il', '?')}). Controllo del {datetime.now().strftime('%d/%m/%Y')}:", ""]
+             f"(testi scaricati il {versioni.get('aggiornato_il', '?')}). Controllo del {datetime.now(FUSO).strftime('%d/%m/%Y')}:", ""]
     righe += [f"- [{c['titolo']}]({c['url']}): {c['nota']}" for c in esito["cambiati"]]
     righe += ["", "Cosa fare:", "",
               "1. Nella cartella della skill: `python3 scripts/manuali.py aggiorna --mostra` e leggi cosa è cambiato.",
@@ -1192,6 +1202,10 @@ def resoconto_markdown(resoconto: dict, prima: dict, dopo: dict, fonti: dict = F
 
 def comando_aggiorna(argomenti) -> int:
     uscita = Path(argomenti.uscita).expanduser() if argomenti.uscita else MANUALI
+    if argomenti.pacchetto and not DENTRO_LA_SKILL:
+        # Fuori dalla skill CARTELLA_SKILL è il repository intero: il pacchetto lo conterrebbe tutto.
+        print(f"Il file .skill si crea solo dalla cartella della skill: in {CARTELLA_SKILL} non c'è SKILL.md.")
+        return 2
     prima = carica_json(uscita / "versioni.json") or carica_json(MANUALI / "versioni.json") or {"fonti": {}, "documenti": {}}
     if uscita.resolve() == MANUALI.resolve() and not os.access(MANUALI, os.W_OK):
         print("La cartella della skill è di sola lettura (succede nell'app): usa --uscita CARTELLA e poi --pacchetto per il file .skill.")
@@ -1421,18 +1435,18 @@ def autotest() -> int:
     except ImportError:
         print("SALTATA conversione dei Fondamenti: manca PyYAML")
 
-    # 3. regole confermate sui manuali della skill e controllo di due pagine
+    # 3. regole confermate sui manuali in uso e controllo di due pagine
     if (MANUALI / "versioni.json").is_file():
         regole = conferma_regole(MANUALI)
         spente = [r for r, v in regole.items() if not v["confermata"]]
-        prova(not spente, "tutte le regole dello script sono confermate dal testo dei manuali nella skill", spente)
+        prova(not spente, "tutte le regole dello script sono confermate dal testo dei manuali in uso", spente)
         salvate = carica_json(MANUALI / "regole.json", {})
-        prova(salvate == regole, "regole.json della skill allineato ai manuali", [k for k in regole if salvate.get(k) != regole[k]])
+        prova(salvate == regole, "regole.json allineato ai manuali in uso", [k for k in regole if salvate.get(k) != regole[k]])
         prova(regole["CONT-TITOLO"]["valore"] == 70 and regole["CONT-SOMMARIO-LUNGHEZZA"]["valore"] == 160
               and regole["CONT-PARAGRAFI"]["valore"] == 5 and regole["CONT-LIVELLI"]["valore"] == 4,
               "valori letti dai manuali (70, 160, 5 frasi, H4)", {k: regole[k]["valore"] for k in regole if regole[k]["valore"]})
         glossario = carica_json(MANUALI / "glossario.json", [])
-        prova(len(glossario) > 80 and any(v["voce"].startswith("Protezione civile") for v in glossario), "glossario della skill letto",
+        prova(len(glossario) > 80 and any(v["voce"].startswith("Protezione civile") for v in glossario), "glossario dei manuali in uso letto",
               len(glossario))
         esito = controlla_testo(PAGINA_CON_PROBLEMI, regole, glossario)
         trovate = {s["regola"] for s in esito["segnalazioni"]}
@@ -1453,7 +1467,10 @@ def autotest() -> int:
         esito = controlla_testo(PAGINA_CON_PROBLEMI, spenta, glossario)
         prova("CONT-TITOLO" not in {s["regola"] for s in esito["segnalazioni"]}, "una regola non confermata non viene applicata")
     else:
-        print("SALTATE le prove sulle regole: la skill non ha ancora i manuali (lancia «aggiorna»)")
+        print(f"SALTATE le prove sulle regole: in {MANUALI} non ci sono ancora i manuali (lancia «aggiorna»)")
+    prova(MANUALI.relative_to(CARTELLA_SKILL).as_posix() == ("references/manuali" if DENTRO_LA_SKILL else ".manuale/manuali-agid"),
+          "cartella dei manuali giusta per dove si trova lo script", MANUALI)
+    prova(FUSO is None or datetime.now(FUSO).utcoffset().total_seconds() in (3600, 7200), "date e ore dei manuali in ora italiana", FUSO)
 
     # 4. aggiornamento e controllo con repository finti in locale
     if shutil.which("git") is None:
@@ -1534,13 +1551,16 @@ def autotest() -> int:
                 prova(controlla(versioni, cache, fonti=fonti)["stato"] == "aggiornati", "controlla: dopo l'aggiornamento di nuovo in pari")
                 rotte = {**fonti, "mod": {**fonti["mod"], "repo": (radice / "non-esiste").resolve().as_uri()}}
                 prova(controlla(versioni, cache, fonti=rotte)["stato"] == "non raggiungibili", "controlla: fonte non raggiungibile → codice 2")
-                pacchetto = radice / "prova.skill"
-                n = crea_pacchetto(uscita, pacchetto)
-                with zipfile.ZipFile(pacchetto) as z:
-                    nomi_zip = z.namelist()
-                    versioni_zip = json.loads(z.read(f"{CARTELLA_SKILL.name}/references/manuali/versioni.json"))
-                prova(n > 5 and f"{CARTELLA_SKILL.name}/SKILL.md" in nomi_zip and versioni_zip["aggiornato_il"] == "22/10/2026 09:30",
-                      "pacchetto .skill con i manuali nuovi", nomi_zip[:5])
+                if DENTRO_LA_SKILL:
+                    pacchetto = radice / "prova.skill"
+                    n = crea_pacchetto(uscita, pacchetto)
+                    with zipfile.ZipFile(pacchetto) as z:
+                        nomi_zip = z.namelist()
+                        versioni_zip = json.loads(z.read(f"{CARTELLA_SKILL.name}/references/manuali/versioni.json"))
+                    prova(n > 5 and f"{CARTELLA_SKILL.name}/SKILL.md" in nomi_zip and versioni_zip["aggiornato_il"] == "22/10/2026 09:30",
+                          "pacchetto .skill con i manuali nuovi", nomi_zip[:5])
+                else:
+                    print("SALTATA la prova del pacchetto .skill: lo script non è nella cartella della skill")
             except ErroreRete as e:
                 prova(False, "repository finti raggiungibili con git", e)
     print(f"\n{'Tutto bene' if not errori else str(len(errori)) + ' errori'}")
@@ -1552,15 +1572,15 @@ def main() -> int:
     parser.add_argument("--autotest", action="store_true", help="prova lo script senza rete")
     sotto = parser.add_subparsers(dest="comando")
     p = sotto.add_parser("versioni", help="di quando sono i manuali che la skill sta usando")
-    p.add_argument("--manuali", help="cartella dei manuali (predefinita: references/manuali della skill)")
+    p.add_argument("--manuali", help="cartella dei manuali (predefinita: references/manuali nella skill, .manuale/manuali-agid nel sito)")
     p = sotto.add_parser("controlla", help="i manuali online sono cambiati? 0 no, 1 sì, 2 non raggiungibili")
     p.add_argument("--manuali")
     p.add_argument("--versioni", help="versioni.json da confrontare (per il workflow su GitHub)")
     p.add_argument("--cache", default=str(CACHE), help=f"cartella delle copie scaricate (predefinita {CACHE})")
     p.add_argument("--issue", help="se i manuali sono cambiati scrive qui un avviso in Markdown")
     p.add_argument("--json", action="store_true")
-    p = sotto.add_parser("aggiorna", help="scarica i manuali, riscrive i testi della skill e dice cosa è cambiato")
-    p.add_argument("--uscita", help="scrive i manuali in un'altra cartella invece che nella skill")
+    p = sotto.add_parser("aggiorna", help="scarica i manuali, riscrive la copia in uso e dice cosa è cambiato")
+    p.add_argument("--uscita", help="scrive i manuali in un'altra cartella invece che nella copia in uso")
     p.add_argument("--pacchetto", help="crea anche il file .skill aggiornato, per esempio scrittura-pubblica-amministrazione.skill")
     p.add_argument("--mostra", action="store_true", help="mostra le righe cambiate")
     p.add_argument("--resoconto", help="se qualcosa è cambiato scrive qui le novità in Markdown (per l'issue settimanale del sito); "

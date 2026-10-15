@@ -20,7 +20,8 @@ apre un'**Issue** sul repository con la checklist dei punti da controllare.
    - la checklist di punti da controllare nel manuale, nelle regole e nella skill dei testi.
 4. Se una fonte non si legge (pagina spostata, sito che rifiuta le richieste, pagina senza
    testo leggibile), lo scrive nell'Issue «⚠️ Fonti del manuale operativo non raggiungibili»,
-   che si aggiorna ogni settimana e si chiude da sola quando la fonte torna leggibile.
+   che si aggiorna ogni settimana e si chiude da sola alla prima settimana in cui tutte le fonti si
+   leggono (un controllo interrotto a metà non la chiude).
 5. Commit automatico degli hash e della copia dei manuali (solo `.manuale/`).
 
 ### Come agire sull'Issue
