@@ -339,6 +339,16 @@ dati:
         contesto: 'FEPIVOL|FE\.PI\.VOL'
         finestra: 40
 
+  - id: soup-denominazione
+    dato: "Nome per esteso della SOUP"
+    valore: "Sala Operativa Unificata Permanente (SOUP), della Regione Lazio"
+    fonti:
+      - nome: "Legge 21 novembre 2000, n. 353, art. 7, comma 3 («sale operative unificate permanenti (SOUP)»)"
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000-11-21;353~art7"
+    vietati:
+      - regex: '[Ss]ala\s+[Oo]perativa\s+[Uu]nica\s+[Pp]ermanente'
+        perche: "La legge 353/2000 dice «unificata», non «unica» (corretto in 13 pagine il 15/10/2026)."
+
   - id: perdite-idriche-reti
     dato: "Perdite idriche totali delle reti comunali di distribuzione in Italia"
     valore: "42,4% dell'acqua immessa in rete (dato 2022)"

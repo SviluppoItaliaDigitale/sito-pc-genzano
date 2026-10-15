@@ -21,7 +21,7 @@ social_punti:
   - "Se vedi fumo o fiamme chiama subito il 112: è l'unico numero da comporre."
 ---
 
-Martedì **22 settembre 2026**, poco prima delle 15, la Sala Operativa Unica Permanente della Regione Lazio ha attivato il Gruppo. L'incendio era in **via del Campo, ad Aprilia**: l'intervento si è chiuso verso le 19, dopo circa quattro ore di lavoro.
+Martedì **22 settembre 2026**, poco prima delle 15, la Sala Operativa Unificata Permanente della Regione Lazio ha attivato il Gruppo. L'incendio era in **via del Campo, ad Aprilia**: l'intervento si è chiuso verso le 19, dopo circa quattro ore di lavoro.
 
 ## Cosa bruciava
 

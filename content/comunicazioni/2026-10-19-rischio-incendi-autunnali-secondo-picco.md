@@ -75,7 +75,7 @@ A Genzano di Roma il rischio **AIB autunnale** è generalmente basso, ma:
 
 ## Cosa fa il sistema antincendio in autunno
 
-La campagna regionale antincendio boschivo si chiude di norma a metà ottobre, ma il bollettino di pericolosità del Centro Funzionale continua a essere emesso quando le condizioni lo richiedono. Le squadre di volontariato AIB, tra cui quelle del Gruppo, restano attivabili dalla Sala Operativa Unica Permanente della Regione per tutto l'anno: la stagione finisce sulla carta, non nei boschi.
+La campagna regionale antincendio boschivo si chiude di norma a metà ottobre, ma il bollettino di pericolosità del Centro Funzionale continua a essere emesso quando le condizioni lo richiedono. Le squadre di volontariato AIB, tra cui quelle del Gruppo, restano attivabili dalla Sala Operativa Unificata Permanente della Regione per tutto l'anno: la stagione finisce sulla carta, non nei boschi.
 
 ## In caso di avvistamento fumo
 
