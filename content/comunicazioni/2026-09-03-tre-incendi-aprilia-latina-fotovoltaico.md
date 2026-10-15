@@ -21,7 +21,7 @@ social_punti:
   - "Se vedi fumo o fiamme chiama subito il 112: è l'unico numero da comporre."
 ---
 
-Tre chiamate in tre ore, e l'ultima è finita dopo la mezzanotte. Giovedì 3 settembre 2026 la Sala Operativa Unica Permanente della Regione Lazio ha attivato il Gruppo Comunale tre volte di seguito, tutte per incendi di vegetazione fuori dal territorio comunale: due ad Aprilia, la terza su un fronte molto più vasto alle porte di Latina.
+Tre chiamate in tre ore, e l'ultima è finita dopo la mezzanotte. Giovedì 3 settembre 2026 la Sala Operativa Unificata Permanente della Regione Lazio ha attivato il Gruppo Comunale tre volte di seguito, tutte per incendi di vegetazione fuori dal territorio comunale: due ad Aprilia, la terza su un fronte molto più vasto alle porte di Latina.
 
 ## Poco dopo le 17, in via dei Cinque Archi
 

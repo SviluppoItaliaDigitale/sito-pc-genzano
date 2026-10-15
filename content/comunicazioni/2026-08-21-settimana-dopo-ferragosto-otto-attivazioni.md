@@ -25,7 +25,7 @@ La settimana dopo Ferragosto non ha concesso pause. Da **lunedì 17** a **venerd
 
 ## Lunedì 17 — Santa Fumia, entrambe le autobotti in campo
 
-La settimana si apre nel primo pomeriggio con un **incendio di sterpaglie in via Santa Fumia**, nell'area a sud di Roma. La **Sala Operativa Unica Permanente (SOUP)** regionale attiva il Gruppo, che schiera **entrambe le autobotti**. Il **Mercedes Atego** lavora allo spegnimento e alla bonifica. Il **Mercedes Actros**, da 14.000 litri, rifornisce d'acqua i Vigili del Fuoco e i moduli antincendio, con il **pickup EVO Cross 4** a supporto dell'equipaggio. Sul posto anche i Carabinieri e altri gruppi di protezione civile. Oltre **quattro ore** di lavoro, con un imprevisto: la foratura di uno pneumatico ha costretto l'Atego a rientrare in sede in anticipo.
+La settimana si apre nel primo pomeriggio con un **incendio di sterpaglie in via Santa Fumia**, nell'area a sud di Roma. La **Sala Operativa Unificata Permanente (SOUP)** regionale attiva il Gruppo, che schiera **entrambe le autobotti**. Il **Mercedes Atego** lavora allo spegnimento e alla bonifica. Il **Mercedes Actros**, da 14.000 litri, rifornisce d'acqua i Vigili del Fuoco e i moduli antincendio, con il **pickup EVO Cross 4** a supporto dell'equipaggio. Sul posto anche i Carabinieri e altri gruppi di protezione civile. Oltre **quattro ore** di lavoro, con un imprevisto: la foratura di uno pneumatico ha costretto l'Atego a rientrare in sede in anticipo.
 
 ## Martedì 18 — un focolaio a Campoleone
 

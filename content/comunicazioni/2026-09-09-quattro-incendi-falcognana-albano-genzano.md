@@ -21,7 +21,7 @@ social_punti:
   - "Se vedi fumo o fiamme chiama il 112, non provare a spegnere da solo."
 ---
 
-Due giornate, quattro attivazioni, due mezzi impegnati a rotazione: quattro volontari martedì, sei mercoledì. Tra martedì 8 e mercoledì 9 settembre 2026 il Gruppo Comunale è uscito quattro volte per **incendi di vegetazione**. Tre volte su richiesta della Sala Operativa Unica Permanente della Regione Lazio, una su attivazione del coordinatore del Gruppo. L'ultima chiamata era a Genzano.
+Due giornate, quattro attivazioni, due mezzi impegnati a rotazione: quattro volontari martedì, sei mercoledì. Tra martedì 8 e mercoledì 9 settembre 2026 il Gruppo Comunale è uscito quattro volte per **incendi di vegetazione**. Tre volte su richiesta della Sala Operativa Unificata Permanente della Regione Lazio, una su attivazione del coordinatore del Gruppo. L'ultima chiamata era a Genzano.
 
 ## Martedì sera: la Falcognana
 

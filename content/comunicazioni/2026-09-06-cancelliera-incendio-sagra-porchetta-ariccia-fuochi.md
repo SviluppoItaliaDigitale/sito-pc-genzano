@@ -25,7 +25,7 @@ Domenica 6 settembre 2026 il **Mercedes Atego** è uscito due volte. Nel primo p
 
 ## Verso le 14 e mezza, via Cancelliera
 
-La chiamata arriva dalla Sala Operativa Unica Permanente della Regione Lazio poco dopo le 14 e mezza. In via Cancelliera, nel territorio di Albano Laziale, bruciano sterpi e canneti. Il fronte non è fermo: avanza verso **due abitazioni** che confinano con i campi incolti.
+La chiamata arriva dalla Sala Operativa Unificata Permanente della Regione Lazio poco dopo le 14 e mezza. In via Cancelliera, nel territorio di Albano Laziale, bruciano sterpi e canneti. Il fronte non è fermo: avanza verso **due abitazioni** che confinano con i campi incolti.
 
 Esce l'**Atego**, il polivalente con impianto antincendio da 6.000 litri. Sul posto lavorano i Vigili del Fuoco, i Carabinieri e altri Gruppi comunali di Protezione Civile. Le fiamme vengono fermate prima di raggiungere le case. L'intervento si chiude poco prima delle 16, dopo **poco più di un'ora**.
 

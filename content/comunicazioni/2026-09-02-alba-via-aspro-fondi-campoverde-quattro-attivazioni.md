@@ -25,7 +25,7 @@ Una giornata iniziata prima delle sette e finita al tramonto. Mercoledì 2 sette
 
 ## All'alba, in via dell'Aspro
 
-Poco prima delle sette la Sala Operativa Unica Permanente della Regione Lazio attiva il Gruppo per un incendio in via dell'Aspro, a Genzano di Roma. Bruciano cataste di legna. Sul posto lavorano già i Vigili del Fuoco: qui il compito della squadra non è spegnere, ma **rifornire d'acqua** i loro mezzi.
+Poco prima delle sette la Sala Operativa Unificata Permanente della Regione Lazio attiva il Gruppo per un incendio in via dell'Aspro, a Genzano di Roma. Bruciano cataste di legna. Sul posto lavorano già i Vigili del Fuoco: qui il compito della squadra non è spegnere, ma **rifornire d'acqua** i loro mezzi.
 
 Esce il **Mercedes Atego**, il mezzo polivalente con impianto antincendio da 6.000 litri, che alimenta le autopompe dei Vigili del Fuoco. L'intervento si chiude poco dopo le otto, in un'ora e quaranta.
 

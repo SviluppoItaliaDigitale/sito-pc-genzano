@@ -19,7 +19,7 @@ social_punti:
   - "Se vedi fumo o fiamme chiama subito il 112"
 ---
 
-Gli ultimi dieci giorni di luglio hanno tenuto le squadre del Gruppo impegnate quasi ogni giorno. Tra il 21 e il 30 luglio le squadre hanno svolto **11 interventi**. Dieci erano per **incendi di vegetazione**, per **oltre 34 ore di attività complessiva**. Le attivazioni sono arrivate dalla **Sala Operativa Unica Permanente (SOUP)** della Regione Lazio. Le squadre hanno raggiunto Genzano, Pomezia, Albano Laziale, Ariccia e la periferia sud di Roma, sempre a supporto dei Vigili del Fuoco. Ecco il riepilogo, tratto dal registro operativo del Gruppo.
+Gli ultimi dieci giorni di luglio hanno tenuto le squadre del Gruppo impegnate quasi ogni giorno. Tra il 21 e il 30 luglio le squadre hanno svolto **11 interventi**. Dieci erano per **incendi di vegetazione**, per **oltre 34 ore di attività complessiva**. Le attivazioni sono arrivate dalla **Sala Operativa Unificata Permanente (SOUP)** della Regione Lazio. Le squadre hanno raggiunto Genzano, Pomezia, Albano Laziale, Ariccia e la periferia sud di Roma, sempre a supporto dei Vigili del Fuoco. Ecco il riepilogo, tratto dal registro operativo del Gruppo.
 
 ## La zona della Solfarata: tre attivazioni in nove giorni
 
