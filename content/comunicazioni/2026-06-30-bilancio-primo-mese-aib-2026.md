@@ -1,7 +1,7 @@
 ---
 title: "Primo mese di campagna AIB: il punto al 30 giugno"
 date: 2026-06-30
-description: "A un mese dall'avvio della campagna antincendio boschivo 2026, un primo bilancio regionale e un richiamo ai comportamenti per i mesi più caldi."
+description: "A fine giugno, un primo bilancio della campagna antincendio boschivo 2026 e un richiamo ai comportamenti per i mesi più caldi."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-La **campagna antincendio boschivo 2026** del Lazio è attiva dal **1° giugno**. A un mese dall'avvio, è tempo di un primo bilancio. I dati ufficiali — numero di eventi, superficie bruciata, mezzi impiegati — sono pubblicati periodicamente dalla **Regione Lazio**, dal **Corpo Forestale dei Carabinieri** e dal **Dipartimento della Protezione Civile**.
+La **campagna antincendio boschivo 2026** è cominciata il **15 giugno**, con l'inizio del periodo di massimo rischio nel Lazio. A fine giugno è tempo di un primo bilancio. I dati ufficiali — numero di eventi, superficie bruciata, mezzi impiegati — sono pubblicati periodicamente dalla **Regione Lazio**, dal **Corpo Forestale dei Carabinieri** e dal **Dipartimento della Protezione Civile**.
 
 ## Il mese di giugno: premessa al luglio
 
@@ -33,7 +33,7 @@ Durante la campagna la Regione attiva:
 - **Canadair** su chiamata (flotta nazionale coordinata dal DPC).
 - **Coordinamento** con Vigili del Fuoco e Corpo Forestale dei Carabinieri.
 
-Il Centro Funzionale Regionale emette **bollettini di pericolosità** giornalieri che classificano il rischio in **bassa, media, alta**.
+Il Centro Funzionale Regionale emette **bollettini di pericolosità** giornalieri che classificano il pericolo in quattro livelli: **basso, medio, moderato ed elevato**.
 
 ## I Gruppi comunali in campagna
 
