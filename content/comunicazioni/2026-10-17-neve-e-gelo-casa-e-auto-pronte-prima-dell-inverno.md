@@ -1,6 +1,6 @@
 ---
 title: "Neve e gelo: la casa e l'auto pronte prima dell'inverno"
-date: 2026-10-17
+date: 2026-10-17T00:01:00+02:00
 description: "Ai Castelli la neve è rara ma non impossibile. Pala, sale, catene provate in garage e batteria controllata: le cose da fare a ottobre, non a gennaio."
 badge: "Prevenzione"
 priorita: "normale"

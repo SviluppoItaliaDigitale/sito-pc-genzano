@@ -1,6 +1,6 @@
 ---
 title: "Settimana nazionale della Protezione Civile: cosa possono fare le scuole"
-date: 2026-10-18
+date: 2026-10-18T00:01:00+02:00
 description: "Ogni ottobre la Settimana nazionale della Protezione Civile invita anche le scuole a parlare di rischi. Materiali pronti per ogni età e come usarli."
 badge: "Formazione"
 priorita: "normale"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Dal 2019, intorno al **13 ottobre** (Giornata internazionale per la riduzione del rischio di disastri), in Italia si celebra la **Settimana nazionale della Protezione Civile**, istituita con la Direttiva del Presidente del Consiglio dei Ministri del 1° aprile 2019. È la settimana in cui il Dipartimento, le Regioni, i Comuni e il volontariato aprono le porte ai cittadini: esercitazioni, incontri, punti informativi. Nel Lazio, nel 2026, la Settimana ospita anche l'[esercitazione regionale di Cassino](/comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile/).
+Dal 2019, intorno al **13 ottobre** (Giornata internazionale per la riduzione del rischio di disastri), in Italia si celebra la **Settimana nazionale della Protezione Civile**, istituita con la Direttiva del Presidente del Consiglio dei Ministri del 1° aprile 2019. È la settimana in cui il Dipartimento, le Regioni, i Comuni e il volontariato aprono le porte ai cittadini: esercitazioni, incontri, punti informativi. Nel Lazio, nel 2026, la Settimana ospita anche l'[esercitazione regionale di Cassino](/comunicazioni/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino/).
 
 Le scuole sono tra i destinatari naturali di questa settimana. Non serve un evento speciale: bastano una lezione, una prova di evacuazione commentata, un compito da portare a casa. Chi vuole dedicarle l'intera settimana trova un [programma pronto per tutto l'istituto](/formazione/settimana-protezione-civile/): un tema al giorno, uguale per tutte le classi, con le lezioni già composte per ogni età.
 

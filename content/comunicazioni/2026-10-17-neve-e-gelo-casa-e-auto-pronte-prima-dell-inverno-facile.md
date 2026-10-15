@@ -1,6 +1,6 @@
 ---
 title: "Neve e gelo: prepara la casa e l'auto"
-date: 2026-10-17
+date: 2026-10-17T00:01:00+02:00
 description: "Consigli semplici per preparare casa e auto prima della neve e del gelo."
 badge: "Prevenzione"
 priorita: "normale"
