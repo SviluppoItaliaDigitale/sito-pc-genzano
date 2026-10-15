@@ -5,22 +5,52 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-15T21:48:26+00:00",
+  "generato": "2026-10-15T23:55:15+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-10-15T23:46:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'offensiva di Meloni sulla flessibilità, sull'energia è scontro aperto in Ue",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/loffensiva-di-meloni-sulla-flessibilita-sullenergia-e-scontro-aperto-in-ue_99106306-33f9-404f-a92d-d2297a3adfba.html"
+  },
+  {
+   "data": "2026-10-15T22:40:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sparatoria in Oregon, media: 5 morti, tre bambini tra le vittime",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/10/16/sparatoria-in-oregon-media-5-morti-tre-bambini-tra-le-vittime_207d7c00-0291-4511-9b8b-a622e6ef91de.html"
+  },
+  {
+   "data": "2026-10-15T22:23:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina, Zelensky sfida Trump e riprende i raid sulle raffinerie russe",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/ucraina-zelensky-sfida-trump-e-riprende-i-raid-sulle-raffinerie-russe_3ee5e831-cd15-4c22-8758-3c9cf5769225.html"
+  },
+  {
+   "data": "2026-10-15T22:15:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra da 23,5 miliardi, famiglie al centro: coperture e voci più importanti",
+   "url": "https://www.adnkronos.com/economia/manovra-2027-risorse-coperture-famiglia_4blrwvp8ec3jglnYBXK5uE"
+  },
+  {
+   "data": "2026-10-15T21:55:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Chi è Alphadjo Cisse, il più giovane italiano riuscito a segnare una tripletta nelle coppe europee",
+   "url": "https://www.adnkronos.com/sport/alphadjo-cisse-chi-e-milan-tripletta-italia_4RvSTHXTXWypVUWH3FddIY"
+  },
+  {
+   "data": "2026-10-15T21:49:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sparatoria in una scuola elementare in Oregon: 4 morti di cui 3 bambini. Ucciso l'aggressore, aveva 16 anni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/sparatoria-scuola-oregon-morti-tre-bambini-attentatore_evOnaU8vmIBMWlMv7yHwQ"
+  },
+  {
    "data": "2026-10-15T21:35:33+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Spalletti lo cambia, Conceicao è una furia: cos'è successo in Celta Vigo-Juve",
    "url": "https://www.adnkronos.com/sport/spalletti-cambia-conceicao-furia-giocatore-cosa-e-successo_3A7xvDUuszeTi61ymjaHII"
-  },
-  {
-   "data": "2026-10-15T21:26:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Zelensky sfida Trump e riprende i raid sulle raffinerie russe",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/ucraina-zelensky-sfida-trump-e-riprende-i-raid-sulle-raffinerie-russe_3ee5e831-cd15-4c22-8758-3c9cf5769225.html"
   },
   {
    "data": "2026-10-15T21:24:55+00:00",
@@ -107,12 +137,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-10-15T19:20:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'offensiva di Meloni sulla flessibilità, sull'energia è scontro aperto in Ue",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/loffensiva-di-meloni-sulla-flessibilita-sullenergia-e-scontro-aperto-in-ue_99106306-33f9-404f-a92d-d2297a3adfba.html"
-  },
-  {
    "data": "2026-10-15T19:16:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Marito e moglie trovati decapitati in casa nel Modenese. Sentito il figlio",
@@ -123,12 +147,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Ucraina, Weidel: \"Basta soldi a Kiev, la guerra è già persa\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-germania-afd-guerra_2HEwFiLBrQ5OaOVQIZiAMM"
-  },
-  {
-   "data": "2026-10-15T19:03:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milano, studentessa tedesca in Erasmus denuncia aggressione in via Giacosa",
-   "url": "https://www.adnkronos.com/cronaca/studentessa-tedesca-aggredita-milano-oggi_3j9JDhxFWiJ7ordo8ehSsE"
   },
   {
    "data": "2026-10-15T19:02:00+00:00",
@@ -171,24 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La retromarcia di Trump: 'Niente fucilazione del killer di Fort Hood in diretta'&nbsp;",
    "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/15/la-retromarcia-di-trump-niente-fucilazione-del-killer-di-fort-hood-in-diretta_590bc7c4-669b-4854-ac9c-16a9d156c5ed.html"
-  },
-  {
-   "data": "2026-10-15T18:11:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone continua la ripresa, Parolin: \"Se starà meglio farà l'Angelus dal Gemelli\". E \"se necessario rimodulerà il pontificato\"",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/papa-leone-continua-la-ripresa-parolin-se-stara-meglio-fara-langelus-dal_0e7218fb-acb0-4f59-93d3-8b2dd3ba6004.html"
-  },
-  {
-   "data": "2026-10-15T18:09:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sequestrati cellulari e una dashcam ai due ragazzi della minicar",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/la-banda-della-minicar-oggi-gli-atti-trasmessi-alla-procura-minorile_fa3f9e44-f62e-4a6c-83fd-5708f306670a.html"
-  },
-  {
-   "data": "2026-10-15T18:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Celta Vigo-Juve 1-2, rimonta bianconera con Woltemade e Kolo Muani",
-   "url": "https://www.adnkronos.com/sport/diretta-celta-vigo-juve-oggi-europa-league-live-risultato-classifica_6fxHpnS97nBAMzV1HGyDNS"
   }
  ]
 }
