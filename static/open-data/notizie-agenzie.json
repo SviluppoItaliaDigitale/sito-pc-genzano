@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-15T00:32:43+00:00",
+  "generato": "2026-10-15T05:05:19+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-15T05:03:05+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Save The Children, 1 bambino su 4 nel mondo in grave povertà alimentare",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/save-the-children-1-bambino-su-4-nel-mondo-in-grave-poverta-alimentare_5203f41b-0d2a-485f-9004-60a161756ff9.html"
+  },
+  {
+   "data": "2026-10-15T05:00:49+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ora solare 2026, quando si spostano le lancette? La data e cosa cambia",
+   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-quando-cambia-data-consiglli_2kpvJLhZKq7EioRvRUtd9P"
+  },
   {
    "data": "2026-10-14T22:35:06+00:00",
    "fonte": "ADNKRONOS",
@@ -143,12 +155,6 @@
    "url": "https://www.adnkronos.com/sport/champions-league-feyenoord-como_4ubznan1sM5Kv5gjy6fIQt"
   },
   {
-   "data": "2026-10-14T19:10:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mihajlović nel 'cuore' di tutti, premio alla memoria e opera d'arte di Benito Macerata",
-   "url": "https://www.adnkronos.com/sport/sinisa-mihajlovic-premio-opera-benito-macerata_5RIfFbHmCEVLRuvxmb0H5X"
-  },
-  {
    "data": "2026-10-14T19:05:24+00:00",
    "fonte": "ANSA",
    "titolo": "Via libera Ue al decreto bollette ma alta tensione tra i 27 sull'energia",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Ucraina, Zelensky a Londra e poi dai 27, l'Ue teme il voltafaccia di Trump",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/14/ucraina-zelensky-a-londra-e-poi-dai-27-lue-teme-il-voltafaccia-di-trump_7c4bcdf8-cc89-403e-b237-2b6b5ab2fd7b.html"
-  },
-  {
-   "data": "2026-10-14T18:41:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Uno dei minorenni della banda della minicar: 'Era uno scherzo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/14/uno-dei-minorenni-della-banda-della-minicar-era-uno-scherzo_65555a49-3948-4536-8119-b7ad101d1c41.html"
   }
  ]
 }
