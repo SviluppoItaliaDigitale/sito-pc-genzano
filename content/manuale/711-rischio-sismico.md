@@ -37,7 +37,7 @@ Il rischio non coincide con la pericolosità. Applicando la formula della Parte 
 - la **vulnerabilità** dipende dall'epoca e dalla tecnica costruttiva degli edifici: il costruito antecedente alle norme antisismiche è il fattore di rischio principale;
 - l'**esposizione** è la popolazione e il patrimonio edilizio presenti.
 
-La piattaforma nazionale che stima il rischio sismico comune per comune (Dipartimento della Protezione Civile con Fondazione EUCENTRE e Consorzio ReLUIS, su dati INGV e censimento ISTAT) colloca Genzano **al di sotto della media italiana** per quasi tutti gli indicatori di rischio atteso, pur restando un territorio sismico. È la prova pratica del principio: a parità di pericolosità, **il danno si abbatte agendo su vulnerabilità ed esposizione** — edifici a norma, arredi fissati, piano familiare e kit pronti.
+La piattaforma nazionale che stima il rischio sismico comune per comune (Dipartimento della Protezione Civile con Fondazione EUCENTRE e Consorzio ReLUIS, su dati INGV e censimento ISTAT) colloca Genzano fra i comuni con **vulnerabilità degli edifici più bassa** della media, ma con pericolosità e rischio atteso più alti di circa due comuni italiani su tre. È la prova pratica del principio: a parità di pericolosità, **il danno si abbatte agendo su vulnerabilità ed esposizione** — edifici a norma, arredi fissati, piano familiare e kit pronti.
 
 ## 7.1.4 Il contesto dei Castelli Romani
 
