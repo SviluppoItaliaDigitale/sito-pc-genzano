@@ -42,9 +42,9 @@ La pericolosità non dice quando arriverà un terremoto: nessuno oggi lo sa prev
 
 La mappa di riferimento nazionale l'ha elaborata l'INGV nel 2004 e si chiama MPS04. È stata adottata con l'Ordinanza del Presidente del Consiglio dei ministri n. 3519 del 28 aprile 2006. Per ogni punto del territorio indica l'**accelerazione massima del suolo** che ha il 10% di probabilità di essere superata in 50 anni. Il valore è riferito a un terreno rigido. Si esprime come frazione di **g**, l'accelerazione di gravità: 0,25 g è un quarto di g.
 
-Nel 2021 i ricercatori dell'INGV hanno pubblicato un nuovo modello, MPS19, costruito con i dati raccolti dopo il 2004. La classificazione dei Comuni si basa ancora sulla mappa adottata nel 2006.
+Nel 2021 i ricercatori dell'INGV hanno pubblicato un nuovo modello, MPS19, costruito con i dati raccolti dopo il 2004. Per la classificazione dei Comuni il Dipartimento continua a indicare lo studio di pericolosità allegato all'ordinanza del 2006.
 
-Attenzione a non confondere la pericolosità con la **magnitudo**. La magnitudo misura l'energia liberata da un singolo terremoto. L'**intensità**, invece, descrive gli effetti osservati su persone ed edifici. Ne parliamo nella scheda [Il rischio sismico in Italia](/conoscere/catalogo-dei-rischi/rischio-sismico/).
+Attenzione a non confondere la pericolosità con la **magnitudo**. La magnitudo misura l'energia liberata da un singolo terremoto, ed è calcolata dai sismografi. L'**intensità**, invece, descrive gli effetti osservati su persone ed edifici in un luogo, in gradi della scala Mercalli-Cancani-Sieberg (MCS). Sono grandezze diverse e non si confrontano fra loro. L'accelerazione al suolo, infine, è un terzo dato: misura lo scuotimento atteso e serve a progettare le costruzioni. Ne parliamo nella scheda [Il rischio sismico in Italia](/conoscere/catalogo-dei-rischi/rischio-sismico/).
 
 ## Le zone sismiche dei Comuni
 
@@ -69,20 +69,22 @@ Per progettare un edificio, oggi, la zona non basta. Dal 1° luglio 2009 l'accel
 
 Sulla pericolosità non si può agire: dipende dalla geologia. Sulla vulnerabilità sì. Il Dipartimento la definisce come la propensione di una struttura a subire un danno di un certo livello.
 
-Una casa costruita prima delle norme antisismiche, o modificata senza progetto, può resistere molto meno di una casa recente. Per sapere come si comporta la propria abitazione serve un **tecnico abilitato**, cioè un ingegnere, un architetto o un geometra. Nessuna mappa sostituisce una verifica sul singolo edificio.
+Una casa costruita prima delle norme antisismiche, o modificata senza progetto, può resistere molto meno di una casa recente. Per sapere come si comporta la propria abitazione serve un **tecnico abilitato** iscritto all'albo, per esempio un ingegnere o un architetto, che opera nei limiti delle sue competenze. Nessuna mappa sostituisce una verifica sul singolo edificio.
 
 Contano anche le condizioni del terreno sotto le case. Le studia la [microzonazione sismica](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/), che individua le aree dove lo scuotimento può amplificarsi.
 
 ## Quanto vale il rischio sismico
 
-Il Dipartimento, con la Fondazione EUCENTRE e il Consorzio ReLUIS, stima il rischio di ogni Comune sulla piattaforma **SicuroPiù**. Sono stime di probabilità su 50 anni, basate sui dati INGV e sul censimento ISTAT del 2011. Per Genzano, alla consultazione del 15 ottobre 2026, il portale indica:
+Il Dipartimento, con la Fondazione EUCENTRE e il Consorzio ReLUIS, stima il rischio di ogni Comune sulla piattaforma **SicuroPiù**. Sono valutazioni probabilistiche, basate sui dati INGV e, per la vulnerabilità, sul censimento ISTAT del 2011. Il portale avverte che indicano i danni che si possono avere **in media in 50 anni**, non danni che si ripetono ogni 50 anni. I terremoti dannosi sono lontani nel tempo, a volte secoli, e le perdite si concentrano in pochi eventi.
 
-- uno scuotimento medio atteso pari al 16,3% dell'accelerazione di gravità;
-- circa il 5% degli edifici ad alta vulnerabilità, cioè circa 1 su 20;
-- circa il 10% di edifici inagibili in 50 anni, cioè circa 1 su 10;
-- perdite economiche pari a circa il 5% del valore degli edifici, poco più di 53 milioni di euro.
+Per Genzano, alla consultazione del 15 ottobre 2026, il portale indica:
 
-Il portale confronta anche Genzano con il resto d'Italia: per le perdite economiche, il 27% dei Comuni ha un rischio più alto. Altri dati sul nostro territorio sono nella pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
+- un valore medio atteso di scuotimento pari al 16,3% dell'accelerazione di gravità;
+- in media circa il 5% degli edifici residenziali ad alta vulnerabilità, cioè circa 1 su 20;
+- in 50 anni gli edifici inagibili potrebbero essere circa il 10%, cioè circa 1 su 10;
+- in 50 anni le perdite economiche potrebbero essere circa il 5% del valore dell'edificato, pari a circa 53,6 milioni di euro.
+
+Il portale confronta anche Genzano con il resto d'Italia: il 35% dei Comuni ha un rischio più alto per gli edifici inagibili e il 27% per le perdite economiche. Altri dati sul nostro territorio sono nella pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
 
 Per la prevenzione, lo Stato ha previsto un fondo nazionale dopo il terremoto dell'Abruzzo del 2009 (articolo 11 del decreto-legge 39/2009). Dal 2010 al 2016 la spesa autorizzata è stata di 965 milioni di euro. Per il Dipartimento è forse meno dell'1% di quanto servirebbe per adeguare tutte le costruzioni, pubbliche e private, e le infrastrutture strategiche. La legge di bilancio 145/2018 ha poi rifinanziato il fondo con 50 milioni di euro, a partire dal 2019. Il fondo paga studi di microzonazione, contributi per rafforzare le case private e interventi sugli edifici pubblici.
 

@@ -40,7 +40,7 @@ Nessuno può dire quando arriva un terremoto.
 
 Gli esperti possono dire quanto può tremare la terra in un posto. Usano una mappa dell'INGV. La mappa è del 2004.
 
-La mappa guarda un periodo di 50 anni. Indica la scossa che ha 1 probabilità su 10 di essere superata in quei 50 anni.
+La mappa guarda un periodo di 50 anni. Dice quanto può tremare la terra. In quei 50 anni, la terra ha 1 probabilità su 10 di tremare di più.
 
 ## Le zone sismiche
 
@@ -54,7 +54,7 @@ Genzano di Roma è in **zona 2B**. La terra può tremare in modo medio.
 
 Sul terremoto non possiamo fare niente. Sulle case sì.
 
-Una casa vecchia può essere più debole di una casa nuova. Per sapere se la tua casa è sicura, chiedi a un tecnico. Il tecnico è un ingegnere, un architetto o un geometra.
+Una casa vecchia può essere più debole di una casa nuova. Per sapere se la tua casa è sicura, chiedi a un tecnico. Il tecnico è, per esempio, un ingegnere o un architetto.
 
 ## Cosa puoi fare
 
