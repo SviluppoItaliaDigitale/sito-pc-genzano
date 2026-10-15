@@ -17,7 +17,9 @@ Uso:
 Stampa l'hash su stdout (40 caratteri esadecimali, prima parte di SHA-256).
 Exit code:
     0 = hash calcolato
-    2 = errore di rete o parsing
+    2 = errore di rete o parsing, oppure pagina quasi senza testo (meno di
+        TESTO_MINIMO caratteri: si costruisce con JavaScript o è una pagina di
+        cortesia, e darebbe sempre lo stesso hash senza accorgersi di nulla)
 """
 import hashlib
 import re
@@ -37,6 +39,11 @@ TAG_DA_RIMUOVERE = [
     "link",         # preload con hash, fingerprint asset
     "meta",         # CSRF, generator, OG tags volatili
 ]
+
+# Sotto questa lunghezza il testo visibile non basta a dire se la pagina è
+# cambiata (aggiunto il 15/10/2026: una pagina che mostra solo «Caricamento…»
+# ha sempre lo stesso hash e il controllo resta cieco senza dirlo).
+TESTO_MINIMO = 200
 
 # Selettori CSS dei "blocchi cornice" da escludere se presenti: header,
 # nav, footer, cookie banner, side menu del sito che fa da ambiente
@@ -140,6 +147,10 @@ def main() -> int:
 
     if not testo:
         print("errore-vuoto", file=sys.stderr)
+        return 2
+    if len(testo) < TESTO_MINIMO:
+        print(f"testo-troppo-corto: {len(testo)} caratteri di testo visibile "
+              "(pagina costruita con JavaScript o quasi vuota)", file=sys.stderr)
         return 2
 
     h = hashlib.sha256(testo.encode("utf-8")).hexdigest()

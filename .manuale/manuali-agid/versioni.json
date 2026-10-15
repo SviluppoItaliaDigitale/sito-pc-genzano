@@ -1,0 +1,110 @@
+{
+ "aggiornato_il": "15/10/2026 16:25",
+ "fonti": {
+  "lg-design": {
+   "repo": "https://github.com/italia/lg-design-servizi-web",
+   "ramo": "versione-corrente",
+   "commit": "94afa9e8edba7198b0b44a005d59e1fd33d5d2ba",
+   "data": "2022-07-27T16:20:36+02:00"
+  },
+  "designers": {
+   "repo": "https://github.com/italia/designers.italia.it",
+   "ramo": "main",
+   "commit": "373215d79c7ad4b8a2652df33ff9d3fc28ed92d8",
+   "data": "2026-10-05T16:23:20+02:00"
+  },
+  "parole-pa": {
+   "repo": "https://github.com/italia/writing-toolkit",
+   "ramo": "master",
+   "commit": "6223b45e99367d0ed4b68058d2f2bcffd41eabe9",
+   "data": "2025-04-14T17:25:08+02:00"
+  },
+  "mod": {
+   "repo": "https://github.com/italia/manuale-operativo-design-docs",
+   "ramo": "versione-corrente",
+   "commit": "0e6794800154b23bbb1bee37cabbcf2bfe95ef09",
+   "data": "2025-03-20T19:36:45+01:00"
+  }
+ },
+ "documenti": {
+  "linee-guida-design": {
+   "file": "linee-guida-design.rst",
+   "url": "https://designers.italia.it/normativa/linee-guida-di-design/",
+   "sha256_sorgente": "5657b60e960a4fac606760856e2278ca3cdb17a13739009f7df4ce40435cd391",
+   "cambiato_il": "15/10/2026"
+  },
+  "fondamenti-contenuti": {
+   "file": "fondamenti-contenuti.md",
+   "url": "https://designers.italia.it/design-system/fondamenti/contenuti/",
+   "sha256_sorgente": "105cedb5d8ec2a8e31c91eea1fc80b1ca8a404c1f5f6066827242551b988f5e3",
+   "cambiato_il": "15/10/2026"
+  },
+  "fondamenti-linguaggio": {
+   "file": "fondamenti-linguaggio.md",
+   "url": "https://designers.italia.it/design-system/fondamenti/linguaggio/",
+   "sha256_sorgente": "68765f18541fdf56af79ae825d93daaba2eeae9f5090f11da6884817c77e8402",
+   "cambiato_il": "15/10/2026"
+  },
+  "fondamenti-microtesti": {
+   "file": "fondamenti-microtesti.md",
+   "url": "https://designers.italia.it/design-system/fondamenti/microtesti/",
+   "sha256_sorgente": "2b477cde38e0112d565fb46eee06f1cbc02fb29029ed7c568edef8641f333871",
+   "cambiato_il": "15/10/2026"
+  },
+  "fondamenti-tono-di-voce": {
+   "file": "fondamenti-tono-di-voce.md",
+   "url": "https://designers.italia.it/design-system/fondamenti/tono-di-voce/",
+   "sha256_sorgente": "f4a7925865f9c3d9b01b2d4634b2ef3e0377cbed5ced336a5942f5008cddab1a",
+   "cambiato_il": "15/10/2026"
+  },
+  "guida-parole-pa": {
+   "file": "guida-parole-pa.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/writing-toolkit/it/bozza/le-parole-della-pubblica-amministrazione.html",
+   "sha256_sorgente": "ab6c2d71bc69de50fd5157ce8e91867f45856d5aff972f975b8fe24484c8665c",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-scrittura-e-linguaggio": {
+   "file": "mod-scrittura-e-linguaggio.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/scrittura-e-linguaggio.html",
+   "sha256_sorgente": "4a762119eaf65822499bb2dd4824ca74fe626ad8569f5b7c98e34729c176357c",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-architettura-dell-informazione": {
+   "file": "mod-architettura-dell-informazione.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/architettura-dell-informazione.html",
+   "sha256_sorgente": "683308ea0ac6d83a1f665ff1ad3c925fe738c6fcec7cf40e289cc6a7a739edb9",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-documenti": {
+   "file": "mod-documenti.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/documenti.html",
+   "sha256_sorgente": "812f0c7624bc04f5c44ed213ffc1b055ed8ee8574bb309f5542db17939c91113",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-immagini-e-video": {
+   "file": "mod-immagini-e-video.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/immagini-e-video.html",
+   "sha256_sorgente": "25596deb48efb05e8a689eb33dd2b31e4bd4bf8694a5c7d5fb7ebc417c7533a1",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-ottimizzazione-per-i-motori-di-ricerca-seo": {
+   "file": "mod-ottimizzazione-per-i-motori-di-ricerca-seo.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/ottimizzazione-per-i-motori-di-ricerca-seo.html",
+   "sha256_sorgente": "11f45def5ac8761ac4071dbd1501758aa381331a3fdfde1df8471a5e439e0c52",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-proprieta-intellettuale-e-privacy": {
+   "file": "mod-proprieta-intellettuale-e-privacy.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/proprieta-intellettuale-e-privacy.html",
+   "sha256_sorgente": "8f0b0f9a0de32844e1e984bead931b6b8e1b12097fad4564d54235281311741d",
+   "cambiato_il": "15/10/2026"
+  },
+  "mod-gestire-i-contenuti": {
+   "file": "mod-gestire-i-contenuti.rst",
+   "url": "https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/it/versione-corrente/doc/progettazione-dei-contenuti/gestire-i-contenuti.html",
+   "sha256_sorgente": "a1924c12ebd6058a3db833ab9d0dbc87a975b13a35308480820564ded4db9f14",
+   "cambiato_il": "15/10/2026"
+  }
+ },
+ "design_system": "1.13.0"
+}

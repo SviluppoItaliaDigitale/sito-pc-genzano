@@ -6,10 +6,12 @@ Queste regole derivano dal **Writing Toolkit di Designers Italia**, dal **Manual
 di design della PA** e dalle integrazioni specifiche per la Protezione Civile.
 
 > **Aggiornamento automatico**: le fonti AGID ufficiali sono monitorate dal workflow
-> `.github/workflows/aggiorna-manuale.yml` ogni lunedì 06:00 UTC. Quando una fonte cambia
-> (Writing Toolkit, Content Toolkit, UI Kit, Linee guida design PA, accessibilità AGID,
-> Bootstrap Italia, DPC), il workflow apre automaticamente un'issue con checklist
-> tripartita: aggiornare **(A)** questo file e gli altri della cartella `manuale/`,
+> `.github/workflows/aggiorna-manuale.yml` ogni lunedì 06:04 UTC. Il testo dei manuali di
+> scrittura (Fondamenti del design system .italia, Guida alle parole della PA, Linee guida di
+> design, Manuale operativo di design) si legge dai repository ufficiali su GitHub e la sua
+> copia aggiornata sta in `.manuale/manuali-agid/`; le altre fonti (UI Kit, accessibilità AGID,
+> Bootstrap Italia, DPC) si controllano sulle pagine web. Quando una fonte cambia, il workflow
+> apre automaticamente un'issue con le righe cambiate e la checklist: aggiornare **(A)** questo file e gli altri della cartella `manuale/`,
 > **(B)** in coerenza i file `.claude/rules/02-content-design-pa.md`, `.claude/rules/03-accessibility.md`,
 > `CLAUDE.md` e gli agent custom letti da Claude Code in ogni sessione, **(C)** build
 > Hugo + commit. Manuale e rules Claude devono dire la stessa cosa sulla stessa regola

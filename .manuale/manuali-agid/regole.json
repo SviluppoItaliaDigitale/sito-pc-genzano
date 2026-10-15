@@ -1,0 +1,282 @@
+{
+ "CONT-TITOLO": {
+  "confermata": true,
+  "valore": 70,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Organizza le informazioni su pagina › Titoli",
+  "gravita": "correggere"
+ },
+ "CONT-SOMMARIO-PRESENTE": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Sommari",
+  "gravita": "valutare"
+ },
+ "CONT-SOMMARIO-LUNGHEZZA": {
+  "confermata": true,
+  "valore": 160,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Sommari",
+  "gravita": "correggere"
+ },
+ "CONT-SOMMARIO-PUNTO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Sommari",
+  "gravita": "correggere"
+ },
+ "CONT-SOMMARIO-TITOLO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Sommari",
+  "gravita": "valutare"
+ },
+ "CONT-PARAGRAFI": {
+  "confermata": true,
+  "valore": 5,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Corpo di pagina",
+  "gravita": "valutare"
+ },
+ "CONT-H1": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Intestazioni",
+  "gravita": "correggere"
+ },
+ "CONT-LIVELLI": {
+  "confermata": true,
+  "valore": 4,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Intestazioni",
+  "gravita": "correggere"
+ },
+ "CONT-GRASSETTO-TITOLO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Intestazioni",
+  "gravita": "valutare"
+ },
+ "CONT-SOTTOELENCHI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Elenchi puntati e numerati",
+  "gravita": "valutare"
+ },
+ "CONT-NUMERATI-PUNTO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Elenchi puntati e numerati",
+  "gravita": "valutare"
+ },
+ "CONT-ELENCO-FRASE": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Elenchi puntati e numerati",
+  "gravita": "valutare"
+ },
+ "CONT-LINK": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Link",
+  "gravita": "correggere"
+ },
+ "CONT-ALT": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-contenuti",
+  "sezione": "Immagini e video",
+  "gravita": "correggere"
+ },
+ "LING-SIGLE": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Acronimi e sigle",
+  "gravita": "valutare"
+ },
+ "LING-NORME": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Riferimenti normativi",
+  "gravita": "valutare"
+ },
+ "LING-ATTIVI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Linguaggio semplice e naturale",
+  "gravita": "valutare"
+ },
+ "LING-GRASSETTO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Grassetto",
+  "gravita": "valutare"
+ },
+ "LING-SOTTOLINEATO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Testo sottolineato",
+  "gravita": "correggere"
+ },
+ "LING-GIUSTIFICATO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Allineamento",
+  "gravita": "correggere"
+ },
+ "LING-MAIUSCOLO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Uso delle maiuscole",
+  "gravita": "valutare"
+ },
+ "LING-MIGLIAIA": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Numeri",
+  "gravita": "valutare"
+ },
+ "LING-DECIMALI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Numeri",
+  "gravita": "correggere"
+ },
+ "LING-DATE": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Date",
+  "gravita": "correggere"
+ },
+ "LING-ORARI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Orari",
+  "gravita": "correggere"
+ },
+ "LING-TELEFONO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Numeri di telefono",
+  "gravita": "valutare"
+ },
+ "LING-EMAIL": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Email",
+  "gravita": "correggere"
+ },
+ "LING-EMAIL-LINK": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Email",
+  "gravita": "valutare"
+ },
+ "LING-UNITA": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Unità di misura",
+  "gravita": "correggere"
+ },
+ "INCL-VEDI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Inclusività",
+  "gravita": "valutare"
+ },
+ "INCL-MASCHILE": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Inclusività",
+  "gravita": "valutare"
+ },
+ "INCL-DISABILI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Inclusività",
+  "gravita": "valutare"
+ },
+ "INCL-CLANDESTINI": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Inclusività",
+  "gravita": "valutare"
+ },
+ "TONO-TU": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-tono-di-voce",
+  "sezione": "Rivolgiti a chi legge con il \"tu\"",
+  "gravita": "valutare"
+ },
+ "MICRO-CTA": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-microtesti",
+  "sezione": "Usa azioni specifiche",
+  "gravita": "valutare"
+ },
+ "MICRO-CONFERMA": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-microtesti",
+  "sezione": "Chiedi conferma prima di azioni importanti",
+  "gravita": "valutare"
+ },
+ "PAROLE-EURO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "guida-parole-pa",
+  "sezione": "Euro, euri, EUR, €",
+  "gravita": "valutare"
+ },
+ "PAROLE-GLOSSARIO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "guida-parole-pa",
+  "sezione": "Glossario",
+  "gravita": "valutare"
+ },
+ "LG-AGGIORNAMENTO": {
+  "confermata": true,
+  "valore": null,
+  "documento": "linee-guida-design",
+  "sezione": "Semplicità di consultazione ed esperienza d'uso",
+  "gravita": "nota"
+ },
+ "LEGGIBILITA": {
+  "confermata": true,
+  "valore": null,
+  "documento": "fondamenti-linguaggio",
+  "sezione": "Ricerca e testa il linguaggio del tuo servizio",
+  "gravita": "nota"
+ }
+}
