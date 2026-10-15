@@ -21,7 +21,7 @@ social_punti:
   - "Tieni sgombra l'erba secca intorno a casa: è la via con cui il fuoco raggiunge gli edifici."
 ---
 
-Due chiamate, otto ore, nessun rientro in mezzo. Venerdì 4 settembre 2026 il Gruppo Comunale è stato impegnato dalla tarda mattinata fino a sera. Due incendi distinti, entrambi su attivazione della Sala Operativa Unica Permanente della Regione Lazio.
+Due chiamate, otto ore, nessun rientro in mezzo. Venerdì 4 settembre 2026 il Gruppo Comunale è stato impegnato dalla tarda mattinata fino a sera. Due incendi distinti, entrambi su attivazione della Sala Operativa Unificata Permanente della Regione Lazio.
 
 ## Verso mezzogiorno e mezzo, a Lanuvio
 

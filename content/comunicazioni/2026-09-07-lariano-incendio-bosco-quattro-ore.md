@@ -15,13 +15,13 @@ tts: true
 lis_section: "rischio-incendio"
 social_citazione: "Un bosco che brucia accanto ai pascoli: il fuoco non distingue tra alberi, recinti e animali."
 social_punti:
-  - "Lunedì 7 settembre 2026 il Gruppo è stato attivato dalla Sala Operativa Unica Permanente per un incendio boschivo in via Silvio Pellico, a Lariano."
+  - "Lunedì 7 settembre 2026 il Gruppo è stato attivato dalla Sala Operativa Unificata Permanente per un incendio boschivo in via Silvio Pellico, a Lariano."
   - "Il fuoco interessava un bosco confinante con terreni incolti e allevamenti di pecore."
   - "Sul posto il Mercedes Atego con impianto antincendio, insieme ai Vigili del Fuoco e ad altri Gruppi di Protezione Civile: circa quattro ore di lavoro."
   - "Se vedi fumo o fiamme chiama subito il 112: nel periodo di massima pericolosità ogni minuto conta."
 ---
 
-Lunedì 7 settembre 2026 la Sala Operativa Unica Permanente della Regione Lazio ha attivato il Gruppo Comunale per un **incendio boschivo** a **Lariano**. L'intervento era in via Silvio Pellico: attivazione poco dopo le 14, chiusura poco dopo le 18, dopo circa quattro ore.
+Lunedì 7 settembre 2026 la Sala Operativa Unificata Permanente della Regione Lazio ha attivato il Gruppo Comunale per un **incendio boschivo** a **Lariano**. L'intervento era in via Silvio Pellico: attivazione poco dopo le 14, chiusura poco dopo le 18, dopo circa quattro ore.
 
 ## Il bosco, i campi e le pecore
 
@@ -31,7 +31,7 @@ Il Gruppo è uscito con il **Mercedes Atego**, il mezzo polivalente con impianto
 
 ## Perché la Sala Operativa chiama Genzano per Lariano
 
-La campagna antincendio nel Lazio funziona per **zone**: Genzano e Lariano stanno entrambe nella Zona 9, i Castelli Romani. Quando un incendio richiede più squadre, la Sala Operativa Unica Permanente attiva i Gruppi disponibili con i mezzi adatti, indipendentemente dal Comune di appartenenza. L'autobotte da 6.000 litri è una risorsa che serve a tutto il comprensorio.
+La campagna antincendio nel Lazio funziona per **zone**: Genzano e Lariano stanno entrambe nella Zona 9, i Castelli Romani. Quando un incendio richiede più squadre, la Sala Operativa Unificata Permanente attiva i Gruppi disponibili con i mezzi adatti, indipendentemente dal Comune di appartenenza. L'autobotte da 6.000 litri è una risorsa che serve a tutto il comprensorio.
 
 Con questo intervento, il totale registrato dal 4 aprile sale a **142**: oltre **467 ore** di lavoro e **8.542 chilometri**. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 

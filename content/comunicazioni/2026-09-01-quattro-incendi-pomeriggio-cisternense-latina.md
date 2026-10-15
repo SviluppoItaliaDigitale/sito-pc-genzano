@@ -25,7 +25,7 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 
 ## Le quattro chiamate
 
-**Verso le 14, sulla Cisternense.** La Sala Operativa Unica Permanente della Regione Lazio attiva il Gruppo per un incendio sul bordo della strada. Esce il **Mercedes Atego**, il mezzo polivalente con impianto antincendio da 6.000 litri. Bastano poco meno di mezz'ora, con Vigili del Fuoco, Polizia Locale, Carabinieri e altri Gruppi comunali sul posto.
+**Verso le 14, sulla Cisternense.** La Sala Operativa Unificata Permanente della Regione Lazio attiva il Gruppo per un incendio sul bordo della strada. Esce il **Mercedes Atego**, il mezzo polivalente con impianto antincendio da 6.000 litri. Bastano poco meno di mezz'ora, con Vigili del Fuoco, Polizia Locale, Carabinieri e altri Gruppi comunali sul posto.
 
 **Nel primo pomeriggio, verso Carano.** Arriva la segnalazione di una colonna di fumo in direzione della Pontina. Sul posto ci sono canneto e vegetazione lungo la strada: il fuoco ha interessato anche terreni incolti. Insieme ai Vigili del Fuoco intervengono la Polizia Locale e altri Gruppi di Protezione Civile. Escono l'Atego e il **Land Rover Defender 130**, con il modulo antincendio da 600 litri.
 
@@ -78,7 +78,7 @@ Per questo si bagna a lungo terreno che sembra già spento, si rivolta la cenere
 
 La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** Dopo i mesi caldi la vegetazione erbacea è secca, e ai margini delle strade basta poco per innescare un fronte. Quanto sia rischiosa una singola giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) del Centro Funzionale Regionale, che classifica ogni giorno la nostra zona.
 
-Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio. Le attivazioni arrivano dalla **SOUP**, la Sala Operativa Unica Permanente regionale, che smista le squadre anche fuori dal territorio comunale. È il motivo per cui in un pomeriggio ci si può trovare sulla Cisternense e poco dopo a Latina.
+Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio. Le attivazioni arrivano dalla **SOUP**, la Sala Operativa Unificata Permanente regionale, che smista le squadre anche fuori dal territorio comunale. È il motivo per cui in un pomeriggio ci si può trovare sulla Cisternense e poco dopo a Latina.
 
 Con queste quattro uscite salgono a **130 gli interventi registrati dal 4 aprile**, data di adozione del registro operativo digitale. In tutto oltre **430 ore** e **7.682 chilometri**. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 
