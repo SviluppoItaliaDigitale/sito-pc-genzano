@@ -165,13 +165,13 @@ Dopo i tre script, lo step di commit:
 **Trigger**: cron settimanale (lunedì 06:00 UTC), manuale.
 
 **Cosa fa:**
-1. Scarica (con `curl`) le pagine ufficiali AGID / Designers Italia / Writing Toolkit / WCAG indicate nella configurazione del workflow.
-2. Calcola hash SHA-256 del contenuto.
-3. Confronta con gli hash salvati nel repository (commit precedente).
-4. Se uno o più hash sono cambiati, apre una Issue con:
-   - elenco delle pagine cambiate;
-   - checklist di revisione ("confronta la sezione X del manuale con la nuova versione della pagina Y");
-   - link alla pagina ufficiale aggiornata.
+1. Scarica con git, dai repository ufficiali su GitHub, il testo dei manuali di scrittura (Fondamenti del design system .italia, Guida alle parole della PA, Linee guida di design, Manuale operativo di design) e rinnova la copia in `.manuale/manuali-agid/` (`scripts/manuali-agid.py`, dal 15/10/2026).
+2. Calcola l'hash SHA-256 del testo visibile delle pagine AGID / Designers Italia / Bootstrap Italia / DPC indicate nel workflow e lo confronta con quello salvato.
+3. Se un manuale o una pagina è cambiato, apre una Issue con:
+   - documenti cambiati, righe cambiate e confronto dei commit;
+   - pagine web cambiate, con il link;
+   - checklist di revisione (manuale, regole, verifica finale, skill dei testi).
+4. Se una fonte non si legge, tiene l'ultimo hash buono e lo scrive nella Issue «⚠️ Fonti del manuale operativo non raggiungibili», che si chiude da sola.
 
 **Permessi**: `contents: write`, `issues: write`.
 
