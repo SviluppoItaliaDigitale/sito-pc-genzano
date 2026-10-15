@@ -11,7 +11,8 @@ name: "Aggiornamento MANUALE-SITO.md"
 #    Toolkit, del Content Toolkit e delle Linee guida AGID, che dal 04/05/2026
 #    non si scaricavano più (le pagine si sono spostate).
 # Se qualcosa cambia apre la issue di revisione. Se una fonte non si legge lo
-# dice in una issue che si aggiorna a ogni giro e si chiude da sola.
+# dice in una issue che si aggiorna a ogni giro e si chiude da sola, ma solo
+# dopo un giro in cui tutti e due i controlli sono arrivati in fondo.
 
 on:
   schedule:
@@ -272,6 +273,10 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
+          # Se un controllo non è partito o si è fermato a metà, nessuna fonte è
+          # stata letta davvero: la issue resta com'è.
+          ESITO_PAGINE: ${{ steps.check.outcome }}
+          ESITO_MANUALI: ${{ steps.manuali.outcome }}
         shell: bash
         run: |
           set -u
@@ -299,6 +304,11 @@ jobs:
             else
               gh issue create --title "$TITOLO" --label manuale --label automazione --body-file "$RUNNER_TEMP/fonti-issue.md"
             fi
-          elif [ -n "$APERTA" ]; then
-            gh issue close "$APERTA" --comment "Tutte le fonti del manuale operativo sono di nuovo leggibili (controllo del $(date -u +%d/%m/%Y))."
+          elif [ "$ESITO_PAGINE" = "success" ] && [ "$ESITO_MANUALI" = "success" ]; then
+            if [ -n "$APERTA" ]; then
+              gh issue close "$APERTA" --comment "Tutte le fonti del manuale operativo sono di nuovo leggibili (controllo del $(date -u +%d/%m/%Y))."
+            fi
+          else
+            # Il run fallito lo segnala il controllo di salute giornaliero.
+            echo "::warning ::Controlli non arrivati in fondo (pagine: ${ESITO_PAGINE:-non eseguito}, manuali: ${ESITO_MANUALI:-non eseguito}): la issue delle fonti resta com'è."
           fi
