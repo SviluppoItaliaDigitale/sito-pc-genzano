@@ -121,7 +121,7 @@ Il Gruppo comunale in questo mese:
 
 - Articolo: [Ondate di calore](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)
 - Articolo: [Temporali estivi Castelli](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
-- Articolo: [Bilancio primo mese AIB](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/)
+- Articolo: [Le prime settimane di campagna AIB](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/)
 - [Ministero della Salute — Caldo](https://www.salute.gov.it/)
 - [ARPA Lazio — Dati climatici](https://www.arpalazio.it/)
 - [Aeronautica Militare — Meteo](https://www.meteoam.it/)
