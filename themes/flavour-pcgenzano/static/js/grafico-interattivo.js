@@ -1,11 +1,13 @@
 /* Grafici interattivi dello shortcode grafico-interattivo (v2, 15/10/2026).
    Barre: i pulsanti cambiano la misura; nel grafico dei mesi ogni mese è un
    pulsante che filtra gli altri grafici dello stesso file di dati (calendario
-   e barre ricalcolate dalle singole uscite). Calendario: un solo punto di
-   tabulazione (frecce, Inizio, Fine), mouse e dito scelgono il giorno; il
-   dettaglio elenca le uscite del giorno e l'articolo che le racconta; il
-   cursore «Rivivi la campagna» scorre i giorni. Ogni grafico ha «Scarica i
-   dati» (CSV). Senza questo script i grafici restano leggibili. */
+   e barre ricalcolate dai valori per mese della serie, se ci sono, oppure
+   dalle singole uscite). Calendario: un solo punto di tabulazione (frecce,
+   Inizio, Fine), mouse e dito scelgono il giorno; il dettaglio elenca le
+   uscite del giorno, se il file le ha, e l'articolo che le racconta; il
+   cursore «Rivivi» scorre i giorni. Ogni grafico ha «Scarica i dati» (CSV).
+   Le parole per il periodo intero («tutta la campagna», «tutto il periodo»)
+   arrivano da data-gi-tutto. Senza questo script i grafici restano leggibili. */
 (function () {
   'use strict';
 
@@ -42,13 +44,16 @@
     return nomi.length < 2 ? nomi.join('') : nomi.slice(0, -1).join(', ') + ' e ' + nomi[nomi.length - 1];
   }
   function quante(n, uno, molti) { return n + ' ' + (n === 1 ? uno : molti); }
+  function periodoIntero(fig) { return fig.getAttribute('data-gi-tutto') || 'tutta la campagna'; }
 
+  /* Dati comuni ai grafici di uno stesso file: le uscite (se il file le
+     pubblica) e i racconti. Senza questo blocco i grafici non si collegano. */
   function archivio(chiave) {
     if (!(chiave in archivi)) {
       var el = document.querySelector('script.gi-dati[data-gi-chiave="' + chiave + '"]');
       var dati = null;
       if (el) { try { dati = JSON.parse(el.textContent); } catch (e) { dati = null; } }
-      archivi[chiave] = dati && dati.interventi ? dati : null;
+      archivi[chiave] = dati ? { interventi: dati.interventi || [], racconti: dati.racconti || {} } : null;
     }
     return archivi[chiave];
   }
@@ -57,7 +62,7 @@
     document.dispatchEvent(new CustomEvent('gi:filtro', { detail: { chiave: chiave, mese: mese, etichetta: etichetta } }));
   }
 
-  /* Avviso «Stai guardando solo …» con il pulsante per tornare a tutta la campagna. */
+  /* Avviso «Stai guardando solo …» con il pulsante per tornare al periodo intero. */
   function avvisoFiltro(fig) {
     var p = document.createElement('p');
     p.className = 'gi-filtro';
@@ -66,7 +71,7 @@
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'gi-azzera';
-    b.textContent = 'Mostra tutta la campagna';
+    b.textContent = 'Mostra ' + periodoIntero(fig);
     p.appendChild(testo);
     p.appendChild(document.createTextNode(' '));
     p.appendChild(b);
@@ -130,8 +135,9 @@
   }
 
   function barre(ul) {
-    var misure;
+    var misure, perMese = null;
     try { misure = JSON.parse(ul.getAttribute('data-gi-barre')); } catch (e) { return; }
+    try { perMese = JSON.parse(ul.getAttribute('data-gi-per-mese') || 'null'); } catch (e) { perMese = null; }
     var fig = ul.closest('.gi');
     var chiave = fig.getAttribute('data-gi-chiave');
     var gruppo = fig.querySelector('.gi-misure');
@@ -166,9 +172,13 @@
       });
     }
 
+    /* Con i valori per mese il CSV ha una colonna per mese (chiave AAAA-MM). */
+    var chiaviMesi = perMese ? Object.keys(perMese) : [];
     pulsanteCsv(fig, function () {
-      var out = [['voce'].concat(misure.map(function (m) { return m.nome.toLowerCase(); }))];
-      etichette.forEach(function (e, i) { out.push([e].concat(misure.map(function (m) { return m.valori[i]; }))); });
+      var out = [['voce'].concat(misure.map(function (m) { return m.nome.toLowerCase(); }), chiaviMesi)];
+      etichette.forEach(function (e, i) {
+        out.push([e].concat(misure.map(function (m) { return m.valori[i]; }), chiaviMesi.map(function (k) { return perMese[k][i]; })));
+      });
       return out;
     });
 
@@ -221,33 +231,43 @@
       return;
     }
 
-    /* Barre che seguono il filtro: il campo delle uscite con le stesse voci
-       (es. fascia oraria, mezzi) e gli stessi totali del grafico pubblicato. */
+    /* Barre che seguono il filtro: i valori per mese della serie (dati
+       aperti) oppure il campo delle uscite con le stesse voci (es. fascia
+       oraria, mezzi) e gli stessi totali del grafico pubblicato. */
     if (misure.length !== 1) return;
-    var campo = null;
-    Object.keys(dati.interventi[0] || {}).some(function (k) {
-      var conta = etichette.map(function (e) {
-        return dati.interventi.filter(function (x) {
-          return Array.isArray(x[k]) ? x[k].indexOf(e) >= 0 : x[k] === e;
-        }).length;
+    var valoriDelMese;
+    if (perMese) {
+      valoriDelMese = function (mese) {
+        return !mese ? misure[0].valori : (perMese[mese] || etichette.map(function () { return 0; }));
+      };
+    } else {
+      var campo = null;
+      Object.keys(dati.interventi[0] || {}).some(function (k) {
+        var conta = etichette.map(function (e) {
+          return dati.interventi.filter(function (x) {
+            return Array.isArray(x[k]) ? x[k].indexOf(e) >= 0 : x[k] === e;
+          }).length;
+        });
+        if (conta.join() === misure[0].valori.join()) { campo = k; return true; }
+        return false;
       });
-      if (conta.join() === misure[0].valori.join()) { campo = k; return true; }
-      return false;
-    });
-    if (!campo) return;
+      if (!campo) return;
+      valoriDelMese = function (mese) {
+        var scelte = dati.interventi.filter(function (x) { return !mese || x.d.indexOf(mese) === 0; });
+        return etichette.map(function (e) {
+          return scelte.filter(function (x) {
+            return Array.isArray(x[campo]) ? x[campo].indexOf(e) >= 0 : x[campo] === e;
+          }).length;
+        });
+      };
+    }
     var mostraAvviso = avvisoFiltro(fig);
     document.addEventListener('gi:filtro', function (ev) {
       if (ev.detail.chiave !== chiave) return;
       var mese = ev.detail.mese;
-      var scelte = dati.interventi.filter(function (x) { return !mese || x.d.indexOf(mese) === 0; });
-      var valori = etichette.map(function (e) {
-        return scelte.filter(function (x) {
-          return Array.isArray(x[campo]) ? x[campo].indexOf(e) >= 0 : x[campo] === e;
-        }).length;
-      });
-      disegna(valori, misure[0]);
+      disegna(valoriDelMese(mese), misure[0]);
       mostraAvviso(ev.detail.etichetta);
-      if (annuncio) annuncio.textContent = mese ? 'Il grafico ora mostra ' + ev.detail.etichetta + '.' : 'Il grafico ora mostra tutta la campagna.';
+      if (annuncio) annuncio.textContent = 'Il grafico ora mostra ' + (mese ? ev.detail.etichetta : periodoIntero(fig)) + '.';
     });
   }
 
@@ -265,6 +285,21 @@
     if (dati) dati.interventi.forEach(function (x) { (perGiorno[x.d] = perGiorno[x.d] || []).push(x); });
     var racconti = (dati && dati.racconti) || {};
     var corrente = -1;
+    var tutto = periodoIntero(fig);
+    /* Calendari lunghi scorrono in orizzontale (su telefono): la casella
+       scelta da tastiera o dal cursore resta in vista, senza muovere la pagina. */
+    var scorrevole = fig.querySelector('.gi-cal-wrap');
+    function inVista(c) {
+      if (!scorrevole || scorrevole.scrollWidth <= scorrevole.clientWidth) return;
+      var r = c.getBoundingClientRect(), w = scorrevole.getBoundingClientRect();
+      var x = r.left - w.left + scorrevole.scrollLeft;   /* posizione nel contenuto */
+      if (r.left < w.left + 4) {
+        var meta = x - 32;
+        scorrevole.scrollLeft = meta < 48 ? 0 : meta;   /* vicino all'inizio: si vedono anche i giorni */
+      } else if (r.right > w.right - 4) {
+        scorrevole.scrollLeft = x + r.width + 32 - scorrevole.clientWidth;
+      }
+    }
     cal.tabIndex = 0;
     dettaglio.hidden = false;
     pulsanteCsv(fig, function () {
@@ -330,6 +365,7 @@
       ev.preventDefault();
       fissato = Math.max(0, Math.min(celle.length - 1, nuovo));
       scegli(fissato);
+      inVista(celle[fissato]);
     });
 
     /* Filtro per mese. */
@@ -353,7 +389,7 @@
       mostraAvviso(ev.detail.etichetta);
     });
 
-    /* Rivivi la campagna. */
+    /* Rivivi il periodo giorno per giorno. */
     var rivivi = fig.querySelector('.gi-rivivi');
     if (!rivivi) return;
     var cursore = rivivi.querySelector('.gi-cursore');
@@ -369,12 +405,15 @@
       cumOre.push(Math.round(to * 10) / 10);
     });
     var timer = null;
-    function posiziona(k) {
+    /* Circa 18 secondi per l'intero periodo, mai più di 140 ms per giorno. */
+    var passo = Math.max(70, Math.min(140, Math.round(18000 / celle.length)));
+    function posiziona(k, seguire) {
       celle.forEach(function (c, i) { c.classList.toggle('gi-dopo', i > k); });
-      var testo = (k === celle.length - 1 ? 'Tutta la campagna, fino a ' : 'Fino a ') + dataLunga(celle[k].getAttribute('data-d')) + ': ' +
+      var testo = (k === celle.length - 1 ? maiuscola(tutto) + ', fino a ' : 'Fino a ') + dataLunga(celle[k].getAttribute('data-d')) + ': ' +
         quante(cumN[k], 'intervento', 'interventi') + ', ' + numero(cumOre[k]) + ' ore.';
       contatore.textContent = testo;
       cursore.setAttribute('aria-valuetext', testo);
+      if (seguire) inVista(celle[k]);
     }
     function ferma() {
       if (!timer) return;
@@ -383,7 +422,7 @@
       playTesto.textContent = 'Avvia';
       playSegno.textContent = '▶';
     }
-    cursore.addEventListener('input', function () { ferma(); posiziona(parseInt(cursore.value, 10)); });
+    cursore.addEventListener('input', function () { ferma(); posiziona(parseInt(cursore.value, 10), true); });
     play.addEventListener('click', function () {
       if (timer) { ferma(); return; }
       var k = parseInt(cursore.value, 10);
@@ -393,9 +432,9 @@
       timer = setInterval(function () {
         k++;
         cursore.value = k;
-        posiziona(k);
+        posiziona(k, true);
         if (k >= celle.length - 1) ferma();
-      }, 140);
+      }, passo);
     });
     document.addEventListener('visibilitychange', function () { if (document.hidden) ferma(); });
     if (movimentoRidotto()) play.hidden = true;

@@ -9,6 +9,10 @@ nessun richiedente, nessuna descrizione, nessun luogo/indirizzo specifico.
 Il file .xlsx NON va committato (contiene nomi dei volontari): resta sul PC.
 Questo script ne estrae solo i numeri.
 
+Scrive anche data/open_data_interventi.json, i dati dei grafici interattivi
+della pagina /open-data/: per giorno quanti interventi e quante ore, per mese
+misure, tipologie, fasce orarie e automezzi (vedi la sezione GRAFICI sotto).
+
 Uso:  python3 scripts/genera-open-data-interventi.py [percorso.xlsx]
 
 Senza argomento prende automaticamente l'export PIÙ RECENTE in ~/Scrivania
@@ -170,6 +174,185 @@ def write_rows(nome, header, rows, periodo):
     print(f"  scritto {csv_path} + .json")
 
 
+# ---------- GRAFICI INTERATTIVI di /open-data/ (15/10/2026) ----------
+# Lo shortcode grafico-interattivo della pagina degli open data legge
+# data/open_data_interventi.json. Solo aggregati, al livello che la pagina
+# dichiara: per GIORNO soltanto quanti interventi e quante ore; tipologie,
+# fasce orarie di partenza e automezzi solo per MESE. Un giorno con un solo
+# intervento, accanto alla sua tipologia, racconterebbe quel singolo evento, e
+# alcune tipologie riguardano persone (es. "Ricerca persona"): per questo le
+# tipologie non scendono sotto il mese. Nessun elenco dei singoli interventi.
+# Lo scrivono questo script (export cumulativo) e aggiorna-open-data-delta.py
+# (export parziale, per somma), con le stesse funzioni.
+# Gli articoli che raccontano le giornate stanno in data/racconti_interventi.json,
+# curato a mano (giorno -> pagine): il file dei grafici vi rimanda per nome,
+# così aggiungere un racconto non richiede di rigenerare i dati.
+DATI_GRAFICI = "data/open_data_interventi.json"
+RACCONTI = "racconti_interventi"          # data/racconti_interventi.json
+FASCE = ["Prima delle 12", "12–14", "14–16", "16–18", "18–20", "Dopo le 20"]
+
+
+def fascia_oraria(ora):
+    m = re.match(r"\s*(\d{1,2})[:.](\d{2})", str(ora or ""))
+    if not m:
+        return None
+    t = int(m.group(1)) * 60 + int(m.group(2))
+    for limite, nome in zip((12, 14, 16, 18, 20), FASCE):
+        if t < limite * 60:
+            return nome
+    return FASCE[-1]
+
+
+def tipologia(r, col):
+    """Tipologia pubblicata: menu del gestionale, altrimenti il Motivo."""
+    t = str(col(r, "Tipologia evento") or "").strip()
+    if t in ("", "-", "None"):
+        t = " ".join(str(col(r, "Motivo") or "").split())
+    t = TIPOLOGIE_NORMALIZZATE.get(t, t)
+    return t or "Non classificato"
+
+
+def record_grafico(r, col):
+    """Riassunto anonimo di un intervento, usato SOLO per sommare: non si scrive."""
+    mezzi = []
+    for etichetta, _targa in automezzi(col(r, "Veicoli")):
+        if etichetta not in mezzi:
+            mezzi.append(etichetta)
+    persone = [n for n in str(col(r, "Utenti") or "").split("|") if n.strip()]
+    return {"d": parse_data_it(col(r, "Data Inizio")), "fascia": fascia_oraria(col(r, "Ora Inizio")),
+            "min": minuti(col(r, "Durata")), "persone": len(persone), "mezzi": mezzi,
+            "tipo": tipologia(r, col)}
+
+
+def grafici_vuoti():
+    return {"giorni": {}, "mesi": {}, "per_mese": {"tipologie": {}, "orari": {}, "mezzi": {}}}
+
+
+def grafici_da_file():
+    """Aggregati del file già pubblicato, per sommarci un export parziale.
+    Ore (al decimo) e ore di servizio (all'unità) sono arrotondate nel file:
+    sommando il delta si eredita quell'incertezza, che si azzera al primo
+    export cumulativo (come per i totali di statistiche-interventi)."""
+    with open(DATI_GRAFICI, encoding="utf-8") as fp:
+        g = json.load(fp)
+    agg = grafici_vuoti()
+    for x in g["giorni"]:
+        if x["n"]:
+            agg["giorni"][x["d"]] = {"n": x["n"], "ore": x["ore"]}
+    s = g["serie"]
+    misure = s["mesi"]["misure"]
+    for i, k in enumerate(s["mesi"]["chiavi"]):
+        agg["mesi"][k] = {"n": misure[0]["valori"][i], "ore": misure[1]["valori"][i], "serv": misure[2]["valori"][i]}
+    for nome in ("tipologie", "orari", "mezzi"):
+        for k, valori in s[nome]["per_mese"].items():
+            agg["per_mese"][nome][k] = {e: v for e, v in zip(s[nome]["etichette"], valori) if v}
+    return agg
+
+
+def aggiungi_grafico(agg, rec):
+    iso = rec["d"].isoformat()
+    mese = iso[:7]
+    g = agg["giorni"].setdefault(iso, {"n": 0, "ore": 0.0})
+    g["n"] += 1
+    g["ore"] += rec["min"] / 60
+    m = agg["mesi"].setdefault(mese, {"n": 0, "ore": 0.0, "serv": 0.0})
+    m["n"] += 1
+    m["ore"] += rec["min"] / 60
+    m["serv"] += rec["min"] * rec["persone"] / 60
+    pm = agg["per_mese"]
+    voci = {"tipologie": [rec["tipo"]], "orari": [rec["fascia"]] if rec["fascia"] else [], "mezzi": rec["mezzi"]}
+    for nome, etichette in voci.items():
+        cont = pm[nome].setdefault(mese, {})
+        for e in etichette:
+            cont[e] = cont.get(e, 0) + 1
+
+
+def racconti_mancanti(giorni):
+    """Giornate con interventi senza un racconto in data/racconti_interventi.json.
+    Serve a chi aggiorna i dati: dopo gli articoli sulle giornate nuove si
+    aggiunge lì la riga giorno -> pagina (il grafico la mostra al build)."""
+    try:
+        with open(os.path.join("data", RACCONTI + ".json"), encoding="utf-8") as fp:
+            racc = json.load(fp)
+    except (OSError, ValueError):
+        racc = {}
+    attivi = [x["d"] for x in giorni if x["n"]]
+    senza = [d for d in attivi if d not in racc]
+    print(f"  racconti: {len(attivi) - len(senza)} giornate su {len(attivi)} hanno un articolo "
+          f"in data/{RACCONTI}.json")
+    if senza:
+        print("  giornate senza racconto (aggiungerlo se un articolo le racconta): " + ", ".join(senza))
+
+
+def scrivi_grafici(agg, periodo):
+    dal = datetime.date.fromisoformat(periodo["dal"])
+    al = datetime.date.fromisoformat(periodo["al"])
+    giorni, d = [], dal
+    while d <= al:
+        x = agg["giorni"].get(d.isoformat(), {"n": 0, "ore": 0.0})
+        giorni.append({"d": d.isoformat(), "n": x["n"], "ore": round(x["ore"], 1)})
+        d += datetime.timedelta(days=1)
+    chiavi, m = [], datetime.date(dal.year, dal.month, 1)
+    while m <= al:
+        chiavi.append(m.strftime("%Y-%m"))
+        m = datetime.date(m.year + (m.month == 12), m.month % 12 + 1, 1)
+    etichette = []
+    for k in chiavi:
+        a, mm = map(int, k.split("-"))
+        nome = MESI_NOME[mm].capitalize()
+        fine_mese = (datetime.date(a + (mm == 12), mm % 12 + 1, 1) - datetime.timedelta(days=1)).day
+        dal_qui = k == chiavi[0] and dal.day > 1
+        al_qui = k == chiavi[-1] and al.day < fine_mese
+        if dal_qui and al_qui:
+            nome += f" (dal {dal.day} al {al.day})"
+        elif dal_qui:
+            nome += f" (dal {dal.day})"
+        elif al_qui:
+            nome += f" (fino al {al.day})"
+        etichette.append(nome)
+    vuoto = {"n": 0, "ore": 0.0, "serv": 0.0}
+
+    def misura(nome, unita, unita1, valori):
+        return {"nome": nome, "unita": unita, "unita1": unita1, "valori": valori}
+
+    def serie_per_mese(nome, ordine=None):
+        pm = agg["per_mese"][nome]
+        tot = {}
+        for k in chiavi:
+            for e, n in pm.get(k, {}).items():
+                tot[e] = tot.get(e, 0) + n
+        voci = ordine or sorted(tot, key=lambda e: (-tot[e], e))
+        return {"etichette": voci,
+                "misure": [misura("Interventi", "interventi", "intervento", [tot.get(e, 0) for e in voci])],
+                "per_mese": {k: [pm.get(k, {}).get(e, 0) for e in voci] for k in chiavi}}
+
+    out = {
+        "titolo": "Interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+        "fonte": "Registro interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, dati aggregati e anonimi",
+        "aggiornato": periodo["al"],
+        "testi": {"tutto": "tutto il periodo", "rivivi": "Rivivi l'attività del Gruppo giorno per giorno"},
+        "giorni": giorni,
+        "serie": {
+            "mesi": {"etichette": etichette, "chiavi": chiavi, "misure": [
+                misura("Interventi", "interventi", "intervento", [agg["mesi"].get(k, vuoto)["n"] for k in chiavi]),
+                misura("Ore di intervento", "ore", "ora", [round(agg["mesi"].get(k, vuoto)["ore"], 1) for k in chiavi]),
+                misura("Ore di servizio dei volontari", "ore", "ora", [round(agg["mesi"].get(k, vuoto)["serv"]) for k in chiavi]),
+            ]},
+            "tipologie": serie_per_mese("tipologie"),
+            "orari": serie_per_mese("orari", FASCE),
+            "mezzi": serie_per_mese("mezzi"),
+        },
+        # rimando al file curato a mano: lo shortcode lo legge al build
+        "racconti": RACCONTI,
+    }
+    with open(DATI_GRAFICI, "w", encoding="utf-8") as fp:
+        json.dump(out, fp, ensure_ascii=False, indent=1)
+        fp.write("\n")
+    print(f"  scritto {DATI_GRAFICI} (grafici di /open-data/, solo aggregati)")
+    racconti_mancanti(giorni)
+    return out
+
+
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else trova_export()
     if not src or not os.path.exists(src):
@@ -228,13 +411,7 @@ def main():
     # generico e senza dati personali nel gestionale (qui sono tutte categorie
     # operative: "Taglio pianta", "Incendio sterpaglie", ...).
     from collections import Counter
-    tip = Counter()
-    for r in data:
-        t = str(col(r, "Tipologia evento") or "").strip()
-        if t in ("", "-", "None"):
-            t = " ".join(str(col(r, "Motivo") or "").split())
-        t = TIPOLOGIE_NORMALIZZATE.get(t, t)
-        tip[t or "Non classificato"] += 1
+    tip = Counter(tipologia(r, col) for r in data)
 
     # automezzi impiegati (dedup per targa entro la cella; targa MAI pubblicata)
     veic_interventi = Counter()   # etichetta -> n. interventi in cui è usato
@@ -286,6 +463,19 @@ def main():
         ("Volontari con almeno un intervento", vol_attivi),
         ("Presenze dei volontari agli interventi", rap_tot),
     ], periodo)
+
+    # ---------- GRAFICI di /open-data/ (solo aggregati) ----------
+    agg = grafici_vuoti()
+    for r in data:
+        rec = record_grafico(r, col)
+        if rec["d"]:
+            aggiungi_grafico(agg, rec)
+    g = scrivi_grafici(agg, periodo)
+    s = g["serie"]
+    assert sum(x["n"] for x in g["giorni"]) == n_tot, "grafici: interventi diversi dal totale"
+    assert dict(zip(s["tipologie"]["etichette"], s["tipologie"]["misure"][0]["valori"])) == dict(tip), "grafici: tipologie diverse"
+    assert dict(zip(s["mezzi"]["etichette"], s["mezzi"]["misure"][0]["valori"])) == dict(veic_interventi), "grafici: automezzi diversi"
+    assert abs(sum(s["mesi"]["misure"][1]["valori"]) - ore) < 0.5, "grafici: ore diverse dal totale"
 
     print("\nRiepilogo (anonimo):")
     print(f"  interventi: {n_tot}, ore {ore}, km {int(km)}, {per_label}")

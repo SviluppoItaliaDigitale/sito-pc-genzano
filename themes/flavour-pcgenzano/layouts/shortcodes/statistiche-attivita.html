@@ -2,8 +2,9 @@
      leggendo i CSV generati da scripts/genera-open-data-interventi.py.
      Si aggiorna da solo a ogni nuovo export (nessun numero scritto a mano). */}}
 {{/* Tabella riassuntiva dei soli indicatori sintetici (KPI): interventi e
-     volontari. "Interventi per tipologia" e "Automezzi impiegati" hanno una
-     resa dedicata (grafico + tabella) tramite lo shortcode grafico-csv. */}}
+     volontari. Mesi, giorni, tipologie, ore di inizio e automezzi hanno i
+     grafici interattivi della pagina (shortcode grafico-interattivo con
+     data/open_data_interventi.json, scritto dagli stessi script). */}}
 {{ $sezioni := slice
   (dict "tit" "Interventi" "file" "static/open-data/statistiche-interventi.csv")
   (dict "tit" "Volontari" "file" "static/open-data/statistiche-volontari.csv")
