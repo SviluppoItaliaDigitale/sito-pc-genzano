@@ -15,8 +15,9 @@
      (Chrome ed Edge) la lezione va su un altro schermo (Chromecast,
      TV, secondo monitor) e il dispositivo del docente fa da
      telecomando. Lo schermo apre la stessa pagina con #aula-schermo e
-     riceve la schermata già composta {h, k, c, d}: contenuto, tipo di
-     schermata, contatore e dimensione del testo. Non la ricostruisce da sé perché con una
+     riceve la schermata già composta {h, k, c, d, s}: contenuto (con le
+     risposte aperte), tipo di schermata, contatore, dimensione del
+     testo e quanto è stata fatta scorrere (da 0 a 1). Non la ricostruisce da sé perché con una
      larghezza diversa la pagina può dare un numero diverso di
      schermate. Dove l'API manca il pulsante non compare.
    ============================================================ */
@@ -123,9 +124,24 @@
     function invia() {
       if (collegamento && collegamento.state === 'connected') {
         try {
-          collegamento.send(JSON.stringify({ h: area.innerHTML, k: area.className, c: contatore.innerHTML, d: dimensione }));
+          var corsa = area.scrollHeight - area.clientHeight;
+          collegamento.send(JSON.stringify({
+            h: area.innerHTML, k: area.className, c: contatore.innerHTML, d: dimensione,
+            s: corsa > 0 ? area.scrollTop / corsa : 0
+          }));
         } catch (e) { /* schermo perso */ }
       }
+    }
+    // lo schermo segue anche lo scorrimento e le risposte aperte o chiuse
+    var attesa = false;
+    function inviaPresto() {
+      if (!collegamento || attesa) return;
+      attesa = true;
+      setTimeout(function () { attesa = false; invia(); }, 60);
+    }
+    if (!schermo) {
+      area.addEventListener('scroll', inviaPresto, { passive: true });
+      area.addEventListener('toggle', inviaPresto, true);
     }
     function scala(d) {
       dimensione = Math.max(0, Math.min(DIMENSIONI.length - 1, d));
@@ -239,14 +255,19 @@
     if (schermo) {
       // lo schermo della classe: niente comandi, segue il telecomando
       mostra(0, false);
+      var ultimo = null;
       return {
         vai: function (dati) {
           if (!dati || typeof dati.h !== 'string') return;
           if (typeof dati.d === 'number') scala(dati.d);
           if (typeof dati.k === 'string') area.className = dati.k;   // apertura centrata, figura
-          area.innerHTML = dati.h;   // contenuto della stessa pagina, composto dal dispositivo del docente
-          area.scrollTop = 0;
+          if (dati.h !== ultimo) {   // contenuto della stessa pagina, composto dal dispositivo del docente
+            area.innerHTML = dati.h;
+            ultimo = dati.h;
+          }
           if (typeof dati.c === 'string') contatore.innerHTML = dati.c;
+          var corsa = area.scrollHeight - area.clientHeight;
+          area.scrollTop = corsa > 0 && typeof dati.s === 'number' ? dati.s * corsa : 0;
         }
       };
     }
