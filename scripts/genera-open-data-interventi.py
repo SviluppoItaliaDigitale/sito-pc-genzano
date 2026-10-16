@@ -284,7 +284,45 @@ def racconti_mancanti(giorni):
         print("  giornate senza racconto (aggiungerlo se un articolo le racconta): " + ", ".join(senza))
 
 
-def scrivi_grafici(agg, periodo):
+def controlla_grafici(g, n_tot, tip, mez, ore=None):
+    """Confronta i grafici costruiti con i totali dei dataset e restituisce i
+    problemi trovati (lista vuota se tornano). Si chiama PRIMA di scrivere
+    qualunque file: se qualcosa non torna, nessun dataset viene toccato."""
+    s = g["serie"]
+    problemi = []
+    giorni = sum(x["n"] for x in g["giorni"])
+    if giorni != n_tot:
+        problemi.append(f"interventi nel calendario {giorni}, nel dataset {n_tot}")
+    mesi = sum(s["mesi"]["misure"][0]["valori"])
+    if mesi != n_tot:
+        problemi.append(f"interventi nei mesi {mesi}, nel dataset {n_tot}")
+    if dict(zip(s["tipologie"]["etichette"], s["tipologie"]["misure"][0]["valori"])) != dict(tip):
+        problemi.append("tipologie diverse dal dataset")
+    if dict(zip(s["mezzi"]["etichette"], s["mezzi"]["misure"][0]["valori"])) != dict(mez):
+        problemi.append("automezzi diversi dal dataset")
+    if ore is not None:
+        ore_mesi = round(sum(s["mesi"]["misure"][1]["valori"]), 1)
+        if abs(ore_mesi - ore) >= 0.5:
+            problemi.append(f"ore nei mesi {ore_mesi}, nel dataset {ore}")
+    return problemi
+
+
+def senza_data(righe, col):
+    """Numeri degli interventi con la data di inizio non leggibile."""
+    return [str(col(r, "Numero")) for r in righe if not parse_data_it(col(r, "Data Inizio"))]
+
+
+def scrivi_grafici(out):
+    """Scrive il file dei grafici già costruito e controllato."""
+    with open(DATI_GRAFICI, "w", encoding="utf-8") as fp:
+        json.dump(out, fp, ensure_ascii=False, indent=1)
+        fp.write("\n")
+    print(f"  scritto {DATI_GRAFICI} (grafici di /open-data/, solo aggregati)")
+    racconti_mancanti(out["giorni"])
+
+
+def costruisci_grafici(agg, periodo):
+    """Dati dei grafici in memoria (nessun file scritto)."""
     dal = datetime.date.fromisoformat(periodo["dal"])
     al = datetime.date.fromisoformat(periodo["al"])
     giorni, d = [], dal
@@ -345,11 +383,6 @@ def scrivi_grafici(agg, periodo):
         # rimando al file curato a mano: lo shortcode lo legge al build
         "racconti": RACCONTI,
     }
-    with open(DATI_GRAFICI, "w", encoding="utf-8") as fp:
-        json.dump(out, fp, ensure_ascii=False, indent=1)
-        fp.write("\n")
-    print(f"  scritto {DATI_GRAFICI} (grafici di /open-data/, solo aggregati)")
-    racconti_mancanti(giorni)
     return out
 
 
@@ -429,6 +462,33 @@ def main():
                 visti.add(etichetta)
                 veic_interventi[etichetta] += 1
 
+    # ---------- MEMBRI (solo aggregato, niente nomi) ----------
+    ws2 = wb["Interventi membri"]
+    d2 = [r for r in ws2.iter_rows(values_only=True)][1:]
+    d2 = [r for r in d2 if r and r[0]]
+    vol_elenco = len(d2)
+    vol_attivi = sum(1 for r in d2 if fnum(r[1]) > 0)
+    rap_tot = int(sum(fnum(r[1]) for r in d2))
+    # "Volontari in organico" rimosso dall'output: il foglio "Interventi membri"
+    # elenca i membri presenti nell'export del gestionale, non è la consistenza
+    # ufficiale dell'organico. Si pubblicano solo gli aggregati legati agli
+    # interventi effettivi.
+    # ---------- GRAFICI di /open-data/ (solo aggregati) ----------
+    # Si costruiscono e si controllano PRIMA di scrivere qualunque file: se una
+    # data non si legge o i conti non tornano, i dataset pubblicati restano com'erano.
+    illeggibili = senza_data(data, col)
+    if illeggibili:
+        sys.exit("Data di inizio non leggibile negli interventi " + ", ".join(illeggibili)
+                 + ": correggi il registro e riesporta. Nessun file scritto.")
+    agg = grafici_vuoti()
+    for r in data:
+        aggiungi_grafico(agg, record_grafico(r, col))
+    g = costruisci_grafici(agg, periodo)
+    problemi = controlla_grafici(g, n_tot, tip, veic_interventi, ore)
+    if problemi:
+        sys.exit("Grafici non coerenti con i dataset (" + "; ".join(problemi) + "). Nessun file scritto.")
+
+    # ---------- scrittura: dataset di static/open-data/ e grafici ----------
     write_kv("statistiche-interventi", [
         ("Periodo (provvisorio)", per_label or "n.d."),
         ("Interventi registrati", n_tot),
@@ -448,34 +508,12 @@ def main():
                sorted(([k, v] for k, v in veic_interventi.items()), key=lambda x: -x[1]),
                periodo)
 
-    # ---------- MEMBRI (solo aggregato, niente nomi) ----------
-    ws2 = wb["Interventi membri"]
-    d2 = [r for r in ws2.iter_rows(values_only=True)][1:]
-    d2 = [r for r in d2 if r and r[0]]
-    vol_elenco = len(d2)
-    vol_attivi = sum(1 for r in d2 if fnum(r[1]) > 0)
-    rap_tot = int(sum(fnum(r[1]) for r in d2))
-    # "Volontari in organico" rimosso dall'output: il foglio "Interventi membri"
-    # elenca i membri presenti nell'export del gestionale, non è la consistenza
-    # ufficiale dell'organico. Si pubblicano solo gli aggregati legati agli
-    # interventi effettivi.
     write_kv("statistiche-volontari", [
         ("Volontari con almeno un intervento", vol_attivi),
         ("Presenze dei volontari agli interventi", rap_tot),
     ], periodo)
 
-    # ---------- GRAFICI di /open-data/ (solo aggregati) ----------
-    agg = grafici_vuoti()
-    for r in data:
-        rec = record_grafico(r, col)
-        if rec["d"]:
-            aggiungi_grafico(agg, rec)
-    g = scrivi_grafici(agg, periodo)
-    s = g["serie"]
-    assert sum(x["n"] for x in g["giorni"]) == n_tot, "grafici: interventi diversi dal totale"
-    assert dict(zip(s["tipologie"]["etichette"], s["tipologie"]["misure"][0]["valori"])) == dict(tip), "grafici: tipologie diverse"
-    assert dict(zip(s["mezzi"]["etichette"], s["mezzi"]["misure"][0]["valori"])) == dict(veic_interventi), "grafici: automezzi diversi"
-    assert abs(sum(s["mesi"]["misure"][1]["valori"]) - ore) < 0.5, "grafici: ore diverse dal totale"
+    scrivi_grafici(g)
 
     print("\nRiepilogo (anonimo):")
     print(f"  interventi: {n_tot}, ore {ore}, km {int(km)}, {per_label}")

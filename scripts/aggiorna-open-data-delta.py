@@ -218,6 +218,33 @@ def main():
               f"-> conteggiati come nuovi: {vol_nuovi}")
     print("  nota: le ore ereditano ±0,1 h di arrotondamento dal totale pubblicato.")
 
+    # Grafici interattivi di /open-data/ (stessa somma, per giorno e per mese):
+    # si costruiscono e si controllano PRIMA di scrivere qualunque file, anche
+    # con --dry-run. Se una data non si legge o il file dei grafici non torna
+    # con i dataset pubblicati, ci si ferma e nessun file viene toccato.
+    g = None
+    if os.path.exists(gen.DATI_GRAFICI):
+        illeggibili = gen.senza_data(nuove, col)
+        if illeggibili:
+            sys.exit("Data di inizio non leggibile negli interventi " + ", ".join(illeggibili)
+                     + ": correggi il registro e riesporta. Nessun file scritto.")
+        try:
+            agg = gen.grafici_da_file()
+        except (OSError, ValueError, KeyError, TypeError, IndexError) as e:
+            sys.exit(f"{gen.DATI_GRAFICI} non si legge ({e}): rigeneralo con un export cumulativo "
+                     "(genera-open-data-interventi.py). Nessun file scritto.")
+        prima = sum(x["n"] for x in agg["giorni"].values())
+        if prima != v["Interventi registrati"]:
+            sys.exit(f"{gen.DATI_GRAFICI} conta {prima} interventi, i dataset pubblicati "
+                     f"{v['Interventi registrati']}: rigeneralo con un export cumulativo. Nessun file scritto.")
+        for r in nuove:
+            gen.aggiungi_grafico(agg, gen.record_grafico(r, col))
+        g = gen.costruisci_grafici(agg, periodo_new)
+        problemi = gen.controlla_grafici(g, v["Interventi registrati"] + len(nuove), tip, mez)
+        if problemi:
+            sys.exit("Grafici non coerenti con i dataset (" + "; ".join(problemi) + "). Nessun file scritto.")
+        print("  grafici: coerenti con i nuovi totali.")
+
     if a.dry_run:
         print("\n--dry-run: nessun file scritto.")
         return
@@ -228,22 +255,8 @@ def main():
     gen.write_rows("automezzi-impiegati", ["automezzo", "interventi"],
                    sorted(([k, n] for k, n in mez.items()), key=lambda x: -x[1]), periodo_new)
     gen.write_kv("statistiche-volontari", vol_new, periodo_new)
-
-    # grafici interattivi di /open-data/: stessa somma, per giorno e per mese
-    if os.path.exists(gen.DATI_GRAFICI):
-        agg = gen.grafici_da_file()
-        for r in nuove:
-            rec = gen.record_grafico(r, col)
-            if rec["d"]:
-                gen.aggiungi_grafico(agg, rec)
-        g = gen.scrivi_grafici(agg, periodo_new)
-        s = g["serie"]
-        assert sum(x["n"] for x in g["giorni"]) == v["Interventi registrati"] + len(nuove), \
-            "grafici: interventi diversi dal totale"
-        assert dict(zip(s["tipologie"]["etichette"], s["tipologie"]["misure"][0]["valori"])) == tip, \
-            "grafici: tipologie diverse dal dataset"
-        assert dict(zip(s["mezzi"]["etichette"], s["mezzi"]["misure"][0]["valori"])) == mez, \
-            "grafici: automezzi diversi dal dataset"
+    if g:
+        gen.scrivi_grafici(g)
     else:
         print(f"  {gen.DATI_GRAFICI} assente: i grafici si creano con un export cumulativo "
               "(genera-open-data-interventi.py).")
