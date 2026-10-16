@@ -538,6 +538,8 @@ In `.claude/agents/` ci sono **50 agenti custom** (dal 28/09/2026 anche `pc-cale
 
 Quando l'utente fa una richiesta che corrisponde al trigger di uno di questi agenti, **applica i criteri descritti** anche se non puoi richiamare il sub-agent specifico.
 
+**Chi dirige.** La regia è della sessione principale, cioè della tua: applichi tu i criteri degli specialisti, uno dopo l'altro, nell'ordine indicato in `CLAUDE.md` (§ «Skill globali», paragrafo «Agent custom + skill in sequenza»). Se il tuo ambiente ti lascia avviare sotto-attività in parallelo, unire i risultati, verificarne la coerenza e pubblicare restano compiti tuoi, un merge per volta. I limiti di delega scritti per Claude in `CLAUDE.md` (§ «Chi dirige») riguardano solo le sue sessioni. Nel rapporto o nella descrizione della PR scrivi quali controlli hai applicato: un controllo non si salta mai in silenzio.
+
 ### 7.1 Skill globali Claude Code (parallelo per OpenAI: usa le tue specializzazioni native)
 
 Claude Code (sessioni CLI/mobile/cloud su Anthropic) ha installate **~100 skill globali** in `~/.claude/skills/` invocabili col tool `Skill`: pattern tecnici trasversali per accessibilità WCAG, SEO, audit del repo, ricerca multi-source, plan multi-step, sicurezza, gestione errori, ecc. La politica obbligata di invocazione è in `manuale/parte-31-skill-globali-invocazione.md` e in `CLAUDE.md` § *"Skill globali — invocazione obbligata col tool `Skill`"*.
