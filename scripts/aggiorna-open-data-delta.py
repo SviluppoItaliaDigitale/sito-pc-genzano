@@ -218,16 +218,20 @@ def main():
               f"-> conteggiati come nuovi: {vol_nuovi}")
     print("  nota: le ore ereditano ±0,1 h di arrotondamento dal totale pubblicato.")
 
+    # Una data di inizio che non si legge ferma tutto, anche con --dry-run e
+    # anche senza il file dei grafici: il generatore farebbe lo stesso, e un
+    # intervento senza giorno non deve entrare nei dataset pubblicati.
+    illeggibili = gen.senza_data(nuove, col)
+    if illeggibili:
+        sys.exit("Data di inizio non leggibile negli interventi " + ", ".join(illeggibili)
+                 + ": correggi il registro e riesporta. Nessun file scritto.")
+
     # Grafici interattivi di /open-data/ (stessa somma, per giorno e per mese):
     # si costruiscono e si controllano PRIMA di scrivere qualunque file, anche
-    # con --dry-run. Se una data non si legge o il file dei grafici non torna
-    # con i dataset pubblicati, ci si ferma e nessun file viene toccato.
+    # con --dry-run. Se il file dei grafici non torna con i dataset pubblicati,
+    # ci si ferma e nessun file viene toccato.
     g = None
     if os.path.exists(gen.DATI_GRAFICI):
-        illeggibili = gen.senza_data(nuove, col)
-        if illeggibili:
-            sys.exit("Data di inizio non leggibile negli interventi " + ", ".join(illeggibili)
-                     + ": correggi il registro e riesporta. Nessun file scritto.")
         try:
             agg = gen.grafici_da_file()
         except (OSError, ValueError, KeyError, TypeError, IndexError) as e:
