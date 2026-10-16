@@ -181,8 +181,16 @@
     // Visivo: nascondi immagini
     if (state.hideImages) html.classList.add('a11y-hide-images');
 
-    // Visivo: pausa animazioni
-    if (state.pauseAnimations) html.classList.add('a11y-pause-animations');
+    // Visivo: pausa animazioni. Due classi per la stessa preferenza:
+    // `a11y-pause-animations` regge la regola generale di a11y-toolbar.css,
+    // `a11y-pause-anim` è il nome che leggono i componenti (CSS e JavaScript di
+    // dossier, Laboratorio meteo, grafici interattivi, assistente). Fino al
+    // 16/10/2026 la seconda non veniva mai aggiunta e quegli script non si
+    // fermavano. Tenere le due righe insieme (anche nello script di baseof.html).
+    if (state.pauseAnimations) {
+      html.classList.add('a11y-pause-animations');
+      html.classList.add('a11y-pause-anim');
+    }
 
     // Orientamento: evidenzia link
     if (state.highlightLinks) html.classList.add('a11y-highlight-links');

@@ -153,7 +153,7 @@ Audit strutturale completo del sito (le 7 Fasi del modello di lavoro). Esiti pri
 
 - **-2.85 MB di asset** ottimizzati: `favicon.png` 932→10 KB (era duplicato del logo, ridimensionato a 64×64), `logo-pc-genzano.png` 932→237 KB (480×480 sufficiente), 2 webp ricompressi sotto i 200 KB, 8+3 webp duplicati md5 consolidati al filename canonico, articoli ridiretti.
 - **Bootstrap Italia bundle**: tentato switch a slim (-750 KB), **rollback** dopo che la navbar custom Italia ha smesso di rispondere. Decisione registrata in memoria: lasciare sempre il bundle 995 KB. Vedi `feedback_bs_italia_no_slim.md`.
-- **CSS unused audit**: rimosse 11 classi morte (-66 righe su `custom.css`). Bug fixato: selettore `html.a11y-pause-anim` (troncato) → `html.a11y-pause-animations` (full nome generato dal JS toolbar a11y).
+- **CSS unused audit**: rimosse 11 classi morte (-66 righe su `custom.css`). Bug fixato: selettore `html.a11y-pause-anim` (troncato) → `html.a11y-pause-animations` (full nome generato dal JS toolbar a11y). ⚠️ Aggiornamento del 16/10/2026: `a11y-pause-anim` non era un refuso, è il nome che leggono i componenti (dossier, grafici interattivi, Laboratorio meteo, Sala situazioni e molte regole di `custom.css`); da quel giorno il pannello aggiunge su `<html>` tutte e due le classi, e nessuna delle due va rinominata nell'altra (rule 03 § «Strumenti di Accessibilità»).
 
 ### Card uniformate al pattern v1.0
 
