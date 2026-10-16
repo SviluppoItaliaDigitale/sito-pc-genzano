@@ -1,0 +1,99 @@
+@font-face {
+  font-family: edu-cursive;
+  src: url('/formazione/schede-stampabili/assets/edu-cursive-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Selettori limitati agli appunti, anche nei pacchetti di stampa. */
+.scheda-page:has(> .appunti) { padding: 7mm 8mm 4mm; background: #fffdf7; }
+.appunti { color: #212529; font-size: 14px; line-height: 1.3; }
+.appunti a { color: var(--scheda-blu); text-decoration: underline; text-underline-offset: 2px; }
+.appunti a:focus-visible { outline: 3px solid var(--scheda-blu); outline-offset: 3px; }
+.appunti-etichetta { color: var(--scheda-blu); font-weight: 700; margin: 0 0 3mm; }
+.appunti-testata { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; align-items: center; margin-bottom: 5mm; }
+.appunti h1 { color: var(--scheda-blu); font: 400 44px/1.06 edu-cursive, cursive; margin: 0; text-shadow: 1.5px 2px #ffe699; }
+.appunti-pennello { width: 88%; height: 12px; display: block; fill: #ffe699; }
+.appunti-domanda { font: 400 21px/1.15 edu-cursive, cursive; margin: 2mm 0; color: var(--scheda-blu); }
+.appunti-apertura { display: block; width: 100%; height: auto; }
+.appunti-note { display: flex; flex-wrap: wrap; gap: 4mm; }
+.appunti-nota { background: #fff0a8; padding: 1mm 3mm; font: 400 18px edu-cursive, cursive; transform: rotate(-3deg); border-bottom: 1px solid var(--scheda-oro); }
+.appunti-nota:nth-child(2) { background: #dceefa; transform: rotate(2deg); }
+.appunti-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.appunti-box { min-width: 0; border: 1px dashed var(--scheda-blu); border-radius: 2mm; padding: 2mm 3mm; background-color: #fffdf7; background-image: repeating-linear-gradient(0deg, transparent 0, transparent 5.8mm, #edf0ed 6mm); break-inside: avoid; }
+.appunti-box h2 { display: table; font: 400 21px/1.15 edu-cursive, cursive; margin: -4mm 0 1.4mm -1mm; padding: 0.5mm 3mm; background: #dceefa; color: var(--scheda-blu); border: 1px solid var(--scheda-blu); border-radius: 2mm 2mm 0 0; }
+.appunti-box:nth-child(3n+2) h2 { background: #fff0a8; }
+.appunti-box:nth-child(3n) h2 { background: #f8dfe5; }
+.appunti-box p { margin: 0 0 1.4mm; }
+.appunti-box p:last-child { margin-bottom: 0; }
+.appunti-box ul, .appunti-box ol { margin: 0; padding-left: 5mm; }
+.appunti-box li { margin: 0 0 1mm; }
+.appunti-box li:last-child { margin-bottom: 0; }
+.appunti-largo { grid-column: 1 / -1; }
+.appunti-icona { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; margin-right: 1mm; flex-shrink: 0; color: var(--scheda-blu); }
+.appunti-freccia { width: 24px; height: 16px; fill: none; stroke: var(--scheda-oro); stroke-width: 2.5; stroke-linecap: round; flex-shrink: 0; }
+.appunti-box .appunti-cause, .appunti-box .appunti-ruoli, .appunti-box .appunti-check { list-style: none; padding: 0; }
+.appunti-cause li, .appunti-ruoli li, .appunti-check li { display: flex; align-items: baseline; gap: 1mm; }
+.appunti-cause li { align-items: center; }
+.appunti-cause strong, .appunti-cause span { flex: 1; }
+.appunti-chiave { border-color: var(--scheda-verde); background-color: #edf7f0; }
+.appunti-errori { position: relative; border-color: var(--scheda-rosso); background-color: #f8dfe5; }
+.appunti-errori > .appunti-icona { position: absolute; top: 1mm; right: 1mm; }
+.appunti-parole dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 4mm; }
+.appunti-parole dt { display: inline; font-weight: 700; background: #fff0a8; }
+.appunti-parole dd { display: inline; margin: 0 0 0 1mm; }
+.appunti-casella { display: inline-block; width: 3mm; height: 3mm; flex-shrink: 0; border: 1px solid var(--scheda-blu); }
+.evidenza-azione { background: #fff0a8; color: #212529; }
+.evidenza-luogo { background: #dceefa; color: #212529; }
+.evidenza-attenzione { background: #f8dfe5; color: #212529; }
+.appunti-legenda { margin-bottom: 1.5mm !important; }
+.appunti-passi { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; }
+.appunti-frase { border: 1px dashed var(--scheda-blu); padding: 1mm 2mm; background: #fff; }
+.appunti-regole ul { display: flex; gap: 5mm; }
+.appunti-regole li { flex: 1; }
+.appunti-box .appunti-schema { display: flex; list-style: none; padding: 0; gap: 1mm; }
+.appunti-schema li { flex: 1; display: flex; align-items: center; gap: 1mm; margin: 0; }
+.appunti-schema span { border: 1px solid var(--scheda-blu); border-radius: 4mm; background: #dceefa; font-weight: 700; padding: 2mm; flex: 1; text-align: center; }
+.appunti-schema li:nth-child(2) span { background: #fff0a8; }
+.appunti-schema li:nth-child(3) span { background: #f8dfe5; }
+.appunti-schema li:nth-child(4) span { background: #edf7f0; }
+.appunti .soluzione-capovolta { font-size: inherit; line-height: inherit; margin: 0; padding: 2mm 3mm; background: #fffdf7; }
+.appunti-fonti { margin-top: 3mm; font-size: 12px; line-height: 1.2; }
+.appunti-fonti p { margin: 0 0 1mm; }
+.appunti .scheda-footer { margin-top: 2mm; padding: 2mm 0 1mm; font-size: 12px; }
+@media screen and (max-width: 699px) {
+  .appunti { font-size: 16px; }
+  .appunti-testata, .appunti-griglia, .appunti-passi, .appunti-parole dl { grid-template-columns: 1fr; }
+  .appunti-griglia { gap: 6mm; }
+  .appunti h1 { font-size: 40px; }
+  .appunti-apertura { max-width: 450px; margin: auto; }
+  .appunti-regole ul { display: block; }
+  .appunti-box .appunti-schema, .appunti-schema li { flex-direction: column; }
+  .appunti-schema .appunti-freccia { transform: rotate(90deg); margin: 1mm; }
+  .appunti .soluzione-capovolta { transform: none; }
+  .appunti-fonti, .appunti .scheda-footer { font-size: 14px; }
+}
+@media print {
+  .scheda-page:has(> .appunti) { width: 100%; min-height: 0; padding: 3mm 5mm 0; }
+  .appunti { font-size: 9.5pt; line-height: 1.2; }
+  .appunti h1 { font-size: 32pt; }
+  .appunti-testata { margin-bottom: 3mm; gap: 3mm; }
+  .appunti-domanda { font-size: 14pt; }
+  .appunti-note { gap: 3mm; }
+  .appunti-nota { font-size: 12pt; }
+  .appunti-etichetta { margin-bottom: 1mm; font-size: 9.5pt; }
+  .appunti-griglia { gap: 3mm; }
+  .appunti-box { padding: 1.5mm 2mm; }
+  .appunti-box h2 { font-size: 14pt; margin-top: -3.5mm; margin-bottom: 1mm; padding: 0.2mm 2mm; }
+  .appunti-box p { margin-bottom: 1mm; }
+  .appunti-box li { margin-bottom: 0.7mm; }
+  .appunti-icona { width: 4mm; height: 4mm; }
+  .appunti-legenda, .appunti-fonti, .appunti .scheda-footer { font-size: 9.5pt; }
+  .appunti-fonti { margin-top: 2mm; }
+  .appunti .scheda-footer { padding: 1.5mm 0 1mm; }
+  .appunti-procedura .appunti-griglia { gap: 2.7mm 3mm; }
+  .appunti-procedura .appunti-testata { margin-bottom: 2.5mm; }
+  .appunti-procedura .appunti-box li { margin-bottom: 0.5mm; }
+  .appunti-procedura .appunti-box { padding-top: 1mm; padding-bottom: 1mm; }
+  .appunti-procedura .appunti-passi { gap: 1mm 6mm; }
+}

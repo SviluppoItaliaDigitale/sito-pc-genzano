@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="titolo descrizione">
+<title id="titolo">Il terremoto</title>
+<desc id="descrizione">Sezione del terreno: una faglia attraversa l’ipocentro in profondità. L’epicentro è sulla sua verticale; onde raggiungono una casa.</desc>
+<path d="M15 140Q165 130 300 140T585 140V345H15Z" fill="#f7e6c4" stroke="#003366" stroke-width="3"/>
+<path d="M15 205Q160 192 300 205T585 205M15 280Q180 269 310 280T585 280" fill="none" stroke="#cfad79" stroke-width="3"/>
+<path d="M145 340 320 140" fill="none" stroke="#b45309" stroke-width="6"/>
+<g fill="none" stroke="#003366" stroke-width="3"><path d="M230 245V140" stroke-dasharray="7 6"/><circle cx="230" cy="245" r="28"/><path d="M180 210a61 61 0 0 1 102 63M151 190a97 97 0 0 1 166 100M120 168a132 132 0 0 1 230 125M420 245A190 190 0 0 0 388 140M470 245A240 240 0 0 0 446 140"/></g>
+<path d="M430 140V83h94v57M417 83l60-45 61 45Z" fill="#dceefa" stroke="#003366" stroke-width="4" stroke-linejoin="round"/>
+<path d="M470 140v-32h21v32M441 96h17v17h-17Z" fill="#fffdf7" stroke="#003366" stroke-width="3"/>
+<circle cx="230" cy="245" r="9" fill="#b02a37"/><circle cx="230" cy="140" r="7" fill="#003366"/>
+<g font-family="Arial, sans-serif" font-size="24" fill="#003366"><text x="130" y="61">epicentro</text><text x="25" y="319">ipocentro</text><text x="335" y="326">faglia</text><text x="355" y="209">onde sismiche</text></g>
+<g fill="none" stroke="#003366" stroke-width="2"><path d="M228 69 230 129M155 306 220 254M331 315 192 286M384 215 344 236"/></g>
+</svg>

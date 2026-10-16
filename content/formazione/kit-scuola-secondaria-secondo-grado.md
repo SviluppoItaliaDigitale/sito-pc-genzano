@@ -711,6 +711,10 @@ Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it"
 
 Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado:
 
+- [**Appunti illustrati — Il terremoto**](/formazione/schede-stampabili/appunti-terremoto-secondaria2/) — un foglio di ripasso con disegno, domande ed esercizi.
+- [**Appunti illustrati — Come si chiama il 112**](/formazione/schede-stampabili/appunti-chiamata-112-secondaria2/) — un foglio di ripasso con disegno, domande ed esercizi.
+- [**Appunti illustrati — Come si legge l’allerta**](/formazione/schede-stampabili/appunti-leggere-allerta-secondaria2/) — un foglio di ripasso con disegno, domande ed esercizi.
+
 - 👉 [**Caso studio Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria2/) — analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).
 - 👉 [**Comunicazione di crisi**](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia di valutazione.
 - 👉 [**Tracce per la prima prova d'esame**](/formazione/schede-stampabili/traccia-esame-secondaria2/) — tracce nello stile della prima prova di Stato (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.

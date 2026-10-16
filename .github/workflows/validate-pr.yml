@@ -126,6 +126,9 @@ jobs:
             exit 1
           fi
 
+      - name: "📒 Appunti illustrati allineati ai dati"
+        run: python3 scripts/genera-appunti-illustrati.py --check
+
       - name: "🧩 Parità kit ↔ Stampa tutto ↔ ZIP, avvertenze e apertura offline"
         # Rilievi F02, F03, F09: avvertenze per l'adulto fuori dal wrapper
         # stampabile (perse in Stampa tutto e ZIP), CSS non risolvibile e
