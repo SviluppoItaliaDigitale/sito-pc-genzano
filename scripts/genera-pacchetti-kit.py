@@ -96,6 +96,15 @@ def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
         'href="../assets/scheda-print.css"',
         'href="../../assets/scheda-print.css"',
     )
+    # Altri fogli di stile condivisi di assets/ (per esempio quello degli appunti
+    # illustrati): viaggiano nello ZIP come scheda-print.css. Senza questa
+    # riscrittura la regola generica qui sotto li punterebbe al sito, e offline
+    # la scheda perderebbe tutta l'impaginazione. Li copia copia_css_condiviso().
+    html = re.sub(
+        r'href=(["\'])/formazione/schede-stampabili/assets/([\w-]+\.css)\1',
+        r'href=\1../../assets/\2\1',
+        html,
+    )
     # Font self-hosted richiamati da una url() dentro <style>: l'alfabetiere usa
     # il corsivo scolastico. Senza questa riscrittura lo ZIP aperto offline
     # cadrebbe sul corsivo di sistema, che ha le lettere legate in modo diverso.
@@ -135,6 +144,29 @@ def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
 
     html = re.sub(r'href=(["\'])(/[^"\']*)\1', _riscrivi_href, html)
     return html
+
+
+def copia_css_condiviso(nome: str, dest: Path) -> None:
+    """Copia nello ZIP un foglio di stile di assets/ con i file che richiama con
+    url() (caratteri, immagini), riscritti in relativo accanto al foglio, e la
+    licenza del carattere a mano quando lo usa."""
+    dst = dest / nome
+    if dst.exists():
+        return
+    src = SCHEDE_BASE / "assets" / nome
+    if not src.exists():
+        print(f"  ⚠ CSS condiviso non trovato: {src}", file=sys.stderr)
+        return
+    testo = re.sub(r"url\((\s*[\"']?)/formazione/schede-stampabili/assets/", r"url(\1",
+                   src.read_text(encoding="utf-8"))
+    dst.write_text(testo, encoding="utf-8")
+    for rif in set(re.findall(r"url\(\s*[\"']?([\w.-]+)[\"']?\s*\)", testo)):
+        f = SCHEDE_BASE / "assets" / rif
+        if f.is_file() and not (dest / rif).exists():
+            shutil.copy(f, dest / rif)
+    licenza = SCHEDE_BASE / "assets" / "OFL-edu-cursive.txt"
+    if "edu-cursive" in testo and licenza.exists() and not (dest / licenza.name).exists():
+        shutil.copy(licenza, dest / licenza.name)
 
 
 def estrai_titolo_scheda(html: str) -> str:
@@ -474,6 +506,9 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
                         shutil.copy(img_src, img_dst)
                     html_patched = html_patched.replace(
                         "/images/" + img, "../../assets/images/" + img)
+            for css_nome in sorted(set(re.findall(r"\.\./\.\./assets/([\w-]+\.css)", html_patched))):
+                if css_nome != "scheda-print.css":
+                    copia_css_condiviso(css_nome, tmp / "assets")
             # Font self-hosted: lo porto nello ZIP solo se una scheda di questo
             # kit lo usa davvero, altrimenti peserebbe su tutti i pacchetti.
             if "assets/edu-cursive-400.woff2" in html_patched:

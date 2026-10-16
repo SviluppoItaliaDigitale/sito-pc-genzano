@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nei percorsi di formazione scuola-lavoro (fino al 2024/25 chiamati PCTO).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~384 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~508 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
