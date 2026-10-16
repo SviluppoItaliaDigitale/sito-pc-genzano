@@ -5,11 +5,143 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-16T17:39:00+00:00",
+  "generato": "2026-10-16T20:06:14+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-16T20:04:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Politica, Fachechi (Meritocrazia Italia): \"Costruiamo agenda del merito per rispondere ai bisogni reali\"",
+   "url": "https://www.adnkronos.com/politica/politica-fachechi-meritocrazia-italia-costruiamo-agenda-del-merito-per-rispondere-ai-bisogni-reali_6u0uJKZF3OOeggdoY2TtMA"
+  },
+  {
+   "data": "2026-10-16T20:01:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pace, Sammarco (Meritocrazia Italia): \"Diventi una vocazione istituzionale\"",
+   "url": "https://www.adnkronos.com/politica/pace-sammarco-meritocrazia-italia-diventi-una-vocazione-istituzionale_I2BNF4k9r0TNoWOjlYuDC"
+  },
+  {
+   "data": "2026-10-16T19:53:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli studenti si prendono le piazze, Meloni: 'Violenze da condannare'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/gli-studenti-si-prendono-le-piazze-meloni-violenze-da-condannare_ff9071cf-026e-438f-8153-f7d47a260b42.html"
+  },
+  {
+   "data": "2026-10-16T19:50:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump caccia la portavoce della Casa Bianca dopo solo cinque giorni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/trump-caccia-la-portavoce-della-casa-bianca-dopo-solo-cinque-giorni_21c88bbe-ed9a-4cf6-998e-28093741f1c4.html"
+  },
+  {
+   "data": "2026-10-16T19:49:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: \"Un mio impeachment? Ho informazioni su Hillary Clinton, Joe Biden e Barack Obama\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/16/trump-un-mio-impeachment-ho-informazioni-su-hillary-clinton-joe-biden-e-barack-obama_ed3ef661-531c-4b4c-be8e-50b6597634fc.html"
+  },
+  {
+   "data": "2026-10-16T19:37:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: in campo Frosinone-Sassuolo 3-2 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/15/serie-a-frosinone-sassuolo-in-campo-alle-20.45-diretta_4dea4151-2d9b-40d2-8b0a-4830b47eeafa.html"
+  },
+  {
+   "data": "2026-10-16T19:35:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Intesa Ue-Meloni sul dl bollette. Von der Leyen: 'Ma non faremo miracoli'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/16/intesa-ue-meloni-sul-dl-bollette.-von-der-leyen-ma-non-faremo-miracoli_5f11bc19-b502-42ac-8252-714b161eb42f.html"
+  },
+  {
+   "data": "2026-10-16T19:34:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump strappa con Kiev. Zelensky: \"Se cadiamo ci saranno 20 milioni di profughi in Europa\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/trump-strappa-con-kiev.-zelensky-se-cadiamo-ci-saranno-20-milioni-di-profughi-in-europa_d4393fc8-a9ba-4a13-9f44-f35b42d0d072.html"
+  },
+  {
+   "data": "2026-10-16T19:16:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Yemen, tv \"Esplosioni ad Aden, aeroporto sotto attacco di missili Houthi\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/yemen-attacco-aeroporto-missili-houthi_6fcKT8d5QUiWrZR5ogrdYF"
+  },
+  {
+   "data": "2026-10-16T19:15:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Duello sulle banche. Tajani: 'Prudenza'. Maxi arretrati ai magistrati",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/16/duello-sulle-banche.-tajani-prudenza.-maxi-arretrati-ai-magistrati_b6cd7128-3e6f-4c14-951d-d05be93b6389.html"
+  },
+  {
+   "data": "2026-10-16T19:07:15+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa sente Putin e chiede tregua per Oleshky, lo zar apre",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/il-papa-sente-putin-e-chiede-tregua-per-oleshky-lo-zar-apre_3eac7241-14db-47b1-9a85-d63d22ba5cbd.html"
+  },
+  {
+   "data": "2026-10-16T19:04:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Salis: 'Manca un leaderì'. La replica di Schlein: 'Il Pd è già oltre il 24%'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/16/salis-manca-un-leaderi.-la-replica-di-schlein-il-pd-e-gia-oltre-il-24_7cf383c3-dc8d-4016-b9e4-fd3660006b1a.html"
+  },
+  {
+   "data": "2026-10-16T18:59:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mondiali ciclismo: per Milan record e oro, Ganna di bronzo",
+   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/10/16/mondiali-ciclismo-per-milan-record-e-oro-ganna-di-bronzo-_28c0a4b4-781c-4993-965e-e85933e1fae8.html"
+  },
+  {
+   "data": "2026-10-16T18:56:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vasco Rossi, Diego Spagnoli se ne va: \"Abbiamo avuto una discussione sul palco, mi dispiace\"",
+   "url": "https://www.adnkronos.com/spettacoli/vasco-rossi-diego-spagnoli-lascia_36Kzmh2xYhEPKt9eX1l0YZ"
+  },
+  {
+   "data": "2026-10-16T18:52:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "A 13 anni cosparge di benzina un clochard e gli dà fuoco",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/a-13-anni-cosparge-di-benzina-un-clochard-e-gli-da-fuoco_6b0e0bfe-e655-4a6b-aa15-22606c4ef2a7.html"
+  },
+  {
+   "data": "2026-10-16T18:47:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "Caos nei cieli italiani, cancellazioni e ritardi per i voli",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/16/caos-nei-cieli-italiani-cancellazioni-e-ritardi-per-i-voli_d9146593-74cc-47ae-9c1f-a00c71879b3f.html"
+  },
+  {
+   "data": "2026-10-16T18:40:41+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La protesta dei Tir infiamma il Sud, blocchi e code",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/la-protesta-dei-tir-parte-dal-sud.-presidi-in-calabria-disagi-in-basilicata_cfaea5f2-bd05-4910-85f9-d1c44b6f2f23.html"
+  },
+  {
+   "data": "2026-10-16T18:18:18+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Al via l'Aeronautica Militare Balloon Cup, il fascino e la storia del volo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/al-via-laeronautica-militare-balloon-cup-il-fascino-e-la-storia-del-volo_e05a7a95-8cd0-4240-b509-d2faf64c33ac.html"
+  },
+  {
+   "data": "2026-10-16T18:09:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump, la nuova portavoce Zacharia lascia subito",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-zacharia-portavoce-casa-bianca_2c63pIjg5i6r7BQSWWdd4F"
+  },
+  {
+   "data": "2026-10-16T17:45:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fratoianni: \"Tempi maturi per costruire il profilo della coalizione, al tavolo del programma posto per chiunque è anti Meloni\"",
+   "url": "https://www.adnkronos.com/politica/avs-fratoianni-intervista_7DLEKW1Ka251EyAJf44ODj"
+  },
+  {
+   "data": "2026-10-16T17:44:54+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Gli studenti in piazza, cortei in tutta Italia. Tre minorenni arrestati a Torino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/gli-studenti-in-piazza-cortei-in-tutta-italia.-a-torino-lancio-di-sassi-contro_1e152b63-e67e-4efd-9ec7-0ca3507f55e3.html"
+  },
+  {
+   "data": "2026-10-16T17:41:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump a Meloni: \"Accordo con Putin è per tutto il mondo non per noi\" - Guarda il video",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-meloni-putin-ultime-news_7J7UFF0v82zqO9pxIxjZ3W"
+  },
   {
    "data": "2026-10-16T17:35:37+00:00",
    "fonte": "ADNKRONOS",
@@ -57,138 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Tumori, Rosati (Gsk): \"Nuova terapia mieloma multiplo migliorerà qualità vita pazienti\"",
    "url": "https://www.adnkronos.com/salute/tumori-rosati-gsk-nuova-terapia-mieloma-multiplo-migliorera-qualita-vita-pazienti_3ZUwBo1ocOrgNvFDLgGF0p"
-  },
-  {
-   "data": "2026-10-16T17:08:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "La telefonata del Papa a Putin: 'Una tregua per la città di Oleshky'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/la-telefonata-del-papa-a-putin-una-tregua-per-la-citta-di-oleshky_3eac7241-14db-47b1-9a85-d63d22ba5cbd.html"
-  },
-  {
-   "data": "2026-10-16T17:07:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump strappa con Kiev. Zelensky all'Ue: \"La guerra nel 2027 costerà 155 miliardi, ne chiedo 70 a voi\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/trump-strappa-con-kiev.-zelensky-allue-la-guerra-nel-2027-costera_d4393fc8-a9ba-4a13-9f44-f35b42d0d072.html"
-  },
-  {
-   "data": "2026-10-16T17:07:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meloni: 'Sulle sanzioni alla Russia non si devono fare passi indietro. Ottimista sulla flessibilità'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/16/meloni-ottimista-sulla-flessibilita-dopo-aver-parlato-con-von-der_5f11bc19-b502-42ac-8252-714b161eb42f.html"
-  },
-  {
-   "data": "2026-10-16T16:58:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "A 13 anni cosparge di benzina un clochard e gli dà fuoco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/a-13-anni-cosparge-di-benzina-un-clochard-e-gli-da-fuoco_6b0e0bfe-e655-4a6b-aa15-22606c4ef2a7.html"
-  },
-  {
-   "data": "2026-10-16T16:51:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tesla Roadster, Elon Musk svela negli Stati Uniti l'auto che vola",
-   "url": "https://www.ansa.it/canale_motori/notizie/novita_anticipazione/2026/10/16/tesla-roadster-elon-musk-svela-negli-stati-uniti-lauto-che_cfc918c6-aa08-4347-8054-a835055a720e.html"
-  },
-  {
-   "data": "2026-10-16T16:48:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "L’Atlantic Council punta su Roma. Mezran: “Italia e Stati Uniti rischiano di perdere la Libia”",
-   "url": "https://www.adnkronos.com/internazionale/esteri/latlantic-council-punta-su-roma-mezran-italia-e-stati-uniti-rischiano-di-perdere-la-libia_oIpcttGbEwmNZ2yb8dWb3"
-  },
-  {
-   "data": "2026-10-16T16:46:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-16T16:44:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giornalista del Washington Post ferita dai coloni in Cisgiordania: \"Mi hanno spinto a terra e preso a calci\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/giornalista-del-washington-post-ferita-dai-coloni-in-cisgiordania-mi-hanno-spinto_ceeab04f-76e0-43c1-84fd-464d47594519.html"
-  },
-  {
-   "data": "2026-10-16T16:41:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, esperto di difesa Gb: \"Fornitura Storm Shadow a Kiev è segnale chiaro a Trump\"",
-   "url": "https://www.adnkronos.com/cronaca/guerra-ucraina-russia-storm-shadow_3qV0OvnnZntXdZxCYibYrb"
-  },
-  {
-   "data": "2026-10-16T16:40:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Blitz allievi della Normale fa tardare cerimonia apertura dell'anno accademico",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/blitz-allievi-della-normale-fa-tardare-cerimonia-apertura-dellanno-accademico_63da3589-7e26-454e-afe1-a83cb104b02a.html"
-  },
-  {
-   "data": "2026-10-16T16:36:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli studenti in piazza, cortei in tutta Italia. Tre minorenni arrestati a Torino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/gli-studenti-in-piazza-cortei-in-tutta-italia.-a-torino-lancio-di-sassi-contro_1e152b63-e67e-4efd-9ec7-0ca3507f55e3.html"
-  },
-  {
-   "data": "2026-10-16T16:35:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "S'infiammano le scuole, scontri e incappucciati a Torino. Arrestati tre minorenni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/danneggiamenti-in-scuole-a-torino-arrestato-un-17enne_807b8d6b-1218-4b65-8c39-a5fb13a98783.html"
-  },
-  {
-   "data": "2026-10-16T16:35:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Diego Poncelet è lo skateboarder più veloce della storia",
-   "url": "https://www.ansa.it/sito/notizie/sport/altrisport/2026/10/16/diego-poncelet-e-lo-skateboarder-piu-veloce-della-storia_5be53256-9684-4864-ab2a-4ce361c97bd9.html"
-  },
-  {
-   "data": "2026-10-16T16:30:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Moser: \"Io e Saronni mai andati d'accordo. Dice che ho rubato un Giro, gli ha dato di volta il cervello...\"",
-   "url": "https://www.adnkronos.com/sport/moser-saronni-mai-andati-d-accordo-intervista_71yBKSlzNSJEg7mkWm6CWV"
-  },
-  {
-   "data": "2026-10-16T16:22:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tre minorenni arrestati al corteo studentesco a Torino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/tre-minorenni-arrestati-al-corteo-studentesco-a-torino_d57d146f-6d4a-4422-9737-9bc7b3795f45.html"
-  },
-  {
-   "data": "2026-10-16T16:21:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cade da impalcatura in cantiere edile ad Ascoli, grave operaio 22enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/cade-da-impalcatura-in-cantiere-edile-ad-ascoli-grave-operaio-22enne_899edb49-ab3a-45c5-a521-3eb01818686f.html"
-  },
-  {
-   "data": "2026-10-16T16:20:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, Mollicone attacca Gualtieri: \"Grave scorrettezza non invitare governo e regione a conferenza riapertura teatro Valle\"",
-   "url": "https://www.adnkronos.com/spettacoli/teatro-valle-roma-mollicone-gualtieri_1SwBS8LLoEJRskh2bGbLpr"
-  },
-  {
-   "data": "2026-10-16T16:13:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sommerso e illegale valgono 218 miliardi, il 9,9% del Pil",
-   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/10/16/istat-sommerso-e-illegale-a-2182-miliardi-nel-2024-2_bb5fcae7-3fd0-4842-b710-e481052fd4f5.html"
-  },
-  {
-   "data": "2026-10-16T16:11:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mondiali ciclismo: per Milan record e oro, Ganna di bronzo",
-   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/10/16/mondiali-di-ciclismo-jonathan-milan-vince-loro-nellinseguimento-individuale-su-pista_28c0a4b4-781c-4993-965e-e85933e1fae8.html"
-  },
-  {
-   "data": "2026-10-16T16:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Papa telefona a Putin: \"Tregua per la città di Oleshky, consentire aiuti umanitari\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/papa-leone-putin-telefonata-guerra-ucraina_5kDdxeNTQOIaP9XZmsw5KN"
-  },
-  {
-   "data": "2026-10-16T16:04:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Blitz studenti sul palco, bloccato convegno dell'Università di Genova",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/blitz-studenti-sul-palco-bloccato-convegno-delluniversita-di-genova_5cf31c75-f82a-4452-bd97-41e527b25403.html"
-  },
-  {
-   "data": "2026-10-16T15:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Farmaceutica, Angeleri (Bayer): \"Cura, salute e sicurezza in nostro Dna\"",
-   "url": "https://www.adnkronos.com/cronaca/farmaceutica-angeleri-bayer-cura-salute-e-sicurezza-in-nostro-dna_4kmT1faufSwsRDUDfcaO2c"
   }
  ]
 }
