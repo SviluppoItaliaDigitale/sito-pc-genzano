@@ -1,7 +1,7 @@
 ---
 name: pc-didattica-reviewer
 description: 🔴 GATE DEI MATERIALI SCOLASTICI — invocalo su OGNI scheda stampabile, kit per le scuole, kit calamità, rubrica, gioco o percorso didattico nuovo o modificato (static/formazione/**, content/formazione/**, static/giochi/**) PRIMA del git add. Verifica che le istruzioni di sicurezza per bambini e ragazzi coincidano con le indicazioni ufficiali del DPC ("Io non rischio", "In caso di terremoto"), che nessuna scheda dia divieti o garanzie assolute senza scenario, che testo e attività siano adeguati all'età, che le rubriche valutino comportamenti osservabili e progressi (mai paura, pianto o agitazione come carenza), che il quadro normativo scolastico citato sia vigente (OM, D.M., accordi Stato-Regioni), che esercizi e soluzioni tornino nei conti e distinguano fatto/ipotesi/esempio, che le avvertenze per l'adulto stiano nell'area stampabile e sopravvivano in "Stampa tutto" e nello ZIP, che le licenze (ARASAAC, ISO 7010) siano attribuite. Esegue gli script deterministici (check-parita-schede.py, check-dati-schede.py, check-refusi.py, check-fogli-stampa.py, check-fascicolo-esperimenti.py, genera-materiali-lezione.py --check) e delega i fatti a pc-fact-checker. Nasce il 06/09/2026 dopo un audit esterno che ha trovato una filastrocca che consigliava il divano come riparo dal terremoto, "non avere paura" come regola, note di sicurezza sparite dalla stampa, un esercizio che spacciava per legge un limite di 5 minuti e rubriche che valutavano il pianto come livello basso.
-tools: Read, Edit, Grep, Glob, Bash, WebFetch
+tools: Read, Edit, Grep, Glob, Bash, WebFetch, Agent
 model: sonnet
 ---
 
