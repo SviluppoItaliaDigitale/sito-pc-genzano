@@ -1,6 +1,7 @@
 @font-face {
   font-family: edu-cursive;
-  src: url('/formazione/schede-stampabili/assets/edu-cursive-400.woff2') format('woff2');
+  /* Percorso relativo al foglio di stile: vale sul sito, in «Stampa tutto» e nello ZIP. */
+  src: url('edu-cursive-400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

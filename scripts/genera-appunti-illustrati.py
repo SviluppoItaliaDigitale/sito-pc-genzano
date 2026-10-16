@@ -103,6 +103,16 @@ def genera(p):
     if p['modello'] not in ('concetto','procedura'):
         raise ValueError('Modello non valido.')
     corpo=concetto(p) if p['modello']=='concetto' else procedura(p)
+    # Il disegno sta nella cartella della pagina e si richiama in relativo: così
+    # lo ZIP del kit, che copia i file accanto alla scheda, lo mostra anche offline.
+    cartella=f'{BASE}appunti-{p["slug"]}-secondaria2/'
+    percorso=url(p['disegno']['percorso'])
+    nome_disegno=percorso[len(cartella):] if percorso.startswith(cartella) else ''
+    if not re.fullmatch(r'[a-z0-9-]+\.svg',nome_disegno):
+        raise ValueError('Il disegno deve essere un file SVG nella cartella della pagina.')
+    # Una parola corta non resta da sola a capo nel titolo («il / 112»).
+    testa,_,coda=p['titolo'].rpartition(' ')
+    titolo_h1=e(testa)+'&nbsp;'+e(coda) if testa and len(coda)<=3 else e(p['titolo'])
     note=''.join('<span class="appunti-nota">'+e(t)+'</span>' for t in p.get('note',[]))
     fonti=' · '.join(link(v) for v in p['fonti'])
     return f'''<!DOCTYPE html>
@@ -117,22 +127,23 @@ def genera(p):
   <link rel="stylesheet" href="{BASE}assets/scheda-print.css">
 </head>
 <body>
-  <nav class="scheda-toolbar no-print" aria-label="Scheda stampabile">
-    <a href="{BASE}">Torna alle schede</a>
-    <span>Per stampare: menu del browser → Stampa, oppure Ctrl+P / Cmd+P.</span>
-  </nav>
+  <div class="scheda-toolbar no-print">
+    <a href="{BASE}"><span aria-hidden="true">← </span>Torna alle schede</a>
+    <span class="scheda-titolo">{e(p['titolo'])} — Appunti illustrati</span>
+    <button type="button" onclick="window.print()"><span aria-hidden="true">🖨️ </span>Stampa o salva come PDF</button>
+  </div>
   <article class="scheda-page">
     <link rel="stylesheet" href="{BASE}assets/appunti.css">
     <div class="appunti appunti-{p['modello']}">
       <p class="appunti-etichetta">Appunti illustrati · Protezione civile · Secondaria di II grado</p>
       <header class="appunti-testata">
         <div>
-          <h1>{e(p['titolo'])}</h1>
+          <h1>{titolo_h1}</h1>
           <svg class="appunti-pennello" viewBox="0 0 300 16" aria-hidden="true"><path d="M4 10Q100 0 295 7L287 13Q120 7 9 15Z"/></svg>
           <p class="appunti-domanda">{e(p['domanda_guida'])}</p>
           <div class="appunti-note">{note}</div>
         </div>
-        <img class="appunti-apertura" src="{url(p['disegno']['percorso'])}" alt="{e(p['disegno']['alt'])}" width="600" height="360">
+        <img class="appunti-apertura" src="{nome_disegno}" alt="{e(p['disegno']['alt'])}" width="600" height="360">
       </header>
       <div class="appunti-griglia">
 {corpo}
@@ -140,7 +151,7 @@ def genera(p):
       <div class="appunti-fonti">
         <p><strong>Fonti:</strong> {fonti}.</p>
         <p>{link(p['manuale'])} · <strong>Approfondisci:</strong> {link(p['approfondisci'])}.</p>
-        <p>Testi e disegni: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, licenza CC BY 4.0</p>
+        <p>Testi e disegni: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, licenza CC BY 4.0.</p>
       </div>
       <footer class="scheda-footer">
         <span class="scheda-site">protezionecivilegenzano.it</span>

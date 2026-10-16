@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="titolo descrizione">
 <title id="titolo">Il terremoto</title>
-<desc id="descrizione">Sezione del terreno: una faglia attraversa l’ipocentro in profondità. L’epicentro è sulla sua verticale; onde raggiungono una casa.</desc>
+<desc id="descrizione">Sezione del terreno: una faglia attraversa l’ipocentro, in profondità. L’epicentro è in superficie, sulla verticale dell’ipocentro. Le onde sismiche raggiungono una casa.</desc>
 <path d="M15 140Q165 130 300 140T585 140V345H15Z" fill="#f7e6c4" stroke="#003366" stroke-width="3"/>
 <path d="M15 205Q160 192 300 205T585 205M15 280Q180 269 310 280T585 280" fill="none" stroke="#cfad79" stroke-width="3"/>
 <path d="M145 340 320 140" fill="none" stroke="#b45309" stroke-width="6"/>
