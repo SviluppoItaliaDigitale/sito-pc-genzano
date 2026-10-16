@@ -106,7 +106,7 @@
   mappa.on('focus', function(){ mappa.scrollWheelZoom.enable(); });
   mappa.on('blur',  function(){ mappa.scrollWheelZoom.disable(); });
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
   }).addTo(mappa);
