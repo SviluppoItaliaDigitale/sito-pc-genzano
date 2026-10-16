@@ -435,17 +435,11 @@ html.a11y-spacing .article-body p { margin-bottom: 2em !important; }
    scope la modalità lettura era invisibile lì. Ora la crema riempie
    tutta la pagina.
 
-   ELEMENTI ISTITUZIONALI CHE RESTANO COL LORO COLORE (per cascade
-   naturale: hanno `background-color` esplicito nel CSS del tema,
-   quindi vincono sul body crema senza bisogno di override qui):
-   - hero-section blu (homepage)
-   - mini-hero blu (pagine interne)
-   - banner emergenza rosso (quando attivo)
-   - banner allerta giallo/arancione/rosso
-   - navbar slim + navbar principale
-   - footer istituzionale
-   - card servizi con bg bianco esplicito
-   - dialog/modal/popover con bg proprio
+   ELEMENTI ISTITUZIONALI CHE RESTANO COL LORO COLORE: hero (homepage
+   e pagine interne), banner di emergenza, barre dell'allerta,
+   intestazione, piè di pagina, badge e pulsanti pieni, finestre. Dal
+   16/10/2026 non è più affidato alla cascata naturale: le regole qui sotto
+   valgono solo dentro <main> ed escludono le zone con colori propri.
    Queste "isole" mantengono l'identità di brand. Solo il fondo
    pagina + le card/sezioni con bg trasparente o ereditato da body
    diventano crema.
@@ -453,105 +447,473 @@ html.a11y-spacing .article-body p { margin-bottom: 2em !important; }
    Il font è gestito separatamente da fontFamily: readingMode alza
    'default' a 'readable' via JS, lascia 'dyslexic'.
 
-   I kit-calamita stampabili (static/formazione/kit-calamita-*/) NON
-   sono toccati perché non caricano `a11y-toolbar.css` (HTML statici
-   fuori da Hugo, includono solo print.css proprio). */
-html.a11y-reading-mode body {
-  background: #fdf6e3 !important;
-}
-/* Anche `main` esplicitamente crema, perché in alcuni layout ha
-   background bianco proprio che vincerebbe su body. */
-html.a11y-reading-mode main {
-  background: #fdf6e3 !important;
-}
-/* IMPORTANTE — il `color` NON viene forzato su body globale.
-   Una versione precedente di questa regola applicava
-   `color: #1a1a1a !important` a tutto body, ma ribaltava il testo
-   bianco del footer blu istituzionale (.it-footer-main) e di altri
-   elementi "isole brand" che hanno testo bianco esplicito su sfondo
-   scuro proprio. Il colore scuro viene applicato SOLO ai figli delle
-   card crema dal blocco "FIX CONTRASTO" più sotto, dove serve. */
-/* SEZIONI E CARD CHE COPRONO LA PAGINA — fix urgente 12 maggio 2026.
-   Senza queste regole, sulla homepage si vede tutto bianco perché:
-   - `.servizi-section` ha `background: var(--pc-light-bg)` esplicito
-   - Le `.card` di Bootstrap-Italia hanno bg bianco di default
-   - Le `.quick-action-card` / `.card-servizio` ereditano da bootstrap
-   Queste regole vincono sui bg bianchi delle card MA NON toccano gli
-   "elementi istituzionali" (navbar, footer, banner allerta, banner
-   emergenza, hero blu, badge colorati) che hanno classi diverse e
-   restano col loro colore di brand. */
-html.a11y-reading-mode .servizi-section,
-html.a11y-reading-mode .notizie-section,
-html.a11y-reading-mode .card,
-html.a11y-reading-mode .card-body,
-html.a11y-reading-mode .quick-action-card,
-html.a11y-reading-mode .card-servizio,
-html.a11y-reading-mode .card-notizia-hero,
-html.a11y-reading-mode .card-notizia-small,
-html.a11y-reading-mode .card-numero-utile,
-html.a11y-reading-mode .card-rischio,
-html.a11y-reading-mode .link-card,
-html.a11y-reading-mode .stat-hero-item,
-html.a11y-reading-mode .bg-light,
-html.a11y-reading-mode .bg-white {
-  background: #fdf6e3 !important;
-  background-color: #fdf6e3 !important;
-}
-/* IMPORTANTE — il selettore generico `section:not(.hero-section):not(.emergency-banner)`
-   è stato RIMOSSO (12 maggio 2026) perché catturava anche la `<section>` interna
-   a `<footer>.it-footer > .it-footer-main > .container > section`. Risultato:
-   il footer blu diventava crema, e il testo `text-white` di Bootstrap restava
-   bianco → bianco su crema, illeggibile. Se in futuro emerge che una sezione
-   specifica del tema NON ha una classe nell'elenco sopra ma deve diventare
-   crema, va aggiunta esplicitamente per classe (non con un selettore generico). */
+   I kit-calamita stampabili (cartelle static/formazione/kit-calamita-NOME)
+   NON sono toccati perché non caricano `a11y-toolbar.css` (HTML statici
+   fuori da Hugo, includono solo print.css proprio).
+   Attenzione: in questo commento c'era il percorso con l'asterisco seguito
+   dalla barra, che chiudeva il commento a metà; il testo rimasto si mangiava
+   la regola successiva (fino al 16/10/2026 era quella che rendeva crema il
+   body). Nei commenti CSS non scrivere asterisco e barra attaccati. */
 
-/* Eccezioni esplicite — restano col loro colore di brand:
-   - .navbar / .it-header-* / .it-footer-* (chrome del sito)
-   - .allerta-bar / .allerta-bar-* (banner allerta colorato)
-   - .emergency-banner (banner emergenza rosso)
-   - .hero-section (gradient blu istituzionale)
-   - .servizio-icon, .quick-action-icon, .servizio-icon-* (icone cerchio)
-   - .badge-allerta-* / .notizia-categoria-* (badge categorie)
-   Queste non sono toccate dai selettori sopra (classi diverse), quindi
-   mantengono il loro background naturalmente. */
+/* ── Colori delle modalità: zone con colori propri (16/10/2026) ──
+   Le modalità colorano testo, collegamenti e superfici con regole generali
+   (p, span, a, card…). Fino al 16/10/2026 le applicavano anche dentro le
+   zone che hanno sfondo e testo progettati insieme e già conformi: hero,
+   barre dell'allerta, etichette delle categorie, badge, pulsanti pieni,
+   intestazioni delle tabelle, riquadri a gradiente, mappe, dossier.
+   Risultato: testo nero o blu sul blu (fino a 1,04:1), giallo sul bianco
+   (1,07:1); axe contava oltre 18.000 errori di contrasto su 35 pagine.
+   Come funziona adesso:
+   - le regole generali valgono dentro <main> e nella barra degli
+     aggiornamenti: intestazione, piè di pagina, striscia dei cookie,
+     barra in basso, pulsanti flottanti e finestre restano nei loro colori;
+   - le zone con colori propri dentro <main> sono escluse con
+     :not(:where(…)), che non cambia la specificità. L'elenco è identico in
+     tutte le regole (le varianti aggiungono una voce in fondo): per
+     aggiungere un componente si sostituisce l'elenco ovunque con la stessa
+     modifica, e si prova con axe in tutte le modalità (manuale, parte 18);
+   - testo e collegamenti prendono il colore da --a11y-testo: il colore
+     dei collegamenti vale anche per ciò che contengono.
+   Se un browser non conosce :is() o :where() (prima del 2021) scarta
+   queste regole e il testo resta nei colori normali del sito, già
+   conformi. */
 
-/* FIX CONTRASTO 12 maggio 2026 — quando una card che PRIMA aveva
-   sfondo blu/scuro con testo bianco (es. la card "Mappa meteo —
-   Windy" sulla pagina /strumenti-tempo-reale/) viene rifatta crema,
-   il suo testo bianco diventa illeggibile su sfondo crema (contrasto
-   ~1.1:1, fallisce WCAG drasticamente). Forziamo TUTTI i testi
-   figli delle card crema a #1a1a1a (contrasto 14:1 vs crema, AAA).
-   Inclusi h1-h6, p, li, span, strong, em che potrebbero avere
-   `color: #fff` ereditato dalla regola tema della card. */
-html.a11y-reading-mode .servizi-section,
-html.a11y-reading-mode .servizi-section *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
-html.a11y-reading-mode .notizie-section,
-html.a11y-reading-mode .notizie-section *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
-html.a11y-reading-mode .card,
-html.a11y-reading-mode .card *:not(.btn):not(.badge):not(i):not(svg):not(svg *):not(.servizio-icon):not(.quick-action-icon),
-html.a11y-reading-mode .quick-action-card *:not(.btn):not(.badge):not(i):not(svg):not(svg *):not(.quick-action-icon),
-html.a11y-reading-mode .card-servizio *:not(.btn):not(.badge):not(i):not(svg):not(svg *):not(.servizio-icon),
-html.a11y-reading-mode .card-numero-utile *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
-html.a11y-reading-mode .card-rischio *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
-html.a11y-reading-mode .link-card *:not(.btn):not(.badge):not(i):not(svg):not(svg *),
-html.a11y-reading-mode .stat-hero-item *:not(.btn):not(.badge):not(i):not(svg):not(svg *) {
-  color: #1a1a1a !important;
-}
-/* I link nel corpo card restano blu istituzionale (su crema ~11.6:1, AAA). */
-html.a11y-reading-mode .card a:not(.btn),
-html.a11y-reading-mode .servizi-section a:not(.btn),
-html.a11y-reading-mode .notizie-section a:not(.btn) {
-  color: #003366 !important;
-}
-/* Bottoni outline/primary mantengono i loro colori di brand (azione). */
-/* Wrapper editoriali: oltre allo sfondo crema (ereditato da body),
-   applichiamo il restringimento riga (65ch), il padding, l'allineamento
-   sinistra e la spaziatura tipografica. Vale per articoli e liste
-   archivio, NON per homepage / pagine speciali. */
+/* ── Modalità lettura: colori ──
+   Crema su body, main e sulle card e sezioni dell'elenco; testo delle card
+   #1a1a1a (16:1 sulla crema), collegamenti #003366 (11,6:1), testi grigi
+   #555b62 (6,4:1; il #6c757d del sito è 4,35:1 sulla crema). Con un
+   contrasto scelto nel pannello i colori li decide il contrasto: la
+   modalità lettura tiene solo l'impaginazione (più sotto). Fino al
+   16/10/2026 le due si sommavano e con «Invertito» il corpo dell'articolo
+   restava crema con il testo bianco. */
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) body,
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) main { background: #fdf6e3 !important; }
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(
+  .servizi-section, .notizie-section, .card, .card-body, .quick-action-card, .card-servizio,
+  .card-notizia-hero, .card-notizia-small, .card-numero-utile, .card-rischio, .link-card,
+  .stat-hero-item, .bg-light, .bg-white
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  ) *
+) { background: #fdf6e3 !important; background-color: #fdf6e3 !important; }
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(.article-body, .list-intro-content) { background: #fdf6e3 !important; color: #1a1a1a !important; }
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(
+  .servizi-section, .notizie-section, .card, .quick-action-card, .card-servizio,
+  .card-numero-utile, .card-rischio, .link-card, .stat-hero-item
+) { --a11y-testo: #1a1a1a; }
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(.servizi-section, .notizie-section, .card) a { --a11y-testo: #003366; }
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(
+  .notizia-data, .notizia-reading-time, .lang-section-title, .articolo-correlato-data,
+  .article-cover-credit, .mappa-punto-credit, .meteo-mappa figcaption, .dash-meta, .dash-aria-nota,
+  .dash-ems-data, .dash-ems-meta, .dash-ems-vuoto
+) { --a11y-testo: #555b62; }
+html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :where(main, .utility-bar) :is(
+  .servizi-section, .notizie-section, .card, .quick-action-card, .card-servizio,
+  .card-numero-utile, .card-rischio, .link-card, .stat-hero-item, .servizi-section *,
+  .notizie-section *, .card *, .quick-action-card *, .card-servizio *, .card-numero-utile *,
+  .card-rischio *, .link-card *, .stat-hero-item *, .notizia-data, .notizia-reading-time,
+  .lang-section-title, .articolo-correlato-data, .article-cover-credit, .mappa-punto-credit,
+  .meteo-mappa figcaption, .dash-meta, .dash-aria-nota, .dash-ems-data, .dash-ems-meta,
+  .dash-ems-vuoto
+):not(i, svg, svg *):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  ) *
+) { color: var(--a11y-testo) !important; }
+
+/* ── Contrasto alto (nero su bianco) ── */
+html.a11y-contrast-high body,
+html.a11y-contrast-high main { background: #fff !important; color: #000 !important; }
+html.a11y-contrast-high { --a11y-testo: #000; }
+html.a11y-contrast-high a { --a11y-testo: #003a78; }
+html.a11y-contrast-high :is(.text-muted, .text-secondary) { --a11y-testo: #333; }
+html.a11y-contrast-high :where(main, .utility-bar) :is(
+  h1, h2, h3, h4, h5, h6, p, li, td, th, a, .text-muted, .text-secondary
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .text-white
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .text-white
+  ) *
+) { color: var(--a11y-testo) !important; }
+html.a11y-contrast-high :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
+html.a11y-contrast-high :where(main, .utility-bar) :is(.card, .alert) { border: 2px solid #000 !important; }
+/* Lingua e velocità di lettura scelte: restano bianche sul loro fondo blu. */
+html.a11y-contrast-high :is(.facile-lang a[aria-current="page"], .tts-rate-option input:checked + span) { color: #fff !important; }
+
+/* ── Contrasto invertito (sfondo nero, testo bianco) ──
+   Card e superfici chiare diventano #1a1a1a insieme al loro testo, celle
+   e pulsanti compresi. Bianco su #1a1a1a 17:1, giallo #ffd54f 12,3:1. */
+html.a11y-contrast-invert,
+html.a11y-contrast-invert body,
+html.a11y-contrast-invert main { background: #000 !important; color: #fff !important; }
+html.a11y-contrast-invert .utility-bar { background: #1a1a1a !important; color: #fff !important; }
+html.a11y-contrast-invert { --a11y-testo: #fff; }
+html.a11y-contrast-invert a { --a11y-testo: #ffd54f; }
+html.a11y-contrast-invert :where(main, .utility-bar) :is(
+  h1, h2, h3, h4, h5, h6, p, li, td, th, span, strong, em, b, small, div, label, figcaption, dt,
+  dd, caption, summary, legend, blockquote, cite, time, address, abbr, q, code, a
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ) *
+) { color: var(--a11y-testo) !important; }
+html.a11y-contrast-invert :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
+html.a11y-contrast-invert :where(main, .utility-bar) :is(
+  .card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card,
+  .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item, .page-index,
+  .page-index-nav, .page-index-summary, .article-toc-body, .facile-blocco, .facile-lang a,
+  .en-card, .ms-card, .dossier-card, .scheda-card, .schede-indice-fascia, .schede-filtri, .cr-card,
+  .tts-rate, .tts-rate-option > span, .strumenti-articolo, .reading-time, .archivio-mese-count,
+  .filter-bar, .video-correlati, .video-correlati-item, .articolo-correlato-card,
+  .articolo-nav-card, .article-body figure, .article-body blockquote, .meteo-confronto-nota,
+  .meteo-home-fonte, .versione-facile-banner, .cal-prev-mese, .cal-prev-file, .faq-item, .dash-kpi,
+  .dash-mag, .cosa-non-fare, .cosa-non-fare-body, .notifiche-allerta-card, .cruscotto-callout,
+  .manuale-infobox, .infobox-head, .iscriviti-telegram, .profili-rapidi-section,
+  .profili-rapidi-card, .arena-card, .arena-fascia-link, .arena-intro, .stato-nuovo,
+  .app-disclaimer, .fascia-card, .gloss-popover, .list-group-item, .risorsa-tipo, .lis-video-item,
+  .lis-toc-link, .lis-fonte-card, .lis-fonti, .pcg-podcast-iscriviti, .lab-form,
+  .crea-lezione-form, .mappa-aree-disclaimer, code, .app-card, .storia-card, .info-pedagogia,
+  .segnali-bufala, .intro-card, .quiz-container, .inf-card, .schede-indice-fascia a, .inf-back,
+  .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc, .bg-light,
+  .bg-white, tbody tr, tbody td, tbody th, tfoot td, button:not(.gloss-term)
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ) *
+):not(.gi *) { background: #1a1a1a !important; color: #fff !important; box-shadow: none !important; }
+html.a11y-contrast-invert :where(main, .utility-bar) :is(.card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card, .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item) { border-color: #555 !important; }
+html.a11y-contrast-invert :where(main, .utility-bar) button:not(.gloss-term, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, .filter-pill, [style*="background"]):not(.gi *, .dossier *, .leaflet-container *, dialog *) { border: 2px solid #fff !important; }
+html.a11y-contrast-invert :where(main, .utility-bar) :is(
+  button[aria-pressed="true"], .page-index-nav a.active, .facile-lang a[aria-current="page"],
+  .tts-rate-option input:checked + span
+):not(.gi *, .dossier *) { background: #fff !important; color: #000 !important; border-color: #fff !important; }
+html.a11y-contrast-invert :is(.page-index-nav a:hover, .page-index-nav a:focus) { background: #333 !important; }
+html.a11y-contrast-invert mark { background: #ffd54f !important; color: #000 !important; }
+
+/* ── Contrasto Giallo su nero — Sera 3 (12 maggio 2026) ──
+   Stile "High Contrast Black" di Windows: sfondo nero, testo giallo
+   (#ffff00), link ciano (#00ffff). Contrast ratio giallo/nero = 19.6:1,
+   ciano/nero = 16.5:1 (entrambi WCAG AAA con larghissimo margine).
+   Niente `filter: invert(1)` (ribalterebbe immagini e logo). Card,
+   superfici chiare, campi e pulsanti diventano neri con testo giallo e
+   bordo giallo. Dal 16/10/2026 hero, intestazione, piè di pagina e
+   segnali tengono i loro colori. */
+html.a11y-contrast-yellow-black body,
+html.a11y-contrast-yellow-black main { background: #000 !important; color: #ffff00 !important; }
+html.a11y-contrast-yellow-black .utility-bar { background: #000 !important; color: #ffff00 !important; }
+html.a11y-contrast-yellow-black { --a11y-testo: #ffff00; }
+html.a11y-contrast-yellow-black a { --a11y-testo: #00ffff; }
+html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
+  h1, h2, h3, h4, h5, h6, p, li, td, th, span, strong, em, b, small, div, label, figcaption, dt,
+  dd, caption, summary, legend, blockquote, cite, time, address, abbr, q, code, a
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ) *
+) { color: var(--a11y-testo) !important; }
+html.a11y-contrast-yellow-black :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
+html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
+  .card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card,
+  .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item, .page-index,
+  .page-index-nav, .page-index-summary, .article-toc-body, .facile-blocco, .facile-lang a,
+  .en-card, .ms-card, .dossier-card, .scheda-card, .schede-indice-fascia, .schede-filtri, .cr-card,
+  .tts-rate, .tts-rate-option > span, .strumenti-articolo, .reading-time, .archivio-mese-count,
+  .filter-bar, .video-correlati, .video-correlati-item, .articolo-correlato-card,
+  .articolo-nav-card, .article-body figure, .article-body blockquote, .meteo-confronto-nota,
+  .meteo-home-fonte, .versione-facile-banner, .cal-prev-mese, .cal-prev-file, .faq-item, .dash-kpi,
+  .dash-mag, .cosa-non-fare, .cosa-non-fare-body, .notifiche-allerta-card, .cruscotto-callout,
+  .manuale-infobox, .infobox-head, .iscriviti-telegram, .profili-rapidi-section,
+  .profili-rapidi-card, .arena-card, .arena-fascia-link, .arena-intro, .stato-nuovo,
+  .app-disclaimer, .fascia-card, .gloss-popover, .list-group-item, .risorsa-tipo, .lis-video-item,
+  .lis-toc-link, .lis-fonte-card, .lis-fonti, .pcg-podcast-iscriviti, .lab-form,
+  .crea-lezione-form, .mappa-aree-disclaimer, code, .app-card, .storia-card, .info-pedagogia,
+  .segnali-bufala, .intro-card, .quiz-container, .inf-card, .schede-indice-fascia a, .inf-back,
+  .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc, .bg-light,
+  .bg-white, tbody tr, tbody td, tbody th, tfoot td, input, textarea, select,
+  button:not(.gloss-term)
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ) *
+):not(.gi *) { background: #000 !important; color: #ffff00 !important; box-shadow: none !important; }
+html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(.card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card, .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item) { border-color: #ffff00 !important; }
+html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(input, textarea, select, button:not(.gloss-term, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, .filter-pill, [style*="background"]):not(.gi *, .dossier *, .leaflet-container *, dialog *)) { border: 2px solid #ffff00 !important; }
+html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
+  button[aria-pressed="true"], .page-index-nav a.active, .facile-lang a[aria-current="page"],
+  .tts-rate-option input:checked + span
+):not(.gi *, .dossier *) { background: #ffff00 !important; color: #000 !important; border-color: #ffff00 !important; }
+html.a11y-contrast-yellow-black :is(.page-index-nav a:hover, .page-index-nav a:focus) { background: #333 !important; }
+html.a11y-contrast-yellow-black mark { background: #ffff00 !important; color: #000 !important; }
+html.a11y-contrast-yellow-black :is(input, textarea)::placeholder { color: #cccc00 !important; }
+html.a11y-contrast-yellow-black .gloss-popover::before { background: #000 !important; border-color: #ffff00 !important; }
+
+/* ── Contrasto Blu su crema — Sera 3 (12 maggio 2026) ──
+   Stile "BBC My Web My Way": sfondo crema #fdf6e3, testo blu istituzionale
+   #003a78 (10,4:1 sulla crema, WCAG AAA). Variante adatta a utenti
+   con dislessia o ipovisione che trovano stancante il bianco puro ma
+   vogliono comunque alto contrasto + leggibilità lunga. Link in blu
+   navy più scuro #00224e (14,5:1) per distinguibilità. */
+html.a11y-contrast-blue-cream body,
+html.a11y-contrast-blue-cream main { background: #fdf6e3 !important; color: #003a78 !important; }
+html.a11y-contrast-blue-cream { --a11y-testo: #003a78; }
+html.a11y-contrast-blue-cream a { --a11y-testo: #00224e; }
+html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(
+  h1, h2, h3, h4, h5, h6, p, li, td, th, span, strong, em, b, small, div, label, figcaption, dt,
+  dd, caption, summary, legend, blockquote, cite, time, address, abbr, q, code, a
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ) *
+) { color: var(--a11y-testo) !important; }
+html.a11y-contrast-blue-cream :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
+html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(
+  .card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card,
+  .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item, input, textarea,
+  select, button:not(.gloss-term)
+):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  ) *
+):not(.gi *) { background: #fdf6e3 !important; color: #003a78 !important; }
+html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(.card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card, .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item) { border-color: #003a78 !important; }
+html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(input, textarea, select, button:not(.gloss-term, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, .filter-pill, [style*="background"]):not(.gi *, .dossier *, .leaflet-container *, dialog *)) { border: 2px solid #003a78 !important; }
+/* Testo segnaposto: #56627f, 5,6:1 sulla crema (#6b7a9c era sotto 4,5:1). */
+html.a11y-contrast-blue-cream :is(input, textarea)::placeholder { color: #56627f !important; }
+html.a11y-contrast-blue-cream :where(main) button[aria-pressed="true"]:not(.gi *, .dossier *) { background: #003a78 !important; color: #fdf6e3 !important; }
+/* Lingua e velocità di lettura scelte: restano bianche sul loro fondo blu. */
+html.a11y-contrast-blue-cream :is(.facile-lang a[aria-current="page"], .tts-rate-option input:checked + span) { color: #fff !important; }
+
+/* ── Modalità lettura: impaginazione ──
+   Vale anche con un contrasto attivo: restringimento della riga (65ch),
+   padding, allineamento a sinistra e spaziatura tipografica su articoli
+   e liste archivio, non su homepage e pagine speciali. */
 html.a11y-reading-mode .article-body,
 html.a11y-reading-mode .list-intro-content {
-  background: #fdf6e3 !important;
-  color: #1a1a1a !important;
   max-width: 65ch !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -569,29 +931,45 @@ html.a11y-reading-mode .list-intro-content p,
 html.a11y-reading-mode .list-intro-content li {
   text-align: left !important;
 }
-/* I link nel corpo restano blu istituzionali: contrast su crema
-   #003366 vs #fdf6e3 ≈ 11.6:1, WCAG AAA. */
-
-/* Override stampa: la modalità lettura NON deve sporcare il PDF/stampa.
-   Sfondo bianco, no max-width (la pagina A4 ha già i suoi margini),
-   line-height standard. */
+/* Stampa: la modalità lettura non deve sporcare il foglio. Sfondo bianco,
+   niente riga ristretta né padding (la pagina A4 ha i suoi margini). */
 @media print {
-  html.a11y-reading-mode body,
-  html.a11y-reading-mode main,
-  html.a11y-reading-mode .servizi-section,
-  html.a11y-reading-mode .notizie-section,
-  html.a11y-reading-mode .card,
-  html.a11y-reading-mode .card-body,
-  html.a11y-reading-mode .quick-action-card,
-  html.a11y-reading-mode .card-servizio,
-  html.a11y-reading-mode .card-notizia-hero,
-  html.a11y-reading-mode .card-notizia-small,
-  html.a11y-reading-mode .card-numero-utile,
-  html.a11y-reading-mode .card-rischio,
-  html.a11y-reading-mode .link-card,
-  html.a11y-reading-mode .stat-hero-item,
-  html.a11y-reading-mode .bg-light,
-  html.a11y-reading-mode .bg-white {
+  html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) body,
+  html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) main,
+  html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(
+    .servizi-section, .notizie-section, .card, .card-body, .quick-action-card, .card-servizio,
+    .card-notizia-hero, .card-notizia-small, .card-numero-utile, .card-rischio, .link-card,
+    .stat-hero-item, .bg-light, .bg-white, .article-body, .list-intro-content
+  ):not(
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  ),
+  :where(
+  .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
+  [class*="allerta-bar"], [class*="avviso-meteo-bar"], [class*="incendi-bar"], [class*="badge"],
+  .notizia-categoria, .avatar, .cosa-non-fare-header, .tel-grande, .en-tel, .icona, .servizio-icon,
+  .quick-action-icon, .gioco-card-icon, [class*="fascia-icon"], .iscriviti-telegram-icon,
+  .filter-pill, .answered-selected, .list-group-item.correct, .list-group-item.incorrect,
+  .meteo-gz, .cruscotto-home-card, .cruscotto-home-monitor, .dossier-home-card,
+  .meteo-approfondisci-card, .ext-widget-placeholder, .article-toc-summary,
+  :is(.bg-primary, .bg-secondary, .bg-dark, .bg-danger, .bg-success, .bg-info, .bg-warning):not([class*="bg-opacity"]),
+  [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
+  .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
+  .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  ) *
+) {
     background: #fff !important;
     background-color: #fff !important;
     color: #000 !important;
@@ -604,179 +982,6 @@ html.a11y-reading-mode .list-intro-content li {
     border-radius: 0 !important;
   }
 }
-
-/* ── Contrasto alto ── */
-html.a11y-contrast-high body,
-html.a11y-contrast-high main { background: #fff !important; color: #000 !important; }
-html.a11y-contrast-high a,
-html.a11y-contrast-high a:visited { color: #003a78 !important; text-decoration: underline !important; }
-html.a11y-contrast-high p,
-html.a11y-contrast-high li,
-html.a11y-contrast-high td,
-html.a11y-contrast-high th,
-html.a11y-contrast-high h1,
-html.a11y-contrast-high h2,
-html.a11y-contrast-high h3,
-html.a11y-contrast-high h4,
-html.a11y-contrast-high h5,
-html.a11y-contrast-high h6 { color: #000 !important; }
-html.a11y-contrast-high .text-muted,
-html.a11y-contrast-high .text-secondary { color: #333 !important; }
-html.a11y-contrast-high .card,
-html.a11y-contrast-high .alert { border: 2px solid #000 !important; }
-
-/* ── Contrasto invertito (sfondo nero, testo bianco) ── */
-html.a11y-contrast-invert,
-html.a11y-contrast-invert body,
-html.a11y-contrast-invert main { background: #000 !important; color: #fff !important; }
-html.a11y-contrast-invert h1,
-html.a11y-contrast-invert h2,
-html.a11y-contrast-invert h3,
-html.a11y-contrast-invert h4,
-html.a11y-contrast-invert h5,
-html.a11y-contrast-invert h6,
-html.a11y-contrast-invert p,
-html.a11y-contrast-invert li,
-html.a11y-contrast-invert td,
-html.a11y-contrast-invert th { color: #fff !important; }
-html.a11y-contrast-invert a,
-html.a11y-contrast-invert a:visited { color: #ffd54f !important; text-decoration: underline !important; }
-html.a11y-contrast-invert .card,
-html.a11y-contrast-invert .alert,
-html.a11y-contrast-invert .article-body figure,
-html.a11y-contrast-invert .article-body blockquote {
-  background: #1a1a1a !important; color: #fff !important; border-color: #555 !important;
-}
-html.a11y-contrast-invert section,
-html.a11y-contrast-invert .container { background: transparent !important; }
-/* Lascia inalterati FAB e dialog di accessibilità: sono già contrastati */
-html.a11y-contrast-invert .a11y-fab,
-html.a11y-contrast-invert .a11y-dialog,
-html.a11y-contrast-invert .a11y-dialog * { /* niente override aggressivo */ }
-
-/* ── Contrasto Giallo su nero — Sera 3 (12 maggio 2026) ──
-   Stile "High Contrast Black" di Windows: sfondo nero, testo giallo
-   (#ffff00), link ciano (#00ffff). Contrast ratio giallo/nero = 19.6:1,
-   ciano/nero = 16.5:1 (entrambi WCAG AAA con larghissimo margine).
-   Approccio: override esplicito per body, intestazioni, paragrafi,
-   form input, card, alert, hero-section. Niente `filter: invert(1)`
-   (che ribalterebbe immagini e logo). Le icone Bootstrap restano
-   bianche o seguono colore corrente, quindi diventano gialle.
-   Form input: bordi visibili 2px gialli, sfondo nero.
-   Hero blu e banner colorati: override esplicito a nero+giallo per
-   coerenza visiva e leggibilità. */
-html.a11y-contrast-yellow-black body,
-html.a11y-contrast-yellow-black main { background: #000 !important; color: #ffff00 !important; }
-html.a11y-contrast-yellow-black h1,
-html.a11y-contrast-yellow-black h2,
-html.a11y-contrast-yellow-black h3,
-html.a11y-contrast-yellow-black h4,
-html.a11y-contrast-yellow-black h5,
-html.a11y-contrast-yellow-black h6,
-html.a11y-contrast-yellow-black p,
-html.a11y-contrast-yellow-black li,
-html.a11y-contrast-yellow-black td,
-html.a11y-contrast-yellow-black th,
-html.a11y-contrast-yellow-black span,
-html.a11y-contrast-yellow-black strong,
-html.a11y-contrast-yellow-black em { color: #ffff00 !important; }
-html.a11y-contrast-yellow-black a,
-html.a11y-contrast-yellow-black a:visited { color: #00ffff !important; text-decoration: underline !important; }
-html.a11y-contrast-yellow-black .card,
-html.a11y-contrast-yellow-black .alert,
-html.a11y-contrast-yellow-black .servizi-section,
-html.a11y-contrast-yellow-black .notizie-section,
-html.a11y-contrast-yellow-black .card-body,
-html.a11y-contrast-yellow-black .quick-action-card,
-html.a11y-contrast-yellow-black .card-servizio,
-html.a11y-contrast-yellow-black .card-numero-utile,
-html.a11y-contrast-yellow-black .card-rischio,
-html.a11y-contrast-yellow-black .link-card,
-html.a11y-contrast-yellow-black .stat-hero-item,
-html.a11y-contrast-yellow-black .hero-section,
-html.a11y-contrast-yellow-black .mini-hero,
-html.a11y-contrast-yellow-black .emergency-banner,
-html.a11y-contrast-yellow-black .it-footer-main,
-html.a11y-contrast-yellow-black .it-footer-small-prints {
-  background: #000 !important;
-  background-color: #000 !important;
-  color: #ffff00 !important;
-  border-color: #ffff00 !important;
-}
-/* Form input: contorno giallo, sfondo nero, testo giallo. Cursore
-   visibile su entrambi i fondi. */
-html.a11y-contrast-yellow-black input,
-html.a11y-contrast-yellow-black textarea,
-html.a11y-contrast-yellow-black select,
-html.a11y-contrast-yellow-black button:not(.a11y-fab):not(.a11y-seg):not(.a11y-toggle):not(.a11y-close):not(.a11y-btn) {
-  background: #000 !important;
-  color: #ffff00 !important;
-  border: 2px solid #ffff00 !important;
-}
-html.a11y-contrast-yellow-black input::placeholder,
-html.a11y-contrast-yellow-black textarea::placeholder { color: #cccc00 !important; }
-/* Lascia inalterati FAB e dialog di accessibilità (sono contrastati per design). */
-html.a11y-contrast-yellow-black .a11y-fab,
-html.a11y-contrast-yellow-black .a11y-dialog,
-html.a11y-contrast-yellow-black .a11y-dialog * { /* niente override */ }
-
-/* ── Contrasto Blu su crema — Sera 3 (12 maggio 2026) ──
-   Stile "BBC My Web My Way": sfondo crema #fdf6e3, testo blu istituzionale
-   #003a78 (contrast 9.8:1 vs crema, WCAG AAA). Variante adatta a utenti
-   con dislessia o ipovisione che trovano stancante il bianco puro ma
-   vogliono comunque alto contrasto + leggibilità lunga. Link in blu
-   navy più scuro #00224e (~14:1) per distinguibilità. */
-html.a11y-contrast-blue-cream body,
-html.a11y-contrast-blue-cream main { background: #fdf6e3 !important; color: #003a78 !important; }
-html.a11y-contrast-blue-cream h1,
-html.a11y-contrast-blue-cream h2,
-html.a11y-contrast-blue-cream h3,
-html.a11y-contrast-blue-cream h4,
-html.a11y-contrast-blue-cream h5,
-html.a11y-contrast-blue-cream h6,
-html.a11y-contrast-blue-cream p,
-html.a11y-contrast-blue-cream li,
-html.a11y-contrast-blue-cream td,
-html.a11y-contrast-blue-cream th,
-html.a11y-contrast-blue-cream span,
-html.a11y-contrast-blue-cream strong,
-html.a11y-contrast-blue-cream em { color: #003a78 !important; }
-html.a11y-contrast-blue-cream a,
-html.a11y-contrast-blue-cream a:visited { color: #00224e !important; text-decoration: underline !important; }
-html.a11y-contrast-blue-cream .card,
-html.a11y-contrast-blue-cream .alert,
-html.a11y-contrast-blue-cream .servizi-section,
-html.a11y-contrast-blue-cream .notizie-section,
-html.a11y-contrast-blue-cream .card-body,
-html.a11y-contrast-blue-cream .quick-action-card,
-html.a11y-contrast-blue-cream .card-servizio,
-html.a11y-contrast-blue-cream .card-numero-utile,
-html.a11y-contrast-blue-cream .card-rischio,
-html.a11y-contrast-blue-cream .link-card,
-html.a11y-contrast-blue-cream .stat-hero-item,
-html.a11y-contrast-blue-cream .hero-section,
-html.a11y-contrast-blue-cream .mini-hero,
-html.a11y-contrast-blue-cream .emergency-banner,
-html.a11y-contrast-blue-cream .it-footer-main,
-html.a11y-contrast-blue-cream .it-footer-small-prints {
-  background: #fdf6e3 !important;
-  background-color: #fdf6e3 !important;
-  color: #003a78 !important;
-  border-color: #003a78 !important;
-}
-html.a11y-contrast-blue-cream input,
-html.a11y-contrast-blue-cream textarea,
-html.a11y-contrast-blue-cream select,
-html.a11y-contrast-blue-cream button:not(.a11y-fab):not(.a11y-seg):not(.a11y-toggle):not(.a11y-close):not(.a11y-btn) {
-  background: #fffaf0 !important;
-  color: #003a78 !important;
-  border: 2px solid #003a78 !important;
-}
-html.a11y-contrast-blue-cream input::placeholder,
-html.a11y-contrast-blue-cream textarea::placeholder { color: #6b7a9c !important; }
-html.a11y-contrast-blue-cream .a11y-fab,
-html.a11y-contrast-blue-cream .a11y-dialog,
-html.a11y-contrast-blue-cream .a11y-dialog * { /* niente override */ }
 
 /* ── Scala di grigi ── */
 html.a11y-grayscale { filter: grayscale(1); }

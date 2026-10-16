@@ -492,6 +492,14 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 /* ── TABLES ── */
 table { width: 100%; margin-bottom: 1rem; border-collapse: collapse; border-radius: var(--pc-radius); overflow: hidden; box-shadow: var(--pc-shadow-sm); }
 table th { background: var(--pc-primary); color: #fff; padding: 0.75rem 1rem; font-weight: 600; font-size: 0.85rem; }
+/* Nelle tabelle con la classe .table di Bootstrap Italia la regola
+   «.table > :not(caption) > * > *» è più specifica di «table th» e rende
+   trasparente lo sfondo delle celle: il testo bianco delle intestazioni
+   restava sul bianco, invisibile (/storia/, /stato-del-territorio/,
+   /registro-prevenzione/; trovato il 16/10/2026). In stampa nero su grigio
+   chiaro, come le tabelle degli articoli: il blu di fondo spesso non si stampa. */
+.table > thead > tr > th { background-color: var(--pc-primary); }
+@media print { .table > thead > tr > th { background: #eee !important; color: #000 !important; } }
 table td { padding: 0.75rem 1rem; border-bottom: 1px solid #e9ecef; font-size: 0.88rem; }
 table tr:nth-child(even) { background: #f8f9fa; }
 table tr { transition: background var(--pc-transition); }
@@ -3702,12 +3710,14 @@ html.a11y-contrast-invert .tts-fallback-msg strong {
   .gloss-popover { display: none !important; }
 }
 
-/* Toolbar a11y: contrasto invertito (sfondo nero, testo bianco) */
+/* Toolbar a11y: contrasto invertito (sfondo nero, testo bianco).
+   L'icona eredita il colore del testo: gialla restava illeggibile sui
+   riquadri chiari che tengono i loro colori (16/10/2026). */
 html.a11y-contrast-invert .gloss-term {
   text-decoration-color: #ffd700;
 }
 html.a11y-contrast-invert .gloss-icon {
-  color: #ffd700;
+  color: inherit;
   opacity: 0.85;
 }
 html.a11y-contrast-invert .gloss-term:hover,
@@ -3732,7 +3742,7 @@ html.a11y-contrast-invert .gloss-popover-link {
   color: #ffd700;
 }
 
-/* Toolbar a11y: alto contrasto (giallo su nero) */
+/* Toolbar a11y: contrasto alto (nero su bianco) */
 html.a11y-contrast-high .gloss-term {
   color: #000;
   text-decoration: underline solid #000;
