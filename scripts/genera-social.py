@@ -337,9 +337,13 @@ def chiama_gemini(api_key: str, system_prompt: str, user_prompt: str,
         },
     }
     body = json.dumps(payload).encode("utf-8")
-    url = f"{GEMINI_ENDPOINT}?key={api_key}"
+    # La chiave va nell'intestazione x-goog-api-key, non nell'indirizzo:
+    # un indirizzo con ?key= finisce nei registri dei proxy e nei messaggi d'errore.
     req = urllib.request.Request(
-        url, data=body, headers={"Content-Type": "application/json"}, method="POST"
+        GEMINI_ENDPOINT,
+        data=body,
+        headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
+        method="POST",
     )
 
     for attempt in range(retries + 1):
