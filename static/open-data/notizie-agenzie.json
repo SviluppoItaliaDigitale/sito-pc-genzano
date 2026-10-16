@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-15T23:55:15+00:00",
+  "generato": "2026-10-16T03:35:59+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-15T23:46:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cinque morti nella sparatoria in Oregon, killer è un sedicenne",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/cinque-morti-nella-sparatoria-in-oregon-killer-e-un-sedicenne_25095d10-78ef-4c49-a9ac-f7e1dbc67a4e.html"
+  },
   {
    "data": "2026-10-15T23:46:18+00:00",
    "fonte": "ANSA",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Chiesto il processo per l'ex agente Cinturrino, cade la premeditazione",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/chiesto-il-processo-per-lex-agente-cinturrino-cade-la-premeditazione_2feca2e0-0e94-4499-9219-57f3e5aa5c48.html"
-  },
-  {
-   "data": "2026-10-15T18:11:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "La retromarcia di Trump: 'Niente fucilazione del killer di Fort Hood in diretta'&nbsp;",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/15/la-retromarcia-di-trump-niente-fucilazione-del-killer-di-fort-hood-in-diretta_590bc7c4-669b-4854-ac9c-16a9d156c5ed.html"
   }
  ]
 }
