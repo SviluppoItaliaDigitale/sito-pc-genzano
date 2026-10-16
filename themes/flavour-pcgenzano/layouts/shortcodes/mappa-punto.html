@@ -25,7 +25,7 @@
   var m=L.map(el,{scrollWheelZoom:false}).setView([lat,lon],{{ $zoom }});
   m.on('focus',function(){m.scrollWheelZoom.enable();});
   m.on('blur',function(){m.scrollWheelZoom.disable();});
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(m);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
   L.marker([lat,lon]).addTo(m).bindPopup({{ $label | jsonify | safeJS }}).openPopup();
 })();
 </script>
