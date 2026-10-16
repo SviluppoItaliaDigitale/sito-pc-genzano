@@ -140,7 +140,8 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
-- **2026-10-16 — da Claude a ChatGPT — Slide per chi conduce le lezioni: Percorso 1, Protezione Civile di base** (preparata da Claude, da avviare a mano in Codex Cloud; PR in apertura; ramo `chatgpt/slide-percorso-1-20261016`)
+- **2026-10-16 — da Claude a ChatGPT — Slide per chi conduce le lezioni: Percorso 1, Protezione Civile di base** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1440; ramo `chatgpt/slide-percorso-1-20261016`)
+  - **Avvio a mano (Alessandro).** In Codex Cloud: ambiente del repository, ramo `chatgpt/slide-percorso-1-20261016` se il selettore lo offre, poi il testo di avvio (intestazione più le sette parti qui sotto: lo stampa `passa-a.py nuovo`, lo ristampa `passa-a.py riavvia --pr 1440`). A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1440 --consegna M`.
   - **1. Obiettivo.**
     Preparare le slide per i formatori del Gruppo che portano nelle scuole il Percorso 1 «Protezione Civile di base» (primaria, classi III-V, 4 lezioni da un'ora; pagina `/formazione/percorsi-didattici/#percorso-1`): una presentazione PowerPoint modificabile per lezione, con le note per chi parla in ogni slide, generata da un file di dati. È la prova della proposta 94: Alessandro guarda le slide prima che vadano sul sito.
   - **2. File.**
