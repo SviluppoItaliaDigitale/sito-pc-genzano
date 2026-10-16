@@ -9,6 +9,18 @@ body:not(.chrome-loaded) > .app-content {
   /* Non nascondiamo il body intero per evitare problemi con noscript */
 }
 
+/* «Vai al contenuto principale» dell'intestazione comune: nascosto finché
+   non riceve il fuoco, come in custom.css. Le pagine che non caricano
+   custom.css (i giochi dell'infanzia, per esempio) lo mostravano come link
+   blu in cima alla pagina, illeggibile sul nero dei contrasti scuri
+   (16/10/2026). */
+.skip-to-content {
+  position: absolute; top: -100%; left: 0; background: #003366; color: #fff;
+  padding: 0.75rem 1.5rem; z-index: 9999; font-weight: 700; text-decoration: none;
+  border-radius: 0 0 4px 4px;
+}
+.skip-to-content:focus { top: 0; color: #fff; }
+
 /* ── HERO INTERNO per le app ── */
 .app-page-hero {
   background: linear-gradient(135deg, var(--pc-primary-dark, #00244d), var(--pc-primary, #003366));

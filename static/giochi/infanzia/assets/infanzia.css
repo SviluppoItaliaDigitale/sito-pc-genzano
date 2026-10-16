@@ -3,8 +3,11 @@
 :root {
   --inf-rosso: #D9364F;
   --inf-giallo: #F4B700;
-  --inf-verde: #4E8B3E;
-  --inf-blu: #3E7BC8;
+  /* Verde e blu un poco più scuri dal 16/10/2026: il testo bianco dei
+     pulsanti arriva a 4,8:1 e 4,9:1 (prima 4,1:1 e 4,3:1, sotto il
+     minimo di 4,5:1 quando il testo scende a 16 px da telefono). */
+  --inf-verde: #4A7F3A;
+  --inf-blu: #3A72B8;
   --inf-testo: #17324D;
 }
 
