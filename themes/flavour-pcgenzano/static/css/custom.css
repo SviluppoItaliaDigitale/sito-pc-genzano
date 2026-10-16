@@ -7997,6 +7997,14 @@ html.a11y-contrast-yellow-black .allerta-stato .allerta-stato-sotto { color: #ff
  * testo #1a1a1a (17:1), titoli #003366 (12,6:1), nessuna animazione.
  * ========================================================================== */
 html.aula-aperta, html.aula-aperta body { overflow: hidden; }
+/* 16/10/2026: i pulsanti flottanti (SOS 112, Assistente, lingua, accessibilità,
+   torna su) stanno sopra la finestra e coprivano testo e comandi da telefono.
+   In aula non servono: si esce con «Esci» o Esc e tornano tutti. */
+html.aula-aperta .sos-button, html.aula-aperta .assistente-fab,
+html.aula-aperta .lang-toggle, html.aula-aperta .a11y-fab,
+html.aula-aperta .back-to-top, html.aula-aperta .barra-lettura,
+html.aula-aperta .bottom-nav, html.aula-aperta .ext-widget-fab-close,
+html.aula-aperta #cookie-banner { display: none !important; }
 .aula {
   --aula-scala: 1;
   position: fixed; inset: 0; z-index: 2000;
@@ -8052,6 +8060,7 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
   .aula-barra, .aula-navigazione { padding: .5rem .75rem; }
   .aula-contatore-parola { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .aula-btn-grande { font-size: 1rem; padding: .5rem 1rem; }
+  .aula-tasto { display: none; }   /* sul telefono non c'è il tasto Esc */
 }
 @media print { .btn-modalita-aula, .aula { display: none !important; } }
 
