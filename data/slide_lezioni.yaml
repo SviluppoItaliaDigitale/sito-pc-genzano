@@ -1,0 +1,734 @@
+# Slide per chi conduce le lezioni del Percorso 1 «Protezione Civile di base»
+# (primaria, classi III-V, quattro lezioni da un'ora).
+#
+# Lo legge scripts/genera-slide-lezioni.py, che scrive un PowerPoint (con le
+# note per chi parla) e un PDF per lezione in static/formazione/slide-lezioni/.
+# I testi riprendono solo le pagine del sito elencate in «fonti» di ogni
+# lezione: un fatto nuovo si aggiunge prima alla pagina, poi qui.
+#
+# Testo «ricco»: una riga può essere una stringa o un elenco di pezzi; un pezzo
+# {testo, evidenza} si evidenzia come negli Appunti illustrati
+# (azione = giallo, luogo = azzurro, attenzione = rosa).
+# Note: «dire», «domanda», «tempo» (minuti, la somma per lezione fa 60) e,
+# dove serve, «attenzione».
+
+aggiornato: 2026-10-16
+sito: "https://www.protezionecivilegenzano.it"
+autore: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+firma: "Gruppo Comunale Volontari di Protezione Civile · Genzano di Roma"
+percorso:
+  numero: 1
+  titolo: "Protezione Civile di base"
+  fascia: "Primaria, classi III-V"
+  pagina: "/formazione/percorsi-didattici/#percorso-1"
+licenza: "CC BY-NC-SA 4.0"
+licenza_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it"
+crediti:
+  - "Testi e disegni: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
+  - "Pittogrammi: Sergio Palao, ARASAAC (arasaac.org), proprietà del Governo di Aragona."
+  - "Licenza: CC BY-NC-SA 4.0. Si può riusare citando la fonte, senza scopo di lucro."
+
+lezioni:
+
+  # ───────────────────────────── Lezione 1 ─────────────────────────────
+  - numero: 1
+    slug: che-cose-la-protezione-civile
+    titolo: "Che cos'è la Protezione Civile"
+    disegni:
+      - {file: arasaac/aiuto.png, alt: "Pittogramma: una mano aiuta un'altra mano"}
+    fonti:
+      - {testo: "Kit per la scuola primaria, Modulo 1", url: "/formazione/kit-scuola-primaria/"}
+      - {testo: "Manuale, capitolo 1: che cos'è la protezione civile", url: "/manuale/01-che-cose-la-protezione-civile/"}
+      - {testo: "Manuale, capitolo 2: la storia in Italia", url: "/manuale/02-storia-della-protezione-civile-in-italia/"}
+      - {testo: "Manuale: le quattro attività", url: "/manuale/61-le-quattro-attivita/"}
+      - {testo: "Rischio sismico: cosa fare prima", url: "/rischi-prevenzione/rischio-sismico/"}
+      - {testo: "Chi siamo", url: "/chi-siamo/"}
+    slide:
+      - tipo: copertina
+        note:
+          dire: "Presentati: il tuo nome e che sei un volontario del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Spiega che farete quattro incontri da un'ora: oggi che cos'è la Protezione Civile, poi il 112, i rischi del nostro territorio e i volontari. Di' che l'obiettivo è prepararsi, non spaventarsi."
+          domanda: "Avete mai sentito le parole «Protezione Civile»? Dove?"
+          tempo: 2
+
+      - tipo: obiettivi
+        titolo: "Oggi scopriamo"
+        punti:
+          - "Chi fa parte della Protezione Civile."
+          - "Che cosa fa: prima, durante e dopo un'emergenza."
+          - "Perché in Italia è nata."
+        immagine: {file: arasaac/scuola.png, alt: "Pittogramma: una scuola"}
+        note:
+          dire: "Leggi i tre punti. Anticipa che alla fine della lezione farete un gioco tutti insieme."
+          domanda: "Secondo voi, che cosa vuol dire «proteggere»?"
+          tempo: 2
+
+      - tipo: storia
+        titolo: "Flavio vede un camion"
+        immagine: {file: arasaac/bambino.png, alt: "Pittogramma: un bambino", nome: "Flavio"}
+        testo:
+          - "Flavio è in piazza con la nonna."
+          - "Passa un camion con la scritta «Protezione Civile»."
+          - "Flavio chiede: «Chi sono? Che cosa fanno?»"
+        domanda: "Voi che cosa gli rispondereste?"
+        note:
+          dire: "Leggi la storia e raccogli le risposte alla lavagna, senza correggerle: alla fine della lezione le riprenderete per vedere che cosa avete scoperto."
+          domanda: "Voi che cosa rispondereste a Flavio?"
+          tempo: 5
+          attenzione: "Accogli ogni risposta. Se un bambino racconta un'emergenza vissuta in famiglia, ascoltalo con calma, ringrazialo e rassicura la classe: oggi scopriamo come si viene aiutati."
+
+      - tipo: testo_immagine
+        titolo: "Una squadra di tante squadre"
+        punti:
+          - "La Protezione Civile non è una persona sola."
+          - ["È un ", {testo: "sistema", evidenza: azione}, ": tanti che lavorano insieme."]
+          - "Protegge persone, animali, ambiente e case dai pericoli."
+        immagini:
+          - {file: arasaac/famiglia.png, alt: "Pittogramma: un gruppo di persone"}
+        note:
+          dire: "La Protezione Civile non è un ufficio e non è un corpo solo: è un sistema formato da tanti soggetti diversi che lavorano insieme per proteggere le persone, gli animali, l'ambiente e i beni dai pericoli. Animali e ambiente li ha aggiunti esplicitamente il Codice della protezione civile del 2018."
+          domanda: "Che cosa vuol dire, secondo voi, «lavorare in squadra»?"
+          tempo: 3
+
+      - tipo: griglia
+        titolo: "Chi fa parte della squadra"
+        voci:
+          - {file: arasaac/pompiere.png, alt: "Pittogramma: un vigile del fuoco con l'estintore", testo: "Vigili del Fuoco"}
+          - {file: arasaac/ambulanza.png, alt: "Pittogramma: un'ambulanza", testo: "Medici e ambulanze"}
+          - {file: arasaac/poliziotto.png, alt: "Pittogramma: un poliziotto accanto all'auto della polizia", testo: "Forze dell'ordine"}
+          - {file: arasaac/aiutare.png, alt: "Pittogramma: una persona aiuta un'altra a rialzarsi", testo: "Volontari"}
+        nota: "Nel Comune guida il Sindaco. Nelle emergenze più grandi coordinano anche Regione e Stato."
+        note:
+          dire: "Presenta le squadre. I Vigili del Fuoco spengono gli incendi, salvano le persone in pericolo e intervengono quando qualcosa crolla. Il soccorso sanitario porta medici e infermieri dove servono. Le forze dell'ordine si occupano della sicurezza e aiutano quando bisogna allontanarsi. I volontari aiutano la popolazione: distribuiscono acqua e cibo, montano le tende, assistono le persone fragili. Il Sindaco è la prima autorità di protezione civile nel Comune; Prefetto, Regione e Stato coordinano le emergenze più gravi."
+          domanda: "Avete mai visto una di queste squadre al lavoro?"
+          tempo: 5
+          attenzione: "Se un bambino ha un genitore in una di queste squadre, valorizzalo senza chiedere dettagli sul suo lavoro."
+
+      - tipo: sequenza
+        titolo: "Che cosa fa: prima, durante, dopo"
+        passi:
+          - {etichetta: "Prima", titolo: "Previsione", testo: "Che cosa può succedere, e dove?", file: arasaac/vedere.png, alt: "Pittogramma: una persona guarda avanti"}
+          - {etichetta: "Prima", titolo: "Prevenzione", testo: "Come riduco i danni?", file: arasaac/zaino.png, alt: "Pittogramma: uno zaino"}
+          - {etichetta: "Durante", titolo: "Soccorso", testo: "Come aiuto adesso?", file: arasaac/ambulanza.png, alt: "Pittogramma: un'ambulanza"}
+          - {etichetta: "Dopo", titolo: "Superamento", testo: "Come si torna alla vita di prima?", file: arasaac/casa.png, alt: "Pittogramma: una casa"}
+        note:
+          dire: "Le attività della Protezione Civile sono quattro. Prima di un evento la previsione studia che cosa può succedere, dove e quando, e la prevenzione riduce i danni in anticipo. Durante l'evento c'è il soccorso, che la legge di oggi chiama gestione dell'emergenza: salvare le persone e assisterle. Dopo viene il superamento, cioè il ritorno alla vita normale, che spesso è la fase più lunga."
+          domanda: "Secondo voi, quale di queste quattro è la più importante?"
+          tempo: 6
+          attenzione: "Servono tutte. Puoi aggiungere che la prevenzione è la fase più silenziosa ed è anche quella che salva più vite."
+
+      - tipo: testo_immagine
+        lato: sinistra
+        titolo: "Prima: prevedere e prepararsi"
+        punti:
+          - "Gli esperti studiano il tempo e i pericoli del territorio."
+          - "Un temporale si vede arrivare. Il giorno di un terremoto, no."
+          - ["Per questo ci si ", {testo: "prepara prima", evidenza: azione}, ": case robuste, un piano in famiglia, le prove a scuola."]
+        immagini:
+          - {file: arasaac/temporale.png, alt: "Pittogramma: una nuvola con un fulmine"}
+        note:
+          dire: "Prevedere non vuol dire indovinare. Una perturbazione si vede arrivare con ore o giorni di anticipo, e la Regione emette i bollettini di allerta. Il momento esatto di un terremoto invece nessuno lo sa prevedere: si sa dove i terremoti sono più probabili. Per questo conta la prevenzione: case costruite bene, mobili alti fissati al muro, il piano di emergenza della famiglia, le prove di evacuazione a scuola."
+          domanda: "Chi di voi ha già fatto una prova di evacuazione a scuola? Che cosa avete fatto?"
+          tempo: 5
+
+      - tipo: testo_immagine
+        titolo: "Una lezione dal passato: il Vajont"
+        punti:
+          - ["Nel ", {testo: "1963", evidenza: luogo}, " una grande frana cadde nel lago dietro la diga del Vajont."]
+          - "Gli studi avevano visto il pericolo, ma non si agì in tempo."
+          - ["La lezione: conoscere un pericolo serve, ", {testo: "se si agisce prima", evidenza: azione}, "."]
+        immagini:
+          - {file: arasaac/montagna.png, alt: "Pittogramma: una montagna"}
+        note:
+          dire: "Racconta in modo semplice: la sera del 9 ottobre 1963 una frana del Monte Toc precipitò nel lago artificiale del Vajont e l'onda superò la diga. Gli studi geologici avevano segnalato il pericolo, ma mancò la decisione di agire. È il caso che ha fatto capire all'Italia che molti disastri non sono una fatalità: sono rischi conosciuti che non sono stati ridotti."
+          domanda: "Secondo voi, che cosa si sarebbe dovuto fare?"
+          tempo: 4
+          attenzione: "Non entrare nei dettagli sulle vittime e non mostrare video del disastro: il kit per la primaria consiglia di evitarli. Se un bambino chiede quante persone sono morte, rispondi che sono state tante e riporta l'attenzione su che cosa abbiamo imparato."
+
+      - tipo: sequenza
+        titolo: "Come è nata la Protezione Civile"
+        passi:
+          - {etichetta: "1976", titolo: "Friuli", testo: "Zamberletti coordina i soccorsi."}
+          - {etichetta: "1980", titolo: "Irpinia", testo: "I soccorsi arrivano in ritardo."}
+          - {etichetta: "1982", titolo: "Il Dipartimento", testo: "Nasce presso il Governo."}
+          - {etichetta: "1992", titolo: "Il Servizio nazionale", testo: "Tutti lavorano insieme."}
+        note:
+          dire: "Dopo il terremoto del Friuli del 1976 Giuseppe Zamberletti, chiamato a guidare i soccorsi, mise centri di coordinamento vicino ai paesi colpiti e fece lavorare insieme Regione, Comuni e volontari: per questo è considerato il padre della protezione civile italiana. Dopo il terremoto dell'Irpinia del 1980 i soccorsi arrivarono di nuovo in ritardo, e nel 1982 nacque il Dipartimento della Protezione Civile presso la Presidenza del Consiglio dei ministri. Nel 1992 una legge creò il Servizio nazionale, che mette insieme Stato, Regioni, Comuni, vigili del fuoco, forze dell'ordine, sanità e volontariato. Oggi la regola è il Codice della protezione civile del 2018. Proprio nel 1981 nasce anche il primo gruppo di volontari di protezione civile di Genzano."
+          domanda: "Perché secondo voi è importante che tutti lavorino insieme?"
+          tempo: 5
+
+      - tipo: attivita
+        titolo: "Gioco: prima, durante o dopo?"
+        durata: "15 minuti"
+        passi:
+          - "Ascoltate la frase che legge il volontario."
+          - "Alzate le dita: 1 previsione, 2 prevenzione, 3 soccorso, 4 superamento."
+          - "Spiegate perché avete scelto così."
+        materiale: "Non serve una scheda da stampare: bastano le mani."
+        riferimento: {testo: "Kit per la scuola primaria, Modulo 1", url: "/formazione/kit-scuola-primaria/"}
+        immagine: {file: arasaac/calendario.png, alt: "Pittogramma: un calendario"}
+        note:
+          dire: "Leggi una frase alla volta e lascia rispondere la classe con le dita. Frasi e risposte: 1) «La Regione prepara il bollettino di allerta per domani»: previsione. 2) «A scuola facciamo la prova di evacuazione»: prevenzione. 3) «A casa fissiamo la libreria al muro»: prevenzione. 4) «I Vigili del Fuoco spengono un incendio»: soccorso. 5) «I volontari montano una tenda per chi non può tornare a casa»: soccorso. 6) «Dopo un terremoto si riparano le scuole e le case»: superamento. 7) «Gli esperti studiano dove i terremoti sono più probabili»: previsione."
+          domanda: "Quale frase vi ha fatto discutere di più?"
+          tempo: 15
+          attenzione: "Alcune azioni stanno a cavallo fra due attività: se un bambino lo nota, dagli ragione e spiega che le quattro attività convivono e si toccano."
+
+      - tipo: ricordiamo
+        punti:
+          - {file: arasaac/famiglia.png, alt: "Pittogramma: un gruppo di persone", testo: "La Protezione Civile è una squadra di tante squadre."}
+          - {file: arasaac/orologio.png, alt: "Pittogramma: un orologio", testo: "Lavora prima, durante e dopo un'emergenza."}
+          - {file: arasaac/bambina.png, alt: "Pittogramma: una bambina", testo: "Anche tu fai parte della squadra, quando ti prepari."}
+        note:
+          dire: "Ripeti i tre punti e torna alle risposte scritte alla lavagna all'inizio: che cosa avete scoperto? Il cittadino che sa che cosa fare è il primo anello della catena della protezione civile."
+          domanda: "Che cosa racconterete a casa di questa lezione?"
+          tempo: 5
+
+      - tipo: fonti
+        note:
+          dire: "Questa slide serve all'insegnante: elenca le pagine del sito da cui vengono i contenuti della lezione. Non serve leggerla alla classe."
+          tempo: 0
+
+      - tipo: chiusura
+        note:
+          dire: "Saluta e annuncia il prossimo incontro: il 112, il numero che fa arrivare tutta la squadra."
+          domanda: "Che cosa vorreste chiedere ai volontari la prossima volta?"
+          tempo: 3
+
+  # ───────────────────────────── Lezione 2 ─────────────────────────────
+  - numero: 2
+    slug: il-112
+    titolo: "Il 112, il numero delle emergenze"
+    disegni:
+      - {file: arasaac/112.png, alt: "Pittogramma: un telefono cellulare con il numero 112"}
+    fonti:
+      - {testo: "Chiamare il 112: come fare bene una segnalazione", url: "/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/"}
+      - {testo: "Scheda «Chiamo il 112 — Primaria»", url: "/formazione/schede-stampabili/chiamo-112-primaria/"}
+      - {testo: "Scheda «Il numero 112 — Primaria»", url: "/formazione/schede-stampabili/il-numero-112-primaria/"}
+      - {testo: "Biblioteca delle idee sbagliate: il numero unico", url: "/rischi-prevenzione/idee-sbagliate/#numero-unico"}
+      - {testo: "Biblioteca delle idee sbagliate: chiamare il Gruppo", url: "/rischi-prevenzione/idee-sbagliate/#chiamare-gruppo"}
+      - {testo: "Rischio incendi boschivi", url: "/rischi-prevenzione/rischio-incendio/"}
+    slide:
+      - tipo: copertina
+        note:
+          dire: "Saluta e ricorda la lezione scorsa: la Protezione Civile è una squadra di tante squadre. Oggi scopriamo il numero che fa arrivare la squadra giusta: il 112."
+          domanda: "Chi sa a memoria il numero di telefono di casa o di un genitore?"
+          tempo: 2
+
+      - tipo: obiettivi
+        titolo: "Oggi scopriamo"
+        punti:
+          - "Quando si chiama il 112."
+          - "Che cosa si dice all'operatore."
+          - "Come ci si allena, con un gioco."
+        immagine: {file: arasaac/telefonare.png, alt: "Pittogramma: una mano compone un numero sul telefono"}
+        note:
+          dire: "Leggi i tre punti. Anticipa che alla fine farete un gioco di ruolo: una telefonata per finta."
+          domanda: "Avete mai visto qualcuno chiamare i soccorsi?"
+          tempo: 2
+
+      - tipo: storia
+        titolo: "Flavio, Silvia e il fumo"
+        immagine: {file: arasaac/bambina.png, alt: "Pittogramma: una bambina", nome: "Silvia"}
+        testo:
+          - "Flavio e Silvia giocano in giardino."
+          - "Dalla finestra della casa di fronte esce fumo nero."
+          - "Silvia dice: «Bisogna chiamare qualcuno. Ma chi?»"
+        domanda: "Voi che cosa fareste?"
+        note:
+          dire: "Leggi la storia e lascia rispondere. Poi racconta come finisce: Flavio e Silvia corrono dalla mamma di Flavio, che chiama subito il 112, e restano lontani dalla casa. Se fossero stati soli e il pericolo fosse stato vero, avrebbero potuto chiamare loro."
+          domanda: "Che cosa NON devono fare Flavio e Silvia?"
+          tempo: 4
+          attenzione: "Risposta attesa: non avvicinarsi a guardare e non entrare nella casa. Se un bambino racconta un incendio vissuto, ascoltalo e sottolinea che cosa è andato bene: qualcuno ha chiamato i soccorsi."
+
+      - tipo: numero
+        titolo: "Un solo numero per le emergenze"
+        numero: "112"
+        punti:
+          - ["Nel Lazio è ", {testo: "l'unico numero", evidenza: azione}, " per ogni emergenza."]
+          - "Risponde un operatore: una persona vera."
+          - "Manda i soccorsi giusti."
+          - ["È ", {testo: "gratis", evidenza: luogo}, ", anche senza credito."]
+        soccorsi:
+          - {file: arasaac/pompiere.png, alt: "Pittogramma: un vigile del fuoco", testo: "Vigili del Fuoco"}
+          - {file: arasaac/ambulanza.png, alt: "Pittogramma: un'ambulanza", testo: "Ambulanza"}
+          - {file: arasaac/poliziotto.png, alt: "Pittogramma: un poliziotto", testo: "Forze dell'ordine"}
+        note:
+          dire: "Nel Lazio il 112, il Numero Unico Europeo di Emergenza, è l'unico numero da chiamare per qualsiasi emergenza: un incendio, una persona che sta male, un incidente. La chiamata arriva alla centrale del 112: l'operatore capisce di che aiuto c'è bisogno e avvisa chi serve, cioè Vigili del Fuoco, emergenza sanitaria, forze dell'ordine o squadre antincendio. Si chiama gratis, anche da un cellulare senza credito."
+          domanda: "Perché secondo voi è meglio ricordare un numero solo invece di tanti?"
+          tempo: 5
+          attenzione: "Un numero solo si ricorda meglio, soprattutto quando si ha paura. Non presentare il 115 o il 118 come numeri da chiamare: nel Lazio il cittadino chiama sempre il 112."
+
+      - tipo: si_no
+        titolo: "Quando si chiama il 112?"
+        si:
+          titolo: "Sì, chiama"
+          punti:
+            - "Vedi fiamme o fumo che esce da una casa."
+            - "Una persona sta male o è caduta e non si alza."
+            - "C'è un incidente."
+        "no":
+          titolo: "No"
+          punti:
+            - "Per scherzo o per gioco."
+            - "Per cose che non sono emergenze, come la merenda dimenticata."
+        note:
+          dire: "Il 112 si chiama quando c'è un pericolo serio: un incendio, una persona che sta male, un incidente. Non si chiama per gioco: chi chiama per scherzo occupa la linea che serve a chi è in pericolo, e fare uno scherzo al 112 è un reato."
+          domanda: "Vi viene in mente un'altra situazione in cui si chiama il 112?"
+          tempo: 5
+          attenzione: "Per le segnalazioni non urgenti di protezione civile esiste la Sala Operativa della Regione Lazio, 803 555: è un'informazione per gli adulti, ai bambini basta il 112."
+
+      - tipo: testo_immagine
+        lato: sinistra
+        titolo: "Anche un bambino può chiamare"
+        punti:
+          - ["Se c'è un adulto vicino, ", {testo: "avvisalo subito", evidenza: azione}, "."]
+          - ["Se sei solo e il pericolo è vero, ", {testo: "chiama tu il 112", evidenza: azione}, "."]
+          - "L'operatore ti fa le domande e ti guida."
+        immagini:
+          - {file: arasaac/bambino.png, alt: "Pittogramma: un bambino"}
+        note:
+          dire: "Di' chiaramente che il 112 lo può chiamare anche un bambino, quando il pericolo è vero e non c'è un adulto vicino. L'operatore parla con chi chiama, fa le domande che servono e lo guida."
+          domanda: "Chi è l'adulto che potete avvisare a scuola? E a casa?"
+          tempo: 3
+
+      - tipo: sequenza
+        titolo: "Le 4 cose da dire"
+        passi:
+          - {etichetta: "1", titolo: "Chi sei", testo: "Nome ed età.", file: arasaac/bambino.png, alt: "Pittogramma: un bambino"}
+          - {etichetta: "2", titolo: "Dove sei", testo: "Via, numero, città.", file: arasaac/mappa.png, alt: "Pittogramma: una mappa"}
+          - {etichetta: "3", titolo: "Che cosa è successo", testo: "In poche parole.", file: arasaac/pericolo.png, alt: "Pittogramma: un cartello di pericolo"}
+          - {etichetta: "4", titolo: "Ci sono feriti?", testo: "Quanti, e come stanno.", file: arasaac/medico.png, alt: "Pittogramma: un medico"}
+        note:
+          dire: "Queste sono le quattro cose della scheda che userete nel gioco: chi sei, dove sei, che cosa è successo, se ci sono feriti. L'operatore può chiederle in un ordine diverso, per esempio prima che cosa è successo e dove: non importa l'ordine, importa rispondere con calma, una cosa alla volta."
+          domanda: "Quale delle quattro è più difficile da dire, secondo voi?"
+          tempo: 6
+
+      - tipo: testo_immagine
+        titolo: "Dove sei? Allenati a dirlo"
+        punti:
+          - ["Impara a memoria il tuo ", {testo: "indirizzo", evidenza: luogo}, ": via, numero, città."]
+          - "Fuori casa guarda intorno: una piazza, un edificio che tutti conoscono."
+          - "Il telefono può mandare la posizione, ma tu dilla lo stesso."
+        immagini:
+          - {file: arasaac/casa.png, alt: "Pittogramma: una casa"}
+        note:
+          dire: "Chi chiama deve dire dove si trova: via e numero civico, città. Se non conosce l'indirizzo, un punto di riferimento: una piazza, un edificio conosciuto. Dallo smartphone la posizione può arrivare da sola alla centrale, se la localizzazione è attiva, ma non sostituisce una buona descrizione del luogo."
+          domanda: "Chi sa dire l'indirizzo della nostra scuola?"
+          tempo: 3
+
+      - tipo: testo_immagine
+        lato: sinistra
+        titolo: "Durante la chiamata"
+        punti:
+          - ["Parla ", {testo: "piano e chiaro", evidenza: azione}, "."]
+          - "Rispondi alle domande dell'operatore."
+          - [{testo: "Non riattaccare", evidenza: attenzione}, " finché l'operatore non ha finito."]
+          - "Se siete in tanti, chiama uno solo: gli altri aiutano."
+        immagini:
+          - {file: arasaac/calma.png, alt: "Pittogramma: una persona seduta, tranquilla"}
+        note:
+          dire: "Durante la telefonata si parla lentamente e chiaramente e si risponde alle domande. Non si riattacca prima che l'operatore abbia tutte le informazioni: se ti dice di restare in linea, resti in linea. Se ci sono più persone, ne basta una al telefono; le altre aiutano, per esempio allontanando chi è in pericolo. Non si richiama più volte se la chiamata è già partita."
+          domanda: "Perché secondo voi è importante non riattaccare?"
+          tempo: 3
+
+      - tipo: errore
+        titolo: "Occhio all'errore"
+        errori:
+          - {idea: "«Per gli incendi il 115, per l'ambulanza il 118.»", correzione: "Nel Lazio si chiama sempre il 112."}
+          - {idea: "«In emergenza chiamo i volontari del Gruppo.»", correzione: "Li attivano il Sindaco o la Sala Operativa: tu chiami il 112."}
+        note:
+          dire: "Due idee sbagliate molto diffuse. Nel Lazio dal 2017 l'unico numero di emergenza per il cittadino è il 112: è la centrale a mandare vigili del fuoco, ambulanza o forze dell'ordine. Il nostro Gruppo non risponde alle chiamate dei cittadini: lo attivano il Sindaco, il Centro Operativo Comunale o la Sala Operativa regionale. Chiamare la sede del Gruppo in emergenza fa perdere tempo prezioso."
+          domanda: "Se un albero cade sulla strada davanti a casa, chi chiamate?"
+          tempo: 3
+          attenzione: "Risposta: il 112, dicendo il punto esatto. Se poi arrivano i volontari, è perché li ha attivati il Comune o la Sala Operativa."
+
+      - tipo: attivita
+        titolo: "Gioco di ruolo: la telefonata"
+        durata: "17 minuti"
+        passi:
+          - "In coppia: uno fa l'operatore, l'altro chiama."
+          - "Completate e recitate i due dialoghi della scheda."
+          - "Poi scambiatevi i ruoli."
+        materiale: "Una scheda per bambino. Per chi fa più fatica: «Il numero 112»."
+        riferimento: {testo: "Scheda «Chiamo il 112 — Primaria»", url: "/formazione/schede-stampabili/chiamo-112-primaria/"}
+        immagine: {file: arasaac/telefonare.png, alt: "Pittogramma: una mano compone un numero sul telefono"}
+        note:
+          dire: "Distribuisci la scheda. Ogni coppia completa i due dialoghi (la nonna caduta in cucina, il fumo dalla finestra del vicino) e li recita: un bambino fa l'operatore, l'altro chi chiama; poi si scambiano i ruoli. Alla fine fai recitare due o tre coppie davanti alla classe. Per chi fa più fatica c'è la scheda «Il numero 112», più semplice."
+          domanda: "Che cosa vi ha chiesto per prima cosa l'operatore?"
+          tempo: 17
+          attenzione: "Durante il gioco si usa un telefono finto o la mano: non si compone mai il 112 vero. La scheda nomina il 118 e il 115: sono i servizi a cui la centrale passa la chiamata, non numeri da comporre."
+
+      - tipo: ricordiamo
+        punti:
+          - {file: arasaac/112.png, alt: "Pittogramma: un telefono con il numero 112", testo: "112: un numero solo per tutte le emergenze."}
+          - {file: arasaac/mappa.png, alt: "Pittogramma: una mappa", testo: "Di' chi sei, dove sei, che cosa è successo, se ci sono feriti."}
+          - {file: arasaac/calma.png, alt: "Pittogramma: una persona seduta, tranquilla", testo: "Parla con calma e non riattaccare."}
+        note:
+          dire: "Fai ripetere insieme il numero e le quattro cose. Compito per casa: imparare a memoria l'indirizzo di casa e il numero di telefono di un genitore."
+          domanda: "Chi sa ripetere le quattro cose senza guardare?"
+          tempo: 4
+
+      - tipo: fonti
+        note:
+          dire: "Questa slide serve all'insegnante: elenca le pagine del sito da cui vengono i contenuti della lezione. Non serve leggerla alla classe."
+          tempo: 0
+
+      - tipo: chiusura
+        note:
+          dire: "Saluta e annuncia il prossimo incontro: i rischi del nostro territorio."
+          domanda: "Avete una domanda sul 112?"
+          tempo: 3
+
+  # ───────────────────────────── Lezione 3 ─────────────────────────────
+  - numero: 3
+    slug: rischi-del-territorio
+    titolo: "I rischi del nostro territorio"
+    disegni:
+      - {file: arasaac/terremoto.png, alt: "Pittogramma: un terremoto fa tremare gli edifici"}
+      - {file: arasaac/pioggia.png, alt: "Pittogramma: nuvole e pioggia"}
+      - {file: arasaac/fuoco.png, alt: "Pittogramma: fiamme"}
+    fonti:
+      - {testo: "Scuole di Genzano di Roma e rischi locali", url: "/rischi-prevenzione/scuole-genzano-rischi-locali/"}
+      - {testo: "Rischi principali in parole semplici", url: "/rischi-prevenzione/rischi-in-parole-semplici/"}
+      - {testo: "Rischio sismico", url: "/rischi-prevenzione/rischio-sismico/"}
+      - {testo: "Rischio idrogeologico", url: "/rischi-prevenzione/rischio-idrogeologico/"}
+      - {testo: "Rischio incendi boschivi", url: "/rischi-prevenzione/rischio-incendio/"}
+      - {testo: "Rischio vulcanico (Colli Albani)", url: "/rischi-prevenzione/rischio-vulcanico/"}
+      - {testo: "Scheda «La geografia sismica dell'Italia»", url: "/formazione/schede-stampabili/geografia-sismica-italia-primaria/"}
+    slide:
+      - tipo: copertina
+        note:
+          dire: "Ricorda le due lezioni precedenti: la squadra della Protezione Civile e il 112. Oggi parliamo dei pericoli del posto in cui viviamo e di che cosa fare in ognuno."
+          domanda: "Secondo voi, che cos'è un rischio?"
+          tempo: 2
+
+      - tipo: obiettivi
+        titolo: "Oggi scopriamo"
+        punti:
+          - "Dove viviamo: sopra un antico vulcano."
+          - "Tre rischi da conoscere: terremoto, piogge forti, incendi."
+          - "Che cosa fare in ognuno."
+        immagine: {file: arasaac/mappa.png, alt: "Pittogramma: una mappa"}
+        note:
+          dire: "Leggi i tre punti. Alla fine lavorerete su una scheda con la mappa dei terremoti in Italia."
+          domanda: "Che cosa vi viene in mente se dico «vulcano»?"
+          tempo: 2
+
+      - tipo: storia
+        titolo: "Flavio guarda il lago"
+        immagine: {file: arasaac/lago.png, alt: "Pittogramma: un lago fra le colline"}
+        testo:
+          - "Flavio guarda il lago di Nemi dall'alto."
+          - "Il nonno dice: «Questo lago è dentro un antico vulcano.»"
+          - "Flavio chiede: «Allora qui ci sono dei pericoli?»"
+        domanda: "Voi che cosa sapete del posto dove vivete?"
+        note:
+          dire: "Genzano sta sul bordo di un antico cratere del Vulcano Laziale: il paese si affaccia sul lago di Nemi, che occupa proprio una conca di quel vulcano. Il vulcano è quiescente, non spento: non è in eruzione, la sua ultima fase eruttiva risale a circa 36.000 anni fa e l'INGV lo sorveglia con i suoi strumenti. I rischi da conoscere a scuola sono il terremoto, le piogge forti con frane e allagamenti, e gli incendi nei boschi."
+          domanda: "Chi di voi va al lago o nei boschi dei Castelli?"
+          tempo: 4
+          attenzione: "Se un bambino chiede se il vulcano può eruttare, rispondi con calma: gli scienziati dell'INGV lo controllano e nessuna fonte ufficiale indica una ripresa dell'attività."
+
+      - tipo: griglia
+        titolo: "Tre rischi da conoscere a Genzano"
+        voci:
+          - {file: arasaac/terremoto.png, alt: "Pittogramma: un terremoto fa tremare gli edifici", testo: "Terremoto"}
+          - {file: arasaac/pioggia.png, alt: "Pittogramma: nuvole e pioggia", testo: "Piogge forti: frane e allagamenti"}
+          - {file: arasaac/fuoco.png, alt: "Pittogramma: fiamme", testo: "Incendi nei boschi"}
+        note:
+          dire: "Questi sono i tre rischi del percorso. Un rischio è la possibilità che un pericolo faccia danni: dipende da quanto è forte il pericolo, da quanto sono robuste le case e da quante persone ci sono."
+          domanda: "Quale di questi tre vi incuriosisce di più?"
+          tempo: 3
+          attenzione: "Il territorio ha anche altri rischi, come temporali e vento, caldo e blackout: li trovi nella pagina «Rischi principali in parole semplici»."
+
+      - tipo: numero
+        titolo: "Terremoto: Genzano è in zona 2"
+        numero: "2"
+        didascalia: "zona sismica"
+        punti:
+          - "L'Italia è divisa in 4 zone sismiche: la 1 è la più pericolosa, la 4 la meno."
+          - ["Genzano è in ", {testo: "zona 2", evidenza: luogo}, ": sismicità media."]
+          - ["Nessuno sa prevedere ", {testo: "il giorno di un terremoto", evidenza: attenzione}, ": ci si prepara prima."]
+        note:
+          dire: "Lo Stato e le Regioni hanno diviso l'Italia in quattro zone sismiche, usando le mappe dell'INGV: la zona 1 è la più pericolosa, la 4 la meno. Genzano è in zona 2, che la Regione Lazio chiama 2B: sismicità media. Nei Colli Albani le scosse sono di solito leggere, a volte avvertite dalla popolazione. Le zone servono anche a costruire le case in modo più robusto dove serve. Nessuno sa prevedere il giorno e l'ora di un terremoto: per questo ci si prepara prima."
+          domanda: "Qualcuno ha mai sentito una scossa? Com'era?"
+          tempo: 4
+          attenzione: "Se un bambino racconta una scossa vissuta, ascoltalo e rassicura: oggi impariamo i gesti che proteggono. Non promettere che non ci saranno terremoti."
+
+      - tipo: illustrazione
+        titolo: "Terremoto: che cosa fare"
+        svg: terremoto-tre-gesti.svg
+        ritaglio: "0 92 1200 468"
+        alt: "Tre disegni in fila: una persona si abbassa, si ripara sotto un tavolo robusto proteggendo testa e collo, poi afferra una gamba del tavolo."
+        punti:
+          - ["Durante: ", {testo: "abbassati, riparati, tieniti", evidenza: azione}, ". Non correre fuori."]
+          - ["Dopo: scarpe ai piedi, esci con calma e vai al ", {testo: "punto di raccolta", evidenza: luogo}, "."]
+        note:
+          dire: "Durante la scossa: abbassati, riparati sotto un tavolo robusto proteggendo la testa con le braccia e tieniti a una gamba del tavolo; stai lontano da finestre, vetri e mobili alti; non correre fuori e non usare l'ascensore. A scuola si seguono le indicazioni dell'insegnante. Quando la scossa è finita: metti le scarpe, esci con calma, raggiungi il punto di raccolta e non tornare indietro a prendere zaino o oggetti."
+          domanda: "Dove vi riparereste in questa aula?"
+          tempo: 6
+          attenzione: "Puoi far provare il gesto sotto il banco se l'insegnante è d'accordo e i banchi sono stabili. Niente rumori forti o finte scosse a sorpresa."
+
+      - tipo: testo_immagine
+        lato: sinistra
+        titolo: "Piogge forti: perché proprio qui?"
+        punti:
+          - "Genzano ha pendii ripidi, sul bordo dell'antico vulcano."
+          - ["Con piogge forti e lunghe il terreno può ", {testo: "franare", evidenza: attenzione}, "."]
+          - ["Nelle zone basse l'acqua ", {testo: "allaga", evidenza: attenzione}, " strade, cantine e sottopassi."]
+        immagini:
+          - {file: arasaac/alluvione.png, alt: "Pittogramma: case allagate dall'acqua"}
+        note:
+          dire: "Il territorio di Genzano ha pendii ripidi e terreni di origine vulcanica: con piogge intense e prolungate i versanti possono franare, e nelle zone basse e lungo i fossi l'acqua può allagare strade, cantine e sottopassi. Asfalto e cemento non lasciano entrare l'acqua nel terreno, che così scorre più in fretta. Il rischio cresce in autunno e in primavera, quando il terreno è già bagnato. Per questo la Regione emette le allerte meteo: Genzano è nella zona di allerta F."
+          domanda: "Avete mai visto una strada piena d'acqua dopo un temporale?"
+          tempo: 4
+
+      - tipo: illustrazione
+        titolo: "Piogge forti: che cosa fare"
+        svg: allagamento-luoghi-sicuri.svg
+        ritaglio: "0 92 1200 468"
+        alt: "A sinistra una casa con la cantina allagata e una persona salita al piano di sopra; a destra un'auto e una persona su una strada allagata, sbarrate da una croce."
+        punti:
+          - [{testo: "Sali ai piani alti", evidenza: azione}, ". Mai in cantina o in garage."]
+          - [{testo: "Non attraversare", evidenza: attenzione}, " strade allagate, né a piedi né in auto."]
+        note:
+          dire: "Con l'acqua che sale si va ai piani alti, mai in cantina o in garage: sono i primi posti a riempirsi e i più difficili da cui uscire. Le strade allagate non si attraversano, né a piedi né in auto: sotto l'acqua possono esserci buche e tombini aperti, e anche poca acqua può far perdere l'equilibrio. Nei sottopassi non si entra."
+          domanda: "Perché non si scende in cantina a salvare le cose?"
+          tempo: 5
+
+      - tipo: testo_immagine
+        titolo: "Incendi: perché proprio qui?"
+        punti:
+          - "Genzano è in parte nel Parco dei Castelli Romani, con tanti boschi."
+          - ["Il periodo più pericoloso va da ", {testo: "giugno a settembre", evidenza: luogo}, "."]
+          - ["Quasi sempre l'incendio ", {testo: "nasce da una persona", evidenza: attenzione}, ": un mozzicone, un fuoco acceso."]
+        immagini:
+          - {file: arasaac/bosco.png, alt: "Pittogramma: un bosco"}
+        note:
+          dire: "Una parte del territorio di Genzano è nel Parco Regionale dei Castelli Romani, con boschi e macchia mediterranea. Da giugno a settembre, con il caldo e poca pioggia, una piccola fiamma spinta dal vento può diventare un grande incendio. Quasi sempre l'incendio nasce da un comportamento umano: un mozzicone, un fiammifero, un fuoco lasciato acceso, sterpaglie bruciate. I fulmini sono una causa molto rara. Ogni estate il nostro Gruppo partecipa alla campagna antincendio boschivo."
+          domanda: "Che cosa possiamo fare noi per proteggere il bosco?"
+          tempo: 4
+
+      - tipo: illustrazione
+        titolo: "Incendi: che cosa fare"
+        svg: incendio-boschivo-avvistamento.svg
+        ritaglio: "0 92 1200 478"
+        alt: "Da una parte fumo e fiamme in un bosco lontano; dall'altra una persona in un luogo sicuro telefona al 112."
+        punti:
+          - [{testo: "Allontanati", evidenza: azione}, " dal fumo e dalle fiamme. Non andare a guardare."]
+          - ["Avvisa un adulto e ", {testo: "chiama il 112", evidenza: azione}, ": di' dove sei."]
+        note:
+          dire: "Chi vede fiamme o anche solo fumo si allontana subito e avvisa un adulto; se è solo e il pericolo è vero, chiama il 112 e dice il Comune e il luogo preciso, senza pensare che l'abbia già fatto qualcun altro. Non ci si avvicina per guardare e non si prova a spegnere un incendio grande. Se c'è fumo dentro un edificio si cammina bassi e si esce seguendo gli adulti."
+          domanda: "Che cosa direste all'operatore del 112?"
+          tempo: 5
+
+      - tipo: attivita
+        titolo: "Scheda: i terremoti in Italia"
+        durata: "14 minuti"
+        passi:
+          - "Guardate la mappa delle 4 zone sismiche."
+          - "Collegate ogni luogo alla sua zona."
+          - "Rispondete alle tre domande."
+        materiale: "Una scheda per bambino, o una per coppia."
+        riferimento: {testo: "Scheda «La geografia sismica dell'Italia»", url: "/formazione/schede-stampabili/geografia-sismica-italia-primaria/"}
+        immagine: {file: arasaac/terremoto.png, alt: "Pittogramma: un terremoto fa tremare gli edifici"}
+        note:
+          dire: "Distribuisci la scheda: si lavora da soli o in coppia. Le soluzioni sono capovolte in fondo al foglio. Alla fine correggete insieme: Calabria zona 1, Genzano zona 2, Milano zona 3, Sardegna zona 4. La mappa della scheda è molto semplificata: la zona si assegna Comune per Comune. Se c'è la lavagna interattiva, apri la Cartografia del sito e mostra le aree di attesa del Comune vicine alla scuola."
+          domanda: "Perché la Sardegna ha così pochi terremoti?"
+          tempo: 14
+          attenzione: "La scheda racconta il crollo di una scuola a San Giuliano di Puglia nel 2002. Se i bambini fanno domande, rispondi con calma: da allora ogni Comune d'Italia è in una zona sismica, e le zone servono a costruire in modo più robusto dove serve."
+
+      - tipo: ricordiamo
+        punti:
+          - {file: arasaac/nascondersi-tavolo.png, alt: "Pittogramma: una persona riparata sotto un tavolo", testo: "Terremoto: abbassati, riparati, tieniti."}
+          - {file: arasaac/salire-scale.png, alt: "Pittogramma: una persona sale le scale", testo: "Acqua alta: sali in alto, mai in cantina."}
+          - {file: arasaac/112.png, alt: "Pittogramma: un telefono con il numero 112", testo: "Fumo o fiamme: allontanati e chiama il 112."}
+        note:
+          dire: "Ripeti i tre gesti. Compito per casa: con la famiglia, trovare il posto più sicuro della casa dove ripararsi durante una scossa."
+          domanda: "Qual è il posto più sicuro della vostra cameretta?"
+          tempo: 5
+
+      - tipo: fonti
+        note:
+          dire: "Questa slide serve all'insegnante: elenca le pagine del sito da cui vengono i contenuti della lezione. Non serve leggerla alla classe."
+          tempo: 0
+
+      - tipo: chiusura
+        note:
+          dire: "Saluta e annuncia l'ultimo incontro: i volontari, chi sono e che cosa fanno."
+          domanda: "Che cosa vorreste sapere dei volontari?"
+          tempo: 2
+
+  # ───────────────────────────── Lezione 4 ─────────────────────────────
+  - numero: 4
+    slug: i-volontari
+    titolo: "I volontari della Protezione Civile"
+    disegni:
+      - {file: arasaac/aiutare.png, alt: "Pittogramma: una persona aiuta un'altra a rialzarsi"}
+      - {file: arasaac/camion-pompieri.png, alt: "Pittogramma: un camion antincendio"}
+      - {file: arasaac/radio.png, alt: "Pittogramma: una radio"}
+    fonti:
+      - {testo: "Chi siamo", url: "/chi-siamo/"}
+      - {testo: "Diventa volontario", url: "/diventa-volontario/"}
+      - {testo: "Manuale: il Codice, Capo V (volontariato)", url: "/manuale/25-commentario-codice-capo-5/"}
+      - {testo: "Biblioteca delle idee sbagliate: chiamare il Gruppo", url: "/rischi-prevenzione/idee-sbagliate/#chiamare-gruppo"}
+      - {testo: "Scheda «Intervista al volontario»", url: "/formazione/schede-stampabili/intervista-volontario-primaria/"}
+      - {testo: "Scheda «La Costituzione e la Protezione Civile»", url: "/formazione/schede-stampabili/costituzione-pc-primaria/"}
+    slide:
+      - tipo: copertina
+        note:
+          dire: "Ricorda le lezioni precedenti: la squadra, il 112, i rischi del territorio. Oggi parliamo dei volontari: chi sono, che cosa fanno e perché lo fanno. Alla fine potranno intervistarti."
+          domanda: "Che cosa vuol dire, secondo voi, «volontario»?"
+          tempo: 2
+
+      - tipo: obiettivi
+        titolo: "Oggi scopriamo"
+        punti:
+          - "Chi sono i volontari della Protezione Civile."
+          - "Che cosa fanno, e che cosa non fanno."
+          - "Perché aiutare è un dovere di tutti."
+        immagine: {file: arasaac/aiuto.png, alt: "Pittogramma: una mano aiuta un'altra mano"}
+        note:
+          dire: "Leggi i tre punti. Anticipa che alla fine diventeranno giornalisti e ti faranno un'intervista."
+          domanda: "Conoscete qualcuno che fa il volontario?"
+          tempo: 2
+
+      - tipo: storia
+        titolo: "Il sabato di Anna"
+        immagine: {file: arasaac/radio.png, alt: "Pittogramma: una radio"}
+        testo:
+          - "Anna è una volontaria del Gruppo di Genzano."
+          - "Il sabato mattina va in sede: controlla i mezzi e le radio."
+          - "Poi va in una scuola a parlare con i bambini."
+        domanda: "Secondo voi, Anna viene pagata per farlo?"
+        note:
+          dire: "Anna è un personaggio inventato, ma la sua giornata è quella di un sabato ordinario in sede: una breve riunione, il controllo dei mezzi, delle attrezzature e delle radio, poi un'attività programmata come un incontro in una scuola. Niente di eroico: è lavoro fatto bene, fatto soprattutto di preparazione e manutenzione. Risposta alla domanda: no, i volontari non sono pagati."
+          domanda: "Perché secondo voi Anna lo fa?"
+          tempo: 4
+
+      - tipo: testo_immagine
+        titolo: "Chi è un volontario"
+        punti:
+          - ["Un cittadino che ", {testo: "sceglie liberamente", evidenza: azione}, " di aiutare gli altri."]
+          - "Non è pagato: dona il suo tempo e le sue capacità."
+          - ["Prima di tutto ", {testo: "si prepara", evidenza: azione}, ": segue dei corsi."]
+        immagini:
+          - {file: arasaac/aiutare.png, alt: "Pittogramma: una persona aiuta un'altra a rialzarsi"}
+        note:
+          dire: "Il Codice della protezione civile descrive il volontario come chi, per sua libera scelta, mette il proprio tempo e le proprie capacità al servizio della comunità, senza guadagnarci, e si forma per farlo bene. Nel nostro Gruppo il corso di base parla di come è fatto il sistema di protezione civile, dei rischi del territorio, della sicurezza personale, delle radio e del primo soccorso."
+          domanda: "Che cosa sapete fare voi che potrebbe aiutare gli altri?"
+          tempo: 4
+
+      - tipo: sequenza
+        titolo: "Il nostro Gruppo a Genzano"
+        passi:
+          - {etichetta: "1981", titolo: "Si comincia", testo: "Nasce un gruppo di volontari."}
+          - {etichetta: "1991", titolo: "Gruppo Comunale", testo: "Lo istituisce il Consiglio Comunale."}
+          - {etichetta: "Oggi", titolo: "Vicino e lontano", testo: "A Genzano e dove c'è bisogno."}
+        note:
+          dire: "Il Gruppo nasce il 23 luglio 1981 con un primo comitato di volontari; nel 1991 il Consiglio Comunale istituisce il Gruppo Comunale di Protezione Civile, che fa parte del Comune di Genzano di Roma. Da allora i volontari hanno aiutato anche lontano da Genzano: per esempio dopo i terremoti in Abruzzo nel 2009 e nel Centro Italia nel 2016, e dopo le alluvioni in Emilia-Romagna nel 2023 e nel 2024."
+          domanda: "Perché secondo voi i volontari di Genzano vanno ad aiutare anche in altre regioni?"
+          tempo: 4
+
+      - tipo: griglia
+        titolo: "Che cosa fanno i volontari"
+        voci:
+          - {file: arasaac/fuoco.png, alt: "Pittogramma: fiamme", testo: "Antincendio nei boschi"}
+          - {file: arasaac/acqua.png, alt: "Pittogramma: acqua che scende da un tubo", testo: "Acqua e tende per chi ha bisogno"}
+          - {file: arasaac/ascoltare-radio.png, alt: "Pittogramma: due persone parlano alla radio", testo: "Radio per comunicare"}
+          - {file: arasaac/scuola.png, alt: "Pittogramma: una scuola", testo: "Lezioni nelle scuole"}
+        note:
+          dire: "I volontari lavorano in squadre. D'estate fanno antincendio boschivo nei Castelli Romani, insieme ai Vigili del Fuoco. Durante le allerte meteo controllano i punti critici del territorio. In emergenza distribuiscono acqua potabile e montano la tenda per accogliere le persone. Curano le radio, che servono quando i telefoni non funzionano. E vengono nelle scuole, come oggi. Gran parte del lavoro è preparazione: formazione, esercitazioni, manutenzione dei mezzi."
+          domanda: "Quale di queste attività vi piacerebbe di più?"
+          tempo: 5
+
+      - tipo: testo_immagine
+        lato: sinistra
+        titolo: "I mezzi del Gruppo"
+        punti:
+          - ["Un'autobotte da ", {testo: "14.000 litri", evidenza: luogo}, " d'acqua."]
+          - ["Una vasca da ", {testo: "8.000 litri", evidenza: luogo}, " per gli elicotteri antincendio."]
+          - ["Una tenda di ", {testo: "35 metri quadrati", evidenza: luogo}, " per accogliere le persone."]
+        immagini:
+          - {file: arasaac/camion-pompieri.png, alt: "Pittogramma: un camion antincendio"}
+          - {file: arasaac/elicottero.png, alt: "Pittogramma: un elicottero"}
+        note:
+          dire: "L'autobotte è un Mercedes Actros: porta 14.000 litri d'acqua e serve sia contro gli incendi sia per distribuire acqua potabile. La vasca mobile da 8.000 litri serve agli elicotteri antincendio per fare rifornimento. La tenda sociale pneumatica, di 35 metri quadrati, accoglie le persone durante un'emergenza. Il Gruppo ha anche pickup e fuoristrada con moduli antincendio e un automezzo con piattaforma aerea."
+          domanda: "Se un secchio contiene 10 litri, quanti secchi servono per riempire l'autobotte?"
+          tempo: 4
+          attenzione: "Risposta: 1.400 secchi."
+
+      - tipo: errore
+        titolo: "Che cosa NON fanno"
+        errori:
+          - {idea: "«I volontari prendono il posto di pompieri e polizia.»", correzione: "Li aiutano, ma non li sostituiscono."}
+          - {idea: "«I volontari partono da soli, quando vogliono.»", correzione: "Li attivano il Sindaco o la Sala Operativa."}
+          - {idea: "«Un bravo volontario fa tutto da solo.»", correzione: "Si lavora sempre in squadra."}
+        note:
+          dire: "Chiarisci che cosa i volontari non fanno: non sostituiscono Vigili del Fuoco, forze dell'ordine o personale sanitario, li supportano; non si attivano da soli, perché l'intervento lo dispone l'autorità competente, cioè il Sindaco, il Comune o la Sala Operativa regionale; non fanno i salvatori solitari, lavorano sempre in squadra. Per questo, in emergenza, i cittadini chiamano il 112 e non il Gruppo."
+          domanda: "Perché è importante lavorare in squadra e non da soli?"
+          tempo: 4
+
+      - tipo: testo_immagine
+        titolo: "Volontari da grandi?"
+        punti:
+          - ["Si può entrare nel Gruppo a ", {testo: "16 anni", evidenza: luogo}, "."]
+          - "Il corso di base è obbligatorio ed è gratis."
+          - ["Sul campo si va dai ", {testo: "18 anni", evidenza: luogo}, "."]
+          - "L'impegno è di circa 16 ore al mese."
+        immagini:
+          - {file: arasaac/calendario.png, alt: "Pittogramma: un calendario"}
+        note:
+          dire: "Per entrare nel Gruppo bisogna aver compiuto 16 anni: i minorenni, con il consenso dei genitori, partecipano alla formazione e alle attività consentite, mentre la piena operatività sul campo arriva a 18 anni. Iscrizione e corso di base sono gratuiti, e il corso è obbligatorio. L'impegno ordinario è di circa 16 ore al mese, concordate con la scuola, il lavoro e la famiglia. Non serve essere atleti: servono competenze diverse, dalla radio alla cucina da campo."
+          domanda: "Che cosa vi piacerebbe imparare in un corso da volontari?"
+          tempo: 3
+
+      - tipo: testo_immagine
+        lato: sinistra
+        titolo: "Aiutarsi è un dovere di tutti"
+        punti:
+          - "La Costituzione è la legge più importante d'Italia."
+          - ["L'articolo 2 chiede a tutti la ", {testo: "solidarietà", evidenza: azione}, "."]
+          - "Solidarietà vuol dire aiutarsi l'uno con l'altro."
+          - "I volontari la mettono in pratica."
+        immagini:
+          - {file: arasaac/famiglia.png, alt: "Pittogramma: un gruppo di persone"}
+        note:
+          dire: "La Costituzione è in vigore dal 1° gennaio 1948. L'articolo 2 riconosce i diritti di ogni persona e chiede a tutti di adempiere i doveri di solidarietà. Il Codice della protezione civile collega proprio a questo dovere il valore del volontariato. Spiega la parola solidarietà con esempi della classe: aiutare un compagno, prestare una matita, aspettare chi è più lento."
+          domanda: "Fate un esempio di solidarietà che avete visto a scuola."
+          tempo: 4
+
+      - tipo: attivita
+        titolo: "Intervista al volontario"
+        durata: "18 minuti"
+        passi:
+          - "In gruppo scegliete le domande: 5 sono già pronte."
+          - "Aggiungete le vostre e intervistate il volontario."
+          - "Prendete appunti: poi scriverete un articolo."
+        materiale: "Una scheda per gruppo. Per le classi 4ª e 5ª anche «La Costituzione e la Protezione Civile»."
+        riferimento: {testo: "Scheda «Intervista al volontario»", url: "/formazione/schede-stampabili/intervista-volontario-primaria/"}
+        immagine: {file: arasaac/ascoltare.png, alt: "Pittogramma: una persona ascolta"}
+        note:
+          dire: "Dividi la classe in gruppi e distribuisci la scheda. Ogni gruppo sceglie le domande: le prime cinque sono suggerite, le altre le scrivono loro. Poi i gruppi, a turno, ti intervistano e prendono appunti. In classe, con l'insegnante, scriveranno un breve articolo. Per le classi quarte e quinte l'insegnante può usare anche la scheda «La Costituzione e la Protezione Civile»."
+          domanda: "Qual è la domanda che vi incuriosisce di più?"
+          tempo: 18
+          attenzione: "Come dice la scheda, niente domande personali su età, soldi o salute. Rispondi raccontando fatti veri del Gruppo; se non sai una cosa, dillo e proponi di scrivere alla segreteria del Gruppo."
+
+      - tipo: ricordiamo
+        punti:
+          - {file: arasaac/aiutare.png, alt: "Pittogramma: una persona aiuta un'altra a rialzarsi", testo: "I volontari scelgono di aiutare, senza essere pagati."}
+          - {file: arasaac/famiglia.png, alt: "Pittogramma: un gruppo di persone", testo: "Lavorano in squadra, quando li attivano le autorità."}
+          - {file: arasaac/aiuto.png, alt: "Pittogramma: una mano aiuta un'altra mano", testo: "Aiutarsi è un dovere di tutti: si chiama solidarietà."}
+        note:
+          dire: "Ripeti i tre punti e ringrazia la classe per le domande dell'intervista. Ricorda le quattro lezioni: la squadra, il 112, i rischi del territorio, i volontari."
+          domanda: "Qual è la cosa più importante che avete imparato in questi quattro incontri?"
+          tempo: 4
+
+      - tipo: fonti
+        note:
+          dire: "Questa slide serve all'insegnante: elenca le pagine del sito da cui vengono i contenuti della lezione. Non serve leggerla alla classe."
+          tempo: 0
+
+      - tipo: chiusura
+        note:
+          dire: "Saluta la classe: è l'ultimo incontro del percorso. Lascia all'insegnante l'indirizzo della pagina dei percorsi didattici, dove trova tutti i materiali."
+          domanda: "Chi vuole dire una cosa ai volontari prima di salutarci?"
+          tempo: 2
