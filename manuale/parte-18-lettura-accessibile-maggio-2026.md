@@ -490,10 +490,68 @@ predefinito / alto (nero su bianco) / invertito (bianco su nero) /
 **blu su crema** (stile BBC My Web My Way, contrast 9.8:1). Le ultime
 due sono pensate per utenti con ipovisione (giallo/nero) e con dislessia
 o stancabilità visiva (blu/crema). Approccio: niente `filter: invert(1)`
-(ribalterebbe immagini e logo), tutto via override esplicito su body,
-intestazioni, form input, card, hero, banner. Hero blu e banner colorati
-vengono **ridipinti** per coerenza visiva quando il contrasto avanzato
-è attivo (a differenza della Modalità lettura crema dove restano blu).
+(ribalterebbe immagini e logo), tutto via override esplicito su testo,
+collegamenti, card, superfici chiare, campi e pulsanti. Dal 16/10/2026
+hero, banner, barre dell'allerta, intestazione e piè di pagina tengono i
+loro colori in tutte le modalità (§ 18.19): prima venivano ridipinti solo
+in parte e il testo finiva nero o blu sul blu.
+
+### 18.19 Colori delle modalità: zone con colori propri (16/10/2026)
+
+Le regole di colore delle modalità (contrasto alto, invertito, giallo su
+nero, blu su crema, modalità lettura) stanno in
+`themes/flavour-pcgenzano/static/css/a11y-toolbar.css`, nel blocco
+«Colori delle modalità». Fino al 16/10/2026 coloravano il testo anche
+dentro le zone che hanno sfondo e testo progettati insieme: il risultato
+era testo nero o blu sul blu e giallo sul bianco, con oltre 18.000 errori
+di contrasto contati da axe su 35 pagine.
+
+**Come funziona adesso.**
+
+- Le regole generali valgono dentro `<main>` e nella barra degli
+  aggiornamenti. Intestazione, piè di pagina, striscia dei cookie, barra in
+  basso, pulsanti flottanti e finestre restano nei colori del sito.
+- Dentro `<main>` le **zone con colori propri** sono escluse da tutte le
+  regole: hero, banner di emergenza, barre dell'allerta e degli incendi,
+  badge ed etichette delle categorie, pulsanti pieni, intestazioni delle
+  tabelle, riquadri scuri o a gradiente (meteo di Genzano, cruscotto e
+  dossier in homepage, segnaposto dei widget), elementi con sfondo scritto
+  in linea, mappe, dossier, finestre.
+- Nelle modalità scure le superfici chiare (card, indice della pagina,
+  blocchi delle pagine facili, schede, celle delle tabelle, pulsanti)
+  diventano scure insieme al loro testo; in blu su crema diventano crema.
+- Testo e collegamenti prendono il colore dalla variabile `--a11y-testo`:
+  il colore dei collegamenti vale anche per ciò che contengono (una card
+  che è tutta un collegamento ha il testo nel colore dei collegamenti).
+- Con un contrasto attivo, la modalità lettura tiene solo l'impaginazione
+  (riga da 65 caratteri, spaziatura): i colori li decide il contrasto.
+
+**Aggiungere un componente con sfondo proprio.** L'elenco delle zone è
+identico in tutte le regole del blocco (alcune varianti aggiungono una
+voce in fondo): si aggiunge il selettore con la stessa modifica in tutte
+le occorrenze (sostituzione di tutto il testo dell'elenco), poi si prova
+con axe la regola `color-contrast` in tutte e cinque le modalità, a 375 e
+1280 px, e con menu, ricerca, finestra SOS, glossario e pannello aperti.
+Una superficie chiara nuova si aggiunge invece all'elenco delle superfici
+delle modalità scure. Al termine del lavoro del 16/10/2026 axe non trova
+errori di contrasto su 54 pagine (anche le pagine autonome di giochi,
+schede, storie e Abili a proteggere), in tutte le modalità, alle due
+larghezze e con menu e finestre aperti.
+
+**Provare le pagine autonome.** Le pagine di `static/` (giochi, schede,
+storie, quizpc, formazionepc) ricevono il foglio del pannello da
+`site-chrome.js`, che lo carica dall'indirizzo del sito pubblicato: in
+locale mostrano quindi la versione online, non quella modificata. Per una
+prova vera l'indirizzo del sito va servito dai file della build locale (in
+Playwright, `context.route` sull'indirizzo del sito che risponde con il
+file di `public/`); senza, una prova su quelle pagine misura il sito di
+ieri.
+
+**Attenzione ai commenti CSS.** Un asterisco seguito dalla barra dentro un
+commento lo chiude a metà: il testo rimasto si mangia la regola successiva
+senza nessun errore visibile. È successo in questo file con un percorso di
+cartella scritto con l'asterisco; la regola persa era quella che rendeva
+crema lo sfondo della pagina in modalità lettura.
 
 ---
 
