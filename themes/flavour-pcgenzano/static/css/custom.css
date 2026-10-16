@@ -7900,6 +7900,19 @@ html.a11y-contrast-blue-cream .bottom-nav a.active { color: #003366; }
   border-color: #ffffff;
 }
 
+/* ── COOKIE BANNER — posizione v1.1 (16/10/2026) ──
+   Su telefono e tablet (<992px) la striscia si appoggia sopra la barra
+   di navigazione in basso invece di coprirla: al primo accesso
+   Emergenza, Allerte, Numeri e Cerca restavano nascoste finché non si
+   premeva «OK, Ho capito». L'altezza è quella della barra (sezione
+   BOTTOM NAV v1.0: 64px più l'area sicura del telefono). Sugli schermi
+   larghi, dove la barra non c'è, la striscia resta a filo del bordo.
+   I pulsanti flottanti non cambiano. */
+#cookie-banner { bottom: 0; }
+@media (max-width: 991.98px) {
+  body.has-bottomnav #cookie-banner { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+}
+
 /* ============================================================
    MAPPE — BASE SCURA OSM v1.0 (28/08/2026)
    CARTO ha iniziato a marchiare le tile anonime ("API KEY
