@@ -19,26 +19,44 @@ Per ogni PDF in static/ raccoglie:
 Output: data/audit-pdf.yaml + sezione di stato.
 
 Verdict per ogni PDF:
-  ✅ ACCESSIBILE   - searchable + tagged + lingua + titolo
-  🟡 PARZIALE      - searchable ma non tagged (lo screen reader legge ma senza struttura)
+  ✅ ACCESSIBILE   - searchable + tagged + lingua coerente + titolo nei metadati
+                     (controlli superati, non una certificazione PDF/UA)
+  🟡 PARZIALE      - searchable, ma senza tag, senza titolo o con lingua
+                     mancante o diversa da quella del documento
   🔴 NON ACCESSIBILE - non searchable (scansione pura, OCR necessario)
   ⚪ TERZO         - di terzo ente, accessibilità a carico loro
 
 Uso:
     python3 scripts/audit-pdf-accessibilita.py [--write]
-    --write  scrive data/audit-pdf.yaml (default: solo stampa report)
+    python3 scripts/audit-pdf-accessibilita.py --check-inventario
+    --write             scrive data/audit-pdf.yaml (default: solo stampa report)
+    --check-inventario  confronta data/audit-pdf.yaml con i PDF in static/
+                        (aggiunti, tolti, sostituiti); exit = differenze.
+                        Non serve PyMuPDF. Gira su ogni PR (validate-pr.yml).
+
+Dal 17/10/2026 (audit esterno, rilievi R9 e R10): il verdetto ACCESSIBILE
+chiede anche titolo e lingua coerente, come diceva questa descrizione e il
+codice non faceva; e l'inventario non può più restare indietro rispetto ai
+PDF pubblicati.
 """
 
 from __future__ import annotations
 import argparse
+import re
 import sys
 from pathlib import Path
 
-try:
-    import fitz  # PyMuPDF
-except ImportError:
-    sys.stderr.write("ERRORE: manca PyMuPDF. Installa:\n  pip install --break-system-packages PyMuPDF\n")
-    sys.exit(1)
+fitz = None  # PyMuPDF, caricato solo quando serve analizzare i PDF
+
+
+def carica_fitz():
+    global fitz
+    try:
+        import fitz as _fitz  # PyMuPDF
+    except ImportError:
+        sys.stderr.write("ERRORE: manca PyMuPDF. Installa:\n  pip install --break-system-packages PyMuPDF\n")
+        sys.exit(1)
+    fitz = _fitz
 
 try:
     import yaml
@@ -59,9 +77,11 @@ ORIGINE_PATTERNS = [
      ["dpc-", "protezione-civile-art-", "dpc_"]),
     ("TERZO", "Regione Lazio (BURL, DGR, determine, regolamenti regionali)",
      ["regione-lazio", "regolamento-regionale-lazio", "dgr-lazio",
-      "determinazione-lazio", "burl"]),
+      "determinazione-lazio", "burl", "determinazione-g1"]),
     ("TERZO", "Comune di Genzano di Roma (ordinanze, delibere)",
-     ["ordinanza-", "delibera-", "deliberazione-"]),
+     ["ordinanza-", "delibera-", "deliberazione-",
+      # avviso, determinazione e modulo del Comune per i volontari civici (ottobre 2026)
+      "volontari-civici-genzano"]),
     ("TERZO", "FEMA (Federal Emergency Management Agency, USA)",
      ["fema-"]),
     ("TERZO", "Polizia di Stato",
@@ -172,13 +192,58 @@ def analizza_pdf(pdf_path: Path) -> dict:
     return info
 
 
+LINGUA_DA_NOME = re.compile(r"[-_](en|fr|de|es|pt|ro|ar|eo|uk|zh|sq)(?:[-_.]|$)", re.I)
+
+
+def lingua_coerente(info: dict) -> bool:
+    """La lingua dichiarata corrisponde a quella del documento.
+
+    Di norma i nostri PDF sono in italiano; una lingua diversa è ammessa se il
+    nome del file la indica (es. poster-emergenza-en.pdf)."""
+    lang = (info.get("language") or "").lower()
+    if not lang:
+        return False
+    m = LINGUA_DA_NOME.search(Path(info["path"]).stem)
+    attesa = m.group(1).lower() if m else "it"
+    return lang.split("-")[0] == attesa
+
+
+def check_inventario() -> int:
+    """Confronta l'inventario con i PDF presenti in static/."""
+    dati = yaml.safe_load(DATA_FILE.read_text(encoding="utf-8")) or {}
+    inv = {d["path"]: d for d in dati.get("documenti", [])}
+    presenti = {}
+    for pdf in STATIC.rglob("*.pdf"):
+        presenti["/" + pdf.relative_to(STATIC).as_posix()] = pdf.stat().st_size / 1024
+    diff = 0
+    for path in sorted(set(presenti) - set(inv)):
+        print(f"  manca nell'inventario: {path}")
+        diff += 1
+    for path in sorted(set(inv) - set(presenti)):
+        print(f"  nell'inventario ma non più pubblicato: {path}")
+        diff += 1
+    for path in sorted(set(inv) & set(presenti)):
+        if abs((inv[path].get("size_kb") or 0) - presenti[path]) > 0.15:
+            print(f"  sostituito (dimensione diversa): {path}")
+            diff += 1
+    if dati.get("totale") != len(presenti):
+        print(f"  totale dichiarato {dati.get('totale')}, PDF presenti {len(presenti)}")
+        diff += 1
+    if diff:
+        print(f"\n{diff} differenza/e fra data/audit-pdf.yaml e i PDF in static/."
+              "\nRigenera con: python3 scripts/audit-pdf-accessibilita.py --write")
+    else:
+        print(f"Inventario PDF allineato: {len(presenti)} file.")
+    return min(diff, 255)
+
+
 def verdict(info: dict, origine_tipo: str) -> str:
     """Calcola il verdict simbolico."""
     if origine_tipo == "TERZO":
         return "TERZO"  # ⚪ non nostro
     if info["errors"]:
         return "ERRORE"  # ❗
-    if info["searchable"] and info["tagged"]:
+    if info["searchable"] and info["tagged"] and info["title"] and lingua_coerente(info):
         return "ACCESSIBILE"  # ✅
     if info["searchable"] and not info["tagged"]:
         return "PARZIALE"  # 🟡 (necessita tagging strutturale)
@@ -189,7 +254,12 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--write", action="store_true",
                     help="Scrivi data/audit-pdf.yaml (default: solo stampa)")
+    ap.add_argument("--check-inventario", action="store_true",
+                    help="Confronta l'inventario con i PDF in static/ (senza PyMuPDF)")
     args = ap.parse_args()
+    if args.check_inventario:
+        return check_inventario()
+    carica_fitz()
 
     pdfs = sorted(STATIC.rglob("*.pdf"))
     print(f"\n📚 Trovati {len(pdfs)} PDF in static/\n")

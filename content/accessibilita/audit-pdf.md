@@ -4,7 +4,7 @@ description: "Stato di accessibilità (PDF/UA, ISO 14289-1) di tutti i documenti
 layout: "single"
 toc: false
 tts: true
-dataUltimaRevisione: "2026-09-21"
+dataUltimaRevisione: "2026-10-17"
 ---
 
 Pubblichiamo lo **stato di accessibilità di ogni PDF presente sul sito** in modo trasparente, come previsto dalla nostra [Dichiarazione di accessibilità](/accessibilita/) e dall'art. 3 della Legge Stanca (L. 4/2004).
@@ -13,8 +13,8 @@ La scadenza che ci siamo dati per l'audit completo è il **31 dicembre 2026**.
 
 ## Come leggere la tabella
 
-- ✅ **Accessibile** — il documento ha testo selezionabile, tag strutturali (intestazioni, paragrafi, alt text), lingua dichiarata. Lo screen reader lo legge bene.
-- 🟡 **Parziale** — il documento ha testo selezionabile ma non i tag strutturali. Lo screen reader lo legge, ma in modo lineare senza riconoscere intestazioni, liste, tabelle.
+- ✅ **Accessibile** — il documento supera tutti i controlli automatici: testo selezionabile, tag strutturali, titolo nei metadati e lingua dichiarata uguale a quella del testo. I controlli automatici non bastano a dire che sia conforme PDF/UA: struttura, ordine di lettura e descrizioni delle figure vanno provati con un lettore di schermo.
+- 🟡 **Parziale** — il documento ha testo selezionabile, ma gli mancano i tag strutturali, il titolo nei metadati o la lingua giusta. Lo screen reader lo legge, ma senza riconoscere intestazioni, liste e tabelle, o con la pronuncia di un'altra lingua.
 - 🔴 **Non accessibile** — il documento è una scansione senza livello testuale (OCR mancante). Va rifatto.
 - ⚪ **Terzo ente** — il documento è prodotto da un ente esterno (Dipartimento Protezione Civile, Regione Lazio, ministeri, Comune). L'accessibilità è responsabilità dell'ente emittente, come previsto dalla normativa.
 
@@ -25,7 +25,7 @@ Per i documenti **del Gruppo** in stato 🔴 o 🟡, abbiamo un piano in quattro
 1. **Inventario completo** (Fase 1, completata) — questa pagina è l'output: tabella aggiornata di tutti i PDF del sito con verdict di accessibilità.
 2. **OCR automatico** dei PDF rasterizzati (in corso, Fase 2).
 3. **Versioni HTML equivalenti** sul sito per i documenti più consultati: l'HTML è sempre più accessibile del PDF.
-4. **Nuovi PDF prodotti già conformi PDF/UA** dal sistema di generazione automatico (fatto per il deck struttura sito, generato dallo script `scripts/genera-presentazione.py` con font open source Liberation Sans).
+4. **Nuovi PDF prodotti con i tag di struttura** dal sistema di generazione automatico. Il deck sulla struttura del sito (`scripts/genera-presentazione.py`) ha già i tag, ma ha ancora la lingua sbagliata e nessun titolo nei metadati: va corretto prima di considerarlo accessibile.
 
 ### Caso specifico — le 5 presentazioni tematiche
 
@@ -41,7 +41,7 @@ Per ognuna di queste presentazioni, **l'equivalente accessibile** è sempre disp
 | Allerta meteo | [/allerte-meteo/](/allerte-meteo/) |
 | Kit emergenza | [/rischi-prevenzione/kit-emergenza/](/rischi-prevenzione/kit-emergenza/) |
 
-Le pagine HTML sono pienamente conformi WCAG 2.2 AA: testo selezionabile, intestazioni semantiche, tabelle con scope, alt text, lingua dichiarata, lettura ad alta voce integrata.
+Le pagine HTML sono progettate secondo le WCAG 2.2 AA: testo selezionabile, intestazioni semantiche, tabelle con scope, alt text, lingua dichiarata, lettura ad alta voce integrata.
 
 Per i documenti **di terzi enti** in stato 🟡 o 🔴, il Gruppo applica il principio del **testo equivalente**: se trovi un PDF che il tuo screen reader non legge bene, scrivi a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)** e ti forniremo una versione alternativa o un testo equivalente.
 

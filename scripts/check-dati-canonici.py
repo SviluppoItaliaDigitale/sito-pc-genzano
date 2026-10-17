@@ -43,12 +43,18 @@ PERIMETRO = [
     ("static", "*.html"),
     ("static", "*.js"),
     ("themes/flavour-pcgenzano/layouts", "*.html"),
+    # Testi dentro il codice: assistente, lezioni, messaggi Telegram e post.
+    # Aggiunti il 17/10/2026, dopo che un audit esterno ha trovato
+    # indicazioni sbagliate proprio lì (ore del caldo, telefoni e gas).
+    ("themes/flavour-pcgenzano/static/js", "*.js"),
+    ("scripts", "*.py"),
 ]
 
 # File rigenerati da altri sorgenti (si correggono alla fonte), librerie di
 # terzi, cataloghi importati e il registro stesso.
 ESCLUSI = [
     "data/dati_canonici.yaml",
+    "scripts/check-dati-canonici.py",
     "data/video_dpc_catalogo.yaml",
     "data/video_correlati.yaml",
     "static/formazione/schede-stampabili/pacchetti/*",

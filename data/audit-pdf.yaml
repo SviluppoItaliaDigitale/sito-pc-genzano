@@ -1,10 +1,10 @@
-ultimo_audit: '2026-10-01'
-totale: 62
+ultimo_audit: '2026-10-17'
+totale: 66
 riepilogo:
-  ACCESSIBILE: 2
+  ACCESSIBILE: 0
   PARZIALE: 15
-  NON_ACCESSIBILE: 18
-  TERZO: 27
+  NON_ACCESSIBILE: 20
+  TERZO: 31
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -33,6 +33,58 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
+- path: /allegati/2026/2026-10-05-avviso-volontari-civici-genzano.pdf
+  file: 2026-10-05-avviso-volontari-civici-genzano.pdf
+  size_kb: 107.5
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: Genzano di Roma _____________
+  pages: 2
+  errors: []
+  text_chars_sample: 6978
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-10-05-determinazione-80-volontari-civici-genzano.pdf
+  file: 2026-10-05-determinazione-80-volontari-civici-genzano.pdf
+  size_kb: 139.3
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 7791
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-10-05-modulo-domanda-volontari-civici-genzano.pdf
+  file: 2026-10-05-modulo-domanda-volontari-civici-genzano.pdf
+  size_kb: 79.5
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: Genzano di Roma _____________
+  pages: 1
+  errors: []
+  text_chars_sample: 1589
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf
+  file: determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf
+  size_kb: 313.1
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 17
+  errors: []
+  text_chars_sample: 7314
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
 - path: /allegati/2026/determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
   file: determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
   size_kb: 306.8
@@ -429,7 +481,7 @@ documenti:
     per articolo, del Codice della protezione civile. — Manuale di Protezione Civile
   pages: 127
   errors: []
-  text_chars_sample: 3549
+  text_chars_sample: 3550
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
@@ -445,7 +497,7 @@ documenti:
   text_chars_sample: 3223
   origine: GRUPPO
   origine_descrizione: Modulo del Gruppo (modulistica)
-  verdict: ACCESSIBILE
+  verdict: NON_ACCESSIBILE
 - path: /manuali/polizia-stato-presentazione-youpol-esserci.pdf
   file: polizia-stato-presentazione-youpol-esserci.pdf
   size_kb: 3011.3
@@ -461,17 +513,17 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2478.3
+  size_kb: 2461.2
   searchable: true
   tagged: true
-  language: it-IT
+  language: en-US
   title: null
-  pages: 68
+  pages: 71
   errors: []
   text_chars_sample: 1002
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: ACCESSIBILE
+  verdict: NON_ACCESSIBILE
 - path: /manuali/schede-caa/scheda-caa-alluvione.pdf
   file: scheda-caa-alluvione.pdf
   size_kb: 1843.4

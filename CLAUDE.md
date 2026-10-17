@@ -345,7 +345,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-50 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi; i 12 aggiunti lo stesso giorno completano l'organigramma «azienda» chiesto dall'utente (*«tutti gli specialisti del settore protezione civile, più agenzia di marketing e giornalistica»*).
+52 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi; i 12 aggiunti lo stesso giorno completano l'organigramma «azienda» chiesto dall'utente (*«tutti gli specialisti del settore protezione civile, più agenzia di marketing e giornalistica»*). I 2 aggiunti il 17/10/2026 (`pc-testi-nel-codice`, `pc-auditor-indipendente`) coprono le sviste trovate da un altro audit esterno: i testi che vivono dentro il codice (assistente, giochi, lezioni, Telegram, generatori) e il metodo dell'auditor esterno, con la regola che **ogni rilievo diventa un controllo**.
 
 🔴 **Chi dirige**: la **sessione principale** è la direzione: convoca gli specialisti in sequenza (i gate degli articoli, l'audit completo, i materiali scolastici sono copioni che lei esegue) o in parallelo quando il lavoro si divide in parti indipendenti (fino a venti agenti alla volta). Dal 16/10/2026, su richiesta dell'utente, tre agenti fanno da capi reparto e hanno `Agent` fra i `tools`: `pc-audit-completo`, `pc-article-reviewer` e `pc-didattica-reviewer`. Quando lo strumento c'è, convocano da soli gli specialisti dei loro copioni; quando manca, ne eseguono a mano i controlli essenziali. Gli altri agenti non delegano. Lo strumento c'è solo se la sessione ammette più livelli di agenti (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`): da terminale sul PC il valore predefinito è 3, le sessioni cloud dell'app partono da 1. In cloud la sessione principale può alzarlo per sé scrivendo `{"env":{"CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH":"3"}}` in `~/.claude/settings.json` della macchina della sessione: vale dopo qualche secondo, senza riavvio, e solo per quella sessione (verificato il 16/10/2026: prima un sottoagente non aveva `Agent`, dopo sì). 🔴 Mai sul PC, dove quel file contiene le impostazioni personali dell'utente, e mai nelle routine: il livello si alza solo per un lavoro grande e divisibile in una sessione con l'utente, perché in quella prova ogni agente è partito con circa 390 mila token di contesto e una catena moltiplica il consumo. Il `.claude/settings.json` del repository non serve allo scopo: le chat dell'app partono dalla cartella sopra il repository e non lo leggono. Le squadre di agenti sperimentali (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`), provate lo stesso giorno, non servono: attivate a sessione in corso, l'agente con nome è partito come un sottoagente qualsiasi. Un gate che non può essere convocato si esegue a mano leggendo il file dell'agente, e il rapporto lo dichiara; mai saltato in silenzio.
 
@@ -353,7 +353,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 | Reparto | Agenti |
 |---|---|
-| Direzione e qualità | `pc-audit-completo`, `pc-documentazione`, `pc-site-auditor` (fotografia rapida del repo) |
+| Direzione e qualità | `pc-audit-completo`, `pc-auditor-indipendente`, `pc-documentazione`, `pc-site-auditor` (fotografia rapida del repo) |
 | Protezione civile tecnico-scientifica | `pc-revisore-scientifico`, `pc-normative-verifier`, `pc-pianificatore-emergenza`, `pc-cartografo-gis`, `pc-medico-emergenza`, `pc-psicologo-emergenza`, `pc-radiocomunicazioni` |
 | Sala operativa | `pc-comunicazione-crisi`, `pc-esercitazione-emergenza` |
 | Volontariato e inclusione | `pc-volontariato-terzo-settore`, `pc-inclusione-fragilita` |
@@ -362,7 +362,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | Fotografia | `pc-image-fixer`, `pc-photo-caption-verifier` |
 | Scuola | `pc-didattica-reviewer`, `pc-print-card-qa` |
 | Esperienza utente e collaudo | `pc-accessibility-auditor`, `pc-usabilita`, `pc-verifica-visiva`, `pc-visitatore-reale`, `pc-collaudo-funzionale` |
-| Tecnologia | `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`, `pc-integrita-tecnica`, `pc-dati-e-feed`, `pc-deploy-validator`, `pc-prestazioni`, `pc-issue-triage` |
+| Tecnologia | `pc-revisore-codice`, `pc-testi-nel-codice`, `pc-revisore-automazioni`, `pc-sicurezza`, `pc-integrita-tecnica`, `pc-dati-e-feed`, `pc-deploy-validator`, `pc-prestazioni`, `pc-issue-triage` |
 | Legale | `pc-conformita-legale` |
 
 
@@ -418,6 +418,8 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-strategia-comunicazione` | "che cosa pubblichiamo il mese prossimo?", campagne — piano editoriale, pubblici, canali, tono istituzionale |
 | `pc-art-director` | "com'è venuta questa locandina?", brief per grafiche — regola dei 4 loghi con E10435833, grafica.md, contrasti, licenze |
 | `pc-produzione-multimediale` | "ho un video da mettere", "facciamo un Reel", podcast — codifica, sottotitoli, trascrizioni, peso, metadati |
+| `pc-testi-nel-codice` | "l'assistente dice cose giuste?", "i giochi danno consigli corretti?", ogni modifica ad assistente, giochi, «Crea la mia lezione», messaggi Telegram, generatori di schede — testi nel codice uguali alla fonte, HTML generato con la sua semantica, combinazioni coerenti |
+| `pc-auditor-indipendente` | "perché non te ne sei accorto?", "fai l'audit come uno esterno", dopo ogni audit esterno e come ultima fase dell'audit mensile — misure sul sito pubblicato senza fidarsi dei controlli, e per ogni rilievo il controllo che lo avrebbe bloccato |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
 

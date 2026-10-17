@@ -375,3 +375,34 @@ dati:
         contesto: '[Ll]uglio'
         finestra: 250
         salvo_se_frase: 'versione precedente|prima versione|risultava'
+
+  - id: caldo-ore-piu-calde
+    dato: "Ore più calde da evitare durante le ondate di calore"
+    valore: "dalle 11 alle 18"
+    fonti:
+      - nome: "Ministero della Salute, «Ondate di calore — Dieci consigli utili» («tra le 11.00 e le 18.00», verificato il 17/10/2026)"
+        url: "https://www.salute.gov.it/new/it/tema/ondate-di-calore/dieci-consigli-utili/"
+      - nome: "Pagina canonica del sito «Ondate di calore»"
+        url: "https://www.protezionecivilegenzano.it/rischi-prevenzione/ondate-di-calore/"
+    # Nato dall'audit esterno del 17/10/2026 (R6): 11-17 compariva in
+    # articoli, versioni facili, kit, giochi, libro pop-up e messaggi Telegram.
+    vietati:
+      - regex: '\b11(?:[.:]00)?\s*(?:[-–]|alle|e\s+le)\s*17(?:[.:]00)?\b'
+        perche: "Il Ministero della Salute indica le ore più calde dalle 11 alle 18, come la pagina «Ondate di calore»."
+        contesto: '[Cc]ald|[Ss]ole|calore|ombra|fresc|ore centrali'
+        finestra: 200
+
+  - id: gas-telefoni
+    dato: "Fuga di gas: quali telefoni non usare"
+    valore: "nessun telefono, né fisso né cellulare, nel locale con il gas; si chiama il 112 da fuori"
+    fonti:
+      - nome: "Corpo nazionale dei Vigili del Fuoco, vademecum, sezione «Fuga di gas»"
+        url: "https://www.vigilfuoco.it/sites/default/files/2024-07/ita_vademecum.pdf"
+    # Nato dall'audit esterno del 17/10/2026 (R7): l'assistente vietava solo
+    # il «telefono fisso», come se il cellulare fosse un'eccezione.
+    vietati:
+      - regex: 'telefono\s+fisso'
+        perche: "I Vigili del Fuoco vietano telefoni fissi e cellulari nel locale con il gas: citare solo il fisso fa pensare che il cellulare vada bene."
+        contesto: '\bgas\b'
+        finestra: 400
+        salvo_se_frase: 'cellular|smartphone|nessun telefono|qualsiasi telefono|qualunque telefono'

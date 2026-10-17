@@ -146,6 +146,20 @@ jobs:
           pip install --quiet pyyaml
           python3 scripts/check-dati-canonici.py
 
+      - name: "🔘 Comandi senza ruoli ARIA che ne cancellano la semantica"
+        # 17/10/2026, audit esterno R4: i pulsanti dell'assistente avevano
+        # role="listitem" e non erano più annunciati come pulsanti. Il gate
+        # pa11y-ci non apre l'assistente; questo controllo legge il codice
+        # che costruisce l'HTML, anche dentro il JavaScript.
+        run: python3 scripts/check-ruoli-aria.py
+
+      - name: "📄 Inventario dei PDF allineato ai file pubblicati"
+        # 17/10/2026, audit esterno R10: quattro PDF pubblicati mancavano
+        # dall'audit pubblico e la presentazione sostituita aveva i dati
+        # vecchi. Un PDF aggiunto, tolto o sostituito senza rigenerare
+        # data/audit-pdf.yaml blocca la PR.
+        run: python3 scripts/audit-pdf-accessibilita.py --check-inventario
+
       - name: "🧑‍🏫 Catalogo di «Crea la mia lezione» aggiornato"
         # 06/10/2026: la pagina compone le lezioni da data/materiali_lezione.json,
         # ricavato dall'indice delle schede, dalle storie, dai giochi e dagli
