@@ -118,6 +118,12 @@ def classifica_origine(rel_path: str) -> tuple[str, str]:
     return "GRUPPO", "Classificazione di default (assumiamo nostro produzione)"
 
 
+def impronta(pdf_path: Path) -> str:
+    """sha256 del file: riconosce un PDF sostituito anche a parità di peso."""
+    import hashlib
+    return hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+
+
 def analizza_pdf(pdf_path: Path) -> dict:
     """Estrae metadati e flag di accessibilità da un PDF."""
     rel = str(pdf_path.relative_to(REPO_ROOT))
@@ -125,6 +131,7 @@ def analizza_pdf(pdf_path: Path) -> dict:
         "path": "/" + str(pdf_path.relative_to(STATIC)),
         "file": pdf_path.name,
         "size_kb": round(pdf_path.stat().st_size / 1024, 1),
+        "sha256": impronta(pdf_path),
         "searchable": False,
         "tagged": False,
         "language": None,
@@ -214,7 +221,7 @@ def check_inventario() -> int:
     inv = {d["path"]: d for d in dati.get("documenti", [])}
     presenti = {}
     for pdf in STATIC.rglob("*.pdf"):
-        presenti["/" + pdf.relative_to(STATIC).as_posix()] = pdf.stat().st_size / 1024
+        presenti["/" + pdf.relative_to(STATIC).as_posix()] = impronta(pdf)
     diff = 0
     for path in sorted(set(presenti) - set(inv)):
         print(f"  manca nell'inventario: {path}")
@@ -223,8 +230,10 @@ def check_inventario() -> int:
         print(f"  nell'inventario ma non più pubblicato: {path}")
         diff += 1
     for path in sorted(set(inv) & set(presenti)):
-        if abs((inv[path].get("size_kb") or 0) - presenti[path]) > 0.15:
-            print(f"  sostituito (dimensione diversa): {path}")
+        # l'impronta e non il peso: una correzione dei soli metadati può
+        # lasciare il file della stessa dimensione
+        if inv[path].get("sha256") != presenti[path]:
+            print(f"  sostituito (impronta diversa): {path}")
             diff += 1
     if dati.get("totale") != len(presenti):
         print(f"  totale dichiarato {dati.get('totale')}, PDF presenti {len(presenti)}")
@@ -245,8 +254,9 @@ def verdict(info: dict, origine_tipo: str) -> str:
         return "ERRORE"  # ❗
     if info["searchable"] and info["tagged"] and info["title"] and lingua_coerente(info):
         return "ACCESSIBILE"  # ✅
-    if info["searchable"] and not info["tagged"]:
-        return "PARZIALE"  # 🟡 (necessita tagging strutturale)
+    if info["searchable"]:
+        # testo leggibile ma manca almeno uno fra tag, titolo e lingua giusta
+        return "PARZIALE"  # 🟡
     return "NON_ACCESSIBILE"  # 🔴 (pura scansione, OCR necessario)
 
 
