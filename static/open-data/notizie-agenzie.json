@@ -5,11 +5,47 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-17T20:59:53+00:00",
+  "generato": "2026-10-17T22:58:39+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-17T22:32:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scintille a Ballando, Bocchi balla e Mariotto sbadiglia. Interviene Pernice: \"Non capisci niente di ballo\"",
+   "url": "https://www.adnkronos.com/spettacoli/bocchi-mariotto-pernice-ballando-con-le-stelle_5mPmV107feVMDeWARfIKcg"
+  },
+  {
+   "data": "2026-10-17T22:06:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, Alberto Matano boccia Eugenio Finardi ma lui lo affonda: \"Sei un pessimo giudice\"",
+   "url": "https://www.adnkronos.com/spettacoli/eugenio-finardi-matano-ballando-con-le-stelle_23TBkkzWPLfIbjhgXTfucE"
+  },
+  {
+   "data": "2026-10-17T22:04:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump blocca le sanzioni alla Russia, Zelensky accusa: \"Nuovo favore a Putin\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-stop-sanzioni-russia-putin-polemiche_3OLDiXMh59KQRVpaJK5tFC"
+  },
+  {
+   "data": "2026-10-17T21:53:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Guerriglia a Parigi, scontri e 1.200 fermi nelle proteste in tutta la Francia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/proteste-in-francia-due-cortei-non-autorizzati-dispersi-a-parigi-incidenti-a-lione_23769778-a3b5-4b11-a769-4ae19c4b2d7e.html"
+  },
+  {
+   "data": "2026-10-17T21:36:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, La Rocca 'provoca' d'Urso ma lei non ci sta: \"Esibizione eccellente, voto 10\"",
+   "url": "https://www.adnkronos.com/spettacoli/barbara-durso-pasquale-la-rocca-ornella-muti-ballando-con-le-stelle_4PoQjN7rGdDu4k6rFSJdwk"
+  },
+  {
+   "data": "2026-10-17T21:28:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crollata la torre del municipio di Limoges, 'danni gravissimi'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/crollata-la-torre-del-municipio-di-limoges-danni-gravissimi_8861ba50-1c31-41e9-b9fd-be48f3b25940.html"
+  },
   {
    "data": "2026-10-17T20:52:21+00:00",
    "fonte": "ANSA",
@@ -95,7 +131,7 @@
    "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/17/la-terza-edizione-dellaeronautica-militare-balloon-cup-il-fascino-e-la-storia-del-volo_e624a2fd-205b-489f-9497-621eb880061b.html"
   },
   {
-   "data": "2026-10-17T19:16:59+00:00",
+   "data": "2026-10-17T19:16:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "SuperEnalotto, estrazione di oggi 17 ottobre 2026: numeri vincenti",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-combinazione-vincente_22XsYSDybGniusOPB4Pcsd"
@@ -111,12 +147,6 @@
    "fonte": "ANSA",
    "titolo": "Dopo undici mesi riunita per un giorno la famiglia nel bosco",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/famiglia-nel-bosco-dopo-11-mesi-i-bambini-tornano-nel-casolare_17861bf6-56ed-45ff-8d10-173ed3dae63a.html"
-  },
-  {
-   "data": "2026-10-17T18:53:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Guerriglia a Parigi, scontri e 400 fermi nelle proteste in tutta la Francia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/proteste-in-francia-due-cortei-non-autorizzati-dispersi-a-parigi-incidenti-a-lione_23769778-a3b5-4b11-a769-4ae19c4b2d7e.html"
   },
   {
    "data": "2026-10-17T18:40:09+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Scontri in Duomo, almeno 4 feriti tra agenti 20 tra i manifestanti",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/scontri-in-duomo-almeno-4-feriti-tra-agenti-20-tra-i-manifestanti_c1b9b611-99b4-4962-aea5-5229dfcfb850.html"
-  },
-  {
-   "data": "2026-10-17T18:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma-Genoa 2-0, Castro-Lulli gol e giallorossi secondi in classifica",
-   "url": "https://www.adnkronos.com/sport/roma-genoa-oggi-serie-a_5kLgFHBboBtTddJr949dTL"
-  },
-  {
-   "data": "2026-10-17T18:00:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Javier Bardem premio alla Carriera alla Festa di Roma: 'Il cinema ha il potere di unirci'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/17/bardem-premio-alla-carriera-alla-festa-di-roma-il-cinema-ha-il-potere-di-unirci_2417ddd5-5a03-48ff-a4f3-01954ab5cd58.html"
-  },
-  {
-   "data": "2026-10-17T17:51:09+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Corteo a Milano, decine fermati di cui alcuni portati in Questura",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/corteo-a-milano-decine-fermati-di-cui-alcuni-portati-in-questura_766133d8-a334-42c5-a040-c261ad6a32ff.html"
-  },
-  {
-   "data": "2026-10-17T17:37:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Si stringe sulla manovra, lunedì tutti da Meloni",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/17/salvini-banche-mazzolate-patuelli-sorprendente-il-contributo-da-5-miliardi-e-il-minimo_8aaccd0a-cdc6-4a30-a4bc-c85d9231a6b3.html"
-  },
-  {
-   "data": "2026-10-17T17:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bologna-Inter, i nerazzurri protestano per un rigore su Thuram: cos'è successo",
-   "url": "https://www.adnkronos.com/sport/bologna-inter-rigore-thuram-ammonito_1f7apPmhifcXd241t3i1qZ"
   }
  ]
 }
