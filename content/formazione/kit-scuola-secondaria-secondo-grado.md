@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nei percorsi di formazione scuola-lavoro (fino al 2024/25 chiamati PCTO).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~384 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~508 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -710,6 +710,10 @@ Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it"
 </div>
 
 Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado:
+
+- [**Appunti illustrati — Il terremoto**](/formazione/schede-stampabili/appunti-terremoto-secondaria2/) — un foglio di ripasso con disegno, domande ed esercizi.
+- [**Appunti illustrati — Come si chiama il 112**](/formazione/schede-stampabili/appunti-chiamata-112-secondaria2/) — un foglio di ripasso con disegno, domande ed esercizi.
+- [**Appunti illustrati — Come si legge l’allerta**](/formazione/schede-stampabili/appunti-leggere-allerta-secondaria2/) — un foglio di ripasso con disegno, domande ed esercizi.
 
 - 👉 [**Caso studio Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria2/) — analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).
 - 👉 [**Comunicazione di crisi**](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) — lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia di valutazione.

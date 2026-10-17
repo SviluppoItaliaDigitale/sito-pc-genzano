@@ -1,0 +1,408 @@
+[
+  {
+    "slug": "terremoto",
+    "modello": "concetto",
+    "titolo": "Il terremoto",
+    "domanda_guida": "Che cosa succede e come ti proteggi?",
+    "disegno": {
+      "percorso": "/formazione/schede-stampabili/appunti-terremoto-secondaria2/disegno-apertura.svg",
+      "alt": "Sezione del terreno: una faglia attraversa l’ipocentro, in profondità. L’epicentro è in superficie, sulla verticale dell’ipocentro. Le onde sismiche raggiungono una casa."
+    },
+    "in_breve": [
+      "Il terremoto libera energia accumulata nelle rocce lungo una faglia.",
+      "L’energia si propaga come onde sismiche.",
+      "Non possiamo prevedere quando avverrà: possiamo ridurre i danni."
+    ],
+    "sequenza": [
+      {
+        "icona": "casa",
+        "testo": "Prima: individua i punti sicuri in casa e le vie di fuga."
+      },
+      {
+        "icona": "tavolo",
+        "testo": "Durante, al chiuso: riparati sotto un tavolo robusto o vicino a un muro portante. Proteggi la testa."
+      },
+      {
+        "icona": "scala",
+        "testo": "Durante: non correre fuori, non usare scale né ascensore. Aspetta la fine della scossa."
+      },
+      {
+        "icona": "porta",
+        "testo": "Dopo: esci con prudenza, indossando le scarpe."
+      },
+      {
+        "icona": "area",
+        "testo": "Poi: raggiungi l’area di attesa. Rientra solo quando le autorità lo consentono."
+      }
+    ],
+    "cause_conseguenze": [
+      [
+        "Rottura lungo la faglia",
+        "L’energia si propaga in onde."
+      ],
+      [
+        "Edifici vulnerabili",
+        "Lo scuotimento può causare danni."
+      ]
+    ],
+    "chi_fa_cosa": [
+      {
+        "icona": "onda",
+        "ruolo": "INGV",
+        "compito": "Localizza i terremoti e pubblica i dati."
+      },
+      {
+        "icona": "mappa",
+        "ruolo": "Regioni",
+        "compito": "Gestiscono la classificazione sismica."
+      },
+      {
+        "icona": "porta",
+        "ruolo": "Autorità",
+        "compito": "Indicano quando si può rientrare in casa."
+      },
+      {
+        "icona": "casa",
+        "ruolo": "Cittadino",
+        "compito": "Prepara kit e piano familiare."
+      }
+    ],
+    "punto_chiave": "Non si evita il terremoto: si riduce il danno con prevenzione e preparazione.",
+    "errori": [
+      {
+        "idea": "«Corro subito fuori».",
+        "correzione": "Durante la scossa cerca riparo e proteggi la testa.",
+        "url": "/rischi-prevenzione/idee-sbagliate/#correre-fuori"
+      },
+      {
+        "idea": "«I terremoti si possono prevedere».",
+        "correzione": "Non esistono segnali premonitori affidabili.",
+        "url": "/rischi-prevenzione/idee-sbagliate/#prevedere-terremoti"
+      }
+    ],
+    "parole_chiave": [
+      {
+        "termine": "Magnitudo",
+        "definizione": "Misura dell’energia liberata da un terremoto.",
+        "url": "/glossario/#magnitudo"
+      },
+      {
+        "termine": "Intensità",
+        "definizione": "Misura degli effetti su persone, edifici e ambiente.",
+        "url": "/glossario/#intensita-sismica"
+      },
+      {
+        "termine": "Epicentro",
+        "definizione": "Punto in superficie sulla verticale dell’ipocentro.",
+        "url": "/glossario/#epicentro-e-ipocentro"
+      },
+      {
+        "termine": "Ipocentro",
+        "definizione": "Punto in profondità dove si genera il terremoto.",
+        "url": "/glossario/#epicentro-e-ipocentro"
+      },
+      {
+        "termine": "Area di attesa",
+        "definizione": "Punto sicuro di raccolta nelle prime fasi dell’emergenza.",
+        "url": "/glossario/#aa--area-di-attesa"
+      }
+    ],
+    "interrogazione": [
+      "Perché magnitudo e intensità sono diverse?",
+      "Che cosa fai durante una scossa al chiuso?",
+      "Come riduci il rischio prima della scossa?"
+    ],
+    "controlla_casa": [
+      "Individuo in casa i punti sicuri e le vie di fuga.",
+      "Controllo il kit di emergenza con la famiglia.",
+      "Segno nel piano familiare la nostra area di attesa."
+    ],
+    "fonti": [
+      {
+        "testo": "Rischio sismico",
+        "url": "/rischi-prevenzione/rischio-sismico/"
+      },
+      {
+        "testo": "Idee sbagliate",
+        "url": "/rischi-prevenzione/idee-sbagliate/"
+      },
+      {
+        "testo": "Glossario",
+        "url": "/glossario/"
+      }
+    ],
+    "manuale": {
+      "testo": "Manuale · 7.1, rischio sismico",
+      "url": "/manuale/711-rischio-sismico/"
+    },
+    "approfondisci": {
+      "testo": "Prima, durante e dopo",
+      "url": "/rischi-prevenzione/rischio-sismico/"
+    }
+  },
+  {
+    "slug": "chiamata-112",
+    "modello": "procedura",
+    "titolo": "Come si chiama il 112",
+    "domanda_guida": "Che cosa dici all’operatore?",
+    "disegno": {
+      "percorso": "/formazione/schede-stampabili/appunti-chiamata-112-secondaria2/disegno-apertura.svg",
+      "alt": "Un telefono con 112 sullo schermo, collegato a quattro promemoria: che cosa succede, dove, quante persone, chi sei."
+    },
+    "note": [
+      "Parla chiaro",
+      "Resta in linea"
+    ],
+    "teoria": [
+      [
+        {
+          "testo": "Chiama",
+          "evidenza": "azione"
+        },
+        " il ",
+        {
+          "testo": "112",
+          "evidenza": "luogo"
+        },
+        ": nel Lazio è l’unico numero per qualsiasi emergenza."
+      ],
+      [
+        "NUE: Numero Unico Europeo di Emergenza. La centrale smista la chiamata all’ente competente."
+      ],
+      [
+        {
+          "testo": "Descrivi",
+          "evidenza": "azione"
+        },
+        " il fatto, il ",
+        {
+          "testo": "luogo",
+          "evidenza": "luogo"
+        },
+        ", le persone e le loro condizioni."
+      ],
+      [
+        "Dallo smartphone la posizione arriva in automatico, se il GPS è attivo. ",
+        {
+          "testo": "Descrivi comunque il luogo.",
+          "evidenza": "attenzione"
+        }
+      ],
+      [
+        "Segnalazioni non urgenti di protezione civile: Sala Operativa Lazio, ",
+        {
+          "testo": "803 555",
+          "evidenza": "luogo"
+        },
+        "."
+      ]
+    ],
+    "regole": [
+      "Riferisci solo ciò che sai.",
+      "Non riagganciare prima che l’operatore abbia tutte le informazioni.",
+      "Se hai chiamato per errore, non riagganciare: spiegalo.",
+      "Nelle prove non comporre il numero."
+    ],
+    "esempio": {
+      "caso": "Esempio didattico: una persona ha un malore in casa. Flavio chiama il 112.",
+      "passi": [
+        {
+          "spiegazione": "Racconta che cosa è successo.",
+          "azione": "«Una persona ha un malore in casa»."
+        },
+        {
+          "spiegazione": "Indica dove sei.",
+          "azione": "«Sono a [Comune], in [via e civico], al [piano]»."
+        },
+        {
+          "spiegazione": "Spiega quante persone sono coinvolte e come stanno.",
+          "azione": "«È una persona sola. È cosciente e parla»."
+        },
+        {
+          "spiegazione": "Presentati e resta in linea.",
+          "azione": "«Sono Flavio [cognome]. Il mio numero è […]». Poi rispondo alle domande."
+        }
+      ]
+    },
+    "schema": [
+      "Componi il 112",
+      "Che cosa e dove",
+      "Persone e condizioni",
+      "Chi sei, resta in linea"
+    ],
+    "errori": [
+      {
+        "idea": "«Ogni soccorso ha un numero».",
+        "correzione": "Nel Lazio, per qualsiasi emergenza: 112.",
+        "url": "/rischi-prevenzione/idee-sbagliate/#numero-unico"
+      },
+      {
+        "idea": "«Attivo direttamente il Gruppo».",
+        "correzione": "Lo attivano il Sindaco o la Sala Operativa regionale: tu chiami il 112.",
+        "url": "/rischi-prevenzione/idee-sbagliate/#chiamare-gruppo"
+      }
+    ],
+    "prova": {
+      "caso": "Esempio didattico: Silvia vede sterpaglie in fiamme dalla strada. Non vede persone.",
+      "richiesta": "Simula a voce o per iscritto la chiamata. Non telefonare davvero.",
+      "indizio": "Pensa prima a dove sei rispetto al fuoco. Non vedere persone non vuol dire che non ci siano.",
+      "soluzione": "Resta lontano dalle fiamme e dalle strade percorse dal fumo; non provare a spegnerle. Al 112 di’ che cosa brucia, dove (Comune, località, un riferimento visibile) e verso dove va il fumo. Di’ che non vedi persone, ma non puoi escluderle. Lascia nome e numero e resta in linea."
+    },
+    "fonti": [
+      {
+        "testo": "Segnalare al 112 · 8 ottobre 2026",
+        "url": "/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/"
+      },
+      {
+        "testo": "Giornata del 112",
+        "url": "/comunicazioni/2026-02-11-giornata-europea-112-numero-unico/"
+      },
+      {
+        "testo": "Numeri utili",
+        "url": "/numeri-utili/"
+      },
+      {
+        "testo": "Glossario",
+        "url": "/glossario/"
+      }
+    ],
+    "manuale": {
+      "testo": "Manuale · appendici, numeri utili",
+      "url": "/manuale/150-appendici/"
+    },
+    "approfondisci": {
+      "testo": "Attivazione dei soccorsi",
+      "url": "/numeri-utili/"
+    }
+  },
+  {
+    "slug": "leggere-allerta",
+    "modello": "procedura",
+    "titolo": "Come si legge l’allerta",
+    "domanda_guida": "Dove e quando vale? Per quale rischio?",
+    "disegno": {
+      "percorso": "/formazione/schede-stampabili/appunti-leggere-allerta-secondaria2/disegno-apertura.svg",
+      "alt": "Quattro fasce colorate in fila: verde, nessuna allerta; giallo, criticità ordinaria; arancione, criticità moderata; rosso, criticità elevata."
+    },
+    "note": [
+      "Zona F",
+      "Leggi la validità"
+    ],
+    "teoria": [
+      [
+        "L’allerta indica ",
+        {
+          "testo": "possibili effetti al suolo",
+          "evidenza": "attenzione"
+        },
+        ", non un evento certo."
+      ],
+      [
+        {
+          "testo": "Cerca",
+          "evidenza": "azione"
+        },
+        " Genzano nella ",
+        {
+          "testo": "zona F — Bacini Costieri Sud",
+          "evidenza": "luogo"
+        },
+        "."
+      ],
+      [
+        "Il Centro Funzionale Regionale del Lazio emette il bollettino di criticità."
+      ],
+      [
+        {
+          "testo": "Leggi",
+          "evidenza": "azione"
+        },
+        " il rischio e ",
+        {
+          "testo": "quando vale",
+          "evidenza": "luogo"
+        },
+        ": il colore da solo non basta."
+      ],
+      [
+        "Verde: nessuna allerta; giallo: criticità ordinaria; arancione: criticità moderata; rosso: criticità elevata."
+      ]
+    ],
+    "regole": [
+      "Controlla gli aggiornamenti ufficiali.",
+      "Segui le indicazioni delle autorità.",
+      "Verde non significa rischio zero."
+    ],
+    "esempio": {
+      "caso": "Caso documentato: allerta del 10 settembre 2026. Rientro a verde alla mezzanotte tra il 10 e l’11 settembre.",
+      "passi": [
+        {
+          "spiegazione": "Trova la zona nel registro.",
+          "azione": "Zona F — Bacini Costieri Sud (Genzano); allerta estesa a tutte le zone del Lazio."
+        },
+        {
+          "spiegazione": "Leggi il livello.",
+          "azione": "Giallo: criticità ordinaria."
+        },
+        {
+          "spiegazione": "Individua il rischio segnalato.",
+          "azione": "Due tipi: criticità idrogeologica e criticità idrogeologica per temporali."
+        },
+        {
+          "spiegazione": "Controlla la validità.",
+          "azione": "Per questo bollettino: dal primo mattino del 10 settembre, per le successive 18–24 ore."
+        }
+      ]
+    },
+    "schema": [
+      "Trova la zona",
+      "Leggi il colore",
+      "Guarda il tipo di rischio",
+      "Controlla quando vale"
+    ],
+    "errori": [
+      {
+        "idea": "«Con il giallo non succede niente».",
+        "correzione": "Sono possibili allagamenti localizzati e altri disagi.",
+        "url": "/rischi-prevenzione/idee-sbagliate/#allerta-gialla"
+      },
+      {
+        "idea": "«Vale solo vicino ai fiumi».",
+        "correzione": "Riguarda l’intera zona di allerta.",
+        "url": "/rischi-prevenzione/idee-sbagliate/#allerta-tutti"
+      }
+    ],
+    "prova": {
+      "caso": "Esempio per esercitarsi, non è un bollettino vero. Zona F; arancione; criticità idrogeologica per temporali; domani, dalle 8 alle 20.",
+      "richiesta": "Indica zona, livello, rischio e validità: a voce o per iscritto.",
+      "indizio": "Ripercorri i quattro passi dello schema.",
+      "soluzione": "Zona: F — Bacini Costieri Sud. Livello: arancione, criticità moderata. Rischio: idrogeologico per temporali. Validità: domani dalle 8 alle 20. Il colore da solo non dice zona, rischio e validità."
+    },
+    "fonti": [
+      {
+        "testo": "Allerte meteo",
+        "url": "/allerte-meteo/"
+      },
+      {
+        "testo": "I colori a Genzano",
+        "url": "/allerte-meteo/cosa-significa-a-genzano/"
+      },
+      {
+        "testo": "Registro della prevenzione",
+        "url": "/registro-prevenzione/"
+      },
+      {
+        "testo": "Glossario",
+        "url": "/glossario/"
+      }
+    ],
+    "manuale": {
+      "testo": "Manuale · 7.4, rischio meteo-idrologico",
+      "url": "/manuale/714-rischio-meteo-idrologico/"
+    },
+    "approfondisci": {
+      "testo": "Allerta a Genzano",
+      "url": "/allerte-meteo/cosa-significa-a-genzano/"
+    }
+  }
+]

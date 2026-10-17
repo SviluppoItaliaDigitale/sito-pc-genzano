@@ -526,6 +526,15 @@ done
 
 Ogni kit deve linkarne almeno tante quante ne contiene la cartella per il suo livello. Un kit con zero link verso le schede del proprio livello è un bug — è successo una volta a entrambi i kit secondaria, scoperto solo quando un docente ha segnalato che non trovava le schede dal proprio kit.
 
+### Appunti illustrati — pagine generate dai dati (dal 16/10/2026)
+
+Gli «Appunti illustrati di protezione civile» (proposta 93) sono fogli A4 di ripasso, uno per argomento, sul modello dei quaderni di appunti a colori: titolo in lettering con il carattere a mano `edu-cursive`, riquadri tratteggiati con la linguetta, evidenziatori con legenda, disegno d'apertura. Due modelli: **pagina-concetto** (rischi, storia, organizzazione: In breve, La sequenza, Cause e conseguenze, Chi fa cosa, Punto chiave, Occhio all'errore, Parole chiave, Per l'interrogazione, Controlla a casa) e **pagina-procedura** (le cose da saper fare: note adesive, La teoria, Le regole, Esempio guidato, Lo schema, Occhio all'errore, Prova tu con la soluzione capovolta).
+
+- **Fonte unica** `data/appunti_illustrati.json`; le pagine `static/formazione/schede-stampabili/appunti-<slug>-secondaria2/index.html` (per ora solo secondaria di secondo grado) le scrive `scripts/genera-appunti-illustrati.py` e non si toccano a mano (`--check` è bloccante in `validate-pr.yml`). Stile in `assets/appunti.css`, che lo ZIP del kit porta con sé insieme al carattere e alla licenza OFL.
+- **Disegno** `disegno-apertura.svg` nella cartella della pagina, richiamato in relativo (il generatore rifiuta un disegno fuori dalla cartella): `role="img"`, `<title>` e `<desc>` uguali nel senso all'`alt`, scritte di almeno 22 unità dentro il `viewBox`; le scritte che stanno sopra altre linee hanno un alone del colore di fondo (`paint-order="stroke"`).
+- **Contenuti**: solo fatti delle pagine del sito già verificate (pagina del rischio, Manuale, Biblioteca delle idee sbagliate, glossario, articoli citati), con le stesse parole e lo stesso ordine (per esempio le informazioni da dare al 112 nell'ordine dell'articolo dell'8 ottobre 2026); casi documentati presi dal registro della prevenzione con le parole del registro; esercizi dichiarati come tali; nelle prove pratiche le indicazioni di sicurezza della pagina del rischio. Gate `pc-didattica-reviewer` e verifica dei fatti come per ogni scheda.
+- **Pagina nuova**: voce nel JSON, `python3 scripts/genera-appunti-illustrati.py`, card nell'indice delle schede e voce nel kit della fascia, poi `genera-pacchetti-schede.py`, `genera-materiali-lezione.py` e `genera-pacchetti-kit.py`; un foglio A4 per argomento (`check-fogli-stampa.py`).
+
 ## Versione "italiano semplice" (A2 CEFR) — file affiancato
 
 Da maggio 2026 (Punto 16 roadmap) gli articoli possono avere una **versione semplificata** in italiano L2 A2 CEFR, per parlanti L2, disabilità cognitive, anziani con poca scuola, chi legge in fretta. Guida completa: `manuale/parte-25-italiano-l2-versione-facile.md`.

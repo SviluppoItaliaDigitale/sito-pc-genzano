@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="titolo descrizione">
+<title id="titolo">Come si legge l’allerta</title>
+<desc id="descrizione">Quattro fasce colorate in fila: verde, nessuna allerta; giallo, criticità ordinaria; arancione, criticità moderata; rosso, criticità elevata.</desc>
+<g stroke="#003366" stroke-width="2"><rect x="20" y="15" width="560" height="72" rx="14" fill="#edf7f0"/><rect x="20" y="100" width="560" height="72" rx="14" fill="#fff0a8"/><rect x="20" y="185" width="560" height="72" rx="14" fill="#fff0e2"/><rect x="20" y="270" width="560" height="72" rx="14" fill="#f8dfe5"/></g>
+<rect x="36" y="30" width="23" height="42" rx="5" fill="#146c43"/><rect x="36" y="115" width="23" height="42" rx="5" fill="#ffc107"/><rect x="36" y="200" width="23" height="42" rx="5" fill="#fd7e14"/><rect x="36" y="285" width="23" height="42" rx="5" fill="#b02a37"/>
+<g fill="#003366" font-family="Arial, sans-serif" font-size="24"><text x="75" y="60">Verde · Nessuna allerta</text><text x="75" y="145">Giallo · Criticità ordinaria</text><text x="75" y="230">Arancione · Criticità moderata</text><text x="75" y="315">Rosso · Criticità elevata</text></g>
+</svg>

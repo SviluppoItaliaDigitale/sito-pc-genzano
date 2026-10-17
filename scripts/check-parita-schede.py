@@ -111,6 +111,13 @@ def controlla_zip_offline(zf: zipfile.ZipFile, errori: list[str], fascia: str) -
             continue
         html = zf.read(nome).decode("utf-8", errors="replace")
         base = posixpath.dirname(nome)
+        # Un foglio di stile preso dal sito passa il controllo sui percorsi ma
+        # offline non si carica, e la scheda perde l'impaginazione: deve stare nello ZIP.
+        for tag in re.findall(r"<link\b[^>]*>", html, flags=re.IGNORECASE):
+            if re.search(r'rel=["\']?stylesheet', tag, flags=re.IGNORECASE):
+                m = re.search(r'href=["\'](https?://[^"\']+)', tag, flags=re.IGNORECASE)
+                if m:
+                    errori.append(f"[{fascia}] ZIP {nome}: foglio di stile online {m.group(1)} (offline la scheda perde l'impaginazione)")
         for attr, valore in re.findall(r'\b(href|src)="([^"]+)"', html):
             if valore.startswith("/"):
                 errori.append(f"[{fascia}] ZIP {nome}: {attr}=\"{valore}\" radicato su / (offline apre il disco, non il sito)")
