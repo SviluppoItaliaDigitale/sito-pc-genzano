@@ -212,7 +212,7 @@ I workflow di **sfondo committano soltanto** (niente più `gh workflow run deplo
   - `ultimo_controllo` di `data/allerta.json`, 8 h.
 
   Le soglie stanno sopra le pause massime osservate dal 25/09 al 17/10/2026: lo scheduler fa girare `aggiorna-dati-sala.yml` a blocchi, con pause fino a circa 10 ore. Si commenta solo quando cambia la firma dei guasti (`<!-- firma-guasti: … -->`). Prova locale: `CHECK_FONTI_RADICE=<cartella> python3 scripts/check-fonti-cruscotto.py`.
-- **Link** (`check-links-sito.yml`). Il run è rosso per **ogni** 404/410, non più solo per quelli istituzionali (`check-404-istituzionali.py` elenca prima gli enti pubblici, poi gli altri), e la issue di lychee porta anche la label `fonte-rotta`.
+- **Link** (`check-links-sito.yml`). Il run è rosso per **ogni** 404/410, non più solo per quelli istituzionali (`check-404-istituzionali.py` elenca prima gli enti pubblici, poi gli altri), e per ogni file del sito mancante nella build (lychee lo scrive come `File not found`; lo script lo ricerca in `public/` senza query e frammento, così un riferimento come `sprites.svg#icona` non conta), e la issue di lychee porta anche la label `fonte-rotta`.
 
 ## Key operational notes
 
