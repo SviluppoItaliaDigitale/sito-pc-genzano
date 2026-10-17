@@ -391,7 +391,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-desk-giornalistico` | cronaca, anniversari, vicende giudiziarie, persone e minori — attribuzione, deontologia, presunzione di non colpevolezza |
 | `pc-conformita-legale` | "la privacy è a posto?", "la dichiarazione di accessibilità è aggiornata?" — RPD, basi giuridiche PA, calendario AgID, note legali, licenze |
 | `pc-integrita-tecnica` | "il sito è integro?", "gli ZIP funzionano offline?", "le ancore?" — script di integrità, ancore, parità, codifiche, stati UI |
-| `pc-coerenza-trasversale` | "il sito si contraddice?", stessa informazione in più pagine — allineamento alla fonte canonica |
+| `pc-coerenza-trasversale` | "il sito si contraddice?", "ci sono incongruenze nei testi?", stessa informazione in più pagine, issue settimanale «Incongruenze fra i testi del sito» — parte da `scripts/cerca-incongruenze.py`, allinea alla fonte canonica e registra il dato in `data/dati_canonici.yaml` |
 | `pc-revisore-codice` | diff a template/partial/CSS/JS/script — escape, subpath, stati UI, idempotenza, a11y dei componenti |
 | `pc-revisore-automazioni` | workflow e routine — YAML, timeout, pin SHA, trigger, priorità deploy, watchdog, documentazione |
 | `pc-sicurezza` | CSP, header, segreti, supply chain, superficie JS, catena allerta — hardening in Report-Only prima dell'enforcing |

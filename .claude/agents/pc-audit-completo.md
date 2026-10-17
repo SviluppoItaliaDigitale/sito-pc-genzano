@@ -43,6 +43,7 @@ python3 scripts/check-fonti-cruscotto.py
 python3 scripts/genera-chrome-menu.py --check
 python3 scripts/check-navigazione.py --public /tmp/public  # assistente e mappa coprono menu e piè di pagina, link vivi
 python3 scripts/check-dati-canonici.py                     # dati ripetuti uguali al registro data/dati_canonici.yaml
+python3 scripts/cerca-incongruenze.py                      # famiglie di dati scritte con valori diversi (scoperta, non solo varianti registrate)
 python3 scripts/check-ruoli-aria.py                        # comandi (anche costruiti dal JavaScript) senza ruoli che ne cancellano la semantica
 python3 scripts/audit-pdf-accessibilita.py --check-inventario  # inventario dei PDF uguale ai file pubblicati
 python3 scripts/check-qualita-pagine.py /tmp/public        # title, h1, alt su tutte le pagine
