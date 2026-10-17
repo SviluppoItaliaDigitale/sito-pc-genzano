@@ -1,16 +1,26 @@
 name: Controllo fonti cruscotto
 
-# Smoke-check settimanale delle fonti dati esterne del cruscotto (/cruscotto/).
-# Le schede leggono dati live da servizi di terzi (INGV, Open-Meteo, DPC,
-# EUMETSAT, NASA, EFFIS, ARPA Lazio): se un endpoint cambia o cade, la scheda
-# diventa vuota SENZA errore visibile. Questo workflow se ne accorge e apre
-# un'issue. Non tocca il sito, non fa deploy: solo monitoraggio.
+# Smoke-check quotidiano delle fonti dati esterne del cruscotto (/cruscotto/)
+# e della Sala situazioni (/monitor/). Le schede leggono dati live da servizi
+# di terzi (INGV, Open-Meteo, DPC, EUMETSAT, NASA, EFFIS, ARPA Lazio...): se un
+# endpoint cambia o cade, la scheda diventa vuota SENZA errore visibile.
 #
-# Scaglionato lunedì 10:53 UTC (dopo refusi 10:40, prima di LIS 11:23).
+# Dal 17/10/2026 controlla anche le fonti dei generatori di snapshot (NASA
+# FIRMS, feed ANSA/Adnkronos, feed YouTube) e l'ETA' dei dati committati
+# (snapshot in static/open-data/, ultimo_controllo di data/allerta.json,
+# timbro del bollettino DPC): i generatori sono fail-safe e non segnalano
+# nulla, quindi una fonte caduta o un workflow fermo si vedono solo qui
+# (istruzione del 17/10/2026: i 404 e simili non si ignorano). Per l'eta'
+# dei dati il giro e' diventato QUOTIDIANO: una volta a settimana un dato
+# fermo poteva restare in pagina sei giorni senza che nessuno lo sapesse.
+#
+# Issue unica in-place: si commenta solo quando cambia l'elenco dei guasti
+# (firma nel report), si chiude da sola quando tutto rientra.
+# Non tocca il sito, non fa deploy: solo monitoraggio.
 
 on:
   schedule:
-    - cron: '53 10 * * 1'
+    - cron: '53 10 * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,13 +30,17 @@ permissions:
 jobs:
   controllo-fonti:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Ping delle fonti del cruscotto
+      - name: Ping delle fonti e controllo dell'età dei dati
         id: ping
+        env:
+          # Stessa chiave di aggiorna-dati-sala.yml: si prova la fonte con la
+          # chiave che usa il generatore. Lo script non la stampa mai.
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
         run: |
           set +e
           python3 scripts/check-fonti-cruscotto.py > /tmp/fonti-report.md
@@ -36,16 +50,17 @@ jobs:
           echo "----- report -----"
           cat /tmp/fonti-report.md
 
-      - name: Apri/aggiorna issue se una fonte è giù
+      - name: Apri/aggiorna issue se una fonte è giù o un dato è fermo
         if: steps.ping.outputs.fails != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           TITLE="Cruscotto: ${{ steps.ping.outputs.fails }} fonte/i dati da verificare"
+          FIRMA=$(grep -o 'firma-guasti:[^>]*' /tmp/fonti-report.md | tail -1 || true)
           {
             echo ""
-            echo "_Issue generata da \`controllo-fonti-cruscotto.yml\`. Si aggiorna ogni lunedì 10:53 UTC. Un ❌ è spesso un disservizio temporaneo del fornitore: se persiste su più settimane, l'endpoint è cambiato e va aggiornato lo shortcode della scheda._"
+            echo "_Issue generata da \`controllo-fonti-cruscotto.yml\`. Il controllo gira ogni giorno alle 10:53 UTC e commenta qui solo quando cambia l'elenco dei guasti; la issue si chiude da sola quando tutto rientra. Un ❌ su una fonte è spesso un disservizio temporaneo del fornitore: se persiste, l'endpoint è cambiato e va aggiornato lo script o lo shortcode. Un ❌ sull'età di un dato vuol dire che il workflow che lo genera non gira più o che la sua fonte non risponde._"
           } >> /tmp/fonti-report.md
           # Label garantita (idempotente): senza, gh issue create fallisce
           # con "could not add label" e il job muore (audit 10/06/2026).
@@ -53,16 +68,41 @@ jobs:
             --description "Fonti dati del cruscotto" 2>/dev/null || true
           EXISTING=$(gh issue list --label "automazione" --label "cruscotto" --state open --json number --jq '.[0].number // empty')
           if [ -n "$EXISTING" ]; then
-            gh issue edit "$EXISTING" --title "$TITLE"
-            gh issue comment "$EXISTING" --body-file /tmp/fonti-report.md
+            ULTIMA=$(gh issue view "$EXISTING" --json body,comments \
+              --jq '([.body] + [.comments[].body]) | map(select(test("firma-guasti:"))) | last // ""' \
+              | grep -o 'firma-guasti:[^>]*' | tail -1 || true)
+            if [ "$ULTIMA" = "$FIRMA" ]; then
+              echo "Elenco dei guasti invariato rispetto all'ultimo commento della issue #$EXISTING: nessun nuovo commento."
+            else
+              gh issue edit "$EXISTING" --title "$TITLE" --add-label fonte-rotta
+              gh issue comment "$EXISTING" --body-file /tmp/fonti-report.md
+            fi
           else
             gh issue create \
               --title "$TITLE" \
               --body-file /tmp/fonti-report.md \
               --label "automazione" \
+              --label "fonte-rotta" \
               --label "cruscotto"
           fi
 
-      - name: Tutte le fonti rispondono
+      - name: Tutte le fonti rispondono — chiudi l'eventuale issue
         if: steps.ping.outputs.fails == '0'
-        run: echo "✓ Tutte le fonti del cruscotto rispondono correttamente."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "✓ Tutte le fonti rispondono e tutti i dati sono freschi."
+          EXISTING=$(gh issue list --label "automazione" --label "cruscotto" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "Al controllo di oggi tutte le fonti rispondono e tutti i dati sono entro le soglie di età: issue chiusa in automatico da \`controllo-fonti-cruscotto.yml\`."
+          fi
+
+      - name: Run rosso se una fonte non risponde o un dato è fermo
+        # Dal 17/10/2026 (istruzione dell'utente: i 404 e simili non si
+        # ignorano): la issue sopra non basta, il run deve essere rosso perché
+        # lo veda anche il controllo di salute giornaliero.
+        if: steps.ping.outputs.fails != '0'
+        run: |
+          echo "::error::${{ steps.ping.outputs.fails }} fonte/i o dati da verificare (issue «Cruscotto» aperta o aggiornata)."
+          exit 1

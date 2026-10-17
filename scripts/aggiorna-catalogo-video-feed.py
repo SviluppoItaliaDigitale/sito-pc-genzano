@@ -12,8 +12,12 @@ solo i video nuovi; la scansione mensile resta la fonte completa e riallinea
 tutto (stesso formato delle voci, stesse chiavi "<canale>-<id>").
 
 Nessuna dipendenza oltre a PyYAML: i feed sono XML pubblici, senza API key
-né yt-dlp. Fail-safe: un canale che non risponde viene saltato, lo script
-esce sempre 0 e non tocca il file se non c'è nulla da aggiungere.
+né yt-dlp. Un canale che non risponde viene saltato senza togliere nulla
+dal catalogo, ma non in silenzio: dopo aver scritto i video nuovi degli
+altri canali lo script stampa su stdout "FONTI_IN_ERRORE: …" ed esce con
+codice 3, così il workflow apre la issue `fonte-rotta` e chiude il run in
+rosso (istruzione del 17/10/2026: i 404 non si ignorano). Il file non si
+tocca se non c'è nulla da aggiungere.
 
 Uso:
     python3 scripts/aggiorna-catalogo-video-feed.py [--dry-run]
@@ -104,17 +108,20 @@ def main() -> int:
     noti = {v["id"] for v in videos.values()}
 
     aggiunti_tot = 0
+    errori: list[str] = []
     for chiave, meta in canali.items():
         cid = CHANNEL_IDS.get(chiave) or risolvi_channel_id(meta.get("url", ""))
         if not cid:
-            print(f"  [salto] {chiave}: ID canale non risolto (aggiungerlo a CHANNEL_IDS)", file=sys.stderr)
+            print(f"  [ERRORE] {chiave}: ID canale non risolto (aggiungerlo a CHANNEL_IDS)", file=sys.stderr)
+            errori.append(f"{chiave} (ID canale non risolto)")
             continue
         if chiave not in CHANNEL_IDS:
             print(f"  [nota] {chiave}: ID {cid} risolto al volo — aggiungerlo a CHANNEL_IDS", file=sys.stderr)
         try:
             recenti = leggi_feed(cid)
         except Exception as e:  # rete, XML, HTTP: il canale si salta, il resto prosegue
-            print(f"  [salto] {chiave}: feed non leggibile ({e})", file=sys.stderr)
+            print(f"  [ERRORE] {chiave}: feed non leggibile ({e})", file=sys.stderr)
+            errori.append(f"{chiave} (feed non leggibile: {e})")
             continue
         nuovi = [v for v in recenti if v["id"] not in noti]
         for v in nuovi:
@@ -126,14 +133,15 @@ def main() -> int:
         aggiunti_tot += len(nuovi)
 
     print(f"\nVideo nuovi dal feed: {aggiunti_tot} (catalogo: {len(videos)} video)", file=sys.stderr)
-    if not aggiunti_tot or args.dry_run:
-        return 0
-
-    header = re.sub(r"# Totale: \d+ video", f"# Totale: {len(videos)} video", header)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(header)
-        yaml.safe_dump({"canali": canali, "video": videos}, f, allow_unicode=True, sort_keys=True, width=120)
-    print(f"✓ Scritto {path}", file=sys.stderr)
+    if aggiunti_tot and not args.dry_run:
+        header = re.sub(r"# Totale: \d+ video", f"# Totale: {len(videos)} video", header)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(header)
+            yaml.safe_dump({"canali": canali, "video": videos}, f, allow_unicode=True, sort_keys=True, width=120)
+        print(f"✓ Scritto {path}", file=sys.stderr)
+    if errori:
+        print(f"FONTI_IN_ERRORE: {'; '.join(errori)}")
+        return 3
     return 0
 
 

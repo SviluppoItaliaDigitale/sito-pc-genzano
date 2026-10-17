@@ -32,14 +32,27 @@ jobs:
         id: check
         run: |
           set -uo pipefail
-          OUTPUT=$(python3 scripts/check-versione-facile-coverage.py 2>/dev/null || true)
-          echo "$OUTPUT"
-          FIRST=$(echo "$OUTPUT" | head -1)
+          # Stdout (marker + corpo della issue) separato dallo stderr (diagnostica):
+          # fino al 17/10/2026 il crash dello script veniva preso per un esito
+          # (`|| true`), e con `2>&1` le righe di diagnostica finivano in testa
+          # all'uscita e il marker non si trovava mai.
+          RC=0
+          python3 scripts/check-versione-facile-coverage.py > /tmp/audit-out.txt 2> /tmp/audit-err.txt || RC=$?
+          cat /tmp/audit-err.txt >&2
+          cat /tmp/audit-out.txt
+          FIRST=$(head -n 1 /tmp/audit-out.txt)
+          if [ "$RC" -ne 0 ]; then
+            echo "::error::scripts/check-versione-facile-coverage.py si è fermato con codice $RC: il controllo non è stato eseguito (non è un «nessun risultato»)."
+            exit "$RC"
+          fi
           if [ "$FIRST" = "OK_NO_MISSING" ]; then
             echo "has_missing=false" >> "$GITHUB_OUTPUT"
-          else
+          elif [ "$FIRST" = "MISSING_FACILE_FOUND" ]; then
             echo "has_missing=true" >> "$GITHUB_OUTPUT"
-            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+            tail -n +2 /tmp/audit-out.txt > /tmp/issue-body.md
+          else
+            echo "::error::Uscita inattesa di scripts/check-versione-facile-coverage.py (prima riga: «$FIRST»): il controllo non è affidabile."
+            exit 1
           fi
 
       - name: Crea/aggiorna issue

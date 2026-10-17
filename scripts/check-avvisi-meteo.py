@@ -24,6 +24,13 @@ Dipendenze runtime:
 - poppler-utils (per pdftotext) — preinstallato su ubuntu-latest
 - python3 (stdlib only)
 
+Guasti delle fonti (17/10/2026): una pagina o un PDF che non si leggono NON
+fanno cessare l'avviso in vigore. La cessazione avviene solo se tutti gli
+allertamenti recenti sono stati letti e nessuno è in corso, oppure quando la
+validità dichiarata dall'avviso salvato è scaduta. Ogni lettura fallita si
+annota in $FONTI_KO_FILE («fonte<TAB>motivo») e in GITHUB_OUTPUT fonti_ko=true:
+il workflow apre la issue `fonte-rotta` se il guasto persiste. Uscita sempre 0.
+
 Anti-spam: lo script aggiorna allerta.json solo se cambia il "tipo" o il
 "livello" dell'avviso_meteo (non per refresh periodici). La notifica Telegram
 del blocco avviso_meteo è gestita da scripts/notifica-telegram.py
@@ -211,6 +218,32 @@ def estrai_validita_e_descrizione(testo, data_emissione):
     return inizio, fine, descrizione
 
 
+FONTE = "Allertamenti meteo Regione Lazio"
+
+
+def segnala_fonte_ko(motivo, fonte=FONTE):
+    """Annota una fonte non letta: log del run + file letto dal workflow."""
+    print(f"::warning::Fonte non letta — {fonte}: {motivo}")
+    percorso = os.environ.get("FONTI_KO_FILE")
+    if percorso:
+        with open(percorso, "a", encoding="utf-8") as f:
+            f.write(f"{fonte}\t{motivo}\n")
+    gh_out = os.environ.get("GITHUB_OUTPUT", "")
+    if gh_out:
+        with open(gh_out, "a") as f:
+            f.write("fonti_ko=true\n")
+
+
+def avviso_scaduto(avviso, now):
+    """True se l'avviso salvato ha una validità dichiarata già passata."""
+    if not avviso or not avviso.get("validita_fine"):
+        return False
+    try:
+        return now > datetime.fromisoformat(avviso["validita_fine"])
+    except ValueError:
+        return False
+
+
 def load_allerta():
     try:
         with open(ALLERTA_PATH, "r", encoding="utf-8") as f:
@@ -229,12 +262,14 @@ def main():
     now = datetime.now(ROME_TZ)
 
     pdf_paths = []
+    errori_indice = []
     for index_url in INDEX_URLS:
         print(f"[{now.isoformat(timespec='seconds')}] check-avvisi-meteo: scarico {index_url}")
         try:
             html = http_get_text(index_url)
         except Exception as e:
             print(f"::warning::Impossibile scaricare la pagina allertamenti: {e}")
+            errori_indice.append(f"{index_url}: {e}")
             continue
         pdf_paths = list(dict.fromkeys(PDF_HREF.findall(html)))  # dedup mantenendo ordine
         print(f"Trovati {len(pdf_paths)} PDF candidati nella pagina")
@@ -245,16 +280,13 @@ def main():
         # La pagina elenca sempre gli allertamenti passati: zero link non vuol dire
         # «nessun avviso», vuol dire che la pagina è cambiata o non risponde. Lo stato
         # resta com'era, salvo un avviso già scaduto, che si toglie comunque.
-        print("::error::Nessun PDF di allertamento nella pagina della Regione Lazio: "
-              "la pagina potrebbe essere cambiata. Stato dell'avviso lasciato com'era.")
+        segnala_fonte_ko(
+            "nessun PDF di allertamento nella pagina (pagina cambiata o non raggiungibile"
+            + (f": {'; '.join(errori_indice)}" if errori_indice else "") + "). Avviso lasciato com'era."
+        )
         allerta = load_allerta()
         corrente = allerta.get("avviso_meteo")
-        scaduto = False
-        if corrente and corrente.get("validita_fine"):
-            try:
-                scaduto = now > datetime.fromisoformat(corrente["validita_fine"])
-            except ValueError:
-                scaduto = False
+        scaduto = avviso_scaduto(corrente, now)
         if scaduto:
             print(f"⚠️  Avviso meteo scaduto ({corrente.get('validita_fine')}): lo tolgo")
             del allerta["avviso_meteo"]
@@ -268,10 +300,16 @@ def main():
     # Filtra per data dal nome (lookback)
     candidates = []
     cutoff = now - timedelta(days=LOOKBACK_DAYS)
+    # Allertamenti recenti che non si sono potuti leggere: se ce n'è anche uno
+    # solo, «nessun avviso in corso» non è una conclusione affidabile.
+    non_letti = []
     for path in pdf_paths:
         filename = urllib.parse.unquote(path.rsplit("/", 1)[-1])
         data_pdf = estrai_data_da_nome(filename)
         if data_pdf is None:
+            # Senza data nel nome il PDF non si può collocare nel tempo: è un
+            # cambio di nomenclatura da riparare, non un PDF da ignorare.
+            non_letti.append((None, f"{filename}: data non riconosciuta nel nome"))
             continue
         if data_pdf < cutoff:
             continue
@@ -291,17 +329,30 @@ def main():
                 pdf_bytes = r.read()
         except Exception as e:
             print(f"  ⏭️  {filename}: impossibile scaricare ({e})")
+            non_letti.append((data_pdf, f"{filename}: non scaricabile ({e})"))
             continue
         if not pdf_bytes.startswith(b"%PDF"):
             print(f"  ⏭️  {filename}: la risposta non è un PDF ({len(pdf_bytes)} bytes)")
+            non_letti.append((data_pdf, f"{filename}: la risposta non è un PDF"))
             continue
 
-        testo = parse_pdf(pdf_bytes)
+        try:
+            testo = parse_pdf(pdf_bytes)
+        except (OSError, subprocess.SubprocessError) as e:
+            testo = ""
+            print(f"  ⏭️  {filename}: pdftotext non eseguibile ({e})")
         if not testo:
             print(f"  ⏭️  {filename}: pdftotext output vuoto")
+            non_letti.append((data_pdf, f"{filename}: testo non estraibile (pdftotext)"))
             continue
 
         rischio_raw = estrai_rischio(testo)
+        if rischio_raw is None:
+            # Tutti gli allertamenti regionali riportano «PER I SEGUENTI
+            # RISCHI:» (verificato il 17/10/2026): se manca, il modello è cambiato.
+            print(f"  ⏭️  {filename}: «PER I SEGUENTI RISCHI» non trovato")
+            non_letti.append((data_pdf, f"{filename}: «PER I SEGUENTI RISCHI» non trovato, formato cambiato?"))
+            continue
         tipo = classifica_rischio(rischio_raw)
         if not tipo:
             print(f"  ⏭️  {filename}: rischio='{rischio_raw}' (skip, idrogeologico già coperto)")
@@ -335,8 +386,25 @@ def main():
     allerta = load_allerta()
     avviso_corrente = allerta.get("avviso_meteo")
 
+    # Letture fallite più recenti dell'avviso scelto (o qualsiasi, se non se ne
+    # è scelto nessuno): il risultato non è affidabile per togliere o cambiare
+    # l'avviso salvato.
+    data_scelta = datetime.fromisoformat(avviso_attivo["fonte_data"]).replace(tzinfo=ROME_TZ) if avviso_attivo else None
+    dubbi = [m for d, m in non_letti if d is None or data_scelta is None or d >= data_scelta]
+    if non_letti:
+        segnala_fonte_ko("; ".join(m for _, m in non_letti))
+
     changed = False
-    if avviso_attivo:
+    if dubbi and avviso_corrente and not avviso_scaduto(avviso_corrente, now):
+        print("⚠️  Lettura incompleta: l'avviso meteo in vigore resta com'era finché la fonte non si legge di nuovo")
+    elif dubbi and not avviso_attivo:
+        if avviso_corrente:
+            print(f"⚠️  Avviso meteo scaduto ({avviso_corrente.get('validita_fine')}): lo tolgo")
+            del allerta["avviso_meteo"]
+            changed = True
+        else:
+            print("ℹ️  Lettura incompleta e nessun avviso salvato: nulla da cambiare")
+    elif avviso_attivo:
         if not avviso_corrente or avviso_corrente.get("tipo") != avviso_attivo["tipo"] or avviso_corrente.get("livello") != avviso_attivo["livello"]:
             print(f"⚠️  Aggiornamento avviso_meteo: {avviso_corrente.get('tipo') if avviso_corrente else 'nessuno'} → {avviso_attivo['tipo']} ({avviso_attivo['livello']})")
             changed = True

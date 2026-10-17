@@ -89,11 +89,12 @@ jobs:
           print(f"immagini={d.get('totale_immagini', 0)}")
           print(f"dirette={d['totale_dirette']}")
           print(f"errori={len(d['errori'])}")
+          print(f"errori_news={len(d.get('errori_news', []))}")
           PY
           echo "[info] voci: $(python3 -c "import json; print(json.load(open('novita.json'))['totale'])")"
 
       - name: Crea label se mancanti
-        if: steps.sweep.outputs.totale != '0' || steps.sweep.outputs.errori != '0'
+        if: steps.sweep.outputs.totale != '0' || steps.sweep.outputs.errori != '0' || steps.sweep.outputs.errori_news != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -121,28 +122,53 @@ jobs:
             --body-file issue_body.md \
             --label "normativa-watcher,automazione"
 
+      # Una fonte che non risponde va riparata, non ignorata (istruzione
+      # dell'utente del 17/10/2026): due issue `fonte-rotta` in-place, una per
+      # le fonti primarie (lette ogni giorno) e una per la rassegna stampa
+      # (letta il lunedì), così un giro di sole primarie non chiude per errore
+      # la segnalazione di Google News. Si chiudono da sole al primo giro che
+      # rilegge tutte le fonti del loro gruppo; l'ultimo step rende rosso il run.
       - name: Segnala fonti irraggiungibili (issue in-place)
-        if: steps.sweep.outputs.errori != '0'
+        if: always() && steps.sweep.outcome == 'success'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FONTI: ${{ steps.piano.outputs.fonti }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          TITOLO="⚠️ Normativa watcher: una o più fonti primarie non rispondono"
-          CORPO=$(python3 -c "import json; d=json.load(open('novita.json')); print('Fonti in errore nel run del ' + d['generato_il'][:16] + ' UTC:\n\n- ' + '\n- '.join(d['errori']) + '\n\nSe l\'errore persiste per più giorni la struttura della pagina è probabilmente cambiata: aggiornare il parser in \`scripts/normativa-watcher.py\` (rule 10 § Normativa watcher). Questa issue si chiude da sola al primo run senza errori.\n\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}')")
-          N=$(gh issue list --search "in:title \"$TITOLO\"" --state open --json number --jq '.[0].number // empty')
-          if [ -n "$N" ]; then
-            gh issue comment "$N" --body "$CORPO"
-          else
-            gh issue create --title "$TITOLO" --body "$CORPO" --label "normativa-watcher,automazione"
-          fi
-
-      - name: Chiudi la segnalazione fonti se tutto risponde
-        if: steps.sweep.outputs.errori == '0'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TITOLO="⚠️ Normativa watcher: una o più fonti primarie non rispondono"
-          N=$(gh issue list --search "in:title \"$TITOLO\"" --state open --json number --jq '.[0].number // empty')
-          [ -n "$N" ] && gh issue close "$N" --comment "Tutte le fonti primarie rispondono di nuovo (run ${{ github.run_id }})." || true
+          set -euo pipefail
+          gh label create fonte-rotta --color B60205 --description "Una fonte esterna non risponde: da riparare" 2>/dev/null || true
+          gestisci () {
+            # $1 = chiave nel JSON, $2 = titolo, $3 = 1 se il giro ha letto quel gruppo
+            local chiave="$1" titolo="$2" letto="$3" n
+            n=$(gh issue list --state open --limit 100 --json number,title \
+                  --jq ".[] | select(.title == \"$titolo\") | .number" | head -n 1)
+            if python3 -c "import json,sys; sys.exit(0 if json.load(open('novita.json')).get('$chiave') else 1)"; then
+              python3 - "$chiave" > /tmp/fonti-body.md <<'PYB'
+          import json, os, sys
+          d = json.load(open('novita.json'))
+          print('Fonti in errore nel run del ' + d['generato_il'][:16] + ' UTC:\n')
+          print('- ' + '\n- '.join(d[sys.argv[1]]) + '\n')
+          print("Se l'errore persiste la struttura o l'indirizzo della fonte è probabilmente cambiato: "
+                "riprodurlo con `python3 scripts/normativa-watcher.py --days 2 --fonti " + os.environ['FONTI'] + "`, "
+                "trovare il nuovo indirizzo sul sito dell'ente, verificarlo con una richiesta reale e aggiornare "
+                "il parser o l'elenco in `scripts/normativa-watcher.py` (rule 10 § Normativa watcher). "
+                "Questa issue si chiude da sola al primo giro che rilegge tutte queste fonti.\n")
+          print('Run: ' + os.environ['RUN_URL'])
+          PYB
+              if [ -n "$n" ]; then
+                gh issue edit "$n" --add-label fonte-rotta
+                gh issue comment "$n" --body-file /tmp/fonti-body.md
+              else
+                gh issue create --title "$titolo" --body-file /tmp/fonti-body.md --label "normativa-watcher,automazione,fonte-rotta"
+              fi
+            elif [ -n "$n" ] && [ "$letto" = "1" ]; then
+              gh issue close "$n" --comment "Tutte le fonti rispondono di nuovo (run ${{ github.run_id }})."
+            fi
+          }
+          case "$FONTI" in primarie|tutte) P=1 ;; *) P=0 ;; esac
+          case "$FONTI" in news|tutte) N=1 ;; *) N=0 ;; esac
+          gestisci errori "⚠️ Normativa watcher: una o più fonti primarie non rispondono" "$P"
+          gestisci errori_news "⚠️ Normativa watcher: una o più fonti della rassegna stampa non rispondono" "$N"
 
       - name: Log silenzioso (se zero voci)
         if: steps.sweep.outputs.totale == '0'
@@ -157,3 +183,9 @@ jobs:
             novita.json
             issue_body.md
           retention-days: 14
+
+      - name: Run rosso se una fonte non risponde
+        if: steps.sweep.outputs.errori != '0' || steps.sweep.outputs.errori_news != '0'
+        run: |
+          echo "::error::Fonti in errore: ${{ steps.sweep.outputs.errori }} primarie/EU Space, ${{ steps.sweep.outputs.errori_news }} della rassegna stampa. Elenco nella issue fonte-rotta e in novita.json."
+          exit 1

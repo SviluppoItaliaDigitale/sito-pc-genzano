@@ -12,6 +12,12 @@ name: Controllo settimanale delle copie
 # Apre o aggiorna UNA sola issue in-place (titolo stabile): il corpo si
 # riscrive a ogni giro, così l'issue dice sempre lo stato della settimana e
 # non accumula commenti. Non tocca il sito, non fa deploy.
+# Dal 17/10/2026 i feed delle testate che non rispondono (e Google News, se
+# nessuna ricerca va a buon fine) non restano in un riquadro chiuso: stanno in
+# testa alla issue, finiscono in una issue `fonte-rotta` separata che si
+# chiude da sola quando rispondono di nuovo, e il run diventa rosso
+# (istruzione dell'utente: «gli errori 404 e simili non devono mai essere
+# ignorati»).
 #
 # Scaglionato lunedì 07:47 UTC (fuori dagli altri controlli del lunedì).
 
@@ -38,9 +44,14 @@ jobs:
       - name: Cerca le copie degli articoli recenti
         env:
           TZ: Europe/Rome
-        # Lo script esce sempre con 0: testate o pagine che non rispondono
-        # finiscono annotate nell'issue.
-        run: python3 scripts/controllo-copie.py --issue-body /tmp/controllo-copie.md
+        # Lo script esce con 0 anche se una fonte non risponde: le fonti
+        # rotte le elenca in /tmp/fonti-ko.md, e i passi sotto le trattano.
+        id: copie
+        run: |
+          set -euo pipefail
+          rm -f /tmp/fonti-ko.md
+          python3 scripts/controllo-copie.py --issue-body /tmp/controllo-copie.md --fonti-ko /tmp/fonti-ko.md
+          [ -s /tmp/fonti-ko.md ] && echo "fonti_ko=true" >> "$GITHUB_OUTPUT" || echo "fonti_ko=false" >> "$GITHUB_OUTPUT"
 
       - name: Apri o aggiorna l'issue
         env:
@@ -65,3 +76,52 @@ jobs:
               --label "automazione" \
               --label "copie"
           fi
+
+      - name: Issue per le fonti che non rispondono
+        # La issue `fonte-rotta` la prende in carico la routine giornaliera
+        # delle issue automatiche (rule 10): una testata che ha cambiato
+        # indirizzo del feed si ripara, non si annota.
+        if: always() && steps.copie.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FONTI_KO: ${{ steps.copie.outputs.fonti_ko }}
+        run: |
+          set -euo pipefail
+          TITLE="Controllo copie: una o più fonti non rispondono"
+          # Per titolo e senza la label `copie`: la issue principale si cerca
+          # per automazione+copie e non deve trovare questa.
+          EXISTING=$(gh issue list --label "fonte-rotta" --state open --limit 100 \
+            --json number,title --jq ".[] | select(.title == \"$TITLE\") | .number" | head -n 1)
+          if [ "$FONTI_KO" = "true" ]; then
+            {
+              echo "Il controllo settimanale delle copie ($(date -u +%d/%m/%Y)) non ha potuto leggere queste fonti:"
+              echo ""
+              cat /tmp/fonti-ko.md
+              echo ""
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "## Che cosa fare"
+              echo ""
+              echo "1. Aprire il sito della testata e cercare il nuovo indirizzo del feed RSS (link \`rel=alternate\` nella pagina, oppure \`/feed/\` sui siti WordPress); verificarlo con una richiesta reale."
+              echo "2. Aggiornare l'indirizzo in \`TESTATE\` di \`scripts/controllo-copie.py\`; se la testata ha chiuso o non ha più un feed, toglierla scrivendo il motivo nel commento dell'elenco."
+              echo "3. Per Google News: riprodurre con \`python3 scripts/controllo-copie.py --dry-run\` e controllare l'indirizzo \`GOOGLE_NEWS\`."
+              echo "4. Rilanciare il workflow: questa issue si chiude da sola al primo giro in cui tutte le fonti rispondono."
+            } > /tmp/fonti-body.md
+            if [ -n "$EXISTING" ]; then
+              gh issue comment "$EXISTING" --body-file /tmp/fonti-body.md
+            else
+              gh label create "fonte-rotta" --color "B60205" \
+                --description "Una fonte esterna non risponde: da riparare" 2>/dev/null || true
+              gh issue create --title "$TITLE" --body-file /tmp/fonti-body.md \
+                --label "automazione" --label "fonte-rotta"
+            fi
+          elif [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "Tutte le fonti rispondono di nuovo (run ${{ github.run_id }})."
+          fi
+
+      - name: Run rosso se una fonte non risponde
+        if: steps.copie.outputs.fonti_ko == 'true'
+        run: |
+          echo "::error::Una o più fonti del controllo copie non hanno risposto: il controllo è incompleto (issue fonte-rotta aperta o aggiornata)."
+          cat /tmp/fonti-ko.md
+          exit 1

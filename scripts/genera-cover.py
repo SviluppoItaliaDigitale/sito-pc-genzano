@@ -8,7 +8,8 @@ Genera cover grafiche istituzionali per gli articoli del sito.
 Composizione in Python+Pillow (non ImageMagick) per essere cross-platform e
 indipendente dalla fragilità ImageMagick v6/v7 (delegate WebP, font discovery,
 sintassi diversa). Stessa scelta gia' adottata per applica-fascia-foto.py.
-Dipendenze: python3-pil (Pillow) + font Liberation Sans (fonts-liberation).
+Dipendenze: python3-pil (Pillow). Font: Titillium Web dal repo (come le grafiche
+social), con Liberation Sans (fonts-liberation) come ripiego.
 
 Uso:
     python3 scripts/genera-cover.py content/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica.md
@@ -39,20 +40,22 @@ PRIMARY = "#003366"
 PRIMARY_DARK = "#001a33"
 WHITE = "#ffffff"
 
+# Palette ufficiale delle categorie (rule 02, la stessa del sito e delle
+# grafiche social): bianco su questi colori >= 4,5:1 (WCAG AA).
 BADGE_COLORS = {
-    "Allerta": "#d32f2f",
-    "Emergenza": "#b71c1c",
-    "Avviso": "#f57c00",
-    "Prevenzione": "#1565c0",
-    "Informazione": "#0277bd",
-    "Formazione": "#6a1b9a",
-    "Evento": "#2e7d32",
-    "Volontariato": "#00695c",
-    "Attività": "#455a64",
-    "Radiocomunicazioni": "#37474f",
-    "Esercitazione": "#4527a0",
-    "Aggiornamento": "#546e7a",
-    "Comunicazione": "#263238",
+    "Allerta": "#d9364f",
+    "Emergenza": "#7f1d1d",
+    "Avviso": "#b45309",
+    "Prevenzione": "#15803d",
+    "Informazione": "#075985",
+    "Formazione": "#7c3aed",
+    "Evento": "#c026d3",
+    "Volontariato": "#b45309",
+    "Attività": "#0e7490",
+    "Radiocomunicazioni": "#0369a1",
+    "Esercitazione": "#c2410c",
+    "Aggiornamento": "#4338ca",
+    "Comunicazione": "#003366",  # come lo sfondo: si contorna (vedi sotto)
 }
 
 W, H = 1200, 630
@@ -76,7 +79,16 @@ _FONT_FILES = {
 _font_cache: dict = {}
 
 
+# Font ufficiale del design system .italia, già nel repo (come le grafiche
+# social): le cover parlano con la stessa voce del sito. Liberation Sans resta
+# come ripiego se il file mancasse.
+TITILLIUM_DIR = ROOT / "static" / "vendor" / "bootstrap-italia" / "fonts" / "Titillium_Web"
+
+
 def _font_path(bold: bool) -> str | None:
+    tit = TITILLIUM_DIR / f"titillium-web-v10-latin-ext_latin-{'700' if bold else 'regular'}.ttf"
+    if tit.is_file():
+        return str(tit)
     for d in _FONT_DIRS:
         for name in _FONT_FILES[bold]:
             p = Path(d) / name
@@ -205,9 +217,15 @@ def generate_cover(md_path: Path, force: bool = False,
     d.polygon([(W - 180, 0), (W, 0), (W, 220), (W - 20, 220)], fill=accent)
 
     # Badge pill
-    badge_w = 40 + 12 * len(badge)
-    d.rounded_rectangle([80, 70, 80 + badge_w, 120], radius=10, fill=accent)
-    d.text((80 + badge_w / 2, 95), badge.upper(), font=font(True, 22),
+    # Larghezza misurata sul testo vero (prima era stimata a 12 px per
+    # lettera e le parole lunghe, come AGGIORNAMENTO, uscivano dal riquadro).
+    badge_font = font(True, 22)
+    badge_w = round(d.textlength(badge.upper(), font=badge_font)) + 2 * 22
+    # Un badge dello stesso blu dello sfondo sparirebbe: lo si contorna.
+    contorno = (255, 255, 255, 140) if accent == primary else None
+    d.rounded_rectangle([80, 70, 80 + badge_w, 120], radius=10, fill=accent,
+                        outline=contorno, width=2 if contorno else 0)
+    d.text((80 + badge_w / 2, 95), badge.upper(), font=badge_font,
            fill=white, anchor="mm")
 
     # Linea separatrice sopra la banda

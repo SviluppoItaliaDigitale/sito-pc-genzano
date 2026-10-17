@@ -18,7 +18,7 @@ Il **controesodo** è il fenomeno dei rientri dalle vacanze estive. I primi flus
 
 ## Pianificare il viaggio
 
-- Controllare le **previsioni di traffico** su [Viabilità Italia](https://www.poliziadistato.it/articolo/viabilita-italia) e sui bollettini Autostrade.
+- Controllare le **previsioni di traffico** su [Viabilità Italia](https://www.interno.gov.it/it/ministero/osservatori-commissioni-e-centri-coordinamento/viabilita-italia) e sui bollettini Autostrade.
 - Preferire le **partenze nelle prime ore del mattino** o **serali** in giornate caldissime.
 - Verificare lo **stato del veicolo**: pneumatici, livelli dei liquidi, impianto di climatizzazione.
 - Calcolare **pause ogni due ore** e assicurarsi di avere acqua a bordo.
@@ -71,7 +71,7 @@ Chi viaggia con **bambini piccoli** o **anziani** deve prevedere:
 
 ## Per approfondire
 
-- [Viabilità Italia](https://www.poliziadistato.it/articolo/viabilita-italia)
+- [Viabilità Italia](https://www.interno.gov.it/it/ministero/osservatori-commissioni-e-centri-coordinamento/viabilita-italia)
 - [Autostrade — traffico](https://www.autostrade.it/)
 - [Polizia Stradale](https://www.poliziadistato.it/)
 

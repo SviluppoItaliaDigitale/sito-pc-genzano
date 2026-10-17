@@ -21,6 +21,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: aggiorna-video
@@ -45,7 +46,25 @@ jobs:
         run: pip install pyyaml
 
       - name: Video recenti dai feed RSS dei canali
-        run: python3 scripts/aggiorna-catalogo-video-feed.py
+        id: feed
+        run: |
+          set -uo pipefail
+          # Codice 3 = almeno un canale non ha risposto: lo script ha già
+          # scritto i dati buoni (i video nuovi degli altri canali), quindi si
+          # prosegue col commit; la issue `fonte-rotta` e il run rosso
+          # arrivano negli ultimi step (istruzione del 17/10/2026).
+          RC=0
+          python3 scripts/aggiorna-catalogo-video-feed.py > /tmp/stdout.txt || RC=$?
+          cat /tmp/stdout.txt
+          echo "rc=$RC" >> "$GITHUB_OUTPUT"
+          if [ "$RC" -eq 3 ]; then
+            echo "fonti_ko=true" >> "$GITHUB_OUTPUT"
+            grep "^FONTI_IN_ERRORE: " /tmp/stdout.txt | sed 's/^FONTI_IN_ERRORE: //' | sed 's/; /\n/g' > /tmp/fonti-ko.txt || true
+            { echo "## Canali che non rispondono"; echo ""; sed 's/^/- /' /tmp/fonti-ko.txt; } >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$RC" -ne 0 ]; then
+            echo "::error::Lo script è terminato con codice $RC (errore inatteso, vedi il log)."
+            exit "$RC"
+          fi
 
       - name: Genera mappa video correlati
         # Stessi default della scansione mensile (fonte unica di verità
@@ -101,3 +120,51 @@ jobs:
             if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
           done
           echo "Mappa video aggiornata nel repo; deploy delegato a deploy-coalescer.yml."
+
+      - name: Issue per i canali che non rispondono
+        # Un canale morto va riparato, non ignorato (istruzione dell'utente
+        # del 17/10/2026): la issue `fonte-rotta` la prende in carico la
+        # routine giornaliera delle issue automatiche (rule 10). Si chiude
+        # da sola al primo run in cui tutti i canali rispondono.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FONTI_KO: ${{ steps.feed.outputs.fonti_ko }}
+          RC: ${{ steps.feed.outputs.rc }}
+        run: |
+          set -euo pipefail
+          TITLE="Video: una o più fonti non rispondono (aggiorna-video-feed)"
+          EXISTING=$(gh issue list --label "fonte-rotta" --state open --limit 100 --json number,title \
+            | jq -r --arg t "$TITLE" '[.[] | select(.title == $t)][0].number // empty')
+          if [ "${FONTI_KO:-}" = "true" ]; then
+            {
+              echo "L'aggiornamento settimanale dai feed RSS dei canali non ha potuto leggere questi canali YouTube:"
+              echo ""
+              sed 's/^/- /' /tmp/fonti-ko.txt 2>/dev/null || echo "- (vedi il log)"
+              echo ""
+              echo "I loro video **non sono stati tolti** dal catalogo: restano quelli dell'ultima lettura riuscita."
+              echo ""
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "## Che cosa fare"
+              echo ""
+              echo "1. Riprodurre l'errore: \`python3 scripts/aggiorna-catalogo-video-feed.py --dry-run\`."
+              echo "2. Verificare l'ID del canale (\`CHANNEL_IDS\` in \`scripts/aggiorna-catalogo-video-feed.py\`) con una richiesta reale a \`https://www.youtube.com/feeds/videos.xml?channel_id=<ID>\`; se è cambiato, ricavare quello nuovo dal campo \`externalId\` della pagina del canale."
+              echo "3. Se il canale non esiste più e non ha sostituti, toglierlo da \`CANALI\` in \`scripts/scrape-catalogo-video.py\` e da \`CHANNEL_IDS\` in \`scripts/aggiorna-catalogo-video-feed.py\`, e documentarlo in \`manuale/parte-32\`."
+              echo "4. Rilanciare il workflow: la issue si chiude da sola al primo run in cui tutti i canali rispondono."
+            } > /tmp/fonti-body.md
+            if [ -n "$EXISTING" ]; then
+              gh issue comment "$EXISTING" --body-file /tmp/fonti-body.md
+            else
+              gh issue create --title "$TITLE" --body-file /tmp/fonti-body.md \
+                --label "automazione" --label "fonte-rotta"
+            fi
+          elif [ -n "$EXISTING" ] && [ "${RC:-}" = "0" ]; then
+            gh issue close "$EXISTING" --comment "Tutti i canali rispondono di nuovo (run ${{ github.run_id }})."
+          fi
+
+      - name: Segnala i canali che non rispondono
+        if: steps.feed.outputs.fonti_ko == 'true'
+        run: |
+          echo "::error::Uno o più canali YouTube non hanno risposto: dati aggiornati solo per gli altri. Dettagli nel riepilogo del run."
+          exit 1
