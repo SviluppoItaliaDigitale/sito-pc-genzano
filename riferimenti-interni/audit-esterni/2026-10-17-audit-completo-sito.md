@@ -51,7 +51,7 @@ Le valutazioni sono giudizi editoriali motivati, non punteggi di uno standard o 
 4. Il cruscotto ha caricato i terremoti con data di aggiornamento, tabella testuale e fonte INGV. La scheda Allerta avverte quando il controllo pubblicato non è recente.
 5. I materiali per le scuole comprendono fasce d'età, durata, istruzioni e collegamenti ai percorsi. Gli esperimenti esaminati descrivono anche i limiti del modello e la presenza dell'adulto.
 6. L'offerta di lettura facile, voce, LIS, comunicazione aumentativa e sintesi tradotte aumenta le possibilità di accesso. La sola presenza di questi supporti non dimostra la conformità complessiva.
-7. Tutte le pagine HTML scansionate hanno un H1, lingua dichiarata, descrizione è un canonical. Non sono state trovate immagini prive dell'attributo alt nell'HTML iniziale; non è stata verificata a vista la correttezza di ogni descrizione.
+7. Tutte le pagine HTML scansionate hanno un H1, lingua dichiarata, descrizione e un canonical. Non sono state trovate immagini prive dell'attributo alt nell'HTML iniziale; non è stata verificata a vista la correttezza di ogni descrizione.
 8. HTTP e dominio senza www conducono alla versione HTTPS con www. Una pagina volutamente inesistente restituisce 404. Sono attivi HSTS, nosniff, protezione da incorporamento e una Content Security Policy applicata dal server.
 
 ## 5. Rilievi da verificare e correggere
