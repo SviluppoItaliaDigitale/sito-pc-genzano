@@ -140,6 +140,67 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
+- **2026-10-16 — da Claude a ChatGPT — Slide per chi conduce le lezioni: Percorso 1, Protezione Civile di base** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1440; ramo `chatgpt/slide-percorso-1-20261016`)
+  - **Avvio a mano (Alessandro).** In Codex Cloud: ambiente del repository, ramo `chatgpt/slide-percorso-1-20261016` se il selettore lo offre, poi il testo di avvio (intestazione più le sette parti qui sotto: lo stampa `passa-a.py nuovo`, lo ristampa `passa-a.py riavvia --pr 1440`). A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1440 --consegna M`.
+  - **16/10/2026, 13:35 — crediti di Codex finiti.** Il lavoro lo fa Claude sullo stesso ramo, seguendo la richiesta qui sotto; la PR resta in bozza e si unisce solo dopo l'ok di Alessandro.
+  - **1. Obiettivo.**
+    Preparare le slide per i formatori del Gruppo che portano nelle scuole il Percorso 1 «Protezione Civile di base» (primaria, classi III-V, 4 lezioni da un'ora; pagina `/formazione/percorsi-didattici/#percorso-1`): una presentazione PowerPoint modificabile per lezione, con le note per chi parla in ogni slide, generata da un file di dati. È la prova della proposta 94: Alessandro guarda le slide prima che vadano sul sito.
+  - **2. File.**
+    Da creare:
+    - `data/slide_lezioni.yaml` — testi delle 4 lezioni, slide per slide, con le note
+    - `scripts/genera-slide-lezioni.py` — generatore (python-pptx)
+
+    Da modificare:
+    - `content/formazione/percorsi-didattici/_index.md` — sotto la tabella «Articolazione» del Percorso 1, il paragrafo con i link alle slide
+    - `content/area-download/_index.md` — nella sezione «Materiali per le scuole», le stesse righe
+
+    Nessun altro file. Nessun file binario: i `.pptx` e i `.pdf` (cartella `static/formazione/slide-lezioni/`) li genera con lo script e li aggiunge chi chiude il lavoro.
+  - **3. Che cosa fare.**
+    1. Leggi prima: `scripts/genera-presentazione.py` (generatore del deck del sito: riprendi formato 16:9 di 13,333 × 7,5 pollici, colori `PRIMARY` #003366 e `ACCENT` #FFBE2E, `DARK`, `GREY` e lo stile pulito delle slide; non modificarlo); le regole del repository (cartella `rules/` della configurazione nascosta, trovale con `find . -name '02-content-design-pa.md'`): `02-content-design-pa.md` § «Composizione standard di ogni nuova grafica» e § «Personaggi delle storie per bambini», `06-protezione-civile-scientifica.md` (numeri di emergenza, manifestazioni pubbliche); la sezione del Percorso 1 in `content/formazione/percorsi-didattici/_index.md`; `content/formazione/kit-scuola-primaria.md` (guida per il docente e Modulo 1).
+
+    2. Ogni lezione ha 10-14 slide per un'ora:
+       - **copertina**: titolo della lezione, «Percorso 1 · Protezione Civile di base · Primaria, classi III-V», logo del Gruppo `static/images/logo-pc-genzano-hires.png`;
+       - **Oggi scopriamo**: 2-3 obiettivi detti come a bambini di 8-11 anni;
+       - **apertura**: una domanda o una piccola storia con Flavio;
+       - **5-8 slide di contenuto**: una sola idea per slide, al massimo 5 righe brevi, un'immagine accanto;
+       - **attività**: la scheda da distribuire (quella indicata nella tabella del Percorso 1, con il suo indirizzo sul sito), quanto dura, come si svolge;
+       - **Ricordiamo**: 3 punti;
+       - **ultima slide**: fonti (le pagine del sito usate, con l'indirizzo), licenza, attribuzione dei pittogrammi e il blocco delle tre affiliazioni: Quality Label del Corpo europeo di solidarietà (`static/images/logo-esc-quality-label-it.png`) con accanto il codice **E10435833** ben leggibile, Coordinamento FE.PI.VOL. (`static/images/logo-fepivol.png`), SNPC Volontariato (`static/images/logo-snpc-volontariato.png`).
+       Esattamente quattro loghi per lezione: il logo del Gruppo solo in copertina, le tre affiliazioni solo nell'ultima slide; nessun doppione, nessun altro logo.
+
+    3. **Note per chi parla** in ogni slide (nelle note di PowerPoint), con quattro voci: «Cosa dire» (3-6 frasi semplici, come le direbbe un volontario ai bambini), «Domanda alla classe», «Tempo» in minuti (la somma per lezione fa 60), «Attenzione» dove serve (per esempio: se un bambino racconta un terremoto vissuto, ascoltarlo e rassicurarlo; mai la paura come leva).
+
+    4. Contenuti: solo fatti scritti in queste pagine. Se un fatto non c'è, non scriverlo e dillo nel riassunto.
+       - **Lezione 1 — Che cos'è la Protezione Civile**: Modulo 1 di `content/formazione/kit-scuola-primaria.md`, `content/manuale/01-che-cose-la-protezione-civile.md`, `content/manuale/02-storia-della-protezione-civile-in-italia.md` (solo i passaggi adatti all'età), `content/manuale/61-le-quattro-attivita.md` (previsione, prevenzione, soccorso, superamento), `content/chi-siamo/_index.md`.
+       - **Lezione 2 — Il 112**: `content/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare.md`, `static/formazione/schede-stampabili/chiamo-112-primaria/index.html`, `static/formazione/schede-stampabili/il-numero-112-primaria/index.html`, `content/rischi-prevenzione/idee-sbagliate.md` (voci `#numero-unico` e `#chiamare-gruppo`). Attività: gioco di ruolo della telefonata con la scheda «Chiamo il 112 — Primaria».
+       - **Lezione 3 — I rischi del nostro territorio**: `content/rischi-prevenzione/scuole-genzano-rischi-locali.md`, `content/rischi-prevenzione/rischi-in-parole-semplici.md`, `content/rischi-prevenzione/rischio-sismico.md`, `content/rischi-prevenzione/rischio-idrogeologico.md`, `content/rischi-prevenzione/rischio-incendio.md`; scheda `static/formazione/schede-stampabili/geografia-sismica-italia-primaria/index.html`. Solo i tre rischi del percorso: terremoto, piogge forti con frane e allagamenti, incendi.
+       - **Lezione 4 — I volontari**: `content/chi-siamo/_index.md`, `content/diventa-volontario/_index.md`, `static/formazione/schede-stampabili/intervista-volontario-primaria/index.html`, `static/formazione/schede-stampabili/costituzione-pc-primaria/index.html`.
+       - Dati fissi: nel Lazio il 112 è l'unico numero per qualsiasi emergenza (mai 115, 118 o 1515 come numeri da chiamare); il Gruppo Comunale non si chiama direttamente, lo attivano il Sindaco o la Sala Operativa; i nomi dei mezzi solo come in `content/chi-siamo/_index.md` § «Mezzi e attrezzature principali»; mai «viabilità», «traffico» o «palette» fra i compiti dei volontari (Circolare DPC del 6 agosto 2018).
+
+    5. Immagini: pittogrammi PNG da `static/pittogrammi/arasaac/` e, per la lezione 3, le illustrazioni già verificate `static/formazione/illustrazioni-udl/terremoto-tre-gesti.svg`, `allagamento-luoghi-sicuri.svg` e `incendio-boschivo-avvistamento.svg`, convertite in PNG al momento della generazione con `cairosvg` (larghezza 1600 px, file temporanei fuori dal repository). Ogni immagine ha il testo alternativo (attributo `descr` dell'immagine). Con i pittogrammi ARASAAC la lezione è sotto licenza CC BY-NC-SA 4.0: l'ultima slide lo dice e riporta l'attribuzione con il testo di `content/attribuzioni-pittogrammi/_index.md`.
+
+    6. Generatore `scripts/genera-slide-lezioni.py`, con due righe di spiegazione in testa. Legge `data/slide_lezioni.yaml` e scrive `static/formazione/slide-lezioni/percorso-1-lezione-<n>-<slug>.pptx`. Con `--pdf` converte ogni file con LibreOffice (`soffice --headless --convert-to pdf`). Con `--verifica` riapre i `.pptx` e controlla: ogni slide ha il titolo nel segnaposto del titolo, note non vuote, testo alternativo su ogni immagine, titoli di almeno 36 pt e testo di almeno 24 pt, somma dei tempi uguale a 60 per lezione, esattamente quattro loghi per file; esce con errore se un controllo fallisce. Carattere Arial, presente su ogni computer delle scuole. Proprietà del documento: autore «Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma», titolo della lezione, nessun campo che citi strumenti. Niente animazioni né transizioni.
+
+    7. Pagine del sito. Nel Percorso 1, subito sotto la tabella «Articolazione», un paragrafo «**Slide per chi conduce le lezioni**» con una frase su che cosa contengono (note per chi parla, tempi, attività) e una riga per lezione: «Lezione N — titolo: [PowerPoint (X MB)](/formazione/slide-lezioni/….pptx) · [PDF (X MB)](/formazione/slide-lezioni/….pdf)». Le stesse righe nella sezione «Materiali per le scuole» di `content/area-download/_index.md`. Le dimensioni sono quelle dei file generati, arrotondate a un decimale; se non li hai potuti generare scrivi «[dimensione da calcolare]» e dillo nel riassunto.
+  - **4. Vincoli.**
+    - Testi delle slide per bambini di 8-11 anni: frasi corte, parole comuni, «tu» e «voi», sigle spiegate, mai la paura come leva. Le note in italiano corretto da adulto.
+    - Personaggi: protagonista Flavio; altri nomi solo fra Silvia, Maria, Elio, Pasquale, Lina, Alessandro, Christian e Marco; la volontaria si chiama Anna.
+    - Contrasto del testo almeno 4,5:1; nessuna informazione affidata al solo colore; al massimo 5 righe per slide; niente foto di persone.
+    - Quattro loghi come al punto 3.2; nessun riferimento a strumenti automatici nei file, nelle proprietà dei documenti e nei messaggi di commit.
+    - Nessun fatto, numero, data o nome inventato.
+  - **5. Controlli.**
+    - `pip install python-pptx pyyaml cairosvg pillow`; se non si installano, scrivilo nel riassunto e salta i due controlli seguenti.
+    - `python3 scripts/genera-slide-lezioni.py` → quattro file `.pptx`; poi `python3 scripts/genera-slide-lezioni.py --verifica` → nessun errore.
+    - Se c'è LibreOffice: `python3 scripts/genera-slide-lezioni.py --pdf` → quattro PDF, ciascuno con tante pagine quante slide.
+    - Se `hugo` è installato: `hugo --minify --quiet` → nessun errore.
+    - `git status --short` → modificati solo i file del punto 2 (i `.pptx` e i `.pdf` restano fuori dai commit).
+  - **6. Consegna.**
+    Solo le modifiche ai file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti (per esempio «Slide del Percorso 1 per chi conduce le lezioni»). Alla fine un riassunto breve: fatto, non fatto e perché, fatti non trovati nelle fonti, controlli non eseguiti. `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla e non segnare pronta nessuna pull request. Non committare `.pptx`, `.pdf` o immagini. Non modificare `scripts/genera-presentazione.py` né altri file fuori dal punto 2. Non fare le slide degli altri percorsi. Non inventare fatti, numeri, nomi o fonti: se manca qualcosa, scrivilo nel riassunto finale.
+
+    Nota per chi chiude (istruzione di Alessandro del 16/10/2026): nulla va online senza il suo ok. La consegna si porta nel ramo con `chiudi --senza-merge`, si generano i `.pptx` e i PDF, si scrivono le dimensioni vere, si mandano le slide ad Alessandro e si unisce solo dopo il suo «pubblica».
+
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
   - **Quando**: Alessandro ti manda l'export del gestionale interventi (file `.xlsx`, di solito `gcpc-genzano-di-roma_global_reports_*.xlsx`) e scrive «aggiorna gli interventi» o simile. Lavora con **Codex** (serve eseguire gli script): il file va allegato al task.
   - **Mai nel repository il file `.xlsx`**: contiene i nomi dei volontari. Tienilo fuori dalla cartella del repository (per esempio `/tmp/`) e non fare `git add -A` senza guardare.
