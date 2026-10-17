@@ -1,16 +1,33 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-10-17T20:59:54+00:00",
+  "generato": "2026-10-17T22:58:40+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 100,
  "events": [
   {
+   "alertlevel": "Green",
+   "country": "México",
+   "datemodified": "2026-10-17T21:10:28",
+   "description": "Tropical Cyclone TRUDY-26",
+   "episodeid": 18,
+   "eventid": 1001337,
+   "eventname": "TRUDY-26",
+   "eventtype": "TC",
+   "fromdate": "2026-10-13T15:00:00",
+   "iso3": "MEX",
+   "lat": 17.5,
+   "lon": -105.0,
+   "name": "Tropical Cyclone TRUDY-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 194 km/h)",
+   "todate": "2026-10-17T21:00:00"
+  },
+  {
    "alertlevel": "Red",
    "country": "Guam, Northern Mariana Islands",
-   "datemodified": "2026-10-17T20:25:48",
+   "datemodified": "2026-10-17T21:01:19",
    "description": "Tropical Cyclone CHAMPI-26",
    "episodeid": 14,
    "eventid": 1001338,
@@ -27,7 +44,7 @@
   {
    "alertlevel": "Orange",
    "country": "Cook Islands",
-   "datemodified": "2026-10-17T20:28:34",
+   "datemodified": "2026-10-17T21:38:47",
    "description": "Tropical Cyclone WATI-26",
    "episodeid": 4,
    "eventid": 1001339,
@@ -56,23 +73,6 @@
    "name": "Earthquake in Bolivia",
    "severitytext": "Magnitude 4.6M, Depth:189.462km",
    "todate": "2026-10-17T16:52:45"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "México",
-   "datemodified": "2026-10-17T17:39:11",
-   "description": "Tropical Cyclone TRUDY-26",
-   "episodeid": 17,
-   "eventid": 1001337,
-   "eventname": "TRUDY-26",
-   "eventtype": "TC",
-   "fromdate": "2026-10-13T15:00:00",
-   "iso3": "MEX",
-   "lat": 16.6,
-   "lon": -103.9,
-   "name": "Tropical Cyclone TRUDY-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 194 km/h)",
-   "todate": "2026-10-17T15:00:00"
   },
   {
    "alertlevel": "Green",
