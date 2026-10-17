@@ -1,14 +1,27 @@
 {
  "_snapshot": {
-  "generato": "2026-10-17T01:09:26+00:00",
+  "generato": "2026-10-17T09:42:28+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 23,
+  "avvisi": 15,
   "scaduti_scartati": 0,
-  "in_corso": 7,
+  "in_corso": 1,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
+  {
+   "in_corso": false,
+   "regione": "Liguria",
+   "fenomeno": "Pioggia",
+   "livello": "rossa",
+   "evento_originale": "Red Rain Warning",
+   "severita": "Extreme",
+   "certezza": "Likely",
+   "inizio": "2026-10-18T00:00:00+00:00",
+   "fine": "2026-10-19T17:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.038"
+  },
   {
    "in_corso": false,
    "regione": "Piemonte",
@@ -18,9 +31,9 @@
    "severita": "Extreme",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.020"
+   "fine": "2026-10-19T05:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.034"
   },
   {
    "in_corso": false,
@@ -31,35 +44,22 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.029"
+   "fine": "2026-10-19T17:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.039"
   },
   {
    "in_corso": false,
-   "regione": "Liguria",
+   "regione": "Piemonte",
    "fenomeno": "Pioggia",
    "livello": "arancione",
    "evento_originale": "Orange Rain Warning",
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.028"
-  },
-  {
-   "in_corso": false,
-   "regione": "Piemonte",
-   "fenomeno": "Temporali",
-   "livello": "arancione",
-   "evento_originale": "Orange Thunderstorm Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.021"
+   "fine": "2026-10-19T05:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.035"
   },
   {
    "in_corso": false,
@@ -70,9 +70,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:34+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.017"
+   "fine": "2026-10-19T05:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.032"
   },
   {
    "in_corso": false,
@@ -83,61 +83,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T12:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.036"
-  },
-  {
-   "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-17T00:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.026"
-  },
-  {
-   "in_corso": false,
-   "regione": "Liguria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.030"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-17T00:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.027"
-  },
-  {
-   "in_corso": false,
-   "regione": "Lombardia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.025"
+   "fine": "2026-10-19T21:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.042"
   },
   {
    "in_corso": false,
@@ -148,35 +96,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.024"
-  },
-  {
-   "in_corso": true,
-   "regione": "Lombardia",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-17T00:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.023"
-  },
-  {
-   "in_corso": true,
-   "regione": "Marche",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-16T18:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.033"
+   "fine": "2026-10-18T23:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.037"
   },
   {
    "in_corso": false,
@@ -187,22 +109,22 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.022"
+   "fine": "2026-10-18T23:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.036"
   },
   {
    "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Nebbia",
+   "regione": "Sardegna",
+   "fenomeno": "Vento",
    "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
+   "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-17T00:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:34+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.019"
+   "inizio": "2026-10-17T08:00:00+00:00",
+   "fine": "2026-10-19T21:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.047"
   },
   {
    "in_corso": false,
@@ -213,9 +135,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T12:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.039"
+   "fine": "2026-10-19T21:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.046"
   },
   {
    "in_corso": false,
@@ -226,9 +148,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T06:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.038"
+   "fine": "2026-10-18T23:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.044"
   },
   {
    "in_corso": false,
@@ -240,8 +162,8 @@
    "certezza": "Likely",
    "inizio": "2026-10-17T12:00:00+00:00",
    "fine": "2026-10-17T23:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.037"
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.043"
   },
   {
    "in_corso": false,
@@ -252,9 +174,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.035"
+   "fine": "2026-10-19T05:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.041"
   },
   {
    "in_corso": false,
@@ -265,48 +187,22 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.034"
-  },
-  {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-16T18:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.031"
-  },
-  {
-   "in_corso": true,
-   "regione": "Umbria",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-16T18:00:00+00:00",
-   "fine": "2026-10-17T08:59:00+00:00",
-   "emesso": "2026-10-16T08:17:35+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.032"
+   "fine": "2026-10-19T05:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.040"
   },
   {
    "in_corso": false,
    "regione": "Valle d'Aosta",
-   "fenomeno": "Temporali",
+   "fenomeno": "Vento",
    "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
+   "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-18T00:00:00+00:00",
-   "fine": "2026-10-18T21:59:00+00:00",
-   "emesso": "2026-10-16T08:17:34+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261016101734.018"
+   "fine": "2026-10-18T23:59:00+00:00",
+   "emesso": "2026-10-17T08:40:43+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261017104043.033"
   }
  ]
 }
