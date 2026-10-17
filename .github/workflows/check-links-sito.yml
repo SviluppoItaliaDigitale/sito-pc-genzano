@@ -110,7 +110,11 @@ jobs:
             --exclude "/pagefind/"
             --exclude-path "public/vendor"
             --exclude-path "public/app-shared"
-            public/**/*.html
+            # Il glob va tra apici: lo espande lychee, ricorsivo. Senza apici la
+            # shell, che non ha globstar, lo leggeva come public/*/*.html e
+            # restavano fuori gli articoli e ogni pagina annidata (scoperto il
+            # 17/10/2026 negli altri siti: 5.822 link invece di 24.086).
+            'public/**/*.html'
           output: ./lychee-report.md
           fail: false
           format: markdown
