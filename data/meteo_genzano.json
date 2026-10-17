@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-17T07:02",
+  "aggiornato": "2026-10-17T08:02",
   "data_lunga": "sabato 17 ottobre 2026",
-  "aggiornato_label": "sabato 17 ottobre 2026, ore 07:02",
+  "aggiornato_label": "sabato 17 ottobre 2026, ore 08:02",
   "alba": "07:23",
   "tramonto": "18:25",
   "corrente": {
-    "temp": 14.9,
-    "percepita": 15.1,
+    "temp": 14.6,
+    "percepita": 14.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 85,
-    "vento": 4,
-    "raffiche": 18
+    "umidita": 82,
+    "vento": 5,
+    "raffiche": 16
   },
   "giorni": [
     {
@@ -19,10 +19,10 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 19,
-      "tmin": 15,
+      "tmin": 14,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 31,
+      "raffiche": 27,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -31,7 +31,7 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 20,
-      "tmin": 15,
+      "tmin": 14,
       "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 35,
@@ -74,24 +74,24 @@
     {
       "nome": "Rieti",
       "tmax": 22,
-      "tmin": 9,
+      "tmin": 8,
       "cielo": "Coperto"
     },
     {
       "nome": "Roma",
-      "tmax": 24,
+      "tmax": 23,
       "tmin": 15,
       "cielo": "Coperto"
     },
     {
       "nome": "Latina",
-      "tmax": 23,
+      "tmax": 22,
       "tmin": 16,
       "cielo": "Coperto"
     },
     {
       "nome": "Frosinone",
-      "tmax": 23,
+      "tmax": 22,
       "tmin": 13,
       "cielo": "Coperto"
     }
