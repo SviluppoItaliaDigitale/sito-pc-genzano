@@ -11,7 +11,6 @@ Logica:
   2. Fetcha:
      - Feed RSS del canale Io non rischio (15 video più recenti)
      - Feed RSS della playlist LIS DPC (12 storici)
-     - Feed RSS della playlist L'attimo decisivo (lezioni)
      - Feed RSS del canale DPCgov (15 video più recenti, filtra LIS)
      - HTML scrape del canale Abili a Proteggere (tutto, ~30 video)
   3. Filtra solo i video LIS plausibili (heuristica: titolo contiene "LIS",
@@ -19,6 +18,11 @@ Logica:
   4. Calcola differenza: video_id YouTube nuovi non in data/lis.yaml.
   5. Stampa report; se eseguito da GitHub Actions, output formattato per
      creazione issue automatica.
+  6. Se una fonte non risponde esce con codice 3 (dopo il report), così il
+     run diventa rosso e il controllo di salute giornaliero lo segnala:
+     fino al 17/10/2026 un errore restava solo nel log e il run era verde
+     (la playlist "L'attimo decisivo", eliminata da YouTube, dava 404 da
+     almeno due mesi senza che nessuno se ne accorgesse).
 
 Uso locale: python3 scripts/check-nuovi-video-lis.py
 Uso CI: invocato da .github/workflows/check-video-lis.yml ogni lunedì.
@@ -37,7 +41,6 @@ CHANNEL_INR = "UCdOg4quMoJDjQIkopcXkqCQ"       # Io non rischio (DPC + ANPAS + I
 CHANNEL_DPCGOV = "UC4fru33Tzpu0UhCIHChiNFA"    # Dipartimento Protezione Civile (PCM) — canale ufficiale
 CHANNEL_AAP = "UCjsiExhgS_2oL5dMwUsgd0Q"       # Abili a Proteggere (Europe Consulting)
 PLAYLIST_LIS_DPC = "PLyRppYk2-sTIDs7RX-2C0pB1ZmgtA0yMo"     # Materiali LIS ufficiali
-PLAYLIST_ATTIMO = "PLyRppYk2-sTKsMmo7PNnOabYpz2paC77V"      # Videolezioni L'attimo decisivo
 
 # Header HTTP per bypassare il consent banner YouTube
 HEADERS = {
@@ -128,6 +131,14 @@ def is_lis_plausible(title: str) -> bool:
                                  "in segni", "glossario in lis"))
 
 
+def esito_fonti(errori: list[str]) -> int:
+    """Codice di uscita: 0 se tutte le fonti hanno risposto, 3 altrimenti."""
+    if not errori:
+        return 0
+    print(f"FONTI_IN_ERRORE: {', '.join(errori)}")
+    return 3
+
+
 def main() -> int:
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     lis_yaml = os.path.join(repo_root, "data", "lis.yaml")
@@ -136,6 +147,7 @@ def main() -> int:
     print(f"Video LIS già integrati nel sito: {len(existing)}", file=sys.stderr)
 
     candidates: list[dict] = []
+    errori: list[str] = []  # fonti che non hanno risposto
 
     # 1) Feed playlist LIS ufficiale DPC (tutti i video sono LIS per definizione)
     try:
@@ -147,19 +159,9 @@ def main() -> int:
         print(f"  Playlist LIS DPC: {len(feed)} video", file=sys.stderr)
     except Exception as e:
         print(f"  Errore playlist LIS DPC: {e}", file=sys.stderr)
+        errori.append("playlist LIS DPC")
 
-    # 2) Feed playlist L'attimo decisivo (lezioni con LIS in sovrimpressione)
-    try:
-        feed = parse_feed(fetch(f"https://www.youtube.com/feeds/videos.xml?playlist_id={PLAYLIST_ATTIMO}"))
-        for v in feed:
-            v["channel"] = "io-non-rischio (playlist L'attimo decisivo)"
-            v["is_lis"] = True  # confermato dall'utente: tutti hanno interprete LIS in sovrimpressione
-            candidates.append(v)
-        print(f"  Playlist L'attimo decisivo: {len(feed)} video", file=sys.stderr)
-    except Exception as e:
-        print(f"  Errore playlist L'attimo decisivo: {e}", file=sys.stderr)
-
-    # 3) Feed canale Io non rischio (filtra per LIS nel titolo: Stromboli LIS ecc.)
+    # 2) Feed canale Io non rischio (filtra per LIS nel titolo: Stromboli LIS ecc.)
     try:
         feed = parse_feed(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_INR}"))
         for v in feed:
@@ -169,8 +171,9 @@ def main() -> int:
         print(f"  Canale Io non rischio: {len(feed)} video (di cui LIS plausibili: {sum(1 for v in feed if is_lis_plausible(v['title']))})", file=sys.stderr)
     except Exception as e:
         print(f"  Errore canale Io non rischio: {e}", file=sys.stderr)
+        errori.append("canale Io non rischio")
 
-    # 4) Feed canale DPCgov (ufficiale PCM) — filtra per LIS nel titolo.
+    # 3) Feed canale DPCgov (ufficiale PCM) — filtra per LIS nel titolo.
     # Il canale non ha playlist LIS dedicata, ma occasionalmente pubblica
     # video con interprete LIS (eventi istituzionali, conferenze stampa).
     try:
@@ -182,8 +185,9 @@ def main() -> int:
         print(f"  Canale DPCgov: {len(feed)} video (di cui LIS plausibili: {sum(1 for v in feed if is_lis_plausible(v['title']))})", file=sys.stderr)
     except Exception as e:
         print(f"  Errore canale DPCgov: {e}", file=sys.stderr)
+        errori.append("canale DPCgov")
 
-    # 5) Canale Abili a Proteggere (HTML scrape) — tutti i Glossario in LIS
+    # 4) Canale Abili a Proteggere (HTML scrape) — tutti i Glossario in LIS
     try:
         scraped = scrape_channel_videos("https://www.youtube.com/@abiliaproteggere4520/videos")
         for v in scraped:
@@ -193,6 +197,7 @@ def main() -> int:
         print(f"  Canale Abili a Proteggere: {len(scraped)} video", file=sys.stderr)
     except Exception as e:
         print(f"  Errore canale Abili a Proteggere: {e}", file=sys.stderr)
+        errori.append("canale Abili a Proteggere")
 
     # Dedup per videoId (alcuni video appaiono in più feed)
     seen_ids = set()
@@ -213,7 +218,7 @@ def main() -> int:
     if not nuovi_lis:
         print("OK_NO_NEW_VIDEOS")
         print("Nessun nuovo video LIS rilevato dai canali monitorati.")
-        return 0
+        return esito_fonti(errori)
 
     print("NEW_VIDEOS_FOUND")
     print(f"Nuovi video LIS rilevati: {len(nuovi_lis)}")
@@ -232,7 +237,7 @@ def main() -> int:
             print(f"  - Famiglia suggerita: `{suggested}`")
         print()
 
-    return 0
+    return esito_fonti(errori)
 
 
 def suggest_family(title: str) -> str:
