@@ -60,14 +60,26 @@ jobs:
 
           # Writing Toolkit, Content Toolkit e Linee guida AGID non sono più qui:
           # il loro testo lo controlla il passo successivo, dai repository ufficiali.
+          # ui_kit, dichiarazione_accessibilita e dipartimento_pc sono stati
+          # corretti il 17/10/2026 (issue #1419): le vecchie URL non davano
+          # più testo leggibile senza JavaScript.
+          # - ui_kit: /kit/ui-kit/ ora fa un redirect via <meta http-equiv>
+          #   (non un 301/302) verso la pagina vera, verificata con curl.
+          # - dichiarazione_accessibilita: form.agid.gov.it è un'app SvelteKit
+          #   senza alcun testo lato server (il modulo di invio, non una
+          #   pagina di contenuto): sostituita con la pagina AGID che
+          #   descrive la procedura della dichiarazione, letta senza JS.
+          # - dipartimento_pc: la home protezionecivile.gov.it è una SPA
+          #   (vedi rule 08) e non lo è mai stata: sostituita col sottodominio
+          #   "Servizio Nazionale", reso lato server con testo vero.
           declare -A FONTI=(
             ["designers_italia_home"]="https://designers.italia.it/"
             ["designers_italia_guide"]="https://designers.italia.it/risorse-per-progettare/"
-            ["ui_kit"]="https://designers.italia.it/kit/ui-kit/"
+            ["ui_kit"]="https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/"
             ["bootstrap_italia_docs"]="https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/"
             ["accessibilita_agid"]="https://www.agid.gov.it/it/design-servizi/accessibilita"
-            ["dichiarazione_accessibilita"]="https://form.agid.gov.it/"
-            ["dipartimento_pc"]="https://www.protezionecivile.gov.it/"
+            ["dichiarazione_accessibilita"]="https://www.agid.gov.it/it/design-servizi/accessibilita/dichiarazione-accessibilita"
+            ["dipartimento_pc"]="https://servizio-nazionale.protezionecivile.gov.it/it/"
           )
 
           PREV_ALGO=$(jq -r '._meta.algoritmo // ""' "$STATE_FILE" 2>/dev/null || echo "")
