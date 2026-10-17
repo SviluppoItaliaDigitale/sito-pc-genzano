@@ -69,7 +69,7 @@ Genzano è lontana dal Vajont e non ha dighe nel proprio territorio comunale. Ma
 
 ## Per saperne di più
 
-- [Memoria del Vajont — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/notizia/9-ottobre-1963-9-ottobre-2023-vajont-60-anni-fa)
+- [La frana del Vajont — Dipartimento della Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/la-frana-del-vajont/)
 - [Comune di Longarone — Sito ufficiale memoria](https://www.comune.longarone.bl.it/)
 - [Comitato Vittime del Vajont](https://www.vajont.net/)
 - Voce Wikipedia: [Disastro del Vajont](https://it.wikipedia.org/wiki/Disastro_del_Vajont)
