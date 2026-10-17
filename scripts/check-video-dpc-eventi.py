@@ -19,6 +19,13 @@ Si esclude qualsiasi LIS: quelli sono già coperti da check-nuovi-video-lis.py.
 
 Uso locale: python3 scripts/check-video-dpc-eventi.py
 Uso CI: invocato da .github/workflows/check-video-dpc-eventi.yml.
+
+Fonti che non rispondono (pagina delle playlist, feed di una playlist, feed
+del canale) non si ignorano: il report si stampa comunque per ciò che si è
+letto, poi una riga "FONTI_IN_ERRORE: …" su stdout e codice di uscita 3,
+così il workflow apre la issue `fonte-rotta` e chiude il run in rosso
+(istruzione del 17/10/2026). Fino a quella data ogni errore restituiva una
+lista vuota e finiva sepolto nel corpo della issue dei suggerimenti.
 """
 
 import os
@@ -56,6 +63,9 @@ NS = {
     "a": "http://www.w3.org/2005/Atom",
     "yt": "http://www.youtube.com/xml/schemas/2015",
 }
+
+# Fonti lette in questo giro che non hanno risposto (riempita dalle fetch_*).
+ERRORI_FONTI: list[str] = []
 
 # Stop-words italiane (articoli, preposizioni, congiunzioni, parole di servizio)
 STOPWORDS_IT = set("""
@@ -110,8 +120,13 @@ def fetch_dpc_playlists() -> list[dict]:
         html = fetch("https://www.youtube.com/@DPCgov/playlists").decode("utf-8", errors="replace")
     except Exception as e:
         print(f"  Errore scrape playlist DPC: {e}", file=sys.stderr)
+        ERRORI_FONTI.append(f"pagina playlist @DPCgov ({e})")
         return []
     pids = sorted(set(re.findall(r'"playlistId":"(PLaLgDI0rVT4[A-Za-z0-9_-]+)"', html)))
+    if not pids:
+        # La pagina risponde ma non contiene playlist riconoscibili: YouTube
+        # ha cambiato markup o il prefisso del canale è cambiato.
+        ERRORI_FONTI.append("pagina playlist @DPCgov (nessuna playlist riconosciuta: markup o prefisso cambiati)")
     out = []
     for pid in pids:
         try:
@@ -121,7 +136,9 @@ def fetch_dpc_playlists() -> list[dict]:
             title = title_el.text if title_el is not None else f"Playlist {pid}"
             out.append({"kind": "playlist", "title": title, "id": pid,
                         "url": f"https://www.youtube.com/playlist?list={pid}"})
-        except Exception:
+        except Exception as e:
+            print(f"  Errore feed playlist {pid}: {e}", file=sys.stderr)
+            ERRORI_FONTI.append(f"feed playlist {pid} ({e})")
             continue
     return out
 
@@ -133,6 +150,7 @@ def fetch_dpc_recent_videos() -> list[dict]:
         root = ET.fromstring(xml_bytes)
     except Exception as e:
         print(f"  Errore feed canale DPC: {e}", file=sys.stderr)
+        ERRORI_FONTI.append(f"feed canale DPCgov ({e})")
         return []
     out = []
     for e in root.findall("a:entry", NS):
@@ -312,7 +330,7 @@ def main() -> int:
     if not matches:
         print("OK_NO_MATCHES")
         print("Nessun video o playlist DPC ha overlap significativo con i contenuti del sito.")
-        return 0
+        return esito_fonti()
 
     print("MATCHES_FOUND")
     print(f"Suggerimenti di integrazione video DPC → contenuti del sito: {len(matches)}")
@@ -342,7 +360,15 @@ def main() -> int:
             print(f"  - …e altri {len(mlist) - 5} match minori")
         print()
 
-    return 0
+    return esito_fonti()
+
+
+def esito_fonti() -> int:
+    """Codice di uscita: 0 se tutte le fonti hanno risposto, 3 altrimenti."""
+    if not ERRORI_FONTI:
+        return 0
+    print(f"FONTI_IN_ERRORE: {'; '.join(ERRORI_FONTI)}")
+    return 3
 
 
 if __name__ == "__main__":
