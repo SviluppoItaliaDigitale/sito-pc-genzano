@@ -21,7 +21,7 @@ social_punti:
   - "La prevenzione si prepara adesso, in autunno e in inverno. Se vedi fumo o fiamme, chiama il 112."
 ---
 
-Il 2026 è uno degli anni più pesanti per gli incendi boschivi in Italia. Dal **1° gennaio al 15 settembre** il fuoco ha percorso **più di 1.200 chilometri quadrati**: poco meno del territorio del comune di Roma. Lo dice l'**ISPRA**, l'Istituto Superiore per la Protezione e la Ricerca Ambientale, nell'aggiornamento pubblicato il 16 ottobre. Qui trovi i numeri nazionali, il quadro del Lazio e i gesti utili nei mesi che mancano alla prossima estate.
+Il 2026 è uno degli anni più pesanti per gli incendi boschivi in Italia. Dal **1° gennaio al 15 settembre** il fuoco ha percorso **più di 1.200 chilometri quadrati**. È poco meno del territorio del comune di Roma. Lo dice l'**ISPRA**, l'Istituto Superiore per la Protezione e la Ricerca Ambientale, nell'aggiornamento pubblicato il 16 ottobre. Qui trovi i numeri nazionali, il quadro del Lazio e i gesti utili nei mesi che mancano alla prossima estate.
 
 ## I numeri in Italia
 
@@ -32,7 +32,7 @@ ISPRA misura gli incendi con i satelliti: elabora i dati dell'**EFFIS**, il sist
 - i **boschi** bruciati sono quasi **200 km²**, il 16% del totale;
 - incendi di grandi dimensioni risultano in **tutte le regioni**.
 
-Fra i boschi, il fuoco ha colpito soprattutto querceti e boschi misti (78 km²), poi macchia alta, leccete e sugherete (65 km²) e foreste di conifere sempreverdi (44 km²).
+Fra i boschi, il fuoco ha colpito soprattutto querceti e boschi misti (78 km²). Seguono macchia alta, leccete e sugherete (65 km²) e foreste di conifere sempreverdi (44 km²).
 
 C'è anche un secondo dato che pesa. Nelle **aree protette** (parchi, riserve, siti Natura 2000) si concentra oltre il **30%** della superficie bruciata. Se si guardano solo i boschi, la quota sale a circa il **40%**.
 
@@ -56,11 +56,11 @@ A Genzano, come racconta il [bilancio della nostra campagna antincendio](/comuni
 
 ## Il messaggio di ISPRA: prepararsi adesso
 
-Per la presidente di ISPRA e del Sistema nazionale per la protezione dell'ambiente, **Maria Alessandra Gallone**, i mesi che ci separano dalla prossima estate servono a rafforzare la prevenzione e la capacità di intervento. Satelliti, droni e dati ambientali aiutano a riconoscere prima le situazioni critiche e a valutare i danni. I sindaci, aggiunge, non devono essere lasciati soli e devono avere strumenti e competenze per decidere. La sua conclusione: *«La prevenzione non si improvvisa quando arrivano le fiamme: si costruisce prima»*.
+**Maria Alessandra Gallone** presiede l'ISPRA e il Sistema nazionale per la protezione dell'ambiente. Per lei i mesi che mancano alla prossima estate servono a rafforzare la prevenzione e la capacità di intervento. Satelliti, droni e dati ambientali aiutano a riconoscere prima le situazioni critiche e a valutare i danni. I sindaci, aggiunge, non devono essere lasciati soli e devono avere strumenti e competenze per decidere. La sua conclusione: *«La prevenzione non si improvvisa quando arrivano le fiamme: si costruisce prima»*.
 
 ## Cosa puoi fare tu
 
-La campagna antincendio si è chiusa il 15 ottobre, ma in autunno sterpaglie secche e vento possono ancora alimentare il fuoco. La prevenzione passa anche da gesti semplici:
+La campagna antincendio si è chiusa il 15 ottobre. In autunno, però, sterpaglie secche e vento possono ancora alimentare il fuoco. La prevenzione passa anche da gesti semplici:
 
 - **Pulisci** i terreni e i giardini da sterpaglie e rami secchi, soprattutto vicino alle case.
 - **Non bruciare** residui vegetali nelle giornate ventose e rispetta le regole del tuo Comune.
