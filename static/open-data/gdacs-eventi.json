@@ -1,12 +1,62 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-10-17T13:14:30+00:00",
+  "generato": "2026-10-17T16:27:12+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 100,
  "events": [
+  {
+   "alertlevel": "Green",
+   "country": "México",
+   "datemodified": "2026-10-17T14:54:50",
+   "description": "Tropical Cyclone TRUDY-26",
+   "episodeid": 17,
+   "eventid": 1001337,
+   "eventname": "TRUDY-26",
+   "eventtype": "TC",
+   "fromdate": "2026-10-13T15:00:00",
+   "iso3": "MEX",
+   "lat": 16.6,
+   "lon": -103.9,
+   "name": "Tropical Cyclone TRUDY-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 194 km/h)",
+   "todate": "2026-10-17T15:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "México",
+   "datemodified": "2026-10-17T14:39:43",
+   "description": "Earthquake in México",
+   "episodeid": 1740757,
+   "eventid": 1572185,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-17T13:59:34",
+   "iso3": "MEX",
+   "lat": 14.0469,
+   "lon": -92.8552,
+   "name": "Earthquake in México",
+   "severitytext": "Magnitude 5.2M, Depth:10km",
+   "todate": "2026-10-17T13:59:34"
+  },
+  {
+   "alertlevel": "Red",
+   "country": "Guam, Northern Mariana Islands",
+   "datemodified": "2026-10-17T15:01:17",
+   "description": "Tropical Cyclone CHAMPI-26",
+   "episodeid": 13,
+   "eventid": 1001338,
+   "eventname": "CHAMPI-26",
+   "eventtype": "TC",
+   "fromdate": "2026-10-14T12:00:00",
+   "iso3": "GUM",
+   "lat": 12.6,
+   "lon": 146.1,
+   "name": "Tropical Cyclone CHAMPI-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 259 km/h)",
+   "todate": "2026-10-17T12:00:00"
+  },
   {
    "alertlevel": "Green",
    "country": "Indonesia",
@@ -22,23 +72,6 @@
    "name": "Earthquake in Indonesia",
    "severitytext": "Magnitude 4.6M, Depth:90.844km",
    "todate": "2026-10-17T09:07:40"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "México",
-   "datemodified": "2026-10-17T11:24:00",
-   "description": "Tropical Cyclone TRUDY-26",
-   "episodeid": 16,
-   "eventid": 1001337,
-   "eventname": "TRUDY-26",
-   "eventtype": "TC",
-   "fromdate": "2026-10-13T15:00:00",
-   "iso3": "MEX",
-   "lat": 16.0,
-   "lon": -103.4,
-   "name": "Tropical Cyclone TRUDY-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 194 km/h)",
-   "todate": "2026-10-17T09:00:00"
   },
   {
    "alertlevel": "Green",
@@ -91,7 +124,7 @@
   {
    "alertlevel": "Green",
    "country": "Cook Islands, French Polynesia",
-   "datemodified": "2026-10-17T12:22:37",
+   "datemodified": "2026-10-17T14:10:10",
    "description": "Tropical Cyclone WATI-26",
    "episodeid": 3,
    "eventid": 1001339,
@@ -103,23 +136,6 @@
    "lon": -163.2,
    "name": "Tropical Cyclone WATI-26",
    "severitytext": "Tropical Storm (maximum wind speed of 139 km/h)",
-   "todate": "2026-10-17T06:00:00"
-  },
-  {
-   "alertlevel": "Red",
-   "country": "Guam, Northern Mariana Islands",
-   "datemodified": "2026-10-17T08:02:57",
-   "description": "Tropical Cyclone CHAMPI-26",
-   "episodeid": 12,
-   "eventid": 1001338,
-   "eventname": "CHAMPI-26",
-   "eventtype": "TC",
-   "fromdate": "2026-10-14T12:00:00",
-   "iso3": "GUM",
-   "lat": 12.5,
-   "lon": 147.3,
-   "name": "Tropical Cyclone CHAMPI-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 259 km/h)",
    "todate": "2026-10-17T06:00:00"
   },
   {
@@ -1240,7 +1256,7 @@
   {
    "alertlevel": "Green",
    "country": "Russia",
-   "datemodified": "2026-10-16T14:47:48",
+   "datemodified": "2026-10-17T14:02:05",
    "description": "Earthquake in Russia",
    "episodeid": 1740457,
    "eventid": 1571917,
@@ -1587,22 +1603,6 @@
    "lon": 39.3644,
    "name": "Forest fires in Mozambique",
    "severitytext": "Green impact for forestfire in 5371 ha",
-   "todate": "2026-10-16T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Brazil",
-   "datemodified": "2026-10-17T11:04:46",
-   "description": "Forest fires in Brazil",
-   "episodeid": 7,
-   "eventid": 1032774,
-   "eventtype": "WF",
-   "fromdate": "2026-10-09T00:00:00",
-   "iso3": "BRA",
-   "lat": -1.6325,
-   "lon": -54.44,
-   "name": "Forest fires in Brazil",
-   "severitytext": "Green impact for forestfire in 5610 ha",
    "todate": "2026-10-16T00:00:00"
   }
  ]
