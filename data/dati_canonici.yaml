@@ -388,7 +388,7 @@ dati:
     # articoli, versioni facili, kit, giochi, libro pop-up e messaggi Telegram.
     vietati:
       # Qualunque fascia che non finisca alle 18 (11-17, 12-17, 11-16, 12-16…).
-      - regex: '(?<![\d/-])\b1[0-2](?:[.:]00)?\s*(?:[-–]|alle|e\s+le)\s*1[5-7](?:[.:]00)?\b(?![\d/-]|\s*(?:min|km|cm|°|anni|gradi))'
+      - regex: '(?<![\d/-])\b1[0-2](?:[.:]00)?\s*(?:[-–]|alle|e\s+le)\s*1[5-7](?:[.:]00)?\b(?![\d/%-]|\s*(?:%|min|km|cm|°|anni|gradi))'
         perche: "Il Ministero della Salute indica le ore più calde dalle 11 alle 18, come la pagina «Ondate di calore»."
         contesto: '[Cc]ald|[Ss]ole|calore|ombra|fresc|ore centrali'
         finestra: 200

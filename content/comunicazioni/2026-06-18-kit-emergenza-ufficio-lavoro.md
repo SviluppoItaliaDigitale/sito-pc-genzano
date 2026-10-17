@@ -40,7 +40,7 @@ In nessuno di questi scenari il cassetto vuoto ti aiuta. Un piccolo **kit di 30-
 
 ### Sanitari
 - **Kit di primo soccorso minimo**: cerotti, disinfettante, garze sterili, paracetamolo, guanti monouso.
-- **Farmaci personali** se ne prendi regolarmente (3-7 giorni di scorta).
+- **Farmaci personali** se ne prendi regolarmente (almeno 7 giorni di scorta).
 - **Occhiali di scorta** se li porti.
 - **Mascherina FFP2** (per fumi o polveri).
 - **Fischietto**.

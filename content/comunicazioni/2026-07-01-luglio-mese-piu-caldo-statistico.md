@@ -60,7 +60,7 @@ Viaggi estivi, strade affollate, caldo nei veicoli, stanchezza. Il mese più cri
 - **Mangiare** leggero, con frutta, verdura e pasti piccoli.
 
 ### All'aperto
-- **Evitare** le uscite dalle 12 alle 17.
+- **Evitare** le uscite dalle 11 alle 18.
 - **Indossare** cappello, occhiali da sole e crema solare ad alta protezione.
 - **Portare** sempre con sé acqua a sufficienza.
 - **Calzare** scarpe chiuse nei boschi.

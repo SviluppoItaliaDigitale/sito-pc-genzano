@@ -55,6 +55,7 @@ PERIMETRO = [
 ESCLUSI = [
     "data/dati_canonici.yaml",
     "scripts/check-dati-canonici.py",
+    "scripts/cerca-incongruenze.py",
     "data/video_dpc_catalogo.yaml",
     "data/video_correlati.yaml",
     "static/formazione/schede-stampabili/pacchetti/*",
@@ -67,7 +68,11 @@ ESCLUSI = [
 # Solo i tag HTML veri (iniziano con lettera, «/» o «!»): gli shortcode Hugo
 # «{{< nome attr="…" >}}» restano, perché i loro attributi sono testo pubblicato.
 RE_TAG = re.compile(r"(?<!\{)<[A-Za-z/!][^>]*>")
-RE_FINE_FRASE = re.compile(r"[.!?;]\s|\n\s*\n|\||\{\{[<%]|[>%]\}\}")
+# Confini di frase anche nel codice: fine di una stringa JavaScript o Python
+# su una riga («'testo.',») e fine di un elemento HTML. Senza, un intero
+# script contava come una frase sola e una parola qualunque di un'altra riga
+# faceva scattare «salvo_se_frase» (17/10/2026: 11-17 in un gioco, non visto).
+RE_FINE_FRASE = re.compile(r"[.!?;]['\"]?\s|['\"]\s*[,\]]?\s*\n|</(?:li|p|t[dh]|h\d)>|\n\s*\n|\||\{\{[<%]|[>%]\}\}")
 RE_FINE_PARAGRAFO = re.compile(r"\n\s*\n|\{\{[<%]|[>%]\}\}")
 
 

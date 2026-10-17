@@ -83,7 +83,7 @@ FAMIGLIE = [
     {
         "id": "ore-caldo",
         "dato": "Ore più calde da evitare",
-        "regex": r"(?<![\d/-])\b(1[0-2])(?:[.:]00)?\s*(?:[-–]|alle|e\s+le)\s*(1[5-9])(?:[.:]00)?\b(?![\d/-]|\s*(?:min|km|cm|°|anni|gradi))",
+        "regex": r"(?<![\d/-])\b(1[0-2])(?:[.:]00)?\s*(?:[-–]|alle|e\s+le)\s*(1[5-9])(?:[.:]00)?\b(?![\d/%-]|\s*(?:%|min|km|cm|°|anni|gradi))",
         "contesto": r"[Cc]ald|[Ss]ole|calore|ombra|fresc|ore centrali",
         "norm": lambda g: f"{int(g[0])}-{int(g[1])}",
         "salvo_se": r"turn[io]|avvistament|fasce di",
@@ -147,7 +147,7 @@ FAMIGLIE = [
                     "7-10": "compatibile con «almeno 7 giorni»",
                     "14": "compatibile con «almeno 7 giorni»"},
         "norm": lambda g: g[0] + (f"-{g[1]}" if g[1] else ""),
-        "salvo_se": r"scaden|ricett|dopo|entro|ricover|sintom|febbre|vaccin|ogni|cicl|chemio|dialisi",
+        "salvo_se": r"scaden|ricett|dopo|entro|ricover|sintom|febbre|vaccin|ogni|cicl|chemio|dialisi|={4,}",
     },
     {
         "id": "sala-operativa-lazio",
