@@ -117,7 +117,7 @@ Sono gli stessi passi che `validate-pr.yml` esegue su ogni pull request: se non 
 40. **Data di uscita degli articoli programmati**: `python3 scripts/check-data-uscita.py <articoli aggiunti o modificati>`.
 41. **Fogli di stampa e fascicolo esperimenti** (servono Playwright e Chromium): `python3 scripts/check-fogli-stampa.py --da-git origin/main` e `python3 scripts/check-fascicolo-esperimenti.py`. In cloud indica il Chromium preinstallato con `CHROMIUM_PATH=/opt/pw-browsers/chromium` (entrambi gli script lo leggono). Se il browser non è disponibile, scrivilo nel report come «non eseguito», non come «OK».
 
-Non bloccano la PR ma girano in altri workflow, e conviene saperlo: `scripts/check-404-istituzionali.py` fa diventare rosso `check-links-sito.yml` quando un link verso un ente pubblico risponde 404/410; `scripts/check-carte-carg.py` (`controllo-carte-carg.yml`) segnala le copie delle carte geologiche CARG superate dall'archivio ISPRA.
+Non bloccano la PR ma girano in altri workflow, e conviene saperlo: `scripts/check-404-istituzionali.py` fa diventare rosso `check-links-sito.yml` quando un link del sito risponde 404/410 (dal 17/10/2026 qualunque dominio, enti pubblici in testa); `scripts/check-carte-carg.py` (`controllo-carte-carg.yml`) segnala le copie delle carte geologiche CARG superate dall'archivio ISPRA.
 
 ### I. Smoke test browser POST-DEPLOY — WARNING opzionale
 

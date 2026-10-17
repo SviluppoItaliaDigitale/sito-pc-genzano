@@ -12,8 +12,9 @@ corretto, la nostra copia resta vecchia senza che nessuno se ne accorga.
 Per ogni record interroga l'API dell'archivio e segnala:
   - una NUOVA VERSIONE del record (versions.is_latest = false);
   - un file cambiato sulla fonte (md5 dell'archivio diverso dal nostro);
-  - un nome di file cambiato o più file nel record (da guardare a mano);
-  - un record che non risponde (fonte giù o record spostato).
+  - un nome di file cambiato o più file nel record (da guardare a mano).
+Un record che non risponde (fonte giù o record spostato) non è una novità
+ma una fonte rotta: va nel file di --fonti-ko, non fra le segnalazioni.
 
 Cerca inoltre nell'archivio (comunità ISPRA) le NUOVE CARTE DELLA NOSTRA
 ZONA: ogni record che cita i fogli 374, 375, 387 o 388 o un luogo dei
@@ -26,14 +27,18 @@ nostra zona».
 
 Non scarica nulla e non modifica nulla: la sostituzione della copia e
 l'aggiornamento dell'articolo si fanno in sessione, dopo aver letto cosa è
-cambiato. Exit code = numero di segnalazioni (0 = tutto allineato); in
-caso di fonte irraggiungibile (nessun record letto, o ricerca delle carte
-nuove non eseguibile) esce 2 = esito INDETERMINATO: un archivio giù per
-un'ora non è una carta cambiata, ma non è nemmeno un «tutto allineato», e
-il workflow in quel caso non apre né chiude l'issue.
+cambiato. Exit code: 0 = tutto letto e tutto allineato; 1 = almeno una
+segnalazione e/o una fonte non letta. Le segnalazioni vanno in
+--issue-body, i record o la ricerca che non hanno risposto in --fonti-ko
+(una riga ciascuno, più la riga «FONTI_IN_ERRORE: …» su stdout). Dal
+17/10/2026 una fonte che non risponde non resta un avviso nel log: il
+workflow apre la issue `fonte-rotta` e chiude il run in rosso (istruzione
+dell'utente: «gli errori 404 e simili non devono mai essere ignorati»).
+Fino ad allora l'exit 2 «esito indeterminato» lasciava il run verde per
+sempre, e si confondeva con «2 segnalazioni».
 
 Uso:
-  python3 scripts/check-carte-carg.py [--issue-body corpo.md]
+  python3 scripts/check-carte-carg.py [--issue-body corpo.md] [--fonti-ko fonti.md]
 Solo Python standard.
 """
 
@@ -108,8 +113,9 @@ def controlla(etichetta: str, rid: str, nome_locale: str) -> tuple[list[str], bo
         segn.append(f"**{etichetta}**: la copia locale `{nome_locale}` manca dal repository.")
     try:
         rec = leggi_json(API + rid)
-    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError) as e:
-        segn.append(f"**{etichetta}**: record `{rid}` non raggiungibile ({e}).")
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, OSError) as e:
+        # Fonte rotta, non novità: la riporta main() fra le fonti in errore.
+        controlla.ultimo_errore = f"record `{rid}` ({API + rid}): {e}"
         return segn, False
     ver = rec.get("versions") or {}
     if ver.get("is_latest") is False:
@@ -143,18 +149,18 @@ def controlla(etichetta: str, rid: str, nome_locale: str) -> tuple[list[str], bo
     return segn, True
 
 
-def cerca_nuove() -> tuple[list[str], bool]:
-    """Record della zona non ancora noti. Restituisce (segnalazioni, fonte_raggiunta)."""
+def cerca_nuove() -> tuple[list[str], bool, list[str]]:
+    """Record della zona non ancora noti. Restituisce (segnalazioni, tutte_le_ricerche_ok, errori)."""
     noti = {rid for _, rid, _ in FOGLI} | set(NOTI_NON_COPIATI)
     trovati: dict[str, dict] = {}
-    raggiunta = False
+    errori: list[str] = []
     for q in RICERCHE_ZONA:
         url = API_ISPRA + "?size=100&sort=newest&q=" + urllib.parse.quote(q, safe="")
         try:
             d = leggi_json(url)
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError):
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ValueError, OSError) as e:
+            errori.append(f"ricerca delle carte nuove `{q}`: {e}")
             continue
-        raggiunta = True
         for r in d.get("hits", {}).get("hits", []):
             trovati.setdefault(r["id"], r)
     segn = []
@@ -168,37 +174,42 @@ def cerca_nuove() -> tuple[list[str], bool]:
             "Se riguarda i Castelli Romani: scaricare, copiare in `static/manuali/carg/`, citarla nell'articolo e nell'Area "
             "Download e aggiungerla a `FOGLI`; altrimenti annotarla in `NOTI_NON_COPIATI` con il motivo."
         )
-    return segn, raggiunta
+    return segn, not errori, errori
 
 
 def main(argv: list[str]) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
-    ap.add_argument("--issue-body", help="scrive qui il corpo Markdown per la issue")
+    ap.add_argument("--issue-body", help="scrive qui il corpo Markdown per la issue delle novità")
+    ap.add_argument("--fonti-ko", help="scrive qui l'elenco delle fonti che non hanno risposto (solo se ce ne sono)")
     a = ap.parse_args(argv)
     segnalazioni: list[str] = []
-    raggiunti = 0
+    fonti_ko: list[str] = []
     for etichetta, rid, nome in FOGLI:
+        controlla.ultimo_errore = ""
         s, ok = controlla(etichetta, rid, nome)
-        raggiunti += ok
         segnalazioni.extend(s)
-        print(("⚠️  " if s else "✅ ") + etichetta + ("" if not s else " — " + s[0].split(": ", 1)[1][:90]))
-    nuove, ricerca_ok = cerca_nuove()
+        if not ok:
+            fonti_ko.append(f"{etichetta}: {controlla.ultimo_errore}")
+            print(f"❗ {etichetta} — record non raggiungibile ({controlla.ultimo_errore[:90]})")
+        else:
+            print(("⚠️  " if s else "✅ ") + etichetta + ("" if not s else " — " + s[0].split(": ", 1)[1][:90]))
+    nuove, ricerca_ok, errori_ricerca = cerca_nuove()
+    segnalazioni.extend(nuove)
+    fonti_ko.extend(errori_ricerca)
     if ricerca_ok:
         print(("⚠️  " if nuove else "✅ ") + f"ricerca di carte nuove della zona: {len(nuove)} da valutare")
-        segnalazioni.extend(nuove)
     else:
-        print("❗ ricerca di carte nuove della zona: l'archivio non ha risposto")
-    fonte_giu = raggiunti == 0
-    indeterminato = fonte_giu or not ricerca_ok
-    if fonte_giu:
-        print("\n❗ L'archivio ISPRA non ha risposto per nessun record: controllo non eseguibile (esito indeterminato, exit 2).")
-    elif segnalazioni:
+        print(f"❗ ricerca di carte nuove della zona: {len(errori_ricerca)} ricerche su {len(RICERCHE_ZONA)} senza risposta")
+    if segnalazioni:
         print(f"\n{len(segnalazioni)} segnalazioni: le copie in static/manuali/carg/ vanno riviste.")
-    else:
+    elif not fonti_ko:
         print("\nTutte le copie coincidono con l'archivio ISPRA (nessuna nuova versione, stessi checksum).")
-    if indeterminato and not fonte_giu and not segnalazioni:
-        print("Esito indeterminato (exit 2): copie allineate ma ricerca delle carte nuove non eseguita.")
-    if a.issue_body and segnalazioni and not fonte_giu:
+    if fonti_ko:
+        print(f"\n❗ {len(fonti_ko)} fonti non hanno risposto: il controllo è incompleto, da riparare.")
+        print("FONTI_IN_ERRORE: " + "; ".join(fonti_ko))
+        if a.fonti_ko:
+            Path(a.fonti_ko).write_text("".join(f"- {f}\n" for f in fonti_ko), encoding="utf-8")
+    if a.issue_body and segnalazioni:
         corpo = ["Confronto fra le copie in `static/manuali/carg/` e i record dell'archivio aperto dell'ISPRA "
                  "(`openaccessrepository.it`, API InvenioRDM: versione del record e checksum md5 del file), più la "
                  "ricerca di record nuovi che citano i fogli 374/375/387/388 o un luogo dei Castelli Romani nel titolo.", ""]
@@ -210,9 +221,7 @@ def main(argv: list[str]) -> int:
                   "(`scripts/audit-pdf-accessibilita.py --write`). Se il record ha una nuova versione, aggiornare anche "
                   "l'id in `scripts/check-carte-carg.py`."]
         Path(a.issue_body).write_text("\n".join(corpo) + "\n", encoding="utf-8")
-    if fonte_giu or (indeterminato and not segnalazioni):
-        return 2
-    return len(segnalazioni)
+    return 1 if (segnalazioni or fonti_ko) else 0
 
 
 if __name__ == "__main__":
