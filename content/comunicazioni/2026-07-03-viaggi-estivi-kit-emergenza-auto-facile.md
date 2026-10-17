@@ -87,7 +87,7 @@ Prima di salire in auto calda:
 ## Pianifica il viaggio
 
 - Parti **di notte o di mattina presto**. Fa meno caldo e c'è meno traffico.
-- **Evita** di guidare dalle 12 alle 17.
+- **Evita** di guidare dalle 11 alle 18.
 - **Fai una pausa ogni 2 ore**. Scendi dall'auto, cammina, bevi.
 
 Se sei stanco, fermati. Non guidare quando hai sonno.

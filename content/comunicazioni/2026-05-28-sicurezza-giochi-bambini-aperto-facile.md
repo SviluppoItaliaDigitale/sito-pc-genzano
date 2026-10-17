@@ -68,7 +68,7 @@ Altre regole:
 
 ## Caldo e sole
 
-- Evita le attività intense tra le 12 e le 17.
+- Evita le attività intense tra le 11 e le 18.
 - Metti il cappello e la crema solare.
 - Riapplica la crema ogni 2 ore e dopo il bagno.
 - Fai bere acqua spesso. I bambini dimenticano di bere.

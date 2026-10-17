@@ -108,7 +108,7 @@ COSA_FARE_AVVISO = {
     ],
     "calore": [
         "Bevi molta acqua anche se non senti sete; evita alcolici e bevande zuccherate.",
-        "Non uscire nelle ore più calde (11:00-17:00).",
+        "Non uscire nelle ore più calde (11:00-18:00).",
         "Controlla anziani, bambini e persone fragili; non lasciare mai persone o animali in auto al sole.",
     ],
     "temporali": [

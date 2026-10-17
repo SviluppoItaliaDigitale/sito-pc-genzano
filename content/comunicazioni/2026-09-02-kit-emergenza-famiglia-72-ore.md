@@ -43,7 +43,7 @@ Gli studi sulle emergenze mostrano che, nei primi giorni dopo un evento di grand
 
 ### Salute
 
-- **farmaci salvavita** personali (almeno 3 giorni di scorta);
+- **farmaci salvavita** personali (almeno 7 giorni di scorta);
 - **kit di primo soccorso**: garze, disinfettante, cerotti, forbicine, guanti, coperta termica;
 - **occhiali di scorta**, igiene personale, mascherine FFP2;
 - **informazioni mediche** della famiglia (gruppo sanguigno, allergie, patologie).

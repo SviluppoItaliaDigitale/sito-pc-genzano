@@ -51,7 +51,7 @@ Abbiamo trattato in dettaglio [perdersi nei boschi](/comunicazioni/2026-05-21-pe
 ## I rischi climatici
 
 - **Temporali pomeridiani** — i Castelli sono soggetti a temporali improvvisi in estate. Non farti sorprendere sopra la cresta o in un radura aperto.
-- **Caldo estremo** — evita le ore 12-17 in salita.
+- **Caldo estremo** — evita le ore 11-18 in salita.
 - **Nebbia mattutina** — può disorientare nei sentieri meno tracciati.
 - **Fulmini** — pericolo reale; scendi da cime e creste in caso di temporale in arrivo.
 

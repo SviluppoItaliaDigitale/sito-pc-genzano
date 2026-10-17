@@ -92,9 +92,11 @@
         return;
       }
       var scelta = candidati(tipi, classe, tema, usati);
-      if (nome === 'principale' && scelta.length) {
-        // se la scheda dichiara la sua durata, si preferisce una che stia nella fase
-        var nelTempo = scelta.filter(function (m) { return !m.minuti || m.minuti <= min + avanzo + 5; });
+      if (scelta.length) {
+        // in ogni fase si preferisce un materiale la cui durata dichiarata stia
+        // nel tempo della fase (più quello avanzato dalle fasi vuote); se non
+        // ce n'è, la scaletta lo dice (audit esterno del 17/10/2026, R5)
+        var nelTempo = scelta.filter(function (m) { return !m.minuti || m.minuti <= min + avanzo; });
         if (nelTempo.length) scelta = nelTempo;
       }
       if (!scelta.length) { avanzo += min; return; }
@@ -167,6 +169,10 @@
         r.appendChild(link(m));
         if (m.minuti) r.appendChild(document.createTextNode(' (durata indicata: ' + m.minuti + ' minuti)'));
         corpo.appendChild(r);
+        if (m.minuti && m.minuti > f.min) {
+          corpo.appendChild(el('p', 'small crea-lezione-nota', 'Il materiale dura ' + m.minuti + ' minuti, più dei ' + f.min +
+            ' di questa fase: usane una parte e riprendi il resto in un’altra lezione.'));
+        }
         if (m.desc && m.tipo !== 'esperimento') corpo.appendChild(el('p', 'small', m.desc));
         if (m.tipo === 'esperimento') corpo.appendChild(el('p', 'small', 'Lo trovi nella pagina degli esperimenti, nella sezione «' + m.desc + '», con materiali e indicazioni di sicurezza: sempre con un adulto.'));
       }

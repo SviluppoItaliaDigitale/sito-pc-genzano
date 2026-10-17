@@ -83,7 +83,7 @@ Prima di iscrivere il bambino verifica:
 - Vai sempre con un adulto.
 - Non tuffarti in acque che non conosci.
 - Usa la crema solare protezione 50. Rimettila ogni 2 ore.
-- Stai all'ombra nelle ore calde: tra le 11 e le 16.
+- Stai all'ombra nelle ore calde: tra le 11 e le 18.
 
 ### Bici e monopattino
 
@@ -112,7 +112,7 @@ Spiega il perché delle regole. Non basta dirgli cosa fare.
 - L'adulto deve stare a pochi metri di distanza.
 
 ### Caldo forte
-- Non fare attività fisica tra le 11 e le 16.
+- Non fare attività fisica tra le 11 e le 18.
 - Fai bere acqua ogni 15-30 minuti.
 - Metti abiti chiari, larghi e di cotone.
 
