@@ -31,7 +31,7 @@ Su richiesta dell'utente (*«dobbiamo simulare una vera e propria azienda che ha
 
 | Reparto | Che cosa fa | Agenti |
 |---|---|---|
-| **Direzione e qualità** | audit, documentazione, fotografia tecnica | audit completo, documentazione, site auditor |
+| **Direzione e qualità** | audit, documentazione, fotografia tecnica | audit completo, auditor indipendente, documentazione, site auditor |
 | **Protezione civile tecnico-scientifica** | correttezza scientifica, norme, piano comunale, mappe, sanità, psicologia, radio | revisore scientifico, verificatore delle norme, pianificatore di emergenza, cartografo GIS, medico dell'emergenza, psicologo dell'emergenza, radiocomunicazioni |
 | **Sala operativa** | allerte ed emergenze reali, esercitazioni della catena | comunicazione di crisi, esercitazioni |
 | **Volontariato e inclusione** | volontari, persone fragili | volontariato e Terzo settore, inclusione e fragilità |
@@ -40,8 +40,10 @@ Su richiesta dell'utente (*«dobbiamo simulare una vera e propria azienda che ha
 | **Fotografia** | foto e didascalie | fotografo, verificatore delle didascalie |
 | **Scuola** | materiali didattici e schede | revisore didattico, controllo delle schede |
 | **Esperienza utente e collaudo** | accessibilità, usabilità, resa grafica, prove sul sito vero | accessibilità, usabilità, verifica visiva, visitatore reale, collaudo funzionale |
-| **Tecnologia** | codice, automazioni, sicurezza, integrità, dati, deploy, prestazioni, issue | revisore del codice, automazioni, sicurezza, integrità tecnica, dati e feed, validatore del deploy, prestazioni, issue |
+| **Tecnologia** | codice, automazioni, sicurezza, integrità, dati, deploy, prestazioni, issue | revisore del codice, testi nel codice, automazioni, sicurezza, integrità tecnica, dati e feed, validatore del deploy, prestazioni, issue |
 | **Legale** | privacy, accessibilità legale, licenze | conformità legale |
+
+**Aggiunti il 17 ottobre 2026**, dopo che l'utente ha dovuto chiedere un altro audit esterno (PR #1459): il **revisore dei testi nel codice** (`pc-testi-nel-codice`) rilegge come contenuto ciò che il cittadino legge ma che sta in file JavaScript o Python (assistente, giochi, «Crea la mia lezione», messaggi Telegram, generatori delle schede), dove i gate editoriali non arrivavano; l'**auditor indipendente** (`pc-auditor-indipendente`) rifà sul sito pubblicato le misure di un auditor esterno senza fidarsi dei controlli interni, ed è l'ultima fase dell'audit mensile. La regola che porta con sé vale per tutti: **ogni rilievo diventa un controllo**. Quel giorno è diventato un controllo ogni rilievo: ore del caldo e telefoni con il gas nel registro dei dati canonici (che da allora legge anche gli script e il JavaScript del tema), ruoli ARIA dei comandi (`check-ruoli-aria.py`), inventario dei PDF (`audit-pdf-accessibilita.py --check-inventario`), punteggi Lighthouse sotto soglia in una issue che si apre e si chiude da sola.
 
 **Ruoli non creati, e perché**: raccolta fondi, community manager, analista delle visite. Si creano quando c'è un lavoro reale che li richiede: con troppi agenti dai compiti vicini la sessione rischia di attivare quello sbagliato.
 

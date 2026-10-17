@@ -118,7 +118,7 @@ Approccio: **dialogo**, non solo divieti. Spiegare **perché** le regole contano
 - **In spiaggia** con sicurezza delimitata.
 
 ### Caldo estivo
-- **Evitare** attività intense dalle 11 alle 16.
+- **Evitare** attività intense dalle 11 alle 18.
 - **Fare** pause frequenti all'ombra.
 - **Bere** acqua ogni 15-30 minuti.
 - **Riapplicare** crema solare ogni 2 ore.

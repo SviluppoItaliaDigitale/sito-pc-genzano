@@ -86,6 +86,17 @@ La stampa si controlla stampando, non leggendo il codice (rule 09 § 15-ter):
 - Niente conteggi inventario («24 schede»), niente riferimenti a strumenti automatici.
 - **Niente nomi di persone reali** (alunni, docenti, famiglie). I personaggi inventati seguono rule 02 § «Personaggi delle storie per bambini — Flavio protagonista»: protagonista Flavio; gli altri nomi solo dalla lista Silvia, Maria, Elio, Pasquale, Lina, Alessandro, Christian e Marco; unica eccezione Anna, la volontaria; nell'infanzia Tina la tartaruga. Un nome di persona fuori da questa lista (Flavia compresa) è un rilievo. Animali e persone reali citate nelle schede (es. Giuseppe Zamberletti) non rientrano nella regola.
 
+### 6-bis. 🔴 GATE DELLA COERENZA — il dato nuovo è uguale a quello già sul sito
+
+Istruzione dell'utente del 17/10/2026: *ogni volta che un dato viene pubblicato si verifica con quello già presente sul sito*. Prima del `git add`:
+
+```bash
+python3 scripts/cerca-incongruenze.py --da-git origin/main   # dati delle righe aggiunte vs resto del sito
+python3 scripts/check-dati-canonici.py <file>             # varianti già registrate come sbagliate
+```
+
+Lo scanner conosce le famiglie di dati che si ripetono (ore del caldo, litri a persona, autonomia del kit, giorni di farmaci, RCP, ustioni, Sala Operativa, distanza dai cavi). Per **ogni altro dato** del testo che il sito dice anche altrove (un orario, una quantità, una distanza, un numero di telefono, un bilancio, una data di un evento, un termine di legge) cerca con `grep -rn` in `content/`, `static/`, `data/`, `themes/` e `scripts/` come lo scrivono le altre pagine. Se il nuovo valore è diverso da quello già pubblicato: **blocca**, verifica sulla fonte canonica quale è giusto e passa a `pc-coerenza-trasversale`, che allinea tutte le pagine e registra il dato in `data/dati_canonici.yaml` (e, se è una famiglia nuova, la aggiunge allo scanner). Non si pubblica un dato che contraddice il sito, nemmeno quando è il dato nuovo a essere giusto: in quel caso si correggono anche le pagine vecchie, nello stesso lavoro.
+
 ### 7. Delega dei fatti
 
 Per ogni dato storico, scientifico o normativo presente nel materiale serve il gate `pc-fact-checker`, con questo mandato: *«Verifica su fonti primarie ogni dato (date, orari, bilanci, cause, norme, dataset) di <file>; correggi in-place ciò che è smentito, riformula in modo prudente ciò che non è verificabile, segnala i bloccanti.»*

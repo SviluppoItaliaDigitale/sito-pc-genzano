@@ -81,7 +81,7 @@ Fai attenzione anche all'inquinamento dell'aria. In città, il rischio può esse
 
 ### Quando esci
 
-- Non uscire tra le 11 e le 17, sono le ore più calde
+- Non uscire tra le 11 e le 18, sono le ore più calde
 - Evita le strade con molto traffico
 - Usa la crema solare sul viso
 

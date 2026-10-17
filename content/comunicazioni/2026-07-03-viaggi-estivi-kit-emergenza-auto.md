@@ -83,7 +83,7 @@ Un **tagliando** prima delle vacanze è un investimento saggio.
 
 ### Orari consigliati
 - **Notte** o **prima mattina** in estate: meno caldo, meno traffico.
-- **Evitare** ore 12-17 per viaggi lunghi.
+- **Evitare** ore 11-18 per viaggi lunghi.
 - **Pause ogni 2 ore** obbligatorie.
 
 ### Informazioni

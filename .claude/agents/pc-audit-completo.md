@@ -43,6 +43,9 @@ python3 scripts/check-fonti-cruscotto.py
 python3 scripts/genera-chrome-menu.py --check
 python3 scripts/check-navigazione.py --public /tmp/public  # assistente e mappa coprono menu e piè di pagina, link vivi
 python3 scripts/check-dati-canonici.py                     # dati ripetuti uguali al registro data/dati_canonici.yaml
+python3 scripts/cerca-incongruenze.py                      # famiglie di dati scritte con valori diversi (scoperta, non solo varianti registrate)
+python3 scripts/check-ruoli-aria.py                        # comandi (anche costruiti dal JavaScript) senza ruoli che ne cancellano la semantica
+python3 scripts/audit-pdf-accessibilita.py --check-inventario  # inventario dei PDF uguale ai file pubblicati
 python3 scripts/check-qualita-pagine.py /tmp/public        # title, h1, alt su tutte le pagine
 python3 scripts/check-fogli-stampa.py --public /tmp/public # fogli bianchi e foglio quasi vuoto in qualunque posizione (Chromium, A4)
 python3 scripts/check-fascicolo-esperimenti.py             # fascicolo esperimenti: un foglio per scheda, scritte intere
@@ -53,6 +56,8 @@ python3 scripts/genera-pacchetti-schede.py && git diff --quiet -- static/formazi
 python3 scripts/verifica-deploy-aruba.py                  # drift di build sul live
 bash scripts/smoke-test-live.sh                            # pagine chiave live
 ```
+
+**Lighthouse e axe si rifanno, non si leggono soltanto** (dal 17/10/2026): esegui Lighthouse mobile sulla home e sulle pagine del campione (`npx @lhci/cli autorun --config=lighthouserc.json` o l'ultimo run di `lighthouse-audit.yml` se è di oggi) e riporta i punteggi contro le soglie di `lighthouserc.json`, non l'esito del job; per axe valuta gli *incomplete*, non solo le violazioni. L'audit del 03/10/2026 li aveva saltati, e un audit esterno ha trovato la home a 76/100 contro 85.
 
 Per i link verso gli enti pubblici serve il rapporto di lychee: prendi quello dell'ultimo run di `check-links-sito.yml` (o esegui lychee sulla build) e passalo a `python3 scripts/check-404-istituzionali.py <rapporto.md>`; ogni 404 o 410 è un rilievo, quelli degli enti pubblici con priorità più alta.
 
@@ -94,6 +99,8 @@ Se hai lo strumento `Agent`, invoca gli specialisti sul perimetro, ciascuno con 
 | `pc-comunicazione-crisi` | catena di allerta ed emergenza (contenuti) | sei punti, coerenza fra barra, banner, CAP, Telegram |
 | `pc-art-director` | cover, social, schede, deck | 4 loghi con E10435833, grafica.md, contrasti |
 | `pc-produzione-multimediale` | podcast e video | sottotitoli, trascrizioni, peso, metadati |
+| `pc-testi-nel-codice` | assistente, giochi, «Crea la mia lezione», messaggi Telegram, generatori di schede e materiali | testi dentro il codice confrontati con la fonte, semantica dell'HTML generato, combinazioni coerenti |
+| `pc-auditor-indipendente` | sito pubblicato, con il metodo di un auditor esterno (ultimo, dopo gli altri) | rilievi con «perché non l'avevamo visto» e il controllo aggiunto |
 
 Quando il perimetro lo richiede aggiungi `pc-normative-verifier` (norme), `pc-content-freshness` (contenuti anziani), `pc-seo-checker` (metadati), `pc-site-auditor` (fotografia tecnica del repo), `pc-print-card-qa` (giocabilità delle schede), `pc-photo-caption-verifier` (foto), `pc-revisore-linguistico` e `pc-correttore-bozze` (lingua), `pc-internal-linker` (linkografia).
 
@@ -110,6 +117,8 @@ Le fasi 1 e 2 guardano il sito **da dentro**: controllano ciò che il sito stess
 5. **Una passata da auditor terzo**: leggi home, comunicazioni, piano di emergenza, area download, privacy, accessibilità come se non conoscessi il repository, e scrivi quello che un esperto esterno scriverebbe, comprese le opinioni (che nel rapporto restano «raccomandazioni motivate», non difetti).
 
 ### Fase 3 — Consolidamento
+
+0. **Ogni rilievo diventa un controllo** (dal 17/10/2026): per ogni rilievo confermato scrivi quale controllo avrebbe dovuto vederlo e perché non l'ha visto, e aggiungi la voce di registro, lo script o il passo di agente che lo blocca la volta dopo (metodo di `pc-auditor-indipendente`, § 7). Cerca anche tutte le copie dello stesso errore: un rilievo su una pagina è quasi sempre un rilievo su più file.
 
 1. Unisci i risultati; **elimina i duplicati** (lo stesso difetto visto da due agenti è un rilievo solo).
 2. Per ogni rilievo compila la scheda nel formato del rapporto (sotto). Un rilievo senza **prova riproducibile** (comando, file:riga, URL) non entra nel rapporto: torna in verifica.

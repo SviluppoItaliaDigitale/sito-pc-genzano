@@ -63,7 +63,7 @@ Non usare acqua ghiacciata. Il freddo troppo veloce peggiora la situazione.
 
 **Per le passeggiate:**
 
-- Non uscire dalle 11 alle 17. Fa troppo caldo.
+- Non uscire dalle 11 alle 18. Fa troppo caldo.
 - Esci al mattino presto o al pomeriggio tardi.
 - Tocca il marciapiede con la mano. Se scotta per te, scotta anche per lui.
 - Porta sempre acqua.

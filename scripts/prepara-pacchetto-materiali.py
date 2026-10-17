@@ -84,7 +84,7 @@ KEYWORDS_TEMA = {
     ],
     "rischio-vulcanico": [
         "vulcanic", "vulcano", "Colli Albani", "Distretto Vulcanico",
-        "INGV-OV", "Osservatorio Vesuviano", "quiescente", "magma",
+        "quiescente", "magma",
         "caldera", "lago Albano", "lago di Nemi", "gas vulcanic",
     ],
     "ondate-di-calore": [
@@ -161,7 +161,7 @@ TEMI = {
             "Standard ISO 22324 (codici colore allerta) — pagina del nostro sito: " + SITO_BASE + "/standard-iso/iso-22324/",
         ],
         "focus_podcast": [
-            "Perché Genzano e i Castelli Romani sono sismicamente attivi (vulcanismo dei Colli Albani spento ma non estinto, faglie attive)",
+            "Perché Genzano e i Castelli Romani sono sismicamente attivi (Colli Albani vulcano quiescente, non estinto; faglie attive)",
             "Storia sismica recente: Irpinia 1980, L'Aquila 2009, Centro Italia 2016 (dati INGV)",
             "Cosa fare PRIMA: piano familiare, kit emergenza, agganciare mobili, conoscere via di fuga",
             "Cosa fare DURANTE: triangolo della vita è FALSO, posizioni sicure (sotto tavolo robusto, vano porta portante)",
@@ -284,7 +284,7 @@ TEMI = {
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
-            "INGV — Osservatorio Vesuviano, sezione Colli Albani: https://www.ov.ingv.it",
+            "INGV — Sorveglianza dei Colli Albani: https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani",
             "INGV — Distretto Vulcanico dei Colli Albani: https://www.ingv.it",
             "Carta vulcanologica e classificazione DPC: https://www.protezionecivile.gov.it/it/dossier/rischio-vulcanico",
             "ISPRA — Carta geologica d'Italia foglio Albano: https://www.isprambiente.gov.it",
@@ -292,7 +292,7 @@ TEMI = {
         "focus_podcast": [
             "I Colli Albani sono un vulcano quiescente, non estinto: cosa significa davvero (l'INGV li monitora costantemente)",
             "Storia eruttiva: ultima eruzione esplosiva ~36.000 anni fa; sismicità di sciame dimostra il sistema vivo",
-            "Cosa monitora INGV-OV: sismicità, deformazione del suolo, gas (CO2, radon), livello laghi Albano e Nemi",
+            "Cosa monitora l'INGV: sismicità, deformazione del suolo, gas (CO2, radon), livello laghi Albano e Nemi",
             "Differenza fra rischio sismico vulcanico (sciami) e rischio eruttivo (oggi non imminente)",
             "Falsi miti: \"il vulcano è morto\" / \"se esplode arriva fino a Roma in 5 minuti\" — la realtà documentata",
             "Cosa farebbe la PC nazionale in caso di anomalia: piano nazionale, livelli di allerta (verde-giallo-arancione-rosso)",
@@ -321,7 +321,7 @@ TEMI = {
             "Chi rischia davvero di più: anziani soli, neonati, malati cronici, lavoratori all'aperto, persone senza casa",
             "Sintomi colpo di calore: confusione, pelle calda e secca, mancata sudorazione — è un'emergenza, 112",
             "Cosa fare in casa: ombreggiare al mattino, areare la notte, idratazione regolare (anche senza sete)",
-            "Cosa fare fuori: evitare 11-17, vestiti chiari, cappello, mai bambini/animali in auto al sole",
+            "Cosa fare fuori: evitare 11-18, vestiti chiari, cappello, mai bambini/animali in auto al sole",
             "Servizi attivi a Genzano e nei Castelli: bollettino quotidiano, numero verde regionale anziani, ASL Roma 6",
             "Falsi miti: \"il caldo non uccide\", \"basta bere birra\", \"i ventilatori bastano sempre\"",
         ],

@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   lighthouse:
@@ -45,9 +46,45 @@ jobs:
           echo "Configurazione: 3 run × 3 URL (home + comunicazioni + numeri-utili), mobile, mediana." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Soglie" >> $GITHUB_STEP_SUMMARY
-          echo "- Accessibilità: ≥ 95/100 (warn errore se sotto, requisito WCAG 2.2 AA)" >> $GITHUB_STEP_SUMMARY
-          echo "- Best Practices: ≥ 95/100 (errore)" >> $GITHUB_STEP_SUMMARY
-          echo "- SEO: ≥ 95/100 (errore)" >> $GITHUB_STEP_SUMMARY
-          echo "- Performance: ≥ 85/100 (warn, target operativo)" >> $GITHUB_STEP_SUMMARY
+          echo "- Accessibilità: ≥ 95/100" >> $GITHUB_STEP_SUMMARY
+          echo "- Best Practices: ≥ 95/100" >> $GITHUB_STEP_SUMMARY
+          echo "- SEO: ≥ 95/100" >> $GITHUB_STEP_SUMMARY
+          echo "- Performance: ≥ 85/100" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Le soglie sono avvisi: il job resta verde anche sotto soglia. Chi è sotto soglia finisce nella issue «Lighthouse: punteggi sotto soglia», che si chiude da sola al rientro." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Configurazione: lighthouserc.json nella root del repo. Modifica le soglie lì." >> $GITHUB_STEP_SUMMARY
+
+      # Un punteggio sotto soglia lascia il job verde (le soglie sono avvisi):
+      # senza questo passo nessuno lo vedeva. Il 17/10/2026 un audit esterno
+      # ha trovato la home a 76/100 contro 85 con il controllo sempre verde.
+      - name: "🚩 Segnala i punteggi sotto soglia"
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RISULTATI: ${{ steps.lighthouse.outputs.assertionResults }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITOLO="Lighthouse: punteggi sotto soglia"
+          SOTTO=$(python3 - <<'PY'
+          import json, os
+          try:
+              r = json.loads(os.environ.get("RISULTATI") or "[]")
+          except ValueError:
+              r = []
+          for a in r:
+              if a.get("passed") is not True:
+                  print(f"- {a.get('url','?')}: {a.get('auditId') or a.get('name')} = {round((a.get('actual') or 0)*100)} (soglia {round((a.get('expected') or 0)*100)})")
+          PY
+          )
+          NUM=$(gh issue list --state open --search "in:title \"$TITOLO\"" --json number --jq '.[0].number' || true)
+          if [ -n "$SOTTO" ]; then
+            CORPO=$(printf '%s\n\n%s\n\nRun: %s\n\nSoglie in lighthouserc.json. La issue si chiude da sola quando tutti i punteggi tornano sopra soglia.' "Punteggi Lighthouse (mediana di 3 run, mobile) sotto le soglie dichiarate:" "$SOTTO" "$RUN_URL")
+            if [ -n "$NUM" ]; then
+              gh issue edit "$NUM" --body "$CORPO"
+            else
+              gh issue create --title "$TITOLO" --label automazione --body "$CORPO"
+            fi
+          elif [ -n "$NUM" ] && [ -n "$RISULTATI" ]; then
+            gh issue close "$NUM" --comment "Tutti i punteggi sono tornati sopra soglia ($RUN_URL)."
+          fi

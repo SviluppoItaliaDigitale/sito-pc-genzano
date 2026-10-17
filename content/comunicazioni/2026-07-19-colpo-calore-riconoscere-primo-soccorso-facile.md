@@ -112,7 +112,7 @@ Per gli anziani la prevenzione è la cosa più importante. Non aspettare i sinto
 ## Come prevenire il colpo di calore
 
 - Bevi almeno 2 litri di acqua al giorno.
-- Resta in un posto fresco nelle ore più calde (dalle 11 alle 17).
+- Resta in un posto fresco nelle ore più calde (dalle 11 alle 18).
 - Indossa abiti leggeri e chiari.
 - Mangia frutta e verdura.
 - Usa un ventilatore o il condizionatore.
