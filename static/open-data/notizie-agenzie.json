@@ -5,16 +5,124 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-17T18:43:42+00:00",
+  "generato": "2026-10-17T20:59:53+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-17T18:39:45+00:00",
+   "data": "2026-10-17T20:52:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: la Roma riparte dopo il Real, Castro e Lulli affondano il Genoa",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/17/serie-a-la-roma-riparte-dopo-il-real-castro-e-lulli-affondano-il-genoa_ba1395a7-14d8-44fc-8a01-9bbe16d524fe.html"
+  },
+  {
+   "data": "2026-10-17T20:47:06+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Centro sociale Milano, chi si stupisce delle città in rivolta è cieco",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/centro-sociale-milano-chi-si-stupisce-delle-citta-in-rivolta-e-cieco_08f67f48-e01c-4c2c-9d6a-85ade5e7c0d4.html"
+  },
+  {
+   "data": "2026-10-17T20:31:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Scontri a Milano, circa 50 fermati, quasi la metà minorenni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/scontri-a-milano-circa-50-fermati-quasi-la-meta-minorenni_9d805d44-257a-4f88-a28d-cfe6a2994a8b.html"
+  },
+  {
+   "data": "2026-10-17T20:31:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tir e trattori, la protesta al sud non si ferma e il gasolio vola a 2,3 euro",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/17/il-gasolio-sfiora-i-3-euro-nei-distributori-su-autostrade_62ddcd77-5816-481d-b5ab-9fb881bbf8ea.html"
+  },
+  {
+   "data": "2026-10-17T20:31:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ex Ilva raddoppia la cigs, in 8.622 a casa fino a febbraio",
+   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/10/17/ex-ilva-comunicata-richiesta-di-cigs-per-un-massimo-di-8622-lavoratori_416ee81c-5c38-4103-a018-5768a95cb2eb.html"
+  },
+  {
+   "data": "2026-10-17T20:30:10+00:00",
    "fonte": "ANSA",
    "titolo": "Cgil in piazza: 'Siamo 100mila, il 20 novembre sciopero generale'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/17/cgil-in-piazza-siamo-100mila-il-20-novembre-sciopero-generale_c4547ea9-f018-4e78-adda-67ad7af8e7d0.html"
+  },
+  {
+   "data": "2026-10-17T20:29:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "La protesta per il carovita diventa guerriglia, Milano un campo di battaglia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/la-protesta-per-il-carovita-diventa-guerriglia-milano-un-campo-di-battaglia_a783ef65-c2c2-4fb9-8d99-7c64d791f43c.html"
+  },
+  {
+   "data": "2026-10-17T20:29:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Coloni violenti aggrediscono diplomatici europei in Cisgiordania",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/coloni-israeliani-aggrediscono-diplomatici-europei-a-taybeh-in-cisgiordania_ac4f2ad6-0568-414f-a5ad-e5f880eec475.html"
+  },
+  {
+   "data": "2026-10-17T20:20:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Attivato un hub legale per i giovani fermati negli scontri a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/attivato-un-hub-legale-per-i-giovani-fermati-negli-scontri-a-milano_93bed3c2-1c6d-4a28-a445-fa3b47e66acc.html"
+  },
+  {
+   "data": "2026-10-17T20:10:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, disastro Safroncik-Lini. D'Urso attacca: \"Anna sei pesante, smettila di attaccare il maestro\"",
+   "url": "https://www.adnkronos.com/spettacoli/anna-safroncik-leonardo-lini-ballando-con-le-stelle_49G8LHQQHFAaZ7gahkNIEE"
+  },
+  {
+   "data": "2026-10-17T20:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Galatasaray, Leao entra in campo e viene sostituito dopo 16 minuti: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/galatasaray-leao-entra-esce-cosa-e-successo_3dJtgbFUZAp1Xc5e1jO5pH"
+  },
+  {
+   "data": "2026-10-17T19:40:43+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "A. Fontana, 'a Milano immagini gravissime, solidarietà a forze dell'ordine'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/a.-fontana-a-milano-immagini-gravissime-solidarieta-a-forze-dellordine_f81cde8d-7aca-4245-8da4-1df98dc58327.html"
+  },
+  {
+   "data": "2026-10-17T19:29:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Helen Mirren si trasforma in una Patricia Highsmith da delitto",
+   "url": "https://www.ansa.it/sito/notizie/speciali/festa-del-cinema-di-roma-/2026/10/16/helen-mirren-si-trasforma-in-una-patricia-highsmith-da-delitto_5c5dbe31-5b29-4057-9a6a-d2e7a576b066.html"
+  },
+  {
+   "data": "2026-10-17T19:28:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "La terza edizione dell'Aeronautica Militare Balloon Cup, il fascino e la storia del volo",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/17/la-terza-edizione-dellaeronautica-militare-balloon-cup-il-fascino-e-la-storia-del-volo_e624a2fd-205b-489f-9497-621eb880061b.html"
+  },
+  {
+   "data": "2026-10-17T19:16:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 17 ottobre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-combinazione-vincente_22XsYSDybGniusOPB4Pcsd"
+  },
+  {
+   "data": "2026-10-17T19:06:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lotta di potere alla Casa Bianca, trema anche Susie Wiles",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/17/lotta-di-potere-alla-casa-bianca-trema-anche-susie-wiles_cc81482b-f35c-4460-b63a-8a1886b5bb18.html"
+  },
+  {
+   "data": "2026-10-17T19:01:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dopo undici mesi riunita per un giorno la famiglia nel bosco",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/famiglia-nel-bosco-dopo-11-mesi-i-bambini-tornano-nel-casolare_17861bf6-56ed-45ff-8d10-173ed3dae63a.html"
+  },
+  {
+   "data": "2026-10-17T18:53:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Guerriglia a Parigi, scontri e 400 fermi nelle proteste in tutta la Francia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/proteste-in-francia-due-cortei-non-autorizzati-dispersi-a-parigi-incidenti-a-lione_23769778-a3b5-4b11-a769-4ae19c4b2d7e.html"
+  },
+  {
+   "data": "2026-10-17T18:40:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump congela le sanzioni a Putin. Esulta la Russia, l'ira di Zelensky",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/trump-sospende-sanzioni-e-dazi-alla-russia-sullexport_c94c6910-154f-4071-9bce-b30372b93263.html"
   },
   {
    "data": "2026-10-17T18:37:02+00:00",
@@ -47,36 +155,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/a-milano-saccheggiati-negozi-in-corso-vittorio-emanuele_a2114bb3-521d-4d11-84bc-2adfba82c509.html"
   },
   {
-   "data": "2026-10-17T18:19:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Guerriglia a piazza Duomo a Milano, bombe carta contro la polizia. Meloni: 'Ogni reticenza sulle violenze di piazza diventa giustificazione'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/guerriglia-a-piazza-duomo-a-milano-bombe-carta-contro-la-polizia.-meloni-ogni_a783ef65-c2c2-4fb9-8d99-7c64d791f43c.html"
-  },
-  {
-   "data": "2026-10-17T18:18:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: da 0-1 a 3-1, ancora una rimonta e l'Inter passa al Dall'Ara",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/17/serie-a-da-0-1-a-3-1-ancora-una-rimonta-e-linter-passa-al-dallara_5e337012-61f7-4e66-8bdf-7c6e282f61bd.html"
-  },
-  {
-   "data": "2026-10-17T18:08:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Coloni violenti aggrediscono diplomatici europei in Cisgiordania",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/coloni-israeliani-aggrediscono-diplomatici-europei-a-taybeh-in-cisgiordania_ac4f2ad6-0568-414f-a5ad-e5f880eec475.html"
-  },
-  {
-   "data": "2026-10-17T18:05:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump congela le sanzioni a Putin. Esulta la Russia, l'ira di Zelensky",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/trump-sospende-sanzioni-e-dazi-alla-russia-sullexport_c94c6910-154f-4071-9bce-b30372b93263.html"
-  },
-  {
-   "data": "2026-10-17T18:05:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lotta di potere alla Casa Bianca, trema anche Susie Wiles",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/17/lotta-di-potere-alla-casa-bianca-trema-anche-susie-wiles_cc81482b-f35c-4460-b63a-8a1886b5bb18.html"
-  },
-  {
    "data": "2026-10-17T18:04:42+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Scontri in Duomo, almeno 4 feriti tra agenti 20 tra i manifestanti",
@@ -85,20 +163,14 @@
   {
    "data": "2026-10-17T18:02:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Roma-Genoa - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-roma-genoa-oggi-serie-a-live_5kLgFHBboBtTddJr949dTL"
+   "titolo": "Roma-Genoa 2-0, Castro-Lulli gol e giallorossi secondi in classifica",
+   "url": "https://www.adnkronos.com/sport/roma-genoa-oggi-serie-a_5kLgFHBboBtTddJr949dTL"
   },
   {
    "data": "2026-10-17T18:00:27+00:00",
    "fonte": "ANSA",
    "titolo": "Javier Bardem premio alla Carriera alla Festa di Roma: 'Il cinema ha il potere di unirci'",
    "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/17/bardem-premio-alla-carriera-alla-festa-di-roma-il-cinema-ha-il-potere-di-unirci_2417ddd5-5a03-48ff-a4f3-01954ab5cd58.html"
-  },
-  {
-   "data": "2026-10-17T17:52:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il premier Lecornu accusa gruppi di estrema sinistra, 'non ci lasceremo intimidire'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/proteste-in-francia-due-cortei-non-autorizzati-dispersi-a-parigi-incidenti-a-lione_23769778-a3b5-4b11-a769-4ae19c4b2d7e.html"
   },
   {
    "data": "2026-10-17T17:51:09+00:00",
@@ -117,78 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Bologna-Inter, i nerazzurri protestano per un rigore su Thuram: cos'è successo",
    "url": "https://www.adnkronos.com/sport/bologna-inter-rigore-thuram-ammonito_1f7apPmhifcXd241t3i1qZ"
-  },
-  {
-   "data": "2026-10-17T17:35:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elena Sofia Ricci difende Barbara d'Urso: \"Il marito le impediva di lavorare, ha lottato per essere libera\"",
-   "url": "https://www.adnkronos.com/spettacoli/elena-sofia-ricci-barbara-durso-marito-tv-talk_1mrAnydyZ9VNqq2wH7o8Kc"
-  },
-  {
-   "data": "2026-10-17T17:29:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tennis: scivolone Zverev, la finale di Shanghai è tutta spagnola",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/17/zverev-ko-a-shanghai-in-finale-va-davidovich-fokina_d79d2847-1186-4aa0-909e-ad39efa89cfa.html"
-  },
-  {
-   "data": "2026-10-17T17:13:35+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "The Voice Senior, la storia di Francesca Magnelli: \"Ho rincorso la mia identità per 30 anni\"",
-   "url": "https://www.adnkronos.com/spettacoli/francesca-magnelli-the-voice-senior-transizione-coming-out_2aC69hHDIXlquD99x0SvxS"
-  },
-  {
-   "data": "2026-10-17T17:11:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Famiglia nel bosco, dopo 11 mesi i bambini tornano nel casolare",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/famiglia-nel-bosco-dopo-11-mesi-i-bambini-tornano-nel-casolare_17861bf6-56ed-45ff-8d10-173ed3dae63a.html"
-  },
-  {
-   "data": "2026-10-17T17:09:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'ex Ilva raddoppia la cigs, in 8.622 a casa fino a febbraio",
-   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/10/17/ex-ilva-comunicata-richiesta-di-cigs-per-un-massimo-di-8622-lavoratori_416ee81c-5c38-4103-a018-5768a95cb2eb.html"
-  },
-  {
-   "data": "2026-10-17T17:09:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Corteo a Milano, almeno cinque manifestanti trasportati in ospedale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/corteo-a-milano-almeno-cinque-manifestanti-trasportati-in-ospedale_161c5573-164e-4a5f-8ce5-be292bb12edd.html"
-  },
-  {
-   "data": "2026-10-17T17:08:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scontri in Duomo, Polizia avanza con gli idranti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/scontri-in-duomo-polizia-avanza-con-gli-idranti_cb81464d-ca23-4362-88c2-5dc674dd30fe.html"
-  },
-  {
-   "data": "2026-10-17T17:08:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tir e trattori, la protesta al sud non si ferma e il gasolio vola a 2,3 euro",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/17/il-gasolio-sfiora-i-3-euro-nei-distributori-su-autostrade_62ddcd77-5816-481d-b5ab-9fb881bbf8ea.html"
-  },
-  {
-   "data": "2026-10-17T17:00:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Superstite di Hiroshima: 'Ho paura che accada di nuovo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/superstite-di-hiroshima-ho-paura-che-accada-di-nuovo-in-ogni-momento_b0239c36-0981-4200-8c8f-63b8b82b0863.html"
-  },
-  {
-   "data": "2026-10-17T16:59:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "'La professoressa precaria per 10 anni va risarcita dal ministero'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/mimit-risarcisca-la-prof-per-10-anni-da-precaria-anche-se-poi-entro-fissa_b4f8d30e-a74b-4965-b6fa-01f094d4f5b9.html"
-  },
-  {
-   "data": "2026-10-17T16:57:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Festa Roma: Javier Bardem show, infiamma il red carpet e si siede al posto dei fotografi",
-   "url": "https://www.adnkronos.com/spettacoli/festa-roma-javier-bardem-show-infiamma-il-red-carpet-e-si-siede-al-posto-dei-fotografi_3KVICJoQQyaGj1tRT2xzO0"
-  },
-  {
-   "data": "2026-10-17T16:44:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scontri davanti stazione Bologna tra giovani manifestanti e forze ordine",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/scontri-davanti-stazione-bologna-tra-giovani-manifestanti-e-forze-ordine_0145aa9f-8f3f-4060-98f5-07d40e566824.html"
   }
  ]
 }
