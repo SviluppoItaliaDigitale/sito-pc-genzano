@@ -5,22 +5,70 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-16T22:52:08+00:00",
+  "generato": "2026-10-17T05:37:07+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-10-17T05:28:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump caccia la portavoce della Casa Bianca dopo solo cinque giorni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/trump-caccia-la-portavoce-della-casa-bianca-dopo-solo-cinque-giorni_21c88bbe-ed9a-4cf6-998e-28093741f1c4.html"
+  },
+  {
+   "data": "2026-10-17T05:22:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump sospende sanzioni e dazi alla Russia sull'export",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/trump-sospende-sanzioni-e-dazi-alla-russia-sullexport_c94c6910-154f-4071-9bce-b30372b93263.html"
+  },
+  {
+   "data": "2026-10-17T05:21:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid su Kherson, ferita una famiglia con un neonato. Missili su Zaporizhzhia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/raid-su-kherson-ferita-una-famiglia-con-un-neonato.-missili-su-zaporizhzhia_46d4fcb6-2796-4b9f-88dc-fd179fe963e7.html"
+  },
+  {
+   "data": "2026-10-17T05:18:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Bologna-Inter: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/bologna-inter-oggi-serie-a-orario-probabili-formazioni-dove-vederla-tv-streaming_48niPSEjl2YidQMW4yUVTT"
+  },
+  {
+   "data": "2026-10-17T05:13:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crosetto: 'Un grave errore limitare a Kiev l'accesso ai satelliti'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/crosetto-un-grave-errore-limitare-a-kiev-laccesso-ai-satelliti_13884a73-f06e-4a55-8ac2-35081434f678.html"
+  },
+  {
+   "data": "2026-10-17T05:04:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ora solare tra sonnolenza, risvegli anticipati e irritabilità: i possibili effetti dello spostamento di lancette",
+   "url": "https://www.adnkronos.com/cronaca/ora-solare-effetti-salute-pregliasco_7qVv6vij4azuf10hzGTGtG"
+  },
+  {
+   "data": "2026-10-17T05:03:47+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Violenza sessuale su un minore nel bagno di un bar, arrestato a Padova",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/violenza-sessuale-su-un-minore-nel-bagno-di-un-bar-arrestato-a-padova_dc38ed0e-cc57-4bf8-aa21-6883061b5726.html"
+  },
+  {
+   "data": "2026-10-16T22:32:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa sente Putin e chiede tregua per Oleshky, lo zar apre",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/il-papa-sente-putin-e-chiede-tregua-per-oleshky-lo-zar-apre_3eac7241-14db-47b1-9a85-d63d22ba5cbd.html"
+  },
+  {
+   "data": "2026-10-16T22:29:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giornalista del Washington Post ferita dai coloni in Cisgiordania: \"Mi hanno spinto a terra e preso a calci\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/giornalista-del-washington-post-ferita-dai-coloni-in-cisgiordania-mi-hanno-spinto_ceeab04f-76e0-43c1-84fd-464d47594519.html"
+  },
+  {
    "data": "2026-10-16T22:12:30+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Telefonata tra il Papa e Putin, Leone XIV: \"Serve una tregua per la città di Oleshky\". Lo zar dà la colpa a Kiev",
    "url": "https://www.adnkronos.com/internazionale/esteri/papa-leone-xiv-putin-telefonata-ucraina-oleshky_DNGYHrWUjfuI90DOp0Bhb"
-  },
-  {
-   "data": "2026-10-16T22:11:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa sente Putin e chiede tregua per Oleshky, lo zar apre",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/il-papa-sente-putin-e-chiede-tregua-per-oleshky-lo-zar-apre_3eac7241-14db-47b1-9a85-d63d22ba5cbd.html"
   },
   {
    "data": "2026-10-16T22:09:26+00:00",
@@ -59,12 +107,6 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/16/duello-sulle-banche.-giorgetti-non-morira-nessuno.-maxi-arretrati-ai-magistrati_b6cd7128-3e6f-4c14-951d-d05be93b6389.html"
   },
   {
-   "data": "2026-10-16T20:17:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump caccia la portavoce della Casa Bianca dopo solo cinque giorni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/trump-caccia-la-portavoce-della-casa-bianca-dopo-solo-cinque-giorni_21c88bbe-ed9a-4cf6-998e-28093741f1c4.html"
-  },
-  {
    "data": "2026-10-16T20:11:20+00:00",
    "fonte": "ANSA",
    "titolo": "Gli studenti si prendono le piazze, Meloni: 'Violenze da condannare'",
@@ -83,22 +125,10 @@
    "url": "https://www.adnkronos.com/politica/pace-sammarco-meritocrazia-italia-diventi-una-vocazione-istituzionale_I2BNF4k9r0TNoWOjlYuDC"
   },
   {
-   "data": "2026-10-16T19:49:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: \"Un mio impeachment? Ho informazioni su Hillary Clinton, Joe Biden e Barack Obama\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/16/trump-un-mio-impeachment-ho-informazioni-su-hillary-clinton-joe-biden-e-barack-obama_ed3ef661-531c-4b4c-be8e-50b6597634fc.html"
-  },
-  {
    "data": "2026-10-16T19:35:12+00:00",
    "fonte": "ANSA",
    "titolo": "Intesa Ue-Meloni sul dl bollette. Von der Leyen: 'Ma non faremo miracoli'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/16/intesa-ue-meloni-sul-dl-bollette.-von-der-leyen-ma-non-faremo-miracoli_5f11bc19-b502-42ac-8252-714b161eb42f.html"
-  },
-  {
-   "data": "2026-10-16T19:34:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump strappa con Kiev. Zelensky: \"Se cadiamo ci saranno 20 milioni di profughi in Europa\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/trump-strappa-con-kiev.-zelensky-se-cadiamo-ci-saranno-20-milioni-di-profughi-in-europa_d4393fc8-a9ba-4a13-9f44-f35b42d0d072.html"
   },
   {
    "data": "2026-10-16T19:16:29+00:00",
@@ -126,7 +156,7 @@
   },
   {
    "data": "2026-10-16T18:52:31+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "A 13 anni cosparge di benzina un clochard e gli dà fuoco",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/a-13-anni-cosparge-di-benzina-un-clochard-e-gli-da-fuoco_6b0e0bfe-e655-4a6b-aa15-22606c4ef2a7.html"
   },
@@ -155,40 +185,10 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-zacharia-portavoce-casa-bianca_2c63pIjg5i6r7BQSWWdd4F"
   },
   {
-   "data": "2026-10-16T17:45:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fratoianni: \"Tempi maturi per costruire il profilo della coalizione, al tavolo del programma posto per chiunque è anti Meloni\"",
-   "url": "https://www.adnkronos.com/politica/avs-fratoianni-intervista_7DLEKW1Ka251EyAJf44ODj"
-  },
-  {
    "data": "2026-10-16T17:44:54+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Gli studenti in piazza, cortei in tutta Italia. Tre minorenni arrestati a Torino",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/gli-studenti-in-piazza-cortei-in-tutta-italia.-a-torino-lancio-di-sassi-contro_1e152b63-e67e-4efd-9ec7-0ca3507f55e3.html"
-  },
-  {
-   "data": "2026-10-16T17:41:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump a Meloni: \"Accordo con Putin è per tutto il mondo non per noi\" - Guarda il video",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-meloni-putin-ultime-news_7J7UFF0v82zqO9pxIxjZ3W"
-  },
-  {
-   "data": "2026-10-16T17:22:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Neonato morto in un sacchetto, 'Non sapevo di essere incinta'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/neonato-morto-in-un-sacchetto-non-sapevo-di-essere-incinta_83d6d510-bd2d-4ff1-9473-57cd9e3ee753.html"
-  },
-  {
-   "data": "2026-10-16T17:18:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Morte avvelenate, alcuni computer rubati a marzo dalla scuola perquisita oggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/morte-avvelenate-alcuni-computer-rubati-a-marzo-dalla-scuola-perquisita-oggi_28301f1d-8b13-426e-98a6-2ca345d8b171.html"
-  },
-  {
-   "data": "2026-10-16T17:16:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Pillon: 'I bimbi del bosco passeranno il weekend a casa da soli con i genitori'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/16/pillon-bimbi-del-bosco-passeranno-il-weekend-a-casa-da-soli-con-i-genitori_01077cbf-ae37-4c40-bb7c-1ea485592bac.html"
   }
  ]
 }
