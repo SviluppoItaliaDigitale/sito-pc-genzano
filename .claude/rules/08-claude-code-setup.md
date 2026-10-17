@@ -160,6 +160,17 @@ Quattro flussi praticabili:
 2. **Cloud + utente che fornisce la foto**: l'utente carica/incolla un file immagine già scaricato → la sessione cloud lo legge dal filesystem temporaneo, applica fascia blu (Pillow è installabile via pip che è whitelistato), inserisce shortcode. Niente download esterno richiesto.
 3. **Workflow CI**: il workflow `scarica-foto-automatica.yml` su GitHub Actions ha **rete libera** (runner Ubuntu standard) e può scaricare da qualsiasi fonte. Lo step 2 (`auto-cover-mancanti.py`) genera comunque la cover tipografica banner per ogni articolo con `image: ""`. Lo step 1 (download foto inline) era basato sui marker `# TODO-foto-*` che sono **banditi** dal 3 maggio 2026 (CLAUDE.md punto 9): non c'è quindi un meccanismo CI per le foto inline.
 
+### 🔴 Uno strumento che manca si installa, non si dichiara mancante (17/10/2026)
+
+Istruzione dell'utente: *«tu sai fare tutto e devi farlo senza giustificazioni»*. Nessun controllo del repository si salta e nessun lavoro si consegna con «qui non si installa». Se manca uno strumento (Hugo, dizionario hunspell, Playwright, PyMuPDF, poppler, LibreOffice, node, qualsiasi pacchetto), lo si procura **prima** di andare avanti, in quest'ordine, passando al successivo solo se il precedente fallisce davvero:
+
+1. `apt-get update` e poi `apt-get install -y <pacchetto>` (senza `update` l'installazione fallisce: è l'errore del 17/10/2026);
+2. `pip install --break-system-packages <pacchetto>` o `npm install`;
+3. download del binario o dei dati dalla fonte ufficiale (release GitHub del progetto, repository ufficiale) in una cartella temporanea, con la versione usata dai workflow (per Hugo: `hugo-version` di `deploy.yml`);
+4. Chromium già presente in `/opt/pw-browsers/chromium` per tutto ciò che usa un browser (`CHROMIUM_PATH`, `executable_path`), mai `playwright install`.
+
+Solo se tutte e quattro le strade falliscono si scrive che cosa è stato provato, con l'errore esatto di ciascuna, e si esegue il controllo in un altro modo (la CI della PR) **prima** di unire, mai dopo. Uno script del repository che dipende da qualcosa di esterno, se può, se lo procura da solo (modello: `scripts/check-refusi.py`).
+
 ### Cosa funziona dalla sandbox cloud
 
 - Lettura/scrittura file del repo (Read, Edit, Write, Bash su file locali).

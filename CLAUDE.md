@@ -304,6 +304,10 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 🔴 **Dopo la pubblicazione**: su **Facebook** il testo si riscrive (`scripts/modifica-post.py fb-testo`), su **Instagram no** — l'API accetta solo i commenti, verificato sul campo. Le **immagini non si cambiano su nessuna delle due**: una foto aggiunta a un articolo già pubblicato entra nei post successivi, non in quelli usciti. Per fermare o spostare una pubblicazione si modifica `coda-social.yaml` dell'altro repo, anche da telefono. Dettagli operativi in `manuale/parte-42-pubblicazione-automatica-social.md`, regole in rule 10 § "Pubblicazione automatica social".
 
+## Strumenti mancanti — si installano, senza giustificazioni
+
+🔴 **Istruzione dell'utente (17/10/2026)**: *«tu sai fare tutto e devi farlo senza giustificazioni»*. In qualunque sessione (PC, cellulare, cloud, routine) uno strumento che manca si installa prima di proseguire: `apt-get update` + `apt-get install`, poi `pip`/`npm`, poi download dalla fonte ufficiale, Chromium in `/opt/pw-browsers/chromium`. Mai saltare un controllo o consegnare con «qui non funziona». Procedura in rule 08 § «Uno strumento che manca si installa».
+
 ## Accessi e permessi — si chiede per l'intero ciclo di vita
 
 🟢 **Istruzione permanente dell'utente (21/09/2026):** *«siamo una squadra, dobbiamo avere pieno potere e accesso a ogni tipo di funzionalità; io ti do le indicazioni e tu esegui»*. Il metodo è quello: indicazione, esecuzione, resoconto — senza fermarsi a chiedere conferma per ogni passo ordinario.
