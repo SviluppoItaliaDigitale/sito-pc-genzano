@@ -327,6 +327,14 @@ jobs:
           done
           exit $fail
 
+      # 17/10/2026, istruzione dell'utente: ogni dato pubblicato si confronta con
+      # quello già presente sul sito. Solo le righe aggiunte dalla PR: se un
+      # valore nuovo (ore del caldo, litri a persona, giorni di farmaci, RCP…)
+      # è diverso da uno già pubblicato, la PR si ferma. Agente:
+      # pc-coerenza-trasversale.
+      - name: "🔗 Dati nuovi coerenti con quelli già pubblicati"
+        run: python3 scripts/cerca-incongruenze.py --da-git origin/${{ github.base_ref }}
+
       # 28/09/2026: un articolo programmato per il 28 settembre titolava «15 ottobre:
       # si chiude la stagione AIB». Il testo era stato corretto, la data di uscita no.
       # Blocca la PR se titolo, descrizione o primo paragrafo raccontano al presente

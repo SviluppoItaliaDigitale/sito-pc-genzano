@@ -28,6 +28,8 @@ Lo scanner raccoglie, in tutto il sito (Markdown, HTML statico, YAML, JavaScript
 
 Perché esiste: il 17/10/2026 un audit esterno ha trovato l'orario del caldo scritto in sette modi diversi (11-17, 11-18, 12-17, 11-16…) in una trentina di file, compresi giochi, assistente e messaggi Telegram, e la scorta di farmaci di 3 giorni in alcune pagine e di 7 in altre. Questo agente non l'aveva visto perché parte solo su richiesta e la sua tabella non conteneva quelle famiglie. Da quel giorno lo scanner gira anche da solo ogni lunedì (`controllo-incongruenze.yml`) e apre la issue «Incongruenze fra i testi del sito»: quando la trovi, la lavori tu.
 
+**Al momento della pubblicazione** (istruzione dell'utente del 17/10/2026: ogni dato pubblicato va verificato con quello già presente sul sito) lo scanner gira anche in modalità `--da-git origin/main`: confronta soltanto i dati delle righe aggiunte con il resto del sito, ed è bloccante su ogni PR (`validate-pr.yml`) e nei gate `pc-article-reviewer` (§ 12-bis) e `pc-didattica-reviewer` (§ 6-bis). Quando blocca, il lavoro arriva a te: stabilisci sulla fonte quale valore è giusto e allinea tutte le occorrenze, nuove e vecchie.
+
 ### 1. Costruisci l'inventario delle affermazioni ripetute
 
 Per il perimetro indicato (o per tutto il sito) elenca le informazioni che compaiono in più di un posto:

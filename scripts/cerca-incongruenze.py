@@ -18,6 +18,16 @@ canonica e come 11-17 in 19 file (articoli, kit, giochi, libro pop-up,
 messaggi Telegram), e nessun controllo lo vedeva perché il dato non era nel
 registro. Lo ha trovato un audit esterno.
 
+Modalità «pubblicazione» (dal 17/10/2026, su richiesta dell'utente: ogni
+dato pubblicato va confrontato con quello già presente sul sito):
+  python3 scripts/cerca-incongruenze.py --da-git origin/main
+confronta soltanto i valori sulle righe AGGIUNTE rispetto a quel ramo
+(commit e modifiche non ancora committate) con i valori della stessa
+famiglia scritti nel resto del sito. Se un valore nuovo è diverso da uno già
+presente, esce con errore: o si corregge il nuovo, o si allineano anche le
+altre pagine. È bloccante in validate-pr.yml; i gate degli articoli e dei
+materiali lo eseguono prima del commit.
+
 Uso:
   python3 scripts/cerca-incongruenze.py                  # rapporto testuale
   python3 scripts/cerca-incongruenze.py --markdown F.md  # rapporto per la issue
@@ -209,15 +219,81 @@ def raccogli(famiglie):
     return risultati
 
 
+def righe_aggiunte(rif: str) -> dict[str, set[int]]:
+    """File e numeri di riga aggiunti rispetto a rif (merge-base con HEAD)."""
+    import subprocess
+    try:
+        base = subprocess.run(["git", "merge-base", rif, "HEAD"], cwd=ROOT,
+                              capture_output=True, text=True, check=True).stdout.strip()
+    except subprocess.CalledProcessError:
+        base = rif
+    diff = subprocess.run(["git", "diff", "-U0", "--no-color", base], cwd=ROOT,
+                          capture_output=True, text=True, check=True).stdout
+    # anche i file nuovi non ancora aggiunti all'indice
+    nuovi = subprocess.run(["git", "ls-files", "--others", "--exclude-standard"],
+                           cwd=ROOT, capture_output=True, text=True).stdout.split()
+    out: dict[str, set[int]] = {}
+    corrente = None
+    for riga in diff.splitlines():
+        if riga.startswith("+++ "):
+            corrente = riga[6:] if riga.startswith("+++ b/") else None
+        elif riga.startswith("@@") and corrente:
+            m = re.search(r"\+(\d+)(?:,(\d+))?", riga)
+            inizio, n = int(m.group(1)), int(m.group(2) or 1)
+            out.setdefault(corrente, set()).update(range(inizio, inizio + n))
+    for rel in nuovi:
+        f = ROOT / rel
+        if f.is_file():
+            try:
+                n = f.read_text(encoding="utf-8").count("\n") + 1
+            except (UnicodeDecodeError, OSError):
+                continue
+            out[rel] = set(range(1, n + 1))
+    return out
+
+
+def controlla_pubblicazione(famiglie, risultati, aggiunte) -> int:
+    problemi = 0
+    for fam in famiglie:
+        valori = risultati[fam["id"]]
+        nuovi, gia = [], defaultdict(set)
+        for valore, occ in valori.items():
+            for rel, riga, frase in occ:
+                if riga in aggiunte.get(rel, ()):
+                    nuovi.append((valore, rel, riga, frase))
+                else:
+                    gia[valore].add(rel)
+        for valore, rel, riga, frase in nuovi:
+            altri = {v: f for v, f in gia.items() if v != valore}
+            if not altri:
+                continue
+            problemi += 1
+            elenco = "; ".join(f"«{v}» in {len(f)} file (es. {sorted(f)[0]})"
+                               for v, f in sorted(altri.items(), key=lambda kv: -len(kv[1])))
+            print(f"{rel}:{riga}: [{fam['id']}] nuovo valore «{valore}» per «{fam['dato']}», "
+                  f"ma sul sito c'è già {elenco}.\n    {frase}")
+    if problemi:
+        print(f"\n{problemi} dato/i nuovi diversi da quelli già pubblicati. Verifica sulla fonte "
+              "canonica: correggi il nuovo valore oppure allinea tutte le pagine "
+              "(agente pc-coerenza-trasversale) e registra il dato in data/dati_canonici.yaml.")
+    else:
+        print("Dati nuovi coerenti con quelli già presenti sul sito.")
+    return min(problemi, 255)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--famiglia", help="Solo questa famiglia")
     ap.add_argument("--markdown", help="Scrive il rapporto in Markdown in questo file")
+    ap.add_argument("--da-git", metavar="RIF",
+                    help="Confronta solo i dati sulle righe aggiunte rispetto a RIF con il resto del sito")
     args = ap.parse_args()
 
     famiglie = [f for f in FAMIGLIE if not args.famiglia or f["id"] == args.famiglia]
     risultati = raccogli(famiglie)
+    if args.da_git:
+        return controlla_pubblicazione(famiglie, risultati, righe_aggiunte(args.da_git))
 
     righe = []
     divergenti = 0
