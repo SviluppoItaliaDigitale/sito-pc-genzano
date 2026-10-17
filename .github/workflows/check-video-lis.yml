@@ -38,8 +38,17 @@ jobs:
         id: check
         run: |
           set -uo pipefail
-          OUTPUT=$(python3 scripts/check-nuovi-video-lis.py 2>&1 || true)
+          # Codice 3 = almeno una fonte non ha risposto: il report vale per le
+          # altre, ma il run va chiuso in rosso (ultimo step) perché il
+          # controllo di salute giornaliero lo segnali. Fino al 17/10/2026
+          # l'errore restava nel log con il run verde.
+          RC=0
+          OUTPUT=$(python3 scripts/check-nuovi-video-lis.py 2>&1) || RC=$?
           echo "$OUTPUT"
+          if [ "$RC" -ne 0 ]; then
+            echo "fonti_ko=true" >> "$GITHUB_OUTPUT"
+            echo "$OUTPUT" | grep "^FONTI_IN_ERRORE" >> "$GITHUB_STEP_SUMMARY" || echo "Lo script è terminato con codice $RC" >> "$GITHUB_STEP_SUMMARY"
+          fi
           # Il marker OK_NO_NEW_VIDEOS/NEW_VIDEOS_FOUND è su stdout, ma OUTPUT
           # include anche stderr (diagnostica canali): cercalo su tutta l'uscita,
           # non sulla prima riga (bug fino a lug 2026: issue aperte con 0 video).
@@ -49,7 +58,7 @@ jobs:
           else
             echo "has_new=true" >> "$GITHUB_OUTPUT"
             # Body issue: tutto tranne la prima riga marker
-            echo "$OUTPUT" | grep -v "^NEW_VIDEOS_FOUND$" > /tmp/issue-body.md
+            echo "$OUTPUT" | grep -v "^NEW_VIDEOS_FOUND$" | grep -v "^FONTI_IN_ERRORE" > /tmp/issue-body.md
             echo "---" >> /tmp/issue-body.md
             echo "" >> /tmp/issue-body.md
             echo "## Come integrare" >> /tmp/issue-body.md
@@ -84,3 +93,46 @@ jobs:
               --label "automazione" \
               --label "lis"
           fi
+
+      - name: Issue per le fonti che non rispondono
+        # Una fonte morta va riparata, non ignorata (istruzione dell'utente
+        # del 17/10/2026): la issue `fonte-rotta` la prende in carico la
+        # routine giornaliera delle issue automatiche (rule 10).
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FONTI_KO: ${{ steps.check.outputs.fonti_ko }}
+        run: |
+          set -euo pipefail
+          TITLE="LIS: una o più fonti dei video non rispondono"
+          EXISTING=$(gh issue list --label "fonte-rotta" --label "lis" --state open --json number --jq '.[0].number // empty')
+          if [ "${FONTI_KO:-}" = "true" ]; then
+            {
+              echo "Il controllo settimanale dei video LIS non ha potuto leggere queste fonti:"
+              echo ""
+              grep "^FONTI_IN_ERRORE" "$GITHUB_STEP_SUMMARY" | sed 's/^FONTI_IN_ERRORE: /- /' || echo "- (vedi il log)"
+              echo ""
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "## Che cosa fare"
+              echo ""
+              echo "1. Riprodurre l'errore: \`python3 scripts/check-nuovi-video-lis.py\`."
+              echo "2. Trovare sul canale ufficiale il nuovo identificativo della playlist o del canale e verificarlo con una richiesta reale."
+              echo "3. Aggiornare \`scripts/check-nuovi-video-lis.py\` (e il commento in \`data/lis.yaml\`); se la fonte non esiste più e non ha sostituti, toglierla documentando che cosa non è più sorvegliato."
+              echo "4. Rilanciare il workflow e chiudere questa issue solo dopo il run verde."
+            } > /tmp/fonti-body.md
+            if [ -n "$EXISTING" ]; then
+              gh issue comment "$EXISTING" --body-file /tmp/fonti-body.md
+            else
+              gh issue create --title "$TITLE" --body-file /tmp/fonti-body.md \
+                --label "automazione" --label "fonte-rotta" --label "lis" --label "urgente"
+            fi
+          elif [ -n "$EXISTING" ] && [ "${{ steps.check.outcome }}" = "success" ]; then
+            gh issue close "$EXISTING" --comment "Tutte le fonti rispondono di nuovo (run ${{ github.run_id }})."
+          fi
+
+      - name: Segnala le fonti che non rispondono
+        if: steps.check.outputs.fonti_ko == 'true'
+        run: |
+          echo "::error::Una o più fonti dei video LIS non hanno risposto: il controllo è incompleto. Dettagli nel riepilogo del run."
+          exit 1
