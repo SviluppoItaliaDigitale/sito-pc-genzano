@@ -37,14 +37,31 @@ jobs:
         id: check
         run: |
           set -uo pipefail
-          OUTPUT=$(python3 scripts/check-video-dpc-eventi.py 2>&1 || true)
-          echo "$OUTPUT"
-          FIRST=$(echo "$OUTPUT" | head -1)
-          if [ "$FIRST" = "OK_NO_MATCHES" ]; then
+          # Codice 3 = almeno una fonte DPC non ha risposto: il report vale per
+          # le altre, ma il run si chiude in rosso (ultimo step) e la issue
+          # `fonte-rotta` la prende in carico la routine giornaliera. Fino al
+          # 17/10/2026 un `|| true` mascherava l'uscita e il marker si cercava
+          # sulla prima riga, che era la diagnostica di stderr: l'errore finiva
+          # sepolto nel corpo della issue dei suggerimenti.
+          RC=0
+          python3 scripts/check-video-dpc-eventi.py > /tmp/stdout.txt 2> /tmp/stderr.txt || RC=$?
+          cat /tmp/stderr.txt
+          cat /tmp/stdout.txt
+          echo "rc=$RC" >> "$GITHUB_OUTPUT"
+          if [ "$RC" -eq 3 ]; then
+            echo "fonti_ko=true" >> "$GITHUB_OUTPUT"
+            grep "^FONTI_IN_ERRORE: " /tmp/stdout.txt | sed 's/^FONTI_IN_ERRORE: //' | sed 's/; /\n/g' > /tmp/fonti-ko.txt || true
+            { echo "## Fonti che non rispondono"; echo ""; sed 's/^/- /' /tmp/fonti-ko.txt; } >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$RC" -ne 0 ]; then
+            echo "::error::Lo script è terminato con codice $RC (errore inatteso, vedi il log)."
+            exit "$RC"
+          fi
+          # Il marker sta su stdout: si cerca su tutta l'uscita, non sulla prima riga.
+          if grep -q "^OK_NO_MATCHES$" /tmp/stdout.txt; then
             echo "has_matches=false" >> "$GITHUB_OUTPUT"
-          else
+          elif grep -q "^MATCHES_FOUND$" /tmp/stdout.txt; then
             echo "has_matches=true" >> "$GITHUB_OUTPUT"
-            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+            grep -v "^MATCHES_FOUND$" /tmp/stdout.txt | grep -v "^FONTI_IN_ERRORE: " > /tmp/issue-body.md
             {
               echo ""
               echo "***"
@@ -62,6 +79,9 @@ jobs:
               echo ""
               echo "_Issue generata automaticamente dal workflow \`check-video-dpc-eventi.yml\` (bi-settimanale). I match con score basso (1.8-2.0) possono essere ignorati se non davvero pertinenti — sono inclusi per copertura._"
             } >> /tmp/issue-body.md
+          else
+            echo "::error::Nessun marker OK_NO_MATCHES/MATCHES_FOUND nell'uscita dello script."
+            exit 1
           fi
 
       - name: Crea/aggiorna issue
@@ -87,3 +107,49 @@ jobs:
               --label "automazione" \
               --label "video-dpc"
           fi
+
+      - name: Issue per le fonti che non rispondono
+        # Una fonte morta va riparata, non ignorata (istruzione dell'utente
+        # del 17/10/2026): la issue `fonte-rotta` la prende in carico la
+        # routine giornaliera delle issue automatiche (rule 10). Si chiude
+        # da sola al primo run in cui tutte le fonti rispondono.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FONTI_KO: ${{ steps.check.outputs.fonti_ko }}
+          RC: ${{ steps.check.outputs.rc }}
+        run: |
+          set -euo pipefail
+          TITLE="Video: una o più fonti non rispondono (check-video-dpc-eventi)"
+          EXISTING=$(gh issue list --label "fonte-rotta" --state open --limit 100 --json number,title \
+            | jq -r --arg t "$TITLE" '[.[] | select(.title == $t)][0].number // empty')
+          if [ "${FONTI_KO:-}" = "true" ]; then
+            {
+              echo "Il controllo bisettimanale dei video DPC da abbinare ai contenuti non ha potuto leggere queste fonti:"
+              echo ""
+              sed 's/^/- /' /tmp/fonti-ko.txt 2>/dev/null || echo "- (vedi il log)"
+              echo ""
+              echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "## Che cosa fare"
+              echo ""
+              echo "1. Riprodurre l'errore: \`python3 scripts/check-video-dpc-eventi.py\`."
+              echo "2. Verificare sul canale ufficiale https://www.youtube.com/@DPCgov se la playlist o il canale sono stati spostati, rinominati o tolti, con una richiesta reale al feed."
+              echo "3. Aggiornare \`scripts/check-video-dpc-eventi.py\` (\`CHANNEL_DPC\`, prefisso delle playlist, \`DENY_IDS\` per una playlist tolta); se la fonte non esiste più, documentare che cosa non è più sorvegliato."
+              echo "4. Rilanciare il workflow: la issue si chiude da sola al primo run in cui tutte le fonti rispondono."
+            } > /tmp/fonti-body.md
+            if [ -n "$EXISTING" ]; then
+              gh issue comment "$EXISTING" --body-file /tmp/fonti-body.md
+            else
+              gh issue create --title "$TITLE" --body-file /tmp/fonti-body.md \
+                --label "automazione" --label "fonte-rotta"
+            fi
+          elif [ -n "$EXISTING" ] && [ "${RC:-}" = "0" ]; then
+            gh issue close "$EXISTING" --comment "Tutte le fonti rispondono di nuovo (run ${{ github.run_id }})."
+          fi
+
+      - name: Segnala le fonti che non rispondono
+        if: steps.check.outputs.fonti_ko == 'true'
+        run: |
+          echo "::error::Una o più fonti dei video DPC non hanno risposto: il controllo è incompleto. Dettagli nel riepilogo del run."
+          exit 1
