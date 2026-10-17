@@ -39,7 +39,23 @@ TIMEOUT = 30
 
 
 def _get(url, expect_json=False, expect_image=False, accept=(200,)):
-    """Ritorna (ok:bool, dettaglio:str, headers, body_or_json)."""
+    """Ritorna (ok:bool, dettaglio:str, headers, body_or_json).
+
+    Timeout ed errori di connessione si ritentano due volte a 10 secondi di
+    distanza prima di dichiarare la fonte guasta: il 17/10/2026 due server
+    EUMETSAT, raggiungibili da qui, sono andati in timeout dal runner di
+    GitHub e al giro successivo rispondevano. Una risposta HTTP (404, 500…)
+    invece è definitiva e non si ritenta."""
+    for tentativo in range(3):
+        esito = _get_una_volta(url, expect_json, expect_image, accept)
+        if esito[0] or not esito[1].startswith(("TimeoutError", "URLError", "ConnectionResetError", "RemoteDisconnected", "timeout")):
+            return esito
+        if tentativo < 2:
+            time.sleep(10)
+    return esito[0], f"{esito[1]} (3 tentativi)", esito[2], esito[3]
+
+
+def _get_una_volta(url, expect_json, expect_image, accept):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
