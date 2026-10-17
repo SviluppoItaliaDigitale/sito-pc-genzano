@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-10-17T16:27:12+00:00",
+  "generato": "2026-10-17T18:43:43+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -9,8 +9,24 @@
  "events": [
   {
    "alertlevel": "Green",
+   "country": "Bolivia",
+   "datemodified": "2026-10-17T18:28:05",
+   "description": "Earthquake in Bolivia",
+   "episodeid": 1740793,
+   "eventid": 1572223,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-17T16:52:45",
+   "iso3": "BOL",
+   "lat": -21.1752,
+   "lon": -67.2144,
+   "name": "Earthquake in Bolivia",
+   "severitytext": "Magnitude 4.6M, Depth:189.462km",
+   "todate": "2026-10-17T16:52:45"
+  },
+  {
+   "alertlevel": "Green",
    "country": "México",
-   "datemodified": "2026-10-17T14:54:50",
+   "datemodified": "2026-10-17T17:39:11",
    "description": "Tropical Cyclone TRUDY-26",
    "episodeid": 17,
    "eventid": 1001337,
@@ -1051,7 +1067,7 @@
   {
    "alertlevel": "Orange",
    "country": "México",
-   "datemodified": "2026-10-17T11:22:21",
+   "datemodified": "2026-10-17T17:37:52",
    "description": "Tropical Cyclone SIMON-26",
    "episodeid": 38,
    "eventid": 1001335,
@@ -1587,22 +1603,6 @@
    "lon": 39.4398,
    "name": "Forest fires in Mozambique",
    "severitytext": "Green impact for forestfire in 6749 ha",
-   "todate": "2026-10-16T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Mozambique",
-   "datemodified": "2026-10-17T11:12:37",
-   "description": "Forest fires in Mozambique",
-   "episodeid": 6,
-   "eventid": 1032773,
-   "eventtype": "WF",
-   "fromdate": "2026-10-05T00:00:00",
-   "iso3": "MOZ",
-   "lat": -14.6832,
-   "lon": 39.3644,
-   "name": "Forest fires in Mozambique",
-   "severitytext": "Green impact for forestfire in 5371 ha",
    "todate": "2026-10-16T00:00:00"
   }
  ]
