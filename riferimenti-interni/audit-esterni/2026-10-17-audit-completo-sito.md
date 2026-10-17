@@ -28,17 +28,17 @@ Il repository inizialmente rilevato era al commit a236864facae71f04081bf6227b314
 
 | Area | Valutazione | Motivo principale |
 | --- | --- | --- |
-| disponibilità e collegamenti | Buona | Tutta la sitemap raggiungibile; pagina inesistente con vero HTTP 404 |
+| Disponibilità e collegamenti | Buona | Tutta la sitemap raggiungibile; pagina inesistente con vero HTTP 404 |
 | Contenuti e utilità locale | Buona | Rischi, aree di attesa, contatti, piani e attività del territorio |
 | Navigazione e ricerca | Buona, da snellire | Ricerca efficace; molte porte d'accesso e pagine molto estese |
 | Didattica | Ricca, da consolidare | Materiali per fasce, esperimenti, percorsi; incoerenze nelle durate e nelle copie |
-| accessibilità HTML | Buona base, verifica incompleta | Markup curato; problema semantico riprodotto nell'assistente |
+| Accessibilità HTML | Buona base, verifica incompleta | Markup curato; problema semantico riprodotto nell'assistente |
 | Documenti PDF | Da migliorare con priorità | Poster raster, manuale senza struttura e classificazioni troppo ottimistiche |
 | Prestazioni mobili | Da migliorare | Ultimo Lighthouse disponibile: home 76/100, sotto il target di 85 |
 | SEO tecnico | Buona base | Canonical e descrizioni presenti; JSON-LD valido sintatticamente |
 | Sicurezza HTTP | Buona base | HTTPS, HSTS e altri header; CSP ulteriormente restringibile |
 | Privacy | Informativa articolata | Distinte richieste automatiche e widget su clic; trattamenti effettivi da verificare con il titolare |
-| affidabilità delle allerte | Impostazione prudente, da uniformare | Fonti e orari presenti; aggiornamento e gestione dei dati non recenti diverse tra le viste |
+| Affidabilità delle allerte | Impostazione prudente, da uniformare | Fonti e orari presenti; aggiornamento e gestione dei dati non recenti diverse tra le viste |
 | Manutenzione e controlli | Evoluta, da ampliare | Controlli frequenti; campione limitato e alcuni esiti non bloccanti |
 
 Le valutazioni sono giudizi editoriali motivati, non punteggi di uno standard o una classifica comparativa.
@@ -64,7 +64,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** run 39026343083 del 17/10/2026, avviato alle 10:49 UTC; log del job 117377964568. La misura precede la build osservata alle 18:30: non è una nuova misurazione sulla build finale della sessione. Non sono disponibili qui dati reali sufficienti per giudicare i Core Web Vitals degli utenti.
 - **Intervento suggerito:** misurare la build corrente, ridurre il codice comune e rinviare i componenti non necessari. Il bundle Bootstrap trasferisce circa 298 kB compressi nella richiesta esaminata; CSS Bootstrap circa 92 kB e CSS personalizzato circa 67 kB. Individuare il peso realmente inutilizzato prima di rimuovere codice.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** aperto: il peso della home va ridotto con una modifica dedicata.
 
 ### R2 - Un controllo Lighthouse verde non garantisce le soglie
 - **Dove:** lighthouserc.json; .github/workflows/lighthouse-audit.yml; https://www.protezionecivilegenzano.it/stato-sistema/ .
@@ -72,7 +72,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** configurazione letta e log dello stesso run: avviso per performance 0,76; conclusione del job success. Il riepilogo del workflow parla anche di errori per categorie che nel file sono solo avvisi.
 - **Intervento suggerito:** separare esito di esecuzione, punteggi e rispetto delle soglie. Decidere quali regressioni devono bloccare e quali devono aprire una segnalazione.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460: il workflow Lighthouse apre una segnalazione quando un punteggio scende sotto soglia.
 
 ### R3 - Il campione accessibilità non copre i percorsi più complessi
 - **Dove:** scripts/axe-gate.js; .github/workflows/pa11y-ci.yml.
@@ -80,7 +80,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** elenco PATHS ed EXCLUDE nello script. Il run 39033056546, riferito alla PR #1439, riporta zero violazioni automatiche e 232 incomplete. È un controllo di una proposta di modifica, non una certificazione dell'intero sito pubblico.
 - **Intervento suggerito:** aggiungere scenari che aprano i dialog, compongano una lezione e usino almeno un gioco per famiglia. Tenere un registro della revisione manuale degli incomplete. Affiancare prove con TalkBack, NVDA o VoiceOver.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** in parte: la PR #1460 aggiunge il controllo bloccante dei ruoli ARIA sui pulsanti; il campione axe resta da estendere ai percorsi interattivi.
 
 ### R4 - I due comandi iniziali dell'assistente perdono il ruolo di pulsante
 - **Dove:** https://www.protezionecivilegenzano.it/assistente/ ; themes/flavour-pcgenzano/layouts/assistente/list.html, funzione di rendering delle card.
@@ -88,15 +88,15 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** DOM dei comandi Sono in difficoltà ORA e Voglio informarmi; entrambi hanno button e role=listitem. Il comportamento è stato riprodotto nella pagina pubblica.
 - **Intervento suggerito:** conservare la semantica nativa del pulsante e, se serve una lista, collocare ciascun pulsante dentro un elemento li. Verificare annuncio, tastiera, focus e nome accessibile.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460.
 
 ### R5 - La lezione composta non rispetta sempre la durata dei materiali
 - **Dove:** https://www.protezionecivilegenzano.it/formazione/crea-la-mia-lezione/?classe=primaria-alta&minuti=45&tema=terremoto ; themes/flavour-pcgenzano/static/js/crea-lezione.js.
 - **Che cosa non va:** nel test il racconto Il giorno della prova è collocato nella fascia 5-15 minuti, quindi 10 minuti, ma la stessa card dichiara una durata di 15 minuti. La scaletta continua a presentarsi come lezione di 45 minuti. Non compare un adattamento che spieghi quale parte usare.
 - **Prova:** composizione eseguita nel browser con primaria III-V, 45 minuti, terremoto. Il codice filtra la durata soltanto per l'attività principale; il racconto non riceve quel filtro. L'esito può variare con il catalogo o con nuove combinazioni, ma la lacuna è presente nell'algoritmo.
-- **Intervento suggerito:** rispettare le durate per ogni fase oppure dichiarare un estratto e la sua durata. Per il pop-up indicare anche quale tavola usare, poiché il materiale completo né contiene 13.
+- **Intervento suggerito:** rispettare le durate per ogni fase oppure dichiarare un estratto e la sua durata. Per il pop-up indicare anche quale tavola usare, poiché il materiale completo ne contiene 13.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460: ogni fase usa materiali che stanno nel suo tempo, oppure dichiara di usarne solo una parte.
 
 ### R6 - Orario del caldo incoerente nel libro pop-up
 - **Dove:** https://www.protezionecivilegenzano.it/formazione/schede-stampabili/libro-popup-protezione-civile/#tav8 ; https://www.protezionecivilegenzano.it/rischi-prevenzione/ondate-di-calore/ .
@@ -104,7 +104,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** confronto dei due testi pubblici e della pagina Dieci consigli utili del Ministero, verificata il 17 ottobre.
 - **Intervento suggerito:** uniformare il riferimento e controllare le altre copie stampabili e i pacchetti. Questo rilievo riguarda la coerenza del consiglio durante le ondate di calore; non implica una soglia universale di sicurezza per ogni luogo e giornata.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460 in tutte le copie (articoli, pagine, giochi, libro pop-up, script e messaggi Telegram), con il dato nel registro dei dati canonici.
 
 ### R7 - Nel percorso gas il divieto sui telefoni è formulato in modo parziale
 - **Dove:** https://www.protezionecivilegenzano.it/assistente/#gas ; themes/flavour-pcgenzano/layouts/assistente/list.html, nodo gas.
@@ -112,7 +112,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** percorso riprodotto nel browser e confronto con il vademecum dei Vigili del Fuoco, che comprende telefoni fissi e cellulari tra gli apparecchi da non utilizzare nel locale interessato.
 - **Intervento suggerito:** formulare un unico divieto comprensibile e mantenere la chiamata al 112 da un luogo sicuro. Non cambiare automaticamente i numeri locali prendendoli da vecchi opuscoli nazionali.
 - **Priorità:** P2, chiarimento di autoprotezione.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460 nell'assistente e nella pagina delle idee sbagliate.
 
 ### R8 - Poster e manuale hanno barriere documentali confermate
 - **Dove:** /poster-emergenza-multilingua/poster-emergenza-it.pdf ; /manuali/manuale-protezione-civile.pdf .
@@ -120,15 +120,15 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** lettura strutturale dei PDF scaricati: poster una pagina e zero caratteri estratti; manuale 127 pagine e 222.827 caratteri estratti, senza StructTreeRoot. Le alternative HTML sono una mitigazione utile, non rendono accessibile il PDF stesso.
 - **Intervento suggerito:** iniziare dai materiali urgenti e più usati, con testo reale, struttura, ordine di lettura e alternative per le figure. Verificare il risultato con strumenti documentali e lettore di schermo.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** aperto: le barriere sono dichiarate nell'audit PDF; i documenti vanno rifatti.
 
 ### R9 - La classificazione verde dei PDF non dimostra accessibilità
 - **Dove:** https://www.protezionecivilegenzano.it/accessibilita/audit-pdf/ ; scripts/audit-pdf-accessibilita.py, funzione verdict; /manuali/presentazione-struttura-sito.pdf .
 - **Che cosa non va:** il verdetto ACCESSIBILE dipende da testo estraibile e presenza di tag, senza richiedere lingua corretta, titolo o verifica semantica. La presentazione indicata come accessibile ha lingua en-US pur essendo in italiano e non ha titolo nei metadati letti. Anche il modulo verde non ha titolo nei metadati letti.
-- **Prova:** esame dello script e dei due file pubblici. La presentazione scaricata ha 71 pagine; l'inventario né riporta ancora 68. La presenza di tag non prova la conformità PDF/UA e non garantisce che le immagini abbiano descrizioni utili.
+- **Prova:** esame dello script e dei due file pubblici. La presentazione scaricata ha 71 pagine; l'inventario ne riporta ancora 68. La presenza di tag non prova la conformità PDF/UA e non garantisce che le immagini abbiano descrizioni utili.
 - **Intervento suggerito:** usare etichette descrittive dei controlli passati e riservare il giudizio completo a una verifica ulteriore. Correggere lingua, titolo e inventario, quindi controllare struttura e lettura effettiva.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460: «accessibile» solo con testo, tag, titolo e lingua coerente; gli altri PDF ricercabili sono «parziale».
 
 ### R10 - Quattro PDF pubblicati mancano nell'inventario documentale
 - **Dove:** data/audit-pdf.yaml; https://www.protezionecivilegenzano.it/accessibilita/audit-pdf/ .
@@ -136,7 +136,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** confronto dei percorsi dell'inventario con l'albero del repository e risposte HTTP 200 per: avviso volontari civici del 5 ottobre; determinazione 80; modulo di domanda relativo; determinazione G13519 sulla convenzione con i coordinamenti. I due PDF in riferimenti-interni/ sono esclusi dal conteggio 66.
 - **Intervento suggerito:** rigenerare l'inventario dopo aggiunte e sostituzioni, aggiornarne le date e derivare da una fonte unica i riepiloghi pubblici. Controllare anche i PDF presenti su Aruba ma gestiti fuori dal repository.
 - **Priorità:** P2.
-- **Esito:** da verificare.
+- **Esito:** corretto nella PR #1460: l'inventario conta tutti i 66 PDF e un controllo bloccante confronta impronte e totale.
 
 ### R11 - Manca il collegamento alla dichiarazione formale AgID
 - **Dove:** https://www.protezionecivilegenzano.it/accessibilita/ e footer.
@@ -144,7 +144,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** testo corrente della pagina. AgID indica la compilazione nell'applicazione ufficiale e la pubblicazione del link generato; il richiamo annuale 2026 indica il 23 settembre.
 - **Intervento suggerito:** verificare lo stato con il Responsabile per la transizione digitale del Comune e pubblicare il collegamento specifico quando disponibile. Questo audit non ha accesso all'area del Comune e non accerta se un deposito esista altrove.
 - **Priorità:** P2, coordinamento amministrativo prioritario.
-- **Esito:** da verificare con il Comune.
+- **Esito:** aperto: serve l'indirizzo della dichiarazione pubblicata su form.agid.gov.it.
 
 ### R12 - La gestione dell'invecchiamento dell'allerta non è uniforme
 - **Dove:** /emergenza/ ; /allerta-stato/index.json ; /cruscotto/#panel-allerta ; themes/flavour-pcgenzano/layouts/shortcodes/pagina-emergenza-lite.html .
@@ -152,7 +152,7 @@ Priorità: P1 = errore con possibile conseguenza immediata grave; P2 = correzion
 - **Prova:** nello stato osservato, la home aveva una verifica live delle 18:36 mentre endpoint pubblicato e pagina leggera indicavano 12:51. Il cruscotto mostrava un avvertimento. Il livello era verde in tutte le viste: non è stato accertato un colore errato. La lacuna sulla scadenza è desunta dal codice, non da un guasto provocato in produzione.
 - **Intervento suggerito:** condividere criteri di freschezza, validità temporale e messaggio non verificato; simulare fonte assente, timeout, dato oltre soglia e cambio di giorno in un ambiente di prova. Non confondere l'assenza di una verifica recente con l'assenza di pericolo.
 - **Priorità:** P3, robustezza di una funzione critica.
-- **Esito:** da verificare con test di indisponibilità.
+- **Esito:** corretto nella PR #1460 per la pagina /emergenza/, che oltre le 6 ore dichiara l'allerta non verificata.
 
 ## 6. Miglioramenti consigliati
 
@@ -198,7 +198,7 @@ Gli interventi di codice e contenuto possono usare gli strumenti già presenti. 
 - Non sono stati verificati esaustivamente tutti i link esterni, i download derivati, i contenuti audio/video, tutti i giochi o tutti i 66 PDF. Le prove su quattro PDF non vengono estese automaticamente agli altri.
 - Non sono stati ispezionati account Aruba, contratti, backup ripristinabili, pannelli privati, statistiche Search Console, dati CrUX o impostazioni dei fornitori. Nessun penetration test o prova di carico è stato effettuato.
 - La presenza dell'alt, di un canonical o di tag PDF non prova da sola qualità, indicizzazione, leggibilità o conformità. Un'alternativa HTML deve essere anche pertinente e completa, non soltanto esistente.
-- Le bozze delle PR #1439 e #1440 sono lavori separati: non sono state considerate funzionalita già pubblicate né difetti del sito corrente.
+- Le bozze delle PR #1439 e #1440 sono lavori separati: non sono state considerate funzionalità già pubblicate né difetti del sito corrente.
 
 ## 9. Riferimenti e riproduzione
 
