@@ -54,7 +54,7 @@ python3 scripts/verifica-deploy-aruba.py                  # drift di build sul l
 bash scripts/smoke-test-live.sh                            # pagine chiave live
 ```
 
-Per i link verso gli enti pubblici serve il rapporto di lychee: prendi quello dell'ultimo run di `check-links-sito.yml` (o esegui lychee sulla build) e passalo a `python3 scripts/check-404-istituzionali.py <rapporto.md>`; un 404 o 410 di un ente pubblico è un rilievo.
+Per i link verso gli enti pubblici serve il rapporto di lychee: prendi quello dell'ultimo run di `check-links-sito.yml` (o esegui lychee sulla build) e passalo a `python3 scripts/check-404-istituzionali.py <rapporto.md>`; ogni 404 o 410 è un rilievo, quelli degli enti pubblici con priorità più alta.
 
 Ogni errore è un rilievo candidato. Non fermarti al primo: raccogli tutto.
 

@@ -90,7 +90,7 @@ Su una build col baseURL di Aruba (`hugo --minify --baseURL "https://www.protezi
 - `python3 scripts/genera-materiali-lezione.py --check` e `python3 scripts/genera-chrome-menu.py --check`.
 - Se Playwright e Chromium sono disponibili (in cloud `CHROMIUM_PATH=/opt/pw-browsers/chromium`): `python3 scripts/check-fogli-stampa.py --da-git origin/main` e `python3 scripts/check-fascicolo-esperimenti.py`. Se non lo sono, scrivi «non eseguito», mai «OK».
 
-Fuori dalle PR ma utili al quadro: `scripts/check-404-istituzionali.py` (rende rosso `check-links-sito.yml` sui 404 degli enti pubblici) e `scripts/check-carte-carg.py` (copie delle carte CARG superate dall'archivio ISPRA). Gli script girano in sola lettura sul repository; quelli che rigenerano un file (`genera-pacchetti-schede.py`, `genera-open-kit.py`) non lanciarli, perché modificherebbero il working tree.
+Fuori dalle PR ma utili al quadro: `scripts/check-404-istituzionali.py` (rende rosso `check-links-sito.yml` su ogni link in 404/410, enti pubblici in testa) e `scripts/check-carte-carg.py` (copie delle carte CARG superate dall'archivio ISPRA). Gli script girano in sola lettura sul repository; quelli che rigenerano un file (`genera-pacchetti-schede.py`, `genera-open-kit.py`) non lanciarli, perché modificherebbero il working tree.
 
 ### Osservazioni editoriali (NON bug)
 - Rapporto articoli pubblicati (data ≤ oggi) vs calendarizzati (data futura): è una scelta editoriale, riportala come **osservazione**, non come problema. A maggio 2026 ~72% degli articoli erano calendarizzati fino a febbraio 2027.

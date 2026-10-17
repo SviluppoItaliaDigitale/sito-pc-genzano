@@ -10,9 +10,12 @@
 #    a) Playlist "Materiali informativi Io non rischio in LIS e con audio
 #       descrizione" (id PLyRppYk2-sTIDs7RX-2C0pB1ZmgtA0yMo, 12 video 2023).
 #    b) 3 video Stromboli LIS pubblicati nel 2025.
-#    c) Playlist "Videolezioni - L'attimo decisivo" (id PLyRppYk2-sTKsMmo7PNnOabYpz2paC77V,
-#       12 lezioni divulgative con interprete LIS in sovrimpressione,
-#       senza dichiarazione esplicita LIS nei metadata YouTube).
+#    c) Lezioni "L'attimo decisivo" (interprete LIS in sovrimpressione,
+#       senza dichiarazione esplicita LIS nei metadata YouTube). La loro
+#       playlist (PLyRppYk2-sTKsMmo7PNnOabYpz2paC77V) non esiste più dal
+#       2026; i video restano raggiungibili dal loro indirizzo (verificato
+#       il 17/10/2026) ma non sono più monitorabili: una lezione nuova
+#       andrebbe segnalata a mano.
 #    Livello 1 nella gerarchia delle fonti PC
 #    (vedi .claude/rules/06-protezione-civile-scientifica.md).
 #

@@ -28,7 +28,10 @@ on:
 
 permissions:
   contents: write
+  # actions: write serve anche a cancellare la copia vecchia dello stato dei
+  # guasti (gh cache delete); issues: write alla issue `fonte-rotta`.
   actions: write
+  issues: write
 
 # Con 12 run/ora (cron-job.org ogni 5 min) due run possono sovrapporsi
 # sul commit/push. In coda, non cancellati: un run di allerta non si
@@ -44,6 +47,26 @@ jobs:
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v7
+
+      # Guasti delle fonti (17/10/2026, istruzione dell'utente: «gli errori 404
+      # e simili non devono mai essere ignorati»). I tre script annotano in
+      # $FONTI_KO_FILE ogni fonte che non hanno letto («fonte<TAB>motivo») e
+      # lasciano intatti i dati in vigore. Lo stato fra un giro e l'altro (da
+      # quando e per quanti giri di fila una fonte è giù) sta nella cache di
+      # Actions, non in un file del repository: un commit ogni 5 minuti per un
+      # contatore riempirebbe la storia e farebbe partire il coalescer.
+      - name: "♻️ Stato dei guasti delle fonti (giro precedente)"
+        id: stato_restore
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ runner.temp }}/stato-fonti
+          key: allerta-fonti-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: allerta-fonti-
+
+      - name: "🗒️ Registro dei guasti di questo giro"
+        run: |
+          echo "FONTI_KO_FILE=$RUNNER_TEMP/fonti-ko.txt" >> "$GITHUB_ENV"
+          : > "$RUNNER_TEMP/fonti-ko.txt"
 
       - name: "🛠️ Setup pdftotext (per fallback PDF Regione Lazio)"
         # pdftotext serve SOLO al fallback PDF Regione Lazio (il percorso primario
@@ -180,3 +203,130 @@ jobs:
           else
             echo "Minuto $MIN: salto (la cartina si rigenera solo nei primi 5 min dell'ora)."
           fi
+
+      # Una fonte giù per un giro è rumore (CDN, rete del runner); giù per tre
+      # giri di fila o da oltre 30 minuti è un guasto da riparare: si apre UNA
+      # issue in-place, si commenta al massimo ogni 6 ore e si chiude da sola
+      # al primo giro in cui tutte e tre le verifiche leggono le loro fonti.
+      # Il run resta verde: i dati letti dalle altre fonti sono già stati
+      # committati, e la issue `fonte-rotta` la lavora la routine giornaliera.
+      # Questi passi stanno in fondo al job perché il deploy urgente e la
+      # notifica non aspettino le chiamate alle API di issue e cache.
+      - name: "🩺 Valuta i guasti delle fonti"
+        id: guasti
+        if: always()
+        env:
+          ESITI: "${{ steps.check.outcome }} ${{ steps.avvisi.outcome }} ${{ steps.incendi.outcome }}"
+        run: |
+          mkdir -p "$RUNNER_TEMP/stato-fonti"
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from zoneinfo import ZoneInfo
+          tmp = os.environ["RUNNER_TEMP"]
+          stato_path = os.path.join(tmp, "stato-fonti", "stato.json")
+          ko_path = os.environ.get("FONTI_KO_FILE", os.path.join(tmp, "fonti-ko.txt"))
+          adesso = datetime.now(timezone.utc)
+          try:
+              stato = json.load(open(stato_path, encoding="utf-8"))
+          except Exception:
+              stato = {}
+          ko = {}
+          if os.path.exists(ko_path):
+              for riga in open(ko_path, encoding="utf-8"):
+                  if "\t" in riga:
+                      fonte, motivo = riga.rstrip("\n").split("\t", 1)
+                      ko[fonte] = motivo
+          completo = os.environ.get("ESITI", "").split() == ["success"] * 3
+          nuovo = {}
+          for fonte, motivo in ko.items():
+              prec = stato.get(fonte, {})
+              nuovo[fonte] = {"dal": prec.get("dal", adesso.isoformat()),
+                              "giri": prec.get("giri", 0) + 1, "motivo": motivo}
+          if not completo:
+              # Uno script si è interrotto: le fonti che non ha controllato
+              # conservano il loro stato, senza contare un giro in più.
+              for fonte, voce in stato.items():
+                  nuovo.setdefault(fonte, voce)
+          json.dump(nuovo, open(stato_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          persistenti = {f: v for f, v in nuovo.items()
+                         if v["giri"] >= 3 or (adesso - datetime.fromisoformat(v["dal"])).total_seconds() >= 1800}
+          righe = []
+          for fonte, v in sorted(persistenti.items()):
+              dal = datetime.fromisoformat(v["dal"]).astimezone(ZoneInfo("Europe/Rome")).strftime("%d/%m/%Y alle %H:%M, ora italiana")
+              righe.append(f"- **{fonte}** — giù da {v['giri']} giri di fila (dal {dal}): {v['motivo']}")
+          with open(os.path.join(tmp, "fonti-elenco.md"), "w", encoding="utf-8") as f:
+              f.write("\n".join(righe) + "\n")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"persistenti={len(persistenti)}\n")
+              f.write(f"tutto_ok={'true' if completo and not ko else 'false'}\n")
+          print(f"Fonti in errore in questo giro: {len(ko)}; guasti persistenti: {len(persistenti)}")
+          for r in righe:
+              print(r)
+          PY
+
+      - name: "🚨 Issue «Allerta: una o più fonti non rispondono»"
+        if: always() && steps.guasti.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSISTENTI: ${{ steps.guasti.outputs.persistenti }}
+          TUTTO_OK: ${{ steps.guasti.outputs.tutto_ok }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          TITLE="Allerta: una o più fonti non rispondono"
+          MARKER="<!-- allerta-fonti -->"
+          EXISTING=$(gh issue list --label "fonte-rotta" --state open --limit 50 --json number,title \
+            --jq ".[] | select(.title == \"$TITLE\") | .number" | head -n1)
+          if [ "${PERSISTENTI:-0}" -gt 0 ]; then
+            {
+              echo "$MARKER"
+              echo "Le verifiche dell'allerta (\`check-allerta.yml\`, ogni 5 minuti) non riescono a leggere queste fonti:"
+              echo ""
+              cat "$RUNNER_TEMP/fonti-elenco.md"
+              echo ""
+              echo "Ultimo run: $RUN_URL"
+              echo ""
+              echo "**I dati in vigore non sono stati toccati**: un guasto di lettura non cambia né cancella allerta, avviso meteo o rischio incendi, e non rinnova la data dell'ultimo controllo mostrata sul sito. Finché il guasto dura, però, il sito non vede i cambi di livello di quella fonte."
+              echo ""
+              echo "## Che cosa fare"
+              echo ""
+              echo "1. Riprodurre in locale: \`python3 scripts/check-allerta.py\`, \`python3 scripts/check-avvisi-meteo.py\`, \`python3 scripts/check-rischi-incendi.py\` (servono rete e \`pdftotext\`)."
+              echo "2. Aprire la fonte nel browser: se è cambiato l'indirizzo, il nome dei PDF o l'impaginazione, aggiornare lo script con l'indirizzo o il formato nuovi verificati con una richiesta reale."
+              echo "3. Se è un disservizio dell'ente, annotarlo qui e aspettare: la issue si chiude da sola al primo giro in cui tutte le fonti rispondono."
+              echo "4. Mai togliere la segnalazione del guasto per far tornare verde il controllo."
+            } > "$RUNNER_TEMP/fonti-body.md"
+            if [ -z "$EXISTING" ]; then
+              gh issue create --title "$TITLE" --body-file "$RUNNER_TEMP/fonti-body.md" \
+                --label "automazione" --label "fonte-rotta" --label "urgente"
+            else
+              ULTIMO=$(gh issue view "$EXISTING" --json createdAt,comments \
+                --jq "[.createdAt] + [.comments[] | select(.body | contains(\"$MARKER\")) | .createdAt] | max")
+              ETA=$(( $(date -u +%s) - $(date -u -d "$ULTIMO" +%s) ))
+              if [ "$ETA" -ge 21600 ]; then
+                gh issue comment "$EXISTING" --body-file "$RUNNER_TEMP/fonti-body.md"
+              else
+                echo "Issue #$EXISTING aggiornata da meno di 6 ore: nessun commento."
+              fi
+            fi
+          elif [ "${TUTTO_OK:-false}" = "true" ] && [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "$MARKER
+          Tutte le fonti dell'allerta rispondono di nuovo ($RUN_URL)."
+          else
+            echo "Nessuna issue da aprire o chiudere."
+          fi
+
+      - name: "💾 Salva lo stato dei guasti"
+        if: always() && steps.guasti.outcome == 'success'
+        uses: actions/cache/save@v6
+        with:
+          path: ${{ runner.temp }}/stato-fonti
+          key: allerta-fonti-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: "🧹 Togli la copia vecchia dello stato"
+        if: always() && steps.stato_restore.outputs.cache-matched-key != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VECCHIA: ${{ steps.stato_restore.outputs.cache-matched-key }}
+        run: |
+          gh cache delete "$VECCHIA" --repo "${{ github.repository }}" || echo "Copia $VECCHIA già rimossa."

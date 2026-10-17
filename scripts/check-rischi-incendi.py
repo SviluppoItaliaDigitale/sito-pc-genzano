@@ -31,8 +31,19 @@ Mapping livelli AIB → palette PC del sito (allineata ai bollettini meteo):
 - ELEVATO   → "rossa"      (mostrare)
 
 Anti-spam: aggiorna allerta.json solo se cambia livello-oggi o livello-domani
-del rischio incendi. Fuori stagione (no PDF di oggi né di ieri), rimuove
-il blocco rischio_incendi se esisteva (cessazione automatica).
+del rischio incendi.
+
+Fuori stagione e guasti (17/10/2026). I PDF si cercano nella pagina elenco dei
+bollettini, non solo a nome indovinato: il 15/10/2026 il bollettino è uscito
+come «Bollettino AIB Lazio_15_10_2026_0.pdf» e un nome cambiato dava 404, che
+lo script prendeva per «fuori stagione» togliendo il blocco. Ora:
+- pagina letta, con bollettini elencati ma nessuno di oggi o di ieri →
+  fuori stagione (fonte letta, nulla in corso): il blocco si toglie;
+- pagina non letta o senza nessun bollettino, PDF non scaricabile, testo non
+  estraibile, Zona 9 non trovata → fonte NON letta: il blocco resta com'era
+  (salvo che la sua data sia già passata: lo si toglie perché scaduto) e il
+  guasto si annota in $FONTI_KO_FILE e in GITHUB_OUTPUT fonti_ko=true, per la
+  issue `fonte-rotta` del workflow. Uscita sempre 0.
 """
 
 import json
@@ -40,6 +51,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta
@@ -68,6 +80,16 @@ PDF_NAME_PATTERNS = [
 # scambiava per il PDF: il 14/10/2026 il blocco rischio_incendi non si aggiornava
 # più, senza errori. Si prova prima l'indirizzo nuovo, poi quello vecchio, e si
 # accetta solo una risposta che comincia con %PDF.
+PAGINA_ELENCO = "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi"
+# Link ai bollettini nella pagina elenco: la data è nel nome, con eventuale
+# suffisso «_0», «_1» che il portale aggiunge ai file ricaricati.
+PDF_ELENCO_HREF = re.compile(
+    r'href="((?:https://[a-z.]+)?/sites/default/files/rischio-incendi/\d{4}/[^"]*?'
+    r'(\d{2})_(\d{2})_(\d{4})[^"/]*\.pdf)"',
+    re.IGNORECASE,
+)
+FONTE = "Bollettino incendi boschivi Regione Lazio (AIB)"
+
 PDF_BASE_URLS = [
     "https://www.regione.lazio.it/sites/default/files/rischio-incendi/{anno}/",
     "https://protezionecivile.regione.lazio.it/sites/default/files/binary/"
@@ -106,31 +128,129 @@ def pdftotext_layout(pdf_bytes):
         return ""
 
 
+def segnala_fonte_ko(motivo):
+    """Annota una fonte non letta: log del run + file letto dal workflow."""
+    print(f"::warning::Fonte non letta — {FONTE}: {motivo}")
+    percorso = os.environ.get("FONTI_KO_FILE")
+    if percorso:
+        with open(percorso, "a", encoding="utf-8") as f:
+            f.write(f"{FONTE}\t{motivo}\n")
+    scrivi_output(fonti_ko="true")
+
+
+def scrivi_output(**kwargs):
+    gh_out = os.environ.get("GITHUB_OUTPUT", "")
+    if gh_out:
+        with open(gh_out, "a") as f:
+            for k, v in kwargs.items():
+                f.write(f"{k}={v}\n")
+
+
+def leggi_elenco():
+    """Legge la pagina elenco dei bollettini.
+
+    Ritorna (dict data → [url], errore). dict vuoto con errore None = pagina
+    letta ma senza nessun bollettino riconoscibile (schema cambiato).
+    """
+    try:
+        html = http_get_bytes(PAGINA_ELENCO).decode("utf-8", errors="replace")
+    except Exception as e:
+        return None, f"pagina elenco non raggiungibile ({e})"
+    per_data = {}
+    for href, gg, mm, aaaa in PDF_ELENCO_HREF.findall(html):
+        try:
+            d = datetime(int(aaaa), int(mm), int(gg)).date()
+        except ValueError:
+            continue
+        url = href if href.lower().startswith("http") else "https://www.regione.lazio.it" + href
+        per_data.setdefault(d, []).append(url.replace(" ", "%20"))
+    return per_data, None
+
+
+def scarica_url(url):
+    """Scarica un PDF. Ritorna (bytes, None) oppure (None, motivo)."""
+    try:
+        pdf_bytes = http_get_bytes(url)
+    except urllib.error.HTTPError as e:
+        return None, f"HTTP {e.code}"
+    except Exception as e:
+        return None, str(e)
+    if not pdf_bytes.startswith(b"%PDF"):
+        return None, f"la risposta non è un PDF ({len(pdf_bytes)} bytes)"
+    return pdf_bytes, None
+
+
 def scarica_pdf_aib(now):
-    """Tenta di scaricare il PDF AIB di oggi, poi di ieri. Ritorna (bytes, data) o (None, None)."""
+    """Cerca il bollettino di oggi, poi di ieri.
+
+    Ritorna (bytes, data, esito) dove esito è:
+    - "ok"            → bollettino trovato e scaricato;
+    - "fuori-stagione"→ elenco letto, bollettini presenti ma nessuno di oggi/ieri;
+    - "guasto: …"     → fonte non letta (elenco o PDF non leggibili).
+    """
     candidates = [now.date(), (now - timedelta(days=1)).date()]
+    elenco, errore_elenco = leggi_elenco()
+    errori = []
+    if elenco:
+        for d in candidates:
+            for url in elenco.get(d, []):
+                pdf_bytes, motivo = scarica_url(url)
+                if pdf_bytes:
+                    print(f"📄 PDF AIB {d.isoformat()} scaricato ({len(pdf_bytes)} bytes) da {url}")
+                    return pdf_bytes, d, "ok"
+                errori.append(f"{url}: {motivo}")
+        if errori:
+            return None, None, "guasto: bollettino elencato ma non scaricabile — " + "; ".join(errori)
+        ultimo = max(elenco)
+        print(f"ℹ️  Elenco letto: ultimo bollettino del {ultimo.isoformat()}, nessuno di oggi o di ieri")
+        return None, None, "fuori-stagione"
+
+    # Elenco non letto (o senza bollettini): si prova coi nomi noti, così un
+    # guasto della sola pagina non ferma l'aggiornamento.
     for d in candidates:
         date_str = d.strftime("%d_%m_%Y")
         for base in PDF_BASE_URLS:
             base = base.format(anno=d.year)
             for pat in PDF_NAME_PATTERNS:
                 url = base + urllib.parse.quote(pat.format(date=date_str))
-                try:
-                    pdf_bytes = http_get_bytes(url)
-                except urllib.error.HTTPError as e:
-                    if e.code == 404:
-                        continue
-                    print(f"::warning::Errore HTTP {e.code} per {url}")
-                    continue
-                except Exception as e:
-                    print(f"::warning::Errore scaricamento {url}: {e}")
-                    continue
-                if not pdf_bytes.startswith(b"%PDF"):
-                    print(f"  ⏭️  {url}: la risposta non è un PDF ({len(pdf_bytes)} bytes)")
-                    continue
-                print(f"📄 PDF AIB {date_str} scaricato ({len(pdf_bytes)} bytes) da {url}")
-                return pdf_bytes, d
-    return None, None
+                pdf_bytes, motivo = scarica_url(url)
+                if pdf_bytes:
+                    print(f"📄 PDF AIB {date_str} scaricato ({len(pdf_bytes)} bytes) da {url}")
+                    if errore_elenco is None:
+                        # Pagina letta ma senza link riconoscibili: lo schema è
+                        # cambiato anche se il PDF si trova ancora.
+                        segnala_fonte_ko("la pagina elenco non contiene link riconoscibili ai bollettini")
+                    else:
+                        segnala_fonte_ko(errore_elenco)
+                    return pdf_bytes, d, "ok"
+                print(f"  ⏭️  {url}: {motivo}")
+    # Un 404 sui nomi indovinati non dice «fuori stagione»: senza l'elenco
+    # non si sa se il bollettino manca o ha solo cambiato nome.
+    return None, None, "guasto: " + (errore_elenco or "la pagina elenco non contiene link riconoscibili ai bollettini") + \
+        "; nessun PDF di oggi o di ieri ai nomi noti"
+
+
+def blocco_scaduto(blocco, now):
+    """True se il blocco salvato non copre più né oggi né un giorno futuro."""
+    oggi = now.strftime("%Y-%m-%d")
+    date = [blocco.get("data") or ""] + [((blocco.get("domani") or {}).get("data")) or ""]
+    return all(d < oggi for d in date)
+
+
+def conserva_per_guasto(motivo, now):
+    """Fonte non letta: il blocco in vigore resta, salvo che sia già scaduto."""
+    segnala_fonte_ko(motivo)
+    allerta = load_allerta()
+    blocco = allerta.get("rischio_incendi")
+    changed = bool(blocco) and blocco_scaduto(blocco, now)
+    if changed:
+        print(f"⚠️  Blocco rischio_incendi scaduto (data {blocco.get('data')}): lo tolgo")
+        del allerta["rischio_incendi"]
+        save_allerta(allerta)
+    elif blocco:
+        print("⚠️  Lettura non riuscita: il blocco rischio_incendi resta com'era")
+    scrivi_output(changed="true" if changed else "false")
+    return 0
 
 
 def estrai_zona_livello(testo, zona_numero):
@@ -209,9 +329,11 @@ def main():
     now = datetime.now(ROME_TZ)
     print(f"[{now.isoformat(timespec='seconds')}] check-rischi-incendi (Zona AIB {ZONA_AIB_GENZANO})")
 
-    pdf_bytes, pdf_date = scarica_pdf_aib(now)
+    pdf_bytes, pdf_date, esito = scarica_pdf_aib(now)
+    if esito.startswith("guasto"):
+        return conserva_per_guasto(esito.split(": ", 1)[1], now)
     if not pdf_bytes:
-        # Fuori stagione: niente PDF disponibile. Rimuovi blocco se esisteva.
+        # Fuori stagione: elenco letto, nessun bollettino di oggi né di ieri.
         allerta = load_allerta()
         if "rischio_incendi" in allerta:
             print("⚠️  Nessun PDF AIB disponibile → cessazione automatica blocco rischio_incendi")
@@ -231,8 +353,7 @@ def main():
 
     testo = pdftotext_layout(pdf_bytes)
     if not testo:
-        print("::warning::pdftotext output vuoto, skip")
-        return 0
+        return conserva_per_guasto(f"testo del PDF del {pdf_date} non estraibile (pdftotext)", now)
 
     liv_oggi_aib, liv_dom_aib, data_oggi, data_dom = estrai_zona_livello_oggi_e_domani(
         testo, ZONA_AIB_GENZANO
@@ -277,8 +398,8 @@ def main():
     livello_dom = aib_to_pc(liv_dom_aib)
 
     if not livello_oggi:
-        print(f"::warning::Zona {ZONA_AIB_GENZANO} non trovata nel PDF AIB del {pdf_date}")
-        return 0
+        return conserva_per_guasto(
+            f"Zona {ZONA_AIB_GENZANO} non trovata nel PDF del {pdf_date}: formato cambiato?", now)
 
     # Costruisci blocco rischio_incendi
     # Mostra in homepage solo se livello-oggi >= gialla (MEDIO)

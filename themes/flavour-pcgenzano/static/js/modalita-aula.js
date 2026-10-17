@@ -11,6 +11,15 @@
    - tastiera: frecce, Pagina su/giù, Inizio/Fine, Esc per uscire;
    - accessibile: finestra modale, il fuoco va al titolo di ogni
      schermata e torna al pulsante all'uscita; nessuna animazione.
+   - «Proietta» (16/10/2026): con la Presentation API del browser
+     (Chrome ed Edge) la lezione va su un altro schermo (Chromecast,
+     TV, secondo monitor) e il dispositivo del docente fa da
+     telecomando. Lo schermo apre la stessa pagina con #aula-schermo e
+     riceve la schermata già composta {h, k, c, d, s}: contenuto (con le
+     risposte aperte), tipo di schermata, contatore, dimensione del
+     testo e quanto è stata fatta scorrere (da 0 a 1). Non la ricostruisce da sé perché con una
+     larghezza diversa la pagina può dare un numero diverso di
+     schermate. Dove l'API manca il pulsante non compare.
    ============================================================ */
 (function () {
   'use strict';
@@ -71,11 +80,15 @@
     return schermate.filter(function (s) { return s.blocchi.length || s.apertura; });
   }
 
-  function apri(btn) {
+  var SEGNO_SCHERMO = '#aula-schermo';
+  var puoProiettare = 'PresentationRequest' in window && window.isSecureContext;
+
+  function apri(btn, schermo) {
     var sorgente = document.querySelector(btn.getAttribute('data-aula-sorgente'));
     if (!sorgente) return;
     var schermate = costruisci(sorgente);
     var indice = 0, dimensione = 0;
+    var collegamento = null;   // lato docente: la proiezione in corso
 
     var box = document.createElement('div');
     box.className = 'aula';
@@ -87,6 +100,9 @@
         '<span class="aula-contatore"></span>' +
         '<span class="aula-annuncio" aria-live="polite"></span>' +
         '<span class="aula-comandi">' +
+          (puoProiettare && !schermo ?
+            '<button type="button" class="aula-btn aula-btn-proietta" data-azione="proietta" aria-pressed="false">' +
+              '<i class="bi bi-cast" aria-hidden="true"></i><span class="aula-btn-testo"> Proietta</span></button>' : '') +
           '<button type="button" class="aula-btn" data-azione="meno" aria-label="Testo più piccolo">A−</button>' +
           '<button type="button" class="aula-btn" data-azione="piu" aria-label="Testo più grande">A+</button>' +
           '<button type="button" class="aula-btn" data-azione="esci">Esci <span class="aula-tasto">Esc</span></button>' +
@@ -102,6 +118,66 @@
     var annuncio = box.querySelector('.aula-annuncio');
     var btnIndietro = box.querySelector('[data-azione="indietro"]');
     var btnAvanti = box.querySelector('[data-azione="avanti"]');
+    var btnProietta = box.querySelector('[data-azione="proietta"]');
+    if (schermo) box.classList.add('aula-schermo');
+
+    function invia() {
+      if (collegamento && collegamento.state === 'connected') {
+        try {
+          var corsa = area.scrollHeight - area.clientHeight;
+          collegamento.send(JSON.stringify({
+            h: area.innerHTML, k: area.className, c: contatore.innerHTML, d: dimensione,
+            s: corsa > 0 ? area.scrollTop / corsa : 0
+          }));
+        } catch (e) { /* schermo perso */ }
+      }
+    }
+    // lo schermo segue anche lo scorrimento e le risposte aperte o chiuse
+    var attesa = false;
+    function inviaPresto() {
+      if (!collegamento || attesa) return;
+      attesa = true;
+      setTimeout(function () { attesa = false; invia(); }, 60);
+    }
+    if (!schermo) {
+      area.addEventListener('scroll', inviaPresto, { passive: true });
+      area.addEventListener('toggle', inviaPresto, true);
+    }
+    function scala(d) {
+      dimensione = Math.max(0, Math.min(DIMENSIONI.length - 1, d));
+      box.style.setProperty('--aula-scala', DIMENSIONI[dimensione]);
+    }
+    function statoProiezione(attiva, messaggio) {
+      if (!btnProietta) return;
+      btnProietta.querySelector('.aula-btn-testo').textContent = attiva ? ' Ferma proiezione' : ' Proietta';
+      btnProietta.setAttribute('aria-pressed', attiva ? 'true' : 'false');
+      if (messaggio) annuncio.textContent = messaggio;
+    }
+    function proietta() {
+      if (collegamento) { collegamento.terminate(); return; }
+      var url = location.href.split('#')[0] + SEGNO_SCHERMO;
+      new PresentationRequest([url]).start().then(function (c) {
+        collegamento = c;
+        statoProiezione(true);
+        c.addEventListener('connect', function () {
+          invia();
+          statoProiezione(true, 'Proiezione avviata: usa questo dispositivo come telecomando');
+        });
+        function chiusa() {
+          if (collegamento !== c) return;
+          collegamento = null;
+          statoProiezione(false, 'Proiezione terminata');
+        }
+        c.addEventListener('close', chiusa);
+        c.addEventListener('terminate', chiusa);
+        if (c.state === 'connected') invia();
+      }).catch(function (e) {
+        // annullato dal docente: nessun messaggio
+        if (e && (e.name === 'AbortError' || e.name === 'NotAllowedError')) return;
+        annuncio.textContent = 'Nessuno schermo disponibile: controlla che sia acceso e sulla stessa rete';
+        if (btnProietta) btnProietta.title = annuncio.textContent;
+      });
+    }
 
     function mostra(i, focus) {
       indice = Math.max(0, Math.min(schermate.length - 1, i));
@@ -134,9 +210,11 @@
       // con le frecce il fuoco va al titolo; con i pulsanti resta sul pulsante
       // (si può premere Avanti più volte) e il titolo nuovo si annuncia
       if (focus !== false) { annuncio.textContent = ''; h.focus(); }
-      else annuncio.textContent = 'Schermata ' + (indice + 1) + ' di ' + schermate.length + ': ' + h.textContent;
+      else if (!schermo) annuncio.textContent = 'Schermata ' + (indice + 1) + ' di ' + schermate.length + ': ' + h.textContent;
+      invia();
     }
     function esci() {
+      if (collegamento) collegamento.terminate();
       document.removeEventListener('keydown', tasti, true);
       if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function () {});
       box.remove();
@@ -168,17 +246,51 @@
       if (a === 'avanti') mostra(indice + 1, false);
       else if (a === 'indietro') mostra(indice - 1, false);
       else if (a === 'esci') esci();
-      else if (a === 'piu' || a === 'meno') {
-        dimensione = Math.max(0, Math.min(DIMENSIONI.length - 1, dimensione + (a === 'piu' ? 1 : -1)));
-        box.style.setProperty('--aula-scala', DIMENSIONI[dimensione]);
-      }
+      else if (a === 'proietta') proietta();
+      else if (a === 'piu' || a === 'meno') { scala(dimensione + (a === 'piu' ? 1 : -1)); invia(); }
     });
 
     document.body.appendChild(box);
     document.documentElement.classList.add('aula-aperta');
+    if (schermo) {
+      // lo schermo della classe: niente comandi, segue il telecomando
+      mostra(0, false);
+      var ultimo = null;
+      return {
+        vai: function (dati) {
+          if (!dati || typeof dati.h !== 'string') return;
+          if (typeof dati.d === 'number') scala(dati.d);
+          if (typeof dati.k === 'string') area.className = dati.k;   // apertura centrata, figura
+          if (dati.h !== ultimo) {   // contenuto della stessa pagina, composto dal dispositivo del docente
+            area.innerHTML = dati.h;
+            ultimo = dati.h;
+          }
+          if (typeof dati.c === 'string') contatore.innerHTML = dati.c;
+          var corsa = area.scrollHeight - area.clientHeight;
+          area.scrollTop = corsa > 0 && typeof dati.s === 'number' ? dati.s * corsa : 0;
+        }
+      };
+    }
     document.addEventListener('keydown', tasti, true);
     if (box.requestFullscreen) box.requestFullscreen().catch(function () {});
     mostra(0);
+  }
+
+  // pagina aperta sullo schermo della classe dal pulsante «Proietta»
+  function avviaSchermo(btn) {
+    var vista = apri(btn, true);
+    if (!vista) return;
+    var ricevitore = navigator.presentation && navigator.presentation.receiver;
+    if (!ricevitore) return;
+    function ascolta(c) {
+      c.addEventListener('message', function (e) {
+        try { vista.vai(JSON.parse(e.data)); } catch (err) { /* messaggio non valido */ }
+      });
+    }
+    ricevitore.connectionList.then(function (lista) {
+      lista.connections.forEach(ascolta);
+      lista.addEventListener('connectionavailable', function (e) { ascolta(e.connection); });
+    });
   }
 
   function avvia() {
@@ -187,6 +299,7 @@
       if (!sorgente || sorgente.querySelectorAll(':scope > h2').length < 2) return;
       btn.hidden = false;
       btn.addEventListener('click', function () { apri(btn); });
+      if (location.hash === SEGNO_SCHERMO && navigator.presentation && navigator.presentation.receiver) avviaSchermo(btn);
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia);

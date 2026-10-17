@@ -7,8 +7,18 @@ DPC, EUMETSAT, NASA, EFFIS/GWIS, ARPA Lazio, ItaliaMeteo/MeteoHub; la Sala situa
 la scheda diventa vuota SENZA errore visibile. Questo script verifica ogni fonte
 e stampa un report Markdown. Exit code = numero di fonti in errore (0 = tutto ok).
 
+Dal 17/10/2026 controlla anche le fonti dei generatori di snapshot (NASA
+FIRMS, feed delle agenzie, feed YouTube dei canali monitorati) e l'ETA' dei
+dati committati (snapshot in static/open-data/, ultimo controllo dell'allerta,
+timbro del bollettino DPC): i generatori sono fail-safe e non segnalano nulla,
+quindi una fonte che cade o un workflow che smette di girare si vedono solo
+qui (istruzione del 17/10/2026: i 404 e simili non si ignorano).
+
 Solo stdlib: gira ovunque (locale + GitHub Actions) senza dipendenze.
 Uso:  python3 scripts/check-fonti-cruscotto.py
+Variabili facoltative:
+  FIRMS_MAP_KEY          chiave NASA FIRMS (in CI viene dal segreto omonimo)
+  CHECK_FONTI_RADICE     cartella da cui leggere static/ e data/ (per le prove)
 """
 import re
 import json
@@ -18,13 +28,34 @@ import datetime
 import urllib.request
 import urllib.error
 import urllib.parse
+import ast
+import os
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from zoneinfo import ZoneInfo
 
 UA = "PCGenzano-cruscotto-healthcheck/1.0 (+https://www.protezionecivilegenzano.it)"
 TIMEOUT = 30
 
 
 def _get(url, expect_json=False, expect_image=False, accept=(200,)):
-    """Ritorna (ok:bool, dettaglio:str, headers, body_or_json)."""
+    """Ritorna (ok:bool, dettaglio:str, headers, body_or_json).
+
+    Timeout ed errori di connessione si ritentano due volte a 10 secondi di
+    distanza prima di dichiarare la fonte guasta: il 17/10/2026 due server
+    EUMETSAT, raggiungibili da qui, sono andati in timeout dal runner di
+    GitHub e al giro successivo rispondevano. Una risposta HTTP (404, 500…)
+    invece è definitiva e non si ritenta."""
+    for tentativo in range(3):
+        esito = _get_una_volta(url, expect_json, expect_image, accept)
+        if esito[0] or not esito[1].startswith(("TimeoutError", "URLError", "ConnectionResetError", "RemoteDisconnected", "timeout")):
+            return esito
+        if tentativo < 2:
+            time.sleep(10)
+    return esito[0], f"{esito[1]} (3 tentativi)", esito[2], esito[3]
+
+
+def _get_una_volta(url, expect_json, expect_image, accept):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
@@ -52,6 +83,13 @@ def _get(url, expect_json=False, expect_image=False, accept=(200,)):
         return False, f"HTTP {e.code}", "", None
     except Exception as e:
         return False, f"{type(e).__name__}: {e}", "", None
+
+
+def _radice():
+    """Radice del repository da cui leggere snapshot e data file. Per le prove
+    si punta a una copia con CHECK_FONTI_RADICE, senza toccare i file veri."""
+    alt = os.environ.get("CHECK_FONTI_RADICE", "").strip()
+    return Path(alt) if alt else Path(__file__).resolve().parent.parent
 
 
 def _utcnow():
@@ -217,13 +255,11 @@ def chk_dpc_bollettino():
     # nostro snapshot static/open-data/dpc-bollettino.json. Qui si controlla che
     # il bollettino indicato dallo snapshot esista ancora sulla fonte: se non
     # esiste, lo snapshot e' fermo o il DPC ha cambiato schema dei nomi.
-    import json as _json
-    from pathlib import Path as _Path
-    p = _Path(__file__).resolve().parent.parent / "static" / "open-data" / "dpc-bollettino.json"
+    p = _radice() / "static" / "open-data" / "dpc-bollettino.json"
     if not p.exists():
         return False, "snapshot dpc-bollettino.json assente"
     try:
-        snap = _json.loads(p.read_text(encoding="utf-8"))
+        snap = json.loads(p.read_text(encoding="utf-8"))
     except Exception as e:
         return False, f"snapshot illeggibile: {e}"
     stamp = snap.get("stamp") or ""
@@ -485,6 +521,205 @@ def chk_pagina_regione(url, cartella):
     return True, f"{det} · {len(set(pdf))} PDF in elenco"
 
 
+# ---------------------------------------------------------------------------
+# Fonti dei generatori di snapshot (17/10/2026)
+# ---------------------------------------------------------------------------
+
+FIRMS_SENSORI = ("VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT")
+# Riquadro piccolo sul Lazio: basta a sapere se chiave e sensore rispondono,
+# senza scaricare l'Italia intera (lo fa gia' il generatore ogni 15 minuti).
+FIRMS_AREA_PROVA = "11.4,40.7,14.1,42.9"
+
+
+def chk_firms():
+    """NASA FIRMS, fonte di scripts/genera-incendi-firms.py. Il generatore e'
+    fail-safe: con la chiave rifiutata o un sensore spento esce 0 e lo
+    snapshot resta com'era. Qui si prova ogni sensore che il generatore usa,
+    con la stessa chiave. La chiave non compare mai nel report: e' nell'URL."""
+    chiave = (os.environ.get("FIRMS_MAP_KEY") or "").strip()
+    if not chiave:
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            return False, ("segreto FIRMS_MAP_KEY non passato al controllo: "
+                           "la fonte non si puo' verificare")
+        return True, ("chiave non disponibile in questo ambiente: fonte non "
+                      "interrogata, vale il controllo dell'eta' dello snapshot")
+    ok_s, ko_s = [], []
+    for sensore in FIRMS_SENSORI:
+        url = ("https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
+               f"{chiave}/{sensore}/{FIRMS_AREA_PROVA}/1")
+        ok, det, _, raw = _get(url)
+        det = det.replace(chiave, "***")
+        txt = raw.decode("utf-8", "replace") if isinstance(raw, bytes) else ""
+        if not ok:
+            if det == "HTTP 400":
+                det = "HTTP 400: la fonte rifiuta la chiave o non conosce piu' il sensore"
+            ko_s.append(f"{sensore} ({det})")
+        elif "Invalid MAP_KEY" in txt or "MAP_KEY is invalid" in txt:
+            ko_s.append(f"{sensore} (chiave rifiutata o limite di richieste superato)")
+        elif not txt.strip() or "latitude" not in txt.splitlines()[0]:
+            ko_s.append(f"{sensore} (risposta non riconosciuta come CSV)")
+        else:
+            ok_s.append(sensore)
+        time.sleep(1)
+    if ko_s:
+        return False, ("sensori in errore: " + "; ".join(ko_s) +
+                       ". Se un sensore e' stato dismesso, toglierlo da SENSORI "
+                       "in genera-incendi-firms.py")
+    return True, f"{len(ok_s)} sensori su {len(FIRMS_SENSORI)} rispondono con la nostra chiave"
+
+
+AGENZIE = (
+    ("ANSA", "https://www.ansa.it/sito/ansait_rss.xml"),
+    ("ANSA CRONACA", "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml"),
+    ("ADNKRONOS", "https://www.adnkronos.com/RSS_PrimaPagina.xml"),
+)
+
+
+def chk_feed_rss(url):
+    """Feed RSS delle agenzie (scripts/genera-notizie-agenzie.py). Il
+    generatore va avanti con i feed che rispondono, quindi uno caduto non si
+    nota dalle notizie in pagina: si controlla ciascuno."""
+    ok, det, _, raw = _get(url)
+    if not ok:
+        return False, det
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError as e:
+        return False, f"{det} ma XML non leggibile ({e})"
+    voci = [i for i in root.iter("item")
+            if (i.findtext("title") or "").strip() and (i.findtext("link") or "").strip()]
+    if not voci:
+        return False, f"{det} ma nessuna notizia con titolo e link: formato cambiato?"
+    return True, f"{det} · {len(voci)} notizie"
+
+
+def _canali_youtube():
+    """CHANNEL_IDS letto dal sorgente di aggiorna-catalogo-video-feed.py senza
+    importarlo (richiederebbe PyYAML): un elenco solo, nessuna copia."""
+    p = Path(__file__).resolve().parent / "aggiorna-catalogo-video-feed.py"
+    albero = ast.parse(p.read_text(encoding="utf-8"))
+    for nodo in albero.body:
+        if isinstance(nodo, ast.Assign) and any(
+                isinstance(t, ast.Name) and t.id == "CHANNEL_IDS" for t in nodo.targets):
+            return ast.literal_eval(nodo.value)
+    raise ValueError("CHANNEL_IDS non trovato in aggiorna-catalogo-video-feed.py")
+
+
+def chk_feed_youtube():
+    """Feed Atom dei canali YouTube monitorati (aggiorna-catalogo-video-feed.py).
+    YouTube risponde ogni tanto 404/500 a freddo su un feed sano: due tentativi
+    per canale prima di contarlo in errore."""
+    canali = _canali_youtube()
+    ko = []
+    for nome, cid in canali.items():
+        url = f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"
+        esito = None
+        for tentativo in range(2):
+            ok, det, _, raw = _get(url)
+            if ok and raw and b"<entry" in raw:
+                esito = None
+                break
+            esito = det if not ok else "feed senza video"
+            if tentativo == 0:
+                time.sleep(3)
+        if esito:
+            ko.append(f"{nome} ({esito})")
+    if ko:
+        return False, f"{len(ko)} canali su {len(canali)} in errore: " + "; ".join(ko)
+    return True, f"{len(canali)} canali su {len(canali)} rispondono"
+
+
+# ---------------------------------------------------------------------------
+# Eta' dei dati committati (17/10/2026)
+# ---------------------------------------------------------------------------
+# I generatori riscrivono uno snapshot SOLO quando i dati cambiano, quindi il
+# campo `generato` e' l'ora dell'ultima variazione. Le soglie stanno sopra le
+# pause piu' lunghe osservate dal 25/09 al 17/10/2026 (git log dei file):
+# lo scheduler di GitHub fa partire aggiorna-dati-sala.yml a blocchi, con
+# pause fino a ~10 ore anche se il cron e' ogni 15 minuti.
+SNAPSHOT_ETA = (
+    # file, ore massime, perche' quella soglia
+    ("notizie-agenzie.json", 12, "cambia a ogni giro; pause osservate fino a ~10 h per lo scheduler"),
+    ("volo-soccorso.json", 12, "cambia a ogni giro (posizioni); pause osservate fino a ~10 h"),
+    ("gdacs-eventi.json", 24, "cambia quasi a ogni giro; pausa massima osservata ~10 h"),
+    ("incendi-firms.json", 36, "nuovi passaggi VIIRS piu' volte al giorno; pausa massima osservata ~24 h"),
+    ("meteoalarm-italia.json", 120, "nei periodi calmi resta uguale per giorni; pausa massima osservata ~30 h"),
+    ("ems-attivazioni.json", 168, "le attivazioni Copernicus cambiano di rado; pausa massima osservata ~43 h"),
+)
+
+
+def _iso_utc(valore):
+    t = datetime.datetime.fromisoformat(str(valore).replace("Z", "+00:00"))
+    if t.tzinfo is None:
+        raise ValueError(f"orario senza fuso: {valore!r}")
+    return t.astimezone(datetime.timezone.utc)
+
+
+def _ore_da(t):
+    return (datetime.datetime.now(datetime.timezone.utc) - t).total_seconds() / 3600
+
+
+def chk_eta_snapshot(nome, soglia_ore):
+    p = _radice() / "static" / "open-data" / nome
+    if not p.exists():
+        return False, f"{nome} assente: il generatore non l'ha mai scritto o e' stato tolto"
+    try:
+        snap = json.loads(p.read_text(encoding="utf-8"))
+        gen = _iso_utc(snap["_snapshot"]["generato"])
+    except Exception as e:
+        return False, f"campo _snapshot.generato illeggibile ({type(e).__name__}: {e}): schema cambiato?"
+    ore = _ore_da(gen)
+    quando = gen.astimezone(ZoneInfo("Europe/Rome")).strftime("%d/%m %H:%M")
+    if ore > soglia_ore:
+        return False, (f"fermo da {ore:.0f} h (ultimo dato {quando} ora italiana, soglia {soglia_ore} h): "
+                       "aggiorna-dati-sala.yml non gira o la fonte non risponde")
+    return True, f"ultimo dato {quando} ora italiana ({ore:.1f} h, soglia {soglia_ore} h)"
+
+
+ALLERTA_SOGLIA_ORE = 8
+
+
+def chk_eta_allerta():
+    """data/allerta.json: `ultimo_controllo` si riscrive almeno ogni ~6 h
+    (heartbeat di check-allerta.py a 5h45'); pausa massima osservata 5h56'.
+    Oltre 8 ore la catena cron-job.org -> check-allerta.yml e' ferma e la
+    barra in homepage mostra un'allerta non piu' verificata."""
+    p = _radice() / "data" / "allerta.json"
+    try:
+        dati = json.loads(p.read_text(encoding="utf-8"))
+        t = _iso_utc(dati["ultimo_controllo"])
+    except Exception as e:
+        return False, f"ultimo_controllo illeggibile ({type(e).__name__}: {e})"
+    ore = _ore_da(t)
+    quando = t.astimezone(ZoneInfo("Europe/Rome")).strftime("%d/%m %H:%M")
+    if ore > ALLERTA_SOGLIA_ORE:
+        return False, (f"ultimo controllo {quando} ora italiana, {ore:.0f} h fa (soglia "
+                       f"{ALLERTA_SOGLIA_ORE} h): check-allerta.yml non committa piu'")
+    return True, f"ultimo controllo {quando} ora italiana ({ore:.1f} h, soglia {ALLERTA_SOGLIA_ORE} h)"
+
+
+DPC_SOGLIA_ORE = 36
+
+
+def chk_eta_dpc():
+    """Timbro del bollettino DPC nello snapshot. Il Dipartimento pubblica ogni
+    giorno, di norma fra le 13:30 e le 16:30: dal 25/09 al 17/10/2026 la pausa
+    piu' lunga fra due timbri e' stata ~25 h. Oltre 36 h manca almeno un
+    bollettino: generatore fermo, mirror fermo o schema cambiato. Il timbro e'
+    l'ora italiana di pubblicazione (20261016_1418)."""
+    p = _radice() / "static" / "open-data" / "dpc-bollettino.json"
+    try:
+        stamp = json.loads(p.read_text(encoding="utf-8")).get("stamp") or ""
+        t = datetime.datetime.strptime(stamp, "%Y%m%d_%H%M").replace(tzinfo=ZoneInfo("Europe/Rome"))
+    except Exception as e:
+        return False, f"timbro illeggibile ({type(e).__name__}: {e})"
+    ore = _ore_da(t)
+    if ore > DPC_SOGLIA_ORE:
+        return False, (f"bollettino {stamp} vecchio di {ore:.0f} h (soglia {DPC_SOGLIA_ORE} h): "
+                       "il DPC pubblica ogni giorno, lo snapshot non segue piu' la fonte")
+    return True, f"bollettino {stamp}, {ore:.1f} h fa (soglia {DPC_SOGLIA_ORE} h)"
+
+
 SORGENTI = [
     ("Terremoti — INGV FDSN", "Terremoti, Vulcani", chk_ingv),
     ("Meteo puntuale — Open-Meteo", "Meteo, cartine", lambda: chk_openmeteo("forecast", "api.open-meteo.com", "current=temperature_2m")),
@@ -528,12 +763,24 @@ SORGENTI = [
      lambda: chk_pagina_regione("https://www.regione.lazio.it/protezione-civile/"
                                 "centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica",
                                 "criticita-idrogeologica")),
+    ("Punti caldi da satellite — NASA FIRMS (chiave e sensori)", "Sala situazioni (EMERGENZE)", chk_firms),
+] + [
+    (f"Notizie — feed {nome}", "Sala situazioni (barra NOTIZIE)", (lambda u=url: chk_feed_rss(u)))
+    for nome, url in AGENZIE
+] + [
+    ("Video — feed YouTube dei canali monitorati", "Approfondimenti video", chk_feed_youtube),
+] + [
+    (f"Età snapshot — {nome}", "Sala situazioni", (lambda n=nome, o=ore: chk_eta_snapshot(n, o)))
+    for nome, ore, _motivo in SNAPSHOT_ETA
+] + [
+    ("Età bollettino DPC — timbro dello snapshot", "Sala situazioni (ALLERTA, cartina zone)", chk_eta_dpc),
+    ("Età allerta — ultimo_controllo di data/allerta.json", "Barra allerta in homepage, CAP", chk_eta_allerta),
 ]
 
 
 def main():
     oggi = datetime.date.today().isoformat()
-    righe, fails = [], 0
+    righe, fails, guasti = [], 0, []
     for nome, scheda, fn in SORGENTI:
         try:
             ok, det = fn()
@@ -541,6 +788,7 @@ def main():
             ok, det = False, f"{type(e).__name__}: {e}"
         if not ok:
             fails += 1
+            guasti.append(nome)
         icona = "✅" if ok else "❌"
         righe.append(f"| {icona} | {nome} | {scheda} | {det} |")
 
@@ -557,6 +805,9 @@ def main():
     print(f"\n_Controllo automatico `scripts/check-fonti-cruscotto.py`. "
           f"Un ❌ non implica sempre un guasto nostro: spesso è il servizio di terzi "
           f"temporaneamente giù. Se persiste, l'endpoint è cambiato._")
+    # Firma dei guasti (solo i nomi, non i dettagli che cambiano a ogni giro):
+    # il workflow commenta la issue solo quando cambia, cosi' niente spam.
+    print(f"\n<!-- firma-guasti: {' | '.join(sorted(guasti))} -->")
     return fails
 
 

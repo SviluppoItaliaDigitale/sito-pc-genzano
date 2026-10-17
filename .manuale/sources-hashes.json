@@ -17,16 +17,14 @@
       "verificato": "2026-10-15T14:52:05Z"
     },
     "ui_kit": {
-      "url": "https://designers.italia.it/kit/ui-kit/",
-      "hash": "errore-download",
-      "verificato": "2026-10-15T14:52:05Z",
-      "ultimo_errore": "2026-10-15T14:52:05Z"
+      "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/",
+      "hash": "466ba5107213c0815913d3f0ef8d9f79cfd11d26a54e57fd293bdcccb6a3a581",
+      "verificato": "2026-10-17T00:00:00Z"
     },
     "dichiarazione_accessibilita": {
-      "url": "https://form.agid.gov.it/",
-      "hash": "errore-download",
-      "verificato": "2026-10-15T14:52:05Z",
-      "ultimo_errore": "2026-10-15T14:52:05Z"
+      "url": "https://www.agid.gov.it/it/design-servizi/accessibilita/dichiarazione-accessibilita",
+      "hash": "9682e455686c2f46c3fb50a598775da4915076afac066353c3a0b7305dbc7ed0",
+      "verificato": "2026-10-17T00:00:00Z"
     },
     "designers_italia_home": {
       "url": "https://designers.italia.it/",
@@ -34,10 +32,9 @@
       "verificato": "2026-10-15T14:52:05Z"
     },
     "dipartimento_pc": {
-      "url": "https://www.protezionecivile.gov.it/",
-      "hash": "69bd720fabc5c030adcd6118ca01ee5a7f1427a194481ad100f17e9d232e6d7b",
-      "verificato": "2026-10-12T14:47:52Z",
-      "ultimo_errore": "2026-10-15T14:52:05Z"
+      "url": "https://servizio-nazionale.protezionecivile.gov.it/it/",
+      "hash": "2800616baa1d5ddba6d10d5a48519004b9196cb093b2bcfe95bbd63c1e5016ef",
+      "verificato": "2026-10-17T00:00:00Z"
     },
     "designers_italia_guide": {
       "url": "https://designers.italia.it/risorse-per-progettare/",

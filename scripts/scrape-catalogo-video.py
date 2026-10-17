@@ -20,6 +20,15 @@ cross-match con i contenuti del sito. La selezione resta editoriale:
 i video Geopop fuori scope PC (archeologia, biologia, fisica generale)
 emergeranno con score basso nel cross-match e non verranno proposti.
 
+Un canale che non risponde (errore di yt-dlp, oppure nessun video dove il
+catalogo precedente ne aveva) NON perde i suoi video: si conservano quelli
+del catalogo precedente per quel canale, e lo script esce con codice 3 DOPO
+aver scritto il catalogo, stampando su stdout la riga
+"FONTI_IN_ERRORE: canale1, canale2". Il workflow committa i dati buoni, apre
+la issue `fonte-rotta` e chiude il run in rosso. Fino al 17/10/2026 un canale
+in errore veniva scritto con video_count 0 e i suoi video sparivano dal
+catalogo (e quindi dalle pagine del sito) con il run verde.
+
 Uso: python3 scripts/scrape-catalogo-video.py [--limit N]
 """
 
@@ -183,15 +192,46 @@ def main() -> int:
     repo_root = Path(__file__).resolve().parent.parent
     out_path = repo_root / args.output
 
+    # Catalogo precedente: serve a non perdere i video di un canale che
+    # in questo giro non risponde.
+    precedente = {"canali": {}, "video": {}}
+    if out_path.exists():
+        try:
+            precedente = yaml.safe_load(out_path.read_text(encoding="utf-8")) or precedente
+        except Exception as e:
+            print(f"ATTENZIONE: catalogo precedente illeggibile ({e})", file=sys.stderr)
+    prec_canali = precedente.get("canali") or {}
+    prec_video = precedente.get("video") or {}
+
     catalogo = {"canali": {}, "video": {}}
+    errori = []
     total = 0
     for ck, meta in CANALI.items():
         print(f"Scarico {meta['nome']}…", file=sys.stderr)
+        errore = None
         try:
             videos = scrape_channel(meta["url"], limit=args.limit)
         except Exception as e:
-            print(f"  ERRORE {ck}: {e}", file=sys.stderr)
+            errore = str(e).splitlines()[0] if str(e) else type(e).__name__
             videos = []
+        conservati = {k: v for k, v in prec_video.items() if v.get("canale") == ck}
+        if errore is None and not videos and conservati:
+            # Nessun video dove prima ce n'erano: pagina cambiata o canale
+            # sparito, non un canale vuoto. Si tratta come un guasto.
+            errore = "nessun video restituito (il catalogo precedente ne aveva)"
+        if errore is not None:
+            print(f"  ERRORE {ck}: {errore}", file=sys.stderr)
+            print(f"  conservo {len(conservati)} video del catalogo precedente", file=sys.stderr)
+            errori.append(f"{ck} ({errore})")
+            catalogo["video"].update(conservati)
+            catalogo["canali"][ck] = {
+                "nome": meta["nome"],
+                "url": meta["url"],
+                "video_count": len(conservati),
+                "tematico_pc": meta.get("tematico_pc", False),
+            }
+            total += len(conservati)
+            continue
         print(f"  {len(videos)} video", file=sys.stderr)
         catalogo["canali"][ck] = {
             "nome": meta["nome"],
@@ -219,6 +259,9 @@ def main() -> int:
         f.write(f"# Totale: {total} video ({len(CANALI)} canali).\n\n")
         yaml.safe_dump(catalogo, f, allow_unicode=True, sort_keys=True, width=120)
     print(f"\n✓ Scritto {out_path} con {total} video totali", file=sys.stderr)
+    if errori:
+        print(f"FONTI_IN_ERRORE: {'; '.join(errori)}")
+        return 3
     return 0
 
 
