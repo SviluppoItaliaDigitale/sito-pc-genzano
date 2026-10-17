@@ -68,5 +68,5 @@ Il caso emiliano è importante per noi perché dimostra che **la classificazione
 ## Per saperne di più
 
 - [INGV — Catalogo Sismico Italiano](https://terremoti.ingv.it/)
-- [Sismabonus — Agenzia delle Entrate](https://www.agenziaentrate.gov.it/portale/web/guest/agevolazioni-sisma)
+- [Sismabonus — Agenzia delle Entrate](https://www.agenziaentrate.gov.it/portale/aree-tematiche/casa/agevolazioni/sisma-bonus)
 - [CPTI15 e DBMI15 v4.0 — Catalogo parametrico e database macrosismico dei terremoti italiani, INGV](https://emidius.mi.ingv.it/CPTI15-DBMI15/)

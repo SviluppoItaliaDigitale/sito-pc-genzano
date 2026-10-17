@@ -37,6 +37,15 @@ Output GH:
 - descrizione / motivo
 - level_changed=true|false
 - source=opendatasicilia|pdf-regione-lazio|misto
+- fonti_ko=true|false     → almeno una fonte non è stata letta (rete, 404,
+                            schema cambiato): il workflow la segnala con una
+                            issue `fonte-rotta` se il guasto persiste.
+
+Guasti delle fonti (17/10/2026): una fonte che non si legge NON cambia mai i
+dati in vigore e non rinnova `ultimo_controllo` (rule 06 e rule 09 § 15). Il
+guasto si annota in $FONTI_KO_FILE (una riga «fonte<TAB>motivo»): è il
+workflow a decidere se aprire la issue. L'uscita resta 0 perché il commit dei
+dati letti dalle altre fonti deve partire comunque.
 """
 
 import csv
@@ -44,6 +53,7 @@ import io
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import urllib.request
@@ -113,6 +123,16 @@ MESI_IT = [
 # questo sito (un solo Comune monitorato).
 ZONA_NAME_BREVE = "Zona F"
 ZONA_NAME_LUNGO = "Zona F — Bacini Costieri Sud (Genzano)"
+
+
+def segnala_fonte_ko(fonte, motivo):
+    """Annota una fonte non letta: log del run + file letto dal workflow."""
+    print(f"::warning::Fonte non letta — {fonte}: {motivo}")
+    percorso = os.environ.get("FONTI_KO_FILE")
+    if percorso:
+        with open(percorso, "a", encoding="utf-8") as f:
+            f.write(f"{fonte}\t{motivo}\n")
+    gh_output(fonti_ko="true")
 
 
 def costruisci_descrizione_ricca(row, livello, rischi_attivi):
@@ -185,16 +205,19 @@ def http_get_bytes(url, timeout=HTTP_TIMEOUT):
 
 def fetch_csv(url, label):
     """Scarica un CSV opendatasicilia. Ritorna riga Comune o None se fallisce."""
+    fonte = f"CSV opendatasicilia «{label}»"
     try:
         data = http_get_text(url)
     except Exception as e:
-        print(f"::warning::CSV {label} non disponibile: {e}")
+        segnala_fonte_ko(fonte, f"non scaricabile ({e})")
         return None
     reader = csv.DictReader(io.StringIO(data))
     for row in reader:
         if row.get("comune_nome", "").strip() == COMUNE:
             return row
-    print(f"::warning::{COMUNE} non trovato nel CSV {label}")
+    # Un CSV che si scarica ma non contiene Genzano non è «nessuna allerta»:
+    # è uno schema cambiato (colonna rinominata, elenco troncato).
+    segnala_fonte_ko(fonte, f"{COMUNE} non trovato nel file (colonne: {reader.fieldnames})")
     return None
 
 
@@ -270,6 +293,8 @@ def fallback_pdf_regione_lazio(now):
     candidates_dates = [now.date(), (now - timedelta(days=1)).date()]
     pdf_text = None
     pdf_date = None
+    fonte = "Bollettino criticità Regione Lazio (PDF)"
+    errori = []
     for d in candidates_dates:
         for modello in PDF_REGIONE_URLS:
             url = modello.format(anno=d.year, data=d.strftime("%d_%m_%Y"))
@@ -284,14 +309,22 @@ def fallback_pdf_regione_lazio(now):
                     break
             except Exception as e:
                 print(f"  ⏭️  PDF del {d.isoformat()} non disponibile da {url}: {e}")
+                errori.append(f"{d.isoformat()}: {e}")
         if pdf_text:
             break
 
     if not pdf_text:
+        # Il bollettino di oggi può non essere ancora uscito, ma quello di ieri
+        # deve esserci: se mancano entrambi la fonte non è stata letta.
+        motivo = "né il bollettino di oggi né quello di ieri sono leggibili"
+        if shutil.which("pdftotext") is None:
+            motivo += " (pdftotext non installato)"
+        segnala_fonte_ko(fonte, f"{motivo}; ultimo errore: {errori[-1] if errori else '—'}")
         return {}
 
     parsed = parse_pdf_regione(pdf_text, zona=ZONA_GENZANO)
     if not parsed["oggi"] and not parsed["domani"]:
+        segnala_fonte_ko(fonte, f"PDF del {pdf_date.isoformat()} letto ma senza la riga della Zona {ZONA_GENZANO}: formato cambiato?")
         return {}
 
     bollettini_finti = {}
@@ -440,12 +473,14 @@ def main():
             print(f"⏭️  Bollettino {label} fuori validità (inizio={inizio}, fine={fine})")
 
     if not attivi:
-        fallback_key = next((k for k in ("domani", "oggi", "reg_domani", "reg_oggi") if k in bollettini), None)
-        if fallback_key:
-            attivi = {fallback_key: bollettini[fallback_key]}
-            print(f"::warning::Nessun bollettino in finestra di validità, uso {fallback_key} come fallback")
-
-    if not attivi:
+        # Fino al 17/10/2026 qui si ripiegava su un bollettino fuori validità e
+        # si rinnovava `ultimo_controllo`: un mirror fermo da giorni sarebbe
+        # passato per verificato. Ora nessun bollettino valido adesso = fonti
+        # ferme: il file resta com'era e il guasto si dichiara.
+        segnala_fonte_ko(
+            "Bollettini di criticità (CSV + PDF)",
+            f"nessun bollettino valido adesso fra {sorted(bollettini)}: fonti ferme o in ritardo",
+        )
         gh_output(changed="false", sostanziale="false", source=source)
         sys.exit(0)
 

@@ -666,10 +666,39 @@ def parte_gnews(articoli: list[dict]) -> dict:
 # Issue
 # ──────────────────────────────────────────────────────────────
 
+def fonti_rotte(feed: dict, gnews: dict | None) -> list[str]:
+    """Fonti che non hanno risposto: da riparare, non da annotare in fondo.
+
+    Una testata il cui feed non risponde (404, feed vuoto, rete) è una fonte
+    rotta. Google News lo è quando nessuna ricerca è andata a buon fine per
+    un errore (non per il 429, che è un limite di frequenza e si riprova il
+    lunedì dopo). Le singole pagine di notizie che non si scaricano non
+    contano: sono notizie, non fonti.
+    """
+    rotte = [f"Feed della testata {t}" for t in feed["senza_risposta"]]
+    if gnews and gnews["errori"] and len(gnews["errori"]) >= gnews["query"] > 0:
+        rotte.append(f"Google News: nessuna delle {gnews['query']} ricerche ha risposto "
+                     f"({', '.join(sorted(set(gnews['errori'])))})")
+    if gnews and gnews["interrotta"] == "ricerca interrotta da un errore":
+        rotte.append(f"Google News: ricerca interrotta da un errore ({', '.join(gnews['errori'])})")
+    return rotte
+
+
 def corpo_issue(feed: dict, gnews: dict | None, frasi: list[dict], ora: dt.datetime) -> str:
     r = [
         f"_Aggiornata il {S.fmt(ora)} (ora italiana) da `controllo-copie.yml`, ogni lunedì._",
         "",
+    ]
+    rotte = fonti_rotte(feed, gnews)
+    if rotte:
+        # In testa e non nel riquadro chiuso: fino al 17/10/2026 i feed morti
+        # stavano solo lì, e la issue riscritta con edit non avvisava nessuno.
+        r += ["> [!WARNING]",
+              ("> **1 fonte non ha risposto in questo giro**" if len(rotte) == 1
+               else f"> **{len(rotte)} fonti non hanno risposto in questo giro**") + ": il controllo è incompleto. "
+              "Sono riportate anche nella issue `fonte-rotta` «Controllo copie: una o più fonti non rispondono».",
+              ">"] + [f"> - {t}" for t in rotte] + [""]
+    r += [
         "## 1. Riprese trovate nei feed delle testate locali",
         "",
     ]
@@ -756,6 +785,8 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="stampa l'esito senza scrivere nulla (salvo --issue-body)")
     ap.add_argument("--issue-body", type=Path, help="file Markdown in cui scrivere il corpo dell'issue")
     ap.add_argument("--senza-gnews", action="store_true", help="salta la ricerca su Google News")
+    ap.add_argument("--fonti-ko", type=Path,
+                    help="file in cui elencare le fonti che non hanno risposto (scritto solo se ce ne sono)")
     args = ap.parse_args()
 
     ora = S.adesso()
@@ -788,6 +819,12 @@ def main() -> int:
         log(f"Corpo dell'issue scritto in {args.issue_body}")
     if args.dry_run or not args.issue_body:
         print(corpo)
+    rotte = fonti_rotte(feed, gnews)
+    if rotte:
+        log(f"Fonti che non hanno risposto: {len(rotte)}")
+        print("FONTI_IN_ERRORE: " + "; ".join(rotte))
+        if args.fonti_ko:
+            args.fonti_ko.write_text("".join(f"- {t}\n" for t in rotte), encoding="utf-8")
     log(f"Riprese dai feed: {len(feed['trovate'])}; "
         f"da Google News: {len(gnews['trovate']) if gnews else 'non eseguita'}")
     return 0

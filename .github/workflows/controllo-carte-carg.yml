@@ -7,9 +7,13 @@ name: "🗺️ Controllo carte geologiche CARG"
 # aggiorna 1 issue in-place che si chiude da sola quando le copie tornano
 # allineate. Cerca anche le carte NUOVE della nostra zona (fogli 374, 375,
 # 387, 388 o luoghi dei Castelli nel titolo) non ancora note allo script. Non scarica né modifica nulla: la sostituzione si fa in
-# sessione. Exit 2 dello script = esito indeterminato (archivio ISPRA
-# irraggiungibile): non si apre né si chiude nulla, perché un disservizio
-# della fonte non è né una carta cambiata né una «risoluzione».
+# sessione. Un record o una ricerca che non rispondono non sono una carta
+# cambiata: finiscono nella issue `fonte-rotta`, che si chiude da sola
+# quando l'archivio torna a rispondere, e il run diventa rosso. Fino al
+# 17/10/2026 restavano un ::warning con il run verde (istruzione
+# dell'utente: «gli errori 404 e simili non devono mai essere ignorati»).
+# La issue delle novità si chiude solo dopo un giro completo senza
+# segnalazioni: con una fonte giù l'esito non è «tutto allineato».
 # Nasce il 01/10/2026 con la pubblicazione delle copie, su
 # richiesta dell'utente («c'è qualcuno che controlla se aggiornano le
 # cartine?»).
@@ -39,10 +43,18 @@ jobs:
         id: check
         run: |
           set -uo pipefail
+          rm -f /tmp/corpo.md /tmp/fonti-ko.md
           set +e
-          python3 scripts/check-carte-carg.py --issue-body /tmp/corpo.md | tee /tmp/esito.txt
-          echo "rc=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          python3 scripts/check-carte-carg.py --issue-body /tmp/corpo.md --fonti-ko /tmp/fonti-ko.md | tee /tmp/esito.txt
+          RC=${PIPESTATUS[0]}
           set -e
+          # 0 = tutto letto e allineato, 1 = segnalazioni e/o fonti ko; altro = lo script si è fermato.
+          if [ "$RC" -gt 1 ]; then
+            echo "::error::check-carte-carg.py si è fermato con codice $RC: il controllo non è stato eseguito."
+            exit "$RC"
+          fi
+          [ -s /tmp/corpo.md ] && echo "novita=true" >> "$GITHUB_OUTPUT" || echo "novita=false" >> "$GITHUB_OUTPUT"
+          [ -s /tmp/fonti-ko.md ] && echo "fonti_ko=true" >> "$GITHUB_OUTPUT" || echo "fonti_ko=false" >> "$GITHUB_OUTPUT"
           {
             echo "### Controllo carte CARG"
             echo '```'
@@ -51,7 +63,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: "🚨 Apri/aggiorna issue se una copia è vecchia o c'è una carta nuova"
-        if: ${{ steps.check.outputs.rc != '0' && steps.check.outputs.rc != '2' }}
+        if: ${{ steps.check.outputs.novita == 'true' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
@@ -73,7 +85,8 @@ jobs:
           fi
 
       - name: "✅ Chiudi l'issue se tutto è allineato"
-        if: ${{ steps.check.outputs.rc == '0' }}
+        # Solo dopo un giro completo: con una fonte giù l'esito non è «allineato».
+        if: ${{ steps.check.outcome == 'success' && steps.check.outputs.novita == 'false' && steps.check.outputs.fonti_ko == 'false' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
@@ -91,7 +104,50 @@ jobs:
             echo "Copie allineate, nessuna issue aperta."
           fi
 
-      - name: "⏸️ Esito indeterminato: archivio ISPRA irraggiungibile"
-        if: ${{ steps.check.outputs.rc == '2' }}
+      - name: "🔌 Issue per l'archivio ISPRA che non risponde"
+        # Una fonte morta va riparata, non ignorata: la issue `fonte-rotta` la
+        # prende in carico la routine giornaliera delle issue automatiche.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          FONTI_KO: ${{ steps.check.outputs.fonti_ko }}
+          ESITO: ${{ steps.check.outcome }}
         run: |
-          echo "::warning::L'archivio ISPRA non ha risposto: controllo rimandato al prossimo giro, issue lasciata com'è."
+          set -euo pipefail
+          TITLE="🗺️ Carte geologiche CARG: l'archivio ISPRA non risponde"
+          NUM=$(gh issue list --repo "$REPO" --state open --label fonte-rotta --limit 100 \
+                  --json number,title \
+                  --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
+          if [ "${FONTI_KO:-}" = "true" ]; then
+            {
+              echo "Il controllo settimanale delle carte CARG ($(date -u +%d/%m/%Y)) non ha potuto leggere:"
+              echo ""
+              cat /tmp/fonti-ko.md
+              echo ""
+              echo "Run: ${{ github.server_url }}/$REPO/actions/runs/${{ github.run_id }}"
+              echo ""
+              echo "## Che cosa fare"
+              echo ""
+              echo "1. Riprodurre: \`python3 scripts/check-carte-carg.py\`."
+              echo "2. Se l'archivio risponde 404 per un record, cercare il record sull'archivio aperto dell'ISPRA (\`openaccessrepository.it\`): se è stato spostato o sostituito, aggiornare l'id in \`FOGLI\` di \`scripts/check-carte-carg.py\`, la copia e i link nell'articolo e nell'Area Download."
+              echo "3. Se è cambiata l'API (indirizzo, formato della ricerca), aggiornare \`API\`, \`API_ISPRA\` o \`RICERCHE_ZONA\` dopo averla provata con una richiesta reale."
+              echo "4. Se l'archivio è giù per tutti, attendere il giro successivo: la issue si chiude da sola quando torna a rispondere."
+            } > /tmp/fonti-body.md
+            if [ -n "$NUM" ]; then
+              gh issue comment "$NUM" --repo "$REPO" --body-file /tmp/fonti-body.md
+            else
+              gh label create "fonte-rotta" --repo "$REPO" --color "B60205" \
+                --description "Una fonte esterna non risponde: da riparare" 2>/dev/null || true
+              gh issue create --repo "$REPO" --title "$TITLE" --body-file /tmp/fonti-body.md \
+                --label automazione --label fonte-rotta --label documenti
+            fi
+          elif [ -n "$NUM" ] && [ "$ESITO" = "success" ]; then
+            gh issue close "$NUM" --repo "$REPO" --comment "L'archivio ISPRA risponde di nuovo per tutti i record e le ricerche (run ${{ github.run_id }})."
+          fi
+
+      - name: "❌ Run rosso se una fonte non risponde"
+        if: ${{ steps.check.outputs.fonti_ko == 'true' }}
+        run: |
+          echo "::error::L'archivio ISPRA non ha risposto per uno o più record o ricerche: il controllo è incompleto (issue fonte-rotta aperta o aggiornata)."
+          exit 1

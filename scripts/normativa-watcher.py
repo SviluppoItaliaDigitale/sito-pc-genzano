@@ -56,8 +56,12 @@ Uso:
                   senza `gh`).
 
 Dipendenze: solo stdlib per le fonti primarie; `feedparser` per le news.
-Ogni fonte è fail-safe: se cade, viene registrata in `errori` e le altre
-proseguono. Esce 0 (anche con zero hit), 1 solo su errore d'uso.
+Ogni fonte è fail-safe: se cade, viene registrata in `errori` (fonti
+primarie ed EU Space) o in `errori_news` (Google News, feed, Firecrawl) e le
+altre proseguono; il workflow apre una issue `fonte-rotta` per ciascun
+gruppo e chiude il run in rosso. Fino al 17/10/2026 gli errori della
+rassegna stampa restavano solo nel log. Esce 0 (anche con zero hit), 1 solo
+su errore d'uso.
 """
 import argparse
 import html as htmllib
@@ -556,6 +560,7 @@ def fetch_consiglio_lazio(cutoff, errori):
         if not righe:
             raise RuntimeError('nessuna notizia trovata: struttura della pagina cambiata?')
         aperte = 0
+        non_letti = []
         for data_txt, href, titolo_html in righe:
             d = parse_data_it(data_txt)
             if not d or d < cutoff:
@@ -575,10 +580,16 @@ def fetch_consiglio_lazio(cutoff, errori):
                     sommario = corpo[i + len(titolo):i + len(titolo) + 4000] if i >= 0 else corpo[:4000]
                 except Exception as e:  # noqa: BLE001
                     print(f'  [warn] consiglio regionale: dettaglio non letto ({e})', file=sys.stderr)
+                    non_letti.append(f'{link} ({e})')
             v = voce('Consiglio regionale del Lazio — notizie', 'primaria', titolo, link, d,
                      tipo_atto='Notizia Aula/Commissioni', ente='Consiglio regionale del Lazio', sommario=sommario)
             if v['rilevanza']:
                 out.append(v)
+        if non_letti:
+            # Una notizia classificata dal solo titolo può sfuggire (il titolo
+            # spesso non nomina la protezione civile): è un guasto, non un dettaglio.
+            errori.append(f'Consiglio regionale del Lazio: {len(non_letti)} notizie non lette, classificate dal solo '
+                          f'titolo: ' + '; '.join(non_letti[:3]))
     except Exception as e:  # noqa: BLE001
         errori.append(f'Consiglio regionale del Lazio: {e}')
         print(f'  [error] consiglio regionale: {e}', file=sys.stderr)
@@ -927,18 +938,28 @@ FEEDS_ISTITUZIONALI = [
 ]
 
 
-def parse_feed(url, fonte, days):
+def parse_feed(url, fonte, days, errori):
     try:
         import feedparser
     except ImportError:
         print("  [warn] feedparser non installato: fonti news saltate (pip install feedparser)", file=sys.stderr)
+        errori.append(f'{fonte}: feedparser non installato')
         return []
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
     out = []
     try:
         feed = feedparser.parse(url, agent=UA)
-        if feed.bozo and not feed.entries:
-            print(f"  [warn] feed non parsabile: {fonte} ({url})", file=sys.stderr)
+        status = feed.get('status')
+        if status and status >= 400:
+            print(f"  [error] {fonte}: HTTP {status} ({url})", file=sys.stderr)
+            errori.append(f'{fonte}: HTTP {status} ({url})')
+            return out
+        if not feed.entries and (feed.bozo or not feed.get('version')):
+            # Anche una pagina HTML servita al posto del feed (redirect a una
+            # pagina di errore) è una fonte rotta, non «zero notizie».
+            motivo = feed.get('bozo_exception') or 'la risposta non è un feed RSS/Atom'
+            print(f"  [warn] feed non parsabile: {fonte} ({url}): {motivo}", file=sys.stderr)
+            errori.append(f'{fonte}: {motivo} ({url})')
             return out
         for entry in feed.entries[:50]:
             titolo = entry.get('title', '').strip()
@@ -957,10 +978,11 @@ def parse_feed(url, fonte, days):
                 out.append(v)
     except Exception as e:  # noqa: BLE001
         print(f"  [error] {fonte}: {e}", file=sys.stderr)
+        errori.append(f'{fonte}: {e}')
     return out
 
 
-def fetch_firecrawl(url, fonte):
+def fetch_firecrawl(url, fonte, errori):
     api_key = os.environ.get('FIRECRAWL_API_KEY')
     if not api_key:
         return []
@@ -975,6 +997,7 @@ def fetch_firecrawl(url, fonte):
             data = json.loads(resp.read().decode('utf-8'))
         if not data.get('success'):
             print(f"  [warn] firecrawl no-success: {fonte}", file=sys.stderr)
+            errori.append(f'{fonte} (Firecrawl): risposta senza successo ({str(data.get("error", ""))[:150]})')
             return out
         md = (data.get('data') or {}).get('markdown') or ''
         seen = set()
@@ -988,6 +1011,7 @@ def fetch_firecrawl(url, fonte):
                 out.append(v)
     except Exception as e:  # noqa: BLE001
         print(f"  [error] firecrawl {fonte}: {e}", file=sys.stderr)
+        errori.append(f'{fonte} (Firecrawl): {e}')
     return out
 
 
@@ -1057,8 +1081,9 @@ def corpo_issue(output):
                  f"{quanti(len(immagini), 'immagine satellitare', 'immagini satellitari')} di EU Space "
                  f"e {quanti(len(news), 'notizia', 'notizie')} dalla rassegna stampa"
                  f"{' (' + str(output['scartati_gia_segnalati']) + ' già segnalati in issue precedenti, scartati)' if output.get('scartati_gia_segnalati') else ''}.\n")
-    if output.get('errori'):
-        righe.append("> ⚠️ Fonti non raggiunte in questo giro (da ricontrollare a mano): " + '; '.join(output['errori']) + "\n")
+    if output.get('errori') or output.get('errori_news'):
+        righe.append("> ⚠️ Fonti non raggiunte in questo giro (da ricontrollare a mano; c'è una issue `fonte-rotta`): "
+                     + '; '.join(output.get('errori', []) + output.get('errori_news', [])) + "\n")
 
     def blocco(items, titolo):
         if not items:
@@ -1151,6 +1176,7 @@ def main():
 
     cutoff = oggi_roma() - timedelta(days=args.days)
     errori = []
+    errori_news = []
     hits = []
     fonti_lette = []
     seen_links = set()
@@ -1183,16 +1209,21 @@ def main():
 
     if args.fonti in ('news', 'tutte'):
         fonti_lette.append(f'Google News ({len(QUERIES_GOOGLE_NEWS)} query)')
+        errori_gn = []
         for query in QUERIES_GOOGLE_NEWS:
             url = GOOGLE_NEWS_BASE.format(q=quote_plus(query))
-            aggiungi(parse_feed(url, f"Google News: {query}", args.days), query)
+            aggiungi(parse_feed(url, f"Google News: {query}", args.days, errori_gn), query)
+        if errori_gn:
+            # Una riga sola: 37 query che cadono insieme sono un guasto unico.
+            errori_news.append(f'Google News: {len(errori_gn)} query su {len(QUERIES_GOOGLE_NEWS)} non lette — '
+                               + '; '.join(errori_gn[:3]) + (' …' if len(errori_gn) > 3 else ''))
         for f in FEEDS_ISTITUZIONALI:
             fonti_lette.append(f['nome'])
-            aggiungi(parse_feed(f['url'], f['nome'], args.days), f['nome'])
+            aggiungi(parse_feed(f['url'], f['nome'], args.days, errori_news), f['nome'])
         if os.environ.get('FIRECRAWL_API_KEY'):
             fonti_lette.append('DPC via Firecrawl')
             for f in FIRECRAWL_SOURCES:
-                aggiungi(fetch_firecrawl(f['url'], f['nome']), f"{f['nome']} (Firecrawl)")
+                aggiungi(fetch_firecrawl(f['url'], f['nome'], errori_news), f"{f['nome']} (Firecrawl)")
         else:
             print(f"  [skip] {len(FIRECRAWL_SOURCES)} fonti Firecrawl (FIRECRAWL_API_KEY non settata)", file=sys.stderr)
 
@@ -1224,6 +1255,7 @@ def main():
         "fonti": args.fonti,
         "fonti_lette": fonti_lette,
         "errori": errori,
+        "errori_news": errori_news,
         "scartati_gia_segnalati": scartati,
         "totale": len(hits),
         "totale_primarie": len(primarie),
@@ -1232,7 +1264,7 @@ def main():
         "novita": hits,
     }
     print(f"[info] Totale: {len(hits)} voci ({len(primarie)} da fonti primarie, {len(immagini)} immagini EU Space, "
-          f"{output['totale_dirette']} a rilevanza diretta); {scartati} già segnalate; {len(errori)} fonti in errore", file=sys.stderr)
+          f"{output['totale_dirette']} a rilevanza diretta); {scartati} già segnalate; {len(errori)} fonti primarie e {len(errori_news)} della rassegna stampa in errore", file=sys.stderr)
 
     if args.out == '-':
         print(json.dumps(output, ensure_ascii=False, indent=2))

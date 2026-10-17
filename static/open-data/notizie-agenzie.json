@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-16T03:35:59+00:00",
+  "generato": "2026-10-17T09:42:19+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-15T23:46:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cinque morti nella sparatoria in Oregon, killer è un sedicenne",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/16/cinque-morti-nella-sparatoria-in-oregon-killer-e-un-sedicenne_25095d10-78ef-4c49-a9ac-f7e1dbc67a4e.html"
-  },
-  {
-   "data": "2026-10-15T23:46:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'offensiva di Meloni sulla flessibilità, sull'energia è scontro aperto in Ue",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/loffensiva-di-meloni-sulla-flessibilita-sullenergia-e-scontro-aperto-in-ue_99106306-33f9-404f-a92d-d2297a3adfba.html"
-  },
-  {
-   "data": "2026-10-15T22:40:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sparatoria in Oregon, media: 5 morti, tre bambini tra le vittime",
-   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/10/16/sparatoria-in-oregon-media-5-morti-tre-bambini-tra-le-vittime_207d7c00-0291-4511-9b8b-a622e6ef91de.html"
-  },
-  {
-   "data": "2026-10-15T22:23:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Zelensky sfida Trump e riprende i raid sulle raffinerie russe",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/ucraina-zelensky-sfida-trump-e-riprende-i-raid-sulle-raffinerie-russe_3ee5e831-cd15-4c22-8758-3c9cf5769225.html"
-  },
-  {
-   "data": "2026-10-15T22:15:47+00:00",
+   "data": "2026-10-17T09:37:19+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Manovra da 23,5 miliardi, famiglie al centro: coperture e voci più importanti",
-   "url": "https://www.adnkronos.com/economia/manovra-2027-risorse-coperture-famiglia_4blrwvp8ec3jglnYBXK5uE"
+   "titolo": "Foro Italico, torna la copertura dello Stadio del Nuoto dopo 20 anni: il progetto di Sport e Salute",
+   "url": "https://www.adnkronos.com/sport/fro-italico-nuoto-stadio-coperto_7tmkCWMaglSRQI3feo5N8k"
   },
   {
-   "data": "2026-10-15T21:55:31+00:00",
+   "data": "2026-10-17T09:31:41+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Chi è Alphadjo Cisse, il più giovane italiano riuscito a segnare una tripletta nelle coppe europee",
-   "url": "https://www.adnkronos.com/sport/alphadjo-cisse-chi-e-milan-tripletta-italia_4RvSTHXTXWypVUWH3FddIY"
+   "titolo": "È morto Beppe 'Sugar' Angiolini, punto di riferimento per il fashion d'avanguardia e il Made in Italy",
+   "url": "https://www.adnkronos.com/moda/beppe-angiolini-morto_2a8NneJhUQICiXjn5MvOCF"
   },
   {
-   "data": "2026-10-15T21:49:00+00:00",
+   "data": "2026-10-17T09:27:04+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Sparatoria in una scuola elementare in Oregon: 4 morti di cui 3 bambini. Ucciso l'aggressore, aveva 16 anni",
-   "url": "https://www.adnkronos.com/internazionale/esteri/sparatoria-scuola-oregon-morti-tre-bambini-attentatore_evOnaU8vmIBMWlMv7yHwQ"
+   "titolo": "Ucraina, Crosetto alla Bbc: \"Limite a sistemi satellitari per Kiev? Grave errore di Trump\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/crosetto-ucraina-trump-putin-intervista-bbc_3jGeJTkH598m2M5sg2Hotv"
   },
   {
-   "data": "2026-10-15T21:35:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Spalletti lo cambia, Conceicao è una furia: cos'è successo in Celta Vigo-Juve",
-   "url": "https://www.adnkronos.com/sport/spalletti-cambia-conceicao-furia-giocatore-cosa-e-successo_3A7xvDUuszeTi61ymjaHII"
-  },
-  {
-   "data": "2026-10-15T21:24:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mentana, Piazzapulita e il lapsus sul programma di Formigli",
-   "url": "https://www.adnkronos.com/politica/mentana-tg-la7-gaffe-piazzapulita_31Ffamy5GSM5oeNHEUs56U"
-  },
-  {
-   "data": "2026-10-15T21:23:49+00:00",
+   "data": "2026-10-17T09:21:46+00:00",
    "fonte": "ANSA",
-   "titolo": "Manovra, 5 miliardi da banche e assicurazioni. Istituti sorpresi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/15/manovra-5-miliardi-da-banche-e-assicurazioni.-istituti-sorpresi_c3055dc9-ff3a-429b-ace4-53b8b73047e2.html"
+   "titolo": "Media, blitz dei manifestanti francesi contro la sede di CNews",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/media-blitz-dei-manifestanti-francesi-contro-la-sede-di-cnews_23769778-a3b5-4b11-a769-4ae19c4b2d7e.html"
   },
   {
-   "data": "2026-10-15T21:17:18+00:00",
+   "data": "2026-10-17T09:21:03+00:00",
    "fonte": "ANSA",
-   "titolo": "Europa League: la Juve sorride a Vigo, Kolo Muani rimonta al 92'",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/15/europa-league-celta-vigo-juventus-1-2_a8c2f086-dd79-4c79-9e3c-c88fc635d9a9.html"
+   "titolo": "La terza edizione dell'Aeronautica Militare Balloon Cup, il fascino e la storia del volo",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/17/la-terza-edizione-dellaeronautica-militare-balloon-cup-il-fascino-e-la-storia-del-volo_e624a2fd-205b-489f-9497-621eb880061b.html"
   },
   {
-   "data": "2026-10-15T21:14:42+00:00",
+   "data": "2026-10-17T09:17:15+00:00",
+   "fonte": "ANSA",
+   "titolo": "Salvini: 'Banche mazzolate? Patuelli sorprendente, il contributo da 5 miliardi è il minimo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/17/salvini-banche-mazzolate-patuelli-sorprendente-il-contributo-da-5-miliardi-e-il-minimo_8aaccd0a-cdc6-4a30-a4bc-c85d9231a6b3.html"
+  },
+  {
+   "data": "2026-10-17T09:07:01+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Atalanta-Pafos 3-1: Elmas, Raspadori e Scamacca firmano il successo al debutto europeo",
-   "url": "https://www.adnkronos.com/sport/conference-league-atalanta-pafos-gol-elmas-raspadori-scamacca_4RUstckcZipnS9cQ7N2j4Y"
+   "titolo": "Conte: \"Meloni mi vuole evitare come competitor, su Renzi garanzie le deve dare il Pd\"",
+   "url": "https://www.adnkronos.com/politica/conte-renzi-campo-largo-cosa-ha-detto_5LYjjlzvNmFnNQVxudiWuQ"
   },
   {
-   "data": "2026-10-15T21:07:23+00:00",
+   "data": "2026-10-17T09:06:48+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione di oggi 15 ottobre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-numeri-vincenti_uSmFbxihl1Kpm3qcycF3L"
+   "titolo": "Real Madrid contro Tebas: \"Paragone con Goebbels intollerabile\". Il club chiede le dimissioni",
+   "url": "https://www.adnkronos.com/sport/tebas-cita-goebbels-real-madrid-furioso_MICZOfWvFtGpT8S7BJOGA"
   },
   {
-   "data": "2026-10-15T20:30:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pellegrini: \"Io gareggiavo anche con 40 di febbre\". È polemica, interviene Bassetti",
-   "url": "https://www.adnkronos.com/sport/pellegrini-gareggiare-febbre-bassetti_12zd5tbzLTZa56geclSM9i"
-  },
-  {
-   "data": "2026-10-15T20:15:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gilbert: \"Sinner rischia l'operazione. Infortunio? Cahill non sapeva nulla...\"",
-   "url": "https://www.adnkronos.com/sport/sinner-rischia-operazione-frase-gilbert-cahill-cosa-ha-detto_2i5EmCBt1vyPz4Q2FU33Es"
-  },
-  {
-   "data": "2026-10-15T20:14:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "La strage delle donne a Gaza: in 3 anni di guerra 50mila uccise o ferite, triplicati gli aborti spontanei",
-   "url": "https://www.ansa.it/donne/notizie/2026/10/15/la-strage-delle-donne-a-gaza-in-3-anni-di-guerra-50mila-uccise-o-ferite-triplicati_d3b82141-fa83-4c2e-b83b-5c170abd9253.html"
-  },
-  {
-   "data": "2026-10-15T20:13:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Orrore nel Modenese, coppia di anziani coniugi trovati decapitati in casa",
-   "url": "https://www.ansa.it/emiliaromagna/notizie/2026/10/15/marito-e-moglie-trovati-morti-in-casa-nel-modenese-ipotesi-omicidio_2e1df95e-b2e6-4560-bc0c-3b7cd82a4971.html"
-  },
-  {
-   "data": "2026-10-15T20:07:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Francia, minibus si scontra con treno fermo all'ingresso del tunnel della Manica: 19 feriti di cui 5 gravi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/scontro-autobus-treno-tunnel-manica-feriti_4joe2BuIDPcNRTmf32PkPX"
-  },
-  {
-   "data": "2026-10-15T19:50:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Istat: 5,4 milioni di persone in povertà assoluta nel 2025, sono il 9,3%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/15/istat-54-milioni-di-persone-in-poverta-assoluta-nel-2025-sono-il-93_54ce2576-31c1-4c1f-9727-bb2e919d3f62.html"
-  },
-  {
-   "data": "2026-10-15T19:45:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stallo sull'Iran, Trump tentato dalla 'madre di tutte le bombe': cos'è e come funziona la MOAB",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/stallo-sulliran-trump-tentato-dalla-madre-di-tutte-le-bombe-cose-e-come_57f3245c-3f75-43cd-9d8e-ee5cd8f8be05.html"
-  },
-  {
-   "data": "2026-10-15T19:44:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Roberto Bolle: \"Con 'Caravaggio' porto un messaggio di pace necessario\"",
-   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/10/15/roberto-bolle-con-caravaggio-porto-un-messaggio-di-pace-necessario_3d33be9a-783f-4cee-89ec-ab2eb25fc9d8.html"
-  },
-  {
-   "data": "2026-10-15T19:21:35+00:00",
+   "data": "2026-10-17T09:00:37+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+   "titolo": "'No Meloni Day', secondo giorno di mobilitazione per studenti Cagliari",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/no-meloni-day-secondo-giorno-di-mobilitazione-per-studenti-cagliari_7e986d71-e677-4bb9-aeda-f4bff64c7004.html"
   },
   {
-   "data": "2026-10-15T19:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Marito e moglie trovati decapitati in casa nel Modenese. Sentito il figlio",
-   "url": "https://www.adnkronos.com/cronaca/marito-moglie-morti-casa-modena-oggi-ultime-notizie_mOqHMfhPYjHQ6U9OuUlyt"
-  },
-  {
-   "data": "2026-10-15T19:14:19+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Weidel: \"Basta soldi a Kiev, la guerra è già persa\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-germania-afd-guerra_2HEwFiLBrQ5OaOVQIZiAMM"
-  },
-  {
-   "data": "2026-10-15T19:02:00+00:00",
+   "data": "2026-10-17T08:52:53+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Marito e moglie trovati morti in casa nel Modenese, i corpi decapitati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/marito-e-moglie-trovati-morti-in-casa-nel-modenese-i-corpi-decapitati_f6fc5f05-7263-41e4-8121-e9611e66e2e7.html"
+   "titolo": "Esce per una passeggiata e scivola, donna trovata morta",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/esce-per-una-passeggiata-e-scivola-donna-trovata-morta_1b05c209-2ac3-4bea-95b3-3e5a5513eec6.html"
   },
   {
-   "data": "2026-10-15T18:37:02+00:00",
+   "data": "2026-10-17T08:52:51+00:00",
    "fonte": "ANSA",
-   "titolo": "S'infiammano le scuole, scontri e incappucciati a Torino. Arrestato un 17enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/danneggiamenti-in-scuole-a-torino-arrestato-un-17enne_807b8d6b-1218-4b65-8c39-a5fb13a98783.html"
+   "titolo": "Abi: 'Accelera la crescita dei prestiti a famiglie e imprese, +3,7%'",
+   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/10/17/-abi-accelera-crescita-dei-prestiti-a-famiglie-e-imprese-37-_d5a98eb6-fd47-4f5f-9424-89f82781068a.html"
   },
   {
-   "data": "2026-10-15T18:21:42+00:00",
+   "data": "2026-10-17T08:49:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Sale l'allarme carburanti, il governo convoca l'autotrasporto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/sale-lallarme-carburanti-il-governo-convoca-lautotrasporto_0a0d0be1-020f-4955-8dbb-84592524f1bf.html"
+   "titolo": "Trump ferma importanti sanzioni e dazi del Graham Act sull'export della Russia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/trump-sospende-sanzioni-e-dazi-alla-russia-sullexport_c94c6910-154f-4071-9bce-b30372b93263.html"
   },
   {
-   "data": "2026-10-15T18:19:46+00:00",
+   "data": "2026-10-17T08:45:11+00:00",
    "fonte": "ANSA",
-   "titolo": "Cade una trave nel cantiere dell'Alta Velocità a Firenze, muore un operaio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/cade-una-trave-nel-cantiere-dellalta-velocita-a-firenze-muore-un-operaio_6272b7fa-1ad1-473c-8799-cfc0be7738aa.html"
+   "titolo": "Serie A: Venezia-Napoli in campo alle 15 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/16/serie-a-venezia-napoli-in-campo-sabato-alle-15-diretta_4b9dbd4b-e40f-450f-9e4c-2fc17932d705.html"
   },
   {
-   "data": "2026-10-15T18:16:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il premier Burnham assicura: il gatto mascotte di Downing Street sta bene",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/15/il-premier-burnham-assicura-il-gatto-mascotte-di-downing-street-sta-bene_2cbaf55a-c1f6-4ed5-ad82-500261fa4e16.html"
+   "data": "2026-10-17T08:44:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Riparare invece di sostituire: il nuovo valore della tecnologia",
+   "url": "https://www.adnkronos.com/tecnologia/riparare-invece-di-sostituire-il-nuovo-valore-della-tecnologia_4WQzfLh7YKaHdema0023KJ"
   },
   {
-   "data": "2026-10-15T18:13:05+00:00",
+   "data": "2026-10-17T08:30:49+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Chiesto il processo per l'ex agente Cinturrino, cade la premeditazione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/15/chiesto-il-processo-per-lex-agente-cinturrino-cade-la-premeditazione_2feca2e0-0e94-4499-9219-57f3e5aa5c48.html"
+   "titolo": "Resinovich, in Procura Visintin si avvale della facoltà di non rispondere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/resinovich-in-procura-visintin-si-avvale-della-facolta-di-non-rispondere_fe278f9d-29a3-4e20-8232-5ff347c268c0.html"
+  },
+  {
+   "data": "2026-10-17T08:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ex Ilva, azienda chiede aumento cassa integrazione con altri 4.172 dipendenti: coinvolti Taranto, Genova e Novi",
+   "url": "https://www.adnkronos.com/economia/ex-ilva-cassa-integrazione-news-oggi_7GNmJHlycZHbFzGiAZ0ize"
+  },
+  {
+   "data": "2026-10-17T08:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Salute, Gatti (Bayer): \"Menopausa, non sopportare i sintomi ma parlarne con il medico\"",
+   "url": "https://www.adnkronos.com/cronaca/salute-gatti-bayer-menopausa-non-sopportare-i-sintomi-ma-parlarne-con-il-medico_5VCNbp6rCeLCCCFziwb5gN"
+  },
+  {
+   "data": "2026-10-17T07:58:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sparatoria in Oregon, l'attentatore era un ex studente della scuola",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/17/sparatoria-in-oregon-lattentatore-era-un-ex-studente-della-scuola_2160f717-27a8-4235-a884-8c312740547b.html"
+  },
+  {
+   "data": "2026-10-17T07:55:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Padova, violenza sessuale su 13enne in un bar: arrestato 40enne pakistano",
+   "url": "https://www.adnkronos.com/cronaca/padova-13enne-violentato-bar-pakistano-arrestato_2MYSONrxD0HiM5gLKY5QxW"
+  },
+  {
+   "data": "2026-10-17T07:54:07+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "A Napoli tassista alla guida senza aver mai conseguito la patente",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/a-napoli-tassista-alla-guida-senza-aver-mai-conseguito-la-patente_bb82cbdf-5224-4334-beea-f2604c08f0e5.html"
+  },
+  {
+   "data": "2026-10-17T07:48:46+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "A Melfi c'è sagra della castagna, gli autotrasportatori tolgono il blocco",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/a-melfi-ce-sagra-della-castagna-gli-autotrasportatori-tolgono-il-blocco_c7e1e310-6130-4a7a-9b83-f56ee9a61b8c.html"
+  },
+  {
+   "data": "2026-10-17T07:47:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giorgetti al Fmi: 'Salvaguardare la sostenibilità del debito proteggendo la crescita'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/17/giorgetti-salvaguardare-la-sostenibilita-del-debito_e898eb82-ee13-41f2-beb1-1525ce781315.html"
+  },
+  {
+   "data": "2026-10-17T07:44:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il racconto della settimana in immagini: 10-17 ottobre",
+   "url": "https://www.ansa.it/sito/videogallery/short_video/2026/10/17/il-racconto-della-settimana-in-immagini-10-17-ottobre_e285c494-4328-4e34-9a5c-f99cea98aaf1.html"
+  },
+  {
+   "data": "2026-10-17T07:34:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Rinasce il Teatro Valle di Roma, si rialza il sipario dopo 16 anni",
+   "url": "https://www.ansa.it/sito/notizie/cultura/teatro/2026/10/16/rinasce-il-teatro-valle-di-roma-si-rialza-il-sipario-dopo-16-anni_ce2f0652-ef26-40cc-ada7-f96d9ff58999.html"
+  },
+  {
+   "data": "2026-10-17T07:31:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Media: 'L'ordine per limitare uso di Starshield a Kiev è arrivato dalla Casa Bianca'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/17/lordine-per-limitare-uso-di-starshield-a-kiev-e-arrivato-dalla-casa-bianca_83f25cb9-9abf-47e9-98b3-ef69fe52cdb8.html"
+  },
+  {
+   "data": "2026-10-17T07:28:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, cede l’anticiclone: arrivano piogge e rovesci a partire dal Nord-Ovest",
+   "url": "https://www.adnkronos.com/cronaca/meteo-previsioni-italia-maltempo-anticiclone-addio_1rgjGyLq6bukuSAgjxt8k"
+  },
+  {
+   "data": "2026-10-17T07:27:55+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Violenza sessuale su un minore nel bagno di un bar, arrestato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/violenza-sessuale-su-un-minore-nel-bagno-di-un-bar-arrestato-a-padova_dc38ed0e-cc57-4bf8-aa21-6883061b5726.html"
+  },
+  {
+   "data": "2026-10-17T07:27:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Quanto costerà il riscaldamento nei prossimi mesi? Cosa controllare in bolletta prima dell'inverno",
+   "url": "https://www.adnkronos.com/economia/riscaldamento-prezzi-consigli-bollette-analisi-segugio_5It50FI3d5IoUkPpCVQxOZ"
+  },
+  {
+   "data": "2026-10-17T07:24:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Cagli il festival ReWriters XS, \"E' più difficile essere giovani o vecchi, nell'oggi iper-contemporaneo?\"",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/12/eugenia-romanelli-con-il-festival-rewriters-xs-diamo-voce-ai-giovani_b3960dba-4b6b-4004-a376-2812ce8d3ef9.html"
+  },
+  {
+   "data": "2026-10-17T07:09:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sentenza, 'gli hater hanno fatto diventare Alessandra Matteuzzi carnefice'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/sentenza-gli-hater-hanno-fatto-diventare-alessandra-matteuzzi-carnefice_fe87b28a-17ab-4d98-9028-f9d1cd25dc88.html"
   }
  ]
 }

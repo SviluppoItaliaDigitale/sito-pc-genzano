@@ -11,8 +11,10 @@ name: "Aggiornamento MANUALE-SITO.md"
 #    Toolkit, del Content Toolkit e delle Linee guida AGID, che dal 04/05/2026
 #    non si scaricavano più (le pagine si sono spostate).
 # Se qualcosa cambia apre la issue di revisione. Se una fonte non si legge lo
-# dice in una issue che si aggiorna a ogni giro e si chiude da sola, ma solo
-# dopo un giro in cui tutti e due i controlli sono arrivati in fondo.
+# dice in una issue `fonte-rotta` che si aggiorna a ogni giro e si chiude da
+# sola, ma solo dopo un giro in cui tutti e due i controlli sono arrivati in
+# fondo; in quel giro il run diventa rosso. La fonte illeggibile conserva
+# l'ultimo hash buono, così al ritorno non scatta una falsa revisione.
 
 on:
   schedule:
@@ -58,14 +60,26 @@ jobs:
 
           # Writing Toolkit, Content Toolkit e Linee guida AGID non sono più qui:
           # il loro testo lo controlla il passo successivo, dai repository ufficiali.
+          # ui_kit, dichiarazione_accessibilita e dipartimento_pc sono stati
+          # corretti il 17/10/2026 (issue #1419): le vecchie URL non davano
+          # più testo leggibile senza JavaScript.
+          # - ui_kit: /kit/ui-kit/ ora fa un redirect via <meta http-equiv>
+          #   (non un 301/302) verso la pagina vera, verificata con curl.
+          # - dichiarazione_accessibilita: form.agid.gov.it è un'app SvelteKit
+          #   senza alcun testo lato server (il modulo di invio, non una
+          #   pagina di contenuto): sostituita con la pagina AGID che
+          #   descrive la procedura della dichiarazione, letta senza JS.
+          # - dipartimento_pc: la home protezionecivile.gov.it è una SPA
+          #   (vedi rule 08) e non lo è mai stata: sostituita col sottodominio
+          #   "Servizio Nazionale", reso lato server con testo vero.
           declare -A FONTI=(
             ["designers_italia_home"]="https://designers.italia.it/"
             ["designers_italia_guide"]="https://designers.italia.it/risorse-per-progettare/"
-            ["ui_kit"]="https://designers.italia.it/kit/ui-kit/"
+            ["ui_kit"]="https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/"
             ["bootstrap_italia_docs"]="https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/"
             ["accessibilita_agid"]="https://www.agid.gov.it/it/design-servizi/accessibilita"
-            ["dichiarazione_accessibilita"]="https://form.agid.gov.it/"
-            ["dipartimento_pc"]="https://www.protezionecivile.gov.it/"
+            ["dichiarazione_accessibilita"]="https://www.agid.gov.it/it/design-servizi/accessibilita/dichiarazione-accessibilita"
+            ["dipartimento_pc"]="https://servizio-nazionale.protezionecivile.gov.it/it/"
           )
 
           PREV_ALGO=$(jq -r '._meta.algoritmo // ""' "$STATE_FILE" 2>/dev/null || echo "")
@@ -300,9 +314,11 @@ jobs:
               echo "Questa issue si aggiorna a ogni controllo e si chiude da sola quando tutte le fonti tornano leggibili."
             } > "$RUNNER_TEMP/fonti-issue.md"
             if [ -n "$APERTA" ]; then
-              gh issue edit "$APERTA" --body-file "$RUNNER_TEMP/fonti-issue.md"
+              # Commento, non solo edit: la modifica del corpo non notifica nessuno.
+              gh issue edit "$APERTA" --add-label fonte-rotta --body-file "$RUNNER_TEMP/fonti-issue.md"
+              gh issue comment "$APERTA" --body "Ancora non leggibili al controllo del $(date -u +%d/%m/%Y): elenco aggiornato nella descrizione. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             else
-              gh issue create --title "$TITOLO" --label manuale --label automazione --body-file "$RUNNER_TEMP/fonti-issue.md"
+              gh issue create --title "$TITOLO" --label manuale --label automazione --label fonte-rotta --body-file "$RUNNER_TEMP/fonti-issue.md"
             fi
           elif [ "$ESITO_PAGINE" = "success" ] && [ "$ESITO_MANUALI" = "success" ]; then
             if [ -n "$APERTA" ]; then
@@ -311,4 +327,18 @@ jobs:
           else
             # Il run fallito lo segnala il controllo di salute giornaliero.
             echo "::warning ::Controlli non arrivati in fondo (pagine: ${ESITO_PAGINE:-non eseguito}, manuali: ${ESITO_MANUALI:-non eseguito}): la issue delle fonti resta com'è."
+          fi
+
+      - name: "Run rosso se una fonte non si legge"
+        # Dal 17/10/2026 (istruzione dell'utente: «gli errori 404 e simili non
+        # devono mai essere ignorati») una fonte illeggibile chiude il run in
+        # rosso, così la vede anche il controllo di salute giornaliero; la issue
+        # `fonte-rotta` qui sopra la prende in carico la routine delle issue.
+        if: always()
+        shell: bash
+        run: |
+          if [ -s "$RUNNER_TEMP/fonti-errori.md" ]; then
+            echo "::error::Una o più fonti del manuale operativo non si leggono: su di esse il controllo è cieco (issue fonte-rotta aperta o aggiornata)."
+            cat "$RUNNER_TEMP/fonti-errori.md"
+            exit 1
           fi
