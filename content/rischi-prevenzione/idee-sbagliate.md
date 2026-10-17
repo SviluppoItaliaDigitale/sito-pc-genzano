@@ -231,7 +231,7 @@ Bassi, a quattro zampe, dove l'aria è più pulita, verso la porta o la finestra
 
 {{< pittogramma src="/pittogrammi/arasaac/aprire-finestra.png" alt="Pittogramma: aprire una finestra" caption="Con odore di gas: finestre aperte, niente interruttori né fiamme, si esce e si chiama da fuori" size="medium" >}}
 
-**Perché è sbagliata.** Un interruttore, un campanello o un telefono fisso possono fare una scintilla, e una scintilla in una stanza piena di gas provoca un'esplosione. Si aprono le finestre, non si toccano interruttori né fiamme, si esce di casa e si chiama il 112 dall'esterno.
+**Perché è sbagliata.** Un interruttore, un campanello o un telefono, fisso o cellulare, possono fare una scintilla, e una scintilla in una stanza piena di gas provoca un'esplosione. Si aprono le finestre, non si toccano interruttori né fiamme, si esce di casa e si chiama il 112 dall'esterno.
 
 **Fonte:** la scheda [Cosa faccio se sento odore di gas](/formazione/schede-stampabili/odore-gas-infanzia/) e [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/), in linea con le indicazioni dei Vigili del Fuoco.
 

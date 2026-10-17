@@ -174,6 +174,11 @@
     gap: 1rem;
     margin-bottom: 1rem;
   }
+  /* Il ruolo di elemento di lista sta sul contenitore, non sul pulsante:
+     role="listitem" sul <button> cancellava il ruolo di pulsante (audit
+     esterno del 17/10/2026, controllo scripts/check-ruoli-aria.py). */
+  #assistente-app .opt-card-item { display: flex; }
+  #assistente-app .opt-card-item > .opt-card { width: 100%; }
   #assistente-app .opt-card {
     display: grid;
     grid-template-columns: 4rem 1fr 2rem;
@@ -1286,7 +1291,7 @@
       bullets: [
         '<strong>Non</strong> accendere fiamme, non fumare, non usare accendini.',
         '<strong>Non</strong> azionare interruttori elettrici (nemmeno per spegnere la luce): una scintilla può innescare l’esplosione.',
-        '<strong>Non</strong> usare il telefono fisso in casa: esci prima.',
+        '<strong>Non</strong> usare telefoni in casa, né fisso né cellulare: esci prima e chiama da fuori.',
         'Chiudi il contatore generale del gas, se è accessibile in sicurezza.',
         'Apri porte e finestre per far uscire il gas.',
         'Esci dall’edificio e avverti vicini e portinaio.',
@@ -1618,14 +1623,14 @@
     node.options.forEach(function (opt) {
       var cls = opt.emergency ? ' card-emergency' : '';
       var iconClass = opt.icon || 'bi-arrow-right-circle';
-      html += '<button type="button" class="opt-card' + cls + '" data-next="' + escapeHTML(opt.next) + '" aria-label="' + escapeHTML(opt.text) + '" role="listitem">'
+      html += '<div class="opt-card-item" role="listitem"><button type="button" class="opt-card' + cls + '" data-next="' + escapeHTML(opt.next) + '" aria-label="' + escapeHTML(opt.text) + '">'
         + '<span class="card-icon-wrap"><i class="bi ' + escapeHTML(iconClass) + '" aria-hidden="true"></i></span>'
         + '<span class="card-text">'
         + '<span class="card-title">' + escapeHTML(opt.text) + '</span>'
         + (opt.description ? '<span class="card-desc">' + escapeHTML(opt.description) + '</span>' : '')
         + '</span>'
         + '<span class="card-arrow" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>'
-        + '</button>';
+        + '</button></div>';
     });
     html += '</div>';
     html += renderControls();

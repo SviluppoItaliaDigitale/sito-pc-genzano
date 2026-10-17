@@ -17,28 +17,84 @@ Uso:
 Exit code: 1 se trova parole sospette, 0 se pulito, 2 se manca il dizionario.
 
 Dipendenze: pip install spylls  +  dizionario hunspell it_IT
-            (Ubuntu/CI: apt-get install hunspell-it).
+            (Ubuntu/CI: apt-get install hunspell-it). Se mancano, lo script
+            li procura da solo (apt-get, poi download del dizionario di
+            LibreOffice in ~/.cache/hunspell, poi pip).
 """
 import sys, re, os, glob, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ALLOW_FILE = os.path.join(ROOT, "scripts", "dizionario-pc.txt")
+CACHE_DIZ = os.path.join(os.path.expanduser("~"), ".cache", "hunspell")
 DICT_CANDIDATES = [
     "/usr/share/hunspell/it_IT",
     "/usr/share/myspell/dicts/it_IT",
     "/usr/share/myspell/it_IT",
+    os.path.join(CACHE_DIZ, "it_IT"),
 ]
+# Dizionario italiano di LibreOffice (stesso di hunspell-it), usato quando il
+# gestore dei pacchetti non c'è o non funziona.
+URL_DIZ = "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/it_IT/it_IT"
+
+
+def _trova_dizionario():
+    for base in DICT_CANDIDATES:
+        if os.path.exists(base + ".dic") and os.path.exists(base + ".aff"):
+            return base
+    return None
+
+
+def _procura_dizionario():
+    """Il correttore deve funzionare ovunque, anche dalle sessioni cloud aperte
+    dal cellulare, dove gli agganci di avvio del repository non partono (dal
+    17/10/2026, richiesta dell'utente). Prova, in ordine: hunspell-it dal
+    gestore dei pacchetti (se si è root), poi il dizionario di LibreOffice
+    scaricato in ~/.cache/hunspell."""
+    import shutil, subprocess, urllib.request
+    if shutil.which("apt-get") and hasattr(os, "geteuid") and os.geteuid() == 0:
+        sys.stderr.write("Dizionario it_IT assente: installo hunspell-it…\n")
+        try:
+            subprocess.run(["apt-get", "update", "-qq"], check=False, timeout=180,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(["apt-get", "install", "-y", "-qq", "hunspell-it"], check=False,
+                           timeout=180, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except (OSError, subprocess.SubprocessError):
+            pass
+        if _trova_dizionario():
+            return
+    sys.stderr.write("Dizionario it_IT assente: lo scarico da LibreOffice…\n")
+    os.makedirs(CACHE_DIZ, exist_ok=True)
+    for est in (".aff", ".dic"):
+        dest = os.path.join(CACHE_DIZ, "it_IT" + est)
+        try:
+            with urllib.request.urlopen(URL_DIZ + est, timeout=60) as r, open(dest + ".tmp", "wb") as fh:
+                fh.write(r.read())
+            os.replace(dest + ".tmp", dest)
+        except OSError as e:
+            sys.stderr.write(f"        download non riuscito ({e})\n")
+            return
+
 
 def load_dictionary():
     try:
         from spylls.hunspell import Dictionary
     except ImportError:
-        sys.stderr.write("ERRORE: manca 'spylls'. Installa con: pip install spylls\n")
-        sys.exit(2)
-    for base in DICT_CANDIDATES:
-        if os.path.exists(base + ".dic") and os.path.exists(base + ".aff"):
-            return Dictionary.from_files(base)
-    sys.stderr.write("ERRORE: dizionario hunspell it_IT non trovato.\n"
+        import subprocess
+        sys.stderr.write("Manca 'spylls': lo installo…\n")
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--break-system-packages", "spylls"],
+                       check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        try:
+            from spylls.hunspell import Dictionary
+        except ImportError:
+            sys.stderr.write("ERRORE: manca 'spylls'. Installa con: pip install spylls\n")
+            sys.exit(2)
+    base = _trova_dizionario()
+    if not base:
+        _procura_dizionario()
+        base = _trova_dizionario()
+    if base:
+        return Dictionary.from_files(base)
+    sys.stderr.write("ERRORE: dizionario hunspell it_IT non trovato e non procurabile.\n"
                      "        Ubuntu/CI: apt-get install hunspell-it\n")
     sys.exit(2)
 

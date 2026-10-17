@@ -53,7 +53,7 @@ Il rischio non è uguale per tutti. Le categorie più vulnerabili sono:
 
 ### Fuori casa
 
-- **Evita di uscire** tra le 11 e le 17 nei giorni più caldi.
+- **Evita di uscire** tra le 11 e le 18 nei giorni più caldi.
 - **Porta sempre una bottiglia d'acqua**.
 - **Indossa cappello chiaro, occhiali da sole, crema solare**.
 - **Cerca ombra** e luoghi climatizzati (biblioteche, centri commerciali, chiese).

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nelle **ore più calde** della giornata estiva — tipicamente tra le 12 e le 17 — la miglior protezione è restare **al riparo** in luoghi freschi. Non tutti hanno climatizzazione a casa. Per questo i **luoghi pubblici climatizzati** diventano risorsa preziosa, soprattutto per anziani e famiglie con bambini. E offrono anche occasioni di **vita comunitaria** contro l'isolamento estivo.
+Nelle **ore più calde** della giornata estiva — tipicamente tra le 11 e le 18 — la miglior protezione è restare **al riparo** in luoghi freschi. Non tutti hanno climatizzazione a casa. Per questo i **luoghi pubblici climatizzati** diventano risorsa preziosa, soprattutto per anziani e famiglie con bambini. E offrono anche occasioni di **vita comunitaria** contro l'isolamento estivo.
 
 ## I rifugi climatici urbani
 
@@ -144,8 +144,8 @@ L'estate comunale dei Castelli ne è ricca.
 
 Per ogni attività estiva, **ore consigliate**:
 - **Sport e movimento**: 6-10 e 19-22.
-- **Passeggiate**: 7-11 e 17-21.
-- **Pausa al fresco**: 11-17.
+- **Passeggiate**: 7-11 e 18-21.
+- **Pausa al fresco**: 11-18.
 - **Aggregazione serale**: dopo le 20.
 - **Riposo**: 13-16 (se possibile).
 

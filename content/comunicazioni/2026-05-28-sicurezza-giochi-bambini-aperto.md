@@ -92,7 +92,7 @@ Ne abbiamo parlato nell'[articolo sui laghi di Nemi e Albano](/comunicazioni/202
 
 ## Insolazione e colpo di calore
 
-- **No ore calde** (12-17) d'estate per attività fisica intensa.
+- **No ore calde** (11-18) d'estate per attività fisica intensa.
 - **Cappello e maglietta** sempre.
 - **Crema solare** riapplicata ogni 2 ore e dopo il bagno.
 - **Acqua costante**: i bambini sentono la sete meno degli adulti, bisogna "ricordare loro di bere".

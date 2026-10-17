@@ -65,7 +65,7 @@ Se il tuo animale è in crisi:
 ## Comportamenti quotidiani d'estate
 
 ### Passeggiate
-- **Evitare** le ore centrali (11-17).
+- **Evitare** le ore centrali (11-18).
 - **Uscire** presto mattino e tardo pomeriggio.
 - **Controllare** l'asfalto con il dorso della mano: se scotta per noi, scotta anche per loro.
 - **Portare** acqua in borraccia.

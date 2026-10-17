@@ -1,15 +1,16 @@
-ultimo_audit: '2026-10-01'
-totale: 62
+ultimo_audit: '2026-10-17'
+totale: 66
 riepilogo:
-  ACCESSIBILE: 2
-  PARZIALE: 15
+  ACCESSIBILE: 0
+  PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 27
+  TERZO: 31
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
   file: 2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
   size_kb: 888.9
+  sha256: cc97443f9e1a210a9da38e2d9b05e5b20b0cc027d7ffa50ce803f2280be8124e
   searchable: false
   tagged: false
   language: null
@@ -23,6 +24,7 @@ documenti:
 - path: /allegati/2026/2026-06-26-venezuela-usgs-pager.pdf
   file: 2026-06-26-venezuela-usgs-pager.pdf
   size_kb: 2147.7
+  sha256: 63e0acbf2ccb44f8419a712d9d47158f9ede528de1ce9bc283d2bcb4d85ad44d
   searchable: true
   tagged: false
   language: null
@@ -33,9 +35,66 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
+- path: /allegati/2026/2026-10-05-avviso-volontari-civici-genzano.pdf
+  file: 2026-10-05-avviso-volontari-civici-genzano.pdf
+  size_kb: 107.5
+  sha256: 2a19527660b3d997a34522d1d5dd91561fef998bdf7347a06d3678bd1e14a1cf
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: Genzano di Roma _____________
+  pages: 2
+  errors: []
+  text_chars_sample: 6978
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-10-05-determinazione-80-volontari-civici-genzano.pdf
+  file: 2026-10-05-determinazione-80-volontari-civici-genzano.pdf
+  size_kb: 139.3
+  sha256: a0ffc6efa05580a62907e19eb6801edb7f207be8efba2719d22e8a5e0ba6bac8
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 7791
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-10-05-modulo-domanda-volontari-civici-genzano.pdf
+  file: 2026-10-05-modulo-domanda-volontari-civici-genzano.pdf
+  size_kb: 79.5
+  sha256: f56d83a4c9018e86d8f2dd87fe15190bb872b8a27c67d762dc9b841a791b4c1d
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: Genzano di Roma _____________
+  pages: 1
+  errors: []
+  text_chars_sample: 1589
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf
+  file: determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf
+  size_kb: 313.1
+  sha256: dd0f6a330d92e2d32d3aee7bd8821272069c39c3a1bb7f7031699c76aac8976f
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 17
+  errors: []
+  text_chars_sample: 7314
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
 - path: /allegati/2026/determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
   file: determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
   size_kb: 306.8
+  sha256: f12831f9e0ae52958a23c1c86f5cff1939a1fe66c79e6a50e42d0e83fa74725c
   searchable: true
   tagged: false
   language: null
@@ -49,6 +108,7 @@ documenti:
 - path: /allegati/2026/dgr-lazio-270-2026-adozione-regolamento-safor-prociv.pdf
   file: dgr-lazio-270-2026-adozione-regolamento-safor-prociv.pdf
   size_kb: 408.9
+  sha256: ad4b9169c9ddbc1e26ed25bbe88010ba564e670607d90a245ced9f24dc22ebcb
   searchable: true
   tagged: false
   language: null
@@ -62,6 +122,7 @@ documenti:
 - path: /allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
   file: ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
   size_kb: 119.4
+  sha256: 910e05de584e644a6ddaf39c935849268c4260ce1e0e16d8636fb505fc3e22b8
   searchable: true
   tagged: true
   language: it-IT
@@ -75,6 +136,7 @@ documenti:
 - path: /allegati/2026/ordinanza-dirigenziale-133-2026-corsa-del-pane.pdf
   file: ordinanza-dirigenziale-133-2026-corsa-del-pane.pdf
   size_kb: 117.6
+  sha256: 9ec5a345cb753496e46f79370027407144dc75d29c7cba21bd0c597cc056cff6
   searchable: true
   tagged: true
   language: it-IT
@@ -88,6 +150,7 @@ documenti:
 - path: /allegati/2026/ordinanza-dirigenziale-134-2026-festa-del-pane.pdf
   file: ordinanza-dirigenziale-134-2026-festa-del-pane.pdf
   size_kb: 146.6
+  sha256: 46cfe60cb1bab9b1e18114b6b2df556937375105c617195f69a4ec8376abb110
   searchable: true
   tagged: true
   language: it-IT
@@ -101,6 +164,7 @@ documenti:
 - path: /allegati/2026/ordinanza-sindacale-12-2026-coc-infiorata.pdf
   file: ordinanza-sindacale-12-2026-coc-infiorata.pdf
   size_kb: 85.6
+  sha256: f927ba08c35daac69f4406ac0ba915410ca4c994898d86ba46af0ec13d87a8ea
   searchable: true
   tagged: true
   language: it-IT
@@ -114,6 +178,7 @@ documenti:
 - path: /allegati/2026/ordinanza-sindacale-19-2026-coc-festa-del-pane.pdf
   file: ordinanza-sindacale-19-2026-coc-festa-del-pane.pdf
   size_kb: 87.0
+  sha256: 3cb827ed97ecc2c47fbcc8393c8bc450486d2a8007f21c4c31b7f7abec59b82c
   searchable: true
   tagged: true
   language: it-IT
@@ -127,6 +192,7 @@ documenti:
 - path: /allegati/2026/programma-talk-salone-del-libro-2026.pdf
   file: programma-talk-salone-del-libro-2026.pdf
   size_kb: 351.8
+  sha256: a3059e11cfa93523fa7696c4062a0256d577f17122a7ab329ab2d0c80d2fcbb8
   searchable: false
   tagged: true
   language: it-IT
@@ -140,6 +206,7 @@ documenti:
 - path: /allegati/2026/raccomandazioni-aib-2026.pdf
   file: raccomandazioni-aib-2026.pdf
   size_kb: 167.9
+  sha256: 7e7d26a91643737e889744364cabf053442a0385ba258c57bd37046744ea44bc
   searchable: true
   tagged: false
   language: null
@@ -153,6 +220,7 @@ documenti:
 - path: /allegati/2026/regione-lazio-adempimenti-aib-2026.pdf
   file: regione-lazio-adempimenti-aib-2026.pdf
   size_kb: 210.7
+  sha256: ecc95e64a241366b6116405c3d8cfcb02893ac25c4c2bb4509f2f2868c893169
   searchable: true
   tagged: true
   language: it
@@ -166,6 +234,7 @@ documenti:
 - path: /allegati/2026/regolamento-regionale-lazio-4-2026-safor-prociv.pdf
   file: regolamento-regionale-lazio-4-2026-safor-prociv.pdf
   size_kb: 219.0
+  sha256: a480d9e97c040d89cc1f8130bd46cefa17133d12848089946d68d8032d4490f8
   searchable: true
   tagged: false
   language: null
@@ -179,6 +248,7 @@ documenti:
 - path: /allegati/2026/volantino-116117-cure-non-urgenti-regione-lazio.pdf
   file: volantino-116117-cure-non-urgenti-regione-lazio.pdf
   size_kb: 158.2
+  sha256: 4b5bf588c73f1c18e2f3b748d5eea361eb8e554415986c14a4d4f333e056cd35
   searchable: true
   tagged: false
   language: null
@@ -192,6 +262,7 @@ documenti:
 - path: /area-download/normativa/Ordinanza_Sindacale_AIB_2026.pdf
   file: Ordinanza_Sindacale_AIB_2026.pdf
   size_kb: 183.6
+  sha256: 2c84b966eb966983bcc95666cdd2c99525c540d46e8db82439f6ec5f8458c224
   searchable: true
   tagged: false
   language: null
@@ -205,6 +276,7 @@ documenti:
 - path: /manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   file: Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   size_kb: 4173.9
+  sha256: a2cb5884fa4523578d58fd990c3569e889101914f55e4b609677054fa39fc640
   searchable: true
   tagged: false
   language: null
@@ -218,6 +290,7 @@ documenti:
 - path: /manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf
   file: DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf
   size_kb: 3881.9
+  sha256: 91e5316ceefaf2dc65f03d7dd07c00e556c3395ad7845dcf5e2e1191f91df5d3
   searchable: true
   tagged: false
   language: it-IT
@@ -231,6 +304,7 @@ documenti:
 - path: /manuali/FondazioneBarilla_Libro_del_Risparmio.pdf
   file: FondazioneBarilla_Libro_del_Risparmio.pdf
   size_kb: 27994.1
+  sha256: c58ca22b8e39910d557d8d5c1e4b0a76c740d60dddfaedc7cec536e566846fcf
   searchable: true
   tagged: false
   language: it-IT
@@ -244,6 +318,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-374-roma-carta.pdf
   file: carg-foglio-374-roma-carta.pdf
   size_kb: 18672.0
+  sha256: 40be66552d190c4d8459e23e63fb77b315d61786cf67f01dc2cbfbb45b2775e0
   searchable: false
   tagged: false
   language: null
@@ -258,6 +333,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-374-roma-note.pdf
   file: carg-foglio-374-roma-note.pdf
   size_kb: 5554.7
+  sha256: c6ff26c29d751366fee9e44c031340edea30ecb025aacb23101d5b684a485687
   searchable: true
   tagged: true
   language: null
@@ -272,6 +348,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-375-tivoli-carta.pdf
   file: carg-foglio-375-tivoli-carta.pdf
   size_kb: 10637.6
+  sha256: f434931dfab75f1c37420ff701155435598219d3d615e6f318fa60de11fb3a37
   searchable: false
   tagged: false
   language: null
@@ -286,6 +363,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-375-tivoli-note.pdf
   file: carg-foglio-375-tivoli-note.pdf
   size_kb: 47634.8
+  sha256: f8d278bea0a6815f2f6d33731f36839338977809af882282d2fb80413ca4d069
   searchable: true
   tagged: false
   language: it-IT
@@ -300,6 +378,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-387-albano-laziale-carta.pdf
   file: carg-foglio-387-albano-laziale-carta.pdf
   size_kb: 21110.0
+  sha256: 76cd3abeceb6bf0f7f7071c0990f74ae51e1f46c76177e16202bcfd09debe004
   searchable: false
   tagged: false
   language: null
@@ -314,6 +393,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-387-albano-laziale-note.pdf
   file: carg-foglio-387-albano-laziale-note.pdf
   size_kb: 24565.2
+  sha256: 076365e185ac2abfdecdcff84f5d0c9bf0741434408ffa2e178993c99413da27
   searchable: true
   tagged: false
   language: null
@@ -328,6 +408,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-388-velletri-carta.pdf
   file: carg-foglio-388-velletri-carta.pdf
   size_kb: 10190.8
+  sha256: fc98f0127d2ec8d06e3b499c8e909a899db260ab51aefaf02c2f872612d430dc
   searchable: false
   tagged: false
   language: null
@@ -342,6 +423,7 @@ documenti:
 - path: /manuali/carg/carg-foglio-388-velletri-note.pdf
   file: carg-foglio-388-velletri-note.pdf
   size_kb: 12940.4
+  sha256: 985efbc529f4130ff016932f5267a9e0eeb5915f04d5b69ca9963e7fbf91247b
   searchable: true
   tagged: false
   language: it-IT
@@ -356,6 +438,7 @@ documenti:
 - path: /manuali/carta-naturalistica-castelli-romani-latium-volcano.pdf
   file: carta-naturalistica-castelli-romani-latium-volcano.pdf
   size_kb: 1807.1
+  sha256: 2bc6db4b8ba28c34e7891acb538b6cde9253473e5de04fa9d5ee440fdd974957
   searchable: false
   tagged: false
   language: null
@@ -369,6 +452,7 @@ documenti:
 - path: /manuali/cna-best-practices-social-media-crisis-2023.pdf
   file: cna-best-practices-social-media-crisis-2023.pdf
   size_kb: 636.8
+  sha256: 1cfda27eb48cf9bba403266004c4debc49c35db0f9ec2fdab3afb53cc07a2c44
   searchable: true
   tagged: true
   language: Lang <FEFF0045004E002D00550053>
@@ -383,6 +467,7 @@ documenti:
 - path: /manuali/delibera-cc-31-2023-costituzione-gruppo-comunale-pc-genzano.pdf
   file: delibera-cc-31-2023-costituzione-gruppo-comunale-pc-genzano.pdf
   size_kb: 1161.4
+  sha256: 044e6f975fc8da231acd6335da7068d6338de11ea04bf040c16b4f24bda73921
   searchable: true
   tagged: true
   language: en-US
@@ -396,6 +481,7 @@ documenti:
 - path: /manuali/fema-saver-innovative-uses-social-media-emergency-management.pdf
   file: fema-saver-innovative-uses-social-media-emergency-management.pdf
   size_kb: 1560.9
+  sha256: a0c321085d6f83efeecdd88fbc1fcf7ba1427144a59c8031935028921d810799
   searchable: true
   tagged: true
   language: en
@@ -409,6 +495,7 @@ documenti:
 - path: /manuali/locandine/locandina-diventa-volontario.pdf
   file: locandina-diventa-volontario.pdf
   size_kb: 104.5
+  sha256: d366c32a6ce33514d5754eac2307c1abfb6e473e911d8fddbd6a5728e1ff555c
   searchable: true
   tagged: false
   language: it
@@ -422,6 +509,7 @@ documenti:
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
   size_kb: 702.3
+  sha256: 2e112ad910380a735740677f180e01bcd0fe4a4117d683bbbfc7e4f072ef03ba
   searchable: true
   tagged: false
   language: it
@@ -429,13 +517,14 @@ documenti:
     per articolo, del Codice della protezione civile. — Manuale di Protezione Civile
   pages: 127
   errors: []
-  text_chars_sample: 3549
+  text_chars_sample: 3550
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
 - path: /manuali/moduli/domanda-ammissione-volontari.pdf
   file: domanda-ammissione-volontari.pdf
   size_kb: 298.0
+  sha256: 6f814f0c77f22f399d5ac4e794852c0a2e8014aa617e8fa66407534b481928e2
   searchable: true
   tagged: true
   language: it
@@ -445,10 +534,11 @@ documenti:
   text_chars_sample: 3223
   origine: GRUPPO
   origine_descrizione: Modulo del Gruppo (modulistica)
-  verdict: ACCESSIBILE
+  verdict: PARZIALE
 - path: /manuali/polizia-stato-presentazione-youpol-esserci.pdf
   file: polizia-stato-presentazione-youpol-esserci.pdf
   size_kb: 3011.3
+  sha256: 9021217cd8d2f716ee0d8db40770415cb701ddee4f6e699ae31e09d6a928c7d1
   searchable: true
   tagged: false
   language: null
@@ -461,20 +551,22 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2478.3
+  size_kb: 2461.2
+  sha256: db105dec94c4ca042573e7a16d4362d733067bc8e5d54e8c4308c252b3a6e8c7
   searchable: true
   tagged: true
-  language: it-IT
+  language: en-US
   title: null
-  pages: 68
+  pages: 71
   errors: []
   text_chars_sample: 1002
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: ACCESSIBILE
+  verdict: PARZIALE
 - path: /manuali/schede-caa/scheda-caa-alluvione.pdf
   file: scheda-caa-alluvione.pdf
   size_kb: 1843.4
+  sha256: dcb83fba0364392f81edf2f47b10a4fd24f436e08a4fe0cd35161a395ce95bef
   searchable: true
   tagged: false
   language: null
@@ -488,6 +580,7 @@ documenti:
 - path: /manuali/schede-caa/scheda-caa-incendi-boschivi.pdf
   file: scheda-caa-incendi-boschivi.pdf
   size_kb: 1130.6
+  sha256: cbbe0418d75036367a30b6ad3ec58f15b8494995bbc06364a4b3b12a8515174e
   searchable: true
   tagged: false
   language: null
@@ -501,6 +594,7 @@ documenti:
 - path: /manuali/schede-caa/scheda-caa-terremoto.pdf
   file: scheda-caa-terremoto.pdf
   size_kb: 649.2
+  sha256: fe95664d0911c9fac5c62baed7f83095dc0ef90204fc0d72b3f32b5816d75ab9
   searchable: true
   tagged: false
   language: null
@@ -514,6 +608,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-de.pdf
   file: poster-emergenza-de.pdf
   size_kb: 451.4
+  sha256: 43cef723d2958cdfe35c9cde99bc0099e3f11ceeabd050f069351ecc384d2f6b
   searchable: false
   tagged: false
   language: null
@@ -527,6 +622,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-en.pdf
   file: poster-emergenza-en.pdf
   size_kb: 415.5
+  sha256: 41876204141e8828a030ff857a6ecc9416a685d0c6dd5a8ad2bbcfe8c411b656
   searchable: false
   tagged: false
   language: null
@@ -540,6 +636,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-eo.pdf
   file: poster-emergenza-eo.pdf
   size_kb: 410.2
+  sha256: b66b7072ace82c2ee1e6531fce586190fa45da95903170ba96b0a7749086adb3
   searchable: false
   tagged: false
   language: null
@@ -553,6 +650,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-es.pdf
   file: poster-emergenza-es.pdf
   size_kb: 434.6
+  sha256: c5763a6328325068ca78ea5dcafa2a9ced137a8990da1643f6691577bf6a06d0
   searchable: false
   tagged: false
   language: null
@@ -566,6 +664,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-fr.pdf
   file: poster-emergenza-fr.pdf
   size_kb: 447.1
+  sha256: 1fd0286efe2ef31c1869f4866007279901d58c445bf29f0a4cbd27237d69371a
   searchable: false
   tagged: false
   language: null
@@ -579,6 +678,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-it.pdf
   file: poster-emergenza-it.pdf
   size_kb: 413.6
+  sha256: 771bc7215cb55dbaa1c8e3eb31b92fa97ea820b08694617d990192e68bf65f8c
   searchable: false
   tagged: false
   language: null
@@ -592,6 +692,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-pt.pdf
   file: poster-emergenza-pt.pdf
   size_kb: 430.0
+  sha256: affac5c49ae1d026a8e1c47db5bc802d2d587d053c8ccc388d20f9bab0835fe4
   searchable: false
   tagged: false
   language: null
@@ -605,6 +706,7 @@ documenti:
 - path: /poster-emergenza-multilingua/poster-emergenza-ro.pdf
   file: poster-emergenza-ro.pdf
   size_kb: 436.5
+  sha256: b33296097c5cfd854db4fcfd1a8cbd7bfe35a716b2d7899ade5101d613736ff5
   searchable: false
   tagged: false
   language: null
@@ -618,6 +720,7 @@ documenti:
 - path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
   file: 2026-03-21-rischio-sismico-presentazione-pdf.pdf
   size_kb: 16740.1
+  sha256: 868339bec5569b62f8361bdafb6929401be144e8edb0e7d8a0c35a72f2f9db05
   searchable: true
   tagged: false
   language: it
@@ -631,6 +734,7 @@ documenti:
 - path: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
   file: 2026-03-25-allerta-meteo-presentazione-pdf.pdf
   size_kb: 16440.9
+  sha256: f49e8d80514713ff57225b9fe1978903044c16d1fc1ae4baca28b571772a61dc
   searchable: true
   tagged: false
   language: it
@@ -644,6 +748,7 @@ documenti:
 - path: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
   file: 2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
   size_kb: 19577.5
+  sha256: ee9ed7b3e8f41b4dc82eb8d7edddf70c515c4ddeabdd7f2837eaa81bd9a01dca
   searchable: true
   tagged: false
   language: it
@@ -657,6 +762,7 @@ documenti:
 - path: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
   file: 2026-04-17-kit-emergenza-presentazione-pdf.pdf
   size_kb: 18216.8
+  sha256: ee79327e76ee7d00388be9320534c6abb0f89a69eab55a811cff3f46727b354a
   searchable: true
   tagged: false
   language: it
@@ -670,6 +776,7 @@ documenti:
 - path: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf.pdf
   file: 2026-05-14-ondate-di-calore-presentazione-pdf.pdf
   size_kb: 13651.1
+  sha256: 56b718574ea1e20483e84baf6ce8ad64b0f382f3fa7c9cf8eccf04dc5e817e56
   searchable: true
   tagged: false
   language: it
@@ -683,6 +790,7 @@ documenti:
 - path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
   file: 2026-05-18-rischio-incendio-presentazione-pdf.pdf
   size_kb: 14084.6
+  sha256: fdb9528ab7d679e2957234af557df83151c0ff738c2cb16a3f4dc61a90c8f4fa
   searchable: true
   tagged: false
   language: it
@@ -696,6 +804,7 @@ documenti:
 - path: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
   file: 2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
   size_kb: 9338.9
+  sha256: 23362415692381e0c9437ec247ee3964d59a887793c3eaffb02090423bf86859
   searchable: true
   tagged: false
   language: it
@@ -709,6 +818,7 @@ documenti:
 - path: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
   file: 2026-05-29-animali-emergenza-presentazione-pdf.pdf
   size_kb: 13545.5
+  sha256: 9e466d053ed3942e92c2aed787f62e879b6bc72aa887cee683ca52a701325881
   searchable: false
   tagged: false
   language: null
@@ -722,6 +832,7 @@ documenti:
 - path: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
   file: 2026-05-29-it-alert-presentazione-pdf.pdf
   size_kb: 12616.4
+  sha256: 4ceb06ee166deb9aeef0342018734dd4a0403d90171ba9b4e7fabea7a08544ad
   searchable: false
   tagged: false
   language: null
@@ -735,6 +846,7 @@ documenti:
 - path: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
   file: 2026-05-29-nue-112-presentazione-pdf.pdf
   size_kb: 11036.1
+  sha256: 5a770482e1424224d20bb887e3f9934cfa0a54ba5e4f82926c4d9871ab7ac434
   searchable: false
   tagged: false
   language: null
@@ -748,6 +860,7 @@ documenti:
 - path: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
   file: 2026-05-29-piano-familiare-presentazione-pdf.pdf
   size_kb: 16565.4
+  sha256: 0e101277b1f561a86cb5285efb013f904f1af48bd33fb0f92ce46c42ca9e6f8d
   searchable: false
   tagged: false
   language: null
@@ -761,6 +874,7 @@ documenti:
 - path: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
   file: 2026-05-29-temporali-intensi-presentazione-pdf.pdf
   size_kb: 13765.1
+  sha256: 6c6cbb7d716dc8260663eaa2b9759c48c9475eb0e45f89197f84635758af6382
   searchable: false
   tagged: false
   language: null
@@ -774,6 +888,7 @@ documenti:
 - path: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
   file: 2026-05-30-aree-emergenza-presentazione-pdf.pdf
   size_kb: 14408.6
+  sha256: 2cec91681d4d920978779e6b6abcec5229109075eece81f71be4a7dadfa7213a
   searchable: false
   tagged: false
   language: null
@@ -787,6 +902,7 @@ documenti:
 - path: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
   file: 2026-05-30-blackout-presentazione-pdf.pdf
   size_kb: 13986.5
+  sha256: 2ebbcddb507c408c539eef4ff3be013ef7dd5219e2113d7ef8e3a64c15f75682
   searchable: false
   tagged: false
   language: null
@@ -800,6 +916,7 @@ documenti:
 - path: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
   file: 2026-05-30-dopo-emergenza-presentazione-pdf.pdf
   size_kb: 15661.4
+  sha256: 2cf566402e241e65be638882e0c1d74a9d798e49924f68bf379f0da29fd41b9d
   searchable: false
   tagged: false
   language: null
@@ -813,6 +930,7 @@ documenti:
 - path: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
   file: 2026-05-30-vento-forte-presentazione-pdf.pdf
   size_kb: 10927.5
+  sha256: ca1be865b9d29ffeeb6561defa319a10604a7d3ea99122e713f7565abbf63baa
   searchable: false
   tagged: false
   language: null

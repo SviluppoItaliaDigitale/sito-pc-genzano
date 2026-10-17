@@ -270,7 +270,7 @@ Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Ci
 
 ### Ondata di calore
 
-- Evita di uscire nelle ore più calde (11-17)
+- Evita di uscire nelle ore più calde (11-18)
 - Bevi molta acqua anche se non hai sete
 - Fai attenzione a bambini, anziani e persone con malattie croniche
 - Non lasciare mai persone o animali in auto al sole

@@ -44,7 +44,7 @@ Dopo una grande emergenza la luce può mancare. L'acqua può mancare. I soccorsi
 
 ### Salute
 
-- **medicinali importanti** per almeno 3 giorni;
+- **medicinali importanti** per almeno 7 giorni;
 - **kit di pronto soccorso**: garze, cerotti, disinfettante, guanti, coperta termica;
 - **occhiali di scorta**;
 - **mascherine FFP2**;

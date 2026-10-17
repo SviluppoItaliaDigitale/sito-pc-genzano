@@ -58,7 +58,7 @@ Nei Castelli Romani puoi incontrare questi animali.
 ## I pericoli del clima
 
 - **Temporali.** In estate arrivano spesso di pomeriggio. Non restare su punti alti durante un temporale.
-- **Caldo.** Non camminare in salita tra le 12 e le 17.
+- **Caldo.** Non camminare in salita tra le 11 e le 18.
 - **Fulmini.** Scendi da cime e creste se vedi un temporale in arrivo.
 - **Nebbia.** La mattina può fare nebbia. Stai attento sui sentieri poco segnati.
 

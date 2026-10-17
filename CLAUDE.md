@@ -94,6 +94,7 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 | **Fatti e fonti** | ogni contenuto con dati verificabili (date, orari, bilanci, quantità, cause, norme, citazioni, dati da dataset): articoli, pagine, schede, kit, dossier, manuale | `pc-fact-checker` (richiamato anche da `pc-article-reviewer` § 12); `scripts/check-dati-schede.py`; `scripts/check-dati-canonici.py` (registro `data/dati_canonici.yaml`, bloccante su PR; lo alimenta `pc-coerenza-trasversale`) |
 | **Materiali scolastici** | ogni scheda stampabile, kit scuola, kit calamità, rubrica, gioco, percorso nuovo o modificato (`static/formazione/**`, `content/formazione/**`, `static/giochi/**`) | `pc-didattica-reviewer` (sicurezza DPC, pedagogia, età, normativa scuola vigente, esercizi, parità dei 4 formati, licenze); `scripts/check-parita-schede.py` |
 | **Scienza e cronaca** | contenuti che spiegano fenomeni, cause, scale, codici colore; articoli di cronaca, anniversari, vicende giudiziarie, contenuti con persone | `pc-revisore-scientifico`, `pc-desk-giornalistico` |
+| **Coerenza dei dati** (dal 17/10/2026) | ogni contenuto nuovo o modificato con un dato che il sito scrive anche altrove (orari, quantità, giorni, distanze, numeri, bilanci): il valore nuovo deve coincidere con quello già pubblicato, altrimenti si allinea tutto alla fonte | `pc-coerenza-trasversale` (richiamato da `pc-article-reviewer` § 12-bis e `pc-didattica-reviewer` § 6-bis); `scripts/cerca-incongruenze.py --da-git origin/main` (bloccante su PR) e settimanale su tutto il sito (`controllo-incongruenze.yml`) |
 | **Integrità e conformità** | asset, ZIP, ancore, codifiche, stati UI; pagine legali; traduzioni; dati aperti e feed; codice e workflow | `pc-integrita-tecnica`, `pc-conformita-legale`, `pc-revisore-traduzioni`, `pc-dati-e-feed`, `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`; `scripts/check-integrita-asset.py`, `scripts/check-ancore.py` |
 
 **Regole cogenti che i gate applicano:** ogni numero, data o causa ha una **fonte primaria nominata** (INGV, DPC, VVF, ISPRA, Normattiva, MIM, dataset del sito) oppure viene riformulato come stima o ipotesi didattica; un dato sensibile (vittime, cause, istruzioni di sicurezza, norme vigenti) senza fonte è **bloccante**; una correzione fattuale si applica in **tutti** i file che ripetono il dato (schede, dossier, articoli, versioni facili, traduzioni); le istruzioni di autoprotezione per bambini coincidono con il DPC e non contengono divieti o garanzie assoluti senza scenario; le rubriche non usano paura, pianto o agitazione come livello; le avvertenze per l'adulto stanno **dentro** il wrapper stampabile; pagina, stampa singola, «Stampa tutto» e ZIP dicono la stessa cosa (gate `pacchetti-schede` in `validate-pr.yml`).
@@ -303,6 +304,10 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 🔴 **Dopo la pubblicazione**: su **Facebook** il testo si riscrive (`scripts/modifica-post.py fb-testo`), su **Instagram no** — l'API accetta solo i commenti, verificato sul campo. Le **immagini non si cambiano su nessuna delle due**: una foto aggiunta a un articolo già pubblicato entra nei post successivi, non in quelli usciti. Per fermare o spostare una pubblicazione si modifica `coda-social.yaml` dell'altro repo, anche da telefono. Dettagli operativi in `manuale/parte-42-pubblicazione-automatica-social.md`, regole in rule 10 § "Pubblicazione automatica social".
 
+## Strumenti mancanti — si installano, senza giustificazioni
+
+🔴 **Istruzione dell'utente (17/10/2026)**: *«tu sai fare tutto e devi farlo senza giustificazioni»*. In qualunque sessione (PC, cellulare, cloud, routine) uno strumento che manca si installa prima di proseguire: `apt-get update` + `apt-get install`, poi `pip`/`npm`, poi download dalla fonte ufficiale, Chromium in `/opt/pw-browsers/chromium`. Mai saltare un controllo o consegnare con «qui non funziona». Procedura in rule 08 § «Uno strumento che manca si installa».
+
 ## Accessi e permessi — si chiede per l'intero ciclo di vita
 
 🟢 **Istruzione permanente dell'utente (21/09/2026):** *«siamo una squadra, dobbiamo avere pieno potere e accesso a ogni tipo di funzionalità; io ti do le indicazioni e tu esegui»*. Il metodo è quello: indicazione, esecuzione, resoconto — senza fermarsi a chiedere conferma per ogni passo ordinario.
@@ -345,7 +350,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-50 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi; i 12 aggiunti lo stesso giorno completano l'organigramma «azienda» chiesto dall'utente (*«tutti gli specialisti del settore protezione civile, più agenzia di marketing e giornalistica»*).
+52 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi; i 12 aggiunti lo stesso giorno completano l'organigramma «azienda» chiesto dall'utente (*«tutti gli specialisti del settore protezione civile, più agenzia di marketing e giornalistica»*). I 2 aggiunti il 17/10/2026 (`pc-testi-nel-codice`, `pc-auditor-indipendente`) coprono le sviste trovate da un altro audit esterno: i testi che vivono dentro il codice (assistente, giochi, lezioni, Telegram, generatori) e il metodo dell'auditor esterno, con la regola che **ogni rilievo diventa un controllo**.
 
 🔴 **Chi dirige**: la **sessione principale** è la direzione: convoca gli specialisti in sequenza (i gate degli articoli, l'audit completo, i materiali scolastici sono copioni che lei esegue) o in parallelo quando il lavoro si divide in parti indipendenti (fino a venti agenti alla volta). Dal 16/10/2026, su richiesta dell'utente, tre agenti fanno da capi reparto e hanno `Agent` fra i `tools`: `pc-audit-completo`, `pc-article-reviewer` e `pc-didattica-reviewer`. Quando lo strumento c'è, convocano da soli gli specialisti dei loro copioni; quando manca, ne eseguono a mano i controlli essenziali. Gli altri agenti non delegano. Lo strumento c'è solo se la sessione ammette più livelli di agenti (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`): da terminale sul PC il valore predefinito è 3, le sessioni cloud dell'app partono da 1. In cloud la sessione principale può alzarlo per sé scrivendo `{"env":{"CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH":"3"}}` in `~/.claude/settings.json` della macchina della sessione: vale dopo qualche secondo, senza riavvio, e solo per quella sessione (verificato il 16/10/2026: prima un sottoagente non aveva `Agent`, dopo sì). 🔴 Mai sul PC, dove quel file contiene le impostazioni personali dell'utente, e mai nelle routine: il livello si alza solo per un lavoro grande e divisibile in una sessione con l'utente, perché in quella prova ogni agente è partito con circa 390 mila token di contesto e una catena moltiplica il consumo. Il `.claude/settings.json` del repository non serve allo scopo: le chat dell'app partono dalla cartella sopra il repository e non lo leggono. Le squadre di agenti sperimentali (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`), provate lo stesso giorno, non servono: attivate a sessione in corso, l'agente con nome è partito come un sottoagente qualsiasi. Un gate che non può essere convocato si esegue a mano leggendo il file dell'agente, e il rapporto lo dichiara; mai saltato in silenzio.
 
@@ -353,7 +358,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 | Reparto | Agenti |
 |---|---|
-| Direzione e qualità | `pc-audit-completo`, `pc-documentazione`, `pc-site-auditor` (fotografia rapida del repo) |
+| Direzione e qualità | `pc-audit-completo`, `pc-auditor-indipendente`, `pc-documentazione`, `pc-site-auditor` (fotografia rapida del repo) |
 | Protezione civile tecnico-scientifica | `pc-revisore-scientifico`, `pc-normative-verifier`, `pc-pianificatore-emergenza`, `pc-cartografo-gis`, `pc-medico-emergenza`, `pc-psicologo-emergenza`, `pc-radiocomunicazioni` |
 | Sala operativa | `pc-comunicazione-crisi`, `pc-esercitazione-emergenza` |
 | Volontariato e inclusione | `pc-volontariato-terzo-settore`, `pc-inclusione-fragilita` |
@@ -362,7 +367,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | Fotografia | `pc-image-fixer`, `pc-photo-caption-verifier` |
 | Scuola | `pc-didattica-reviewer`, `pc-print-card-qa` |
 | Esperienza utente e collaudo | `pc-accessibility-auditor`, `pc-usabilita`, `pc-verifica-visiva`, `pc-visitatore-reale`, `pc-collaudo-funzionale` |
-| Tecnologia | `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`, `pc-integrita-tecnica`, `pc-dati-e-feed`, `pc-deploy-validator`, `pc-prestazioni`, `pc-issue-triage` |
+| Tecnologia | `pc-revisore-codice`, `pc-testi-nel-codice`, `pc-revisore-automazioni`, `pc-sicurezza`, `pc-integrita-tecnica`, `pc-dati-e-feed`, `pc-deploy-validator`, `pc-prestazioni`, `pc-issue-triage` |
 | Legale | `pc-conformita-legale` |
 
 
@@ -391,7 +396,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-desk-giornalistico` | cronaca, anniversari, vicende giudiziarie, persone e minori — attribuzione, deontologia, presunzione di non colpevolezza |
 | `pc-conformita-legale` | "la privacy è a posto?", "la dichiarazione di accessibilità è aggiornata?" — RPD, basi giuridiche PA, calendario AgID, note legali, licenze |
 | `pc-integrita-tecnica` | "il sito è integro?", "gli ZIP funzionano offline?", "le ancore?" — script di integrità, ancore, parità, codifiche, stati UI |
-| `pc-coerenza-trasversale` | "il sito si contraddice?", stessa informazione in più pagine — allineamento alla fonte canonica |
+| `pc-coerenza-trasversale` | "il sito si contraddice?", "ci sono incongruenze nei testi?", stessa informazione in più pagine, issue settimanale «Incongruenze fra i testi del sito» — parte da `scripts/cerca-incongruenze.py`, allinea alla fonte canonica e registra il dato in `data/dati_canonici.yaml` |
 | `pc-revisore-codice` | diff a template/partial/CSS/JS/script — escape, subpath, stati UI, idempotenza, a11y dei componenti |
 | `pc-revisore-automazioni` | workflow e routine — YAML, timeout, pin SHA, trigger, priorità deploy, watchdog, documentazione |
 | `pc-sicurezza` | CSP, header, segreti, supply chain, superficie JS, catena allerta — hardening in Report-Only prima dell'enforcing |
@@ -418,6 +423,8 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-strategia-comunicazione` | "che cosa pubblichiamo il mese prossimo?", campagne — piano editoriale, pubblici, canali, tono istituzionale |
 | `pc-art-director` | "com'è venuta questa locandina?", brief per grafiche — regola dei 4 loghi con E10435833, grafica.md, contrasti, licenze |
 | `pc-produzione-multimediale` | "ho un video da mettere", "facciamo un Reel", podcast — codifica, sottotitoli, trascrizioni, peso, metadati |
+| `pc-testi-nel-codice` | "l'assistente dice cose giuste?", "i giochi danno consigli corretti?", ogni modifica ad assistente, giochi, «Crea la mia lezione», messaggi Telegram, generatori di schede — testi nel codice uguali alla fonte, HTML generato con la sua semantica, combinazioni coerenti |
+| `pc-auditor-indipendente` | "perché non te ne sei accorto?", "fai l'audit come uno esterno", dopo ogni audit esterno e come ultima fase dell'audit mensile — misure sul sito pubblicato senza fidarsi dei controlli, e per ogni rilievo il controllo che lo avrebbe bloccato |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
 

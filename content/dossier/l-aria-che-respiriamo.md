@@ -70,7 +70,7 @@ L'**ozono troposferico** è l'inquinante critico dell'estate. Nessuno lo emette:
 
 In Italia la soglia di informazione è **180 µg/m³** (media oraria), quella di allarme **240 µg/m³** (D.Lgs. 155/2010). Paradosso: spesso è più alto in campagna e in periferia che nel centro città.
 
-Proprio per questo riguarda i **Castelli**: l'ARPA Lazio segnala superamenti del valore obiettivo nelle ondate di calore, anche in stazioni rurali e suburbane. Per anziani, bambini e malati respiratori: niente attività all'aperto nelle ore più calde, tra le 12 e le 16.
+Proprio per questo riguarda i **Castelli**: l'ARPA Lazio segnala superamenti del valore obiettivo nelle ondate di calore, anche in stazioni rurali e suburbane. Per anziani, bambini e malati respiratori: niente attività all'aperto nelle ore più calde, tra le 11 e le 18.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="vulcani-so2" image="/images/dossier/aria-vulcani-so2.webp" alt="Vista satellitare dell'Etna che rilascia dai crateri sommitali due pennacchi: uno più scuro di gas e uno più chiaro di cenere, sopra colate laviche scure e paesi" align="top" kicker="Non sempre è colpa dell'uomo" title="Quando è la Terra<br>a sporcare l'aria" credito="NASA Goddard / Earth Observatory · pubblico dominio" >}}

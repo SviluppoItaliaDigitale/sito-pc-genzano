@@ -152,7 +152,7 @@ TAVOLE = [
                  "si beve prima, e all'ombra ci si sta per scelta, non per premio.",
         "regole": [
             "Bevi acqua spesso, anche se non hai sete.",
-            "Nelle ore più calde, fra le 11 e le 17, resta all'ombra o in casa.",
+            "Nelle ore più calde, fra le 11 e le 18, resta all'ombra o in casa.",
             "Metti vestiti leggeri e chiari, il cappello e gli occhiali da sole.",
             "In casa abbassa le tapparelle quando il sole batte sulla finestra.",
             "In una macchina parcheggiata al sole non resta nessuno: né le persone né gli animali.",

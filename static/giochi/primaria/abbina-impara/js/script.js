@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: 'Alluvione', right: 'Sali ai piani alti, non scendere in cantina' },
                 { left: 'Incendio boschivo', right: 'Chiama il 112 e allontanati dal fuoco' },
                 { left: 'Temporale con fulmini', right: 'Entra in un edificio, stai lontano dagli alberi' },
-                { left: 'Ondata di calore', right: 'Bevi molto, resta all\'ombra dalle 11 alle 17' },
+                { left: 'Ondata di calore', right: 'Bevi molto, resta all\'ombra dalle 11 alle 18' },
                 { left: 'Fuga di gas', right: 'Apri le finestre, esci, non toccare interruttori' }
             ]
         },
