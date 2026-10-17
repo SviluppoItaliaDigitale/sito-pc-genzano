@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-17T01:31",
+  "aggiornato": "2026-10-17T02:02",
   "data_lunga": "sabato 17 ottobre 2026",
-  "aggiornato_label": "sabato 17 ottobre 2026, ore 01:31",
+  "aggiornato_label": "sabato 17 ottobre 2026, ore 02:02",
   "alba": "07:23",
   "tramonto": "18:25",
   "corrente": {
     "temp": 15.7,
-    "percepita": 15.3,
+    "percepita": 15.2,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 75,
-    "vento": 6,
-    "raffiche": 15
+    "umidita": 72,
+    "vento": 5,
+    "raffiche": 17
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 15,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 32,
+      "raffiche": 30,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -31,7 +31,7 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 20,
-      "tmin": 15,
+      "tmin": 14,
       "pioggia": 5,
       "pioggia_mm": 0,
       "raffiche": 48,
@@ -75,7 +75,7 @@
       "nome": "Rieti",
       "tmax": 23,
       "tmin": 8,
-      "cielo": "Nebbia"
+      "cielo": "Coperto"
     },
     {
       "nome": "Roma",
