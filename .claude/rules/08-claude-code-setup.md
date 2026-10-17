@@ -167,7 +167,6 @@ Quattro flussi praticabili:
 - Tool MCP per GitHub (`mcp__github__create_pull_request`, `merge_pull_request`, ecc.).
 - `pip install <pacchetto>` e `npm install <pacchetto>` per dipendenze toolchain.
 - Pillow installabile al volo per applicare la fascia blu **se la foto sorgente è già nel filesystem**.
-
 - **Correttore ortografico** (`scripts/check-refusi.py`, dal 17/10/2026): se manca il dizionario italiano lo procura da solo (installa `hunspell-it` con `apt-get update` + `apt-get install`, altrimenti scarica il dizionario di LibreOffice in `~/.cache/hunspell`) e installa `spylls` se manca. Nelle sessioni aperte dal cellulare gli agganci di avvio del repository non partono, quindi lo script non può contare su di loro. Per gli altri pacchetti di sistema: `apt-get update` prima di `apt-get install`, altrimenti l'installazione fallisce.
 
 ### Cosa NON funziona dalla sandbox cloud
