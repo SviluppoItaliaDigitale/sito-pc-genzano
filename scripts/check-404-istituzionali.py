@@ -18,7 +18,8 @@ promesso la fonte ufficiale. Audit esterno del 25/09/2026, rilievo F13: 58 URL
 in 404, 26 verso il Dipartimento della Protezione Civile.
 
 Uso:  python3 scripts/check-404-istituzionali.py lychee-report.md
-Exit: 0 se nessun link in 404/410, 1 altrimenti (elenco su stdout).
+Exit: 0 se nessun link in 404/410, 1 altrimenti (elenco su stdout), 2 se il
+      rapporto manca (lychee non ha girato).
 """
 import re
 import sys
@@ -72,8 +73,10 @@ def main(percorso: str) -> int:
     try:
         testo = open(percorso, encoding="utf-8").read()
     except FileNotFoundError:
-        print(f"Rapporto {percorso} assente: nulla da controllare.")
-        return 0
+        # Un rapporto assente vuol dire che lychee non ha girato (argomenti
+        # sbagliati, crash): il controllo non è stato fatto, non è «tutto ok».
+        print(f"Rapporto {percorso} assente: il controllo dei link non è stato eseguito.")
+        return 2
     trovati = sorted(set(RIGA.findall(testo)))
     if not trovati:
         print("Nessun link in 404/410.")
