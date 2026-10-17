@@ -86,6 +86,11 @@ jobs:
           #              NOTA: fino a luglio 2026 si usava `--base public`, ma lychee ≥0.16
           #              richiede per --base un URL completo o un path assoluto e per i path
           #              locali root-relative il nuovo flag --root-dir (assoluto).
+          # Il glob in fondo va tra apici: lo espande lychee, ricorsivo. Senza
+          # apici la shell, che non ha globstar, lo leggeva come public/*/*.html
+          # e restavano fuori gli articoli e ogni pagina annidata (scoperto il
+          # 17/10/2026). Nessun commento DENTRO args: il blocco diventa una riga
+          # sola e la shell scarterebbe tutto ciò che segue il «#».
           args: >-
             --cache
             --max-cache-age 1d
@@ -110,10 +115,6 @@ jobs:
             --exclude "/pagefind/"
             --exclude-path "public/vendor"
             --exclude-path "public/app-shared"
-            # Il glob va tra apici: lo espande lychee, ricorsivo. Senza apici la
-            # shell, che non ha globstar, lo leggeva come public/*/*.html e
-            # restavano fuori gli articoli e ogni pagina annidata (scoperto il
-            # 17/10/2026 negli altri siti: 5.822 link invece di 24.086).
             'public/**/*.html'
           output: ./lychee-report.md
           fail: false
