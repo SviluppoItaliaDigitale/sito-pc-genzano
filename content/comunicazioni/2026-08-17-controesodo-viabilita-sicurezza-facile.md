@@ -23,7 +23,7 @@ Dopo Ferragosto molte persone tornano a casa. Le strade sono più trafficate. Qu
 
 ## Prepara il viaggio prima di partire
 
-- Controlla le previsioni di traffico su [Viabilità Italia](https://www.poliziadistato.it/articolo/viabilita-italia).
+- Controlla le previsioni di traffico su [Viabilità Italia](https://www.interno.gov.it/it/ministero/osservatori-commissioni-e-centri-coordinamento/viabilita-italia).
 - Parti di mattina presto o di sera. Fa meno caldo.
 - Controlla le gomme e i liquidi della macchina.
 - Pianifica una pausa ogni 2 ore.
@@ -72,5 +72,5 @@ La stanchezza è pericolosa. Se senti che hai sonno:
 ## Numeri utili
 
 - In emergenza chiama il **112**, il numero unico di emergenza.
-- Informazioni sul traffico: [Viabilità Italia](https://www.poliziadistato.it/articolo/viabilita-italia)
+- Informazioni sul traffico: [Viabilità Italia](https://www.interno.gov.it/it/ministero/osservatori-commissioni-e-centri-coordinamento/viabilita-italia)
 - Informazioni sulle autostrade: [Autostrade](https://www.autostrade.it/)
