@@ -5,16 +5,94 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-18T19:16:46+00:00",
+  "generato": "2026-10-18T21:33:25+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-18T19:09:25+00:00",
+   "data": "2026-10-18T21:12:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Campo largo, il consiglio di Veltroni: \"Serve un programma di 10 punti\"",
+   "url": "https://www.adnkronos.com/politica/veltroni-fazio-che-tempo-che-fa_4U4iv5iEbA5uFLKIXth8zu"
+  },
+  {
+   "data": "2026-10-18T21:12:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Lazio da sogno e Juve da incubo, allo Stadium finisce 0-3",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/18/serie-a-lazio-da-sogno-e-juve-da-incubo-allo-stadium-finisce-0-3_02c6a963-1886-4a93-92ec-be0857426a7b.html"
+  },
+  {
+   "data": "2026-10-18T20:57:54+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Urta con il trattore un bracciante in bici che cade e muore, denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/urta-con-il-trattore-un-bracciante-in-bici-che-cade-e-muore-denunciato_41958378-2de3-4e75-b439-be3d0e0e1676.html"
+  },
+  {
+   "data": "2026-10-18T20:55:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mercalli a Che tempo che fa, la previsione: \"Perderemo i ghiacciai\"",
+   "url": "https://www.adnkronos.com/cronaca/mercalli-che-tempo-che-fa-fazio_6mJQQNWYdb2g9J2UdXBEpa"
+  },
+  {
+   "data": "2026-10-18T20:34:06+00:00",
    "fonte": "ANSA",
    "titolo": "A Milano ancora scontri, Meloni convoca il vertice sulla sicurezza",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/a-milano-ancora-scontri-meloni-convoca-il-vertice-sulla-sicurezza_7945d5b5-a8b2-4eed-96ae-375261367822.html"
+  },
+  {
+   "data": "2026-10-18T20:33:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il poliziotto ferito al lavoro: 'Dobbiamo garantire la sicurezza'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/il-poliziotto-ferito-al-lavoro-dobbiamo-garantire-la-sicurezza_870b61b1-18e9-4159-b7bf-fe9c6414bc06.html"
+  },
+  {
+   "data": "2026-10-18T20:22:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "E' morta Christiana Ruggeri, la giornalista del Tg2 aveva 57 anni",
+   "url": "https://www.adnkronos.com/cronaca/christiana-ruggeri-tg2-rai_5pL7FIJtwWrEJWFjMrq1Hi"
+  },
+  {
+   "data": "2026-10-18T20:09:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La preoccupazione del governo, 'nuove misure contro chi semina il caos'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/pochi-agenti-in-strada-scoppia-la-polemica-tra-piantedosi-e-sala.-danni-per_397d8359-98ac-4ba2-840f-a55dcb988745.html"
+  },
+  {
+   "data": "2026-10-18T19:54:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dalle battute su Ranucci e Mengoni fino ad Annalisa ospite, Fiorello riporta varietà subito dopo il Tg1",
+   "url": "https://www.adnkronos.com/spettacoli/fiorello-ritorno-rai1-come-sara_3dyRhC1Ks0SsXtim7yhO2A"
+  },
+  {
+   "data": "2026-10-18T19:54:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Fiorello torna su Rai1 con 'Tg1 edizione più che straordinaria':  \"Una luce anche sulle proteste al Sud\"",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/18/fiorello-torna-su-rai1-con-tg1-edizione-piu-che-straordinaria_9590baf9-3992-412d-8240-c474a17d986d.html"
+  },
+  {
+   "data": "2026-10-18T19:47:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sollecito, volontà precisa di ignorare l'ingiustizia nei miei confronti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/sollecito-volonta-precisa-di-ignorare-lingiustizia-nei-miei-confronti_7e440022-47c6-4ed4-bbef-372c86a4961b.html"
+  },
+  {
+   "data": "2026-10-18T19:36:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Macron: 'Rabbia e vergogna, chi ha distrutto deve pagare'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/macron-denuncia-il-caos-in-francia-rabbia-e-vergogna_2aeef560-dded-49f0-b82b-97ffd9004684.html"
+  },
+  {
+   "data": "2026-10-18T19:36:34+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Piantedosi vede vertici polizia e questore Milano, fermati oltre 200 violenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/piantedosi-vede-vertici-polizia-e-questore-milano-fermati-oltre-200-violenti_db824242-c4cf-454d-8a30-92d00b06fa93.html"
+  },
+  {
+   "data": "2026-10-18T19:16:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Guerriglia a Milano, chi sono i ragazzi della generazione Selfie: TikTok, rabbia e voglia di apparire",
+   "url": "https://www.adnkronos.com/cronaca/guerriglia-milano-identikit-giovani-protagonisti_5sGokignsuyJT3mlNoSSx7"
   },
   {
    "data": "2026-10-18T19:07:59+00:00",
@@ -27,24 +105,6 @@
    "fonte": "ANSA",
    "titolo": "Schlein si candida alla corsa per Palazzo Chigi, 'con o senza le primarie'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/18/schlein-sono-pronta-a-candidarmi-con-o-senza-le-primarie_68325ea6-8145-45ec-add6-1db6a16ef38a.html"
-  },
-  {
-   "data": "2026-10-18T19:03:26+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Meloni convoca una riunione sull'ordine pubblico, l'ipotesi di una stretta sui minori",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/pochi-agenti-in-strada-scoppia-la-polemica-tra-piantedosi-e-sala.-danni-per_397d8359-98ac-4ba2-840f-a55dcb988745.html"
-  },
-  {
-   "data": "2026-10-18T18:57:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A, in campo Juventus-Lazio LIVE",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/18/serie-a-juventus-lazio-in-campo-alle-20.45-diretta_02c6a963-1886-4a93-92ec-be0857426a7b.html"
-  },
-  {
-   "data": "2026-10-18T18:55:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Macron denuncia il caos in Francia: 'Rabbia e vergogna'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/macron-denuncia-il-caos-in-francia-rabbia-e-vergogna_2aeef560-dded-49f0-b82b-97ffd9004684.html"
   },
   {
    "data": "2026-10-18T18:54:23+00:00",
@@ -89,16 +149,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/allarme-in-lituania-per-possibile-drone-popolazione-invitata-ad-andare-nei-rifugi_5919d6be-2347-43cb-bc66-245437e9ed27.html"
   },
   {
-   "data": "2026-10-18T18:16:19+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Juventus-Lazio 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/juventus-lazio-diretta-serie-a_3CJ8v2p0n9U9BQ5mKc53op"
-  },
-  {
    "data": "2026-10-18T18:16:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Scontri in Francia, Macron: \"Proviamo rabbia, nulla giustifica la violenza. Chi ha distrutto dovrà pagare\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/macron-violenze-citta-francesi-disordini-messaggio-nazione_2HdtziDRrlMboI3Nsa8fRr"
+  },
+  {
+   "data": "2026-10-18T18:16:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, Juventus-Lazio 0-3, Gattuso sbanca lo Stadium e torna in vetta con l'Inter",
+   "url": "https://www.adnkronos.com/sport/juventus-lazio-diretta-serie-a_3CJ8v2p0n9U9BQ5mKc53op"
   },
   {
    "data": "2026-10-18T18:06:49+00:00",
@@ -129,66 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Aumento degli stipendi dei magistrati, è scontro tra Meloni e l'Anm",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/18/fonti-chigi-meloni-non-firma-il-dpcm-per-aumenti-da-1-miliardo-ai-magistrati_91f8da6f-3aa1-4323-bfcd-b3c42aac4a2c.html"
-  },
-  {
-   "data": "2026-10-18T17:28:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Donna muore nello scontro con l'auto dell'ex, l'uomo accusato di femminicidio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/muore-nello-scontro-con-lauto-dellex-accusa-femminicidio_df46c31f-7782-446c-9c71-149bc4d5863a.html"
-  },
-  {
-   "data": "2026-10-18T17:08:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incidente nella principale base militare del Canada, morti e feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/canada-media-almeno-7-morti-in-un-incendio-in-una-base-militare_0487aa86-c718-437f-9a73-9b7333991cf6.html"
-  },
-  {
-   "data": "2026-10-18T17:07:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Gran finale per l'Aeronautica Militare Balloon Cup, le squadre vincitrici",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/gran-finale-per-laeronautica-militare-balloon-cup-le-squadre-vincitrici_0f82e957-43c2-4297-b3b9-29b445d01d05.html"
-  },
-  {
-   "data": "2026-10-18T17:07:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Lo slogan 'Bismillah, c'est les ténèbres', il buio dalla Francia nelle piazze italiane",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/lo-slogan-bismillah-cest-les-tenebres-il-buio-dalla-francia-nelle-piazze_d6168e37-f1c0-4c95-a12f-a600e75c34be.html"
-  },
-  {
-   "data": "2026-10-18T17:02:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ultraleggero si schianta contro un capannone a Recanati, due feriti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/ultraleggero-si-schianta-contro-un-capannone-a-recanati-due-feriti-gravi_8f39291b-1cd6-4f9a-891a-8b00cb922771.html"
-  },
-  {
-   "data": "2026-10-18T17:00:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incendio su un minibus dopo il pellegrinaggio a Loreto, nessun ferito",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/incendio-su-un-minibus-dopo-il-pellegrinaggio-a-loreto-nessun-ferito_ecf9f701-5d16-42dc-aafc-260681c8ec72.html"
-  },
-  {
-   "data": "2026-10-18T16:52:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bollette, sconto dal 2027, un nuovo decreto per fissare il tetto al gas",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/18/bollette-sconto-dal-2027-un-nuovo-decreto-per-fissare-il-tetto-al-gas_38f35727-60e4-4d21-b060-0f823a8c6eb2.html"
-  },
-  {
-   "data": "2026-10-18T16:42:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Studi economici dell'Ocse: Italia 2026' al centro dell'incontro al CNEL",
-   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/18/studi-economici-dellocse-italia-2026-al-centro-dellincontro-al-cnel_435e0769-2ff8-49e8-8057-f654e3b2fc98.html"
-  },
-  {
-   "data": "2026-10-18T16:41:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fabbricavano bottiglie incendiarie a corteo Torino, arrestati 3 minorenni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/fabbricavano-bottiglie-incendiarie-a-corteo-torino-arrestati-3-minorenni_bb202117-0339-4075-ba53-f8af64b9bce7.html"
-  },
-  {
-   "data": "2026-10-18T16:35:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Milano saccheggiati negozi vicini a Cordusio, Galleria blindata",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/a-milano-saccheggiati-negozi-vicini-a-cordusio-galleria-blindata_85cf47de-b0d4-4f45-9ee5-c16528ec7ba6.html"
   }
  ]
 }
