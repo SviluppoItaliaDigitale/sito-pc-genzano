@@ -153,7 +153,8 @@ def main():
         (archivio / "SHA256SUMS").write_text("".join(f"{h}  {n}\n" for n, h in sorted(sums.items())))
 
         # Il tag del backup punta a una radice vuota: non trattiene lo storico.
-        tag = f"backup-storico-20261018-{os.environ['GITHUB_RUN_ID']}"
+        tag = (f"backup-storico-20261018-{os.environ['GITHUB_RUN_ID']}"
+               f"-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}")
         empty = git(source, "mktree", data=b"").decode().strip()
         orphan = git(source, "commit-tree", empty, data=b"Copia di sicurezza della cronologia prima della manutenzione\n").decode().strip()
         git(source, "push", "origin", f"{orphan}:refs/tags/{tag}")
