@@ -5,11 +5,29 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-18T21:33:25+00:00",
+  "generato": "2026-10-18T23:35:56+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-18T22:02:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Guerriglia a Milano, assalto ai negozi e saccheggi: fermati 200 giovani. Meloni convoca riunione su ordine pubblico",
+   "url": "https://www.adnkronos.com/cronaca/milano-scontri-giovani-polizia-cronaca-news-oggi_4Ojxn0SSjuIkgcNrbVXUFW"
+  },
+  {
+   "data": "2026-10-18T22:02:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump: \"Zelensky non vuole la fine della guerra\". Il presidente ucraino: \"Casa Bianca spinge Kiev alla resa\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-accusa-zelensky-guerra-ucraina_69dRuu2eDjBdHMdQWIs4ec"
+  },
+  {
+   "data": "2026-10-18T21:37:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spalletti duro: “Senza ritmo, idee e cuore. Molti atteggiamenti non mi sono piaciuti”",
+   "url": "https://www.adnkronos.com/sport/spalletti-ko-lazio-senza-cuore-e-idee_KEsqSa17iB2JYH3UMySQJ"
+  },
   {
    "data": "2026-10-18T21:12:41+00:00",
    "fonte": "ADNKRONOS",
@@ -17,10 +35,10 @@
    "url": "https://www.adnkronos.com/politica/veltroni-fazio-che-tempo-che-fa_4U4iv5iEbA5uFLKIXth8zu"
   },
   {
-   "data": "2026-10-18T21:12:11+00:00",
+   "data": "2026-10-18T21:10:33+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: Lazio da sogno e Juve da incubo, allo Stadium finisce 0-3",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/18/serie-a-lazio-da-sogno-e-juve-da-incubo-allo-stadium-finisce-0-3_02c6a963-1886-4a93-92ec-be0857426a7b.html"
+   "titolo": "Serie A: la Juve crolla, la Lazio vola ed è in testa con l'Inter",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/18/serie-a-la-juve-crolla-la-lazio-vola-ed-e-in-testa-con-linter_fbbef75c-2606-4c53-a729-a23a275d3dd6.html"
   },
   {
    "data": "2026-10-18T20:57:54+00:00",
@@ -151,14 +169,14 @@
   {
    "data": "2026-10-18T18:16:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Scontri in Francia, Macron: \"Proviamo rabbia, nulla giustifica la violenza. Chi ha distrutto dovrà pagare\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/macron-violenze-citta-francesi-disordini-messaggio-nazione_2HdtziDRrlMboI3Nsa8fRr"
+   "titolo": "Serie A, Juventus-Lazio 0-3, Gattuso sbanca lo Stadium e torna in vetta con l'Inter",
+   "url": "https://www.adnkronos.com/sport/juventus-lazio-diretta-serie-a_3CJ8v2p0n9U9BQ5mKc53op"
   },
   {
    "data": "2026-10-18T18:16:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Juventus-Lazio 0-3, Gattuso sbanca lo Stadium e torna in vetta con l'Inter",
-   "url": "https://www.adnkronos.com/sport/juventus-lazio-diretta-serie-a_3CJ8v2p0n9U9BQ5mKc53op"
+   "titolo": "Scontri in Francia, Macron: \"Proviamo rabbia, nulla giustifica la violenza. Chi ha distrutto dovrà pagare\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/macron-violenze-citta-francesi-disordini-messaggio-nazione_2HdtziDRrlMboI3Nsa8fRr"
   },
   {
    "data": "2026-10-18T18:06:49+00:00",
@@ -171,24 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "A. Fontana, a Milano delinquenti che devono essere trattati come tali",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/a.-fontana-a-milano-delinquenti-che-devono-essere-trattati-come-tali_a5465eea-4aaa-4872-8de2-39be3c7a58db.html"
-  },
-  {
-   "data": "2026-10-18T17:54:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Portati in questura a Milano in 160 dopo gli scontri di oggi, l'80% minori",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/portati-in-questura-a-milano-in-160-dopo-gli-scontri-di-oggi-l80-minori_9de5c8cf-262c-41df-a592-6fb68202baeb.html"
-  },
-  {
-   "data": "2026-10-18T17:40:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone all'Angelus dopo il ricovero: 'Riprenderò gradualmente'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/papa-leone-allangelus-dopo-il-ricovero-riprendero-gradualmente_74dcf119-92a0-46e7-986f-16343122a321.html"
-  },
-  {
-   "data": "2026-10-18T17:32:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Aumento degli stipendi dei magistrati, è scontro tra Meloni e l'Anm",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/18/fonti-chigi-meloni-non-firma-il-dpcm-per-aumenti-da-1-miliardo-ai-magistrati_91f8da6f-3aa1-4323-bfcd-b3c42aac4a2c.html"
   }
  ]
 }
