@@ -1,16 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-10-17T22:59:01+00:00",
+  "generato": "2026-10-18T00:42:57+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 16,
-  "scaduti_scartati": 0,
-  "in_corso": 2,
+  "avvisi": 15,
+  "scaduti_scartati": 1,
+  "in_corso": 11,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Liguria",
    "fenomeno": "Pioggia",
    "livello": "rossa",
@@ -23,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.038"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Pioggia",
    "livello": "rossa",
@@ -36,7 +36,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.034"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -49,7 +49,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.039"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -62,7 +62,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.035"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Valle d'Aosta",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -88,7 +88,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.042"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lombardia",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -101,7 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.037"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -167,19 +167,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-17T12:00:00+00:00",
-   "fine": "2026-10-17T23:59:00+00:00",
-   "emesso": "2026-10-17T08:40:43+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261017104043.043"
-  },
-  {
-   "in_corso": false,
    "regione": "Toscana",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -192,7 +179,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.041"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -205,7 +192,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261017104043.040"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Valle d'Aosta",
    "fenomeno": "Vento",
    "livello": "gialla",

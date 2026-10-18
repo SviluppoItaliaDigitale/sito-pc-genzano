@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-17T22:58:39+00:00",
+  "generato": "2026-10-18T00:42:21+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-18T00:37:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le Stelle, Ornella Muti e Pasquale La Rocca hanno vinto la puntata: la classifica",
+   "url": "https://www.adnkronos.com/spettacoli/classifica-ballando-con-le-stelle-chi-ha-vinto-ieri-sera_5n3ajkaXcCd2o9BkHWmZvq"
+  },
   {
    "data": "2026-10-17T22:32:43+00:00",
    "fonte": "ADNKRONOS",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "A Milano saccheggiati negozi in corso Vittorio Emanuele",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/a-milano-saccheggiati-negozi-in-corso-vittorio-emanuele_a2114bb3-521d-4d11-84bc-2adfba82c509.html"
-  },
-  {
-   "data": "2026-10-17T18:04:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scontri in Duomo, almeno 4 feriti tra agenti 20 tra i manifestanti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/scontri-in-duomo-almeno-4-feriti-tra-agenti-20-tra-i-manifestanti_c1b9b611-99b4-4962-aea5-5229dfcfb850.html"
   }
  ]
 }
