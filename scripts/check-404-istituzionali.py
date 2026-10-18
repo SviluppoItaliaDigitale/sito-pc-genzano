@@ -10,6 +10,13 @@ istituzionali: un link rotto verso un sito di terzi è comunque una promessa
 non mantenuta. Timeout, 5xx e anti-bot restano fuori: sono passeggeri e li
 riporta già l'issue di lychee.
 
+Dal 17/10/2026 fallisce anche per i file del sito mancanti (link interni verso
+un'immagine, un PDF o una pagina che la build non contiene), che lychee scrive
+come `[ERROR] <file://…/public/…> | File not found`. Prima finivano solo nella
+issue e il run restava verde. Per evitare falsi allarmi (lychee segnala anche
+riferimenti con frammento come `sprites.svg#icona`) il file viene cercato nella
+build, senza query e frammento: conta solo se davvero non c'è.
+
 Perché: il crawl settimanale di check-links-sito.yml gira con `fail: false`,
 perché molti errori esterni sono passeggeri (timeout, 5xx, anti-bot). Un 404
 di un ente pubblico invece è quasi sempre una pagina spostata: il cittadino
@@ -17,13 +24,14 @@ che segue il link dal nostro sito trova una pagina d'errore dove gli avevamo
 promesso la fonte ufficiale. Audit esterno del 25/09/2026, rilievo F13: 58 URL
 in 404, 26 verso il Dipartimento della Protezione Civile.
 
-Uso:  python3 scripts/check-404-istituzionali.py lychee-report.md
-Exit: 0 se nessun link in 404/410, 1 altrimenti (elenco su stdout), 2 se il
+Uso:  python3 scripts/check-404-istituzionali.py lychee-report.md [public]
+Exit: 0 se nessun link in 404/410 e nessun file mancante, 1 altrimenti (elenco su stdout), 2 se il
       rapporto manca (lychee non ha girato).
 """
+import os
 import re
 import sys
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 # Domini istituzionali. Due livelli, entrambi da tenere aggiornati quando il
 # sito comincia a citare un ente nuovo (revisione del 26/09/2026: la prima
@@ -67,9 +75,22 @@ def istituzionale(host: str) -> bool:
 
 
 RIGA = re.compile(r"\[(404|410)\][^\n]*?(https?://[^\s<>|)\]]+)")
+FILE = re.compile(r"\[ERROR\] <file://[^>]*?/public(/[^>]*)>[^\n]*File not found")
 
 
-def main(percorso: str) -> int:
+def file_mancanti(testo: str, public: str) -> list:
+    """Percorsi del sito che lychee dà per mancanti e che mancano davvero nella build."""
+    mancanti = set()
+    for percorso in FILE.findall(testo):
+        pulito = unquote(re.split(r"[?#]", percorso, maxsplit=1)[0])
+        locale = os.path.join(public, pulito.lstrip("/"))
+        if os.path.isfile(locale) or os.path.isfile(os.path.join(locale, "index.html")):
+            continue
+        mancanti.add(pulito)
+    return sorted(mancanti)
+
+
+def main(percorso: str, public: str = "public") -> int:
     try:
         testo = open(percorso, encoding="utf-8").read()
     except FileNotFoundError:
@@ -78,9 +99,20 @@ def main(percorso: str) -> int:
         print(f"Rapporto {percorso} assente: il controllo dei link non è stato eseguito.")
         return 2
     trovati = sorted(set(RIGA.findall(testo)))
-    if not trovati:
-        print("Nessun link in 404/410.")
+    mancanti = file_mancanti(testo, public) if os.path.isdir(public) else []
+    if not os.path.isdir(public):
+        print(f"Cartella {public} assente: i file del sito mancanti non si possono verificare.")
+    if not trovati and not mancanti:
+        print("Nessun link in 404/410 e nessun file del sito mancante.")
         return 0
+    if mancanti:
+        print(f"{len(mancanti)} file del sito mancanti nella build:")
+        for m in mancanti:
+            print(f"  {m}")
+        print()
+    if not trovati:
+        print("Correggi il link nel sorgente o aggiungi il file che manca.")
+        return 1
     pubblici = [(c, u) for c, u in trovati if istituzionale((urlparse(u).hostname or "").lower())]
     altri = [t for t in trovati if t not in pubblici]
     print(f"{len(trovati)} link in 404/410 ({len(pubblici)} verso enti pubblici):")
@@ -96,4 +128,5 @@ def main(percorso: str) -> int:
     return 1
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "lychee-report.md"))
+    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "lychee-report.md",
+                  sys.argv[2] if len(sys.argv) > 2 else "public"))

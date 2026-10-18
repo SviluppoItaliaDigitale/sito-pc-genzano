@@ -22,6 +22,20 @@
 
 Perché: `main` è il sito pubblico, che si aggiorna in pochi minuti. Le modifiche arrivate su `main` senza PR l'08/10/2026 hanno saltato i controlli (otto illustrazioni con testi sopra i disegni) e annullato pubblicazioni di altre sessioni. Le automazioni del repository (`github-actions[bot]`: allerta, meteo, dati) restano fuori da questa regola.
 
+## Qualità e guasti: regole per ogni intelligenza artificiale (dal 17/10/2026)
+
+Valgono per te come per Claude, in tutti i repository di Alessandro. Testo completo in `.claude/rules/qualita.md` e `.claude/rules/guasti.md`.
+
+- **Lavori perfetti, a prova di confutazione.** Ogni fatto, numero, data, norma, nome o indicazione di sicurezza ha una fonte primaria che hai verificato nel lavoro in corso, non la memoria. Ciò che non si può dimostrare non si scrive, oppure si scrive come stima e lo si dichiara.
+- **Lo stesso dato è uguale ovunque.** Prima di scrivere un dato, cerca come lo scrivono già le altre pagine e gli altri file del repository, codice compreso. Se non coincide, stabilisci sulla fonte qual è quello giusto e allinea tutte le copie nello stesso lavoro, mai una sola.
+- **Prima di consegnare, prova a confutare il tuo lavoro** come farebbe un revisore esterno: ogni affermazione, ogni numero, ogni link, ogni comando. Il lavoro è finito solo quando quella lettura non trova più niente.
+- **Tutti i controlli si eseguono, nessuno si salta.** Uno strumento che manca si installa: `apt-get update` e poi `apt-get install`, poi `pip` o `npm`, poi il download dalla fonte ufficiale. «Qui non si installa» non è un motivo per consegnare. Se tutte le strade falliscono, scrivi che cosa hai provato e con quale errore: il controllo lo fa la CI della pull request, prima di unire.
+- **Ogni errore trovato diventa un controllo.** Si corregge in tutte le copie e si aggiunge ciò che lo avrebbe fermato: una voce di registro, un test, un controllo bloccante sulle pull request.
+- **Onestà sui limiti.** Non dichiarare conformità, certificazioni o assenza di errori che non hai misurato; scrivi che cosa non hai potuto verificare e perché.
+- **Nessun guasto ignorato.** Un controllo che non riesce a leggere la sua fonte (404, 410, 403 o 5xx che persistono, timeout ripetuti, schema cambiato) non chiude in verde: apre o aggiorna una sola issue con le label `automazione` e `fonte-rotta`, che si chiude da sola quando la fonte torna, e il run diventa rosso. Fanno eccezione i controlli che girano tanto spesso da riempire di avvisi (per esempio ogni pochi minuti, come quello dell'allerta meteo del sito della Protezione Civile): lì il run resta verde e basta la issue, aperta solo quando il guasto persiste. Un errore di lettura non cambia mai i dati in vigore. Nel controllo dei link il run diventa rosso per 404, 410 e file mancanti; un 403 o un 429 (blocco anti-bot) si accetta; un 5xx o un timeout resta scritto nel rapporto del controllo, si ricontrolla con una richiesta reale e, se torna per più settimane, si tratta come un link rotto. Un link rotto si ripara con la pagina attuale, verificata con una richiesta reale sulla fonte, mai con un indirizzo indovinato.
+- **Nei dubbi chiedi** ad Alessandro, con la tua raccomandazione accanto, e intanto fai il resto del lavoro.
+- **In questo repository** il confronto dei dati è automatico: `python3 scripts/cerca-incongruenze.py --da-git origin/main` controlla i dati che aggiungi contro quelli già pubblicati, e `python3 scripts/check-dati-canonici.py` contro il registro `data/dati_canonici.yaml`. Sono bloccanti sulle pull request: se uno dei due segnala qualcosa, correggi alla fonte e allinea, non aggirare il controllo. `scripts/check-refusi.py` si procura da solo il dizionario italiano se manca.
+
 ## 🔴 Sezione 0 — Come usarmi (leggi questa per prima)
 
 **AGENTS.md è già completo come punto d'ingresso.** Contiene quickref, 3 regole operative non negoziabili, 16 invarianti, palette badge, comandi, agenti specializzati, divieti. **Non serve caricare altri file upfront.**
@@ -681,10 +695,11 @@ R. Segnalalo all'utente. Non risolverlo autonomamente: la decisione su quale dei
 ## Code Review Rules
 
 - **Firma dei commit: non giudicarla dai commit del tuo ambiente.** I commit che vedi mentre rivedi una pull request li crea l'ambiente di revisione, con un'identità di servizio, e possono riportare la descrizione della pull request: non sono i commit della pull request. Non segnalare autore, committer o righe di firma dei commit: li controlla e li corregge chi unisce (`scripts/passa-a.py chiudi` riscrive a nome di Alessandro Cuollo i commit con un altro autore e toglie i trailer, regola `.claude/rules/firma-dei-lavori.md`). Segnala invece nomi di strumenti o righe di firma nei file modificati che vengono pubblicati; i file di governo interni (`CLAUDE.md`, `AGENTS.md`, `COORDINAMENTO.md`, `.claude/`, `memoria/`) ne parlano per forza.
+- **Dati incoerenti e affermazioni senza fonte.** Segnala ogni dato (orari, quantità, numeri, date, norme, recapiti) che la pull request scrive in modo diverso da come lo scrive già il resto del repository, e ogni fatto o indicazione di sicurezza nuova senza una fonte verificabile (regola `.claude/rules/qualita.md`).
 
 ---
 
-**Versione:** 1.6 — creato il 2026-05-06; 2026-10-11 aggiunta la continuità con Claude tramite `COORDINAMENTO.md` (protocollo comune a tutti i repository); 2026-10-13 passaggio delle richieste preparate da Claude; 2026-10-14 avvio in Codex Cloud con il testo di avvio e consegna con «Create PR» (il commento di avvio sulla PR resta solo per riprovare il canale); 2026-10-14 sezione «Code Review Rules» per la revisione automatica delle pull request.
+**Versione:** 1.6 — creato il 2026-05-06; 2026-10-11 aggiunta la continuità con Claude tramite `COORDINAMENTO.md` (protocollo comune a tutti i repository); 2026-10-13 passaggio delle richieste preparate da Claude; 2026-10-14 avvio in Codex Cloud con il testo di avvio e consegna con «Create PR» (il commento di avvio sulla PR resta solo per riprovare il canale); 2026-10-14 sezione «Code Review Rules» per la revisione automatica delle pull request; 2026-10-17 regole di qualità e guasti per ogni intelligenza artificiale.
 **Ultima revisione:** 2026-05-09 — invariante 9 «BANNER COL TITOLO INTOCCABILE» riscritta con anti-pattern espliciti per task di revisione AGID (incidente Giornata Europa); aggiunta Sezione 0 «Come usarmi» (anti-overload del GitHub connector); sezione 3.2 riscritta (parole-trigger ampliate, sotto-sezione «Domande di stato sulla pubblicazione», nuove FAQ).
 **Autorità:** allineato a `CLAUDE.md` v3.0 e a `.claude/rules/0*.md` (snapshot maggio 2026).
 **Manutenzione:** quando modifichi `CLAUDE.md` aggiorna anche questo file, e viceversa.

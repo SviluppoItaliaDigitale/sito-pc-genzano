@@ -1,0 +1,57 @@
+# ============================================================
+# Workflow: incongruenze fra i testi del sito
+# Ogni lunedì scripts/cerca-incongruenze.py raccoglie i valori scritti
+# nel sito per le famiglie di dati che si ripetono (ore del caldo,
+# scorta d'acqua e di farmaci, autonomia del kit, RCP, ustioni…) e
+# segnala quelle con valori diversi. Una sola issue in-place, chiusa
+# da sola quando il sito torna coerente. La correzione la fa l'agente
+# pc-coerenza-trasversale, che poi aggiunge il dato al registro
+# data/dati_canonici.yaml (bloccante sulle PR).
+# Nasce il 17/10/2026: l'orario del caldo compariva con sette valori
+# diversi e la scorta di farmaci con 3 e 7 giorni, e lo ha trovato
+# solo un audit esterno.
+# ============================================================
+name: "🔗 Incongruenze fra i testi"
+
+on:
+  schedule:
+    - cron: '43 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  incongruenze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+
+      - name: "🔎 Cerca valori diversi per lo stesso dato"
+        id: cerca
+        run: |
+          set +e
+          python3 scripts/cerca-incongruenze.py --markdown /tmp/incongruenze.md
+          echo "famiglie=$?" >> "$GITHUB_OUTPUT"
+
+      - name: "📝 Apri, aggiorna o chiudi la issue"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAMIGLIE: ${{ steps.cerca.outputs.famiglie }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITOLO="Incongruenze fra i testi del sito"
+          NUM=$(gh issue list --state open --search "in:title \"$TITOLO\"" --json number --jq '.[0].number' || true)
+          if [ "$FAMIGLIE" != "0" ]; then
+            { cat /tmp/incongruenze.md; echo; echo "Run: $RUN_URL"; echo; echo "Correzione: agente pc-coerenza-trasversale, poi voce in data/dati_canonici.yaml. Un valore legittimamente diverso si aggiunge a \"ammessi\" della famiglia in scripts/cerca-incongruenze.py, con il motivo."; } > /tmp/corpo.md
+            if [ -n "$NUM" ]; then
+              gh issue edit "$NUM" --body-file /tmp/corpo.md
+            else
+              gh issue create --title "$TITOLO" --label automazione --body-file /tmp/corpo.md
+            fi
+          elif [ -n "$NUM" ]; then
+            gh issue close "$NUM" --comment "Nessuna incongruenza nelle famiglie controllate ($RUN_URL)."
+          fi

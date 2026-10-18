@@ -53,7 +53,7 @@ Non tutte le persone sono a rischio uguale. Queste persone devono fare più atte
 
 ## Cosa fare fuori casa
 
-- Non uscire tra le 11 e le 17 nei giorni più caldi.
+- Non uscire tra le 11 e le 18 nei giorni più caldi.
 - Porta sempre una bottiglia d'acqua.
 - Metti il cappello, gli occhiali da sole e la crema solare.
 - Cerca posti con ombra o aria condizionata. Per esempio: biblioteche, chiese, centri commerciali.

@@ -156,7 +156,7 @@ Per chi **lavora** in questi ambienti è obbligatoria la **valutazione del risch
 ## Attività sportiva estiva
 
 Per lo sport in estate:
-- **Evitare** ore centrali (11-17).
+- **Evitare** ore centrali (11-18).
 - **Idratazione** prima, durante, dopo.
 - **Abbigliamento** tecnico traspirante.
 - **Pausa** frequente.

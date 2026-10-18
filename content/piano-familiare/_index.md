@@ -481,7 +481,7 @@ function zaModello(){
     {id:'fischietto',t:'Fischietto per segnalare la propria presenza'},
     {id:'chiavi',t:'Chiavi di casa e dell’auto di riserva'}
   ];
-  if(farmaci) voci.push({id:'salvavita',t:'Farmaci salvavita personali: almeno 3 giorni di scorta, secondo indicazione medica'});
+  if(farmaci) voci.push({id:'salvavita',t:'Farmaci salvavita personali: almeno 7 giorni di scorta, secondo indicazione medica'});
   if(neonati>0) voci.push({id:'neonati',t:'Per neonati e bambini piccoli: latte, pannolini, omogeneizzati, acqua dedicata in più'});
   if(animali>0) voci.push({id:'animali',t:'Per gli animali: cibo, acqua dedicata, guinzaglio, trasportino, libretto sanitario'});
   return {persone:persone,neonati:neonati,animali:animali,farmaci:farmaci,voci:voci};
