@@ -1,0 +1,36 @@
+name: "📦 Backup e pulizia verificata dello storico"
+
+on:
+  push:
+    branches: ["chatgpt/pulizia-storico-20261018"]
+    paths:
+      - "scripts/pulisci-cronologia-tecnica.py"
+      - ".github/workflows/manutenzione-storico-20261018.yml"
+
+permissions:
+  contents: write
+  actions: write
+  pull-requests: read
+
+concurrency:
+  group: manutenzione-storico-20261018
+  cancel-in-progress: false
+
+jobs:
+  conserva-e-verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: "Acquisisci il programma di manutenzione"
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout: |
+            scripts/pulisci-cronologia-tecnica.py
+          sparse-checkout-cone-mode: false
+
+      - name: "Backup completo, simulazione e applicazione con contenuti identici"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/pulisci-cronologia-tecnica.py --applica
