@@ -241,15 +241,15 @@ jobs:
           # ------------------------------------------------------------
           # 4) CRESCITA DEL REPO (podcast, presentazioni, snapshot dati in git;
           #    l'indice Pagefind non è più versionato dal 15/07/2026).
-          #    Sopra 3 GB va pianificata la migrazione audio→Drive già
-          #    prevista, PRIMA che un limite GitHub blocchi un push
-          #    durante una pubblicazione urgente.
+          #    Allegati sempre disponibili: ordine del 18/10/2026.
+          #    Il contatore API può includere riferimenti storici conservati
+          #    da GitHub; non autorizza cancellazioni dal sito o dalle release.
           # ------------------------------------------------------------
           SIZE_KB=$(gh api "repos/$REPO" --jq .size 2>/dev/null || echo 0)
           SIZE_GB=$(( SIZE_KB / 1024 / 1024 ))
           echo "Dimensione repo (API GitHub): ${SIZE_GB} GB (${SIZE_KB} KB)"
           if [ "$SIZE_GB" -ge 3 ]; then
-            PROBLEMI="${PROBLEMI}### Repository oltre i 3 GB\n\nIl repo pesa **${SIZE_GB} GB**. Dal 10/10/2026 le immagini meteo non si committano più (release immagini-meteo) e la pulizia mensile toglie le immagini social vecchie. Passo successivo da decidere: presentazioni, podcast, video e carte CARG sul server Aruba fuori da git (come /documenti/), con copia nelle release. La storia dei commit si accorcia solo riscrivendola, con un intervento pianificato.\n\n"
+            PROBLEMI="${PROBLEMI}### Repository oltre i 3 GB\n\nL'API GitHub segnala **${SIZE_GB} GB** (${SIZE_KB} KB). La cronologia degli output tecnici è stata ripulita il 18/10/2026 con backup completo verificato nella release backup-storico-20261018-39152697296-1. Il contatore può includere ancora vecchi riferimenti conservati da GitHub: confrontarlo con una nuova copia dei rami e tag correnti. Immagini e allegati devono restare disponibili sul sito; la pulizia mensile delle immagini social esegue soltanto una simulazione. Ogni futura migrazione fuori Git richiede copia permanente verificata e ripristino automatico nel medesimo percorso prima della build.\n\n"
           fi
 
           # ------------------------------------------------------------

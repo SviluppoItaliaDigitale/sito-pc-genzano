@@ -6,6 +6,16 @@
 
 ---
 
+## Conservare immagini e allegati (18/10/2026)
+
+**Ordine esplicito di Alessandro:** immagini, documenti, audio, video e altri allegati devono restare sempre disponibili sul sito. Si eliminano dal sito soltanto su suo ordine esplicito. Una richiesta di liberare spazio in Git non autorizza la loro rimozione, neppure delle immagini social più vecchie.
+
+Per spostare un allegato fuori dall'indice Git occorrono prima una copia permanente verificata e il ripristino automatico nello stesso percorso pubblico prima di ogni build. Conservare le copie nella release `allegati-permanenti`; non sovrascriverle né eliminarle automaticamente. Il recupero in `scripts/immagini-meteo-release.py` deve bloccare la pubblicazione se manca un allegato o non coincide la sua impronta. La pulizia periodica delle immagini social rimane in modalità `--dry-run`.
+
+**Cronologia ripulita il 18/10/2026:** rimossi soltanto vecchi output Pagefind, ECMWF, sinottica e Open Kit; file attuali del sito e contenuti delle PR #1439 e #1440 verificati identici. Il [backup completo verificato](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/releases/tag/backup-storico-20261018-39152697296-1) conserva i riferimenti originali, le istruzioni di recupero e la mappa dei commit.
+
+**Copie di lavoro precedenti alla pulizia:** conservare prima ogni modifica locale, poi usare una nuova copia della cronologia corrente o riallineare i rami con la mappa dei commit. Non unire né ripubblicare rami basati sulla vecchia cronologia: reintrodurrebbero gli oggetti rimossi. Nessun aggiornamento forzato da una vecchia copia.
+
 ## 🔁 Continuità con Claude: la bacheca `COORDINAMENTO.md` (dall'11/10/2026)
 
 `COORDINAMENTO.md`, nella cartella principale, è la bacheca comune fra Claude e ChatGPT: lo stesso file, con la stessa prima parte, esiste in tutti i repository di Alessandro. Quando Alessandro scrive **«guarda la bacheca»** o **«continua il lavoro»**, segui il protocollo comune scritto lì: prendi le richieste aperte, lavora su un ramo tuo, fai i controlli, aggiorna la bacheca nella stessa PR e, **se i controlli sono verdi, unisci tu la PR e verifica il deploy**. Lavori in autonomia fino alla pubblicazione (fuori dai passaggi preparati da Claude, paragrafo sotto), seguendo le istruzioni di Alessandro o quelle che Claude ha lasciato in bacheca. Le eccezioni in cui non unisci sono elencate nella bacheca (§ «Quando ChatGPT non unisce» e § «Questo repository»). Se Claude non è disponibile, la revisione che fa di solito la fai tu, usando come lista di controllo i file di `.claude/agents/` pertinenti.
