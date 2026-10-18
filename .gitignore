@@ -72,3 +72,7 @@ static/images/sentinel/*.webp
 static/images/sentinel/*.png
 static/images/meteo-sinottica-italia.webp
 static/images/meteo-sinottica-italia.png
+
+# Allegato permanente conservato nella release allegati-permanenti.
+# Il deploy lo ripristina allo stesso URL e verifica tutti i byte prima di Hugo.
+/static/video/campagna-lazio-intervista-volontario-aib-pomezia.mp4
