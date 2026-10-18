@@ -234,6 +234,13 @@ Il Gruppo ha sviluppato **kit didattici completi** per ogni grado di istruzione,
 - [Kit Scuola Secondaria di I grado](/formazione/kit-scuola-secondaria-primo-grado/) (11-14 anni)
 - [Kit Scuola Secondaria di II grado](/formazione/kit-scuola-secondaria-secondo-grado/) (14-19 anni)
 
+**Slide per chi conduce le lezioni del [Percorso 1 — Protezione Civile di base](/formazione/percorsi-didattici/#percorso-1)** (primaria, classi III-V): una presentazione PowerPoint per ogni lezione, con le note per chi parla, i tempi e l'attività da proporre.
+
+- Lezione 1 — Che cos'è la Protezione Civile: [PowerPoint (0,8 MB)](/formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pptx) · [PDF (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pdf)
+- Lezione 2 — Il 112: [PowerPoint (0,8 MB)](/formazione/slide-lezioni/percorso-1-lezione-2-il-112.pptx) · [PDF (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-2-il-112.pdf)
+- Lezione 3 — I rischi del nostro territorio: [PowerPoint (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pptx) · [PDF (1,3 MB)](/formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pdf)
+- Lezione 4 — I volontari: [PowerPoint (0,7 MB)](/formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pptx) · [PDF (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pdf)
+
 Se sei un insegnante e desideri materiale aggiuntivo per attività in classe, contattaci a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it). Siamo disponibili anche per incontri formativi nelle scuole del territorio.
 
 ## Accessibilità dei documenti — guida rapida

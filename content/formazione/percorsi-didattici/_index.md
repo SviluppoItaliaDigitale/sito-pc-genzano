@@ -315,6 +315,13 @@ Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, 
 | 3 | I rischi del nostro territorio (Castelli Romani: idrogeologico, sismico, AIB) | Scheda [Geografia sismica Italia — Primaria](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) + cartografia comunale |
 | 4 | Volontariato: chi sono, cosa fanno, perché. Visita al Gruppo o intervista a un volontario | Scheda [Intervista al volontario — Primaria](/formazione/schede-stampabili/intervista-volontario-primaria/) + scheda [Costituzione e PC — Primaria](/formazione/schede-stampabili/costituzione-pc-primaria/) |
 
+**Slide per chi conduce le lezioni**: una presentazione PowerPoint per ogni lezione, con le note per chi parla, i tempi di ciascuna parte e l'attività da proporre alla classe.
+
+- Lezione 1 — Che cos'è la Protezione Civile: [PowerPoint (0,8 MB)](/formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pptx) · [PDF (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pdf)
+- Lezione 2 — Il 112: [PowerPoint (0,8 MB)](/formazione/slide-lezioni/percorso-1-lezione-2-il-112.pptx) · [PDF (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-2-il-112.pdf)
+- Lezione 3 — I rischi del nostro territorio: [PowerPoint (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pptx) · [PDF (1,3 MB)](/formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pdf)
+- Lezione 4 — I volontari: [PowerPoint (0,7 MB)](/formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pptx) · [PDF (1,1 MB)](/formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pdf)
+
 <details class="faq-item percorso-dettagli">
 <summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
 <div class="percorso-dettagli-body">
