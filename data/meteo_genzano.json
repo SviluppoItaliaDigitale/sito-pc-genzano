@@ -1,28 +1,28 @@
 {
-  "aggiornato": "2026-10-18T12:03",
+  "aggiornato": "2026-10-18T12:57",
   "data_lunga": "domenica 18 ottobre 2026",
-  "aggiornato_label": "domenica 18 ottobre 2026, ore 12:03",
+  "aggiornato_label": "domenica 18 ottobre 2026, ore 12:57",
   "alba": "07:24",
   "tramonto": "18:23",
   "corrente": {
-    "temp": 18.4,
-    "percepita": 18.4,
+    "temp": 19.8,
+    "percepita": 19.8,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 77,
-    "vento": 10,
-    "raffiche": 32
+    "umidita": 70,
+    "vento": 9,
+    "raffiche": 31
   },
   "giorni": [
     {
       "label": "Oggi",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 19,
+      "tmax": 20,
       "tmin": 14,
-      "pioggia": 0,
+      "pioggia": 18,
       "pioggia_mm": 0,
-      "raffiche": 33,
+      "raffiche": 32,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -30,11 +30,11 @@
       "label": "Lun 19",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 20,
-      "tmin": 13,
+      "tmax": 21,
+      "tmin": 14,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 24,
+      "raffiche": 26,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -42,11 +42,11 @@
       "label": "Mar 20",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 20,
+      "tmax": 21,
       "tmin": 14,
-      "pioggia": 35,
+      "pioggia": 82,
       "pioggia_mm": 0,
-      "raffiche": 63,
+      "raffiche": 71,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -54,11 +54,11 @@
       "label": "Mer 21",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
       "cielo": "Temporale",
-      "tmax": 18,
-      "tmin": 14,
+      "tmax": 19,
+      "tmin": 16,
       "pioggia": 100,
-      "pioggia_mm": 18.6,
-      "raffiche": 70,
+      "pioggia_mm": 14.5,
+      "raffiche": 87,
       "uv": 4,
       "uv_label": "moderato"
     }
@@ -73,8 +73,8 @@
     },
     {
       "nome": "Rieti",
-      "tmax": 23,
-      "tmin": 8,
+      "tmax": 22,
+      "tmin": 10,
       "cielo": "Nebbia"
     },
     {
