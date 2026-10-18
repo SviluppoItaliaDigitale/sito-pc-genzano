@@ -1,7 +1,7 @@
-ultimo_audit: '2026-10-17'
-totale: 66
+ultimo_audit: '2026-10-18'
+totale: 70
 riepilogo:
-  ACCESSIBILE: 0
+  ACCESSIBILE: 4
   PARZIALE: 17
   NON_ACCESSIBILE: 18
   TERZO: 31
@@ -273,6 +273,62 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
+- path: /formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pdf
+  file: percorso-1-lezione-1-che-cose-la-protezione-civile.pdf
+  size_kb: 1106.2
+  sha256: ec55d679a04a61ab90ef68d46847b29e55a92187e7bdff9c30eba1301865c1a6
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 1: Che cos’è la Protezione Civile'
+  pages: 13
+  errors: []
+  text_chars_sample: 503
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /formazione/slide-lezioni/percorso-1-lezione-2-il-112.pdf
+  file: percorso-1-lezione-2-il-112.pdf
+  size_kb: 1161.0
+  sha256: 0c4a4972de95d2af058fe4b1a115f9d7271ca3ee546a79825e66229fd52763f7
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 2: Il 112, il numero delle emergenze'
+  pages: 14
+  errors: []
+  text_chars_sample: 488
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pdf
+  file: percorso-1-lezione-3-rischi-del-territorio.pdf
+  size_kb: 1341.7
+  sha256: cc226981e1c6da2d154d88c1843c7090e148e4600daf59319f6bd8ca6202873b
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 3: I rischi del nostro territorio'
+  pages: 14
+  errors: []
+  text_chars_sample: 540
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pdf
+  file: percorso-1-lezione-4-i-volontari.pdf
+  size_kb: 1156.2
+  sha256: 7baff98cb5a1de50c76cae8a4ff3d9e810fa620d90c3095fff3576b2e1a6fb69
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 4: I volontari della Protezione Civile'
+  pages: 14
+  errors: []
+  text_chars_sample: 541
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
 - path: /manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   file: Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   size_kb: 4173.9
