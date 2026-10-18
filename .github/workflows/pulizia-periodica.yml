@@ -1,17 +1,21 @@
-# Pulizia periodica del repository (10/10/2026).
-# Toglie le immagini social degli articoli usciti da oltre 60 giorni: servivano
-# al repository social-pc-genzano solo nei tre giorni della pubblicazione.
-# Testi e README restano; il marcatore .immagini-rimosse evita che una modifica
-# all'articolo le rigeneri. Dettagli in scripts/pulisci-social-bozze.py.
-name: "🧹 Pulizia periodica del repository"
+# Conservazione permanente dei contenuti (istruzione del 18/10/2026).
+# Gli allegati si archiviano e si verificano; le immagini social si elencano
+# soltanto. Nessuna cancellazione automatica e nessuna modifica al sito.
+name: "📦 Archiviazione conservativa del repository"
 
 on:
+  push:
+    branches: ["chatgpt/alleggerimento-*"]
+    paths:
+      - "scripts/immagini-meteo-release.py"
+      - "scripts/test-allegati-permanenti.py"
+      - ".github/workflows/pulizia-periodica.yml"
   schedule:
     - cron: "43 4 1 * *"
   workflow_dispatch:
     inputs:
       giorni:
-        description: "Togli le immagini degli articoli usciti da più di N giorni"
+        description: "Elenca soltanto le immagini degli articoli usciti da più di N giorni"
         default: "60"
 
 permissions:
@@ -22,7 +26,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  pulisci:
+  conserva:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -34,22 +38,15 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: "🧹 Immagini social oltre la soglia"
-        run: python3 scripts/pulisci-social-bozze.py --giorni "${{ github.event.inputs.giorni || '60' }}"
+      - name: "🧪 Verifica le protezioni degli allegati"
+        run: python3 scripts/test-allegati-permanenti.py
 
-      - name: "💾 Commit se qualcosa è stato tolto"
-        run: |
-          set -euo pipefail
-          git add -A social-bozze
-          if git diff --cached --quiet; then
-            echo "Niente da togliere."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "Pulizia periodica: immagini social degli articoli usciti da oltre ${{ github.event.inputs.giorni || '60' }} giorni [skip-social]"
-          for t in 1 2 3; do
-            if git push 2>&1; then break; fi
-            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
-            if [ "$t" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
-          done
+      - name: "💾 Conserva e verifica gli allegati permanenti"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/immagini-meteo-release.py carica-permanenti
+
+      - name: "🔎 Immagini social: sola verifica, nessuna cancellazione"
+        env:
+          GIORNI: ${{ github.event.inputs.giorni || '60' }}
+        run: python3 scripts/pulisci-social-bozze.py --giorni "$GIORNI" --dry-run
