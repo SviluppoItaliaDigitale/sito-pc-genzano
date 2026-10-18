@@ -5,11 +5,41 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-18T00:42:21+00:00",
+  "generato": "2026-10-18T05:11:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-18T04:59:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Milan-Atalanta: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/milan-atalanta-oggi-serie-a-orario-formazioni-dove-vederla_61XX05ypcc8ze87dHZQGHH"
+  },
+  {
+   "data": "2026-10-18T04:58:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Juve-Lazio: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/juve-lazio-oggi-serie-a-orario-formazioni-dove-vederla_2QQ5SMn9Q1jK8hZTfQL2Yl"
+  },
+  {
+   "data": "2026-10-18T04:57:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, domenica 18 ottobre: gli ospiti e le interviste di oggi",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-ospiti-interviste_3ESnSXy9Uqoayur3PnKLgA"
+  },
+  {
+   "data": "2026-10-18T04:56:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Domenica In, oggi domenica 18 ottobre: Barbara d'Urso ospite di Mara Venier",
+   "url": "https://www.adnkronos.com/spettacoli/domenica-in-barbara-durso-ospite-oggi_7zSJqjwwY0szt4CfyKVB1S"
+  },
+  {
+   "data": "2026-10-18T04:54:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump, la proposta: Europa ricominci a comprare gas dalla Russia",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-proposta-gas-russia-europa-ucraina_6slVKJffpNZY1scjGFegIo"
+  },
   {
    "data": "2026-10-18T00:37:09+00:00",
    "fonte": "ADNKRONOS",
@@ -137,12 +167,6 @@
    "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/17/la-terza-edizione-dellaeronautica-militare-balloon-cup-il-fascino-e-la-storia-del-volo_e624a2fd-205b-489f-9497-621eb880061b.html"
   },
   {
-   "data": "2026-10-17T19:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione di oggi 17 ottobre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-combinazione-vincente_22XsYSDybGniusOPB4Pcsd"
-  },
-  {
    "data": "2026-10-17T19:06:53+00:00",
    "fonte": "ANSA",
    "titolo": "Lotta di potere alla Casa Bianca, trema anche Susie Wiles",
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Papa Leone lascia il Gemelli e rassicura: 'Sto molto meglio'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/papa-leone-lascia-il-gemelli-e-rassicura-sto-molto-meglio_15686946-c59e-4b78-b5d4-b9a1e78e9ee7.html"
-  },
-  {
-   "data": "2026-10-17T18:35:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Le possibili cure per il Papa, fattore vita sana aiuta la ripresa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/le-possibili-cure-per-il-papa-fattore-vita-sana-aiuta-la-ripresa_a1448355-e0cd-4925-93b4-e100bc98bbd7.html"
-  },
-  {
-   "data": "2026-10-17T18:35:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Muore nello scontro con l'auto dell'ex, il figlio della donna: 'Aspettata e inseguita'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/donna-al-volante-muore-in-un-frontale-laltro-automobilista-e-lex-compagno_ea4ad409-8209-4bca-aa74-ea178030ea2b.html"
-  },
-  {
-   "data": "2026-10-17T18:23:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il sogno avverato di Varvara, l'abbraccio al Papa dopo le cure",
-   "url": "https://www.ansa.it/vaticano/notizie/speciali/2026/10/17/la-13enne-ucraina-che-ha-salutato-il-papa-un-sogno-realizzato_b016d11e-400c-4a11-a665-557fff697057.html"
-  },
-  {
-   "data": "2026-10-17T18:22:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Milano saccheggiati negozi in corso Vittorio Emanuele",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/17/a-milano-saccheggiati-negozi-in-corso-vittorio-emanuele_a2114bb3-521d-4d11-84bc-2adfba82c509.html"
   }
  ]
 }
