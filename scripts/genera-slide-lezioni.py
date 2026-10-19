@@ -138,7 +138,9 @@ class Risorse:
     def _carattere(self) -> Path:
         if not CARATTERE_WOFF2.exists():
             raise SystemExit(f"Manca il carattere degli Appunti illustrati: {CARATTERE_WOFF2.relative_to(ROOT)}")
-        font = TTFont(CARATTERE_WOFF2)
+        # recalcTimestamp=False: senza, ogni rigenerazione scriverebbe l'ora corrente
+        # nel carattere incorporato e i file cambierebbero anche a contenuto identico.
+        font = TTFont(CARATTERE_WOFF2, recalcTimestamp=False)
         font.flavor = None
         if "fvar" in font:
             font = instancer.instantiateVariableFont(font, {"wght": 400}, updateFontNames=True)
@@ -1069,9 +1071,15 @@ def converti_pdf(pptx: Path, ttf: Path, dati: dict, lez: dict) -> Path:
             "keywords": "protezione civile; scuola primaria; educazione civica; Genzano di Roma",
             "creator": dati["autore"],
             "producer": "",
+            "creationDate": "",
+            "modDate": "",
         })
         doc.set_language("it-IT")
-        doc.save(finale, garbage=3, deflate=True)
+        # Niente date e identificativo ricavato dal PowerPoint, non dall'ora:
+        # stesso contenuto, stesso PDF byte per byte a ogni rigenerazione.
+        impronta = hashlib.md5(pptx.read_bytes()).hexdigest().upper()
+        doc.xref_set_key(-1, "ID", f"[<{impronta}> <{impronta}>]")
+        doc.save(finale, garbage=3, deflate=True, no_new_id=True)
         doc.close()
         return finale
 
