@@ -9,6 +9,13 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+<style>
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: un 1% in meno
+       su tutto tiene il foglio intero (controllo fogli di stampa, 19/10/2026).
+       Solo in stampa. */
+    @media print { html { font-size: 99%; } }
+  </style>
 </head>
 <body>
 
