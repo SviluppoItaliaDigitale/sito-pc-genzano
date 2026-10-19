@@ -9,6 +9,12 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/storie-e-racconti/assets/storia-libro.css">
+<style>
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio: un 1%
+       in meno su tutta la pagina tiene il foglio intero (controllo fogli di
+       stampa, 19/10/2026). Solo in stampa. */
+    @media print { .storia-page { zoom: 99%; } }
+  </style>
 </head>
 <body>
   <div class="storia-toolbar">

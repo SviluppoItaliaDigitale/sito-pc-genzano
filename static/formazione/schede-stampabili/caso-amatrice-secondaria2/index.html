@@ -32,6 +32,13 @@
     .cs-righe { border-bottom: 1.5px solid var(--scheda-bordo); min-height: 1.5rem; margin: 0.35rem 0; }
     .scheda-h2 { font-size: 1rem; margin: 0.55rem 0 0.2rem; }
   </style>
+<style>
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: un 1% in meno
+       su tutto tiene il foglio intero (controllo fogli di stampa, 19/10/2026).
+       Solo in stampa. */
+    @media print { html { font-size: 99%; } }
+  </style>
 </head>
 <body>
 
