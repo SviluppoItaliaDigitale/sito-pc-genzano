@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-19T01:45:28+00:00",
+  "generato": "2026-10-19T06:54:50+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 38,
-  "scaduti_scartati": 11,
-  "in_corso": 6,
+  "avvisi": 36,
+  "scaduti_scartati": 13,
+  "in_corso": 4,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -453,19 +453,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-19T00:00:00+00:00",
-   "fine": "2026-10-19T05:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.039"
-  },
-  {
-   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -489,19 +476,6 @@
    "fine": "2026-10-19T23:59:00+00:00",
    "emesso": "2026-10-18T09:10:22+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261018111021.079"
-  },
-  {
-   "in_corso": true,
-   "regione": "Valle d'Aosta",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-19T00:00:00+00:00",
-   "fine": "2026-10-19T05:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.032"
   }
  ]
 }

@@ -5,19 +5,91 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-18T23:35:56+00:00",
+  "generato": "2026-10-19T06:54:41+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-18T22:02:34+00:00",
+   "data": "2026-10-19T06:50:00+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ex Ilva: a Genova lavoratori in corteo verso l'aeroporto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/ex-ilva-a-genova-lavoratori-in-corteo-verso-laeroporto_d610556e-d51b-4320-971c-d7a8467dfa69.html"
+  },
+  {
+   "data": "2026-10-19T06:46:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ministro Interno Francia: 'In alcune città abbiamo perso il controllo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/ministro-interno-francia-in-alcune-citta-abbiamo-perso-il-controllo_ed171ce5-9088-4f84-8481-f5677efc58f2.html"
+  },
+  {
+   "data": "2026-10-19T06:45:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cambio di passo meteo, pioggia e calo delle temperature sull'Italia: le previsioni",
+   "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-previsioni-oggi-19-ottobre_37yTyYyRXZ6tmcD5YsSXNa"
+  },
+  {
+   "data": "2026-10-19T06:45:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Protesta degli autotrasportatori, sull'A1 chiuso nodo A30 Caserta-Salerno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/protesta-degli-autotrasportatori-sulla1-chiuso-nodo-a30-caserta-salerno_ff9394fe-3211-452a-ac1e-41aef9da3466.html"
+  },
+  {
+   "data": "2026-10-19T06:41:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scontri ai cortei, Cacciari: \"I governi si sveglino, i giovani si sentono traditi\"",
+   "url": "https://www.adnkronos.com/politica/scontri-cortei-cacciari_1kblsBrguUYfj4cS5p24UA"
+  },
+  {
+   "data": "2026-10-19T06:37:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Missili russi su Kiev, un morto e otto feriti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/missili-russi-su-kiev-un-morto-e-otto-feriti_880ccfc3-f526-4c4a-9def-79024e582454.html"
+  },
+  {
+   "data": "2026-10-19T06:16:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburanti, continua la protesta dei tir: stop e rallentamenti su A1 e A30",
+   "url": "https://www.adnkronos.com/cronaca/caro-carburante-protesta-tir-news-oggi_7upQwCvpmgsHBz8W8Oavq8"
+  },
+  {
+   "data": "2026-10-19T06:06:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ora solare 2026, presto il cambio d'ora: più buio e qualche fastidio, quando spostare le lancette",
+   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-cambio-dora-quando_7qGgR3LTDpQth7dGaHCSgI"
+  },
+  {
+   "data": "2026-10-19T05:57:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE |  A Milano ancora scontri, Meloni convoca il vertice sulla sicurezza",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/19/prime-pagine-a-milano-ancora-scontri-meloni-convoca-il-vertice-sulla-sicurezza_42428f61-71c1-4aaf-87b7-a8bbb3d57fe3.html"
+  },
+  {
+   "data": "2026-10-19T05:54:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Wsj: Putin propone vertice con Trump e Xi per discutere la fine della guerra",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-19-ottobre_4WDSoJNhQVpS3OfJgaUN5P"
+  },
+  {
+   "data": "2026-10-19T05:09:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Clown\", \"corrotto\": in Brasile il duello tv tra Lula e Bolsonaro Jr",
+   "url": "https://www.adnkronos.com/internazionale/esteri/brasile-lula-bolsonaro-jr-scontro-tv_5eIkAmXZWyvkKtOtErusHL"
+  },
+  {
+   "data": "2026-10-19T04:38:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrosinistra, Schlein ufficializza corsa per Palazzo Chigi: \"Io candidata premier, con o senza primarie\"",
+   "url": "https://www.adnkronos.com/politica/elly-schlein-annuncio-corsa-palazzo-chigi-oggi_4nduIuf7s10SejxYJgTDAA"
+  },
+  {
+   "data": "2026-10-18T22:02:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Guerriglia a Milano, assalto ai negozi e saccheggi: fermati 200 giovani. Meloni convoca riunione su ordine pubblico",
    "url": "https://www.adnkronos.com/cronaca/milano-scontri-giovani-polizia-cronaca-news-oggi_4Ojxn0SSjuIkgcNrbVXUFW"
   },
   {
-   "data": "2026-10-18T22:02:18+00:00",
+   "data": "2026-10-18T22:02:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Trump: \"Zelensky non vuole la fine della guerra\". Il presidente ucraino: \"Casa Bianca spinge Kiev alla resa\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-accusa-zelensky-guerra-ucraina_69dRuu2eDjBdHMdQWIs4ec"
@@ -65,22 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/il-poliziotto-ferito-al-lavoro-dobbiamo-garantire-la-sicurezza_870b61b1-18e9-4159-b7bf-fe9c6414bc06.html"
   },
   {
-   "data": "2026-10-18T20:22:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "E' morta Christiana Ruggeri, la giornalista del Tg2 aveva 57 anni",
-   "url": "https://www.adnkronos.com/cronaca/christiana-ruggeri-tg2-rai_5pL7FIJtwWrEJWFjMrq1Hi"
-  },
-  {
    "data": "2026-10-18T20:09:01+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "La preoccupazione del governo, 'nuove misure contro chi semina il caos'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/pochi-agenti-in-strada-scoppia-la-polemica-tra-piantedosi-e-sala.-danni-per_397d8359-98ac-4ba2-840f-a55dcb988745.html"
-  },
-  {
-   "data": "2026-10-18T19:54:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dalle battute su Ranucci e Mengoni fino ad Annalisa ospite, Fiorello riporta varietà subito dopo il Tg1",
-   "url": "https://www.adnkronos.com/spettacoli/fiorello-ritorno-rai1-come-sara_3dyRhC1Ks0SsXtim7yhO2A"
   },
   {
    "data": "2026-10-18T19:54:37+00:00",
@@ -95,22 +155,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/sollecito-volonta-precisa-di-ignorare-lingiustizia-nei-miei-confronti_7e440022-47c6-4ed4-bbef-372c86a4961b.html"
   },
   {
-   "data": "2026-10-18T19:36:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Macron: 'Rabbia e vergogna, chi ha distrutto deve pagare'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/macron-denuncia-il-caos-in-francia-rabbia-e-vergogna_2aeef560-dded-49f0-b82b-97ffd9004684.html"
-  },
-  {
    "data": "2026-10-18T19:36:34+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Piantedosi vede vertici polizia e questore Milano, fermati oltre 200 violenti",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/piantedosi-vede-vertici-polizia-e-questore-milano-fermati-oltre-200-violenti_db824242-c4cf-454d-8a30-92d00b06fa93.html"
-  },
-  {
-   "data": "2026-10-18T19:16:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Guerriglia a Milano, chi sono i ragazzi della generazione Selfie: TikTok, rabbia e voglia di apparire",
-   "url": "https://www.adnkronos.com/cronaca/guerriglia-milano-identikit-giovani-protagonisti_5sGokignsuyJT3mlNoSSx7"
   },
   {
    "data": "2026-10-18T19:07:59+00:00",
@@ -123,12 +171,6 @@
    "fonte": "ANSA",
    "titolo": "Schlein si candida alla corsa per Palazzo Chigi, 'con o senza le primarie'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/18/schlein-sono-pronta-a-candidarmi-con-o-senza-le-primarie_68325ea6-8145-45ec-add6-1db6a16ef38a.html"
-  },
-  {
-   "data": "2026-10-18T18:54:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sarri contro Chiffi: “Ho scoperto che c’è chi può mandare affanc...l’arbitro”",
-   "url": "https://www.adnkronos.com/sport/sarri-arbitro-chiffi-affanc-serie-a-atalanta-milan_22mjKFUPRzFLegv3IQRbOJ"
   },
   {
    "data": "2026-10-18T18:53:12+00:00",
@@ -147,48 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Netanyahu incassa l'endorsement di Trump, allarme attacchi sul voto",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/le-famiglie-delle-vittime-del-7-ottobre-e-degli-ostaggi-chiedono-unindagine-penale_b83ace76-5a3b-45fc-aedf-ce5bfc7eddeb.html"
-  },
-  {
-   "data": "2026-10-18T18:39:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Milano ancora scontri, la cronaca di domenica 18 ottobre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/centinaia-di-giovani-a-gruppetti-in-piazza-duomo-50-portati-in-questura_57da2060-1834-4ed4-a7a9-19a0843c94bd.html"
-  },
-  {
-   "data": "2026-10-18T18:37:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Rabbia e violenza, l'ombra dell'internazionale del disordine della Gen Z",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/la-giornata-di-scontri-in-piazza-dalla-chiamata-sui-social-da-una-sigla-sconosciuta_59d80aae-d045-4d8d-98e9-8e43612a389b.html"
-  },
-  {
-   "data": "2026-10-18T18:34:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Jet italiani in volo per un drone in Lituania, ma era ucraino",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/allarme-in-lituania-per-possibile-drone-popolazione-invitata-ad-andare-nei-rifugi_5919d6be-2347-43cb-bc66-245437e9ed27.html"
-  },
-  {
-   "data": "2026-10-18T18:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Juventus-Lazio 0-3, Gattuso sbanca lo Stadium e torna in vetta con l'Inter",
-   "url": "https://www.adnkronos.com/sport/juventus-lazio-diretta-serie-a_3CJ8v2p0n9U9BQ5mKc53op"
-  },
-  {
-   "data": "2026-10-18T18:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scontri in Francia, Macron: \"Proviamo rabbia, nulla giustifica la violenza. Chi ha distrutto dovrà pagare\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/macron-violenze-citta-francesi-disordini-messaggio-nazione_2HdtziDRrlMboI3Nsa8fRr"
-  },
-  {
-   "data": "2026-10-18T18:06:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Moto contro un muretto a secco, due motociclisti muoiono in Salento",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/moto-contro-un-muretto-a-secco-due-motociclisti-muoiono-in-salento_064ec063-41a3-4711-a278-824124dcde6a.html"
-  },
-  {
-   "data": "2026-10-18T17:59:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A. Fontana, a Milano delinquenti che devono essere trattati come tali",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/a.-fontana-a-milano-delinquenti-che-devono-essere-trattati-come-tali_a5465eea-4aaa-4872-8de2-39be3c7a58db.html"
   }
  ]
 }
