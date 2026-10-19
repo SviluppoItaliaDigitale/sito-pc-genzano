@@ -1,5 +1,15 @@
 # GitHub + Aruba — Deploy e Infrastruttura
 
+## Conservare immagini e allegati (18/10/2026)
+
+**Ordine esplicito di Alessandro:** immagini, documenti, audio, video e altri allegati devono restare sempre disponibili sul sito. Si eliminano dal sito soltanto su suo ordine esplicito. Una richiesta di liberare spazio in Git non autorizza la loro rimozione, neppure delle immagini social più vecchie.
+
+Per spostare un allegato fuori dall'indice Git occorrono prima una copia permanente verificata e il ripristino automatico nello stesso percorso pubblico prima di ogni build. Conservare le copie nella release `allegati-permanenti`; non sovrascriverle né eliminarle automaticamente. Il recupero in `scripts/immagini-meteo-release.py` deve bloccare la pubblicazione se manca un allegato o non coincide la sua impronta. La pulizia periodica delle immagini social rimane in modalità `--dry-run`.
+
+**Cronologia ripulita il 18/10/2026:** rimossi soltanto vecchi output Pagefind, ECMWF, sinottica e Open Kit; file attuali del sito e contenuti delle PR #1439 e #1440 verificati identici. Il [backup completo verificato](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/releases/tag/backup-storico-20261018-39152697296-1) conserva i riferimenti originali, le istruzioni di recupero e la mappa dei commit.
+
+**Copie di lavoro precedenti alla pulizia:** conservare prima ogni modifica locale, poi usare una nuova copia della cronologia corrente o riallineare i rami con la mappa dei commit. Non unire né ripubblicare rami basati sulla vecchia cronologia: reintrodurrebbero gli oggetti rimossi. Nessun aggiornamento forzato da una vecchia copia.
+
 ## Ambienti di pubblicazione
 
 Il sito viene pubblicato su due ambienti distinti ad ogni push su `main`:

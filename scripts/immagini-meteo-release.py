@@ -10,6 +10,8 @@ giro e non pesa sul repository; i metadati JSON restano in git.
 Uso (serve `gh` autenticato con GH_TOKEN, oppure in locale `gh auth login`):
     python3 scripts/immagini-meteo-release.py scarica [--rigoroso]  # prima dei generatori; --rigoroso nel deploy
     python3 scripts/immagini-meteo-release.py carica ecmwf|sinottica|sentinel1|sentinel2  # dopo il generatore, solo i suoi file
+    python3 scripts/immagini-meteo-release.py carica-permanenti  # copia aggiuntiva immutabile e verifica
+    python3 scripts/immagini-meteo-release.py scarica-permanenti  # ripristino integrale degli allegati
 
 `scarica` ripiega sulle copie servite dal sito pubblicato se la release non
 risponde. Le scene Sentinel-2 (`sentinel2-genzano-AAAAMMGG.webp`) hanno nomi
@@ -17,13 +19,21 @@ che cambiano: l'elenco atteso si legge da static/open-data/copernicus-sentinel2.
 e `carica sentinel2` toglie dalla release le scene che il JSON non elenca più. Se manca anche quella esce 0 nei workflow dei generatori; con
 `--rigoroso` (nel deploy) esce 1, perché un caricamento FTP senza quelle
 immagini le cancellerebbe da Aruba. `carica` crea la release se non esiste ancora.
+
+Gli allegati permanenti stanno in una release separata, senza scadenza. Ogni
+ripristino verifica dimensione e SHA-256 e conserva gli indirizzi originali.
+Un allegato mancante blocca sempre il comando, anche senza --rigoroso.
+Le copie permanenti non vengono mai sovrascritte o eliminate automaticamente.
 """
 from __future__ import annotations
 
 import json
+import hashlib
+import os
 import re
 import subprocess
 import sys
+import time
 import urllib.error
 import tempfile
 import urllib.request
@@ -33,6 +43,136 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 TAG = "immagini-meteo"
 SITO = "https://www.protezionecivilegenzano.it"
 UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/)"
+
+# Allegati permanenti: copie immutabili, separate dalle carte meteo aggiornabili.
+# Il ripristino precede la build e controlla tutti i byte. Non si eliminano
+# allegati dalla release né dal sito. Per aggiungerne uno verificare prima
+# originale, copia pubblica e impronta; poi eseguire carica-permanenti.
+TAG_PERMANENTI = "allegati-permanenti"
+PERMANENTI = {
+    "e9a894dc914d0c11-campagna-lazio-intervista-volontario-aib-pomezia.mp4": {
+        "percorso": "video/campagna-lazio-intervista-volontario-aib-pomezia.mp4",
+        "byte": 19389458,
+        "sha256": "e9a894dc914d0c118a12b183ca65ade9f37f5549f5baeb6584dc6a5e0795a084",
+    },
+}
+
+
+def verifica_permanente(path: Path, info: dict) -> bool:
+    if not path.is_file() or path.stat().st_size != info["byte"]:
+        return False
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for blocco in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(blocco)
+    return h.hexdigest() == info["sha256"]
+
+
+def copia_permanente(url: str, dest: Path, info: dict) -> bool:
+    """Download limitato e atomico: la destinazione cambia solo dopo la verifica."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with tempfile.TemporaryDirectory(dir=dest.parent) as tmp:
+            copia = Path(tmp) / "allegato"
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            totale = 0
+            with urllib.request.urlopen(req, timeout=45) as risposta, copia.open("wb") as f:
+                for blocco in iter(lambda: risposta.read(1024 * 1024), b""):
+                    totale += len(blocco)
+                    if totale > info["byte"]:
+                        raise ValueError("risposta più grande dell'originale verificato")
+                    f.write(blocco)
+            if not verifica_permanente(copia, info):
+                raise ValueError("dimensione o SHA-256 diverso dall'originale verificato")
+            os.replace(copia, dest)
+        return True
+    except (OSError, ValueError) as e:
+        print(f"  [ko ] {info['percorso']}: {e}")
+        return False
+
+
+def url_permanente(nome: str) -> str:
+    return f"https://github.com/{repo_slug()}/releases/download/{TAG_PERMANENTI}/{nome}"
+
+
+def scarica_permanenti() -> int:
+    """Ogni allegato deve essere completo; un guasto blocca la pubblicazione."""
+    mancanti = []
+    for nome, info in PERMANENTI.items():
+        dest = REPO_ROOT / "static" / info["percorso"]
+        if verifica_permanente(dest, info):
+            print(f"  [ok ] {info['percorso']} (originale verificato)")
+            continue
+        if dest.exists():
+            print(f"  [ko ] {info['percorso']}: file locale diverso dall'inventario; non sovrascritto")
+            mancanti.append(info["percorso"])
+            continue
+        for url in (url_permanente(nome), f"{SITO}/{info['percorso']}"):
+            if copia_permanente(url, dest, info):
+                print(f"  [ok ] {info['percorso']} (copia verificata)")
+                break
+        else:
+            mancanti.append(info["percorso"])
+    if mancanti:
+        print("ERRORE: allegati permanenti non recuperati integralmente: "
+              + ", ".join(mancanti) + ". Pubblicazione fermata per conservarli sul sito.")
+        return 1
+    return 0
+
+
+def carica_permanenti() -> int:
+    """Crea copie aggiuntive e le riscarica: nessuna sostituzione o cancellazione."""
+    if scarica_permanenti():
+        return 1
+    repo = repo_slug()
+    if not repo:
+        print("ERRORE: repository di origine non riconosciuto.")
+        return 1
+    endpoint = f"repos/{repo}/releases/tags/{TAG_PERMANENTI}"
+    r = gh("api", endpoint)
+    if r.returncode:
+        if "404" not in r.stderr:
+            print(f"ERRORE: lettura della release non riuscita: {r.stderr.strip()}")
+            return 1
+        r = gh("release", "create", TAG_PERMANENTI, "--repo", repo,
+               "--target", os.environ.get("GITHUB_SHA", "main"),
+               "--title", "Allegati permanenti del sito",
+               "--notes", "Copie integrali degli allegati, conservate senza scadenza. "
+               "Il sito mantiene gli stessi indirizzi e verifica dimensione e SHA-256 prima della pubblicazione. "
+               "Nessun allegato va cancellato senza ordine esplicito di Alessandro Cuollo.",
+               "--latest=false")
+        if r.returncode:
+            print(f"ERRORE: creazione della release non riuscita: {r.stderr.strip()}")
+            return 1
+    r = gh("api", endpoint)
+    try:
+        if r.returncode:
+            raise ValueError(r.stderr.strip())
+        assets = {a["name"]: a for a in json.loads(r.stdout)["assets"]}
+    except (ValueError, KeyError, TypeError) as e:
+        print(f"ERRORE: elenco allegati non verificabile: {e}")
+        return 1
+    for nome, info in PERMANENTI.items():
+        if nome not in assets:
+            with tempfile.TemporaryDirectory() as tmp:
+                copia = Path(tmp) / nome
+                copia.write_bytes((REPO_ROOT / "static" / info["percorso"]).read_bytes())
+                r = gh("release", "upload", TAG_PERMANENTI, str(copia), "--repo", repo)
+                if r.returncode:
+                    print(f"ERRORE: copia di sicurezza non caricata: {r.stderr.strip()}")
+                    return 1
+        with tempfile.TemporaryDirectory() as tmp:
+            dest = Path(tmp) / nome
+            for tentativo in range(3):
+                if copia_permanente(url_permanente(nome), dest, info):
+                    print(f"  [ok ] backup nella release verificato byte per byte: {info['percorso']}")
+                    break
+                if tentativo < 2:
+                    time.sleep(3)
+            else:
+                print("ERRORE: copia di sicurezza non verificata; conservare l'originale in git.")
+                return 1
+    return 0
 
 # nome dell'allegato nella release -> percorso nel sito (sotto static/)
 FILE = {
@@ -125,6 +265,10 @@ def dal_sito(percorso: str, dest: Path) -> bool | None:
 
 
 def scarica(rigoroso: bool = False) -> int:
+    # Anche il controllo dei link usa questo comando: il file deve esserci
+    # sia nella produzione sia nelle build che ne verificano i collegamenti.
+    if scarica_permanenti():
+        return 1
     with tempfile.TemporaryDirectory() as tmp:
         r = gh("release", "download", TAG, "--dir", tmp, "--clobber")
         if r.returncode != 0:
@@ -201,6 +345,10 @@ def carica(gruppo: str) -> int:
 
 if __name__ == "__main__":
     comando = sys.argv[1] if len(sys.argv) > 1 else ""
+    if comando == "carica-permanenti":
+        sys.exit(carica_permanenti())
+    if comando == "scarica-permanenti":
+        sys.exit(scarica_permanenti())
     if comando == "scarica":
         sys.exit(scarica(rigoroso="--rigoroso" in sys.argv))
     if comando == "carica" and len(sys.argv) > 2 and sys.argv[2] in ("ecmwf", "meteo-sinottica", "sinottica", "sentinel1", "sentinel2"):

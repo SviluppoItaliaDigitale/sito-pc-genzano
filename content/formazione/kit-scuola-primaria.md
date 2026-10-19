@@ -558,7 +558,7 @@ Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come e
 - 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-primaria/) — solidarietà nazionale, Case C.A.S.E., comunicazione del rischio. *(storia/geografia)*
 - 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-primaria/) — la pasta all'amatriciana per la ricostruzione: solidarietà fra cuochi e ristoranti. *(storia/geografia)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-primaria/) — ascoltare gli scienziati: Tina Merlin e il principio della voce critica. *(storia/scienze)*
-- 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-primaria/) — il coraggio dei soccorritori: 5 giorni nella neve per salvare 11 persone. *(scienze/ed. civica)*
+- 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-primaria/) — il coraggio dei soccorritori: tre giorni nella neve per salvare 11 persone. *(scienze/ed. civica)*
 - 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-primaria/) — solidarietà internazionale: navi russe, britanniche, americane. *(storia/geografia)*
 - 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-primaria/) — il valore dei controlli ambientali: cosa significa "responsabilità d'impresa". *(scienze/ed. civica)*
 - 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-primaria/) — rispettare la fragilità del territorio: i boschi salvano i pendii. *(scienze/geografia)*
