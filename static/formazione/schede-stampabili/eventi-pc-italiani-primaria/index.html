@@ -70,6 +70,10 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
     .istruzioni-maestra strong { color: #664d03; }
+    /* In stampa restava un foglio quasi vuoto (solo la fascia delle
+       affiliazioni): un 6% in meno tiene il contenuto sui fogli precedenti.
+       Solo in stampa (controllo fogli di stampa). */
+    @media print { html { font-size: 94%; } }
   </style>
 </head>
 <body>
