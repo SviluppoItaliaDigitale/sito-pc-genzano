@@ -934,7 +934,7 @@ QUERIES_GOOGLE_NEWS = [
 ]
 
 FEEDS_ISTITUZIONALI = [
-    {"nome": "TGR Lazio (RAI)", "url": "https://www.rainews.it/tgr/lazio/archivio.rss"},
+    {"nome": "TGR Lazio (RAI)", "url": "https://www.rainews.it/tgr/lazio/rss/tutti"},
 ]
 
 
