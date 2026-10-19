@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-19T06:54:41+00:00",
+  "generato": "2026-10-19T14:25:53+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-19T06:50:00+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ex Ilva: a Genova lavoratori in corteo verso l'aeroporto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/ex-ilva-a-genova-lavoratori-in-corteo-verso-laeroporto_d610556e-d51b-4320-971c-d7a8467dfa69.html"
-  },
-  {
-   "data": "2026-10-19T06:46:54+00:00",
+   "data": "2026-10-19T14:22:44+00:00",
    "fonte": "ANSA",
-   "titolo": "Ministro Interno Francia: 'In alcune città abbiamo perso il controllo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/ministro-interno-francia-in-alcune-citta-abbiamo-perso-il-controllo_ed171ce5-9088-4f84-8481-f5677efc58f2.html"
+   "titolo": "Paura di nuovi disordini a Milano, chiudono i negozi del lusso",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/paura-di-nuovi-disordini-a-milano-chiudono-i-negozi-del-lusso_0d0d286f-7f8f-420a-9737-2566da0ba8a2.html"
   },
   {
-   "data": "2026-10-19T06:45:48+00:00",
+   "data": "2026-10-19T14:12:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bob Woodward, nel nuovo memoir rivela una nuova 'gola profonda'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/bob-woodward-nel-nuovo-memoir-rivela-una-nuova-gola-profonda_c4c3e663-dd05-4073-b373-33b096cfef78.html"
+  },
+  {
+   "data": "2026-10-19T14:08:54+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Cambio di passo meteo, pioggia e calo delle temperature sull'Italia: le previsioni",
-   "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-previsioni-oggi-19-ottobre_37yTyYyRXZ6tmcD5YsSXNa"
+   "titolo": "Spagna, tempesta Adam su Valencia e Alicante: 900mila in lockdown e centinaia di salvataggi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/tempesta-adam-valencia-alicante-maltempo_VVI9OuglgGKav9UMNcgYh"
   },
   {
-   "data": "2026-10-19T06:45:16+00:00",
+   "data": "2026-10-19T14:07:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sinner, niente Bonus Pool: Jannik deve rinunciare a 4 milioni",
+   "url": "https://www.adnkronos.com/sport/sinner-soldi-quanto-costa-infortunio-guadagni_3po5pdae123uG4OVy06EIc"
+  },
+  {
+   "data": "2026-10-19T14:06:15+00:00",
    "fonte": "ANSA",
-   "titolo": "Protesta degli autotrasportatori, sull'A1 chiuso nodo A30 Caserta-Salerno",
+   "titolo": "L'omaggio speciale a Messi, anche una pianta porta il suo nome",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/19/lomaggio-speciale-a-messi-anche-una-pianta-porta-il-suo-nome_a16b7e76-a3f4-4777-a5e1-53ec4743ad55.html"
+  },
+  {
+   "data": "2026-10-19T14:06:11+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il 'Movimento 17 ottobre' annuncia una mobilitazione permanente. Paura di nuovi disordini a Milano, chiudono i negozi del lusso",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/il-movimento-17-ottobre-annuncia-mobilitazione-permanente-meloni-convoca-un-vertice_0d0d286f-7f8f-420a-9737-2566da0ba8a2.html"
+  },
+  {
+   "data": "2026-10-19T14:03:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maltempo, scuole chiuse a Genova e allerta arancione e gialla per temporali giovedì 20 ottobre: le regioni interessate",
+   "url": "https://www.adnkronos.com/cronaca/scuole-chiuse-maltempo-allerta-meteo-20-ottobre_4AbDwFn5xVykp0JVK00Pys"
+  },
+  {
+   "data": "2026-10-19T14:03:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Francia: il premier Lecornu ordina l'attuazione di 'diversi coprifuoco'. I manifestanti bloccano l'accesso al Louvre",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/il-premier-lecornu-ordina-lattuazione-di-diversi-coprifuoco.-i-manifestanti-bloccano-laccesso-al-louvre_ed171ce5-9088-4f84-8481-f5677efc58f2.html"
+  },
+  {
+   "data": "2026-10-19T14:01:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giornata ginecologia universitaria, Nappi (Agui): \"Non normalizzare dolore endometriosi\"",
+   "url": "https://www.adnkronos.com/cronaca/giornata-ginecologia-universitaria-nappi-agui-non-normalizzare-dolore-endometriosi_7wKKlj3SolfgnBm3Iuvh76"
+  },
+  {
+   "data": "2026-10-19T13:59:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Svanisce la pista sul relitto di Amelia Earhart, erano solo alberi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/svanisce-la-pista-sul-relitto-di-amelia-earhart-erano-solo-alberi_bb01b1c7-deaf-4938-8af4-8dfaf34de522.html"
+  },
+  {
+   "data": "2026-10-19T13:53:38+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bernini, l'università è di tutti non di chi la occupa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/bernini-luniversita-e-di-tutti-non-di-chi-la-occupa_d379c12a-c837-4ac9-8936-8ba869b1ee85.html"
+  },
+  {
+   "data": "2026-10-19T13:52:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Protesta degli autotrasportatori, blocchi al Sud. Stop al porto di Napoli e negli approdi siciliani",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/protesta-degli-autotrasportatori-sulla1-chiuso-nodo-a30-caserta-salerno_ff9394fe-3211-452a-ac1e-41aef9da3466.html"
   },
   {
-   "data": "2026-10-19T06:41:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scontri ai cortei, Cacciari: \"I governi si sveglino, i giovani si sentono traditi\"",
-   "url": "https://www.adnkronos.com/politica/scontri-cortei-cacciari_1kblsBrguUYfj4cS5p24UA"
-  },
-  {
-   "data": "2026-10-19T06:37:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Missili russi su Kiev, un morto e otto feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/missili-russi-su-kiev-un-morto-e-otto-feriti_880ccfc3-f526-4c4a-9def-79024e582454.html"
-  },
-  {
-   "data": "2026-10-19T06:16:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caro carburanti, continua la protesta dei tir: stop e rallentamenti su A1 e A30",
-   "url": "https://www.adnkronos.com/cronaca/caro-carburante-protesta-tir-news-oggi_7upQwCvpmgsHBz8W8Oavq8"
-  },
-  {
-   "data": "2026-10-19T06:06:35+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ora solare 2026, presto il cambio d'ora: più buio e qualche fastidio, quando spostare le lancette",
-   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-cambio-dora-quando_7qGgR3LTDpQth7dGaHCSgI"
-  },
-  {
-   "data": "2026-10-19T05:57:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "PRIME PAGINE |  A Milano ancora scontri, Meloni convoca il vertice sulla sicurezza",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/19/prime-pagine-a-milano-ancora-scontri-meloni-convoca-il-vertice-sulla-sicurezza_42428f61-71c1-4aaf-87b7-a8bbb3d57fe3.html"
-  },
-  {
-   "data": "2026-10-19T05:54:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Wsj: Putin propone vertice con Trump e Xi per discutere la fine della guerra",
-   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-19-ottobre_4WDSoJNhQVpS3OfJgaUN5P"
-  },
-  {
-   "data": "2026-10-19T05:09:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Clown\", \"corrotto\": in Brasile il duello tv tra Lula e Bolsonaro Jr",
-   "url": "https://www.adnkronos.com/internazionale/esteri/brasile-lula-bolsonaro-jr-scontro-tv_5eIkAmXZWyvkKtOtErusHL"
-  },
-  {
-   "data": "2026-10-19T04:38:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Centrosinistra, Schlein ufficializza corsa per Palazzo Chigi: \"Io candidata premier, con o senza primarie\"",
-   "url": "https://www.adnkronos.com/politica/elly-schlein-annuncio-corsa-palazzo-chigi-oggi_4nduIuf7s10SejxYJgTDAA"
-  },
-  {
-   "data": "2026-10-18T22:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Guerriglia a Milano, assalto ai negozi e saccheggi: fermati 200 giovani. Meloni convoca riunione su ordine pubblico",
-   "url": "https://www.adnkronos.com/cronaca/milano-scontri-giovani-polizia-cronaca-news-oggi_4Ojxn0SSjuIkgcNrbVXUFW"
-  },
-  {
-   "data": "2026-10-18T22:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump: \"Zelensky non vuole la fine della guerra\". Il presidente ucraino: \"Casa Bianca spinge Kiev alla resa\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-accusa-zelensky-guerra-ucraina_69dRuu2eDjBdHMdQWIs4ec"
-  },
-  {
-   "data": "2026-10-18T21:37:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Spalletti duro: “Senza ritmo, idee e cuore. Molti atteggiamenti non mi sono piaciuti”",
-   "url": "https://www.adnkronos.com/sport/spalletti-ko-lazio-senza-cuore-e-idee_KEsqSa17iB2JYH3UMySQJ"
-  },
-  {
-   "data": "2026-10-18T21:12:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Campo largo, il consiglio di Veltroni: \"Serve un programma di 10 punti\"",
-   "url": "https://www.adnkronos.com/politica/veltroni-fazio-che-tempo-che-fa_4U4iv5iEbA5uFLKIXth8zu"
-  },
-  {
-   "data": "2026-10-18T21:10:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: la Juve crolla, la Lazio vola ed è in testa con l'Inter",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/18/serie-a-la-juve-crolla-la-lazio-vola-ed-e-in-testa-con-linter_fbbef75c-2606-4c53-a729-a23a275d3dd6.html"
-  },
-  {
-   "data": "2026-10-18T20:57:54+00:00",
+   "data": "2026-10-19T13:52:20+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Urta con il trattore un bracciante in bici che cade e muore, denunciato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/urta-con-il-trattore-un-bracciante-in-bici-che-cade-e-muore-denunciato_41958378-2de3-4e75-b439-be3d0e0e1676.html"
+   "titolo": "Lavoratori dell'ex Ilva di Cornigliano occupano l'aeroporto di Genova, protesta ad oltranza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/lavoratori-dellex-ilva-di-cornigliano-occupano-laeroporto-di-genova-protesta-ad-oltranza_d610556e-d51b-4320-971c-d7a8467dfa69.html"
   },
   {
-   "data": "2026-10-18T20:55:17+00:00",
+   "data": "2026-10-19T13:51:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alluvioni fra Valencia e Alicante, allerta rossa: tre morti, 2mila persone evacuate da camping",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/alluvioni-fra-valencia-e-alicante-allerta-rossa-tre-morti-2mila-persone_a4f8fa4a-a47e-41eb-8f4e-6e8931628d47.html"
+  },
+  {
+   "data": "2026-10-19T13:49:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "La morte di David Rossi, la commissione d'inchiesta fa i nomi di due presunti coinvolti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/la-morte-di-david-rossi-la-commissione-dinchiesta-fa-i-nomi-dei-due-presunti-coinvolti_dfbdb29a-5cd3-4d5e-ab08-04f43b9e5f6f.html"
+  },
+  {
+   "data": "2026-10-19T13:45:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Concluso a Palazzo Chigi il vertice sull'ordine pubblico con Meloni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/concluso-a-palazzo-chigi-il-vertice-sullordine-pubblico-con-meloni-_397d8359-98ac-4ba2-840f-a55dcb988745.html"
+  },
+  {
+   "data": "2026-10-19T13:44:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dal Cpr in Albania 59 rimpatri nel 2025, ognuno costato 68mila euro",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/dal-cpr-in-albania-59-rimpatri-nel-2025-ognuno-costato-68mila-euro_9c5b7084-727e-4161-bf46-364b455b7d08.html"
+  },
+  {
+   "data": "2026-10-19T13:44:55+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Mercalli a Che tempo che fa, la previsione: \"Perderemo i ghiacciai\"",
-   "url": "https://www.adnkronos.com/cronaca/mercalli-che-tempo-che-fa-fazio_6mJQQNWYdb2g9J2UdXBEpa"
+   "titolo": "Sanremo, Fiorello lancia il primo 'spoiler': \"Brad Pitt co-conduttore per una serata\"",
+   "url": "https://www.adnkronos.com/spettacoli/sanremo-spoiler-fiorello-brad-pitt-co-conduttore_6VMb6AUBedCOzK3RPrCCvG"
   },
   {
-   "data": "2026-10-18T20:34:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Milano ancora scontri, Meloni convoca il vertice sulla sicurezza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/a-milano-ancora-scontri-meloni-convoca-il-vertice-sulla-sicurezza_7945d5b5-a8b2-4eed-96ae-375261367822.html"
+   "data": "2026-10-19T13:35:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Guerriglia a Milano, Alessandro Gassmann: \"È inevitabile che i più deboli diventino violenti\"",
+   "url": "https://www.adnkronos.com/spettacoli/alessandro-gassmann-manifestazioni-video_2UnzTAHAGu9jbvXrZjzZP3"
   },
   {
-   "data": "2026-10-18T20:33:31+00:00",
+   "data": "2026-10-19T13:34:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Poste, passaporti da record: superate 300mila richieste",
+   "url": "https://www.adnkronos.com/economia/poste-passaporti-da-record-superate-300mila-richieste_q6f4Eyy2vdrPsb6KdPbqp"
+  },
+  {
+   "data": "2026-10-19T13:33:55+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il poliziotto ferito al lavoro: 'Dobbiamo garantire la sicurezza'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/il-poliziotto-ferito-al-lavoro-dobbiamo-garantire-la-sicurezza_870b61b1-18e9-4159-b7bf-fe9c6414bc06.html"
+   "titolo": "Familiari di Regeni a ambasciatore Egitto, 'si attivi su provvisionale' +RPT+",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/familiari-di-regeni-a-ambasciatore-egitto-si-attivi-su-provvisionale-rpt_73f3044e-3bf1-433e-918d-fefb87dcf754.html"
   },
   {
-   "data": "2026-10-18T20:09:01+00:00",
+   "data": "2026-10-19T13:32:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Per Btp Valore Insieme adesioni a quasi 1 miliardo in oltre 6 ore",
+   "url": "https://www.ansa.it/sito/notizie/economia/risparmio_Investimenti/2026/10/19/per-btp-valore-insieme-adesioni-a-quasi-1-miliardo-in-oltre-6-ore_819a8737-d8eb-4d09-b4e9-681ba93bdb16.html"
+  },
+  {
+   "data": "2026-10-19T13:23:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Presa a martellate dal marito sul bus, morta dopo cinque mesi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/presa-a-martellate-dal-marito-sul-bus-morta-dopo-cinque-mesi_c197afb8-7f68-42b1-975d-ce34656a26a2.html"
+  },
+  {
+   "data": "2026-10-19T13:23:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Parcheggio piazza Capponi, residenti: \"Ennesimo scavo inutile e i nostri palazzi tremano\"",
+   "url": "https://www.adnkronos.com/cronaca/parcheggio-piazza-capponi-residenti-ennesimo-scavo-inutile-e-i-nostri-palazzi-tremano_3SYoUWmzGyoPnjaBdd6Edu"
+  },
+  {
+   "data": "2026-10-19T13:11:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Benny Gantz si ritira dalle elezioni a otto giorni dal voto",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/19/benny-gantz-si-ritira-dalle-elezioni-a-otto-giorni-dal-voto_a6d3ec57-5fe3-45b0-a599-12f80f2c4aeb.html"
+  },
+  {
+   "data": "2026-10-19T13:07:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Stefano Torzullo: \"Targa a Federica sia seme di cambiamento\"",
+   "url": "https://www.adnkronos.com/cronaca/stefano-torzullo-targa-a-federica-sia-seme-di-cambiamento_4jxJkWoG6fgCOaf2qAlsTa"
+  },
+  {
+   "data": "2026-10-19T13:07:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ghiron (Tor Vergata): \"Aula intitolata a Federica Torzullo ci invita a non restare indifferenti\"",
+   "url": "https://www.adnkronos.com/cronaca/ghiron-tor-vergata-aula-intitolata-a-federica-torzullo-ci-invita-a-non-restare-indifferenti_3jdCVgZKB71tXvX6sZSL2N"
+  },
+  {
+   "data": "2026-10-19T13:05:00+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "La preoccupazione del governo, 'nuove misure contro chi semina il caos'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/pochi-agenti-in-strada-scoppia-la-polemica-tra-piantedosi-e-sala.-danni-per_397d8359-98ac-4ba2-840f-a55dcb988745.html"
+   "titolo": "Ruba soldi al nonno e gli clona assegni, denunciato nipote 34enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/ruba-soldi-al-nonno-e-gli-clona-assegni-denunciato-nipote-34enne_70c4ccb3-3dcb-4b97-8e2f-d5ef529b3d30.html"
   },
   {
-   "data": "2026-10-18T19:54:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fiorello torna su Rai1 con 'Tg1 edizione più che straordinaria':  \"Una luce anche sulle proteste al Sud\"",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/18/fiorello-torna-su-rai1-con-tg1-edizione-piu-che-straordinaria_9590baf9-3992-412d-8240-c474a17d986d.html"
+   "data": "2026-10-19T13:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Guerriglia a Milano, Confcommercio: \"Danni per un milione, un altro weekend come questo e il conto sale vertiginosamente\"",
+   "url": "https://www.adnkronos.com/cronaca/guerriglia-milano-stima-danni-commercianti_4JCzLMZJCRMCQt0akzjvcd"
   },
   {
-   "data": "2026-10-18T19:47:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sollecito, volontà precisa di ignorare l'ingiustizia nei miei confronti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/sollecito-volonta-precisa-di-ignorare-lingiustizia-nei-miei-confronti_7e440022-47c6-4ed4-bbef-372c86a4961b.html"
-  },
-  {
-   "data": "2026-10-18T19:36:34+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Piantedosi vede vertici polizia e questore Milano, fermati oltre 200 violenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/18/piantedosi-vede-vertici-polizia-e-questore-milano-fermati-oltre-200-violenti_db824242-c4cf-454d-8a30-92d00b06fa93.html"
-  },
-  {
-   "data": "2026-10-18T19:07:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump ai minimi, Vance: 'Deciderò sul 2028 dopo le midterm'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/18/trump-ai-minimi-vance-decidero-sul-2028-dopo-le-midterm_44c1c2e7-b990-461a-9a99-a499c9e7c11b.html"
-  },
-  {
-   "data": "2026-10-18T19:05:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Schlein si candida alla corsa per Palazzo Chigi, 'con o senza le primarie'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/18/schlein-sono-pronta-a-candidarmi-con-o-senza-le-primarie_68325ea6-8145-45ec-add6-1db6a16ef38a.html"
-  },
-  {
-   "data": "2026-10-18T18:53:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Vasco: 'Sono caduto in bici e ho rotto i legamenti della spalla'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/10/18/vasco-sono-caduto-in-bici-e-ho-rotto-i-legamenti-della-spalla_0178ca12-f96e-49a1-a577-19a81c721eca.html"
-  },
-  {
-   "data": "2026-10-18T18:48:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Francia, le devastazioni all'indomani delle proteste violente",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/18/francia-le-devastazioni-allindomani-delle-proteste-violente_211315d1-16b0-4461-addc-0566091adb65.html"
-  },
-  {
-   "data": "2026-10-18T18:40:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Netanyahu incassa l'endorsement di Trump, allarme attacchi sul voto",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/18/le-famiglie-delle-vittime-del-7-ottobre-e-degli-ostaggi-chiedono-unindagine-penale_b83ace76-5a3b-45fc-aedf-ce5bfc7eddeb.html"
+   "data": "2026-10-19T13:03:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cosmetici, smartphone e abiti firmati: il bottino dei saccheggi in vendita su Vinted",
+   "url": "https://www.adnkronos.com/internazionale/esteri/saccheggi-negozi-vendita-vinted-cosa-succede_3dKkfZRSLWM1Ok3nE6DpL"
   }
  ]
 }
