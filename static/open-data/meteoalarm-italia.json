@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-18T23:36:06+00:00",
+  "generato": "2026-10-19T01:45:28+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 49,
-  "scaduti_scartati": 0,
-  "in_corso": 14,
+  "avvisi": 38,
+  "scaduti_scartati": 11,
+  "in_corso": 6,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -62,19 +62,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261018111021.065"
   },
   {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Pioggia",
-   "livello": "rossa",
-   "evento_originale": "Red Rain Warning",
-   "severita": "Extreme",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.061"
-  },
-  {
    "in_corso": false,
    "regione": "Lombardia",
    "fenomeno": "Neve e ghiaccio",
@@ -125,19 +112,6 @@
    "fine": "2026-10-20T21:59:00+00:00",
    "emesso": "2026-10-18T09:10:21+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261018111021.040"
-  },
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Pioggia",
-   "livello": "rossa",
-   "evento_originale": "Red Rain Warning",
-   "severita": "Extreme",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.036"
   },
   {
    "in_corso": false,
@@ -322,19 +296,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261018111021.042"
   },
   {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Pioggia",
-   "livello": "arancione",
-   "evento_originale": "Orange Rain Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.037"
-  },
-  {
    "in_corso": false,
    "regione": "Sardegna",
    "fenomeno": "Temporali",
@@ -439,19 +400,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261018111021.034"
   },
   {
-   "in_corso": true,
-   "regione": "Valle d'Aosta",
-   "fenomeno": "Pioggia",
-   "livello": "arancione",
-   "evento_originale": "Orange Rain Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.031"
-  },
-  {
    "in_corso": false,
    "regione": "Valle d'Aosta",
    "fenomeno": "Pioggia",
@@ -505,45 +453,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.057"
-  },
-  {
-   "in_corso": true,
-   "regione": "Lombardia",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.043"
-  },
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.038"
-  },
-  {
-   "in_corso": false,
    "regione": "Piemonte",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -556,7 +465,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261018111021.039"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -583,58 +492,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:22+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.076"
-  },
-  {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.068"
-  },
-  {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.067"
-  },
-  {
-   "in_corso": true,
-   "regione": "Valle d'Aosta",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-18T08:00:00+00:00",
-   "fine": "2026-10-18T23:59:00+00:00",
-   "emesso": "2026-10-18T09:10:21+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261018111021.035"
-  },
-  {
-   "in_corso": false,
    "regione": "Valle d'Aosta",
    "fenomeno": "Pioggia",
    "livello": "gialla",
