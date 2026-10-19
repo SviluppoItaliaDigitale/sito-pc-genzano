@@ -27,6 +27,10 @@
     .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
     .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+  /* In stampa restava un foglio quasi vuoto con la sola fascia delle
+     affiliazioni: un 6% in meno tiene il contenuto sui primi tre fogli.
+     Solo in stampa (controllo fogli di stampa). */
+  @media print { html { font-size: 94%; } }
   </style>
 </head>
 <body>
@@ -71,7 +75,7 @@
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">SADE</dt><dd style="margin: 0;">Società Adriatica di Elettricità, costruttore dell'opera. Nazionalizzata in ENEL nel 1962, un anno prima del disastro.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Tina Merlin</dt><dd style="margin: 0;">(1926-1991) giornalista de <em>l'Unità</em>. Denunciò il rischio Vajont dal 1959. Fu querelata e assolta.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Edoardo Semenza</dt><dd style="margin: 0;">(1927-2002) geologo, individuò la paleofrana del Monte Toc nel 1959. I suoi report furono sottovalutati.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">L. 584/1994</dt><dd style="margin: 0;">"Norme sulla sicurezza delle dighe": controllo sistematico di tutte le grandi dighe italiane (post-Vajont).</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">L. 584/1994</dt><dd style="margin: 0;">conversione di un decreto con misure urgenti sulle dighe, nel quadro dei controlli sulle grandi dighe italiane rafforzati dopo il Vajont.</dd>
     </dl>
 
     <h2 class="scheda-h2">📅 Cronologia dell'evento</h2>
