@@ -1252,6 +1252,9 @@
 @media (max-width: 580px) {
 :where([id="scheda-caso-vajont-secondaria"]) .due-colonne { grid-template-columns: 1fr; }
 }
+@media print {
+:where([id="scheda-caso-vajont-secondaria"]) { zoom: 0.94; }
+}
 
 :where([id="scheda-caso-messina-secondaria"]) .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
 :where([id="scheda-caso-messina-secondaria"]) .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin-bottom: 0.2rem; }
