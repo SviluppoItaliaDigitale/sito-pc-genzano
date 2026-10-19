@@ -46,7 +46,7 @@
     - "COC"
     - "Centro Operativo Comunale"
   definizione: "Centro Operativo Comunale: la sala operativa che il Sindaco attiva per gestire un'emergenza sul territorio comunale. A Genzano: presso il Comando di Polizia Locale."
-  link: "/glossario/#coc-centro-operativo-comunale"
+  link: "/glossario/#coc--centro-operativo-comunale"
 
 - id: coi
   termine: "COI"
@@ -54,7 +54,7 @@
     - "COI"
     - "Centro Operativo Intercomunale"
   definizione: "Centro Operativo Intercomunale: coordina più Comuni vicini in un'emergenza estesa. Genzano fa parte del 14° COI Castelli Romani Sud."
-  link: "/glossario/#coi-centro-operativo-intercomunale"
+  link: "/glossario/#coi--centro-operativo-intercomunale"
 
 - id: nue
   termine: "NUE"
@@ -95,7 +95,7 @@
     - "Aree di Attesa"
     - "Area Attesa"
   definizione: "Punto sicuro dove la popolazione si raduna nelle prime fasi di un'emergenza, in attesa di indicazioni. A Genzano sono numerate AA1, AA2…"
-  link: "/glossario/#aa-area-di-attesa"
+  link: "/glossario/#aa--area-di-attesa"
 
 - id: area-ricovero
   termine: "Area di Ricovero"
@@ -103,7 +103,7 @@
     - "Area di Ricovero"
     - "Aree di Ricovero"
   definizione: "Aree dove si allestiscono tende o moduli abitativi per ospitare la popolazione evacuata, anche per settimane o mesi."
-  link: "/glossario/#ar-area-di-ricovero"
+  link: "/glossario/#ar--area-di-ricovero"
 
 - id: area-ammassamento
   termine: "Area di Ammassamento"
@@ -112,7 +112,7 @@
     - "Area di Ammassamento Soccorritori"
     - "Aree di Ammassamento"
   definizione: "Spazio dove si concentrano uomini, mezzi e materiali in arrivo da fuori comune per supportare un'emergenza. A Genzano: AS1 e AS2."
-  link: "/glossario/#as-area-di-ammassamento-soccorritori"
+  link: "/glossario/#as--area-di-ammassamento-soccorritori"
 
 - id: dicomac
   termine: "DICOMAC"

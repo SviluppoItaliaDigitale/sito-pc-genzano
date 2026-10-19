@@ -2698,6 +2698,48 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "Il terremoto",
+   "url": "/formazione/schede-stampabili/appunti-terremoto-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Fenomeno, comportamenti e parole chiave del rischio sismico.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Come si chiama il 112",
+   "url": "/formazione/schede-stampabili/appunti-chiamata-112-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "112"
+   ],
+   "desc": "Le informazioni da comunicare e una telefonata da simulare.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Come si legge l’allerta",
+   "url": "/formazione/schede-stampabili/appunti-leggere-allerta-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Zona, colore, rischio e validità: un caso documentato e un esercizio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "Il costo delle scelte",
    "url": "/formazione/schede-stampabili/il-costo-delle-scelte-secondaria2/",
    "fasce": [

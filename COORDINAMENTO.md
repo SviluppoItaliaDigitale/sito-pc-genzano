@@ -140,6 +140,104 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
+- **2026-10-16 — da Claude a ChatGPT — Appunti illustrati: modelli di pagina e tre pagine di prova** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1439; ramo `chatgpt/appunti-illustrati-20261016`)
+  - **Avvio a mano (Alessandro).** In Codex Cloud: ambiente del repository, ramo `chatgpt/appunti-illustrati-20261016` se il selettore lo offre, poi il testo di avvio (intestazione più le sette parti qui sotto: lo stampa `passa-a.py nuovo`, lo ristampa `passa-a.py riavvia --pr 1439`). A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1439 --consegna M`.
+  - **1. Obiettivo.**
+    Costruire il modello degli «Appunti illustrati di protezione civile» (proposta 93): schede A4 di ripasso, una per argomento, che riprendono lo schema di pagina di due libri di appunti illustrati per le superiori. Insieme al modello, le prime tre pagine di prova per la secondaria di secondo grado: «Il terremoto» (pagina-concetto), «Come si chiama il 112» (pagina-procedura) e «Come si legge l'allerta» (pagina-procedura). Le tre pagine servono ad Alessandro per approvare l'aspetto prima dei circa 27 argomenti che seguiranno con lo stesso generatore.
+  - **2. File.**
+    Da creare:
+    - `data/appunti_illustrati.json` — testi e struttura delle tre pagine
+    - `scripts/genera-appunti-illustrati.py` — generatore, solo libreria standard di Python
+    - `static/formazione/schede-stampabili/assets/appunti.css` — stile comune delle pagine
+    - `static/formazione/schede-stampabili/appunti-terremoto-secondaria2/index.html` (generato) e `disegno-apertura.svg`
+    - `static/formazione/schede-stampabili/appunti-chiamata-112-secondaria2/index.html` (generato) e `disegno-apertura.svg`
+    - `static/formazione/schede-stampabili/appunti-leggere-allerta-secondaria2/index.html` (generato) e `disegno-apertura.svg`
+
+    Da modificare:
+    - `static/formazione/schede-stampabili/index.html` — tre schede nella sezione della secondaria di secondo grado
+    - `content/formazione/kit-scuola-secondaria-secondo-grado.md` — tre voci nel blocco «Schede già pronte per la stampa»
+    - `static/formazione/schede-stampabili/pacchetti/*.html` e `data/materiali_lezione.json` — solo come li riscrivono `scripts/genera-pacchetti-schede.py` e `scripts/genera-materiali-lezione.py`
+    - `.github/workflows/validate-pr.yml` — un passo nel job `pacchetti-schede`
+
+    Nessun altro file. Nessun file binario (ZIP, PNG, PDF): lo ZIP del kit lo rigenera chi chiude il lavoro.
+  - **3. Che cosa fare.**
+    1. Leggi prima le regole del repository (cartella `rules/` della configurazione nascosta, trovale con `find . -name '09-regole-contenuti-qualita.md'`): `09-regole-contenuti-qualita.md` § 15-ter (come si fanno le schede stampabili e perché la stampa si rompe), `03-accessibility.md` § «Progettazione universale per l'apprendimento», `02-content-design-pa.md` § «Umanizzazione della scrittura», e la lista di controllo `pc-didattica-reviewer.md` (cartella `agents/` accanto a `rules/`). Modello tecnico: `static/formazione/schede-stampabili/caso-amatrice-secondaria2/index.html` (intestazione, `scheda-print.css`, barra `.scheda-toolbar`, `<article class="scheda-page">`, `.scheda-footer`, URL canonico) e `static/formazione/schede-stampabili/assets/scheda-print.css` (variabili di colore, classe `.soluzione-capovolta`, banda delle affiliazioni aggiunta in stampa).
+
+    2. Due modelli di pagina, ciascuno su un solo foglio A4. Dei due libri si riprende lo schema della pagina; etichette, testi e disegni sono nostri.
+
+       **Pagina-concetto** (per rischi, storia, organizzazione; modello «quaderno di appunti a colori»):
+       - testata: etichetta «Appunti illustrati · Protezione civile · Secondaria di II grado», titolo in lettering (punto 3) e, sotto, la **domanda guida** a cui la pagina risponde;
+       - **disegno d'apertura** accanto alla testata;
+       - **In breve**: 3 frasi;
+       - **La sequenza**: 4-5 passaggi numerati, ognuno con una piccola icona e una riga di testo;
+       - **Cause e conseguenze**: 2-3 coppie unite da una freccia disegnata;
+       - **Chi fa cosa**: 4-5 ruoli (enti e cittadino, mai persone con nome), un compito per riga, con una piccola icona;
+       - **Punto chiave**: la frase da ricordare, in un riquadro;
+       - **Occhio all'errore**: 2 idee sbagliate corrette, prese dalla Biblioteca delle idee sbagliate, con il link alla voce;
+       - **Parole chiave**: 4-5 termini evidenziati, con la definizione breve del glossario del sito;
+       - **Per l'interrogazione**: 3 domande;
+       - **Controlla a casa**: 3 caselle da spuntare;
+       - piede: fonti (le pagine del sito usate), capitolo del Manuale e pagina del rischio per approfondire, «Testi e disegni: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, licenza CC BY 4.0», `.scheda-footer` come nelle altre schede.
+
+       **Pagina-procedura** (per le cose da saper fare; modello «appunti illustrati di matematica»):
+       - testata come sopra, con titolo in lettering e 1-2 **note adesive** (foglietti leggermente ruotati) che portano il concetto chiave in due-tre parole;
+       - **La teoria**: 4-5 punti con le parole importanti evidenziate in tre colori secondo una legenda fissa, scritta in piccolo nel riquadro (giallo = azioni, azzurro = numeri e luoghi, rosa = attenzione);
+       - **Le regole**: riquadro con 2-4 regole;
+       - **Esempio guidato**: il caso di partenza, poi 3-4 passi numerati, ognuno con una riga di spiegazione e una riga in riquadro (che cosa si dice o si fa);
+       - **Lo schema**: 4 pastiglie colorate unite da frecce, dal primo all'ultimo gesto;
+       - **Occhio all'errore**: riquadro rosa con triangolo di avvertimento, 1-2 errori tipici con la correzione;
+       - **Prova tu**: un caso nuovo, con **Indizio** (icona della lampadina) e **Soluzione** stampata capovolta in fondo con la classe `.soluzione-capovolta`;
+       - piede come nella pagina-concetto.
+
+       In entrambi i modelli ogni riquadro ha bordo tratteggiato e una **linguetta** colorata in alto a sinistra con il nome del riquadro, come le schede di un raccoglitore.
+
+    3. Aspetto e lettering. Direzione: «quaderno di appunti a colori fatto a mano»: carta chiara, righe o quadretti leggerissimi sullo sfondo dei riquadri, evidenziatori, frecce e cerchi disegnati.
+       - Titolo in lettering con il carattere a mano `edu-cursive` (file `static/formazione/schede-stampabili/assets/edu-cursive-400.woff2`, licenza OFL in `OFL-edu-cursive.txt`, da dichiarare con `@font-face` in `appunti.css`): grande (30-34 pt in stampa), colore pieno con un'ombra spostata in un secondo colore e una sottolineatura a pennello disegnata in SVG sotto la parola principale; al massimo due colori per titolo.
+       - Il carattere a mano solo per titoli, linguette, note adesive e domanda guida. Il testo continuo resta nel carattere di `scheda-print.css`, almeno 9,5 pt in stampa.
+       - Colori: le variabili di `scheda-print.css` (`--scheda-blu`, `--scheda-oro`, `--scheda-verde`, `--scheda-rosso`) e i tre evidenziatori; ogni testo con contrasto almeno 4,5:1 sul suo fondo, calcolato.
+       - Leggibile anche stampata in bianco e nero: le parole evidenziate sono anche in grassetto, i riquadri si riconoscono da linguetta e bordo, nessuna informazione affidata al solo colore.
+       - Icone, frecce e sottolineature: SVG in linea scritti a mano, semplici, con `aria-hidden="true"` quando sono decorativi.
+       - Niente pittogrammi ARASAAC (cambierebbero la licenza), niente foto, niente emoji.
+       - Tutto lo stile comune sta in `appunti.css`, caricato dopo `scheda-print.css`; niente stili in linea nelle pagine.
+
+    4. Generatore `scripts/genera-appunti-illustrati.py`, con due righe di spiegazione in testa. Legge `data/appunti_illustrati.json` (un elenco di pagine, ognuna con `slug`, `modello` = `concetto` o `procedura`, titolo, domanda guida, disegno con percorso e testo alternativo, i campi dei riquadri del suo modello, `fonti`, `manuale`, `approfondisci`) e scrive `static/formazione/schede-stampabili/appunti-<slug>-secondaria2/index.html`. Escape HTML di tutti i testi, output identico a ogni esecuzione. Con `--check` non scrive nulla ed esce con errore se un file generato è diverso da quello sul disco. In `.github/workflows/validate-pr.yml`, job `pacchetti-schede`, aggiungi dopo il passo dei pacchetti un passo «📒 Appunti illustrati allineati ai dati» che esegue `python3 scripts/genera-appunti-illustrati.py --check`.
+
+    5. Contenuti: solo fatti scritti in queste pagine del sito, già verificate. Se un fatto non c'è, non scriverlo e dillo nel riassunto. Registro per ragazzi di 14-19 anni: frasi brevi e concrete, mai la paura come leva.
+       - **Il terremoto** (pagina-concetto): `content/rischi-prevenzione/rischio-sismico.md`, `content/manuale/711-rischio-sismico.md`, `content/rischi-prevenzione/idee-sbagliate.md` (voci `#correre-fuori`, `#ascensore`, `#tornare-in-casa`, `#prevedere-terremoti`), glossario `data/glossario.yaml` (`magnitudo`, `intensita-sismica`, `epicentro`, `ipocentro`, `area-attesa`, `ingv`). La sequenza riprende che cosa fare prima, durante e dopo la scossa come lo scrive la pagina del rischio sismico, con icone di oggetti (tavolo, scala, porta, area di attesa), senza figure umane.
+       - **Come si chiama il 112** (pagina-procedura): `content/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare.md`, `content/comunicazioni/2026-02-11-giornata-europea-112-numero-unico.md`, `content/numeri-utili/_index.md`, `static/formazione/schede-stampabili/chiamo-112-secondaria2/index.html`, idee sbagliate `#numero-unico` e `#chiamare-gruppo`, glossario `nue`, `where-are-u`, `sala-operativa-lazio`. Esempio guidato e Prova tu: due situazioni diverse e concrete (per esempio un malore in casa e un fuoco di sterpaglie visto dalla strada), senza indirizzi reali; se servono personaggi, si chiamano Flavio, Silvia o Marco.
+       - **Come si legge l'allerta** (pagina-procedura): `content/allerte-meteo/_index.md`, `content/allerte-meteo/cosa-significa-a-genzano.md`, `data/codici_colore.yaml`, `content/manuale/714-rischio-meteo-idrologico.md`, idee sbagliate `#allerta-gialla` e `#allerta-tutti`, glossario `allerta`, `allertamento`, `bollettino-criticita`, `cfr`, `zona-allerta`, `coc`. Esempio guidato: l'allerta gialla del 10-11 settembre 2026 come la riporta `data/registro_prevenzione.yaml` (solo zona, tipo e date scritti lì). Prova tu: un caso dichiarato come esempio, con la scritta «Esempio per esercitarsi, non è un bollettino vero». Lo schema: trova la zona → leggi il colore → guarda il tipo di rischio → controlla quando vale.
+       - Dati che restano identici alle fonti: nel Lazio l'unico numero per qualsiasi emergenza è il 112 (mai 115, 118 o 1515 come numeri da chiamare); le segnalazioni non urgenti vanno alla Sala Operativa della Protezione Civile del Lazio, 803 555; il Gruppo Comunale non si attiva chiamandolo direttamente; i codici colore con le parole esatte di `data/codici_colore.yaml` (verde: nessuna allerta; giallo: criticità ordinaria; arancione: criticità moderata; rosso: criticità elevata); Genzano di Roma è nella zona di allerta F «Bacini Costieri Sud».
+
+    6. Disegni d'apertura, uno per pagina, SVG scritti a mano nella cartella della scheda (`disegno-apertura.svg`). Pensati per stare larghi circa 9 cm sul foglio: `viewBox` di circa 600×360, al massimo 6 scritte, ciascuna di almeno 22 unità e tutta dentro il `viewBox`; `role="img"` con `<title>` e `<desc>` in italiano su ciò che si vede; nessun logo, nessun metadato. Nella pagina, `alt` uguale nel senso a `<desc>`.
+       - Terremoto: sezione del terreno con la faglia, l'ipocentro in profondità, l'epicentro in superficie proprio sopra e le onde che arrivano a una casa; scritte «ipocentro», «epicentro», «faglia», «onde sismiche», coerenti con le definizioni del glossario.
+       - 112: un telefono con il 112 sullo schermo e attorno le quattro cose da dire (chi sei, che cosa succede, dove, quante persone), come nell'articolo dell'8 ottobre.
+       - Allerta: la scala dei quattro colori, con accanto a ogni colore la parola del livello.
+
+    7. Indice e kit. Nella sezione della secondaria di secondo grado di `static/formazione/schede-stampabili/index.html` aggiungi tre `scheda-card` come quelle vicine (`scheda-card-icon secondaria2`, fascia «Secondaria II · 14-19 anni · appunti», meta «1 foglio · ripasso», descrizione di una riga, pulsante «Apri e stampa»). In `content/formazione/kit-scuola-secondaria-secondo-grado.md`, blocco «Schede già pronte per la stampa», tre voci nello stesso formato delle altre. Poi rigenera con gli script, mai a mano: `python3 scripts/genera-appunti-illustrati.py`, `python3 scripts/genera-pacchetti-schede.py`, `python3 scripts/genera-materiali-lezione.py`.
+  - **4. Vincoli.**
+    - Un argomento, un foglio A4: l'area stampabile è alta 28,7 cm (margini di `@page` in `scheda-print.css`); `.scheda-page` è un contenitore flex, quindi niente `float`; in fondo `scheda-print.css` aggiunge la banda delle affiliazioni, a cui va lasciato spazio. Se il contenuto non entra si accorciano i testi, non si scende sotto i 9,5 pt.
+    - Accessibilità WCAG 2.2 AA: `lang="it"`, un solo h1, un h2 per ogni riquadro, `alt` su ogni immagine, elenchi veri per passaggi e caselle, ordine di lettura uguale a quello visivo; a schermo la pagina si legge anche da telefono (riquadri in colonna sotto i 700 px). La soluzione capovolta viene dopo il testo del Prova tu anche nell'ordine di lettura.
+    - Italiano corretto, frasi sotto le 20 parole, voce attiva, niente tic da testo scritto in automatico (rule 02 § «Umanizzazione»).
+    - Nessun riferimento a strumenti automatici nei file, nei commenti, nei metadati e nei messaggi di commit.
+    - Schede senza JavaScript, come le altre; URL canonico `https://www.protezionecivilegenzano.it/formazione/schede-stampabili/<cartella>/`.
+    - Nessun dato, luogo, nome o fonte inventati.
+  - **5. Controlli.**
+    - `python3 scripts/genera-appunti-illustrati.py --check` → nessuna differenza.
+    - `python3 scripts/genera-materiali-lezione.py --check` → nessun errore.
+    - `python3 scripts/aggiungi-canonical-statiche.py --check` → nessun errore.
+    - `python3 scripts/check-parita-schede.py` → nessun errore, salvo la parità con lo ZIP della secondaria di secondo grado (lo ZIP lo rigenera chi chiude): riporta nel riassunto i messaggi che restano.
+    - `python3 -c "import sys, xml.dom.minidom as m; [m.parse(f) for f in sys.argv[1:]]" static/formazione/schede-stampabili/appunti-*/disegno-apertura.svg` → nessun errore.
+    - `git status --short` → solo i file del punto 2.
+    - Se `hugo` è installato: `hugo --minify --quiet`, poi `python3 scripts/check-qualita-pagine.py public` e `python3 scripts/check-ancore.py public --base-path ""` → nessun errore.
+    - Se c'è un browser Chromium: `python3 scripts/check-fogli-stampa.py --da-git origin/main` → ogni pagina su un solo foglio.
+    - Un controllo che nell'ambiente non si può eseguire si scrive nel riassunto: lo esegue chi chiude.
+  - **6. Consegna.**
+    Solo le modifiche ai file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti (per esempio «Appunti illustrati: modelli di pagina e tre pagine di prova»). Alla fine un riassunto breve: fatto, non fatto e perché, fatti non trovati nelle fonti, controlli non eseguiti. `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla e non segnare pronta nessuna pull request. Non toccare file fuori dall'elenco del punto 2, non creare file binari, non scrivere gli altri argomenti, non inventare fatti, numeri, nomi o fonti: se manca qualcosa, scrivilo nel riassunto finale.
+
+    Nota per chi chiude (istruzione di Alessandro del 16/10/2026): nulla va online senza il suo ok. La consegna si porta nel ramo con `chiudi --senza-merge`, si rigenera lo ZIP del kit, si fanno i controlli, si mandano ad Alessandro le tre pagine in PDF e si unisce solo dopo il suo «pubblica».
+
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
   - **Quando**: Alessandro ti manda l'export del gestionale interventi (file `.xlsx`, di solito `gcpc-genzano-di-roma_global_reports_*.xlsx`) e scrive «aggiorna gli interventi» o simile. Lavora con **Codex** (serve eseguire gli script): il file va allegato al task.
   - **Mai nel repository il file `.xlsx`**: contiene i nomi dei volontari. Tienilo fuori dalla cartella del repository (per esempio `/tmp/`) e non fare `git add -A` senza guardare.
