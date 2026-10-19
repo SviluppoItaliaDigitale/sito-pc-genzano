@@ -1,4 +1,4 @@
-ultimo_audit: '2026-10-18'
+ultimo_audit: '2026-10-19'
 totale: 70
 riepilogo:
   ACCESSIBILE: 4
@@ -276,7 +276,7 @@ documenti:
 - path: /formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pdf
   file: percorso-1-lezione-1-che-cose-la-protezione-civile.pdf
   size_kb: 1106.2
-  sha256: ec55d679a04a61ab90ef68d46847b29e55a92187e7bdff9c30eba1301865c1a6
+  sha256: 4d84131fb275a617f94f83e157a09cbb288e8b9f32df361135342cb675797189
   searchable: true
   tagged: true
   language: it
@@ -290,7 +290,7 @@ documenti:
 - path: /formazione/slide-lezioni/percorso-1-lezione-2-il-112.pdf
   file: percorso-1-lezione-2-il-112.pdf
   size_kb: 1161.0
-  sha256: 0c4a4972de95d2af058fe4b1a115f9d7271ca3ee546a79825e66229fd52763f7
+  sha256: da28fbb3b03a2f374df8e21512ce5e5ca7b6b3363a10da584379bcfdcbe1991d
   searchable: true
   tagged: true
   language: it
@@ -303,8 +303,8 @@ documenti:
   verdict: ACCESSIBILE
 - path: /formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pdf
   file: percorso-1-lezione-3-rischi-del-territorio.pdf
-  size_kb: 1341.7
-  sha256: cc226981e1c6da2d154d88c1843c7090e148e4600daf59319f6bd8ca6202873b
+  size_kb: 1341.6
+  sha256: c8528d3c565fc460854722840de0cfa51d91d0913ee26265e9d2e126386bbe5e
   searchable: true
   tagged: true
   language: it
@@ -318,7 +318,7 @@ documenti:
 - path: /formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pdf
   file: percorso-1-lezione-4-i-volontari.pdf
   size_kb: 1156.2
-  sha256: 7baff98cb5a1de50c76cae8a4ff3d9e810fa620d90c3095fff3576b2e1a6fb69
+  sha256: 3ca4710557ff2a219a693fe83810349968574002cda5ec069df9071ad354967a
   searchable: true
   tagged: true
   language: it
