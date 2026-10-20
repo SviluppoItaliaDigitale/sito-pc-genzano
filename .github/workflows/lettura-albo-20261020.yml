@@ -25,6 +25,10 @@ jobs:
           session=requests.Session()
           r=session.get(url,timeout=45);r.raise_for_status()
           soup=BeautifulSoup(r.content,'html.parser')
+          for table in soup.select('table'):
+              print('TABELLA HTML:',str(table))
+          for script in soup.select('script'):
+              if any(w in script.get_text().lower() for w in ['download','documento']):print('FUNZIONE DOCUMENTO:',script.get_text())
           for s in soup(['script','style']):s.decompose()
           print('PAGINA UFFICIALE:',url)
           print(soup.get_text(' ',strip=True))
