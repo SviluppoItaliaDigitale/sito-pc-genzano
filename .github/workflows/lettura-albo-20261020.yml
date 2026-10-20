@@ -16,25 +16,26 @@ jobs:
       - name: Leggi pagina e documento ufficiale
         shell: bash
         run: |
-          pip install --quiet requests beautifulsoup4
+          pip install --quiet requests beautifulsoup4 pypdf
           python3 - <<'PY'
-          import requests,urllib.parse,subprocess,pathlib
+          import requests,urllib.parse,base64,re,io
+          from pypdf import PdfReader
           from bs4 import BeautifulSoup
           base='https://genzanodiroma.trasparenza-valutazione-merito.it'
           url=base+'/web/trasparenza/papca-ap/-/papca/display/10580405'
           session=requests.Session()
           r=session.get(url,timeout=45);r.raise_for_status()
           soup=BeautifulSoup(r.content,'html.parser')
-          for table in soup.select('table'):
-              print('TABELLA HTML:',str(table))
-          for script in soup.select('script'):
-              if any(w in script.get_text().lower() for w in ['download','documento']):print('FUNZIONE DOCUMENTO:',script.get_text())
           for s in soup(['script','style']):s.decompose()
           print('PAGINA UFFICIALE:',url)
           print(soup.get_text(' ',strip=True))
           links=[]
           for a in soup.select('a[href]'):
               href=a.get('href','');label=a.get_text(' ',strip=True)+' '+a.get('title','')
+              onclick=a.get('onclick','')
+              encoded=re.search(r"atob\('([^']+)'\)",onclick)
+              if encoded:href=base64.b64decode(encoded.group(1)).decode()
+              if 'downloadSigned=true' in href:continue
               if any(x in (href+' '+label).lower() for x in ['download','documento principale','.pdf']):
                   u=urllib.parse.urljoin(url,href)
                   if urllib.parse.urlparse(u).hostname==urllib.parse.urlparse(base).hostname:
@@ -43,8 +44,8 @@ jobs:
           for i,u in enumerate(dict.fromkeys(links)):
               z=session.get(u,timeout=45);z.raise_for_status()
               if not z.content.startswith(b'%PDF'):continue
-              p=pathlib.Path('/tmp')/('atto-'+str(i)+'.pdf');p.write_bytes(z.content)
-              text=subprocess.run(['pdftotext','-layout',str(p),'-'],check=True,capture_output=True,text=True).stdout
+              doc=PdfReader(io.BytesIO(z.content))
+              text='\n'.join(page.extract_text() or '' for page in doc.pages)
               print('TESTO INTEGRALE PDF:',u);print(text);letti+=1
           if not letti:raise RuntimeError('Nessun PDF letto: verificare i collegamenti della pagina')
           PY
