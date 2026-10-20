@@ -425,3 +425,30 @@ dati:
         contesto: '.'
         finestra: 10
         salvo_se_frase: 'provvist|viveri|acqua|cibo'
+
+
+  - id: proqol-versione-ufficiale
+    dato: "Uso della scala ProQOL"
+    valore: "Versione ufficiale integrale, senza adattamenti dichiarati validati; non formula diagnosi."
+    fonti:
+      - nome: "Stamm, The Concise ProQOL Manual, seconda edizione (2010)"
+        url: "https://proqol.org/proqol-manual"
+      - nome: "Questionario ProQOL 5 e traduzioni ufficiali"
+        url: "https://proqol.org/proqol-measure"
+    vietati:
+      - regex: 'Diagnosi\s*:\s*scala\s+ProQOL|ProQOL(?:-5)?\s+semplificat[oa]'
+        perche: "La scala non è diagnostica; una versione semplificata non coincide con il questionario ufficiale."
+      - regex: 'Validato\s+in\s+studi\s+internazionali'
+        contesto: 'ProQOL'
+        finestra: 250
+        perche: "La validazione dello strumento originale non dimostra quella di un adattamento locale."
+
+  - id: benessere-volontari-promesse-kit
+    dato: "Promesse cliniche nei materiali per i volontari"
+    valore: "Nessuna promessa di risoluzione con debriefing psicologico o validazione IFRC non documentata."
+    fonti:
+      - nome: "OMS, Psychological debriefing in people exposed to a recent traumatic event (2012)"
+        url: "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/other-significant-emotional-and-medical-unexplained-somatic-complaints/psychological-debriefing-in-people-exposed-to-a-recent-traumatic-event"
+    vietati:
+      - regex: 'Risolutivo\s+con\s+debriefing|Validato\s+IFRC'
+        perche: "Il debriefing psicologico non va presentato come risolutivo e il promemoria non ha una validazione clinica IFRC documentata."
