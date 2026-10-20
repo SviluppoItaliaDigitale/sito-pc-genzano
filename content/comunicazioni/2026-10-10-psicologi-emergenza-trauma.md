@@ -1,6 +1,7 @@
 ---
 title: "Il supporto psicologico nelle emergenze: per chi le subisce e per chi soccorre"
 date: 2026-10-10T00:02:00+02:00
+lastmod: 2026-10-20
 description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruolo, criteri del Dipartimento, sostegno alle popolazioni colpite e ai volontari."
 
 badge: "Informazione"
@@ -51,21 +52,18 @@ In questa fase l'intervento si integra con i servizi del territorio (ASL, consul
 
 ## Il problema invisibile: il trauma dei soccorritori
 
-Si parla poco di un fenomeno reale e documentato: i **soccorritori** — vigili del fuoco, sanitari, volontari di Protezione Civile — sono **esposti al trauma** quanto e talvolta più delle persone che soccorrono. Il fenomeno ha un nome tecnico: **trauma vicario** o **stress traumatico secondario**.
+Si parla poco di un fenomeno reale e documentato: i **soccorritori** — vigili del fuoco, sanitari, volontari di Protezione Civile — possono essere **esposti a eventi traumatici** durante il servizio. Il fenomeno ha un nome tecnico: **trauma vicario** o **stress traumatico secondario**.
 
-Le ricerche internazionali stimano che fino al **15-20% dei soccorritori** dopo un grande evento manifesti sintomi di PTSD a 6 mesi dall'intervento. I fattori di rischio includono:
+Le reazioni dipendono dalla persona e dalle condizioni dell’intervento. Fra gli aspetti da considerare ci sono:
 
 - **Esposizione ripetuta** a scene di morte, ferimento, distruzione.
 - **Coinvolgimento personale** (conoscere le vittime, vivere nello stesso territorio).
-- **Mancato debriefing** dopo gli interventi.
+- **Difficoltà ad accedere al sostegno** quando serve.
 - **Cultura del "noi siamo forti, non ci serve aiuto"** che ostacola la richiesta di supporto.
 
-Le buone pratiche internazionali (NICE Guidelines, UK; APA Guidelines, USA) raccomandano:
+Il confronto operativo su fatti e procedure è distinto dall’intervento psicologico. L’OMS sconsiglia il debriefing psicologico per prevenire stress post-traumatico, ansia o depressione dopo un trauma recente. Il sostegno professionale si adatta ai bisogni della persona.
 
-- **Debriefing strutturato** entro 72 ore dall'intervento (in gruppi piccoli, condotti da psicologi formati).
-- **Screening periodico** per chi è esposto a interventi prolungati.
-- **Cultura aziendale di apertura** alla richiesta di aiuto, senza stigma.
-- **Pause obbligatorie** durante interventi prolungati.
+Le indicazioni CDC/NIOSH per i soccorritori richiamano pause, riposo e accesso al sostegno. La persona sceglie se e quando parlare dell’esperienza.
 
 In Italia, la **Croce Rossa Italiana**, il **Corpo Nazionale dei Vigili del Fuoco** e il **Dipartimento della Protezione Civile** hanno linee operative interne per il supporto agli operatori; molte associazioni di volontariato (PC inclusa) si stanno strutturando.
 
@@ -86,11 +84,11 @@ Se sei un volontario o un operatore, dopo un intervento difficile è normale pro
 - Pensieri ricorrenti sull'evento, "rivivere" mentalmente la scena.
 - Evitare luoghi o persone che ricordano l'evento.
 
-**Reazioni che durano alcuni giorni** sono normali e si risolvono da sole. Se invece **persistono dopo 3-4 settimane**, è il momento di parlarne: con il Coordinatore del Gruppo, con un collega di fiducia, o con uno psicologo della rete. Chiedere aiuto **non** è un segno di debolezza; è un segno di professionalità.
+Tempi e intensità delle reazioni possono cambiare. Se il disagio ti preoccupa o ostacola la vita quotidiana, chiedi una valutazione professionale. Non aspettare una soglia fissa di settimane. Puoi farti aiutare da una persona fidata a contattare il medico o uno psicologo.
 
 ## Dove trovare aiuto
 
-Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi simili può fare una differenza importante. Per un supporto professionale i riferimenti sono l'**Ordine degli Psicologi del Lazio**, che pubblica l'elenco degli iscritti, e il **Consiglio Nazionale dell'Ordine degli Psicologi** (CNOP), che ha linee guida dedicate alla psicologia dell'emergenza. In caso di bisogno immediato ci si rivolge al medico di base o ai servizi della ASL.
+Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi simili può fare una differenza importante. Per un supporto professionale i riferimenti sono l'**Ordine degli Psicologi del Lazio**, che pubblica l'elenco degli iscritti, e il **Consiglio Nazionale dell'Ordine degli Psicologi** (CNOP), che ha linee guida dedicate alla psicologia dell'emergenza. Per il disagio personale puoi rivolgerti al medico o ai servizi della ASL. In caso di pericolo immediato, contatta subito i servizi di emergenza.
 
 ## Sul nostro sito
 
@@ -108,3 +106,8 @@ Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi sim
 ## In una parola
 
 La **Giornata Mondiale della Salute Mentale** del 10 ottobre è un'occasione per ricordare che la salute mentale **fa parte della salute** (Costituzione, art. 32) e che dopo un'emergenza il lavoro non finisce con la riapertura delle strade. Ricostruire le vite richiede attenzione anche a quello che non si vede — e a chi quel lavoro lo fa, ogni giorno.
+
+### Fonti per l’aggiornamento sul sostegno agli operatori
+
+- [OMS: raccomandazione sul debriefing psicologico dopo un trauma recente (2012)](https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/other-significant-emotional-and-medical-unexplained-somatic-complaints/psychological-debriefing-in-people-exposed-to-a-recent-traumatic-event).
+- [CDC/NIOSH: stress da incidenti traumatici e cura dei soccorritori (2026)](https://www.cdc.gov/niosh/stress/traumaticincidentstress/index.html).
