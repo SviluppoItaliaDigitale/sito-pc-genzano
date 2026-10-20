@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-20T13:02:01+00:00",
+  "generato": "2026-10-20T21:21:49+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 167,
   "scaduti_scartati": 3,
-  "in_corso": 39,
+  "in_corso": 57,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -296,7 +296,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.257"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Friuli Venezia Giulia",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -322,7 +322,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.231"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Friuli Venezia Giulia",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -374,7 +374,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.023"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lazio",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -426,7 +426,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.214"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lazio",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -751,7 +751,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.036"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -764,7 +764,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.020"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -803,7 +803,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.227"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -816,7 +816,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.211"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Pioggia",
    "livello": "arancione",
@@ -1180,7 +1180,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.041"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Friuli Venezia Giulia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -1206,7 +1206,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.232"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Friuli Venezia Giulia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -1765,7 +1765,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.025"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -1804,7 +1804,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.216"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -1921,7 +1921,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.038"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Trentino Alto Adige",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -1960,7 +1960,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.229"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Trentino Alto Adige",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -1999,7 +1999,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.055"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -2038,7 +2038,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.246"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -2051,7 +2051,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.011"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -2064,7 +2064,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.206"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Pioggia",
    "livello": "gialla",
