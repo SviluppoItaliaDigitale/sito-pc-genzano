@@ -1,0 +1,46 @@
+name: Lettura del documento pubblico della rassegna
+on:
+  push:
+    branches: ['chatgpt/lettura-albo-20261020']
+    paths: ['.github/workflows/lettura-albo-20261020.yml']
+permissions:
+  contents: read
+jobs:
+  lettura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Leggi pagina e documento ufficiale
+        shell: bash
+        run: |
+          pip install --quiet requests beautifulsoup4
+          python3 - <<'PY'
+          import requests,urllib.parse,subprocess,pathlib
+          from bs4 import BeautifulSoup
+          base='https://genzanodiroma.trasparenza-valutazione-merito.it'
+          url=base+'/web/trasparenza/papca-ap/-/papca/display/10580405'
+          session=requests.Session()
+          r=session.get(url,timeout=45);r.raise_for_status()
+          soup=BeautifulSoup(r.content,'html.parser')
+          for s in soup(['script','style']):s.decompose()
+          print('PAGINA UFFICIALE:',url)
+          print(soup.get_text(' ',strip=True))
+          links=[]
+          for a in soup.select('a[href]'):
+              href=a.get('href','');label=a.get_text(' ',strip=True)+' '+a.get('title','')
+              if any(x in (href+' '+label).lower() for x in ['download','documento principale','.pdf']):
+                  u=urllib.parse.urljoin(url,href)
+                  if urllib.parse.urlparse(u).hostname==urllib.parse.urlparse(base).hostname:
+                      print('DOCUMENTO:',label,u);links.append(u)
+          letti=0
+          for i,u in enumerate(dict.fromkeys(links)):
+              z=session.get(u,timeout=45);z.raise_for_status()
+              if not z.content.startswith(b'%PDF'):continue
+              p=pathlib.Path('/tmp')/('atto-'+str(i)+'.pdf');p.write_bytes(z.content)
+              text=subprocess.run(['pdftotext','-layout',str(p),'-'],check=True,capture_output=True,text=True).stdout
+              print('TESTO INTEGRALE PDF:',u);print(text);letti+=1
+          if not letti:raise RuntimeError('Nessun PDF letto: verificare i collegamenti della pagina')
+          PY
