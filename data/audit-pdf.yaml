@@ -1,10 +1,10 @@
 ultimo_audit: '2026-10-17'
-totale: 66
+totale: 67
 riepilogo:
   ACCESSIBILE: 0
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 31
+  TERZO: 32
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -941,3 +941,19 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: NON_ACCESSIBILE
+
+- path: /allegati/2026/gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
+  file: gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
+  size_kb: 159.8
+  sha256: 31ce9b7bbe1f395b5270f7e970638c9ea3ec0dae70f6a23088c75a5f14c96f88
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 18061
+  origine: TERZO
+  origine_descrizione: 'Gazzetta Ufficiale della Repubblica Italiana: estratto del
+    testo legislativo originale'
+  verdict: TERZO
