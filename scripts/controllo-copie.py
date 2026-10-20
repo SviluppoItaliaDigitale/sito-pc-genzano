@@ -353,7 +353,9 @@ def _data_feed(s: str) -> dt.datetime | None:
 def voci_feed(xml: str) -> list[dict]:
     """Voci di un feed RSS 2.0 o Atom: titolo, link, data, testo, fonte."""
     try:
-        radice = ET.fromstring(xml.encode("utf-8"))
+        # Alcuni feed antepongono una riga vuota o un BOM alla dichiarazione
+        # XML. Normalizza solo il prefisso, senza cambiare il contenuto.
+        radice = ET.fromstring(xml.lstrip("\ufeff \t\r\n").encode("utf-8"))
     except ET.ParseError:
         return []
     out = []
@@ -787,7 +789,23 @@ def main() -> int:
     ap.add_argument("--senza-gnews", action="store_true", help="salta la ricerca su Google News")
     ap.add_argument("--fonti-ko", type=Path,
                     help="file in cui elencare le fonti che non hanno risposto (scritto solo se ce ne sono)")
+    ap.add_argument("--self-test", action="store_true", help="verifica il lettore RSS senza richieste esterne")
     args = ap.parse_args()
+
+    if args.self_test:
+        esempio = ('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'
+                   '<item><title>Prova</title><link>https://example.invalid/notizia</link>'
+                   '</item></channel></rss>')
+        for prefisso in ("", "\n", "\ufeff", "\ufeff \r\n\t"):
+            voci = voci_feed(prefisso + esempio)
+            if len(voci) != 1 or voci[0]["titolo"] != "Prova":
+                raise SystemExit(f"Lettura RSS errata con prefisso {prefisso!r}")
+        if voci_feed('<html><body>Errore della fonte</body></html>'):
+            raise SystemExit('Una pagina HTML è stata accettata come feed')
+        if voci_feed('<rss><channel>'):
+            raise SystemExit('Un feed incompleto è stato accettato')
+        print('OK: RSS con spazi e BOM; pagine HTML e XML incompleto restano esclusi.')
+        return 0
 
     ora = S.adesso()
     nostri, formule = nostri_articoli(ora)
