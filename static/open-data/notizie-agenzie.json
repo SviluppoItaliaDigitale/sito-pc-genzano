@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-20T13:01:51+00:00",
+  "generato": "2026-10-20T17:54:51+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-20T12:57:22+00:00",
+   "data": "2026-10-20T17:36:09+00:00",
    "fonte": "ANSA",
-   "titolo": "Zelensky a Oslo per colloqui con Witkoff. Il Cremlino: 'Serve un leader ucraino legittimo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/droni-russi-sullautostrada-kiev-odessa-almeno-3-morti.-zelensky-a-rubio-risolvere_6d053c09-807c-406e-8549-fd712ebcc9f0.html"
+   "titolo": "Via libera al decreto sicurezza, nasce il reato di partecipazione violenta a una manifestazione. Meloni: 'Fermo preventivo anche per i minori'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/20/via-libera-al-decreto-sicurezza-nasce-il-reato-di-partecipazione-violenta-a-una-manifestazione._b5702cd2-a73e-4734-8495-07184704c255.html"
   },
   {
-   "data": "2026-10-20T12:34:09+00:00",
+   "data": "2026-10-20T17:08:05+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Torna il maltempo in Campania e per alcune aree è allerta arancione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/torna-il-maltempo-in-campania-e-per-alcune-aree-e-allerta-arancione_688a0fe0-26b7-4d64-8e41-b67eac9176b2.html"
+   "titolo": "Muro dei sindacati di polizia sulla norma per i militari: 'Torsione autoritaria'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/muro-dei-sindacati-di-polizia-sulla-norma-per-i-militari-torsione-autoritaria_4573be30-12ec-48a7-830c-fd83513b3ed4.html"
   },
   {
-   "data": "2026-10-20T12:34:01+00:00",
+   "data": "2026-10-20T17:08:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "I ragazzi della Barona, quartiere di Marracash: \"Qua non abbiamo niente\"",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/20/i-ragazzi-della-barona-quartiere-di-marracash-qua-non-abbiamo-niente_82f13fb1-86e7-4cc5-ab1a-160fd77643f1.html"
+  },
+  {
+   "data": "2026-10-20T17:00:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Problemi al cloud di Google, down di Revolut e altri servizi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/problemi-al-cloud-di-google-down-di-revolut-e-altri-servizi_f104840f-8ccb-42a6-98fd-4cf242097bd8.html"
+  },
+  {
+   "data": "2026-10-20T16:56:05+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Allerta arancione per temporali estesa in Liguria fino a domani",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/allerta-arancione-per-temporali-estesa-in-liguria-fino-a-domani_a493b23a-1d67-4043-a3ea-a78c4f96a158.html"
+   "titolo": "La giudice trovata morta, l'autopsia conferma lo strangolamento",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/la-giudice-trovata-morta-lautopsia-conferma-lo-strangolamento_7951a3df-918b-475d-ba65-19b0a07b31d7.html"
   },
   {
-   "data": "2026-10-20T12:25:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiorella Mannoia, l'amore per i videogiochi e le sfide a burraco con... Giorgio Panariello",
-   "url": "https://www.adnkronos.com/spettacoli/fiorella-mannoia-videogiochi-che-tempo-che-fa_67nt99XJh13WkMr5XPD6jq"
-  },
-  {
-   "data": "2026-10-20T12:20:57+00:00",
+   "data": "2026-10-20T16:52:36+00:00",
    "fonte": "ANSA",
-   "titolo": "Pg Cassazione: 'No allo stop dell'ex Ilva, bilanciare salute e produzione'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/20/pg-cassazione-no-allo-stop-dellex-ilva-bilanciare-salute-e-produzione_0e7d04a1-cfb5-4eac-aeb1-08c4254400e1.html"
+   "titolo": "Rush finale per le midterm, rischi di 'risacca rossa' per Trump",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/20/ansa-rush-finale-per-le-midterm-rischi-di-risacca-rossa-per-trump_03133b18-da8e-496f-96e1-93ca3573c608.html"
   },
   {
-   "data": "2026-10-20T12:15:32+00:00",
+   "data": "2026-10-20T16:51:24+00:00",
    "fonte": "ANSA",
-   "titolo": "Autotrasportatori, prosegue la protesta nel Sud. Rixi: 'Da oggi disponibili 480 milioni'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/autotrasportatori-prosegue-la-protesta-nel-sud-italia.-salvini-subito-i-fondi-stanziati_3a6127ff-0b4c-4c40-8785-32cfb644514b.html"
+   "titolo": "Il pg di Cassazione: 'No allo stop dell'ex Ilva, bilanciare salute e produzione'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/20/il-pg-di-cassazione-no-allo-stop-dellex-ilva-bilanciare-salute-e-produzione_0e7d04a1-cfb5-4eac-aeb1-08c4254400e1.html"
   },
   {
-   "data": "2026-10-20T12:11:56+00:00",
+   "data": "2026-10-20T16:49:10+00:00",
    "fonte": "ANSA",
-   "titolo": "Oggi il Cdm sulla sicurezza, domani la Cgil in piazza a Milano 'contro le disuguaglianze'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/20/oggi-il-cdm-sulla-sicurezza-domani-la-cgil-in-piazza-a-milano-contro-le-diseguaglianze_b5702cd2-a73e-4734-8495-07184704c255.html"
+   "titolo": "In Sicilia revocato il fermo dei tir. Rixi: 'Da oggi disponibili 480 milioni'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/in-sicilia-revocato-il-fermo-dei-tir.-rixi-da-oggi-disponibili-480-milioni_3a6127ff-0b4c-4c40-8785-32cfb644514b.html"
   },
   {
-   "data": "2026-10-20T12:11:06+00:00",
+   "data": "2026-10-20T16:35:18+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Morte avvelenate, si moltiplicano segnalazioni piante di ricino in Molise",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/morte-avvelenate-si-moltiplicano-segnalazioni-piante-di-ricino-in-molise_b9046bcb-d5d5-48ea-8d81-2d7f4a496c27.html"
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-10-20T12:08:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "McEnroe incorona Alcaraz: \"È la cosa migliore successa al tennis negli ultimi 10 anni\"",
-   "url": "https://www.adnkronos.com/sport/mcenroe-esalta-alcaraz-e-dimentica-sinner_7EcCv5vbgalJjgB2zUgb0Z"
-  },
-  {
-   "data": "2026-10-20T11:59:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lease 2026, il 28 e 29 ottobre torna a Milano il Salone del Leasing organizzato da Assilea",
-   "url": "https://www.adnkronos.com/economia/lease-2026-il-28-e-29-ottobre-torna-a-milano-il-salone-del-leasing-organizzato-da-assilea_7D98oEMW1wVqZXPhzPxnhy"
-  },
-  {
-   "data": "2026-10-20T11:58:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Non solo Marracash, da Ghali a Kid Yugi: la voce dei rapper sugli scontri a Milano",
-   "url": "https://www.adnkronos.com/cronaca/scontri-milano-marracash-kid-yugi-rapper-cosa-hanno-detto_4ZhF6qxGAWp3LgtVz0tyO8"
-  },
-  {
-   "data": "2026-10-20T11:53:22+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Lite a scuola, 14enne accoltella un coetaneo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/lite-a-scuola-14enne-accoltella-coetaneo_d6cbc979-63dd-4614-bd59-bd456c64f494.html"
-  },
-  {
-   "data": "2026-10-20T11:48:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fabrizio Corona contro Mediaset: \"Non ho paura, mi prendo responsabilità di quello che ho detto\"",
-   "url": "https://www.adnkronos.com/cronaca/fabrizio-corona-mediaset-falsissimo-tribunale_3WkMYEPjlwda2m2T3vRgOw"
-  },
-  {
-   "data": "2026-10-20T11:48:55+00:00",
+   "data": "2026-10-20T16:35:01+00:00",
    "fonte": "ANSA",
-   "titolo": "Seul, nessuna conferma sulle voci della morte di Kim Jong-un",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/seul-nessuna-conferma-sulle-voci-della-morte-di-kim-jong-un_763b8bae-5271-4ff4-9284-500c0a3d6ea6.html"
-  },
-  {
-   "data": "2026-10-20T11:46:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Totti e la prima visita alla prostata: \"Dottore, cosa vorrebbe fare con questo arnese...?\"",
-   "url": "https://www.adnkronos.com/sport/francesco-totti-oltre-libro-visita-prostata_1Wdv0oZGdvVc1rS0kw5LVD"
-  },
-  {
-   "data": "2026-10-20T11:43:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Beppe Signori torna in azzurro come capodelegazione dell'Under 20: dal calcioscommesse all’assoluzione, la seconda vita del bomber",
-   "url": "https://www.adnkronos.com/sport/beppe-signori-capodelegazione-nazionale-under-20_3hvwFP8H9m4pltSv458kid"
-  },
-  {
-   "data": "2026-10-20T11:40:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Le donne studiano più degli uomini, ma hanno meno opportunità di carriera",
-   "url": "https://www.ansa.it/donne/notizie/2026/10/20/le-donne-studiano-piu-degli-uomini-ma-hanno-meno-opportunita-di-carriera_7af05188-a016-4d3e-8dfe-5d930ab82ee6.html"
-  },
-  {
-   "data": "2026-10-20T11:40:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Caso Shalabayeva, il pg di Cassazione chiede un nuovo appello per i cinque poliziotti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/shalabayeva-pg-cassazione-chiede-nuovo-appello-per-i-cinque-poliziotti_fb51835e-0037-4bf3-b266-2d52a4efe059.html"
-  },
-  {
-   "data": "2026-10-20T11:37:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meteo in peggioramento, arrivano piogge e temporali",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/meteo-graduale-peggioramento.-domani-piogge-e-temporali_cb772965-4f3e-40c4-8533-95c70b06912b.html"
-  },
-  {
-   "data": "2026-10-20T11:37:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Non andate in Italia, ci sono le rivolte\": il messaggio dell'Iran ai cittadini",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-messaggio-viaggi-italia-milano_2AV8IClUOFNmQ571xBNMwY"
-  },
-  {
-   "data": "2026-10-20T11:36:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "La rabbia dei giovanissimi: 'E' l'unico modo per farci sentire'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/19/la-rabbia-dei-giovanissimi-e-lunico-modo-per-farci-sentire_b52a179e-da2b-4422-97a3-9cd27c39e190.html"
-  },
-  {
-   "data": "2026-10-20T11:36:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ranucci sceglie RaiNews, comunicata la decisione alla Rai",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/20/ranucci-sceglie-rainews-comunicata-la-decisione-alla-rai_36679a45-ae67-41fb-b1b2-5d7cd82a6cfd.html"
-  },
-  {
-   "data": "2026-10-20T11:36:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Al via la maxi causa Mediaset e Berlusconi contro Corona, lui 'non ho paura'",
+   "titolo": "Al via la maxi causa Mediaset-Berlusconi contro Corona. Lui: 'Non ho paura'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/al-via-la-maxi-causa-mediaset-e-berlusconi-contro-corona-lui-non-ho-paura_1294fc95-f756-4369-bed0-22eed28e7dbf.html"
   },
   {
-   "data": "2026-10-20T11:35:21+00:00",
+   "data": "2026-10-20T16:34:51+00:00",
    "fonte": "ANSA",
-   "titolo": "Il Regno Unito invia caccia della Raf in Arabia Saudita contro i raid degli Houthi",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/gb-invia-caccia-raf-in-arabia-saudita-contro-i-raid-degli-houthi_3ec6e646-9865-4a85-ac7d-12f3d4eaaca9.html"
+   "titolo": "I caccia britannici in volo, al fianco di Riad contro gli Houthi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/i-caccia-britannici-in-volo-al-fianco-di-riad-contro-gli-houthi_3ec6e646-9865-4a85-ac7d-12f3d4eaaca9.html"
   },
   {
-   "data": "2026-10-20T11:33:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Urtato da camion mentre lavora su cestello, muore operaio 47enne",
-   "url": "https://www.adnkronos.com/cronaca/infortunio-sul-lavoro-morto-operaio-sarezzo-brescia_2OkLLNvHP3RCihAQxwuQhH"
-  },
-  {
-   "data": "2026-10-20T11:32:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caserta, 14enne accoltellato a scuola: arrestato coetaneo",
-   "url": "https://www.adnkronos.com/cronaca/caserta-lite-studenti-14enne-accoltellato-arrestato_42xEhj0QIGckGPfnMOcE24"
-  },
-  {
-   "data": "2026-10-20T11:31:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Crosetto, i fatti di Milano frutto della guerra ibrida",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/crosetto-i-fatti-di-milano-frutto-della-guerra-ibrida_77b9fbe3-78f5-41c7-9792-60c7ab67f049.html"
-  },
-  {
-   "data": "2026-10-20T11:28:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Operaio di 47 anni resta schiacciato in fabbrica e muore in ospedale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/operaio-di-47-anni-resta-schiacciato-in-fabbrica-e-muore-in-ospedale_2f34cc1b-0208-425e-82ec-73d3836e6bde.html"
-  },
-  {
-   "data": "2026-10-20T11:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Google Cloud down, siti e app non funzionano: problemi anche in Italia",
-   "url": "https://www.adnkronos.com/internazionale/esteri/google-cloud-down-oggi-guasto-cosa-succede_6W3EBxYAnYLDJ2GJXVk4FX"
-  },
-  {
-   "data": "2026-10-20T11:19:45+00:00",
+   "data": "2026-10-20T16:29:46+00:00",
    "fonte": "ANSA",
-   "titolo": "Tajani: 'Contributo alla manovra deve venire da tutto il mondo della finanza, anche da Cdp'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/20/tajani-contributo-alla-manovra-deve-venire-da-tutto-il-mondo-della-finanza_03e8ab0a-48e8-4164-bbc5-edee2cfbfbf4.html"
+   "titolo": "Controllore di un bus aggredito dagli studenti, la testa spinta sull'asfalto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/controllore-bus-aggredito-da-studenti-testa-spinta-sullasfalto_c7fafcce-0765-4347-8336-e5474695df8b.html"
+  },
+  {
+   "data": "2026-10-20T16:29:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ranucci sceglie Rainews, delega per gli approfondimenti ma nessuna conduzione",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/20/ranucci-sceglie-rainews-comunicata-la-decisione-alla-rai_36679a45-ae67-41fb-b1b2-5d7cd82a6cfd.html"
+  },
+  {
+   "data": "2026-10-20T16:29:07+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Torino, la scuola del 'Libro Cuore' rinnovata coi fondi Pnrr",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/torino-la-scuola-del-libro-cuore-rinnovata-coi-fondi-pnrr_40a6bfcd-e3f5-4346-82c9-0c1ebbd0c087.html"
+  },
+  {
+   "data": "2026-10-20T16:28:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Modella fan di Bolsonaro diventa virale, ma è creata dall'IA",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/modella-fan-di-bolsonaro-diventa-virale-ma-e-creata-dallia_5253f172-2e4d-48b6-8b82-77acd6e96a8b.html"
+  },
+  {
+   "data": "2026-10-20T16:25:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alla Scala salta la prima del Faust per lo sciopero dei lavoratori",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/10/20/alla-scala-salta-la-prima-del-faust-per-lo-sciopero-dei-lavoratori_ec2a650e-c953-48f7-8724-1def6aab699c.html"
+  },
+  {
+   "data": "2026-10-20T16:22:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scontri a Milano, 4 maggiorenni restano in carcere e uno va ai domiciliari",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/scontri-a-milano-4-maggiorenni-restano-in-carcere-e-uno-va-ai-domiciliari_4950f746-3842-4546-8b28-1f898c6b7afa.html"
+  },
+  {
+   "data": "2026-10-20T16:22:27+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La ricetta dei 103 anni, zia Teresina prepara ancora i culurgiones a mano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/la-ricetta-dei-103-anni-zia-teresina-prepara-ancora-i-culurgiones-a-mano_14f6052a-7293-4e4f-8ffa-fb815f726e08.html"
+  },
+  {
+   "data": "2026-10-20T16:13:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuovo dramma tra i Kennedy, morta Kyle, nipote di Bob e Ethel Kennedy",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/nuovo-dramma-tra-i-kennedy-morta-kyle-nipote-di-bob-e-ethel-kennedy_e1e44281-ba2d-4b76-bc8b-83ac26c72ae3.html"
+  },
+  {
+   "data": "2026-10-20T16:08:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra, Messina: 'Non c'è solo un settore che deve pagare, dalle banche 25 miliardi di imposte'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/20/manovra-messina-non-ce-solo-un-settore-che-deve-pagare-dalle-banche_f08b924f-f967-434f-b1b7-bd704cf60d09.html"
+  },
+  {
+   "data": "2026-10-20T16:03:41+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morte avvelenate dalla ricina, Gianni Di Vita: 'Sono esasperato, non ce la faccio più'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/morte-avvelenate-dalla-ricina-gianni-di-vita-sono-esasperato-non-ce-la-faccio_8d9fb73c-f380-4576-a977-48784951be87.html"
+  },
+  {
+   "data": "2026-10-20T16:02:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dopo gli scontri riaprono i negozi del lusso in centro a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/dopo-gli-scontri-riaprono-i-negozi-del-lusso-in-centro-a-milano_b6f93de6-7915-4cee-820a-4d2adf608b67.html"
+  },
+  {
+   "data": "2026-10-20T16:01:34+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Garante Infanzia, 'punizioni per minori violenti, ma a chi giova il caos?'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/garante-infanzia-punizioni-per-minori-violenti-ma-a-chi-giova-il-caos_78f1b777-7972-46d0-b968-6d53513b4bb5.html"
+  },
+  {
+   "data": "2026-10-20T15:58:39+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Gianni Di Vita, sono esasperato, non ce la faccio più",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/gianni-di-vita-sono-esasperato-non-ce-la-faccio-piu_e002b8eb-94c8-4de6-9d0a-10673d25a48a.html"
+  },
+  {
+   "data": "2026-10-20T15:57:33+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Impazzano le fake sui social, fra cortei fantasma e false aggressioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/impazzano-i-fake-sui-social-fra-cortei-fantasma-e-false-aggressioni_8681580e-40c2-4f4b-991f-f1452d7b18ca.html"
+  },
+  {
+   "data": "2026-10-20T15:48:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "In corso l'incontro tra Zelensky e Witkoff a Oslo. Il Nyt: 'Trump vuole imporgli l'intesa'. Ancora raid",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/in-corso-lincontro-tra-zelensky-e-witkoff-a-oslo.-il-nyt-trump-vuole-imporgli_6d053c09-807c-406e-8549-fd712ebcc9f0.html"
+  },
+  {
+   "data": "2026-10-20T15:45:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Da Caivano ai 'maranza', le strette del governo sulla sicurezza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/da-caivano-ai-maranza-le-strette-del-governo-sulla-sicurezza_b853ac52-7ff4-4917-8feb-8d05fef3c411.html"
+  },
+  {
+   "data": "2026-10-20T15:42:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bonus mamme 2026, al via le domande. Come presentarle: le cose da sapere",
+   "url": "https://www.ansa.it/donne/notizie/2026/10/20/bonus-mamme-2026-al-via-domande.-come-presentarle-le-cose-da-sapere_0bf715e9-5aa2-4e8c-9263-f9a0665488a4.html"
+  },
+  {
+   "data": "2026-10-20T15:39:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Parigi annuncia 149 persone incarcerate per le violenze e i saccheggi in Francia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/20/parigi-annuncia-149-persone-incarcerate-per-le-violenze-e-i-saccheggi-in-francia_bedf84b0-ad4d-48a4-add6-f7d5d2f2b300.html"
+  },
+  {
+   "data": "2026-10-20T15:28:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Caso Shalabayeva, il pg di Cassazione chiede un nuovo appello per i cinque poliziotti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/shalabayeva-pg-cassazione-chiede-nuovo-appello-per-i-cinque-poliziotti_fb51835e-0037-4bf3-b266-2d52a4efe059.html"
   }
  ]
 }
