@@ -22,6 +22,11 @@ name: Controllo settimanale delle copie
 # Scaglionato lunedì 07:47 UTC (fuori dagli altri controlli del lunedì).
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/controllo-copie.py'
+      - '.github/workflows/controllo-copie.yml'
   schedule:
     - cron: '47 7 * * 1'
   workflow_dispatch:
@@ -40,6 +45,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Verifica il lettore dei feed
+        run: python3 scripts/controllo-copie.py --self-test
 
       - name: Cerca le copie degli articoli recenti
         env:
