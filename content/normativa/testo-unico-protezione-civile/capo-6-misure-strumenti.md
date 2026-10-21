@@ -22,6 +22,10 @@ Disciplina il **Fondo regionale** di protezione civile, con cui lo Stato concorr
 
 Definisce gli **strumenti organizzativi** di cui il Servizio nazionale si avvale per realizzare le proprie attività: modalità di impiego delle risorse umane e strumentali, raccordo tra componenti e strutture operative, procedure amministrative dedicate. L'articolo **46 bis** integra il Capo con disposizioni sulle **procedure di protezione civile**, per snellire e rendere più efficaci gli interventi.
 
+## Una modifica in arrivo (non ancora vigente)
+
+Il 21 ottobre 2026 il Parlamento ha approvato in via definitiva la legge «Disposizioni in materia di protezione civile» (atto Camera 3076), che inserirà in questo Capo, prima dell'articolo 43, due nuovi articoli: il **42-*bis*** (linee guida nazionali su formazione e addestramento) e il **42-*ter*** (responsabilità penale colposa di autorità, operatori e volontari, limitata alla colpa grave quando sono state rispettate le linee guida o le buone pratiche). La legge non è ancora in vigore: attende la promulgazione del Presidente della Repubblica e la pubblicazione in Gazzetta Ufficiale. Aggiorneremo questa pagina con il commento ai nuovi articoli non appena sarà vigente. [Approfondisci sul nostro sito](/comunicazioni/2026-10-21-legge-protezione-civile-responsabilita-volontari/).
+
 ## Perché questo Capo conta
 
 Dietro ogni mezzo, ogni esercitazione, ogni corso di formazione e ogni intervento c'è una **copertura finanziaria** prevista dalla legge. Il Capo VI è la parte del Codice che spiega **con quali risorse** il sistema si regge: il Fondo per la prevenzione (art. 43), quello per le emergenze nazionali (art. 44) e quello regionale (art. 45) sono i tre pilastri economici del Servizio nazionale.

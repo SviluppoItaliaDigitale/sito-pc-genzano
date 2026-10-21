@@ -9,11 +9,24 @@ image: "/images/2026-11-01-ognissanti-cimiteri-viabilita.webp"
 image_alt: "Ingresso del cimitero comunale di Genzano con fila di persone con fiori e auto in parcheggio durante Ognissanti"
 scadenza: "2026-11-02"
 area: "Genzano di Roma"
-allegati: []
+allegati:
+  - titolo: "Ordinanza dirigenziale n. 150/2026 — disciplina della circolazione per la Commemorazione dei Defunti"
+    url: "/allegati/2026/comune-genzano-ordinanza-150-2026-commemorazione-defunti.pdf"
+    dimensione: "PDF — 3 pagine"
 draft: false
 ---
 
 Oggi, **1° novembre**, **Ognissanti**, e domani, **2 novembre**, **commemorazione dei defunti**, sono giornate di forte afflusso ai **cimiteri**. A Genzano di Roma, come in altri comuni dei Castelli, si registrano maggior traffico e raduni di persone. Qualche indicazione per viverle in **serenità** e **sicurezza**.
+
+## L'ordinanza del Comune sulla circolazione
+
+Il Comando di Polizia Locale e Protezione Civile ha firmato l'**ordinanza dirigenziale n. 150 del 21 ottobre 2026**, che disciplina temporaneamente la circolazione intorno ai due cimiteri:
+
+- **cimitero nuovo**, viale Francia, dall'ingresso del parcheggio fino all'incrocio con piazza Cina, direzione centro urbano: divieto di sosta con rimozione (esclusi i veicoli autorizzati) dalle **8:00 di sabato 31 ottobre** alle **18:00 di lunedì 2 novembre**;
+- **cimitero vecchio**, viale Francia, nel tratto davanti all'ingresso in direzione Nemi, dall'attraversamento pedonale fino al parcheggio Paolini: divieto di sosta con rimozione dalle **8:00 di venerdì 30 ottobre** alle **18:00 di martedì 3 novembre**, con lo spazio riservato al passaggio pedonale e transennato;
+- **rampa di accesso al cimitero vecchio**: divieto di sosta con rimozione dalle 8:00 del 31 ottobre alle 18:00 del 2 novembre, salvo i posti per persone con disabilità riservati a chi ha il contrassegno rilasciato dal Comune.
+
+Nei giorni dell'ordinanza, la ditta Paolini mette a disposizione gratuitamente, come parcheggio non custodito, lo spazio davanti al cimitero vecchio. La segnaletica è installata e rimossa dal personale comunale; la vigilanza spetta alla Polizia Locale e agli altri organi di polizia stradale.
 
 ## La viabilità nei pressi dei cimiteri
 
@@ -129,7 +142,8 @@ I cimiteri italiani sono gestiti dal **Comune**:
 
 ## Per approfondire
 
-- [Ora solare — sicurezza serale](/comunicazioni/2026-10-26-ora-solare-primo-giorno-buio-alle-17/)
-- [Sicurezza stradale](/comunicazioni/2026-10-30-halloween-sicurezza-bambini/)
+- Sul nostro sito: [Ora solare — sicurezza serale](/comunicazioni/2026-10-26-ora-solare-primo-giorno-buio-alle-17/) · [Sicurezza stradale](/comunicazioni/2026-10-30-halloween-sicurezza-bambini/)
+- Fonte primaria: [ordinanza n. 150/2026 sull'Albo Pretorio del Comune di Genzano di Roma](https://genzanodiroma.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/10584784)
+- Copia sul sito: [testo dell'ordinanza n. 150/2026](/allegati/2026/comune-genzano-ordinanza-150-2026-commemorazione-defunti.pdf)
 
 In emergenza: **112**.
