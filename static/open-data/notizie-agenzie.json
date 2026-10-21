@@ -5,22 +5,46 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-20T21:21:40+00:00",
+  "generato": "2026-10-21T00:02:44+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-10-20T22:20:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, rischio iter al cardiopalma in Parlamento: malumori delle opposizioni",
+   "url": "https://www.adnkronos.com/economia/manovra-legge-di-bilancio-iter-parlamento-tappe-misure_1LUOH1UpyokMjhf7B2XYg"
+  },
+  {
+   "data": "2026-10-20T22:19:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia nella morsa del maltempo, perturbazione in arrivo con piogge e nubifragi: le previsioni di Betti (Cnr)",
+   "url": "https://www.adnkronos.com/cronaca/maltempo-pioggia-nubifragi-previsioni-21-ottobre-giulio-betti_2RrLJIiIIWdi6kdQaBDbLz"
+  },
+  {
+   "data": "2026-10-20T22:18:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zelensky avverte gli Usa: \"Incontro tra Trump, Putin e Xi? Niente sull'Ucraina senza l'Ucraina\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-scontro-zelensky-trump-putin_4FVQF2i0Jgf37muBVwUiiw"
+  },
+  {
+   "data": "2026-10-20T22:05:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Decreto cortei, per minori fermo preventivo e subito imputabilità: la stretta del governo dopo i disordini",
+   "url": "https://www.adnkronos.com/politica/decreto-cortei-misure-violenze-minori-cosa-cambia_7cr0qqyEoYnZZTUBtcdowc"
+  },
+  {
+   "data": "2026-10-20T21:19:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Prime vittorie in Champions League per Roma e Napoli",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/20/prime-vittorie-in-champions-league-per-roma-e-napoli_fd237cc7-5007-4753-96f9-26189c142411.html"
+  },
+  {
    "data": "2026-10-20T21:05:45+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Vasto incendio nel Trapanese, sgomberate alcune abitazioni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/vasto-incendio-nel-trapanese-sgomberate-alcune-abitazioni_f660fa1d-ad6e-485a-9e5c-f7cf6b35cda8.html"
-  },
-  {
-   "data": "2026-10-20T20:53:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Champions League: Roma-Bratislava 4-0, Napoli-Bodo 4-2",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/20/champions-league-roma-bratislava-4-0-napoli-bodo-4-2_fd237cc7-5007-4753-96f9-26189c142411.html"
   },
   {
    "data": "2026-10-20T20:46:16+00:00",
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Accoltella compagno in classe, 14enne arrestato nel Casertano",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/accoltella-compagno-in-classe-14enne-arrestato-nel-casertano_d6cbc979-63dd-4614-bd59-bd456c64f494.html"
-  },
-  {
-   "data": "2026-10-20T18:10:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, Messina: \"C'è accordo triennale con Meloni, ci ho creduto\"",
-   "url": "https://www.adnkronos.com/economia/carlo-messina-intesa-intervento-coldiretti_6SXeXuxRW4RJhF3nwLHzbm"
-  },
-  {
-   "data": "2026-10-20T18:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions League, Roma-Slovan Bratislava 4-0, gara dominata e poker giallorosso",
-   "url": "https://www.adnkronos.com/sport/champions-league-roma-slovan-bratislava_78BzsQwxzP3COSnhiAMGpK"
-  },
-  {
-   "data": "2026-10-20T18:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions League, Napoli-Bodo Glimt 4-3, doppietta di McTominay",
-   "url": "https://www.adnkronos.com/sport/champions-league-napoli-bodo-glimt_2qCVTsfvKFy5PCkVLiUJjm"
-  },
-  {
-   "data": "2026-10-20T18:01:26+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Nordio, 'fino a 12 anni per chi usa social per organizzare gruppi piazze",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/20/nordio-fino-a-12-anni-per-chi-usa-social-per-organizzare-gruppi_7beeebd5-adaf-4196-9579-74c7a525511d.html"
   }
  ]
 }
