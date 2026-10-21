@@ -29,10 +29,15 @@ Verdict per ogni PDF:
 Uso:
     python3 scripts/audit-pdf-accessibilita.py [--write]
     python3 scripts/audit-pdf-accessibilita.py --check-inventario
+    python3 scripts/audit-pdf-accessibilita.py --aggiorna /manuali/manuale-protezione-civile.pdf
     --write             scrive data/audit-pdf.yaml (default: solo stampa report)
     --check-inventario  confronta data/audit-pdf.yaml con i PDF in static/
                         (aggiunti, tolti, sostituiti); exit = differenze.
                         Non serve PyMuPDF. Gira su ogni PR (validate-pr.yml).
+    --aggiorna PERCORSO rianalizza solo i PDF indicati e ne aggiorna le righe
+                        nell'inventario (un PDF che non c'è più ne esce); le
+                        altre righe restano come sono. Serve a chi rigenera un
+                        PDF, come genera-manuale-pdf.yml (dal 21/10/2026).
 
 Dal 17/10/2026 (audit esterno, rilievi R9 e R10): il verdetto ACCESSIBILE
 chiede anche titolo e lingua coerente, come diceva questa descrizione e il
@@ -244,7 +249,8 @@ def check_inventario() -> int:
         diff += 1
     if diff:
         print(f"\n{diff} differenza/e fra data/audit-pdf.yaml e i PDF in static/."
-              "\nRigenera con: python3 scripts/audit-pdf-accessibilita.py --write")
+              "\nRigenera con: python3 scripts/audit-pdf-accessibilita.py --write"
+              "\n(per uno o pochi PDF basta --aggiorna seguito dai loro percorsi)")
     else:
         print(f"Inventario PDF allineato: {len(presenti)} file.")
     return min(diff, 255)
@@ -264,16 +270,84 @@ def verdict(info: dict, origine_tipo: str) -> str:
     return "NON_ACCESSIBILE"  # 🔴 (pura scansione, OCR necessario)
 
 
+def ordine(path: str) -> list[str]:
+    """Stesso ordine di --write, che ordina i Path di static/ parte per parte."""
+    return path.strip("/").split("/")
+
+
+def aggiorna(percorsi: list[str]) -> int:
+    """Rianalizza solo i PDF indicati e aggiorna le loro righe nell'inventario.
+
+    Nasce il 21/10/2026: genera-manuale-pdf.yml aveva rigenerato il PDF del
+    manuale direttamente su main senza toccare l'inventario, e il controllo
+    --check-inventario fermava tutte le pull request. Le righe degli altri PDF
+    restano come sono e nello stesso ordine; riepilogo e totale si ricalcolano
+    su tutte le righe, come fa --write."""
+    dati = yaml.safe_load(DATA_FILE.read_text(encoding="utf-8")) or {}
+    righe = list(dati.get("documenti", []))
+    for grezzo in percorsi:
+        rel = grezzo.strip().lstrip("/")
+        if rel.startswith("static/"):
+            rel = rel[len("static/"):]
+        path = "/" + rel
+        pdf = STATIC / rel
+        if pdf.suffix.lower() != ".pdf":
+            sys.stderr.write(f"ERRORE: {grezzo} non è un PDF.\n")
+            return 2
+        presenti = [i for i, r in enumerate(righe) if r.get("path") == path]
+        if not pdf.is_file():
+            if not presenti:
+                sys.stderr.write(f"ERRORE: {path} non è in static/ né nell'inventario.\n")
+                return 2
+            righe = [r for r in righe if r.get("path") != path]
+            print(f"  tolto dall'inventario (non più pubblicato): {path}")
+            continue
+        info = analizza_pdf(pdf)
+        info["origine"], info["origine_descrizione"] = classifica_origine(info["path"])
+        info["verdict"] = verdict(info, info["origine"])
+        if presenti:
+            righe[presenti[0]] = info
+            righe = [r for i, r in enumerate(righe) if i == presenti[0] or r.get("path") != path]
+            stato = "aggiornato"
+        else:
+            dopo = [i for i, r in enumerate(righe) if ordine(r.get("path", "")) > ordine(path)]
+            righe.insert(dopo[0] if dopo else len(righe), info)
+            stato = "aggiunto"
+        print(f"  {stato}: {path} — {info['verdict']}, {info['pages']} pagine, {info['size_kb']} KB")
+
+    summary = {"ACCESSIBILE": 0, "PARZIALE": 0, "NON_ACCESSIBILE": 0,
+               "TERZO": 0, "ERRORE": 0}
+    for r in righe:
+        summary[r["verdict"]] += 1
+    from datetime import date
+    out = {
+        "ultimo_audit": str(date.today()),
+        "totale": len(righe),
+        "riepilogo": summary,
+        "documenti": righe,
+    }
+    DATA_FILE.write_text(yaml.safe_dump(out, allow_unicode=True,
+                                        sort_keys=False, default_flow_style=False),
+                         encoding="utf-8")
+    print(f"✏  Scritto {DATA_FILE.relative_to(REPO_ROOT)}: {len(righe)} PDF in inventario.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--write", action="store_true",
                     help="Scrivi data/audit-pdf.yaml (default: solo stampa)")
     ap.add_argument("--check-inventario", action="store_true",
                     help="Confronta l'inventario con i PDF in static/ (senza PyMuPDF)")
+    ap.add_argument("--aggiorna", nargs="+", metavar="PERCORSO",
+                    help="Rianalizza solo questi PDF (percorsi come nell'inventario, "
+                         "es. /manuali/manuale-protezione-civile.pdf) e aggiorna le loro righe")
     args = ap.parse_args()
     if args.check_inventario:
         return check_inventario()
     carica_fitz()
+    if args.aggiorna:
+        return aggiorna(args.aggiorna)
 
     pdfs = sorted(STATIC.rglob("*.pdf"))
     print(f"\n📚 Trovati {len(pdfs)} PDF in static/\n")
