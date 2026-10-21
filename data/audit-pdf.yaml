@@ -1,10 +1,10 @@
-ultimo_audit: '2026-10-17'
-totale: 67
+ultimo_audit: '2026-10-21'
+totale: 69
 riepilogo:
   ACCESSIBILE: 0
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 32
+  TERZO: 34
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -77,6 +77,34 @@ documenti:
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
+- path: /allegati/2026/camera-ac3076-protezione-civile-approvato-21-10-2026.pdf
+  file: camera-ac3076-protezione-civile-approvato-21-10-2026.pdf
+  size_kb: 195.7
+  sha256: 169cf893af8f6697f237577c363f04f257f98225bea9225e963757e0e9cc54b8
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 8
+  errors: []
+  text_chars_sample: 3849
+  origine: TERZO
+  origine_descrizione: Camera dei Deputati (atti parlamentari, disegni di legge)
+  verdict: TERZO
+- path: /allegati/2026/comune-genzano-ordinanza-150-2026-commemorazione-defunti.pdf
+  file: comune-genzano-ordinanza-150-2026-commemorazione-defunti.pdf
+  size_kb: 104.7
+  sha256: af95668a4efc237205ee0024269cc21f367ccb057d4939c1aed9f35fa8a2f5ba
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 3
+  errors: []
+  text_chars_sample: 5429
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
 - path: /allegati/2026/determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf
   file: determinazione-g13519-2026-convenzione-coordinamenti-volontariato-pc.pdf
   size_kb: 313.1
@@ -118,6 +146,21 @@ documenti:
   text_chars_sample: 6744
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /allegati/2026/gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
+  file: gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
+  size_kb: 159.8
+  sha256: 31ce9b7bbe1f395b5270f7e970638c9ea3ec0dae70f6a23088c75a5f14c96f88
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 18061
+  origine: TERZO
+  origine_descrizione: Gazzetta Ufficiale della Repubblica Italiana (testi legislativi
+    originali)
   verdict: TERZO
 - path: /allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
   file: ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
@@ -941,19 +984,3 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: NON_ACCESSIBILE
-
-- path: /allegati/2026/gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
-  file: gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
-  size_kb: 159.8
-  sha256: 31ce9b7bbe1f395b5270f7e970638c9ea3ec0dae70f6a23088c75a5f14c96f88
-  searchable: true
-  tagged: false
-  language: null
-  title: null
-  pages: 4
-  errors: []
-  text_chars_sample: 18061
-  origine: TERZO
-  origine_descrizione: 'Gazzetta Ufficiale della Repubblica Italiana: estratto del
-    testo legislativo originale'
-  verdict: TERZO
