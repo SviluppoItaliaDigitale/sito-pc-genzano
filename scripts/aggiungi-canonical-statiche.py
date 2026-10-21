@@ -3,7 +3,7 @@
 
 Le pagine generate da Hugo hanno già il canonical dal tema. Le pagine statiche
 — schede stampabili, giochi, kit, storie, quizpc, formazionepc,
-abili-a-proteggere — no: al 14/09/2026 ce l'avevano 2 file su 393. Senza
+abili-a-proteggere, moduli per le scuole — no: al 14/09/2026 ce l'avevano 2 file su 393. Senza
 canonical lo stesso foglio è raggiungibile a indirizzi diversi (produzione
 Aruba, copia GitHub Pages, varianti con `?stampa=1` o con parametri di
 tracciamento aggiunti da chi condivide il link) e per un motore di ricerca
@@ -43,6 +43,7 @@ FAMIGLIE = [
     "formazionepc",
     "abili-a-proteggere",
     "monitor",
+    "scuole",  # moduli per le scuole (liberatoria, circolare, convenzione PCTO…), dal 21/10/2026
 ]
 
 HA_CANONICAL = re.compile(r'<link[^>]+rel=["\']canonical["\']', re.I)

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schema di convenzione attuativa Scuola–Gruppo (PCTO) — fac-simile editabile</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/scuole/pcto/convenzione-attuativa/">
   <meta name="description" content="Fac-simile editabile di convenzione attuativa fra Istituto scolastico e Gruppo Comunale Volontari di Protezione Civile per percorsi PCTO ai sensi della L. 145/2018 e del D.M. 774/2019.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -23,26 +24,35 @@
     .firma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.4rem; }
     .firma-box { border-top: 1.4px solid var(--scheda-bordo); padding-top: 0.4rem; text-align: center; font-size: 0.85rem; color: var(--scheda-blu); font-weight: 600; min-height: 3.4rem; }
     .meta-disclaimer { font-size: 0.78rem; color: #555; font-style: italic; margin-top: 1rem; padding: 0.5rem 0.7rem; border-left: 3px solid var(--scheda-oro); background: #fff8e6; }
-    .nav-back { font-size: 0.85rem; margin-bottom: 1rem; }
-    .nav-back a { color: var(--scheda-blu); text-decoration: underline; }
-    @media print { .nav-back { display: none; } }
+    /* «Letto, approvato e sottoscritto» e le firme restano sullo stesso foglio */
+    .firme-insieme { break-inside: avoid; page-break-inside: avoid; }
+    @media print {
+      /* controllo fogli di stampa (21/10/2026): con l'intestazione delle schede e la
+         fascia delle affiliazioni la convenzione resta su tre fogli, con Inter,
+         Liberation Sans e DejaVu Sans, solo alla scala del 90%: al 100% sul quarto
+         foglio finivano le sole firme */
+      html { font-size: 90%; }
+    }
   </style>
 </head>
 <body>
-  <div class="nav-back">
+  <div class="scheda-toolbar no-print">
     <a href="/formazione/scuole-strumenti/">← Torna agli Strumenti per le scuole</a>
+    <span class="scheda-titolo">Schema di convenzione attuativa Scuola–Gruppo — Fac-simile A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
-  <article class="scheda">
+  <article class="scheda-page">
     <header class="scheda-header">
-      <div class="scheda-titolo">
-        <h1>Schema di convenzione attuativa Scuola–Gruppo</h1>
-        <p class="scheda-sub">Fac-simile editabile · Pacchetto B — Strumenti formali PCTO · L. 145/2018 + D.M. 774/2019</p>
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Schema di convenzione attuativa Scuola–Gruppo</h1>
+        <div class="scheda-sottotitolo">Fac-simile editabile · Pacchetto B — Strumenti formali PCTO · L. 145/2018 + D.M. 774/2019</div>
       </div>
-      <div class="scheda-logo">PC Genzano</div>
     </header>
 
     <section class="scheda-blocco">
-      <h2>Le parti</h2>
+      <h2 class="scheda-h2">Le parti</h2>
       <div class="form-row">
         <div class="form-field full"><label>Istituto scolastico (denominazione completa)</label><div class="input-line"></div></div>
       </div>
@@ -63,7 +73,7 @@
     </section>
 
     <section class="scheda-blocco">
-      <h2>Premesse</h2>
+      <h2 class="scheda-h2">Premesse</h2>
       <p style="font-size: 0.92rem; line-height: 1.55;">Vista la <strong>L. 30 dicembre 2018, n. 145</strong> (art. 1, comma 785), che ha ridefinito i Percorsi per le Competenze Trasversali e l'Orientamento (PCTO) sostituendo l'Alternanza Scuola Lavoro; visto il <strong>D.M. 4 settembre 2019, n. 774</strong>, recante le Linee guida operative; visto il <strong>D.Lgs. 15 aprile 2005, n. 77</strong>; visto il <strong>D.Lgs. 13 aprile 2017, n. 62</strong> sulla valutazione delle competenze; visto il <strong>D.Lgs. 9 aprile 2008, n. 81</strong> sulla salute e sicurezza nei luoghi di lavoro che equipara lo studente in PCTO al lavoratore (art. 2 c. 1 lett. a); vista la <strong>L. 20 agosto 2019, n. 92</strong> sull'Educazione Civica e la <strong>L. 17 febbraio 2025, n. 21</strong> sulla sicurezza nei luoghi di lavoro nell'Educazione Civica; <strong>si conviene quanto segue</strong>.</p>
     </section>
 
@@ -121,7 +131,7 @@
     <div class="articolo">
       <h3>Articolo 8 — Limiti, esclusioni, recesso</h3>
       <p>Il Soggetto ospitante <strong>non eroga compensi né rimborsi</strong> agli studenti: il PCTO è attività formativa, non rapporto di lavoro retribuito. Le parti possono recedere dalla presente convenzione con preavviso scritto di almeno 15 giorni. È fatta salva la prosecuzione dei percorsi già avviati al momento del recesso, fino al completamento del monte ore programmato.</p>
-      <p>L'ammissione di uno studente al percorso è subordinata all'<strong>incondizionabile giudizio del Coordinatore e del Consiglio Direttivo del Gruppo Comunale</strong>, che valutano la coerenza con la disponibilità operativa del Gruppo, il numero di volontari attivi disponibili al tutoraggio, le esigenze formative dello studente e le necessità del territorio.</p>
+      <p>L'ammissione di uno studente al percorso è subordinata al <strong>giudizio insindacabile del Coordinatore e del Consiglio Direttivo del Gruppo Comunale</strong>, che valutano la coerenza con la disponibilità operativa del Gruppo, il numero di volontari attivi disponibili al tutoraggio, le esigenze formative dello studente e le necessità del territorio.</p>
     </div>
 
     <div class="articolo">
@@ -129,11 +139,13 @@
       <p>Per qualunque controversia derivante dall'esecuzione della presente convenzione è competente in via esclusiva il Foro di Velletri.</p>
     </div>
 
-    <p style="font-size: 0.92rem; margin-top: 1rem;">Letto, approvato e sottoscritto.</p>
+    <div class="firme-insieme">
+      <p style="font-size: 0.92rem; margin-top: 1rem;">Letto, approvato e sottoscritto.</p>
 
-    <div class="firma-grid">
-      <div class="firma-box">Per l'Istituto scolastico<br><span style="font-weight: 400; font-size: 0.78rem; color: #555;">Il Dirigente Scolastico</span></div>
-      <div class="firma-box">Per il Gruppo Comunale Volontari PC<br><span style="font-weight: 400; font-size: 0.78rem; color: #555;">Il Coordinatore</span></div>
+      <div class="firma-grid">
+        <div class="firma-box">Per l'Istituto scolastico<br><span style="font-weight: 400; font-size: 0.78rem; color: #555;">Il Dirigente Scolastico</span></div>
+        <div class="firma-box">Per il Gruppo Comunale Volontari PC<br><span style="font-weight: 400; font-size: 0.78rem; color: #555;">Il Coordinatore</span></div>
+      </div>
     </div>
 
     <div class="meta-disclaimer">
