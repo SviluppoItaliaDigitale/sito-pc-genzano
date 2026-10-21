@@ -13,14 +13,14 @@ allegati: []
 draft: false
 ---
 
-Oggi **1° novembre**, **Ognissanti**, e domani **2 novembre**, **commemorazione dei defunti**, sono giornate di forte afflusso ai **cimiteri**. A Genzano di Roma, come in altri comuni dei Castelli, si registrano maggior traffico e raduni di persone. Qualche indicazione per viverle in **serenità** e **sicurezza**.
+Oggi, **1° novembre**, **Ognissanti**, e domani, **2 novembre**, **commemorazione dei defunti**, sono giornate di forte afflusso ai **cimiteri**. A Genzano di Roma, come in altri comuni dei Castelli, si registrano maggior traffico e raduni di persone. Qualche indicazione per viverle in **serenità** e **sicurezza**.
 
 ## La viabilità nei pressi dei cimiteri
 
 Tra le **9:00 e le 13:00** e tra le **15:00 e le 18:00** si registra maggior afflusso. In questi orari:
 
 - **rallentare** nelle vie d'accesso;
-- **parcheggiare** negli spazi predisposti (attenzione a divieti di sosta);
+- **parcheggiare** negli spazi predisposti (attenzione ai divieti di sosta);
 - **non occupare** aree riservate a disabili senza permesso;
 - **attenzione** agli anziani e ai pedoni con piante e fiori;
 - **non ostruire** i cancelli o le corsie di servizio.
@@ -31,8 +31,8 @@ Di norma la Polizia Locale è **presente** nei pressi degli accessi principali.
 
 Chi arriva in **autobus**:
 
-- **fermate** possono essere più affollate del solito;
-- **verificare** orari su sito del gestore;
+- le **fermate** possono essere più affollate del solito;
+- **verificare** gli orari sul sito del gestore;
 - **salire** ordinatamente dando precedenza agli anziani;
 - **rispettare** le priorità per disabili e persone con difficoltà.
 

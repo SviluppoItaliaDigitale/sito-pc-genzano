@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Oggi **4 novembre**, **Giorno dell'Unità Nazionale e delle Forze Armate**, ricorrenza istituita per ricordare la conclusione della Prima Guerra Mondiale (1918). Una data che ci dà l'occasione per riflettere sul **ruolo** che le **Forze Armate** italiane svolgono anche nel **sistema di Protezione Civile**.
+Oggi, **4 novembre**, si celebra il **Giorno dell'Unità Nazionale e delle Forze Armate**, ricorrenza istituita per ricordare la conclusione della Prima Guerra Mondiale (1918). Una data che ci dà l'occasione per riflettere sul **ruolo** che le **Forze Armate** italiane svolgono anche nel **sistema di Protezione Civile**.
 
 ## Le Forze Armate nella PC italiana
 
@@ -37,7 +37,7 @@ La loro attivazione avviene attraverso una **catena gerarchica** che coinvolge D
 - **personale** medico e logistico.
 
 ### Marina Militare
-- **navi** per evacuazioni marittime o supporto ad isole;
+- **navi** per evacuazioni marittime o supporto a isole;
 - **elicotteri** di soccorso in mare;
 - **sommozzatori** per ricerca dispersi in acqua;
 - **comandi** costieri integrati con Capitaneria di Porto.

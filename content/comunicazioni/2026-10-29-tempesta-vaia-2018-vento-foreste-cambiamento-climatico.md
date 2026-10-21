@@ -27,7 +27,7 @@ Vaia è la **più grande catastrofe forestale** della storia europea recente. Ha
 
 {{< foto src="/images/2026-10-29-vaia-bosco-abbattuto-dolomiti.webp"
          alt="Foto a colori del 2019: vista panoramica di un versante alpino dopo la tempesta Vaia. Migliaia di abeti rossi sono stesi al suolo, allineati nella stessa direzione, schiantati dalla violenza del vento. Sopra, la striscia di bosco intatto rimasta in piedi. Le piante a terra sono ancora con le radici in superficie, alcune giovani conifere superstiti emergono dal cumulo."
-         caption="Un versante delle Dolomiti dopo Vaia: migliaia di abeti rossi schiantati al suolo dal vento. Le foreste danneggiate dalla tempesta sono il punto di partenza di una crisi più lunga: l'attacco dei coleotteri scolitidi alle piante caduto, la successiva diffusione di parassiti agli alberi superstiti, la riduzione della funzione protettiva del bosco rispetto a frane e valanghe a valle." >}}
+         caption="Un versante delle Dolomiti dopo Vaia: migliaia di abeti rossi schiantati al suolo dal vento. Le foreste danneggiate dalla tempesta sono il punto di partenza di una crisi più lunga: l'attacco dei coleotteri scolitidi alle piante cadute, la successiva diffusione di parassiti agli alberi superstiti, la riduzione della funzione protettiva del bosco rispetto a frane e valanghe a valle." >}}
 
 ## Cosa è successo davvero
 

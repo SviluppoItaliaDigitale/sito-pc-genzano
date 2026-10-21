@@ -48,7 +48,7 @@ Tre lezioni operative dalla tragedia di Genova:
 
 1. **Le città storiche italiane hanno rii nascosti che vanno mappati e gestiti.** Non basta sapere dove passa il fiume principale: bisogna conoscere anche i corsi d'acqua minori tombati, perché in caso di piena improvvisa **possono uccidere proprio loro**.
 
-2. **Le bombe d'acqua sono il nuovo standard climatico, non l'eccezione.** Eventi che il 1990 considerava "millenari" oggi si ripetono ogni 5-10 anni. La **pianificazione di Protezione Civile** deve aggiornarsi a questa realtà.
+2. **Le bombe d'acqua sono il nuovo standard climatico, non l'eccezione.** Eventi che nel 1990 si consideravano "millenari" oggi si ripetono ogni 5-10 anni. La **pianificazione di Protezione Civile** deve aggiornarsi a questa realtà.
 
 3. **Camminare in strada durante un evento intenso è pericoloso.** Le vittime di via Fereggiano stavano camminando sul marciapiede quando l'acqua è uscita dai tombini. **Se piove molto forte**, restare in casa e ai piani alti è la prima regola di autoprotezione (vedi pagina [Cosa Fare Adesso](/cosa-fare-adesso/)).
 
@@ -57,7 +57,7 @@ Tre lezioni operative dalla tragedia di Genova:
 Anche Genzano è una città storica con **fossi tombati** sotto strade e piazze, retaggio dell'urbanizzazione del Novecento. Gli scenari di allagamento in caso di temporali intensi sono descritti nel [Piano di Emergenza Comunale](/piano-emergenza/).
 
 In caso di **allerta arancione o rossa** sul nostro Comune (vedi sempre la barra di stato in cima alla [homepage](/)):
-- **Non camminare** vicino a tombini o sotto i sottopassaggi
+- **Non camminare** vicino a tombini né nei sottopassaggi
 - **Non attraversare** strade allagate, anche se sembrano poca acqua: il flusso rapido può trascinare via
 - **Sali ai piani alti** se l'acqua entra in casa
 - **Allontana i bambini** da finestre e porte d'ingresso durante l'evento intenso
