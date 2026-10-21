@@ -10,7 +10,7 @@ Componenti: `scripts/normativa-watcher.py` (fonti primarie: albo pretorio di Gen
 
 **Se Claude è ferma:** la esegue ChatGPT quando Alessandro chiede «fai le routine di oggi» (`AGENTS.md`, § «Quando Claude è fermo, lavori tu al suo posto»). Dove il testo chiede una notifica push o un'email ad Alessandro, l'esito va nel riassunto finale e, se il lavoro nasce da una issue, in un commento sulla issue; dove chiede di avviare un agente, applichi tu la lista di controllo del suo file in `.claude/agents/`.
 
-**Come capire se oggi è già stata fatta:** commento di oggi sulla issue `normativa-watcher` del giorno (articoli pubblicati o motivi di scarto).
+**Come capire se un giro è già stato fatto:** ogni giro ha il suo segno: un commento della rassegna su una issue `normativa-watcher` scritto dopo l'orario del giro (articoli pubblicati o motivi di scarto); se manca per l'ultimo giro passato, falla: un giro recupera anche quelli saltati prima, e gli atti già lavorati si riconoscono dalle issue.
 
 ---
 
