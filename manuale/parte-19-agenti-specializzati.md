@@ -341,7 +341,7 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 - *"La L. 225/1992 vale ancora?"* (no, è abrogata dal D.Lgs. 1/2018)
 - *"La struttura del Codice (Capi/articoli) è corretta?"*
 
-**Cosa fa**: estrae citazioni normative dal corpo (D.Lgs., L., L.R., DGR, DPCM, D.M.), verifica via WebFetch/Firecrawl su **Normattiva** / **Gazzetta Ufficiale** / **Consiglio regionale Lazio** / **BURL Lazio** se ogni norma è vigente, abrogata o modificata. Conoscenza pregressa di norme PC fondamentali (D.Lgs. 1/2018 vigente, L. 225/1992 abrogata, **L.R. Lazio 2/2014 = legge regionale PC vigente**, ecc.) per evitare WebFetch inutili. Per le pagine che riproducono una norma confronta Capi/articoli/rubriche con la fonte primaria (Normattiva per le statali, Consiglio regionale per le L.R. — Normattiva non contiene le regionali). Suggerisce sostituzioni dove abrogata o **riallinea le strutture fabbricate**.
+**Cosa fa**: estrae citazioni normative dal corpo (D.Lgs., L., L.R., DGR, DPCM, D.M.), verifica via WebFetch (Firecrawl solo per i siti che WebFetch non legge, rule 08) su **Normattiva** / **Gazzetta Ufficiale** / **Consiglio regionale Lazio** / **BURL Lazio** se ogni norma è vigente, abrogata o modificata. Conoscenza pregressa di norme PC fondamentali (D.Lgs. 1/2018 vigente, L. 225/1992 abrogata, **L.R. Lazio 2/2014 = legge regionale PC vigente**, ecc.) per evitare WebFetch inutili. Per le pagine che riproducono una norma confronta Capi/articoli/rubriche con la fonte primaria (Normattiva per le statali, Consiglio regionale per le L.R. — Normattiva non contiene le regionali). Suggerisce sostituzioni dove abrogata o **riallinea le strutture fabbricate**.
 
 **Identità tecnica**: `pc-normative-verifier`.
 

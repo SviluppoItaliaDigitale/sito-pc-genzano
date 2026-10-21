@@ -2,28 +2,32 @@
 
 Questo file documenta come configurare l'ambiente di Claude Code per lavorare sul sito senza essere bloccato dalla sandbox di sicurezza, in particolare per il download di foto da fonti libere e per la lettura di siti istituzionali con SPA JS o anti-bot.
 
-## Firecrawl MCP — canale primario per siti SPA/anti-bot/SSL-CA-restricted
+## Firecrawl — solo per i siti che gli altri strumenti non leggono (dal 21/10/2026)
 
-🟢 **Installato 19 maggio 2026** come MCP server stdio scope user (`firecrawl-mcp` v3.17.0 via `npx`, API key in env `FIRECRAWL_API_KEY`). Tier free: **500 pagine/mese**, 10 req/min.
+🔴 **Firecrawl è a credito, e i crediti finiscono.** Il piano gratuito dà **1.000 crediti al mese**, che si rinnovano intorno al 19 e non si accumulano. Costi dal listino di Firecrawl: 1 credito per pagina (`scrape`, `crawl`, `map`), **1 credito per ogni pagina di un PDF**, 2 crediti ogni 10 risultati di `search`, 4 crediti in più a pagina con l'estrazione in JSON. Il credito si è esaurito il 1° ottobre 2026, la rassegna ha ricevuto errori 402 il 16 e il 19 ottobre e, il giorno dopo il rinnovo del 20 ottobre, metà dei crediti del mese era già usata. Decisione di Alessandro del 21/10/2026: «Si facciamo così in modo tale da risparmiare!».
 
-**Quando usare Firecrawl al posto di WebFetch:**
+**Ordine degli strumenti, sempre:**
 
-- Siti **SPA JavaScript** (Next.js, React, Vue) dove WebFetch riceve solo "Loading..." o language selector
-- Siti con **anti-bot WAF** (Cloudflare, Akamai) che restituiscono 403 a WebFetch
-- Siti con **certificati SSL su CA non incluse nella sandbox** Claude Code (`.gov.it`/`.giustizia.it` con CA Sogei o simili) — Firecrawl gira su infra con CA store completo
-- Pagine di **bollettini PDF** rese dinamicamente dietro JS
+1. `WebSearch` per trovare una pagina, `WebFetch` per leggerla: sono inclusi nel piano di Claude e non consumano crediti Firecrawl.
+2. **PDF**: si scaricano con `curl` e si leggono in locale con `pdftotext` o `pdfplumber` (MinerU per gli scansionati, § sotto), mai con Firecrawl: un PDF di 30 pagine costa 30 crediti.
+3. **Fonti con un canale dati gratuito.** Il sito del Dipartimento è fatto con Gatsby e ogni sua pagina ha il file JSON con i dati da cui nasce, testo compreso, allo stesso indirizzo con `/page-data/` davanti e `page-data.json` in fondo: `https://www.protezionecivile.gov.it/page-data/it/<percorso>/page-data.json` (per l'archivio di notizie e comunicati `…/page-data/it/attualit-/page-data.json`, verificato il 21/10/2026). INGV: API FDSN (`webservices.ingv.it`), come il cruscotto. Dove ci sono, i feed RSS.
+4. **Firecrawl `scrape`**, una pagina alla volta, solo se i passi sopra falliscono davvero (pagina vuota, 403 anti-bot, errore di certificato): oggi è il caso di EUR-Lex, DG ECHO, UNDRR, OCHA, Crusca, Senato e Quirinale (tabelle sotto).
 
-**Quando NON usare Firecrawl:**
+**Mai** `firecrawl_search`, `crawl`, `map` o l'estrazione in JSON per il lavoro ordinario e nelle routine: costano più crediti e `WebSearch` fa lo stesso lavoro. **Mai** aggiungere una carta di pagamento all'account Firecrawl e mai accettare l'offerta dei «1.500 crediti gratis»: chiede la carta e autorizza il passaggio automatico al piano a pagamento (19 dollari al mese). Se i crediti finiscono, si aspetta il rinnovo e intanto si lavora con i passi 1-3.
 
-- Siti **già leggibili via WebFetch** (Normattiva, GU, Camera, Regione Lazio, Wikipedia): risparmia pagine del tier.
-- **Download diretto di file** (PDF, foto): usa `curl` con l'allowlist sandbox.
-- Siti con **DNS failure/ECONNREFUSED**: il sito è realmente offline, nessun proxy lo risuscita.
+Configurazione: server MCP stdio installato il 19 maggio 2026 (`firecrawl-mcp` via `npx`, chiave nella variabile di sistema `FIRECRAWL_API_KEY`; nel repository c'è solo il riferimento in `.mcp.json`, nessuna chiave). Nelle sessioni cloud c'è anche il connettore Firecrawl di claude.ai: vale lo stesso ordine.
+
+**Quando non serve Firecrawl:**
+
+- Siti **già leggibili via WebFetch** (Normattiva, GU, Camera, Regione Lazio, Wikipedia).
+- **Download diretto di file** (PDF, foto): `curl` con l'allowlist sandbox.
+- Siti con **DNS failure/ECONNREFUSED**: il sito è davvero offline, nessun proxy lo risuscita.
 
 **Quadro siti istituzionali al 19 maggio 2026 (test batch 13 URL):**
 
 | Sito | Pre-Firecrawl | Post-Firecrawl |
 |---|---|---|
-| DPC `www.protezionecivile.gov.it` | SPA "Loading..." | ✅ 11.458 char markdown |
+| DPC `www.protezionecivile.gov.it` | SPA "Loading..." | ✅ 11.458 char markdown; dal 21/10/2026 si legge gratis dal `page-data.json` di ogni pagina (§ sopra) |
 | EUR-Lex `eur-lex.europa.eu` | Contenuto vuoto | ✅ 6.085 char |
 | DG ECHO `civil-protection-humanitarian-aid.ec.europa.eu` | Solo language selector | ✅ Leggibile (poche righe per home, ma pagine interne OK) |
 | UNDRR `www.undrr.org` | 403 anti-bot | ✅ 13.204 char |
@@ -35,7 +39,7 @@ Questo file documenta come configurare l'ambiente di Claude Code per lavorare su
 | Quirinale `www.quirinale.it` | 403 anti-bot | ✅ 7.712 char |
 | Giustizia Amministrativa `www.giustizia-amministrativa.it` | SSL CA error | ✅ 33.583 char (era problema CA store sandbox) |
 | ENEA `www.enea.it` | SSL error | ✅ 36.086 char |
-| INGV terremoti `terremoti.ingv.it` | SSL error | ✅ 34.419 char con lista terremoti realtime |
+| INGV terremoti `terremoti.ingv.it` | SSL error | ✅ 34.419 char con lista terremoti realtime; i dati si leggono gratis dalle API FDSN (`webservices.ingv.it`) |
 
 **Siti che restano inaccessibili anche con Firecrawl:**
 
@@ -47,11 +51,9 @@ Questo file documenta come configurare l'ambiente di Claude Code per lavorare su
 | **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | Server offline; cercare endpoint alternativo |
 | ~~protezionecivile.regione.lazio.it~~ | ~~ECONNREFUSED~~ | 🔴 **AGGIORNAMENTO 14/10/2026**: il vecchio dominio rimanda alla **home** del portale `www.regione.lazio.it/protezione-civile` per **qualunque** percorso (bollettini, Centro Funzionale, normativa, PDF): un link profondo porta il cittadino alla home e non alla pagina citata. I link del sito puntano alle pagine del portale `www.regione.lazio.it/protezione-civile/…` (sweep del 14/10/2026: bollettini e allertamenti, `centro-funzionale-regionale/bollettini-rischi-incendi`, `centro-funzionale-regionale`, `normativa`, tabella delle zone DGR 865/2019 in `sites/default/files/box-allegati-protezione-civile/2026/`). Sul vecchio host resta solo l'area riservata delle organizzazioni (`/organizzazioni/frontend/web/`), che si lascia com'è. Una pagina nuova si verifica con `curl -L` prima di linkarla (la home non è mai un sostituto valido di una pagina specifica) |
 
-**Comando Firecrawl via MCP (sessione Claude Code):**
+**Comando Firecrawl via MCP**: `mcp__firecrawl__firecrawl_scrape` sul PC (server `firecrawl`), `mcp__Firecrawl__firecrawl_scrape` con il connettore delle sessioni cloud; una pagina per chiamata, con `onlyMainContent: true`.
 
-Una volta riavviata la sessione dopo l'install, i tool MCP `mcp__firecrawl__scrape` (e `_crawl`, `_map`, `_search`) sono direttamente invocabili. Esempio in conversazione: *"usa Firecrawl per leggere la homepage DPC e estrarre allerta meteo nazionale"*.
-
-**Comando Firecrawl via curl (qualsiasi sessione, anche cloud-side):**
+**Comando Firecrawl via curl** (qualsiasi sessione con la chiave nell'ambiente):
 
 ```bash
 curl -s -X POST https://api.firecrawl.dev/v1/scrape \
@@ -60,16 +62,7 @@ curl -s -X POST https://api.firecrawl.dev/v1/scrape \
   -d '{"url": "<URL>", "formats": ["markdown"], "onlyMainContent": true, "timeout": 30000}'
 ```
 
-**Costo per pagina:** 1 page del tier free. Funzionalità avanzate (`crawl` multi-pagina, `search`, `extract` LLM-powered) consumano da 1 a 5 pagine per chiamata.
-
-**Workflow editoriale aggiornato:**
-
-1. **Lettura singola URL nota** (es. circolare DPC specifica, sentenza Corte Costituzionale): Firecrawl `scrape` → 1 page.
-2. **Sweep multi-pagina dello stesso dominio** (es. tutti i comunicati DPC del mese): Firecrawl `crawl` con `maxDepth: 2` e `limit: 20` → ~20 page.
-3. **Ricerca trasversale tematica** (es. "circolari volontariato PC 2026"): Firecrawl `search` → 5 page.
-4. **Estrazione strutturata** (es. tutti i numeri di articolo + data di un atto): Firecrawl `extract` con schema JSON → 1-5 page.
-
-**Aggiornamenti workflow CI futuri**: il workflow `.github/workflows/normativa-watcher.yml` può aggiungere il DPC come fonte monitorata (oggi è in whitelist `08-claude-code-setup.md` ma resta inutilizzabile via WebFetch). Costo stimato: ~10 page/mese sul tier free.
+**Rassegna normativa (dal 21/10/2026):** `scripts/normativa-watcher.py` legge notizie e comunicati stampa del Dipartimento dal file JSON pubblico della pagina «Attualità», con le date e senza crediti; prima leggeva la home e l'Area stampa con Firecrawl, a credito e senza date. Il workflow `normativa-watcher.yml` non usa più il segreto `FIRECRAWL_API_KEY`.
 
 ## Playwright MCP — browser automation per smoke test post-deploy
 
@@ -94,7 +87,7 @@ Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome
 
 **Quando NON usare Playwright:**
 
-- Per leggere contenuto testuale di una pagina (usa WebFetch o Firecrawl, molto più veloci).
+- Per leggere contenuto testuale di una pagina (usa WebFetch, molto più veloce; Firecrawl solo se WebFetch è bloccato, § in cima).
 - Per audit accessibility (usa Lighthouse + axe-core, sono specifici).
 
 **Integrazione con agent esistenti:**
@@ -116,7 +109,7 @@ Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome
   ```
   Output in `cartella_output/<nome>/auto/<nome>.md` (+ JSON struttura, PDF con layout). ~1-2 min per 4 pagine su CPU.
 - **Rete:** serve **solo la prima volta** per scaricare i modelli (già fatto, con sandbox off perché HuggingFace non è nell'allowlist locale). Dopo, con `HF_HUB_OFFLINE=1`, gira **senza rete** anche in sandbox normale.
-- **Quando usarlo (non come tuttofare):** solo per i PDF che gli strumenti leggeri non leggono. Per i PDF già testuali (Normattiva, GU, la maggior parte) bastano `pdftotext`/Firecrawl. **NON** metterlo nei workflow CI (i parser bollettini usano `poppler`, leggeri e sufficienti). È un tool **attivato in sessione da Claude**, non un'automazione schedulata.
+- **Quando usarlo (non come tuttofare):** solo per i PDF che gli strumenti leggeri non leggono. Per i PDF già testuali (Normattiva, GU, la maggior parte) bastano `pdftotext` o `pdfplumber`, in locale. **NON** metterlo nei workflow CI (i parser bollettini usano `poppler`, leggeri e sufficienti). È un tool **attivato in sessione da Claude**, non un'automazione schedulata.
 - **Dopo l'estrazione**: redigere l'articolo in stile AGID come al solito (gate `pc-article-reviewer`). Micro-refusi OCR (è→e, il→i1) si correggono in rilettura. Collaudato sull'ordinanza Infiorata (PDF scansionato): estrazione fedele di testata, dispositivo e regole di viabilità via per via.
 
 ---
@@ -382,11 +375,11 @@ Estensione della whitelist con 25 ulteriori siti istituzionali testati e funzion
 
 ### Siti testati che NON funzionavano via WebFetch (status aggiornato 19 maggio 2026)
 
-🟢 **Aggiornamento maggio 2026**: dopo l'installazione di Firecrawl MCP, **13 dei 18 siti** precedentemente bloccati sono ora leggibili tramite il canale Firecrawl (vedi sezione "Firecrawl MCP" in cima al file). Vincolo: 1 pagina del tier free (500/mese) per richiesta. Lista completa:
+🟢 **Aggiornamento maggio 2026**: dopo l'installazione di Firecrawl MCP, **13 dei 18 siti** precedentemente bloccati sono ora leggibili tramite il canale Firecrawl (vedi sezione "Firecrawl MCP" in cima al file). Vincolo: ogni pagina costa un credito, e dal 21/10/2026 Firecrawl si usa solo dopo WebFetch e i canali gratuiti (§ in cima al file). Lista completa:
 
 | Sito | Causa originale (WebFetch) | Status ora |
 |---|---|---|
-| **DPC** (`www.protezionecivile.gov.it`) | Solo "Loading..." (SPA JS) | 🟢 Firecrawl OK (11.458 char) |
+| **DPC** (`www.protezionecivile.gov.it`) | Solo "Loading..." (SPA JS) | 🟢 dal 21/10/2026 gratis dal `page-data.json` di ogni pagina; Firecrawl OK (11.458 char) |
 | **EUR-Lex** (`eur-lex.europa.eu`) | Contenuto vuoto (SPA JS) | 🟢 Firecrawl OK (6.085 char) |
 | **DG ECHO** (`civil-protection-humanitarian-aid.ec.europa.eu`) | Solo language selector (SPA JS) | 🟢 Firecrawl OK (pagine interne) |
 | **UNDRR** (`www.undrr.org`) | HTTP 403 Forbidden anti-bot | 🟢 Firecrawl OK (13.204 char) |

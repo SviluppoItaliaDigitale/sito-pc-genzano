@@ -192,7 +192,7 @@ Agent({
 
 **Perché esiste (6 settembre 2026)**: un audit esterno ha trovato una scheda pubblicata da mesi che contava 4 bambini fra le vittime di Rigopiano (erano fra i superstiti, tutti salvati), presentava il terremoto come innesco della valanga (nesso mai dimostrato) e riportava un orario diverso dalla ricostruzione INGV; lo stesso evento era raccontato con numeri diversi in un dossier e in un articolo programmato. Tutti i gate tecnici e linguistici erano verdi. I fatti sono un gate a sé.
 
-**Esecuzione minima senza Agent tool**: per ogni dato, apri tu la fonte primaria con WebFetch (o Firecrawl, se disponibile) e compila la tabella affermazione → fonte → verdetto descritta in `.claude/agents/pc-fact-checker.md`. Niente fonte, niente dato.
+**Esecuzione minima senza Agent tool**: per ogni dato, apri tu la fonte primaria con WebFetch (Firecrawl solo se il sito respinge WebFetch, rule 08 § «Firecrawl») e compila la tabella affermazione → fonte → verdetto descritta in `.claude/agents/pc-fact-checker.md`. Niente fonte, niente dato.
 
 ### 12-bis. 🔴 GATE DELLA COERENZA — il dato nuovo è uguale a quello già sul sito
 

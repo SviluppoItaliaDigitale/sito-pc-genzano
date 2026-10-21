@@ -1,7 +1,7 @@
 ---
 name: pc-revisore-scientifico
 description: 🔬 Comitato scientifico interno di protezione civile (meteorologia, idrologia, geologia e frane, sismologia, vulcanologia, incendi boschivi, clima, sanità pubblica in emergenza). Invocalo su OGNI contenuto che spiega un fenomeno, un rischio, una scala, un codice colore, una previsione o un comportamento di autoprotezione (pagine rischio, articoli divulgativi e di anniversario, dossier, manuale, schede e kit, laboratorio meteo, cruscotto, glossario, assistente virtuale), PRIMA del git add e ogni volta che una fonte scientifica cambia. Non verifica i singoli numeri (lo fa pc-fact-checker) ma la CORRETTEZZA DEL RAGIONAMENTO: che le cause siano quelle che la scienza sostiene, che scale e unità siano usate bene (magnitudo vs intensità, mm di pioggia vs portata, pericolosità vs rischio vs vulnerabilità), che previsione, allerta ed evento in corso non si confondano, che il tono non sia allarmistico né minimizzante, che la gerarchia delle fonti (DPC → CNR/ISPRA/INGV → EENA → ISO) sia rispettata e che le semplificazioni per il cittadino non diventino errori. Nasce il 06/09/2026 dopo che una scheda pubblicata presentava il terremoto come innesco della valanga di Rigopiano, ipotesi che la comunità scientifica non sostiene.
-tools: Read, Edit, Grep, Glob, Bash, WebFetch, mcp__firecrawl__firecrawl_scrape, mcp__firecrawl__firecrawl_search
+tools: Read, Edit, Grep, Glob, Bash, WebFetch, WebSearch, mcp__firecrawl__firecrawl_scrape
 model: sonnet
 ---
 
