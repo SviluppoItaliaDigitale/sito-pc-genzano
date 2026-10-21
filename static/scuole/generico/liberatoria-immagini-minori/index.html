@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Liberatoria immagini minori — fac-simile editabile (GDPR)</title>
-  <meta name="description" content="Fac-simile editabile di liberatoria per la pubblicazione di foto e video di minori durante attività con il Gruppo Comunale Volontari di Protezione Civile. Conforme GDPR e D.Lgs. 196/2003.">
+  <meta name="description" content="Liberatoria per foto e video di minori nelle attività con la Protezione Civile di Genzano di Roma: fac-simile da stampare, firmano entrambi i genitori o il tutore.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -17,13 +17,23 @@
     .opzione-box { border: 1.4px solid var(--scheda-bordo); border-radius: 6px; padding: 0.6rem 0.8rem; margin: 0.5rem 0; }
     .opzione-box label { display: flex; gap: 0.5rem; font-size: 0.95rem; align-items: flex-start; cursor: pointer; }
     .opzione-box input[type="checkbox"] { width: 1.05rem; height: 1.05rem; margin-top: 0.18rem; flex-shrink: 0; }
-    .firma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.2rem; }
+    .firma-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.6rem; }
     .firma-box { border-top: 1.4px solid var(--scheda-bordo); padding-top: 0.4rem; text-align: center; font-size: 0.85rem; color: var(--scheda-blu); font-weight: 600; min-height: 3.4rem; }
+    /* firme: la casella della firma singola e le tre firme restano sullo stesso foglio */
+    .firme-insieme { break-inside: avoid; page-break-inside: avoid; }
+    @media screen and (max-width: 600px) { .firma-grid { grid-template-columns: 1fr; } }
     .meta-disclaimer { font-size: 0.78rem; color: #555; font-style: italic; margin-top: 1rem; padding: 0.5rem 0.7rem; border-left: 3px solid var(--scheda-oro); background: #fff8e6; }
     .nav-back { font-size: 0.85rem; margin-bottom: 1rem; }
     .nav-back a { color: var(--scheda-blu); text-decoration: underline; }
     .legal-text { font-size: 0.85rem; line-height: 1.55; }
-    @media print { .nav-back { display: none; } }
+    @media print {
+      .nav-back { display: none; }
+      /* controllo fogli di stampa (21/10/2026): con i dati e le firme di entrambi i
+         genitori il modulo resta su due fogli anche con i caratteri più larghi
+         (DejaVu Sans, comune su Linux) solo alla scala del 93% */
+      html { font-size: 93%; }
+      h2 { break-after: avoid; page-break-after: avoid; }
+    }
   </style>
 </head>
 <body>
@@ -55,23 +65,27 @@
     </section>
 
     <section class="scheda-blocco">
-      <h2>Dati del genitore / tutore legale che firma</h2>
+      <h2>Dati dei genitori o del tutore</h2>
       <div class="form-row">
-        <div class="form-field"><label>Cognome e nome</label><div class="input-line"></div></div>
+        <div class="form-field"><label>Primo genitore o tutore: cognome e nome</label><div class="input-line"></div></div>
         <div class="form-field"><label>Codice fiscale</label><div class="input-line"></div></div>
       </div>
       <div class="form-row">
-        <div class="form-field full"><label>In qualità di (genitore esercente la potestà / tutore legale / affidatario)</label><div class="input-line"></div></div>
+        <div class="form-field full"><label>In qualità di (genitore / tutore)</label><div class="input-line"></div></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label>Secondo genitore: cognome e nome</label><div class="input-line"></div></div>
+        <div class="form-field"><label>Codice fiscale</label><div class="input-line"></div></div>
       </div>
     </section>
 
     <section class="scheda-blocco">
       <h2>Oggetto della liberatoria</h2>
-      <p class="legal-text">Il/la sottoscritto/a, in qualità di genitore esercente la potestà o tutore legale del minore sopra indicato, nell'ambito dell'attività di Protezione Civile organizzata dall'Istituto in collaborazione con il <strong>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, in data <span style="display: inline-block; min-width: 7rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span> presso <span style="display: inline-block; min-width: 12rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span>, autorizza secondo le opzioni selezionate qui sotto la realizzazione e l'eventuale pubblicazione di fotografie e/o riprese video in cui compare il minore.</p>
+      <p class="legal-text">Chi firma, in qualità di genitore o di tutore del minore sopra indicato, nell'ambito dell'attività di Protezione Civile organizzata dall'Istituto in collaborazione con il <strong>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, in data <span style="display: inline-block; min-width: 7rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span> presso <span style="display: inline-block; min-width: 12rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span>, autorizza secondo le opzioni selezionate qui sotto la realizzazione e l'eventuale pubblicazione di fotografie e/o riprese video in cui compare il minore.</p>
     </section>
 
     <section class="scheda-blocco">
-      <h2>Scelte del genitore / tutore</h2>
+      <h2>Scelte dei genitori o del tutore</h2>
 
       <div class="opzione-box">
         <label><input type="checkbox"> <span><strong>1. Realizzazione di fotografie e video</strong> durante l'attività, ad uso esclusivamente interno della scuola e del Gruppo (archivio storico, documentazione interna), <strong>senza alcuna pubblicazione</strong> su canali pubblici.</span></label>
@@ -86,7 +100,7 @@
       </div>
 
       <div class="opzione-box">
-        <label><input type="checkbox"> <span><strong>4. Diniego completo</strong>: non autorizzo alcuna realizzazione né pubblicazione di immagini in cui compare il minore.</span></label>
+        <label><input type="checkbox"> <span><strong>4. Diniego completo</strong>: nessuna autorizzazione a realizzare o a pubblicare immagini in cui compare il minore.</span></label>
       </div>
     </section>
 
@@ -96,25 +110,41 @@
       <ul class="legal-text" style="margin-left: 1.2rem;">
         <li><strong>Titolari del trattamento</strong> in regime di contitolarità: l'<strong>Istituto scolastico</strong> e il <strong>Comune di Genzano di Roma — Gruppo Comunale di Protezione Civile</strong>.</li>
         <li><strong>Finalità del trattamento</strong>: documentazione istituzionale dell'attività formativa, comunicazione del valore civico del volontariato di Protezione Civile, finalità storiche e di archivio.</li>
-        <li><strong>Base giuridica</strong>: consenso dell'esercente la potestà genitoriale ai sensi dell'art. 6 c. 1 lett. a) GDPR e dell'art. 8 GDPR per i minori; per i minori di 14 anni il consenso è esclusivamente dei genitori (art. 2-quinquies D.Lgs. 196/2003).</li>
+        <li><strong>Base giuridica</strong>: consenso (art. 6, par. 1, lett. a) GDPR). Per i minori di 14 anni lo dà chi esercita la responsabilità genitoriale, di norma entrambi i genitori (art. 8 GDPR e art. 2-quinquies D.Lgs. 196/2003).</li>
         <li><strong>Periodo di conservazione</strong>: per le finalità di archivio storico-istituzionale, indeterminato; per le pubblicazioni social, fino a richiesta motivata di rimozione.</li>
         <li><strong>Diritti dell'interessato</strong> (artt. 15-22 GDPR): accesso, rettifica, cancellazione, limitazione, portabilità, opposizione. Il consenso può essere <strong>revocato in qualsiasi momento</strong> con richiesta scritta a <em>segreteria@protezionecivilegenzano.it</em> o ai contatti dell'Istituto.</li>
         <li><strong>DPO dell'Istituto</strong>: i contatti del Data Protection Officer sono pubblicati sul sito istituzionale della scuola.</li>
       </ul>
     </section>
 
-    <div class="firma-grid">
-      <div class="firma-box">Firma leggibile del genitore / tutore<br><span style="font-weight: 400; font-size: 0.78rem; color: #555;">(in caso di entrambi i genitori esercenti la potestà, è necessaria anche la seconda firma)</span></div>
-      <div class="firma-box">Luogo e data</div>
-    </div>
+    <section class="scheda-blocco">
+      <h2>Chi firma</h2>
+      <ul class="legal-text" style="margin-left: 1.2rem;">
+        <li>Firmano <strong>entrambi i genitori</strong>, anche se separati o divorziati e anche con l'affidamento condiviso: la responsabilità genitoriale resta a tutti e due (art. 317 del Codice civile) e per pubblicare foto di minori sui social serve il consenso di entrambi (Garante per la protezione dei dati personali, <a href="https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/10251841">provvedimento del 29 aprile 2026, documento web n. 10251841</a>).</li>
+        <li>Basta la firma di un solo genitore quando è l'unico a esercitare la responsabilità genitoriale, per esempio perché l'altro è morto o perché il giudice ha pronunciato la sua decadenza (art. 330 del Codice civile), oppure quando l'altro non può esercitarla per lontananza, incapacità o altro impedimento (art. 317 del Codice civile).</li>
+        <li>Se il minore ha un tutore, firma il tutore (art. 357 del Codice civile).</li>
+        <li>Se il minore è in affidamento familiare o accolto in una comunità, firma chi esercita la responsabilità genitoriale, cioè i genitori o il tutore.</li>
+        <li><strong>Nel dubbio, firmano entrambi i genitori.</strong></li>
+      </ul>
+      <div class="firme-insieme">
+        <div class="opzione-box">
+          <label><input type="checkbox"> <span>Firma un solo genitore, perché è l'unico a esercitare la responsabilità genitoriale o perché l'altro non può esercitarla (vedi qui sopra).</span></label>
+        </div>
+        <div class="firma-grid">
+          <div class="firma-box">Firma del primo genitore o del tutore</div>
+          <div class="firma-box">Firma del secondo genitore</div>
+          <div class="firma-box">Luogo e data</div>
+        </div>
+      </div>
+    </section>
 
     <div class="meta-disclaimer">
-      <strong>Fac-simile editabile.</strong> Il presente documento è un orientamento operativo. Ogni Istituto scolastico ha un proprio modello di liberatoria approvato dal <strong>DPO</strong>: in caso di disallineamento, prevale il modello dell'Istituto. Il Gruppo accetta liberatorie redatte sui modelli interni della scuola, purché coerenti con GDPR e con le finalità qui descritte. Per i minori di 14 anni il consenso è dei soli genitori; sopra i 14 anni si raccomanda di acquisire anche il consenso del minore (interesse pubblico al coinvolgimento educativo).
+      <strong>Fac-simile editabile.</strong> Il presente documento è un orientamento operativo. Ogni Istituto scolastico ha un proprio modello di liberatoria approvato dal <strong>DPO</strong>: in caso di disallineamento, prevale il modello dell'Istituto. Il Gruppo accetta liberatorie redatte sui modelli interni della scuola, purché coerenti con GDPR e con le finalità qui descritte. Per i minori di 14 anni il consenso lo danno soltanto i genitori o il tutore; dai 14 anni si raccomanda di acquisire anche il consenso del minore (interesse pubblico al coinvolgimento educativo).
     </div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it/formazione/scuole-strumenti/</span>
-      <span>Liberatoria immagini minori · Pacchetto A · fac-simile GDPR · rev. 2026</span>
+      <span>Liberatoria immagini minori · Pacchetto A · fac-simile GDPR · rev. ottobre 2026</span>
     </footer>
   </article>
 </body>

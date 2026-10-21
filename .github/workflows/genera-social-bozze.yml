@@ -218,6 +218,14 @@ jobs:
           esac
           echo "falliti=$FALLITI" >> "$GITHUB_OUTPUT"
 
+          # Testi alternativi (dal 21/10/2026): le immagini nuove li hanno già;
+          # il materiale fatto prima li riceve qui, per gli articoli ancora nella
+          # finestra di pubblicazione (72 ore). Le immagini non si toccano: il
+          # generatore le ridisegna a parte e scrive il file solo se coincidono.
+          # Sono facoltativi: se non riesce, il giro resta verde.
+          python3 scripts/genera-immagini-social.py --solo-testi-alternativi --all \
+            || echo "::warning::Testi alternativi non aggiunti: i post usciranno senza."
+
       - name: "💾 Commit risultati"
         if: steps.lista.outputs.modalita != 'nessuno'
         run: |
@@ -233,9 +241,11 @@ jobs:
             CHANGED=$(git diff --staged --name-only)
             COUNT_TXT=$(echo "$CHANGED" | grep -c '\.txt$' || true)
             COUNT_IMG=$(echo "$CHANGED" | grep -c '\.jpg$' || true)
+            COUNT_ALT=$(echo "$CHANGED" | grep -c 'testi-alternativi\.json$' || true)
             COUNT_TXT="${COUNT_TXT:-0}"
             COUNT_IMG="${COUNT_IMG:-0}"
-            git commit -m "[skip-social] Bozze social: $COUNT_TXT testi + $COUNT_IMG immagini"
+            COUNT_ALT="${COUNT_ALT:-0}"
+            git commit -m "[skip-social] Bozze social: $COUNT_TXT testi + $COUNT_IMG immagini + $COUNT_ALT file di testi alternativi"
 
             # Rebase + push con retry per gestire conflitti di concorrenza
             # (più workflow possono pushare insieme dopo un articolo nuovo).

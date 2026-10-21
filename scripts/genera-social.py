@@ -4,7 +4,8 @@ articoli del sito a partire dal frontmatter Markdown.
 
 Funzionamento:
   - Legge le rules istituzionali da .claude/rules/*.md (AGID, accessibility,
-    protezione civile, social-media-policy del Gruppo).
+    protezione civile e, dal 21/10/2026, i consigli dei webinar nazionali sulla
+    comunicazione, senza la parte sulla Misericordia di Ariccia): RULES_FILES.
   - Le inietta nel system prompt di Gemini API.
   - Per ogni articolo, passa il frontmatter + estratto del corpo come user
     message e chiede 4 testi calibrati per piattaforma.
@@ -77,7 +78,20 @@ RULES_FILES = [
     "02-content-design-pa.md",   # linguaggio AGID, hashtag, struttura crisi
     "03-accessibility.md",       # alt text, max 2 emoji, no Unicode decorativi
     "06-protezione-civile-scientifica.md",  # codici colore, badge, gerarchia fonti
+    # Dal 21/10/2026: i consigli dei webinar nazionali sulla comunicazione
+    # (tono di voce, testi e didascalie, parole su disabilità e fragilità,
+    # persone nelle foto). La regola è comune a tutti i repository e dice da
+    # sé che le regole del repository prevalgono: qui valgono il prompt e le
+    # rules sopra.
+    "comunicazione-social.md",
 ]
+
+# Sezioni da togliere prima di passare una rule a Gemini: (file -> titoli).
+# La parte sulla Misericordia di Ariccia riguarda un altro ente (modelli
+# grafici, logo, colori) e qui confonderebbe.
+SEZIONI_ESCLUSE = {
+    "comunicazione-social.md": ["## Solo per la Misericordia di Ariccia"],
+}
 
 GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_ENDPOINT = (
@@ -120,15 +134,43 @@ def stampa_info(msg: str) -> None:
     print(msg, file=sys.stderr)
 
 
+def togli_sezione(testo: str, titolo: str) -> tuple[str, bool]:
+    """Toglie da un file Markdown la sezione che comincia con la riga `titolo`
+    (per esempio «## Solo per …») fino al titolo successivo dello stesso
+    livello o superiore. Ritorna (testo, trovata)."""
+    livello = len(titolo) - len(titolo.lstrip("#"))
+    righe = testo.split("\n")
+    uscita, dentro, trovata = [], False, False
+    for riga in righe:
+        if riga.strip() == titolo.strip():
+            dentro, trovata = True, True
+            continue
+        if dentro:
+            m = re.match(r"^(#+)\s", riga)
+            if m and len(m.group(1)) <= livello:
+                dentro = False
+            else:
+                continue
+        uscita.append(riga)
+    return "\n".join(uscita), trovata
+
+
 def carica_rules() -> str:
-    """Concatena le rules istituzionali dal repo per il system prompt."""
+    """Concatena le rules istituzionali dal repo per il system prompt, senza
+    le sezioni di SEZIONI_ESCLUSE."""
     blocchi = []
     for nome in RULES_FILES:
         p = RULES_DIR / nome
         if not p.exists():
             stampa_err(f"Rule mancante: {p}")
             continue
-        blocchi.append(f"# === {nome} ===\n\n{p.read_text(encoding='utf-8')}\n")
+        testo = p.read_text(encoding="utf-8")
+        for titolo in SEZIONI_ESCLUSE.get(nome, []):
+            testo, trovata = togli_sezione(testo, titolo)
+            if not trovata:
+                stampa_err(f"Rule {nome}: sezione «{titolo}» non trovata, il file "
+                           f"è cambiato: controllare SEZIONI_ESCLUSE.")
+        blocchi.append(f"# === {nome} ===\n\n{testo}\n")
     if not blocchi:
         raise SystemExit("Nessuna rule trovata in .claude/rules/. Stop.")
     return "\n\n".join(blocchi)

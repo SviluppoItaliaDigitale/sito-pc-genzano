@@ -20,7 +20,8 @@ Bloccante (exit 1):
 
 Pagine controllate:
   - schede stampabili, schede dei kit calamità, storie (pagine HTML autonome
-    in static/formazione/);
+    in static/formazione/) e, dal 21/10/2026, i moduli per le scuole
+    (static/scuole/), che usano il foglio di stile delle schede;
   - un campione fisso di pagine del sito (PAGINE_SITO), dove si guarda solo il
     foglio bianco: le pagine lunghe possono finire con poche righe.
 
@@ -74,6 +75,10 @@ def stampabili(public: Path) -> dict[str, str]:
     for f in sorted(base.glob("storie-e-racconti/*/index.html")):
         if f.parent.name != "assets":
             out[f.relative_to(public).as_posix()] = "storie"
+    # Moduli per le scuole (liberatoria, circolare, convenzione PCTO…): usano il
+    # foglio di stile delle schede e si stampano per farli firmare (21/10/2026).
+    for f in sorted(public.glob("scuole/*/*/index.html")):
+        out[f.relative_to(public).as_posix()] = "schede"
     # le pagine di rimando a un indirizzo nuovo non si stampano
     return {k: v for k, v in out.items()
             if not re.search(r'http-equiv=["\']?refresh', (public / k).read_text(errors="replace"), re.I)}
@@ -171,7 +176,7 @@ def main() -> int:
         browser.close()
     srv.shutdown()
 
-    print(f"Pagine stampate: {len(voci)} ({len(scelte)} schede, kit e storie; {len(sito)} pagine del sito)")
+    print(f"Pagine stampate: {len(voci)} ({len(scelte)} schede, kit, storie e moduli per le scuole; {len(sito)} pagine del sito)")
     for e in errori:
         print(f"❌ {e}")
     if errori:

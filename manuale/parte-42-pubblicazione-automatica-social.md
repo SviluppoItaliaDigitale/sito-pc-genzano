@@ -52,6 +52,26 @@ differenza è che vengono scritti e usati senza che tu debba fare niente.
 Il token di Instagram scade ogni sessanta giorni e si rinnova da solo il **primo e il sedici** di
 ogni mese. Il permesso della pagina Facebook non scade.
 
+### I testi alternativi delle immagini (21/10/2026)
+
+Chi usa un lettore di schermo non vede la grafica: sente il testo alternativo, se c'è. Dal 21
+ottobre, accanto alle immagini, il sito scrive in `social-bozze/AAAA/MM/<slug>/` il file
+`testi-alternativi.json`, con una descrizione per ogni immagine del feed e una per la storia, e il
+sistema la manda insieme al post: a Instagram per l'immagine singola e per ogni immagine del
+carosello, a Facebook per ogni foto. Le storie e i Reel non la prevedono: Instagram accetta il testo
+alternativo solo sui post con immagini.
+
+I testi si scrivono da soli e dicono solo ciò che la grafica mostra: l'etichetta e il titolo della
+prima immagine, la citazione e i punti della sintesi per intero, per le foto la descrizione scritta
+nell'articolo e chi l'ha scattata, i loghi delle affiliazioni con il codice del Quality Label. Non
+superano i mille caratteri, il limite di Instagram.
+
+Il testo alternativo non ferma mai un post: se il file manca o non si legge, il post esce come
+prima e il registro del giro lo annota. Il materiale preparato prima del 21 ottobre lo riceve da
+solo a ogni giro in cui il sito prepara materiale nuovo, finché l'articolo è nei tre giorni in cui
+può ancora uscire, senza che le immagini vengano rifatte. Chi pubblica a mano trova lo stesso testo nel file e lo incolla come testo alternativo di
+ogni immagine.
+
 ## 42.3 — Cosa non esce mai in automatico
 
 Queste esclusioni sono scritte nel codice, non in una configurazione modificabile, perché
