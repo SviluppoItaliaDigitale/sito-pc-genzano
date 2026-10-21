@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-21T00:02:55+00:00",
+  "generato": "2026-10-21T09:32:49+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 135,
-  "scaduti_scartati": 47,
-  "in_corso": 94,
+  "avvisi": 123,
+  "scaduti_scartati": 59,
+  "in_corso": 102,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -47,58 +47,6 @@
    "fine": "2026-10-21T11:59:00+00:00",
    "emesso": "2026-10-20T12:28:11+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261020142810.040"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Pioggia",
-   "livello": "rossa",
-   "evento_originale": "Red Rain Warning",
-   "severita": "Extreme",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:28:11+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020142810.047"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Temporali",
-   "livello": "rossa",
-   "evento_originale": "Red Thunderstorm Warning",
-   "severita": "Extreme",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:28:11+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020142810.046"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Pioggia",
-   "livello": "rossa",
-   "evento_originale": "Red Rain Warning",
-   "severita": "Extreme",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:19:43+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020141942.238"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Temporali",
-   "livello": "rossa",
-   "evento_originale": "Red Thunderstorm Warning",
-   "severita": "Extreme",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:19:43+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020141942.237"
   },
   {
    "in_corso": true,
@@ -413,7 +361,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.224"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -426,7 +374,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.069"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -452,7 +400,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.103"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -465,7 +413,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.083"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -608,7 +556,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.204"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -647,7 +595,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.060"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -842,7 +790,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.097"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -855,7 +803,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.068"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -881,7 +829,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.093"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -933,7 +881,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.006"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -1024,32 +972,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.232"
   },
   {
-   "in_corso": true,
-   "regione": "Lazio",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:28:11+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020142810.059"
-  },
-  {
-   "in_corso": true,
-   "regione": "Lazio",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:19:43+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020141942.250"
-  },
-  {
    "in_corso": false,
    "regione": "Liguria",
    "fenomeno": "Vento",
@@ -1065,19 +987,6 @@
   {
    "in_corso": true,
    "regione": "Liguria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:28:11+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020142810.049"
-  },
-  {
-   "in_corso": false,
-   "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
@@ -1090,19 +999,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:19:43+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020141942.240"
-  },
-  {
-   "in_corso": false,
    "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -1128,7 +1024,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.096"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -1141,7 +1037,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.054"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -1154,7 +1050,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.053"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -1167,7 +1063,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.245"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -1180,7 +1076,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.244"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -1206,7 +1102,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.064"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -1297,7 +1193,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020142810.071"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -1323,7 +1219,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261020141942.262"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -1403,19 +1299,6 @@
   {
    "in_corso": true,
    "regione": "Sicilia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:28:11+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020142810.080"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
    "fenomeno": "Pioggia",
    "livello": "gialla",
    "evento_originale": "Yellow Rain Warning",
@@ -1438,19 +1321,6 @@
    "fine": "2026-10-21T17:59:00+00:00",
    "emesso": "2026-10-20T12:28:11+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261020142810.078"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:19:44+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020141942.271"
   },
   {
    "in_corso": true,
@@ -1737,32 +1607,6 @@
    "fine": "2026-10-22T11:59:00+00:00",
    "emesso": "2026-10-20T12:28:12+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261020142810.092"
-  },
-  {
-   "in_corso": true,
-   "regione": "Veneto",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:28:11+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020142810.042"
-  },
-  {
-   "in_corso": true,
-   "regione": "Veneto",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-21T00:00:00+00:00",
-   "fine": "2026-10-21T05:59:00+00:00",
-   "emesso": "2026-10-20T12:19:43+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261020141942.233"
   }
  ]
 }
