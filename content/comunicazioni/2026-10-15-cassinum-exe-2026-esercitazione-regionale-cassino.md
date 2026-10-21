@@ -41,6 +41,10 @@ Le attività principali si svolgono a contatto con i cittadini:
 
 In questi giorni a Cassino cambiano la sosta e la circolazione: se ne occupa la Polizia Locale. Gli orari e le strade interessate sono sul [sito del Comune di Cassino](https://www.comune.cassino.fr.it/).
 
+## Com'è andata
+
+L'esercitazione si è conclusa domenica 18 ottobre. Secondo le cronache locali hanno partecipato circa duemila persone e oltre ottanta organizzazioni di volontariato da tutto il Lazio. Il momento centrale è stata la simulazione di un terremoto su scala reale, nella giornata di sabato: ha messo alla prova il Piano comunale di Protezione Civile di Cassino e il coordinamento tra volontari, istituzioni e strutture di soccorso.
+
 ## Perché un coordinamento di volontari
 
 In un'emergenza regionale le organizzazioni di volontariato non lavorano ciascuna per conto proprio: si riuniscono nei **coordinamenti territoriali**, che organizzano i gruppi aderenti. Il Coordinamento FE.PI.VOL. è uno di questi: ne fa parte anche il nostro Gruppo, come spiega l'articolo sulla [convenzione 2026 tra la Regione e i coordinamenti](/comunicazioni/2026-10-13-regione-lazio-convenzione-coordinamenti-volontariato-fepivol/).
@@ -69,3 +73,7 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emerg
 
 - [Comune di Cassino — La Regione sceglie Cassino per la maxi esercitazione di protezione civile del 16, 17 e 18 ottobre](https://www.comune.cassino.fr.it/en-us/novita/avvisi/2026/salute-e-sanita/la-regione-sceglie-cassino-per-la-maxi-esercitazione-di-protezione-civile-del-16-17-18-ottobre-402605-1-3f1ee3bc5bf7e94e4d9c01d58dfddf35)
 - [Regione Lazio — Protezione civile](https://www.regione.lazio.it/protezione-civile)
+
+**Le cronache locali**
+
+- [Latina Quotidiano — Protezione Civile, a Cassino maxi esercitazione con 2mila partecipanti e 80 associazioni da tutta la regione](https://www.latinaquotidiano.it/protezione-civile-cassino-maxi-esercitazione/)
