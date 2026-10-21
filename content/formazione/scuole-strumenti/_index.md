@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-10-21"
 ---
 
 Questa pagina raccoglie moduli e fac-simile che il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma mette a disposizione delle scuole.
@@ -59,6 +59,7 @@ In particolare:
 
 - il modello deve essere verificato dal DPO dell'istituto;
 - il consenso per foto e video deve essere specifico e informato;
+- il modulo lo firmano tutti coloro che esercitano la responsabilità genitoriale: di norma entrambi i genitori, anche se separati o con l'affidamento condiviso, oppure il tutore ([provvedimento del Garante per la protezione dei dati personali del 29 aprile 2026](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/10251841));
 - la scuola stabilisce tempi di conservazione, archiviazione e canali di pubblicazione;
 - il Gruppo pubblica immagini solo se c'è autorizzazione valida e coerente con le finalità indicate.
 
