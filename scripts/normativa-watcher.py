@@ -34,7 +34,9 @@ FONTE ISTITUZIONALE EUROPEA (letta con le primarie, ogni giorno)
 FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Google News RSS con query tematiche e site:
 - Feed RSS istituzionali (TGR Lazio)
-- DPC home + Area stampa via Firecrawl (solo se FIRECRAWL_API_KEY)
+- DPC: notizie e comunicati stampa dal file JSON pubblico del sito del
+  Dipartimento (archivio completo con le date, nessuna chiave e nessun
+  credito; dal 21/10/2026, prima la home e l'Area stampa via Firecrawl)
 
 Ogni voce è classificata per RILEVANZA con un punteggio a parole chiave:
 - "diretta"   → riguarda la protezione civile, il volontariato di PC, le
@@ -57,7 +59,7 @@ Uso:
 
 Dipendenze: solo stdlib per le fonti primarie; `feedparser` per le news.
 Ogni fonte è fail-safe: se cade, viene registrata in `errori` (fonti
-primarie ed EU Space) o in `errori_news` (Google News, feed, Firecrawl) e le
+primarie ed EU Space) o in `errori_news` (Google News, feed, DPC) e le
 altre proseguono; il workflow apre una issue `fonte-rotta` per ciascun
 gruppo e chiude il run in rosso. Fino al 17/10/2026 gli errori della
 rassegna stampa restavano solo nel log. Esce 0 (anche con zero hit), 1 solo
@@ -882,16 +884,16 @@ def fetch_eu_space(cutoff, errori):
 
 
 # ---------------------------------------------------------------------------
-# FONTI SECONDARIE — Google News, RSS istituzionali, DPC via Firecrawl
+# FONTI SECONDARIE — Google News, RSS istituzionali, notizie e comunicati del DPC
 # ---------------------------------------------------------------------------
 
 GOOGLE_NEWS_BASE = "https://news.google.com/rss/search?q={q}&hl=it&gl=IT&ceid=IT:it"
 
-FIRECRAWL_API_URL = "https://api.firecrawl.dev/v1/scrape"
-FIRECRAWL_SOURCES = [
-    {"nome": "DPC — Home (notizie in evidenza)", "url": "https://www.protezionecivile.gov.it/it/"},
-    {"nome": "DPC — Area stampa", "url": "https://www.protezionecivile.gov.it/it/media-e-comunicazione/area-stampa/"},
-]
+DPC_BASE = 'https://www.protezionecivile.gov.it'
+# File JSON pubblico della pagina «Attualità» del sito del Dipartimento
+# (Gatsby): archivio completo di notizie e comunicati stampa, senza chiave.
+DPC_ATTUALITA = DPC_BASE + '/page-data/it/attualit-/page-data.json'
+DPC_MAX_ETA_GIORNI = 30   # oltre, il file è fermo: il Dipartimento pubblica ogni settimana
 
 QUERIES_GOOGLE_NEWS = [
     'protezione civile Lazio',
@@ -982,36 +984,49 @@ def parse_feed(url, fonte, days, errori):
     return out
 
 
-def fetch_firecrawl(url, fonte, errori):
-    api_key = os.environ.get('FIRECRAWL_API_KEY')
-    if not api_key:
-        return []
+def fetch_dpc(cutoff, errori):
+    """Notizie e comunicati stampa del Dipartimento della Protezione Civile.
+
+    Il sito del Dipartimento è costruito con Gatsby, che pubblica per ogni
+    pagina un file JSON con i dati da cui la pagina nasce. Quello della pagina
+    «Attualità» contiene l'archivio completo di notizie e comunicati stampa,
+    con data, titolo, sommario e indirizzo: si legge con una richiesta sola,
+    senza chiave e senza crediti (dal 21/10/2026; prima la home e l'Area
+    stampa si leggevano con Firecrawl, a credito, e senza date). Una risposta
+    che si legge ma è vuota, o ferma da settimane, è una fonte rotta: schema
+    o indirizzo cambiati.
+    """
+    fonte = 'DPC — notizie e comunicati stampa'
     out = []
     try:
-        req = urllib.request.Request(
-            FIRECRAWL_API_URL,
-            data=json.dumps({"url": url, "formats": ["markdown"], "onlyMainContent": True, "timeout": 30000}).encode('utf-8'),
-            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            method='POST')
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-        if not data.get('success'):
-            print(f"  [warn] firecrawl no-success: {fonte}", file=sys.stderr)
-            errori.append(f'{fonte} (Firecrawl): risposta senza successo ({str(data.get("error", ""))[:150]})')
+        dati = json.loads(Cliente().get(DPC_ATTUALITA))['result']['data']
+        nodi = []
+        for chiave in ('allNodeNotizia', 'allNodeComunicatoStampa'):
+            nodi += [e.get('node') or {} for e in (dati.get(chiave) or {}).get('edges') or []]
+        date_nodi = [d for d in (parse_data_iso(n.get('field_data')) for n in nodi) if d]
+        if not date_nodi:
+            print(f"  [error] {fonte}: nessuna notizia datata nel file", file=sys.stderr)
+            errori.append(f'{fonte}: nessuna notizia datata nel file (schema cambiato?) ({DPC_ATTUALITA})')
             return out
-        md = (data.get('data') or {}).get('markdown') or ''
-        seen = set()
-        for m in re.finditer(r'\[([^\]]+)\]\((https?://[^\)]+)\)', md):
-            titolo, link = m.group(1).strip(), m.group(2).strip().split('#')[0]
-            if len(titolo) < 15 or not re.search(r'protezionecivile\.gov\.it/it/(notizia|comunicato-stampa)/', link) or link in seen:
+        ultima = max(date_nodi)
+        if (oggi_roma() - ultima).days > DPC_MAX_ETA_GIORNI:
+            print(f"  [error] {fonte}: file fermo al {ultima.isoformat()}", file=sys.stderr)
+            errori.append(f'{fonte}: il file non si aggiorna, ultima voce del {ultima.strftime("%d/%m/%Y")} '
+                          f'(indirizzo o schema cambiati?) ({DPC_ATTUALITA})')
+            return out
+        for n in nodi:
+            d = parse_data_iso(n.get('field_data'))
+            slug = ((n.get('fields') or {}).get('slug') or '').strip()
+            if not d or d < cutoff or not slug.startswith('/'):
                 continue
-            seen.add(link)
-            v = voce(fonte, 'news', titolo, link, None)
+            titolo = ' '.join((n.get('field_titolo_esteso') or n.get('title') or '').split())
+            sommario = solo_testo((n.get('field_abstract') or {}).get('processed') or '')
+            v = voce(fonte, 'news', titolo, DPC_BASE + '/it' + slug, n.get('field_data').strip(), sommario=sommario)
             if v['rilevanza']:
                 out.append(v)
     except Exception as e:  # noqa: BLE001
-        print(f"  [error] firecrawl {fonte}: {e}", file=sys.stderr)
-        errori.append(f'{fonte} (Firecrawl): {e}')
+        print(f"  [error] {fonte}: {e}", file=sys.stderr)
+        errori.append(f'{fonte}: {e} ({DPC_ATTUALITA})')
     return out
 
 
@@ -1166,7 +1181,7 @@ def main():
     ap.add_argument('--days', type=int, default=2, help='Finestra temporale in giorni (default 2)')
     ap.add_argument('--fonti', choices=['primarie', 'news', 'tutte', 'eu-space'], default='tutte',
                     help='primarie = albo/GU/Normattiva/BURL/Consiglio regionale + immagini EU Space; '
-                         'news = Google News/RSS/Firecrawl; tutte (default); eu-space = solo le immagini EU Space')
+                         'news = Google News/RSS/notizie del DPC; tutte (default); eu-space = solo le immagini EU Space')
     ap.add_argument('--out', default='-', help='File output JSON (default stdout)')
     ap.add_argument('--issue-body', default=None, help='Scrive il corpo Markdown della issue in questo file')
     ap.add_argument('--dedup-issues', action='store_true', help='Scarta gli URL già comparsi nelle issue normativa-watcher (richiede gh)')
@@ -1235,12 +1250,9 @@ def main():
         for f in FEEDS_ISTITUZIONALI:
             fonti_lette.append(f['nome'])
             aggiungi(parse_feed(f['url'], f['nome'], args.days, errori_news), f['nome'])
-        if os.environ.get('FIRECRAWL_API_KEY'):
-            fonti_lette.append('DPC via Firecrawl')
-            for f in FIRECRAWL_SOURCES:
-                aggiungi(fetch_firecrawl(f['url'], f['nome'], errori_news), f"{f['nome']} (Firecrawl)")
-        else:
-            print(f"  [skip] {len(FIRECRAWL_SOURCES)} fonti Firecrawl (FIRECRAWL_API_KEY non settata)", file=sys.stderr)
+        nome = 'DPC — notizie e comunicati stampa'
+        fonti_lette.append(nome)
+        aggiungi(fetch_dpc(cutoff, errori_news), nome)
 
     # Dedup contro issue precedenti / file di esclusione
     esclusi = set()

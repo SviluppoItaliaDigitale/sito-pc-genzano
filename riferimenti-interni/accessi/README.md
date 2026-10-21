@@ -83,7 +83,7 @@ contenuti sponsorizzati.
 | Credenziale | Abilita | Limite |
 |---|---|---|
 | `GEMINI_API_KEY` | testi delle bozze social | tier gratuito, ampiamente sufficiente |
-| `FIRECRAWL_API_KEY` | lettura di siti istituzionali con JavaScript o anti-bot | 500 pagine al mese |
+| `FIRECRAWL_API_KEY` | lettura, nelle sessioni, dei siti istituzionali con JavaScript o anti-bot che WebFetch non legge; dal 21/10/2026 nessun workflow la usa più | 1.000 crediti al mese, che si rinnovano intorno al 19; mai una carta di pagamento né l'offerta dei 1.500 crediti, che attiva il piano a pagamento (rule 08 § «Firecrawl») |
 | `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | avvisi sul canale: allerta e nuovi articoli | — |
 | `PEXELS_API_KEY`, `PIXABAY_API_KEY`, `UNSPLASH_ACCESS_KEY` | foto stock, usate di rado per scelta editoriale | — |
 | `CDSE_S3_ACCESS_KEY` + `CDSE_S3_SECRET_KEY` (dal 10/10/2026) | lettura dell'archivio del Copernicus Data Space Ecosystem via S3 (`eodata.dataspace.copernicus.eu`, bucket `eodata`): Sentinel-1/2/3/5P e prodotti CLMS, per gli snapshot `copernicus-*.json` del cruscotto e il ritaglio radar Sentinel-1 (lettura parziale dei COG via GDAL `/vsis3/`) | sola lettura: niente elaborazioni sul loro server (openEO e Sentinel Hub vogliono un client OIDC a parte); quota gratuita 10 TB/mese e 4 scarichi in parallelo; le chiavi si rigenerano dal gestore chiavi S3 dell'account (dataspace.copernicus.eu, «S3 keys manager»), la segreta si vede una volta sola |
