@@ -91,7 +91,7 @@ Fonti istituzionali:
 
 - [Dipartimento della Protezione Civile — Comunicato stampa](https://www.protezionecivile.gov.it/it/comunicato-stampa/la-mostra-terremoti-ditalia-fa-tappa-napoli/).
 - [Città della Scienza](https://www.cittadellascienza.it/).
-- [Campagna «Io non rischio»](https://iononrischio.protezionecivile.it/).
+- [Campagna «Io non rischio»](https://iononrischio.protezionecivile.gov.it/).
 - [Rete Accelerometrica Nazionale (RAN)](https://ran.protezionecivile.it/).
 - [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
 

@@ -73,6 +73,8 @@ DATA_FILE = REPO_ROOT / "data" / "audit-pdf.yaml"
 ORIGINE_PATTERNS = [
     # TERZO — documenti di altri enti, la cui accessibilità è responsabilità
     # dell'ente emittente (come dichiariamo pubblicamente).
+    ("TERZO", "Gazzetta Ufficiale della Repubblica Italiana (testi legislativi originali)",
+     ["gazzetta-ufficiale-"]),
     ("TERZO", "DPC / Dipartimento Protezione Civile",
      ["dpc-", "protezione-civile-art-", "dpc_"]),
     ("TERZO", "Regione Lazio (BURL, DGR, determine, regolamenti regionali)",

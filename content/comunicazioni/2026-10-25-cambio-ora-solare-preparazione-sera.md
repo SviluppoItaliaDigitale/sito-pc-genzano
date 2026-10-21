@@ -53,7 +53,7 @@ Al rientro dal lavoro o da scuola, quando cala la luce:
 
 ## Comportamenti per automobilisti
 
-- **rallentare** in centri abitati al tramonto;
+- **rallentare** nei centri abitati al tramonto;
 - **attenzione** a pedoni sugli attraversamenti;
 - **luci** accese da mezz'ora dopo il tramonto e, fuori dai centri abitati, anche di giorno;
 - **distanza** di sicurezza maggiorata (tempi di reazione ridotti al buio);

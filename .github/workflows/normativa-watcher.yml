@@ -11,6 +11,11 @@ name: 📰 Normativa Watcher (rassegna quotidiana + digest settimanale)
 # vengono scartati (`--dedup-issues`), niente file di stato da committare.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/normativa-watcher.py'
+      - '.github/workflows/normativa-watcher.yml'
   schedule:
     # Ogni giorno 05:30 UTC (07:30 italiane). Lo scheduler GitHub può
     # ritardare di ore: la Routine CCR non dipende da questo run (esegue
@@ -51,6 +56,9 @@ jobs:
 
       - name: Installa dipendenze
         run: pip install feedparser
+
+      - name: Verifica la classificazione degli atti
+        run: python3 scripts/normativa-watcher.py --self-test
 
       - name: Decidi finestra e fonti
         id: piano

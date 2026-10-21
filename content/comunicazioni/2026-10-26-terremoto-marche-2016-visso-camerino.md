@@ -36,7 +36,7 @@ La sequenza sismica del **Centro Italia 2016-2017** è una delle più lunghe e c
 - **24 agosto 2016, 03:36** — M6.0, epicentro Accumoli (Rieti, Lazio). Danni gravissimi ad **Amatrice, Accumoli, Pescara del Tronto** (frazione di Arquata del Tronto, Marche). **Circa 300 vittime**.
 - **26 ottobre 2016, 19:11** — M5.4, scossa precorritrice del Maceratese.
 - **26 ottobre 2016, 21:18** — M5.9, scossa principale fra **Visso, Castelsantangelo sul Nera, Ussita**.
-- **30 ottobre 2016, 07:40** — M6.5, epicentro Norcia. **La scossa più forte registrata in Italia dal Friuli 1976**. Distrusse parzialmente o totalmente molti edifici già lesionati, fra cui la **Basilica di San Benedetto** a Norcia.
+- **30 ottobre 2016, 07:40** — M6.5, epicentro Norcia. **La scossa più forte registrata in Italia dal 1980 (Irpinia)**. Distrusse parzialmente o totalmente molti edifici già lesionati, fra cui la **Basilica di San Benedetto** a Norcia.
 - **18 gennaio 2017, da 09:25 a 14:33** — quattro scosse fra M5.1 e M5.5 sulla zona di Capitignano (L'Aquila), in concomitanza con un'**ondata di neve eccezionale** che il 18 gennaio 2017 stesso causò la **valanga di Rigopiano** (29 vittime) sull'altro versante del Gran Sasso.
 
 Le **Marche** furono colpite soprattutto dalle scosse del **24 agosto 2016** (Pescara del Tronto, Arquata del Tronto) e del **26-30 ottobre 2016** (Visso, Castelsantangelo, Ussita, Camerino, Tolentino, Amandola, Sarnano e decine di altri Comuni del Maceratese e del Fermano). Il **patrimonio storico** dei piccoli paesi appenninici — chiese romaniche, palazzi rinascimentali, abbazie, borghi medievali — fu **gravemente danneggiato o distrutto**.

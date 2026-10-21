@@ -129,6 +129,10 @@ Comunicazione Aumentativa Alternativa. Modalità di comunicazione con simboli e 
 ### CAI {#cai}
 Club Alpino Italiano. Struttura di riferimento per l'alpinismo e l'escursionismo; il suo Corpo Nazionale Soccorso Alpino e Speleologico (CNSAS) è una struttura operativa del Servizio nazionale di protezione civile.
 
+### CAMS {#cams}
+Copernicus Atmosphere Monitoring Service. Servizio europeo del programma Copernicus, gestito dall'ECMWF, che prevede la qualità dell'aria fino a quattro giorni combinando più modelli (PM2,5, PM10, ozono, biossido di azoto). Il cruscotto di questo sito lo affianca ai dati delle centraline ARPA.
+*Approfondisci: [Cruscotto](/cruscotto/).*
+
 ### CAP {#cap}
 Common Alerting Protocol. Standard internazionale con cui questo sito pubblica le proprie allerte in formato leggibile dalle macchine (feed [`/allerta-cap.xml`](/allerta-cap.xml)), oltre che nelle pagine per il cittadino. Non va confuso con il CAP come codice di avviamento postale.
 *Approfondisci: [Open Data](/open-data/).*
@@ -229,6 +233,10 @@ Defibrillatore Automatico Esterno. Apparecchio salvavita che riconosce un arrest
 
 ### DEP {#dep}
 Dipartimento di Epidemiologia del Lazio (ASL Roma 1). Ente di sanità pubblica che pubblica studi e linee guida su rischi sanitari come le ondate di calore, citati anche dagli articoli di questo sito.
+
+### DGR {#dgr}
+Delibera della Giunta Regionale. Atto con cui la Giunta della Regione Lazio decide su materie di sua competenza. Per la protezione civile le più citate sono la DGR 865/2019, che suddivide il Lazio in zone di allerta meteo-idrogeologica (Genzano di Roma è nella Zona F), e la DGR 1145/2024, che indica la corrispondenza minima tra livello di allerta e fasi operative del Comune.
+*Approfondisci: [Allerte meteo](/allerte-meteo/).*
 
 ### DICOMAC
 Direzione di Comando e Controllo. Struttura di coordinamento nazionale attivata nelle emergenze di rilievo nazionale.

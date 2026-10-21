@@ -79,6 +79,12 @@ jobs:
           #                   (artefatto di build, mai committato — rule 10), quindi nella
           #                   build di questo workflow /pagefind/pagefind-ui.css non esiste:
           #                   falso positivo strutturale.
+          #                   + i bottoni di condivisione «LinkedIn» e «X» (page-tools.html,
+          #                   presenti su OGNI pagina) puntano a endpoint di condivisione
+          #                   che richiedono login/sessione browser: un crawler automatico
+          #                   non può mai validarli (si tratta di un'azione dell'utente, non
+          #                   di un link di contenuto). Rumore ricorrente in ogni rapporto
+          #                   settimanale (issue #1488 e precedenti), mai un vero guasto.
           # --require-https   segnala link http:// (sicurezza)
           # --root-dir   risolve i path assoluti (/foo/bar/) contro la root del sito buildato.
           #              Senza questo flag lychee non sa contro cosa risolvere /css/, /images/, ecc.
@@ -113,6 +119,8 @@ jobs:
             --exclude "^https://www\.cnr\.it"
             --exclude "^https://www\.parcocastelliromani\.it"
             --exclude "/pagefind/"
+            --exclude "^https://www\.linkedin\.com/sharing/share-offsite"
+            --exclude "^https://x\.com/intent/post"
             --exclude-path "public/vendor"
             --exclude-path "public/app-shared"
             'public/**/*.html'

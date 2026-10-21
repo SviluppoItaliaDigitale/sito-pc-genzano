@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-28-incendi-boschivi-divieti-fino-15-ottobre.webp"
 image_alt: "Cover dell'articolo: Incendi boschivi, a Genzano i divieti restano in vigore fino al 15 ottobre"
 scadenza: "2026-10-15"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza Sindacale n. 14 del 17/06/2026 — prevenzione incendi boschivi"

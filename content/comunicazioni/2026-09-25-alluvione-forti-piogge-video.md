@@ -90,4 +90,4 @@ Per i colori dell'allerta ci sono i due video dell'articolo [Allerta meteo in du
 
 **Fonti istituzionali:**
 
-- [Alluvione: cosa fare](https://iononrischio.protezionecivile.it/it/preparati/alluvione/cosa-fare/) e [cosa sapere](https://iononrischio.protezionecivile.it/it/preparati/alluvione/cosa-sapere/) — campagna «Io non rischio» del Dipartimento della Protezione Civile.
+- [Alluvione: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/) e [cosa sapere](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/) — campagna «Io non rischio» del Dipartimento della Protezione Civile.

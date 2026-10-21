@@ -90,7 +90,7 @@ Un kit utile è un kit **aggiornato**. Una volta l'anno:
 
 ## Per approfondire
 
-- [Campagna "Io Non Rischio"](https://iononrischio.protezionecivile.it/)
+- [Campagna "Io Non Rischio"](https://iononrischio.protezionecivile.gov.it/)
 - [Piano familiare di emergenza](/piano-familiare/)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 

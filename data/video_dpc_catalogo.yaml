@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8957 video (18 canali).
+# Totale: 8984 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -15,7 +15,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 632
+    video_count: 633
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 962
+    video_count: 963
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -40,12 +40,12 @@ canali:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 391
+    video_count: 393
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1348
+    video_count: 1355
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -75,7 +75,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 647
+    video_count: 648
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1910
+    video_count: 1925
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -2907,6 +2907,11 @@ video:
     id: fqv88MpCen0
     titolo: 'Fuori servizio: in difesa della sanità pubblica'
     url: https://youtu.be/fqv88MpCen0
+  cicap-ftJZO0vAnhQ:
+    canale: cicap
+    id: ftJZO0vAnhQ
+    titolo: In caso di terremoto - con Laura Peruzza e Warner Marzocchi
+    url: https://youtu.be/ftJZO0vAnhQ
   cicap-ftYaQ6xhxW0:
     canale: cicap
     id: ftYaQ6xhxW0
@@ -5752,6 +5757,11 @@ video:
     id: GCqvSiW6foY
     titolo: 'INSIDERS | Unlocking Finance for Nature-based Solutions: Perspectives from Three Innovation Labs'
     url: https://youtu.be/GCqvSiW6foY
+  cmcc-GGvf4AAF090:
+    canale: cmcc
+    id: GGvf4AAF090
+    titolo: Connecting disaster risk reduction and climate adaptation | CLIMAAX & CARMINE | UNDRR DAY 2026
+    url: https://youtu.be/GGvf4AAF090
   cmcc-GJEwu_cJ1_0:
     canale: cmcc
     id: GJEwu_cJ1_0
@@ -10282,6 +10292,11 @@ video:
     id: 1zpqQzMy8qY
     titolo: Open Day al Dipartimento della Protezione Civile
     url: https://youtu.be/1zpqQzMy8qY
+  dpc-gov-25FcvhaIhN0:
+    canale: dpc-gov
+    id: 25FcvhaIhN0
+    titolo: Cerimonia di consegna delle Pubbliche Benemerenze di Protezione Civile
+    url: https://youtu.be/25FcvhaIhN0
   dpc-gov-25ci6GjB-so:
     canale: dpc-gov
     id: 25ci6GjB-so
@@ -11697,6 +11712,11 @@ video:
     id: j8OYAh_2_k8
     titolo: Promo 2014 "Io Non Rischio"  (versione 2 di 2)
     url: https://youtu.be/j8OYAh_2_k8
+  dpc-gov-jIk31o4YT3w:
+    canale: dpc-gov
+    id: jIk31o4YT3w
+    titolo: Percorsi di protezione civile 2026
+    url: https://youtu.be/jIk31o4YT3w
   dpc-gov-jOhCY8YhooM:
     canale: dpc-gov
     id: jOhCY8YhooM
@@ -13082,6 +13102,11 @@ video:
     id: 7av4Z_JjMFo
     titolo: 'Luca Zingaretti: Beyond Montalbano, the Actor''s Profession'
     url: https://youtu.be/7av4Z_JjMFo
+  geopop-7bieEUoKpH8:
+    canale: geopop
+    id: 7bieEUoKpH8
+    titolo: La storia Geologica della Sardegna da 30 milioni di anni fa ad oggi
+    url: https://youtu.be/7bieEUoKpH8
   geopop-7fPmsTUteAs:
     canale: geopop
     id: 7fPmsTUteAs
@@ -13727,6 +13752,11 @@ video:
     id: ECs0eNTrwQ4
     titolo: Is it possible to make rain artificially? I'm sorting out chemtrails, HAARP, and insemination.
     url: https://youtu.be/ECs0eNTrwQ4
+  geopop-EDXmtLtqo3g:
+    canale: geopop
+    id: EDXmtLtqo3g
+    titolo: 'La Prince Rupert’s drop non è una goccia di vetro come tante: non si rompe con un martello!'
+    url: https://youtu.be/EDXmtLtqo3g
   geopop-EDXt6tUDIJA:
     canale: geopop
     id: EDXt6tUDIJA
@@ -15152,6 +15182,11 @@ video:
     id: RSooxlN_HKw
     titolo: 'We tasted Surstromming: why does it smell so bad? The biochemistry of fermentation'
     url: https://youtu.be/RSooxlN_HKw
+  geopop-Rba9SnD4EZw:
+    canale: geopop
+    id: Rba9SnD4EZw
+    titolo: 'L’attentato a Hitler del 20 luglio 1944: la ricostruzione 3D del piano segreto'
+    url: https://youtu.be/Rba9SnD4EZw
   geopop-RdYCpVDPr20:
     canale: geopop
     id: RdYCpVDPr20
@@ -15467,6 +15502,11 @@ video:
     id: U_b4zriq8V4
     titolo: Come la geologia racconta lo sbarco in Normandia
     url: https://youtu.be/U_b4zriq8V4
+  geopop-Uat8tLqv8io:
+    canale: geopop
+    id: Uat8tLqv8io
+    titolo: Quanto ci metti a risolvere un cubo di Rubik? Sapete chi ha il record mondiale?
+    url: https://youtu.be/Uat8tLqv8io
   geopop-Ub8jvZHbL1g:
     canale: geopop
     id: Ub8jvZHbL1g
@@ -16492,6 +16532,11 @@ video:
     id: dJJCinSP7Vk
     titolo: La spiegazione delle rotte migratorie dall’Africa all’Italia attraverso una mappa e i dati ufficiali
     url: https://youtu.be/dJJCinSP7Vk
+  geopop-dN-D-8byhNA:
+    canale: geopop
+    id: dN-D-8byhNA
+    titolo: '"Resto al Sud 2.0": un sostegno economico per giovani dai 18 ai 34, che avviano attività al Sud.'
+    url: https://youtu.be/dN-D-8byhNA
   geopop-dZ_D6gmy6FY:
     canale: geopop
     id: dZ_D6gmy6FY
@@ -16577,6 +16622,11 @@ video:
     id: eUL5akagtJ8
     titolo: Is ketamine a drug or a medicine? Its effects on the body from a scientific perspective.
     url: https://youtu.be/eUL5akagtJ8
+  geopop-eV74a-D8KLM:
+    canale: geopop
+    id: eV74a-D8KLM
+    titolo: A proposito dell’Aeroporto di Firenze
+    url: https://youtu.be/eV74a-D8KLM
   geopop-eXkVgJpemLk:
     canale: geopop
     id: eXkVgJpemLk
@@ -16847,6 +16897,11 @@ video:
     id: gu7AxJCZreI
     titolo: Mineral deposits, distribution of resources and the richest countries
     url: https://youtu.be/gu7AxJCZreI
+  geopop-gvINM1-i5cA:
+    canale: geopop
+    id: gvINM1-i5cA
+    titolo: 'Cos''è la menopausa e perché si verificano le vampate di calore: vediamo cosa accade al corpo'
+    url: https://youtu.be/gvINM1-i5cA
   geopop-gvvvh4UtQdk:
     canale: geopop
     id: gvvvh4UtQdk
@@ -29367,6 +29422,11 @@ video:
     id: bcTqTbeJqE8
     titolo: Due donne in carriera
     url: https://youtu.be/bcTqTbeJqE8
+  natgeo-italia-bma9TGt_cvE:
+    canale: natgeo-italia
+    id: bma9TGt_cvE
+    titolo: Una giovane megattera
+    url: https://youtu.be/bma9TGt_cvE
   natgeo-italia-bmaWm3Ep8ps:
     canale: natgeo-italia
     id: bmaWm3Ep8ps
@@ -30957,6 +31017,11 @@ video:
     id: 0bhpuI3wM4M
     titolo: MappaMondi - La rivolta anti-Trump, cosa succede a Los Angeles (con Lucia Magi)
     url: https://youtu.be/0bhpuI3wM4M
+  rai-news-0cNUldq8Rs8:
+    canale: rai-news
+    id: 0cNUldq8Rs8
+    titolo: 'Morte David Rossi, la verità scomoda della Commissione d''inchiesta: coinvolti Mussari e Ceccherelli'
+    url: https://youtu.be/0cNUldq8Rs8
   rai-news-0e8Nl7dVaFs:
     canale: rai-news
     id: 0e8Nl7dVaFs
@@ -31207,6 +31272,11 @@ video:
     id: 2SC-Nor0rgs
     titolo: Via Poma, a new lead emerges from the latest Cesaroni murder investigation
     url: https://youtu.be/2SC-Nor0rgs
+  rai-news-2UujJyvFJeE:
+    canale: rai-news
+    id: 2UujJyvFJeE
+    titolo: 'Piazza Duomo, il giorno dopo: vetrine sfondate e danni a Milano'
+    url: https://youtu.be/2UujJyvFJeE
   rai-news-2VRq7r0CSXg:
     canale: rai-news
     id: 2VRq7r0CSXg
@@ -31872,6 +31942,11 @@ video:
     id: 6dG_p3Hffeg
     titolo: 'Cosenza, rissa in discoteca: ucciso un lavoratore di 34 anni'
     url: https://youtu.be/6dG_p3Hffeg
+  rai-news-6e04CWboFEY:
+    canale: rai-news
+    id: 6e04CWboFEY
+    titolo: i manifestanti impediscono l'accesso al Louvre
+    url: https://youtu.be/6e04CWboFEY
   rai-news-6iLuMkdVPhM:
     canale: rai-news
     id: 6iLuMkdVPhM
@@ -31912,6 +31987,11 @@ video:
     id: 6vzBMdoLJzA
     titolo: Family in the woods. Court orders children to be moved to another facility without their mother.
     url: https://youtu.be/6vzBMdoLJzA
+  rai-news-6w1fmrkoWm4:
+    canale: rai-news
+    id: 6w1fmrkoWm4
+    titolo: Terni, morta la donna aggredita a martellate dal marito sul bus
+    url: https://youtu.be/6w1fmrkoWm4
   rai-news-6wbqGqQoWK0:
     canale: rai-news
     id: 6wbqGqQoWK0
@@ -32072,6 +32152,11 @@ video:
     id: 842mJW1g9rs
     titolo: 'Gianna Pratesi turns 106: from the referendum on the Republic to Sanremo'
     url: https://youtu.be/842mJW1g9rs
+  rai-news-84lIDuVyW4U:
+    canale: rai-news
+    id: 84lIDuVyW4U
+    titolo: sabato è notte di guerriglia in tutta Parigi
+    url: https://youtu.be/84lIDuVyW4U
   rai-news-8534x8SFAvs:
     canale: rai-news
     id: 8534x8SFAvs
@@ -32372,6 +32457,11 @@ video:
     id: AR-d4EVKDzQ
     titolo: 'Digos raid: seals placed on the Askatasuna social center in Turin.'
     url: https://youtu.be/AR-d4EVKDzQ
+  rai-news-ASCg3X5Jr2U:
+    canale: rai-news
+    id: ASCg3X5Jr2U
+    titolo: Fiorello, stasera il ritorno su Rai 1
+    url: https://youtu.be/ASCg3X5Jr2U
   rai-news-ASQ0VnXDW24:
     canale: rai-news
     id: ASQ0VnXDW24
@@ -33092,6 +33182,11 @@ video:
     id: Eqes_W7aab8
     titolo: Justice referendum; high turnout and a "No" vote from young people, an initial analysis of the vote.
     url: https://youtu.be/Eqes_W7aab8
+  rai-news-Es6kK85XNNA:
+    canale: rai-news
+    id: Es6kK85XNNA
+    titolo: 'Aperitivo surreale a Parigi: si sorseggia un drink mentre alle loro spalle infuriano gli scontri'
+    url: https://youtu.be/Es6kK85XNNA
   rai-news-EvCgJ1Iho_k:
     canale: rai-news
     id: EvCgJ1Iho_k
@@ -33227,6 +33322,11 @@ video:
     id: FeHDbNYcg0s
     titolo: 'The derailed tram in Milan: a chronicle of a tragedy'
     url: https://youtu.be/FeHDbNYcg0s
+  rai-news-FhfepqpbyrU:
+    canale: rai-news
+    id: FhfepqpbyrU
+    titolo: Il Papa sorridente a San Pietro
+    url: https://youtu.be/FhfepqpbyrU
   rai-news-Fie-RVAFAP4:
     canale: rai-news
     id: Fie-RVAFAP4
@@ -34632,6 +34732,11 @@ video:
     id: Oc508fZ9ops
     titolo: Six Milan City Hall employees investigated for stealing jewelry from the dead.
     url: https://youtu.be/Oc508fZ9ops
+  rai-news-OcRWEwxGiUY:
+    canale: rai-news
+    id: OcRWEwxGiUY
+    titolo: 'Fiorello al Tg1 su autotrasportatori: "Stanno protestando senza spaccare niente"'
+    url: https://youtu.be/OcRWEwxGiUY
   rai-news-OdmNcnzLi2Q:
     canale: rai-news
     id: OdmNcnzLi2Q
@@ -34732,6 +34837,11 @@ video:
     id: PEYg1TtzJS0
     titolo: SERGIO ENDRIGO - Out of sight but not out of mind
     url: https://youtu.be/PEYg1TtzJS0
+  rai-news-PGJmju5QZEs:
+    canale: rai-news
+    id: PGJmju5QZEs
+    titolo: 'Distruggere, terrorizzare, saccheggiare: le parole d''ordine della guerriglia di Milano'
+    url: https://youtu.be/PGJmju5QZEs
   rai-news-PGP0HnChkr4:
     canale: rai-news
     id: PGP0HnChkr4
@@ -35212,6 +35322,11 @@ video:
     id: SEHh-bvRzzg
     titolo: 'Winter''s final throes in Italy: snow, cold, and wind in central and northern Italy.'
     url: https://youtu.be/SEHh-bvRzzg
+  rai-news-SH-Lk_PQqI0:
+    canale: rai-news
+    id: SH-Lk_PQqI0
+    titolo: Tra gli ulivi dell'Umbria, 40 chilometri da gustare in bici
+    url: https://youtu.be/SH-Lk_PQqI0
   rai-news-SHkyiG6feFw:
     canale: rai-news
     id: SHkyiG6feFw
@@ -35892,6 +36007,11 @@ video:
     id: X8FsUEujIuY
     titolo: 'MappaMondi: elezioni anticipate al 4 luglio nel Regno Unito'
     url: https://youtu.be/X8FsUEujIuY
+  rai-news-XAYE_M-k3DM:
+    canale: rai-news
+    id: XAYE_M-k3DM
+    titolo: Donna morta in incidente, all'ex oltre al femminicidio contestato anche omicidio volontario
+    url: https://youtu.be/XAYE_M-k3DM
   rai-news-XBjsD_Pl4gU:
     canale: rai-news
     id: XBjsD_Pl4gU
@@ -36727,6 +36847,11 @@ video:
     id: cDoTOnRdOIY
     titolo: Goodbye Gino Paoli, the great singer-songwriter has died.
     url: https://youtu.be/cDoTOnRdOIY
+  rai-news-cEQlk64MTLw:
+    canale: rai-news
+    id: cEQlk64MTLw
+    titolo: Sabato e notte di guerriglia in tutta Parigi
+    url: https://youtu.be/cEQlk64MTLw
   rai-news-cEhShh0N_kU:
     canale: rai-news
     id: cEhShh0N_kU
@@ -38572,6 +38697,11 @@ video:
     id: o_6hNDDiatA
     titolo: 'Silvana Armani: "My uncle Giorgio, an unforgettable gaze"'
     url: https://youtu.be/o_6hNDDiatA
+  rai-news-o_yyQOZFRjk:
+    canale: rai-news
+    id: o_yyQOZFRjk
+    titolo: Guerriglia a Milano, il giorno dopo
+    url: https://youtu.be/o_yyQOZFRjk
   rai-news-oalzQum8Cdo:
     canale: rai-news
     id: oalzQum8Cdo
@@ -39707,6 +39837,11 @@ video:
     id: vjj5YiYddW8
     titolo: Taiwan trasforma gli scarti in fibre tessili sostenibili
     url: https://youtu.be/vjj5YiYddW8
+  rai-news-vl_kKuN1M5w:
+    canale: rai-news
+    id: vl_kKuN1M5w
+    titolo: 'Poliziotto ferito a Milano: "Mai vista una violenza simile"'
+    url: https://youtu.be/vl_kKuN1M5w
   rai-news-vxvgL5F0xtg:
     canale: rai-news
     id: vxvgL5F0xtg

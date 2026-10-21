@@ -2096,3 +2096,8 @@ documentation
 hydrological
 modelling
 rumors
+
+# --- Controllo kit calamità 20/10/2026: orig. (stanza originale), van der Steen, long-term ---
+orig
+der
+term

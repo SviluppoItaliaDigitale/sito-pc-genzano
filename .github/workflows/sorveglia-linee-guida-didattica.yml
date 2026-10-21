@@ -19,6 +19,9 @@ name: "Linee guida per l'apprendimento: controllo settimanale"
 # e segnala dal secondo.
 
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sorveglia-linee-guida-didattica.yml']
   schedule:
     # Lunedì 06:26 UTC, dopo aggiorna-manuale.yml (06:04).
     - cron: "26 6 * * 1"
@@ -27,6 +30,10 @@ on:
 permissions:
   contents: write
   issues: write
+
+concurrency:
+  group: linee-guida-didattica
+  cancel-in-progress: false
 
 jobs:
   verifica-fonti:
@@ -102,17 +109,26 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- .manuale/fonti-didattica-hashes.json && git ls-files --error-unmatch .manuale/fonti-didattica-hashes.json >/dev/null 2>&1; then
-            echo "Nessuna modifica agli hash."
-          else
+          # Conserva il solo risultato del controllo, poi riparte dal ramo
+          # remoto corrente: un altro aggiornamento non causa più conflitti
+          # di rebase sul JSON. Gli altri file remoti restano intatti.
+          snapshot="$RUNNER_TEMP/fonti-didattica-hashes.json"
+          cp .manuale/fonti-didattica-hashes.json "$snapshot"
+          for tentativo in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p .manuale
+            cp "$snapshot" .manuale/fonti-didattica-hashes.json
             git add .manuale/fonti-didattica-hashes.json
+            if git diff --cached --quiet; then
+              echo "Nessuna modifica agli hash."
+              exit 0
+            fi
             git commit -m "Hash delle linee guida per l'apprendimento — controllo settimanale"
-            for tentativo in 1 2 3; do
-              if git push 2>&1; then break; fi
-              git pull --rebase origin main || exit 1
-              [ "$tentativo" = "3" ] && exit 1
-            done
-          fi
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          echo "Impossibile pubblicare gli hash dopo tre tentativi." >&2
+          exit 1
 
       - name: "Apri issue se una linea guida è cambiata"
         if: steps.check.outputs.has_changes == 'true'

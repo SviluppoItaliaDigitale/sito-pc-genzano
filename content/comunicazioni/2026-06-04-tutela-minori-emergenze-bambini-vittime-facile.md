@@ -63,7 +63,7 @@ Parlare di emergenza con i bambini è utile. Ecco come farlo:
 - Fai delle piccole simulazioni di gioco: "Dove andiamo se succede...".
 - Dopo un evento difficile, lascia che disegnino o raccontino cosa hanno vissuto.
 
-Il Dipartimento della Protezione Civile ha guide per le famiglie sul sito [Io Non Rischio](https://iononrischio.protezionecivile.it/).
+Il Dipartimento della Protezione Civile ha guide per le famiglie sul sito [Io Non Rischio](https://iononrischio.protezionecivile.gov.it/).
 
 ## Bambini con disabilità
 
@@ -94,6 +94,6 @@ Nei nostri corsi impariamo come aiutare i bambini in emergenza. Impariamo a parl
 - [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - [Aiutare anziani e vicini fragili](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
 - [Nazioni Unite — Giornata dei bambini vittime](https://www.un.org/en/observances/child-victim-day)
-- [Io Non Rischio — Materiali per famiglie](https://iononrischio.protezionecivile.it/)
+- [Io Non Rischio — Materiali per famiglie](https://iononrischio.protezionecivile.gov.it/)
 
 I bambini in emergenza hanno bisogno di attenzione speciale. Ogni famiglia può prepararsi. Ogni volontario può imparare.

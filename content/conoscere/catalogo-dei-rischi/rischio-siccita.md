@@ -70,5 +70,5 @@ Anche i comportamenti quotidiani contano. Ridurre gli sprechi domestici, segnala
 
 - [ISPRA](https://www.isprambiente.gov.it/) — dati su risorse idriche e siccità (Istituto Superiore per la Protezione e la Ricerca Ambientale).
 - [CMCC](https://www.cmcc.it/) — scenari climatici per il Mediterraneo (Centro Euro-Mediterraneo sui Cambiamenti Climatici).
-- [Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.autoritadistrettoappenninocentrale.it/) — Osservatorio sugli utilizzi idrici per il Lazio.
+- [Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.aubac.it/) — Osservatorio sugli utilizzi idrici per il Lazio.
 - [DPC, *La protezione civile in Italia. Testo per i docenti scolastici* (2020)](https://www.protezionecivile.gov.it/it/pubblicazione/la-protezione-civile-italia-testo-istituzionale-di-riferimento-i-docenti-scolastici/) — il volume istituzionale da cui è tratta parte di questa scheda.
