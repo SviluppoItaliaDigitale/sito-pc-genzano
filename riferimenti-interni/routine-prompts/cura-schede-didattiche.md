@@ -6,7 +6,7 @@ punto 3 (gate `pc-didattica-reviewer` + `pc-fact-checker` con rotazione del cata
 punto 5 (note dentro il wrapper stampabile, `pc-verifica-visiva`), punto 8 (parità dei pacchetti).
 Novità dell'08/10/2026: punto 4-bis (ricerca attiva di norme e linee guida nuove), D.M. 221/2025 fra le norme vigenti, punto 5 con CAST UDL e Mayer.
 
-**Se Claude è ferma:** la esegue ChatGPT quando Alessandro chiede «fai le routine di oggi» (`AGENTS.md`, § «Quando Claude è fermo, lavori tu al suo posto»). Dove il testo chiede una notifica push o un'email ad Alessandro, l'esito va nel riassunto finale e, se il lavoro nasce da una issue, in un commento sulla issue; dove chiede di avviare un agente, applichi tu la lista di controllo del suo file in `.claude/agents/`.
+**Se Claude è ferma:** la esegue ChatGPT quando Alessandro chiede «fai le routine di oggi» (`AGENTS.md`, § «Quando Claude è ferma, lavori tu al suo posto»). Dove il testo chiede una notifica push o un'email ad Alessandro, l'esito va nel riassunto finale e, se il lavoro nasce da una issue, in un commento sulla issue; dove chiede di avviare un agente, applichi tu la lista di controllo del suo file in `.claude/agents/`.
 
 **Come capire se oggi è già stata fatta:** PR o commit di oggi su `static/formazione/schede-stampabili/` o sui kit per le scuole.
 
