@@ -84,7 +84,11 @@ jobs:
         # copia GitHub Pages si presentavano ai motori come pagine distinte. Il
         # controllo vale soprattutto per le FAMIGLIE nuove: chi ne aggiunge una
         # senza elencarla nello script se ne accorge qui, non fra sei mesi.
-        run: python3 scripts/aggiungi-canonical-statiche.py --check
+        # Dal 22/10/2026 si ferma anche su una pagina indicizzabile di static/ che
+        # nessuna famiglia elenca e su una pagina con il canonical assente dalla
+        # mappa per i motori: le 143 schede dei kit calamità erano rimaste senza
+        # canonical perché la famiglia puntava alla cartella del foglio di stile.
+        run: python3 scripts/aggiungi-canonical-statiche.py --check --sitemap public/sitemap.xml
 
       - name: "🧪 Qualità delle pagine (titolo, h1, testo alternativo)"
         # Proposta «controllo qualità» del 06/10/2026: tutte le pagine del
@@ -375,6 +379,15 @@ jobs:
         run: |
           python3 scripts/test-testi-alternativi.py
           python3 scripts/test-genera-social.py
+
+      # 22/10/2026: la cornice di microtesto si mette anche sulle grafiche fatte in
+      # altro modo (locandine, programmi di grafica esterni) con
+      # `python3 scripts/microtesto_cornice.py GRAFICA.png`. Prove con grafiche
+      # costruite apposta: quattro lati, originale intatto, niente sovrascritture
+      # né doppie cornici (anche quelle degli altri enti), bordi trasparenti
+      # rifiutati, CMYK, nessun metadato dell'originale nel file nuovo.
+      - name: "🖼️ Cornice di microtesto sulle grafiche fatte in altro modo"
+        run: python3 scripts/microtesto_cornice.py --prova
 
   italiano:
     name: "Italiano — refusi e grammatica"
