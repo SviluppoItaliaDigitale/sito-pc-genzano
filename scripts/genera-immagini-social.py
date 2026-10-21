@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera immagini Instagram (post 1080x1080 e story 1080x1920) a partire
+"""Genera immagini Instagram (post 1080x1350 e story 1080x1920) a partire
 dalla cover di un articolo del sito.
 
 Template istituzionale:
