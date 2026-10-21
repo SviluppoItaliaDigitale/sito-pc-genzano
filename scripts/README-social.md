@@ -20,6 +20,10 @@ Per ogni articolo in `content/comunicazioni/*.md`:
    testi. Nomi a prova di errore: `feed-post.jpg` (post singolo nel feed),
    `feed-carosello-N.jpg` (carosello nel feed), `storia.jpg` (storia 24h).
    Tutte 1080×1350 (feed) o 1080×1920 (storia). Comodo da scaricare via mobile.
+   Accanto scrive `testi-alternativi.json` (dal 21/10/2026): il testo
+   alternativo di ogni immagine, preso solo da ciò che la grafica disegna, che
+   la pubblicazione automatica invia a Instagram e Facebook per chi usa un
+   lettore di schermo. È facoltativo: senza, i post escono come prima.
 
 ## Setup iniziale (una sola volta)
 
@@ -73,6 +77,7 @@ Output:
 - `social-bozze/2026/04/2026-04-20-articolo/README.md`
 - `social-bozze/2026/04/2026-04-20-articolo/feed-post.jpg` (o `feed-carosello-1.jpg`, `-2.jpg`, … se carosello)
 - `social-bozze/2026/04/2026-04-20-articolo/storia.jpg`
+- `social-bozze/2026/04/2026-04-20-articolo/testi-alternativi.json`
 
 ### Tutti gli articoli pubblicati (batch retroattivo)
 
@@ -189,6 +194,11 @@ Le rules istituzionali sono in `.claude/rules/`. Modificale per cambiare:
 - Hashtag stabili → `02-content-design-pa.md`
 - Regole di accessibilità social → `03-accessibility.md`
 - Distinzione badge Allerta/Emergenza → `06-protezione-civile-scientifica.md`
+- Consigli dei webinar nazionali (tono, testi, parole su disabilità e fragilità)
+  → `comunicazione-social.md`, regola comune a tutti i repository: si cambia
+  nella copia di riferimento di `assistente-personale`, non qui. La sezione
+  sulla Misericordia di Ariccia non va nel prompt (`SEZIONI_ESCLUSE` in
+  `genera-social.py`).
 
 Allo script non serve modifica: legge automaticamente i file aggiornati al
 prossimo run.
@@ -200,7 +210,7 @@ cartella**, comoda da scaricare via mobile da GitHub.
 
 | Cartella | Contenuto | Deployata sul sito? |
 |---|---|---|
-| `social-bozze/AAAA/MM/<slug>/` | 4 .txt + README.md + `feed-post.jpg`/`feed-carosello-*.jpg` + `storia.jpg` | ❌ no (cartella fuori da Hugo, solo archivio di lavoro) |
+| `social-bozze/AAAA/MM/<slug>/` | 4 .txt + README.md + `feed-post.jpg`/`feed-carosello-*.jpg` + `storia.jpg` + `testi-alternativi.json` | ❌ no (cartella fuori da Hugo, solo archivio di lavoro) |
 
 > **Nota storica (2 maggio 2026)**:
 > 1. Le immagini stavano in `static/images-social/` con URL pubblico Aruba.

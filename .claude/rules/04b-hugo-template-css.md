@@ -241,8 +241,8 @@ Logica skip in `assistente-fab.html`: `{{ $skipSections := slice "assistente" "e
 Genera bozze post social (X, Facebook, Instagram, Telegram) + immagini per il **feed** (post/carosello 1080×1350, 4:5) e le **storie** (1080×1920, 9:16) dagli articoli. Testi via **tier gratuito Gemini 2.5 Flash** (costo zero); immagini via Pillow (nessun costo né limite di quota).
 
 **Componenti operativi:**
-- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva i `.txt` in `social-bozze/AAAA/MM/<slug>/`.
-- `scripts/genera-immagini-social.py` — Pillow: genera le immagini e il `README.md` della cartella. Font ufficiale **Titillium Web** (design system `.italia`, già nel repo `static/vendor/bootstrap-italia/`), colori istituzionali (#003366 + accento giallo #ffbe2e).
+- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e `comunicazione-social.md` (dal 21/10/2026, senza la sezione sulla Misericordia di Ariccia: `SEZIONI_ESCLUSE`) e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva i `.txt` in `social-bozze/AAAA/MM/<slug>/`.
+- `scripts/genera-immagini-social.py` — Pillow: genera le immagini, il file dei loro testi alternativi (`testi-alternativi.json`, dal 21/10/2026) e il `README.md` della cartella. Font ufficiale **Titillium Web** (design system `.italia`, già nel repo `static/vendor/bootstrap-italia/`), colori istituzionali (#003366 + accento giallo #ffbe2e).
 - `scripts/genera-social.sh` — wrapper bash sequenziale.
 - `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo **e al termine di ogni deploy** (la chiama `deploy.yml` dopo il caricamento su Aruba), perché anche gli articoli calendarizzati abbiano il materiale quando vanno online (22/09/2026).
 - `scripts/social_comune.py` + `scripts/social-pronti.py` — regole comuni (articolo online in ora italiana, materiale completo, candidato alla pubblicazione automatica) e i comandi `mancanti` / `sveglia` / `attendi` / `controlla`.
@@ -265,11 +265,18 @@ Ordine carosello: **title card → citazione → punti → foto** (max 10 slide)
 - `scripts/check-grafiche-social.py` fa lo stesso calcolo senza disegnare ed è **bloccante su ogni PR** che tocca un articolo (`validate-pr.yml`; se cambia un generatore ricontrolla tutti gli articoli). Se scatta: accorciare `social_punti`, `social_citazione`, il titolo o la `description`, o riscrivere a parole il carattere che manca.
 - Vietato rimettere limiti di righe con lo slicing (`[:3]`) o tagli di caratteri con i puntini.
 
+♿ **Testi alternativi delle immagini (dal 21/10/2026).** Insieme alle immagini il generatore scrive `testi-alternativi.json` (`{"versione": 1, "feed": {"feed-carosello-1.jpg": "…", …}, "storia": "…"}`; per un post con una sola immagine la chiave è `feed-post.jpg`), che il repository social invia a Instagram (`alt_text`) e a Facebook (`alt_text_custom`), così chi usa un lettore di schermo sa che cosa dice la grafica (rule 03 § «Accessibilità dei post sui social media»). Sezione «Testi alternativi» del generatore:
+- i testi nascono **solo da ciò che la grafica disegna**: prima slide = grafica del Gruppo con etichetta e titolo interi; citazione = «Citazione dall'articolo: …» intera; sintesi = tutti i punti in ordine, con «1 di 2» se la sintesi è divisa; foto = `alt` dello shortcode `{{< foto >}}` più l'attribuzione della didascalia («Foto: …», «Immagine: …», «Fonte: …»); affiliazioni = le righe scritte sotto i loghi, codice E10435833 compreso; storia = titolo e descrizione come compaiono, la foto in evidenza se c'è, l'invito finale;
+- al massimo **1000 caratteri** (limite di Instagram): se servisse, si tolgono frasi intere dalla fine, mai una parola a metà; mai «immagine di»/«foto di» in apertura, niente emoji, punto finale (`controlla_testi_alternativi`);
+- il file è **facoltativo**: se non si riesce a comporlo le immagini escono lo stesso, e `social_comune.py`/`social-pronti.py` non lo contano per dire se il materiale è completo. Si toglie insieme alle immagini (`togli_immagini`), perché descrive solo quelle;
+- per il materiale fatto prima, `genera-immagini-social.py --solo-testi-alternativi --all` lo aggiunge agli articoli ancora nella finestra di pubblicazione (72 ore) **senza toccare le immagini**: le ridisegna in una cartella provvisoria e scrive il file solo se coincidono con quelle presenti (altrimenti l'articolo è cambiato dopo le immagini e lo dice). `genera-social-bozze.yml` lo esegue a ogni giro che prepara materiale; le prove sono in `scripts/test-testi-alternativi.py`, eseguite su ogni PR da `validate-pr.yml`.
+
 **Cartelle e nomi file (a prova di errore — la destinazione è nel nome):**
 - `social-bozze/AAAA/MM/<slug>/` — fuori da Hugo (non deployata), solo nel repo. Contiene tutto il materiale social di un articolo:
   - 4 file `.txt` (X/Facebook/Instagram/Telegram) — testi indipendenti per canale (puoi pubblicare anche su un solo social).
   - `feed-post.jpg` (post con una sola immagine) **oppure** `feed-carosello-1.jpg … feed-carosello-N.jpg` (carosello) → **FEED** (Instagram + Facebook).
   - `storia.jpg` → **STORIE** (Instagram + Facebook).
+  - `testi-alternativi.json` — testo alternativo di ogni immagine (dal 21/10/2026; facoltativo, vedi sopra).
   - `README.md` — mappa "dove va ogni file" (scritto da `genera-immagini-social.py`).
 - Per **X** e **Telegram** vanno bene le immagini del feed (Telegram le mostra intere, X le espande al tap): nessuna misura dedicata.
 - (Storico) Fino al 2 maggio 2026 le immagini erano in `static/images-social/` (URL Aruba), poi in `social-bozze/`. Fino al 23 maggio 2026 i nomi erano `instagram-post*.jpg`/`instagram-story.jpg`, formato 1080×1080 font Liberation Sans: migrati a `feed-*`/`storia`, 4:5 (1080×1350), font Titillium Web.
@@ -280,7 +287,7 @@ Ordine carosello: **title card → citazione → punti → foto** (max 10 slide)
 
 Le foto utente vanno **sempre** inline nel corpo come `{{< foto >}}` (mai nel banner): lo script le rileva e le mette in carosello automaticamente. Se l'articolo non ha foto inline, il carosello = title card (+ citazione/punti se presenti).
 
-**Regole della scrittura sociale**: caricate dinamicamente dalle rules `02-content-design-pa.md` (linguaggio AGID, hashtag stabili, struttura post crisi), `03-accessibility.md` (a11y social: alt text, max 2 emoji, no Unicode decorativi), `06-protezione-civile-scientifica.md` (codici colore, struttura 6 punti per allerte).
+**Regole della scrittura sociale**: caricate dinamicamente dalle rules `02-content-design-pa.md` (linguaggio AGID, hashtag stabili, struttura post crisi), `03-accessibility.md` (a11y social: alt text, max 2 emoji, no Unicode decorativi), `06-protezione-civile-scientifica.md` (codici colore, struttura 6 punti per allerte), `comunicazione-social.md` (dal 21/10/2026: i consigli dei webinar nazionali su tono, testi e didascalie, parole su disabilità e fragilità, persone nelle foto; la sezione sulla Misericordia di Ariccia resta fuori). Le regole del prompt e le rules del repository prevalgono, come dice la regola stessa.
 
 **Cosa NON fa** (intenzionalmente):
 - Non pubblica nulla: si ferma alle bozze. Dal 20/09/2026 Instagram e Facebook sono serviti dal repo privato `social-pc-genzano`, che prende il materiale da `social-bozze/` e lo pubblica insieme all'articolo, appena la pagina risponde sul sito (rule 10 § "Pubblicazione automatica social"). X resta copia/incolla manuale; Telegram ha il suo avviso automatico solo per gli articoli urgenti (`notifica-telegram-articolo.yml`).

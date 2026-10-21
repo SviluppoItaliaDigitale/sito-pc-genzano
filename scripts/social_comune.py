@@ -239,7 +239,9 @@ def immagini_complete(slug: str) -> bool:
 
 
 def materiale_completo(slug: str) -> bool:
-    """Tutto ciò che i generatori producono: 4 testi, feed e storia."""
+    """Tutto ciò che i generatori producono: 4 testi, feed e storia.
+    testi-alternativi.json (dal 21/10/2026) non conta: è facoltativo, e il
+    materiale fatto prima di quel giorno è completo anche senza."""
     return testi_completi(slug) and immagini_complete(slug)
 
 

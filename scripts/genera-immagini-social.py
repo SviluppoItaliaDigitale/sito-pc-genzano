@@ -17,9 +17,15 @@ Output (accanto ai testi delle bozze, comodo da scaricare insieme via mobile):
   social-bozze/<slug>/feed-post.jpg          (1080x1350, post singolo per il FEED)
   social-bozze/<slug>/feed-carosello-N.jpg   (1080x1350, carosello per il FEED)
   social-bozze/<slug>/storia.jpg             (1080x1920, per le STORIE 24h)
+  social-bozze/<slug>/testi-alternativi.json (testo alternativo di ogni immagine)
 
 Nomi a prova di errore: "feed-" = post nel feed (Instagram + Facebook),
 "storia" = storia verticale 24h. Il numero del carosello è l'ordine di caricamento.
+
+testi-alternativi.json (dal 21/10/2026) descrive a parole ogni immagine, per chi
+usa un lettore di schermo: la pubblicazione automatica lo invia a Instagram e a
+Facebook. Nasce solo da ciò che la grafica disegna (sezione «Testi
+alternativi»). È facoltativo: senza, i post escono come prima.
 
 Formato: JPEG quality 90. Universalmente accettato da Instagram, Facebook,
 X, Telegram, LinkedIn. WebP non funziona per upload su Instagram (web e
@@ -31,6 +37,11 @@ Uso:
   python3 scripts/genera-immagini-social.py --all
   python3 scripts/genera-immagini-social.py --force <articolo>
   python3 scripts/genera-immagini-social.py --out-dir /tmp/prove <articolo>   # prova
+  python3 scripts/genera-immagini-social.py --solo-testi-alternativi --all
+      # aggiunge testi-alternativi.json al materiale già fatto degli articoli
+      # ancora nella finestra di pubblicazione (72 ore), senza toccare le
+      # immagini: le ridisegna in una cartella provvisoria e scrive il file
+      # solo se coincidono con quelle che ci sono.
 
 Ogni immagine porta lungo i bordi una cornice di microtesto con la provenienza
 (scripts/microtesto_cornice.py): invisibile da lontano, leggibile ingrandendo.
@@ -46,6 +57,7 @@ Dipendenze: Pillow (pip install Pillow), font-liberation (apt: fonts-liberation)
 """
 
 import argparse
+import json
 import os
 import re
 import shutil
@@ -56,7 +68,7 @@ import unicodedata
 from itertools import combinations
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import social_comune  # noqa: E402
@@ -101,15 +113,29 @@ def slug_dir(slug: str) -> Path:
     return d
 
 
+# Testi alternativi delle immagini, scritti accanto a loro (sezione «Testi
+# alternativi» più sotto).
+TESTI_ALTERNATIVI = "testi-alternativi.json"
+
 # Le immagini che questo script scrive in una cartella: i nomi attuali e quelli
-# vecchi (instagram-post*/instagram-story*, .webp di prima del 2 maggio 2026).
+# vecchi (instagram-post*/instagram-story*, .webp di prima del 2 maggio 2026),
+# più i loro testi alternativi, che descrivono quelle immagini e non hanno
+# senso senza di loro.
 IMMAGINI_GENERATE = ("feed-*.jpg", "storia.jpg",
                      "instagram-post*.jpg", "instagram-post*.webp",
-                     "instagram-story*.jpg", "instagram-story*.webp")
+                     "instagram-story*.jpg", "instagram-story*.webp",
+                     TESTI_ALTERNATIVI)
+
+
+def nome_feed(numero: int, totale: int) -> str:
+    """Nome del file di una slide del feed: `feed-post.jpg` se il post ha una
+    sola immagine, `feed-carosello-N.jpg` se è un carosello."""
+    return "feed-post.jpg" if totale == 1 else f"feed-carosello-{numero}.jpg"
 
 
 def togli_immagini(out_dir: Path) -> int:
-    """Toglie le immagini generate per un articolo; restituisce quante erano."""
+    """Toglie le immagini generate per un articolo (e i loro testi
+    alternativi); restituisce quanti file erano."""
     tolte = 0
     for pat in IMMAGINI_GENERATE:
         for vecchia in out_dir.glob(pat):
@@ -758,6 +784,19 @@ def crea_slide_punti(pagina: list, out_path: Path, corpo: int = PUNTI_CORPO[0],
     return out_path
 
 
+# Loghi della slide finale, con le righe scritte sotto ciascuno e l'eventuale
+# codice: (file in static/images, righe, codice). Le stesse righe servono al
+# testo alternativo della slide (alt_affiliazioni), così i due non divergono.
+AFFILIAZIONI = (
+    ("logo-esc-quality-label-it.png",
+     ("Quality Label", "European Solidarity Corps"), "Codice: E10435833"),
+    ("logo-fepivol.png",
+     ("Coordinamento", "FE.PI.VOL.", "Volontariato Lazio"), None),
+    ("logo-snpc-volontariato.png",
+     ("Servizio Nazionale", "di Protezione Civile"), None),
+)
+
+
 def crea_slide_affiliazioni(out_path: Path,
                             W: int = 1080, H: int = 1350) -> Path:
     """Slide finale 'Affiliazioni e riconoscimenti': 3 loghi affiancati.
@@ -777,18 +816,7 @@ def crea_slide_affiliazioni(out_path: Path,
 
     # 3 loghi affiancati in card bianche rotonde — ESC usa la versione HI-RES
     # 4016x4016 ufficiale UE per massima nitidezza (cerchio Quality Label).
-    repo_root = Path(__file__).resolve().parent.parent
-    loghi = [
-        (repo_root / "static" / "images" / "logo-esc-quality-label-it.png",
-         ["Quality Label", "European Solidarity Corps"],
-         "Codice: E10435833"),
-        (repo_root / "static" / "images" / "logo-fepivol.png",
-         ["Coordinamento", "FE.PI.VOL.", "Volontariato Lazio"],
-         None),
-        (repo_root / "static" / "images" / "logo-snpc-volontariato.png",
-         ["Servizio Nazionale", "di Protezione Civile"],
-         None),
-    ]
+    loghi = [(IMAGES_DIR / file, righe, codice) for file, righe, codice in AFFILIAZIONI]
 
     # Card più grandi per maggiore nitidezza visiva post-compressione JPEG
     card_size = 280
@@ -906,19 +934,39 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
     return out_path
 
 
+# Uno shortcode {{< foto ... >}} (o {{% foto ... %}}) e i suoi parametri,
+# fra virgolette doppie (con \" all'interno), apici inversi o virgolette semplici.
+_FOTO_SHORTCODE = re.compile(r"\{\{[<%]\s*foto\s(.*?)[>%]\}\}", re.IGNORECASE | re.DOTALL)
+_FOTO_PARAMETRO = re.compile(
+    r"""(\w+)\s*=\s*(?:"((?:[^"\\]|\\.)*)"|`([^`]*)`|'([^']*)')""", re.DOTALL)
+
+
+def estrai_foto_inline_info(body: str) -> list[dict]:
+    """Le foto inline del corpo, nell'ordine dell'articolo, con i parametri
+    dello shortcode foto: {"path": Path in static/, "alt": str, "caption": str}.
+    Supporta sia {{< foto >}} che {{% foto %}}."""
+    risultati = []
+    for m in _FOTO_SHORTCODE.finditer(body):
+        parametri = {}
+        for p in _FOTO_PARAMETRO.finditer(m.group(1)):
+            valore = next(v for v in p.groups()[1:] if v is not None)
+            parametri[p.group(1).lower()] = valore.replace('\\"', '"')
+        src = parametri.get("src", "").strip()
+        if not src:
+            continue
+        risultati.append({
+            # Path relativi (/images/...) -> static/images/...
+            "path": ROOT / "static" / src.lstrip("/"),
+            "alt": parametri.get("alt", ""),
+            "caption": parametri.get("caption", ""),
+        })
+    return risultati
+
+
 def estrai_foto_inline(body: str) -> list[Path]:
     """Estrae tutti i path delle foto inline dallo shortcode {{< foto src="..." >}}.
-    Ritorna lista di Path assoluti (relativi a static/).
-    Supporta sia {{< foto >}} che {{% foto %}}."""
-    pattern = re.compile(
-        r'\{\{[<%]\s*foto\s+(?:[^>%]*?\s+)?src=["\']([^"\']+)["\']',
-        re.IGNORECASE,
-    )
-    risultati = []
-    for src in pattern.findall(body):
-        # Path relativi (/images/...) -> static/images/...
-        risultati.append(ROOT / "static" / src.lstrip("/"))
-    return risultati
+    Ritorna lista di Path assoluti (relativi a static/)."""
+    return [f["path"] for f in estrai_foto_inline_info(body)]
 
 
 def crea_cover_tipografica(art_path: Path) -> Path | None:
@@ -950,6 +998,12 @@ def scrivi_readme(out_dir: Path, art: dict, n_immagini: int) -> None:
         nomi = ", ".join(f"`feed-carosello-{i}.jpg`" for i in range(1, n_immagini + 1))
         riga_feed = (f"| {nomi} | FEED Instagram + Facebook — carosello: "
                      f"caricale **tutte, in ordine** (1080×1350) |")
+    riga_alt = ""
+    if (out_dir / TESTI_ALTERNATIVI).is_file():
+        riga_alt = (f"| `{TESTI_ALTERNATIVI}` | testo alternativo di ogni immagine, "
+                    f"per chi usa un lettore di schermo: la pubblicazione automatica "
+                    f"lo invia a Instagram e Facebook; chi pubblica a mano lo incolla "
+                    f"come testo alternativo di ciascuna immagine |\n")
     url = f"{SITE_BASE}/comunicazioni/{art['slug']}/"
     testo = f"""# Immagini e testi social per «{art['title']}»
 
@@ -966,7 +1020,7 @@ Il numero del carosello è l'ordine di caricamento.
 |---|---|
 {riga_feed}
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
-| `instagram.txt` | testo per Instagram |
+{riga_alt}| `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
 | `x.txt` | testo per X — max 280 caratteri |
 | `telegram.txt` | testo per Telegram (Markdown) |
@@ -986,7 +1040,337 @@ storia) e sono condivise tra Instagram e Facebook (stesse misure).
     (out_dir / "README.md").write_text(testo, encoding="utf-8")
 
 
-def estrai_articolo(path: Path) -> dict | None:
+# ---------------------------------------------------------------------------
+# Testi alternativi (21/10/2026)
+# ---------------------------------------------------------------------------
+# Accanto alle immagini il generatore scrive testi-alternativi.json, con un
+# testo alternativo per ogni immagine del feed e uno per la storia:
+#   {"versione": 1,
+#    "feed": {"feed-carosello-1.jpg": "…", "feed-carosello-2.jpg": "…"},
+#    "storia": "…"}
+# (per un post con una sola immagine la chiave è "feed-post.jpg"). Il
+# repository social-pc-genzano li invia a Instagram (alt_text) e a Facebook
+# (alt_text_custom), così chi usa un lettore di schermo sa che cosa dice la
+# grafica (rule 03 § «Accessibilità dei post sui social media», WCAG 1.1.1).
+# Regole:
+#   - i testi nascono SOLO da ciò che la grafica disegna: etichetta e titolo,
+#     citazione, punti della sintesi, alt e attribuzione delle foto
+#     dell'articolo, titolo e descrizione della storia. Niente di inventato;
+#   - al massimo 1000 caratteri (limite di Instagram per alt_text): se servisse
+#     accorciare, si tolgono frasi intere dalla fine, mai una parola a metà;
+#   - mai «immagine di» o «foto di» in apertura (il lettore di schermo dice già
+#     che è un'immagine), niente emoji, punto finale;
+#   - il file è facoltativo: se non si riesce a comporlo, le immagini escono
+#     lo stesso e i post partono senza testo alternativo. Non blocca nulla.
+
+ALT_MAX = 1000          # limite di Instagram per alt_text, in caratteri
+FIRMA_GRUPPO = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+_FINE_FRASE = ".!?…"
+_CHIUSURE = "»”\"’')]"
+_APERTURE = "«“\"‘'(["
+# Emoji e simboli pittografici (con selettori di variante e giunzioni): i
+# lettori di schermo li leggono uno per uno. Il segno di grado e simili restano.
+_EMOJI = re.compile(
+    "[\U0001F000-\U0001FAFF☀-➿⬀-⯿️‍⃣"
+    "\U000E0020-\U000E007F]")
+# Link Markdown, anche con parentesi tonde dentro l'indirizzo
+# («…/File:Po_a_San_Benedetto_(Mantova)_1.jpg»).
+_LINK_MD = re.compile(r"\[([^\]]*)\]\((?:[^()\s]|\([^()\s]*\))*\)")
+_APERTURA_RIDONDANTE = re.compile(r"^(?:immagine|immagini|foto|fotografia)\s+di\s+",
+                                  re.IGNORECASE)
+# Etichette con cui le didascalie delle foto attribuiscono l'immagine
+# («Foto: Gruppo Comunale…», «Immagine: Comune di Genzano di Roma»…).
+_ETICHETTE_ATTRIBUZIONE = ("Foto", "Immagine", "Immagini", "Grafica",
+                           "Illustrazione", "Infografica", "Fonte", "Mappa",
+                           "Cartina", "Elaborazione", "Credito", "Crediti", "Disegno")
+_ATTRIBUZIONE = re.compile(r"\b(" + "|".join(_ETICHETTE_ATTRIBUZIONE) + r")\s*:")
+
+
+def alt_lunghezza(testo: str) -> int:
+    """Lunghezza come la conta Instagram, in unità UTF-16: per i caratteri
+    fuori dal piano di base vale 2, così il limite non si supera mai."""
+    return len(testo.encode("utf-16-le")) // 2
+
+
+def alt_pulisci(testo) -> str:
+    """Testo pronto per un testo alternativo: link Markdown ridotti al loro
+    testo (quelli verso la «fonte originale» tolti), enfasi tolta, emoji
+    tolte, spazi e pedici come nella grafica (per_grafica)."""
+    s = str(testo or "")
+    s = _LINK_MD.sub(lambda m: "" if m.group(1).strip().lower() in
+                     ("fonte originale", "fonte") else m.group(1), s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"\1", s)
+    s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"\1", s)
+    s = _EMOJI.sub("", s)
+    s = re.sub(r"\(\s*\)", "", s)                  # parentesi rimaste vuote
+    s = per_grafica(s)
+    s = re.sub(r"\s+([.,;:!?])", r"\1", s)         # spazio prima della punteggiatura
+    return re.sub(r"(?<!\.)\.\.(?!\.)", ".", s)    # «Commons..» dopo un link tolto
+
+
+def _maiuscola(testo: str) -> str:
+    return testo[:1].upper() + testo[1:] if testo[:1].islower() else testo
+
+
+def alt_frase(testo: str) -> str:
+    """La frase finisce con un segno di fine frase: si aggiunge il punto se
+    manca (dopo le virgolette di chiusura, all'italiana), e una virgola o un
+    punto e virgola finali diventano punto."""
+    t = re.sub(r"[\s,;:—–-]+$", "", str(testo or "").strip())
+    if not t:
+        return ""
+    nucleo = t.rstrip(_CHIUSURE)
+    if nucleo and nucleo[-1] in _FINE_FRASE:
+        return t
+    return t + "."
+
+
+def _dividi_frasi(testo: str) -> list[str]:
+    """Divide un testo in frasi: dopo . ! ? … (con eventuali virgolette o
+    parentesi di chiusura) seguiti da una parola maiuscola o da un numero. Non
+    divide dopo un'iniziale («J. Smith») né dentro una sigla puntata
+    («FE.PI.VOL.»)."""
+    parole = testo.split(" ")
+    frasi, corrente = [], []
+    for i, parola in enumerate(parole):
+        corrente.append(parola)
+        nucleo = parola.rstrip(_CHIUSURE)
+        if not nucleo or nucleo[-1] not in _FINE_FRASE or i + 1 >= len(parole):
+            continue
+        seguente = parole[i + 1].lstrip(_APERTURE)
+        if not seguente or not (seguente[0].isupper() or seguente[0].isdigit()):
+            continue
+        if nucleo[-1] == ".":
+            radice = nucleo[:-1].lstrip(_APERTURE)
+            if "." in radice or len(radice) < 2:
+                continue
+        frasi.append(" ".join(corrente))
+        corrente = []
+    if corrente:
+        frasi.append(" ".join(corrente))
+    return [f for f in frasi if f.strip()]
+
+
+def alt_limita(testo: str, limite: int = ALT_MAX) -> str:
+    """Al massimo `limite` caratteri: si tolgono frasi intere dalla fine. Solo
+    se la prima frase da sola supera il limite si taglia all'ultima parola
+    intera, con i puntini. Mai una parola a metà."""
+    testo = " ".join(testo.split())
+    if alt_lunghezza(testo) <= limite:
+        return testo
+    tenuto = ""
+    for frase in _dividi_frasi(testo):
+        candidato = f"{tenuto} {frase}".strip()
+        if alt_lunghezza(candidato) > limite:
+            break
+        tenuto = candidato
+    if tenuto:
+        return tenuto
+    for parola in testo.split():
+        candidato = f"{tenuto} {parola}".strip()
+        if alt_lunghezza(candidato + "…") > limite:
+            break
+        tenuto = candidato
+    return re.sub(r"[\s,;:—–-]+$", "", tenuto) + "…"
+
+
+def alt_virgolette(testo: str) -> str:
+    """Il testo fra caporali, come una citazione: tolte le virgolette che lo
+    racchiudono già, quelle interne «» diventano “”. Un punto finale esce
+    dalle virgolette (lo mette la frase che le contiene: «… l'area».), mentre
+    ? ! e … restano dentro."""
+    t = str(testo or "").strip()
+    for apre, chiude in (("«", "»"), ("“", "”"), ('"', '"')):
+        interno = t[1:-1]
+        if (len(t) >= 2 and t.startswith(apre) and t.endswith(chiude)
+                and apre not in interno and chiude not in interno):
+            t = interno.strip()
+            break
+    t = re.sub(r"(?<!\.)\.$", "", t).rstrip()
+    t = t.replace("«", "“").replace("»", "”")
+    return f"«{t}»"
+
+
+def attribuzione_foto(didascalia: str) -> str:
+    """L'attribuzione scritta nella didascalia di una foto («Foto: …»,
+    «Immagine: …», «Fonte: …»): la frase che comincia con l'etichetta, all'inizio
+    della didascalia, dopo la fine di una frase o fra parentesi. Stringa vuota
+    se la didascalia non ne ha."""
+    testo = alt_pulisci(didascalia)
+    for m in _ATTRIBUZIONE.finditer(testo):
+        prima = testo[:m.start()].rstrip()
+        if prima and prima[-1] not in _FINE_FRASE + _CHIUSURE + "(":
+            continue  # l'etichetta sta in mezzo a una frase: non è un'attribuzione
+        resto = testo[m.start():]
+        if prima.endswith("("):
+            resto = resto.split(")", 1)[0]
+        frase = _dividi_frasi(resto)[0] if resto.strip() else ""
+        frase = re.sub(r"[\s,;:—–-]+$", "", frase)
+        if len(frase) > len(m.group(0)) + 1:
+            return alt_frase(frase)
+    return ""
+
+
+def alt_titolo(titolo: str, badge: str) -> str:
+    """Prima slide: la grafica del Gruppo con l'etichetta e il titolo intero."""
+    t = alt_virgolette(alt_pulisci(titolo))
+    if badge:
+        return (f"Grafica del {FIRMA_GRUPPO} con l'etichetta "
+                f"{alt_virgolette(alt_pulisci(badge))} e il titolo {t}.")
+    return f"Grafica del {FIRMA_GRUPPO} con il titolo {t}."
+
+
+def alt_citazione(testo: str) -> str:
+    """Slide della citazione: la frase intera dell'articolo."""
+    return f"Citazione dall'articolo: {alt_virgolette(alt_pulisci(testo))}."
+
+
+def alt_punti(testi: list, numero: int = 1, totale: int = 1) -> str:
+    """Slide «In sintesi»: i punti interi, nell'ordine; se la sintesi è divisa
+    su più slide, quale delle slide è («1 di 2»)."""
+    intestazione = "In sintesi." if totale == 1 else f"In sintesi, {numero} di {totale}."
+    punti = [alt_frase(_maiuscola(alt_pulisci(t))) for t in testi]
+    return " ".join([intestazione] + [p for p in punti if p])
+
+
+def alt_affiliazioni() -> str:
+    """Slide finale: i loghi delle affiliazioni con le righe scritte sotto,
+    codice del Quality Label compreso (Reg. UE 2021/888)."""
+    voci = []
+    for _, righe, codice in AFFILIAZIONI:
+        voce = " ".join(righe)
+        if codice:
+            voce += ", " + re.sub(r"^Codice:\s*", "codice ", codice)
+        voci.append(voce)
+    return "Affiliazioni e riconoscimenti del Gruppo, con i loghi: " + "; ".join(voci) + "."
+
+
+def _descrizione_foto(info: dict | None) -> str:
+    """L'alt della foto, come scritto nell'articolo, senza «Foto di» in apertura."""
+    if not info:
+        return ""
+    alt = alt_pulisci(info.get("alt", ""))
+    alt = _APERTURA_RIDONDANTE.sub("", alt)
+    return alt_frase(_maiuscola(alt))
+
+
+def alt_foto(info: dict | None, titolo: str = "") -> str:
+    """Slide di una foto: l'alt dello shortcode foto e l'attribuzione della
+    didascalia, se c'è."""
+    descrizione = _descrizione_foto(info)
+    if not descrizione:
+        # Lo shortcode foto ha sempre l'alt (Hugo si ferma senza): qui si arriva
+        # solo con dati incompleti. Si dice il vero, senza inventare.
+        return f"Foto dell'articolo {alt_virgolette(alt_pulisci(titolo))}."
+    attribuzione = attribuzione_foto(info.get("caption", "")) if info else ""
+    return f"{descrizione} {attribuzione}".strip()
+
+
+def info_foto(art: dict, path) -> dict | None:
+    """Alt e didascalia della foto `path`, dagli shortcode dell'articolo."""
+    if path is None:
+        return None
+    return art.get("foto_info", {}).get(str(Path(path).resolve()))
+
+
+def alt_storia(art: dict) -> str:
+    """Storia: etichetta, titolo e descrizione come compaiono (la descrizione
+    solo se la storia la mostra), la foto in evidenza se c'è e l'invito finale.
+    Usa la stessa impaginazione di crea_story_verticale()."""
+    hero = art["carousel"][1] if len(art.get("carousel") or []) > 1 else None
+    con_foto = bool(hero and Path(hero).exists())
+    piano = piano_storia_completo(art["title"], art.get("description", ""),
+                                  art.get("badge", ""), con_foto)
+    t = alt_virgolette(alt_pulisci(art["title"]))
+    badge = art.get("badge", "")
+    if badge:
+        parti = [f"Grafica per le storie del {FIRMA_GRUPPO} con l'etichetta "
+                 f"{alt_virgolette(alt_pulisci(badge))} e il titolo {t}."]
+    else:
+        parti = [f"Grafica per le storie del {FIRMA_GRUPPO} con il titolo {t}."]
+    if piano["righe_d"]:
+        parti.append(f"Sotto il titolo, il testo "
+                     f"{alt_virgolette(alt_pulisci(art.get('description', '')))}.")
+    if piano["con_foto"]:
+        descrizione = _descrizione_foto(info_foto(art, hero))
+        if descrizione:
+            parti.append(f"Sopra il titolo, la foto dell'articolo. {descrizione}")
+    parti.append("In fondo, l'invito «Leggi sul sito» con l'indirizzo "
+                 "protezionecivilegenzano.it.")
+    return " ".join(parti)
+
+
+def testi_alternativi(art: dict, slides: list[tuple]) -> dict:
+    """Il contenuto di testi-alternativi.json per il piano `slides`
+    (piano_carosello) e la storia dell'articolo."""
+    feed = {}
+    for numero, (kind, data) in enumerate(slides, 1):
+        if kind == "titolo":
+            testo = alt_titolo(art["title"], art.get("badge", ""))
+        elif kind == "citazione":
+            testo = alt_citazione(data)
+        elif kind == "punti":
+            pagina, _corpo, n, totale = data
+            testo = alt_punti([t for t, _righe in pagina], n, totale)
+        elif kind == "affiliazioni":
+            testo = alt_affiliazioni()
+        else:
+            testo = alt_foto(info_foto(art, data), art["title"])
+        feed[nome_feed(numero, len(slides))] = alt_limita(testo)
+    return {"versione": 1, "feed": feed, "storia": alt_limita(alt_storia(art))}
+
+
+def controlla_testi_alternativi(dati: dict, nomi_feed: list[str]) -> list[str]:
+    """Problemi del contenuto di testi-alternativi.json (lista vuota se va
+    bene): struttura, una voce per ogni immagine del feed, nessun testo vuoto,
+    più lungo di ALT_MAX, senza punto finale, con «immagine di» in apertura o
+    con emoji."""
+    problemi = []
+    if not isinstance(dati, dict) or dati.get("versione") != 1:
+        return ["manca \"versione\": 1"]
+    feed = dati.get("feed")
+    if not isinstance(feed, dict) or list(feed) != list(nomi_feed):
+        problemi.append(f"le voci del feed {list(feed or {})} non sono le immagini {nomi_feed}")
+        feed = feed if isinstance(feed, dict) else {}
+    voci = list(feed.items()) + [("storia", dati.get("storia"))]
+    for nome, testo in voci:
+        if not isinstance(testo, str) or not testo.strip():
+            problemi.append(f"{nome}: testo vuoto")
+            continue
+        if alt_lunghezza(testo) > ALT_MAX:
+            problemi.append(f"{nome}: {alt_lunghezza(testo)} caratteri, oltre {ALT_MAX}")
+        if testo.rstrip(_CHIUSURE)[-1:] not in _FINE_FRASE:
+            problemi.append(f"{nome}: senza punto finale")
+        if _APERTURA_RIDONDANTE.match(testo):
+            problemi.append(f"{nome}: comincia con «immagine di» o «foto di»")
+        if _EMOJI.search(testo):
+            problemi.append(f"{nome}: contiene emoji")
+    return problemi
+
+
+def scrivi_testi_alternativi(cartella: Path, art: dict, slides: list[tuple]) -> bool:
+    """Scrive testi-alternativi.json in `cartella`. Se i testi non si possono
+    comporre o non passano il controllo, non scrive nulla, lo dice e torna
+    False: le immagini escono lo stesso, i post partono senza testo alternativo."""
+    try:
+        dati = testi_alternativi(art, slides)
+        problemi = controlla_testi_alternativi(
+            dati, [nome_feed(i, len(slides)) for i in range(1, len(slides) + 1)])
+    except Exception as e:  # noqa: BLE001 — i testi alternativi non bloccano le immagini
+        problemi = [f"errore: {e}"]
+    if problemi:
+        msg = (f"testi alternativi non scritti per {art.get('slug', '?')}: "
+               + "; ".join(problemi))
+        print(f"  ! {msg}", file=sys.stderr)
+        if os.environ.get("GITHUB_ACTIONS"):
+            print(f"::warning::{msg}")
+        return False
+    (cartella / TESTI_ALTERNATIVI).write_text(
+        json.dumps(dati, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
+def estrai_articolo(path: Path, crea_cover: bool = True) -> dict | None:
     try:
         testo = path.read_text(encoding="utf-8")
     except OSError:
@@ -1012,14 +1396,24 @@ def estrai_articolo(path: Path) -> dict | None:
         if not cover_path.exists():
             cover_path = None  # path nel frontmatter ma file mancante
 
-    # Se cover assente, prova a generare quella tipografica al volo
+    # Se cover assente, prova a generare quella tipografica al volo (non con
+    # --solo-testi-alternativi, che non deve creare altro che il file dei testi)
     if cover_path is None:
+        if not crea_cover:
+            return None
         cover_path = crea_cover_tipografica(path)
         if cover_path is None or not cover_path.exists():
             return None
 
-    # Foto inline dal corpo (per il carosello Instagram)
-    foto_inline = estrai_foto_inline(body)
+    # Foto inline dal corpo (per il carosello Instagram), con alt e didascalia
+    # (per i testi alternativi). Se la stessa foto compare due volte, vale la
+    # prima, come nel carosello.
+    foto_info_lista = estrai_foto_inline_info(body)
+    foto_inline = [f["path"] for f in foto_info_lista]
+    foto_info = {}
+    for f in foto_info_lista:
+        foto_info.setdefault(str(f["path"].resolve()),
+                             {"alt": f["alt"], "caption": f["caption"]})
 
     # Carosello = cover + inline (deduplicato, mantenendo ordine)
     carousel = [cover_path] + foto_inline
@@ -1053,6 +1447,7 @@ def estrai_articolo(path: Path) -> dict | None:
         "punti": [str(p).strip() for p in punti if str(p).strip()],
         "cover": cover_path,
         "carousel": carousel_unique,
+        "foto_info": foto_info,
     }
 
 
@@ -1083,10 +1478,17 @@ def main() -> int:
     parser.add_argument("--force", action="store_true", help="Sovrascrivi esistenti")
     parser.add_argument("--out-dir", type=Path, default=None,
                         help="Cartella base alternativa al posto di social-bozze/ (prove)")
+    parser.add_argument("--solo-testi-alternativi", action="store_true",
+                        help="Scrive solo testi-alternativi.json per immagini già fatte, "
+                             "senza toccarle; con --all, solo per gli articoli ancora "
+                             "nella finestra di pubblicazione (72 ore)")
     args = parser.parse_args()
     if args.out_dir:
         global BOZZE_DIR
         BOZZE_DIR = args.out_dir
+
+    if args.solo_testi_alternativi:
+        return main_solo_testi_alternativi(args)
 
     if args.articolo:
         articoli = [Path(args.articolo)]
@@ -1202,7 +1604,7 @@ def genera_immagini(art: dict, slides: list[tuple], out_dir: Path) -> None:
     provvisoria = Path(tempfile.mkdtemp(prefix="immagini-social-"))
     try:
         for idx, (kind, data) in enumerate(slides, 1):
-            dest = provvisoria / f"feed-carosello-{idx}.jpg"
+            dest = provvisoria / nome_feed(idx, len(slides))
             if kind == "titolo":
                 crea_slide_titolo(art["title"], art["badge"], dest)
             elif kind == "citazione":
@@ -1220,6 +1622,10 @@ def genera_immagini(art: dict, slides: list[tuple], out_dir: Path) -> None:
         crea_story_verticale(art["cover"], art["title"], art["description"],
                              provvisoria / "storia.jpg", art["badge"], hero)
 
+        # Testi alternativi delle immagini appena disegnate, dallo stesso piano.
+        # Se non si riescono a comporre, le immagini escono lo stesso.
+        scrivi_testi_alternativi(provvisoria, art, slides)
+
         # Tutto riuscito: via le immagini precedenti, dentro le nuove.
         out_dir.mkdir(parents=True, exist_ok=True)
         togli_immagini(out_dir)
@@ -1227,6 +1633,111 @@ def genera_immagini(art: dict, slides: list[tuple], out_dir: Path) -> None:
             shutil.move(str(nuova), str(out_dir / nuova.name))
     finally:
         shutil.rmtree(provvisoria, ignore_errors=True)
+
+
+# ---------------------------------------------------------------------------
+# --solo-testi-alternativi: il file dei testi per materiale già fatto
+# ---------------------------------------------------------------------------
+# Il materiale generato prima del 21/10/2026 non ha testi-alternativi.json. Per
+# gli articoli ancora nella finestra di pubblicazione lo si aggiunge senza
+# toccare le immagini. Ma un testo alternativo deve descrivere l'immagine che
+# c'è davvero, e il frontmatter può essere cambiato dopo (un titolo corretto,
+# una sintesi aggiunta): per questo le immagini si ridisegnano in una cartella
+# provvisoria e il file si scrive solo se coincidono con quelle presenti. Se
+# non coincidono, non si scrive nulla e lo si dice: vanno rigenerate (--force).
+
+# Due JPEG «coincidono» se sono uguali byte per byte oppure se differiscono solo
+# per la codifica (un'altra versione di Pillow o di libjpeg): al più lo 0,05%
+# dei pixel con uno scarto oltre 48 su 255 in un canale. Una parola cambiata in
+# un titolo cambia migliaia di pixel ben oltre quella soglia.
+SOGLIA_SCARTO = 48
+QUOTA_PIXEL_DIVERSI = 0.0005
+
+
+def stesse_immagini(a: Path, b: Path) -> bool:
+    if a.read_bytes() == b.read_bytes():
+        return True
+    with Image.open(a) as ia, Image.open(b) as ib:
+        if ia.size != ib.size:
+            return False
+        diff = ImageChops.difference(ia.convert("RGB"), ib.convert("RGB"))
+    r, g, b_ = diff.split()
+    massimo = ImageChops.lighter(ImageChops.lighter(r, g), b_)
+    istogramma = massimo.histogram()
+    diversi = sum(istogramma[SOGLIA_SCARTO + 1:])
+    return diversi <= QUOTA_PIXEL_DIVERSI * massimo.width * massimo.height
+
+
+def aggiungi_testi_alternativi(path: Path, forza: bool = False) -> tuple[bool, str]:
+    """Scrive testi-alternativi.json (e aggiorna il README) per le immagini già
+    presenti di un articolo, senza toccarle. Ritorna (scritto, motivo)."""
+    art = estrai_articolo(path, crea_cover=False)
+    if not art:
+        return False, "non online, versione facile o senza cover"
+    out_dir = BOZZE_DIR / slug_to_path(art["slug"])
+    if not out_dir.is_dir():
+        return False, "nessun materiale"
+    if (out_dir / social_comune.MARCATORE_PULITO).exists():
+        return False, "immagini tolte dalla pulizia periodica"
+    if (out_dir / TESTI_ALTERNATIVI).exists() and not forza:
+        return False, "già presente"
+    try:
+        slides = piano_carosello(art)
+    except TestoIncompleto as e:
+        return False, f"il testo di adesso non entra nella grafica: {e}"
+    attese = [nome_feed(i, len(slides)) for i in range(1, len(slides) + 1)] + ["storia.jpg"]
+    presenti = sorted({p.name for p in out_dir.glob("feed-*.jpg")}
+                      | {p.name for p in out_dir.glob("storia.jpg")})
+    if sorted(attese) != presenti:
+        return False, (f"le immagini presenti ({', '.join(presenti) or 'nessuna'}) non sono "
+                       f"quelle del testo di adesso ({len(slides)} nel feed più la storia): "
+                       f"rigenerarle con --force")
+    with tempfile.TemporaryDirectory(prefix="testi-alternativi-") as tmp:
+        prova = Path(tmp)
+        try:
+            genera_immagini(art, slides, prova)
+        except TestoIncompleto as e:
+            return False, f"il testo di adesso non entra nella grafica: {e}"
+        diverse = [n for n in attese if not stesse_immagini(prova / n, out_dir / n)]
+        if diverse:
+            return False, (f"{', '.join(diverse)} non corrisponde al testo di adesso "
+                           f"(articolo cambiato dopo le immagini): rigenerarle con --force")
+        nuovo = prova / TESTI_ALTERNATIVI
+        if not nuovo.is_file():
+            return False, "testi alternativi non composti (vedi sopra)"
+        shutil.copyfile(nuovo, out_dir / TESTI_ALTERNATIVI)
+    scrivi_readme(out_dir, art, len(slides))
+    return True, "scritto"
+
+
+def main_solo_testi_alternativi(args) -> int:
+    """Con un articolo: solo quello. Con --all: gli articoli andati online
+    nella finestra di pubblicazione (social_comune.FINESTRA_RECUPERO_ORE), gli
+    unici che il repository social può ancora pubblicare."""
+    if args.articolo:
+        articoli = [Path(args.articolo)]
+    elif args.all:
+        articoli = [p for p, _fm, _d in
+                    social_comune.articoli(social_comune.FINESTRA_RECUPERO_ORE)]
+    else:
+        print("Specifica un articolo o --all", file=sys.stderr)
+        return 2
+    scritti = saltati = 0
+    for path in articoli:
+        try:
+            scritto, motivo = aggiungi_testi_alternativi(path, args.force)
+        except Exception as e:  # noqa: BLE001 — un articolo non ferma gli altri
+            scritto, motivo = False, f"errore: {e}"
+        if scritto:
+            scritti += 1
+            print(f"  ✓ {path.stem}: testi alternativi scritti", file=sys.stderr)
+        else:
+            saltati += 1
+            print(f"  - {path.stem}: {motivo}", file=sys.stderr)
+            if os.environ.get("GITHUB_ACTIONS") and "rigenerarle" in motivo:
+                print(f"::warning::{path.stem}: testi alternativi non aggiunti, {motivo}")
+    print(f"\nFatto. Testi alternativi scritti={scritti}, saltati={saltati}", file=sys.stderr)
+    return 0
 
 
 if __name__ == "__main__":

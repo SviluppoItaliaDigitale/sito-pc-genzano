@@ -365,6 +365,17 @@ jobs:
             python3 scripts/check-grafiche-social.py --da-git "$base"
           fi
 
+      # 21/10/2026: testi alternativi delle grafiche social (testi-alternativi.json),
+      # che la pubblicazione automatica invia a Instagram e Facebook. Prove con un
+      # articolo finto: post singolo, carosello con citazione e sintesi, carosello
+      # con foto, aggiunta al materiale già fatto senza toccare le immagini. Poi le
+      # regole passate a Gemini: comunicazione-social.md senza la sezione sulla
+      # Misericordia di Ariccia (se il titolo cambia, la prova lo fa vedere).
+      - name: "♿ Testi alternativi e regole dei testi social"
+        run: |
+          python3 scripts/test-testi-alternativi.py
+          python3 scripts/test-genera-social.py
+
   italiano:
     name: "Italiano — refusi e grammatica"
     runs-on: ubuntu-latest
@@ -388,7 +399,8 @@ jobs:
         # spell-check di parola singola. Qui il controllo diventa un gate di PR.
         #
         # Perimetro: content/**/*.md + schede/giochi HTML statici (il punto
-        # cieco grammaticale chiuso il 19/08/2026).
+        # cieco grammaticale chiuso il 19/08/2026) + moduli per le scuole in
+        # static/scuole/ (dal 21/10/2026).
         # Cosa BLOCCA:
         #  - findings ERR dell'audit grammaticale (accenti, apostrofi, spaziature,
         #    elisioni) sui file modificati;
@@ -408,7 +420,8 @@ jobs:
           set -euo pipefail
           BASE="${{ github.event.pull_request.base.sha }}"
           git diff --name-only "$BASE"...HEAD -- 'content/**/*.md' \
-            'static/formazione/**/*.html' 'static/giochi/**/*.html' > /tmp/changed.txt || true
+            'static/formazione/**/*.html' 'static/giochi/**/*.html' \
+            'static/scuole/**/*.html' > /tmp/changed.txt || true
           if [ ! -s /tmp/changed.txt ]; then
             echo "Nessun contenuto modificato: niente da controllare."; exit 0
           fi
@@ -434,8 +447,22 @@ jobs:
           echo "::endgroup::"
 
           # Parole sospette NUOVE = non presenti sul branch base -> refuso introdotto qui.
-          git grep -h '' "$BASE" -- 'content/**/*.md' > /tmp/base.txt 2>/dev/null || true
-          grep -oE '^ +- [A-Za-zÀ-ÿ]+' /tmp/refusi.txt | sed 's/^ *- //' | sort -u > /tmp/words.txt || true
+          # Il testo di partenza comprende gli stessi file che si controllano,
+          # HTML statici compresi: una parola che c'era già non è nuova.
+          git grep -h '' "$BASE" -- 'content/**/*.md' 'static/formazione/**/*.html' \
+            'static/giochi/**/*.html' 'static/scuole/**/*.html' > /tmp/base.txt 2>/dev/null || true
+          # 21/10/2026: le parole si prendevano con grep e l'intervallo À-ÿ, che
+          # nella lingua C.UTF-8 dei runner dà «Invalid collation character» e
+          # nessuna parola, così il controllo dei refusi nuovi passava sempre.
+          # sed con [^ ] funziona in ogni lingua; e se check-refusi.py conta
+          # parole sospette ma l'elenco resta vuoto, il controllo fallisce
+          # invece di passare in silenzio.
+          sed -nE 's/^ +- ([^ ]+).*/\1/p' /tmp/refusi.txt | sort -u > /tmp/words.txt
+          sospette=$(sed -nE 's/^=== ([0-9]+) parole sospette.*/\1/p' /tmp/refusi.txt | tail -1)
+          if [ "${sospette:-0}" -gt 0 ] && [ ! -s /tmp/words.txt ]; then
+            echo "::error::check-refusi.py segnala $sospette parole sospette ma l'elenco non si legge: controllo non eseguito"
+            fail=1
+          fi
           nuove=""
           while read -r w; do
             [ -n "$w" ] || continue
