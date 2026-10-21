@@ -69,7 +69,7 @@ I materiali si stampano e si riusano liberamente alle condizioni indicate su ogn
 - [Calendario scolastico 2026/2027 — Regione Lazio](https://www.regione.lazio.it/notizie/scuola-e-universita/comunicato-calendario-scolastico-2026-2027)
 - [Istituto comprensivo «Giuseppe Garibaldi» — Genzano di Roma](https://www.istitutocomprensivogaribaldigenzano.edu.it/)
 - [IIS «Sandro Pertini» — inizio delle lezioni 2026/2027](https://www.pertinigenzano.edu.it/inizio-delle-lezioni-a-s-2026-2027-orario-di-ingresso-e-di-uscita-dei-primi-giorni/)
-- [Dipartimento della Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.it/)
+- [Dipartimento della Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.gov.it/)
 - [Ministero dell'Istruzione e del Merito](https://www.mim.gov.it/)
 
 Buon lavoro a tutti. Se una scuola di Genzano vuole invitarci per una lezione, ci si scrive dalla pagina [Contatti](/contatti/).

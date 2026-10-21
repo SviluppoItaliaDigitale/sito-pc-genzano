@@ -155,7 +155,7 @@ TEMI = {
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
-            "Campagna 'Io non rischio' (DPC): https://iononrischio.protezionecivile.it",
+            "Campagna 'Io non rischio' (DPC): https://iononrischio.protezionecivile.gov.it",
             "INGV — Istituto Nazionale di Geofisica e Vulcanologia: https://www.ingv.it",
             "Terremoti in tempo reale (INGV): https://terremoti.ingv.it",
             "Standard ISO 22324 (codici colore allerta) — pagina del nostro sito: " + SITO_BASE + "/standard-iso/iso-22324/",
@@ -181,7 +181,7 @@ TEMI = {
         "fonti_istituzionali": [
             "PAI (Piano Assetto Idrogeologico) Regione Lazio: https://www.regione.lazio.it",
             "Rapporto ISPRA dissesto idrogeologico (ultima edizione): https://www.isprambiente.gov.it",
-            "Manuale 'Io non rischio alluvione' (DPC + ANPAS): https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio alluvione' (DPC + ANPAS): https://iononrischio.protezionecivile.gov.it",
             "Linee guida CNR-IRPI su frane: https://www.irpi.cnr.it",
         ],
         "focus_podcast": [
@@ -208,7 +208,7 @@ TEMI = {
         "fonti_istituzionali": [
             "Bollettino pericolosità incendi boschivi (CFR Lazio, RISICOLazio): https://www.regione.lazio.it/bollettini/rischi-incendi",
             "Piano AIB Regione Lazio: https://www.regione.lazio.it",
-            "Manuale 'Io non rischio incendio boschivo' (DPC): https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio incendio boschivo' (DPC): https://iononrischio.protezionecivile.gov.it",
             "Legge 353/2000 incendi boschivi: https://www.normattiva.it",
         ],
         "focus_podcast": [
@@ -235,7 +235,7 @@ TEMI = {
             "Direttiva PCM 27 febbraio 2004 sul sistema di allertamento: https://www.normattiva.it",
             "Centro Funzionale Regionale Lazio (bollettini): https://www.regione.lazio.it/bollettini",
             "ISO 22324:2015 — Public warning by color codes: pagina sito " + SITO_BASE + "/standard-iso/iso-22324/",
-            "Manuale 'Io non rischio': sezione 'In allerta meteo': https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio': sezione 'In allerta meteo': https://iononrischio.protezionecivile.gov.it",
         ],
         "focus_podcast": [
             "Cos'è l'allerta meteo: previsione, non evento (è prima che succeda qualcosa)",
@@ -259,7 +259,7 @@ TEMI = {
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
-            "Manuale 'Io non rischio' (DPC) — sezione 'Kit emergenza': https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio' (DPC) — sezione 'Kit emergenza': https://iononrischio.protezionecivile.gov.it",
             "Linee guida IFRC (Croce Rossa Internazionale): https://www.ifrc.org",
             "Sphere Handbook 2018 — standard umanitari minimi: https://spherestandards.org",
             "Manuale FIC cucina emergenza (sito): " + SITO_BASE + "/area-download/",
@@ -339,7 +339,7 @@ TEMI = {
             "Centro Funzionale Regionale Lazio — bollettino temporali: https://www.regione.lazio.it/bollettini",
             "DPC — rischio temporali: https://www.protezionecivile.gov.it",
             "ESSL European Severe Storms Laboratory: https://www.essl.org",
-            "Manuale 'Io non rischio' sezione temporali: https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio' sezione temporali: https://iononrischio.protezionecivile.gov.it",
         ],
         "focus_podcast": [
             "Cos'è un temporale intenso: cumulonembo, supercella, sistema multicellulare — perché alcuni fanno paura",
@@ -365,7 +365,7 @@ TEMI = {
             "Scala Beaufort (riferimento internazionale velocità vento): https://www.metoffice.gov.uk",
             "Centro Funzionale Regionale Lazio — bollettino vento: https://www.regione.lazio.it/bollettini",
             "Direttiva PCM 27/02/2004 sull'allertamento: https://www.normattiva.it",
-            "Manuale 'Io non rischio' (sezione vento e fulmini): https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio' (sezione vento e fulmini): https://iononrischio.protezionecivile.gov.it",
         ],
         "focus_podcast": [
             "Quando il vento diventa pericoloso: soglie operative (>60 km/h = avviso, >90 km/h = forte)",
@@ -391,7 +391,7 @@ TEMI = {
             "Terna — gestore rete trasmissione nazionale: https://www.terna.it",
             "DPC — rischio blackout elettrico: https://www.protezionecivile.gov.it",
             "ARERA — Autorità regolazione energia: https://www.arera.it",
-            "Manuale 'Io non rischio' sezione blackout: https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio' sezione blackout: https://iononrischio.protezionecivile.gov.it",
         ],
         "focus_podcast": [
             "Tipi di blackout: locale (cabina), zonale (linea), nazionale (rete) — perché la durata cambia tutto",
@@ -492,7 +492,7 @@ TEMI = {
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
-            "Manuale 'Io non rischio — Piano famiglia' (DPC): https://iononrischio.protezionecivile.it",
+            "Manuale 'Io non rischio — Piano famiglia' (DPC): https://iononrischio.protezionecivile.gov.it",
             "FEMA — Family Emergency Plan: https://www.ready.gov/plan",
             "IFRC — Family preparedness toolkit: https://www.ifrc.org",
             "American Red Cross — Make a plan: https://www.redcross.org",

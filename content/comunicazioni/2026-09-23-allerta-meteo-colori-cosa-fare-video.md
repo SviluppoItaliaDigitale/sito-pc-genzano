@@ -103,5 +103,5 @@ Per sapere che cosa cambia in concreto nel nostro territorio, con le zone più d
 **Fonti istituzionali:**
 
 - [Tabella delle allerte e degli scenari di criticità](https://rischi.protezionecivile.gov.it/it/meteo-idro/allertamento/tabella-allerte-e-scenari-di-criticita) — Dipartimento della Protezione Civile.
-- [Alluvione: cosa fare](https://iononrischio.protezionecivile.it/it/preparati/alluvione/cosa-fare) — campagna «Io non rischio».
+- [Alluvione: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare) — campagna «Io non rischio».
 - [Allertamento meteo-idro](https://rischi.protezionecivile.gov.it/it/meteo-idro/allertamento) — bollettini nazionali del Dipartimento della Protezione Civile.

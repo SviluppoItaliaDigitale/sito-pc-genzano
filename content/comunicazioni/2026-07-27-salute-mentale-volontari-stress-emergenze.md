@@ -258,7 +258,6 @@ Le **nuove generazioni** portano cambiamento positivo.
 - Articolo: [Esercitazioni PC](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/)
 - Articolo: [Gemellaggi PC](/comunicazioni/2026-07-12-gemellaggi-pc-solidarieta-territori/)
 - [SIPEM SoS](https://www.sipemsos.org/)
-- [Psicologi dell'emergenza](https://www.psicologidellaprotezionecivile.it/)
 - [DPC — Formazione](https://www.protezionecivile.gov.it/)
 
 Un volontario in buona salute mentale è un volontario **più efficace, più durevole, più umano**. La cura di sé stessi è parte dell'essere al servizio degli altri.

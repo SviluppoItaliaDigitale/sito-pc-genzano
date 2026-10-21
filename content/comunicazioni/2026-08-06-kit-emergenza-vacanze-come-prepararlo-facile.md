@@ -88,7 +88,7 @@ Una volta all'anno fai queste cose:
 
 ## Per saperne di più
 
-- [Campagna "Io Non Rischio"](https://iononrischio.protezionecivile.it/)
+- [Campagna "Io Non Rischio"](https://iononrischio.protezionecivile.gov.it/)
 - [Piano familiare di emergenza](/piano-familiare/)
 
 In caso di emergenza chiama il **112**. Il 112 è il numero unico di emergenza. Risponde sempre, anche di notte.
