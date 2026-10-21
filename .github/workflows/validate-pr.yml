@@ -84,7 +84,7 @@ jobs:
         # copia GitHub Pages si presentavano ai motori come pagine distinte. Il
         # controllo vale soprattutto per le FAMIGLIE nuove: chi ne aggiunge una
         # senza elencarla nello script se ne accorge qui, non fra sei mesi.
-        # Dal 21/10/2026 si ferma anche su una pagina indicizzabile di static/ che
+        # Dal 22/10/2026 si ferma anche su una pagina indicizzabile di static/ che
         # nessuna famiglia elenca e su una pagina con il canonical assente dalla
         # mappa per i motori: le 143 schede dei kit calamità erano rimaste senza
         # canonical perché la famiglia puntava alla cartella del foglio di stile.
