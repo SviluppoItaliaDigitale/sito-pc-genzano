@@ -1,6 +1,6 @@
 ---
 title: "Sicurezza sul lavoro: il D.Lgs. 81/2008 che ogni cittadino dovrebbe conoscere"
-date: 2026-10-21
+date: 2026-10-21T00:01:00+02:00
 description: "Il Testo Unico sulla sicurezza sul lavoro tutela oltre 23 milioni di lavoratori italiani. I capisaldi normativi che ogni cittadino dovrebbe conoscere."
 badge: "Informazione"
 priorita: "normale"

@@ -75,6 +75,8 @@ ORIGINE_PATTERNS = [
     # dell'ente emittente (come dichiariamo pubblicamente).
     ("TERZO", "Gazzetta Ufficiale della Repubblica Italiana (testi legislativi originali)",
      ["gazzetta-ufficiale-"]),
+    ("TERZO", "Camera dei Deputati (atti parlamentari, disegni di legge)",
+     ["camera-ac", "camera-leg19-"]),
     ("TERZO", "DPC / Dipartimento Protezione Civile",
      ["dpc-", "protezione-civile-art-", "dpc_"]),
     ("TERZO", "Regione Lazio (BURL, DGR, determine, regolamenti regionali)",
