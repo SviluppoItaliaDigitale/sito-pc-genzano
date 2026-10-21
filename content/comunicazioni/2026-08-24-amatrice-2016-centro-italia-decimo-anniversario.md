@@ -56,5 +56,5 @@ Genzano si trova in **zona sismica 2B** secondo la classificazione regionale. An
 ## Per saperne di più
 
 - [Memoria del terremoto del Centro Italia — Dipartimento Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-centro-italia-0/)
-- [Sequenza sismica Centro Italia — INGV](https://terremoticentroitalia.info/)
+- [INGV — Lista dei terremoti](https://terremoti.ingv.it/)
 - Voce Wikipedia: [Sequenza sismica del Centro Italia del 2016-2017](https://it.wikipedia.org/wiki/Sequenza_sismica_del_Centro_Italia_del_2016-2017)

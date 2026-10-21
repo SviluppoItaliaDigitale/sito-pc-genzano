@@ -138,7 +138,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Dipartimento Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.it/).
+- [Dipartimento Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.gov.it/).
 - [Sphere Standards 2018](https://spherestandards.org/) — riferimento internazionale per kit emergenza.
 - [WHO — Emergency preparedness](https://www.who.int/health-topics/emergencies).
 

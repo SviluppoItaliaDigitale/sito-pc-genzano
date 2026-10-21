@@ -65,7 +65,7 @@ La campagna non è pubblicità del sistema PC: è **informazione istituzionale v
 
 ## Per approfondire
 
-- [Sito ufficiale Io Non Rischio](https://iononrischio.protezionecivile.it/)
+- [Sito ufficiale Io Non Rischio](https://iononrischio.protezionecivile.gov.it/)
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Corso base volontari](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 

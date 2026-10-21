@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-08-campagna-antincendio-boschivo-2026-facile.webp"
 image_alt: "Cover dell'articolo: Campagna contro gli incendi nei boschi: estate 2026"
 scadenza: "2026-10-15"
+archiviato: true
 area: ""
 allegati: []
 versione_facile_di: "2026-06-08-campagna-antincendio-boschivo-2026"

@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino.webp"
 image_alt: "Cover dell'articolo: Cassinum Exe 2026: a Cassino l'esercitazione regionale con il Coordinamento FE.PI.VOL."
 scadenza: "2026-10-18"
+archiviato: true
 area: "Cassino (FR)"
 allegati: []
 draft: false

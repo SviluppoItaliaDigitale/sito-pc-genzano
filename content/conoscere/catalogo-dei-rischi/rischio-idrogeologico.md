@@ -105,4 +105,4 @@ Il volontariato di protezione civile, come il nostro Gruppo, contribuisce soprat
 - [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — la piattaforma nazionale sul dissesto idrogeologico (frane e alluvioni).
 - [CNR-IRPI](https://www.irpi.cnr.it/) — ricerca su frane, alluvioni e dissesti (Consiglio Nazionale delle Ricerche).
 - [DPC — Rischio idrogeologico](https://rischi.protezionecivile.gov.it/it/) (Dipartimento della Protezione Civile).
-- [Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.autoritadistrettoappenninocentrale.it/) — i piani PAI e PGRA per il Lazio.
+- [Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.aubac.it/) — i piani PAI e PGRA per il Lazio.

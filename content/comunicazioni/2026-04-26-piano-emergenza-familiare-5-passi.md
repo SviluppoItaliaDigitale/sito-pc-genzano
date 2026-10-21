@@ -101,5 +101,5 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Dipartimento Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.it/).
+- [Dipartimento Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.gov.it/).
 - [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).

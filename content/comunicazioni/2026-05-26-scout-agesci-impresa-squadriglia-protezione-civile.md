@@ -72,5 +72,5 @@ Ringraziamo la squadriglia per la visita e la curiosità. Aspettiamo di sapere c
 **Fonti istituzionali:**
 
 - [D.Lgs. 1/2018 — Codice della Protezione Civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1) (Normattiva)
-- [Campagna "Io non rischio"](https://iononrischio.protezionecivile.it/) (Dipartimento della Protezione Civile)
+- [Campagna "Io non rischio"](https://iononrischio.protezionecivile.gov.it/) (Dipartimento della Protezione Civile)
 - [Sito ufficiale AGESCI](https://www.agesci.it/) — Associazione Guide e Scouts Cattolici Italiani

@@ -82,7 +82,7 @@ Le scuole interessate possono contattare il Gruppo Comunale Volontari di PC di G
 
 ## Per approfondire
 
-- [Io Non Rischio — campagna nazionale](https://iononrischio.protezionecivile.it/)
+- [Io Non Rischio — campagna nazionale](https://iononrischio.protezionecivile.gov.it/)
 - [Primo giorno di scuola: prove di evacuazione](/comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/)
 - [Corso base volontari — iscrizioni aperte](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 

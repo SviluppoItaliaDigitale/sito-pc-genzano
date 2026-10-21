@@ -296,7 +296,7 @@ Ogni 6-12 mesi:
 - Articolo: [Piano famiglia di emergenza](/comunicazioni/2026-06-26-piano-famiglia-estate-emergenze/)
 - Articolo: [Kit emergenza casalingo](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - Articolo: [Disabilità in emergenza](/comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili/)
-- [DPC — Io non rischio](https://iononrischio.protezionecivile.it/)
+- [DPC — Io non rischio](https://iononrischio.protezionecivile.gov.it/)
 - [Ministero Interno — Protezione Civile](https://www.interno.gov.it/)
 
 Un piano familiare di evacuazione è **investimento minimo** per **massima tranquillità**. In emergenza si **esegue** quello che si è **preparato**. Mai improvvisato.

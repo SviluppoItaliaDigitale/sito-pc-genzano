@@ -74,4 +74,4 @@ Fonti istituzionali:
 - [Istituto Nazionale di Geofisica e Vulcanologia — lista terremoti](https://terremoti.ingv.it/)
 - [USGS — scheda dell'evento colombiano del 10 agosto 2026](https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2)
 - [Dipartimento della Protezione Civile — rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/)
-- [Io non rischio — terremoto, cosa fare](https://iononrischio.protezionecivile.it/it/preparati/terremoto/cosa-fare/)
+- [Io non rischio — terremoto, cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/)

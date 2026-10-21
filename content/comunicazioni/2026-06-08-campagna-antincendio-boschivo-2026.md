@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-08-campagna-antincendio-boschivo-2026.webp"
 image_alt: "Cover dell'articolo: Campagna antincendio boschivo 2026: dal 15 giugno al 15 ottobre la lotta attiva"
 scadenza: "2026-10-15"
+archiviato: true
 area: ""
 lis_section: "rischio-incendio"
 social_citazione: "La prevenzione è il principale strumento per ridurre il rischio di incendi boschivi e di interfaccia urbano-rurale."

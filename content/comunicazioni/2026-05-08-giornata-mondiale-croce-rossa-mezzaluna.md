@@ -55,7 +55,7 @@ I sette principi fondamentali non sono una cornice retorica: sono la ragione per
 
 L'8 maggio è occasione per dire **grazie** a tutte le volontarie e i volontari della Croce Rossa. E per ricordare che il movimento è aperto a chiunque voglia metterci tempo, competenza e cura degli altri. Le società locali organizzano corsi, attività sociali, servizi sanitari sul territorio.
 
-Per informazioni sulla [CRI Lazio](https://crilazio.it/) e sui comitati locali, consulta il sito ufficiale.
+Per informazioni sulla [CRI Lazio](https://cri.it/lazio/) e sui comitati locali, consulta il sito ufficiale.
 
 ## Per approfondire
 
@@ -70,7 +70,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Croce Rossa Italiana](https://www.cri.it/).
-- [CRI Lazio](https://crilazio.it/).
+- [CRI Lazio](https://cri.it/lazio/).
 - [IFRC — Federazione Internazionale della Croce Rossa e Mezzaluna Rossa](https://www.ifrc.org/).
 - [ICRC — Comitato Internazionale della Croce Rossa](https://www.icrc.org/).
 - [Storia della CRI](https://www.cri.it/chi-siamo/storia/).
