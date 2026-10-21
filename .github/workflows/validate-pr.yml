@@ -447,8 +447,22 @@ jobs:
           echo "::endgroup::"
 
           # Parole sospette NUOVE = non presenti sul branch base -> refuso introdotto qui.
-          git grep -h '' "$BASE" -- 'content/**/*.md' > /tmp/base.txt 2>/dev/null || true
-          grep -oE '^ +- [A-Za-zÀ-ÿ]+' /tmp/refusi.txt | sed 's/^ *- //' | sort -u > /tmp/words.txt || true
+          # Il testo di partenza comprende gli stessi file che si controllano,
+          # HTML statici compresi: una parola che c'era già non è nuova.
+          git grep -h '' "$BASE" -- 'content/**/*.md' 'static/formazione/**/*.html' \
+            'static/giochi/**/*.html' 'static/scuole/**/*.html' > /tmp/base.txt 2>/dev/null || true
+          # 21/10/2026: le parole si prendevano con grep e l'intervallo À-ÿ, che
+          # nella lingua C.UTF-8 dei runner dà «Invalid collation character» e
+          # nessuna parola, così il controllo dei refusi nuovi passava sempre.
+          # sed con [^ ] funziona in ogni lingua; e se check-refusi.py conta
+          # parole sospette ma l'elenco resta vuoto, il controllo fallisce
+          # invece di passare in silenzio.
+          sed -nE 's/^ +- ([^ ]+).*/\1/p' /tmp/refusi.txt | sort -u > /tmp/words.txt
+          sospette=$(sed -nE 's/^=== ([0-9]+) parole sospette.*/\1/p' /tmp/refusi.txt | tail -1)
+          if [ "${sospette:-0}" -gt 0 ] && [ ! -s /tmp/words.txt ]; then
+            echo "::error::check-refusi.py segnala $sospette parole sospette ma l'elenco non si legge: controllo non eseguito"
+            fail=1
+          fi
           nuove=""
           while read -r w; do
             [ -n "$w" ] || continue
