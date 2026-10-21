@@ -1,7 +1,7 @@
-ultimo_audit: '2026-10-17'
-totale: 67
+ultimo_audit: '2026-10-21'
+totale: 71
 riepilogo:
-  ACCESSIBILE: 0
+  ACCESSIBILE: 4
   PARZIALE: 17
   NON_ACCESSIBILE: 18
   TERZO: 32
@@ -118,6 +118,21 @@ documenti:
   text_chars_sample: 6744
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /allegati/2026/gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
+  file: gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
+  size_kb: 159.8
+  sha256: 31ce9b7bbe1f395b5270f7e970638c9ea3ec0dae70f6a23088c75a5f14c96f88
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 18061
+  origine: TERZO
+  origine_descrizione: Gazzetta Ufficiale della Repubblica Italiana (testi legislativi
+    originali)
   verdict: TERZO
 - path: /allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
   file: ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
@@ -273,6 +288,62 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
+- path: /formazione/slide-lezioni/percorso-1-lezione-1-che-cose-la-protezione-civile.pdf
+  file: percorso-1-lezione-1-che-cose-la-protezione-civile.pdf
+  size_kb: 1106.2
+  sha256: 4d84131fb275a617f94f83e157a09cbb288e8b9f32df361135342cb675797189
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 1: Che cos’è la Protezione Civile'
+  pages: 13
+  errors: []
+  text_chars_sample: 503
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /formazione/slide-lezioni/percorso-1-lezione-2-il-112.pdf
+  file: percorso-1-lezione-2-il-112.pdf
+  size_kb: 1161.0
+  sha256: da28fbb3b03a2f374df8e21512ce5e5ca7b6b3363a10da584379bcfdcbe1991d
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 2: Il 112, il numero delle emergenze'
+  pages: 14
+  errors: []
+  text_chars_sample: 488
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /formazione/slide-lezioni/percorso-1-lezione-3-rischi-del-territorio.pdf
+  file: percorso-1-lezione-3-rischi-del-territorio.pdf
+  size_kb: 1341.6
+  sha256: c8528d3c565fc460854722840de0cfa51d91d0913ee26265e9d2e126386bbe5e
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 3: I rischi del nostro territorio'
+  pages: 14
+  errors: []
+  text_chars_sample: 540
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /formazione/slide-lezioni/percorso-1-lezione-4-i-volontari.pdf
+  file: percorso-1-lezione-4-i-volontari.pdf
+  size_kb: 1156.2
+  sha256: 3ca4710557ff2a219a693fe83810349968574002cda5ec069df9071ad354967a
+  searchable: true
+  tagged: true
+  language: it
+  title: 'Lezione 4: I volontari della Protezione Civile'
+  pages: 14
+  errors: []
+  text_chars_sample: 541
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
 - path: /manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   file: Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   size_kb: 4173.9
@@ -941,19 +1012,3 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: NON_ACCESSIBILE
-
-- path: /allegati/2026/gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
-  file: gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf
-  size_kb: 159.8
-  sha256: 31ce9b7bbe1f395b5270f7e970638c9ea3ec0dae70f6a23088c75a5f14c96f88
-  searchable: true
-  tagged: false
-  language: null
-  title: null
-  pages: 4
-  errors: []
-  text_chars_sample: 18061
-  origine: TERZO
-  origine_descrizione: 'Gazzetta Ufficiale della Repubblica Italiana: estratto del
-    testo legislativo originale'
-  verdict: TERZO
