@@ -1063,7 +1063,7 @@ storia) e sono condivise tra Instagram e Facebook (stesse misure).
 #   - il file è facoltativo: se non si riesce a comporlo, le immagini escono
 #     lo stesso e i post partono senza testo alternativo. Non blocca nulla.
 
-ALT_MAX = 1000          # limite di Instagram per alt_text, in caratteri
+ALT_MAX = 1000          # limite di Instagram per alt_text («up to 1000 character»), contato con alt_lunghezza
 FIRMA_GRUPPO = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
 _FINE_FRASE = ".!?…"
 _CHIUSURE = "»”\"’')]"
@@ -1087,8 +1087,11 @@ _ATTRIBUZIONE = re.compile(r"\b(" + "|".join(_ETICHETTE_ATTRIBUZIONE) + r")\s*:"
 
 
 def alt_lunghezza(testo: str) -> int:
-    """Lunghezza come la conta Instagram, in unità UTF-16: per i caratteri
-    fuori dal piano di base vale 2, così il limite non si supera mai."""
+    """Lunghezza in unità UTF-16, il modo di contare più severo: un carattere
+    fuori dal piano di base, come un'emoji, vale 2. La documentazione di Meta
+    dice «up to 1000 character» senza dire come li conta: così il limite non
+    si supera comunque si contino i caratteri. Contano allo stesso modo la
+    pubblicazione di social-pc-genzano e quella della Misericordia di Ariccia."""
     return len(testo.encode("utf-16-le")) // 2
 
 
