@@ -1,6 +1,7 @@
 ---
 title: "Salute mentale dei volontari: gestire lo stress delle emergenze"
 date: 2026-07-27
+lastmod: 2026-10-20
 description: "Essere volontario di PC espone a stress psicologico significativo. La cura della propria salute mentale non è debolezza."
 badge: "Informazione"
 priorita: "normale"
@@ -36,7 +37,7 @@ Si distingue:
 ### Stress acuto
 - Legato a **singolo evento** intenso.
 - Sintomi: ansia, insonnia, flashback, irritabilità.
-- Si risolve tipicamente in **poche settimane**.
+- Tempi e intensità cambiano da persona a persona.
 - Normale reazione a evento anormale.
 
 ### Stress cronico
@@ -64,7 +65,7 @@ Da notare in sé o nei colleghi:
 - **Problemi** di concentrazione.
 - **Sintomi** fisici inspiegati.
 
-Se persistono oltre **4-6 settimane**: cercare aiuto.
+Se il disagio preoccupa o interferisce con la vita quotidiana, chiedi una valutazione professionale. In caso di pericolo immediato, contatta subito i servizi di emergenza.
 
 ## Il debriefing operativo
 
@@ -78,16 +79,11 @@ Dopo ogni operazione significativa:
 
 Il **debriefing** fa parte a pieno titolo dell'operatività.
 
-## Critical Incident Stress Management (CISM)
+## Confronto operativo e sostegno psicologico
 
-Protocollo internazionale per gestione stress in volontari e operatori:
-- **Defusing** — intervento immediato (primi 1-4 ore).
-- **Debriefing formale** — 24-72 ore dopo evento.
-- **Follow-up** — settimane dopo.
-- **Supporto peer** — da colleghi formati.
-- **Riferimento** a professionisti se necessario.
+La riunione operativa riguarda fatti, consegne e procedure. Non obbliga nessuno a raccontare emozioni o ricordi traumatici.
 
-Il **CISM** è adottato in molte organizzazioni italiane.
+Il debriefing psicologico è un intervento diverso. L’OMS lo sconsiglia per prevenire stress post-traumatico, ansia o depressione dopo un trauma recente. Il sostegno clinico si sceglie con un professionista, secondo i bisogni della persona.
 
 ## Il supporto peer
 
@@ -181,16 +177,9 @@ Dopo attivazione intensa:
 
 Non tornare subito al **lavoro ordinario** se non si è pronti.
 
-## Testimonianze
+## Il valore del sostegno fra colleghi
 
-Volontari esperti dichiarano:
-- "La prima grande attivazione mi ha segnato per mesi".
-- "Senza debriefing avrei smesso".
-- "Ho chiesto aiuto e non me ne vergogno".
-- "Il Gruppo è stato la mia rete".
-- "Con gli anni ho imparato a ruotare".
-
-La **saggezza** dei veterani è risorsa.
+Il confronto con persone fidate può aiutare a chiedere sostegno. Chi ascolta rispetta i tempi della persona e la sua scelta di parlare. Il sostegno fra colleghi non sostituisce la valutazione professionale.
 
 ## Organizzazioni specializzate
 
@@ -248,7 +237,7 @@ La **diversità di genere e di esperienza** arricchisce il sistema di supporto d
 ## Casi studio internazionali
 
 Dopo grandi eventi (9/11, L'Aquila, Amatrice) studi hanno mostrato:
-- **15-30%** dei soccorritori sviluppa sintomi.
+- I soccorritori possono manifestare sintomi di stress: frequenza e intensità dipendono dal contesto e dalla persona.
 - **Supporto precoce** riduce significativamente.
 - **Follow-up** anni dopo è fondamentale.
 - **Cultura** organizzativa fa differenza.
@@ -269,7 +258,11 @@ Le **nuove generazioni** portano cambiamento positivo.
 - Articolo: [Esercitazioni PC](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/)
 - Articolo: [Gemellaggi PC](/comunicazioni/2026-07-12-gemellaggi-pc-solidarieta-territori/)
 - [SIPEM SoS](https://www.sipemsos.org/)
-- [Psicologi dell'emergenza](https://www.psicologidellaprotezionecivile.it/)
 - [DPC — Formazione](https://www.protezionecivile.gov.it/)
 
 Un volontario in buona salute mentale è un volontario **più efficace, più durevole, più umano**. La cura di sé stessi è parte dell'essere al servizio degli altri.
+
+### Fonti per l’aggiornamento sul sostegno agli operatori
+
+- [OMS: raccomandazione sul debriefing psicologico dopo un trauma recente (2012)](https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/other-significant-emotional-and-medical-unexplained-somatic-complaints/psychological-debriefing-in-people-exposed-to-a-recent-traumatic-event).
+- [CDC/NIOSH: stress da incidenti traumatici e cura dei soccorritori (2026)](https://www.cdc.gov/niosh/stress/traumaticincidentstress/index.html).

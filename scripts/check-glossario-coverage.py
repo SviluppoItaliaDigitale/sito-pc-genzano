@@ -53,6 +53,9 @@ SIGLE_BLACKLIST = {
     "SMS", "MMS", "LED", "APP", "QR", "PIN", "SIM", "NFC",
     # frammenti di sigle puntate già in glossario (DI.COMA.C. → "COMA")
     "COMA",
+    # nomi commerciali di mezzi e missioni, non sigle PC da spiegare
+    "EVO",  # "EVO Cross 4 Pickup", modello del mezzo del Gruppo (chi-siamo)
+    "FLEX",  # FLuorescence EXplorer, missione ESA citata in un solo articolo
 }
 
 # Pattern: parola maiuscola 3+ caratteri (sigla PC tipica)

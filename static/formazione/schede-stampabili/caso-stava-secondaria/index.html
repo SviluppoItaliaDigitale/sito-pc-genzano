@@ -28,6 +28,15 @@
     .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   </style>
+<style>
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: un 3% in meno
+       su tutto accorpa l'ultimo foglio al precedente (controllo fogli di
+       stampa, 19/10/2026; margine aumentato lo stesso giorno perché il 1%
+       bastava solo di un soffio, al limite della verifica).
+       Solo in stampa. */
+    @media print { html { font-size: 97%; } }
+  </style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">

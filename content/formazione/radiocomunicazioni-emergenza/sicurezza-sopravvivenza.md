@@ -292,7 +292,7 @@ Oltre alle ferite fisiche, in emergenza esistono ferite **psicologiche**. Segnal
 - **Attiva** il supporto (ARES 118, psicologo del DPC, ASL Roma 6)
 - **Segnala** al tuo coordinatore
 
-Dopo operazioni traumatiche (soprattutto con **vittime visibili** o con **bambini coinvolti**), il **debriefing psicologico** con un professionista entro 24-72 ore **previene** il disturbo da stress post-traumatico (DSPT). La normativa italiana (D.Lgs. 81/2008) riconosce il **rischio psicosociale** dei lavoratori in emergenza — e il D.Lgs. 1/2018 estende tutele analoghe al volontariato di protezione civile.
+Dopo operazioni difficili, la riunione su fatti e procedure resta distinta dal sostegno psicologico. L’[OMS](https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/other-significant-emotional-and-medical-unexplained-somatic-complaints/psychological-debriefing-in-people-exposed-to-a-recent-traumatic-event) sconsiglia il debriefing psicologico per prevenire stress post-traumatico, ansia o depressione dopo un trauma recente. Non obbligare nessuno a raccontare l’esperienza. Se il disagio preoccupa o ostacola la vita quotidiana, chiedi una valutazione professionale. In caso di pericolo immediato, contatta subito i servizi di emergenza.
 
 ## Opportunità di apprendimento continuo
 

@@ -328,5 +328,5 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ## Per approfondire — fonti istituzionali
 
-- [DPC — Io non rischio](https://www.iononrischio.protezionecivile.it/) — la campagna nazionale sulle buone pratiche di protezione civile.
+- [DPC — Io non rischio](https://www.iononrischio.protezionecivile.gov.it/) — la campagna nazionale sulle buone pratiche di protezione civile.
 - [DPC, *La protezione civile in Italia. Testo per i docenti scolastici* (2020)](https://www.protezionecivile.gov.it/it/pubblicazione/la-protezione-civile-italia-testo-istituzionale-di-riferimento-i-docenti-scolastici/) — il volume di riferimento per l'insegnamento.

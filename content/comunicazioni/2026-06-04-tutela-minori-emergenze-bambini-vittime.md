@@ -92,6 +92,6 @@ Nei nostri corsi di formazione trattiamo specificamente la **comunicazione con i
 - Articolo: [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - Articolo: [Persone fragili — aiutare anziani e vicini](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
 - [UN — Children victims of aggression](https://www.un.org/en/observances/child-victim-day)
-- [Io Non Rischio — Materiali per famiglie](https://iononrischio.protezionecivile.it/)
+- [Io Non Rischio — Materiali per famiglie](https://iononrischio.protezionecivile.gov.it/)
 
 I bambini non sono "piccoli adulti" in emergenza. Meritano preparazione e attenzione specifiche — da ogni famiglia, da ogni volontario, da ogni comunità.

@@ -49,7 +49,7 @@ Le **conseguenze normative** di San Giuliano furono profonde e relativamente rap
 Pochi mesi dopo, l'**Ordinanza del Presidente del Consiglio dei Ministri n. 3274 del 20 marzo 2003** introdusse una **nuova classificazione sismica** dell'intero territorio italiano in **quattro zone** (1 = alta sismicità, 4 = bassa sismicità). **Nessun Comune** italiano fu più classificato "non sismico". L'effetto pratico: ogni nuova costruzione, ovunque in Italia, deve rispettare standard antisismici proporzionati alla zona di appartenenza. Un edificio scolastico nuovo a Genzano di Roma (zona 2B) ha gli stessi obblighi di adeguamento sismico di uno a Reggio Calabria.
 
 **2. Adeguamento antisismico delle scuole.**
-La stessa OPCM 3274 e successive integrazioni hanno introdotto l'**obbligo di verifica della vulnerabilità sismica** per gli edifici "**strategici**" (caserme, ospedali, sale operative) e "**rilevanti**" (scuole di ogni ordine e grado). Per le scuole esistenti, i Comuni e le Province sono stati obbligati a eseguire **Verifiche tecniche** entro tempi definiti. Dove la verifica indicava vulnerabilità, l'edificio doveva essere **adeguato sismicamente**, **migliorato** (un grado intermedio) o **dismesso e sostituito**.
+La stessa OPCM 3274 e successive integrazioni hanno introdotto l'**obbligo di verifica della vulnerabilità sismica** per gli edifici "**strategici**" (caserme, ospedali, sale operative) e "**rilevanti**" (scuole di ogni ordine e grado). Per le scuole esistenti, i Comuni e le Province sono stati obbligati a eseguire **verifiche tecniche** entro tempi definiti. Dove la verifica indicava vulnerabilità, l'edificio doveva essere **adeguato sismicamente**, **migliorato** (un grado intermedio) o **dismesso e sostituito**.
 
 **3. Norme Tecniche per le Costruzioni (NTC).**
 Il **Decreto del Ministero delle Infrastrutture 14 gennaio 2008**, poi aggiornato dal **DM 17 gennaio 2018** (NTC 2018), ha introdotto i **moderni criteri di progettazione antisismica** per le nuove costruzioni e per gli interventi sull'esistente. Sono fra le norme tecniche più avanzate d'Europa, basate sui principi della **Performance-Based Design** (progettazione per livelli di prestazione attesi).
@@ -62,7 +62,7 @@ Negli anni successivi sono stati introdotti **incentivi fiscali** (Sismabonus, o
 Oggi in Italia esistono:
 
 - La **mappa sismica nazionale** aggiornata (consultabile su [zonesismiche.mi.ingv.it](https://zonesismiche.mi.ingv.it/) e su [INGV Terremoti](https://www.ingv.it/)).
-- I **Microzonazioni Sismiche di Livello 1, 2, 3** dei Comuni più esposti, che integrano la classificazione zonale con valutazioni locali (effetti di sito).
+- Le **Microzonazioni Sismiche di Livello 1, 2, 3** dei Comuni più esposti, che integrano la classificazione zonale con valutazioni locali (effetti di sito).
 - Il **Fascicolo Edilizio del Fabbricato** (in alcune regioni), che traccia la storia tecnica di ogni edificio rilevante.
 - Le **Norme Tecniche 2018** in vigore per ogni progettazione strutturale.
 - Il **piano nazionale di adeguamento sismico delle scuole**, ancora in corso e mai completamente concluso, ma con risorse stabili dedicate dal MIUR e dal MIT.
@@ -101,7 +101,6 @@ Ventiquattro anni dopo, San Giuliano resta una ferita aperta. Ma ogni scuola ita
 - [OPCM 20 marzo 2003, n. 3274 — Normattiva](https://www.normattiva.it/)
 - [Norme Tecniche per le Costruzioni 2018 — Ministero delle Infrastrutture](https://www.mit.gov.it/)
 - [Mappa di Pericolosità Sismica Italia (INGV)](https://zonesismiche.mi.ingv.it/)
-- [Associazione Vittime Scuola "F. Jovine"](https://www.associazionevittime.it/)
 
 ## Approfondimenti dal nostro archivio
 

@@ -99,6 +99,6 @@ Fonti istituzionali:
 
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/).
 - [Dipartimento della Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/).
-- [Regione Emilia-Romagna — Sisma 2012](https://sismacentro.regione.emilia-romagna.it/).
+- [Regione Emilia-Romagna — Sisma 2012](https://www.regione.emilia-romagna.it/terremoto).
 
 *In memoria delle vittime del sisma emiliano.*

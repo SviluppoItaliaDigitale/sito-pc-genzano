@@ -1,12 +1,28 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-19T06:54:43+00:00",
+  "generato": "2026-10-21T04:31:32+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
  "count": 50,
  "results": [
+  {
+   "activationTime": "2026-10-19T16:03:00",
+   "category": "Flood",
+   "centroid": "POINT (0.022993090259437 38.81628901353977)",
+   "closed": false,
+   "code": "EMSR935",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-10-19T03:10:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-10-21T03:55:11.352969",
+   "n_aois": 2,
+   "n_products": 2,
+   "name": "Flood in Alicante-Valencia Regions, Spain"
+  },
   {
    "activationTime": "2026-10-09T23:19:00",
    "category": "Earthquake",
@@ -18,7 +34,7 @@
    ],
    "eventTime": "2026-10-09T17:56:00",
    "gdacsId": "EQ1570339",
-   "lastUpdate": "2026-10-18T21:14:45.685180",
+   "lastUpdate": "2026-10-21T00:23:08.403694",
    "n_aois": 9,
    "n_products": 12,
    "name": "Earthquake in Los Santos, Panama"
@@ -795,22 +811,6 @@
    "n_aois": 1,
    "n_products": 2,
    "name": "Wildfire in Greenland"
-  },
-  {
-   "activationTime": "2026-06-11T09:34:00",
-   "category": "Earthquake",
-   "centroid": "POINT (125.06572282904199 6.018410631258506)",
-   "closed": true,
-   "code": "EMSR882",
-   "countries": [
-    "Philippines"
-   ],
-   "eventTime": "2026-06-06T22:00:00",
-   "gdacsId": "EQ1545533",
-   "lastUpdate": "2026-06-19T14:07:50.933000",
-   "n_aois": 4,
-   "n_products": 4,
-   "name": "Earthquake in the southern Philippines"
   }
  ]
 }

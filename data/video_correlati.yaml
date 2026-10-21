@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 312 / Video unici usati: 263 /
-# Link totali: 1061 (max 5 per pagina,
+# Pagine coperte: 321 / Video unici usati: 263 /
+# Link totali: 1092 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -19,7 +19,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 632
+    video_count: 633
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -29,7 +29,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 962
+    video_count: 963
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -44,12 +44,12 @@ canali:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 391
+    video_count: 393
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1348
+    video_count: 1355
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -79,7 +79,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 647
+    video_count: 648
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1910
+    video_count: 1925
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -1317,7 +1317,7 @@ pagine:
       - irpinia
       - sismico
       - terremoto
-      score: 3.2
+      score: 2.8
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
   comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio:
@@ -3186,7 +3186,7 @@ pagine:
       - forte
       - nubifragio
       - pioggia
-      score: 4.6
+      score: 3.8
       titolo: Nubifragio si abbatte su Milano, una forte pioggia e un vento impetuoso sferzano la città
       url: https://youtu.be/21ZzYWU9Y_E
   comunicazioni/2026-06-20-servizio-saggio-danza-parco-sforza-cesarini:
@@ -3753,7 +3753,7 @@ pagine:
       titolo: Raccontiamo l'incidente ferroviario di Viareggio e le sue cause grazie ad una ricostruzione in 3D
       url: https://youtu.be/tnVy7Bl35Wg
   comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026:
-    title: 'Primo mese di campagna AIB: il punto al 30 giugno'
+    title: 'Le prime settimane di campagna AIB: il punto al 30 giugno'
     url: /comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/
     video:
     - anchored:
@@ -6424,18 +6424,6 @@ pagine:
     - anchored:
       - esercitazione
       canale: dpc-gov
-      id: 6ImZj3WaeQY
-      is_lis: false
-      overlap:
-      - esercitazione
-      - rischio
-      - sismico
-      score: 7.2
-      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
-      url: https://youtu.be/6ImZj3WaeQY
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
       id: Qdr1TEgicd8
       is_lis: false
       overlap:
@@ -6448,15 +6436,26 @@ pagine:
     - anchored:
       - esercitazione
       canale: dpc-gov
-      id: UIpzlwhK2ik
+      id: _AYUUv69F3U
       is_lis: false
       overlap:
       - esercitazione
       - rischio
-      - sismico
+      - vulcanico
       score: 7.2
-      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
-      url: https://youtu.be/UIpzlwhK2ik
+      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+      url: https://youtu.be/_AYUUv69F3U
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: YInihWkOdI0
+      is_lis: false
+      overlap:
+      - esercitazione
+      - flegrei
+      score: 7.0
+      titolo: Esercitazione nazionale "Exe Flegrei 2024"
+      url: https://youtu.be/YInihWkOdI0
   comunicazioni/2026-09-19-giornata-aggiornamento-volontari:
     title: Giornata di aggiornamento per i volontari attivi
     url: /comunicazioni/2026-09-19-giornata-aggiornamento-volontari/
@@ -7241,6 +7240,21 @@ pagine:
       score: 7.0
       titolo: Cosa succede al cuore dal punto di vista tecnico quando usi un defibrillatore
       url: https://youtu.be/3mgqw3BCeWw
+  comunicazioni/2026-10-10-nobel-radio-defibrillatore-kit-emergenza-facile:
+    title: I premi Nobel dentro il kit di emergenza
+    url: /comunicazioni/2026-10-10-nobel-radio-defibrillatore-kit-emergenza-facile/
+    video:
+    - anchored:
+      - defibrillatore
+      canale: geopop
+      id: 3mgqw3BCeWw
+      is_lis: false
+      overlap:
+      - cuore
+      - defibrillatore
+      score: 3.0
+      titolo: Cosa succede al cuore dal punto di vista tecnico quando usi un defibrillatore
+      url: https://youtu.be/3mgqw3BCeWw
   comunicazioni/2026-10-10-sentinel-3c-prime-immagini-italia:
     title: 'Sentinel-3C manda le prime immagini: c''è anche l''Italia'
     url: /comunicazioni/2026-10-10-sentinel-3c-prime-immagini-italia/
@@ -7328,6 +7342,70 @@ pagine:
       score: 6.0
       titolo: Terremoti a Fontanigorda (Genova) ottobre 2024
       url: https://youtu.be/quun4sD4YQw
+  comunicazioni/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino:
+    title: 'Cassinum Exe 2026: a Cassino l''esercitazione regionale con il Coordinamento FE.PI.VOL.'
+    url: /comunicazioni/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino/
+    video:
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - esercitazione
+      - ingv
+      - nell
+      - rischio
+      score: 7.8
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 3kA8XEf2u6I
+      is_lis: false
+      overlap:
+      - esercitazione
+      - tecnico
+      score: 7.0
+      titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
+      url: https://youtu.be/3kA8XEf2u6I
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 6.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      - sismico
+      score: 6.8
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: UIpzlwhK2ik
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      - sismico
+      score: 6.8
+      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
+      url: https://youtu.be/UIpzlwhK2ik
   comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano:
     title: 'Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica'
     url: /comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano/
@@ -7406,6 +7484,220 @@ pagine:
       score: 8.2
       titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
       url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-10-15-settimana-nazionale-protezione-civile-2026-calendario:
+    title: 'Settimana nazionale della Protezione Civile 2026: il calendario degli eventi'
+    url: /comunicazioni/2026-10-15-settimana-nazionale-protezione-civile-2026-calendario/
+    video:
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - disabilità
+      - esercitazione
+      score: 3.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - dagli
+      - esercitazione
+      score: 3.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: cima-foundation
+      id: UsSW6k87nXM
+      is_lis: false
+      overlap:
+      - droni
+      - esercitazione
+      score: 3.0
+      titolo: Esercitazione Droni Protezione Civile - Spotorno 2024
+      url: https://youtu.be/UsSW6k87nXM
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: yPBNi9QoXa0
+      is_lis: false
+      overlap:
+      - esercitazione
+      - programma
+      score: 3.0
+      titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
+      url: https://youtu.be/yPBNi9QoXa0
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      - sismico
+      score: 2.8
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+  comunicazioni/2026-10-16-chiusura-campagna-aib-2026-bilancio:
+    title: 'Campagna antincendio 2026 chiusa: 86 interventi in quattro mesi'
+    url: /comunicazioni/2026-10-16-chiusura-campagna-aib-2026-bilancio/
+    video:
+    - anchored:
+      - antincendio
+      - campagna
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 8.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
+    - anchored:
+      - antincendio
+      - campagna
+      canale: cmcc
+      id: qhaxcNNmi-E
+      is_lis: false
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 8.4
+      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
+      url: https://youtu.be/qhaxcNNmi-E
+  comunicazioni/2026-10-16-roma-e-i-terremoti-leggende-e-scienza:
+    title: 'Roma e i terremoti: dicerie, profezie e che cosa dice la scienza'
+    url: /comunicazioni/2026-10-16-roma-e-i-terremoti-leggende-e-scienza/
+    video:
+    - anchored:
+      - scossa
+      canale: geopop
+      id: v2VFX_ZIWr8
+      is_lis: false
+      overlap:
+      - scossa
+      - terremoto
+      - vulcano
+      score: 3.6
+      titolo: Perché tante scosse di terremoto a Santorini? L'analisi geologica e le caratteristiche del vulcano
+      url: https://youtu.be/v2VFX_ZIWr8
+    - anchored:
+      - scossa
+      canale: rai-news
+      id: RmDN-R7NJNk
+      is_lis: false
+      overlap:
+      - magnitudo
+      - scossa
+      - terremoto
+      score: 3.6
+      titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
+      url: https://youtu.be/RmDN-R7NJNk
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-10-17-ispra-incendi-boschivi-2026-dati:
+    title: 'Incendi boschivi 2026: in Italia bruciati oltre 1.200 km². I dati ISPRA e il Lazio'
+    url: /comunicazioni/2026-10-17-ispra-incendi-boschivi-2026-dati/
+    video:
+    - anchored:
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: FPLoljB20QA
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: MzVgNeBjJSQ
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: 'Incendi boschivi: le buone pratiche'
+      url: https://youtu.be/MzVgNeBjJSQ
   comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno:
     title: 'Neve e gelo: la casa e l''auto pronte prima dell''inverno'
     url: /comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/
@@ -7456,6 +7748,31 @@ pagine:
       score: 6.0
       titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
       url: https://youtu.be/_eRFm4JSkYs
+  comunicazioni/2026-10-17-rischio-sismico-come-si-misura-quanto-vale-italia:
+    title: 'Il rischio sismico: che cos''è, come si misura, quanto vale in Italia'
+    url: /comunicazioni/2026-10-17-rischio-sismico-come-si-misura-quanto-vale-italia/
+    video:
+    - anchored:
+      - vulnerabilità
+      canale: cmcc
+      id: PONxa3SC-kc
+      is_lis: false
+      overlap:
+      - dell
+      - vulnerabilità
+      score: 2.2
+      titolo: 'Cambiamenti climatici: di cosa si parla nel WG2 dell''IPCC. Impatti, adattamento, vulnerabilità'
+      url: https://youtu.be/PONxa3SC-kc
+    - anchored:
+      - vulnerabilità
+      canale: cmcc
+      id: JQtfXKRG1gs
+      is_lis: false
+      overlap:
+      - vulnerabilità
+      score: 2.0
+      titolo: CLIMATE CHANGE 2022 - Impatti, adattamento e vulnerabilità
+      url: https://youtu.be/JQtfXKRG1gs
   comunicazioni/2026-10-20-rischio-industriale-seveso:
     title: 'Rischio industriale: la direttiva Seveso e i piani di emergenza'
     url: /comunicazioni/2026-10-20-rischio-industriale-seveso/
@@ -8243,7 +8560,7 @@ pagine:
       - irpinia
       - sismico
       - terremoto
-      score: 8.6
+      score: 8.2
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
   comunicazioni/2026-11-26-friuli-1976-memoria-terremoto:
@@ -9634,20 +9951,6 @@ pagine:
     url: /dossier/genzano-castelli-i-nostri-rischi/
     video:
     - anchored:
-      - sismico
-      - vulcanico
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - rischio
-      - sismico
-      - terremoto
-      - vulcanico
-      score: 4.8
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
-    - anchored:
       - vulcanico
       - vulcano
       canale: dpc-gov
@@ -9660,6 +9963,20 @@ pagine:
       score: 4.6
       titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
       url: https://youtu.be/_AYUUv69F3U
+    - anchored:
+      - sismico
+      - vulcanico
+      canale: geopop
+      id: KG8xHth3n_8
+      is_lis: false
+      overlap:
+      - rischio
+      - sismico
+      - terremoto
+      - vulcanico
+      score: 4.0
+      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
+      url: https://youtu.be/KG8xHth3n_8
     - anchored:
       - laghi
       - vulcanico
@@ -9751,26 +10068,26 @@ pagine:
       url: https://youtu.be/hMvO-_BHBzQ
     - anchored:
       - climatici
-      canale: link4universe
-      id: yRZOwww4iWc
+      canale: cmcc
+      id: 91JztEqaJKs
       is_lis: false
       overlap:
       - climatici
-      - decennio
+      - ipcc
       score: 3.0
-      titolo: Falliti tutti gli obiettivi climatici dell'ultimo decennio
-      url: https://youtu.be/yRZOwww4iWc
+      titolo: 'Cambiamenti climatici: tutto quello che c''è da sapere sul rapporto IPCC - Le basi scientifiche'
+      url: https://youtu.be/91JztEqaJKs
     - anchored:
       - climatici
       canale: cmcc
-      id: M6GBHqjM084
+      id: PONxa3SC-kc
       is_lis: false
       overlap:
       - climatici
-      - rischio
-      score: 2.6
-      titolo: Presentazione rapporto CMCC “Analisi del rischio. I cambiamenti climatici in Italia”
-      url: https://youtu.be/M6GBHqjM084
+      - ipcc
+      score: 3.0
+      titolo: 'Cambiamenti climatici: di cosa si parla nel WG2 dell''IPCC. Impatti, adattamento, vulnerabilità'
+      url: https://youtu.be/PONxa3SC-kc
   dossier/il-disastro-che-non-e-successo:
     title: Il disastro che non è successo
     url: /dossier/il-disastro-che-non-e-successo/
@@ -11439,6 +11756,79 @@ pagine:
       score: 2.2
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
+  formazione/scatola-delle-esercitazioni:
+    title: Scatola delle esercitazioni per la classe
+    url: /formazione/scatola-delle-esercitazioni/
+    video:
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - esercitazione
+      - evacuazione
+      score: 6.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - esercitazione
+      - evacuazione
+      score: 6.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: QFQtk_XfdS4
+      is_lis: true
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: 'Glossario in LIS: Esercitazione di protezione civile'
+      url: https://youtu.be/QFQtk_XfdS4
+    - anchored:
+      - esercitazione
+      canale: cima-foundation
+      id: UsSW6k87nXM
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Esercitazione Droni Protezione Civile - Spotorno 2024
+      url: https://youtu.be/UsSW6k87nXM
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 3kA8XEf2u6I
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
+      url: https://youtu.be/3kA8XEf2u6I
+  formazione/settimana-protezione-civile:
+    title: Settimana della protezione civile a scuola
+    url: /formazione/settimana-protezione-civile/
+    video:
+    - anchored:
+      - evacuazione
+      - pronto
+      canale: geopop
+      id: xwXlvUH1sa0
+      is_lis: false
+      overlap:
+      - evacuazione
+      - piano
+      - pronto
+      score: 3.4
+      titolo: Vesuvio - piano d'evacuazione pronto? Non è quello che dice la protezione civile. Facciamo chiarezza
+      url: https://youtu.be/xwXlvUH1sa0
   glossario:
     title: Glossario di protezione civile
     url: /glossario/
@@ -11736,7 +12126,7 @@ pagine:
       - sismico
       - vesuvio
       - vulcanico
-      score: 10.6
+      score: 10.2
       titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
       url: https://youtu.be/KG8xHth3n_8
     - anchored:
@@ -12772,7 +13162,7 @@ pagine:
       - sismico
       - vesuvio
       - vulcanico
-      score: 9.8
+      score: 9.4
       titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
       url: https://youtu.be/KG8xHth3n_8
     - anchored:
@@ -13272,7 +13662,7 @@ pagine:
       overlap:
       - earthquake
       - sismico
-      score: 4.0
+      score: 3.2
       titolo: Dove registriamo gli sciami sismici? Where do we record earthquake swarms?
       url: https://youtu.be/0GhmsBHH3XI
     - anchored:

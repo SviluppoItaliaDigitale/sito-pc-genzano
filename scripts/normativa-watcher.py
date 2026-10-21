@@ -148,7 +148,7 @@ KW_INDIRETTE = [
 # l'ambito è già il territorio di Genzano.
 KW_INDIRETTE_SOLO_ALBO = {
     'chiusur*', 'strad*', 'transito', 'viabilit*', 'radio', 'gas', 'clima', 'scuol*', 'scolastic*',
-    'giornata', 'commemorazion*', 'sindac*', 'polizia locale', 'concerto', 'concerti', 'fiera', 'fiere', 'mercatin*',
+    'giornata', 'commemorazion*', 'sindac*', 'concerto', 'concerti', 'fiera', 'fiere', 'mercatin*',
     'corteo', 'cortei', 'carneval*', 'interruzion*', 'energia elettrica', 'rifiuti', 'bosch*', 'accessibilit*',
     'disabilit*', 'fragil*', 'anzian*', 'rsa', 'ambient*', 'sanit*', '118', 'ares', 'ambulanz*',
     'caldo', 'incendi*', 'rogh*', 'idric*', 'ordinanz*', 'diga', 'dighe', 'invaso', 'invasi', 'bacino', 'bacini', 'ets', 'odv',
@@ -1172,7 +1172,22 @@ def main():
     ap.add_argument('--dedup-issues', action='store_true', help='Scarta gli URL già comparsi nelle issue normativa-watcher (richiede gh)')
     ap.add_argument('--escludi-url', default=None, help='File con URL da scartare, uno per riga')
     ap.add_argument('--solo-rilevanti', action='store_true', default=True, help=argparse.SUPPRESS)
+    ap.add_argument('--self-test', action='store_true', help='Verifica la classificazione senza leggere fonti esterne')
     args = ap.parse_args()
+
+    if args.self_test:
+        casi = [
+            ('Delega al Governo per il riordino delle funzioni e dell’ordinamento della polizia locale',
+             False, 'indiretta'),
+            ('Liquidazione fattura per forniture alla polizia locale', False, None),
+            ('Ordinanza per la festa del paese', True, 'indiretta'),
+        ]
+        for testo, albo, attesa in casi:
+            ottenuta, motivi = classifica(testo, fonte_albo=albo)
+            if ottenuta != attesa:
+                raise SystemExit(f'Classificazione errata: {testo!r}: {ottenuta!r}, attesa {attesa!r}; {motivi}')
+        print(f'OK: {len(casi)} verifiche di classificazione, nessuna richiesta esterna.')
+        return 0
 
     cutoff = oggi_roma() - timedelta(days=args.days)
     errori = []

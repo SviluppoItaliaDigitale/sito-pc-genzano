@@ -71,7 +71,7 @@ Una giornata di sport e di lavoro collettivo — silenzioso, coordinato, profess
 
 ## Fonti istituzionali
 
-- [Coordinamento FE.PI.VOL.](https://fepivol.it/) — federazione delle associazioni di volontariato di PC del Lazio.
+- [Coordinamento FE.PI.VOL.](https://www.facebook.com/fepivol/) — federazione delle associazioni di volontariato di PC del Lazio.
 - [Agenzia Regionale di Protezione Civile — Regione Lazio](https://www.regione.lazio.it/protezione-civile) — autorità regionale.
 - [Comune di Formia](https://www.comune.formia.lt.it/) — autorità comunale ospitante.
 - [Giro d'Italia 2026](https://www.giroditalia.it/) — informazioni ufficiali del percorso.

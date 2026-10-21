@@ -65,5 +65,5 @@ Il video è anche nella pagina [Kit di emergenza](/rischi-prevenzione/kit-emerge
 
 **Fonti:**
 
-- [Terremoto: cosa fare](https://iononrischio.protezionecivile.it/it/preparati/terremoto/cosa-fare/) — campagna «Io non rischio» del Dipartimento della Protezione Civile, che indica cosa mettere nel kit.
+- [Terremoto: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/) — campagna «Io non rischio» del Dipartimento della Protezione Civile, che indica cosa mettere nel kit.
 - [Strategia dell'Unione per la preparazione](https://ec.europa.eu/commission/presscorner/detail/it/ip_25_856) — Commissione europea, 26 marzo 2025: invita i cittadini a tenere scorte essenziali per almeno 72 ore.

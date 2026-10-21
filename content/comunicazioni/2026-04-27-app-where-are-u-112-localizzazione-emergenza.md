@@ -117,9 +117,8 @@ L'app Where Are U è **interoperabile** con il sistema italiano: che tu sia a Mi
 
 ## Riferimenti ufficiali
 
-- [AREU Lombardia — pagina ufficiale Where Are U](https://www.areu.lombardia.it/web/home/where-are-u)
+- [AREU Lombardia — pagina ufficiale Where Are U](https://where.areu.lombardia.it/)
 - [Numero Unico Europeo 112 — Ministero dell'Interno](https://www.interno.gov.it/it/temi/sicurezza/numero-unico-emergenza-1-1-2)
-- [112 Lazio — Centrale Unica di Risposta](https://www.112lazio.it/)
 
 ## Come parlarne in famiglia
 
@@ -146,7 +145,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Where Are U — sito ufficiale](https://www.wherareu.it/).
+- [Where Are U — sito ufficiale](https://where.areu.lombardia.it/).
 - [EENA — European Emergency Number Association](https://eena.org/).
 - [Ministero dell'Interno — NUE 112](https://www.interno.gov.it/).
 

@@ -75,7 +75,7 @@ Con il cambiamento climatico le estati diventano più calde e le piogge più irr
 
 **Fonti istituzionali**
 
-- [Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.autoritadistrettoappenninocentrale.it/) — Osservatorio sugli utilizzi idrici competente per il Lazio.
+- [Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.aubac.it/) — Osservatorio sugli utilizzi idrici competente per il Lazio.
 - [ISPRA](https://www.isprambiente.gov.it/) — dati su risorse idriche e siccità.
 - [CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici](https://www.cmcc.it/) — scenari climatici per il Mediterraneo.
 

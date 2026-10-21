@@ -1,0 +1,18 @@
+# Routine «Lettura sintattica articoli in uscita (gate linguistico settimanale)»
+
+- **Quando gira:** ogni mercoledì alle 06:37 italiane con l'ora legale, alle 05:37 con l'ora solare.
+- **Routine di Claude:** `trig_015yjxdHQ1nxq246YjDRm98N`, testo aggiornato il 28/08/2026. Sotto la riga c'è lo stesso testo della routine: se cambi l'uno, cambia anche l'altro.
+- **Se Claude è ferma:** la esegue ChatGPT quando Alessandro chiede «fai le routine di oggi» (`AGENTS.md`, § «Quando Claude è ferma, lavori tu al suo posto»). Dove il testo chiede una notifica push o un'email ad Alessandro, l'esito va nel riassunto finale e, se il lavoro nasce da una issue, in un commento sulla issue; dove chiede di avviare un agente, applichi tu la lista di controllo del suo file in `.claude/agents/`.
+- **Come capire se oggi è già stata fatta:** PR o commit di oggi sugli articoli calendarizzati in `content/comunicazioni/`.
+
+---
+Sei nella repo SviluppoItaliaDigitale/sito-pc-genzano (sito del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma). Compito settimanale autorizzato dall'utente il 20/08/2026: eseguire la LETTURA SINTATTICA frase per frase sugli articoli calendarizzati in uscita nei prossimi 14 giorni.
+
+Procedura:
+1. Individua gli articoli in content/comunicazioni/ con date del frontmatter compresa tra oggi e i prossimi 14 giorni (inclusi i file -facile.md).
+2. Esegui prima gli script deterministici: python3 scripts/check-refusi.py <file...> e python3 scripts/audit-grammatica-italiana.py <file...>.
+3. Poi invoca l'agent pc-revisore-linguistico sul lotto per la lettura sintattica: articoli mancanti, accordi di genere/numero, preposizioni errate, concordanze verbali, elisioni mancanti, parole incollate dopo la punteggiatura, ripetizioni involontarie. Correzioni CONSERVATIVE, mai riscritture stilistiche; nei file -facile.md il registro A2 (frasi corte e ripetitive) è intenzionale e non va toccato; MAI modificare il campo image: del frontmatter. "Nessuna modifica necessaria" è un esito legittimo.
+4. Controlla anche la densità dei tic da IA (rule 02 § "Umanizzazione della scrittura"): intervieni solo con ≥3 occorrenze di lessico-spia nello stesso articolo, giudizio caso per caso.
+5. Se ci sono correzioni: build Hugo pulita, commit su un branch claude/..., push, PR verso main, merge (squash) e verifica che deploy.yml parta — le correzioni linguistiche sono manutenzione pre-autorizzata (Categoria A) fino a live. Se non c'è nulla da correggere, dichiaralo senza inventare lavoro e non committare nulla.
+6. Riepiloga in una riga per file: fix applicati o "conforme".
+7. AVVISO IN CASO DI BLOCCO: se qualcosa ti impedisce di completare la procedura (push o clone negato, accesso mancante, build Hugo che fallisce senza un fix possibile, script o agent non disponibili, errori ripetuti di qualsiasi tipo), NON chiudere in silenzio e non limitarti a riprovare all'infinito: manda subito un avviso all'utente (PushNotification) dicendo in modo chiaro (a) in quale passo ti sei bloccata, (b) l'errore ESATTO e verbatim, (c) cosa serve per sbloccare, (d) cosa hai completato fino a quel punto (es. branch e commit già pronti in locale, con i loro nomi esatti), così nulla va perso. Includi sempre i dati tecnici per chi interverrà: id di questa routine (trig_015yjxdHQ1nxq246YjDRm98N), nome esatto del branch, sha del commit, numero della PR se creata, e il messaggio d'errore copiato tale e quale. L'assistente dell'utente sul PC (workspace assistente-personale) ha un runbook per sbloccarti (memoria/runbook-sblocco-routine-cloud.md nel repo assistente-personale): scrivi l'avviso in modo che quell'assistente possa agire subito senza farti altre domande.

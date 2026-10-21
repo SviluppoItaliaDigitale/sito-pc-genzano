@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026-facile.webp"
 image_alt: "Cover dell'articolo: Ordinanza incendi boschivi 2026, in parole semplici"
 scadenza: "2026-10-15"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza Sindacale n. 14 del 17/06/2026 — prevenzione incendi boschivi"

@@ -121,7 +121,6 @@ Insegnare a bambini e ragazzi il numero **112** è parte della formazione civile
 ## Per approfondire
 
 - [Numero Unico Europeo 112 — Ministero Interno](https://www.interno.gov.it/)
-- [112 Lazio — Centrale Unica di Risposta](https://www.112lazio.it/)
 - Articolo: [Piano di emergenza familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
 - Articolo: [Primo soccorso: cinque regole base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/)
 

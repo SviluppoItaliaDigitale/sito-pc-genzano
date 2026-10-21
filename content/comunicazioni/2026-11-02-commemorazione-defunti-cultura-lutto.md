@@ -56,7 +56,7 @@ Per alcune persone la giornata è **gravosa**:
 - **anziani soli** che ricordano il coniuge scomparso;
 - **persone** con lutto recente;
 - **bambini** che affrontano per la prima volta il tema della morte;
-- **famiglie** con perdite dovute ad eventi traumatici.
+- **famiglie** con perdite dovute a eventi traumatici.
 
 **Un pensiero**, una visita, una telefonata fanno differenza.
 
