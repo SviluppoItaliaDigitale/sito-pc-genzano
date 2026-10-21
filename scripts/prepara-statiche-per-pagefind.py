@@ -42,6 +42,7 @@ SCAN_DIRS = [
     'abili-a-proteggere',
     'formazione/schede-stampabili',
     'formazione/storie-e-racconti',
+    'scuole',  # moduli per le scuole, dal 21/10/2026
 ]
 KIT_CALAMITA_GLOB = 'formazione/kit-calamita-*'
 

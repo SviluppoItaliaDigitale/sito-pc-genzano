@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Liberatoria immagini minori — fac-simile editabile (GDPR)</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/scuole/generico/liberatoria-immagini-minori/">
   <meta name="description" content="Liberatoria per foto e video di minori nelle attività con la Protezione Civile di Genzano di Roma: fac-simile da stampare, firmano entrambi i genitori o il tutore.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -23,34 +24,37 @@
     .firme-insieme { break-inside: avoid; page-break-inside: avoid; }
     @media screen and (max-width: 600px) { .firma-grid { grid-template-columns: 1fr; } }
     .meta-disclaimer { font-size: 0.78rem; color: #555; font-style: italic; margin-top: 1rem; padding: 0.5rem 0.7rem; border-left: 3px solid var(--scheda-oro); background: #fff8e6; }
-    .nav-back { font-size: 0.85rem; margin-bottom: 1rem; }
-    .nav-back a { color: var(--scheda-blu); text-decoration: underline; }
     .legal-text { font-size: 0.85rem; line-height: 1.55; }
     @media print {
-      .nav-back { display: none; }
-      /* controllo fogli di stampa (21/10/2026): con i dati e le firme di entrambi i
-         genitori il modulo resta su due fogli anche con i caratteri più larghi
-         (DejaVu Sans, comune su Linux) solo alla scala del 93% */
-      html { font-size: 93%; }
+      /* controllo fogli di stampa (21/10/2026): con l'intestazione delle schede e la
+         fascia delle affiliazioni il modulo resta su due fogli, con Inter, Liberation
+         Sans e DejaVu Sans, solo alla scala del 90% e con gli spazi un po' più stretti */
+      html { font-size: 90%; }
       h2 { break-after: avoid; page-break-after: avoid; }
+      h2.scheda-h2 { margin-top: 0.75rem; }
+      .scheda-header { margin-bottom: 0.6rem; }
+      .opzione-box { padding: 0.45rem 0.7rem; margin: 0.35rem 0; }
     }
   </style>
 </head>
 <body>
-  <div class="nav-back">
+  <div class="scheda-toolbar no-print">
     <a href="/formazione/scuole-strumenti/">← Torna agli Strumenti per le scuole</a>
+    <span class="scheda-titolo">Liberatoria immagini di minori — Fac-simile A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
-  <article class="scheda">
+  <article class="scheda-page">
     <header class="scheda-header">
-      <div class="scheda-titolo">
-        <h1>Liberatoria immagini di minori</h1>
-        <p class="scheda-sub">Fac-simile editabile · Pacchetto A — Strumenti generici · GDPR + D.Lgs. 196/2003</p>
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Liberatoria immagini di minori</h1>
+        <div class="scheda-sottotitolo">Fac-simile editabile · Pacchetto A — Strumenti generici · GDPR + D.Lgs. 196/2003</div>
       </div>
-      <div class="scheda-logo">PC Genzano</div>
     </header>
 
     <section class="scheda-blocco">
-      <h2>Dati del minore</h2>
+      <h2 class="scheda-h2">Dati del minore</h2>
       <div class="form-row">
         <div class="form-field"><label>Cognome del minore</label><div class="input-line"></div></div>
         <div class="form-field"><label>Nome del minore</label><div class="input-line"></div></div>
@@ -65,7 +69,7 @@
     </section>
 
     <section class="scheda-blocco">
-      <h2>Dati dei genitori o del tutore</h2>
+      <h2 class="scheda-h2">Dati dei genitori o del tutore</h2>
       <div class="form-row">
         <div class="form-field"><label>Primo genitore o tutore: cognome e nome</label><div class="input-line"></div></div>
         <div class="form-field"><label>Codice fiscale</label><div class="input-line"></div></div>
@@ -80,12 +84,12 @@
     </section>
 
     <section class="scheda-blocco">
-      <h2>Oggetto della liberatoria</h2>
+      <h2 class="scheda-h2">Oggetto della liberatoria</h2>
       <p class="legal-text">Chi firma, in qualità di genitore o di tutore del minore sopra indicato, nell'ambito dell'attività di Protezione Civile organizzata dall'Istituto in collaborazione con il <strong>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, in data <span style="display: inline-block; min-width: 7rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span> presso <span style="display: inline-block; min-width: 12rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span>, autorizza secondo le opzioni selezionate qui sotto la realizzazione e l'eventuale pubblicazione di fotografie e/o riprese video in cui compare il minore.</p>
     </section>
 
     <section class="scheda-blocco">
-      <h2>Scelte dei genitori o del tutore</h2>
+      <h2 class="scheda-h2">Scelte dei genitori o del tutore</h2>
 
       <div class="opzione-box">
         <label><input type="checkbox"> <span><strong>1. Realizzazione di fotografie e video</strong> durante l'attività, ad uso esclusivamente interno della scuola e del Gruppo (archivio storico, documentazione interna), <strong>senza alcuna pubblicazione</strong> su canali pubblici.</span></label>
@@ -105,7 +109,7 @@
     </section>
 
     <section class="scheda-blocco">
-      <h2>Informativa privacy sintetica</h2>
+      <h2 class="scheda-h2">Informativa privacy sintetica</h2>
       <p class="legal-text">Ai sensi degli artt. 13 e 14 del <strong>Regolamento UE 2016/679 (GDPR)</strong> e del <strong>D.Lgs. 196/2003</strong> come modificato dal <strong>D.Lgs. 101/2018</strong>:</p>
       <ul class="legal-text" style="margin-left: 1.2rem;">
         <li><strong>Titolari del trattamento</strong> in regime di contitolarità: l'<strong>Istituto scolastico</strong> e il <strong>Comune di Genzano di Roma — Gruppo Comunale di Protezione Civile</strong>.</li>
@@ -118,7 +122,7 @@
     </section>
 
     <section class="scheda-blocco">
-      <h2>Chi firma</h2>
+      <h2 class="scheda-h2">Chi firma</h2>
       <ul class="legal-text" style="margin-left: 1.2rem;">
         <li>Firmano <strong>entrambi i genitori</strong>, anche se separati o divorziati e anche con l'affidamento condiviso: la responsabilità genitoriale resta a tutti e due (art. 317 del Codice civile) e per pubblicare foto di minori sui social serve il consenso di entrambi (Garante per la protezione dei dati personali, <a href="https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/10251841">provvedimento del 29 aprile 2026, documento web n. 10251841</a>).</li>
         <li>Basta la firma di un solo genitore quando è l'unico a esercitare la responsabilità genitoriale, per esempio perché l'altro è morto o perché il giudice ha pronunciato la sua decadenza (art. 330 del Codice civile), oppure quando l'altro non può esercitarla per lontananza, incapacità o altro impedimento (art. 317 del Codice civile).</li>
