@@ -12,7 +12,7 @@ area: "Italia"
 allegati:
   - titolo: "Disegno di legge 3076, approvato dal Senato il 4 agosto 2026 — testo trasmesso alla Camera"
     url: "/allegati/2026/camera-ac3076-protezione-civile-approvato-21-10-2026.pdf"
-    dimensione: "PDF — 8 pagine"
+    dimensione: "196 KB"
 social_citazione: "Per i reati colposi commessi nell'esercizio di attività di protezione civile, il volontario risponde comunque solo per colpa grave, indipendentemente dall'aver seguito le linee guida o le buone pratiche."
 social_punti:
   - "Approvazione definitiva alla Camera il 21 ottobre 2026: 131 voti favorevoli, 95 astensioni, nessun contrario"

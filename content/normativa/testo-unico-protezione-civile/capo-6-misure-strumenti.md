@@ -24,7 +24,7 @@ Definisce gli **strumenti organizzativi** di cui il Servizio nazionale si avvale
 
 ## Una modifica in arrivo (non ancora vigente)
 
-Il 21 ottobre 2026 il Parlamento ha approvato in via definitiva la legge «Disposizioni in materia di protezione civile» (atto Camera 3076), che inserirà in questo Capo, prima dell'articolo 43, due nuovi articoli: il **42-*bis*** (linee guida nazionali su formazione e addestramento) e il **42-*ter*** (responsabilità penale colposa di autorità, operatori e volontari, limitata alla colpa grave quando sono state rispettate le linee guida o le buone pratiche). La legge non è ancora in vigore: attende la promulgazione del Presidente della Repubblica e la pubblicazione in Gazzetta Ufficiale. Aggiorneremo questa pagina con il commento ai nuovi articoli non appena sarà vigente. [Approfondisci sul nostro sito](/comunicazioni/2026-10-21-legge-protezione-civile-responsabilita-volontari/).
+Il 21 ottobre 2026 il Parlamento ha approvato in via definitiva la legge «Disposizioni in materia di protezione civile» (atto Camera 3076), che inserirà in questo Capo, prima dell'articolo 43, due nuovi articoli: il **42-*bis*** (linee guida nazionali su formazione e addestramento) e il **42-*ter*** (per i reati colposi: non punibilità se sono state rispettate le linee guida o le buone pratiche; per i volontari, in ogni caso, responsabilità limitata alla sola colpa grave). La legge non è ancora in vigore: attende la promulgazione del Presidente della Repubblica e la pubblicazione in Gazzetta Ufficiale. Aggiorneremo questa pagina con il commento ai nuovi articoli non appena sarà vigente. [Approfondisci sul nostro sito](/comunicazioni/2026-10-21-legge-protezione-civile-responsabilita-volontari/).
 
 ## Perché questo Capo conta
 
