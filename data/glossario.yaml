@@ -1249,3 +1249,19 @@
     - "Decreto-Legge"
   definizione: "Atto con forza di legge adottato dal Governo in casi di urgenza, efficace da subito ma da convertire in legge entro 60 giorni."
   link: "/glossario/#dl"
+
+- id: cams
+  termine: "CAMS"
+  varianti:
+    - "CAMS"
+    - "Copernicus CAMS"
+  definizione: "Servizio europeo Copernicus che prevede la qualità dell'aria fino a quattro giorni, gestito dall'ECMWF."
+  link: "/glossario/#cams"
+
+- id: dgr
+  termine: "DGR"
+  varianti:
+    - "DGR"
+    - "Delibera della Giunta Regionale"
+  definizione: "Delibera della Giunta Regionale: atto con cui la Regione Lazio decide su materie di sua competenza, come le zone di allerta meteo."
+  link: "/glossario/#dgr"
