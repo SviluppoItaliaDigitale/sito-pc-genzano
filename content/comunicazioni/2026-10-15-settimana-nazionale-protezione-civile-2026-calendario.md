@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-15-settimana-nazionale-protezione-civile-2026-calendario.webp"
 image_alt: "Cover dell'articolo: Settimana nazionale della Protezione Civile 2026: il calendario degli eventi"
 scadenza: "2026-10-18"
+archiviato: true
 area: ""
 allegati: []
 draft: false

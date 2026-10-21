@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-28-campagna-aib-2026-conferenza-stampa-punto-situazione.webp"
 image_alt: "Cover dell'articolo: Campagna AIB 2026, il punto della Regione Lazio: incendi in calo e 230 organizzazioni in campo"
 scadenza: "2026-10-15"
+archiviato: true
 area: ""
 lis_section: "rischio-incendio"
 social_citazione: "Un sistema sempre più efficiente grazie al coordinamento tra Protezione Civile regionale, Vigili del Fuoco, Carabinieri forestali e volontariato."
