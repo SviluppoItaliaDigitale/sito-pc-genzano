@@ -380,6 +380,15 @@ jobs:
           python3 scripts/test-testi-alternativi.py
           python3 scripts/test-genera-social.py
 
+      # 22/10/2026: la cornice di microtesto si mette anche sulle grafiche fatte in
+      # altro modo (locandine, programmi di grafica esterni) con
+      # `python3 scripts/microtesto_cornice.py GRAFICA.png`. Prove con grafiche
+      # costruite apposta: quattro lati, originale intatto, niente sovrascritture
+      # né doppie cornici (anche quelle degli altri enti), bordi trasparenti
+      # rifiutati, CMYK, nessun metadato dell'originale nel file nuovo.
+      - name: "🖼️ Cornice di microtesto sulle grafiche fatte in altro modo"
+        run: python3 scripts/microtesto_cornice.py --prova
+
   italiano:
     name: "Italiano — refusi e grammatica"
     runs-on: ubuntu-latest
