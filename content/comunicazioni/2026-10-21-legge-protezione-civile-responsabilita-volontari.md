@@ -61,7 +61,7 @@ La parte iniziale della legge (articoli 1-5) riguarda il personale, dirigenziale
 
 ## Che cosa manca ancora
 
-La legge **non è ancora vigente**. Dopo l'approvazione del Parlamento, il testo deve essere promulgato dal Presidente della Repubblica e pubblicato in Gazzetta Ufficiale. Solo da quel momento decorrono i termini, incluso quello di dodici mesi per le linee guida nazionali. Il Ministro per la protezione civile e le politiche del mare dovrà poi presentare alle Camere, ogni due anni, una relazione sull'attuazione della legge.
+La legge **non è ancora vigente**. Dopo l'approvazione del Parlamento, il testo deve essere promulgato dal Presidente della Repubblica e pubblicato in Gazzetta Ufficiale. Il testo non fissa una data di entrata in vigore diversa da quella ordinaria: entrerà quindi in vigore il quindicesimo giorno successivo alla pubblicazione (la regola generale per le leggi italiane), non il giorno stesso della pubblicazione. Solo da quel momento decorrono i termini della legge, incluso quello di dodici mesi per le linee guida nazionali. Il Ministro per la protezione civile e le politiche del mare dovrà poi presentare alle Camere, ogni due anni, una relazione sull'attuazione della legge.
 
 Seguiremo la pubblicazione in Gazzetta Ufficiale e aggiorneremo la pagina del [Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/) non appena la legge sarà vigente.
 

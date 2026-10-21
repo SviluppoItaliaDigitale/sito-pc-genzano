@@ -1,7 +1,7 @@
 ---
 title: "Responsabilità penale nelle emergenze: primo sì del Senato alle tutele per volontari e sindaci"
 date: 2026-08-05T00:02:00+02:00
-description: "Il Senato ha approvato il ddl protezione civile con l'emendamento sulla responsabilità colposa: per i volontari conterà solo la colpa grave. Ora la Camera."
+description: "Il 21 ottobre 2026 la Camera ha approvato in via definitiva il ddl: per i volontari conterà solo la colpa grave. Qui la cronistoria dal primo sì del Senato."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,12 +13,16 @@ allegati: []
 draft: false
 versione_facile: "2026-08-05-senato-tutele-penali-volontari-protezione-civile-facile"
 tts: true
-social_citazione: "Chi interviene in emergenza decide in fretta, con informazioni incomplete: la legge inizia a riconoscere questa specificità."
+social_citazione: "Chi interviene in emergenza decide in fretta, con informazioni incomplete: la legge riconosce questa specificità."
 social_punti:
   - "Il 4 agosto 2026 il Senato ha approvato in prima lettura il ddl di riforma della protezione civile."
   - "Niente punibilità per errori colposi se si sono rispettate linee guida e buone pratiche."
-  - "Per i volontari di protezione civile la responsabilità penale scatterà solo per colpa grave."
-  - "Il provvedimento non è ancora legge: ora passa all'esame della Camera."
+  - "Per i volontari di protezione civile la responsabilità penale scatta solo per colpa grave."
+  - "Il 21 ottobre 2026 la Camera ha approvato il testo in via definitiva: il racconto completo è nel nuovo articolo dedicato."
+---
+
+🔴 **Aggiornamento del 21 ottobre 2026: la legge è stata approvata in via definitiva.** La Camera dei Deputati ha concluso l'iter con 131 voti favorevoli, 95 astensioni e nessun contrario. Il racconto completo, con il testo dei nuovi articoli del Codice della protezione civile, è nell'articolo [«Volontari di protezione civile: il Parlamento approva la nuova legge sulla responsabilità penale»](/comunicazioni/2026-10-21-legge-protezione-civile-responsabilita-volontari/). Questa pagina resta online come cronistoria del primo passaggio, al Senato.
+
 ---
 
 Il **4 agosto 2026** il Senato ha approvato in prima lettura il disegno di legge di riforma della protezione civile. Il testo contiene l'**emendamento governativo sulla responsabilità penale colposa** di volontari, operatori e autorità di protezione civile, tra cui i sindaci. È un passaggio molto atteso dal mondo del volontariato. Il percorso però non è concluso: il provvedimento **passa ora alla Camera** per la seconda lettura.
@@ -46,11 +50,11 @@ Per i gruppi comunali come il nostro, la norma — se confermata dalla Camera �
 Due precisazioni importanti, per leggere la novità senza fraintendimenti:
 
 - **Non è un'immunità.** La colpa grave, l'imprudenza macroscopica e la violazione delle regole di settore restano penalmente rilevanti. Formazione, addestramento e rispetto delle procedure rimangono la prima tutela, per sé e per gli altri.
-- **Non è ancora legge.** Il testo deve completare l'esame della Camera. Aggiorneremo questa notizia quando il percorso parlamentare sarà concluso.
+- **Non era ancora legge, al momento di questo articolo.** Il testo doveva completare l'esame della Camera: lo ha fatto il 21 ottobre 2026 (vedi l'aggiornamento in cima alla pagina).
 
 ### Aggiornamento del 7 ottobre 2026
 
-Il testo non è ancora legge. Alla Camera è l'atto **C. 3076**, «Disposizioni in materia di protezione civile», trasmesso dal Senato il 4 agosto. Lo esaminano insieme le Commissioni Affari costituzionali e Lavoro. L'ultima seduta indicata sul [sito della Camera](https://www.camera.it/leg19/126?leg=19&idDocumento=3076) è del 23 settembre 2026, con il rinvio del seguito dell'esame. Quando la Camera voterà il testo, lo riporteremo in questa pagina.
+Il testo non è ancora legge. Alla Camera è l'atto **C. 3076**, «Disposizioni in materia di protezione civile», trasmesso dal Senato il 4 agosto. Lo esaminano insieme le Commissioni Affari costituzionali e Lavoro. L'ultima seduta indicata sul [sito della Camera](https://www.camera.it/leg19/126?leg=19&idDocumento=3076) è del 23 settembre 2026, con il rinvio del seguito dell'esame.
 
 ## Il quadro normativo
 

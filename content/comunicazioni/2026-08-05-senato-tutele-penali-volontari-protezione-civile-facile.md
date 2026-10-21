@@ -1,7 +1,7 @@
 ---
 title: "Il Senato dice sì: più tutele per i volontari"
 date: 2026-08-05
-description: "Il Senato approva più protezione per i volontari di protezione civile."
+description: "Il Senato approva più protezione per i volontari di protezione civile. Il 21 ottobre 2026 la legge è stata approvata in via definitiva."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -18,6 +18,10 @@ build:
   render: always
   publishResources: true
 ---
+
+🔴 **Aggiornamento del 21 ottobre 2026: la legge è stata approvata in via definitiva.** Leggi l'articolo [«Nuova legge: più protezione per i volontari» (versione completa approvata)](/comunicazioni/2026-10-21-legge-protezione-civile-responsabilita-volontari-facile/) per sapere cosa prevede.
+
+Questa pagina racconta il primo passo, al Senato.
 
 Il **4 agosto 2026** il Senato dice sì a una proposta di legge. La proposta parla di protezione civile.
 
@@ -41,11 +45,11 @@ Nel 2023, a Preone, un volontario è morto durante il maltempo. Dopo, un sindaco
 
 Molti volontari hanno paura di essere puniti per un errore. La nuova legge vuole dare più sicurezza a chi aiuta.
 
-## Attenzione: non è ancora legge definitiva
+## Cosa è successo dopo
 
-Il Senato ha detto sì una prima volta. Ora deve votare anche la **Camera**.
+Il Senato ha detto sì una prima volta, il 4 agosto 2026. Poi ha votato anche la **Camera**, il 21 ottobre 2026.
 
-Solo dopo il voto della Camera la legge diventa definitiva.
+La Camera ha detto sì. Ora il percorso in Parlamento è finito.
 
 **Importante**: seguire sempre la formazione e le regole resta la protezione migliore.
 

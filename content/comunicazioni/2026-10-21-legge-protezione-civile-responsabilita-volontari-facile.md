@@ -51,7 +51,7 @@ Prima deve succedere una cosa. Il Presidente della Repubblica deve firmare la le
 
 Poi la legge esce sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale ufficiale delle leggi italiane.
 
-Solo dopo questi due passaggi, la legge diventa attiva.
+La legge non diventa attiva subito dopo. Di solito una legge italiana diventa attiva 15 giorni dopo essere uscita sulla Gazzetta Ufficiale.
 
 ## Cosa puoi fare tu
 
