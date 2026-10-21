@@ -102,4 +102,72 @@
       {{- end }}
     {{- end }}
   {{- end }}
+
+  {{- /* 6-8 (dal 21/10/2026). Fino a quel giorno storie, schede dei kit calamità e
+       moduli per le scuole non erano in questa mappa, pur essendo pagine indicizzabili
+       e linkate dal sito. Stessi filtri della sezione 1: niente noindex, niente
+       rimandi, e solo pagine con un <head> (non frammenti). */ -}}
+
+  {{- /* 6. Storie e racconti: l'indice della biblioteca e una pagina per storia. */ -}}
+  {{- $storie := "static/formazione/storie-e-racconti" }}
+  {{- if fileExists (printf "%s/index.html" $storie) }}
+  <url>
+    <loc>{{ printf "%s/formazione/storie-e-racconti/" (strings.TrimRight "/" $prodBase) | safeHTML }}</loc>
+  </url>
+  {{- end }}
+  {{- with os.ReadDir $storie }}
+    {{- range . }}
+      {{- $idx := printf "%s/%s/index.html" $storie .Name }}
+      {{- $ok := false }}
+      {{- if and .IsDir (ne .Name "assets") (fileExists $idx) }}
+        {{- $c := readFile $idx }}
+        {{- $ok = and (findRE `(?i)<head` $c 1) (not (or (findRE `<meta[^>]+name="robots"[^>]+noindex` $c 1) (findRE `http-equiv="refresh"` $c 1))) }}
+      {{- end }}
+      {{- if $ok }}
+  <url>
+    <loc>{{ printf "%s/formazione/storie-e-racconti/%s/" (strings.TrimRight "/" $prodBase) .Name | safeHTML }}</loc>
+  </url>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+
+  {{- /* 7. Schede dei kit calamità: i file .html delle cartelle kit-calamita-*
+       (le pagine dei kit sono di Hugo e stanno già sopra). */ -}}
+  {{- with os.ReadDir "static/formazione" }}
+    {{- range . }}
+      {{- if and .IsDir (strings.HasPrefix .Name "kit-calamita-") }}
+        {{- $kit := .Name }}
+        {{- range os.ReadDir (printf "static/formazione/%s" $kit) }}
+          {{- if and (not .IsDir) (strings.HasSuffix .Name ".html") (ne .Name "index.html") }}
+            {{- $c := readFile (printf "static/formazione/%s/%s" $kit .Name) }}
+            {{- if and (findRE `(?i)<head` $c 1) (not (or (findRE `<meta[^>]+name="robots"[^>]+noindex` $c 1) (findRE `http-equiv="refresh"` $c 1))) }}
+  <url>
+    <loc>{{ printf "%s/formazione/%s/%s" (strings.TrimRight "/" $prodBase) $kit .Name | safeHTML }}</loc>
+  </url>
+            {{- end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+
+  {{- /* 8. Moduli per le scuole: static/scuole/<pacchetto>/<modulo>/index.html. */ -}}
+  {{- with os.ReadDir "static/scuole" }}
+    {{- range . }}
+      {{- if .IsDir }}
+        {{- $pacchetto := .Name }}
+        {{- range os.ReadDir (printf "static/scuole/%s" $pacchetto) }}
+          {{- $idx := printf "static/scuole/%s/%s/index.html" $pacchetto .Name }}
+          {{- if and .IsDir (fileExists $idx) }}
+            {{- $c := readFile $idx }}
+            {{- if and (findRE `(?i)<head` $c 1) (not (or (findRE `<meta[^>]+name="robots"[^>]+noindex` $c 1) (findRE `http-equiv="refresh"` $c 1))) }}
+  <url>
+    <loc>{{ printf "%s/scuole/%s/%s/" (strings.TrimRight "/" $prodBase) $pacchetto .Name | safeHTML }}</loc>
+  </url>
+            {{- end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
 </urlset>

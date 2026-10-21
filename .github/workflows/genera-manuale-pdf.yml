@@ -55,12 +55,25 @@ jobs:
       - name: Genera il PDF (Hugo + WeasyPrint, font Titillium dal repo)
         run: python3 scripts/genera-manuale-pdf.py
 
+      # Il PDF rigenerato ha un'impronta nuova: la sua riga in data/audit-pdf.yaml
+      # va aggiornata nello stesso commit, altrimenti il controllo
+      # --check-inventario di validate-pr.yml ferma tutte le pull request
+      # (successo il 21/10/2026).
+      - name: Aggiorna la riga del manuale nell'inventario dei PDF
+        run: |
+          if [ -n "$(git status --porcelain static/manuali/manuale-protezione-civile.pdf)" ]; then
+            pip install --quiet PyMuPDF pyyaml
+            python3 scripts/audit-pdf-accessibilita.py --aggiorna /manuali/manuale-protezione-civile.pdf
+          else
+            echo "PDF invariato: inventario invariato."
+          fi
+
       - name: Commit del PDF se cambiato
         run: |
           if [ -n "$(git status --porcelain static/manuali/manuale-protezione-civile.pdf)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add static/manuali/manuale-protezione-civile.pdf
+            git add static/manuali/manuale-protezione-civile.pdf data/audit-pdf.yaml
             git commit -m "[skip-manuale-pdf] Rigenera PDF del Manuale di Protezione Civile"
             # main può essere avanzato durante il run (deploy/bot): rebase + retry
             # per evitare il fallimento da non-fast-forward sul push.

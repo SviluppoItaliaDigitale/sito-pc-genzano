@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registro presenze + valutazione competenze + certificazione finale (PCTO) — fac-simile editabile</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/scuole/pcto/registro-valutazione-certificazione/">
   <meta name="description" content="Documento sequenziale per il PCTO: registro presenze studente, scheda di valutazione delle competenze trasversali, certificazione finale.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -22,28 +23,29 @@
     .firma-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
     .firma-box { border-top: 1.4px solid var(--scheda-bordo); padding-top: 0.4rem; text-align: center; font-size: 0.85rem; color: var(--scheda-blu); font-weight: 600; min-height: 3.4rem; }
     .meta-disclaimer { font-size: 0.78rem; color: #555; font-style: italic; margin-top: 1rem; padding: 0.5rem 0.7rem; border-left: 3px solid var(--scheda-oro); background: #fff8e6; }
-    .nav-back { font-size: 0.85rem; margin-bottom: 1rem; }
-    .nav-back a { color: var(--scheda-blu); text-decoration: underline; }
     .fase-band { background: var(--scheda-blu); color: #fff; padding: 0.5rem 0.9rem; margin: 1.4rem 0 0.5rem 0; border-radius: 4px; font-weight: 700; }
     .fase-band .fase-num { background: #fff; color: var(--scheda-blu); padding: 0.1rem 0.55rem; border-radius: 50%; margin-right: 0.6rem; font-weight: 800; }
-    @media print { .nav-back { display: none; } .fase-band { background: var(--scheda-blu) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    @media print { .fase-band { background: var(--scheda-blu) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   </style>
 </head>
 <body>
-  <div class="nav-back">
+  <div class="scheda-toolbar no-print">
     <a href="/formazione/scuole-strumenti/">← Torna agli Strumenti per le scuole</a>
+    <span class="scheda-titolo">Registro · Valutazione · Certificazione finale (PCTO) — Fac-simile A4</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
-  <article class="scheda">
+  <article class="scheda-page">
     <header class="scheda-header">
-      <div class="scheda-titolo">
-        <h1>Registro · Valutazione · Certificazione finale (PCTO)</h1>
-        <p class="scheda-sub">Fac-simile editabile · Pacchetto B · Documento sequenziale 3-in-1 dello studente</p>
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Registro · Valutazione · Certificazione finale (PCTO)</h1>
+        <div class="scheda-sottotitolo">Fac-simile editabile · Pacchetto B · Documento sequenziale 3-in-1 dello studente</div>
       </div>
-      <div class="scheda-logo">PC Genzano</div>
     </header>
 
     <section class="scheda-blocco">
-      <h2>Identificazione del percorso</h2>
+      <h2 class="scheda-h2">Identificazione del percorso</h2>
       <div class="form-row">
         <div class="form-field"><label>Cognome e nome studente</label><div class="input-line"></div></div>
         <div class="form-field"><label>Classe e sezione</label><div class="input-line"></div></div>
@@ -65,34 +67,36 @@
 
     <section class="scheda-blocco">
       <p style="font-size: 0.92rem;">Compilato di volta in volta dal tutor esterno (volontario del Gruppo). Lo studente firma a fine sessione. Lo scarto fra ore previste e ore effettive va motivato; ore non recuperate non concorrono al monte ore.</p>
-      <table class="tab registro">
-        <thead>
-          <tr>
-            <th style="width: 14%;">Data</th>
-            <th style="width: 10%;">Ora inizio</th>
-            <th style="width: 10%;">Ora fine</th>
-            <th style="width: 8%;">Ore</th>
-            <th>Attività svolta</th>
-            <th style="width: 18%;">Firma studente</th>
-            <th style="width: 14%;">Visto tutor</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr style="background: #f4f7fb; font-weight: 700;"><td colspan="3" style="text-align: right;">Totale ore svolte</td><td></td><td colspan="3"></td></tr>
-        </tbody>
-      </table>
+      <div class="scheda-tabella-scorrevole" tabindex="0" role="region" aria-label="Tabella: Registro presenze">
+        <table class="tab registro">
+          <thead>
+            <tr>
+              <th style="width: 14%;">Data</th>
+              <th style="width: 10%;">Ora inizio</th>
+              <th style="width: 10%;">Ora fine</th>
+              <th style="width: 8%;">Ore</th>
+              <th>Attività svolta</th>
+              <th style="width: 18%;">Firma studente</th>
+              <th style="width: 14%;">Visto tutor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr style="background: #f4f7fb; font-weight: 700;"><td colspan="3" style="text-align: right;">Totale ore svolte</td><td></td><td colspan="3"></td></tr>
+          </tbody>
+        </table>
+      </div>
       <p style="font-size: 0.82rem; color: #555; font-style: italic;">Per percorsi di lunga durata, fotocopiare/duplicare il blocco tabella mantenendo l'identificativo studente in cima.</p>
     </section>
 
@@ -109,26 +113,28 @@
         </ul>
       </div>
 
-      <table class="tab">
-        <thead>
-          <tr>
-            <th style="width: 32%;">Competenza chiave europea</th>
-            <th>Indicatore osservato nel percorso</th>
-            <th style="width: 13%;">Livello</th>
-            <th style="width: 25%;">Note del tutor</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Personale, sociale, imparare a imparare</td><td>Lavora in squadra, accetta feedback, riflette sul proprio operato</td><td></td><td></td></tr>
-          <tr><td>In materia di cittadinanza</td><td>Conosce il sistema di Protezione Civile e il principio di sussidiarietà</td><td></td><td></td></tr>
-          <tr><td>Imprenditoriale</td><td>Pianifica, identifica risorse, gestisce un piccolo progetto operativo</td><td></td><td></td></tr>
-          <tr><td>Digitale</td><td>Usa GIS, social istituzionali, distingue fonti ufficiali da disinformazione</td><td></td><td></td></tr>
-          <tr><td>Alfabetica funzionale</td><td>Scrive in linguaggio chiaro AGID, redige documenti strutturati</td><td></td><td></td></tr>
-          <tr><td>Matematica e in scienze</td><td>Legge dati di rischio, usa carte di pericolosità, interpreta bollettini</td><td></td><td></td></tr>
-          <tr><td>Multilinguistica</td><td>(opzionale) Sa interagire in inglese su contenuti di EU Civil Protection</td><td></td><td></td></tr>
-          <tr><td>Espressione culturale</td><td>Riconosce la dimensione storica e civile delle emergenze italiane</td><td></td><td></td></tr>
-        </tbody>
-      </table>
+      <div class="scheda-tabella-scorrevole" tabindex="0" role="region" aria-label="Tabella: Valutazione delle competenze trasversali">
+        <table class="tab">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Competenza chiave europea</th>
+              <th>Indicatore osservato nel percorso</th>
+              <th style="width: 13%;">Livello</th>
+              <th style="width: 25%;">Note del tutor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Personale, sociale, imparare a imparare</td><td>Lavora in squadra, accetta feedback, riflette sul proprio operato</td><td></td><td></td></tr>
+            <tr><td>In materia di cittadinanza</td><td>Conosce il sistema di Protezione Civile e il principio di sussidiarietà</td><td></td><td></td></tr>
+            <tr><td>Imprenditoriale</td><td>Pianifica, identifica risorse, gestisce un piccolo progetto operativo</td><td></td><td></td></tr>
+            <tr><td>Digitale</td><td>Usa GIS, social istituzionali, distingue fonti ufficiali da disinformazione</td><td></td><td></td></tr>
+            <tr><td>Alfabetica funzionale</td><td>Scrive in linguaggio chiaro AGID, redige documenti strutturati</td><td></td><td></td></tr>
+            <tr><td>Matematica e in scienze</td><td>Legge dati di rischio, usa carte di pericolosità, interpreta bollettini</td><td></td><td></td></tr>
+            <tr><td>Multilinguistica</td><td>(opzionale) Sa interagire in inglese su contenuti di EU Civil Protection</td><td></td><td></td></tr>
+            <tr><td>Espressione culturale</td><td>Riconosce la dimensione storica e civile delle emergenze italiane</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p style="font-size: 0.92rem; margin-top: 0.7rem;"><strong>Punti di forza dello studente</strong> osservati durante il percorso:</p>
       <div style="border: 1.2px solid var(--scheda-bordo); border-radius: 4px; min-height: 4rem; padding: 0.4rem; background: #fff;"></div>
@@ -147,23 +153,25 @@
     <section class="scheda-blocco">
       <p style="font-size: 0.92rem;">Si certifica che lo studente <strong><span style="display: inline-block; min-width: 13rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span></strong>, frequentante la classe <span style="display: inline-block; min-width: 4rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span> dell'Istituto sopra indicato, ha completato il percorso PCTO presso il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per un totale effettivo di <span style="display: inline-block; min-width: 4rem; border-bottom: 1.2px solid var(--scheda-bordo);"></span> ore, raggiungendo i seguenti livelli di competenza:</p>
 
-      <table class="tab">
-        <thead>
-          <tr>
-            <th style="width: 60%;">Competenza certificata</th>
-            <th>Livello finale (Iniziale / Base / Intermedio / Avanzato)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Personale, sociale, imparare a imparare</td><td></td></tr>
-          <tr><td>In materia di cittadinanza</td><td></td></tr>
-          <tr><td>Imprenditoriale</td><td></td></tr>
-          <tr><td>Digitale</td><td></td></tr>
-          <tr><td>Alfabetica funzionale</td><td></td></tr>
-          <tr><td>Matematica e in scienze</td><td></td></tr>
-          <tr><td>Espressione culturale</td><td></td></tr>
-        </tbody>
-      </table>
+      <div class="scheda-tabella-scorrevole" tabindex="0" role="region" aria-label="Tabella: Livelli di competenza certificati">
+        <table class="tab">
+          <thead>
+            <tr>
+              <th style="width: 60%;">Competenza certificata</th>
+              <th>Livello finale (Iniziale / Base / Intermedio / Avanzato)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Personale, sociale, imparare a imparare</td><td></td></tr>
+            <tr><td>In materia di cittadinanza</td><td></td></tr>
+            <tr><td>Imprenditoriale</td><td></td></tr>
+            <tr><td>Digitale</td><td></td></tr>
+            <tr><td>Alfabetica funzionale</td><td></td></tr>
+            <tr><td>Matematica e in scienze</td><td></td></tr>
+            <tr><td>Espressione culturale</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p style="font-size: 0.92rem; margin-top: 0.7rem;">La presente certificazione è redatta ai sensi del <strong>D.Lgs. 13 aprile 2017 n. 62</strong> e contribuisce, secondo le delibere del consiglio di classe, alla valutazione di Educazione Civica (L. 92/2019), al voto di comportamento e al <strong>Curriculum dello studente</strong> (art. 1 c. 28 L. 107/2015).</p>
 
