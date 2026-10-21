@@ -111,5 +111,5 @@ Durante una gita scolastica i principi non cambiano: si resta con il gruppo, si 
 
 **Fonti istituzionali**
 
-- [Dipartimento della Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.it/)
+- [Dipartimento della Protezione Civile — Io non rischio](https://iononrischio.protezionecivile.gov.it/)
 - [Ministero dell'Istruzione e del Merito — Sicurezza nelle scuole](https://www.mim.gov.it/)

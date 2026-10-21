@@ -81,5 +81,5 @@ Il video è anche nella pagina [Rischio incendi boschivi](/rischi-prevenzione/ri
 
 **Fonti istituzionali:**
 
-- [Incendi boschivi: cosa fare](https://iononrischio.protezionecivile.it/it/preparati/incendi-boschivi/cosa-fare/) e [cosa sapere](https://iononrischio.protezionecivile.it/it/preparati/incendi-boschivi/cosa-sapere/) — campagna «Io non rischio» del Dipartimento della Protezione Civile.
+- [Incendi boschivi: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/) e [cosa sapere](https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-sapere/) — campagna «Io non rischio» del Dipartimento della Protezione Civile.
 - [Incendio boschivo: il fenomeno](https://rischi.protezionecivile.gov.it/it/incendi-boschivi/incendio-boschivo/) e [Sei preparato?](https://rischi.protezionecivile.gov.it/it/incendi-boschivi/sei-preparato/) — Dipartimento della Protezione Civile.

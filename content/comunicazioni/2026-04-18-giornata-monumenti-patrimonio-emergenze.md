@@ -149,7 +149,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [ICOMOS Italia](https://www.icomos.it/).
+- [ICOMOS Italia](https://www.icomositalia.com/).
 - [UNESCO Italia — Patrimonio Mondiale](https://www.unesco.it/).
 - [Ministero della Cultura](https://www.cultura.gov.it/).
 - [Carabinieri Tutela Patrimonio Culturale (TPC)](https://tpcweb.carabinieri.it/).

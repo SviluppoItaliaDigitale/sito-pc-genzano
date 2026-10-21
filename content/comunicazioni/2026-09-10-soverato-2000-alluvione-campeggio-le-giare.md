@@ -58,6 +58,6 @@ Il nostro [Piano di Emergenza](/piano-emergenza/) considera questi aspetti.
 
 ## Per saperne di più
 
-- [Piano di Assetto Idrogeologico — Autorità di Bacino Distrettuali](https://www.autoritabacino.it/)
+- [ISPRA — IdroGEO: mappe di pericolosità idrogeologica](https://idrogeo.isprambiente.it/)
 - [AISM — Associazione Italiana Sclerosi Multipla](https://www.aism.it/)
 - Voce Wikipedia: [Soverato](https://it.wikipedia.org/wiki/Soverato) (la sezione sulla storia ricorda l'alluvione del 2000)

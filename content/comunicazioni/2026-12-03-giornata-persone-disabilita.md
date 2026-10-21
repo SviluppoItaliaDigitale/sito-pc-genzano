@@ -182,6 +182,6 @@ Fonti istituzionali:
 - [ONU — International Day of Persons with Disabilities](https://www.un.org/en/observances/day-of-persons-with-disabilities).
 - [Convenzione ONU sui diritti delle persone con disabilità](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html).
 - [FISH — Federazione Italiana per il Superamento dell'Handicap](https://www.fishonlus.it/).
-- [Where Are U](https://www.wherareu.it/) — chiamate al 112 con localizzazione.
+- [Where Are U](https://where.areu.lombardia.it/) — chiamate al 112 con localizzazione.
 
 In emergenza: **112**. Per persone sorde è disponibile la chiamata video in LIS tramite app dedicate (dipende dall'operatore).
