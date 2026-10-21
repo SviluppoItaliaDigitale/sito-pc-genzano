@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-10-21"
 ---
 
 Questa pagina è rivolta a Dirigenti scolastici, DSGA, RSPP, ASPP, referenti sicurezza e docenti delegati. Spiega cosa può fare il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma nelle scuole, quali sono i limiti e come coordinare le attività con il piano di emergenza dell'istituto.
@@ -121,7 +121,7 @@ La richiesta va inviata a [segreteria@protezionecivilegenzano.it](mailto:segrete
 2. Il Coordinatore valuta disponibilità, compatibilità operativa e sicurezza.
 3. Scuola e Gruppo definiscono obiettivi, durata, spazi, materiali e referenti.
 4. Per PCTO o attività continuative si definiscono convenzione e progetto formativo.
-5. Per foto e video si usa il modello dell'istituto, validato dal DPO.
+5. Per foto e video si usa il modello dell'istituto, validato dal DPO e firmato da chi esercita la responsabilità genitoriale: di norma entrambi i genitori, oppure il tutore.
 6. Durante l'attività si rispettano piano di emergenza, vigilanza dei docenti e indicazioni del referente scolastico.
 7. Al termine, se richiesto, può essere rilasciato un attestato di partecipazione.
 
