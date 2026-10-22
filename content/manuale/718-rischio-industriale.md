@@ -3,7 +3,7 @@ title: "Il rischio chimico-industriale (Seveso)"
 description: "Gli stabilimenti a rischio di incidente rilevante, la direttiva Seveso e il d.lgs. 105/2015, gli scenari incidentali, il Piano di Emergenza Esterna e l'informazione alla popolazione."
 weight: 718
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.8"
 tts: true
 date: 2026-06-10
 ---

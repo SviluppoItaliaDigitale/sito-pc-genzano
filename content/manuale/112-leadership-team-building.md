@@ -2,7 +2,7 @@
 title: "Team building e leadership nelle emergenze"
 description: "Comando e controllo (ISO 22320), i principi dell'organizzazione delle emergenze, la leadership in condizioni di stress, il lavoro di squadra, il briefing e il debriefing."
 weight: 1120
-parte: "Parte XI · Il fattore umano"
+parte: "Parte XI · Il fattore umano: comunicazione, psicologia, inclusione e leadership"
 capitolo: "11"
 tts: true
 date: 2026-06-10

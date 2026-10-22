@@ -3,7 +3,7 @@ title: "Il rischio nucleare e radiologico"
 description: "Radiazioni ionizzanti, scenari nucleari e radiologici, il Piano nazionale, l'ISIN e le reti di monitoraggio della radioattività, la iodoprofilassi e l'autoprotezione."
 weight: 719
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.9"
 tts: true
 date: 2026-06-10
 ---

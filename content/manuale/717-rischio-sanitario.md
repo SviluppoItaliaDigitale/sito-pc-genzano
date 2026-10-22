@@ -3,7 +3,7 @@ title: "Il rischio sanitario: epidemie, pandemie e maxiemergenze"
 description: "Le emergenze di sanità pubblica e le maxiemergenze sanitarie, la sorveglianza (ISS, OMS, ECDC), il ruolo della protezione civile e la lezione della pandemia di COVID-19."
 weight: 717
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.7"
 tts: true
 date: 2026-07-29
 ---

@@ -3,7 +3,7 @@ title: "Il rischio sismico: il terremoto"
 description: "Che cos'è un terremoto, come si misura, come si valuta la pericolosità sismica in Italia e come si riduce il rischio. Con il profilo del territorio dei Castelli Romani."
 weight: 711
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.1"
 tts: true
 date: 2026-06-10
 ---

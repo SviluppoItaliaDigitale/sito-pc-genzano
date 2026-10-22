@@ -3,7 +3,7 @@ title: "Il rischio idrico: la siccità e la scarsità d'acqua"
 description: "La siccità e la crisi idrica: i tipi di siccità, gli indici, gli Osservatori sugli utilizzi idrici, il legame con il cambiamento climatico e la gestione della scarsità."
 weight: 720
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.10"
 tts: true
 date: 2026-06-10
 ---

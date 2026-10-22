@@ -3,7 +3,7 @@ title: "Il rischio maremoto (tsunami)"
 description: "Come nasce un maremoto, i segnali naturali di allarme, il Sistema di Allertamento nazionale per i Maremoti (SiAM) e il Centro Allerta Tsunami dell'INGV. Il rischio nel Mediterraneo."
 weight: 716
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.6"
 tts: true
 date: 2026-06-10
 ---
