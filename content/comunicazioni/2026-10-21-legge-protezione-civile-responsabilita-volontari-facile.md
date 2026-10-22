@@ -13,6 +13,7 @@ build:
   render: always
   publishResources: true
 tts: true
+draft: false
 ---
 
 Oggi, 21 ottobre 2026, la Camera dei Deputati vota una legge. La Camera è un ramo del Parlamento italiano. La legge parla di Protezione Civile.

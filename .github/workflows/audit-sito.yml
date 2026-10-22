@@ -637,7 +637,9 @@ jobs:
           # slash iniziale di un href/URL residuo (che sarebbe "/quizpc/index.html"),
           # partono sempre da "static/" perché Hugo li legge dal filesystem, non
           # li serve a quell'URL. Falso positivo trovato il 27/09/2026 (issue #1158).
-          PAT_INDEX=$(grep -rn '/index\.html"' "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null | grep -v '"static/' | head -5 || true)
+          # Dal 22/10/2026 anche i percorsi composti con printf nella sitemap
+          # (sezione storie, "%s/index.html"): leggono il filesystem, non sono link.
+          PAT_INDEX=$(grep -rn '/index\.html"' "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null | grep -v '"static/' | grep -v 'layouts/_default/sitemap\.xml:' | head -5 || true)
           [ -n "$PAT_INDEX" ] && RESIDUI="${RESIDUI}**/index.html nei contenuti/template:**\n\`\`\`\n$PAT_INDEX\n\`\`\`\n"
           PAT_LOMB=$(grep -rin "intercomunale lombard\|manuale originale\|imbersago" "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null || true)
           [ -n "$PAT_LOMB" ] && RESIDUI="${RESIDUI}**Riferimenti al manuale lombardo:**\n\`\`\`\n$PAT_LOMB\n\`\`\`\n"
