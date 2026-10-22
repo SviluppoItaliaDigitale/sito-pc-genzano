@@ -159,7 +159,7 @@ Per chiarezza verso il cittadino, esplicitiamo anche i comportamenti che non rie
 
 - Non seguiamo account personali o politici.
 - Non accettiamo pubblicità a pagamento e non promuoviamo prodotti o servizi commerciali.
-- Non pubblichiamo foto o video in cui si riconoscano persone soccorse o in difficoltà durante un'emergenza: i loro volti vengono oscurati. I volti di minorenni si mostrano solo con il consenso scritto di entrambi i genitori; altrimenti vengono oscurati.
+- Non pubblichiamo foto o video in cui si riconoscano persone soccorse o in difficoltà durante un'emergenza: i loro volti vengono oscurati. I volti di minorenni si mostrano solo con il consenso scritto, specifico per la pubblicazione, di chi esercita la responsabilità genitoriale; altrimenti vengono oscurati.
 - Non diffondiamo previsioni meteo da fonti non istituzionali.
 - Non rispondiamo in privato a richieste relative a emergenze in corso: in quel caso il canale unico è il **112**.
 - Non siamo un servizio di emergenza. Il servizio è il **112**.
