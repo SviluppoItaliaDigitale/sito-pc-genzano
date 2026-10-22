@@ -16,7 +16,7 @@ lis_section: "allerte-meteo"
 social_citazione: "Mercoledì 21 ottobre il maltempo ci ha tenuti impegnati su due fronti."
 social_punti:
   - "Tre interventi del Gruppo a Genzano per alberi e rami: via Falcone, via Don Nazario Galieti e via Monte Giove."
-  - "Una nostra squadra a Latina, su attivazione della Sala Operativa regionale, insieme ad altri gruppi dei Castelli."
+  - "Una nostra squadra a Latina con il Coordinamento FE.PI.VOL., su indicazione della Regione Lazio."
   - "Con l'allerta gialla evita sottopassi e strade allagate e chiama il 112 per i pericoli."
 ---
 
@@ -36,9 +36,9 @@ Poco dopo mezzogiorno è arrivata la segnalazione di un **grosso ramo spezzato d
 
 Secondo le cronache locali, a Latina sono caduti circa 170 millimetri di pioggia in poche ore, contro i 50 previsti. L'acqua ha invaso strade, case, attività commerciali, scuole e il seminterrato dell'ospedale. Tra le zone più colpite c'era il quartiere Piccarello. Il Comune di Latina aveva attivato il Centro Operativo Comunale (COC) già il pomeriggio del 20 ottobre.
 
-Nel corso della giornata è partita anche una nostra squadra, su attivazione della **Sala Operativa Regionale** della Protezione Civile del Lazio. Secondo le cronache locali, con noi sono arrivate le squadre comunali di Albano Laziale, Lanuvio e Velletri e i volontari di due associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
+Nel corso della mattina è partita anche una nostra squadra. Dopo l'allerta della **Sala Operativa Unificata Permanente** (SOUP) della Regione, il **Coordinamento FE.PI.VOL.**, a cui il Gruppo aderisce, ha mobilitato su indicazione della Regione Lazio le associazioni dei territori non colpiti, per dare supporto ai volontari di Latina e dei comuni vicini. Con noi c'erano, tra gli altri, i volontari del Gruppo comunale di Albano Laziale. Secondo le cronache locali, a Latina operavano anche le squadre comunali di Lanuvio e Velletri e associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
 
-Quando un comune colpito ha bisogno di rinforzi, la richiesta passa dalla Sala Operativa Regionale, che attiva i gruppi di volontariato dei comuni vicini. È così che funziona il Servizio nazionale della protezione civile: ognuno interviene sul proprio territorio e, quando serve, va a dare una mano agli altri.
+Quando un territorio colpito ha bisogno di rinforzi, la Regione chiede aiuto alle organizzazioni di volontariato dei territori vicini, che arrivano anche attraverso i loro coordinamenti. È così che funziona il Servizio nazionale della protezione civile: ognuno interviene sul proprio territorio e, quando serve, va a dare una mano agli altri.
 
 ## Cosa impariamo
 
