@@ -38,6 +38,8 @@ Secondo le cronache locali, a Latina sono caduti circa 170 millimetri di pioggia
 
 Nel corso della mattina è partita anche una nostra squadra, con il pickup EVO Cross 4 e un'idrovora carrellata di proprietà della Regione Lazio, in dotazione al Gruppo. Dopo l'allerta della **Sala Operativa Unificata Permanente** (SOUP) della Regione, il **Coordinamento FE.PI.VOL.**, a cui il Gruppo aderisce, ha mobilitato su indicazione della Regione Lazio le associazioni dei territori non colpiti, per dare supporto ai volontari di Latina e dei comuni vicini. Con noi c'erano, tra gli altri, i volontari del Gruppo comunale di Albano Laziale. Secondo le cronache locali, a Latina operavano anche le squadre comunali di Lanuvio e Velletri e associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
 
+Il presidente della Regione Lazio, Francesco Rocca, ha ringraziato gli operatori e i volontari della protezione civile al lavoro a Latina «al fianco dei cittadini colpiti dal maltempo», e ha espresso vicinanza alle famiglie e alle attività che hanno subito danni.
+
 Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palestra e dei suoi locali interrati, invasi da acqua e fango. L'acqua aspirata veniva portata in strada con una lunga manichetta.
 
 {{< galleria titolo="La nostra squadra a Latina" >}}
@@ -97,4 +99,5 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 - [Castelli Notizie — Alluvione a Latina, soccorsi anche dai Castelli Romani](https://www.castellinotizie.it/2026/10/21/alluvione-a-latina-soccorsi-anche-dai-castelli-romani-protezioni-civili-al-lavoro-senza-sosta/)
 - [Il Mamilio — Maltempo a Latina, in campo le Protezioni Civili dei Castelli Romani](https://www.ilmamilio.it/wp/2026/10/maltempo-a-latina-in-campo-le-protezioni-civili-dei-castelli-romani-per-liberare-strade-e-abitazioni-dallacqua/)
 - [Il Messaggero — Latina dopo l'alluvione ancora al lavoro centinaia di soccorritori](https://www.ilmessaggero.it/fotogallery/italia/latina_dopo_alluvione_ancora_al_lavoro_centinaia_di_soccorritori_foto_luciano_sciurba-9840121.html)
+- [TusciaTimes — Maltempo, Rocca: «Grazie alla protezione civile per l'impegno al fianco dei cittadini di Latina»](https://www.tusciatimes.eu/maltempo-rocca-grazie-alla-protezione-civile-per-limpegno-al-fianco-dei-cittadini-di-latina/)
 - [Radio Cassino — Latina, il maltempo provoca centinaia di allagamenti](https://radiocassino.it/latina-maltempo-provoca-centinaia-di-allagamenti-danni-e-disagi-protezione-civile-in-campo/)
