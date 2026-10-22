@@ -1,4 +1,4 @@
-ultimo_audit: '2026-10-21'
+ultimo_audit: '2026-10-22'
 totale: 69
 riepilogo:
   ACCESSIBILE: 0
@@ -551,16 +551,16 @@ documenti:
   verdict: PARZIALE
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
-  size_kb: 705.7
-  sha256: 36fd4bb8e578d02a16fea0d8565ce39dec9b5cfa560009af52008ddcfccad4ab
+  size_kb: 702.2
+  sha256: e1c41d247ea5c07aa0b0fd043b17faee78dca3c8572e1461de205a4e5906ca84
   searchable: true
   tagged: false
   language: it
   title: Fondamenti, ordinamento e gestione delle emergenze. Con il commentario, articolo
     per articolo, del Codice della protezione civile. — Manuale di Protezione Civile
-  pages: 127
+  pages: 125
   errors: []
-  text_chars_sample: 3550
+  text_chars_sample: 3571
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
