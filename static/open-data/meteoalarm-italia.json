@@ -1,14 +1,40 @@
 {
  "_snapshot": {
-  "generato": "2026-10-22T19:23:41+00:00",
+  "generato": "2026-10-22T22:38:40+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 5,
-  "scaduti_scartati": 138,
+  "avvisi": 10,
+  "scaduti_scartati": 55,
   "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
+  {
+   "in_corso": false,
+   "regione": "Abruzzo",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T12:00:00+00:00",
+   "fine": "2026-10-24T21:59:00+00:00",
+   "emesso": "2026-10-22T08:45:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261022104541.048"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T18:00:00+00:00",
+   "fine": "2026-10-24T21:59:00+00:00",
+   "emesso": "2026-10-22T08:45:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261022104541.050"
+  },
   {
    "in_corso": false,
    "regione": "Emilia e Romagna",
@@ -50,6 +76,32 @@
   },
   {
    "in_corso": false,
+   "regione": "Molise",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T12:00:00+00:00",
+   "fine": "2026-10-24T21:59:00+00:00",
+   "emesso": "2026-10-22T08:45:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261022104541.049"
+  },
+  {
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T18:00:00+00:00",
+   "fine": "2026-10-24T21:59:00+00:00",
+   "emesso": "2026-10-22T08:45:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261022104541.051"
+  },
+  {
+   "in_corso": false,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -60,6 +112,19 @@
    "fine": "2026-10-23T23:59:00+00:00",
    "emesso": "2026-10-22T08:45:41+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261022104541.053"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sardegna",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T06:00:00+00:00",
+   "fine": "2026-10-24T21:59:00+00:00",
+   "emesso": "2026-10-22T08:45:41+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261022104541.052"
   },
   {
    "in_corso": false,
