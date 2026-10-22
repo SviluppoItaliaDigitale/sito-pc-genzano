@@ -36,11 +36,30 @@ Poco dopo mezzogiorno è arrivata la segnalazione di un **grosso ramo spezzato d
 
 Secondo le cronache locali, a Latina sono caduti circa 170 millimetri di pioggia in poche ore, contro i 50 previsti. L'acqua ha invaso strade, case, attività commerciali, scuole e il seminterrato dell'ospedale. Tra le zone più colpite c'era il quartiere Piccarello. Il Comune di Latina aveva attivato il Centro Operativo Comunale (COC) già il pomeriggio del 20 ottobre.
 
-Nel corso della mattina è partita anche una nostra squadra, con il pickup EVO Cross 4 e l'idrovora carrellata del Gruppo. Dopo l'allerta della **Sala Operativa Unificata Permanente** (SOUP) della Regione, il **Coordinamento FE.PI.VOL.**, a cui il Gruppo aderisce, ha mobilitato su indicazione della Regione Lazio le associazioni dei territori non colpiti, per dare supporto ai volontari di Latina e dei comuni vicini. Con noi c'erano, tra gli altri, i volontari del Gruppo comunale di Albano Laziale. Secondo le cronache locali, a Latina operavano anche le squadre comunali di Lanuvio e Velletri e associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
+Nel corso della mattina è partita anche una nostra squadra, con il pickup EVO Cross 4 del Gruppo e un'idrovora carrellata. Dopo l'allerta della **Sala Operativa Unificata Permanente** (SOUP) della Regione, il **Coordinamento FE.PI.VOL.**, a cui il Gruppo aderisce, ha mobilitato su indicazione della Regione Lazio le associazioni dei territori non colpiti, per dare supporto ai volontari di Latina e dei comuni vicini. Con noi c'erano, tra gli altri, i volontari del Gruppo comunale di Albano Laziale. Secondo le cronache locali, a Latina operavano anche le squadre comunali di Lanuvio e Velletri e associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
 
-{{< foto src="/images/2026-10-21-pickup-motopompa-latina.webp"
-         alt="Pickup con livrea di protezione civile a bande gialla e blu e, davanti, un carrello con un'idrovora bianca e i tubi, in un parcheggio con il sole basso all'orizzonte. Sullo sfondo un camion, un'autocisterna, pini e altre auto parcheggiate."
-         caption="Il pickup EVO Cross 4 e l'idrovora carrellata del Gruppo, partiti il 21 ottobre per gli allagamenti di Latina. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palestra e dei suoi locali interrati, invasi da acqua e fango. L'idrovora pescava nei locali allagati e scaricava l'acqua in strada attraverso una lunga manichetta.
+
+{{< galleria titolo="La nostra squadra a Latina" >}}
+{{< foto src="/images/2026-10-21-latina-pickup-idrovora-parcheggio.webp"
+         alt="Pickup bianco con bande gialla e blu e la scritta Protezione Civile e, davanti, un carrello con un'idrovora bianca, i tubi e la scritta Regione Lazio Dipartimento Ambiente Protezione Civile, in un parcheggio con il sole basso all'orizzonte. Sullo sfondo un camion, un'autocisterna, pini e altre auto."
+         caption="Il pickup EVO Cross 4 del Gruppo e l'idrovora carrellata, il 21 ottobre. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-idrovora-carrellata-cortile.webp"
+         alt="Un carrello bianco con un'idrovora e la scritta Regione Lazio Dipartimento Ambiente Protezione Civile, in un cortile asfaltato fra una siepe e una ringhiera. Più avanti il pickup di protezione civile e due volontari di spalle con pantaloni rossi a bande riflettenti; sullo sfondo palazzine color mattone."
+         caption="L'idrovora carrellata in posizione accanto ai locali da svuotare. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-tubo-scarico-strada.webp"
+         alt="Una strada asfaltata con una lunga manichetta blu che corre lungo la ringhiera e scarica acqua sulla carreggiata, delimitata da coni bianchi e arancioni e da barriere gialle. Sullo sfondo un furgone bianco e alberi."
+         caption="La manichetta porta in strada l'acqua aspirata dai locali allagati. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-palestra-allagata.webp"
+         alt="L'interno di una palestra su due livelli, con il piano basso sommerso da acqua scura in cui galleggiano attrezzi e oggetti; al piano superiore si vedono gli attrezzi asciutti e alcuni striscioni."
+         caption="Il piano inferiore di una palestra invaso dall'acqua. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-scala-locali-interrati.webp"
+         alt="Una scala interna con le pareti bianche che scende verso un pianerottolo invaso da acqua torbida e marrone; sul gradino più basso c'è un cartone fradicio."
+         caption="La scala che porta ai locali interrati, con l'acqua arrivata fino agli ultimi gradini. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-garage-allagato.webp"
+         alt="Un locale interrato con una porta rossa, allagato da acqua fangosa su cui galleggiano rametti, foglie e detriti; sulle pareti si vede il segno lasciato dall'acqua."
+         caption="Un locale interrato allagato, con i detriti trascinati dall'acqua. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< /galleria >}}
 
 Quando un territorio colpito ha bisogno di rinforzi, la Regione chiede aiuto alle organizzazioni di volontariato dei territori vicini, che arrivano anche attraverso i loro coordinamenti. È così che funziona il Servizio nazionale della protezione civile: ognuno interviene sul proprio territorio e, quando serve, va a dare una mano agli altri.
 
