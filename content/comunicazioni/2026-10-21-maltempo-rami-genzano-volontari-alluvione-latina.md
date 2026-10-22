@@ -47,7 +47,7 @@ Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palest
          alt="Pickup bianco con bande gialla e blu e la scritta Protezione Civile e, davanti, un carrello con un'idrovora bianca, i tubi e la scritta Regione Lazio Dipartimento Ambiente Protezione Civile, in un parcheggio con il sole basso all'orizzonte. Sullo sfondo un camion, un'autocisterna, pini e altre auto."
          caption="Il pickup EVO Cross 4 del Gruppo con il carrello dell'idrovora, il 21 ottobre. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-idrovora-carrellata-cortile.webp"
-         alt="Un carrello bianco con un'idrovora e la scritta Regione Lazio Dipartimento Ambiente Protezione Civile, in un cortile asfaltato fra una siepe e una ringhiera. Più avanti il pickup di protezione civile e, in lontananza, due volontari con pantaloni rossi a bande riflettenti, di cui uno con il volto oscurato; sullo sfondo palazzine color mattone."
+         alt="Un carrello bianco con un'idrovora e la scritta Regione Lazio Dipartimento Ambiente Protezione Civile, in un cortile asfaltato fra una siepe e una ringhiera. Più avanti il pickup di protezione civile e, in lontananza, due volontari con pantaloni rossi a bande riflettenti; sullo sfondo palazzine color mattone."
          caption="L'idrovora sul carrello, posizionata nel cortile. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-tubo-scarico-strada.webp"
          alt="Una strada asfaltata con una lunga manichetta blu che corre lungo la ringhiera; più avanti la carreggiata è bagnata, con coni bianchi e arancioni e barriere gialle. Sullo sfondo un furgone bianco e alberi."
@@ -65,17 +65,20 @@ Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palest
          alt="Un corridoio interno con l'acqua scura a metà delle pareti; sul muro bacheche con coppe e quadri e il cartello dell'uscita di emergenza, a destra una porta blu chiusa con un lucchetto."
          caption="Il corridoio interno della palestra, invaso dall'acqua. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-idrovora-aspirazione-interrato.webp"
-         alt="L'idrovora sul carrello vista dall'alto, con il tubo nero di aspirazione che scende verso un'area incassata piena d'acqua torbida; a destra un volontario di spalle con l'elmetto rosso, sullo sfondo un palazzo, un fuoristrada della protezione civile e una persona con il volto oscurato."
+         alt="L'idrovora sul carrello vista dall'alto, con il tubo nero di aspirazione che scende verso un'area incassata piena d'acqua torbida; a destra un volontario di spalle con l'elmetto rosso, sullo sfondo un palazzo, un fuoristrada della protezione civile e, in alto oltre il muretto, due soccorritori con elmetti blu che guardano verso il basso."
          caption="L'idrovora sul carrello, con il tubo nero che scende verso i locali allagati. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-volontario-vigili-fuoco-interrato.webp"
-         alt="Un volontario di spalle con l'elmetto rosso, il sottocasco e una torcia gialla, accanto a un vigile del fuoco in divisa con il volto oscurato, in uno stretto passaggio in cemento che scende verso i locali allagati, dove arriva un tubo nero."
+         alt="Un volontario di spalle con l'elmetto rosso, il sottocasco e una torcia gialla, accanto a un vigile del fuoco in divisa, in uno stretto passaggio in cemento che scende verso i locali allagati, dove arriva un tubo nero."
          caption="Un nostro volontario con un vigile del fuoco, davanti ai locali interrati da svuotare. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-volontario-acqua-interrato.webp"
          alt="Un volontario con l'elmetto rosso e la divisa di protezione civile in piedi nell'acqua torbida di un cortile interrato, ripreso dall'alto; il tubo nero di aspirazione scende lungo la parete di cemento, sul bordo terra, detriti e bottiglie."
          caption="Il cortile interrato da svuotare, con il tubo dell'idrovora. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-volontario-manichetta-interrato.webp"
-         alt="Un volontario con l'elmetto rosso e la divisa rossa e blu, con il volto oscurato, in piedi nell'acqua torbida di un locale interrato, ripreso dall'alto dietro il raccordo metallico del tubo di aspirazione; una corda attraversa l'inquadratura."
+         alt="Un volontario con l'elmetto rosso, gli occhiali protettivi e la divisa rossa e blu, in piedi nell'acqua torbida di un locale interrato, ripreso dall'alto dietro il raccordo metallico del tubo di aspirazione; una corda attraversa l'inquadratura."
          caption="Un volontario nel locale interrato, accanto al tubo di aspirazione. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-soccorritore-cortile.webp"
+         alt="Un soccorritore con la barba grigia, l'elmetto rosso con gli occhiali protettivi alzati e la divisa rossa e blu a bande riflettenti, in piedi in un cortile; dietro di lui un fuoristrada bianco, un tubo blu steso a terra, i bidoni della raccolta e un edificio basso."
+         caption="Un soccorritore nel cortile, durante una pausa del lavoro. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< /galleria >}}
 
 I due video, girati con la torcia, mostrano i locali interni della palestra sommersi dall'acqua.
