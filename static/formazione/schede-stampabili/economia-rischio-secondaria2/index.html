@@ -70,8 +70,18 @@
   </style>
   <!-- Stampa: le fonti puntuali aggiunte alla tabella del paragrafo 2 (correzione
        fonti F18, audit 03/10/2026) spingevano un foglio quasi vuoto in fondo;
-       una scala ridotta tiene il fascicolo compatto (controllo fogli di stampa). -->
+       una scala ridotta tiene il fascicolo compatto (controllo fogli di stampa).
+       Dal 22/10/2026 anche spazi più stretti in tabelle, riquadri e glossario: con i
+       caratteri di un Linux senza Liberation l'ultimo foglio restava quasi vuoto, e
+       il glossario ha gli spazi scritti nell'elemento, da qui !important. -->
   <style>@media print { html { font-size: 89%; } }</style>
+  <style>@media print {
+    .casi-tabella th, .casi-tabella td { padding: 0.25rem 0.45rem; }
+    .testo-info { padding: 0.5rem 0.8rem; margin: 0.35rem 0; }
+    .sez-titolo { margin: 0.6rem 0 0.3rem 0; }
+    .scheda-page dl { gap: 0.15rem 0.7rem !important; padding: 0.45rem 0.75rem !important; }
+    .domanda-card { margin: 0.3rem 0; }
+  }</style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">

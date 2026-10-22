@@ -53,7 +53,24 @@ FAMIGLIE = [
     "scuole",  # moduli per le scuole (liberatoria, circolare, convenzione PCTO…), dal 21/10/2026
 ]
 
-HA_CANONICAL = re.compile(r'<link[^>]+rel=["\']canonical["\']', re.I)
+# Il link canonical si riconosce dai suoi attributi, in qualunque ordine e con o
+# senza virgolette: `<link href="…" rel="canonical">` vale quanto il contrario.
+# Fino al 22/10/2026 l'indirizzo si leggeva solo con rel prima di href, e il
+# controllo della mappa per i motori saltava in silenzio le pagine scritte
+# nell'altro ordine (revisione della PR #1529). Prova: scripts/test-canonical-statiche.py.
+LINK = re.compile(r"<link\b[^>]*>", re.I)
+ATTRIBUTO = re.compile(r"""([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+))""")
+
+
+def link_canonical(testo: str):
+    """Gli attributi del primo <link> con rel="canonical" (chiavi in minuscolo), o None."""
+    for tag in LINK.findall(testo):
+        attributi = {k.lower(): a or b or c for k, a, b, c in ATTRIBUTO.findall(tag)}
+        if "canonical" in attributi.get("rel", "").lower().split():
+            return attributi
+    return None
+
+
 # Le pagine marcate noindex (i pacchetti «Stampa tutto», che raccolgono schede
 # già indicizzate una per una) non hanno bisogno di un URL preferito: ai motori
 # stiamo già dicendo di non indicizzarle, e un canonical su una pagina noindex
@@ -61,7 +78,6 @@ HA_CANONICAL = re.compile(r'<link[^>]+rel=["\']canonical["\']', re.I)
 NOINDEX = re.compile(r'<meta[^>]+name=["\']robots["\'][^>]*content=["\'][^"\']*noindex', re.I)
 # Le pagine che rimandano a un altro indirizzo (schede ritirate, vecchi giochi)
 RIMANDO = re.compile(r'<meta[^>]+http-equiv=["\']refresh["\']', re.I)
-URL_CANONICAL = re.compile(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)', re.I)
 # Il canonical va dopo il titolo, prima dei fogli di stile: è la posizione che
 # usa il tema Hugo, così i due tipi di pagina si leggono allo stesso modo.
 DOPO = re.compile(r"(<title>.*?</title>\s*\n)", re.S | re.I)
@@ -111,9 +127,10 @@ def assenti_dalla_mappa(sitemap: Path) -> list[str]:
     assenti = []
     for p in pagine():
         testo = p.read_text(encoding="utf-8", errors="replace")
-        m = URL_CANONICAL.search(testo)
-        if m and indicizzabile(testo) and m.group(1) not in indirizzi:
-            assenti.append(f"{p.relative_to(ROOT).as_posix()} ({m.group(1)})")
+        link = link_canonical(testo)
+        url = link.get("href") if link else None
+        if url and indicizzabile(testo) and url not in indirizzi:
+            assenti.append(f"{p.relative_to(ROOT).as_posix()} ({url})")
     return assenti
 
 
@@ -135,7 +152,7 @@ def main() -> int:
             continue  # frammento, non una pagina
         if NOINDEX.search(testo):
             continue
-        if HA_CANONICAL.search(testo):
+        if link_canonical(testo) is not None:
             gia += 1
             continue
         if solo_check:

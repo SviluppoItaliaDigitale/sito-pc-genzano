@@ -22,11 +22,12 @@ Ciò che rompe la stampa non si vede leggendo il codice (rule 09 § 15-ter): fog
 ```bash
 hugo --quiet --minify                                   # build in public/
 python3 scripts/check-fogli-stampa.py --da-git origin/main   # solo le pagine toccate
-python3 scripts/check-fogli-stampa.py                   # tutte (schede, kit calamità, storie, campione del sito)
+python3 scripts/check-fogli-stampa.py                   # tutte (schede, kit calamità, storie, pacchetti «Stampa tutto», campione del sito)
+python3 scripts/check-fogli-stampa.py --pagine formazione/kit-calamita-<kit>/<scheda>.html --png /tmp/fogli   # una scheda, con i fogli in PNG
 python3 scripts/check-fascicolo-esperimenti.py          # se si tocca il fascicolo degli esperimenti
 ```
 
-`check-fogli-stampa.py` stampa con Chromium in A4 (`media=print`) e blocca un foglio bianco in qualunque posizione e, nelle schede, nei kit e nelle storie, l'foglio quasi vuoto in qualunque posizione. Sulle PR gira in `validate-pr.yml` sulle sole pagine toccate (tutta la famiglia se cambia `kit-calamita-shared/print.css`), ogni lunedì su tutto (`controllo-fogli-stampa.yml`). Se scatta su una scheda di kit, la correzione è la scala di stampa della sola scheda (`.scheda { zoom }`), al massimo del 12%; oltre si stringono gli spazi della scheda.
+`check-fogli-stampa.py` stampa con Chromium in A4 (`media=print`) e blocca un foglio bianco in qualunque posizione e, nelle schede, nei kit e nelle storie, il foglio quasi vuoto in qualunque posizione. Dal 22/10/2026 ogni pagina stampabile si stampa con tre serie di caratteri (i kit con Liberation, TeX Gyre Adventor al posto di Century Gothic e DejaVu; schede e storie con Liberation, Inter con Gelasio, DejaVu), perché schede, kit e storie usano i caratteri del computer che stampa: una scheda che passa con una serie e sfora con un'altra va corretta (rule 09 § 15-ter h, `scripts/fogli-stampa/caratteri/LEGGIMI.md`). Se il controllo si ferma dicendo che i caratteri della prova non sono quelli attesi, il problema è la macchina (pacchetti, cache di fontconfig), non la scheda: vedi il LEGGIMI. Sulle PR gira in `validate-pr.yml` sulle sole pagine toccate (tutta la famiglia se cambia `kit-calamita-shared/print.css`, tutto se cambiano lo script o le serie), ogni lunedì su tutto (`controllo-fogli-stampa.yml`). Se scatta su una scheda di kit, la correzione è la scala di stampa della sola scheda (`.scheda { zoom }`), al massimo del 12% e scelta in modo che passi con tutte e tre le serie; oltre si stringono gli spazi della scheda.
 
 **Resta un giudizio visivo** — un disegno riconoscibile, un pittogramma leggibile, l'estetica di un SVG inline, il cropping di un'immagine: per questo serve `pc-verifica-visiva`, che fa gli screenshot (anche in stampa A4) e li legge davvero. Se hai lo strumento Agent, invoca `pc-verifica-visiva`. Se non lo hai, leggi `.claude/agents/pc-verifica-visiva.md` ed esegui tu i suoi controlli essenziali, scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto «gate pc-verifica-visiva da eseguire dalla sessione principale». Mai saltare un gate in silenzio.
 
@@ -150,7 +151,7 @@ python3 scripts/check-fascicolo-esperimenti.py          # se si tocca il fascico
 ✅ VERIFICATE OK: 25/30 schede
 
 🖨️ PROVA DI STAMPA:
-  check-fogli-stampa: <n fogli bianchi, n ultimi fogli quasi vuoti, n errori JS>
+  check-fogli-stampa: <n fogli bianchi, n fogli quasi vuoti (con quale serie di caratteri), n errori JS>
   check-fascicolo-esperimenti: <esito, se pertinente>
   Giudizio visivo (pc-verifica-visiva): <fatto | eseguito a mano | da eseguire dalla sessione principale>
 ```

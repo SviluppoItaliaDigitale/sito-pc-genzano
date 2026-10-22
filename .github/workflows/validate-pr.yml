@@ -88,7 +88,11 @@ jobs:
         # nessuna famiglia elenca e su una pagina con il canonical assente dalla
         # mappa per i motori: le 143 schede dei kit calamità erano rimaste senza
         # canonical perché la famiglia puntava alla cartella del foglio di stile.
-        run: python3 scripts/aggiungi-canonical-statiche.py --check --sitemap public/sitemap.xml
+        # Prima la prova di come lo script legge il canonical: fino al 22/10/2026
+        # con href prima di rel la pagina usciva in silenzio dal controllo della mappa.
+        run: |
+          python3 scripts/test-canonical-statiche.py
+          python3 scripts/aggiungi-canonical-statiche.py --check --sitemap public/sitemap.xml
 
       - name: "🧪 Qualità delle pagine (titolo, h1, testo alternativo)"
         # Proposta «controllo qualità» del 06/10/2026: tutte le pagine del
@@ -201,8 +205,9 @@ jobs:
 
   fogli-stampa:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Ubuntu 24.04 e Playwright fissato: vedi controllo-fogli-stampa.yml.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v7
@@ -218,9 +223,14 @@ jobs:
       - name: "🏗️ Build"
         run: hugo --minify --quiet --baseURL "https://www.protezionecivilegenzano.it/"
 
+      - name: "🔤 Caratteri della prova"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation fonts-inter fonts-texgyre fonts-dejavu-core fonts-noto-color-emoji
+
       - name: "🌐 Browser e lettore PDF"
         run: |
-          pip install --quiet playwright pymupdf
+          pip install --quiet playwright==1.56.0 pymupdf
           playwright install --with-deps chromium
 
       - name: "🖨️ Stampa le pagine toccate dalla PR e guarda i fogli"
@@ -228,8 +238,13 @@ jobs:
         # una riga di fonti su un foglio in più, quattro pagine del sito e la
         # homepage stampavano fogli bianchi. Si vede solo stampando. Qui si
         # stampano le schede, i kit e le storie modificati (tutta la famiglia
-        # se cambia il loro foglio di stile) più un campione di pagine del
-        # sito; il controllo completo gira ogni lunedì (controllo-fogli-stampa.yml).
+        # se cambia il loro foglio di stile, tutto se cambiano lo script o le
+        # serie di caratteri) più un campione di pagine del sito; dal
+        # 22/10/2026 ogni pagina stampabile con tre serie di caratteri
+        # (scripts/fogli-stampa/caratteri/LEGGIMI.md) e ogni scheda toccata
+        # anche dentro i pacchetti «Stampa tutto» (tutti i pacchetti se cambia
+        # il loro generatore). Il controllo completo gira ogni lunedì
+        # (controllo-fogli-stampa.yml).
         run: python3 scripts/check-fogli-stampa.py --da-git "origin/${{ github.base_ref }}"
 
   fascicolo-esperimenti:

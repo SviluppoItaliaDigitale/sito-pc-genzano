@@ -91,6 +91,12 @@ CSS = """    /* Alfabetiere A-Z — un foglio per lettera, quattro scritture. CS
       .alf section { break-inside: avoid; }
       .alf .alf-spiega { background: #fff; }
       .alf .alf-riga .alf-eti { background: #fff; }
+      /* Le lettere con la spiegazione (H, J, W, X, Y) hanno qualche riga in più: con i
+         caratteri di Mac o di un Linux senza Liberation la fascia delle affiliazioni
+         finiva da sola su un foglio. Disegno un po' più piccolo e meno margine in alto
+         (controllo fogli di stampa, 22/10/2026). */
+      .alf:has(.alf-spiega) { padding-top: 6mm; }
+      .alf:has(.alf-spiega) .alf-disegno img { width: 32mm; height: 32mm; }
     }"""
 
 def riga(etichetta, testo, corsivo=False, parola=False):

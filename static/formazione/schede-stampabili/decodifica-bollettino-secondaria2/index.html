@@ -35,10 +35,11 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
-  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
-     riga di piè di pagina con la banda affiliazioni andava su una pagina in più:
-     un 4% in meno su tutto tiene il foglio intero (ritoccata il 19/10/2026 — controllo fogli di stampa). Solo in stampa. */
-  @media print { html { font-size: 96%; } }
+  /* Stampa: un 9% in meno su tutto evita un foglio quasi vuoto anche con i
+     caratteri che la scheda trova su Windows con Office, su Mac o su un Linux
+     senza Liberation: senza, la fascia delle affiliazioni o l'ultima riga
+     finivano da sole su un foglio in più (controllo fogli di stampa, 22/10/2026). */
+  @media print { html { font-size: 91%; } }
   </style>
 </head>
 <body>

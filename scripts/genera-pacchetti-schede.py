@@ -155,7 +155,11 @@ def estrai_styles_articoli_titolo(
 #     stampata da sola rispetto a scheda-print.css;
 #   - html { font-size: N% } (la scala di stampa della scheda) diventa
 #     zoom: N/100 sulla sola sezione, perché le dimensioni in rem dipendono
-#     dalla radice del documento e non si possono ridurre per una sezione;
+#     dalla radice del documento e non si possono ridurre per una sezione.
+#     Lo zoom rimpicciolisce anche le misure in millimetri (fascia delle
+#     affiliazioni, piè di pagina), che la scala su html lascia com'erano:
+#     nel pacchetto la scheda si impagina in un altro modo, e
+#     scripts/check-fogli-stampa.py la stampa anche qui (22/10/2026);
 #   - body tiene solo font-size (lo sfondo è del pacchetto);
 #   - @page senza nome della scheda non passa al pacchetto, che stampa tutto
 #     in A4 verticale con margine di 5 mm: il browser usa un solo formato per

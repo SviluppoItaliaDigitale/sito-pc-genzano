@@ -70,9 +70,11 @@
       body { background: #fff; }
       .es-giorno { background: #fff; }
     }
-    /* Controllo fogli di stampa: un solo foglio con la banda delle affiliazioni. */
+    /* Controllo fogli di stampa: un solo foglio con la banda delle affiliazioni.
+       Dal 22/10/2026 margini più stretti: con i caratteri di Mac o di un Linux senza
+       Liberation la fascia andava da sola su un secondo foglio. */
     @media print { html { font-size: 88%; } }
-    @media print { .scheda-page { padding: 1cm 1.5cm 0.4cm 1.5cm; } }
+    @media print { .scheda-page { padding: 0.8cm 1.2cm 0.3cm 1.2cm; } }
   </style>
 </head>
 <body>
