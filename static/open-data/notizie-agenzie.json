@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-21T22:11:00+00:00",
+  "generato": "2026-10-22T00:42:02+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-21T22:16:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Milano, violenza contro studentessa Erasmus: fermato 31enne",
+   "url": "https://www.adnkronos.com/cronaca/studentessa-erasmus-violentata-milano-fermato-31enne_BplJJtPQTA1YzpeelBDFK"
+  },
   {
    "data": "2026-10-21T22:04:02+00:00",
    "fonte": "ADNKRONOS",
@@ -177,12 +183,6 @@
    "fonte": "ANSA",
    "titolo": "Kiev e Mosca tornano a parlarsi, appuntamento a metà novembre",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/21/il-cremlino-pronti-a-riprendere-i-negoziati-trilaterali-con-kiev-e-gli-usa-a-meta_62ff8056-bbec-4377-a0c7-7fa4a07823ec.html"
-  },
-  {
-   "data": "2026-10-21T17:54:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ai, Fanizzi (Dell Technologies): \"La sovranità digitale significa avere possibilità di scelta\"",
-   "url": "https://www.adnkronos.com/economia/ai-fanizzi-dell-technologies-la-sovranita-digitale-significa-avere-possibilita-di-scelta_3Tx4gExqeY79iqdA3H8l12"
   },
   {
    "data": "2026-10-21T17:52:28+00:00",
