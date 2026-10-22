@@ -38,7 +38,7 @@ Secondo le cronache locali, a Latina sono caduti circa 170 millimetri di pioggia
 
 Nel corso della mattina è partita anche una nostra squadra, con il pickup EVO Cross 4 e un'idrovora carrellata di proprietà della Regione Lazio, in dotazione al Gruppo. Dopo l'allerta della **Sala Operativa Unificata Permanente** (SOUP) della Regione, il **Coordinamento FE.PI.VOL.**, a cui il Gruppo aderisce, ha mobilitato su indicazione della Regione Lazio le associazioni dei territori non colpiti, per dare supporto ai volontari di Latina e dei comuni vicini. Con noi c'erano, tra gli altri, i volontari del Gruppo comunale di Albano Laziale. Secondo le cronache locali, a Latina operavano anche le squadre comunali di Lanuvio e Velletri e associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
 
-Il presidente della Regione Lazio, Francesco Rocca, ha ringraziato gli operatori e i volontari della protezione civile al lavoro a Latina «al fianco dei cittadini colpiti dal maltempo», e ha espresso vicinanza alle famiglie e alle attività che hanno subito danni.
+Il presidente della Regione Lazio, Francesco Rocca, in un messaggio sui suoi profili social ha ringraziato gli operatori e i volontari della protezione civile al lavoro a Latina «al fianco dei cittadini colpiti dal maltempo», e ha espresso vicinanza alle famiglie e alle attività che hanno subito danni.
 
 Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palestra e dei suoi locali interrati, invasi da acqua e fango. L'acqua aspirata veniva portata in strada con una lunga manichetta.
 
