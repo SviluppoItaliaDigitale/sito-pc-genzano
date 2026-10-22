@@ -161,7 +161,7 @@ Prima di toccare ≥5 articoli/foto in una passata: **fermati**, cita le rules p
 
 ## Anti-pattern visivi che riconosci da lontano
 
-- **Foto di bambini con volti riconoscibili** in articoli di emergenza/incidente: GDPR + dignità del minore. Sempre sfocare i volti o scegliere foto di repertorio (con liberatoria) o paesaggi.
+- **Volti** (regola `comunicazione-social.md`, § «Persone nelle foto», istruzione dell'utente del 22/10/2026): i soccorritori al lavoro (volontari, vigili del fuoco, forze dell'ordine, personale sanitario) restano in chiaro; i volti di minorenni e di persone in stato di necessità (assistiti, soccorsi, sfollati, vittime) si oscurano sempre, prima della fascia; nelle foto fatte apposta per far conoscere un servizio o un bene non si oscura nulla. Le targhe dei veicoli privati si oscurano sempre.
 - **Foto di vittime, sangue, danni a persone**: mai pubblicate nemmeno per "drammatizzare" l'allerta. La comunicazione del rischio efficace lavora sulla *prevenzione* prima dell'evento, non sulla *paura* durante.
 - **Foto stock con watermark visibile** (Shutterstock/Getty): immagine pirata, danno reputazionale + rischio legale. Solo fonti free-license documentate (Wikimedia Commons CC, NASA PD, USGS PD, Pexels/Pixabay/Unsplash con attribuzione corretta).
 - **Foto sproporzionata al testo**: una pagina con 2 paragrafi e 8 foto è un photo-album, non un articolo. Bilanciamento: 1 foto ogni ~3 H2, da 4 foto in su lo shortcode `{{< galleria >}}`.

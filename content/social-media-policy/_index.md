@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-10-14"
+dataUltimaRevisione: "2026-10-22"
 toc: true
 ---
 
@@ -159,7 +159,7 @@ Per chiarezza verso il cittadino, esplicitiamo anche i comportamenti che non rie
 
 - Non seguiamo account personali o politici.
 - Non accettiamo pubblicità a pagamento e non promuoviamo prodotti o servizi commerciali.
-- Non pubblichiamo foto o video di persone coinvolte in eventi di emergenza senza liberatoria.
+- Non pubblichiamo foto o video in cui si riconoscano minorenni o persone soccorse o in difficoltà durante un'emergenza: i loro volti vengono oscurati.
 - Non diffondiamo previsioni meteo da fonti non istituzionali.
 - Non rispondiamo in privato a richieste relative a emergenze in corso: in quel caso il canale unico è il **112**.
 - Non siamo un servizio di emergenza. Il servizio è il **112**.
