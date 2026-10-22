@@ -49,6 +49,9 @@ Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palest
 {{< foto src="/images/2026-10-21-latina-idrovora-carrellata-cortile.webp"
          alt="Un carrello bianco con un'idrovora e la scritta Regione Lazio Dipartimento Ambiente Protezione Civile, in un cortile asfaltato fra una siepe e una ringhiera. Più avanti il pickup di protezione civile e, in lontananza, due volontari con pantaloni rossi a bande riflettenti; sullo sfondo palazzine color mattone."
          caption="L'idrovora sul carrello, posizionata nel cortile. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-volontario-idrovora-cortile.webp"
+         alt="Un volontario con occhiali da sole, maglietta blu e pantaloni rossi a bande riflettenti si sporge verso il carrello dell'idrovora, nel cortile. In primo piano la pompa bianca con i raccordi metallici e il tubo nero di aspirazione; un tubo blu corre sull'asfalto bagnato verso i bidoni dei rifiuti."
+         caption="Un volontario controlla l'idrovora sul carrello, nel cortile. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-10-21-latina-tubo-scarico-strada.webp"
          alt="Una strada asfaltata con una lunga manichetta blu che corre lungo la ringhiera; più avanti la carreggiata è bagnata, con coni bianchi e arancioni e barriere gialle. Sullo sfondo un furgone bianco e alberi."
          caption="La lunga manichetta lungo la strada, da cui l'acqua aspirata dai locali allagati viene scaricata. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
