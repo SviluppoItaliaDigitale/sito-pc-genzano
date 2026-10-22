@@ -76,5 +76,6 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 **Le cronache locali:**
 
 - [Castelli Notizie — Alluvione a Latina, soccorsi anche dai Castelli Romani](https://www.castellinotizie.it/2026/10/21/alluvione-a-latina-soccorsi-anche-dai-castelli-romani-protezioni-civili-al-lavoro-senza-sosta/)
+- [Il Mamilio — Maltempo a Latina, in campo le Protezioni Civili dei Castelli Romani](https://www.ilmamilio.it/wp/2026/10/maltempo-a-latina-in-campo-le-protezioni-civili-dei-castelli-romani-per-liberare-strade-e-abitazioni-dallacqua/)
 - [Il Messaggero — Latina dopo l'alluvione ancora al lavoro centinaia di soccorritori](https://www.ilmessaggero.it/fotogallery/italia/latina_dopo_alluvione_ancora_al_lavoro_centinaia_di_soccorritori_foto_luciano_sciurba-9840121.html)
 - [Radio Cassino — Latina, il maltempo provoca centinaia di allagamenti](https://radiocassino.it/latina-maltempo-provoca-centinaia-di-allagamenti-danni-e-disagi-protezione-civile-in-campo/)
