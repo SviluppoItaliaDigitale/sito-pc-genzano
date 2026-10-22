@@ -1,5 +1,5 @@
 ---
-title: "Il kit di emergenza in un video: cosa preparare"
+title: "Un video breve sul kit di emergenza"
 date: 2026-09-25T00:03:00+02:00
 description: "Un video breve spiega cosa mettere nel kit di emergenza."
 badge: "Prevenzione"

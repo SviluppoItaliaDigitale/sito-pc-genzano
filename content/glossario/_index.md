@@ -217,7 +217,7 @@ Costellazione di satelliti radar italiani, gestita dall'Agenzia Spaziale Italian
 
 ### COVID-19 {#covid-19}
 Malattia respiratoria causata dal coronavirus SARS-CoV-2. La pandemia dichiarata il 31 gennaio 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria, con il Capo del Dipartimento come coordinatore della risposta.
-*Approfondisci: [Il rischio sanitario (Manuale, cap. 7.17)](/manuale/717-rischio-sanitario/).*
+*Approfondisci: [Il rischio sanitario (Manuale, cap. 7.7)](/manuale/717-rischio-sanitario/).*
 
 ### CRI {#cri}
 Croce Rossa Italiana. Associazione di pubblica utilità, oggi ente del Terzo Settore, componente operativa del Servizio nazionale di protezione civile.

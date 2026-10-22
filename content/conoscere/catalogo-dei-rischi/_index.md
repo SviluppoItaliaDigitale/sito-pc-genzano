@@ -64,7 +64,7 @@ La siccità come rischio lento: come si misura, gli effetti su acqua potabile, a
 Gli stabilimenti che trattano sostanze pericolose, la **direttiva Seveso** e i piani di emergenza esterna. Leggi: [Il rischio chimico-industriale e la direttiva Seveso](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/).
 
 ### Rischio nucleare e radiologico
-Le emergenze radiologiche e nucleari, il Piano nazionale e il ruolo delle autorità competenti. Leggi: [Il rischio nucleare e radiologico](/conoscere/catalogo-dei-rischi/rischio-nucleare-radiologico/).
+Le emergenze radiologiche e nucleari, il Piano nazionale e il ruolo delle autorità competenti. Leggi: [Il rischio nucleare e radiologico in Italia](/conoscere/catalogo-dei-rischi/rischio-nucleare-radiologico/).
 
 ### Rischio sanitario
 Le emergenze sanitarie collettive, comprese le epidemie e le pandemie, e la pianificazione di sanità pubblica. Leggi: [Il rischio sanitario: emergenze, epidemie e pandemie](/conoscere/catalogo-dei-rischi/rischio-sanitario/).

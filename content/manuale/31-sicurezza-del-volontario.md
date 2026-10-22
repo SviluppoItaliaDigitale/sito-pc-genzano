@@ -10,11 +10,11 @@ date: 2026-06-10
 
 Chi protegge gli altri ha diritto, a sua volta, di essere protetto. Anche il volontario di protezione civile — che opera gratuitamente — ha diritto alla **salute e alla sicurezza** mentre svolge la sua attività. Questa parte spiega come il **Testo Unico sulla sicurezza sul lavoro** (decreto legislativo 9 aprile 2008, n. 81) si applica al volontariato di protezione civile attraverso un regime speciale.
 
-## 3.1 Il volontario come «lavoratore equiparato»
+## Il volontario come «lavoratore equiparato»
 
 Il Testo Unico nasce per tutelare i lavoratori, ma la sua definizione di «lavoratore» è ampia. L'**articolo 2** include espressamente, tra i soggetti equiparati, «il volontario, come definito dalla legge 1° agosto 1991, n. 266» e, con una previsione specifica, «**i volontari del Corpo nazionale dei vigili del fuoco e della protezione civile**». Il volontario di protezione civile è dunque, ai fini della sicurezza, **equiparato a un lavoratore** — ma con un'avvertenza decisiva: lo è «nei limiti» di un regime speciale.
 
-## 3.2 Il ponte: l'articolo 3, comma 3-bis
+## Il ponte: l'articolo 3, comma 3-bis
 
 È l'articolo 3 del Testo Unico a costruire il ponte. Il **comma 3-bis** stabilisce che, «nei riguardi delle organizzazioni di volontariato della protezione civile […], le disposizioni del presente decreto legislativo si applicano **esclusivamente nei limiti e con le modalità** previsti» da un decreto attuativo dedicato.
 
@@ -22,7 +22,7 @@ Il Testo Unico nasce per tutelare i lavoratori, ma la sua definizione di «lavor
 Per il volontariato di protezione civile, il Testo Unico **non si applica tale e quale** come per un'azienda. Si applica «tenendo conto delle particolari modalità di svolgimento» delle attività, secondo quanto stabilito da un apposito decreto. La ragione è evidente: un'attività di soccorso non è un ufficio, e le tutele vanno **adattate** alla natura volontaria e operativa del servizio, senza per questo abbassare la guardia sulla sicurezza.
 {{< /box >}}
 
-## 3.3 Il regime speciale: il D.M. 13 aprile 2011
+## Il regime speciale: il D.M. 13 aprile 2011
 
 Il decreto attuativo è il **decreto interministeriale del 13 aprile 2011**. Esso definisce come gli obblighi del Testo Unico si calano sull'attività del volontariato di protezione civile. In sintesi, l'**organizzazione** (per il gruppo comunale, il Comune di cui è articolazione) deve garantire al volontario, in modo proporzionato all'attività e agli scenari di rischio:
 
@@ -34,7 +34,7 @@ Il decreto attuativo è il **decreto interministeriale del 13 aprile 2011**. Ess
 
 Il principio è che la sicurezza si misura sull'**attività effettivamente svolta**: a un volontario impiegato in compiti logistici si chiede una preparazione diversa da quella di chi opera su scenari più impegnativi. La formazione e l'idoneità non sono un adempimento, ma la condizione per poter operare.
 
-## 3.4 Di chi è la responsabilità
+## Di chi è la responsabilità
 
 Nel gruppo comunale, la **gestione amministrativa è del Comune**, che ne è responsabile (art. 35 del Codice della protezione civile, commentato nella Parte II): è quindi nell'ambito dell'ente che si collocano gli obblighi di sicurezza verso i volontari, secondo il regime speciale. Il volontario, dal canto suo, ha il **dovere** di seguire la formazione, usare i DPI e rispettare le procedure: la sicurezza è una responsabilità condivisa.
 
