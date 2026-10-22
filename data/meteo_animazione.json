@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-10-22T20:39",
+  "aggiornato": "2026-10-23T01:27",
   "frame": 12,
   "passo_ore": 6,
   "durata_s": 24,
   "fonte": "Open-Meteo",
-  "span_da": "2026-10-23T00:00",
-  "span_a": "2026-10-25T18:00"
+  "span_da": "2026-10-23T06:00",
+  "span_a": "2026-10-26T00:00"
 }
