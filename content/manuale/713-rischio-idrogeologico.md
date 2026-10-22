@@ -3,7 +3,7 @@ title: "Il rischio idrogeologico e idraulico: frane e alluvioni"
 description: "Frane e alluvioni in Italia: come nascono, come si mappa la pericolosità (IFFI, PAI, Direttiva Alluvioni), il tempo di ritorno delle piene e l'allertamento. Con il profilo dei Castelli Romani."
 weight: 713
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.3"
 tts: true
 date: 2026-06-10
 ---

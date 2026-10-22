@@ -3,7 +3,7 @@ title: "Il rischio vulcanico"
 description: "I tipi di vulcano e di eruzione, i pericoli vulcanici, i vulcani attivi italiani e il loro monitoraggio, i piani nazionali per Vesuvio e Campi Flegrei. Con il rimando al Vulcano Laziale."
 weight: 712
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.2"
 tts: true
 date: 2026-06-10
 ---

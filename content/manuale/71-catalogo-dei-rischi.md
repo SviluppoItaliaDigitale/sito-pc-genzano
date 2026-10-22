@@ -10,7 +10,7 @@ date: 2026-06-10
 
 La protezione civile non si occupa di un rischio solo: si occupa di una **famiglia di rischi**, alcuni naturali, altri legati all'attività umana, che possono mettere in pericolo la vita, i beni, gli insediamenti e l'ambiente. Questa parte è l'indice della materia: presenta ogni rischio per quello che è, lasciando le istruzioni di autoprotezione alle schede operative del sito ([Rischi e prevenzione](/rischi-prevenzione/)).
 
-## 7.1 Come si classificano i rischi
+## Come si classificano i rischi
 
 L'articolo 16 del Codice — commentato nella Parte II — distingue i rischi su cui il Servizio nazionale agisce **in via principale** da quelli su cui interviene **a supporto** di altre amministrazioni competenti. Una distinzione complementare, didatticamente utile, separa i rischi per **origine**:
 
@@ -21,7 +21,7 @@ L'articolo 16 del Codice — commentato nella Parte II — distingue i rischi su
 Per quanto diversi, tutti i rischi si leggono con lo stesso modello: **R = Pericolosità × Vulnerabilità × Esposizione** (Parte IV). Cambia il fenomeno (la pericolosità), ma la logica della prevenzione — agire su vulnerabilità ed esposizione — è sempre la stessa. È ciò che rende la protezione civile una *disciplina*, e non un elenco di casi separati.
 {{< /box >}}
 
-## 7.2 Materia e pratica: due livelli per ogni rischio
+## Materia e pratica: due livelli per ogni rischio
 
 Per ogni rischio il manuale tiene separati due livelli, perché rispondono a due domande diverse:
 
@@ -30,22 +30,22 @@ Per ogni rischio il manuale tiene separati due livelli, perché rispondono a due
 
 Se sei qui per studiare, parti dalla materia; se un fenomeno è in corso, vai alla pagina operativa o chiama il **112**.
 
-## 7.3 La mappa del catalogo
+## La mappa del catalogo
 
-I capitoli dedicati a ciascuna famiglia di rischio vengono pubblicati uno alla volta. La struttura del catalogo, comune a tutti, è la seguente:
+Ogni famiglia di rischio ha un suo capitolo, numerato da 7.1 a 7.10 nell'ordine della tabella. La struttura del catalogo, comune a tutti, è la seguente:
 
-| Rischio | Cornice di lettura |
-|---|---|
-| Sismico | pericolosità sismica, vulnerabilità degli edifici, esposizione del costruito |
-| Vulcanico | tipo di vulcano e di eruzione attesa; per il nostro territorio, il Vulcano Laziale (Parte XIV) |
-| Idrogeologico e idraulico | frane e alluvioni; tempo di ritorno delle piene |
-| Meteo-idrologico | temporali, vento, neve, ondate di calore; l'allertamento |
-| Incendi boschivi | pericolosità stagionale; interfaccia urbano-rurale |
-| Maremoto | sismicità sottomarina; tempi di arrivo dell'onda |
-| Sanitario | epidemie e pandemie; sorveglianza |
-| Chimico-industriale | stabilimenti a rischio di incidente rilevante (Seveso) |
-| Nucleare e radiologico | sorgenti e scenari; piano nazionale |
-| Idrico (siccità) | deficit idrico; scenari climatici |
+| Capitolo | Rischio | Cornice di lettura |
+|---|---|---|
+| 7.1 | [Sismico](/manuale/711-rischio-sismico/) | pericolosità sismica, vulnerabilità degli edifici, esposizione del costruito |
+| 7.2 | [Vulcanico](/manuale/712-rischio-vulcanico/) | tipo di vulcano e di eruzione attesa; per il nostro territorio, il Vulcano Laziale (Parte XIV) |
+| 7.3 | [Idrogeologico e idraulico](/manuale/713-rischio-idrogeologico/) | frane e alluvioni; tempo di ritorno delle piene |
+| 7.4 | [Meteo-idrologico](/manuale/714-rischio-meteo-idrologico/) | temporali, vento, neve, ondate di calore; l'allertamento |
+| 7.5 | [Incendi boschivi](/manuale/715-rischio-incendio/) | pericolosità stagionale; interfaccia urbano-rurale |
+| 7.6 | [Maremoto](/manuale/716-rischio-maremoto/) | sismicità sottomarina; tempi di arrivo dell'onda |
+| 7.7 | [Sanitario](/manuale/717-rischio-sanitario/) | epidemie e pandemie; sorveglianza |
+| 7.8 | [Chimico-industriale](/manuale/718-rischio-industriale/) | stabilimenti a rischio di incidente rilevante (Seveso) |
+| 7.9 | [Nucleare e radiologico](/manuale/719-rischio-nucleare-radiologico/) | sorgenti e scenari; piano nazionale |
+| 7.10 | [Idrico (siccità)](/manuale/720-rischio-idrico-siccita/) | deficit idrico; scenari climatici |
 
 Per ciascuno, il manuale rimanda alla scheda operativa corrispondente. L'approfondimento più rilevante per noi — il **rischio vulcanico dei Colli Albani** — è trattato nella Parte XIV.
 

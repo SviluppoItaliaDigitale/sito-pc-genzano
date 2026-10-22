@@ -3,7 +3,7 @@ title: "Il rischio meteo-idrologico: temporali, vento, neve, calore"
 description: "I fenomeni meteorologici avversi — temporali, nubifragi, vento forte, neve, ondate di calore — e il sistema di allertamento meteo italiano a codici colore. Con il legame con il cambiamento climatico."
 weight: 714
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.4"
 tts: true
 date: 2026-06-10
 ---

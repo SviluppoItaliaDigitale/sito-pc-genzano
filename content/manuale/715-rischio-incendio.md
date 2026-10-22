@@ -3,7 +3,7 @@ title: "Il rischio incendi boschivi e di interfaccia"
 description: "Come nasce e si propaga un incendio boschivo, le cause, l'interfaccia urbano-rurale, la legge quadro 353/2000, la campagna AIB e la flotta aerea dello Stato. Con la Zona AIB di Genzano."
 weight: 715
 parte: "Parte VII · Il catalogo dei rischi"
-capitolo: "7"
+capitolo: "7.5"
 tts: true
 date: 2026-06-10
 ---
