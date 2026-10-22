@@ -61,7 +61,36 @@ Tra gli interventi, la nostra squadra ha lavorato allo svuotamento di una palest
 {{< foto src="/images/2026-10-21-latina-garage-allagato.webp"
          alt="Un locale interrato con una porta rossa, allagato da acqua fangosa su cui galleggiano rametti, foglie e detriti; sulle pareti si vede il segno lasciato dall'acqua."
          caption="Un locale interrato allagato, con i detriti trascinati dall'acqua. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-corridoio-palestra-allagato.webp"
+         alt="Un corridoio interno con l'acqua scura a metà delle pareti; sul muro bacheche con coppe e quadri e il cartello dell'uscita di emergenza, a destra una porta blu chiusa con un lucchetto."
+         caption="Il corridoio interno della palestra, invaso dall'acqua. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-idrovora-aspirazione-interrato.webp"
+         alt="L'idrovora sul carrello vista dall'alto, con il tubo nero di aspirazione che scende verso un'area incassata piena d'acqua torbida; a destra un volontario di spalle con l'elmetto rosso, sullo sfondo un palazzo, un fuoristrada della protezione civile e una persona con il volto oscurato."
+         caption="L'idrovora sul carrello, con il tubo nero che scende verso i locali allagati. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-volontario-vigili-fuoco-interrato.webp"
+         alt="Un volontario di spalle con l'elmetto rosso, il sottocasco e una torcia gialla, accanto a un vigile del fuoco in divisa con il volto oscurato, in uno stretto passaggio in cemento che scende verso i locali allagati, dove arriva un tubo nero."
+         caption="Un nostro volontario con un vigile del fuoco, davanti ai locali interrati da svuotare. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-volontario-acqua-interrato.webp"
+         alt="Un volontario con l'elmetto rosso e la divisa di protezione civile in piedi nell'acqua torbida di un cortile interrato, ripreso dall'alto; il tubo nero di aspirazione scende lungo la parete di cemento, sul bordo terra, detriti e bottiglie."
+         caption="Il cortile interrato da svuotare, con il tubo dell'idrovora. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-21-latina-volontario-manichetta-interrato.webp"
+         alt="Un volontario con l'elmetto rosso e la divisa rossa e blu, con il volto oscurato, in piedi nell'acqua torbida di un locale interrato, ripreso dall'alto dietro il raccordo metallico del tubo di aspirazione; una corda attraversa l'inquadratura."
+         caption="Un volontario nel locale interrato, accanto al tubo di aspirazione. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< /galleria >}}
+
+I due video, girati con la torcia, mostrano i locali interni della palestra sommersi dall'acqua.
+
+{{< video src="/video/2026-10-21-latina-corridoio-allagato.mp4"
+          poster="/video/2026-10-21-latina-corridoio-allagato-poster.webp"
+          verticale="true"
+          titolo="Video senza audio: il corridoio della palestra allagato"
+          caption="Video senza audio. Il corridoio della palestra è allagato: l'acqua arriva alle gambe di un volontario, che si muove nel corridoio fra una panca e altri oggetti galleggianti. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+{{< video src="/video/2026-10-21-latina-locali-interrati.mp4"
+          poster="/video/2026-10-21-latina-locali-interrati-poster.webp"
+          verticale="true"
+          titolo="Video senza audio: i locali interrati sommersi dall'acqua"
+          caption="Video senza audio. Corridoi e stanze dei locali interrati, ripresi con la torcia, sono sommersi dall'acqua torbida; più avanti si vede un volontario che li attraversa. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 Quando un territorio colpito ha bisogno di rinforzi, la Regione chiede aiuto alle organizzazioni di volontariato dei territori vicini, che arrivano anche attraverso i loro coordinamenti. È così che funziona il Servizio nazionale della protezione civile: ognuno interviene sul proprio territorio e, quando serve, va a dare una mano agli altri.
 
