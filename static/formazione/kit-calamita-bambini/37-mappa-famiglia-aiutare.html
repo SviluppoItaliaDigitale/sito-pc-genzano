@@ -12,6 +12,11 @@
   .nodo .righe { display: flex; flex-direction: column; gap: 4mm; }
   .nodo .riga { border-bottom: 1px dashed #999; min-height: 5mm; font-size: 11pt; }
 </style>
+  <!-- Stampa: un 3% in meno su tutto evita un foglio quasi vuoto anche con i
+       caratteri che la scheda trova su Windows con Office, su Mac o su un Linux
+       senza Liberation: senza, la fascia delle affiliazioni o l'ultima riga
+       finivano da sole su un foglio in più (controllo fogli di stampa, 22/10/2026). -->
+  <style>@media print { .scheda { zoom: 0.97; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

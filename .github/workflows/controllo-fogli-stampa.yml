@@ -1,9 +1,10 @@
 name: "🖨️ Controllo settimanale dei fogli di stampa"
 
 # Ogni lunedì stampa (Chromium, A4) TUTTE le schede stampabili, le schede dei
-# kit calamità, le storie e un campione di pagine del sito, e controlla che non
-# ci siano fogli bianchi, ultimi fogli quasi vuoti o errori JavaScript; poi
-# passa tutte le pagine del sito compilato (titolo, h1, testo alternativo).
+# kit calamità, le storie, ogni scheda dentro i pacchetti «Stampa tutto» e un
+# campione di pagine del sito, e controlla che non ci siano fogli bianchi,
+# fogli quasi vuoti o errori JavaScript; poi passa tutte le pagine del sito
+# compilato (titolo, h1, testo alternativo).
 # Sulle pull request lo stesso controllo gira solo sulle pagine toccate
 # (validate-pr.yml, job fogli-stampa): questo giro intero intercetta ciò che
 # cambia senza una PR, per esempio un aggiornamento del browser o un foglio di
@@ -12,6 +13,12 @@ name: "🖨️ Controllo settimanale dei fogli di stampa"
 # Nasce il 06/10/2026 dalla proposta «controllo qualità prima della
 # pubblicazione»: la prima misura ha trovato 49 schede con un foglio in più
 # quasi vuoto e la homepage che stampava sei fogli bianchi.
+# Dal 22/10/2026 schede, kit e storie si stampano con tre serie di caratteri
+# ciascuna (scripts/fogli-stampa/caratteri/LEGGIMI.md): con i soli caratteri
+# della CI 72 pagine lasciavano un foglio quasi vuoto su computer con
+# caratteri più larghi. Dallo stesso giorno anche le schede dentro i pacchetti
+# «Stampa tutto»: lì la scala diventa lo zoom della sezione, e cinque schede
+# lasciavano un foglio quasi vuoto solo nel pacchetto.
 # Una issue in-place, chiusa da sola quando tutto rientra.
 
 on:
@@ -29,8 +36,11 @@ concurrency:
 
 jobs:
   controllo:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Ubuntu 24.04 e non ubuntu-latest: le serie di caratteri della prova sono
+    # misurate con i pacchetti di questa versione, e Playwright 1.56 non
+    # installa Chromium su Ubuntu 26.04.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v7
@@ -44,9 +54,18 @@ jobs:
       - name: "🏗️ Build"
         run: hugo --minify --quiet --baseURL "https://www.protezionecivilegenzano.it/"
 
-      - name: "🌐 Browser e lettore PDF"
+      - name: "🔤 Caratteri della prova"
         run: |
-          pip install --quiet playwright pymupdf
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation fonts-inter fonts-texgyre fonts-dejavu-core fonts-noto-color-emoji
+
+      - name: "🌐 Browser e lettore PDF"
+        # Playwright fissato alla versione con cui sono state misurate le scale
+        # di stampa (Chromium 141): un'altra versione del browser può impaginare
+        # in modo appena diverso. Si aggiorna con una PR dedicata, dopo aver
+        # rifatto il controllo completo, come axe-core in pa11y-ci.yml.
+        run: |
+          pip install --quiet playwright==1.56.0 pymupdf
           playwright install --with-deps chromium
 
       - name: "🖨️ Fogli di stampa e qualità delle pagine"
@@ -77,14 +96,18 @@ jobs:
             echo "Controllo del $(TZ=Europe/Rome date '+%d/%m/%Y alle %H:%M'), ora italiana."
             echo
             echo "## Fogli di stampa"
-            echo '```'; grep -E '^(❌|Pagine|✅)' fogli.log; echo '```'
+            echo '```'; grep -E '^(❌|Pagine|✅|   - )' fogli.log; echo '```'
             echo
             echo "## Pagine del sito"
             echo '```'; grep -E '^(❌|Pagine|✅)' pagine.log; echo '```'
             echo
-            echo "Come si corregge: una scheda con un foglio quasi vuoto si riduce in stampa"
-            echo "(vedi le schede con il commento «controllo fogli di stampa») o si stringono i suoi spazi."
-            echo "Per riprovare in locale: \`python3 scripts/check-fogli-stampa.py\` dopo la build."
+            echo "Come si corregge: una scheda con un foglio quasi vuoto si riduce in stampa, al massimo"
+            echo "del 12% e in modo che passi con tutte le serie di caratteri (vedi le schede con il"
+            echo "commento «controllo fogli di stampa»), o si stringono i suoi spazi."
+            echo "Per riprovare in locale: \`python3 scripts/check-fogli-stampa.py\` dopo la build;"
+            echo "per vedere i fogli di una pagina: \`--pagine PAGINA --png CARTELLA\`."
+            echo "Se il controllo dice che i caratteri della prova non sono quelli attesi:"
+            echo "\`scripts/fogli-stampa/caratteri/LEGGIMI.md\`."
           } > corpo.md
           if [ -n "$NUM" ]; then
             gh issue edit "$NUM" --body-file corpo.md

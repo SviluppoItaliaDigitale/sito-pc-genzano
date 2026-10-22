@@ -65,8 +65,8 @@
  {
   "id": "controllo-fogli-stampa",
   "titolo": "Controllo dei fogli di stampa e delle pagine",
-  "desc": "Stampa davvero le pagine con Chromium e blocca fogli bianchi, ultimi fogli quasi vuoti ed errori JavaScript; controlla titolo, h1 e testo alternativo di tutte le pagine.",
+  "desc": "Stampa davvero le pagine con Chromium, con più serie di caratteri, e blocca fogli bianchi, fogli quasi vuoti ed errori JavaScript; controlla titolo, h1 e testo alternativo di tutte le pagine.",
   "zip": "/open-kit/controllo-fogli-stampa.zip",
-  "file": 5
+  "file": 10
  }
 ]

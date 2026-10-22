@@ -147,13 +147,25 @@ COMPONENTI = [
     {
         "id": "controllo-fogli-stampa",
         "titolo": "Controllo dei fogli di stampa e delle pagine",
-        "desc": "Stampa davvero le pagine con Chromium e blocca fogli bianchi, ultimi fogli quasi vuoti ed errori JavaScript; controlla titolo, h1 e testo alternativo di tutte le pagine.",
+        "desc": "Stampa davvero le pagine con Chromium, con più serie di caratteri, e blocca fogli bianchi, fogli quasi vuoti ed errori JavaScript; controlla titolo, h1 e testo alternativo di tutte le pagine.",
         "file": ["scripts/check-fogli-stampa.py", "scripts/check-qualita-pagine.py",
-                 ".github/workflows/controllo-fogli-stampa.yml"],
+                 ".github/workflows/controllo-fogli-stampa.yml",
+                 "scripts/fogli-stampa/caratteri/LEGGIMI.md",
+                 "scripts/fogli-stampa/caratteri/liberation.conf",
+                 "scripts/fogli-stampa/caratteri/windows-mac.conf",
+                 "scripts/fogli-stampa/caratteri/adventor.conf",
+                 "scripts/fogli-stampa/caratteri/dejavu.conf"],
         "css": [],
-        "uso": "Dopo la build: python3 check-qualita-pagine.py public e python3 check-fogli-stampa.py --public public "
-               "(servono playwright con Chromium e pymupdf). Le cartelle delle pagine stampabili sono nella "
-               "funzione stampabili(): adattale alle tue.",
+        "uso": "Dopo la build: python3 scripts/check-qualita-pagine.py public e python3 scripts/check-fogli-stampa.py "
+               "--public public (servono playwright con Chromium, pymupdf e i pacchetti di caratteri elencati in "
+               "scripts/fogli-stampa/caratteri/LEGGIMI.md). Le cartelle delle pagine stampabili sono nella "
+               "funzione stampabili(), le pile di caratteri dei fogli di stile in PILE e ATTESI: adattale alle tue. "
+               "Le pagine che ne raccolgono altre (i nostri pacchetti «Stampa tutto», in PACCHETTI) si stampano "
+               "una sezione per volta; se non ne hai, il controllo le salta.",
+        "non_inclusi": "Il carattere Gelasio (SIL Open Font License 1.1), che la serie windows-mac usa al posto "
+                       "di Georgia: si scarica da https://github.com/google/fonts, cartella ofl/gelasio, e va in "
+                       "scripts/fogli-stampa/caratteri/gelasio/ (versione, fonte e impronte sha256 in "
+                       "scripts/fogli-stampa/caratteri/LEGGIMI.md, che è nel pacchetto).",
     },
 ]
 
@@ -192,6 +204,7 @@ def leggimi(c: dict, nomi: list[str]) -> str:
         f"Non inclusi\n-----------\n"
         f"Bootstrap Italia (BSD-3-Clause), Bootstrap Icons (MIT), i pittogrammi ARASAAC (CC BY-NC-SA 4.0)\n"
         f"e le altre librerie di terzi si scaricano dalle loro fonti, con le loro licenze.\n"
+        + (f"{c['non_inclusi']}\n" if c.get("non_inclusi") else "")
     )
 
 

@@ -26,12 +26,12 @@ python3 scripts/check-parita-schede.py                               # kit ↔ S
 python3 scripts/check-jsonld.py /tmp/public                          # dati strutturati
 python3 scripts/check-dati-schede.py                                 # tabelle vs dataset
 python3 scripts/check-qualita-pagine.py /tmp/public                  # titolo, h1, alt su tutte le pagine
-python3 scripts/check-fogli-stampa.py --da-git origin/main           # fogli di stampa (Playwright; in cloud CHROMIUM_PATH=/opt/pw-browsers/chromium)
+python3 scripts/check-fogli-stampa.py --public /tmp/public --da-git origin/main   # fogli di stampa (Playwright; in cloud CHROMIUM_PATH=/opt/pw-browsers/chromium)
 bash scripts/smoke-test-live.sh                                      # (solo se serve verificare il live)
 python3 scripts/verifica-deploy-aruba.py                            # (pagine servite contro /build-manifest.json)
 ```
 
-`check-fogli-stampa.py` senza `--da-git` stampa tutte le schede, i kit e le storie (pochi minuti): usalo nei controlli completi. Se il browser non è disponibile, scrivi «non eseguito», non «OK».
+`check-fogli-stampa.py` senza `--da-git` stampa tutte le schede, i kit, le storie e i moduli per le scuole, ognuno con tre serie di caratteri, e ogni scheda dentro i pacchetti «Stampa tutto» (circa 9 minuti in locale, più in CI): usalo nei controlli completi. Se il browser non è disponibile, scrivi «non eseguito», non «OK».
 
 Ogni errore restituito è un difetto da correggere, non un avviso da leggere. Prima di correggere, riproduci: apri il file, decodificalo, segui il link.
 
