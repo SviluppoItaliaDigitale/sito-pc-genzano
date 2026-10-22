@@ -59,9 +59,11 @@ Se fotografi tu o un collega:
 - **Luce naturale** possibile. Evita controluce forte.
 - **Soggetto centrale** o sulla regola dei terzi.
 - **Inquadratura chiara**: non troppi elementi dispersivi.
-- **Volti di persone**: chiedi il consenso per la pubblicazione online. Per minori, serve
-  consenso scritto dei genitori.
-- **Targhe automobili e volti non autorizzati**: offusca (strumento: GIMP, Photoshop, mobile app).
+- **Volti di persone** (decisione del 22/10/2026, regola `comunicazione-social.md`): i soccorritori
+  al lavoro restano in chiaro; i volti di minorenni e di persone in stato di necessità (assistiti,
+  soccorsi, sfollati, vittime) si oscurano sempre, anche nelle foto in posa. Nelle foto fatte apposta
+  per far conoscere un servizio o un bene non si oscura altro.
+- **Targhe automobili**: offusca (strumento: GIMP, Photoshop, mobile app).
 
 ### 3.5 — Come cercare una foto libera
 
