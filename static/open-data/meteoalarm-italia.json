@@ -1,53 +1,14 @@
 {
  "_snapshot": {
-  "generato": "2026-10-22T10:28:28+00:00",
+  "generato": "2026-10-22T19:23:41+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 11,
-  "scaduti_scartati": 132,
-  "in_corso": 6,
+  "avvisi": 5,
+  "scaduti_scartati": 138,
+  "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
-  {
-   "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-22T08:00:00+00:00",
-   "fine": "2026-10-22T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.057"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-22T08:00:00+00:00",
-   "fine": "2026-10-22T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.058"
-  },
-  {
-   "in_corso": true,
-   "regione": "Campania",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-22T08:00:00+00:00",
-   "fine": "2026-10-22T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.055"
-  },
   {
    "in_corso": false,
    "regione": "Emilia e Romagna",
@@ -88,32 +49,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261022104541.046"
   },
   {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-22T08:00:00+00:00",
-   "fine": "2026-10-22T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.056"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-22T08:00:00+00:00",
-   "fine": "2026-10-22T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.054"
-  },
-  {
    "in_corso": false,
    "regione": "Sardegna",
    "fenomeno": "Vento",
@@ -125,19 +60,6 @@
    "fine": "2026-10-23T23:59:00+00:00",
    "emesso": "2026-10-22T08:45:41+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261022104541.053"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-22T08:00:00+00:00",
-   "fine": "2026-10-22T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.059"
   },
   {
    "in_corso": false,
