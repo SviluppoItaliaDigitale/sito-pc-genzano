@@ -1,12 +1,75 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-10-22T00:42:05+00:00",
+  "generato": "2026-10-22T05:24:43+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 100,
  "events": [
+  {
+   "alertlevel": "Green",
+   "country": "Reykjanes Ridge",
+   "datemodified": "2026-10-22T05:18:44",
+   "description": "Earthquake in Reykjanes Ridge",
+   "episodeid": 1741752,
+   "eventid": 1573068,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-22T04:44:17",
+   "lat": 56.9659,
+   "lon": -34.0939,
+   "name": "Earthquake in Reykjanes Ridge",
+   "severitytext": "Magnitude 4.8M, Depth:10km",
+   "todate": "2026-10-22T04:44:17"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "México",
+   "datemodified": "2026-10-22T04:15:22",
+   "description": "Earthquake in México",
+   "episodeid": 1741739,
+   "eventid": 1573059,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-22T03:35:17",
+   "iso3": "MEX",
+   "lat": 14.8614,
+   "lon": -93.8388,
+   "name": "Earthquake in México",
+   "severitytext": "Magnitude 4.6M, Depth:49.131km",
+   "todate": "2026-10-22T03:35:17"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "United States, Canada, Saint Pierre and Miquelon",
+   "datemodified": "2026-10-22T03:10:04",
+   "description": "Tropical Cyclone JOSEPHINE-26",
+   "episodeid": 2,
+   "eventid": 1001342,
+   "eventname": "JOSEPHINE-26",
+   "eventtype": "TC",
+   "fromdate": "2026-10-21T21:00:00",
+   "iso3": "CAN",
+   "lat": 37.7,
+   "lon": -69.4,
+   "name": "Tropical Cyclone JOSEPHINE-26",
+   "severitytext": "Tropical Storm (maximum wind speed of 120 km/h)",
+   "todate": "2026-10-22T03:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "datemodified": "2026-10-22T04:36:50",
+   "description": "Tropical Cyclone VANCE-26",
+   "episodeid": 3,
+   "eventid": 1001341,
+   "eventname": "VANCE-26",
+   "eventtype": "TC",
+   "fromdate": "2026-10-21T15:00:00",
+   "lat": 9.6,
+   "lon": -100.7,
+   "name": "Tropical Cyclone VANCE-26",
+   "severitytext": "Tropical Storm (maximum wind speed of 194 km/h)",
+   "todate": "2026-10-22T03:00:00"
+  },
   {
    "alertlevel": "Green",
    "country": "Italy",
@@ -40,6 +103,23 @@
    "todate": "2026-10-22T01:00:00"
   },
   {
+   "alertlevel": "Red",
+   "country": "Philippines, Guam, Northern Mariana Islands, Japan",
+   "datemodified": "2026-10-22T04:00:32",
+   "description": "Tropical Cyclone CHAMPI-26",
+   "episodeid": 31,
+   "eventid": 1001338,
+   "eventname": "CHAMPI-26",
+   "eventtype": "TC",
+   "fromdate": "2026-10-14T12:00:00",
+   "iso3": "GUM",
+   "lat": 20.3,
+   "lon": 126.0,
+   "name": "Tropical Cyclone CHAMPI-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 296 km/h)",
+   "todate": "2026-10-22T00:00:00"
+  },
+  {
    "alertlevel": "Green",
    "country": "Reykjanes Ridge",
    "datemodified": "2026-10-21T22:15:43",
@@ -68,38 +148,6 @@
    "name": "Earthquake in Reykjanes Ridge",
    "severitytext": "Magnitude 5.3M, Depth:10km",
    "todate": "2026-10-21T21:38:55"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "United States, Canada, Saint Pierre and Miquelon",
-   "datemodified": "2026-10-21T23:22:13",
-   "description": "Tropical Cyclone JOSEPHINE-26",
-   "episodeid": 1,
-   "eventid": 1001342,
-   "eventname": "JOSEPHINE-26",
-   "eventtype": "TC",
-   "fromdate": "2026-10-21T21:00:00",
-   "iso3": "CAN",
-   "lat": 37.4,
-   "lon": -69.5,
-   "name": "Tropical Cyclone JOSEPHINE-26",
-   "severitytext": "Tropical Storm (maximum wind speed of 130 km/h)",
-   "todate": "2026-10-21T21:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "datemodified": "2026-10-21T20:42:56",
-   "description": "Tropical Cyclone VANCE-26",
-   "episodeid": 2,
-   "eventid": 1001341,
-   "eventname": "VANCE-26",
-   "eventtype": "TC",
-   "fromdate": "2026-10-21T15:00:00",
-   "lat": 9.4,
-   "lon": -99.8,
-   "name": "Tropical Cyclone VANCE-26",
-   "severitytext": "Tropical Storm (maximum wind speed of 194 km/h)",
-   "todate": "2026-10-21T21:00:00"
   },
   {
    "alertlevel": "Green",
@@ -161,23 +209,6 @@
    "name": "Earthquake in South Of Africa",
    "severitytext": "Magnitude 5.1M, Depth:10km",
    "todate": "2026-10-21T18:12:35"
-  },
-  {
-   "alertlevel": "Red",
-   "country": "Philippines, Guam, Northern Mariana Islands, Japan, Taiwan",
-   "datemodified": "2026-10-21T21:00:33",
-   "description": "Tropical Cyclone CHAMPI-26",
-   "episodeid": 30,
-   "eventid": 1001338,
-   "eventname": "CHAMPI-26",
-   "eventtype": "TC",
-   "fromdate": "2026-10-14T12:00:00",
-   "iso3": "GUM",
-   "lat": 19.9,
-   "lon": 126.9,
-   "name": "Tropical Cyclone CHAMPI-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 296 km/h)",
-   "todate": "2026-10-21T18:00:00"
   },
   {
    "alertlevel": "Green",
@@ -368,7 +399,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:02:46",
+   "datemodified": "2026-10-22T03:04:32",
    "description": "Forest fires in Australia",
    "episodeid": 3,
    "eventid": 1032956,
@@ -384,7 +415,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:03:33",
+   "datemodified": "2026-10-22T03:03:00",
    "description": "Forest fires in Australia",
    "episodeid": 5,
    "eventid": 1032959,
@@ -400,7 +431,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:02:51",
+   "datemodified": "2026-10-22T03:04:25",
    "description": "Forest fires in Australia",
    "episodeid": 5,
    "eventid": 1032960,
@@ -416,7 +447,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:02:39",
+   "datemodified": "2026-10-22T03:04:19",
    "description": "Forest fires in Australia",
    "episodeid": 5,
    "eventid": 1032996,
@@ -432,17 +463,17 @@
   {
    "alertlevel": "Green",
    "country": "Namibia",
-   "datemodified": "2026-10-21T23:03:27",
+   "datemodified": "2026-10-22T03:03:22",
    "description": "Forest fires in Namibia",
-   "episodeid": 3,
+   "episodeid": 4,
    "eventid": 1033007,
    "eventtype": "WF",
    "fromdate": "2026-10-19T00:00:00",
    "iso3": "NAM",
-   "lat": -19.1808,
-   "lon": 16.3655,
+   "lat": -19.1815,
+   "lon": 16.365,
    "name": "Forest fires in Namibia",
-   "severitytext": "Green impact for forestfire in 7854 ha",
+   "severitytext": "Green impact for forestfire in 7999 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
@@ -464,7 +495,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:03:08",
+   "datemodified": "2026-10-22T03:03:14",
    "description": "Forest fires in Australia",
    "episodeid": 1,
    "eventid": 1033014,
@@ -480,7 +511,7 @@
   {
    "alertlevel": "Green",
    "country": "Burkina Faso",
-   "datemodified": "2026-10-21T23:02:54",
+   "datemodified": "2026-10-22T03:03:04",
    "description": "Forest fires in Burkina Faso",
    "episodeid": 1,
    "eventid": 1033027,
@@ -496,7 +527,7 @@
   {
    "alertlevel": "Green",
    "country": "Madagascar",
-   "datemodified": "2026-10-21T23:03:17",
+   "datemodified": "2026-10-22T03:03:36",
    "description": "Forest fires in Madagascar",
    "episodeid": 1,
    "eventid": 1033028,
@@ -512,7 +543,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:56",
+   "datemodified": "2026-10-22T03:01:31",
    "description": "Forest fires in Australia",
    "episodeid": 5,
    "eventid": 1032994,
@@ -528,25 +559,25 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:23",
+   "datemodified": "2026-10-22T03:02:31",
    "description": "Forest fires in Australia",
-   "episodeid": 5,
+   "episodeid": 6,
    "eventid": 1032995,
    "eventtype": "WF",
    "fromdate": "2026-10-20T00:00:00",
    "iso3": "AUS",
    "lat": -21.6107,
-   "lon": 122.3363,
+   "lon": 122.3358,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 13556 ha",
+   "severitytext": "Green impact for forestfire in 13717 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:49",
+   "datemodified": "2026-10-22T03:01:07",
    "description": "Forest fires in Australia",
-   "episodeid": 3,
+   "episodeid": 4,
    "eventid": 1033002,
    "eventtype": "WF",
    "fromdate": "2026-10-20T00:00:00",
@@ -554,29 +585,29 @@
    "lat": -23.3694,
    "lon": 122.3682,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 7682 ha",
+   "severitytext": "Green impact for forestfire in 7688 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:02:18",
+   "datemodified": "2026-10-22T03:02:38",
    "description": "Forest fires in Australia",
-   "episodeid": 3,
+   "episodeid": 4,
    "eventid": 1033003,
    "eventtype": "WF",
    "fromdate": "2026-10-20T00:00:00",
    "iso3": "AUS",
-   "lat": -21.9136,
+   "lat": -21.9133,
    "lon": 123.4116,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 12903 ha",
+   "severitytext": "Green impact for forestfire in 12956 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:08",
+   "datemodified": "2026-10-22T03:01:18",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1033004,
@@ -592,7 +623,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:37",
+   "datemodified": "2026-10-22T03:00:38",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1033005,
@@ -608,7 +639,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:00:56",
+   "datemodified": "2026-10-22T03:02:54",
    "description": "Forest fires in Australia",
    "episodeid": 3,
    "eventid": 1033006,
@@ -624,7 +655,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:16",
+   "datemodified": "2026-10-22T03:02:14",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1033013,
@@ -640,23 +671,23 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:30",
+   "datemodified": "2026-10-22T03:02:05",
    "description": "Forest fires in Australia",
-   "episodeid": 1,
+   "episodeid": 2,
    "eventid": 1033019,
    "eventtype": "WF",
    "fromdate": "2026-10-20T00:00:00",
    "iso3": "AUS",
-   "lat": -22.198,
-   "lon": 123.4664,
+   "lat": -22.1972,
+   "lon": 123.4654,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 5173 ha",
+   "severitytext": "Green impact for forestfire in 5275 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:01:43",
+   "datemodified": "2026-10-22T03:01:24",
    "description": "Forest fires in Australia",
    "episodeid": 1,
    "eventid": 1033020,
@@ -672,23 +703,23 @@
   {
    "alertlevel": "Green",
    "country": "Botswana",
-   "datemodified": "2026-10-21T23:02:01",
+   "datemodified": "2026-10-22T03:00:52",
    "description": "Forest fires in Botswana",
-   "episodeid": 1,
+   "episodeid": 2,
    "eventid": 1033021,
    "eventtype": "WF",
    "fromdate": "2026-10-20T00:00:00",
    "iso3": "BWA",
-   "lat": -20.1035,
-   "lon": 23.7696,
+   "lat": -20.1031,
+   "lon": 23.7699,
    "name": "Forest fires in Botswana",
-   "severitytext": "Green impact for forestfire in 8588 ha",
+   "severitytext": "Green impact for forestfire in 8708 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:02:06",
+   "datemodified": "2026-10-22T03:02:24",
    "description": "Forest fires in Australia",
    "episodeid": 1,
    "eventid": 1033022,
@@ -704,7 +735,7 @@
   {
    "alertlevel": "Green",
    "country": "Botswana",
-   "datemodified": "2026-10-21T23:02:09",
+   "datemodified": "2026-10-22T03:01:11",
    "description": "Forest fires in Botswana",
    "episodeid": 1,
    "eventid": 1033023,
@@ -720,7 +751,7 @@
   {
    "alertlevel": "Green",
    "country": "South Sudan",
-   "datemodified": "2026-10-21T23:02:12",
+   "datemodified": "2026-10-22T03:02:41",
    "description": "Forest fires in South Sudan",
    "episodeid": 1,
    "eventid": 1033024,
@@ -736,7 +767,7 @@
   {
    "alertlevel": "Green",
    "country": "South Sudan, Sudan",
-   "datemodified": "2026-10-21T23:02:21",
+   "datemodified": "2026-10-22T03:02:18",
    "description": "Forest fires in South Sudan, Sudan",
    "episodeid": 1,
    "eventid": 1033025,
@@ -752,7 +783,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:02:27",
+   "datemodified": "2026-10-22T03:02:47",
    "description": "Forest fires in Australia",
    "episodeid": 1,
    "eventid": 1033026,
@@ -768,7 +799,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:07:44",
+   "datemodified": "2026-10-22T03:10:03",
    "description": "Forest fires in Australia",
    "episodeid": 17,
    "eventid": 1032857,
@@ -784,7 +815,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:07:56",
+   "datemodified": "2026-10-22T03:11:35",
    "description": "Forest fires in Australia",
    "episodeid": 11,
    "eventid": 1032883,
@@ -800,7 +831,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:08:54",
+   "datemodified": "2026-10-22T03:11:41",
    "description": "Forest fires in Australia",
    "episodeid": 9,
    "eventid": 1032895,
@@ -816,7 +847,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-21T23:08:19",
+   "datemodified": "2026-10-22T03:10:47",
    "description": "Forest fires in Indonesia",
    "episodeid": 9,
    "eventid": 1032942,
@@ -832,7 +863,7 @@
   {
    "alertlevel": "Green",
    "country": "Botswana",
-   "datemodified": "2026-10-21T23:08:34",
+   "datemodified": "2026-10-22T03:11:46",
    "description": "Forest fires in Botswana",
    "episodeid": 3,
    "eventid": 1032944,
@@ -848,7 +879,7 @@
   {
    "alertlevel": "Green",
    "country": "Botswana",
-   "datemodified": "2026-10-21T23:08:31",
+   "datemodified": "2026-10-22T03:11:16",
    "description": "Forest fires in Botswana",
    "episodeid": 4,
    "eventid": 1032945,
@@ -864,7 +895,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:08:11",
+   "datemodified": "2026-10-22T03:11:28",
    "description": "Forest fires in Australia",
    "episodeid": 7,
    "eventid": 1032966,
@@ -880,7 +911,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-10-21T23:08:57",
+   "datemodified": "2026-10-22T03:11:12",
    "description": "Forest fires in Zambia",
    "episodeid": 3,
    "eventid": 1032979,
@@ -896,7 +927,7 @@
   {
    "alertlevel": "Green",
    "country": "Chad, Nigeria, Cameroon",
-   "datemodified": "2026-10-21T23:08:47",
+   "datemodified": "2026-10-22T03:10:32",
    "description": "Forest fires in Chad, Nigeria, Cameroon",
    "episodeid": 2,
    "eventid": 1032998,
@@ -912,7 +943,7 @@
   {
    "alertlevel": "Green",
    "country": "Namibia, Angola",
-   "datemodified": "2026-10-21T23:07:47",
+   "datemodified": "2026-10-22T03:09:54",
    "description": "Forest fires in Namibia, Angola",
    "episodeid": 1,
    "eventid": 1033032,
@@ -928,7 +959,7 @@
   {
    "alertlevel": "Green",
    "country": "Zimbabwe",
-   "datemodified": "2026-10-21T23:08:14",
+   "datemodified": "2026-10-22T03:11:19",
    "description": "Forest fires in Zimbabwe",
    "episodeid": 1,
    "eventid": 1033033,
@@ -944,7 +975,7 @@
   {
    "alertlevel": "Green",
    "country": "Tanzania, Malawi",
-   "datemodified": "2026-10-21T23:08:38",
+   "datemodified": "2026-10-22T03:09:50",
    "description": "Forest fires in Tanzania, Malawi",
    "episodeid": 1,
    "eventid": 1033034,
@@ -960,7 +991,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:06:33",
+   "datemodified": "2026-10-22T03:08:22",
    "description": "Forest fires in Australia",
    "episodeid": 16,
    "eventid": 1032862,
@@ -976,7 +1007,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:07:35",
+   "datemodified": "2026-10-22T03:08:29",
    "description": "Forest fires in Australia",
    "episodeid": 6,
    "eventid": 1032926,
@@ -992,7 +1023,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:07:06",
+   "datemodified": "2026-10-22T03:09:04",
    "description": "Forest fires in Australia",
    "episodeid": 7,
    "eventid": 1032939,
@@ -1008,23 +1039,23 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:07:19",
+   "datemodified": "2026-10-22T03:08:06",
    "description": "Forest fires in Australia",
-   "episodeid": 7,
+   "episodeid": 8,
    "eventid": 1032940,
    "eventtype": "WF",
    "fromdate": "2026-10-16T00:00:00",
    "iso3": "AUS",
-   "lat": -15.9982,
-   "lon": 134.9729,
+   "lat": -15.9987,
+   "lon": 134.973,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 30014 ha",
+   "severitytext": "Green impact for forestfire in 30138 ha",
    "todate": "2026-10-21T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:06:26",
+   "datemodified": "2026-10-22T03:07:58",
    "description": "Forest fires in Australia",
    "episodeid": 5,
    "eventid": 1032941,
@@ -1040,7 +1071,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique, Zambia",
-   "datemodified": "2026-10-21T23:06:43",
+   "datemodified": "2026-10-22T03:08:47",
    "description": "Forest fires in Mozambique, Zambia",
    "episodeid": 3,
    "eventid": 1032957,
@@ -1056,7 +1087,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:07:28",
+   "datemodified": "2026-10-22T03:08:37",
    "description": "Forest fires in Australia",
    "episodeid": 6,
    "eventid": 1032970,
@@ -1072,7 +1103,7 @@
   {
    "alertlevel": "Green",
    "country": "Sudan",
-   "datemodified": "2026-10-21T23:06:47",
+   "datemodified": "2026-10-22T03:09:21",
    "description": "Forest fires in Sudan",
    "episodeid": 2,
    "eventid": 1032977,
@@ -1088,7 +1119,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-10-21T23:06:51",
+   "datemodified": "2026-10-22T03:08:40",
    "description": "Forest fires in Zambia",
    "episodeid": 1,
    "eventid": 1033030,
@@ -1104,7 +1135,7 @@
   {
    "alertlevel": "Green",
    "country": "South Sudan",
-   "datemodified": "2026-10-21T23:06:55",
+   "datemodified": "2026-10-22T03:08:44",
    "description": "Forest fires in South Sudan",
    "episodeid": 1,
    "eventid": 1033031,
@@ -1120,7 +1151,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:05:54",
+   "datemodified": "2026-10-22T03:07:11",
    "description": "Forest fires in Australia",
    "episodeid": 7,
    "eventid": 1032915,
@@ -1136,7 +1167,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-10-21T23:05:24",
+   "datemodified": "2026-10-22T03:07:45",
    "description": "Forest fires in Zambia",
    "episodeid": 4,
    "eventid": 1032934,
@@ -1152,7 +1183,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:05:45",
+   "datemodified": "2026-10-22T03:06:54",
    "description": "Forest fires in Australia",
    "episodeid": 7,
    "eventid": 1032936,
@@ -1168,7 +1199,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:05:17",
+   "datemodified": "2026-10-22T03:06:46",
    "description": "Forest fires in Australia",
    "episodeid": 6,
    "eventid": 1032962,
@@ -1184,7 +1215,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:06:01",
+   "datemodified": "2026-10-22T03:07:25",
    "description": "Forest fires in Australia",
    "episodeid": 6,
    "eventid": 1032963,
@@ -1200,7 +1231,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:05:38",
+   "datemodified": "2026-10-22T03:06:39",
    "description": "Forest fires in Australia",
    "episodeid": 4,
    "eventid": 1032964,
@@ -1216,7 +1247,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:05:30",
+   "datemodified": "2026-10-22T03:07:18",
    "description": "Forest fires in Australia",
    "episodeid": 4,
    "eventid": 1032997,
@@ -1232,7 +1263,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-10-21T23:03:57",
+   "datemodified": "2026-10-22T03:04:46",
    "description": "Forest fires in Zambia",
    "episodeid": 7,
    "eventid": 1032930,
@@ -1248,7 +1279,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:04:34",
+   "datemodified": "2026-10-22T03:05:10",
    "description": "Forest fires in Australia",
    "episodeid": 5,
    "eventid": 1032932,
@@ -1264,7 +1295,7 @@
   {
    "alertlevel": "Green",
    "country": "Botswana",
-   "datemodified": "2026-10-21T23:04:43",
+   "datemodified": "2026-10-22T03:05:49",
    "description": "Forest fires in Botswana",
    "episodeid": 7,
    "eventid": 1032933,
@@ -1280,7 +1311,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:04:09",
+   "datemodified": "2026-10-22T03:06:05",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1032968,
@@ -1296,7 +1327,7 @@
   {
    "alertlevel": "Green",
    "country": "Nigeria",
-   "datemodified": "2026-10-21T23:04:24",
+   "datemodified": "2026-10-22T03:06:15",
    "description": "Forest fires in Nigeria",
    "episodeid": 6,
    "eventid": 1032969,
@@ -1312,7 +1343,7 @@
   {
    "alertlevel": "Green",
    "country": "Namibia",
-   "datemodified": "2026-10-21T23:03:46",
+   "datemodified": "2026-10-22T03:04:42",
    "description": "Forest fires in Namibia",
    "episodeid": 5,
    "eventid": 1032975,
@@ -1328,7 +1359,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:04:17",
+   "datemodified": "2026-10-22T03:05:27",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1033009,
@@ -1344,7 +1375,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:03:52",
+   "datemodified": "2026-10-22T03:06:32",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1033010,
@@ -1376,7 +1407,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-10-21T23:04:00",
+   "datemodified": "2026-10-22T03:05:37",
    "description": "Forest fires in Mozambique",
    "episodeid": 1,
    "eventid": 1033029,
@@ -1392,7 +1423,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-10-21T23:22:36",
+   "datemodified": "2026-10-22T03:27:20",
    "description": "Forest fires in Zambia",
    "episodeid": 12,
    "eventid": 1032805,
@@ -1408,7 +1439,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-10-21T23:22:23",
+   "datemodified": "2026-10-22T03:26:45",
    "description": "Forest fires in Mozambique",
    "episodeid": 8,
    "eventid": 1032855,
@@ -1424,7 +1455,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-10-21T23:22:08",
+   "datemodified": "2026-10-22T03:27:46",
    "description": "Forest fires in Mozambique",
    "episodeid": 2,
    "eventid": 1032987,
@@ -1440,7 +1471,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-21T23:22:43",
+   "datemodified": "2026-10-22T03:27:17",
    "description": "Forest fires in Indonesia",
    "episodeid": 4,
    "eventid": 1033000,
@@ -1456,7 +1487,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-21T23:18:52",
+   "datemodified": "2026-10-22T03:25:49",
    "description": "Forest fires in Australia",
    "episodeid": 34,
    "eventid": 1032702,
@@ -1472,7 +1503,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-10-21T23:18:57",
+   "datemodified": "2026-10-22T03:23:14",
    "description": "Forest fires in Zambia",
    "episodeid": 18,
    "eventid": 1032789,
@@ -1488,7 +1519,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-10-21T23:19:15",
+   "datemodified": "2026-10-22T03:24:51",
    "description": "Forest fires in Mozambique",
    "episodeid": 9,
    "eventid": 1032804,
@@ -1504,7 +1535,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-21T23:19:03",
+   "datemodified": "2026-10-22T03:25:05",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 17,
    "eventid": 1032814,
@@ -1520,7 +1551,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-10-21T23:18:30",
+   "datemodified": "2026-10-22T03:24:05",
    "description": "Forest fires in Mozambique",
    "episodeid": 7,
    "eventid": 1032847,
@@ -1536,7 +1567,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-10-21T23:19:18",
+   "datemodified": "2026-10-22T03:24:33",
    "description": "Forest fires in Mozambique",
    "episodeid": 8,
    "eventid": 1032880,
@@ -1552,7 +1583,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-21T23:20:53",
+   "datemodified": "2026-10-22T03:24:46",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 4,
    "eventid": 1032894,
@@ -1563,38 +1594,6 @@
    "lon": 144.5403,
    "name": "Forest fires in Papua New Guinea",
    "severitytext": "Green impact for forestfire in 5374 ha",
-   "todate": "2026-10-21T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Nigeria, Cameroon",
-   "datemodified": "2026-10-21T23:20:01",
-   "description": "Forest fires in Nigeria, Cameroon",
-   "episodeid": 4,
-   "eventid": 1032954,
-   "eventtype": "WF",
-   "fromdate": "2026-10-09T00:00:00",
-   "iso3": "NGA",
-   "lat": 11.4294,
-   "lon": 14.7338,
-   "name": "Forest fires in Nigeria, Cameroon",
-   "severitytext": "Green impact for forestfire in 8135 ha",
-   "todate": "2026-10-21T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Chad, Nigeria",
-   "datemodified": "2026-10-21T23:20:56",
-   "description": "Forest fires in Chad, Nigeria",
-   "episodeid": 1,
-   "eventid": 1033041,
-   "eventtype": "WF",
-   "fromdate": "2026-10-09T00:00:00",
-   "iso3": "TCD",
-   "lat": 13.2328,
-   "lon": 13.7998,
-   "name": "Forest fires in Chad, Nigeria",
-   "severitytext": "Green impact for forestfire in 5256 ha",
    "todate": "2026-10-21T00:00:00"
   }
  ]

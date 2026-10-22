@@ -5,11 +5,59 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-22T00:42:02+00:00",
+  "generato": "2026-10-22T05:24:39+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-22T05:13:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Protesta tir, emergenza carburante in aeroporto: quali sono gli scali a rischio",
+   "url": "https://www.adnkronos.com/economia/aeroporto-protesta-tir-emergenza-carburante_4bxD1rQ9dypQuvc38PPBKk"
+  },
+  {
+   "data": "2026-10-22T05:05:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Governo sceglie la linea dura, sospesi i blocchi dei tir in Sicilia e Calabria",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/21/il-governo-sceglie-la-linea-dura-sospesi-i-blocchi-in-sicilia-e-calabria_9c1d4f81-b58b-423e-aef2-9fa4b224c7bf.html"
+  },
+  {
+   "data": "2026-10-22T05:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "A Genova esperti a confronto sul futuro della prevenzione vaccinale dell'influenza",
+   "url": "https://www.adnkronos.com/cronaca/a-genova-esperti-a-confronto-sul-futuro-della-prevenzione-vaccinale-dellinfluenza_3qDj92gQgnt40tFw4T6Ygk"
+  },
+  {
+   "data": "2026-10-22T04:58:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Occhiuto: \"A2A fondamentale per transizione energetica in Calabria\"",
+   "url": "https://www.adnkronos.com/cronaca/occhiuto-a2a-fondamentale-per-transizione-energetica-in-calabria_2hz9C2Xj79i6Bkz7wa2jNG"
+  },
+  {
+   "data": "2026-10-22T04:57:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diritto alla riparazione in vigore da oggi, cos'è e cosa cambia per i consumatori",
+   "url": "https://www.adnkronos.com/economia/diritto-alla-riparazione-in-vigore-da-oggi-cose-e-cosa-cambia-per-i-consumatori_6xRaXouEUQmpbfAkElWqtS"
+  },
+  {
+   "data": "2026-10-22T04:56:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tasca (A2A): \"Molto soddisfatti risultati ottenuti con bilancio sostenibilità territoriale Calabria\"",
+   "url": "https://www.adnkronos.com/cronaca/tasca-a2a-molto-soddisfatti-risultati-ottenuti-con-bilancio-sostenibilita-territoriale-calabria_7afOLHgfbTOZNf6LiQhXco"
+  },
+  {
+   "data": "2026-10-22T04:55:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mazzoncini 8A\"A): \"La Calabria per noi ha ruolo strategico\"",
+   "url": "https://www.adnkronos.com/cronaca/mazzoncini-8aa-la-calabria-per-noi-ha-ruolo-strategico_576S4zLqAh8rxqurDnPwEY"
+  },
+  {
+   "data": "2026-10-22T04:39:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "1 e 4 novembre in busta paga, come vengono pagati: lo stipendio è più ricco?",
+   "url": "https://www.adnkronos.com/economia/1-4-novembre-busta-paga-stipendio-domenica-2026_5CbksIZNRIODXAr78w5OD5"
+  },
   {
    "data": "2026-10-21T22:16:14+00:00",
    "fonte": "ADNKRONOS",
@@ -17,7 +65,7 @@
    "url": "https://www.adnkronos.com/cronaca/studentessa-erasmus-violentata-milano-fermato-31enne_BplJJtPQTA1YzpeelBDFK"
   },
   {
-   "data": "2026-10-21T22:04:02+00:00",
+   "data": "2026-10-21T22:04:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Protesta Tir e agricoltori, oggi Consiglio dei ministri: governo prepara decreto con risorse",
    "url": "https://www.adnkronos.com/economia/protesta-tir-agricoltori-decreto-meloni-news_5NYFqizQdjGBaY3yciWdO4"
@@ -53,24 +101,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/21/la-studentessa-erasmus-violentata-a-milano-ce-un-fermo_137d6f48-10fb-4271-a0fd-7df24a24cc83.html"
   },
   {
-   "data": "2026-10-21T21:28:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Governo sceglie la linea dura, sospesi i blocchi dei tir in Sicilia e Calabria",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/21/il-governo-sceglie-la-linea-dura-sospesi-i-blocchi-in-sicilia-e-calabria_9c1d4f81-b58b-423e-aef2-9fa4b224c7bf.html"
-  },
-  {
-   "data": "2026-10-21T21:26:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Barella: \"Non so se la vittoria è meritata al 100% ma abbiamo dato tutto quello che avevamo\"",
-   "url": "https://www.adnkronos.com/sport/champions-league-inter-shakhtar-barella_7hmMQfl7kt1ZVNEgDsOsDB"
-  },
-  {
-   "data": "2026-10-21T21:26:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Auto travolta dalla piena del Meduna, tre persone bloccate su un isolotto: scatta il salvataggio aereo",
-   "url": "https://www.adnkronos.com/cronaca/pordenone-auto-torrente-meduna-tre-persone-salvate-elicottero_7983ZdnWxmZWSJ7fFxRbH2"
-  },
-  {
    "data": "2026-10-21T21:22:31+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Trasportatori siciliani, sospendiamo protesta e rimuoviamo blocchi",
@@ -81,18 +111,6 @@
    "fonte": "ANSA",
    "titolo": "Champions League: l'Inter in 10 torna a vincere, primi punti con lo Shakhtar",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/21/champions-league-linter-in-10-torna-a-vincere-primi-punti-con-lo-shakhtar_c3b24c73-fd6c-4a20-a737-242096fe08f4.html"
-  },
-  {
-   "data": "2026-10-21T21:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Inter-Shakhtar, nerazzurri in dieci al 68’: Bastoni espulso dopo due gialli in due minuti",
-   "url": "https://www.adnkronos.com/sport/champions-league-inter-shakhtar-bastoni_1xWWat8OgWHKsgjsy3y8wn"
-  },
-  {
-   "data": "2026-10-21T20:06:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran-Usa, segnali di tensione: Washington richiama personale da ambasciate Arabia, Emirati e Qatar",
-   "url": "https://www.adnkronos.com/internazionale/esteri/usa-iran-guerra-israele-news-21-ottobre_4RjUt92vYtGeECpJMEqKkA"
   },
   {
    "data": "2026-10-21T19:36:59+00:00",
@@ -113,12 +131,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/21/nave-container-urta-gru-in-porto-a-livorno-nessun-ferito_535698d4-61a4-4283-a64e-36cfa573b9f2.html"
   },
   {
-   "data": "2026-10-21T19:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Papa Leone XIV, i medici: \"Non servono altre terapie dopo l'operazione\"",
-   "url": "https://www.adnkronos.com/cronaca/papa-leone-operazione-tumore-medici_RmjB5aFdkXFT4VeszSb84"
-  },
-  {
    "data": "2026-10-21T19:07:58+00:00",
    "fonte": "ANSA",
    "titolo": "Placido: 'Livatino forse oggi indagherebbe sul ponte di Messina'",
@@ -137,12 +149,6 @@
    "url": "https://www.ansa.it/sito/videogallery/economia/2026/10/21/termoli-commercianti-in-crisi-punto-di-non-ritorno-non-vendiamo-piu_221e9877-3552-46e7-8881-f20daeed4a4a.html"
   },
   {
-   "data": "2026-10-21T18:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nico Paz incanta, il Como vola: doppietta e assist, serata da fenomeno contro lo United in Champions",
-   "url": "https://www.adnkronos.com/sport/champions-league-como-manchester-united-nico-paz_1DLxZntev5ZvTpVXzyCGfZ"
-  },
-  {
    "data": "2026-10-21T18:42:23+00:00",
    "fonte": "ANSA",
    "titolo": "A Milano 500 parà della Folgore: 'Ora controllo e repressione'",
@@ -153,12 +159,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "A Milano in piazza i candidati a primarie centrosinistra contro la violenza",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/21/a-milano-in-piazza-i-candidati-a-primarie-centrosinistra-contro-la-violenza_07292d12-22d9-457c-8464-e95b54621412.html"
-  },
-  {
-   "data": "2026-10-21T18:26:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions League, Inter-Shakhtar 1-0: Bastoni si fa espellere ma Carlos Augusto regala la vittoria a Chivu",
-   "url": "https://www.adnkronos.com/sport/champions-league-inter-shakhtar_4yEboAn8QShMeR1Sz4eH55"
   },
   {
    "data": "2026-10-21T18:18:03+00:00",
