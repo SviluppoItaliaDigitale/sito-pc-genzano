@@ -1,7 +1,7 @@
 ---
 title: "Maltempo, 21 ottobre: rami caduti a Genzano e una nostra squadra a Latina dopo l'alluvione"
 date: 2026-10-21T00:03:00+02:00
-description: "Mercoledì 21 ottobre tre interventi del Gruppo a Genzano per alberi e rami. Una nostra squadra a Latina, colpita dall'alluvione."
+description: "Mercoledì 21 ottobre tre interventi del Gruppo a Genzano per alberi e rami. Una nostra squadra a Latina, la città colpita dall'alluvione."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -36,13 +36,13 @@ Poco dopo mezzogiorno è arrivata la segnalazione di un **grosso ramo spezzato d
 
 Secondo le cronache locali, a Latina sono caduti circa 170 millimetri di pioggia in poche ore, contro i 50 previsti. L'acqua ha invaso strade, case, attività commerciali, scuole e il seminterrato dell'ospedale. Tra le zone più colpite c'era il quartiere Piccarello. Il Comune di Latina aveva attivato il Centro Operativo Comunale (COC) già il pomeriggio del 20 ottobre.
 
-Su attivazione della **Sala Operativa Regionale** della Protezione Civile del Lazio, nel corso della giornata sono partite per Latina le squadre comunali di Albano Laziale, **Genzano**, Lanuvio e Velletri, insieme ad associazioni di volontariato di Ardea, di Anzio e del litorale romano. Con idrovore e motopompe, le squadre hanno svuotato abitazioni, scantinati, edifici pubblici e locali commerciali e liberato le strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. Il lavoro è continuato fino a tarda sera.
+Nel corso della giornata è partita anche una nostra squadra, su attivazione della **Sala Operativa Regionale** della Protezione Civile del Lazio. Secondo le cronache locali, con noi sono arrivate le squadre comunali di Albano Laziale, Lanuvio e Velletri e i volontari di due associazioni di Ardea e di Anzio. Le squadre hanno lavorato con idrovore e motopompe in abitazioni, scantinati, edifici pubblici, locali commerciali e strade, insieme ai Vigili del Fuoco e alle forze dell'ordine. A tarda sera le operazioni proseguivano ancora.
 
-Quando un comune non basta a se stesso, la Regione chiede aiuto ai gruppi dei comuni vicini. È così che funziona il Servizio nazionale della protezione civile: ognuno interviene sul proprio territorio e, quando serve, va a dare una mano agli altri.
+Quando un comune colpito ha bisogno di rinforzi, la richiesta passa dalla Sala Operativa Regionale, che attiva i gruppi di volontariato dei comuni vicini. È così che funziona il Servizio nazionale della protezione civile: ognuno interviene sul proprio territorio e, quando serve, va a dare una mano agli altri.
 
 ## Cosa impariamo
 
-- **L'allerta gialla non vuol dire che non succederà niente.** Il 21 ottobre la previsione era di allerta gialla, ma a Latina in poche ore è caduta molta più pioggia di quella prevista. Il colore indica la criticità attesa, non il massimo possibile: [Allerte meteo](/allerte-meteo/).
+- **L'allerta gialla non vuol dire che non succederà niente.** Il 21 ottobre la previsione era di allerta gialla, ma secondo le cronache locali a Latina in poche ore è caduta molta più pioggia di quella prevista. Il colore indica la criticità attesa, non il massimo possibile: [Allerte meteo](/allerte-meteo/).
 - **Con piogge molto intense si allagano per primi sottopassi, scantinati e piani interrati.** Con l'allerta in corso non si scende nei locali sotto il livello della strada: [rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 - **Con il maltempo cadono alberi e rami, anche in città.** A Genzano tutti e tre gli interventi riguardavano questo: strade e un percorso pedonale da liberare. Con il vento forte ci si tiene lontani dagli alberi: [vento forte](/rischi-prevenzione/vento-forte/).
 
