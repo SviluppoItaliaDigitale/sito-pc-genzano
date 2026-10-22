@@ -71,7 +71,8 @@ Uso:
   python3 scripts/check-fogli-stampa.py --pagine formazione/schede-stampabili/estate-sicura/ \
       --png /tmp/fogli                                         # una pagina, con i fogli in PNG
 Con --da-git si controllano le pagine stampabili modificate (anche solo in
-un'immagine della loro cartella) e le loro sezioni nei pacchetti, più le
+un'immagine della loro cartella; per un'immagine di un kit calamità, le schede
+del kit che la nominano) e le loro sezioni nei pacchetti, più le
 sezioni entrate in un pacchetto; se cambia un foglio di stile condiviso (print.css dei kit,
 scheda-print.css, storia-libro.css, custom.css) si ricontrolla l'intera famiglia
 che lo usa (con scheda-print.css anche tutti i pacchetti), se cambia il
@@ -268,6 +269,19 @@ def da_git(base: str, tutte: dict[str, str],
                 if pagina in tutte:
                     scelte[pagina] = tutte[pagina]
                     break
+            # Le schede dei kit calamità non si chiamano index.html e le loro immagini
+            # stanno in img/ dentro la cartella del kit: si ristampano le schede del kit
+            # che nominano il file, o tutte se nessuna lo nomina (22/10/2026: prima
+            # un'immagine nuova in un kit non faceva ristampare nessuna scheda).
+            parti = rel.split("/")
+            if not rel.endswith(".html") and len(parti) > 2 and parti[0] == "formazione" \
+                    and parti[1].startswith("kit-calamita-"):
+                schede_kit = {p: fam for p, fam in tutte.items()
+                              if p.startswith(f"formazione/{parti[1]}/")}
+                nominano = {p: fam for p, fam in schede_kit.items()
+                            if (RADICE / "static" / p).is_file() and
+                            Path(rel).name in (RADICE / "static" / p).read_text(errors="replace")}
+                scelte.update(nominano or schede_kit)
     # I pacchetti: tutti se cambia il foglio di stile delle schede o il generatore,
     # altrimenti le sezioni delle schede toccate (cartella della scheda, immagini comprese).
     if "schede" in famiglie or GENERATORE_PACCHETTI in diff:
