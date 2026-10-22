@@ -291,7 +291,7 @@ Su Instagram, dove i link non sono cliccabili, citare solo il dominio e aggiorna
 
 #### Contenuti vietati
 
-- Volti riconoscibili di persone in stato di necessità (assistiti, soccorsi, sfollati, vittime): si oscurano sempre. Quelli dei minorenni si oscurano, salvo il consenso scritto di entrambi i genitori. I volti dei soccorritori al lavoro restano in chiaro, e nelle foto fatte apposta per far conoscere un servizio o un bene non si oscura nulla (decisione del 22/10/2026).
+- Volti riconoscibili di persone in stato di necessità (assistiti, soccorsi, sfollati, vittime): si oscurano sempre. Quelli dei minorenni si oscurano, salvo il consenso scritto, specifico per la pubblicazione, di chi esercita la responsabilità genitoriale. I volti dei soccorritori al lavoro restano in chiaro, e nelle foto fatte apposta per far conoscere un servizio o un bene non si oscura nulla (decisione del 22/10/2026).
 - Targhe di veicoli privati.
 - Dati sensibili (indirizzi di abitazioni coinvolte, nomi di infortunati, informazioni sanitarie).
 - Numeri telefonici privati dei volontari.
@@ -693,7 +693,7 @@ Controlli comuni a tutti i canali:
 - [ ] Rimando al sito presente e corretto?
 - [ ] Alt-text dell'immagine compilato e descrittivo?
 - [ ] Immagine con fascia blu istituzionale (Parte 3.8)?
-- [ ] Volti di persone in stato di necessità oscurati, e di minorenni se manca il consenso scritto dei genitori, nessuna targa riconoscibile?
+- [ ] Volti di persone in stato di necessità oscurati, e di minorenni se manca il consenso scritto, specifico per la pubblicazione, di chi esercita la responsabilità genitoriale, nessuna targa riconoscibile?
 - [ ] Emoji solo funzionali (11.4)?
 - [ ] Nessun hashtag in inglese, politico, generico, di trend?
 - [ ] Nessuna formula di engagement bait ("tagga un amico", "condividi se…")?

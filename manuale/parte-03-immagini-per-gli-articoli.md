@@ -62,7 +62,7 @@ Se fotografi tu o un collega:
 - **Volti di persone** (decisione del 22/10/2026, regola `comunicazione-social.md`): i soccorritori
   al lavoro restano in chiaro; i volti di persone in stato di necessità (assistiti, soccorsi,
   sfollati, vittime) si oscurano sempre, anche nelle foto in posa; quelli dei minorenni anche,
-  salvo il consenso scritto di entrambi i genitori. Nelle foto fatte apposta
+  salvo il consenso scritto, specifico per la pubblicazione, di chi esercita la responsabilità genitoriale. Nelle foto fatte apposta
   per far conoscere un servizio o un bene non si oscura altro.
 - **Targhe automobili**: offusca (strumento: GIMP, Photoshop, mobile app).
 - **Fotomontaggi** (decisione del 22/10/2026, regola `comunicazione-social.md`): si può togliere
