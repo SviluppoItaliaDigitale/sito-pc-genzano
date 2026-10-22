@@ -64,6 +64,10 @@ Se fotografi tu o un collega:
   soccorsi, sfollati, vittime) si oscurano sempre, anche nelle foto in posa. Nelle foto fatte apposta
   per far conoscere un servizio o un bene non si oscura altro.
 - **Targhe automobili**: offusca (strumento: GIMP, Photoshop, mobile app).
+- **Fotomontaggi** (decisione del 22/10/2026, regola `comunicazione-social.md`): si può togliere
+  ciò che distrae (una sigaretta, una cartaccia, un oggetto fuori posto) e completare uno sfondo
+  neutro; non si aggiunge mai nulla che non c'era, soprattutto i DPI. Se in una foto di servizio
+  mancano i DPI, quella foto non si pubblica: se ne sceglie un'altra o si ritaglia sul dettaglio.
 
 ### 3.5 — Come cercare una foto libera
 

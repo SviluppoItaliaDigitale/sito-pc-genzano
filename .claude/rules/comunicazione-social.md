@@ -78,7 +78,11 @@ Vale in tutti i repository di Alessandro per chi prepara testi, grafiche, foto e
   - **foto fatte apposta per far conoscere un servizio o un bene** (foto in posa, campagne, presentazione di un mezzo, di una sede o di un corso): nulla si oscura, tranne i volti di minorenni e di persone in stato di necessità, che restano sempre oscurati: le due tutele sopra valgono anche qui.
 - Mai dati sanitari (monitor, referti, schede, farmaci), targhe, indirizzi, numeri civici, citofoni o dettagli del servizio come luogo, ora e motivo della chiamata. Controllare anche gli sfondi: schermi, fogli, nomi sulle divise (W2; W3).
 - Preferire il dettaglio, come mani al lavoro, stemma, attrezzatura, ruote del mezzo: racconta il servizio senza mostrare chi viene aiutato (W2 0:28:05).
-- Ritoccare solo l'aspetto: togliere un telefono che spunta da una tasca va bene, cambiare il senso di una scena no (W3 0:19:29).
+- **Fotomontaggi: togliere sì, aggiungere no** (istruzione di Alessandro del 22/10/2026). Ritoccare solo l'aspetto, mai il senso della scena (W3 0:19:29):
+  - **si può togliere** ciò che distrae o non va: una sigaretta, una cartaccia, un telefono che spunta da una tasca, un oggetto fuori posto; si possono anche completare dettagli neutri, come il cielo o un pezzo di sfondo dopo un ritaglio;
+  - **non si aggiunge** nulla che non c'era: persone, mezzi, attrezzature, scritte e soprattutto **DPI** (caschi, guanti, stivali, gilet, occhiali). Una foto di servizio documenta come si è lavorato, e un DPI aggiunto direbbe una cosa falsa sulla sicurezza dei volontari;
+  - se in una foto mancano i DPI, non si pubblica: si sceglie un'altra foto della serie o si ritaglia sul dettaglio che conta, lasciando fuori la persona;
+  - oscurare volti e targhe secondo le regole sopra non è un fotomontaggio e resta sempre dovuto.
 - Non far passare un'immagine generata per un servizio vero: presentarla come illustrativa (W2).
 
 ## Solo per la Misericordia di Ariccia
@@ -101,6 +105,7 @@ Vale in tutti i repository di Alessandro per chi prepara testi, grafiche, foto e
 - [ ] Il messaggio si capisce al primo sguardo, nella grafica c'è poco testo e, fuori dai modelli ufficiali, scritte e logo stanno ad almeno 100 px dai bordi (W1 0:56:23; W3 0:26:21).
 - [ ] Il logo è il file originale, non modificato e ben visibile; il contrasto regge anche per chi è daltonico (W1 0:35:31, 1:04:41).
 - [ ] Nessuna foto a colori portata in bianco e nero, salvo una grafica di lutto; il nome dell'ente leggibile e la cornice di microtesto ai bordi (regola `grafica.md`).
+- [ ] Nessun fotomontaggio che aggiunge qualcosa (DPI, persone, mezzi, scritte); tolte solo le distrazioni.
 - [ ] Volti oscurati solo dove serve: minorenni e persone in stato di necessità sempre, anche nelle foto in posa; soccorritori in chiaro; nessun dato sanitario, targa, indirizzo o dettaglio del servizio (W2; W3).
 - [ ] Le parole su disabilità e fragilità seguono la sezione dedicata (Disabilità).
 - [ ] Le immagini hanno il testo alternativo e, dove la pubblicazione non lo invia, la didascalia dice anche ciò che dice la grafica; i video hanno i sottotitoli ricontrollati, la musica una licenza verificata (Disabilità; W3 0:56:51).
