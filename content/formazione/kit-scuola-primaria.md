@@ -207,7 +207,7 @@ Il territorio di Genzano di Roma e dei Castelli Romani è collinare, con pendii 
 4. **Non bere** l'acqua del rubinetto finché le autorità non confermano che è potabile
 
 **Se sei fuori:**
-1. **Non attraversare** strade allagate, né a piedi né in auto — bastano 20 centimetri di acqua in movimento per trascinare una persona
+1. **Non attraversare** strade allagate, né a piedi né in auto — bastano 15 centimetri di acqua in movimento per far cadere una persona
 2. **Non fermarti** su ponti o lungo gli argini dei fiumi
 3. **Raggiungi** il punto più alto nelle vicinanze
 4. **Non rifugiarti** sotto alberi isolati
@@ -610,7 +610,7 @@ Spazi da compilare:
 | 1. Nel Lazio si chiama il 115 per i vigili del fuoco | ○ | ○ |
 | 2. Durante il terremoto l'ascensore è il modo più rapido per uscire | ○ | ○ |
 | 3. Un'allerta arancione è più grave di un'allerta gialla | ○ | ○ |
-| 4. Per trascinare una persona bastano 20 cm di acqua in movimento | ○ | ○ |
+| 4. Per far cadere una persona bastano 15 cm di acqua in movimento | ○ | ○ |
 | 5. I mozziconi di sigaretta possono causare incendi boschivi | ○ | ○ |
 | 6. Il sindaco è la prima autorità di protezione civile del comune | ○ | ○ |
 | 7. Durante un'alluvione devo scendere in cantina per mettermi al sicuro | ○ | ○ |

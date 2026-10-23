@@ -94,7 +94,7 @@ Quiescente: un vulcano che non erutta da molto tempo ma può tornare attivo, e c
 
 {{< pittogramma src="/pittogrammi/arasaac/inondazione.png" alt="Pittogramma: inondazione, acqua che copre una strada" caption="Una strada allagata non si attraversa: non si vede quanto è profonda né che cosa nasconde" size="medium" >}}
 
-**Perché è sbagliata.** Sotto l'acqua non vedi buche, tombini scoperchiati e la vera profondità; pochi centimetri bastano a far perdere aderenza alle ruote o a spegnere il motore, e un sottopasso può riempirsi in pochi minuti. Se l'acqua blocca l'auto, si abbandona e si raggiunge a piedi un punto più alto.
+**Perché è sbagliata.** Sotto l'acqua non vedi buche, tombini scoperchiati e la vera profondità; pochi centimetri bastano a far perdere aderenza alle ruote o a spegnere il motore, e un sottopasso può riempirsi in pochi minuti. Se l'acqua blocca l'auto e si può uscire senza entrare nella corrente, si abbandona e si raggiunge a piedi un punto più alto; in una corrente forte si resta dentro, si chiama il 112 e, se l'acqua entra nell'abitacolo, si sale sul tetto.
 
 **Fonte:** [Rischio idrogeologico, cosa fare durante](/rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante), in linea con le indicazioni del Dipartimento della Protezione Civile sull'alluvione.
 

@@ -103,7 +103,8 @@ Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** del sistema 
 
 - **Non attraversare mai** un sottopassaggio o una strada allagata.
 - Pochi centimetri d'acqua bastano a far perdere aderenza o a spegnere il motore.
-- Se l'acqua blocca l'auto, **abbandonala** e raggiungi a piedi un punto più elevato.
+- Se l'acqua blocca l'auto e puoi uscire senza entrare nella corrente, **abbandonala** e raggiungi a piedi un punto più elevato.
+- Se l'auto è ferma in una corrente forte, resta dentro e chiama il 112; se l'acqua sale nell'abitacolo, sali sul tetto.
 
 ## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO l'evento {#cosa-fare-dopo}
 - Non rientrare in casa finché le autorità non lo autorizzano.
