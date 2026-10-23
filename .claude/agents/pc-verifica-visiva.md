@@ -80,7 +80,7 @@ I difetti di § 2 si trovano per elemento; quelli di composizione solo guardando
 
 Scrivi i rilievi come li direbbe un grafico a un collega, con lo screenshot in cui si vedono e la correzione: «il paragrafo parte 40 px a sinistra del titolo», «terza sezione divisa di fila», non «potrebbe essere più curata». Correggi in quest'ordine, perché i dettagli non salvano una gerarchia sbagliata: gerarchia (una cosa dominante per schermata), composizione (allineamenti, spazi, varietà), testo, immagini, colore, dettagli, movimento. Se togliere un elemento lascia un buco, non riempirlo con una decorazione: chiudi lo spazio o ingrandisci ciò che resta. Al massimo tre giri (guarda → correggi i tre problemi più visibili → nuovo screenshot); se dopo il terzo restano problemi, scrivili nel rapporto.
 
-Questo è un sito della PA: i componenti di Bootstrap Italia (card, callout, stepper numerato, accordion, badge) e la struttura fissa delle pagine rischio **non** sono difetti da togliere. Le passate valutano come sono composti, non se esistono. Le passate vengono dal riferimento di critica del progetto `taste-skill` v2 (Leonxlnx, licenza MIT), adattate al sito il 23/10/2026.
+Questo è un sito della PA: i componenti di Bootstrap Italia (card, callout, stepper numerato, accordion, badge) e la struttura fissa delle pagine rischio **non** sono difetti da togliere. Le passate valutano come sono composti, non se esistono. Le passate vengono dal riferimento di critica del progetto `taste-skill` v2 (Leonxlnx, licenza MIT), adattate al sito il 23/10/2026; il testo della licenza, che va insieme alle parti adattate, è in `.claude/skills/landing-premium/references/LICENZA-taste-skill.txt`.
 
 ### 2-bis. Il conteggio dei fogli lo fa lo script
 

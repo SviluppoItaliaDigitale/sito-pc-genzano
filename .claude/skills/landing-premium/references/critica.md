@@ -3,11 +3,19 @@
 Adattato dal riferimento `references/critique.md` di **taste-skill v2** (Leonxlnx, licenza MIT,
 commit `6010f91`, letto il 23/10/2026). La skill originale non si installa: sceglie a caso palette e
 caratteri e vieta componenti dei design system istituzionali. Qui resta solo il metodo per guardare
-ciò che si è costruito.
+ciò che si è costruito. Il testo della licenza MIT dell'originale, che va sempre insieme a questo
+file, è in `LICENZA-taste-skill.txt`.
 
 Si giudica **sugli screenshot, mai sul codice**: chi ha scritto il codice ci legge le proprie
-intenzioni, gli screenshot mostrano solo ciò che c'è. Screenshot a 1280, 768 e 375 px, la prima
-schermata e poi la pagina intera; con Playwright `full_page=True` più le singole schermate.
+intenzioni, gli screenshot mostrano solo ciò che c'è. Finestre fisse, così due giri danno gli stessi
+screenshot: **1280×800**, **768×1024** e **375×812** px. Per ognuna la prima schermata e poi la pagina
+intera (con Playwright `full_page=True`).
+
+Nelle tecniche guidate dallo scorrimento (esplosione 3D, video scrubbato, scrollytelling, cubi) la
+pagina intera non basta, perché una scena bloccata cambia mentre si scorre: si fanno anche gli
+screenshot a ogni scena e, dentro le scene bloccate, a circa il 25, il 50 e il 75 per cento
+dell'avanzamento, più la pagina con il movimento ridotto (`reduced_motion="reduce"`). La passata 13
+si fa su tutti questi.
 
 ## 1. Le passate
 

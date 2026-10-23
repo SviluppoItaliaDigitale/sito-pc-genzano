@@ -50,7 +50,7 @@ tema o navbar.
    Banana", video Veo) o indica stock gratuito (Pexels/Pixabay). La pagina
    deve prevedere lo slot (`PHOTOS`/`VIDEO_SRC` a inizio script) per il
    drop-in successivo.
-5. **Guarda la pagina**: screenshot a 1280, 768 e 375 px e critica con
+5. **Guarda la pagina**: screenshot a 1280×800, 768×1024 e 375×812 px e critica con
    `references/critica.md` (passate, voto, al massimo tre giri di correzione).
 6. **QA finale obbligatoria** (sezione sotto), poi consegna un solo file
    `.html` + eventuale nota di 3-5 righe su cosa manca (asset, testi da
