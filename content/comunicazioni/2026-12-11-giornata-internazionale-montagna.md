@@ -1,7 +1,7 @@
 ---
 title: "11 dicembre, Giornata internazionale della montagna: chi la abita, chi la presidia"
 date: 2026-12-11
-description: "La Giornata ONU della montagna 2026 è dedicata ai pastori. In Italia la montagna è oltre un terzo del territorio: frane, neve, isolamento e soccorso, e che cosa riguarda anche chi vive ai Castelli."
+description: "La Giornata ONU della montagna 2026 è dedicata ai pastori. In Italia la montagna è oltre un terzo del territorio: i suoi rischi e chi soccorre."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

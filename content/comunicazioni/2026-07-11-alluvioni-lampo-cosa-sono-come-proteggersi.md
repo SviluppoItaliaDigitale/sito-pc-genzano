@@ -81,9 +81,9 @@ Può piovere in una zona e alluvionare in un'altra se il bacino è impermeabile.
 ### In auto
 1. **Non entrare** in guadi allagati: cerca un percorso alternativo.
 2. Se rimani **bloccato nell'acqua**:
-   - **Esci subito** dall'auto se il livello sale.
-   - **Rompi un finestrino** se le porte sono bloccate dalla pressione dell'acqua.
-   - **Abbandona l'auto** spostandoti verso una zona non sommersa.
+   - **Esci** e spostati verso una zona non sommersa se l'acqua è ferma o lenta e puoi farlo senza entrare nella corrente.
+   - **Resta nell'auto** e chiama il **112** se intorno l'acqua corre forte.
+   - **Sali sul tetto** se l'acqua sale dentro l'abitacolo; se le porte non si aprono, rompi un finestrino.
 3. **Ricorda**: bastano 30 cm di acqua in movimento per portare via un'automobile.
 
 ### A piedi

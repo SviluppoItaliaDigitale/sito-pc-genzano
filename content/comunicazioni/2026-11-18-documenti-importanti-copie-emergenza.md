@@ -1,7 +1,7 @@
 ---
 title: "Documenti importanti: copie pronte prima dell'emergenza"
 date: 2026-11-18
-description: "Carta d'identità, tessera sanitaria, ricette, polizze: quali documenti copiare, dove tenere le copie e come proteggere i dati, prima che un'emergenza ti costringa a uscire di casa."
+description: "Carta d'identità, tessera sanitaria, ricette, polizze: quali documenti copiare prima di un'emergenza, dove tenere le copie e come proteggere i dati."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

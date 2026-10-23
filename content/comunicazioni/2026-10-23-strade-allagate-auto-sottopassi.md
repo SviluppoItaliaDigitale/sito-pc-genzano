@@ -17,7 +17,7 @@ social_citazione: "Davanti a una strada allagata, l'auto non va avanti. Si torna
 social_punti:
   - "Non entrare con l'auto in sottopassi, guadi o strade coperte dall'acqua."
   - "Con un'allerta in corso, valuta il percorso prima di partire ed evita le zone allagabili."
-  - "Se l'acqua blocca l'auto e sale, scendi e raggiungi un punto più alto."
+  - "Auto bloccata nella corrente: resta dentro, chiama il 112 e, se l'acqua entra, sali sul tetto."
   - "Se vedi persone o auto in difficoltà, chiama il 112."
 draft: false
 ---
@@ -49,7 +49,7 @@ Il Dipartimento della Protezione Civile, nella campagna «Io non rischio», è n
 1. Fermati prima dell'acqua, accendi le luci di emergenza e non seguire chi passa davanti a te.
 2. Torna indietro con calma e scegli un percorso più alto, anche se è più lungo.
 3. Se non puoi muoverti, aspetta in un punto sicuro lontano da fossi, sottopassi e argini.
-4. Se l'acqua ti blocca e sale, slaccia la cintura, esci e raggiungi a piedi un punto più alto.
+4. Se l'auto si ferma nell'acqua: se l'acqua è ferma o lenta e puoi raggiungere un punto più alto senza entrare nella corrente, slaccia la cintura, esci e allontanati. Se intorno l'acqua corre forte, resta nell'auto e chiama il **112**; se l'acqua sale dentro l'abitacolo, sali sul tetto.
 5. Se vedi persone o auto in difficoltà, chiama il **112** e dai la posizione precisa.
 {{< /passi >}}
 
@@ -79,5 +79,6 @@ Quando l'acqua si ritira la strada può restare danneggiata: asfalto sollevato, 
 
 - [Io non rischio — Alluvione: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/), Dipartimento della Protezione Civile
 - [Turn Around Don't Drown](https://www.weather.gov/safety/flood-turn-around-dont-drown), National Weather Service (in inglese)
+- [Floods](https://www.ready.gov/floods), Ready.gov, agenzia federale per le emergenze degli Stati Uniti (in inglese)
 
 In emergenza chiama il **112**.
