@@ -1,6 +1,6 @@
 ---
 title: "Caldaia e termosifoni: il controllo annuale obbligatorio"
-date: 2026-10-27
+date: 2026-10-27T00:01:00+02:00
 description: "Prima dell'accensione invernale, la caldaia va controllata. Un obbligo normativo e una questione di sicurezza domestica."
 badge: "Prevenzione"
 priorita: "normale"
