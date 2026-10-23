@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-10-23T00:58:49+00:00",
+  "generato": "2026-10-23T11:11:44+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 10,
-  "scaduti_scartati": 55,
+  "avvisi": 14,
+  "scaduti_scartati": 52,
   "in_corso": 1,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -18,9 +18,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-24T12:00:00+00:00",
-   "fine": "2026-10-24T21:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.048"
+   "fine": "2026-10-24T17:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.024"
   },
   {
    "in_corso": false,
@@ -30,10 +30,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T18:00:00+00:00",
-   "fine": "2026-10-24T21:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.050"
+   "inizio": "2026-10-24T17:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.026"
   },
   {
    "in_corso": false,
@@ -45,21 +45,21 @@
    "certezza": "Likely",
    "inizio": "2026-10-23T12:00:00+00:00",
    "fine": "2026-10-23T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.045"
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.021"
   },
   {
    "in_corso": false,
    "regione": "Friuli Venezia Giulia",
-   "fenomeno": "Temporali",
+   "fenomeno": "Vento",
    "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
+   "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-23T18:00:00+00:00",
-   "fine": "2026-10-23T23:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.044"
+   "fine": "2026-10-24T17:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.019"
   },
   {
    "in_corso": false,
@@ -71,8 +71,8 @@
    "certezza": "Likely",
    "inizio": "2026-10-23T12:00:00+00:00",
    "fine": "2026-10-23T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.046"
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.022"
   },
   {
    "in_corso": false,
@@ -83,9 +83,35 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-24T12:00:00+00:00",
-   "fine": "2026-10-24T21:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.049"
+   "fine": "2026-10-24T17:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.025"
+  },
+  {
+   "in_corso": false,
+   "regione": "Piemonte",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T00:00:00+00:00",
+   "fine": "2026-10-24T05:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.018"
+  },
+  {
+   "in_corso": false,
+   "regione": "Piemonte",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-23T18:00:00+00:00",
+   "fine": "2026-10-23T23:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.017"
   },
   {
    "in_corso": false,
@@ -95,23 +121,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T18:00:00+00:00",
-   "fine": "2026-10-24T21:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.051"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-23T00:00:00+00:00",
-   "fine": "2026-10-23T23:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.053"
+   "inizio": "2026-10-24T17:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.027"
   },
   {
    "in_corso": false,
@@ -121,10 +134,23 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T06:00:00+00:00",
-   "fine": "2026-10-24T21:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.052"
+   "inizio": "2026-10-24T00:00:00+00:00",
+   "fine": "2026-10-25T21:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.029"
+  },
+  {
+   "in_corso": true,
+   "regione": "Sardegna",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-23T08:00:00+00:00",
+   "fine": "2026-10-23T23:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.028"
   },
   {
    "in_corso": false,
@@ -136,8 +162,34 @@
    "certezza": "Likely",
    "inizio": "2026-10-23T12:00:00+00:00",
    "fine": "2026-10-23T17:59:00+00:00",
-   "emesso": "2026-10-22T08:45:41+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261022104541.047"
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.023"
+  },
+  {
+   "in_corso": false,
+   "regione": "Valle d'Aosta",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-23T18:00:00+00:00",
+   "fine": "2026-10-23T23:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.016"
+  },
+  {
+   "in_corso": false,
+   "regione": "Veneto",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T12:00:00+00:00",
+   "fine": "2026-10-24T17:59:00+00:00",
+   "emesso": "2026-10-23T08:27:57+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261023102757.020"
   }
  ]
 }
