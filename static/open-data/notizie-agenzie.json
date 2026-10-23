@@ -5,16 +5,124 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-23T19:33:38+00:00",
+  "generato": "2026-10-23T22:34:56+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-23T19:24:04+00:00",
+   "data": "2026-10-23T22:15:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cortei e allerta massima oggi, Movimento 17 ottobre rompe le regole: chiamata 'last minute' per non essere fermati",
+   "url": "https://www.adnkronos.com/cronaca/cortei-oggi-24-ottobre-movimento-17-ottobre_5FDpj5SJF8zmIc6pt1sgJK"
+  },
+  {
+   "data": "2026-10-23T22:15:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: Torino-Monza 0-0 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/23/serie-a-torino-monza-0-0-diretta-e-foto_3103b24d-f062-443f-85de-251baa8873d4.html"
+   "titolo": "F1: Leclerc domina le libere ad Austin, Antonelli è secondo",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/24/f1-leclerc-domina-le-libere-ad-austin-antonelli-e-secondo_e75bf53d-214a-44e7-9fae-da5ded693b7a.html"
+  },
+  {
+   "data": "2026-10-23T22:13:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, tregua umanitaria per Oleshky dal 27 ottobre: l'accordo mediato da Melania Trump",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-oleshky-tregua-ruolo-melania-trump_4yeHwSQYfejqgX3Xqy1u7l"
+  },
+  {
+   "data": "2026-10-23T22:12:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco al checkpoint di Hebron, scattata un'operazione antiterrorismo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/attacco-al-checkpoint-di-hebron-scattata-unoperazione-antiterrorismo_9ba2138b-09b6-4e76-8477-6a022b91575a.html"
+  },
+  {
+   "data": "2026-10-23T22:10:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Melanoma, nuova pillola 'spoglia' il tumore avanzato e rallenta la crescita",
+   "url": "https://www.adnkronos.com/cronaca/melanoma-nuova-pillola-rallenta-tumore_6m7IiNOi598rhINE6LNiRh"
+  },
+  {
+   "data": "2026-10-23T22:08:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Virus Shamonda, chi lo trasmette? L'imputato è il Culicoides: identikit del 'moscerino pungente'",
+   "url": "https://www.adnkronos.com/cronaca/chi-trasmette-virus-shamonda-allarme-italia-moscerino_58vNFxrKS4AlvZ76EZwr7S"
+  },
+  {
+   "data": "2026-10-23T22:07:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lega, oggi via al Congresso. Salvini e Garavaglia in campo: alla vigilia il 'giallo' della telefonata",
+   "url": "https://www.adnkronos.com/politica/congresso-lega-salvini-garavaglia_7J24I9a5fbAb8HOMd8446j"
+  },
+  {
+   "data": "2026-10-23T22:06:47+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bimba di tre anni uccisa a coltellate dalla madre in casa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/bimba-di-tre-anni-uccisa-a-coltellate-dalla-madre-in-casa_800346db-f039-44c9-9562-d7fa9b8dfe8a.html"
+  },
+  {
+   "data": "2026-10-23T22:05:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attiviste italiane espulse da Israele. Atteso il rientro in Italia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/attiviste-italiane-espulse-da-israele.-atteso-il-rientro-in-italia_9b783e6a-ae93-41de-ab9b-63414f183e13.html"
+  },
+  {
+   "data": "2026-10-23T21:10:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, esplosione in palazzina a Ostia: un ferito",
+   "url": "https://www.adnkronos.com/cronaca/ostia-esplosione-palazzina-ferito_2DUTdiQ97p8gGkswPvGBlS"
+  },
+  {
+   "data": "2026-10-23T21:07:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Accuse shock di pedofilia al padre di Meghan, la duchessa lo ripudia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/accuse-shock-di-pedofilia-al-padre-di-meghan-la-duchessa-lo-ripudia_3060ad02-2ef9-4861-bda8-0417359cee12.html"
+  },
+  {
+   "data": "2026-10-23T20:59:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Protezione civile Sicilia a Comuni 'monitorare litorali a rischio tsunami'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/protezione-civile-sicilia-a-comuni-monitorare-litorali-a-rischio-tsunami_8f846fe4-e446-400a-bcb4-acf1b5f82245.html"
+  },
+  {
+   "data": "2026-10-23T20:52:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tris del Torino al Monza, sorpassata la Juventus CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/23/tris-del-torino-al-monza-sorpassata-la-juventus-cronaca-e-foto_3103b24d-f062-443f-85de-251baa8873d4.html"
+  },
+  {
+   "data": "2026-10-23T20:09:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scatta la tregua umanitaria ad Oleshky, 'merito di Melania'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/casa-bianca-melania-trump-ottiene-una-tregua-fra-russia-e-ucraina_7390536b-7182-49ea-b68f-2faba023bbb2.html"
+  },
+  {
+   "data": "2026-10-23T20:08:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Superenalotto, estrazione oggi 23 ottobre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-23-ottobre-numeri-vincenti_1N7VIZYAoJ0tolvhTsYGAT"
+  },
+  {
+   "data": "2026-10-23T19:41:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da Milano a Castel Volturno, la mappa delle piazze",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/da-milano-a-castel-volturno-la-mappa-delle-piazze_4b093092-5d16-474b-ad7e-21a60f02d95f.html"
+  },
+  {
+   "data": "2026-10-23T19:40:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Milano città blindata, in chat la guida ai cortei: 'Sfondare gli sbarramenti'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/milano-citta-blindata-in-chat-la-guida-ai-cortei-sfondare-gli-sbarramenti_78729dcd-4796-4ad7-baa8-c22626c351c2.html"
+  },
+  {
+   "data": "2026-10-23T19:36:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eni: 'Il tetto al prezzo per benzina e diesel proseguirà fino a fine anno'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/eni-il-tetto-al-prezzo-per-benzina-e-diesel-proseguira-fino-a-fine-anno_7f2ea08b-ce91-4f3c-90b8-ca8bf6e4c8aa.html"
+  },
+  {
+   "data": "2026-10-23T19:32:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Paura per scosse di terremoto in Sicilia, scuole e uffici evacuati",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/paura-per-scosse-di-terremoto-in-sicilia-scuole-e-uffici-evacuati_81346d86-485c-4b00-88cd-aadc8e45e917.html"
   },
   {
    "data": "2026-10-23T19:15:43+00:00",
@@ -24,15 +132,9 @@
   },
   {
    "data": "2026-10-23T19:10:33+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Azione preventiva del Viminale, il Movimento 17 ottobre cambia le piazze",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/azione-preventiva-del-viminale-il-movimento-17-ottobre-cambia-le-piazze_56996a1f-2ff3-42af-a212-a36e9eaf0944.html"
-  },
-  {
-   "data": "2026-10-23T19:10:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Da Milano a Castel Volturno, la mappa delle piazze",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/da-milano-a-castel-volturno-la-mappa-delle-piazze_4b093092-5d16-474b-ad7e-21a60f02d95f.html"
   },
   {
    "data": "2026-10-23T18:57:23+00:00",
@@ -71,18 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/torna-lora-solare-con-quella-legale-risparmiati-90-milioni-di-euro_3b0f87be-a16f-4cd2-9b08-287a81c83690.html"
   },
   {
-   "data": "2026-10-23T18:29:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scatta la tregua umanitaria ad Oleshky, 'merito di Melania'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/casa-bianca-melania-trump-ottiene-una-tregua-fra-russia-e-ucraina_7390536b-7182-49ea-b68f-2faba023bbb2.html"
-  },
-  {
-   "data": "2026-10-23T18:28:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eni: 'Il tetto al prezzo per benzina e diesel proseguirà fino a fine anno'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/eni-il-tetto-al-prezzo-per-benzina-e-diesel-proseguira-fino-a-fine-anno_7f2ea08b-ce91-4f3c-90b8-ca8bf6e4c8aa.html"
-  },
-  {
    "data": "2026-10-23T18:26:14+00:00",
    "fonte": "ANSA",
    "titolo": "Morto lo scrittore giapponese Ryu Murakami, esplorava il lato oscuro della società",
@@ -99,96 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La Francia si prepara al secondo atto in piazza, 'saremo inflessibili'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/la-francia-si-prepara-al-secondo-atto-in-piazza-saremo-inflessibili_bd1e06f5-b847-4c45-8875-1bde48915478.html"
-  },
-  {
-   "data": "2026-10-23T18:23:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Uccide la fidanzata a coltellate, poi va a costituirsi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/uccide-la-fidanzata-a-coltellate-poi-va-a-costituirsi_d59f3266-b325-4df0-9380-98ea552c009d.html"
-  },
-  {
-   "data": "2026-10-23T18:19:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attiviste italiane espulse da Israele. Tajani: 'Domani mattina il rientro in Italia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/attiviste-italiane-espulse-da-israele.-tajani-domani-mattina-il-rientro-in-italia_9b783e6a-ae93-41de-ab9b-63414f183e13.html"
-  },
-  {
-   "data": "2026-10-23T18:15:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allerta in Moldova, drone russo precipita vicino a una casa",
-   "url": "https://www.adnkronos.com/internazionale/esteri/drone-russo-precipita-moldova_5cSFsePydaRvv7iDKn3eDy"
-  },
-  {
-   "data": "2026-10-23T18:06:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rimossi i blocchi dei Tir, scendono in piazza i taxi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/rimossi-i-blocchi-dei-tir-scendono-in-piazza-i-taxi_fd94eea8-5def-4c2c-a53e-ef58e99b697f.html"
-  },
-  {
-   "data": "2026-10-23T18:05:20+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Meghan Markle è molto turbata\", il padre Thomas accusato di possesso di materiale pedopornografico",
-   "url": "https://www.adnkronos.com/internazionale/esteri/meghan-markle-padre-accuse-pedopornogrfia_5rM96yYqC5IL5MyhHs2eyw"
-  },
-  {
-   "data": "2026-10-23T18:05:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bimba di tre anni uccisa a coltellate dalla madre in casa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/bimba-di-tre-anni-uccisa-a-coltellate-dalla-madre-in-casa_800346db-f039-44c9-9562-d7fa9b8dfe8a.html"
-  },
-  {
-   "data": "2026-10-23T18:02:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Intesa Sanpaolo, sabato tre eventi per il Festival internazionale dell'Economia",
-   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/23/intesa-sanpaolo-sabato-tre-eventi-per-il-festival-internazionale-delleconomia_643e90f0-0981-4913-8cc7-381162c9f13e.html"
-  },
-  {
-   "data": "2026-10-23T18:01:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attacco al checkpoint di Hebron, Netanyahu chiude la Cisgiordania",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/attacco-al-check-point-israeliano-a-hebron-morti-due-soldati-feriti.-netanyahu_9ba2138b-09b6-4e76-8477-6a022b91575a.html"
-  },
-  {
-   "data": "2026-10-23T17:59:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "A 'Malavia' il premio Save the Children 'Ciak per i diritti dell’infanzia'",
-   "url": "https://www.ansa.it/sito/notizie/speciali/festa-del-cinema-di-roma-/2026/10/23/a-malavia-il-premio-save-the-children-ciak-per-i-diritti-dellinfanzia_043731fd-869c-453e-a039-88a64151805b.html"
-  },
-  {
-   "data": "2026-10-23T17:54:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "David Rossi, Giletti: \"L'Italia è un Paese di misteri, servono inchieste coraggiose\"",
-   "url": "https://www.adnkronos.com/cronaca/david-rossi-massimo-giletti-oggi_7dhMfu4Qr50s4xVg6WiatC"
-  },
-  {
-   "data": "2026-10-23T17:42:26+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Incidente in Turchia, colpita dal macchinario per il posizionamento dei birilli: muore dipendente 28enne di una sala bowling",
-   "url": "https://www.adnkronos.com/internazionale/esteri/morta-28-anni-dipendente-sala-bowling-macchinario-birilli_5XOrcSWBuo5TbTPEAFOEUD"
-  },
-  {
-   "data": "2026-10-23T17:35:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il calendario Pirelli 2027 per la prima volta in India e fuori dai cliché / LA GALLERY",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/10/23/il-calendario-pirelli-2027-per-la-prima-volta-in-india-e-fuori-dai-cliche_3d30fb1a-ab02-4a7b-9b5d-df73b17b92a2.html"
-  },
-  {
-   "data": "2026-10-23T17:30:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Innovazione, a Maker Faire Mit Technology Review Italia presenta Innovators Under 35 Eu",
-   "url": "https://www.adnkronos.com/economia/innovazione-a-maker-faire-mit-technology-review-italia-presenta-innovators-under-35-eu_6WMwtu5nO7IRb7H9QGmbEo"
-  },
-  {
-   "data": "2026-10-23T17:23:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tumori, in Italia servono 15 mesi per accedere a nuove terapie",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/focus_tumore/2026/10/23/ansatumori-in-italia-servono-15-mesi-per-accedere-a-nuove-terapie_dab917e2-687b-4bc8-9e07-050b980d7ba8.html"
-  },
-  {
-   "data": "2026-10-23T17:10:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'allarme del governo britannico, 'fate tre giorni di scorte'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/lallarme-del-governo-britannico-fate-tre-giorni-di-scorte_66f88aae-f438-459b-99a1-44e02c2ed966.html"
   }
  ]
 }
