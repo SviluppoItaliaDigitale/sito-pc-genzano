@@ -62,6 +62,26 @@ Per un blocco specifico usa `page.locator("<selettore>").screenshot(...)`. Per l
 
 Confronta con la versione precedente quando esiste (`git stash` / checkout del commit precedente su un secondo server alla porta 1315) e descrivi la differenza.
 
+### 2-ter. Lo sguardo d'insieme (pagine nuove, hub, home, dossier, landing)
+
+I difetti di § 2 si trovano per elemento; quelli di composizione solo guardando la pagina intera. Su ogni pagina nuova o ridisegnata fai queste passate **sugli screenshot, mai sul codice**, una alla volta, prima desktop e poi mobile:
+
+1. **Un secondo, poi cinque.** Che cosa si vede per primo? Deve esserci una risposta sola. In cinque secondi uno sconosciuto deve capire che pagina è, per chi è e che cosa fare (in emergenza: il 112 e il gesto da compiere).
+2. **Occhi socchiusi.** La pagina si riduce a due o tre masse di dimensioni diverse? Tante masse piccole e simili vuol dire che niente guida.
+3. **Bordi.** Segui il margine sinistro dei blocchi di testo: due o tre allineamenti ripetuti sono una composizione, sei sono elementi messi uno per volta.
+4. **Spazio.** Le cose collegate sono vicine e quelle diverse lontane? Lo stacco fra sezioni è più grande di quelli interni? C'è un buco per caso (una colonna corta, una decorazione tolta), margini destro e sinistro diversi, una sezione con il testo in metà schermo e l'altra metà vuota, un vuoto più alto di mezzo schermo?
+5. **Testo.** Salto netto fra corpo e titolo, non più di cinque o sei dimensioni, nessun titolo con una parola sola sull'ultima riga, righe non oltre circa 75 caratteri, niente testo centrato oltre tre righe.
+6. **Colore.** Quale colore occupa più superficie, quale accompagna, dove sta l'accento? Un accento in dieci punti non dice più nulla; il rosso resta per allerta, emergenza e 112.
+7. **Immagini.** Ognuna fa un lavoro (mostra il fatto, il luogo, la prova)? Tagli coerenti, nessuna foto stirata, nessun riquadro grigio al posto di un'immagine.
+8. **Ripetizione.** Una parola per la disposizione di ogni sezione (divisa, elenco, griglia, a tutta larghezza…): la stessa parola tre volte di fila è il modello che si vede.
+9. **Telefono.** La schermata a 375 è una composizione sua o la pagina desktop schiacciata? Una riga che scorre di lato si legge come tagliata.
+10. **Sostanza.** Ogni sezione dà la sua informazione intera e leggibile? Chi arriva esce sapendo ciò che cercava? L'azione principale è un pulsante vero nella prima schermata?
+11. **Sovrapposizioni.** Qualcosa copre un titolo, un testo o un pulsante a qualche punto dello scorrimento (pulsanti flottanti, barra in basso, banner)?
+
+Scrivi i rilievi come li direbbe un grafico a un collega, con lo screenshot in cui si vedono e la correzione: «il paragrafo parte 40 px a sinistra del titolo», «terza sezione divisa di fila», non «potrebbe essere più curata». Correggi in quest'ordine, perché i dettagli non salvano una gerarchia sbagliata: gerarchia (una cosa dominante per schermata), composizione (allineamenti, spazi, varietà), testo, immagini, colore, dettagli, movimento. Se togliere un elemento lascia un buco, non riempirlo con una decorazione: chiudi lo spazio o ingrandisci ciò che resta. Al massimo tre giri (guarda → correggi i tre problemi più visibili → nuovo screenshot); se dopo il terzo restano problemi, scrivili nel rapporto.
+
+Questo è un sito della PA: i componenti di Bootstrap Italia (card, callout, stepper numerato, accordion, badge) e la struttura fissa delle pagine rischio **non** sono difetti da togliere. Le passate valutano come sono composti, non se esistono. Le passate vengono dal riferimento di critica del progetto `taste-skill` v2 (Leonxlnx, licenza MIT), adattate al sito il 23/10/2026; il testo della licenza, che va insieme alle parti adattate, è in `.claude/skills/landing-premium/references/LICENZA-taste-skill.txt`.
+
 ### 2-bis. Il conteggio dei fogli lo fa lo script
 
 Lo screenshot in stampa mostra come appare il foglio; il **numero di fogli** e i fogli bianchi li misura `scripts/check-fogli-stampa.py`, che stampa con Chromium in A4 (`media=print`) e blocca un foglio bianco in qualunque posizione e, nelle schede, nei kit e nelle storie, il foglio quasi vuoto in qualunque posizione, con tre serie di caratteri per pagina e, per le schede, anche dentro i pacchetti «Stampa tutto» (dal 22/10/2026, rule 09 § 15-ter h). Dopo la build in `public/`: `python3 scripts/check-fogli-stampa.py --da-git origin/main` per le sole pagine toccate (è ciò che fa `validate-pr.yml` sulle PR), `python3 scripts/check-fogli-stampa.py` per tutte (lo fa `controllo-fogli-stampa.yml` ogni lunedì). Quando tocchi una scheda, una storia o il CSS di stampa, eseguilo e riporta l'esito nella riga «Stampa A4».
