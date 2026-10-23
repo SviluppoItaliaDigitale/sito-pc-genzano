@@ -5,11 +5,53 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-22T22:38:27+00:00",
+  "generato": "2026-10-23T05:49:05+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-23T05:37:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ora solare 2026, lancette indietro di un'ora tra sabato e domenica: cosa fare e i consigli degli esperti",
+   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-data-lancette-consigli_Y0uMKbMLUQscJdmRlOBM3"
+  },
+  {
+   "data": "2026-10-23T05:36:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "C'era una volta il furgone, oggi c'è l'offerta Toyota",
+   "url": "https://www.ansa.it/native/ansacom/2026/10/23/cera-una-volta-il-furgone-oggi-ce-lofferta-toyota_a4544187-8d38-4f7f-a2a5-7e3fd1c549a3.html"
+  },
+  {
+   "data": "2026-10-23T05:30:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Trenta giovani perquisiti a Como, si indaga per istigazione al saccheggio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/trenta-giovani-perquisiti-a-como-si-indaga-per-istigazione-al-saccheggio_c2fa35ab-2fe5-4c25-85ae-1c73f3ba723b.html"
+  },
+  {
+   "data": "2026-10-23T05:18:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Terremoto in Tibet, almeno 16 morti e 46 feriti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/terremoto-in-tibet-almeno-16-morti-e-46-feriti_3ea4cb1d-2c68-4bd5-997c-15f885f93a48.html"
+  },
+  {
+   "data": "2026-10-23T05:18:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zucca e semi di zucca: il lato sorprendente (e sano) di Halloween",
+   "url": "https://www.adnkronos.com/salute/zucca-semi-halloween-segreto-benefici_6duePzawtWekYWpKjfS3SA"
+  },
+  {
+   "data": "2026-10-23T05:13:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lula e Bolsonaro testa a testa al 50%",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/lula-e-bolsonaro-testa-a-testa-al-50_e48aeee5-07b9-46e3-8103-2f6d8fa57d3d.html"
+  },
+  {
+   "data": "2026-10-23T04:57:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "15 anni senza Marco Simoncelli: il Sic vive ancora nel cuore dei tifosi",
+   "url": "https://www.adnkronos.com/sport/marco-simoncelli-il-ricodo-a-15-anni-dalla-scomparsa_4ESMY8QB8yczSgmZ6HxhZB"
+  },
   {
    "data": "2026-10-22T22:05:14+00:00",
    "fonte": "ADNKRONOS",
@@ -119,18 +161,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/22/mattarella-ha-firmato-il-decreto-sicurezza.-salvini-i-militari-a-milano-potranno-intervenire-con_eed9a37d-fa53-4efa-98f1-c14afc9e3317.html"
   },
   {
-   "data": "2026-10-22T19:36:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giudice ordina a Trump di deporre entro l'11 dicembre nella causa contro la Bbc",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/22/giudice-ordina-a-trump-di-deporre-entro-l11-dicembre-nella-causa-contro_f0322f7a-c3d4-4164-b247-196a3f5f12dc.html"
-  },
-  {
-   "data": "2026-10-22T19:32:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto oggi 22 ottobre, centrato un 5 da 162mila euro: la combinazione vincente",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-numeri-vincenti-22-ottobre_6k1gTBDpj3JNeZzefAKYlK"
-  },
-  {
    "data": "2026-10-22T19:25:34+00:00",
    "fonte": "ANSA",
    "titolo": "Il Governo stringe sulla manovra. Si punta sui giovani, chance per l'Irpef",
@@ -143,12 +173,6 @@
    "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/10/22/migliorano-liste-dattesa-ma-4-milioni-di-visite-ed-esami-in-ritardo_dbb3d2bb-632b-4e3a-8663-0246e3bf9bde.html"
   },
   {
-   "data": "2026-10-22T19:23:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Putin: \"Accordo possibile, Russia non vuole la guerra\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-putin-zelensky-accordo_4i8870decmcCESNsxz9l6k"
-  },
-  {
    "data": "2026-10-22T19:22:47+00:00",
    "fonte": "ANSA",
    "titolo": "Francia: la stretta di Macron, a Parigi i gilet gialli solo con il corteo sindacale",
@@ -156,7 +180,7 @@
   },
   {
    "data": "2026-10-22T19:22:20+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "A Ferrara il 'nucleo anti maranza', plaude Salvini",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/22/a-ferrara-il-nucleo-anti-maranza-plaude-salvini_40b1c126-b6db-4074-8708-5d561c1b0507.html"
   },
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Il premio Sacharov alla Cpi, schiaffo dell'Eurocamera a Trump",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/22/il-premio-sacharov-alla-cpi-schiaffo-delleurocamera-a-trump-_fe883eb5-a5e3-4830-8de9-cfae8a07ce89.html"
-  },
-  {
-   "data": "2026-10-22T19:18:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Brasile: tra Lula e Bolsonaro ultime scintille prima del duello tv decisivo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/10/22/brasile-tra-lula-e-bolsonaro-ultime-scintille-prima-del-duello-tv-decisivo_c55bee45-bc93-444c-912f-9370c6d49874.html"
-  },
-  {
-   "data": "2026-10-22T19:17:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il movimento studentesco converge su Belgrado e lancia la sfida a Vucic",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/22/il-movimento-studentesco-converge-su-belgrado-e-lancia-la-sfida-a-vucic_d8126705-a2ba-4af3-a301-8e49118dd6a9.html"
-  },
-  {
-   "data": "2026-10-22T19:14:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli Usa e Israele pronti ad attaccare l'Iran dopo le midterm",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/22/gli-usa-e-israele-pronti-ad-attaccare-liran-dopo-le-midterm_cf59f0ea-672b-41c6-a950-daa0e6e7cd4d.html"
-  },
-  {
-   "data": "2026-10-22T19:09:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fermate altre attiviste italiane, la Farnesina chiede chiarimenti a Israele",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/22/fermate-altre-attiviste-italiane-la-farnesina-chiede-chiarimenti-a-israele_b15e583e-19cd-4d3a-89f0-687591972967.html"
   }
  ]
 }
