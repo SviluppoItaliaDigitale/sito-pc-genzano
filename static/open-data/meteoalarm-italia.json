@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-10-23T15:46:03+00:00",
+  "generato": "2026-10-23T19:34:03+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 14,
-  "scaduti_scartati": 52,
+  "avvisi": 11,
+  "scaduti_scartati": 55,
   "in_corso": 4,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -37,19 +37,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-23T12:00:00+00:00",
-   "fine": "2026-10-23T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.021"
-  },
-  {
-   "in_corso": false,
    "regione": "Friuli Venezia Giulia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -60,19 +47,6 @@
    "fine": "2026-10-24T17:59:00+00:00",
    "emesso": "2026-10-23T08:27:57+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261023102757.019"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-23T12:00:00+00:00",
-   "fine": "2026-10-23T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.022"
   },
   {
    "in_corso": false,
@@ -101,7 +75,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261023102757.018"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -154,19 +128,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-23T12:00:00+00:00",
-   "fine": "2026-10-23T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.023"
-  },
-  {
-   "in_corso": false,
    "regione": "Valle d'Aosta",
    "fenomeno": "Vento",
    "livello": "gialla",
