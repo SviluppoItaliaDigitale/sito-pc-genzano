@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-23T11:10:50+00:00",
+  "generato": "2026-10-23T15:45:33+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-23T11:05:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Terza forte scossa di terremoto in Sicilia, magnitudo 5.0",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/terza-forte-scossa-di-terremoto-in-sicilia-magnitudo-5.0_81346d86-485c-4b00-88cd-aadc8e45e917.html"
-  },
-  {
-   "data": "2026-10-23T11:05:05+00:00",
+   "data": "2026-10-23T15:34:37+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Lazio, Aurigemma: \"Regione punto di riferimento per dialogo con istituzioni estere\"",
-   "url": "https://www.adnkronos.com/cronaca/lazio-aurigemma-regione-punto-di-riferimento-per-dialogo-con-istituzioni-estere_36mt0ldQpkSq2vtY3kD3Rq"
+   "titolo": "T3 Expo e Agv Expo, seconda giornata su decarbonizzazione e automazione",
+   "url": "https://www.adnkronos.com/economia/t3-expo-e-agv-expo-seconda-giornata-su-decarbonizzazione-e-automazione_3Wn5RBbQekIXUDcIZDjsag"
   },
   {
-   "data": "2026-10-23T11:03:48+00:00",
+   "data": "2026-10-23T15:30:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Freida Pinto, 'troppi cliché sulle donne, basta ricerca di perfezione'",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/people/2026/10/23/freida-pinto-troppi-cliche-sulle-donne-basta-ricerca-di-perfezione_a4ce73d3-cb98-47f1-9e47-0cb4df9ad10d.html"
+  },
+  {
+   "data": "2026-10-23T15:29:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, cade da tetto mentre tenta furto in un capannone: muore 24enne",
+   "url": "https://www.adnkronos.com/cronaca/ciampino-rom-morto-tetto-capannone-furto_qOgtIdQxaL3Shm8axlaAs"
+  },
+  {
+   "data": "2026-10-23T15:23:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Monreale è la Capitale italiana del libro 2027",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/10/23/monreale-e-la-capitale-italiana-del-libro-2027_18ec048f-c3f9-4766-a58a-74d6e19f42ba.html"
+  },
+  {
+   "data": "2026-10-23T15:23:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Terremoto in Sicilia, una serie di scosse, la più forte di magnitudo 5.5: scuole e uffici evacuati",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/terremoto-in-sicilia-una-serie-di-scosse-la-piu-forte-di-magnitudo-5.5-scuole_81346d86-485c-4b00-88cd-aadc8e45e917.html"
+  },
+  {
+   "data": "2026-10-23T15:18:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "LeBron James replica a Trump dopo le polemiche sull’inno americano: \"Poche notizie in redazione\"",
+   "url": "https://www.adnkronos.com/sport/james-trump-truth-nba_1sUo72v8R0P6lGv6gVat5W"
+  },
+  {
+   "data": "2026-10-23T15:16:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Morto lo scrittore giapponese Ryu Murakami, esplorava il lato oscuro della società",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/10/23/morto-lo-scrittore-giapponese-ryu-murakami_088b5ac9-b7c6-40a8-b1be-197d42519bf9.html"
+  },
+  {
+   "data": "2026-10-23T15:15:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lusetti (Confcommercio): \"Contratti pirata corsa al ribasso\"",
+   "url": "https://www.adnkronos.com/economia/lusetti-confcommercio-contratti-pirata-corsa-al-ribasso_2HQRaV8Pp224MQFnskBLLK"
+  },
+  {
+   "data": "2026-10-23T15:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Stoppani (Fipe): \"I giovani cercano equilibrio, stabilità e giusta retribuzione\"",
+   "url": "https://www.adnkronos.com/economia/stoppani-fipe-i-giovani-cercano-equilibrio-stabilita-e-giusta-retribuzione_1jREXjCjxqd3XPqoDSmG6U"
+  },
+  {
+   "data": "2026-10-23T15:12:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, il dramma di Oleshky: l'inferno in terra sulla linea del fronte",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-oleshky-inferno_78ZNehbq4oDi6UO8fcEDpd"
+  },
+  {
+   "data": "2026-10-23T15:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Orlandi (Aigrim-Fipe): \"40% forza lavoro è under 30, il problema è trattenerli\"",
+   "url": "https://www.adnkronos.com/economia/orlandi-aigrim-fipe-40-forza-lavoro-e-under-30-il-problema-e-trattenerli_6L6nQ6D0x6jSFsjxVpUiH2"
+  },
+  {
+   "data": "2026-10-23T15:04:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Casa Bianca: 'Melania Trump ottiene una tregua fra Russia e Ucraina a Oleshky'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/casa-bianca-melania-trump-ottiene-una-tregua-fra-russia-e-ucraina_7390536b-7182-49ea-b68f-2faba023bbb2.html"
+  },
+  {
+   "data": "2026-10-23T15:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto in Sicilia, solo oggi 42 scosse nel Mar Tirreno Meridionale. L'Ingv: \"Zona dalla pericolosità sismica alta\"",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-sicilia-palermo-sciame-sismico-42-scosse-cosa-sappiamo_2KQCNlX396gumRYBqS94Kb"
+  },
+  {
+   "data": "2026-10-23T15:02:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sferetta metallica nel tiramisù, maxi richiamo alimentare: i lotti interessati",
+   "url": "https://www.adnkronos.com/cronaca/sfera-acciaio-tiramisu-richiamo_5E24BWPALiqxaczgKqbzU0"
+  },
+  {
+   "data": "2026-10-23T15:02:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'architetta che progetta l'ospedale in Sudan seguendo il vento",
+   "url": "https://www.ansa.it/umbria/notizie/2026/10/23/larchitetta-che-progetta-lospedale-in-sudan-seguendo-il-vento_d3b07dc3-75b6-43a7-b849-a984ae83c1b7.html"
+  },
+  {
+   "data": "2026-10-23T14:54:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Violenta rissa tra algerini e afghani al Cas di Monastir, un arresto",
+   "url": "https://www.adnkronos.com/cronaca/monastir-arresto-cas-rissa_ucqnx7HpzOhsTp09fuvD9"
+  },
+  {
+   "data": "2026-10-23T14:44:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dall'IA alla robotica, oltre 400 i progetti della Maker Faire Rome",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/10/23/dallia-alla-robotica-oltre-400-i-progetti-della-maker-faire-rome_ae590173-2c8a-4caf-935a-53fd163a5ac0.html"
+  },
+  {
+   "data": "2026-10-23T14:41:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manuel Agnelli al Premio Tenco: \"La nuova generazione ci assomiglia, ma rubare scarpe rovina la protesta\"",
+   "url": "https://www.adnkronos.com/spettacoli/manuel-agnelli-cortei-proteste-premio-tenco_7uHrZh09ihun9LjxmEH4c4"
+  },
+  {
+   "data": "2026-10-23T14:36:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manifestazioni 24 ottobre, Movimento 17 ottobre cambia le piazze: \"Le diremo all'ultimo\". Allerta in diverse città",
+   "url": "https://www.adnkronos.com/cronaca/manifestazioni-24-ottobre-allerta-movimento-17-ottobre-piazze_1IQJZxHwCpICVxnasKujaL"
+  },
+  {
+   "data": "2026-10-23T14:26:21+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Paura a Milano tra i negozianti. Sala: 'Non guasterebbe più vicinanza istituzionale dalla premier'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/paura-a-milano-tra-i-negozianti-alcuni-domani-terranno-chiuso_6ba38369-9e11-4553-824b-24656589fb58.html"
+   "titolo": "Studiare il clima attraverso il benessere delle persone, progetto di UniTo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/studiare-il-clima-attraverso-il-benessere-delle-persone-progetto-di-unito_339dd1ce-ff76-4477-a01a-93893eb02813.html"
   },
   {
-   "data": "2026-10-23T11:01:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ascolti tv 22 ottobre, 'Doc – Nelle Tue Mani 4' su Rai1 vince con 23,5%. 'Affari tuoi' batte 'La Ruota della Fortuna'",
-   "url": "https://www.adnkronos.com/spettacoli/ascolti-tv-22-ottobre-doc-nelle-tue-mani-affari-tuoi_3VqVECkFNT4TVrHnXvd0fq"
-  },
-  {
-   "data": "2026-10-23T11:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pievani (UniMi): \"Con patogeni giocare d’anticipo e ridurre capacità diffusione\"",
-   "url": "https://www.adnkronos.com/cronaca/pievani-unimi-con-patogeni-giocare-danticipo-e-ridurre-capacita-diffusione_23AmlTM5O3jOxR9zE1ynUH"
-  },
-  {
-   "data": "2026-10-23T10:59:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scontri del 17 e 18 ottobre, perquisizioni della Digos in diciotto città",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/scontri-del-17-e-18-ottobre-perquisizioni-della-digos-in-diverse-citta_c576aa3c-07aa-4c48-838f-2ac212b76996.html"
-  },
-  {
-   "data": "2026-10-23T10:58:42+00:00",
+   "data": "2026-10-23T14:25:38+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Scontri del 17 e 18 ottobre, identificati a Bergamo 350 giovani",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/scontri-del-17-e-18-ottobre-identificati-a-bergamo-350-giovani_7038b8d5-396e-4244-acc8-e6c48d5b6897.html"
+   "titolo": "'Aggrediamo stranieri e maranza', la polizia scopre chat razzista",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/aggrediamo-stranieri-e-maranza-la-polizia-scopre-chat-razzista_848b6336-4ed7-48da-a8fb-5d431fd302b2.html"
   },
   {
-   "data": "2026-10-23T10:57:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumori, in Europa mortalità maschile in calo del 7,8%: in Italia 15 mesi per le nuove terapie",
-   "url": "https://www.adnkronos.com/cronaca/tumori-in-europa-mortalita-maschile-in-calo-del-7-8-in-italia-15-mesi-per-le-nuove-terapie_644ngfDV5sTPZ5C1rf3WzZ"
+   "data": "2026-10-23T14:25:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gino Cecchettin: 'Raccontare la storia di Giulia può aprire un percorso di salvezza'",
+   "url": "https://www.ansa.it/donne/videogallery/2026/10/23/gino-cecchettin-raccontare-la-storia-di-giulia-puo-aprire-un-percorso-di-salvezza_387adbc7-a1d1-4452-b29b-230644fbf249.html"
   },
   {
-   "data": "2026-10-23T10:56:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Toni Capuozzo rivela: \"Ho un tumore, proverò ad affrontarlo\"",
-   "url": "https://www.adnkronos.com/spettacoli/toni-capuozzo-tumore-annuncio-giornalista_11FxSJgPfptdJYSqd6euoc"
+   "data": "2026-10-23T14:21:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Ucraina punta a una rete satellitare propria dopo i guai con Starlink",
+   "url": "https://www.ansa.it/canale_scienza/notizie/ricerca_istituzioni/2026/10/23/lucraina-punta-a-una-rete-satellitare-propria-dopo-i-guai-con-starlink_d9835346-bc91-4cfa-9a38-1ccbc23d6063.html"
   },
   {
-   "data": "2026-10-23T10:56:24+00:00",
+   "data": "2026-10-23T14:16:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco al check point israeliano a Hebron, morti due soldati feriti. Netanyahu annuncia la 'chiusura' della Cisgiordania",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/attacco-al-check-point-israeliano-a-hebron-morti-due-soldati-feriti.-netanyahu_9ba2138b-09b6-4e76-8477-6a022b91575a.html"
+  },
+  {
+   "data": "2026-10-23T14:16:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Le attiviste italiane fermate in Cisgiordania potrebbero essere espulse già oggi'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/le-attiviste-italiane-fermate-in-cisgiordania-potrebbero-essere-espulse-gia-oggi_9b783e6a-ae93-41de-ab9b-63414f183e13.html"
+  },
+  {
+   "data": "2026-10-23T14:12:14+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Garante, 'detenuto di 54 anni suicida nel carcere di Poggioreale a Napoli'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/garante-detenuto-di-54-anni-suicida-nel-carcere-di-poggioreale-a-napoli_13d64962-029e-498f-af48-d167627deaa0.html"
+   "titolo": "Paolo Fresu, 'i giovani vanno ascoltati, li incontrerò nei licei a Bologna'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/paolo-fresu-i-giovani-vanno-ascoltati-li-incontrero-nei-licei-a-bologna_2e664d3e-5c31-4a35-824c-8cb3ccecc3d7.html"
   },
   {
-   "data": "2026-10-23T10:53:41+00:00",
+   "data": "2026-10-23T13:55:04+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Uccide la fidanzata, difesa 'la compagna voleva colpirlo con un coltello'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/uccide-la-fidanzata-difesa-la-compagna-voleva-colpirlo-con-un-coltello_f547d590-09ef-410e-a529-0f92e9c37475.html"
+   "titolo": "Uccide la madre in Slovenia e dà fuoco alla casa, arrestato in Friuli",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/uccide-la-madre-in-slovenia-e-da-fuoco-alla-casa-arrestato-in-friuli_02e51497-f146-418c-a23c-4b62a701bb0a.html"
   },
   {
-   "data": "2026-10-23T10:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Carburanti, Pichetto: \"Massima attenzione, altri interventi se ci sarà disponibilità\"",
-   "url": "https://www.adnkronos.com/economia/carburanti-pichetto-massima-attenzione-altri-interventi-se-ci-sara-disponibilita_3ghY4MzbC6HVARiq2uN564"
-  },
-  {
-   "data": "2026-10-23T10:49:16+00:00",
+   "data": "2026-10-23T13:50:47+00:00",
    "fonte": "ANSA",
-   "titolo": "'Meloni nella rosa dei 5 candidati europei per negoziare con Putin'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/meloni-nella-rosa-dei-5-candidati-europei-per-negoziare-con-putin_c6ee9b4d-28eb-4187-9c9c-fa0ee01550d0.html"
+   "titolo": "Movimento 17 ottobre: 'Domani in altre piazze, le diremo all'ultimo'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/movimento-17-ottobre-domani-in-altre-piazze-le-diremo-allultimo_56996a1f-2ff3-42af-a212-a36e9eaf0944.html"
   },
   {
-   "data": "2026-10-23T10:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dalla strada al mare, anestesisti-rianimatori: \"Nelle emergenze i minuti contano\"",
-   "url": "https://www.adnkronos.com/cronaca/dalla-strada-al-mare-anestesisti-rianimatori-nelle-emergenze-i-minuti-contano_3awRm04PApykwlPA1q5tFt"
-  },
-  {
-   "data": "2026-10-23T10:41:14+00:00",
+   "data": "2026-10-23T13:21:23+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Segregarono una parente per 20 anni, moglie e marito finiscono in carcere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/segregarono-una-parente-per-20-anni-moglie-e-marito-finiscono-in-carcere_05ebf218-5400-4e97-a405-79f156a9a820.html"
+   "titolo": "Al via in Valle d'Aosta la stagione dello sci, domani apre Cervinia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/al-via-in-valle-daosta-la-stagione-dello-sci-domani-apre-cervinia_3b55aefe-ec41-4b2d-abc9-cb5946ad7135.html"
   },
   {
-   "data": "2026-10-23T10:29:57+00:00",
+   "data": "2026-10-23T13:09:26+00:00",
    "fonte": "ANSA",
-   "titolo": "Torna l'ora solare, 'con quella legale risparmiati 90 milioni di euro'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/torna-lora-solare-con-quella-legale-risparmiati-90-milioni-di-euro_3b0f87be-a16f-4cd2-9b08-287a81c83690.html"
-  },
-  {
-   "data": "2026-10-23T10:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Terremoto in Sicilia, tripla scossa nel mar Tirreno Meridionale: avvertita a Palermo e sulla costa",
-   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-sicilia-palermo-epicentro_6QKC5u8QV4rwVZNcblGBQb"
-  },
-  {
-   "data": "2026-10-23T10:27:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sinner-Cahill, vertice a Montecarlo: così si progetta il futuro del numero 1",
-   "url": "https://www.adnkronos.com/sport/sinner-e-cahill-vertice-a-montecarlo_4Q8VgpWFgHxDHlKUEiAxUg"
-  },
-  {
-   "data": "2026-10-23T10:21:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Al Consiglio Regionale del Lazio incontro con 25 giovani dirigenti Pubblica Amministrazione olandese",
-   "url": "https://www.adnkronos.com/cronaca/al-consiglio-regionale-del-lazio-incontro-con-25-giovani-dirigenti-pubblica-amministrazione-olandese_Cr85UenvaAdHMYNGHnuUA"
-  },
-  {
-   "data": "2026-10-23T10:20:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, Salvo Sottile comunica in tv all'avvocato di Stasi che è stato querelato dall'ex generale Garofano: \"Non mi illuda\"",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-de-rensis-querela-garofano-tv-salvo-sottile_GkOruUeJLsrjC6xnfBs35"
-  },
-  {
-   "data": "2026-10-23T10:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Paggi (Ucbm), \"Scuola dottorato Campus biomedico promuove internazionalizzazione e inter-settorialità\"",
-   "url": "https://www.adnkronos.com/cronaca/paggi-ucbm-scuola-dottorato-campus-biomedico-promuove-internazionalizzazione-e-inter-settorialita_TezktzWfxaRuNuKas2BYo"
-  },
-  {
-   "data": "2026-10-23T10:13:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Valditara: 'Gran parte proteste nelle scuole non ha fondamento razionale'",
-   "url": "https://www.ansa.it/canale_legalita_scuola/notizie/mim/2026/10/22/valditara-gran-parte-proteste-nelle-scuole-non-ha-fondamento-razionale_44fbf609-7712-4f62-a6d3-f3f7651dd3f9.html"
-  },
-  {
-   "data": "2026-10-23T10:12:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rimossi nella notte i blocchi stradali dei tir in Campania. Lunedì protesta taxi a Roma",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/rimossi-nella-notte-i-blocchi-stradali-dei-tir-in-campania_fd94eea8-5def-4c2c-a53e-ef58e99b697f.html"
-  },
-  {
-   "data": "2026-10-23T10:11:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Terremoto in Tibet, almeno 16 morti e 65 feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/terremoto-in-tibet-almeno-16-morti-e-65-feriti_3ea4cb1d-2c68-4bd5-997c-15f885f93a48.html"
-  },
-  {
-   "data": "2026-10-23T10:08:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attacco al check point israeliano, 5 feriti. Netanyahu annuncia la 'chiusura totale' della Cisgiordania",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/attacco-al-check-point-israeliano-5-feriti.-netanyahu-annuncia-la-chiusura-totale-della_9ba2138b-09b6-4e76-8477-6a022b91575a.html"
-  },
-  {
-   "data": "2026-10-23T10:07:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "La protesta dei pescatori nel Foggiano: “Il caro gasolio ci sta mettendo in ginocchio”",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/23/la-protesta-dei-pescatori-nel-foggiano-il-caro-gasolio-ci-sta-mettendo-in-ginocchio_2da6d1e8-4b64-4c5a-8636-8b2c726b8b27.html"
-  },
-  {
-   "data": "2026-10-23T10:04:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Paura a Milano tra i negozianti, alcuni domani terranno chiuso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/paura-a-milano-tra-i-negozianti-alcuni-domani-terranno-chiuso_c0f6e0c0-d30b-426c-9373-36128ff46e4c.html"
-  },
-  {
-   "data": "2026-10-23T09:58:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Uccide la fidanzata vicino a Varese e si costituisce in Abruzzo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/uccide-la-fidanzata-vicino-a-varese-e-si-costituisce-in-abruzzo_d59f3266-b325-4df0-9380-98ea552c009d.html"
-  },
-  {
-   "data": "2026-10-23T09:54:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uccide la fidanzata vicino a Varese e si costituisce in Abruzzo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/uccide-la-fidanzata-vicino-a-varese-e-si-costituisce-in-abruzzo_787e5b3a-78d6-46e8-ba54-96c4a3fa7a87.html"
-  },
-  {
-   "data": "2026-10-23T09:54:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Napoli autocisterne riforniscono i distributori di carburante",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/a-napoli-autocisterne-riforniscono-i-distributori-di-carburante_db9690c3-2e1a-49aa-8cdf-c4fe89b7181a.html"
+   "titolo": "Torna 'Street for kids', la colorata protesta per le strade scolastiche sicure",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/torna-street-for-kids-la-colorata-protesta-per-le-strade-scolastiche-sicure_45154838-4416-433c-b961-08f711bee5a7.html"
   }
  ]
 }
