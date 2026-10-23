@@ -44,7 +44,7 @@
       title: 'Non camminare nell’acqua alta',
       desc: 'Restare al riparo, non attraversare strade allagate.',
       correct: 'water',
-      feedback: 'In alluvione l’acqua corrente è pericolosa: anche 30 cm bastano a trascinare via una persona. In incendio non c’entra: la regola è uscire.'
+      feedback: 'In alluvione l’acqua corrente è pericolosa: bastano 15 cm d’acqua che corre per far cadere una persona. In incendio non c’entra: la regola è uscire.'
     },
     {
       icon: '🔌',

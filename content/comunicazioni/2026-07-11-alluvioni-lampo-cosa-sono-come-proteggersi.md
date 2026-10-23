@@ -84,7 +84,7 @@ Può piovere in una zona e alluvionare in un'altra se il bacino è impermeabile.
    - **Esci subito** dall'auto se il livello sale.
    - **Rompi un finestrino** se le porte sono bloccate dalla pressione dell'acqua.
    - **Abbandona l'auto** spostandoti verso una zona non sommersa.
-3. **Ricorda**: bastano 15 cm di acqua in movimento per spostare un'automobile.
+3. **Ricorda**: bastano 30 cm di acqua in movimento per portare via un'automobile.
 
 ### A piedi
 1. **Evita** di attraversare acque in movimento.

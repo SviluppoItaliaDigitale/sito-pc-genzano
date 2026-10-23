@@ -70,7 +70,7 @@ Le regole base, anche per il rischio alluvionale di pianura:
 
 1. **Conoscere se la propria casa è in zona alluvionabile**: la mappa è pubblica sulla pagina ISPRA "[ItaliaSicura](https://italiasicura.governo.it/)" o sui portali delle Autorità di bacino regionali.
 2. **In caso di allerta arancione/rossa**: spostare beni di valore ai piani alti, preparare il [kit di emergenza](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/), tenere il telefono carico, non scendere in scantinati o garage.
-3. **Durante l'alluvione**: salire ai piani alti, non camminare nell'acqua corrente (anche 30 cm bastano a trascinare via una persona — e in pianura l'acqua è spesso opaca e nasconde tombini aperti, fili scoperti, mobili galleggianti), aspettare i soccorsi.
+3. **Durante l'alluvione**: salire ai piani alti, non camminare nell'acqua corrente (bastano 15 cm d'acqua che corre per far cadere una persona — e in pianura l'acqua è spesso opaca e nasconde tombini aperti, fili scoperti, mobili galleggianti), aspettare i soccorsi.
 4. **Dopo l'alluvione**: non rientrare prima del nullaosta delle autorità, non bere l'acqua del rubinetto fino a quando non viene certificata sicura, vaccinarsi contro il tetano se ci si ferisce.
 
 Il [piano familiare di emergenza](/piano-familiare/) è uno strumento concreto per prepararsi a scenari come questo.

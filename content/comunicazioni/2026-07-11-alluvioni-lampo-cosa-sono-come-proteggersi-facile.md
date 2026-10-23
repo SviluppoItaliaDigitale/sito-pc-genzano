@@ -75,7 +75,7 @@ Se l'acqua sale dentro l'auto:
 - Rompi un finestrino se la porta non si apre.
 - Vai verso un posto asciutto.
 
-Ricorda: bastano 15 centimetri d'acqua per muovere un'auto.
+Ricorda: bastano 30 centimetri d'acqua per muovere un'auto.
 
 ## Cosa fare se sei a piedi
 

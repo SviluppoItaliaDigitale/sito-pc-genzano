@@ -475,3 +475,26 @@ dati:
         perche: "La richiesta di una valutazione non va subordinata all'attesa di queste soglie."
       - regex: 'Reazioni\s+che\s+durano\s+alcuni\s+giorni\s+sono\s+normali\s+e\s+si\s+risolvono\s+da\s+sole'
         perche: "Le reazioni e i tempi variano: non garantire una risoluzione spontanea per tutti."
+
+  - id: acqua-corrente-persone-auto
+    dato: "Quanta acqua in movimento basta a far cadere una persona o a portare via un'auto"
+    valore: "circa 15 cm fanno cadere un adulto; circa 30 cm portano via la maggior parte delle auto; circa 60 cm anche fuoristrada e furgoni"
+    fonti:
+      - nome: "National Weather Service, «Turn Around Don't Drown» (6 inches, 12 inches, 2 feet)"
+        url: "https://www.weather.gov/safety/flood-turn-around-dont-drown"
+      - nome: "Dipartimento della Protezione Civile, Io non rischio — Alluvione: «anche pochi centimetri d'acqua potrebbero farti perdere il controllo del veicolo»"
+        url: "https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/"
+    # Nato il 23/10/2026: «15 cm per spostare un'automobile», «30 cm per
+    # trascinare una persona» e «20 cm per trascinare una persona» convivevano
+    # in articoli, kit della primaria e due giochi. I valori si scambiavano.
+    vietati:
+      - regex: '\b(?:1[05]|20)\s*(?:cm|centimetri)\b[^.\n<]{0,60}?(?:automobil|\bauto\b|macchin|veicol)'
+        perche: "Per portare via un'auto servono circa 30 cm d'acqua in corsa (NWS); 15-20 cm sono la soglia per una persona."
+        contesto: 'acqua'
+        finestra: 120
+        stessa_frase: true
+      - regex: '\b(?:30|50)\s*(?:cm|centimetri)\b[^.\n<]{0,60}?(?:una\s+persona|un\s+adulto|un\s+bambino)'
+        perche: "Per far cadere una persona bastano circa 15 cm d'acqua che corre (NWS): 30 cm è la soglia per le auto."
+        contesto: 'acqua'
+        finestra: 120
+        stessa_frase: true
