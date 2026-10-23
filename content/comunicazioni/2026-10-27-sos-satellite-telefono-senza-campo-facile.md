@@ -34,7 +34,7 @@ A volte la chiamata funziona anche senza campo. Usa il satellite solo se la chia
 - **iPhone 14** o più nuovo.
 - **Google Pixel 9** o più nuovo. Il Pixel 9a non va bene.
 
-Sul Pixel deve essere attiva l'app **Messaggi di Google**.
+Sul Pixel, **Messaggi di Google** deve essere l'app che usi di solito per i messaggi. Se usi un'altra app, il satellite non funziona.
 
 Hai un altro telefono? Leggi la guida del tuo telefono.
 
