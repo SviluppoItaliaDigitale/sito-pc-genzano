@@ -166,10 +166,13 @@ RedirectMatch 410 ^/areefiltrate\.html$
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
   # Licenza machine-readable a livello HTTP (15 agosto 2026, aggiornata il
-  # 24 ottobre 2026): completa il JSON-LD di jsonld-copyright.html coprendo
-  # anche le risorse non-HTML (immagini, PDF, video, download) servite da
-  # Aruba. Dal 24/10/2026 il sito è CC BY-NC-SA 4.0 (la stessa licenza dei
-  # pittogrammi ARASAAC). Due eccezioni:
+  # 24 ottobre 2026): completa sulle pagine il JSON-LD di
+  # jsonld-copyright.html, come dicono le note legali («header Link
+  # rel="license" [...] su ogni pagina»). Dal 24/10/2026 i contenuti del
+  # Gruppo sono CC BY-NC-SA 4.0. Tre casi:
+  # - PAGINA_HTML: le pagine (indirizzi che finiscono con / o con .html)
+  #   hanno CC BY-NC-SA 4.0, «salvo diversa indicazione» scritta nella
+  #   pagina stessa (didascalie delle foto di terzi, note sui materiali);
   # - DATI_APERTI: i dati aperti del Gruppo restano CC BY 4.0, perché i dati
   #   di tipo aperto devono poter essere riusati anche per scopi commerciali
   #   (CAD, art. 1, comma 1, lettera l-ter): CSV e JSON di /open-data/, JSON
@@ -177,10 +180,20 @@ RedirectMatch 410 ^/areefiltrate\.html$
   # - DATI_TERZI: le copie dei dati di fonti esterne salvate in /open-data/
   #   (agenzie, GDACS, Copernicus, NASA FIRMS, MeteoAlarm, adsb.lol, DPC,
   #   Natural Earth) hanno la licenza del titolare: nessun header di licenza.
-  # La pagina HTML /open-data/ resta CC BY-NC-SA come il resto del sito.
+  # Immagini, PDF, video, audio, archivi, codice e caratteri NON hanno un
+  # header di licenza: nelle stesse cartelle convivono file nostri e file di
+  # terzi con la loro licenza (foto di Wikimedia e della NASA, immagini
+  # Copernicus dei dossier, carte ECMWF, pittogrammi, loghi esclusi dalla
+  # licenza, librerie di /vendor/, codice EUPL 1.2 dell'Open Kit, atti
+  # ufficiali), e un header uguale per tutti dichiarerebbe una licenza falsa.
+  # La licenza di ogni file è scritta nella pagina che lo pubblica. Rilievo
+  # di revisione del 24/10/2026: l'immagine Copernicus del dossier sul
+  # blackout (CC BY 4.0), Leaflet e il logo del Quality Label uscivano con
+  # l'header CC BY-NC-SA.
+  SetEnvIf Request_URI "(/|\.html)$" PAGINA_HTML
   SetEnvIf Request_URI "^/(open-data/[^/]+\.(csv|json)|stato-del-territorio/index\.json|allerta-cap\.xml|allerta-stato/index\.json)$" DATI_APERTI
   SetEnvIf Request_URI "^/open-data/(copernicus-sentinel[0-9]|dpc-bollettino|ems-attivazioni|gdacs-eventi|incendi-firms|meteoalarm-italia|notizie-agenzie|volo-soccorso|world-countries\.geo)\.json$" DATI_TERZI
-  Header always set Link "<https://creativecommons.org/licenses/by-nc-sa/4.0/>; rel=\"license\"" env=!DATI_APERTI
+  Header always set Link "<https://creativecommons.org/licenses/by-nc-sa/4.0/>; rel=\"license\"" env=PAGINA_HTML
   Header always set Link "<https://creativecommons.org/licenses/by/4.0/>; rel=\"license\"" env=DATI_APERTI
   Header always unset Link env=DATI_TERZI
 
