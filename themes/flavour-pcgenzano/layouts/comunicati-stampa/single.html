@@ -1,0 +1,125 @@
+{{- /* Comunicato stampa (sezione /sala-stampa/comunicati/).
+     A schermo: pagina del sito con testo da leggere o copiare, PDF da
+     scaricare e recapiti. In stampa (e nel PDF che scripts/genera-comunicati-pdf.py
+     ricava da questa pagina): carta intestata con la testata blu del Gruppo,
+     il testo del comunicato, il riquadro delle cifre, i recapiti e la banda
+     delle affiliazioni. Stile in static/css/comunicati-stampa.css, pulsante
+     «Copia il testo» in static/js/comunicati-stampa.js.
+
+     Front matter del comunicato:
+       title, sottotitolo, date, description, luogo
+       pdf:       percorso del PDF in static/ (es. /comunicati/2026/<slug>.pdf)
+       articolo:  articolo del sito da cui nasce il comunicato (facoltativo)
+       cifre, cifre_titolo, cifre_nota: riquadro {{< comunicato-cifre >}}
+     I recapiti vengono da hugo.toml [params] (email, telefono, telefono_tel). */ -}}
+{{ define "main" }}
+{{- $vCss := readFile "themes/flavour-pcgenzano/static/css/comunicati-stampa.css" | hash.FNV32a -}}
+{{- $vJs := readFile "themes/flavour-pcgenzano/static/js/comunicati-stampa.js" | hash.FNV32a -}}
+<link rel="stylesheet" href="{{ "css/comunicati-stampa.css" | relURL }}?v={{ $vCss }}">
+{{- $ente := site.Params.author | default "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" -}}
+{{- $email := site.Params.email -}}
+{{- $tel := strings.TrimPrefix "+39 " (site.Params.telefono | default "") -}}
+{{- $telHref := site.Params.telefono_tel -}}
+{{- $dataLunga := .Date | time.Format ":date_long" -}}
+{{- $pdf := .Params.pdf -}}
+{{- $pdfKB := 0 -}}
+{{- $pdfEsiste := false -}}
+{{- with $pdf -}}
+  {{- $f := printf "static%s" . -}}
+  {{- if fileExists $f -}}
+    {{- $pdfEsiste = true -}}
+    {{- $pdfKB = math.Ceil (div (float (os.Stat $f).Size) 1024.0) -}}
+  {{- end -}}
+{{- end }}
+<div class="page-hero cs-hero">
+  <div class="container">
+    {{/* Testata della carta intestata: compare solo in stampa e nel PDF. */}}
+    <div class="cs-testata cs-solo-stampa">
+      <img class="cs-testata-logo" src="{{ "images/logo-pc-genzano.webp" | relURL }}" width="480" height="480" alt="Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma">
+      <p class="cs-testata-ente"><span class="cs-testata-nome">Protezione Civile</span> <span class="cs-testata-gruppo">Gruppo Comunale Volontari di Genzano di Roma</span></p>
+      <p class="cs-testata-tipo"><span class="cs-testata-etichetta">Comunicato stampa</span> <span class="cs-testata-data">{{ $dataLunga }}</span></p>
+    </div>
+    <nav aria-label="Percorso di navigazione" class="breadcrumb-nav">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        {{- range .Ancestors.Reverse }}{{ if not .IsHome }}
+        <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{- end }}{{ end }}
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1 class="cs-titolo" data-cs-parte>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4 cs-pagina">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="cs-meta">
+        <span class="notizia-data"><i class="bi bi-megaphone" aria-hidden="true"></i> Comunicato stampa</span>
+        <span class="notizia-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ $dataLunga }}</time></span>
+        {{- with .Params.luogo }}
+        <span class="notizia-data"><i class="bi bi-geo-alt" aria-hidden="true"></i> {{ . }}</span>
+        {{- end }}
+      </div>
+
+      {{ with .Params.sottotitolo }}<p class="lead cs-sottotitolo" data-cs-parte>{{ . }}</p>{{ end }}
+
+      <div class="cs-azioni" role="group" aria-label="Scarica o copia il comunicato">
+        {{- if $pdfEsiste }}
+        <a class="btn btn-primary cs-btn" href="{{ strings.TrimPrefix "/" $pdf | relURL }}">
+          <i class="bi bi-file-earmark-pdf me-2" aria-hidden="true"></i>Scarica il comunicato (PDF, {{ printf "%.0f" $pdfKB }} KB)
+        </a>
+        {{- end }}
+        <button type="button" class="btn btn-outline-primary cs-btn" data-cs-copia hidden>
+          <i class="bi bi-clipboard me-2" aria-hidden="true"></i><span data-cs-copia-testo>Copia il testo</span>
+        </button>
+        {{- with .Params.articolo }}
+        <a class="btn btn-outline-primary cs-btn" href="{{ strings.TrimPrefix "/" . | relURL }}">
+          <i class="bi bi-bar-chart-line me-2" aria-hidden="true"></i>Leggi l'articolo con i grafici
+        </a>
+        {{- end }}
+      </div>
+      <p class="visually-hidden" role="status" aria-live="polite" data-cs-stato></p>
+
+      {{- if and (ne .Params.tts false) (gt .WordCount 30) }}
+      <div class="strumenti-articolo strumenti-lettura cs-strumenti" role="region" aria-label="Strumenti di lettura del comunicato">
+        <div class="strumenti-articolo-header">
+          <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+          Leggi questo comunicato in altri modi
+        </div>
+        <div class="strumenti-articolo-body">
+          <span class="reading-time" title="Tempo di lettura stimato (200 parole al minuto)">
+            <i class="bi bi-clock me-1" aria-hidden="true"></i>
+            ~{{ .ReadingTime }} min<span class="visually-hidden"> di lettura stimati</span>
+          </span>
+          {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
+        </div>
+      </div>
+      {{- end }}
+
+      <article class="article-body cs-documento" data-cs-corpo>
+        {{ .Content }}
+      </article>
+
+      <div class="cs-chiusura">
+        <section class="cs-contatti" aria-labelledby="cs-contatti-titolo" data-cs-contatti>
+          <h2 class="cs-contatti-titolo" id="cs-contatti-titolo">Per informazioni</h2>
+          <p>{{ $ente }}</p>
+          <p><a href="mailto:{{ $email }}">{{ $email }}</a> · tel. <a href="tel:{{ $telHref }}">{{ $tel }}</a></p>
+        </section>
+        <div class="cs-affiliazioni cs-solo-stampa">
+          <img src="{{ "images/footer-print-affiliazioni.png" | relURL }}" width="1200" height="140" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL., Federazione Pronto Intervento Volontariato ODV; Servizio Nazionale della Protezione Civile, Volontariato.">
+        </div>
+      </div>
+
+      <aside class="cs-riuso" aria-label="Riuso del comunicato">
+        <p><strong>Per le testate:</strong> questo comunicato si può pubblicare, in tutto o in parte, citando la fonte: «{{ $ente }}». Per ogni altro uso vale la <a href="{{ "note-legali/" | relURL }}#licenza-dei-contenuti">licenza dei contenuti del sito</a>, CC BY-NC-SA 4.0.</p>
+      </aside>
+
+      {{ partial "page-tools.html" . }}
+      {{ partial "torna-indietro.html" . }}
+    </div>
+  </div>
+</div>
+<script src="{{ "js/comunicati-stampa.js" | relURL }}?v={{ $vJs }}" defer></script>
+{{ end }}

@@ -2107,3 +2107,5 @@ previsori
 supercalcolatori
 # --- Note legali 24/10/2026: numerazione degli articoli di legge (art. 70-quater) ---
 quater
+# --- Comunicati stampa 24/10/2026: sigla AIB minuscola nell'indirizzo citato come testo ---
+aib

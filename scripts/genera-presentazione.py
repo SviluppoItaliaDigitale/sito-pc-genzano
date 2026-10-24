@@ -901,11 +901,11 @@ content("I miei contenuti — le pagine che servono, sempre a portata di mano", 
 ], N())
 
 content("Open data, Open Kit e stato del sito", [
-    "Dati aperti riutilizzabili dalla cittadinanza.",
+    "Dati aperti riutilizzabili da chiunque, anche per scopi commerciali (CC BY 4.0).",
     "Open Kit: i componenti del sito, con licenza EUPL 1.2, a disposizione di altri gruppi e Comuni.",
     "Pagina di trasparenza sullo stato tecnico del sito.",
-    "Riuso libero, secondo il principio di trasparenza della PA.",
-], N(), fonti="CC BY 4.0 · EUPL 1.2")
+    "Testi, foto, video, kit e schede riusabili per scopi non commerciali, citando la fonte (CC BY-NC-SA 4.0).",
+], N(), fonti="CC BY-NC-SA 4.0 · CC BY 4.0 per i dati · EUPL 1.2")
 
 content("Metodo editoriale — come scriviamo e verifichiamo", [
     "Fonti ufficiali sempre citate; ogni dato è verificabile da cittadini ed enti.",
@@ -924,7 +924,7 @@ divider("Comunicazione", N())
 content("Comunicazioni e notizie", [
     "Sezione informativa costantemente aggiornata, che distingue informazione, prevenzione, allerta ed emergenza.",
     "Ogni avviso rimanda alla fonte ufficiale di riferimento.",
-    "Sala stampa: contatti, dati, foto, logo e regole di citazione per giornalisti e redazioni.",
+    "Sala stampa: contatti per i giornalisti, comunicati stampa con PDF da scaricare, dati, foto, logo e regole di citazione.",
 ], N())
 
 content("Comunicazione di crisi e social", [

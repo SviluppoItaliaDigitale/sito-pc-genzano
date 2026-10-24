@@ -1,0 +1,502 @@
+/* ══════════════════════════════════════════════════════════
+   COMUNICATI STAMPA v1.0 (24/10/2026)
+   Caricato solo dai layout comunicati-stampa/list.html e single.html.
+   A schermo: pagina del sito (meta, pulsanti, riquadro delle cifre,
+   recapiti, archivio). In stampa: carta intestata del Gruppo, la stessa
+   da cui scripts/genera-comunicati-pdf.py ricava il PDF del comunicato
+   (la cornice di microtesto la aggiunge lo script, come immagine).
+   Le regole di stampa vincono su quelle globali di custom.css perché
+   questo file arriva dopo e usa selettori più specifici.
+   Contrasti calcolati: #003366 su bianco 12,6:1 e su #f2f5f8 11,5:1;
+   #1a1a1a su #f2f5f8 15,9:1; #44515e su #f2f5f8 7,4:1 e su bianco 8,1:1;
+   bianco su #003366 12,6:1.
+   ══════════════════════════════════════════════════════════ */
+
+/* Titillium Web dal repository (vendor di Bootstrap Italia), con un nome
+   proprio: si usa solo in stampa e nel PDF, quindi a schermo il browser non
+   lo scarica e la pagina resta uguale al resto del sito. */
+@font-face {
+  font-family: "Titillium Web Stampa";
+  src: url("../vendor/bootstrap-italia/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: block;
+}
+@font-face {
+  font-family: "Titillium Web Stampa";
+  src: url("../vendor/bootstrap-italia/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: block;
+}
+@font-face {
+  font-family: "Titillium Web Stampa";
+  src: url("../vendor/bootstrap-italia/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: block;
+}
+@font-face {
+  font-family: "Titillium Web Stampa";
+  src: url("../vendor/bootstrap-italia/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: block;
+}
+
+/* Elementi della carta intestata: solo in stampa. */
+.cs-solo-stampa { display: none !important; }
+
+/* ── Pagina del comunicato ── */
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}
+.cs-sottotitolo {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+.cs-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+}
+.cs-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* Paragrafo messo in evidenza (citazione del coordinatore): stesso testo,
+   solo un filetto e un corpo più grande. */
+.cs-documento .cs-evidenza {
+  border-left: 4px solid #003366;
+  padding: 0.25rem 0 0.25rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.12em;
+  line-height: 1.55;
+  color: #003366;
+}
+/* Il 112: filetto rosso (contrasto del filetto su bianco 6,2:1). */
+.cs-documento .cs-112 {
+  border-left: 4px solid #c1121f;
+  padding: 0.15rem 0 0.15rem 1rem;
+  font-weight: 600;
+}
+.cs-documento a { overflow-wrap: anywhere; }
+/* Il primo paragrafo del comunicato non prende lo stile «lede» degli articoli:
+   il sottotitolo sopra fa già da attacco. */
+.cs-documento > p:first-of-type {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* ── Riquadro delle cifre (shortcode comunicato-cifre) ── */
+.cs-cifre {
+  background: #f2f5f8;
+  border: 1px solid #c5d3e3;
+  border-top: 4px solid #003366;
+  border-radius: 4px;
+  padding: 1rem 1.25rem 0.9rem;
+  margin: 1.75rem 0;
+}
+.cs-documento .cs-cifre-titolo,
+.cs-cifre-titolo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #003366;
+  border-left: 0;
+  padding-left: 0;
+  margin: 0 0 0.85rem;
+}
+.cs-cifre-griglia {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem 1.25rem;
+  margin: 0;
+}
+.cs-cifra {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  border-left: 2px solid #c5d3e3;
+  padding-left: 0.65rem;
+  margin: 0;
+}
+.cs-cifra dd {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #003366;
+  margin: 0;
+}
+.cs-cifra-pref {
+  font-size: 0.6em;
+  font-weight: 600;
+}
+.cs-cifra dt {
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-top: 0.15rem;
+}
+.cs-cifre-nota {
+  font-size: 0.86rem;
+  color: #44515e;
+  margin: 0.85rem 0 0;
+}
+@media (max-width: 575.98px) {
+  .cs-cifre-griglia { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ── Recapiti e riuso ── */
+.cs-contatti {
+  border-top: 1px solid #c5d3e3;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+.cs-contatti-titolo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #003366;
+  margin: 0 0 0.5rem;
+}
+.cs-contatti p { margin: 0 0 0.25rem; line-height: 1.5; }
+.cs-contatti a { overflow-wrap: anywhere; }
+.cs-riuso {
+  background: #f2f5f8;
+  border-left: 4px solid #003366;
+  padding: 0.85rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.cs-riuso p { margin: 0; }
+
+/* ── Archivio ── */
+.cs-archivio-titolo,
+.cs-rss-titolo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #003366;
+  margin: 2rem 0 0.5rem;
+}
+.cs-elenco {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cs-voce {
+  border-top: 1px solid #d5dee8;
+  padding: 1.25rem 0;
+}
+.cs-voce:last-child { border-bottom: 1px solid #d5dee8; }
+.cs-voce-data {
+  font-size: 0.9rem;
+  color: #44515e;
+  margin: 0 0 0.35rem;
+}
+.cs-voce-titolo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+}
+.cs-voce-titolo a { color: #003366; }
+.cs-voce-sottotitolo { margin: 0 0 0.6rem; color: #1a1a1a; }
+.cs-voce-pdf { margin: 0; }
+.cs-voce-pdf a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+}
+.cs-rss p { margin: 0; }
+
+/* Gruppi per mese (titolo h3) e filtro per anno e mese (24/10/2026). */
+.cs-gruppo-titolo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 1.5rem 0 0.25rem;
+}
+.cs-gruppo-titolo + .cs-elenco .cs-voce:first-child { border-top-color: #003366; }
+.cs-filtro {
+  background: #f4f7fb;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0 1rem;
+}
+.cs-filtro[hidden] { display: none; }
+.cs-filtro-titolo {
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 0.6rem;
+}
+.cs-filtro-campi {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 1rem;
+}
+.cs-filtro-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 10rem;
+}
+.cs-filtro-campo label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  /* Bootstrap Italia posiziona le label dei campi in assoluto: qui no. */
+  position: static;
+  transform: none;
+  width: auto;
+}
+.cs-filtro-campo select {
+  min-height: 44px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background-color: #fff;
+  border: 1px solid #5c6f82;
+  border-radius: 4px;
+  padding: 0.4rem 2rem 0.4rem 0.6rem;
+}
+.cs-filtro-campo select:focus,
+.cs-filtro-azzera:focus {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.cs-filtro-azzera { min-height: 44px; }
+.cs-filtro-esito {
+  margin: 0.75rem 0 0;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.cs-gruppo[hidden],
+.cs-voce[hidden] { display: none; }
+@media (max-width: 575.98px) {
+  .cs-filtro-campo { flex: 1 1 100%; }
+  .cs-filtro-azzera { width: 100%; }
+}
+@media print {
+  .cs-filtro { display: none !important; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   STAMPA E PDF — carta intestata
+   ══════════════════════════════════════════════════════════ */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 17mm 21mm 17mm;
+    @bottom-left {
+      content: "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma · www.protezionecivilegenzano.it";
+      font-family: "Titillium Web Stampa", "Titillium Web", Arial, sans-serif;
+      font-size: 7.5pt;
+      color: #003366;
+      vertical-align: top;
+      padding-top: 5mm;
+    }
+    @bottom-right {
+      content: "Pagina " counter(page) " di " counter(pages);
+      font-family: "Titillium Web Stampa", "Titillium Web", Arial, sans-serif;
+      font-size: 7.5pt;
+      color: #003366;
+      vertical-align: top;
+      padding-top: 5mm;
+    }
+  }
+
+  html, body { background: #fff !important; }
+  .cs-hero,
+  .cs-pagina {
+    font-family: "Titillium Web Stampa", "Titillium Web", Geneva, Tahoma, sans-serif !important;
+  }
+  .cs-solo-stampa { display: block !important; }
+  .cs-testata.cs-solo-stampa { display: flex !important; }
+
+  /* La testata blu sostituisce il riquadro blu del sito. */
+  .page-hero.cs-hero {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+  .page-hero.cs-hero::before,
+  .page-hero.cs-hero::after { display: none !important; }
+  .cs-hero .container { padding: 0 !important; }
+
+  .cs-testata {
+    align-items: center;
+    gap: 5mm;
+    background: #003366 !important;
+    color: #fff !important;
+    padding: 4.5mm 6mm;
+    border-bottom: 1mm solid #ff6600;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cs-testata-logo {
+    width: 19mm !important;
+    height: 19mm !important;
+    max-height: none !important;
+    flex: 0 0 19mm;
+  }
+  .cs-testata-ente,
+  .cs-testata-tipo {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: #fff !important;
+  }
+  .cs-testata-ente { flex: 1 1 auto; }
+  .cs-testata-tipo { text-align: right; align-items: flex-end; }
+  .cs-testata-nome {
+    font-size: 17pt;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .cs-testata-gruppo {
+    font-size: 10.5pt;
+    line-height: 1.3;
+    margin-top: 0.6mm;
+  }
+  .cs-testata-etichetta {
+    font-size: 11.5pt;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .cs-testata-data {
+    font-size: 9.5pt;
+    line-height: 1.3;
+    margin-top: 0.6mm;
+  }
+
+  .page-hero.cs-hero .cs-titolo {
+    color: #003366 !important;
+    font-size: 21pt !important;
+    font-weight: 700 !important;
+    line-height: 1.16 !important;
+    margin: 7mm 0 3mm !important;
+  }
+  .cs-pagina { padding: 0 !important; }
+  .cs-pagina .cs-sottotitolo {
+    font-size: 12.5pt !important;
+    line-height: 1.4 !important;
+    color: #2b2b2b !important;
+    margin: 0 0 5mm !important;
+    padding-bottom: 4.5mm;
+    border-bottom: 0.4pt solid #a9bbcf;
+  }
+
+  .cs-meta,
+  .cs-azioni,
+  .cs-riuso,
+  .cs-strumenti,
+  .cs-pagina .strumenti-azione,
+  .cs-pagina .torna-indietro { display: none !important; }
+
+  /* Testo: una colonna, senza sillabazione (il testo copiato dal PDF
+     non deve avere parole spezzate), senza righe orfane o vedove. */
+  .cs-documento {
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    color: #1a1a1a !important;
+    -webkit-hyphens: manual !important;
+    hyphens: manual !important;
+  }
+  .cs-documento > p,
+  .cs-documento > p:first-of-type {
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    color: #1a1a1a !important;
+    font-weight: 400 !important;
+  }
+  .cs-documento p {
+    margin: 0 0 2.6mm !important;
+    orphans: 3;
+    widows: 3;
+    text-align: left !important;
+  }
+  .cs-documento a[href]::after,
+  .cs-contatti a[href]::after,
+  .cs-testata a[href]::after { content: none !important; }
+  .cs-documento a,
+  .cs-contatti a {
+    color: #003366 !important;
+    text-decoration: underline;
+  }
+  .cs-documento .cs-evidenza {
+    font-size: 12.3pt !important;
+    line-height: 1.45 !important;
+    color: #003366 !important;
+    border-left: 1.1mm solid #003366;
+    padding: 0.6mm 0 0.6mm 5mm;
+    margin: 4.5mm 0 !important;
+    break-inside: avoid;
+  }
+  .cs-documento .cs-112 {
+    font-weight: 600 !important;
+    border-left: 1.1mm solid #c1121f;
+    padding: 0.3mm 0 0.3mm 5mm;
+    break-inside: avoid;
+  }
+
+  .cs-cifre {
+    background: #f2f5f8 !important;
+    border: 0.3mm solid #c5d3e3 !important;
+    border-top: 1mm solid #003366 !important;
+    border-radius: 0;
+    padding: 3.2mm 5mm 2.8mm;
+    margin: 4.5mm 0 5mm !important;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cs-documento .cs-cifre-titolo {
+    font-size: 10.5pt !important;
+    color: #003366 !important;
+    margin: 0 0 2.4mm !important;
+  }
+  .cs-cifre-griglia { gap: 2.4mm 5mm; }
+  .cs-cifra { border-left: 0.5mm solid #c5d3e3; padding-left: 2.5mm; }
+  .cs-cifra dd { font-size: 15pt !important; color: #003366 !important; }
+  .cs-cifra dt { font-size: 8.6pt !important; color: #1a1a1a !important; margin-top: 0.4mm; }
+  .cs-cifre-nota { font-size: 8pt !important; color: #44515e !important; margin: 2.2mm 0 0 !important; }
+
+  .cs-chiusura { break-inside: avoid; }
+  .cs-contatti {
+    border-top: 0.6pt solid #003366;
+    margin-top: 5.5mm;
+    padding-top: 3mm;
+  }
+  .cs-contatti-titolo {
+    font-size: 11pt !important;
+    line-height: 1.3 !important;
+    color: #003366 !important;
+    margin: 0 0 1.2mm !important;
+  }
+  .cs-contatti p {
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+    color: #1a1a1a !important;
+  }
+  .cs-affiliazioni { margin-top: 8mm; }
+  .cs-affiliazioni img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
