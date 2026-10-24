@@ -1,5 +1,5 @@
 ---
-title: "Come nasce un'allerta meteo: un video in 3D"
+title: "Chi fa l'allerta meteo: un video in 3D"
 date: 2026-10-24T00:05:00+02:00
 description: "Un video spiega chi fa l'allerta meteo, come la fa e quando finisce."
 badge: "Informazione"
