@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-24T01:08:44+00:00",
+  "generato": "2026-10-24T10:30:03+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 8,
+  "avvisi": 10,
   "scaduti_scartati": 6,
-  "in_corso": 3,
+  "in_corso": 1,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -13,14 +13,66 @@
    "in_corso": false,
    "regione": "Abruzzo",
    "fenomeno": "Temporali",
+   "livello": "arancione",
+   "evento_originale": "Orange Thunderstorm Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T12:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.013"
+  },
+  {
+   "in_corso": false,
+   "regione": "Molise",
+   "fenomeno": "Temporali",
+   "livello": "arancione",
+   "evento_originale": "Orange Thunderstorm Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T12:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.014"
+  },
+  {
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Temporali",
+   "livello": "arancione",
+   "evento_originale": "Orange Thunderstorm Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T12:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.015"
+  },
+  {
+   "in_corso": false,
+   "regione": "Basilicata",
+   "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T12:00:00+00:00",
-   "fine": "2026-10-24T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.024"
+   "inizio": "2026-10-24T18:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.018"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-24T18:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.019"
   },
   {
    "in_corso": false,
@@ -30,49 +82,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T17:00:00+00:00",
+   "inizio": "2026-10-24T18:00:00+00:00",
    "fine": "2026-10-24T23:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.026"
-  },
-  {
-   "in_corso": true,
-   "regione": "Friuli Venezia Giulia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-23T18:00:00+00:00",
-   "fine": "2026-10-24T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.019"
-  },
-  {
-   "in_corso": false,
-   "regione": "Molise",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-24T12:00:00+00:00",
-   "fine": "2026-10-24T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.025"
-  },
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-24T00:00:00+00:00",
-   "fine": "2026-10-24T05:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.018"
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.017"
   },
   {
    "in_corso": false,
@@ -82,10 +95,23 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T17:00:00+00:00",
-   "fine": "2026-10-24T23:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.027"
+   "inizio": "2026-10-25T06:00:00+00:00",
+   "fine": "2026-10-25T11:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.016"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sardegna",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-25T00:00:00+00:00",
+   "fine": "2026-10-26T11:59:00+00:00",
+   "emesso": "2026-10-24T08:15:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.022"
   },
   {
    "in_corso": true,
@@ -95,23 +121,23 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T00:00:00+00:00",
-   "fine": "2026-10-25T21:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.029"
+   "inizio": "2026-10-24T08:00:00+00:00",
+   "fine": "2026-10-24T23:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.021"
   },
   {
    "in_corso": false,
-   "regione": "Veneto",
-   "fenomeno": "Vento",
+   "regione": "Sicilia",
+   "fenomeno": "Temporali",
    "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
+   "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-24T12:00:00+00:00",
-   "fine": "2026-10-24T17:59:00+00:00",
-   "emesso": "2026-10-23T08:27:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261023102757.020"
+   "inizio": "2026-10-25T00:00:00+00:00",
+   "fine": "2026-10-25T17:59:00+00:00",
+   "emesso": "2026-10-24T08:15:02+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261024101502.020"
   }
  ]
 }
