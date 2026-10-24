@@ -125,13 +125,13 @@ Useful references: the Agency for Digital Italy (AgID) and Designers Italia, the
 
 ## Reuse and attribution
 
-The kit materials are meant to be useful to the community and may be reused, adapted and printed by municipalities, Civil Protection groups, schools, associations, care facilities and care workers.
+The kit materials are meant to be useful to the community. Municipalities, Civil Protection groups, schools, associations, care facilities and care workers may reuse, adapt and print them under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) licence: give credit to the source, make no commercial use, and share adapted materials under the same licence.
 
-When the materials are copied, adapted or redistributed, a citation of the source is appreciated:
+When you copy, adapt or redistribute the materials, credit the source as follows:
 
-> "Adapted from the Disaster Kits of the Municipal Volunteer Group of Civil Protection of Genzano di Roma — www.protezionecivilegenzano.it".
+> "Adapted from the Disaster Kits of the Municipal Volunteer Group of Civil Protection of Genzano di Roma — www.protezionecivilegenzano.it — licence CC BY-NC-SA 4.0".
 
-Any third-party images or resources keep their original licence.
+Any third-party images or resources keep their original licence. The full terms, in Italian, are in the [legal notes](/note-legali/#licenza-dei-contenuti).
 
 ## Updates and new kits
 

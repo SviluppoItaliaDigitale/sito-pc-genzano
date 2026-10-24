@@ -7,6 +7,8 @@ baseURL = "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
 languageCode = "it"
 defaultContentLanguage = "it"
 title = "Protezione Civile Genzano di Roma"
+# Licenza scritta nei feed RSS (<copyright>), che non hanno l'header HTTP di licenza
+copyright = "© Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Contenuti con licenza CC BY-NC-SA 4.0, salvo diversa indicazione: https://www.protezionecivilegenzano.it/note-legali/#licenza-dei-contenuti"
 timeZone = "Europe/Rome"
 
 # Tema personalizzato

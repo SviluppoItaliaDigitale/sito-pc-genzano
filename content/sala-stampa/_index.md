@@ -82,7 +82,7 @@ Per le testate valgono queste regole:
 
 - i **comunicati stampa** e le foto che li accompagnano si possono pubblicare, in tutto o in parte, citando la fonte;
 - i **fatti** delle nostre notizie si possono riportare liberamente, e le citazioni brevi restano libere nei limiti dell'[articolo 70 della legge sul diritto d'autore](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art70);
-- per ripubblicare un articolo del sito, o ampie parti del testo, serve il permesso della segreteria;
+- per ripubblicare un articolo del sito, o ampie parti del testo, a scopo commerciale serve il permesso della segreteria; per usi non commerciali basta rispettare la licenza CC BY-NC-SA 4.0;
 - i **dati aperti** si riusano liberamente, anche per scopi commerciali, con licenza CC BY 4.0.
 
 Il dettaglio è nelle [note legali](/note-legali/#licenza-dei-contenuti). Se in un nostro contenuto trovate un errore, scriveteci: lo correggiamo e aggiorniamo la data di revisione della pagina, come spiega il [metodo editoriale](/metodo-editoriale/#correzioni).
