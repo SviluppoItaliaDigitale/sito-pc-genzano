@@ -5,16 +5,106 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-24T01:08:36+00:00",
+  "generato": "2026-10-24T05:55:42+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-23T22:15:58+00:00",
+   "data": "2026-10-24T05:49:12+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Cortei e allerta massima oggi, Movimento 17 ottobre rompe le regole: chiamata 'last minute' per non essere fermati",
-   "url": "https://www.adnkronos.com/cronaca/cortei-oggi-24-ottobre-movimento-17-ottobre_5FDpj5SJF8zmIc6pt1sgJK"
+   "titolo": "Iran, il piano contro gli Usa: diplomatici e cavi comunicazione sottomarini nel mirino",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-guerra-usa-piano-trump-obiettivi_1cs0wg7KAy8ffd8cmSnMqM"
+  },
+  {
+   "data": "2026-10-24T05:44:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Paura a Roma, esplosione in una palazzina a Ostia: 1 ferito e 11 famiglie evacuate",
+   "url": "https://www.adnkronos.com/cronaca/esplosione-palazzina-ostia-feriti-evacuati_3yGCTuUkWbxddZ6zfErvJW"
+  },
+  {
+   "data": "2026-10-24T05:37:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gf Vip, rissa sfiorata tra Alex Belli e Alessandra Roncaccia",
+   "url": "https://www.adnkronos.com/spettacoli/rissa-sfiorata-gf-vip-alex-belli-alessandro-roncaccia-piera_223UpaJWiBIvGRS6DuArDp"
+  },
+  {
+   "data": "2026-10-24T05:27:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Brucia il 'Nido dell'Aquila' di Hitler sulle Alpi, una persona fermata",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/brucia-il-nido-dellaquila-di-hitler-sulle-alpi-una-persona-fermata_aea89572-ba94-43cf-b176-37b0a32498c0.html"
+  },
+  {
+   "data": "2026-10-24T05:23:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da Milano a Castel Volturno, piazze blindate per i nuovi cortei. La mappa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/da-milano-a-castel-volturno-piazze-blindate-per-i-nuovi-cortei.-la-mappa_4b093092-5d16-474b-ad7e-21a60f02d95f.html"
+  },
+  {
+   "data": "2026-10-24T05:20:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Grecia vieta i social ai minori di 15 anni a partire dal 2027",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/la-grecia-vieta-i-social-ai-minori-di-15-anni-a-partire-dal-2027_31e071da-bc2f-4447-8ed0-c62b3bc7b70d.html"
+  },
+  {
+   "data": "2026-10-24T05:20:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto in Sicilia, continua lo sciame sismico nel mar Tirreno Meridionale: decine di scosse nella notte",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-sicilia-oggi-sciame-sismico-palermo-ultime-news_5rET6j9UuuB2l2l5koXw32"
+  },
+  {
+   "data": "2026-10-24T05:17:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Moto Gp Australia, M. Marquez vince la Sprint Race e torna in testa al Mondiale",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/24/moto-gp-australia-m.-marquez-vince-la-sprint-race-e-torna-in-testa-al-mondiale_67efd39e-7d7c-45fb-b445-4cf72bc868a4.html"
+  },
+  {
+   "data": "2026-10-24T05:05:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Riscaldamenti, via all'accensione dei termosifoni: le quattro linee guida per l’inverno",
+   "url": "https://www.adnkronos.com/economia/termosifoni-accensione-riscaldamenti-linee-guida-enea_BQ688yN1SyiZQ2DJEQO6r"
+  },
+  {
+   "data": "2026-10-24T05:04:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Cagliari-Bologna: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-cagliari-bologna_1JKAv8sw4u5TrRe4jMSpQU"
+  },
+  {
+   "data": "2026-10-24T05:04:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Como-Sassuolo: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-como-sassuolo_25y3dHoGr1ClBlbqYzDvpy"
+  },
+  {
+   "data": "2026-10-24T05:03:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Napoli-Roma: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/napoli-roma-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_3f0m7oT7EYQajCYKkU46EL"
+  },
+  {
+   "data": "2026-10-24T05:00:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, anticipazioni e ospiti della puntata di oggi 24 ottobre",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-ospiti-oggi-24-ottobre_1w67SoIFVnZal4xBVvx3UP"
+  },
+  {
+   "data": "2026-10-24T04:59:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Lazio-Parma: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/lazio-parma-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_6QiDcQv5bktwwbvSKXIwhF"
+  },
+  {
+   "data": "2026-10-24T04:59:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ora solare 2026, stanotte si cambia: quanto si risparmia? Il dibattito sul cambio d'ora",
+   "url": "https://www.adnkronos.com/cronaca/ora-solare-2026-orario-stanotte-risparmi_1wYFq003TrCle2KD1vf9xt"
+  },
+  {
+   "data": "2026-10-24T04:57:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le stelle, stasera su Rai1 quarto appuntamento: le anticipazioni",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-stelle-anticipazioni-stasera-sabato-24-ottobre_6vBxlDzHxvPtHXuDBTzlPN"
   },
   {
    "data": "2026-10-23T22:15:57+00:00",
@@ -23,52 +113,16 @@
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/24/f1-leclerc-domina-le-libere-ad-austin-antonelli-e-secondo_e75bf53d-214a-44e7-9fae-da5ded693b7a.html"
   },
   {
-   "data": "2026-10-23T22:13:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, tregua umanitaria per Oleshky dal 27 ottobre: l'accordo mediato da Melania Trump",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-oleshky-tregua-ruolo-melania-trump_4yeHwSQYfejqgX3Xqy1u7l"
-  },
-  {
    "data": "2026-10-23T22:12:08+00:00",
    "fonte": "ANSA",
    "titolo": "Attacco al checkpoint di Hebron, scattata un'operazione antiterrorismo",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/attacco-al-checkpoint-di-hebron-scattata-unoperazione-antiterrorismo_9ba2138b-09b6-4e76-8477-6a022b91575a.html"
   },
   {
-   "data": "2026-10-23T22:10:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Melanoma, nuova pillola 'spoglia' il tumore avanzato e rallenta la crescita",
-   "url": "https://www.adnkronos.com/cronaca/melanoma-nuova-pillola-rallenta-tumore_6m7IiNOi598rhINE6LNiRh"
-  },
-  {
-   "data": "2026-10-23T22:08:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Virus Shamonda, chi lo trasmette? L'imputato è il Culicoides: identikit del 'moscerino pungente'",
-   "url": "https://www.adnkronos.com/cronaca/chi-trasmette-virus-shamonda-allarme-italia-moscerino_58vNFxrKS4AlvZ76EZwr7S"
-  },
-  {
-   "data": "2026-10-23T22:07:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lega, oggi via al Congresso. Salvini e Garavaglia in campo: alla vigilia il 'giallo' della telefonata",
-   "url": "https://www.adnkronos.com/politica/congresso-lega-salvini-garavaglia_7J24I9a5fbAb8HOMd8446j"
-  },
-  {
    "data": "2026-10-23T22:06:47+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Bimba di tre anni uccisa a coltellate dalla madre in casa",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/bimba-di-tre-anni-uccisa-a-coltellate-dalla-madre-in-casa_800346db-f039-44c9-9562-d7fa9b8dfe8a.html"
-  },
-  {
-   "data": "2026-10-23T22:05:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attiviste italiane espulse da Israele. Atteso il rientro in Italia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/attiviste-italiane-espulse-da-israele.-atteso-il-rientro-in-italia_9b783e6a-ae93-41de-ab9b-63414f183e13.html"
-  },
-  {
-   "data": "2026-10-23T21:10:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, esplosione in palazzina a Ostia: un ferito",
-   "url": "https://www.adnkronos.com/cronaca/ostia-esplosione-palazzina-ferito_2DUTdiQ97p8gGkswPvGBlS"
   },
   {
    "data": "2026-10-23T21:07:48+00:00",
@@ -83,28 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/protezione-civile-sicilia-a-comuni-monitorare-litorali-a-rischio-tsunami_8f846fe4-e446-400a-bcb4-acf1b5f82245.html"
   },
   {
-   "data": "2026-10-23T20:52:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tris del Torino al Monza, sorpassata la Juventus CRONACA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/23/tris-del-torino-al-monza-sorpassata-la-juventus-cronaca-e-foto_3103b24d-f062-443f-85de-251baa8873d4.html"
-  },
-  {
    "data": "2026-10-23T20:09:50+00:00",
    "fonte": "ANSA",
    "titolo": "Scatta la tregua umanitaria ad Oleshky, 'merito di Melania'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/casa-bianca-melania-trump-ottiene-una-tregua-fra-russia-e-ucraina_7390536b-7182-49ea-b68f-2faba023bbb2.html"
-  },
-  {
-   "data": "2026-10-23T20:08:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, estrazione oggi 23 ottobre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-23-ottobre-numeri-vincenti_1N7VIZYAoJ0tolvhTsYGAT"
-  },
-  {
-   "data": "2026-10-23T19:41:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Da Milano a Castel Volturno, la mappa delle piazze",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/23/da-milano-a-castel-volturno-la-mappa-delle-piazze_4b093092-5d16-474b-ad7e-21a60f02d95f.html"
   },
   {
    "data": "2026-10-23T19:40:12+00:00",
@@ -149,46 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/spari-in-strada-vicino-a-parigi-un-morto-e-quattro-feriti-indaga-lantiterrorismo_5988c970-373a-4e3c-b579-d95b1722e65c.html"
   },
   {
-   "data": "2026-10-23T18:35:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nepi Molineris: \"A Colle Oppio sport, cinema e arte per parlare ai giovani\"",
-   "url": "https://www.adnkronos.com/sport/nepi-molineris-a-colle-oppio-sport-cinema-e-arte-per-parlare-ai-giovani_3M6krIKnFIkRNdTpdNHNv6"
-  },
-  {
-   "data": "2026-10-23T18:31:35+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sport e Salute, a Roma docufilm 'Lo Sport è Vita', protagonisti i ragazzi, tra urban culture, arte e basket",
-   "url": "https://www.adnkronos.com/sport/sport-e-salute-a-roma-docufilm-lo-sport-e-vita-protagonisti-i-ragazzi-tra-urban-culture-arte-e-basket_7bpSGoNiq4hy2aNX0SMDqs"
-  },
-  {
    "data": "2026-10-23T18:30:44+00:00",
    "fonte": "ANSA",
    "titolo": "La 'Lega di lotta e di governo' va al congresso, è lite Salvini-Garavaglia",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/23/salvini-stupito-da-garavaglia-ci-siamo-sentiti-martedi-scorso_6dcde883-7dd3-4737-b1b3-671e0031c6c7.html"
-  },
-  {
-   "data": "2026-10-23T18:29:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Torna l'ora solare, 'con quella legale risparmiati 90 milioni di euro'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/torna-lora-solare-con-quella-legale-risparmiati-90-milioni-di-euro_3b0f87be-a16f-4cd2-9b08-287a81c83690.html"
-  },
-  {
-   "data": "2026-10-23T18:26:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morto lo scrittore giapponese Ryu Murakami, esplorava il lato oscuro della società",
-   "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/10/23/morto-lo-scrittore-giapponese-ryu-murakami_088b5ac9-b7c6-40a8-b1be-197d42519bf9.html"
-  },
-  {
-   "data": "2026-10-23T18:26:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "La squadra lascia il campo dopo l'insulto razzista e perde la partita a tavolino",
-   "url": "https://www.ansa.it/emiliaromagna/notizie/2026/10/23/squadra-lascia-il-campo-dopo-insulto-razzista-e-perde-la-partita-a-tavolino_29fb55d4-097d-4811-9553-ec92f93b9725.html"
-  },
-  {
-   "data": "2026-10-23T18:25:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Francia si prepara al secondo atto in piazza, 'saremo inflessibili'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/23/la-francia-si-prepara-al-secondo-atto-in-piazza-saremo-inflessibili_bd1e06f5-b847-4c45-8875-1bde48915478.html"
   }
  ]
 }
