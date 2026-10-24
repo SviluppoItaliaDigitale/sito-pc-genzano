@@ -5,16 +5,100 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-24T19:40:33+00:00",
+  "generato": "2026-10-24T21:55:43+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-24T19:31:31+00:00",
+   "data": "2026-10-24T21:43:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Scontri a Milano, fermato Youssef Siher 'mente' del Movimento 17 ottobre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/scontri-a-milano-fermato-youssef-siher-mente-del-movimento-17-ottobre_e18967c4-35bf-4e74-a31c-2cbdf8b34324.html"
+  },
+  {
+   "data": "2026-10-24T21:32:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, Monica Guerritore riceve la standing ovation e si commuove: in piedi il marito Roberto Zaccaria",
+   "url": "https://www.adnkronos.com/spettacoli/monica-guerritore-ballando-con-le-stelle-roberto-zaccaria_1jVY0g9UtQwP3x8dd1a6nq"
+  },
+  {
+   "data": "2026-10-24T21:23:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Lazio batte il Parma 2-1 e per una notte è prima in solitaria CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/24/la-lazio-batte-il-parma-2-1-e-per-una-notte-e-prima-in-solitaria-cronaca-e-foto_d0b994f1-a702-4064-bfda-9f7f315d0ce2.html"
+  },
+  {
+   "data": "2026-10-24T20:58:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lavoro, Salvitti (FdI): \"Rinnovi contrattuali importanti per garantire salario giusto\"",
+   "url": "https://www.adnkronos.com/economia/lavoro-salvitti-fdi-rinnovi-contrattuali-importanti-per-garantire-salario-giusto_2hYBluxAwk5ncuk8KueUn2"
+  },
+  {
+   "data": "2026-10-24T20:55:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mentana ufficializza l'addio al TgLa7: 'Il 23 dicembre saluto i telespettatori'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/24/enrico-mentana-il-23-dicembre-mio-ultimo-giorno-di-conduzione-al-tg-de-la7_09ccd2c7-b3f8-4744-a931-d0fd61d82545.html"
+  },
+  {
+   "data": "2026-10-24T20:50:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, Anna Safroncik: \"Se mi piace Leonardo? Non mi corteggia\". Poi, il giudizio (negativo) di Carolyn Smith",
+   "url": "https://www.adnkronos.com/spettacoli/anna-safroncik-leonardo-lini-ballando-con-le-stelle_5p5ZcJMnEKdu66NsnaqKNu"
+  },
+  {
+   "data": "2026-10-24T20:31:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "C'è un Berlusconi pugile invincibile, decimo successo per il figlio di Pier Silvio",
+   "url": "https://www.adnkronos.com/sport/berlusconi-boxe-pugile-lorenzo_7htX5Mds93C4yRCGUcAiJ9"
+  },
+  {
+   "data": "2026-10-24T20:28:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cortei di protesta da Roma a Milano TUTTI I VIDEO",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/cortei-di-protesta-da-roma-a-milano-tutti-i-video_2bb860a1-c867-4ceb-aabb-2889ee1baa7b.html"
+  },
+  {
+   "data": "2026-10-24T20:27:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Città blindate, cortei in tutta Italia. Alta tensione a Torino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/citta-blindate-cortei-in-tutta-italia.-tensioni-a-torino-milano-firenze.-a-roma_c947f80a-5c41-4c1b-bc3b-fe5603318029.html"
+  },
+  {
+   "data": "2026-10-24T20:14:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Corteo a Roma, i manifestanti respinti ai cancelli del Colosseo",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/24/corteo-a-roma-i-manifestanti-respinti-ai-cancelli-del-colosseo_125d6fb1-6bb7-45a2-bf5b-ef52b6dbc30d.html"
+  },
+  {
+   "data": "2026-10-24T20:09:03+00:00",
    "fonte": "ANSA",
    "titolo": "Al congresso della Lega sotto accusa il 'ribelle' Romeo, in ballo un ruolo per Zaia",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/24/attacco-a-romeo-al-congresso-lega-no-a-diatribe-personali_2df1fea2-8d5f-4ea0-a6d9-771170bc06ff.html"
+  },
+  {
+   "data": "2026-10-24T20:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Superenalotto, numeri estrazione vincente oggi 24 ottobre. I 5 vincono 37mila euro",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-24-ottobre_1wM54bg01kdtDtU2lyhWF9"
+  },
+  {
+   "data": "2026-10-24T20:01:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi le qualifiche ufficiali Gp Usa - Diretta",
+   "url": "https://www.adnkronos.com/sport/f1-qualifiche-ferrari-antonelli-austin_kva7LMHRctt3uey4oEYh9"
+  },
+  {
+   "data": "2026-10-24T19:49:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Allegri furioso: \"Ogni volta che mi muovo vengo espulso, mentre altri...\"",
+   "url": "https://www.adnkronos.com/sport/allegri-napoli-roma-furioso-espulsione_4TvqIoKQCTMEirDH5TH4m8"
+  },
+  {
+   "data": "2026-10-24T19:41:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Torna l'ora solare, lancette indietro di un'ora",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/torna-lora-solare-con-quella-legale-risparmiati-90-milioni-di-euro_3b0f87be-a16f-4cd2-9b08-287a81c83690.html"
   },
   {
    "data": "2026-10-24T19:30:38+00:00",
@@ -47,18 +131,6 @@
    "url": "https://www.adnkronos.com/spettacoli/kim-kardashian-tifosa-roma_3O4yXFGCs9FJTSFdF1GthO"
   },
   {
-   "data": "2026-10-24T19:14:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mentana ufficializza l'addio al TgLa7: 'Il 23 dicembre saluto i telespettatori'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/24/enrico-mentana-il-23-dicembre-mio-ultimo-giorno-di-conduzione-al-tg-de-la7_09ccd2c7-b3f8-4744-a931-d0fd61d82545.html"
-  },
-  {
-   "data": "2026-10-24T19:05:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Città blindate, cortei in tutta Italia. Alta tensione a Torino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/citta-blindate-cortei-in-tutta-italia.-tensioni-a-torino-milano-firenze.-a-roma_c947f80a-5c41-4c1b-bc3b-fe5603318029.html"
-  },
-  {
    "data": "2026-10-24T18:59:02+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Uomo travolto e ucciso a Napoli da scooter e furgone pirata",
@@ -83,12 +155,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/chi-e-la-mente-del-movimento-17-ottobre-sarebbe-un-ricercatore-con-dottorato_7ea4ecc5-fc85-49fe-b151-c71e6855e75d.html"
   },
   {
-   "data": "2026-10-24T18:29:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Lazio-Parma DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/24/serie-a-lazio-parma-diretta_d0b994f1-a702-4064-bfda-9f7f315d0ce2.html"
-  },
-  {
    "data": "2026-10-24T18:26:37+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Sassi e bottiglie contro gli agenti, a Torino usati idrante e lacrimogeni",
@@ -101,10 +167,10 @@
    "url": "https://www.adnkronos.com/spettacoli/ballando-federica-nargi-bianca-guaccero-podio_3iG32Ke1ePglxVu5fxPzw0"
   },
   {
-   "data": "2026-10-24T18:20:10+00:00",
+   "data": "2026-10-24T18:20:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Lazio-Parma 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/lazio-parma-diretta-serie-a_KyAZmzikgmSsP0TTj7PPC"
+   "titolo": "Serie A, Lazio-Parma 2-1 e Gattuso è da solo in vetta",
+   "url": "https://www.adnkronos.com/sport/lazio-parma-vittoria-serie-a_KyAZmzikgmSsP0TTj7PPC"
   },
   {
    "data": "2026-10-24T18:16:30+00:00",
@@ -123,72 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Il Nobel all'Economia David Card: \"Rivedere le politiche di sostegno ai lavoratori poveri\"",
    "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/24/il-nobel-alleconomia-david-card-rivedere-le-politiche-di-sostegno-ai-lavoratori-poveri_643e90f0-0981-4913-8cc7-381162c9f13e.html"
-  },
-  {
-   "data": "2026-10-24T18:03:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Bologna proseguono le tensioni tra manifestanti e forze dell'ordine",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/a-bologna-proseguono-le-tensioni-tra-manifestanti-e-forze-dellordine_e282bb96-5769-4e5f-b855-7967f68533aa.html"
-  },
-  {
-   "data": "2026-10-24T17:50:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scontri al centro di Roma, cariche e idranti sui manifestanti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/scontri-al-centro-di-roma-cariche-e-idranti-sui-manifestanti_b6b52709-4233-4e10-90bb-970379051cac.html"
-  },
-  {
-   "data": "2026-10-24T17:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mentana annuncia l'addio al Tg La7: \"Lascio il 23 dicembre\"",
-   "url": "https://www.adnkronos.com/politica/mentana-lascia-tg-la7_1ObnOfu6A7HMoDwIEkDtAz"
-  },
-  {
-   "data": "2026-10-24T17:49:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "La manovra guarda a giovani e mamme. Giorgetti: 'La coperta è corta'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/24/la-manovra-guarda-a-giovani-e-mamme.-giorgetti-la-coperta-e-corta_45b46f2c-5aee-4eb4-8420-f23173e1f48e.html"
-  },
-  {
-   "data": "2026-10-24T17:46:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Musetti vince il derby con Cobolli e va in finale a Lione",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/24/musetti-vince-il-derby-con-cobolli-e-va-in-finale-a-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html"
-  },
-  {
-   "data": "2026-10-24T17:46:08+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Agguato in Calabria, uccisa la compagna del boss Damiano Pepe",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/agguato-in-calabria-uccisa-la-moglie-di-un-boss-lui-e-grave_48605512-6c55-4b18-8cde-4a7351ad5747.html"
-  },
-  {
-   "data": "2026-10-24T17:38:44+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cortei e proteste, Fabri Fibra: \"Capisco la rabbia dei ventenni\"",
-   "url": "https://www.adnkronos.com/cronaca/fabri-fibra-cortei-proteste-milano_6blMeCKEOde21IDK7k0jHe"
-  },
-  {
-   "data": "2026-10-24T17:28:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Corteo Bologna, cariche e alcuni manifestanti bloccati da agenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/corteo-bologna-cariche-e-alcuni-manifestanti-bloccati-da-agenti_310eade4-3ef7-4007-a60b-beb0772e0bc1.html"
-  },
-  {
-   "data": "2026-10-24T17:21:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Razzi e bottiglie contro la polizia, a Torino fitto lancio lacrimogeni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/razzi-e-bottiglie-contro-la-polizia-a-torino-fitto-lancio-lacrimogeni_41227dfb-5a3b-405a-a2a6-f0edc8889ce3.html"
-  },
-  {
-   "data": "2026-10-24T17:07:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-24T16:53:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In centinaia ad Alba nel corteo contro il caporalato del vino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/in-centinaia-ad-alba-nel-corteo-contro-il-caporalato-del-vino_2d9915f3-6af0-4724-b972-56cd4557b1d2.html"
   }
  ]
 }
