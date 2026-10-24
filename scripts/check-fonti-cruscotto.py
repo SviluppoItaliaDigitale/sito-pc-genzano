@@ -38,7 +38,7 @@ UA = "PCGenzano-cruscotto-healthcheck/1.0 (+https://www.protezionecivilegenzano.
 TIMEOUT = 30
 
 
-def _get(url, expect_json=False, expect_image=False, accept=(200,)):
+def _get(url, expect_json=False, expect_image=False, accept=(200,), timeout=None):
     """Ritorna (ok:bool, dettaglio:str, headers, body_or_json).
 
     Timeout ed errori di connessione si ritentano due volte a 10 secondi di
@@ -47,7 +47,7 @@ def _get(url, expect_json=False, expect_image=False, accept=(200,)):
     GitHub e al giro successivo rispondevano. Una risposta HTTP (404, 500…)
     invece è definitiva e non si ritenta."""
     for tentativo in range(3):
-        esito = _get_una_volta(url, expect_json, expect_image, accept)
+        esito = _get_una_volta(url, expect_json, expect_image, accept, timeout)
         if esito[0] or not esito[1].startswith(("TimeoutError", "URLError", "ConnectionResetError", "RemoteDisconnected", "timeout")):
             return esito
         if tentativo < 2:
@@ -55,10 +55,10 @@ def _get(url, expect_json=False, expect_image=False, accept=(200,)):
     return esito[0], f"{esito[1]} (3 tentativi)", esito[2], esito[3]
 
 
-def _get_una_volta(url, expect_json, expect_image, accept):
+def _get_una_volta(url, expect_json, expect_image, accept, timeout=None):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+        with urllib.request.urlopen(req, timeout=timeout or TIMEOUT) as r:
             code = r.getcode()
             ctype = r.headers.get("Content-Type", "")
             lastmod = r.headers.get("Last-Modified", "")
@@ -286,7 +286,10 @@ def chk_gdacs():
     # static/open-data/gdacs-eventi.json rigenerato da deploy.yml
     # (scripts/genera-gdacs-eventi.py), letto dalla Sala situazioni /monitor/.
     url = "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP"
-    ok, det, _, j = _get(url, expect_json=True)
+    # Il server di GDACS e' lento a servire i ~135 KB della lista (da 2 a 6 s da qui,
+    # e dal runner di GitHub e' andato in timeout a 30 s il 22 e il 23/10/2026,
+    # mentre rispondeva 200 a ogni prova): timeout di lettura a 90 s.
+    ok, det, _, j = _get(url, expect_json=True, timeout=90)
     if ok and isinstance(j, dict) and isinstance(j.get("features"), list):
         return True, f"{det} · {len(j['features'])} eventi correnti"
     return False, det if not ok else "Risposta JSON inattesa (manca 'features')"
