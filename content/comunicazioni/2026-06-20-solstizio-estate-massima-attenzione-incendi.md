@@ -12,6 +12,13 @@ area: "Genzano di Roma"
 allegati: []
 versione_facile: "2026-06-20-solstizio-estate-massima-attenzione-incendi-facile"
 lis_section: "rischio-incendio"
+tts: true
+social_citazione: "I divieti dell'ordinanza valgono ogni giorno, dal 17 giugno al 15 ottobre, qualunque sia il livello dei bollettini."
+social_punti:
+  - "Campagna antincendio boschivo dal 15 giugno al 15 ottobre"
+  - "Nelle aree a rischio di Genzano vietati fuochi, sigarette accese, fuochi d'artificio e lanterne volanti"
+  - "Se vedi fiamme o anche solo fumo, chiama subito il 112"
+  - "Non scappare in salita: le fiamme salgono più veloci di te"
 draft: false
 ---
 
@@ -52,7 +59,7 @@ Nella prevenzione l'ossigeno dell'aria non si può togliere: si lavora sul **com
 L'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/) vale dal 17 giugno al 15 ottobre 2026 nelle aree del Comune a rischio di incendio boschivo e in quelle vicine. In questo periodo è vietato:
 
 - accendere fuochi di ogni genere;
-- usare apparecchi a fiamma o elettrici per tagliare metalli, e motori, fornelli o inceneritori che producono faville o brace, salvo i lavori forestali autorizzati;
+- usare apparecchi a fiamma o elettrici per tagliare metalli e usare motori, fornelli o inceneritori che producono faville o brace, salvo i lavori forestali autorizzati;
 - fumare, gettare fiammiferi, sigari o sigarette accese e qualsiasi materiale acceso;
 - accendere fuochi d'artificio, lanciare razzi e lanterne volanti;
 - far brillare mine o usare esplosivi;
@@ -60,14 +67,14 @@ L'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordin
 
 Gli abbruciamenti di residui vegetali si possono fare solo con l'autorizzazione del Comando Carabinieri Forestale. Anche se autorizzati, non si fanno nelle giornate di vento né tra le 10 e le 18.
 
-Chi possiede terreni deve creare una fascia di protezione larga 5 metri (10 vicino alla ferrovia) e interrare le stoppie entro il 15 luglio. Deve anche ripulire per 5 metri la vegetazione secca lungo le strade e tenere libere da materiali infiammabili le aree intorno alle case.
+Chi possiede terreni deve creare una fascia di protezione larga 5 metri (10 se il terreno confina con una linea ferroviaria) e interrare le stoppie entro il 15 luglio. Deve anche ripulire dalla vegetazione secca, per almeno 5 metri, i boschi che confinano con strade e vie di passaggio, e creare fasce senza materiali infiammabili intorno agli edifici alla periferia del centro abitato.
 
 Chi viola i divieti rischia una sanzione da 5.000 a 50.000 euro (articolo 10, comma 6, della legge 353/2000). Chi provoca un incendio boschivo, anche per imprudenza, ne risponde anche penalmente.
 
 ## Dove trovi le informazioni
 
 - Durante la campagna il **Centro Funzionale della Regione Lazio** pubblica ogni giorno il [bollettino di pericolosità da incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi), zona per zona, con quattro livelli: basso, medio, moderato ed elevato. Genzano è nella zona 9. Quando il livello non è basso, lo trovi anche nella barra delle allerte di questo sito.
-- Il **Dipartimento della Protezione Civile** emette ogni giorno un [bollettino nazionale di suscettività all'innesco](https://rischi.protezionecivile.gov.it/it/incendi-boschivi/attivita/), provincia per provincia, con tre livelli di pericolosità: bassa, media e alta. Il livello indica quanto potrebbe essere impegnativo spegnere un incendio: con pericolosità alta può servire quasi certamente la flotta aerea dello Stato.
+- Il **Dipartimento della Protezione Civile** emette ogni giorno un [bollettino nazionale di suscettività all'innesco](https://rischi.protezionecivile.gov.it/it/incendi-boschivi/attivita/), provincia per provincia, con tre livelli di pericolosità: bassa, media e alta. Il livello indica quanto potrebbe essere impegnativo spegnere un incendio: con pericolosità alta un incendio può diventare così grande da richiedere quasi certamente la flotta aerea dello Stato.
 - Il **Comune di Genzano di Roma** pubblica le ordinanze sul suo sito istituzionale.
 
 I divieti dell'ordinanza valgono ogni giorno, dal 17 giugno al 15 ottobre, qualunque sia il livello dei bollettini.
