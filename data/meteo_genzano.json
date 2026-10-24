@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-24T06:02",
+  "aggiornato": "2026-10-24T07:02",
   "data_lunga": "sabato 24 ottobre 2026",
-  "aggiornato_label": "sabato 24 ottobre 2026, ore 06:02",
+  "aggiornato_label": "sabato 24 ottobre 2026, ore 07:02",
   "alba": "07:31",
   "tramonto": "18:14",
   "corrente": {
-    "temp": 13.0,
-    "percepita": 13.2,
+    "temp": 13.2,
+    "percepita": 13.3,
     "cielo": "Nebbia",
     "icona": "<g><line x1=\"8.8\" y1=\"24.8\" x2=\"47.2\" y2=\"24.8\" stroke=\"#9aa7b4\" stroke-width=\"4.8\" stroke-linecap=\"round\"/><line x1=\"8.8\" y1=\"32.0\" x2=\"47.2\" y2=\"32.0\" stroke=\"#9aa7b4\" stroke-width=\"4.8\" stroke-linecap=\"round\"/><line x1=\"8.8\" y1=\"39.2\" x2=\"47.2\" y2=\"39.2\" stroke=\"#9aa7b4\" stroke-width=\"4.8\" stroke-linecap=\"round\"/></g>",
-    "umidita": 98,
-    "vento": 5,
-    "raffiche": 32
+    "umidita": 99,
+    "vento": 6,
+    "raffiche": 27
   },
   "giorni": [
     {
@@ -20,7 +20,7 @@
       "cielo": "Rovesci",
       "tmax": 16,
       "tmin": 12,
-      "pioggia": 98,
+      "pioggia": 100,
       "pioggia_mm": 1.9,
       "raffiche": 52,
       "uv": 4,
