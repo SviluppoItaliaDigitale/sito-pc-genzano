@@ -152,6 +152,16 @@ Se l'hook blocca la chiusura della sessione, spiega all'utente perché non lo ha
 
 ---
 
+## Video del Gruppo — sempre per uso non commerciale
+
+🟢 **Decisione dell'utente del 24/10/2026**: *«Tutti i nostri video sono per uso non commerciale!»*. Ogni video del Gruppo (motion graphic, video in 3D, montaggi, Reel, video degli articoli, puntate e podcast video) serve a informare e formare i cittadini: niente pubblicità, sponsor, vendite o monetizzazione dei canali, su nessuna piattaforma.
+
+- Nei video si possono usare materiali e strumenti con licenza o piano **solo per uso non commerciale**: per esempio contenuti in CC BY-NC o CC BY-NC-SA, i pittogrammi ARASAAC, il modello italiano di allineamento dei sottotitoli in CC BY-NC 4.0. Valgono tutte le loro altre condizioni: l'attribuzione e, per i materiali «SA», la stessa licenza sul video.
+- L'uso non commerciale non toglie gli altri obblighi. Se una licenza o un piano gratuito chiede di nominare lo strumento nel video, nel titolo o nella descrizione, quella condizione va contro § «Nessun riferimento all'IA»: lo strumento non si usa per i video pubblicati, salvo diversa decisione dell'utente. Caso noto: il piano gratuito di ElevenLabs chiede «elevenlabs.io» nel titolo anche per l'uso non commerciale.
+- Il controllo spetta a `pc-produzione-multimediale` (mandato operativo, punto «Licenze»).
+
+---
+
 ## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
 
 🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):

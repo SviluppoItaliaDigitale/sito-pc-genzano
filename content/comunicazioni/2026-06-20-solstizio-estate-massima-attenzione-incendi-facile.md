@@ -1,12 +1,12 @@
 ---
 title: "Estate: attenzione agli incendi nei boschi"
 date: 2026-06-20T00:01:00+02:00
-description: "In estate il pericolo incendi è alto. Cosa fare e cosa non fare nei boschi."
+description: "In estate il pericolo di incendi è alto. Cosa fare e cosa non fare nei boschi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-20-solstizio-estate-massima-attenzione-incendi.webp"
-image_alt: "Sole al tramonto sopra campi aridi ai Castelli Romani in una giornata estiva"
+image_alt: "Cover dell'articolo: Solstizio d'estate: massima attenzione agli incendi boschivi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -19,84 +19,93 @@ build:
   publishResources: true
 ---
 
-Il 20 giugno inizia l'estate. In estate il pericolo incendi è molto alto. Devi prestare attenzione.
+Domenica 21 giugno comincia l'estate. È il giorno più lungo dell'anno. In estate il pericolo di incendi nei boschi è alto.
 
 ## Perché in estate ci sono più incendi
 
-In estate fa molto caldo. Le piante e l'erba diventano secche. Il vento soffia spesso. Una piccola fiamma può diventare un grande incendio.
+In estate piove poco. L'erba e le piante diventano secche. Spesso c'è vento. Una piccola fiamma può diventare un grande incendio.
 
-Nel Lazio, più del 70% degli incendi succede tra giugno e settembre. I mesi peggiori sono luglio e agosto.
+Nel Lazio ci sono molti incendi in estate e pochi in inverno. Di solito il mese con più incendi è agosto. Poi vengono luglio e settembre.
 
-## Cosa non puoi fare nei boschi
+Quasi sempre il fuoco lo accendono le persone. In Italia solo 2 incendi su 100 hanno cause naturali, come i fulmini.
 
-Nel 2026, dal 17 giugno al 15 ottobre, a Genzano è vietato:
+## Le regole a Genzano
 
-- Accendere fuochi all'aperto.
-- Bruciare erba secca o rami.
-- Buttare mozziconi di sigarette.
-- Lasciare bottiglie o vetri.
+Il Sindaco di Genzano ha firmato un'ordinanza. Un'ordinanza è una regola ufficiale del Sindaco. Vale dal 17 giugno al 15 ottobre 2026.
 
-Chi non rispetta queste regole paga una multa. Può avere anche problemi con la legge.
+Nei posti con pericolo di incendio, e vicino a questi posti, è vietato:
+
+- accendere fuochi;
+- fumare o buttare sigarette e fiammiferi accesi;
+- usare fuochi d'artificio, razzi e lanterne volanti;
+- entrare con un veicolo nelle strade di terra dentro i boschi.
+
+Bruciare erba secca e rami si chiama "abbruciamento". Puoi farlo solo con un permesso scritto dei Carabinieri Forestali. Anche con il permesso, non puoi bruciare quando c'è vento. Non puoi bruciare neanche tra le 10 e le 18.
+
+Chi non rispetta le regole paga una multa da 5.000 a 50.000 euro. Chi provoca un incendio può finire davanti a un giudice.
 
 ## Cosa fare se vedi un incendio
 
-I primi 5 minuti sono importanti. Agisci subito.
+Chiama subito. Non pensare che un'altra persona abbia già chiamato.
 
-1. Chiama il **112**, il numero unico di emergenza. Di' dove sei e dove soffia il vento.
-2. Allontanati dal fuoco. Vai in direzione opposta al vento.
-3. Se puoi, vai verso il basso, non verso l'alto.
-4. Non cercare di spegnere un fuoco grande.
-5. Metti un panno bagnato sulla bocca e sul naso.
+1. Chiama il **112**, il numero unico per le emergenze. Chiama anche se vedi solo fumo. Di' il Comune e il posto preciso.
+2. Non avvicinarti al fuoco. Non cercare di spegnerlo da solo.
+3. Vai verso una strada o un fiume. Non andare dove soffia il vento.
+4. Non scappare in salita. In salita il fuoco corre più veloce di te.
+5. Il fuoco ti chiude la strada? Stenditi a terra, in un posto senza erba e senza piante. Il fumo va verso l'alto: così respiri meno fumo.
+6. Non fermarti sulla strada a guardare. La strada serve ai soccorsi.
 
 ## Cosa fare se sei a casa e il fuoco è vicino
 
-- Chiudi tutte le finestre e le porte.
-- Togli le tende e i tessuti vicino alle finestre.
-- Riempi vasche e contenitori con acqua.
-- Prepara una borsa con le cose essenziali.
-- Segui le istruzioni delle autorità.
-- Non tornare a casa senza il permesso delle autorità.
+- Puoi andare via senza pericolo? Allora vai via subito, lontano dal fumo e dal fuoco.
+- Non puoi andare via? Resta in casa. Chiudi porte, finestre, persiane e prese d'aria.
+- Metti panni bagnati sotto le porte.
+- Segui sempre le istruzioni dei soccorritori.
+- Il fuoco ha toccato la tua casa? Prima di entrare, fai controllare che la casa sia sicura.
 
 ## Cosa fare con gli animali
 
-- Metti al sicuro gli animali domestici vicino a casa.
-- Tieni pronto un trasportino per portarli via.
-- Non cercare di salvare animali selvatici. Chiama il 112.
+- Tieni vicino a te gli animali di casa. Se vai via, portali con te.
+- Tieni pronto un trasportino.
+- Non avvicinarti al fuoco per salvare animali selvatici. Se li vedi in pericolo, dillo quando chiami il 112.
 
 ## Chi interviene in caso di incendio
 
-Quando c'è un incendio nel Lazio intervengono:
+Nel Lazio la Regione guida la lotta agli incendi. La sua Sala Operativa manda le squadre e gli elicotteri.
 
-- I **Vigili del Fuoco** — coordinano i soccorsi.
-- I **Carabinieri Forestali** — controllano e fanno le indagini.
-- Il **volontariato di Protezione Civile** — avvista i fuochi e supporta i soccorsi. Il sistema AIB (anti incendio boschivo) coordina questo lavoro.
-- Gli elicotteri e i **Canadair** — gettano acqua sui fuochi grandi.
+Intervengono:
+
+- i **Vigili del Fuoco**, che spengono gli incendi;
+- i **Carabinieri Forestali**, che controllano e cercano le cause degli incendi;
+- i **volontari di Protezione Civile**, chiamati dalla Sala Operativa della Regione;
+- gli **elicotteri** della Regione e i **Canadair** dello Stato. I Canadair sono aerei che buttano acqua sul fuoco.
 
 ## Il nostro Gruppo in estate
 
-Il Gruppo Comunale di Genzano di Roma lavora in estate per prevenire gli incendi. I volontari:
+I volontari del Gruppo Comunale di Genzano di Roma:
 
-- Controllano le zone a rischio.
-- Supportano i Vigili del Fuoco quando serve.
-- Informano i cittadini nei quartieri e alle feste.
+- controllano le zone a rischio nei giorni più pericolosi;
+- aiutano a spegnere gli incendi, quando la Sala Operativa della Regione li chiama;
+- danno informazioni ai cittadini.
+
+I cittadini non possono chiamare direttamente il Gruppo. Per un incendio chiama il 112.
 
 ## Dove trovare le informazioni
 
-- **DPC**, cioè il Dipartimento della Protezione Civile, pubblica ogni giorno il rischio incendi.
-- La **Regione Lazio** pubblica le allerte.
-- Il **Comune di Genzano** pubblica le ordinanze locali.
+- Nella stagione degli incendi la **Regione Lazio** pubblica ogni giorno il bollettino del pericolo di incendi. Genzano è nella zona 9.
+- Anche il **Dipartimento della Protezione Civile** pubblica ogni giorno il pericolo di incendi, per ogni provincia.
+- Il **Comune di Genzano** pubblica le ordinanze.
 
 ## Le zone a rischio a Genzano
 
 Le zone più pericolose sono:
 
-- I boschi del Parco dei Castelli Romani.
-- Le scarpate con erba secca vicino alle strade.
-- Le aree vicino alle case che confinano con i boschi.
-- I campi abbandonati vicino alle abitazioni.
+- i boschi del Parco dei Castelli Romani vicino alle case;
+- l'erba secca ai lati delle strade;
+- i campi abbandonati vicino alle case.
 
 ## Per sapere di più
 
-- [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
-- [Triangolo del fuoco — come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- [Campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
+- [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/)
+- [L'ordinanza del Sindaco in parole semplici](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026-facile/)
+- [Il triangolo del fuoco: come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)

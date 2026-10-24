@@ -1,142 +1,147 @@
 ---
-title: "20 giugno: solstizio d'estate e massima attenzione incendi"
+title: "Solstizio d'estate: massima attenzione agli incendi boschivi"
 date: 2026-06-20T00:01:00+02:00
-description: "Il solstizio d'estate segna l'inizio della fase critica per gli incendi boschivi. Cambiano temperatura, umidità, vento: un promemoria operativo."
+description: "Il solstizio cade domenica 21 giugno, a campagna antincendio già partita. I dati del Lazio, i divieti a Genzano e cosa fare se vedi un incendio."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-20-solstizio-estate-massima-attenzione-incendi.webp"
-image_alt: "Sole al tramonto sopra campi aridi ai Castelli Romani in una giornata estiva"
+image_alt: "Cover dell'articolo: Solstizio d'estate: massima attenzione agli incendi boschivi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 versione_facile: "2026-06-20-solstizio-estate-massima-attenzione-incendi-facile"
+lis_section: "rischio-incendio"
 draft: false
 ---
 
-Il **20-21 giugno** segna il **solstizio d'estate**: il momento dell'anno con il giorno più lungo e l'angolazione solare più alta. Astronomicamente è l'inizio della stagione estiva, ma in Protezione Civile coincide con qualcosa di più concreto: la **fase di massima attenzione** sugli incendi boschivi.
+Quest'anno il **solstizio d'estate** cade **domenica 21 giugno, alle 10:24** ora italiana: comincia l'estate astronomica. È il giorno più lungo dell'anno. A Genzano il sole sorge verso le 5:35 e tramonta verso le 20:47: poco più di 15 ore di luce. Per la protezione civile il solstizio segna l'inizio della stagione in cui gli incendi boschivi sono più frequenti.
 
-## Perché il solstizio segna un punto di svolta
+## La campagna antincendio è già cominciata
 
-Le condizioni che favoriscono gli incendi si accumulano nelle settimane precedenti. Al solstizio molti parametri raggiungono il picco:
+La [campagna antincendio boschivo 2026](/comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026/) è partita il 15 giugno e dura fino al 15 ottobre. Il periodo di massima attenzione, con la flotta aerea dello Stato schierata al completo, va dal 1° luglio al 5 settembre. A Genzano l'[ordinanza del Sindaco](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/) ha dichiarato lo stato di grave pericolosità per gli incendi boschivi dal 17 giugno al 15 ottobre 2026.
 
-- **Temperature medie** sopra i 25-30 °C.
-- **Ore di luce solare** massime (fino a 15 ore/giorno a queste latitudini).
-- **Umidità dell'aria** in progressiva diminuzione.
-- **Vegetazione** secca dopo l'aridità di fine primavera.
-- **Frequentazione turistica** dei boschi in crescita.
+In queste settimane si sommano le condizioni che favoriscono il fuoco:
 
-È il momento in cui il sistema AIB nazionale e regionale entra nella **massima allerta operativa**.
+- giornate lunghe, con molte ore di sole;
+- erba e sterpaglie che seccano dopo la primavera;
+- poca pioggia e, in alcune giornate, il vento;
+- più persone all'aperto, nei boschi e in campagna.
 
-## I dati stagionali
+## Che cosa dicono i dati
 
-Dati medi per il Lazio negli ultimi dieci anni:
+Nel Lazio gli incendi boschivi seguono l'andamento tipico delle regioni mediterranee: molti d'estate, pochi d'inverno. Il [Piano regionale antincendio boschivo 2023-2025](https://www.regione.lazio.it/sites/default/files/documentazione/2026/DGR-228-25-05-2023-piano-AIB-2023-2025.pdf) (PDF, 31 MB) della Regione Lazio lo collega alla siccità di primavera e d'estate e al vento. Nello stesso documento si legge che:
 
-- **Oltre il 70% degli incendi** annuali si concentra tra giugno e settembre.
-- **Picco di eventi** tipicamente a luglio-agosto.
-- **Superficie bruciata media annua** nel Lazio: 4.000-6.000 ettari.
-- **Cause**: quasi tutti gli incendi nascono da comportamenti umani, dolosi o colposi (comportamenti incauti). In Italia solo il 2% ha cause naturali, come i fulmini, secondo le stime riportate dall'[ISPRA](https://www.isprambiente.gov.it/it/attivita/Crisi-Emergenze-ambientali-e-Danno/centro-operativo-per-la-sorveglianza-ambientale/ecosistemi-ed-incendi-boschivi-in-italia/inquadramento-del-problema).
+- dal 1990 al 2022 nel Lazio ci sono stati in media **478 incendi boschivi l'anno**, che hanno percorso in media **circa 5.900 ettari** l'anno, di cui circa 3.800 di bosco;
+- fra il 2006 e il 2016 il mese con più incendi è stato **agosto** (1.697), seguito da **luglio** (978) e **settembre** (735): questi tre mesi da soli contano quasi tre incendi su quattro.
 
-Fonte: [Rapporti annuali del Corpo Forestale dei Carabinieri](https://www.carabinieri.it/) e della **Regione Lazio**.
+Anche l'[ISPRA](https://www.isprambiente.gov.it/it/attivita/Crisi-Emergenze-ambientali-e-Danno/centro-operativo-per-la-sorveglianza-ambientale/ecosistemi-ed-incendi-boschivi-in-italia/inquadramento-del-problema) spiega che nelle regioni del Centro e del Sud, con clima mediterraneo, gli incendi sono più frequenti e possono interessare grandi superfici soprattutto d'estate. Quasi tutti nascono da comportamenti umani, dolosi o colposi: secondo le stime riportate dall'ISPRA, in Italia solo il 2% degli incendi ha cause naturali, come i fulmini.
 
-## Il "triangolo del fuoco"
+## Il triangolo del fuoco
 
 Perché un incendio si sviluppi servono tre elementi:
 
 1. **Combustibile**: vegetazione secca (erba, sterpaglie, aghi di pino, foglie).
-2. **Comburente**: ossigeno dell'aria.
-3. **Innesco**: una scintilla, una fiamma, una temperatura sufficiente.
+2. **Comburente**: l'ossigeno dell'aria.
+3. **Innesco**: una scintilla, una fiamma, una fonte di calore.
 
-La prevenzione agisce principalmente sul **combustibile** (manutenzione del territorio) e sull'**innesco** (comportamenti umani). L'ossigeno non si può togliere.
+Nella prevenzione l'ossigeno dell'aria non si può togliere: si lavora sul **combustibile**, con terreni puliti, e sull'**innesco**, con comportamenti prudenti. Abbiamo dedicato un articolo al [triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
 
-Abbiamo dedicato un articolo al [triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
+## I divieti a Genzano fino al 15 ottobre
 
-## I comportamenti vietati in periodo AIB
+L'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/) vale dal 17 giugno al 15 ottobre 2026 nelle aree del Comune a rischio di incendio boschivo e in quelle vicine. In questo periodo è vietato:
 
-Ricordiamo gli obblighi in vigore a Genzano nel periodo di grave pericolosità, che nel 2026 va [dal 17 giugno al 15 ottobre](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/):
+- accendere fuochi di ogni genere;
+- usare apparecchi a fiamma o elettrici per tagliare metalli, e motori, fornelli o inceneritori che producono faville o brace, salvo i lavori forestali autorizzati;
+- fumare, gettare fiammiferi, sigari o sigarette accese e qualsiasi materiale acceso;
+- accendere fuochi d'artificio, lanciare razzi e lanterne volanti;
+- far brillare mine o usare esplosivi;
+- transitare o sostare con i veicoli sulle strade non asfaltate dentro le aree boscate, salvo i mezzi di servizio e le attività agricole, forestali e di pascolo.
 
-- **Vietato** accendere fuochi all'aperto.
-- **Vietato** bruciare stoppie, sterpaglie, residui di potatura.
-- **Vietato** lanciare mozziconi, fiammiferi, oggetti incandescenti.
-- **Vietato** abbandonare vetri e specchi.
-- **Obbligatorio** mantenere pulita fascia di rispetto attorno ad edifici e strade in area boscata.
+Gli abbruciamenti di residui vegetali si possono fare solo con l'autorizzazione del Comando Carabinieri Forestale. Anche se autorizzati, non si fanno nelle giornate di vento né tra le 10 e le 18.
 
-Violazioni: **sanzioni amministrative** significative e **responsabilità penali** se causa di incendio.
+Chi possiede terreni deve creare una fascia di protezione larga 5 metri (10 vicino alla ferrovia) e interrare le stoppie entro il 15 luglio. Deve anche ripulire per 5 metri la vegetazione secca lungo le strade e tenere libere da materiali infiammabili le aree intorno alle case.
 
-## Dove si trovano le informazioni
+Chi viola i divieti rischia una sanzione da 5.000 a 50.000 euro (articolo 10, comma 6, della legge 353/2000). Chi provoca un incendio boschivo, anche per imprudenza, ne risponde anche penalmente.
 
-- **Bollettini di pericolosità** del DPC — valutano il rischio in base a indice meteo-climatico (Fire Weather Index).
-- **Allerte regionali** del Centro Funzionale Lazio, pubblicate ogni giorno.
-- **Sito del Comune di Genzano di Roma** per ordinanze locali.
+## Dove trovi le informazioni
 
-I **tre livelli di pericolosità** (bassa, media, alta) cambiano i divieti e le attenzioni operative del sistema.
+- Durante la campagna il **Centro Funzionale della Regione Lazio** pubblica ogni giorno il [bollettino di pericolosità da incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi), zona per zona, con quattro livelli: basso, medio, moderato ed elevato. Genzano è nella zona 9. Quando il livello non è basso, lo trovi anche nella barra delle allerte di questo sito.
+- Il **Dipartimento della Protezione Civile** emette ogni giorno un [bollettino nazionale di suscettività all'innesco](https://rischi.protezionecivile.gov.it/it/incendi-boschivi/attivita/), provincia per provincia, con tre livelli di pericolosità: bassa, media e alta. Il livello indica quanto potrebbe essere impegnativo spegnere un incendio: con pericolosità alta può servire quasi certamente la flotta aerea dello Stato.
+- Il **Comune di Genzano di Roma** pubblica le ordinanze sul suo sito istituzionale.
 
-## La mappa del rischio a Genzano
+I divieti dell'ordinanza valgono ogni giorno, dal 17 giugno al 15 ottobre, qualunque sia il livello dei bollettini.
 
-Le aree a maggiore rischio di Genzano e Comuni vicini:
+## Dove il rischio è più alto
 
-- **Boschi del Parco dei Castelli** (Monte Gentile, Valle Caina, Roccolo).
-- **Scarpate a vegetazione erbacea secca** lungo le strade principali.
-- **Zone di interfaccia urbano-bosco** nelle frazioni rurali.
-- **Aree di coltivo abbandonato** prossime ad abitazioni.
+Genzano di Roma è in parte compresa nel Parco regionale dei Castelli Romani, con ampie aree di bosco e di macchia mediterranea. Il fuoco è più pericoloso dove la vegetazione secca arriva vicino a case e strade:
 
-Il **Piano Comunale di Protezione Civile** identifica queste zone e pianifica risposta.
+- i margini dei boschi accanto alle abitazioni;
+- le scarpate con erba secca lungo le strade;
+- i terreni incolti o abbandonati vicino alle case.
 
 ## Se vedi un incendio
 
-La rapidità è tutto. Nei primi **5 minuti** un principio d'incendio è gestibile. Dopo 15-30 minuti, in estate, raramente.
+In caso di incendio boschivo conta intervenire presto. Non pensare che qualcun altro abbia già chiamato.
 
-1. **Chiama il 112** — indica località, direzione del vento, presenza di case o persone.
-2. **Allontanati** in direzione **opposta al vento** e **in discesa** se possibile.
-3. **Non tentare di spegnere** un fronte di fuoco esteso.
-4. **Raggiungi un punto sicuro** (strada asfaltata larga, terreno già bruciato, area senza vegetazione).
-5. **Proteggi le vie respiratorie** con un panno bagnato.
+1. **Chiama il 112** appena vedi fiamme, o anche solo fumo: nel Lazio è l'unico numero di emergenza. Spiega con precisione dove: il Comune, la località, un punto di riferimento visibile e la direzione del fumo.
+2. **Non avvicinarti alle fiamme** e non tentare di spegnere l'incendio da solo.
+3. **Cerca una via di fuga sicura**, verso una strada o un corso d'acqua. Non fermarti nei luoghi verso cui soffia il vento: potresti restare intrappolato tra le fiamme.
+4. **Non scappare in salita**: le fiamme salgono più velocemente di quanto tu possa correre.
+5. Se il fuoco ti chiude la strada, **stenditi a terra** in un punto senza vegetazione che possa bruciare: il fumo tende a salire e così lo respiri meno. Solo se non hai altra scelta, attraversa il fuoco dove è meno intenso, per passare dalla parte già bruciata.
+6. **Non fermarti lungo la strada** a guardare: intralceresti i soccorsi.
 
-## Autoprotezione in zona con fuoco vicino
+## Se un incendio minaccia la tua casa
 
-Se sei a casa e un incendio si avvicina:
-
-- **Chiudi** tutte le finestre, porte e prese d'aria.
-- **Togli** tende e materiali infiammabili dalle finestre.
-- **Riempi** vasche, lavandini e contenitori con acqua.
-- **Metti in sicurezza** le bombole di gas in posizione ombreggiata se sicura.
-- **Tieni pronto** un kit di evacuazione.
-- **Segui** le indicazioni delle autorità — **non rientrare** se non autorizzato.
+- Se puoi allontanarti in sicurezza, fallo subito, nella direzione opposta al fumo e al fuoco.
+- Se non puoi, entra in casa e chiudi porte, finestre, persiane e tutte le prese d'aria.
+- Sigilla le fessure sotto le porte con panni bagnati.
+- Se puoi farlo senza correre rischi, bagna l'area intorno alla casa con un tubo da giardino.
+- Prepara una via di fuga alternativa, nel caso il fuoco cambi direzione.
+- Segui sempre le indicazioni delle squadre di soccorso. Se il fuoco ha raggiunto la casa, rientra solo dopo aver fatto verificare la stabilità della struttura.
 
 ## Animali domestici e selvatici
 
-- **Metti in sicurezza** gli animali in corteggio casa.
-- Tieni **trasportini** pronti per evacuazione.
-- **Non tentare** di salvare animali selvatici: rivolgiti ai Vigili del Fuoco.
+- Tieni gli animali domestici vicino a te: se devi allontanarti, portali con te.
+- Tieni pronto un trasportino. Per prepararti c'è il [kit calamità per gli animali domestici](/formazione/kit-calamita-animali/).
+- Non avvicinarti al fuoco per soccorrere animali selvatici: se ne vedi in pericolo, dillo quando chiami il 112.
 
-## Chi partecipa alla difesa
+## Chi interviene
 
-Il sistema AIB nel Lazio coinvolge:
+La legge quadro sugli incendi boschivi (legge 353/2000) affida alle Regioni la previsione, la prevenzione e la lotta attiva; lo Stato concorre allo spegnimento con la flotta aerea. Nel Lazio intervengono:
 
-- **Vigili del Fuoco** (coordinamento operativo).
-- **Corpo Forestale dei Carabinieri** (indagini e controlli).
-- **Volontariato di Protezione Civile** (avvistamento e primi interventi).
-- **Mezzi aerei regionali** (elicotteri, Canadair in casi gravi).
-- **Personale stagionale** specializzato.
-
-Tutti coordinati dalla **Sala Operativa Unificata Permanente** della Regione.
+- la **Sala Operativa Unificata Permanente (SOUP)** della Regione, che coordina avvistamenti, squadre a terra ed elicotteri regionali;
+- i **Vigili del Fuoco**, con le loro squadre;
+- i **Carabinieri Forestali**, che fanno controlli e indagini sulle cause degli incendi;
+- le squadre del **volontariato di protezione civile**, attivate dalla SOUP per avvistamento, spegnimento e bonifica;
+- la **flotta aerea dello Stato**, con i Canadair e gli elicotteri S-64, coordinata dal Centro Operativo Aereo Unificato (COAU) del Dipartimento della Protezione Civile. Interviene su richiesta della Regione, quando squadre ed elicotteri regionali non bastano.
 
 ## Il Gruppo di Genzano in estate
 
-Il Gruppo comunale si attiva in estate con:
+Durante la campagna il Gruppo Comunale:
 
-- **Turni di avvistamento** nelle zone sensibili.
-- **Attivazioni 112** per supporto ai Vigili del Fuoco.
-- **Campagne informative** in sagre, feste, quartieri.
-- **Coordinamento** con il Parco Regionale e i Comuni vicini.
+- fa servizio di avvistamento nei giorni di maggiore pericolosità;
+- partecipa a interventi di spegnimento e bonifica quando lo attiva la Sala Operativa della Regione;
+- affianca le istituzioni nella prevenzione, nel monitoraggio e nell'informazione alla popolazione;
+- collabora con Vigili del Fuoco, Carabinieri Forestali, Parco dei Castelli Romani e i Gruppi dei Comuni vicini.
+
+Il Gruppo non può essere attivato direttamente dai cittadini: se vedi un incendio, chiama il 112.
 
 ## Per approfondire
 
-- Articolo: [Avvio campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
-- Articolo: [Triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- Articolo: [Mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/)
-- Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
-- [DPC — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
-- [Regione Lazio — AIB](https://www.regione.lazio.it/protezione-civile)
+**Sul nostro sito:**
 
-Il solstizio non è solo il giorno più lungo dell'anno. È l'inizio di tre mesi in cui ogni comportamento individuale incide sulla sicurezza di tutti.
+- [Campagna antincendio boschivo 2026: dal 15 giugno al 15 ottobre la lotta attiva](/comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026/).
+- [Incendi boschivi: l'ordinanza del Sindaco per l'estate 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/) — divieti e obblighi fino al 15 ottobre.
+- [Incendi boschivi: nel 2025 la superficie bruciata è quasi raddoppiata](/comunicazioni/2026-06-16-ispra-incendi-2025-superficie-bruciata-prevenzione/) — i dati dell'ISPRA.
+- [Triangolo del fuoco: capire come nasce un incendio per prevenirlo in tempo](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
+- [31 maggio: Giornata senza tabacco, mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/).
+- [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/) — cosa fare prima, durante e dopo.
+
+**Fonti istituzionali:**
+
+- [Campagna antincendio boschivo 2026](https://www.protezionecivile.gov.it/it/approfondimento/campagna-antincendio-boschivo-2026/) e [le attività di previsione, prevenzione e lotta](https://rischi.protezionecivile.gov.it/it/incendi-boschivi/attivita/) — Dipartimento della Protezione Civile.
+- [Incendi boschivi: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/) — campagna «Io non rischio» del Dipartimento della Protezione Civile.
+- [Bollettini di pericolosità da incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) — Centro Funzionale della Regione Lazio.
+- [Piano regionale di previsione, prevenzione e lotta attiva contro gli incendi boschivi 2023-2025](https://www.regione.lazio.it/sites/default/files/documentazione/2026/DGR-228-25-05-2023-piano-AIB-2023-2025.pdf) (PDF, 31 MB) — Regione Lazio.
+- [Ecosistemi e incendi boschivi in Italia: inquadramento del problema](https://www.isprambiente.gov.it/it/attivita/Crisi-Emergenze-ambientali-e-Danno/centro-operativo-per-la-sorveglianza-ambientale/ecosistemi-ed-incendi-boschivi-in-italia/inquadramento-del-problema) — ISPRA.

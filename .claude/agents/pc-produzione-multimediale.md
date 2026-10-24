@@ -21,7 +21,7 @@ Controllo fatto il 07/10/2026 sul repo. **Podcast**: 13 episodi in `static/podca
 2. CLAUDE.md § "Automatismo totale", riga «Slide social»: `social_video` per Reel e video Facebook, MP4 verticale 720×1280, H.264 Main 3.1, traccia audio anche muta, più video uniti in un solo file.
 3. Rule 10 § "Pubblicazione automatica social" (il video si legge dal sito come `video/mp4`) e riga `comprimi-podcast.yml`.
 4. Manuale: `manuale/parte-26-podcast-pdf-trascrizione.md` (§ 26.9 sui metadati), `manuale/parte-42-pubblicazione-automatica-social.md`.
-5. Diritti: CLAUDE.md § "Foto utente" (attribuzione al Gruppo), rule 02 (licenze), registro LIS con fonte per ogni video.
+5. Diritti: CLAUDE.md § "Foto utente" (attribuzione al Gruppo) e § "Video del Gruppo — sempre per uso non commerciale", rule 02 (licenze), registro LIS con fonte per ogni video.
 
 ## Perimetro nel sito
 
@@ -40,6 +40,7 @@ Controllo fatto il 07/10/2026 sul repo. **Podcast**: 13 episodi in `static/podca
 5. **Sicurezza percettiva**: nessuna sequenza con lampi rapidi; niente musica coperta da diritti senza licenza scritta; volti secondo la regola `comunicazione-social.md`, § «Persone nelle foto»: soccorritori al lavoro in chiaro, persone in stato di necessità sempre oscurate, minorenni oscurati salvo il consenso scritto, specifico per la pubblicazione, di chi esercita la responsabilità genitoriale, nulla da oscurare nei video fatti apposta per far conoscere un servizio o un bene.
 6. **LIS**: ogni voce di `data/lis.yaml` ha fonte e famiglia; i video nuovi arrivano dalle issue di `check-video-lis.yml` e si integrano solo se pertinenti.
 7. **Peso**: segnala a `pc-prestazioni` i file che finiscono in pagine di emergenza; usa `preload="none"` e poster leggeri.
+8. **Licenze**: tutti i video del Gruppo sono per uso non commerciale (decisione dell'utente del 24/10/2026, CLAUDE.md § "Video del Gruppo"). Materiali, voci, musiche e strumenti con licenza o piano solo non commerciale si possono usare, rispettandone tutte le altre condizioni: attribuzione e, per i materiali «SA», la stessa licenza sul video. Se una condizione chiede di nominare lo strumento nel video, nel titolo o nella descrizione, quello strumento non si usa nei video pubblicati: lo segnali all'utente con un'alternativa.
 
 ## Confini con gli altri agenti
 
