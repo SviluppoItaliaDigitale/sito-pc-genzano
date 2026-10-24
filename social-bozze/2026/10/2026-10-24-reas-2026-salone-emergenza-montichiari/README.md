@@ -1,4 +1,4 @@
-# Immagini e testi social per «REAS 2026: che cosa si è visto al Salone dell'emergenza di Montichiari»
+# Immagini e testi social per «REAS 2026: il bilancio del Salone dell'emergenza di Montichiari»
 
 - **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-10-24-reas-2026-salone-emergenza-montichiari/
 - **Data**: 2026-10-24

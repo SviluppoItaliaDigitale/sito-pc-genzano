@@ -3429,6 +3429,11 @@ html.a11y-grayscale  img.pittogramma { filter: contrast(1.2); }
 .versione-facile-banner-easy .badge.bg-warning {
   font-size: 0.85rem;
   padding: 0.4rem 0.75rem;
+  /* 24/10/2026: lo stesso ambra del pulsante con testo scuro (9,7:1).
+     Il bg-warning di Bootstrap Italia è #995c00, e con text-dark dava
+     2,39:1 (WCAG 1.4.3) su tutte le versioni facili. */
+  background-color: #ffb300 !important;
+  color: #1a1a1a !important;
 }
 @media print {
   .versione-facile-banner { display: none !important; }
@@ -7426,12 +7431,15 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
   .banner-volontariato { display: none; }
 }
 
-/* ===== VIDEO CAMPAGNA (spot self-hosted negli articoli) v1.0 ===== */
-.article-body figure.video-campagna {
+/* ===== VIDEO CAMPAGNA (spot self-hosted negli articoli) v1.1 =====
+   v1.1 (24/10/2026): le stesse regole valgono anche nelle pagine di sezione
+   (.list-intro-content). Lì il video verticale usciva largo, in 16:9 con le
+   bande nere, perché tutte le regole erano legate a .article-body. */
+:is(.article-body, .list-intro-content) figure.video-campagna {
   max-width: 720px;
   margin: 1.5rem auto;
 }
-.article-body figure.video-campagna video {
+:is(.article-body, .list-intro-content) figure.video-campagna video {
   width: 100%;
   height: auto;
   display: block;
@@ -7441,8 +7449,29 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
 }
 /* Variante per video verticali 9:16 (reel): riquadro più stretto,
    il player video.js segue le proporzioni dagli attributi width/height. */
-.article-body figure.video-campagna.video-verticale {
+:is(.article-body, .list-intro-content) figure.video-campagna.video-verticale {
   max-width: 400px;
+}
+/* Nelle pagine di sezione non c'è la cornice delle figure degli articoli
+   (.article-body figure e figcaption): la riprendo solo per il video. */
+.list-intro-content figure.video-campagna {
+  background: #ffffff;
+  padding: 8px 8px 0 8px;
+  border-radius: 10px;
+  box-shadow:
+    0 10px 28px rgba(0, 51, 102, 0.18),
+    0 3px 8px rgba(0, 51, 102, 0.10);
+  border: 1px solid rgba(0, 51, 102, 0.12);
+}
+.list-intro-content figure.video-campagna figcaption {
+  font-style: italic;
+  color: #003366;
+  text-align: center;
+  font-size: 0.925rem;
+  margin: 0.7rem 0.4rem 0.6rem;
+  padding: 0.4rem 0;
+  line-height: 1.5;
+  border-top: 1px solid rgba(0, 51, 102, 0.10);
 }
 /* VIDEO COPPIA v1.0 — due video verticali affiancati (allerte-meteo, 23/09/2026) */
 .article-body .video-coppia {
@@ -7459,7 +7488,7 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
   width: 100%;
   margin: 0 auto;
 }
-.article-body figure.video-campagna.video-verticale .video-js {
+:is(.article-body, .list-intro-content) figure.video-campagna.video-verticale .video-js {
   width: 100%;
   height: auto;
   aspect-ratio: 9 / 16;

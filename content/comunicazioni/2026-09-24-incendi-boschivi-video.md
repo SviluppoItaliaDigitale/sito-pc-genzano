@@ -75,6 +75,7 @@ Il video è anche nella pagina [Rischio incendi boschivi](/rischi-prevenzione/ri
 **Sul nostro sito:**
 
 - [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/) — cosa fare prima, durante e dopo.
+- [Il fuoco nei nostri boschi: un video in 3D sugli incendi boschivi](/comunicazioni/2026-10-24-incendi-boschivi-video-3d/) — come nasce e corre un incendio, sul rilievo dei Castelli Romani.
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — il kit per un'evacuazione rapida.
 - [Piano familiare di emergenza](/piano-familiare/).
 - [Numeri utili](/numeri-utili/).

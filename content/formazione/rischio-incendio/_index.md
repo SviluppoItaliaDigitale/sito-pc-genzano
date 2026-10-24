@@ -54,6 +54,49 @@ Per il **rischio AIB** (Attività di lotta agli Incendi Boschivi), il riferiment
 
 Non chiamare direttamente il Gruppo Comunale per segnalare un incendio in corso: **il flusso corretto è 112 → Centrale Unica → ente competente**.
 
+Il nostro video in 3D mostra come nasce e corre un incendio nei boschi dei Castelli Romani e che cosa fare quando lo vedi.
+
+{{< video src="/video/2026-10-24-incendi-boschivi-video-3d.mp4"
+          poster="/video/2026-10-24-incendi-boschivi-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: il fuoco nei nostri boschi, come nasce e corre un incendio boschivo"
+          caption="Come nasce e corre un incendio boschivo, sul rilievo dei Castelli Romani. L'incendio è una simulazione schematica, non in scala: ne parliamo nell'articolo [Il fuoco nei nostri boschi](/comunicazioni/2026-10-24-incendi-boschivi-video-3d/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video in 3D</strong></summary>
+
+Il fuoco nei nostri boschi. Il video mostra il rilievo dei Castelli Romani ricostruito in 3D, con le altezze raddoppiate e i laghi di Albano e di Nemi. L'incendio è una simulazione schematica, non in scala.
+
+D'estate i boschi dei Castelli Romani diventano secchi: basta una scintilla per accendere un incendio.
+
+Al fuoco servono tre cose: qualcosa che bruci, l'ossigeno dell'aria e una fonte di calore. Togline una, e si spegne.
+
+In Italia quasi tutti gli incendi li accende l'uomo: le cause naturali, come i fulmini, sono appena il 2%.
+
+Basta un mozzicone, un abbruciamento di sterpaglie, o un'auto parcheggiata sull'erba secca.
+
+Il vento porta ossigeno e spinge le fiamme: la testa dell'incendio corre, i fianchi e la coda vanno più piano.
+
+In salita il fuoco accelera, perché le fiamme scaldano e seccano la vegetazione che hanno davanti.
+
+Nel bosco il fuoco può correre basso, tra foglie secche e sottobosco, oppure salire fino alle chiome: allora è molto più difficile da fermare.
+
+Il vento solleva anche le faville, che accendono nuovi focolai lontano dal fronte.
+
+A terra lavorano Vigili del Fuoco e volontari antincendio; con una fascia tagliafuoco si toglie al fuoco il combustibile.
+
+Se l'incendio è troppo grande, dal cielo arrivano elicotteri e Canadair.
+
+Chi ha una casa vicino al bosco deve tenere il terreno intorno pulito da erba secca, sterpaglie e rami.
+
+Se vedi fumo o fiamme chiama subito il 112, e spiega con precisione dove: non pensare che l'abbia già fatto qualcun altro.
+
+Se il fuoco si avvicina, allontanati verso una strada o un corso d'acqua, mai nella direzione in cui soffia il vento.
+
+Prevenire gli incendi è compito di tutti. In caso di incendio chiama il 112.
+
+</details>
+
 ## Leggi anche
 
 - [Manuale da Campo — Funzioni tecniche](/formazione/manuale-campo/funzioni-tecniche/)

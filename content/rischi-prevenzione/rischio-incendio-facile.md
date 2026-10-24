@@ -15,6 +15,16 @@ Un incendio nel bosco è un fuoco grande tra alberi ed erba. Il fuoco corre velo
 
 Genzano di Roma ha molti boschi, nel Parco dei Castelli Romani. Il periodo più pericoloso va da giugno a settembre. In questi mesi fa caldo e piove poco.
 
+Guarda il nostro video. Nel video vedi i Castelli Romani in 3D. Vedi anche come nasce e come corre il fuoco nel bosco.
+
+{{< video src="/video/2026-10-24-incendi-boschivi-video-3d.mp4"
+          poster="/video/2026-10-24-incendi-boschivi-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e scritte: il fuoco nei boschi"
+          caption="Come nasce un incendio nel bosco e come corre. L'incendio del video non è vero: è un esempio. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+Il video dice molte cose. Le trovi scritte con frasi semplici nella pagina [Il fuoco nei boschi: un video in 3D](/comunicazioni/2026-10-24-incendi-boschivi-video-3d-facile/).
+
 ## Prima
 
 - Non buttare mai sigarette o fiammiferi accesi. Non buttarli neanche dall'auto.

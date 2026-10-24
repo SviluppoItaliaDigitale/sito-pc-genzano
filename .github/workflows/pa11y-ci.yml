@@ -5,7 +5,7 @@ name: "♿ Pa11y accessibilità (PR)"
 # dichiarazione di accessibilità) su un campione di pagine chiave, secondo
 # WCAG 2.2 AA. Obiettivo: intercettare le regressioni di accessibilità PRIMA
 # del deploy, complementare a lighthouse-audit.yml (che gira post-deploy) e a
-# validate-pr.yml (che fa solo build Hugo). Config in .pa11yci.json.
+# validate-pr.yml (che fa solo build Hugo). Pagine del campione in scripts/axe-gate.js (PATHS).
 
 on:
   pull_request:
