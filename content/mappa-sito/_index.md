@@ -713,6 +713,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Sala stampa</p>
   <p class="ms-card-desc">Per giornalisti e redazioni: contatti, comunicati stampa, ultime notizie, dati, foto e logo, come citare il Gruppo e le fonti ufficiali in emergenza.</p>
 </a>
+<a class="ms-card" href="/sala-stampa/comunicati/">
+  <div class="ms-card-icon"><i class="bi bi-megaphone"></i></div>
+  <p class="ms-card-title">Comunicati stampa</p>
+  <p class="ms-card-desc">L'archivio dei comunicati del Gruppo, con il filtro per anno e mese, il testo da copiare, il PDF da scaricare e il feed RSS.</p>
+</a>
 <a class="ms-card" href="/san-pio-da-pietrelcina/">
   <div class="ms-card-icon"><i class="bi bi-star"></i></div>
   <p class="ms-card-title">Il nostro patrono</p>

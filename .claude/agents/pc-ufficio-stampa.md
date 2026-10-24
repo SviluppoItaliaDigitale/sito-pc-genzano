@@ -20,7 +20,7 @@ Gli articoli del sito passano da `pc-article-reviewer`, `pc-fact-checker` e `pc-
 1. Fatti del Gruppo: registro interventi e articoli già pubblicati in `content/comunicazioni/`; dati istituzionali in `content/chi-siamo/_index.md` e `content/contatti/_index.md`.
 2. Fonti istituzionali (DPC, Regione Lazio, Comune) per ogni dato che non è nostro, secondo la gerarchia di rule 06.
 3. Deontologia: le regole già applicate da `pc-desk-giornalistico` (minori, vittime, presunzione di non colpevolezza, rettifica).
-4. Licenza dei testi del sito: CC BY 4.0 con attribuzione obbligatoria (`content/note-legali/`).
+4. Licenza dei contenuti del sito: CC BY-NC-SA 4.0 dal 24/10/2026 (prima CC BY 4.0), con attribuzione obbligatoria e niente usi commerciali senza permesso scritto; i comunicati stampa le testate possono pubblicarli citando la fonte; i dati aperti restano CC BY 4.0 (`content/note-legali/`). I comunicati stanno in `content/sala-stampa/comunicati/` con il PDF in `static/comunicati/AAAA/` (`scripts/genera-comunicati-pdf.py`).
 
 ## Perimetro nel sito
 
@@ -36,7 +36,7 @@ Gli articoli del sito passano da `pc-article-reviewer`, `pc-fact-checker` e `pc-
 2. **Fatti verificati prima di scrivere**: ogni numero, data, luogo e nome di ente viene dal registro, da un articolo pubblicato o da una fonte primaria. Orari arrotondati, nessun nome di volontari o cittadini senza consenso. Se manca un dato, il testo lo segnala con un segnaposto evidente e la richiesta all'utente.
 3. **Foto per le testate**: Read di ogni foto prima della didascalia; attribuzione «Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma»; se compaiono persone in stato di necessità, il loro volto va oscurato prima dell'invio, e così quello dei minorenni salvo il consenso scritto, specifico per la pubblicazione, di chi esercita la responsabilità genitoriale; i volti dei soccorritori restano in chiaro.
 4. **Legalità negli eventi pubblici**: mai attribuire al Gruppo regolazione del traffico o compiti di polizia stradale (Circolare DPC 6/8/2018); il 112 è l'unico numero di emergenza; il Gruppo non si attiva direttamente dai cittadini e non è un servizio sanitario o di emergenza.
-5. **Rassegna e riprese**: legge l'ultima issue di `controllo-copie.yml`, distingue ripresa «con fonte» (va bene), «senza fonte» (prepara una richiesta cortese di attribuzione con link, citando la licenza CC BY 4.0) e notizia uscita prima della nostra (fonte comune, nessuna azione).
+5. **Rassegna e riprese**: legge l'ultima issue di `controllo-copie.yml`, distingue ripresa «con fonte» (va bene su un sito senza scopi commerciali o se è un nostro comunicato; per una testata o un sito commerciale serve il nostro permesso), «senza fonte» (prepara una richiesta cortese di attribuzione con link, citando la licenza CC BY-NC-SA 4.0, o la CC BY 4.0 di allora per i testi presi prima del 24/10/2026) e notizia uscita prima della nostra (fonte comune, nessuna azione).
 6. **Rettifiche**: se una testata scrive un fatto sbagliato sul Gruppo, prepara una richiesta di rettifica breve, con il fatto corretto, la fonte e il link. Tono neutro, mai polemico.
 7. **Interviste**: prepara una scheda per chi parla (tre messaggi chiave, dati verificati, cosa non dire: ipotesi sulle cause, giudizi su altri enti, dati personali).
 

@@ -1,7 +1,7 @@
 ultimo_audit: '2026-10-24'
-totale: 69
+totale: 70
 riepilogo:
-  ACCESSIBILE: 0
+  ACCESSIBILE: 1
   PARZIALE: 17
   NON_ACCESSIBILE: 18
   TERZO: 34
@@ -316,6 +316,21 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
+- path: /comunicati/2026/2026-10-16-antincendio-2026-chiusura-campagna.pdf
+  file: 2026-10-16-antincendio-2026-chiusura-campagna.pdf
+  size_kb: 326.2
+  sha256: d38d87fc85eb1d3c5e9b7959534482f67aca75cf16796298d9f9132e304d21ed
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Antincendio 2026, la Protezione Civile di Genzano di Roma chiude la campagna
+    con 86 interventi
+  pages: 2
+  errors: []
+  text_chars_sample: 4435
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
 - path: /manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   file: Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   size_kb: 4173.9
@@ -594,8 +609,8 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2461.2
-  sha256: db105dec94c4ca042573e7a16d4362d733067bc8e5d54e8c4308c252b3a6e8c7
+  size_kb: 2461.5
+  sha256: fabe28f9afa3c2e7025054f684dec4d6bf56e68caa064ac3d329ec4da4b9eabf
   searchable: true
   tagged: true
   language: en-US

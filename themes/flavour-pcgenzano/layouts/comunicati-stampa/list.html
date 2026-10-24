@@ -1,0 +1,114 @@
+{{- /* Archivio dei comunicati stampa (/sala-stampa/comunicati/).
+     Comunicati dal più recente, raggruppati per mese, con data, titolo,
+     sottotitolo e PDF (tipo e dimensione letti al build con os.Stat; se il
+     file manca il collegamento non compare). Filtro per anno e mese
+     (richiesta dell'utente del 24/10/2026): i due menu compaiono solo con
+     JavaScript, che li gestisce in static/js/comunicati-stampa.js; senza
+     JavaScript si vede tutto, raggruppato per mese. In fondo il feed RSS
+     della sezione (modello comunicati-stampa/rss.xml). Stile in
+     static/css/comunicati-stampa.css, sezione «Archivio». */ -}}
+{{ define "main" }}
+{{- $vCss := readFile "themes/flavour-pcgenzano/static/css/comunicati-stampa.css" | hash.FNV32a -}}
+{{- $vJs := readFile "themes/flavour-pcgenzano/static/js/comunicati-stampa.js" | hash.FNV32a -}}
+<link rel="stylesheet" href="{{ "css/comunicati-stampa.css" | relURL }}?v={{ $vCss }}">
+{{- $nomiMesi := dict
+  "01" "Gennaio" "02" "Febbraio" "03" "Marzo" "04" "Aprile"
+  "05" "Maggio" "06" "Giugno" "07" "Luglio" "08" "Agosto"
+  "09" "Settembre" "10" "Ottobre" "11" "Novembre" "12" "Dicembre" -}}
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione" class="breadcrumb-nav">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        {{- range .Ancestors.Reverse }}{{ if not .IsHome }}
+        <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{- end }}{{ end }}
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4 cs-archivio">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="list-intro-content cs-intro">{{ .Content }}</div>
+
+      {{- $comunicati := .RegularPages.ByDate.Reverse }}
+      <h2 class="cs-archivio-titolo">Tutti i comunicati</h2>
+      {{- if $comunicati }}
+      {{- $anni := slice }}{{ $mesi := slice }}
+      {{- range $comunicati }}{{ $anni = $anni | append (.Date.Format "2006") }}{{ $mesi = $mesi | append (.Date.Format "01") }}{{ end }}
+      <div class="cs-filtro d-print-none" data-cs-filtro hidden>
+        <p class="cs-filtro-titolo" id="cs-filtro-titolo">Filtra per periodo</p>
+        <div class="cs-filtro-campi" role="group" aria-labelledby="cs-filtro-titolo">
+          <div class="cs-filtro-campo">
+            <label for="cs-filtro-anno">Anno</label>
+            <select id="cs-filtro-anno" data-cs-anno>
+              <option value="">Tutti gli anni</option>
+              {{- range uniq $anni }}
+              <option value="{{ . }}">{{ . }}</option>
+              {{- end }}
+            </select>
+          </div>
+          <div class="cs-filtro-campo">
+            <label for="cs-filtro-mese">Mese</label>
+            <select id="cs-filtro-mese" data-cs-mese>
+              <option value="">Tutti i mesi</option>
+              {{- range sort (uniq $mesi) }}
+              <option value="{{ . }}">{{ index $nomiMesi . }}</option>
+              {{- end }}
+            </select>
+          </div>
+          <button type="button" class="btn btn-outline-primary cs-filtro-azzera" data-cs-azzera>Mostra tutti</button>
+        </div>
+        <p class="cs-filtro-esito" role="status" aria-live="polite" data-cs-esito></p>
+      </div>
+      {{- range $comunicati.GroupByDate "2006-01" }}
+      {{- $parti := split .Key "-" }}
+      <section class="cs-gruppo" data-cs-gruppo aria-labelledby="cs-mese-{{ .Key }}">
+        <h3 class="cs-gruppo-titolo" id="cs-mese-{{ .Key }}">{{ index $nomiMesi (index $parti 1) }} {{ index $parti 0 }}</h3>
+        <ul class="cs-elenco">
+          {{- range .Pages }}
+          {{- $dataLunga := .Date | time.Format ":date_long" }}
+          <li class="cs-voce" data-anno="{{ .Date.Format "2006" }}" data-mese="{{ .Date.Format "01" }}">
+            <p class="cs-voce-data"><i class="bi bi-calendar3" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ $dataLunga }}</time></p>
+            <h4 class="cs-voce-titolo"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            {{- with .Params.sottotitolo }}
+            <p class="cs-voce-sottotitolo">{{ . }}</p>
+            {{- end }}
+            {{- with .Params.pdf }}
+            {{- $f := printf "static%s" . }}
+            {{- if fileExists $f }}
+            {{- $kb := math.Ceil (div (float (os.Stat $f).Size) 1024.0) }}
+            <p class="cs-voce-pdf">
+              <a href="{{ strings.TrimPrefix "/" . | relURL }}"><i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Scarica il PDF ({{ printf "%.0f" $kb }} KB)<span class="visually-hidden"> – comunicato del {{ $dataLunga }}</span></a>
+            </p>
+            {{- end }}
+            {{- end }}
+          </li>
+          {{- end }}
+        </ul>
+      </section>
+      {{- end }}
+      {{- else }}
+      <p>Al momento non ci sono comunicati pubblicati.</p>
+      {{- end }}
+
+      {{- with .OutputFormats.Get "RSS" }}
+      <div class="cs-rss">
+        <h2 class="cs-rss-titolo">Ricevi i nuovi comunicati</h2>
+        <p>Con un lettore di feed puoi seguire questa pagina e ricevere ogni nuovo comunicato appena viene pubblicato: <a href="{{ .RelPermalink }}"><i class="bi bi-rss me-1" aria-hidden="true"></i>feed RSS dei comunicati stampa</a>. Altri feed del sito sono nella pagina <a href="{{ "feed-rss/" | relURL }}">Feed RSS</a>.</p>
+      </div>
+      {{- end }}
+
+      {{- with .Parent }}{{ if not .IsHome }}
+      <nav class="torna-indietro d-print-none mt-4" aria-label="Torna alla sezione superiore">
+        <a href="{{ .RelPermalink }}" class="notizia-link"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna a {{ .Title }}</a>
+      </nav>
+      {{- end }}{{ end }}
+    </div>
+  </div>
+</div>
+<script src="{{ "js/comunicati-stampa.js" | relURL }}?v={{ $vJs }}" defer></script>
+{{ end }}

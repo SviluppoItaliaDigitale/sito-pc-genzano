@@ -1,0 +1,28 @@
+{{- /* Riquadro «in cifre» dei comunicati stampa (layout comunicati-stampa).
+     Si mette nel testo del comunicato, nel punto in cui deve comparire:
+       {{< comunicato-cifre >}}
+     Legge dal front matter del comunicato:
+       cifre:         lista di { valore, etichetta, prefisso (facoltativo) }
+       cifre_titolo:  titolo del riquadro (predefinito «In cifre»)
+       cifre_nota:    riga sotto il riquadro (facoltativa)
+     Il riquadro riprende solo cifre già scritte nel testo del comunicato:
+     nessun dato nuovo. Il pulsante «Copia il testo» lo salta (è un riepilogo),
+     la ricerca interna anche (data-pagefind-ignore). Stile in
+     static/css/comunicati-stampa.css, sezione «Riquadro delle cifre». */ -}}
+{{- with .Page.Params.cifre -}}
+{{- $id := printf "cs-cifre-%d" $.Ordinal -}}
+<aside class="cs-cifre" aria-labelledby="{{ $id }}" data-pagefind-ignore>
+  <h2 class="cs-cifre-titolo" id="{{ $id }}">{{ $.Page.Params.cifre_titolo | default "In cifre" }}</h2>
+  <dl class="cs-cifre-griglia">
+    {{- range . }}
+    <div class="cs-cifra">
+      <dt>{{ .etichetta }}</dt>
+      <dd>{{ with .prefisso }}<span class="cs-cifra-pref">{{ . }}</span> {{ end }}{{ .valore }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+  {{- with $.Page.Params.cifre_nota }}
+  <p class="cs-cifre-nota">{{ . }}</p>
+  {{- end }}
+</aside>
+{{- end -}}
