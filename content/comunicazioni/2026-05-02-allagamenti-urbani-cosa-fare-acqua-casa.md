@@ -58,9 +58,9 @@ Se l'acqua sta entrando in casa:
 
 ### Se sei in auto e l'auto si blocca nell'acqua
 
-- **Esci subito** dal veicolo e allontanati verso l'alto.
-- **Non aspettare** i soccorsi dentro l'auto: l'acqua può continuare a salire.
-- Se la porta non apre per la pressione dell'acqua, **rompi il vetro** con l'apposito martelletto di sicurezza.
+- **Esci** e raggiungi a piedi un punto più alto solo se l'acqua è ferma o lenta e puoi farlo senza entrare nella corrente.
+- **Resta nell'auto** e chiama il **112** se intorno l'acqua corre forte.
+- **Sali sul tetto** se l'acqua sale dentro l'abitacolo; se la porta non si apre per la spinta dell'acqua, rompi un finestrino con il martelletto di sicurezza.
 
 ### Chiamata di emergenza
 
