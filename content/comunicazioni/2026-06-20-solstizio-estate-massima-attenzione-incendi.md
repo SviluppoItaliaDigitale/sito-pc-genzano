@@ -145,3 +145,7 @@ Il Gruppo non può essere attivato direttamente dai cittadini: se vedi un incend
 - [Bollettini di pericolosità da incendi boschivi](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi) — Centro Funzionale della Regione Lazio.
 - [Piano regionale di previsione, prevenzione e lotta attiva contro gli incendi boschivi 2023-2025](https://www.regione.lazio.it/sites/default/files/documentazione/2026/DGR-228-25-05-2023-piano-AIB-2023-2025.pdf) (PDF, 31 MB) — Regione Lazio.
 - [Ecosistemi e incendi boschivi in Italia: inquadramento del problema](https://www.isprambiente.gov.it/it/attivita/Crisi-Emergenze-ambientali-e-Danno/centro-operativo-per-la-sorveglianza-ambientale/ecosistemi-ed-incendi-boschivi-in-italia/inquadramento-del-problema) — ISPRA.
+
+**Dati astronomici:**
+
+- [Date e ore delle stagioni 2026](https://aa.usno.navy.mil/calculated/seasons?year=2026&tz=2.00&tz_sign=1&tz_label=false&dst=false) e [alba e tramonto a Genzano di Roma il 21 giugno 2026](https://aa.usno.navy.mil/calculated/rstt/oneday?date=2026-06-21&lat=41.705&lon=12.689&label=Genzano+di+Roma&tz=2.00&tz_sign=1&tz_label=false&dst=false) — Osservatorio navale degli Stati Uniti (U.S. Naval Observatory, in inglese), orari nell'ora legale italiana.
