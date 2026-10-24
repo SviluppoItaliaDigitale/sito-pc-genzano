@@ -1,7 +1,7 @@
 ultimo_audit: '2026-10-24'
-totale: 70
+totale: 71
 riepilogo:
-  ACCESSIBILE: 1
+  ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
   TERZO: 34
@@ -328,6 +328,21 @@ documenti:
   pages: 2
   errors: []
   text_chars_sample: 4435
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: ACCESSIBILE
+- path: /comunicati/2026/2026-10-24-documentario-storia-protezione-civile.pdf
+  file: 2026-10-24-documentario-storia-protezione-civile.pdf
+  size_kb: 320.0
+  sha256: 4e2a9760e76e097083f4b05b25657e92ae10daa2d2d71069dc6daeb838ea6077
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Da Messina 1908 a IT-alert: la Protezione Civile di Genzano di Roma pubblica
+    un documentario'
+  pages: 2
+  errors: []
+  text_chars_sample: 3530
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: ACCESSIBILE
