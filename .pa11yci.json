@@ -20,6 +20,8 @@
     "http://127.0.0.1:8080/piano-familiare/",
     "http://127.0.0.1:8080/rischi-prevenzione/",
     "http://127.0.0.1:8080/comunicazioni/",
-    "http://127.0.0.1:8080/cruscotto/"
+    "http://127.0.0.1:8080/cruscotto/",
+    "http://127.0.0.1:8080/rischi-prevenzione/rischio-incendio/",
+    "http://127.0.0.1:8080/rischi-prevenzione/rischio-incendio-facile/"
   ]
 }

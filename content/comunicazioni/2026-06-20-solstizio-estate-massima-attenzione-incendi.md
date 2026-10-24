@@ -35,7 +35,7 @@ Dati medi per il Lazio negli ultimi dieci anni:
 - **Oltre il 70% degli incendi** annuali si concentra tra giugno e settembre.
 - **Picco di eventi** tipicamente a luglio-agosto.
 - **Superficie bruciata media annua** nel Lazio: 4.000-6.000 ettari.
-- **Cause**: 50-60% dolose, 20-30% colpose (comportamenti incauti), 10-15% naturali, 5-10% di origine non determinata.
+- **Cause**: quasi tutti gli incendi nascono da comportamenti umani, dolosi o colposi (comportamenti incauti). In Italia solo il 2% ha cause naturali, come i fulmini, secondo le stime riportate dall'[ISPRA](https://www.isprambiente.gov.it/it/attivita/Crisi-Emergenze-ambientali-e-Danno/centro-operativo-per-la-sorveglianza-ambientale/ecosistemi-ed-incendi-boschivi-in-italia/inquadramento-del-problema).
 
 Fonte: [Rapporti annuali del Corpo Forestale dei Carabinieri](https://www.carabinieri.it/) e della **Regione Lazio**.
 

@@ -218,6 +218,18 @@ materiali:
   dimensione: 5.0 MB
   data_pubblicazione: '2026-04-17'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-video-3d-2026-10-24
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: video
+  titolo: 'Video in 3D: il fuoco nei nostri boschi'
+  descrizione: Video verticale con voce e sottotitoli (1 minuto e 48 secondi) sul
+    rilievo dei Castelli Romani. Mostra come nasce e corre un incendio boschivo e cosa
+    fare. Pronto da condividere su WhatsApp e social.
+  file_url: /video/2026-10-24-incendi-boschivi-video-3d.mp4
+  dimensione: 16.1 MB
+  data_pubblicazione: '2026-10-24'
+  licenza: CC BY 4.0
 - id: rischio-incendio-video-2026-09-24
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
