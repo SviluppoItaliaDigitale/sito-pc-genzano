@@ -152,6 +152,16 @@ Se l'hook blocca la chiusura della sessione, spiega all'utente perché non lo ha
 
 ---
 
+## Video del Gruppo — sempre per uso non commerciale
+
+🟢 **Decisione dell'utente del 24/10/2026**: *«Tutti i nostri video sono per uso non commerciale!»*. Ogni video del Gruppo (motion graphic, video in 3D, montaggi, Reel, video degli articoli, puntate e podcast video) serve a informare e formare i cittadini: niente pubblicità, sponsor, vendite o monetizzazione dei canali, su nessuna piattaforma.
+
+- Nei video si possono usare materiali e strumenti con licenza o piano **solo per uso non commerciale**: per esempio contenuti in CC BY-NC o CC BY-NC-SA, i pittogrammi ARASAAC, il modello italiano di allineamento dei sottotitoli in CC BY-NC 4.0. Valgono tutte le loro altre condizioni: l'attribuzione e, per i materiali «SA», la stessa licenza sul video.
+- 🔴 **Mai il nome dello strumento o del sito che ha prodotto voce, musica o immagini** (decisione dell'utente del 24/10/2026, che conferma § «Nessun riferimento all'IA»): né nel video, né nel titolo, né nella descrizione, nei sottotitoli, nei metadati o nei post. La voce **Luca** resta nel video sugli incendi e negli altri video in cui c'è, senza alcun riferimento al sito che l'ha generata. L'utente conosce le condizioni dei piani gratuiti (informato il 24/10/2026): non si chiede di nuovo e non si propone mai di aggiungere attribuzioni a strumenti.
+- Il controllo spetta a `pc-produzione-multimediale` (mandato operativo, punto «Licenze»).
+
+---
+
 ## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
 
 🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):
