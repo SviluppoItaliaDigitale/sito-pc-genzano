@@ -5,7 +5,7 @@ layout: "single"
 aliases:
   - /contatti.html
 tts: true
-dataUltimaRevisione: "2026-05-16"
+dataUltimaRevisione: "2026-10-24"
 ---
 
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
@@ -35,6 +35,7 @@ Usa questi recapiti per **informazioni e richieste non urgenti**.
 - **Sede:** Via Sicilia, 13-15 — 00045 Genzano di Roma (RM)
 - **Telefono Segreteria:** [+39 06 9362600](tel:+39069362600)
 - **Email:** [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
+- **Giornalisti e redazioni:** contatti, comunicati e materiali nella [Sala stampa](/sala-stampa/)
 - **Link utili:** [Tutti i link web del Gruppo](https://linktr.ee/protezionecivilegenzano)
 
 ## Canali ufficiali
@@ -116,7 +117,7 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Diventa volontario](/diventa-volontario/) — iscrizione, requisiti e formazione
-- [Sala stampa](/sala-stampa/) — per giornalisti e redazioni: contatti, notizie, foto e logo
+- [Sala stampa](/sala-stampa/) — per giornalisti e redazioni: contatti, comunicati stampa, notizie, foto e logo
 - [Mappa del sito](/mappa-sito/) — tutte le sezioni del sito
 
 <!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

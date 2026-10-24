@@ -26,12 +26,13 @@
             '</div>' +
             '<div class="it-header-slim-right-zone" role="navigation" aria-label="Link rapidi e social">' +
               '<a href="' + SITE_URL + '/facile-da-leggere/" class="btn btn-slim-header btn-easy-read me-2" aria-label="Vai alla versione facile da leggere del sito"><i class="bi bi-book-half me-1" aria-hidden="true"></i><span class="d-none d-md-inline">Facile da leggere</span><span class="d-md-none">Aa</span></a>' +
+              '<a href="' + SITE_URL + '/sala-stampa/" class="btn btn-slim-header btn-sala-stampa me-2" title="Sala stampa per giornalisti e redazioni"><i class="bi bi-newspaper me-1" aria-hidden="true"></i><span class="d-none d-xl-inline">Sala stampa</span><span class="d-xl-none visually-hidden">Sala stampa</span><span class="visually-hidden">: contatti, comunicati e materiali per giornalisti</span></a>' +
               '<a href="' + SITE_URL + '/area-volontari/" class="btn btn-slim-header btn-area-volontari me-3"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i><span class="d-none d-sm-inline">Area Volontari</span><span class="d-sm-none">Accedi</span><span class="visually-hidden">: informazioni e accesso al gestionale dei volontari</span></a>' +
               '<span class="slim-header-divider d-none d-lg-inline" aria-hidden="true"></span>' +
-              '<a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-white me-2"><i class="bi bi-facebook" aria-hidden="true"></i></a>' +
-              '<a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-white me-2"><i class="bi bi-instagram" aria-hidden="true"></i></a>' +
-              '<a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" aria-label="X Twitter" class="text-white me-2"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>' +
-              '<a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="text-white"><i class="bi bi-telegram" aria-hidden="true"></i></a>' +
+              '<a href="https://www.facebook.com/protezionecivilegenzanodiroma" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="slim-social text-white me-2"><i class="bi bi-facebook" aria-hidden="true"></i></a>' +
+              '<a href="https://www.instagram.com/protezionecivilegenzano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="slim-social text-white me-2"><i class="bi bi-instagram" aria-hidden="true"></i></a>' +
+              '<a href="https://x.com/alfagenzano" target="_blank" rel="noopener noreferrer" aria-label="X Twitter" class="slim-social text-white me-2"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>' +
+              '<a href="https://t.me/pcalfagenzano" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="slim-social text-white"><i class="bi bi-telegram" aria-hidden="true"></i></a>' +
             '</div>' +
           '</div>' +
         '</div></div>' +
@@ -213,6 +214,8 @@
                    speculare a hugo.toml menus.footer). */
                 /* «I miei contenuti» (06/10/2026): pagine salvate sul dispositivo. */
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/i-miei-contenuti/" style="color:rgba(255,255,255,0.85);">I miei contenuti</a></li>' +
+                /* «Sala stampa» (24/10/2026): per giornalisti e redazioni. */
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/sala-stampa/" style="color:rgba(255,255,255,0.85);">Sala stampa</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/metodo-editoriale/" style="color:rgba(255,255,255,0.85);">Metodo editoriale</a></li>' +
                 /* Trasparenza + Stato del Sito spostati da "Risorse" a maggio 2026:
                    accountability istituzionale, coerenti nel footer accanto a
@@ -247,7 +250,7 @@
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/social-media-policy/" style="color:rgba(255,255,255,0.85);">Social Media Policy</a></li>' +
             '<li class="list-inline-item" role="listitem"><a href="' + SITE_URL + '/attribuzioni-pittogrammi/" style="color:rgba(255,255,255,0.85);">Attribuzioni pittogrammi</a></li>' +
           '</ul>' +
-          '<p class="mt-2 mb-0 small" style="color:rgba(255,255,255,0.75);">&copy; ' + new Date().getFullYear() + ' Gruppo Comunale Volontari di Protezione Civile Genzano di Roma &mdash; C.F. 92011880588<br>I contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer license" style="color:rgba(255,255,255,0.85);">CC BY 4.0</a>.<br>Sito Web ideato e realizzato da Alessandro Cuollo - Alfa 19 - IU0QVW.</p>' +
+          '<p class="mt-2 mb-0 small" style="color:rgba(255,255,255,0.75);">&copy; ' + new Date().getFullYear() + ' Gruppo Comunale Volontari di Protezione Civile Genzano di Roma &mdash; C.F. 92011880588<br>I contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it" target="_blank" rel="noopener noreferrer license" style="color:rgba(255,255,255,0.85);">CC BY-NC-SA 4.0<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>: riuso non commerciale, citando la fonte.<br>Sito Web ideato e realizzato da Alessandro Cuollo - Alfa 19 - IU0QVW.</p>' +
         '</div>' +
       '</div>' +
     '</footer>' +
@@ -467,7 +470,7 @@
     // Attribuzione automatica al copia (tutela proprietà intellettuale,
     // agosto 2026): stesso script delle pagine Hugo (copy-attribution.js,
     // caricato da baseof.html). Su copia >120 caratteri appende la fonte
-    // con URL e licenza CC BY 4.0; non tocca input/textarea/pre/code né
+    // con URL e licenza CC BY-NC-SA 4.0; non tocca input/textarea/pre/code né
     // i pulsanti "Copia link" (Clipboard API). Idempotente.
     if (document.querySelector('script[data-copy-attribution]')) return;
     var sc = document.createElement('script');

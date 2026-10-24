@@ -4,7 +4,7 @@ description: "Come scriviamo e verifichiamo i contenuti del sito: fonti ufficial
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-10-24"
 ---
 Questa pagina spiega **come lavoriamo**. Vogliamo che ogni cittadino, ma anche ogni ente, possa verificare da dove vengono le nostre informazioni e quanto sono affidabili. La trasparenza del metodo è parte della qualità del contenuto.
 
@@ -63,7 +63,7 @@ Se trovi un'informazione sbagliata o un link che non funziona, scrivici dalla pa
 
 ## Riuso dei contenuti {#riuso}
 
-I contenuti originali del sito sono pensati per essere utili e condivisibili. Dove indicato, sono rilasciati con licenze aperte. I materiali di terzi (norme, foto, pittogrammi) restano soggetti alle rispettive licenze, sempre citate.
+I contenuti originali del sito sono pensati per essere utili e condivisibili. Dal 24 ottobre 2026 sono distribuiti con licenza CC BY-NC-SA 4.0: puoi riusarli per scopi non commerciali, citando la fonte e con la stessa licenza. I dati aperti restano CC BY 4.0. I materiali di terzi (norme, foto, pittogrammi) restano soggetti alle rispettive licenze, sempre citate. Tutti i dettagli sono nelle [Note legali](/note-legali/#licenza-dei-contenuti).
 
 ## Vedi anche
 

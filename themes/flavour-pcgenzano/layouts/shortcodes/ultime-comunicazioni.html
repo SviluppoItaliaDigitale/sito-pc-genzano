@@ -1,0 +1,26 @@
+{{- /* Ultime comunicazioni di un canale (Sala stampa, 24/10/2026).
+     Elenco breve e sempre aggiornato degli articoli più recenti del canale
+     scelto (partial canale-articolo.html: "gruppo" = Il Gruppo e il
+     territorio, "approfondimenti" = magazine). Esclude versioni facili
+     (versione_facile_di) e contenuti d'archivio (archiviato: true).
+     Uso: {{< ultime-comunicazioni canale="gruppo" numero="5" >}} */ -}}
+{{- $canale := .Get "canale" | default "gruppo" -}}
+{{- $n := int (.Get "numero" | default 5) -}}
+{{- $tutti := where (where site.RegularPages "Section" "comunicazioni") "Params.versione_facile_di" nil -}}
+{{- $scelti := slice -}}
+{{- range $tutti.ByDate.Reverse -}}
+  {{- if and (lt (len $scelti) $n) (not .Params.archiviato) (eq (partial "canale-articolo.html" .) $canale) -}}
+    {{- $scelti = $scelti | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- if $scelti -}}
+<ul class="sala-stampa-elenco sala-stampa-elenco-notizie" role="list">
+  {{- range $scelti }}
+  <li class="sala-stampa-voce">
+    <time class="sala-stampa-data" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+    {{- with .Params.badge }} {{ partial "badge.html" . }}{{ end }}
+    <a class="sala-stampa-titolo" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{- end }}
+</ul>
+{{- end -}}

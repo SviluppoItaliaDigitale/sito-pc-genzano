@@ -74,7 +74,7 @@ materiali:
   file_url: /video/2026-09-23-allerta-meteo-codici-colore.mp4
   dimensione: 3.0 MB
   data_pubblicazione: '2026-09-23'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: allerta-meteo-video-cosa-fare-2026-09-23
   tema: allerta-meteo
   tema_titolo: Allerta meteo
@@ -85,7 +85,7 @@ materiali:
   file_url: /video/2026-09-23-allerta-meteo-cosa-fare.mp4
   dimensione: 4.1 MB
   data_pubblicazione: '2026-09-23'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: allerta-meteo-video-codici-colore-16x9-2026-09-24
   tema: allerta-meteo
   tema_titolo: Allerta meteo
@@ -96,7 +96,7 @@ materiali:
   file_url: /video/2026-09-23-allerta-meteo-codici-colore-16x9.mp4
   dimensione: 3.4 MB
   data_pubblicazione: '2026-09-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: allerta-meteo-video-cosa-fare-16x9-2026-09-24
   tema: allerta-meteo
   tema_titolo: Allerta meteo
@@ -107,7 +107,7 @@ materiali:
   file_url: /video/2026-09-23-allerta-meteo-cosa-fare-16x9.mp4
   dimensione: 4.4 MB
   data_pubblicazione: '2026-09-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: allerta-meteo-video-3d-2026-10-24
   tema: allerta-meteo
   tema_titolo: Allerta meteo
@@ -119,7 +119,7 @@ materiali:
   file_url: /video/2026-10-24-come-nasce-allerta-meteo-video-3d.mp4
   dimensione: 44.7 MB
   data_pubblicazione: '2026-10-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: allerta-meteo-podcast-2026-03-25
   tema: allerta-meteo
   tema_titolo: Allerta meteo
@@ -174,7 +174,7 @@ materiali:
   file_url: /video/2026-09-25-kit-emergenza-video.mp4
   dimensione: 1.9 MB
   data_pubblicazione: '2026-09-25'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: kit-emergenza-video-16x9-2026-09-25
   tema: kit-emergenza
   tema_titolo: Kit emergenza famiglia
@@ -185,7 +185,7 @@ materiali:
   file_url: /video/2026-09-25-kit-emergenza-video-16x9.mp4
   dimensione: 1.9 MB
   data_pubblicazione: '2026-09-25'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: kit-emergenza-podcast-2026-04-17
   tema: kit-emergenza
   tema_titolo: Kit emergenza famiglia
@@ -241,7 +241,7 @@ materiali:
   file_url: /video/2026-10-24-incendi-boschivi-video-3d.mp4
   dimensione: 16.1 MB
   data_pubblicazione: '2026-10-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-video-2026-09-24
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
@@ -252,7 +252,7 @@ materiali:
   file_url: /video/2026-09-24-incendi-boschivi-video.mp4
   dimensione: 4.0 MB
   data_pubblicazione: '2026-09-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-video-16x9-2026-09-24
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
@@ -263,7 +263,7 @@ materiali:
   file_url: /video/2026-09-24-incendi-boschivi-video-16x9.mp4
   dimensione: 4.3 MB
   data_pubblicazione: '2026-09-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-presentazione-pdf-2026-05-18
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
@@ -364,7 +364,7 @@ materiali:
   file_url: /video/2026-10-24-pioggia-forte-alluvioni-video-3d.mp4
   dimensione: 26.2 MB
   data_pubblicazione: '2026-10-24'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-idrogeologico-video-2026-09-25
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico
@@ -375,7 +375,7 @@ materiali:
   file_url: /video/2026-09-25-alluvione-forti-piogge-video.mp4
   dimensione: 4.3 MB
   data_pubblicazione: '2026-09-25'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-idrogeologico-video-16x9-2026-09-25
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico
@@ -386,7 +386,7 @@ materiali:
   file_url: /video/2026-09-25-alluvione-forti-piogge-video-16x9.mp4
   dimensione: 4.6 MB
   data_pubblicazione: '2026-09-25'
-  licenza: CC BY 4.0
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-idrogeologico-podcast-2026-04-08
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico

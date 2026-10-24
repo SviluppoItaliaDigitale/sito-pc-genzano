@@ -162,6 +162,14 @@ Se l'hook blocca la chiusura della sessione, spiega all'utente perché non lo ha
 
 ---
 
+## Licenza del sito — CC BY-NC-SA 4.0 (dal 24/10/2026)
+
+🔴 **Decisione dell'utente del 24/10/2026**: *«Proprio tutto il sito sotto licenza NC!»*. I contenuti del Gruppo (testi, articoli, pagine, foto e grafiche, video, podcast, kit, schede, documenti, presentazioni) sono distribuiti con licenza **CC BY-NC-SA 4.0**. Eccezioni dichiarate in `/note-legali/#licenza-dei-contenuti`: **dati aperti CC BY 4.0** (CAD, art. 1, c. 1, lett. l-ter: i dati aperti devono ammettere anche l'uso commerciale), **codice dell'Open Kit EUPL 1.2**, **comunicati stampa** che le testate possono pubblicare citando la fonte, **materiali di terzi** con la loro licenza (anche adattati con la fascia blu), **loghi** esclusi. Le copie già prese in CC BY 4.0 restano utilizzabili alle condizioni di allora (le licenze CC non si revocano).
+
+Punti da tenere allineati quando la licenza o un'eccezione cambia: note legali, social media policy, Sala stampa, Risorse pronte (+ `data/risorse_pronte.yaml`), Open Kit (pagina + `scripts/genera-open-kit.py`), `jsonld-copyright.html`, piè di pagina (Hugo + `site-chrome.js`), `.htaccess` (`DATI_APERTI`/`DATI_TERZI`: un nuovo file di dati di terzi in `static/open-data/` va in `DATI_TERZI`), `copy-attribution.js`, attestato dei giochi, deck di presentazione.
+
+---
+
 ## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
 
 🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):

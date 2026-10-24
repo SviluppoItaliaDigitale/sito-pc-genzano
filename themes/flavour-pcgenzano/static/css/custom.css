@@ -1146,6 +1146,50 @@ article:not(.card) p:has(img) + p:has(img) {
   color: #002244;
   border-color: #e7f0fa;
 }
+/* Variante "Sala stampa" (24/10/2026): stile traslucido della barra, icona
+   sempre visibile e nome visibile da xl in su; sotto xl resta l'icona (con il
+   nome per gli screen reader e nel suggerimento), perché la barra è già piena. */
+.btn-slim-header.btn-sala-stampa {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  min-height: 28px;
+}
+@media (max-width: 1199.98px) {
+  .btn-slim-header.btn-sala-stampa { padding: 0.2rem 0.55rem; }
+  .btn-slim-header.btn-sala-stampa .bi { margin-right: 0 !important; }
+}
+/* Il selettore della lingua (.lang-toggle) è fisso in alto a destra, sopra
+   la barra, e ne copriva la fine: le ultime icone social e, sul telefono, il
+   pulsante Accedi. Dove il selettore c'è (pagine Hugo, se non è nascosto dal
+   pannello accessibilità) la zona destra gli lascia il suo spazio. */
+html:not(.a11y-hide-translate-button) body:has(#lang-toggle) .it-header-slim-right-zone {
+  padding-right: 5.25rem;
+}
+@media (max-width: 480px) {
+  html:not(.a11y-hide-translate-button) body:has(#lang-toggle) .it-header-slim-right-zone {
+    padding-right: 4.5rem;
+  }
+}
+/* Sul telefono (sotto i 576px) le icone dei social lasciano il posto ai tre
+   pulsanti, che perdono le icone decorative: con la Sala stampa la zona
+   destra copriva «Enti istituzionali» a 375px. I canali social restano nel
+   piè di pagina e nella Sala stampa. Classe .slim-social anche in
+   site-chrome.js. */
+@media (max-width: 575.98px) {
+  .it-header-slim-right-zone .slim-social { display: none; }
+  .btn-slim-header.btn-easy-read .bi,
+  .btn-slim-header.btn-area-volontari .bi { display: none; }
+  /* Lo spazio a destra lo dà già la riserva per il selettore della lingua. */
+  .it-header-slim-right-zone .btn-slim-header.btn-area-volontari { margin-right: 0 !important; }
+}
+@media (max-width: 359.98px) {
+  .it-header-slim-right-zone .btn-slim-header { margin-right: 0.25rem !important; }
+  .it-header-slim-right-zone .btn-slim-header.btn-area-volontari { margin-right: 0 !important; }
+  html:not(.a11y-hide-translate-button) body:has(#lang-toggle) .it-header-slim-right-zone {
+    padding-right: 4rem;
+  }
+}
 /* Difesa: forza la zona destra della barra (Facile da leggere + Area Volontari
    + social) a restare visibile e in linea, anche se una versione precedente del
    CSS o un layout stretto tendessero a nasconderla/mandarla a capo. */
@@ -1243,10 +1287,25 @@ article:not(.card) p:has(img) + p:has(img) {
    orizzontale dei nav-link così tutte le voci rientrano. Sopra i 1400px
    resta il padding pieno (c'è spazio); sotto i 992px la navbar collassa
    già nel menu a panino (nessun effetto). */
+/* 24/10/2026: la regola qui sotto non si applicava più. Bootstrap Italia
+   scrive il padding con `.navbar .navbar-collapsable .navbar-nav li.nav-item
+   a.nav-link` (specificità 0,5,2), più forte di `.navbar.has-megamenu
+   .nav-item > .nav-link` (0,3,0): la barra restava larga 1265px e la pagina
+   scorreva in orizzontale fra 992 e 1290px. Selettore rinforzato (0,6,2) e,
+   fra 992 e 1199px, corpo 16px e padding 10px, perché a 14px non bastava. */
 @media (min-width: 992px) and (max-width: 1399.98px) {
-  .navbar.has-megamenu .nav-item > .nav-link {
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > a.nav-link,
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > button.nav-link {
     padding-left: 14px;
     padding-right: 14px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > a.nav-link,
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > button.nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
   }
 }
 
@@ -8335,4 +8394,118 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
   .gi-cal-giorni { line-height: .72rem; font-size: .62rem; width: 1.5rem; }
   .gi-cal .gi-cella { width: .72rem; height: .72rem; border-radius: 2px; }
   .gi-cal-mesi { margin-left: 1.9rem; font-size: .65rem; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   SALA STAMPA v1.0 — 24/10/2026
+   Riquadro dei contatti (shortcode contatti-stampa) ed elenchi
+   sempre aggiornati di comunicati e notizie (shortcode
+   ultimi-comunicati e ultime-comunicazioni). Contrasti calcolati:
+   testo #1a1a1a su #f4f7fb 16,2:1; date #5a6268 su bianco 6,2:1 e su
+   #f4f7fb 5,8:1; etichette #3d4a57 su #f4f7fb 8,4:1; avviso #a1121f su
+   #f4f7fb 7,5:1; collegamenti #003366 su #f4f7fb 11,7:1. Il riquadro è nelle
+   superfici chiare delle modalità di contrasto (a11y-toolbar.css).
+   ══════════════════════════════════════════════════════════ */
+.contatti-stampa {
+  background: #f4f7fb;
+  border-left: 4px solid #003366;
+  border-radius: 0 6px 6px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.5rem;
+  color: #1a1a1a;
+}
+.article-body .contatti-stampa-lista,
+.contatti-stampa-lista {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.article-body .contatti-stampa-lista > li {
+  margin: 0;
+}
+.contatti-stampa-lista > li {
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  column-gap: 0.5rem;
+  align-items: start;
+}
+.contatti-stampa-lista .bi {
+  grid-row: span 3;
+  color: #003366;
+  font-size: 1.15rem;
+  margin-top: 0.1rem;
+}
+.contatti-stampa-voce {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3d4a57;
+}
+.contatti-stampa-lista a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+.contatti-stampa-nota {
+  font-size: 0.9rem;
+  color: #5a6268;
+}
+.contatti-stampa-112 {
+  border-top: 1px solid #c9d6e3;
+  padding-top: 0.75rem;
+}
+.contatti-stampa-112 strong {
+  color: #a1121f;
+}
+
+.article-body .sala-stampa-elenco,
+.sala-stampa-elenco {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem;
+  border-top: 1px solid #dde4ec;
+}
+.article-body .sala-stampa-elenco > li,
+.sala-stampa-voce {
+  margin: 0;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #dde4ec;
+}
+.sala-stampa-data {
+  display: block;
+  font-size: 0.88rem;
+  color: #5a6268;
+  margin-bottom: 0.15rem;
+}
+.sala-stampa-elenco-notizie .sala-stampa-data {
+  display: inline;
+  margin-right: 0.35rem;
+}
+.sala-stampa-titolo {
+  display: block;
+  font-weight: 700;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+.sala-stampa-sommario {
+  margin: 0.3rem 0 0.4rem;
+  font-size: 0.98rem;
+  color: #3d4a57;
+}
+.sala-stampa-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+@media (max-width: 575.98px) {
+  .contatti-stampa { padding: 1rem 1.1rem; }
+  .contatti-stampa-lista a { font-size: 1.08rem; }
+}
+@media print {
+  .contatti-stampa { background: none; border-left-color: #000; }
+  .contatti-stampa-112 strong { color: #000; }
 }

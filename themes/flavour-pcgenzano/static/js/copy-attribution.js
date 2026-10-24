@@ -1,7 +1,7 @@
 /* ============================================================
    ATTRIBUZIONE AUTOMATICA AL COPIA v1.0
-   Tutela della proprietà intellettuale dei contenuti (CC BY 4.0,
-   come dichiarato in /note-legali/): quando l'utente copia più di
+   Tutela della proprietà intellettuale dei contenuti (CC BY-NC-SA 4.0
+   dal 24/10/2026, come dichiarato in /note-legali/): quando l'utente copia più di
    120 caratteri di testo dalla pagina, alla clipboard viene
    appesa la fonte con URL e licenza.
 
@@ -22,8 +22,11 @@
 
   var SOGLIA = 120; // caratteri minimi di selezione per l'attribuzione
   var FONTE = 'Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma';
-  var LICENZA = 'licenza CC BY 4.0 (attribuzione obbligatoria)';
-  var LICENZA_URL = 'https://creativecommons.org/licenses/by/4.0/';
+  var LICENZA = 'licenza CC BY-NC-SA 4.0 (citare la fonte, uso non commerciale, stessa licenza)';
+  var LICENZA_URL = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+  // Pagine che dichiarano i dati aperti (license: CC BY 4.0 nel front matter).
+  var LICENZA_DATI = 'licenza CC BY 4.0 (citare la fonte)';
+  var LICENZA_DATI_URL = 'https://creativecommons.org/licenses/by/4.0/';
 
   // true se il nodo (o un suo antenato) è un contesto in cui la copia
   // non va alterata.
@@ -46,7 +49,7 @@
   // `license: <url>` → etichetta con quell'URL; `license: none` →
   // nessun campo license nel blocco → niente attribuzione al copia
   // (il "salvo diversa indicazione" di /note-legali/). Sulle pagine
-  // statiche senza JSON-LD vale il default CC BY 4.0 del sito.
+  // statiche senza JSON-LD vale il default CC BY-NC-SA 4.0 del sito.
   function licenzaPagina() {
     var def = { url: LICENZA_URL, label: LICENZA };
     try {
@@ -56,6 +59,7 @@
         if (d && d.copyrightHolder) {
           if (!d.license) return null;
           if (d.license === LICENZA_URL) return def;
+          if (d.license === LICENZA_DATI_URL) return { url: LICENZA_DATI_URL, label: LICENZA_DATI };
           return { url: String(d.license), label: 'licenza: ' + String(d.license) };
         }
       }
@@ -83,7 +87,7 @@
       var url = location.origin + location.pathname + location.hash;
 
       var lic = licenzaPagina();
-      if (!lic) return; // license: none → la pagina non dichiara CC BY
+      if (!lic) return; // license: none → la pagina non dichiara una licenza
 
       var blocco = '\n\n—\n' + FONTE + '\n' +
                    url + ' — ' + lic.label;
@@ -97,9 +101,9 @@
           contenitore.appendChild(sel.getRangeAt(i).cloneContents());
         }
         html = contenitore.innerHTML;
-        // La selezione HTML può trasportare pittogrammi ARASAAC (immagini),
-        // che NON sono CC BY 4.0 ma CC BY-NC-SA 4.0: la licenza va dichiarata
-        // correttamente (il text/plain non è interessato: niente immagini).
+        // La selezione HTML può trasportare pittogrammi ARASAAC (immagini):
+        // hanno un autore e un titolare propri, da citare accanto alla
+        // licenza CC BY-NC-SA 4.0 (il text/plain non è interessato: niente immagini).
         conArasaac = !!contenitore.querySelector('img[src*="/pittogrammi/arasaac/"]');
       } catch (errHtml) {
         html = '';

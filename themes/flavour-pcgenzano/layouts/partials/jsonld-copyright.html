@@ -1,8 +1,10 @@
 {{/* JSON-LD di paternità e licenza — tutela proprietà intellettuale.
 
      Emette per OGNI pagina un blocco schema.org con autore, copyrightHolder
-     e licenza dei contenuti (CC BY 4.0 come dichiarato in /note-legali/,
-     "salvo diversa indicazione" sulla singola pagina):
+     e licenza dei contenuti (CC BY-NC-SA 4.0 come dichiarato in
+     /note-legali/ dal 24/10/2026, "salvo diversa indicazione" sulla
+     singola pagina; i dati aperti restano CC BY 4.0 e lo dichiarano
+     con `license:` nel front matter):
        - Article  → pagine di contenuto con data reale (comunicazioni,
                     capitoli del manuale, dossier, ecc.);
        - WebPage  → pagine statiche/di sezione (e homepage).
@@ -28,7 +30,7 @@
        nel front matter (rule 09 punto 19) e la ereditano anche qui. */ -}}
 {{- $lang := "it-IT" -}}
 {{- with .Params.language }}{{ $lang = . }}{{ end -}}
-{{- $license := "https://creativecommons.org/licenses/by/4.0/" -}}
+{{- $license := "https://creativecommons.org/licenses/by-nc-sa/4.0/" -}}
 {{- $omitLicense := false -}}
 {{- with .Params.license -}}
   {{- if eq . "none" }}{{ $omitLicense = true }}{{ else }}{{ $license = . }}{{ end -}}

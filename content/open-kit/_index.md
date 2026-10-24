@@ -15,7 +15,7 @@ I pacchetti si rigenerano a ogni aggiornamento del sito: quello che scarichi è 
 ## Licenza e attribuzione
 
 - Il **codice** dei componenti è rilasciato con licenza [EUPL 1.2](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32017D0863), la licenza open source dell'Unione europea, il cui testo vale anche in italiano. Puoi usarlo, modificarlo e ridistribuirlo; se distribuisci una versione modificata, va condivisa con la stessa licenza.
-- I **testi e gli esempi di contenuto** inclusi (definizioni del glossario, modelli di pagina) hanno licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it), come il resto del sito.
+- I **testi e gli esempi di contenuto** inclusi (definizioni del glossario, modelli di pagina) hanno licenza [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it), come il resto del sito: si riusano per scopi non commerciali, citando la fonte e con la stessa licenza.
 - Quando riusi un componente, cita la fonte: «Open Kit PC Genzano — www.protezionecivilegenzano.it/open-kit/».
 
 **Non sono inclusi**, perché hanno licenze proprie e vanno scaricati dalle loro fonti: Bootstrap Italia, Bootstrap Icons, i pittogrammi ARASAAC (licenza CC BY-NC-SA 4.0, solo uso non commerciale) e le altre librerie di terzi. Il file LEGGIMI di ogni pacchetto dice quali servono.

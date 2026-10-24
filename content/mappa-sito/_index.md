@@ -711,7 +711,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card" href="/sala-stampa/">
   <div class="ms-card-icon"><i class="bi bi-newspaper"></i></div>
   <p class="ms-card-title">Sala stampa</p>
-  <p class="ms-card-desc">Per giornalisti e redazioni: chi siamo in breve, contatti, notizie e dati, foto e logo, come citare il Gruppo e le fonti ufficiali in emergenza.</p>
+  <p class="ms-card-desc">Per giornalisti e redazioni: contatti, comunicati stampa, ultime notizie, dati, foto e logo, come citare il Gruppo e le fonti ufficiali in emergenza.</p>
 </a>
 <a class="ms-card" href="/san-pio-da-pietrelcina/">
   <div class="ms-card-icon"><i class="bi bi-star"></i></div>

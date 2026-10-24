@@ -869,14 +869,18 @@ citata in tutti gli altri canali.
 
 Tutti i contenuti testuali, fotografici e grafici pubblicati sui canali social del Gruppo
 (Instagram, Facebook, X, Telegram) sono rilasciati, ove non diversamente indicato, con licenza
-**Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)**, coerentemente con quanto
-dichiarato per il sito (vedi pagina [Note legali](/note-legali/) e `content/note-legali/_index.md`).
+**Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0
+Internazionale (CC BY-NC-SA 4.0)** dal 24 ottobre 2026 (prima CC BY 4.0), come il sito (vedi
+pagina [Note legali](/note-legali/) e `content/note-legali/_index.md`).
 
-Questo significa che chiunque può:
+Questo significa che chiunque può, per scopi non commerciali:
 
-- riprendere il contenuto (testo, foto, infografica) su altri canali, anche commerciali;
-- modificarlo o adattarlo;
+- riprendere il contenuto (testo, foto, infografica, video) su altri canali;
+- modificarlo o adattarlo, ridistribuendo il risultato con la stessa licenza;
 - citarlo in articoli, tesi, materiali formativi.
+
+Per un uso commerciale serve un permesso scritto del Gruppo; le testate possono pubblicare i
+comunicati stampa citando la fonte.
 
 A condizione di:
 
@@ -890,7 +894,7 @@ Fanno eccezione:
 
 - **fotografie con persone riconoscibili**: soggette a liberatoria individuale, non ridistribuibili;
 - **loghi e identità visiva** del Gruppo, del Comune, del Dipartimento di Protezione Civile:
-  protetti da diritti specifici, non rilasciati in CC BY;
+  protetti da diritti specifici, non rilasciati con licenza Creative Commons;
 - **materiali di terzi** (es. infografiche DPC, ISPRA, INGV) citati con attribuzione alla fonte
   originaria, che mantiene la propria licenza.
 

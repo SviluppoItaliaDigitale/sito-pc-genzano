@@ -36,7 +36,7 @@ Un audit esterno ha rilevato che l'informativa privacy definiva il Gruppo «arti
 
 ### 3. Note legali, trasparenza, social media policy, licenze
 
-- **Licenza dei contenuti** (CC BY 4.0 «salvo diversa indicazione») coerente fra note legali, JSON-LD (`jsonld-copyright.html`), header `.htaccess`, `tdmrep.json`, script di attribuzione alla copia; eccezione ARASAAC CC BY-NC-SA 4.0 dichiarata dove serve.
+- **Licenza dei contenuti** (CC BY-NC-SA 4.0 dal 24/10/2026, «salvo diversa indicazione») coerente fra note legali, JSON-LD (`jsonld-copyright.html`), header `.htaccess`, `tdmrep.json`, piè di pagina (Hugo e `site-chrome.js`), script di attribuzione alla copia, `data/risorse_pronte.yaml`; eccezioni dichiarate dove servono: dati aperti CC BY 4.0 (CAD, art. 1, c. 1, lett. l-ter), codice dell'Open Kit EUPL 1.2, comunicati pubblicabili dalle testate, materiali di terzi con la loro licenza.
 - **Trasparenza**: pagina `/trasparenza/` coerente con lo statuto del Gruppo e con gli obblighi applicabili (D.Lgs. 33/2013 per la parte comunale, D.Lgs. 117/2017 per il Terzo settore); niente adempimenti dichiarati che non esistono.
 - **Social media policy**: coerente con i canali realmente attivi (`data/social_links.yaml`) e con gli orari di presidio dichiarati.
 - **Quality Label ESC**: logo sempre con codice E10435833 (Reg. UE 2021/888), in ogni superficie (CLAUDE.md § Affiliazioni).

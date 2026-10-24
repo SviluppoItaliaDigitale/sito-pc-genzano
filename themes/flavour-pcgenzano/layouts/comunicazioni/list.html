@@ -149,6 +149,14 @@
 
     <aside class="col-lg-4" aria-label="Archivio e categorie">
       <div class="sidebar-archivio sticky-lg-top">
+        {{- /* Sala stampa (24/10/2026): l'utente segnalava che non si trovava. */}}
+        <div class="card card-bordo mb-3">
+          <div class="card-body">
+            <h2 class="h5 mb-2"><i class="bi bi-newspaper" aria-hidden="true"></i> Per giornalisti e redazioni</h2>
+            <p class="mb-2 small">Contatti, comunicati stampa con il PDF da scaricare, foto e logo.</p>
+            <a class="fw-semibold" href="{{ "sala-stampa/" | relURL }}">Vai alla Sala stampa</a>
+          </div>
+        </div>
         <div class="card card-bordo mb-3">
           <div class="card-body">
             <h2 class="h5 mb-3"><i class="bi bi-calendar-range" aria-hidden="true"></i> Archivio mensile</h2>

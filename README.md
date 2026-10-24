@@ -604,6 +604,9 @@ In sintesi:
 
 ## Licenza e diritti
 
-Contenuti testuali: © Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
+Contenuti (testi, foto e grafiche del Gruppo, video, podcast, kit, schede, documenti): © Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, licenza [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it) dal 24 ottobre 2026 (prima CC BY 4.0).
+Dati aperti (`static/open-data/`, JSON dello stato del territorio, feed CAP): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
+Componenti dell'Open Kit: codice EUPL 1.2. Materiali di terzi: licenza del titolare.
+Dettagli ed eccezioni: pagina [Note legali](https://www.protezionecivilegenzano.it/note-legali/#licenza-dei-contenuti).
 Codice del tema: vedi `themes/flavour-pcgenzano/`.
 Riferimenti normativi: AGID, Designers Italia, Dipartimento Protezione Civile.

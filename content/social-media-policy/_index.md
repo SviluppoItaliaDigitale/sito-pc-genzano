@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-10-22"
+dataUltimaRevisione: "2026-10-24"
 toc: true
 ---
 
@@ -53,15 +53,18 @@ Non pubblichiamo previsioni meteo da fonti non istituzionali, notizie non verifi
 
 ## Licenza dei contenuti
 
-I testi, le immagini e le grafiche che pubblichiamo, **salvo diversa indicazione**, sono rilasciati con licenza **[Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.it)**, coerentemente con quanto dichiarato nelle [Note legali](/note-legali/).
+I testi, le immagini, le grafiche e i video che pubblichiamo, **salvo diversa indicazione**, sono rilasciati con licenza **[Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it)**, come dichiarato nelle [Note legali](/note-legali/#licenza-dei-contenuti).
 
-Chiunque può riprendere, adattare e ricondividere i nostri contenuti, anche per uso commerciale, a condizione di:
+Chiunque può riprendere, adattare e ricondividere i nostri contenuti **per scopi non commerciali**, a condizione di:
 
 - **attribuire** la paternità al *Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma*, con link al sito [protezionecivilegenzano.it](https://www.protezionecivilegenzano.it/);
+- **ricondividere** gli adattamenti con la stessa licenza;
 - **non alterare i fatti** (numeri di attivazione, fonti di allerta, codici colore, orari, istruzioni operative);
 - **non presentare** l'adattamento come comunicazione ufficiale del Gruppo se ne modifica la sostanza.
 
-Non sono rilasciati con licenza CC BY:
+Per un uso commerciale serve un permesso scritto del Gruppo. Le testate giornalistiche possono pubblicare i nostri [comunicati stampa](/sala-stampa/#comunicati-stampa) citando la fonte.
+
+Non sono rilasciati con licenza CC BY-NC-SA:
 
 - le **fotografie con persone riconoscibili** (soggette a liberatoria individuale);
 - i **loghi** del Gruppo, del Comune di Genzano di Roma e del Dipartimento di Protezione Civile;

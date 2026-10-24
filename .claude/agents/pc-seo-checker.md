@@ -72,7 +72,7 @@ Dal 15/08/2026 l'entità di pagina **non** è più emessa da `partials/structure
 - **`headline`** e **`description`**: titolo e descrizione dell'articolo.
 - **`datePublished`** e **`dateModified`**: formato data ISO 8601.
 - **`author`** e **`copyrightHolder`**: Organization «Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma».
-- **`license`**: CC BY 4.0 di default; `license:` nel frontmatter la sostituisce, `license: none` la omette.
+- **`license`**: CC BY-NC-SA 4.0 di default (dal 24/10/2026); `license:` nel frontmatter la sostituisce, `license: none` la omette.
 - **`speakable`**: `SpeakableSpecification` su `h1` e primo paragrafo del corpo.
 - **`publisher`**: Organization con logo; **`image`**: URL assoluto della cover; **`mainEntityOfPage`** e **`url`**: URL di produzione.
 

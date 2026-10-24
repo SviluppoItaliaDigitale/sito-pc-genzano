@@ -1,0 +1,23 @@
+{{- /* Riquadro dei contatti per la stampa (Sala stampa, 24/10/2026).
+     Recapiti presi da hugo.toml [params] (email, telefono, telefono_tel):
+     un solo posto da aggiornare. Il titolo «Contatti per la stampa» resta
+     nel Markdown della pagina, così entra nell'indice. Uso:
+     {{< contatti-stampa >}} */ -}}
+{{- $p := .Site.Params -}}
+<div class="contatti-stampa">
+  <ul class="contatti-stampa-lista" role="list">
+    <li>
+      <i class="bi bi-envelope" aria-hidden="true"></i>
+      <span class="contatti-stampa-voce">Email</span>
+      <a href="mailto:{{ $p.email }}">{{ $p.email }}</a>
+    </li>
+    <li>
+      <i class="bi bi-telephone" aria-hidden="true"></i>
+      <span class="contatti-stampa-voce">Telefono della segreteria</span>
+      <a href="tel:{{ $p.telefono_tel }}">{{ $p.telefono }}</a>
+      <span class="contatti-stampa-nota">solo per richieste non urgenti</span>
+    </li>
+  </ul>
+  <p>Per un'intervista, una foto o informazioni su un intervento scrivete indicando testata, argomento e scadenza. Rispondiamo appena possibile; durante un'emergenza in corso la priorità va all'attività operativa.</p>
+  <p class="contatti-stampa-112 mb-0"><strong>Non è un numero di emergenza.</strong> In emergenza si chiama il <a href="tel:112">112</a>: il Gruppo Comunale non si attiva su chiamata dei cittadini.</p>
+</div>
