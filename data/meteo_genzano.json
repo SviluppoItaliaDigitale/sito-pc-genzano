@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-24T13:02",
+  "aggiornato": "2026-10-24T14:02",
   "data_lunga": "sabato 24 ottobre 2026",
-  "aggiornato_label": "sabato 24 ottobre 2026, ore 13:02",
+  "aggiornato_label": "sabato 24 ottobre 2026, ore 14:02",
   "alba": "07:31",
   "tramonto": "18:14",
   "corrente": {
-    "temp": 16.3,
-    "percepita": 16.0,
+    "temp": 15.4,
+    "percepita": 14.8,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 76,
-    "vento": 7,
-    "raffiche": 19
+    "umidita": 79,
+    "vento": 8,
+    "raffiche": 26
   },
   "giorni": [
     {
@@ -21,8 +21,8 @@
       "tmax": 16,
       "tmin": 12,
       "pioggia": 100,
-      "pioggia_mm": 1.4,
-      "raffiche": 50,
+      "pioggia_mm": 1.6,
+      "raffiche": 48,
       "uv": 3,
       "uv_label": "moderato"
     },
@@ -34,7 +34,7 @@
       "tmin": 10,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 56,
+      "raffiche": 53,
       "uv": 3,
       "uv_label": "moderato"
     },
@@ -67,7 +67,7 @@
   "province": [
     {
       "nome": "Viterbo",
-      "tmax": 17,
+      "tmax": 16,
       "tmin": 10,
       "cielo": "Rovesci"
     },
@@ -79,8 +79,8 @@
     },
     {
       "nome": "Roma",
-      "tmax": 20,
-      "tmin": 13,
+      "tmax": 19,
+      "tmin": 14,
       "cielo": "Rovesci"
     },
     {
@@ -93,7 +93,7 @@
       "nome": "Frosinone",
       "tmax": 19,
       "tmin": 11,
-      "cielo": "Temporale"
+      "cielo": "Rovesci"
     }
   ]
 }
