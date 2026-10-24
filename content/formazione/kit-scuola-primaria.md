@@ -204,7 +204,7 @@ Il territorio di Genzano di Roma e dei Castelli Romani è collinare, con pendii 
 1. **Sali ai piani alti** — non scendere mai in cantina o nei piani interrati
 2. **Non uscire** se l'acqua è già per strada
 3. **Stacca gas e corrente elettrica** se puoi farlo in sicurezza
-4. **Non bere** l'acqua del rubinetto finché le autorità non confermano che è potabile
+4. **Non bere** l'acqua del rubinetto: potrebbe essere contaminata. Dopo l'alluvione, bevila solo se ordinanze o avvisi del Comune non lo vietano
 
 **Se sei fuori:**
 1. **Non attraversare** strade allagate, né a piedi né in auto — bastano 15 centimetri di acqua in movimento per far cadere una persona

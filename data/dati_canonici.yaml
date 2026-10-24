@@ -523,7 +523,47 @@ dati:
         perche: "In una corrente forte si resta nell'auto e si chiama il 112 (Ready.gov): il consiglio di uscire va limitato all'acqua ferma o lenta."
         contesto: 'acqua|allag|alluvion'
         finestra: 150
-        salvo_se_frase: 'corrente|acqua\s+(?:è\s+)?(?:ferma|lenta)|ferma\s+o\s+lenta'
+        # «Lontano dalla corrente» non è la condizione dell'acqua ferma: la scheda
+        # di secondaria diceva «abbandonalo … lontano dalla corrente» e passava
+        # per quella parola (trovato il 24/10/2026).
+        salvo_se_frase: '(?<!dalla )(?<!dalle )corrente|acqua\s+(?:è\s+)?(?:ferma|lenta)|ferma\s+o\s+lenta'
+
+  - id: acqua-rubinetto-alluvione
+    dato: "Quando si beve l'acqua del rubinetto durante e dopo un'alluvione"
+    valore: "durante l'alluvione non si beve, perché potrebbe essere contaminata; dopo, prima di berla ci si assicura che ordinanze o avvisi del Comune non lo vietino"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Io non rischio — Alluvione: cosa fare»: «Non bere acqua dal rubinetto: potrebbe essere contaminata» (durante, in un luogo chiuso); «Prima di bere l'acqua dal rubinetto assicurati che ordinanze o avvisi comunali non lo vietino» (dopo)"
+        url: "https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/"
+    # Nato il 24/10/2026 dalla revisione automatica della PR del video in 3D
+    # sulle alluvioni: le pagine nuove dicevano, come il Dipartimento, che dopo
+    # l'alluvione l'acqua del rubinetto si beve se il Comune non lo vieta;
+    # altre quindici dicevano di aspettare una conferma («finché non è
+    # dichiarata potabile», «fino al via libera», «aspetta che le autorità
+    # dicano che si può bere») o davano come criterio l'acqua torbida, cioè
+    # una regola diversa da quella ufficiale. Le varianti chiedono una parola
+    # sull'acqua prima della condizione, così «non rientrare finché le autorità
+    # non lo autorizzano» resta libero.
+    vietati:
+      - regex: '(?:rubinetto|\bbere|\bberla|potabil\w*)[^.;\n<]{0,80}?\b(?:finch[éè]|fino\s+a\s+quando|se)\s+non\s+(?:è|viene|sia|venga)\s+(?:dichiarat|certificat|riconosciut)\w*\s+(?:di\s+nuovo\s+)?(?:potabile|sicur[ao])'
+        perche: "Dopo un'alluvione il Dipartimento chiede di assicurarsi che ordinanze o avvisi del Comune non vietino l'acqua del rubinetto, non di aspettare che venga dichiarata potabile."
+        contesto: 'alluvion|allag|inondaz|esondaz|flash flood'
+        finestra: 400
+      - regex: '(?:rubinetto|\bbere|\bberla|potabil\w*)[^.;\n<]{0,80}?\b(?:finch[éè]|fino\s+a\s+quando)\s+(?:(?:le|il|un|un.|l.)\s*)?(?:autorità|Comune|Sindaco|adulto|gestore|azienda\s+idrica)\s+non\s+(?:lo\s+)?(?:conferm|dic|consent|autorizz|permett)\w*'
+        perche: "Dopo un'alluvione l'acqua del rubinetto si beve se ordinanze o avvisi del Comune non lo vietano (Dipartimento della Protezione Civile): non serve aspettare una conferma."
+        contesto: 'alluvion|allag|inondaz|esondaz|flash flood'
+        finestra: 400
+      - regex: '(?:rubinetto|\bbere|\bberla)[^.;\n<]{0,60}?\b(?:fino\s+al|prima\s+del|senza\s+il|aspett\w*\s+il)\s+(?:via\s+libera|nulla\s?osta)'
+        perche: "Per l'acqua del rubinetto dopo un'alluvione il criterio del Dipartimento sono le ordinanze o gli avvisi del Comune, non un via libera da aspettare."
+        contesto: 'alluvion|allag|inondaz|esondaz|flash flood'
+        finestra: 400
+      - regex: '\b(?:[Aa]spett|[Aa]ttend)\w*\b[^.;\n<]{0,50}?\b(?:autorità|Comune|Sindaco|adulto|gestore|comunicazioni\s+ufficiali)\b[^.;\n<]{0,60}?(?:\bbere\b|\bberla\b|potabil\w*|si\s+può\s+bere)'
+        perche: "Dopo un'alluvione non si aspetta che qualcuno dichiari l'acqua bevibile: ci si assicura che ordinanze o avvisi del Comune non la vietino (Dipartimento della Protezione Civile)."
+        contesto: 'alluvion|allag|inondaz|esondaz|flash flood'
+        finestra: 400
+      - regex: 'rubinetto\s+(?:solo\s+)?se\s+(?:è\s+)?torbid\w*'
+        perche: "Anche l'acqua limpida può essere contaminata: il criterio sono le ordinanze o gli avvisi del Comune, non l'aspetto dell'acqua."
+        contesto: 'alluvion|allag|inondaz|esondaz|flash flood|DOPO'
+        finestra: 400
 
   - id: incendi-cause-naturali
     dato: "Quanti incendi boschivi hanno cause naturali in Italia"
