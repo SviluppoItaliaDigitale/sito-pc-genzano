@@ -82,7 +82,7 @@ Per questo il rischio cresce in **autunno e primavera**, quando il terreno è pi
 {{< /dossier-dati >}}
 
 {{< dossier-chiusura id="fine" titolo="L'acqua si conosce, si previene, si rispetta" cta1="Rischio idrogeologico: cosa fare" cta1url="/rischi-prevenzione/rischio-idrogeologico/" cta2="Le allerte di oggi" cta2url="/allerte-meteo/" >}}
-**Prima:** controlla l'allerta, libera tombini e caditoie vicino a casa, metti in sicurezza i beni nei locali interrati. **Durante:** sali ai **piani alti**, **non scendere mai in cantina** o nei piani interrati, non attraversare strade allagate a piedi o in auto, evita sottopassi. **In pericolo immediato chiama il 112.** **Dopo:** rientra solo quando le autorità lo dicono e non bere l'acqua del rubinetto finché non è dichiarata potabile.
+**Prima:** controlla l'allerta, libera tombini e caditoie vicino a casa, metti in sicurezza i beni nei locali interrati. **Durante:** sali ai **piani alti**, **non scendere mai in cantina** o nei piani interrati, non attraversare strade allagate a piedi o in auto, evita sottopassi. **In pericolo immediato chiama il 112.** **Dopo:** rientra solo quando le autorità lo dicono e bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano.
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}

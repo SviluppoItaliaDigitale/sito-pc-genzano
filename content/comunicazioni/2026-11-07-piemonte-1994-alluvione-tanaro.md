@@ -43,7 +43,7 @@ Le alluvioni fluviali sono più lente delle colate di fango o dei torrenti coper
 - **Con un'allerta in corso**, non dormire nei piani seminterrati e tieni pronti documenti, farmaci, torcia e radio.
 - **Se arriva l'acqua**, sali ai piani alti; non scendere in cantina per salvare i beni.
 - **Non usare l'auto** per spostarti in zone allagate.
-- **Dopo**, non transitare nelle strade coperte d'acqua e non bere dal rubinetto finché il Comune non lo consente.
+- **Dopo**, non transitare nelle strade coperte d'acqua e bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano.
 
 ## Per approfondire
 

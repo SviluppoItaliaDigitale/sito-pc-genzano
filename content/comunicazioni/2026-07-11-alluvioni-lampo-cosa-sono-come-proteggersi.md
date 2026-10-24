@@ -119,7 +119,7 @@ Un'allerta **arancione o rossa** per temporali intensi va presa seriamente.
 Quando l'acqua si ritira:
 - **Non rientrare** in edifici danneggiati prima delle verifiche dei tecnici.
 - **Attenzione** ai fili elettrici scoperti o caduti.
-- **Non bere** l'acqua del rubinetto fino al via libera dell'azienda idrica: rischio contaminazione.
+- **Bevi** l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano: potrebbe essere contaminata.
 - **Proteggiti** con stivali di gomma e guanti spessi.
 - **Aiuta** le persone fragili dei dintorni.
 - **Segnala** i danni al Comune e alle autorità.

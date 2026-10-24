@@ -302,10 +302,10 @@ document.addEventListener('DOMContentLoaded', () => {
             answers: [
                 { text: 'Sì, sempre', correct: false },
                 { text: 'Solo se è calda', correct: false },
-                { text: 'No, finché le autorità non dicono che è sicura', correct: true },
+                { text: 'Solo se il Comune non lo vieta: lo controlla un adulto', correct: true },
                 { text: 'Sì, basta farla bollire', correct: false }
             ],
-            explanation: 'L\'acqua del rubinetto potrebbe essere inquinata. Aspetta sempre che le autorità dicano che si può bere!'
+            explanation: 'L\'acqua del rubinetto potrebbe essere inquinata. Prima di berla, un adulto controlla che il Comune non abbia vietato di usarla!'
         },
         {
             category: 'alluvione',

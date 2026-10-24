@@ -93,7 +93,7 @@ Quando l'acqua scende:
 
 - Non entrare in una casa danneggiata prima del via libera.
 - Non toccare i fili della luce caduti.
-- Non bere l'acqua del rubinetto finché le autorità non dicono che è sicura.
+- Bevi l'acqua del rubinetto solo se il Comune non lo vieta.
 - Metti stivali di gomma e guanti prima di toccare il fango.
 - Aiuta le persone anziane e fragili vicino a te.
 - Segnala i danni al Comune.

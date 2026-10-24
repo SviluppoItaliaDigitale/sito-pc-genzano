@@ -254,7 +254,7 @@ Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Ci
 - Se sei in auto e l'acqua è ferma, esci e raggiungi un punto più alto; se la corrente è forte, resta dentro, chiama il 112 e, se l'acqua entra, sali sul tetto
 - Raggiungi i piani alti dell'edificio in cui ti trovi
 
-**Dopo**: non bere acqua dal rubinetto finché non è dichiarata potabile. Non toccare impianti elettrici bagnati.
+**Dopo**: bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano. Non toccare impianti elettrici bagnati.
 
 ### Incendio boschivo
 

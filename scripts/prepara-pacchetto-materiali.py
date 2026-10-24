@@ -190,7 +190,7 @@ TEMI = {
             "Segnali da osservare: crepe nei muri, alberi inclinati, gorgoglii in cantine, scolatoi otturati",
             "Cosa fare PRIMA: piano familiare adattato, area attesa, allontanare oggetti dalle finestre",
             "Cosa fare DURANTE alluvione: salire ai piani alti, non scendere in cantina, evitare guadi",
-            "Cosa fare DOPO: documentare danni, segnalare a 803 555 o Comune, non bere acqua del rubinetto se torbida",
+            "Cosa fare DOPO: documentare danni, segnalare a 803 555 o Comune, bere l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano",
             "Codici colore allerta meteo (verde-giallo-arancione-rosso) e dove leggere il bollettino",
         ],
         "icona_emoji": "🌧️🏔️",

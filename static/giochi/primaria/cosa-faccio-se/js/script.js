@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 }
             ],
-            endMsg: 'Hai protetto la tua famiglia durante l\'alluvione! Ricorda: mai scendere ai piani bassi, non bere l\'acqua del rubinetto, aspetta il via libera.'
+            endMsg: 'Hai protetto la tua famiglia durante l\'alluvione! Ricorda: mai scendere ai piani bassi e, durante l\'alluvione, non bere l\'acqua del rubinetto. Prima di uscire, aspetta il via libera.'
         },
         {
             id: 'incendio-bosco', title: 'Fumo nel bosco', icon: '\uD83C\uDF32',

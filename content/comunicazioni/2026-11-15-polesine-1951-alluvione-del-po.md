@@ -43,7 +43,7 @@ Le regole del Dipartimento della Protezione Civile:
 - **Con l'allerta**, non dormire ai piani seminterrati e tieni pronti documenti, farmaci, torcia, radio a pile.
 - **Quando arriva l'acqua**, sali ai piani alti e non tornare giù per i beni.
 - **Aiuta chi non può muoversi da solo**: anziani, persone con disabilità, animali.
-- **Dopo**, aspetta le indicazioni del Comune prima di rientrare e non bere l'acqua del rubinetto se non è dichiarata sicura.
+- **Dopo**, aspetta le indicazioni del Comune prima di rientrare e bevi l'acqua del rubinetto solo se ordinanze o avvisi comunali non lo vietano.
 
 ## Per approfondire
 
