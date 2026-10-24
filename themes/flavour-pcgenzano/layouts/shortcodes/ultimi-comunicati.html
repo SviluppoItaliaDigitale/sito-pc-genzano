@@ -1,0 +1,41 @@
+{{- /* Ultimi comunicati stampa (Sala stampa, 24/10/2026).
+     Legge la sezione /sala-stampa/comunicati/ (campi `sottotitolo` e `pdf`
+     del front matter) e mostra gli N più recenti con il collegamento al PDF,
+     dichiarando tipo e peso del file (WCAG 3.3.5), poi i collegamenti
+     all'archivio e al feed RSS della sezione. Senza comunicati scrive
+     che non ce ne sono ancora. Uso: {{< ultimi-comunicati numero="3" >}} */ -}}
+{{- $n := int (.Get "numero" | default 3) -}}
+{{- $lista := slice -}}
+{{- $sezione := site.GetPage "/sala-stampa/comunicati" -}}
+{{- with $sezione -}}{{- $lista = first $n .RegularPages.ByDate.Reverse -}}{{- end -}}
+{{- if $lista -}}
+<ul class="sala-stampa-elenco" role="list">
+  {{- range $lista }}
+  {{- $titolo := .Title }}
+  <li class="sala-stampa-voce">
+    <time class="sala-stampa-data" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+    <a class="sala-stampa-titolo" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- with .Params.sottotitolo }}
+    <p class="sala-stampa-sommario">{{ . }}</p>
+    {{- end }}
+    {{- with .Params.pdf }}
+    {{- $file := printf "static%s" . }}
+    {{- if fileExists $file }}
+    {{- $byte := (os.Stat $file).Size }}
+    {{- $peso := "" }}
+    {{- if ge $byte 1048576 }}{{ $peso = replace (printf "%.1f MB" (div (float $byte) 1048576)) "." "," }}{{ else }}{{ $peso = printf "%d KB" (int (math.Ceil (div (float $byte) 1024))) }}{{ end }}
+    <a class="sala-stampa-pdf" href="{{ strings.TrimPrefix "/" . | relURL }}"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Scarica il PDF ({{ $peso }})<span class="visually-hidden"> del comunicato «{{ $titolo }}»</span></a>
+    {{- end }}
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
+<ul role="list">
+  <li><a href="{{ $sezione.RelPermalink }}">Archivio dei comunicati stampa</a></li>
+  {{- with $sezione.OutputFormats.Get "rss" }}
+  <li><a href="{{ .RelPermalink }}">Feed RSS dei comunicati</a>, per ricevere i nuovi comunicati nel lettore di notizie della redazione</li>
+  {{- end }}
+</ul>
+{{- else -}}
+<p class="text-muted">Non ci sono ancora comunicati pubblicati.</p>
+{{- end -}}

@@ -165,20 +165,31 @@ RedirectMatch 410 ^/areefiltrate\.html$
   # Aggiunto 2026-05-06 dopo audit security ChatGPT.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
-  # Licenza machine-readable a livello HTTP (15 agosto 2026): completa il
-  # JSON-LD di jsonld-copyright.html coprendo anche le risorse non-HTML
-  # (immagini WebP, PDF, download) servite da Aruba. I pittogrammi ARASAAC
-  # hanno licenza propria CC BY-NC-SA 4.0 (vedi /attribuzioni-pittogrammi/):
-  # header dedicato su quella cartella, mai CC BY.
-  SetEnvIf Request_URI "^/pittogrammi/arasaac/" ARASAAC_ASSET
-  Header always set Link "<https://creativecommons.org/licenses/by/4.0/>; rel=\"license\"" env=!ARASAAC_ASSET
-  Header always set Link "<https://creativecommons.org/licenses/by-nc-sa/4.0/>; rel=\"license\"" env=ARASAAC_ASSET
+  # Licenza machine-readable a livello HTTP (15 agosto 2026, aggiornata il
+  # 24 ottobre 2026): completa il JSON-LD di jsonld-copyright.html coprendo
+  # anche le risorse non-HTML (immagini, PDF, video, download) servite da
+  # Aruba. Dal 24/10/2026 il sito è CC BY-NC-SA 4.0 (la stessa licenza dei
+  # pittogrammi ARASAAC). Due eccezioni:
+  # - DATI_APERTI: i dati aperti del Gruppo restano CC BY 4.0, perché i dati
+  #   di tipo aperto devono poter essere riusati anche per scopi commerciali
+  #   (CAD, art. 1, comma 1, lettera l-ter): CSV e JSON di /open-data/, JSON
+  #   dello stato del territorio, feed CAP e JSON dello stato dell'allerta;
+  # - DATI_TERZI: le copie dei dati di fonti esterne salvate in /open-data/
+  #   (agenzie, GDACS, Copernicus, NASA FIRMS, MeteoAlarm, adsb.lol, DPC,
+  #   Natural Earth) hanno la licenza del titolare: nessun header di licenza.
+  # La pagina HTML /open-data/ resta CC BY-NC-SA come il resto del sito.
+  SetEnvIf Request_URI "^/(open-data/[^/]+\.(csv|json)|stato-del-territorio/index\.json|allerta-cap\.xml|allerta-stato/index\.json)$" DATI_APERTI
+  SetEnvIf Request_URI "^/open-data/(copernicus-sentinel[0-9]|dpc-bollettino|ems-attivazioni|gdacs-eventi|incendi-firms|meteoalarm-italia|notizie-agenzie|volo-soccorso|world-countries\.geo)\.json$" DATI_TERZI
+  Header always set Link "<https://creativecommons.org/licenses/by-nc-sa/4.0/>; rel=\"license\"" env=!DATI_APERTI
+  Header always set Link "<https://creativecommons.org/licenses/by/4.0/>; rel=\"license\"" env=DATI_APERTI
+  Header always unset Link env=DATI_TERZI
 
   # TDM Reservation Protocol (W3C TDMRep / Direttiva UE 2019/790 art. 4).
   # Che cosa dice davvero: "TDM-Reservation: 1" RISERVA i diritti di text and
   # data mining, e "TDM-Policy" indica dove sono le condizioni alle quali il
-  # mining è consentito, cioè /note-legali/ (licenza CC BY 4.0, attribuzione
-  # obbligatoria). È una riserva con licenza offerta, non un'assenza di
+  # mining è consentito, cioè /note-legali/ (dal 24/10/2026 solo per scopi
+  # non commerciali, con attribuzione obbligatoria: licenza CC BY-NC-SA 4.0;
+  # i dati aperti restano CC BY 4.0). È una riserva con licenza offerta, non un'assenza di
   # riserva: chi vuole dichiarare "nessuna riserva" usa il valore 0 (audit
   # 25/09/2026, F30). Speculare a /.well-known/tdmrep.json.
   Header always set TDM-Reservation "1"

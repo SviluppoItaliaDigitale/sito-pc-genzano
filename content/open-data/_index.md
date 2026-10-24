@@ -86,6 +86,8 @@ I dataset su **defibrillatori (DAE)** e **idranti antincendio** saranno pubblica
 
 Tutti i dataset pubblicati su questa pagina sono rilasciati sotto **licenza Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)**.
 
+È un'eccezione voluta: dal 24 ottobre 2026 il resto del sito è distribuito con licenza CC BY-NC-SA 4.0, che esclude gli usi commerciali ([Note legali](/note-legali/#licenza-dei-contenuti)). I dati restano CC BY 4.0 perché il [Codice dell'amministrazione digitale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art1) considera aperti solo i dati che chiunque può riusare, anche per finalità commerciali.
+
 Sei libero di:
 
 - **Condividere** — copiare e ridistribuire il materiale con qualsiasi mezzo e formato

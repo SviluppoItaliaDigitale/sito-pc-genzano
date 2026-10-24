@@ -640,7 +640,7 @@ Sintesi dei divieti dalle rules:
 - ❌ Cambiare `Permissions-Policy: geolocation=(self)` in `()` su `.htaccess` (rompe la mappa cartografia).
 - ❌ Citare 115/118/1515 come numeri di emergenza nel Lazio: solo **112** (NUE).
 - ❌ Tipo Schema.org `GovernmentOrganization` o `EmergencyService` (siamo OdV, non ente pubblico).
-- ❌ Reintrodurre blocchi `Article`/`WebPage` in `structured-data.html`: la **fonte unica** dell'entità di pagina è `jsonld-copyright.html` (paternità + licenza CC BY 4.0 + `speakable`; override frontmatter `license:` / `license: none`).
+- ❌ Reintrodurre blocchi `Article`/`WebPage` in `structured-data.html`: la **fonte unica** dell'entità di pagina è `jsonld-copyright.html` (paternità + licenza CC BY-NC-SA 4.0 dal 24/10/2026 + `speakable`; override frontmatter `license:` / `license: none`).
 - ❌ Aggiungere una fonte dati al cruscotto o un widget **senza aggiornare `connect-src`/`frame-src` della CSP** in `.htaccess`: la policy è **ENFORCING** dal 15/08/2026 — il sintomo è una scheda vuota solo su Aruba (GitHub Pages non invia header). Vedi rule 05.
 - ❌ Action di terze parti su tag mutabile o job senza `timeout-minutes` nei workflow nuovi.
 - ❌ Overlay commerciali di accessibilità (AccessiBe, UserWay, EquallyAI): il W3C-WAI li sconsiglia.

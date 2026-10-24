@@ -2,7 +2,8 @@
 """Controllo settimanale delle copie dei nostri articoli.
 
 Perché esiste (01/10/2026): i testi del sito sono redazione originale del
-Gruppo, rilasciati in CC BY 4.0 (attribuzione obbligatoria). Capita che un
+Gruppo, rilasciati in CC BY-NC-SA 4.0 dal 24/10/2026 (prima in CC BY 4.0):
+fonte obbligatoria, niente usi commerciali senza permesso. Capita che un
 articolo venga ripreso parola per parola, con o senza fonte. Accorgersene a
 mano vuol dire cercare frase per frase su più motori ogni settimana: questo
 script fa la parte automatizzabile e prepara il resto.
@@ -777,8 +778,12 @@ def corpo_issue(feed: dict, gnews: dict | None, frasi: list[dict], ora: dt.datet
           "quelli fatti quasi solo di parole comuni, nomi di enti o di comuni dei Castelli, e le "
           f"nostre formule che ricorrono in {SOGLIA_FORMULA} o più articoli. Titoli di eventi o "
           "frasi di un comunicato possono coincidere perché vengono dalla stessa fonte: prima di "
-          "parlare di copia si confrontano le date. Una ripresa con "
-          "fonte rispetta la licenza CC BY 4.0 del sito; una senza fonte va valutata caso per caso._"]
+          "parlare di copia si confrontano le date. Dal 24/10/2026 la licenza del sito è "
+          "CC BY-NC-SA 4.0: una ripresa con fonte su un sito senza scopi commerciali la rispetta; "
+          "una testata o un sito commerciale ha bisogno del nostro permesso, salvo i comunicati "
+          "stampa, che le testate possono pubblicare citando la fonte. Chi aveva già preso un "
+          "testo prima di quella data può usarlo alle condizioni della CC BY 4.0 di allora. "
+          "Una ripresa senza fonte va valutata caso per caso._"]
     return "\n".join(r) + "\n"
 
 

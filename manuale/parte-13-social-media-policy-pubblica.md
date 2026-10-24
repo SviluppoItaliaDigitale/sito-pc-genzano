@@ -45,7 +45,8 @@ La pagina pubblica deve contenere, come minimo:
   canali se non è sostenibile da una struttura di volontariato.
 - **Tipi di contenuti pubblicati**: informazioni istituzionali, allerte meteo, comunicati,
   aggiornamenti operativi, formazione, reclutamento volontari, prevenzione.
-- **Licenza dei contenuti**: Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0),
+- **Licenza dei contenuti**: Creative Commons Attribuzione - Non commerciale - Condividi allo
+  stesso modo 4.0 Internazionale (CC BY-NC-SA 4.0) dal 24 ottobre 2026 (prima CC BY 4.0),
   coerente con la pagina [Note legali](/note-legali/). Con le eccezioni della 11.16.
 - **Netiquette per i commenti**: cosa è accettato, cosa viene moderato.
 - **Criteri di moderazione**: quando un commento viene nascosto o rimosso, e come si fa

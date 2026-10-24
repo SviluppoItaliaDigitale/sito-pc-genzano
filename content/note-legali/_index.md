@@ -2,7 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-08-15"
+dataUltimaRevisione: "2026-10-24"
 ---
 
 ## Titolarità del sito
@@ -19,27 +19,44 @@ Per segnalazioni di malfunzionamenti, errori nei contenuti o richieste di aggior
 
 ## Licenza dei contenuti
 
-I contenuti testuali e multimediali pubblicati su questo sito, salvo diversa indicazione, sono distribuiti con licenza [Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.it).
+Dal 24 ottobre 2026 i contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza [Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it). La licenza vale per testi, articoli, pagine, foto e grafiche del Gruppo, video, podcast, kit, schede, documenti e presentazioni.
 
-In pratica: puoi **riutilizzare, copiare, modificare e ridistribuire** i contenuti — anche per scopi commerciali — a condizione di **citare la fonte** ("Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma") e di indicare se sono state apportate modifiche.
+In pratica puoi copiare, ridistribuire e modificare i contenuti a tre condizioni:
 
-### Come puoi riusare i contenuti
+- **citi la fonte**: «Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma», con il link alla pagina e l'indicazione delle modifiche che hai fatto;
+- **non li usi per scopi commerciali**: niente vendita, pubblicità, sponsorizzazioni o canali che guadagnano dai contenuti;
+- **condividi allo stesso modo**: se li modifichi o li inserisci in un'opera tua, distribuisci il risultato con la stessa licenza.
 
-Le licenze variano a seconda del tipo di materiale. Controlla sempre l'indicazione sulla singola pagina o scheda:
+Scuole, associazioni, enti pubblici e cittadini possono quindi usarli liberamente per informare e formare. Per un uso commerciale, per esempio da parte di un editore o di un'azienda, serve un permesso scritto del Gruppo: scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
-| Tipo di materiale | Licenza | Cosa puoi fare |
+La licenza riguarda il diritto d'autore. Non autorizza a usare l'immagine delle persone ritratte nelle foto fuori dal contesto in cui le pubblichiamo.
+
+### Licenze diverse
+
+Alcuni materiali hanno una licenza diversa. Controlla sempre l'indicazione sulla singola pagina, scheda o file:
+
+| Materiale | Licenza | Che cosa puoi fare |
 |---|---|---|
-| Pagine informative, articoli e testi del sito | **CC BY 4.0** | Riuso libero, anche commerciale, citando la fonte. |
-| Schede didattiche, kit e infografiche che includono pittogrammi **ARASAAC** | **CC BY-NC-SA 4.0** | Riuso **non commerciale**, citando la fonte e ridistribuendo con la **stessa licenza**. La condizione è imposta dalla licenza dei pittogrammi ARASAAC, che l'opera derivata eredita. |
-| Materiali di terzi (foto, loghi, documenti di enti esterni) | **Licenza del titolare originale** | Valgono le condizioni indicate dalla fonte citata. |
+| Contenuti del Gruppo: testi, articoli, pagine, foto e grafiche, video, podcast, kit, schede, documenti, presentazioni | **CC BY-NC-SA 4.0** | Riuso **non commerciale**, citando la fonte e ridistribuendo con la **stessa licenza**. |
+| Comunicati stampa della [Sala stampa](/sala-stampa/) | **CC BY-NC-SA 4.0**, con un permesso in più per le testate | Le testate giornalistiche possono pubblicarli, in tutto o in parte, citando la fonte. |
+| Dati in formato aperto: [dataset della pagina Open data](/open-data/), [stato del territorio in JSON](/stato-del-territorio/index.json), [feed delle allerte CAP](/allerta-cap.xml) e [stato dell'allerta in JSON](/allerta-stato/index.json) | **CC BY 4.0** | Riuso libero, **anche commerciale**, citando la fonte. Lo richiede la definizione di dati di tipo aperto del [Codice dell'amministrazione digitale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art1) (articolo 1, comma 1, lettera l-ter). |
+| Codice dei componenti dell'[Open Kit](/open-kit/) | **EUPL 1.2** | La licenza open source dell'Unione europea, scritta per il software. |
+| Materiali di altri, anche adattati (per esempio con la fascia blu): foto, pittogrammi ARASAAC, mappe, documenti di enti | **Licenza del titolare** | Valgono le condizioni indicate accanto al materiale o dalla fonte citata. |
+| Loghi del Gruppo e delle affiliazioni | Nessuna licenza libera | Si usano solo come indicato nell'[Area Download](/area-download/). |
 
-Se una scuola, un'associazione o un altro Comune vuole riutilizzare un materiale e ha dubbi sulla licenza applicabile, può [contattarci](/contatti/).
+Se una scuola, un'associazione o un altro Comune ha dubbi sulla licenza di un materiale, può [contattarci](/contatti/).
+
+### Contenuti ottenuti prima del 24 ottobre 2026
+
+Fino al 23 ottobre 2026 i contenuti del Gruppo erano distribuiti con licenza CC BY 4.0, salvo le schede con pittogrammi ARASAAC. Le licenze Creative Commons [non si possono revocare](https://creativecommons.org/faq/#what-if-i-change-my-mind-about-using-a-cc-license): chi ha ottenuto una copia prima di quella data può continuare a usarla e a ridistribuirla alle condizioni della licenza CC BY 4.0. Le copie prese dal sito da quella data, e i contenuti nuovi o aggiornati, seguono la licenza CC BY-NC-SA 4.0.
 
 ### Estrazione di testo e dati (text and data mining) {#text-and-data-mining}
 
-Ai sensi dell'articolo 4 della [Direttiva (UE) 2019/790](https://eur-lex.europa.eu/eli/dir/2019/790/oj?locale=it) sul diritto d'autore nel mercato unico digitale, il Gruppo dichiara la propria policy sull'**estrazione di testo e dati** (text and data mining, TDM), anche a fini di addestramento di sistemi di intelligenza artificiale:
+Ai sensi dell'articolo 4 della [Direttiva (UE) 2019/790](https://eur-lex.europa.eu/eli/dir/2019/790/oj?locale=it) sul diritto d'autore nel mercato unico digitale e dell'[articolo 70-quater della legge 633/1941](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art70quater), il Gruppo dichiara la propria policy sull'**estrazione di testo e dati** (text and data mining, TDM), anche a fini di addestramento di sistemi di intelligenza artificiale:
 
-- il TDM sui contenuti di questo sito è **consentito nei termini della licenza dichiarata** per ciascun materiale (vedi tabella sopra): per i testi del sito, CC BY 4.0 con **attribuzione obbligatoria** al "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma";
+- sui contenuti del Gruppo l'estrazione è **consentita solo per scopi non commerciali**, con **attribuzione obbligatoria** al "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" e nei termini della licenza CC BY-NC-SA 4.0;
+- gli usi **commerciali**, compreso l'addestramento di sistemi di intelligenza artificiale a fini commerciali, sono **espressamente riservati** (articolo 4, paragrafo 3, della Direttiva): servono un accordo o un permesso scritto del Gruppo;
+- sui dati aperti l'estrazione è libera, anche per scopi commerciali, nei termini della licenza CC BY 4.0;
 - la riserva è espressa anche in **formato leggibile dalle macchine**: header HTTP `TDM-Reservation` e `TDM-Policy` su ogni risorsa, file [`/.well-known/tdmrep.json`](/.well-known/tdmrep.json) (protocollo TDMRep), header `Link: rel="license"` e dati strutturati JSON-LD con licenza su ogni pagina;
 - i materiali con licenza propria (pittogrammi ARASAAC, contenuti di terzi) restano soggetti alle **rispettive condizioni**.
 

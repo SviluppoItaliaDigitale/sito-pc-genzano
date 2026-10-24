@@ -423,45 +423,53 @@ enableGitInfo = true
   url = "/i-miei-contenuti/"
   weight = 0
 
+# Sala stampa (24/10/2026): l'utente non la trovava. Ora è anche qui, nella
+# barra in alto (slim-header.html), nell'archivio delle comunicazioni e nei
+# Contatti. Speculare in static/app-shared/site-chrome.js.
+[[menus.footer]]
+  name = "Sala stampa"
+  url = "/sala-stampa/"
+  weight = 1
+
 # Trasparenza editoriale (E-E-A-T): come scriviamo e verifichiamo i contenuti.
 [[menus.footer]]
   name = "Metodo editoriale"
   url = "/metodo-editoriale/"
-  weight = 1
+  weight = 2
 
 # Spostata da "Risorse" a maggio 2026: la Trasparenza è obbligo istituzionale
 # di accountability.
 [[menus.footer]]
   name = "Trasparenza"
   url = "/trasparenza/"
-  weight = 2
+  weight = 3
 
 [[menus.footer]]
   name = "Siti Utili"
   url = "/siti-utili/"
-  weight = 3
+  weight = 4
 
 [[menus.footer]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
-  weight = 4
+  weight = 5
 
 # Spostato da "Risorse" a maggio 2026: cruscotto tecnico di trasparenza
 # sul funzionamento delle automazioni del sito.
 [[menus.footer]]
   name = "Stato del Sito"
   url = "/stato-sistema/"
-  weight = 5
+  weight = 6
 
 [[menus.footer]]
   name = "Open Data"
   url = "/open-data/"
-  weight = 6
+  weight = 7
 
 [[menus.footer]]
   name = "Feed RSS"
   url = "/feed-rss/"
-  weight = 7
+  weight = 8
 
 # Menu footer — Servizi
 [[menus.servizi]]

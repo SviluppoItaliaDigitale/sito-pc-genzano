@@ -2105,3 +2105,5 @@ lucaphoto
 # --- Video «Come nasce un'allerta meteo» 24/10/2026: parole italiane corrette, assenti dal dizionario ---
 previsori
 supercalcolatori
+# --- Note legali 24/10/2026: numerazione degli articoli di legge (art. 70-quater) ---
+quater

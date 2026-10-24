@@ -14,7 +14,7 @@ la versione in linea del componente. Gli ZIP sono riproducibili (data fissa
 delle voci), quindi non cambiano finché non cambiano i file.
 
 Licenze: codice dei componenti EUPL 1.2 (scelta dell'autore, 06/10/2026);
-testi ed esempi di contenuto CC BY 4.0 come il resto del sito. I pittogrammi
+testi ed esempi di contenuto CC BY-NC-SA 4.0 come il resto del sito. I pittogrammi
 ARASAAC (CC BY-NC-SA 4.0) e le librerie di terzi NON sono nei pacchetti: il
 LEGGIMI dice dove prenderli.
 
@@ -72,7 +72,7 @@ COMPONENTI = [
         "file": [f"{T}/layouts/partials/glossario-inline.html", "static/js/glossario-inline.js", "data/glossario.yaml"],
         "css": ["GLOSSARIO INLINE"],
         "uso": "Il partial legge data/glossario.yaml e passa le voci allo script. Le definizioni del file sono "
-               "nostre (CC BY 4.0): puoi usarle citando la fonte o sostituirle con le tue.",
+               "nostre (CC BY-NC-SA 4.0): puoi usarle per scopi non commerciali citando la fonte, o sostituirle con le tue.",
     },
     {
         "id": "tabelle-caa",
@@ -198,7 +198,7 @@ def leggimi(c: dict, nomi: list[str]) -> str:
         f"Codice: EUPL 1.2 (European Union Public Licence), testo in LICENZA-EUPL-1.2.txt.\n"
         f"Il testo ufficiale in italiano è nella Decisione di esecuzione (UE) 2017/863:\n"
         f"https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32017D0863\n"
-        f"Testi ed esempi di contenuto: CC BY 4.0.\n"
+        f"Testi ed esempi di contenuto: CC BY-NC-SA 4.0 (uso non commerciale, attribuzione, stessa licenza).\n"
         f"Autore: {AUTORE}.\n"
         f"Riusando il componente, cita: «Open Kit PC Genzano — {SITO}/open-kit/».\n\n"
         f"Non inclusi\n-----------\n"
