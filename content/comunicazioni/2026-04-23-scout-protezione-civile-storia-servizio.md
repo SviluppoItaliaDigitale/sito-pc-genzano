@@ -109,7 +109,7 @@ Dal Friuli 1976 a oggi, **non c'è grande catastrofe italiana senza la presenza 
 - **Irpinia 1980** — terremoto.
 - **Vajont 1963** — disastro della diga (con presenza scout in soccorso).
 - **Umbria-Marche 1997** — terremoto di Colfiorito.
-- **Sarno 1998** — frana e alluvione, 161 morti.
+- **Sarno 1998** — frana e alluvione, 159 morti.
 - **Molise 2002** — terremoto di San Giuliano di Puglia.
 - **Piemonte 1994 e 2000** — alluvioni.
 - **Abruzzo 2009** — terremoto dell'Aquila.

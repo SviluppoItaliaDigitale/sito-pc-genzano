@@ -163,6 +163,16 @@ Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraul
 
 Genzano di Roma rientra nella **Zona di allerta F — Bacini Costieri Sud**, secondo la classificazione regionale DGR 865/2019. Il bollettino viene emesso ogni giorno, di norma entro le ore 14:00, con validità per le successive 24-36 ore.
 
+### Come nasce un'allerta, in un video
+
+Un video di circa sei minuti, con voce e sottotitoli, racconta il percorso di un'allerta: le misure, i modelli, le soglie della zona F, il bollettino e l'allertamento ai Comuni. Il testo completo è nella pagina [Come nasce un'allerta meteo: un video in 3D](/comunicazioni/2026-10-24-come-nasce-allerta-meteo-video-3d/).
+
+{{< video src="/video/2026-10-24-come-nasce-allerta-meteo-video-3d.mp4"
+          poster="/video/2026-10-24-come-nasce-allerta-meteo-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: come nasce un'allerta meteo, dalla frana di Sarno al bollettino della Regione Lazio"
+          caption="Come nasce un'allerta meteo, dalle misure al colore. La sala operativa, l'idrometro e la frana sono schemi non in scala; le piogge sulle carte sono esempi. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 ### Previsione meteo e allerta non sono la stessa cosa
 
 - **Previsione meteo:** indica il tempo previsto, per esempio pioggia, vento o temperatura.
@@ -215,6 +225,7 @@ Per sviluppatori e altri enti: lo stato di allerta è disponibile anche come [fe
 
 ## Approfondimenti dall'archivio
 
+- [Come nasce un'allerta meteo: un video in 3D](/comunicazioni/2026-10-24-come-nasce-allerta-meteo-video-3d/)
 - [Allerta meteo in due video: cosa dicono i colori e cosa fare](/comunicazioni/2026-09-23-allerta-meteo-colori-cosa-fare-video/)
 - [Previsioni meteo e bollettini: come funziona il sistema](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
 - [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)

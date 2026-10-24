@@ -48,9 +48,9 @@ L'instabilità del Monte Toc era **nota da tempo**: crepe, piccoli movimenti e s
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="sarno" image="/images/dossier/frane-sarno.webp" alt="L'abitato di Sarno invaso dal fango dopo le colate del maggio 1998, con un fronte di detriti che attraversa le case fino al versante" align="top" kicker="5 maggio 1998 · Campania" title="Le colate<br>di fango" credito="Foto: Ciro Fusco · pubblico dominio in Italia, via Wikimedia Commons" >}}
-Il 5 maggio 1998 colate rapide di fango travolsero **Sarno, Quindici** e altri comuni tra le province di Salerno, Avellino e Caserta. Le vittime furono **circa 160**, di cui 137 solo a Sarno. Il materiale erano coltri vulcaniche del Vesuvio, scivolate dai pendii calcarei già saturi d'acqua.
+Il 5 maggio 1998 colate rapide di fango travolsero **Sarno, Quindici** e altri comuni tra le province di Salerno, Avellino e Caserta. Le vittime furono **159**, di cui 137 solo a Sarno. Il materiale erano coltri vulcaniche del Vesuvio, scivolate dai pendii calcarei già saturi d'acqua.
 
-Non servì una pioggia eccezionale: bastò un terreno già pieno. Poche settimane dopo nacque la **"Legge Sarno"** (267/1998), che introdusse i **Piani di Assetto Idrogeologico**, le mappe che ancora oggi individuano le aree a rischio.
+Non servì una pioggia eccezionale: bastò un terreno già pieno. Poche settimane dopo arrivò il **"decreto Sarno"** (D.L. 180/1998, poi legge 267/1998), che introdusse i **Piani di Assetto Idrogeologico**, le mappe che ancora oggi individuano le aree a rischio.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="oso" image="/images/dossier/frane-oso.webp" alt="Veduta aerea dell'ampio campo di fango e detriti della frana di Oso, che scende dal versante boscoso fino al fondovalle" align="top" kicker="22 marzo 2014 · Washington, USA" title="La frana più letale<br>degli Stati Uniti" credito="Foto: Spc. Samantha Ciaramitaro, Washington Army National Guard · pubblico dominio, via Wikimedia Commons" >}}

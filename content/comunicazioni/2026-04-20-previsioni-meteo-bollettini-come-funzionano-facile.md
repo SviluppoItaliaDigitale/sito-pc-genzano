@@ -50,7 +50,7 @@ Il Centro Funzionale del Lazio guarda le previsioni. Poi decide se c'è un risch
 
 Ci sono 3 bollettini principali.
 
-Il primo è il **bollettino di vigilanza meteorologica**. Esce ogni giorno entro le ore 14. Dice che tempo farà in Italia nelle prossime 36 ore.
+Il primo è il **bollettino di vigilanza meteorologica**. Esce ogni giorno, di solito entro le ore 15. Dice che tempo farà in Italia oggi e domani. Dà anche un'idea del tempo di dopodomani.
 
 Il secondo è l'**avviso di condizioni meteo avverse**. Viene emesso solo se si prevedono fenomeni intensi.
 

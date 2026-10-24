@@ -42,7 +42,7 @@ Nel sistema italiano di Protezione Civile, i codici colore si usano in più cont
 - **Allerta incendi boschivi**: ARSIAL e Regione Lazio pubblicano nei mesi estivi un bollettino di pericolosità per fascia climatica e tipo di vegetazione.
 - **Bollettini sanitari**: il Ministero della Salute usa scale colorate per ondate di calore, qualità dell'aria, allerta epidemica.
 
-Il riferimento normativo è la **Direttiva del Presidente del Consiglio dei Ministri del 27 febbraio 2004**, che ha introdotto i codici colore nazionali per il rischio idrogeologico. Le Regioni li applicano con piccole varianti grafiche, ma la struttura è uniforme.
+Il riferimento normativo è la **Direttiva del Presidente del Consiglio dei Ministri del 27 febbraio 2004**, che ha organizzato il sistema di allertamento per il rischio idrogeologico e idraulico, con zone di allerta e livelli di criticità. I codici colore sono diventati uguali in tutta Italia nel 2016, con le **indicazioni operative del Dipartimento della Protezione Civile del 10 febbraio 2016**. Le Regioni li applicano con piccole varianti grafiche, ma la struttura è uniforme.
 
 ## Cosa trovare in un bollettino di allerta
 

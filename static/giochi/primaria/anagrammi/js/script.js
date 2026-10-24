@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'PREVENZIONE', cat: 'Protezione Civile', hint: 'Evitare che il pericolo diventi danno',
         explain: 'La prevenzione è la prima missione della PC (D.Lgs. 1/2018, Codice). Costa meno di ricostruire.' },
       { w: 'BOLLETTINO', cat: 'Comunicazione', hint: 'Previsioni e avvisi ufficiali del CFR',
-        explain: 'Il bollettino di criticità del Centro Funzionale Regionale Lazio è pubblicato ogni giorno alle 13:00.' },
+        explain: 'Il bollettino di criticità del Centro Funzionale Regionale Lazio è pubblicato ogni giorno, di norma entro le 14:00.' },
       { w: 'SEGNALE', cat: 'Comunicazione', hint: 'Serve ad avvisare di un pericolo',
         explain: 'I segnali ISO 7010 sono internazionali: codice colore + forma indicano la natura del pericolo.' },
       { w: 'RIFUGIO', cat: 'Luogo sicuro', hint: 'Posto strutturato per ripararsi in emergenza',

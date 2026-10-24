@@ -93,7 +93,7 @@ Il sistema costruito da Zamberletti viene messo alla prova ogni due o tre anni:
 Ogni emergenza è una scuola. Ogni scuola produce **direttive, circolari, modifiche normative**. Tra le più importanti:
 
 - **Legge 401/2001** — assegna al Capo del Dipartimento un ruolo politico più marcato, con poteri di ordinanza per il superamento dell'emergenza.
-- **Direttiva PCM 27 febbraio 2004** — istituisce ufficialmente il **Sistema di Allertamento Nazionale** per il rischio idrogeologico e idraulico, basato sui Centri Funzionali regionali.
+- **Direttiva PCM 27 febbraio 2004** — fissa gli indirizzi operativi del **sistema di allertamento nazionale e regionale** per il rischio idrogeologico e idraulico, basato sulla rete dei Centri Funzionali.
 - **DPCM 12 gennaio 2012** — definisce gli **indirizzi operativi per la formazione del volontariato di protezione civile**: standard nazionali per i corsi base, per la specializzazione, per l'aggiornamento continuo.
 - **Direttiva PCM 9 novembre 2012** — disciplina la **catena di comando** in emergenza tra Stato, Regioni, Province e Comuni, con una novità storica: il **DICOMAC** (Direzione di Comando e Controllo) che riunisce tutti i livelli istituzionali in un unico luogo fisico durante le emergenze nazionali.
 

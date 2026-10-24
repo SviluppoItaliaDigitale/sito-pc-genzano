@@ -65,7 +65,7 @@ La previsione meteo dice che cosa farà il cielo. L'**allerta di Protezione Civi
 
 ### Bollettino di vigilanza meteorologica nazionale
 
-Pubblicato ogni giorno entro le **ore 14:00**, con validità 36 ore. Descrive i fenomeni previsti sull'Italia e segnala quelli significativi.
+Lo pubblica ogni giorno il Dipartimento della Protezione Civile, di norma entro le **ore 15:00**. Descrive i fenomeni previsti sull'Italia per oggi e domani, con la tendenza per dopodomani, e segnala quelli significativi.
 
 ### Avviso di condizioni meteorologiche avverse
 

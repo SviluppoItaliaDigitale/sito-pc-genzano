@@ -586,3 +586,67 @@ dati:
         contesto: 'incend|bosc|fuoc|AIB'
         finestra: 300
         salvo_se_frase: 'Europa|europe|mondo|mondial|global'
+
+  - id: sarno-1998-vittime
+    dato: "Vittime delle colate di fango di Sarno, 5 maggio 1998"
+    valore: "159 in tutto, 137 nella sola Sarno"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, scheda storica «Sarno»: «Nella sola Sarno 137 persone restano uccise [...] In totale i morti sono 159»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/static/92b3cddfc9a174a28f7e76c13c0cd154/sarno.pdf"
+    # Nato il 24/10/2026 con il video in 3D «Come nasce un'allerta meteo»: il sito
+    # scriveva 161 vittime in una dozzina di file (articolo, schede, kit, gioco) e
+    # «circa 160» nel dossier sulle frane. Il CNR-IRPI ne conta 160: si usa il
+    # dato del Dipartimento, che è anche quello della voce del video.
+    vietati:
+      - regex: '\b(?:16[01]|circa\s+160)\s+(?:vittim\w*|mort[ie]\b|persone)'
+        perche: "Il Dipartimento della Protezione Civile conta 159 vittime, 137 nella sola Sarno."
+        contesto: 'Sarno'
+        finestra: 300
+      - regex: '(?:[Vv]ittime|[Mm]orti)\s*:?\s+16[01]\b'
+        perche: "Il Dipartimento della Protezione Civile conta 159 vittime, 137 nella sola Sarno."
+        contesto: 'Sarno'
+        finestra: 300
+
+  - id: bollettino-criticita-lazio-orario
+    dato: "Orario di pubblicazione del bollettino di criticità del Centro Funzionale del Lazio"
+    valore: "ogni giorno, di norma entro le ore 14:00"
+    fonti:
+      - nome: "DGR Lazio 865/2019, Allegato, § 8.1: il CFR pubblica il bollettino «indicativamente entro le ore 14.00»"
+        url: "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale"
+    # Nato il 24/10/2026 con il video in 3D «Come nasce un'allerta meteo»: due
+    # schede e un gioco scrivevano «alle 13:00».
+    vietati:
+      - regex: '\b(?:alle|ore)\s+13(?:[:.]00)?\b'
+        perche: "La DGR Lazio 865/2019 dice che il bollettino di criticità esce indicativamente entro le ore 14.00."
+        contesto: '[Bb]ollettino di [Cc]riticit|Centro Funzionale'
+        stessa_frase: true
+
+  - id: bollettino-vigilanza-dpc-orario
+    dato: "Bollettino di vigilanza meteorologica nazionale del Dipartimento della Protezione Civile"
+    valore: "ogni giorno, di norma entro le ore 15:00, per oggi e domani con la tendenza per dopodomani"
+    fonti:
+      - nome: "DGR Lazio 865/2019, Allegato, § 7: il DPC emette «indicativamente entro le ore 15.00 un bollettino di vigilanza meteorologica giornaliero a scala nazionale»"
+        url: "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale"
+      - nome: "Dipartimento della Protezione Civile, Centro funzionale centrale, «Fase previsionale»: il bollettino riguarda il giorno di emissione e il seguente, più la tendenza per il giorno successivo, ed è pubblicato ogni giorno alle 15.00"
+        url: "https://rischi.protezionecivile.gov.it/it/meteo-idro/attivita/centro-funzionale-centrale/fase-previsionale/"
+    # Nato il 24/10/2026: l'articolo e la versione facile sui bollettini davano
+    # «entro le ore 14:00, con validità 36 ore».
+    vietati:
+      - regex: '\b(?:entro le\s+(?:\*\*)?(?:ore\s+)?14\b|validità 36 ore|prossime 36 ore)'
+        perche: "Il bollettino di vigilanza del Dipartimento esce di norma entro le 15:00 e riguarda oggi e domani, con la tendenza per dopodomani."
+        contesto: '[Vv]igilanza meteo'
+        finestra: 120
+
+  - id: codici-colore-allerta-origine
+    dato: "Origine dei codici colore delle allerte uguali in tutta Italia"
+    valore: "livelli di criticità dalla Direttiva PCM 27 febbraio 2004; colori uguali in tutta Italia dal 2016 (indicazioni operative del Dipartimento, nota prot. 7117 del 10 febbraio 2016)"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Indicazioni operative per l'omogeneizzazione dei messaggi di allertamento e delle relative Fasi operative per rischio meteo-idro» (10 febbraio 2016)"
+        url: "https://www.protezionecivile.gov.it/it/normativa/indicazioni-operative-per-l-omogeneizzazione-dei-messaggi-di-allertamento-e-delle-relative-fasi-operative-per-rischio-meteo-idro/"
+    # Nato il 24/10/2026: l'articolo sui codici colore e una scheda per la
+    # primaria attribuivano i colori nazionali alla direttiva del 2004.
+    vietati:
+      - regex: '(?:introdotto|introduce|prevede|istituito|istituisce)\s+(?:i\s+)?(?:<strong>)?(?:4\s+)?(?:codici\s+)?color[ei]'
+        perche: "I colori sono uguali in tutta Italia dal 2016, con le indicazioni operative del Dipartimento; la direttiva del 2004 ha fissato zone e livelli di criticità."
+        contesto: '2004'
+        stessa_frase: true

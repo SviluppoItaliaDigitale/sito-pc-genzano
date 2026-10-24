@@ -108,6 +108,18 @@ materiali:
   dimensione: 4.4 MB
   data_pubblicazione: '2026-09-24'
   licenza: CC BY 4.0
+- id: allerta-meteo-video-3d-2026-10-24
+  tema: allerta-meteo
+  tema_titolo: Allerta meteo
+  tipo: video
+  titolo: 'Video in 3D: come nasce un''allerta meteo'
+  descrizione: Video verticale con voce e sottotitoli (5 minuti e 43 secondi) che
+    racconta chi scrive l'allerta, come si sceglie il colore e quando finisce, dalla
+    frana di Sarno del 1998 al bollettino di oggi.
+  file_url: /video/2026-10-24-come-nasce-allerta-meteo-video-3d.mp4
+  dimensione: 44.7 MB
+  data_pubblicazione: '2026-10-24'
+  licenza: CC BY 4.0
 - id: allerta-meteo-podcast-2026-03-25
   tema: allerta-meteo
   tema_titolo: Allerta meteo
