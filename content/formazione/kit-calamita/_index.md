@@ -120,13 +120,13 @@ Riferimenti utili: Agenzia per l’Italia Digitale e Designers Italia, Dipartime
 
 ## Riutilizzo e attribuzione
 
-I materiali dei kit sono pensati per essere utili alla comunità e possono essere riutilizzati, adattati e stampati da Comuni, gruppi di Protezione Civile, scuole, associazioni, strutture assistenziali e operatori.
+I materiali dei kit sono pensati per essere utili alla comunità. Comuni, gruppi di Protezione Civile, scuole, associazioni, strutture assistenziali e operatori possono riutilizzarli, adattarli e stamparli con la licenza [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it): citando la fonte, senza fini commerciali e distribuendo i materiali adattati con la stessa licenza.
 
-Quando i materiali vengono copiati, adattati o redistribuiti, è gradita una citazione della fonte:
+Quando copi, adatti o ridistribuisci i materiali, cita la fonte così:
 
-> “Adattato dai Kit Calamità del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma — www.protezionecivilegenzano.it”.
+> “Adattato dai Kit Calamità del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma — www.protezionecivilegenzano.it — licenza CC BY-NC-SA 4.0”.
 
-Le eventuali immagini o risorse di terze parti mantengono la propria licenza originaria.
+Le eventuali immagini o risorse di terze parti mantengono la propria licenza originaria. Le condizioni complete sono nelle [note legali](/note-legali/#licenza-dei-contenuti).
 
 ## Kit per chi gestisce un luogo o un gruppo
 
