@@ -6,6 +6,8 @@ description: "Chiusa la campagna antincendio 2026: 86 interventi in 55 giornate 
 luogo: "Genzano di Roma"
 pdf: "/comunicati/2026/2026-10-16-antincendio-2026-chiusura-campagna.pdf"
 articolo: "/comunicazioni/2026-10-16-chiusura-campagna-aib-2026-bilancio/"
+# Citazioni del coordinatore prese dal comunicato già diffuso dal Gruppo il 16/10/2026.
+citazioni_approvate: true
 cifre_titolo: "La campagna in cifre"
 cifre_nota: "Campagna antincendio boschivo 2026, dal 15 giugno al 15 ottobre."
 cifre:

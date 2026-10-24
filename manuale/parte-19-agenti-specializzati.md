@@ -706,7 +706,7 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 **Frasi naturali**: *"scrivi un comunicato stampa"*, *"un giornale ha scritto una cosa sbagliata"*.
 
-**Cosa fa**: prepara comunicati per le testate (registro non-AGID solo su richiesta), rettifiche e risposte; segue le riprese con il controllo settimanale delle copie. Non invia nulla: l'invio è di una persona.
+**Cosa fa**: prepara comunicati per le testate (registro non-AGID solo su richiesta), rettifiche e risposte; segue le riprese con il controllo settimanale delle copie. Dal 24/10/2026 lo usa tre volte al giorno (09:13, 15:13 e 21:13) la routine «Comunicati stampa automatici»: guarda gli articoli delle ultime 48 ore e, se uno porta una notizia per le testate, scrive il comunicato dal solo testo dell'articolo, ne fa il PDF e lo pubblica nella Sala stampa (al massimo uno per giro, mai per Allerta ed Emergenza). Alle redazioni non invia nulla: l'invio lo ordina Alessandro.
 
 **Identità tecnica**: `pc-ufficio-stampa`.
 

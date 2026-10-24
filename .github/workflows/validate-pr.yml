@@ -168,6 +168,16 @@ jobs:
         # data/audit-pdf.yaml blocca la PR.
         run: python3 scripts/audit-pdf-accessibilita.py --check-inventario
 
+      - name: "🗞️ Comunicati stampa: front matter, PDF allineato al testo, citazioni approvate"
+        # 24/10/2026: i comunicati della Sala stampa si pubblicano con il testo
+        # approvato e il PDF su carta intestata. Un testo corretto senza
+        # rigenerare il PDF, una citazione non approvata (manca
+        # citazioni_approvate: true), un articolo collegato inesistente o il
+        # nome di uno strumento nel testo o nei metadati bloccano la PR.
+        run: |
+          pip install --quiet pyyaml pypdf
+          python3 scripts/check-comunicati.py
+
       - name: "🧑‍🏫 Catalogo di «Crea la mia lezione» aggiornato"
         # 06/10/2026: la pagina compone le lezioni da data/materiali_lezione.json,
         # ricavato dall'indice delle schede, dalle storie, dai giochi e dagli
