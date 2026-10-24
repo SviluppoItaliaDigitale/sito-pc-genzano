@@ -66,9 +66,10 @@ Per un uso commerciale serve un permesso scritto del Gruppo. Le testate giornali
 
 Non sono rilasciati con licenza CC BY-NC-SA:
 
-- le **fotografie con persone riconoscibili** (soggette a liberatoria individuale);
 - i **loghi** del Gruppo, del Comune di Genzano di Roma e del Dipartimento di Protezione Civile;
 - i **materiali di terzi** eventualmente rilanciati (infografiche DPC, ISPRA, INGV…), che restano soggetti alla licenza del produttore originario.
+
+La licenza riguarda il diritto d'autore. Non autorizza a usare l'immagine delle persone ritratte nelle foto fuori dal contesto in cui le pubblichiamo.
 
 ## Netiquette: cosa ci aspettiamo dai commenti
 
