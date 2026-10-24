@@ -17,6 +17,16 @@ Genzano ha colline ripide e zone basse. Quando piove tanto, l'acqua può allagar
 
 L'autunno e la primavera sono i periodi più a rischio. Il terreno è già pieno d'acqua.
 
+Guarda il nostro video. Nel video vedi i Castelli Romani in 3D. Vedi anche perché la pioggia forte allaga le strade e cosa fare.
+
+{{< video src="/video/2026-10-24-pioggia-forte-alluvioni-video-3d.mp4"
+          poster="/video/2026-10-24-pioggia-forte-alluvioni-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e scritte: pioggia forte e alluvioni"
+          caption="Perché la pioggia forte allaga le strade e cosa fare. Le case e le strade del video sono disegni, non sono vere. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+Il video dice molte cose. Le trovi scritte con frasi semplici nella pagina [Pioggia forte e alluvioni: un video in 3D](/comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d-facile/).
+
 Per controllare le allerte, guarda la pagina [Allerte meteo](/allerte-meteo/).
 
 ## Prima
@@ -48,13 +58,15 @@ Per controllare le allerte, guarda la pagina [Allerte meteo](/allerte-meteo/).
 
 - Non passare nei sottopassi o nelle strade allagate.
 - Pochi centimetri d'acqua fermano il motore.
-- Se l'auto si ferma, esci. Vai a piedi in un punto più alto.
+- Se l'auto si ferma e l'acqua è ferma, esci. Vai a piedi in un punto più alto.
+- Se l'acqua corre forte, resta nell'auto. Chiama il 112.
+- Se l'acqua entra nell'auto, sali sul tetto.
 
 ## Dopo
 
 - Non tornare a casa se le autorità non lo dicono.
 - Non entrare nei locali allagati con impianti elettrici.
-- Non bere l'acqua del rubinetto. Aspetta che sia dichiarata sicura.
+- Bevi l'acqua del rubinetto solo se il Comune non lo vieta.
 - Evita le strade rovinate o piene di fango.
 - Chiama il 112, il numero unico di emergenza, se vedi un pericolo. Per esempio frane, strade chiuse o persone in difficoltà.
 - Fai foto dei danni. Servono per chiedere il rimborso.

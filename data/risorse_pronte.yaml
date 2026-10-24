@@ -340,6 +340,19 @@ materiali:
   dimensione: 4.5 MB
   data_pubblicazione: '2026-03-21'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-idrogeologico-video-3d-2026-10-24
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: video
+  titolo: 'Video in 3D: pioggia forte e alluvioni'
+  descrizione: Video verticale con voce e sottotitoli (3 minuti e 3 secondi) sul
+    rilievo dei Castelli Romani. Mostra perché un temporale forte allaga le strade
+    in pochi minuti, quattro idee sbagliate e cosa fare. Pronto da condividere su
+    WhatsApp e social.
+  file_url: /video/2026-10-24-pioggia-forte-alluvioni-video-3d.mp4
+  dimensione: 26.2 MB
+  data_pubblicazione: '2026-10-24'
+  licenza: CC BY 4.0
 - id: rischio-idrogeologico-video-2026-09-25
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico

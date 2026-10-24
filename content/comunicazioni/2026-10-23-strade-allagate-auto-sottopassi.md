@@ -73,6 +73,7 @@ Quando l'acqua si ritira la strada può restare danneggiata: asfalto sollevato, 
 - [Rischio idrogeologico e alluvioni: prima, durante e dopo](/rischi-prevenzione/rischio-idrogeologico/)
 - [Allagamenti urbani: che cosa fare se l'acqua entra in casa](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/)
 - [Alluvioni lampo: che cosa sono e come proteggersi](/comunicazioni/2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi/)
+- [Pioggia forte e alluvioni: un video in 3D sui Castelli Romani](/comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d/)
 - [Allerte meteo: come leggere i codici colore](/allerte-meteo/)
 
 **Fonti istituzionali**

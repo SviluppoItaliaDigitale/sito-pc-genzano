@@ -1,7 +1,7 @@
 ---
 title: "Biblioteca delle idee sbagliate"
 description: "I luoghi comuni su terremoti, alluvioni, incendi, blackout, caldo e allerte, con la spiegazione di perché sono sbagliati, la fonte ufficiale e una domanda per verificare se hai capito."
-dataUltimaRevisione: "2026-10-13"
+dataUltimaRevisione: "2026-10-24"
 tts: true
 weight: 11
 toc: true
@@ -111,7 +111,7 @@ No. Torni indietro e prendi un'altra strada, anche se allunga. L'auto si ferma c
 
 **Perché è sbagliata.** Cantine, garage e locali interrati sono i primi a riempirsi e gli ultimi da cui si riesce a uscire: la porta può bloccarsi per la pressione dell'acqua. Durante un allagamento ci si sposta ai piani alti e si chiude il contatore del gas e dell'elettricità se l'acqua raggiunge gli impianti. L'auto si sostituisce, una persona no.
 
-**Fonte:** [Rischio idrogeologico, cosa fare durante](/rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante).
+**Fonte:** [Rischio idrogeologico, cosa fare durante](/rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante); [Alluvione: cosa fare](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/), campagna «Io non rischio» del Dipartimento della Protezione Civile. Sulla porta: l'Ufficio per l'ambiente della Baviera spiega che bastano meno di cinquanta centimetri d'acqua perché una porta non si apra più contro la spinta dell'acqua ([Richtiges Verhalten im Hochwasserfall](https://www.hochwasserinfo.bayern.de/aktiv_werden/kommunen/themendienst/doc/themendienstbeitrag5.pdf), in tedesco).
 
 <details class="faq-item">
 <summary><strong>Verifica: durante un'allerta arancione l'acqua comincia a entrare al piano terra. Dove vai?</strong></summary>

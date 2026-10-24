@@ -15,6 +15,16 @@ Un temporale forte porta pioggia intensa, fulmini, grandine e vento improvviso. 
 
 A Genzano e nei Castelli Romani i temporali forti sono frequenti. Le colline e i laghi li rendono violenti. Nelle zone basse l'acqua può allagare le strade in pochi minuti.
 
+Guarda il nostro video. Nel video vedi i Castelli Romani in 3D. Vedi anche perché la pioggia forte allaga le strade e cosa fare.
+
+{{< video src="/video/2026-10-24-pioggia-forte-alluvioni-video-3d.mp4"
+          poster="/video/2026-10-24-pioggia-forte-alluvioni-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e scritte: pioggia forte e alluvioni"
+          caption="Perché la pioggia forte allaga le strade e cosa fare. Le case e le strade del video sono disegni, non sono vere. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+Il video dice molte cose. Le trovi scritte con frasi semplici nella pagina [Pioggia forte e alluvioni: un video in 3D](/comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d-facile/).
+
 ## Prima
 
 - Guarda le previsioni del tempo e l'allerta meteo.

@@ -84,6 +84,7 @@ Per i colori dell'allerta ci sono i due video dell'articolo [Allerta meteo in du
 **Sul nostro sito:**
 
 - [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — cosa fare prima, durante e dopo.
+- [Pioggia forte e alluvioni: un video in 3D sui Castelli Romani](/comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d/) — perché da noi un temporale forte allaga le strade, sul rilievo dei Castelli Romani.
 - [Allerte meteo](/allerte-meteo/) — lo stato dell'allerta per Genzano.
 - [Temporali intensi](/rischi-prevenzione/temporali-intensi/).
 - [Piano familiare di emergenza](/piano-familiare/).

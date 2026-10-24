@@ -57,9 +57,9 @@ Il **CFR Lazio** (il Centro Funzionale Regionale del Lazio) pubblica le allerte 
 
 ### Se sei in auto e l'acqua cresce
 
-- Esci subito dall'auto. Allontanati verso un posto alto.
-- Non aspettare i soccorsi dentro l'auto.
-- Se la porta non si apre, rompi il vetro con il martelletto.
+- Se l'acqua è ferma, esci dall'auto. Vai a piedi in un posto alto.
+- Se l'acqua corre forte, resta nell'auto. Chiama il 112.
+- Se l'acqua entra nell'auto, sali sul tetto. Se la porta non si apre, rompi il vetro con il martelletto.
 
 ## Quando chiamare il 112
 

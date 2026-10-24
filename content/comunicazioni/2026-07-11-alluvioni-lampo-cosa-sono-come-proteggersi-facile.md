@@ -69,11 +69,11 @@ Se vedi anche 1 solo segnale, allontanati subito dall'acqua.
 
 Non entrare in una strada allagata con l'auto.
 
-Se l'acqua sale dentro l'auto:
+Se l'auto resta ferma nell'acqua:
 
-- Esci subito dall'auto.
-- Rompi un finestrino se la porta non si apre.
-- Vai verso un posto asciutto.
+- Se l'acqua è ferma, esci dall'auto. Vai verso un posto asciutto.
+- Se l'acqua corre forte, resta nell'auto. Chiama il 112.
+- Se l'acqua sale dentro l'auto, sali sul tetto. Rompi un finestrino se la porta non si apre.
 
 Ricorda: bastano 30 centimetri d'acqua per muovere un'auto.
 

@@ -510,12 +510,20 @@ dati:
     # Nato il 23/10/2026 dalla revisione della PR #1557: sei pagine, assistente
     # compreso, dicevano «abbandona l'auto» senza distinguere la corrente forte,
     # in cui uscire vuol dire entrare nell'acqua che trascina.
+    # Allargato il 24/10/2026 con il video in 3D sulle alluvioni: la prima
+    # versione non vedeva «Esci subito dal veicolo», «Esci subito dall'auto» e
+    # «Se l'auto si ferma, esci», rimasti in quattro pagine. «Si ferma» parla
+    # dell'auto, non dell'acqua: per questo l'eccezione chiede «acqua ferma».
+    # Le maiuscole contano: «Esci» a inizio elenco sfuggiva alla prima versione.
+    # Nella seconda forma («auto … esci») il tratto in mezzo non può contenere
+    # «acqua ferma», «lenta» o «corrente»: lì la condizione giusta è dentro la
+    # variante, e l'eccezione, che guarda il resto della frase, non la vedrebbe.
     vietati:
-      - regex: '\b(?:abbandon\w*|esc[io]\w*)\s+(?:dal(?:l.)?\s*)?(?:il\s+veicolo|l.auto|la\s+macchina|auto\b)|(?:auto|veicolo)\b[^.\n<]{0,40}?\babbandon\w*'
+      - regex: '\b(?:[Aa]bbandon\w*|[Ee]sc[io]\w*)\s+(?:(?:subito|immediatamente)\s+)?(?:dal(?:l.)?\s*)?(?:il\s+veicolo|l.auto|la\s+macchina|auto\b|veicolo\b|macchina\b)|(?:auto|veicolo|macchina)\b(?:(?!acqua\s+(?:è\s+)?(?:ferma|lenta)|ferma\s+o\s+lenta|corrente)[^.\n<]){0,40}?\b(?:[Aa]bbandon\w*|[Ee]sci\b)'
         perche: "In una corrente forte si resta nell'auto e si chiama il 112 (Ready.gov): il consiglio di uscire va limitato all'acqua ferma o lenta."
         contesto: 'acqua|allag|alluvion'
         finestra: 150
-        salvo_se_frase: 'corrente|ferma|lenta'
+        salvo_se_frase: 'corrente|acqua\s+(?:è\s+)?(?:ferma|lenta)|ferma\s+o\s+lenta'
 
   - id: incendi-cause-naturali
     dato: "Quanti incendi boschivi hanno cause naturali in Italia"
