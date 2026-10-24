@@ -1,7 +1,7 @@
 ---
 title: "Sarno, 5 maggio 1998: la frana che ha riscritto le mappe del rischio idrogeologico in Italia"
 date: 2026-05-05T00:02:00+02:00
-description: "Le colate rapide del 5 maggio 1998 a Sarno e Quindici travolsero quattro Comuni campani lasciando 161 vittime."
+description: "Le colate rapide del 5 maggio 1998 colpirono Sarno, Quindici, Siano e Bracigliano: 159 vittime, 137 nella sola Sarno."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,13 +13,13 @@ allegati: []
 draft: false
 ---
 
-Sono passati **ventotto anni** da quella sera. Il **5 maggio 1998**, dopo giorni di pioggia, dai monti che circondano la piana di Sarno — i monti del **Pizzo d'Alvano** in Campania — si staccarono **colate rapide di fango** così veloci da non lasciare alle persone il tempo di alzarsi dalla tavola della cena. Il fronte del fango raggiungeva i **trenta chilometri orari**, una velocità impossibile da contrastare a piedi.
+Sono passati **ventotto anni** da quella sera. Il **5 maggio 1998**, dopo giorni di pioggia, dai monti che circondano la piana di Sarno — i monti del **Pizzo d'Alvano** in Campania — si staccarono **colate rapide di fango** così veloci da non lasciare alle persone il tempo di alzarsi dalla tavola della cena. Secondo il CNR-IRPI le colate scendevano a **15-20 metri al secondo**, oltre cinquanta chilometri orari: una velocità impossibile da contrastare a piedi.
 
 {{< foto src="/images/2026-evento-sarno-1998-frana-paese.webp"
          alt="Sarno dopo la frana del 5 maggio 1998: case sommerse dal fango"
-         caption="Sarno, 5 maggio 1998. Una colata di fango travolge il paese: 161 morti. Da quel disastro nasce in Italia la cultura moderna del rischio idrogeologico." >}}
+         caption="Sarno, 5 maggio 1998. Una colata di fango travolge il paese: in tutto i morti sono 159. Da quel disastro nasce in Italia la cultura moderna del rischio idrogeologico." >}}
 
-I Comuni colpiti furono soprattutto quattro: **Sarno** in provincia di Salerno, **Quindici** in provincia di Avellino, **Bracigliano** e **Siano** sempre in provincia di Salerno. Il bilancio definitivo, dopo giorni di scavi, fu di **161 vittime**, di cui 137 nella sola Sarno. Trecentocinquanta i feriti, tremila gli sfollati, centosettantotto le case completamente distrutte.
+I Comuni colpiti furono soprattutto quattro: **Sarno** in provincia di Salerno, **Quindici** in provincia di Avellino, **Bracigliano** e **Siano** sempre in provincia di Salerno. Il bilancio definitivo, dopo giorni di scavi, fu di **159 vittime**, di cui 137 nella sola Sarno. Secondo la ricostruzione del Dipartimento della Protezione Civile i feriti furono centinaia e le persone rimaste senza casa migliaia; 178 case andarono completamente distrutte e 450 furono danneggiate.
 
 Sarno non fu solo una tragedia umana. Fu l'evento che obbligò l'Italia a guardarsi allo specchio e ad ammettere una verità scomoda: **il territorio nazionale era in larga parte sconosciuto** dal punto di vista del rischio idrogeologico. Mancava la mappa di chi viveva sopra una frana, di chi aveva la casa in un alveo coperto, di chi era esposto alle colate rapide. Da Sarno è cominciato il lungo lavoro per cambiare questa cosa.
 
@@ -27,11 +27,11 @@ Sarno non fu solo una tragedia umana. Fu l'evento che obbligò l'Italia a guarda
 
 {{< foto src="/images/2026-05-05-sarno-colate-rapide-pizzo-alvano.webp"
          alt="Vista panoramica del Pizzo d'Alvano, in Campania, con i lunghi ventagli di detrito delle colate rapide del 5 maggio 1998 che si allungano dal fianco della montagna fino all'abitato di Sarno in pianura. Si vedono almeno otto canaloni di erosione che hanno trascinato fango e materiale piroclastico verso valle."
-         caption="I versanti del Pizzo d'Alvano, in Campania, mostrano ancora oggi le tracce delle colate rapide del 5 maggio 1998. I ventagli di detrito partono dalla quota di mille metri e arrivano fino all'abitato di Sarno in pianura: ciascuno di quei \"canaloni\" è il segno di una colata di fango, acqua e rocce piroclastiche scesa a oltre trenta chilometri orari." >}}
+         caption="I versanti del Pizzo d'Alvano, in Campania, mostrano ancora oggi le tracce delle colate rapide del 5 maggio 1998. I ventagli di detrito partono dalla quota di mille metri e arrivano fino all'abitato di Sarno in pianura: ciascuno di quei \"canaloni\" è il segno di una colata di fango, acqua e rocce piroclastiche scesa a oltre cinquanta chilometri orari." >}}
 
 Le **colate rapide** — in inglese *debris flows* — sono fra i fenomeni più letali della famiglia delle frane. Si formano quando, durante una pioggia intensa e prolungata, i terreni superficiali di un versante perdono la coesione e cominciano a scorrere verso valle, mescolandosi all'acqua e alle macerie del sottobosco. La miscela acquisisce densità e velocità: invece di "cadere" come una frana classica, **scorre** come un fluido pesante.
 
-A Sarno l'innesco fu una pioggia eccezionale ma non senza precedenti: oltre **duecento millimetri di acqua** in poche ore, su versanti già saturi dalle piogge dei giorni precedenti. Le **rocce piroclastiche** che ricoprono i monti del Pizzo d'Alvano — depositi di vecchie eruzioni vesuviane — si trasformarono in fango pesantissimo. La velocità, l'orario serale, l'esiguità dei tempi di reazione: tutto si combinò nel modo peggiore possibile.
+A Sarno l'innesco non fu una pioggia eccezionale. Secondo il CNR-IRPI tra il 4 e il 5 maggio caddero circa **173 millimetri in 48 ore**, dopo giorni di piogge non intense ma persistenti che avevano già saturato i versanti. Le **rocce piroclastiche** che ricoprono i monti del Pizzo d'Alvano — depositi di vecchie eruzioni vesuviane — si trasformarono in fango pesantissimo. La velocità, l'orario serale, l'esiguità dei tempi di reazione: tutto si combinò nel modo peggiore possibile.
 
 I primi soccorsi arrivarono entro le ore successive. Vigili del fuoco, Croce Rossa, volontariato di protezione civile, Forze armate: il dispositivo nazionale si attivò, ma la dimensione del disastro saturò ogni capacità per giorni. Le immagini delle case sepolte fino al primo piano, dei superstiti scavati a mano, dei pompieri ricoperti di fango fino al viso restarono nella memoria collettiva.
 
@@ -75,7 +75,7 @@ Cosa fare in caso di pioggia intensa e allerta meteo, in tre regole:
 
 ## In ricordo
 
-Le **161 persone** morte fra il 5 e il 6 maggio 1998 a Sarno, Quindici, Bracigliano e Siano sono ricordate ogni anno nei luoghi della tragedia e nei nomi delle scuole, delle vie, delle piazze. Ma il modo migliore per ricordarle è **continuare a pianificare il territorio**, finanziare le opere di protezione, mantenere aggiornate le mappe del rischio.
+Le **159 persone** morte fra il 5 e il 6 maggio 1998 a Sarno, Quindici, Bracigliano e Siano sono ricordate ogni anno nei luoghi della tragedia e nei nomi delle scuole, delle vie, delle piazze. Ma il modo migliore per ricordarle è **continuare a pianificare il territorio**, finanziare le opere di protezione, mantenere aggiornate le mappe del rischio.
 
 Ventotto anni dopo, nessun versante in Italia è ancora "sicuro" in modo assoluto. Ma la differenza fra il Paese del 1998 e quello del 2026 è enorme: oggi sappiamo dove guardare, abbiamo un sistema di allerta e abbiamo uno Stato che — dopo Sarno — ha smesso di pretendere che il territorio fosse problema solo dei Comuni.
 

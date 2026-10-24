@@ -53,7 +53,7 @@ Il comma 3 è il fondamento normativo di una regola pratica: durante sagre, fest
 </div>
 <div class="commento-spiega">
 <h4>Che cosa dice</h4>
-<p>L'allertamento è un sistema a due livelli, <strong>statale e regionale</strong>, che preannuncia gli eventi in termini probabilistici e li monitora in tempo reale. Per il rischio idro-meteo si appoggia alla <strong>rete dei Centri funzionali</strong> (istituita dalla direttiva PCM del 27 febbraio 2004), ai servizi meteo e ai Centri di competenza.</p>
+<p>L'allertamento è un sistema a due livelli, <strong>statale e regionale</strong>, che preannuncia gli eventi in termini probabilistici e li monitora in tempo reale. Per il rischio idro-meteo si appoggia alla <strong>rete dei Centri funzionali</strong> (avviata con il decreto Sarno del 1998 e disciplinata dalla direttiva PCM del 27 febbraio 2004), ai servizi meteo e ai Centri di competenza.</p>
 <h4>Perché conta</h4>
 <p>È la base giuridica delle <strong>allerte meteo</strong> e dei codici colore (verde, giallo, arancione, rosso) che il cittadino conosce. Il bollettino del Centro Funzionale Regionale del Lazio — la fonte delle nostre allerte — nasce esattamente da questo articolo. La trattazione operativa è nella Parte VI.</p>
 </div>
