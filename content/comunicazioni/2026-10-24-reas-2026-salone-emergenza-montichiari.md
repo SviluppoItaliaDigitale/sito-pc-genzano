@@ -1,12 +1,12 @@
 ---
-title: "REAS 2026: che cosa si è visto al Salone dell'emergenza di Montichiari"
+title: "REAS 2026: il bilancio del Salone dell'emergenza di Montichiari"
 date: 2026-10-24T00:02:00+02:00
 description: "Sensori nei boschi, droni solari, mezzi per le zone allagate: il bilancio del 25° Salone dell'emergenza e la prossima edizione, dal 7 al 9 ottobre 2027."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-24-reas-2026-salone-emergenza-montichiari.webp"
-image_alt: "Cover dell'articolo: REAS 2026: che cosa si è visto al Salone dell'emergenza di Montichiari"
+image_alt: "Cover dell'articolo: REAS 2026: il bilancio del Salone dell'emergenza di Montichiari"
 scadenza: ""
 area: ""
 allegati: []
@@ -24,9 +24,9 @@ Dall'8 al 10 ottobre il Centro Fiera di Montichiari, in provincia di Brescia, ha
 
 Secondo il bilancio degli organizzatori, gli espositori sono stati **310**, dall'Italia e da altri 24 Paesi. Fra questi Germania, Francia, Svezia, Ucraina, Stati Uniti, Cina e Corea del Sud. Ci sono stati 25 convegni e seminari, con esercitazioni e dimostrazioni per operatori e volontari. Erano presenti anche tre enti tedeschi: l'agenzia federale del soccorso tecnico (THW) e due associazioni. Una riunisce gli esperti di protezione antincendio (VFDB), l'altra i vigili del fuoco (DFV).
 
-## Che cosa c'era nei padiglioni
+## I temi del Salone
 
-Gli organizzatori elencano:
+Fra i prodotti in esposizione, gli organizzatori elencano:
 
 - mezzi e attrezzature per le aree colpite da incendi e catastrofi naturali;
 - imbarcazioni e dispositivi per il soccorso in acqua;

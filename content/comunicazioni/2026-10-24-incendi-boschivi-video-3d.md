@@ -15,15 +15,15 @@ versione_facile: "2026-10-24-incendi-boschivi-video-3d-facile"
 tts: true
 lis_section: "rischio-incendio"
 social_video: "/video/2026-10-24-incendi-boschivi-video-3d.mp4"
-social_citazione: "Se vedi fumo o fiamme chiama subito il 112: non pensare che l'abbia già fatto qualcun altro."
+social_citazione: "Se vedi fumo o fiamme, chiama subito il 112: non pensare che l'abbia già fatto qualcun altro."
 social_punti:
   - "In Italia quasi tutti gli incendi li accende l'uomo: solo il 2% ha cause naturali, come i fulmini."
   - "Il vento solleva anche le faville, che accendono nuovi focolai lontano dal fronte."
-  - "Chi ha una casa vicino al bosco deve tenere il terreno intorno pulito da erba secca, sterpaglie e rami."
-  - "Se il fuoco si avvicina, allontanati verso una strada o un corso d'acqua, mai dove soffia il vento."
+  - "Se hai una casa vicino al bosco, tieni il terreno intorno pulito da erba secca, sterpaglie e rami."
+  - "Se il fuoco si avvicina, allontanati verso una strada o un corso d'acqua, mai nella direzione in cui soffia il vento."
 ---
 
-Abbiamo preparato un nuovo **video di meno di due minuti** sugli incendi boschivi. Dopo il [video di settembre](/comunicazioni/2026-09-24-incendi-boschivi-video/), questa volta il fuoco si vede sul rilievo dei Castelli Romani, ricostruito in 3D con i laghi di Albano e di Nemi: come nasce, come corre con il vento e in salita, come si spegne e che cosa può fare ciascuno di noi.
+Abbiamo preparato un nuovo **video di meno di due minuti** sugli incendi boschivi. Dopo il [video di settembre](/comunicazioni/2026-09-24-incendi-boschivi-video/), questa volta il fuoco si vede sul rilievo dei Castelli Romani, ricostruito in 3D con i laghi di Albano e di Nemi. Il video mostra come nasce un incendio, come corre con il vento e in salita, come si spegne e che cosa può fare ciascuno di noi.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Tutto quello che dice è scritto anche in questa pagina.
 
@@ -76,11 +76,11 @@ Prevenire gli incendi è compito di tutti. Le indicazioni complete, anche per qu
 
 Il rilievo è quello vero dei Castelli Romani, ricostruito dai dati altimetrici, con le altezze raddoppiate perché si legga meglio. L'incendio invece è una simulazione schematica e non in scala: non racconta un incendio realmente avvenuto, serve a mostrare come si comporta il fuoco.
 
-I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Data, che usano per l'Europa i dati EU-DEM, prodotti con dati e informazioni del programma Copernicus finanziato dall'Unione europea, e i dati SRTM e GMTED2010 dello U.S. Geological Survey. Le posizioni dei paesi vengono da GeoNames e da OpenStreetMap.
+I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Data. Per l'Europa usano i dati EU-DEM, prodotti con dati e informazioni del programma Copernicus finanziato dall'Unione europea. Usano anche i dati SRTM e GMTED2010 dello U.S. Geological Survey. Le posizioni dei paesi vengono da GeoNames e da OpenStreetMap.
 
 ## Dove trovi il video
 
-Il video, con la sua trascrizione, è anche nella pagina [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/), nella scheda [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/) del catalogo dei rischi e nell'area di formazione [Rischio incendio](/formazione/rischio-incendio/). Nelle [Risorse pronte](/risorse-pronte/#tema-rischio-incendio) puoi scaricarlo in verticale, pronto da condividere dal telefono.
+Il video, con la sua trascrizione, è anche nella pagina [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/). Lo trovi inoltre nel [catalogo dei rischi](/conoscere/catalogo-dei-rischi/rischio-incendio/) e nell'area di formazione [Rischio incendio](/formazione/rischio-incendio/). Nelle [Risorse pronte](/risorse-pronte/#tema-rischio-incendio) puoi scaricarlo in verticale, pronto da condividere dal telefono.
 
 ## Per approfondire
 
