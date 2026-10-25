@@ -1,16 +1,16 @@
 {
-  "aggiornato": "2026-10-25T12:17",
+  "aggiornato": "2026-10-25T13:02",
   "data_lunga": "domenica 25 ottobre 2026",
-  "aggiornato_label": "domenica 25 ottobre 2026, ore 12:17",
+  "aggiornato_label": "domenica 25 ottobre 2026, ore 13:02",
   "alba": "06:32",
   "tramonto": "17:13",
   "corrente": {
-    "temp": 14.5,
-    "percepita": 10.6,
+    "temp": 14.8,
+    "percepita": 10.9,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 39,
-    "vento": 12,
+    "umidita": 37,
+    "vento": 13,
     "raffiche": 46
   },
   "giorni": [
@@ -34,7 +34,7 @@
       "tmin": 10,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 36,
+      "raffiche": 40,
       "uv": 4,
       "uv_label": "moderato"
     },
