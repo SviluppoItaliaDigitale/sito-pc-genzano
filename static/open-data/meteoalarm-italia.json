@@ -1,16 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-10-25T00:03:50+00:00",
+  "generato": "2026-10-25T09:19:31+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 3,
   "scaduti_scartati": 10,
-  "in_corso": 2,
+  "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Temporali",
    "livello": "gialla",

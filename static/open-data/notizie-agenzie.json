@@ -5,40 +5,166 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-25T00:03:41+00:00",
+  "generato": "2026-10-25T09:19:03+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-24T23:45:28+00:00",
+   "data": "2026-10-25T09:15:25+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ballando, Alessandro Matri vince la puntata e Massimo Ghini eliminato: la classifica",
-   "url": "https://www.adnkronos.com/spettacoli/eliminati-ballando-con-le-stelle-puntata-ieri-cosa-e-successo_21wr6ZMjEHj1us6WtqTHMg"
+   "titolo": "Cortei, il punto di vista di Follini: \"I giovani, la politica e quella recita stanca\"",
+   "url": "https://www.adnkronos.com/politica/cortei-marco-follini-punto-di-vista_2kgdny2bnLd50kueKLc5oz"
   },
   {
-   "data": "2026-10-24T22:56:08+00:00",
+   "data": "2026-10-25T09:11:26+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Scintille a Ballando, Pernice attacca Mariotto: \"Il tuo voto non conta\". Il giurato: \"Maleducato\"",
-   "url": "https://www.adnkronos.com/spettacoli/giovanni-pernice-guillermo-mariotto-ballando-con-le-stelle_m3VhUSXBIHXbAUaVZbC72"
+   "titolo": "Che tempo che fa, domenica 25 ottobre: gli ospiti e le interviste di oggi di Fabio Fazio",
+   "url": "https://www.adnkronos.com/spettacoli/fabio-fazio-che-tempo-che-fa-ospiti-oggi_7BXB2pWcX0RpMUHrQWWh1i"
   },
   {
-   "data": "2026-10-24T22:50:34+00:00",
+   "data": "2026-10-25T09:09:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Liga, oggi Barcellona-Real Madrid: orario, probabili formazioni e dove vederla in tv (in chiaro)",
+   "url": "https://www.adnkronos.com/sport/barcellona-real-madrid-oggi-clasico-liga-orario-dove-vederla-tv-probabili-formazioni_3WcSolHl70hZobzjMNgelV"
+  },
+  {
+   "data": "2026-10-25T09:08:41+00:00",
    "fonte": "ANSA",
+   "titolo": "Il primo dispositivo che trasmette di odori a distanza",
+   "url": "https://www.ansa.it/canale_scienza/notizie/futuri_digitali/2026/10/25/il-primo-dispositivo-che-trasmette-di-odori-a-distanza_ff45c032-3669-4722-801d-69410a7c761a.html"
+  },
+  {
+   "data": "2026-10-25T09:06:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Amici, oggi domenica 25 ottobre: le anticipazioni del nuovo appuntamento",
+   "url": "https://www.adnkronos.com/spettacoli/amici-oggi-ospiti-gare-anticipazioni_5XtZIIzjxmFZRTNykh68ja"
+  },
+  {
+   "data": "2026-10-25T09:04:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cortei e tensioni, scontri a Torino. Incursione al Colosseo. Meloni: 'Sicurezza garantita'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/cortei-e-tensioni-scontri-a-torino.-incursione-al-colosseo.-meloni-sicurezza-garantita_a5328565-eeb0-4566-bf29-d289f2b330a3.html"
+  },
+  {
+   "data": "2026-10-25T09:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cancro alla vescica, Berardi (Aiom): \"Sangue nelle urine segnale da non sottovalutare\"",
+   "url": "https://www.adnkronos.com/cronaca/cancro-alla-vescica-berardi-aiom-sangue-nelle-urine-segnale-da-non-sottovalutare_3BSrLx9YaWUNHadwjZFVnV"
+  },
+  {
+   "data": "2026-10-25T08:58:01+00:00",
+   "fonte": "ANSA CRONACA",
    "titolo": "Fermato Youssef Siher, la mente della pagina Movimento 17 ottobre IL PROFILO",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/fermato-youssef-siher-la-mente-della-pagina-movimento-17-ottobre-il-profilo_7ea4ecc5-fc85-49fe-b151-c71e6855e75d.html"
+  },
+  {
+   "data": "2026-10-25T08:57:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Udinese-Milan: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/udinese-milan-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_2r7LlayoSCFRhUGdt0t8uX"
+  },
+  {
+   "data": "2026-10-25T08:53:59+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Festival Regioni: Fedriga, 'temi dai territori al futuro del Paese'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/festival-regioni-fedriga-temi-dai-territori-al-futuro-del-paese_053e47c5-e679-452f-a686-29b071190359.html"
+  },
+  {
+   "data": "2026-10-25T08:50:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "La fine del Sistema Solare potrebbe essere più rapida del previsto",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/10/25/la-fine-del-sistema-solare-potrebbe-essere-piu-rapida-del-previsto_42cd1573-8fbb-4c2a-9cad-5e840ab51a7b.html"
+  },
+  {
+   "data": "2026-10-25T08:45:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Eleonora Giorgi, il ricordo dei figli a Verissimo e l'annuncio: \"Andrea Rizzoli presto papà\"",
+   "url": "https://www.adnkronos.com/spettacoli/eleonora-giorgi-verissimo-andrea-rizzoli-papa-paolo-ciavarro_4Y51q5G3xGoJB7cK6eGoHa"
+  },
+  {
+   "data": "2026-10-25T08:42:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo Italia, stop alle piogge e torna il sole: temperature fino a 24 gradi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/meteo-previsioni-italia-torna-sole_3RVToDbIQIYx4wbWcenWYc"
+  },
+  {
+   "data": "2026-10-25T08:42:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Funzionari iraniani al Nyt: 'Lecito colpire diplomatici americani'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/funzionari-iraniani-al-nyt-lecito-colpire-diplomatici-americani_8bf2465a-7e05-43cc-997d-16e8579cf77c.html"
+  },
+  {
+   "data": "2026-10-25T08:32:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Midterm, Obama tira la volata a El-Sayed: 'C'è aria di cambiamento negli Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/midterm-obama-tira-la-volata-a-el-sayed-ce-aria-di-cambiamento-negli-usa_616e3eb7-1aea-4deb-a54d-614da5270d1d.html"
+  },
+  {
+   "data": "2026-10-25T08:28:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "E' tornata l'ora solare, lancette indietro di un'ora",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/25/e-tornata-lora-solare-lancette-indietro-di-unora_3b0f87be-a16f-4cd2-9b08-287a81c83690.html"
+  },
+  {
+   "data": "2026-10-25T08:27:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "World Pasta Day, per 9 italiani su 10 senza pasta mancherebbe l'identità gastronomica del Paese",
+   "url": "https://www.ansa.it/canale_terraegusto/notizie/fiere_eventi/2026/10/24/world-pasta-day-per-9-italiani-su-10-senza-pasta-mancherebbe-lidentita-gastronomica_88d4f3f2-c8ae-44a4-be51-83742c3343f3.html"
+  },
+  {
+   "data": "2026-10-25T08:23:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manuela Arcuri oggi a Verissimo, la verità sul rapporto con il principe Pallavicino",
+   "url": "https://www.adnkronos.com/spettacoli/manuela-arcuri-principe-domenico-antonio-pallavicino-verissimo_6q4Exf2uRlLQpwEeXdVHOQ"
+  },
+  {
+   "data": "2026-10-25T08:21:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, gli ospiti e le interviste di oggi domenica 25 ottobre",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-ospiti-interviste_5HAX6pAg013ba9EhKC6P2I"
+  },
+  {
+   "data": "2026-10-25T08:20:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Lecce-Juventus: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/lecce-juventus-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_46Y0DxlNrg2DQXCKt9WXfF"
+  },
+  {
+   "data": "2026-10-25T08:13:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Da Noi…a Ruota Libera\", oggi Tosca D'Aquino e Monica Guerritore ospiti di Francesca Fialdini",
+   "url": "https://www.adnkronos.com/spettacoli/da-noi-a-ruota-libera-oggi-domenica-25-ottobre-ospiti_39HeP5ox4rn7cYMvFWeSvJ"
+  },
+  {
+   "data": "2026-10-25T07:40:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Droni ucraini su Belgorod, un morto. Industria sotto attacco russo a Vinnytsia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/droni-ucraini-su-belgorod-un-morto.-industria-sotto-attacco-russo-a-vinnytsia_a43f3460-eed5-4b50-8f06-b88c50f15875.html"
+  },
+  {
+   "data": "2026-10-25T07:30:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Comprendere non significa giustificare",
+   "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/10/23/comprendere-non-significa-giustificare_31482d02-3b4c-4273-bd48-e3d11e366ffc.html"
+  },
+  {
+   "data": "2026-10-25T06:53:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Brasile al voto, l'ultimo sondaggio: Bolsonaro in lieve vantaggio su Lula",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html"
+  },
+  {
+   "data": "2026-10-25T04:59:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "MotoGP in Australia, gara annullata a causa del maltempo",
+   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/10/25/motogp-in-australia-gara-annullata-a-causa-del-maltempo_022a581d-9611-4639-8565-1a69edbd0835.html"
   },
   {
    "data": "2026-10-24T22:36:35+00:00",
    "fonte": "ANSA",
    "titolo": "Inarrestabile Kimi si prende la pole ad Austin: 'Voglio vincere'",
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/25/inarrestabile-kimi-si-prende-la-pole-ad-austin-voglio-vincere_e75bf53d-214a-44e7-9fae-da5ded693b7a.html"
-  },
-  {
-   "data": "2026-10-24T22:31:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cortei e tensioni, scontri a Torino. Incursione al Colosseo. Meloni: 'Sicurezza garantita'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/cortei-e-tensioni-scontri-a-torino.-incursione-al-colosseo.-meloni-sicurezza-garantita_a5328565-eeb0-4566-bf29-d289f2b330a3.html"
   },
   {
    "data": "2026-10-24T22:24:48+00:00",
@@ -53,142 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/scontri-milano-a-youssef-siher-contestata-anche-lipotesi-di-terrorismo_6d2b6b05-eacf-4e63-9bc4-0c42dcd7e0e8.html"
   },
   {
-   "data": "2026-10-24T22:14:08+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Musk attacca Kiev: \"Ha usato Starlink per uccidere\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-musk-trump-satelliti-starlink_5SsxJpqvTTzWj3kQC8wu4D"
-  },
-  {
    "data": "2026-10-24T22:09:44+00:00",
    "fonte": "ANSA",
    "titolo": "Smutniak premiata a Festa di Roma: 'Nulla davvero finisce, ma si trasforma'",
    "url": "https://www.ansa.it/sito/notizie/speciali/festa-del-cinema-di-roma-/2026/10/24/smutniak-premiata-a-festa-di-roma-nulla-davvero-finisce-ma-si-trasforma_7b2907f9-ca54-4dc0-9409-5c7ec3f99e82.html"
   },
   {
-   "data": "2026-10-24T22:04:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, Fialdini-Ventura puntano il dito contro Barbara d'Urso, lei sbotta: \"Siete ossessionati da me\"",
-   "url": "https://www.adnkronos.com/spettacoli/barbara-d-urso-pasquale-la-rocca-ballando-con-le-stelle_7dKjENoXV9xr4K5EQbvbCc"
-  },
-  {
-   "data": "2026-10-24T21:58:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lavoro, Gasparri (FI): \"Politica deve ascoltare a 360 gradi le forze sociali\"",
-   "url": "https://www.adnkronos.com/economia/lavoro-gasparri-fi-politica-deve-ascoltare-a-360-gradi-le-forze-sociali_R49YRCpSlA2bypAHMAZlq"
-  },
-  {
-   "data": "2026-10-24T21:54:38+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lavoro, Rinaldi (Fn): \"Per aumentare salari necessario recuperare produttività\"",
-   "url": "https://www.adnkronos.com/economia/lavoro-rinaldi-fn-per-aumentare-salari-necessario-recuperare-produttivita_6Fy8T1ns7Gko9hb58cDF1J"
-  },
-  {
    "data": "2026-10-24T21:43:19+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Scontri a Milano, fermato Youssef Siher 'mente' del Movimento 17 ottobre",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/scontri-a-milano-fermato-youssef-siher-mente-del-movimento-17-ottobre_e18967c4-35bf-4e74-a31c-2cbdf8b34324.html"
-  },
-  {
-   "data": "2026-10-24T21:32:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, Monica Guerritore riceve la standing ovation e si commuove: in piedi il marito Roberto Zaccaria",
-   "url": "https://www.adnkronos.com/spettacoli/monica-guerritore-ballando-con-le-stelle-roberto-zaccaria_1jVY0g9UtQwP3x8dd1a6nq"
-  },
-  {
-   "data": "2026-10-24T21:24:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Lazio batte il Parma 2-1 e per una notte è prima in solitaria CRONACA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/24/la-lazio-batte-il-parma-2-1-e-per-una-notte-e-prima-in-solitaria-cronaca-e-foto_d0b994f1-a702-4064-bfda-9f7f315d0ce2.html"
-  },
-  {
-   "data": "2026-10-24T20:58:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lavoro, Salvitti (FdI): \"Rinnovi contrattuali importanti per garantire salario giusto\"",
-   "url": "https://www.adnkronos.com/economia/lavoro-salvitti-fdi-rinnovi-contrattuali-importanti-per-garantire-salario-giusto_2hYBluxAwk5ncuk8KueUn2"
-  },
-  {
-   "data": "2026-10-24T20:55:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mentana ufficializza l'addio al TgLa7: 'Il 23 dicembre saluto i telespettatori'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/24/enrico-mentana-il-23-dicembre-mio-ultimo-giorno-di-conduzione-al-tg-de-la7_09ccd2c7-b3f8-4744-a931-d0fd61d82545.html"
-  },
-  {
-   "data": "2026-10-24T20:50:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, Anna Safroncik: \"Se mi piace Leonardo? Non mi corteggia\". Poi, il giudizio (negativo) di Carolyn Smith",
-   "url": "https://www.adnkronos.com/spettacoli/anna-safroncik-leonardo-lini-ballando-con-le-stelle_5p5ZcJMnEKdu66NsnaqKNu"
-  },
-  {
-   "data": "2026-10-24T20:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "C'è un Berlusconi pugile invincibile, decimo successo per il figlio di Pier Silvio",
-   "url": "https://www.adnkronos.com/sport/berlusconi-boxe-pugile-lorenzo_7htX5Mds93C4yRCGUcAiJ9"
-  },
-  {
-   "data": "2026-10-24T20:28:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cortei di protesta da Roma a Milano TUTTI I VIDEO",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/cortei-di-protesta-da-roma-a-milano-tutti-i-video_2bb860a1-c867-4ceb-aabb-2889ee1baa7b.html"
-  },
-  {
-   "data": "2026-10-24T20:14:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Corteo a Roma, i manifestanti respinti ai cancelli del Colosseo",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/24/corteo-a-roma-i-manifestanti-respinti-ai-cancelli-del-colosseo_125d6fb1-6bb7-45a2-bf5b-ef52b6dbc30d.html"
-  },
-  {
-   "data": "2026-10-24T20:09:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Al congresso della Lega sotto accusa il 'ribelle' Romeo, in ballo un ruolo per Zaia",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/24/attacco-a-romeo-al-congresso-lega-no-a-diatribe-personali_2df1fea2-8d5f-4ea0-a6d9-771170bc06ff.html"
-  },
-  {
-   "data": "2026-10-24T20:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, numeri estrazione vincente oggi 24 ottobre. I 5 vincono 37mila euro",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-24-ottobre_1wM54bg01kdtDtU2lyhWF9"
-  },
-  {
-   "data": "2026-10-24T20:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, Antonelli in pole nel Gp degli Usa davanti a Verstappen e Hadjar",
-   "url": "https://www.adnkronos.com/sport/f1-qualifiche-antonelli-austin-pole-position_kva7LMHRctt3uey4oEYh9"
-  },
-  {
-   "data": "2026-10-24T19:41:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Torna l'ora solare, lancette indietro di un'ora",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/23/torna-lora-solare-con-quella-legale-risparmiati-90-milioni-di-euro_3b0f87be-a16f-4cd2-9b08-287a81c83690.html"
-  },
-  {
-   "data": "2026-10-24T19:30:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli 007 a Rubio: 'L'Iran vuole assassinare i diplomatici americani'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/gli-007-a-rubio-liran-vuole-assassinare-i-diplomatici-americani_7373399c-26ef-45a1-a1d1-1018eb555b3a.html"
-  },
-  {
-   "data": "2026-10-24T19:27:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Piantedosi, 'isolati violenti, non c'è spazio per chi agisce nell'impunità",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/piantedosi-isolati-violenti-non-ce-spazio-per-chi-agisce-nellimpunita_ba5d2670-da81-45cc-a34b-5ccf4f061f2e.html"
-  },
-  {
-   "data": "2026-10-24T19:25:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cortei in Italia, quasi 5mila identificati, 371 fermati, 110 sono minori",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/cortei-in-italia-quasi-5mila-identificati-371-fermati-110-sono-minori_e0122321-4d8b-4b24-8cc8-22fc17f0f290.html"
-  },
-  {
-   "data": "2026-10-24T19:23:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Una marea di manifestanti in Francia, ma il caos del 17 ottobre non si ripete",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/parigi-scontri-alla-fine-del-corteo-polizia-con-lacrimogeni-e-idranti_bd1e06f5-b847-4c45-8875-1bde48915478.html"
-  },
-  {
-   "data": "2026-10-24T18:59:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uomo travolto e ucciso a Napoli da scooter e furgone pirata",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/travolto-da-uno-scooter-poi-viene-investito-anche-da-un-furgoncino_ac484113-87ec-453e-b2c4-3387c3e4cd8a.html"
   }
  ]
 }
