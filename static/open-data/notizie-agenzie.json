@@ -5,11 +5,89 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-25T19:52:44+00:00",
+  "generato": "2026-10-25T22:21:36+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-25T22:18:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Caos alle urne, il ballottaggio in Brasile a rischio annullamento",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html"
+  },
+  {
+   "data": "2026-10-25T22:17:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il Real di Mourinho vince il Clasico, Barca battuto 2-1",
+   "url": "https://www.adnkronos.com/sport/clasico-barcellona-real-madrid-vittoria-mourinho_2WWK0QnLTQkCAJBHbKuGfZ"
+  },
+  {
+   "data": "2026-10-25T22:17:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli studenti vincono le elezioni in Serbia, lo annuncia lo sconfitto Vucic",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html"
+  },
+  {
+   "data": "2026-10-25T22:12:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lmdv Media due diligence su Seif per Opa. Soci maggioranza non cedono quote",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/25/lmdv-media-avvia-due-diligence-su-societa-editoriale-il-fatto-per-opa_49bbeaad-86d1-4f54-9ec6-f1574dcd41b1.html"
+  },
+  {
+   "data": "2026-10-25T21:58:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: Antonelli vince ad Austin, il Mondiale sempre più vicino",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/25/antonelli-vince-ad-austin-il-mondiale-e-a-un-passo_e75bf53d-214a-44e7-9fae-da5ded693b7a.html"
+  },
+  {
+   "data": "2026-10-25T21:56:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Inter folle rimonta, è in testa con la Lazio. Milan e Juve ripartono",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/25/inter-folle-rimonta-e-in-testa-con-la-lazio.-milan-e-juve-ripartono_48165f49-25f1-4256-b483-815a22d32165.html"
+  },
+  {
+   "data": "2026-10-25T21:36:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump in Michigan attacca El-Sayed, 'farà entrare orde di jihadisti negli Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/trump-obama-presidente-incompetente-e-ora-sostiene-un-jihadista-anti-semita_4027c932-07ad-4ba1-a7d0-8eb7636955f9.html"
+  },
+  {
+   "data": "2026-10-25T21:15:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "In gravi condizioni tifoso colpito alla testa dopo Puteolana-Portici",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/in-gravi-condizioni-tifoso-colpito-alla-testa-dopo-puteolana-portici_37804f56-8e86-4998-9cb4-4a4f641d6468.html"
+  },
+  {
+   "data": "2026-10-25T21:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serbia, svolta alle elezioni politiche: vittoria schiacciante della Lista degli Studenti, Vucic riconosce la sconfitta",
+   "url": "https://www.adnkronos.com/internazionale/esteri/serbia-lista-studenti-elezioni-vucic_3C1Pha1Hv2hjeumNj9Omos"
+  },
+  {
+   "data": "2026-10-25T20:40:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Youssef Siher in carcere, 'aveva un progetto eversivo'. Indagata anche la moglie",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/youssef-siher-in-carcere-aveva-un-progetto-eversivo.-indagata-anche-la-moglie_dde34ca0-69ba-4c10-86ed-1c191da76dca.html"
+  },
+  {
+   "data": "2026-10-25T20:38:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, 'lista stupri' e una svastica nei bagni del liceo Righi",
+   "url": "https://www.adnkronos.com/cronaca/roma-liceo-righi-lista-stupri_6vP9dqncQDZtBBmkQ1UgkY"
+  },
+  {
+   "data": "2026-10-25T20:04:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Torre Annunziata, Valentino Gionta jr scovato in un bunker sotto la sua casa",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/torre-annunziata-valentino-gionta-jr-scovato-in-un-bunker-sotto-la-sua-casa_f1ceed98-d996-47c2-a834-a37fffaa56f7.html"
+  },
+  {
+   "data": "2026-10-25T20:04:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "I fan di Lara Croft celebrano i suoi 30 anni nella città \"natale\"",
+   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/10/25/i-fan-di-lara-croft-celebrano-i-suoi-30-anni-nella-citta-natale_965ff7bd-2bb7-4515-a0c0-6b048cad13db.html"
+  },
   {
    "data": "2026-10-25T19:45:20+00:00",
    "fonte": "ANSA CRONACA",
@@ -17,28 +95,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/una-lista-stupri-nei-bagni-del-liceo-righi-a-roma_0415e69a-f3f8-4af7-afd0-c11114e6844b.html"
   },
   {
-   "data": "2026-10-25T19:42:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Territori e futuro, a Firenze apre il festival delle Regioni",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/territori-e-futuro-a-firenze-apre-il-festival-delle-regioni_f54d642f-ee1a-47cd-b63a-07dad0e96fb8.html"
-  },
-  {
-   "data": "2026-10-25T19:42:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A, in campo Udinese-Milan LIVE",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-udinese-milan-diretta-e-foto_ada4ee21-0c89-46e0-854c-ac6a99956170.html"
-  },
-  {
    "data": "2026-10-25T19:40:22+00:00",
    "fonte": "ANSA",
    "titolo": "Una 'lista stupri' nei bagni del liceo Righi a Roma",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/una-lista-stupri-nei-bagni-del-liceo-righi-a-roma_4a4f14f2-a323-4aa5-a4e4-dea55e0441ba.html"
-  },
-  {
-   "data": "2026-10-25T19:36:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Youssef Siher in carcere, 'aveva un progetto eversivo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/domani-la-richiesta-di-convalida-del-fermo-per-youssef-sehir-tra-le-accuse_dde34ca0-69ba-4c10-86ed-1c191da76dca.html"
   },
   {
    "data": "2026-10-25T19:24:49+00:00",
@@ -59,22 +119,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/pm-milano-siher-con-m1710-ha-creato-stato-intimidazione-popolazione_a3ac8ed9-1315-452c-99c7-48d6e206292a.html"
   },
   {
-   "data": "2026-10-25T19:13:17+00:00",
+   "data": "2026-10-25T19:13:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, oggi Gp Usa, Antonelli parte dalla pole per il match point mondiale - Diretta",
+   "titolo": "Formula 1: Gp Usa, trionfo di Antonelli davanti a Leclerc ma per titolo è tutto rimandato",
    "url": "https://www.adnkronos.com/sport/f1-antonelli-titolo-mondiale-gp-usa-mercedes_38XLclFJzyk5vQ2ggpfGYf"
   },
   {
-   "data": "2026-10-25T19:10:37+00:00",
+   "data": "2026-10-25T19:10:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Udinese-Milan 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/serie-a-udinese-milan-diretta_XNy3dngYpLOz9UnUaSbHh"
-  },
-  {
-   "data": "2026-10-25T18:59:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump in Michigan attacca Obama, 'appoggia un jihadista'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/trump-obama-presidente-incompetente-e-ora-sostiene-un-jihadista-anti-semita_4027c932-07ad-4ba1-a7d0-8eb7636955f9.html"
+   "titolo": "Serie A, Udinese-Milan 0-2, Pulisic ed Hutchinson stendono i bianconeri",
+   "url": "https://www.adnkronos.com/sport/serie-a-udinese-ko-con-milan-aggancia-la-roma_XNy3dngYpLOz9UnUaSbHh"
   },
   {
    "data": "2026-10-25T18:55:51+00:00",
@@ -101,12 +155,6 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/10/24/una-reliquia-di-san-carlo-acutis-esposta-24-ore-su-24-in-brasile_2ef18196-c77a-4112-99dd-956c9d8ea28e.html"
   },
   {
-   "data": "2026-10-25T18:43:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "In Serbia affluenza in forte aumento, 'irregolarità e incidenti a seggi'. Bulgaria verso il ballottaggio",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html"
-  },
-  {
    "data": "2026-10-25T18:28:50+00:00",
    "fonte": "ANSA",
    "titolo": "Le Pen lancia la campagna per l'Eliseo: 'Io guardo alla Francia di domani'",
@@ -125,12 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-10-25T17:52:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Napoli, studenti ripuliscono la scuola dopo giorni di occupazione",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/napoli-studenti-ripuliscono-la-scuola-dopo-giorni-di-occupazione_59e788c3-26b8-45bb-9d48-90be42769132.html"
-  },
-  {
    "data": "2026-10-25T17:51:59+00:00",
    "fonte": "ANSA",
    "titolo": "Centuripe, il borgo siciliano a forma di essere umano",
@@ -147,48 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Un diciassettenne accoltellato in una lite fuori da un locale a Sassari",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/un-diciassettenne-accoltellato-in-una-lite-fuori-da-un-locale-a-sassari_bfd0c019-5739-4fcc-be0b-cd7db225dd20.html"
-  },
-  {
-   "data": "2026-10-25T17:47:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tragedia in Molise, madre e figlio trovati morti in casa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/tragedia-in-molise-madre-e-figlio-trovati-morti-in-casa_c9d157ce-dfb1-42c0-b028-ff9ee83bd11f.html"
-  },
-  {
-   "data": "2026-10-25T17:44:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Musetti torna alla vittoria dopo quattro anni e fa suo il torneo di Lione",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/25/musetti-torna-alla-vittoria-dopo-quattro-anni-e-fa-suo-il-torneo-di-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html"
-  },
-  {
-   "data": "2026-10-25T17:44:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I boss al 41bis nel carcere di Alessandria, è polemica",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/carceri-circa-un-centinaio-i-nuovi-detenuti-al-41-bis-ad-alessandria_39729727-4a8b-423a-8905-046dafd1315a.html"
-  },
-  {
-   "data": "2026-10-25T17:40:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Spagna, bus precipita per 20 metri: 41 feriti, la metà sono gravi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/spagna-barcellona-bus-scarpata-feriti-gravi_4ZyhF4nNgWPXFW5J1zk3c0"
-  },
-  {
-   "data": "2026-10-25T17:34:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Urne aperte in Brasile, Bolsonaro al seggio a Rio: 'È l'ora del cambiamento'. Lula vota a San Paolo e attacca lo sfidante: 'Bugiardo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html"
-  },
-  {
-   "data": "2026-10-25T17:31:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "I ladri a casa di Alisson Santos, rubati orologi e gioielli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/i-ladri-a-casa-di-alisson-santos-rubati-orologi-e-gioielli_76ba3df2-749f-4e40-aabf-e6f022a901a9.html"
-  },
-  {
-   "data": "2026-10-25T17:12:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Zuppi, 'preoccupa la corsa al riarmo, diffusa rozza cultura della potenza'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/zuppi-preoccupa-la-corsa-al-riarmo-diffusa-rozza-cultura-della-potenza_15838715-105d-43f6-90e4-b9e4806e83e1.html"
   }
  ]
 }
