@@ -1,26 +1,91 @@
 {
  "_snapshot": {
-  "generato": "2026-10-25T09:19:31+00:00",
+  "generato": "2026-10-25T13:51:49+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 3,
-  "scaduti_scartati": 10,
+  "avvisi": 8,
+  "scaduti_scartati": 7,
   "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Temporali",
+   "in_corso": false,
+   "regione": "Basilicata",
+   "fenomeno": "Vento",
    "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
+   "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-25T06:00:00+00:00",
-   "fine": "2026-10-25T11:59:00+00:00",
-   "emesso": "2026-10-24T08:15:02+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261024101502.016"
+   "inizio": "2026-10-26T06:00:00+00:00",
+   "fine": "2026-10-26T17:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.010"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-26T06:00:00+00:00",
+   "fine": "2026-10-27T22:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.012"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-26T06:00:00+00:00",
+   "fine": "2026-10-26T17:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.009"
+  },
+  {
+   "in_corso": false,
+   "regione": "Molise",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-26T06:00:00+00:00",
+   "fine": "2026-10-26T17:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.008"
+  },
+  {
+   "in_corso": true,
+   "regione": "Piemonte",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-25T09:00:00+00:00",
+   "fine": "2026-10-25T23:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.006"
+  },
+  {
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-26T06:00:00+00:00",
+   "fine": "2026-10-26T23:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.011"
   },
   {
    "in_corso": true,
@@ -30,23 +95,23 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-25T00:00:00+00:00",
-   "fine": "2026-10-26T11:59:00+00:00",
-   "emesso": "2026-10-24T08:15:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261024101502.022"
+   "inizio": "2026-10-25T09:00:00+00:00",
+   "fine": "2026-10-25T23:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.007"
   },
   {
    "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Temporali",
+   "regione": "Valle d'Aosta",
+   "fenomeno": "Vento",
    "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
+   "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-25T00:00:00+00:00",
-   "fine": "2026-10-25T17:59:00+00:00",
-   "emesso": "2026-10-24T08:15:02+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261024101502.020"
+   "inizio": "2026-10-25T09:00:00+00:00",
+   "fine": "2026-10-25T23:59:00+00:00",
+   "emesso": "2026-10-25T09:32:22+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261025103222.005"
   }
  ]
 }
