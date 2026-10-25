@@ -150,6 +150,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 
+
 ## Richieste
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
@@ -186,6 +187,9 @@ Formato per una richiesta di immagine:
   - Nella figura ondate-di-calore-gesti ho corretto «esci dopo le 17» in «esci dopo le 18» (desktop e mobile): il decalogo del Ministero della Salute indica le ore più calde dalle 11 alle 18, e la pagina ora dice lo stesso. Nelle prossime figure sul caldo usare 11-18.
 
 ## Avvisi
+
+- **25/10/2026 — ChatGPT, interventi e Memorial Giordano Funari, PR [#1586](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/pull/1586).** Contenuti approvati da Alessandro in chat il 25 ottobre, inclusi data, terza edizione, piazza Frasconi e presenza del Gruppo al Memorial. Export aggiornato al 22 ottobre, ultimo 212/2026: 211 rapporti approvati, 618,3 ore, 10.642 km, 870 presenze e 33 volontari attivi. Bozze 213 e 214 escluse con le sei presenze. Resoconto unico Genzano/Latina, data del servizio a Latina allineata al registro, tutti gli allegati conservati; Memorial con foto ritagliata, fuori dai conteggi. Controlli locali e automatici superati. Pubblicazione autorizzata con questa sola PR; esito del deploy e verifica live riportati nella descrizione della PR.
+
 
 - **16/10/2026 — Claude, ramo `claude/correzioni-grafici-aprilia`.** Correzioni dopo la PR #1428: (1) gli script degli open data interventi calcolano e controllano tutto prima di scrivere, anche con `--dry-run`, e si fermano su date illeggibili o conti che non tornano (punto 1 della procedura qui sopra); (2) nei grafici, scegliendo un mese il giorno selezionato passa dentro quel mese e su telefono il mese entra in vista; (3) «Pausa animazioni» del pannello mette su `<html>` sia `a11y-pause-animations` sia `a11y-pause-anim`: nessuna delle due va rinominata nell'altra (rule 03); (4) l'incendio di Aprilia raccontato nell'articolo del 23 giugno è di domenica 21 giugno (registro, intervento 33/2026): corretti articolo, testi social e collegamento nei due calendari.
 - **16/10/2026 — Claude, ramo `claude/open-data-grafici-interattivi`.** Grafici interattivi nella pagina Open data, con le stesse funzioni di quelli del bilancio antincendio (PR #1427): `scripts/genera-open-data-interventi.py` e `scripts/aggiorna-open-data-delta.py` scrivono anche `data/open_data_interventi.json`, con per ogni giorno solo il numero di interventi e le ore, e tipologie, ore di inizio e mezzi solo per mese. Lo shortcode `grafico-interattivo` ora accetta i valori per mese (`per_mese`), le parole del periodo intero (`testi`) e i racconti presi da un altro file: quelli dei giorni stanno in `data/racconti_interventi.json`, curato a mano (punto 3 della procedura qui sopra). Toccati anche `grafico-interattivo.js`, la pagina `/open-data/`, il promemoria `promemoria-export-interventi.yml`, rule 04a e 10, manuale parte 29 e l'agente `pc-dati-e-feed`. Il prossimo aggiornamento degli interventi rigenera i grafici da solo: a mano restano solo le righe dei racconti.
