@@ -149,6 +149,8 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
+- **25/10/2026 — ChatGPT, aggiornamento interventi e Memorial Giordano Funari.** Ramo `chatgpt/interventi-20261025`, PR da aprire. Export cumulativo: 211 rapporti approvati fino al 212/2026 del 22 ottobre; escluse le bozze 213 e 214 e le loro sei presenze. Rigenerazione degli aggregati, integrazione del resoconto già esistente di Genzano/Latina senza duplicarlo, articolo del Memorial con la foto fornita da Alessandro ritagliata. Prossimo passo: controlli editoriali e tecnici, una sola PR. Il Memorial non è nel registro: non aggiungerlo alle statistiche e applicare la verifica prevista per i fatti della stampa.
+
 
 ## Richieste
 

@@ -4,11 +4,11 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-10-21",
-    "ultimo_numero": "210/2026"
+    "al": "2026-10-22",
+    "ultimo_numero": "212/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-10-22",
+  "generato_il": "2026-10-25",
   "dati": [
     {
       "tipologia": "Antincendio",
@@ -16,7 +16,7 @@
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
-      "numero_interventi": 51
+      "numero_interventi": 52
     },
     {
       "tipologia": "Evento Locale",
@@ -32,7 +32,7 @@
     },
     {
       "tipologia": "Allagamento",
-      "numero_interventi": 10
+      "numero_interventi": 11
     },
     {
       "tipologia": "Incendio sterpaglie",
