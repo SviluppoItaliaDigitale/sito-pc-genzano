@@ -296,12 +296,13 @@ def chk_gdacs():
 
 
 def chk_gibs():
+    # Dal 10/10/2026 la scheda usa il satellite NOAA-21 (Suomi NPP cessa il 2/11/2026).
     # Il mosaico "best" VIIRS true-color ha ~2 giorni di latenza di elaborazione:
     # la data odierna e quella di ieri restituiscono sistematicamente 404 (verificato
     # 04/08/2026 su più tile). Stesso offset usato lato client in dashboard-satellite.html.
     giorno = (datetime.date.today() - datetime.timedelta(days=2)).isoformat()
     url = ("https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/"
-           "VIIRS_SNPP_CorrectedReflectance_TrueColor/default/" + giorno +
+           "VIIRS_NOAA21_CorrectedReflectance_TrueColor/default/" + giorno +
            "/GoogleMapsCompatible_Level9/4/5/8.jpg")
     ok, det, _, _ = _get(url, expect_image=True)
     return ok, det
