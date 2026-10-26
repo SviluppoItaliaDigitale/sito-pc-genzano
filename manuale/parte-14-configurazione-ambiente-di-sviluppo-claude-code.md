@@ -706,7 +706,7 @@ Per informazioni su questa pagina: 06 9362 600 o [segreteria@protezionecivilegen
 - [docs.italia.it/italia/designers-italia/](https://docs.italia.it/italia/designers-italia/)
 - [Writing Toolkit](https://designers.italia.it/risorse-per-il-design/writing-toolkit/)
 - [Manuale operativo design PA](https://docs.italia.it/italia/designers-italia/manuale-operativo-design-docs/)
-- [Linee guida accessibilità AGID](https://www.agid.gov.it/it/design-servizi/accessibilita)
+- [Linee guida accessibilità AGID](https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita)
 
 **Protezione civile:**
 
