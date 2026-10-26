@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8984 video (18 canali).
+# Totale: 9013 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -15,7 +15,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 633
+    video_count: 634
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 963
+    video_count: 966
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -40,12 +40,12 @@ canali:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 393
+    video_count: 394
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1355
+    video_count: 1362
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -75,7 +75,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 648
+    video_count: 649
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,12 +85,12 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1925
+    video_count: 1940
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 119
+    video_count: 120
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
@@ -1317,6 +1317,11 @@ video:
     id: BLpqUlbKkVs
     titolo: 'Il diritto alla scelta: Orientamento e Futuro in epoca di incertezza'
     url: https://youtu.be/BLpqUlbKkVs
+  cicap-BN0VoTfjfnA:
+    canale: cicap
+    id: BN0VoTfjfnA
+    titolo: Questione di naso - con Anna D'Errico
+    url: https://youtu.be/BN0VoTfjfnA
   cicap-BQYUt4Zi2yU:
     canale: cicap
     id: BQYUt4Zi2yU
@@ -5412,6 +5417,11 @@ video:
     id: CU_5nZsH5s4
     titolo: Prof. Giuliana Panieri, The Arctic University of Norway in Tromsø (UiT), on  FERS
     url: https://youtu.be/CU_5nZsH5s4
+  cmcc-CVpJZdmLc0I:
+    canale: cmcc
+    id: CVpJZdmLc0I
+    titolo: Reducing the large short-lived impact of methane emissions with temporary carbon removals
+    url: https://youtu.be/CVpJZdmLc0I
   cmcc-CWO8LgnR2WU:
     canale: cmcc
     id: CWO8LgnR2WU
@@ -6827,6 +6837,11 @@ video:
     id: V5WV9e8L_Nk
     titolo: PRISMA Summer School 2026 | 19 June 2026
     url: https://youtu.be/V5WV9e8L_Nk
+  cmcc-V8Vvd6FNcgA:
+    canale: cmcc
+    id: V8Vvd6FNcgA
+    titolo: 'Artificial societies, real decisions: agent-based simulation for climate policy testing'
+    url: https://youtu.be/V8Vvd6FNcgA
   cmcc-VAeHUVsIyXY:
     canale: cmcc
     id: VAeHUVsIyXY
@@ -7112,6 +7127,11 @@ video:
     id: Z8U-_x1jbps
     titolo: Koopman operators in GCM
     url: https://youtu.be/Z8U-_x1jbps
+  cmcc-ZAnZt08xEAw:
+    canale: cmcc
+    id: ZAnZt08xEAw
+    titolo: IPCC OPEN HOUR Webinar on the WGII AR7 contribution and Technical Guidelines FOD review
+    url: https://youtu.be/ZAnZt08xEAw
   cmcc-ZCpZro_1M1M:
     canale: cmcc
     id: ZCpZro_1M1M
@@ -10362,6 +10382,11 @@ video:
     id: 3aDF3Rjs_jE
     titolo: Workshop annuale Programma/gen 2019 (3 di 3) – Protezione civile e PONGOV 2014-2020
     url: https://youtu.be/3aDF3Rjs_jE
+  dpc-gov-3biBq_DyDfs:
+    canale: dpc-gov
+    id: 3biBq_DyDfs
+    titolo: Esercitazione ricerca persona scomparsa.
+    url: https://youtu.be/3biBq_DyDfs
   dpc-gov-3c_4vjCWYZg:
     canale: dpc-gov
     id: 3c_4vjCWYZg
@@ -12647,6 +12672,11 @@ video:
     id: 3aW_GPJRe00
     titolo: Perché l’Iran ha attaccato Israele con missili e droni e quali sono i possibili scenari futuri?
     url: https://youtu.be/3aW_GPJRe00
+  geopop-3bnDyONMbu4:
+    canale: geopop
+    id: 3bnDyONMbu4
+    titolo: Scarpe da ginnastica VS scarpa da trekking. Cosa cambia?
+    url: https://youtu.be/3bnDyONMbu4
   geopop-3cejo4K3Lpg:
     canale: geopop
     id: 3cejo4K3Lpg
@@ -13917,6 +13947,11 @@ video:
     id: Fz8NuY-VN5c
     titolo: I'll take you inside the Geopop editorial team and tell you how many views we got in 2023
     url: https://youtu.be/Fz8NuY-VN5c
+  geopop-FzdmudtoKfg:
+    canale: geopop
+    id: FzdmudtoKfg
+    titolo: Dove si trovano i ponti raffigurati sulle banconote?
+    url: https://youtu.be/FzdmudtoKfg
   geopop-G0K8KGhp80g:
     canale: geopop
     id: G0K8KGhp80g
@@ -14737,6 +14772,11 @@ video:
     id: NGrJStUFYzc
     titolo: 'The hydroelectric power plant inside the mountain: we show you Snowy 2.0 under construction in Au...'
     url: https://youtu.be/NGrJStUFYzc
+  geopop-NNOo_ubmJtE:
+    canale: geopop
+    id: NNOo_ubmJtE
+    titolo: 'L’incubo del cyberbullismo: i numeri (alti) del fenomeno'
+    url: https://youtu.be/NNOo_ubmJtE
   geopop-NRy--CXXT0E:
     canale: geopop
     id: NRy--CXXT0E
@@ -15202,6 +15242,11 @@ video:
     id: RgXJW3f7-7U
     titolo: The Taipei 101 skyscraper's giant steel sphere may have saved it from the earthquake in Taiwan
     url: https://youtu.be/RgXJW3f7-7U
+  geopop-RgrxPFd7NVM:
+    canale: geopop
+    id: RgrxPFd7NVM
+    titolo: Quante cose usiamo ogni giorno senza sapere davvero come funzionano?
+    url: https://youtu.be/RgrxPFd7NVM
   geopop-Rhjqzn4-zBY:
     canale: geopop
     id: Rhjqzn4-zBY
@@ -16222,6 +16267,11 @@ video:
     id: aqeAaHDGJMw
     titolo: Why is global shipping in crisis? Choke points
     url: https://youtu.be/aqeAaHDGJMw
+  geopop-asUt8jayPDE:
+    canale: geopop
+    id: asUt8jayPDE
+    titolo: 'Come funziona l’auto “volante” di Tesla: l’analisi tecnica della Roadster, tra ventole e propulsori'
+    url: https://youtu.be/asUt8jayPDE
   geopop-auLbpifu6Ro:
     canale: geopop
     id: auLbpifu6Ro
@@ -16747,6 +16797,11 @@ video:
     id: fRT6ACeEh0o
     titolo: Fracking - A Geological Explanation in Simple Words
     url: https://youtu.be/fRT6ACeEh0o
+  geopop-fXJUvLFzLFQ:
+    canale: geopop
+    id: fXJUvLFzLFQ
+    titolo: Cosa sta succedendo in Italia? Le cause della crisi dagli autotrasportatori ai supermercati
+    url: https://youtu.be/fXJUvLFzLFQ
   geopop-fYD9d74m5ag:
     canale: geopop
     id: fYD9d74m5ag
@@ -18847,6 +18902,11 @@ video:
     id: z6vWeLPEtnY
     titolo: 'The map of illegal building: what''s the situation in Italy and what are the risks?'
     url: https://youtu.be/z6vWeLPEtnY
+  geopop-z80sN_gaTW8:
+    canale: geopop
+    id: z80sN_gaTW8
+    titolo: 'Il compost perfetto non è fatto solo di scarti gettati in un vaso: ecco la guida pratica'
+    url: https://youtu.be/z80sN_gaTW8
   geopop-z9ruuhBo0VI:
     canale: geopop
     id: z9ruuhBo0VI
@@ -27972,6 +28032,11 @@ video:
     id: 7v9WAPL0iMU
     titolo: 'Cermis: il disastro della funivia'
     url: https://youtu.be/7v9WAPL0iMU
+  natgeo-italia-87iroPg26Qk:
+    canale: natgeo-italia
+    id: 87iroPg26Qk
+    titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
+    url: https://youtu.be/87iroPg26Qk
   natgeo-italia-88f2CzhqGdw:
     canale: natgeo-italia
     id: 88f2CzhqGdw
@@ -32772,6 +32837,11 @@ video:
     id: CQsr2FEj1CE
     titolo: 'Stalking alla preside di Caivano: arrestata l''ex "bidella pendolare"'
     url: https://youtu.be/CQsr2FEj1CE
+  rai-news-CS94KouTqgU:
+    canale: rai-news
+    id: CS94KouTqgU
+    titolo: 'La storia di Giulia Cecchettin, diventa un film: "Se domani non torno"'
+    url: https://youtu.be/CS94KouTqgU
   rai-news-CYjOgc6Ux9s:
     canale: rai-news
     id: CYjOgc6Ux9s
@@ -33642,6 +33712,11 @@ video:
     id: HjCAbGLLhX8
     titolo: A Varsavia tutti in coda per ammirare il fiore cadavere che odora di carne putrefatta
     url: https://youtu.be/HjCAbGLLhX8
+  rai-news-HkW-eJWyCv4:
+    canale: rai-news
+    id: HkW-eJWyCv4
+    titolo: Torna l'ora solare, cosa cambia e come spostare le lancette
+    url: https://youtu.be/HkW-eJWyCv4
   rai-news-HojM56trfWQ:
     canale: rai-news
     id: HojM56trfWQ
@@ -33787,6 +33862,11 @@ video:
     id: IQkVd6uG02A
     titolo: Farewell to the World Cup, the government wants Gravina's head.
     url: https://youtu.be/IQkVd6uG02A
+  rai-news-ISiz5vYti-c:
+    canale: rai-news
+    id: ISiz5vYti-c
+    titolo: 'La mareggiata interrompe la diretta: reporter spazzato via da un''onda'
+    url: https://youtu.be/ISiz5vYti-c
   rai-news-IU72l9iWEAY:
     canale: rai-news
     id: IU72l9iWEAY
@@ -34537,6 +34617,11 @@ video:
     id: NbRh0MWkpVU
     titolo: 'Stalin''s wine cellar in Georgia opened for the first time: 40,000 bottles up for auction'
     url: https://youtu.be/NbRh0MWkpVU
+  rai-news-NcriMWVlQRE:
+    canale: rai-news
+    id: NcriMWVlQRE
+    titolo: 'La Serbia volta pagina, gli studenti travolgono Vučić: "Inizia una nuova epoca"'
+    url: https://youtu.be/NcriMWVlQRE
   rai-news-Ng8bHfYpnso:
     canale: rai-news
     id: Ng8bHfYpnso
@@ -36227,6 +36312,11 @@ video:
     id: YtCzTpNvyFk
     titolo: 'Cloud, il talkcast di RaiNews.it: Giornalismo, guerra e intelligenza artificiale'
     url: https://youtu.be/YtCzTpNvyFk
+  rai-news-Yv5be-UG3GE:
+    canale: rai-news
+    id: Yv5be-UG3GE
+    titolo: Femminicidio di Giulia Tramontano, i giudici riconoscono la premeditazione per Impagnatiello
+    url: https://youtu.be/Yv5be-UG3GE
   rai-news-Z-82dIkcjds:
     canale: rai-news
     id: Z-82dIkcjds
@@ -36812,6 +36902,11 @@ video:
     id: bzWGjogdsik
     titolo: Emilio Fede has died
     url: https://youtu.be/bzWGjogdsik
+  rai-news-c016xnYkO3g:
+    canale: rai-news
+    id: c016xnYkO3g
+    titolo: Youssef Siher, gli studi sull'Islam politico e l'attivismo, fino al fermo per Movimento 17 ottobre
+    url: https://youtu.be/c016xnYkO3g
   rai-news-c0mY5MI6sQs:
     canale: rai-news
     id: c0mY5MI6sQs
@@ -36862,6 +36957,11 @@ video:
     id: cH-DasfZODQ
     titolo: 'Vance in Hungary: "We''re disappointed with the EU on Ukraine; only a few have cooperated: Meloni ...'
     url: https://youtu.be/cH-DasfZODQ
+  rai-news-cKvu4YCYgpM:
+    canale: rai-news
+    id: cKvu4YCYgpM
+    titolo: Italian News in English
+    url: https://youtu.be/cKvu4YCYgpM
   rai-news-cLgWAWfUWfw:
     canale: rai-news
     id: cLgWAWfUWfw
@@ -37412,6 +37512,11 @@ video:
     id: frOXzF9rGfM
     titolo: 'Charlie Kirk''s widow, tears and strength: "The movement my husband built will never die."'
     url: https://youtu.be/frOXzF9rGfM
+  rai-news-frfmcHiQJVU:
+    canale: rai-news
+    id: frfmcHiQJVU
+    titolo: Youssef Siher, gli studi sull'Islam politico e l'attivismo, fino al fermo per Movimento 17 ottobre
+    url: https://youtu.be/frfmcHiQJVU
   rai-news-fsSEfY20Fnk:
     canale: rai-news
     id: fsSEfY20Fnk
@@ -37592,6 +37697,11 @@ video:
     id: h9XYfcbxyQM
     titolo: A train collision in Andalusia left 39 dead and 152 injured. Among the possible causes is a blown...
     url: https://youtu.be/h9XYfcbxyQM
+  rai-news-h9c0qAspB7A:
+    canale: rai-news
+    id: h9c0qAspB7A
+    titolo: 'La sincronia perfetta dei 110 robot ballerini: la coreografia è da record'
+    url: https://youtu.be/h9c0qAspB7A
   rai-news-h9jmpLpWp10:
     canale: rai-news
     id: h9jmpLpWp10
@@ -37602,6 +37712,11 @@ video:
     id: hD7_NgrVtug
     titolo: Trump's Conditions for a Preliminary Agreement with Iran
     url: https://youtu.be/hD7_NgrVtug
+  rai-news-hDWiu8jjGN4:
+    canale: rai-news
+    id: hDWiu8jjGN4
+    titolo: Polizia Postale e Antiterrorismo individuano la mente dietro al Movimento 17 ottobre
+    url: https://youtu.be/hDWiu8jjGN4
   rai-news-hEWu7Nnqgbg:
     canale: rai-news
     id: hEWu7Nnqgbg
@@ -37902,6 +38017,11 @@ video:
     id: jP1G2zTzijU
     titolo: '"Submerged": Water Invading the Land in Kenya and South Sudan - TG1 Special'
     url: https://youtu.be/jP1G2zTzijU
+  rai-news-jPbFdkf3y4Q:
+    canale: rai-news
+    id: jPbFdkf3y4Q
+    titolo: Youssef Siher è il ricercatore che alimentava l'account Instagram del Movimento del 17 ottobre
+    url: https://youtu.be/jPbFdkf3y4Q
   rai-news-jQucan1L34A:
     canale: rai-news
     id: jQucan1L34A
@@ -38827,6 +38947,11 @@ video:
     id: pMEc9xIJTN4
     titolo: The emotions of the third evening of the 2026 Sanremo Festival
     url: https://youtu.be/pMEc9xIJTN4
+  rai-news-pOmXL9DjFXo:
+    canale: rai-news
+    id: pOmXL9DjFXo
+    titolo: 'Baglioni torna a Piazza di Siena dopo 44 anni: apre il concerto evento con un inedito'
+    url: https://youtu.be/pOmXL9DjFXo
   rai-news-pQ7cEah14Kw:
     canale: rai-news
     id: pQ7cEah14Kw
@@ -39317,6 +39442,11 @@ video:
     id: sE4PT8WonI4
     titolo: Pope Leo's Christmas Homily
     url: https://youtu.be/sE4PT8WonI4
+  rai-news-sHtpI1PNPbw:
+    canale: rai-news
+    id: sHtpI1PNPbw
+    titolo: Brasile, Luiz Ignacio Lula da Silva, conquista il suo quarto mandato presidenziale
+    url: https://youtu.be/sHtpI1PNPbw
   rai-news-sJBy8ukmWE4:
     canale: rai-news
     id: sJBy8ukmWE4
@@ -39377,6 +39507,11 @@ video:
     id: sn3Mx50QQTQ
     titolo: 50 years ago the devastating earthquake in Friuli
     url: https://youtu.be/sn3Mx50QQTQ
+  rai-news-sqCbFlCqmRU:
+    canale: rai-news
+    id: sqCbFlCqmRU
+    titolo: 'Kimi Antonelli: il giovane pilota punta a nuovo record'
+    url: https://youtu.be/sqCbFlCqmRU
   rai-news-sqe7TitC9fs:
     canale: rai-news
     id: sqe7TitC9fs
@@ -40307,6 +40442,11 @@ video:
     id: zLZt_06OrNU
     titolo: Former President Sarkozy in prison
     url: https://youtu.be/zLZt_06OrNU
+  rai-news-zO3tUGFQFOs:
+    canale: rai-news
+    id: zO3tUGFQFOs
+    titolo: 'Le proteste in Italia: il sabato dei cortei da Torino a Roma'
+    url: https://youtu.be/zO3tUGFQFOs
   rai-news-zOnYSaB4FfQ:
     canale: rai-news
     id: zOnYSaB4FfQ
@@ -40412,6 +40552,11 @@ video:
     id: zx6QsneiTLs
     titolo: 'Israel takes control of the Madleen ship: the moment of the raid'
     url: https://youtu.be/zx6QsneiTLs
+  solarino-sismologo--3EM3AjMaTQ:
+    canale: solarino-sismologo
+    id: -3EM3AjMaTQ
+    titolo: La prima escape room sui terremoti
+    url: https://youtu.be/-3EM3AjMaTQ
   solarino-sismologo--tpQ8lMtSGk:
     canale: solarino-sismologo
     id: -tpQ8lMtSGk
