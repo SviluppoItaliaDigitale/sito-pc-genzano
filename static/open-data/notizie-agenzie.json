@@ -5,16 +5,34 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-26T00:35:26+00:00",
+  "generato": "2026-10-26T05:21:43+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-26T00:21:49+00:00",
+   "data": "2026-10-26T02:19:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Youssef Siher, oggi la richiesta di convalida del fermo. Indagata anche la moglie, inquirenti al lavoro per ricostruire la 'rete'",
+   "url": "https://www.adnkronos.com/cronaca/movimento-17-ottobre-youssef-siher-moglie-indagini-ultime-news_3PvL7D9wwZV1Xxsn21FgV1"
+  },
+  {
+   "data": "2026-10-26T02:11:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Trump: \"Presto la svolta\". Mosca: \"Bisogna parlare con l'Europa\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-usa-colloqui-trump-putin_5ooKQNlnbXjdz7RFReBt7C"
+  },
+  {
+   "data": "2026-10-26T02:03:28+00:00",
    "fonte": "ANSA",
    "titolo": "Brasile, Lula rieletto presidente",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html"
+  },
+  {
+   "data": "2026-10-26T01:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lula rieletto presidente del Brasile, Bolsonaro battuto al ballottaggio",
+   "url": "https://www.adnkronos.com/internazionale/esteri/lula-presidente-brasile-ballottaggio-elezioni-bolsonaro_2573sK0OYnv3iBWwAvVJgr"
   },
   {
    "data": "2026-10-25T23:32:58+00:00",
@@ -171,24 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-25T17:51:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Centuripe, il borgo siciliano a forma di essere umano",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/centuripe-il-borgo-siciliano-a-forma-di-essere-umano_42c30d2e-df75-4c63-a57a-ecdf906673d0.html"
-  },
-  {
-   "data": "2026-10-25T17:50:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Agguato al boss in Calabria, l'ipotesi della guerra tra cosche",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/agguato-al-boss-in-calabria-lipotesi-della-guerra-tra-cosche_467460d0-47ab-41da-84aa-a89d315df971.html"
-  },
-  {
-   "data": "2026-10-25T17:48:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Un diciassettenne accoltellato in una lite fuori da un locale a Sassari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/un-diciassettenne-accoltellato-in-una-lite-fuori-da-un-locale-a-sassari_bfd0c019-5739-4fcc-be0b-cd7db225dd20.html"
   }
  ]
 }
