@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-26T17:33:15+00:00",
+  "generato": "2026-10-26T21:49:11+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-26T17:28:26+00:00",
+   "data": "2026-10-26T21:22:54+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Pallone d'Oro, oggi si decide il vincitore - Diretta",
-   "url": "https://www.adnkronos.com/sport/pallone-doro-2026-kane-yamal-mbappe_4kOaF1ZctsOGcrUKe8yotX"
+   "titolo": "Milano, studentessa denuncia violenza sessuale",
+   "url": "https://www.adnkronos.com/cronaca/milano-studentessa-denuncia-violenza-sessuale_3M87FRZVdO7irwrs5fJQPg"
   },
   {
-   "data": "2026-10-26T17:24:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Star Trek, è morto Walter Koenig: l'attore era Chekov nell'equipaggio del capitano Kirk",
-   "url": "https://www.adnkronos.com/spettacoli/star-trek-morto-chekov-capitano-kirk_1MDojS19DMlKpFugS3jKW6"
+   "data": "2026-10-26T21:13:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lula trionfa in Brasile, Bolsonaro: 'La polizia mi ha tolto il passaporto'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/lula-trionfa-in-brasile-esplode-la-festa-ma-crollano-la-borsa-e-il-real_56cc4597-7350-4738-9bed-c5925ac6574d.html"
   },
   {
-   "data": "2026-10-26T17:24:00+00:00",
+   "data": "2026-10-26T21:07:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Nadal torna in campo, giocherà una esibizione a Las Vegas a febbraio 2027",
-   "url": "https://www.adnkronos.com/sport/nadal-tennis-torna-campo-las-vegas-2027_29OWjNd2XmGdE6KpAPlW2B"
+   "titolo": "Sinner ha scelto Norman, sarà lui a sostituire Cahill",
+   "url": "https://www.adnkronos.com/sport/sinner-nuovo-allenatore-norman_2RgeabMnbvfp53OqicG5kR"
   },
   {
-   "data": "2026-10-26T17:18:15+00:00",
+   "data": "2026-10-26T21:04:09+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Post sisma, nelle Marche completati 9.024 cantieri privati, 5.534 in corso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/post-sisma-nelle-marche-completati-9.024-cantieri-privati-5.534-in-corso_5cfdfb7a-e738-408b-bf4e-8ec04bc120b2.html"
+   "titolo": "Studentessa denuncia una violenza sessuale a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studentessa-denuncia-una-violenza-sessuale-nel-pomeriggio-a-milano_b0f785e5-0534-4a46-89a2-38c9310d0548.html"
   },
   {
-   "data": "2026-10-26T17:17:06+00:00",
+   "data": "2026-10-26T20:58:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Si assegna il Pallone d'Oro, Messi non vola a Londra per la cerimonia",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/26/si-assegna-il-pallone-doro-messi-non-vola-a-londra-per-la-cerimonia_510822b0-f4c0-4722-80ea-f0097bd53971.html"
+  },
+  {
+   "data": "2026-10-26T20:28:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mercoledì il cdm sulla manovra. L'Ue risponde ma ancora nodi da sciogliere",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/mercoledi-il-cdm-sulla-manovra.-lue-risponde-ma-ancora-nodi-da-sciogliere_d8929f9e-cae5-4b75-a4ce-ccd9d2236aaf.html"
+  },
+  {
+   "data": "2026-10-26T20:22:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina, Mosca: 'La tregua a Oleshky un precedente per altre iniziative'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/cremlino-tregua-a-oleshky-puo-essere-precedente-per-altre-iniziative_e3ec0b9b-793a-4f2a-add0-ccfd86eddbac.html"
+  },
+  {
+   "data": "2026-10-26T20:16:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump, l'ultima idea: \"Ricompensa di 1 milione a chi denuncia frodi alle elezioni\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-elezioni-midterm-frodi-un-milione_27F9rGYYPsFkpTsELQe5vs"
+  },
+  {
+   "data": "2026-10-26T20:13:49+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morte di Domenico: chirurgo a collega 'da inizio anno abbiamo fatto 3 morti'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/morte-di-domenico-chirurgo-a-collega-da-inizio-anno-abbiamo-fatto-3-morti_6ec91990-797d-4f57-a51f-15ceb50b38a8.html"
+  },
+  {
+   "data": "2026-10-26T20:04:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Studente accoltellato a Milano, per tre minori 'messa alla prova' per 2 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studente-accoltellato-a-milano-per-tre-minori-messa-alla-prova-per_19210924-5ea8-4ca9-9ffc-8aa0f6eef9ae.html"
+  },
+  {
+   "data": "2026-10-26T19:49:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Serbia volta pagina, ora per gli Studenti la sfida del governo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/26/la-serbia-volta-pagina-ora-per-gli-studenti-la-sfida-del-governo_f215e45f-faf5-446c-80fb-aee6e0a4d11a.html"
+  },
+  {
+   "data": "2026-10-26T19:42:30+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Meloni a Confindustria: ci battiamo sugli Ets, protezione da chi ha meno costi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/meloni-a-confindustria-ci-battiamo-sugli-ets-protezione-da-chi-ha-meno-costi_8dd5ae54-c667-4ae9-8161-106b5f4220ff.html"
+  },
+  {
+   "data": "2026-10-26T19:40:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alta tensione in Israele, il giorno della verità per Netanyahu",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/26/alta-tensione-in-israele-il-giorno-della-verita-per-netanyahu_55f636c1-fde1-4c5f-bca9-8fdd5ef14022.html"
+  },
+  {
+   "data": "2026-10-26T19:39:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ex Ilva, la procura chiede i domiciliari per Lucia Morselli e altri due",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/ex-ilva-la-procura-chiede-i-domiciliari-per-lucia-morselli-e-altri-due_274cd5e7-da49-4369-92c0-c1216c25c981.html"
+  },
+  {
+   "data": "2026-10-26T19:35:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Chiesto il carcere per Siher, 'strategia rivoluzionaria'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/chiesto-il-carcere-per-siher-strategia-rivoluzionaria_5905713b-d4ad-46ad-b182-9397b436d23b.html"
+  },
+  {
+   "data": "2026-10-26T19:32:49+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Chi ruba sarà ucciso' sugli scaffali le minacce choc di un negoziante, denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/chi-ruba-sara-ucciso-sugli-scaffali-le-minacce-choc-di-un-negoziante-denunciato_575fe03a-01d8-4a28-9225-c1966747ec9c.html"
+  },
+  {
+   "data": "2026-10-26T19:31:29+00:00",
    "fonte": "ANSA",
    "titolo": "Chiesto l'ergastolo per il killer di Villa Pamphili",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/chiesto-lergastolo-per-il-killer-di-villa-pamphili_35b4295f-257f-4f1f-b71f-2cf634d14e9e.html"
   },
   {
-   "data": "2026-10-26T17:15:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Brasile, Lula rieletto presidente. Bolsonaro contesta l'esito del voto",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/brasile-lula-rieletto-presidente.-bolsonaro-contesta-lesito-del-voto-_56cc4597-7350-4738-9bed-c5925ac6574d.html"
+   "data": "2026-10-26T19:28:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Studentessa denuncia una violenza sessuale nel pomeriggio a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studentessa-denuncia-una-violenza-sessuale-nel-pomeriggio-a-milano_15e94abf-0689-40c9-b66f-27a76272e884.html"
   },
   {
-   "data": "2026-10-26T17:15:12+00:00",
+   "data": "2026-10-26T19:27:54+00:00",
    "fonte": "ANSA",
-   "titolo": "I dem pubblicano una testimonianza shock, 'Trump mi violentò brutalmente nel '93'",
+   "titolo": "Mattarella: \"La tutela del Servizio sanitario nazionale è priorità assoluta\"",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/26/mattarella-la-tutela-del-servizio-sanitario-nazionale-e-priorita-assoluta_5d62529a-9529-49a0-85fb-1ceb7e4cebd7.html"
+  },
+  {
+   "data": "2026-10-26T19:15:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sondaggio politico, centrosinistra avanti e Fratelli d'Italia primo partito",
+   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-elezioni-voto-26-ottobre_4hjYZqCxddQglIBNfsGE70"
+  },
+  {
+   "data": "2026-10-26T19:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scontri ai cortei, Gabrielli: \"Va capito il ruolo di Youssef Siher, farsi domande è legittimo\"",
+   "url": "https://www.adnkronos.com/cronaca/scontri-piazza-ex-capo-polizia-franco-gabrielli_6t5wwoKfjvJm8PZEhbV7do"
+  },
+  {
+   "data": "2026-10-26T18:40:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "I dem pubblicano una testimonianza shock: 'Trump mi violentò'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/i-dem-pubblicano-una-testimonianza-shock-trump-mi-violento-brutalmente-nel-93_b4a89511-73c1-48b3-8285-2e9a2fcb83e4.html"
   },
   {
-   "data": "2026-10-26T17:14:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Strage di Castel D'Azzano, niente perizia per fratelli Ramponi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/strage-di-castel-dazzano-niente-perizia-per-fratelli-ramponi_1fc8528a-d053-4cc5-9c28-36d207c30c65.html"
-  },
-  {
-   "data": "2026-10-26T17:03:04+00:00",
+   "data": "2026-10-26T18:40:10+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Lamperti (Besta): \"Fondamentale essere chiari ma anche dare speranza\"",
-   "url": "https://www.adnkronos.com/cronaca/lamperti-besta-fondamentale-essere-chiari-ma-anche-dare-speranza_4kPKTQdqqrWmOtnSjTnZXc"
+   "titolo": "Giallo a Monaco, morto Antoine de Massy: cugino di Alberto. Un fermo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/antoine-de-massy-cugino-principe-alberto-morto_60oHCwg8ZH2RUoR1pQgHIt"
   },
   {
-   "data": "2026-10-26T16:58:45+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Anziana muore in incendio, sentito vicino di casa per possibile atto doloso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/anziana-muore-in-incendio-sentito-vicino-di-casa-per-possibile-atto-doloso_b3cb8825-0472-4bd5-8161-69ac1b877fbf.html"
+   "data": "2026-10-26T18:28:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diabete, ok Ema per la prima combinazione di insulina settimanale e semaglutide",
+   "url": "https://www.adnkronos.com/cronaca/diabete-ok-ema-per-la-prima-combinazione-di-insulina-settimanale-e-semaglutide_6sRJezKShCxW5skoYAQrSN"
   },
   {
-   "data": "2026-10-26T16:56:54+00:00",
+   "data": "2026-10-26T18:24:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Unicamillus, 400 futuri medici indossano il camice bianco a Roma",
+   "url": "https://www.adnkronos.com/cronaca/unicamillus-400-futuri-medici-indossano-il-camice-bianco-a-roma_3CpJ1IDV3Ej3eiGpvQemKB"
+  },
+  {
+   "data": "2026-10-26T18:16:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tassorelli (Sin): \"Prevenzione fondamentale per dilazionare esordio Alzheimer\"",
+   "url": "https://www.adnkronos.com/cronaca/tassorelli-sin-prevenzione-fondamentale-per-dilazionare-esordio-alzheimer_5gnQ8v1Y20Uw0ULvaOfujn"
+  },
+  {
+   "data": "2026-10-26T18:16:18+00:00",
    "fonte": "ANSA",
-   "titolo": "Confermato il viaggio di Papa Leone XIV in Sudamerica",
+   "titolo": "Papa Leone andrà in Sudamerica: 'Felice di tornare dove ho vissuto'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/confermato-il-viaggio-di-papa-leone-xiv-in-sudamerica_55c4d9bb-095c-4280-a0f9-37def648d271.html"
   },
   {
-   "data": "2026-10-26T16:56:46+00:00",
+   "data": "2026-10-26T18:15:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "De Stefano (Sin): \"Nuove terapie su meccanismi alla base patologie\"",
+   "url": "https://www.adnkronos.com/cronaca/de-stefano-sin-nuove-terapie-su-meccanismi-alla-base-patologie_5OapTXKn88oF1JL9a8jXqN"
+  },
+  {
+   "data": "2026-10-26T18:08:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Padovani (Sin): \"Biomarcatori per neurologia di precisione\"",
+   "url": "https://www.adnkronos.com/cronaca/padovani-sin-biomarcatori-per-neurologia-di-precisione_1G0bXF8xMvjNcmcXbrWFJ7"
+  },
+  {
+   "data": "2026-10-26T18:07:40+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Domani mattina a San Vittore l'interrogatorio di convalida per Youssef Siher",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/domani-mattina-a-san-vittore-linterrogatorio-di-convalida-per-youssef-siher_efd3374d-b270-4b5b-bb1b-b55b4c4a106a.html"
-  },
-  {
-   "data": "2026-10-26T16:55:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio Mansouri, a dicembre l'udienza per l'ex poliziotto Cinturrino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/omicidio-mansouri-a-dicembre-ludienza-per-lex-poliziotto-cinturrino_8b22d3ed-39e7-4499-b697-3db20ec60362.html"
-  },
-  {
-   "data": "2026-10-26T16:54:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Borrelli (Aned): \"Si può rinascere grazie a un sì alla donazione di organi\"",
-   "url": "https://www.adnkronos.com/cronaca/borrelli-aned-si-puo-rinascere-grazie-a-un-si-alla-donazione-di-organi_3jGkRyWSQKJ98FCVbHtHSW"
-  },
-  {
-   "data": "2026-10-26T16:53:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morandi (Imp): \"Per non vedenti tecnologia importante quanto l’aria\"",
-   "url": "https://www.adnkronos.com/cronaca/morandi-imp-per-non-vedenti-tecnologia-importante-quanto-laria_29VVvqCHm6GjwdjEA79woG"
-  },
-  {
-   "data": "2026-10-26T16:52:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ranzi (Aimps): \"Diagnosi di mucopolisaccaridosi disorienta le famiglie\"",
-   "url": "https://www.adnkronos.com/cronaca/ranzi-aimps-diagnosi-di-mucopolisaccaridosi-disorienta-le-famiglie_Nj7r9igcoZgPZA7OQBYxs"
-  },
-  {
-   "data": "2026-10-26T16:51:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il femminicidio di Giulia Tramontano fu premeditato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/lomicidio-di-giulia-i-giudici-riconoscono-la-premeditazione-per-impagnatiello_abfac359-fe4a-4b41-9936-acd3ba50715d.html"
-  },
-  {
-   "data": "2026-10-26T16:46:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bruscagnin (Vivere Ets): \"Associazionismo è una forza importante\"",
-   "url": "https://www.adnkronos.com/cronaca/bruscagnin-vivere-ets-associazionismo-e-una-forza-importante_9EDzd7MxDbOGo8AO5tUC"
-  },
-  {
-   "data": "2026-10-26T16:45:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Agosti (Sin): \"Prevenzione della prematurità è la cosa migliore\"",
-   "url": "https://www.adnkronos.com/cronaca/agosti-sin-prevenzione-della-prematurita-e-la-cosa-migliore_6VA7ffvP8AoZIu8Fu6ADlM"
-  },
-  {
-   "data": "2026-10-26T16:44:09+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La pediatra Gasperini: \"Dove forniamo una cura dobbiamo anche prenderci cura\"",
-   "url": "https://www.adnkronos.com/cronaca/la-pediatra-gasperini-dove-forniamo-una-cura-dobbiamo-anche-prenderci-cura_69fOQJDzYVj7XadKOCHVoC"
-  },
-  {
-   "data": "2026-10-26T16:42:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gli autori: \"‘Vite in campo’ lascia un’emozione grandissima\"",
-   "url": "https://www.adnkronos.com/cronaca/gli-autori-vite-in-campo-lascia-unemozione-grandissima_5hTRRgLc429vGHl1WXLxqq"
-  },
-  {
-   "data": "2026-10-26T16:41:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Farnesi: \"Rendere società più accogliente e inclusiva verso chi soffre\"",
-   "url": "https://www.adnkronos.com/cronaca/farnesi-rendere-societa-piu-accogliente-e-inclusiva-verso-chi-soffre_4vIbTScJh8ImpHkRHpn5IK"
-  },
-  {
-   "data": "2026-10-26T16:39:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Migliora il benessere, ma ancora 5,4 milioni di italiani in povertà assoluta",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/26/migliorano-gli-indicatori-di-benessere-ma-il-rischio-di-poverta-e-sopra-la-media-ue_e1a84dac-735e-4cb5-b2dc-09d60c5c398f.html"
-  },
-  {
-   "data": "2026-10-26T16:38:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tennis: Sinner fissa il rientro, appuntamento al Six Kings milionario a fine dicembre",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/26/supertennis-sinner-giochera-il-six-kings-slam-a-fine-dicembre_670191b2-dc5a-4ba6-aa7d-326bc9344bcd.html"
-  },
-  {
-   "data": "2026-10-26T16:32:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Domani mattina a San Vittore l'interrogatorio di convalida del fermo per Youssef Siher",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/domani-mattina-a-san-vittore-linterrogatorio-di-convalida-del-fermo-per-youssef_5905713b-d4ad-46ad-b182-9397b436d23b.html"
-  },
-  {
-   "data": "2026-10-26T16:28:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Microsoft vara un piano di incentivi per l'esodo volontario fino a 60.000 dipendenti",
-   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/10/26/microsoft-vara-un-piano-di-incentivi-per-lesodo-volontario-fino-a-60.000-dipendenti_130e14e4-e919-4e92-8cea-2df5e11293f6.html"
-  },
-  {
-   "data": "2026-10-26T16:11:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Commissione Ue ha risposto all'Italia sulla Nec",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/la-commissione-ue-ha-risposto-allitalia-sulla-nec-_d8929f9e-cae5-4b75-a4ce-ccd9d2236aaf.html"
-  },
-  {
-   "data": "2026-10-26T16:11:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Festival delle Regioni a Firenze, \"Right to Stay – La tua Regione, il tuo futuro\"",
-   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/26/right-to-stay-la-tua-regione-il-tuo-futuro-_3e832548-789c-4b1b-9037-43059a68da23.html"
-  },
-  {
-   "data": "2026-10-26T15:50:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Andavano al lavoro, 4 morti in un incidente stradale nell'Agrigentino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/andavano-al-lavoro-4-morti-in-un-incidente-stradale-nellagrigentino_ae57b9b7-3f51-4315-8cc4-cc0cc439448a.html"
-  },
-  {
-   "data": "2026-10-26T15:45:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Gli studenti vincono le elezioni in Serbia', lo annuncia lo sconfitto Vucic",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/gli-studenti-vincono-le-elezioni-in-serbia-lo-annuncia-lo-sconfitto-vucic_87f3828a-9352-4958-a756-d408a61a1bd3.html"
+   "titolo": "In fin di vita un tifoso colpito alla testa con una mazza da baseball",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/in-fin-di-vita-un-tifoso-colpito-alla-testa-con-una-mazza-da-baseball_953adc2f-26f9-4639-aada-7caf45a06e4f.html"
   }
  ]
 }
