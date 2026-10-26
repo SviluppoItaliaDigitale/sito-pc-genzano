@@ -1,33 +1,21 @@
 {
-  "aggiornato": "2026-10-26T23:02",
-  "data_lunga": "lunedì 26 ottobre 2026",
-  "aggiornato_label": "lunedì 26 ottobre 2026, ore 23:02",
-  "alba": "06:33",
-  "tramonto": "17:11",
+  "aggiornato": "2026-10-27T00:02",
+  "data_lunga": "martedì 27 ottobre 2026",
+  "aggiornato_label": "martedì 27 ottobre 2026, ore 00:02",
+  "alba": "06:35",
+  "tramonto": "17:10",
   "corrente": {
-    "temp": 11.7,
+    "temp": 11.8,
     "percepita": 10.3,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 82,
     "vento": 8,
-    "raffiche": 17
+    "raffiche": 18
   },
   "giorni": [
     {
       "label": "Oggi",
-      "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-      "cielo": "Coperto",
-      "tmax": 18,
-      "tmin": 10,
-      "pioggia": 0,
-      "pioggia_mm": 0,
-      "raffiche": 45,
-      "uv": 4,
-      "uv_label": "moderato"
-    },
-    {
-      "label": "Mar 27",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 18,
@@ -61,6 +49,18 @@
       "raffiche": 19,
       "uv": 4,
       "uv_label": "moderato"
+    },
+    {
+      "label": "Ven 30",
+      "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
+      "cielo": "Coperto",
+      "tmax": 16,
+      "tmin": 10,
+      "pioggia": 18,
+      "pioggia_mm": 0,
+      "raffiche": 22,
+      "uv": 4,
+      "uv_label": "moderato"
     }
   ],
   "fonte": "Open-Meteo",
@@ -68,30 +68,30 @@
     {
       "nome": "Viterbo",
       "tmax": 19,
-      "tmin": 11,
-      "cielo": "Coperto"
+      "tmin": 10,
+      "cielo": "Parzialmente nuvoloso"
     },
     {
       "nome": "Rieti",
       "tmax": 20,
-      "tmin": 7,
+      "tmin": 6,
       "cielo": "Coperto"
     },
     {
       "nome": "Roma",
-      "tmax": 22,
-      "tmin": 11,
+      "tmax": 21,
+      "tmin": 10,
       "cielo": "Coperto"
     },
     {
       "nome": "Latina",
-      "tmax": 22,
+      "tmax": 21,
       "tmin": 10,
       "cielo": "Coperto"
     },
     {
       "nome": "Frosinone",
-      "tmax": 21,
+      "tmax": 20,
       "tmin": 8,
       "cielo": "Coperto"
     }
