@@ -5,40 +5,40 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-25T22:21:36+00:00",
+  "generato": "2026-10-26T00:35:26+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-25T22:18:29+00:00",
+   "data": "2026-10-26T00:21:49+00:00",
    "fonte": "ANSA",
-   "titolo": "Caos alle urne, il ballottaggio in Brasile a rischio annullamento",
+   "titolo": "Brasile, Lula rieletto presidente",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html"
   },
   {
-   "data": "2026-10-25T22:17:30+00:00",
+   "data": "2026-10-25T23:32:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: Antonelli vince ad Austin, il Mondiale sempre più vicino",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/25/antonelli-vince-ad-austin-il-mondiale-e-a-un-passo_e75bf53d-214a-44e7-9fae-da5ded693b7a.html"
+  },
+  {
+   "data": "2026-10-25T22:59:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli studenti vincono le elezioni in Serbia, lo annuncia lo sconfitto Vucic",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/gli-studenti-vincono-le-elezioni-in-serbia-lo-annuncia-lo-sconfitto-vucic_87f3828a-9352-4958-a756-d408a61a1bd3.html"
+  },
+  {
+   "data": "2026-10-25T22:17:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Il Real di Mourinho vince il Clasico, Barca battuto 2-1",
    "url": "https://www.adnkronos.com/sport/clasico-barcellona-real-madrid-vittoria-mourinho_2WWK0QnLTQkCAJBHbKuGfZ"
-  },
-  {
-   "data": "2026-10-25T22:17:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli studenti vincono le elezioni in Serbia, lo annuncia lo sconfitto Vucic",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html"
   },
   {
    "data": "2026-10-25T22:12:10+00:00",
    "fonte": "ANSA",
    "titolo": "Lmdv Media due diligence su Seif per Opa. Soci maggioranza non cedono quote",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/25/lmdv-media-avvia-due-diligence-su-societa-editoriale-il-fatto-per-opa_49bbeaad-86d1-4f54-9ec6-f1574dcd41b1.html"
-  },
-  {
-   "data": "2026-10-25T21:58:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Antonelli vince ad Austin, il Mondiale sempre più vicino",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/25/antonelli-vince-ad-austin-il-mondiale-e-a-un-passo_e75bf53d-214a-44e7-9fae-da5ded693b7a.html"
   },
   {
    "data": "2026-10-25T21:56:39+00:00",
