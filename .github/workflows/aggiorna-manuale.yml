@@ -72,13 +72,15 @@ jobs:
           # - dipartimento_pc: la home protezionecivile.gov.it è una SPA
           #   (vedi rule 08) e non lo è mai stata: sostituita col sottodominio
           #   "Servizio Nazionale", reso lato server con testo vero.
+          # 26/10/2026: le pagine AGID /it/design-servizi/accessibilita[...] sono state
+          # spostate (301) in /it/ambiti-intervento/accessibilita-usabilita, che contiene
+          # anche la procedura della dichiarazione: una fonte sola al posto di due.
           declare -A FONTI=(
             ["designers_italia_home"]="https://designers.italia.it/"
             ["designers_italia_guide"]="https://designers.italia.it/risorse-per-progettare/"
             ["ui_kit"]="https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/"
             ["bootstrap_italia_docs"]="https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/"
-            ["accessibilita_agid"]="https://www.agid.gov.it/it/design-servizi/accessibilita"
-            ["dichiarazione_accessibilita"]="https://www.agid.gov.it/it/design-servizi/accessibilita/dichiarazione-accessibilita"
+            ["accessibilita_agid"]="https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita"
             ["dipartimento_pc"]="https://servizio-nazionale.protezionecivile.gov.it/it/"
           )
 

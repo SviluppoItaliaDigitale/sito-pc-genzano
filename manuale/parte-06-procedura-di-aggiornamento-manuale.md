@@ -10,7 +10,7 @@ _[Indice manuale](README.md)_
 | Writing Toolkit | [designers.italia.it/risorse-per-il-design/writing-toolkit/](https://designers.italia.it/risorse-per-il-design/writing-toolkit/) | Nuove regole di scrittura |
 | Linee guida design | [docs.italia.it/italia/designers-italia/design-linee-guida-docs/](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/) | Versione |
 | Bootstrap Italia | [github.com/italia/bootstrap-italia/releases](https://github.com/italia/bootstrap-italia/releases) | Ultima versione stabile |
-| AGID Accessibilità | [agid.gov.it/it/design-servizi/accessibilita](https://agid.gov.it/it/design-servizi/accessibilita) | Aggiornamenti normativi |
+| AGID Accessibilità | [agid.gov.it/it/design-servizi/accessibilita](https://agid.gov.it/it/ambiti-intervento/accessibilita-usabilita) | Aggiornamenti normativi |
 | Form AGID | [form.agid.gov.it](https://form.agid.gov.it/) | Procedura dichiarazione |
 
 ### Quando aggiornare

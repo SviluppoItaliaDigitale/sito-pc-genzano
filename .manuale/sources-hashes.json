@@ -7,7 +7,7 @@
   },
   "fonti": {
     "accessibilita_agid": {
-      "url": "https://www.agid.gov.it/it/design-servizi/accessibilita",
+      "url": "https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita",
       "hash": "0f3886e3038691415ab2b4d162f7e8bc70dd815df4e16d3407d8a44f24abd6c6",
       "verificato": "2026-10-19T12:32:41Z",
       "ultimo_errore": "2026-10-26T12:31:05Z"
@@ -21,12 +21,6 @@
       "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/",
       "hash": "466ba5107213c0815913d3f0ef8d9f79cfd11d26a54e57fd293bdcccb6a3a581",
       "verificato": "2026-10-26T12:31:05Z"
-    },
-    "dichiarazione_accessibilita": {
-      "url": "https://www.agid.gov.it/it/design-servizi/accessibilita/dichiarazione-accessibilita",
-      "hash": "9682e455686c2f46c3fb50a598775da4915076afac066353c3a0b7305dbc7ed0",
-      "verificato": "2026-10-19T12:32:41Z",
-      "ultimo_errore": "2026-10-26T12:31:05Z"
     },
     "designers_italia_home": {
       "url": "https://designers.italia.it/",
