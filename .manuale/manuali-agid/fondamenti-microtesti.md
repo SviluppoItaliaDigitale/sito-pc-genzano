@@ -1,6 +1,6 @@
 # Microtesti
 
-> Testo ufficiale di Designers Italia, «Fondamenti del design system .italia: Microtesti» (https://designers.italia.it/design-system/fondamenti/microtesti/), licenza CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.it). Convertito in Markdown senza cambiare il testo dal file src/data/content/design-system/fondamenti/microtesti.yaml del repository https://github.com/italia/designers.italia.it (commit 373215d del 05/10/2026). Non modificarlo a mano: si aggiorna con `python3 scripts/manuali-agid.py aggiorna`.
+> Testo ufficiale di Designers Italia, «Fondamenti del design system .italia: Microtesti» (https://designers.italia.it/design-system/fondamenti/microtesti/), licenza CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.it). Convertito in Markdown senza cambiare il testo dal file src/data/content/design-system/fondamenti/microtesti.yaml del repository https://github.com/italia/designers.italia.it (commit 8aca4c5 del 20/10/2026). Non modificarlo a mano: si aggiorna con `python3 scripts/manuali-agid.py aggiorna`.
 <!-- fine intestazione -->
 
 I microtesti rendono l'interazione fluida e coerente con l'ecosistema di un servizio digitale. Scopri come scrivere testi di interfaccia utili, che facilitano il raggiungimento degli obiettivi e che ispirano fiducia.

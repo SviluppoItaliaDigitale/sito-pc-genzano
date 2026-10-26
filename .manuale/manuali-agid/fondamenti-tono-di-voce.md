@@ -1,6 +1,6 @@
 # Tono di voce
 
-> Testo ufficiale di Designers Italia, «Fondamenti del design system .italia: Tono di voce» (https://designers.italia.it/design-system/fondamenti/tono-di-voce/), licenza CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.it). Convertito in Markdown senza cambiare il testo dal file src/data/content/design-system/fondamenti/tono-di-voce.yaml del repository https://github.com/italia/designers.italia.it (commit 373215d del 05/10/2026). Non modificarlo a mano: si aggiorna con `python3 scripts/manuali-agid.py aggiorna`.
+> Testo ufficiale di Designers Italia, «Fondamenti del design system .italia: Tono di voce» (https://designers.italia.it/design-system/fondamenti/tono-di-voce/), licenza CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.it). Convertito in Markdown senza cambiare il testo dal file src/data/content/design-system/fondamenti/tono-di-voce.yaml del repository https://github.com/italia/designers.italia.it (commit 8aca4c5 del 20/10/2026). Non modificarlo a mano: si aggiorna con `python3 scripts/manuali-agid.py aggiorna`.
 <!-- fine intestazione -->
 
 Una Pubblica Amministrazione che mette le persone al centro sa parlare con una voce semplice, chiara ed empatica. Scopri come dare al tuo sito o servizio pubblico digitale un’identità verbale coerente e modularne il tono in base alle emozioni degli utenti.
