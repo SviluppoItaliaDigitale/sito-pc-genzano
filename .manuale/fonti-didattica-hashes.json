@@ -2,38 +2,38 @@
   "_meta": {
     "descrizione": "Hash del testo visibile delle pagine delle linee guida per l apprendimento, controllate ogni lunedì da .github/workflows/sorveglia-linee-guida-didattica.yml con scripts/hash-fonte-agid.py.",
     "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente.",
-    "ultimo_aggiornamento": "2026-10-20T14:44:49Z"
+    "ultimo_aggiornamento": "2026-10-26T13:19:36Z"
   },
   "fonti": {
     "cast_udl": {
       "hash": "33e35234501e75fcbe9a4a67d116eb035f3314051a227f339baaffd3b7679446",
       "url": "https://udlguidelines.cast.org/",
-      "verificato": "2026-10-20T14:44:51Z"
+      "verificato": "2026-10-26T13:19:38Z"
     },
     "dpc_io_non_rischio": {
       "hash": "d903a0b339229be685f5c544133b287ff9cb7dc98720aea4a83d55e621b03b53",
       "url": "https://iononrischio.protezionecivile.gov.it/it/",
-      "verificato": "2026-10-20T14:44:50Z"
+      "verificato": "2026-10-26T13:19:38Z"
     },
     "gadrrres_cssf": {
       "hash": "61f423f9834dde516be69f00e310123fbff627c3496bb8bfaa5ed80121c7f152",
       "url": "https://gadrrres.net/comprehensive-school-safety-framework/",
-      "verificato": "2026-10-20T14:44:55Z"
+      "verificato": "2026-10-26T13:19:42Z"
     },
     "inclusion_europe_easy_to_read": {
       "hash": "847468db4f59a42d9286b7889a83f1fcbf277a6325443274b7665ff0ee6afccd",
       "url": "https://www.inclusion-europe.eu/easy-to-read/",
-      "verificato": "2026-10-20T14:44:54Z"
+      "verificato": "2026-10-26T13:19:41Z"
     },
     "w3c_coga": {
       "hash": "627c9978686171bd3d6098d1bb19c69d13827b63d737acbf4dc2b1e71fb34b7b",
       "url": "https://www.w3.org/TR/coga-usable/",
-      "verificato": "2026-10-20T14:44:55Z"
+      "verificato": "2026-10-26T13:19:43Z"
     },
     "w3c_wcag": {
       "hash": "8ef1ad789396e37d82b280f6fe3b065a514b0e9d319663a7265175183cafdf24",
       "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
-      "verificato": "2026-10-20T14:44:50Z"
+      "verificato": "2026-10-26T13:19:38Z"
     }
   }
 }
