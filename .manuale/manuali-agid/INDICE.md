@@ -1,6 +1,6 @@
 # Manuali ufficiali per i testi della PA
 
-Testi scaricati dai repository ufficiali su GitHub il 26/10/2026 13:31. Non modificarli a mano: si aggiornano con `python3 scripts/manuali-agid.py aggiorna`, che dice anche cosa è cambiato.
+Testi scaricati dai repository ufficiali su GitHub il 27/10/2026 14:28. Non modificarli a mano: si aggiornano con `python3 scripts/manuali-agid.py aggiorna`, che dice anche cosa è cambiato.
 
 | File | Documento | Editore e licenza | Versione del testo |
 |---|---|---|---|
