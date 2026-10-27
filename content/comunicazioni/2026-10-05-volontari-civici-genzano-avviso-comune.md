@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-05-volontari-civici-genzano-avviso-comune.webp"
 image_alt: "Cover dell'articolo: Volontari civici davanti alle scuole, il Comune cerca candidati entro il 20 ottobre"
 scadenza: "2026-10-20"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Avviso di manifestazione d'interesse — Progetto servizio Volontari Civici (Comune di Genzano di Roma)"

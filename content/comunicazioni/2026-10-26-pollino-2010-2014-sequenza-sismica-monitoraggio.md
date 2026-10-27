@@ -71,4 +71,4 @@ L'esperienza del Pollino è una lezione importante per noi: anche zone considera
 
 - [INGV — Catalogo Sismico Italiano](https://terremoti.ingv.it/)
 - [Memoria della sequenza Pollino — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
-- Voce Wikipedia: [Sequenza sismica del Pollino](https://it.wikipedia.org/wiki/Sequenza_sismica_del_Pollino_del_2010-2014)
+- Studio scientifico sulla sequenza del Pollino 2010-2014 (Napolitano e altri, Frontiers in Earth Science, 2021): [testo integrale](https://www.frontiersin.org/articles/10.3389/feart.2021.735340/full)
