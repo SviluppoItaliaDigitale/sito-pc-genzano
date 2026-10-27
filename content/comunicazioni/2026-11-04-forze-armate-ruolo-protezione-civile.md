@@ -17,14 +17,14 @@ Oggi, **4 novembre**, si celebra il **Giorno dell'Unità Nazionale e delle Forze
 
 ## Le Forze Armate nella PC italiana
 
-Il **Codice della Protezione Civile** (D.Lgs. 1/2018) riconosce come **componente** del Servizio Nazionale della Protezione Civile le **Forze Armate**:
+Il **Codice della Protezione Civile** (D.Lgs. 1/2018) indica le **Forze armate** tra le **strutture operative nazionali** del Servizio Nazionale della Protezione Civile (art. 13, comma 1, lettera a). Le Forze di polizia sono una struttura operativa distinta (lettera b). Le Forze armate sono:
 
 - **Esercito Italiano**;
 - **Marina Militare**;
 - **Aeronautica Militare**;
-- **Arma dei Carabinieri** (anch'essa Forza Armata).
+- **Arma dei Carabinieri** (anch'essa Forza armata, con compiti di polizia).
 
-La loro attivazione avviene attraverso una **catena gerarchica** che coinvolge Dipartimento di PC, Regioni, Prefetture e i **Comandi militari**.
+Le modalità del concorso delle Forze armate sono disciplinate da un decreto del Presidente del Consiglio dei ministri, su proposta del Capo del Dipartimento, di concerto con il Ministro della Difesa (art. 13, comma 5). Le richieste partono dal Dipartimento della Protezione Civile e passano per i **Comandi militari**.
 
 ## Cosa fanno le Forze Armate in emergenza
 
@@ -59,8 +59,7 @@ La loro attivazione avviene attraverso una **catena gerarchica** che coinvolge D
 
 Le Forze Armate sono intervenute in numerose emergenze recenti:
 
-- **Amatrice 2016** — Esercito con mezzi e personale (Operazione Sabina);
-- **Ischia 2017** — Marina Militare con supporto marittimo;
+- **Amatrice 2016** — Esercito con mezzi e personale;
 - **Genova ponte Morandi 2018** — Esercito con genieri e mezzi;
 - **Emilia-Romagna 2023** (alluvione) — tutte le Forze coinvolte;
 - **Covid-19 2020-2022** — logistica vaccini, tamponi, controllo territorio.

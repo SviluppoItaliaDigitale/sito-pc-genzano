@@ -85,5 +85,5 @@ Per informazioni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@prot
 
 - D.Lgs. 81/2008, artt. 28-30 e art. 45, in materia di valutazione dei rischi sul lavoro e di primo soccorso.
 - D.M. 388/2003, Allegato 1, sul contenuto minimo della cassetta di pronto soccorso.
-- D.Lgs. 193/2007, recepimento del Regolamento CE 852/2004 sull'igiene dei prodotti alimentari.
+- D.Lgs. 193/2007, attuazione della direttiva 2004/41/CE sui controlli in materia di sicurezza alimentare e applicazione dei regolamenti comunitari del settore, tra cui il Regolamento CE 852/2004 sull'igiene dei prodotti alimentari.
 - Manuale di Cucina in Emergenza DSEFIC-FIC, cap. 1.
