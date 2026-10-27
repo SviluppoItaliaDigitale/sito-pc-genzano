@@ -5,22 +5,58 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-26T21:49:11+00:00",
+  "generato": "2026-10-27T01:15:18+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-10-26T23:07:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Kane vince il Pallone d'Oro, Putellas regina del calcio femminile",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/26/pallone-doro-herry-kane-e-il-vincitore-delledizione-2026_510822b0-f4c0-4722-80ea-f0097bd53971.html"
+  },
+  {
+   "data": "2026-10-26T23:05:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni in Israele, duello Netanyahu-Eisenkot: sfida all'ultimo voto",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-israele-2026-netanyahu-eisenkot_1GfqiGm8Ovqwf6hNZHUedQ"
+  },
+  {
+   "data": "2026-10-26T23:03:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero generale 30 ottobre 2026, venerdì nero: a rischio treni, aerei, bus e scuola",
+   "url": "https://www.adnkronos.com/economia/sciopero-30ottobre-2026-trasporti-scuola-orari_YdaoJjtxUMrQlEPxaHSBr"
+  },
+  {
+   "data": "2026-10-26T23:03:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fentanyl, \"con test rapidi rischio di falsi positivi\": studio Iss svela l'interferenza di un farmaco",
+   "url": "https://www.adnkronos.com/cronaca/fentanyl-test-rapidi-rischio-falsi-positivi_6JcHjrcn1JK6autu78dFEm"
+  },
+  {
+   "data": "2026-10-26T22:26:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Zelensky: \"Missili russi ancora contro Kiev, Usa bloccano fornitura di Patriot\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-missili-russia-kiev-zelensky_3tD5Iy03cc4LwMsx9gUlc6"
+  },
+  {
+   "data": "2026-10-26T22:15:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli alleati stoppano Salvini su Kiev, tensioni anche sul voto anticipato",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/gli-alleati-stoppano-salvini-su-kiev-tensioni-anche-sul-voto-anticipato_b41eeca9-3f34-44c2-958c-91dbda471622.html"
+  },
+  {
+   "data": "2026-10-26T22:12:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lula trionfa in Brasile, Trump: 'Il voto è stato truccato ma lui mi piace'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/lula-trionfa-in-brasile-esplode-la-festa-ma-crollano-la-borsa-e-il-real_56cc4597-7350-4738-9bed-c5925ac6574d.html"
+  },
+  {
    "data": "2026-10-26T21:22:54+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Milano, studentessa denuncia violenza sessuale",
    "url": "https://www.adnkronos.com/cronaca/milano-studentessa-denuncia-violenza-sessuale_3M87FRZVdO7irwrs5fJQPg"
-  },
-  {
-   "data": "2026-10-26T21:13:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lula trionfa in Brasile, Bolsonaro: 'La polizia mi ha tolto il passaporto'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/lula-trionfa-in-brasile-esplode-la-festa-ma-crollano-la-borsa-e-il-real_56cc4597-7350-4738-9bed-c5925ac6574d.html"
   },
   {
    "data": "2026-10-26T21:07:00+00:00",
@@ -35,22 +71,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studentessa-denuncia-una-violenza-sessuale-nel-pomeriggio-a-milano_b0f785e5-0534-4a46-89a2-38c9310d0548.html"
   },
   {
-   "data": "2026-10-26T20:58:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Si assegna il Pallone d'Oro, Messi non vola a Londra per la cerimonia",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/26/si-assegna-il-pallone-doro-messi-non-vola-a-londra-per-la-cerimonia_510822b0-f4c0-4722-80ea-f0097bd53971.html"
-  },
-  {
    "data": "2026-10-26T20:28:51+00:00",
    "fonte": "ANSA",
    "titolo": "Mercoledì il cdm sulla manovra. L'Ue risponde ma ancora nodi da sciogliere",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/mercoledi-il-cdm-sulla-manovra.-lue-risponde-ma-ancora-nodi-da-sciogliere_d8929f9e-cae5-4b75-a4ce-ccd9d2236aaf.html"
-  },
-  {
-   "data": "2026-10-26T20:22:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Mosca: 'La tregua a Oleshky un precedente per altre iniziative'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/cremlino-tregua-a-oleshky-puo-essere-precedente-per-altre-iniziative_e3ec0b9b-793a-4f2a-add0-ccfd86eddbac.html"
   },
   {
    "data": "2026-10-26T20:16:51+00:00",
@@ -161,34 +185,10 @@
    "url": "https://www.adnkronos.com/cronaca/unicamillus-400-futuri-medici-indossano-il-camice-bianco-a-roma_3CpJ1IDV3Ej3eiGpvQemKB"
   },
   {
-   "data": "2026-10-26T18:16:44+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tassorelli (Sin): \"Prevenzione fondamentale per dilazionare esordio Alzheimer\"",
-   "url": "https://www.adnkronos.com/cronaca/tassorelli-sin-prevenzione-fondamentale-per-dilazionare-esordio-alzheimer_5gnQ8v1Y20Uw0ULvaOfujn"
-  },
-  {
    "data": "2026-10-26T18:16:18+00:00",
    "fonte": "ANSA",
    "titolo": "Papa Leone andrà in Sudamerica: 'Felice di tornare dove ho vissuto'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/confermato-il-viaggio-di-papa-leone-xiv-in-sudamerica_55c4d9bb-095c-4280-a0f9-37def648d271.html"
-  },
-  {
-   "data": "2026-10-26T18:15:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "De Stefano (Sin): \"Nuove terapie su meccanismi alla base patologie\"",
-   "url": "https://www.adnkronos.com/cronaca/de-stefano-sin-nuove-terapie-su-meccanismi-alla-base-patologie_5OapTXKn88oF1JL9a8jXqN"
-  },
-  {
-   "data": "2026-10-26T18:08:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Padovani (Sin): \"Biomarcatori per neurologia di precisione\"",
-   "url": "https://www.adnkronos.com/cronaca/padovani-sin-biomarcatori-per-neurologia-di-precisione_1G0bXF8xMvjNcmcXbrWFJ7"
-  },
-  {
-   "data": "2026-10-26T18:07:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In fin di vita un tifoso colpito alla testa con una mazza da baseball",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/in-fin-di-vita-un-tifoso-colpito-alla-testa-con-una-mazza-da-baseball_953adc2f-26f9-4639-aada-7caf45a06e4f.html"
   }
  ]
 }
