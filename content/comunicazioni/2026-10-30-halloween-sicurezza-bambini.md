@@ -75,12 +75,27 @@ Il **30-31 ottobre** richiede attenzione speciale alla guida:
 
 Per la **Festa di Halloween** il Comando di Polizia Locale ha disciplinato la circolazione con l'ordinanza dirigenziale n. 156 del 27 ottobre 2026. Dalle **15:30 alle 20:30** di sabato 31 ottobre:
 
-- i veicoli provenienti da Ariccia non possono proseguire su viale Fratelli Rosselli e corso Gramsci fino a piazza IV Novembre: la deviazione passa da via Garibaldi;
-- i veicoli provenienti da Velletri e Lanuvio non possono percorrere corso Don Minzoni fino a piazza IV Novembre: la deviazione passa da via Belardi;
-- resta ammesso il traffico locale;
-- chi viene da Roma verso Velletri è indirizzato su viale Fratelli Rosselli, tangenziale, via Emilia Romagna, via Appia Antica e Appia; chi va da Velletri verso Roma passa da piazza Cina, viale Matteotti, via Di Vittorio, via San Carlino e dalla tangenziale.
+- i veicoli da Ariccia non possono proseguire su viale Fratelli Rosselli e corso Gramsci fino a piazza IV Novembre;
+- per loro la deviazione passa da via Garibaldi;
+- i veicoli da Velletri e Lanuvio non possono percorrere corso Don Minzoni fino a piazza IV Novembre;
+- per loro la deviazione passa da via Belardi;
+- il traffico locale resta ammesso.
 
-Percorsi dei mezzi Co.Tra.L. e altri dettagli sono nell'ordinanza allegata. Segnaletica e transenne sono compito del Comune. La regolazione del traffico spetta alla Polizia Locale e alle Forze dell'Ordine: il Gruppo non la svolge.
+Percorso alternativo da Roma verso Velletri:
+
+- viale Fratelli Rosselli;
+- tangenziale;
+- via Emilia Romagna;
+- via Appia Antica;
+- Appia.
+
+Percorso alternativo da Velletri verso Roma:
+
+- piazza Cina e viale Matteotti;
+- via Di Vittorio e via San Carlino;
+- tangenziale.
+
+I percorsi dei mezzi Co.Tra.L. e gli altri dettagli sono nell'ordinanza allegata. Segnaletica e transenne sono compito del Comune. La regolazione del traffico spetta alla Polizia Locale e alle Forze dell'Ordine: il Gruppo non la svolge.
 
 > ⚠️ **Per eventuali variazioni fai sempre riferimento al [sito ufficiale del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).** Il Gruppo riporta l'ordinanza a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
 
