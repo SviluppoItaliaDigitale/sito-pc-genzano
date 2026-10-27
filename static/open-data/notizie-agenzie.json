@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-27T06:20:15+00:00",
+  "generato": "2026-10-27T12:35:33+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-27T06:12:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Aperti i seggi, Israele al voto per il rinnovo della Knesset",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/26/alta-tensione-in-israele-il-giorno-della-verita-per-netanyahu_55f636c1-fde1-4c5f-bca9-8fdd5ef14022.html"
-  },
-  {
-   "data": "2026-10-27T06:09:55+00:00",
+   "data": "2026-10-27T12:29:08+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, in vigore la tregua a Oleshky. Missili russi su un ponte a Kiev",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-tregua-oleshky-ultime-newsoggi_2g6TZVoqNfFKHnZGJa7hYe"
+   "titolo": "Migranti, Ue propone riforma Frontex: 30mila agenti e regia su rimpatri",
+   "url": "https://www.adnkronos.com/internazionale/esteri/migranti-crisi-ceuta-frontex-riforma-rimpatri_3Xz3hrSYMyaUOKXzePaAUy"
   },
   {
-   "data": "2026-10-27T06:03:35+00:00",
+   "data": "2026-10-27T12:28:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Electro IB compie 25 anni, da Brescia al fianco delle imprese nell’automazione industriale",
+   "url": "https://www.adnkronos.com/economia/electro-ib-compie-25-anni-da-brescia-al-fianco-delle-imprese-nellautomazione-industriale_4f1Cxl6E7MhL12A0cZapSG"
+  },
+  {
+   "data": "2026-10-27T12:26:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il mondo celebra Kane 'star senza lustrini', solo la Spagna non esulta",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/27/il-mondo-celebra-kane-star-senza-lustrini-solo-la-spagna-non-esulta_4ef78dc6-1dde-4850-8eaf-ffafb8003cf3.html"
+  },
+  {
+   "data": "2026-10-27T12:25:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ilaria Sula, oggi la sentenza per Mark Samson. La pm: \"Non si è mai pentito\"",
+   "url": "https://www.adnkronos.com/cronaca/femminicidio-ilaria-sula-oggi-sentenza-mark-samson_1V02FrR3DgTMYFhh43fr34"
+  },
+  {
+   "data": "2026-10-27T12:24:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa celebrerà la messa per i defunti al cimitero del Verano il 2 novembre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/il-papa-celebrera-la-messa-per-i-defunti-al-cimitero-del-verano-il-2-novembre_feb2ee3a-786d-404f-8a6d-0509313e4992.html"
+  },
+  {
+   "data": "2026-10-27T12:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gerli (Unareti): \"Cabina Comasina alleggerisce il transito a città\"",
+   "url": "https://www.adnkronos.com/economia/gerli-unareti-cabina-comasina-alleggerisce-il-transito-a-citta_3EbRbyagybIeT0lqfcG4kG"
+  },
+  {
+   "data": "2026-10-27T12:21:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tregua umanitaria a Oleshky, gli abitanti saranno evacuati attraverso la Crimea. Kiev: 'Colpito il ponte Pivdennyi'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/tregua-umanitaria-a-oleshky-abitanti-evacuatri-attraverso-la-crimea.-kiev-colpito-il-ponte_dcbfe7fb-aeb2-4bf2-ab14-bce634a36c96.html"
+  },
+  {
+   "data": "2026-10-27T12:19:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Grandi (ass. Milano): \"Cabina Comasina supporta l'efficienza energetica di Milano\"",
+   "url": "https://www.adnkronos.com/economia/grandi-ass-milano-cabina-comasina-supporta-lefficienza-energetica-di-milano_3YT1pHS46jnBpILM8MWr2a"
+  },
+  {
+   "data": "2026-10-27T12:17:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Israele al voto. Alle 12 l'affluenza supera il 31%. Netanyahu: 'Tentano di rubarci le elezioni'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-al-voto.-alle-12-laffluenza-supera-il-31.-netanyahu-tentano-di-rubarci-le-elezioni_a1c108b8-6cbb-4e8e-bbd7-353e896240bd.html"
+  },
+  {
+   "data": "2026-10-27T12:15:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mazzoncini (A2a), \"Investiti 40 milioni in cabina Comasina\"",
+   "url": "https://www.adnkronos.com/economia/mazzoncini-a2a-investiti-40-milioni-in-cabina-comasina_7hczXyK1yCQbQxeSRBY5WO"
+  },
+  {
+   "data": "2026-10-27T12:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Berardi (Aiom): \"Viaggio del Papa in America Latina segnale di speranza per i pazienti oncologici\"",
+   "url": "https://www.adnkronos.com/cronaca/berardi-aiom-viaggio-del-papa-in-america-latina-segnale-di-speranza-per-i-pazienti-oncologici_5DX8BN9VcL3wwmREKdbKEN"
+  },
+  {
+   "data": "2026-10-27T12:11:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Yemen, Houthi: \"Colpita la più grande raffineria dell'Arabia Saudita\". Esplosioni a Riad",
+   "url": "https://www.adnkronos.com/internazionale/esteri/yemen-houthi-arabia-saudita-escalation-raid-missili-news-oggi_6KqaTO1Ud18VVbZLTPW5QS"
+  },
+  {
+   "data": "2026-10-27T12:09:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Italia delle Regioni, l'evento di chiusura",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/26/litalia-delle-regioni-levento-di-chiusura_9fa36965-bd41-421c-b59c-8a89d5f238ac.html"
+  },
+  {
+   "data": "2026-10-27T12:06:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Meghan confermata co-conduttrice di Junior MasterChef Australia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/meghan-confermata-co-conduttrice-di-junior-masterchef-australia_161736cc-442b-4737-bbd2-736c13eb7634.html"
+  },
+  {
+   "data": "2026-10-27T12:04:27+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Pestaggio in carcere, pm chiede 5 condanne per tortura nel processo bis",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/pestaggio-in-carcere-pm-chiede-5-condanne-per-tortura-nel-processo-bis_a25a5adc-680d-4cb1-9f71-609c31b531b0.html"
+  },
+  {
+   "data": "2026-10-27T12:02:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mentana ironizza: \"Fenomeni social spiegano dove andrò dopo La7\"",
+   "url": "https://www.adnkronos.com/spettacoli/enrico-mentana-addio-tgla7-post-dietrologi_7CupfImFVmfHvd7lGonAjM"
+  },
+  {
+   "data": "2026-10-27T11:59:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Halloween: ma che festa da paura è diventata?",
+   "url": "https://www.ansa.it/sito/podcast/la_tendenza_della_settimana/2026/10/27/halloween-ma-che-festa-da-paura-e-diventata_f27084a9-f139-4300-af10-58ac3554f94f.html"
+  },
+  {
+   "data": "2026-10-27T11:57:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Netanyahu alle urne con la moglie invita gli elettori a “votare come si deve”",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/27/netanyahu-alle-urne-con-la-moglie-invita-gli-elettori-a-votare-come_e3c99786-b0bd-4533-a8ae-33ed1b98c72b.html"
+  },
+  {
+   "data": "2026-10-27T11:55:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Roggero, Anm: \"Non è stata legittima difesa, giudici oggetto di linciaggio mediatico\"",
+   "url": "https://www.adnkronos.com/cronaca/caso-roggero-tango-anm-ultime-notizie_1z3W2TENVoTg77SOeeX6My"
+  },
+  {
+   "data": "2026-10-27T11:50:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giovani Ambasciatori Moige portano in Parlamento sfide per un digitale sicuro e responsabile",
+   "url": "https://www.adnkronos.com/cronaca/giovani-ambasciatori-moige-portano-in-parlamento-sfide-per-un-digitale-sicuro-e-responsabile_1R3q4iap6Ax25FKoYPyLpU"
+  },
+  {
+   "data": "2026-10-27T11:49:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sorvegliato speciale ucciso a coltellate a Monza, un fermo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/sorvegliato-speciale-ucciso-a-coltellate-a-monza-un-fermo_aae7f5a8-ba29-41c9-9c54-0b7252d3d9ac.html"
+  },
+  {
+   "data": "2026-10-27T11:45:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Ue propone la riforma di Frontex, 'braccio operativo per i rimpatri'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/lue-propone-la-riforma-di-frontex-braccio-operativo-per-i-rimpatri_3a0b862f-7205-4972-966b-434f07958bd9.html"
+  },
+  {
+   "data": "2026-10-27T11:42:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Anziana morta nel rogo a Milano: portato in ospedale l'inquilino sospettato dell'incendio",
+   "url": "https://www.adnkronos.com/cronaca/milano-incendio-anziana-morta-vicino-ospedale_6Ue0VjXM5FEBhZa43ARZku"
+  },
+  {
+   "data": "2026-10-27T11:36:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Morte avvelenate, Berlino ottiene la proroga sulle analisi dei reperti: risultati a fine anno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/morte-avvelenate-berlino-ottiene-la-proroga-sulle-analisi-dei-reperti-risultati_ec143ca5-e818-4fe3-8f27-1b1f6936e293.html"
+  },
+  {
+   "data": "2026-10-27T11:35:44+00:00",
    "fonte": "ANSA",
    "titolo": "Lula trionfa in Brasile, ora anche Bolsonaro ammette la vittoria",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/lula-trionfa-in-brasile-esplode-la-festa-ma-crollano-la-borsa-e-il-real_56cc4597-7350-4738-9bed-c5925ac6574d.html"
   },
   {
-   "data": "2026-10-27T01:37:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Russia annuncia, 'al via la tregua umanitaria a Oleshky'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/27/russia-annuncia-al-via-la-tregua-umanitaria-a-oleshky_dcbfe7fb-aeb2-4bf2-ab14-bce634a36c96.html"
-  },
-  {
-   "data": "2026-10-26T23:08:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Kane vince il Pallone d'Oro, Putellas regina del calcio femminile",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/kane-vince-il-pallone-doro-putellas-regina-del-calcio-femminile_510822b0-f4c0-4722-80ea-f0097bd53971.html"
-  },
-  {
-   "data": "2026-10-26T23:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elezioni in Israele, duello Netanyahu-Eisenkot: sfida all'ultimo voto",
-   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-israele-2026-netanyahu-eisenkot_1GfqiGm8Ovqwf6hNZHUedQ"
-  },
-  {
-   "data": "2026-10-26T23:03:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sciopero generale 30 ottobre 2026, venerdì nero: a rischio treni, aerei, bus e scuola",
-   "url": "https://www.adnkronos.com/economia/sciopero-30ottobre-2026-trasporti-scuola-orari_YdaoJjtxUMrQlEPxaHSBr"
-  },
-  {
-   "data": "2026-10-26T23:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fentanyl, \"con test rapidi rischio di falsi positivi\": studio Iss svela l'interferenza di un farmaco",
-   "url": "https://www.adnkronos.com/cronaca/fentanyl-test-rapidi-rischio-falsi-positivi_6JcHjrcn1JK6autu78dFEm"
-  },
-  {
-   "data": "2026-10-26T22:26:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Zelensky: \"Missili russi ancora contro Kiev, Usa bloccano fornitura di Patriot\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-missili-russia-kiev-zelensky_3tD5Iy03cc4LwMsx9gUlc6"
-  },
-  {
-   "data": "2026-10-26T21:22:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milano, studentessa denuncia violenza sessuale",
-   "url": "https://www.adnkronos.com/cronaca/milano-studentessa-denuncia-violenza-sessuale_3M87FRZVdO7irwrs5fJQPg"
-  },
-  {
-   "data": "2026-10-26T21:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sinner ha scelto Norman, sarà lui a sostituire Cahill",
-   "url": "https://www.adnkronos.com/sport/sinner-nuovo-allenatore-norman_2RgeabMnbvfp53OqicG5kR"
-  },
-  {
-   "data": "2026-10-26T21:04:09+00:00",
+   "data": "2026-10-27T11:35:37+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Studentessa denuncia una violenza sessuale a Milano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studentessa-denuncia-una-violenza-sessuale-nel-pomeriggio-a-milano_b0f785e5-0534-4a46-89a2-38c9310d0548.html"
+   "titolo": "Partecipazione, slancio civico, senso di comunità, torna Fai per la scuola",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/partecipazione-slancio-civico-senso-di-comunita-torna-fai-per-la-scuola_b4b920b3-ab82-484f-8d16-c969fc84ef30.html"
   },
   {
-   "data": "2026-10-26T20:28:51+00:00",
+   "data": "2026-10-27T11:35:04+00:00",
    "fonte": "ANSA",
-   "titolo": "Mercoledì il cdm sulla manovra. L'Ue risponde ma ancora nodi da sciogliere",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/mercoledi-il-cdm-sulla-manovra.-lue-risponde-ma-ancora-nodi-da-sciogliere_d8929f9e-cae5-4b75-a4ce-ccd9d2236aaf.html"
+   "titolo": "Torna e cresce #ioleggoperché, ora coinvolge anche i nidi",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/27/ioleggoperche-a-milano-la-presentazione-della-nuova-edizione_9b9fa905-2c4c-4d6e-b3ef-64c1070e4841.html"
   },
   {
-   "data": "2026-10-26T20:16:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump, l'ultima idea: \"Ricompensa di 1 milione a chi denuncia frodi alle elezioni\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-elezioni-midterm-frodi-un-milione_27F9rGYYPsFkpTsELQe5vs"
+   "data": "2026-10-27T11:29:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giorgetti: 'La manovra in consiglio dei ministri domani, fatti progressi con l'Ue'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/27/giorgetti-la-manovra-in-consiglio-dei-ministri-domani-fatti-progressi-con-lue_af140783-af8a-47c0-b449-b638883598ac.html"
   },
   {
-   "data": "2026-10-26T20:13:49+00:00",
+   "data": "2026-10-27T11:29:10+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Morte di Domenico: chirurgo a collega 'da inizio anno abbiamo fatto 3 morti'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/morte-di-domenico-chirurgo-a-collega-da-inizio-anno-abbiamo-fatto-3-morti_6ec91990-797d-4f57-a51f-15ceb50b38a8.html"
+   "titolo": "Orsara di Puglia pronta alla tradizione millenaria per ricordare i defunti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/orsara-di-puglia-pronta-alla-tradizione-millenaria-per-ricordare-i-defunti_d1bbd1e4-2cdc-4250-b766-74e1705e1667.html"
   },
   {
-   "data": "2026-10-26T20:04:09+00:00",
+   "data": "2026-10-27T11:28:08+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Studente accoltellato a Milano, per tre minori 'messa alla prova' per 2 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studente-accoltellato-a-milano-per-tre-minori-messa-alla-prova-per_19210924-5ea8-4ca9-9ffc-8aa0f6eef9ae.html"
-  },
-  {
-   "data": "2026-10-26T19:49:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Serbia volta pagina, ora per gli Studenti la sfida del governo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/26/la-serbia-volta-pagina-ora-per-gli-studenti-la-sfida-del-governo_f215e45f-faf5-446c-80fb-aee6e0a4d11a.html"
-  },
-  {
-   "data": "2026-10-26T19:42:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Meloni a Confindustria: ci battiamo sugli Ets, protezione da chi ha meno costi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/meloni-a-confindustria-ci-battiamo-sugli-ets-protezione-da-chi-ha-meno-costi_8dd5ae54-c667-4ae9-8161-106b5f4220ff.html"
-  },
-  {
-   "data": "2026-10-26T19:39:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ex Ilva, la procura chiede i domiciliari per Lucia Morselli e altri due",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/ex-ilva-la-procura-chiede-i-domiciliari-per-lucia-morselli-e-altri-due_274cd5e7-da49-4369-92c0-c1216c25c981.html"
-  },
-  {
-   "data": "2026-10-26T19:35:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Chiesto il carcere per Siher, 'strategia rivoluzionaria'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/chiesto-il-carcere-per-siher-strategia-rivoluzionaria_5905713b-d4ad-46ad-b182-9397b436d23b.html"
-  },
-  {
-   "data": "2026-10-26T19:32:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Chi ruba sarà ucciso' sugli scaffali le minacce choc di un negoziante, denunciato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/chi-ruba-sara-ucciso-sugli-scaffali-le-minacce-choc-di-un-negoziante-denunciato_575fe03a-01d8-4a28-9225-c1966747ec9c.html"
-  },
-  {
-   "data": "2026-10-26T19:31:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Chiesto l'ergastolo per il killer di Villa Pamphili",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/chiesto-lergastolo-per-il-killer-di-villa-pamphili_35b4295f-257f-4f1f-b71f-2cf634d14e9e.html"
-  },
-  {
-   "data": "2026-10-26T19:28:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Studentessa denuncia una violenza sessuale nel pomeriggio a Milano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/studentessa-denuncia-una-violenza-sessuale-nel-pomeriggio-a-milano_15e94abf-0689-40c9-b66f-27a76272e884.html"
-  },
-  {
-   "data": "2026-10-26T19:27:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella: \"La tutela del Servizio sanitario nazionale è priorità assoluta\"",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/26/mattarella-la-tutela-del-servizio-sanitario-nazionale-e-priorita-assoluta_5d62529a-9529-49a0-85fb-1ceb7e4cebd7.html"
-  },
-  {
-   "data": "2026-10-26T19:15:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, centrosinistra avanti e Fratelli d'Italia primo partito",
-   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-elezioni-voto-26-ottobre_4hjYZqCxddQglIBNfsGE70"
-  },
-  {
-   "data": "2026-10-26T19:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scontri ai cortei, Gabrielli: \"Va capito il ruolo di Youssef Siher, farsi domande è legittimo\"",
-   "url": "https://www.adnkronos.com/cronaca/scontri-piazza-ex-capo-polizia-franco-gabrielli_6t5wwoKfjvJm8PZEhbV7do"
-  },
-  {
-   "data": "2026-10-26T18:40:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "I dem pubblicano una testimonianza shock: 'Trump mi violentò'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/i-dem-pubblicano-una-testimonianza-shock-trump-mi-violento-brutalmente-nel-93_b4a89511-73c1-48b3-8285-2e9a2fcb83e4.html"
-  },
-  {
-   "data": "2026-10-26T18:40:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giallo a Monaco, morto Antoine de Massy: cugino di Alberto. Un fermo",
-   "url": "https://www.adnkronos.com/internazionale/esteri/antoine-de-massy-cugino-principe-alberto-morto_60oHCwg8ZH2RUoR1pQgHIt"
-  },
-  {
-   "data": "2026-10-26T18:28:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Diabete, ok Ema per la prima combinazione di insulina settimanale e semaglutide",
-   "url": "https://www.adnkronos.com/cronaca/diabete-ok-ema-per-la-prima-combinazione-di-insulina-settimanale-e-semaglutide_6sRJezKShCxW5skoYAQrSN"
-  },
-  {
-   "data": "2026-10-26T18:16:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone andrà in Sudamerica: 'Felice di tornare dove ho vissuto'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/26/confermato-il-viaggio-di-papa-leone-xiv-in-sudamerica_55c4d9bb-095c-4280-a0f9-37def648d271.html"
+   "titolo": "Scontri al corteo pro Askatasuna, interrogatori precautelari per 19 indagati",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/scontri-a-corteo-pro-askatasuna-interrogatori-precautelari-per-19-indagati_4dae6251-ce54-4545-855e-74e40c440783.html"
   }
  ]
 }
