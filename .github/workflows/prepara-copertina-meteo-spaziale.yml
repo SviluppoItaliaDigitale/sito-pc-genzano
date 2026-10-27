@@ -24,6 +24,7 @@ jobs:
             /.githooks/
             /content/comunicazioni/2026-10-27-meteo-spaziale-sala-monitoraggio-ingv.md
             /static/images/logo-pc-genzano.png
+            /static/images/2026-10-27-meteo-spaziale-sala-monitoraggio-ingv.webp
             /static/vendor/bootstrap-italia/fonts/Titillium_Web/
       - name: Installa il motore grafico
         run: python3 -m pip install --quiet Pillow==12.3.0
