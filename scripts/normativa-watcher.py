@@ -251,8 +251,22 @@ class Cliente:
 
     def get(self, url, referer=None):
         req = urllib.request.Request(url, headers={'User-Agent': UA, **({'Referer': referer} if referer else {})})
-        with self.opener.open(req, timeout=TIMEOUT) as r:
-            return decodifica(r.read(), r.headers.get_content_charset())
+        # Un 429 (troppe richieste dallo stesso indirizzo, tipico dei runner
+        # condivisi) si riprova con attese crescenti, rispettando Retry-After
+        # fino a 90 secondi; ogni altro errore risale subito.
+        for attesa in (15, 45, None):
+            try:
+                with self.opener.open(req, timeout=TIMEOUT) as r:
+                    return decodifica(r.read(), r.headers.get_content_charset())
+            except urllib.error.HTTPError as e:
+                if e.code != 429 or attesa is None:
+                    raise
+                try:
+                    pausa = min(int(e.headers.get('Retry-After', attesa)), 90)
+                except (TypeError, ValueError):
+                    pausa = attesa
+                print(f'  [info] 429 da {urllib.parse.urlparse(url).netloc}: riprovo fra {pausa} s', file=sys.stderr)
+                time.sleep(max(pausa, attesa))
 
     def post(self, url, data, referer=None):
         body = urllib.parse.urlencode(data).encode('utf-8')
