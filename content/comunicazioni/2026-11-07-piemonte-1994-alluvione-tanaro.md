@@ -31,7 +31,7 @@ Il Po, ricevendo tutta quell'acqua, raggiunse livelli record lungo il suo corso.
 
 ## Perché fu un punto di svolta
 
-L'alluvione del 1994 fece capire che il rischio dei fiumi andava **conosciuto prima**, non subito dopo. Nei mesi seguenti presero forma strumenti che oggi diamo per scontati: la **mappatura delle aree allagabili** con diversi tempi di ritorno, i **piani di assetto idrogeologico** dei bacini. Arrivarono anche i **vincoli** sulle costruzioni nelle fasce fluviali. La legge 267 del 1998, dopo la frana di Sarno, avrebbe completato quel percorso. Il sistema dei Centri Funzionali e dell'allertamento per colori sarebbe arrivato nel decennio successivo.
+L'alluvione del 1994 fece capire che il rischio dei fiumi andava **conosciuto prima**, non subito dopo. Negli anni seguenti si consolidarono strumenti che oggi diamo per scontati: la **mappatura delle aree allagabili** con diversi tempi di ritorno, i **piani di assetto idrogeologico** dei bacini. Arrivarono anche i **vincoli** sulle costruzioni nelle fasce fluviali. La legge 267 del 1998, dopo la frana di Sarno, avrebbe completato quel percorso. Il sistema dei Centri Funzionali e dell'allertamento per colori sarebbe arrivato nel decennio successivo.
 
 Il 1994 fu anche una grande prova per il **volontariato di protezione civile**: migliaia di persone da tutta Italia lavorarono per settimane nel fango delle città piemontesi. Molti Gruppi comunali del Nord sono nati o cresciuti da quell'esperienza.
 

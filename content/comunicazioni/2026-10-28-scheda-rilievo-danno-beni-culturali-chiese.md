@@ -17,7 +17,7 @@ Quando un terremoto colpisce un territorio ricco di patrimonio storico e religio
 
 Per farlo in modo **standard, veloce e affidabile**, il Dipartimento della Protezione Civile e il Ministero della Cultura hanno messo a punto una **scheda di rilievo del danno** — nota come **Modello A-DC** — accompagnata da un **manuale operativo**.
 
-Il manuale — [pubblicato dal DPC nel 2013 e rivisto nel 2016 e nel 2024](https://www.protezionecivile.gov.it/static/60cbe9606bcae1903c3c1b94c0f9c198/manuale-compilazione-scheda-rilievo-danno-bbcc-e-chiese.pdf) — è un documento tecnico di **116 pagine**. In questa pagina ne offriamo una sintesi divulgativa per chi vuole capire **come funziona** il lavoro dei tecnici dopo un sisma.
+Il manuale — [pubblicato dal DPC nel 2013 e rivisto nel 2016](https://www.protezionecivile.gov.it/static/60cbe9606bcae1903c3c1b94c0f9c198/manuale-compilazione-scheda-rilievo-danno-bbcc-e-chiese.pdf) — è un documento tecnico di **116 pagine**. In questa pagina ne offriamo una sintesi divulgativa per chi vuole capire **come funziona** il lavoro dei tecnici dopo un sisma.
 
 ## Perché serve una scheda dedicata alle chiese
 
@@ -210,11 +210,11 @@ Collaborano con le **Unità di Crisi Regionali per i Beni Culturali** (UCR), ist
 
 ## Fonti ufficiali
 
-- **Manuale** — [Manuale per la compilazione della scheda per il rilievo del danno ai beni culturali, Chiese (Modello A–DC), DPC 2013 / rev. 2016 / 2024](https://www.protezionecivile.gov.it/static/60cbe9606bcae1903c3c1b94c0f9c198/manuale-compilazione-scheda-rilievo-danno-bbcc-e-chiese.pdf) — PDF, 116 pp.
+- **Manuale** — [Manuale per la compilazione della scheda per il rilievo del danno ai beni culturali, Chiese (Modello A–DC), DPC 2013 / rev. 2016](https://www.protezionecivile.gov.it/static/60cbe9606bcae1903c3c1b94c0f9c198/manuale-compilazione-scheda-rilievo-danno-bbcc-e-chiese.pdf) — PDF, 116 pp.
 - **Decreto Interministeriale 3 maggio 2001** — schede di rilevamento beni mobili e immobili (G.U. 21/5/2001 n. 116)
 - **DPCM 23 febbraio 2006** — scheda Modello A-DC con 28 meccanismi (G.U. 7/3/2006 n. 55)
-- **Dipartimento della Protezione Civile — sezione beni culturali**: [https://www.protezionecivile.gov.it/it/approfondimento/tutela-dei-beni-culturali-dai-rischi-0/](https://www.protezionecivile.gov.it/it/approfondimento/tutela-dei-beni-culturali-dai-rischi-0/)
-- **Ministero della Cultura — Unità di Crisi Coordinamento Regionale**: [https://www.beniculturali.it/](https://www.beniculturali.it/)
+- **Dipartimento della Protezione Civile — sezione beni culturali**: [scheda della pubblicazione sul sito del DPC](https://www.protezionecivile.gov.it/it/pubblicazione/manuale-la-compilazione-della-scheda-il-rilievo-del-danno-ai-beni-culturali-chiese-modello-dc/)
+- **Ministero della Cultura — Unità di Crisi Coordinamento Regionale**: [https://cultura.gov.it/](https://cultura.gov.it/)
 
 ## Leggi anche
 

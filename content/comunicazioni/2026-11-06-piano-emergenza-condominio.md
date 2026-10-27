@@ -116,7 +116,7 @@ L'**amministratore di condominio** ha:
 
 - **obblighi** di sicurezza sugli spazi comuni (D.Lgs. 81/2008 se ci sono lavoratori);
 - **responsabilità** per impianti e manutenzioni;
-- **documentazione** CPI per condomini di grandi dimensioni;
+- **documentazione antincendio** (D.P.R. 1 agosto 2011, n. 151) per gli edifici che rientrano nelle attività soggette ai controlli dei Vigili del Fuoco, di norma i condomini più grandi;
 - **sensibilità** su tematiche di Protezione Civile variabile.
 
 Un amministratore **collaborativo** è un alleato prezioso.
