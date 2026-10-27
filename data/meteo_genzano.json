@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-27T06:02",
+  "aggiornato": "2026-10-27T07:03",
   "data_lunga": "martedì 27 ottobre 2026",
-  "aggiornato_label": "martedì 27 ottobre 2026, ore 06:02",
+  "aggiornato_label": "martedì 27 ottobre 2026, ore 07:03",
   "alba": "06:35",
   "tramonto": "17:10",
   "corrente": {
-    "temp": 11.7,
-    "percepita": 10.4,
+    "temp": 12.5,
+    "percepita": 11.4,
     "cielo": "Sereno",
     "icona": "<g><line x1=\"44.8\" y1=\"28.0\" x2=\"52.8\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"39.9\" x2=\"45.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"44.8\" x2=\"28.0\" y2=\"52.8\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"39.9\" x2=\"10.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"11.2\" y1=\"28.0\" x2=\"3.2\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"16.1\" x2=\"10.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"11.2\" x2=\"28.0\" y2=\"3.2\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"16.1\" x2=\"45.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><circle cx=\"28.0\" cy=\"28.0\" r=\"16.0\" fill=\"#f6a800\"/></g>",
-    "umidita": 77,
-    "vento": 5,
-    "raffiche": 13
+    "umidita": 71,
+    "vento": 3,
+    "raffiche": 11
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 11,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 25,
+      "raffiche": 26,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -74,7 +74,7 @@
     {
       "nome": "Rieti",
       "tmax": 20,
-      "tmin": 6,
+      "tmin": 7,
       "cielo": "Coperto"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "nome": "Frosinone",
-      "tmax": 21,
+      "tmax": 20,
       "tmin": 9,
       "cielo": "Coperto"
     }
