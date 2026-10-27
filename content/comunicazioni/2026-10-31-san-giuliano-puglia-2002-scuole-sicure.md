@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigilia di Ognissanti, ultimo giorno di scuola della settimana per i bambini di **San Giuliano di Puglia**, piccolo Comune di **mille abitanti** della provincia di Campobasso, in **Molise**. Una scossa di **magnitudo 5.8** della scala Richter, con epicentro fra le province di Campobasso e Foggia, scosse il paese per circa venti secondi.
+Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigilia di Ognissanti, ultimo giorno di scuola della settimana per i bambini di **San Giuliano di Puglia**, piccolo Comune di **mille abitanti** della provincia di Campobasso, in **Molise**. Una scossa di **magnitudo momento 5.7**, con epicentro fra le province di Campobasso e Foggia, scosse il paese per circa venti secondi.
 
 {{< foto src="/images/2026-10-31-san-giuliano-parco-memoria.webp"
          alt="Veduta notturna di San Giuliano di Puglia: sullo sfondo il borgo antico illuminato, in primo piano decine di piccole luci allineate su steli verticali che compongono il Parco della Memoria dedicato alle vittime del terremoto del 2002"
