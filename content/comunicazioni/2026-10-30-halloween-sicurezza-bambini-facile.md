@@ -10,7 +10,10 @@ image: "/images/2026-10-30-halloween-sicurezza-bambini.webp"
 image_alt: "Gruppo di bambini in costume di Halloween con luci riflettenti sui vestiti durante la raccolta di dolcetti in un quartiere"
 scadenza: "2026-10-31"
 area: "Genzano di Roma"
-allegati: []
+allegati:
+  - titolo: "Ordinanza n. 156 del 27 ottobre 2026 — strade per la Festa di Halloween"
+    url: "/allegati/2026/2026-10-27-ordinanza-viabilita-festa-halloween-genzano.pdf"
+    dimensione: "103 KB"
 tts: true
 versione_facile_di: "2026-10-30-halloween-sicurezza-bambini"
 build:
@@ -40,6 +43,16 @@ La sera di Halloween i bambini escono travestiti. Questa pagina ti dice cosa far
 - Dove vai. Resta nel tuo quartiere.
 - A che ora torni. I bambini piccoli tornano entro le 21:00.
 - Cammina solo in strade con luce.
+
+## Strade chiuse sabato 31 ottobre
+
+Sabato 31 ottobre c'è la Festa di Halloween in centro. Dalle 15:30 alle 20:30 le auto non passano in alcune strade.
+
+- Le auto da Ariccia non vanno in viale Fratelli Rosselli. Passano da via Garibaldi.
+- Le auto da Velletri e Lanuvio non vanno in corso Don Minzoni. Passano da via Belardi.
+- Le auto dei residenti possono passare.
+
+I percorsi sono nel documento allegato. È il Comune che li decide. Se cambia qualcosa, guarda il [sito del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 ## Durante la passeggiata
 

@@ -9,7 +9,10 @@ image: "/images/2026-10-30-halloween-sicurezza-bambini.webp"
 image_alt: "Gruppo di bambini in costume di Halloween con luci riflettenti sui vestiti durante la raccolta di dolcetti in un quartiere"
 scadenza: "2026-10-31"
 area: "Genzano di Roma"
-allegati: []
+allegati:
+  - titolo: "Ordinanza dirigenziale n. 156 del 27 ottobre 2026 — viabilità per la Festa di Halloween"
+    url: "/allegati/2026/2026-10-27-ordinanza-viabilita-festa-halloween-genzano.pdf"
+    dimensione: "103 KB"
 draft: false
 versione_facile: "2026-10-30-halloween-sicurezza-bambini-facile"
 ---
@@ -67,6 +70,34 @@ Il **30-31 ottobre** richiede attenzione speciale alla guida:
 - **fari** accesi;
 - **priorità** ai pedoni mascherati (possono avere visibilità ridotta);
 - **non** suonare il clacson inutilmente.
+
+## Strade chiuse in centro sabato 31 ottobre
+
+Per la **Festa di Halloween** il Comando di Polizia Locale ha disciplinato la circolazione con l'ordinanza dirigenziale n. 156 del 27 ottobre 2026. Dalle **15:30 alle 20:30** di sabato 31 ottobre:
+
+- i veicoli da Ariccia non possono proseguire su viale Fratelli Rosselli e corso Gramsci fino a piazza IV Novembre;
+- per loro la deviazione passa da via Garibaldi;
+- i veicoli da Velletri e Lanuvio non possono percorrere corso Don Minzoni fino a piazza IV Novembre;
+- per loro la deviazione passa da via Belardi;
+- il traffico locale resta ammesso.
+
+Percorso alternativo da Roma verso Velletri:
+
+- viale Fratelli Rosselli;
+- tangenziale;
+- via Emilia Romagna;
+- via Appia Antica;
+- Appia.
+
+Percorso alternativo da Velletri verso Roma:
+
+- piazza Cina e viale Matteotti;
+- via Di Vittorio e via San Carlino;
+- tangenziale.
+
+I percorsi dei mezzi Co.Tra.L. e gli altri dettagli sono nell'ordinanza allegata. Segnaletica e transenne sono compito del Comune. La regolazione del traffico spetta alla Polizia Locale e alle Forze dell'Ordine: il Gruppo non la svolge.
+
+> ⚠️ **Per eventuali variazioni fai sempre riferimento al [sito ufficiale del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).** Il Gruppo riporta l'ordinanza a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
 
 ## Dolciumi in sicurezza
 
