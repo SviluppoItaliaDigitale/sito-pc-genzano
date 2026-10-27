@@ -63,5 +63,5 @@ Per ora le regole pratiche non ci sono. Dobbiamo aspettare i decreti.
 ## Per saperne di più
 
 - Sul nostro sito: [numeri utili](/numeri-utili/) e [norme della protezione civile](/normativa/).
-- Fonte: [Gazzetta Ufficiale n. 243 del 19 ottobre 2026](https://www.gazzettaufficiale.it/eli/gu/2026/10/19/243/sg/pdf). La legge è alle pagine da 1 a 9.
+- Fonte: [Gazzetta Ufficiale n. 243 del 19 ottobre 2026](https://www.gazzettaufficiale.it/eli/gu/2026/10/19/243/sg/pdf). La legge e le sue note sono alle pagine da 1 a 9.
 - Copia sul sito: [testo della legge, pagine da 1 a 4 della Gazzetta Ufficiale](/allegati/2026/gazzetta-ufficiale-243-2026-legge-187-polizia-locale.pdf).
