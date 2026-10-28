@@ -13,6 +13,9 @@ allegati:
   - titolo: "Ordinanza dirigenziale n. 156 del 27 ottobre 2026 — viabilità per la Festa di Halloween"
     url: "/allegati/2026/2026-10-27-ordinanza-viabilita-festa-halloween-genzano.pdf"
     dimensione: "103 KB"
+  - titolo: "Ordinanza sindacale n. 26 del 28 ottobre 2026 — divieto di vendita e introduzione di vetro e lattine per la Festa di Halloween"
+    url: "/allegati/2026/2026-10-28-ordinanza-sindacale-26-divieto-vetro-halloween-genzano.pdf"
+    dimensione: "149 KB"
 draft: false
 versione_facile: "2026-10-30-halloween-sicurezza-bambini-facile"
 ---
@@ -98,6 +101,15 @@ Percorso alternativo da Velletri verso Roma:
 I percorsi dei mezzi Co.Tra.L. e gli altri dettagli sono nell'ordinanza allegata. Segnaletica e transenne sono compito del Comune. La regolazione del traffico spetta alla Polizia Locale e alle Forze dell'Ordine: il Gruppo non la svolge.
 
 > ⚠️ **Per eventuali variazioni fai sempre riferimento al [sito ufficiale del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).** Il Gruppo riporta l'ordinanza a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
+
+## Niente vetro e lattine nell'area della festa
+
+Con l'ordinanza sindacale n. 26 del 28 ottobre 2026 il Comune vieta, per ragioni di sicurezza, di vendere per asporto bevande in bottiglie e bicchieri di vetro, lattine di alluminio e bombolette spray. Vieta anche di portare questi contenitori nell'area della festa: via Garibaldi fino all'incrocio con via dei Mille, piazza IV Novembre, piazza Frasconi, corso Gramsci e corso Don Minzoni, con le zone vicine.
+
+- Il divieto vale **venerdì 30 ottobre dalle 20:00 alle 24:00** e **sabato 31 ottobre dalle 16:00 fino alla fine della festa**.
+- Resta possibile la vendita per asporto in contenitori di plastica, aperti dal venditore e senza tappo né linguetta.
+- Dentro i locali si può consumare come sempre.
+- La sanzione va da 25 a 500 euro.
 
 ## Dolciumi in sicurezza
 
