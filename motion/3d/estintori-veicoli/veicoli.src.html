@@ -701,7 +701,7 @@ SOTT.forEach(f => {
   scheda('uscite', 'Uscite di emergenza', 'E MARTELLETTO PER IL VETRO', () => bus.punto(bus.L2 - 2.7, 1.95, bus.Wb / 2 - .1), vs(-150, -250), parola(5, 'uscite'), E(5) - .4, '#15803d');
   scheda('fuori', 'Prima fate scendere tutti', 'POI SI PENSA AL FUOCO', null, null, parola(6, 'scendere') - .1, E(6) - .3, '#15803d');
   scheda('passi', 'Spina, base, leva', 'GETTI BREVI', () => estBus.testa(), vs(-160, -240), parola(7, 'spina') - .1, parola(7, 'cala') - .2);
-  scheda('scendi', 'Non si spegne? Scendi', 'E ALLONTANATI', () => estBus.testa(), vs(-160, -240), parola(7, 'cala') - .1, E(7) - .3, '#ef4136');
+  scheda('scendi', 'Non si spegne? Lascia perdere', 'ALLONTANATI CON GLI ALTRI', () => estBus.testa(), vs(-160, -240), parola(7, 'cala') - .1, E(7) - .3, '#ef4136');
   scheda('panno', 'Pannello arancione', 'MERCI PERICOLOSE', () => tir.punto(-.75, 1.85, 1.02), vs(140, -240), parola(8, 'arancione') - .3, parola(8, 'fuoco') - .2, '#f59e0b');
   scheda('viatir', 'Non avvicinarti', 'ALLONTANATI E CHIAMA IL 112', () => tir.punto(-2.4, 1.2, .9), vs(160, -260), parola(8, 'avvicinarti') - .2, E(8) - .3, '#ef4136');
   scheda('litio', 'Batteria al litio', 'PUÒ RIACCENDERSI ORE DOPO', () => autoE.punto(0, .45, .8), vs(-160, -260), parola(9, 'litio') - .2, E(9) - .4, '#ef4136');
@@ -782,8 +782,16 @@ SOTT.forEach(f => {
     const soccorre = PASS[5];
     // il passeggero tiene l'estintore: sollevato da terra, una mano sulla leva e una sulla manichetta
     estBus.gruppo.position.y += .1 * sp;
-    if (t > tSgancia) { soccorre.position.copy(estBus.gruppo.position).add(_v.set(.2, 0, .3)); soccorre.position.y = 0; soccorre.scale.setScalar(.85); guarda(soccorre, soccorre.position, bus.punto(-bus.L2, 0, 0)); }
-    const tiene = t > tSgancia + .2 && soccorre.visible && estBus.gruppo.visible;
+    // se il fuoco non cala: posa l'estintore e raggiunge gli altri
+    const tVia = parola(7, 'perdere') + .1, uVia = ease.morbida(prog(t, tVia, 2.2));
+    if (t > tSgancia) {
+      const posEst = estBus.gruppo.position.clone().add(_v.set(.2, 0, .3)); posEst.y = 0;
+      const posGr = fuori.clone().add(_v.set(-5 * .55, 0, .45)); posGr.y = 0;
+      soccorre.position.lerpVectors(posEst, posGr, uVia); soccorre.scale.setScalar(.85);
+      if (uVia > .02 && uVia < .98) guarda(soccorre, posEst, posGr); else guarda(soccorre, soccorre.position, bus.punto(-bus.L2, 0, 0));
+    }
+    if (uVia > 0) estBus.gruppo.position.y -= .1 * Math.min(1, uVia * 3);
+    const tiene = t > tSgancia + .2 && t < tVia && soccorre.visible && estBus.gruppo.visible;
     braccia.forEach(m => { m.visible = tiene; });
     if (tiene) {
       soccorre.updateMatrixWorld(); estBus.gruppo.updateMatrixWorld();

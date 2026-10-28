@@ -970,13 +970,13 @@
  },
  {
   "n": 8,
-  "testo": "Poi sgancia l'estintore dal supporto, togli la spina, punta alla base delle fiamme e premi la leva, a getti brevi. Se il fuoco non cala in pochi secondi, scendi anche tu.",
-  "schermo": "Poi sgancia l'estintore dal supporto, togli la spina, punta alla base delle fiamme e premi la leva, a getti brevi. Se il fuoco non cala in pochi secondi, scendi anche tu.",
+  "testo": "Poi sgancia l'estintore dal supporto, togli la spina, punta alla base delle fiamme e premi la leva, a getti brevi. Se il fuoco non cala in pochi secondi, lascia perdere e allontanati con gli altri.",
+  "schermo": "Poi sgancia l'estintore dal supporto, togli la spina, punta alla base delle fiamme e premi la leva, a getti brevi. Se il fuoco non cala in pochi secondi, lascia perdere e allontanati con gli altri.",
   "file": "line_8.wav",
-  "ripresa": "line_8_take_1.mp3",
-  "durata": 10.35,
+  "ripresa": "line_8_take_1.mp3 + correzione",
+  "durata": 12.11,
   "somiglianza": 0.99,
-  "sentito": "Poi, sgancia l'estintore dal supporto, toglie la spina, punta alla base delle fiamme e premi la leva. Aggetti brevi. Se il fuoco non cala in pochi secondi, scendi anche tu.",
+  "sentito": "Poi sgancia l'istintore dal supporto, toglie la spina, punta alla base delle fiamme e premi la leva. Aggetti brevi. Se il fuoco non cala in pochi secondi, lascia perdere e allontanati con gli altri.",
   "parole": [
    {
     "w": "Poi",
@@ -985,7 +985,7 @@
    },
    {
     "w": "sgancia",
-    "t0": 0.38,
+    "t0": 0.26,
     "t1": 0.82
    },
    {
@@ -1080,58 +1080,78 @@
    },
    {
     "w": "Se",
-    "t0": 7.4,
+    "t0": 7.38,
     "t1": 7.56
    },
    {
     "w": "il",
     "t0": 7.56,
-    "t1": 7.66
+    "t1": 7.68
    },
    {
     "w": "fuoco",
-    "t0": 7.66,
-    "t1": 7.92
+    "t0": 7.68,
+    "t1": 7.94
    },
    {
     "w": "non",
-    "t0": 7.92,
-    "t1": 8.06
+    "t0": 7.94,
+    "t1": 8.12
    },
    {
     "w": "cala",
-    "t0": 8.06,
-    "t1": 8.4
+    "t0": 8.12,
+    "t1": 8.46
    },
    {
     "w": "in",
-    "t0": 8.4,
-    "t1": 8.44
+    "t0": 8.46,
+    "t1": 8.5
    },
    {
     "w": "pochi",
-    "t0": 8.44,
-    "t1": 8.68
+    "t0": 8.5,
+    "t1": 8.78
    },
    {
     "w": "secondi,",
-    "t0": 8.68,
-    "t1": 9.32
+    "t0": 8.78,
+    "t1": 9.46
    },
    {
-    "w": "scendi",
-    "t0": 9.46,
-    "t1": 9.74
-   },
-   {
-    "w": "anche",
-    "t0": 9.74,
+    "w": "lascia",
+    "t0": 9.6,
     "t1": 9.9
    },
    {
-    "w": "tu.",
+    "w": "perdere",
     "t0": 9.9,
-    "t1": 10.12
+    "t1": 10.38
+   },
+   {
+    "w": "e",
+    "t0": 10.38,
+    "t1": 10.68
+   },
+   {
+    "w": "allontanati",
+    "t0": 10.68,
+    "t1": 11.3
+   },
+   {
+    "w": "con",
+    "t0": 11.3,
+    "t1": 11.44
+   },
+   {
+    "w": "gli",
+    "t0": 11.44,
+    "t1": 11.6
+   },
+   {
+    "w": "altri.",
+    "t0": 11.6,
+    "t1": 11.82
    }
   ]
  },
