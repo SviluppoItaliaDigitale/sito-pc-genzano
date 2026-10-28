@@ -5,40 +5,136 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-28T19:48:58+00:00",
+  "generato": "2026-10-28T23:37:37+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-28T19:41:47+00:00",
+   "data": "2026-10-28T23:13:10+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Monza-Napoli - Diretta",
-   "url": "https://www.adnkronos.com/sport/serie-a-monza-napoli_27onAWZHAZHdEX3zxYhuZX"
+   "titolo": "Halloween, picco di lesioni da intaglio zucche: come evitare la 'maledizione della Jack-o'-Lantern'",
+   "url": "https://www.adnkronos.com/cronaca/allarme-zucche-halloween-picco-lesioni-intaglio_5cbeFUz7f3eABx3uTyuPzK"
   },
   {
-   "data": "2026-10-28T19:36:49+00:00",
+   "data": "2026-10-28T23:11:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, ok Cdm a legge bilancio da 26 miliardi. Meloni: \"Lavoro di squadra, avanti con determinazione\"",
+   "url": "https://www.adnkronos.com/politica/manovra-meloni_5wZmgDFyvGiLENVYZoCkCg"
+  },
+  {
+   "data": "2026-10-28T23:10:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spagna, tragedia ferroviaria irrompe nella campagna elettorale: nuova grana per Sanchez a un mese dal voto",
+   "url": "https://www.adnkronos.com/internazionale/esteri/incidente-ferroviario-spagna-scontro-politico-campagna-elettorale_5ACQpgtvbKzOCmnCOU6MoN"
+  },
+  {
+   "data": "2026-10-28T22:55:11+00:00",
    "fonte": "ANSA",
-   "titolo": "Via libera del consiglio dei ministri alla manovra. Meloni: 'Vale circa 26 miliardi di euro'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/via-libera-del-consiglio-dei-ministri-alla-manovra.-meloni-vale_a800dc0a-5e17-4252-b135-567ad9587d2b.html"
+   "titolo": "Prof lo interroga, studente 14enne gli frattura il naso a pugni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/professore-picchiato-a-scuola-da-uno-studente-portato-in-ospedale_0936fec0-95c8-4f43-a778-6d9d0ff63d21.html"
   },
   {
-   "data": "2026-10-28T19:34:16+00:00",
+   "data": "2026-10-28T22:48:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crollo di Milan e Juventus, l'Inter riaggancia la Lazio",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/28/crollo-di-milan-e-juventus-linter-riaggancia-la-lazio_66fffdd7-92bf-46ae-b1d0-ba385683e400.html"
+  },
+  {
+   "data": "2026-10-28T22:46:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, via libera del Cdm. Irpef al 33% fino a 55mila euro, incentivi per affitti ai giovani e fondo previdenziale nuovi nati. Meloni: \"Molto soddisfatta\"",
+   "url": "https://www.adnkronos.com/economia/manovra-2027-approvata-cdm-cosa-prevede_7eV7BzcVacg5sEogW5fsUI"
+  },
+  {
+   "data": "2026-10-28T22:40:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spagna, scontro treni alta velocità: 68 morti. Tre italiane disperse, una è di Pistoia",
+   "url": "https://www.adnkronos.com/internazionale/esteri/spagna-incidente-ferroviario-scontro-treni-morti_1SbHPXVPpyfgZrDToCKBRG"
+  },
+  {
+   "data": "2026-10-28T22:38:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Brasile, Bolsonaro contesta ancora il voto dagli Usa: \"Il vero presidente eletto sono io\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/bolsonaro-brasile-critica-voto_3Q2WNL8k6JKp7wlY7L865C"
+  },
+  {
+   "data": "2026-10-28T22:17:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mbangula come Batistuta, storica tripletta a San Siro contro il Milan dell'ex Juve",
+   "url": "https://www.adnkronos.com/sport/mbangula-batistuta-milan-gol-tripletta-serie-a_2CGZ7ex3ZBhLbnUlp09uuM"
+  },
+  {
+   "data": "2026-10-28T22:03:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Almeno 68 morti nell'incidente ferroviario a Toledo Tre italiane disperse",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/almeno-68-morti-nellincidente-ferroviario-a-toledo-tre-italiane-disperse_3124daf4-1c75-4126-a99f-4356a4740361.html"
+  },
+  {
+   "data": "2026-10-28T21:23:15+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Fed mantiene fermi i tassi, 'economia solida, ma l'inflazione è alta'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/28/la-fed-mantiene-i-tassi-fermi_0874fa87-b228-48f4-9696-09c383c457d5.html"
+  },
+  {
+   "data": "2026-10-28T21:22:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bolsonaro: 'Io il vero presidente del Brasile, guiderò l'opposizione dagli Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/bolsonaro-io-il-vero-presidente-del-brasile-guidero-lopposizione-dagli-usa_1b9d2be9-8a00-428f-926e-46b20bfc3e26.html"
+  },
+  {
+   "data": "2026-10-28T21:03:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Siher torna in libertà, Meloni attacca la gip: 'Una decisione vergognosa. È una mortificazione delle forze dell'ordine'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/meloni-dalla-gip-di-milano-una-decisione-vergognosa-su-siher.-lanm-solidarieta_cf22bf4c-c1b3-46ba-b54f-c5e1eb028452.html"
+  },
+  {
+   "data": "2026-10-28T21:00:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Galliani contro Malagò, pronta la corsa per la sfida alla Figc",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/28/galliani-contro-malago-pronta-la-corsa-per-la-sfida-alla-figc_dde0e88f-19fe-467a-8b08-478ce6781a14.html"
+  },
+  {
+   "data": "2026-10-28T20:54:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Napoli, tegola Lobotka: problema alla caviglia sinistra, lo slovacco esce in barella",
+   "url": "https://www.adnkronos.com/sport/monza-napoli-serie-a-lobotka_4BhwgecfxUfLxD8IoARRTj"
+  },
+  {
+   "data": "2026-10-28T20:44:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mps decide il suo futuro, sul piano Lovaglio il muro dei soci",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/28/mps-decide-il-suo-futuro-sul-piano-lovaglio-il-muro-dei-soci_368cd399-ea22-4ee4-9487-e8e27070171c.html"
+  },
+  {
+   "data": "2026-10-28T20:40:40+00:00",
    "fonte": "ANSA",
    "titolo": "Elezioni in Israele, il blocco di Netanyahu avanti di 5 seggi. La palla nelle mani di Herzog",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/elezioni-in-israele-il-blocco-di-netanyahu-avanti-di-5-seggi.-la-palla-nelle-mani-di-herzog_61d49ed4-29f3-40c8-abb7-de226e1432dc.html"
   },
   {
-   "data": "2026-10-28T19:29:41+00:00",
+   "data": "2026-10-28T20:16:46+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: a Venezia l'Inter vince 2-0 con due autogol CRONACA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/28/serie-a-a-venezia-linter-vince-2-0-con-due-autogol-cronaca-e-foto_827a62d9-5f86-4662-8dc7-c863c483cc6c.html"
+   "titolo": "Manovra da 26 miliardi, taglio Irpef fino a 55mila euro",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/via-libera-del-consiglio-dei-ministri-alla-manovra.-meloni-vale_a800dc0a-5e17-4252-b135-567ad9587d2b.html"
   },
   {
-   "data": "2026-10-28T19:27:39+00:00",
+   "data": "2026-10-28T20:02:10+00:00",
    "fonte": "ANSA",
-   "titolo": "William e Kate scansatevi, arrivano Harry Kane e Katie Goodland",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/beauty_fitness/2026/10/27/william-e-kate-scansatevi-arrivano-harry-kane-e-katie-goodland_2bbb8c31-d461-4c8e-82d1-ff5850b4ad5a.html"
+   "titolo": "Gli ultimi minuti di Fakir nel video della bodycam di uno degli agenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/lagente-mi-scuso-per-le-frasi-con-la-famiglia-di-fakir-e-con-la-polizia_172f295f-9c36-48b4-b5c9-33f6d52f21b0.html"
+  },
+  {
+   "data": "2026-10-28T19:43:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, scontro tra auto e moto in via Boccea: morto un 33enne, ferito un altro centauro",
+   "url": "https://www.adnkronos.com/cronaca/incidente-roma-morto-centauro_4FloN1QGhSXteS7zmgY9JD"
+  },
+  {
+   "data": "2026-10-28T19:41:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Monza-Napoli 1-4: gli azzurri calano il poker e tornano alla vittoria",
+   "url": "https://www.adnkronos.com/sport/serie-a-monza-napoli_27onAWZHAZHdEX3zxYhuZX"
   },
   {
    "data": "2026-10-28T19:22:14+00:00",
@@ -54,21 +150,9 @@
   },
   {
    "data": "2026-10-28T19:19:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spagna: Toledo, almeno 68 morti nello scontro tra due treni. La Farnesina: 'Coinvolti 7 italiani, due disperse'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/spagna-toledo-almeno-68-morti-nello-scontro-tra-due-treni.-la-farnesina_3124daf4-1c75-4126-a99f-4356a4740361.html"
-  },
-  {
-   "data": "2026-10-28T19:19:09+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Manovra, arriva il salvadanaio per neonati: 100 euro ogni anno fino a 18 anni",
    "url": "https://www.adnkronos.com/economia/manovra-salvadanaio-neonati-libretto-inps_2Af6QXL5C4xuB6duEpa8XD"
-  },
-  {
-   "data": "2026-10-28T19:15:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Prof lo interroga, studente 14enne gli frattura il naso a pugni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/professore-picchiato-a-scuola-da-uno-studente-portato-in-ospedale_0936fec0-95c8-4f43-a778-6d9d0ff63d21.html"
   },
   {
    "data": "2026-10-28T19:13:00+00:00",
@@ -77,28 +161,10 @@
    "url": "https://www.adnkronos.com/sport/serie-a-milan-bologna-mbangula_1rAQpSchAFdeHjiv6pIr4Z"
   },
   {
-   "data": "2026-10-28T19:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scintille tra Meloni e giornalista su scontri ai cortei: \"Credo nello Stato di diritto, difende la gente perbene\"",
-   "url": "https://www.adnkronos.com/politica/meloni-disordini-cortei-scintille-meloni-giornalista_11WSWuOUKGm5jVEJ00E4ba"
-  },
-  {
-   "data": "2026-10-28T19:03:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lorenzo Mirandola, il cacciatore di aurora boreale si racconta in 'Quando il cielo si accende'",
-   "url": "https://www.adnkronos.com/spettacoli/lorenzo-mirandola-il-cacciatore-di-aurora-boreale-si-racconta-in-quando-il-cielo-si-accende_5H138GUSdaGmlFBPmlKalC"
-  },
-  {
    "data": "2026-10-28T18:58:17+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Cadavere nel pozzo, un uomo fermato dai carabinieri",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/cadavere-nel-pozzo-un-uomo-fermato-dai-carabinieri_636d3a00-de7e-4d91-aa9d-b87af8494b97.html"
-  },
-  {
-   "data": "2026-10-28T18:54:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli ultimi minuti di Fakir nel video della bodycam di uno degli agenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/lagente-mi-scuso-per-le-frasi-con-la-famiglia-di-fakir-e-con-la-polizia_172f295f-9c36-48b4-b5c9-33f6d52f21b0.html"
   },
   {
    "data": "2026-10-28T18:51:32+00:00",
@@ -113,82 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/mattarella-guerre-dissennate-e-progetti-militari-sottraggono-risorse-alla-medicina_99ab9e81-544d-4f94-8bc1-666ad0386c9b.html"
   },
   {
-   "data": "2026-10-28T18:44:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Genoa-Juventus - Diretta",
-   "url": "https://www.adnkronos.com/sport/serie-a-genoa-juventus-de-rossi_7845sI2enpQ8VOPFa4l3b3"
-  },
-  {
-   "data": "2026-10-28T18:38:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Venezia-Inter, annullato dal Var il gol di Lauerbach. Cosa è successo",
-   "url": "https://www.adnkronos.com/sport/inter-gol-annullato-venezia-serie-a_969D3TEbAvunAlkIFKZr"
+   "data": "2026-10-28T18:44:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Noah Wyle l'uomo più sexy al mondo secondo People, 'pensavo fosse uno scherzo'",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/people/2026/10/28/noah-wyle-luomo-piu-sexy-al-mondo-secondo-people-pensavo-fosse_7346a7ec-8657-4025-a921-c29b38a7909f.html"
   },
   {
    "data": "2026-10-28T18:27:46+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Caso Hydra, si pente il 'luogotenente' del clan Senese in Lombardia",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/caso-hydra-si-pente-il-luogotenente-del-clan-senese-in-lombardia_99048359-b0ed-4b95-8a2f-1058266bb2b8.html"
-  },
-  {
-   "data": "2026-10-28T18:22:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cissé show a San Siro: doppietta in 13 minuti e il Milan ribalta il Bologna",
-   "url": "https://www.adnkronos.com/sport/serie-a-milan-bologna-cisse_4cwpCoJWkRcJyZjxDE1mcV"
-  },
-  {
-   "data": "2026-10-28T18:20:09+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incidente fra due treni in Spagna, donna di Pistoia risulterebbe dispersa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/incidente-fra-due-treni-in-spagna-donna-di-pistoia-risulterebbe-dispersa_ec9cd25a-88f2-4a30-b42b-02fcd7ef5d10.html"
-  },
-  {
-   "data": "2026-10-28T18:18:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ottimisti sulla propria vita, pessimisti sul mondo: cosa racconta il grande sondaggio FII",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ottimisti-sulla-propria-vita-pessimisti-sul-mondo-cosa-racconta-il-grande-sondaggio-fii_fYY76TVQS03yDuRs8Jb3j"
-  },
-  {
-   "data": "2026-10-28T18:18:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra 2027, tutte le misure: da taglio Irpef al salvadanaio per neonati",
-   "url": "https://www.adnkronos.com/economia/manovra-2027-tutte-le-misure-legge-di-bilancio_71mtFNTvYvhcdn8gJ9Dvj3"
-  },
-  {
-   "data": "2026-10-28T18:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milan-Bologna, Theate, che disastro: Cissè ringrazia e fa 1-1",
-   "url": "https://www.adnkronos.com/sport/serie-a-milan-bologna_6NIDNGcCzu91hUn5ZC8JfX"
-  },
-  {
-   "data": "2026-10-28T18:07:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I 35 anni della Direzione Investigativa Antimafia, l'evento con Piantedosi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/i-35-anni-della-direzione-investigativa-antimafia-levento-con-piantedosi_4f3a8995-71c7-4030-8980-89cc5e64dde0.html"
-  },
-  {
-   "data": "2026-10-28T18:04:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fonti Viminale, decisione su Siher non incide su impegno contro violenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/fonti-viminale-decisione-su-siher-non-incide-su-impegno-contro-violenti_231a2109-3b34-4564-b281-e8b9de8c7d8e.html"
-  },
-  {
-   "data": "2026-10-28T18:01:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Strage del bus di Mestre, in sette patteggiano a Venezia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/strage-del-bus-di-mestre-in-sette-patteggiano-a-venezia_0c97203a-0077-4083-81cd-2c5cc0438217.html"
-  },
-  {
-   "data": "2026-10-28T18:00:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina: la tregua tiene, si prepara l'evacuazione da Oleshky",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/ucraina-la-tregua-tiene-si-prepara-levacuazione-da-oleshky_27be0948-eae6-4740-9dbe-9e6bded4fcd0.html"
-  },
-  {
-   "data": "2026-10-28T17:59:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Collettivi, occupata la facoltà di Lettere alla Sapienza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/collettivi-occupata-la-facolta-di-lettere-alla-sapienza_cb86388d-4765-4ce4-b52b-d930e6d6abdb.html"
   }
  ]
 }
