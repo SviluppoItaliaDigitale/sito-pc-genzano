@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'estintore, dentro e fuori</title>
+<!-- estintori.src.html — video 3D divulgativo sugli estintori (Protezione Civile Genzano di Roma).
+     Scritto per Alessandro Cuollo il 28/10/2026 sul modello della skill video-3d, senza codice di terzi.
+     Si costruisce con costruisci.py di video-3d (three.js 0.181.2 MIT, motore 3D, impaginazione comune, font)
+     e i dati tempi (ritmo.py) e sottotitoli (voce.py tempi). Tutto dipende solo da t: render(t) deterministico.
+     Stazioni lungo l'asse x: 0 estintore a polvere (spaccato e meccanismo), 3 modello a bombola ausiliaria,
+     6 classi di fuoco, 10…17 i sei tipi con il loro fuoco, 21 come si usa. -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #livello-scena { z-index: 2; }
+  #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="livello-scena"></canvas>
+  <div id="fonte" data-componente="fonte-3d"></div>
+</div>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: "L'estintore, dentro e fuori",
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  capitoli: ['ESTINTORI', 'COME FUNZIONA', 'CLASSI DI FUOCO', 'I TIPI', 'COME SI USA', 'MANUTENZIONE'],
+  capitoloDi: [0, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5],
+  hud: ['ESTINTORI', 'DENTRO L\'ESTINTORE', 'IL MECCANISMO', 'IL MANOMETRO', 'BOMBOLA AUSILIARIA', 'CLASSI DI FUOCO',
+        'A POLVERE', 'ANIDRIDE CARBONICA', 'A SCHIUMA', 'AD ACQUA', 'CLASSE F · CUCINA', 'CLASSE D · METALLI',
+        'COME SI USA', 'QUANDO USCIRE', 'MANUTENZIONE', 'PROTEZIONE CIVILE'],
+  nota: 'SCHEMA · NON IN SCALA',
+  fonte: 'Fonti: Vigili del Fuoco · norme UNI EN 2, UNI EN 3-7, UNI 9994-1',
+  chiave: ['polvere', 'anidride', 'carbonica', 'schiuma', 'acqua', '112', 'pescante', 'manometro', 'verde', 'valvola',
+           'leva', 'azoto', 'base', 'ventaglio', 'sei', 'mesi', 'ricaricato', 'F', 'A', 'B', 'C', 'D'],
+  modo: 'parole'
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const TEMPI = dato('tempi') || { scene: Array.from({ length: 16 }, (_, i) => ({ inizio: i * 9, durata: 9 })), totale: 144 };
+const SOTT = dato('sottotitoli') || [];
+// le frasi lunghe si mostrano a pezzi (frasi intere, al massimo ~125 caratteri), così il sottotitolo resta su tre righe
+const FRASI = [];
+SOTT.forEach(f => {
+  const chiave = (f.chiave || []).concat(CONFIG.chiave), P = f.parole || [];
+  const parti = String(f.testo).trim().split(/\s+/);
+  if (f.testo.length <= 130 || P.length !== parti.length) { FRASI.push(Object.assign({}, f, { chiave })); return; }
+  let da = 0, n = 0;
+  const chiudi = (a) => {
+    FRASI.push({ inizio: da === 0 ? f.inizio : P[da].t0, fine: a === parti.length ? f.fine : P[a].t0 - .02,
+      testo: parti.slice(da, a).join(' '), parole: P.slice(da, a), chiave });
+    da = a;
+  };
+  for (let i = 0; i < parti.length; i++) {
+    n += parti[i].length + 1;
+    const fineFrase = /[.:;?!]$/.test(parti[i]) && i < parti.length - 1;
+    const resto = parti.slice(i + 1).join(' ').length;
+    if (fineFrase && n > 45 && resto > 30) { chiudi(i + 1); n = 0; }
+  }
+  if (da < parti.length) chiudi(parti.length);
+});
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const P = new URLSearchParams(location.search);
+  const formato = P.get('formato') || CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
+  const SC = TEMPI.scene, TOTAL = TEMPI.totale || SC[SC.length - 1].inizio + SC[SC.length - 1].durata;
+  const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, ease, hash, rumore1 } = M3;
+  const fin = M3.finestra;
+
+  /* istante di una parola detta nella scena k (dai sottotitoli), con riserva in proporzione */
+  const norma = w => String(w).toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, '');
+  function parola(k, w, n = 0, riserva = 0.5) {
+    const f = SOTT[k];
+    if (f && f.parole) {
+      let c = 0;
+      for (const p of f.parole) if (norma(p.w) === norma(w) || norma(p.w).startsWith(norma(w)) && norma(w).length > 3) { if (c === n) return p.t0; c++; }
+    }
+    return S(k) + D(k) * riserva;
+  }
+
+  const stage = document.getElementById('stage');
+  const nCap = CONFIG.capitoli.length;
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud[0], passiHUD: nCap, nota: CONFIG.nota });
+  IMP.anteprima(stage);
+
+  const vicino = M3.creaRenderer(document.getElementById('livello-scena'), W, H, { scala: 0.8 });
+  const scena = new THREE.Scene();
+  const camera = M3.creaCamera(W, H, { fov: 30, zona: L.zona });
+
+  /* ---------------------------------------------------------------- luci */
+  scena.add(new THREE.HemisphereLight(0xdfe9ff, 0x1a2236, 1.05));
+  const sole = new THREE.DirectionalLight(0xffffff, 1.6); sole.position.set(3, 6, 5); scena.add(sole);
+  const contro = new THREE.DirectionalLight(0x7fb4ff, 0.9); contro.position.set(-4, 3, -4); scena.add(contro);
+
+  /* ---------------------------------------------------------------- texture su canvas */
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 1; return t;
+  }
+  const FT = "'Titillium Web', sans-serif", FM = "'Roboto Mono', monospace";
+  function tondoRett(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+  function fiammaPath(g, x, y, s) {           // fiammella stilizzata con base in (x, y)
+    g.beginPath(); g.moveTo(x, y);
+    g.bezierCurveTo(x - s * .55, y - s * .05, x - s * .45, y - s * .6, x - s * .05, y - s);
+    g.bezierCurveTo(x + s * .05, y - s * .62, x + s * .25, y - s * .55, x + s * .2, y - s * .82);
+    g.bezierCurveTo(x + s * .55, y - s * .5, x + s * .55, y - s * .05, x, y);
+    g.closePath();
+  }
+  function fiamma2D(g, x, y, s) {
+    g.fillStyle = '#f97316'; fiammaPath(g, x, y, s); g.fill();
+    g.fillStyle = '#fde047'; fiammaPath(g, x, y - s * .02, s * .55); g.fill();
+  }
+
+  /* ---------------------------------------------------------------- materiali */
+  const metallo = () => new THREE.MeshStandardMaterial({ color: 0xb8c0ca, metalness: 0.75, roughness: 0.32 });
+  const nero = () => new THREE.MeshStandardMaterial({ color: 0x1c1f24, metalness: 0.1, roughness: 0.6 });
+  const tinta = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, metalness: 0.05, roughness: 0.55 }, o));
+  const base = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+
+  /* ---------------------------------------------------------------- pavimento e pedane */
+  const pav = new THREE.Mesh(new THREE.PlaneGeometry(80, 30), tinta(0x0d1729, { roughness: 1 }));
+  pav.rotation.x = -Math.PI / 2; pav.position.set(10, 0, 0); scena.add(pav);
+  const texAlone = tela(256, 256, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(70,140,255,.55)'); gr.addColorStop(.55, 'rgba(46,144,250,.16)'); gr.addColorStop(1, 'rgba(46,144,250,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  const texOmbra = tela(128, 128, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(0,0,0,.7)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function alone(x, z, r) {
+    const m = new THREE.Mesh(new THREE.CircleGeometry(r, 48), base(0xffffff, { map: texAlone, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+    m.rotation.x = -Math.PI / 2; m.position.set(x, 0.002, z); scena.add(m); return m;
+  }
+  function ombra(gruppo, r) {
+    const m = new THREE.Mesh(new THREE.CircleGeometry(r, 32), base(0xffffff, { map: texOmbra, transparent: true, depthWrite: false }));
+    m.rotation.x = -Math.PI / 2; m.position.y = 0.004; gruppo.add(m); return m;
+  }
+  const anelloPedana = (x, z, r) => {
+    const m = new THREE.Mesh(new THREE.RingGeometry(r - 0.012, r, 96), base(0x2e90fa, { transparent: true, opacity: 0.55 }));
+    m.rotation.x = -Math.PI / 2; m.position.set(x, 0.003, z); scena.add(m); return m;
+  };
+
+  /* ---------------------------------------------------------------- l'estintore */
+  const TIPI = {
+    polvere:   { R: .16, H: .74, nome: 'POLVERE',  classi: ['A', 'B', 'C'], agente: 0xefe3b5, gauge: true, uscita: 'tubo' },
+    cartuccia: { R: .16, H: .74, nome: 'POLVERE',  classi: ['A', 'B', 'C'], agente: 0xefe3b5, gauge: false, uscita: 'tubo', cartuccia: true },
+    co2:       { R: .12, H: .88, nome: 'CO₂',      classi: ['B'],           agente: 0xd5e8ff, gauge: false, uscita: 'cono', fascia: '#4b5563' },
+    schiuma:   { R: .16, H: .74, nome: 'SCHIUMA',  classi: ['A', 'B'],      agente: 0xf5f8fb, gauge: true, uscita: 'tubo', fascia: '#e8d9a8' },
+    acqua:     { R: .16, H: .74, nome: 'ACQUA',    classi: ['A'],           agente: 0x5cb3ff, gauge: true, uscita: 'tubo', fascia: '#2e90fa' },
+    F:         { R: .15, H: .70, nome: 'CLASSE F', classi: ['F'],           agente: 0xcfeef0, gauge: true, uscita: 'lancia' },
+    D:         { R: .16, H: .74, nome: 'CLASSE D', classi: ['D'],           agente: 0xd8d2c4, gauge: true, uscita: 'lancia', fascia: '#9ca3af' }
+  };
+  const COL_CLASSE = { A: '#34b25a', B: '#2e90fa', C: '#f59e0b', D: '#8b97a8', F: '#ef4136' };
+
+  function etichetta(c) {
+    return tela(512, 640, (g, w, h) => {
+      g.fillStyle = '#f4f6f8'; g.fillRect(0, 0, w, h);
+      g.fillStyle = c.fascia || '#d9dde3'; g.fillRect(0, 0, w, 70);
+      g.fillStyle = '#0a1220'; g.font = '700 30px ' + FM; g.textAlign = 'center'; g.fillText('ESTINTORE', w / 2, 48);
+      g.font = '900 ' + (c.nome.length > 6 ? 84 : 108) + 'px ' + FT; g.fillText(c.nome, w / 2, 210);
+      const n = c.classi.length, d = 116, x0 = w / 2 - (n - 1) * d / 2;
+      c.classi.forEach((k, i) => {
+        g.fillStyle = COL_CLASSE[k]; g.beginPath(); g.arc(x0 + i * d, 330, 50, 0, 6.283); g.fill();
+        g.fillStyle = '#fff'; g.font = '900 64px ' + FT; g.fillText(k, x0 + i * d, 352);
+      });
+      g.fillStyle = '#5b6573'; g.font = '500 24px ' + FM;
+      ['1 · TOGLI LA SPINA', '2 · PUNTA ALLA BASE', '3 · PREMI LA LEVA'].forEach((r, i) => g.fillText(r, w / 2, 450 + i * 40));
+      g.fillStyle = '#c8102e'; g.fillRect(0, h - 26, w, 26);
+    });
+  }
+  function texManometro() {
+    return tela(256, 256, (g, w) => {
+      const c = w / 2;
+      g.fillStyle = '#f8fafc'; g.beginPath(); g.arc(c, c, c, 0, 6.283); g.fill();
+      g.lineWidth = 30;
+      const arco = (a0, a1, col) => { g.strokeStyle = col; g.beginPath(); g.arc(c, c, c * .72, a0, a1); g.stroke(); };
+      arco(Math.PI * .8, Math.PI * 1.25, '#ef4136'); arco(Math.PI * 1.25, Math.PI * 1.75, '#22a04b'); arco(Math.PI * 1.75, Math.PI * 2.2, '#ef4136');
+      g.fillStyle = '#0a1220'; g.font = '700 30px ' + FM; g.textAlign = 'center'; g.fillText('bar', c, c + 70);
+      g.lineWidth = 6; g.strokeStyle = '#1f2937'; g.beginPath(); g.arc(c, c, c - 4, 0, 6.283); g.stroke();
+    });
+  }
+  const TEX_MANO = { t: null };
+
+  /* ritorna { gruppo, corpo, interno, leva, spina, ago, ugello(), direzione(), taglio(d), livello(u), flusso(t,u), gas } */
+  function estintore(tipo) {
+    const c = TIPI[tipo], R = c.R, Hh = c.H;
+    const g = new THREE.Group(), corpo = new THREE.Group(); g.add(corpo);
+    const piano = new THREE.Plane(new THREE.Vector3(0, 0, -1), 1e7);
+    const rosso = new THREE.MeshStandardMaterial({ color: 0xb3161e, metalness: 0.15, roughness: 0.38, side: THREE.DoubleSide, clippingPlanes: [piano] });
+    const prof = [[0, 0], [R * .82, 0], [R * .97, .014], [R, .05], [R, Hh - .07], [R * .93, Hh - .028], [R * .72, Hh - .004],
+                  [R * .36, Hh + .018], [.042, Hh + .024], [.042, Hh + .05], [0, Hh + .05]].map(p => new THREE.Vector2(p[0], p[1]));
+    const guscio = new THREE.Mesh(new THREE.LatheGeometry(prof, 56), rosso); corpo.add(guscio);
+    // interno del guscio più scuro (si vede con lo spaccato)
+    const dentro = new THREE.Mesh(new THREE.CylinderGeometry(R * .985, R * .985, Hh - .09, 48, 1, true),
+      new THREE.MeshStandardMaterial({ color: 0x4a0b0e, roughness: .9, side: THREE.BackSide, clippingPlanes: [piano] }));
+    dentro.position.y = (Hh - .09) / 2 + .03; corpo.add(dentro);
+    const et = new THREE.Mesh(new THREE.CylinderGeometry(R + .002, R + .002, Hh * .5, 48, 1, true, -0.95, 1.9),
+      new THREE.MeshStandardMaterial({ map: etichetta(c), roughness: .5, clippingPlanes: [piano] }));
+    et.position.y = Hh * .5; corpo.add(et);
+    // valvola
+    const testa = new THREE.Mesh(new THREE.CylinderGeometry(.036, .04, .07, 24), metallo());
+    testa.position.y = Hh + .085; g.add(testa);
+    const manico = new THREE.Mesh(new THREE.BoxGeometry(.17, .016, .036), nero());
+    manico.position.set(-.075, Hh + .075, 0); g.add(manico);
+    const leva = new THREE.Group(); leva.position.set(.02, Hh + .125, 0); g.add(leva);
+    const levaB = new THREE.Mesh(new THREE.BoxGeometry(.19, .016, .036), nero()); levaB.position.x = -.09; leva.add(levaB);
+    leva.rotation.z = -0.22;
+    const spina = new THREE.Group(); spina.position.set(-.035, Hh + .1, 0); g.add(spina);
+    const spinaB = new THREE.Mesh(new THREE.CylinderGeometry(.005, .005, .09, 8), metallo()); spinaB.rotation.x = Math.PI / 2; spina.add(spinaB);
+    const anello = new THREE.Mesh(new THREE.TorusGeometry(.018, .004, 8, 24), metallo()); anello.position.z = .055; spina.add(anello);
+    const sigillo = new THREE.Mesh(new THREE.BoxGeometry(.012, .02, .006), tinta(0xffcc00)); sigillo.position.set(0, -.02, .07); spina.add(sigillo);
+    let ago = null, faccia = null;
+    if (c.gauge) {
+      const cassa = new THREE.Mesh(new THREE.CylinderGeometry(.03, .03, .014, 28), metallo());
+      cassa.rotation.x = Math.PI / 2; cassa.position.set(.0, Hh + .09, .043); g.add(cassa);
+      if (!TEX_MANO.t) TEX_MANO.t = texManometro();
+      faccia = new THREE.Mesh(new THREE.CircleGeometry(.026, 32), base(0xffffff, { map: TEX_MANO.t }));
+      faccia.position.set(0, Hh + .09, .0505); g.add(faccia);
+      ago = new THREE.Mesh(new THREE.BoxGeometry(.003, .022, .001), base(0x0a1220)); ago.geometry.translate(0, .011, 0);
+      ago.position.set(0, Hh + .09, .052); g.add(ago);
+    }
+    // uscita: tubo flessibile con ugello, cono (CO2) o lancia
+    const p0 = new THREE.Vector3(.036, Hh + .08, 0);
+    const curva = c.uscita === 'cono'
+      ? new THREE.CatmullRomCurve3([p0, new THREE.Vector3(.09, Hh + .07, .01), new THREE.Vector3(R + .04, Hh - .08, .05), new THREE.Vector3(R + .05, Hh * .55, .07)])
+      : new THREE.CatmullRomCurve3([p0, new THREE.Vector3(.09, Hh + .06, .015), new THREE.Vector3(R + .03, Hh - .1, .04), new THREE.Vector3(R + .04, Hh * .42, .06), new THREE.Vector3(R + .025, Hh * .2, .075)]);
+    const tubo = new THREE.Mesh(new THREE.TubeGeometry(curva, 40, c.uscita === 'cono' ? .014 : .011, 10), nero()); g.add(tubo);
+    const fine = curva.getPoint(1), tang = curva.getTangent(1).normalize();
+    let punta = fine.clone(), dirLocale = tang.clone();
+    if (c.uscita === 'cono') {
+      const cono = new THREE.Mesh(new THREE.CylinderGeometry(.055, .014, .17, 24, 1, true), new THREE.MeshStandardMaterial({ color: 0x23262b, roughness: .5, side: THREE.DoubleSide }));
+      const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, -1, 0), tang);
+      cono.quaternion.copy(q); cono.position.copy(fine).addScaledVector(tang, .085); g.add(cono);
+      const imp = new THREE.Mesh(new THREE.CylinderGeometry(.018, .018, .05, 12), tinta(0x3a3f47)); imp.quaternion.copy(q); imp.position.copy(fine).addScaledVector(tang, -.01); g.add(imp);
+      punta = fine.clone().addScaledVector(tang, .17);
+    } else if (c.uscita === 'lancia') {
+      const dl = new THREE.Vector3(.5, -.15, .85).normalize(), lung = .32;
+      const lancia = new THREE.Mesh(new THREE.CylinderGeometry(.008, .008, lung, 10), metallo());
+      lancia.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dl); lancia.position.copy(fine).addScaledVector(dl, lung / 2); g.add(lancia);
+      punta = fine.clone().addScaledVector(dl, lung); dirLocale = dl;
+    } else {
+      const ug = new THREE.Mesh(new THREE.CylinderGeometry(.009, .014, .04, 12), nero());
+      ug.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), tang); ug.position.copy(fine).addScaledVector(tang, .02); g.add(ug);
+      punta = fine.clone().addScaledVector(tang, .04);
+    }
+    ombra(g, R * 2.4);
+
+    // interno (visibile con lo spaccato)
+    const interno = new THREE.Group(); interno.visible = false; g.add(interno);
+    const alto = Hh - .06, basso = .03, rIn = R * .93;
+    const agMat = tinta(c.agente, { roughness: tipo === 'acqua' ? .2 : .95, transparent: tipo === 'acqua', opacity: tipo === 'acqua' ? .85 : 1 });
+    const agente = new THREE.Mesh(new THREE.CylinderGeometry(rIn, rIn, 1, 40), agMat);
+    interno.add(agente);
+    const gasMat = base(0x7cc4ff, { transparent: true, opacity: .22, depthWrite: false });
+    const gas = new THREE.Mesh(new THREE.CylinderGeometry(rIn, rIn, 1, 40, 1, true), gasMat); interno.add(gas);
+    const pescante = new THREE.Mesh(new THREE.CylinderGeometry(.008, .008, alto - basso + .06, 10), tinta(0xdde3ea, { metalness: .6, roughness: .3 }));
+    pescante.position.set(0, (alto + basso) / 2 + .03, 0); interno.add(pescante);
+    let cart = null;
+    if (c.cartuccia) {
+      cart = new THREE.Mesh(new THREE.CylinderGeometry(.028, .028, .22, 20), tinta(0xd4a017, { metalness: .7, roughness: .3 }));
+      cart.position.set(-.07, alto - .14, 0); interno.add(cart);
+      const coll = new THREE.Mesh(new THREE.CylinderGeometry(.012, .028, .03, 16), tinta(0xa0780e, { metalness: .7, roughness: .3 }));
+      coll.position.set(-.07, alto - .015, 0); interno.add(coll);
+    }
+    // molecole di gas (punti che si agitano) e flusso dell'agente (punti lungo pescante e tubo)
+    const NM = 70, mPos = new Float32Array(NM * 3), mGeo = new THREE.BufferGeometry();
+    mGeo.setAttribute('position', new THREE.BufferAttribute(mPos, 3));
+    const molecole = new THREE.Points(mGeo, new THREE.PointsMaterial({ color: 0xbfe3ff, size: .012, transparent: true, opacity: .95, depthWrite: false }));
+    molecole.frustumCulled = false; interno.add(molecole);
+    const NF = 90, fPos = new Float32Array(NF * 3), fGeo = new THREE.BufferGeometry();
+    fGeo.setAttribute('position', new THREE.BufferAttribute(fPos, 3));
+    const flussoP = new THREE.Points(fGeo, new THREE.PointsMaterial({ color: c.agente, size: .016, transparent: true, opacity: 1, depthWrite: false }));
+    flussoP.frustumCulled = false; g.add(flussoP); flussoP.visible = false;
+    const percorso = new THREE.CatmullRomCurve3([new THREE.Vector3(0, basso + .03, 0), new THREE.Vector3(0, alto + .06, 0), p0.clone()].concat(curva.points.slice(1)).concat([punta.clone()]));
+
+    let livelloU = .74, gasDa = 0;
+    function livello(u, gasU = 1) {          // u = frazione di riempimento dell'agente; gasU = quanto gas c'è sopra (0..1)
+      livelloU = u;
+      const y1 = mix(basso, alto, u);
+      agente.scale.y = Math.max(y1 - basso, .001); agente.position.y = (basso + y1) / 2;
+      const hg = Math.max(alto - y1, .001) * clamp(gasU);
+      gas.scale.y = hg; gas.position.y = c.cartuccia ? alto - hg / 2 : y1 + hg / 2;
+      gasMat.opacity = .22 * Math.min(1, gasU * 1.4); gasDa = y1;
+    }
+    livello(tipo === 'co2' ? .66 : .74);
+    function agita(t, gasU = 1) {
+      for (let i = 0; i < NM; i++) {
+        const a = hash(i * 1.3) * 6.283 + t * (1.2 + hash(i) * 2), r = rIn * (.2 + .7 * hash(i * 2.1));
+        const y0 = c.cartuccia ? alto - (alto - gasDa) * gasU : gasDa;
+        const y = mix(y0 + .01, alto - .01, (hash(i * 3.7) + .25 * Math.sin(t * 3 + i)) % 1);
+        const on = (c.cartuccia && gasU < .05) ? 0 : 1;
+        mPos[i * 3] = Math.cos(a) * r; mPos[i * 3 + 1] = on ? y : -10; mPos[i * 3 + 2] = Math.sin(a) * r * .9;
+      }
+      mGeo.attributes.position.needsUpdate = true;
+    }
+    function flusso(t, u) {                  // u: intensità del flusso 0..1
+      flussoP.visible = u > .01;
+      if (!flussoP.visible) return;
+      for (let i = 0; i < NF; i++) {
+        const s = ((hash(i * 5.1) + t * .9) % 1);
+        const p = percorso.getPointAt(s);
+        const on = hash(i * 9.7) < u;
+        fPos[i * 3] = p.x; fPos[i * 3 + 1] = on ? p.y : -10; fPos[i * 3 + 2] = p.z + .002;
+      }
+      fGeo.attributes.position.needsUpdate = true;
+    }
+    function taglio(dQ, cam) {               // dQ: 0 = intero, 1 = metà anteriore tolta
+      const w = g.getWorldPosition(new THREE.Vector3());
+      const v = new THREE.Vector3(w.x - cam.position.x, 0, w.z - cam.position.z).normalize();
+      piano.normal.copy(v);
+      const d = mix(R + .05, -.005, dQ);
+      piano.constant = dQ <= 0 ? 1e7 : -v.dot(w) + d;
+      interno.visible = dQ > 0.02;
+      if (interno.visible) interno.rotation.y = 0;
+    }
+    return {
+      gruppo: g, corpo, interno, leva, spina, ago, faccia, cart, R, H: Hh, tipo,
+      punta: () => g.localToWorld(punta.clone()),
+      dir: () => dirLocale.clone().transformDirection(g.matrixWorld),
+      testa: () => g.localToWorld(new THREE.Vector3(0, Hh + .1, 0)),
+      quota: y => g.localToWorld(new THREE.Vector3(0, y, 0)),
+      mano: () => g.localToWorld(new THREE.Vector3(0, Hh + .09, .052)),
+      taglio, livello, agita, flusso, gasDa: () => gasDa,
+      pescante: () => g.localToWorld(new THREE.Vector3(0, Hh * .45, 0)),
+      cartPos: () => g.localToWorld(new THREE.Vector3(-.07, alto - .14, 0))
+    };
+  }
+
+  /* ---------------------------------------------------------------- fuoco */
+  const texFiamma = tela(128, 256, (g, w, h) => {
+    const gr = g.createRadialGradient(w / 2, h * .78, 4, w / 2, h * .62, h * .6);
+    gr.addColorStop(0, 'rgba(255,250,210,1)'); gr.addColorStop(.25, 'rgba(255,200,60,.95)'); gr.addColorStop(.55, 'rgba(255,110,20,.7)'); gr.addColorStop(1, 'rgba(255,60,0,0)');
+    g.fillStyle = gr; g.beginPath(); g.moveTo(w / 2, 6);
+    g.bezierCurveTo(w * .95, h * .45, w * .95, h * .95, w / 2, h * .97); g.bezierCurveTo(w * .05, h * .95, w * .05, h * .45, w / 2, 6); g.fill();
+  });
+  function fuoco(pos, op = {}) {
+    const g = new THREE.Group(); g.position.copy(pos); scena.add(g);
+    const N = op.numero || 9, lingue = [], larg = op.larghezza || .22, alt = op.altezza || .42;
+    for (let i = 0; i < N; i++) {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texFiamma, color: op.colore || 0xffffff, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+      g.add(s); lingue.push(s);
+    }
+    const luce = new THREE.PointLight(op.colore || 0xff8a2a, 0, 2.2); luce.position.y = .25; g.add(luce);
+    const fumo = M3.particelle({ tipo: 'fumo', centro: [pos.x, pos.y + .9, pos.z], dimensioni: [.35, 1.2, .35], numero: 12, dimensione: .18, velocita: .2, colore: '#5d6470', opacita: .35, seme: Math.round(pos.x * 7) });
+    scena.add(fumo.oggetto);
+    const scint = M3.particelle({ tipo: 'scintille', centro: [pos.x, pos.y + .08, pos.z], dimensioni: [.2, .5, .2], numero: op.scintille || 40, dimensione: .02, velocita: .6, gravita: .5, vita: 1.2, colore: op.coloreScintille || '#ffb347', seme: Math.round(pos.x * 11) });
+    scena.add(scint.oggetto);
+    return {
+      gruppo: g,
+      aggiorna(t, k, f = 0) {            // k: intensità 0..1 ; f: fumo extra
+        g.visible = k > .002 || f > .002;
+        lingue.forEach((s, i) => {
+          const n = rumore1(t * 2.6 + i * 3.1, i), m = rumore1(t * 4.1 + i * 1.7, i + 9);
+          const sc = k * (0.55 + .6 * n) * (i < 3 ? 1.15 : .8);
+          s.scale.set(larg * .9 * sc, alt * sc * (0.85 + .3 * m), 1);
+          s.position.set((hash(i * 2.3) - .5) * larg * 1.1 + .02 * Math.sin(t * 5 + i), alt * sc * .45, (hash(i * 4.1) - .5) * larg * .6);
+          s.material.opacity = clamp(k * 1.4) * (.75 + .25 * m); s.visible = k > .01;
+        });
+        luce.intensity = 2.2 * k * (.8 + .2 * rumore1(t * 6, 3));
+        fumo.aggiorna(t, clamp(k * .7 + f)); scint.aggiorna(t, clamp(k));
+      }
+    };
+  }
+
+  /* ---------------------------------------------------------------- getto dell'agente */
+  const texPallino = tela(64, 64, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(.45, 'rgba(255,255,255,.7)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function getto(op) {
+    const N = op.numero || 420, pos = new Float32Array(N * 3), geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const pt = new THREE.Points(geo, new THREE.PointsMaterial({ color: op.colore, size: op.dimensione || .03, map: texPallino, transparent: true,
+      opacity: op.opacita || .85, depthWrite: false, blending: op.additivo ? THREE.AdditiveBlending : THREE.NormalBlending }));
+    pt.frustumCulled = false; scena.add(pt);
+    const a = new THREE.Vector3(), b = new THREE.Vector3(), q = new THREE.Vector3();
+    return {
+      punti: pt,
+      aggiorna(t, k, da, verso, apertura = .18, caduta = 0) {    // da → verso, k intensità
+        pt.visible = k > .01; if (!pt.visible) return;
+        a.copy(da); b.copy(verso); const L0 = a.distanceTo(b);
+        for (let i = 0; i < N; i++) {
+          const s = (hash(i * 3.3) + t * (op.velocita || 1.6)) % 1, on = hash(i * 7.7) < k;
+          const sp = apertura * s * L0;
+          q.lerpVectors(a, b, s);
+          q.x += (hash(i * 1.1 + Math.floor(t * 2)) - .5) * sp; q.y += (hash(i * 2.2) - .5) * sp * .6 - caduta * s * s; q.z += (hash(i * 3.9) - .5) * sp;
+          pos[i * 3] = q.x; pos[i * 3 + 1] = on ? q.y : -10; pos[i * 3 + 2] = q.z;
+        }
+        geo.attributes.position.needsUpdate = true;
+      }
+    };
+  }
+  function nube(op) {                       // nube di polvere o vapore (sprite morbidi che si allargano)
+    const g = new THREE.Group(), sp = []; scena.add(g);
+    for (let i = 0; i < (op.numero || 18); i++) {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texPallino, color: op.colore, transparent: true, depthWrite: false, opacity: 0 }));
+      g.add(s); sp.push(s);
+    }
+    return {
+      aggiorna(t, k, centro, raggio) {
+        g.visible = k > .01; if (!g.visible) return;
+        sp.forEach((s, i) => {
+          const u = (hash(i * 2.7) + t * .12) % 1;
+          s.position.set(centro.x + (hash(i * 1.9) - .5) * raggio * 2, centro.y + (hash(i * 4.4) - .3) * raggio * .9 + u * raggio * .3, centro.z + (hash(i * 6.1) - .5) * raggio * 1.4);
+          s.scale.setScalar(raggio * (.6 + .9 * hash(i * 8.3)) * (.8 + .4 * u));
+          s.material.opacity = k * (op.opacita || .35) * Math.sin(Math.PI * clamp(u * 1.1));
+        });
+      }
+    };
+  }
+
+  /* ================================================================ COSTRUZIONE DELLE STAZIONI */
+  const OGG = {};
+  // stazione 0: eroe a polvere
+  const eroe = estintore('polvere'); scena.add(eroe.gruppo); alone(0, 0, .9); anelloPedana(0, 0, .55);
+  const esplosa = M3.esplosa([]);       // (non usata: la vista esplosa la anima a mano su testa, leva, tubo)
+  // stazione 3: modello a bombola ausiliaria
+  const cart = estintore('cartuccia'); cart.gruppo.position.set(3, 0, 0); scena.add(cart.gruppo); alone(3, 0, .9); anelloPedana(3, 0, .55);
+  // stazione 6: le cinque classi
+  const CLASSI = [
+    { k: 'A', nome: 'SOLIDI', icona: 'legna' }, { k: 'B', nome: 'LIQUIDI', icona: 'goccia' }, { k: 'C', nome: 'GAS', icona: 'bombola' },
+    { k: 'D', nome: 'METALLI', icona: 'lingotto' }, { k: 'F', nome: 'OLI DA CUCINA', icona: 'padella' }];
+  function texClasse(cl) {
+    return tela(420, 560, (g, w, h) => {
+      g.fillStyle = '#f7f9fb'; tondoRett(g, 0, 0, w, h, 40); g.fill();
+      g.fillStyle = COL_CLASSE[cl.k]; tondoRett(g, 0, 0, w, 150, 40); g.fill(); g.fillRect(0, 100, w, 50);
+      g.fillStyle = '#fff'; g.font = '900 120px ' + FT; g.textAlign = 'center'; g.fillText(cl.k, w / 2, 122);
+      const cx = w / 2, cy = 340;
+      g.save();
+      if (cl.icona === 'legna') { g.fillStyle = '#8a5a2b'; [[-80, 30], [0, 30], [-40, -5]].forEach(([x, y]) => { tondoRett(g, cx + x - 55, cy + y, 150, 34, 17); g.fill(); }); fiamma2D(g, cx, cy - 10, 110); }
+      if (cl.icona === 'goccia') { g.fillStyle = '#2e90fa'; g.beginPath(); g.moveTo(cx - 60, cy - 40); g.bezierCurveTo(cx - 20, cy - 90, cx - 30, cy - 120, cx - 60, cy - 150); g.bezierCurveTo(cx - 90, cy - 120, cx - 100, cy - 90, cx - 60, cy - 40); g.fill(); g.fillStyle = '#3b4352'; g.fillRect(cx - 120, cy + 40, 240, 22); fiamma2D(g, cx + 40, cy + 40, 120); }
+      if (cl.icona === 'bombola') { g.fillStyle = '#e8eef5'; g.strokeStyle = '#3b4352'; g.lineWidth = 8; tondoRett(g, cx - 110, cy - 90, 80, 170, 34); g.fill(); g.stroke(); g.fillStyle = '#3b4352'; g.fillRect(cx - 82, cy - 112, 24, 24); fiamma2D(g, cx + 50, cy + 70, 140); }
+      if (cl.icona === 'lingotto') { g.fillStyle = '#9aa4b2'; g.beginPath(); g.moveTo(cx - 120, cy + 60); g.lineTo(cx + 120, cy + 60); g.lineTo(cx + 85, cy); g.lineTo(cx - 85, cy); g.closePath(); g.fill(); g.fillStyle = '#ffffff'; g.beginPath(); g.arc(cx, cy - 40, 40, 0, 6.283); g.fill(); fiamma2D(g, cx, cy - 20, 110); }
+      if (cl.icona === 'padella') { g.fillStyle = '#2a2f37'; g.beginPath(); g.ellipse(cx - 10, cy + 40, 110, 30, 0, 0, 6.283); g.fill(); g.fillRect(cx + 90, cy + 34, 110, 14); fiamma2D(g, cx - 10, cy + 30, 140); }
+      g.restore();
+      g.fillStyle = '#0a1220'; g.font = '800 46px ' + FT; g.fillText(cl.nome, w / 2, h - 50);
+    });
+  }
+  const carte = [];
+  function costruisciCarte() {
+    CLASSI.forEach((cl, i) => {
+      const m = new THREE.Mesh(new THREE.BoxGeometry(.42, .56, .02), [tinta(0xdde3ea), tinta(0xdde3ea), tinta(0xdde3ea), tinta(0xdde3ea),
+        new THREE.MeshStandardMaterial({ map: texClasse(cl), roughness: .6 }), tinta(0x2b3445)]);
+      let x, y;
+      if (ORIZ) { x = 6 + (i - 2) * .52; y = .42; }
+      else { const r = i < 3 ? 0 : 1, c = i < 3 ? i - 1 : i - 3.5; x = 6 + c * .5; y = r === 0 ? .98 : .36; }
+      m.userData.base = new THREE.Vector3(x, y, 0); scena.add(m); carte.push(m);
+    });
+  }
+  // stazioni dei tipi
+  const TIPI_FILA = ['polvere', 'co2', 'schiuma', 'acqua', 'F', 'D'];
+  const fila = TIPI_FILA.map((tp, i) => {
+    const x = 10 + i * 1.5, e = estintore(tp); e.gruppo.position.set(x, 0, 0); e.gruppo.rotation.y = -0.35; scena.add(e.gruppo);
+    alone(x + .3, 0.15, 1.0);
+    return e;
+  });
+  // fuochi delle stazioni e oggetti di scena
+  const legna = (x, z) => { const g = new THREE.Group(); [[-.07, .03, 0, .3], [.07, .03, 0, -.3], [0, .085, .0, 1.57]].forEach(([dx, y, dz, r]) => { const l = new THREE.Mesh(new THREE.CylinderGeometry(.03, .03, .28, 10), tinta(0x6b4423, { roughness: .9 })); l.rotation.z = Math.PI / 2; l.rotation.y = r; l.position.set(dx, y, dz); g.add(l); }); g.position.set(x, 0, z); scena.add(g); return g; };
+  const vasca = (x, z, colore) => { const g = new THREE.Group(); const v = new THREE.Mesh(new THREE.CylinderGeometry(.2, .2, .05, 32, 1, true), tinta(0x40464f, { metalness: .6, side: THREE.DoubleSide })); v.position.y = .025; g.add(v); const f = new THREE.Mesh(new THREE.CircleGeometry(.2, 32), tinta(colore || 0x3a2a12, { roughness: .2 })); f.rotation.x = -Math.PI / 2; f.position.y = .03; g.add(f); g.position.set(x, 0, z); scena.add(g); return g; };
+  const FX = TIPI_FILA.map((tp, i) => new THREE.Vector3(10 + i * 1.5 + .62, 0, .32));
+  legna(FX[0].x, FX[0].z); vasca(FX[1].x, FX[1].z); vasca(FX[2].x, FX[2].z); legna(FX[3].x, FX[3].z);
+  // cucina per la classe F: piano cottura e padella
+  const piano = new THREE.Mesh(new THREE.BoxGeometry(.6, .4, .45), tinta(0xd9dde3, { roughness: .4 })); piano.position.set(FX[4].x, .2, FX[4].z); scena.add(piano);
+  const padella = new THREE.Group(); padella.position.set(FX[4].x, .4, FX[4].z); scena.add(padella);
+  const pad = new THREE.Mesh(new THREE.CylinderGeometry(.13, .11, .04, 32, 1, true), tinta(0x22262c, { metalness: .5, side: THREE.DoubleSide })); pad.position.y = .02; padella.add(pad);
+  const olio = new THREE.Mesh(new THREE.CircleGeometry(.12, 32), tinta(0xc79a2c, { roughness: .15 })); olio.rotation.x = -Math.PI / 2; olio.position.y = .03; padella.add(olio);
+  const manicoP = new THREE.Mesh(new THREE.BoxGeometry(.2, .015, .03), tinta(0x22262c)); manicoP.position.set(.2, .03, 0); padella.add(manicoP);
+  // classe D: banco con metallo incandescente
+  const banco = new THREE.Mesh(new THREE.BoxGeometry(.5, .3, .4), tinta(0x56606e, { metalness: .4 })); banco.position.set(FX[5].x, .15, FX[5].z); scena.add(banco);
+  const metallo3 = new THREE.Mesh(new THREE.BoxGeometry(.18, .05, .1), base(0xfff2c8)); metallo3.position.set(FX[5].x, .33, FX[5].z); scena.add(metallo3);
+  const fuochi = [
+    fuoco(new THREE.Vector3(FX[0].x, .05, FX[0].z)),
+    fuoco(new THREE.Vector3(FX[1].x, .04, FX[1].z), { larghezza: .3 }),
+    fuoco(new THREE.Vector3(FX[2].x, .04, FX[2].z), { larghezza: .3 }),
+    fuoco(new THREE.Vector3(FX[3].x, .05, FX[3].z)),
+    fuoco(new THREE.Vector3(FX[4].x, .43, FX[4].z), { larghezza: .2, altezza: .38 }),
+    fuoco(new THREE.Vector3(FX[5].x, .34, FX[5].z), { larghezza: .15, altezza: .22, colore: 0xffffff, coloreScintille: '#ffffff', scintille: 120 })
+  ];
+  // schiuma sulla vasca
+  const schiumaStrato = new THREE.Mesh(new THREE.CylinderGeometry(.2, .2, .03, 32), tinta(0xf6f9fc, { roughness: 1 })); schiumaStrato.position.set(FX[2].x, .04, FX[2].z); scena.add(schiumaStrato);
+  // getti
+  const getti = {
+    polvere: getto({ colore: 0xf1e7c6, dimensione: .045, velocita: 1.4, opacita: .8 }),
+    co2: getto({ colore: 0xffffff, dimensione: .04, velocita: 1.8, opacita: .75 }),
+    schiuma: getto({ colore: 0xffffff, dimensione: .05, velocita: 1.1, opacita: .95 }),
+    acqua: getto({ colore: 0x7cc4ff, dimensione: .028, velocita: 2.0, opacita: .9 }),
+    F: getto({ colore: 0xd8f3f5, dimensione: .03, velocita: 1.5, opacita: .9 }),
+    D: getto({ colore: 0xd8d2c4, dimensione: .04, velocita: 1.1, opacita: .85 }),
+    acquaNo: getto({ colore: 0x5cb3ff, dimensione: .035, velocita: 1.2, opacita: .95 }),
+    uso: getto({ colore: 0xf1e7c6, dimensione: .045, velocita: 1.4, opacita: .8 })
+  };
+  const nubePolvere = nube({ colore: 0xe9e1c8, opacita: .55, numero: 26 });
+  const nubeCO2 = nube({ colore: 0xffffff, opacita: .4, numero: 14 });
+  // stazione 21: come si usa
+  const XU = 21;
+  const uso = estintore('polvere'); uso.gruppo.position.set(XU, 0, 0); uso.gruppo.rotation.y = -0.35; scena.add(uso.gruppo); alone(XU + .4, .1, 1.3);
+  const FU = new THREE.Vector3(XU + .95, 0, .28); legna(FU.x, FU.z);
+  const fuocoUso = fuoco(new THREE.Vector3(FU.x, .05, FU.z), { larghezza: .26, altezza: .5 });
+  // porta di uscita alle spalle (a sinistra, dietro)
+  const porta = new THREE.Group(); porta.position.set(XU - .75, 0, -.55); scena.add(porta);
+  const telaio = new THREE.Mesh(new THREE.BoxGeometry(.5, .95, .04), tinta(0x2b3445)); telaio.position.y = .475; porta.add(telaio);
+  const anta = new THREE.Mesh(new THREE.BoxGeometry(.42, .88, .02), tinta(0x3b4a62)); anta.position.set(0, .44, .02); porta.add(anta);
+  const cartello = new THREE.Mesh(new THREE.PlaneGeometry(.36, .14), base(0xffffff, { map: tela(360, 140, (g, w, h) => {
+    g.fillStyle = '#15803d'; g.fillRect(0, 0, w, h); g.fillStyle = '#fff'; g.font = '800 54px ' + FT; g.textAlign = 'left'; g.fillText('USCITA', 26, 90);
+    g.beginPath(); g.moveTo(268, 50); g.lineTo(318, 70); g.lineTo(268, 90); g.closePath(); g.fill(); g.fillRect(240, 63, 34, 14); }) }));
+  cartello.position.set(0, 1.04, .03); porta.add(cartello);
+  // cartellino di manutenzione appeso al collo dell'estintore d'uso
+  const cartellino = new THREE.Group(); scena.add(cartellino);
+  const tagMesh = new THREE.Mesh(new THREE.PlaneGeometry(.11, .16), new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, roughness: .7, map: tela(220, 320, (g, w, h) => {
+    g.fillStyle = '#fefce8'; g.fillRect(0, 0, w, h); g.fillStyle = '#c8102e'; g.fillRect(0, 0, w, 52);
+    g.fillStyle = '#fff'; g.font = '800 22px ' + FT; g.textAlign = 'center'; g.fillText('CONTROLLO', w / 2, 34);
+    g.fillStyle = '#0a1220'; g.font = '700 17px ' + FM; g.fillText('OGNI 6 MESI', w / 2, 82);
+    g.strokeStyle = '#94a3b8'; g.lineWidth = 2;
+    for (let i = 0; i < 5; i++) { const y = 110 + i * 40; g.strokeRect(22, y, 176, 30); g.fillStyle = '#22a04b'; if (i < 3) { g.font = '900 26px ' + FT; g.fillText('✓', 46, y + 25); } }
+    g.fillStyle = '#334155'; g.beginPath(); g.arc(w / 2, 14, 7, 0, 6.283); g.fill(); }) }));
+  tagMesh.position.y = -.09; cartellino.add(tagMesh);
+  const filo = new THREE.Mesh(new THREE.CylinderGeometry(.0015, .0015, .06, 6), tinta(0x334155)); filo.position.y = -.0; cartellino.add(filo);
+
+  /* ================================================================ TELECAMERA */
+  const ins = (r) => M3.distanzaPerInquadrare(r, camera, .9);
+  const K = [];
+  const chiave = (t, b, az, el, r, extra = {}) => K.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(r) }, extra));
+  const MV = 1.3;                                           // durata degli spostamenti fra le stazioni
+  // 0 apertura: orbita attorno all'eroe
+  chiave(0, [0, .44, 0], -48, 18, .78);
+  chiave(E(0) - .2, [0, .44, 0], 12, 12, .62, { facilita: 'lineare' });
+  // 1 spaccato
+  chiave(S(1) + 1.0, [0, .45, 0], 22, 10, .6);
+  chiave(E(1) - .1, [0, .45, 0], 22, 10, .6);
+  // 2 meccanismo: un po' più vicino sulla parte alta
+  chiave(S(2) + .9, [.03, .5, 0], 14, 8, .55);
+  chiave(E(2) - .1, [.03, .5, 0], 14, 8, .55);
+  // 3 manometro
+  const posMano = eroe.mano();
+  chiave(S(3) + 1.1, [posMano.x, posMano.y, posMano.z], 6, 4, .07);
+  chiave(E(3) - .1, [posMano.x, posMano.y, posMano.z], 6, 4, .07);
+  // 4 bombola ausiliaria
+  chiave(S(4) + MV + .2, [3, .45, 0], 18, 10, .6);
+  chiave(E(4) - .1, [3, .45, 0], 18, 10, .6);
+  // 5 classi
+  chiave(S(5) + MV, [6, ORIZ ? .42 : .67, 0], 0, 4, ORIZ ? .78 : .95);
+  chiave(E(5) - .1, [6, ORIZ ? .42 : .67, 0], 0, 4, ORIZ ? .78 : .95);
+  // 6..11 i tipi
+  for (let i = 0; i < 6; i++) {
+    const k = 6 + i, x = 10 + i * 1.5 + .3;
+    chiave(S(k) + MV, [x, .42, .12], 4, 10, .78);
+    chiave(E(k) - .1, [x, .42, .12], 4, 10, .78);
+  }
+  // 12-13 come si usa
+  chiave(S(12) + MV + .2, [XU + .2, .45, 0], 8, 12, .95);
+  chiave(E(13) - .1, [XU + .2, .45, 0], 8, 12, .95);
+  // 14 cartellino
+  const posTag = uso.quota(uso.H - .02);
+  chiave(S(14) + 1.2, [posTag.x + .05, posTag.y - .08, posTag.z + .1], -6, 4, .2);
+  chiave(E(14) - .1, [posTag.x + .05, posTag.y - .08, posTag.z + .1], -6, 4, .2);
+  // 15 chiusura: tutta la fila
+  chiave(S(15) + 1.6, [13.75, .5, 0], 0, 16, ORIZ ? 3.0 : 2.9);
+  chiave(TOTAL, [13.75, .5, 0], 0, 16, ORIZ ? 3.0 : 2.9);
+  const cam = M3.telecamera(camera, K, {});
+
+  /* ================================================================ SCHEDE (punto 3D a ogni fotogramma) */
+  const SCH = [];
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore });
+  const vs = (dx, dy) => ORIZ ? { dx: dx * 1.4, dy: dy * .7 } : { dx, dy };
+  // 1 spaccato
+  scheda('agente', 'Agente estinguente', 'POLVERE, ACQUA, SCHIUMA…', () => eroe.quota(.2), vs(-250, 150), parola(1, "l'agente"), E(1) - .5);
+  scheda('azoto', 'Gas in pressione', 'DI SOLITO AZOTO', () => eroe.quota(.66), vs(250, -170), parola(1, 'gas'), E(1) - .5);
+  // 2 meccanismo
+  scheda('valvola', 'Leva e valvola', 'SI APRE QUANDO PREMI', () => eroe.testa(), vs(-240, -140), parola(2, 'valvola'), parola(2, 'pescante') - .1);
+  scheda('pescante', 'Tubo pescante', "PRENDE L'AGENTE DAL FONDO", () => eroe.pescante(), vs(-250, 120), parola(2, 'pescante'), E(2) - .5);
+  scheda('manichetta', 'Manichetta', 'ESCE QUI', () => eroe.punta(), vs(220, -60), parola(2, 'manichetta'), E(2) - .3);
+  // 3 manometro
+  scheda('verde', 'Lancetta nel verde', 'ESTINTORE CARICO', () => eroe.mano(), vs(0, -300), parola(3, 'verde') - .3, E(3) - .3, '#22a04b');
+  // 4 cartuccia
+  scheda('cart', 'Bombola di gas ausiliaria', 'PRESSURIZZA AL MOMENTO DELL\'USO', () => cart.cartPos(), vs(-240, -200), parola(4, 'bombola'), E(4) - .5);
+  scheda('nomano', 'Senza manometro', 'SI CONTROLLA IN ALTRO MODO', () => cart.testa(), vs(220, -150), parola(4, 'manometro') - .2, E(4) - .4);
+  // 6..11 tipi
+  const TIT = [['A polvere', 'CLASSI A · B · C'], ['Ad anidride carbonica', 'CLASSE B · CONO RIGIDO'], ['A schiuma', 'CLASSI A · B'],
+               ['Ad acqua', 'CLASSE A'], ['Classe F', 'OLI E GRASSI DA CUCINA'], ['Classe D', 'METALLI · PERSONALE FORMATO']];
+  TIT.forEach(([t, s], i) => scheda('tipo' + i, t, s, () => fila[i].testa(), vs(-170, -170), S(6 + i) + MV + .1, E(6 + i) - .4));
+  scheda('freddo', 'Circa −78 °C', 'IMPUGNA SOLO LA PARTE ISOLATA', () => fila[1].punta(), vs(230, 40), parola(7, 'settantotto', 0, .35) - .2, parola(7, 'residui', 0, .6) - .1, '#2e90fa');
+  scheda('sporca', 'Sporca e toglie visibilità', 'IRRITA LE VIE RESPIRATORIE', () => FX[0].clone().add(new THREE.Vector3(0, .3, 0)), vs(160, -260), parola(6, 'sporca', 0, .7) - .1, E(6) - .4, '#f59e0b');
+  scheda('tensione', 'Apparecchi in tensione', "SOLO SE L'ETICHETTA LO PERMETTE", () => fila[3].quota(.4), vs(230, -200), parola(9, 'tensione', 0, .6) - .5, E(9) - .4, '#f59e0b');
+  scheda('maiacqua', "Mai acqua sull'olio", 'LO SCHIZZA E ALLARGA IL FUOCO', () => padella.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, .25, 0)), vs(170, -230), parola(10, 'acqua', 0, .25) - .1, parola(10, 'serve', 0, .4) + .6, '#ef4136');
+  scheda('coperta', 'O una coperta antifiamma', 'SE IL FUOCO È ANCORA PICCOLO', () => padella.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, .1, 0)), vs(200, 150), parola(10, 'coperta', 0, .6) - .2, E(10) - .4);
+  // 12 uso: i passi
+  scheda('p1', '1 · Togli la spina', 'SPINA DI SICUREZZA', () => uso.testa(), vs(-230, -170), parola(12, 'togli'), parola(12, 'resta') - .15);
+  scheda('p2', '2 · Resta a distanza', 'VIA DI FUGA ALLE SPALLE', () => porta.localToWorld(new THREE.Vector3(0, 1.04, 0)), vs(-60, -180), parola(12, 'resta'), parola(12, 'punta') - .15, '#15803d');
+  scheda('p3', '3 · Punta alla base', 'DELLE FIAMME, POI PREMI LA LEVA', () => FU.clone().add(new THREE.Vector3(0, .05, 0)), vs(120, -330), parola(12, 'punta'), parola(12, 'muovi') - .15);
+  scheda('p4', '4 · Muovi a ventaglio', 'DA UN LATO ALL\'ALTRO', () => FU.clone().add(new THREE.Vector3(0, .05, 0)), vs(120, -330), parola(12, 'muovi'), E(12) - .3);
+  // 13 uscire: 112 senza punto
+  scheda('112', 'Esci e chiama il 112', 'NUMERO UNICO DI EMERGENZA', null, null, parola(13, 'esci', 0, .75) - .15, E(13) - .3, '#ef4136');
+  // 14 cartellino
+  scheda('semestre', 'Controllo ogni 6 mesi', 'LO FA UN TECNICO', () => cartellino.localToWorld(new THREE.Vector3(0, -.1, 0)), vs(-200, -250), parola(14, 'tecnico'), E(14) - .4);
+  scheda('ricarica', 'Dopo ogni uso: ricarica', 'ANCHE SE USATO IN PARTE', () => cartellino.localToWorld(new THREE.Vector3(0, -.14, 0)), vs(200, 230), parola(14, 'dopo'), E(14) - .4);
+  // 15 chiusura
+  scheda('fine', 'Protezione Civile', 'GRUPPO COMUNALE · GENZANO DI ROMA', null, null, S(15) + 1.7, TOTAL + 1);
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  const fonte = document.getElementById('fonte');
+  fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+
+  /* ================================================================ ANIMAZIONE */
+  function anima(t) {
+    // --- eroe: vista esplosa (scena 1), poi spaccato (1-3), leva e flusso (2)
+    const e0 = S(1) + .5;
+    const uEsp = ease.morbida(prog(t, e0, 1.0)) * (1 - ease.morbida(prog(t, e0 + 1.9, .9)));
+    eroe.leva.position.y = eroe.H + .125 + .22 * uEsp; eroe.spina.position.y = eroe.H + .1 + .18 * uEsp;
+    eroe.corpo.position.y = -.12 * uEsp;
+    const tagliaDa = parola(1, 'dentro') - .2;
+    let dQ = ease.morbida(prog(t, tagliaDa, 1.0));
+    dQ *= 1 - ease.morbida(prog(t, S(3) + .2, .8));           // si richiude per il manometro
+    eroe.taglio(dQ, camera);
+    const tLeva = parola(2, 'premi') - .1;
+    const premuta = ease.outCubic(prog(t, tLeva, .35)) * (1 - ease.morbida(prog(t, E(2) - .6, .5)));
+    eroe.leva.rotation.z = mix(-0.22, 0.03, premuta);
+    const fl = clamp(prog(t, parola(2, 'pressione'), .4)) * (1 - prog(t, E(2) - .6, .5));
+    eroe.livello(.74 - .12 * clamp(prog(t, parola(2, 'pressione'), D(2) * .6)) * (t < S(3) ? 1 : 0));
+    eroe.agita(t); eroe.flusso(t, fl);
+    getti.polvere.aggiorna(t, 0);
+    // getto dell'eroe dalla manichetta (piccolo, mentre esce l'agente)
+    const pe = eroe.punta(), de = eroe.dir();
+    if (t < S(3)) { getti.uso.aggiorna(t, fl * .6, pe, pe.clone().addScaledVector(de, .25).add(new THREE.Vector3(.25, -.05, .2)), .5, .1); }
+    // manometro: ago che oscilla e si ferma nel verde
+    const am = t < S(3) + .8 ? -1.1 : mix(-1.1, 0, ease.outBack(prog(t, S(3) + .8, 1.2)));
+    eroe.ago.rotation.z = am + .05 * Math.sin(t * 9) * (1 - prog(t, S(3) + 2, .8));
+    // --- bombola ausiliaria
+    const dC = ease.morbida(prog(t, S(4) + MV + .3, 1.0));
+    cart.taglio(dC, camera);
+    const gU = ease.morbida(prog(t, parola(4, 'pressurizzano'), 1.4));
+    cart.livello(.74, gU); cart.agita(t, gU);
+    // --- carte delle classi
+    const tCarte = [parola(5, 'A', 0, .45), parola(5, 'B', 0, .55), parola(5, 'C', 0, .65), parola(5, 'D', 0, .75), parola(5, 'F', 0, .85)];
+    carte.forEach((m, i) => {
+      const u = ease.outBack(prog(t, S(5) + MV - .3 + i * .18, .5)), b = m.userData.base;
+      const salto = Math.sin(Math.PI * clamp(prog(t, tCarte[i] - .1, .6)));
+      m.visible = t > S(5) - .5 && t < E(5) + .5;
+      m.position.set(b.x, b.y - (1 - u) * .25 + .05 * salto, b.z + .08 * salto); m.scale.setScalar(Math.max(u * (1 + .12 * salto), .001));
+      m.rotation.y = (1 - u) * 1.2 + .04 * Math.sin(t * 1.3 + i);
+    });
+    // --- tipi: fuoco acceso all'arrivo, spento dal getto
+    TIPI_FILA.forEach((tp, i) => {
+      const k = 6 + i, e = fila[i], f = fuochi[i];
+      let tGetto, tSpento;
+      if (tp === 'polvere') { tGetto = parola(k, 'polvere', 0, .2) + .3; tSpento = tGetto + 2.2; }
+      else if (tp === 'co2') { tGetto = parola(k, 'gas', 0, .3); tSpento = tGetto + 2.6; }
+      else if (tp === 'schiuma') { tGetto = parola(k, 'schiuma', 0, .1) + .5; tSpento = tGetto + 2.4; }
+      else if (tp === 'acqua') { tGetto = parola(k, 'acqua', 0, .15) + .3; tSpento = tGetto + 2.2; }
+      else if (tp === 'F') { tGetto = parola(k, 'estintore', 0, .45) - .1; tSpento = tGetto + 2.2; }
+      else { tGetto = parola(k, 'speciali', 0, .5) - .3; tSpento = tGetto + 2.4; }
+      const acceso = fin(t, S(k) - 1.5, null, .6) * (1 - ease.morbida(prog(t, tSpento - 1.2, 1.4)));
+      let k2 = acceso;
+      if (tp === 'F') {                                          // l'acqua sull'olio fa divampare il fuoco
+        const tw = parola(k, 'acqua', 0, .25) - .1;
+        k2 = acceso * (1 + .9 * ease.outCubic(prog(t, tw + .55, .4)) * (1 - prog(t, tw + 1.6, 1)));
+        getti.acquaNo.aggiorna(t, fin(t, tw, tw + .8, .1, .2), padella.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(-.15, .75, .1)), padella.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, .05, 0)), .12, 0);
+      }
+      const vis = t > S(k) - 1.6 && t < E(k) + 1.6;
+      f.aggiorna(t, vis ? k2 : 0, vis ? .25 * prog(t, tSpento - 1, 1.5) * (1 - prog(t, tSpento + 1.5, 2)) : 0);
+      const gk = vis ? fin(t, tGetto, tSpento + .3, .25, .35) : 0;
+      const p0 = e.punta(), bersaglio = FX[i].clone().add(new THREE.Vector3(-.02, tp === 'F' ? .44 : tp === 'D' ? .34 : .06, 0));
+      const sweep = .08 * Math.sin(t * 3.2);
+      bersaglio.z += sweep;
+      getti[tp].aggiorna(t, gk, p0, bersaglio, tp === 'acqua' ? .1 : tp === 'co2' ? .32 : .26, tp === 'acqua' ? .08 : 0);
+      if (tp === 'schiuma') { const u = ease.morbida(prog(t, tGetto + .4, 1.6)); schiumaStrato.scale.set(Math.max(u, .001), 1, Math.max(u, .001)); schiumaStrato.visible = u > .01 && vis; }
+      if (tp === 'polvere') nubePolvere.aggiorna(t, vis ? clamp(prog(t, tGetto + .8, 2)) * (1 - prog(t, E(k) - .3, 1.2)) : 0, FX[0].clone().add(new THREE.Vector3(-.3, .25, 0)), .55);
+      if (tp === 'co2') nubeCO2.aggiorna(t, gk * .9, p0.clone().lerp(bersaglio, .5), .2);
+      if (tp === 'D') { metallo3.material.color.setHex(acceso > .2 ? 0xfff2c8 : 0x8b8f96); }
+    });
+    // --- uso: spina, leva, getto a ventaglio, poi il fuoco che riparte
+    const tSpina = parola(12, 'togli') + .3;
+    const sp = ease.morbida(prog(t, tSpina, .7));
+    uso.spina.position.z = .25 * sp; uso.spina.position.y = uso.H + .1 - .45 * ease.parte(prog(t, tSpina + .8, .5)) * (t > tSpina + .8 ? 1 : 0);
+    uso.spina.visible = t < tSpina + 1.5;
+    const tLevaU = parola(12, 'leva', 0, .75) - .1;
+    const getU = clamp(prog(t, tLevaU, .25)) * (1 - prog(t, parola(13, 'secondi', 0, .1) + .2, .4));
+    uso.leva.rotation.z = mix(-0.22, 0.03, clamp(prog(t, tLevaU, .25)) * (1 - prog(t, E(13) - .5, .5)));
+    const tVent = parola(12, 'ventaglio', 0, .9) - .6;
+    const amp = .16 * clamp(prog(t, tVent, .4));
+    const bersU = FU.clone().add(new THREE.Vector3(-.05, .06, Math.sin((t - tVent) * 3.4) * amp));
+    getti.uso.aggiorna(t, t >= S(12) - .2 ? getU : 0, uso.punta(), bersU, .28, 0);
+    if (t >= S(12) - .2) {
+      const scende = ease.morbida(prog(t, tLevaU + .3, 3.5));
+      const risale = ease.morbida(prog(t, parola(13, 'spegne', 0, .35), 2.2));
+      const kU = fin(t, S(12) - 1, null, .6) * mix(1, .35, scende) * mix(1, 1.5, risale) * (t > E(13) + .2 ? 0 : 1);
+      fuocoUso.aggiorna(t, kU, .6 * prog(t, parola(13, 'fumo', 0, .55), 1.4));
+    } else fuocoUso.aggiorna(t, 0);
+    // --- cartellino che oscilla appeso al collo
+    const pc = uso.quota(uso.H - .005); cartellino.position.set(pc.x + .07, pc.y, pc.z + .07); cartellino.rotation.set(0, -.35, .12 * Math.sin(t * 1.6));
+    cartellino.visible = t > S(13);
+    // --- visibilità per stazioni (meno oggetti da disegnare)
+    const k = sceneA(t);
+    eroe.gruppo.visible = t < E(4) + .5 || k === 15; cart.gruppo.visible = t > S(4) - 1.5 && t < E(5) + 1 || k === 15;
+    fila.forEach((e, i) => { e.gruppo.visible = t > S(5) || k === 15; });
+    uso.gruppo.visible = t > S(11); porta.visible = t > S(11) && t < E(14);
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    cam.applica(t);
+    camera.near = .01; camera.far = 60; camera.updateProjectionMatrix();
+    anima(t);
+    vicino.disegna(scena, camera);
+    const k = sceneA(t), c = CONFIG.capitoloDi[k], sc = SC[k];
+    const primaDelCap = CONFIG.capitoloDi.indexOf(c);
+    IMP.aggiorna(stato, t, { passoHUD: c + (k === 0 ? 1 : (k === primaDelCap ? clamp((t - sc.inizio) / .4) : 1)), hud: CONFIG.hud[k], notaVisibile: true });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const s of SCH) {
+      let punto = null, vis = true, p = null;
+      if (s.punto) {
+        p = M3.proietta(s.punto(), camera, { zona: L.zonaSchede, margine: L.margine });
+        punto = p.punto; vis = p.visibile;
+      }
+      proiezioni[s.id] = p;
+      IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
+        inizio: s.inizio, fine: s.fine, visibile: vis,
+        centro: s.punto ? null : { x: W / 2, y: s.id === 'fine' ? (L.zona.alto + L.zona.basso) / 2 - (ORIZ ? 230 : 300) : (L.zona.alto + L.zona.basso) / 2 - (ORIZ ? 200 : 260) } });
+    }
+    const testo = k === 15 ? CONFIG.fonte : '';
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.display = testo ? '' : 'none';
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(s => s.punto).map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine, proiezione: proiezioni[s.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  IMP.caricaFont().then(() => { costruisciCarte(); eroe.gruppo.updateMatrixWorld(true); render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>
