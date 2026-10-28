@@ -84,4 +84,5 @@ La proposta è assegnata alla I Commissione. Sono coinvolte anche la IV, la VI, 
 
 - [Consiglio regionale del Lazio — Proposta di legge n. 281 del 12 giugno 2026 (testo e relazione, PDF)](https://www.consiglio.regione.lazio.it/binary/consiglio_regionale/tbl_commissioni_documenti/PL_281_12062026.pdf)
 - [Consiglio regionale del Lazio, I Commissione — Tutela di sanitari, trasportatori e volontari: in prima Commissione ascoltate aziende e sindacati sulla proposta di legge (1° ottobre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=commissioniNewsDettaglio&cid=1&id=4182)
+- [Consiglio regionale del Lazio, I Commissione — Tutela di sanitari, trasportatori e volontari: ascoltato l'assessore Ciacciarelli (27 ottobre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=newsDettaglio&id=comm-4209)
 - [Normattiva — Legge 14 agosto 2020, n. 113, disposizioni in materia di sicurezza per gli esercenti le professioni sanitarie e socio-sanitarie nell'esercizio delle loro funzioni](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2020-08-14;113)
