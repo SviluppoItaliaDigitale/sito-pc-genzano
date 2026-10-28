@@ -2109,3 +2109,4 @@ supercalcolatori
 quater
 # --- Comunicati stampa 24/10/2026: sigla AIB minuscola nell'indirizzo citato come testo ---
 aib
+subemendamenti
