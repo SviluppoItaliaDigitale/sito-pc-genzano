@@ -76,7 +76,7 @@ Conosci un anziano che vive solo vicino a te?
 - Vai a trovarlo almeno 2 volte a settimana.
 - Controlla che abbia il riscaldamento acceso.
 - Aiutalo a fare la spesa.
-- Parla con il medico di famiglia se stai preoccupato.
+- Parla con il medico di famiglia se sei preoccupato.
 
 Un saluto alla porta può salvare una vita.
 

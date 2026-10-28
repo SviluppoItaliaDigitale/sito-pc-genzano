@@ -32,7 +32,7 @@ Le **cronache meteorologiche** mostrano che effettivamente:
 
 - **verso metà novembre** si osserva frequentemente un **rialzo termico** di pochi giorni;
 - **cielo sereno** e **mitezza** contrastano con il freddo precedente e successivo;
-- **fenomeno** legato a **anticicloni** tardo-autunnali;
+- **fenomeno** legato ad **anticicloni** tardo-autunnali;
 - **non tutti gli anni** si presenta (è un fenomeno statistico);
 - **ne esiste** anche una versione **di Sant'Anna** (26 luglio) per l'estate.
 
@@ -54,7 +54,7 @@ Oggi la **previsione scientifica** si basa su:
 - **modelli** matematici complessi;
 - **satelliti** e **radar**;
 - **rete** di stazioni meteo;
-- **reanalisi** storiche;
+- **rianalisi** storiche;
 - **intelligenza artificiale** applicata ai dati;
 - **cooperazione internazionale** (ECMWF, WMO).
 
@@ -102,7 +102,7 @@ Le ricette tipiche della festa:
 - **vino novello** (non appena fermentato);
 - **castagne** arrostite;
 - **zuppa** di castagne e fagioli;
-- **focacce** con le **ciccioli**;
+- **focacce** con i **ciccioli**;
 - **pane** fatto in casa;
 - **formaggio** fresco;
 - **mele cotte**.

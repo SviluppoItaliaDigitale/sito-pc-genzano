@@ -77,7 +77,7 @@ Chi raggiunge il cimitero **a piedi** da zone vicine:
 ### Sicurezza
 - **attenzione** ai dislivelli (gradini, cordoli);
 - **scarpe** comode (non tacchi su pavimentazioni non livellate);
-- **luce** adeguata se visite al calare della luce;
+- **luce** adeguata se si visita al calare della luce;
 - **acqua** per pulire tombe (fontane di solito presenti);
 - **non arrampicarsi** su monumenti antichi.
 
@@ -134,7 +134,7 @@ Se durante la visita si verifica:
 - **fuoco** da lumino;
 - **smarrimento** di bambino;
 
-→ **chiamare il 112 immediatamente** e seguire istruzioni.
+→ **chiamare il 112 immediatamente** e seguire le istruzioni.
 
 ## Sul cimitero in sé
 

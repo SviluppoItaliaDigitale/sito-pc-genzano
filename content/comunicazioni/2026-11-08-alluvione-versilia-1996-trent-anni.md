@@ -29,7 +29,7 @@ Nella tarda sera del 19 giugno:
 - **bacini** idrografici piccoli e ripidi si saturarono;
 - **frane** si innescarono su versanti denudati dalla vegetazione;
 - **torrenti** tracimarono simultaneamente;
-- **detriti** di enorme entità riversarono a valle.
+- **detriti** di enorme entità si riversarono a valle.
 
 Le **cave di marmo** del territorio, dismesse o attive, contribuirono a rendere i versanti più fragili.
 

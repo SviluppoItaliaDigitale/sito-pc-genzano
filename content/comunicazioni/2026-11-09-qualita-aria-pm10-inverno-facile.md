@@ -64,7 +64,7 @@ In inverno l'aria può peggiorare anche nei Castelli Romani. Le cause principali
 - Brucia solo legna asciutta nel camino.
 - Cerca di non usare stufe a legna vecchie.
 - Vai a piedi o in bicicletta quando puoi.
-- Non riscaldare troppo casa: ogni grado in meno aiuta.
+- Non riscaldare troppo la casa: ogni grado in meno aiuta.
 
 ### Nei giorni di smog
 
