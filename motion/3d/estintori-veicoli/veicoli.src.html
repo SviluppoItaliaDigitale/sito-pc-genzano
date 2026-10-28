@@ -654,7 +654,10 @@ SOTT.forEach(f => {
   chiave(E(6) - .1, [XB + 1.5, 1.2, 1.4], -12, 20, ORIZ ? 4.4 : 4.1);
   // 7 l'estintore sul fuoco in coda
   chiave(S(7) + MV, [XB - bus.L2 + .4, .9, 1.6], 38, 16, ORIZ ? 3.3 : 3.1);
-  chiave(E(7) - .1, [XB - bus.L2 + .4, .9, 1.6], 38, 16, ORIZ ? 3.3 : 3.1);
+  // poi vicino a chi usa l'estintore: spina, base delle fiamme, leva
+  const bUso = bus.punto(-bus.L2 - .25, .65, 1.3);
+  chiave(parola(7, 'spina') - .3, [bUso.x, bUso.y, bUso.z], 66, 12, ORIZ ? 1.55 : 1.45);
+  chiave(E(7) - .1, [bUso.x, bUso.y, bUso.z], 66, 12, ORIZ ? 1.55 : 1.45);
   // 8 camion
   chiave(S(8) + 2.6, [XC - .2, 1.3, 1.0], -22, 14, ORIZ ? 4.6 : 4.3);
   chiave(E(8) - .1, [XC - .2, 1.3, 1.0], -22, 14, ORIZ ? 4.6 : 4.3);
@@ -685,8 +688,8 @@ SOTT.forEach(f => {
   scheda('dovebus', "Dov'è l'estintore", 'GUARDALO QUANDO SALI', () => posBus0.clone().add(new THREE.Vector3(0, .35, 0)), vs(150, -260), parola(5, 'guarda') - .1, parola(5, 'uscite') - .1);
   scheda('uscite', 'Uscite di emergenza', 'E MARTELLETTO PER IL VETRO', () => bus.punto(bus.L2 - 2.7, 1.95, bus.Wb / 2 - .1), vs(-150, -250), parola(5, 'uscite'), E(5) - .4, '#15803d');
   scheda('fuori', 'Prima fate scendere tutti', 'POI SI PENSA AL FUOCO', null, null, parola(6, 'scendere') - .1, E(6) - .3, '#15803d');
-  scheda('passi', 'Spina, base, leva', 'GETTI BREVI', () => posBus1.clone().add(new THREE.Vector3(0, .9, 0)), vs(-160, -240), parola(7, 'spina') - .1, parola(7, 'cala') - .2);
-  scheda('scendi', 'Non si spegne? Scendi', 'E ALLONTANATI', () => posBus1.clone().add(new THREE.Vector3(0, .9, 0)), vs(-160, -240), parola(7, 'cala') - .1, E(7) - .3, '#ef4136');
+  scheda('passi', 'Spina, base, leva', 'GETTI BREVI', () => estBus.testa(), vs(-160, -240), parola(7, 'spina') - .1, parola(7, 'cala') - .2);
+  scheda('scendi', 'Non si spegne? Scendi', 'E ALLONTANATI', () => estBus.testa(), vs(-160, -240), parola(7, 'cala') - .1, E(7) - .3, '#ef4136');
   scheda('panno', 'Pannello arancione', 'MERCI PERICOLOSE', () => tir.punto(-.75, 1.85, 1.02), vs(140, -240), parola(8, 'arancione') - .3, parola(8, 'fuoco') - .2, '#f59e0b');
   scheda('viatir', 'Non avvicinarti', 'ALLONTANATI E CHIAMA IL 112', () => tir.punto(-2.4, 1.2, .9), vs(160, -260), parola(8, 'avvicinarti') - .2, E(8) - .3, '#ef4136');
   scheda('litio', 'Batteria al litio', 'PUÒ RIACCENDERSI ORE DOPO', () => autoE.punto(0, .45, .8), vs(-160, -260), parola(9, 'litio') - .2, E(9) - .4, '#ef4136');
