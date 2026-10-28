@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-27T18:21:22+00:00",
+  "generato": "2026-10-28T14:20:48+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-10-19T03:10:00",
    "gdacsId": null,
-   "lastUpdate": "2026-10-26T16:26:37.686300",
+   "lastUpdate": "2026-10-28T08:51:30.454061",
    "n_aois": 2,
    "n_products": 2,
    "name": "Flood in Alicante-Valencia Regions, Spain"
