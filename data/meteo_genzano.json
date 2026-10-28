@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-28T16:59",
+  "aggiornato": "2026-10-28T18:12",
   "data_lunga": "mercoledì 28 ottobre 2026",
-  "aggiornato_label": "mercoledì 28 ottobre 2026, ore 16:59",
+  "aggiornato_label": "mercoledì 28 ottobre 2026, ore 18:12",
   "alba": "06:36",
   "tramonto": "17:09",
   "corrente": {
-    "temp": 14.7,
-    "percepita": 13.5,
+    "temp": 12.9,
+    "percepita": 12.0,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 68,
-    "vento": 6,
-    "raffiche": 20
+    "umidita": 81,
+    "vento": 5,
+    "raffiche": 19
   },
   "giorni": [
     {
@@ -32,7 +32,7 @@
       "cielo": "Parzialmente nuvoloso",
       "tmax": 17,
       "tmin": 9,
-      "pioggia": 0,
+      "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 18,
       "uv": 4,
@@ -44,7 +44,7 @@
       "cielo": "Rovesci",
       "tmax": 15,
       "tmin": 10,
-      "pioggia": 50,
+      "pioggia": 66,
       "pioggia_mm": 4.3,
       "raffiche": 21,
       "uv": 4,
@@ -56,7 +56,7 @@
       "cielo": "Coperto",
       "tmax": 17,
       "tmin": 8,
-      "pioggia": 10,
+      "pioggia": 8,
       "pioggia_mm": 0,
       "raffiche": 21,
       "uv": 4,
