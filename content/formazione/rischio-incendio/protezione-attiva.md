@@ -17,6 +17,51 @@ A differenza della [protezione passiva](/formazione/rischio-incendio/protezione-
 
 Gli **estintori portatili** sono i mezzi di primo intervento più diffusi su **principi di incendio**. Non sono efficaci in una fase avanzata dell'incendio.
 
+Come funziona un estintore portatile, dentro, lo mostra il nostro video in 3D: il serbatoio, la valvola con lo stelo e la molla, il tubo pescante, il manometro e i diversi tipi.
+
+{{< video src="/video/2026-10-28-estintori-video-3d.mp4"
+          poster="/video/2026-10-28-estintori-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: dentro l'estintore, come funziona e quale usare"
+          caption="L'estintore aperto in 3D: valvola, tubo pescante, manometro e i diversi tipi. Le figure sono schematiche e non in scala: ne parliamo nell'articolo [Dentro l'estintore](/comunicazioni/2026-10-28-estintori-video-3d/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video «Dentro l'estintore»</strong></summary>
+
+Hai un estintore in casa, in ufficio o in auto. Ma sai davvero come funziona, e quale usare?
+
+Apriamolo. Dentro c'è l'agente che spegne il fuoco, e un gas che lo tiene sotto pressione: di solito azoto.
+
+Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta. Guardiamo dentro la valvola. Una molla e la pressione tengono lo stelo premuto sulla guarnizione: il passaggio è chiuso. Togli la spina: non succede niente, la spina blocca solo la leva. Premi la leva: lo stelo scende, e l'agente passa. Lasci la leva: la valvola si richiude, e il getto si ferma.
+
+Il manometro ti dice se è carico: la lancetta deve stare nel verde.
+
+Altri modelli hanno una piccola bombola di gas a parte: si pressurizzano solo quando li usi, e non hanno il manometro.
+
+Ogni estintore è fatto per certi fuochi. Le lettere sull'etichetta lo dicono: A solidi, B liquidi, C gas, D metalli, F oli e grassi da cucina.
+
+Il più diffuso è a polvere. Va bene su solidi, liquidi e gas, anche vicino a impianti elettrici. Però sporca, toglie visibilità e irrita le vie respiratorie.
+
+Quello ad anidride carbonica ha un cono rigido. Il gas esce a circa −78 °C: impugnalo solo dalla parte isolata. Non lascia residui, ma sui solidi il fuoco può riaccendersi, e nei locali piccoli toglie ossigeno.
+
+La schiuma raffredda e copre il combustibile, separandolo dall'aria. Funziona su solidi e liquidi infiammabili.
+
+L'estintore ad acqua raffredda bene i solidi. Acqua e schiuma, su impianti elettrici sotto tensione, solo se l'etichetta lo permette.
+
+In cucina, sull'olio che brucia, mai acqua: serve un estintore di classe F, o una coperta antifiamma. Polvere e anidride carbonica sull'olio sono pericolose.
+
+Per i metalli, come magnesio o sodio, esistono estintori speciali, da usare solo con la formazione giusta.
+
+Come si usa? Togli la spina di sicurezza. Resta a distanza, con la via di fuga alle spalle. Punta alla base delle fiamme, premi la leva e muovi il getto a ventaglio.
+
+Dura pochi secondi. Se il fuoco non si spegne subito, o il fumo aumenta, esci e chiama il 112.
+
+E ricorda: un tecnico lo controlla ogni sei mesi, e dopo ogni uso, anche parziale, va ricaricato.
+
+Protezione Civile, Gruppo comunale di Genzano di Roma.
+
+</details>
+
 ### Classificazione per peso
 
 | Tipo | Massa complessiva |
