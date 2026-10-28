@@ -16,6 +16,7 @@ social_punti:
   - "La proposta di legge regionale n. 281 del 12 giugno 2026 cita i volontari di protezione civile insieme a personale sanitario e lavoratori del trasporto pubblico locale."
   - "Se diventasse legge, la Regione Lazio si costituirebbe parte civile nei processi per violenza fisica contro di loro, in servizio."
   - "Il 1° ottobre 2026 la I Commissione del Consiglio regionale ha ascoltato aziende e sindacati: le aziende hanno espresso parere favorevole, i sindacati sostegno con alcune proposte di modifica."
+  - "Il 27 ottobre 2026 la Commissione ha ascoltato l'assessore Ciacciarelli: emendamenti entro il 4 novembre, subemendamenti entro il 9 novembre."
   - "Non è ancora legge: servono la fase degli emendamenti, il voto dell'Aula e la pubblicazione sul Bollettino ufficiale."
 draft: false
 ---
@@ -53,6 +54,14 @@ Secondo il resoconto dell'Ufficio stampa del Consiglio regionale, le aziende han
 
 La vicepresidente Berni ha assicurato che le proposte scritte saranno esaminate nella fase degli emendamenti.
 
+## L'audizione del 27 ottobre
+
+Il **27 ottobre 2026** la stessa I Commissione, presieduta da Eleonora Berni, ha ascoltato l'assessore regionale alla Protezione civile **Pasquale Ciacciarelli**. Secondo il resoconto dell'Ufficio stampa del Consiglio regionale, l'assessore ha ricordato che il sistema regionale conta oltre 15mila volontari e che sono arrivate più di 800 richieste di giovani interessati a entrare. Ha citato anche la formazione rafforzata e il fondo istituito per i volontari che si infortunano.
+
+La consigliera Mari, prima firmataria, ha spiegato che la costituzione di parte civile della Regione si aggiungerebbe a quella eventuale delle aziende sanitarie e delle associazioni, che restano possibili.
+
+A conclusione dell'audizione la commissione ha fissato i termini per modificare il testo: gli **emendamenti** vanno presentati entro il **4 novembre 2026 alle 13**, i subemendamenti entro il **9 novembre alle 13**. Il testo non è ancora stato votato dall'Aula.
+
 ## Perché ci riguarda
 
 I volontari del nostro Gruppo operano a contatto con le persone: alle feste di paese, nei punti di raccolta, durante le emergenze. La proposta riguarda chi presta servizio in tutta la regione, quindi anche loro. Questo articolo riferisce un iter normativo, non episodi avvenuti a Genzano.
@@ -75,4 +84,5 @@ La proposta è assegnata alla I Commissione. Sono coinvolte anche la IV, la VI, 
 
 - [Consiglio regionale del Lazio — Proposta di legge n. 281 del 12 giugno 2026 (testo e relazione, PDF)](https://www.consiglio.regione.lazio.it/binary/consiglio_regionale/tbl_commissioni_documenti/PL_281_12062026.pdf)
 - [Consiglio regionale del Lazio, I Commissione — Tutela di sanitari, trasportatori e volontari: in prima Commissione ascoltate aziende e sindacati sulla proposta di legge (1° ottobre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=commissioniNewsDettaglio&cid=1&id=4182)
+- [Consiglio regionale del Lazio, I Commissione — Tutela di sanitari, trasportatori e volontari: ascoltato l'assessore Ciacciarelli (27 ottobre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=newsDettaglio&id=comm-4209)
 - [Normattiva — Legge 14 agosto 2020, n. 113, disposizioni in materia di sicurezza per gli esercenti le professioni sanitarie e socio-sanitarie nell'esercizio delle loro funzioni](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2020-08-14;113)
