@@ -1,0 +1,121 @@
+{
+ "voce": [
+  {
+   "file": "voce/line_1.wav",
+   "inizio": 0.45
+  },
+  {
+   "file": "voce/line_2.wav",
+   "inizio": 14.61
+  },
+  {
+   "file": "voce/line_3.wav",
+   "inizio": 25.47
+  },
+  {
+   "file": "voce/line_4.wav",
+   "inizio": 38.83
+  },
+  {
+   "file": "voce/line_5.wav",
+   "inizio": 52.35
+  },
+  {
+   "file": "voce/line_6.wav",
+   "inizio": 62.11
+  },
+  {
+   "file": "voce/line_7.wav",
+   "inizio": 71.7
+  },
+  {
+   "file": "voce/line_8.wav",
+   "inizio": 85.22
+  },
+  {
+   "file": "voce/line_9.wav",
+   "inizio": 99.53
+  },
+  {
+   "file": "voce/line_10.wav",
+   "inizio": 113.67
+  },
+  {
+   "file": "voce/line_11.wav",
+   "inizio": 126.22
+  },
+  {
+   "file": "voce/line_12.wav",
+   "inizio": 134.96
+  },
+  {
+   "file": "voce/line_13.wav",
+   "inizio": 149.22
+  }
+ ],
+ "durata": 159.99,
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 14.16
+  },
+  {
+   "inizio": 14.16,
+   "durata": 10.86
+  },
+  {
+   "inizio": 25.02,
+   "durata": 13.36
+  },
+  {
+   "inizio": 38.38,
+   "durata": 13.52
+  },
+  {
+   "inizio": 51.9,
+   "durata": 9.76
+  },
+  {
+   "inizio": 61.66,
+   "durata": 9.59
+  },
+  {
+   "inizio": 71.25,
+   "durata": 13.52
+  },
+  {
+   "inizio": 84.77,
+   "durata": 14.31
+  },
+  {
+   "inizio": 99.08,
+   "durata": 14.14
+  },
+  {
+   "inizio": 113.22,
+   "durata": 12.55
+  },
+  {
+   "inizio": 125.77,
+   "durata": 8.74
+  },
+  {
+   "inizio": 134.51,
+   "durata": 14.26
+  },
+  {
+   "inizio": 148.77,
+   "durata": 11.22
+  }
+ ],
+ "musica": [
+  {
+   "file": "audio/musica.mp3",
+   "inizio": 0,
+   "fine": 159.99,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 3.5
+  }
+ ]
+}

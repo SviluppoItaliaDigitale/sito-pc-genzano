@@ -23,6 +23,18 @@ Un estintore serve per spegnere un piccolo incendio. Non tutti gli estintori son
 
 Se il fuoco è grande, non usare l'estintore. Esci dalla stanza. Chiama il 112, il numero unico europeo di emergenza.
 
+## Il video
+
+Guarda il nostro video. Nel video l'estintore è aperto e tagliato a metà. Così vedi cosa c'è dentro e come funziona.
+
+{{< video src="/video/2026-10-28-estintori-video-3d.mp4"
+          poster="/video/2026-10-28-estintori-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video con voce e scritte: dentro l'estintore"
+          caption="L'estintore aperto e tagliato a metà. Il disegno non è uguale a un estintore vero: è un esempio. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+Il video dice molte cose. Le trovi scritte con frasi semplici nella pagina [Dentro l'estintore: un video in 3D](/comunicazioni/2026-10-28-estintori-video-3d-facile/).
+
 ## I tipi di fuoco
 
 Gli incendi si dividono in classi. Ogni classe ha una lettera.

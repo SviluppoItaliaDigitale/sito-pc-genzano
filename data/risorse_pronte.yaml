@@ -230,6 +230,30 @@ materiali:
   dimensione: 5.0 MB
   data_pubblicazione: '2026-04-17'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-video-3d-estintori-2026-10-28
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: video
+  titolo: "Video in 3D: dentro l'estintore"
+  descrizione: Video verticale con voce e sottotitoli (3 minuti e 9 secondi). Apre
+    l'estintore per mostrare valvola, tubo pescante e manometro, poi spiega quale
+    usare per ogni fuoco e come. Pronto da condividere su WhatsApp e social.
+  file_url: /video/2026-10-28-estintori-video-3d.mp4
+  dimensione: 9.5 MB
+  data_pubblicazione: '2026-10-28'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-incendio-video-3d-veicoli-2026-10-28
+  tema: rischio-incendio
+  tema_titolo: Rischio incendi boschivi
+  tipo: video
+  titolo: "Video in 3D: fuoco a bordo di un veicolo"
+  descrizione: Video verticale con voce e sottotitoli (2 minuti e 40 secondi) su cosa
+    fare se prende fuoco un'auto, un camion, uno scuolabus o un autobus, e quando
+    usare l'estintore. Pronto da condividere su WhatsApp e social.
+  file_url: /video/2026-10-28-estintori-veicoli-video-3d.mp4
+  dimensione: 7.7 MB
+  data_pubblicazione: '2026-10-28'
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-video-3d-2026-10-24
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
