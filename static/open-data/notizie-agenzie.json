@@ -5,11 +5,41 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-27T22:30:20+00:00",
+  "generato": "2026-10-28T01:35:12+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-28T01:29:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Netanyahu, 'attesa, ma è chiaro che Likud partito più grande' ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/10/28/-netanyahu-attesa-ma-e-chiaro-che-likud-partito-piu-grande-_36e9820b-1da6-406b-bf9a-a7f5dfa3b80d.html"
+  },
+  {
+   "data": "2026-10-27T23:22:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Crisi climatica e caldo record, Lancet: \"È un'emergenza sanitaria globale, 710mila morti nel 2023\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/crisi-climatica-morti-caldo-dossier-lancet_7pRSTXnyDWojoJ7T1C4jNo"
+  },
+  {
+   "data": "2026-10-27T23:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni in Israele, Likud di Netanyahu primo partito ma opposizione di Eisenkot avanti: exit poll e rebus governo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-in-israele-likud-di-netanyahu-primo-partito-ma-opposizione-di-eisenkot-avanti-exit-poll-e-rebus-governo_1LyJm6kEJuUQidGOVLjWsW"
+  },
+  {
+   "data": "2026-10-27T22:21:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il messaggio del Papa: 'Basta preparare altre guerre, solo la pace è santa'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/10/27/il-messaggio-del-papa-basta-preparare-altre-guerre-solo-la-pace-e-santa_be3dffa7-c6b4-47c2-9fa2-0d2dde85f2ea.html"
+  },
+  {
+   "data": "2026-10-27T22:20:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Rapporto ASviS 2026 \"L'Italia e gli Obiettivi di sviluppo sostenibile\"",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/27/rapporto-asvis-2026-litalia-e-gli-obiettivi-di-sviluppo-sostenibile_4fa59f05-f4e2-410b-b547-491ff9b474dd.html"
+  },
   {
    "data": "2026-10-27T22:02:46+00:00",
    "fonte": "ANSA",
@@ -113,12 +143,6 @@
    "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/10/26/alimentazione-vegetale-e-longevity-i-legumi-la-fonte-proteica-meno-utilizzata-dagli-italiani_545459d4-aa99-4770-913d-009d447bbdab.html"
   },
   {
-   "data": "2026-10-27T18:42:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Torna e cresce #ioleggoperché, ora coinvolge anche i nidi",
-   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/27/ioleggoperche-a-milano-la-presentazione-della-nuova-edizione_9b9fa905-2c4c-4d6e-b3ef-64c1070e4841.html"
-  },
-  {
    "data": "2026-10-27T18:40:09+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Csm, spunta candidatura Di Pietro in quota Fratelli d'Italia ma c'è veto di Forza Italia",
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Trump: 'Accetterò i risultati delle Midterm solo se saranno elezioni corrette'",
    "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/27/trump-il-partito-del-presidente-non-ottiene-di-solito-buoni-risultati-alle_53773608-7ce2-4fa4-adc1-3cd956274c2a.html"
-  },
-  {
-   "data": "2026-10-27T17:51:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sciopero nazionale dei taxi il 15 dicembre contro il caro carburante",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/sciopero-nazionale-dei-taxi-il-15-dicembre_0693e19f-1d49-4414-a09e-43c4a39a5777.html"
-  },
-  {
-   "data": "2026-10-27T17:51:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Associazioni e medici: \"Garantire a tutti i pazienti accesso a nutrizione clinica oncologica\"",
-   "url": "https://www.adnkronos.com/cronaca/associazioni-e-medici-garantire-a-tutti-i-pazienti-accesso-a-nutrizione-clinica-oncologica_1cWBNFEhoBLy22OIszuQCd"
-  },
-  {
-   "data": "2026-10-27T17:47:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Demoskopika, giovani in piazza, indignazione per caro vita davanti a tutto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/demoskopika-giovani-in-piazza-indignazione-per-caro-vita-davanti-a-tutto_8a196598-a58d-4096-bc51-a44ab8e1b661.html"
-  },
-  {
-   "data": "2026-10-27T17:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Biometano di Casa Sartori entra in rete nazionale gas, investimento da 5 milioni",
-   "url": "https://www.adnkronos.com/economia/biometano-di-casa-sartori-entra-in-rete-nazionale-gas-investimento-da-5-milioni_2UBnSfuHfKaHx6mu94AQue"
   }
  ]
 }
