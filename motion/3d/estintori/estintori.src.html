@@ -541,7 +541,8 @@ SOTT.forEach(f => {
     for (let i = 0; i < 5; i++) { const y = 110 + i * 40; g.strokeRect(22, y, 176, 30); g.fillStyle = '#22a04b'; if (i < 3) { g.font = '900 26px ' + FT; g.fillText('✓', 46, y + 25); } }
     g.fillStyle = '#334155'; g.beginPath(); g.arc(w / 2, 14, 7, 0, 6.283); g.fill(); }) }));
   tagMesh.position.y = -.09; cartellino.add(tagMesh);
-  const filo = new THREE.Mesh(new THREE.CylinderGeometry(.0015, .0015, .06, 6), tinta(0x334155)); filo.position.y = -.0; cartellino.add(filo);
+  // filo dal collo della valvola al foro del cartellino (lunghezza 1, scalato a ogni fotogramma)
+  const filo = new THREE.Mesh(new THREE.CylinderGeometry(.0018, .0018, 1, 6), tinta(0x334155)); scena.add(filo);
 
   /* ================================================================ TELECAMERA */
   const ins = (r) => M3.distanzaPerInquadrare(r, camera, .9);
@@ -578,8 +579,8 @@ SOTT.forEach(f => {
   chiave(E(13) - .1, [XU + .2, .45, 0], 8, 12, .95);
   // 14 cartellino
   const posTag = uso.quota(uso.H - .02);
-  chiave(S(14) + 1.2, [posTag.x + .05, posTag.y - .08, posTag.z + .1], -6, 4, .2);
-  chiave(E(14) - .1, [posTag.x + .05, posTag.y - .08, posTag.z + .1], -6, 4, .2);
+  chiave(S(14) + 1.2, [posTag.x + .05, posTag.y - .08, posTag.z + .1], ORIZ ? 22 : -6, 4, .2);
+  chiave(E(14) - .1, [posTag.x + .05, posTag.y - .08, posTag.z + .1], ORIZ ? 22 : -6, 4, .2);
   // 15 chiusura: tutta la fila
   chiave(S(15) + 1.6, [13.75, .5, 0], 0, 16, ORIZ ? 3.0 : 2.9);
   chiave(TOTAL, [13.75, .5, 0], 0, 16, ORIZ ? 3.0 : 2.9);
@@ -618,7 +619,7 @@ SOTT.forEach(f => {
   // 13 uscire: 112 senza punto
   scheda('112', 'Esci e chiama il 112', 'NUMERO UNICO DI EMERGENZA', null, null, parola(13, 'esci', 0, .75) - .15, E(13) - .3, '#ef4136');
   // 14 cartellino
-  scheda('semestre', 'Controllo ogni 6 mesi', 'LO FA UN TECNICO', () => cartellino.localToWorld(new THREE.Vector3(0, -.1, 0)), vs(-200, -250), parola(14, 'tecnico'), E(14) - .4);
+  scheda('semestre', 'Controllo ogni 6 mesi', 'LO FA UN TECNICO', () => cartellino.localToWorld(new THREE.Vector3(0, -.1, 0)), vs(210, -230), parola(14, 'tecnico'), E(14) - .4);
   scheda('ricarica', 'Dopo ogni uso: ricarica', 'ANCHE SE USATO IN PARTE', () => cartellino.localToWorld(new THREE.Vector3(0, -.14, 0)), vs(200, 230), parola(14, 'dopo'), E(14) - .4);
   // 15 chiusura
   scheda('fine', 'Protezione Civile', 'GRUPPO COMUNALE · GENZANO DI ROMA', null, null, S(15) + 1.7, TOTAL + 1);
@@ -716,8 +717,15 @@ SOTT.forEach(f => {
       fuocoUso.aggiorna(t, kU, .6 * prog(t, parola(13, 'fumo', 0, .55), 1.4));
     } else fuocoUso.aggiorna(t, 0);
     // --- cartellino che oscilla appeso al collo
-    const pc = uso.quota(uso.H - .005); cartellino.position.set(pc.x + .07, pc.y, pc.z + .07); cartellino.rotation.set(0, -.35, .12 * Math.sin(t * 1.6));
-    cartellino.visible = t > S(13);
+    // pende davanti al corpo, fuori dal raggio (R .16): prima stava a .10 dall'asse e restava dentro il serbatoio
+    const pc = uso.quota(uso.H - .005), dondola = .12 * Math.sin(t * 1.6);
+    cartellino.position.set(pc.x - .02, pc.y - .015, pc.z + uso.R + .035); cartellino.rotation.set(0, -.1, dondola);
+    cartellino.visible = t > S(14) - .4;   // compare col passaggio alla manutenzione: nelle inquadrature larghe coprirebbe l'etichetta
+    const foro = new THREE.Vector3(0, -.017, .001).applyEuler(cartellino.rotation).add(cartellino.position);
+    const collo = uso.quota(uso.H - .005).add(new THREE.Vector3(0, 0, .03));
+    filo.position.copy(collo).add(foro).multiplyScalar(.5); filo.scale.set(1, collo.distanceTo(foro), 1);
+    filo.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), foro.clone().sub(collo).normalize());
+    filo.visible = cartellino.visible;
     // --- visibilità per stazioni (meno oggetti da disegnare)
     const k = sceneA(t);
     eroe.gruppo.visible = t < E(4) + .5 || k === 15; cart.gruppo.visible = t > S(4) - 1.5 && t < E(5) + 1 || k === 15;
