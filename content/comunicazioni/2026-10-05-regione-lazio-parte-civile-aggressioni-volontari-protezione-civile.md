@@ -16,6 +16,7 @@ social_punti:
   - "La proposta di legge regionale n. 281 del 12 giugno 2026 cita i volontari di protezione civile insieme a personale sanitario e lavoratori del trasporto pubblico locale."
   - "Se diventasse legge, la Regione Lazio si costituirebbe parte civile nei processi per violenza fisica contro di loro, in servizio."
   - "Il 1° ottobre 2026 la I Commissione del Consiglio regionale ha ascoltato aziende e sindacati: le aziende hanno espresso parere favorevole, i sindacati sostegno con alcune proposte di modifica."
+  - "Il 27 ottobre 2026 la Commissione ha ascoltato l'assessore Ciacciarelli: emendamenti entro il 4 novembre, subemendamenti entro il 9 novembre."
   - "Non è ancora legge: servono la fase degli emendamenti, il voto dell'Aula e la pubblicazione sul Bollettino ufficiale."
 draft: false
 ---
@@ -52,6 +53,14 @@ Secondo il resoconto dell'Ufficio stampa del Consiglio regionale, le aziende han
 - potenziare la prevenzione con un osservatorio regionale e percorsi di formazione sulla gestione delle situazioni a rischio.
 
 La vicepresidente Berni ha assicurato che le proposte scritte saranno esaminate nella fase degli emendamenti.
+
+## L'audizione del 27 ottobre
+
+Il **27 ottobre 2026** la stessa I Commissione, presieduta da Eleonora Berni, ha ascoltato l'assessore regionale alla Protezione civile **Pasquale Ciacciarelli**. Secondo il resoconto dell'Ufficio stampa del Consiglio regionale, l'assessore ha ricordato che il sistema regionale conta oltre 15mila volontari e che sono arrivate più di 800 richieste di giovani interessati a entrare. Ha citato anche la formazione rafforzata e il fondo istituito per i volontari che si infortunano.
+
+La consigliera Mari, prima firmataria, ha spiegato che la costituzione di parte civile della Regione si aggiungerebbe a quella eventuale delle aziende sanitarie e delle associazioni, che restano possibili.
+
+A conclusione dell'audizione la commissione ha fissato i termini per modificare il testo: gli **emendamenti** vanno presentati entro il **4 novembre 2026 alle 13**, i subemendamenti entro il **9 novembre alle 13**. Il testo non è ancora stato votato dall'Aula.
 
 ## Perché ci riguarda
 
