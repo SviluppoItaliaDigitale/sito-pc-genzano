@@ -61,7 +61,7 @@ I percorsi sono nel documento allegato. È il Comune che li decide. Se cambia qu
 
 Il Comune ha deciso una regola per la festa. Nella zona della festa non si vendono bevande da portare via in bottiglie di vetro, bicchieri di vetro, lattine e bombolette spray. Non si possono nemmeno portare.
 
-- La zona è: via Garibaldi, piazza IV Novembre, piazza Frasconi, corso Gramsci e corso Don Minzoni.
+- La zona è: via Garibaldi fino all'incrocio con via dei Mille, piazza IV Novembre, piazza Frasconi, corso Gramsci e corso Don Minzoni. Vale anche nelle strade vicine.
 - La regola vale venerdì 30 ottobre dalle 20:00 alle 24:00.
 - Vale anche sabato 31 ottobre dalle 16:00 fino alla fine della festa.
 - Puoi comprare bevande in bicchieri di plastica.
