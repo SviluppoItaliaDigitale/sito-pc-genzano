@@ -4,11 +4,11 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-10-22",
-    "ultimo_numero": "212/2026"
+    "al": "2026-10-25",
+    "ultimo_numero": "217/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-10-25",
+  "generato_il": "2026-10-28",
   "dati": [
     {
       "tipologia": "Antincendio",
@@ -16,11 +16,11 @@
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
-      "numero_interventi": 52
+      "numero_interventi": 55
     },
     {
       "tipologia": "Evento Locale",
-      "numero_interventi": 16
+      "numero_interventi": 18
     },
     {
       "tipologia": "Taglio pianta",
