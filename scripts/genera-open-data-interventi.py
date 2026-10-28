@@ -82,6 +82,32 @@ def automezzi(cella):
     return out
 
 
+# Date sbagliate nel gestionale che il Gruppo non può correggere alla fonte.
+# Valgono per ogni export, cumulativo o parziale (le applica anche
+# aggiorna-open-data-delta.py). Numero intervento -> data vera, con il motivo.
+CORREZIONI_DATE = {
+    # Memorial Giordano Funari, piazza Frasconi: sabato 24 ottobre 2026
+    # (confermato da Alessandro il 25 e il 28/10/2026); il rapporto è datato 25.
+    "217/2026": "sabato 24 ottobre 2026",
+}
+
+
+def applica_correzioni(righe, idx):
+    """Sostituisce Data Inizio e Data Fine dei rapporti in CORREZIONI_DATE."""
+    i_num, campi = idx.get("Numero"), [idx[c] for c in ("Data Inizio", "Data Fine") if c in idx]
+    out = []
+    for r in righe:
+        nuova = CORREZIONI_DATE.get(str(r[i_num]).strip()) if i_num is not None else None
+        if nuova:
+            r = list(r)
+            for i in campi:
+                if i < len(r):
+                    r[i] = nuova
+            r = tuple(r)
+        out.append(r)
+    return out
+
+
 def parse_data_it(s):
     if not s:
         return None
@@ -406,6 +432,7 @@ def main():
         return r[i] if i is not None and i < len(r) else None
 
     data = [r for r in rows[1:] if col(r, "Numero") not in (None, "")]
+    data = applica_correzioni(data, idx)
     n_tot = len(data)
     min_tot = sum(minuti(col(r, "Durata")) for r in data)
     ore = round(min_tot / 60, 1)
