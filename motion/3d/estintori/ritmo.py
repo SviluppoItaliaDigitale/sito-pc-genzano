@@ -21,6 +21,7 @@ for k, s in enumerate(scene):
     for p in sott[k].get('parole', []):
         p['t0'] = round(p['t0'] + dt, 3); p['t1'] = round(p['t1'] + dt, 3)
     col['voce'][k]['inizio'] = round(nuovo, 3)
+if 'scene' in col: col['scene'] = scene        # anche le scene della colonna seguono i tempi nuovi
 json.dump({'scene': scene, 'totale': round(t, 2)}, open('tempi.json', 'w'), indent=1)
 json.dump(sott, open('sottotitoli.json', 'w'), ensure_ascii=False, indent=1)
 json.dump(col, open('colonna.json', 'w'), ensure_ascii=False, indent=1)

@@ -708,7 +708,7 @@ SOTT.forEach(f => {
     const tVent = parola(12, 'ventaglio', 0, .9) - .6;
     const amp = .16 * clamp(prog(t, tVent, .4));
     const bersU = FU.clone().add(new THREE.Vector3(-.05, .06, Math.sin((t - tVent) * 3.4) * amp));
-    getti.uso.aggiorna(t, t >= S(12) - .2 ? getU : 0, uso.punta(), bersU, .28, 0);
+    if (t >= S(3)) getti.uso.aggiorna(t, t >= S(12) - .2 ? getU : 0, uso.punta(), bersU, .28, 0);   // prima della scena 3 il getto è dell'eroe
     if (t >= S(12) - .2) {
       const scende = ease.morbida(prog(t, tLevaU + .3, 3.5));
       const risale = ease.morbida(prog(t, parola(13, 'spegne', 0, .35), 2.2));

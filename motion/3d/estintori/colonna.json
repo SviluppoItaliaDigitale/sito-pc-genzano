@@ -69,67 +69,67 @@
  "scene": [
   {
    "inizio": 0.0,
-   "durata": 7.5
+   "durata": 8.1
   },
   {
-   "inizio": 7.5,
-   "durata": 8.32
+   "inizio": 8.1,
+   "durata": 9.72
   },
   {
-   "inizio": 15.82,
-   "durata": 8.8
+   "inizio": 17.82,
+   "durata": 9.4
   },
   {
-   "inizio": 24.62,
-   "durata": 5.68
+   "inizio": 27.22,
+   "durata": 6.08
   },
   {
-   "inizio": 30.3,
-   "durata": 8.31
+   "inizio": 33.3,
+   "durata": 9.31
   },
   {
-   "inizio": 38.61,
-   "durata": 14.46
+   "inizio": 42.61,
+   "durata": 15.26
   },
   {
-   "inizio": 53.07,
-   "durata": 12.22
+   "inizio": 57.87,
+   "durata": 13.22
   },
   {
-   "inizio": 65.29,
-   "durata": 16.04
+   "inizio": 71.09,
+   "durata": 16.84
   },
   {
-   "inizio": 81.33,
-   "durata": 8.29
+   "inizio": 87.93,
+   "durata": 9.29
   },
   {
-   "inizio": 89.62,
-   "durata": 9.6
+   "inizio": 97.22,
+   "durata": 10.4
   },
   {
-   "inizio": 99.22,
-   "durata": 11.68
+   "inizio": 107.62,
+   "durata": 12.48
   },
   {
-   "inizio": 110.9,
-   "durata": 8.04
+   "inizio": 120.1,
+   "durata": 8.84
   },
   {
-   "inizio": 118.94,
-   "durata": 12.13
+   "inizio": 128.94,
+   "durata": 13.13
   },
   {
-   "inizio": 131.07,
-   "durata": 8.29
+   "inizio": 142.07,
+   "durata": 9.29
   },
   {
-   "inizio": 139.36,
-   "durata": 8.39
+   "inizio": 151.36,
+   "durata": 9.19
   },
   {
-   "inizio": 147.75,
-   "durata": 4.77
+   "inizio": 160.55,
+   "durata": 6.97
   }
  ],
  "musica": [
