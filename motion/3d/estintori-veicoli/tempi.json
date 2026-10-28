@@ -1,0 +1,57 @@
+{
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 14.16
+  },
+  {
+   "inizio": 14.16,
+   "durata": 10.86
+  },
+  {
+   "inizio": 25.02,
+   "durata": 13.36
+  },
+  {
+   "inizio": 38.38,
+   "durata": 13.52
+  },
+  {
+   "inizio": 51.9,
+   "durata": 9.76
+  },
+  {
+   "inizio": 61.66,
+   "durata": 9.59
+  },
+  {
+   "inizio": 71.25,
+   "durata": 13.52
+  },
+  {
+   "inizio": 84.77,
+   "durata": 12.55
+  },
+  {
+   "inizio": 97.32,
+   "durata": 14.14
+  },
+  {
+   "inizio": 111.46,
+   "durata": 12.55
+  },
+  {
+   "inizio": 124.01,
+   "durata": 8.74
+  },
+  {
+   "inizio": 132.75,
+   "durata": 14.26
+  },
+  {
+   "inizio": 147.01,
+   "durata": 11.22
+  }
+ ],
+ "totale": 158.23
+}

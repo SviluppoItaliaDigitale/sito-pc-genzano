@@ -1,0 +1,1823 @@
+[
+ {
+  "n": 1,
+  "testo": "Auto a benzina o diesel, a GPL, a metano o elettrica, camion, scuolabus, autobus: se a bordo vedi fumo o fiamme, la prima cosa è fermarsi e scendere.",
+  "schermo": "Auto a benzina o diesel, a GPL, a metano o elettrica, camion, scuolabus, autobus: se a bordo vedi fumo o fiamme, la prima cosa è fermarsi e scendere.",
+  "file": "line_1.wav",
+  "ripresa": "line_1_take_1.mp3",
+  "durata": 11.96,
+  "somiglianza": 1.0,
+  "sentito": "Auto a benzina o diesel, a GPL, a metano o elettrica, camion, scuolabus, autobus. Se a bordo vedi fumo o fiamme, la prima cosa è fermarsi e scendere.",
+  "parole": [
+   {
+    "w": "Auto",
+    "t0": 0.0,
+    "t1": 0.3
+   },
+   {
+    "w": "a",
+    "t0": 0.3,
+    "t1": 0.46
+   },
+   {
+    "w": "benzina",
+    "t0": 0.46,
+    "t1": 1.0
+   },
+   {
+    "w": "o",
+    "t0": 1.0,
+    "t1": 1.16
+   },
+   {
+    "w": "diesel,",
+    "t0": 1.16,
+    "t1": 1.54
+   },
+   {
+    "w": "a",
+    "t0": 1.98,
+    "t1": 2.06
+   },
+   {
+    "w": "GPL,",
+    "t0": 2.06,
+    "t1": 2.56
+   },
+   {
+    "w": "a",
+    "t0": 3.0,
+    "t1": 3.08
+   },
+   {
+    "w": "metano",
+    "t0": 3.08,
+    "t1": 3.6
+   },
+   {
+    "w": "o",
+    "t0": 3.6,
+    "t1": 3.76
+   },
+   {
+    "w": "elettrica,",
+    "t0": 3.76,
+    "t1": 4.36
+   },
+   {
+    "w": "camion,",
+    "t0": 4.74,
+    "t1": 5.24
+   },
+   {
+    "w": "scuolabus,",
+    "t0": 5.46,
+    "t1": 6.14
+   },
+   {
+    "w": "autobus:",
+    "t0": 6.32,
+    "t1": 6.96
+   },
+   {
+    "w": "se",
+    "t0": 7.38,
+    "t1": 7.58
+   },
+   {
+    "w": "a",
+    "t0": 7.58,
+    "t1": 7.68
+   },
+   {
+    "w": "bordo",
+    "t0": 7.68,
+    "t1": 7.88
+   },
+   {
+    "w": "vedi",
+    "t0": 7.88,
+    "t1": 8.18
+   },
+   {
+    "w": "fumo",
+    "t0": 8.18,
+    "t1": 8.56
+   },
+   {
+    "w": "o",
+    "t0": 8.56,
+    "t1": 8.66
+   },
+   {
+    "w": "fiamme,",
+    "t0": 8.66,
+    "t1": 9.2
+   },
+   {
+    "w": "la",
+    "t0": 9.44,
+    "t1": 9.5
+   },
+   {
+    "w": "prima",
+    "t0": 9.5,
+    "t1": 9.7
+   },
+   {
+    "w": "cosa",
+    "t0": 9.7,
+    "t1": 10.06
+   },
+   {
+    "w": "è",
+    "t0": 10.06,
+    "t1": 10.34
+   },
+   {
+    "w": "fermarsi",
+    "t0": 10.34,
+    "t1": 11.0
+   },
+   {
+    "w": "e",
+    "t0": 11.0,
+    "t1": 11.24
+   },
+   {
+    "w": "scendere.",
+    "t0": 11.24,
+    "t1": 11.76
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "testo": "Accosta appena puoi, spegni il motore, accendi le quattro frecce e fai scendere tutti, lontano dal traffico. Poi chiama il uno uno due.",
+  "schermo": "Accosta appena puoi, spegni il motore, accendi le quattro frecce e fai scendere tutti, lontano dal traffico. Poi chiama il 112.",
+  "file": "line_2.wav",
+  "ripresa": "line_2_take_1.mp3",
+  "durata": 8.86,
+  "somiglianza": 1.0,
+  "sentito": "Accosta appena puoi, spegni il motore, accendi le quattro frecce e fai scendere tutti, lontano dal traffico. Poi chiama il 112.",
+  "parole": [
+   {
+    "w": "Accosta",
+    "t0": 0.0,
+    "t1": 0.482
+   },
+   {
+    "w": "appena",
+    "t0": 0.482,
+    "t1": 0.904
+   },
+   {
+    "w": "puoi,",
+    "t0": 0.904,
+    "t1": 1.266
+   },
+   {
+    "w": "spegni",
+    "t0": 1.266,
+    "t1": 1.688
+   },
+   {
+    "w": "il",
+    "t0": 1.688,
+    "t1": 1.869
+   },
+   {
+    "w": "motore,",
+    "t0": 1.869,
+    "t1": 2.351
+   },
+   {
+    "w": "accendi",
+    "t0": 2.351,
+    "t1": 2.834
+   },
+   {
+    "w": "le",
+    "t0": 2.834,
+    "t1": 3.015
+   },
+   {
+    "w": "quattro",
+    "t0": 3.015,
+    "t1": 3.497
+   },
+   {
+    "w": "frecce",
+    "t0": 3.497,
+    "t1": 3.919
+   },
+   {
+    "w": "e",
+    "t0": 3.919,
+    "t1": 4.04
+   },
+   {
+    "w": "fai",
+    "t0": 4.04,
+    "t1": 4.281
+   },
+   {
+    "w": "scendere",
+    "t0": 4.281,
+    "t1": 4.824
+   },
+   {
+    "w": "tutti,",
+    "t0": 4.824,
+    "t1": 5.246
+   },
+   {
+    "w": "lontano",
+    "t0": 5.246,
+    "t1": 5.728
+   },
+   {
+    "w": "dal",
+    "t0": 5.728,
+    "t1": 5.969
+   },
+   {
+    "w": "traffico.",
+    "t0": 5.969,
+    "t1": 6.572
+   },
+   {
+    "w": "Poi",
+    "t0": 6.572,
+    "t1": 6.813
+   },
+   {
+    "w": "chiama",
+    "t0": 6.813,
+    "t1": 7.235
+   },
+   {
+    "w": "il",
+    "t0": 7.235,
+    "t1": 7.416
+   },
+   {
+    "w": "uno",
+    "t0": 7.416,
+    "t1": 7.657
+   },
+   {
+    "w": "uno",
+    "t0": 7.657,
+    "t1": 7.899
+   },
+   {
+    "w": "due.",
+    "t0": 7.899,
+    "t1": 8.2
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "testo": "Se il fuoco è piccolo e hai un estintore, non spalancare il cofano: l'aria ravviva le fiamme. Sollevalo appena, stando di lato, e spruzza nella fessura con getti brevi.",
+  "schermo": "Se il fuoco è piccolo e hai un estintore, non spalancare il cofano: l'aria ravviva le fiamme. Sollevalo appena, stando di lato, e spruzza nella fessura con getti brevi.",
+  "file": "line_3.wav",
+  "ripresa": "line_3_take_2.mp3",
+  "durata": 10.96,
+  "somiglianza": 1.0,
+  "sentito": "Se il fuoco è piccolo e hai un estintore, non spalancare il cofano. L'aria ravviva le fiamme. Sollevalo appena, stando di lato, e spruzza nella fessura con getti brevi.",
+  "parole": [
+   {
+    "w": "Se",
+    "t0": 0.0,
+    "t1": 0.192
+   },
+   {
+    "w": "il",
+    "t0": 0.192,
+    "t1": 0.383
+   },
+   {
+    "w": "fuoco",
+    "t0": 0.383,
+    "t1": 0.767
+   },
+   {
+    "w": "è",
+    "t0": 0.767,
+    "t1": 0.895
+   },
+   {
+    "w": "piccolo",
+    "t0": 0.895,
+    "t1": 1.406
+   },
+   {
+    "w": "e",
+    "t0": 1.406,
+    "t1": 1.534
+   },
+   {
+    "w": "hai",
+    "t0": 1.534,
+    "t1": 1.789
+   },
+   {
+    "w": "un",
+    "t0": 1.789,
+    "t1": 1.981
+   },
+   {
+    "w": "estintore,",
+    "t0": 1.981,
+    "t1": 2.684
+   },
+   {
+    "w": "non",
+    "t0": 2.684,
+    "t1": 2.94
+   },
+   {
+    "w": "spalancare",
+    "t0": 2.94,
+    "t1": 3.643
+   },
+   {
+    "w": "il",
+    "t0": 3.643,
+    "t1": 3.834
+   },
+   {
+    "w": "cofano:",
+    "t0": 3.834,
+    "t1": 4.346
+   },
+   {
+    "w": "l'aria",
+    "t0": 4.346,
+    "t1": 4.793
+   },
+   {
+    "w": "ravviva",
+    "t0": 4.793,
+    "t1": 5.304
+   },
+   {
+    "w": "le",
+    "t0": 5.304,
+    "t1": 5.496
+   },
+   {
+    "w": "fiamme.",
+    "t0": 5.496,
+    "t1": 6.007
+   },
+   {
+    "w": "Sollevalo",
+    "t0": 6.007,
+    "t1": 6.646
+   },
+   {
+    "w": "appena,",
+    "t0": 6.646,
+    "t1": 7.157
+   },
+   {
+    "w": "stando",
+    "t0": 7.157,
+    "t1": 7.605
+   },
+   {
+    "w": "di",
+    "t0": 7.605,
+    "t1": 7.796
+   },
+   {
+    "w": "lato,",
+    "t0": 7.796,
+    "t1": 8.18
+   },
+   {
+    "w": "e",
+    "t0": 8.18,
+    "t1": 8.308
+   },
+   {
+    "w": "spruzza",
+    "t0": 8.308,
+    "t1": 8.819
+   },
+   {
+    "w": "nella",
+    "t0": 8.819,
+    "t1": 9.202
+   },
+   {
+    "w": "fessura",
+    "t0": 9.202,
+    "t1": 9.714
+   },
+   {
+    "w": "con",
+    "t0": 9.714,
+    "t1": 9.969
+   },
+   {
+    "w": "getti",
+    "t0": 9.969,
+    "t1": 10.353
+   },
+   {
+    "w": "brevi.",
+    "t0": 10.353,
+    "t1": 10.8
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "testo": "Benzina e diesel: se senti odore di carburante o vedi una perdita sotto il veicolo, non accendere niente e allontanati. I vapori della benzina prendono fuoco con una scintilla.",
+  "schermo": "Benzina e diesel: se senti odore di carburante o vedi una perdita sotto il veicolo, non accendere niente e allontanati. I vapori della benzina prendono fuoco con una scintilla.",
+  "file": "line_4.wav",
+  "ripresa": "line_4_take_1.mp3",
+  "durata": 11.52,
+  "somiglianza": 1.0,
+  "sentito": "Benzina e diesel. Se senti odore di carburante o vedi una perdita sotto il veicolo, non accendere niente e allontanati. I vapori della benzina prendono fuoco con una scintilla.",
+  "parole": [
+   {
+    "w": "Benzina",
+    "t0": 0.0,
+    "t1": 0.64
+   },
+   {
+    "w": "e",
+    "t0": 0.64,
+    "t1": 0.82
+   },
+   {
+    "w": "diesel:",
+    "t0": 0.82,
+    "t1": 1.16
+   },
+   {
+    "w": "se",
+    "t0": 1.8,
+    "t1": 1.98
+   },
+   {
+    "w": "senti",
+    "t0": 1.98,
+    "t1": 2.32
+   },
+   {
+    "w": "odore",
+    "t0": 2.32,
+    "t1": 2.62
+   },
+   {
+    "w": "di",
+    "t0": 2.62,
+    "t1": 2.74
+   },
+   {
+    "w": "carburante",
+    "t0": 2.74,
+    "t1": 3.46
+   },
+   {
+    "w": "o",
+    "t0": 3.46,
+    "t1": 3.72
+   },
+   {
+    "w": "vedi",
+    "t0": 3.72,
+    "t1": 3.94
+   },
+   {
+    "w": "una",
+    "t0": 3.94,
+    "t1": 4.1
+   },
+   {
+    "w": "perdita",
+    "t0": 4.1,
+    "t1": 4.54
+   },
+   {
+    "w": "sotto",
+    "t0": 4.54,
+    "t1": 4.8
+   },
+   {
+    "w": "il",
+    "t0": 4.8,
+    "t1": 5.02
+   },
+   {
+    "w": "veicolo,",
+    "t0": 5.02,
+    "t1": 5.48
+   },
+   {
+    "w": "non",
+    "t0": 5.78,
+    "t1": 5.9
+   },
+   {
+    "w": "accendere",
+    "t0": 5.9,
+    "t1": 6.44
+   },
+   {
+    "w": "niente",
+    "t0": 6.44,
+    "t1": 6.92
+   },
+   {
+    "w": "e",
+    "t0": 6.92,
+    "t1": 7.14
+   },
+   {
+    "w": "allontanati.",
+    "t0": 7.14,
+    "t1": 7.86
+   },
+   {
+    "w": "I",
+    "t0": 8.3,
+    "t1": 8.4
+   },
+   {
+    "w": "vapori",
+    "t0": 8.4,
+    "t1": 8.78
+   },
+   {
+    "w": "della",
+    "t0": 8.78,
+    "t1": 8.9
+   },
+   {
+    "w": "benzina",
+    "t0": 8.9,
+    "t1": 9.44
+   },
+   {
+    "w": "prendono",
+    "t0": 9.44,
+    "t1": 9.9
+   },
+   {
+    "w": "fuoco",
+    "t0": 9.9,
+    "t1": 10.3
+   },
+   {
+    "w": "con",
+    "t0": 10.3,
+    "t1": 10.5
+   },
+   {
+    "w": "una",
+    "t0": 10.5,
+    "t1": 10.66
+   },
+   {
+    "w": "scintilla.",
+    "t0": 10.66,
+    "t1": 11.28
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "testo": "In auto tieni un estintore piccolo e fissalo bene: in una frenata, un oggetto libero nell'abitacolo diventa pericoloso.",
+  "schermo": "In auto tieni un estintore piccolo e fissalo bene: in una frenata, un oggetto libero nell'abitacolo diventa pericoloso.",
+  "file": "line_5.wav",
+  "ripresa": "line_5_take_1.mp3",
+  "durata": 7.76,
+  "somiglianza": 1.0,
+  "sentito": "In auto, tieni un estintore piccolo e fissalo bene. In una frenata, un oggetto libero nell'abitacolo diventa pericoloso.",
+  "parole": [
+   {
+    "w": "In",
+    "t0": 0.0,
+    "t1": 0.188
+   },
+   {
+    "w": "auto",
+    "t0": 0.188,
+    "t1": 0.5
+   },
+   {
+    "w": "tieni",
+    "t0": 0.5,
+    "t1": 0.875
+   },
+   {
+    "w": "un",
+    "t0": 0.875,
+    "t1": 1.062
+   },
+   {
+    "w": "estintore",
+    "t0": 1.062,
+    "t1": 1.688
+   },
+   {
+    "w": "piccolo",
+    "t0": 1.688,
+    "t1": 2.188
+   },
+   {
+    "w": "e",
+    "t0": 2.188,
+    "t1": 2.312
+   },
+   {
+    "w": "fissalo",
+    "t0": 2.312,
+    "t1": 2.812
+   },
+   {
+    "w": "bene:",
+    "t0": 2.812,
+    "t1": 3.188
+   },
+   {
+    "w": "in",
+    "t0": 3.188,
+    "t1": 3.375
+   },
+   {
+    "w": "una",
+    "t0": 3.375,
+    "t1": 3.625
+   },
+   {
+    "w": "frenata,",
+    "t0": 3.625,
+    "t1": 4.188
+   },
+   {
+    "w": "un",
+    "t0": 4.188,
+    "t1": 4.375
+   },
+   {
+    "w": "oggetto",
+    "t0": 4.375,
+    "t1": 4.875
+   },
+   {
+    "w": "libero",
+    "t0": 4.875,
+    "t1": 5.312
+   },
+   {
+    "w": "nell'abitacolo",
+    "t0": 5.312,
+    "t1": 6.25
+   },
+   {
+    "w": "diventa",
+    "t0": 6.25,
+    "t1": 6.75
+   },
+   {
+    "w": "pericoloso.",
+    "t0": 6.75,
+    "t1": 7.5
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "testo": "Su scuolabus e autobus l'estintore c'è. Quando sali, guarda dove si trova, e dove sono le uscite di emergenza.",
+  "schermo": "Su scuolabus e autobus l'estintore c'è. Quando sali, guarda dove si trova, e dove sono le uscite di emergenza.",
+  "file": "line_6.wav",
+  "ripresa": "line_6_take_1.mp3",
+  "durata": 7.39,
+  "somiglianza": 1.0,
+  "sentito": "Su scuola bus e autobus l'estintore c'è, quando sali guarda dove si trova e dove sono le uscite di emergenza.",
+  "parole": [
+   {
+    "w": "Su",
+    "t0": 0.0,
+    "t1": 0.194
+   },
+   {
+    "w": "scuolabus",
+    "t0": 0.194,
+    "t1": 0.839
+   },
+   {
+    "w": "e",
+    "t0": 0.839,
+    "t1": 0.968
+   },
+   {
+    "w": "autobus",
+    "t0": 0.968,
+    "t1": 1.484
+   },
+   {
+    "w": "l'estintore",
+    "t0": 1.484,
+    "t1": 2.258
+   },
+   {
+    "w": "c'è.",
+    "t0": 2.258,
+    "t1": 2.58
+   },
+   {
+    "w": "Quando",
+    "t0": 2.58,
+    "t1": 3.032
+   },
+   {
+    "w": "sali,",
+    "t0": 3.032,
+    "t1": 3.419
+   },
+   {
+    "w": "guarda",
+    "t0": 3.419,
+    "t1": 3.87
+   },
+   {
+    "w": "dove",
+    "t0": 3.87,
+    "t1": 4.193
+   },
+   {
+    "w": "si",
+    "t0": 4.193,
+    "t1": 4.386
+   },
+   {
+    "w": "trova,",
+    "t0": 4.386,
+    "t1": 4.838
+   },
+   {
+    "w": "e",
+    "t0": 4.838,
+    "t1": 4.967
+   },
+   {
+    "w": "dove",
+    "t0": 4.967,
+    "t1": 5.289
+   },
+   {
+    "w": "sono",
+    "t0": 5.289,
+    "t1": 5.612
+   },
+   {
+    "w": "le",
+    "t0": 5.612,
+    "t1": 5.805
+   },
+   {
+    "w": "uscite",
+    "t0": 5.805,
+    "t1": 6.257
+   },
+   {
+    "w": "di",
+    "t0": 6.257,
+    "t1": 6.45
+   },
+   {
+    "w": "emergenza.",
+    "t0": 6.45,
+    "t1": 7.16
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "testo": "Se l'autista non può intervenire, devi saperlo fare anche tu. Prima di tutto, fate scendere tutti: dalle porte, o dalle uscite di emergenza, rompendo il vetro con il martelletto se serve.",
+  "schermo": "Se l'autista non può intervenire, devi saperlo fare anche tu. Prima di tutto, fate scendere tutti: dalle porte, o dalle uscite di emergenza, rompendo il vetro con il martelletto se serve.",
+  "file": "line_7.wav",
+  "ripresa": "line_7_take_1.mp3",
+  "durata": 11.52,
+  "somiglianza": 1.0,
+  "sentito": "Se l'autista non può intervenire, devi saperlo fare anche tu. Prima di tutto, fate scendere tutti, dalle porte o dalle uscite di emergenza, rompendo il vetro con il martelletto se serve.",
+  "parole": [
+   {
+    "w": "Se",
+    "t0": 0.0,
+    "t1": 0.179
+   },
+   {
+    "w": "l'autista",
+    "t0": 0.179,
+    "t1": 0.777
+   },
+   {
+    "w": "non",
+    "t0": 0.777,
+    "t1": 1.016
+   },
+   {
+    "w": "può",
+    "t0": 1.016,
+    "t1": 1.256
+   },
+   {
+    "w": "intervenire,",
+    "t0": 1.256,
+    "t1": 2.033
+   },
+   {
+    "w": "devi",
+    "t0": 2.033,
+    "t1": 2.332
+   },
+   {
+    "w": "saperlo",
+    "t0": 2.332,
+    "t1": 2.81
+   },
+   {
+    "w": "fare",
+    "t0": 2.81,
+    "t1": 3.109
+   },
+   {
+    "w": "anche",
+    "t0": 3.109,
+    "t1": 3.468
+   },
+   {
+    "w": "tu.",
+    "t0": 3.468,
+    "t1": 3.707
+   },
+   {
+    "w": "Prima",
+    "t0": 3.707,
+    "t1": 4.066
+   },
+   {
+    "w": "di",
+    "t0": 4.066,
+    "t1": 4.245
+   },
+   {
+    "w": "tutto,",
+    "t0": 4.245,
+    "t1": 4.663
+   },
+   {
+    "w": "fate",
+    "t0": 4.663,
+    "t1": 4.962
+   },
+   {
+    "w": "scendere",
+    "t0": 4.962,
+    "t1": 5.5
+   },
+   {
+    "w": "tutti:",
+    "t0": 5.5,
+    "t1": 5.919
+   },
+   {
+    "w": "dalle",
+    "t0": 5.919,
+    "t1": 6.278
+   },
+   {
+    "w": "porte,",
+    "t0": 6.278,
+    "t1": 6.696
+   },
+   {
+    "w": "o",
+    "t0": 6.696,
+    "t1": 6.816
+   },
+   {
+    "w": "dalle",
+    "t0": 6.816,
+    "t1": 7.174
+   },
+   {
+    "w": "uscite",
+    "t0": 7.174,
+    "t1": 7.593
+   },
+   {
+    "w": "di",
+    "t0": 7.593,
+    "t1": 7.772
+   },
+   {
+    "w": "emergenza,",
+    "t0": 7.772,
+    "t1": 8.43
+   },
+   {
+    "w": "rompendo",
+    "t0": 8.43,
+    "t1": 8.968
+   },
+   {
+    "w": "il",
+    "t0": 8.968,
+    "t1": 9.147
+   },
+   {
+    "w": "vetro",
+    "t0": 9.147,
+    "t1": 9.506
+   },
+   {
+    "w": "con",
+    "t0": 9.506,
+    "t1": 9.745
+   },
+   {
+    "w": "il",
+    "t0": 9.745,
+    "t1": 9.925
+   },
+   {
+    "w": "martelletto",
+    "t0": 9.925,
+    "t1": 10.642
+   },
+   {
+    "w": "se",
+    "t0": 10.642,
+    "t1": 10.821
+   },
+   {
+    "w": "serve.",
+    "t0": 10.821,
+    "t1": 11.24
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "testo": "Poi sgancia l'estintore dal supporto, togli la spina, punta alla base delle fiamme e premi la leva, a getti brevi. Se il fuoco non cala in pochi secondi, scendi anche tu.",
+  "schermo": "Poi sgancia l'estintore dal supporto, togli la spina, punta alla base delle fiamme e premi la leva, a getti brevi. Se il fuoco non cala in pochi secondi, scendi anche tu.",
+  "file": "line_8.wav",
+  "ripresa": "line_8_take_1.mp3",
+  "durata": 10.35,
+  "somiglianza": 0.99,
+  "sentito": "Poi, sgancia l'estintore dal supporto, toglie la spina, punta alla base delle fiamme e premi la leva. Aggetti brevi. Se il fuoco non cala in pochi secondi, scendi anche tu.",
+  "parole": [
+   {
+    "w": "Poi",
+    "t0": 0.0,
+    "t1": 0.26
+   },
+   {
+    "w": "sgancia",
+    "t0": 0.38,
+    "t1": 0.82
+   },
+   {
+    "w": "l'estintore",
+    "t0": 0.82,
+    "t1": 0.92
+   },
+   {
+    "w": "dal",
+    "t0": 0.92,
+    "t1": 1.36
+   },
+   {
+    "w": "supporto,",
+    "t0": 1.36,
+    "t1": 1.52
+   },
+   {
+    "w": "togli",
+    "t0": 1.52,
+    "t1": 2.24
+   },
+   {
+    "w": "la",
+    "t0": 2.4,
+    "t1": 2.72
+   },
+   {
+    "w": "spina,",
+    "t0": 2.72,
+    "t1": 2.84
+   },
+   {
+    "w": "punta",
+    "t0": 2.84,
+    "t1": 3.26
+   },
+   {
+    "w": "alla",
+    "t0": 3.56,
+    "t1": 3.88
+   },
+   {
+    "w": "base",
+    "t0": 3.88,
+    "t1": 4.02
+   },
+   {
+    "w": "delle",
+    "t0": 4.02,
+    "t1": 4.28
+   },
+   {
+    "w": "fiamme",
+    "t0": 4.28,
+    "t1": 4.5
+   },
+   {
+    "w": "e",
+    "t0": 4.5,
+    "t1": 5.06
+   },
+   {
+    "w": "premi",
+    "t0": 5.06,
+    "t1": 5.22
+   },
+   {
+    "w": "la",
+    "t0": 5.22,
+    "t1": 5.52
+   },
+   {
+    "w": "leva,",
+    "t0": 5.52,
+    "t1": 5.7
+   },
+   {
+    "w": "a",
+    "t0": 5.7,
+    "t1": 5.96
+   },
+   {
+    "w": "getti",
+    "t0": 6.24,
+    "t1": 6.68
+   },
+   {
+    "w": "brevi.",
+    "t0": 6.68,
+    "t1": 7.04
+   },
+   {
+    "w": "Se",
+    "t0": 7.4,
+    "t1": 7.56
+   },
+   {
+    "w": "il",
+    "t0": 7.56,
+    "t1": 7.66
+   },
+   {
+    "w": "fuoco",
+    "t0": 7.66,
+    "t1": 7.92
+   },
+   {
+    "w": "non",
+    "t0": 7.92,
+    "t1": 8.06
+   },
+   {
+    "w": "cala",
+    "t0": 8.06,
+    "t1": 8.4
+   },
+   {
+    "w": "in",
+    "t0": 8.4,
+    "t1": 8.44
+   },
+   {
+    "w": "pochi",
+    "t0": 8.44,
+    "t1": 8.68
+   },
+   {
+    "w": "secondi,",
+    "t0": 8.68,
+    "t1": 9.32
+   },
+   {
+    "w": "scendi",
+    "t0": 9.46,
+    "t1": 9.74
+   },
+   {
+    "w": "anche",
+    "t0": 9.74,
+    "t1": 9.9
+   },
+   {
+    "w": "tu.",
+    "t0": 9.9,
+    "t1": 10.12
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "testo": "Sui camion che trasportano merci pericolose, con il pannello arancione, gli estintori sono obbligatori. Ma se il fuoco arriva al carico, non avvicinarti: allontanati e chiama il uno uno due.",
+  "schermo": "Sui camion che trasportano merci pericolose, con il pannello arancione, gli estintori sono obbligatori. Ma se il fuoco arriva al carico, non avvicinarti: allontanati e chiama il 112.",
+  "file": "line_9.wav",
+  "ripresa": "line_9_take_1.mp3",
+  "durata": 11.94,
+  "somiglianza": 1.0,
+  "sentito": "Sui camion che trasportano merci pericolose, con il pannello arancione, gli estintori sono obbligatori. Ma se il fuoco arriva al carico, non avvicinarti, allontanati e chiama il 112.",
+  "parole": [
+   {
+    "w": "Sui",
+    "t0": 0.0,
+    "t1": 0.237
+   },
+   {
+    "w": "camion",
+    "t0": 0.237,
+    "t1": 0.651
+   },
+   {
+    "w": "che",
+    "t0": 0.651,
+    "t1": 0.887
+   },
+   {
+    "w": "trasportano",
+    "t0": 0.887,
+    "t1": 1.597
+   },
+   {
+    "w": "merci",
+    "t0": 1.597,
+    "t1": 1.952
+   },
+   {
+    "w": "pericolose,",
+    "t0": 1.952,
+    "t1": 2.662
+   },
+   {
+    "w": "con",
+    "t0": 2.662,
+    "t1": 2.899
+   },
+   {
+    "w": "il",
+    "t0": 2.899,
+    "t1": 3.076
+   },
+   {
+    "w": "pannello",
+    "t0": 3.076,
+    "t1": 3.609
+   },
+   {
+    "w": "arancione,",
+    "t0": 3.609,
+    "t1": 4.26
+   },
+   {
+    "w": "gli",
+    "t0": 4.26,
+    "t1": 4.496
+   },
+   {
+    "w": "estintori",
+    "t0": 4.496,
+    "t1": 5.088
+   },
+   {
+    "w": "sono",
+    "t0": 5.088,
+    "t1": 5.384
+   },
+   {
+    "w": "obbligatori.",
+    "t0": 5.384,
+    "t1": 6.153
+   },
+   {
+    "w": "Ma",
+    "t0": 6.153,
+    "t1": 6.33
+   },
+   {
+    "w": "se",
+    "t0": 6.33,
+    "t1": 6.508
+   },
+   {
+    "w": "il",
+    "t0": 6.508,
+    "t1": 6.685
+   },
+   {
+    "w": "fuoco",
+    "t0": 6.685,
+    "t1": 7.04
+   },
+   {
+    "w": "arriva",
+    "t0": 7.04,
+    "t1": 7.454
+   },
+   {
+    "w": "al",
+    "t0": 7.454,
+    "t1": 7.632
+   },
+   {
+    "w": "carico,",
+    "t0": 7.632,
+    "t1": 8.105
+   },
+   {
+    "w": "non",
+    "t0": 8.105,
+    "t1": 8.342
+   },
+   {
+    "w": "avvicinarti:",
+    "t0": 8.342,
+    "t1": 9.111
+   },
+   {
+    "w": "allontanati",
+    "t0": 9.111,
+    "t1": 9.821
+   },
+   {
+    "w": "e",
+    "t0": 9.821,
+    "t1": 9.939
+   },
+   {
+    "w": "chiama",
+    "t0": 9.939,
+    "t1": 10.353
+   },
+   {
+    "w": "il",
+    "t0": 10.353,
+    "t1": 10.531
+   },
+   {
+    "w": "uno",
+    "t0": 10.531,
+    "t1": 10.768
+   },
+   {
+    "w": "uno",
+    "t0": 10.768,
+    "t1": 11.004
+   },
+   {
+    "w": "due.",
+    "t0": 11.004,
+    "t1": 11.3
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "testo": "Le auto elettriche e ibride hanno una grande batteria al litio. Se prende fuoco, un estintore portatile non basta, e la batteria può riaccendersi anche ore dopo.",
+  "schermo": "Le auto elettriche e ibride hanno una grande batteria al litio. Se prende fuoco, un estintore portatile non basta, e la batteria può riaccendersi anche ore dopo.",
+  "file": "line_10.wav",
+  "ripresa": "line_10_take_2.mp3",
+  "durata": 10.15,
+  "somiglianza": 1.0,
+  "sentito": "Le auto elettriche e ibride hanno una grande batteria al litio. Se prende fuoco, un estintore portatile non basta e la batteria può riaccendersi anche ore dopo.",
+  "parole": [
+   {
+    "w": "Le",
+    "t0": 0.0,
+    "t1": 0.16
+   },
+   {
+    "w": "auto",
+    "t0": 0.16,
+    "t1": 0.4
+   },
+   {
+    "w": "elettriche",
+    "t0": 0.4,
+    "t1": 0.98
+   },
+   {
+    "w": "e",
+    "t0": 0.98,
+    "t1": 1.18
+   },
+   {
+    "w": "ibride",
+    "t0": 1.18,
+    "t1": 1.64
+   },
+   {
+    "w": "hanno",
+    "t0": 1.64,
+    "t1": 2.0
+   },
+   {
+    "w": "una",
+    "t0": 2.0,
+    "t1": 2.2
+   },
+   {
+    "w": "grande",
+    "t0": 2.2,
+    "t1": 2.54
+   },
+   {
+    "w": "batteria",
+    "t0": 2.54,
+    "t1": 3.1
+   },
+   {
+    "w": "al",
+    "t0": 3.1,
+    "t1": 3.26
+   },
+   {
+    "w": "litio.",
+    "t0": 3.26,
+    "t1": 3.62
+   },
+   {
+    "w": "Se",
+    "t0": 4.0,
+    "t1": 4.18
+   },
+   {
+    "w": "prende",
+    "t0": 4.18,
+    "t1": 4.52
+   },
+   {
+    "w": "fuoco,",
+    "t0": 4.52,
+    "t1": 4.94
+   },
+   {
+    "w": "un",
+    "t0": 5.18,
+    "t1": 5.26
+   },
+   {
+    "w": "estintore",
+    "t0": 5.26,
+    "t1": 5.72
+   },
+   {
+    "w": "portatile",
+    "t0": 5.72,
+    "t1": 6.24
+   },
+   {
+    "w": "non",
+    "t0": 6.24,
+    "t1": 6.42
+   },
+   {
+    "w": "basta,",
+    "t0": 6.42,
+    "t1": 6.82
+   },
+   {
+    "w": "e",
+    "t0": 6.82,
+    "t1": 7.38
+   },
+   {
+    "w": "la",
+    "t0": 7.38,
+    "t1": 7.48
+   },
+   {
+    "w": "batteria",
+    "t0": 7.48,
+    "t1": 7.94
+   },
+   {
+    "w": "può",
+    "t0": 7.94,
+    "t1": 8.1
+   },
+   {
+    "w": "riaccendersi",
+    "t0": 8.1,
+    "t1": 8.92
+   },
+   {
+    "w": "anche",
+    "t0": 8.92,
+    "t1": 9.18
+   },
+   {
+    "w": "ore",
+    "t0": 9.18,
+    "t1": 9.52
+   },
+   {
+    "w": "dopo.",
+    "t0": 9.52,
+    "t1": 9.86
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "testo": "Allontanati, mettiti con il vento alle spalle e chiama il uno uno due: di' subito che è un'auto elettrica.",
+  "schermo": "Allontanati, mettiti con il vento alle spalle e chiama il 112: di' subito che è un'auto elettrica.",
+  "file": "line_11.wav",
+  "ripresa": "line_11_take_2.mp3",
+  "durata": 6.74,
+  "somiglianza": 1.0,
+  "sentito": "Allontanati, mettiti con il vento alle spalle e chiama il 112, di subito che è un'auto elettrica.",
+  "parole": [
+   {
+    "w": "Allontanati,",
+    "t0": 0.0,
+    "t1": 0.787
+   },
+   {
+    "w": "mettiti",
+    "t0": 0.787,
+    "t1": 1.272
+   },
+   {
+    "w": "con",
+    "t0": 1.272,
+    "t1": 1.514
+   },
+   {
+    "w": "il",
+    "t0": 1.514,
+    "t1": 1.696
+   },
+   {
+    "w": "vento",
+    "t0": 1.696,
+    "t1": 2.059
+   },
+   {
+    "w": "alle",
+    "t0": 2.059,
+    "t1": 2.362
+   },
+   {
+    "w": "spalle",
+    "t0": 2.362,
+    "t1": 2.786
+   },
+   {
+    "w": "e",
+    "t0": 2.786,
+    "t1": 2.907
+   },
+   {
+    "w": "chiama",
+    "t0": 2.907,
+    "t1": 3.331
+   },
+   {
+    "w": "il",
+    "t0": 3.331,
+    "t1": 3.513
+   },
+   {
+    "w": "uno",
+    "t0": 3.513,
+    "t1": 3.755
+   },
+   {
+    "w": "uno",
+    "t0": 3.755,
+    "t1": 3.997
+   },
+   {
+    "w": "due:",
+    "t0": 3.997,
+    "t1": 4.3
+   },
+   {
+    "w": "di'",
+    "t0": 4.3,
+    "t1": 4.542
+   },
+   {
+    "w": "subito",
+    "t0": 4.542,
+    "t1": 4.966
+   },
+   {
+    "w": "che",
+    "t0": 4.966,
+    "t1": 5.208
+   },
+   {
+    "w": "è",
+    "t0": 5.208,
+    "t1": 5.329
+   },
+   {
+    "w": "un'auto",
+    "t0": 5.329,
+    "t1": 5.814
+   },
+   {
+    "w": "elettrica.",
+    "t0": 5.814,
+    "t1": 6.48
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "testo": "Le auto a GPL e a metano hanno serbatoi robusti, con valvole di sicurezza. Se le fiamme si avvicinano al serbatoio, non provare a spegnerle: allontanati e chiama il uno uno due.",
+  "schermo": "Le auto a GPL e a metano hanno serbatoi robusti, con valvole di sicurezza. Se le fiamme si avvicinano al serbatoio, non provare a spegnerle: allontanati e chiama il 112.",
+  "file": "line_12.wav",
+  "ripresa": "line_12_take_1.mp3",
+  "durata": 12.06,
+  "somiglianza": 1.0,
+  "sentito": "Le auto a GPL e a metano hanno serbatoi robusti, con valvole di sicurezza. Se le fiamme si avvicinano al serbatoio, non provare a spegnerle. Allontanati e chiama il 112.",
+  "parole": [
+   {
+    "w": "Le",
+    "t0": 0.0,
+    "t1": 0.193
+   },
+   {
+    "w": "auto",
+    "t0": 0.193,
+    "t1": 0.514
+   },
+   {
+    "w": "a",
+    "t0": 0.514,
+    "t1": 0.643
+   },
+   {
+    "w": "GPL",
+    "t0": 0.643,
+    "t1": 0.9
+   },
+   {
+    "w": "e",
+    "t0": 0.9,
+    "t1": 1.028
+   },
+   {
+    "w": "a",
+    "t0": 1.028,
+    "t1": 1.157
+   },
+   {
+    "w": "metano",
+    "t0": 1.157,
+    "t1": 1.607
+   },
+   {
+    "w": "hanno",
+    "t0": 1.607,
+    "t1": 1.992
+   },
+   {
+    "w": "serbatoi",
+    "t0": 1.992,
+    "t1": 2.571
+   },
+   {
+    "w": "robusti,",
+    "t0": 2.571,
+    "t1": 3.149
+   },
+   {
+    "w": "con",
+    "t0": 3.149,
+    "t1": 3.406
+   },
+   {
+    "w": "valvole",
+    "t0": 3.406,
+    "t1": 3.92
+   },
+   {
+    "w": "di",
+    "t0": 3.92,
+    "t1": 4.113
+   },
+   {
+    "w": "sicurezza.",
+    "t0": 4.113,
+    "t1": 4.82
+   },
+   {
+    "w": "Se",
+    "t0": 4.82,
+    "t1": 5.013
+   },
+   {
+    "w": "le",
+    "t0": 5.013,
+    "t1": 5.206
+   },
+   {
+    "w": "fiamme",
+    "t0": 5.206,
+    "t1": 5.656
+   },
+   {
+    "w": "si",
+    "t0": 5.656,
+    "t1": 5.849
+   },
+   {
+    "w": "avvicinano",
+    "t0": 5.849,
+    "t1": 6.556
+   },
+   {
+    "w": "al",
+    "t0": 6.556,
+    "t1": 6.748
+   },
+   {
+    "w": "serbatoio,",
+    "t0": 6.748,
+    "t1": 7.455
+   },
+   {
+    "w": "non",
+    "t0": 7.455,
+    "t1": 7.712
+   },
+   {
+    "w": "provare",
+    "t0": 7.712,
+    "t1": 8.227
+   },
+   {
+    "w": "a",
+    "t0": 8.227,
+    "t1": 8.355
+   },
+   {
+    "w": "spegnerle:",
+    "t0": 8.355,
+    "t1": 9.062
+   },
+   {
+    "w": "allontanati",
+    "t0": 9.062,
+    "t1": 9.833
+   },
+   {
+    "w": "e",
+    "t0": 9.833,
+    "t1": 9.962
+   },
+   {
+    "w": "chiama",
+    "t0": 9.962,
+    "t1": 10.412
+   },
+   {
+    "w": "il",
+    "t0": 10.412,
+    "t1": 10.604
+   },
+   {
+    "w": "uno",
+    "t0": 10.604,
+    "t1": 10.862
+   },
+   {
+    "w": "uno",
+    "t0": 10.862,
+    "t1": 11.119
+   },
+   {
+    "w": "due.",
+    "t0": 11.119,
+    "t1": 11.44
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "testo": "Qualunque mezzo guidi, prima vieni tu, poi il veicolo. Protezione Civile, Gruppo comunale di Genzano di Roma.",
+  "schermo": "Qualunque mezzo guidi, prima vieni tu, poi il veicolo. Protezione Civile, Gruppo comunale di Genzano di Roma.",
+  "file": "line_13.wav",
+  "ripresa": "line_13_take_1.mp3",
+  "durata": 7.82,
+  "somiglianza": 0.99,
+  "sentito": "Qualunque mezzo guidi. Prima vieni tu, poi il veicolo. Protezione civile, gruppo comunale di Gensano di Roma.",
+  "parole": [
+   {
+    "w": "Qualunque",
+    "t0": 0.0,
+    "t1": 0.44
+   },
+   {
+    "w": "mezzo",
+    "t0": 0.44,
+    "t1": 0.76
+   },
+   {
+    "w": "guidi,",
+    "t0": 0.76,
+    "t1": 1.16
+   },
+   {
+    "w": "prima",
+    "t0": 1.52,
+    "t1": 1.82
+   },
+   {
+    "w": "vieni",
+    "t0": 1.82,
+    "t1": 2.08
+   },
+   {
+    "w": "tu,",
+    "t0": 2.08,
+    "t1": 2.28
+   },
+   {
+    "w": "poi",
+    "t0": 2.64,
+    "t1": 2.94
+   },
+   {
+    "w": "il",
+    "t0": 2.94,
+    "t1": 3.22
+   },
+   {
+    "w": "veicolo.",
+    "t0": 3.22,
+    "t1": 3.74
+   },
+   {
+    "w": "Protezione",
+    "t0": 4.3,
+    "t1": 4.9
+   },
+   {
+    "w": "Civile,",
+    "t0": 4.9,
+    "t1": 5.4
+   },
+   {
+    "w": "Gruppo",
+    "t0": 5.66,
+    "t1": 6.06
+   },
+   {
+    "w": "comunale",
+    "t0": 6.06,
+    "t1": 6.54
+   },
+   {
+    "w": "di",
+    "t0": 6.54,
+    "t1": 6.68
+   },
+   {
+    "w": "Genzano",
+    "t0": 6.68,
+    "t1": 7.18
+   },
+   {
+    "w": "di",
+    "t0": 7.18,
+    "t1": 7.32
+   },
+   {
+    "w": "Roma.",
+    "t0": 7.32,
+    "t1": 7.54
+   }
+  ]
+ }
+]
