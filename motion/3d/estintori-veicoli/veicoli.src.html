@@ -598,7 +598,19 @@ SOTT.forEach(f => {
   const posBus0 = bus.punto(bus.L2 - .55, .5, .87), posBus1 = bus.punto(-bus.L2 - .2, 0, 2.6);
   // persone
   const autista = persona(0x334155);
-  const PASS = [0xf97316, 0x22c55e, 0xa855f7, 0x0ea5e9, 0xeab308, 0xef4444].map(c => persona(c));
+  const PASS = [0xf97316, 0x22c55e, 0xa855f7, 0x0ea5e9, 0xeab308, 0x14b8a6].map(c => persona(c));
+  // braccia del passeggero che usa l'estintore: una mano sulla leva, l'altra sulla manichetta
+  const braccia = [0, 1].map(() => {
+    const m = new THREE.Mesh(new THREE.CapsuleGeometry(.045, 1, 4, 10), tinta(0x14b8a6, { roughness: .7 }));
+    m.visible = false; scena.add(m); return m;
+  });
+  const _sp = new THREE.Vector3(), _mn = new THREE.Vector3(), _ax = new THREE.Vector3(0, 1, 0);
+  function braccio(m, spalla, mano) {          // capsula dalla spalla alla mano
+    const d = spalla.distanceTo(mano);
+    m.position.copy(spalla).add(mano).multiplyScalar(.5);
+    m.scale.set(1, Math.max(d - .09, .01), 1);
+    m.quaternion.setFromUnitVectors(_ax, _mn.copy(mano).sub(spalla).normalize());
+  }
   const SEDILI = [[.6, 0], [-.6, 0], [.6, 1], [-.6, 2], [.6, 3], [-.6, 4]].map(([z, i]) => bus.punto(bus.L2 - 2.2 - i * .95, .1, z));
   const guidatoreA = persona(0x475569), passeggeroA = persona(0xf97316);
   const camionista = persona(0x475569), guidatoreE = persona(0x0ea5e9);
@@ -768,7 +780,16 @@ SOTT.forEach(f => {
     estBus.gruppo.visible = t > S(5) - .5 && t < E(7) + .5;
     estBus.spina.visible = t < parola(7, 'spina') + .6;
     const soccorre = PASS[5];
-    if (t > tSgancia) { soccorre.position.copy(estBus.gruppo.position).add(_v.set(.35, 0, .45)); soccorre.scale.setScalar(.85); guarda(soccorre, soccorre.position, bus.punto(-bus.L2, 0, 0)); }
+    // il passeggero tiene l'estintore: sollevato da terra, una mano sulla leva e una sulla manichetta
+    estBus.gruppo.position.y += .1 * sp;
+    if (t > tSgancia) { soccorre.position.copy(estBus.gruppo.position).add(_v.set(.2, 0, .3)); soccorre.position.y = 0; soccorre.scale.setScalar(.85); guarda(soccorre, soccorre.position, bus.punto(-bus.L2, 0, 0)); }
+    const tiene = t > tSgancia + .2 && soccorre.visible && estBus.gruppo.visible;
+    braccia.forEach(m => { m.visible = tiene; });
+    if (tiene) {
+      soccorre.updateMatrixWorld(); estBus.gruppo.updateMatrixWorld();
+      braccio(braccia[0], soccorre.localToWorld(_sp.set(-.17, 1.02, .05)), estBus.mano());
+      const pn = estBus.punta(); braccio(braccia[1], soccorre.localToWorld(_sp.set(.17, 1.02, .05)), estBus.gruppo.localToWorld(new THREE.Vector3(0, 0, 0)).lerp(pn, .85));
+    }
     const tLevaB = parola(7, 'leva') - .1;
     const gB = fin(t, tLevaB, parola(7, 'cala') + .2, .2, .3);
     estBus.leva.rotation.z = mix(-0.22, 0.03, gB);
