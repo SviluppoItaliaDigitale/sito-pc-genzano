@@ -62,7 +62,7 @@ Per alcune persone la giornata è **gravosa**:
 
 ## Sicurezza al cimitero
 
-Molte delle indicazioni valide per il 1° novembre restano valide oggi. In particolare:
+Molte delle indicazioni date per il 1° novembre restano valide oggi. In particolare:
 
 - **viabilità** ancora elevata;
 - **attenzione** a pedoni, specie anziani;
