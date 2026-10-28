@@ -23,6 +23,8 @@ Tra il **23 e il 25 ottobre** il nostro registro conta **tre interventi per albe
 
 Questo articolo raccoglie il resoconto delle tre giornate e aggiorna le statistiche del Gruppo.
 
+Nello stesso fine settimana i volontari erano anche in piazza Frasconi per il terzo Memorial Giordano Funari: ne abbiamo scritto nell'articolo [Memorial Giordano Funari: il Gruppo in piazza Frasconi](/comunicazioni/2026-10-24-memorial-giordano-funari-genzano/).
+
 ## Il 23 ottobre: due rami in viale delle Regioni
 
 Nel pomeriggio il Sindaco ci ha chiesto di intervenire in **viale delle Regioni**, dove **due rami pericolanti** andavano rimossi. La squadra è arrivata poco dopo le 15 e 30 con il pickup EVO Cross 4 del Gruppo. Il servizio è terminato in serata, verso le 21 e 45.
@@ -64,6 +66,7 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 
 **Sul nostro sito:**
 
+- [Memorial Giordano Funari: il Gruppo in piazza Frasconi](/comunicazioni/2026-10-24-memorial-giordano-funari-genzano/)
 - [Maltempo, 21 e 22 ottobre: interventi a Genzano e supporto a Latina](/comunicazioni/2026-10-21-maltempo-rami-genzano-volontari-alluvione-latina/)
 - [Da oggi il buio alle 17: il primo giorno di ora solare](/comunicazioni/2026-10-26-ora-solare-primo-giorno-buio-alle-17/)
 - [Vento forte: cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/)
