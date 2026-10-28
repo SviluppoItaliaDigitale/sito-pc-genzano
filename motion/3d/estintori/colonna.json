@@ -14,58 +14,58 @@
   },
   {
    "file": "voce/line_4.wav",
-   "inizio": 27.67
+   "inizio": 48.86
   },
   {
    "file": "voce/line_5.wav",
-   "inizio": 33.75
+   "inizio": 54.94
   },
   {
    "file": "voce/line_6.wav",
-   "inizio": 43.06
+   "inizio": 64.25
   },
   {
    "file": "voce/line_7.wav",
-   "inizio": 58.32
+   "inizio": 79.51
   },
   {
    "file": "voce/line_8.wav",
-   "inizio": 71.54
+   "inizio": 92.73
   },
   {
    "file": "voce/line_9.wav",
-   "inizio": 88.38
+   "inizio": 109.57
   },
   {
    "file": "voce/line_10.wav",
-   "inizio": 97.67
+   "inizio": 118.86
   },
   {
    "file": "voce/line_11.wav",
-   "inizio": 108.07
+   "inizio": 129.26
   },
   {
    "file": "voce/line_12.wav",
-   "inizio": 120.55
+   "inizio": 141.74
   },
   {
    "file": "voce/line_13.wav",
-   "inizio": 129.39
+   "inizio": 150.58
   },
   {
    "file": "voce/line_14.wav",
-   "inizio": 142.52
+   "inizio": 163.71
   },
   {
    "file": "voce/line_15.wav",
-   "inizio": 151.81
+   "inizio": 173.0
   },
   {
    "file": "voce/line_16.wav",
-   "inizio": 161.0
+   "inizio": 182.19
   }
  ],
- "durata": 167.52,
+ "durata": 188.71,
  "scene": [
   {
    "inizio": 0.0,
@@ -77,58 +77,58 @@
   },
   {
    "inizio": 17.82,
-   "durata": 9.4
+   "durata": 30.59
   },
   {
-   "inizio": 27.22,
+   "inizio": 48.41,
    "durata": 6.08
   },
   {
-   "inizio": 33.3,
+   "inizio": 54.49,
    "durata": 9.31
   },
   {
-   "inizio": 42.61,
+   "inizio": 63.8,
    "durata": 15.26
   },
   {
-   "inizio": 57.87,
+   "inizio": 79.06,
    "durata": 13.22
   },
   {
-   "inizio": 71.09,
+   "inizio": 92.28,
    "durata": 16.84
   },
   {
-   "inizio": 87.93,
+   "inizio": 109.12,
    "durata": 9.29
   },
   {
-   "inizio": 97.22,
+   "inizio": 118.41,
    "durata": 10.4
   },
   {
-   "inizio": 107.62,
+   "inizio": 128.81,
    "durata": 12.48
   },
   {
-   "inizio": 120.1,
+   "inizio": 141.29,
    "durata": 8.84
   },
   {
-   "inizio": 128.94,
+   "inizio": 150.13,
    "durata": 13.13
   },
   {
-   "inizio": 142.07,
+   "inizio": 163.26,
    "durata": 9.29
   },
   {
-   "inizio": 151.36,
+   "inizio": 172.55,
    "durata": 9.19
   },
   {
-   "inizio": 160.55,
+   "inizio": 181.74,
    "durata": 6.97
   }
  ],
@@ -136,9 +136,17 @@
   {
    "file": "audio/musica.mp3",
    "inizio": 0,
-   "fine": 167.52,
+   "fine": 36.014,
    "da": 0,
    "entrata": 1.2,
+   "uscita": 0.04
+  },
+  {
+   "file": "audio/musica.mp3",
+   "inizio": 36.014,
+   "fine": 188.71,
+   "da": 14.392,
+   "entrata": 0.04,
    "uscita": 3.0
   }
  ]

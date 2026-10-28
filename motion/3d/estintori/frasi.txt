@@ -1,6 +1,6 @@
 Hai un estintore in casa, in ufficio o in auto. Ma sai davvero come funziona, e quale usare?
 Apriamolo. Dentro c'è l'agente che spegne il fuoco, e un gas che lo tiene sotto pressione: di solito azoto.
-Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta.
+Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta. Guardiamo dentro la valvola. Una molla e la pressione tengono lo stelo premuto sulla guarnizione: il passaggio è chiuso. Togli la spina: non succede niente, la spina blocca solo la leva. Premi la leva: lo stelo scende, e l'agente passa. Lasci la leva: la valvola si richiude, e il getto si ferma.
 Il manometro ti dice se è carico: la lancetta deve stare nel verde.
 Altri modelli hanno una piccola bombola di gas a parte: si pressurizzano solo quando li usi, e non hanno il manometro.
 Ogni estintore è fatto per certi fuochi. Le lettere sull'etichetta lo dicono: a, solidi; bi, liquidi; ci, gas; di, metalli; effe, oli e grassi da cucina. || Ogni estintore è fatto per certi fuochi. Le lettere sull'etichetta lo dicono: A solidi, B liquidi, C gas, D metalli, F oli e grassi da cucina.

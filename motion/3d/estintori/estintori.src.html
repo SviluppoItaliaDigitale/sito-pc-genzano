@@ -274,13 +274,31 @@ SOTT.forEach(f => {
     // interno (visibile con lo spaccato)
     const interno = new THREE.Group(); interno.visible = false; g.add(interno);
     const alto = Hh - .06, basso = .03, rIn = R * .93;
-    const agMat = tinta(c.agente, { roughness: tipo === 'acqua' ? .2 : .95, transparent: tipo === 'acqua', opacity: tipo === 'acqua' ? .85 : 1 });
+    const grana = tela(128, 128, (g, w, h) => {
+      g.fillStyle = '#ffffff'; g.fillRect(0, 0, w, h);
+      for (let i = 0; i < 900; i++) { const v = 200 + Math.floor(hash(i * 3.3) * 55); g.fillStyle = `rgb(${v},${v},${v})`; g.fillRect(hash(i * 1.7) * w, hash(i * 2.9) * h, 2, 2); }
+    });
+    grana.wrapS = grana.wrapT = THREE.RepeatWrapping; grana.repeat.set(3, 3);
+    const agMat = tinta(c.agente, { roughness: tipo === 'acqua' ? .2 : .95, transparent: tipo === 'acqua', opacity: tipo === 'acqua' ? .85 : 1, map: tipo === 'acqua' ? null : grana });
     const agente = new THREE.Mesh(new THREE.CylinderGeometry(rIn, rIn, 1, 40), agMat);
     interno.add(agente);
     const gasMat = base(0x7cc4ff, { transparent: true, opacity: .22, depthWrite: false });
     const gas = new THREE.Mesh(new THREE.CylinderGeometry(rIn, rIn, 1, 40, 1, true), gasMat); interno.add(gas);
-    const pescante = new THREE.Mesh(new THREE.CylinderGeometry(.008, .008, alto - basso + .06, 10), tinta(0xdde3ea, { metalness: .6, roughness: .3 }));
+    // pescante trasparente, un po' più grosso del vero per leggerlo; dentro, la colonna di agente che sale
+    const lungP = alto - basso + .06;
+    const pescante = new THREE.Mesh(new THREE.CylinderGeometry(.015, .015, lungP, 16, 1, true),
+      new THREE.MeshStandardMaterial({ color: 0xdff1ff, metalness: .1, roughness: .1, transparent: true, opacity: .38, depthWrite: false, side: THREE.DoubleSide }));
     pescante.position.set(0, (alto + basso) / 2 + .03, 0); interno.add(pescante);
+    const colonna = new THREE.Mesh(new THREE.CylinderGeometry(.011, .011, 1, 12), tinta(c.agente, { roughness: .6, emissive: c.agente, emissiveIntensity: .25 }));
+    colonna.geometry.translate(0, .5, 0); colonna.position.set(0, basso, 0); colonna.scale.y = .001; colonna.visible = false; interno.add(colonna);
+    // frecce del gas che preme sulla superficie dell'agente
+    const frecceG = [];
+    for (let i = 0; i < 5; i++) {
+      const fr = new THREE.Group();
+      const asta = new THREE.Mesh(new THREE.CylinderGeometry(.004, .004, .045, 8), base(0x7cc4ff));
+      const punta = new THREE.Mesh(new THREE.ConeGeometry(.012, .022, 12), base(0x7cc4ff)); punta.rotation.x = Math.PI; punta.position.y = -.033;
+      fr.add(asta, punta); fr.visible = false; interno.add(fr); frecceG.push(fr);
+    }
     let cart = null;
     if (c.cartuccia) {
       cart = new THREE.Mesh(new THREE.CylinderGeometry(.028, .028, .22, 20), tinta(0xd4a017, { metalness: .7, roughness: .3 }));
@@ -295,9 +313,17 @@ SOTT.forEach(f => {
     molecole.frustumCulled = false; interno.add(molecole);
     const NF = 90, fPos = new Float32Array(NF * 3), fGeo = new THREE.BufferGeometry();
     fGeo.setAttribute('position', new THREE.BufferAttribute(fPos, 3));
-    const flussoP = new THREE.Points(fGeo, new THREE.PointsMaterial({ color: c.agente, size: .016, transparent: true, opacity: 1, depthWrite: false }));
+    const flussoP = new THREE.Points(fGeo, new THREE.PointsMaterial({ color: c.agente, size: .02, transparent: true, opacity: 1, depthWrite: false, depthTest: false }));
     flussoP.frustumCulled = false; g.add(flussoP); flussoP.visible = false;
     const percorso = new THREE.CatmullRomCurve3([new THREE.Vector3(0, basso + .03, 0), new THREE.Vector3(0, alto + .06, 0), p0.clone()].concat(curva.points.slice(1)).concat([punta.clone()]));
+    // frazione del percorso dove finisce il pescante (per la colonna che sale)
+    let sPesc = .2;
+    for (let i = 0; i <= 200; i++) { if (percorso.getPointAt(i / 200).y >= alto + .055) { sPesc = i / 200; break; } }
+    // soffio di gas dalla bombolina (solo modello a cartuccia)
+    const NS = 80, sPos = new Float32Array(NS * 3), sGeo = new THREE.BufferGeometry();
+    sGeo.setAttribute('position', new THREE.BufferAttribute(sPos, 3));
+    const soffioP = new THREE.Points(sGeo, new THREE.PointsMaterial({ color: 0xbfe3ff, size: .016, transparent: true, opacity: .95, depthWrite: false, depthTest: false }));
+    soffioP.frustumCulled = false; soffioP.visible = false; interno.add(soffioP);
 
     let livelloU = .74, gasDa = 0;
     function livello(u, gasU = 1) {          // u = frazione di riempimento dell'agente; gasU = quanto gas c'è sopra (0..1)
@@ -319,16 +345,42 @@ SOTT.forEach(f => {
       }
       mGeo.attributes.position.needsUpdate = true;
     }
-    function flusso(t, u) {                  // u: intensità del flusso 0..1
-      flussoP.visible = u > .01;
-      if (!flussoP.visible) return;
+    // flusso dell'agente lungo pescante, testa e manichetta: compare dove testa ≥ s ≥ coda (0 = fondo, 1 = diffusore)
+    function flusso(t, testa, coda = 0) {
+      flussoP.visible = testa > .005 && coda < .995;
+      colonna.visible = flussoP.visible && interno.visible;
+      if (!flussoP.visible) { colonna.scale.y = .001; return; }
       for (let i = 0; i < NF; i++) {
-        const s = ((hash(i * 5.1) + t * .9) % 1);
+        const s = (hash(i * 5.1) + t * .55) % 1;
+        const on = s <= testa && s >= coda;
         const p = percorso.getPointAt(s);
-        const on = hash(i * 9.7) < u;
         fPos[i * 3] = p.x; fPos[i * 3 + 1] = on ? p.y : -10; fPos[i * 3 + 2] = p.z + .002;
       }
       fGeo.attributes.position.needsUpdate = true;
+      // colonna nel pescante: piena fino alla testa finché scorre, si svuota dal basso quando la valvola si chiude
+      const h0 = clamp(coda / sPesc), h1 = clamp(testa / sPesc), Lp = alto + .06 - basso;
+      colonna.position.y = basso + h0 * Lp; colonna.scale.y = Math.max((h1 - h0) * Lp, .001);
+    }
+    function frecce(t, u) {                    // il gas preme sulla superficie dell'agente
+      frecceG.forEach((fr, i) => {
+        fr.visible = u > .02 && interno.visible;
+        const a = i / 5 * 6.283 + .4, r = i === 0 ? 0 : rIn * .55;
+        const y0 = c.cartuccia ? mix(alto - .02, gasDa + .07, 1) : gasDa + .07;
+        fr.position.set(i === 0 ? .045 : Math.cos(a) * r, y0 + .018 * (1 - ((t * 1.6 + i * .2) % 1)), i === 0 ? 0 : Math.sin(a) * r * .5);
+        fr.scale.setScalar(Math.max(u, .001));
+      });
+    }
+    function soffio(t, t0) {                   // il gas esce dalla bombolina e riempie lo spazio sopra l'agente
+      const w = clamp(prog(t, t0, .25)) * (1 - prog(t, t0 + 1.6, .6));
+      soffioP.visible = w > .01 && interno.visible;
+      if (!soffioP.visible) return;
+      for (let i = 0; i < NS; i++) {
+        const s = (hash(i * 4.7) + (t - t0) * 1.3) % 1, a = hash(i * 2.3) * 6.283, sp = .03 + .1 * s;
+        sPos[i * 3] = -.07 + Math.cos(a) * sp * (.3 + hash(i)); sPos[i * 3 + 1] = alto - .005 + .02 * Math.sin(Math.PI * s) - .03 * s * hash(i * 7.7);
+        sPos[i * 3 + 2] = Math.sin(a) * sp * .7;
+        if (hash(i * 9.1) > w) sPos[i * 3 + 1] = -10;
+      }
+      sGeo.attributes.position.needsUpdate = true;
     }
     function taglio(dQ, cam) {               // dQ: 0 = intero, 1 = metà anteriore tolta
       const w = g.getWorldPosition(new THREE.Vector3());
@@ -346,7 +398,7 @@ SOTT.forEach(f => {
       testa: () => g.localToWorld(new THREE.Vector3(0, Hh + .1, 0)),
       quota: y => g.localToWorld(new THREE.Vector3(0, y, 0)),
       mano: () => g.localToWorld(new THREE.Vector3(0, Hh + .09, .052)),
-      taglio, livello, agita, flusso, gasDa: () => gasDa,
+      taglio, livello, agita, flusso, frecce, soffio, gasDa: () => gasDa,
       pescante: () => g.localToWorld(new THREE.Vector3(0, Hh * .45, 0)),
       cartPos: () => g.localToWorld(new THREE.Vector3(-.07, alto - .14, 0))
     };
@@ -443,6 +495,101 @@ SOTT.forEach(f => {
   const esplosa = M3.esplosa([]);       // (non usata: la vista esplosa la anima a mano su testa, leva, tubo)
   // stazione 3: modello a bombola ausiliaria
   const cart = estintore('cartuccia'); cart.gruppo.position.set(3, 0, 0); scena.add(cart.gruppo); alone(3, 0, .9); anelloPedana(3, 0, .55);
+  // valvola in sezione (scena 2, seconda parte): modello ingrandito, schema non in scala.
+  // Misure in metri del modello: corpo largo 0,36 e alto 0,34; origine al centro della base del corpo.
+  const XV = -1.6, YV = .32;
+  const valv = (function () {
+    const g = new THREE.Group(); g.position.set(XV, YV, 0); scena.add(g);
+    const PX = 2000, Wc = .36, Hc = .34, Z = .04;              // pixel per metro della tessitura; mezza profondità del corpo
+    const cav = [                                               // cavità interna (x, y): ingresso, camera, sede, camera alta, uscita, guida dello stelo
+      [[-.02, 0], [.02, .04]], [[-.07, .04], [.07, .14]], [[-.025, .14], [.025, .17]], [[-.045, .17], [.045, .24]],
+      [[.045, .185], [.18, .225]], [[-.012, .24], [.012, .34]]];
+    const tex = tela(Math.round(Wc * PX), Math.round(Hc * PX), (gc, w, h) => {
+      const X = x => (x + Wc / 2) * PX, Y = y => h - y * PX;
+      gc.fillStyle = '#c3ccd6'; gc.fillRect(0, 0, w, h);
+      gc.strokeStyle = 'rgba(60,72,88,.35)'; gc.lineWidth = 3;                    // tratteggio della sezione
+      for (let i = -h; i < w; i += 22) { gc.beginPath(); gc.moveTo(i, h); gc.lineTo(i + h, 0); gc.stroke(); }
+      gc.fillStyle = '#1b2d44';
+      cav.forEach(([[x0, y0], [x1, y1]]) => gc.fillRect(X(x0), Y(y1), (x1 - x0) * PX, (y1 - y0) * PX));
+      gc.strokeStyle = '#d6dde5'; gc.lineWidth = 5; gc.strokeRect(2, 2, w - 4, h - 4);
+    });
+    const faccia = new THREE.MeshStandardMaterial({ map: tex, metalness: .1, roughness: .7, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: .35 });
+    const lato = new THREE.MeshStandardMaterial({ color: 0x9aa6b4, metalness: .6, roughness: .35 });
+    const corpo = new THREE.Mesh(new THREE.BoxGeometry(Wc, Hc, 2 * Z), [lato, lato, lato, lato, faccia, lato]);
+    corpo.position.y = Hc / 2; g.add(corpo);
+    // aletta forata per la spina, sopra il corpo, vicino al fulcro
+    const aletta = new THREE.Mesh(new THREE.BoxGeometry(.03, .075, .03), lato); aletta.position.set(-.09, Hc + .037, -.01); g.add(aletta);
+    // pescante sotto (trasparente) e manichetta a destra
+    const vetro = new THREE.MeshStandardMaterial({ color: 0xdff1ff, transparent: true, opacity: .35, depthWrite: false, roughness: .1, side: THREE.DoubleSide });
+    const pesc = new THREE.Mesh(new THREE.CylinderGeometry(.02, .02, .2, 20, 1, true), vetro); pesc.position.set(0, -.1, Z); g.add(pesc);
+    const man = new THREE.Mesh(new THREE.CylinderGeometry(.024, .024, .12, 20), nero()); man.rotation.z = Math.PI / 2; man.position.set(.24, .205, Z * .2); g.add(man);
+    // parti mobili: stelo, guarnizione (otturatore), molla, leva, spina
+    const acciaio = new THREE.MeshStandardMaterial({ color: 0xd5dbe2, metalness: .5, roughness: .3, emissive: 0x3a4250 });
+    const stelo = new THREE.Group(); stelo.position.set(0, 0, Z); g.add(stelo);
+    const asta = new THREE.Mesh(new THREE.CylinderGeometry(.009, .009, .257, 16), acciaio); asta.position.y = .128 + .257 / 2; stelo.add(asta);
+    const disco = new THREE.Mesh(new THREE.CylinderGeometry(.05, .05, .014, 32), tinta(0xd23a2a, { roughness: .7, emissive: 0x5a0d08 })); disco.position.y = .122; stelo.add(disco);
+    const giro = []; for (let i = 0; i <= 240; i++) { const u = i / 240, a = u * 6.283 * 5.5; giro.push(new THREE.Vector3(Math.cos(a) * .042, u, Math.sin(a) * .042)); }
+    const molla = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(giro), 240, .006, 8), tinta(0xf6a821, { metalness: .4, roughness: .35, emissive: 0x6b4200 }));
+    molla.position.set(0, .04, Z); g.add(molla);
+    const fulcro = new THREE.Group(); fulcro.position.set(-.15, Hc + .06, Z + .015); g.add(fulcro);
+    const leva = new THREE.Mesh(new THREE.BoxGeometry(.32, .022, .03), nero()); leva.position.x = .15; fulcro.add(leva);
+    const perno = new THREE.Mesh(new THREE.CylinderGeometry(.012, .012, .05, 16), acciaio); perno.rotation.x = Math.PI / 2; fulcro.add(perno);
+    const spina = new THREE.Group(); spina.position.set(-.09, Hc + .055, 0); g.add(spina);
+    const spinaB = new THREE.Mesh(new THREE.CylinderGeometry(.006, .006, .13, 10), acciaio); spinaB.rotation.x = Math.PI / 2; spinaB.position.z = .04; spina.add(spinaB);
+    const anelloS = new THREE.Mesh(new THREE.TorusGeometry(.028, .005, 10, 28), acciaio); anelloS.position.z = .12; spina.add(anelloS);
+    // frecce della pressione sotto la guarnizione
+    const frP = [-.03, .03].map(x => {
+      const f = new THREE.Group();
+      const ast = new THREE.Mesh(new THREE.CylinderGeometry(.004, .004, .03, 8), base(0x7cc4ff));
+      const pt = new THREE.Mesh(new THREE.ConeGeometry(.011, .02, 12), base(0x7cc4ff)); pt.position.y = .025;
+      f.add(ast, pt); f.position.set(x, .085, Z + .02); g.add(f); return f;
+    });
+    // particelle: agente fermo nell'ingresso e nella camera, poi flusso verso l'uscita
+    const colAg = 0xefe3b5;
+    const NC = 95, cPos = new Float32Array(NC * 3), cGeo = new THREE.BufferGeometry(); cGeo.setAttribute('position', new THREE.BufferAttribute(cPos, 3));
+    const nube = new THREE.Points(cGeo, new THREE.PointsMaterial({ color: colAg, size: .011, depthTest: false, depthWrite: false, transparent: true }));
+    nube.frustumCulled = false; g.add(nube);
+    const via = new THREE.CatmullRomCurve3([[0, .118], [.032, .135], [.017, .15], [.016, .165], [.025, .19], [.07, .205], [.18, .205], [.3, .205]].map(([x, y]) => new THREE.Vector3(x, y, Z + .01)));
+    const su = new THREE.CatmullRomCurve3([[0, -.2], [0, .02], [.03, .06], [.058, .1], [.04, .125]].map(([x, y]) => new THREE.Vector3(x, y, Z + .01)));
+    const NF = 110, fPos = new Float32Array(NF * 3), fGeo = new THREE.BufferGeometry(); fGeo.setAttribute('position', new THREE.BufferAttribute(fPos, 3));
+    const getto = new THREE.Points(fGeo, new THREE.PointsMaterial({ color: colAg, size: .018, depthTest: false, depthWrite: false, transparent: true }));
+    getto.frustumCulled = false; g.add(getto);
+    const CORSA = .045;                                          // corsa dello stelo, metri del modello
+    function aggiorna(t, st) {                                  // st: { premuta 0..1, spina 0..1 (tolta), testa, coda, pressione 0..1 }
+      const d = CORSA * st.premuta;
+      stelo.position.y = -d;
+      const lm = .082 - d; molla.scale.y = lm; molla.position.y = .04;
+      fulcro.rotation.z = -Math.asin(Math.min(d / .15, .9));
+      spina.position.z = .2 * ease.morbida(clamp(st.spina * 1.4)); spina.position.y = Hc + .055 + .12 * ease.parte(clamp(st.spina * 1.4 - .6));
+      spina.visible = st.spina < .99;
+      frP.forEach((f, i) => { f.visible = st.pressione > .02; f.scale.setScalar(Math.max(st.pressione, .001)); f.position.y = .075 + .012 * ((t * 1.8 + i * .5) % 1) - d * .3; });
+      for (let i = 0; i < NC; i++) {                           // agente in pressione: ingresso e camera bassa sempre pieni
+        const inPesc = i < NC * .35, jx = .004 * Math.sin(t * 7 + i), jy = .004 * Math.cos(t * 6.3 + i * 1.7);
+        let x, y;
+        if (inPesc) { x = (hash(i * 3.1) - .5) * .03; y = -.2 + hash(i * 5.3) * .24; }
+        else { x = (hash(i * 3.1) - .5) * .13; y = .045 + hash(i * 5.3) * (.07 - d); if (Math.abs(x) < .01) x += .02; }
+        cPos[i * 3] = x + jx; cPos[i * 3 + 1] = y + jy; cPos[i * 3 + 2] = Z + .012;
+      }
+      cGeo.attributes.position.needsUpdate = true;
+      getto.visible = st.testa > .005 && st.coda < .995;
+      if (getto.visible) {
+        for (let i = 0; i < NF; i++) {
+          const ramo = i < NF * .35;                             // un terzo risale dall'ingresso, il resto attraversa la sede
+          const s = (hash(i * 5.7) + t * (ramo ? .7 : .55)) % 1;
+          const p = ramo ? su.getPointAt(s) : via.getPointAt(s);
+          const on = ramo ? st.premuta > .5 && st.coda < .02 : s <= st.testa && s >= st.coda;
+          const lato2 = (!ramo && hash(i * 2.2) > .5 && s < .45) ? -1 : 1;     // passa ai due lati dello stelo
+          fPos[i * 3] = p.x * lato2; fPos[i * 3 + 1] = on ? p.y - (s < .3 && !ramo ? d * .5 : 0) : -10; fPos[i * 3 + 2] = p.z;
+        }
+        fGeo.attributes.position.needsUpdate = true;
+      }
+    }
+    return {
+      gruppo: g, aggiorna,
+      punto: (x, y) => g.localToWorld(new THREE.Vector3(x, y, Z + .02)),
+      leva: () => fulcro.localToWorld(new THREE.Vector3(.27, .01, 0)), spina: () => spina.localToWorld(new THREE.Vector3(0, 0, .12))
+    };
+  })();
   // stazione 6: le cinque classi
   const CLASSI = [
     { k: 'A', nome: 'SOLIDI', icona: 'legna' }, { k: 'B', nome: 'LIQUIDI', icona: 'goccia' }, { k: 'C', nome: 'GAS', icona: 'bombola' },
@@ -556,8 +703,12 @@ SOTT.forEach(f => {
   chiave(S(1) + 1.0, [0, .45, 0], 22, 10, .6);
   chiave(E(1) - .1, [0, .45, 0], 22, 10, .6);
   // 2 meccanismo: un po' più vicino sulla parte alta
-  chiave(S(2) + .9, [.03, .5, 0], 14, 8, .55);
-  chiave(E(2) - .1, [.03, .5, 0], 14, 8, .55);
+  chiave(S(2) + .9, [.05, .47, 0], 16, 8, .47);
+  chiave(parola(2, 'guardiamo') - .5, [.05, .47, 0], 16, 8, .47);
+  // 2 valvola in sezione (modello ingrandito a sinistra): la camera ci arriva e resta quasi frontale
+  const bV = [XV + (ORIZ ? .06 : .05), YV + (ORIZ ? .19 : .16), .04], rV = ORIZ ? .27 : .3;
+  chiave(parola(2, 'guardiamo') + 1.2, bV, 8, 4, rV);
+  chiave(E(2) - .1, bV, 8, 4, rV);
   // 3 manometro
   const posMano = eroe.mano();
   chiave(S(3) + 1.1, [posMano.x, posMano.y, posMano.z], 6, 4, .07);
@@ -595,8 +746,14 @@ SOTT.forEach(f => {
   scheda('azoto', 'Gas in pressione', 'DI SOLITO AZOTO', () => eroe.quota(.66), vs(250, -170), parola(1, 'gas'), E(1) - .5);
   // 2 meccanismo
   scheda('valvola', 'Leva e valvola', 'SI APRE QUANDO PREMI', () => eroe.testa(), vs(-240, -140), parola(2, 'valvola'), parola(2, 'pescante') - .1);
-  scheda('pescante', 'Tubo pescante', "PRENDE L'AGENTE DAL FONDO", () => eroe.pescante(), vs(-250, 120), parola(2, 'pescante'), E(2) - .5);
-  scheda('manichetta', 'Manichetta', 'ESCE QUI', () => eroe.punta(), vs(220, -60), parola(2, 'manichetta'), E(2) - .3);
+  scheda('pescante', 'Tubo pescante', "PRENDE L'AGENTE DAL FONDO", () => eroe.pescante(), vs(-250, 120), parola(2, 'pescante'), parola(2, 'guardiamo') - .6);
+  scheda('manichetta', 'Manichetta', 'ESCE QUI', () => eroe.punta(), vs(220, -60), parola(2, 'manichetta'), parola(2, 'guardiamo') - .5);
+  // 2 valvola in sezione
+  scheda('molla', 'Molla', 'SPINGE LO STELO IN ALTO', () => valv.punto(.045, .07), vs(240, 60), parola(2, 'molla'), parola(2, 'togli') - .2);
+  scheda('stelo', 'Stelo e guarnizione', 'CHIUDONO IL PASSAGGIO', () => valv.punto(-.04, .128), vs(-230, -120), parola(2, 'stelo'), parola(2, 'togli') - .2);
+  scheda('spinaV', 'Spina tolta', 'LA VALVOLA RESTA CHIUSA', () => valv.punto(-.09, .38), vs(-200, -170), parola(2, 'spina') + .4, parola(2, 'premi', 1) - .2, '#f59e0b');
+  scheda('aperta', 'Leva premuta: passaggio aperto', "L'AGENTE ESCE", () => valv.punto(.12, .205), vs(150, -230), parola(2, 'scende'), parola(2, 'lasci') - .1, '#22a04b');
+  scheda('chiusa', 'Leva rilasciata: valvola chiusa', 'IL GETTO SI FERMA', () => valv.punto(0, .15), vs(-190, 200), parola(2, 'richiude'), E(2) - .3, '#ef4136');
   // 3 manometro
   scheda('verde', 'Lancetta nel verde', 'ESTINTORE CARICO', () => eroe.mano(), vs(0, -300), parola(3, 'verde') - .3, E(3) - .3, '#22a04b');
   // 4 cartuccia
@@ -642,12 +799,24 @@ SOTT.forEach(f => {
     let dQ = ease.morbida(prog(t, tagliaDa, 1.0));
     dQ *= 1 - ease.morbida(prog(t, S(3) + .2, .8));           // si richiude per il manometro
     eroe.taglio(dQ, camera);
-    const tLeva = parola(2, 'premi') - .1;
-    const premuta = ease.outCubic(prog(t, tLeva, .35)) * (1 - ease.morbida(prog(t, E(2) - .6, .5)));
+    // prima parte: leva premuta, il gas preme, l'agente sale nel pescante, attraversa la testa ed esce dalla manichetta
+    const tLeva = parola(2, 'premi') - .1, tGuarda = parola(2, 'guardiamo'), tRil = tGuarda - .35;
+    const tSale = parola(2, 'spinge'), tFuori = parola(2, 'manichetta') + .2;
+    const premuta = ease.outCubic(prog(t, tLeva, .35)) * (1 - ease.morbida(prog(t, tRil, .4)));
     eroe.leva.rotation.z = mix(-0.22, 0.03, premuta);
-    const fl = clamp(prog(t, parola(2, 'pressione'), .4)) * (1 - prog(t, E(2) - .6, .5));
-    eroe.livello(.74 - .12 * clamp(prog(t, parola(2, 'pressione'), D(2) * .6)) * (t < S(3) ? 1 : 0));
-    eroe.agita(t); eroe.flusso(t, fl);
+    const testaE = ease.morbida(prog(t, tSale, tFuori - tSale)), codaE = ease.morbida(prog(t, tRil + .2, 1.1));
+    eroe.livello(.74 - .1 * clamp(prog(t, tSale, tRil - tSale)) * (t < S(3) ? 1 : 0));
+    eroe.agita(t); eroe.flusso(t, t < S(3) ? testaE : 0, codaE);
+    eroe.frecce(t, t < S(3) ? fin(t, parola(2, 'pressione') - .3, tRil + .6, .3, .4) : 0);
+    const fl = clamp((testaE - .96) / .04) * (1 - codaE);
+    // seconda parte: la valvola in sezione
+    const tSpinaV = parola(2, 'togli') + .3, tPremiV = parola(2, 'premi', 1) + .05, tLasciV = parola(2, 'lasci') + .1;
+    const premV = ease.outCubic(prog(t, tPremiV, .5)) * (1 - ease.outCubic(prog(t, tLasciV, .45)));
+    valv.gruppo.visible = t > tGuarda - 1.2 && t < S(3) + .3;
+    if (valv.gruppo.visible) valv.aggiorna(t, {
+      premuta: premV, spina: clamp(prog(t, tSpinaV, 1.0)),
+      testa: ease.morbida(prog(t, tPremiV + .35, 1.3)), coda: ease.morbida(prog(t, tLasciV + .35, 1.1)),
+      pressione: fin(t, parola(2, 'pressione', 1) - .2, null, .3) });
     getti.polvere.aggiorna(t, 0);
     // getto dell'eroe dalla manichetta (piccolo, mentre esce l'agente)
     const pe = eroe.punta(), de = eroe.dir();
@@ -660,6 +829,8 @@ SOTT.forEach(f => {
     cart.taglio(dC, camera);
     const gU = ease.morbida(prog(t, parola(4, 'pressurizzano'), 1.4));
     cart.livello(.74, gU); cart.agita(t, gU);
+    cart.soffio(t, parola(4, 'pressurizzano') - .1);
+    cart.frecce(t, fin(t, parola(4, 'pressurizzano') + 1.0, E(4) - .3, .4, .4));
     // --- carte delle classi
     const tCarte = [parola(5, 'A', 0, .45), parola(5, 'B', 0, .55), parola(5, 'C', 0, .65), parola(5, 'D', 0, .75), parola(5, 'F', 0, .85)];
     carte.forEach((m, i) => {

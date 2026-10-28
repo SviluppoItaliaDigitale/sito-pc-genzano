@@ -210,13 +210,13 @@
  },
  {
   "n": 3,
-  "testo": "Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta.",
-  "schermo": "Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta.",
+  "testo": "Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta. Guardiamo dentro la valvola. Una molla e la pressione tengono lo stelo premuto sulla guarnizione: il passaggio è chiuso. Togli la spina: non succede niente, la spina blocca solo la leva. Premi la leva: lo stelo scende, e l'agente passa. Lasci la leva: la valvola si richiude, e il getto si ferma.",
+  "schermo": "Quando premi la leva, la valvola si apre. La pressione spinge l'agente su per il tubo pescante, e fuori dalla manichetta. Guardiamo dentro la valvola. Una molla e la pressione tengono lo stelo premuto sulla guarnizione: il passaggio è chiuso. Togli la spina: non succede niente, la spina blocca solo la leva. Premi la leva: lo stelo scende, e l'agente passa. Lasci la leva: la valvola si richiude, e il getto si ferma.",
   "file": "line_3.wav",
-  "ripresa": "line_3_take_2.mp3",
-  "durata": 7.6,
+  "ripresa": "line_3_take_2.mp3 + valvola:line_1_take_1.mp3",
+  "durata": 27.99,
   "somiglianza": 0.99,
-  "sentito": "Quando premi la leva, la valvola si apre, la pressione spinge la gente su per il tubo pescante e fuori dalla manichetta.",
+  "sentito": "Quando premi la leva, la valvola si apre, la pressione spinge la gente su per il tubo pescante e fuori dalla manichetta. Guardiamo dentro la valvola. Una molla e la pressione tengono lo stelo premuto sulla guarnizione. Il passaggio è chiuso. Togli la spina. Non succede niente. La spina blocca solo la leva. Premi la leva. Lo stelo scende e la gente passa. Lasci la leva. La valvola si richiude e il getto si ferma.",
   "parole": [
    {
     "w": "Quando",
@@ -322,6 +322,266 @@
     "w": "manichetta.",
     "t0": 6.6,
     "t1": 7.32
+   },
+   {
+    "w": "Guardiamo",
+    "t0": 8.205,
+    "t1": 8.866
+   },
+   {
+    "w": "dentro",
+    "t0": 8.866,
+    "t1": 9.328
+   },
+   {
+    "w": "la",
+    "t0": 9.328,
+    "t1": 9.526
+   },
+   {
+    "w": "valvola.",
+    "t0": 9.526,
+    "t1": 10.121
+   },
+   {
+    "w": "Una",
+    "t0": 10.121,
+    "t1": 10.385
+   },
+   {
+    "w": "molla",
+    "t0": 10.385,
+    "t1": 10.781
+   },
+   {
+    "w": "e",
+    "t0": 10.781,
+    "t1": 10.913
+   },
+   {
+    "w": "la",
+    "t0": 10.913,
+    "t1": 11.112
+   },
+   {
+    "w": "pressione",
+    "t0": 11.112,
+    "t1": 11.772
+   },
+   {
+    "w": "tengono",
+    "t0": 11.772,
+    "t1": 12.301
+   },
+   {
+    "w": "lo",
+    "t0": 12.301,
+    "t1": 12.499
+   },
+   {
+    "w": "stelo",
+    "t0": 12.499,
+    "t1": 12.895
+   },
+   {
+    "w": "premuto",
+    "t0": 12.895,
+    "t1": 13.424
+   },
+   {
+    "w": "sulla",
+    "t0": 13.424,
+    "t1": 13.82
+   },
+   {
+    "w": "guarnizione:",
+    "t0": 13.82,
+    "t1": 14.679
+   },
+   {
+    "w": "il",
+    "t0": 14.679,
+    "t1": 14.877
+   },
+   {
+    "w": "passaggio",
+    "t0": 14.877,
+    "t1": 15.538
+   },
+   {
+    "w": "è",
+    "t0": 15.538,
+    "t1": 15.67
+   },
+   {
+    "w": "chiuso.",
+    "t0": 15.67,
+    "t1": 16.198
+   },
+   {
+    "w": "Togli",
+    "t0": 16.198,
+    "t1": 16.595
+   },
+   {
+    "w": "la",
+    "t0": 16.595,
+    "t1": 16.793
+   },
+   {
+    "w": "spina:",
+    "t0": 16.793,
+    "t1": 17.255
+   },
+   {
+    "w": "non",
+    "t0": 17.255,
+    "t1": 17.52
+   },
+   {
+    "w": "succede",
+    "t0": 17.52,
+    "t1": 18.048
+   },
+   {
+    "w": "niente,",
+    "t0": 18.048,
+    "t1": 18.577
+   },
+   {
+    "w": "la",
+    "t0": 18.577,
+    "t1": 18.775
+   },
+   {
+    "w": "spina",
+    "t0": 18.775,
+    "t1": 19.171
+   },
+   {
+    "w": "blocca",
+    "t0": 19.171,
+    "t1": 19.633
+   },
+   {
+    "w": "solo",
+    "t0": 19.633,
+    "t1": 19.964
+   },
+   {
+    "w": "la",
+    "t0": 19.964,
+    "t1": 20.162
+   },
+   {
+    "w": "leva.",
+    "t0": 20.162,
+    "t1": 20.558
+   },
+   {
+    "w": "Premi",
+    "t0": 20.558,
+    "t1": 20.955
+   },
+   {
+    "w": "la",
+    "t0": 20.955,
+    "t1": 21.153
+   },
+   {
+    "w": "leva:",
+    "t0": 21.153,
+    "t1": 21.549
+   },
+   {
+    "w": "lo",
+    "t0": 21.549,
+    "t1": 21.747
+   },
+   {
+    "w": "stelo",
+    "t0": 21.747,
+    "t1": 22.144
+   },
+   {
+    "w": "scende,",
+    "t0": 22.144,
+    "t1": 22.672
+   },
+   {
+    "w": "e",
+    "t0": 22.672,
+    "t1": 22.804
+   },
+   {
+    "w": "l'agente",
+    "t0": 22.804,
+    "t1": 23.399
+   },
+   {
+    "w": "passa.",
+    "t0": 23.399,
+    "t1": 23.861
+   },
+   {
+    "w": "Lasci",
+    "t0": 23.861,
+    "t1": 24.258
+   },
+   {
+    "w": "la",
+    "t0": 24.258,
+    "t1": 24.456
+   },
+   {
+    "w": "leva:",
+    "t0": 24.456,
+    "t1": 24.852
+   },
+   {
+    "w": "la",
+    "t0": 24.852,
+    "t1": 25.05
+   },
+   {
+    "w": "valvola",
+    "t0": 25.05,
+    "t1": 25.579
+   },
+   {
+    "w": "si",
+    "t0": 25.579,
+    "t1": 25.777
+   },
+   {
+    "w": "richiude,",
+    "t0": 25.777,
+    "t1": 26.438
+   },
+   {
+    "w": "e",
+    "t0": 26.438,
+    "t1": 26.57
+   },
+   {
+    "w": "il",
+    "t0": 26.57,
+    "t1": 26.768
+   },
+   {
+    "w": "getto",
+    "t0": 26.768,
+    "t1": 27.164
+   },
+   {
+    "w": "si",
+    "t0": 27.164,
+    "t1": 27.363
+   },
+   {
+    "w": "ferma.",
+    "t0": 27.363,
+    "t1": 27.825
    }
   ]
  },
