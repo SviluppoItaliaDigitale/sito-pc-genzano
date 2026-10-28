@@ -5,16 +5,106 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-28T01:35:12+00:00",
+  "generato": "2026-10-28T07:28:55+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-28T01:29:34+00:00",
+   "data": "2026-10-28T07:24:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, Usa avvertono i Paesi del Golfo: dopo mid-term possibile nuova e intensa campagna militare contro Teheran",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-escalation-ultime-news_4zswyNoHmf1IAVfcBExVeA"
+  },
+  {
+   "data": "2026-10-28T07:06:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maxi blitz anti 'ndrangheta, 41 arresti: ai domiciliari anche un sindaco",
+   "url": "https://www.adnkronos.com/cronaca/maxi-blitz-anti-ndrangheta-arresti_61pX05GMLJDWWxJQLWl4uS"
+  },
+  {
+   "data": "2026-10-28T06:56:22+00:00",
    "fonte": "ANSA",
-   "titolo": "++ Netanyahu, 'attesa, ma è chiaro che Likud partito più grande' ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/10/28/-netanyahu-attesa-ma-e-chiaro-che-likud-partito-piu-grande-_36e9820b-1da6-406b-bf9a-a7f5dfa3b80d.html"
+   "titolo": "PRIME PAGINE | Israele spaccato, Netanyahu regge ma il blocco di Eisenkot è avanti",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/28/prime-pagine-israele-spaccato-netanyahu-regge-ma-il-blocco-di-eisenkot-e-avanti_9b10eb5d-8b48-49f4-a3c5-6b5711aed070.html"
+  },
+  {
+   "data": "2026-10-28T06:55:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scrutinato il 50% dei seggi in Israele, avanti lo schieramento Netanyahu, verso il 50% dei seggi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/attesa-in-israele-netanyahu-regge-likud-e-il-partito-piu-grande-ma-eisenkot-e-avanti_74766689-3c93-4a0a-8778-21bf55ce3a7c.html"
+  },
+  {
+   "data": "2026-10-28T06:51:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Flávio Bolsonaro è in Florida e ha incontrato il fratello Eduardo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/flavio-bolsonaro-e-in-florida-e-ha-incontrato-il-fratello-eduardo_1b9d2be9-8a00-428f-926e-46b20bfc3e26.html"
+  },
+  {
+   "data": "2026-10-28T06:50:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Blitz anti 'ndrangheta a Cosenza, ai domiciliari anche il sindaco di Corigliano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/blitz-anti-ndrangheta-a-cosenza-ai-domiciliari-anche-il-sindaco-di-corigliano_19b77b99-f131-486c-8893-eef313fe43b2.html"
+  },
+  {
+   "data": "2026-10-28T06:29:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump annuncia un incontro tra Putin e Zelensky  'molto presto'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/trump-annuncia-un-incontro-tra-putin-e-zelensky-molto-presto-_27be0948-eae6-4740-9dbe-9e6bded4fcd0.html"
+  },
+  {
+   "data": "2026-10-28T06:22:51+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Blitz anti 'ndrangheta, arrestato anche sindaco di Corigliano-Rossano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/blitz-anti-ndrangheta-arrestato-anche-sindaco-di-corigliano-rossano_ee5454e1-4418-4f8d-a69c-aea43fcb3440.html"
+  },
+  {
+   "data": "2026-10-28T06:04:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Venezia-Inter: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/venezia-inter-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_5aZ6PQ5PBh5w7MGjO4wfaW"
+  },
+  {
+   "data": "2026-10-28T06:03:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Monza-Napoli: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/monza-napoli-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_3qADXAhPquji0kqiBAybuy"
+  },
+  {
+   "data": "2026-10-28T06:02:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Genoa-Juventus: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-genoa-juventus-spalletti_5eU85z0OYZoIqkGk69ietA"
+  },
+  {
+   "data": "2026-10-28T06:01:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Milan-Bologna: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-milan-bologna-amorim_2Nvg37zKEvGa10Qh8e2ci6"
+  },
+  {
+   "data": "2026-10-28T06:00:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra oggi in Consiglio dei ministri, Meloni: \"Obiettivo è mantenere gli impegni\"",
+   "url": "https://www.adnkronos.com/politica/manovra-2027-pensioni-64-anni_jRIPb7Q2BYgwCVXQERXto"
+  },
+  {
+   "data": "2026-10-28T05:59:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bollette in ritardo? Se il conguaglio arriva oltre due anni non va pagato",
+   "url": "https://www.adnkronos.com/economia/bollette-conguaglio-ritardo-pagamento_DCJWaECORwvnUrvxzZvkl"
+  },
+  {
+   "data": "2026-10-28T05:57:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Flavio Bolsonaro, media Usa: \"Arrivato negli Stati Uniti\". Ma l'Argentina: \"E' in volo verso l'Ecuador\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/brasile-flavio-bolsonaro-usa-ultime-news_77a3a8sC2mQ8Htzowf3Zzb"
+  },
+  {
+   "data": "2026-10-28T05:47:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni in Israele, scrutinio in corso: blocco pro Netanyahu in testa ma senza maggioranza",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-israele-risultati-in-diretta-ultime-news_3DpL6oxREj41CyFqHaFAOJ"
   },
   {
    "data": "2026-10-27T23:22:35+00:00",
@@ -47,24 +137,6 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/serie-a-la-roma-batte-il-cagliari_47dcb4bd-36fb-476b-950d-28ea0282c1cd.html"
   },
   {
-   "data": "2026-10-27T21:34:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Israele spaccato: Netanyahu regge, ma il blocco di Eisenkot è avanti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-spaccato-netanyahu-regge-ma-il-blocco-di-eisenkot-e-avanti_b2e19377-c270-4498-ba32-400374367485.html"
-  },
-  {
-   "data": "2026-10-27T21:10:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina: Stubb e Store chiamano Putin. Meloni, 'l'Ue non vada in ordine sparso'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/ucraina-stubb-e-store-chiamano-putin.-meloni-lue-non-vada-in-ordine_f24da4b3-81f4-4c1d-899b-62951b2301c0.html"
-  },
-  {
-   "data": "2026-10-27T21:07:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Brasile: Bolsonaro fugge in Florida, Trump pronto a dargli l'asilo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/brasile-media-bolsonaro-ha-lasciato-il-brasile-ed-e-in-volo-per-gli-stati-uniti_bec521a5-35b6-4db4-91cf-30e166594cb9.html"
-  },
-  {
    "data": "2026-10-27T21:03:40+00:00",
    "fonte": "ANSA",
    "titolo": "La manovra che verrà: flat tax per i giovani. Sull'Irpef si tratta ancora",
@@ -77,28 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/tifoso-in-coma-8-arresti-e-confessa-laggressore-di-19-anni_8e36f786-40b5-49d6-8300-795189da69a0.html"
   },
   {
-   "data": "2026-10-27T20:16:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma-Cagliari, mano di Pisilli e calcio di rigore per i sardi",
-   "url": "https://www.adnkronos.com/sport/mano-pisilli-area-rigore-proteste-roma-cagliari-cose-successo_7lZW8BclQm1XpAnivFbB2W"
-  },
-  {
-   "data": "2026-10-27T20:10:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Intesa Sanpaolo, ok da Bce ad acquisizione controllo Monte dei Paschi di Siena",
-   "url": "https://www.adnkronos.com/finanza/intesa-sanpaolo-bce-mps_2DqO32MPs2UmBvVZOgtmMi"
-  },
-  {
    "data": "2026-10-27T20:07:35+00:00",
    "fonte": "ANSA",
    "titolo": "Piantedosi: 'Sugli scontri non è finita'. Il Mit precetta sciopero del 30. L'Usb, 'lo confermiamo'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/27/piantedosi-sugli-scontri-non-e-finita-attenzione-alta-per-venerdi_f453532f-bbda-4ca2-a09a-2831b65ca114.html"
-  },
-  {
-   "data": "2026-10-27T19:59:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Travaglio respinge l'offerta di Del Vecchio: \"Io non sono in vendita, nemmeno il Fatto Quotidiano\"",
-   "url": "https://www.adnkronos.com/economia/marco-travaglio-fatto-quotidiano-del-vecchio_6A2CE7uMBk7DbES3FVgdnI"
   },
   {
    "data": "2026-10-27T19:54:28+00:00",
@@ -119,22 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/blitz-di-3-incappucciati-alla-mostra-di-laika-imbrattate-tutte-le-opere_0bdc9403-b01b-405d-8a78-ed09bd786933.html"
   },
   {
-   "data": "2026-10-27T19:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Fakir, le frasi degli agenti registrate dalle bodycam: \"E' schiattato\", \"Ca… me ne frega\"",
-   "url": "https://www.adnkronos.com/cronaca/fakir-morte-inchiesta-frasi-poliziotti_6R2xu8cps7BH7MXZmqESn7"
-  },
-  {
    "data": "2026-10-27T19:04:45+00:00",
    "fonte": "ANSA",
    "titolo": "La premier del Marocco all'opposizione: “Non siamo lampadari, ma coscienza e cervello\"",
    "url": "https://www.ansa.it/donne/videogallery/2026/10/27/la-premier-del-marocco-allopposizione-non-siamo-lampadari-ma-coscienza-e-cervello_e1b54eca-d902-4417-bc96-f20d89ba61c1.html"
-  },
-  {
-   "data": "2026-10-27T18:48:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma-Cagliari 4-2, Gasperini vince in rimonta e resta terzo",
-   "url": "https://www.adnkronos.com/sport/diretta-roma-cagliari-oggi-serie-a-risultato-live_4qcJhe0N0jwRuWMFEfTpMC"
   },
   {
    "data": "2026-10-27T18:45:01+00:00",
@@ -143,52 +185,10 @@
    "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/10/26/alimentazione-vegetale-e-longevity-i-legumi-la-fonte-proteica-meno-utilizzata-dagli-italiani_545459d4-aa99-4770-913d-009d447bbdab.html"
   },
   {
-   "data": "2026-10-27T18:40:09+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Csm, spunta candidatura Di Pietro in quota Fratelli d'Italia ma c'è veto di Forza Italia",
-   "url": "https://www.adnkronos.com/politica/di-pietro-candidato-csm-fratelli-di-italia_4Qc26LzyiKlmmXuOH9Cmwa"
-  },
-  {
-   "data": "2026-10-27T18:35:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Acqua minerale ritirata dal mercato: il lotto interessato, come comportarsi",
-   "url": "https://www.adnkronos.com/cronaca/acqua-ritirata-supermercati-lotto_6Q2SRdnyayzJcwa7D5TtvQ"
-  },
-  {
-   "data": "2026-10-27T18:26:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Presentato rapporto legislazione 2026, focus su decreti legge e qualità normativa",
-   "url": "https://www.adnkronos.com/cronaca/presentato-rapporto-legislazione-2026-focus-su-decreti-legge-e-qualita-normativa_MpKASO6htoC7g0gmhdsXL"
-  },
-  {
-   "data": "2026-10-27T18:13:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Due gol convalidati dopo check del Var e un rosso: caos in Sassuolo-Lazio",
-   "url": "https://www.adnkronos.com/sport/caos-sassuolo-lazio-var-gol-espulsione-cose-successo_6n2WrIVTBJJubzeZFTeucy"
-  },
-  {
-   "data": "2026-10-27T18:11:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, Le Iene assolte in appello dall'accusa di diffamazione a Stefania Cappa",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-le-iene-assolte-diffamazione-stefania-cappa_11Ys2kfUDw4JBFxgWASBCa"
-  },
-  {
    "data": "2026-10-27T18:08:16+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-27T18:00:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uomo accoltellato in strada a Olbia, è in fin di vita",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/uomo-accoltellato-in-strada-a-olbia-e-in-fin-di-vita_b619555e-9801-408a-a87d-24bc2a93c709.html"
-  },
-  {
-   "data": "2026-10-27T17:54:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Accetterò i risultati delle Midterm solo se saranno elezioni corrette'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/27/trump-il-partito-del-presidente-non-ottiene-di-solito-buoni-risultati-alle_53773608-7ce2-4fa4-adc1-3cd956274c2a.html"
   }
  ]
 }
