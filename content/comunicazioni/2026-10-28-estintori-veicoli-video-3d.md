@@ -89,4 +89,6 @@ Come funziona l'estintore, dentro, lo spieghiamo nell'altro video: [Dentro l'est
 **Fonti istituzionali:**
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it).
+- [Che cosa fare se un'auto prende fuoco](https://www.vugd.gov.lv/en/what-do-if-car-catches-fire) (in inglese) — Servizio statale antincendio e soccorso della Lettonia: non aprire del tutto il cofano, perché l'aria alimenta il fuoco, e spruzzare dalla fessura.
+- [I rischi per i soccorritori negli incendi delle batterie al litio delle auto elettriche](https://www.ntsb.gov/safety/safety-studies/Documents/SR2001.pdf) (PDF in inglese) — NTSB, l'ente statunitense per la sicurezza dei trasporti: le batterie delle auto elettriche possono riaccendersi dopo lo spegnimento.
 - [Accordo ADR sul trasporto internazionale di merci pericolose su strada](https://unece.org/transport/dangerous-goods/adr-2025-agreement-concerning-international-carriage-dangerous-goods-road) — UNECE.

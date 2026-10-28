@@ -53,11 +53,11 @@ Per questo puoi usare l'estintore a getti brevi, invece di svuotarlo tutto in un
 
 Le lettere sull'etichetta dicono su quali fuochi si può usare: **A** solidi, **B** liquidi, **C** gas, **D** metalli, **F** oli e grassi da cucina.
 
-- **A polvere**: è il più diffuso. Va bene su solidi, liquidi e gas, anche vicino a impianti elettrici. Però sporca, toglie visibilità e irrita le vie respiratorie.
+- **A polvere**: è il più diffuso. Quello a polvere polivalente, con le lettere A, B e C, va bene su solidi, liquidi e gas, e si può usare anche vicino a impianti elettrici, entro i limiti scritti sull'etichetta. Però sporca, toglie visibilità e irrita le vie respiratorie.
 - **Ad anidride carbonica**: ha un cono rigido e il gas esce a circa −78 °C, quindi si impugna solo dalla parte isolata. Non lascia residui, ma sui solidi il fuoco può riaccendersi e nei locali piccoli toglie ossigeno.
 - **A schiuma**: raffredda e copre il combustibile, separandolo dall'aria. Funziona su solidi e liquidi infiammabili.
 - **Ad acqua**: raffredda bene i solidi. Acqua e schiuma vanno usate su impianti elettrici sotto tensione solo se l'etichetta lo permette.
-- **Classe F**: in cucina, sull'olio che brucia, mai acqua. Serve un estintore di classe F o una coperta antifiamma; polvere e anidride carbonica sull'olio sono pericolose.
+- **Classe F**: in cucina, sull'olio che brucia, mai acqua. Serve un estintore di classe F o una coperta antifiamma. Polvere e anidride carbonica sull'olio sono pericolose: non sono fatte per questo fuoco, non raffreddano l'olio e le fiamme possono riaccendersi.
 - **Per i metalli**, come magnesio o sodio, esistono estintori speciali, da usare solo con la formazione giusta.
 
 Le classi di fuoco e i tipi di estintore sono spiegati per esteso nella guida [Estintori: classi di fuoco, uso corretto e manutenzione](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
@@ -97,4 +97,4 @@ Abbiamo preparato anche un secondo video, sull'uso dell'estintore quando prende 
 - [Vigili del Fuoco](https://www.vigilfuoco.it).
 - Norma tecnica UNI EN 2 — Classificazione dei fuochi.
 - Norma tecnica UNI EN 3 — Estintori d'incendio portatili.
-- Norma tecnica UNI 9994-1 — Manutenzione degli estintori.
+- Norma tecnica UNI 9994-1 — Manutenzione degli estintori, richiamata dal D.M. 1 settembre 2021 sui controlli degli impianti e delle attrezzature antincendio.
