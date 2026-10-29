@@ -830,16 +830,16 @@ dati:
 
   - id: centro-italia-2016-24-agosto-vittime
     dato: "Vittime della scossa del 24 agosto 2016 (Amatrice, Accumoli, Arquata del Tronto)"
-    valore: "299; in tutta la sequenza 333 (34 negli eventi di gennaio 2017, 29 dei quali a Rigopiano; nessuna il 30 ottobre)"
+    valore: "299 il 24 agosto 2016 e nessuna il 30 ottobre; gli eventi di gennaio 2017 causano 34 vittime, 29 delle quali nella tragedia di Rigopiano"
     fonti:
       - nome: "Dipartimento della Protezione Civile, «Il terremoto del Centro Italia»: «La scossa provoca 299 vittime» … «Gli eventi di gennaio causano 34 vittime, di cui 29 nella tragedia di Rigopiano»"
         url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-centro-italia-0/"
     vietati:
       - regex: '\b(?:oltre|circa|quasi)\s+300\s+(?:vittim\w*|mort[ie]\b)'
-        perche: "La scossa del 24 agosto 2016 fece 299 vittime (Dipartimento della Protezione Civile). «Oltre 300» vale solo per tutta la sequenza."
-        contesto: '24 agosto|Amatrice|Accumoli'
+        perche: "La scossa del 24 agosto 2016 fece 299 vittime e quella del 30 ottobre nessuna (Dipartimento della Protezione Civile). «Oltre 300» si può scrivere solo contando anche gli eventi di gennaio 2017, e dicendolo."
+        contesto: '24 agosto|Amatrice|Accumoli|Norcia|Arquata|Centro Italia'
         finestra: 150
-        salvo_se_frase: 'sequenza|in tutto|complessiv|gennaio|Rigopiano|intera'
+        salvo_se_frase: 'in tutto|complessiv|gennaio|2017|Rigopiano'
 
   - id: abruzzo-2009-vittime
     dato: "Vittime e feriti del terremoto dell'Aquila, 6 aprile 2009"
@@ -864,3 +864,17 @@ dati:
         perche: "Zamberletti fu Commissario straordinario (1980) e poi Ministro per il coordinamento della protezione civile (1982), non «Ministro per gli interventi straordinari»."
         contesto: 'Zamberletti'
         finestra: 300
+
+  - id: vajont-1963-vittime
+    dato: "Vittime del disastro del Vajont, 9 ottobre 1963"
+    valore: "1.917"
+    fonti:
+      - nome: "Senato della Repubblica, disegno di legge n. 2238 (XIV legislatura), «Istituzione del Museo diffuso del Vajont»: «Il bilancio fu di 1.917 morti»"
+        url: "https://www.parlamento.it/service/PDF/PDFServer/BGT/00068650.pdf"
+      - nome: "CNR-IRPI, «9 ottobre 1963: il disastro del Vajont»"
+        url: "https://polaris.irpi.cnr.it/9-ottobre-1963-il-disastro-del-vajont/"
+    vietati:
+      - regex: '(?<![\d.])1\.?910(?![\d.,])'
+        perche: "Le vittime del Vajont sono 1.917, come nel resto del sito."
+        contesto: '(?i)Vajont|Longarone'
+        stessa_frase: true

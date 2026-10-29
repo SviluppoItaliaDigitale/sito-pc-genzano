@@ -36,7 +36,7 @@ Il soccorso era generoso ma improvvisato. E il disastro successivo trovava il Pa
 
 {{< dossier-dati id="conto" image="/images/dossier/storia-longarone-1963.webp" alt="Veduta aerea in bianco e nero della valle del Piave dopo il disastro del Vajont: una distesa di fango e detriti dove sorgeva Longarone" >}}
 {{< dossier-dato to="80" unita=" mila" label="Le vittime di **Messina e Reggio Calabria**, 1908, secondo le stime degli studi più recenti: il terremoto più grave della storia d'Italia" >}}
-{{< dossier-dato to="1910" label="Le vittime del **Vajont**, 1963: l'onda che cancellò Longarone. Il «disastro annunciato»" >}}
+{{< dossier-dato to="1917" label="Le vittime del **Vajont**, 1963: l'onda che cancellò Longarone. Il «disastro annunciato»" >}}
 {{< dossier-dato to="965" label="Le vittime del **Friuli**, 1976, in tutta la sequenza: il terremoto da cui nacque l'idea di organizzarsi prima" >}}
 {{< dossier-dato to="2734" label="Le vittime dell'**Irpinia**, 1980: i ritardi nei soccorsi convinsero l'Italia che serviva un sistema permanente" >}}
 {{< /dossier-dati >}}

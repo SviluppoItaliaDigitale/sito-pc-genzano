@@ -327,7 +327,7 @@ window.CRUCIVERBA_PUZZLES = {
           explain: 'INGV pubblica in tempo reale magnitudo, profondità, epicentro di ogni scossa su ingv.it (sezione Lista Eventi).' },
         { n: 10, dir: 'D', row: 0, col: 9, answer: 'AMARO',
           clue: 'Sapore non dolce, come il ricordo di Amatrice 2016',
-          explain: 'Sisma Centro Italia 2016 (Amatrice, Norcia, Arquata): sequenza prolungata, oltre 300 vittime, ricostruzione ancora in corso.' },
+          explain: 'Sisma Centro Italia 2016 (Amatrice, Norcia, Arquata): una sequenza lunga mesi; la scossa del 24 agosto fece 299 vittime. La ricostruzione è ancora in corso.' },
         { n: 11, dir: 'D', row: 0, col: 10, answer: 'AVVISO',
           clue: 'Messaggio di attenzione, prima dell\'allerta',
           explain: 'Il bollettino sismico è informativo: l\'INGV non emette "allerta" sismica perché i terremoti non si prevedono. Comunicano solo dopo.' }
