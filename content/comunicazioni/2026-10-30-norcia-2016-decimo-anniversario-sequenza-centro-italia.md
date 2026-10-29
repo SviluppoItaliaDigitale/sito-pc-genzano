@@ -13,18 +13,13 @@ allegati: []
 draft: false
 ---
 
-Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò gran parte del centro storico, compresa la **Basilica di San Benedetto**, simbolo della città.
+Alle **7:40 del 30 ottobre 2016** la scossa più forte registrata in Italia dopo l'Irpinia 1980 colpì la valle del Nera. **Magnitudo 6.5**, ipocentro a 9 chilometri di profondità, epicentro pochi chilometri a nord di Norcia. Crollò la **Basilica di San Benedetto**, simbolo della città.
 
-## Una scossa attesa, paesi evacuati
+## Nessuna vittima, molte persone già fuori casa
 
-A differenza del 24 agosto, questa volta il bilancio umano fu **straordinariamente contenuto**: nessuna vittima diretta nell'abitato di Norcia, due deceduti per cause indirette nelle ore successive, alcune centinaia di feriti.
+A differenza del 24 agosto, questa volta **non ci furono vittime**, come riporta il Dipartimento della Protezione Civile.
 
-La ragione è precisa. Nei giorni precedenti, dopo le scosse del 26 ottobre (M 5.4 e M 5.9), la **Protezione Civile aveva fatto evacuare** i centri storici più fragili. La popolazione era stata ospitata in tendopoli, alberghi della costa adriatica e sistemazioni temporanee. **Quando la scossa principale arrivò, le case erano vuote.**
-
-È una delle dimostrazioni più chiare della validità del modello italiano:
-- **Monitoraggio sismico continuo** da parte dell'INGV
-- **Comunicazione del rischio** trasparente alle autorità locali
-- **Decisioni operative tempestive** del sistema di Protezione Civile
+Dopo le scosse del 26 ottobre (M 5.4 e M 5.9) migliaia di persone avevano lasciato le case. Dormivano nei centri di accoglienza, da amici o in auto. Secondo le cronache, è soprattutto per questo che la scossa del 30 ottobre non provocò morti.
 
 ## Il bilancio della sequenza
 
@@ -43,7 +38,7 @@ E ha lasciato in eredità il **Sismabonus**, il Fondo per la ricostruzione, e l'
 
 ## Cosa ci insegna oggi
 
-L'evento del 30 ottobre 2016 dimostra che **prevenzione, evacuazione precauzionale e fiducia nella scienza** possono trasformare una catastrofe attesa in un evento gestibile.
+L'evento del 30 ottobre 2016 mostra quanto conta restare fuori dagli edifici danneggiati dopo una forte scossa. Molte persone lo avevano fatto dopo il 26 ottobre, e la scossa più forte non fece vittime.
 
 {{< foto src="/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia-visso-borgo-marche.webp"
          alt="Visso (Macerata), comune colpito dalla sequenza sismica del Centro Italia 2016"
@@ -54,7 +49,7 @@ Le tre lezioni:
 
 1. **Prima della scossa: pianificazione.** Sapere dove sono i punti di raccolta, le strutture sicure, le aree di attesa. A Genzano di Roma questa informazione è raccolta nella sezione [Piano di Emergenza](/piano-emergenza/).
 
-2. **Durante l'allerta: ascolto delle istituzioni.** Quando il sistema dice "evacuare", evacuare. Non è un eccesso di prudenza: è il margine di sicurezza che salva le vite.
+2. **Durante la sequenza sismica: ascolto delle istituzioni.** Se la casa è danneggiata, non si rientra finché non lo dicono le autorità: è il margine di sicurezza che salva le vite.
 
 3. **Dopo la scossa: ricostruzione che riduce il rischio.** La ricostruzione del Centro Italia è guidata dal principio del *building back better*: si ricostruisce con criteri antisismici aggiornati, non si rimette tutto come prima.
 
@@ -69,6 +64,9 @@ Genzano si trova in **zona sismica 2B**, parte dello stesso sistema appenninico.
 
 - [Amatrice, 24 agosto 2016: la prima scossa della sequenza](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/)
 - [Dieci anni dal sisma del Centro Italia: la memoria come prevenzione](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
+- [Il terremoto dalla A alla Z: un video in 3D](/comunicazioni/2026-10-29-terremoto-dalla-a-alla-z-video-3d/) — anche il gradino lungo il Monte Vettore e il Monte Bove e le case vuote di Norcia
 - [Sequenza sismica Centro Italia — Dipartimento Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-centro-italia-0/)
 - [INGV — Lista dei terremoti](https://terremoti.ingv.it/)
 - Voce Wikipedia: [Terremoto di Norcia del 30 ottobre 2016](https://it.wikipedia.org/wiki/Terremoto_di_Norcia_del_30_ottobre_2016)
+- [Il terremoto nell'Italia Centrale](https://www.ilpost.it/2016/10/30/terremoto-marche-centro-italia/) — Il Post, 30 ottobre 2016
+- [Migliaia di sfollati per il terremoto](https://www.ilpost.it/2016/10/28/terremoto-marche-sfollati/) — Il Post, 28 ottobre 2016

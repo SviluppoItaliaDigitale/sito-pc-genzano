@@ -34,7 +34,7 @@ La mostra è organizzata in **tre macro-percorsi esperienziali**, costruiti per 
 
 ### Storia degli strumenti di rilevazione
 
-Dal **sismoscopio cinese del 132 d.C.** (l'urna di Zhang Heng) ai moderni **accelerometri della Rete Accelerometrica Nazionale (RAN)** dell'INGV: un percorso di duemila anni di tentativi umani di "ascoltare" la Terra. Il visitatore vede gli strumenti reali e capisce come si è arrivati alla strumentazione di oggi.
+Dal **sismoscopio cinese del 132 d.C.** (l'urna di Zhang Heng) ai moderni **accelerometri della Rete Accelerometrica Nazionale (RAN)** del Dipartimento della Protezione Civile: un percorso di duemila anni di tentativi umani di "ascoltare" la Terra. Il visitatore vede gli strumenti reali e capisce come si è arrivati alla strumentazione di oggi.
 
 ### Comportamenti corretti e «Io non rischio»
 
@@ -93,8 +93,10 @@ Fonti istituzionali:
 - [Città della Scienza](https://www.cittadellascienza.it/).
 - [Campagna «Io non rischio»](https://iononrischio.protezionecivile.gov.it/).
 - [Rete Accelerometrica Nazionale (RAN)](https://ran.protezionecivile.it/).
-- [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
+- [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/).
 
 ---
 
 **Fonte**: comunicato stampa del Dipartimento della Protezione Civile, 17 aprile 2026.
+
+*Aggiornamento del 29 ottobre 2026: corretto l'ente che gestisce la Rete Accelerometrica Nazionale, che è il Dipartimento della Protezione Civile e non l'INGV.*

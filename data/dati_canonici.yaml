@@ -286,7 +286,7 @@ dati:
         contesto: 'Indicazioni'
         finestra: 20
       - regex: '(?i)Indicazioni nazionali[^.;\n]{0,90}?[\s*(]2012\b(?![^.;\n]{0,30}classi)'
-        nota: "Qualunque grafia: grassetti, parentesi, «Scuola dell'Infanzia** (2012)». Ammessa solo insieme alle «classi già avviate» (rilievo Codex sulla PR #1281)."
+        nota: "Qualunque grafia: grassetti, parentesi, «Scuola dell'Infanzia** (2012)». Ammessa solo insieme alle «classi già avviate» (segnalazione nella revisione della PR #1281)."
         perche: "Dal 2026/27 valgono le Indicazioni del D.M. 221/2025; il 2012 resta solo per le classi già avviate e va citato insieme al nuovo decreto."
         contesto: 'Indicazioni'
         finestra: 20
@@ -650,3 +650,19 @@ dati:
         perche: "I colori sono uguali in tutta Italia dal 2016, con le indicazioni operative del Dipartimento; la direttiva del 2004 ha fissato zone e livelli di criticità."
         contesto: '2004'
         stessa_frase: true
+
+  - id: rete-accelerometrica-nazionale
+    dato: "Chi gestisce la Rete Accelerometrica Nazionale (RAN)"
+    valore: "il Dipartimento della Protezione Civile (oltre 700 stazioni, per le scosse più forti); dell'INGV è la Rete Sismica Nazionale (circa 500 stazioni)"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, Rete Accelerometrica Nazionale"
+        url: "https://rischi.protezionecivile.gov.it/it/sismico/attivita/rete-accelerometrica-nazionale/"
+      - nome: "INGV, Rete Sismica Nazionale"
+        url: "https://www.mi.ingv.it/index.php/it/monitoraggio-sismologico/rete-sismica-nazionale"
+    # Nato il 29/10/2026: l'articolo sulla mostra dei terremoti a Napoli
+    # attribuiva la Rete Accelerometrica Nazionale all'INGV. L'espressione
+    # prende anche la sola sigla (RAN), l'apostrofo tipografico e il nome
+    # dell'istituto scritto per esteso.
+    vietati:
+      - regex: '(?:Rete Accelerometrica Nazionale(?:\s*\(RAN\))?|\bRAN\b)\W{0,4}\s+(?:dell[’'']\s*|gestita dall[’'']\s*|curata dall[’'']\s*)(?:INGV|Istituto Nazionale di Geofisica)'
+        perche: "La Rete Accelerometrica Nazionale è del Dipartimento della Protezione Civile; dell'INGV è la Rete Sismica Nazionale."
