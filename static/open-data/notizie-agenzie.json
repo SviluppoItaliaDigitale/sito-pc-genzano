@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-28T23:37:37+00:00",
+  "generato": "2026-10-29T02:55:08+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-29T00:01:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elezioni in Israele, il blocco di Netanyahu avanti di 5 seggi. La palla nelle mani di Herzog",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/elezioni-in-israele-il-blocco-di-netanyahu-avanti-di-5-seggi.-la-palla-nelle-mani-di-herzog_61d49ed4-29f3-40c8-abb7-de226e1432dc.html"
+  },
+  {
+   "data": "2026-10-28T23:44:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
   {
    "data": "2026-10-28T23:13:10+00:00",
    "fonte": "ADNKRONOS",
@@ -107,12 +119,6 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/28/mps-decide-il-suo-futuro-sul-piano-lovaglio-il-muro-dei-soci_368cd399-ea22-4ee4-9487-e8e27070171c.html"
   },
   {
-   "data": "2026-10-28T20:40:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elezioni in Israele, il blocco di Netanyahu avanti di 5 seggi. La palla nelle mani di Herzog",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/elezioni-in-israele-il-blocco-di-netanyahu-avanti-di-5-seggi.-la-palla-nelle-mani-di-herzog_61d49ed4-29f3-40c8-abb7-de226e1432dc.html"
-  },
-  {
    "data": "2026-10-28T20:16:46+00:00",
    "fonte": "ANSA",
    "titolo": "Manovra da 26 miliardi, taglio Irpef fino a 55mila euro",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Noah Wyle l'uomo più sexy al mondo secondo People, 'pensavo fosse uno scherzo'",
    "url": "https://www.ansa.it/canale_lifestyle/notizie/people/2026/10/28/noah-wyle-luomo-piu-sexy-al-mondo-secondo-people-pensavo-fosse_7346a7ec-8657-4025-a921-c29b38a7909f.html"
-  },
-  {
-   "data": "2026-10-28T18:27:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Caso Hydra, si pente il 'luogotenente' del clan Senese in Lombardia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/caso-hydra-si-pente-il-luogotenente-del-clan-senese-in-lombardia_99048359-b0ed-4b95-8a2f-1058266bb2b8.html"
   }
  ]
 }

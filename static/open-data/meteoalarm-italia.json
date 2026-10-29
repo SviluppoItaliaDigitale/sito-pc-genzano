@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-28T23:38:31+00:00",
+  "generato": "2026-10-29T02:55:26+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 14,
-  "scaduti_scartati": 0,
-  "in_corso": 2,
+  "avvisi": 12,
+  "scaduti_scartati": 2,
+  "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -36,19 +36,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261028104053.023"
   },
   {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-28T09:00:00+00:00",
-   "fine": "2026-10-29T00:59:00+00:00",
-   "emesso": "2026-10-28T09:40:53+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261028104053.022"
-  },
-  {
    "in_corso": false,
    "regione": "Emilia e Romagna",
    "fenomeno": "Nebbia",
@@ -75,7 +62,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261028104053.018"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -114,7 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261028104053.012"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lombardia",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -138,19 +125,6 @@
    "fine": "2026-10-30T22:59:00+00:00",
    "emesso": "2026-10-28T09:40:53+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261028104053.021"
-  },
-  {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-28T09:00:00+00:00",
-   "fine": "2026-10-29T00:59:00+00:00",
-   "emesso": "2026-10-28T09:40:53+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261028104053.020"
   },
   {
    "in_corso": false,
@@ -179,7 +153,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261028104053.015"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Nebbia",
    "livello": "gialla",
