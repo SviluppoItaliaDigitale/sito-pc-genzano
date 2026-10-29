@@ -2,40 +2,39 @@
   "_meta": {
     "descrizione": "Hash SHA-256 del solo testo visibile (main/body) delle pagine AGID / Designers Italia / Bootstrap Italia / DPC controllate ogni settimana dal workflow .github/workflows/aggiorna-manuale.yml. Lo script scripts/hash-fonte-agid.py rimuove script, style, header, footer, cookie banner e pattern volatili (timestamp, fingerprint asset) prima dell hashing, così le modifiche puramente cosmetiche non scattano falsi positivi. Se una pagina non si legge resta l ultimo hash buono, con la data dell errore in ultimo_errore. Il testo dei manuali di scrittura è in .manuale/manuali-agid/.",
     "algoritmo": "v2-text-only",
-    "ultimo_aggiornamento": "2026-10-27T13:28:47Z",
+    "ultimo_aggiornamento": "2026-10-29T13:46:22Z",
     "note": "Aggiornato automaticamente dal workflow. Non modificare manualmente."
   },
   "fonti": {
     "accessibilita_agid": {
       "url": "https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita",
       "hash": "0f3886e3038691415ab2b4d162f7e8bc70dd815df4e16d3407d8a44f24abd6c6",
-      "verificato": "2026-10-19T12:32:41Z",
-      "ultimo_errore": "2026-10-27T13:28:47Z"
+      "verificato": "2026-10-29T13:46:22Z"
     },
     "bootstrap_italia_docs": {
       "url": "https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/",
       "hash": "b96d9a11219e83cdd893d5941eeccdd66b0b0e359f738f8b61c9492c094a7e47",
-      "verificato": "2026-10-27T13:28:47Z"
+      "verificato": "2026-10-29T13:46:22Z"
     },
     "ui_kit": {
       "url": "https://designers.italia.it/risorse-per-progettare/realizzare/costruzione-interfaccia/",
       "hash": "466ba5107213c0815913d3f0ef8d9f79cfd11d26a54e57fd293bdcccb6a3a581",
-      "verificato": "2026-10-27T13:28:47Z"
+      "verificato": "2026-10-29T13:46:22Z"
     },
     "designers_italia_home": {
       "url": "https://designers.italia.it/",
       "hash": "5ebe385181996dc2d0eb746bfb37c10117285d604a5eb90b9d6c4fc83e679b44",
-      "verificato": "2026-10-27T13:28:47Z"
+      "verificato": "2026-10-29T13:46:22Z"
     },
     "dipartimento_pc": {
       "url": "https://servizio-nazionale.protezionecivile.gov.it/it/",
       "hash": "2800616baa1d5ddba6d10d5a48519004b9196cb093b2bcfe95bbd63c1e5016ef",
-      "verificato": "2026-10-27T13:28:47Z"
+      "verificato": "2026-10-29T13:46:22Z"
     },
     "designers_italia_guide": {
       "url": "https://designers.italia.it/risorse-per-progettare/",
       "hash": "ddd2af92ac3f9e87aa07cfbb381517eb38c18e24d13b5d8f93d9e3672d2de8ab",
-      "verificato": "2026-10-27T13:28:47Z"
+      "verificato": "2026-10-29T13:46:22Z"
     }
   }
 }
