@@ -108,16 +108,15 @@ def estrai_testo_normalizzato(html: str) -> str:
     return testo
 
 
-def scarica(url: str, timeout: int = 30) -> str:
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (compatible; PCGenzanoBot/1.0; "
-                "+https://www.protezionecivilegenzano.it/)"
-            )
-        },
-    )
+UA_BOT = "Mozilla/5.0 (compatible; PCGenzanoBot/1.0; +https://www.protezionecivilegenzano.it/)"
+# Alcuni siti (AGID dal 26/10/2026, dagli indirizzi dei runner) rispondono al
+# nome del bot con una pagina senza testo: seconda prova con un browser comune.
+UA_BROWSER = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
+              "Chrome/141.0 Safari/537.36")
+
+
+def scarica(url: str, timeout: int = 30, ua: str = UA_BOT) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Language": "it-IT,it;q=0.9"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         body = resp.read()
     # AGID usa utf-8; tolleranti su errori di encoding
@@ -141,12 +140,18 @@ def main() -> int:
 
     try:
         testo = estrai_testo_normalizzato(html)
+        if not testo and arg != "-":
+            html = scarica(arg, ua=UA_BROWSER)
+            testo = estrai_testo_normalizzato(html)
     except Exception as e:
         print(f"errore-parsing: {e}", file=sys.stderr)
         return 2
 
     if not testo:
-        print("errore-vuoto", file=sys.stderr)
+        titolo = re.search(r"<title[^>]*>(.*?)</title>", html, flags=re.S | re.I)
+        print(f"errore-vuoto: {len(html)} byte di HTML senza testo visibile"
+              + (f", titolo «{re.sub(chr(92) + 's+', ' ', titolo.group(1)).strip()[:80]}»" if titolo else ""),
+              file=sys.stderr)
         return 2
     if len(testo) < TESTO_MINIMO:
         print(f"testo-troppo-corto: {len(testo)} caratteri di testo visibile "

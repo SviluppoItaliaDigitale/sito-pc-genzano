@@ -1,7 +1,7 @@
 ---
 title: "La differenza è una scelta: il nostro video sul volontariato"
 date: 2026-10-28T19:30:00+01:00
-description: "Un video di circa tre minuti, con voce e sottotitoli, racconta la scelta di chi fa il volontario di protezione civile e dice grazie a chi ci mette tempo, fatica e cuore."
+description: "Un video di circa tre minuti, con voce e sottotitoli, racconta la scelta di chi fa il volontario di protezione civile e ringrazia chi ci mette tempo e cuore."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
