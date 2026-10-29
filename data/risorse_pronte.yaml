@@ -332,6 +332,17 @@ materiali:
   dimensione: 4.7 MB
   data_pubblicazione: '2026-05-18'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-sismico-video-3d-2026-10-29
+  tema: rischio-sismico
+  tema_titolo: Rischio sismico
+  tipo: video
+  titolo: "Video in 3D: il terremoto dalla A alla Z"
+  descrizione: Video verticale con voce e sottotitoli (14 minuti), in dodici capitoli,
+    dal terremoto di Messina del 1908 alla prevenzione. Pronto da condividere dal telefono.
+  file_url: /video/2026-10-29-terremoto-dalla-a-alla-z-video-3d.mp4
+  dimensione: 94.9 MB
+  data_pubblicazione: '2026-10-29'
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-sismico-presentazione-pdf-2026-03-21
   tema: rischio-sismico
   tema_titolo: Rischio sismico
