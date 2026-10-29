@@ -1,25 +1,25 @@
 ---
-title: "Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece 100.000 vittime e fondò l'idea moderna di soccorso"
+title: "Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece circa 80.000 vittime e fondò l'idea moderna di soccorso"
 date: 2026-12-28
-description: "Alle 5:21 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrusse Messina e Reggio Calabria."
+description: "Alle 5:20 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrusse Messina e Reggio Calabria."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno.webp"
-image_alt: "Copertina dell'articolo: Messina e Reggio Calabria, 28 dicembre 1908, il terremoto che fece 100.000 vittime e fondò l'idea moderna di soccorso"
+image_alt: "Copertina dell'articolo: Messina e Reggio Calabria, 28 dicembre 1908, il terremoto che fece circa 80.000 vittime e fondò l'idea moderna di soccorso"
 scadenza: ""
 area: "Italia · Stretto di Messina · Sicilia · Calabria"
 allegati: []
 draft: false
 ---
 
-Sono passati **centodiciotto anni** dall'evento più devastante della storia naturale italiana. Erano le **5:21 del mattino del 28 dicembre 1908**. Le città di **Messina** e **Reggio Calabria**, sulle due sponde dello Stretto, dormivano. In **trentasette secondi** una scossa sismica di **magnitudo 7.1** della scala Richter — con epicentro nello Stretto, a circa 10 chilometri di profondità — rase al suolo entrambe le città. Circa **dieci minuti dopo**, uno **tsunami** generato dal sisma colpì le coste con onde alte fino a **dodici metri**, completando ciò che il terremoto aveva iniziato.
+Sono passati **centodiciotto anni** dall'evento più devastante della storia naturale italiana. Erano le **5:20 del mattino del 28 dicembre 1908**. Le città di **Messina** e **Reggio Calabria**, sulle due sponde dello Stretto, dormivano. In **trentasette secondi** una scossa sismica di **magnitudo 7.1** della scala Richter — con epicentro nello Stretto, a circa 10 chilometri di profondità — rase al suolo entrambe le città. **Pochi minuti dopo**, uno **tsunami** generato dal sisma colpì le coste con onde che a Pellaro raggiunsero i **13 metri**, completando ciò che il terremoto aveva iniziato.
 
 {{< foto src="/images/2026-evento-messina-1908-rovine.webp"
          alt="Illustrazione d'epoca in seppia: veduta dall'alto dello Stretto di Messina con le città di Messina e Reggio Calabria disegnate sulle due sponde opposte, cartiglio con la scritta \"Le terre colpite dalla catastrofe sismica del 28 dicembre 1908\""
-         caption="Cartolina d'epoca con la veduta dello Stretto di Messina, le terre colpite dal terremoto e dallo tsunami del 28 dicembre 1908: oltre 80.000 vittime. È il primo evento in cui lo Stato italiano organizza un soccorso strutturato — l'antenato lontano della Protezione Civile." >}}
+         caption="Cartolina d'epoca con la veduta dello Stretto di Messina, le terre colpite dal terremoto e dallo tsunami del 28 dicembre 1908: circa 80.000 vittime. È il primo evento in cui lo Stato italiano organizza un soccorso strutturato — l'antenato lontano della Protezione Civile." >}}
 
-Il bilancio finale **non si conoscerà mai con precisione**. Le stime credibili oscillano fra **80.000 e 120.000 vittime**: a Messina morì circa **metà della popolazione** (60.000 abitanti su 140.000); a Reggio Calabria morirono **15.000-25.000** persone su 45.000; a Bagnara, Scilla, Villa San Giovanni, Bova Marina, Pellaro, decine di altri Comuni costieri furono distrutti per intero. È il **più grave disastro naturale della storia europea** moderna.
+Il bilancio esatto **non si conoscerà mai**: secondo il Dipartimento della Protezione Civile, gli studi più recenti stimano le vittime **attorno alle 80.000**. A Messina, secondo i dati del Ministero dei Lavori Pubblici del 1912, soltanto **due case** non subirono alcun danno; fra le province di Messina, Reggio Calabria e Catanzaro le case distrutte furono **oltre 40.000**. Bagnara, Scilla, Villa San Giovanni, Bova Marina, Pellaro e molti altri centri costieri furono devastati. È il **disastro naturale più grave della storia d'Italia**.
 
 Centodiciotto anni dopo, il **terremoto di Messina e Reggio** è il punto da cui parte tutta la lunga storia che porterà — ottantaquattro anni dopo, nel 1992 — alla nascita del **Servizio Nazionale della Protezione Civile**. Non è esagerato dire che quella mattina di dicembre, sui due lati dello Stretto, è cominciata la **moderna idea italiana di soccorso pubblico**.
 
@@ -83,7 +83,7 @@ Genzano di Roma è in **zona sismica 2B**: sismicità media. Significa che posso
 
 ## In ricordo
 
-I **caduti del terremoto del 28 dicembre 1908** — quasi centomila persone, di cui i nomi conosciuti sono solo una parte — sono ricordati ogni anno a Messina e Reggio Calabria con cerimonie istituzionali, religiose, civili. La **sirena del porto di Messina** suona alle 5:21 del mattino del 28 dicembre, riproducendo l'orario esatto della scossa.
+I **caduti del terremoto del 28 dicembre 1908** — circa 80.000 persone secondo gli studi più recenti, di cui i nomi conosciuti sono solo una parte — sono ricordati ogni anno a Messina e Reggio Calabria con cerimonie istituzionali, religiose, civili.
 
 Il **monumento alle vittime** del terremoto, a Messina, è un punto di ritrovo della memoria cittadina. Da lì, ogni anno, parte un corteo di cittadini, autorità, soccorritori, volontari di protezione civile, fino al porto e poi lungo i quartieri ricostruiti. È un modo per dire, una volta all'anno: **abbiamo imparato. Continueremo a imparare**.
 

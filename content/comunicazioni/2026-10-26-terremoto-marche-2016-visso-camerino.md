@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **dieci anni esatti**. Erano le **21:18 del 26 ottobre 2016**, quando una scossa di **magnitudo 5.9** della scala Richter colpì il **Maceratese**, nelle **Marche**. Esattamente **due mesi dopo Amatrice** (24 agosto 2016, magnitudo 6.0, oltre 300 vittime), la sequenza sismica del **Centro Italia** tornava attiva con grande violenza, spostandosi più a nord rispetto all'epicentro originario laziale-abruzzese.
+Sono passati **dieci anni esatti**. Erano le **21:18 del 26 ottobre 2016**, quando una scossa di **magnitudo 5.9** della scala Richter colpì il **Maceratese**, nelle **Marche**. Esattamente **due mesi dopo Amatrice** (24 agosto 2016, magnitudo 6.0, 299 vittime), la sequenza sismica del **Centro Italia** tornava attiva con grande violenza, spostandosi più a nord rispetto all'epicentro originario laziale-abruzzese.
 
 {{< foto src="/images/2026-evento-norcia-2016-basilica-crollata.webp"
          alt="La basilica di San Benedetto a Norcia crollata dopo il terremoto del 30 ottobre 2016"
@@ -33,7 +33,7 @@ Quattro giorni dopo, la sequenza tornò a colpire con violenza ancora maggiore. 
 
 La sequenza sismica del **Centro Italia 2016-2017** è una delle più lunghe e complesse della storia italiana recente. È collegata al sistema di **faglie normali** che attraversa l'Appennino centrale lungo la sua direzione nord-ovest sud-est. Le scosse principali furono:
 
-- **24 agosto 2016, 03:36** — M6.0, epicentro Accumoli (Rieti, Lazio). Danni gravissimi ad **Amatrice, Accumoli, Pescara del Tronto** (frazione di Arquata del Tronto, Marche). **Circa 300 vittime**.
+- **24 agosto 2016, 03:36** — M6.0, epicentro Accumoli (Rieti, Lazio). Danni gravissimi ad **Amatrice, Accumoli, Pescara del Tronto** (frazione di Arquata del Tronto, Marche). **299 vittime**, secondo il Dipartimento della Protezione Civile.
 - **26 ottobre 2016, 19:11** — M5.4, scossa precorritrice del Maceratese.
 - **26 ottobre 2016, 21:18** — M5.9, scossa principale fra **Visso, Castelsantangelo sul Nera, Ussita**.
 - **30 ottobre 2016, 07:40** — M6.5, epicentro Norcia. **La scossa più forte registrata in Italia dal 1980 (Irpinia)**. Distrusse parzialmente o totalmente molti edifici già lesionati, fra cui la **Basilica di San Benedetto** a Norcia.

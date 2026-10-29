@@ -554,7 +554,7 @@ Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come e
 **Casi studio — le maxi-emergenze italiane raccontate ai bambini (classi 4ª-5ª):** schede narrative su 12 eventi storici della Protezione Civile italiana. Ogni scheda ha cronologia in box, "Cosa abbiamo imparato" in 3 punti, domande di comprensione, soluzioni e note didattiche per il/la docente. Sono state escluse Vermicino e San Giuliano per sensibilità pedagogica (presenti dalla Secondaria di I grado in su).
 
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-primaria/) — "là dov'era, com'era": ricostruzione esemplare e nascita della PC italiana moderna. *(storia/geografia)*
-- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-primaria/) — Zamberletti, "Fate presto" di Pertini, nascita del Servizio Nazionale di Protezione Civile. *(storia/ed. civica)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-primaria/) — Zamberletti, la denuncia di Pertini sui ritardi dei soccorsi, nascita del Servizio Nazionale di Protezione Civile. *(storia/ed. civica)*
 - 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-primaria/) — solidarietà nazionale, Case C.A.S.E., comunicazione del rischio. *(storia/geografia)*
 - 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-primaria/) — la pasta all'amatriciana per la ricostruzione: solidarietà fra cuochi e ristoranti. *(storia/geografia)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-primaria/) — ascoltare gli scienziati: Tina Merlin e il principio della voce critica. *(storia/scienze)*

@@ -11,7 +11,7 @@ tts: false
 indice: false
 sezioni:
   - { id: "inizio", label: "Apertura" }
-  - { id: "alba", label: "Le 5:21" }
+  - { id: "alba", label: "Le 5:20" }
   - { id: "sismografo", label: "La scossa" }
   - { id: "maremoto", label: "Il maremoto" }
   - { id: "soccorsi", label: "I soccorsi" }
@@ -23,24 +23,24 @@ sezioni:
 
 {{< dossier-hero id="inizio" image="/images/dossier/messina-1908-rovine.webp" alt="Una strada di Messina ridotta a un canale di macerie dopo il terremoto del 1908: palazzi sventrati su entrambi i lati e superstiti in piedi tra le rovine" eyebrow="Messina e Reggio Calabria · 28 dicembre 1908" title="Il minuto che<br>cancellò una città" sub="All'alba del 28 dicembre 1908 lo Stretto di Messina si chiuse come una tagliola: il terremoto più letale della storia europea, e subito dopo il mare. Da quelle macerie nacquero il soccorso moderno e la prima legge antisismica italiana." credito="Foto: Richard Ellis, gennaio 1909 · pubblico dominio, via Wikimedia Commons" >}}
 
-{{< dossier-scena id="alba" image="/images/dossier/messina-1908-superstiti.webp" alt="Superstiti del terremoto di Messina accampati sotto una tenda di fortuna, in una foto d'epoca: famiglie sedute tra poche cose recuperate" align="right" kicker="Ore 5:21" title="Trentasette secondi<br>nel buio" credito="Sopravvissuti al terremoto, 1908 · foto Wilhelm von Gloeden · pubblico dominio, via Wikimedia Commons" >}}
-Alle **5:21** del 28 dicembre 1908 Messina e Reggio Calabria dormono. La scossa — magnitudo **7.1**, una delle più forti mai registrate in Italia — dura, secondo le cronache dell'epoca, **circa 37 secondi**. Bastano a trasformare due città in un cumulo di pietre.
+{{< dossier-scena id="alba" image="/images/dossier/messina-1908-superstiti.webp" alt="Superstiti del terremoto di Messina accampati sotto una tenda di fortuna, in una foto d'epoca: famiglie sedute tra poche cose recuperate" align="right" kicker="Ore 5:20" title="Trentasette secondi<br>nel buio" credito="Sopravvissuti al terremoto, 1908 · foto Wilhelm von Gloeden · pubblico dominio, via Wikimedia Commons" >}}
+Alle **5:20** del 28 dicembre 1908 Messina e Reggio Calabria dormono. La scossa — magnitudo **7.1**, una delle più forti mai registrate in Italia — dura, secondo le cronache dell'epoca, **circa 37 secondi**. Bastano a trasformare due città in un cumulo di pietre.
 
 A Messina crolla **circa il 90% degli edifici**. Non ci sono ancora norme antisismiche: i palazzi, costruiti con muri pesanti e solai deboli, si piegano su chi dorme. Le vie scompaiono sotto metri di macerie, l'acquedotto si spezza, il gas alimenta gli incendi. Chi si salva esce nel buio di dicembre, scalzo, e non riconosce più la propria strada.
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="sismografo" image="/images/dossier/messina-1908-sismogramma.webp" alt="Il sismogramma originale del terremoto di Messina registrato a Vienna: il tracciato bianco su fondo nero esplode in oscillazioni violente" >}}
-{{< dossier-dato to="7" unita=".1 Mw" label="La **magnitudo momento** stimata per la scossa delle 5:21: tra i terremoti più forti della storia sismica italiana (catalogo INGV)" >}}
+{{< dossier-dato to="7" unita=".1 Mw" label="La **magnitudo momento** stimata per la scossa delle 5:20: tra i terremoti più forti della storia sismica italiana (catalogo INGV)" >}}
 {{< dossier-dato to="37" unita=" secondi" label="La **durata** dello scuotimento secondo le cronache dell'epoca: poco più di mezzo minuto per cancellare due città" >}}
 {{< dossier-dato to="90" unita="%" label="Gli **edifici crollati o gravemente danneggiati** a Messina: si costruiva senza alcuna regola antisismica" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="maremoto" image="/images/dossier/messina-1908-sfollati.webp" alt="Folla di superstiti del terremoto di Messina raccolta lungo il porto, con gli edifici della palazzata danneggiati sullo sfondo" align="top" kicker="Pochi minuti dopo" title="Poi arrivò<br>il mare" credito="Foto: U.S. Navy — Naval History and Heritage Command (NH 1177), gennaio 1909 · pubblico dominio" >}}
-La terra non aveva finito. Pochi minuti dopo la scossa, il mare dello Stretto **si ritirò** — e tornò come un muro. Le onde del maremoto raggiunsero i **6-12 metri** sulle coste, con punte di circa **13 metri** a Pellaro, vicino Reggio: spazzarono il lungomare proprio dove i superstiti si erano rifugiati, lontano dai palazzi che crollavano.
+La terra non aveva finito. Pochi minuti dopo la scossa, il mare dello Stretto **si ritirò** — e tornò come un muro. Le onde del maremoto raggiunsero fra i 6 e gli 11 metri sulle coste, con punte di 11,70 metri a Sant'Alessio Siculo e di **13 metri** a Pellaro, vicino Reggio: spazzarono il lungomare proprio dove i superstiti si erano rifugiati, lontano dai palazzi che crollavano.
 
 È la trappola crudele dei terremoti dello Stretto: la fuga dal crollo porta verso l'acqua. Oggi quel comportamento ha una regola precisa, che raccontiamo nel dossier [«Quando il mare si ritira»](/dossier/quando-il-mare-si-ritira/): dopo una forte scossa vicino alla costa, **ci si allontana dal mare**, subito e verso l'alto.
 
-Il bilancio complessivo non fu mai contato con certezza: **almeno 80.000 vittime**, con stime che superano le 100.000. Nessun evento naturale, in Europa, ha mai ucciso così tante persone.
+Il bilancio complessivo non fu mai contato con certezza: gli studi più recenti stimano **circa 80.000 vittime**. In Italia nessun altro terremoto ha mai ucciso così tante persone.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="soccorsi" image="/images/dossier/messina-1908-marinai-russi.webp" alt="Marinai russi della corazzata Slava scavano tra le macerie di Messina insieme ai superstiti, in una foto del 1908-1909" align="right" kicker="Le prime navi" title="I soccorsi arrivarono<br>dal mare" credito="Marinai della corazzata russa Slava tra le macerie · 1908-1909 · pubblico dominio, via Wikimedia Commons" >}}
@@ -53,7 +53,7 @@ Un secolo dopo, quel coordinamento improvvisato è diventato un sistema: il [Mec
 
 {{< dossier-dati id="sfollati" image="/images/dossier/messina-1908-rovine.webp" alt="Una via di Messina ridotta a un canale di macerie" >}}
 {{< dossier-dato to="13" unita=" m" label="L'altezza massima stimata delle onde del **maremoto**, a Pellaro (Reggio Calabria): il mare colpì chi era fuggito dai crolli verso la costa" >}}
-{{< dossier-dato to="80" unita=" mila+" label="Le **vittime** accertate come minimo: le stime arrivano oltre 100.000. È il disastro naturale più letale della storia europea" >}}
+{{< dossier-dato to="80" unita=" mila" label="Le **vittime** stimate dagli studi più recenti: il numero esatto non è mai stato accertato. È il terremoto più grave della storia d'Italia" >}}
 {{< dossier-dato to="1300" unita="~" label="Le persone **salvate dai marinai russi** accorsi da Augusta: il primo grande soccorso internazionale dell'età contemporanea" >}}
 {{< /dossier-dati >}}
 
@@ -79,7 +79,7 @@ Messina 1908 è il punto zero della protezione civile italiana: il disastro che 
 
 {{< dossier-fonti >}}
 - **Immagini:** via di Messina in rovina, gennaio 1909 (Richard Ellis · pubblico dominio) · superstiti sotto una tenda di fortuna (Wilhelm von Gloeden · pubblico dominio) · profughi in attesa d'imbarco (U.S. Navy, Naval History and Heritage Command, NH 1177 · pubblico dominio) · marinai della corazzata russa Slava tra le macerie (autore ignoto, 1908-1909 · pubblico dominio) · campo dei profughi, 1909 (Library of Congress · pubblico dominio) · sismogramma del 28 dicembre 1908, stazione Hohe Warte di Vienna (ZAMG · pubblico dominio). Via Wikimedia Commons.
-- **Fonti:** [INGV — Catalogo dei Forti Terremoti in Italia (CFTI5Med)](https://storing.ingv.it/cfti/cfti5/) e [Catalogo Parametrico dei Terremoti Italiani (CPTI15)](https://emidius.mi.ingv.it/CPTI15-DBMI15/) (magnitudo, effetti, maremoto) · [Regio decreto 18 aprile 1909, n. 193 — Normattiva](https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=1909-04-22&atto.codiceRedazionale=009U0193&tipoDettaglio=originario&qId=) (prime norme antisismiche) · [U.S. Naval History and Heritage Command — Messina earthquake relief](https://www.history.navy.mil/) · le stime delle vittime (80.000-100.000+) variano tra le fonti storiografiche e vanno lette come ordini di grandezza.
+- **Fonti:** [INGV — Catalogo dei Forti Terremoti in Italia (CFTI5Med)](https://storing.ingv.it/cfti/cfti5/) e [Catalogo Parametrico dei Terremoti Italiani (CPTI15)](https://emidius.mi.ingv.it/CPTI15-DBMI15/) (magnitudo, effetti, maremoto) · [Regio decreto 18 aprile 1909, n. 193 — Normattiva](https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=1909-04-22&atto.codiceRedazionale=009U0193&tipoDettaglio=originario&qId=) (prime norme antisismiche) · [U.S. Naval History and Heritage Command — Messina earthquake relief](https://www.history.navy.mil/) · [Dipartimento della Protezione Civile — scheda storica del terremoto e del maremoto](https://servizio-nazionale.protezionecivile.gov.it/static/041316488bb4a7fdccb230dfdee0d544/terrem-calabro-messinese.pdf) (ora della scossa, altezza delle onde, stima di circa 80.000 vittime: il numero esatto non è mai stato accertato).
 - **Sul nostro sito:** [Il rischio sismico (Manuale, cap. 7.1)](/manuale/711-rischio-sismico/) · [Rischio sismico: cosa fare](/rischi-prevenzione/rischio-sismico/) · [Dossier: Quando il mare si ritira](/dossier/quando-il-mare-si-ritira/) · [Dossier: Quando la terra trema](/dossier/quando-la-terra-trema/) · [Dossier: Dalle macerie, un sistema](/dossier/nascita-protezione-civile-italiana/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

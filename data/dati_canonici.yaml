@@ -666,3 +666,215 @@ dati:
     vietati:
       - regex: '(?:Rete Accelerometrica Nazionale(?:\s*\(RAN\))?|\bRAN\b)\W{0,4}\s+(?:dell[’'']\s*|gestita dall[’'']\s*|curata dall[’'']\s*)(?:INGV|Istituto Nazionale di Geofisica)'
         perche: "La Rete Accelerometrica Nazionale è del Dipartimento della Protezione Civile; dell'INGV è la Rete Sismica Nazionale."
+
+  # Bilanci dei grandi terremoti italiani. Nati il 29/10/2026 con il video in
+  # 3D «Il terremoto dalla A alla Z»: lo stesso evento compariva con numeri
+  # diversi in articoli, dossier, schede, kit e giochi (Irpinia 2.914 e 2.734,
+  # Friuli 989, 990, 976, 970 e 965, Messina da 80.000 a 120.000). Fanno fede le
+  # schede storiche del Dipartimento della Protezione Civile; le magnitudo
+  # restano quelle del catalogo INGV.
+  - id: messina-1908-vittime
+    dato: "Vittime del terremoto e del maremoto di Messina e Reggio Calabria, 28 dicembre 1908"
+    valore: "circa 80.000, stima degli studi più recenti (il numero esatto non è mai stato accertato)"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, scheda storica «Il terremoto e il maremoto di Messina e Reggio Calabria»: «Enorme, ma incerto, il numero delle vittime, che studi recenti stimano attorno alle 80mila persone»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/static/041316488bb4a7fdccb230dfdee0d544/terrem-calabro-messinese.pdf"
+    vietati:
+      - regex: '\b(?:oltre|più di|almeno)\s+(?:80\.?000|ottantamila)\s+(?:vittim\w*|mort[ie]\b|persone)'
+        perche: "Il Dipartimento della Protezione Civile scrive che gli studi recenti stimano le vittime «attorno alle 80mila persone»: circa, non oltre né almeno."
+        contesto: 'Messina|Reggio|1908|Stretto'
+        finestra: 300
+      - regex: '\b80\.?000\s*(?:[-–—]|e|a)\s*(?:100|120)\.?000\b'
+        perche: "Forbice non più usata: il Dipartimento della Protezione Civile riporta la stima degli studi recenti, circa 80.000."
+        contesto: 'Messina|Reggio|1908|Stretto'
+        finestra: 300
+      - regex: '\b(?:100|120)\.?000\s+(?:vittim\w*|mort[ie]\b|caduti)|\bcentomila\s+(?:vittim\w*|mort[ie]\b|persone|caduti)|super\w*\s+(?:le\s+)?100\.?000|arriv\w*\s+oltre\s+(?:le\s+)?100\.?000'
+        perche: "Le vittime stimate dagli studi recenti sono circa 80.000 (Dipartimento della Protezione Civile), non 100.000 o più."
+        contesto: 'Messina|Reggio|1908|Stretto'
+        finestra: 300
+      - regex: 'unita="\s*mila\+"'
+        perche: "«80 mila+» presenta come minimo una stima: le vittime sono circa 80.000."
+        contesto: 'Messina|Reggio|1908'
+        finestra: 400
+
+  - id: messina-1908-ora
+    dato: "Ora della scossa di Messina e Reggio Calabria, 28 dicembre 1908"
+    valore: "5.20"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, scheda storica «Il terremoto e il maremoto di Messina e Reggio Calabria»: «Alle ore 5.20 del 28 dicembre 1908 una violentissima scossa…»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/static/041316488bb4a7fdccb230dfdee0d544/terrem-calabro-messinese.pdf"
+    vietati:
+      - regex: '\b5[:.]21\b'
+        perche: "Il Dipartimento della Protezione Civile indica le 5.20."
+        contesto: 'Messina|Reggio|1908|Stretto'
+        finestra: 400
+
+  - id: messina-1908-onde
+    dato: "Altezza massima delle onde del maremoto del 28 dicembre 1908"
+    valore: "13 metri a Pellaro (Reggio Calabria); 11,70 metri a Sant'Alessio Siculo"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, scheda storica «Il terremoto e il maremoto di Messina e Reggio Calabria»: «con un picco di 13 metri a Pellaro in Provincia di Reggio Calabria»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/static/041316488bb4a7fdccb230dfdee0d544/terrem-calabro-messinese.pdf"
+    vietati:
+      - regex: '\b(?:dodici|12)\s+metri\b|\bonde\s+10[-–]13\s*m\b'
+        perche: "Il picco del maremoto fu di 13 metri, a Pellaro (Dipartimento della Protezione Civile)."
+        contesto: '(?s)(?=.*(?:onde|tsunami|maremoto))(?=.*(?:Messina|Reggio|1908|Stretto))'
+        finestra: 400
+
+  - id: marsica-1915-vittime
+    dato: "Vittime del terremoto della Marsica, 13 gennaio 1915"
+    valore: "oltre 30.000"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto della Marsica»: «Complessivamente oltre 30mila persone perdono la vita»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-della-marsica/"
+    vietati:
+      - regex: '\b(?:32|33)\.?000\s+(?:vittim\w*|mort[ie]\b|persone)|trentaduemila|trentatremila'
+        perche: "Il Dipartimento della Protezione Civile scrive «oltre 30mila» vittime."
+        contesto: 'Marsica|Avezzano|1915|Fucino'
+        finestra: 300
+    escludi:
+      # Trascrizione fedele della voce del documentario del 23/10/2026: la nota
+      # in fondo alla trascrizione dà il dato del Dipartimento.
+      - "content/comunicazioni/2026-10-23-documentario-storia-protezione-civile.md"
+
+  - id: belice-1968-bilancio
+    dato: "Bilancio del terremoto del Belice, gennaio 1968"
+    valore: "296 morti, oltre mille feriti, quasi 100.000 senza casa"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto del Belice»: «296 persone perdono la vita, oltre mille restano ferite e quasi 100mila sono senza casa»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-del-belice/"
+    vietati:
+      - regex: '\b(?:231|352|370)\s+(?:vittim\w*|mort[ie]\b|persone)|(?:[Vv]ittime|[Mm]orti)\s*:?\s*(?:231|352|370)\b|\b623\s+feriti|\b70\.?000\s+sfollati'
+        perche: "Il Dipartimento della Protezione Civile conta 296 morti, oltre mille feriti e quasi 100.000 persone senza casa."
+        contesto: 'Belice|Gibellina|Salaparuta|Montevago|Poggioreale|1968'
+        finestra: 300
+
+  - id: friuli-1976-vittime
+    dato: "Vittime del terremoto del Friuli, sequenza del 6 maggio e del 15 settembre 1976"
+    valore: "965 in tutta la sequenza"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto del Friuli»: «Perdono la vita complessivamente 965 persone»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-del-friuli/"
+    # La pagina storica dei Vigili del Fuoco riporta 989 morti: si usa il dato
+    # del Dipartimento, come per gli altri terremoti.
+    vietati:
+      - regex: '\b(?:989|990|976|970)\s+(?:vittim\w*|mort[ie]\b|persone)|(?:[Vv]ittime|[Mm]orti)\s*:?\s*(?:989|990|976|970)\b|(?<![Qq]uasi\s)\b[Mm]ille\s+morti'
+        perche: "Il Dipartimento della Protezione Civile conta 965 morti in tutta la sequenza."
+        contesto: 'Friuli|Gemona|Venzone|Osoppo|Tagliamento|Orcolat'
+        finestra: 300
+      - regex: '(?<![\d.,])(?:989|990)(?![\d.,])'
+        perche: "Il Dipartimento della Protezione Civile conta 965 morti in tutta la sequenza (vale anche per tabelle e «circa 990»)."
+        contesto: 'Friuli|Gemona|Venzone|Osoppo|Orcolat'
+        finestra: 150
+
+  - id: friuli-1976-senzatetto
+    dato: "Senzatetto del terremoto del Friuli, 1976"
+    valore: "oltre 45.000"
+    fonti:
+      - nome: "Corpo Nazionale dei Vigili del Fuoco, «Il terremoto del Friuli del maggio 1976»: «oltre 45.000 senzatetto»"
+        url: "https://anniversario-sca.vigilfuoco.it/it/print/pdf/node/32305"
+    vietati:
+      - regex: '\b(?:centomila|100\.?000|157\.?000)\s+(?:senza\s?tetto|sfollat\w*|persone)'
+        perche: "Per i Vigili del Fuoco i senzatetto furono oltre 45.000; il Dipartimento della Protezione Civile non dà un numero."
+        contesto: 'Friuli|Gemona|Venzone|Osoppo|Tagliamento|Orcolat'
+        finestra: 300
+
+  - id: irpinia-1980-bilancio
+    dato: "Vittime e comuni colpiti del terremoto dell'Irpinia, 23 novembre 1980"
+    valore: "2.734 vittime; 688 comuni con lesioni gravi"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto dell'Irpinia»: «causando 2734 vittime. A riportare gravi lesioni sono complessivamente 688 comuni»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-dellirpinia/"
+    vietati:
+      - regex: '\b2\.?9\d\d\b(?!\s*km)|\bquasi\s+(?:tremila|3\.000)\s+(?:vittim\w*|mort[ie]\b)|\b(?:circa\s+)?3\.000\s+(?:vittim\w*|mort[ie]\b)'
+        perche: "Il Dipartimento della Protezione Civile conta 2.734 vittime."
+        contesto: 'Irpinia|Campania|Basilicata|Conza|Lioni|Sant[’'']Angelo dei Lombardi|Avellino'
+        finestra: 300
+      - regex: '\b687\s+comuni'
+        perche: "Per il Dipartimento della Protezione Civile i comuni con lesioni gravi furono 688."
+        contesto: 'Irpinia|1980|Campania|Basilicata'
+        finestra: 300
+    escludi:
+      # Trascrizione fedele della voce del documentario del 23/10/2026: la nota
+      # in fondo alla trascrizione dà il dato del Dipartimento.
+      - "content/comunicazioni/2026-10-23-documentario-storia-protezione-civile.md"
+
+  - id: irpinia-1980-fate-presto
+    dato: "Chi scrisse «Fate presto» dopo il terremoto dell'Irpinia"
+    valore: "il quotidiano Il Mattino di Napoli, titolo della prima pagina del 26 novembre 1980; lo stesso giorno il Presidente Pertini denunciò in tv i ritardi dei soccorsi"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Fate presto», volume I: «Il titolo che campeggia a caratteri cubitali sulla prima pagina del Mattino di Napoli del 26 novembre 1980»"
+        url: "https://www.protezionecivile.gov.it/static/2d9870aa9d31f154966e3d97de19244e/Fate_presto_-_volume_I.pdf"
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto dell'Irpinia» (messaggio televisivo di Pertini del 26 novembre)"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-dellirpinia/"
+    vietati:
+      - regex: '(?i)Pertini[^.;·?!]{0,80}?[«"“]\s*Fate\s+presto|[«"“]\s*Fate\s+presto\s*!?\s*[»"”]\s*(?:di|del)\s+(?:Presidente\s+)?(?:Sandro\s+)?Pertini|[«"“]\s*Fate\s+presto\s*!?\s*[»"”]\s*:\s*Pertini|Suo\s+il\s+celebre\s+[«"“]\s*Fate\s+presto|disse\s+in\s+tv\s*:?\s*[«"“]\s*Fate\s+presto'
+        perche: "«Fate presto» è il titolo del Mattino di Napoli del 26 novembre 1980; Pertini, in tv, denunciò i ritardi dei soccorsi, ma quella frase non è sua."
+        contesto: 'Pertini|Irpinia|1980|Mattino'
+        finestra: 400
+
+  - id: emilia-2012-vittime
+    dato: "Vittime della sequenza sismica dell'Emilia, maggio 2012"
+    valore: "28 in tutto"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto nel Nord Italia»: «Complessivamente perdono la vita 28 persone»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-nel-nord-italia/"
+    vietati:
+      - regex: '\b27\s+(?:le\s+)?(?:vittim\w*|mort[ie]\b)|(?:[Vv]ittime|[Mm]orti)\s*:?\s*27\b'
+        perche: "Il Dipartimento della Protezione Civile conta 28 morti in tutta la sequenza."
+        contesto: '2012|Mirandola|Finale Emilia|Cavezzo|Medolla|San Felice'
+        stesso_paragrafo: true
+        salvo_se_frase: 'San Giuliano|bambin|Jovine|Rigopiano'
+      - regex: '(?:Emilia|Mirandola)[^\n]{0,60}?2012\s+[\d.,]+\s+27\b'
+        perche: "Nelle tabelle di confronto: il Dipartimento della Protezione Civile conta 28 morti in tutta la sequenza."
+
+  - id: centro-italia-2016-24-agosto-vittime
+    dato: "Vittime della scossa del 24 agosto 2016 (Amatrice, Accumoli, Arquata del Tronto)"
+    valore: "299 il 24 agosto 2016 e nessuna il 30 ottobre; gli eventi di gennaio 2017 causano 34 vittime, 29 delle quali nella tragedia di Rigopiano"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto del Centro Italia»: «La scossa provoca 299 vittime» … «Gli eventi di gennaio causano 34 vittime, di cui 29 nella tragedia di Rigopiano»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-centro-italia-0/"
+    vietati:
+      - regex: '\b(?:oltre|circa|quasi)\s+300\s+(?:vittim\w*|mort[ie]\b)'
+        perche: "La scossa del 24 agosto 2016 fece 299 vittime e quella del 30 ottobre nessuna (Dipartimento della Protezione Civile). «Oltre 300» si può scrivere solo contando anche gli eventi di gennaio 2017, e dicendolo."
+        contesto: '24 agosto|Amatrice|Accumoli|Norcia|Arquata|Centro Italia'
+        finestra: 150
+        salvo_se_frase: 'in tutto|complessiv|gennaio|2017|Rigopiano'
+
+  - id: abruzzo-2009-vittime
+    dato: "Vittime e feriti del terremoto dell'Aquila, 6 aprile 2009"
+    valore: "309 vittime e oltre 1.500 feriti"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto in Abruzzo»: «Il terremoto provoca 309 vittime e oltre 1500 feriti»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-abruzzo/"
+    vietati:
+      - regex: '\b308\s+(?:vittim\w*|mort[ie]\b|persone)|[Tt]recentootto\s+(?:vittim\w*|mort[ie]\b)|\b1\.?600\s+feriti'
+        perche: "Il Dipartimento della Protezione Civile conta 309 vittime e oltre 1.500 feriti."
+        contesto: 'Aquila|Abruzzo|Onna|2009'
+        finestra: 300
+
+  - id: zamberletti-incarichi-1980-1982
+    dato: "Incarichi di Giuseppe Zamberletti dopo il terremoto dell'Irpinia"
+    valore: "Commissario straordinario per i soccorsi nel 1980; Ministro per il coordinamento della protezione civile dal febbraio 1982"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto dell'Irpinia»: «il Governo interviene nominando il Commissario straordinario Giuseppe Zamberletti … nel febbraio del 1982 porta alla nomina di Zamberletti quale Ministro per il Coordinamento della Protezione Civile»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-dellirpinia/"
+    vietati:
+      - regex: '(?i)[Mm]inistro\s+per\s+gli\s+interventi\s+straordinari'
+        perche: "Zamberletti fu Commissario straordinario (1980) e poi Ministro per il coordinamento della protezione civile (1982), non «Ministro per gli interventi straordinari»."
+        contesto: 'Zamberletti'
+        finestra: 300
+
+  - id: vajont-1963-vittime
+    dato: "Vittime del disastro del Vajont, 9 ottobre 1963"
+    valore: "1.917"
+    fonti:
+      - nome: "Senato della Repubblica, disegno di legge n. 2238 (XIV legislatura), «Istituzione del Museo diffuso del Vajont»: «Il bilancio fu di 1.917 morti»"
+        url: "https://www.parlamento.it/service/PDF/PDFServer/BGT/00068650.pdf"
+      - nome: "CNR-IRPI, «9 ottobre 1963: il disastro del Vajont»"
+        url: "https://polaris.irpi.cnr.it/9-ottobre-1963-il-disastro-del-vajont/"
+    vietati:
+      - regex: '(?<![\d.])1\.?910(?![\d.,])'
+        perche: "Le vittime del Vajont sono 1.917, come nel resto del sito."
+        contesto: '(?i)Vajont|Longarone'
+        stessa_frase: true

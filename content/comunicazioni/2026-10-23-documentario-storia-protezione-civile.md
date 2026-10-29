@@ -75,6 +75,8 @@ Essere volontari non è solo guidare un mezzo. Monitoriamo il territorio. Siamo 
 
 **Cartello finale.** Diventa volontario: non c'è Protezione Civile senza di te. C'è un posto anche per te. www.protezionecivilegenzano.it, Gruppo Comunale Volontari, dal 1981.
 
+*Nota sui numeri: per la Marsica 1915 e per l'Irpinia 1980 la voce del documentario riporta stime diverse da quelle del Dipartimento della Protezione Civile, che conta [oltre 30.000 vittime per la Marsica](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-della-marsica/) e [2.734 per l'Irpinia](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-dellirpinia/). Sono i dati che usiamo nel resto del sito.*
+
 ## Vuoi fare la tua parte?
 
 Requisiti, formazione e contatti sono nella pagina [Diventa volontario](/diventa-volontario/).

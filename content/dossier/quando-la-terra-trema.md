@@ -45,19 +45,19 @@ Quattro terremoti, in poco più di un secolo, hanno segnato il Paese: **Messina*
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="messina-1908" image="/images/dossier/sisma-messina-1908.webp" alt="Foto storica in bianco e nero: folla di superstiti, donne con foulard chiari e bambini, in una strada di Messina dopo il terremoto del 1908; sulla sinistra un edificio con insegna «Le Phénix», sullo sfondo edifici danneggiati" align="top" kicker="28 dicembre 1908 · Stretto di Messina" title="Il sisma più grave<br>della storia d'Europa" credito="Foto: U.S. Naval History and Heritage Command (NH 1177), Messina gennaio 1909 · pubblico dominio, via Wikimedia Commons" >}}
-Alle 5:20 del **28 dicembre 1908** un terremoto di magnitudo **Mw 7.1** colpì lo Stretto di Messina. Circa dieci minuti dopo, un violento **maremoto** investì le due coste. Messina e Reggio Calabria furono quasi del tutto distrutte.
+Alle 5:20 del **28 dicembre 1908** un terremoto di magnitudo **Mw 7.1** colpì lo Stretto di Messina. Pochi minuti dopo, un violento **maremoto** investì le due coste. Messina e Reggio Calabria furono quasi del tutto distrutte.
 
-Le vittime furono **circa 80.000** (le stime variano): il disastro sismico più catastrofico mai avvenuto in Europa. Da quella tragedia nacque, nel 1909, la prima norma antisismica italiana.
+Le vittime furono **circa 80.000**, secondo gli studi più recenti: il disastro sismico più catastrofico mai avvenuto in Europa. Da quella tragedia nacque, nel 1909, la prima norma antisismica italiana.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="friuli-1976" image="/images/dossier/sisma-friuli-1976.webp" alt="Foto in bianco e nero: le rovine del Duomo di Venzone dopo il terremoto del Friuli del 1976, con archi in pietra ancora in piedi, una montagna innevata sullo sfondo e una staccionata con cartello «Pericolo»" align="top" kicker="6 maggio 1976 · Friuli" title="Dov'era,<br>com'era" credito="Foto: Duomo di Venzone (UD) dopo il terremoto del Friuli, settembre 1976 · YukioSanjo · CC BY-SA 3.0, via Wikimedia Commons" >}}
-Il **6 maggio 1976**, alle 21:00, una scossa di magnitudo **Mw 6.4-6.5** colpì il Friuli. Le vittime furono **circa 990**, gli sfollati oltre 45.000. Centri come Gemona, Osoppo e **Venzone** furono rasi al suolo.
+Il **6 maggio 1976**, alle 21:00, una scossa di magnitudo **Mw 6.4-6.5** colpì il Friuli. Le vittime furono **965** in tutta la sequenza, i senzatetto oltre 45.000. Centri come Gemona, Osoppo e **Venzone** furono rasi al suolo.
 
 La ricostruzione divenne un modello: ricostruire **"dov'era e com'era"**, con i sindaci e le comunità protagoniste. Venzone, oggi, è di nuovo in piedi.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="irpinia-1980" image="/images/dossier/sisma-irpinia-1980.webp" alt="Foto in bianco e nero: strada bagnata di Sant'Angelo dei Lombardi dopo il terremoto dell'Irpinia del 1980, con edifici crollati su se stessi, un'automobile ribaltata sul tetto a destra, un furgone e una balaustra alberata che si affaccia sulla vallata a sinistra" align="left" kicker="23 novembre 1980 · Irpinia" title="Da qui nasce<br>la Protezione Civile" credito="Foto: Sant'Angelo dei Lombardi (AV) dopo il terremoto dell'Irpinia, 23 novembre 1980 · Michele V. · CC BY-SA 4.0, via Wikimedia Commons" >}}
-Il **23 novembre 1980**, alle 19:34, il terremoto dell'**Irpinia** (magnitudo **Mw 6.9**) colpì Campania e Basilicata. Le vittime furono **circa 2.900** (le stime variano), gli sfollati quasi 280.000. Centri come **Sant'Angelo dei Lombardi** crollarono su se stessi.
+Il **23 novembre 1980**, alle 19:34, il terremoto dell'**Irpinia** (magnitudo **Mw 6.9**) colpì Campania e Basilicata. Le vittime furono **2.734**, secondo il Dipartimento della Protezione Civile; gli sfollati circa 280.000. Centri come **Sant'Angelo dei Lombardi** crollarono su se stessi.
 
 I ritardi nei soccorsi fecero capire che serviva un sistema organizzato. Da quella esperienza, guidata da Giuseppe Zamberletti, nasce la **moderna Protezione Civile** italiana.
 {{< /dossier-scena >}}
@@ -69,7 +69,7 @@ Ricordare questi eventi, con rispetto, serve a non considerare il terremoto un p
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="centro-italia" image="/images/dossier/sisma-amatrice.webp" alt="Edifici crollati e cumuli di macerie ad Amatrice dopo il terremoto del Centro Italia del 2016, all'alba" align="top" kicker="2016 · Centro Italia" title="Una lunga<br>sequenza" credito="Amatrice 2016 · foto terremocentroitalia · CC BY 2.0" >}}
-Il **24 agosto 2016**, alle 3:36, una scossa di magnitudo **6.0** colpì **Amatrice** e Accumoli, causando la quasi totalità delle **299 vittime** della sequenza. Il **30 ottobre 2016** seguì la scossa più forte, magnitudo **6.5**, vicino a Norcia.
+Il **24 agosto 2016**, alle 3:36, una scossa di magnitudo **6.0** colpì **Amatrice** e Accumoli, causando **299 vittime**. Il **30 ottobre 2016** seguì la scossa più forte, magnitudo **6.5**, vicino a Norcia.
 
 Le immagini di Amatrice sono diventate il simbolo di quanto un evento naturale possa cambiare per sempre una comunità. Ricordarle serve a non considerare il terremoto un problema lontano.
 {{< /dossier-scena >}}
