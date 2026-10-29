@@ -149,7 +149,6 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **Video 3D «Il terremoto dalla A alla Z»** (Claude, dal 29/10/2026 alle 01:30). Video verticale di circa 15 minuti in 12 capitoli, da Messina 1908 a oggi, con voce, musica della «Libreria musicale» ed effetti; pagine 3D, voce e render si fanno nella cartella di lavoro della sessione, non nel repository. Ramo `claude/video-terremoto-a-z-20261029`: articolo `2026-10-29-terremoto-dalla-a-alla-z-video-3d` con la versione facile, video, sottotitoli e poster in `static/video/`, incorporamento in `/rischi-prevenzione/rischio-sismico/`, voce in `data/risorse_pronte.yaml`, correzione della Rete Accelerometrica Nazionale (è del Dipartimento, non dell'INGV) in `2026-04-17-mostra-terremoti-italia-napoli.md`. Prossimo passo: render delle pagine, mix, revisore, poi PR e merge. Alessandro lo vuole online la mattina del 29/10/2026. Cervello: documento «Video per i siti web» e riga 1 del foglio «Piano video siti web».
 
 
 ## Richieste

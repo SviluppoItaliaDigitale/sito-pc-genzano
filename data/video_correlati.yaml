@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 332 / Video unici usati: 267 /
-# Link totali: 1126 (max 5 per pagina,
+# Pagine coperte: 333 / Video unici usati: 270 /
+# Link totali: 1131 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -8392,6 +8392,65 @@ pagine:
       score: 6.0
       titolo: Il Titanic "affondato" da una tempesta solare ?
       url: https://youtu.be/dbtYw22YtLU
+  comunicazioni/2026-10-29-terremoto-dalla-a-alla-z-video-3d:
+    title: 'Il terremoto dalla A alla Z: un video in 3D, da Messina 1908 a oggi'
+    url: /comunicazioni/2026-10-29-terremoto-dalla-a-alla-z-video-3d/
+    video:
+    - anchored:
+      - messina
+      canale: ingv-terremoti
+      id: UgAcbTC4rbA
+      is_lis: false
+      overlap:
+      - calabria
+      - maremoto
+      - messina
+      - reggio
+      score: 9.0
+      titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
+      url: https://youtu.be/UgAcbTC4rbA
+    - anchored:
+      - faglie
+      canale: geopop
+      id: M-dt6lqpm6s
+      is_lis: false
+      overlap:
+      - faglie
+      - sismico
+      score: 3.0
+      titolo: Faglie en echelon su cubo sismico
+      url: https://youtu.be/M-dt6lqpm6s
+    - anchored:
+      - faglie
+      canale: ingv-terremoti
+      id: vqcZOSupPMg
+      is_lis: false
+      overlap:
+      - faglie
+      - pianura
+      score: 3.0
+      titolo: 'Sequenza sismica in Pianura Padana 2012: Le Faglie Sepolte'
+      url: https://youtu.be/vqcZOSupPMg
+    - anchored:
+      - faglie
+      canale: geopop
+      id: gUOcDWN47Ws
+      is_lis: false
+      overlap:
+      - faglie
+      score: 2.0
+      titolo: '#2 FREE WEBINAR - Le faglie inverse, una visione dal mondo dell''industria dell''esplorazione'
+      url: https://youtu.be/gUOcDWN47Ws
+    - anchored:
+      - faglie
+      canale: geopop
+      id: nXaWt5xfnYg
+      is_lis: false
+      overlap:
+      - faglie
+      score: 2.0
+      titolo: LE FAGLIE NORMALI - Cinematica Vs Deposizione - WEBINAR per studenti universitari
+      url: https://youtu.be/nXaWt5xfnYg
   comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia:
     title: 'Norcia, 30 ottobre 2016: la scossa più forte d''Italia degli ultimi 30 anni'
     url: /comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia/
@@ -8405,7 +8464,8 @@ pagine:
       overlap:
       - magnitudo
       - scossa
-      score: 8.0
+      - terremoto
+      score: 8.2
       titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
       url: https://youtu.be/RmDN-R7NJNk
     - anchored:
@@ -8416,7 +8476,8 @@ pagine:
       overlap:
       - danni
       - scossa
-      score: 6.6
+      - terremoto
+      score: 6.8
       titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/0--y1oKrz-4
     - anchored:
@@ -8427,7 +8488,8 @@ pagine:
       overlap:
       - danni
       - scossa
-      score: 6.6
+      - terremoto
+      score: 6.8
       titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
@@ -8438,7 +8500,8 @@ pagine:
       overlap:
       - danni
       - scossa
-      score: 6.6
+      - terremoto
+      score: 6.8
       titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
       url: https://youtu.be/KjQSuaVrjlY
   comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure:
@@ -8499,15 +8562,15 @@ pagine:
     - anchored:
       - magnitudo
       canale: solarino-sismologo
-      id: F6809gcJmXQ
+      id: TCALB5mhddU
       is_lis: false
       overlap:
+      - cambiato
       - magnitudo
-      - richter
       - terremoto
       score: 3.6
-      titolo: Terremoti in pillole 14. Richter e la sua magnitudo
-      url: https://youtu.be/F6809gcJmXQ
+      titolo: Terremoti in pillole 28. Chi ha cambiato la magnitudo?
+      url: https://youtu.be/TCALB5mhddU
   comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano:
     title: 'Genova, 4 novembre 2011: l''alluvione del Fereggiano e la lezione dei rii tombati'
     url: /comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano/
