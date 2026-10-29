@@ -754,7 +754,12 @@ def _eu_space_feed(cli, anni):
                 d = parsedate_to_datetime((it.findtext('pubDate') or '').strip()).astimezone(ROMA).date()
             except (TypeError, ValueError):
                 pass
-            voci.append(((it.findtext('title') or '').strip(), (it.findtext('link') or '').strip(), d,
+            link = (it.findtext('link') or '').strip()
+            # Dal 29/10/2026 il feed porta anche eventi e notizie del portale: solo
+            # le pagine «image-of-the-day» hanno il riquadro dei dettagli.
+            if '/image-of-the-day/' not in link:
+                continue
+            voci.append(((it.findtext('title') or '').strip(), link, d,
                          solo_testo(it.findtext('description') or '')))
     if not voci:
         raise RuntimeError('feed RSS senza voci: struttura cambiata?')
