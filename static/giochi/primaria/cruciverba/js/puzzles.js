@@ -285,7 +285,7 @@ window.CRUCIVERBA_PUZZLES = {
           explain: 'I Castelli Romani sono in zona sismica 2B (sismicità media). L\'INGV monitora 24/7.' },
         { n: 10, dir: 'A', row: 9, col: 0, answer: 'IRPINIA',
           clue: 'Terremoto del 1980 che ha portato alla nascita del DPC',
-          explain: 'Sisma Irpinia 1980: 2914 vittime. Spinta decisiva alla creazione del Dipartimento di Protezione Civile (1982, Zamberletti).' }
+          explain: 'Sisma Irpinia 1980: 2734 vittime. Spinta decisiva alla creazione del Dipartimento di Protezione Civile (1982, Zamberletti).' }
       ]
     },
 

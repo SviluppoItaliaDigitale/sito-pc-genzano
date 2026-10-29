@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~764 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~765 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -532,7 +532,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 
 - 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione lenta. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria/) — "dov'era e com'era": modello internazionale di ricostruzione + Legge 225/1992. *(storia/geografia)*
-- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — "Fate presto": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — il «Fate presto» del Mattino, la denuncia di Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
 - 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-secondaria/) — sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio. *(storia/scienze)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria/) — disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-secondaria/) — tsunami, prima legge antisismica italiana (R.D. 193/1909), cooperazione internazionale. *(storia/scienze)*
@@ -580,10 +580,10 @@ Spunti per ampliare il percorso integrandolo con altre discipline.
 
 ### Storia — Eventi-chiave nella storia della Protezione Civile italiana
 
-- **1908 — Terremoto di Messina** (magnitudo 7.1, oltre 80.000 morti) → nascita delle prime norme sul soccorso
+- **1908 — Terremoto di Messina** (magnitudo 7.1, circa 80.000 morti) → nascita delle prime norme sul soccorso
 - **1966 — Alluvione di Firenze** (4 novembre) → nascita degli "angeli del fango", primo volontariato spontaneo organizzato
-- **1976 — Terremoto del Friuli** (magnitudo 6.5, 976 morti) → nasce il modello di ricostruzione partecipata ("com'era, dov'era")
-- **1980 — Terremoto dell'Irpinia** (magnitudo 6.9, 2.914 morti) → evidenzia la necessità di un sistema nazionale coordinato
+- **1976 — Terremoto del Friuli** (magnitudo 6.5, 965 morti) → nasce il modello di ricostruzione partecipata ("com'era, dov'era")
+- **1980 — Terremoto dell'Irpinia** (magnitudo 6.9, 2.734 morti) → evidenzia la necessità di un sistema nazionale coordinato
 - **1992 — Legge 225** → nasce il Servizio Nazionale di Protezione Civile (con Giuseppe Zamberletti)
 - **2009 — Terremoto dell'Aquila** (magnitudo 6.3, 309 morti) → caso G8 e processo alla Commissione Grandi Rischi
 - **2012 — Terremoto in Emilia** → prima vera prova del sistema attuale

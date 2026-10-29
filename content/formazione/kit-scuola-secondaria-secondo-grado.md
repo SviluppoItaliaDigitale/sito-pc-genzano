@@ -736,11 +736,11 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 
 **12 nuovi caso studio** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + domande di analisi + box per il docente):
 
-- 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, 80.000-120.000 vittime: la più grande catastrofe naturale d'Europa moderna, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
-- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.914 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
+- 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, circa 80.000 vittime: la più grave catastrofe naturale della storia d'Italia, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.734 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
 - 👉 [**Caso San Giuliano di Puglia 2002**](/formazione/schede-stampabili/caso-san-giuliano-secondaria2/) — la scuola Jovine crollata: 27 bambini + maestra, OPCM 3274/2003, classificazione sismica obbligatoria di tutto il territorio. *(diritto, scienze della Terra, ed. civica, etica)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria2/) — la "tragedia annunciata": frana del Toc, 1.917 vittime, ruolo della responsabilità tecnica e della comunicazione del rischio. *(geologia, diritto, filosofia, italiano)*
-- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria2/) — «Là dov'era, com'era»: 989 vittime, ricostruzione modello, nascita della PC italiana moderna. *(storia, diritto, ed. civica)*
+- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria2/) — «Là dov'era, com'era»: 965 vittime, ricostruzione modello, nascita della PC italiana moderna. *(storia, diritto, ed. civica)*
 - 👉 [**Caso Vermicino 1981**](/formazione/schede-stampabili/caso-vermicino-secondaria2/) — Alfredino Rampi, 18 ore di diretta TV, l'opinione pubblica scopre la PC: nasce il Ministero. *(storia, diritto, comunicazione, etica)*
 - 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria2/) — frana dei bacini di decantazione minerari, 268 vittime: il rischio industriale e la responsabilità penale. *(diritto, geologia, etica industriale)*
 - 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria2/) — alluvione di Cardoso, 14 vittime: bombe d'acqua, bacini montani, cambiamento climatico. *(geografia, geologia, ed. civica)*

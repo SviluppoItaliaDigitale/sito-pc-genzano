@@ -1,7 +1,7 @@
 ---
 title: "Friuli 1976, cinquant'anni dopo: il terremoto che ha fatto nascere la protezione civile italiana"
 date: 2026-05-06T00:02:00+02:00
-description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.4 devastò il Friuli, lasciando 989 morti e 45.000 senza tetto."
+description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.4 devastò il Friuli: in tutta la sequenza 965 morti e oltre 45.000 senza tetto."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,11 +13,11 @@ allegati: []
 draft: false
 ---
 
-Sono passati **cinquant'anni esatti**. Alle **ore 21:00 del 6 maggio 1976**, per cinquantanove interminabili secondi, una scossa di **magnitudo 6.4 della scala Richter** investì la media valle del Tagliamento. Il Friuli — un territorio fatto di paesi medievali, campanili in pietra, case di sasso a due piani — venne sconvolto in modo brutale. Quando alle 21:01 le luci si spensero per la rottura della rete elettrica, sotto le macerie c'erano già **989 morti** e oltre **45.000 senza tetto**.
+Sono passati **cinquant'anni esatti**. Alle **ore 21:00 del 6 maggio 1976**, per cinquantanove interminabili secondi, una scossa di **magnitudo 6.4 della scala Richter** investì la media valle del Tagliamento. Il Friuli — un territorio fatto di paesi medievali, campanili in pietra, case di sasso a due piani — venne sconvolto in modo brutale. Quando alle 21:01 le luci si spensero per la rottura della rete elettrica, sotto le macerie c'erano già centinaia di vittime: alla fine della sequenza i morti saranno **965**, secondo il Dipartimento della Protezione Civile, e i senza tetto **oltre 45.000**.
 
 {{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
          alt="Mappa ShakeMap USGS del terremoto del Friuli del 6 maggio 1976, magnitudo 6.5, con l'area di scuotimento più severo (in rosso) centrata sulle Alpi Carniche presso Gemona"
-         caption="Gemona del Friuli, maggio 1976. Magnitudo 6,5: mille morti, centomila senzatetto. Il commissario Zamberletti coordina la prima vera Protezione Civile italiana moderna. Mappa: USGS — Public domain." >}}
+         caption="Gemona del Friuli, maggio 1976. Magnitudo 6,5: 965 morti in tutta la sequenza, oltre 45.000 senzatetto. Il commissario Zamberletti coordina la prima vera Protezione Civile italiana moderna. Mappa: USGS — Public domain." >}}
 
 I Comuni più colpiti furono quelli della media valle: **Gemona del Friuli, Venzone, Trasaghis, Bordano, Forgaria nel Friuli, Buja, Majano, Osoppo, Montenars**. Per molti di loro l'intensità Mercalli arrivò al **grado X**, distruzione quasi totale degli edifici. La gente del posto, che parla un suo dialetto antico, chiamò subito il sisma con un nome che faceva paura ai bambini: ***Orcolat***, l'orco delle leggende.
 
@@ -120,7 +120,7 @@ Per i comportamenti di autoprotezione e per la mappa delle aree di attesa del Co
 
 ## In ricordo
 
-Le **989 vittime** del 6 maggio 1976 e dei mesi successivi sono ricordate ogni anno in Friuli con cerimonie sobrie, nei cimiteri dei paesi colpiti e nelle scuole. **Venzone** ha riaperto al pubblico solo nel 1996, vent'anni dopo il sisma. **Gemona** ha ricostruito il suo duomo, simbolo della rinascita. Migliaia di volontari italiani e stranieri lavorarono in quei mesi — fra loro molti dei "padri" e delle "madri" del moderno volontariato di protezione civile italiano.
+Le **965 vittime** del 6 maggio 1976 e dei mesi successivi sono ricordate ogni anno in Friuli con cerimonie sobrie, nei cimiteri dei paesi colpiti e nelle scuole. **Venzone** ha riaperto al pubblico solo nel 1996, vent'anni dopo il sisma. **Gemona** ha ricostruito il suo duomo, simbolo della rinascita. Migliaia di volontari italiani e stranieri lavorarono in quei mesi — fra loro molti dei "padri" e delle "madri" del moderno volontariato di protezione civile italiano.
 
 A cinquant'anni di distanza, il Friuli ricorda i suoi morti e celebra una verità importante: **da una catastrofe può nascere un sistema migliore**, se le persone giuste fanno le cose giuste al momento giusto. Zamberletti morì nel 2018, dopo aver visto il Codice della Protezione Civile portare il suo nome morale in tutta Italia.
 

@@ -32,7 +32,7 @@ Il terremoto del 1996 ricordò che esiste una **fascia sismica padana** legata a
          caption="Sedici anni dopo Reggio Emilia 1996, lo stesso fronte appenninico sepolto produsse il terremoto dell'Emilia del 20 maggio 2012 (M 5.8 alle 02:03 UTC, ipocentro 9.5 km, ID INGV 772691). La sequenza colpì la pianura tra Modena e Ferrara con intensità VII-VIII MCS, danneggiando capannoni industriali padani non antisismici. Mappa di intensità macrosismica: INGV, basata su Faenza e Michelini (2010, 2011). [Fonte originale](https://commons.wikimedia.org/wiki/File:2012_Modena_intensity.jpg)." >}}
 
 
-Il **terremoto dell'Emilia 2012** confermò ciò che il 1996 aveva suggerito: la Pianura Padana ha una pericolosità sismica reale, e l'edilizia storica e produttiva (chiese, capannoni industriali) era largamente inadeguata. Bilancio del 2012: **27 morti**, **40.000 sfollati**, **danni stimati 12 miliardi di euro**.
+Il **terremoto dell'Emilia 2012** confermò ciò che il 1996 aveva suggerito: la Pianura Padana ha una pericolosità sismica reale, e l'edilizia storica e produttiva (chiese, capannoni industriali) era largamente inadeguata. Bilancio del 2012: **28 morti**, **decine di migliaia di sfollati**, **danni stimati 12 miliardi di euro**.
 
 ## Cosa ci insegna oggi
 

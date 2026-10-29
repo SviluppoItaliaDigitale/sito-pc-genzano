@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **29 maggio 2012**, alle **9:00 del mattino**, una scossa di magnitudo **5.8** colpì la Pianura Padana, nove giorni dopo la prima scossa del 20 maggio (5.9). Questa seconda scossa causò **17 vittime**, tra cui molti operai rientrati nelle fabbriche dopo la prima emergenza, e devastò un territorio che stava appena provando a rialzarsi.
+Il **29 maggio 2012**, alle **9:00 del mattino**, una scossa di magnitudo **5.8** colpì la Pianura Padana, nove giorni dopo la prima scossa del 20 maggio (5.9). Questa seconda scossa uccise anche molti operai rientrati nelle fabbriche dopo la prima emergenza e devastò un territorio che stava appena provando a rialzarsi. In tutta la sequenza i morti furono **28**, secondo il Dipartimento della Protezione Civile.
 
 Ne abbiamo parlato il [20 maggio](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/) per l'anniversario della prima scossa. Il 29 maggio è un'occasione per riflettere su un aspetto meno raccontato: la **resilienza delle comunità** di fronte a emergenze **prolungate**, non a un singolo evento.
 
@@ -114,7 +114,7 @@ Il Lazio ha sismicità medio-bassa nei Castelli Romani, ma **non assente**: il t
 
 **Il 29 maggio 2012** ricorda che un'emergenza non è un evento puntuale: è un **percorso collettivo** che richiede serietà dei sistemi, preparazione dei cittadini, solidarietà delle comunità.
 
-Nel ricordo delle **17 vittime** di quel mattino, e di tutte le persone colpite dalla sequenza sismica emiliana: il modo migliore di ricordare è **prepararsi bene** al prossimo evento, ovunque arrivi.
+Nel ricordo delle vittime di quel mattino, delle **28 persone** morte in tutta la sequenza e di tutte le persone colpite: il modo migliore di ricordare è **prepararsi bene** al prossimo evento, ovunque arrivi.
 
 ## Per approfondire
 

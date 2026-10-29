@@ -14,7 +14,7 @@ La protezione civile italiana, nella forma di sistema permanente che conosciamo,
 
 Per buona parte della sua storia unitaria, lo Stato italiano è intervenuto sui disastri **solo a evento concluso**, in una logica più assistenziale che organizzata. È emblematico che, dopo il terremoto di Calabria del 1894, il dibattito parlamentare registrasse un cittadino lasciato in sostanza solo davanti alla calamità.
 
-Furono i grandi terremoti di inizio Novecento a incrinare quel modello. Il **terremoto di Messina e Reggio Calabria del 1908**, accompagnato da un maremoto, causò circa **80.000 vittime**: da quella tragedia nacquero la prima **classificazione sismica** del territorio e una prima normativa antisismica. Il **terremoto della Marsica del 1915**, ad Avezzano, provocò oltre **32.000 morti**. Lo Stato iniziò a strutturare il soccorso urgente — fino alla nazionalizzazione del **Corpo dei vigili del fuoco** (legge 1570 del 1941) — ma restava un'impostazione tutta rivolta all'emergenza, senza prevenzione né un'organizzazione stabile.
+Furono i grandi terremoti di inizio Novecento a incrinare quel modello. Il **terremoto di Messina e Reggio Calabria del 1908**, accompagnato da un maremoto, causò circa **80.000 vittime**: da quella tragedia nacquero la prima **classificazione sismica** del territorio e una prima normativa antisismica. Il **terremoto della Marsica del 1915**, ad Avezzano, provocò oltre **30.000 morti**. Lo Stato iniziò a strutturare il soccorso urgente — fino alla nazionalizzazione del **Corpo dei vigili del fuoco** (legge 1570 del 1941) — ma restava un'impostazione tutta rivolta all'emergenza, senza prevenzione né un'organizzazione stabile.
 
 ## 2.2 Le catastrofi che imposero il cambiamento
 
@@ -30,7 +30,7 @@ L'**alluvione di Firenze del 1966** e il **terremoto del Belìce del 1968** conf
 
 La svolta ha un nome: **Giuseppe Zamberletti**, considerato il «padre» della protezione civile italiana. Dopo il **terremoto del Friuli del 1976**, nominato commissario per i soccorsi, mise a punto un metodo nuovo: **centri di coordinamento** vicino ai luoghi colpiti e collaborazione strutturata con Regione, Comuni e volontariato locale. Funzionò, e la ricostruzione del Friuli divenne un modello positivo di riferimento.
 
-Quattro anni dopo, il **terremoto dell'Irpinia e Basilicata del 1980** (quasi 3.000 vittime) mostrò di nuovo i ritardi: il Presidente della Repubblica Sandro Pertini li denunciò pubblicamente, e Zamberletti fu richiamato d'urgenza. Da quell'esperienza, nel **1982**, nacque il **Dipartimento della Protezione Civile** presso la Presidenza del Consiglio dei ministri, con Zamberletti primo ministro per il coordinamento. È in questi anni che prendono forma il **volontariato organizzato** e la **rete radio di emergenza**.
+Quattro anni dopo, il **terremoto dell'Irpinia e Basilicata del 1980** (2.734 vittime) mostrò di nuovo i ritardi: il Presidente della Repubblica Sandro Pertini li denunciò pubblicamente, e Zamberletti fu richiamato d'urgenza. Da quell'esperienza, nel **1982**, nacque il **Dipartimento della Protezione Civile** presso la Presidenza del Consiglio dei ministri, con Zamberletti primo ministro per il coordinamento. È in questi anni che prendono forma il **volontariato organizzato** e la **rete radio di emergenza**.
 
 ## 2.4 La legge 225/1992: nasce il Servizio nazionale
 
