@@ -5,15 +5,153 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-30T19:24:29+00:00",
+  "generato": "2026-10-30T23:07:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-30T19:18:08+00:00",
+   "data": "2026-10-30T23:04:03+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Manovra, ddl da 157 articoli: dal taglio Irpef fino a 55mila euro al salvadanaio per bebè",
+   "titolo": "Centrosinistra, sprint Schlein, Conte e Avs: programma a novembre e primarie a febbraio",
+   "url": "https://www.adnkronos.com/politica/centrosinistra-schlein-conte-avs-programma-primarie-ultime-notizie_4rFwLh9ZqysBhL2anpmbxq"
+  },
+  {
+   "data": "2026-10-30T23:02:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gigi D'Alessio torna in tour e sogna San Siro: \"La mia intelligenza napoletana, non artificiale\"",
+   "url": "https://www.adnkronos.com/spettacoli/gigi-dalessio-tour-san-siro-verona-film_5Rz3dWhvsikLZfDoqIPyk9"
+  },
+  {
+   "data": "2026-10-30T22:59:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il patto di ferro Ue-Canada, 'uniti in un mondo sempre più diviso'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/30/il-patto-di-ferro-ue-canada-uniti-in-un-mondo-sempre-piu-diviso_472b0ee5-816f-40e9-874f-b6795063e6f6.html"
+  },
+  {
+   "data": "2026-10-30T22:56:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tensioni e proteste in Polonia dopo la sospensione del presidente Corte costituzionale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/tensioni-e-proteste-in-polonia-dopo-la-sospensione-del-presidente-corte-costituzionale_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
+  },
+  {
+   "data": "2026-10-30T22:42:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Leone ha votato per posta per le midterm, 'un diritto democratico'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/30/leone-ha-votato-per-posta-per-midterm-un-diritto-democratico_0ef687d9-259c-4fd9-9bba-c7714ea59566.html"
+  },
+  {
+   "data": "2026-10-30T22:27:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lavrov sbarca al G20 negli Usa e spacca gli alleati",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/lavrov-sbarca-al-g20-negli-usa-e-spacca-gli-alleati_f89dd372-fa3e-456d-9d3f-ace295b2e601.html"
+  },
+  {
+   "data": "2026-10-30T22:13:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Le ipotesi sulla caduta del Chinook in Bosnia, Crosetto dai feriti in Bosnia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-in-bosnia-le-ipotesi-sulla-caduta-del-chinook-crosetto-dai_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html"
+  },
+  {
+   "data": "2026-10-30T22:07:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Fuga da Oleshky con valigie e cani, ma c'è chi sceglie di restare",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/fuga-da-oleshky-con-valigie-e-cani-ma-ce-chi-sceglie-di-restare_c0726186-7a55-4e09-a9c1-8bbb24635f55.html"
+  },
+  {
+   "data": "2026-10-30T21:58:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Epstein e le ragazze a Balmoral', si aggravano le accuse ad Andrea",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/epstein-e-le-ragazze-a-balmoral-si-aggravano-le-accuse-ad-andrea_c2a71f5f-3fc1-459a-a06e-6ebffcd35566.html"
+  },
+  {
+   "data": "2026-10-30T21:45:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Arriva la quinta estrazione settimanale per Lotto e Superenalotto, la novità in manovra",
+   "url": "https://www.adnkronos.com/economia/manovra-superenalotto-lotto-quinta-estrazione_3EDZGyqAJkh7jPFe0wChfr"
+  },
+  {
+   "data": "2026-10-30T21:41:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cortei di studenti e lavoratori in 60 città, tensioni a Roma e Torino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/cortei-di-studenti-e-lavoratori-in-60-citta-tensioni-a-roma-e-torino_a01576fd-7a47-4585-8b60-c9e676a5c213.html"
+  },
+  {
+   "data": "2026-10-30T21:32:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-10-30T21:16:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: giù l'Irpef per 3,2 milioni di persone, dalle banche 5,8 miliardi",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/manovra-giu-lirpef-per-32-milioni-di-persone-dalle-banche-58-miliardi_a2553a3a-6200-46b4-bebd-ed940ffd56e8.html"
+  },
+  {
+   "data": "2026-10-30T20:46:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Cuba blackout fino a 30 ore e acqua contaminata, 2,7 milioni senza rifornimenti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/a-cuba-blackout-fino-a-30-ore-e-acqua-contaminata-27-milioni-senza-rifornimenti_de40b030-6d33-455d-bc73-eb2229d2960c.html"
+  },
+  {
+   "data": "2026-10-30T20:44:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Polonia, sospeso presidente della Corte Costituzionale: polizia schierata attorno all'edificio",
+   "url": "https://www.adnkronos.com/internazionale/esteri/polonia-corte-costituzionale-polizia-news_F5kEIm6aYW281MISWIBrP"
+  },
+  {
+   "data": "2026-10-30T20:03:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il caro energia fa danni, vola l'inflazione e la crescita si ferma",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/il-caro-energia-fa-danni-vola-linflazione-e-la-crescita-si-ferma_6ea6c523-9671-4e3d-b1df-e2cfbfa1e6fd.html"
+  },
+  {
+   "data": "2026-10-30T19:57:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Maxi attacco hacker contro Binance, 'é il furto del secolo'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/maxi-attacco-hacker-contro-binance-e-il-furto-del-secolo-_3aea9536-ba98-4317-b834-8d48a442e54e.html"
+  },
+  {
+   "data": "2026-10-30T19:46:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "F1, Gp Messico: Leclerc davanti ad Antonelli nelle prime libere",
+   "url": "https://www.adnkronos.com/sport/f1-messico-antonelli-mondiale-leclerc_1h9BD77LCHaTyCnvxHTKAY"
+  },
+  {
+   "data": "2026-10-30T19:42:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pensioni, sistema rivalutazioni cambia con Manovra 2027: si torna a 6 scaglioni",
+   "url": "https://www.adnkronos.com/economia/manovra-2027-pensioni-news-rivalutazioni_moe2f3y9XGXhAdSVkKKm8"
+  },
+  {
+   "data": "2026-10-30T19:38:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'angoscia per i tanti dispersi. Sanchez ammette le falle",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/langoscia-per-i-tanti-dispersi.-sanchez-ammette-le-falle-_278f14b6-53fa-46f9-95c5-d43f8dd17447.html"
+  },
+  {
+   "data": "2026-10-30T19:36:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Webuild, acquista ulteriore 4,68% di Trevi e sale al 34,58%. Opa diventa obbligatoria",
+   "url": "https://www.adnkronos.com/economia/webuild-acquista-ulteriore-4-68-di-trevi-e-sale-al-34-58-opa-diventa-obbligatoria_2TPFOs0ngnaE7qbzj6D2zW"
+  },
+  {
+   "data": "2026-10-30T19:33:49+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sciopero generale e cortei in tutta Italia, tensioni a Roma e Torino. La cronaca della giornata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia-tensioni-a-roma-e-torino.-la-cronaca-della_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html"
+  },
+  {
+   "data": "2026-10-30T19:23:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cobolli rassicura tutti: \"Piccolo risentimento muscolare, a Parigi farò tutto il possibile per giocare\"",
+   "url": "https://www.adnkronos.com/sport/tennis-cobolli-infortunio-berrettini-vienna_7HJTzf3VgMmBmBYlfdMJGQ"
+  },
+  {
+   "data": "2026-10-30T19:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, ddl da 157 articoli: le novità dal taglio Irpef al salvadanaio per bebè fino al Superenalotto",
    "url": "https://www.adnkronos.com/economia/manovra-testo-articoli-misure_62DqIP3bOvgDTPJy7uIVCc"
   },
   {
@@ -23,16 +161,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/ci-opprimono-con-la-paura-i-volti-della-protesta_e1dce918-64b7-4fe1-a8ee-6eeaadeac31d.html"
   },
   {
-   "data": "2026-10-30T19:06:46+00:00",
+   "data": "2026-10-30T19:08:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Elicottero caduto in Bosnia, la Procura Militare di Roma avvia un'indagine",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-la-procura-militare-di-roma-avvia-unindagine_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html"
-  },
-  {
-   "data": "2026-10-30T19:05:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il patto di ferro Ue-Canada, 'uniti in un mondo sempre più diviso'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/30/il-patto-di-ferro-ue-canada-uniti-in-un-mondo-sempre-piu-diviso_472b0ee5-816f-40e9-874f-b6795063e6f6.html"
+   "titolo": "Il campo largo accelera, subito il programma e primarie entro febbraio",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/30/i-leader-del-campo-largo-il-programma-a-novembre-le-primarie-a-febbraio_2e10ed14-2959-47b6-8f4d-4c06f9726eee.html"
   },
   {
    "data": "2026-10-30T19:02:47+00:00",
@@ -47,148 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/-cariche-in-pieno-centro-al-corteo-torino-_3144aad1-19ef-49ff-b9d7-e3864b8044cd.html"
   },
   {
-   "data": "2026-10-30T18:57:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Leone ha votato per posta per midterm, 'un diritto democratico'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/30/il-papa-ha-votato-per-le-elezioni-americane-di-midterm_0ef687d9-259c-4fd9-9bba-c7714ea59566.html"
-  },
-  {
    "data": "2026-10-30T18:54:40+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Sciopero generale, cortei in tutta Italia",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-cortei-in-tutta-italia_27f8d4bf-d6d2-4835-9a1c-7a2d6c5ed3ab.html"
   },
   {
-   "data": "2026-10-30T18:51:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sciopero generale e cortei in tutta Italia. Ancora tensione a Roma",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia.-scontri-a-torino-cariche-in-piazza-castello_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html"
-  },
-  {
-   "data": "2026-10-30T18:51:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra da 157 articoli, rivalutazione piena fino a quattro volte il minimo per le pensioni poi la stretta",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/mef-manovra-bollinata-il-testo-inviato-a-palazzo-chigi_a2553a3a-6200-46b4-bebd-ed940ffd56e8.html"
-  },
-  {
    "data": "2026-10-30T18:49:10+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "La rabbia nei porti: 'Non vogliamo lavorare per la guerra'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/la-rabbia-nei-porti-non-vogliamo-lavorare-per-la-guerra_b8eabe48-c8eb-40f8-84d3-5c4a5f407cdb.html"
-  },
-  {
-   "data": "2026-10-30T18:44:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sciopero a Torino, il corteo sfida la polizia e tenta di entrare in centro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-a-torino-il-corteo-sfida-la-polizia-e-tenta-di-entrare-in-centro_b9893fe2-cb4d-4599-bab7-26b3643095cc.html"
-  },
-  {
-   "data": "2026-10-30T18:42:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sciopero a Napoli, sfogliatelle alla polizia: 'Non siete voi il problema'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-a-napoli-sfogliatelle-alla-polizia-non-siete-voi-il-problema_21d283ac-f8a4-472b-9346-72f08b62d7ae.html"
-  },
-  {
-   "data": "2026-10-30T18:41:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In aula la perizia su Resinovich, la Procura: 'C'è ancora da fare'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/caso-resinovich-in-aula-il-confronto-sulle-perizie_48b2ed97-5ed6-42c6-abbc-d4fc03729307.html"
-  },
-  {
-   "data": "2026-10-30T18:37:06+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fiori e biglietti, il Villaggio della Difesa diventa luogo del ricordo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/fiori-e-biglietti-il-villaggio-della-difesa-diventa-luogo-del-ricordo_68c96d6b-71d4-47ee-ae58-f7145206e350.html"
-  },
-  {
-   "data": "2026-10-30T18:30:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sciopero a Torino, manifestante porge fiori alla polizia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-a-torino-manifestante-porge-fiori-alla-polizia_4ab0b5ca-735c-47b0-860c-4d2b6f98a7f1.html"
-  },
-  {
-   "data": "2026-10-30T18:28:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morto a 49 anni Francesco Pompilio, addio all'attore de 'Il Paradiso delle Signore' e 'Buen Camino'",
-   "url": "https://www.adnkronos.com/spettacoli/morto-fancesco-pompilio-attore_1RDM2FWVo56Koz380HoRPP"
-  },
-  {
-   "data": "2026-10-30T18:26:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il caro energia fa danni, vola l'inflazione e la crescita si ferma",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/il-caro-energia-fa-danni-vola-linflazione-e-la-crescita-si-ferma_6ea6c523-9671-4e3d-b1df-e2cfbfa1e6fd.html"
-  },
-  {
-   "data": "2026-10-30T18:15:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malattie rare, De Stefano (UniCatt): \"Piastrinopenia aumenta del 40% rischio mortalità\"",
-   "url": "https://www.adnkronos.com/cronaca/malattie-rare-de-stefano-unicatt-piastrinopenia-aumenta-del-40-rischio-mortalita_3uvvfF2TAuN6oqFhfkkTCQ"
-  },
-  {
-   "data": "2026-10-30T18:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malattie rare, Grandone (Siset): \"Non creare allarmismo su trombosi nelle donne\"",
-   "url": "https://www.adnkronos.com/cronaca/malattie-rare-grandone-siset-non-creare-allarmismo-su-trombosi-nelle-donne_4KFs5r8RZOM6TbCi6LPge8"
-  },
-  {
-   "data": "2026-10-30T18:00:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Ue verso ok a prestito da 45 miliardi per il 2027",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-ue-prestito-45-miliardi_5wdIgHF7f2W6FQJIilvjZD"
-  },
-  {
-   "data": "2026-10-30T17:59:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Kiev: 'Partiti i civili evacuati da Oleshky'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/mosca-e-kiev-iniziata-levacuazione-umanitaria-a-oleshky_c0726186-7a55-4e09-a9c1-8bbb24635f55.html"
-  },
-  {
-   "data": "2026-10-30T17:55:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Le famiglie delle vittime contro Crans, non toccate le foto dei nostri figli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/le-famiglie-delle-vittime-contro-crans-non-toccate-le-foto-dei-nostri_e1197174-40e7-48c4-aba1-1ef184a90553.html"
-  },
-  {
-   "data": "2026-10-30T17:55:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Epstein e le ragazze a Balmoral', si aggravano le accuse ad Andrea",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/epstein-e-le-ragazze-a-balmoral-si-aggravano-le-accuse-ad-andrea_c2a71f5f-3fc1-459a-a06e-6ebffcd35566.html"
-  },
-  {
-   "data": "2026-10-30T17:52:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La madre di Martina Carbonaro: 'Al killer darei la sedia elettrica'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/la-madre-di-martina-al-killer-darei-la-sedia-elettrica_c5b51023-871a-4870-83d0-11832e8b2d8a.html"
-  },
-  {
-   "data": "2026-10-30T17:49:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Padre e madre uccisi dal monossido, grave la bimba di 7 mesi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/due-morti-per-monossido-e-una-neonata-grave-nel-parmense_2c7b7cee-2629-40ef-b76b-7e338f20334b.html"
-  },
-  {
-   "data": "2026-10-30T17:47:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-30T17:44:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elicottero caduto in Bosnia, le vittime",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-in-bosnia-le-vittime-_2ac7350e-580d-4c75-b386-2c0d63e279c6.html"
-  },
-  {
-   "data": "2026-10-30T17:38:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Le guerre non finiscono quando crediamo. La Bosnia e quella difesa europea che esiste già",
-   "url": "https://www.adnkronos.com/internazionale/esteri/le-guerre-non-finiscono-quando-crediamo-la-bosnia-e-quella-difesa-europea-che-esiste-gia_4b4SLDZXxcaf9vcAQ77WFS"
-  },
-  {
-   "data": "2026-10-30T17:36:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trovato morto sul bordo della strada, 39 anni dopo indagata la moglie",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/mori-nel-1987-per-unaggressione-39-anni-dopo-si-indaga-per-omicidio_33e62929-c2e0-47d3-bec1-19feb3940003.html"
   }
  ]
 }
