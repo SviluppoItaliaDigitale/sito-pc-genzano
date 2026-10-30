@@ -84,6 +84,14 @@ PDF_REGIONE_URLS = (
     "rl_protezione_civile/tbl_bollettini_criticita/bollettino_{data}.pdf",
 )
 
+# Pagina elenco dei bollettini: la Regione a volte pubblica il file con un
+# suffisso (es. "bollettino_30_10_2026 (1).pdf", visto il 30/10/2026), quindi
+# se il nome standard non risponde si cerca il link vero nell'elenco.
+PAGINA_ELENCO_REGIONE = (
+    "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/"
+    "bollettini-criticita-idrogeologica-idraulica"
+)
+
 COMUNE = "Genzano di Roma"
 ZONA_GENZANO = "F"  # Bacini Costieri Sud
 USER_AGENT = "PC-Genzano-Bot/1.0"
@@ -267,8 +275,8 @@ def parse_pdf_regione(testo, zona=ZONA_GENZANO):
     # Pattern riga zona: "F     VERDE    GIALLO   VERDE" (con spazi variabili)
     livelli_pat = r"(VERDE|GIALLO|GIALLA|ARANCIONE|ROSSO|ROSSA)"
     # La riga può iniziare con le lettere della cartina accanto alla tabella
-    # ("F   F   ARANCIONE ARANCIONE GIALLO"): conta la lettera seguita dai livelli.
-    row_pat = re.compile(rf"^[^\n]*?(?<![A-Za-z]){zona}\s+{livelli_pat}\s+{livelli_pat}\s+{livelli_pat}\s*$", re.MULTILINE)
+    # ("F   F   ARANCIONE ARANCIONE GIALLO"): conta la lettera seguita dai livelli; in fondo può esserci una nota (colonna NOTE).
+    row_pat = re.compile(rf"^[^\n]*?(?<![A-Za-z]){zona}\s+{livelli_pat}\s+{livelli_pat}\s+{livelli_pat}(?:[ \t]+[^\n]*)?$", re.MULTILINE)
 
     m1 = row_pat.search(sez_oggi)
     if m1:
@@ -285,6 +293,23 @@ def parse_pdf_regione(testo, zona=ZONA_GENZANO):
     return out
 
 
+def urls_da_elenco_regione(d):
+    """Indirizzi dei PDF del giorno d letti dalla pagina elenco della Regione
+    (nome con suffisso variabile). Lista vuota se l'elenco non si legge."""
+    import re
+    from urllib.parse import quote
+    try:
+        html = http_get_bytes(PAGINA_ELENCO_REGIONE).decode("utf-8", "replace")
+    except Exception:
+        return []
+    data = d.strftime("%d_%m_%Y")
+    trovati = []
+    for href in re.findall(r'href="([^"]*bollettino_' + data + r'[^"]*\.pdf)"', html):
+        url = "https://www.regione.lazio.it" + href if href.startswith("/") else href
+        trovati.append(quote(url, safe=":/%"))
+    return trovati
+
+
 def fallback_pdf_regione_lazio(now):
     """Fallback: scarica e parsa il PDF Regione Lazio del giorno corrente
     (o del precedente se quello di oggi non è ancora online).
@@ -296,8 +321,15 @@ def fallback_pdf_regione_lazio(now):
     fonte = "Bollettino criticità Regione Lazio (PDF)"
     errori = []
     for d in candidates_dates:
-        for modello in PDF_REGIONE_URLS:
-            url = modello.format(anno=d.year, data=d.strftime("%d_%m_%Y"))
+        indirizzi = [m.format(anno=d.year, data=d.strftime("%d_%m_%Y")) for m in PDF_REGIONE_URLS]
+        for url in indirizzi + ["@elenco"]:
+            if url == "@elenco":
+                if pdf_text:
+                    break
+                extra = urls_da_elenco_regione(d)
+                if not extra:
+                    continue
+                url = extra[0]
             try:
                 pdf_bytes = http_get_bytes(url)
                 if not pdf_bytes.startswith(b"%PDF"):
