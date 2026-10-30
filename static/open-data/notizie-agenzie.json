@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-30T07:14:33+00:00",
+  "generato": "2026-10-30T14:12:04+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-30T07:02:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Riscaldamento e caro prezzi, ogni grado conta: come consumare meno senza sorprese",
-   "url": "https://www.adnkronos.com/cronaca/riscaldamento-termosifoni-consigli-risparmio-consumi_5nm68aWX0AfGjAmZozmo2E"
-  },
-  {
-   "data": "2026-10-30T07:02:38+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sciopero generale, cortei e disagi in tutta Italia: Roma e Milano blindate, a rischio i trasporti - Diretta",
-   "url": "https://www.adnkronos.com/cronaca/sciopero-cortei-30-ottobre-roma-milano-trasporti-diretta_6SPtKk4vm6ue3ohezmVC84"
-  },
-  {
-   "data": "2026-10-30T06:52:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, oggi prove libere Gp Messico, orario e dove vederle in tv",
-   "url": "https://www.adnkronos.com/sport/f1-gp-messico-antonelli-hamilton_7yte4onPInkaWVipCpguIk"
-  },
-  {
-   "data": "2026-10-30T06:46:13+00:00",
+   "data": "2026-10-30T14:06:43+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Elicottero caduto, sindaca Andria 'incredula per morte sergente-infermiera'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-sindaca-andria-incredula-per-morte-sergente-infermiera_0bb74420-b1b6-4b6e-b14e-b89b471c4173.html"
+   "titolo": "Intelligenza artificiale e libertà di scelta: il 7 novembre AI AnthropoCosmic",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/intelligenza-artificiale-e-liberta-di-scelta-il-7-novembre-ai-anthropocosmic_2c4fe0c6-7c7e-4da5-b0e0-3622ae869589.html"
   },
   {
-   "data": "2026-10-30T06:39:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Edufin Index: Fancel (Generali Italia): \"Educazione finanziaria ancora troppo bassa\"",
-   "url": "https://www.adnkronos.com/economia/edufin-index-fancel-generali-italia-educazione-finanziaria-ancora-troppo-bassa_2DHWMUEOjJc49Epv5jIWPi"
-  },
-  {
-   "data": "2026-10-30T06:39:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Edufin Index, Oddone (Alleanza Assicurazioni): \"Su educazione finanziaria serve trasformare conoscenze in azioni\"",
-   "url": "https://www.adnkronos.com/economia/edufin-index-oddone-alleanza-assicurazioni-su-educazione-finanziaria-serve-trasformare-conoscenze-in-azioni_1fxzJU26ZCHstzq0sOdzNy"
-  },
-  {
-   "data": "2026-10-30T06:39:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "\"L'Ucraina ha sospeso gli attacchi alle raffinerie russe su pressione degli Usa\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/lucraina-ha-sospeso-gli-attacchi-alle-raffinerie-russe-su-pressione-degli-usa_623c1d5d-5e2b-4889-b998-15a94f0bf25c.html"
-  },
-  {
-   "data": "2026-10-30T06:38:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Edufin Index, Morelli: \"Educazione finanziaria per mobilitare risparmio e sostenere imprese\"",
-   "url": "https://www.adnkronos.com/economia/edufin-index-morelli-educazione-finanziaria-per-mobilitare-risparmio-e-sostenere-imprese_7vbCIWJc3MM4G9MGA4UYm0"
-  },
-  {
-   "data": "2026-10-30T06:15:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Allerta sicurezza per oggi, il Viminale 'isoleremo i violenti'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/allerta-sicurezza-per-oggi-il-viminale-isoleremo-i-violenti-_99d186a2-8b27-442f-b637-bc226fa79102.html"
-  },
-  {
-   "data": "2026-10-30T06:08:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cortei 30 ottobre a Roma e Milano, attese migliaia di persone: allerta su nuove azioni 'spacca e fuggi'",
-   "url": "https://www.adnkronos.com/cronaca/corteo-roma-30-ottobre-oggi_1MJNi8h4KFtffjqnYbTCkF"
-  },
-  {
-   "data": "2026-10-30T05:58:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sciopero 30 ottobre, trasporti a rischio nonostante precettazione: disagi per treni, bus, metro e Tpl",
-   "url": "https://www.adnkronos.com/economia/sciopero-30-ottobre-2026-treni-autobus-scuola_6XiU3GkuST7YrDuooOTg8V"
-  },
-  {
-   "data": "2026-10-30T05:58:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, leader centrosinistra all'assalto: oggi call del campo largo",
-   "url": "https://www.adnkronos.com/politica/manovra-2027-centrosinistra-call-campo-largo_72BJ5cGQcJwOpjp6vwgvQt"
-  },
-  {
-   "data": "2026-10-29T23:31:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Halloween, trucchi e maschere possono danneggiare la pelle: ecco i rischi",
-   "url": "https://www.adnkronos.com/cronaca/trucco-halloween-rischi-pelle-allarme-esperti_5gU6IeHTO1NQRKkLsj6ZHC"
-  },
-  {
-   "data": "2026-10-29T23:27:19+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Chi decide gli orari del riscaldamento in condominio e come modificarli? Tutte le risposte",
-   "url": "https://www.adnkronos.com/cronaca/riscaldamenti-fasce-orarie-condominio-quando_48CMObixYR2Pnhu0arszaY"
-  },
-  {
-   "data": "2026-10-29T23:19:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sciopero Italo, lunedì 9 novembre treni a rischio: orari e motivi della protesta",
-   "url": "https://www.adnkronos.com/economia/sciopero-treni-italo-9-novembre-2026_1hQdOpOLpTBwehvGynP0C5"
-  },
-  {
-   "data": "2026-10-29T23:04:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elicottero italiano cade in Bosnia, quattro militari morti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-italiano-cade-in-bosnia-quattro-militari-morti_c2a741c9-64ff-4040-9191-fc48011cdff0.html"
-  },
-  {
-   "data": "2026-10-29T22:55:20+00:00",
+   "data": "2026-10-30T14:02:40+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il pilota, lo specialista, la sergente della Cri tra vittime dello schianto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/il-pilota-lo-specialista-e-la-sergente-della-cri-tra-le-vittime-dello-schianto_b76ca35a-3ac8-4b94-9c45-4b7488a163aa.html"
+   "titolo": "Sciopero a Torino, conclusa manifestazione si riapre accesso tangenziale",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-a-torino-conclusa-manifestazione-si-riapre-accesso-tangenziale_7cdd8e14-cafb-4706-ad1d-7aaac390f90d.html"
   },
   {
-   "data": "2026-10-29T22:16:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Fiorentina-Atalanta, spettacolo e gol ma solo un punto a testa",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/serie-a-fiorentina-atalanta-spettacolo-e-gol-ma-solo-un-punto-a-testa_46e940ce-e50c-4281-93c6-ee8668230411.html"
+   "data": "2026-10-30T14:00:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Snam, Pichetto: \"L'energia ha accompagnato le grandi trasformazioni della nostra Nazione'",
+   "url": "https://www.adnkronos.com/economia/snam-pichetto-lenergia-ha-accompagnato-le-grandi-trasformazioni-della-nostra-nazione_7IsVlLS1smBzCrRTSCX42Z"
   },
   {
-   "data": "2026-10-29T22:07:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Happy Halloween, ma che festa da paura è diventata? SPECIALE",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/tempo_libero/2026/10/29/happy-halloween-ma-che-festa-da-paura-e-diventata-speciale-_deb2e6c6-1278-42df-a2c9-e3cf6bebe2f6.html"
+   "data": "2026-10-30T13:57:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Garattini e la dieta per vivere a lungo: \"No a vino e salumi, mangio poco e peso 52 chili\"",
+   "url": "https://www.adnkronos.com/cronaca/garattini-98-anni-dieta-vita-lunga_35B3wNrNQDiUr9ALb8K1qh"
   },
   {
-   "data": "2026-10-29T21:35:16+00:00",
+   "data": "2026-10-30T13:57:14+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Elicottero caduto, una sergente della Croce Rossa tra i morti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/elicottero-caduto-una-sergente-della-croce-rossa-tra-i-morti_4e6f8a84-7a89-4494-bd6f-a2c9a1e266ec.html"
+   "titolo": "Cortei in 50 città, la fotodiretta dalle manifestazioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/cortei-in-50-citta-la-fotodiretta-dalle-manifestazioni_d55af3f1-58c8-4729-be7c-db860dc8d7ac.html"
   },
   {
-   "data": "2026-10-29T21:20:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Addio a Patrick Stewart, il capitano di Star Trek e professore degli X-Men",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/29/e-morto-patrick-stewart-il-capitano-picard-di-star-trek_aade8c8f-71ac-4a5e-a8c6-042f27445816.html"
+   "data": "2026-10-30T13:56:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Martellini (Fcp): \"Mezzi di comunicazione evolvono creando Total Audience\"",
+   "url": "https://www.adnkronos.com/economia/martellini-fcp-mezzi-di-comunicazione-evolvono-creando-total-audience_4WCCQCgut9BuB7c40ymm09"
   },
   {
-   "data": "2026-10-29T21:11:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra, nel 2027 in arrivo un doppio rincaro sulle sigarette",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/29/manovra-nel-2027-in-arrivo-un-doppio-rincaro-sulle-sigarette_a90bd15a-aed6-4a6a-9b21-245af819cc84.html"
+   "data": "2026-10-30T13:52:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Snam, Scornajenchi: \"La sfida è l'integrazione delle fonti di energia, non la sostituzione\"",
+   "url": "https://www.adnkronos.com/economia/snam-scornajenchi-la-sfida-e-lintegrazione-delle-fonti-di-energia-non-la-sostituzione_2RFKXteIes6AZmnuoNgRyA"
   },
   {
-   "data": "2026-10-29T20:50:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Calcio: ecco il nuovo San Siro, si chiamerà Generali Stadium",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/calcio-nuovo-san-siro-si-chiamera-generali-stadium_36b2d92c-91d5-44b4-a914-e59937063cff.html"
-  },
-  {
-   "data": "2026-10-29T20:32:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Altri 5 italiani fermati in Cisgiordania, la Farnesina chiede il rilascio",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/29/cinque-attivisti-italiani-fermati-in-cisgiordania-la-farnesina-chiede-chiarimenti_6f4aa2ca-7e44-42e9-ad75-0c83be3a6ca3.html"
-  },
-  {
-   "data": "2026-10-29T20:15:02+00:00",
+   "data": "2026-10-30T13:50:49+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il Csm chiede una pratica a tutela della gip del caso Siher",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/il-csm-chiede-una-pratica-a-tutela-della-gip-del-caso-siher_364a9dad-a6ac-44e5-8f9a-21da0e5f5174.html"
+   "titolo": "Due morti per monossido e una neonata grave nel Parmense",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/due-morti-per-monossido-e-una-neonata-grave-nel-parmense_2c7b7cee-2629-40ef-b76b-7e338f20334b.html"
   },
   {
-   "data": "2026-10-29T20:09:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Chi scende in piazza e dove, la mappa del venerdì nero",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/chi-scende-in-piazza-e-dove-la-mappa-del-venerdi-nero_1b7b41a3-a291-47a9-9049-e83060ee87f8.html"
+   "data": "2026-10-30T13:48:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sostenibilità, Eni e Adnkronos presentano podcast 'Energia in Evoluzione'",
+   "url": "https://www.adnkronos.com/economia/sostenibilita-eni-e-adnkronos-presentano-podcast-energia-in-evoluzione_pMTD9ZFevgYW23fmUSS6R"
   },
   {
-   "data": "2026-10-29T20:00:33+00:00",
+   "data": "2026-10-30T13:45:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Snam celebra 85 anni, \"Grandi progetti al servizio dell’Italia\"",
+   "url": "https://www.adnkronos.com/economia/snam-celebra-85-anni-grandi-progetti-al-servizio-dellitalia_2eA6LsWvGO8Cp9CbwYqQKw"
+  },
+  {
+   "data": "2026-10-30T13:45:01+00:00",
    "fonte": "ANSA",
-   "titolo": "'Uccise la moglie con l'insulina', ex infermiere arrestato dopo due anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/uccise-la-moglie-con-linsulina-ex-infermiere-arrestato-dopo-due-anni_26ae9446-d989-425b-b9b7-a4cf04257ac0.html"
+   "titolo": "Sciopero generale e cortei in tutta Italia. Scontri a Torino, cariche in Piazza Castello",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia.-scontri-a-torino-cariche-in-piazza-castello_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html"
   },
   {
-   "data": "2026-10-29T19:56:48+00:00",
+   "data": "2026-10-30T13:39:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Agricoltura, Italia sul tetto del mondo: export di mele da primato per il secondo anno consecutivo",
+   "url": "https://www.adnkronos.com/economia/agricoltura-italia-sul-tetto-del-mondo-export-di-mele-da-primato-per-il-secondo-anno-consecutivo_5oD9FDLtc3iIOnRGpxzj2A"
+  },
+  {
+   "data": "2026-10-30T13:36:12+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Avanti il cantiere a Brera, respinto il ricorso dei pm sul sequestro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/avanti-il-cantiere-a-brera-respinto-il-ricorso-dei-pm-sul-sequestro_6cab2509-cfb9-46f1-9b17-c3ed6fdd4202.html"
+   "titolo": "Sciopero a Torino, cariche in piazza Castello",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-a-torino-cariche-in-piazza-castello_b25388a0-9317-46cd-9340-bc0e4e8bba6b.html"
   },
   {
-   "data": "2026-10-29T19:55:35+00:00",
+   "data": "2026-10-30T13:35:19+00:00",
    "fonte": "ANSA",
-   "titolo": "Disastro ferroviario in Spagna, ritrovata una delle italiane",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/29/disastro-ferroviario-in-spagna-ritrovata-una-delle-italiane_cb23d261-10a6-4136-8db0-a611c06f6406.html"
+   "titolo": "Dieci anni fa il terremoto di Norcia, un boato dalle viscere della terra",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/dieci-anni-fa-il-terremoto-di-norcia-un-boato-dalle-viscere-della-terra_60770237-6db3-45cc-b0c9-51947dad3d2e.html"
   },
   {
-   "data": "2026-10-29T19:54:16+00:00",
+   "data": "2026-10-30T13:33:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elicottero caduto, la Procura Militare di Roma avvia un'indagine",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-la-procura-militare-di-roma-avvia-unindagine_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html"
+  },
+  {
+   "data": "2026-10-30T13:33:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Femminicidi, più della metà degli orfani era presente al delitto",
+   "url": "https://www.ansa.it/donne/notizie/2026/10/30/femminicidi-piu-della-meta-degli-orfani-era-presente-al-delitto_c2020c41-2d84-4d41-8ca4-e4bc87bc4b86.html"
+  },
+  {
+   "data": "2026-10-30T13:31:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni: \"Vannacci? Suo obiettivo è farci perdere alle urne\". Lui risponde: \"Ci spieghi perché vuole far vincere la sinistra\"",
+   "url": "https://www.adnkronos.com/politica/meloni-vannacci-botta-e-risposta-ultime-notizie_1w1ZZ5jODhfnrc1GQADFHX"
+  },
+  {
+   "data": "2026-10-30T13:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il drago segreto della Cina è in orbita. Cosa rivela la foto che preoccupa l’intelligence Usa",
+   "url": "https://www.adnkronos.com/internazionale/esteri/il-drago-segreto-della-cina-e-in-orbita-cosa-rivela-la-foto-che-preoccupa-lintelligence-usa_7zyFQRauKo9JHd4r384oM4"
+  },
+  {
+   "data": "2026-10-30T13:23:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Morì nel 1987 per un'aggressione, 39 anni dopo si indaga per omicidio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/mori-nel-1987-per-unaggressione-39-anni-dopo-si-indaga-per-omicidio_33e62929-c2e0-47d3-bec1-19feb3940003.html"
+  },
+  {
+   "data": "2026-10-30T13:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dramma a Parma, monossido di carbonio killer in casa: coppia morta, gravissima la bambina",
+   "url": "https://www.adnkronos.com/cronaca/coppia-morta-parma-grave-bambina_1oWlaRtCKntxq7HsIGJqOl"
+  },
+  {
+   "data": "2026-10-30T13:22:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Norvegia cesso di Paese?\" Oslo risponde a Trump con una gallery di toilette spettacolari",
+   "url": "https://www.adnkronos.com/internazionale/esteri/norvegia-trump-insulti-oslo-replica-toilette_3JRP2eFhCV1v7MG3kTqwTv"
+  },
+  {
+   "data": "2026-10-30T13:20:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ilaria Salis in piazza a Milano: \"Il terrorismo mediatico non ci ferma\"",
+   "url": "https://www.adnkronos.com/cronaca/ilaria-salis-sciopero-milano-30-ottobre_FcWXR6yAy1Y4mrQkmkKdP"
+  },
+  {
+   "data": "2026-10-30T13:13:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sanchez: 'La fiducia nel sistema dell'alta velocità in Spagna è venuta meno'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/sanchez-la-fiducia-nel-sistema-dellalta-velocita-in-spagna-e-venuta-meno_278f14b6-53fa-46f9-95c5-d43f8dd17447.html"
+  },
+  {
+   "data": "2026-10-30T13:12:42+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "\"Uccise il cugino per l'eredità\", bomba alla crema l'arma del delitto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/uccise-il-cugino-per-leredita-bomba-alla-crema-larma-del-delitto_7eb4f981-4af7-44fc-9be0-72b52d79a10a.html"
+   "titolo": "Sciopero e corteo a Roma, Usb 'siamo 100mila in piazza'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-e-corteo-a-roma-usb-siamo-100mila-in-piazza_accf0f9c-9489-4a3e-b645-74f7b821fd60.html"
+  },
+  {
+   "data": "2026-10-30T13:11:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "L’elicottero caduto in Bosnia, il racconto dell’inviato a Brčko",
+   "url": "https://www.ansa.it/sito/podcast/in_diretta_dal_mondo/2026/10/30/lelicottero-caduto-in-bosnia-il-racconto-dellinviato-a-brcko_6216e1d3-2bac-4ef3-80c9-c225c47a69e2.html"
+  },
+  {
+   "data": "2026-10-30T13:11:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Urbanistica, pm Milano va in Cassazione contro prima sentenza di assoluzioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/urbanistica-pm-milano-va-in-cassazione-contro-prima-sentenza-di-assoluzioni_4e941d25-b8e7-488b-b639-b70f939094f2.html"
+  },
+  {
+   "data": "2026-10-30T13:09:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa ha votato per le elezioni americane di Midterm",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/30/il-papa-ha-votato-per-le-elezioni-americane-di-midterm_0ef687d9-259c-4fd9-9bba-c7714ea59566.html"
+  },
+  {
+   "data": "2026-10-30T12:57:49+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Striscione dei manifestanti sul cavalcavia della tangenziale, 'gen maranza'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/striscione-dei-manifestanti-sul-cavalcavia-della-tangenziale-gen-maranza_c8b90491-456f-4a65-bb47-845726a7ddee.html"
+  },
+  {
+   "data": "2026-10-30T12:51:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Maxi-attacco hacker a Binance in soli 20 minuti, 'è il furto del secolo'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/piattaforma-crypto-binance-conferma-cyber-attacco-congelati-oltre-25-miliardi_3aea9536-ba98-4317-b834-8d48a442e54e.html"
+  },
+  {
+   "data": "2026-10-30T12:42:05+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Caso Siher, Anm Milano 'inauditi attacchi sessisti a giudice e pm'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/caso-siher-anm-milano-inauditi-attacchi-sessisti-a-giudice-e-pm_68b57320-89d4-4a7a-8d93-4c3d243a211e.html"
   }
  ]
 }
