@@ -5,16 +5,106 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-29T21:20:35+00:00",
+  "generato": "2026-10-30T01:16:59+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-29T21:12:56+00:00",
+   "data": "2026-10-29T23:31:11+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Cobolli si fa male nel derby e scoppia a piangere, Berrettini lo abbraccia",
+   "titolo": "Halloween, trucchi e maschere possono danneggiare la pelle: ecco i rischi",
+   "url": "https://www.adnkronos.com/cronaca/trucco-halloween-rischi-pelle-allarme-esperti_5gU6IeHTO1NQRKkLsj6ZHC"
+  },
+  {
+   "data": "2026-10-29T23:27:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Chi decide gli orari del riscaldamento in condominio e come modificarli? Tutte le risposte",
+   "url": "https://www.adnkronos.com/cronaca/riscaldamenti-fasce-orarie-condominio-quando_48CMObixYR2Pnhu0arszaY"
+  },
+  {
+   "data": "2026-10-29T23:19:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero Italo, lunedì 9 novembre treni a rischio: orari e motivi della protesta",
+   "url": "https://www.adnkronos.com/economia/sciopero-treni-italo-9-novembre-2026_1hQdOpOLpTBwehvGynP0C5"
+  },
+  {
+   "data": "2026-10-29T23:17:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, arriva il freddo artico sull’Italia: piogge intense, neve in Appennino e poi torna il sole",
+   "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-freddo-neve-previsioni_13ZMUeTpH1mp75WEdXrPj"
+  },
+  {
+   "data": "2026-10-29T23:12:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Raffreddore che non passa, cosa fare: esperto svela le cause dei sintomi infiniti",
+   "url": "https://www.adnkronos.com/cronaca/raffreddore-che-non-passa-sintomi-cause_4viNbjCxfiDP4FUjd8oElX"
+  },
+  {
+   "data": "2026-10-29T23:06:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bce, Lagarde lascia per fare sentire sua voce: dietro le quinte il voto in Francia",
+   "url": "https://www.adnkronos.com/economia/bce-lagarde-lascia-voto-francia-successore_3TEXRpWnZlTlXyAOH0CGd6"
+  },
+  {
+   "data": "2026-10-29T23:04:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elicottero italiano cade in Bosnia, quattro militari morti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-italiano-cade-in-bosnia-quattro-militari-morti_c2a741c9-64ff-4040-9191-fc48011cdff0.html"
+  },
+  {
+   "data": "2026-10-29T22:55:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il pilota, lo specialista, la sergente della Cri tra vittime dello schianto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/il-pilota-lo-specialista-e-la-sergente-della-cri-tra-le-vittime-dello-schianto_b76ca35a-3ac8-4b94-9c45-4b7488a163aa.html"
+  },
+  {
+   "data": "2026-10-29T22:16:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Fiorentina-Atalanta, spettacolo e gol ma solo un punto a testa",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/serie-a-fiorentina-atalanta-spettacolo-e-gol-ma-solo-un-punto-a-testa_46e940ce-e50c-4281-93c6-ee8668230411.html"
+  },
+  {
+   "data": "2026-10-29T22:08:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Frosinone-Lecce 5-1, Alvini non si ferma e vola al sesto posto. Fiorentina-Atalanta 2-2",
+   "url": "https://www.adnkronos.com/sport/serie-a-frosinone-lecce-fiorentina-atalanta-risultati-oggi_11gU3tyJAkmw5gnSpSMxDe"
+  },
+  {
+   "data": "2026-10-29T22:07:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Happy Halloween, ma che festa da paura è diventata? SPECIALE",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/tempo_libero/2026/10/29/happy-halloween-ma-che-festa-da-paura-e-diventata-speciale-_deb2e6c6-1278-42df-a2c9-e3cf6bebe2f6.html"
+  },
+  {
+   "data": "2026-10-29T21:35:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Elicottero caduto, una sergente della Croce Rossa tra i morti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/elicottero-caduto-una-sergente-della-croce-rossa-tra-i-morti_4e6f8a84-7a89-4494-bd6f-a2c9a1e266ec.html"
+  },
+  {
+   "data": "2026-10-29T21:34:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elicottero militare italiano precipitato in Bosnia, chi sono le vittime: c'è anche una donna",
+   "url": "https://www.adnkronos.com/cronaca/elicottero-militare-italiano-precipitato-in-bosnia-chi-sono-vittime-nomi_UG5zUXokADnq7JVYasajf"
+  },
+  {
+   "data": "2026-10-29T21:20:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Addio a Patrick Stewart, il capitano di Star Trek e professore degli X-Men",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/29/e-morto-patrick-stewart-il-capitano-picard-di-star-trek_aade8c8f-71ac-4a5e-a8c6-042f27445816.html"
+  },
+  {
+   "data": "2026-10-29T21:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cobolli si infortuna nel derby e scoppia a piangere, Atp Finals a rischio. Berrettini lo abbraccia",
    "url": "https://www.adnkronos.com/sport/cobolli-infortunio-lacrime-berrettini-abbraccio-video_2A11kHTprOxER5fBweuiIA"
+  },
+  {
+   "data": "2026-10-29T21:11:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra, nel 2027 in arrivo un doppio rincaro sulle sigarette",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/29/manovra-nel-2027-in-arrivo-un-doppio-rincaro-sulle-sigarette_a90bd15a-aed6-4a6a-9b21-245af819cc84.html"
   },
   {
    "data": "2026-10-29T20:50:57+00:00",
@@ -23,34 +113,16 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/calcio-nuovo-san-siro-si-chiamera-generali-stadium_36b2d92c-91d5-44b4-a914-e59937063cff.html"
   },
   {
-   "data": "2026-10-29T20:50:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A, in campo Fiorentina-Atalanta DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/serie-a-in-campo-fiorentina-atalanta-0-0-diretta_46e940ce-e50c-4281-93c6-ee8668230411.html"
-  },
-  {
    "data": "2026-10-29T20:44:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Svelato il 'Generali Stadium', nuovo stadio di Milan e Inter dalla stagione 2031/32: ecco come sarà",
    "url": "https://www.adnkronos.com/sport/generali-stadium-presentato-nuovo-stadio-milan-inter_2CZsqamKodq9sPpyZ1NTBa"
   },
   {
-   "data": "2026-10-29T20:37:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "È morto Patrick Stewart, il capitano Picard di Star Trek",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/29/e-morto-patrick-stewart-il-capitano-picard-di-star-trek_aade8c8f-71ac-4a5e-a8c6-042f27445816.html"
-  },
-  {
    "data": "2026-10-29T20:32:34+00:00",
    "fonte": "ANSA",
    "titolo": "Altri 5 italiani fermati in Cisgiordania, la Farnesina chiede il rilascio",
    "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/29/cinque-attivisti-italiani-fermati-in-cisgiordania-la-farnesina-chiede-chiarimenti_6f4aa2ca-7e44-42e9-ad75-0c83be3a6ca3.html"
-  },
-  {
-   "data": "2026-10-29T20:23:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elicottero italiano cade in Bosnia, quattro militari morti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/elicottero-militare-italiano-cade-in-bosnia-due-operatori-della-croce-rossa_c2a741c9-64ff-4040-9191-fc48011cdff0.html"
   },
   {
    "data": "2026-10-29T20:21:00+00:00",
@@ -117,78 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Progettava attentati in sinagoga e moschea, arrestato 22enne a Milano",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/progettava-attentati-in-sinagoga-e-moschea-arrestato-22enne-a-milano_fb5694eb-992b-4b7d-afd9-0028c056fa2e.html"
-  },
-  {
-   "data": "2026-10-29T19:49:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Crosetto 'dolore immenso, nessuno dei feriti rischia la vita'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/crosetto-dolore-immenso-nessuno-dei-feriti-rischia-la-vita_d8599fab-8fad-4881-bb8d-48f77c9ac9a5.html"
-  },
-  {
-   "data": "2026-10-29T19:33:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Zverev batte Griekspoor a Vienna e sorpassa Sinner, è il nuovo numero uno del ranking Atp",
-   "url": "https://www.adnkronos.com/sport/zverev-sorpassa-sinner-nuovo-numero-uno-atp_4wtX5DrIwt4tkJoXmvyMcY"
-  },
-  {
-   "data": "2026-10-29T19:33:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fermati 5 attivisti italiani in Cisgiordania, Farnesina chiede rilascio immediato",
-   "url": "https://www.adnkronos.com/internazionale/esteri/cisgiordania-attivisti-italiani-fermati-oggi_7xuToB1j1hfpF0jr1T1cJ"
-  },
-  {
-   "data": "2026-10-29T19:31:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scintille Fdi-Lega sulla Fornero. Il fisco divide autonomi e dipendenti",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/29/scintille-fdi-lega-sulla-fornero.-il-fisco-divide-autonomi-e-dipendenti_b2dabd79-7a26-4357-8767-9d6e322c5baf.html"
-  },
-  {
-   "data": "2026-10-29T19:26:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Al via missione umanitaria ad Oleshky, ma a Dnipro è strage",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/29/al-via-missione-umanitaria-ad-oleshky-ma-a-dnipro-e-strage_b0af0cc5-930d-4f46-815b-d49c726710bc.html"
-  },
-  {
-   "data": "2026-10-29T19:22:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra, nel 2027 in arrivo un doppio rincaro sulle sigarette",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/29/manovra-nel-2027-in-arrivo-un-doppio-rincaro-sulle-sigarette_a90bd15a-aed6-4a6a-9b21-245af819cc84.html"
-  },
-  {
-   "data": "2026-10-29T19:21:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La missione Althea dal 2004, al comando un generale italiano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/la-missione-althea-dal-2004-al-comando-un-generale-italiano_cfa0ab1d-7fb6-42ae-a131-663baea672e9.html"
-  },
-  {
-   "data": "2026-10-29T19:17:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Piano Lovaglio travolto dai soci, bocciate offerte Mps e fusione Mediobanca",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/29/i-soci-di-mps-bocciano-le-offerte-su-banca-generali-e-bpm_5c1a02b1-a853-4f2d-9db9-75c37a981ec4.html"
-  },
-  {
-   "data": "2026-10-29T19:13:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cassazione: 'L'ex Ilva spenga gli altiforni, pericolo grave per la salute'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/29/cassazione-lex-ilva-spenga-gli-altiforni-pericolo-grave-per-la-salute_5718d63d-7b4d-4fd9-bab3-4ebb7814d248.html"
-  },
-  {
-   "data": "2026-10-29T18:53:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "SCHEDA Il Ch 47, elicottero da trasporto truppe in servizio da 70 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/scheda-il-ch-47-elicottero-da-trasporto-truppe-in-servizio-da-70-anni_007b7eb1-52d4-4c2a-b174-5128f91074d9.html"
-  },
-  {
-   "data": "2026-10-29T18:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Farmaci, report su terapie avanzate: \"Innovazione non solo per malattie rare, spesa oltre 1,6 miliardi nel 2031\"",
-   "url": "https://www.adnkronos.com/cronaca/farmaci-report-su-terapie-avanzate-innovazione-non-solo-per-malattie-rare-spesa-oltre-1-6-miliardi-nel-2031_6FOdlU7mdEfE2nVA872wXq"
-  },
-  {
-   "data": "2026-10-29T18:48:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Putin: \"Europa si prepara a guerra con Russia entro il 2030, non vogliamo il conflitto ma siamo pronti\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/putin-russia-europa-guerra-2030_5IwUVAaaxtDoSArMnG57eV"
   }
  ]
 }
