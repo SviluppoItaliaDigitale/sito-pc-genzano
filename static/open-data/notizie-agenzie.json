@@ -5,11 +5,83 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-30T01:16:59+00:00",
+  "generato": "2026-10-30T07:14:33+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-30T07:02:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Riscaldamento e caro prezzi, ogni grado conta: come consumare meno senza sorprese",
+   "url": "https://www.adnkronos.com/cronaca/riscaldamento-termosifoni-consigli-risparmio-consumi_5nm68aWX0AfGjAmZozmo2E"
+  },
+  {
+   "data": "2026-10-30T07:02:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero generale, cortei e disagi in tutta Italia: Roma e Milano blindate, a rischio i trasporti - Diretta",
+   "url": "https://www.adnkronos.com/cronaca/sciopero-cortei-30-ottobre-roma-milano-trasporti-diretta_6SPtKk4vm6ue3ohezmVC84"
+  },
+  {
+   "data": "2026-10-30T06:52:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi prove libere Gp Messico, orario e dove vederle in tv",
+   "url": "https://www.adnkronos.com/sport/f1-gp-messico-antonelli-hamilton_7yte4onPInkaWVipCpguIk"
+  },
+  {
+   "data": "2026-10-30T06:46:13+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Elicottero caduto, sindaca Andria 'incredula per morte sergente-infermiera'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-sindaca-andria-incredula-per-morte-sergente-infermiera_0bb74420-b1b6-4b6e-b14e-b89b471c4173.html"
+  },
+  {
+   "data": "2026-10-30T06:39:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Edufin Index: Fancel (Generali Italia): \"Educazione finanziaria ancora troppo bassa\"",
+   "url": "https://www.adnkronos.com/economia/edufin-index-fancel-generali-italia-educazione-finanziaria-ancora-troppo-bassa_2DHWMUEOjJc49Epv5jIWPi"
+  },
+  {
+   "data": "2026-10-30T06:39:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Edufin Index, Oddone (Alleanza Assicurazioni): \"Su educazione finanziaria serve trasformare conoscenze in azioni\"",
+   "url": "https://www.adnkronos.com/economia/edufin-index-oddone-alleanza-assicurazioni-su-educazione-finanziaria-serve-trasformare-conoscenze-in-azioni_1fxzJU26ZCHstzq0sOdzNy"
+  },
+  {
+   "data": "2026-10-30T06:39:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "\"L'Ucraina ha sospeso gli attacchi alle raffinerie russe su pressione degli Usa\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/lucraina-ha-sospeso-gli-attacchi-alle-raffinerie-russe-su-pressione-degli-usa_623c1d5d-5e2b-4889-b998-15a94f0bf25c.html"
+  },
+  {
+   "data": "2026-10-30T06:38:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Edufin Index, Morelli: \"Educazione finanziaria per mobilitare risparmio e sostenere imprese\"",
+   "url": "https://www.adnkronos.com/economia/edufin-index-morelli-educazione-finanziaria-per-mobilitare-risparmio-e-sostenere-imprese_7vbCIWJc3MM4G9MGA4UYm0"
+  },
+  {
+   "data": "2026-10-30T06:15:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Allerta sicurezza per oggi, il Viminale 'isoleremo i violenti'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/allerta-sicurezza-per-oggi-il-viminale-isoleremo-i-violenti-_99d186a2-8b27-442f-b637-bc226fa79102.html"
+  },
+  {
+   "data": "2026-10-30T06:08:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cortei 30 ottobre a Roma e Milano, attese migliaia di persone: allerta su nuove azioni 'spacca e fuggi'",
+   "url": "https://www.adnkronos.com/cronaca/corteo-roma-30-ottobre-oggi_1MJNi8h4KFtffjqnYbTCkF"
+  },
+  {
+   "data": "2026-10-30T05:58:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero 30 ottobre, trasporti a rischio nonostante precettazione: disagi per treni, bus, metro e Tpl",
+   "url": "https://www.adnkronos.com/economia/sciopero-30-ottobre-2026-treni-autobus-scuola_6XiU3GkuST7YrDuooOTg8V"
+  },
+  {
+   "data": "2026-10-30T05:58:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, leader centrosinistra all'assalto: oggi call del campo largo",
+   "url": "https://www.adnkronos.com/politica/manovra-2027-centrosinistra-call-campo-largo_72BJ5cGQcJwOpjp6vwgvQt"
+  },
   {
    "data": "2026-10-29T23:31:11+00:00",
    "fonte": "ADNKRONOS",
@@ -27,24 +99,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Sciopero Italo, lunedì 9 novembre treni a rischio: orari e motivi della protesta",
    "url": "https://www.adnkronos.com/economia/sciopero-treni-italo-9-novembre-2026_1hQdOpOLpTBwehvGynP0C5"
-  },
-  {
-   "data": "2026-10-29T23:17:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meteo, arriva il freddo artico sull’Italia: piogge intense, neve in Appennino e poi torna il sole",
-   "url": "https://www.adnkronos.com/cronaca/meteo-maltempo-freddo-neve-previsioni_13ZMUeTpH1mp75WEdXrPj"
-  },
-  {
-   "data": "2026-10-29T23:12:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Raffreddore che non passa, cosa fare: esperto svela le cause dei sintomi infiniti",
-   "url": "https://www.adnkronos.com/cronaca/raffreddore-che-non-passa-sintomi-cause_4viNbjCxfiDP4FUjd8oElX"
-  },
-  {
-   "data": "2026-10-29T23:06:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bce, Lagarde lascia per fare sentire sua voce: dietro le quinte il voto in Francia",
-   "url": "https://www.adnkronos.com/economia/bce-lagarde-lascia-voto-francia-successore_3TEXRpWnZlTlXyAOH0CGd6"
   },
   {
    "data": "2026-10-29T23:04:34+00:00",
@@ -65,12 +119,6 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/serie-a-fiorentina-atalanta-spettacolo-e-gol-ma-solo-un-punto-a-testa_46e940ce-e50c-4281-93c6-ee8668230411.html"
   },
   {
-   "data": "2026-10-29T22:08:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Frosinone-Lecce 5-1, Alvini non si ferma e vola al sesto posto. Fiorentina-Atalanta 2-2",
-   "url": "https://www.adnkronos.com/sport/serie-a-frosinone-lecce-fiorentina-atalanta-risultati-oggi_11gU3tyJAkmw5gnSpSMxDe"
-  },
-  {
    "data": "2026-10-29T22:07:53+00:00",
    "fonte": "ANSA",
    "titolo": "Happy Halloween, ma che festa da paura è diventata? SPECIALE",
@@ -83,22 +131,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/elicottero-caduto-una-sergente-della-croce-rossa-tra-i-morti_4e6f8a84-7a89-4494-bd6f-a2c9a1e266ec.html"
   },
   {
-   "data": "2026-10-29T21:34:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elicottero militare italiano precipitato in Bosnia, chi sono le vittime: c'è anche una donna",
-   "url": "https://www.adnkronos.com/cronaca/elicottero-militare-italiano-precipitato-in-bosnia-chi-sono-vittime-nomi_UG5zUXokADnq7JVYasajf"
-  },
-  {
    "data": "2026-10-29T21:20:53+00:00",
    "fonte": "ANSA",
    "titolo": "Addio a Patrick Stewart, il capitano di Star Trek e professore degli X-Men",
    "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/29/e-morto-patrick-stewart-il-capitano-picard-di-star-trek_aade8c8f-71ac-4a5e-a8c6-042f27445816.html"
-  },
-  {
-   "data": "2026-10-29T21:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cobolli si infortuna nel derby e scoppia a piangere, Atp Finals a rischio. Berrettini lo abbraccia",
-   "url": "https://www.adnkronos.com/sport/cobolli-infortunio-lacrime-berrettini-abbraccio-video_2A11kHTprOxER5fBweuiIA"
   },
   {
    "data": "2026-10-29T21:11:43+00:00",
@@ -113,28 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/calcio-nuovo-san-siro-si-chiamera-generali-stadium_36b2d92c-91d5-44b4-a914-e59937063cff.html"
   },
   {
-   "data": "2026-10-29T20:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Svelato il 'Generali Stadium', nuovo stadio di Milan e Inter dalla stagione 2031/32: ecco come sarà",
-   "url": "https://www.adnkronos.com/sport/generali-stadium-presentato-nuovo-stadio-milan-inter_2CZsqamKodq9sPpyZ1NTBa"
-  },
-  {
    "data": "2026-10-29T20:32:34+00:00",
    "fonte": "ANSA",
    "titolo": "Altri 5 italiani fermati in Cisgiordania, la Farnesina chiede il rilascio",
    "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/29/cinque-attivisti-italiani-fermati-in-cisgiordania-la-farnesina-chiede-chiarimenti_6f4aa2ca-7e44-42e9-ad75-0c83be3a6ca3.html"
-  },
-  {
-   "data": "2026-10-29T20:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Addio a Patrick Stewart, l'attore di 'Star Trek' e 'X-Men' aveva 86 anni",
-   "url": "https://www.adnkronos.com/spettacoli/morto-patrick-stewart-star-trek-e-x-men_2eGZucxs1zP524zggJN8bO"
-  },
-  {
-   "data": "2026-10-29T20:15:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Allerta sicurezza per domani, il Viminale 'isoleremo i violenti'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/allerta-sicurezza-per-domani-il-viminale-isoleremo-i-violenti-_99d186a2-8b27-442f-b637-bc226fa79102.html"
   },
   {
    "data": "2026-10-29T20:15:02+00:00",
@@ -147,12 +165,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Chi scende in piazza e dove, la mappa del venerdì nero",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/chi-scende-in-piazza-e-dove-la-mappa-del-venerdi-nero_1b7b41a3-a291-47a9-9049-e83060ee87f8.html"
-  },
-  {
-   "data": "2026-10-29T20:07:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, numeri estrazione vincente oggi 29 ottobre. I 5 vincono quasi 33mila euro",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-numeri-vincenti-oggi-29-ottobre_FRHibVh9Ce8gpa1pXFwIx"
   },
   {
    "data": "2026-10-29T20:00:33+00:00",
@@ -177,18 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "\"Uccise il cugino per l'eredità\", bomba alla crema l'arma del delitto",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/uccise-il-cugino-per-leredita-bomba-alla-crema-larma-del-delitto_7eb4f981-4af7-44fc-9be0-72b52d79a10a.html"
-  },
-  {
-   "data": "2026-10-29T19:52:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sexting con l'Intelligenza Artificiale, uno studio esplora il fenomeno",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/cybersecurity/2026/10/29/sexting-con-lintelligenza-artificiale-studio-esplora-il-fenomeno_8d015c37-a7ab-449c-b3d1-95bfc088a09e.html"
-  },
-  {
-   "data": "2026-10-29T19:52:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Progettava attentati in sinagoga e moschea, arrestato 22enne a Milano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/progettava-attentati-in-sinagoga-e-moschea-arrestato-22enne-a-milano_fb5694eb-992b-4b7d-afd9-0028c056fa2e.html"
   }
  ]
 }
