@@ -5,22 +5,130 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-31T02:24:31+00:00",
+  "generato": "2026-10-31T08:42:40+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-30T23:28:55+00:00",
+   "data": "2026-10-31T08:30:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Milan-Inter: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/milan-inter-oggi-serie-a-orario-formazioni-dove-vederla_20y8ILYnHhOLQ4gmI7QqQ1"
+  },
+  {
+   "data": "2026-10-31T08:28:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: giù l'Irpef per 3,2 milioni di persone, dalle banche 5,8 miliardi",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/manovra-giu-lirpef-per-32-milioni-di-persone-dalle-banche-58-miliardi_a2553a3a-6200-46b4-bebd-ed940ffd56e8.html"
+  },
+  {
+   "data": "2026-10-31T08:26:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero 30 ottobre, \"costato circa 1 miliardo tra effetti diretti e indiretti\": la stima della Cgia",
+   "url": "https://www.adnkronos.com/economia/sciopero-30-ottobre-cgia-costo_6QYc0Yejb5svObT4Lubztn"
+  },
+  {
+   "data": "2026-10-31T08:26:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "MotoGp: Malesia, Alex Marquez in pole davanti al fratello Marc",
+   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/10/31/motogp-malesia-alex-marquez-in-pole-davanti-al-fratello-marc_c749ed5a-c670-4002-88cb-855c3fec687c.html"
+  },
+  {
+   "data": "2026-10-31T08:19:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "È morta Nonna Silvi, addio alla cuoca toscana diventata una star dei social: aveva 85 anni",
+   "url": "https://www.adnkronos.com/cronaca/nonna-silvi-silvana-bini-morta_7fITFyONGVS8dGDfsjdIiZ"
+  },
+  {
+   "data": "2026-10-31T08:17:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Silvia Salis, un destino nel nome?",
+   "url": "https://www.ansa.it/sito/podcast/impero_dei_segni/2026/10/31/silvia-salis-un-destino-nel-nome_de6da71f-1e9a-4ed2-bdbe-734bb1d8b0ea.html"
+  },
+  {
+   "data": "2026-10-31T08:02:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Udinese-Roma: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/udinese-roma-oggi-serie-a-orario-formazioni-dove-vederla_6Kr9DQt6kiTut9t1fUvFfz"
+  },
+  {
+   "data": "2026-10-31T08:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, ordine d'arrivo gara Sprint del Gp Malesia e classifica Mondiale",
+   "url": "https://www.adnkronos.com/sport/motogp-gp-malesia-acosta-marquez_gSm0zdA3vGyTHDjCiYsj7"
+  },
+  {
+   "data": "2026-10-31T07:57:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump 'apre' a Nicki Minaj portavoce della Casa Bianca: \"Buona idea, ci penserò\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-nicki-minaj-portavoce-casa-bianca-video_4wcoq2oADSeH8zHC0cWFWN"
+  },
+  {
+   "data": "2026-10-31T07:41:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Zelensky: \"I 500 Patriot Usa tra qualche anno, ma dobbiamo difenderci questo inverno\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/zelensky-i-500-patriot-usa-tra-qualche-anno-ma-dobbiamo-difenderci-questo_bae448a2-c0d3-44e5-9cdd-029b563447d2.html"
+  },
+  {
+   "data": "2026-10-31T07:36:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, droni russi su Kharkiv. Zelensky: \"I 500 Patriot Usa tra qualche anno, ma noi dobbiamo difenderci ora\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-news-oggi-31-ottobre_7lG8fjEbvXrO7HuVMZZGx3"
+  },
+  {
+   "data": "2026-10-31T07:24:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le stelle, stasera su Rai1: le anticipazioni e l'ospite speciale",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-stasera-anticipazioni_23moOzNO0ezfyd0joLrZx7"
+  },
+  {
+   "data": "2026-10-31T07:22:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto in provincia di Chieti, nuove scosse oggi 31 ottobre",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-provincia-chieti-palena-sciame-sismico_5Q5gPVOA9JRyJ07anbTBWc"
+  },
+  {
+   "data": "2026-10-31T07:10:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Giuseppe, Bongiorno e Tremonti i 'Paperoni' in Parlamento",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/30/di-giuseppe-bongiorno-e-tremonti-i-paperoni-in-parlamento_c60dd174-5133-47d3-824f-df67f6bcb681.html"
+  },
+  {
+   "data": "2026-10-31T06:53:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Maxi attacco hacker contro Binance, 'é il furto del secolo'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/maxi-attacco-hacker-contro-binance-e-il-furto-del-secolo-_3aea9536-ba98-4317-b834-8d48a442e54e.html"
+  },
+  {
+   "data": "2026-10-31T06:49:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Halloween, il 'Vade retro' della Chiesa: le iniziative in tutta Italia, dalla notte dei santuari alla festa della luce",
+   "url": "https://www.adnkronos.com/cronaca/halloween-risposta-chiesa-iniziative_7qlbMEwyZJ0iVEz9EsSznQ"
+  },
+  {
+   "data": "2026-10-31T06:45:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGP, Jorge Martin si ritira dal Gp di Malesia: \"Non avevo il controllo della moto\"",
+   "url": "https://www.adnkronos.com/sport/motogp-gp-malesia-martin_3psze5IkPdQIycyHNbue9b"
+  },
+  {
+   "data": "2026-10-31T06:23:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nuove proteste oggi in Francia, l'allarme: \"Manifestazioni ad alto rischio di violenza urbana\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/proteste-francia-allerta-scontri-oggi-news_SaB5ou7Y3hzRpeFylau9H"
+  },
+  {
+   "data": "2026-10-30T23:31:42+00:00",
    "fonte": "ANSA",
    "titolo": "F1 Messico: la Ferrari di Leclerc domina le seconde libere, quarto tempo per Antonelli",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-messico-la-ferrari-di-leclerc-domina-le-seconde-libere-quarto-tempo-per-mercedes_589e3c5d-754b-421f-ac8b-2cdadb46b4a2.html"
   },
   {
-   "data": "2026-10-30T23:19:43+00:00",
+   "data": "2026-10-30T23:30:04+00:00",
    "fonte": "ANSA",
-   "titolo": "Manovra: giù l'Irpef per 3,2 milioni di persone, dalle banche 5,8 miliardi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/manovra-giu-lirpef-per-32-milioni-di-persone-dalle-banche-58-miliardi_a2553a3a-6200-46b4-bebd-ed940ffd56e8.html"
+   "titolo": "Tensioni e proteste in Polonia dopo la sospensione del presidente Corte costituzionale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/tensioni-e-proteste-in-polonia-dopo-la-sospensione-del-presidente-corte-costituzionale_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
   },
   {
    "data": "2026-10-30T23:11:18+00:00",
@@ -29,46 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/31/il-campo-largo-accelera-subito-il-programma-e-primarie-entro-febbraio_2e10ed14-2959-47b6-8f4d-4c06f9726eee.html"
   },
   {
-   "data": "2026-10-30T23:05:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pensioni, pagamento dal 2 novembre: conguagli 730 sul cedolino e dal 2027 notifiche digitali con Send",
-   "url": "https://www.adnkronos.com/economia/pensioni-pagamento-inps-ultime-notizie_1sgYi10Mp9ZWybucaC7kY4"
-  },
-  {
-   "data": "2026-10-30T23:04:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Centrosinistra, sprint Schlein, Conte e Avs: programma a novembre e primarie a febbraio",
-   "url": "https://www.adnkronos.com/politica/centrosinistra-schlein-conte-avs-programma-primarie-ultime-notizie_4rFwLh9ZqysBhL2anpmbxq"
-  },
-  {
-   "data": "2026-10-30T23:02:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gigi D'Alessio torna in tour e sogna San Siro: \"La mia intelligenza napoletana, non artificiale\"",
-   "url": "https://www.adnkronos.com/spettacoli/gigi-dalessio-tour-san-siro-verona-film_5Rz3dWhvsikLZfDoqIPyk9"
-  },
-  {
-   "data": "2026-10-30T22:59:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il patto di ferro Ue-Canada, 'uniti in un mondo sempre più diviso'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/30/il-patto-di-ferro-ue-canada-uniti-in-un-mondo-sempre-piu-diviso_472b0ee5-816f-40e9-874f-b6795063e6f6.html"
-  },
-  {
-   "data": "2026-10-30T22:56:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tensioni e proteste in Polonia dopo la sospensione del presidente Corte costituzionale",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/tensioni-e-proteste-in-polonia-dopo-la-sospensione-del-presidente-corte-costituzionale_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
-  },
-  {
    "data": "2026-10-30T22:42:58+00:00",
    "fonte": "ANSA",
    "titolo": "Leone ha votato per posta per le midterm, 'un diritto democratico'",
    "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/30/leone-ha-votato-per-posta-per-midterm-un-diritto-democratico_0ef687d9-259c-4fd9-9bba-c7714ea59566.html"
-  },
-  {
-   "data": "2026-10-30T22:27:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lavrov sbarca al G20 negli Usa e spacca gli alleati",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/lavrov-sbarca-al-g20-negli-usa-e-spacca-gli-alleati_f89dd372-fa3e-456d-9d3f-ace295b2e601.html"
   },
   {
    "data": "2026-10-30T22:13:33+00:00",
@@ -89,12 +161,6 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/epstein-e-le-ragazze-a-balmoral-si-aggravano-le-accuse-ad-andrea_c2a71f5f-3fc1-459a-a06e-6ebffcd35566.html"
   },
   {
-   "data": "2026-10-30T21:45:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Arriva la quinta estrazione settimanale per Lotto e Superenalotto, la novità in manovra",
-   "url": "https://www.adnkronos.com/economia/manovra-superenalotto-lotto-quinta-estrazione_3EDZGyqAJkh7jPFe0wChfr"
-  },
-  {
    "data": "2026-10-30T21:41:06+00:00",
    "fonte": "ANSA",
    "titolo": "Cortei di studenti e lavoratori in 60 città, tensioni a Roma e Torino",
@@ -113,82 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/a-cuba-blackout-fino-a-30-ore-e-acqua-contaminata-27-milioni-senza-rifornimenti_de40b030-6d33-455d-bc73-eb2229d2960c.html"
   },
   {
-   "data": "2026-10-30T20:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Polonia, sospeso presidente della Corte Costituzionale: polizia schierata attorno all'edificio",
-   "url": "https://www.adnkronos.com/internazionale/esteri/polonia-corte-costituzionale-polizia-news_F5kEIm6aYW281MISWIBrP"
-  },
-  {
-   "data": "2026-10-30T19:57:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Maxi attacco hacker contro Binance, 'é il furto del secolo'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/maxi-attacco-hacker-contro-binance-e-il-furto-del-secolo-_3aea9536-ba98-4317-b834-8d48a442e54e.html"
-  },
-  {
    "data": "2026-10-30T19:51:21+00:00",
    "fonte": "ANSA",
    "titolo": "'Israele rischia la paralisi', scatta il risiko delle coalizioni",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/israele-rischia-la-paralisi-scatta-il-risiko-delle-coalizioni-_50079fc1-fae9-4272-902c-0b7444893f9d.html"
   },
   {
-   "data": "2026-10-30T19:46:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "F1, Gp Messico: Leclerc davanti ad Antonelli nelle prime libere",
-   "url": "https://www.adnkronos.com/sport/f1-messico-antonelli-mondiale-leclerc_1h9BD77LCHaTyCnvxHTKAY"
-  },
-  {
-   "data": "2026-10-30T19:42:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pensioni, sistema rivalutazioni cambia con Manovra 2027: si torna a 6 scaglioni",
-   "url": "https://www.adnkronos.com/economia/manovra-2027-pensioni-news-rivalutazioni_moe2f3y9XGXhAdSVkKKm8"
-  },
-  {
-   "data": "2026-10-30T19:38:30+00:00",
+   "data": "2026-10-30T19:44:19+00:00",
    "fonte": "ANSA",
-   "titolo": "L'angoscia per i tanti dispersi. Sanchez ammette le falle",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/langoscia-per-i-tanti-dispersi.-sanchez-ammette-le-falle-_278f14b6-53fa-46f9-95c5-d43f8dd17447.html"
-  },
-  {
-   "data": "2026-10-30T19:36:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Webuild, acquista ulteriore 4,68% di Trevi e sale al 34,58%. Opa diventa obbligatoria",
-   "url": "https://www.adnkronos.com/economia/webuild-acquista-ulteriore-4-68-di-trevi-e-sale-al-34-58-opa-diventa-obbligatoria_2TPFOs0ngnaE7qbzj6D2zW"
-  },
-  {
-   "data": "2026-10-30T19:33:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sciopero generale e cortei in tutta Italia, tensioni a Roma e Torino. La cronaca della giornata",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia-tensioni-a-roma-e-torino.-la-cronaca-della_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html"
-  },
-  {
-   "data": "2026-10-30T19:23:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cobolli rassicura tutti: \"Piccolo risentimento muscolare, a Parigi farò tutto il possibile per giocare\"",
-   "url": "https://www.adnkronos.com/sport/tennis-cobolli-infortunio-berrettini-vienna_7HJTzf3VgMmBmBYlfdMJGQ"
-  },
-  {
-   "data": "2026-10-30T19:18:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, ddl da 157 articoli: le novità dal taglio Irpef al salvadanaio per bebè fino al Superenalotto",
-   "url": "https://www.adnkronos.com/economia/manovra-testo-articoli-misure_62DqIP3bOvgDTPJy7uIVCc"
-  },
-  {
-   "data": "2026-10-30T19:14:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Ci opprimono con la paura', i volti della protesta",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/ci-opprimono-con-la-paura-i-volti-della-protesta_e1dce918-64b7-4fe1-a8ee-6eeaadeac31d.html"
-  },
-  {
-   "data": "2026-10-30T19:02:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Parla Christa Pike: 'Ero pronta a morire, ora soffro nel corpo e nell'anima'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/parla-christa-pike-ero-pronta-a-morire-ora-soffro-nel-corpo_93883b56-d501-40fb-adda-34ca3ce82c64.html"
-  },
-  {
-   "data": "2026-10-30T19:01:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "++ Cariche in pieno centro al corteo Torino ++",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/-cariche-in-pieno-centro-al-corteo-torino-_3144aad1-19ef-49ff-b9d7-e3864b8044cd.html"
+   "titolo": "I The Jackal a Sanremo, condurranno il Primafestival",
+   "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/10/30/i-the-jackal-a-sanremo-condurranno-il-primafestival_c7413450-79af-49ae-b08e-7432d52862b1.html"
   }
  ]
 }
