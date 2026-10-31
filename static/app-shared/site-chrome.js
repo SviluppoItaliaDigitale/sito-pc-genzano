@@ -106,6 +106,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti &#8212; Ed. Civica</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/libro-che-si-esplora/" role="menuitem"><span>Il libro che si esplora</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/esperimenti/" role="menuitem"><span>Esperimenti e attivit&#224;</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/laboratorio-meteo/" role="menuitem"><span>Laboratorio meteo</span></a></li>' +
                   '</ul></div></div>' +
