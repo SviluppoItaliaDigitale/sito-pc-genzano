@@ -172,6 +172,8 @@ All'apertura della pagina, il browser scarica le sole porzioni di mappa necessar
 
 La funzione **Centra sulla mia posizione** usa la Geolocation API del browser. La posizione viene letta solo dopo autorizzazione dell'utente, è usata localmente per centrare la mappa e non viene inviata al nostro server.
 
+Lo stesso vale per il pulsante **Trova l'area di attesa più vicina**, nelle pagine [Aree di attesa](/aree-attesa/), [Cartografia](/cartografia/) ed [Emergenza](/emergenza/): la posizione viene letta solo dopo la tua autorizzazione, la distanza dalle aree si calcola sul tuo dispositivo e la posizione non viene inviata a nessuno. Il collegamento «Indicazioni a piedi» apre Google Maps solo se lo premi, e contiene soltanto le coordinate dell'area di destinazione.
+
 ## Laboratorio meteo
 
 La pagina [Laboratorio meteo](/laboratorio-meteo/) permette di costruire grafici con i dati climatici del territorio. Quando scegli di creare un grafico, il browser contatta direttamente il servizio **Open-Meteo** (Open-Meteo, Zurigo) per scaricare i dati storici richiesti. Open-Meteo può quindi ricevere dati tecnici della richiesta, come l'indirizzo IP, secondo la propria [privacy policy](https://open-meteo.com/en/terms). La connessione avviene **solo su tua richiesta** (al clic su "Crea il grafico"), senza cookie né tracciamento. Gli esempi pronti, invece, usano dati già salvati sul nostro sito e non comportano connessioni esterne.

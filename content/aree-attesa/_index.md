@@ -21,6 +21,8 @@ Questa pagina elenca le 10 aree di attesa del Comune di Genzano di Roma. Per la 
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Individua adesso la tua area</strong>, non quando l'emergenza è in corso. Memorizza il codice (es. AA1) e il percorso a piedi.</p>
 </div>
 
+{{< area-piu-vicina >}}
+
 ## Le 10 aree di attesa di Genzano di Roma
 
 | Codice | Denominazione | Indirizzo |

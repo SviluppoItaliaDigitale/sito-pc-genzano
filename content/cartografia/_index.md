@@ -24,6 +24,8 @@ In questa sezione puoi consultare la **mappa interattiva** e le tabelle con i pu
 <p class="mb-0 small">In alcuni punti il Piano di Emergenza Comunale può riportare denominazioni viarie diverse da quelle attuali. Per orientarti fai riferimento alla <strong>mappa interattiva</strong>, all'<strong>indirizzo</strong> nelle tabelle e al <strong>cartello installato sul posto</strong>.</p>
 </div>
 
+{{< area-piu-vicina >}}
+
 ## Aree di attesa della popolazione (AA)
 
 Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un evento sismico** o in caso di evacuazione. Qui verrai censito e riceverai le prime informazioni.
