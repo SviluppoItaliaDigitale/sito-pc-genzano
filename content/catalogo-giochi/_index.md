@@ -27,7 +27,7 @@ Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una sc
 - [Giochi per la scuola primaria (6-11 anni)](#primaria)
 - [Giochi per ragazzi e adulti (11-19 anni e oltre)](#ragazzi)
 
-## <span id="infanzia">Infanzia</span> (3-6 anni)
+## Infanzia (3-6 anni) {#infanzia}
 
 **Durata media:** circa 5 minuti a gioco. **Lingua:** italiano semplice.
 
@@ -71,7 +71,7 @@ I cartelli ci dicono dove andare e cosa fare. **[Apri la scheda →](/catalogo-g
 
 Aiuta Tina a mettere nello zaino le cose giuste per l'emergenza. **[Apri la scheda →](/catalogo-giochi/vesti-tina/)** · [Gioca subito →](/giochi/infanzia/vesti-tina/)
 
-## <span id="primaria">Scuola primaria</span> (6-11 anni)
+## Scuola primaria (6-11 anni) {#primaria}
 
 **Durata media:** circa 10 minuti a gioco. **Lingua:** italiano standard.
 
@@ -127,7 +127,7 @@ Verde sicuro, giallo attenzione, rosso pericolo: come l'allerta meteo. **[Apri l
 
 Lo zaino di emergenza ha cose utili, non comode. **[Apri la scheda →](/catalogo-giochi/zaino-emergenza/)** · [Gioca subito →](/giochi/primaria/zaino-emergenza/)
 
-## <span id="ragazzi">Ragazzi e adulti</span> (11-19 anni e oltre)
+## Ragazzi e adulti (11-19 anni e oltre) {#ragazzi}
 
 **Durata media:** circa 15 minuti a gioco. **Lingua:** italiano standard.
 

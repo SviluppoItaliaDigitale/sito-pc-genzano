@@ -76,7 +76,7 @@
   {{- with .Site.Params.instagram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
   {{- with .Site.Params.telegram }}{{ $sameAs = $sameAs | append . }}{{ end -}}
   {{- with .Site.Params.twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
-  "sameAs": {{ $sameAs | jsonify }}
+  "sameAs": {{ $sameAs | jsonify | safeJS }}
 }
 </script>
 <script type="application/ld+json">
