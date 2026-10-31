@@ -19,7 +19,7 @@ const RM = () => mqRM.matches || html.classList.contains('a11y-pause-anim') || h
 const CH = DATI.capitoli.map(c => ({
   key:c.chiave, kicker:c.occhiello, title:c.titolo, intro:c.intro, q:c.domanda,
   opts:c.opzioni.map(o => ({t:o.testo, ok:!!o.giusta, why:o.perche || ''})),
-  answer:c.risposta, short:c.breve, src:{t:c.fonte.titolo, u:c.fonte.url}
+  answer:c.risposta, short:c.breve, srcs:c.fonti.map(f => ({t:f.titolo, u:f.url}))
 }));
 const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 const COLORI = DATI.colori.map(c => ({
@@ -47,7 +47,7 @@ controls.minPolarAngle = .35; controls.maxPolarAngle = 1.2;
 controls.minAzimuthAngle = -.75; controls.maxAzimuthAngle = .75;
 controls.target.set(0, .05, .02);
 
-scene.add(new THREE.HemisphereLight(0xffffff, 0x9aa8bb, 1.6));
+const hemi = new THREE.HemisphereLight(0xffffff, 0x9aa8bb, 1.6); scene.add(hemi);
 const sun = new THREE.DirectionalLight(0xffffff, 2.2);
 sun.position.set(-1.6, 3.2, 1.4); sun.castShadow = true;
 sun.shadow.mapSize.set(2048,2048);
@@ -197,6 +197,19 @@ function setFlap(open){
 const sheetPivot = new THREE.Group(); sheetPivot.position.set(0, PY+.003, 0); book.add(sheetPivot);
 const sheet = new THREE.Mesh(new THREE.PlaneGeometry(PW,PD), new THREE.MeshStandardMaterial({color:0xfbfaf5, roughness:1, side:THREE.DoubleSide}));
 sheet.rotation.x = -Math.PI/2; sheet.position.x = .52; sheet.castShadow = true; sheet.visible = false; sheetPivot.add(sheet);
+
+function casetta(w,h,d){
+  const g = new THREE.Group(); g.add(at(part(box(w,h,d)),0,h/2,0));
+  const sh = new THREE.Shape(); sh.moveTo(-w/2-.01,0); sh.lineTo(w/2+.01,0); sh.lineTo(0,h*.45); sh.closePath();
+  g.add(at(part(new THREE.ExtrudeGeometry(sh,{depth:d+.02,bevelEnabled:false}), 0xb24a35),0,h,-d/2-.01));
+  g.add(at(part(box(.04,.07,.006), 0x6b4f33),0,.035,d/2+.003)); return g;
+}
+function carro(color){
+  const c = new THREE.Group();
+  c.add(at(part(box(.11,.035,.2), color),0,.04,0), at(part(box(.095,.035,.1), 0xdfe8f2),0,.075,.01));
+  for (const [wx,wz] of [[-.058,-.065],[.058,-.065],[-.058,.065],[.058,.065]]){ const w = part(new THREE.CylinderGeometry(.022,.022,.018,14), 0x222831); w.rotation.z = Math.PI/2; at(w,wx,.022,wz); c.add(w); }
+  return c;
+}
 
 /* ---------- Le scene della pagina di destra ---------- */
 const anchor = new THREE.Group(); anchor.position.set(.545, PY, -.04); book.add(anchor);
@@ -375,7 +388,7 @@ const BUILD = {
     pick(t, 'tubo'+k); g.add(t); tubes.push({t, liq});
   });
   function sel(k){ tubes.forEach((o,j)=>{ const y0 = o.t.position.y, y1 = j===k ? .05 : 0; tween(.4,q=>{ o.t.position.y = y0+(y1-y0)*ease(q); }); o.liq.material.emissiveIntensity = j===k ? .35 : .08; });
-    const c = COLORI[k]; say(`${c.n}: ${c.t}. ${c.s} Cosa fare: ${c.f}`); }
+    const c = COLORI[k]; say(`Allerta ${c.n.toLowerCase()}. ${c.s} Cosa fare: ${c.f}`); }
   return { g, tools: COLORI.map((c,k)=>({label:`Allerta ${c.n.toLowerCase()}`, fn(){ sel(k); }})),
     onPick(id){ if (String(id).startsWith('tubo')) sel(+String(id).slice(4)); },
     choose(){ sel(2); }, update(){} };
@@ -416,12 +429,237 @@ const BUILD = {
     choose(i){ Object.values(map).forEach((o,k)=>glow(o.obj,0xffb000,k===i?.55:0)); },
     update(dt,t){ flame.scale.y = 1+.2*Math.sin(t*12); }
   };
+ },
+ caldo(){
+  const g = new THREE.Group();
+  g.add(at(part(box(.84,.012,.95), 0xd9cfb4),0,.006,-.03));
+  g.add(at(part(box(.84,.004,.16), 0x8d8f94, {edges:false}),0,.014,.22));
+  const h1 = casetta(.36,.22,.2), h2 = casetta(.3,.2,.2); at(h1,-.2,0,-.2); at(h2,.22,0,-.22); g.add(h1, h2);
+  const shut = []; [-.28,-.12].forEach(x=>{ const s = at(part(box(.09,.01,.012), 0x6b7c93),x,.205,-.093); g.add(s); shut.push(s); });
+  const tree = new THREE.Group(); tree.add(at(part(new THREE.CylinderGeometry(.01,.014,.1,8), 0x6b4f33),0,.05,0), at(part(new THREE.SphereGeometry(.07,12,9), 0x3f7a45),0,.14,0)); at(tree,.05,0,.05); g.add(tree);
+  const sunM = part(new THREE.SphereGeometry(.05,20,14), 0xffc107, {emissive:0xffb000, ei:.9, edges:false, shadow:false}); g.add(sunM);
+  const thermo = new THREE.Group(); at(thermo,.36,0,.32); g.add(thermo);
+  thermo.add(at(part(new THREE.CylinderGeometry(.02,.02,.3,14,1,true), 0xdfeaf5, {opacity:.35, side:THREE.DoubleSide, depthWrite:false, shadow:false}),0,.17,0));
+  const liq = part(new THREE.CylinderGeometry(.014,.014,1,14), 0xd23a2f, {edges:false}); thermo.add(liq);
+  thermo.add(at(part(new THREE.SphereGeometry(.026,14,10), 0xd23a2f, {edges:false}),0,.025,0));
+  const lab = textSprite('Ore 9', .04); g.add(lab);
+  const p = pawn(); at(p,-.2,0,.0); g.add(p);
+  let hour = 9, closed = false;
+  function setHour(h){ hour = h; const t = (h-6)/15;
+    sunM.position.set(-.45+.9*t, .15+.42*Math.sin(Math.PI*t), -.42);
+    const hot = h>=11 && h<18; sunM.material.color.setHex(hot ? 0xff7a1a : 0xffd54a); sunM.material.emissive.setHex(hot ? 0xff5a00 : 0xffb000);
+    const lv = .05 + .2*Math.sin(Math.PI*Math.min(1,Math.max(0,(h-6)/14))); liq.scale.y = lv; liq.position.y = .04 + lv/2;
+    lab.material.map.dispose(); const n = textSprite('Ore ' + h, .04); lab.material = n.material; lab.scale.copy(n.scale); lab.position.set(sunM.position.x, sunM.position.y+.08, sunM.position.z);
+    say(hot ? `Ore ${h}: sono le ore più calde, dalle 11 alle 18. Resta al fresco ed evita gli sforzi.` : `Ore ${h}: fuori dalle ore più calde. Se esci, porta acqua e cappello.`);
+    const inp = document.getElementById('r-caldo-0'); if (inp) inp.value = h; }
+  setHour(9);
+  return { g, tools:[
+      {range:true, label:'Ora del giorno', min:6, max:21, value:9, fn(v){ setHour(v); }},
+      {label:'Abbassa le tapparelle', fn(){ closed = !closed; shut.forEach(s=>{ const a = s.scale.y, b = closed ? 9 : 1; tween(.5,q=>{ s.scale.y = a+(b-a)*ease(q); s.position.y = .205 - (s.scale.y-1)*.005; }); });
+        this.textContent = closed ? 'Alza le tapparelle' : 'Abbassa le tapparelle';
+        say(closed ? 'Tapparelle abbassate: nelle ore di sole diretto la casa resta più fresca.' : 'Tapparelle alzate.'); }} ],
+    choose(i){ setHour([13,9,15][i]); moveTo(p, new THREE.Vector3([-.05,-.1,.15][i], 0, .22), 1, .04); },
+    update(){} };
+ },
+ temporale(){
+  const g = new THREE.Group();
+  g.add(at(part(box(.84,.012,.95), 0x8fae6a),0,.006,-.03));
+  const tree = new THREE.Group(); tree.add(at(part(new THREE.CylinderGeometry(.012,.016,.16,8), 0x6b4f33),0,.08,0), at(part(new THREE.ConeGeometry(.07,.2,9), 0x3f7a45),0,.24,0)); at(tree,-.25,0,-.2); g.add(pick(tree,0));
+  const roof = new THREE.Group(); at(roof,.25,0,-.25);
+  for (const [x,z] of [[-.08,-.05],[.08,-.05],[-.08,.05],[.08,.05]]) roof.add(at(part(box(.008,.14,.008), 0x9aa0a8),x,.07,z));
+  roof.add(at(part(box(.2,.008,.14), 0x9aa0a8),0,.145,0)); g.add(pick(roof,1));
+  const safe = new THREE.Group(); const hs = casetta(.2,.16,.16); at(hs,.2,0,.18); safe.add(hs);
+  safe.add(at(carro(0x2f6fb5),-.2,0,.28)); g.add(pick(safe,2));
+  const cloud = new THREE.Group(); [[0,0,0,.11],[.1,.01,.03,.09],[-.1,0,.02,.08],[.04,.04,-.04,.08]].forEach(([x,y,z,r])=>cloud.add(at(part(new THREE.SphereGeometry(r,14,10), 0x6b7280, {edges:false, shadow:false}),x,y,z)));
+  at(cloud,-.15,.62,-.25); g.add(cloud);
+  const bolt = new THREE.Group(); const pts = [[-.15,.55],[-.2,.45],[-.17,.44],[-.23,.33],[-.2,.32],[-.25,.25]];
+  for (let k=0;k<pts.length-1;k++){ const [x1,y1]=pts[k],[x2,y2]=pts[k+1]; const L = Math.hypot(x2-x1,y2-y1);
+    const s = part(box(.012,L,.012), 0xfff3a0, {emissive:0xffe066, ei:1, edges:false, shadow:false}); at(s,(x1+x2)/2,(y1+y2)/2,-.2); s.rotation.z = Math.atan2(x2-x1,y2-y1)*-1; bolt.add(s); }
+  bolt.visible = false; g.add(bolt);
+  const flash = new THREE.PointLight(0xfff6c8, 0, 2); at(flash,-.2,.5,-.2); g.add(flash);
+  const p = pawn(); at(p,0,0,.05); g.add(p);
+  const T = [new THREE.Vector3(-.21,0,-.15), new THREE.Vector3(.25,0,-.25), new THREE.Vector3(.2,0,.32)];
+  return { g, tools:[{label:'Arriva il fulmine', fn(){ bolt.visible = true; tween(.5,q=>{ flash.intensity = 6*(1-q); }, ()=>{ bolt.visible = false; });
+      say('Il fulmine colpisce l’albero isolato: è il punto più alto del prato. Al riparo si sta nella casa o in auto con i finestrini chiusi.'); }}],
+    choose(i){ [tree,roof,safe].forEach((o,k)=>glow(o,0xffb000,k===i?.45:0)); moveTo(p, T[i], 1, .05); },
+    update(dt,t){ cloud.position.x = -.15 + Math.sin(t*.4)*.03; } };
+ },
+ vento(){
+  const g = new THREE.Group();
+  g.add(at(part(box(.84,.012,.95), 0xb9b4a8),0,.006,-.03));
+  const pal = new THREE.Group(); pal.add(at(part(box(.3,.42,.2), 0xe6dfcf),0,.21,0));
+  const cornice = at(part(box(.34,.025,.06), 0xc9bfa8),0,.43,.12); pal.add(cornice);
+  pal.add(at(part(box(.06,.1,.01), 0x6b4f33),.08,.05,.101));
+  for (const x of [-.08,.04]) for (const y of [.18,.32]) pal.add(at(part(box(.06,.06,.01), 0x9cc6ea),x,y,.101));
+  at(pal,-.2,0,-.28); g.add(pal);
+  const corniceZone = new THREE.Group(); g.add(pick(corniceZone,0));
+  pick(cornice,0);
+  const door = new THREE.Group(); g.add(door);
+  const scaf = new THREE.Group(); at(scaf,.25,0,-.3);
+  for (const x of [-.08,.08]) for (const z of [-.04,.04]) scaf.add(at(part(box(.006,.34,.006), 0x8a8f99),x,.17,z));
+  for (const y of [.12,.24,.34]) scaf.add(at(part(box(.18,.01,.09), 0xc9a86b),0,y,0)); g.add(scaf);
+  const bill = new THREE.Group(); at(bill,.24,0,.16);
+  for (const x of [-.08,.08]) bill.add(at(part(box(.01,.18,.01), 0x5b6270),x,.09,0));
+  const panel = at(part(box(.24,.12,.01), 0xf2c12e),0,.22,0); bill.add(panel); g.add(pick(bill,2));
+  const tree = new THREE.Group(); tree.add(at(part(new THREE.CylinderGeometry(.01,.014,.12,8), 0x6b4f33),0,.06,0), at(part(new THREE.SphereGeometry(.07,12,9), 0x3f7a45),0,.16,0)); at(tree,-.28,0,.22); g.add(tree);
+  const leaves = []; for (let k=0;k<18;k++){ const l = part(box(.014,.003,.01), 0x5e8d43, {edges:false, shadow:false}); l.userData.o = Math.random(); g.add(l); leaves.push(l); }
+  const p = pawn(); at(p,0,0,.25); g.add(p);
+  let wind = .7;
+  const T = [new THREE.Vector3(-.2,0,-.13), new THREE.Vector3(-.12,0,-.17), new THREE.Vector3(.24,0,.22)];
+  return { g, tools:[{range:true, label:'Forza del vento', min:0, max:100, value:70, fn(v){ wind = v/100; say(v>60 ? 'Raffiche forti: cartelloni, impalcature e alberi possono cedere o perdere pezzi.' : 'Vento moderato.'); }}],
+    choose(i){ [cornice,null,bill].forEach((o,k)=>o && glow(o,0xffb000,k===i?.5:0)); moveTo(p, T[i], 1, .04, ()=>{ if (i===1) say('Sei dentro l’edificio: resta lontano dalle finestre.'); }); },
+    update(dt,t){ const s = RM() ? .3 : 1;
+      bill.rotation.z = Math.sin(t*6)*.05*wind*s; tree.rotation.z = Math.sin(t*3.3)*.12*wind*s; scaf.rotation.z = Math.sin(t*5)*.015*wind*s;
+      leaves.forEach(l=>{ l.userData.o = (l.userData.o + dt*(.08+.5*wind)*s) % 1; const o = l.userData.o; l.position.set(-.42+.84*o, .05+.25*Math.abs(Math.sin(o*9+l.id)), -.45+((l.id*37)%90)/100); l.rotation.set(o*20,o*13,0); l.visible = wind>.15; }); } };
+ },
+ blackout(){
+  const g = new THREE.Group(), room = new THREE.Group(); g.add(room);
+  room.add(at(part(box(.84,.02,.9), 0xe9e4d6),0,.01,-.05), at(part(box(.84,.5,.02)),0,.26,-.49), at(part(box(.02,.5,.9)),-.41,.26,-.05));
+  const tbl = new THREE.Group(); tbl.add(at(part(box(.26,.02,.18), 0xc79a63),0,.14,0));
+  for (const [x,z] of [[-.11,-.07],[.11,-.07],[-.11,.07],[.11,.07]]) tbl.add(at(part(new THREE.CylinderGeometry(.008,.008,.13,8), 0xb08654),x,.07,z));
+  at(tbl,-.05,0,.05); room.add(tbl);
+  const candle = new THREE.Group(); candle.add(at(part(new THREE.CylinderGeometry(.016,.016,.06,12), 0xf3e6c4),0,.03,0));
+  const flame = part(new THREE.ConeGeometry(.008,.024,8), 0xffb000, {emissive:0xff8a00, ei:1, edges:false}); at(flame,0,.075,0); flame.visible = false; candle.add(flame);
+  at(candle,-.12,.15,.06); room.add(pick(candle,0));
+  const torch = new THREE.Group(); { const b = part(new THREE.CylinderGeometry(.014,.014,.08,12), 0x2c3e50); b.rotation.z = Math.PI/2; at(b,0,.014,0); torch.add(b, at(part(new THREE.CylinderGeometry(.02,.015,.02,12), 0x7f8c8d),.05,.016,0)); torch.children[1].rotation.z = Math.PI/2; }
+  at(torch,.03,.15,.06); room.add(pick(torch,1));
+  const beam = new THREE.SpotLight(0xfff2cc, 0, 1.4, .45, .5); at(beam,.08,.17,.06); beam.target.position.set(.4,0,-.3); room.add(beam, beam.target);
+  const fridge = new THREE.Group(); fridge.add(at(part(box(.14,.32,.13), 0xf4f6f8),0,.16,0));
+  const fdoor = part(box(.14,.32,.01), 0xe9edf1); const hinge = new THREE.Group(); at(hinge,-.07,.16,.07); at(fdoor,.07,0,0); hinge.add(fdoor); fridge.add(hinge);
+  at(fridge,.3,.02,-.38); room.add(pick(fridge,2));
+  const tv = at(part(box(.2,.12,.02), 0x22262e),-.1,.3,-.475); room.add(tv);
+  const lamp = part(new THREE.SphereGeometry(.03,14,10), 0xfff4c2, {emissive:0xffe9a0, ei:1, edges:false, shadow:false}); at(lamp,0,.47,-.1); room.add(lamp);
+  const p = pawn(); at(p,.12,.02,.25); room.add(p);
+  let dark = false;
+  function setDark(on){ dark = on; hemi.intensity = on ? .25 : 1.6; sun.intensity = on ? .25 : 2.2; lamp.material.emissiveIntensity = on ? 0 : 1; tv.material.color.setHex(on ? 0x111317 : 0x22262e);
+    say(on ? 'È andata via la corrente: la stanza è al buio.' : 'La corrente è tornata.'); }
+  return { g, tools:[{label:'Va via la corrente', fn(){ setDark(!dark); this.textContent = dark ? 'Torna la corrente' : 'Va via la corrente'; }}],
+    choose(i){ if (!dark){ setDark(true); const b = document.getElementById('t-blackout-0'); if (b) b.textContent = 'Torna la corrente'; }
+      flame.visible = i===0; beam.intensity = i===1 ? 6 : 0; [candle,torch,fridge].forEach((o,k)=>glow(o,0xffb000,k===i?.4:0));
+      const a = hinge.rotation.y, b = i===2 ? -1.3 : 0; tween(.6,q=>{ hinge.rotation.y = a+(b-a)*ease(q); });
+      if (i===0) say('Una candela accesa al buio può provocare un incendio.'); else if (i===1) say('Con la torcia vedi senza rischi. Ora scollega gli elettrodomestici.'); else say('Aprendo il frigorifero il freddo esce: tienilo chiuso.'); },
+    update(dt,t){ if (flame.visible) flame.scale.y = 1+.2*Math.sin(t*12); },
+    dispose(){ hemi.intensity = 1.6; sun.intensity = 2.2; } };
+ },
+ gas(){
+  const g = new THREE.Group(), EARTH = 0x9c8461;
+  g.add(at(part(box(.2,.16,.5), EARTH),-.32,.08,-.2), at(part(box(.18,.16,.5), EARTH),.33,.08,-.2), at(part(box(.84,.16,.1), EARTH),0,.08,-.4));
+  for (const [x,w] of [[-.32,.2],[.33,.18]]) g.add(at(part(box(w,.008,.5), 0x7fa35a, {edges:false}),x,.164,-.2));
+  g.add(at(part(box(.84,.008,.3), 0x7fa35a, {edges:false}),0,.004,.3));
+  const H = new THREE.Group(); g.add(H);
+  H.add(at(part(box(.46,.015,.36), 0xe6dfcf),.02,.0075,-.17), at(part(box(.46,.36,.015)),.02,.18,-.35), at(part(box(.015,.36,.36)),-.21,.18,-.17), at(part(box(.015,.36,.36)),.245,.18,-.17));
+  H.add(at(part(box(.3,.015,.36), 0xe6dfcf),-.06,.167,-.17));
+  for (let k=0;k<5;k++) H.add(at(part(box(.08,.012,.05), 0xd8cdb6),.19,.03+k*.03,-.3+k*.05));
+  const animal = new THREE.Group(); animal.add(at(part(box(.06,.022,.03), 0x8a6d4b),0,.012,0), at(part(new THREE.SphereGeometry(.016,10,8), 0x8a6d4b),.04,.014,0)); at(animal,-.1,.015,-.2); animal.rotation.y = .4; H.add(animal);
+  const co2 = part(box(1,1,1), 0x7d8fa8, {opacity:.0, edges:false, shadow:false, depthWrite:false}); H.add(co2);
+  const lab = textSprite('CO₂: non si vede', .03); at(lab,-.06,.08,-.04); lab.visible = false; g.add(lab);
+  const L1 = textSprite('Cantina', .03); at(L1,.02,.135,-.02); g.add(L1);
+  const p = pawn(); at(p,.19,.17,-.08); g.add(p);
+  let show = false, lvl = .5;
+  function setLvl(v){ lvl = v; const h = .01 + v*.12; co2.scale.set(.43,h,.34); co2.position.set(.02,.015+h/2,-.17); }
+  setLvl(.5);
+  function vis(){ co2.material.opacity = show ? .5 : 0; lab.visible = show; }
+  return { g, tools:[
+      {label:'Mostra il gas', fn(){ show = !show; vis(); this.textContent = show ? 'Nascondi il gas' : 'Mostra il gas';
+        say(show ? 'Così si vedrebbe la CO₂: pesante, si raccoglie in basso nella cantina. Nella realtà è invisibile e senza odore.' : 'Nella realtà la CO₂ non si vede e non ha odore.'); }},
+      {range:true, label:'Gas accumulato in cantina', min:0, max:100, value:50, fn(v){ setLvl(v/100); if (!show){ show = true; vis(); } }} ],
+    choose(i){ const T = [new THREE.Vector3(-.06,.015,-.18), new THREE.Vector3(.1,.004,.32), new THREE.Vector3(.12,.015,-.2)];
+      moveTo(p, T[i], 1.1, .06, ()=>{ glow(p, i===1 ? 0 : 0xd23a2f, i===1 ? 0 : .5); });
+      say(i===1 ? 'Sei all’aria aperta. Ora chiama il 112 e tieni lontane le altre persone.' : 'Sei rimasto dove si accumula il gas: è il punto più pericoloso.'); },
+    update(){} };
+ },
+ maremoto(){
+  const g = new THREE.Group();
+  g.add(at(part(box(.84,.02,.95), 0xe8d7a8),0,.01,-.03));
+  const wet = at(part(box(.84,.004,.3), 0xc6b48a, {edges:false}),0,.022,-.25); g.add(wet);
+  const sea = part(box(.84,.04,1), 0x3f86c9, {opacity:.8, edges:false, shadow:false}); g.add(sea);
+  const hill = part(new THREE.CylinderGeometry(.1,.2,.2,8), 0x8f9a5e); at(hill,.26,.1,.28); g.add(hill);
+  const hut = casetta(.12,.1,.1); at(hut,-.25,0,.3); g.add(hut);
+  const umb = new THREE.Group(); umb.add(at(part(new THREE.CylinderGeometry(.004,.004,.12,6), 0x8a8f99),0,.06,0), at(part(new THREE.ConeGeometry(.06,.03,10), 0xd23a2f),0,.13,0)); at(umb,-.05,0,0); g.add(umb);
+  const p = pawn(); at(p,.0,.02,.05); g.add(p);
+  let zFront = -.15;
+  function setSea(front){ zFront = front; const back = -.5, d = front-back; sea.scale.z = d; sea.position.set(0,.03,(front+back)/2); }
+  setSea(-.15);
+  function to(front, dur, after){ const a = zFront; tween(dur, q=>setSea(a+(front-a)*ease(q)), after); }
+  return { g, tools:[
+      {label:'Il mare si ritira', fn(){ to(-.42, 2); say('Il mare si ritira all’improvviso e scopre la spiaggia: è un segnale naturale di maremoto. Allontanati subito.'); }},
+      {label:'Arriva l’onda', fn(){ to(.24, 1.6); say('L’acqua invade la spiaggia. Chi è sulla collina è al sicuro; la prima onda può non essere la più grande.'); }},
+      {label:'Ricomincia', fn(){ setSea(-.15); p.position.set(0,.02,.05); say('La spiaggia è tornata com’era.'); }} ],
+    choose(i){ const T = [new THREE.Vector3(.02,.02,-.3), new THREE.Vector3(0,.02,.05), new THREE.Vector3(.26,.2,.28)]; moveTo(p, T[i], 1.3, .05); },
+    update(){} };
+ },
+ industriale(){
+  const g = new THREE.Group();
+  g.add(at(part(box(.84,.012,.95), 0xc9cfb8),0,.006,-.03));
+  const fab = new THREE.Group(); fab.add(at(part(box(.26,.12,.16), 0xbfc5cc),0,.06,0));
+  for (const x of [-.06,.06]) fab.add(at(part(new THREE.CylinderGeometry(.018,.022,.22,10), 0x9aa0a8),x,.17,-.03));
+  fab.add(at(part(new THREE.CylinderGeometry(.05,.05,.1,16), 0xd8dce1),.18,.05,.03)); at(fab,-.25,0,-.32); g.add(fab);
+  const home = new THREE.Group(); const hc = casetta(.2,.16,.16); home.add(hc);
+  const wins = []; [-.05,.05].forEach(x=>{ const w = at(part(box(.045,.05,.01), 0x9cc6ea),x,.1,.081); w.rotation.y = -1.2; home.add(w); wins.push(w); });
+  at(home,.22,0,.18); g.add(pick(home,1));
+  const school = new THREE.Group(); school.add(at(part(box(.2,.12,.12), 0xf0d9b5),0,.06,0), at(part(box(.004,.12,.004), 0x8a8f99),.12,.06,0), at(part(box(.04,.025,.003), 0x2f6fb5),.14,.11,0));
+  at(school,-.2,0,.28); g.add(pick(school,2));
+  const cloudMat = new THREE.MeshStandardMaterial({color:0xb7c45a, transparent:true, opacity:.4, depthWrite:false, roughness:1});
+  const puffs = []; for (let k=0;k<30;k++){ const s = new THREE.Mesh(new THREE.SphereGeometry(.03,8,6), cloudMat.clone()); s.userData.age = Math.random()*4; s.userData.j = Math.random()-.5; g.add(s); puffs.push(s); }
+  const p = pawn(); at(p,.05,0,.05); g.add(p);
+  let shut = false;
+  const W = new THREE.Vector3(.55,0,.6).normalize(), F = new THREE.Vector3(-.25,.26,-.35);
+  return { g, tools:[{label:'Chiudi porte e finestre', fn(){ shut = !shut; wins.forEach(w=>{ const a = w.rotation.y, b = shut ? 0 : -1.2; tween(.5,q=>{ w.rotation.y = a+(b-a)*ease(q); }); });
+      this.textContent = shut ? 'Riapri le finestre' : 'Chiudi porte e finestre';
+      say(shut ? 'Finestre chiuse e ventilazione spenta: la casa ti ripara dalla nube.' : 'Finestre aperte: con una nube in arrivo vanno chiuse.'); }}],
+    choose(i){ const T = [new THREE.Vector3(-.1,0,-.12), new THREE.Vector3(.22,0,.18), new THREE.Vector3(-.2,0,.4)];
+      moveTo(p, T[i], 1.3, .04, ()=>{ if (i===1){ p.visible = false; if (!shut){ document.getElementById('t-industriale-0')?.click(); } } });
+      p.visible = true; [null,home,school].forEach((o,k)=>o && glow(o,0xffb000,k===i?.4:0)); },
+    update(dt){ const sp = RM() ? .35 : 1;
+      puffs.forEach(s=>{ let a = s.userData.age += dt*sp; if (a>4){ a = s.userData.age = 0; s.userData.j = Math.random()-.5; }
+        s.position.set(F.x + W.x*a*.15 + s.userData.j*.08, F.y + a*.015, F.z + W.z*a*.15 - s.userData.j*.06);
+        s.scale.setScalar(.8+a*.7); s.material.opacity = .45*(1-a/4); }); } };
+ },
+ radiologico(){
+  const g = new THREE.Group(), room = new THREE.Group(); g.add(room);
+  room.add(at(part(box(.6,.02,.6), 0xe9e4d6),-.08,.01,-.15), at(part(box(.6,.4,.02)),-.08,.21,-.44), at(part(box(.02,.4,.6)),-.37,.21,-.15), at(part(box(.02,.4,.6)),.21,.21,-.15));
+  const win = new THREE.Group(); win.add(at(part(box(.16,.12,.012), 0xdfe8f2),0,0,0)); const pane = at(part(box(.07,.1,.01), 0x9cc6ea),.04,0,.01); win.add(pane); at(win,-.1,.25,-.43); room.add(win);
+  const fan = new THREE.Group(); for (let k=0;k<3;k++){ const b = part(box(.08,.004,.018), 0xb8c0ca); b.position.x = .04; const r = new THREE.Group(); r.rotation.y = k*2.09; r.add(b); fan.add(r); }
+  at(fan,-.08,.395,-.15); room.add(fan);
+  const tbl = new THREE.Group(); tbl.add(at(part(box(.2,.015,.14), 0xc79a63),0,.12,0)); for (const [x,z] of [[-.08,-.05],[.08,-.05],[-.08,.05],[.08,.05]]) tbl.add(at(part(new THREE.CylinderGeometry(.007,.007,.11,8), 0xb08654),x,.06,z)); at(tbl,-.15,0,-.1); room.add(tbl);
+  const radio = at(part(box(.06,.035,.03), 0x30353d),-.18,.145,-.1); room.add(radio);
+  const iodio = new THREE.Group(); iodio.add(at(part(box(.03,.04,.02), 0xf6f6f2),0,.02,0)); at(iodio,-.1,.128,-.08); room.add(pick(iodio,2));
+  const rings = []; for (let k=0;k<3;k++){ const r = new THREE.Mesh(new THREE.TorusGeometry(.03,.002,6,24), new THREE.MeshBasicMaterial({color:0x2f6fb5, transparent:true})); r.rotation.x = Math.PI/2; at(r,-.18,.17,-.1); r.userData.o = k/3; room.add(r); rings.push(r); }
+  const car = carro(0x2f6fb5); at(car,.33,0,.25); g.add(pick(car,0));
+  const p = pawn(); at(p,.0,.02,.2); g.add(p);
+  let closed = false, spin = 1;
+  return { g, tools:[{label:'Chiudi le finestre e spegni la ventilazione', fn(){ closed = !closed; spin = closed ? 0 : 1; const a = pane.position.x, b = closed ? -.04 : .04; tween(.5,q=>{ pane.position.x = a+(b-a)*ease(q); });
+      this.textContent = closed ? 'Riapri e riaccendi' : 'Chiudi le finestre e spegni la ventilazione';
+      say(closed ? 'Finestre chiuse e ventilazione spenta. Ora resta in un locale interno e ascolta la radio.' : 'Finestre aperte e ventilazione accesa.'); }}],
+    choose(i){ [car,null,iodio].forEach((o,k)=>o && glow(o,0xffb000,k===i?.5:0));
+      const T = [new THREE.Vector3(.33,0,.4), new THREE.Vector3(-.05,.02,-.25), new THREE.Vector3(-.08,.02,-.02)]; moveTo(p, T[i], 1.1, .05);
+      say(['Mettersi in viaggio espone di più: con il riparo al chiuso si resta in casa.','Sei al chiuso, in un locale interno. Segui la radio e i canali ufficiali.','Lo iodio si prende solo se lo dispongono le autorità sanitarie.'][i]); },
+    update(dt,t){ fan.rotation.y += dt*8*spin*(RM() ? .3 : 1); rings.forEach(r=>{ r.userData.o = (r.userData.o + dt*.5) % 1; const o = r.userData.o; r.scale.setScalar(1+o*2.5); r.material.opacity = .6*(1-o); }); } };
+ },
+ siccita(){
+  const g = new THREE.Group();
+  g.add(at(part(box(.84,.012,.95), 0xc9b48a),0,.006,-.03));
+  const crack = new THREE.Group(); for (let k=0;k<14;k++){ const c = part(box(.08,.003,.004), 0x7a6646, {edges:false, shadow:false}); c.rotation.y = k*1.3; at(c,-.3+((k*29)%60)/100,.013,.1+((k*17)%30)/100); crack.add(c); } g.add(crack);
+  const basin = new THREE.Group(); at(basin,-.15,0,-.3);
+  basin.add(at(part(box(.4,.015,.26), 0xb8b0a0),0,.008,0)); for (const [x,z,w,d] of [[0,-.13,.4,.012],[0,.13,.4,.012],[-.2,0,.012,.26],[.2,0,.012,.26]]) basin.add(at(part(box(w,.12,d), 0xd8d2c4),x,.06,z));
+  const water = part(box(.38,1,.24), 0x3f86c9, {opacity:.7, edges:false, shadow:false}); basin.add(water); g.add(basin);
+  const home = casetta(.18,.15,.15); at(home,.25,0,-.25); g.add(pick(home,1));
+  const car = carro(0x2f6fb5); at(car,.25,0,.22); g.add(pick(car,0));
+  const hose = new THREE.Mesh(new THREE.TorusGeometry(.05,.005,6,16,Math.PI*1.4), new THREE.MeshStandardMaterial({color:0x2e9e4f})); hose.rotation.x = Math.PI/2; at(hose,.14,.01,.22); g.add(hose);
+  const font = new THREE.Group(); font.add(at(part(new THREE.CylinderGeometry(.02,.025,.12,10), 0x8a8f99),0,.06,0), at(part(box(.04,.008,.008), 0x8a8f99),.02,.11,0)); at(font,-.3,0,.3); g.add(pick(font,2));
+  const p = pawn(); at(p,.05,0,.05); g.add(p);
+  function setLvl(v){ const h = .005 + v*.1; water.scale.y = h; water.position.y = .015+h/2;
+    say(v<.25 ? 'Il serbatoio è quasi vuoto: ogni litro risparmiato serve per bere e cucinare.' : v<.6 ? 'Il livello scende: è il momento delle ordinanze e del risparmio.' : 'Il serbatoio è ancora pieno.'); }
+  setLvl(.35);
+  return { g, tools:[{range:true, label:'Livello del serbatoio', min:0, max:100, value:35, fn(v){ setLvl(v/100); }}],
+    choose(i){ [car,home,font].forEach((o,k)=>glow(o,0xffb000,k===i?.45:0)); const T = [new THREE.Vector3(.13,0,.3), new THREE.Vector3(.2,0,-.1), new THREE.Vector3(-.26,0,.36)]; moveTo(p, T[i], 1, .04); },
+    update(){} };
  }
 };
 
 let current = null;
 function mount(i){
-  if (current){ anchor.remove(current.g); current.g.traverse(o=>{ o.geometry?.dispose(); if (o.material){ o.material.map?.dispose(); o.material.dispose(); } }); }
+  if (current){ current.dispose?.(); anchor.remove(current.g); current.g.traverse(o=>{ o.geometry?.dispose(); if (o.material){ o.material.map?.dispose(); o.material.dispose(); } }); }
   current = BUILD[CH[i].key](); anchor.add(current.g);
 }
 
@@ -446,8 +684,9 @@ function renderPanel(i){
     b.setAttribute('aria-pressed','false'); b.innerHTML = `<b aria-hidden="true">${'ABC'[k]}</b><span></span>`; b.querySelector('span').textContent = o.t;
     b.onclick = ()=>choose(k); opts.append(b); });
   $('answer').hidden = true; $('flapBtn').textContent = 'Alza il lembo e scopri la risposta';
-  $('src').innerHTML = ''; const a = document.createElement('a'); a.href = BASE + c.src.u.replace(/^\//,''); a.target = '_blank'; a.rel = 'noopener';
-  a.textContent = c.src.t; $('src').append('Per saperne di più: ', a, ' (sito del Gruppo, si apre in una nuova scheda).');
+  $('src').replaceChildren('Per saperne di più: ');
+  c.srcs.forEach((f,k)=>{ const a = document.createElement('a'); a.href = BASE + f.u.replace(/^\//,''); a.textContent = f.t; if (k) $('src').append('; '); $('src').append(a); });
+  $('src').append('.');
   say('');
 }
 function choose(k){
@@ -532,7 +771,7 @@ function loop(){
 /* ---------- Avvio ---------- */
 (async()=>{
   try{ await Promise.race([Promise.all([document.fonts.load(F(700,40)), document.fonts.load(F(400,40)), document.fonts.load(F(600,40))]), new Promise(r=>setTimeout(r,2500))]); }catch(_){}
-  const m = /^#capitolo-(\d)$/.exec(location.hash); chapter = m ? Math.min(CH.length, Math.max(1,+m[1]))-1 : 0;
+  const m = /^#capitolo-(\d{1,2})$/.exec(location.hash); chapter = m ? Math.min(CH.length, Math.max(1,+m[1]))-1 : 0;
   drawLeft(chapter); drawRight(chapter); mount(chapter); renderPanel(chapter);
   $('loading').remove(); resize(); loop();
   setTimeout(()=>$('hint').classList.add('off'), 9000);

@@ -401,7 +401,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/formazione/libro-che-si-esplora/">
   <div class="ms-card-icon"><i class="bi bi-book"></i></div>
   <p class="ms-card-title">Il libro che si esplora</p>
-  <p class="ms-card-desc">Libro di protezione civile in 3D: sei capitoli su terremoto, allagamenti, sottopassaggi, incendi, allerte e zaino di emergenza, con previsione e risposta da scoprire.</p>
+  <p class="ms-card-desc">Libro di protezione civile in 3D: quindici capitoli su terremoto, allagamenti, incendi, allerte, zaino, caldo, temporali, vento, blackout, gas, maremoto, incidenti industriali e radiologici, siccità, con previsione e risposta da scoprire.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/esperimenti/">
   <div class="ms-card-icon"><i class="bi bi-eyedropper"></i></div>

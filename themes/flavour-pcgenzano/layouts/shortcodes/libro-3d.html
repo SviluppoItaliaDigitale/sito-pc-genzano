@@ -3,7 +3,7 @@
   capitoli di autoprotezione. A sinistra testo e domanda, a destra un
   modellino interattivo; il lettore sceglie la sua previsione e alza il lembo
   per vedere la risposta.
-  Testi: data/libro_3d.yaml (capitoli) e data/codici_colore.yaml (capitolo 5),
+  Testi: data/libro_3d.yaml (capitoli, con una o più fonti) e data/codici_colore.yaml (capitolo 5),
   passati allo script nel blocco JSON #lb-dati e ripetuti sotto come versione
   testuale, che vale anche senza JavaScript o WebGL.
   Script: static/js/libro-3d.js (modulo), libreria in static/vendor/three/.
@@ -65,6 +65,6 @@
 {{- range site.Data.codici_colore.codici }}<li><strong>{{ .titolo }}.</strong> {{ .significato }} Cosa fare: {{ .cosa_fare }}</li>{{ end }}
 </ul>
 {{- end }}
-<p>Per saperne di più: <a href="{{ strings.TrimPrefix "/" $c.fonte.url | relURL }}">{{ $c.fonte.titolo }}</a>.</p>
+<p>Per saperne di più: {{ range $k, $f := $c.fonti }}{{ if $k }}; {{ end }}<a href="{{ strings.TrimPrefix "/" $f.url | relURL }}">{{ $f.titolo }}</a>{{ end }}.</p>
 {{- end }}
 </details>

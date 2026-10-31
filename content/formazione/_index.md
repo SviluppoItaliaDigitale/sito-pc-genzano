@@ -56,7 +56,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 <div class="consulta-rapida">
 {{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
 {{< link-card url="/formazione/crea-la-mia-lezione/" icon="bi-magic" titolo="Crea la mia lezione" desc="Classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti." >}}
-{{< link-card url="/formazione/libro-che-si-esplora/" icon="bi-book" titolo="Il libro che si esplora" desc="Sei capitoli in 3D: fai la tua previsione, prova sul modellino e alza il lembo per la risposta." >}}
+{{< link-card url="/formazione/libro-che-si-esplora/" icon="bi-book" titolo="Il libro che si esplora" desc="Quindici capitoli in 3D: fai la tua previsione, prova sul modellino e alza il lembo per la risposta." >}}
 {{< link-card url="/formazione/settimana-protezione-civile/" icon="bi-calendar-week" titolo="Settimana della protezione civile a scuola" desc="Un programma pronto per tutto l'istituto: un tema al giorno, il compito in famiglia, la prova del venerdì." >}}
 {{< link-card url="/formazione/scatola-delle-esercitazioni/" icon="bi-box-seam" titolo="Scatola delle esercitazioni" desc="Dalla lezione alla prova in aula: scenari, ruoli, carte degli imprevisti e discussione finale." >}}
 {{< link-card url="/formazione/dalla-carta-al-territorio/" icon="bi-signpost-split" titolo="Dalla carta al territorio" desc="L'uscita sui luoghi del Piano: cartelli, aree di attesa, acqua e DAE in cinque stazioni." >}}

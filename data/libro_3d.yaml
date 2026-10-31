@@ -1,111 +1,266 @@
 # Libro 3D «Il libro che si esplora» (/formazione/libro-che-si-esplora/).
 # Fonte unica dei testi: li leggono lo shortcode libro-3d (versione testuale
 # della pagina) e static/js/libro-3d.js (pagine del libro e pannello).
-# I testi riprendono le pagine canoniche indicate in «fonte»: se una di
+# I testi riprendono le pagine canoniche indicate in «fonti»: se una di
 # quelle pagine cambia un'indicazione, si aggiorna anche qui.
 # Il capitolo 5 legge i colori da data/codici_colore.yaml, non da qui.
 # chiave = nome della scena 3D in libro-3d.js: non cambiarla.
-aggiornato: "2026-10-31"
+aggiornato: '2026-10-31'
 capitoli:
-  - chiave: sisma
-    occhiello: "Capitolo 1 · Rischio sismico"
-    titolo: "La scossa"
-    intro: "Sei in casa e senti una scossa di terremoto. Hai pochi secondi per scegliere dove stare."
-    domanda: "Dove ti ripari durante la scossa?"
-    opzioni:
-      - testo: "Sotto il tavolo robusto"
-        giusta: true
-      - testo: "Vicino alla finestra"
-        perche: "Finestre, vetri e specchi possono rompersi: durante la scossa stai lontano."
-      - testo: "Giù per le scale, verso l’uscita"
-        perche: "Durante la scossa non correre fuori e non usare scale e ascensore."
-    risposta: "Riparati sotto un tavolo robusto, una scrivania o vicino a un muro portante, e proteggi la testa con le braccia o con un cuscino. Non precipitarti fuori durante la scossa, non usare scale e ascensore, stai lontano da finestre, vetri, specchi e mobili pesanti."
-    breve: "A · Sotto il tavolo robusto, proteggendo la testa. Lontano da finestre e mobili pesanti. Non usare scale e ascensore durante la scossa."
-    fonte:
-      titolo: "Rischio sismico: cosa fare durante la scossa"
-      url: "/rischi-prevenzione/rischio-sismico/#cosa-fare-durante"
-  - chiave: alluvione
-    occhiello: "Capitolo 2 · Rischio idrogeologico"
-    titolo: "L’acqua sale"
-    intro: "Piove da ore e l’acqua comincia a entrare in casa dal basso. Prima riempie i locali sotto il livello della strada."
-    domanda: "L’acqua entra in casa. Dove vai?"
-    opzioni:
-      - testo: "In cantina, a mettere al sicuro le cose"
-        perche: "Cantine e locali interrati sono i primi che l’acqua riempie: durante un allagamento non scenderci."
-      - testo: "Al piano più alto della casa"
-        giusta: true
-      - testo: "In garage, a spostare l’auto"
-        perche: "Cantine e garage si allagano per primi e la spinta dell’acqua può bloccare la porta. L’auto si sostituisce, una persona no."
-    risposta: "Sali ai piani alti della casa, senza usare l’ascensore. Durante l’allagamento non scendere in cantine, garage o locali interrati. Se puoi farlo senza rischi, chiudi il gas e stacca la corrente, ma non toccare gli impianti con mani o piedi bagnati."
-    breve: "B · Al piano più alto, senza ascensore. Non scendere in cantine, garage o locali interrati. Gas e corrente si chiudono solo se puoi farlo senza rischi."
-    fonte:
-      titolo: "Rischio idrogeologico: cosa fare durante l’evento"
-      url: "/rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante"
-  - chiave: sottopasso
-    occhiello: "Capitolo 3 · Strade allagate"
-    titolo: "Il sottopassaggio"
-    intro: "Sei in auto. La strada scende in un sottopassaggio e il fondo è coperto d’acqua. Da qui non vedi quanto è profonda."
-    domanda: "Davanti a te il sottopassaggio è allagato. Cosa fai?"
-    opzioni:
-      - testo: "Passo piano: l’acqua sembra bassa"
-        perche: "Pochi centimetri d’acqua bastano a far perdere aderenza o a spegnere il motore."
-      - testo: "Passo veloce, così non mi fermo"
-        perche: "Anche andando veloce non sai cosa c’è sotto l’acqua: l’auto può perdere il controllo o spegnersi."
-      - testo: "Torno indietro e cerco un’altra strada"
-        giusta: true
-    risposta: "Non attraversare mai un sottopassaggio o una strada allagata. Pochi centimetri d’acqua bastano a far perdere aderenza o a spegnere il motore, e sotto la superficie possono esserci buche o tombini aperti. Se l’auto si blocca e puoi uscire senza entrare nella corrente, lasciala e sali a piedi in un punto più alto. Se la corrente è forte, resta dentro e chiama il 112."
-    breve: "C · Torna indietro. Non attraversare mai un sottopassaggio allagato: sotto l’acqua possono esserci buche o tombini aperti."
-    fonte:
-      titolo: "Rischio idrogeologico: se sei in auto"
-      url: "/rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante"
-  - chiave: incendio
-    occhiello: "Capitolo 4 · Incendi boschivi"
-    titolo: "Il vento e il fumo"
-    intro: "Dal bosco vicino a casa sale una colonna di fumo e il vento la spinge. Prima di tutto chiami il 112."
-    domanda: "Puoi allontanarti in sicurezza. Da che parte vai?"
-    opzioni:
-      - testo: "Verso il fumo, per capire cosa succede"
-        perche: "Nel fumo la visibilità può annullarsi rapidamente: non sostare nelle strade percorse dal fumo."
-      - testo: "Dalla parte opposta al fumo e al fuoco"
-        giusta: true
-      - testo: "Verso le fiamme, per provare a spegnerle"
-        perche: "Non avvicinarti alle fiamme e non tentare di spegnere l’incendio da solo."
-    risposta: "Chiama subito il 112, indicando il luogo e la direzione del fumo. Se puoi allontanarti in sicurezza, fallo subito in direzione opposta a fumo e fuoco. Non avvicinarti alle fiamme e non tentare di spegnere l’incendio da solo. Non fuggire in salita davanti al fuoco. Se sei un bambino, avvisa subito un adulto."
-    breve: "B · Chiama il 112 e allontanati dalla parte opposta a fumo e fuoco. Non avvicinarti alle fiamme."
-    fonte:
-      titolo: "Rischio incendio: cosa fare durante l’incendio"
-      url: "/rischi-prevenzione/rischio-incendio/#cosa-fare-durante"
-  - chiave: allerta
-    occhiello: "Capitolo 5 · Allerte meteo"
-    titolo: "I colori dell’allerta"
-    intro: "I bollettini usano quattro colori. Ogni colore dice quanto possono essere intensi e diffusi i fenomeni previsti."
-    domanda: "Per domani è prevista allerta arancione. Cosa fai?"
-    opzioni:
-      - testo: "Niente di diverso: è solo pioggia"
-        perche: "L’arancione indica fenomeni che possono essere diffusi e pericolosi: serve prepararsi."
-      - testo: "Limito gli spostamenti e tengo pronto il kit"
-        giusta: true
-      - testo: "Vado a vedere il torrente che si gonfia"
-        perche: "Non sostare lungo i corsi d’acqua: i fossi si gonfiano molto in fretta."
-    risposta: "Con l’allerta arancione limita gli spostamenti allo stretto necessario, metti in sicurezza i beni nei locali interrati, tieni pronto il kit di emergenza e segui le indicazioni delle autorità."
-    breve: "B · Limita gli spostamenti, metti in sicurezza i beni nei locali interrati, tieni pronto il kit, segui le autorità."
-    fonte:
-      titolo: "Allerte meteo e codici colore"
-      url: "/allerte-meteo/"
-  - chiave: kit
-    occhiello: "Capitolo 6 · Kit di emergenza"
-    titolo: "Lo zaino pronto"
-    intro: "Uno zaino leggero, tenuto vicino all’uscita, da prendere al volo quando devi lasciare casa in pochi minuti."
-    domanda: "Quale di questi oggetti NON va nello zaino?"
-    opzioni:
-      - testo: "La torcia elettrica"
-        perche: "La torcia serve: è la luce sicura quando manca la corrente."
-      - testo: "La candela"
-        giusta: true
-      - testo: "Il fischietto"
-        perche: "Il fischietto serve: aiuta a farti trovare se sei bloccato."
-    risposta: "La candela resta fuori: per fare luce usa una torcia elettrica, perché le candele possono provocare un incendio. Nello zaino vanno documenti, farmaci, telefono con caricabatterie, torcia, fischietto, acqua e snack a lunga conservazione."
-    breve: "B · La candela. Per fare luce usa la torcia: le candele possono provocare un incendio."
-    fonte:
-      titolo: "Kit di emergenza: lo zaino da prendere al volo"
-      url: "/rischi-prevenzione/kit-emergenza/#kit-vai"
+- chiave: sisma
+  occhiello: Capitolo 1 · Rischio sismico
+  titolo: La scossa
+  intro: Sei in casa e senti una scossa di terremoto. Hai pochi secondi per scegliere dove stare.
+  domanda: Dove ti ripari durante la scossa?
+  opzioni:
+  - testo: Sotto il tavolo robusto
+    giusta: true
+  - testo: Vicino alla finestra
+    perche: 'Finestre, vetri e specchi possono rompersi: durante la scossa stai lontano.'
+  - testo: Giù per le scale, verso l’uscita
+    perche: Durante la scossa non correre fuori e non usare scale e ascensore.
+  risposta: Riparati sotto un tavolo robusto, una scrivania o vicino a un muro portante, e proteggi la testa con le braccia o con un cuscino. Non precipitarti fuori durante la scossa, non usare scale e ascensore, stai lontano da finestre, vetri, specchi e mobili pesanti.
+  breve: A · Sotto il tavolo robusto, proteggendo la testa. Lontano da finestre e mobili pesanti. Non usare scale e ascensore durante la scossa.
+  fonti:
+  - titolo: 'Rischio sismico: cosa fare durante la scossa'
+    url: /rischi-prevenzione/rischio-sismico/#cosa-fare-durante
+- chiave: alluvione
+  occhiello: Capitolo 2 · Rischio idrogeologico
+  titolo: L’acqua sale
+  intro: Piove da ore e l’acqua comincia a entrare in casa dal basso. Prima riempie i locali sotto il livello della strada.
+  domanda: L’acqua entra in casa. Dove vai?
+  opzioni:
+  - testo: In cantina, a mettere al sicuro le cose
+    perche: 'Cantine e locali interrati sono i primi che l’acqua riempie: durante un allagamento non scenderci.'
+  - testo: Al piano più alto della casa
+    giusta: true
+  - testo: In garage, a spostare l’auto
+    perche: Cantine e garage si allagano per primi e la spinta dell’acqua può bloccare la porta. L’auto si sostituisce, una persona no.
+  risposta: Sali ai piani alti della casa, senza usare l’ascensore. Durante l’allagamento non scendere in cantine, garage o locali interrati. Se puoi farlo senza rischi, chiudi il gas e stacca la corrente, ma non toccare gli impianti con mani o piedi bagnati.
+  breve: B · Al piano più alto, senza ascensore. Non scendere in cantine, garage o locali interrati. Gas e corrente si chiudono solo se puoi farlo senza rischi.
+  fonti:
+  - titolo: 'Rischio idrogeologico: cosa fare durante l’evento'
+    url: /rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante
+- chiave: sottopasso
+  occhiello: Capitolo 3 · Strade allagate
+  titolo: Il sottopassaggio
+  intro: Sei in auto. La strada scende in un sottopassaggio e il fondo è coperto d’acqua. Da qui non vedi quanto è profonda.
+  domanda: Davanti a te il sottopassaggio è allagato. Cosa fai?
+  opzioni:
+  - testo: 'Passo piano: l’acqua sembra bassa'
+    perche: Pochi centimetri d’acqua bastano a far perdere aderenza o a spegnere il motore.
+  - testo: Passo veloce, così non mi fermo
+    perche: 'Anche andando veloce non sai cosa c’è sotto l’acqua: l’auto può perdere il controllo o spegnersi.'
+  - testo: Torno indietro e cerco un’altra strada
+    giusta: true
+  risposta: Non attraversare mai un sottopassaggio o una strada allagata. Pochi centimetri d’acqua bastano a far perdere aderenza o a spegnere il motore, e sotto la superficie possono esserci buche o tombini aperti. Se l’auto si blocca e puoi uscire senza entrare nella corrente, lasciala e sali a piedi in un punto più alto. Se la corrente è forte, resta dentro e chiama il 112.
+  breve: 'C · Torna indietro. Non attraversare mai un sottopassaggio allagato: sotto l’acqua possono esserci buche o tombini aperti.'
+  fonti:
+  - titolo: 'Rischio idrogeologico: se sei in auto'
+    url: /rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante
+- chiave: incendio
+  occhiello: Capitolo 4 · Incendi boschivi
+  titolo: Il vento e il fumo
+  intro: Dal bosco vicino a casa sale una colonna di fumo e il vento la spinge. Prima di tutto chiami il 112.
+  domanda: Puoi allontanarti in sicurezza. Da che parte vai?
+  opzioni:
+  - testo: Verso il fumo, per capire cosa succede
+    perche: 'Nel fumo la visibilità può annullarsi rapidamente: non sostare nelle strade percorse dal fumo.'
+  - testo: Dalla parte opposta al fumo e al fuoco
+    giusta: true
+  - testo: Verso le fiamme, per provare a spegnerle
+    perche: Non avvicinarti alle fiamme e non tentare di spegnere l’incendio da solo.
+  risposta: Chiama subito il 112, indicando il luogo e la direzione del fumo. Se puoi allontanarti in sicurezza, fallo subito in direzione opposta a fumo e fuoco. Non avvicinarti alle fiamme e non tentare di spegnere l’incendio da solo. Non fuggire in salita davanti al fuoco. Se sei un bambino, avvisa subito un adulto.
+  breve: B · Chiama il 112 e allontanati dalla parte opposta a fumo e fuoco. Non avvicinarti alle fiamme.
+  fonti:
+  - titolo: 'Rischio incendio: cosa fare durante l’incendio'
+    url: /rischi-prevenzione/rischio-incendio/#cosa-fare-durante
+- chiave: allerta
+  occhiello: Capitolo 5 · Allerte meteo
+  titolo: I colori dell’allerta
+  intro: I bollettini usano quattro colori. Ogni colore dice quanto possono essere intensi e diffusi i fenomeni previsti.
+  domanda: Per domani è prevista allerta arancione. Cosa fai?
+  opzioni:
+  - testo: 'Niente di diverso: è solo pioggia'
+    perche: 'L’arancione indica fenomeni che possono essere diffusi e pericolosi: serve prepararsi.'
+  - testo: Limito gli spostamenti e tengo pronto il kit
+    giusta: true
+  - testo: Vado a vedere il torrente che si gonfia
+    perche: 'Non sostare lungo i corsi d’acqua: i fossi si gonfiano molto in fretta.'
+  risposta: Con l’allerta arancione limita gli spostamenti allo stretto necessario, metti in sicurezza i beni nei locali interrati, tieni pronto il kit di emergenza e segui le indicazioni delle autorità.
+  breve: B · Limita gli spostamenti, metti in sicurezza i beni nei locali interrati, tieni pronto il kit, segui le autorità.
+  fonti:
+  - titolo: Allerte meteo e codici colore
+    url: /allerte-meteo/
+- chiave: kit
+  occhiello: Capitolo 6 · Kit di emergenza
+  titolo: Lo zaino pronto
+  intro: Uno zaino leggero, tenuto vicino all’uscita, da prendere al volo quando devi lasciare casa in pochi minuti.
+  domanda: Quale di questi oggetti NON va nello zaino?
+  opzioni:
+  - testo: La torcia elettrica
+    perche: 'La torcia serve: è la luce sicura quando manca la corrente.'
+  - testo: La candela
+    giusta: true
+  - testo: Il fischietto
+    perche: 'Il fischietto serve: aiuta a farti trovare se sei bloccato.'
+  risposta: 'La candela resta fuori: per fare luce usa una torcia elettrica, perché le candele possono provocare un incendio. Nello zaino vanno documenti, farmaci, telefono con caricabatterie, torcia, fischietto, acqua e snack a lunga conservazione.'
+  breve: 'B · La candela. Per fare luce usa la torcia: le candele possono provocare un incendio.'
+  fonti:
+  - titolo: 'Kit di emergenza: lo zaino da prendere al volo'
+    url: /rischi-prevenzione/kit-emergenza/#kit-vai
+  - titolo: 'Blackout: torcia elettrica, non candele'
+    url: /rischi-prevenzione/blackout/#cosa-fare-durante
+- chiave: caldo
+  occhiello: Capitolo 7 · Ondate di calore
+  titolo: Il sole di mezzogiorno
+  intro: È in corso un’ondata di calore. Devi uscire per una commissione e puoi scegliere l’ora.
+  domanda: A che ora esci?
+  opzioni:
+  - testo: All’una, così faccio prima
+    perche: 'Dalle 11 alle 18 sono le ore più calde: in quella fascia non uscire e non fare sforzi.'
+  - testo: Prima delle 11 o dopo le 18
+    giusta: true
+  - testo: Alle tre, con il cappello va bene
+    perche: Il cappello aiuta, ma dalle 11 alle 18 è meglio restare al fresco.
+  risposta: Non uscire nelle ore più calde, dalle 11 alle 18. Bevi molta acqua anche se non senti sete, indossa abiti leggeri e chiari, cappello e occhiali da sole, e abbassa le tapparelle nelle ore di sole diretto. Non lasciare mai persone o animali in auto parcheggiate al sole.
+  breve: B · Prima delle 11 o dopo le 18. Bevi spesso, tieni le tapparelle abbassate, mai persone o animali in auto al sole.
+  fonti:
+  - titolo: 'Ondate di calore: cosa fare durante'
+    url: /rischi-prevenzione/ondate-di-calore/#cosa-fare-durante
+- chiave: temporale
+  occhiello: Capitolo 8 · Temporali intensi
+  titolo: Il fulmine
+  intro: Sei in un prato aperto e arriva un temporale con fulmini. C’è un albero isolato, una tettoia leggera, un’auto e una casa in muratura.
+  domanda: Dove ti ripari?
+  opzioni:
+  - testo: Sotto l’albero isolato
+    perche: 'Gli alberi isolati sono bersagli naturali per i fulmini: allontanati.'
+  - testo: Sotto la tettoia leggera
+    perche: 'Le tettoie e le strutture precarie non proteggono: non ripararti lì.'
+  - testo: Nella casa in muratura o in auto con i finestrini chiusi
+    giusta: true
+  risposta: Entra in un edificio solido o in auto con i finestrini chiusi. Allontanati da alberi isolati, pali metallici, tralicci e recinzioni metalliche, e non ripararti sotto tettoie o strutture precarie. In casa scollega gli apparecchi elettrici e allontanati da finestre e porte finestre.
+  breve: C · In un edificio solido o in auto con i finestrini chiusi. Mai sotto alberi isolati o tettoie.
+  fonti:
+  - titolo: 'Temporali intensi: cosa fare durante'
+    url: /rischi-prevenzione/temporali-intensi/#cosa-fare-durante
+- chiave: vento
+  occhiello: Capitolo 9 · Vento forte
+  titolo: Le raffiche
+  intro: Cammini per strada e il vento soffia a raffiche fortissime. Intorno ci sono un cartellone, un’impalcatura, un albero e un palazzo.
+  domanda: Che cosa fai?
+  opzioni:
+  - testo: Mi fermo sotto il cornicione del palazzo
+    perche: 'Non sostare sotto cornicioni o strutture sospese: possono cadere pezzi.'
+  - testo: Entro in un edificio e sto lontano dalle finestre
+    giusta: true
+  - testo: Mi riparo dietro il cartellone
+    perche: Cartelloni, impalcature, alberi e pali della luce sono proprio ciò da cui allontanarsi.
+  risposta: Se possibile rimani in casa, lontano da finestre e vetrate, con porte e finestre chiuse. Se sei all’aperto allontanati da alberi, pali della luce, impalcature e cartelloni, e non sostare sotto cornicioni o strutture sospese.
+  breve: B · Entra in un edificio, lontano dalle finestre. Fuori stai lontano da alberi, impalcature, cartelloni e cornicioni.
+  fonti:
+  - titolo: 'Vento forte: cosa fare durante'
+    url: /rischi-prevenzione/vento-forte/#cosa-fare-durante
+- chiave: blackout
+  occhiello: Capitolo 10 · Blackout
+  titolo: Al buio
+  intro: È sera e va via la corrente in tutto il quartiere. In casa è buio.
+  domanda: Che cosa fai per prima cosa?
+  opzioni:
+  - testo: Accendo le candele
+    perche: 'Le candele possono provocare un incendio: per fare luce usa la torcia elettrica.'
+  - testo: Prendo la torcia e scollego gli elettrodomestici
+    giusta: true
+  - testo: Apro il frigorifero per controllare il cibo
+    perche: 'Tieni chiusi frigorifero e congelatore: il cibo si conserva per molte ore senza aprirli.'
+  risposta: 'Mantieni la calma: i blackout sono di solito temporanei. Usa la torcia elettrica, non le candele. Scollega gli elettrodomestici e lascia accesa una sola lampada per accorgerti del ripristino. Tieni chiusi frigorifero e congelatore. Non usare generatori a combustibile in locali chiusi.'
+  breve: B · Torcia elettrica, non candele. Scollega gli elettrodomestici e tieni chiusi frigorifero e congelatore.
+  fonti:
+  - titolo: 'Blackout: cosa fare durante'
+    url: /rischi-prevenzione/blackout/#cosa-fare-durante
+- chiave: gas
+  occhiello: Capitolo 11 · Rischio vulcanico e gas
+  titolo: Il gas che non si vede
+  intro: Il territorio dei Colli Albani può liberare anidride carbonica dal suolo. È un gas invisibile e senza odore, più pesante dell’aria, che si raccoglie in cantine, pozzi e scantinati poco aerati.
+  domanda: Entri in cantina, ti gira la testa e vedi un animale a terra immobile. Cosa fai?
+  opzioni:
+  - testo: Scendo a prendere l’animale
+    perche: 'Non entrare a soccorrere in uno spazio chiuso dove qualcuno è a terra: diventeresti la seconda vittima.'
+  - testo: Esco subito all’aria aperta e chiamo il 112
+    giusta: true
+  - testo: Resto a controllare meglio che cosa succede
+    perche: 'Non tornare indietro a «controllare meglio»: esci subito all’aria aperta.'
+  risposta: 'Esci immediatamente all’aria aperta e non tornare indietro. Chiama il 112 dicendo «sospetto di gas in spazio confinato»: arrivano i Vigili del Fuoco con gli autorespiratori. Non entrare a soccorrere chi è a terra e tieni lontane le altre persone.'
+  breve: 'B · Esci subito all’aria aperta e chiama il 112. Non entrare a soccorrere: arrivano i Vigili del Fuoco con gli autorespiratori.'
+  fonti:
+  - titolo: 'Rischio vulcanico: sospetto di accumulo di CO₂'
+    url: /rischi-prevenzione/rischio-vulcanico/#durante-co2
+- chiave: maremoto
+  occhiello: Capitolo 12 · Maremoto
+  titolo: Il mare si ritira
+  intro: Sei al mare, sul litorale laziale. All’improvviso il mare si ritira e lascia scoperto un tratto di spiaggia insolitamente ampio.
+  domanda: Cosa fai?
+  opzioni:
+  - testo: Vado a vedere da vicino
+    perche: 'Non scendere verso il mare per guardare o fotografare: i minuti contano.'
+  - testo: Aspetto un avviso ufficiale
+    perche: 'Se riconosci i segnali naturali non aspettare la conferma: allontanati subito.'
+  - testo: Mi allontano a piedi verso un punto alto
+    giusta: true
+  risposta: 'Allontanati subito dalla spiaggia a piedi e raggiungi un punto alto, senza aspettare un messaggio ufficiale. Se non puoi, sali ai piani alti di un edificio solido. Evita l’auto: le strade costiere si bloccano. Resta in alto fino al cessato allarme: la prima onda può non essere la più grande.'
+  breve: C · A piedi verso un punto alto, subito. Non aspettare l’avviso e non tornare in spiaggia dopo la prima onda.
+  fonti:
+  - titolo: 'Maremoto: segnali e cosa fare'
+    url: /rischi-prevenzione/maremoto/#segnali
+- chiave: industriale
+  occhiello: Capitolo 13 · Rischio industriale
+  titolo: La nube
+  intro: Un incidente in un impianto vicino libera una nube di sostanze pericolose. Le autorità chiedono alla popolazione di proteggersi.
+  domanda: Cosa fai?
+  opzioni:
+  - testo: Scappo a piedi attraversando la nube
+    perche: 'Non attraversare la nube a piedi o in auto: il riparo al chiuso è quasi sempre più sicuro.'
+  - testo: Entro in casa, chiudo porte e finestre e spengo la ventilazione
+    giusta: true
+  - testo: Corro a prendere i bambini a scuola
+    perche: 'La scuola applica il suo piano di emergenza: portarli fuori li esporrebbe alla nube.'
+  risposta: Entra nell’edificio chiuso più vicino, chiudi porte e finestre, spegni ventilazione, condizionatori e caldaie, sigilla gli spifferi con panni umidi e sali ai piani alti. Ascolta i canali ufficiali ed esci solo se le autorità dispongono l’evacuazione.
+  breve: 'B · Riparati al chiuso: porte e finestre chiuse, ventilazione spenta, piani alti. Segui i canali ufficiali.'
+  fonti:
+  - titolo: 'Rischio industriale: cosa fare durante'
+    url: /rischi-prevenzione/rischio-industriale/#cosa-fare-durante
+- chiave: radiologico
+  occhiello: Capitolo 14 · Emergenza radiologica
+  titolo: Il riparo al chiuso
+  intro: 'Un’emergenza radiologica: le autorità dispongono il riparo al chiuso per la popolazione della zona.'
+  domanda: Cosa fai?
+  opzioni:
+  - testo: Prendo l’auto e mi allontano
+    perche: Se è disposto il riparo al chiuso, mettersi in viaggio espone di più.
+  - testo: Resto in casa, chiudo tutto e seguo i canali ufficiali
+    giusta: true
+  - testo: Prendo lo iodio che ho in casa
+    perche: 'Lo iodio si assume solo se e quando le autorità sanitarie lo dispongono: da soli è inutile o dannoso.'
+  risposta: Segui le indicazioni delle autorità. Con il riparo al chiuso resta in casa, chiudi porte e finestre, spegni ventilazione e condizionatori e stai in un locale interno. Se eri all’aperto togli i vestiti esterni, chiudili in un sacchetto e fai una doccia. Assumi iodio solo se le autorità sanitarie lo dispongono e non rilanciare voci non verificate.
+  breve: B · Resta in casa con porte e finestre chiuse e ventilazione spenta. Iodio solo se lo dispongono le autorità sanitarie.
+  fonti:
+  - titolo: 'Rischio nucleare e radiologico: cosa fare durante'
+    url: /rischi-prevenzione/rischio-nucleare-radiologico/#cosa-fare-durante
+- chiave: siccita
+  occhiello: Capitolo 15 · Siccità
+  titolo: L’acqua che manca
+  intro: 'Non piove da mesi e il Comune ha emesso un’ordinanza per la crisi idrica: l’acqua potabile va risparmiata.'
+  domanda: Cosa fai?
+  opzioni:
+  - testo: 'Lavo l’auto lo stesso: è poca acqua'
+    perche: Lavare l’auto, riempire piscine e irrigare prati sono proprio gli usi che le ordinanze limitano.
+  - testo: Rispetto i divieti e riduco i consumi
+    giusta: true
+  - testo: Bevo dalla fontanella di campagna non controllata
+    perche: 'Non bere acqua di pozzi, sorgenti o fontanili non controllati: la scarsità non la rende sicura.'
+  risposta: 'Rispetta le ordinanze comunali: l’acqua risparmiata serve agli usi potabili. Fai docce più brevi, chiudi il rubinetto mentre ti lavi i denti, riusa l’acqua delle verdure per le piante. Se l’erogazione è sospesa a fasce orarie riempi contenitori puliti e tienili coperti. Controlla che le persone fragili del vicinato abbiano acqua.'
+  breve: B · Rispetta le ordinanze e riduci i consumi. Non usare acqua potabile per usi non essenziali.
+  fonti:
+  - titolo: 'Siccità: cosa fare durante'
+    url: /rischi-prevenzione/siccita/#cosa-fare-durante
