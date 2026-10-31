@@ -28,18 +28,20 @@ In questa sezione puoi consultare la **mappa interattiva** e le tabelle con i pu
 
 Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un evento sismico** o in caso di evacuazione. Qui verrai censito e riceverai le prime informazioni.
 
-| ID | Denominazione | Indirizzo |
-|---|---|---|
-| AA1 | Palazzo Sforza Cesarini | Piazza Tommaso Frasconi |
-| AA2 | Via Piave | Parcheggio Via Piave |
-| AA3 | Via Toscana | Parcheggio incrocio Via Toscana / Via Lazio |
-| AA4 | Via Enrico Mattei | Parcheggio Via Enrico Mattei |
-| AA5 | Via Napoli | Parcheggio incrocio Via Napoli / Via Emilia Romagna |
-| AA6 | Palazzetto dello Sport | Parcheggio Via G. di Vittorio |
-| AA7 | Carlo Alberto dalla Chiesa | Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia |
-| AA8 | Zona Industriale | Parcheggio Via del Lavoro |
-| AA9 | Colli di Cicerone | Parcheggio Via Colli di Cicerone |
-| AA10 | Landi | Piazzale Frazione Landi |
+| ID | Denominazione | Indirizzo | Nel Piano comunale |
+|---|---|---|---|
+| AA1 | Palazzo Sforza Cesarini | Piazza Tommaso Frasconi | «Via Corso Vecchio» |
+| AA2 | Via Piave | Parcheggio Via Piave | — |
+| AA3 | Via Toscana | Parcheggio incrocio Via Toscana / Via Lazio | — |
+| AA4 | Via Enrico Mattei | Parcheggio Via Enrico Mattei | — |
+| AA5 | Via Napoli | Parcheggio incrocio Via Napoli / Via Emilia Romagna | «Via Napoli incrocio Via Lenin» |
+| AA6 | Palazzetto dello Sport | Parcheggio Via G. di Vittorio | «Piazzale G. Cesaroni» |
+| AA7 | Carlo Alberto dalla Chiesa | Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia | — |
+| AA8 | Zona Industriale | Parcheggio Via del Lavoro | — |
+| AA9 | Colli di Cicerone | Parcheggio Via Colli di Cicerone | «Via Mecenate» |
+| AA10 | Landi | Piazzale Frazione Landi | «Piazza Lotte Contadine» |
+
+*Il codice dell'area è quello scritto sul cartello. La colonna «Nel Piano comunale» riporta l'indirizzo che il testo del [Piano di Emergenza Comunale](/piano-emergenza/) scrive per quell'area quando è diverso dal nostro, che indica l'accesso e i cartelli sul territorio; il trattino vuol dire che il Piano indica lo stesso luogo. Quando il Comune avrà confermato quale indirizzo usare, aggiorneremo la tabella.*
 
 ## Aree di ammassamento soccorritori (AS)
 
@@ -54,12 +56,14 @@ Aree destinate al **raggruppamento di uomini e mezzi di soccorso** provenienti d
 
 Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove vengono allestiti i primi ripari.
 
-| ID | Denominazione | Indirizzo |
-|---|---|---|
-| AR1 | Palazzetto dello Sport | Area esterna Palazzetto dello Sport, Via G. di Vittorio |
-| AR2 | Campo Sportivo Via Sicilia | Via Sicilia *(nel testo del Piano è indicata come "Via Piemonte"; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)* |
-| AR3 | Campo Sportivo Via Sardegna | Via Sardegna |
-| AR4 | Campo Sportivo Don Bosco (Salesiani) | Viale Piave angolo Via Lega Latina |
+| ID | Denominazione | Indirizzo | Nel Piano comunale |
+|---|---|---|---|
+| AR1 | Palazzetto dello Sport | Area esterna Palazzetto dello Sport, Via G. di Vittorio | «Via G. Cesaroni» |
+| AR2 | Campo Sportivo Via Sicilia | Via Sicilia | «Via Piemonte incrocio con Via Emilia Romagna» |
+| AR3 | Campo Sportivo Via Sardegna | Via Sardegna | — |
+| AR4 | Campo Sportivo Don Bosco (Salesiani) | Viale Piave angolo Via Lega Latina | «Viale Mazzini» |
+
+*Il codice dell'area è quello scritto sul cartello. La colonna «Nel Piano comunale» riporta l'indirizzo che il testo del [Piano di Emergenza Comunale](/piano-emergenza/) scrive per quell'area quando è diverso dal nostro, che indica l'accesso e i cartelli sul territorio; il trattino vuol dire che il Piano indica lo stesso luogo. Quando il Comune avrà confermato quale indirizzo usare, aggiorneremo la tabella.*
 
 ## Segnaletica delle aree di emergenza
 

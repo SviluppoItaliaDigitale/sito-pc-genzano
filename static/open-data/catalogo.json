@@ -15,13 +15,14 @@
         "nome": "CC BY 4.0",
         "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
       },
-      "aggiornato_il": "2026-10-13",
+      "aggiornato_il": "2026-10-31",
       "record": 16,
       "campi": [
         "id",
         "tipo",
         "nome",
         "indirizzo",
+        "indirizzo_piano",
         "lat",
         "lon",
         "verified"
