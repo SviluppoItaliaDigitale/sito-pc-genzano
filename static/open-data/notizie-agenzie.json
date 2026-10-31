@@ -5,11 +5,35 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-30T23:07:01+00:00",
+  "generato": "2026-10-31T02:24:31+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-30T23:28:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1 Messico: la Ferrari di Leclerc domina le seconde libere, quarto tempo per Antonelli",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-messico-la-ferrari-di-leclerc-domina-le-seconde-libere-quarto-tempo-per-mercedes_589e3c5d-754b-421f-ac8b-2cdadb46b4a2.html"
+  },
+  {
+   "data": "2026-10-30T23:19:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: giù l'Irpef per 3,2 milioni di persone, dalle banche 5,8 miliardi",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/manovra-giu-lirpef-per-32-milioni-di-persone-dalle-banche-58-miliardi_a2553a3a-6200-46b4-bebd-ed940ffd56e8.html"
+  },
+  {
+   "data": "2026-10-30T23:11:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il campo largo accelera, subito il programma e primarie entro febbraio",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/31/il-campo-largo-accelera-subito-il-programma-e-primarie-entro-febbraio_2e10ed14-2959-47b6-8f4d-4c06f9726eee.html"
+  },
+  {
+   "data": "2026-10-30T23:05:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pensioni, pagamento dal 2 novembre: conguagli 730 sul cedolino e dal 2027 notifiche digitali con Send",
+   "url": "https://www.adnkronos.com/economia/pensioni-pagamento-inps-ultime-notizie_1sgYi10Mp9ZWybucaC7kY4"
+  },
   {
    "data": "2026-10-30T23:04:03+00:00",
    "fonte": "ADNKRONOS",
@@ -83,12 +107,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-10-30T21:16:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra: giù l'Irpef per 3,2 milioni di persone, dalle banche 5,8 miliardi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/manovra-giu-lirpef-per-32-milioni-di-persone-dalle-banche-58-miliardi_a2553a3a-6200-46b4-bebd-ed940ffd56e8.html"
-  },
-  {
    "data": "2026-10-30T20:46:53+00:00",
    "fonte": "ANSA",
    "titolo": "A Cuba blackout fino a 30 ore e acqua contaminata, 2,7 milioni senza rifornimenti",
@@ -101,16 +119,16 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/polonia-corte-costituzionale-polizia-news_F5kEIm6aYW281MISWIBrP"
   },
   {
-   "data": "2026-10-30T20:03:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il caro energia fa danni, vola l'inflazione e la crescita si ferma",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/il-caro-energia-fa-danni-vola-linflazione-e-la-crescita-si-ferma_6ea6c523-9671-4e3d-b1df-e2cfbfa1e6fd.html"
-  },
-  {
    "data": "2026-10-30T19:57:44+00:00",
    "fonte": "ANSA",
    "titolo": "Maxi attacco hacker contro Binance, 'é il furto del secolo'",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/maxi-attacco-hacker-contro-binance-e-il-furto-del-secolo-_3aea9536-ba98-4317-b834-8d48a442e54e.html"
+  },
+  {
+   "data": "2026-10-30T19:51:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Israele rischia la paralisi', scatta il risiko delle coalizioni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/israele-rischia-la-paralisi-scatta-il-risiko-delle-coalizioni-_50079fc1-fae9-4272-902c-0b7444893f9d.html"
   },
   {
    "data": "2026-10-30T19:46:25+00:00",
@@ -161,12 +179,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/ci-opprimono-con-la-paura-i-volti-della-protesta_e1dce918-64b7-4fe1-a8ee-6eeaadeac31d.html"
   },
   {
-   "data": "2026-10-30T19:08:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il campo largo accelera, subito il programma e primarie entro febbraio",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/30/i-leader-del-campo-largo-il-programma-a-novembre-le-primarie-a-febbraio_2e10ed14-2959-47b6-8f4d-4c06f9726eee.html"
-  },
-  {
    "data": "2026-10-30T19:02:47+00:00",
    "fonte": "ANSA",
    "titolo": "Parla Christa Pike: 'Ero pronta a morire, ora soffro nel corpo e nell'anima'",
@@ -177,18 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "++ Cariche in pieno centro al corteo Torino ++",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/-cariche-in-pieno-centro-al-corteo-torino-_3144aad1-19ef-49ff-b9d7-e3864b8044cd.html"
-  },
-  {
-   "data": "2026-10-30T18:54:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sciopero generale, cortei in tutta Italia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-cortei-in-tutta-italia_27f8d4bf-d6d2-4835-9a1c-7a2d6c5ed3ab.html"
-  },
-  {
-   "data": "2026-10-30T18:49:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La rabbia nei porti: 'Non vogliamo lavorare per la guerra'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/la-rabbia-nei-porti-non-vogliamo-lavorare-per-la-guerra_b8eabe48-c8eb-40f8-84d3-5c4a5f407cdb.html"
   }
  ]
 }
