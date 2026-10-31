@@ -5,11 +5,143 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-31T18:49:48+00:00",
+  "generato": "2026-10-31T22:17:15+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-31T22:15:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Lite in stazione finisce a coltellate, un morto nel Frusinate",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/lite-in-stazione-finisce-a-coltellate-un-morto-nel-frusinate_e17181ed-8783-4645-9bb2-d90dbf2164c7.html"
+  },
+  {
+   "data": "2026-10-31T22:06:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Milan rinasce nel derby con show di Moreira, Inter vede le streghe",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/31/serie-a-milan-inter-in-campo-alle-20.45-diretta_00f71d0c-a85e-4c9d-b003-c9ba0d43461d.html"
+  },
+  {
+   "data": "2026-10-31T21:25:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Caos in Polonia. Tusk: 'Il partito PiS vuole distruggere la democrazia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/caos-in-polonia.-tusk-il-partito-pis-vuole-distruggere-la-democrazia_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
+  },
+  {
+   "data": "2026-10-31T21:25:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, Cgil: \"Al di là delle peggiori aspettative, governo vive su un altro pianeta\". Scontro sulla scuola",
+   "url": "https://www.adnkronos.com/economia/manovra-legge-di-bilancio-scontro-su-scuola_647Qs3LMDTMabGSNGjZwkA"
+  },
+  {
+   "data": "2026-10-31T21:16:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, la confessione di Aurora Ramazzotti: \"Ero una bestia consumata dalla gelosia\"",
+   "url": "https://www.adnkronos.com/spettacoli/aurora-ramazzotti-ballando-31-ottobre_3RhfMgdDWu1CbqQH4PpGmJ"
+  },
+  {
+   "data": "2026-10-31T20:46:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le stelle, Safroncik e l''incidente in scena': \"Non volevo restare nuda\"",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-safroncik-incidente-abito-31-ottobre_3CY3Ow9n6fcRqXJPgNAdTr"
+  },
+  {
+   "data": "2026-10-31T20:43:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra, scontro sulla scuola. Banche ancora sotto tiro",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-scontro-sulla-scuola.-banche-ancora-sotto-tiro_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html"
+  },
+  {
+   "data": "2026-10-31T20:19:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Parigi ancora scontri a fine corteo, 'dai casseurs violenza inaudita'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/a-parigi-ancora-scontri-a-fine-corteo-dai-casseurs-violenza-inaudita_2c093ef1-cc85-4d03-bcc4-4d553004fd49.html"
+  },
+  {
+   "data": "2026-10-31T20:05:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi le qualifiche del Gp del Messico - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-qualifiche-gp-messico-oggi-live-formula-1_2NEwGHKIoKMvR3gZtzDJv3"
+  },
+  {
+   "data": "2026-10-31T20:02:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Svastiche e scritte inneggianti al nazismo, sdegno in Valtellina",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/svastiche-e-scritte-inneggianti-al-nazismo-sdegno-in-valtellina_79cc36e3-5780-4d8b-bdbf-2c5908d2a8ab.html"
+  },
+  {
+   "data": "2026-10-31T20:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione oggi 31 ottobre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-numeri-fortunati_tpkHKpLOzNcFtGtkQO4SM"
+  },
+  {
+   "data": "2026-10-31T19:57:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Iran, Khamenei avverte Trump: 'Se ci attaccate risposta senza confini'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/iran-khamenei-avverte-trump-se-ci-attaccate-risposta-senza-confini_3cf54edb-3eec-4388-ae57-c19b268c5d39.html"
+  },
+  {
+   "data": "2026-10-31T19:46:23+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bimbo di un anno e mezzo muore soffocato da un pezzo di mela",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/bimbo-di-un-anno-e-mezzo-muore-soffocato-da-un-pezzo-di-mela_c0143d45-707a-4679-b09d-3672604d13c8.html"
+  },
+  {
+   "data": "2026-10-31T19:39:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Rush finale alle midterm, Trump teme l'ondata dem",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/31/rush-finale-alle-midterm-trump-teme-londata-dem_288d891f-ad1f-4645-a886-37370d72fb4c.html"
+  },
+  {
+   "data": "2026-10-31T19:28:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'In tempi non facili il futuro va disegnato dai giovani'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/31/mattarella-in-tempi-non-facili-il-futuro-va-disegnato-dai-giovani_e2a91df1-6af8-446d-84e6-81a88fd1c741.html"
+  },
+  {
+   "data": "2026-10-31T19:23:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gp del Messico, Norris il più veloce nelle terze libere",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/31/gp-messico-norris-il-piu-veloce-nelle-terze-libere_2b699849-5c0a-43dc-8ffc-b730ed632af2.html"
+  },
+  {
+   "data": "2026-10-31T19:15:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conte a Schlein: \"Garanzie su Renzi o M5S non ci sta. Riproporremo il reddito di cittadinanza\"",
+   "url": "https://www.adnkronos.com/politica/conte-schlein-centrosinistra-campo-largo-ultime-news_4pVZ9L4Key11m7agPmSr4g"
+  },
+  {
+   "data": "2026-10-31T19:06:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giallo a Mosca, allerta Usa su un possibile attentato al Museo Tsaritsyno",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/gli-usa-avvertono-mosca-minaccia-credibile-al-museo-tsaritsyno_bc7f5a80-5264-4ebd-9762-2bb45b1ec8a0.html"
+  },
+  {
+   "data": "2026-10-31T19:04:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dona il fegato a 98 anni e salva una vita",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/dona-il-fegato-a-98-anni-e-salva-una-vita_66acf73b-9e57-4a48-bff7-b72c19a881d8.html"
+  },
+  {
+   "data": "2026-10-31T19:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, bimbo di un anno e mezzo muore soffocato da un pezzo di mela",
+   "url": "https://www.adnkronos.com/cronaca/bambino-muore-soffocato-mela_7ItijyUNpAF6klwySvlPsE"
+  },
+  {
+   "data": "2026-10-31T19:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Milan-Inter 3-1: Pulisic, Rabiot e Moreira regalano derby e quarto posto ai rossoneri",
+   "url": "https://www.adnkronos.com/sport/diretta-milan-inter-oggi-serie-a-live_7ssuhUTitimDITsxAghycF"
+  },
+  {
+   "data": "2026-10-31T18:59:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Hanno incitato alla violenza nelle piazze', 60 perquisizioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/hanno-incitato-alla-violenza-nelle-piazze-60-perquisizioni_449404aa-1c37-4c96-aa63-5089df5221ae.html"
+  },
   {
    "data": "2026-10-31T18:43:08+00:00",
    "fonte": "ANSA CRONACA",
@@ -17,40 +149,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/bomba-dacqua-nel-foggiano-strade-invase-da-fango-e-detriti_aafe9b06-a9c5-4db0-9907-ceb66aecc147.html"
   },
   {
-   "data": "2026-10-31T18:40:38+00:00",
+   "data": "2026-10-31T18:40:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Manovra, Salvini: \"Targhe personalizzate portano soldi ma io non la farò\"",
    "url": "https://www.adnkronos.com/politica/targhe-personalizzate-manovra-come-funzionano_eBt8kfuko0PILZPG9K02R"
-  },
-  {
-   "data": "2026-10-31T18:37:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Udinese-Roma in campo 2-4 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/31/serie-a-udinese-roma-in-campo-2-4-diretta_96639d9b-7d3f-4276-a644-4e831a1fc20e.html"
-  },
-  {
-   "data": "2026-10-31T18:36:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Proteste in Francia, in calo il numero dei manifestanti. Scontri al termine del corteo a Parigi",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/proteste-in-francia-in-calo-il-numero-dei-manifestanti.-scontri-al-termine-del-corteo_2c093ef1-cc85-4d03-bcc4-4d553004fd49.html"
-  },
-  {
-   "data": "2026-10-31T18:34:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli Usa avvertono Mosca: 'Minaccia credibile al museo Tsaritsyno'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/gli-usa-avvertono-mosca-minaccia-credibile-al-museo-tsaritsyno_bc7f5a80-5264-4ebd-9762-2bb45b1ec8a0.html"
   },
   {
    "data": "2026-10-31T18:27:58+00:00",
    "fonte": "ANSA",
    "titolo": "Il parto sull'autobus, la conducente racconta: 'Un abbraccio di umanità'",
    "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/31/bologna-partorisce-in-bus-con-laiuto-della-conducente-momento-emozionante_aa77610c-a65b-4a1a-a8b1-99a3dc5f8602.html"
-  },
-  {
-   "data": "2026-10-31T18:24:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra: scontro su scuola e pensioni, le opposizioni all'attacco",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-si-rivede-il-riparto-dei-fondi-per-gli-asili-nido-per_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html"
   },
   {
    "data": "2026-10-31T18:19:15+00:00",
@@ -77,118 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/ha-spinto-contro-muro-e-minacciato-alunno-citazione-a-giudizio-per-prof_c5b68570-c2c3-4244-b244-c433fac66ef1.html"
   },
   {
-   "data": "2026-10-31T17:59:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rubio: Trump non ha ancora deciso su un nuovo attacco. Khamenei: 'Risponderemo a ogni minaccia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/layatollah-khamenei-agli-usa-risponderemo-a-ogni-minaccia_3cf54edb-3eec-4388-ae57-c19b268c5d39.html"
-  },
-  {
    "data": "2026-10-31T17:45:51+00:00",
    "fonte": "ANSA",
    "titolo": "Il Papa: 'Lo sport insegna, i rivali non sono mai nemici'",
    "url": "https://www.ansa.it/vaticano/notizie/2026/10/31/il-papa-lo-sport-insegna-i-rivali-non-sono-mai-nemici_0f5ac170-9400-486a-aa46-0aaeedc91c9b.html"
-  },
-  {
-   "data": "2026-10-31T17:40:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il parto sul bus, l'autista racconta 'un abbraccio di umanità'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/il-parto-sul-bus-lautista-racconta-un-abbraccio-di-umanita_b4627c5c-04d2-4f71-88a3-39ad3f7e5360.html"
-  },
-  {
-   "data": "2026-10-31T17:40:06+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-10-31T17:29:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella: 'In tempi non facili il futuro va disegnato dai giovani'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/31/mattarella-in-tempi-non-facili-il-futuro-va-disegnato-dai-giovani_e2a91df1-6af8-446d-84e6-81a88fd1c741.html"
-  },
-  {
-   "data": "2026-10-31T17:28:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fanno esplodere una cassa per il ticket, stop alla guardia medica",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/nel-foggiano-esplosione-distrugge-la-cassa-per-pagare-il-ticket-danni-ingenti_c74ca887-cb4e-4fb4-bba2-e0ecf8179267.html"
-  },
-  {
-   "data": "2026-10-31T17:27:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Veronica Peparini, ex maestra di 'Amici' raggirata al telefono: \"Lasciata con 4 euro sul conto\"",
-   "url": "https://www.adnkronos.com/cronaca/veronica-peparini-raggirata-al-telefono-il-racconto_3p8xXyHzWo3QQ3e033cZP6"
-  },
-  {
-   "data": "2026-10-31T17:23:57+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Per vent'anni nel coro del Maggio Musicale, a 87 anni canta La Bohème in rsa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/per-ventanni-nel-coro-del-maggio-musicale-a-87-anni-canta-la-boheme_df9a637c-483b-450f-b495-fc2a8f3364c7.html"
-  },
-  {
-   "data": "2026-10-31T17:21:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, Haas esclude Ocon dal Gp del Messico: Hirakawa al suo posto",
-   "url": "https://www.adnkronos.com/sport/f1-haas-ocon-hirakawa_18UvW460AKZuI77YUqW8P7"
-  },
-  {
-   "data": "2026-10-31T17:10:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scontro in Polonia sulla Corte costituzionale, alle 20 Tusk parla alla nazione",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/caos-in-polonia-sulla-corte-costituzionale-morawiecki-governo-tecnico-fino-alle_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
-  },
-  {
-   "data": "2026-10-31T17:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cantù, deriso per l'accento accoltella e uccide un uomo fuori dal bar",
-   "url": "https://www.adnkronos.com/cronaca/omicidio-cantu-accoltella-e-uccide-uomo-fuori-da-bar_7uPLs0VOpdRq3tUlBwgaY1"
-  },
-  {
-   "data": "2026-10-31T16:54:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Muore dopo essere stato accoltellato al bar, un fermo nel Comasco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/muore-dopo-essere-stato-accoltellato-al-bar-un-fermo-nel-comasco_cee14eb1-c9ad-4429-acea-6e5a4a8aada7.html"
-  },
-  {
-   "data": "2026-10-31T16:53:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Ti passo Kid Rock\", quando Trump ha mollato Macron al telefono",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-macron-kid-rock-telefonata-video_K7Ze2XyxxoycSaV0oLtp7"
-  },
-  {
-   "data": "2026-10-31T16:49:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "MotoGp, domani si corre il Gp di Malesia: orario, griglia di partenza e dove vederlo in tv",
-   "url": "https://www.adnkronos.com/sport/motogp-gp-malesia-marquez_3yIt725dKB98n78y5TO9ot"
-  },
-  {
-   "data": "2026-10-31T16:41:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morta Nonna Silvi, la cuoca influencer da 7 milioni di follower",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/morta-nonna-silvi-influencer-della-cucina-da-4-milioni-di-follower_8d85fe1d-8a2d-4c50-8469-968ba88c1689.html"
-  },
-  {
-   "data": "2026-10-31T16:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Egitto, tragico scontro tra minibus e camion al Cairo: 10 morti e 24 feriti",
-   "url": "https://www.adnkronos.com/internazionale/esteri/incidente-egitto-scontro-minibus-camion-morti-feriti_4PMY94TDLbCwZ6kMxfwfQw"
-  },
-  {
-   "data": "2026-10-31T16:30:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cade dal tetto di una scuola, operaio muore dopo due giorni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/morto-dopo-due-giorni-operaio-edile-di-itri-caduto-dal-tetto_d18cc73c-1359-4b7b-ba99-2257fefcc58d.html"
-  },
-  {
-   "data": "2026-10-31T16:25:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, il Bologna vince 2-1 in rimonta sul Monza: Pobega e Bernardeschi su rigore stendono i brianzoli",
-   "url": "https://www.adnkronos.com/sport/serie-a-bologna-monza-bernardeschi_5XELNmhkBzhfBR2qZHIr97"
-  },
-  {
-   "data": "2026-10-31T16:19:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rush finale alle midterm, Trump teme l'ondata dem",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/31/trump-in-calo-nei-sondaggi-il-tasso-di-approvazione-scende-al-37_288d891f-ad1f-4645-a886-37370d72fb4c.html"
   }
  ]
 }
