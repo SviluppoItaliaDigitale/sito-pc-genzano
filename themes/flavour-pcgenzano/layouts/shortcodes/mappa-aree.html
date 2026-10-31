@@ -27,7 +27,6 @@
 .mappa-aree-popup h3{font-size:1.05rem;color:#003366;margin:0 0 0.4rem 0;font-weight:700}
 .mappa-aree-popup .badge-tipo{display:inline-block;color:#fff;padding:0.15rem 0.55rem;border-radius:4px;font-size:0.75rem;font-weight:700;letter-spacing:0.03em;margin-bottom:0.4rem}
 .mappa-aree-popup .indirizzo{margin:0 0 0.6rem 0;font-size:0.9rem;color:#333}
-.mappa-aree-popup .indirizzo-piano{margin:-0.4rem 0 0.6rem 0;font-size:0.82rem;color:#495057}
 .mappa-aree-popup .azioni{display:flex;flex-direction:column;gap:0.3rem;margin-top:0.4rem}
 .mappa-aree-popup .azioni a{font-size:0.85rem}
 .mappa-marker-pin{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.78rem;color:#fff;width:32px;height:42px;text-align:center;line-height:1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -144,8 +143,6 @@
       + '<span class="badge-tipo" style="background:' + (COLORI[p.tipo] || '#003366') + '">' + p.id + ' · ' + ETICHETTE[p.tipo] + '</span>' + verificato
       + '<h3>' + p.nome + '</h3>'
       + '<p class="indirizzo"><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>' + p.indirizzo + '</p>'
-      // Indirizzo diverso nel testo del Piano comunale (data/aree_emergenza.yaml, dal 31/10/2026).
-      + (p.indirizzo_piano ? '<p class="indirizzo-piano">Nel Piano comunale: «' + p.indirizzo_piano + '»</p>' : '')
       + '<div class="azioni">'
       +   '<a href="' + cartelloUrl + '" target="_blank" rel="noopener"><i class="bi bi-image me-1" aria-hidden="true"></i>Vedi cartello segnaletico</a>'
       +   '<a href="https://www.google.com/maps/dir/?api=1&destination=' + coordsParam + '&destination_place_id=' + nomeParam + '" target="_blank" rel="noopener noreferrer"><i class="bi bi-signpost-2 me-1" aria-hidden="true"></i>Indicazioni stradali (Google Maps)</a>'

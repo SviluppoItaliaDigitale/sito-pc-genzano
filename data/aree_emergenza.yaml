@@ -4,15 +4,15 @@
 # Volontari di Protezione Civile (aprile 2026). Tutti i 16 punti sono
 # contrassegnati come verified: true.
 #
-# INDIRIZZO NEL PIANO (`indirizzo_piano`, dal 31/10/2026): per otto aree il
-# testo del Piano di Emergenza Comunale (cap. 6, pagine 46-56 del PDF) scrive
-# un indirizzo diverso da quello riportato dal sito, che è l'indirizzo
-# dell'accesso e dei cartelli sul territorio (AR2: il Piano dice "Via
-# Piemonte", la segnaletica è in Via Sicilia). Il campo riporta l'indirizzo del
-# Piano così come è scritto, con le sole maiuscole corrette, finché il Comune
-# non conferma quale dei due è quello operativo (audit esterno 31/10/2026, A01).
-# Le aree senza il campo hanno nel Piano lo stesso luogo, scritto con parole
-# simili.
+# INDIRIZZI: valgono quelli dei cartelli installati sul territorio, impostati e
+# verificati dal Gruppo (decisione di Alessandro del 31/10/2026: il Piano di
+# Emergenza Comunale in PDF contiene errori). Per otto aree il testo del Piano
+# (cap. 6, pagine 46-56) scrive un indirizzo diverso; restano qui solo come
+# traccia, per chiedere al Comune di correggere il PDF:
+#   AA1 «Via corso vecchio» · AA5 «Via Napoli incrocio via Lenin» ·
+#   AA6 «Piazzale G. Cesaroni» · AA9 «Via Mecenate» · AA10 «Piazza lotte
+#   contadine» · AR1 «Via G. Cesaroni» · AR2 «Via Piemonte incrocio con Emilia
+#   Romagna» · AR4 «Viale Mazzini».
 
 # Tipi di area:
 #   AA = Area di Attesa della popolazione (10 punti)
@@ -25,7 +25,6 @@ aree:
     tipo: AA
     nome: "Palazzo Sforza Cesarini"
     indirizzo: "Piazza Tommaso Frasconi"
-    indirizzo_piano: "Via Corso Vecchio"
     lat: 41.707567
     lon: 12.692586
     verified: true
@@ -54,7 +53,6 @@ aree:
     tipo: AA
     nome: "Via Napoli"
     indirizzo: "Parcheggio incrocio Via Napoli / Via Emilia Romagna"
-    indirizzo_piano: "Via Napoli incrocio Via Lenin"
     lat: 41.702022
     lon: 12.685094
     verified: true
@@ -62,7 +60,6 @@ aree:
     tipo: AA
     nome: "Palazzetto dello Sport"
     indirizzo: "Parcheggio Via G. di Vittorio"
-    indirizzo_piano: "Piazzale G. Cesaroni"
     lat: 41.701107
     lon: 12.693919
     verified: true
@@ -84,7 +81,6 @@ aree:
     tipo: AA
     nome: "Colli di Cicerone"
     indirizzo: "Parcheggio Via Colli di Cicerone"
-    indirizzo_piano: "Via Mecenate"
     lat: 41.656804
     lon: 12.734351
     verified: true
@@ -92,7 +88,6 @@ aree:
     tipo: AA
     nome: "Landi"
     indirizzo: "Piazzale Frazione Landi"
-    indirizzo_piano: "Piazza Lotte Contadine"
     lat: 41.649318
     lon: 12.715690
     verified: true
@@ -118,7 +113,6 @@ aree:
     tipo: AR
     nome: "Palazzetto dello Sport"
     indirizzo: "Area esterna Palazzetto dello Sport, Via G. di Vittorio"
-    indirizzo_piano: "Via G. Cesaroni"
     lat: 41.701505
     lon: 12.693323
     verified: true
@@ -126,7 +120,6 @@ aree:
     tipo: AR
     nome: "Campo Sportivo Via Sicilia"
     indirizzo: "Via Sicilia"
-    indirizzo_piano: "Via Piemonte incrocio con Via Emilia Romagna"
     lat: 41.701023
     lon: 12.694646
     verified: true
@@ -141,7 +134,6 @@ aree:
     tipo: AR
     nome: "Campo Sportivo Don Bosco (Salesiani)"
     indirizzo: "Viale Piave angolo Via Lega Latina"
-    indirizzo_piano: "Viale Mazzini"
     lat: 41.712941
     lon: 12.687930
     verified: true

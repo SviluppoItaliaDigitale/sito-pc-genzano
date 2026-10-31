@@ -37,7 +37,7 @@ OUT = ROOT / "static" / "open-data"
 DATASETS = [
     {
         "src": "aree_emergenza.yaml", "key": "aree", "out": "aree-emergenza",
-        "fields": ["id", "tipo", "nome", "indirizzo", "indirizzo_piano", "lat", "lon", "verified"],
+        "fields": ["id", "tipo", "nome", "indirizzo", "lat", "lon", "verified"],
         "title": "Aree di emergenza del Piano comunale di Protezione Civile",
         "descrizione": "Aree di attesa della popolazione (AA), aree di ricovero (AR) "
                        "e aree di ammassamento dei soccorritori (AS), con coordinate GPS.",

@@ -23,20 +23,20 @@ Questa pagina elenca le 10 aree di attesa del Comune di Genzano di Roma. Per la 
 
 ## Le 10 aree di attesa di Genzano di Roma
 
-| Codice | Denominazione | Indirizzo | Nel Piano comunale |
-|---|---|---|---|
-| **AA1** | Palazzo Sforza Cesarini | Piazza Tommaso Frasconi | «Via Corso Vecchio» |
-| **AA2** | Via Piave | Parcheggio Via Piave | — |
-| **AA3** | Via Toscana | Parcheggio incrocio Via Toscana / Via Lazio | — |
-| **AA4** | Via Enrico Mattei | Parcheggio Via Enrico Mattei | — |
-| **AA5** | Via Napoli | Parcheggio incrocio Via Napoli / Via Emilia Romagna | «Via Napoli incrocio Via Lenin» |
-| **AA6** | Palazzetto dello Sport | Parcheggio Via G. di Vittorio | «Piazzale G. Cesaroni» |
-| **AA7** | Carlo Alberto dalla Chiesa | Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia | — |
-| **AA8** | Zona Industriale | Parcheggio Via del Lavoro | — |
-| **AA9** | Colli di Cicerone | Parcheggio Via Colli di Cicerone | «Via Mecenate» |
-| **AA10** | Landi | Piazzale Frazione Landi | «Piazza Lotte Contadine» |
+| Codice | Denominazione | Indirizzo |
+|---|---|---|
+| **AA1** | Palazzo Sforza Cesarini | Piazza Tommaso Frasconi |
+| **AA2** | Via Piave | Parcheggio Via Piave |
+| **AA3** | Via Toscana | Parcheggio incrocio Via Toscana / Via Lazio |
+| **AA4** | Via Enrico Mattei | Parcheggio Via Enrico Mattei |
+| **AA5** | Via Napoli | Parcheggio incrocio Via Napoli / Via Emilia Romagna |
+| **AA6** | Palazzetto dello Sport | Parcheggio Via G. di Vittorio |
+| **AA7** | Carlo Alberto dalla Chiesa | Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia |
+| **AA8** | Zona Industriale | Parcheggio Via del Lavoro |
+| **AA9** | Colli di Cicerone | Parcheggio Via Colli di Cicerone |
+| **AA10** | Landi | Piazzale Frazione Landi |
 
-*Il codice dell'area è quello scritto sul cartello. La colonna «Nel Piano comunale» riporta l'indirizzo che il testo del [Piano di Emergenza Comunale](/piano-emergenza/) scrive per quell'area quando è diverso dal nostro, che indica l'accesso e i cartelli sul territorio; il trattino vuol dire che il Piano indica lo stesso luogo. Quando il Comune avrà confermato quale indirizzo usare, aggiorneremo la tabella.*
+*Gli indirizzi sono quelli dei cartelli installati sul territorio e verificati dal Gruppo: in caso di differenza valgono questi. In alcuni punti il testo del [Piano di Emergenza Comunale](/piano-emergenza/) in PDF riporta indirizzi diversi o non aggiornati.*
 
 ## Cosa fare quando raggiungi l'area
 
