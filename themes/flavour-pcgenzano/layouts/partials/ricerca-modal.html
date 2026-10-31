@@ -27,6 +27,7 @@
       <button type="button" class="pcg-ricerca-close" data-pcg-ricerca-close
               aria-label="Chiudi la ricerca">&times;</button>
     </header>
+    {{ partial "ricerca-scorciatoie.html" (dict "radice" "pcg-ricerca-ui" "pagina" .) }}
     <div id="pcg-ricerca-ui" class="pcg-ricerca-ui">
       <p class="pcg-ricerca-loading" role="status">Caricamento della ricerca…</p>
     </div>
@@ -78,6 +79,14 @@
             element: "#pcg-ricerca-ui",
             bundlePath: BUNDLE,
             showSubResults: true,
+            processResult: function (r) {
+              /* Tipo del risultato davanti al titolo (Notizia, Gioco,
+                 Simulazione didattica…), da data/ricerca.json: le pagine
+                 operative restano senza etichetta (audit 31/10/2026, A12). */
+              var t = r.meta && r.meta.tipo;
+              if (t && t.indexOf("Informazioni operative") !== 0 && r.meta.title) r.meta.title = t + " · " + r.meta.title;
+              return r;
+            },
             showImages: false,
             pageSize: 8,
             resetStyles: false,

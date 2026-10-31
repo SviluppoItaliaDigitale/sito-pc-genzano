@@ -1,0 +1,268 @@
+{
+  "_nota": "Ordine ed etichette dei risultati della ricerca interna (Pagefind). Le pagine operative pesano di più, così per «allerta», «terremoto», «area di attesa» o «112» il servizio reale viene prima di notizie, simulazioni e giochi (audit esterno 31/10/2026, A12). «tipo» è l'etichetta mostrata accanto al titolo del risultato: vale la prima regola che corrisponde. Ogni «percorso» vale per la pagina e per tutte le sue sottopagine (confronto sull'inizio dell'indirizzo). Alle versioni in italiano semplice (indirizzo che finisce con -facile/) si aggiunge «italiano semplice». Lo leggono il partial ricerca-pagina.html (pagine Hugo) e scripts/prepara-statiche-per-pagefind.py (pagine autonome di static/).",
+  "peso_operative": 5,
+  "operative": [
+    {
+      "percorso": "/emergenza/"
+    },
+    {
+      "percorso": "/cosa-fare-adesso/"
+    },
+    {
+      "percorso": "/numeri-utili/"
+    },
+    {
+      "percorso": "/aree-attesa/"
+    },
+    {
+      "percorso": "/cartografia/"
+    },
+    {
+      "percorso": "/allerte-meteo/"
+    },
+    {
+      "percorso": "/piano-emergenza/"
+    },
+    {
+      "percorso": "/piano-familiare/"
+    },
+    {
+      "percorso": "/rischi-prevenzione/"
+    },
+    {
+      "percorso": "/calcolatore-scorta/"
+    },
+    {
+      "percorso": "/tabelle-comunicazione/"
+    },
+    {
+      "percorso": "/non-e-vero-che/"
+    },
+    {
+      "percorso": "/assistente/"
+    },
+    {
+      "percorso": "/contatti/"
+    }
+  ],
+  "tipi": [
+    {
+      "percorso": "/formazionepc/",
+      "tipo": "Simulazione didattica"
+    },
+    {
+      "percorso": "/quizpc/",
+      "tipo": "Quiz"
+    },
+    {
+      "percorso": "/giochi/",
+      "tipo": "Gioco"
+    },
+    {
+      "percorso": "/catalogo-giochi/",
+      "tipo": "Gioco"
+    },
+    {
+      "percorso": "/formazione/schede-stampabili/",
+      "tipo": "Scheda per la scuola"
+    },
+    {
+      "percorso": "/scuole/",
+      "tipo": "Scheda per la scuola"
+    },
+    {
+      "percorso": "/formazione/storie-e-racconti/",
+      "tipo": "Storia per bambini"
+    },
+    {
+      "percorso": "/formazione/kit-calamita",
+      "tipo": "Kit stampabile"
+    },
+    {
+      "percorso": "/formazione/",
+      "tipo": "Formazione"
+    },
+    {
+      "percorso": "/abili-a-proteggere/",
+      "tipo": "Formazione"
+    },
+    {
+      "percorso": "/manuale/",
+      "tipo": "Manuale"
+    },
+    {
+      "percorso": "/dossier/",
+      "tipo": "Dossier"
+    },
+    {
+      "percorso": "/comunicazioni/",
+      "tipo": "Notizia"
+    }
+  ],
+  "_nota_scorciatoie": "«scorciatoie»: le pagine operative mostrate nel riquadro «Pagine di servizio» sopra i risultati, quando la ricerca contiene una delle «parole» (inizio di parola, senza accenti e senza maiuscole; con uno spazio vale come frase). Pagefind da solo mette davanti gli articoli brevi con la parola nel titolo, anche con il peso più alto alle pagine operative: per «allerta», «terremoto» e «112» le pagine di servizio non entravano fra i primi sei risultati. Il titolo mostrato è quello della pagina, letto alla build; se la pagina non esiste la build si ferma.",
+  "scorciatoie": [
+    {
+      "percorso": "/emergenza/",
+      "parole": [
+        "emergenz",
+        "pericolo",
+        "aiuto",
+        "soccorso"
+      ]
+    },
+    {
+      "percorso": "/numeri-utili/",
+      "parole": [
+        "112",
+        "numer",
+        "telefon",
+        "chiamare",
+        "803"
+      ]
+    },
+    {
+      "percorso": "/allerte-meteo/",
+      "parole": [
+        "allert",
+        "bollettin",
+        "codice colore",
+        "meteo"
+      ]
+    },
+    {
+      "percorso": "/aree-attesa/",
+      "parole": [
+        "area di attesa",
+        "aree di attesa",
+        "attesa",
+        "punto di raccolta",
+        "raccolta",
+        "evacuazion"
+      ]
+    },
+    {
+      "percorso": "/cosa-fare-adesso/",
+      "parole": [
+        "cosa fare",
+        "cosa faccio",
+        "adesso"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/rischio-sismico/",
+      "parole": [
+        "terremot",
+        "scoss",
+        "sism"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/rischio-idrogeologico/",
+      "parole": [
+        "alluvion",
+        "allag",
+        "frana",
+        "frane",
+        "idrogeolog",
+        "esondaz"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/rischio-incendio/",
+      "parole": [
+        "incend",
+        "fuoco",
+        "fiamm",
+        "aib"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/temporali-intensi/",
+      "parole": [
+        "temporal",
+        "fulmin",
+        "grandin",
+        "nubifragi"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/vento-forte/",
+      "parole": [
+        "vento",
+        "raffic",
+        "tromba d'aria"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/ondate-di-calore/",
+      "parole": [
+        "caldo",
+        "calore",
+        "afa"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/blackout/",
+      "parole": [
+        "blackout",
+        "corrente elettrica",
+        "senza luce"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/rischio-vulcanico/",
+      "parole": [
+        "vulcan",
+        "colli albani"
+      ]
+    },
+    {
+      "percorso": "/rischi-prevenzione/kit-emergenza/",
+      "parole": [
+        "kit",
+        "zaino",
+        "scorta"
+      ]
+    },
+    {
+      "percorso": "/piano-familiare/",
+      "parole": [
+        "piano familiare",
+        "piano di famiglia",
+        "famigli"
+      ]
+    },
+    {
+      "percorso": "/piano-emergenza/",
+      "parole": [
+        "piano di emergenza",
+        "piano comunale",
+        "coc"
+      ]
+    },
+    {
+      "percorso": "/cartografia/",
+      "parole": [
+        "mappa",
+        "cartografi",
+        "cartell"
+      ]
+    },
+    {
+      "percorso": "/diventa-volontario/",
+      "parole": [
+        "volontar",
+        "iscriver"
+      ]
+    },
+    {
+      "percorso": "/contatti/",
+      "parole": [
+        "contatt",
+        "sede",
+        "email",
+        "indirizzo"
+      ]
+    }
+  ]
+}

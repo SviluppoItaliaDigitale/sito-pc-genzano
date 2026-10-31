@@ -17,6 +17,7 @@
            Ricerca full-text con Pagefind — stesso motore del modal Ctrl+K. */}}
       <div id="pcg-ricerca-page-wrap" data-pagefind-ignore>
         <p class="text-muted mb-3">Cerca tra articoli, pagine, rischi, numeri utili e materiali del sito. Puoi anche premere <kbd>Ctrl</kbd>+<kbd>K</kbd> da qualsiasi pagina.</p>
+        {{ partial "ricerca-scorciatoie.html" (dict "radice" "pcg-ricerca-page" "pagina" .) }}
         <div id="pcg-ricerca-page" class="pcg-ricerca-ui">
           <p class="pcg-ricerca-loading" role="status">Caricamento della ricerca…</p>
         </div>
@@ -56,10 +57,22 @@
   (function () {
     "use strict";
     if (typeof PagefindUI === "undefined") return;
+    /* Come nella ricerca Ctrl+K: il messaggio di caricamento si toglie quando
+       Pagefind è pronto (restava sopra il campo con i risultati già a schermo). */
+    var caricamento = document.querySelector("#pcg-ricerca-page .pcg-ricerca-loading");
+    if (caricamento) caricamento.remove();
     var ui = new PagefindUI({
       element: "#pcg-ricerca-page",
       bundlePath: "{{ $bundle }}",
       showSubResults: true,
+      processResult: function (r) {
+        /* Tipo del risultato davanti al titolo (Notizia, Gioco,
+           Simulazione didattica…), da data/ricerca.json: le pagine
+           operative restano senza etichetta (audit 31/10/2026, A12). */
+        var t = r.meta && r.meta.tipo;
+        if (t && t.indexOf("Informazioni operative") !== 0 && r.meta.title) r.meta.title = t + " · " + r.meta.title;
+        return r;
+      },
       showImages: false,
       pageSize: 10,
       resetStyles: false,

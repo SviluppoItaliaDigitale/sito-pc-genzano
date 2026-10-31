@@ -4904,6 +4904,22 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
     display: none !important;
   }
 }
+/* Riquadro «Pagine di servizio» sopra i risultati (31/10/2026, audit A12):
+   le pagine operative legate alle parole cercate, da data/ricerca.json. */
+.ricerca-servizio {
+  margin: 0.75rem 0 1rem;
+  padding: 0.75rem 1rem;
+  background: #e7f0fa;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+}
+.ricerca-servizio[hidden] { display: none; }
+.ricerca-servizio-titolo { margin: 0 0 0.4rem; font-weight: 700; color: #003366; }
+.ricerca-servizio-lista { list-style: none; margin: 0; padding: 0; }
+.ricerca-servizio-lista li { margin: 0.35rem 0; }
+.ricerca-servizio-lista a { font-weight: 600; color: #003366; text-decoration: underline; }
+.ricerca-servizio-lista a:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.ricerca-servizio-desc { display: block; font-size: 0.9rem; color: #1a1a1a; }
 /* ==========================================================================
  * fine RICERCA PAGEFIND v1.0
  * ==========================================================================

@@ -143,8 +143,9 @@
   {{/* data-pagefind-body: Pagefind indicizza SOLO il contenuto di <main>,
        non navbar/footer/banner. data-pagefind-filter: filtro "Sezione" nel
        modal di ricerca. Vedi partials/ricerca-modal.html. */}}
+  {{- $ricerca := partial "ricerca-pagina.html" . }}
   <main id="main-content" tabindex="-1" data-pagefind-body
-        data-pagefind-filter="Sezione:{{ cond (eq .Section "") "Sito" (.Section | replaceRE "-" " " | title) }}">
+        data-pagefind-filter="Sezione:{{ cond (eq .Section "") "Sito" (.Section | replaceRE "-" " " | title) }}"{{ $ricerca | safeHTMLAttr }}>
     {{ block "main" . }}{{ end }}
   </main>
   <div{{ $chromeLang | safeHTMLAttr }}>
