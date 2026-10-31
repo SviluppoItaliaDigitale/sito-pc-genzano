@@ -242,7 +242,7 @@ const BUILD = {
   const groups = [tbl, win, stairs];
   let shake = 0;
   return { g,
-    tools:[ {label:'Fai tremare la stanza', fn(){ shake = RM() ? 1.2 : 3; say('La stanza trema per qualche secondo: guarda che cosa si muove e che cosa cade.');
+    tools:[ {label:'Fai tremare la stanza', fn(){ if (RM()){ say('Con le animazioni in pausa la stanza non trema. In una scossa vera mobili, libri e vetri possono cadere: per questo ci si ripara sotto il tavolo.'); } else { shake = 3; say('La stanza trema per qualche secondo: guarda che cosa si muove e che cosa cade.'); }
               books.forEach((b,k)=>{ const to = new THREE.Vector3(.11+k*.045, .012, .14+k*.025); setTimeout(()=>{ const a=b.m.position.clone(); tween(.6,q=>{ b.m.position.lerpVectors(a,to,ease(q)); b.m.position.y += Math.sin(Math.PI*q)*.06; b.m.rotation.z = q*1.4; }); }, 400+k*350); }); } },
             {label:'Rimetti a posto', fn(){ books.forEach(b=>{ b.m.position.copy(b.home); b.m.rotation.set(0,0,0); }); say('I libri sono tornati sullo scaffale.'); } } ],
     choose(i){ groups.forEach((o,k)=>glow(o, 0xffb000, k===i ? .45 : 0)); moveTo(p, T[i]); },
@@ -760,11 +760,13 @@ function resize(){
 }
 new ResizeObserver(resize).observe(stage);
 
-const clock = new THREE.Clock();
+const clock = new THREE.Clock(); let animT = 0;
 function loop(){
-  const dt = Math.min(clock.getDelta(), .1), t = clock.elapsedTime;
+  const dt = Math.min(clock.getDelta(), .1);
+  /* «Pausa animazioni» o movimento ridotto: i movimenti continui (fiamme, fumo, nube, vento, ventola) si fermano; restano solo le transizioni brevi dei comandi. RM() si rilegge a ogni fotogramma, quindi vale anche se la preferenza cambia a pagina aperta. */
+  const still = RM(); if (!still) animT += dt;
   for (let k=tweens.length-1; k>=0; k--){ const tw = tweens[k]; tw.t += dt; const p = Math.min(1, tw.t/tw.dur); tw.fn(p); if (p>=1){ tweens.splice(k,1); tw.done?.(); } }
-  current?.update(dt,t); controls.update(); renderer.render(scene, camera);
+  current?.update(still ? 0 : dt, animT); controls.update(); renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
 

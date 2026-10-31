@@ -118,12 +118,12 @@ capitoli:
   domanda: A che ora esci?
   opzioni:
   - testo: All’una, così faccio prima
-    perche: 'Dalle 11 alle 18 sono le ore più calde: in quella fascia non uscire e non fare sforzi.'
+    perche: 'Dalle 11 alle 18 sono le ore più calde: in quella fascia evita di uscire e di fare sforzi.'
   - testo: Prima delle 11 o dopo le 18
     giusta: true
   - testo: Alle tre, con il cappello va bene
     perche: Il cappello aiuta, ma dalle 11 alle 18 è meglio restare al fresco.
-  risposta: Non uscire nelle ore più calde, dalle 11 alle 18. Bevi molta acqua anche se non senti sete, indossa abiti leggeri e chiari, cappello e occhiali da sole, e abbassa le tapparelle nelle ore di sole diretto. Non lasciare mai persone o animali in auto parcheggiate al sole.
+  risposta: Evita di uscire nelle ore più calde, dalle 11 alle 18. Bevi molta acqua anche se non senti sete, indossa abiti leggeri e chiari, cappello e occhiali da sole, e abbassa le tapparelle nelle ore di sole diretto. Non lasciare mai persone o animali in auto parcheggiate al sole.
   breve: B · Prima delle 11 o dopo le 18. Bevi spesso, tieni le tapparelle abbassate, mai persone o animali in auto al sole.
   fonti:
   - titolo: 'Ondate di calore: cosa fare durante'
@@ -182,7 +182,7 @@ capitoli:
 - chiave: gas
   occhiello: Capitolo 11 · Rischio vulcanico e gas
   titolo: Il gas che non si vede
-  intro: Il territorio dei Colli Albani può liberare anidride carbonica dal suolo. È un gas invisibile e senza odore, più pesante dell’aria, che si raccoglie in cantine, pozzi e scantinati poco aerati.
+  intro: In alcune aree dei Colli Albani il suolo può liberare anidride carbonica. È un gas invisibile e senza odore, più pesante dell’aria, che si raccoglie in cantine, pozzi e scantinati poco aerati.
   domanda: Entri in cantina, ti gira la testa e vedi un animale a terra immobile. Cosa fai?
   opzioni:
   - testo: Scendo a prendere l’animale
@@ -191,7 +191,7 @@ capitoli:
     giusta: true
   - testo: Resto a controllare meglio che cosa succede
     perche: 'Non tornare indietro a «controllare meglio»: esci subito all’aria aperta.'
-  risposta: 'Esci immediatamente all’aria aperta e non tornare indietro. Chiama il 112 dicendo «sospetto di gas in spazio confinato»: arrivano i Vigili del Fuoco con gli autorespiratori. Non entrare a soccorrere chi è a terra e tieni lontane le altre persone.'
+  risposta: 'Esci immediatamente all’aria aperta e non tornare indietro. Chiama il 112 dicendo «sospetto di gas in spazio confinato»: arrivano i Vigili del Fuoco con gli autorespiratori. Non entrare a soccorrere chi è a terra senza attrezzatura e addestramento e tieni lontane le altre persone. Se sei un bambino, esci e avvisa subito un adulto.'
   breve: 'B · Esci subito all’aria aperta e chiama il 112. Non entrare a soccorrere: arrivano i Vigili del Fuoco con gli autorespiratori.'
   fonti:
   - titolo: 'Rischio vulcanico: sospetto di accumulo di CO₂'
@@ -242,7 +242,7 @@ capitoli:
     giusta: true
   - testo: Prendo lo iodio che ho in casa
     perche: 'Lo iodio si assume solo se e quando le autorità sanitarie lo dispongono: da soli è inutile o dannoso.'
-  risposta: Segui le indicazioni delle autorità. Con il riparo al chiuso resta in casa, chiudi porte e finestre, spegni ventilazione e condizionatori e stai in un locale interno. Se eri all’aperto togli i vestiti esterni, chiudili in un sacchetto e fai una doccia. Assumi iodio solo se le autorità sanitarie lo dispongono e non rilanciare voci non verificate.
+  risposta: Segui le indicazioni delle autorità. Con il riparo al chiuso resta in casa, chiudi porte e finestre, spegni ventilazione e condizionatori e stai, se puoi, in un locale interno. Se eri all’aperto togli i vestiti esterni, chiudili in un sacchetto e fai una doccia. Assumi iodio solo se le autorità sanitarie lo dispongono e non rilanciare voci non verificate.
   breve: B · Resta in casa con porte e finestre chiuse e ventilazione spenta. Iodio solo se lo dispongono le autorità sanitarie.
   fonti:
   - titolo: 'Rischio nucleare e radiologico: cosa fare durante'
@@ -254,12 +254,12 @@ capitoli:
   domanda: Cosa fai?
   opzioni:
   - testo: 'Lavo l’auto lo stesso: è poca acqua'
-    perche: Lavare l’auto, riempire piscine e irrigare prati sono proprio gli usi che le ordinanze limitano.
+    perche: Lavare l’auto, riempire piscine e irrigare prati sono tra gli usi che le ordinanze di solito limitano.
   - testo: Rispetto i divieti e riduco i consumi
     giusta: true
   - testo: Bevo dalla fontanella di campagna non controllata
     perche: 'Non bere acqua di pozzi, sorgenti o fontanili non controllati: la scarsità non la rende sicura.'
-  risposta: 'Rispetta le ordinanze comunali: l’acqua risparmiata serve agli usi potabili. Fai docce più brevi, chiudi il rubinetto mentre ti lavi i denti, riusa l’acqua delle verdure per le piante. Se l’erogazione è sospesa a fasce orarie riempi contenitori puliti e tienili coperti. Controlla che le persone fragili del vicinato abbiano acqua.'
+  risposta: 'Rispetta le ordinanze comunali: l’acqua risparmiata serve agli usi potabili. Fai docce più brevi, chiudi il rubinetto mentre ti lavi i denti, riusa l’acqua delle verdure per le piante. Se l’erogazione è sospesa a fasce orarie riempi contenitori puliti e tienili coperti. Controlla che le persone con fragilità del vicinato abbiano acqua.'
   breve: B · Rispetta le ordinanze e riduci i consumi. Non usare acqua potabile per usi non essenziali.
   fonti:
   - titolo: 'Siccità: cosa fare durante'
