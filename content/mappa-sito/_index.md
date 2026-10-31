@@ -398,6 +398,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Storie e Racconti</p>
   <p class="ms-card-desc">Fiabe e racconti per bambini 3-11 anni con valore pedagogico per la scuola: ogni storia ha un attimo decisivo + sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/libro-che-si-esplora/">
+  <div class="ms-card-icon"><i class="bi bi-book"></i></div>
+  <p class="ms-card-title">Il libro che si esplora</p>
+  <p class="ms-card-desc">Libro di protezione civile in 3D: sei capitoli su terremoto, allagamenti, sottopassaggi, incendi, allerte e zaino di emergenza, con previsione e risposta da scoprire.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/esperimenti/">
   <div class="ms-card-icon"><i class="bi bi-eyedropper"></i></div>
   <p class="ms-card-title">Esperimenti e attività</p>

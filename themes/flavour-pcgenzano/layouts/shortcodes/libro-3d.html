@@ -1,0 +1,70 @@
+{{- /*
+  Shortcode libro-3d — «Il libro che si esplora»: libro aperto in 3D con sei
+  capitoli di autoprotezione. A sinistra testo e domanda, a destra un
+  modellino interattivo; il lettore sceglie la sua previsione e alza il lembo
+  per vedere la risposta.
+  Testi: data/libro_3d.yaml (capitoli) e data/codici_colore.yaml (capitolo 5),
+  passati allo script nel blocco JSON #lb-dati e ripetuti sotto come versione
+  testuale, che vale anche senza JavaScript o WebGL.
+  Script: static/js/libro-3d.js (modulo), libreria in static/vendor/three/.
+  Uso: {{< libro-3d >}}
+*/ -}}
+{{- $d := site.Data.libro_3d -}}
+{{- $vj := readFile "themes/flavour-pcgenzano/static/js/libro-3d.js" | hash.FNV32a -}}
+{{- $vc := readFile "themes/flavour-pcgenzano/static/css/libro-3d.css" | hash.FNV32a -}}
+<link rel="stylesheet" href="{{ "css/libro-3d.css" | relURL }}?v={{ $vc }}">
+<div class="lb d-print-none" id="lb">
+  <section class="lb-stage" id="lb-stage" aria-label="Libro in 3D: trascina per girarlo, tocca gli oggetti sulla pagina di destra. Gli stessi contenuti sono nel pannello accanto e nella versione testuale.">
+    <div class="lb-loading" id="lb-loading">Sto aprendo il libro…</div>
+    <div class="lb-hint" id="lb-hint" aria-hidden="true">Trascina per girare il libro · tocca gli oggetti sulla pagina</div>
+  </section>
+  <section class="lb-panel" aria-labelledby="lb-titolo">
+    <nav class="lb-nav" aria-label="Capitoli del libro">
+      <button type="button" id="lb-prev" aria-label="Capitolo precedente">‹</button>
+      <div class="lb-dots" id="lb-dots"></div>
+      <button type="button" id="lb-next" aria-label="Capitolo successivo">›</button>
+    </nav>
+    <div>
+      <p class="lb-kicker" id="lb-kicker"></p>
+      <h2 class="lb-title" id="lb-titolo">Il libro che si esplora</h2>
+      <p class="lb-intro" id="lb-intro"></p>
+    </div>
+    <div class="lb-box">
+      <h3>Prova sulla pagina</h3>
+      <div class="lb-tools" id="lb-tools"></div>
+      <p class="lb-status" id="lb-status" aria-live="polite"></p>
+    </div>
+    <div class="lb-box">
+      <h3>Fai la tua previsione</h3>
+      <p class="lb-q" id="lb-question"></p>
+      <div class="lb-opts" id="lb-opts" role="group" aria-labelledby="lb-question"></div>
+      <button type="button" class="lb-primary" id="lb-flapBtn">Alza il lembo e scopri la risposta</button>
+      <div class="lb-answer" id="lb-answer" hidden aria-live="polite">
+        <p class="lb-verdict" id="lb-verdict"></p>
+        <p id="lb-answerText"></p>
+      </div>
+    </div>
+    <p class="lb-src" id="lb-src"></p>
+  </section>
+</div>
+<script type="application/json" id="lb-dati">{{ dict "base" ("" | relURL) "capitoli" $d.capitoli "colori" site.Data.codici_colore.codici | jsonify | safeJS }}</script>
+<script type="module" src="{{ "js/libro-3d.js" | relURL }}?v={{ $vj }}"></script>
+
+<details class="faq-item lb-testo" id="versione-testuale">
+<summary><strong>Versione testuale del libro</strong> (tutti i capitoli, con domande e risposte)</summary>
+{{- range $i, $c := $d.capitoli }}
+<h3>{{ $c.occhiello }}: {{ $c.titolo }}</h3>
+<p>{{ $c.intro }}</p>
+<p><strong>{{ $c.domanda }}</strong></p>
+<ol type="A">
+{{- range $c.opzioni }}<li>{{ .testo }}</li>{{ end }}
+</ol>
+<p><strong>Risposta.</strong> {{ $c.risposta }}</p>
+{{- if eq $c.chiave "allerta" }}
+<ul>
+{{- range site.Data.codici_colore.codici }}<li><strong>{{ .titolo }}.</strong> {{ .significato }} Cosa fare: {{ .cosa_fare }}</li>{{ end }}
+</ul>
+{{- end }}
+<p>Per saperne di più: <a href="{{ strings.TrimPrefix "/" $c.fonte.url | relURL }}">{{ $c.fonte.titolo }}</a>.</p>
+{{- end }}
+</details>
