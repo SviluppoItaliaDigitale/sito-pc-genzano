@@ -41,6 +41,8 @@ Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un eve
 | AA9 | Colli di Cicerone | Parcheggio Via Colli di Cicerone |
 | AA10 | Landi | Piazzale Frazione Landi |
 
+*Gli indirizzi sono quelli dei cartelli installati sul territorio e verificati dal Gruppo: in caso di differenza valgono questi. In alcuni punti il testo del [Piano di Emergenza Comunale](/piano-emergenza/) in PDF riporta indirizzi diversi o non aggiornati.*
+
 ## Aree di ammassamento soccorritori (AS)
 
 Aree destinate al **raggruppamento di uomini e mezzi di soccorso** provenienti dall'esterno. Non sono destinate alla popolazione civile.
@@ -57,7 +59,7 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 | ID | Denominazione | Indirizzo |
 |---|---|---|
 | AR1 | Palazzetto dello Sport | Area esterna Palazzetto dello Sport, Via G. di Vittorio |
-| AR2 | Campo Sportivo Via Sicilia | Via Sicilia *(nel testo del Piano è indicata come "Via Piemonte"; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)* |
+| AR2 | Campo Sportivo Via Sicilia | Via Sicilia |
 | AR3 | Campo Sportivo Via Sardegna | Via Sardegna |
 | AR4 | Campo Sportivo Don Bosco (Salesiani) | Viale Piave angolo Via Lega Latina |
 

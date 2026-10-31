@@ -36,6 +36,8 @@ Questa pagina elenca le 10 aree di attesa del Comune di Genzano di Roma. Per la 
 | **AA9** | Colli di Cicerone | Parcheggio Via Colli di Cicerone |
 | **AA10** | Landi | Piazzale Frazione Landi |
 
+*Gli indirizzi sono quelli dei cartelli installati sul territorio e verificati dal Gruppo: in caso di differenza valgono questi. In alcuni punti il testo del [Piano di Emergenza Comunale](/piano-emergenza/) in PDF riporta indirizzi diversi o non aggiornati.*
+
 ## Cosa fare quando raggiungi l'area
 
 1. **Resta nell'area**, non andare via prima che ti dicano cosa fare.

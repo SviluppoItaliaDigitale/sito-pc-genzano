@@ -4,11 +4,17 @@
 # Volontari di Protezione Civile (aprile 2026). Tutti i 16 punti sono
 # contrassegnati come verified: true.
 #
-# NOTA: AR2 — nel testo del Piano l'area è indicata come "Via Piemonte",
-# mentre l'accesso reale sul territorio è in Via Sicilia (dove è
-# installata la segnaletica del Comune). Il sito riporta l'indirizzo
-# verificato sul campo, allineato alla mappa interattiva e ai cartelli.
-#
+# INDIRIZZI: valgono quelli dei cartelli installati sul territorio, impostati e
+# verificati dal Gruppo (decisione di Alessandro del 31/10/2026: il Piano di
+# Emergenza Comunale in PDF contiene errori). Per nove aree il testo del Piano
+# (cap. 6, pagine 46-56) scrive un indirizzo diverso; restano qui solo come
+# traccia, per chiedere al Comune di correggere il PDF:
+#   AA1 «Via corso vecchio» · AA5 «Via Napoli incrocio via Lenin» ·
+#   AA6 «Piazzale G. Cesaroni» · AA7 «Via Generale Carlo Alberto dalla Chiesa,
+#   1» · AA9 «Via Mecenate» · AA10 «Piazza lotte
+#   contadine» · AR1 «Via G. Cesaroni» · AR2 «Via Piemonte incrocio con Emilia
+#   Romagna» · AR4 «Viale Mazzini».
+
 # Tipi di area:
 #   AA = Area di Attesa della popolazione (10 punti)
 #   AS = Area di Ammassamento Soccorritori (2 punti)
@@ -114,7 +120,7 @@ aree:
   - id: AR2
     tipo: AR
     nome: "Campo Sportivo Via Sicilia"
-    indirizzo: "Via Sicilia (nel testo del Piano è indicata come Via Piemonte; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)"
+    indirizzo: "Via Sicilia"
     lat: 41.701023
     lon: 12.694646
     verified: true
