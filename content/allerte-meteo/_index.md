@@ -142,17 +142,7 @@ La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri mete
 
 Consulta la previsione del **Servizio Meteorologico dell'Aeronautica Militare** per Genzano di Roma. È una fonte istituzionale per le previsioni meteorologiche.
 
-{{< external-widget
-    src="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
-    title="Previsione meteo ufficiale per Genzano di Roma — Aeronautica Militare"
-    placeholderTitle="Previsione meteo — Aeronautica Militare"
-    placeholderDesc="Previsione ufficiale del <strong>Servizio Meteorologico dell'Aeronautica Militare</strong> per Genzano di Roma."
-    icon="bi-cloud-sun-fill"
-    btnLabel="Carica la previsione AM"
-    altUrl="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
-    altLabel="meteoam.it — Genzano di Roma"
-    fallbackText="Previsione meteo ufficiale per Genzano di Roma consultabile su meteoam.it (Aeronautica Militare)"
-    widgetId="meteo-aeronautica" >}}
+<p id="meteo-aeronautica"><a class="btn btn-outline-primary" href="https://www.meteoam.it/it/meteo-citta/genzano-di-roma" target="_blank" rel="noopener noreferrer"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Apri la previsione per Genzano di Roma su meteoam.it<span class="visually-hidden"> (si apre in una nuova finestra)</span></a></p>
 
 ## Come funziona il sistema di allertamento
 

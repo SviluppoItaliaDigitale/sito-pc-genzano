@@ -29,7 +29,7 @@ Output GH:
 - changed=true|false      → il file data/allerta.json è stato riscritto
 - sostanziale=true|false  → è cambiato il livello di oggi o la pre-allerta
                             "domani" (=> deploy urgente). Falso per il solo
-                            heartbeat di `ultimo_controllo` (ogni ≥5h45'),
+                            heartbeat di `ultimo_controllo` (ogni ≥4h45'),
                             che il workflow committa ma NON deploya in
                             urgenza: lo raccoglie deploy-coalescer.yml
                             (audit 25/09/2026, F19).
@@ -621,7 +621,7 @@ def main():
     if last_check_str:
         try:
             last_check = datetime.fromisoformat(last_check_str)
-            if (now - last_check) < timedelta(hours=5, minutes=45):
+            if (now - last_check) < timedelta(hours=4, minutes=45):
                 stale_check = False
         except Exception:
             pass

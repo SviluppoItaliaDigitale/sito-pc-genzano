@@ -685,7 +685,7 @@ ALLERTA_SOGLIA_ORE = 8
 
 def chk_eta_allerta():
     """data/allerta.json: `ultimo_controllo` si riscrive almeno ogni ~6 h
-    (heartbeat di check-allerta.py a 5h45'); pausa massima osservata 5h56'.
+    (heartbeat di check-allerta.py a 4h45', 5h45' fino al 31/10/2026); pausa massima osservata 5h56'.
     Oltre 8 ore la catena cron-job.org -> check-allerta.yml e' ferma e la
     barra in homepage mostra un'allerta non piu' verificata."""
     p = _radice() / "data" / "allerta.json"

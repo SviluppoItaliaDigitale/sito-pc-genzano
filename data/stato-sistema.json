@@ -17,11 +17,11 @@
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
-      "nome": "Audit settimanale del sito",
+      "nome": "Audit del sito",
       "file": "audit-sito.yml",
       "stato": "success",
       "ultimo_run": "2026-10-30T05:36:52Z",
-      "descrizione": "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
+      "descrizione": "Controlla contenuti, link, accessibilità e coerenza ogni 6 ore."
     },
     {
       "nome": "Verifica dopo la pubblicazione",
@@ -38,11 +38,11 @@
       "descrizione": "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
     },
     {
-      "nome": "Audit prestazioni e accessibilita",
+      "nome": "Audit prestazioni e accessibilità",
       "file": "lighthouse-audit.yml",
       "stato": "success",
       "ultimo_run": "2026-10-29T22:47:31Z",
-      "descrizione": "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
+      "descrizione": "Misura velocità, accessibilità e SEO con Lighthouse due volte al giorno su tre pagine."
     }
   ]
 }

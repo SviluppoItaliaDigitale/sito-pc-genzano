@@ -228,8 +228,14 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   line-height: 1.6;
 }
 .hero-section .btn { position: relative; z-index: 1; font-weight: 600; letter-spacing: 0.01em; }
-.hero-section .btn-warning { background: var(--pc-secondary); border-color: var(--pc-secondary); color: #fff; }
-.hero-section .btn-warning:hover { background: #e65c00; border-color: #e65c00; color: #fff; transform: translateY(-1px); }
+/* Testo blu scuro sull'arancione del Gruppo: il bianco su #FF6600 dava 2,94:1,
+   sotto anche la soglia del testo grande (audit esterno 31/10/2026, A03).
+   #002244 su #FF6600 = 5,45:1; in hover #002244 su #FF7A1F = 6,14:1. */
+.hero-section .btn-warning { background: var(--pc-secondary); border-color: var(--pc-secondary); color: #002244; }
+.hero-section .btn-warning:hover,
+.hero-section .btn-warning:focus,
+.hero-section .btn-warning:active { background: #ff7a1f; border-color: #ff7a1f; color: #002244; }
+.hero-section .btn-warning:hover { transform: translateY(-1px); }
 @media (max-width: 768px) {
   .hero-section h1 { font-size: 2rem; }
   .hero-section { padding: 3rem 0; }
@@ -7344,7 +7350,7 @@ html.a11y-pause-anim .cruscotto-home-monitor:hover { transform: none; }
 .dash-ems-titolo a:hover, .dash-ems-titolo a:focus { text-decoration: underline; }
 .dash-ems-meta { font-size: .85rem; color: #495057; margin: .2rem 0 0; }
 .dash-ems-meta i.bi { color: #6c757d; margin-right: .15rem; }
-.dash-ems-vuoto { padding: 1.2rem; text-align: center; color: #6c757d; background: #f8f9fa; border-radius: 6px; }
+.dash-ems-vuoto { padding: 1.2rem; text-align: center; color: #5c636a; background: #f8f9fa; border-radius: 6px; }
 @media print { .dash-ems-lista { grid-template-columns: 1fr; } .dash-ems-item { box-shadow: none; } }
 
 /* ─────────────────────────────────────────────────────────────

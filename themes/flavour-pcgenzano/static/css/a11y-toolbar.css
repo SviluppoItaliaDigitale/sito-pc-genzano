@@ -236,7 +236,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   background: #e9ecef;
-  color: #6c757d;
+  color: #5c636a; /* 5,14:1 su #e9ecef (#6c757d dava 3,95:1) */
   border-radius: 999px;
   padding: 0.15rem 0.7rem;
   letter-spacing: 0.04em;

@@ -56,7 +56,14 @@
     {{ with .Params.parte }}<p class="print-cap-parte">{{ . }}</p>{{ end }}
     <h1 class="print-cap-title">{{ with .Params.capitolo }}<span class="print-cap-num">{{ . }} · </span>{{ end }}{{ .Title }}</h1>
     {{ with .Params.description }}<p class="print-cap-abstract">{{ . }}</p>{{ end }}
-    <div class="print-cap-body">{{ .Content }}</div>
+    {{/* Nel libro intero i capitoli stanno nella stessa pagina: «Fonti», le note
+         e gli altri titoli ripetuti avrebbero lo stesso id in più capitoli, e un
+         collegamento interno porterebbe al capitolo sbagliato. Gli id del capitolo
+         e i suoi collegamenti interni prendono il prefisso del capitolo
+         (audit esterno 31/10/2026, controllo degli id ripetuti). */}}
+    {{ $pre := printf "%s--" .File.ContentBaseName }}
+    {{ $corpo := .Content | replaceRE `(\s)id="([^"]+)"` (printf `${1}id="%s${2}"` $pre) | replaceRE `href="#([^"]+)"` (printf `href="#%s${1}"` $pre) }}
+    <div class="print-cap-body">{{ $corpo | safeHTML }}</div>
   </section>
 {{ end }}
 

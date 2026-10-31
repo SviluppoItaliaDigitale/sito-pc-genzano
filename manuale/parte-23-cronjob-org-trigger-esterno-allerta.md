@@ -62,7 +62,7 @@ Per un sistema di Protezione Civile, la latenza imprevedibile non è accettabile
 TOTALE end-to-end al cambio livello DPC: ~15-30 secondi.
 ```
 
-L'**anti-spam** interno (`stale_check` 5h45min) impedisce commit duplicati anche se i due trigger sparano ravvicinati: il secondo run trova `ultimo_controllo` recente e salta il commit.
+L'**anti-spam** interno (`stale_check` 4h45min) impedisce commit duplicati anche se i due trigger sparano ravvicinati: il secondo run trova `ultimo_controllo` recente e salta il commit.
 
 ## 23.3 — Setup iniziale (una sola volta, già fatto il 10 maggio 2026)
 

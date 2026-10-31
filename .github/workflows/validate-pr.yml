@@ -161,6 +161,17 @@ jobs:
         # che costruisce l'HTML, anche dentro il JavaScript.
         run: python3 scripts/check-ruoli-aria.py
 
+      - name: "🎨 Contrasto delle coppie testo/sfondo nei fogli di stile"
+        # 31/10/2026, audit esterno A03: il pulsante «Allerte Meteo» della home
+        # era bianco su #FF6600 (2,94:1). axe non lo vedeva perché dietro
+        # c'è un gradiente e lo segnalava solo come «incompleto».
+        run: python3 scripts/check-contrasto-css.py
+
+      - name: "🧩 Widget esterni ammessi dalla CSP (frame-src)"
+        # 31/10/2026, audit esterno A06: il riquadro di MeteoAM restava bloccato
+        # perché il dominio non era nella CSP di .htaccess (attiva solo su Aruba).
+        run: python3 scripts/check-widget-csp.py
+
       - name: "📄 Inventario dei PDF allineato ai file pubblicati"
         # 17/10/2026, audit esterno R10: quattro PDF pubblicati mancavano
         # dall'audit pubblico e la presentazione sostituita aveva i dati
