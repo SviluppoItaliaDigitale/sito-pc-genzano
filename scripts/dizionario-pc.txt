@@ -2110,3 +2110,5 @@ quater
 # --- Comunicati stampa 24/10/2026: sigla AIB minuscola nell'indirizzo citato come testo ---
 aib
 subemendamenti
+# Gioco «Genzano si prepara» 01/11/2026: formula di attribuzione obbligatoria «© OpenStreetMap contributors»
+contributors

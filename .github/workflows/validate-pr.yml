@@ -232,6 +232,15 @@ jobs:
           pip install --quiet pyyaml
           python3 scripts/genera-calendario-prevenzione.py --check
 
+      - name: "🗺️ Gioco «Genzano si prepara»: aree di attesa allineate al Piano"
+        # 01/11/2026: la mappa del gioco mostra le aree di attesa vere. Se
+        # data/aree_emergenza.yaml cambia, luoghi.json va rigenerato con
+        # scripts/genera-mappa-gioco-genzano.py, altrimenti il gioco
+        # mostrerebbe un'area spostata o un nome vecchio.
+        run: |
+          pip install --quiet pyyaml
+          python3 scripts/genera-mappa-gioco-genzano.py --check
+
       - name: "🗺️ Ogni scheda del cruscotto spiegata a parole"
         # 14/10/2026 (proposta 64, «Mappe raccontate»): ogni scheda di
         # /cruscotto/ ha la sua voce in data/mappe_raccontate.yaml, il riquadro

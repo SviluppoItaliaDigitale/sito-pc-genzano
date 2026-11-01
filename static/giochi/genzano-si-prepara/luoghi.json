@@ -1,0 +1,152 @@
+{
+ "vista": [
+  1000,
+  1116
+ ],
+ "luoghi": {
+  "casa": {
+   "nome": "Casa tua",
+   "x": 377.8,
+   "y": 301.4
+  },
+  "scuola": {
+   "nome": "Scuola Giovanni Pascoli",
+   "x": 469.7,
+   "y": 312.9
+  },
+  "parco": {
+   "nome": "Parco Sforza-Cesarini",
+   "x": 527.8,
+   "y": 327.4
+  },
+  "strada": {
+   "nome": "Una strada in discesa",
+   "x": 236.1,
+   "y": 613.9
+  },
+  "comune": {
+   "nome": "Municipio",
+   "x": 528.3,
+   "y": 406.7
+  },
+  "lago": {
+   "nome": "Lago di Nemi",
+   "x": 894.4,
+   "y": 89.3
+  }
+ },
+ "aree": [
+  {
+   "id": "AA1",
+   "tipo": "AA",
+   "nome": "Palazzo Sforza Cesarini",
+   "indirizzo": "Piazza Tommaso Frasconi",
+   "x": 571.8,
+   "y": 388.2
+  },
+  {
+   "id": "AA2",
+   "tipo": "AA",
+   "nome": "Via Piave",
+   "indirizzo": "Parcheggio Via Piave",
+   "x": 372.4,
+   "y": 183.7
+  },
+  {
+   "id": "AA3",
+   "tipo": "AA",
+   "nome": "Via Toscana",
+   "indirizzo": "Parcheggio incrocio Via Toscana / Via Lazio",
+   "x": 702.7,
+   "y": 826.9
+  },
+  {
+   "id": "AA4",
+   "tipo": "AA",
+   "nome": "Via Enrico Mattei",
+   "indirizzo": "Parcheggio Via Enrico Mattei",
+   "x": 676.2,
+   "y": 766.4
+  },
+  {
+   "id": "AA5",
+   "tipo": "AA",
+   "nome": "Via Napoli",
+   "indirizzo": "Parcheggio incrocio Via Napoli / Via Emilia Romagna",
+   "x": 363.7,
+   "y": 594.5
+  },
+  {
+   "id": "AA6",
+   "tipo": "AA",
+   "nome": "Palazzetto dello Sport",
+   "indirizzo": "Parcheggio Via G. di Vittorio",
+   "x": 608.9,
+   "y": 628.5
+  },
+  {
+   "id": "AA7",
+   "tipo": "AA",
+   "nome": "Carlo Alberto dalla Chiesa",
+   "indirizzo": "Parcheggio Scuola C. A. dalla Chiesa, Via Appia Vecchia",
+   "x": 356.9,
+   "y": 286.9
+  },
+  {
+   "id": "AA8",
+   "tipo": "AA",
+   "nome": "Zona Industriale",
+   "indirizzo": "Parcheggio Via del Lavoro",
+   "x": 660.6,
+   "y": 972.3
+  },
+  {
+   "id": "AS1",
+   "tipo": "AS",
+   "nome": "Via del Lavoro",
+   "indirizzo": "Via del Lavoro (Zona Industriale)",
+   "x": 589.8,
+   "y": 996.9
+  },
+  {
+   "id": "AS2",
+   "tipo": "AS",
+   "nome": "Viale Mazzini",
+   "indirizzo": "Viale G. Mazzini",
+   "x": 486.7,
+   "y": 279.6
+  },
+  {
+   "id": "AR1",
+   "tipo": "AR",
+   "nome": "Palazzetto dello Sport",
+   "indirizzo": "Area esterna Palazzetto dello Sport, Via G. di Vittorio",
+   "x": 592.3,
+   "y": 613.7
+  },
+  {
+   "id": "AR2",
+   "tipo": "AR",
+   "nome": "Campo Sportivo Via Sicilia",
+   "indirizzo": "Via Sicilia",
+   "x": 629.1,
+   "y": 631.6
+  },
+  {
+   "id": "AR3",
+   "tipo": "AR",
+   "nome": "Campo Sportivo Via Sardegna",
+   "indirizzo": "Via Sardegna",
+   "x": 695.0,
+   "y": 639.6
+  },
+  {
+   "id": "AR4",
+   "tipo": "AR",
+   "nome": "Campo Sportivo Don Bosco (Salesiani)",
+   "indirizzo": "Viale Piave angolo Via Lega Latina",
+   "x": 442.5,
+   "y": 188.2
+  }
+ ]
+}
