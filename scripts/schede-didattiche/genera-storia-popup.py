@@ -646,6 +646,7 @@ def main():
     <nav class="st-indice" aria-label="Vai al foglio">{indice}</nav>
   </div>
 {"".join(fogli)}
+  <script src="/formazione/schede-stampabili/assets/zoom-pagina.js" defer></script>
 </body>
 </html>
 '''
