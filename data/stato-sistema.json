@@ -1,47 +1,47 @@
 {
-  "aggiornato": "2026-10-31T11:05:15+00:00",
+  "aggiornato": "2026-11-01T11:58:24+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-31T10:21:40Z",
+      "ultimo_run": "2026-11-01T11:13:20Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-31T11:01:01Z",
+      "ultimo_run": "2026-11-01T11:55:23Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
       "nome": "Audit del sito",
       "file": "audit-sito.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-31T05:27:14Z",
+      "ultimo_run": "2026-11-01T05:52:19Z",
       "descrizione": "Controlla contenuti, link, accessibilità e coerenza ogni 6 ore."
     },
     {
       "nome": "Verifica dopo la pubblicazione",
       "file": "smoke-test-post-deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-31T10:14:10Z",
+      "ultimo_run": "2026-11-01T09:54:35Z",
       "descrizione": "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
     },
     {
       "nome": "Allineamento delle pagine online",
       "file": "verifica-deploy-aruba.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-31T10:14:10Z",
+      "ultimo_run": "2026-11-01T09:54:35Z",
       "descrizione": "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
     },
     {
       "nome": "Audit prestazioni e accessibilità",
       "file": "lighthouse-audit.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-30T22:24:17Z",
+      "ultimo_run": "2026-10-31T21:38:58Z",
       "descrizione": "Misura velocità, accessibilità e SEO con Lighthouse due volte al giorno su tre pagine."
     }
   ]
