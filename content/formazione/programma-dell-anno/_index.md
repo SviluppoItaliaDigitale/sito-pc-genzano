@@ -16,9 +16,10 @@ Ogni incontro dura un'ora, 45 minuti all'infanzia. Il consiglio di classe può c
 ## Come si usa
 
 1. Trova la tabella della tua classe e apri la lezione del mese.
-2. Prima del primo incontro e dopo l'ultimo usa la [verifica prima e dopo](/formazione/verifica-prima-e-dopo/): cinque domande, senza voto e senza nomi.
-3. A fine incontro consegna il compito a casa. La guida [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) spiega ai genitori come continuare.
-4. A maggio la classe prepara il lavoro finale. Se vuoi, [mandacelo](#il-lavoro-della-classe-sul-sito): può uscire sul sito.
+2. Per aprire l'incontro, in [Video per la classe](/formazione/video-per-la-classe/) trovi un video breve e animato per ogni argomento, con voce e sottotitoli, da proiettare sulla LIM.
+3. Prima del primo incontro e dopo l'ultimo usa la [verifica prima e dopo](/formazione/verifica-prima-e-dopo/): cinque domande, senza voto e senza nomi.
+4. A fine incontro consegna il compito a casa. La guida [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) spiega ai genitori come continuare.
+5. A maggio la classe prepara il lavoro finale. Se vuoi, [mandacelo](#il-lavoro-della-classe-sul-sito): può uscire sul sito.
 
 Prima di cominciare leggi la [checklist del docente](/formazione/scuole-checklist-docente/), con le risposte alle domande difficili dei bambini.
 
@@ -77,8 +78,6 @@ Si comincia a leggere le fonti ufficiali e a guardare il proprio quartiere.
 | Gennaio-febbraio | I colori dell'allerta | [Apri la lezione](/formazione/crea-la-mia-lezione/?classe=primaria-alta&minuti=60&tema=meteo) | L'alunno spiega ai genitori che cosa vuol dire ogni colore. |
 | Marzo-aprile | Il piano della mia famiglia | [Apri la lezione](/formazione/crea-la-mia-lezione/?classe=primaria-alta&minuti=60&tema=casa) | Si compila insieme il [piano familiare](/piano-familiare/). |
 | Maggio | Notizie vere e notizie false | [Apri la lezione](/formazione/crea-la-mia-lezione/?classe=primaria-alta&minuti=60&tema=informazione) | In famiglia si sceglie dove leggere le notizie ufficiali. |
-
-**Video per ogni incontro:** in [Video per la classe](/formazione/video-per-la-classe/) c'è un video breve con voce e sottotitoli per ciascuno dei cinque incontri, da proiettare sulla LIM.
 
 **Lavoro finale:** la mappa dei punti sicuri del quartiere, con la [mappa cieca del quartiere](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/).
 

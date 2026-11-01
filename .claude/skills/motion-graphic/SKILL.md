@@ -115,3 +115,13 @@ Dipendenze installate al volo dagli script: `playwright` (Python) con il Chromiu
 ## Chiusura della consegna
 
 Una riga su cosa contiene il video e in quali formati, note sui dati da validare (e su eventuali divisioni per livello fatte da me), fonti in fondo come link.
+
+## Video per bambini e per la classe (stile «cartellone», dal 01/11/2026)
+
+Istruzione dell'utente: *«Falle belle animate, sono per bambini!»*, poi *«deve essere un video semplice ma bello da vedere, animato»*, validi anche per i ragazzi. I video della pagina [Video per la classe](/formazione/video-per-la-classe/) usano uno stampo diverso dal blu notte delle puntate social, in `bambini/`:
+
+- **Stile:** cartellone di classe a pennarello. Cielo con nuvole e colline, riquadri bianchi con bordo inchiostro `#0b3a66` e ombra netta, titoli che rimbalzano con la parola chiave evidenziata in giallo, cerchio di colore fra le scene, coriandoli solo nel finale (dietro il testo). Personaggi originali disegnati in SVG: Flavio protagonista, gli amici con i nomi ammessi (rule 02 § «Personaggi delle storie»), Anna volontaria.
+- **Pezzi:** `bambini/base.html` (motore, HUD, sottotitoli) e `bambini/icone.js` (personaggi `PG()`, `RANNICCHIATO()`, `anima()`, icone, `tile()`, `svgPop()`) sono comuni; ogni video ha tre file in `bambini/pezzi/<prefisso>-{cfg,dis,anim}.js`. `python3 .claude/skills/motion-graphic/bambini/assembla.py <nome> <prefisso> "<titolo>"` scrive `motion/src/<nome>.src.html` (il suffisso «— Protezione Civile Genzano di Roma» lo aggiunge lo stampo). 🔴 `svgPop()` scrive `style.transform`: va applicato a un elemento **senza** attributo `transform`, altrimenti la traslazione si perde (si avvolge in un `<g>` in più).
+- **Voce:** ElevenLabs, voce «Luca - Warm Italian Narrator» (`1s5ETcPtsJ9W2cUUQrDb`), una riga per scena come in `testi.txt`; si scaricano gli mp3 con `bambini/scarica.py` (variabile `ELEVENLABS_WORKSPACE`, URL firmate valide due ore) e `bambini/converti.py <cartella mp3> motion/voce/<nome>` scrive `line_<k>.wav` e `durate.json`, tolto il silenzio. `render.py` li monta come la voce Piper. Nessun nome dello strumento nel video, nei titoli, nei metadati o nelle descrizioni (CLAUDE.md § «Video del Gruppo»).
+- **Tempi degli elenchi** (`listaAt`): ogni voce compare quando la voce la nomina, in proporzione ai caratteri della frase.
+- **Sito:** solo 16:9 web; dopo `--sito` si tolgono i metadati dell'encoder (`ffmpeg -map 0 -c copy -map_metadata -1 -bsf:v filter_units=remove_types=6 -fflags +bitexact`). La pagina la riscrive `scripts/genera-pagina-video-classe.py` dai `.vtt` (trascrizioni) e da `ffprobe` (durate): un video nuovo si aggiunge alla lista `V` dello script.
