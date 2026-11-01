@@ -489,8 +489,9 @@
       ],
       teoria: [
         { titolo: 'Temporali intensi', url: '/rischi-prevenzione/temporali-intensi/' },
-        { titolo: 'Rischio idrogeologico', url: '/rischi-prevenzione/rischio-idrogeologico/' },
-        { titolo: 'Allerte meteo', url: '/allerte-meteo/' }
+        { titolo: 'Rischio sismico', url: '/rischi-prevenzione/rischio-sismico/' },
+        { titolo: 'Rischio incendio', url: '/rischi-prevenzione/rischio-incendio/' },
+        { titolo: 'Ondate di calore', url: '/rischi-prevenzione/ondate-di-calore/' }
       ]
     },
     'simulatore-coc': {

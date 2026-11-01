@@ -44,6 +44,13 @@
       localStorage.setItem(k, v);
     } catch (e) { return null; }
   }
+  // testo con collegamenti scritti come [parole](/indirizzo/), solo interni al sito
+  function conLink(t) {
+    return esc(t).replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, function (m, testo, url) {
+      return '<a href="' + url + '" target="_blank" rel="noopener">' + testo +
+        '<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>';
+    });
+  }
   function link(url, testo) {
     return '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(testo) +
       '<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>';
@@ -99,6 +106,10 @@
 
   function inquadra(chiave, zoom) {
     var l = LUOGHI && LUOGHI.luoghi[chiave];
+    if (chiave === 'area-vicina') {
+      var aa = areaPiuVicina();
+      if (aa) l = { x: aa.x, y: aa.y, nome: 'Area di attesa ' + aa.id + ', ' + aa.nome };
+    }
     var pin = $('#gsp-pin');
     var cw = mappa.clientWidth, ch = mappa.clientHeight;
     // la carta copre sempre tutto il riquadro, anche quando il riquadro è
@@ -132,8 +143,16 @@
   /* ------------------------------------------------------------ meteo */
   var gocce = [], animazione = null, meteoAttuale = 'sereno';
   function meteo(tipo) {
+    tipo = tipo || 'sereno';
+    var prima = meteoAttuale;
     meteoAttuale = tipo;
     root.setAttribute('data-meteo', tipo);
+    // la scossa: un solo sussulto della mappa, mai con il movimento ridotto
+    mappa.classList.remove('gsp-trema');
+    if (tipo === 'scossa' && prima !== 'scossa' && !movimentoRidotto()) {
+      void mappa.offsetWidth;
+      mappa.classList.add('gsp-trema');
+    }
     if ((tipo === 'pioggia' || tipo === 'buio') && !movimentoRidotto()) avviaPioggia();
     else fermaPioggia();
   }
@@ -214,41 +233,50 @@
     }
   }
 
+  function elencoScenari() {
+    var G = window.GenzanoScenari;
+    return Object.keys(G).map(function (k) { return G[k]; })
+      .sort(function (a, b) { return (a.ordine || 0) - (b.ordine || 0); });
+  }
+
   function schermataIniziale() {
-    var s = window.GenzanoScenari.temporale;
     barraAllerta.hidden = true;
     meteo('sereno');
-    mostra(
-      '<h2 data-leggi>Scegli lo scenario</h2>' +
+    var html = '<h2 data-leggi>Scegli lo scenario</h2>' +
       '<p data-leggi>Una famiglia di Genzano, una città vera e un evento simulato. Prima ti prepari, poi affronti quello che succede, alla fine scopri che cosa la preparazione ha evitato.</p>' +
-      '<div class="gsp-scenari">' +
-      '<button type="button" class="gsp-scenario" data-azione="inizia" data-scenario="temporale">' +
-      '<span class="gsp-scenario-t"><i class="bi bi-cloud-lightning-rain-fill me-2" aria-hidden="true"></i>' + esc(s.titolo) + '</span>' +
-      '<span class="gsp-scenario-d">' + esc(s.rischio) + ' · ' + esc(s.durata) + '</span></button>' +
-      '<div class="gsp-scenario gsp-presto" aria-disabled="true"><span class="gsp-scenario-t"><i class="bi bi-house-exclamation me-2" aria-hidden="true"></i>La scossa della notte</span><span class="gsp-scenario-d">Rischio sismico · in preparazione</span></div>' +
-      '<div class="gsp-scenario gsp-presto" aria-disabled="true"><span class="gsp-scenario-t"><i class="bi bi-fire me-2" aria-hidden="true"></i>Fumo sulla collina</span><span class="gsp-scenario-d">Incendio boschivo · in preparazione</span></div>' +
-      '<div class="gsp-scenario gsp-presto" aria-disabled="true"><span class="gsp-scenario-t"><i class="bi bi-thermometer-sun me-2" aria-hidden="true"></i>Luglio rovente</span><span class="gsp-scenario-d">Ondata di calore · in preparazione</span></div>' +
-      '</div>' +
+      '<div class="gsp-scenari">';
+    elencoScenari().forEach(function (s) {
+      html += '<button type="button" class="gsp-scenario" data-azione="inizia" data-scenario="' + esc(s.id) + '">' +
+        '<span class="gsp-scenario-t"><i class="bi ' + esc(s.icona || 'bi-map') + ' me-2" aria-hidden="true"></i>' + esc(s.titolo) + '</span>' +
+        '<span class="gsp-scenario-d">' + esc(s.rischio) + ' · ' + esc(s.durata) + '</span></button>';
+    });
+    html += '</div>' +
       '<h3 class="h6 mt-3">Come si gioca</h3>' +
       '<ul class="gsp-come"><li>Prima dell\'evento scegli come usare il tempo che hai: non puoi fare tutto.</li>' +
       '<li>Durante l\'evento scegli che cosa fare. Dopo ogni scelta leggi perché è giusta o sbagliata.</li>' +
-      '<li>Non c\'è un tempo limite: leggi con calma.</li></ul>',
-      null, 1);
+      '<li>Non c\'è un tempo limite: leggi con calma.</li></ul>';
+    mostra(html, null, 1);
+  }
+
+  function mostraAllerta(a) {
+    if (!a) { barraAllerta.hidden = true; return; }
+    barraAllerta.hidden = false;
+    barraAllerta.className = 'gsp-allerta gsp-allerta-' + (a.colore || 'arancione');
+    barraAllerta.innerHTML = '<i class="bi ' + (a.icona || 'bi-exclamation-triangle-fill') + ' me-2" aria-hidden="true"></i><strong>' +
+      esc(a.testo) + '</strong><span class="gsp-allerta-fonte"> · Fonte: ' + esc(a.fonte) + ' (simulazione)</span>';
   }
 
   function inizia(id) {
     var s = window.GenzanoScenari[id];
     stato = { s: s, esiti: {}, prep: [], indice: -1, punti: 0, massimo: 0, diario: [] };
-    meteo('sereno');
+    meteo(s.prima.meteo || 'sereno');
     mostra(
       '<p class="gsp-ora" data-leggi>' + esc(s.prima.ora) + '</p>' +
       '<h2 data-leggi>' + esc(s.titolo) + '</h2>' +
       s.intro.map(function (t) { return '<p data-leggi>' + esc(t) + '</p>'; }).join('') +
       '<button type="button" class="btn btn-primary" data-azione="prima">Prepararsi</button>',
-      'casa', 1.6);
-    barraAllerta.hidden = false;
-    barraAllerta.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i><strong>' +
-      esc(s.allerta.testo) + '</strong><span class="gsp-allerta-fonte"> · Fonte: ' + esc(s.allerta.fonte) + ' (simulazione)</span>';
+      s.prima.luogo || 'casa', 1.6);
+    mostraAllerta(s.allerta);
   }
 
   function schermataPrima() {
@@ -262,8 +290,8 @@
       html += '<li><button type="button" class="gsp-azione" aria-pressed="false" data-azione="prep" data-id="' + a.id + '">' +
         '<span class="gsp-spunta" aria-hidden="true"></span><span data-leggi>' + esc(a.testo) + '</span></button></li>';
     });
-    html += '</ul><button type="button" class="btn btn-primary" data-azione="via" disabled>È venerdì: andiamo avanti</button>';
-    mostra(html, 'casa', 1.6);
+    html += '</ul><button type="button" class="btn btn-primary" data-azione="via" disabled>' + esc(p.avanti || 'Andiamo avanti') + '</button>';
+    mostra(html, p.luogo || 'casa', 1.6);
     aggiornaContatore();
   }
 
@@ -282,8 +310,10 @@
   function preparazione() {
     var p = {};
     stato.prep.forEach(function (id) { p[id] = true; });
-    // scelte fatte durante l'evento che cambiano quelli successivi
-    p.nonnaSu = stato.esiti.nonnanotte > 0;
+    // punti delle scelte già fatte: cambiano gli eventi successivi
+    p.esiti = stato.esiti;
+    // l'area di attesa più vicina alla casa del gioco
+    p.area = areaPiuVicina();
     return p;
   }
 
@@ -299,19 +329,19 @@
   }
 
   function passaggioAlDopo() {
-    barraAllerta.innerHTML = '<i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i><strong>Allerta terminata</strong><span class="gsp-allerta-fonte"> · Fonte: Centro Funzionale della Regione Lazio (simulazione)</span>';
-    barraAllerta.classList.add('gsp-allerta-fine');
-    meteo('sereno');
-    mostra('<h2 data-leggi>La notte è passata</h2>' +
-      '<p data-leggi>La pioggia è finita. Adesso comincia il dopo: anche qui le scelte contano.</p>' +
-      '<button type="button" class="btn btn-primary" data-azione="dopo">Vai alla mattina</button>', 'casa', 1.4);
+    var t = stato.s.transizione;
+    if (t.allerta) mostraAllerta(t.allerta); else barraAllerta.hidden = true;
+    meteo(t.meteo || 'sereno');
+    mostra('<h2 data-leggi>' + esc(t.titolo) + '</h2>' +
+      '<p data-leggi>' + esc(t.testo) + '</p>' +
+      '<button type="button" class="btn btn-primary" data-azione="dopo">' + esc(t.bottone) + '</button>', t.luogo || 'casa', 1.4);
   }
 
   function mostraEvento(e, p) {
     meteo(e.meteo);
     var scelte = valore(e.scelte, p);
     stato.scelteCorrenti = scelte;
-    var html = '<p class="gsp-ora" data-leggi>' + esc(e.ora) + ' · ' + (e.fase === 'dopo' ? 'Dopo' : 'Durante') + '</p>' +
+    var html = '<p class="gsp-ora" data-leggi>' + esc(e.ora) + ' · ' + ({ prima: 'Prima', dopo: 'Dopo' }[e.fase] || 'Durante') + '</p>' +
       '<h2 data-leggi>' + esc(e.titolo) + '</h2>' +
       '<p data-leggi>' + esc(valore(e.testo, p)) + '</p>' +
       '<p class="gsp-domanda" data-leggi>Che cosa fai?</p><ul class="gsp-scelte">';
@@ -340,7 +370,7 @@
       if (j === i) b.classList.add('gsp-scelta-tua');
     });
     var nota = (max < 3 && c.punti === max)
-      ? '<p class="gsp-nota">In questa situazione non c\'era una scelta perfetta: la preparazione di ieri l\'avrebbe resa possibile.</p>' : '';
+      ? '<p class="gsp-nota">In questa situazione non c\'era una scelta perfetta: la preparazione fatta prima l\'avrebbe resa possibile.</p>' : '';
     var box = document.createElement('div');
     box.className = 'gsp-esito gsp-esito-' + tipo;
     box.innerHTML = '<p class="gsp-esito-t" data-leggi><i class="bi ' + icona + ' me-2" aria-hidden="true"></i>' + etichetta + '</p>' +
@@ -387,22 +417,22 @@
 
     var aa = areaPiuVicina();
     html += '<div class="gsp-ricorda"><h3 class="h6" data-leggi>Per la vita vera</h3><ul>' +
-      '<li data-leggi>Controlla l\'allerta di oggi su ' + link('/allerte-meteo/', 'Allerte meteo') + '.</li>' +
-      '<li data-leggi>Prepara il ' + link('/piano-familiare/', 'piano familiare') + ' e il ' + link('/rischi-prevenzione/kit-emergenza/', 'kit di emergenza') + '.</li>' +
-      (aa ? '<li data-leggi>Per il terremoto il punto di ritrovo è l\'area di attesa: per la casa del gioco la più vicina è la ' + esc(aa.id) + ', ' + esc(aa.nome) + '. Trova la tua su ' + link('/aree-attesa/', 'Aree di attesa') + '.</li>' : '') +
+      (s.ricorda || []).map(function (r) { return '<li data-leggi>' + conLink(r) + '</li>'; }).join('') +
+      (aa ? '<li data-leggi>L\'area di attesa più vicina alla casa del gioco è la ' + esc(aa.id) + ', ' + esc(aa.nome) + '. Trova la tua su ' + link('/aree-attesa/', 'Aree di attesa') + '.</li>' : '') +
       '<li data-leggi>In emergenza chiama il 112 e segui solo le fonti ufficiali.</li></ul></div>' +
       '<div id="gsp-attestato"></div>' +
       '<p class="mt-3"><button type="button" class="btn btn-primary me-2" data-azione="rigioca">Gioca di nuovo</button>' +
       '<button type="button" class="btn btn-outline-primary" data-azione="scenari">Torna agli scenari</button></p>';
-    mostra(html, 'casa', 1);
+    mostra(html, s.prima.luogo || 'casa', 1);
     if (window.GiochiUtil && window.GiochiUtil.salvaEMostraAttestato) {
       window.GiochiUtil.salvaEMostraAttestato(ID_GIOCO, totale, massimo, '#gsp-attestato');
     }
   }
 
   function areaPiuVicina() {
-    if (!LUOGHI || !LUOGHI.luoghi.casa) return null;
-    var c = LUOGHI.luoghi.casa, meglio = null, dist = Infinity;
+    var chiave = (stato && stato.s.casa) || 'casa';
+    if (!LUOGHI || !LUOGHI.luoghi[chiave]) return null;
+    var c = LUOGHI.luoghi[chiave], meglio = null, dist = Infinity;
     LUOGHI.aree.forEach(function (a) {
       if (a.tipo !== 'AA') return;
       var d = Math.hypot(a.x - c.x, a.y - c.y);
@@ -463,10 +493,13 @@
     if (!LUOGHI) return;
     var t = camera.style.transform.match(/scale\(([\d.]+)\)/);
     var e = stato && stato.indice >= 0 && stato.s.eventi[stato.indice];
-    inquadra(e ? e.luogo : 'casa', t ? parseFloat(t[1]) : 1);
+    inquadra(e ? e.luogo : ((stato && stato.s.casa) || 'casa'), t ? parseFloat(t[1]) : 1);
   });
   window.addEventListener('pagehide', smettiDiLeggere);
 
   interruttoreAree.checked = ls('pcgenzano.gsp.aree') !== '0';
-  caricaLuoghi().then(schermataIniziale);
+  caricaLuoghi().then(function () {
+    var dalLink = (location.hash || '').replace('#', '');
+    if (dalLink && window.GenzanoScenari[dalLink]) inizia(dalLink); else schermataIniziale();
+  });
 })();

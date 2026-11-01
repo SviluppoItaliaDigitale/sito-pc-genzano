@@ -451,7 +451,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/giochi/genzano-si-prepara/">
   <div class="ms-card-icon"><i class="bi bi-map-fill"></i></div>
   <p class="ms-card-title">Genzano si prepara</p>
-  <p class="ms-card-desc">Gioco di simulazione per tutti sulla mappa vera di Genzano: preparazione, allerta e resoconto di ciò che la prevenzione ha evitato.</p>
+  <p class="ms-card-desc">Gioco di simulazione per tutti sulla mappa vera di Genzano: temporale, terremoto, incendio boschivo e ondata di calore.</p>
 </a>
 <a class="ms-card ms-edu" href="/catalogo-giochi/">
   <div class="ms-card-icon"><i class="bi bi-card-checklist"></i></div>

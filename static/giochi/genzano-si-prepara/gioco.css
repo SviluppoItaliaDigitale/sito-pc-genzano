@@ -41,6 +41,9 @@ body.gsp-body { background: var(--gsp-fondo); }
   line-height: 1.35;
 }
 .gsp-allerta.gsp-allerta-fine { background: #d7ecdf; }
+.gsp-allerta.gsp-allerta-rosso { background: #a4161a; color: #fff; }
+.gsp-allerta.gsp-allerta-giallo { background: #ffd84d; color: #111; }
+.gsp-allerta.gsp-allerta-info { background: #dbe7f5; color: #0b2545; }
 .gsp-allerta-fonte { font-weight: 400; }
 .gsp-allerta:not([hidden]) + .gsp-mappa { border-top-left-radius: 0; border-top-right-radius: 0; }
 
@@ -78,6 +81,18 @@ body.gsp-body { background: var(--gsp-fondo); }
 .gsp-cielo { position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; transition: background .8s; }
 .gsp[data-meteo="pioggia"] .gsp-cielo { background: rgba(40, 60, 90, .28); }
 .gsp[data-meteo="buio"] .gsp-cielo { background: rgba(10, 20, 45, .58); }
+.gsp[data-meteo="notte"] .gsp-cielo { background: rgba(10, 20, 45, .5); }
+.gsp[data-meteo="scossa"] .gsp-cielo { background: rgba(10, 20, 45, .35); }
+.gsp[data-meteo="fumo"] .gsp-cielo { background: linear-gradient(200deg, rgba(90, 70, 60, .15), rgba(120, 90, 70, .45)); }
+.gsp[data-meteo="caldo"] .gsp-cielo { background: rgba(255, 150, 40, .18); }
+/* la scossa: un sussulto breve della mappa, solo se il movimento non è ridotto */
+.gsp-mappa.gsp-trema { animation: gsp-trema .9s ease-out 1; }
+@keyframes gsp-trema {
+  0%, 100% { transform: translate(0, 0); }
+  15% { transform: translate(-6px, 2px); } 30% { transform: translate(5px, -3px); }
+  45% { transform: translate(-4px, 2px); } 60% { transform: translate(3px, -1px); }
+  75% { transform: translate(-2px, 1px); }
+}
 .gsp-pioggia { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
 
 .gsp-dove {
@@ -208,11 +223,13 @@ button.gsp-scenario:hover, button.gsp-scenario:focus-visible { background: #eef4
 /* ---------- movimento ridotto ---------- */
 @media (prefers-reduced-motion: reduce) {
   .gsp-camera, .gsp-cielo { transition: none; }
+  .gsp-mappa.gsp-trema { animation: none; }
   .gsp-pin-alone { animation: none; opacity: .5; }
 }
 html.a11y-pause-anim .gsp-camera, html.a11y-pause-animations .gsp-camera,
 html.a11y-pause-anim .gsp-cielo, html.a11y-pause-animations .gsp-cielo { transition: none; }
 html.a11y-pause-anim .gsp-pin-alone, html.a11y-pause-animations .gsp-pin-alone { animation: none; opacity: .5; }
+html.a11y-pause-anim .gsp-mappa.gsp-trema, html.a11y-pause-animations .gsp-mappa.gsp-trema { animation: none; }
 
 /* ---------- stampa ---------- */
 @media print {
