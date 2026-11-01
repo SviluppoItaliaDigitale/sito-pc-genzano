@@ -124,4 +124,6 @@ Prima dell'uso ufficiale, ogni modello deve essere controllato dalla scuola.
 - [Dirigenti scolastici, DSGA, RSPP e ASPP](/formazione/dirigenti-e-rspp/)
 - [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/)
 - [Educazione civica](/formazione/educazione-civica/)
+- [Il Gruppo nella tua scuola](/formazione/il-gruppo-a-scuola/) — che cosa possiamo fare con la classe e come chiederlo
+- [Programma dell'anno per la classe](/formazione/programma-dell-anno/)
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/)

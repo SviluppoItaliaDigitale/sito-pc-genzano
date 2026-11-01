@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-11-01"
 ---
 
 Questa checklist aiuta i docenti a usare i materiali didattici del Gruppo Comunale di Protezione Civile di Genzano di Roma in modo semplice, ordinato e adatto all'età degli alunni.
@@ -31,6 +31,7 @@ Domande guida:
 
 Materiali utili:
 
+- [Programma dell'anno per la classe](/formazione/programma-dell-anno/) — cinque incontri già organizzati
 - [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/)
 - [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/)
@@ -90,6 +91,22 @@ Esempio sul 112:
 - Non chiedere agli alunni di raccontare esperienze dolorose davanti a tutti.
 - Non valutare la paura come errore.
 - Non sostituire le procedure della scuola con indicazioni generiche.
+
+## Le domande difficili degli alunni
+
+Le domande sulla paura arrivano quasi sempre. Rispondi con calma, con frasi vere: niente promesse che nessuno può mantenere, niente previsioni allarmanti.
+
+| Se ti chiedono… | Puoi rispondere così |
+|---|---|
+| «Ci sarà un terremoto?» | «Nessuno può sapere quando arriverà un terremoto. Sappiamo che qui la terra a volte trema, di solito poco, e sappiamo che cosa fare: per questo ci esercitiamo.» |
+| «La scuola crolla?» | Non dire «è impossibile» e non dire «può succedere». Spiega che la scuola ha un piano di emergenza, che gli adulti sanno che cosa fare e che le prove servono a essere pronti. |
+| «E se succede quando non c'è la mamma?» | «Con te ci sono sempre degli adulti che ti aiutano: a scuola gli insegnanti, che seguono il piano della scuola. Con la tua famiglia potete scegliere un punto dove ritrovarvi.» Il [piano familiare](/piano-familiare/) aiuta a farlo. |
+| «Il vulcano si sveglia?» | «Il vulcano dei Colli Albani è quiescente, non spento. L'INGV lo sorveglia ogni giorno con i suoi strumenti.» Approfondisci con la pagina sul [rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/). |
+| «E il mio cane?» | «Anche gli animali fanno parte del piano della famiglia.» Per i genitori c'è il [kit per gli animali domestici](/formazione/kit-calamita-animali-domestici/). |
+| Un alunno piange o si spaventa | Non dire «non avere paura». Di' che la paura è normale e che ci prepariamo proprio per sapere che cosa fare. Lascialo fare l'attività da un posto dove si sente tranquillo. |
+| Un alunno ha vissuto un'emergenza | Non chiedergli di raccontarla davanti alla classe. Parlane con lui in privato e con la famiglia. Indicazioni nella pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/#a-scuola). |
+
+Se non sai rispondere, dillo: «Non lo so, lo chiediamo insieme ai volontari». È una risposta onesta, e i volontari possono [venire in classe](/formazione/il-gruppo-a-scuola/).
 
 ## Inclusione e bisogni educativi
 
@@ -183,6 +200,8 @@ Per organizzare un incontro o proporre un'attività nelle scuole del territorio 
 
 ## Vedi anche
 
+- [Programma dell'anno per la classe](/formazione/programma-dell-anno/) — cinque incontri da ottobre a maggio
+- [Verifica prima e dopo](/formazione/verifica-prima-e-dopo/) — che cosa ha imparato la classe
 - [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/) — materiali per ruolo
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) — unità già strutturate
 - [Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/) — schede semplificate
