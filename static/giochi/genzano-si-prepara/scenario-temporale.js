@@ -12,6 +12,8 @@
 
   var S = {
     id: 'temporale',
+    ordine: 1,
+    icona: 'bi-cloud-lightning-rain-fill',
     titolo: 'Il temporale di ottobre',
     rischio: 'Rischio idrogeologico e temporali',
     durata: 'Circa 10 minuti',
@@ -22,14 +24,26 @@
     allerta: {
       livello: 'arancione',
       testo: 'Allerta arancione per rischio idrogeologico e temporali — Zona F — valida venerdì',
-      fonte: 'Centro Funzionale della Regione Lazio'
+      fonte: 'Centro Funzionale della Regione Lazio',
+      colore: 'arancione'
     },
+    transizione: {
+      titolo: 'La notte è passata',
+      testo: 'La pioggia è finita. Adesso comincia il dopo: anche qui le scelte contano.',
+      bottone: 'Vai alla mattina',
+      allerta: { testo: 'Allerta terminata', fonte: 'Centro Funzionale della Regione Lazio', colore: 'fine', icona: 'bi-check-circle-fill' }
+    },
+    ricorda: [
+      'Controlla l\'allerta di oggi su [Allerte meteo](/allerte-meteo/).',
+      'Prepara il [piano familiare](/piano-familiare/) e il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).'
+    ],
 
     /* ---------- PRIMA: scegli come usare il tempo che hai ---------- */
     prima: {
       ora: 'Giovedì, ore 17:00',
       luogo: 'casa',
       testo: 'Prima di cena hai tempo per quattro cose. Quali scegli?',
+      avanti: 'È venerdì: andiamo avanti',
       posti: 4,
       azioni: [
         { id: 'nonna', luogo: 'casa', peso: 3,
@@ -190,14 +204,14 @@
             ? 'La caditoia davanti casa porta via molta acqua, ma la pioggia è troppa: un filo d\'acqua entra nel seminterrato.'
             : 'La caditoia davanti casa è piena di foglie: l\'acqua si ferma davanti al portone ed entra nel seminterrato.';
           if (p.nonna) t += ' La nonna Lina dorme al primo piano: è al sicuro.';
-          else if (p.nonnaSu) t += ' La nonna Lina adesso dorme al primo piano: l\'hai portata su in tempo.';
+          else if (p.esiti.nonnanotte > 0) t += ' La nonna Lina adesso dorme al primo piano: l\'hai portata su in tempo.';
           else t += ' La nonna Lina è ancora giù, nella stanza del seminterrato, e ti chiama.';
           if (!p.auto) t += ' E l\'auto è nel garage interrato.';
           return t;
         },
         scelte: function (p) {
           var s = [];
-          if (p.nonna || p.nonnaSu) {
+          if (p.nonna || p.esiti.nonnanotte > 0) {
             s.push({ testo: 'Resto su e chiudo la porta che porta al piano di sotto. Se l\'acqua arriva agli impianti e posso farlo senza rischi, stacco gas e corrente.', punti: 3,
               perche: 'Giusto. Si resta ai piani alti, si chiudono le porte verso i locali bassi e, solo senza rischi, si staccano gas e corrente.' });
             s.push({ testo: 'Scendo a mettere degli stracci sotto la porta della cantina.', punti: 0,
@@ -213,7 +227,7 @@
           if (!p.auto) {
             s.push({ testo: 'Scendo in garage a spostare l\'auto.', punti: 0,
               perche: 'Cantine e garage si allagano per primi e la spinta dell\'acqua può bloccare la porta. L\'auto si sostituisce, una persona no.' });
-          } else if (p.nonna || p.nonnaSu) {
+          } else if (p.nonna || p.esiti.nonnanotte > 0) {
             s.push({ testo: 'Vado ad aprire il portone per far uscire l\'acqua.', punti: 0,
               perche: 'Per aprire il portone dovresti scendere dove l\'acqua sta entrando. Si resta ai piani alti.' });
           }

@@ -32,7 +32,7 @@ Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una sc
 
 ### [Genzano si prepara](/catalogo-giochi/genzano-si-prepara/)
 
-Una simulazione sulla mappa vera di Genzano: ti prepari all'allerta, affronti l'evento e scopri che cosa la prevenzione ha evitato. **[Apri la scheda →](/catalogo-giochi/genzano-si-prepara/)** · [Gioca subito →](/giochi/genzano-si-prepara/)
+Una simulazione sulla mappa vera di Genzano, con quattro scenari (temporale, terremoto, incendio boschivo, ondata di calore): ti prepari, affronti l'evento e scopri che cosa la prevenzione ha evitato. **[Apri la scheda →](/catalogo-giochi/genzano-si-prepara/)** · [Gioca subito →](/giochi/genzano-si-prepara/)
 
 ## Infanzia (3-6 anni) {#infanzia}
 

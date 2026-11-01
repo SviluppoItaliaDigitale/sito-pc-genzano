@@ -1,6 +1,6 @@
 ---
 title: "Gioco: Genzano si prepara"
-description: "Scheda del gioco Genzano si prepara, per tutte le età: una simulazione sulla mappa vera di Genzano di Roma, dalla preparazione al resoconto di ciò che la prevenzione ha evitato."
+description: "Scheda del gioco Genzano si prepara, per tutte le età: simulazioni su temporale, terremoto, incendio boschivo e ondata di calore sulla mappa vera di Genzano di Roma."
 image: ""
 image_alt: ""
 date: 2026-11-01
@@ -23,7 +23,7 @@ tags: ["giochi", "simulazione", "educazione-civica", "scuola", "famiglie"]
 ## A chi è rivolto
 
 - **Fascia d'età:** per tutti; i più piccoli giocano insieme a un adulto
-- **Durata stimata:** circa 10 minuti per scenario
+- **Durata stimata:** da 8 a 10 minuti per scenario
 - **Modalità:** interattiva, da computer, tablet, smartphone e lavagna interattiva
 - **Lingua:** italiano chiaro, con lettura ad alta voce
 
@@ -38,7 +38,14 @@ tags: ["giochi", "simulazione", "educazione-civica", "scuola", "famiglie"]
 3. Durante e dopo l'evento scegli che cosa fare. Dopo ogni scelta leggi perché è giusta o sbagliata, con il collegamento alla pagina del sito che lo spiega.
 4. Alla fine il resoconto mostra i disastri che la preparazione ha evitato e quelli che si potevano evitare.
 
-Il primo scenario, **«Il temporale di ottobre»**, riguarda il rischio idrogeologico e i temporali con un'allerta arancione sulla Zona F. Gli scenari sul terremoto, sugli incendi boschivi e sull'ondata di calore sono in preparazione.
+Gli scenari sono quattro:
+
+- **«Il temporale di ottobre»**: rischio idrogeologico e temporali, con un'allerta arancione sulla Zona F;
+- **«La scossa della sera»**: rischio sismico; il terremoto non si prevede, e dopo la scossa si raggiunge l'area di attesa più vicina, quella vera del Piano comunale;
+- **«Fumo sulla collina»**: incendio boschivo, con la pericolosità elevata sulla Zona AIB 9;
+- **«Luglio rovente»**: ondata di calore, con il livello 3 del bollettino di Roma, la città più vicina che ha un bollettino.
+
+Ogni scenario ha anche un collegamento diretto, comodo per il docente: per esempio `/giochi/genzano-si-prepara/#terremoto`.
 
 ## Apri il gioco interattivo
 
@@ -46,8 +53,10 @@ Il primo scenario, **«Il temporale di ottobre»**, riguarda il rischio idrogeol
 
 ## Approfondisci sul sito
 
-- [Temporali intensi](/rischi-prevenzione/temporali-intensi/)
-- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
+- [Temporali intensi](/rischi-prevenzione/temporali-intensi/) e [rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e [dopo l'emergenza](/rischi-prevenzione/dopo-emergenza/)
+- [Rischio incendio](/rischi-prevenzione/rischio-incendio/)
+- [Ondate di calore](/rischi-prevenzione/ondate-di-calore/)
 - [Allerte meteo](/allerte-meteo/)
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Piano familiare](/piano-familiare/)
 - [Aree di attesa](/aree-attesa/), mostrate anche sulla mappa del gioco
