@@ -29,7 +29,9 @@ Per le scuole secondarie di secondo grado è possibile anche un percorso di [for
 
 1. Il dirigente scolastico, o un docente con delega scritta, compila il [modulo di richiesta](/scuole/generico/modulo-richiesta-intervento/).
 2. Il modulo va inviato a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) **almeno 15 giorni prima** della data che preferite.
-3. Il Gruppo risponde con una proposta di data. La conferma dipende dalla disponibilità dei volontari ed è decisa dal Coordinatore del Gruppo.
+3. Il Gruppo risponde con una proposta di data. La conferma è decisa dal Coordinatore del Gruppo.
+
+**Quanti interventi nell'anno?** Non c'è un numero fisso. Data, numero e tipo di interventi si concordano con la scuola, in base alla disponibilità della scuola e dei volontari del Gruppo esperti nella didattica.
 
 Nel modulo indicate la classe, l'età, il numero di alunni e se ci sono alunni con bisogni educativi speciali o disabilità. Così i volontari preparano l'incontro adatto alla classe.
 
