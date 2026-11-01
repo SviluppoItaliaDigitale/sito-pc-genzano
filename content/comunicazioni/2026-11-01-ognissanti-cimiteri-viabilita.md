@@ -1,6 +1,6 @@
 ---
 title: "Ognissanti: viabilità nei pressi dei cimiteri e comportamenti"
-date: 2026-11-01
+date: 2026-11-01T00:01:00+02:00
 description: "Il 1° novembre aumenta l'afflusso verso i cimiteri. Indicazioni per la viabilità e comportamenti in sicurezza."
 badge: "Informazione"
 priorita: "normale"

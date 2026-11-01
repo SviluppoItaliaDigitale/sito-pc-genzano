@@ -1,7 +1,7 @@
 {
  "titolo": "Interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
  "fonte": "Registro interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, dati aggregati e anonimi",
- "aggiornato": "2026-10-31",
+ "aggiornato": "2026-11-01",
  "testi": {
   "tutto": "tutto il periodo",
   "rivivi": "Rivivi l'attività del Gruppo giorno per giorno"
@@ -1061,6 +1061,11 @@
    "d": "2026-10-31",
    "n": 2,
    "ore": 5.9
+  },
+  {
+   "d": "2026-11-01",
+   "n": 1,
+   "ore": 2.1
   }
  ],
  "serie": {
@@ -1072,7 +1077,8 @@
     "Luglio",
     "Agosto",
     "Settembre",
-    "Ottobre"
+    "Ottobre",
+    "Novembre (fino al 1)"
    ],
    "chiavi": [
     "2026-04",
@@ -1081,7 +1087,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "misure": [
     {
@@ -1095,7 +1102,8 @@
       34,
       52,
       46,
-      48
+      48,
+      1
      ]
     },
     {
@@ -1109,7 +1117,8 @@
       78.7,
       227.2,
       133.6,
-      94.9
+      94.9,
+      2.1
      ]
     },
     {
@@ -1123,7 +1132,8 @@
       326,
       1495,
       977,
-      355
+      355,
+      6
      ]
     }
    ]
@@ -1153,7 +1163,7 @@
      "unita1": "intervento",
      "valori": [
       87,
-      57,
+      58,
       19,
       14,
       13,
@@ -1289,6 +1299,23 @@
      0,
      1,
      0
+    ],
+    "2026-11": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ]
    }
   },
@@ -1312,7 +1339,7 @@
       45,
       46,
       25,
-      10
+      11
      ]
     }
    ],
@@ -1372,6 +1399,14 @@
      7,
      0,
      7
+    ],
+    "2026-11": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
     ]
    }
   },
@@ -1395,8 +1430,8 @@
      "valori": [
       71,
       64,
-      58,
-      48,
+      59,
+      49,
       11,
       9,
       4,
@@ -1476,12 +1511,23 @@
      3,
      3,
      22,
-     8,
+     9,
      0,
      1,
      1,
      0,
      1
+    ],
+    "2026-11": [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
     ]
    }
   }
