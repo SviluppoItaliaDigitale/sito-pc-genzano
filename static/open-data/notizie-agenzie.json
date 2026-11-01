@@ -5,11 +5,101 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-01T01:16:31+00:00",
+  "generato": "2026-11-01T07:37:32+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-01T07:31:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Binance annuncia che è ripresa l'attività dopo il mega-hackeraggio",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/binance-annuncia-che-e-ripresa-lattivita-dopo-il-mega-hackeraggio_87d50dc4-42ca-4246-8e1b-efd1578e52d4.html"
+  },
+  {
+   "data": "2026-11-01T07:28:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Morta nella piscina di casa nel Comasco, arrestato l'ex marito",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/morta-nella-piscina-di-casa-nel-comasco-arrestato-lex-marito_4ca017c1-3daa-4120-b2ad-789d90ed8fb7.html"
+  },
+  {
+   "data": "2026-11-01T07:21:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Non abbiamo fretta sull'Iran, abbiamo uno o due siti di cui occuparci'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/trump-non-abbiamo-fretta-sulliran-abbiamo-uno-o-due-siti-di-cui_c61082f4-ba5a-417a-a2a5-16dceb809481.html"
+  },
+  {
+   "data": "2026-11-01T07:15:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Wnba: le Valkyries e la Zandalasini vincono il titolo 2026 ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/11/01/-wnba-le-valkyries-e-la-zandalasini-vincono-il-titolo-2026-_1768a74c-58d0-45ca-b83d-145c7bc5cde9.html"
+  },
+  {
+   "data": "2026-11-01T06:54:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Como-Venezia: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-como-venezia-fabregas_1gxbhXVvbAjylEFvp9udZn"
+  },
+  {
+   "data": "2026-11-01T06:53:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Domenica In, nuova puntata oggi 1 novembre: ospiti e anticipazioni",
+   "url": "https://www.adnkronos.com/spettacoli/domenica-in-oggi-1-novembre-ospiti-anticipazioni_5aY1uHkqFyvaSzosGFFtCx"
+  },
+  {
+   "data": "2026-11-01T06:49:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, anticipazioni e ospiti della puntata di oggi 1 novembre",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-1-novembre-2026-ospiti_2VdaDn5wAUvs0NpYIYjOk9"
+  },
+  {
+   "data": "2026-11-01T06:33:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Juve-Napoli: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/juve-napoli-oggi-serie-a-orario-formazioni-dove-vederla_3N0PtseRAlLou2VrQPjntn"
+  },
+  {
+   "data": "2026-11-01T06:32:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alcaraz-De Minaur, oggi finale a Vienna: orario, precedenti e dove vederla",
+   "url": "https://www.adnkronos.com/sport/alcaraz-de-minaur-oggi-finale-vienna-orario-precedenti-dove-vederla-tv-streaming_NiU9ggbKJICG9Dd4jN4bL"
+  },
+  {
+   "data": "2026-11-01T06:28:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Lazio-Cagliari: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-lazio-cagliari_5j9pKB3tAx85EY4dGL2pDr"
+  },
+  {
+   "data": "2026-11-01T06:27:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Che tempo che fa, ospiti e anticipazioni puntata di oggi 1 novembre",
+   "url": "https://www.adnkronos.com/spettacoli/che-tempo-che-fa-diretta-oggi-1-novembre_7EJi5vPN6XgFysBgIQ6YfL"
+  },
+  {
+   "data": "2026-11-01T06:26:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi Gp Messico: orario, griglia di partenza e dove vederlo in chiaro",
+   "url": "https://www.adnkronos.com/sport/gp-messico-orario-griglia-partenza-dove-vederlo-f1_6BbPTyMtz5G38gXsXoAmkx"
+  },
+  {
+   "data": "2026-11-01T06:22:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra, scontro sulla scuola. Banche ancora sotto tiro",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-scontro-sulla-scuola.-banche-ancora-sotto-tiro_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html"
+  },
+  {
+   "data": "2026-11-01T06:20:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, oggi si corre in Malesia - Diretta",
+   "url": "https://www.adnkronos.com/sport/motogp-malesia-diretta-live-gran-premio-sepang_1SHLNjdMkEwoQiZEbii7go"
+  },
+  {
+   "data": "2026-11-01T06:09:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Un piccolo segnale per una grande speranza",
+   "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/10/30/un-piccolo-segnale-per-una-grande-speranza_83175b35-a354-4ca3-8bd3-2c1f91325c8b.html"
+  },
   {
    "data": "2026-11-01T00:46:09+00:00",
    "fonte": "ADNKRONOS",
@@ -35,18 +125,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/lite-in-stazione-finisce-a-coltellate-38enne-arrestato-per-omicidio_fb596364-c915-46ef-8b31-4a06c2eacfe5.html"
   },
   {
-   "data": "2026-10-31T23:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, tutti contro Barbara d'Urso: \"Perché non parli di Ornella Muti?\"",
-   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-barbara-durso-ornella-muti-31-ottobre_3C7NGbpZ0LJzLjBERp4Rrz"
-  },
-  {
-   "data": "2026-10-31T23:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Frosinone, lite in stazione a Castro dei Volsci: uomo ucciso a coltellate",
-   "url": "https://www.adnkronos.com/cronaca/castro-dei-volsci-lite-in-stazione-uomo-ucciso-a-coltellate_2tis9bgpfM1orOewq8mp3m"
-  },
-  {
    "data": "2026-10-31T23:10:07+00:00",
    "fonte": "ANSA",
    "titolo": "A Parigi ancora scontri a fine corteo, 'dai casseurs violenza inaudita'",
@@ -59,34 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/caos-in-polonia.-tusk-il-partito-pis-vuole-distruggere-la-democrazia_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
   },
   {
-   "data": "2026-10-31T23:06:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nuovo attacco all'Iran, Trump non ha ancora deciso. Khamenei avverte: \"Risposta sarebbe senza limiti geografici\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-trump-khamenei-ultime-news-live_2Mye2Hy84yrcNFn4p0LsXy"
-  },
-  {
    "data": "2026-10-31T23:05:49+00:00",
    "fonte": "ANSA",
    "titolo": "Il Milan rinasce nel derby con show di Moreira, Inter vede le streghe",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/31/serie-a-milan-inter-in-campo-alle-20.45-diretta_00f71d0c-a85e-4c9d-b003-c9ba0d43461d.html"
-  },
-  {
-   "data": "2026-10-31T23:05:08+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Re Carlo parlerà al Commonwealth 'senza remore' del passato schiavista della Gran Bretagna",
-   "url": "https://www.adnkronos.com/internazionale/esteri/re-carlo-commonwealth-passato-schiavista-gran-bretagna_7nMacUDptaxjKMBdk9gvgo"
-  },
-  {
-   "data": "2026-10-31T23:04:26+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tornare a casa per Natale? Per gli italiani è già un salasso: \"Biglietti aerei fino a 430 euro\"",
-   "url": "https://www.adnkronos.com/economia/caro-biglietti-aerei-voli-natale-italia-denuncia-codacons_6TD0aVF9DawXUJ1KA3FAwp"
-  },
-  {
-   "data": "2026-10-31T23:03:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Troppo allenamento fa male: 'cambia' la chimica del cervello",
-   "url": "https://www.adnkronos.com/cronaca/troppo-sport-fa-male-studio_78OVfXvGgcsDaMJpaDjTHP"
   },
   {
    "data": "2026-10-31T23:02:31+00:00",
@@ -95,52 +149,16 @@
    "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-hamilton-in-pole-al-suo-fianco-russel.-antonelli-quinto_d44231ac-58ba-4f03-bfb9-8da0eb242644.html"
   },
   {
-   "data": "2026-10-31T22:29:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Messico, Hamilton in pole e Antonelli quarto: la griglia di partenza del Gran Premio",
-   "url": "https://www.adnkronos.com/sport/gp-messico-griglia-partenza-hamilton-pole-antonelli_1ZJWnOWb7j3MWuoMq3l4Pv"
-  },
-  {
    "data": "2026-10-31T22:15:24+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Lite in stazione finisce a coltellate, un morto nel Frusinate",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/lite-in-stazione-finisce-a-coltellate-un-morto-nel-frusinate_e17181ed-8783-4645-9bb2-d90dbf2164c7.html"
   },
   {
-   "data": "2026-10-31T22:12:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Per l'Fbi c'è la Corea del Nord dietro l'attacco hacker a Binance",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/per-lfbi-ce-la-corea-del-nord-dietro-lattacco-hacker-a-binance_91500b86-8d24-4383-b9c4-c616a4f0625a.html"
-  },
-  {
-   "data": "2026-10-31T21:25:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, Cgil: \"Al di là delle peggiori aspettative, governo vive su un altro pianeta\". Scontro sulla scuola",
-   "url": "https://www.adnkronos.com/economia/manovra-legge-di-bilancio-scontro-su-scuola_647Qs3LMDTMabGSNGjZwkA"
-  },
-  {
-   "data": "2026-10-31T21:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, la confessione di Aurora Ramazzotti: \"Ero una bestia consumata dalla gelosia\"",
-   "url": "https://www.adnkronos.com/spettacoli/aurora-ramazzotti-ballando-31-ottobre_3RhfMgdDWu1CbqQH4PpGmJ"
-  },
-  {
-   "data": "2026-10-31T20:43:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra, scontro sulla scuola. Banche ancora sotto tiro",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-scontro-sulla-scuola.-banche-ancora-sotto-tiro_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html"
-  },
-  {
    "data": "2026-10-31T20:02:04+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Svastiche e scritte inneggianti al nazismo, sdegno in Valtellina",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/svastiche-e-scritte-inneggianti-al-nazismo-sdegno-in-valtellina_79cc36e3-5780-4d8b-bdbf-2c5908d2a8ab.html"
-  },
-  {
-   "data": "2026-10-31T19:57:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Iran, Khamenei avverte Trump: 'Se ci attaccate risposta senza confini'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/iran-khamenei-avverte-trump-se-ci-attaccate-risposta-senza-confini_3cf54edb-3eec-4388-ae57-c19b268c5d39.html"
   },
   {
    "data": "2026-10-31T19:46:23+00:00",
@@ -171,24 +189,6 @@
    "fonte": "ANSA",
    "titolo": "'Hanno incitato alla violenza nelle piazze', 60 perquisizioni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/hanno-incitato-alla-violenza-nelle-piazze-60-perquisizioni_449404aa-1c37-4c96-aa63-5089df5221ae.html"
-  },
-  {
-   "data": "2026-10-31T18:43:08+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bomba d'acqua nel Foggiano, strade invase da fango e detriti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/bomba-dacqua-nel-foggiano-strade-invase-da-fango-e-detriti_aafe9b06-a9c5-4db0-9907-ceb66aecc147.html"
-  },
-  {
-   "data": "2026-10-31T18:27:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il parto sull'autobus, la conducente racconta: 'Un abbraccio di umanità'",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/31/bologna-partorisce-in-bus-con-laiuto-della-conducente-momento-emozionante_aa77610c-a65b-4a1a-a8b1-99a3dc5f8602.html"
-  },
-  {
-   "data": "2026-10-31T18:19:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Elicottero precipitato in Bosnia, verso maxiconsulenza per accertare le cause",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/elicottero-precipitato-in-bosnia-verso-maxiconsulenza-per-accertare-le-cause_fa319c53-50ad-47e4-802d-83965e4549f1.html"
   }
  ]
 }

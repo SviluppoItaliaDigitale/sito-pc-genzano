@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-01T01:16:41+00:00",
+  "generato": "2026-11-01T07:37:42+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 41,
   "scaduti_scartati": 4,
-  "in_corso": 12,
+  "in_corso": 13,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -517,7 +517,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261031105004.044"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Vento",
    "livello": "gialla",
