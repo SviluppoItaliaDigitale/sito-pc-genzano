@@ -234,7 +234,7 @@
 
   function inizia(id) {
     var s = window.GenzanoScenari[id];
-    stato = { s: s, scelte: {}, prep: [], indice: -1, punti: 0, massimo: 0, diario: [] };
+    stato = { s: s, esiti: {}, prep: [], indice: -1, punti: 0, massimo: 0, diario: [] };
     meteo('sereno');
     mostra(
       '<p class="gsp-ora" data-leggi>' + esc(s.prima.ora) + '</p>' +
@@ -256,7 +256,7 @@
       '<ul class="gsp-azioni">';
     p.azioni.forEach(function (a) {
       html += '<li><button type="button" class="gsp-azione" aria-pressed="false" data-azione="prep" data-id="' + a.id + '">' +
-        '<span class="gsp-spunta" aria-hidden="true"></span><span>' + esc(a.testo) + '</span></button></li>';
+        '<span class="gsp-spunta" aria-hidden="true"></span><span data-leggi>' + esc(a.testo) + '</span></button></li>';
     });
     html += '</ul><button type="button" class="btn btn-primary" data-azione="via" disabled>È venerdì: andiamo avanti</button>';
     mostra(html, 'casa', 1.6);
@@ -278,6 +278,8 @@
   function preparazione() {
     var p = {};
     stato.prep.forEach(function (id) { p[id] = true; });
+    // scelte fatte durante l'evento che cambiano quelli successivi
+    p.nonnaSu = stato.esiti.nonnanotte > 0;
     return p;
   }
 
@@ -323,6 +325,7 @@
     var max = Math.max.apply(null, scelte.map(function (x) { return x.punti; }));
     var ottimo = 3;
     stato.punti += c.punti;
+    stato.esiti[e.id] = c.punti;
     stato.massimo += ottimo;
     stato.diario.push({ titolo: e.titolo, scelta: c.testo, punti: c.punti, perche: c.perche, link: e.link });
     var tipo = c.punti === 3 ? 'giusta' : (c.punti > 0 ? 'meglio' : 'sbagliata');
@@ -420,7 +423,9 @@
     }
     else if (a === 'via') prossimoEvento();
     else if (a === 'scegli') scegli(parseInt(b.getAttribute('data-i'), 10));
-    else if (a === 'avanti' || a === 'dopo') prossimoEvento();
+    else if (a === 'avanti') prossimoEvento();
+    // l'indice punta già al primo evento del «dopo»: si mostra senza avanzare
+    else if (a === 'dopo') mostraEvento(stato.s.eventi[stato.indice], preparazione());
     else if (a === 'rigioca') inizia(stato.s.id);
     else if (a === 'scenari') schermataIniziale();
     else if (a === 'ascolta') leggi();

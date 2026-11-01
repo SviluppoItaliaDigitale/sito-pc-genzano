@@ -145,6 +145,22 @@
         ],
         link: '/rischi-prevenzione/vento-forte/' },
 
+      { id: 'nonnanotte', fase: 'durante', ora: 'Venerdì, ore 21:30', luogo: 'casa', meteo: 'pioggia',
+        solo: function (p) { return !p.nonna; },
+        titolo: 'La nonna nel seminterrato',
+        testo: function () {
+          return 'La pioggia è sempre più forte. La nonna Lina è già andata a letto, nella sua stanza al piano seminterrato. In casa l\'acqua non è ancora entrata.';
+        },
+        scelte: [
+          { testo: 'La sveglio adesso, finché l\'acqua non è entrata, e la porto nella camera di Flavio, al primo piano, per le scale.', punti: 2,
+            perche: 'Giusto farlo adesso, prima che l\'acqua entri: quando c\'è l\'allerta non si dorme nei seminterrati, e dopo, con l\'allagamento, nei locali interrati non si scende più. Sarebbe stato meglio ancora spostarla ieri, con calma.' },
+          { testo: 'La lascio dormire: l\'acqua non è ancora entrata.', punti: 0,
+            perche: 'Con l\'allerta non si dorme nei seminterrati: sono i primi locali ad allagarsi, e quando l\'acqua entra non ci si può più scendere.' },
+          { testo: 'Aspetto di vedere se l\'acqua entra, poi decido.', punti: 0,
+            perche: 'Quando l\'acqua entra è tardi: nei locali interrati durante un allagamento non si scende. Le persone si spostano prima.' }
+        ],
+        link: '/rischi-prevenzione/temporali-intensi/' },
+
       { id: 'blackout', fase: 'durante', ora: 'Venerdì, ore 22:00', luogo: 'casa', meteo: 'buio',
         titolo: 'Va via la corrente',
         testo: function (p) {
@@ -173,29 +189,31 @@
           var t = p.caditoia
             ? 'La caditoia davanti casa porta via molta acqua, ma la pioggia è troppa: un filo d\'acqua entra nel seminterrato.'
             : 'La caditoia davanti casa è piena di foglie: l\'acqua si ferma davanti al portone ed entra nel seminterrato.';
-          t += p.nonna
-            ? ' La nonna Lina dorme al primo piano: è al sicuro.'
-            : ' La nonna Lina dorme proprio lì, nella stanza del seminterrato! Per ora l\'acqua è ancora bassa.';
+          if (p.nonna) t += ' La nonna Lina dorme al primo piano: è al sicuro.';
+          else if (p.nonnaSu) t += ' La nonna Lina adesso dorme al primo piano: l\'hai portata su in tempo.';
+          else t += ' La nonna Lina è ancora giù, nella stanza del seminterrato, e ti chiama.';
           if (!p.auto) t += ' E l\'auto è nel garage interrato.';
           return t;
         },
         scelte: function (p) {
           var s = [];
-          if (p.nonna) {
+          if (p.nonna || p.nonnaSu) {
             s.push({ testo: 'Resto su e chiudo la porta che porta al piano di sotto. Se l\'acqua arriva agli impianti e posso farlo senza rischi, stacco gas e corrente.', punti: 3,
               perche: 'Giusto. Si resta ai piani alti, si chiudono le porte verso i locali bassi e, solo senza rischi, si staccano gas e corrente.' });
             s.push({ testo: 'Scendo a mettere degli stracci sotto la porta della cantina.', punti: 0,
               perche: 'Non si scende mai in cantine, garage o locali interrati durante un allagamento.' });
           } else {
-            s.push({ testo: 'Corro giù, sveglio la nonna e la porto subito al primo piano per le scale, senza fermarmi a prendere niente.', punti: 2,
-              perche: 'In questo momento è la cosa giusta: le persone prima delle cose, per le scale e non in ascensore. Ma averla spostata prima avrebbe evitato di scendere con l\'acqua che entra.' });
-            s.push({ testo: 'Portiamo su la nonna con l\'ascensore, è più comodo.', punti: 0,
+            s.push({ testo: 'Chiamo il 112 e dico che una persona anziana è bloccata nel seminterrato che si allaga. Dall\'alto delle scale le dico di salire, se ce la fa.', punti: 2,
+              perche: 'Con una persona in pericolo si chiama subito il 112. Nei locali interrati durante un allagamento non si scende: si aiuta solo se lo si può fare senza esporsi a pericoli. Spostarla prima avrebbe evitato tutto questo.' });
+            s.push({ testo: 'Scendo di corsa nel seminterrato a prenderla.', punti: 0,
+              perche: 'Nei locali interrati durante un allagamento non si scende mai: l\'acqua sale in fretta e può bloccare la porta. Si chiama il 112.' });
+            s.push({ testo: 'Le dico di prendere l\'ascensore.', punti: 0,
               perche: 'Con l\'acqua in casa e il rischio di blackout l\'ascensore può bloccarsi. Si usano le scale.' });
           }
           if (!p.auto) {
             s.push({ testo: 'Scendo in garage a spostare l\'auto.', punti: 0,
               perche: 'Cantine e garage si allagano per primi e la spinta dell\'acqua può bloccare la porta. L\'auto si sostituisce, una persona no.' });
-          } else {
+          } else if (p.nonna || p.nonnaSu) {
             s.push({ testo: 'Vado ad aprire il portone per far uscire l\'acqua.', punti: 0,
               perche: 'Per aprire il portone dovresti scendere dove l\'acqua sta entrando. Si resta ai piani alti.' });
           }
@@ -269,7 +287,7 @@
     resoconto: [
       { se: 'nonna',
         si: 'La nonna Lina ha dormito al primo piano: quando l\'acqua è entrata nel seminterrato era già al sicuro.',
-        no: 'La nonna Lina dormiva nel seminterrato: avete dovuto portarla su di notte, con l\'acqua che entrava.' },
+        no: 'La nonna Lina dormiva nel seminterrato con l\'allerta in corso: una notte di corse e di paura, che spostarla il giorno prima avrebbe evitato.' },
       { se: 'auto',
         si: 'L\'auto era parcheggiata in alto: nessuno ha dovuto pensare di scendere in garage.',
         no: 'L\'auto era nel garage interrato: in garage l\'acqua può bloccare la porta, e la tentazione di scendere è forte.' },
