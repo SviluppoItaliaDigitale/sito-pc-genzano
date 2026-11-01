@@ -637,6 +637,7 @@ def main():
   </div>
 {"".join(pagine)}
   <script>{JS}</script>
+  <script src="/formazione/schede-stampabili/assets/zoom-pagina.js" defer></script>
 </body>
 </html>
 '''
