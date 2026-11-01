@@ -652,13 +652,13 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2461.5
-  sha256: fabe28f9afa3c2e7025054f684dec4d6bf56e68caa064ac3d329ec4da4b9eabf
+  size_kb: 2483.0
+  sha256: 34198f25f3e5a80a6d2465617a6701a7417f9e2f317d99ddc77623a33f63253b
   searchable: true
   tagged: true
   language: en-US
   title: null
-  pages: 71
+  pages: 72
   errors: []
   text_chars_sample: 1002
   origine: GRUPPO

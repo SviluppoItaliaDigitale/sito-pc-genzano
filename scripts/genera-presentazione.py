@@ -763,6 +763,13 @@ content("Laboratorio meteo — esplorare i dati del clima", [
     "Ogni grafico ha spiegazione a parole, tabella dati, stampa, download (CSV e immagine) e link condivisibile.",
 ], N(), fonti="ERA5-Land · ERA5 · Copernicus Climate Change Service · Open-Meteo (CC BY 4.0)")
 
+# Dal 31/10/2026, voce del menu «Per le scuole».
+content("Il libro che si esplora — autoprotezione in 3D", [
+    "Un libro aperto in 3D: per ogni capitolo una situazione, una domanda e un modellino da muovere.",
+    "Si fa la previsione, si prova sulla pagina e si alza il lembo per vedere la risposta e il perché.",
+    "Quindici capitoli, dal terremoto alla siccità, con i testi delle pagine rischio e una versione testuale accessibile.",
+], N(), fonti="Pagine rischio del sito · DPC «Io non rischio» · WCAG 2.2 AA")
+
 content("Dossier interattivi — racconti visivi", [
     "Storie che si leggono scorrendo: immagini a tutto schermo, dati animati e mappe da esplorare.",
     "Qualità da rivista digitale, ma interamente accessibile (WCAG 2.2 AA) e senza servizi di terzi.",
