@@ -398,6 +398,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Storie e Racconti</p>
   <p class="ms-card-desc">Fiabe e racconti per bambini 3-11 anni con valore pedagogico per la scuola: ogni storia ha un attimo decisivo + sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari.</p>
 </a>
+<a class="ms-card ms-edu" href="/lim/">
+  <div class="ms-card-icon"><i class="bi bi-easel"></i></div>
+  <p class="ms-card-title">Protezione civile sulla LIM</p>
+  <p class="ms-card-desc">Giochi, storie, schede, quiz e lezioni da usare col dito sulla lavagna interattiva: che cosa è controllato e come si usano in classe.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/libro-che-si-esplora/">
   <div class="ms-card-icon"><i class="bi bi-book"></i></div>
   <p class="ms-card-title">Il libro che si esplora</p>

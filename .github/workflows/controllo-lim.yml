@@ -3,9 +3,11 @@ name: "🧑‍🏫 Controllo settimanale LIM (lavagne interattive)"
 # Ogni lunedì apre tutte le pagine per le scuole come una lavagna interattiva:
 #  1. sintassi JavaScript leggibile dai browser vecchi delle LIM (Chrome 64),
 #     compresi gli script dentro le pagine costruite (check-sintassi-js.cjs);
-#  2. schermo touch a 1024x768 e 1366x768: errori, pagina più larga dello
-#     schermo, comandi dei giochi troppo piccoli per il dito, giochi a
-#     trascinamento senza alternativa al tocco (check-lim.py);
+#  2. schermo touch a 1024x768 e 1366x768, con Chromium e con Firefox:
+#     errori, pagina più larga dello schermo, comandi dei giochi troppo
+#     piccoli per il dito, giochi a trascinamento senza alternativa al tocco,
+#     riquadro «Pronto per la LIM» mancante (check-lim.py,
+#     segno-lim-statiche.py --check);
 #  3. le stesse pagine con un Chromium del 2018 (versione 69, lavagne Android 9
 #     e PC di scuola non aggiornati): script fermi, Bootstrap Italia che non si
 #     avvia, menu che non si aprono (check-lim-browser-vecchio.cjs).
@@ -52,7 +54,7 @@ jobs:
       - name: "🌐 Browser moderno, acorn e ws"
         run: |
           pip install --quiet playwright==1.56.0
-          playwright install --with-deps chromium
+          playwright install --with-deps chromium firefox
           npm install --no-save --prefix /tmp/js-lim acorn@8.14.0 ws@8.18.0
 
       - name: "🕰️ Chromium 69 (2018), il browser delle LIM non aggiornate"
@@ -70,7 +72,11 @@ jobs:
         run: |
           set +e
           node scripts/check-sintassi-js.cjs --public public > sintassi.log 2>&1; a=$?
-          python3 scripts/check-lim.py > lim.log 2>&1; b=$?
+          python3 scripts/check-lim.py > lim.log 2>&1; b1=$?
+          # Firefox: a 1024 px disegna il menu più largo di Chromium (01/11/2026).
+          python3 scripts/check-lim.py --browser firefox >> lim.log 2>&1; b2=$?
+          b=$(( b1 | b2 ))
+          python3 scripts/segno-lim-statiche.py --check >> lim.log 2>&1 || b=1
           node scripts/check-lim-browser-vecchio.cjs --chrome /tmp/chrome69/chrome-linux/chrome --public public > vecchio.log 2>&1; c=$?
           cat sintassi.log lim.log vecchio.log
           if [ $a -ne 0 ] || [ $b -ne 0 ] || [ $c -ne 0 ]; then echo "esito=ko" >> "$GITHUB_OUTPUT"; else echo "esito=ok" >> "$GITHUB_OUTPUT"; fi

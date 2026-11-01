@@ -119,6 +119,12 @@ jobs:
           npm install --no-save --prefix /tmp/js-lim acorn@8.14.0 >/dev/null
           NODE_PATH=/tmp/js-lim/node_modules node scripts/check-sintassi-js.cjs --public public
 
+      - name: "🧑‍🏫 «Pronto per la LIM» su ogni scheda e storia"
+        # 01/11/2026: le schede e le storie non caricano JavaScript, il segno sta
+        # nella loro barra in alto. Una scheda nuova o rigenerata senza segno
+        # ferma la PR: python3 scripts/segno-lim-statiche.py lo aggiunge.
+        run: python3 scripts/segno-lim-statiche.py --check
+
       - name: "📖 Libro che si esplora: versioni allineate e fonti esistenti"
         # 01/11/2026: i testi del libro 3D riprendono le pagine dei rischi.
         # Italiano, italiano semplice e inglese devono avere gli stessi

@@ -78,8 +78,36 @@ CONDIVISI_TUTTO = (
     "static/app-shared/", "static/vendor/bootstrap-italia/", "themes/flavour-pcgenzano/static/css/custom.css",
     "themes/flavour-pcgenzano/static/css/a11y-toolbar.css", "themes/flavour-pcgenzano/static/js/a11y-toolbar.js",
     "themes/flavour-pcgenzano/layouts/_default/baseof.html", "scripts/check-lim.py", "hugo.toml",
+    "data/lim.yaml", "themes/flavour-pcgenzano/layouts/partials/lim-pronto.html",
 )
-GIOCHI = re.compile(r"^/(giochi/(infanzia|primaria|ragazzi)/[^/]+/|quizpc/|formazionepc/|quiz-preparazione/)")
+
+
+def leggi_lim() -> dict[str, list[str]]:
+    """Le voci di data/lim.yaml (elenchi semplici), senza dipendere da PyYAML."""
+    voci: dict[str, list[str]] = {}
+    chiave = None
+    for riga in (RADICE / "data/lim.yaml").read_text(encoding="utf-8").splitlines():
+        if not riga.strip() or riga.lstrip().startswith("#"):
+            continue
+        m = re.match(r"^([a-z_]+):\s*(\S*)", riga)
+        if m:
+            chiave = m.group(1)
+            voci[chiave] = [m.group(2)] if m.group(2) else []
+        elif chiave and riga.strip().startswith("- "):
+            voci[chiave].append(riga.strip()[2:].strip())
+    return voci
+
+
+LIM = leggi_lim()
+
+
+def nel_perimetro(u: str) -> bool:
+    """La pagina deve mostrare «Pronto per la LIM» (data/lim.yaml)."""
+    if u == LIM.get("pagina", [""])[0]:
+        return False
+    dentro = any(u.startswith(x) for x in LIM.get("hugo", []) + LIM.get("statiche", []))
+    return dentro and not any(u.startswith(x) for x in LIM.get("esclusi", []))
+GIOCHI = re.compile(r"^/(giochi/((infanzia|primaria|ragazzi)/)?(?!(infanzia|primaria|ragazzi|assets)/)[^/]+/|quizpc/|formazionepc/|quiz-preparazione/)")
 
 
 def pagine_static(public: Path) -> list[str]:
@@ -152,7 +180,8 @@ SONDA = r"""(giochi) => {
       if (m < 24) piccoli.push(d); else if (m < 40) medi.push(d);
     });
   }
-  return { ox, largo, piccoli: piccoli.slice(0, 5), npiccoli: piccoli.length, medi: medi.slice(0, 3), nmedi: medi.length };
+  return { lim: !!document.querySelector('.lim-pronto, .scheda-lim'),
+    rimando: !!document.querySelector('meta[http-equiv=refresh]'), ox, largo, piccoli: piccoli.slice(0, 5), npiccoli: piccoli.length, medi: medi.slice(0, 3), nmedi: medi.length };
 }"""
 
 
@@ -167,7 +196,7 @@ def trascinamento_senza_alternativa(public: Path, url: str) -> bool:
     return "dragstart" in testo and SEGNO_ALTERNATIVA not in testo
 
 
-async def prova(public: Path, pagine: list[str]) -> tuple[list[str], list[str]]:
+async def prova(public: Path, pagine: list[str], motore: str = "chromium") -> tuple[list[str], list[str]]:
     from playwright.async_api import async_playwright
 
     class Silenzioso(http.server.SimpleHTTPRequestHandler):
@@ -190,9 +219,12 @@ async def prova(public: Path, pagine: list[str]) -> tuple[list[str], list[str]]:
             await route.abort()
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch()
+        browser = await getattr(p, motore).launch()
         for w, h in SCHERMI:
-            ctx = await browser.new_context(viewport={"width": w, "height": h}, has_touch=True, is_mobile=False)
+            opzioni = {"viewport": {"width": w, "height": h}, "has_touch": True}
+            if motore == "chromium":
+                opzioni["is_mobile"] = False  # Firefox non accetta l'opzione
+            ctx = await browser.new_context(**opzioni)
             await ctx.route(PRODUZIONE + "/**", da_locale)
             pagina = await ctx.new_page()
             js: list[str] = []
@@ -208,6 +240,9 @@ async def prova(public: Path, pagine: list[str]) -> tuple[list[str], list[str]]:
                     continue
                 for e in js:
                     errori.append(f"{u} [{w}x{h}] errore JavaScript: {e}")
+                if w == SCHERMI[0][0] and nel_perimetro(u) and not r["rimando"] and not r["lim"]:
+                    errori.append(f"{u} manca «Pronto per la LIM» (data/lim.yaml; per schede e storie "
+                                  "python3 scripts/segno-lim-statiche.py)")
                 if r["ox"] > 1:
                     errori.append(f"{u} [{w}x{h}] più larga dello schermo di {r['ox']} px (prima a uscire: {r['largo']})")
                 if r["npiccoli"]:
@@ -229,6 +264,8 @@ def main() -> int:
     ap.add_argument("--public", default="public")
     ap.add_argument("--da-git", metavar="BASE")
     ap.add_argument("--pagine", nargs="+")
+    ap.add_argument("--browser", default="chromium", choices=["chromium", "firefox"],
+                    help="motore del browser (il giro settimanale prova anche Firefox)")
     a = ap.parse_args()
     public = (RADICE / a.public).resolve() if not Path(a.public).is_absolute() else Path(a.public)
     if not (public / "index.html").is_file():
@@ -245,8 +282,8 @@ def main() -> int:
     if not pagine:
         print("Nessuna pagina per le scuole toccata: niente da provare.")
         return 0
-    print(f"Prova da LIM (touch, {', '.join(f'{w}x{h}' for w, h in SCHERMI)}) su {len(pagine)} pagine…")
-    errori, avvisi = asyncio.run(prova(public, pagine))
+    print(f"Prova da LIM ({a.browser}, touch, {', '.join(f'{w}x{h}' for w, h in SCHERMI)}) su {len(pagine)} pagine…")
+    errori, avvisi = asyncio.run(prova(public, pagine, a.browser))
     for x in avvisi[:30]:
         print(f"::warning::{x}")
     if errori:

@@ -12,7 +12,8 @@ Una LIM non è un computer qualunque: si usa col dito o con la penna, senza mous
 - i giochi dell'infanzia senza `custom.css`: la barra per il telefono compariva anche sulla LIM e copriva il gioco;
 - etichette che uscivano dallo schermo a 1366 px;
 - il libro 3D bloccato su «Sto aprendo il libro…» dove il 3D non può partire;
-- nessun pulsante «Schermo intero» nei giochi.
+- nessun pulsante «Schermo intero» nei giochi;
+- con Firefox, a 1024 px, il menu del sito sforava di 18 px su 110 pagine (Firefox disegna il carattere un po' più largo di Chromium), e il libro 3D senza WebGL lasciava il pannello vuoto e un errore.
 
 Nessun controllo se n'era accorto, perché tutti provavano con un browser moderno, il mouse e uno schermo largo.
 
@@ -25,7 +26,12 @@ Nessun controllo se n'era accorto, perché tutti provavano con un browser modern
 5. **Proiettore e zoom.** Nessuna pagina più larga dello schermo a 1024×768 e 1366×768, né con lo zoom al 150% (910×512); niente `white-space: nowrap` su testi lunghi, `minmax(0, 1fr)` nelle griglie con parole grandi. I pulsanti fissi del sito non devono coprire il gioco: le pagine statiche caricano sempre `/css/custom.css` (lo stile della barra in basso, che compare solo sotto i 992 px), dopo `bootstrap-icons` e prima di `app-common.css`.
 6. **Schermo intero.** I giochi e i quiz con schermate (`#intro`, `#game`, `#end`, `[data-gioco]`…) ricevono da `site-chrome.js` i pulsanti «Schermo intero» e «Torna al menu» (`#gioco-comandi`). Un gioco nuovo usa quei marcatori, così li riceve da sé; i contenuti da proiettare in Hugo usano Modalità Aula.
 7. **Se una funzione non può partire, lo si dice.** Un componente che richiede tecnologie recenti (WebGL, moduli ES) ha un'alternativa che funziona ovunque (versione testuale, schede da stampare), e se dopo il caricamento non è partito mostra un messaggio che porta a quell'alternativa, come lo shortcode `libro-3d`. Mai uno «Sto caricando…» senza fine.
-8. **Si prova come in classe, prima di consegnare.** Per ogni gioco o strumento nuovo o modificato: `python3 scripts/check-lim.py --pagine /percorso/` dopo la build, e una partita intera col solo tocco fino alla verifica finale (Playwright con `has_touch`, `tap`; per il trascinamento col dito `Input.dispatchTouchEvent` via CDP). Per i giochi con schermate che compaiono dopo un tocco, la prova automatica vede solo la prima schermata: le altre si controllano giocando.
+8. **Ogni materiale lo dichiara: «Pronto per la LIM».** Istruzione dell'utente dell'01/11/2026: *«Metti anche una specifica in ogni pagina utilizzabile sul lim»*. Il riquadro rimanda alla pagina [`/lim/`](/lim/), che spiega che cosa è controllato e come si usano i materiali in classe, ed è scritta per farsi trovare dai motori di ricerca (domande frequenti strutturate, mappa del sito, `llms.txt`). Dove compare:
+   - **pagine Hugo**: partial `lim-pronto.html`, sopra «Leggi questa pagina in altri modi», per i prefissi di `data/lim.yaml` (voce `hugo`, meno `esclusi`);
+   - **giochi, quiz, Abili a proteggere, indici di schede e storie**: lo inserisce `site-chrome.js` (`aggiungiProntoLim`);
+   - **schede e storie**, che non caricano JavaScript: link nella barra in alto, scritto da `scripts/segno-lim-statiche.py` e dai generatori di `scripts/schede-didattiche/` e `scripts/genera-schede-esperimenti.py`.
+   Il riquadro dice solo ciò che i controlli verificano: una famiglia di pagine nuova entra in `data/lim.yaml` (e, se statica, in `site-chrome.js` o nello script) solo insieme ai controlli che la provano. Testo identico nei tre posti: si cambia insieme. **Mai scrivere «unici in Italia», «i primi», «qualsiasi LIM» senza condizioni o altri primati e garanzie che nessuno ha misurato** (regola `qualita.md`, punti 1 e 7): la pagina dice con quali browser e a quali risoluzioni la compatibilità è provata.
+9. **Si prova come in classe, prima di consegnare.** Per ogni gioco o strumento nuovo o modificato: `python3 scripts/check-lim.py --pagine /percorso/` dopo la build, e una partita intera col solo tocco fino alla verifica finale (Playwright con `has_touch`, `tap`; per il trascinamento col dito `Input.dispatchTouchEvent` via CDP). Per i giochi con schermate che compaiono dopo un tocco, la prova automatica vede solo la prima schermata: le altre si controllano giocando.
 
 ## Controlli automatici
 
@@ -33,6 +39,7 @@ Nessun controllo se n'era accorto, perché tutti provavano con un browser modern
 |---|---|---|
 | `scripts/check-sintassi-js.cjs --public public` | `validate-pr.yml` (ogni PR), `controllo-lim.yml` | sintassi oltre ES2018 in file e pagine; Bootstrap Italia non trascritto |
 | `scripts/check-lim.py --da-git` | `validate-pr.yml` job `fogli-stampa` (pagine toccate; tutte se cambia un file condiviso) | errori JS, pagina più larga dello schermo, comandi dei giochi sotto 24 px, trascinamento senza alternativa |
-| `scripts/check-lim.py` + `scripts/check-lim-browser-vecchio.cjs` (Chromium 69) | `controllo-lim.yml`, ogni lunedì | tutte le pagine per le scuole; script fermi, Bootstrap Italia assente e menu fermi sul browser del 2018 |
+| `scripts/segno-lim-statiche.py --check` | `validate-pr.yml`, `controllo-lim.yml` | scheda o storia senza «Pronto per la LIM» |
+| `scripts/check-lim.py` (Chromium e Firefox) + `scripts/check-lim-browser-vecchio.cjs` (Chromium 69) | `controllo-lim.yml`, ogni lunedì | tutte le pagine per le scuole, compreso il riquadro «Pronto per la LIM» mancante; script fermi, Bootstrap Italia assente e menu fermi sul browser del 2018 |
 
 Il giro settimanale apre la issue in-place «🧑‍🏫 Pagine per le scuole da correggere per le LIM» (label `automazione`), che si chiude da sola. Un problema nuovo trovato in classe diventa una voce di questi controlli (regola `qualita.md`, punto 5). Il gate dei materiali scolastici `pc-didattica-reviewer` e il collaudo `pc-collaudo-funzionale` applicano questa regola.

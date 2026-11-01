@@ -98,8 +98,7 @@
      la versione testuale, che contiene tutti i capitoli. Sintassi ES5 di proposito. */ -}}
 <script>
 (function () {
-  function controlla() {
-    if (window.__libro3dAvviato) return;
+  function nonParte() {
     var lb = document.getElementById('lb'), car = document.getElementById('lb-loading');
     if (!lb || !car) return;
     car.innerHTML = 'Su questo dispositivo il libro in 3D non si apre. Tutti i capitoli, con domande e risposte, sono nella <a href="#versione-testuale">versione testuale</a>; per la classe ci sono anche le <a href="{{ "formazione/libro-che-si-esplora-schede/" | relURL }}">schede da stampare</a>.';
@@ -108,6 +107,11 @@
     if (pannello) pannello.hidden = true;
     var testo = document.getElementById('versione-testuale');
     if (testo) testo.open = true;
+  }
+  window.__libro3dNonParte = nonParte;
+  function controlla() {
+    if (window.__libro3dAvviato || document.querySelector('.lb-loading-fallito')) return;
+    nonParte();
   }
   if (document.readyState === 'complete') setTimeout(controlla, 4000);
   else window.addEventListener('load', function () { setTimeout(controlla, 4000); });

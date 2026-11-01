@@ -564,6 +564,9 @@
     // (schermate intro/game/end). Esclude pagine hub e statiche.
     aggiungiPulsanteEsciGioco();
 
+    // Riquadro «Pronto per la LIM» nei giochi, nei quiz e in Abili a proteggere (01/11/2026).
+    aggiungiProntoLim();
+
     // SOS 112 + toolbar accessibilità anche sulle pagine statiche (audit 2026-05-22).
     injectA11yAndSos();
     // BottomNav mobile anche sulle pagine statiche (adozione catalogo BI, luglio 2026).
@@ -651,6 +654,38 @@
     posiziona();
     window.addEventListener('scroll', posiziona, { passive: true });
     window.addEventListener('resize', posiziona);
+  }
+
+  // Riquadro «Pronto per la LIM» (regola .claude/rules/lim-scuole.md, 01/11/2026): stesse
+  // famiglie di data/lim.yaml (voce «statiche») con site-chrome.js, tutte controllate ogni
+  // settimana da scripts/check-lim.py. Testo identico al partial lim-pronto.html e a
+  // scripts/segno-lim-statiche.py: si cambiano insieme. Stile in custom.css. Sintassi ES5.
+  function aggiungiProntoLim() {
+    var famiglie = ['/giochi/', '/quizpc/', '/formazionepc/', '/abili-a-proteggere/',
+      '/formazione/schede-stampabili/', '/formazione/storie-e-racconti/'];
+    var percorso = window.location.pathname.replace(/^\/sito-pc-genzano/, '');
+    var dentro = false;
+    for (var i = 0; i < famiglie.length; i++) { if (percorso.indexOf(famiglie[i]) === 0) dentro = true; }
+    if (!dentro || percorso.indexOf('/giochi/assets/') === 0 || document.querySelector('.lim-pronto, .scheda-lim')) return;
+    var main = document.querySelector('main') || document.body;
+    var box = document.createElement('aside');
+    box.className = 'lim-pronto d-print-none';
+    box.setAttribute('aria-label', 'Uso sulla lavagna interattiva');
+    box.innerHTML = '<i class="bi bi-easel lim-pronto-icona" aria-hidden="true"></i>'
+      + '<p class="mb-0"><strong>Pronto per la LIM.</strong> Si usa col dito sulla lavagna interattiva della classe, '
+      + 'anche a schermo intero, e funziona sui browser delle lavagne meno recenti. '
+      + '<a href="' + SITE_URL + '/lim/">Come usarlo in classe</a></p>';
+    var hero = main.querySelector('.app-page-hero, .page-hero');
+    if (hero) {
+      var contenitore = document.createElement('div');
+      contenitore.className = 'container mt-3';
+      contenitore.appendChild(box);
+      hero.parentNode.insertBefore(contenitore, hero.nextSibling);
+      return;
+    }
+    var h1 = main.querySelector('h1');
+    if (h1) { h1.parentNode.insertBefore(box, h1.nextSibling); box.style.marginTop = '0.75rem'; return; }
+    main.insertBefore(box, main.firstChild);
   }
 
   // Pulsante «Schermo intero» per i giochi (01/11/2026): sulla lavagna interattiva (LIM)
