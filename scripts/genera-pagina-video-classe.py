@@ -8,15 +8,13 @@ V = [
    "Infanzia e primaria, ottobre-dicembre: «Quando trema la terra», «Terremoto: prima, durante, dopo»", "/rischi-prevenzione/rischio-sismico/", "Rischio sismico"),
   ("2026-11-01-vulcano-colli-albani-video", "Il vulcano dei Colli Albani",
    "Secondaria di primo grado, gennaio-febbraio, e di secondo grado, ottobre", "/rischi-prevenzione/rischio-vulcanico/", "Rischio vulcanico"),
-  ("2026-09-25-alluvione-forti-piogge-video", "Alluvione e forti piogge: come comportarsi",
+  ("2026-11-01-alluvione-bambini-video", "Quando piove forte: come stare al sicuro dall'acqua",
    "Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»; secondaria, marzo-aprile e novembre-dicembre", "/rischi-prevenzione/rischio-idrogeologico/", "Rischio idrogeologico"),
-  ("2026-09-23-allerta-meteo-codici-colore", "I quattro colori dell'allerta meteo",
+  ("2026-11-01-allerta-colori-bambini-video", "I colori dell'allerta meteo e che cosa fare",
    "Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre", "/allerte-meteo/", "Allerte meteo"),
-  ("2026-09-23-allerta-meteo-cosa-fare", "Cosa fare con l'allerta, dal verde al rosso",
-   "Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre", "/allerte-meteo/", "Allerte meteo"),
-  ("2026-09-25-kit-emergenza-video", "Il kit di emergenza",
+  ("2026-11-01-kit-emergenza-bambini-video", "Il kit di emergenza",
    "Infanzia e primaria, marzo-maggio: «Il mio zainetto», «La mia casa preparata», «Il piano della mia famiglia»", "/rischi-prevenzione/kit-emergenza/", "Kit di emergenza"),
-  ("2026-09-24-incendi-boschivi-video", "Incendi boschivi: come nascono e come comportarsi",
+  ("2026-11-01-incendi-bambini-video", "Il fuoco nel bosco: come nasce e che cosa fare",
    "Primaria 1ª-2ª, marzo-aprile: «Fumo e fuoco»; tutte le classi prima dell'estate", "/rischi-prevenzione/rischio-incendio/", "Rischio incendio"),
   ("2026-11-01-caldo-ondate-di-calore-video", "Il caldo: come proteggersi",
    "Secondaria di secondo grado, marzo-aprile: «Il caldo e le persone fragili»; tutte le classi prima dell'estate", "/rischi-prevenzione/ondate-di-calore/", "Ondate di calore"),
@@ -81,6 +79,8 @@ coda = """
 ## Per i ragazzi più grandi
 
 Con la secondaria si può partire da uno di questi video e continuare con il [documentario sulla storia della protezione civile](/comunicazioni/2026-10-23-documentario-storia-protezione-civile/): meno di cinque minuti, da Messina 1908 a IT-alert, con foto vere dei disastri. Per questo è adatto ai ragazzi, non ai bambini.
+
+Le pagine [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/), [Allerte meteo](/allerte-meteo/), [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Rischio incendio](/rischi-prevenzione/rischio-incendio/) hanno anche video più lunghi e con più dettagli sugli stessi argomenti, adatti alla secondaria.
 
 ## Vedi anche
 
