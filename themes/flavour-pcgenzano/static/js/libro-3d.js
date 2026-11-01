@@ -275,7 +275,9 @@ function festa(){
   const pts = new THREE.Points(geo, new THREE.PointsMaterial({size:.045, map:puntoTex, vertexColors:true, transparent:true, opacity:1, depthWrite:false}));
   scene.add(pts); scintille.push({pts, vel, t:0});
 }
-function muoviScintille(dt){
+function muoviScintille(dt, ferme){
+  /* con «Pausa animazioni» attivata a scintille in volo, le scintille spariscono subito invece di continuare a muoversi */
+  if (ferme) dt = 9;
   for (let i=scintille.length-1;i>=0;i--){ const s = scintille[i]; s.t += dt;
     const a = s.pts.geometry.attributes.position;
     s.vel.forEach((v,k)=>{ v.y -= 2.2*dt; a.array[k*3] += v.x*dt; a.array[k*3+1] += v.y*dt; a.array[k*3+2] += v.z*dt; });
@@ -939,7 +941,7 @@ function loop(){
   /* «Pausa animazioni» o movimento ridotto: i movimenti continui (fiamme, fumo, nube, vento, ventola) si fermano; restano solo le transizioni brevi dei comandi. RM() si rilegge a ogni fotogramma, quindi vale anche se la preferenza cambia a pagina aperta. */
   const still = RM(); if (!still) animT += dt;
   for (let k=tweens.length-1; k>=0; k--){ const tw = tweens[k]; tw.t += dt; const p = Math.min(1, tw.t/tw.dur); tw.fn(p); if (p>=1){ tweens.splice(k,1); tw.done?.(); } }
-  current?.update(still ? 0 : dt, animT); muoviPolvere(still ? 0 : dt, animT); muoviScintille(dt);
+  current?.update(still ? 0 : dt, animT); muoviPolvere(still ? 0 : dt, animT); muoviScintille(dt, still);
   if (controls.enabled) controls.update(); renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
