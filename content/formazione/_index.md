@@ -55,6 +55,9 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 
 <div class="consulta-rapida">
 {{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
+{{< link-card url="/formazione/programma-dell-anno/" icon="bi-calendar3" titolo="Programma dell'anno" desc="Cinque incontri da ottobre a maggio per ogni età, con le lezioni già composte e il lavoro finale della classe." >}}
+{{< link-card url="/formazione/il-gruppo-a-scuola/" icon="bi-people" titolo="Il Gruppo nella tua scuola" desc="Incontri in classe, prove di evacuazione affiancate, giornate di plesso e uscite con i volontari." >}}
+{{< link-card url="/formazione/verifica-prima-e-dopo/" icon="bi-clipboard-data" titolo="Verifica prima e dopo" desc="Cinque domande senza voto e senza nomi per capire che cosa ha imparato la classe." >}}
 {{< link-card url="/formazione/crea-la-mia-lezione/" icon="bi-magic" titolo="Crea la mia lezione" desc="Classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti." >}}
 {{< link-card url="/formazione/libro-che-si-esplora/" icon="bi-book" titolo="Il libro che si esplora" desc="Capitoli in 3D sull'autoprotezione: fai la tua previsione, prova sul modellino e alza il lembo per la risposta." >}}
 {{< link-card url="/formazione/settimana-protezione-civile/" icon="bi-calendar-week" titolo="Settimana della protezione civile a scuola" desc="Un programma pronto per tutto l'istituto: un tema al giorno, il compito in famiglia, la prova del venerdì." >}}

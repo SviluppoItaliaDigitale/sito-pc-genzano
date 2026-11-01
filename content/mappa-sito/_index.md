@@ -338,6 +338,21 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Scuole: da dove cominciare</p>
   <p class="ms-card-desc">Cruscotto unico per ogni ruolo: scegli se sei docente di infanzia/primaria/sec I/sec II, di sostegno/BES, Dirigente/DSGA/RSPP, oppure genitore — e in 2 click arrivi ai materiali giusti.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/programma-dell-anno/">
+  <div class="ms-card-icon"><i class="bi bi-calendar3"></i></div>
+  <p class="ms-card-title">Programma dell'anno per la classe</p>
+  <p class="ms-card-desc">Cinque incontri da ottobre a maggio per ogni età, con le lezioni già composte, il compito a casa e il lavoro finale della classe.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/il-gruppo-a-scuola/">
+  <div class="ms-card-icon"><i class="bi bi-people"></i></div>
+  <p class="ms-card-title">Il Gruppo nella tua scuola</p>
+  <p class="ms-card-desc">Incontri in classe, percorsi, prove di evacuazione affiancate, giornate di plesso e uscite con i volontari: che cosa possiamo fare e come chiederlo.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/verifica-prima-e-dopo/">
+  <div class="ms-card-icon"><i class="bi bi-clipboard-data"></i></div>
+  <p class="ms-card-title">Verifica prima e dopo</p>
+  <p class="ms-card-desc">Cinque domande per classe, uguali prima e dopo il percorso, senza voto e senza nomi.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/crea-la-mia-lezione/">
   <div class="ms-card-icon"><i class="bi bi-magic"></i></div>
   <p class="ms-card-title">Crea la mia lezione</p>
