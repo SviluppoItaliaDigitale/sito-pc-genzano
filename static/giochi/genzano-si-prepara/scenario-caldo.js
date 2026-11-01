@@ -200,7 +200,7 @@
         no: 'Le medicine della nonna sono rimaste al sole: il calore può alterarne l\'efficacia.' },
       { se: 'acqua',
         si: 'In casa c\'era acqua per tutti, senza uscire nelle ore calde.',
-        no: 'L\'acqua è finita e qualcuno è dovuto uscire nelle ore più calde.' },
+        no: 'In casa c\'era poca acqua: è servito un acquisto in più, da fare fuori dalle ore più calde.' },
       { se: 'ventilatore',
         si: 'Il ventilatore funzionava quando serviva.',
         no: 'Il ventilatore si è rivelato rotto proprio nei giorni peggiori.' },
