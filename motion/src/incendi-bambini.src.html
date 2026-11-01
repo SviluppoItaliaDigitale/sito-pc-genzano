@@ -26,6 +26,9 @@ body.render #stage{left:0;top:0;transform:none!important}
   box-shadow:12px 12px 0 rgba(11,58,102,.22)}
 .carta svg{width:100%;height:100%;display:block}
 [data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:70px}
+[data-fmt="9x16"] .ill{height:700px}
+[data-fmt="9x16"] .scena.conlista .ill{height:400px}
+[data-fmt="9x16"] .scena.fin .ill{height:460px}
 [data-fmt="16x9"] .ill{order:2;width:47%;height:640px}
 [data-fmt="16x9"] .txt{order:1;width:53%}
 [data-fmt="16x9"] .grande{font-size:150px}
@@ -126,7 +129,7 @@ const AUDIO = /*AUDIO*/"";
 
 /* ===================== FORMATI e zone sicure ===================== */
 const FORMATI = {
-  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
+  "9x16": { W:1080, H:1920, hx:96,  hy:170, side:96,  top:280, bot:1430, subb:1700, t:104, k:1,   ks:.93, illk:1   },
   "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
   "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
   "16x9": { W:1920, H:1080, hx:120, hy:48,  side:130, top:150, bot:900,  subb:1046, t:108, k:.95, ks:.9,  illk:1   }
@@ -384,7 +387,7 @@ const box = $("#scene"), NODI = [];
 const righe = arr => `<h1>${arr.map(r => `<span class="l">${r}</span>`).join("")}</h1>`;
 CONFIG.scene.forEach((s, k) => {
   const el = document.createElement("section");
-  el.className = "scena" + (s.finale ? " fin" : ""); el.style.opacity = 0;
+  el.className = "scena" + (s.finale ? " fin" : "") + (s.lista ? " conlista" : ""); el.style.opacity = 0;
   el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
   const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t], j) => `<li><span class="ico" style="background:${TINTE[j + 2]}33">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
   const ill = ILL[s.ill]();
