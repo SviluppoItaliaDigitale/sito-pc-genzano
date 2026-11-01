@@ -6,62 +6,62 @@
 <title>Notizie vere e notizie false in emergenza — Protezione Civile Genzano di Roma</title>
 <style>
 /*FONTS*/
-:root{--bg:#0a1220;--az:#8fb8e0;--ar:#4fb0ff;--tx:#eef2f7;--dim:#93a1b5;
-  --verde:#34b25a;--gialla:#ffcc00;--arancione:#ff8a00;--rossa:#ef4136;
-  --bosco:#2f8f5b;--bosco2:#1f6f4a;--terra:#13261d;--fumo:#93a1b5}
+/* Direzione: cartellone di classe disegnato a pennarello — cielo chiaro, prato, contorni blu inchiostro,
+   colori pieni da pastelli a cera, il bambino Flavio come protagonista di ogni scena. */
+:root{--ink:#0b3a66;--ink2:#2c5282;--acc:#c2410c;--giallo:#ffd43b;--arancio:#ff922b;--rosso:#e03131;
+  --verde:#40c057;--azzurro:#4dabf7;--viola:#9775fa;--cielo1:#9bd8ff;--cielo2:#e3f4ff}
 html,body{margin:0;height:100%;background:#000;overflow:hidden}
 #stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
-  background:radial-gradient(120% 60% at 50% 100%,#10233d 0%,var(--bg) 60%);overflow:hidden;
-  font-family:'Titillium Web',sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
+  background:linear-gradient(180deg,var(--cielo1) 0%,var(--cielo2) 70%);overflow:hidden;
+  font-family:'Titillium Web',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
 body.render #stage{left:0;top:0;transform:none!important}
+#fondo,#coriandoli{position:absolute;inset:0;width:100%;height:100%}
+#coriandoli{pointer-events:none}
 .scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
   top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
   display:flex;flex-direction:column;justify-content:center;gap:calc(26px*var(--k))}
 .txt{display:flex;flex-direction:column;gap:calc(22px*var(--k))}
 .ill{height:calc(var(--illh)*1px);flex:none;display:flex;align-items:center;justify-content:center}
-.ill svg{width:100%;height:100%;overflow:visible}
-[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:80px}
-[data-fmt="16x9"] .ill{order:2;width:46%;height:640px}
-[data-fmt="16x9"] .txt{order:1;width:54%}
-[data-fmt="16x9"] .grande{font-size:140px}
-[data-fmt="16x9"] .scena:last-child .txt{gap:14px}
-.chip{align-self:flex-start;font:700 calc(26px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ar);border:3px solid var(--ar);border-radius:999px;padding:.35em .9em}
-h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.02;letter-spacing:-.01em}
-h1 .a{color:var(--ar)}
-.m{display:block;overflow:hidden;padding:.12em .22em;margin:-.12em -.22em}
-.m>.i{display:block;will-change:transform}
-.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--dim);margin:0}
-.sotto b{color:var(--tx)}
-.lista{display:flex;flex-direction:column;gap:calc(16px*var(--k));margin:0;padding:0;list-style:none}
-.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:600;font-size:calc(42px*var(--k));line-height:1.18}
-.lista .ico{flex:none;width:calc(76px*var(--k));height:calc(76px*var(--k));border-radius:50%;background:rgba(79,176,255,.14);
-  display:flex;align-items:center;justify-content:center}
-.lista .ico svg{width:64%;height:64%}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(22px*var(--k));width:100%}
-.tiles.t3{grid-template-columns:1fr 1fr 1fr}
-.tile{background:rgba(255,255,255,.05);border-radius:calc(26px*var(--k));padding:calc(18px*var(--k));
-  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center}
-.tile svg{width:calc(130px*var(--k));height:calc(130px*var(--k))}
-.tile span{font-weight:700;font-size:calc(34px*var(--k));line-height:1.1}
-.nota{font:700 calc(28px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0}
-.nota b{color:var(--ar)}
-.mesi{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(14px*var(--k));width:100%}
-.mese{border-radius:calc(18px*var(--k));padding:calc(20px*var(--k)) 0;text-align:center;
-  font:700 calc(40px*var(--k)) 'Roboto Mono',monospace;background:rgba(255,255,255,.06);color:var(--dim)}
-.mese.on{background:var(--arancione);color:#0a1220}
-.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--ar)}
-.fonte{font:500 calc(24px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.04em;color:var(--dim);margin:0}
-#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:72px;display:flex;
-  align-items:center;gap:22px;padding:0 30px;border-radius:999px;background:rgba(255,255,255,.07);
-  font:700 24px 'Roboto Mono',monospace;letter-spacing:.16em;color:var(--dim)}
+.carta{width:100%;height:100%;border:6px solid var(--ink);border-radius:40px;overflow:hidden;background:#fff;
+  box-shadow:12px 12px 0 rgba(11,58,102,.22)}
+.carta svg{width:100%;height:100%;display:block}
+[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:70px}
+[data-fmt="16x9"] .ill{order:2;width:47%;height:640px}
+[data-fmt="16x9"] .txt{order:1;width:53%}
+[data-fmt="16x9"] .grande{font-size:150px}
+[data-fmt="16x9"] .scena.fin .txt{gap:12px}
+.chip{align-self:flex-start;font:800 calc(28px*var(--k)) 'Titillium Web',sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink);background:var(--giallo);border:4px solid var(--ink);border-radius:999px;
+  padding:.18em .9em;box-shadow:5px 5px 0 rgba(11,58,102,.22)}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.04;letter-spacing:-.01em}
+h1 .l{display:block;transform-origin:0 80%}
+h1 .a{color:var(--acc);background:linear-gradient(#ffe066,#ffe066) no-repeat 0 88%/var(--hl,0%) 34%;padding:0 .06em}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--ink2);margin:0}
+.sotto b{color:var(--ink)}
+.lista{display:flex;flex-direction:column;gap:calc(18px*var(--k));margin:0;padding:0;list-style:none}
+.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:700;font-size:calc(42px*var(--k));line-height:1.16}
+.lista .ico{flex:none;width:calc(84px*var(--k));height:calc(84px*var(--k));border-radius:50%;border:4px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;background:#fff}
+.lista .ico svg{width:70%;height:70%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(26px*var(--k));width:100%}
+.tile{position:relative;background:#fff;border:5px solid var(--ink);border-radius:32px;padding:calc(18px*var(--k));
+  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center;box-shadow:8px 8px 0 rgba(11,58,102,.2)}
+.tile svg{width:calc(140px*var(--k));height:calc(140px*var(--k))}
+.tile span{font-weight:800;font-size:calc(34px*var(--k));line-height:1.1}
+.tile .bollo{position:absolute;right:-14px;top:-14px;width:74px;height:74px}
+.nota{font:800 calc(32px*var(--k)) 'Titillium Web',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);margin:0}
+.nota b{color:var(--acc)}
+.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--rosso);-webkit-text-stroke:6px var(--ink);paint-order:stroke fill}
+.fonte{font:600 calc(24px*var(--k)) 'Titillium Web',sans-serif;color:var(--ink2);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:68px;display:flex;
+  align-items:center;gap:20px;padding:0 28px;border-radius:999px;background:#fff;border:4px solid var(--ink);
+  font:800 26px 'Titillium Web',sans-serif;letter-spacing:.12em;color:var(--ink)}
 #hud .dots{display:flex;gap:10px}
-#hud .dot{width:14px;height:14px;border-radius:50%;background:#33415a}
+#hud .dot{width:18px;height:18px;border-radius:50%;background:#d0dbe8;border:3px solid var(--ink)}
 #wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
-.banda{position:absolute;top:0;bottom:0;width:26%;opacity:0}
 #sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);bottom:calc((var(--H) - var(--subb))*1px);
-  background:rgba(10,18,32,.9);border:2px solid rgba(255,255,255,.12);border-radius:22px;padding:18px 26px;
-  font-weight:600;font-size:calc(43px*var(--ks));line-height:1.25;text-align:center;opacity:0}
+  background:#fff;border:4px solid var(--ink);border-radius:24px;padding:14px 26px;color:var(--ink);
+  font-weight:700;font-size:calc(42px*var(--ks));line-height:1.22;text-align:center;opacity:0}
 #ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
 #ui a{color:#eef2f7;background:#1d2a40;border-radius:999px;padding:8px 14px;text-decoration:none}
 #ui a[aria-current]{background:#2e90fa;color:#0a1220}
@@ -72,9 +72,10 @@ body.render #ui,body.render #avvio{display:none!important}
 </head>
 <body>
 <div id="stage" role="img" aria-label="">
+  <svg id="fondo" aria-hidden="true"></svg>
+  <svg id="coriandoli" aria-hidden="true"></svg>
   <div id="scene"></div>
   <div id="wipe"></div>
-  <div id="bande"></div>
   <div id="hud"><div class="dots"></div><span class="lab"></span></div>
   <div id="sub" aria-hidden="true"></div>
 </div>
@@ -96,7 +97,7 @@ const CONFIG = {
     { ill: "chat", illh: 460, dur: 6, chip: "Cosa sapere",
       righe: ["Girano", "<span class='a'>in fretta</span>"], sotto: "Messaggi inoltrati, <b>foto vecchie</b>, voci senza fonte.",
       sottotitolo: "In un'emergenza girano in fretta anche notizie false: messaggi inoltrati, foto vecchie, voci senza una fonte." },
-    { ill: "lente", illh: 240, dur: 9, chip: "Tre controlli",
+    { ill: "lente", illh: 240, dur: 9, chip: "Tre controlli", listaAt: [3.0, 3.9, 6.95],
       righe: ["Prima di", "<span class='a'>crederci</span>"], lista: [
         ["persone", "Chi lo dice?"],
         ["calendario", "È di oggi? Parla di qui?"],
@@ -117,6 +118,7 @@ const CONFIG = {
       sottotitolo: "Segui solo le fonti ufficiali. In emergenza chiama il 112." }
   ]
 };
+
 const DUR = /*DUR*/[];
 const AUDIO = /*AUDIO*/"";
 
@@ -125,7 +127,7 @@ const FORMATI = {
   "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
   "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
   "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
-  "16x9": { W:1920, H:1080, hx:120, hy:56,  side:140, top:160, bot:890,  subb:1044, t:104, k:.95, ks:.9,  illk:1   }
+  "16x9": { W:1920, H:1080, hx:120, hy:48,  side:130, top:150, bot:900,  subb:1046, t:108, k:.95, ks:.9,  illk:1   }
 };
 const Q = new URLSearchParams(location.search);
 const RENDER = Q.get("render") === "1";
@@ -144,64 +146,196 @@ const prog = (u, s, d) => clamp((u - s) / d);
 const outCubic = x => 1 - Math.pow(1 - x, 3);
 const outQuart = x => 1 - Math.pow(1 - x, 4);
 const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-const outBack = x => { const c = 1.70158, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const outBack = x => { const c = 2.2, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const outElastic = x => x <= 0 ? 0 : x >= 1 ? 1 : Math.pow(2, -10 * x) * Math.sin((x * 10 - .75) * (2 * Math.PI / 3)) + 1;
 const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
 const lerp = (a, b, x) => a + (b - a) * x;
-function reveal(el, p) { el.style.transform = `translateY(${(1 - outQuart(p)) * 115}%)`; }
-function fadeUp(el, p, d = 40) { const e = outCubic(p); el.style.opacity = e; el.style.transform = `translateY(${(1 - e) * d}px)`; }
-function pop(el, p) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `scale(${lerp(.6, 1, e)})`; }
+const INK = "#0b3a66";
+/* boing: entra rimbalzando (scala + piccola rotazione) */
+function boing(el, p, rot = 0) {
+  const e = p <= 0 ? 0 : outElastic(p);
+  el.style.opacity = clamp(p * 4);
+  el.style.transform = `scale(${lerp(.3, 1, e).toFixed(3)}) rotate(${(lerp(rot - 8, rot, e)).toFixed(2)}deg)`;
+}
+function salta(el, p, d = 60) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `translateY(${((1 - e) * d).toFixed(1)}px)`; }
+function svgPop(g, p, cx = "50%", cy = "50%") {
+  g.style.transformBox = "fill-box"; g.style.transformOrigin = `${cx} ${cy}`;
+  const e = p <= 0 ? 0 : outElastic(p); g.style.opacity = p > 0 ? 1 : 0; g.style.transform = `scale(${e.toFixed(3)})`;
+}
 
-/* ===================== DISEGNI (SVG piatti, originali) ===================== */
-const PERSONA = (x, y, s, c = "#f59e0b", testa = "#f2c49b") => `<g transform="translate(${x} ${y}) scale(${s})">
-  <circle cx="0" cy="-118" r="22" fill="${testa}"/><rect x="-22" y="-92" width="44" height="58" rx="18" fill="${c}"/>
-  <rect x="-20" y="-40" width="16" height="42" rx="7" fill="#34435c"/><rect x="4" y="-40" width="16" height="42" rx="7" fill="#34435c"/></g>`;
+/* ===================== PERSONAGGI (originali, stile pennarello) ===================== */
+/* Origine ai piedi. Altezza ~280 a scala 1. tipo: flavio | silvia | elio | adulta | adulto */
+function PG(cls, o = {}) {
+  const c = Object.assign({ maglia: "#ff922b", pantaloni: "#4dabf7", pelle: "#ffd8b1", capelli: "#8b5a2b", tipo: "flavio" }, o);
+  const adulto = c.tipo === "adulta" || c.tipo === "adulto";
+  const gamba = adulto ? 96 : 76;
+  const capelli = {
+    flavio: `<path d="M-56 -14 Q-60 -64 -6 -62 Q46 -66 56 -16 Q36 -40 4 -36 Q-26 -44 -56 -14Z" fill="${c.capelli}"/><path d="M-6 -62 Q4 -80 18 -70" fill="none" stroke="${c.capelli}" stroke-width="9"/>`,
+    silvia: `<circle cx="-62" cy="-4" r="20" fill="${c.capelli}"/><circle cx="62" cy="-4" r="20" fill="${c.capelli}"/><path d="M-56 -10 Q-58 -64 0 -62 Q58 -64 56 -10 Q30 -36 0 -30 Q-30 -36 -56 -10Z" fill="${c.capelli}"/>`,
+    elio: `<path d="M-54 -20 Q-50 -62 0 -60 Q50 -62 54 -20 Q20 -44 -54 -20Z" fill="${c.capelli}"/>`,
+    adulta: `<circle cx="0" cy="-66" r="22" fill="${c.capelli}"/><path d="M-58 4 Q-62 -64 0 -60 Q62 -64 58 4 Q50 -32 0 -34 Q-50 -32 -58 4Z" fill="${c.capelli}"/>`,
+    adulto: `<path d="M-54 -22 Q-48 -62 0 -60 Q48 -62 54 -22 Q10 -40 -54 -22Z" fill="${c.capelli}"/>`
+  }[c.tipo];
+  const busto = adulto ? `<rect x="-42" y="-${gamba + 112}" width="84" height="118" rx="30" fill="${c.maglia}"/>` :
+    `<rect x="-38" y="-${gamba + 94}" width="76" height="100" rx="30" fill="${c.maglia}"/>`;
+  const spalla = adulto ? gamba + 96 : gamba + 78, testaY = adulto ? gamba + 172 : gamba + 146;
+  const braccio = (lato) => `<g class="brac${lato}" transform="translate(${lato === "S" ? -34 : 34} -${spalla})"><g class="r">
+      <path d="M0 0 L0 ${adulto ? 74 : 62}" stroke="${c.maglia}" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="0" cy="${adulto ? 80 : 68}" r="12" fill="${c.pelle}"/></g></g>`;
+  const gambe = lato => `<g class="gamba${lato}" transform="translate(${lato === "S" ? -16 : 16} -${gamba})"><g class="r">
+      <rect x="-12" y="0" width="24" height="${gamba}" rx="11" fill="${c.pantaloni}"/><ellipse cx="${lato === "S" ? -4 : 4}" cy="${gamba - 2}" rx="20" ry="10" fill="#495057"/></g></g>`;
+  return `<g class="${cls} pg" stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><g class="corpo">
+    ${gambe("S")}${gambe("D")}${braccio("S")}${busto}${braccio("D")}
+    <g class="testa" transform="translate(0 -${testaY})"><circle r="${adulto ? 56 : 60}" fill="${c.pelle}"/>${capelli}
+      <g class="occhi"><ellipse cx="-21" cy="2" rx="7" ry="10" fill="${INK}" stroke="none"/><ellipse cx="21" cy="2" rx="7" ry="10" fill="${INK}" stroke="none"/>
+        <circle cx="-19" cy="-2" r="2.6" fill="#fff" stroke="none"/><circle cx="23" cy="-2" r="2.6" fill="#fff" stroke="none"/></g>
+      <circle cx="-36" cy="22" r="10" fill="#ff8787" opacity=".55" stroke="none"/><circle cx="36" cy="22" r="10" fill="#ff8787" opacity=".55" stroke="none"/>
+      <path class="bocca sorriso" d="M-18 22 Q0 40 18 22" fill="none"/>
+      <ellipse class="bocca o" cx="0" cy="30" rx="9" ry="11" fill="#c92a2a" opacity="0"/></g></g></g>`;
+}
+/* muove un personaggio: posizione, respiro, braccia, camminata, occhi che sbattono, bocca */
+function anima(root, sel, t, o) {
+  const g = typeof sel === "string" ? root.querySelector(sel) : sel; if (!g) return;
+  const s = o.s ?? 1, fase = o.fase ?? 0, cam = o.cammina ?? 0;
+  const bob = (o.bob ?? 1) * Math.sin(t * 3.2 + fase) * 3 + cam * Math.abs(Math.sin(t * 9 + fase)) * -7;
+  g.setAttribute("transform", `translate(${(+o.x).toFixed(1)} ${(o.y + bob).toFixed(1)}) scale(${o.flip ? -s : s} ${(s * (o.schiaccia ?? 1)).toFixed(3)})`);
+  const aS = (o.aS ?? 12) + (o.agitaS ? Math.sin(t * 10 + fase) * 18 : 0), aD = (o.aD ?? 12) + (o.agitaD ? Math.sin(t * 10 + fase) * 18 : 0);
+  g.querySelector(".bracS .r").setAttribute("transform", `rotate(${aS.toFixed(1)})`);
+  g.querySelector(".bracD .r").setAttribute("transform", `rotate(${(-aD).toFixed(1)})`);
+  const gm = Math.sin(t * 9 + fase) * 22 * cam;
+  g.querySelector(".gambaS .r").setAttribute("transform", `rotate(${gm.toFixed(1)})`);
+  g.querySelector(".gambaD .r").setAttribute("transform", `rotate(${(-gm).toFixed(1)})`);
+  const bl = ((t + fase * .7) % 3.4) < .13 ? .12 : 1;
+  g.querySelector(".occhi").setAttribute("transform", `translate(0 2) scale(1 ${bl}) translate(0 -2)`);
+  const oo = o.bocca === "o";
+  g.querySelector(".bocca.sorriso").setAttribute("opacity", oo ? 0 : 1);
+  g.querySelector(".bocca.o").setAttribute("opacity", oo ? 1 : 0);
+}
+/* in ginocchio sotto il tavolo: un braccio protegge la testa, l'altra mano tiene la gamba del tavolo */
+function RANNICCHIATO(cls, o = {}) {
+  const c = Object.assign({ maglia: "#ff922b", pantaloni: "#4dabf7", pelle: "#ffd8b1", capelli: "#8b5a2b" }, o);
+  return `<g class="${cls}" stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><g class="corpo">
+    <rect x="-78" y="-34" width="96" height="34" rx="16" fill="${c.pantaloni}"/><ellipse cx="-80" cy="-12" rx="14" ry="13" fill="#495057"/>
+    <rect x="-58" y="-86" width="42" height="70" rx="18" fill="${c.pantaloni}"/>
+    <rect x="-52" y="-150" width="72" height="98" rx="30" fill="${c.maglia}" transform="rotate(38 -16 -70)"/>
+    <path class="tiene" d="M8 -112 Q60 -112 98 -96" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle class="manoT" cx="100" cy="-95" r="12" fill="${c.pelle}"/>
+    <g class="testa" transform="translate(40 -118)"><circle r="50" fill="${c.pelle}"/>
+      <path d="M-46 -14 Q-44 -56 0 -52 Q40 -54 48 -14 Q30 -34 2 -30 Q-26 -36 -46 -14Z" fill="${c.capelli}"/>
+      <g class="occhi"><ellipse cx="2" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/><ellipse cx="30" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/></g>
+      <circle cx="40" cy="24" r="8" fill="#ff8787" opacity=".55" stroke="none"/>
+      <path class="bocca sorriso" d="M8 26 Q20 36 32 26" fill="none"/><ellipse class="bocca o" cx="20" cy="30" rx="7" ry="8" fill="#c92a2a" opacity="0"/></g>
+    <path d="M-2 -132 Q14 -186 52 -176 Q82 -168 84 -150" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle cx="84" cy="-148" r="12" fill="${c.pelle}"/>
+  </g></g>`;
+}
+/* elementi di contorno */
+const STELLA = (cls, x, y, r = 22, c = "#ffd43b") => { let d = ""; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; d += (i ? "L" : "M") + (x + Math.cos(a) * rr).toFixed(1) + " " + (y + Math.sin(a) * rr).toFixed(1); }
+  return `<path class="${cls}" d="${d}Z" fill="${c}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>`; };
+const SPUNTA = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#40c057" stroke="${INK}" stroke-width="5"/><path d="M${-r * .42} 0 L${-r * .1} ${r * .32} L${r * .45} ${-r * .3}" stroke="#fff" stroke-width="${r * .22}" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g>`;
+const DIVIETO = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#fff" stroke="#e03131" stroke-width="${r * .26}"/><path d="M${-r * .66} ${r * .66} L${r * .66} ${-r * .66}" stroke="#e03131" stroke-width="${r * .26}"/><circle r="${r * 1.13}" fill="none" stroke="${INK}" stroke-width="4"/></g></g>`;
+const NUVOLA = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 40 Q-4 10 26 12 Q34 -14 64 -4 Q84 -22 106 0 Q132 2 128 30 Q140 44 120 52 H8 Q-10 52 0 40Z" fill="#fff" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/></g>`;
+const SOLE = (x, y, r = 46) => `<g class="sole" transform="translate(${x} ${y})"><g class="raggi">${Array.from({ length: 10 }, (_, i) => `<path d="M0 ${-r - 12} L0 ${-r - 30}" stroke="#f59f00" stroke-width="9" stroke-linecap="round" transform="rotate(${i * 36})"/>`).join("")}</g>
+  <circle r="${r}" fill="#ffd43b" stroke="${INK}" stroke-width="5"/><ellipse cx="-14" cy="-6" rx="5" ry="7" fill="${INK}"/><ellipse cx="14" cy="-6" rx="5" ry="7" fill="${INK}"/>
+  <path d="M-16 12 Q0 26 16 12" stroke="${INK}" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="-26" cy="10" r="7" fill="#ff8787" opacity=".6"/><circle cx="26" cy="10" r="7" fill="#ff8787" opacity=".6"/></g>`;
+const PRATO = (y = 430, c = "#69db7c") => `<path d="M-10 ${y} Q150 ${y - 26} 300 ${y} T610 ${y} V530 H-10Z" fill="${c}" stroke="${INK}" stroke-width="5"/>`;
+const STANZA = `<rect width="600" height="510" fill="#fff4d6"/><rect y="420" width="600" height="90" fill="#e9b872" stroke="${INK}" stroke-width="5"/>
+  <path d="M0 448 H600 M0 478 H600" stroke="#c98c48" stroke-width="3"/>`;
+
+const O = `stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"`;
 const ICONE = {
-  persone: `<svg viewBox="0 0 100 100"><circle cx="50" cy="32" r="16" fill="#f2c49b"/><rect x="28" y="52" width="44" height="40" rx="16" fill="#2e90fa"/><text x="76" y="40" font-family="Roboto Mono" font-weight="700" font-size="34" fill="#ffcc00">?</text></svg>`,
-  calendario: `<svg viewBox="0 0 100 100"><rect x="14" y="20" width="72" height="68" rx="10" fill="#eef2f7"/><rect x="14" y="20" width="72" height="20" rx="10" fill="#ef4136"/><rect x="14" y="32" width="72" height="8" fill="#ef4136"/><text x="50" y="76" text-anchor="middle" font-family="Roboto Mono" font-weight="700" font-size="30" fill="#0a1220">OGGI</text></svg>`,
-  scudo: `<svg viewBox="0 0 100 100"><path d="M50 8 L84 20 V48 C84 70 68 84 50 92 C32 84 16 70 16 48 V20Z" fill="#34b25a"/><path d="M34 50 L46 62 L68 38" stroke="#0a1220" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-  comune: `<svg viewBox="0 0 100 100"><path d="M12 36 L50 12 L88 36Z" fill="#c9d4e2"/><g fill="#c9d4e2">${[22, 42, 62].map(x => `<rect x="${x}" y="40" width="10" height="38"/>`).join("")}<rect x="78" y="40" width="10" height="38"/></g><rect x="10" y="80" width="80" height="10" fill="#c9d4e2"/></svg>`,
-  pc: `<svg viewBox="0 0 100 100"><path d="M16 66 C16 36 30 22 50 22 C70 22 84 36 84 66Z" fill="#ffcc00"/><rect x="8" y="64" width="84" height="12" rx="6" fill="#ffcc00"/><path d="M50 22 V64" stroke="#c99a00" stroke-width="6"/></svg>`,
-  allarme: `<svg viewBox="0 0 100 100"><rect x="30" y="8" width="40" height="84" rx="9" fill="#34435c"/><rect x="35" y="16" width="30" height="62" rx="3" fill="#ef4136"/><path d="M50 30 V52" stroke="#eef2f7" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="63" r="4.5" fill="#eef2f7"/></svg>`,
-  sito: `<svg viewBox="0 0 100 100"><rect x="8" y="18" width="84" height="64" rx="8" fill="#eef2f7"/><rect x="8" y="18" width="84" height="16" rx="8" fill="#2e90fa"/><rect x="8" y="28" width="84" height="6" fill="#2e90fa"/><rect x="18" y="44" width="40" height="8" rx="3" fill="#34435c"/><rect x="18" y="58" width="64" height="6" rx="3" fill="#93a1b5"/><rect x="18" y="68" width="52" height="6" rx="3" fill="#93a1b5"/></svg>`
+  pin: `<svg viewBox="0 0 100 100"><path d="M50 92 C30 64 22 52 22 38 a28 28 0 0 1 56 0 C78 52 70 64 50 92Z" fill="#40c057" ${O}/><circle cx="50" cy="38" r="11" fill="#fff" ${O}/></svg>`,
+  zaino: `<svg viewBox="0 0 100 100"><path d="M36 26 V18 a14 14 0 0 1 28 0 V26" fill="none" ${O}/><rect x="22" y="24" width="56" height="68" rx="16" fill="#ff922b" ${O}/><rect x="32" y="56" width="36" height="24" rx="6" fill="#ffd43b" ${O}/></svg>`,
+  casa: `<svg viewBox="0 0 100 100"><path d="M14 50 L50 16 L86 50 V90 H14Z" fill="#ffe066" ${O}/><path d="M8 52 L50 12 L92 52" fill="none" stroke="#e03131" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><rect x="30" y="60" width="40" height="8" rx="3" fill="#c08a4f" ${O}/><path d="M36 68 V86 M64 68 V86" ${O}/></svg>`,
+  persone: `<svg viewBox="0 0 100 100"><circle cx="32" cy="34" r="13" fill="#ffd8b1" ${O}/><rect x="17" y="50" width="30" height="38" rx="13" fill="#4dabf7" ${O}/><circle cx="68" cy="34" r="13" fill="#ffd8b1" ${O}/><rect x="53" y="50" width="30" height="38" rx="13" fill="#ff922b" ${O}/></svg>`,
+  scarpe: `<svg viewBox="0 0 100 100"><path d="M10 62 Q10 42 28 44 Q36 56 52 58 Q74 60 86 68 Q92 74 88 82 H14 Q8 76 10 62Z" fill="#ff922b" ${O}/><path d="M14 82 H88" ${O}/><path d="M36 50 L44 46 M42 54 L50 50" ${O}/></svg>`,
+  telefono: `<svg viewBox="0 0 100 100"><rect x="28" y="8" width="44" height="84" rx="10" fill="#495057" ${O}/><rect x="34" y="18" width="32" height="58" rx="4" fill="#a5d8ff" stroke="none"/><circle cx="50" cy="84" r="4" fill="#fff" stroke="none"/></svg>`,
+  finestra: `<svg viewBox="0 0 100 100"><rect x="16" y="12" width="68" height="76" rx="6" fill="#a5d8ff" ${O}/><path d="M50 12 V88 M16 50 H84" ${O}/><path d="M28 26 L38 38" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>`,
+  mobile: `<svg viewBox="0 0 100 100"><rect x="26" y="6" width="48" height="88" rx="6" fill="#c08a4f" ${O}/><path d="M26 36 H74 M26 64 H74" ${O}/><rect x="32" y="14" width="14" height="18" fill="#e03131" stroke="none"/><rect x="52" y="42" width="14" height="18" fill="#4dabf7" stroke="none"/><rect x="36" y="70" width="18" height="18" fill="#ffd43b" stroke="none"/></svg>`,
+  ascensore: `<svg viewBox="0 0 100 100"><rect x="16" y="8" width="68" height="84" rx="8" fill="#ced4da" ${O}/><path d="M50 8 V92" ${O}/><path d="M33 34 L42 24 L51 34Z M49 66 L58 76 L67 66Z" fill="${INK}" stroke="none"/></svg>`,
+  corsa: `<svg viewBox="0 0 100 100"><circle cx="58" cy="18" r="11" fill="#ffd8b1" ${O}/><path d="M56 31 L44 56 L60 66 L56 90 M44 56 L30 84 M52 38 L72 48 M50 40 L30 46" fill="none" stroke="#ff922b" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  calendario: `<svg viewBox="0 0 100 100"><rect x="12" y="18" width="76" height="72" rx="10" fill="#fff" ${O}/><path d="M12 40 H88" ${O}/><rect x="12" y="18" width="76" height="22" rx="10" fill="#e03131" ${O}/><text x="50" y="78" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="30" fill="${INK}">OGGI</text></svg>`,
+  scudo: `<svg viewBox="0 0 100 100"><path d="M50 8 L84 20 V48 C84 70 68 84 50 92 C32 84 16 70 16 48 V20Z" fill="#40c057" ${O}/><path d="M34 50 L46 62 L68 38" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  comune: `<svg viewBox="0 0 100 100"><path d="M10 38 L50 12 L90 38Z" fill="#ffe066" ${O}/><g fill="#fff" ${O}><rect x="20" y="42" width="12" height="36"/><rect x="44" y="42" width="12" height="36"/><rect x="68" y="42" width="12" height="36"/></g><rect x="8" y="80" width="84" height="10" rx="3" fill="#ced4da" ${O}/></svg>`,
+  pc: `<svg viewBox="0 0 100 100"><path d="M16 66 C16 36 30 22 50 22 C70 22 84 36 84 66Z" fill="#ffd43b" ${O}/><rect x="8" y="64" width="84" height="14" rx="7" fill="#ffd43b" ${O}/><path d="M50 22 V64" ${O}/></svg>`,
+  allarme: `<svg viewBox="0 0 100 100"><rect x="28" y="6" width="44" height="88" rx="10" fill="#495057" ${O}/><rect x="34" y="16" width="32" height="62" rx="4" fill="#e03131" stroke="none"/><path d="M50 30 V52" stroke="#fff" stroke-width="8" stroke-linecap="round"/><circle cx="50" cy="64" r="5" fill="#fff"/></svg>`,
+  sito: `<svg viewBox="0 0 100 100"><rect x="8" y="16" width="84" height="68" rx="10" fill="#fff" ${O}/><path d="M8 34 H92" ${O}/><circle cx="20" cy="25" r="3" fill="${INK}"/><circle cx="30" cy="25" r="3" fill="${INK}"/><rect x="18" y="44" width="40" height="9" rx="4" fill="#4dabf7"/><rect x="18" y="60" width="64" height="7" rx="3" fill="#ced4da"/><rect x="18" y="72" width="50" height="7" rx="3" fill="#ced4da"/></svg>`
 };
-const tile = (ico, testo) => `<div class="tile">${ICONE[ico]}<span>${testo}</span></div>`;
-const BOLLA = (x, y, w, c, i) => `<g transform="translate(${x} ${y})"><g class="bolla" data-i="${i}"><rect width="${w}" height="56" rx="18" fill="${c}"/>
-  <rect x="18" y="16" width="${w - 60}" height="8" rx="4" fill="#0a1220" opacity=".55"/><rect x="18" y="32" width="${w - 100}" height="8" rx="4" fill="#0a1220" opacity=".4"/></g></g>`;
-const CASETTE = `<g fill="#1d2a40"><path d="M40 330 V250 L90 210 L140 250 V330Z"/><path d="M150 330 V200 H250 V330Z"/><path d="M260 330 V240 L320 190 L380 240 V330Z"/><path d="M390 330 V180 H470 V330Z"/><path d="M480 330 V230 L530 195 L580 230 V330Z"/></g>
-  <g fill="#ffcc00" opacity=".85"><rect x="70" y="260" width="16" height="18"/><rect x="175" y="220" width="16" height="18"/><rect x="215" y="260" width="16" height="18"/><rect x="300" y="255" width="16" height="18"/><rect x="415" y="210" width="16" height="18"/><rect x="415" y="260" width="16" height="18"/><rect x="520" y="250" width="16" height="18"/></g>`;
+const BOLLO_NO = `<svg class="bollo" viewBox="-45 -45 90 90">${DIVIETO("", 0, 0, 34)}</svg>`;
+const BOLLO_SI = `<svg class="bollo" viewBox="-45 -45 90 90">${SPUNTA("", 0, 0, 36)}</svg>`;
+const tile = (ico, testo, bollo = BOLLO_NO) => `<div class="tile">${ICONE[ico]}<span>${testo}</span>${bollo}</div>`;
+const S0 = `viewBox="0 0 600 510" preserveAspectRatio="xMidYMid slice"`;
+const INTERNO = n => ICONE[n].replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "");
+
+/* ===================== DISEGNI (originali, stile pennarello) ===================== */
+const CROCE = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#e03131" stroke="${INK}" stroke-width="5"/><path d="M${-r * .38} ${-r * .38} L${r * .38} ${r * .38} M${r * .38} ${-r * .38} L${-r * .38} ${r * .38}" stroke="#fff" stroke-width="${r * .24}" stroke-linecap="round"/></g></g>`;
+const BOLLA = (x, y, w, c, i, cls = "bolla") => `<g transform="translate(${x} ${y})"><g class="${cls}" data-i="${i}"><rect width="${w}" height="54" rx="18" fill="${c}" ${O}/>
+  <rect x="16" y="15" width="${w - 52}" height="8" rx="4" fill="${INK}" opacity=".45"/><rect x="16" y="31" width="${w - 84}" height="8" rx="4" fill="${INK}" opacity=".3"/></g></g>`;
+const TELEFONO = (x, y, w, h, dentro = "") => `<g transform="translate(${x} ${y})" ${O}><rect width="${w}" height="${h}" rx="26" fill="#495057"/>
+  <rect x="12" y="34" width="${w - 24}" height="${h - 70}" rx="8" fill="#e7f5ff"/><rect x="${w / 2 - 24}" y="14" width="48" height="8" rx="4" fill="#868e96" stroke="none"/>
+  <circle cx="${w / 2}" cy="${h - 18}" r="9" fill="#868e96" stroke="none"/>${dentro}</g>`;
 const ILL = {
-  telefono: () => `<svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
-    <rect x="40" y="0" width="520" height="460" rx="30" fill="#101c2e"/>
-    <rect x="210" y="40" width="180" height="380" rx="28" fill="#34435c"/><rect x="224" y="70" width="152" height="310" rx="8" fill="#16223a"/>
-    ${BOLLA(236, 90, 120, "#8fb8e0", 0)}${BOLLA(244, 160, 120, "#34b25a", 1)}${BOLLA(236, 230, 120, "#ef4136", 2)}
-    <g transform="translate(420 120)"><circle r="40" fill="#34b25a"/><path d="M-16 0 L-4 12 L18 -12" stroke="#0a1220" stroke-width="9" fill="none" stroke-linecap="round"/></g>
-    <g transform="translate(420 300)"><circle r="40" fill="#ef4136"/><path d="M-14 -14 L14 14 M14 -14 L-14 14" stroke="#0a1220" stroke-width="9" stroke-linecap="round"/></g></svg>`,
-  chat: () => `<svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
-    <rect x="40" y="0" width="520" height="460" rx="30" fill="#101c2e"/>
-    ${[0, 1, 2, 3, 4, 5].map(i => BOLLA(70 + (i % 2) * 150, 30 + i * 66, 220 + (i % 3) * 30, ["#8fb8e0", "#ff8a00", "#93a1b5"][i % 3], i)).join("")}
-    <g class="inoltri">${[0, 1, 2].map(i => `<path d="M${470} ${110 + i * 120} h40 l-14 -14 m14 14 l-14 14" stroke="#ffcc00" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`).join("")}</g></svg>`,
-  lente: () => `<svg viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet">
-    <rect x="40" y="10" width="520" height="240" rx="26" fill="#101c2e"/>
-    ${BOLLA(120, 100, 260, "#ff8a00", 0)}
-    <g class="lente"><circle r="56" fill="rgba(143,184,224,.25)" stroke="#eef2f7" stroke-width="10"/><path d="M40 40 L84 84" stroke="#eef2f7" stroke-width="16" stroke-linecap="round"/></g></svg>`,
-  fonti: () => `<div class="tiles">${tile("comune", "Il Comune")}${tile("pc", "La Protezione Civile")}${tile("allarme", "IT-alert sul cellulare")}${tile("sito", "Il sito del Gruppo")}</div>`,
-  inoltra: () => `<svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
-    <rect x="40" y="0" width="520" height="460" rx="30" fill="#101c2e"/>
-    <rect x="140" y="60" width="180" height="340" rx="26" fill="#34435c"/><rect x="152" y="86" width="156" height="280" rx="8" fill="#16223a"/>
-    ${BOLLA(164, 120, 130, "#ff8a00", 0)}
-    <g class="freccia" transform="translate(380 230)"><path d="M0 0 H110 M80 -30 L110 0 L80 30" stroke="#8fb8e0" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
-    <g transform="translate(436 230)"><g class="stop"><circle r="62" fill="none" stroke="#ef4136" stroke-width="14"/><path d="M-42 42 L42 -42" stroke="#ef4136" stroke-width="14" stroke-linecap="round"/></g></g></svg>`,
-  adulto: () => `<svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
-    <rect x="40" y="0" width="520" height="440" rx="30" fill="#101c2e"/>
-    ${PERSONA(240, 400, 1.6, "#2e90fa")}${PERSONA(370, 400, 1.05, "#f59e0b")}
-    <g transform="translate(300 90)"><rect x="-70" y="-40" width="140" height="80" rx="16" fill="#34435c"/>${BOLLA(-56, -26, 112, "#8fb8e0", 0)}</g>
-    <g transform="translate(450 120)"><g class="cuore"><path d="M0 18 C-30 -6 -26 -30 -8 -30 C0 -30 0 -22 0 -22 C0 -22 0 -30 8 -30 C26 -30 30 -6 0 18Z" fill="#ef4136"/></g></g></svg>`,
-  sereno: () => `<svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid meet">
-    <defs><clipPath id="sr"><rect x="0" y="0" width="600" height="380" rx="30"/></clipPath></defs>
-    <g clip-path="url(#sr)"><rect width="600" height="380" fill="#101c2e"/>
-    <g class="sole"><circle cx="470" cy="110" r="52" fill="#ffcc00"/></g>
-    <g transform="translate(0 20)">${CASETTE}</g><rect y="350" width="600" height="30" fill="#34435c"/></g></svg>`
+  telefono: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(30, 40, .6)}${NUVOLA(420, 30, .5)}${PRATO(450)}
+    ${TELEFONO(150, 70, 200, 390, BOLLA(24, 60, 130, "#b2f2bb", 0) + BOLLA(46, 140, 130, "#ffe066", 1) + BOLLA(24, 220, 130, "#ffc9c9", 2))}
+    ${SPUNTA("si", 410, 170, 36)}${CROCE("no", 410, 300, 36)}${PG("flavio")}</svg>`,
+  chat: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(380, 40, .5)}${PRATO(455)}
+    ${TELEFONO(40, 150, 170, 320, BOLLA(20, 50, 110, "#ffe066", 0, "x") + BOLLA(34, 120, 110, "#ffc9c9", 1, "x"))}
+    <g class="volo">${Array.from({ length: 7 }, (_, i) => BOLLA(0, 0, 90 + (i % 3) * 18, ["#ffe066", "#ffc9c9", "#d0bfff", "#a5d8ff"][i % 4], i, "vb")).join("")}</g>
+    ${PG("flavio")}</svg>`,
+  lente: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${PRATO(470)}
+    <g transform="translate(80 60)"><rect width="380" height="150" rx="34" fill="#ffd8a8" ${O}/><path d="M60 148 L40 196 L110 148" fill="#ffd8a8" ${O}/>
+      <rect x="34" y="34" width="250" height="16" rx="8" fill="${INK}" opacity=".45"/><rect x="34" y="66" width="200" height="16" rx="8" fill="${INK}" opacity=".35"/><rect x="34" y="98" width="230" height="16" rx="8" fill="${INK}" opacity=".3"/>
+      <text x="330" y="104" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="80" fill="#e03131" stroke="${INK}" stroke-width="3">?</text></g>
+    <g class="lente"><circle r="58" fill="rgba(255,255,255,.45)" stroke="${INK}" stroke-width="12"/><circle r="58" fill="none" stroke="#ffd43b" stroke-width="5"/>
+      <path d="M44 44 L96 96" stroke="${INK}" stroke-width="26" stroke-linecap="round"/><path d="M44 44 L96 96" stroke="#c08a4f" stroke-width="15" stroke-linecap="round"/></g>
+    ${[["persone", 120], ["calendario", 250], ["scudo", 380]].map(([n, x], j) => `<g class="b${j}" transform="translate(${x} 352)"><g><circle r="54" fill="#fff" ${O}/><g transform="translate(-36 -36) scale(.72)">${INTERNO(n)}</g>
+      <g transform="translate(40 -40)"><circle r="18" fill="#40c057" ${O}/><path d="M-8 0 L-2 7 L9 -7" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/></g></g></g>`).join("")}
+    ${PG("flavio")}</svg>`,
+  fonti: () => `<div class="tiles">${tile("comune", "Il Comune", BOLLO_SI)}${tile("pc", "La Protezione Civile", BOLLO_SI)}${tile("allarme", "IT-alert sul cellulare", BOLLO_SI)}${tile("sito", "Il sito del Gruppo", BOLLO_SI)}</div>`,
+  inoltra: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(380, 40, .5)}${PRATO(455)}
+    ${TELEFONO(50, 110, 170, 330, BOLLA(20, 60, 110, "#ffc9c9", 0))}
+    <g class="freccia"><path d="M0 0 H110 M76 -34 L110 0 L76 34" stroke="${INK}" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 0 H110 M76 -34 L110 0 L76 34" stroke="#74c0fc" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    ${DIVIETO("stop", 330, 250, 70)}${PG("flavio")}</svg>`,
+  adulto: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(40, 40, .55)}${PRATO(440)}
+    <g class="fumetto"><g><rect x="-100" y="-56" width="200" height="96" rx="30" fill="#fff" ${O}/><path d="M-20 38 L-40 74 L14 38" fill="#fff" ${O}/>
+      <g class="dubbio"><text x="0" y="22" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="64" fill="#e03131">?</text></g>
+      <g class="certo">${SPUNTA("", 0, -6, 30)}</g></g></g>
+    <g class="cuore"><path d="M0 18 C-30 -6 -26 -30 -8 -30 C0 -30 0 -22 0 -22 C0 -22 0 -30 8 -30 C26 -30 30 -6 0 18Z" fill="#e03131" stroke="${INK}" stroke-width="4" transform="scale(1.4)"/></g>
+    ${PG("ins", { tipo: "adulta", maglia: "#40c057", pantaloni: "#5c7cfa", capelli: "#5c3d1e" })}
+    <g class="tel"><rect x="-22" y="-38" width="44" height="76" rx="9" fill="#495057" ${O}/><rect x="-14" y="-28" width="28" height="50" rx="3" fill="#a5d8ff"/></g>
+    ${PG("flavio")}</svg>`,
+  sereno: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(40, 50, .6)}${SOLE(470, 110, 50)}
+    <g ${O}>${[[30, "#ff8787", 110], [140, "#ffd43b", 140], [250, "#74c0fc", 120], [370, "#b197fc", 150], [480, "#8ce99a", 110]].map(([x, c, h]) =>
+      `<rect x="${x}" y="${420 - h}" width="96" height="${h}" fill="${c}"/><path d="M${x - 8} ${428 - h} L${x + 48} ${380 - h} L${x + 104} ${428 - h}Z" fill="#fa5252"/><rect x="${x + 34}" y="${384 - h * .4}" width="26" height="26" fill="#fff"/>`).join("")}</g>
+    ${PRATO(430)}${PG("flavio")}${PG("silvia", { tipo: "silvia", maglia: "#9775fa", pantaloni: "#f783ac", capelli: "#3b2412" })}</svg>`
 };
+
+
+/* ===================== SFONDO: nuvole e colline ===================== */
+const W = L.W, H = L.H;
+$("#fondo").setAttribute("viewBox", `0 0 ${W} ${H}`);
+$("#fondo").innerHTML = `${[0, 1, 2, 3].map(i => `<g class="nuv" data-i="${i}">${NUVOLA(0, 0, .9 + hash(i + 2) * .6)}</g>`).join("")}
+  <path d="M0 ${H - 120} Q${W * .25} ${H - 190} ${W * .5} ${H - 130} T${W} ${H - 150} V${H} H0Z" fill="#8ce99a" stroke="${INK}" stroke-width="5"/>
+  <path d="M0 ${H - 70} Q${W * .3} ${H - 120} ${W * .62} ${H - 70} T${W} ${H - 80} V${H} H0Z" fill="#69db7c" stroke="${INK}" stroke-width="5"/>`;
+function sfondo(t) {
+  document.querySelectorAll("#fondo .nuv").forEach(g => {
+    const i = +g.dataset.i, v = 18 + hash(i) * 22, span = W + 400;
+    const x = ((hash(i + 9) * span + t * v) % span) - 260, y = 40 + hash(i + 5) * (H * .32);
+    g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+  });
+}
+/* coriandoli del finale */
+const COLORI = ["#ffd43b", "#4dabf7", "#ff922b", "#40c057", "#9775fa", "#e03131", "#f783ac"];
+$("#coriandoli").setAttribute("viewBox", `0 0 ${W} ${H}`);
+$("#coriandoli").innerHTML = Array.from({ length: 90 }, (_, i) =>
+  `<rect data-i="${i}" width="${14 + hash(i) * 12}" height="${8 + hash(i + 1) * 8}" rx="3" fill="${COLORI[i % COLORI.length]}" stroke="${INK}" stroke-width="2" opacity="0"/>`).join("");
+function coriandoli(u, attivo) {
+  document.querySelectorAll("#coriandoli rect").forEach(r => {
+    const i = +r.dataset.i, p = u - hash(i + 3) * 1.6;
+    if (!attivo || p < 0) { r.setAttribute("opacity", 0); return; }
+    const x = hash(i + 7) * W + Math.sin(p * 2 + i) * 40, y = ((p * (220 + hash(i + 4) * 180) + hash(i + 11) * 300) % (H + 120)) - 60;
+    r.setAttribute("opacity", 1);
+    r.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(p * (200 + hash(i) * 300)).toFixed(1)})`);
+  });
+}
 
 /* ===================== SCENE ===================== */
 const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 : s.dur;
@@ -211,15 +345,17 @@ const TOTAL = acc;
 const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
 const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
   { da: +VOICE_AT[k].toFixed(3), a: +(VOICE_AT[k] + DUR[k] + 0.2).toFixed(3), testo: s.sottotitolo }).filter(Boolean);
+const TINTE = ["#ffd43b", "#4dabf7", "#ff922b", "#40c057", "#9775fa", "#f783ac", "#ffd43b", "#4dabf7", "#ff922b"];
 
 const box = $("#scene"), NODI = [];
-const righe = arr => `<h1>${arr.map(r => `<span class="m"><span class="i">${r}</span></span>`).join("")}</h1>`;
+const righe = arr => `<h1>${arr.map(r => `<span class="l">${r}</span>`).join("")}</h1>`;
 CONFIG.scene.forEach((s, k) => {
   const el = document.createElement("section");
-  el.className = "scena"; el.style.opacity = 0;
+  el.className = "scena" + (s.finale ? " fin" : ""); el.style.opacity = 0;
   el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
-  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t]) => `<li><span class="ico">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
-  el.innerHTML = `<div class="ill">${ILL[s.ill]()}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
+  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t], j) => `<li><span class="ico" style="background:${TINTE[j + 2]}33">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
+  const ill = ILL[s.ill]();
+  el.innerHTML = `<div class="ill">${ill.startsWith("<svg") ? `<div class="carta">${ill}</div>` : ill}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
     ${s.sotto ? `<p class="sotto">${s.sotto}</p>` : ""}${lista}${s.nota ? `<p class="nota">${s.nota}</p>` : ""}
     ${s.grande ? `<div class="grande">${s.grande}</div>` : ""}${s.fonte ? `<p class="fonte">${s.fonte}</p>` : ""}</div>`;
   if (L.illk < .5 && s.lista) el.querySelector(".ill").style.display = "none";
@@ -228,65 +364,70 @@ CONFIG.scene.forEach((s, k) => {
 const dots = $("#hud .dots");
 CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
 $("#hud .lab").textContent = CONFIG.hud;
-["verde", "gialla", "arancione", "rossa"].forEach((c, i) =>
-  $("#bande").insertAdjacentHTML("beforeend", `<div class="banda" style="left:${i * 25 - .5}%;background:var(--${c})"></div>`));
 
-/* pioggia che cade e acqua che ondeggia: tutto in funzione di t */
-function pioggia(el, t) {
-  el.querySelectorAll(".pioggia").forEach(g => {
-    g.querySelectorAll("line").forEach((l, i) => {
-      const H = +l.dataset.h + 40, v = 520 + hash(i + 7) * 260, y = ((t * v + hash(i + 3) * H) % H) - 30, x = +l.dataset.x - y * .25;
-      l.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
-    });
-  });
-}
-function onde(el, t, alza = 0) {
-  el.querySelectorAll(".onda").forEach((p, j) => {
-    const y0 = +p.dataset.y - alza, w = +p.dataset.w, ph = t * (j ? 2.1 : 1.6) + j * 1.3;
-    let d = `M0 ${y0}`;
-    for (let x = 0; x <= w; x += 20) d += ` L${x} ${(y0 + Math.sin(x / 46 + ph) * 7 + Math.sin(x / 19 - ph * 1.4) * 3).toFixed(1)}`;
-    p.setAttribute("d", d + ` L${w} 600 L0 600Z`);
-  });
-}
-const livello = (y0, w, t, x0 = 0) => {
-  let d = `M${x0} ${y0}`;
-  for (let x = x0; x <= x0 + w; x += 20) d += ` L${x} ${(y0 + Math.sin(x / 40 + t * 2) * 5).toFixed(1)}`;
-  return d + ` L${x0 + w} 700 L${x0} 700Z`;
-};
-function bolle(el, u, passo = .35) {
-  el.querySelectorAll(".bolla").forEach(b => {
-    const i = +b.dataset.i, p = outBack(prog(u, .3 + i * passo, .45));
-    b.style.opacity = clamp(prog(u, .3 + i * passo, .2)); b.style.transformBox = "fill-box"; b.style.transformOrigin = "0 50%";
-    b.style.transform = `scale(${lerp(.4, 1, p).toFixed(3)})`;
+const pop = (el, sel, p) => { const g = el.querySelector(sel); if (g) svgPop(g.querySelector(":scope > g") || g, p); };
+function bolle(el, u, sel = ".bolla", passo = .45, da = .4) {
+  el.querySelectorAll(sel).forEach(b => {
+    const i = +b.dataset.i, p = prog(u, da + i * passo, .6);
+    b.style.opacity = clamp(p * 4); b.style.transformBox = "fill-box"; b.style.transformOrigin = "0 50%";
+    b.style.transform = `scale(${outElastic(p).toFixed(3)})`;
   });
 }
 const ANIM = {
-  telefono: (el, u) => { if (u > 0) bolle(el, u + 3); },
+  telefono: (el, u, t) => {
+    bolle(el, u + 3);
+    pop(el, ".si", prog(u + 4, 0, 1)); pop(el, ".no", prog(u + 4, 0, 1));
+    ["si", "no"].forEach((c, i) => { const g = el.querySelector(`.${c} > g`); g.style.transform += ` rotate(${(Math.sin(t * 2.4 + i * 2) * 8).toFixed(1)}deg)`; });
+    anima(el, ".flavio", t, { x: 530, y: 492, s: .5, aS: 150, agitaS: true, aD: 14 });
+  },
   chat: (el, u, t) => {
-    bolle(el, u, .3);
-    el.querySelectorAll(".inoltri path").forEach((p, i) => p.setAttribute("transform", `translate(${((t * 60 + i * 40) % 60).toFixed(1)} 0)`));
+    bolle(el, u, ".x", .4, .2);
+    el.querySelectorAll(".vb").forEach(b => {
+      const i = +b.dataset.i, ciclo = 2.6, p = ((u - .8 - i * .37) / ciclo), q = p - Math.floor(p);
+      if (u < .8 + i * .37) { b.style.opacity = 0; return; }
+      const x = lerp(170, 560, q) + Math.sin(q * 9 + i) * 18, y = lerp(240, -40, q) + Math.sin(q * 6 + i * 2) * 26;
+      b.parentNode.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+      b.style.opacity = (clamp(q * 6) * clamp((1 - q) * 4)).toFixed(2);
+      b.style.transformBox = "fill-box"; b.style.transformOrigin = "50% 50%"; b.style.transform = `rotate(${(Math.sin(q * 8 + i) * 10).toFixed(1)}deg) scale(${lerp(.7, 1.05, q).toFixed(2)})`;
+    });
+    anima(el, ".flavio", t, { x: 470, y: 496, s: .5, aS: 165, aD: 165, bocca: "o" });
   },
-  lente: (el, u, t) => {
-    bolle(el, u + 1);
-    const x = 250 + Math.sin(t * 1.4) * 70, y = 128 + Math.sin(t * 2.1) * 20;
+  lente: (el, u, t, D) => {
+    const at = CONFIG.scene[2].listaAt;
+    const x = 270 + Math.sin(u * 1.5) * 120, y = 140 + Math.sin(u * 2.3) * 30;
     el.querySelector(".lente").setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+    at.forEach((a, j) => pop(el, ".b" + j, prog(u, a, .8)));
+    anima(el, ".flavio", t, { x: 530, y: 500, s: .42, aS: 140, aD: 14, bocca: u > at[2] + .5 ? "sorriso" : "o" });
   },
-  inoltra: (el, u) => {
-    bolle(el, u + 1);
-    const f = el.querySelector(".freccia"), s = el.querySelector(".stop");
-    f.setAttribute("transform", `translate(${lerp(340, 380, outCubic(prog(u, .4, .8))).toFixed(1)} 230)`);
-    s.style.transformBox = "fill-box"; s.style.transformOrigin = "50% 50%"; s.style.transform = `scale(${outBack(prog(u, 1.4, .5))})`;
+  inoltra: (el, u, t) => {
+    bolle(el, u + 2);
+    const f = el.querySelector(".freccia"); f.setAttribute("transform", `translate(${lerp(170, 236, outCubic(prog(u, .5, 1))).toFixed(1)} 250)`);
+    f.style.opacity = clamp(prog(u, .5, .3));
+    pop(el, ".stop", prog(u, 1.4, .9));
+    const s = el.querySelector(".stop > g"); if (u > 2.3) s.style.transform += ` rotate(${(Math.sin(t * 3) * 6).toFixed(1)}deg)`;
+    anima(el, ".flavio", t, { x: 500, y: 496, s: .5, aD: 165, aS: 14, bocca: "sorriso" });
   },
-  adulto: (el, u, t) => {
-    bolle(el, u + 1);
-    const c = el.querySelector(".cuore"); c.style.transformBox = "fill-box"; c.style.transformOrigin = "50% 50%";
-    c.style.transform = `scale(${(prog(u, 1, .4) * (1 + Math.sin(t * 4) * .06)).toFixed(3)})`;
+  adulto: (el, u, t, D) => {
+    anima(el, ".ins", t, { x: 200, y: 470, s: .66, aD: 110, aS: 14 });
+    el.querySelector(".tel").setAttribute("transform", `translate(${(200 + 34 * .66 + 72 * .66).toFixed(1)} ${(470 - 170 * .66 + Math.sin(t * 3.2) * 3).toFixed(1)}) rotate(-12)`);
+    anima(el, ".flavio", t, { x: 400, y: 470, s: .5, aS: u > D * .55 ? 150 : 40, agitaS: u > D * .55, fase: 1.4, bocca: u > D * .55 ? "sorriso" : "o" });
+    const fm = el.querySelector(".fumetto"); fm.setAttribute("transform", `translate(300 ${(110 + Math.sin(t * 2.5) * 5).toFixed(1)})`);
+    svgPop(fm.firstElementChild, prog(u, .9, .8));
+    const cambio = prog(u, D * .55, .4);
+    el.querySelector(".dubbio").setAttribute("opacity", (1 - cambio).toFixed(2));
+    const ce = el.querySelector(".certo"); ce.style.opacity = cambio; ce.style.transformBox = "fill-box"; ce.style.transformOrigin = "50% 50%"; ce.style.transform = `scale(${outElastic(cambio).toFixed(3)})`;
+    const cg = el.querySelector(".cuore"), c = cg.firstElementChild; cg.setAttribute("transform", `translate(470 ${(250 + Math.sin(t * 3) * 6).toFixed(1)})`);
+    const pc = prog(u, D * .62, .8); c.style.opacity = pc > 0 ? 1 : 0; c.style.transformBox = "fill-box"; c.style.transformOrigin = "50% 50%";
+    c.style.transform = `scale(${(1.4 * outElastic(pc) * (1 + Math.sin(t * 6) * .06)).toFixed(3)})`;
   },
-  sereno: (el, u) => {
-    const s = el.querySelector(".sole"); s.style.transformBox = "fill-box"; s.style.transformOrigin = "50% 50%";
-    s.style.transform = `translateY(${lerp(80, 0, outCubic(prog(u, .2, 1.2))).toFixed(1)}px)`;
+  sereno: (el, u, t) => {
+    const s = el.querySelector(".sole"); s.setAttribute("transform", `translate(470 ${lerp(220, 110, outBack(prog(u, .1, 1.2))).toFixed(1)})`);
+    el.querySelector(".raggi").setAttribute("transform", `rotate(${(t * 25).toFixed(1)})`);
+    anima(el, ".flavio", t, { x: 230, y: 492, s: .55, aD: 150, agitaD: true });
+    anima(el, ".silvia", t, { x: 370, y: 492, s: .55, aS: 150, agitaS: true, fase: 2 });
   }
 };
+
 
 /* ===================== RENDER(t) — unica fonte di verità ===================== */
 const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
@@ -295,44 +436,46 @@ function render(t) {
   const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
   NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
   const el = NODI[k];
-  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .35, .35) : 1;
+  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .3, .3) : 1;
+  sfondo(t);
 
   dots.querySelectorAll(".dot").forEach((d, i) => {
-    d.style.background = i < k ? "var(--az)" : i === k ? "var(--ar)" : "#33415a";
-    d.style.transform = `scale(${i === k ? lerp(1, 1.45, outBack(prog(u, 0, .4))) : 1})`;
+    d.style.background = i < k ? "#74c0fc" : i === k ? TINTE[k] : "#d0dbe8";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.5, outElastic(prog(u, 0, .8))) : 1})`;
   });
 
-  // transizione a cerchio dal pallino dell'HUD
+  // transizione: cerchio colorato che parte dal pallino dell'HUD
   const w = $("#wipe"), dp = dots.children[k];
-  if (k > 0 && !s.finale && u < .7) {
+  if (k > 0 && u < .75) {
     const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
     w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
-    w.style.background = "var(--ar)";
+    w.style.background = TINTE[k];
     w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
-    w.style.opacity = 1 - prog(u, .28, .4);
+    w.style.opacity = 1 - prog(u, .3, .42);
   } else w.style.opacity = 0;
 
   const primo = k === 0;
   const q = x => primo ? 1 : x;  // il primo fotogramma è già completo (anteprima)
-  el.querySelectorAll("h1 .i").forEach((i, j) => reveal(i, q(prog(u, .15 + j * .1, .55))));
-  const chip = el.querySelector(".chip"); fadeUp(chip, q(prog(u, .1, .4)), 16);
-  el.querySelectorAll(".sotto").forEach((p, j) => fadeUp(p, primo ? 1 : prog(u, .7 + j * .3, .5)));
-  el.querySelectorAll(".lista li").forEach((li, j) => fadeUp(li, prog(u, .9 + j * .9, .5), 30));
-  el.querySelectorAll(".tile").forEach((ti, j) => pop(ti, prog(u, .5 + j * .45, .5)));
-  el.querySelectorAll(".mese").forEach((m, j) => pop(m, prog(u, .4 + j * .08, .4)));
-  const nota = el.querySelector(".nota"); if (nota) fadeUp(nota, prog(u, D * .55, .5), 20);
-  const g = el.querySelector(".grande"); if (g) pop(g, prog(u, 1.4, .5));
-  const fo = el.querySelector(".fonte"); if (fo) fadeUp(fo, prog(u, 1.9, .5), 16);
-  const ill = el.querySelector(".ill"); if (!primo && !s.lista) fadeUp(ill, prog(u, .2, .6), 30); else ill.style.opacity = 1;
-  if (ANIM[s.ill]) ANIM[s.ill](el, u, t);
-
-  // spazzata a 4 bande all'ingresso del finale
-  const sw = s.finale ? prog(u, 0, .9) : 1;
-  $("#bande").querySelectorAll(".banda").forEach((b, i) => {
-    const p = clamp(sw * 1.6 - i * .15);
-    b.style.opacity = sw < 1 ? 1 : 0;
-    b.style.transform = `translateY(${lerp(100, -100, inOutCubic(p))}%)`;
+  el.querySelectorAll("h1 .l").forEach((l, j) => boing(l, q(prog(u, .25 + j * .18, 1)), 0));
+  el.querySelectorAll("h1 .a").forEach(a => a.style.setProperty("--hl", (q(outCubic(prog(u, 1.1, .7))) * 100).toFixed(1) + "%"));
+  const chip = el.querySelector(".chip"); boing(chip, q(prog(u, .1, .9)), -2);
+  el.querySelectorAll(".sotto").forEach((p, j) => salta(p, primo ? 1 : prog(u, .9 + j * .3, .6), 40));
+  el.querySelectorAll(".lista li").forEach((li, j) => {
+    const pp = prog(u, s.listaAt ? s.listaAt[j] : 1 + j, .6);
+    li.style.opacity = clamp(pp * 3); li.style.transform = `translateX(${((1 - outBack(pp)) * -80).toFixed(1)}px)`;
+    const ic = li.querySelector(".ico"); ic.style.transform = `rotate(${((1 - outElastic(pp)) * -180).toFixed(1)}deg) scale(${(.4 + .6 * outElastic(pp)).toFixed(3)})`;
   });
+  el.querySelectorAll(".tile").forEach((ti, j) => boing(ti, prog(u, .5 + j * .5, 1), j % 2 ? 2 : -2));
+  el.querySelectorAll(".tile .bollo").forEach((b, j) => { const p = prog(u, 1 + j * .5, .7); b.style.opacity = p > 0 ? 1 : 0; b.style.transform = `scale(${lerp(2.2, 1, outBack(p)).toFixed(3)}) rotate(${lerp(-40, 0, outCubic(p)).toFixed(1)}deg)`; });
+  const nota = el.querySelector(".nota"); if (nota) salta(nota, prog(u, D * .55, .6), 30);
+  const g = el.querySelector(".grande"); if (g) { const p = prog(u, 1.2, 1); boing(g, p, 0); if (p >= 1) g.style.transform = `scale(${(1 + Math.sin(t * 5) * .04).toFixed(3)})`; }
+  const fo = el.querySelector(".fonte"); if (fo) salta(fo, prog(u, 1.9, .5), 16);
+  const ill = el.querySelector(".ill");
+  if (primo) { ill.style.opacity = 1; ill.style.transform = `rotate(${(Math.sin(t * 1.3) * .6).toFixed(2)}deg)`; }
+  else { const p = prog(u, .2, 1.1), e = outElastic(p); ill.style.opacity = clamp(p * 4);
+    ill.style.transform = `translateY(${((1 - e) * 60).toFixed(1)}px) scale(${lerp(.6, 1, e).toFixed(3)}) rotate(${(lerp(k % 2 ? 6 : -6, 0, e) + Math.sin(t * 1.3) * .6).toFixed(2)}deg)`; }
+  if (ANIM[s.ill]) ANIM[s.ill](el, u, t, D);
+  coriandoli(u, !!s.finale);
 
   const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
   if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
