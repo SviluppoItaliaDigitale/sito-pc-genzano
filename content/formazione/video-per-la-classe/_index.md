@@ -65,46 +65,31 @@ Genzano sorge su un vulcano: i Colli Albani. I laghi di Albano e di Nemi sono an
 
 Per approfondire: [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/).
 
-## Alluvione e forti piogge: come comportarsi
+## Quando piove forte: come stare al sicuro dall'acqua
 
-**Durata:** 1 min 57 s · **Nel programma dell'anno:** Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»; secondaria, marzo-aprile e novembre-dicembre
+**Durata:** 1 min 01 s · **Nel programma dell'anno:** Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»; secondaria, marzo-aprile e novembre-dicembre
 
-{{< video src="/video/2026-09-25-alluvione-forti-piogge-video-16x9.mp4" poster="/video/2026-09-25-alluvione-forti-piogge-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Alluvione e forti piogge: come comportarsi" >}}
+{{< video src="/video/2026-11-01-alluvione-bambini-video-16x9.mp4" poster="/video/2026-11-01-alluvione-bambini-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Quando piove forte: come stare al sicuro dall'acqua" >}}
 
 <details class="faq-item">
 <summary><strong>Trascrizione del video</strong></summary>
 
-Alluvione e forti piogge: come comportarsi. In un'alluvione l'acqua può salire all'improvviso, anche di uno o due metri in pochi minuti. I punti più pericolosi: in casa, cantine, seminterrati e piani terra. Fuori, sottopassi, argini, ponti e le zone più basse. Prima: informati sul piano di protezione civile del tuo Comune e segui le allerte. Prepara il kit di emergenza, e non tenere oggetti di valore in cantina. Con l'allerta, non dormire nei seminterrati. Se devi spostarti, scegli un percorso lontano dalle zone che si allagano. Se l'acqua arriva, non scendere in cantina o in garage per salvare le tue cose: rischi la vita. Sali ai piani alti, senza ascensore. Chiudi il gas e stacca la corrente, ma non toccare gli impianti con mani o piedi bagnati. Non bere l'acqua del rubinetto: potrebbe essere contaminata. Se sei all'aperto, allontanati dall'acqua: per la velocità con cui scorre, anche pochi centimetri possono farti cadere. Raggiungi un punto più alto, lontano da pendii e scarpate che possono franare. Non usare l'auto: pochi centimetri d'acqua possono farti perdere il controllo o spegnere il motore. Evita sottopassi, argini e ponti. Aiuta gli anziani e le persone con disabilità del tuo palazzo. Usa poco il cellulare: le linee libere servono ai soccorsi. Dopo, segui le indicazioni delle autorità prima di rientrare o spalare il fango. Stai lontano dalle strade allagate: possono nascondere buche e tombini aperti. Bevi l'acqua del rubinetto solo se il Comune non lo vieta. Segui solo le fonti ufficiali. Genzano di Roma è nella zona di allerta F. In emergenza chiama il 112.
+Quando piove forte: come stare al sicuro dall'acqua. Con la pioggia forte, l'acqua può salire all'improvviso, anche in pochi minuti. I posti più pericolosi sono cantine, garage, sottopassi e le zone basse vicino a fossi e torrenti. Prima: guarda con la tua famiglia il colore dell'allerta e tenete pronto il kit di emergenza. Se l'acqua arriva, non scendere in cantina o in garage. Sali ai piani alti, senza usare l'ascensore. Se sei fuori, allontanati dall'acqua: se scorre veloce, anche poca acqua può farti cadere. Vai in un posto più alto. Ricordalo anche ai grandi: in auto, mai nei sottopassi o sulle strade allagate. Dopo, non giocare nell'acqua o nel fango: possono nascondere buche e tombini aperti. Segui solo le fonti ufficiali. In emergenza chiama il 112.
 
 </details>
 
 Per approfondire: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
-## I quattro colori dell'allerta meteo
+## I colori dell'allerta meteo e che cosa fare
 
-**Durata:** 45 s · **Nel programma dell'anno:** Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre
+**Durata:** 1 min 00 s · **Nel programma dell'anno:** Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre
 
-{{< video src="/video/2026-09-23-allerta-meteo-codici-colore-16x9.mp4" poster="/video/2026-09-23-allerta-meteo-codici-colore-16x9-poster.webp" titolo="Video con voce e sottotitoli: I quattro colori dell'allerta meteo" >}}
-
-<details class="faq-item">
-<summary><strong>Trascrizione del video</strong></summary>
-
-Verde, gialla, arancione, rossa. Sai cosa significano i colori dell'allerta meteo? Verde: nessuna allerta. Non sono previsti fenomeni significativi. Allerta gialla: fenomeni localizzati, occasionale pericolo per le persone. Allerta arancione: fenomeni più intensi e diffusi, pericolo per le persone. Allerta rossa: fenomeni molto intensi e diffusi, grave pericolo per le persone. Controlla l'allerta della tua zona. Genzano di Roma è nella zona F, Bacini Costieri Sud. Segui le allerte su protezionecivilegenzano.it.
-
-</details>
-
-Per approfondire: [Allerte meteo](/allerte-meteo/).
-
-## Cosa fare con l'allerta, dal verde al rosso
-
-**Durata:** 59 s · **Nel programma dell'anno:** Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre
-
-{{< video src="/video/2026-09-23-allerta-meteo-cosa-fare-16x9.mp4" poster="/video/2026-09-23-allerta-meteo-cosa-fare-16x9-poster.webp" titolo="Video con voce e sottotitoli: Cosa fare con l'allerta, dal verde al rosso" >}}
+{{< video src="/video/2026-11-01-allerta-colori-bambini-video-16x9.mp4" poster="/video/2026-11-01-allerta-colori-bambini-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: I colori dell'allerta meteo e che cosa fare" >}}
 
 <details class="faq-item">
 <summary><strong>Trascrizione del video</strong></summary>
 
-Allerta meteo: cosa fare, dal verde al rosso. Colore per colore. Codice verde: preparati prima. Conosci il piano del tuo Comune, scopri se abiti in zona a rischio e tieni pronto il kit di emergenza. Allerta gialla: informati spesso. Segui gli avvisi ufficiali, evita le zone che si allagano e stai lontano da fossi e torrenti. Allerta arancione: limita gli spostamenti. Niente sottopassi, argini e ponti. Non dormire nei seminterrati e proteggi i locali al piano strada. Allerta rossa: mettiti al sicuro. Sali ai piani alti, mai in cantina. Chiudi il gas e stacca la corrente. Non usare l'auto e segui le indicazioni delle autorità. In emergenza chiama il 112. E aiuta anziani e persone fragili.
+Verde, giallo, arancione, rosso: i colori dell'allerta meteo. Ogni giorno la Regione Lazio guarda le previsioni e dà un colore a ogni zona. Genzano è nella zona F. Verde: nessuna allerta. Non serve fare niente di speciale: resta informato. Gialla: in alcuni posti pioggia e temporali possono essere forti. Stai lontano da fossi, torrenti e sottopassi. Arancione: fenomeni diffusi e pericolosi. Si esce solo se serve, e il kit di emergenza è pronto. Rossa: fenomeni molto forti. Non uscire se non è necessario, stai lontano da cantine e strade allagate, e segui le autorità. Il colore di oggi si trova sul sito del Gruppo. Guardatelo insieme, in famiglia. Ogni colore ha i suoi gesti. In emergenza chiama il 112.
 
 </details>
 
@@ -112,29 +97,29 @@ Per approfondire: [Allerte meteo](/allerte-meteo/).
 
 ## Il kit di emergenza
 
-**Durata:** 57 s · **Nel programma dell'anno:** Infanzia e primaria, marzo-maggio: «Il mio zainetto», «La mia casa preparata», «Il piano della mia famiglia»
+**Durata:** 46 s · **Nel programma dell'anno:** Infanzia e primaria, marzo-maggio: «Il mio zainetto», «La mia casa preparata», «Il piano della mia famiglia»
 
-{{< video src="/video/2026-09-25-kit-emergenza-video-16x9.mp4" poster="/video/2026-09-25-kit-emergenza-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Il kit di emergenza" >}}
+{{< video src="/video/2026-11-01-kit-emergenza-bambini-video-16x9.mp4" poster="/video/2026-11-01-kit-emergenza-bambini-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Il kit di emergenza" >}}
 
 <details class="faq-item">
 <summary><strong>Trascrizione del video</strong></summary>
 
-Il kit di emergenza: l’essenziale sempre pronto, per affrontare le prime 72 ore. Acqua potabile e cibo a lunga conservazione, per almeno 3 giorni. Non dimenticare l’apriscatole. Una torcia e una radio a pile, con le batterie di ricambio. Il kit di pronto soccorso e i medicinali che prendi ogni giorno. Le copie dei documenti in una busta impermeabile. E un po’ di contanti. Il telefono, con caricabatterie e power bank. E un fischietto, per farti sentire. Vestiti di ricambio, una coperta e il cibo per i tuoi animali. Tieni il kit vicino all’uscita. E ogni sei mesi controlla scadenze e batterie. Preparalo oggi.
+Il kit di emergenza: uno zaino sempre pronto, per i primi tre giorni. Acqua da bere e cibo che dura a lungo, per almeno tre giorni. E l'apriscatole! Una torcia e una radio a pile, con le batterie di ricambio. Il kit di pronto soccorso e le medicine che si prendono ogni giorno. Le copie dei documenti in una busta impermeabile, e un po' di soldi. Il caricabatterie del telefono, e un fischietto per farsi sentire. Vestiti di ricambio, una coperta, e il cibo per il tuo animale. Tenetelo vicino alla porta, e ogni sei mesi controllate scadenze e batterie. Preparatelo oggi, insieme!
 
 </details>
 
 Per approfondire: [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 
-## Incendi boschivi: come nascono e come comportarsi
+## Il fuoco nel bosco: come nasce e che cosa fare
 
-**Durata:** 1 min 55 s · **Nel programma dell'anno:** Primaria 1ª-2ª, marzo-aprile: «Fumo e fuoco»; tutte le classi prima dell'estate
+**Durata:** 1 min 04 s · **Nel programma dell'anno:** Primaria 1ª-2ª, marzo-aprile: «Fumo e fuoco»; tutte le classi prima dell'estate
 
-{{< video src="/video/2026-09-24-incendi-boschivi-video-16x9.mp4" poster="/video/2026-09-24-incendi-boschivi-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Incendi boschivi: come nascono e come comportarsi" >}}
+{{< video src="/video/2026-11-01-incendi-bambini-video-16x9.mp4" poster="/video/2026-11-01-incendi-bambini-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Il fuoco nel bosco: come nasce e che cosa fare" >}}
 
 <details class="faq-item">
 <summary><strong>Trascrizione del video</strong></summary>
 
-Incendi boschivi: come nascono e come comportarsi. Un video per tutte le età. Un incendio boschivo nasce quasi sempre da una persona: un mozzicone, un fiammifero, un fuoco lasciato acceso, sterpaglie bruciate. Quelli naturali, come i fulmini, sono molto rari. Poi il fuoco cresce con l'erba secca, il caldo e il vento, che porta le scintille lontano e accende nuovi focolai. In salita corre ancora più veloce. Da noi il periodo più pericoloso va da giugno a settembre, quando fa caldo e piove poco. Per evitarlo: non gettare mozziconi o fiammiferi. Accendi il fuoco solo nelle aree attrezzate e spegnilo bene. Con il vento, mai. E non parcheggiare sull'erba secca: la marmitta scotta. Se vedi fiamme, o anche solo fumo, chiama subito il 112. Non pensare che l'abbia già fatto qualcun altro. Di' il Comune e il luogo preciso. Sei piccolo? Allontanati e avvisa subito un adulto. Se sei solo e il pericolo è vero, chiama tu il 112. Se il fuoco è vicino, cerca una via di fuga sicura, come una strada o un corso d'acqua. Non andare dove soffia il vento, e non scappare in salita. Se non puoi allontanarti, stenditi a terra in un punto senza vegetazione: il fumo sale, e così lo respiri meno. L'incendio non è uno spettacolo: non fermarti lungo la strada a guardare, intralci i soccorsi. Dopo, non entrare nella zona bruciata: sotto la cenere possono esserci braci ancora accese. Il bosco è di tutti: proteggerlo dipende anche da te. In emergenza chiama il 112.
+Il fuoco nel bosco: come nasce e che cosa fare. Quasi sempre un incendio nasce da una persona: un mozzicone, un fiammifero, un fuoco lasciato acceso. Erba secca, caldo e vento lo fanno crescere in fretta. Da giugno a settembre il pericolo è più alto. Il fuoco si accende solo nelle aree attrezzate, con un adulto, e si spegne bene. Con il vento, mai. Se vedi fiamme o fumo, allontanati e avvisa subito un adulto. Il numero da chiamare è il 112. Se sei solo e il pericolo è vero, chiama tu il 112, e di' dove sei. Allontanati verso una strada o un corso d'acqua. Non andare dove soffia il vento, e non scappare in salita. L'incendio non è uno spettacolo: non ci si ferma a guardare. E nella zona bruciata non si entra. Il bosco è di tutti. In emergenza chiama il 112.
 
 </details>
 
@@ -188,6 +173,8 @@ Per approfondire: [Diventa volontario](/diventa-volontario/).
 ## Per i ragazzi più grandi
 
 Con la secondaria si può partire da uno di questi video e continuare con il [documentario sulla storia della protezione civile](/comunicazioni/2026-10-23-documentario-storia-protezione-civile/): meno di cinque minuti, da Messina 1908 a IT-alert, con foto vere dei disastri. Per questo è adatto ai ragazzi, non ai bambini.
+
+Le pagine [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/), [Allerte meteo](/allerte-meteo/), [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Rischio incendio](/rischi-prevenzione/rischio-incendio/) hanno anche video più lunghi e con più dettagli sugli stessi argomenti, adatti alla secondaria.
 
 ## Vedi anche
 
