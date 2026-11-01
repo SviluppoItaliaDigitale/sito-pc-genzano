@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-02T00:03",
+  "aggiornato": "2026-11-02T00:32",
   "data_lunga": "lunedì 2 novembre 2026",
-  "aggiornato_label": "lunedì 2 novembre 2026, ore 00:03",
+  "aggiornato_label": "lunedì 2 novembre 2026, ore 00:32",
   "alba": "06:42",
   "tramonto": "17:02",
   "corrente": {
     "temp": 7.4,
-    "percepita": 3.7,
+    "percepita": 3.9,
     "cielo": "Pioggia debole",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
     "umidita": 75,
-    "vento": 15,
-    "raffiche": 55
+    "vento": 13,
+    "raffiche": 52
   },
   "giorni": [
     {
@@ -23,8 +23,8 @@
       "pioggia": 98,
       "pioggia_mm": 6.0,
       "raffiche": 76,
-      "uv": 2,
-      "uv_label": "basso"
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Mar 3",
@@ -35,7 +35,7 @@
       "pioggia": 20,
       "pioggia_mm": 1.8,
       "raffiche": 28,
-      "uv": 4,
+      "uv": 3,
       "uv_label": "moderato"
     },
     {
@@ -47,7 +47,7 @@
       "pioggia": 20,
       "pioggia_mm": 0,
       "raffiche": 31,
-      "uv": 3,
+      "uv": 4,
       "uv_label": "moderato"
     },
     {
