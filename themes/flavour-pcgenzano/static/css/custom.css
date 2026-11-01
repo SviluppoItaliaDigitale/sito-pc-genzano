@@ -1314,6 +1314,19 @@ html:not(.a11y-hide-translate-button) body:has(#lang-toggle) .it-header-slim-rig
     font-size: 16px;
   }
 }
+/* 01/11/2026, prova da LIM con Firefox (regola lim-scuole.md): a 1024 px, la
+   risoluzione dei proiettori delle lavagne, Firefox disegna Titillium un po'
+   più largo di Chromium e la barra sforava di 18 px (scorrimento orizzontale
+   su 110 pagine). Sotto i 1100 px corpo 15px e padding 6px: in Firefox la
+   barra arriva a ~930 px su 1024. */
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > a.nav-link,
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > button.nav-link {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 15px;
+  }
+}
 
 /* ── COMUNICAZIONE URGENTE ── */
 .comunicazione-urgente {
@@ -8545,3 +8558,28 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
    Shortcode libro-3d-testo (oggi la versione inglese, /english/explorable-book/). */
 .lb-testo-lingua .lb-tl-cap{border-top:1px solid #c9d3df;padding-top:1rem;margin-top:1.5rem}
 .lb-testo-lingua .lb-tl-occhiello{margin:0;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#003366}
+
+/* ==========================================================================
+   PRONTO PER LA LIM v1.0 — 01/11/2026
+   Riquadro sulle pagine per le scuole controllate per la lavagna interattiva
+   (partial lim-pronto.html, site-chrome.js, scripts/segno-lim-statiche.py;
+   regola lim-scuole.md delle regole del progetto). Testo #1a1a1a e link #003366 su
+   #eef7f1: 15,6:1 e 11,4:1.
+   ========================================================================== */
+.lim-pronto {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #eef7f1;
+  color: #1a1a1a;
+  border-left: 4px solid #15803d;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.lim-pronto-icona { font-size: 1.5rem; color: #15803d; line-height: 1; margin-top: 0.1rem; }
+.lim-pronto a { color: #003366; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
+.lim-pronto a:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+@media print { .lim-pronto { display: none !important; } }

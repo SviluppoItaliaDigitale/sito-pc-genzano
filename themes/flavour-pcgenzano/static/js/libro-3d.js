@@ -9,6 +9,8 @@
 import * as THREE from '../vendor/three/three.module.min.js';
 import { OrbitControls } from '../vendor/three/OrbitControls.js';
 
+// Segnale per la rete di sicurezza dello shortcode: lo script è stato letto ed eseguito.
+window.__libro3dAvviato = true;
 const ROOT = document.getElementById('lb');
 const DATI = JSON.parse(document.getElementById('lb-dati').textContent);
 const BASE = DATI.base || '/';
@@ -34,7 +36,15 @@ let chapter = 0, choice = -1, revealed = false, busy = false;
 
 let renderer;
 try { renderer = new THREE.WebGLRenderer({antialias:true}); }
-catch (err) { $('loading').textContent = 'Il tuo browser non riesce a mostrare il libro in 3D. Trovi tutti i capitoli nella versione testuale qui sotto.'; throw err; }
+catch (err) {
+  // Senza WebGL (lavagne vecchie, schede grafiche disattivate): stesso messaggio della rete di
+  // sicurezza dello shortcode, pannello nascosto, versione testuale aperta. Il modulo si ferma
+  // qui in silenzio (un'eccezione lasciata uscire comparirebbe come errore della pagina).
+  window.__libro3dAvviato = false;
+  if (window.__libro3dNonParte) window.__libro3dNonParte();
+  else $('loading').textContent = 'Il tuo browser non riesce a mostrare il libro in 3D. Trovi tutti i capitoli nella versione testuale qui sotto.';
+  await new Promise(() => {});
+}
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 stage.prepend(renderer.domElement);

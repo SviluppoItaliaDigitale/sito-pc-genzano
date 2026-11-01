@@ -277,7 +277,7 @@
                 <li>Ogni scena ha alcuni <strong>posti vuoti</strong> con una scritta breve (es. "Primo soccorso").</li>
                 <li>Ogni cartello in basso ha <strong>sotto un'etichetta</strong> che dice cosa significa (es. "Primo soccorso").</li>
                 <li><strong>Abbina</strong> ogni cartello al posto vuoto che ha la stessa scritta o che significa la stessa cosa.</li>
-                <li><strong>Dal cellulare</strong>: tieni premuto il cartello e trascinalo nel posto giusto.</li>
+                <li><strong>Dalla lavagna interattiva, dal tablet o dal cellulare</strong>: tocca il cartello e poi il posto giusto, oppure trascinalo col dito.</li>
                 <li><strong>Dal computer</strong>: trascina col mouse, oppure seleziona con <kbd>Tab</kbd> e sposta con le <kbd>frecce</kbd>. Premi <kbd>Invio</kbd> per prendere o rilasciare.</li>
                 <li>Dopo aver messo tutti i cartelli, premi <strong>Verifica</strong>: ti diremo dove sono quelli giusti e dove sbagliati.</li>
               </ul>
@@ -508,7 +508,14 @@
 
     var current = null;   // scena corrente
     var placement = {};   // { segnoId: slotId | null }
-    var selected = null;  // sign selezionato con tastiera
+    var selected = null;  // sign selezionato con tastiera o col tocco
+    // toccando il vassoio con un cartello scelto, il cartello torna lì
+    trayEl.addEventListener('click', function () {
+      if (!selected) return;
+      var cid = selected.dataset.signId;
+      selected.classList.remove('selected'); selected = null;
+      placeSign(cid, null);
+    });
     // Modalita' di gioco: 'normale' (le scritte del posto guidano) oppure
     // 'esperto' (le scritte sono nascoste, deduzione dal contesto). Letta dai
     // radio button al click su una scena.
@@ -577,6 +584,13 @@
           var cid = e.dataTransfer.getData('text/plain');
           placeSign(cid, slot.id);
         });
+        // Tocco e posa (LIM, tablet, cellulare; alternativa-al-trascinamento): cartello scelto, poi il posto
+        d.addEventListener('click', function () {
+          if (!selected) return;
+          var cid = selected.dataset.signId;
+          selected.classList.remove('selected'); selected = null;
+          placeSign(cid, slot.id);
+        });
         sceneEl.appendChild(d);
       });
     }
@@ -612,7 +626,20 @@
         });
         s.addEventListener('dragend', function () { s.classList.remove('dragging'); });
         s.addEventListener('keydown', onSignKeyDown);
-        s.addEventListener('click', function () { selectSign(s); });
+        s.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (dopoTrascinamento) { dopoTrascinamento = false; return; }
+        // con un altro cartello già scelto, toccare un cartello collocato vuol dire
+        // «metti qui quello scelto» (quello che c'era torna nel vassoio)
+        var posto = s.closest('.slot');
+        if (selected && selected !== s && posto) {
+          var cid = selected.dataset.signId;
+          selected.classList.remove('selected'); selected = null;
+          placeSign(cid, posto.dataset.slot);
+          return;
+        }
+        selectSign(s);
+      });
 
         // touch: tieni premuto e muovi sopra uno slot
         s.addEventListener('pointerdown', onPointerDown);
@@ -741,13 +768,27 @@
       });
       s.addEventListener('dragend', function () { s.classList.remove('dragging'); });
       s.addEventListener('keydown', onSignKeyDown);
-      s.addEventListener('click', function () { selectSign(s); });
+      s.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (dopoTrascinamento) { dopoTrascinamento = false; return; }
+        // con un altro cartello già scelto, toccare un cartello collocato vuol dire
+        // «metti qui quello scelto» (quello che c'era torna nel vassoio)
+        var posto = s.closest('.slot');
+        if (selected && selected !== s && posto) {
+          var cid = selected.dataset.signId;
+          selected.classList.remove('selected'); selected = null;
+          placeSign(cid, posto.dataset.slot);
+          return;
+        }
+        selectSign(s);
+      });
       s.addEventListener('pointerdown', onPointerDown);
       return s;
     }
 
     // Pointer drag (touch friendly)
     var dragState = null;
+    var dopoTrascinamento = false;
     function onPointerDown(e) {
       // non avviamo il drag custom se è già un click breve: lasciamo tastiera
       if (e.pointerType === 'mouse' && e.button !== 0) return;
@@ -805,8 +846,9 @@
       }
       sceneEl.querySelectorAll('.slot').forEach(function (s) { s.classList.remove('drop-highlight'); });
       dragState = null;
-      // se pointer era breve (tap senza movimento), usato come selezione via tastiera
-      if (!moved) selectSign(el);
+      // un tocco breve lo gestisce l'evento click (selezione); dopo un
+      // trascinamento il click che segue non deve selezionare il cartello
+      dopoTrascinamento = moved;
     }
 
     function verify() {

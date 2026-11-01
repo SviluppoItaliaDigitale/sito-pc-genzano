@@ -1,0 +1,17 @@
+{{- /* Riquadro «Pronto per la LIM» (regola lim-scuole.md delle regole del progetto, 01/11/2026).
+     Compare sulle pagine Hugo elencate in data/lim.yaml, tutte controllate ogni
+     settimana da scripts/check-lim.py: il riquadro dice solo ciò che quei
+     controlli verificano. Stesso testo in site-chrome.js e in
+     scripts/segno-lim-statiche.py: si cambiano insieme. */ -}}
+{{- $d := site.Data.lim -}}
+{{- $p := .RelPermalink | strings.TrimPrefix (strings.TrimSuffix "/" ("" | relURL)) -}}
+{{- $si := false -}}
+{{- range $d.hugo }}{{ if strings.HasPrefix $p . }}{{ $si = true }}{{ end }}{{ end -}}
+{{- range $d.esclusi }}{{ if strings.HasPrefix $p . }}{{ $si = false }}{{ end }}{{ end -}}
+{{- if eq $p $d.pagina }}{{ $si = false }}{{ end -}}
+{{- if $si }}
+<aside class="lim-pronto d-print-none" aria-label="Uso sulla lavagna interattiva">
+  <i class="bi bi-easel lim-pronto-icona" aria-hidden="true"></i>
+  <p class="mb-0"><strong>Pronto per la LIM.</strong> Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti. <a href="{{ $d.pagina | strings.TrimPrefix "/" | relURL }}">Come usarlo in classe</a></p>
+</aside>
+{{- end }}

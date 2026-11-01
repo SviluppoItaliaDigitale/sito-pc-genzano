@@ -30,6 +30,7 @@
       {{ if eq .Kind "section" }}{{ range $ttsBlacklist }}{{ if eq $.Section . }}{{ $isBlacklisted = true }}{{ end }}{{ end }}{{ end }}
       {{ $ttsEnabled := and (ne .Params.tts false) (not $isBlacklisted) }}
 
+      {{ partial "lim-pronto.html" . }}
       {{ if and $ttsEnabled (gt .WordCount 30) }}
       <div class="strumenti-articolo strumenti-lettura" role="region" aria-label="Strumenti di lettura della pagina">
         <div class="strumenti-articolo-header">

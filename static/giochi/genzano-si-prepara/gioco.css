@@ -237,3 +237,8 @@ html.a11y-pause-anim .gsp-mappa.gsp-trema, html.a11y-pause-animations .gsp-mappa
   .gsp { display: block; }
   .gsp-pannello { border: 0; padding: 0; }
 }
+
+/* LIM (01/11/2026, regola lim-scuole.md delle regole del progetto): l'interruttore delle aree
+   di attesa alto almeno 44 px, comodo col dito sulla lavagna. */
+.gsp-sotto-mappa .form-check { min-height: 44px; display: flex; align-items: center; }
+.gsp-sotto-mappa .form-check-label { min-height: 44px; display: inline-flex; align-items: center; }

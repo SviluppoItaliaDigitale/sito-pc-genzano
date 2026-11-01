@@ -10,6 +10,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
   <link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
@@ -460,7 +461,8 @@
       SCENE = shuffle(SCENE);
       idx = 0; errori = 0;
       endScreen.classList.add('hide');
-      document.querySelector('.inf-card.hide')?.classList.remove('hide');
+      var cartaNascosta = document.querySelector('.inf-card.hide');
+      if (cartaNascosta) cartaNascosta.classList.remove('hide');
       progressBolli.forEach(function(b,i){ b.classList.remove('on'); b.textContent = (i+1); });
       mostraScena();
     });

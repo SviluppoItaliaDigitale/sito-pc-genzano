@@ -564,6 +564,9 @@
     // (schermate intro/game/end). Esclude pagine hub e statiche.
     aggiungiPulsanteEsciGioco();
 
+    // Riquadro «Pronto per la LIM» nei giochi, nei quiz e in Abili a proteggere (01/11/2026).
+    aggiungiProntoLim();
+
     // SOS 112 + toolbar accessibilità anche sulle pagine statiche (audit 2026-05-22).
     injectA11yAndSos();
     // BottomNav mobile anche sulle pagine statiche (adozione catalogo BI, luglio 2026).
@@ -596,10 +599,6 @@
     esci.setAttribute('aria-label', 'Esci dal gioco e torna al menu');
     esci.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i> <span class="gioco-esci-label">Torna al menu</span>';
     esci.style.cssText = [
-      'position: fixed',
-      'top: 1rem',
-      'right: 1rem',
-      'z-index: 9999',
       'background: #003366',
       'color: #ffffff',
       'text-decoration: none',
@@ -623,15 +622,105 @@
         + '  outline: 3px solid #ffbe2e;'
         + '  outline-offset: 2px;'
         + '}'
-        + '#gioco-esci-btn .gioco-esci-label { white-space: nowrap; }'
+        + '#gioco-esci-btn .gioco-esci-label, #gioco-schermo-btn .gioco-esci-label { white-space: nowrap; }'
+        + '#gioco-comandi { position: fixed; top: 1rem; right: 1rem; z-index: 9999; display: flex; flex-wrap: wrap; justify-content: flex-end; }'
+        + '#gioco-comandi > * { margin-left: 0.5rem; min-height: 44px; }'
+        + '#gioco-schermo-btn { background: #ffffff; color: #003366; border: 2px solid #003366; padding: 0.55rem 1rem;'
+        + '  border-radius: 24px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 3px 10px rgba(0,0,0,0.25);'
+        + '  display: inline-flex; align-items: center; cursor: pointer; font-family: inherit; }'
+        + '#gioco-schermo-btn i { margin-right: 0.5rem; }'
+        + '#gioco-schermo-btn:hover, #gioco-schermo-btn:focus { background: #e7f0fa; outline: 3px solid #ffbe2e; outline-offset: 2px; }'
         + '@media (max-width: 480px) {'
-        + '  #gioco-esci-btn .gioco-esci-label { display: none; }'
-        + '  #gioco-esci-btn { padding: 0.55rem 0.7rem !important; }'
+        + '  #gioco-esci-btn .gioco-esci-label, #gioco-schermo-btn .gioco-esci-label { display: none; }'
+        + '  #gioco-esci-btn, #gioco-schermo-btn { padding: 0.55rem 0.7rem !important; }'
+        + '  #gioco-schermo-btn i { margin-right: 0; }'
         + '}'
-        + '@media print { #gioco-esci-btn { display: none !important; } }';
+        + '@media print { #gioco-comandi { display: none !important; } }';
       document.head.appendChild(stile);
     }
-    document.body.appendChild(esci);
+    var comandi = document.createElement('div');
+    comandi.id = 'gioco-comandi';
+    var schermo = pulsanteSchermoIntero();
+    if (schermo) comandi.appendChild(schermo);
+    comandi.appendChild(esci);
+    document.body.appendChild(comandi);
+    // Sotto l'intestazione finché la si vede (così non copre Area Volontari, social e
+    // ricerca), in cima allo schermo appena si scorre: l'uscita resta sempre a portata.
+    var testata = document.querySelector('.it-header-wrapper, body > header, header:not(.a11y-dialog-header)');
+    var posiziona = function () {
+      var basso = testata ? testata.getBoundingClientRect().bottom : 0;
+      comandi.style.top = Math.max(16, basso + 12) + 'px';
+    };
+    posiziona();
+    window.addEventListener('scroll', posiziona, { passive: true });
+    window.addEventListener('resize', posiziona);
+  }
+
+  // Riquadro «Pronto per la LIM» (regola lim-scuole.md delle regole del progetto, 01/11/2026): stesse
+  // famiglie di data/lim.yaml (voce «statiche») con site-chrome.js, tutte controllate ogni
+  // settimana da scripts/check-lim.py. Testo identico al partial lim-pronto.html e a
+  // scripts/segno-lim-statiche.py: si cambiano insieme. Stile in custom.css. Sintassi ES5.
+  function aggiungiProntoLim() {
+    var famiglie = ['/giochi/', '/quizpc/', '/formazionepc/', '/abili-a-proteggere/',
+      '/formazione/schede-stampabili/', '/formazione/storie-e-racconti/'];
+    var percorso = window.location.pathname.replace(/^\/sito-pc-genzano/, '');
+    var dentro = false;
+    for (var i = 0; i < famiglie.length; i++) { if (percorso.indexOf(famiglie[i]) === 0) dentro = true; }
+    if (!dentro || percorso.indexOf('/giochi/assets/') === 0 || document.querySelector('.lim-pronto, .scheda-lim')) return;
+    var main = document.querySelector('main') || document.body;
+    var box = document.createElement('aside');
+    box.className = 'lim-pronto d-print-none';
+    box.setAttribute('aria-label', 'Uso sulla lavagna interattiva');
+    box.innerHTML = '<i class="bi bi-easel lim-pronto-icona" aria-hidden="true"></i>'
+      + '<p class="mb-0"><strong>Pronto per la LIM.</strong> Si usa col dito sulla lavagna interattiva della classe, '
+      + 'anche a schermo intero, e funziona sui browser delle lavagne meno recenti. '
+      + '<a href="' + SITE_URL + '/lim/">Come usarlo in classe</a></p>';
+    var hero = main.querySelector('.app-page-hero, .page-hero');
+    if (hero) {
+      var contenitore = document.createElement('div');
+      contenitore.className = 'container mt-3';
+      contenitore.appendChild(box);
+      hero.parentNode.insertBefore(contenitore, hero.nextSibling);
+      return;
+    }
+    var h1 = main.querySelector('h1');
+    if (h1) { h1.parentNode.insertBefore(box, h1.nextSibling); box.style.marginTop = '0.75rem'; return; }
+    main.insertBefore(box, main.firstChild);
+  }
+
+  // Pulsante «Schermo intero» per i giochi (01/11/2026): sulla lavagna interattiva (LIM)
+  // nasconde le barre del browser e lascia tutto lo spazio al gioco. Compare solo dove il
+  // browser lo permette (non su iPhone); Esc o lo stesso pulsante per uscire. Sintassi ES5.
+  function pulsanteSchermoIntero() {
+    var doc = document.documentElement;
+    var entra = doc.requestFullscreen || doc.webkitRequestFullscreen || doc.msRequestFullscreen;
+    var esciFs = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+    var abilitato = document.fullscreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled;
+    if (!entra || !esciFs || !abilitato) return null;
+    var attivo = function () {
+      return !!(document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+    };
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.id = 'gioco-schermo-btn';
+    var aggiorna = function () {
+      var on = attivo();
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.innerHTML = on
+        ? '<i class="bi bi-fullscreen-exit" aria-hidden="true"></i><span class="gioco-esci-label">Esci da schermo intero</span>'
+        : '<i class="bi bi-arrows-fullscreen" aria-hidden="true"></i><span class="gioco-esci-label">Schermo intero</span>';
+      b.setAttribute('aria-label', on ? 'Esci da schermo intero' : 'Schermo intero');
+    };
+    b.addEventListener('click', function () {
+      try {
+        var r = attivo() ? esciFs.call(document) : entra.call(doc);
+        if (r && r.catch) r.catch(function () {});
+      } catch (e) {}
+    });
+    document.addEventListener('fullscreenchange', aggiorna);
+    document.addEventListener('webkitfullscreenchange', aggiorna);
+    aggiorna();
+    return b;
   }
 
   if (document.readyState === 'loading') {

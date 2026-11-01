@@ -92,6 +92,31 @@
 </div>
 <script type="application/json" id="lb-dati">{{ dict "base" ("" | relURL) "variante" $nome "capitoli" $d.capitoli "colori" site.Data.codici_colore.codici | jsonify | safeJS }}</script>
 <script type="module" src="{{ "js/libro-3d.js" | relURL }}?v={{ $vj }}"></script>
+{{- /* Rete di sicurezza (01/11/2026): sui browser vecchi delle LIM e dei PC di scuola
+     il modulo 3D non si legge e il riquadro restava su «Sto aprendo il libro…» con il
+     pannello vuoto. Se dopo il caricamento lo script non è partito, lo diciamo e apriamo
+     la versione testuale, che contiene tutti i capitoli. Sintassi ES5 di proposito. */ -}}
+<script>
+(function () {
+  function nonParte() {
+    var lb = document.getElementById('lb'), car = document.getElementById('lb-loading');
+    if (!lb || !car) return;
+    car.innerHTML = 'Su questo dispositivo il libro in 3D non si apre. Tutti i capitoli, con domande e risposte, sono nella <a href="#versione-testuale">versione testuale</a>; per la classe ci sono anche le <a href="{{ "formazione/libro-che-si-esplora-schede/" | relURL }}">schede da stampare</a>.';
+    car.className += ' lb-loading-fallito';
+    var pannello = lb.querySelector('.lb-panel');
+    if (pannello) pannello.hidden = true;
+    var testo = document.getElementById('versione-testuale');
+    if (testo) testo.open = true;
+  }
+  window.__libro3dNonParte = nonParte;
+  function controlla() {
+    if (window.__libro3dAvviato || document.querySelector('.lb-loading-fallito')) return;
+    nonParte();
+  }
+  if (document.readyState === 'complete') setTimeout(controlla, 4000);
+  else window.addEventListener('load', function () { setTimeout(controlla, 4000); });
+})();
+</script>
 
 <details class="faq-item lb-testo" id="versione-testuale">
 <summary><strong>Versione testuale del libro</strong> (tutti i capitoli, con domande e risposte)</summary>

@@ -477,6 +477,10 @@ Come costruirla (principi di apprendimento multimediale di Mayer): solo gli elem
 
 Per ogni illustrazione che prepari: SVG 1200×620 senza JavaScript né font esterni, `role="img"` con `<title>` e `<desc>` in italiano; gesto e scena coerenti con le indicazioni del DPC; `alt` e didascalia su ciò che si vede davvero; nessun metadato, commento o testo che citi lo strumento usato (§ 3.6); scritte dentro il `viewBox` e leggibili su telefono e su A4. Regola completa in `.claude/rules/03-accessibility.md` § «Progettazione universale per l'apprendimento», criteri in `docs/illustrazioni-cast-udl.md`.
 
+### 5.4-ter Materiali per le scuole usabili sulla LIM (dall'01/11/2026)
+
+Ogni gioco, quiz, scheda, kit, storia, modulo o strumento per la classe deve funzionare su una lavagna interattiva: solo tocco (niente mouse né tastiera), proiettore a 1024×768 e 1366×768, browser fermo anche a Chrome 64. In pratica: JavaScript entro ECMAScript 2018 (niente `?.`, `??`, campi di classe, `catch {}`), ogni trascinamento con un'alternativa a tocco singolo marcata `alternativa-al-trascinamento`, comandi dei giochi di almeno 44 px (minimo bloccante 24), nessuna pagina più larga dello schermo, `/css/custom.css` caricato dalle pagine statiche, Bootstrap Italia sempre nella versione trascritta (`bash scripts/js-compatibile-lim.sh`). Controlli bloccanti sulle PR: `scripts/check-sintassi-js.cjs`, `scripts/check-lim.py --da-git`. Regola completa: `.claude/rules/lim-scuole.md`.
+
 ### 5.5 Niente conteggi inventario sul sito
 
 Decisione editoriale di maggio 2026: il sito **non riporta numeri di inventario** (schede, giochi, storie, kit, pittogrammi, fac-simile). Descrizioni qualitative ("schede stampabili per tutte le fasce", "giochi educativi divisi per fascia di età"), non quantitative. **Cosa NON va toccato:** numeri citazionali di documenti esterni ("Codice PC 50 articoli", "scala EMS-98 5 livelli"), strutture normative ("le 4 attività della PC"), date, telefoni, formati file.
@@ -666,6 +670,7 @@ Quando devi applicare una regola di dettaglio, leggi la fonte primaria. Ognuno d
 - `06-protezione-civile-scientifica.md` — fonti gerarchiche, badge Allerta vs Emergenza, codici colore, struttura pagine rischio, numeri emergenza
 - `07-proattivita-coerenza.md` — checkpoint pre-batch, verifica pattern simili, casi storici
 - `08-claude-code-setup.md` — sandbox `.claude/settings.local.json` (specifico Claude Code, non rilevante per ChatGPT)
+- `lim-scuole.md` — materiali per le scuole usabili sulla lavagna interattiva: solo tocco, proiettore, browser vecchi
 
 Documentazione aggiuntiva nella root:
 - `MANUALE-SITO.md` (indice) + `manuale/parte-NN-*.md` (split operativo)

@@ -148,6 +148,8 @@ body:not(.chrome-loaded) > .app-content {
   color: var(--pc-primary, #003366);
   text-decoration: none;
   transition: all 0.2s ease;
+  /* bersaglio comodo col dito sulla lavagna interattiva (LIM) */
+  min-height: 44px;
 }
 .app-back-link:hover {
   color: #ff6600;
@@ -351,3 +353,20 @@ body:not(.chrome-loaded) > .app-content {
   border-left: 5px solid #c026d3; background: #faf5ff; border-radius: 0 8px 8px 0;
 }
 @media print { .abili-indice { display: none; } }
+
+/* ── Lavagna interattiva (LIM) e tablet: bersagli comodi col dito ──
+   Dall'01/11/2026, dopo le segnalazioni delle scuole: pulsanti di livello,
+   filtri delle categorie e righe apribili dei giochi almeno 44 px di altezza
+   (WCAG 2.2, 2.5.8 chiede 24 px; per un bambino alla lavagna ne servono di
+   più). Lo controlla scripts/check-lim.py. */
+[data-level].btn,
+[data-count].btn,
+.category-toggle-btn {
+  min-height: 44px;
+}
+main details > summary {
+  min-height: 44px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  cursor: pointer;
+}

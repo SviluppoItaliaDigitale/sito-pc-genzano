@@ -108,6 +108,23 @@ jobs:
         # deve portare a una pagina della build.
         run: python3 scripts/check-navigazione.py --public public
 
+      - name: "🧑‍🏫 Script leggibili dai browser delle LIM (Chrome 64)"
+        # 01/11/2026: sulle lavagne interattive e sui PC di scuola non
+        # aggiornati Bootstrap Italia 2.x non si avviava (sintassi di Chrome
+        # 80+) e con lui menu, finestre e accordion; due giochi dell'infanzia
+        # non partivano. Ogni script del sito, file e dentro le pagine
+        # costruite, deve restare entro ECMAScript 2018. Regola:
+        # .claude/rules/lim-scuole.md.
+        run: |
+          npm install --no-save --prefix /tmp/js-lim acorn@8.14.0 >/dev/null
+          NODE_PATH=/tmp/js-lim/node_modules node scripts/check-sintassi-js.cjs --public public
+
+      - name: "🧑‍🏫 «Pronto per la LIM» su ogni scheda e storia"
+        # 01/11/2026: le schede e le storie non caricano JavaScript, il segno sta
+        # nella loro barra in alto. Una scheda nuova o rigenerata senza segno
+        # ferma la PR: python3 scripts/segno-lim-statiche.py lo aggiunge.
+        run: python3 scripts/segno-lim-statiche.py --check
+
       - name: "📖 Libro che si esplora: versioni allineate e fonti esistenti"
         # 01/11/2026: i testi del libro 3D riprendono le pagine dei rischi.
         # Italiano, italiano semplice e inglese devono avere gli stessi
@@ -244,7 +261,7 @@ jobs:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
     # Ubuntu 24.04 e Playwright fissato: vedi controllo-fogli-stampa.yml.
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 60  # 35 per la stampa, più la prova da LIM (01/11/2026)
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v7
@@ -283,6 +300,14 @@ jobs:
         # il loro generatore). Il controllo completo gira ogni lunedì
         # (controllo-fogli-stampa.yml).
         run: python3 scripts/check-fogli-stampa.py --da-git "origin/${{ github.base_ref }}"
+
+      - name: "🧑‍🏫 Prova da LIM sulle pagine per le scuole toccate dalla PR"
+        # 01/11/2026, segnalazioni delle scuole: schermo touch a 1024x768 e
+        # 1366x768, niente mouse né tastiera. Blocca errori, pagine più larghe
+        # dello schermo, comandi dei giochi sotto i 24 px e giochi a
+        # trascinamento senza alternativa al tocco. Tutte le pagine se cambia
+        # un file condiviso. Giro completo ogni lunedì in controllo-lim.yml.
+        run: python3 scripts/check-lim.py --da-git "origin/${{ github.base_ref }}"
 
   fascicolo-esperimenti:
     name: "Fascicolo esperimenti: un foglio per esperimento"

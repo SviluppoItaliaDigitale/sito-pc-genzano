@@ -61,7 +61,10 @@
     }
     .evento-card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,.15); }
     .evento-card.dragging { opacity: .5; cursor: grabbing; }
-    .evento-card.in-slot { cursor: default; }
+    .evento-card.in-slot { cursor: pointer; }
+    /* Tocco e posa (LIM, tablet): tessera scelta in attesa dello slot */
+    .evento-card.scelta { outline: 4px solid #ffbe2e; outline-offset: 2px; box-shadow: 0 0 0 6px rgba(255,190,46,.35); }
+    .timeline-strip.attesa .timeline-slot:not(.filled) { border-color: var(--rag-verde); background: #f2faf5; }
     .evento-card strong { color: var(--rag-blu); }
     .evento-card small { color: #5b6b7c; }
     .evento-anno-reveal {
@@ -101,7 +104,7 @@
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">La memoria serve alla prevenzione</h2>
         <p>La storia italiana è segnata da disastri-evento che, pezzo dopo pezzo, hanno costruito il sistema nazionale di Protezione Civile: dal <strong>Vajont 1963</strong> al sistema <strong>IT-alert 2024</strong>. Ogni grande catastrofe ha portato a una norma o a una riforma: Sarno → PAI, L'Aquila → riforma della comunicazione del rischio, Centro Italia → consolidamento COC.</p>
-        <p class="small text-muted"><i class="bi bi-mouse me-1"></i>Trascina le <strong>8 tessere evento</strong> nella striscia temporale, dal più antico al più recente. Quando tutte sono collocate, premi "Verifica".</p>
+        <p class="small text-muted"><i class="bi bi-hand-index me-1" aria-hidden="true"></i>Colloca le <strong>8 tessere evento</strong> nella striscia temporale, dal più antico al più recente: trascinale col mouse, oppure tocca una tessera e poi la posizione (va bene anche sulla lavagna interattiva). Quando tutte sono collocate, premi "Verifica".</p>
         <p class="small"><i class="bi bi-shuffle me-1"></i> <strong>Pool di 16 eventi</strong>: ad ogni partita ne pesca 8 random, la sequenza è diversa ogni volta.</p>
         <div class="d-flex flex-wrap gap-2">
           <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
@@ -112,7 +115,7 @@
       <section id="game" class="hide">
         <div class="gioco-card-wrap">
           <div class="pool-label"><i class="bi bi-collection"></i> Tessere da collocare</div>
-          <div id="pool" class="pool-events" aria-label="Eventi da trascinare"></div>
+          <div id="pool" class="pool-events" aria-label="Tessere da collocare"></div>
 
           <div class="pool-label"><i class="bi bi-calendar3"></i> Linea del tempo (dal più antico al più recente)</div>
           <div id="timeline" class="timeline-strip" aria-label="Slot cronologici"></div>
@@ -196,6 +199,13 @@
         esito = document.getElementById('esito');
 
     var draggedEl = null;
+    var scelta = null; // tessera scelta col tocco, in attesa della posizione
+
+    function scegli(c){
+      if (scelta) scelta.classList.remove('scelta');
+      if (scelta === c || !c) { scelta = null; timeline.classList.remove('attesa'); return; }
+      scelta = c; c.classList.add('scelta'); timeline.classList.add('attesa');
+    }
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -217,7 +227,18 @@
         draggedEl = null;
         document.querySelectorAll('.dropzone-over').forEach(function(z){ z.classList.remove('dropzone-over'); });
       });
-      // Fallback tap-to-place con tastiera
+      // Tocco e posa (alternativa-al-trascinamento): tocca la tessera, poi la posizione
+      c.setAttribute('role', 'button');
+      c.addEventListener('click', function(e){
+        e.stopPropagation();
+        // con un'altra tessera già scelta, toccare una tessera collocata vuol dire
+        // «metti qui quella scelta»: le due si scambiano
+        if (scelta && scelta !== c && c.classList.contains('in-slot')) {
+          var daMettere = scelta; scegli(null); collocaInSlot(daMettere, c.parentElement); return;
+        }
+        scegli(c);
+      });
+      // Fallback con tastiera
       c.addEventListener('keydown', function(e){
         if (e.key !== 'Enter' && e.key !== ' ') return;
         e.preventDefault();
@@ -234,6 +255,7 @@
       var s = document.createElement('div');
       s.className = 'timeline-slot';
       s.setAttribute('data-n', n);
+      s.setAttribute('role', 'group');
       s.setAttribute('aria-label', 'Posizione ' + n);
       s.addEventListener('dragover', function(e){ e.preventDefault(); s.classList.add('dropzone-over'); });
       s.addEventListener('dragleave', function(){ s.classList.remove('dropzone-over'); });
@@ -244,7 +266,9 @@
         collocaInSlot(draggedEl, s);
       });
       s.addEventListener('click', function(){
-        // se cliccato uno slot occupato, riporta tessera al pool
+        // con una tessera scelta: la colloca qui (scambiando l'eventuale inquilino)
+        if (scelta) { var c = scelta; scegli(null); collocaInSlot(c, s); return; }
+        // altrimenti, se lo slot è occupato, riporta la tessera al pool
         var card = s.querySelector('.evento-card');
         if (card) riportaAlPool(card);
       });
@@ -252,9 +276,16 @@
     }
 
     function collocaInSlot(card, slot){
-      // se slot già occupato, scambia (riporta inquilino al pool)
+      // se lo slot è già occupato, scambia le due tessere
       var inquilino = slot.querySelector('.evento-card');
-      if (inquilino) riportaAlPool(inquilino);
+      if (inquilino === card) return;
+      var vecchio = card.parentElement;
+      var daSlot = vecchio && vecchio.classList.contains('timeline-slot');
+      if (daSlot) vecchio.classList.remove('filled');
+      // scambio: se la tessera arriva da un'altra posizione, l'inquilino va lì;
+      // se arriva dal pool, l'inquilino torna al pool
+      if (inquilino && daSlot) { vecchio.appendChild(inquilino); vecchio.classList.add('filled'); }
+      else if (inquilino) riportaAlPool(inquilino);
       slot.appendChild(card);
       slot.classList.add('filled');
       card.classList.add('in-slot');
@@ -275,6 +306,16 @@
       aggiornaVerifica();
     }
 
+    // pool drop e tocco sul pool (per riportare indietro): registrati una volta sola
+    pool.addEventListener('dragover', function(e){ e.preventDefault(); });
+    pool.addEventListener('drop', function(e){
+      e.preventDefault();
+      if (draggedEl) riportaAlPool(draggedEl);
+    });
+    pool.addEventListener('click', function(){
+      if (scelta && scelta.classList.contains('in-slot')) { var c = scelta; scegli(null); riportaAlPool(c); }
+    });
+
     function aggiornaVerifica(){
       var tutti = timeline.querySelectorAll('.timeline-slot.filled').length === EVENTI.length;
       verificaBtn.disabled = !tutti;
@@ -283,6 +324,7 @@
     function setup(){
       // Estrae nuovi 8 eventi a ogni partita: pool di 16 totali per rigiocabilita'
       EVENTI = estraiEventi();
+      scegli(null);
       pool.innerHTML = '';
       timeline.innerHTML = '';
       esito.classList.add('hide');
@@ -290,12 +332,6 @@
       var mescolati = shuffle(EVENTI.slice());
       mescolati.forEach(function(ev){ pool.appendChild(creaCarta(ev)); });
       for (var i = 1; i <= EVENTI.length; i++) timeline.appendChild(creaSlot(i));
-      // pool drop (per riportare indietro)
-      pool.addEventListener('dragover', function(e){ e.preventDefault(); });
-      pool.addEventListener('drop', function(e){
-        e.preventDefault();
-        if (draggedEl) riportaAlPool(draggedEl);
-      });
       verificaBtn.disabled = true;
     }
 

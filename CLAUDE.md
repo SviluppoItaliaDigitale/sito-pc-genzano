@@ -92,7 +92,7 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 |---|---|---|
 | **Calendario** | ogni articolo programmato nuovo o modificato, ogni correzione di una data dentro un articolo in coda (nata il 28/09/2026: «15 ottobre: si chiude la stagione AIB» uscito il 28 settembre) | `pc-calendario-editoriale`; `scripts/check-data-uscita.py` (bloccante in `validate-pr.yml`, serale in `controllo-data-uscita.yml`) |
 | **Fatti e fonti** | ogni contenuto con dati verificabili (date, orari, bilanci, quantità, cause, norme, citazioni, dati da dataset): articoli, pagine, schede, kit, dossier, manuale | `pc-fact-checker` (richiamato anche da `pc-article-reviewer` § 12); `scripts/check-dati-schede.py`; `scripts/check-dati-canonici.py` (registro `data/dati_canonici.yaml`, bloccante su PR; lo alimenta `pc-coerenza-trasversale`) |
-| **Materiali scolastici** | ogni scheda stampabile, kit scuola, kit calamità, rubrica, gioco, percorso nuovo o modificato (`static/formazione/**`, `content/formazione/**`, `static/giochi/**`) | `pc-didattica-reviewer` (sicurezza DPC, pedagogia, età, normativa scuola vigente, esercizi, parità dei 4 formati, licenze); `scripts/check-parita-schede.py` |
+| **Materiali scolastici** | ogni scheda stampabile, kit scuola, kit calamità, rubrica, gioco, percorso nuovo o modificato (`static/formazione/**`, `content/formazione/**`, `static/giochi/**`) | `pc-didattica-reviewer` (sicurezza DPC, pedagogia, età, normativa scuola vigente, esercizi, parità dei 4 formati, licenze, **uso sulla LIM**); `scripts/check-parita-schede.py`; `scripts/check-lim.py` e `scripts/check-sintassi-js.cjs` (regola `lim-scuole.md`) |
 | **Scienza e cronaca** | contenuti che spiegano fenomeni, cause, scale, codici colore; articoli di cronaca, anniversari, vicende giudiziarie, contenuti con persone | `pc-revisore-scientifico`, `pc-desk-giornalistico` |
 | **Coerenza dei dati** (dal 17/10/2026) | ogni contenuto nuovo o modificato con un dato che il sito scrive anche altrove (orari, quantità, giorni, distanze, numeri, bilanci): il valore nuovo deve coincidere con quello già pubblicato, altrimenti si allinea tutto alla fonte | `pc-coerenza-trasversale` (richiamato da `pc-article-reviewer` § 12-bis e `pc-didattica-reviewer` § 6-bis); `scripts/cerca-incongruenze.py --da-git origin/main` (bloccante su PR) e settimanale su tutto il sito (`controllo-incongruenze.yml`) |
 | **Integrità e conformità** | asset, ZIP, ancore, codifiche, stati UI; pagine legali; traduzioni; dati aperti e feed; codice e workflow | `pc-integrita-tecnica`, `pc-conformita-legale`, `pc-revisore-traduzioni`, `pc-dati-e-feed`, `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`; `scripts/check-integrita-asset.py`, `scripts/check-ancore.py` |
@@ -363,6 +363,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 @.claude/rules/08-claude-code-setup.md
 @.claude/rules/09-regole-contenuti-qualita.md
 @.claude/rules/10-automazioni-github-actions.md
+@.claude/rules/lim-scuole.md
 
 ---
 

@@ -135,7 +135,10 @@ Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. Se hai un
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
   font-weight: 600;
-  white-space: nowrap;
+  /* a capo se serve: con nowrap le etichette lunghe uscivano dalla colonna
+     (1366 px, LIM e portatili) e dallo schermo del telefono */
+  white-space: normal;
+  max-width: 100%;
 }
 .meta-fascia { background: #e7f0fa; color: #003366; border: 1px solid #b3cce6; }
 .meta-durata { background: #fef6e4; color: #b45309; border: 1px solid #f0d99b; }

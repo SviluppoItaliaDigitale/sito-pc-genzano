@@ -312,6 +312,10 @@ Quando un giocatore sbaglia 2+ volte consecutive nello stesso scenario, mostrare
 
 Why: quando un bambino sbaglia ripetutamente sta perdendo il filo. Una pausa esplicativa lo rimette in carreggiata invece di lasciarlo accumulare errori e rinunciare.
 
+### 5. Giocabile col solo tocco sulla LIM (dall'01/11/2026)
+
+Ogni gioco si gioca sulla lavagna interattiva: solo tocco, niente mouse né tastiera, proiettore a 1024×768, browser fermo anche a Chrome 64. Il trascinamento ha sempre un'alternativa a tocco singolo (tocca e posa, frecce), marcata nel codice `alternativa-al-trascinamento`; i comandi misurano almeno 44 px; il JavaScript resta entro ECMAScript 2018. Regola completa e controlli: `.claude/rules/lim-scuole.md`.
+
 ### Pattern bonus: cascata di icone vettoriali
 
 Quando un gioco ha bisogno di icone, usa la **cascata di scelta** in ordine:
