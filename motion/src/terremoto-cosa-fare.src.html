@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terremoto: cosa fare prima, durante e dopo — Protezione Civile Genzano di Roma</title>
+<style>
+/*FONTS*/
+:root{--bg:#0a1220;--az:#8fb8e0;--ar:#4fb0ff;--tx:#eef2f7;--dim:#93a1b5;
+  --verde:#34b25a;--gialla:#ffcc00;--arancione:#ff8a00;--rossa:#ef4136;
+  --bosco:#2f8f5b;--bosco2:#1f6f4a;--terra:#13261d;--fumo:#93a1b5}
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
+  background:radial-gradient(120% 60% at 50% 100%,#10233d 0%,var(--bg) 60%);overflow:hidden;
+  font-family:'Titillium Web',sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
+body.render #stage{left:0;top:0;transform:none!important}
+.scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
+  top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(26px*var(--k))}
+.txt{display:flex;flex-direction:column;gap:calc(22px*var(--k))}
+.ill{height:calc(var(--illh)*1px);flex:none;display:flex;align-items:center;justify-content:center}
+.ill svg{width:100%;height:100%;overflow:visible}
+[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:80px}
+[data-fmt="16x9"] .ill{order:2;width:46%;height:640px}
+[data-fmt="16x9"] .txt{order:1;width:54%}
+[data-fmt="16x9"] .grande{font-size:140px}
+[data-fmt="16x9"] .scena:last-child .txt{gap:14px}
+.chip{align-self:flex-start;font:700 calc(26px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ar);border:3px solid var(--ar);border-radius:999px;padding:.35em .9em}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.02;letter-spacing:-.01em}
+h1 .a{color:var(--ar)}
+.m{display:block;overflow:hidden;padding:.12em .22em;margin:-.12em -.22em}
+.m>.i{display:block;will-change:transform}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--dim);margin:0}
+.sotto b{color:var(--tx)}
+.lista{display:flex;flex-direction:column;gap:calc(16px*var(--k));margin:0;padding:0;list-style:none}
+.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:600;font-size:calc(42px*var(--k));line-height:1.18}
+.lista .ico{flex:none;width:calc(76px*var(--k));height:calc(76px*var(--k));border-radius:50%;background:rgba(79,176,255,.14);
+  display:flex;align-items:center;justify-content:center}
+.lista .ico svg{width:64%;height:64%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(22px*var(--k));width:100%}
+.tiles.t3{grid-template-columns:1fr 1fr 1fr}
+.tile{background:rgba(255,255,255,.05);border-radius:calc(26px*var(--k));padding:calc(18px*var(--k));
+  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center}
+.tile svg{width:calc(130px*var(--k));height:calc(130px*var(--k))}
+.tile span{font-weight:700;font-size:calc(34px*var(--k));line-height:1.1}
+.nota{font:700 calc(28px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0}
+.nota b{color:var(--ar)}
+.mesi{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(14px*var(--k));width:100%}
+.mese{border-radius:calc(18px*var(--k));padding:calc(20px*var(--k)) 0;text-align:center;
+  font:700 calc(40px*var(--k)) 'Roboto Mono',monospace;background:rgba(255,255,255,.06);color:var(--dim)}
+.mese.on{background:var(--arancione);color:#0a1220}
+.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--ar)}
+.fonte{font:500 calc(24px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.04em;color:var(--dim);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:72px;display:flex;
+  align-items:center;gap:22px;padding:0 30px;border-radius:999px;background:rgba(255,255,255,.07);
+  font:700 24px 'Roboto Mono',monospace;letter-spacing:.16em;color:var(--dim)}
+#hud .dots{display:flex;gap:10px}
+#hud .dot{width:14px;height:14px;border-radius:50%;background:#33415a}
+#wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
+.banda{position:absolute;top:0;bottom:0;width:26%;opacity:0}
+#sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);bottom:calc((var(--H) - var(--subb))*1px);
+  background:rgba(10,18,32,.9);border:2px solid rgba(255,255,255,.12);border-radius:22px;padding:18px 26px;
+  font-weight:600;font-size:calc(43px*var(--ks));line-height:1.25;text-align:center;opacity:0}
+#ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
+#ui a{color:#eef2f7;background:#1d2a40;border-radius:999px;padding:8px 14px;text-decoration:none}
+#ui a[aria-current]{background:#2e90fa;color:#0a1220}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer}
+body.render #ui,body.render #avvio{display:none!important}
+</style>
+</head>
+<body>
+<div id="stage" role="img" aria-label="">
+  <div id="scene"></div>
+  <div id="wipe"></div>
+  <div id="bande"></div>
+  <div id="hud"><div class="dots"></div><span class="lab"></span></div>
+  <div id="sub" aria-hidden="true"></div>
+</div>
+<nav id="ui" aria-label="Formato"></nav>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
+<script>
+/* ===================== CONFIG — testi, tempi ===================== */
+/* Fonti: Dipartimento della Protezione Civile, «Sei preparato?» del rischio sismico
+   (rischi.protezionecivile.gov.it/it/sismico/sei-preparato/), campagna «Io non rischio»;
+   pagina /rischi-prevenzione/rischio-sismico/ del sito; Scatola delle esercitazioni (lo zaino
+   resta in classe). 112 numero unico di emergenza nel Lazio. */
+const CONFIG = {
+  titolo: "Terremoto: cosa fare prima, durante e dopo",
+  hud: "TERREMOTO",
+  posterT: 0,
+  scene: [
+    { ill: "scuola", illh: 520, dur: 5, chip: "Protezione Civile · Genzano di Roma",
+      righe: ["Terremoto:", "<span class='a'>cosa fare</span>"], sotto: "<b>Prima, durante e dopo la scossa.</b>",
+      sottotitolo: "Terremoto: cosa fare prima, durante e dopo la scossa." },
+    { ill: "sismografo", illh: 420, dur: 6, chip: "Cosa sapere",
+      righe: ["Arriva", "<span class='a'>senza avviso</span>"], sotto: "Nessuno sa dire quando. <b>Possiamo sapere che cosa fare.</b>",
+      sottotitolo: "Nessuno può sapere quando arriverà un terremoto. Possiamo però sapere che cosa fare." },
+    { ill: "prima", illh: 220, dur: 8, chip: "Prima",
+      righe: ["Preparati"], lista: [
+        ["casa", "Trova i posti sicuri della casa"],
+        ["pin", "Conosci l'area di attesa più vicina"],
+        ["zaino", "Prepara il kit e il piano della famiglia"] ],
+      sottotitolo: "Prima: trova i posti sicuri della casa, come un tavolo resistente o un muro portante. Conosci l'area di attesa più vicina e prepara con la famiglia il kit e il piano di emergenza." },
+    { ill: "tavolo", illh: 480, dur: 8, chip: "Durante la scossa",
+      righe: ["Abbassati,", "<span class='a'>copriti</span>, tieniti"], sotto: "Sotto un tavolo resistente o il banco. <b>Proteggi la testa.</b>",
+      sottotitolo: "Durante la scossa, se sei al chiuso: abbassati, riparati sotto un tavolo resistente o sotto il banco, e tieniti forte. Proteggi la testa con le braccia." },
+    { ill: "pericolo", illh: 420, dur: 7, chip: "Durante la scossa",
+      righe: ["Non correre", "<span class='a'>fuori</span>"], nota: "Aspetta che la scossa <b>finisca</b>",
+      sottotitolo: "Non correre fuori: aspetta che la scossa finisca. Stai lontano da finestre e mobili alti, e non usare l'ascensore." },
+    { ill: "aperto", illh: 420, dur: 7, chip: "Se sei all'aperto",
+      righe: ["Cerca uno", "spazio <span class='a'>aperto</span>"], sotto: "Lontano da <b>edifici, alberi, lampioni e fili elettrici</b>.",
+      sottotitolo: "Se sei all'aperto, allontanati da edifici, alberi, lampioni e fili elettrici, e aspetta in uno spazio aperto." },
+    { ill: "fila", illh: 420, dur: 8, chip: "A scuola",
+      righe: ["Segui", "l'<span class='a'>insegnante</span>"], sotto: "Esci in fila, senza correre. <b>Lo zaino resta in classe.</b>",
+      sottotitolo: "A scuola, finita la scossa, segui l'insegnante. Esci in fila, senza correre, e raggiungi con la classe il punto di raccolta. Lo zaino resta in classe." },
+    { ill: "dopo", illh: 220, dur: 9, chip: "Dopo",
+      righe: ["Esci con", "<span class='a'>prudenza</span>"], lista: [
+        ["persone", "Controlla che chi è con te stia bene"],
+        ["scarpe", "Metti le scarpe, niente ascensore"],
+        ["pin", "Raggiungi l'area di attesa"],
+        ["telefono", "Usa poco il telefono"] ],
+      sottotitolo: "Dopo, controlla che chi è con te stia bene. Metti le scarpe, esci senza ascensore, raggiungi l'area di attesa e usa poco il telefono." },
+    { ill: "sereno", illh: 200, dur: 7, chip: "Genzano di Roma · Protezione Civile", finale: true,
+      righe: ["Prepariamoci", "<span class='a'>prima</span>"], sotto: "<b>protezionecivilegenzano.it</b>",
+      grande: "112", fonte: "Fonte: Dipartimento della Protezione Civile,<br>«Sei preparato?» e campagna «Io non rischio»",
+      sottotitolo: "Il terremoto non avvisa: prepariamoci prima. In emergenza chiama il 112." }
+  ]
+};
+const DUR = /*DUR*/[];
+const AUDIO = /*AUDIO*/"";
+
+/* ===================== FORMATI e zone sicure ===================== */
+const FORMATI = {
+  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
+  "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
+  "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
+  "16x9": { W:1920, H:1080, hx:120, hy:56,  side:140, top:160, bot:890,  subb:1044, t:104, k:.95, ks:.9,  illk:1   }
+};
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.get("render") === "1";
+const FMT = FORMATI[Q.get("fmt")] ? Q.get("fmt") : "9x16";
+const L = FORMATI[FMT];
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.dataset.fmt = FMT;
+for (const k of ["W","H","side","top","bot","subb","hx","hy","t","k","ks"]) stage.style.setProperty("--" + k, L[k]);
+if (RENDER) document.body.classList.add("render");
+stage.setAttribute("aria-label", CONFIG.titolo);
+
+/* ===================== AIUTANTI (deterministici) ===================== */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outQuart = x => 1 - Math.pow(1 - x, 4);
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => { const c = 1.70158, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+const lerp = (a, b, x) => a + (b - a) * x;
+function reveal(el, p) { el.style.transform = `translateY(${(1 - outQuart(p)) * 115}%)`; }
+function fadeUp(el, p, d = 40) { const e = outCubic(p); el.style.opacity = e; el.style.transform = `translateY(${(1 - e) * d}px)`; }
+function pop(el, p) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `scale(${lerp(.6, 1, e)})`; }
+
+/* ===================== DISEGNI (SVG piatti, originali) ===================== */
+const PERSONA = (x, y, s, c = "#f59e0b", testa = "#f2c49b") => `<g transform="translate(${x} ${y}) scale(${s})">
+  <circle cx="0" cy="-118" r="22" fill="${testa}"/><rect x="-22" y="-92" width="44" height="58" rx="18" fill="${c}"/>
+  <rect x="-20" y="-40" width="16" height="42" rx="7" fill="#34435c"/><rect x="4" y="-40" width="16" height="42" rx="7" fill="#34435c"/></g>`;
+const X = (x, y, r = 30) => `<g transform="translate(${x} ${y})" stroke="#ef4136" stroke-width="11" stroke-linecap="round"><path d="M${-r} ${-r} L${r} ${r}"/><path d="M${r} ${-r} L${-r} ${r}"/></g>`;
+const ICONE = {
+  pin: `<svg viewBox="0 0 100 100"><path d="M50 92 C30 64 22 52 22 38 a28 28 0 0 1 56 0 C78 52 70 64 50 92Z" fill="#34b25a"/><circle cx="50" cy="38" r="11" fill="#0a1220"/></svg>`,
+  zaino: `<svg viewBox="0 0 100 100"><rect x="22" y="24" width="56" height="68" rx="16" fill="#f59e0b"/><path d="M36 24 V16 a14 14 0 0 1 28 0 V24" stroke="#f59e0b" stroke-width="7" fill="none"/><rect x="32" y="56" width="36" height="24" rx="6" fill="#c97c05"/><path d="M50 60 V76 M42 68 H58" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>`,
+  casa: `<svg viewBox="0 0 100 100"><path d="M14 48 L50 16 L86 48 V90 H14Z" fill="#c9d4e2"/><rect x="30" y="58" width="40" height="8" rx="3" fill="#8a6a44"/><path d="M34 66 V86 M66 66 V86" stroke="#8a6a44" stroke-width="6"/><path d="M68 30 L84 46" stroke="#34b25a" stroke-width="0"/></svg>`,
+  persone: `<svg viewBox="0 0 100 100"><circle cx="34" cy="34" r="12" fill="#f2c49b"/><rect x="20" y="48" width="28" height="38" rx="12" fill="#2e90fa"/><circle cx="66" cy="34" r="12" fill="#f2c49b"/><rect x="52" y="48" width="28" height="38" rx="12" fill="#f59e0b"/></svg>`,
+  scarpe: `<svg viewBox="0 0 100 100"><path d="M10 62 Q10 44 26 44 Q34 56 50 58 Q72 60 86 68 Q92 72 90 80 H12 Q10 74 10 62Z" fill="#f59e0b"/><path d="M10 80 H90" stroke="#c97c05" stroke-width="8" stroke-linecap="round"/></svg>`,
+  telefono: `<svg viewBox="0 0 100 100"><rect x="30" y="10" width="40" height="80" rx="9" fill="#34435c"/><rect x="35" y="18" width="30" height="58" rx="3" fill="#8fb8e0"/><circle cx="50" cy="83" r="3.5" fill="#93a1b5"/></svg>`,
+  finestra: `<svg viewBox="0 0 100 100"><rect x="18" y="14" width="64" height="72" rx="4" fill="#8fb8e0" stroke="#c9d4e2" stroke-width="7"/><path d="M50 14 V86 M18 50 H82" stroke="#c9d4e2" stroke-width="6"/><path d="M28 30 L40 44 L34 52" stroke="#eef2f7" stroke-width="4" fill="none"/></svg>`,
+  mobile: `<svg viewBox="0 0 100 100"><rect x="28" y="8" width="44" height="84" rx="4" fill="#8a6a44"/><path d="M28 36 H72 M28 64 H72" stroke="#5d4630" stroke-width="5"/><rect x="34" y="16" width="14" height="16" fill="#ef4136"/><rect x="52" y="44" width="14" height="16" fill="#2e90fa"/></svg>`,
+  ascensore: `<svg viewBox="0 0 100 100"><rect x="18" y="10" width="64" height="80" rx="6" fill="#93a1b5"/><path d="M50 10 V90" stroke="#5d6b80" stroke-width="5"/><path d="M40 30 L50 20 L60 30Z M40 70 L50 80 L60 70Z" fill="#0a1220"/></svg>`,
+  corsa: `<svg viewBox="0 0 100 100"><circle cx="58" cy="18" r="10" fill="#f2c49b"/><path d="M56 30 L44 56 L60 66 L58 88 M44 56 L30 82 M52 38 L70 48 M50 40 L32 46" stroke="#f59e0b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`
+};
+const tile = (ico, testo) => `<div class="tile">${ICONE[ico]}<span>${testo}</span></div>`;
+const CASETTE = `<g fill="#1d2a40"><path d="M40 330 V250 L90 210 L140 250 V330Z"/><path d="M150 330 V200 H250 V330Z"/><path d="M260 330 V240 L320 190 L380 240 V330Z"/><path d="M390 330 V180 H470 V330Z"/><path d="M480 330 V230 L530 195 L580 230 V330Z"/></g>
+  <g fill="#ffcc00" opacity=".85"><rect x="70" y="260" width="16" height="18"/><rect x="175" y="220" width="16" height="18"/><rect x="215" y="260" width="16" height="18"/><rect x="300" y="255" width="16" height="18"/><rect x="415" y="210" width="16" height="18"/><rect x="415" y="260" width="16" height="18"/><rect x="520" y="250" width="16" height="18"/></g>`;
+const ILL = {
+  scuola: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">
+    <rect width="600" height="420" rx="30" fill="#101c2e"/>
+    <g class="trema"><path d="M120 360 V180 L300 90 L480 180 V360Z" fill="#c9d4e2"/>
+    <rect x="270" y="270" width="60" height="90" fill="#5d6b80"/>
+    ${[0, 1, 2].map(i => `<rect x="${160 + i * 110}" y="200" width="60" height="50" fill="#8fb8e0"/>`).join("")}
+    <rect x="160" y="290" width="60" height="50" fill="#8fb8e0"/><rect x="380" y="290" width="60" height="50" fill="#8fb8e0"/>
+    <text x="300" y="168" text-anchor="middle" font-family="Roboto Mono" font-weight="700" font-size="26" fill="#34435c">SCUOLA</text></g>
+    <path class="suolo" d="" stroke="#2e90fa" stroke-width="8" fill="none"/></svg>`,
+  sismografo: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">
+    <rect x="40" y="20" width="520" height="380" rx="30" fill="#101c2e"/>
+    <g stroke="#1d2a40" stroke-width="3">${[100, 160, 220, 280, 340].map(y => `<path d="M70 ${y} H530"/>`).join("")}</g>
+    <path class="traccia" d="" stroke="#2e90fa" stroke-width="5" fill="none" stroke-linejoin="round"/>
+    <text x="300" y="380" text-anchor="middle" font-family="Roboto Mono" font-weight="700" font-size="24" fill="#93a1b5">QUANDO? NESSUNO PUÒ SAPERLO</text></svg>`,
+  prima: () => `<svg viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet">
+    <rect x="40" y="10" width="520" height="240" rx="26" fill="#101c2e"/>
+    <g transform="translate(300 150)"><path d="M-110 90 V-10 L0 -90 L110 -10 V90Z" fill="#c9d4e2"/>
+    <path d="M-130 -2 L0 -104 L130 -2" stroke="#5d6b80" stroke-width="14" fill="none" stroke-linejoin="round"/>
+    <rect x="-70" y="40" width="80" height="10" rx="3" fill="#8a6a44"/><path d="M-64 50 V88 M4 50 V88" stroke="#8a6a44" stroke-width="7"/>
+    <g class="spunta"><circle cx="70" cy="40" r="26" fill="#34b25a"/><path d="M58 40 L67 50 L84 30" stroke="#0a1220" stroke-width="7" fill="none" stroke-linecap="round"/></g></g></svg>`,
+  tavolo: () => `<svg viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet">
+    <rect x="40" y="10" width="520" height="460" rx="30" fill="#101c2e"/>
+    <g class="trema"><rect x="110" y="190" width="380" height="26" rx="6" fill="#a07a50"/>
+    <path d="M140 216 V420 M460 216 V420" stroke="#8a6a44" stroke-width="22" stroke-linecap="round"/>
+    <g transform="translate(300 420)"><ellipse cx="0" cy="-58" rx="78" ry="54" fill="#f59e0b"/>
+      <circle cx="-56" cy="-98" r="26" fill="#f2c49b"/><path d="M-86 -110 Q-56 -140 -24 -112" stroke="#f59e0b" stroke-width="16" fill="none" stroke-linecap="round"/>
+      <path class="mano" d="M70 -60 Q120 -90 150 -110" stroke="#f2c49b" stroke-width="14" fill="none" stroke-linecap="round"/></g></g>
+    <g class="cade">${[0, 1, 2, 3].map(i => `<rect data-i="${i}" x="${160 + i * 90}" y="0" width="${14 + i * 3}" height="12" rx="3" fill="#93a1b5"/>`).join("")}</g>
+    <path d="M60 430 H540" stroke="#34435c" stroke-width="8"/></svg>`,
+  pericolo: () => `<div class="tiles">${tile("finestra", "Lontano dalle finestre")}${tile("mobile", "Lontano dai mobili alti")}${tile("ascensore", "Niente ascensore")}${tile("corsa", "Non correre fuori")}</div>`,
+  aperto: () => `<svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
+    <defs><clipPath id="ap"><rect width="600" height="440" rx="30"/></clipPath></defs>
+    <g clip-path="url(#ap)"><rect width="600" height="440" fill="#101c2e"/><rect y="340" width="600" height="100" fill="#2f8f5b"/>
+    <g class="trema"><rect x="20" y="130" width="130" height="210" fill="#5d6b80"/><rect x="40" y="160" width="30" height="30" fill="#8fb8e0"/><rect x="95" y="160" width="30" height="30" fill="#8fb8e0"/>
+    <rect x="505" y="200" width="12" height="140" fill="#93a1b5"/><circle cx="511" cy="196" r="14" fill="#ffcc00"/>
+    <rect x="186" y="230" width="16" height="110" fill="#6b4a2e"/><circle cx="194" cy="210" r="46" fill="#1f6f4a"/></g>
+    <path d="M150 120 Q330 90 520 140" stroke="#93a1b5" stroke-width="4" fill="none"/>
+    <g class="sale">${PERSONA(0, 0, .9, "#f59e0b")}</g>
+    <path class="trat" d="M380 420 Q380 380 360 340" stroke="#eef2f7" stroke-width="0" fill="none"/></g></svg>`,
+  fila: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">
+    <defs><clipPath id="fl"><rect width="600" height="420" rx="30"/></clipPath></defs>
+    <g clip-path="url(#fl)"><rect width="600" height="420" fill="#101c2e"/><rect y="340" width="600" height="80" fill="#34435c"/>
+    <rect x="20" y="110" width="140" height="230" fill="#c9d4e2"/><rect x="60" y="230" width="60" height="110" fill="#5d6b80"/>
+    <g transform="translate(520 200)"><rect x="-6" y="0" width="12" height="140" fill="#93a1b5"/><rect x="-56" y="-60" width="112" height="64" rx="10" fill="#34b25a"/>
+      <text x="0" y="-20" text-anchor="middle" font-family="Roboto Mono" font-weight="700" font-size="18" fill="#0a1220">RACCOLTA</text></g>
+    <g class="fila">${PERSONA(0, 340, 1, "#2e90fa")}${[1, 2, 3].map(i => PERSONA(-70 * i, 340, .72, ["#f59e0b", "#8f7ad6", "#34b25a"][i - 1])).join("")}</g></g></svg>`,
+  dopo: () => `<svg viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet">
+    <defs><clipPath id="dp"><rect x="40" y="10" width="520" height="240" rx="26"/></clipPath></defs>
+    <g clip-path="url(#dp)"><rect x="40" y="10" width="520" height="240" fill="#101c2e"/><rect x="40" y="200" width="520" height="50" fill="#2f8f5b"/>
+    <g transform="translate(300 120)"><rect x="-150" y="-70" width="300" height="100" rx="16" fill="#34b25a"/>
+      <text x="0" y="-8" text-anchor="middle" font-family="Roboto Mono" font-weight="700" font-size="30" fill="#0a1220">AREA DI ATTESA</text></g>
+    <g class="arriva">${PERSONA(0, 230, .7, "#f59e0b")}${PERSONA(60, 230, .7, "#2e90fa")}</g></g></svg>`,
+  sereno: () => `<svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid meet">
+    <defs><clipPath id="sr"><rect x="0" y="0" width="600" height="380" rx="30"/></clipPath></defs>
+    <g clip-path="url(#sr)"><rect width="600" height="380" fill="#101c2e"/>
+    <g class="sole"><circle cx="470" cy="110" r="52" fill="#ffcc00"/></g>
+    <g transform="translate(0 20)">${CASETTE}</g><rect y="350" width="600" height="30" fill="#34435c"/></g></svg>`
+};
+
+/* ===================== SCENE ===================== */
+const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 : s.dur;
+const START = []; let acc = 0;
+CONFIG.scene.forEach((s, k) => { START[k] = acc; acc += durScena(s, k); });
+const TOTAL = acc;
+const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
+const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
+  { da: +VOICE_AT[k].toFixed(3), a: +(VOICE_AT[k] + DUR[k] + 0.2).toFixed(3), testo: s.sottotitolo }).filter(Boolean);
+
+const box = $("#scene"), NODI = [];
+const righe = arr => `<h1>${arr.map(r => `<span class="m"><span class="i">${r}</span></span>`).join("")}</h1>`;
+CONFIG.scene.forEach((s, k) => {
+  const el = document.createElement("section");
+  el.className = "scena"; el.style.opacity = 0;
+  el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
+  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t]) => `<li><span class="ico">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
+  el.innerHTML = `<div class="ill">${ILL[s.ill]()}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
+    ${s.sotto ? `<p class="sotto">${s.sotto}</p>` : ""}${lista}${s.nota ? `<p class="nota">${s.nota}</p>` : ""}
+    ${s.grande ? `<div class="grande">${s.grande}</div>` : ""}${s.fonte ? `<p class="fonte">${s.fonte}</p>` : ""}</div>`;
+  if (L.illk < .5 && s.lista) el.querySelector(".ill").style.display = "none";
+  box.appendChild(el); NODI.push(el);
+});
+const dots = $("#hud .dots");
+CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
+$("#hud .lab").textContent = CONFIG.hud;
+["verde", "gialla", "arancione", "rossa"].forEach((c, i) =>
+  $("#bande").insertAdjacentHTML("beforeend", `<div class="banda" style="left:${i * 25 - .5}%;background:var(--${c})"></div>`));
+
+/* pioggia che cade e acqua che ondeggia: tutto in funzione di t */
+function pioggia(el, t) {
+  el.querySelectorAll(".pioggia").forEach(g => {
+    g.querySelectorAll("line").forEach((l, i) => {
+      const H = +l.dataset.h + 40, v = 520 + hash(i + 7) * 260, y = ((t * v + hash(i + 3) * H) % H) - 30, x = +l.dataset.x - y * .25;
+      l.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+    });
+  });
+}
+function onde(el, t, alza = 0) {
+  el.querySelectorAll(".onda").forEach((p, j) => {
+    const y0 = +p.dataset.y - alza, w = +p.dataset.w, ph = t * (j ? 2.1 : 1.6) + j * 1.3;
+    let d = `M0 ${y0}`;
+    for (let x = 0; x <= w; x += 20) d += ` L${x} ${(y0 + Math.sin(x / 46 + ph) * 7 + Math.sin(x / 19 - ph * 1.4) * 3).toFixed(1)}`;
+    p.setAttribute("d", d + ` L${w} 600 L0 600Z`);
+  });
+}
+const livello = (y0, w, t, x0 = 0) => {
+  let d = `M${x0} ${y0}`;
+  for (let x = x0; x <= x0 + w; x += 20) d += ` L${x} ${(y0 + Math.sin(x / 40 + t * 2) * 5).toFixed(1)}`;
+  return d + ` L${x0 + w} 700 L${x0} 700Z`;
+};
+const ANIM_SCOSSA = (u, a, b) => { const p = prog(u, a, .2) * (1 - prog(u, b, .4)); return p; };
+function trema(el, t, forza) {
+  el.querySelectorAll(".trema").forEach(g => {
+    const x = Math.sin(t * 38) * 7 * forza + Math.sin(t * 23 + 1) * 4 * forza, r = Math.sin(t * 31) * 1.1 * forza;
+    g.setAttribute("transform", `translate(${x.toFixed(1)} 0) rotate(${r.toFixed(2)} 300 360)`);
+  });
+}
+const ANIM = {
+  scuola: (el, u, t) => {
+    const f = ANIM_SCOSSA(u, .6, 3.4); trema(el, t, f);
+    let d = "M60 380"; for (let x = 60; x <= 540; x += 10) d += ` L${x} ${(380 + Math.sin(x / 9 + t * 30) * 10 * f).toFixed(1)}`;
+    el.querySelector(".suolo").setAttribute("d", d);
+  },
+  sismografo: (el, u, t) => {
+    const fine = 70 + 460 * prog(u, 0, 4.5);
+    let d = "M70 220";
+    for (let x = 70; x <= fine; x += 4) {
+      const c = Math.exp(-Math.pow((x - 330) / 60, 2));
+      d += ` L${x} ${(220 + Math.sin(x * 1.3) * (4 + 110 * c) * (hash(x) * .6 + .4)).toFixed(1)}`;
+    }
+    el.querySelector(".traccia").setAttribute("d", d);
+  },
+  prima: (el, u) => { const s = el.querySelector(".spunta"); s.style.transformBox = "fill-box"; s.style.transformOrigin = "50% 50%"; s.style.transform = `scale(${outBack(prog(u, 1.2, .5))})`; },
+  tavolo: (el, u, t) => {
+    const f = ANIM_SCOSSA(u, .2, 6); trema(el, t, f * .8);
+    el.querySelectorAll(".cade rect").forEach(r => {
+      const i = +r.dataset.i, p = prog(u, .6 + i * .5, 1.1), y = lerp(20, 168, p * p);
+      r.setAttribute("transform", `translate(0 ${y.toFixed(1)}) rotate(${(p * 160 * (i % 2 ? 1 : -1)).toFixed(1)} ${170 + i * 90} 6)`);
+      r.setAttribute("opacity", p > 0 ? 1 : 0);
+    });
+  },
+  aperto: (el, u, t) => {
+    trema(el, t, ANIM_SCOSSA(u, .2, 5) * .7);
+    const p = inOutCubic(prog(u, .8, 3));
+    el.querySelector(".sale").setAttribute("transform", `translate(${lerp(240, 380, p).toFixed(1)} 400)`);
+  },
+  fila: (el, u) => {
+    const p = inOutCubic(prog(u, .6, 5));
+    el.querySelector(".fila").setAttribute("transform", `translate(${lerp(170, 430, p).toFixed(1)} 0)`);
+  },
+  dopo: (el, u) => {
+    const p = outCubic(prog(u, .3, 3));
+    el.querySelector(".arriva").setAttribute("transform", `translate(${lerp(40, 250, p).toFixed(1)} 0)`);
+  },
+  sereno: (el, u) => {
+    const s = el.querySelector(".sole"); s.style.transformBox = "fill-box"; s.style.transformOrigin = "50% 50%";
+    s.style.transform = `translateY(${lerp(80, 0, outCubic(prog(u, .2, 1.2))).toFixed(1)}px)`;
+  }
+};
+
+/* ===================== RENDER(t) — unica fonte di verità ===================== */
+const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
+  NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
+  const el = NODI[k];
+  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .35, .35) : 1;
+
+  dots.querySelectorAll(".dot").forEach((d, i) => {
+    d.style.background = i < k ? "var(--az)" : i === k ? "var(--ar)" : "#33415a";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.45, outBack(prog(u, 0, .4))) : 1})`;
+  });
+
+  // transizione a cerchio dal pallino dell'HUD
+  const w = $("#wipe"), dp = dots.children[k];
+  if (k > 0 && !s.finale && u < .7) {
+    const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
+    w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
+    w.style.background = "var(--ar)";
+    w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
+    w.style.opacity = 1 - prog(u, .28, .4);
+  } else w.style.opacity = 0;
+
+  const primo = k === 0;
+  const q = x => primo ? 1 : x;  // il primo fotogramma è già completo (anteprima)
+  el.querySelectorAll("h1 .i").forEach((i, j) => reveal(i, q(prog(u, .15 + j * .1, .55))));
+  const chip = el.querySelector(".chip"); fadeUp(chip, q(prog(u, .1, .4)), 16);
+  el.querySelectorAll(".sotto").forEach((p, j) => fadeUp(p, primo ? 1 : prog(u, .7 + j * .3, .5)));
+  el.querySelectorAll(".lista li").forEach((li, j) => fadeUp(li, prog(u, .9 + j * .9, .5), 30));
+  el.querySelectorAll(".tile").forEach((ti, j) => pop(ti, prog(u, .5 + j * .45, .5)));
+  el.querySelectorAll(".mese").forEach((m, j) => pop(m, prog(u, .4 + j * .08, .4)));
+  const nota = el.querySelector(".nota"); if (nota) fadeUp(nota, prog(u, D * .55, .5), 20);
+  const g = el.querySelector(".grande"); if (g) pop(g, prog(u, 1.4, .5));
+  const fo = el.querySelector(".fonte"); if (fo) fadeUp(fo, prog(u, 1.9, .5), 16);
+  const ill = el.querySelector(".ill"); if (!primo && !s.lista) fadeUp(ill, prog(u, .2, .6), 30); else ill.style.opacity = 1;
+  if (ANIM[s.ill]) ANIM[s.ill](el, u, t);
+
+  // spazzata a 4 bande all'ingresso del finale
+  const sw = s.finale ? prog(u, 0, .9) : 1;
+  $("#bande").querySelectorAll(".banda").forEach((b, i) => {
+    const p = clamp(sw * 1.6 - i * .15);
+    b.style.opacity = sw < 1 ? 1 : 0;
+    b.style.transform = `translateY(${lerp(100, -100, inOutCubic(p))}%)`;
+  });
+
+  const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
+  else sub.style.opacity = 0;
+}
+
+/* ===================== AVVIO ===================== */
+window.TOTAL = TOTAL;
+window.VOICE_AT = VOICE_AT;
+window.SUBS = SUBS;
+window.POSTER_T = CONFIG.posterT;
+window.KEYFRAMES = [0, ...START.map((s, k) => +(s + durScena(CONFIG.scene[k], k) * .85).toFixed(2))];
+window.renderFrame = render;
+Promise.all(["400", "600", "700", "900"].map(p => document.fonts.load(`${p} 40px "Titillium Web"`))
+  .concat(["500", "700"].map(p => document.fonts.load(`${p} 20px "Roboto Mono"`))))
+  .then(() => document.fonts.ready).then(() => { render(0); window.__ready = true; if (!RENDER) anteprima(); });
+
+function anteprima() {
+  const fit = () => { const s = Math.min(innerWidth / L.W, (innerHeight - 50) / L.H);
+    stage.style.transform = `translate(-50%,calc(-50% - 20px)) scale(${s})`; };
+  fit(); addEventListener("resize", fit);
+  for (const f in FORMATI) {
+    const a = document.createElement("a"); a.href = `?fmt=${f}`; a.textContent = f.replace("x", ":");
+    if (f === FMT) a.setAttribute("aria-current", "true"); $("#ui").appendChild(a);
+  }
+  const au = AUDIO ? new Audio(AUDIO) : null;
+  let t0 = null, pausa = false, tp = 0;
+  const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL || (au && au.ended)) { if (au) { au.currentTime = 0; au.play(); } else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
+  stage.addEventListener("click", () => {
+    pausa = !pausa;
+    if (au) pausa ? au.pause() : au.play();
+    else if (pausa) tp = ora(); else t0 = performance.now() - tp * 1000;
+  });
+  if (au) { const b = $("#avvio"); b.style.display = "flex"; b.onclick = () => { b.style.display = "none"; parti(); }; }
+  else parti();
+}
+</script>
+</body>
+</html>
