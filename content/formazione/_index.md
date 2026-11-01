@@ -56,7 +56,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 <div class="consulta-rapida">
 {{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
 {{< link-card url="/formazione/crea-la-mia-lezione/" icon="bi-magic" titolo="Crea la mia lezione" desc="Classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti." >}}
-{{< link-card url="/formazione/libro-che-si-esplora/" icon="bi-book" titolo="Il libro che si esplora" desc="Quindici capitoli in 3D: fai la tua previsione, prova sul modellino e alza il lembo per la risposta." >}}
+{{< link-card url="/formazione/libro-che-si-esplora/" icon="bi-book" titolo="Il libro che si esplora" desc="Capitoli in 3D sull'autoprotezione: fai la tua previsione, prova sul modellino e alza il lembo per la risposta." >}}
 {{< link-card url="/formazione/settimana-protezione-civile/" icon="bi-calendar-week" titolo="Settimana della protezione civile a scuola" desc="Un programma pronto per tutto l'istituto: un tema al giorno, il compito in famiglia, la prova del venerdì." >}}
 {{< link-card url="/formazione/scatola-delle-esercitazioni/" icon="bi-box-seam" titolo="Scatola delle esercitazioni" desc="Dalla lezione alla prova in aula: scenari, ruoli, carte degli imprevisti e discussione finale." >}}
 {{< link-card url="/formazione/dalla-carta-al-territorio/" icon="bi-signpost-split" titolo="Dalla carta al territorio" desc="L'uscita sui luoghi del Piano: cartelli, aree di attesa, acqua e DAE in cinque stazioni." >}}
@@ -100,7 +100,7 @@ Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza 
 - [Giochi della sicurezza](/giochi/) — giochi per infanzia, primaria, ragazzi e famiglie (Arena con badge e progressi).
 - [Catalogo dei giochi](/catalogo-giochi/) — scheda informativa di ogni gioco con fascia d'età, durata, obiettivo didattico e accessibilità.
 - [Esperimenti e attività di protezione civile](/formazione/esperimenti/) — esperimenti scientifici e giochi da fare a scuola o a casa, con materiali semplici, per capire i rischi e come ci si protegge.
-- [Il libro che si esplora](/formazione/libro-che-si-esplora/) — libro aperto in 3D con quindici capitoli di autoprotezione: fai la tua previsione, prova sul modellino e alza il lembo per la risposta. Sotto il libro c'è la versione testuale di tutti i capitoli.
+- [Il libro che si esplora](/formazione/libro-che-si-esplora/) — libro aperto in 3D con capitoli di autoprotezione: fai la tua previsione, prova sul modellino e alza il lembo per la risposta. Sotto il libro c'è la versione testuale di tutti i capitoli.
 - [Schede stampabili](/formazione/schede-stampabili/) — schede A4 pronte per la classe.
 
 ## Aree tematiche {#aree-tematiche}

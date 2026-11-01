@@ -767,7 +767,7 @@ content("Laboratorio meteo — esplorare i dati del clima", [
 content("Il libro che si esplora — autoprotezione in 3D", [
     "Un libro aperto in 3D: per ogni capitolo una situazione, una domanda e un modellino da muovere.",
     "Si fa la previsione, si prova sulla pagina e si alza il lembo per vedere la risposta e il perché.",
-    "Quindici capitoli, dal terremoto alla siccità, con i testi delle pagine rischio e una versione testuale accessibile.",
+    "Capitoli sui rischi, dal terremoto alla siccità, con i testi delle pagine rischio e una versione testuale accessibile.",
 ], N(), fonti="Pagine rischio del sito · DPC «Io non rischio» · WCAG 2.2 AA")
 
 content("Dossier interattivi — racconti visivi", [
