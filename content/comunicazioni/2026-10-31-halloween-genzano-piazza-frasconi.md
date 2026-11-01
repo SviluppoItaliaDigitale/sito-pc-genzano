@@ -28,7 +28,7 @@ Accanto a noi c'era la **Misericordia di Ariccia**, con il presidio sanitario. I
 
 {{< foto src="/images/2026-10-31-halloween-squadra-volontari.webp"
          alt="Un gruppo di persone in posa in una piazza, su una strada asfaltata: volontarie e volontari con divise blu e gialle e gilet ad alta visibilità, volontari con divise rosse e blu e giacche arancioni, un agente della Polizia Locale e un uomo con giubbotto e cappellino blu. A destra si vede il muso di un fuoristrada bianco con una banda gialla e blu, sullo sfondo alberi, palazzi e ombrelloni."
-         caption="Volontari della Misericordia di Ariccia e della Protezione Civile, con un agente della Polizia Locale, in piazza Tommaso Frasconi il 31 ottobre 2026. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         caption="Volontari della Misericordia di Ariccia e del Gruppo, con un agente della Polizia Locale, in piazza Tommaso Frasconi il 31 ottobre 2026. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 Il programma del pomeriggio era pensato per le famiglie: il laboratorio di zucche della Pro Loco, l'area trucco, la sfilata in centro. Per noi questo vuol dire tanti bambini in piazza, spesso già al buio, con l'ora solare.
 
