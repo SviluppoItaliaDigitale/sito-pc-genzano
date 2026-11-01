@@ -72,7 +72,7 @@
           link: '/rischi-prevenzione/kit-emergenza/' },
         { id: 'gas', luogo: 'casa', peso: 2,
           testo: 'Imparo dove si chiudono il gas e l\'interruttore generale della luce, e lo mostro a tutti.',
-          perche: 'Dopo la scossa, prima di uscire, si chiudono il gas e l\'interruttore generale dell\'elettricità.',
+          perche: 'Dopo la scossa, prima di uscire, si chiudono il gas e l\'interruttore generale dell\'elettricità. Se invece senti odore di gas, non tocchi interruttori.',
           link: LINK + '#cosa-fare-dopo' },
         { id: 'mensola', luogo: 'casa', peso: 2,
           testo: 'Tolgo la mensola con i vasi sopra il letto di Flavio.',
@@ -126,7 +126,7 @@
                   perche: 'Giusto non farla muovere se rischia di cadere. Ma è accanto alla vetrata: scegliere prima un posto sicuro, vicino a un muro portante, l\'avrebbe protetta meglio.' },
             { testo: 'Le grido di alzarsi e di venire sotto il tavolo con noi.', punti: 0,
               perche: 'Con il deambulatore, alzarsi e camminare mentre la terra trema fa rischiare una caduta: non si tenta di raggiungere un tavolo.' },
-            { testo: 'Attraverso il salotto di corsa per andare da lei mentre tutto trema.', punti: 1,
+            { testo: 'Attraverso il salotto di corsa per andare da lei mentre tutto trema.', punti: 0,
               perche: 'Muoversi durante la scossa espone te agli oggetti che cadono. Prima ci si protegge, e si dice subito alla nonna come proteggersi.' }
           ];
         },
@@ -143,9 +143,9 @@
             { testo: 'Accendo la luce per vedere da dove viene.', punti: 0,
               perche: 'Con l\'odore di gas non si accendono luci o fiamme e non si usano interruttori: una scintilla può bastare.' },
             p.gas
-              ? { testo: 'Non tocco interruttori né fiamme, apro le finestre, chiudo il contatore e usciamo. Il 112 lo chiamo da fuori.', punti: 3,
+              ? { testo: 'Non tocco interruttori né fiamme, apro le finestre, chiudo il contatore e ci avviamo all\'uscita. Il 112 lo chiamo da fuori.', punti: 3,
                   perche: 'Giusto. Finestre aperte, contatore chiuso, tutti fuori, e i soccorsi si chiamano dall\'esterno: nel locale con il gas non si usa nessun telefono.' }
-              : { testo: 'Non tocco interruttori né fiamme, apro le finestre e usciamo tutti. Il 112 lo chiamo da fuori.', punti: 2,
+              : { testo: 'Non tocco interruttori né fiamme, apro le finestre e ci avviamo tutti all\'uscita. Il 112 lo chiamo da fuori.', punti: 2,
                   perche: 'Giusto uscire e chiamare da fuori, senza usare telefoni in casa. Sapere prima dove si chiude il contatore ti avrebbe permesso di chiuderlo subito.' },
             { testo: 'Chiamo subito il 112 con il cellulare, qui in cucina.', punti: 0,
               perche: 'Nel locale con il gas non si usa nessun telefono, né fisso né cellulare: si esce e si chiama il 112 da fuori.' }
@@ -156,7 +156,7 @@
       { id: 'uscire', fase: 'dopo', ora: 'Martedì, ore 21:15', luogo: 'casa', meteo: 'notte',
         titolo: 'Uscire di casa',
         testo: function (p) {
-          return 'Dovete uscire. È andata via la luce e sul pavimento ci sono vetri rotti.' +
+          return 'State per lasciare la casa. È andata via la luce e sul pavimento ci sono vetri rotti.' +
             (p.kit ? ' Il kit con le scarpe robuste e la torcia è vicino all\'ingresso.' : ' Le scarpe sono in camera e la torcia non si trova.');
         },
         scelte: function (p) {
@@ -166,7 +166,7 @@
             p.kit
               ? { testo: 'Mettiamo le scarpe, prendiamo il kit e scendiamo per le scale con calma, aiutando la nonna.', punti: 3,
                   perche: 'Giusto. Si esce con prudenza, con le scarpe ai piedi, perché possono esserci vetri e calcinacci.' }
-              : { testo: 'Cerchiamo al buio le scarpe con la luce del telefono, poi scendiamo per le scale aiutando la nonna.', punti: 2,
+              : { testo: 'Cerchiamo al buio le scarpe, facendo attenzione ai vetri, poi scendiamo per le scale aiutando la nonna.', punti: 2,
                   perche: 'Giusto uscire con le scarpe e per le scale. Con il kit pronto all\'ingresso avreste perso meno tempo al buio.' },
             { testo: 'Usciamo scalzi per fare prima.', punti: 0,
               perche: 'Dopo una scossa possono esserci vetri e calcinacci: si esce con le scarpe ai piedi.' }
@@ -262,7 +262,7 @@
         no: 'Avete cercato scarpe e torcia al buio, tra i vetri.' },
       { se: 'gas',
         si: 'Sapevate dove chiudere il gas: l\'avete fatto subito.',
-        no: 'Non sapevate dove chiudere il gas: siete usciti lasciandolo aperto.' },
+        no: 'Non sapevate dove si chiude il gas: avete perso tempo a cercare il contatore.' },
       { se: 'tecnico',
         si: 'Un tecnico aveva già indicato come rendere la casa più sicura: è la prevenzione che conta di più.',
         no: 'Non sapete ancora quanto è sicura la vostra casa: un tecnico può valutarla e indicare come migliorarla.' }

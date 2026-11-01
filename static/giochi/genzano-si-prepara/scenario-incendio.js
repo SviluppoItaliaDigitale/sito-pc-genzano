@@ -95,7 +95,7 @@
           { testo: 'Lascio stare: è solo un mozzicone.', punti: 0,
             perche: 'Con la vegetazione secca e il vento, un mozzicone acceso può far partire un incendio.' },
           { testo: 'Gli dico di gettarla dove c\'è l\'asfalto.', punti: 0,
-            perche: 'Il vento e le auto spostano il mozzicone fino all\'erba secca. Non si getta mai.' }
+            perche: 'Un mozzicone acceso non si getta mai, nemmeno sull\'asfalto: basta poco per far partire un incendio.' }
         ],
         link: LINK + '#cosa-fare-prima' },
 
@@ -127,7 +127,7 @@
         },
         scelte: [
           { testo: 'Lo attraversiamo di corsa: casa è lì dietro.', punti: 0,
-            perche: 'Nelle strade invase dal fumo la visibilità può annullarsi, e respirare il fumo è la prima causa di morte negli incendi.' },
+            perche: 'Nelle strade invase dal fumo la visibilità può annullarsi, e il fumo non va sottovalutato: respirarlo è pericoloso.' },
           { testo: 'Torniamo indietro e facciamo un\'altra strada, lontano dal fumo.', punti: 3,
             perche: 'Giusto. Non si attraversano e non si percorrono le strade invase dal fumo.' },
           { testo: 'Ci fermiamo a guardare e a fare un video.', punti: 0,
@@ -140,7 +140,7 @@
         testo: function (p) {
           var t = 'Siete a casa. Il fuoco scende verso le case al margine del bosco; il fumo arriva da ovest, la strada verso est è libera.';
           t += p.sterpaglie
-            ? ' Intorno alla casa l\'erba è tagliata: il fuoco non trova niente da bruciare fino al muro.'
+            ? ' Intorno alla casa l\'erba è tagliata: al fuoco resta meno da bruciare vicino al muro.'
             : ' L\'erba secca del giardino arriva fino al muro di casa.';
           if (p.vie) t += ' Sapete già quale strada prendere.';
           return t;
@@ -148,7 +148,7 @@
         scelte: function (p) {
           return [
             p.vie
-              ? { testo: 'Ci allontaniamo subito verso est, lontano dal fumo e dal fuoco, con la nonna e il kit.', punti: 3,
+              ? { testo: 'Ci allontaniamo subito verso est, lontano dal fumo e dal fuoco, con la nonna.', punti: 3,
                   perche: 'Giusto. Se puoi allontanarti in sicurezza, fallo subito, in direzione opposta a quella del fumo e del fuoco.' }
               : { testo: 'Ci allontaniamo verso est, lontano dal fumo, e cerchiamo la strada mentre andiamo.', punti: 2,
                   perche: 'Giusto allontanarsi subito, lontano dal fumo e dal fuoco. Con una strada già decisa, e una di riserva, sareste partiti senza esitare.' },
@@ -172,7 +172,7 @@
           { testo: 'Torno indietro da solo verso il fumo per andarlo a prendere.', punti: 0,
             perche: 'Si aiuta chi è in difficoltà solo se lo si può fare senza esporsi a pericoli: andare verso il fumo e il fuoco non lo è.' },
           { testo: 'Penso che se ne sia già andato.', punti: 0,
-            perche: 'Una persona anziana e sola può non accorgersi del pericolo o non riuscire ad andare via: va segnalata subito al 112.' }
+            perche: 'Chi vive solo può non accorgersi del pericolo o non riuscire ad andare via: se può essere in pericolo, va segnalato subito al 112.' }
         ],
         link: '/rischi-prevenzione/persone-necessita-specifiche/' },
 
@@ -195,23 +195,23 @@
         titolo: 'Tornare a casa',
         testo: function (p) {
           return p.sterpaglie
-            ? 'La casa è intatta: il fuoco si è fermato dove l\'erba era tagliata. Una casa vicina invece ha il tetto annerito.'
+            ? 'La casa non è stata toccata dal fuoco: intorno l\'erba era tagliata. Una casa vicina ha il tetto annerito.'
             : 'Il fuoco è arrivato fino al vostro giardino e ha annerito una parete di casa.';
         },
         scelte: [
           { testo: 'Rientriamo solo quando le squadre di soccorso lo dicono, e facciamo verificare la casa se il fuoco l\'ha toccata.', punti: 3,
             perche: 'Giusto. Si seguono le indicazioni delle squadre di soccorso e, se l\'abitazione è stata interessata dal fuoco, si fa verificare la stabilità della struttura prima di rientrare.' },
           { testo: 'Rientriamo subito: la casa sembra a posto.', punti: 0,
-            perche: 'Un edificio toccato dal fuoco può avere danni che non si vedono: prima si fa verificare la struttura.' },
+            perche: 'Prima si aspettano le indicazioni delle squadre di soccorso; e se il fuoco ha toccato la casa, ne va fatta verificare la struttura, perché i danni possono non vedersi.' },
           { testo: 'Entro a prendere qualcosa e poi esco.', punti: 0,
-            perche: 'Finché le squadre non dicono che si può rientrare, in casa non si entra, nemmeno per un minuto.' }
+            perche: 'Si rientra quando le squadre di soccorso dicono che si può: la zona può essere ancora pericolosa.' }
         ],
         link: LINK + '#cosa-fare-dopo' }
     ],
 
     resoconto: [
       { se: 'sterpaglie',
-        si: 'L\'erba intorno alla casa era tagliata: il fuoco si è fermato prima del muro.',
+        si: 'L\'erba intorno alla casa era tagliata: al fuoco restava meno da bruciare e la casa non è stata toccata.',
         no: 'L\'erba secca arrivava fino alla casa: il fuoco ha annerito una parete.' },
       { se: 'vie',
         si: 'Sapevate già quale strada prendere e siete partiti subito.',
@@ -224,7 +224,7 @@
         no: 'Siete usciti senza documenti, farmaci e torcia.' },
       { se: 'vicino',
         si: 'Il signor Pasquale aveva il tuo numero e vi ha chiamati subito: è venuto via con voi.',
-        no: 'Il signor Pasquale era rimasto solo in casa, con il fuoco vicino.' },
+        no: 'Il signor Pasquale non aveva ancora lasciato casa: l\'avete scoperto solo mentre vi allontanavate.' },
       { se: 'bollettino',
         si: 'In casa tutti sapevano che il pericolo era elevato.',
         no: 'In casa nessuno sapeva che il pericolo era elevato.' }

@@ -111,7 +111,7 @@
           { testo: 'Lo sveglio e lo porto con me.', punti: 3,
             perche: 'Giusto. Mai persone o animali da soli in un\'auto parcheggiata al sole.' },
           { testo: 'Lo lascio con il motore acceso e l\'aria condizionata.', punti: 0,
-            perche: 'Un bambino non si lascia mai da solo in auto: se il motore si spegne, l\'auto chiusa si scalda in fretta.' }
+            perche: 'Mai persone o animali in un\'auto parcheggiata al sole, nemmeno con il motore acceso: un bambino non si lascia solo in auto.' }
         ],
         link: LINK + '#cosa-fare-durante' },
 
@@ -122,10 +122,10 @@
             (p.ventilatore ? ' Il ventilatore funziona: l\'hai controllato domenica.' : ' Il ventilatore non parte: non l\'avevi controllato.');
         },
         scelte: [
-          { testo: 'Abbasso le tapparelle nelle ore di sole e preparo per pranzo frutta e verdura.', punti: 3,
+          { testo: 'Abbasso le tapparelle nelle ore di sole e preparo per cena un pasto leggero con frutta e verdura.', punti: 3,
             perche: 'Giusto. Nelle ore di sole diretto si abbassano le tapparelle e si rinfrescano gli ambienti; i pasti sono leggeri, con frutta e verdura.' },
           { testo: 'Apro tutte le finestre per fare corrente, anche dove batte il sole.', punti: 1,
-            perche: 'Nelle ore di sole diretto conviene abbassare le tapparelle, per non far entrare il caldo. Le finestre si aprono quando fuori fa più fresco.' },
+            perche: 'Nelle ore di sole diretto si abbassano le tapparelle e si rinfrescano gli ambienti: è l\'indicazione per tenere fresca la casa.' },
           { testo: 'Preparo un pranzo abbondante, con fritti e dolci.', punti: 0,
             perche: 'Con il caldo si fanno pasti leggeri, privilegiando frutta e verdura.' }
         ],
@@ -143,8 +143,8 @@
             p.acqua
               ? { testo: 'Le porto acqua fresca, non ghiacciata, e la invito a bere a piccoli sorsi e spesso, anche senza sete.', punti: 3,
                   perche: 'Giusto. Con il caldo si beve molta acqua anche se non si sente sete: gli anziani sono tra i più a rischio.' }
-              : { testo: 'Esco a comprare l\'acqua, anche se sono le 16, e poi la faccio bere a piccoli sorsi.', punti: 2,
-                  perche: 'Farla bere è giusto, anche senza sete. Ma uscire nelle ore più calde espone anche te: con una scorta in casa non sarebbe servito.' },
+              : { testo: 'Le do subito l\'acqua che è rimasta, fresca ma non ghiacciata, a piccoli sorsi; altra acqua la compro dopo le 18.', punti: 2,
+                  perche: 'Giusto farla bere subito, anche senza sete, e non uscire nelle ore più calde. Con una scorta in casa non avresti dovuto poi uscire a comprarne altra.' },
             { testo: 'Se non ha sete, va bene così.', punti: 0,
               perche: 'Si beve molta acqua anche se non si sente sete: gli anziani sono tra le persone più a rischio con il caldo.' },
             { testo: 'Le preparo una bibita gelata e zuccherata.', punti: 0,
@@ -185,8 +185,8 @@
             perche: 'Giusto. Si continua a bere anche quando la temperatura scende, e gli sforzi si fanno nelle ore più fresche.' },
           { testo: 'È finita: niente più attenzioni, si gioca a mezzogiorno.', punti: 0,
             perche: 'Si continua a idratarsi anche quando la temperatura scende, e gli sforzi intensi nelle ore più calde restano da evitare.' },
-          { testo: 'Gioca pure a mezzogiorno, basta il cappello.', punti: 1,
-            perche: 'Il cappello aiuta, ma gli sforzi fisici intensi si fanno nelle ore più fresche.' }
+          { testo: 'Gioca pure a mezzogiorno, basta il cappello.', punti: 0,
+            perche: 'Il cappello aiuta, ma gli sforzi fisici intensi si evitano nelle ore più calde, dalle 11 alle 18.' }
         ],
         link: LINK + '#cosa-fare-dopo' }
     ],
@@ -194,7 +194,7 @@
     resoconto: [
       { se: 'vicino',
         si: 'Il signor Pasquale era sentito ogni giorno: il malore è stato scoperto subito.',
-        no: 'Il signor Pasquale è rimasto solo per giorni: il malore è stato scoperto tardi.' },
+        no: 'Non c\'era un accordo per sentire il signor Pasquale ogni giorno: il malore è stato scoperto più tardi.' },
       { se: 'farmaci',
         si: 'Le medicine della nonna erano in un posto fresco.',
         no: 'Le medicine della nonna sono rimaste al sole: il calore può alterarne l\'efficacia.' },
