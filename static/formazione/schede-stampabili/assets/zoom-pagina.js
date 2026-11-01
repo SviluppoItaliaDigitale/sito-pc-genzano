@@ -15,13 +15,19 @@
   var conZoom = 'zoom' in html.style;
 
   var stile = document.createElement('style');
+  // Lo zoom vale solo a schermo (@media screen): la stampa resta quella di sempre, con la sua scala
+  // per pagina (le storie e le schede hanno uno zoom di stampa tarato sui fogli).
+  var SEL = '.storia-page,.scheda-page';
   stile.textContent =
     '.zp{display:inline-flex;align-items:center;gap:4px;flex-wrap:nowrap}' +
     '.zp button{min-width:44px;min-height:44px;font-size:1.05rem;line-height:1;padding:0 .7rem;cursor:pointer}' +
     '.zp button[disabled]{opacity:.45;cursor:not-allowed}' +
     '.zp-valore{min-width:3.4em;text-align:center;font-weight:700;font-size:.9rem}' +
-    '@media print{.zp{display:none!important}' +
-    '.storia-page,.scheda-page{zoom:1!important;transform:none!important;margin-right:0!important;margin-bottom:0!important}}';
+    '@media print{.zp{display:none!important}}' +
+    '@media screen{' +
+    'html.zp-on:not(.zp-tr) ' + SEL.replace(',', ',html.zp-on:not(.zp-tr) ') + '{zoom:var(--zp)}' +
+    'html.zp-on.zp-tr ' + SEL.replace(',', ',html.zp-on.zp-tr ') +
+    '{transform:scale(var(--zp));transform-origin:0 0;margin-right:var(--zp-mr);margin-bottom:var(--zp-mb)}}';
   document.head.appendChild(stile);
 
   var gruppo = document.createElement('span');
@@ -48,19 +54,16 @@
     var z = PASSI[passo];
     // Il punto letto resta più o meno lo stesso: lo scorrimento cresce in proporzione.
     var x = window.pageXOffset * z / vecchio, y = window.pageYOffset * z / vecchio;
-    for (var i = 0; i < pagine.length; i++) {
-      var p = pagine[i];
-      if (conZoom) {
-        p.style.zoom = z === 1 ? '' : String(z);
-      } else {
-        p.style.transform = ''; p.style.marginRight = ''; p.style.marginBottom = '';
-        if (z !== 1) {
-          var w = p.offsetWidth, h = p.offsetHeight;
-          p.style.transformOrigin = '0 0';
-          p.style.transform = 'scale(' + z + ')';
-          p.style.marginRight = (w * (z - 1)) + 'px';
-          p.style.marginBottom = (h * (z - 1)) + 'px';
-        }
+    html.style.setProperty('--zp', String(z));
+    html.classList.toggle('zp-on', z !== 1);
+    html.classList.toggle('zp-tr', !conZoom);
+    if (!conZoom) {
+      // Senza zoom CSS (Firefox prima della 126) si scala con transform: i margini lasciano lo spazio
+      // che la pagina ingrandita occupa, altrimenti lo scorrimento non ci arriverebbe.
+      for (var i = 0; i < pagine.length; i++) {
+        var p = pagine[i];
+        p.style.setProperty('--zp-mr', (p.offsetWidth * (z - 1)) + 'px');
+        p.style.setProperty('--zp-mb', (p.offsetHeight * (z - 1)) + 'px');
       }
     }
     valore.textContent = Math.round(z * 100) + '%';
