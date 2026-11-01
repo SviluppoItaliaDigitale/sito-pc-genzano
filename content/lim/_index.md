@@ -26,7 +26,7 @@ Se un controllo non va a buon fine, il problema viene segnalato e corretto prima
 1. Apri la pagina dal browser della LIM o del computer collegato. Non serve installare nulla né creare un account.
 2. Nei giochi tocca **«Schermo intero»**, in alto a destra: spariscono le barre del browser e il gioco occupa tutta la lavagna. Per uscire tocca di nuovo il pulsante.
 3. Per proiettare una pagina di testo (un rischio, una storia, una scheda del kit) usa **«Modalità Aula»**: la pagina diventa una sequenza di schermate con il testo grande, da scorrere con «Avanti» e «Indietro».
-4. Se il testo è piccolo per chi sta in fondo all'aula, ingrandisci con lo zoom del browser: le pagine restano nello schermo anche al 150%.
+4. Se il testo è piccolo per chi sta in fondo all'aula, ingrandisci: nelle storie e nei libri pop-up tocca **«+»** nella barra in alto, nel libro che si esplora **«Pagina sinistra»** o **«Pagina destra»**, poi scorri col dito per spostarti; **«↺ Ripristina»** riporta tutto com'era. Sulle lavagne che lo permettono funziona anche il pizzico con due dita, e nelle altre pagine lo zoom del browser: restano nello schermo anche al 150%.
 5. Nei giochi con «Ascolta» o «Leggi ad alta voce» il testo si sente dalle casse della LIM.
 {{< /passi >}}
 
