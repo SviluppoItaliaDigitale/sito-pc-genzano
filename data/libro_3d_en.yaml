@@ -1,0 +1,263 @@
+# English translation of the 3D book «Il libro che si esplora» (/formazione/libro-che-si-esplora/).
+# Traduzione inglese di data/libro_3d.yaml, che resta la fonte unica dei testi:
+# stessa struttura, stesso ordine, stesse chiavi. Se cambia l'italiano, va riallineato questo file.
+# Il capitolo 5 legge i colori da data/codici_colore.yaml, non da qui. Le pagine collegate sono in italiano.
+aggiornato: '2026-11-01'
+capitoli:
+- chiave: sisma
+  occhiello: Chapter 1 · Earthquake risk
+  titolo: The shaking
+  intro: You are at home and you feel an earthquake. You have only a few seconds to choose where to stay.
+  domanda: Where do you take cover during the shaking?
+  opzioni:
+  - testo: Under a sturdy table
+    giusta: true
+  - testo: Next to the window
+    perche: 'Windows, glass and mirrors can break: stay away from them during the shaking.'
+  - testo: Down the stairs, towards the exit
+    perche: Do not run outside during the shaking, and do not use the stairs or the lift.
+  risposta: Take cover under a sturdy table or desk, or next to a load-bearing wall, and protect your head with your arms or a cushion. Do not rush outside during the shaking, do not use the stairs or the lift, and stay away from windows, glass, mirrors and heavy furniture.
+  breve: A · Under the sturdy table, protecting your head. Away from windows and heavy furniture. Do not use the stairs or the lift during the shaking.
+  fonti:
+  - titolo: 'Earthquake risk: what to do during the shaking (in Italian)'
+    url: /rischi-prevenzione/rischio-sismico/#cosa-fare-durante
+- chiave: alluvione
+  occhiello: Chapter 2 · Flood and landslide risk
+  titolo: The water rises
+  intro: It has been raining for hours and water starts coming into the house from below. It fills the rooms below street level first.
+  domanda: Water is coming into the house. Where do you go?
+  opzioni:
+  - testo: To the cellar, to save things
+    perche: 'Cellars and basements are the first places the water fills: do not go down there during a flood.'
+  - testo: To the top floor of the house
+    giusta: true
+  - testo: To the garage, to move the car
+    perche: Cellars and garages flood first, and the pressure of the water can jam the door. A car can be replaced, a person cannot.
+  risposta: Go up to the upper floors of the house, without using the lift. During the flood do not go down into cellars, garages or basements. If you can do it safely, turn off the gas and the electricity, but do not touch the electrical system with wet hands or feet.
+  breve: B · To the top floor, without the lift. Do not go down to cellars, garages or basements. Gas and power only if you can switch them off safely.
+  fonti:
+  - titolo: 'Flood and landslide risk: what to do during the event (in Italian)'
+    url: /rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante
+- chiave: sottopasso
+  occhiello: Chapter 3 · Flooded roads
+  titolo: The underpass
+  intro: You are in your car. The road dips into an underpass and the road surface is covered with water. From here you cannot see how deep it is.
+  domanda: The underpass ahead of you is flooded. What do you do?
+  opzioni:
+  - testo: 'I drive through slowly: the water looks shallow'
+    perche: A few centimetres of water are enough to make you lose grip or stall the engine.
+  - testo: I drive through fast, so I do not stop
+    perche: 'Even if you go fast, you do not know what is under the water: the car can go out of control or stall.'
+  - testo: I turn back and look for another road
+    giusta: true
+  risposta: Never drive through an underpass or a flooded road. A few centimetres of water are enough to make you lose grip or stall the engine, and under the surface there may be holes or open manholes. If the car stops and you can get out without stepping into the current, leave it and walk up to higher ground. If the current is strong, stay inside and call 112, the single European emergency number.
+  breve: 'C · Turn back. Never drive through a flooded underpass: under the water there may be holes or open manholes.'
+  fonti:
+  - titolo: 'Flood and landslide risk: if you are in a car (in Italian)'
+    url: /rischi-prevenzione/rischio-idrogeologico/#cosa-fare-durante
+- chiave: incendio
+  occhiello: Chapter 4 · Wildfires
+  titolo: Wind and smoke
+  intro: A column of smoke rises from the woods near your home and the wind is pushing it. First of all, you call 112, the single European emergency number.
+  domanda: You can move away safely. Which way do you go?
+  opzioni:
+  - testo: Towards the smoke, to see what is going on
+    perche: 'In smoke, visibility can drop to zero very quickly: do not stay on roads where there is smoke.'
+  - testo: The opposite way from the smoke and the fire
+    giusta: true
+  - testo: Towards the flames, to try to put them out
+    perche: Do not go near the flames and do not try to put the fire out on your own.
+  risposta: Call 112, the single European emergency number, right away, giving the place and the direction of the smoke. If you can move away safely, do so immediately, in the direction opposite to the smoke and the fire. Do not go near the flames and do not try to put the fire out on your own. Do not flee uphill ahead of the fire. If you are a child, tell an adult straight away.
+  breve: B · Call 112 and move away in the direction opposite to smoke and fire. Do not go near the flames.
+  fonti:
+  - titolo: 'Wildfire risk: what to do during a fire (in Italian)'
+    url: /rischi-prevenzione/rischio-incendio/#cosa-fare-durante
+- chiave: allerta
+  occhiello: Chapter 5 · Weather alerts
+  titolo: The alert colours
+  intro: The bulletins use four colours. Each colour tells you how intense and widespread the expected events may be.
+  domanda: An orange alert is forecast for tomorrow. What do you do?
+  opzioni:
+  - testo: 'Nothing different: it is just rain'
+    perche: 'Orange means events that may be widespread and dangerous: you need to get ready.'
+  - testo: I limit my trips and keep the kit ready
+    giusta: true
+  - testo: I go and look at the stream as it swells
+    perche: 'Do not stay near watercourses: ditches and streams swell very fast.'
+  risposta: With an orange alert, limit your trips to what is strictly necessary, secure your belongings in basements and cellars, keep your emergency kit ready and follow the instructions of the authorities.
+  breve: B · Limit your trips, secure belongings in basements and cellars, keep the kit ready, follow the authorities.
+  fonti:
+  - titolo: 'Weather alerts and colour codes (in Italian)'
+    url: /allerte-meteo/
+- chiave: kit
+  occhiello: Chapter 6 · Emergency kit
+  titolo: The ready backpack
+  intro: A light backpack, kept near the exit, to grab on the way out when you have to leave home within a few minutes.
+  domanda: Which of these items does NOT go in the backpack?
+  opzioni:
+  - testo: The torch
+    perche: 'The torch is needed: it is a safe light when the power is out.'
+  - testo: The candle
+    giusta: true
+  - testo: The whistle
+    perche: 'The whistle is needed: it helps people find you if you are trapped.'
+  risposta: 'The candle stays out: for light use a torch, because candles can start a fire. The backpack should hold documents, medicines, a phone with its charger, a torch, a whistle, water and long-life snacks.'
+  breve: 'B · The candle. For light, use a torch: candles can start a fire.'
+  fonti:
+  - titolo: 'Emergency kit: the backpack to grab on the way out (in Italian)'
+    url: /rischi-prevenzione/kit-emergenza/#kit-vai
+  - titolo: 'Blackout: a torch, not candles (in Italian)'
+    url: /rischi-prevenzione/blackout/#cosa-fare-durante
+- chiave: caldo
+  occhiello: Chapter 7 · Heatwaves
+  titolo: The midday sun
+  intro: A heatwave is under way. You have to go out to run an errand and you can choose the time.
+  domanda: What time do you go out?
+  opzioni:
+  - testo: At one o'clock, to get it done sooner
+    perche: 'From 11 am to 6 pm are the hottest hours: avoid going out and physical effort in that time.'
+  - testo: Before 11 am or after 6 pm
+    giusta: true
+  - testo: At three o'clock, a hat will do
+    perche: A hat helps, but from 11 am to 6 pm it is better to stay in the cool.
+  risposta: Avoid going out in the hottest hours, from 11 am to 6 pm. Drink plenty of water even if you do not feel thirsty, wear light-coloured, light clothes, a hat and sunglasses, and lower the shutters when the sun is direct. Never leave people or animals in a car parked in the sun.
+  breve: B · Before 11 am or after 6 pm. Drink often, keep the shutters down, never leave people or animals in a car in the sun.
+  fonti:
+  - titolo: 'Heatwaves: what to do during one (in Italian)'
+    url: /rischi-prevenzione/ondate-di-calore/#cosa-fare-durante
+- chiave: temporale
+  occhiello: Chapter 8 · Severe thunderstorms
+  titolo: The lightning
+  intro: You are in an open field and a thunderstorm with lightning arrives. There is a lone tree, a light shelter roof, a car and a brick house.
+  domanda: Where do you take shelter?
+  opzioni:
+  - testo: Under the lone tree
+    perche: 'Lone trees are natural targets for lightning: move away from them.'
+  - testo: Under the light shelter roof
+    perche: 'Light roofs and makeshift structures do not protect you: do not take shelter there.'
+  - testo: In the brick house, or in the car with the windows closed
+    giusta: true
+  risposta: Go into a solid building or into a car with the windows closed. Move away from lone trees, metal poles, pylons and metal fences, and do not take shelter under roofs or makeshift structures. Indoors, unplug electrical appliances and stay away from windows and French windows.
+  breve: C · In a solid building or in a car with the windows closed. Never under lone trees or shelter roofs.
+  fonti:
+  - titolo: 'Severe thunderstorms: what to do during one (in Italian)'
+    url: /rischi-prevenzione/temporali-intensi/#cosa-fare-durante
+- chiave: vento
+  occhiello: Chapter 9 · Strong wind
+  titolo: The gusts
+  intro: You are walking down the street and the wind is blowing in very strong gusts. Around you there is a billboard, scaffolding, a tree and a building.
+  domanda: What do you do?
+  opzioni:
+  - testo: I stop under the building's cornice
+    perche: 'Do not stand under cornices or hanging structures: pieces can fall.'
+  - testo: I go into a building and stay away from the windows
+    giusta: true
+  - testo: I take cover behind the billboard
+    perche: Billboards, scaffolding, trees and lamp posts are exactly what you should move away from.
+  risposta: If possible, stay indoors, away from windows and glass doors, with doors and windows closed. If you are outside, move away from trees, lamp posts, scaffolding and billboards, and do not stand under cornices or hanging structures.
+  breve: B · Go into a building, away from the windows. Outside, keep away from trees, scaffolding, billboards and cornices.
+  fonti:
+  - titolo: 'Strong wind: what to do during it (in Italian)'
+    url: /rischi-prevenzione/vento-forte/#cosa-fare-durante
+- chiave: blackout
+  occhiello: Chapter 10 · Blackout
+  titolo: In the dark
+  intro: It is evening and the power goes out across the whole neighbourhood. It is dark at home.
+  domanda: What do you do first?
+  opzioni:
+  - testo: I light candles
+    perche: 'Candles can start a fire: for light, use a torch.'
+  - testo: I take a torch and unplug the appliances
+    giusta: true
+  - testo: I open the fridge to check the food
+    perche: 'Keep the fridge and freezer closed: food keeps for many hours without opening them.'
+  risposta: 'Stay calm: blackouts are usually temporary. Use a torch, not candles. Unplug appliances and leave just one lamp switched on so you notice when the power comes back. Keep the fridge and freezer closed. Do not use fuel generators in enclosed spaces.'
+  breve: B · A torch, not candles. Unplug appliances and keep the fridge and freezer closed.
+  fonti:
+  - titolo: 'Blackout: what to do during one (in Italian)'
+    url: /rischi-prevenzione/blackout/#cosa-fare-durante
+- chiave: gas
+  occhiello: Chapter 11 · Volcanic risk and gas
+  titolo: The gas you cannot see
+  intro: In some areas of the Colli Albani the ground can release carbon dioxide. It is an invisible, odourless gas, heavier than air, that collects in cellars, wells and poorly ventilated basements.
+  domanda: You enter a cellar, you feel dizzy and you see an animal lying motionless on the floor. What do you do?
+  opzioni:
+  - testo: I go down to get the animal
+    perche: 'Do not enter an enclosed space to help someone lying on the floor: you would become the second victim.'
+  - testo: I get out into the open air at once and call 112
+    giusta: true
+  - testo: I stay to take a closer look at what is happening
+    perche: 'Do not stay to take a closer look: get out into the open air at once.'
+  risposta: 'Get out into the open air immediately and do not go back. Call 112, the single European emergency number, and say «suspected gas in a confined space»: the Fire Brigade arrives with breathing apparatus. Do not enter to help anyone lying on the floor without equipment and training, and keep other people away. If you are a child, get out and tell an adult straight away.'
+  breve: 'B · Get out into the open air at once and call 112. Do not go in to help: the Fire Brigade arrives with breathing apparatus.'
+  fonti:
+  - titolo: 'Volcanic risk: suspected carbon dioxide build-up (in Italian)'
+    url: /rischi-prevenzione/rischio-vulcanico/#durante-co2
+- chiave: maremoto
+  occhiello: Chapter 12 · Tsunami
+  titolo: The sea pulls back
+  intro: You are at the seaside, on the coast of Lazio. Suddenly the sea pulls back and leaves an unusually wide stretch of beach uncovered.
+  domanda: What do you do?
+  opzioni:
+  - testo: I go and look from close up
+    perche: 'Do not go down towards the sea to watch or take photos: minutes count.'
+  - testo: I wait for an official warning
+    perche: 'If you recognise the natural signs, do not wait for confirmation: move away at once.'
+  - testo: I walk away to high ground
+    giusta: true
+  risposta: 'Move away from the beach on foot at once and get to high ground, without waiting for an official message. If you cannot, go up to the upper floors of a solid building. Avoid the car: coastal roads get blocked. Stay up high until the all-clear: the first wave may not be the biggest.'
+  breve: C · On foot to high ground, at once. Do not wait for a warning and do not go back to the beach after the first wave.
+  fonti:
+  - titolo: 'Tsunami: signs and what to do (in Italian)'
+    url: /rischi-prevenzione/maremoto/#segnali
+- chiave: industriale
+  occhiello: Chapter 13 · Industrial risk
+  titolo: The cloud
+  intro: An accident at a nearby plant releases a cloud of hazardous substances. The authorities ask the public to protect themselves.
+  domanda: What do you do?
+  opzioni:
+  - testo: I run away on foot through the cloud
+    perche: 'Do not go through the cloud on foot or by car: sheltering indoors is almost always safer.'
+  - testo: I go indoors, close doors and windows and switch off the ventilation
+    giusta: true
+  - testo: I rush to pick up the children from school
+    perche: 'The school follows its own emergency plan: taking children out would expose them to the cloud.'
+  risposta: Go into the nearest closed building, close doors and windows, switch off ventilation, air conditioners and boilers, seal any gaps with damp cloths and go up to the upper floors. Listen to the official channels and go out only if the authorities order an evacuation.
+  breve: 'B · Shelter indoors: doors and windows closed, ventilation off, upper floors. Follow the official channels.'
+  fonti:
+  - titolo: 'Industrial risk: what to do during an incident (in Italian)'
+    url: /rischi-prevenzione/rischio-industriale/#cosa-fare-durante
+- chiave: radiologico
+  occhiello: Chapter 14 · Radiological emergency
+  titolo: Sheltering indoors
+  intro: 'A radiological emergency: the authorities order the population of the area to shelter indoors.'
+  domanda: What do you do?
+  opzioni:
+  - testo: I take the car and drive away
+    perche: If you have been told to shelter indoors, setting out on a journey exposes you more.
+  - testo: I stay at home, close everything and follow the official channels
+    giusta: true
+  - testo: I take the iodine I have at home
+    perche: 'Iodine is taken only if and when the health authorities order it: on your own it is useless or harmful.'
+  risposta: Follow the instructions of the authorities. If you are told to shelter indoors, stay at home, close doors and windows, switch off ventilation and air conditioners and, if you can, stay in an inner room. If you were outdoors, take off your outer clothes, seal them in a bag and take a shower. Take iodine only if the health authorities order it, and do not pass on unverified rumours.
+  breve: B · Stay at home with doors and windows closed and ventilation off. Iodine only if the health authorities order it.
+  fonti:
+  - titolo: 'Nuclear and radiological risk: what to do during an emergency (in Italian)'
+    url: /rischi-prevenzione/rischio-nucleare-radiologico/#cosa-fare-durante
+- chiave: siccita
+  occhiello: Chapter 15 · Drought
+  titolo: The water that runs short
+  intro: 'It has not rained for months and the municipality has issued an order because of the water crisis: drinking water must be saved.'
+  domanda: What do you do?
+  opzioni:
+  - testo: 'I wash the car anyway: it is only a little water'
+    perche: Washing the car, filling swimming pools and watering lawns are among the uses that such orders usually restrict.
+  - testo: I follow the bans and cut my consumption
+    giusta: true
+  - testo: I drink from an unchecked country drinking fountain
+    perche: 'Do not drink water from wells, springs or fountains that are not checked: scarcity does not make it safe.'
+  risposta: 'Follow the municipal orders: the water you save is needed for drinking. Take shorter showers, turn off the tap while you brush your teeth, reuse the water from washing vegetables for plants. If the supply is cut off at certain hours, fill clean containers and keep them covered. Check that vulnerable people in your neighbourhood have water.'
+  breve: B · Follow the orders and cut your consumption. Do not use drinking water for non-essential uses.
+  fonti:
+  - titolo: 'Drought: what to do during one (in Italian)'
+    url: /rischi-prevenzione/siccita/#cosa-fare-durante

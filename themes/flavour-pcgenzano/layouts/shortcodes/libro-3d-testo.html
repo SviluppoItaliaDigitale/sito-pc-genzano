@@ -1,0 +1,32 @@
+{{- /*
+  Shortcode libro-3d-testo — versione solo testo del «Libro che si esplora»
+  in un'altra lingua (oggi: inglese, data/libro_3d_en.yaml). Il libro in 3D
+  resta in italiano perché i messaggi delle scene sono scritti nello script;
+  qui ogni capitolo ha situazione, domanda, risposte e la risposta giusta in
+  un riquadro da aprire (<details>, nessun JavaScript).
+  Uso: {{< libro-3d-testo dati="libro_3d_en" >}}
+*/ -}}
+{{- $nome := .Get "dati" | default "libro_3d_en" -}}
+{{- $d := index site.Data $nome -}}
+{{- if not $d }}{{ errorf "libro-3d-testo: dati %q non trovati in data/" $nome }}{{ end -}}
+<div class="lb-testo-lingua">
+{{- range $i, $c := $d.capitoli }}
+<section class="lb-tl-cap" id="chapter-{{ add $i 1 }}" aria-labelledby="lb-tl-{{ add $i 1 }}">
+  <p class="lb-tl-occhiello">{{ $c.occhiello }}</p>
+  <h2 class="h4" id="lb-tl-{{ add $i 1 }}">{{ $c.titolo }}</h2>
+  <p>{{ $c.intro }}</p>
+  <p><strong>{{ $c.domanda }}</strong></p>
+  <ol type="A">{{ range $c.opzioni }}<li>{{ .testo }}</li>{{ end }}</ol>
+  <details class="faq-item">
+    <summary><strong>Show the answer</strong></summary>
+    {{- range $k, $o := $c.opzioni }}{{ if $o.giusta }}
+    <p><strong>The safe choice is {{ index (slice "A" "B" "C" "D") $k }}.</strong> {{ $c.risposta }}</p>
+    {{- end }}{{ end }}
+    <ul>
+    {{- range $k, $o := $c.opzioni }}{{ if not $o.giusta }}<li><strong>Why not {{ index (slice "A" "B" "C" "D") $k }}:</strong> {{ $o.perche }}</li>{{ end }}{{ end }}
+    </ul>
+    <p>More information: {{ range $k, $f := $c.fonti }}{{ if $k }}; {{ end }}<a href="{{ strings.TrimPrefix "/" $f.url | relURL }}" hreflang="it">{{ $f.titolo }}</a>{{ end }}.</p>
+  </details>
+</section>
+{{- end }}
+</div>

@@ -1,0 +1,50 @@
+{{- /*
+  Shortcode libro-3d-schede — schede A4 del «Libro che si esplora», una per
+  capitolo, da usare in classe anche senza lavagna digitale: situazione,
+  domanda, risposte da segnare, spazio per il perché e risposta capovolta in
+  fondo al foglio (si legge girando il foglio). Testi da data/libro_3d.yaml
+  (o dal file indicato con dati="…"), colori del capitolo sull'allerta da
+  data/codici_colore.yaml. In stampa: un capitolo per foglio, senza il resto
+  della pagina; banda delle affiliazioni in fondo a ogni foglio.
+  Uso: {{< libro-3d-schede >}}
+*/ -}}
+{{- $nome := .Get "dati" | default "libro_3d" -}}
+{{- $d := index site.Data $nome -}}
+{{- if not $d }}{{ errorf "libro-3d-schede: dati %q non trovati in data/" $nome }}{{ end -}}
+<link rel="stylesheet" href="{{ "css/libro-3d-schede.css" | relURL }}?v={{ readFile "themes/flavour-pcgenzano/static/css/libro-3d-schede.css" | hash.FNV32a }}">
+<p class="d-print-none"><button type="button" class="btn btn-primary" data-lb-stampa><i class="bi bi-printer me-1" aria-hidden="true"></i>Stampa tutte le schede</button></p>
+<div class="lb-schede">
+{{- range $i, $c := $d.capitoli }}
+<section class="lb-scheda" id="scheda-{{ add $i 1 }}" aria-labelledby="lb-scheda-titolo-{{ add $i 1 }}">
+  <div class="lb-scheda-micro" aria-hidden="true" data-micro="{{ strings.Repeat 4 "GRUPPO COMUNALE VOLONTARI DI PROTEZIONE CIVILE DI GENZANO DI ROMA · PROTEZIONECIVILEGENZANO.IT · " }}"></div>
+  <header class="lb-scheda-testa">
+    <img src="{{ "images/logo-pc-genzano.png" | relURL }}" alt="Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" width="48" height="48">
+    <p>Il libro che si esplora<br><span>{{ $c.occhiello }}</span></p>
+  </header>
+  <h2 class="lb-scheda-titolo" id="lb-scheda-titolo-{{ add $i 1 }}">{{ $c.titolo }}</h2>
+  <p>{{ $c.intro }}</p>
+  <p class="lb-scheda-domanda">{{ $c.domanda }}</p>
+  <p class="lb-scheda-istr">Segna con una crocetta la risposta che scegli.</p>
+  <ul class="lb-scheda-opz">
+  {{- range $k, $o := $c.opzioni }}
+    <li><span class="lb-scheda-casella" aria-hidden="true"></span><b>{{ index (slice "A" "B" "C" "D") $k }}.</b> {{ $o.testo }}</li>
+  {{- end }}
+  </ul>
+  <p class="lb-scheda-istr">Perché hai scelto questa risposta?</p>
+  <div class="lb-scheda-righe" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="lb-scheda-risposta soluzione-capovolta">
+    <p><strong>Risposta.</strong> {{ $c.risposta }}</p>
+    <p><strong>Perché non le altre.</strong> {{ range $k, $o := $c.opzioni }}{{ if not $o.giusta }}{{ index (slice "A" "B" "C" "D") $k }}: {{ $o.perche }} {{ end }}{{ end }}</p>
+    {{- if eq $c.chiave "allerta" }}
+    <ul>{{ range site.Data.codici_colore.codici }}<li><strong>{{ .titolo }}.</strong> {{ .cosa_fare }}</li>{{ end }}</ul>
+    {{- end }}
+    <p class="lb-scheda-fonti">Per saperne di più: {{ range $k, $f := $c.fonti }}{{ if $k }}; {{ end }}{{ $f.titolo }} (protezionecivilegenzano.it{{ index (split $f.url "#") 0 }}){{ end }}.</p>
+  </div>
+  <div class="lb-scheda-piede">
+    <img src="{{ "images/footer-print-affiliazioni.png" | relURL }}" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, Volontariato" width="1200" height="140">
+    <p>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma · protezionecivilegenzano.it · CC BY-NC-SA 4.0 · Rev. 01 · Novembre 2026</p>
+  </div>
+</section>
+{{- end }}
+</div>
+<script>document.querySelectorAll("[data-lb-stampa]").forEach(function(b){b.addEventListener("click",function(){window.print();});});</script>

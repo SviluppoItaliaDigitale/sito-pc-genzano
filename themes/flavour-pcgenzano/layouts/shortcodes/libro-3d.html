@@ -7,13 +7,20 @@
   passati allo script nel blocco JSON #lb-dati e ripetuti sotto come versione
   testuale, che vale anche senza JavaScript o WebGL.
   Script: static/js/libro-3d.js (modulo), libreria in static/vendor/three/.
-  Uso: {{< libro-3d >}}
+  Uso: {{< libro-3d >}}; versione in italiano semplice: {{< libro-3d dati="libro_3d_facile" >}}
+  (stessi capitoli e stesse scene, testi di data/libro_3d_facile.yaml).
+  Strumenti per la classe: lettura ad alta voce, conteggio delle previsioni,
+  avanzamento salvato nel browser e attestato da stampare a fine libro.
 */ -}}
-{{- $d := site.Data.libro_3d -}}
+{{- $nome := .Get "dati" | default "libro_3d" -}}
+{{- $d := index site.Data $nome -}}
+{{- if not $d }}{{ errorf "libro-3d: dati %q non trovati in data/" $nome }}{{ end -}}
 {{- $vj := readFile "themes/flavour-pcgenzano/static/js/libro-3d.js" | hash.FNV32a -}}
 {{- $vc := readFile "themes/flavour-pcgenzano/static/css/libro-3d.css" | hash.FNV32a -}}
 <link rel="stylesheet" href="{{ "css/libro-3d.css" | relURL }}?v={{ $vc }}">
 <div class="lb d-print-none" id="lb">
+  {{- /* Ancore dei capitoli (#capitolo-N): portano al libro, che legge il numero e apre quel capitolo. */ -}}
+  {{- range $i, $c := $d.capitoli }}<span class="lb-ancora" id="capitolo-{{ add $i 1 }}"></span>{{ end }}
   <section class="lb-stage" id="lb-stage" aria-label="Libro in 3D: trascina per girarlo, tocca gli oggetti sulla pagina di destra. Gli stessi contenuti sono nel pannello accanto e nella versione testuale.">
     <div class="lb-loading" id="lb-loading">Sto aprendo il libro…</div>
     <div class="lb-hint" id="lb-hint" aria-hidden="true">Trascina per girare il libro · tocca gli oggetti sulla pagina</div>
@@ -24,6 +31,11 @@
       <div class="lb-dots" id="lb-dots"></div>
       <button type="button" id="lb-next" aria-label="Capitolo successivo">›</button>
     </nav>
+    <div class="lb-extra" role="group" aria-label="Strumenti per leggere e per la classe">
+      <button type="button" id="lb-ascolta" aria-pressed="false" hidden><i class="bi bi-volume-up" aria-hidden="true"></i> Ascolta il capitolo</button>
+      <button type="button" id="lb-classe" aria-pressed="false"><i class="bi bi-people" aria-hidden="true"></i> Previsione della classe</button>
+      <a class="lb-link" href="{{ "formazione/libro-che-si-esplora-schede/" | relURL }}"><i class="bi bi-printer" aria-hidden="true"></i> Schede da stampare</a>
+    </div>
     <div>
       <p class="lb-kicker" id="lb-kicker"></p>
       <h2 class="lb-title" id="lb-titolo">Il libro che si esplora</h2>
@@ -38,6 +50,12 @@
       <h3>Fai la tua previsione</h3>
       <p class="lb-q" id="lb-question"></p>
       <div class="lb-opts" id="lb-opts" role="group" aria-labelledby="lb-question"></div>
+      <div class="lb-conta" id="lb-conta" hidden>
+        <p class="lb-conta-nota">Chiedi alla classe di alzare la mano per ogni risposta e segna quante mani vedi. I numeri restano su questo schermo e non vengono salvati.</p>
+        <div id="lb-conta-righe"></div>
+        <button type="button" id="lb-conta-azzera">Azzera i conteggi</button>
+      </div>
+      <p class="lb-conta-tot" id="lb-conta-tot" aria-live="polite"></p>
       <button type="button" class="lb-primary" id="lb-flapBtn">Alza il lembo e scopri la risposta</button>
       <div class="lb-answer" id="lb-answer" hidden aria-live="polite">
         <p class="lb-verdict" id="lb-verdict"></p>
@@ -45,9 +63,34 @@
       </div>
     </div>
     <p class="lb-src" id="lb-src"></p>
+    <p class="lb-progresso" id="lb-progresso" aria-live="polite"></p>
+    <div class="lb-box lb-fine" id="lb-fine" hidden>
+      <h3>Hai esplorato tutto il libro</h3>
+      <p>Hai visto la risposta di ogni capitolo. Scrivi il nome e stampa l'attestato.</p>
+      <label for="lb-nome">Nome sull'attestato</label>
+      <input type="text" id="lb-nome" maxlength="60" autocomplete="off">
+      <div class="lb-fine-azioni">
+        <button type="button" class="lb-primary" id="lb-stampa-attestato"><i class="bi bi-printer" aria-hidden="true"></i> Stampa l'attestato</button>
+        <button type="button" id="lb-ricomincia">Ricomincia da capo</button>
+      </div>
+    </div>
   </section>
 </div>
-<script type="application/json" id="lb-dati">{{ dict "base" ("" | relURL) "capitoli" $d.capitoli "colori" site.Data.codici_colore.codici | jsonify | safeJS }}</script>
+<div class="lb-attestato" id="lb-attestato" aria-hidden="true">
+  {{- $micro := "GRUPPO COMUNALE VOLONTARI DI PROTEZIONE CIVILE DI GENZANO DI ROMA · PROTEZIONECIVILEGENZANO.IT · " -}}
+  {{- $riga := strings.Repeat 6 $micro }}
+  <div class="lb-att-micro lb-att-micro-t">{{ $riga }}</div><div class="lb-att-micro lb-att-micro-b">{{ $riga }}</div>
+  <div class="lb-att-micro lb-att-micro-l">{{ $riga }}</div><div class="lb-att-micro lb-att-micro-r">{{ $riga }}</div>
+  <img class="lb-att-logo" src="{{ "images/logo-pc-genzano.png" | relURL }}" alt="">
+  <p class="lb-att-ente">Gruppo Comunale Volontari di Protezione Civile<br>Genzano di Roma</p>
+  <p class="lb-att-titolo">Attestato</p>
+  <p>Questo attestato è di</p>
+  <p class="lb-att-nome" id="lb-att-nome"></p>
+  <p>che ha esplorato tutti i capitoli del «Libro che si esplora»,<br>con le previsioni, i modellini e le risposte sull'autoprotezione.</p>
+  <p class="lb-att-data" id="lb-att-data"></p>
+  <img class="lb-att-affiliazioni" src="{{ "images/footer-print-affiliazioni.png" | relURL }}" alt="">
+</div>
+<script type="application/json" id="lb-dati">{{ dict "base" ("" | relURL) "variante" $nome "capitoli" $d.capitoli "colori" site.Data.codici_colore.codici | jsonify | safeJS }}</script>
 <script type="module" src="{{ "js/libro-3d.js" | relURL }}?v={{ $vj }}"></script>
 
 <details class="faq-item lb-testo" id="versione-testuale">

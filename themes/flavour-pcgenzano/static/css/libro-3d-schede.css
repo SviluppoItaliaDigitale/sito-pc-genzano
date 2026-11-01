@@ -1,0 +1,46 @@
+/* Schede A4 del «Libro che si esplora» (shortcode libro-3d-schede).
+   A schermo: schede una sotto l'altra. In stampa: un capitolo per foglio A4,
+   risposta capovolta in fondo, banda delle affiliazioni nel piede. */
+.lb-schede{display:flex;flex-direction:column;gap:1.5rem;margin:1.5rem 0}
+.lb-scheda{border:1px solid #c9d3df;border-radius:6px;padding:1rem 1.25rem;background:#fff;color:#14223a;display:flex;flex-direction:column;gap:.5rem}
+.lb-scheda p{margin:0}
+/* Cornice di microtesto: scritta come contenuto generato (::before), così resta grafica e non testo da leggere. */
+.lb-scheda-micro{height:.6rem;overflow:hidden}
+.lb-scheda-micro::before{content:attr(data-micro);display:block;font-size:.45rem;line-height:1;color:#7d8da3;white-space:nowrap;letter-spacing:.05em}
+/* Le immagini del corpo articolo hanno cornice e larghezza propria: qui no. */
+article:not(.card) .lb-scheda img{display:block;margin:0;max-width:none;border-radius:0;box-shadow:none}
+article:not(.card) .lb-scheda-testa img{width:48px;height:48px;flex:none}
+article:not(.card) .lb-scheda-piede img{width:100%;height:auto}
+.lb-scheda-testa{display:flex;align-items:center;gap:.75rem;border-bottom:3px solid #003366;padding-bottom:.5rem}
+.lb-scheda-testa p{font-weight:700;color:#003366;line-height:1.25}
+.lb-scheda-testa span{font-weight:600;color:#33435a;font-size:.9rem}
+.lb-scheda .lb-scheda-titolo{font-size:1.6rem;margin:.25rem 0;color:#14223a}
+.lb-scheda-domanda{font-weight:700;font-size:1.1rem}
+.lb-scheda-istr{font-size:.9rem;color:#4a5a72}
+.lb-scheda-opz{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.45rem}
+.lb-scheda-opz li{display:flex;align-items:flex-start;gap:.5rem}
+.lb-scheda-casella{flex:none;width:1.1rem;height:1.1rem;border:2px solid #14223a;border-radius:2px;margin-top:.15rem}
+.lb-scheda-righe{display:flex;flex-direction:column;gap:1.4rem;margin:.6rem 0 .4rem}
+.lb-scheda-righe span{display:block;border-bottom:1px solid #9aa9bd}
+.lb-scheda-risposta{transform:rotate(180deg);border:1px dashed #9aa9bd;border-radius:6px;padding:.6rem .8rem;font-size:.9rem;display:flex;flex-direction:column;gap:.35rem;margin-top:auto}
+.lb-scheda-risposta ul{margin:0;padding-left:1.1rem}
+.lb-scheda-fonti{font-size:.8rem;color:#4a5a72}
+.lb-scheda-piede img{display:block;width:100%;height:auto}
+.lb-scheda-piede p{font-size:.6rem;color:#4a5a72;text-align:center;margin-top:.2rem}
+@media print{
+  @page{size:A4;margin:10mm}
+  .lb-schede{display:block;margin:0}
+  .lb-scheda{border:0;border-radius:0;padding:0;height:270mm;box-sizing:border-box;break-after:page;page-break-after:always;font-size:12pt}
+  .lb-scheda:last-child{break-after:auto;page-break-after:auto}
+  .lb-scheda .lb-scheda-titolo{font-size:22pt}
+  .lb-scheda-domanda{font-size:14pt}
+  .lb-scheda-righe{gap:8mm;margin:3mm 0 5mm}
+  .lb-scheda-risposta{font-size:10.5pt}
+  .lb-scheda-micro::before,.lb-scheda-piede p{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  article:not(.card) .lb-scheda-testa img{width:14mm;height:14mm}
+  .lb-scheda{overflow:hidden}
+}
+@media print{
+  /* Sulla pagina delle schede si stampano solo le schede: titolo della pagina e testo introduttivo restano a schermo. */
+  body:has(.lb-schede) .page-hero,body:has(.lb-schede) .article-body>p,body:has(.lb-schede) h1{display:none!important}
+}

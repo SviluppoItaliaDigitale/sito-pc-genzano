@@ -41,3 +41,46 @@
 .lb-src{margin:0;font-size:.88rem;color:#4a5a72}
 @media (prefers-reduced-motion:reduce){.lb-hint{transition:none}}
 html.a11y-pause-anim .lb-hint,html.a11y-pause-animations .lb-hint{transition:none}
+/* Strumenti per la classe: ascolto, previsione della classe, avanzamento, attestato */
+.lb-extra{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.lb .lb-extra button[aria-pressed="true"]{background:#003366;color:#fff;border-color:#003366}
+.lb-link{font-weight:600;color:#003366;padding:.45rem .2rem;min-height:40px;display:inline-flex;align-items:center;gap:.3rem}
+.lb-conta{border:1px dashed #9aa9bd;border-radius:6px;padding:.6rem .75rem;display:flex;flex-direction:column;gap:.5rem}
+.lb-conta-nota{margin:0;font-size:.88rem;color:#4a5a72}
+.lb-conta-riga{display:flex;align-items:center;gap:.5rem;margin:.2rem 0}
+.lb-conta-lettera{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1px solid #9aa9bd;font-weight:700;font-size:.8rem}
+.lb-conta-riga output{min-width:2.5em;text-align:center;font-weight:700;font-size:1.15rem}
+.lb .lb-conta-riga button{min-width:44px;font-size:1.1rem}
+.lb-conta-tot{margin:0;font-weight:600}
+.lb-conta-tot:empty{display:none}
+.lb-conta #lb-conta-azzera{align-self:flex-start}
+.lb-progresso{margin:0;font-size:.9rem;color:#33435a}
+.lb-progresso:empty{display:none}
+.lb-fine{border:2px solid #16723a;border-radius:6px;padding:.75rem}
+.lb-fine p{margin:0}
+.lb-fine input{font:inherit;padding:.4rem .5rem;border:1px solid #9aa9bd;border-radius:6px;max-width:24rem}
+.lb-fine-azioni{display:flex;flex-wrap:wrap;gap:.5rem}
+.lb-attestato{display:none}
+@media print{
+  @page attestato{size:A4;margin:8mm}
+  /* L'attestato viene spostato da libro-3d.js come figlio diretto di body: in stampa resta solo lui. */
+  html.stampa-attestato-libro body>*:not(.lb-attestato){display:none!important}
+  html.stampa-attestato-libro body{padding:0!important;margin:0!important}
+  html.stampa-attestato-libro .lb-attestato{page:attestato;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;height:279mm;margin:0;padding:16mm 16mm 10mm;background:#fff;color:#14223a;font-family:"Titillium Web",Arial,sans-serif;font-size:13pt;border:3px solid #003366;box-sizing:border-box;overflow:hidden;break-inside:avoid}
+  .lb-attestato img{display:block;margin:0;max-width:none;border-radius:0;box-shadow:none}
+  html.stampa-attestato-libro{background:#fff}
+  .lb-attestato p{margin:.25rem 0}
+  .lb-attestato .lb-att-logo{width:30mm;height:auto;margin-bottom:3mm}
+  .lb-att-ente{font-weight:700;color:#003366;font-size:14pt}
+  .lb-att-titolo{font-size:34pt;font-weight:700;color:#003366;margin:6mm 0 4mm!important}
+  .lb-att-nome{font-size:24pt;font-weight:700;border-bottom:1px solid #14223a;min-width:60%;padding-bottom:2mm;margin:3mm 0 5mm!important}
+  .lb-att-data{margin-top:8mm!important}
+  .lb-attestato .lb-att-affiliazioni{width:100%;max-width:170mm;height:auto;margin-top:auto}
+  .lb-att-micro{position:absolute;font-size:4.5pt;line-height:1;color:#7d8da3;white-space:nowrap;overflow:hidden;letter-spacing:.05em}
+  .lb-att-micro-t{top:1.5mm;left:4mm;right:4mm}
+  .lb-att-micro-b{bottom:1.5mm;left:4mm;right:4mm}
+  .lb-att-micro-l{left:1.5mm;top:4mm;width:271mm;transform-origin:0 0;transform:rotate(90deg) translateY(-100%)}
+  .lb-att-micro-r{right:1.5mm;top:4mm;width:271mm;transform-origin:100% 0;transform:rotate(-90deg) translateY(-100%)}
+}
+.lb{position:relative}
+.lb-ancora{position:absolute;top:0;left:0;width:0;height:0;scroll-margin-top:90px}

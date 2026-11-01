@@ -165,6 +165,7 @@ This page gives you **essential information** in English. The full website is in
 <li><a href="/english/cosa-fare-adesso/"><strong>What To Do Now</strong></a></li>
 <li><a href="/english/piano-familiare/"><strong>Family Emergency Plan</strong></a></li>
 <li><a href="/english/kit-calamita/"><strong>Disaster Kits for vulnerable people</strong></a> — overview (detailed printable cards are in Italian)</li>
+<li><a href="/english/explorable-book/"><strong>The explorable book</strong></a> — short chapters with a question and the answer to check (the 3D version is in Italian)</li>
 </ul>
 </div>
 
