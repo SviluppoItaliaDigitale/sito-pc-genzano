@@ -57,6 +57,18 @@ controls.enablePan = false; controls.enableDamping = true; controls.dampingFacto
 controls.minPolarAngle = .35; controls.maxPolarAngle = 1.2;
 controls.minAzimuthAngle = -.75; controls.maxAzimuthAngle = .75;
 controls.target.set(0, .05, .02);
+/* Avvicinarsi e spostarsi (01/11/2026, richiesta per leggere da telefono): con due dita si allarga e si sposta
+   il libro, la rotella e il pizzico avvicinano verso il punto indicato, il tasto destro del mouse sposta.
+   Il centro della scena resta sulle pagine (tieniSulLibro). */
+controls.enablePan = true; controls.screenSpacePanning = false; controls.zoomToCursor = true;
+/* Il centro dell'inquadratura resta sulle pagine: se uno spostamento lo porta fuori, lo si riporta dentro
+   spostando di altrettanto la telecamera (tieniSulLibro, dopo ogni controls.update). */
+const LIMITE = {x:.8, z:.55}, _spinta = new THREE.Vector3();
+function tieniSulLibro(){
+  const t = controls.target;
+  _spinta.set(THREE.MathUtils.clamp(t.x,-LIMITE.x,LIMITE.x)-t.x, .05-t.y, THREE.MathUtils.clamp(t.z,-LIMITE.z,LIMITE.z)-t.z);
+  if (_spinta.lengthSq() > 1e-10){ t.add(_spinta); camera.position.add(_spinta); }
+}
 
 const hemi = new THREE.HemisphereLight(0xffffff, 0x9aa8bb, 1.6); scene.add(hemi);
 const sun = new THREE.DirectionalLight(0xffffff, 2.2);
@@ -941,8 +953,34 @@ function resize(){
   const w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return;
   renderer.setSize(w,h,false); camera.aspect = w/h; camera.updateProjectionMatrix();
   const k = Math.pow(Math.max(1, 1.5/camera.aspect), .85);
-  const dist = 3.05*k; camera.position.set(0, dist*.78, dist*.62); controls.maxDistance = dist*1.6; controls.minDistance = .9; controls.update();
+  controls.maxDistance = 3.05*k*1.6; controls.minDistance = .6;
+  vista(vistaAttuale, false);
 }
+/* Inquadrature: tutto il libro, pagina sinistra (testo e domanda), pagina destra (modellino).
+   La distanza si calcola perché la pagina entri intera nello schermo, in verticale e in orizzontale. */
+const VISTE = { tutto:0, sinistra:-.545, destra:.545 };
+const DIREZIONE = new THREE.Vector3(0, .78, .62).normalize();
+let vistaAttuale = 'tutto';
+function distanzaVista(n){
+  const k = Math.pow(Math.max(1, 1.5/camera.aspect), .85);
+  if (n === 'tutto') return 3.05*k*Math.hypot(.78,.62);
+  const t = Math.tan(THREE.MathUtils.degToRad(camera.fov/2));
+  return Math.max(.64/t, .56/(t*camera.aspect))*1.14;
+}
+function vista(n, anima){
+  if (!(n in VISTE)) n = 'tutto';
+  vistaAttuale = n;
+  document.querySelectorAll('#lb-vista button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.vista===n)));
+  const target = new THREE.Vector3(VISTE[n], .05, .02);
+  const pos = target.clone().addScaledVector(DIREZIONE, distanzaVista(n));
+  if (!anima){ controls.target.copy(target); camera.position.copy(pos); camera.lookAt(target); controls.update(); return; }
+  const t0 = controls.target.clone(), p0 = camera.position.clone(), eraAttivo = controls.enabled;
+  controls.enabled = false;
+  tween(.6, p=>{ const e = ease(p); controls.target.lerpVectors(t0, target, e); camera.position.lerpVectors(p0, pos, e); camera.lookAt(controls.target); },
+    ()=>{ controls.enabled = eraAttivo || controls.enabled; controls.update(); });
+}
+document.querySelectorAll('#lb-vista button').forEach(b=>b.addEventListener('click', ()=>vista(b.dataset.vista, true)));
+controls.addEventListener('start', ()=>document.querySelectorAll('#lb-vista button').forEach(b=>b.setAttribute('aria-pressed','false')));
 new ResizeObserver(resize).observe(stage);
 
 const clock = new THREE.Clock(); let animT = 0;
@@ -952,7 +990,7 @@ function loop(){
   const still = RM(); if (!still) animT += dt;
   for (let k=tweens.length-1; k>=0; k--){ const tw = tweens[k]; tw.t += dt; const p = Math.min(1, tw.t/tw.dur); tw.fn(p); if (p>=1){ tweens.splice(k,1); tw.done?.(); } }
   current?.update(still ? 0 : dt, animT); muoviPolvere(still ? 0 : dt, animT); muoviScintille(dt, still);
-  if (controls.enabled) controls.update(); renderer.render(scene, camera);
+  if (controls.enabled){ controls.update(); tieniSulLibro(); } renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
 
@@ -961,6 +999,6 @@ function loop(){
   try{ await Promise.race([Promise.all([document.fonts.load(F(700,40)), document.fonts.load(F(400,40)), document.fonts.load(F(600,40))]), new Promise(r=>setTimeout(r,2500))]); }catch(_){}
   const m = /^#capitolo-(\d{1,2})$/.exec(location.hash); chapter = m ? Math.min(CH.length, Math.max(1,+m[1]))-1 : 0;
   drawLeft(chapter); drawRight(chapter); mount(chapter); renderPanel(chapter);
-  $('loading').remove(); resize(); ingresso(); loop();
+  $('loading').remove(); $('vista').hidden = false; resize(); ingresso(); loop();
   setTimeout(()=>$('hint').classList.add('off'), 9000);
 })();
