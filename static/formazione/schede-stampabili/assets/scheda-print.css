@@ -713,7 +713,7 @@ table.scheda-tabella th {
   }
 }
 
-/* «Pronto per la LIM» nella barra (01/11/2026, regola .claude/rules/lim-scuole.md;
+/* «Pronto per la LIM» nella barra (01/11/2026, regola lim-scuole.md delle regole del progetto;
    lo scrive scripts/segno-lim-statiche.py). La barra non si stampa. */
 .scheda-toolbar .scheda-lim {
   border: 1.5px solid #fff;

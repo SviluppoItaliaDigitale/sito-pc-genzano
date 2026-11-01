@@ -656,7 +656,7 @@
     window.addEventListener('resize', posiziona);
   }
 
-  // Riquadro «Pronto per la LIM» (regola .claude/rules/lim-scuole.md, 01/11/2026): stesse
+  // Riquadro «Pronto per la LIM» (regola lim-scuole.md delle regole del progetto, 01/11/2026): stesse
   // famiglie di data/lim.yaml (voce «statiche») con site-chrome.js, tutte controllate ogni
   // settimana da scripts/check-lim.py. Testo identico al partial lim-pronto.html e a
   // scripts/segno-lim-statiche.py: si cambiano insieme. Stile in custom.css. Sintassi ES5.

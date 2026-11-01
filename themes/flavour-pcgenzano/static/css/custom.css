@@ -8563,7 +8563,7 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
    PRONTO PER LA LIM v1.0 — 01/11/2026
    Riquadro sulle pagine per le scuole controllate per la lavagna interattiva
    (partial lim-pronto.html, site-chrome.js, scripts/segno-lim-statiche.py;
-   regola .claude/rules/lim-scuole.md). Testo #1a1a1a e link #003366 su
+   regola lim-scuole.md delle regole del progetto). Testo #1a1a1a e link #003366 su
    #eef7f1: 15,6:1 e 11,4:1.
    ========================================================================== */
 .lim-pronto {
