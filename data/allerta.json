@@ -1,9 +1,9 @@
 {
   "livello": "gialla",
   "titolo": "ALLERTA GIALLA — temporali",
-  "descrizione": "Ordinaria per temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 1 novembre 2026, validità 1 novembre 00:00–23:59.",
+  "descrizione": "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 1 novembre 2026, validità 1 novembre 14:55–23:59.",
   "ultimo_aggiornamento": "2026-11-01T00:02:35+01:00",
-  "ultimo_controllo": "2026-11-01T14:21:41+01:00",
+  "ultimo_controllo": "2026-11-01T19:12:00+01:00",
   "domani": {
     "livello": "verde",
     "titolo": "Previsto verde",
