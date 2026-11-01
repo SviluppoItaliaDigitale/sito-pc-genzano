@@ -50,6 +50,12 @@ LUOGHI = {
     "strada": {"nome": "Una strada in discesa", "lat": 41.70150, "lon": 12.68050},
     "comune": {"nome": "Municipio", "lat": 41.70707, "lon": 12.69102},
     "lago":   {"nome": "Lago di Nemi", "lat": 41.71560, "lon": 12.70420},
+    # scenario incendio: il bosco sul versante a ovest del paese (natural=wood in OSM)
+    "bosco":  {"nome": "Il bosco a ovest del paese", "lat": 41.70630, "lon": 12.67600},
+    "margine": {"nome": "Le case al margine del bosco", "lat": 41.70760, "lon": 12.67900},
+    # scenario caldo
+    "piazza": {"nome": "Piazza Tommaso Frasconi", "lat": 41.70757, "lon": 12.69259},
+    "parcheggio": {"nome": "Un parcheggio al sole", "lat": 41.70350, "lon": 12.68800},
 }
 
 

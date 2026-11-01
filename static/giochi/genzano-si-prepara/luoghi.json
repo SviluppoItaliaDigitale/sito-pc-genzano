@@ -33,6 +33,26 @@
    "nome": "Lago di Nemi",
    "x": 894.4,
    "y": 89.3
+  },
+  "bosco": {
+   "nome": "Il bosco a ovest del paese",
+   "x": 111.1,
+   "y": 435.3
+  },
+  "margine": {
+   "nome": "Le case al margine del bosco",
+   "x": 194.4,
+   "y": 386.9
+  },
+  "piazza": {
+   "nome": "Piazza Tommaso Frasconi",
+   "x": 571.9,
+   "y": 388.1
+  },
+  "parcheggio": {
+   "nome": "Un parcheggio al sole",
+   "x": 444.4,
+   "y": 539.5
   }
  },
  "aree": [
