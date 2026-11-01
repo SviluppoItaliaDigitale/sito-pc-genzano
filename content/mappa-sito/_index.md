@@ -443,6 +443,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Giochi della Sicurezza</p>
   <p class="ms-card-desc">Giochi educativi gratuiti per bambini 3-19 anni: terremoto, evacuazione, 112.</p>
 </a>
+<a class="ms-card ms-edu" href="/giochi/genzano-si-prepara/">
+  <div class="ms-card-icon"><i class="bi bi-map-fill"></i></div>
+  <p class="ms-card-title">Genzano si prepara</p>
+  <p class="ms-card-desc">Gioco di simulazione per tutti sulla mappa vera di Genzano: preparazione, allerta e resoconto di ciò che la prevenzione ha evitato.</p>
+</a>
 <a class="ms-card ms-edu" href="/catalogo-giochi/">
   <div class="ms-card-icon"><i class="bi bi-card-checklist"></i></div>
   <p class="ms-card-title">Catalogo dei giochi</p>

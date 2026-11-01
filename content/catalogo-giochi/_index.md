@@ -23,9 +23,16 @@ Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una sc
 
 ## Indice per fascia
 
+- [Per tutti: la simulazione su Genzano](#tutti)
 - [Giochi per la scuola dell'infanzia (3-6 anni)](#infanzia)
 - [Giochi per la scuola primaria (6-11 anni)](#primaria)
 - [Giochi per ragazzi e adulti (11-19 anni e oltre)](#ragazzi)
+
+## Per tutti {#tutti}
+
+### [Genzano si prepara](/catalogo-giochi/genzano-si-prepara/)
+
+Una simulazione sulla mappa vera di Genzano: ti prepari all'allerta, affronti l'evento e scopri che cosa la prevenzione ha evitato. **[Apri la scheda →](/catalogo-giochi/genzano-si-prepara/)** · [Gioca subito →](/giochi/genzano-si-prepara/)
 
 ## Infanzia (3-6 anni) {#infanzia}
 
