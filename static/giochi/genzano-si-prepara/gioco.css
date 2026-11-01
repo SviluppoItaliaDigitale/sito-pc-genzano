@@ -50,20 +50,23 @@ body.gsp-body { background: var(--gsp-fondo); }
   border-radius: 8px;
   border: 1px solid var(--gsp-bordo);
   background: #eef0e6;
-  height: min(74vh, 640px);
+  height: 640px;
+  height: 74vh;
+  max-height: 640px;
 }
-@media (max-width: 991.98px) { .gsp-mappa { height: 40vh; min-height: 240px; } }
+@media (max-width: 991.98px) { .gsp-mappa { height: 40vh; min-height: 240px; max-height: none; } }
 .gsp-pannello h2 { scroll-margin-top: 1rem; }
 
 .gsp-camera {
   position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%; /* il gioco la allarga se il riquadro è più alto della carta */
   transition: transform .8s ease-in-out;
   will-change: transform;
 }
 .gsp-mappa-img { display: block; width: 100%; height: auto; }
-.gsp-segni { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.gsp-segni { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: visible; }
 
 .gsp-aa { fill: var(--gsp-aa); stroke: #fff; stroke-width: 2; }
 .gsp-aa-t { fill: #fff; font: 700 14px/1 "Titillium Web", system-ui, sans-serif; text-anchor: middle; }
@@ -72,10 +75,10 @@ body.gsp-body { background: var(--gsp-fondo); }
 .gsp-pin-alone { fill: rgba(217, 54, 79, .22); animation: gsp-alone 1.8s ease-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes gsp-alone { from { transform: scale(.6); opacity: 1; } to { transform: scale(1.4); opacity: 0; } }
 
-.gsp-cielo { position: absolute; inset: 0; pointer-events: none; transition: background .8s; }
+.gsp-cielo { position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; transition: background .8s; }
 .gsp[data-meteo="pioggia"] .gsp-cielo { background: rgba(40, 60, 90, .28); }
 .gsp[data-meteo="buio"] .gsp-cielo { background: rgba(10, 20, 45, .58); }
-.gsp-pioggia { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.gsp-pioggia { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
 
 .gsp-dove {
   position: absolute; left: .6rem; bottom: .6rem; margin: 0;
@@ -98,7 +101,7 @@ body.gsp-body { background: var(--gsp-fondo); }
   color: var(--gsp-testo);
   min-height: 300px;
 }
-.gsp-pannello h2 { color: var(--gsp-blu); font-size: 1.55rem; margin: 0 0 .6rem; }
+.gsp-pannello h2 { color: var(--gsp-blu); margin: 0 0 .6rem; }
 .gsp-pannello h2:focus { outline: 3px solid #ffbe2e; outline-offset: 3px; }
 .gsp-ora { margin: 0 0 .2rem; color: #4a5560; font-weight: 600; font-size: .95rem; text-transform: none; }
 .gsp-domanda { font-weight: 700; margin: 1rem 0 .4rem; }
@@ -173,6 +176,34 @@ button.gsp-scenario:hover, button.gsp-scenario:focus-visible { background: #eef4
 
 .gsp-avvertenza { background: #fff; border: 1px solid var(--gsp-bordo); border-left: 5px solid var(--gsp-blu); border-radius: 6px; padding: .8rem 1rem; }
 .gsp-testuale summary { font-weight: 600; color: var(--gsp-blu); cursor: pointer; }
+
+/* ---------- LIM e schermi grandi ---------- */
+.gsp-strumenti { display: flex; justify-content: flex-end; margin-bottom: .5rem; }
+.gsp-strumenti .btn { min-height: 48px; }
+/* Dita e penne delle lavagne: bersagli più grandi */
+@media (pointer: coarse) {
+  .gsp-azione, .gsp-scelta { min-height: 56px; padding: .85rem .9rem; }
+  .gsp-pannello .btn { min-height: 52px; padding-left: 1.2rem; padding-right: 1.2rem; }
+  .gsp-sotto-mappa .form-check-input { width: 2.6em; height: 1.4em; }
+}
+/* LIM a 1920 px e pannelli 4K: si legge dal fondo dell'aula.
+   Il corpo cresce con la larghezza dello schermo: anche un pannello 4K
+   con la scala al 100% mostra testi leggibili a qualche metro. */
+.gsp-pannello .btn, .gsp-pannello .gsp-azione, .gsp-pannello .gsp-scelta { font-size: 1em; }
+.gsp-pannello h2 { font-size: 1.45em; }
+@media (min-width: 1600px) {
+  .gsp-pannello { font-size: 1.3rem; font-size: min(max(1.3rem, 1.1vw), 1.6rem); }
+  .gsp-mappa { height: 72vh; max-height: none; }
+  .gsp-dove { font-size: 1.1rem; font-size: max(1.1rem, .9vw); }
+}
+/* A schermo intero il gioco riempie la lavagna */
+.gsp:fullscreen { background: var(--gsp-fondo); padding: 1rem; overflow: auto; align-content: start; }
+.gsp:-webkit-full-screen { background: var(--gsp-fondo); padding: 1rem; overflow: auto; }
+.gsp:fullscreen .gsp-mappa { height: calc(100vh - 8rem); max-height: none; }
+.gsp:-webkit-full-screen .gsp-mappa { height: calc(100vh - 8rem); max-height: none; }
+.gsp:fullscreen .gsp-pannello { font-size: 1.3rem; font-size: clamp(1.2rem, 1.2vw, 3rem); max-height: calc(100vh - 2rem); overflow: auto; }
+.gsp:-webkit-full-screen .gsp-pannello { font-size: 1.3rem; font-size: clamp(1.2rem, 1.2vw, 3rem); max-height: calc(100vh - 2rem); overflow: auto; }
+.gsp:fullscreen .gsp-strumenti .btn { font-size: clamp(1rem, .9vw, 2rem); }
 
 /* ---------- movimento ridotto ---------- */
 @media (prefers-reduced-motion: reduce) {

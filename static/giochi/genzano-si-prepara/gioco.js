@@ -101,7 +101,11 @@
     var l = LUOGHI && LUOGHI.luoghi[chiave];
     var pin = $('#gsp-pin');
     var cw = mappa.clientWidth, ch = mappa.clientHeight;
-    var scala = cw / VISTA[0];
+    // la carta copre sempre tutto il riquadro, anche quando il riquadro è
+    // più alto che largo (pannelli 4K, schermo intero): si allarga la carta
+    var largo = Math.max(cw, ch * VISTA[0] / VISTA[1]);
+    camera.style.width = largo + 'px';
+    var scala = largo / VISTA[0];
     var Z = zoom || 1;
     var px, py;
     if (l) {
@@ -110,7 +114,7 @@
       pin.setAttribute('visibility', 'visible');
       dove.textContent = 'Dove sei: ' + l.nome;
     } else {
-      px = cw / 2; py = 420 * scala;
+      px = 470 * scala; py = 420 * scala;
       pin.setAttribute('visibility', 'hidden');
       dove.textContent = 'Genzano di Roma';
     }
@@ -118,7 +122,7 @@
     var dx = cw / 2 - px, dy = ch / 2 - py;
     // niente bordi vuoti: la mappa copre sempre il riquadro
     dx = Math.min(dx, (Z - 1) * px);
-    dx = Math.max(dx, cw - px - (cw - px) * Z);
+    dx = Math.max(dx, cw - px - (largo - px) * Z);
     dy = Math.min(dy, (Z - 1) * py);
     dy = Math.max(dy, ch - py - (alto - py) * Z);
     camera.style.transformOrigin = px + 'px ' + py + 'px';
@@ -267,7 +271,7 @@
     var n = stato.prep.length, max = stato.s.prima.posti;
     $('#gsp-contatore').textContent = 'Hai scelto ' + n + ' cose su ' + max + '.' +
       (n === max ? ' Puoi andare avanti, o cambiare una scelta.' : '');
-    pannello.querySelectorAll('.gsp-azione').forEach(function (b) {
+    Array.prototype.forEach.call(pannello.querySelectorAll('.gsp-azione'), function (b) {
       var su = stato.prep.indexOf(b.getAttribute('data-id')) >= 0;
       b.setAttribute('aria-pressed', su ? 'true' : 'false');
       b.disabled = !su && n >= max;
@@ -331,7 +335,7 @@
     var tipo = c.punti === 3 ? 'giusta' : (c.punti > 0 ? 'meglio' : 'sbagliata');
     var etichetta = { giusta: 'Scelta giusta', meglio: 'Si poteva fare meglio', sbagliata: 'Scelta sbagliata' }[tipo];
     var icona = { giusta: 'bi-check-circle-fill', meglio: 'bi-dash-circle-fill', sbagliata: 'bi-x-circle-fill' }[tipo];
-    pannello.querySelectorAll('.gsp-scelta').forEach(function (b, j) {
+    Array.prototype.forEach.call(pannello.querySelectorAll('.gsp-scelta'), function (b, j) {
       b.disabled = true;
       if (j === i) b.classList.add('gsp-scelta-tua');
     });
@@ -431,6 +435,30 @@
     else if (a === 'ascolta') leggi();
   });
   interruttoreAree.addEventListener('change', function () { mostraAree(interruttoreAree.checked); });
+
+  /* Schermo intero: sulla LIM il gioco occupa tutta la lavagna. */
+  var btnSchermo = $('#gsp-schermo');
+  var richiedi = root.requestFullscreen || root.webkitRequestFullscreen;
+  var esci = document.exitFullscreen || document.webkitExitFullscreen;
+  function aSchermoIntero() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+  function aggiornaSchermo() {
+    var su = aSchermoIntero();
+    btnSchermo.setAttribute('aria-pressed', su ? 'true' : 'false');
+    btnSchermo.querySelector('span').textContent = su ? 'Esci dallo schermo intero' : 'Schermo intero';
+    setTimeout(function () {
+      var e = stato && stato.indice >= 0 && stato.s.eventi[stato.indice];
+      var t = camera.style.transform.match(/scale\(([\d.]+)\)/);
+      if (LUOGHI) inquadra(e ? e.luogo : 'casa', t ? parseFloat(t[1]) : 1);
+    }, 150);
+  }
+  if (btnSchermo && richiedi && esci) {
+    btnSchermo.hidden = false;
+    btnSchermo.addEventListener('click', function () {
+      if (aSchermoIntero()) esci.call(document); else richiedi.call(root);
+    });
+    document.addEventListener('fullscreenchange', aggiornaSchermo);
+    document.addEventListener('webkitfullscreenchange', aggiornaSchermo);
+  }
   window.addEventListener('resize', function () {
     if (!LUOGHI) return;
     var t = camera.style.transform.match(/scale\(([\d.]+)\)/);
