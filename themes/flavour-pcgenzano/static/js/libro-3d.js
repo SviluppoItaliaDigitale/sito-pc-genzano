@@ -9,6 +9,8 @@
 import * as THREE from '../vendor/three/three.module.min.js';
 import { OrbitControls } from '../vendor/three/OrbitControls.js';
 
+// Segnale per la rete di sicurezza dello shortcode: lo script è stato letto ed eseguito.
+window.__libro3dAvviato = true;
 const ROOT = document.getElementById('lb');
 const DATI = JSON.parse(document.getElementById('lb-dati').textContent);
 const BASE = DATI.base || '/';

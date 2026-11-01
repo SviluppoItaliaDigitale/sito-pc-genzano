@@ -240,7 +240,8 @@
       });
       levelUp.classList.add('hide');
       endScreen.classList.add('hide');
-      document.querySelector('.inf-card.hide')?.classList.remove('hide');
+      var cartaNascosta = document.querySelector('.inf-card.hide');
+      if (cartaNascosta) cartaNascosta.classList.remove('hide');
       var card = document.querySelector('.inf-card:not(#level-up):not(#end)');
       if (card) card.classList.remove('hide');
       mostraRound();

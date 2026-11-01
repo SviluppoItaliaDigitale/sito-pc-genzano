@@ -227,7 +227,7 @@
         draggedEl = null;
         document.querySelectorAll('.dropzone-over').forEach(function(z){ z.classList.remove('dropzone-over'); });
       });
-      // Tocco e posa: tocca la tessera, poi la posizione
+      // Tocco e posa (alternativa-al-trascinamento): tocca la tessera, poi la posizione
       c.setAttribute('role', 'button');
       c.addEventListener('click', function(e){ e.stopPropagation(); scegli(c); });
       // Fallback con tastiera

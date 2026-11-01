@@ -130,7 +130,7 @@ I due script (`dump-coach-manifest.js` e `genera-schede-giochi.py`) **non sono n
 
 ## 34.6 Aggiungere un nuovo gioco al sito (workflow completo)
 
-Quando aggiungi un nuovo gioco interattivo al sito, segui questi sei passi:
+Quando aggiungi un nuovo gioco interattivo al sito, segui questi passi:
 
 1. **Crea la webapp del gioco** in `static/giochi/<fascia>/<slug>/index.html` (con assets correlati). Convenzione standard del repo: `<body data-coach-game="<slug>">` + `<link rel="stylesheet" href="/giochi/assets/css/coach.css">` + `<script src="/giochi/assets/js/coach.js" defer></script>`.
 2. **Aggiungi una voce al manifest `CONTENUTI`** in `static/giochi/assets/js/coach.js`:
@@ -152,6 +152,7 @@ Quando aggiungi un nuovo gioco interattivo al sito, segui questi sei passi:
 3. **Aggiungi il gioco all'Arena** in `static/giochi/index.html` (griglia di card).
 4. **Rigenera la scheda del catalogo** con i due script di 34.5: a quel punto compare una nuova `content/catalogo-giochi/<slug>.md` e l'hub viene aggiornato automaticamente con il nuovo gioco nella sezione di fascia corretta.
 5. **Verifica con `pc-article-reviewer`** (sulla nuova scheda + sull'hub aggiornato).
+5-bis. **Prova da LIM** (regola `.claude/rules/lim-scuole.md`, dall'01/11/2026): JavaScript entro ECMAScript 2018 (`node scripts/check-sintassi-js.cjs`), `python3 scripts/check-lim.py --pagine /giochi/<fascia>/<slug>/` dopo la build, una partita intera col solo tocco; ogni trascinamento ha un'alternativa a tocco singolo marcata `alternativa-al-trascinamento`; comandi di almeno 44 px; la pagina carica `/css/custom.css` e usa i marcatori delle schermate (`#intro`, `#game`, `#end`), così riceve «Schermo intero» e «Torna al menu».
 6. **Commit + push + PR + merge.** Al deploy, il workflow `scarica-foto-automatica.yml` step 2 genererà la cover tipografica banner automaticamente.
 
 ⚠️ **Non bypassare il passo 2 (manifest)**: se aggiungi il gioco senza voce nel Coach, il bottone "💡 Consigli per giocare" non avrà contenuto e il sistema Layer 3 (hint contestuale sugli errori) non funzionerà.
@@ -311,6 +312,7 @@ Quando un futuro intervento tocca i giochi del sito, ricorda:
 5. **`image: ""` resta vuoto** nel frontmatter: la cover tipografica banner è generata automaticamente (mai foto utente nel banner).
 6. **Bottone CTA = shortcode `bottone-gioco`**, non Markdown attribute syntax (incompatibile con Goldmark del sito).
 7. **D.M. 183/2024** (non 91/2024) è il riferimento corretto per l'Educazione Civica.
+8. **Ogni gioco funziona sulla LIM**: solo tocco, proiettore, browser vecchi (regola `lim-scuole.md`, passo 5-bis).
 
 ---
 

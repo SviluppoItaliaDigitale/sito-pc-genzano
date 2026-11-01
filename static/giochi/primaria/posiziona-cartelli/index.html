@@ -584,7 +584,7 @@
           var cid = e.dataTransfer.getData('text/plain');
           placeSign(cid, slot.id);
         });
-        // Tocco e posa (LIM, tablet, cellulare): cartello scelto, poi il posto
+        // Tocco e posa (LIM, tablet, cellulare; alternativa-al-trascinamento): cartello scelto, poi il posto
         d.addEventListener('click', function () {
           if (!selected) return;
           var cid = selected.dataset.signId;

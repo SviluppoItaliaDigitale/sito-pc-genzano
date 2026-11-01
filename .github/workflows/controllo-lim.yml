@@ -1,0 +1,113 @@
+name: "🧑‍🏫 Controllo settimanale LIM (lavagne interattive)"
+
+# Ogni lunedì apre tutte le pagine per le scuole come una lavagna interattiva:
+#  1. sintassi JavaScript leggibile dai browser vecchi delle LIM (Chrome 64),
+#     compresi gli script dentro le pagine costruite (check-sintassi-js.cjs);
+#  2. schermo touch a 1024x768 e 1366x768: errori, pagina più larga dello
+#     schermo, comandi dei giochi troppo piccoli per il dito, giochi a
+#     trascinamento senza alternativa al tocco (check-lim.py);
+#  3. le stesse pagine con un Chromium del 2018 (versione 69, lavagne Android 9
+#     e PC di scuola non aggiornati): script fermi, Bootstrap Italia che non si
+#     avvia, menu che non si aprono (check-lim-browser-vecchio.cjs).
+# Sulle pull request i controlli 1 e 2 girano in validate-pr.yml (solo le
+# pagine toccate per il 2); qui il giro intero intercetta ciò che cambia senza
+# una PR, per esempio un aggiornamento automatico di Bootstrap Italia.
+#
+# Nasce l'01/11/2026 dalle segnalazioni delle scuole: sulle LIM con browser non
+# aggiornato Bootstrap Italia 2.x non partiva (menu, finestre e accordion
+# fermi su 101 pagine su 165), un gioco non si poteva giocare col dito e la
+# barra per il telefono copriva i giochi dell'infanzia.
+# Una issue in-place, chiusa da sola quando tutto rientra.
+
+on:
+  schedule:
+    - cron: "17 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: "controllo-lim"
+  cancel-in-progress: false
+
+jobs:
+  controllo:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+
+      - name: "⚙️ Setup Hugo"
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: "🏗️ Build"
+        run: hugo --minify --quiet --baseURL "https://www.protezionecivilegenzano.it/"
+
+      - name: "🌐 Browser moderno, acorn e ws"
+        run: |
+          pip install --quiet playwright==1.56.0
+          playwright install --with-deps chromium
+          npm install --no-save --prefix /tmp/js-lim acorn@8.14.0 ws@8.18.0
+
+      - name: "🕰️ Chromium 69 (2018), il browser delle LIM non aggiornate"
+        # Snapshot ufficiale del progetto Chromium, revisione 576753 = 69.0.3497.
+        run: |
+          curl -sSfL -o /tmp/chrome69.zip https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/576753/chrome-linux.zip
+          unzip -q /tmp/chrome69.zip -d /tmp/chrome69
+          /tmp/chrome69/chrome-linux/chrome --version
+
+      - name: "🧑‍🏫 Prove da LIM"
+        id: controllo
+        shell: bash
+        env:
+          NODE_PATH: /tmp/js-lim/node_modules
+        run: |
+          set +e
+          node scripts/check-sintassi-js.cjs --public public > sintassi.log 2>&1; a=$?
+          python3 scripts/check-lim.py > lim.log 2>&1; b=$?
+          node scripts/check-lim-browser-vecchio.cjs --chrome /tmp/chrome69/chrome-linux/chrome --public public > vecchio.log 2>&1; c=$?
+          cat sintassi.log lim.log vecchio.log
+          if [ $a -ne 0 ] || [ $b -ne 0 ] || [ $c -ne 0 ]; then echo "esito=ko" >> "$GITHUB_OUTPUT"; else echo "esito=ok" >> "$GITHUB_OUTPUT"; fi
+
+      - name: "📝 Issue in-place"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ESITO: ${{ steps.controllo.outputs.esito }}
+        shell: bash
+        run: |
+          TITOLO="🧑‍🏫 Pagine per le scuole da correggere per le LIM"
+          NUM=$(gh issue list --state open --search "\"$TITOLO\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$ESITO" = "ok" ]; then
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --comment "Controllo del $(TZ=Europe/Rome date '+%d/%m/%Y'): nessun problema, chiusa automaticamente."
+            fi
+            exit 0
+          fi
+          {
+            echo "Controllo del $(TZ=Europe/Rome date '+%d/%m/%Y alle %H:%M'), ora italiana."
+            echo
+            echo "## Sintassi JavaScript (browser delle LIM, Chrome 64)"
+            echo '```'; grep -E '^(❌|✅|  - )' sintassi.log | head -60; echo '```'
+            echo
+            echo "## Prova touch a 1024x768 e 1366x768"
+            echo '```'; grep -E '^(❌|✅|  - )' lim.log | head -60; echo '```'
+            echo
+            echo "## Chromium 69 (LIM e PC non aggiornati)"
+            echo '```'; grep -E '^(❌|✅|  - )' vecchio.log | head -60; echo '```'
+            echo
+            echo "Regola: \`.claude/rules/lim-scuole.md\`. Bootstrap Italia non compatibile:"
+            echo "\`bash scripts/js-compatibile-lim.sh\`. Per riprovare in locale dopo la build:"
+            echo "\`python3 scripts/check-lim.py\` e \`node scripts/check-sintassi-js.cjs --public public\`."
+          } > corpo.md
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file corpo.md
+          else
+            gh issue create --title "$TITOLO" --label automazione --body-file corpo.md
+          fi
+          exit 1

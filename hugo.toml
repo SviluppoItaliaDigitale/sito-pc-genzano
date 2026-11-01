@@ -531,6 +531,15 @@ enableGitInfo = true
   badge = "badges"
 
 # Impostazioni di output
+# Compatibilità con i browser delle lavagne interattive (LIM) e dei computer
+# di scuola non aggiornati (dall'01/11/2026): la minificazione degli script
+# inline non deve usare sintassi oltre ECMAScript 2017. Con il valore
+# predefinito (2022) Hugo riscriveva catch(e){} in catch{}, che i browser
+# precedenti a Chrome 66 non leggono. Controllo bloccante in
+# scripts/check-sintassi-js.cjs.
+[minify.tdewolff.js]
+  version = 2017
+
 [outputs]
 home = ["HTML", "RSS", "JSON", "BUILDINFO", "NEWSSITEMAP", "CAP"]
 
