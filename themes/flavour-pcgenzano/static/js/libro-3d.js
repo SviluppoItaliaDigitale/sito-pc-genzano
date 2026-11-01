@@ -100,6 +100,8 @@ function pawn(color=0xe0a100){
 const tweens = [];
 function tween(dur, fn, done){ const tw = {t:0, dur:RM() ? Math.min(dur,.25) : dur, fn, done}; tweens.push(tw); return tw; }
 const ease = p => p<.5 ? 2*p*p : 1-Math.pow(-2*p+2,2)/2;
+/* uscita con un piccolo rimbalzo, come la carta di un libro pop-up */
+const easeBack = p => 1 + 2.2*Math.pow(p-1,3) + 1.2*Math.pow(p-1,2);
 function moveTo(obj, target, dur=.9, hop=.05, done){
   const a = obj.position.clone();
   tween(dur, p=>{ const e = ease(p); obj.position.lerpVectors(a,target,e); obj.position.y += Math.sin(Math.PI*e)*hop; }, done);
@@ -191,7 +193,7 @@ flapBack.rotation.x = Math.PI/2; flapBack.position.set(0, -.0005, .14); flapBack
 flapPivot.add(flap, flapBack);
 function setFlap(open){
   const a = flapPivot.rotation.x, b = open ? -2.35 : 0;
-  tween(.7, p=>{ flapPivot.rotation.x = a + (b-a)*ease(p); });
+  tween(open ? .9 : .6, p=>{ flapPivot.rotation.x = a + (b-a)*(open && !RM() ? easeBack(p) : ease(p)); });
 }
 
 /* foglio che gira quando cambi capitolo */
@@ -214,6 +216,85 @@ function carro(color){
 
 /* ---------- Le scene della pagina di destra ---------- */
 const anchor = new THREE.Group(); anchor.position.set(.545, PY, -.04); book.add(anchor);
+
+/* ---------- Effetti ----------
+   Pop-up dei modellini, luce e colore del cielo per ogni capitolo, polvere
+   luminosa, scintille sulla previsione giusta, ingresso della telecamera.
+   Con «Pausa animazioni» o movimento ridotto restano solo i cambi immediati. */
+function popUp(g){
+  if (RM()) return;
+  [...g.children].forEach((c,k)=>{
+    const piv = new THREE.Group(); g.add(piv); piv.add(c);   /* il perno è sulla pagina: il pezzo «si alza» dalla carta */
+    piv.scale.set(1,.001,1); piv.rotation.x = -.5;
+    const d = .08*k, dur = .7;
+    tween(dur + d, p=>{ const q = Math.max(0, Math.min(1, (p*(dur+d) - d)/dur)); const e = easeBack(q);
+      piv.scale.set(1, Math.max(.001, e), 1); piv.rotation.x = -.5*(1-Math.min(1,e)); },
+      ()=>{ piv.scale.set(1,1,1); piv.rotation.x = 0; });
+  });
+}
+const TINTA = { sisma:0xe3dccf, alluvione:0xcfdbe6, sottopasso:0xcbd6e0, incendio:0xead6c8, allerta:0xdfe3ee,
+  kit:0xdfe6ee, caldo:0xf0dfc4, temporale:0xbfc8d6, vento:0xd3dde6, blackout:0x9aa3b4, gas:0xd8d6cc,
+  maremoto:0xc9dfe8, industriale:0xd5d6d2, radiologico:0xd9dde2, siccita:0xeedfc2 };
+const SOLE = { caldo:0xfff0d0, incendio:0xffe2c8, temporale:0xdfe7ff, blackout:0xc8d2ff, siccita:0xfff1d6 };
+const cielo = new THREE.Color(0xdfe6ee), cieloA = new THREE.Color(), sunCol = new THREE.Color(0xffffff), sunA = new THREE.Color();
+function atmosfera(key){
+  const bg = new THREE.Color(TINTA[key] ?? 0xdfe6ee), sc = new THREE.Color(SOLE[key] ?? 0xffffff);
+  if (RM()){ scene.background.copy(bg); sun.color.copy(sc); return; }
+  cieloA.copy(scene.background); sunA.copy(sun.color);
+  tween(1.2, p=>{ const e = ease(p); scene.background.copy(cieloA).lerp(bg,e); sun.color.copy(sunA).lerp(sc,e); });
+}
+/* punto rotondo e sfumato per polvere e scintille (i Points sono quadrati senza texture) */
+const puntoTex = (()=>{ const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d');
+  const g = x.createRadialGradient(32,32,0,32,32,32); g.addColorStop(0,'rgba(255,255,255,1)'); g.addColorStop(.45,'rgba(255,255,255,.85)'); g.addColorStop(1,'rgba(255,255,255,0)');
+  x.fillStyle = g; x.fillRect(0,0,64,64); return new THREE.CanvasTexture(c); })();
+/* polvere luminosa nel fascio di luce: si muove solo senza «Pausa animazioni» */
+const POLVERE = 140, pv = new Float32Array(POLVERE*3), pvVel = [];
+for (let k=0;k<POLVERE;k++){ pv[k*3] = (Math.random()-.5)*2.6; pv[k*3+1] = .1+Math.random()*1.2; pv[k*3+2] = (Math.random()-.5)*1.8;
+  pvVel.push([(Math.random()-.5)*.02, .01+Math.random()*.02, (Math.random()-.5)*.02]); }
+const pvGeo = new THREE.BufferGeometry(); pvGeo.setAttribute('position', new THREE.BufferAttribute(pv,3));
+const polvere = new THREE.Points(pvGeo, new THREE.PointsMaterial({color:0xfff6d8, size:.02, map:puntoTex, transparent:true, opacity:.6, depthWrite:false}));
+scene.add(polvere);
+function muoviPolvere(dt, t){
+  if (!dt) return;
+  for (let k=0;k<POLVERE;k++){ const v = pvVel[k];
+    pv[k*3] += (v[0] + .006*Math.sin(t*.7+k))*dt; pv[k*3+1] += v[1]*dt; pv[k*3+2] += v[2]*dt;
+    if (pv[k*3+1] > 1.4){ pv[k*3+1] = .08; pv[k*3] = (Math.random()-.5)*2.6; pv[k*3+2] = (Math.random()-.5)*1.8; } }
+  pvGeo.attributes.position.needsUpdate = true;
+}
+/* scintille quando la previsione è giusta */
+const scintille = [];
+function festa(){
+  if (RM()) return;
+  const o = new THREE.Vector3(); flapPivot.getWorldPosition(o); o.y += .05; o.z += .1;
+  const N = 90, pos = new Float32Array(N*3), col = new Float32Array(N*3), vel = [];
+  const tinte = [new THREE.Color(0xffbe2e), new THREE.Color(0x16a34a), new THREE.Color(0x3b82f6), new THREE.Color(0xffffff)];
+  for (let k=0;k<N;k++){ pos.set([o.x+(Math.random()-.5)*.6, o.y, o.z+(Math.random()-.5)*.1], k*3);
+    const c = tinte[k%4]; col.set([c.r,c.g,c.b], k*3);
+    vel.push(new THREE.Vector3((Math.random()-.5)*.9, .9+Math.random()*1.1, (Math.random()-.5)*.6)); }
+  const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos,3)); geo.setAttribute('color', new THREE.BufferAttribute(col,3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({size:.045, map:puntoTex, vertexColors:true, transparent:true, opacity:1, depthWrite:false}));
+  scene.add(pts); scintille.push({pts, vel, t:0});
+}
+function muoviScintille(dt){
+  for (let i=scintille.length-1;i>=0;i--){ const s = scintille[i]; s.t += dt;
+    const a = s.pts.geometry.attributes.position;
+    s.vel.forEach((v,k)=>{ v.y -= 2.2*dt; a.array[k*3] += v.x*dt; a.array[k*3+1] += v.y*dt; a.array[k*3+2] += v.z*dt; });
+    a.needsUpdate = true; s.pts.material.opacity = Math.max(0, 1 - s.t/1.6);
+    if (s.t > 1.6){ scene.remove(s.pts); s.pts.geometry.dispose(); s.pts.material.dispose(); scintille.splice(i,1); } }
+}
+/* scossa leggera del libro quando la previsione non è quella sicura */
+function scuoti(){
+  if (RM()) return;
+  tween(.45, p=>{ book.rotation.z = .025*Math.sin(p*Math.PI*6)*(1-p); }, ()=>{ book.rotation.z = 0; });
+}
+/* ingresso: la telecamera scende sul libro e il libro ruota verso chi guarda */
+function ingresso(){
+  if (RM()) return;
+  const fine = camera.position.clone(), inizio = fine.clone().multiplyScalar(2.1).add(new THREE.Vector3(1.4,.9,0));
+  camera.position.copy(inizio); book.rotation.y = -.55; controls.enabled = false;
+  tween(2.4, p=>{ const e = 1-Math.pow(1-p,3); camera.position.lerpVectors(inizio, fine, e); book.rotation.y = -.55*(1-e); camera.lookAt(controls.target); },
+    ()=>{ book.rotation.y = 0; controls.enabled = true; });
+}
 const clampP = v => (v.x = Math.max(-.42, Math.min(.42, v.x)), v.z = Math.max(-.55, Math.min(.5, v.z)), v);
 
 const BUILD = {
@@ -662,6 +743,7 @@ let current = null;
 function mount(i){
   if (current){ current.dispose?.(); anchor.remove(current.g); current.g.traverse(o=>{ o.geometry?.dispose(); if (o.material){ o.material.map?.dispose(); o.material.dispose(); } }); }
   current = BUILD[CH[i].key](); anchor.add(current.g);
+  popUp(current.g); atmosfera(CH[i].key);
 }
 
 /* ---------- Pannello ---------- */
@@ -707,7 +789,7 @@ function showAnswer(){
 function toggleFlap(){
   revealed = !revealed; setFlap(revealed);
   $('flapBtn').textContent = revealed ? 'Abbassa il lembo' : 'Alza il lembo e scopri la risposta';
-  if (revealed) showAnswer(); else { $('answer').hidden = true; [...$('opts').children].forEach(b=>b.classList.remove('right')); }
+  if (revealed){ showAnswer(); const right = CH[chapter].opts.findIndex(o=>o.ok); if (choice === right) festa(); else if (choice >= 0) scuoti(); } else { $('answer').hidden = true; [...$('opts').children].forEach(b=>b.classList.remove('right')); }
 }
 $('flapBtn').onclick = toggleFlap;
 $('prev').onclick = ()=>goTo(chapter-1);
@@ -729,8 +811,7 @@ function goTo(i){
   const from = dir>0 ? 0 : Math.PI, to = dir>0 ? Math.PI : 0; let swapped = false;
   tween(.85, p=>{ sheetPivot.rotation.z = from + (to-from)*ease(p);
       if (!swapped && p>=.5){ swapped = true; swap(); }
-      const s = p<.5 ? 1-p*2 : (p-.5)*2;
-      current.g.scale.setScalar(Math.max(.001, s)); },
+      current.g.scale.setScalar(p<.5 ? Math.max(.001, 1-p*2) : 1); },
     ()=>{ sheet.visible = false; busy = false; current.g.scale.setScalar(1); });
 }
 
@@ -858,7 +939,8 @@ function loop(){
   /* «Pausa animazioni» o movimento ridotto: i movimenti continui (fiamme, fumo, nube, vento, ventola) si fermano; restano solo le transizioni brevi dei comandi. RM() si rilegge a ogni fotogramma, quindi vale anche se la preferenza cambia a pagina aperta. */
   const still = RM(); if (!still) animT += dt;
   for (let k=tweens.length-1; k>=0; k--){ const tw = tweens[k]; tw.t += dt; const p = Math.min(1, tw.t/tw.dur); tw.fn(p); if (p>=1){ tweens.splice(k,1); tw.done?.(); } }
-  current?.update(still ? 0 : dt, animT); controls.update(); renderer.render(scene, camera);
+  current?.update(still ? 0 : dt, animT); muoviPolvere(still ? 0 : dt, animT); muoviScintille(dt);
+  if (controls.enabled) controls.update(); renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
 
@@ -867,6 +949,6 @@ function loop(){
   try{ await Promise.race([Promise.all([document.fonts.load(F(700,40)), document.fonts.load(F(400,40)), document.fonts.load(F(600,40))]), new Promise(r=>setTimeout(r,2500))]); }catch(_){}
   const m = /^#capitolo-(\d{1,2})$/.exec(location.hash); chapter = m ? Math.min(CH.length, Math.max(1,+m[1]))-1 : 0;
   drawLeft(chapter); drawRight(chapter); mount(chapter); renderPanel(chapter);
-  $('loading').remove(); resize(); loop();
+  $('loading').remove(); resize(); ingresso(); loop();
   setTimeout(()=>$('hint').classList.add('off'), 9000);
 })();
