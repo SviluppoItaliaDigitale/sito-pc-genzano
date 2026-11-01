@@ -9,5 +9,13 @@
     "titolo": "Previsto verde",
     "rischi": [],
     "data": "2026-11-02"
+  },
+  "avviso_meteo": {
+    "tipo": "vento",
+    "livello": "gialla",
+    "validita_inizio": "2026-11-01T00:00:00+01:00",
+    "validita_fine": "2026-11-02T12:00:00+01:00",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/allertamento_01_11_2026%20%281%29%20%281%29.pdf",
+    "fonte_data": "2026-11-01"
   }
 }
