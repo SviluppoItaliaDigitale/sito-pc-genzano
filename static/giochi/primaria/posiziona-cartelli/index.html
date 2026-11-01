@@ -626,7 +626,20 @@
         });
         s.addEventListener('dragend', function () { s.classList.remove('dragging'); });
         s.addEventListener('keydown', onSignKeyDown);
-        s.addEventListener('click', function (e) { e.stopPropagation(); if (dopoTrascinamento) { dopoTrascinamento = false; return; } selectSign(s); });
+        s.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (dopoTrascinamento) { dopoTrascinamento = false; return; }
+        // con un altro cartello già scelto, toccare un cartello collocato vuol dire
+        // «metti qui quello scelto» (quello che c'era torna nel vassoio)
+        var posto = s.closest('.slot');
+        if (selected && selected !== s && posto) {
+          var cid = selected.dataset.signId;
+          selected.classList.remove('selected'); selected = null;
+          placeSign(cid, posto.dataset.slot);
+          return;
+        }
+        selectSign(s);
+      });
 
         // touch: tieni premuto e muovi sopra uno slot
         s.addEventListener('pointerdown', onPointerDown);
@@ -755,7 +768,20 @@
       });
       s.addEventListener('dragend', function () { s.classList.remove('dragging'); });
       s.addEventListener('keydown', onSignKeyDown);
-      s.addEventListener('click', function (e) { e.stopPropagation(); if (dopoTrascinamento) { dopoTrascinamento = false; return; } selectSign(s); });
+      s.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (dopoTrascinamento) { dopoTrascinamento = false; return; }
+        // con un altro cartello già scelto, toccare un cartello collocato vuol dire
+        // «metti qui quello scelto» (quello che c'era torna nel vassoio)
+        var posto = s.closest('.slot');
+        if (selected && selected !== s && posto) {
+          var cid = selected.dataset.signId;
+          selected.classList.remove('selected'); selected = null;
+          placeSign(cid, posto.dataset.slot);
+          return;
+        }
+        selectSign(s);
+      });
       s.addEventListener('pointerdown', onPointerDown);
       return s;
     }

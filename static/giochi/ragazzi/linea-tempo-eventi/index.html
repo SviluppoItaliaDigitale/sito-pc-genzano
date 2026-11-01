@@ -229,7 +229,15 @@
       });
       // Tocco e posa (alternativa-al-trascinamento): tocca la tessera, poi la posizione
       c.setAttribute('role', 'button');
-      c.addEventListener('click', function(e){ e.stopPropagation(); scegli(c); });
+      c.addEventListener('click', function(e){
+        e.stopPropagation();
+        // con un'altra tessera già scelta, toccare una tessera collocata vuol dire
+        // «metti qui quella scelta»: le due si scambiano
+        if (scelta && scelta !== c && c.classList.contains('in-slot')) {
+          var daMettere = scelta; scegli(null); collocaInSlot(daMettere, c.parentElement); return;
+        }
+        scegli(c);
+      });
       // Fallback con tastiera
       c.addEventListener('keydown', function(e){
         if (e.key !== 'Enter' && e.key !== ' ') return;
