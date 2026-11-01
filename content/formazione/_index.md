@@ -100,6 +100,7 @@ Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza 
 - [Giochi della sicurezza](/giochi/) — giochi per infanzia, primaria, ragazzi e famiglie (Arena con badge e progressi).
 - [Catalogo dei giochi](/catalogo-giochi/) — scheda informativa di ogni gioco con fascia d'età, durata, obiettivo didattico e accessibilità.
 - [Esperimenti e attività di protezione civile](/formazione/esperimenti/) — esperimenti scientifici e giochi da fare a scuola o a casa, con materiali semplici, per capire i rischi e come ci si protegge.
+- [Il libro che si esplora](/formazione/libro-che-si-esplora/) — libro aperto in 3D con quindici capitoli di autoprotezione: fai la tua previsione, prova sul modellino e alza il lembo per la risposta. Sotto il libro c'è la versione testuale di tutti i capitoli.
 - [Schede stampabili](/formazione/schede-stampabili/) — schede A4 pronte per la classe.
 
 ## Aree tematiche {#aree-tematiche}
