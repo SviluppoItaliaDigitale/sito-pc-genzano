@@ -4,8 +4,8 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-10-31",
-    "ultimo_numero": "221/2026"
+    "al": "2026-11-01",
+    "ultimo_numero": "222/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
   "generato_il": "2026-11-01",
@@ -20,11 +20,11 @@
     },
     {
       "automezzo": "M04 Evo (Pickup)",
-      "interventi": 58
+      "interventi": 59
     },
     {
       "automezzo": "M05 Doblò (Autovettura)",
-      "interventi": 48
+      "interventi": 49
     },
     {
       "automezzo": "AB02 Actros (Autobotte)",
