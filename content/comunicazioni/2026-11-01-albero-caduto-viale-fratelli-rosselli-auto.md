@@ -42,7 +42,7 @@ La chioma si è distesa sulla strada, sopra i posti auto lungo il marciapiede: d
          alt="Di notte, una strada alberata con i lampioni accesi: a sinistra l'albero caduto con i rami sull'asfalto, al centro un'auto grigia parcheggiata con il tronco sopra il cofano. A destra due persone di spalle, una con lo zaino, guardano la scena; in fondo un cartello stradale blu. Volti e targhe sono oscurati."
          caption="La strada bloccata dall'albero. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-11-01-viale-rosselli-vigili-fuoco-autoscala.webp"
-         alt="Di notte, un'autoscala rossa dei Vigili del Fuoco con il cestello alzato e i lampeggianti blu accesi, accanto a un pickup rosso con la scritta Vigili del Fuoco. Vicino a una staccionata due vigili del fuoco con le bande riflettenti e mucchi di rami tagliati. In primo piano due persone. Volti e targhe dei civili sono oscurati."
+         alt="Di notte, un'autoscala rossa dei Vigili del Fuoco con il cestello alzato e i lampeggianti blu accesi, accanto a un pickup rosso con la scritta Vigili del Fuoco. Vicino a una staccionata due vigili del fuoco con le bande riflettenti e mucchi di rami tagliati. In primo piano due persone. Volti e targhe sono oscurati."
          caption="I Vigili del Fuoco al lavoro con l'autoscala. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-11-01-viale-rosselli-ceppo-albero-caduto.webp"
          alt="Marciapiede bagnato coperto di foglie gialle e segatura. Nell'aiuola rettangolare con il cordolo di pietra spezzato resta il ceppo dell'albero, con il legno chiaro della frattura; dietro, i pezzi del tronco tagliati e appoggiati a terra."
