@@ -26,19 +26,26 @@ Accanto a noi c'era la **Misericordia di Ariccia**, con il presidio sanitario. I
 
 ## La squadra in piazza
 
+{{< galleria titolo="La festa di Halloween in piazza Frasconi" >}}
 {{< foto src="/images/2026-10-31-halloween-squadra-volontari.webp"
          alt="Un gruppo di persone in posa in una piazza, su una strada asfaltata: volontarie e volontari con divise blu e gialle e gilet ad alta visibilità, volontari con divise rosse e blu e giacche arancioni, un agente della Polizia Locale e un uomo con giubbotto e cappellino blu. A destra si vede il muso di un fuoristrada bianco con una banda gialla e blu, sullo sfondo alberi, palazzi e ombrelloni."
          caption="Volontari della Misericordia di Ariccia e del Gruppo, con un agente della Polizia Locale, in piazza Tommaso Frasconi il 31 ottobre 2026. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-31-halloween-mezzi-piazza-pomeriggio.webp"
+         alt="Piazza lastricata nel pomeriggio, con edifici color ocra. A sinistra un fuoristrada verde con lampeggianti, a destra un furgone bianco con bande gialle e blu e il numero 05. Al centro un gazebo giallo con un banchetto e diverse persone, alcune balle di paglia e volontari con divise colorate più lontano. Targhe e alcuni volti sono oscurati."
+         caption="Mezzi della Protezione Civile ai margini della piazza e il gazebo della festa, nel pomeriggio del 31 ottobre. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-31-halloween-defender-sera.webp"
+         alt="Di sera, il frontale di un Land Rover Defender verde con lampeggianti blu e un adesivo tondo della Protezione Civile sul cofano bagnato di pioggia. Sullo sfondo, sotto i lampioni, un volontario in divisa rossa e alcune persone vicino alle strisce pedonali; più lontano auto e un furgone."
+         caption="Il Land Rover Defender 130 del Gruppo in piazza, dopo la pioggia della sera. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-10-31-halloween-pickup-regione-lazio-sera.webp"
+         alt="Di sera, il cofano bianco di un mezzo coperto di gocce di pioggia, con lo stemma tondo della Protezione Civile della Regione Lazio e la scritta Protezione Civile sul parabrezza. Sullo sfondo una via illuminata con palazzi, una colonna, l'insegna verde di una farmacia, un gazebo giallo e alcune persone."
+         caption="Un mezzo della Protezione Civile con lo stemma della Regione Lazio, la sera del 31 ottobre in centro. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< /galleria >}}
 
 Il programma del pomeriggio era pensato per le famiglie: il laboratorio di zucche della Pro Loco, l'area trucco, la sfilata in centro. Per noi questo vuol dire tanti bambini in piazza, spesso già al buio, con l'ora solare.
 
-Il servizio è iniziato verso le 15:30 e si è chiuso poco dopo le 20:30. Per il servizio abbiamo impiegato il **Land Rover Defender 130** e il pickup **EVO Cross 4**.
+Il servizio è iniziato verso le 15:30 e si è chiuso poco dopo le 20:30. Abbiamo impiegato il **Land Rover Defender 130** e il pickup **EVO Cross 4**.
 
 ## Che cosa abbiamo fatto
-
-{{< foto src="/images/2026-10-31-halloween-mezzi-piazza-pomeriggio.webp"
-         alt="Piazza lastricata nel pomeriggio, con edifici color ocra. A sinistra un fuoristrada verde con lampeggianti, a destrun furgone bianco con bande gialle e blu e il numero 05. Al centro un gazebo giallo con un banchetto e diverse persone, alcune balle di paglia e volontari con divise colorate più lontano. Targhe e alcuni volti sono oscurati."
-         caption="Mezzi della Protezione Civile ai margini della piazza e il gazebo della festa, nel pomeriggio del 31 ottobre. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 In una festa come questa i nostri volontari presidiano l'area pedonale e i suoi accessi. Danno informazioni ai cittadini sui percorsi e sulle strade chiuse, e restano in collegamento con chi cura il soccorso sanitario.
 
@@ -48,15 +55,7 @@ Dalle 15:30 alle 20:30 il centro era chiuso al traffico, come avevamo spiegato n
 
 ## Fino a sera
 
-{{< foto src="/images/2026-10-31-halloween-defender-sera.webp"
-         alt="Di sera, il frontale di un Land Rover Defender verde con lampeggianti blu e un adesivo tondo della Protezione Civile sul cofano bagnato di pioggia. Sullo sfondo, sotto i lampioni, un volontario in divisa rossa e alcune persone vicino alle strisce pedonali; più lontano auto e un furgone."
-         caption="Il Land Rover Defender 130 del Gruppo in piazza, dopo la pioggia della sera. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-
 In serata la pioggia ha bagnato la piazza e i mezzi. Il servizio è andato avanti fino alla chiusura prevista per il centro.
-
-{{< foto src="/images/2026-10-31-halloween-pickup-regione-lazio-sera.webp"
-         alt="Di sera, il cofano bianco di un mezzo coperto di gocce di pioggia, con lo stemma tondo della Protezione Civile della Regione Lazio e la scritta Protezione Civile sul parabrezza. Sullo sfondo una via illuminata con palazzi, una colonna, l'insegna verde di una farmacia, un gazebo giallo e alcune persone."
-         caption="Un mezzo della Protezione Civile con lo stemma della Regione Lazio, la sera del 31 ottobre in centro. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 Ringraziamo la Misericordia di Ariccia, la Pro Loco, la Polizia Locale e la Polizia di Stato per il lavoro fatto insieme.
 
