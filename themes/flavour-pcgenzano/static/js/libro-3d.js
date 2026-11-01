@@ -956,7 +956,8 @@ function resize(){
   controls.maxDistance = 3.05*k*1.6; controls.minDistance = .6;
   vista(vistaAttuale, false);
 }
-/* Inquadrature: tutto il libro, pagina sinistra (testo e domanda), pagina destra (modellino).
+/* Inquadrature: tutto il libro (pulsante «Ripristina»: riporta zoom, rotazione e posizione a quelli di partenza),
+   pagina sinistra (testo e domanda), pagina destra (modellino).
    La distanza si calcola perché la pagina entri intera nello schermo, in verticale e in orizzontale. */
 const VISTE = { tutto:0, sinistra:-.545, destra:.545 };
 const DIREZIONE = new THREE.Vector3(0, .78, .62).normalize();
