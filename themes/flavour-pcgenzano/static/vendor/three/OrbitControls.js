@@ -967,7 +967,8 @@ class OrbitControls extends EventDispatcher {
 			const centerX = ( event.pageX + position.x ) * 0.5;
 			const centerY = ( event.pageY + position.y ) * 0.5;
 
-			updateZoomParameters( centerX, centerY );
+			// Correzione locale: pageX/pageY contano lo scorrimento della pagina, updateZoomParameters vuole coordinate del viewport.
+			updateZoomParameters( centerX - window.scrollX, centerY - window.scrollY );
 
 		}
 
