@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-01T07:37:32+00:00",
+  "generato": "2026-11-01T14:32:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-01T07:31:51+00:00",
+   "data": "2026-11-01T14:26:23+00:00",
    "fonte": "ANSA",
-   "titolo": "Binance annuncia che è ripresa l'attività dopo il mega-hackeraggio",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/binance-annuncia-che-e-ripresa-lattivita-dopo-il-mega-hackeraggio_87d50dc4-42ca-4246-8e1b-efd1578e52d4.html"
+   "titolo": "In Piazza Maggiore a Bologna 'La Cantata' per Guccini",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/01/in-piazza-maggiore-a-bologna-la-cantata-per-guccini_80699dcc-2ee8-46ee-b69f-2d76042d8dca.html"
   },
   {
-   "data": "2026-11-01T07:28:14+00:00",
+   "data": "2026-11-01T14:24:47+00:00",
    "fonte": "ANSA",
-   "titolo": "Morta nella piscina di casa nel Comasco, arrestato l'ex marito",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/morta-nella-piscina-di-casa-nel-comasco-arrestato-lex-marito_4ca017c1-3daa-4120-b2ad-789d90ed8fb7.html"
+   "titolo": "Serie A: in campo Lazio-Cagliari 0-1 e Frosinone-Torino 0-0 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/01/serie-a-lazio-cagliari-in-campo-alle-15-diretta_4b330203-a3e7-49f6-9d1a-deb5ae5300a4.html"
   },
   {
-   "data": "2026-11-01T07:21:33+00:00",
+   "data": "2026-11-01T14:22:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: stretta sugli aumenti degli stipendi dei magistrati, rivisti i criteri",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-bonus-giorgetti-confermato-piu-soldi-in-busta-paga-a-chi-rinvia_20031262-e476-45eb-82ee-0356dd37c56f.html"
+  },
+  {
+   "data": "2026-11-01T14:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Barbara d'Urso non sincera, sono dispiaciuto\", Pasquale La Rocca e il gelo a Ballando",
+   "url": "https://www.adnkronos.com/spettacoli/pasquale-la-rocca-barbara-durso-ballando-domenica-in_7gyN7K4jX7AXaur5oaEee8"
+  },
+  {
+   "data": "2026-11-01T14:10:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Broker di 61 anni trovato morto vicino la sua auto, fermato un 29enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/broker-di-61-anni-trovato-morto-vicino-la-sua-auto-fermato-un-29enne_391c5158-866b-42b5-8df9-4b9911851a11.html"
+  },
+  {
+   "data": "2026-11-01T14:03:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Herzog: 'Mercoledì i dati ufficiali del voto, poi al via le consultazioni'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/01/herzog-mercoledi-i-dati-ufficiali-del-voto-poi-al-via-le-consultazioni_9aa5e803-daf0-4591-b0c6-ea26ce02a358.html"
+  },
+  {
+   "data": "2026-11-01T14:01:17+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morta una maestra d'asilo nel Bresciano per sospetta meningite",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/morta-una-maestra-dasilo-nel-bresciano-per-sospetta-meningite_6aa1046e-60a7-4ea4-825b-d3ff9ecf4927.html"
+  },
+  {
+   "data": "2026-11-01T13:57:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ciara Mageean, muore a 34 anni l'irlandese oro agli Europei di Roma",
+   "url": "https://www.ansa.it/sito/notizie/sport/altrisport/2026/11/01/atletica-ciara-mageean-muore-a-34-anni-lirlandese-oro-agli-europei-di-roma_f90cb025-e873-469d-a0a3-6b293575c8ca.html"
+  },
+  {
+   "data": "2026-11-01T13:35:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cresce l'uso dell'IA per accedere alle news, ma gli utenti non la vogliono in redazione",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/10/31/ansa-cresce-uso-ia-per-accedere-alle-news-ma-utenti-non-la-vogliono_43b8ba7e-39cf-4a97-b54b-a4ee046f016e.html"
+  },
+  {
+   "data": "2026-11-01T13:33:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il frontman dei Deep Purple Ian Gillan ricoverato in ospedale, annullati due concerti in Germania",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/01/ian-gillan-ricoverato-in-ospedale-i-deep-purple-annullano-due-concerti-in-germania_66ccd562-8287-46b4-b6ec-317260be9cdd.html"
+  },
+  {
+   "data": "2026-11-01T13:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Lazio-Cagliari 0-1 - Diretta",
+   "url": "https://www.adnkronos.com/sport/serie-a-lazio-cagliari-diretta-oggi_weBJ7nYwZ9ZTwhdvsgUIF"
+  },
+  {
+   "data": "2026-11-01T13:15:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Michela Ponzani: \"Io a primarie del centrosinistra? Non sono interessata e nessuno me l'ha chiesto\"",
+   "url": "https://www.adnkronos.com/politica/primarie-centrosinistra-smentita-michela-ponzani_1V0AZj9DbWTwBN373r6Do5"
+  },
+  {
+   "data": "2026-11-01T13:05:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Davide Lippi racconta la malattia: \"Ho vinto una battaglia, non la guerra\"",
+   "url": "https://www.adnkronos.com/sport/davide-lippi-malattia-video-racconto-instagram_2ZQHNdrMQL9Lalu9iYGlFi"
+  },
+  {
+   "data": "2026-11-01T12:55:03+00:00",
    "fonte": "ANSA",
    "titolo": "Trump: 'Non abbiamo fretta sull'Iran, abbiamo uno o due siti di cui occuparci'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/trump-non-abbiamo-fretta-sulliran-abbiamo-uno-o-due-siti-di-cui_c61082f4-ba5a-417a-a2a5-16dceb809481.html"
   },
   {
-   "data": "2026-11-01T07:15:22+00:00",
+   "data": "2026-11-01T12:54:41+00:00",
    "fonte": "ANSA",
-   "titolo": "++ Wnba: le Valkyries e la Zandalasini vincono il titolo 2026 ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/11/01/-wnba-le-valkyries-e-la-zandalasini-vincono-il-titolo-2026-_1768a74c-58d0-45ca-b83d-145c7bc5cde9.html"
+   "titolo": "Trump: \"Non abbiamo fretta sull'Iran\"",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/01/trump-non-abbiamo-fretta-sulliran_d580774b-cc50-452d-9e5c-0fcd4eb38eec.html"
   },
   {
-   "data": "2026-11-01T06:54:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Como-Venezia: orario, probabili formazioni e dove vederla",
-   "url": "https://www.adnkronos.com/sport/serie-a-como-venezia-fabregas_1gxbhXVvbAjylEFvp9udZn"
-  },
-  {
-   "data": "2026-11-01T06:53:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Domenica In, nuova puntata oggi 1 novembre: ospiti e anticipazioni",
-   "url": "https://www.adnkronos.com/spettacoli/domenica-in-oggi-1-novembre-ospiti-anticipazioni_5aY1uHkqFyvaSzosGFFtCx"
-  },
-  {
-   "data": "2026-11-01T06:49:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Verissimo, anticipazioni e ospiti della puntata di oggi 1 novembre",
-   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-1-novembre-2026-ospiti_2VdaDn5wAUvs0NpYIYjOk9"
-  },
-  {
-   "data": "2026-11-01T06:33:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Juve-Napoli: orario, probabili formazioni e dove vederla",
-   "url": "https://www.adnkronos.com/sport/juve-napoli-oggi-serie-a-orario-formazioni-dove-vederla_3N0PtseRAlLou2VrQPjntn"
-  },
-  {
-   "data": "2026-11-01T06:32:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alcaraz-De Minaur, oggi finale a Vienna: orario, precedenti e dove vederla",
-   "url": "https://www.adnkronos.com/sport/alcaraz-de-minaur-oggi-finale-vienna-orario-precedenti-dove-vederla-tv-streaming_NiU9ggbKJICG9Dd4jN4bL"
-  },
-  {
-   "data": "2026-11-01T06:28:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Lazio-Cagliari: orario, probabili formazioni e dove vederla",
-   "url": "https://www.adnkronos.com/sport/serie-a-lazio-cagliari_5j9pKB3tAx85EY4dGL2pDr"
-  },
-  {
-   "data": "2026-11-01T06:27:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Che tempo che fa, ospiti e anticipazioni puntata di oggi 1 novembre",
-   "url": "https://www.adnkronos.com/spettacoli/che-tempo-che-fa-diretta-oggi-1-novembre_7EJi5vPN6XgFysBgIQ6YfL"
-  },
-  {
-   "data": "2026-11-01T06:26:20+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, oggi Gp Messico: orario, griglia di partenza e dove vederlo in chiaro",
-   "url": "https://www.adnkronos.com/sport/gp-messico-orario-griglia-partenza-dove-vederlo-f1_6BbPTyMtz5G38gXsXoAmkx"
-  },
-  {
-   "data": "2026-11-01T06:22:06+00:00",
+   "data": "2026-11-01T12:54:39+00:00",
    "fonte": "ANSA",
-   "titolo": "Manovra, scontro sulla scuola. Banche ancora sotto tiro",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-scontro-sulla-scuola.-banche-ancora-sotto-tiro_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html"
+   "titolo": "\"It's time!\", Mariah Carey dà il via al countdown per Natale",
+   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/11/01/its-time-mariah-carey-da-il-via-al-countdown-per-natale_1deda8cd-c76c-40f8-8939-9d57c89d8a80.html"
   },
   {
-   "data": "2026-11-01T06:20:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "MotoGp, oggi si corre in Malesia - Diretta",
-   "url": "https://www.adnkronos.com/sport/motogp-malesia-diretta-live-gran-premio-sepang_1SHLNjdMkEwoQiZEbii7go"
-  },
-  {
-   "data": "2026-11-01T06:09:56+00:00",
+   "data": "2026-11-01T12:45:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Un piccolo segnale per una grande speranza",
-   "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/10/30/un-piccolo-segnale-per-una-grande-speranza_83175b35-a354-4ca3-8bd3-2c1f91325c8b.html"
+   "titolo": "MotoGp: Marc Marquez vince a Sepang ed ipoteca il mondiale",
+   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/01/motogp-marc-marquez-vince-il-gp-della-malesia_08a0a29e-b250-4c87-95a2-04a44eeac9fb.html"
   },
   {
-   "data": "2026-11-01T00:46:09+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milan-Inter 3-1, giornalista 'assediato' dai tifosi e stop al collegamento",
-   "url": "https://www.adnkronos.com/sport/milan-inter-tancredi-palmeri-video_3YJQyf79686jhcCWMvur7P"
-  },
-  {
-   "data": "2026-11-01T00:37:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, Noemi Bocchi vince la puntata e Eugenio Finardi eliminato: la classifica",
-   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-classifica-quinta-puntata_5PhXSXdzQnCZvMVwwdTnbP"
-  },
-  {
-   "data": "2026-11-01T00:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Cafone\" e \"poveraccia\", scontro totale tra Barbara d'Urso e Guillermo Mariotto a Ballando: cosa è successo",
-   "url": "https://www.adnkronos.com/spettacoli/durso-mariotto-lite-ballando-31-ottobre_2QunRqBtek8sn6ccqtbM3v"
-  },
-  {
-   "data": "2026-10-31T23:32:30+00:00",
+   "data": "2026-11-01T12:39:53+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Lite in stazione finisce a coltellate, 38enne arrestato per omicidio",
+   "titolo": "Manifestazione nazionale Usb il 12 dicembre contro caro vita e governo Meloni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/manifestazione-nazionale-usb-il-12-dicembre-contro-caro-vita-e-governo-meloni_356df6be-bccb-4a13-b9fe-26f10310587c.html"
+  },
+  {
+   "data": "2026-11-01T12:37:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elicottero caduto in Bosnia, domani il rientro delle salme in Italia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/elicottero-caduto-in-bosnia-domani-il-rientro-delle-salme-in-italia_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html"
+  },
+  {
+   "data": "2026-11-01T12:37:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Israele, media: formazioni arabe verso indicazione di Eisenkot come premier",
+   "url": "https://www.adnkronos.com/internazionale/esteri/israele-elezioni-news-oggi-1-novembre_6AhIyV20Eb95maIkxo0n8B"
+  },
+  {
+   "data": "2026-11-01T12:34:57+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Parte un colpo di pistola, poliziotta ferita in questura ad Ancona",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/parte-un-colpo-di-pistola-poliziotta-ferita-in-questura-ad-ancona_b374b0a2-f2d7-47cc-af90-a788734a0bf0.html"
+  },
+  {
+   "data": "2026-11-01T12:26:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dazi, Carney: \"Canada pronto ad aspettare un nuovo presidente Usa per l'accordo\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/dazi-canada-usa-trump_2o7XciLq895hG5L5yFsVnH"
+  },
+  {
+   "data": "2026-11-01T12:24:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Calcio di rigore revocato al Venezia, Como salvato. Cosa è successo",
+   "url": "https://www.adnkronos.com/sport/calcio-rigore-venezia-como-assegnato-revocato-serie-a_qqsIPY8QxW8FzSlgdd58B"
+  },
+  {
+   "data": "2026-11-01T12:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, Antonelli campione del mondo se... Tutte le combinazioni",
+   "url": "https://www.adnkronos.com/sport/formula-1-antonelli-campione-mondo-combinazionu-messico_6Yf37fP24Gc4fp7QnJcnXe"
+  },
+  {
+   "data": "2026-11-01T12:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pensioni, dai 144 ai 1300 euro l’anno: \"Ecco quanto pesa il taglio delle rivalutazioni\"",
+   "url": "https://www.adnkronos.com/economia/pensione-taglio-rivalutazione-quanto-costa_7r9Q26psfOgxOBNs8dYRoe"
+  },
+  {
+   "data": "2026-11-01T12:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Vienna, oggi finale Alcaraz-De Minaur 6-1 - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-alcaraz-de-minaur-oggi-finale-atp-vienna-live_61QVPDfVwPLIdv9I1MmQKw"
+  },
+  {
+   "data": "2026-11-01T11:51:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lite in stazione finisce a coltellate, nata per un cambio di gomme in ritardo",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/lite-in-stazione-finisce-a-coltellate-38enne-arrestato-per-omicidio_fb596364-c915-46ef-8b31-4a06c2eacfe5.html"
   },
   {
-   "data": "2026-10-31T23:10:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Parigi ancora scontri a fine corteo, 'dai casseurs violenza inaudita'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/a-parigi-ancora-scontri-a-fine-corteo-dai-casseurs-violenza-inaudita_2c093ef1-cc85-4d03-bcc4-4d553004fd49.html"
+   "data": "2026-11-01T11:50:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lutto nell'atletica. Addio a Ciara Mageean, scomparsa a 34 anni l'oro dei 1500 a Roma",
+   "url": "https://www.adnkronos.com/sport/morta-ciara-mageean-a-34-anni-campionessa-atletica-mezzofondo_65HFW8PHSHkw0bvBFyAt7b"
   },
   {
-   "data": "2026-10-31T23:06:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Caos in Polonia. Tusk: 'Il partito PiS vuole distruggere la democrazia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/caos-in-polonia.-tusk-il-partito-pis-vuole-distruggere-la-democrazia_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
-  },
-  {
-   "data": "2026-10-31T23:05:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Milan rinasce nel derby con show di Moreira, Inter vede le streghe",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/31/serie-a-milan-inter-in-campo-alle-20.45-diretta_00f71d0c-a85e-4c9d-b003-c9ba0d43461d.html"
-  },
-  {
-   "data": "2026-10-31T23:02:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Hamilton in pole, al suo fianco Russel. Antonelli parte quarto",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-hamilton-in-pole-al-suo-fianco-russel.-antonelli-quinto_d44231ac-58ba-4f03-bfb9-8da0eb242644.html"
-  },
-  {
-   "data": "2026-10-31T22:15:24+00:00",
+   "data": "2026-11-01T11:43:45+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Lite in stazione finisce a coltellate, un morto nel Frusinate",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/lite-in-stazione-finisce-a-coltellate-un-morto-nel-frusinate_e17181ed-8783-4645-9bb2-d90dbf2164c7.html"
+   "titolo": "A Torino otto arresti e 18 denunce nei controlli del weekend di Halloween",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/a-torino-otto-arresti-e-18-denunce-nei-controlli-del-weekend-di-halloween_c8600aa9-83cd-44d5-a221-d27555b78623.html"
   },
   {
-   "data": "2026-10-31T20:02:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Svastiche e scritte inneggianti al nazismo, sdegno in Valtellina",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/svastiche-e-scritte-inneggianti-al-nazismo-sdegno-in-valtellina_79cc36e3-5780-4d8b-bdbf-2c5908d2a8ab.html"
-  },
-  {
-   "data": "2026-10-31T19:46:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bimbo di un anno e mezzo muore soffocato da un pezzo di mela",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/bimbo-di-un-anno-e-mezzo-muore-soffocato-da-un-pezzo-di-mela_c0143d45-707a-4679-b09d-3672604d13c8.html"
-  },
-  {
-   "data": "2026-10-31T19:39:28+00:00",
+   "data": "2026-11-01T11:42:28+00:00",
    "fonte": "ANSA",
-   "titolo": "Rush finale alle midterm, Trump teme l'ondata dem",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/31/rush-finale-alle-midterm-trump-teme-londata-dem_288d891f-ad1f-4645-a886-37370d72fb4c.html"
-  },
-  {
-   "data": "2026-10-31T19:06:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giallo a Mosca, allerta Usa su un possibile attentato al Museo Tsaritsyno",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/gli-usa-avvertono-mosca-minaccia-credibile-al-museo-tsaritsyno_bc7f5a80-5264-4ebd-9762-2bb45b1ec8a0.html"
-  },
-  {
-   "data": "2026-10-31T19:04:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Dona il fegato a 98 anni e salva una vita",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/dona-il-fegato-a-98-anni-e-salva-una-vita_66acf73b-9e57-4a48-bff7-b72c19a881d8.html"
-  },
-  {
-   "data": "2026-10-31T18:59:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Hanno incitato alla violenza nelle piazze', 60 perquisizioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/hanno-incitato-alla-violenza-nelle-piazze-60-perquisizioni_449404aa-1c37-4c96-aa63-5089df5221ae.html"
+   "titolo": "Binance annuncia che è ripresa l'attività dopo il mega-hackeraggio",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/binance-annuncia-che-e-ripresa-lattivita-dopo-il-mega-hackeraggio_87d50dc4-42ca-4246-8e1b-efd1578e52d4.html"
   }
  ]
 }
