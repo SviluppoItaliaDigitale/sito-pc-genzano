@@ -12,7 +12,7 @@
 {{- $d := index site.Data $nome -}}
 {{- if not $d }}{{ errorf "libro-3d-schede: dati %q non trovati in data/" $nome }}{{ end -}}
 <link rel="stylesheet" href="{{ "css/libro-3d-schede.css" | relURL }}?v={{ readFile "themes/flavour-pcgenzano/static/css/libro-3d-schede.css" | hash.FNV32a }}">
-<p class="d-print-none"><button type="button" class="btn btn-primary" onclick="window.print()"><i class="bi bi-printer me-1" aria-hidden="true"></i>Stampa tutte le schede</button></p>
+<p class="d-print-none"><button type="button" class="btn btn-primary" data-lb-stampa><i class="bi bi-printer me-1" aria-hidden="true"></i>Stampa tutte le schede</button></p>
 <div class="lb-schede">
 {{- range $i, $c := $d.capitoli }}
 <section class="lb-scheda" id="scheda-{{ add $i 1 }}" aria-labelledby="lb-scheda-titolo-{{ add $i 1 }}">
@@ -32,8 +32,9 @@
   </ul>
   <p class="lb-scheda-istr">Perché hai scelto questa risposta?</p>
   <div class="lb-scheda-righe" aria-hidden="true"><span></span><span></span><span></span></div>
-  <div class="lb-scheda-risposta">
+  <div class="lb-scheda-risposta soluzione-capovolta">
     <p><strong>Risposta.</strong> {{ $c.risposta }}</p>
+    <p><strong>Perché non le altre.</strong> {{ range $k, $o := $c.opzioni }}{{ if not $o.giusta }}{{ index (slice "A" "B" "C" "D") $k }}: {{ $o.perche }} {{ end }}{{ end }}</p>
     {{- if eq $c.chiave "allerta" }}
     <ul>{{ range site.Data.codici_colore.codici }}<li><strong>{{ .titolo }}.</strong> {{ .cosa_fare }}</li>{{ end }}</ul>
     {{- end }}
@@ -41,8 +42,9 @@
   </div>
   <div class="lb-scheda-piede">
     <img src="{{ "images/footer-print-affiliazioni.png" | relURL }}" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, Volontariato" width="1200" height="140">
-    <p>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma · protezionecivilegenzano.it · CC BY-NC-SA 4.0</p>
+    <p>Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma · protezionecivilegenzano.it · CC BY-NC-SA 4.0 · Rev. 01 · Novembre 2026</p>
   </div>
 </section>
 {{- end }}
 </div>
+<script>document.querySelectorAll("[data-lb-stampa]").forEach(function(b){b.addEventListener("click",function(){window.print();});});</script>

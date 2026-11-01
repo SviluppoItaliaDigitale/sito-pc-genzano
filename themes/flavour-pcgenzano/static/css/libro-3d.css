@@ -52,6 +52,7 @@ html.a11y-pause-anim .lb-hint,html.a11y-pause-animations .lb-hint{transition:non
 .lb-conta-riga output{min-width:2.5em;text-align:center;font-weight:700;font-size:1.15rem}
 .lb .lb-conta-riga button{min-width:44px;font-size:1.1rem}
 .lb-conta-tot{margin:0;font-weight:600}
+.lb-conta-tot:empty{display:none}
 .lb-conta #lb-conta-azzera{align-self:flex-start}
 .lb-progresso{margin:0;font-size:.9rem;color:#33435a}
 .lb-progresso:empty{display:none}
@@ -61,11 +62,11 @@ html.a11y-pause-anim .lb-hint,html.a11y-pause-animations .lb-hint{transition:non
 .lb-fine-azioni{display:flex;flex-wrap:wrap;gap:.5rem}
 .lb-attestato{display:none}
 @media print{
-  @page{size:A4;margin:8mm}
+  @page attestato{size:A4;margin:8mm}
   /* L'attestato viene spostato da libro-3d.js come figlio diretto di body: in stampa resta solo lui. */
   html.stampa-attestato-libro body>*:not(.lb-attestato){display:none!important}
   html.stampa-attestato-libro body{padding:0!important;margin:0!important}
-  html.stampa-attestato-libro .lb-attestato{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;height:279mm;margin:0;padding:16mm 16mm 10mm;background:#fff;color:#14223a;font-family:"Titillium Web",Arial,sans-serif;font-size:13pt;border:3px solid #003366;box-sizing:border-box;overflow:hidden;break-inside:avoid}
+  html.stampa-attestato-libro .lb-attestato{page:attestato;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;height:279mm;margin:0;padding:16mm 16mm 10mm;background:#fff;color:#14223a;font-family:"Titillium Web",Arial,sans-serif;font-size:13pt;border:3px solid #003366;box-sizing:border-box;overflow:hidden;break-inside:avoid}
   .lb-attestato img{display:block;margin:0;max-width:none;border-radius:0;box-shadow:none}
   html.stampa-attestato-libro{background:#fff}
   .lb-attestato p{margin:.25rem 0}

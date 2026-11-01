@@ -15,7 +15,7 @@ capitoli:
   - testo: 'Vicino alla finestra'
     perche: 'I vetri e gli specchi possono rompersi. Durante la scossa stai lontano.'
   - testo: 'Giù per le scale, verso l’uscita'
-    perche: 'Durante la scossa non correre fuori. Non usare le scale e l’ascensore.'
+    perche: 'Durante la scossa non correre fuori. Durante la scossa non usare le scale e l’ascensore.'
   risposta: 'Vai sotto un tavolo robusto, o vicino a un muro portante. Proteggi la testa con le braccia o con un cuscino. Durante la scossa non uscire di corsa. Non usare scale e ascensore. Stai lontano da finestre, vetri, specchi e mobili pesanti.'
   breve: 'A · Sotto il tavolo robusto. Proteggi la testa. Stai lontano da finestre e mobili pesanti. Non usare scale e ascensore.'
   fonti:
@@ -45,12 +45,12 @@ capitoli:
   domanda: 'Il sottopassaggio davanti a te è allagato. Cosa fai?'
   opzioni:
   - testo: 'Passo piano: l’acqua sembra bassa'
-    perche: 'Bastano pochi centimetri d’acqua per perdere aderenza o spegnere il motore.'
+    perche: 'Bastano pochi centimetri d’acqua per perdere la presa sulla strada o spegnere il motore.'
   - testo: 'Passo veloce, così non mi fermo'
     perche: 'Non sai cosa c’è sotto l’acqua. L’auto può perdere il controllo o spegnersi.'
   - testo: 'Torno indietro e cerco un’altra strada'
     giusta: true
-  risposta: 'Non attraversare mai un sottopassaggio o una strada allagata. Bastano pochi centimetri d’acqua per perdere aderenza o spegnere il motore. Sotto l’acqua possono esserci buche o tombini aperti. Se l’auto si ferma e puoi uscire senza entrare nella corrente, lasciala. Vai a piedi in un punto più alto. Se la corrente è forte, resta nell’auto. Chiama il 112, il numero unico per le emergenze.'
+  risposta: 'Non attraversare mai un sottopassaggio o una strada allagata. Bastano pochi centimetri d’acqua per perdere la presa sulla strada o spegnere il motore. Sotto l’acqua possono esserci buche o tombini aperti. Se l’auto si ferma e puoi uscire senza entrare nella corrente, lasciala. Vai a piedi in un punto più alto. Se la corrente è forte, resta nell’auto. Chiama il 112, il numero unico per le emergenze.'
   breve: 'C · Torna indietro. Non attraversare mai un sottopassaggio allagato: sotto l’acqua possono esserci buche o tombini aperti.'
   fonti:
   - titolo: 'Rischio idrogeologico: se sei in auto'
@@ -84,7 +84,7 @@ capitoli:
     giusta: true
   - testo: 'Vado a vedere il torrente che si gonfia'
     perche: 'Non stare vicino ai corsi d’acqua. I fossi si gonfiano molto in fretta.'
-  risposta: 'Con l’allerta arancione esci solo se è necessario. Metti al sicuro le cose che sono in cantina. Fai lo stesso nei locali sotto il livello della strada. Tieni pronto il kit di emergenza. Segui le indicazioni delle autorità.'
+  risposta: 'Con l’allerta arancione esci solo se è necessario. Prima che arrivi l’acqua, metti al sicuro le cose che sono in cantina. Fai lo stesso nei locali sotto il livello della strada. Tieni pronto il kit di emergenza. Segui le indicazioni delle autorità.'
   breve: 'B · Esci solo se è necessario. Metti al sicuro le cose in cantina. Tieni pronto il kit. Segui le autorità.'
   fonti:
   - titolo: 'Allerte meteo e codici colore'
@@ -115,12 +115,12 @@ capitoli:
   domanda: 'A che ora esci?'
   opzioni:
   - testo: 'All’una, così faccio prima'
-    perche: 'Le ore più calde sono dalle 11 alle 18. In quelle ore non uscire e non fare sforzi.'
+    perche: 'Le ore più calde sono dalle 11 alle 18. In quelle ore esci solo se devi. Non fare sforzi.'
   - testo: 'Prima delle 11 o dopo le 18'
     giusta: true
   - testo: 'Alle tre, con il cappello va bene'
     perche: 'Il cappello aiuta. Ma dalle 11 alle 18 è meglio stare al fresco.'
-  risposta: 'Non uscire nelle ore più calde, dalle 11 alle 18. Bevi molta acqua, anche se non hai sete. Metti vestiti leggeri e chiari, il cappello e gli occhiali da sole. Abbassa le tapparelle quando il sole entra in casa. Non lasciare mai persone o animali in auto al sole.'
+  risposta: 'Nelle ore più calde, dalle 11 alle 18, esci solo se devi. Bevi molta acqua, anche se non hai sete. Metti vestiti leggeri e chiari, il cappello e gli occhiali da sole. Abbassa le tapparelle quando il sole entra in casa. Non lasciare mai persone o animali in auto al sole.'
   breve: 'B · Prima delle 11 o dopo le 18. Bevi spesso, abbassa le tapparelle, mai persone o animali in auto al sole.'
   fonti:
   - titolo: 'Ondate di calore: cosa fare durante'
@@ -171,7 +171,7 @@ capitoli:
     giusta: true
   - testo: 'Apro il frigorifero per controllare il cibo'
     perche: 'Tieni chiusi il frigorifero e il congelatore. Il cibo resta buono per molte ore se non li apri.'
-  risposta: 'Resta calmo: di solito il blackout dura poco. Usa la torcia elettrica, non le candele. Stacca gli elettrodomestici. Lascia accesa una sola lampada, così vedi quando torna la corrente. Tieni chiusi il frigorifero e il congelatore. Non usare i generatori a combustibile in locali chiusi.'
+  risposta: 'Di solito il blackout finisce da solo. Usa la torcia elettrica, non le candele. Stacca gli elettrodomestici. Lascia accesa una sola lampada, così vedi quando torna la corrente. Tieni chiusi il frigorifero e il congelatore. Non usare i generatori a combustibile in locali chiusi.'
   breve: 'B · Torcia elettrica, non candele. Stacca gli elettrodomestici e tieni chiusi frigorifero e congelatore.'
   fonti:
   - titolo: 'Blackout: cosa fare durante'
@@ -205,7 +205,7 @@ capitoli:
     perche: 'Se vedi questi segnali naturali, non aspettare la conferma. Vai via subito.'
   - testo: 'Mi allontano a piedi verso un punto alto'
     giusta: true
-  risposta: 'Allontanati subito dalla spiaggia a piedi. Vai in un punto alto. Non aspettare un messaggio ufficiale. Se non puoi, sali ai piani alti di un edificio solido. Non usare l’auto: le strade vicino al mare si bloccano. Resta in alto fino al cessato allarme. La prima onda può non essere la più grande.'
+  risposta: 'Allontanati subito dalla spiaggia a piedi. Vai in un punto alto. Non aspettare un messaggio ufficiale. Se non puoi, sali ai piani alti di un edificio solido. Evita l’auto: le strade vicino al mare si bloccano. Resta in alto finché le autorità dicono che il pericolo è finito. La prima onda può non essere la più grande.'
   breve: 'C · A piedi verso un punto alto, subito. Non aspettare l’avviso. Dopo la prima onda non tornare in spiaggia.'
   fonti:
   - titolo: 'Maremoto: segnali e cosa fare'
@@ -256,7 +256,7 @@ capitoli:
     giusta: true
   - testo: 'Bevo dalla fontanella di campagna non controllata'
     perche: 'Non bere acqua di pozzi, sorgenti o fontane non controllati. Se l’acqua manca, non diventa sicura.'
-  risposta: 'Rispetta le ordinanze del Comune. L’acqua risparmiata serve per bere. Fai docce più brevi. Chiudi il rubinetto mentre ti lavi i denti. Riusa l’acqua delle verdure per le piante. Se l’acqua manca a certe ore, riempi contenitori puliti e tienili coperti. Controlla che le persone fragili del vicinato abbiano acqua.'
+  risposta: 'Rispetta le ordinanze del Comune. L’acqua risparmiata serve per bere. Fai docce più brevi. Chiudi il rubinetto mentre ti lavi i denti. Riusa l’acqua delle verdure per le piante. Se l’acqua manca a certe ore, riempi contenitori puliti e tienili coperti. Controlla che le persone con fragilità del vicinato abbiano acqua.'
   breve: 'B · Rispetta le ordinanze e consuma meno acqua. Non usare l’acqua potabile per usi non essenziali.'
   fonti:
   - titolo: 'Siccità: cosa fare durante'

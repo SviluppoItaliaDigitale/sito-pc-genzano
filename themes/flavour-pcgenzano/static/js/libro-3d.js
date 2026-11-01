@@ -16,6 +16,7 @@ const html = document.documentElement;
 const mqRM = matchMedia('(prefers-reduced-motion: reduce)');
 const RM = () => mqRM.matches || html.classList.contains('a11y-pause-anim') || html.classList.contains('a11y-pause-animations');
 
+const LETTERE = 'ABCD';
 const CH = DATI.capitoli.map(c => ({
   key:c.chiave, kicker:c.occhiello, title:c.titolo, intro:c.intro, q:c.domanda,
   opts:c.opzioni.map(o => ({t:o.testo, ok:!!o.giusta, why:o.perche || ''})),
@@ -151,7 +152,7 @@ function drawLeft(i){
   y += 14; x.font = F(400,29);
   c.opts.forEach((o,k)=>{
     x.strokeStyle = '#24344d'; x.lineWidth = 2; x.beginPath(); x.arc(98, y-10, 17, 0, 7); x.stroke();
-    x.fillStyle = '#14223a'; x.font = F(700,20); x.fillText('ABC'[k], 91, y-3);
+    x.fillStyle = '#14223a'; x.font = F(700,20); x.fillText(LETTERE[k], 91, y-3);
     x.font = F(400,29); x.fillText(o.t, 132, y); y += 50;
   });
   // area sotto il lembo
@@ -681,7 +682,7 @@ function renderPanel(i){
   });
   const opts = $('opts'); opts.replaceChildren();
   c.opts.forEach((o,k)=>{ const b = document.createElement('button'); b.type = 'button'; b.className = 'opt'; b.id = `o-${c.key}-${k}`;
-    b.setAttribute('aria-pressed','false'); b.innerHTML = `<b aria-hidden="true">${'ABC'[k]}</b><span></span>`; b.querySelector('span').textContent = o.t;
+    b.setAttribute('aria-pressed','false'); b.innerHTML = `<b aria-hidden="true">${LETTERE[k]}</b><span></span>`; b.querySelector('span').textContent = o.t;
     b.onclick = ()=>choose(k); opts.append(b); });
   $('answer').hidden = true; $('flapBtn').textContent = 'Alza il lembo e scopri la risposta';
   $('src').replaceChildren('Per saperne di più: ');
@@ -711,6 +712,7 @@ function toggleFlap(){
 $('flapBtn').onclick = toggleFlap;
 $('prev').onclick = ()=>goTo(chapter-1);
 $('next').onclick = ()=>goTo(chapter+1);
+addEventListener('hashchange', ()=>{ const m = /^#capitolo-(\d{1,2})$/.exec(location.hash); if (m) goTo(Math.min(CH.length, Math.max(1,+m[1]))-1); });
 ROOT.addEventListener('keydown', e=>{
   if (e.target.closest('input,textarea,select')) return;
   if (e.key==='ArrowRight') goTo(chapter+1); else if (e.key==='ArrowLeft') goTo(chapter-1);
@@ -741,7 +743,7 @@ const btnVoce = $('ascolta');
 function voceStop(){ if (voce){ speechSynthesis.cancel(); } btnVoce.setAttribute('aria-pressed','false'); }
 function testoDaLeggere(){
   const c = CH[chapter], parti = [c.kicker + '.', c.title + '.', c.intro, c.q];
-  c.opts.forEach((o,k)=>parti.push(`Risposta ${'ABC'[k]}: ${o.t}.`));
+  c.opts.forEach((o,k)=>parti.push(`Risposta ${LETTERE[k]}: ${o.t}.`));
   if (revealed) parti.push($('verdict').textContent, c.answer);
   return parti.join(' ');
 }
@@ -767,21 +769,32 @@ btnClasse.onclick = ()=>{
   const on = btnClasse.getAttribute('aria-pressed')!=='true';
   btnClasse.setAttribute('aria-pressed', String(on)); $('conta').hidden = !on; disegnaConta();
 };
+let contaDi = null;
+/* Le righe si creano una volta per capitolo; i clic aggiornano solo i numeri,
+   così il fuoco da tastiera resta sul pulsante premuto. */
 function disegnaConta(){
   const c = CH[chapter], n = conti[c.key] || (conti[c.key] = c.opts.map(()=>0));
-  const righe = $('conta-righe'); righe.replaceChildren();
-  c.opts.forEach((o,k)=>{
-    const L = 'ABC'[k], r = document.createElement('div'); r.className = 'lb-conta-riga';
-    r.innerHTML = `<span class="lb-conta-lettera" aria-hidden="true">${L}</span><button type="button" aria-label="Togli una mano alla risposta ${L}">−</button><output aria-label="Mani per la risposta ${L}">${n[k]}</output><button type="button" aria-label="Aggiungi una mano alla risposta ${L}">+</button>`;
-    const [meno, piu] = r.querySelectorAll('button');
-    meno.onclick = ()=>{ n[k] = Math.max(0, n[k]-1); disegnaConta(); };
-    piu.onclick = ()=>{ n[k]++; disegnaConta(); };
-    righe.append(r);
-  });
-  const tot = n.reduce((a,b)=>a+b,0);
-  $('conta-tot').textContent = tot ? 'Mani alzate: ' + n.map((x,k)=>`${'ABC'[k]} ${x}`).join(', ') + '.' : '';
+  const righe = $('conta-righe');
+  if (contaDi !== c.key){
+    contaDi = c.key; righe.replaceChildren();
+    c.opts.forEach((o,k)=>{
+      const L = LETTERE[k], r = document.createElement('div'); r.className = 'lb-conta-riga';
+      r.innerHTML = `<span class="lb-conta-lettera" aria-hidden="true">${L}</span><button type="button" aria-label="Togli una mano alla risposta ${L}">−</button><output aria-label="Mani per la risposta ${L}">0</output><button type="button" aria-label="Aggiungi una mano alla risposta ${L}">+</button>`;
+      const [meno, piu] = r.querySelectorAll('button');
+      meno.onclick = ()=>{ n[k] = Math.max(0, n[k]-1); aggiornaConta(); };
+      piu.onclick = ()=>{ n[k]++; aggiornaConta(); };
+      righe.append(r);
+    });
+  }
+  aggiornaConta();
 }
-$('conta-azzera').onclick = ()=>{ conti[CH[chapter].key] = CH[chapter].opts.map(()=>0); disegnaConta(); };
+function aggiornaConta(){
+  const c = CH[chapter], n = conti[c.key];
+  [...$('conta-righe').querySelectorAll('output')].forEach((o,k)=>{ o.textContent = n[k]; });
+  const tot = n.reduce((a,b)=>a+b,0);
+  $('conta-tot').textContent = tot ? 'Mani alzate: ' + n.map((x,k)=>`${LETTERE[k]} ${x}`).join(', ') + '.' : '';
+}
+$('conta-azzera').onclick = ()=>{ conti[CH[chapter].key].fill(0); aggiornaConta(); };
 
 const CHIAVE = 'pcgenzano-libro3d-' + (DATI.variante || 'libro_3d');
 function leggiVisti(){ try { return new Set(JSON.parse(localStorage.getItem(CHIAVE) || '[]')); } catch(_){ return new Set(); } }
@@ -806,7 +819,7 @@ $('stampa-attestato').onclick = ()=>{
   const via = ()=>{ html.classList.remove('stampa-attestato-libro'); removeEventListener('afterprint', via); };
   addEventListener('afterprint', via);
   print();
-  setTimeout(via, 1000);
+  setTimeout(via, 60000); /* ripiego se il browser non segnala la fine della stampa */
 };
 mostraAvanzamento();
 

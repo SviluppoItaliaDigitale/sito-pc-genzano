@@ -4,8 +4,12 @@
   (il percorso, senza l'ancora) e mostra un riquadro con il collegamento diretto
   a ciascun capitolo (#capitolo-N). Sulle versioni facili (-facile) porta alla
   versione in italiano semplice del libro. Nessun capitolo: nessun riquadro.
-  Incluso da rischi-prevenzione/single.html e _default/list.html.
+  Incluso da rischi-prevenzione/single.html, _default/single.html e
+  _default/list.html; attivo solo nelle sezioni che il libro usa come fonte
+  (rischi-prevenzione, allerte-meteo): una fonte in un'altra sezione va
+  aggiunta alla lista qui sotto.
 */ -}}
+{{- if in (slice "rischi-prevenzione" "allerte-meteo") .Section -}}
 {{- $base := site.BaseURL | urls.Parse -}}
 {{- $p := strings.TrimPrefix (strings.TrimSuffix "/" $base.Path) .RelPermalink -}}
 {{- $facile := strings.HasSuffix $p "-facile/" -}}
@@ -31,4 +35,5 @@
   {{- end }}
   </ul>
 </aside>
+{{- end -}}
 {{- end -}}
