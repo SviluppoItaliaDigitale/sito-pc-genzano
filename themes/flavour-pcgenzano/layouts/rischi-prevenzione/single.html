@@ -70,6 +70,8 @@
 
       <article class="article-body">{{ .Content }}</article>
 
+      {{ partial "libro-3d-rimando.html" . }}
+
       {{ if $ttsEnabled }}
       {{ partial "glossario-inline.html" . }}
       {{ end }}

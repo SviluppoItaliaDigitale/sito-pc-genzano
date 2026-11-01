@@ -687,7 +687,7 @@ function renderPanel(i){
   $('src').replaceChildren('Per saperne di più: ');
   c.srcs.forEach((f,k)=>{ const a = document.createElement('a'); a.href = BASE + f.u.replace(/^\//,''); a.textContent = f.t; if (k) $('src').append('; '); $('src').append(a); });
   $('src').append('.');
-  say('');
+  say(''); voceStop(); disegnaConta();
 }
 function choose(k){
   choice = k; [...$('opts').children].forEach((b,j)=>b.setAttribute('aria-pressed', String(j===k)));
@@ -701,6 +701,7 @@ function showAnswer(){
   else if (choice === right){ v.textContent = 'Previsione giusta.'; v.className = 'verdict ok'; }
   else { v.textContent = `Non è la scelta sicura. ${c.opts[choice].why}`; v.className = 'verdict ko'; }
   [...$('opts').children].forEach((b,j)=>b.classList.toggle('right', j===right));
+  segnaVisto(c.key);
 }
 function toggleFlap(){
   revealed = !revealed; setFlap(revealed);
@@ -730,6 +731,84 @@ function goTo(i){
       current.g.scale.setScalar(Math.max(.001, s)); },
     ()=>{ sheet.visible = false; busy = false; current.g.scale.setScalar(1); });
 }
+
+/* ---------- Strumenti per la classe ----------
+   Lettura ad alta voce (Web Speech API, voce italiana, velocità condivisa con
+   il resto del sito), conteggio delle previsioni della classe (solo in
+   memoria), avanzamento salvato nel browser e attestato da stampare. */
+const voce = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+const btnVoce = $('ascolta');
+function voceStop(){ if (voce){ speechSynthesis.cancel(); } btnVoce.setAttribute('aria-pressed','false'); }
+function testoDaLeggere(){
+  const c = CH[chapter], parti = [c.kicker + '.', c.title + '.', c.intro, c.q];
+  c.opts.forEach((o,k)=>parti.push(`Risposta ${'ABC'[k]}: ${o.t}.`));
+  if (revealed) parti.push($('verdict').textContent, c.answer);
+  return parti.join(' ');
+}
+if (voce){
+  btnVoce.hidden = false;
+  btnVoce.onclick = ()=>{
+    if (btnVoce.getAttribute('aria-pressed')==='true'){ voceStop(); return; }
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(testoDaLeggere()); u.lang = 'it-IT';
+    let rate = .95; try { rate = parseFloat(localStorage.getItem('pcgenzano-tts-rate')) || .95; } catch(_){}
+    u.rate = rate;
+    const v = speechSynthesis.getVoices().find(x=>x.lang==='it-IT') || speechSynthesis.getVoices().find(x=>x.lang && x.lang.startsWith('it'));
+    if (v) u.voice = v;
+    u.onend = u.onerror = ()=>btnVoce.setAttribute('aria-pressed','false');
+    btnVoce.setAttribute('aria-pressed','true'); speechSynthesis.speak(u);
+  };
+  addEventListener('pagehide', ()=>speechSynthesis.cancel());
+}
+
+const conti = {};
+const btnClasse = $('classe');
+btnClasse.onclick = ()=>{
+  const on = btnClasse.getAttribute('aria-pressed')!=='true';
+  btnClasse.setAttribute('aria-pressed', String(on)); $('conta').hidden = !on; disegnaConta();
+};
+function disegnaConta(){
+  const c = CH[chapter], n = conti[c.key] || (conti[c.key] = c.opts.map(()=>0));
+  const righe = $('conta-righe'); righe.replaceChildren();
+  c.opts.forEach((o,k)=>{
+    const L = 'ABC'[k], r = document.createElement('div'); r.className = 'lb-conta-riga';
+    r.innerHTML = `<span class="lb-conta-lettera" aria-hidden="true">${L}</span><button type="button" aria-label="Togli una mano alla risposta ${L}">−</button><output aria-label="Mani per la risposta ${L}">${n[k]}</output><button type="button" aria-label="Aggiungi una mano alla risposta ${L}">+</button>`;
+    const [meno, piu] = r.querySelectorAll('button');
+    meno.onclick = ()=>{ n[k] = Math.max(0, n[k]-1); disegnaConta(); };
+    piu.onclick = ()=>{ n[k]++; disegnaConta(); };
+    righe.append(r);
+  });
+  const tot = n.reduce((a,b)=>a+b,0);
+  $('conta-tot').textContent = tot ? 'Mani alzate: ' + n.map((x,k)=>`${'ABC'[k]} ${x}`).join(', ') + '.' : '';
+}
+$('conta-azzera').onclick = ()=>{ conti[CH[chapter].key] = CH[chapter].opts.map(()=>0); disegnaConta(); };
+
+const CHIAVE = 'pcgenzano-libro3d-' + (DATI.variante || 'libro_3d');
+function leggiVisti(){ try { return new Set(JSON.parse(localStorage.getItem(CHIAVE) || '[]')); } catch(_){ return new Set(); } }
+let visti = leggiVisti();
+function mostraAvanzamento(){
+  const n = CH.filter(c=>visti.has(c.key)).length;
+  $('progresso').textContent = n ? `Risposte che hai già scoperto: ${n} su ${CH.length}.` : '';
+  $('fine').hidden = n < CH.length;
+}
+function segnaVisto(k){
+  if (visti.has(k)) return; visti.add(k);
+  try { localStorage.setItem(CHIAVE, JSON.stringify([...visti])); } catch(_){}
+  mostraAvanzamento();
+}
+$('ricomincia').onclick = ()=>{ visti = new Set(); try { localStorage.removeItem(CHIAVE); } catch(_){} mostraAvanzamento(); };
+$('stampa-attestato').onclick = ()=>{
+  const nome = $('nome').value.trim();
+  document.getElementById('lb-att-nome').textContent = nome || '______________________________';
+  document.getElementById('lb-att-data').textContent = 'Genzano di Roma, ' + new Date().toLocaleDateString('it-IT', {day:'numeric', month:'long', year:'numeric'});
+  const att = document.getElementById('lb-attestato'); if (att.parentNode !== document.body) document.body.append(att);
+  html.classList.add('stampa-attestato-libro');
+  const via = ()=>{ html.classList.remove('stampa-attestato-libro'); removeEventListener('afterprint', via); };
+  addEventListener('afterprint', via);
+  print();
+  setTimeout(via, 1000);
+};
+mostraAvanzamento();
 
 /* ---------- Selezione con puntatore ---------- */
 const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(); let down = null;

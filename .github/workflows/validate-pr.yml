@@ -108,6 +108,13 @@ jobs:
         # deve portare a una pagina della build.
         run: python3 scripts/check-navigazione.py --public public
 
+      - name: "📖 Libro che si esplora: versioni allineate e fonti esistenti"
+        # 01/11/2026: i testi del libro 3D riprendono le pagine dei rischi.
+        # Italiano, italiano semplice e inglese devono avere gli stessi
+        # capitoli, la stessa risposta giusta e le stesse fonti, e ogni fonte
+        # deve portare a una pagina e a un'ancora della build.
+        run: python3 scripts/check-libro-3d.py --public public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"

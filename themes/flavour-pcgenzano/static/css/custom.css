@@ -8531,3 +8531,17 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
   .contatti-stampa { background: none; border-left-color: #000; }
   .contatti-stampa-112 strong { color: #000; }
 }
+
+/* ===== RIMANDO AL LIBRO CHE SI ESPLORA v1.0 =====
+   Riquadro in fondo alle pagine che il libro 3D usa come fonte
+   (partial libro-3d-rimando.html). Stessi colori del box strumenti. */
+.libro-rimando{background:#e7f0fa;border-left:4px solid #003366;border-radius:6px;padding:1rem 1.25rem;margin:2rem 0}
+.libro-rimando h2{color:#003366;margin:0 0 .5rem}
+.libro-rimando p{margin-bottom:.5rem}
+.libro-rimando ul{margin:0;padding-left:1.25rem}
+.libro-rimando li{margin:.25rem 0}
+
+/* ===== LIBRO CHE SI ESPLORA — VERSIONE SOLO TESTO v1.0 =====
+   Shortcode libro-3d-testo (oggi la versione inglese, /english/explorable-book/). */
+.lb-testo-lingua .lb-tl-cap{border-top:1px solid #c9d3df;padding-top:1rem;margin-top:1.5rem}
+.lb-testo-lingua .lb-tl-occhiello{margin:0;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#003366}

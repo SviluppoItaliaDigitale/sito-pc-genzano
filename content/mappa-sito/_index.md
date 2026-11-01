@@ -403,6 +403,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Il libro che si esplora</p>
   <p class="ms-card-desc">Libro di protezione civile in 3D: capitoli su terremoto, allagamenti, incendi, allerte, zaino, caldo, temporali, vento, blackout, gas, maremoto, incidenti industriali e radiologici, siccità, con previsione e risposta da scoprire.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/libro-che-si-esplora-schede/">
+  <div class="ms-card-icon"><i class="bi bi-printer"></i></div>
+  <p class="ms-card-title">Il libro che si esplora: schede da stampare</p>
+  <p class="ms-card-desc">Un capitolo per foglio A4, con le risposte da segnare e la risposta capovolta in fondo, da usare anche senza lavagna digitale.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/esperimenti/">
   <div class="ms-card-icon"><i class="bi bi-eyedropper"></i></div>
   <p class="ms-card-title">Esperimenti e attività</p>
