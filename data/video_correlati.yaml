@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 333 / Video unici usati: 270 /
-# Link totali: 1131 (max 5 per pagina,
+# Pagine coperte: 334 / Video unici usati: 270 /
+# Link totali: 1144 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -19,42 +19,42 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 634
+    video_count: 635
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
     url: https://www.youtube.com/@CIMAfondazione/videos
-    video_count: 94
+    video_count: 89
   cmcc:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 966
+    video_count: 967
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
     url: https://www.youtube.com/@CnsasCanaleUfficiale/videos
-    video_count: 58
+    video_count: 56
   dario-bressanini:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 144
+    video_count: 138
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 394
+    video_count: 392
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1362
+    video_count: 1348
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 154
+    video_count: 156
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1233
+    video_count: 1217
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 649
+    video_count: 635
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,17 +89,17 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1940
+    video_count: 2005
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 120
+    video_count: 117
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
     url: https://www.youtube.com/@WiredItalia/videos
-    video_count: 802
+    video_count: 799
 pagine:
   cartografia:
     title: Cartografia operativa del Piano di emergenza
@@ -133,6 +133,46 @@ pagine:
       score: 2.6
       titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
       url: https://youtu.be/Q9JaOMzqd1w
+  catalogo-giochi/genzano-si-prepara:
+    title: 'Gioco: Genzano si prepara'
+    url: /catalogo-giochi/genzano-si-prepara/
+    video:
+    - anchored:
+      - temporale
+      canale: ingv-terremoti
+      id: bIM2mW9y_Ik
+      is_lis: false
+      overlap:
+      - spazio
+      - temporale
+      score: 3.0
+      titolo: Animazione spazio temporale sequenza sismica in Italia Centrale
+      url: https://youtu.be/bIM2mW9y_Ik
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivo
+      - evitare
+      - incendio
+      - rischio
+      score: 2.8
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: FPLoljB20QA
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - situazione
+      score: 2.6
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
   catalogo-giochi/simulatore-coc:
     title: 'Gioco: Simulatore COC'
     url: /catalogo-giochi/simulatore-coc/
@@ -337,6 +377,36 @@ pagine:
       score: 4.4
       titolo: Fumo, fiamme, l'azione dei Canadair cercano di spegnere l'incendio sul Parco Vesuvio
       url: https://youtu.be/Hgpj5Mjg0tY
+    - anchored:
+      - vesuvio
+      canale: geopop
+      id: b1Keep6snGg
+      is_lis: false
+      overlap:
+      - vesuvio
+      score: 2.0
+      titolo: VESUVIO - Prima era molto più grande! Uno dei miei primissimi video
+      url: https://youtu.be/b1Keep6snGg
+    - anchored:
+      - vesuvio
+      canale: geopop
+      id: kb3-B7bF6HM
+      is_lis: false
+      overlap:
+      - vesuvio
+      score: 2.0
+      titolo: 'Scossa di terremoto a Napoli sul Vesuvio: sintesi della situazione'
+      url: https://youtu.be/kb3-B7bF6HM
+    - anchored:
+      - vesuvio
+      canale: geopop
+      id: rMX2xGhgqLM
+      is_lis: false
+      overlap:
+      - vesuvio
+      score: 2.0
+      titolo: VULC - L'essenza di un legame |4K| Campi Flegrei, Vesuvio, Stromboli e Etna
+      url: https://youtu.be/rMX2xGhgqLM
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione:
     title: 'Neve nei Castelli Romani: come ci organizziamo'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/
@@ -388,6 +458,16 @@ pagine:
       score: 2.0
       titolo: Sicuri in Montagna - Come chiamare i soccorsi in ambiente impervio
       url: https://youtu.be/-mLtpjwaJVQ
+    - anchored:
+      - montagna
+      canale: cnsas
+      id: 0ntHvTt1IuQ
+      is_lis: false
+      overlap:
+      - montagna
+      score: 2.0
+      titolo: Sicuri in Montagna - Estote parati... Anche in montagna!
+      url: https://youtu.be/0ntHvTt1IuQ
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile:
     title: 'Neve ai Castelli Romani: cosa fare'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile/
@@ -1514,6 +1594,34 @@ pagine:
       url: https://youtu.be/l1L-etpluYY
     - anchored:
       - magnitudo
+      - sequenza
+      canale: ingv-terremoti
+      id: 2ZVvY4ufdYM
+      is_lis: false
+      overlap:
+      - magnitudo
+      - sequenza
+      - sismica
+      - terremoto
+      score: 5.6
+      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.8 del 29 maggio'
+      url: https://youtu.be/2ZVvY4ufdYM
+    - anchored:
+      - magnitudo
+      - sequenza
+      canale: ingv-terremoti
+      id: RiIOiejhOHc
+      is_lis: false
+      overlap:
+      - magnitudo
+      - sequenza
+      - sismica
+      - terremoto
+      score: 5.6
+      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.1 del 3 giugno'
+      url: https://youtu.be/RiIOiejhOHc
+    - anchored:
+      - magnitudo
       - scossa
       canale: rai-news
       id: RmDN-R7NJNk
@@ -1526,30 +1634,6 @@ pagine:
       score: 5.6
       titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
       url: https://youtu.be/RmDN-R7NJNk
-    - anchored:
-      - magnitudo
-      canale: ingv-terremoti
-      id: 2ZVvY4ufdYM
-      is_lis: false
-      overlap:
-      - magnitudo
-      - sismica
-      - terremoto
-      score: 3.6
-      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.8 del 29 maggio'
-      url: https://youtu.be/2ZVvY4ufdYM
-    - anchored:
-      - magnitudo
-      canale: ingv-terremoti
-      id: RiIOiejhOHc
-      is_lis: false
-      overlap:
-      - magnitudo
-      - sismica
-      - terremoto
-      score: 3.6
-      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.1 del 3 giugno'
-      url: https://youtu.be/RiIOiejhOHc
     - anchored:
       - magnitudo
       canale: solarino-sismologo
@@ -2310,20 +2394,6 @@ pagine:
       url: https://youtu.be/7NKVJqnbt8c
     - anchored:
       - montagna
-      - sentiero
-      - sicuri
-      canale: cnsas
-      id: JEhyPLmVrEc
-      is_lis: false
-      overlap:
-      - montagna
-      - sentiero
-      - sicuri
-      score: 10.0
-      titolo: 'Sicuri sul Sentiero 2022 - Quando il Paese fa rete: montagna e sicurezza'
-      url: https://youtu.be/JEhyPLmVrEc
-    - anchored:
-      - montagna
       - sicuri
       canale: cnsas
       id: ka1TVa3ZAUw
@@ -2350,6 +2420,19 @@ pagine:
       score: 9.2
       titolo: 'Sicuri in Montagna - Freeride: free... Ma con delle regole'
       url: https://youtu.be/YMfRmwyiQv4
+    - anchored:
+      - montagna
+      - sicuri
+      canale: cnsas
+      id: IWz8cJyJWsQ
+      is_lis: false
+      overlap:
+      - montagna
+      - salita
+      - sicuri
+      score: 9.0
+      titolo: 'Sicuri in Montagna: scialpinismo, la salita'
+      url: https://youtu.be/IWz8cJyJWsQ
   comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile:
     title: 'Escursioni in montagna: come stare al sicuro'
     url: /comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile/
@@ -3790,20 +3873,6 @@ pagine:
       score: 8.4
       titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
       url: https://youtu.be/qhaxcNNmi-E
-  comunicazioni/2026-07-01-luglio-mese-piu-caldo-statistico:
-    title: 'Luglio: storicamente il mese più caldo dell''anno'
-    url: /comunicazioni/2026-07-01-luglio-mese-piu-caldo-statistico/
-    video:
-    - anchored:
-      - piena
-      canale: natgeo-italia
-      id: 87iroPg26Qk
-      is_lis: false
-      overlap:
-      - piena
-      score: 2.0
-      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
-      url: https://youtu.be/87iroPg26Qk
   comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa:
     title: 'IRIDE operativa nel 2026: i nuovi occhi italiani sul territorio'
     url: /comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa/
@@ -3843,14 +3912,15 @@ pagine:
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
       - frana
-      canale: cima-foundation
-      id: gsBgcnO6qfc
+      canale: rai-news
+      id: XqAePTXBEWg
       is_lis: false
       overlap:
+      - altri
       - frana
-      score: 2.0
-      titolo: Frana di Arenzano 2016
-      url: https://youtu.be/gsBgcnO6qfc
+      score: 2.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
   comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono:
     title: 'Le esercitazioni di Protezione Civile: a cosa servono davvero'
     url: /comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/
@@ -4053,6 +4123,18 @@ pagine:
       - eruzione
       - vulcano
       canale: geopop
+      id: LyKnzPR7l2k
+      is_lis: false
+      overlap:
+      - eruzione
+      - vulcano
+      score: 8.0
+      titolo: 'L’Eruzione in Islanda è arrivata ma non c’è un vulcano: vi racconto i due aspetti più interessanti'
+      url: https://youtu.be/LyKnzPR7l2k
+    - anchored:
+      - eruzione
+      - vulcano
+      canale: geopop
       id: zMNdRzWw3jA
       is_lis: false
       overlap:
@@ -4219,6 +4301,17 @@ pagine:
     video:
     - anchored:
       - satellite
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - altri
+      - satellite
+      score: 2.2
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
+    - anchored:
+      - satellite
       canale: ingv-vulcani
       id: -7lSBNfnToM
       is_lis: false
@@ -4257,16 +4350,6 @@ pagine:
       score: 2.0
       titolo: Etna, 18 febbraio 2021 – L’eruzione vista dal satellite (2)
       url: https://youtu.be/3oFaI9yE7nQ
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 5ReEp8UbRmU
-      is_lis: false
-      overlap:
-      - satellite
-      score: 2.0
-      titolo: Etna, 16 febbraio 2021 – L’eruzione vista dal satellite
-      url: https://youtu.be/5ReEp8UbRmU
   comunicazioni/2026-07-18-siccita-gestione-risorsa-idrica:
     title: 'Siccità estiva: gestire la risorsa idrica come cittadini'
     url: /comunicazioni/2026-07-18-siccita-gestione-risorsa-idrica/
@@ -5906,6 +5989,17 @@ pagine:
     video:
     - anchored:
       - satellite
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - satellite
+      - satelliti
+      score: 7.0
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
+    - anchored:
+      - satellite
       canale: ingv-vulcani
       id: -7lSBNfnToM
       is_lis: false
@@ -5944,20 +6038,22 @@ pagine:
       score: 6.0
       titolo: Etna, 18 febbraio 2021 – L’eruzione vista dal satellite (2)
       url: https://youtu.be/3oFaI9yE7nQ
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 5ReEp8UbRmU
-      is_lis: false
-      overlap:
-      - satellite
-      score: 6.0
-      titolo: Etna, 16 febbraio 2021 – L’eruzione vista dal satellite
-      url: https://youtu.be/5ReEp8UbRmU
   comunicazioni/2026-09-02-cosmo-skymed-frana-niscemi-satelliti-emergenza:
     title: 'Quattrocento immagini in ventiquattro ore: i satelliti italiani dentro un''emergenza'
     url: /comunicazioni/2026-09-02-cosmo-skymed-frana-niscemi-satelliti-emergenza/
     video:
+    - anchored:
+      - satellite
+      - satelliti
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - satellite
+      - satelliti
+      score: 8.0
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
     - anchored:
       - frana
       - niscemi
@@ -6006,18 +6102,6 @@ pagine:
       score: 4.0
       titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre – Frana Niscemi 2026
       url: https://youtu.be/YKzuDqox1qE
-    - anchored:
-      - frana
-      - niscemi
-      canale: dpc-gov
-      id: k90I_coJTsA
-      is_lis: false
-      overlap:
-      - frana
-      - niscemi
-      score: 4.0
-      titolo: Operazioni di salvataggio animali – Frana Niscemi 2026
-      url: https://youtu.be/k90I_coJTsA
   comunicazioni/2026-09-03-temporali-settembre-prevenzione:
     title: 'Temporali di settembre: come riconoscerli e proteggersi'
     url: /comunicazioni/2026-09-03-temporali-settembre-prevenzione/
@@ -6052,6 +6136,20 @@ pagine:
     video:
     - anchored:
       - satellite
+      - satelliti
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - altri
+      - lancio
+      - satellite
+      - satelliti
+      score: 9.2
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
+    - anchored:
+      - satellite
       canale: link4universe
       id: MXnPOoJ9y0c
       is_lis: false
@@ -6061,17 +6159,6 @@ pagine:
       score: 7.0
       titolo: Lancio SpaceX Falcon9  con Satellite militare Coreano.
       url: https://youtu.be/MXnPOoJ9y0c
-    - anchored:
-      - satellite
-      canale: link4universe
-      id: T-wp_8A2eRE
-      is_lis: false
-      overlap:
-      - lancio
-      - satellite
-      score: 7.0
-      titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
-      url: https://youtu.be/T-wp_8A2eRE
     - anchored:
       - satellite
       canale: ingv-vulcani
@@ -6234,16 +6321,6 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
-    - anchored:
-      - piena
-      canale: natgeo-italia
-      id: 87iroPg26Qk
-      is_lis: false
-      overlap:
-      - piena
-      score: 2.0
-      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
-      url: https://youtu.be/87iroPg26Qk
   comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi:
     title: 'Un giorno di pioggia: otto interventi tra alberi caduti, tombini e una voragine'
     url: /comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/
@@ -6268,16 +6345,6 @@ pagine:
       score: 6.0
       titolo: Etna,  13 giugno 2019, Voragine
       url: https://youtu.be/2uqjdFLU8Jo
-    - anchored:
-      - voragine
-      canale: ingv-vulcani
-      id: SpzLmhWnw38
-      is_lis: false
-      overlap:
-      - voragine
-      score: 6.0
-      titolo: L'attività alla Voragine - giugno 2024
-      url: https://youtu.be/SpzLmhWnw38
     - anchored:
       - voragine
       canale: ingv-vulcani
@@ -6355,6 +6422,17 @@ pagine:
     - anchored:
       - vulcano
       canale: geopop
+      id: LyKnzPR7l2k
+      is_lis: false
+      overlap:
+      - arrivata
+      - vulcano
+      score: 7.0
+      titolo: 'L’Eruzione in Islanda è arrivata ma non c’è un vulcano: vi racconto i due aspetti più interessanti'
+      url: https://youtu.be/LyKnzPR7l2k
+    - anchored:
+      - vulcano
+      canale: geopop
       id: v2VFX_ZIWr8
       is_lis: false
       overlap:
@@ -6363,17 +6441,6 @@ pagine:
       score: 7.0
       titolo: Perché tante scosse di terremoto a Santorini? L'analisi geologica e le caratteristiche del vulcano
       url: https://youtu.be/v2VFX_ZIWr8
-    - anchored:
-      - vulcano
-      canale: ingv-vulcani
-      id: doJOni-e2BE
-      is_lis: false
-      overlap:
-      - campi
-      - vulcano
-      score: 7.0
-      titolo: Campi Flegrei - Nel sonno del vulcano
-      url: https://youtu.be/doJOni-e2BE
   comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico:
     title: 'Alluvione delle Marche, 15-16 settembre 2022: la notte delle bombe d''acqua sui Monti del Catria'
     url: /comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/
@@ -7065,6 +7132,16 @@ pagine:
       score: 6.0
       titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
       url: https://youtu.be/UgAcbTC4rbA
+    - anchored:
+      - messina
+      canale: natgeo-italia
+      id: o4BFEUB_0ak
+      is_lis: false
+      overlap:
+      - messina
+      score: 6.0
+      titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
+      url: https://youtu.be/o4BFEUB_0ak
   comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio:
     title: 'Geoportali: come leggere le mappe di rischio del proprio territorio'
     url: /comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio/
@@ -7295,6 +7372,20 @@ pagine:
       - lancio
       - satellite
       canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - altri
+      - lancio
+      - satellite
+      - satelliti
+      score: 5.2
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
+    - anchored:
+      - lancio
+      - satellite
+      canale: link4universe
       id: MXnPOoJ9y0c
       is_lis: false
       overlap:
@@ -7303,18 +7394,6 @@ pagine:
       score: 4.0
       titolo: Lancio SpaceX Falcon9  con Satellite militare Coreano.
       url: https://youtu.be/MXnPOoJ9y0c
-    - anchored:
-      - lancio
-      - satellite
-      canale: link4universe
-      id: T-wp_8A2eRE
-      is_lis: false
-      overlap:
-      - lancio
-      - satellite
-      score: 4.0
-      titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
-      url: https://youtu.be/T-wp_8A2eRE
     - anchored:
       - satellite
       canale: ingv-vulcani
@@ -7841,20 +7920,16 @@ pagine:
       score: 4.0
       titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
       url: https://youtu.be/UgAcbTC4rbA
-  comunicazioni/2026-10-23-strade-allagate-auto-sottopassi-facile:
-    title: 'Strada piena d''acqua: con l''auto non si passa'
-    url: /comunicazioni/2026-10-23-strade-allagate-auto-sottopassi-facile/
-    video:
     - anchored:
-      - piena
+      - messina
       canale: natgeo-italia
-      id: 87iroPg26Qk
+      id: o4BFEUB_0ak
       is_lis: false
       overlap:
-      - piena
-      score: 6.0
-      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
-      url: https://youtu.be/87iroPg26Qk
+      - messina
+      score: 2.0
+      titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
+      url: https://youtu.be/o4BFEUB_0ak
   comunicazioni/2026-10-24-come-nasce-allerta-meteo-video-3d:
     title: 'Come nasce un''allerta meteo: un video in 3D'
     url: /comunicazioni/2026-10-24-come-nasce-allerta-meteo-video-3d/
@@ -7896,6 +7971,17 @@ pagine:
       url: https://youtu.be/6eeYoCoFn5M
     - anchored:
       - frana
+      canale: rai-news
+      id: XqAePTXBEWg
+      is_lis: false
+      overlap:
+      - altri
+      - frana
+      score: 2.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
+    - anchored:
+      - frana
       canale: cima-foundation
       id: gsBgcnO6qfc
       is_lis: false
@@ -7904,16 +7990,6 @@ pagine:
       score: 2.0
       titolo: Frana di Arenzano 2016
       url: https://youtu.be/gsBgcnO6qfc
-    - anchored:
-      - sarno
-      canale: dpc-gov
-      id: 8v4izQL7MuA
-      is_lis: false
-      overlap:
-      - sarno
-      score: 2.0
-      titolo: 'Sarno 1998-2023: il ricordo dei funzionari del Dipartimento'
-      url: https://youtu.be/8v4izQL7MuA
   comunicazioni/2026-10-24-giornata-onu-risparmio-energetico-emergenze:
     title: 'Risparmio energetico e resilienza: come l''energia incide sulle emergenze'
     url: /comunicazioni/2026-10-24-giornata-onu-risparmio-energetico-emergenze/
@@ -8168,6 +8244,19 @@ pagine:
     video:
     - anchored:
       - satellite
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - altri
+      - pronto
+      - satellite
+      - satelliti
+      score: 8.2
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
+    - anchored:
+      - satellite
       canale: ingv-vulcani
       id: -7lSBNfnToM
       is_lis: false
@@ -8206,16 +8295,6 @@ pagine:
       score: 6.0
       titolo: Etna, 18 febbraio 2021 – L’eruzione vista dal satellite (2)
       url: https://youtu.be/3oFaI9yE7nQ
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 5ReEp8UbRmU
-      is_lis: false
-      overlap:
-      - satellite
-      score: 6.0
-      titolo: Etna, 16 febbraio 2021 – L’eruzione vista dal satellite
-      url: https://youtu.be/5ReEp8UbRmU
   comunicazioni/2026-10-27-sos-satellite-telefono-senza-campo-facile:
     title: Chiedere aiuto con il satellite quando non c'è campo
     url: /comunicazioni/2026-10-27-sos-satellite-telefono-senza-campo-facile/
@@ -8410,6 +8489,17 @@ pagine:
       titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
       url: https://youtu.be/UgAcbTC4rbA
     - anchored:
+      - messina
+      canale: natgeo-italia
+      id: o4BFEUB_0ak
+      is_lis: false
+      overlap:
+      - messina
+      - stretto
+      score: 7.0
+      titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
+      url: https://youtu.be/o4BFEUB_0ak
+    - anchored:
       - faglie
       canale: geopop
       id: M-dt6lqpm6s
@@ -8441,16 +8531,6 @@ pagine:
       score: 2.0
       titolo: '#2 FREE WEBINAR - Le faglie inverse, una visione dal mondo dell''industria dell''esplorazione'
       url: https://youtu.be/gUOcDWN47Ws
-    - anchored:
-      - faglie
-      canale: geopop
-      id: nXaWt5xfnYg
-      is_lis: false
-      overlap:
-      - faglie
-      score: 2.0
-      titolo: LE FAGLIE NORMALI - Cinematica Vs Deposizione - WEBINAR per studenti universitari
-      url: https://youtu.be/nXaWt5xfnYg
   comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia:
     title: 'Norcia, 30 ottobre 2016: la scossa più forte d''Italia degli ultimi 30 anni'
     url: /comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia/
@@ -8886,6 +8966,16 @@ pagine:
     - anchored:
       - evacuati
       canale: rai-news
+      id: eL3n0zUf9d0
+      is_lis: false
+      overlap:
+      - evacuati
+      score: 2.0
+      titolo: Napoli, teatro Sannazaro divorato dalle fiamme. Quartiere Chiaia, 60 evacuati
+      url: https://youtu.be/eL3n0zUf9d0
+    - anchored:
+      - evacuati
+      canale: rai-news
       id: eYZMSEKA-Ro
       is_lis: false
       overlap:
@@ -9252,8 +9342,8 @@ pagine:
       titolo: Lo tsunami del 30.10.2020 nel Mar Egeo. Video dell'impatto in località Karlovasi, isola di Samos(GR)
       url: https://youtu.be/YM6hha4n5W4
   comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno:
-    title: 'Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece 100.000 vittime e fondò l''idea moderna di
-      soccorso'
+    title: 'Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece circa 80.000 vittime e fondò l''idea moderna
+      di soccorso'
     url: /comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno/
     video:
     - anchored:
@@ -9272,6 +9362,17 @@ pagine:
       titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
       url: https://youtu.be/UgAcbTC4rbA
     - anchored:
+      - messina
+      canale: natgeo-italia
+      id: o4BFEUB_0ak
+      is_lis: false
+      overlap:
+      - messina
+      - stretto
+      score: 7.0
+      titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
+      url: https://youtu.be/o4BFEUB_0ak
+    - anchored:
       - magnitudo
       - scossa
       canale: rai-news
@@ -9286,18 +9387,6 @@ pagine:
       score: 6.6
       titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
       url: https://youtu.be/RmDN-R7NJNk
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: 4-r2rPCOEPM
-      is_lis: false
-      overlap:
-      - finale
-      - scossa
-      - terremoto
-      score: 3.6
-      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
-      url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - magnitudo
       canale: ingv-terremoti
@@ -10392,20 +10481,6 @@ pagine:
     url: /dossier/genzano-castelli-i-nostri-rischi/
     video:
     - anchored:
-      - sismico
-      - vulcanico
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - rischio
-      - sismico
-      - terremoto
-      - vulcanico
-      score: 4.8
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
-    - anchored:
       - vulcanico
       - vulcano
       canale: dpc-gov
@@ -10452,6 +10527,18 @@ pagine:
       score: 3.0
       titolo: Vivere con gas vulcanici  (VolFilm)
       url: https://youtu.be/bX1TRrVkbfo
+    - anchored:
+      - vulcanico
+      canale: io-non-rischio
+      id: esAjpZQ2C9E
+      is_lis: false
+      overlap:
+      - conoscere
+      - terremoto
+      - vulcanico
+      score: 2.8
+      titolo: Conoscere la caldera - Cosa fare in caso di terremoto, gas vulcanici ed eruzione vulcanica
+      url: https://youtu.be/esAjpZQ2C9E
   dossier/i-nobel-che-ci-proteggono:
     title: I Nobel che ci proteggono
     url: /dossier/i-nobel-che-ci-proteggono/
@@ -10496,19 +10583,6 @@ pagine:
       url: https://youtu.be/gEF0B-p4LaU
     - anchored:
       - climatici
-      - dati
-      canale: cmcc
-      id: hMvO-_BHBzQ
-      is_lis: false
-      overlap:
-      - climatici
-      - climatico
-      - dati
-      score: 4.2
-      titolo: 'Il servizio climatico CLIME: una piattaforma web per l’analisi e l''uso dei dati climatici'
-      url: https://youtu.be/hMvO-_BHBzQ
-    - anchored:
-      - climatici
       canale: cmcc
       id: 91JztEqaJKs
       is_lis: false
@@ -10529,6 +10603,17 @@ pagine:
       score: 3.0
       titolo: 'Cambiamenti climatici: di cosa si parla nel WG2 dell''IPCC. Impatti, adattamento, vulnerabilità'
       url: https://youtu.be/PONxa3SC-kc
+    - anchored:
+      - climatici
+      canale: cmcc
+      id: sUjK_zwTmPk
+      is_lis: false
+      overlap:
+      - climatici
+      - ipcc
+      score: 3.0
+      titolo: Adattamento e dimensione regionale. Le novità del rapporto IPCC sui cambiamenti climatici
+      url: https://youtu.be/sUjK_zwTmPk
   dossier/il-disastro-che-non-e-successo:
     title: Il disastro che non è successo
     url: /dossier/il-disastro-che-non-e-successo/
@@ -10684,6 +10769,17 @@ pagine:
       url: https://youtu.be/xUtCwhN8-pQ
     - anchored:
       - frana
+      canale: rai-news
+      id: XqAePTXBEWg
+      is_lis: false
+      overlap:
+      - altri
+      - frana
+      score: 2.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
+    - anchored:
+      - frana
       canale: cima-foundation
       id: gsBgcnO6qfc
       is_lis: false
@@ -10692,16 +10788,6 @@ pagine:
       score: 2.0
       titolo: Frana di Arenzano 2016
       url: https://youtu.be/gsBgcnO6qfc
-    - anchored:
-      - frana
-      canale: dpc-gov
-      id: 6eeYoCoFn5M
-      is_lis: false
-      overlap:
-      - frana
-      score: 2.0
-      titolo: Le attività operative in corso – Frana Niscemi 2026
-      url: https://youtu.be/6eeYoCoFn5M
   dossier/messina-1908-il-minuto:
     title: Il minuto che cancellò una città
     url: /dossier/messina-1908-il-minuto/
@@ -10722,6 +10808,18 @@ pagine:
       score: 8.0
       titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
       url: https://youtu.be/UgAcbTC4rbA
+    - anchored:
+      - messina
+      canale: natgeo-italia
+      id: o4BFEUB_0ak
+      is_lis: false
+      overlap:
+      - altro
+      - messina
+      - stretto
+      score: 4.0
+      titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
+      url: https://youtu.be/o4BFEUB_0ak
     - anchored:
       - maremoto
       canale: ingv-terremoti
@@ -10755,17 +10853,6 @@ pagine:
       score: 2.4
       titolo: 'Terremoti in pillole 23. L''onda inarrestabile: il maremoto'
       url: https://youtu.be/2w1JaOKE_2M
-    - anchored:
-      - maremoto
-      canale: solarino-sismologo
-      id: FV2yJ7ISMbI
-      is_lis: false
-      overlap:
-      - maremoto
-      - terremoto
-      score: 2.4
-      titolo: Terremoti in pillole 24. Quanti maremoti in Italia?
-      url: https://youtu.be/FV2yJ7ISMbI
   dossier/nascita-protezione-civile-italiana:
     title: Dalle macerie, un sistema
     url: /dossier/nascita-protezione-civile-italiana/
@@ -10852,18 +10939,6 @@ pagine:
       url: https://youtu.be/yoTTJ9BJYIM
     - anchored:
       - chernobyl
-      - fukushima
-      canale: geopop
-      id: fvGJjZvwMH8
-      is_lis: false
-      overlap:
-      - chernobyl
-      - fukushima
-      score: 4.0
-      titolo: Qualcuno associa Chernobyl a Fukushima, ma ci sono differenze fondamentali tra i due eventi.
-      url: https://youtu.be/fvGJjZvwMH8
-    - anchored:
-      - chernobyl
       - nucleare
       canale: geopop
       id: ogsZv_kQVZ4
@@ -10897,6 +10972,17 @@ pagine:
       score: 3.0
       titolo: '"La lezione di Fukushima": Margherita Fronte al XII Convegno Nazionale del Cicap'
       url: https://youtu.be/Xw_qqKMOEnQ
+    - anchored:
+      - chernobyl
+      canale: geopop
+      id: 4G-cqJy_6_o
+      is_lis: false
+      overlap:
+      - chernobyl
+      - reattore
+      score: 3.0
+      titolo: Ricostruzione del disastro di Chernobyl, come e perché si è arrivati all'esplosione del reattore 4
+      url: https://youtu.be/4G-cqJy_6_o
   dossier/prove-generali-del-disastro:
     title: Prove generali del disastro
     url: /dossier/prove-generali-del-disastro/
@@ -11308,6 +11394,17 @@ pagine:
       score: 2.6
       titolo: Scoprire la vita aliena esplorando laghi vulcanici estremi sulla Terra
       url: https://youtu.be/0fTelCqyoAU
+    - anchored:
+      - vulcanico
+      canale: dpc-gov
+      id: ShU_V_7SUQA
+      is_lis: false
+      overlap:
+      - rischio
+      - vulcanico
+      score: 2.2
+      titolo: Il rischio vulcanico nei Campi Flegrei e la risposta di protezione civile – EXE Flegrei 2019
+      url: https://youtu.be/ShU_V_7SUQA
   dossier/ricostruire-meglio-il-dopo:
     title: 'Ricostruire meglio: il dopo che nessuno racconta'
     url: /dossier/ricostruire-meglio-il-dopo/
@@ -11481,17 +11578,6 @@ pagine:
       titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
       url: https://youtu.be/CiSTPzoI_zs
     - anchored:
-      - piena
-      canale: natgeo-italia
-      id: 87iroPg26Qk
-      is_lis: false
-      overlap:
-      - piena
-      - sorge
-      score: 3.0
-      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
-      url: https://youtu.be/87iroPg26Qk
-    - anchored:
       - tempesta
       canale: geopop
       id: cmEzpKqaTEU
@@ -11511,6 +11597,16 @@ pagine:
       score: 2.0
       titolo: Una Super-Tempesta di Meteore in Arrivo?
       url: https://youtu.be/Z51K4zh0APg
+    - anchored:
+      - tempesta
+      canale: link4universe
+      id: dbtYw22YtLU
+      is_lis: false
+      overlap:
+      - tempesta
+      score: 2.0
+      titolo: Il Titanic "affondato" da una tempesta solare ?
+      url: https://youtu.be/dbtYw22YtLU
   dossier/vajont-la-diga-che-resse:
     title: La diga che resse, la montagna che cadde
     url: /dossier/vajont-la-diga-che-resse/
@@ -11718,6 +11814,16 @@ pagine:
       url: https://youtu.be/p1PCHFWQiV4
     - anchored:
       - earthquake
+      canale: cicap
+      id: ftJZO0vAnhQ
+      is_lis: false
+      overlap:
+      - earthquake
+      score: 2.0
+      titolo: In Case of Earthquake - with Laura Peruzza and Warner Marzocchi
+      url: https://youtu.be/ftJZO0vAnhQ
+    - anchored:
+      - earthquake
       canale: ingv-terremoti
       id: 0GhmsBHH3XI
       is_lis: false
@@ -11746,16 +11852,6 @@ pagine:
       score: 2.0
       titolo: 'Amatrice, Accumoli, and Arquata: a bell toll to remember every earthquake victim'
       url: https://youtu.be/6P6UuDy5_lY
-    - anchored:
-      - earthquake
-      canale: rai-news
-      id: sCrKgqfPSPg
-      is_lis: false
-      overlap:
-      - earthquake
-      score: 2.0
-      titolo: Indonesia earthquake
-      url: https://youtu.be/sCrKgqfPSPg
   formazione/cosa-fare-in-caso-di:
     title: Cosa fare in caso di emergenza
     url: /formazione/cosa-fare-in-caso-di/
@@ -11861,6 +11957,34 @@ pagine:
       score: 2.6
       titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
       url: https://youtu.be/xymAoW-l-VA
+  formazione/il-gruppo-a-scuola:
+    title: Il Gruppo nella tua scuola
+    url: /formazione/il-gruppo-a-scuola/
+    video:
+    - anchored:
+      - evacuazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - disabilità
+      - esercitazione
+      - evacuazione
+      score: 3.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - evacuazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 2.4
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
   formazione/kit-calamita:
     title: Kit Calamità — schede stampabili per emergenza
     url: /formazione/kit-calamita/
@@ -11920,17 +12044,6 @@ pagine:
     title: Kit Calamità per Bambini — schede stampabili
     url: /formazione/kit-calamita-bambini/
     video:
-    - anchored:
-      - inclusione
-      canale: rai-news
-      id: 06_f3NnPe_M
-      is_lis: false
-      overlap:
-      - inclusione
-      - sociale
-      score: 3.0
-      titolo: 'Mattarella: "L''inclusione arricchisce la società e il progresso sociale"'
-      url: https://youtu.be/06_f3NnPe_M
     - anchored:
       - inclusione
       canale: rai-news
@@ -12058,6 +12171,50 @@ pagine:
       score: 2.0
       titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
       url: https://youtu.be/e_bwJY-3fh8
+  formazione/libro-che-si-esplora:
+    title: Il libro che si esplora
+    url: /formazione/libro-che-si-esplora/
+    video:
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: 3zLaQO7QvTw
+      is_lis: false
+      overlap:
+      - siccità
+      score: 2.0
+      titolo: 'Kit siccità: cittadini IT'
+      url: https://youtu.be/3zLaQO7QvTw
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: 6go6B2sB2SY
+      is_lis: false
+      overlap:
+      - siccità
+      score: 2.0
+      titolo: 'Kit siccità: turisti IT'
+      url: https://youtu.be/6go6B2sB2SY
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: d3PnplO-uGI
+      is_lis: false
+      overlap:
+      - siccità
+      score: 2.0
+      titolo: 'Kit siccità: gestori di strutture turistiche IT'
+      url: https://youtu.be/d3PnplO-uGI
+    - anchored:
+      - siccità
+      canale: geopop
+      id: xbkBI9oAO9w
+      is_lis: false
+      overlap:
+      - siccità
+      score: 2.0
+      titolo: Cos'è il cuneo salino? Sintesi sull'emergenza siccità in Italia e la crisi idrica del Po
+      url: https://youtu.be/xbkBI9oAO9w
   formazione/manuale-campo/struttura-organizzativa:
     title: Capitolo 1 — Struttura organizzativa e catena di comando
     url: /formazione/manuale-campo/struttura-organizzativa/
@@ -12097,16 +12254,6 @@ pagine:
     - anchored:
       - inclusione
       canale: rai-news
-      id: 06_f3NnPe_M
-      is_lis: false
-      overlap:
-      - inclusione
-      score: 2.0
-      titolo: 'Mattarella: "L''inclusione arricchisce la società e il progresso sociale"'
-      url: https://youtu.be/06_f3NnPe_M
-    - anchored:
-      - inclusione
-      canale: rai-news
       id: s64qNOY8mkc
       is_lis: false
       overlap:
@@ -12118,6 +12265,17 @@ pagine:
     title: Capitolo 3 — Reti, maglie e canali
     url: /formazione/radiocomunicazioni-emergenza/reti-canali/
     video:
+    - anchored:
+      - satellite
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - altri
+      - satellite
+      score: 2.2
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
     - anchored:
       - satellite
       canale: ingv-vulcani
@@ -12158,16 +12316,6 @@ pagine:
       score: 2.0
       titolo: Etna, 18 febbraio 2021 – L’eruzione vista dal satellite (2)
       url: https://youtu.be/3oFaI9yE7nQ
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 5ReEp8UbRmU
-      is_lis: false
-      overlap:
-      - satellite
-      score: 2.0
-      titolo: Etna, 16 febbraio 2021 – L’eruzione vista dal satellite
-      url: https://youtu.be/5ReEp8UbRmU
   formazione/rischio-incendio/procedure-emergenza:
     title: Capitolo 5 — Procedure di emergenza
     url: /formazione/rischio-incendio/procedure-emergenza/
@@ -12330,18 +12478,6 @@ pagine:
       url: https://youtu.be/UyyXFhN_0yM
     - anchored:
       - climatici
-      - dati
-      canale: cmcc
-      id: hMvO-_BHBzQ
-      is_lis: false
-      overlap:
-      - climatici
-      - dati
-      score: 3.8
-      titolo: 'Il servizio climatico CLIME: una piattaforma web per l’analisi e l''uso dei dati climatici'
-      url: https://youtu.be/hMvO-_BHBzQ
-    - anchored:
-      - climatici
       canale: cmcc
       id: PONxa3SC-kc
       is_lis: false
@@ -12362,6 +12498,17 @@ pagine:
       score: 2.2
       titolo: Adattamento e dimensione regionale. Le novità del rapporto IPCC sui cambiamenti climatici
       url: https://youtu.be/sUjK_zwTmPk
+    - anchored:
+      - climatici
+      canale: cmcc
+      id: vEcBw4ZXf34
+      is_lis: false
+      overlap:
+      - climatici
+      - dell
+      score: 2.2
+      titolo: La sfida tecnologica. Limiti e opportunità dell'innovazione sui cambiamenti climatici
+      url: https://youtu.be/vEcBw4ZXf34
   manuale/111-fattore-umano:
     title: 'Il fattore umano: comunicazione, psicologia e inclusione'
     url: /manuale/111-fattore-umano/
@@ -12377,16 +12524,6 @@ pagine:
       score: 7.0
       titolo: 'Giorgione: “La convivialità del cibo è ciò che lo rende strumento di inclusione”'
       url: https://youtu.be/s64qNOY8mkc
-    - anchored:
-      - inclusione
-      canale: rai-news
-      id: 06_f3NnPe_M
-      is_lis: false
-      overlap:
-      - inclusione
-      score: 6.0
-      titolo: 'Mattarella: "L''inclusione arricchisce la società e il progresso sociale"'
-      url: https://youtu.be/06_f3NnPe_M
     - anchored:
       - disabilità
       canale: dpc-gov
@@ -12418,6 +12555,16 @@ pagine:
       score: 2.0
       titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e disabilità'
       url: https://youtu.be/88NyIgS1PbE
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
   manuale/141-territorio-vulcano-laziale:
     title: 'Genzano e i Castelli Romani: il Vulcano Laziale'
     url: /manuale/141-territorio-vulcano-laziale/
@@ -12461,6 +12608,17 @@ pagine:
     - anchored:
       - vulcano
       canale: geopop
+      id: LyKnzPR7l2k
+      is_lis: false
+      overlap:
+      - eruzione
+      - vulcano
+      score: 7.0
+      titolo: 'L’Eruzione in Islanda è arrivata ma non c’è un vulcano: vi racconto i due aspetti più interessanti'
+      url: https://youtu.be/LyKnzPR7l2k
+    - anchored:
+      - vulcano
+      canale: geopop
       id: SHl690TWTSo
       is_lis: false
       overlap:
@@ -12469,17 +12627,6 @@ pagine:
       score: 7.0
       titolo: 'I vulcani lineari non hanno la forma a "cono": cosa sono, dove si trovano e le caratteristiche'
       url: https://youtu.be/SHl690TWTSo
-    - anchored:
-      - vulcano
-      canale: geopop
-      id: zMNdRzWw3jA
-      is_lis: false
-      overlap:
-      - eruzione
-      - vulcano
-      score: 7.0
-      titolo: 'Tonga: vi spiego l’eruzione del vulcano Hunga Tonga-Hunga Ha''apai nella cintura di fuoco'
-      url: https://youtu.be/zMNdRzWw3jA
   manuale/41-modello-del-rischio:
     title: 'Il modello del rischio: pericolosità, vulnerabilità, esposizione'
     url: /manuale/41-modello-del-rischio/
@@ -12557,20 +12704,20 @@ pagine:
       titolo: Il rischio vulcanico nei Campi Flegrei e la risposta di protezione civile – EXE Flegrei 2019
       url: https://youtu.be/ShU_V_7SUQA
     - anchored:
-      - vesuvio
+      - campi
+      - flegrei
       - vulcanico
       canale: geopop
-      id: KG8xHth3n_8
+      id: 9fBuH-jXu3Y
       is_lis: false
       overlap:
-      - etna
+      - campi
+      - flegrei
       - rischio
-      - sismico
-      - vesuvio
       - vulcanico
       score: 10.6
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
+      titolo: 'RISCHIO VULCANICO CAMPI FLEGREI: LA SIMULAZIONE D''EVACUAZIONE FUNZIONERA? Considerazioni e dubbi'
+      url: https://youtu.be/9fBuH-jXu3Y
     - anchored:
       - eruzione
       - vulcanico
@@ -13590,23 +13737,8 @@ pagine:
       is_lis: false
       overlap: []
       score: 10.0
-      titolo: PIANO DI EVACUAZIONE DEI CAMPI FLEGREI E VESUVIO - Intervista a chi li progetta
+      titolo: CAMPI FLEGREI AND VESUVIUS EVACUATION PLAN - Interview with the planners
       url: https://youtu.be/HjhnA7sC1OU
-    - anchored:
-      - vulcanico
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - etna
-      - prevenzione
-      - rischio
-      - sismico
-      - vesuvio
-      - vulcanico
-      score: 9.8
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
     - anchored:
       - vulcanico
       canale: dpc-gov
@@ -13646,6 +13778,19 @@ pagine:
       score: 8.6
       titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
       url: https://youtu.be/_AYUUv69F3U
+    - anchored:
+      - vulcanico
+      canale: geopop
+      id: 9fBuH-jXu3Y
+      is_lis: false
+      overlap:
+      - campi
+      - flegrei
+      - rischio
+      - vulcanico
+      score: 8.6
+      titolo: 'RISCHIO VULCANICO CAMPI FLEGREI: LA SIMULAZIONE D''EVACUAZIONE FUNZIONERA? Considerazioni e dubbi'
+      url: https://youtu.be/9fBuH-jXu3Y
   rischi-prevenzione/siccita:
     title: 'Siccità e Crisi Idrica: Cosa Fare'
     url: /rischi-prevenzione/siccita/
@@ -13807,6 +13952,16 @@ pagine:
       score: 8.0
       titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
       url: https://youtu.be/UgAcbTC4rbA
+    - anchored:
+      - messina
+      canale: natgeo-italia
+      id: o4BFEUB_0ak
+      is_lis: false
+      overlap:
+      - messina
+      score: 6.0
+      titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
+      url: https://youtu.be/o4BFEUB_0ak
   standard-iso:
     title: Standard ISO per la Protezione Civile
     url: /standard-iso/
@@ -13952,19 +14107,6 @@ pagine:
       titolo: CLIMATE CHANGE 2022 - Impatti, adattamento e vulnerabilità
       url: https://youtu.be/JQtfXKRG1gs
     - anchored:
-      - climatici
-      - climatico
-      canale: cmcc
-      id: hMvO-_BHBzQ
-      is_lis: false
-      overlap:
-      - climatici
-      - climatico
-      - dati
-      score: 8.6
-      titolo: 'Il servizio climatico CLIME: una piattaforma web per l’analisi e l''uso dei dati climatici'
-      url: https://youtu.be/hMvO-_BHBzQ
-    - anchored:
       - climatico
       canale: cmcc
       id: voonMYn-twI
@@ -13987,6 +14129,16 @@ pagine:
       score: 7.0
       titolo: Dal nowcasting agli scenari di cambiamento climatico
       url: https://youtu.be/sDYhbU-74JA
+    - anchored:
+      - climatico
+      canale: cicap
+      id: 2i0qXtiPXwY
+      is_lis: false
+      overlap:
+      - climatico
+      score: 6.0
+      titolo: Storie e immagini del cambiamento climatico - con Marco Cattaneo
+      url: https://youtu.be/2i0qXtiPXwY
   standard-iso/iso-14092:
     title: ISO 14092 — Pianificazione locale dell'adattamento climatico
     url: /standard-iso/iso-14092/
@@ -14016,17 +14168,6 @@ pagine:
       url: https://youtu.be/CMwDb2EOzDo
     - anchored:
       - climatico
-      canale: cmcc
-      id: hMvO-_BHBzQ
-      is_lis: false
-      overlap:
-      - climatici
-      - climatico
-      score: 7.0
-      titolo: 'Il servizio climatico CLIME: una piattaforma web per l’analisi e l''uso dei dati climatici'
-      url: https://youtu.be/hMvO-_BHBzQ
-    - anchored:
-      - climatico
       canale: cima-foundation
       id: sDYhbU-74JA
       is_lis: false
@@ -14047,6 +14188,16 @@ pagine:
       score: 6.6
       titolo: ItaliaMeteo lancia un’indagine sulle esigenze degli utenti del settore meteo-climatico
       url: https://youtu.be/GX_FkaORWkw
+    - anchored:
+      - climatico
+      canale: cicap
+      id: 2i0qXtiPXwY
+      is_lis: false
+      overlap:
+      - climatico
+      score: 6.0
+      titolo: Storie e immagini del cambiamento climatico - con Marco Cattaneo
+      url: https://youtu.be/2i0qXtiPXwY
   standard-iso/iso-22300:
     title: ISO 22300 — Vocabolario di sicurezza e resilienza
     url: /standard-iso/iso-22300/
@@ -14166,6 +14317,16 @@ pagine:
       url: https://youtu.be/KslHsZKGaqM
     - anchored:
       - earthquake
+      canale: cicap
+      id: ftJZO0vAnhQ
+      is_lis: false
+      overlap:
+      - earthquake
+      score: 2.0
+      titolo: In Case of Earthquake - with Laura Peruzza and Warner Marzocchi
+      url: https://youtu.be/ftJZO0vAnhQ
+    - anchored:
+      - earthquake
       canale: rai-news
       id: 6P6UuDy5_lY
       is_lis: false
@@ -14184,16 +14345,6 @@ pagine:
       score: 2.0
       titolo: 'Venezuela Earthquake: "That few-second alert saved our lives"'
       url: https://youtu.be/p1PCHFWQiV4
-    - anchored:
-      - earthquake
-      canale: rai-news
-      id: sCrKgqfPSPg
-      is_lis: false
-      overlap:
-      - earthquake
-      score: 2.0
-      titolo: Indonesia earthquake
-      url: https://youtu.be/sCrKgqfPSPg
   standard-iso/iso-22329:
     title: ISO 22329 — Uso dei social media in emergenza
     url: /standard-iso/iso-22329/
