@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genzano si prepara — Giochi della Sicurezza</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/genzano-si-prepara/">
+  <meta name="description" content="Gioco di simulazione per tutti sulla mappa vera di Genzano di Roma: prepara la casa e la famiglia, affronta un temporale con allerta arancione e scopri che cosa la prevenzione ha evitato.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
+  <link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/app-shared/app-common.css">
+  <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
+  <link rel="stylesheet" href="/giochi/assets/css/coach.css">
+  <link rel="stylesheet" href="gioco.css">
+</head>
+<body class="gsp-body" data-coach-game="genzano-si-prepara">
+  <main id="main-content" tabindex="-1">
+    <div class="app-page-hero">
+      <div class="container">
+        <nav aria-label="Percorso">
+          <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/formazione/">Formazione</a></li>
+            <li class="breadcrumb-item"><a href="/giochi/">Giochi della Sicurezza</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Genzano si prepara</li>
+          </ol>
+        </nav>
+        <h1>Genzano si prepara</h1>
+        <p class="lead">Un gioco per tutti sulla mappa vera della nostra città: preparati, affronta l'evento, scopri che cosa la prevenzione ha evitato.</p>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div id="gsp" class="gsp" data-meteo="sereno">
+        <div class="gsp-colonna-mappa">
+          <div class="gsp-strumenti">
+            <button type="button" id="gsp-schermo" class="btn btn-outline-primary btn-sm" aria-pressed="false" hidden><i class="bi bi-arrows-fullscreen me-2" aria-hidden="true"></i><span>Schermo intero</span></button>
+          </div>
+          <div id="gsp-allerta" class="gsp-allerta" role="status" hidden></div>
+          <div id="gsp-mappa" class="gsp-mappa">
+            <div id="gsp-camera" class="gsp-camera">
+              <img src="mappa-genzano.svg" alt="" width="1000" height="1116" class="gsp-mappa-img">
+              <svg id="gsp-segni" class="gsp-segni" viewBox="0 0 1000 1116" aria-hidden="true" focusable="false"></svg>
+            </div>
+            <div id="gsp-cielo" class="gsp-cielo" aria-hidden="true"></div>
+            <canvas id="gsp-pioggia" class="gsp-pioggia" aria-hidden="true"></canvas>
+            <p id="gsp-dove" class="gsp-dove" aria-live="polite">Genzano di Roma</p>
+          </div>
+          <div class="gsp-sotto-mappa">
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" role="switch" id="gsp-mostra-aree" checked>
+              <label class="form-check-label" for="gsp-mostra-aree">Mostra le aree di attesa del Piano comunale</label>
+            </div>
+            <p class="gsp-attribuzione">Mappa: dati © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap<span class="visually-hidden"> (si apre in una nuova scheda)</span></a> contributors (ODbL). Aree di attesa: <a href="/aree-attesa/">Piano di emergenza comunale</a>.</p>
+          </div>
+        </div>
+
+        <section id="gsp-pannello" class="gsp-pannello" aria-label="Il gioco">
+          <h2>Caricamento del gioco</h2>
+          <noscript><p>Il gioco funziona con JavaScript attivo. Le stesse indicazioni sono nelle pagine <a href="/rischi-prevenzione/temporali-intensi/">Temporali intensi</a> e <a href="/rischi-prevenzione/rischio-idrogeologico/">Rischio idrogeologico</a>.</p></noscript>
+        </section>
+      </div>
+
+      <div class="gsp-avvertenza mt-4">
+        <p class="mb-1"><strong>È una simulazione.</strong> I luoghi della mappa sono quelli veri di Genzano di Roma; gli eventi, la famiglia e i messaggi sono inventati. Le indicazioni di comportamento sono quelle delle pagine del sito sui <a href="/rischi-prevenzione/">rischi e la prevenzione</a>.</p>
+        <p class="mb-0">Durante un'allerta vera segui il bollettino del Centro Funzionale della Regione Lazio sulla pagina <a href="/allerte-meteo/">Allerte meteo</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+      </div>
+
+      <details class="gsp-testuale mt-3">
+        <summary>Elenco delle aree di attesa mostrate sulla mappa</summary>
+        <p class="small mb-1">Le aree di attesa sono i luoghi sicuri dove ritrovarsi dopo un terremoto o quando lo chiede il Comune. Dettagli e cartelli nella pagina <a href="/aree-attesa/">Aree di attesa</a>.</p>
+        <ul id="gsp-elenco-aree" class="small mb-0"></ul>
+      </details>
+    </div>
+  </main>
+
+  <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/progressione.js"></script>
+  <script src="/giochi/assets/js/attestato.js"></script>
+  <script src="/giochi/assets/js/comune.js"></script>
+  <script src="scenario-temporale.js"></script>
+  <script src="gioco.js"></script>
+  <script src="/giochi/assets/js/coach.js" defer></script>
+</body>
+</html>

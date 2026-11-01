@@ -477,6 +477,22 @@
         { titolo: 'Diventa volontario', url: '/diventa-volontario/' }
       ]
     },
+    'genzano-si-prepara': {
+      fascia: 'ragazzi',
+      titolo: 'Consigli per Genzano si prepara',
+      regola: 'Quello che fai prima dell\'evento decide come va durante e dopo: la prevenzione evita i disastri.',
+      come: [
+        'Prima scegli quattro cose da fare: non puoi fare tutto, quindi parti da quelle che proteggono le persone.',
+        'Durante l\'evento leggi la situazione e scegli che cosa fare. Dopo ogni scelta leggi il perché.',
+        'Non c\'è un tempo limite: leggi con calma.',
+        'Alla fine il resoconto ti mostra i disastri che la preparazione ha evitato.'
+      ],
+      teoria: [
+        { titolo: 'Temporali intensi', url: '/rischi-prevenzione/temporali-intensi/' },
+        { titolo: 'Rischio idrogeologico', url: '/rischi-prevenzione/rischio-idrogeologico/' },
+        { titolo: 'Allerte meteo', url: '/allerte-meteo/' }
+      ]
+    },
     'simulatore-coc': {
       fascia: 'ragazzi',
       titolo: 'Consigli per Simulatore COC',

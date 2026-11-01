@@ -77,8 +77,9 @@
 
   {{- /* 4. Listing pages (hub) — non sono Hugo content, dichiarate qui.
        monitor/ è la Sala situazioni, dal 21/10/2026: pagina pubblica, collegata da
-       /strumenti/, con il suo canonical, ma fino a quel giorno fuori dalla mappa. */ -}}
-  {{- range slice "giochi/" "giochi/infanzia/" "giochi/primaria/" "giochi/ragazzi/" "abili-a-proteggere/" "formazione/schede-stampabili/" "quizpc/" "formazionepc/" "monitor/" }}
+       /strumenti/, con il suo canonical, ma fino a quel giorno fuori dalla mappa.
+       giochi/genzano-si-prepara/ è il gioco per tutti, fuori dalle tre fasce (01/11/2026). */ -}}
+  {{- range slice "giochi/" "giochi/infanzia/" "giochi/primaria/" "giochi/ragazzi/" "giochi/genzano-si-prepara/" "abili-a-proteggere/" "formazione/schede-stampabili/" "quizpc/" "formazionepc/" "monitor/" }}
   <url>
     <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) . | safeHTML }}</loc>
   </url>

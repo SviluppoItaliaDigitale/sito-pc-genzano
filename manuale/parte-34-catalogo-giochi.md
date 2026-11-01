@@ -315,3 +315,13 @@ Quando un futuro intervento tocca i giochi del sito, ricorda:
 ---
 
 _[Indice manuale](README.md)_
+
+## Genzano si prepara — il gioco di simulazione per tutti (01/11/2026)
+
+Gioco a scenari sulla mappa vera di Genzano (`static/giochi/genzano-si-prepara/`), per tutte le età e ogni dispositivo. Ogni scenario ha tre momenti: **prima** (quattro azioni di preparazione da scegliere fra dieci), **durante e dopo** (eventi con tre scelte, punteggio 3/1/0 e il perché), **resoconto** («i disastri che non sono successi», con le conseguenze legate alla preparazione scelta).
+
+- **Mappa**: `mappa-genzano.svg` e `luoghi.json` li genera `scripts/genera-mappa-gioco-genzano.py` dai dati OpenStreetMap (ODbL, attribuzione sotto la mappa) e da `data/aree_emergenza.yaml`. `--check` è bloccante in `validate-pr.yml`: se cambiano le aree di attesa, si rigenera `luoghi.json`.
+- **Scenari**: un file per scenario (`scenario-temporale.js`). I testi ripetono le pagine canoniche dei rischi elencate in testa al file: se una di quelle pagine cambia un'indicazione, si aggiorna anche lo scenario. Luoghi veri, eventi e famiglia inventati (Flavio, la nonna Lina, il signor Pasquale), dichiarati come simulazione.
+- **Fascia «tutti»**: in `progressione.js` il gioco ha `fascia: 'tutti'`; l'Arena (`arena.js`) lo mostra con ogni filtro e lo apre da `/giochi/genzano-si-prepara/`, non da una cartella di fascia.
+- **Accessibilità**: scelte come pulsanti, esito scritto oltre al colore, focus sul titolo a ogni passo, lettura ad alta voce, nessun tempo limite; pioggia, alone e movimenti della mappa si fermano con `prefers-reduced-motion` e «Pausa animazioni» anche a pagina aperta. Scenari in preparazione: terremoto, incendio boschivo, ondata di calore.
+- **LIM** (01/11/2026): pulsante «Schermo intero» dentro il gioco (si esce senza tastiera), bersagli di almeno 56 px con dita e penne (`pointer: coarse`), testo che cresce con la larghezza dello schermo fino ai pannelli 4K, carta che copre sempre il riquadro, codice in ES5 per i browser vecchi dei pannelli Android. Provato a solo tocco su proiettore 1024×768, LIM 1280×800 e 1366×768, pannelli 1920×1080, 4K al 100% e al 200%, pannello Android con scala 150%: partita completa, nessuno scorrimento orizzontale, axe senza violazioni, schermo intero che entra ed esce.
