@@ -78,6 +78,8 @@ Si comincia a leggere le fonti ufficiali e a guardare il proprio quartiere.
 | Marzo-aprile | Il piano della mia famiglia | [Apri la lezione](/formazione/crea-la-mia-lezione/?classe=primaria-alta&minuti=60&tema=casa) | Si compila insieme il [piano familiare](/piano-familiare/). |
 | Maggio | Notizie vere e notizie false | [Apri la lezione](/formazione/crea-la-mia-lezione/?classe=primaria-alta&minuti=60&tema=informazione) | In famiglia si sceglie dove leggere le notizie ufficiali. |
 
+**Video per ogni incontro:** in [Video per la classe](/formazione/video-per-la-classe/) c'è un video breve con voce e sottotitoli per ciascuno dei cinque incontri, da proiettare sulla LIM.
+
 **Lavoro finale:** la mappa dei punti sicuri del quartiere, con la [mappa cieca del quartiere](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/).
 
 ## Secondaria di primo grado
@@ -129,5 +131,6 @@ Ogni estate il Dipartimento della Protezione Civile organizza i campi scuola [«
 - [Crea la mia lezione](/formazione/crea-la-mia-lezione/) — componi una lezione su qualunque tema.
 - [Il Gruppo nella tua scuola](/formazione/il-gruppo-a-scuola/) — incontri, prove affiancate, uscite.
 - [Verifica prima e dopo](/formazione/verifica-prima-e-dopo/) — cinque domande per capire che cosa è cambiato.
+- [Video per la classe](/formazione/video-per-la-classe/) — video brevi con voce e sottotitoli da proiettare sulla LIM.
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) — unità più lunghe e approfondite.
 - [Kit per le scuole](/formazione/#kit) — tutto il materiale per fascia d'età.
