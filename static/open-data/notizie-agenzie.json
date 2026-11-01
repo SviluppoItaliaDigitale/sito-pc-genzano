@@ -5,11 +5,161 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-01T19:07:03+00:00",
+  "generato": "2026-11-01T22:50:40+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-01T22:40:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Antonelli fa la storia in Messico, è campione del mondo 73 anni dopo Ascari",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/01/antonelli-fa-la-storia-in-messico-e-campione-del-mondo-73-anni-dopo-ascari_623e8e68-b9e6-4b58-abc1-674b8f0bc473.html"
+  },
+  {
+   "data": "2026-11-01T22:30:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Antonelli campione del mondo F1, quanto vale il titolo? Le cifre e i guadagni di Kimi",
+   "url": "https://www.adnkronos.com/sport/antonelli-campione-formula-1-quanto-guadagna_7vzuTvlfL2mxBqe5oWcksV"
+  },
+  {
+   "data": "2026-11-01T22:06:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Zelensky: \"Putin sta perdendo. Russia ha avuto 54mila morti e feriti a ottobre\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-zelensky-incontro-putin_5qa14Z9PSGXdGgsniYEMkV"
+  },
+  {
+   "data": "2026-11-01T22:03:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Lazio prima da sola dopo 16 anni, Inter a -3. La Juve riparte",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/01/lazio-prima-da-sola-dopo-16-anni-inter-a-3.-la-juve-riparte_e791a174-9074-4c6a-af26-0fb5654e6a13.html"
+  },
+  {
+   "data": "2026-11-01T21:27:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa, jet privato precipita su quartiere residenziale a Palm Beach: 9 morti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/palm-beach-florida-jet-schiantomorti_269dCEEcB47wriMRuSAV8Z"
+  },
+  {
+   "data": "2026-11-01T21:12:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Impresa Crippa, è secondo alla Maratona di New York. 'Un'emozione che mi porterò dietro a lungo'",
+   "url": "https://www.ansa.it/sito/notizie/sport/altrisport/2026/11/01/impresa-crippa-e-secondo-alla-maratona-di-new-york_18601b41-786c-4f57-8831-daae21986b8f.html"
+  },
+  {
+   "data": "2026-11-01T21:02:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Testa di maiale davanti a un centro islamico, 'non siete ben accetti'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/testa-di-maiale-davanti-a-un-centro-islamico-non-siete-ben-accetti_48a7aa06-85a4-44c9-a6e1-1a4570061bc0.html"
+  },
+  {
+   "data": "2026-11-01T21:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Veltroni: \"Nessuno prende Trump sul serio, è come Bombolo\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/veltroni-che-tempo-che-fa_3kj5lMLwdzV4s2KO1S1HXz"
+  },
+  {
+   "data": "2026-11-01T20:57:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Israele, Eisenkot cerca alleati, guarda agli arabi di Ra'am e agli ultraortodossi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/01/israele-eisenkot-cerca-alleati-guarda-agli-arabi-di-raam-e-agli-ultraortodossi_9aa5e803-daf0-4591-b0c6-ea26ce02a358.html"
+  },
+  {
+   "data": "2026-11-01T20:29:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Maltempo in Puglia, scuole chiuse a Lecce, Brindisi, Trani e Barletta",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/maltempo-in-puglia-scuole-chiuse-a-lecce-brindisi-trani-e-barletta_56437237-70e5-4896-af5e-b24727b7b66d.html"
+  },
+  {
+   "data": "2026-11-01T20:21:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gp Messico, scintille al via tra le Ferrari di Hamilton e Leclerc: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/gp-messico-contatto-leclerc-hamilton-cosa-e-successo_5CSmILmikrnDPftRI3MV45"
+  },
+  {
+   "data": "2026-11-01T20:10:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Non abbiamo fretta sull'Iran, abbiamo uno o due siti di cui occuparci'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/trump-minaccia-pickaxe-mountain-ma-sulliran-non-ho-fretta_c61082f4-ba5a-417a-a2a5-16dceb809481.html"
+  },
+  {
+   "data": "2026-11-01T20:07:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Maltempo: prime nevicate in Toscana, Umbria e Abruzzo. Allerta arancione in Puglia per pioggia e vento",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/prime-nevicate-in-toscana-umbria-e-abruzzo.-allerta-arancione-in-puglia-per-pioggia_35d2cf69-75fd-46ba-a496-dd64d39657fa.html"
+  },
+  {
+   "data": "2026-11-01T20:04:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Bulgaria conferma la filorussa Yotova, battuto l'europeista Ghiurov",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/la-bulgaria-conferma-la-filorussa-yotova-battuto-leuropeista-ghiurov_16bd5dad-caaf-47d0-8228-470def3c9a5b.html"
+  },
+  {
+   "data": "2026-11-01T19:56:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Zelensky: 'La Russia sta perdendo, scelga la diplomazia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/zelensky-la-russia-sta-perdendo-sul-terreno-scelga-la-via-diplomatica_53fc5c2e-9fb3-492e-ab6c-128d6bbe3f73.html"
+  },
+  {
+   "data": "2026-11-01T19:49:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: stretta sugli aumenti degli stipendi dei magistrati. Altolà dell'Anm",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-stretta-sugli-aumenti-degli-stipendi-dei-magistrati-rivisti-i-criteri_20031262-e476-45eb-82ee-0356dd37c56f.html"
+  },
+  {
+   "data": "2026-11-01T19:48:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "I dem aumentano il vantaggio. Trump: 'Se vincono loro sarò Mr Veto'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/01/i-dem-aumentano-il-vantaggio.-trump-se-vincono-loro-saro-mr-veto_17b942f9-5903-49fc-a157-fd5107755506.html"
+  },
+  {
+   "data": "2026-11-01T19:32:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Ue si schiera con Tusk, ma ora la Polonia rischia la paralisi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/lue-si-schiera-con-tusk-ma-ora-la-polonia-rischia-la-paralisi_a3a447fc-e24c-4000-9841-bfd8059b0856.html"
+  },
+  {
+   "data": "2026-11-01T19:31:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Michael Mann si spara accidentalmente a una gamba, è in ospedale",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/01/michael-mann-si-spara-accidentalmente-a-una-gamba-al-poligono-a-la-e-in-ospedale_93f7c9e6-57c2-4cfb-b854-0b0825426c26.html"
+  },
+  {
+   "data": "2026-11-01T19:26:41+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-11-01T19:16:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lunedì in Italia le salme dei quattro militari morti in Bosnia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/lunedi-in-italia-le-salme-dei-quattro-militari-morti-in-bosnia_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html"
+  },
+  {
+   "data": "2026-11-01T19:15:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Burioni: \"I medici no vax avevano torto, bugie dei politici sono intollerabili\"",
+   "url": "https://www.adnkronos.com/cronaca/burioni-medici-no-vax-che-tempo-che-fa_aDbsFY0YIREoz0LJXVItj"
+  },
+  {
+   "data": "2026-11-01T19:13:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Omaggio a Guccini in Piazza Maggiore, in migliaia nonostante la pioggia",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/01/in-piazza-maggiore-a-bologna-la-cantata-per-guccini_80699dcc-2ee8-46ee-b69f-2d76042d8dca.html"
+  },
+  {
+   "data": "2026-11-01T19:12:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Fbi accusa: 'La Corea del Nord dietro l'attacco a Binance'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/lfbi-accusa-la-corea-del-nord-dietro-lattacco-a-binance_87d50dc4-42ca-4246-8e1b-efd1578e52d4.html"
+  },
+  {
+   "data": "2026-11-01T19:10:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iva Zanicchi sul ritorno di 'Ok il prezzo è giusto': \"Una telefonatina Mediaset poteva farmela\"",
+   "url": "https://www.adnkronos.com/spettacoli/ok-il-prezzo-e-giusto-ritorno-iva-zanicchi-mediaset_35QWqwUQvQ2DcRTUmOuJln"
+  },
   {
    "data": "2026-11-01T19:03:13+00:00",
    "fonte": "ANSA CRONACA",
@@ -17,22 +167,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/parte-colpo-di-pistola-che-ferisce-poliziotta-ricoverata-in-rianimazione_740a3847-e36a-4b5f-ac4d-65d57d7b28d5.html"
   },
   {
-   "data": "2026-11-01T19:01:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra: Stretta sugli aumenti degli stipendi dei magistrati. Altolà dell'Anm",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-stretta-sugli-aumenti-degli-stipendi-dei-magistrati-rivisti-i-criteri_20031262-e476-45eb-82ee-0356dd37c56f.html"
-  },
-  {
-   "data": "2026-11-01T19:00:34+00:00",
+   "data": "2026-11-01T19:00:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, oggi il Gp del Messico: Antonelli può vincere il Mondiale - Diretta",
+   "titolo": "Gp del Messico, Antonelli chiude terzo ed è campione del mondo di Formula 1",
    "url": "https://www.adnkronos.com/sport/diretta-gp-messico-antonelli-mondiale-formula-1-live_1SLBbppkxglradfcQgxPcB"
-  },
-  {
-   "data": "2026-11-01T18:56:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump minaccia Pickaxe Mountain: 'Ma sull'Iran non ho fretta'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/trump-minaccia-pickaxe-mountain-ma-sulliran-non-ho-fretta_c61082f4-ba5a-417a-a2a5-16dceb809481.html"
   },
   {
    "data": "2026-11-01T18:54:09+00:00",
@@ -41,154 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/cacciamo-il-governo-meloni-le-tende-si-spostano-sotto-il-colosseo_3d831e06-2d14-4e88-a2d2-b80215bae534.html"
   },
   {
-   "data": "2026-11-01T18:53:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'Ue si schiera con Tusk, ma ora la Polonia rischia la paralisi",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/lue-si-schiera-con-tusk-ma-ora-la-polonia-rischia-la-paralisi_a3a447fc-e24c-4000-9841-bfd8059b0856.html"
-  },
-  {
-   "data": "2026-11-01T18:48:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Impresa Crippa, è secondo alla Maratona di New York",
-   "url": "https://www.ansa.it/sito/notizie/sport/altrisport/2026/11/01/impresa-crippa-e-secondo-alla-maratona-di-new-york_18601b41-786c-4f57-8831-daae21986b8f.html"
-  },
-  {
-   "data": "2026-11-01T18:45:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Antonelli nel paddock in Messico, arriva con la sorella Maggie",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/01/f1-antonelli-nel-paddock-in-messico-arriva-con-la-sorella-maggie_623e8e68-b9e6-4b58-abc1-674b8f0bc473.html"
-  },
-  {
-   "data": "2026-11-01T18:43:24+00:00",
+   "data": "2026-11-01T18:43:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Juventus-Napoli 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/juventus-napoli-allegri-spalletti-ex-serie-a-diretta_WctXb9nrfDvzkhZRYAgYY"
-  },
-  {
-   "data": "2026-11-01T18:42:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lunedì in Italia le salme dei quattro militari morti in Bosnia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/lunedi-in-italia-le-salme-dei-quattro-militari-morti-in-bosnia_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html"
+   "titolo": "Serie A, Juventus-Napoli 2-0, Alajbegovic e Boga decidono la sfida degli ex",
+   "url": "https://www.adnkronos.com/sport/juventus-napoli-allegri-spalletti-ex-serie-a_WctXb9nrfDvzkhZRYAgYY"
   },
   {
    "data": "2026-11-01T18:41:30+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Trump, sondaggio pessimo prima delle midterm: bocciatura record per il presidente",
    "url": "https://www.adnkronos.com/cronaca/elezioni-midterm-trump-sondaggio-usa_22leKOLQCELnLhytpFzPuF"
-  },
-  {
-   "data": "2026-11-01T18:38:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Prima neve nella Città metropolitana di Firenze, al Passo della Consuma",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/prima-neve-nella-citta-metropolitana-di-firenze-al-passo-della-consuma_f8930109-440f-4765-9b74-7e6889de0664.html"
-  },
-  {
-   "data": "2026-11-01T18:38:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Omaggio a Guccini in Piazza Maggiore, in migliaia nonostante la pioggia",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/01/in-piazza-maggiore-a-bologna-la-cantata-per-guccini_80699dcc-2ee8-46ee-b69f-2d76042d8dca.html"
-  },
-  {
-   "data": "2026-11-01T18:37:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Exit poll, la presidente Yotova vince il ballottaggio in Bulgaria",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/01/exit-poll-la-presidente-yotova-vince-il-ballottaggio-in-bulgaria_16bd5dad-caaf-47d0-8228-470def3c9a5b.html"
-  },
-  {
-   "data": "2026-11-01T18:25:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Lecce-Genoa 1-2 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/01/serie-a-in-campo-lecce-genoa-1-2-diretta_b2147e23-8617-4f35-ad2f-ab6163c437bb.html"
-  },
-  {
-   "data": "2026-11-01T18:25:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Anm, tutela stipendi è condizione per salvaguardia dell'indipendenza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/anm-tutela-stipendi-e-condizione-per-salvaguardia-dellindipendenza_181e4611-2509-46a4-bf76-60219508acab.html"
-  },
-  {
-   "data": "2026-11-01T18:16:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trovata morta in piscina nel Comasco, arrestato l'ex marito",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/morta-nella-piscina-di-casa-nel-comasco-arrestato-lex-marito_4ca017c1-3daa-4120-b2ad-789d90ed8fb7.html"
-  },
-  {
-   "data": "2026-11-01T18:11:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scontro tra due auto nel Napoletano, un morto e due feriti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/scontro-tra-due-auto-nel-napoletano-un-morto-e-due-feriti_046fae91-df66-4e0a-aa7f-68547f2b7e27.html"
-  },
-  {
-   "data": "2026-11-01T18:10:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Prime nevicate in Toscana, Umbria e Abruzzo. Giù le temperature di 7 gradi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/prime-nevicate-in-toscana-umbria-e-abruzzo.-giu-le-temperature-di-7-gradi_35d2cf69-75fd-46ba-a496-dd64d39657fa.html"
-  },
-  {
-   "data": "2026-11-01T18:07:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elicottero precipitato in Bosnia, l'unico superstite: \"E' stata questione di un secondo, miracolo che sia ancora vivo\"",
-   "url": "https://www.adnkronos.com/cronaca/bosnia-elicottero-superstite-racconto_7aZ2cwtrZTWEK7OJ1SuNqA"
-  },
-  {
-   "data": "2026-11-01T18:07:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Commissione elettorale di Israele: 'Voto regolare, i sospetti non pregiudicano l'esito'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/01/la-commissione-elettorale-di-israele-voto-regolare-i-sospetti-non-pregiudicano-lesito_9aa5e803-daf0-4591-b0c6-ea26ce02a358.html"
-  },
-  {
-   "data": "2026-11-01T18:00:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Simona Ventura: \"Nel 2027 compio 40 anni di carriera. Sto studiando nuovi programmi\"",
-   "url": "https://www.adnkronos.com/spettacoli/simona-ventura-40-anni-carriera-progetti_5u0HrJH1VOzXjBCmoP77Gh"
-  },
-  {
-   "data": "2026-11-01T17:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Michael Mann si spara accidentalmente a una gamba in un poligono, il regista ricoverato in ospedale",
-   "url": "https://www.adnkronos.com/spettacoli/michael-mann-sparo-gamba-ospedale_23RmkDFFmhAz1FdtSxNe4c"
-  },
-  {
-   "data": "2026-11-01T17:44:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-11-01T17:43:11+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ucciso a coltellate durante una lite in stazione nel Frusinate",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/ucciso-a-coltellate-durante-una-lite-in-stazione-nel-frusinate_f5df2024-f146-4944-814d-55df8d386d70.html"
-  },
-  {
-   "data": "2026-11-01T17:42:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ucciso a coltellate durante una lite in stazione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/lite-in-stazione-finisce-a-coltellate-38enne-arrestato-per-omicidio_fb596364-c915-46ef-8b31-4a06c2eacfe5.html"
-  },
-  {
-   "data": "2026-11-01T17:39:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meloni: 'Il Quirinale non è nei miei piani ma basta razzismo culturale'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/01/meloni-concentrata-a-chiedere-un-altro-mandato.-il-quirinale-non-e-nei-miei-piani_facdc2e3-865b-4f6a-9977-dec528bb34e0.html"
-  },
-  {
-   "data": "2026-11-01T17:34:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Un super Yeman Crippa è secondo alla maratona di New York",
-   "url": "https://www.adnkronos.com/sport/maratona-new-york-crippa-secondo_547ka28Mj1LYkVqvL65o9u"
-  },
-  {
-   "data": "2026-11-01T17:21:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sondaggio Nbc, il 52% degli elettori vuole il Congresso a guida dem, il 45% è per i repubblicani",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/01/sondaggio-nbc-il-52-elettori-vuole-il-congresso-a-guida-dem-il-45-e-per-i-repubblicani_17b942f9-5903-49fc-a157-fd5107755506.html"
-  },
-  {
-   "data": "2026-11-01T17:20:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La Lazio e il primato. Gattuso: \"Non guardare la classifica sennò ci gira la testa, mancano 12 punti all'obiettivo\"",
-   "url": "https://www.adnkronos.com/sport/gattuso-lazio-vetta-classifica-serie-a-zaccagni_56Rw6VsKAngQTSQk5VjWao"
   }
  ]
 }
