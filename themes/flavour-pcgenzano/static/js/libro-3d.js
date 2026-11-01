@@ -120,6 +120,10 @@ function pawn(color=0xe0a100){
 
 /* ---------- Animazioni ---------- */
 const tweens = [];
+/* Un solo movimento della telecamera alla volta: quello nuovo chiude il precedente portandolo alla fine
+   (ingresso compreso), altrimenti i due tween si contendono la posizione. */
+let tweenCamera = null;
+function chiudiTween(tw){ const i = tweens.indexOf(tw); if (i < 0) return; tweens.splice(i,1); tw.fn(1); tw.done?.(); }
 function tween(dur, fn, done){ const tw = {t:0, dur:RM() ? Math.min(dur,.25) : dur, fn, done}; tweens.push(tw); return tw; }
 const ease = p => p<.5 ? 2*p*p : 1-Math.pow(-2*p+2,2)/2;
 /* uscita con un piccolo rimbalzo, come la carta di un libro pop-up */
@@ -316,7 +320,7 @@ function ingresso(){
   if (RM()) return;
   const fine = camera.position.clone(), inizio = fine.clone().multiplyScalar(2.1).add(new THREE.Vector3(1.4,.9,0));
   camera.position.copy(inizio); book.rotation.y = -.55; controls.enabled = false;
-  tween(2.4, p=>{ const e = 1-Math.pow(1-p,3); camera.position.lerpVectors(inizio, fine, e); book.rotation.y = -.55*(1-e); camera.lookAt(controls.target); },
+  tweenCamera = tween(2.4, p=>{ const e = 1-Math.pow(1-p,3); camera.position.lerpVectors(inizio, fine, e); book.rotation.y = -.55*(1-e); camera.lookAt(controls.target); },
     ()=>{ book.rotation.y = 0; controls.enabled = true; });
 }
 const clampP = v => (v.x = Math.max(-.42, Math.min(.42, v.x)), v.z = Math.max(-.55, Math.min(.5, v.z)), v);
@@ -974,10 +978,12 @@ function vista(n, anima){
   document.querySelectorAll('#lb-vista button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.vista===n)));
   const target = new THREE.Vector3(VISTE[n], .05, .02);
   const pos = target.clone().addScaledVector(DIREZIONE, distanzaVista(n));
-  if (!anima){ controls.target.copy(target); camera.position.copy(pos); camera.lookAt(target); controls.update(); return; }
+  // Ridimensionamento a movimento in corso (anche l'ingresso, che parte con la prima misura): lo si lascia finire.
+  if (!anima){ if (tweenCamera && tweens.includes(tweenCamera)) return; controls.target.copy(target); camera.position.copy(pos); camera.lookAt(target); controls.update(); return; }
+  if (tweenCamera) chiudiTween(tweenCamera);
   const t0 = controls.target.clone(), p0 = camera.position.clone(), eraAttivo = controls.enabled;
   controls.enabled = false;
-  tween(.6, p=>{ const e = ease(p); controls.target.lerpVectors(t0, target, e); camera.position.lerpVectors(p0, pos, e); camera.lookAt(controls.target); },
+  tweenCamera = tween(.6, p=>{ const e = ease(p); controls.target.lerpVectors(t0, target, e); camera.position.lerpVectors(p0, pos, e); camera.lookAt(controls.target); },
     ()=>{ controls.enabled = eraAttivo || controls.enabled; controls.update(); });
 }
 document.querySelectorAll('#lb-vista button').forEach(b=>b.addEventListener('click', ()=>vista(b.dataset.vista, true)));
