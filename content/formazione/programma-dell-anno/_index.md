@@ -16,9 +16,10 @@ Ogni incontro dura un'ora, 45 minuti all'infanzia. Il consiglio di classe può c
 ## Come si usa
 
 1. Trova la tabella della tua classe e apri la lezione del mese.
-2. Prima del primo incontro e dopo l'ultimo usa la [verifica prima e dopo](/formazione/verifica-prima-e-dopo/): cinque domande, senza voto e senza nomi.
-3. A fine incontro consegna il compito a casa. La guida [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) spiega ai genitori come continuare.
-4. A maggio la classe prepara il lavoro finale. Se vuoi, [mandacelo](#il-lavoro-della-classe-sul-sito): può uscire sul sito.
+2. Per aprire l'incontro, in [Video per la classe](/formazione/video-per-la-classe/) trovi un video breve e animato per ogni argomento, con voce e sottotitoli, da proiettare sulla LIM.
+3. Prima del primo incontro e dopo l'ultimo usa la [verifica prima e dopo](/formazione/verifica-prima-e-dopo/): cinque domande, senza voto e senza nomi.
+4. A fine incontro consegna il compito a casa. La guida [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) spiega ai genitori come continuare.
+5. A maggio la classe prepara il lavoro finale. Se vuoi, [mandacelo](#il-lavoro-della-classe-sul-sito): può uscire sul sito.
 
 Prima di cominciare leggi la [checklist del docente](/formazione/scuole-checklist-docente/), con le risposte alle domande difficili dei bambini.
 
@@ -129,5 +130,6 @@ Ogni estate il Dipartimento della Protezione Civile organizza i campi scuola [«
 - [Crea la mia lezione](/formazione/crea-la-mia-lezione/) — componi una lezione su qualunque tema.
 - [Il Gruppo nella tua scuola](/formazione/il-gruppo-a-scuola/) — incontri, prove affiancate, uscite.
 - [Verifica prima e dopo](/formazione/verifica-prima-e-dopo/) — cinque domande per capire che cosa è cambiato.
+- [Video per la classe](/formazione/video-per-la-classe/) — video brevi con voce e sottotitoli da proiettare sulla LIM.
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) — unità più lunghe e approfondite.
 - [Kit per le scuole](/formazione/#kit) — tutto il materiale per fascia d'età.

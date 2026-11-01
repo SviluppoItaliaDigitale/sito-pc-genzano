@@ -353,6 +353,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Verifica prima e dopo</p>
   <p class="ms-card-desc">Cinque domande per classe, uguali prima e dopo il percorso, senza voto e senza nomi.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/video-per-la-classe/">
+  <div class="ms-card-icon"><i class="bi bi-play-btn-fill"></i></div>
+  <p class="ms-card-title">Video per la classe</p>
+  <p class="ms-card-desc">Video brevi con voce e sottotitoli da proiettare sulla LIM: terremoto, alluvione, colori dell'allerta, kit di emergenza, notizie false e incendi, con la trascrizione.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/crea-la-mia-lezione/">
   <div class="ms-card-icon"><i class="bi bi-magic"></i></div>
   <p class="ms-card-title">Crea la mia lezione</p>

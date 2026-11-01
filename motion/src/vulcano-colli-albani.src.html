@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Il vulcano dei Colli Albani — Protezione Civile Genzano di Roma</title>
+<style>
+/*FONTS*/
+/* Direzione: cartellone di classe disegnato a pennarello — cielo chiaro, prato, contorni blu inchiostro,
+   colori pieni da pastelli a cera, il bambino Flavio come protagonista di ogni scena. */
+:root{--ink:#0b3a66;--ink2:#2c5282;--acc:#c2410c;--giallo:#ffd43b;--arancio:#ff922b;--rosso:#e03131;
+  --verde:#40c057;--azzurro:#4dabf7;--viola:#9775fa;--cielo1:#9bd8ff;--cielo2:#e3f4ff}
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
+  background:linear-gradient(180deg,var(--cielo1) 0%,var(--cielo2) 70%);overflow:hidden;
+  font-family:'Titillium Web',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+body.render #stage{left:0;top:0;transform:none!important}
+#fondo,#coriandoli{position:absolute;inset:0;width:100%;height:100%}
+#coriandoli{pointer-events:none}
+.scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
+  top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(26px*var(--k))}
+.txt{display:flex;flex-direction:column;gap:calc(22px*var(--k))}
+.ill{height:calc(var(--illh)*1px);flex:none;display:flex;align-items:center;justify-content:center}
+.carta{width:100%;height:100%;border:6px solid var(--ink);border-radius:40px;overflow:hidden;background:#fff;
+  box-shadow:12px 12px 0 rgba(11,58,102,.22)}
+.carta svg{width:100%;height:100%;display:block}
+[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:70px}
+[data-fmt="16x9"] .ill{order:2;width:47%;height:640px}
+[data-fmt="16x9"] .txt{order:1;width:53%}
+[data-fmt="16x9"] .grande{font-size:150px}
+[data-fmt="16x9"] .scena.fin .txt{gap:12px}
+.chip{align-self:flex-start;font:800 calc(28px*var(--k)) 'Titillium Web',sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink);background:var(--giallo);border:4px solid var(--ink);border-radius:999px;
+  padding:.18em .9em;box-shadow:5px 5px 0 rgba(11,58,102,.22)}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.04;letter-spacing:-.01em}
+h1 .l{display:block;transform-origin:0 80%}
+h1 .a{color:var(--acc);background:linear-gradient(#ffe066,#ffe066) no-repeat 0 88%/var(--hl,0%) 34%;padding:0 .06em}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--ink2);margin:0}
+.sotto b{color:var(--ink)}
+.lista{display:flex;flex-direction:column;gap:calc(18px*var(--k));margin:0;padding:0;list-style:none}
+.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:700;font-size:calc(42px*var(--k));line-height:1.16}
+.lista .ico{flex:none;width:calc(84px*var(--k));height:calc(84px*var(--k));border-radius:50%;border:4px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;background:#fff}
+.lista .ico svg{width:70%;height:70%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(26px*var(--k));width:100%}
+.tile{position:relative;background:#fff;border:5px solid var(--ink);border-radius:32px;padding:calc(18px*var(--k));
+  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center;box-shadow:8px 8px 0 rgba(11,58,102,.2)}
+.tile svg{width:calc(140px*var(--k));height:calc(140px*var(--k))}
+.tile span{font-weight:800;font-size:calc(34px*var(--k));line-height:1.1}
+.tile .bollo{position:absolute;right:-14px;top:-14px;width:74px;height:74px}
+.nota{font:800 calc(32px*var(--k)) 'Titillium Web',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);margin:0}
+.nota b{color:var(--acc)}
+.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--rosso);-webkit-text-stroke:6px var(--ink);paint-order:stroke fill}
+.fonte{font:600 calc(24px*var(--k)) 'Titillium Web',sans-serif;color:var(--ink2);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:68px;display:flex;
+  align-items:center;gap:20px;padding:0 28px;border-radius:999px;background:#fff;border:4px solid var(--ink);
+  font:800 26px 'Titillium Web',sans-serif;letter-spacing:.12em;color:var(--ink)}
+#hud .dots{display:flex;gap:10px}
+#hud .dot{width:18px;height:18px;border-radius:50%;background:#d0dbe8;border:3px solid var(--ink)}
+#wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
+#sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);bottom:calc((var(--H) - var(--subb))*1px);
+  background:#fff;border:4px solid var(--ink);border-radius:24px;padding:14px 26px;color:var(--ink);
+  font-weight:700;font-size:calc(42px*var(--ks));line-height:1.22;text-align:center;opacity:0}
+#ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
+#ui a{color:#eef2f7;background:#1d2a40;border-radius:999px;padding:8px 14px;text-decoration:none}
+#ui a[aria-current]{background:#2e90fa;color:#0a1220}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer}
+body.render #ui,body.render #avvio{display:none!important}
+</style>
+</head>
+<body>
+<div id="stage" role="img" aria-label="">
+  <svg id="fondo" aria-hidden="true"></svg>
+  <svg id="coriandoli" aria-hidden="true"></svg>
+  <div id="scene"></div>
+  <div id="wipe"></div>
+  <div id="hud"><div class="dots"></div><span class="lab"></span></div>
+  <div id="sub" aria-hidden="true"></div>
+</div>
+<nav id="ui" aria-label="Formato"></nav>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
+<script>
+/* ===================== CONFIG — testi, tempi ===================== */
+/* Fonti: pagina /rischi-prevenzione/rischio-vulcanico/ del sito; registro data/dati_canonici.yaml
+   (ultima eruzione circa 36.000 anni fa, INGV; vulcano quiescente, DPC; sorveglianza INGV con GPS e
+   misure dei gas). CO2: si accumula in cantine, scantinati, pozzi e fossi; aerare prima di entrare,
+   non entrare nei pozzi, non soccorrere entrando in uno spazio chiuso, chiamare il 112. */
+const CONFIG = {
+  titolo: "Il vulcano dei Colli Albani",
+  hud: "VULCANO",
+  posterT: 0,
+  scene: [
+    { ill: "vulcano", illh: 520, dur: 6, chip: "Protezione Civile · Genzano di Roma",
+      righe: ["Il vulcano", "sotto i <span class='a'>Castelli</span>"], sotto: "<b>I Colli Albani sono un vulcano.</b>",
+      sottotitolo: "Genzano sorge su un vulcano: i Colli Albani. I laghi di Albano e di Nemi sono antichi crateri." },
+    { ill: "dorme", illh: 420, dur: 7, chip: "Cosa sapere",
+      righe: ["Quiescente,", "non <span class='a'>spento</span>"], sotto: "L'ultima eruzione è di <b>circa 36.000 anni fa</b>.",
+      sottotitolo: "L'ultima eruzione è avvenuta circa 36.000 anni fa. Oggi il vulcano è quiescente: non è spento." },
+    { ill: "sorveglia", illh: 420, dur: 7, chip: "Chi lo controlla",
+      righe: ["Sempre", "<span class='a'>sorvegliato</span>"], sotto: "L'INGV misura <b>il suolo e i gas</b>, ogni giorno.",
+      sottotitolo: "Lo sorveglia l'Istituto Nazionale di Geofisica e Vulcanologia, che misura i movimenti del suolo e i gas." },
+    { ill: "gas", illh: 240, dur: 9, chip: "Il gas invisibile", listaAt: [4.6, 5.3, 6.0],
+      righe: ["Un gas", "<span class='a'>invisibile</span>"], lista: [
+        ["cantina", "Cantine e scantinati"],
+        ["pozzo", "Pozzi"],
+        ["fosso", "Fossi e buche"] ],
+      sottotitolo: "Dal sottosuolo esce anidride carbonica: non ha colore né odore e si raccoglie nei posti bassi e chiusi." },
+    { ill: "aria", illh: 420, dur: 7, chip: "Cosa fare",
+      righe: ["Prima fai", "<span class='a'>cambiare l'aria</span>"], sotto: "Apri e aspetta. <b>Nei pozzi non si entra mai.</b>",
+      sottotitolo: "Prima di entrare in una cantina chiusa da tempo, apri e fai cambiare l'aria. Nei pozzi non si entra mai." },
+    { ill: "soccorso", illh: 420, dur: 8, chip: "Se qualcuno sta male",
+      righe: ["Non entrare:", "chiama il <span class='a'>112</span>"], sotto: "Esci all'aria aperta. <b>Arrivano i Vigili del Fuoco.</b>",
+      sottotitolo: "Se qualcuno sta male in un posto chiuso, non entrare a prenderlo: esci all'aria aperta e chiama il 112." },
+    { ill: "sereno", illh: 200, dur: 7, chip: "Genzano di Roma · Protezione Civile", finale: true,
+      righe: ["Informati", "dalle fonti <span class='a'>ufficiali</span>"], sotto: "<b>protezionecivilegenzano.it</b>",
+      grande: "112", fonte: "Fonti: INGV, scheda «Colli Albani»;<br>Dipartimento della Protezione Civile",
+      sottotitolo: "Segui le notizie dell'INGV, non le voci sui social. In emergenza chiama il 112." }
+  ]
+};
+
+const DUR = /*DUR*/[];
+const AUDIO = /*AUDIO*/"";
+
+/* ===================== FORMATI e zone sicure ===================== */
+const FORMATI = {
+  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
+  "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
+  "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
+  "16x9": { W:1920, H:1080, hx:120, hy:48,  side:130, top:150, bot:900,  subb:1046, t:108, k:.95, ks:.9,  illk:1   }
+};
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.get("render") === "1";
+const FMT = FORMATI[Q.get("fmt")] ? Q.get("fmt") : "9x16";
+const L = FORMATI[FMT];
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.dataset.fmt = FMT;
+for (const k of ["W","H","side","top","bot","subb","hx","hy","t","k","ks"]) stage.style.setProperty("--" + k, L[k]);
+if (RENDER) document.body.classList.add("render");
+stage.setAttribute("aria-label", CONFIG.titolo);
+
+/* ===================== AIUTANTI (deterministici) ===================== */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outQuart = x => 1 - Math.pow(1 - x, 4);
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => { const c = 2.2, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const outElastic = x => x <= 0 ? 0 : x >= 1 ? 1 : Math.pow(2, -10 * x) * Math.sin((x * 10 - .75) * (2 * Math.PI / 3)) + 1;
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+const lerp = (a, b, x) => a + (b - a) * x;
+const INK = "#0b3a66";
+/* boing: entra rimbalzando (scala + piccola rotazione) */
+function boing(el, p, rot = 0) {
+  const e = p <= 0 ? 0 : outElastic(p);
+  el.style.opacity = clamp(p * 4);
+  el.style.transform = `scale(${lerp(.3, 1, e).toFixed(3)}) rotate(${(lerp(rot - 8, rot, e)).toFixed(2)}deg)`;
+}
+function salta(el, p, d = 60) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `translateY(${((1 - e) * d).toFixed(1)}px)`; }
+function svgPop(g, p, cx = "50%", cy = "50%") {
+  g.style.transformBox = "fill-box"; g.style.transformOrigin = `${cx} ${cy}`;
+  const e = p <= 0 ? 0 : outElastic(p); g.style.opacity = p > 0 ? 1 : 0; g.style.transform = `scale(${e.toFixed(3)})`;
+}
+
+/* ===================== PERSONAGGI (originali, stile pennarello) ===================== */
+/* Origine ai piedi. Altezza ~280 a scala 1. tipo: flavio | silvia | elio | adulta | adulto */
+function PG(cls, o = {}) {
+  const c = Object.assign({ maglia: "#ff922b", pantaloni: "#4dabf7", pelle: "#ffd8b1", capelli: "#8b5a2b", tipo: "flavio" }, o);
+  const adulto = c.tipo === "adulta" || c.tipo === "adulto";
+  const gamba = adulto ? 96 : 76;
+  const capelli = {
+    flavio: `<path d="M-56 -14 Q-60 -64 -6 -62 Q46 -66 56 -16 Q36 -40 4 -36 Q-26 -44 -56 -14Z" fill="${c.capelli}"/><path d="M-6 -62 Q4 -80 18 -70" fill="none" stroke="${c.capelli}" stroke-width="9"/>`,
+    silvia: `<circle cx="-62" cy="-4" r="20" fill="${c.capelli}"/><circle cx="62" cy="-4" r="20" fill="${c.capelli}"/><path d="M-56 -10 Q-58 -64 0 -62 Q58 -64 56 -10 Q30 -36 0 -30 Q-30 -36 -56 -10Z" fill="${c.capelli}"/>`,
+    elio: `<path d="M-54 -20 Q-50 -62 0 -60 Q50 -62 54 -20 Q20 -44 -54 -20Z" fill="${c.capelli}"/>`,
+    adulta: `<circle cx="0" cy="-66" r="22" fill="${c.capelli}"/><path d="M-58 4 Q-62 -64 0 -60 Q62 -64 58 4 Q50 -32 0 -34 Q-50 -32 -58 4Z" fill="${c.capelli}"/>`,
+    adulto: `<path d="M-54 -22 Q-48 -62 0 -60 Q48 -62 54 -22 Q10 -40 -54 -22Z" fill="${c.capelli}"/>`
+  }[c.tipo];
+  const busto = adulto ? `<rect x="-42" y="-${gamba + 112}" width="84" height="118" rx="30" fill="${c.maglia}"/>` :
+    `<rect x="-38" y="-${gamba + 94}" width="76" height="100" rx="30" fill="${c.maglia}"/>`;
+  const spalla = adulto ? gamba + 96 : gamba + 78, testaY = adulto ? gamba + 172 : gamba + 146;
+  const braccio = (lato) => `<g class="brac${lato}" transform="translate(${lato === "S" ? -34 : 34} -${spalla})"><g class="r">
+      <path d="M0 0 L0 ${adulto ? 74 : 62}" stroke="${c.maglia}" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="0" cy="${adulto ? 80 : 68}" r="12" fill="${c.pelle}"/></g></g>`;
+  const gambe = lato => `<g class="gamba${lato}" transform="translate(${lato === "S" ? -16 : 16} -${gamba})"><g class="r">
+      <rect x="-12" y="0" width="24" height="${gamba}" rx="11" fill="${c.pantaloni}"/><ellipse cx="${lato === "S" ? -4 : 4}" cy="${gamba - 2}" rx="20" ry="10" fill="#495057"/></g></g>`;
+  return `<g class="${cls} pg" stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><g class="corpo">
+    ${gambe("S")}${gambe("D")}${braccio("S")}${busto}${braccio("D")}
+    <g class="testa" transform="translate(0 -${testaY})"><circle r="${adulto ? 56 : 60}" fill="${c.pelle}"/>${capelli}
+      <g class="occhi"><ellipse cx="-21" cy="2" rx="7" ry="10" fill="${INK}" stroke="none"/><ellipse cx="21" cy="2" rx="7" ry="10" fill="${INK}" stroke="none"/>
+        <circle cx="-19" cy="-2" r="2.6" fill="#fff" stroke="none"/><circle cx="23" cy="-2" r="2.6" fill="#fff" stroke="none"/></g>
+      <circle cx="-36" cy="22" r="10" fill="#ff8787" opacity=".55" stroke="none"/><circle cx="36" cy="22" r="10" fill="#ff8787" opacity=".55" stroke="none"/>
+      <path class="bocca sorriso" d="M-18 22 Q0 40 18 22" fill="none"/>
+      <ellipse class="bocca o" cx="0" cy="30" rx="9" ry="11" fill="#c92a2a" opacity="0"/></g></g></g>`;
+}
+/* muove un personaggio: posizione, respiro, braccia, camminata, occhi che sbattono, bocca */
+function anima(root, sel, t, o) {
+  const g = typeof sel === "string" ? root.querySelector(sel) : sel; if (!g) return;
+  const s = o.s ?? 1, fase = o.fase ?? 0, cam = o.cammina ?? 0;
+  const bob = (o.bob ?? 1) * Math.sin(t * 3.2 + fase) * 3 + cam * Math.abs(Math.sin(t * 9 + fase)) * -7;
+  g.setAttribute("transform", `translate(${(+o.x).toFixed(1)} ${(o.y + bob).toFixed(1)}) scale(${o.flip ? -s : s} ${(s * (o.schiaccia ?? 1)).toFixed(3)})`);
+  const aS = (o.aS ?? 12) + (o.agitaS ? Math.sin(t * 10 + fase) * 18 : 0), aD = (o.aD ?? 12) + (o.agitaD ? Math.sin(t * 10 + fase) * 18 : 0);
+  g.querySelector(".bracS .r").setAttribute("transform", `rotate(${aS.toFixed(1)})`);
+  g.querySelector(".bracD .r").setAttribute("transform", `rotate(${(-aD).toFixed(1)})`);
+  const gm = Math.sin(t * 9 + fase) * 22 * cam;
+  g.querySelector(".gambaS .r").setAttribute("transform", `rotate(${gm.toFixed(1)})`);
+  g.querySelector(".gambaD .r").setAttribute("transform", `rotate(${(-gm).toFixed(1)})`);
+  const bl = ((t + fase * .7) % 3.4) < .13 ? .12 : 1;
+  g.querySelector(".occhi").setAttribute("transform", `translate(0 2) scale(1 ${bl}) translate(0 -2)`);
+  const oo = o.bocca === "o";
+  g.querySelector(".bocca.sorriso").setAttribute("opacity", oo ? 0 : 1);
+  g.querySelector(".bocca.o").setAttribute("opacity", oo ? 1 : 0);
+}
+/* in ginocchio sotto il tavolo: un braccio protegge la testa, l'altra mano tiene la gamba del tavolo */
+function RANNICCHIATO(cls, o = {}) {
+  const c = Object.assign({ maglia: "#ff922b", pantaloni: "#4dabf7", pelle: "#ffd8b1", capelli: "#8b5a2b" }, o);
+  return `<g class="${cls}" stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><g class="corpo">
+    <rect x="-78" y="-34" width="96" height="34" rx="16" fill="${c.pantaloni}"/><ellipse cx="-80" cy="-12" rx="14" ry="13" fill="#495057"/>
+    <rect x="-58" y="-86" width="42" height="70" rx="18" fill="${c.pantaloni}"/>
+    <rect x="-52" y="-150" width="72" height="98" rx="30" fill="${c.maglia}" transform="rotate(38 -16 -70)"/>
+    <path class="tiene" d="M8 -112 Q60 -112 98 -96" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle class="manoT" cx="100" cy="-95" r="12" fill="${c.pelle}"/>
+    <g class="testa" transform="translate(40 -118)"><circle r="50" fill="${c.pelle}"/>
+      <path d="M-46 -14 Q-44 -56 0 -52 Q40 -54 48 -14 Q30 -34 2 -30 Q-26 -36 -46 -14Z" fill="${c.capelli}"/>
+      <g class="occhi"><ellipse cx="2" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/><ellipse cx="30" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/></g>
+      <circle cx="40" cy="24" r="8" fill="#ff8787" opacity=".55" stroke="none"/>
+      <path class="bocca sorriso" d="M8 26 Q20 36 32 26" fill="none"/><ellipse class="bocca o" cx="20" cy="30" rx="7" ry="8" fill="#c92a2a" opacity="0"/></g>
+    <path d="M-2 -132 Q14 -186 52 -176 Q82 -168 84 -150" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle cx="84" cy="-148" r="12" fill="${c.pelle}"/>
+  </g></g>`;
+}
+/* elementi di contorno */
+const STELLA = (cls, x, y, r = 22, c = "#ffd43b") => { let d = ""; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; d += (i ? "L" : "M") + (x + Math.cos(a) * rr).toFixed(1) + " " + (y + Math.sin(a) * rr).toFixed(1); }
+  return `<path class="${cls}" d="${d}Z" fill="${c}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>`; };
+const SPUNTA = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#40c057" stroke="${INK}" stroke-width="5"/><path d="M${-r * .42} 0 L${-r * .1} ${r * .32} L${r * .45} ${-r * .3}" stroke="#fff" stroke-width="${r * .22}" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g>`;
+const DIVIETO = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#fff" stroke="#e03131" stroke-width="${r * .26}"/><path d="M${-r * .66} ${r * .66} L${r * .66} ${-r * .66}" stroke="#e03131" stroke-width="${r * .26}"/><circle r="${r * 1.13}" fill="none" stroke="${INK}" stroke-width="4"/></g></g>`;
+const NUVOLA = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 40 Q-4 10 26 12 Q34 -14 64 -4 Q84 -22 106 0 Q132 2 128 30 Q140 44 120 52 H8 Q-10 52 0 40Z" fill="#fff" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/></g>`;
+const SOLE = (x, y, r = 46) => `<g class="sole" transform="translate(${x} ${y})"><g class="raggi">${Array.from({ length: 10 }, (_, i) => `<path d="M0 ${-r - 12} L0 ${-r - 30}" stroke="#f59f00" stroke-width="9" stroke-linecap="round" transform="rotate(${i * 36})"/>`).join("")}</g>
+  <circle r="${r}" fill="#ffd43b" stroke="${INK}" stroke-width="5"/><ellipse cx="-14" cy="-6" rx="5" ry="7" fill="${INK}"/><ellipse cx="14" cy="-6" rx="5" ry="7" fill="${INK}"/>
+  <path d="M-16 12 Q0 26 16 12" stroke="${INK}" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="-26" cy="10" r="7" fill="#ff8787" opacity=".6"/><circle cx="26" cy="10" r="7" fill="#ff8787" opacity=".6"/></g>`;
+const PRATO = (y = 430, c = "#69db7c") => `<path d="M-10 ${y} Q150 ${y - 26} 300 ${y} T610 ${y} V530 H-10Z" fill="${c}" stroke="${INK}" stroke-width="5"/>`;
+const STANZA = `<rect width="600" height="510" fill="#fff4d6"/><rect y="420" width="600" height="90" fill="#e9b872" stroke="${INK}" stroke-width="5"/>
+  <path d="M0 448 H600 M0 478 H600" stroke="#c98c48" stroke-width="3"/>`;
+
+const O = `stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"`;
+const ICONE = {
+  pin: `<svg viewBox="0 0 100 100"><path d="M50 92 C30 64 22 52 22 38 a28 28 0 0 1 56 0 C78 52 70 64 50 92Z" fill="#40c057" ${O}/><circle cx="50" cy="38" r="11" fill="#fff" ${O}/></svg>`,
+  zaino: `<svg viewBox="0 0 100 100"><path d="M36 26 V18 a14 14 0 0 1 28 0 V26" fill="none" ${O}/><rect x="22" y="24" width="56" height="68" rx="16" fill="#ff922b" ${O}/><rect x="32" y="56" width="36" height="24" rx="6" fill="#ffd43b" ${O}/></svg>`,
+  casa: `<svg viewBox="0 0 100 100"><path d="M14 50 L50 16 L86 50 V90 H14Z" fill="#ffe066" ${O}/><path d="M8 52 L50 12 L92 52" fill="none" stroke="#e03131" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><rect x="30" y="60" width="40" height="8" rx="3" fill="#c08a4f" ${O}/><path d="M36 68 V86 M64 68 V86" ${O}/></svg>`,
+  persone: `<svg viewBox="0 0 100 100"><circle cx="32" cy="34" r="13" fill="#ffd8b1" ${O}/><rect x="17" y="50" width="30" height="38" rx="13" fill="#4dabf7" ${O}/><circle cx="68" cy="34" r="13" fill="#ffd8b1" ${O}/><rect x="53" y="50" width="30" height="38" rx="13" fill="#ff922b" ${O}/></svg>`,
+  scarpe: `<svg viewBox="0 0 100 100"><path d="M10 62 Q10 42 28 44 Q36 56 52 58 Q74 60 86 68 Q92 74 88 82 H14 Q8 76 10 62Z" fill="#ff922b" ${O}/><path d="M14 82 H88" ${O}/><path d="M36 50 L44 46 M42 54 L50 50" ${O}/></svg>`,
+  telefono: `<svg viewBox="0 0 100 100"><rect x="28" y="8" width="44" height="84" rx="10" fill="#495057" ${O}/><rect x="34" y="18" width="32" height="58" rx="4" fill="#a5d8ff" stroke="none"/><circle cx="50" cy="84" r="4" fill="#fff" stroke="none"/></svg>`,
+  finestra: `<svg viewBox="0 0 100 100"><rect x="16" y="12" width="68" height="76" rx="6" fill="#a5d8ff" ${O}/><path d="M50 12 V88 M16 50 H84" ${O}/><path d="M28 26 L38 38" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>`,
+  mobile: `<svg viewBox="0 0 100 100"><rect x="26" y="6" width="48" height="88" rx="6" fill="#c08a4f" ${O}/><path d="M26 36 H74 M26 64 H74" ${O}/><rect x="32" y="14" width="14" height="18" fill="#e03131" stroke="none"/><rect x="52" y="42" width="14" height="18" fill="#4dabf7" stroke="none"/><rect x="36" y="70" width="18" height="18" fill="#ffd43b" stroke="none"/></svg>`,
+  ascensore: `<svg viewBox="0 0 100 100"><rect x="16" y="8" width="68" height="84" rx="8" fill="#ced4da" ${O}/><path d="M50 8 V92" ${O}/><path d="M33 34 L42 24 L51 34Z M49 66 L58 76 L67 66Z" fill="${INK}" stroke="none"/></svg>`,
+  corsa: `<svg viewBox="0 0 100 100"><circle cx="58" cy="18" r="11" fill="#ffd8b1" ${O}/><path d="M56 31 L44 56 L60 66 L56 90 M44 56 L30 84 M52 38 L72 48 M50 40 L30 46" fill="none" stroke="#ff922b" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  calendario: `<svg viewBox="0 0 100 100"><rect x="12" y="18" width="76" height="72" rx="10" fill="#fff" ${O}/><path d="M12 40 H88" ${O}/><rect x="12" y="18" width="76" height="22" rx="10" fill="#e03131" ${O}/><text x="50" y="78" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="30" fill="${INK}">OGGI</text></svg>`,
+  scudo: `<svg viewBox="0 0 100 100"><path d="M50 8 L84 20 V48 C84 70 68 84 50 92 C32 84 16 70 16 48 V20Z" fill="#40c057" ${O}/><path d="M34 50 L46 62 L68 38" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  comune: `<svg viewBox="0 0 100 100"><path d="M10 38 L50 12 L90 38Z" fill="#ffe066" ${O}/><g fill="#fff" ${O}><rect x="20" y="42" width="12" height="36"/><rect x="44" y="42" width="12" height="36"/><rect x="68" y="42" width="12" height="36"/></g><rect x="8" y="80" width="84" height="10" rx="3" fill="#ced4da" ${O}/></svg>`,
+  pc: `<svg viewBox="0 0 100 100"><path d="M16 66 C16 36 30 22 50 22 C70 22 84 36 84 66Z" fill="#ffd43b" ${O}/><rect x="8" y="64" width="84" height="14" rx="7" fill="#ffd43b" ${O}/><path d="M50 22 V64" ${O}/></svg>`,
+  allarme: `<svg viewBox="0 0 100 100"><rect x="28" y="6" width="44" height="88" rx="10" fill="#495057" ${O}/><rect x="34" y="16" width="32" height="62" rx="4" fill="#e03131" stroke="none"/><path d="M50 30 V52" stroke="#fff" stroke-width="8" stroke-linecap="round"/><circle cx="50" cy="64" r="5" fill="#fff"/></svg>`,
+  sito: `<svg viewBox="0 0 100 100"><rect x="8" y="16" width="84" height="68" rx="10" fill="#fff" ${O}/><path d="M8 34 H92" ${O}/><circle cx="20" cy="25" r="3" fill="${INK}"/><circle cx="30" cy="25" r="3" fill="${INK}"/><rect x="18" y="44" width="40" height="9" rx="4" fill="#4dabf7"/><rect x="18" y="60" width="64" height="7" rx="3" fill="#ced4da"/><rect x="18" y="72" width="50" height="7" rx="3" fill="#ced4da"/></svg>`
+};
+const BOLLO_NO = `<svg class="bollo" viewBox="-45 -45 90 90">${DIVIETO("", 0, 0, 34)}</svg>`;
+const BOLLO_SI = `<svg class="bollo" viewBox="-45 -45 90 90">${SPUNTA("", 0, 0, 36)}</svg>`;
+const tile = (ico, testo, bollo = BOLLO_NO) => `<div class="tile">${ICONE[ico]}<span>${testo}</span>${bollo}</div>`;
+const S0 = `viewBox="0 0 600 510" preserveAspectRatio="xMidYMid slice"`;
+const INTERNO = n => ICONE[n].replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "");
+Object.assign(ICONE, {
+  fuoco: `<svg viewBox="0 0 100 100"><path d="M50 8 C62 30 82 40 80 64 C78 84 64 94 50 94 C34 94 20 84 20 64 C20 48 32 40 36 26 C42 36 44 42 50 44 C52 30 50 20 50 8Z" fill="#ff922b" ${O}/><path d="M50 52 C58 62 64 68 62 78 C60 88 40 88 38 78 C36 68 46 64 50 52Z" fill="#ffd43b" ${O}/></svg>`,
+  incidente: `<svg viewBox="0 0 100 100"><path d="M10 66 V50 L22 30 H66 L82 50 H90 V66Z" fill="#4dabf7" ${O}/><path d="M28 34 H62 L72 48 H22Z" fill="#d0ebff" ${O}/><circle cx="28" cy="68" r="11" fill="#495057" ${O}/><circle cx="72" cy="68" r="11" fill="#495057" ${O}/><path d="M78 14 L84 26 L94 20 L88 32" stroke="#e03131" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  pericolo: `<svg viewBox="0 0 100 100"><path d="M50 10 L92 86 H8Z" fill="#ffd43b" ${O}/><path d="M50 38 V60" stroke="${INK}" stroke-width="10" stroke-linecap="round"/><circle cx="50" cy="73" r="6" fill="${INK}"/></svg>`,
+  malore: `<svg viewBox="0 0 100 100"><rect x="14" y="58" width="58" height="20" rx="10" fill="#4dabf7" ${O}/><circle cx="80" cy="64" r="13" fill="#ffd8b1" ${O}/><path d="M28 30 a10 10 0 0 1 16 0 a10 10 0 0 1 16 0 C60 42 44 50 44 50 C44 50 28 42 28 30Z" fill="#e03131" ${O}/></svg>`,
+  fumetto: `<svg viewBox="0 0 100 100"><path d="M14 22 H86 V66 H44 L28 82 V66 H14Z" fill="#fff" ${O}/><path d="M28 36 H72 M28 50 H60" ${O}/></svg>`,
+  cerotto: `<svg viewBox="0 0 100 100"><rect x="10" y="34" width="80" height="32" rx="16" fill="#ffc078" transform="rotate(-30 50 50)" ${O}/><rect x="36" y="38" width="28" height="24" rx="4" fill="#fff4e6" transform="rotate(-30 50 50)" ${O}/></svg>`,
+  casco: `<svg viewBox="0 0 100 100"><path d="M16 64 C16 34 30 22 50 22 C70 22 84 34 84 64Z" fill="#e03131" ${O}/><rect x="8" y="62" width="84" height="14" rx="7" fill="#e03131" ${O}/><path d="M50 22 V62" ${O}/><rect x="40" y="34" width="20" height="12" rx="3" fill="#ffd43b" ${O}/></svg>`,
+  distintivo: `<svg viewBox="0 0 100 100"><path d="M50 8 L84 20 V48 C84 70 68 84 50 92 C32 84 16 70 16 48 V20Z" fill="#4263eb" ${O}/><path d="M50 30 L56 44 L71 45 L59 54 L63 69 L50 61 L37 69 L41 54 L29 45 L44 44Z" fill="#ffd43b" ${O}/></svg>`,
+  ambulanza: `<svg viewBox="0 0 100 100"><path d="M8 70 V30 H62 V40 H78 L92 56 V70Z" fill="#fff" ${O}/><path d="M8 52 H92" stroke="#4dabf7" stroke-width="8"/><rect x="68" y="44" width="14" height="10" fill="#a5d8ff" ${O}/><rect x="28" y="18" width="14" height="12" rx="3" fill="#4dabf7" ${O}/><circle cx="26" cy="72" r="10" fill="#495057" ${O}/><circle cx="74" cy="72" r="10" fill="#495057" ${O}/></svg>`,
+  gilet: `<svg viewBox="0 0 100 100"><path d="M30 12 L42 20 H58 L70 12 L88 30 L80 46 V90 H20 V46 L12 30Z" fill="#ffd43b" ${O}/><path d="M20 62 H80 M20 74 H80" stroke="#c9d4e2" stroke-width="7"/><rect x="40" y="20" width="20" height="70" fill="#1c4fa0" ${O}/></svg>`,
+  borraccia: `<svg viewBox="0 0 100 100"><rect x="38" y="6" width="24" height="12" rx="4" fill="#495057" ${O}/><rect x="28" y="16" width="44" height="78" rx="14" fill="#74c0fc" ${O}/><path d="M34 48 Q50 42 66 48 V84 Q50 90 34 84Z" fill="#d0ebff" stroke="none"/></svg>`,
+  cappello: `<svg viewBox="0 0 100 100"><ellipse cx="50" cy="66" rx="42" ry="12" fill="#ffd43b" ${O}/><path d="M28 64 C28 34 72 34 72 64Z" fill="#ffd43b" ${O}/><path d="M29 56 H71" stroke="#e03131" stroke-width="7"/></svg>`,
+  orologio: `<svg viewBox="0 0 100 100"><circle cx="50" cy="52" r="38" fill="#fff" ${O}/><path d="M50 52 V28 M50 52 L66 62" ${O} stroke-width="7"/><circle cx="50" cy="52" r="5" fill="${INK}"/></svg>`,
+  auto: `<svg viewBox="0 0 100 100"><path d="M8 68 V52 L22 32 H66 L84 52 H92 V68Z" fill="#ff8787" ${O}/><path d="M28 36 H62 L74 50 H22Z" fill="#d0ebff" ${O}/><circle cx="28" cy="70" r="11" fill="#495057" ${O}/><circle cx="72" cy="70" r="11" fill="#495057" ${O}/></svg>`,
+  anziano: `<svg viewBox="0 0 100 100"><circle cx="46" cy="28" r="15" fill="#ffd8b1" ${O}/><path d="M34 18 Q46 8 58 18" fill="none" stroke="#ced4da" stroke-width="7"/><rect x="30" y="46" width="32" height="44" rx="14" fill="#9775fa" ${O}/><path d="M74 50 V92 M74 50 Q74 42 66 44" fill="none" stroke="#a0703c" stroke-width="7" stroke-linecap="round"/></svg>`,
+  frutta: `<svg viewBox="0 0 100 100"><circle cx="38" cy="58" r="24" fill="#ff6b6b" ${O}/><path d="M38 34 Q42 22 52 20" fill="none" ${O}/><circle cx="68" cy="66" r="18" fill="#ffd43b" ${O}/><path d="M50 22 Q60 14 66 24 Q56 28 50 22Z" fill="#40c057" ${O}/></svg>`,
+  ombra: `<svg viewBox="0 0 100 100"><rect x="44" y="50" width="12" height="42" fill="#a0703c" ${O}/><circle cx="50" cy="38" r="30" fill="#40c057" ${O}/><ellipse cx="50" cy="92" rx="36" ry="6" fill="#adb5bd" stroke="none"/></svg>`,
+  cantina: `<svg viewBox="0 0 100 100"><rect x="14" y="24" width="72" height="66" rx="6" fill="#c08a4f" ${O}/><path d="M14 24 L50 8 L86 24" fill="none" ${O}/><rect x="36" y="50" width="28" height="40" rx="4" fill="#5c3d1e" ${O}/><path d="M42 36 H58" ${O}/></svg>`,
+  pozzo: `<svg viewBox="0 0 100 100"><ellipse cx="50" cy="54" rx="34" ry="12" fill="#495057" ${O}/><path d="M16 54 V82 Q50 96 84 82 V54" fill="#adb5bd" ${O}/><path d="M22 54 V18 H78 V54 M22 22 L50 12 L78 22" fill="none" ${O}/></svg>`,
+  fosso: `<svg viewBox="0 0 100 100"><path d="M6 40 H30 Q50 86 70 40 H94 V90 H6Z" fill="#a0703c" ${O}/><path d="M34 50 Q50 72 66 50" fill="#74c0fc" opacity=".6"/><path d="M6 40 H30 M70 40 H94" stroke="#40c057" stroke-width="10"/></svg>`,
+  gps: `<svg viewBox="0 0 100 100"><path d="M50 40 V90 M34 90 H66" ${O}/><path d="M26 34 a24 24 0 0 1 48 0Z" fill="#ced4da" ${O}/><path d="M18 20 a40 40 0 0 1 14 -10 M82 20 a40 40 0 0 0 -14 -10" fill="none" stroke="#4dabf7" stroke-width="6" stroke-linecap="round"/></svg>`,
+  famiglia: `<svg viewBox="0 0 100 100"><circle cx="28" cy="30" r="12" fill="#ffd8b1" ${O}/><rect x="15" y="46" width="26" height="40" rx="12" fill="#9775fa" ${O}/><circle cx="72" cy="30" r="12" fill="#ffd8b1" ${O}/><rect x="59" y="46" width="26" height="40" rx="12" fill="#40c057" ${O}/><circle cx="50" cy="52" r="9" fill="#ffd8b1" ${O}/><rect x="40" y="64" width="20" height="24" rx="9" fill="#ff922b" ${O}/></svg>`
+});
+const ICOSVG = (n, x, y, s = 1, cls = "") => `<g class="${cls}" transform="translate(${x} ${y}) scale(${s})"><g transform="translate(-50 -50)">${INTERNO(n)}</g></g>`;
+const POP = (cls, x, y, inner) => `<g class="${cls}" transform="translate(${x} ${y})"><g>${inner}</g></g>`;
+
+/* ===================== DISEGNI (originali, stile pennarello) ===================== */
+const COLLI = (zz = "") => `<path d="M-10 330 Q120 150 300 120 Q480 150 610 330 V520 H-10Z" fill="#8ce99a" ${O}/>
+  <ellipse cx="210" cy="250" rx="62" ry="22" fill="#4dabf7" ${O}/><ellipse cx="380" cy="268" rx="48" ry="17" fill="#4dabf7" ${O}/>
+  <g fill="#c9d4e2" ${O}>${[[120, 360], [175, 390], [450, 372], [500, 398]].map(([x, y]) => `<rect x="${x}" y="${y}" width="40" height="34"/><path d="M${x - 4} ${y} L${x + 20} ${y - 18} L${x + 44} ${y}Z" fill="#fa5252"/>`).join("")}</g>${zz}`;
+const ZZ = `<g class="zz" font-family="Titillium Web" font-weight="900" fill="#4263eb" stroke="${INK}" stroke-width="2"><text class="z0" font-size="40">Z</text><text class="z1" font-size="30">Z</text><text class="z2" font-size="22">Z</text></g>`;
+const ILL = {
+  vulcano: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(30, 30, .55)}${NUVOLA(420, 20, .5)}${COLLI(ZZ)}
+    <text x="210" y="300" text-anchor="middle" font-family="Titillium Web" font-weight="800" font-size="20" fill="${INK}">Albano</text>
+    <text x="380" y="312" text-anchor="middle" font-family="Titillium Web" font-weight="800" font-size="20" fill="${INK}">Nemi</text>${PG("flavio")}</svg>`,
+  dorme: () => `<svg ${S0}><rect width="600" height="510" fill="#e7f5ff"/>${COLLI(ZZ)}
+    <g class="tempo"><g><rect x="-150" y="-50" width="300" height="100" rx="26" fill="#fff" ${O}/>
+      <text x="0" y="-6" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="44" fill="#e8590c" stroke="${INK}" stroke-width="2">36.000</text>
+      <text x="0" y="30" text-anchor="middle" font-family="Titillium Web" font-weight="800" font-size="24" fill="${INK}">anni fa, circa</text></g></g></svg>`,
+  sorveglia: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${COLLI()}
+    <g class="sat" ${O}><rect x="-24" y="-18" width="48" height="36" rx="6" fill="#ced4da"/><rect x="-80" y="-12" width="50" height="24" fill="#4dabf7"/><rect x="30" y="-12" width="50" height="24" fill="#4dabf7"/></g>
+    ${ICOSVG("gps", 140, 190, .9)}<g class="seg" fill="none" stroke="#e8590c" stroke-width="5" stroke-dasharray="10 12" stroke-linecap="round"><path d="M150 140 L300 70"/><path d="M455 200 L330 80"/></g>
+    <g ${O}><rect x="420" y="190" width="70" height="70" rx="12" fill="#fff"/><path class="ago" d="M455 245 L455 210" stroke="#e03131" stroke-width="6"/></g>
+    <text x="455" y="282" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="22" fill="${INK}">GAS</text>
+    ${PG("ricerc", { tipo: "adulto", maglia: "#fff", pantaloni: "#495057", capelli: "#5c3d1e" })}</svg>`,
+  gas: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${PRATO(210, "#8ce99a")}
+    <rect x="60" y="230" width="480" height="280" fill="#c9a27a" ${O}/>
+    <rect x="120" y="270" width="360" height="220" rx="10" fill="#e9d5bf" ${O}/>
+    <path d="M140 270 L210 270 L160 340 M230 270 H300" fill="none" ${O}/>
+    <rect class="co2" x="124" y="420" width="352" height="66" fill="#74c0fc" opacity=".55"/>
+    <g class="bolle">${Array.from({ length: 9 }, (_, i) => `<circle data-i="${i}" r="${6 + (i % 3) * 3}" fill="#a5d8ff" stroke="${INK}" stroke-width="3"/>`).join("")}</g>
+    <text x="300" y="462" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="34" fill="${INK}">CO₂</text>
+    ${PG("flavio")}</svg>`,
+  aria: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(380, 30, .5)}${PRATO(440)}
+    <g ${O}><rect x="40" y="170" width="260" height="270" fill="#e9d5bf"/><path d="M30 176 L170 90 L310 176Z" fill="#fa5252"/>
+      <rect class="porta" x="120" y="300" width="90" height="140" fill="#5c3d1e"/></g>
+    <g class="vento" fill="none" stroke="#4dabf7" stroke-width="7" stroke-linecap="round">${[0, 1, 2].map(i => `<path data-i="${i}" d="M0 0 q20 -14 40 0 t40 0"/>`).join("")}</g>
+    ${ICOSVG("pozzo", 470, 360, 1.2)}${DIVIETO("np", 470, 360, 62)}${PG("flavio")}</svg>`,
+  soccorso: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(380, 30, .5)}${PRATO(440)}
+    <g ${O}><rect x="30" y="200" width="210" height="240" fill="#c9a27a"/><rect x="80" y="300" width="110" height="140" fill="#343a40"/></g>
+    ${DIVIETO("np", 135, 360, 62)}
+    <g class="vvf">${ICOSVG("casco", 470, 140, .9)}</g>
+    ${PG("flavio")}<g class="cell"><rect x="-16" y="-30" width="32" height="56" rx="7" fill="#495057" ${O}/></g>
+    <g class="fum"><g><rect x="-58" y="-28" width="116" height="56" rx="24" fill="#fff" ${O}/><text x="0" y="14" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="36" fill="#e03131">112</text></g></g></svg>`,
+  sereno: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(40, 40, .6)}${SOLE(500, 90, 44)}${COLLI()}
+    ${PG("flavio")}${PG("silvia", { tipo: "silvia", maglia: "#9775fa", pantaloni: "#f783ac", capelli: "#3b2412" })}</svg>`
+};
+
+
+/* ===================== SFONDO: nuvole e colline ===================== */
+const W = L.W, H = L.H;
+$("#fondo").setAttribute("viewBox", `0 0 ${W} ${H}`);
+$("#fondo").innerHTML = `${[0, 1, 2, 3].map(i => `<g class="nuv" data-i="${i}">${NUVOLA(0, 0, .9 + hash(i + 2) * .6)}</g>`).join("")}
+  <path d="M0 ${H - 120} Q${W * .25} ${H - 190} ${W * .5} ${H - 130} T${W} ${H - 150} V${H} H0Z" fill="#8ce99a" stroke="${INK}" stroke-width="5"/>
+  <path d="M0 ${H - 70} Q${W * .3} ${H - 120} ${W * .62} ${H - 70} T${W} ${H - 80} V${H} H0Z" fill="#69db7c" stroke="${INK}" stroke-width="5"/>`;
+function sfondo(t) {
+  document.querySelectorAll("#fondo .nuv").forEach(g => {
+    const i = +g.dataset.i, v = 18 + hash(i) * 22, span = W + 400;
+    const x = ((hash(i + 9) * span + t * v) % span) - 260, y = 40 + hash(i + 5) * (H * .32);
+    g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+  });
+}
+/* coriandoli del finale */
+const COLORI = ["#ffd43b", "#4dabf7", "#ff922b", "#40c057", "#9775fa", "#e03131", "#f783ac"];
+$("#coriandoli").setAttribute("viewBox", `0 0 ${W} ${H}`);
+$("#coriandoli").innerHTML = Array.from({ length: 90 }, (_, i) =>
+  `<rect data-i="${i}" width="${14 + hash(i) * 12}" height="${8 + hash(i + 1) * 8}" rx="3" fill="${COLORI[i % COLORI.length]}" stroke="${INK}" stroke-width="2" opacity="0"/>`).join("");
+function coriandoli(u, attivo) {
+  document.querySelectorAll("#coriandoli rect").forEach(r => {
+    const i = +r.dataset.i, p = u - hash(i + 3) * 1.6;
+    if (!attivo || p < 0) { r.setAttribute("opacity", 0); return; }
+    const x = hash(i + 7) * W + Math.sin(p * 2 + i) * 40, y = ((p * (220 + hash(i + 4) * 180) + hash(i + 11) * 300) % (H + 120)) - 60;
+    r.setAttribute("opacity", 1);
+    r.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(p * (200 + hash(i) * 300)).toFixed(1)})`);
+  });
+}
+
+/* ===================== SCENE ===================== */
+const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 : s.dur;
+const START = []; let acc = 0;
+CONFIG.scene.forEach((s, k) => { START[k] = acc; acc += durScena(s, k); });
+const TOTAL = acc;
+const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
+const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
+  { da: +VOICE_AT[k].toFixed(3), a: +(VOICE_AT[k] + DUR[k] + 0.2).toFixed(3), testo: s.sottotitolo }).filter(Boolean);
+const TINTE = ["#ffd43b", "#4dabf7", "#ff922b", "#40c057", "#9775fa", "#f783ac", "#ffd43b", "#4dabf7", "#ff922b"];
+
+const box = $("#scene"), NODI = [];
+const righe = arr => `<h1>${arr.map(r => `<span class="l">${r}</span>`).join("")}</h1>`;
+CONFIG.scene.forEach((s, k) => {
+  const el = document.createElement("section");
+  el.className = "scena" + (s.finale ? " fin" : ""); el.style.opacity = 0;
+  el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
+  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t], j) => `<li><span class="ico" style="background:${TINTE[j + 2]}33">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
+  const ill = ILL[s.ill]();
+  el.innerHTML = `<div class="ill">${ill.startsWith("<svg") ? `<div class="carta">${ill}</div>` : ill}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
+    ${s.sotto ? `<p class="sotto">${s.sotto}</p>` : ""}${lista}${s.nota ? `<p class="nota">${s.nota}</p>` : ""}
+    ${s.grande ? `<div class="grande">${s.grande}</div>` : ""}${s.fonte ? `<p class="fonte">${s.fonte}</p>` : ""}</div>`;
+  if (L.illk < .5 && s.lista) el.querySelector(".ill").style.display = "none";
+  box.appendChild(el); NODI.push(el);
+});
+const dots = $("#hud .dots");
+CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
+$("#hud .lab").textContent = CONFIG.hud;
+
+const pop = (el, sel, p) => { const g = el.querySelector(sel); if (g) svgPop(g.querySelector(":scope > g") || g, p); };
+function zz(el, t, x, y) {
+  el.querySelectorAll(".zz text").forEach((z, i) => { const q = (t * .5 + i * .33) % 1;
+    z.setAttribute("x", (x + i * 26 + Math.sin(q * 6) * 8).toFixed(1)); z.setAttribute("y", (y - q * 90).toFixed(1)); z.setAttribute("opacity", (Math.sin(q * Math.PI)).toFixed(2)); });
+}
+function alTelefono(el, sel, x, y, s, t) {
+  el.querySelector(sel).setAttribute("transform", `translate(${(x + 46 * s).toFixed(1)} ${(y - 222 * s + Math.sin(t * 3.2) * 3).toFixed(1)}) scale(${s.toFixed(2)}) rotate(18)`);
+}
+const ANIM = {
+  vulcano: (el, u, t) => { zz(el, t, 290, 130); anima(el, ".flavio", t, { x: 520, y: 492, s: .5, aS: 120, aD: 14 }); },
+  dorme: (el, u, t) => { zz(el, t, 290, 130); const g = el.querySelector(".tempo"); g.setAttribute("transform", `translate(300 ${(420 + Math.sin(t * 2) * 5).toFixed(1)})`); svgPop(g.firstElementChild, prog(u, 1.4, 1)); },
+  sorveglia: (el, u, t) => {
+    el.querySelector(".sat").setAttribute("transform", `translate(${(300 + Math.sin(t * .8) * 30).toFixed(1)} ${(64 + Math.sin(t * 1.6) * 6).toFixed(1)}) rotate(${(Math.sin(t) * 6).toFixed(1)})`);
+    el.querySelector(".seg").setAttribute("stroke-dashoffset", (-t * 50).toFixed(1));
+    el.querySelector(".ago").setAttribute("transform", `rotate(${(Math.sin(t * 2.3) * 40).toFixed(1)} 455 245)`);
+    anima(el, ".ricerc", t, { x: 330, y: 470, s: .55, aD: 100, aS: 14 });
+  },
+  gas: (el, u, t) => {
+    const liv = prog(u, .6, 3.4); el.querySelector(".co2").setAttribute("opacity", (.15 + .5 * liv).toFixed(2));
+    el.querySelectorAll(".bolle circle").forEach(c => { const i = +c.dataset.i, q = (t * .35 + hash(i) ) % 1;
+      c.setAttribute("cx", (150 + hash(i + 3) * 300 + Math.sin(q * 8 + i) * 10).toFixed(1)); c.setAttribute("cy", (500 - q * 70).toFixed(1)); c.setAttribute("opacity", (liv * Math.sin(q * Math.PI)).toFixed(2)); });
+    anima(el, ".flavio", t, { x: 520, y: 205, s: .4, aS: 14, aD: 100, bocca: "o" });
+  },
+  aria: (el, u, t) => {
+    const ap = outBack(prog(u, .8, .8)); const p = el.querySelector(".porta"); p.setAttribute("transform", `translate(${(120 * (1 - Math.cos(ap * .9))).toFixed(1)} 0) scale(${(1 - .7 * ap).toFixed(3)} 1)`); p.setAttribute("transform-origin", "120 0");
+    el.querySelectorAll(".vento path").forEach(v => { const i = +v.dataset.i, q = (t * .7 + i * .33) % 1;
+      v.setAttribute("transform", `translate(${(150 + q * 160).toFixed(1)} ${(330 + i * 34).toFixed(1)})`); v.setAttribute("opacity", (prog(u, 1.2, .5) * Math.sin(q * Math.PI)).toFixed(2)); });
+    pop(el, ".np", prog(u, 3.6, .8));
+    anima(el, ".flavio", t, { x: 340, y: 470, s: .5, aS: 14, aD: 60 });
+  },
+  soccorso: (el, u, t, D) => {
+    pop(el, ".np", prog(u, .8, .8));
+    const p = inOutCubic(prog(u, 1.4, 1.6)), mov = p > 0 && p < 1 ? 1 : 0, x = lerp(250, 360, p);
+    anima(el, ".flavio", t, { x, y: 470, s: .55, cammina: mov, aD: p >= 1 ? 165 : 20, aS: 14 });
+    alTelefono(el, ".cell", x, 470, .55, t); el.querySelector(".cell").style.opacity = prog(u, 3, .3);
+    const f = el.querySelector(".fum"); f.setAttribute("transform", `translate(${(x + 70).toFixed(1)} 180)`); svgPop(f.firstElementChild, prog(u, 3.2, .8));
+    const v = el.querySelector(".vvf"); v.setAttribute("transform", `translate(${lerp(140, 0, outCubic(prog(u, 4.4, 1.2))).toFixed(1)} 0)`); v.style.opacity = prog(u, 4.4, .3);
+  },
+  sereno: (el, u, t) => {
+    const s = el.querySelector(".sole"); s.setAttribute("transform", `translate(500 ${lerp(200, 90, outBack(prog(u, .1, 1.2))).toFixed(1)})`);
+    el.querySelector(".raggi").setAttribute("transform", `rotate(${(t * 25).toFixed(1)})`);
+    anima(el, ".flavio", t, { x: 250, y: 492, s: .5, aD: 150, agitaD: true });
+    anima(el, ".silvia", t, { x: 360, y: 492, s: .5, aS: 150, agitaS: true, fase: 2 });
+  }
+};
+
+
+/* ===================== RENDER(t) — unica fonte di verità ===================== */
+const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
+  NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
+  const el = NODI[k];
+  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .3, .3) : 1;
+  sfondo(t);
+
+  dots.querySelectorAll(".dot").forEach((d, i) => {
+    d.style.background = i < k ? "#74c0fc" : i === k ? TINTE[k] : "#d0dbe8";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.5, outElastic(prog(u, 0, .8))) : 1})`;
+  });
+
+  // transizione: cerchio colorato che parte dal pallino dell'HUD
+  const w = $("#wipe"), dp = dots.children[k];
+  if (k > 0 && u < .75) {
+    const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
+    w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
+    w.style.background = TINTE[k];
+    w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
+    w.style.opacity = 1 - prog(u, .3, .42);
+  } else w.style.opacity = 0;
+
+  const primo = k === 0;
+  const q = x => primo ? 1 : x;  // il primo fotogramma è già completo (anteprima)
+  el.querySelectorAll("h1 .l").forEach((l, j) => boing(l, q(prog(u, .25 + j * .18, 1)), 0));
+  el.querySelectorAll("h1 .a").forEach(a => a.style.setProperty("--hl", (q(outCubic(prog(u, 1.1, .7))) * 100).toFixed(1) + "%"));
+  const chip = el.querySelector(".chip"); boing(chip, q(prog(u, .1, .9)), -2);
+  el.querySelectorAll(".sotto").forEach((p, j) => salta(p, primo ? 1 : prog(u, .9 + j * .3, .6), 40));
+  el.querySelectorAll(".lista li").forEach((li, j) => {
+    const pp = prog(u, s.listaAt ? s.listaAt[j] : 1 + j, .6);
+    li.style.opacity = clamp(pp * 3); li.style.transform = `translateX(${((1 - outBack(pp)) * -80).toFixed(1)}px)`;
+    const ic = li.querySelector(".ico"); ic.style.transform = `rotate(${((1 - outElastic(pp)) * -180).toFixed(1)}deg) scale(${(.4 + .6 * outElastic(pp)).toFixed(3)})`;
+  });
+  el.querySelectorAll(".tile").forEach((ti, j) => boing(ti, prog(u, .5 + j * .5, 1), j % 2 ? 2 : -2));
+  el.querySelectorAll(".tile .bollo").forEach((b, j) => { const p = prog(u, 1 + j * .5, .7); b.style.opacity = p > 0 ? 1 : 0; b.style.transform = `scale(${lerp(2.2, 1, outBack(p)).toFixed(3)}) rotate(${lerp(-40, 0, outCubic(p)).toFixed(1)}deg)`; });
+  const nota = el.querySelector(".nota"); if (nota) salta(nota, prog(u, D * .55, .6), 30);
+  const g = el.querySelector(".grande"); if (g) { const p = prog(u, 1.2, 1); boing(g, p, 0); if (p >= 1) g.style.transform = `scale(${(1 + Math.sin(t * 5) * .04).toFixed(3)})`; }
+  const fo = el.querySelector(".fonte"); if (fo) salta(fo, prog(u, 1.9, .5), 16);
+  const ill = el.querySelector(".ill");
+  if (primo) { ill.style.opacity = 1; ill.style.transform = `rotate(${(Math.sin(t * 1.3) * .6).toFixed(2)}deg)`; }
+  else { const p = prog(u, .2, 1.1), e = outElastic(p); ill.style.opacity = clamp(p * 4);
+    ill.style.transform = `translateY(${((1 - e) * 60).toFixed(1)}px) scale(${lerp(.6, 1, e).toFixed(3)}) rotate(${(lerp(k % 2 ? 6 : -6, 0, e) + Math.sin(t * 1.3) * .6).toFixed(2)}deg)`; }
+  if (ANIM[s.ill]) ANIM[s.ill](el, u, t, D);
+  coriandoli(u, !!s.finale);
+
+  const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
+  else sub.style.opacity = 0;
+}
+
+/* ===================== AVVIO ===================== */
+window.TOTAL = TOTAL;
+window.VOICE_AT = VOICE_AT;
+window.SUBS = SUBS;
+window.POSTER_T = CONFIG.posterT;
+window.KEYFRAMES = [0, ...START.map((s, k) => +(s + durScena(CONFIG.scene[k], k) * .85).toFixed(2))];
+window.renderFrame = render;
+Promise.all(["400", "600", "700", "900"].map(p => document.fonts.load(`${p} 40px "Titillium Web"`))
+  .concat(["500", "700"].map(p => document.fonts.load(`${p} 20px "Roboto Mono"`))))
+  .then(() => document.fonts.ready).then(() => { render(0); window.__ready = true; if (!RENDER) anteprima(); });
+
+function anteprima() {
+  const fit = () => { const s = Math.min(innerWidth / L.W, (innerHeight - 50) / L.H);
+    stage.style.transform = `translate(-50%,calc(-50% - 20px)) scale(${s})`; };
+  fit(); addEventListener("resize", fit);
+  for (const f in FORMATI) {
+    const a = document.createElement("a"); a.href = `?fmt=${f}`; a.textContent = f.replace("x", ":");
+    if (f === FMT) a.setAttribute("aria-current", "true"); $("#ui").appendChild(a);
+  }
+  const au = AUDIO ? new Audio(AUDIO) : null;
+  let t0 = null, pausa = false, tp = 0;
+  const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL || (au && au.ended)) { if (au) { au.currentTime = 0; au.play(); } else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
+  stage.addEventListener("click", () => {
+    pausa = !pausa;
+    if (au) pausa ? au.pause() : au.play();
+    else if (pausa) tp = ora(); else t0 = performance.now() - tp * 1000;
+  });
+  if (au) { const b = $("#avvio"); b.style.display = "flex"; b.onclick = () => { b.style.display = "none"; parti(); }; }
+  else parti();
+}
+</script>
+</body>
+</html>

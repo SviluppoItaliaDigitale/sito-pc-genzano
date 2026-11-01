@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@@TITOLO — Protezione Civile Genzano di Roma</title>
+<style>
+/*FONTS*/
+/* Direzione: cartellone di classe disegnato a pennarello — cielo chiaro, prato, contorni blu inchiostro,
+   colori pieni da pastelli a cera, il bambino Flavio come protagonista di ogni scena. */
+:root{--ink:#0b3a66;--ink2:#2c5282;--acc:#c2410c;--giallo:#ffd43b;--arancio:#ff922b;--rosso:#e03131;
+  --verde:#40c057;--azzurro:#4dabf7;--viola:#9775fa;--cielo1:#9bd8ff;--cielo2:#e3f4ff}
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
+  background:linear-gradient(180deg,var(--cielo1) 0%,var(--cielo2) 70%);overflow:hidden;
+  font-family:'Titillium Web',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+body.render #stage{left:0;top:0;transform:none!important}
+#fondo,#coriandoli{position:absolute;inset:0;width:100%;height:100%}
+#coriandoli{pointer-events:none}
+.scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
+  top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(26px*var(--k))}
+.txt{display:flex;flex-direction:column;gap:calc(22px*var(--k))}
+.ill{height:calc(var(--illh)*1px);flex:none;display:flex;align-items:center;justify-content:center}
+.carta{width:100%;height:100%;border:6px solid var(--ink);border-radius:40px;overflow:hidden;background:#fff;
+  box-shadow:12px 12px 0 rgba(11,58,102,.22)}
+.carta svg{width:100%;height:100%;display:block}
+[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:70px}
+[data-fmt="16x9"] .ill{order:2;width:47%;height:640px}
+[data-fmt="16x9"] .txt{order:1;width:53%}
+[data-fmt="16x9"] .grande{font-size:150px}
+[data-fmt="16x9"] .scena.fin .txt{gap:12px}
+.chip{align-self:flex-start;font:800 calc(28px*var(--k)) 'Titillium Web',sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink);background:var(--giallo);border:4px solid var(--ink);border-radius:999px;
+  padding:.18em .9em;box-shadow:5px 5px 0 rgba(11,58,102,.22)}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.04;letter-spacing:-.01em}
+h1 .l{display:block;transform-origin:0 80%}
+h1 .a{color:var(--acc);background:linear-gradient(#ffe066,#ffe066) no-repeat 0 88%/var(--hl,0%) 34%;padding:0 .06em}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--ink2);margin:0}
+.sotto b{color:var(--ink)}
+.lista{display:flex;flex-direction:column;gap:calc(18px*var(--k));margin:0;padding:0;list-style:none}
+.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:700;font-size:calc(42px*var(--k));line-height:1.16}
+.lista .ico{flex:none;width:calc(84px*var(--k));height:calc(84px*var(--k));border-radius:50%;border:4px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;background:#fff}
+.lista .ico svg{width:70%;height:70%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(26px*var(--k));width:100%}
+.tile{position:relative;background:#fff;border:5px solid var(--ink);border-radius:32px;padding:calc(18px*var(--k));
+  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center;box-shadow:8px 8px 0 rgba(11,58,102,.2)}
+.tile svg{width:calc(140px*var(--k));height:calc(140px*var(--k))}
+.tile span{font-weight:800;font-size:calc(34px*var(--k));line-height:1.1}
+.tile .bollo{position:absolute;right:-14px;top:-14px;width:74px;height:74px}
+.nota{font:800 calc(32px*var(--k)) 'Titillium Web',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);margin:0}
+.nota b{color:var(--acc)}
+.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--rosso);-webkit-text-stroke:6px var(--ink);paint-order:stroke fill}
+.fonte{font:600 calc(24px*var(--k)) 'Titillium Web',sans-serif;color:var(--ink2);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:68px;display:flex;
+  align-items:center;gap:20px;padding:0 28px;border-radius:999px;background:#fff;border:4px solid var(--ink);
+  font:800 26px 'Titillium Web',sans-serif;letter-spacing:.12em;color:var(--ink)}
+#hud .dots{display:flex;gap:10px}
+#hud .dot{width:18px;height:18px;border-radius:50%;background:#d0dbe8;border:3px solid var(--ink)}
+#wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
+#sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);bottom:calc((var(--H) - var(--subb))*1px);
+  background:#fff;border:4px solid var(--ink);border-radius:24px;padding:14px 26px;color:var(--ink);
+  font-weight:700;font-size:calc(42px*var(--ks));line-height:1.22;text-align:center;opacity:0}
+#ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
+#ui a{color:#eef2f7;background:#1d2a40;border-radius:999px;padding:8px 14px;text-decoration:none}
+#ui a[aria-current]{background:#2e90fa;color:#0a1220}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer}
+body.render #ui,body.render #avvio{display:none!important}
+</style>
+</head>
+<body>
+<div id="stage" role="img" aria-label="">
+  <svg id="fondo" aria-hidden="true"></svg>
+  <svg id="coriandoli" aria-hidden="true"></svg>
+  <div id="scene"></div>
+  <div id="wipe"></div>
+  <div id="hud"><div class="dots"></div><span class="lab"></span></div>
+  <div id="sub" aria-hidden="true"></div>
+</div>
+<nav id="ui" aria-label="Formato"></nav>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
+<script>
+//@@CONFIG
+const DUR = /*DUR*/[];
+const AUDIO = /*AUDIO*/"";
+
+/* ===================== FORMATI e zone sicure ===================== */
+const FORMATI = {
+  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
+  "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
+  "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
+  "16x9": { W:1920, H:1080, hx:120, hy:48,  side:130, top:150, bot:900,  subb:1046, t:108, k:.95, ks:.9,  illk:1   }
+};
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.get("render") === "1";
+const FMT = FORMATI[Q.get("fmt")] ? Q.get("fmt") : "9x16";
+const L = FORMATI[FMT];
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.dataset.fmt = FMT;
+for (const k of ["W","H","side","top","bot","subb","hx","hy","t","k","ks"]) stage.style.setProperty("--" + k, L[k]);
+if (RENDER) document.body.classList.add("render");
+stage.setAttribute("aria-label", CONFIG.titolo);
+
+/* ===================== AIUTANTI (deterministici) ===================== */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outQuart = x => 1 - Math.pow(1 - x, 4);
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => { const c = 2.2, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const outElastic = x => x <= 0 ? 0 : x >= 1 ? 1 : Math.pow(2, -10 * x) * Math.sin((x * 10 - .75) * (2 * Math.PI / 3)) + 1;
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+const lerp = (a, b, x) => a + (b - a) * x;
+const INK = "#0b3a66";
+/* boing: entra rimbalzando (scala + piccola rotazione) */
+function boing(el, p, rot = 0) {
+  const e = p <= 0 ? 0 : outElastic(p);
+  el.style.opacity = clamp(p * 4);
+  el.style.transform = `scale(${lerp(.3, 1, e).toFixed(3)}) rotate(${(lerp(rot - 8, rot, e)).toFixed(2)}deg)`;
+}
+function salta(el, p, d = 60) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `translateY(${((1 - e) * d).toFixed(1)}px)`; }
+function svgPop(g, p, cx = "50%", cy = "50%") {
+  g.style.transformBox = "fill-box"; g.style.transformOrigin = `${cx} ${cy}`;
+  const e = p <= 0 ? 0 : outElastic(p); g.style.opacity = p > 0 ? 1 : 0; g.style.transform = `scale(${e.toFixed(3)})`;
+}
+
+/* ===================== PERSONAGGI (originali, stile pennarello) ===================== */
+/* Origine ai piedi. Altezza ~280 a scala 1. tipo: flavio | silvia | elio | adulta | adulto */
+function PG(cls, o = {}) {
+  const c = Object.assign({ maglia: "#ff922b", pantaloni: "#4dabf7", pelle: "#ffd8b1", capelli: "#8b5a2b", tipo: "flavio" }, o);
+  const adulto = c.tipo === "adulta" || c.tipo === "adulto";
+  const gamba = adulto ? 96 : 76;
+  const capelli = {
+    flavio: `<path d="M-56 -14 Q-60 -64 -6 -62 Q46 -66 56 -16 Q36 -40 4 -36 Q-26 -44 -56 -14Z" fill="${c.capelli}"/><path d="M-6 -62 Q4 -80 18 -70" fill="none" stroke="${c.capelli}" stroke-width="9"/>`,
+    silvia: `<circle cx="-62" cy="-4" r="20" fill="${c.capelli}"/><circle cx="62" cy="-4" r="20" fill="${c.capelli}"/><path d="M-56 -10 Q-58 -64 0 -62 Q58 -64 56 -10 Q30 -36 0 -30 Q-30 -36 -56 -10Z" fill="${c.capelli}"/>`,
+    elio: `<path d="M-54 -20 Q-50 -62 0 -60 Q50 -62 54 -20 Q20 -44 -54 -20Z" fill="${c.capelli}"/>`,
+    adulta: `<circle cx="0" cy="-66" r="22" fill="${c.capelli}"/><path d="M-58 4 Q-62 -64 0 -60 Q62 -64 58 4 Q50 -32 0 -34 Q-50 -32 -58 4Z" fill="${c.capelli}"/>`,
+    adulto: `<path d="M-54 -22 Q-48 -62 0 -60 Q48 -62 54 -22 Q10 -40 -54 -22Z" fill="${c.capelli}"/>`
+  }[c.tipo];
+  const busto = adulto ? `<rect x="-42" y="-${gamba + 112}" width="84" height="118" rx="30" fill="${c.maglia}"/>` :
+    `<rect x="-38" y="-${gamba + 94}" width="76" height="100" rx="30" fill="${c.maglia}"/>`;
+  const spalla = adulto ? gamba + 96 : gamba + 78, testaY = adulto ? gamba + 172 : gamba + 146;
+  const braccio = (lato) => `<g class="brac${lato}" transform="translate(${lato === "S" ? -34 : 34} -${spalla})"><g class="r">
+      <path d="M0 0 L0 ${adulto ? 74 : 62}" stroke="${c.maglia}" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="0" cy="${adulto ? 80 : 68}" r="12" fill="${c.pelle}"/></g></g>`;
+  const gambe = lato => `<g class="gamba${lato}" transform="translate(${lato === "S" ? -16 : 16} -${gamba})"><g class="r">
+      <rect x="-12" y="0" width="24" height="${gamba}" rx="11" fill="${c.pantaloni}"/><ellipse cx="${lato === "S" ? -4 : 4}" cy="${gamba - 2}" rx="20" ry="10" fill="#495057"/></g></g>`;
+  return `<g class="${cls} pg" stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><g class="corpo">
+    ${gambe("S")}${gambe("D")}${braccio("S")}${busto}${braccio("D")}
+    <g class="testa" transform="translate(0 -${testaY})"><circle r="${adulto ? 56 : 60}" fill="${c.pelle}"/>${capelli}
+      <g class="occhi"><ellipse cx="-21" cy="2" rx="7" ry="10" fill="${INK}" stroke="none"/><ellipse cx="21" cy="2" rx="7" ry="10" fill="${INK}" stroke="none"/>
+        <circle cx="-19" cy="-2" r="2.6" fill="#fff" stroke="none"/><circle cx="23" cy="-2" r="2.6" fill="#fff" stroke="none"/></g>
+      <circle cx="-36" cy="22" r="10" fill="#ff8787" opacity=".55" stroke="none"/><circle cx="36" cy="22" r="10" fill="#ff8787" opacity=".55" stroke="none"/>
+      <path class="bocca sorriso" d="M-18 22 Q0 40 18 22" fill="none"/>
+      <ellipse class="bocca o" cx="0" cy="30" rx="9" ry="11" fill="#c92a2a" opacity="0"/></g></g></g>`;
+}
+/* muove un personaggio: posizione, respiro, braccia, camminata, occhi che sbattono, bocca */
+function anima(root, sel, t, o) {
+  const g = typeof sel === "string" ? root.querySelector(sel) : sel; if (!g) return;
+  const s = o.s ?? 1, fase = o.fase ?? 0, cam = o.cammina ?? 0;
+  const bob = (o.bob ?? 1) * Math.sin(t * 3.2 + fase) * 3 + cam * Math.abs(Math.sin(t * 9 + fase)) * -7;
+  g.setAttribute("transform", `translate(${(+o.x).toFixed(1)} ${(o.y + bob).toFixed(1)}) scale(${o.flip ? -s : s} ${(s * (o.schiaccia ?? 1)).toFixed(3)})`);
+  const aS = (o.aS ?? 12) + (o.agitaS ? Math.sin(t * 10 + fase) * 18 : 0), aD = (o.aD ?? 12) + (o.agitaD ? Math.sin(t * 10 + fase) * 18 : 0);
+  g.querySelector(".bracS .r").setAttribute("transform", `rotate(${aS.toFixed(1)})`);
+  g.querySelector(".bracD .r").setAttribute("transform", `rotate(${(-aD).toFixed(1)})`);
+  const gm = Math.sin(t * 9 + fase) * 22 * cam;
+  g.querySelector(".gambaS .r").setAttribute("transform", `rotate(${gm.toFixed(1)})`);
+  g.querySelector(".gambaD .r").setAttribute("transform", `rotate(${(-gm).toFixed(1)})`);
+  const bl = ((t + fase * .7) % 3.4) < .13 ? .12 : 1;
+  g.querySelector(".occhi").setAttribute("transform", `translate(0 2) scale(1 ${bl}) translate(0 -2)`);
+  const oo = o.bocca === "o";
+  g.querySelector(".bocca.sorriso").setAttribute("opacity", oo ? 0 : 1);
+  g.querySelector(".bocca.o").setAttribute("opacity", oo ? 1 : 0);
+}
+/* in ginocchio sotto il tavolo: un braccio protegge la testa, l'altra mano tiene la gamba del tavolo */
+function RANNICCHIATO(cls, o = {}) {
+  const c = Object.assign({ maglia: "#ff922b", pantaloni: "#4dabf7", pelle: "#ffd8b1", capelli: "#8b5a2b" }, o);
+  return `<g class="${cls}" stroke="${INK}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><g class="corpo">
+    <rect x="-78" y="-34" width="96" height="34" rx="16" fill="${c.pantaloni}"/><ellipse cx="-80" cy="-12" rx="14" ry="13" fill="#495057"/>
+    <rect x="-58" y="-86" width="42" height="70" rx="18" fill="${c.pantaloni}"/>
+    <rect x="-52" y="-150" width="72" height="98" rx="30" fill="${c.maglia}" transform="rotate(38 -16 -70)"/>
+    <path class="tiene" d="M8 -112 Q60 -112 98 -96" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle class="manoT" cx="100" cy="-95" r="12" fill="${c.pelle}"/>
+    <g class="testa" transform="translate(40 -118)"><circle r="50" fill="${c.pelle}"/>
+      <path d="M-46 -14 Q-44 -56 0 -52 Q40 -54 48 -14 Q30 -34 2 -30 Q-26 -36 -46 -14Z" fill="${c.capelli}"/>
+      <g class="occhi"><ellipse cx="2" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/><ellipse cx="30" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/></g>
+      <circle cx="40" cy="24" r="8" fill="#ff8787" opacity=".55" stroke="none"/>
+      <path class="bocca sorriso" d="M8 26 Q20 36 32 26" fill="none"/><ellipse class="bocca o" cx="20" cy="30" rx="7" ry="8" fill="#c92a2a" opacity="0"/></g>
+    <path d="M-2 -132 Q14 -186 52 -176 Q82 -168 84 -150" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle cx="84" cy="-148" r="12" fill="${c.pelle}"/>
+  </g></g>`;
+}
+/* elementi di contorno */
+const STELLA = (cls, x, y, r = 22, c = "#ffd43b") => { let d = ""; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; d += (i ? "L" : "M") + (x + Math.cos(a) * rr).toFixed(1) + " " + (y + Math.sin(a) * rr).toFixed(1); }
+  return `<path class="${cls}" d="${d}Z" fill="${c}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>`; };
+const SPUNTA = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#40c057" stroke="${INK}" stroke-width="5"/><path d="M${-r * .42} 0 L${-r * .1} ${r * .32} L${r * .45} ${-r * .3}" stroke="#fff" stroke-width="${r * .22}" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g>`;
+const DIVIETO = (cls, x, y, r = 34) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="${r}" fill="#fff" stroke="#e03131" stroke-width="${r * .26}"/><path d="M${-r * .66} ${r * .66} L${r * .66} ${-r * .66}" stroke="#e03131" stroke-width="${r * .26}"/><circle r="${r * 1.13}" fill="none" stroke="${INK}" stroke-width="4"/></g></g>`;
+const NUVOLA = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 40 Q-4 10 26 12 Q34 -14 64 -4 Q84 -22 106 0 Q132 2 128 30 Q140 44 120 52 H8 Q-10 52 0 40Z" fill="#fff" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/></g>`;
+const SOLE = (x, y, r = 46) => `<g class="sole" transform="translate(${x} ${y})"><g class="raggi">${Array.from({ length: 10 }, (_, i) => `<path d="M0 ${-r - 12} L0 ${-r - 30}" stroke="#f59f00" stroke-width="9" stroke-linecap="round" transform="rotate(${i * 36})"/>`).join("")}</g>
+  <circle r="${r}" fill="#ffd43b" stroke="${INK}" stroke-width="5"/><ellipse cx="-14" cy="-6" rx="5" ry="7" fill="${INK}"/><ellipse cx="14" cy="-6" rx="5" ry="7" fill="${INK}"/>
+  <path d="M-16 12 Q0 26 16 12" stroke="${INK}" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="-26" cy="10" r="7" fill="#ff8787" opacity=".6"/><circle cx="26" cy="10" r="7" fill="#ff8787" opacity=".6"/></g>`;
+const PRATO = (y = 430, c = "#69db7c") => `<path d="M-10 ${y} Q150 ${y - 26} 300 ${y} T610 ${y} V530 H-10Z" fill="${c}" stroke="${INK}" stroke-width="5"/>`;
+const STANZA = `<rect width="600" height="510" fill="#fff4d6"/><rect y="420" width="600" height="90" fill="#e9b872" stroke="${INK}" stroke-width="5"/>
+  <path d="M0 448 H600 M0 478 H600" stroke="#c98c48" stroke-width="3"/>`;
+
+//@@DISEGNI
+
+/* ===================== SFONDO: nuvole e colline ===================== */
+const W = L.W, H = L.H;
+$("#fondo").setAttribute("viewBox", `0 0 ${W} ${H}`);
+$("#fondo").innerHTML = `${[0, 1, 2, 3].map(i => `<g class="nuv" data-i="${i}">${NUVOLA(0, 0, .9 + hash(i + 2) * .6)}</g>`).join("")}
+  <path d="M0 ${H - 120} Q${W * .25} ${H - 190} ${W * .5} ${H - 130} T${W} ${H - 150} V${H} H0Z" fill="#8ce99a" stroke="${INK}" stroke-width="5"/>
+  <path d="M0 ${H - 70} Q${W * .3} ${H - 120} ${W * .62} ${H - 70} T${W} ${H - 80} V${H} H0Z" fill="#69db7c" stroke="${INK}" stroke-width="5"/>`;
+function sfondo(t) {
+  document.querySelectorAll("#fondo .nuv").forEach(g => {
+    const i = +g.dataset.i, v = 18 + hash(i) * 22, span = W + 400;
+    const x = ((hash(i + 9) * span + t * v) % span) - 260, y = 40 + hash(i + 5) * (H * .32);
+    g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)})`);
+  });
+}
+/* coriandoli del finale */
+const COLORI = ["#ffd43b", "#4dabf7", "#ff922b", "#40c057", "#9775fa", "#e03131", "#f783ac"];
+$("#coriandoli").setAttribute("viewBox", `0 0 ${W} ${H}`);
+$("#coriandoli").innerHTML = Array.from({ length: 90 }, (_, i) =>
+  `<rect data-i="${i}" width="${14 + hash(i) * 12}" height="${8 + hash(i + 1) * 8}" rx="3" fill="${COLORI[i % COLORI.length]}" stroke="${INK}" stroke-width="2" opacity="0"/>`).join("");
+function coriandoli(u, attivo) {
+  document.querySelectorAll("#coriandoli rect").forEach(r => {
+    const i = +r.dataset.i, p = u - hash(i + 3) * 1.6;
+    if (!attivo || p < 0) { r.setAttribute("opacity", 0); return; }
+    const x = hash(i + 7) * W + Math.sin(p * 2 + i) * 40, y = ((p * (220 + hash(i + 4) * 180) + hash(i + 11) * 300) % (H + 120)) - 60;
+    r.setAttribute("opacity", 1);
+    r.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(p * (200 + hash(i) * 300)).toFixed(1)})`);
+  });
+}
+
+/* ===================== SCENE ===================== */
+const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 : s.dur;
+const START = []; let acc = 0;
+CONFIG.scene.forEach((s, k) => { START[k] = acc; acc += durScena(s, k); });
+const TOTAL = acc;
+const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
+const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
+  { da: +VOICE_AT[k].toFixed(3), a: +(VOICE_AT[k] + DUR[k] + 0.2).toFixed(3), testo: s.sottotitolo }).filter(Boolean);
+const TINTE = ["#ffd43b", "#4dabf7", "#ff922b", "#40c057", "#9775fa", "#f783ac", "#ffd43b", "#4dabf7", "#ff922b"];
+
+const box = $("#scene"), NODI = [];
+const righe = arr => `<h1>${arr.map(r => `<span class="l">${r}</span>`).join("")}</h1>`;
+CONFIG.scene.forEach((s, k) => {
+  const el = document.createElement("section");
+  el.className = "scena" + (s.finale ? " fin" : ""); el.style.opacity = 0;
+  el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
+  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t], j) => `<li><span class="ico" style="background:${TINTE[j + 2]}33">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
+  const ill = ILL[s.ill]();
+  el.innerHTML = `<div class="ill">${ill.startsWith("<svg") ? `<div class="carta">${ill}</div>` : ill}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
+    ${s.sotto ? `<p class="sotto">${s.sotto}</p>` : ""}${lista}${s.nota ? `<p class="nota">${s.nota}</p>` : ""}
+    ${s.grande ? `<div class="grande">${s.grande}</div>` : ""}${s.fonte ? `<p class="fonte">${s.fonte}</p>` : ""}</div>`;
+  if (L.illk < .5 && s.lista) el.querySelector(".ill").style.display = "none";
+  box.appendChild(el); NODI.push(el);
+});
+const dots = $("#hud .dots");
+CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
+$("#hud .lab").textContent = CONFIG.hud;
+
+//@@ANIM
+
+/* ===================== RENDER(t) — unica fonte di verità ===================== */
+const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
+  NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
+  const el = NODI[k];
+  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .3, .3) : 1;
+  sfondo(t);
+
+  dots.querySelectorAll(".dot").forEach((d, i) => {
+    d.style.background = i < k ? "#74c0fc" : i === k ? TINTE[k] : "#d0dbe8";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.5, outElastic(prog(u, 0, .8))) : 1})`;
+  });
+
+  // transizione: cerchio colorato che parte dal pallino dell'HUD
+  const w = $("#wipe"), dp = dots.children[k];
+  if (k > 0 && u < .75) {
+    const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
+    w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
+    w.style.background = TINTE[k];
+    w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
+    w.style.opacity = 1 - prog(u, .3, .42);
+  } else w.style.opacity = 0;
+
+  const primo = k === 0;
+  const q = x => primo ? 1 : x;  // il primo fotogramma è già completo (anteprima)
+  el.querySelectorAll("h1 .l").forEach((l, j) => boing(l, q(prog(u, .25 + j * .18, 1)), 0));
+  el.querySelectorAll("h1 .a").forEach(a => a.style.setProperty("--hl", (q(outCubic(prog(u, 1.1, .7))) * 100).toFixed(1) + "%"));
+  const chip = el.querySelector(".chip"); boing(chip, q(prog(u, .1, .9)), -2);
+  el.querySelectorAll(".sotto").forEach((p, j) => salta(p, primo ? 1 : prog(u, .9 + j * .3, .6), 40));
+  el.querySelectorAll(".lista li").forEach((li, j) => {
+    const pp = prog(u, s.listaAt ? s.listaAt[j] : 1 + j, .6);
+    li.style.opacity = clamp(pp * 3); li.style.transform = `translateX(${((1 - outBack(pp)) * -80).toFixed(1)}px)`;
+    const ic = li.querySelector(".ico"); ic.style.transform = `rotate(${((1 - outElastic(pp)) * -180).toFixed(1)}deg) scale(${(.4 + .6 * outElastic(pp)).toFixed(3)})`;
+  });
+  el.querySelectorAll(".tile").forEach((ti, j) => boing(ti, prog(u, .5 + j * .5, 1), j % 2 ? 2 : -2));
+  el.querySelectorAll(".tile .bollo").forEach((b, j) => { const p = prog(u, 1 + j * .5, .7); b.style.opacity = p > 0 ? 1 : 0; b.style.transform = `scale(${lerp(2.2, 1, outBack(p)).toFixed(3)}) rotate(${lerp(-40, 0, outCubic(p)).toFixed(1)}deg)`; });
+  const nota = el.querySelector(".nota"); if (nota) salta(nota, prog(u, D * .55, .6), 30);
+  const g = el.querySelector(".grande"); if (g) { const p = prog(u, 1.2, 1); boing(g, p, 0); if (p >= 1) g.style.transform = `scale(${(1 + Math.sin(t * 5) * .04).toFixed(3)})`; }
+  const fo = el.querySelector(".fonte"); if (fo) salta(fo, prog(u, 1.9, .5), 16);
+  const ill = el.querySelector(".ill");
+  if (primo) { ill.style.opacity = 1; ill.style.transform = `rotate(${(Math.sin(t * 1.3) * .6).toFixed(2)}deg)`; }
+  else { const p = prog(u, .2, 1.1), e = outElastic(p); ill.style.opacity = clamp(p * 4);
+    ill.style.transform = `translateY(${((1 - e) * 60).toFixed(1)}px) scale(${lerp(.6, 1, e).toFixed(3)}) rotate(${(lerp(k % 2 ? 6 : -6, 0, e) + Math.sin(t * 1.3) * .6).toFixed(2)}deg)`; }
+  if (ANIM[s.ill]) ANIM[s.ill](el, u, t, D);
+  coriandoli(u, !!s.finale);
+
+  const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
+  else sub.style.opacity = 0;
+}
+
+/* ===================== AVVIO ===================== */
+window.TOTAL = TOTAL;
+window.VOICE_AT = VOICE_AT;
+window.SUBS = SUBS;
+window.POSTER_T = CONFIG.posterT;
+window.KEYFRAMES = [0, ...START.map((s, k) => +(s + durScena(CONFIG.scene[k], k) * .85).toFixed(2))];
+window.renderFrame = render;
+Promise.all(["400", "600", "700", "900"].map(p => document.fonts.load(`${p} 40px "Titillium Web"`))
+  .concat(["500", "700"].map(p => document.fonts.load(`${p} 20px "Roboto Mono"`))))
+  .then(() => document.fonts.ready).then(() => { render(0); window.__ready = true; if (!RENDER) anteprima(); });
+
+function anteprima() {
+  const fit = () => { const s = Math.min(innerWidth / L.W, (innerHeight - 50) / L.H);
+    stage.style.transform = `translate(-50%,calc(-50% - 20px)) scale(${s})`; };
+  fit(); addEventListener("resize", fit);
+  for (const f in FORMATI) {
+    const a = document.createElement("a"); a.href = `?fmt=${f}`; a.textContent = f.replace("x", ":");
+    if (f === FMT) a.setAttribute("aria-current", "true"); $("#ui").appendChild(a);
+  }
+  const au = AUDIO ? new Audio(AUDIO) : null;
+  let t0 = null, pausa = false, tp = 0;
+  const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL || (au && au.ended)) { if (au) { au.currentTime = 0; au.play(); } else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
+  stage.addEventListener("click", () => {
+    pausa = !pausa;
+    if (au) pausa ? au.pause() : au.play();
+    else if (pausa) tp = ora(); else t0 = performance.now() - tp * 1000;
+  });
+  if (au) { const b = $("#avvio"); b.style.display = "flex"; b.onclick = () => { b.style.display = "none"; parti(); }; }
+  else parti();
+}
+</script>
+</body>
+</html>
