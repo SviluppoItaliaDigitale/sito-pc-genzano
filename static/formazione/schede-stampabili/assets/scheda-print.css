@@ -48,6 +48,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  /* bersaglio comodo col dito sulla lavagna interattiva (LIM) */
+  min-height: 44px;
 }
 .scheda-toolbar a:hover,
 .scheda-toolbar a:focus {

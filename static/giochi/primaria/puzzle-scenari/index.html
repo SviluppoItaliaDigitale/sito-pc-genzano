@@ -34,12 +34,13 @@
     .step-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); border-color: #008758; }
     .step-item.dragging { opacity: .5; }
     .step-item .move-btns {
-      display: flex; flex-direction: column; gap: 2px;
+      display: flex; flex-direction: column; gap: 6px;
     }
     .step-item .move-btns button {
-      width: 30px; height: 22px; border: 1px solid #008758; background: #fff;
-      color: #008758; border-radius: 4px; padding: 0; cursor: pointer;
-      font-size: .8rem; display: inline-flex; align-items: center; justify-content: center;
+      /* 44×36: bersaglio comodo col dito sulla LIM e sul tablet */
+      width: 44px; height: 36px; border: 2px solid #008758; background: #fff;
+      color: #008758; border-radius: 6px; padding: 0; cursor: pointer;
+      font-size: 1.1rem; display: inline-flex; align-items: center; justify-content: center;
     }
     .step-item .move-btns button:hover { background: #008758; color: #fff; }
     .step-item .num-pos {
@@ -96,7 +97,7 @@
               <span class="badge bg-primary">Scenario</span>
             </div>
             <p id="game-desc" class="text-muted small mb-3"></p>
-            <p class="mb-2 small"><i class="bi bi-info-circle me-1"></i> Riordina i passi con le frecce ▲ ▼ (o trascina con il mouse). Quando sei sicuro, clicca <strong>Verifica</strong>.</p>
+            <p class="mb-2 small"><i class="bi bi-info-circle me-1"></i> Riordina i passi toccando le frecce ▲ ▼ (o trascina con il mouse). Quando sei sicuro, clicca <strong>Verifica</strong>.</p>
             <ol id="step-list" class="step-list" aria-label="Passi da riordinare"></ol>
             <div id="feedback" class="feedback-msg hide" aria-live="polite"></div>
             <div class="text-center">

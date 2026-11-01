@@ -148,6 +148,8 @@ body:not(.chrome-loaded) > .app-content {
   color: var(--pc-primary, #003366);
   text-decoration: none;
   transition: all 0.2s ease;
+  /* bersaglio comodo col dito sulla lavagna interattiva (LIM) */
+  min-height: 44px;
 }
 .app-back-link:hover {
   color: #ff6600;
