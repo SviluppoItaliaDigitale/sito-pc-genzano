@@ -27,7 +27,8 @@
     '@media screen{' +
     'html.zp-on:not(.zp-tr) ' + SEL.replace(',', ',html.zp-on:not(.zp-tr) ') + '{zoom:var(--zp)}' +
     'html.zp-on.zp-tr ' + SEL.replace(',', ',html.zp-on.zp-tr ') +
-    '{transform:scale(var(--zp));transform-origin:0 0;margin-right:var(--zp-mr);margin-bottom:var(--zp-mb)}}';
+    '{transform:scale(var(--zp));transform-origin:0 0;box-sizing:border-box;width:var(--zp-w);max-width:none;' +
+    'margin-right:var(--zp-mr);margin-bottom:var(--zp-mb)}}';
   document.head.appendChild(stile);
 
   var gruppo = document.createElement('span');
@@ -54,18 +55,21 @@
     var z = PASSI[passo];
     // Il punto letto resta più o meno lo stesso: lo scorrimento cresce in proporzione.
     var x = window.pageXOffset * z / vecchio, y = window.pageYOffset * z / vecchio;
+    if (!conZoom) {
+      // Senza zoom CSS (Firefox prima della 126) si scala con transform. Si misura la pagina a grandezza
+      // normale e se ne fissa la larghezza: altrimenti il margine destro, che lascia lo spazio della pagina
+      // ingrandita per lo scorrimento, restringerebbe la colonna del testo prima della trasformazione.
+      html.classList.remove('zp-on');
+      for (var i = 0; i < pagine.length; i++) {
+        var p = pagine[i], w = p.offsetWidth, h = p.offsetHeight;
+        p.style.setProperty('--zp-w', w + 'px');
+        p.style.setProperty('--zp-mr', (w * (z - 1)) + 'px');
+        p.style.setProperty('--zp-mb', (h * (z - 1)) + 'px');
+      }
+    }
     html.style.setProperty('--zp', String(z));
     html.classList.toggle('zp-on', z !== 1);
     html.classList.toggle('zp-tr', !conZoom);
-    if (!conZoom) {
-      // Senza zoom CSS (Firefox prima della 126) si scala con transform: i margini lasciano lo spazio
-      // che la pagina ingrandita occupa, altrimenti lo scorrimento non ci arriverebbe.
-      for (var i = 0; i < pagine.length; i++) {
-        var p = pagine[i];
-        p.style.setProperty('--zp-mr', (p.offsetWidth * (z - 1)) + 'px');
-        p.style.setProperty('--zp-mb', (p.offsetHeight * (z - 1)) + 'px');
-      }
-    }
     valore.textContent = Math.round(z * 100) + '%';
     meno.disabled = passo === 0;
     piu.disabled = passo === PASSI.length - 1;
