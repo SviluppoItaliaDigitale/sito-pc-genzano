@@ -51,7 +51,7 @@ La chioma si è distesa sulla strada, sopra i posti auto lungo il marciapiede: d
 
 ## L'intervento
 
-I **Vigili del Fuoco** hanno lavorato con l'**autoscala AS 11** e il mezzo **AB 27A**. Noi abbiamo impiegato il pickup **EVO Cross 4**.
+I **Vigili del Fuoco** hanno lavorato con l'**autoscala AS 11** e il mezzo **27A**. Noi abbiamo impiegato il pickup **EVO Cross 4**.
 
 Il tronco e i rami sono stati tagliati per liberare la carreggiata. A fine lavoro i pezzi del tronco sono rimasti sul marciapiede, accanto al ceppo. L'intervento si è chiuso poco prima delle 23.
 
