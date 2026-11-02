@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-02T09:32:06+00:00",
+  "generato": "2026-11-02T19:44:15+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-02T09:27:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Per il 2 novembre a Campobasso arriva il 'fiore sospeso'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/per-il-2-novembre-a-campobasso-arriva-il-fiore-sospeso_4a6f5e64-ee8d-4002-ae18-bef5a9838b55.html"
-  },
-  {
-   "data": "2026-11-02T09:26:17+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Arrestato per l'omicidio della moglie, l'infermiere non risponde al gip",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/arrestato-per-lomicidio-della-moglie-linfermiere-non-risponde-al-gip_4653c99a-e3b4-4bb4-9a27-91afbef46487.html"
-  },
-  {
-   "data": "2026-11-02T09:20:55+00:00",
+   "data": "2026-11-02T19:39:38+00:00",
    "fonte": "ANSA",
-   "titolo": "Identificate le due vittime italiane dell'incidente ferroviario di Toledo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/identificate-le-due-vittime-italiane-dellincidente-ferroviario-di-toledo-_ff2f24c6-eabc-4e8d-b16c-f02c4408dc60.html"
+   "titolo": "Ondata di cyberattacchi ai supermarket europei, frigoriferi in tilt anche in Italia, in Sicilia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/02/ondata-di-cyberattacchi-ai-supermarket-europei-frigoriferi-in-tilt-anche-in-italia-in-sicilia_5e6f0b27-05c9-468a-9004-087167137119.html"
   },
   {
-   "data": "2026-11-02T09:17:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elezioni, Calenda boccia il Campo largo e svela il suo piano: \"Correrò da solo, saremo decisivi\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-carlo-calenda-azione-campo-largo_3sjiJdWduugh1UrK9r5fSh"
-  },
-  {
-   "data": "2026-11-02T09:15:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Crans-Montana, oggi l'interrogatorio di Jaques Moretti sono presenti anche alcuni feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/crans-montana-oggi-linterrogatorio-di-jaques-moretti-sono-presenti-anche-alcuni_b354f421-f01c-4386-aa3b-e80e1c456b2a.html"
-  },
-  {
-   "data": "2026-11-02T09:02:44+00:00",
+   "data": "2026-11-02T19:36:47+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "A Trieste raffiche di bora oltre i 100 km orari, vigili del fuoco al lavoro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/a-trieste-raffiche-di-bora-oltre-i-100-km-orari-vigili-del-fuoco-al-lavoro_74f02737-f523-4a92-8b5a-2bb923403075.html"
+   "titolo": "Attacchi hacker ai supermercati, si muove anche il Copasir",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/attacchi-hacker-ai-supermercati-si-muove-anche-il-copasir_c475b1b2-184c-4001-b904-2a40ac6fd530.html"
   },
   {
-   "data": "2026-11-02T09:02:41+00:00",
+   "data": "2026-11-02T19:34:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A, in campo Atalanta-Parma LIVE",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/02/serie-a-in-campo-atalanta-parma-live_9516fa2b-9f6b-4ebd-8d9d-a26e11e997e8.html"
+  },
+  {
+   "data": "2026-11-02T19:34:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Le midterm più importanti della storia, dai dem candidati jihadisti'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/02/trump-le-midterm-piu-importanti-della-storia-dai-dem-candidati-jihadisti_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
+  },
+  {
+   "data": "2026-11-02T19:31:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Violati i sigilli della casa in cui è stata uccisa Pamela Genini",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/violati-i-sigilli-della-casa-in-cui-e-stata-uccisa-pamela-genini_36cdce2d-b4ca-4fd3-a8a1-63c387e89eae.html"
+  },
+  {
+   "data": "2026-11-02T19:24:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "FI apre a mini-ritocchi sulle pensioni. Ma è rebus coperture",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/02/nella-manovra-previsti-12-miliardi-di-tagli-agli-interventi-per-le-calamita-tornano_1ce833d8-40ac-40f4-b1d1-d3f8e388834b.html"
+  },
+  {
+   "data": "2026-11-02T19:19:51+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Crans-Montana, oggi l'interrogatorio di Jaques Moretti sono presenti anche alcuni feriti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/crans-montana-oggi-linterrogatorio-di-jaques-moretti-sono-presenti-anche-alcuni_b2378160-9a82-47f8-87af-8b1e46eef420.html"
+   "titolo": "Attacchi hacker a sistemi refrigerazione dei supermercati della Sicilia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/attacchi-hacker-a-sistemi-refrigerazione-dei-supermercati-della-sicilia_0441bc55-6270-46de-b7ed-1d7f2fd63f93.html"
   },
   {
-   "data": "2026-11-02T08:59:00+00:00",
+   "data": "2026-11-02T19:15:45+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Incidente ferroviario in Spagna, identificate due vittime italiane",
-   "url": "https://www.adnkronos.com/cronaca/chi-sono-vittime-italiane-incidente-ferroviario-spagna_2kZ8TW9eCOVS5uXvfjE67M"
+   "titolo": "Sondaggio politico, Fratelli d'Italia cala e centrosinistra allunga",
+   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-voto-oggi-elezioni-2-novembre_3Uzp9rH9Kgpmof5COSYUM9"
   },
   {
-   "data": "2026-11-02T08:52:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Antonelli vince il Mondiale di F1 e si commuove per il nonno",
-   "url": "https://www.adnkronos.com/sport/antonelli-piange-ricorda-nonno-vittoria-mondiale-formula-1-video_4R1rdNY6tqS8nrt1piz98d"
-  },
-  {
-   "data": "2026-11-02T08:52:21+00:00",
+   "data": "2026-11-02T19:14:51+00:00",
    "fonte": "ANSA",
-   "titolo": "Melania Trump:  'Il cessate il fuoco è finito, quasi 800 persone evacuate da Oleshky'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/melania-trump-il-cessate-il-fuoco-e-finito-quasi-800-persone-evacuate-da-oleshky_5d7684f7-539f-4f2e-b683-fa74199e5046.html"
+   "titolo": "Il telescopio spaziale Swift della Nasa in caduta libera, il rientro tra il 3 e 4 novembre",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/02/il-telescopio-spaziale-swift-della-nasa-in-caduta-libera-il-rientro-tra-il-3-e-4-novembre_ebd79554-ca37-44ac-bcab-2f218c3799fd.html"
   },
   {
-   "data": "2026-11-02T08:43:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ia, Angelini (Sensemakers): \"In Italia usata dal 40% degli utenti\"",
-   "url": "https://www.adnkronos.com/economia/ia-angelini-sensemakers-in-italia-usata-dal-40-degli-utenti_5UeomVCP5v0lXV7JYK7BKN"
-  },
-  {
-   "data": "2026-11-02T08:42:32+00:00",
+   "data": "2026-11-02T19:11:41+00:00",
    "fonte": "ANSA",
-   "titolo": "Fiamme in un appartamento a Roma, due morti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/fiamme-in-un-appartamento-a-roma-due-morti-_342934ee-a5d0-4ed1-9750-865746c03c5f.html"
+   "titolo": "Maltempo al Centro Sud, nevicate, allagamenti e scuole chiuse",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/maltempo-al-centro-sud-nevicate-allagamenti-e-scuole-chiuse_89bf9972-1692-4d72-95d7-ad0c9b4a5a3e.html"
   },
   {
-   "data": "2026-11-02T08:40:37+00:00",
+   "data": "2026-11-02T19:02:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Leonardo Maria Del Vecchio rilancia, 22 miliardi da Citi per le quote Delfin",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/leonardo-maria-del-vecchio-rilancia-22-miliardi-da-citi-per-le-quote-delfin_600e29d0-2e87-46d0-85e0-2ef80439af6c.html"
+  },
+  {
+   "data": "2026-11-02T18:51:16+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Addio a Juan Atkins, morto uno dei padri della musica techno: aveva 64 anni",
-   "url": "https://www.adnkronos.com/spettacoli/juan-atkins-morto-padre-musica-techno_6U0KhCC2YiyIoRYnCooph8"
+   "titolo": "Manovra, Sumai: \"Dimenticati 18mila specialisti ambulatoriali, a rischio sanità territoriale\"",
+   "url": "https://www.adnkronos.com/economia/manovra-sumai-dimenticati-18mila-specialisti-ambulatoriali-a-rischio-sanita-territoriale_1aNOT5RSRPCvULeqXIsVkd"
   },
   {
-   "data": "2026-11-02T08:37:26+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trieste, incendio in magazzino chiuso al Porto Vecchio: morti due giovani migranti",
-   "url": "https://www.adnkronos.com/cronaca/incendio-trieste-porto-vecchio-due-morti_4C66RYEoC6BfPOHpaqH9tL"
-  },
-  {
-   "data": "2026-11-02T08:27:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mamma e papà Antonelli: \"Kimi prende ancora la paghetta\"",
-   "url": "https://www.adnkronos.com/sport/antonelli-paghetta-mamma-papa-mondiale-formula-1_2z2XY4LHDvw28bDjgDZ7CO"
-  },
-  {
-   "data": "2026-11-02T08:23:22+00:00",
+   "data": "2026-11-02T18:49:16+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "17enne ferito con arma ad aria compressa durante una rapina nel Napoletano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/17enne-ferito-con-arma-ad-aria-compressa-durante-una-rapina-nel_f67a4cab-a05e-4dc7-a7a0-de44967186f2.html"
+   "titolo": "Verso il ritorno a casa dei bimbi del bosco, attesa per l'udienza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/verso-il-ritorno-a-casa-dei-bimbi-del-bosco-attesa-per-ludienza_80a3cf14-4623-4093-a0c1-ca33fb13eb7e.html"
   },
   {
-   "data": "2026-11-02T08:17:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incendio nel Porto Vecchio di Trieste, morti un uomo e una donna",
+   "data": "2026-11-02T18:47:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Brucia un magazzino nel Porto Vecchio di Trieste, morti due giovani",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/incendio-nel-porto-vecchio-di-trieste-morti-un-uomo-e-una-donna_e3a5928d-fb9b-46c2-8319-75e90e02f6d3.html"
   },
   {
-   "data": "2026-11-02T08:17:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, coppia morta per incendio appartamento: le fiamme da un lumino votivo",
-   "url": "https://www.adnkronos.com/cronaca/incendio-roma-due-morti-via-spinoza_3nCHGY8uRp7Wml3FhmS0Pv"
-  },
-  {
-   "data": "2026-11-02T08:15:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Leonardo Maria Del Vecchio ci riprova, inviata un'offerta per acquistare tutte le quote di Delfin",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/leonardo-maria-del-vecchio-ci-riprova-inviata-unofferta-per-acquistare-tutte_600e29d0-2e87-46d0-85e0-2ef80439af6c.html"
-  },
-  {
-   "data": "2026-11-02T08:12:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Kimi campione a 20 anni, Meloni celebra Antonelli: 'Orgoglio per la nazione'",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/02/kimi-campione-a-20-anni-meloni-celebra-antonelli-orgoglio-per-la-nazione_6c835c5e-9c8c-41c8-b49d-b03e55f19ecc.html"
-  },
-  {
-   "data": "2026-11-02T08:06:14+00:00",
+   "data": "2026-11-02T18:45:26+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Contrasto alla criminalità giovanile, 644 arrestati dalla polizia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/contrasto-alla-criminalita-giovanile-644-arrestati-dalla-polizia_db556012-898f-436a-be31-d9e57d4e9ccc.html"
+   "titolo": "Fiamme in una casa a Roma, coppia di anziani uccisa dal fumo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/fiamme-in-una-casa-a-roma-coppia-di-anziani-uccisa-dal-fumo_342934ee-a5d0-4ed1-9750-865746c03c5f.html"
   },
   {
-   "data": "2026-11-02T08:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meteo, irruzione artica sull'Italia: temperature giù di 5 gradi e venti di burrasca",
-   "url": "https://www.adnkronos.com/cronaca/meteo-freddo-artico-in-arrivo-pioggia-neve-previsioni_Lrf5ViWeDwoe1fHexzOat"
-  },
-  {
-   "data": "2026-11-02T07:52:02+00:00",
+   "data": "2026-11-02T18:45:03+00:00",
    "fonte": "ANSA",
-   "titolo": "F1: Antonelli fa la storia in Messico, è campione del mondo 73 anni dopo Ascari",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/02/f1-antonelli-fa-la-storia-in-messico-e-campione-del-mondo-73-anni-dopo-ascari_623e8e68-b9e6-4b58-abc1-674b8f0bc473.html"
+   "titolo": "È morta Nadia Santini, chef tre stelle Michelin",
+   "url": "https://www.ansa.it/canale_terraegusto/notizie/regioni/lombardia/2026/11/02/e-morta-nadia-santini-chef-tre-stelle-michelin-aveva-73-anni_7f59752d-0032-4379-8cde-b3a50b526d64.html"
   },
   {
-   "data": "2026-11-02T07:44:31+00:00",
+   "data": "2026-11-02T18:44:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Freezer guasti, manomessi dagli hacker\": gli attacchi in Toscana, Emilia Romagna e Sicilia",
+   "url": "https://www.adnkronos.com/cronaca/freezer-guasti-europa-italia_3pWhD3dMFOaDUGAhrEDYnv"
+  },
+  {
+   "data": "2026-11-02T18:43:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "La strage di Crans-Montana. Moretti in aula, la rabbia delle famiglie",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/la-strage-di-crans-montana.-moretti-in-aula-la-rabbia-delle-famiglie_b354f421-f01c-4386-aa3b-e80e1c456b2a.html"
+  },
+  {
+   "data": "2026-11-02T18:43:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alcol e rischio cancro, conta anche un solo bicchiere: gli studi",
+   "url": "https://www.adnkronos.com/cronaca/vino-alcol-rischio-cancro-al-seno_16n9h0xM0H8YzrzZ3pYdiF"
+  },
+  {
+   "data": "2026-11-02T18:42:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Zelensky: 'Attacco devastante in una scuola utilizzata per attività umanitarie'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/zelensky-attacco-devastante-in-una-scuola-utilizzata-per-attivita-umanitarie_5d7684f7-539f-4f2e-b683-fa74199e5046.html"
+  },
+  {
+   "data": "2026-11-02T18:41:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "In Italia le salme dei quattro militari morti in Bosnia, al Celio la camera ardente",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/in-italia-le-salme-dei-quattro-militari-morti-in-bosnia-al-celio-la-camera-ardente_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html"
+  },
+  {
+   "data": "2026-11-02T18:36:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ancora una sparatoria negli Usa, \"molte vittime\" vicino a spiaggia in California",
+   "url": "https://www.adnkronos.com/internazionale/esteri/sparatoria-california-usa-oggi-news_2Q2vfpCAlleGe8QyoNCa13"
+  },
+  {
+   "data": "2026-11-02T18:30:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "Daniel come Tom Hanks in The Terminal, da settimane vive a Capodichino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/daniel-come-tom-hanks-in-the-terminal-da-settimane-vive-a-capodichino_a67fa977-85d6-49e7-9283-22c8b5458a57.html"
+  },
+  {
+   "data": "2026-11-02T18:27:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Rinasce su Telegram il gruppo sessista Phica, il sito era stato chiuso in estate",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/rinasce-su-telegram-il-gruppo-sessista-phica-il-sito-era-stato-chiuso-in-estate_72fd5bdf-516c-4a09-9385-9557323e11d3.html"
+  },
+  {
+   "data": "2026-11-02T18:21:09+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Incendio nel Porto Vecchio di Trieste, morti un uomo e una donna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/incendio-nel-porto-vecchio-di-trieste-morti-un-uomo-e-una-donna_f2f4ebae-5ead-4c3b-bc76-492a243fd9c2.html"
+   "titolo": "Attacchi hacker ai supermercati, alert Agenzia cyber in Italia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/attacchi-hacker-ai-supermercati-alert-agenzia-cyber-in-italia_6a838d5b-aef2-48ac-b082-37c487819ded.html"
   },
   {
-   "data": "2026-11-02T07:23:00+00:00",
+   "data": "2026-11-02T18:20:03+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Baby gang e criminalità giovanile, blitz in tutta Italia: oltre 575 arresti, coinvolti anche minorenni",
-   "url": "https://www.adnkronos.com/cronaca/maxi-blitz-polizia-italia-criminalita-giovanile-arresti-denunce_6SCCehq5PEFXg5psxYMFiF"
+   "titolo": "Gabrielli (Polizia Postale): \"Creare filo antropologico con famiglie\"",
+   "url": "https://www.adnkronos.com/cronaca/gabrielli-polizia-postale-creare-filo-antropologico-con-famiglie_6iQdjZ88eF3UMEqa4kczGN"
   },
   {
-   "data": "2026-11-02T06:57:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Antonelli fa la storia in Messico, campione del mondo 73 anni dopo Ascari",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/02/prime-pagine-antonelli-fa-la-storia-in-messico-campione-del-mondo-73-anni-dopo_39acb1c2-130f-48bd-bf01-7eaf1d7f3857.html"
-  },
-  {
-   "data": "2026-11-02T06:27:00+00:00",
+   "data": "2026-11-02T18:18:10+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Iniziato il novembre caldo degli scioperi: dai bus a treni e scuola, ecco le date da segnare",
-   "url": "https://www.adnkronos.com/cronaca/scioperi-novembre-2026-calendario-proteste_nrqM0J00Cr9Yxy9xyXWuZ"
+   "titolo": "Siti sessisti, su Telegram spunta la chat Phica-la rinascita: ancora classifiche e scambio di foto nude di donne ignare",
+   "url": "https://www.adnkronos.com/cronaca/siti-sessisti-chat-telegram-phica-la-rinascita_6xqwK96kLpYwzqfgzFFuc1"
   },
   {
-   "data": "2026-11-02T06:13:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elicottero caduto in Bosnia, oggi il rientro in Italia delle salme dei militari morti nell'incidente",
-   "url": "https://www.adnkronos.com/cronaca/bosnia-militari-italiani-morti-rientro-salme-oggi_oAHRxfiZpYb8C9P9LDH9i"
-  },
-  {
-   "data": "2026-11-01T22:03:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Lazio prima da sola dopo 16 anni, Inter a -3. La Juve riparte",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/01/lazio-prima-da-sola-dopo-16-anni-inter-a-3.-la-juve-riparte_e791a174-9074-4c6a-af26-0fb5654e6a13.html"
-  },
-  {
-   "data": "2026-11-01T21:02:04+00:00",
+   "data": "2026-11-02T18:14:18+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Testa di maiale davanti a un centro islamico, 'non siete ben accetti'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/testa-di-maiale-davanti-a-un-centro-islamico-non-siete-ben-accetti_48a7aa06-85a4-44c9-a6e1-1a4570061bc0.html"
+   "titolo": "Donna morta dopo dimissioni da ospedale, quattro indagati a Trani",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/donna-morta-dopo-dimissioni-da-ospedale-quattro-indagati-a-trani_8e009c33-c1db-4494-9804-b18dad813fb4.html"
+  },
+  {
+   "data": "2026-11-02T18:14:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Khamenei autorizza a trattare con gli Usa'. Petrolio a picco",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/iran-pronti-a-riaprire-hormuz-in-due-giorni-se-gli-usa-accettano-le-condizioni_f5315141-c840-4f45-89ca-066c867cee06.html"
+  },
+  {
+   "data": "2026-11-02T18:12:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "È morta Erminia Manfredi, il 'punto fermo' nella vita di Nino",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/02/e-morta-erminia-manfredi-vedova-di-nino-e-costumista_18953676-cafd-4617-9e78-fcca8af90610.html"
   }
  ]
 }
