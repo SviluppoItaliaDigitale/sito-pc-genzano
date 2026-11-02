@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-02T18:03",
+  "aggiornato": "2026-11-02T19:03",
   "data_lunga": "lunedì 2 novembre 2026",
-  "aggiornato_label": "lunedì 2 novembre 2026, ore 18:03",
+  "aggiornato_label": "lunedì 2 novembre 2026, ore 19:03",
   "alba": "06:42",
   "tramonto": "17:02",
   "corrente": {
-    "temp": 12.3,
-    "percepita": 8.9,
+    "temp": 11.5,
+    "percepita": 8.5,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 63,
-    "vento": 16,
-    "raffiche": 67
+    "umidita": 68,
+    "vento": 14,
+    "raffiche": 58
   },
   "giorni": [
     {
@@ -32,9 +32,9 @@
       "cielo": "Rovesci",
       "tmax": 16,
       "tmin": 10,
-      "pioggia": 10,
-      "pioggia_mm": 0.5,
-      "raffiche": 27,
+      "pioggia": 15,
+      "pioggia_mm": 0.4,
+      "raffiche": 32,
       "uv": 4,
       "uv_label": "moderato"
     },
@@ -44,11 +44,11 @@
       "cielo": "Coperto",
       "tmax": 15,
       "tmin": 10,
-      "pioggia": 8,
+      "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 33,
-      "uv": 3,
-      "uv_label": "moderato"
+      "uv": 2,
+      "uv_label": "basso"
     },
     {
       "label": "Gio 5",
@@ -56,7 +56,7 @@
       "cielo": "Coperto",
       "tmax": 15,
       "tmin": 11,
-      "pioggia": 21,
+      "pioggia": 47,
       "pioggia_mm": 0,
       "raffiche": 32,
       "uv": 3,
