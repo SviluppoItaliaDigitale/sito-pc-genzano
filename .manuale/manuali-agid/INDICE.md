@@ -1,6 +1,6 @@
 # Manuali ufficiali per i testi della PA
 
-Testi scaricati dai repository ufficiali su GitHub il 29/10/2026 14:46. Non modificarli a mano: si aggiornano con `python3 scripts/manuali-agid.py aggiorna`, che dice anche cosa è cambiato.
+Testi scaricati dai repository ufficiali su GitHub il 02/11/2026 16:05. Non modificarli a mano: si aggiornano con `python3 scripts/manuali-agid.py aggiorna`, che dice anche cosa è cambiato.
 
 | File | Documento | Editore e licenza | Versione del testo |
 |---|---|---|---|
@@ -21,7 +21,7 @@ Testi scaricati dai repository ufficiali su GitHub il 29/10/2026 14:46. Non modi
 Repository e commit usati:
 
 - AgID, Linee guida di design per i siti internet e i servizi digitali della PA: https://github.com/italia/lg-design-servizi-web (ramo versione-corrente), commit 94afa9e del 27/07/2022.
-- Designers Italia, design system .italia (sito designers.italia.it): https://github.com/italia/designers.italia.it (ramo main), commit 8aca4c5 del 20/10/2026.
+- Designers Italia, design system .italia (sito designers.italia.it): https://github.com/italia/designers.italia.it (ramo main), commit 2964c29 del 02/11/2026.
 - Designers Italia, Guida alle parole della Pubblica Amministrazione: https://github.com/italia/writing-toolkit (ramo master), commit 6223b45 del 14/04/2025.
 - Designers Italia, Manuale operativo di design: https://github.com/italia/manuale-operativo-design-docs (ramo versione-corrente), commit 0e67948 del 20/03/2025.
 
