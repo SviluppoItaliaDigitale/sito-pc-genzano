@@ -3,14 +3,14 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 9017 video (18 canali).
+# Totale: 9096 video (18 canali).
 
 canali:
   abili-a-proteggere:
     nome: Abili a Proteggere
     tematico_pc: true
     url: https://www.youtube.com/@abiliaproteggere4520/videos
-    video_count: 131
+    video_count: 135
   cicap:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
@@ -20,7 +20,7 @@ canali:
     nome: CIMA Research Foundation
     tematico_pc: true
     url: https://www.youtube.com/@CIMAfondazione/videos
-    video_count: 89
+    video_count: 94
   cmcc:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
@@ -30,27 +30,27 @@ canali:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
     url: https://www.youtube.com/@CnsasCanaleUfficiale/videos
-    video_count: 56
+    video_count: 58
   dario-bressanini:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 138
+    video_count: 144
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 392
+    video_count: 394
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1348
+    video_count: 1356
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 156
+    video_count: 161
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -70,12 +70,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1217
+    video_count: 1232
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 635
+    video_count: 648
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,17 +85,17 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2005
+    video_count: 2017
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 117
+    video_count: 121
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
     url: https://www.youtube.com/@WiredItalia/videos
-    video_count: 799
+    video_count: 802
 video:
   abili-a-proteggere--8j4TkuV6jU:
     canale: abili-a-proteggere
@@ -127,6 +127,11 @@ video:
     id: 06YsmvWwmQ4
     titolo: '#NienteDiSpeciale: Intervista a Iacopo Melio fondatore della Onlus #vorreiprendereiltreno'
     url: https://youtu.be/06YsmvWwmQ4
+  abili-a-proteggere-0hjPhWDXCB4:
+    canale: abili-a-proteggere
+    id: 0hjPhWDXCB4
+    titolo: Visual Vernacular Alluvione
+    url: https://youtu.be/0hjPhWDXCB4
   abili-a-proteggere-1A-exeeR1Tc:
     canale: abili-a-proteggere
     id: 1A-exeeR1Tc
@@ -677,11 +682,21 @@ video:
     id: sY9mI1fTofA
     titolo: 'Glossario in LIS: Normativa antisismica'
     url: https://youtu.be/sY9mI1fTofA
+  abili-a-proteggere-t5k-hftsChs:
+    canale: abili-a-proteggere
+    id: t5k-hftsChs
+    titolo: Visual Vernacular Incendi boschivi
+    url: https://youtu.be/t5k-hftsChs
   abili-a-proteggere-tWBLKYes5B8:
     canale: abili-a-proteggere
     id: tWBLKYes5B8
     titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - protezione civile e disabilità'
     url: https://youtu.be/tWBLKYes5B8
+  abili-a-proteggere-t_Y9dg3-xxQ:
+    canale: abili-a-proteggere
+    id: t_Y9dg3-xxQ
+    titolo: Visual Vernacular Terremoto
+    url: https://youtu.be/t_Y9dg3-xxQ
   abili-a-proteggere-tzmEiku-yXI:
     canale: abili-a-proteggere
     id: tzmEiku-yXI
@@ -752,6 +767,11 @@ video:
     id: zaM_spcLCV0
     titolo: La visione d'insieme - Fabrizio Curcio (Capo del Dipartimento di Protezione Civile)
     url: https://youtu.be/zaM_spcLCV0
+  abili-a-proteggere-zkgAnLyUgfo:
+    canale: abili-a-proteggere
+    id: zkgAnLyUgfo
+    titolo: Introduzione al Visual Vernacular
+    url: https://youtu.be/zkgAnLyUgfo
   cicap--I0clf0eIMA:
     canale: cicap
     id: -I0clf0eIMA
@@ -4042,6 +4062,11 @@ video:
     id: CMwDb2EOzDo
     titolo: 'Protezione Civile e Cambiamento climatico: forensic investigation, istituzioni e comunità'
     url: https://youtu.be/CMwDb2EOzDo
+  cima-foundation-DF-3iduuApE:
+    canale: cima-foundation
+    id: DF-3iduuApE
+    titolo: EXE Droni Spotorno 2024 - Intervista a Mattia Fiorini
+    url: https://youtu.be/DF-3iduuApE
   cima-foundation-DO1NZDfizLI:
     canale: cima-foundation
     id: DO1NZDfizLI
@@ -4082,6 +4107,11 @@ video:
     id: GVrij7sRgGA
     titolo: La mappa delle balene
     url: https://youtu.be/GVrij7sRgGA
+  cima-foundation-GtqBhuNJi4U:
+    canale: cima-foundation
+    id: GtqBhuNJi4U
+    titolo: EXE Droni Spotorno 2024 - Intervista a Guglielmo Rossi
+    url: https://youtu.be/GtqBhuNJi4U
   cima-foundation-GwiGpRLjXY8:
     canale: cima-foundation
     id: GwiGpRLjXY8
@@ -4272,6 +4302,11 @@ video:
     id: gsBgcnO6qfc
     titolo: Frana di Arenzano 2016
     url: https://youtu.be/gsBgcnO6qfc
+  cima-foundation-h-0uzWMUgvE:
+    canale: cima-foundation
+    id: h-0uzWMUgvE
+    titolo: EXE Droni Spotorno 2024 - Intervista a Federico Grosso
+    url: https://youtu.be/h-0uzWMUgvE
   cima-foundation-h6ClMTdN5ks:
     canale: cima-foundation
     id: h6ClMTdN5ks
@@ -4312,6 +4347,16 @@ video:
     id: kadUjEOVeg4
     titolo: Finalborgo
     url: https://youtu.be/kadUjEOVeg4
+  cima-foundation-ldfamFVF1xU:
+    canale: cima-foundation
+    id: ldfamFVF1xU
+    titolo: EXE Droni Spotorno 2024 - Intervista a Andrea Massabò
+    url: https://youtu.be/ldfamFVF1xU
+  cima-foundation-lwUZoM78fKY:
+    canale: cima-foundation
+    id: lwUZoM78fKY
+    titolo: EXE Droni Spotorno 2024 - Intervista a Andrea Berton
+    url: https://youtu.be/lwUZoM78fKY
   cima-foundation-mHeuyC0QXCE:
     canale: cima-foundation
     id: mHeuyC0QXCE
@@ -9307,6 +9352,11 @@ video:
     id: IZukqmDxZKw
     titolo: Il tuo 5x1000 al Soccorso Alpino e Speleologico
     url: https://youtu.be/IZukqmDxZKw
+  cnsas-JEhyPLmVrEc:
+    canale: cnsas
+    id: JEhyPLmVrEc
+    titolo: 'Sicuri sul Sentiero 2022 - Quando il Paese fa rete: montagna e sicurezza'
+    url: https://youtu.be/JEhyPLmVrEc
   cnsas-JMayL7Dhq4A:
     canale: cnsas
     id: JMayL7Dhq4A
@@ -9317,6 +9367,11 @@ video:
     id: LCDj_d-F2xs
     titolo: 'Covid-19: incidente in montagna, il protocollo del Soccorso Alpino e Speleologico'
     url: https://youtu.be/LCDj_d-F2xs
+  cnsas-ObkztPfCe-Q:
+    canale: cnsas
+    id: ObkztPfCe-Q
+    titolo: Live streaming di Corpo Nazionale Soccorso Alpino e Speleologico
+    url: https://youtu.be/ObkztPfCe-Q
   cnsas-Qd28xLulEhQ:
     canale: cnsas
     id: Qd28xLulEhQ
@@ -9552,6 +9607,11 @@ video:
     id: 3xGaRx8PNcE
     titolo: REPLY to 8 Fruits before they were domesticated by INFINITO
     url: https://youtu.be/3xGaRx8PNcE
+  dario-bressanini-4j3wEet5pNk:
+    canale: dario-bressanini
+    id: 4j3wEet5pNk
+    titolo: Marmellate con più del 100% di frutta?!?
+    url: https://youtu.be/4j3wEet5pNk
   dario-bressanini-54cJje06fGM:
     canale: dario-bressanini
     id: 54cJje06fGM
@@ -9617,6 +9677,11 @@ video:
     id: 9uBoo0bEhEE
     titolo: I popcorn - La Casalinga e lo Scienziato - Scienza in Cucina
     url: https://youtu.be/9uBoo0bEhEE
+  dario-bressanini-AK-j9c3UqQ4:
+    canale: dario-bressanini
+    id: AK-j9c3UqQ4
+    titolo: 'La Macchina di Majorana e la trasmutazione della materia #perte #majorana'
+    url: https://youtu.be/AK-j9c3UqQ4
   dario-bressanini-Akdhz6QFY9Q:
     canale: dario-bressanini
     id: Akdhz6QFY9Q
@@ -9832,6 +9897,11 @@ video:
     id: RtBN7xjR28I
     titolo: Ho un TUMORE
     url: https://youtu.be/RtBN7xjR28I
+  dario-bressanini-Sf80L-E6BSI:
+    canale: dario-bressanini
+    id: Sf80L-E6BSI
+    titolo: 'Salsa acida: aggiungi zucchero o bicarbonato? #perte'
+    url: https://youtu.be/Sf80L-E6BSI
   dario-bressanini-SjesnThmmE0:
     canale: dario-bressanini
     id: SjesnThmmE0
@@ -10087,6 +10157,11 @@ video:
     id: n5xWqux3kvU
     titolo: Butter - The Housewife and the Scientist - Kitchen Science
     url: https://youtu.be/n5xWqux3kvU
+  dario-bressanini-nROW0tOwvog:
+    canale: dario-bressanini
+    id: nROW0tOwvog
+    titolo: 'il test dell’uovo che galleggia #perte #egg'
+    url: https://youtu.be/nROW0tOwvog
   dario-bressanini-pkXpvqmjLow:
     canale: dario-bressanini
     id: pkXpvqmjLow
@@ -10097,6 +10172,11 @@ video:
     id: qLAona8HB0A
     titolo: RICE marketing LIES. You think you buy Carnaroli or Arborio rice, but reality is different
     url: https://youtu.be/qLAona8HB0A
+  dario-bressanini-r8774QzXF1U:
+    canale: dario-bressanini
+    id: r8774QzXF1U
+    titolo: Evil Bressa e le calorie
+    url: https://youtu.be/r8774QzXF1U
   dario-bressanini-rEg7jbx_QBo:
     canale: dario-bressanini
     id: rEg7jbx_QBo
@@ -10132,6 +10212,11 @@ video:
     id: u7Deq5ppmU0
     titolo: The invisible KILLER in food
     url: https://youtu.be/u7Deq5ppmU0
+  dario-bressanini-un5Teeo18U4:
+    canale: dario-bressanini
+    id: un5Teeo18U4
+    titolo: Mirtilli selvatici e coltivati
+    url: https://youtu.be/un5Teeo18U4
   dario-bressanini-vKHHoFOaSbE:
     canale: dario-bressanini
     id: vKHHoFOaSbE
@@ -10257,6 +10342,11 @@ video:
     id: 1zpqQzMy8qY
     titolo: Open Day al Dipartimento della Protezione Civile
     url: https://youtu.be/1zpqQzMy8qY
+  dpc-gov-25FcvhaIhN0:
+    canale: dpc-gov
+    id: 25FcvhaIhN0
+    titolo: Cerimonia di consegna delle Pubbliche Benemerenze di Protezione Civile
+    url: https://youtu.be/25FcvhaIhN0
   dpc-gov-25ci6GjB-so:
     canale: dpc-gov
     id: 25ci6GjB-so
@@ -11037,6 +11127,11 @@ video:
     id: PI0DyYVXsQc
     titolo: L'intervento della protezione civile italiana – Terremoto Albania
     url: https://youtu.be/PI0DyYVXsQc
+  dpc-gov-PPiE2skRJyo:
+    canale: dpc-gov
+    id: PPiE2skRJyo
+    titolo: Diretta "CapRischio – Strategie di protezione civile per i territori 21-27" / 13 luglio 2026 ore 10
+    url: https://youtu.be/PPiE2skRJyo
   dpc-gov-PRtzGF8aTv0:
     canale: dpc-gov
     id: PRtzGF8aTv0
@@ -12607,6 +12702,11 @@ video:
     id: 3aW_GPJRe00
     titolo: Perché l’Iran ha attaccato Israele con missili e droni e quali sono i possibili scenari futuri?
     url: https://youtu.be/3aW_GPJRe00
+  geopop-3bnDyONMbu4:
+    canale: geopop
+    id: 3bnDyONMbu4
+    titolo: Scarpe da ginnastica VS scarpa da trekking. Cosa cambia?
+    url: https://youtu.be/3bnDyONMbu4
   geopop-3cejo4K3Lpg:
     canale: geopop
     id: 3cejo4K3Lpg
@@ -12887,6 +12987,11 @@ video:
     id: 6Bv4eLvDtDA
     titolo: 'La "conquista" del polo nord: l''impresa di Nobile e Amundsen a bordo del dirigibile Norge'
     url: https://youtu.be/6Bv4eLvDtDA
+  geopop-6DGaYJ7nY34:
+    canale: geopop
+    id: 6DGaYJ7nY34
+    titolo: Perché nessuno si ricorda niente fino ai primi due anni di vita?
+    url: https://youtu.be/6DGaYJ7nY34
   geopop-6EFHaktlC4k:
     canale: geopop
     id: 6EFHaktlC4k
@@ -13852,6 +13957,11 @@ video:
     id: Fz8NuY-VN5c
     titolo: I'll take you inside the Geopop editorial team and tell you how many views we got in 2023
     url: https://youtu.be/Fz8NuY-VN5c
+  geopop-FzdmudtoKfg:
+    canale: geopop
+    id: FzdmudtoKfg
+    titolo: Dove si trovano i ponti raffigurati sulle banconote?
+    url: https://youtu.be/FzdmudtoKfg
   geopop-G0K8KGhp80g:
     canale: geopop
     id: G0K8KGhp80g
@@ -14287,6 +14397,11 @@ video:
     id: KCrPEzj6tzI
     titolo: The Terrible History of the Palace of the Parliament in Bucharest, the Heaviest Building in the W...
     url: https://youtu.be/KCrPEzj6tzI
+  geopop-KDxInPb4eQU:
+    canale: geopop
+    id: KDxInPb4eQU
+    titolo: Sui social girano video che spiegano come si è formato il Gran Canyon. Ma è davvero così?
+    url: https://youtu.be/KDxInPb4eQU
   geopop-KEl7ShmYtBk:
     canale: geopop
     id: KEl7ShmYtBk
@@ -14942,6 +15057,11 @@ video:
     id: QA_V6vtmEmU
     titolo: What would happen if AI went to war?
     url: https://youtu.be/QA_V6vtmEmU
+  geopop-QAvWPluhSSg:
+    canale: geopop
+    id: QAvWPluhSSg
+    titolo: Se smettessimo di lavarci i denti, cosa succederebbe?
+    url: https://youtu.be/QAvWPluhSSg
   geopop-QB4WuTk_ja8:
     canale: geopop
     id: QB4WuTk_ja8
@@ -15122,6 +15242,11 @@ video:
     id: RgXJW3f7-7U
     titolo: The Taipei 101 skyscraper's giant steel sphere may have saved it from the earthquake in Taiwan
     url: https://youtu.be/RgXJW3f7-7U
+  geopop-RgrxPFd7NVM:
+    canale: geopop
+    id: RgrxPFd7NVM
+    titolo: Quante cose usiamo ogni giorno senza sapere davvero come funzionano?
+    url: https://youtu.be/RgrxPFd7NVM
   geopop-Rhjqzn4-zBY:
     canale: geopop
     id: Rhjqzn4-zBY
@@ -15732,6 +15857,11 @@ video:
     id: WpxaIEK6wOk
     titolo: Bizarre, Absurd, Funny - The Fire Snake Chemical Experiment
     url: https://youtu.be/WpxaIEK6wOk
+  geopop-WrmwXcs0hTc:
+    canale: geopop
+    id: WrmwXcs0hTc
+    titolo: Perché nelle carte il Nord è sempre in alto? Non è sempre stato così.
+    url: https://youtu.be/WrmwXcs0hTc
   geopop-WtF2R7J9DUo:
     canale: geopop
     id: WtF2R7J9DUo
@@ -18772,6 +18902,11 @@ video:
     id: z6vWeLPEtnY
     titolo: 'The map of illegal building: what''s the situation in Italy and what are the risks?'
     url: https://youtu.be/z6vWeLPEtnY
+  geopop-z80sN_gaTW8:
+    canale: geopop
+    id: z80sN_gaTW8
+    titolo: 'Il compost perfetto non è fatto solo di scarti gettati in un vaso: ecco la guida pratica'
+    url: https://youtu.be/z80sN_gaTW8
   geopop-z9ruuhBo0VI:
     canale: geopop
     id: z9ruuhBo0VI
@@ -18907,6 +19042,11 @@ video:
     id: 12Cy8Rirsnc
     titolo: Liceo scientifico Sora
     url: https://youtu.be/12Cy8Rirsnc
+  ingv-terremoti-14YF7lbkKlA:
+    canale: ingv-terremoti
+    id: 14YF7lbkKlA
+    titolo: Giornate ONT 2026 | PULSE il calore della Terra
+    url: https://youtu.be/14YF7lbkKlA
   ingv-terremoti-1CnpbVOIQLA:
     canale: ingv-terremoti
     id: 1CnpbVOIQLA
@@ -18952,6 +19092,11 @@ video:
     id: 3C7DmuJasIw
     titolo: Terremoto in Turchia dell'8 marzo 2010
     url: https://youtu.be/3C7DmuJasIw
+  ingv-terremoti-3HwRHV6Z3hY:
+    canale: ingv-terremoti
+    id: 3HwRHV6Z3hY
+    titolo: Giornate ONT 2026 | Deposizione delle boe per il monitoraggio degli tsunami nel Mar Mediterraneo
+    url: https://youtu.be/3HwRHV6Z3hY
   ingv-terremoti-3zYfibUwdKE:
     canale: ingv-terremoti
     id: 3zYfibUwdKE
@@ -19212,6 +19357,11 @@ video:
     id: SYmPM40Bh5E
     titolo: 'La rete sismica mobile: aggiornamento e intervento in Lunigiana'
     url: https://youtu.be/SYmPM40Bh5E
+  ingv-terremoti-Sd2_gfLSFpA:
+    canale: ingv-terremoti
+    id: Sd2_gfLSFpA
+    titolo: Giornate ONT 2026 | Custodi di memoria
+    url: https://youtu.be/Sd2_gfLSFpA
   ingv-terremoti-StOjg8WyoU4:
     canale: ingv-terremoti
     id: StOjg8WyoU4
@@ -19437,6 +19587,11 @@ video:
     id: hrjkHiphQt4
     titolo: INGV-Terremoti20luglio-03agosto2010
     url: https://youtu.be/hrjkHiphQt4
+  ingv-terremoti-iFLxrLjJkl4:
+    canale: ingv-terremoti
+    id: iFLxrLjJkl4
+    titolo: Giornate ONT 2026 | A caccia di microterremoti sulla faglia del monte Morrone
+    url: https://youtu.be/iFLxrLjJkl4
   ingv-terremoti-iZwEv9P_djg:
     canale: ingv-terremoti
     id: iZwEv9P_djg
@@ -19542,6 +19697,11 @@ video:
     id: sBkMLYUyUZg
     titolo: TSUNAMI
     url: https://youtu.be/sBkMLYUyUZg
+  ingv-terremoti-sGiCBxGA2ME:
+    canale: ingv-terremoti
+    id: sGiCBxGA2ME
+    titolo: 'Giornate ONT 2026 | Story map: Roma e i terremoti'
+    url: https://youtu.be/sGiCBxGA2ME
   ingv-terremoti-sVBcGFxnIC8:
     canale: ingv-terremoti
     id: sVBcGFxnIC8
@@ -21282,6 +21442,11 @@ video:
     id: -JGIv9q0EmY
     titolo: Nuovo Pianeta Gigante nel Sistema Solare? Parliamone
     url: https://youtu.be/-JGIv9q0EmY
+  link4universe--ScOAimpemo:
+    canale: link4universe
+    id: -ScOAimpemo
+    titolo: LIVE - AGGIORNAMENTI NASA sulla Moon Base  Artemis (la Base Lunare per Astronauti)
+    url: https://youtu.be/-ScOAimpemo
   link4universe--UB9PHkbptE:
     canale: link4universe
     id: -UB9PHkbptE
@@ -21322,6 +21487,11 @@ video:
     id: -mYN0kGJtYo
     titolo: 'Life on Venus? #AstroCaffè'
     url: https://youtu.be/-mYN0kGJtYo
+  link4universe--oDprUYjqWY:
+    canale: link4universe
+    id: -oDprUYjqWY
+    titolo: LIVE - Lancio Roman Space Telescope / Falcon Heavy (NASA/SpaceX)
+    url: https://youtu.be/-oDprUYjqWY
   link4universe--vhQga4ot0E:
     canale: link4universe
     id: -vhQga4ot0E
@@ -22347,6 +22517,11 @@ video:
     id: 9iqnMKePUjM
     titolo: 'Beresheet : primo lander privato sulla Luna - #AstroCaffè'
     url: https://youtu.be/9iqnMKePUjM
+  link4universe-9olXT9ucTKk:
+    canale: link4universe
+    id: 9olXT9ucTKk
+    titolo: LIVE - Lancio Missione di SALVATAGGIO SPAZIALE per il telescopio Swift
+    url: https://youtu.be/9olXT9ucTKk
   link4universe-9p-Tn4Vllrc:
     canale: link4universe
     id: 9p-Tn4Vllrc
@@ -23042,6 +23217,11 @@ video:
     id: H47GT8q9Re8
     titolo: 'Novità da Europa - Geyser attivi sulla luna di Giove?  #AstroCaffè'
     url: https://youtu.be/H47GT8q9Re8
+  link4universe-H4puomrVHQk:
+    canale: link4universe
+    id: H4puomrVHQk
+    titolo: LIVE - Lancio Crew 13 - 4 Astronauti verso la ISS / NASA-SpaceX
+    url: https://youtu.be/H4puomrVHQk
   link4universe-H6N6Zrz1l7Q:
     canale: link4universe
     id: H6N6Zrz1l7Q
@@ -23942,6 +24122,11 @@ video:
     id: Qa9Umc5xFlI
     titolo: L'incredibile Oceano liquido di Encelado
     url: https://youtu.be/Qa9Umc5xFlI
+  link4universe-QaZi224_r2Y:
+    canale: link4universe
+    id: QaZi224_r2Y
+    titolo: LIVE - LANCIO razzo italiano VEGA (Avio) con Sentinel-3C e FLEX (ESA/UE)
+    url: https://youtu.be/QaZi224_r2Y
   link4universe-QboonAxSmJk:
     canale: link4universe
     id: QboonAxSmJk
@@ -24072,6 +24257,11 @@ video:
     id: S8UOkHr2pTQ
     titolo: Sarebbe giusto viaggiare nel tempo? (Se fosse possibile) feat. Wesachannel
     url: https://youtu.be/S8UOkHr2pTQ
+  link4universe-SBSBQcVUQGc:
+    canale: link4universe
+    id: SBSBQcVUQGc
+    titolo: Giove - Nuove Scoperte, Foto Recenti e Missioni future - Serata Speciale
+    url: https://youtu.be/SBSBQcVUQGc
   link4universe-SDKmiQEol4o:
     canale: link4universe
     id: SDKmiQEol4o
@@ -24092,6 +24282,11 @@ video:
     id: SMf3zXDIk-g
     titolo: Una stella dentro un'altra stella!
     url: https://youtu.be/SMf3zXDIk-g
+  link4universe-SOOyJg2mvHE:
+    canale: link4universe
+    id: SOOyJg2mvHE
+    titolo: LIVE - STARSHIP (SPACEX) - LANCIO 13 RIMANDATO
+    url: https://youtu.be/SOOyJg2mvHE
   link4universe-SQ0BNgza1mI:
     canale: link4universe
     id: SQ0BNgza1mI
@@ -24142,6 +24337,11 @@ video:
     id: SjHWY-JdDtM
     titolo: '"Endurance. Un anno nello spazio, una vita di scoperte" - Scott Kelly'
     url: https://youtu.be/SjHWY-JdDtM
+  link4universe-Sk-Z3eoIS9U:
+    canale: link4universe
+    id: Sk-Z3eoIS9U
+    titolo: LIVE - STARSHIP (SPACEX) - LANCIO 13
+    url: https://youtu.be/Sk-Z3eoIS9U
   link4universe-SoaGgh-ibks:
     canale: link4universe
     id: SoaGgh-ibks
@@ -24162,6 +24362,11 @@ video:
     id: T-CT8YWphls
     titolo: 'Martian Sues Canada: The Strange Court Case Joly v Pelletier'
     url: https://youtu.be/T-CT8YWphls
+  link4universe-T-wp_8A2eRE:
+    canale: link4universe
+    id: T-wp_8A2eRE
+    titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
+    url: https://youtu.be/T-wp_8A2eRE
   link4universe-T5p6wv83mI0:
     canale: link4universe
     id: T5p6wv83mI0
@@ -24662,6 +24867,11 @@ video:
     id: Xqih8emkgEM
     titolo: Se dopo la fine del mondo sopravvivesse solo casa vostra | Astrolive 17
     url: https://youtu.be/Xqih8emkgEM
+  link4universe-XsmTO5O56Vs:
+    canale: link4universe
+    id: XsmTO5O56Vs
+    titolo: LIVE - STARSHIP (SPACEX) - LANCIO 13 (RIMANDATO)
+    url: https://youtu.be/XsmTO5O56Vs
   link4universe-Xvi7pb4_avM:
     canale: link4universe
     id: Xvi7pb4_avM
@@ -25877,6 +26087,11 @@ video:
     id: jkcoh2Q0ljw
     titolo: Come colonizzare un altro mondo - Parte 1 (Planetbase)
     url: https://youtu.be/jkcoh2Q0ljw
+  link4universe-jr-LjHWCQbk:
+    canale: link4universe
+    id: jr-LjHWCQbk
+    titolo: LIVE - STARSHIP / SPACEX - Lancio 14
+    url: https://youtu.be/jr-LjHWCQbk
   link4universe-jsu1jDJ9GHs:
     canale: link4universe
     id: jsu1jDJ9GHs
@@ -25992,6 +26207,11 @@ video:
     id: lHWIDBhKreo
     titolo: 'Space Survival Guide: What Would It Be Like to Shoot Into the Void?'
     url: https://youtu.be/lHWIDBhKreo
+  link4universe-lHnXKXiKR8c:
+    canale: link4universe
+    id: lHnXKXiKR8c
+    titolo: LIVE - 99° Camminata Spaziale (EVA) fuori dalla ISS
+    url: https://youtu.be/lHnXKXiKR8c
   link4universe-lXWNhk5v5Kg:
     canale: link4universe
     id: lXWNhk5v5Kg
@@ -27052,6 +27272,11 @@ video:
     id: whNn8GyuNSo
     titolo: 'Riparato il telescopio spaziale Hubble! (ed anche Chandra) #AstroCaffè'
     url: https://youtu.be/whNn8GyuNSo
+  link4universe-wkU7KUQQeHA:
+    canale: link4universe
+    id: wkU7KUQQeHA
+    titolo: LIVE - ATTRACCO della navicella Dragon con Crew 13, alla Stazione Spaziale Internazionale
+    url: https://youtu.be/wkU7KUQQeHA
   link4universe-wnZyl1xqf_c:
     canale: link4universe
     id: wnZyl1xqf_c
@@ -27067,6 +27292,11 @@ video:
     id: x1lGXV1PrEY
     titolo: The MYSTERY of the SUPERNOVA remnant at the center of the MILKY WAY
     url: https://youtu.be/x1lGXV1PrEY
+  link4universe-x74Gv2ftY8Y:
+    canale: link4universe
+    id: x74Gv2ftY8Y
+    titolo: LIVE - RIENTRO ASTRONAUTI Crew 12 dalla ISS / SPACEX - NASA
+    url: https://youtu.be/x74Gv2ftY8Y
   link4universe-xD3BUVdhZts:
     canale: link4universe
     id: xD3BUVdhZts
@@ -27267,6 +27497,11 @@ video:
     id: yfODcSSZR98
     titolo: Panorama dell'Esplorazione Spaziale nel 2014
     url: https://youtu.be/yfODcSSZR98
+  link4universe-yrXY1eSGWQg:
+    canale: link4universe
+    id: yrXY1eSGWQg
+    titolo: Rieccomi! Serata chiacchiere e ritorno alle live - novità spaziali in arrivo!
+    url: https://youtu.be/yrXY1eSGWQg
   link4universe-ytv9KOW4goY:
     canale: link4universe
     id: ytv9KOW4goY
@@ -27722,11 +27957,21 @@ video:
     id: 5Wp76W14EWQ
     titolo: Wild Real TV clip 2
     url: https://youtu.be/5Wp76W14EWQ
+  natgeo-italia-5YI9qJ5QtLw:
+    canale: natgeo-italia
+    id: 5YI9qJ5QtLw
+    titolo: 5 fatti sorprendenti sui mostri di Gila
+    url: https://youtu.be/5YI9qJ5QtLw
   natgeo-italia-5ZLsZEiURg8:
     canale: natgeo-italia
     id: 5ZLsZEiURg8
     titolo: 'Inside Area 51: Massima riservatezza'
     url: https://youtu.be/5ZLsZEiURg8
+  natgeo-italia-5ZmcHTsLyLs:
+    canale: natgeo-italia
+    id: 5ZmcHTsLyLs
+    titolo: Le giraffe possiedono abilità matematiche?
+    url: https://youtu.be/5ZmcHTsLyLs
   natgeo-italia-5j6m4O73H3U:
     canale: natgeo-italia
     id: 5j6m4O73H3U
@@ -27817,6 +28062,11 @@ video:
     id: 7v9WAPL0iMU
     titolo: 'Cermis: il disastro della funivia'
     url: https://youtu.be/7v9WAPL0iMU
+  natgeo-italia-87iroPg26Qk:
+    canale: natgeo-italia
+    id: 87iroPg26Qk
+    titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
+    url: https://youtu.be/87iroPg26Qk
   natgeo-italia-88f2CzhqGdw:
     canale: natgeo-italia
     id: 88f2CzhqGdw
@@ -28127,6 +28377,11 @@ video:
     id: Cv_cUpT2AmA
     titolo: Come vincere a braccio di ferro
     url: https://youtu.be/Cv_cUpT2AmA
+  natgeo-italia-D5IDFi7wVEY:
+    canale: natgeo-italia
+    id: D5IDFi7wVEY
+    titolo: La crescita di un cucciolo di orango
+    url: https://youtu.be/D5IDFi7wVEY
   natgeo-italia-D7uWRzgRsr8:
     canale: natgeo-italia
     id: D7uWRzgRsr8
@@ -28917,6 +29172,11 @@ video:
     id: VtAjwHiH2rs
     titolo: Più grande di un T. rex
     url: https://youtu.be/VtAjwHiH2rs
+  natgeo-italia-VtHqr08syJs:
+    canale: natgeo-italia
+    id: VtHqr08syJs
+    titolo: Il filmato raro di uno squalo bianco nel Mediterraneo
+    url: https://youtu.be/VtHqr08syJs
   natgeo-italia-VwOipLZfh_Q:
     canale: natgeo-italia
     id: VwOipLZfh_Q
@@ -29257,6 +29517,11 @@ video:
     id: bcTqTbeJqE8
     titolo: Due donne in carriera
     url: https://youtu.be/bcTqTbeJqE8
+  natgeo-italia-bma9TGt_cvE:
+    canale: natgeo-italia
+    id: bma9TGt_cvE
+    titolo: Una giovane megattera
+    url: https://youtu.be/bma9TGt_cvE
   natgeo-italia-bmaWm3Ep8ps:
     canale: natgeo-italia
     id: bmaWm3Ep8ps
@@ -29352,6 +29617,11 @@ video:
     id: dl0u2LR4x1c
     titolo: FreeSolo - 2 Aprile ore 20.55 National Geographic
     url: https://youtu.be/dl0u2LR4x1c
+  natgeo-italia-dnq-H8o6hbs:
+    canale: natgeo-italia
+    id: dnq-H8o6hbs
+    titolo: 5 fatti sorprendenti sulle aquile di mare testabianca
+    url: https://youtu.be/dnq-H8o6hbs
   natgeo-italia-dzQMrAfLSeU:
     canale: natgeo-italia
     id: dzQMrAfLSeU
@@ -29412,6 +29682,11 @@ video:
     id: fEDC8yY8V7c
     titolo: Plastiki - L'oceano di plastica
     url: https://youtu.be/fEDC8yY8V7c
+  natgeo-italia-fHINFtd1ItA:
+    canale: natgeo-italia
+    id: fHINFtd1ItA
+    titolo: 5 fatti sorprendenti sugli orsi polari
+    url: https://youtu.be/fHINFtd1ItA
   natgeo-italia-fJGIYf1JOok:
     canale: natgeo-italia
     id: fJGIYf1JOok
@@ -29552,6 +29827,11 @@ video:
     id: hTtLFOE229A
     titolo: 'Nat Geo Italia: il numero di ottobre racconta la battaglia per salvare la fauna selvatica africana'
     url: https://youtu.be/hTtLFOE229A
+  natgeo-italia-hbpBwooqUxg:
+    canale: natgeo-italia
+    id: hbpBwooqUxg
+    titolo: Una madre di orsi polari allatta sulla spiaggia
+    url: https://youtu.be/hbpBwooqUxg
   natgeo-italia-iDB-yo-on40:
     canale: natgeo-italia
     id: iDB-yo-on40
@@ -29852,6 +30132,16 @@ video:
     id: mZjRsfruypA
     titolo: Wild America - La costa
     url: https://youtu.be/mZjRsfruypA
+  natgeo-italia-mgy3mG4X7uQ:
+    canale: natgeo-italia
+    id: mgy3mG4X7uQ
+    titolo: Ippopotamo nel fiume Lugenda
+    url: https://youtu.be/mgy3mG4X7uQ
+  natgeo-italia-mjzY5_Qweb4:
+    canale: natgeo-italia
+    id: mjzY5_Qweb4
+    titolo: 5 fatti sorprendenti sugli ornitorinchi
+    url: https://youtu.be/mjzY5_Qweb4
   natgeo-italia-mvUgpt8tfwg:
     canale: natgeo-italia
     id: mvUgpt8tfwg
@@ -30522,11 +30812,21 @@ video:
     id: zechqf-4YpM
     titolo: 'Wild Life con Bertie Gregory, Ep. 3: gli eroi sconosciuti dell’Artide'
     url: https://youtu.be/zechqf-4YpM
+  natgeo-italia-zfnsVDALnhw:
+    canale: natgeo-italia
+    id: zfnsVDALnhw
+    titolo: Pinguini reali sull’isola della Georgia del Sud
+    url: https://youtu.be/zfnsVDALnhw
   natgeo-italia-zx44MFbBpMs:
     canale: natgeo-italia
     id: zx44MFbBpMs
     titolo: Andata e Ritorno - Valentina Correani
     url: https://youtu.be/zx44MFbBpMs
+  natgeo-italia-zx74Mdbc-P8:
+    canale: natgeo-italia
+    id: zx74Mdbc-P8
+    titolo: Un orso polare sotto l'arcobaleno
+    url: https://youtu.be/zx74Mdbc-P8
   rai-cultura-7ec1juiPsMY:
     canale: rai-cultura
     id: 7ec1juiPsMY
@@ -32357,6 +32657,11 @@ video:
     id: Aj2cFil_c1o
     titolo: When the ice gives way and sweeps everything away
     url: https://youtu.be/Aj2cFil_c1o
+  rai-news-Aj_Wy6ehzks:
+    canale: rai-news
+    id: Aj_Wy6ehzks
+    titolo: Omicidio Pasolini, la Procura apre una nuova indagine
+    url: https://youtu.be/Aj_Wy6ehzks
   rai-news-Akj4X3X6IEY:
     canale: rai-news
     id: Akj4X3X6IEY
@@ -33517,6 +33822,11 @@ video:
     id: HjCAbGLLhX8
     titolo: A Varsavia tutti in coda per ammirare il fiore cadavere che odora di carne putrefatta
     url: https://youtu.be/HjCAbGLLhX8
+  rai-news-HljFsATMmVI:
+    canale: rai-news
+    id: HljFsATMmVI
+    titolo: Italian News in English - 2/11/2026
+    url: https://youtu.be/HljFsATMmVI
   rai-news-HojM56trfWQ:
     canale: rai-news
     id: HojM56trfWQ
@@ -33727,6 +34037,11 @@ video:
     id: IrpitLpg5TY
     titolo: 'Iran: The theocratic regime''s policy of repression and death sentences'
     url: https://youtu.be/IrpitLpg5TY
+  rai-news-Iu-U6xr3LL8:
+    canale: rai-news
+    id: Iu-U6xr3LL8
+    titolo: Maxi blitz della polizia, centinaia di arresti dopo i disordini
+    url: https://youtu.be/Iu-U6xr3LL8
   rai-news-Iupz4XSvz1E:
     canale: rai-news
     id: Iupz4XSvz1E
@@ -34067,6 +34382,11 @@ video:
     id: LCtKW8RpqPc
     titolo: 'Massimiliano Ossini, cronaca da base Concordia: il vento da nord rivela la sagoma del K2'
     url: https://youtu.be/LCtKW8RpqPc
+  rai-news-LDPGzj4X-1c:
+    canale: rai-news
+    id: LDPGzj4X-1c
+    titolo: L' arrivo dei feretri dei quattro militari morti in Bosnia
+    url: https://youtu.be/LDPGzj4X-1c
   rai-news-LFGbdJ7SZFY:
     canale: rai-news
     id: LFGbdJ7SZFY
@@ -34737,6 +35057,11 @@ video:
     id: PEYg1TtzJS0
     titolo: SERGIO ENDRIGO - Out of sight but not out of mind
     url: https://youtu.be/PEYg1TtzJS0
+  rai-news-PEpb9JZFKw4:
+    canale: rai-news
+    id: PEpb9JZFKw4
+    titolo: L'arrivo dei feretri di quattro militari italiani morti in Bosnia, l'omaggio di Mattarella e Meloni
+    url: https://youtu.be/PEpb9JZFKw4
   rai-news-PF0qg0G4KFc:
     canale: rai-news
     id: PF0qg0G4KFc
@@ -34807,6 +35132,11 @@ video:
     id: P_Hmqrl73io
     titolo: 'Sanremo 2025: Lucio Corsi''s first rehearsals with the orchestra'
     url: https://youtu.be/P_Hmqrl73io
+  rai-news-PccL0GY4EUg:
+    canale: rai-news
+    id: PccL0GY4EUg
+    titolo: 'Lucca Comics & Games: Barbascura X: l’entanglement quantistico raccontato in un minuto. Sembra magia'
+    url: https://youtu.be/PccL0GY4EUg
   rai-news-PdLUYsZ7O30:
     canale: rai-news
     id: PdLUYsZ7O30
@@ -36217,6 +36547,11 @@ video:
     id: Z0n1-9fqhTk
     titolo: 'Intervista a Cesare Cremonini: i sentimenti del pubblico sono il valore aggiunto delle canzoni'
     url: https://youtu.be/Z0n1-9fqhTk
+  rai-news-Z1HXK_ymR44:
+    canale: rai-news
+    id: Z1HXK_ymR44
+    titolo: 'Un Paperino in un minuto: Giorgio Cavazzano lo disegna per noi'
+    url: https://youtu.be/Z1HXK_ymR44
   rai-news-Z2Sq8Bbt2mc:
     canale: rai-news
     id: Z2Sq8Bbt2mc
@@ -36772,6 +37107,11 @@ video:
     id: bTw5iP3u2-k
     titolo: 'Sports for kids, social media, a psychologist, and electric cars: September''s family bonuses.'
     url: https://youtu.be/bTw5iP3u2-k
+  rai-news-bZ_q0K4Nwlk:
+    canale: rai-news
+    id: bZ_q0K4Nwlk
+    titolo: Famiglia nel bosco, Catherine docente di "intelligenza naturale" all'Istituto nazionale di pedagogia
+    url: https://youtu.be/bZ_q0K4Nwlk
   rai-news-bgdjnKVd-18:
     canale: rai-news
     id: bgdjnKVd-18
@@ -36947,6 +37287,11 @@ video:
     id: chkyv2BffHw
     titolo: Young man killed in Trani, 17-year-old turns himself in to police and confesses
     url: https://youtu.be/chkyv2BffHw
+  rai-news-cnB6ApZqB1Y:
+    canale: rai-news
+    id: cnB6ApZqB1Y
+    titolo: 'Frigoriferi impazziti in mezza Europa: cyberattacco ai supermercati, temperature a 50 gradi'
+    url: https://youtu.be/cnB6ApZqB1Y
   rai-news-coU83txYKeA:
     canale: rai-news
     id: coU83txYKeA
@@ -39097,6 +39442,11 @@ video:
     id: q8PlGB_NK5E
     titolo: Farewell Don Mazzi, lying in state at the Exodus community
     url: https://youtu.be/q8PlGB_NK5E
+  rai-news-qBGXwuSNSl8:
+    canale: rai-news
+    id: qBGXwuSNSl8
+    titolo: 'Heidi Klum "mano mozza": l''ex modella sfila in versione super splatter'
+    url: https://youtu.be/qBGXwuSNSl8
   rai-news-qEn0hvitwiE:
     canale: rai-news
     id: qEn0hvitwiE
@@ -40387,6 +40737,11 @@ video:
     id: yT09Tr6fXuQ
     titolo: 'September 11, 2001: How the Twin Towers Attack Changed Western History'
     url: https://youtu.be/yT09Tr6fXuQ
+  rai-news-yZXywXXm1FU:
+    canale: rai-news
+    id: yZXywXXm1FU
+    titolo: 'MappaMondi:  Trump al bivio, viaggio nel voto americano'
+    url: https://youtu.be/yZXywXXm1FU
   rai-news-y_Uwi2lSPaE:
     canale: rai-news
     id: y_Uwi2lSPaE
@@ -40487,6 +40842,11 @@ video:
     id: zEjiLAqaHTo
     titolo: 'I segreti di una disegnatrice: un''illustrazione nasce da un''idea, che nasce dallo studio'
     url: https://youtu.be/zEjiLAqaHTo
+  rai-news-zExQKWQAfvw:
+    canale: rai-news
+    id: zExQKWQAfvw
+    titolo: Come un missile il jet si schianta al suolo ed esplode
+    url: https://youtu.be/zExQKWQAfvw
   rai-news-zISf3HmGEuA:
     canale: rai-news
     id: zISf3HmGEuA
@@ -40602,6 +40962,11 @@ video:
     id: zx6QsneiTLs
     titolo: 'Israele prende il controllo della nave Madleen: il momento dell''irruzione'
     url: https://youtu.be/zx6QsneiTLs
+  solarino-sismologo--3EM3AjMaTQ:
+    canale: solarino-sismologo
+    id: -3EM3AjMaTQ
+    titolo: La prima escape room sui terremoti
+    url: https://youtu.be/-3EM3AjMaTQ
   solarino-sismologo--tpQ8lMtSGk:
     canale: solarino-sismologo
     id: -tpQ8lMtSGk
@@ -40897,6 +41262,11 @@ video:
     id: TCALB5mhddU
     titolo: Terremoti in pillole 28. Chi ha cambiato la magnitudo?
     url: https://youtu.be/TCALB5mhddU
+  solarino-sismologo-TwLs9nzpceA:
+    canale: solarino-sismologo
+    id: TwLs9nzpceA
+    titolo: Vi presto un libro....
+    url: https://youtu.be/TwLs9nzpceA
   solarino-sismologo-TzqpHu7DKVY:
     canale: solarino-sismologo
     id: TzqpHu7DKVY
@@ -41017,6 +41387,11 @@ video:
     id: dZFbnMYzSaw
     titolo: 'Terremoti in pillole 10: come si registrano i terremoti'
     url: https://youtu.be/dZFbnMYzSaw
+  solarino-sismologo-epqibSR6REo:
+    canale: solarino-sismologo
+    id: epqibSR6REo
+    titolo: Tutti i ....volti della Geofisica moderna
+    url: https://youtu.be/epqibSR6REo
   solarino-sismologo-fer6FOYTfbo:
     canale: solarino-sismologo
     id: fer6FOYTfbo
@@ -41072,6 +41447,11 @@ video:
     id: nNyb1ch50Ms
     titolo: Terremoti in pillole 16. Una sola magnitudo non basta!
     url: https://youtu.be/nNyb1ch50Ms
+  solarino-sismologo-nrnpCGMiEQU:
+    canale: solarino-sismologo
+    id: nrnpCGMiEQU
+    titolo: Il temporale provoca un black out, subito risolto
+    url: https://youtu.be/nrnpCGMiEQU
   solarino-sismologo-oJFvxQKlSoY:
     canale: solarino-sismologo
     id: oJFvxQKlSoY
@@ -41947,6 +42327,11 @@ video:
     id: BHQH-McG5hM
     titolo: Le giuste misure di prevenzione contro il Coronavirus | Wired Answers| Wired Italia
     url: https://youtu.be/BHQH-McG5hM
+  wired-italia-BIqI1TaR-ug:
+    canale: wired-italia
+    id: BIqI1TaR-ug
+    titolo: '#Paragon, a un anno dallo scandalo spionaggio non sono ancora arrivate risposte'
+    url: https://youtu.be/BIqI1TaR-ug
   wired-italia-BKCC11Ey7qc:
     canale: wired-italia
     id: BKCC11Ey7qc
@@ -42542,6 +42927,11 @@ video:
     id: KYm6WQuzsDw
     titolo: Anche Punga invaderà Roma con il suo Ultracorto! | Wired Italia
     url: https://youtu.be/KYm6WQuzsDw
+  wired-italia-KZ2YV4zM70Q:
+    canale: wired-italia
+    id: KZ2YV4zM70Q
+    titolo: Il primo “robot da compagnia” emotiva rischia di travolgere le relazioni cinesi
+    url: https://youtu.be/KZ2YV4zM70Q
   wired-italia-Kbi8jmELWc4:
     canale: wired-italia
     id: Kbi8jmELWc4
@@ -43462,6 +43852,11 @@ video:
     id: _7PNrtTCNT8
     titolo: WNF16 - Doomsday clock, mancano tre minuti alla fine del mondo | Wired Italia
     url: https://youtu.be/_7PNrtTCNT8
+  wired-italia-_8VDJjVAphI:
+    canale: wired-italia
+    id: _8VDJjVAphI
+    titolo: Che senso ha, oggi, un G7 Energia che non parla di transizione?
+    url: https://youtu.be/_8VDJjVAphI
   wired-italia-_98VFJPUoUs:
     canale: wired-italia
     id: _98VFJPUoUs

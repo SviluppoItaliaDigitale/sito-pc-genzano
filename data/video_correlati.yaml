@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 334 / Video unici usati: 270 /
-# Link totali: 1144 (max 5 per pagina,
+# Pagine coperte: 336 / Video unici usati: 274 /
+# Link totali: 1146 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -14,7 +14,7 @@ canali:
     nome: Abili a Proteggere
     tematico_pc: true
     url: https://www.youtube.com/@abiliaproteggere4520/videos
-    video_count: 131
+    video_count: 135
   cicap:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
@@ -24,7 +24,7 @@ canali:
     nome: CIMA Research Foundation
     tematico_pc: true
     url: https://www.youtube.com/@CIMAfondazione/videos
-    video_count: 89
+    video_count: 94
   cmcc:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
@@ -34,27 +34,27 @@ canali:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
     url: https://www.youtube.com/@CnsasCanaleUfficiale/videos
-    video_count: 56
+    video_count: 58
   dario-bressanini:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 138
+    video_count: 144
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 392
+    video_count: 394
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1348
+    video_count: 1356
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 156
+    video_count: 161
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1217
+    video_count: 1232
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 635
+    video_count: 648
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,17 +89,17 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2005
+    video_count: 2017
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 117
+    video_count: 121
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
     url: https://www.youtube.com/@WiredItalia/videos
-    video_count: 799
+    video_count: 802
 pagine:
   cartografia:
     title: Cartografia operativa del Piano di emergenza
@@ -458,16 +458,6 @@ pagine:
       score: 2.0
       titolo: Sicuri in Montagna - Come chiamare i soccorsi in ambiente impervio
       url: https://youtu.be/-mLtpjwaJVQ
-    - anchored:
-      - montagna
-      canale: cnsas
-      id: 0ntHvTt1IuQ
-      is_lis: false
-      overlap:
-      - montagna
-      score: 2.0
-      titolo: Sicuri in Montagna - Estote parati... Anche in montagna!
-      url: https://youtu.be/0ntHvTt1IuQ
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile:
     title: 'Neve ai Castelli Romani: cosa fare'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile/
@@ -823,6 +813,17 @@ pagine:
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
       - boschivo
+      canale: abili-a-proteggere
+      id: t5k-hftsChs
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.2
+      titolo: Visual Vernacular Incendi boschivi
+      url: https://youtu.be/t5k-hftsChs
+    - anchored:
+      - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
       is_lis: false
@@ -854,17 +855,6 @@ pagine:
       score: 2.2
       titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
       url: https://youtu.be/FPLoljB20QA
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: MzVgNeBjJSQ
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      score: 2.2
-      titolo: 'Incendi boschivi: le buone pratiche'
-      url: https://youtu.be/MzVgNeBjJSQ
   comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione:
     title: 'Esercitazione antincendio boschivo: come ci prepariamo'
     url: /comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/
@@ -2394,6 +2384,20 @@ pagine:
       url: https://youtu.be/7NKVJqnbt8c
     - anchored:
       - montagna
+      - sentiero
+      - sicuri
+      canale: cnsas
+      id: JEhyPLmVrEc
+      is_lis: false
+      overlap:
+      - montagna
+      - sentiero
+      - sicuri
+      score: 10.0
+      titolo: 'Sicuri sul Sentiero 2022 - Quando il Paese fa rete: montagna e sicurezza'
+      url: https://youtu.be/JEhyPLmVrEc
+    - anchored:
+      - montagna
       - sicuri
       canale: cnsas
       id: ka1TVa3ZAUw
@@ -2420,19 +2424,6 @@ pagine:
       score: 9.2
       titolo: 'Sicuri in Montagna - Freeride: free... Ma con delle regole'
       url: https://youtu.be/YMfRmwyiQv4
-    - anchored:
-      - montagna
-      - sicuri
-      canale: cnsas
-      id: IWz8cJyJWsQ
-      is_lis: false
-      overlap:
-      - montagna
-      - salita
-      - sicuri
-      score: 9.0
-      titolo: 'Sicuri in Montagna: scialpinismo, la salita'
-      url: https://youtu.be/IWz8cJyJWsQ
   comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile:
     title: 'Escursioni in montagna: come stare al sicuro'
     url: /comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile/
@@ -3062,6 +3053,17 @@ pagine:
     video:
     - anchored:
       - boschivo
+      canale: abili-a-proteggere
+      id: t5k-hftsChs
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: Visual Vernacular Incendi boschivi
+      url: https://youtu.be/t5k-hftsChs
+    - anchored:
+      - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
       is_lis: false
@@ -3104,17 +3106,6 @@ pagine:
       score: 2.4
       titolo: 'Incendi boschivi: le buone pratiche'
       url: https://youtu.be/MzVgNeBjJSQ
-    - anchored:
-      - boschivo
-      canale: io-non-rischio
-      id: 9tYSNBQY7OY
-      is_lis: true
-      overlap:
-      - boschivo
-      - incendio
-      score: 2.4
-      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
-      url: https://youtu.be/9tYSNBQY7OY
   comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026:
     title: 'Incendi boschivi: l''ordinanza del Sindaco per l''estate 2026. Divieti e obblighi fino al 15 ottobre'
     url: /comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/
@@ -3873,6 +3864,20 @@ pagine:
       score: 8.4
       titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
       url: https://youtu.be/qhaxcNNmi-E
+  comunicazioni/2026-07-01-luglio-mese-piu-caldo-statistico:
+    title: 'Luglio: storicamente il mese più caldo dell''anno'
+    url: /comunicazioni/2026-07-01-luglio-mese-piu-caldo-statistico/
+    video:
+    - anchored:
+      - piena
+      canale: natgeo-italia
+      id: 87iroPg26Qk
+      is_lis: false
+      overlap:
+      - piena
+      score: 2.0
+      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
+      url: https://youtu.be/87iroPg26Qk
   comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa:
     title: 'IRIDE operativa nel 2026: i nuovi occhi italiani sul territorio'
     url: /comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa/
@@ -4912,6 +4917,17 @@ pagine:
       url: https://youtu.be/9tYSNBQY7OY
     - anchored:
       - boschivo
+      canale: abili-a-proteggere
+      id: t5k-hftsChs
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: Visual Vernacular Incendi boschivi
+      url: https://youtu.be/t5k-hftsChs
+    - anchored:
+      - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
       is_lis: false
@@ -4932,17 +4948,6 @@ pagine:
       score: 2.4
       titolo: Spot 2012 sul rischio incendi boschivi
       url: https://youtu.be/53yYyLsFW3Q
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: FPLoljB20QA
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      score: 2.4
-      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
-      url: https://youtu.be/FPLoljB20QA
   comunicazioni/2026-08-03-rischio-incendi-agosto-picco-facile:
     title: 'Incendi boschivi in agosto: cosa fare'
     url: /comunicazioni/2026-08-03-rischio-incendi-agosto-picco-facile/
@@ -6161,6 +6166,17 @@ pagine:
       url: https://youtu.be/MXnPOoJ9y0c
     - anchored:
       - satellite
+      canale: link4universe
+      id: T-wp_8A2eRE
+      is_lis: false
+      overlap:
+      - lancio
+      - satellite
+      score: 7.0
+      titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
+      url: https://youtu.be/T-wp_8A2eRE
+    - anchored:
+      - satellite
       canale: ingv-vulcani
       id: -7lSBNfnToM
       is_lis: false
@@ -6179,16 +6195,6 @@ pagine:
       score: 6.0
       titolo: Etna, 2 marzo 2021 – L’eruzione vista dal satellite
       url: https://youtu.be/0pcdcnhfG-E
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 1HBw30dCsQU
-      is_lis: false
-      overlap:
-      - satellite
-      score: 6.0
-      titolo: Etna, 7 marzo 2021 – L’eruzione vista dal satellite (2)
-      url: https://youtu.be/1HBw30dCsQU
   comunicazioni/2026-09-04-fulmini-protezione-civile-autoprotezione-facile:
     title: 'Fulmini: cosa fare per stare al sicuro'
     url: /comunicazioni/2026-09-04-fulmini-protezione-civile-autoprotezione-facile/
@@ -6321,6 +6327,16 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
+    - anchored:
+      - piena
+      canale: natgeo-italia
+      id: 87iroPg26Qk
+      is_lis: false
+      overlap:
+      - piena
+      score: 2.0
+      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
+      url: https://youtu.be/87iroPg26Qk
   comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi:
     title: 'Un giorno di pioggia: otto interventi tra alberi caduti, tombini e una voragine'
     url: /comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/
@@ -7395,6 +7411,18 @@ pagine:
       titolo: Lancio SpaceX Falcon9  con Satellite militare Coreano.
       url: https://youtu.be/MXnPOoJ9y0c
     - anchored:
+      - lancio
+      - satellite
+      canale: link4universe
+      id: T-wp_8A2eRE
+      is_lis: false
+      overlap:
+      - lancio
+      - satellite
+      score: 4.0
+      titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
+      url: https://youtu.be/T-wp_8A2eRE
+    - anchored:
       - satellite
       canale: ingv-vulcani
       id: -7lSBNfnToM
@@ -7416,17 +7444,6 @@ pagine:
       score: 3.0
       titolo: Etna, 2 marzo 2021 – L’eruzione vista dal satellite
       url: https://youtu.be/0pcdcnhfG-E
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 1HBw30dCsQU
-      is_lis: false
-      overlap:
-      - satellite
-      - vista
-      score: 3.0
-      titolo: Etna, 7 marzo 2021 – L’eruzione vista dal satellite (2)
-      url: https://youtu.be/1HBw30dCsQU
   comunicazioni/2026-10-11-genova-2014-alluvione-bisagno-tre-anni-dopo:
     title: 'Genova, 9 ottobre 2014: il Bisagno esonda di nuovo, tre anni dopo il Fereggiano'
     url: /comunicazioni/2026-10-11-genova-2014-alluvione-bisagno-tre-anni-dopo/
@@ -7765,6 +7782,17 @@ pagine:
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
       - boschivo
+      canale: abili-a-proteggere
+      id: t5k-hftsChs
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: Visual Vernacular Incendi boschivi
+      url: https://youtu.be/t5k-hftsChs
+    - anchored:
+      - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
       is_lis: false
@@ -7796,17 +7824,6 @@ pagine:
       score: 2.4
       titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
       url: https://youtu.be/FPLoljB20QA
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: MzVgNeBjJSQ
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      score: 2.4
-      titolo: 'Incendi boschivi: le buone pratiche'
-      url: https://youtu.be/MzVgNeBjJSQ
   comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno:
     title: 'Neve e gelo: la casa e l''auto pronte prima dell''inverno'
     url: /comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/
@@ -7930,6 +7947,20 @@ pagine:
       score: 2.0
       titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
       url: https://youtu.be/o4BFEUB_0ak
+  comunicazioni/2026-10-23-strade-allagate-auto-sottopassi-facile:
+    title: 'Strada piena d''acqua: con l''auto non si passa'
+    url: /comunicazioni/2026-10-23-strade-allagate-auto-sottopassi-facile/
+    video:
+    - anchored:
+      - piena
+      canale: natgeo-italia
+      id: 87iroPg26Qk
+      is_lis: false
+      overlap:
+      - piena
+      score: 6.0
+      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
+      url: https://youtu.be/87iroPg26Qk
   comunicazioni/2026-10-24-come-nasce-allerta-meteo-video-3d:
     title: 'Come nasce un''allerta meteo: un video in 3D'
     url: /comunicazioni/2026-10-24-come-nasce-allerta-meteo-video-3d/
@@ -8054,6 +8085,17 @@ pagine:
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
       - boschivo
+      canale: abili-a-proteggere
+      id: t5k-hftsChs
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      score: 2.4
+      titolo: Visual Vernacular Incendi boschivi
+      url: https://youtu.be/t5k-hftsChs
+    - anchored:
+      - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
       is_lis: false
@@ -8074,17 +8116,6 @@ pagine:
       score: 2.4
       titolo: Spot 2012 sul rischio incendi boschivi
       url: https://youtu.be/53yYyLsFW3Q
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: FPLoljB20QA
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      score: 2.4
-      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
-      url: https://youtu.be/FPLoljB20QA
   comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d:
     title: 'Pioggia forte e alluvioni: un video in 3D sui Castelli Romani'
     url: /comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d/
@@ -9955,6 +9986,18 @@ pagine:
       titolo: COMEN-Conferenza Mediterranea, presentazione sui maremoti nel mar Mediterraneo e in Italia 2022
       url: https://youtu.be/1CnpbVOIQLA
     - anchored:
+      - mediterraneo
+      - tsunami
+      canale: ingv-terremoti
+      id: 3HwRHV6Z3hY
+      is_lis: false
+      overlap:
+      - mediterraneo
+      - tsunami
+      score: 12.0
+      titolo: Giornate ONT 2026 | Deposizione delle boe per il monitoraggio degli tsunami nel Mar Mediterraneo
+      url: https://youtu.be/3HwRHV6Z3hY
+    - anchored:
       - maremoto
       - tsunami
       canale: ingv-terremoti
@@ -9966,18 +10009,6 @@ pagine:
       score: 12.0
       titolo: Comportamenti pericolosi in caso di Tsunami. Gli effetti del maremoto del mar Egeo del 30.10.2020
       url: https://youtu.be/IFlOYHy5hmQ
-    - anchored:
-      - maremoto
-      - tsunami
-      canale: ingv-terremoti
-      id: UgAcbTC4rbA
-      is_lis: false
-      overlap:
-      - maremoto
-      - tsunami
-      score: 12.0
-      titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
-      url: https://youtu.be/UgAcbTC4rbA
   conoscere/catalogo-dei-rischi/rischio-neve-gelo:
     title: Il rischio da neve e gelo
     url: /conoscere/catalogo-dei-rischi/rischio-neve-gelo/
@@ -11578,6 +11609,17 @@ pagine:
       titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
       url: https://youtu.be/CiSTPzoI_zs
     - anchored:
+      - piena
+      canale: natgeo-italia
+      id: 87iroPg26Qk
+      is_lis: false
+      overlap:
+      - piena
+      - sorge
+      score: 3.0
+      titolo: Nel crepuscolo artico, la luna piena sorge mentre un orso polare si muove tra le rocce
+      url: https://youtu.be/87iroPg26Qk
+    - anchored:
       - tempesta
       canale: geopop
       id: cmEzpKqaTEU
@@ -11597,16 +11639,6 @@ pagine:
       score: 2.0
       titolo: Una Super-Tempesta di Meteore in Arrivo?
       url: https://youtu.be/Z51K4zh0APg
-    - anchored:
-      - tempesta
-      canale: link4universe
-      id: dbtYw22YtLU
-      is_lis: false
-      overlap:
-      - tempesta
-      score: 2.0
-      titolo: Il Titanic "affondato" da una tempesta solare ?
-      url: https://youtu.be/dbtYw22YtLU
   dossier/vajont-la-diga-che-resse:
     title: La diga che resse, la montagna che cadde
     url: /dossier/vajont-la-diga-che-resse/
