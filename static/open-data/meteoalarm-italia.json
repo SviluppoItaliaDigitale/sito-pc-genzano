@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-02T02:10:00+00:00",
+  "generato": "2026-11-02T09:32:22+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 41,
-  "scaduti_scartati": 14,
-  "in_corso": 31,
+  "avvisi": 40,
+  "scaduti_scartati": 15,
+  "in_corso": 30,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -255,19 +255,6 @@
    "fine": "2026-11-02T23:59:00+00:00",
    "emesso": "2026-11-01T10:27:49+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261101112749.095"
-  },
-  {
-   "in_corso": true,
-   "regione": "Abruzzo",
-   "fenomeno": "Neve e ghiaccio",
-   "livello": "gialla",
-   "evento_originale": "Yellow Snow-ice Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-01T09:00:00+00:00",
-   "fine": "2026-11-02T05:59:00+00:00",
-   "emesso": "2026-11-01T10:27:49+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261101112749.088"
   },
   {
    "in_corso": false,
