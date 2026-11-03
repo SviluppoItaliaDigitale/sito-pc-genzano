@@ -861,6 +861,12 @@
     - "LIS"
   definizione: "Lingua dei segni italiana: la lingua delle persone sorde in Italia, riconosciuta dallo Stato. Alcuni contenuti del sito sono disponibili in LIS."
   link: "/glossario/#lis"
+- id: lim
+  termine: "LIM"
+  varianti:
+    - "LIM"
+  definizione: "Lavagna interattiva multimediale: lo schermo touch usato in classe, collegato a un computer, su cui si proietta e si scrive col dito o con la penna."
+  link: "/glossario/#lim"
 - id: undrr
   termine: "UNDRR"
   varianti:
