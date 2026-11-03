@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-11-01"
+dataUltimaRevisione: "2026-11-03"
 ---
 
 Video brevi da proiettare in classe sulla LIM o con il proiettore. Hanno la voce e i sottotitoli già nel video, quindi si capiscono anche con l'audio basso. Sono in formato orizzontale 16:9: avviali e usa lo schermo intero del lettore.
@@ -49,6 +49,21 @@ Terremoto: cosa fare prima, durante e dopo la scossa. Nessuno può sapere quando
 </details>
 
 Per approfondire: [Rischio sismico](/rischi-prevenzione/rischio-sismico/).
+
+## Terremoto: una casa vista dall'interno
+
+**Durata:** 3 min 32 s · **Nel programma dell'anno:** Primaria 3ª-5ª, ottobre: «Terremoto: prima, durante, dopo»; primaria 1ª-2ª, maggio: «La mia casa preparata»
+
+{{< video src="/video/2026-11-03-terremoto-casa-interno-video-3d-16x9.mp4" poster="/video/2026-11-03-terremoto-casa-interno-video-3d-16x9-poster.webp" titolo="Video con voce e sottotitoli: Terremoto, una casa vista dall'interno" >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Una casa come tante, ai Castelli Romani. Entriamo: è un giorno qualunque. Guardiamola con occhi diversi. La libreria alta non è fissata al muro. Sopra il divano ci sono una mensola e un quadro. La TV è appoggiata sul mobile, senza niente che la tenga. In cucina, piatti e bicchieri stanno dietro ante che si aprono. E sul parapetto del balcone ci sono vasi pesanti, sopra la strada. Arriva la scossa. Il lampadario oscilla, i libri scivolano. Il vaso cade sul divano, il quadro si stacca dal gancio. La TV scivola e cade a terra. Le ante si spalancano e i piatti finiscono sul pavimento. La libreria si inclina e si rovescia. Fuori, dal balcone cadono i vasi. Dal tetto si staccano tegole e pezzi di cornicione, e anche un balcone può cedere. Per questo, all'aperto, ci si allontana dagli edifici e si cerca uno spazio libero. Chi è nella stanza non corre fuori: a ferire sono soprattutto gli oggetti che cadono e i crolli. Si abbassa, si ripara sotto il tavolo robusto, protegge testa e collo e si tiene a una gamba del tavolo. Lontano da finestre e mobili alti. Durante la scossa non si usano le scale e nemmeno l'ascensore, che può bloccarsi. Riavvolgiamo. Stessa casa, stessa scossa: questa volta preparata prima. Vediamo come. La libreria si fissa al muro con staffe a L, viti e tasselli. Quadri e specchi si appendono con ganci chiusi, che non li lasciano saltare via. E sopra il divano, niente oggetti pesanti. La TV si fissa al mobile o alla parete, con una cinghia o una staffa. Gli oggetti pesanti vanno sui ripiani bassi. Quelli in alto si fermano con il nastro biadesivo. Alle ante della cucina si mette un fermo: così, durante la scossa, restano chiuse. I vasi si tolgono dal parapetto e dal davanzale, oppure si fissano bene. Impara dove si chiudono gas, acqua e luce. Tieni pronti cassetta di pronto soccorso, torcia e radio a pile. E per muri, solai, cornicioni e balconi, chiedi a un tecnico di fiducia: sa dirti se la casa va rinforzata. Ora la scossa arriva... e nulla cade. Quando la scossa finisce, controlla che chi è con te stia bene. Metti le scarpe, perché a terra possono esserci vetri. Chiudi il gas e la luce, ed esci con prudenza verso l'area di attesa. Non rientrare finché non lo dicono le autorità. Il terremoto non si può prevedere. Ma una casa preparata fa la differenza. Su protezionecivilegenzano.it trovi che cosa fare e le aree di attesa di Genzano.
+
+</details>
+
+Per approfondire: [Terremoto: una casa vista dall'interno](/comunicazioni/2026-11-03-terremoto-casa-interno-video-3d/), con le precauzioni spiegate una per una.
 
 ## Il vulcano dei Colli Albani
 

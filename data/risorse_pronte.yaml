@@ -332,6 +332,18 @@ materiali:
   dimensione: 4.7 MB
   data_pubblicazione: '2026-05-18'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-sismico-video-3d-casa-2026-11-03
+  tema: rischio-sismico
+  tema_titolo: Rischio sismico
+  tipo: video
+  titolo: "Video in 3D: terremoto, una casa vista dall'interno"
+  descrizione: Video verticale con voce e sottotitoli (3 minuti e mezzo). Che cosa cade
+    in casa durante la scossa e come metterla in sicurezza, una cosa alla volta. Pronto
+    da condividere dal telefono.
+  file_url: /video/2026-11-03-terremoto-casa-interno-video-3d.mp4
+  dimensione: 36.8 MB
+  data_pubblicazione: '2026-11-03'
+  licenza: CC BY-NC-SA 4.0
 - id: rischio-sismico-video-3d-2026-10-29
   tema: rischio-sismico
   tema_titolo: Rischio sismico

@@ -185,6 +185,7 @@ Il riparo "abbassati, copriti, tieniti" va adattato: la regola è **proteggere l
 **Sul nostro sito**
 
 - **In un video:** [Il terremoto dalla A alla Z](/comunicazioni/2026-10-29-terremoto-dalla-a-alla-z-video-3d/) — un video in 3D di 14 minuti, con voce e sottotitoli, dalla storia alla prevenzione.
+- **In un video:** [Terremoto: una casa vista dall'interno](/comunicazioni/2026-11-03-terremoto-casa-interno-video-3d/) — tre minuti e mezzo in 3D: che cosa cade in casa durante la scossa e come metterla in sicurezza.
 - **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — il rischio sismico spiegato come materia, dal fenomeno alla scienza.
 - [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) — contesto vulcano-tettonico del nostro territorio
 - [Cartografia](/cartografia/) — aree di attesa e di emergenza
