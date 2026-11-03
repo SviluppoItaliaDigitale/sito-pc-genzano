@@ -1,6 +1,6 @@
 ---
 title: "Polesine, 14 novembre 1951: la grande alluvione del Po"
-date: 2026-11-15
+date: 2026-11-15T00:01:00+01:00
 description: "Settantacinque anni fa il Po ruppe gli argini a Occhiobello e allagò il Polesine per settimane: oltre 113.000 ettari sott'acqua, 101 vittime, 180.000 sfollati."
 badge: "Informazione"
 priorita: "normale"
