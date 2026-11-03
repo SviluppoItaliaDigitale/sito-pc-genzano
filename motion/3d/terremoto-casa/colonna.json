@@ -1,0 +1,161 @@
+{
+ "voce": [
+  {
+   "file": "voce/line_1.wav",
+   "inizio": 0.45
+  },
+  {
+   "file": "voce/line_2.wav",
+   "inizio": 9.4
+  },
+  {
+   "file": "voce/line_3.wav",
+   "inizio": 22.88
+  },
+  {
+   "file": "voce/line_4.wav",
+   "inizio": 42.68
+  },
+  {
+   "file": "voce/line_5.wav",
+   "inizio": 60.82
+  },
+  {
+   "file": "voce/line_6.wav",
+   "inizio": 68.56
+  },
+  {
+   "file": "voce/line_7.wav",
+   "inizio": 93.72
+  },
+  {
+   "file": "voce/line_8.wav",
+   "inizio": 111.34
+  }
+ ],
+ "durata": 125.67,
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 8.95
+  },
+  {
+   "inizio": 8.95,
+   "durata": 13.48
+  },
+  {
+   "inizio": 22.43,
+   "durata": 19.8
+  },
+  {
+   "inizio": 42.23,
+   "durata": 18.14
+  },
+  {
+   "inizio": 60.37,
+   "durata": 7.74
+  },
+  {
+   "inizio": 68.11,
+   "durata": 25.16
+  },
+  {
+   "inizio": 93.27,
+   "durata": 17.62
+  },
+  {
+   "inizio": 110.89,
+   "durata": 14.78
+  }
+ ],
+ "musica": [
+  {
+   "file": "audio/longnote.mp3",
+   "inizio": 0,
+   "fine": 68.46000000000001,
+   "da": 0,
+   "entrata": 1.5,
+   "uscita": 0.8
+  },
+  {
+   "file": "audio/cleansoul.mp3",
+   "inizio": 68.76,
+   "fine": 125.67,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 3.0
+  }
+ ],
+ "effetti": [
+  {
+   "file": "audio/sfx/swoosh_1.mp3",
+   "evento": 3.91,
+   "tipo": "colpo",
+   "durata": 1.6
+  },
+  {
+   "file": "audio/sfx/scossa_1.mp3",
+   "evento": 22.78,
+   "tipo": "colpo",
+   "durata": 3.0
+  },
+  {
+   "file": "audio/sfx/vaso_2.mp3",
+   "evento": 30.52,
+   "tipo": "colpo",
+   "durata": 1.6
+  },
+  {
+   "file": "audio/sfx/libreria_1.mp3",
+   "evento": 35.11,
+   "tipo": "colpo",
+   "durata": 1.0
+  },
+  {
+   "file": "audio/sfx/swoosh_2.mp3",
+   "evento": 61.07,
+   "tipo": "colpo",
+   "durata": 1.6
+  },
+  {
+   "file": "audio/sfx/rewind_1.mp3",
+   "inizio": 68.46,
+   "tipo": "colpo",
+   "durata": 1.8
+  },
+  {
+   "file": "audio/sfx/staffa_1.mp3",
+   "evento": 75.82,
+   "tipo": "colpo",
+   "durata": 1.0
+  },
+  {
+   "file": "audio/sfx/scossa_2.mp3",
+   "evento": 87.2,
+   "tipo": "colpo",
+   "durata": 1.0
+  },
+  {
+   "file": "audio/sfx/swoosh_1.mp3",
+   "evento": 111.79,
+   "tipo": "colpo",
+   "durata": 1.6
+  },
+  {
+   "file": "audio/rombo1.wav",
+   "inizio": 22.38,
+   "fine": 60.37,
+   "tipo": "ambiente",
+   "entrata": 0.3,
+   "uscita": 1.5
+  },
+  {
+   "file": "audio/rombo2.wav",
+   "inizio": 86.905,
+   "fine": 92.905,
+   "tipo": "ambiente",
+   "entrata": 0.3,
+   "uscita": 1.0
+  }
+ ]
+}
