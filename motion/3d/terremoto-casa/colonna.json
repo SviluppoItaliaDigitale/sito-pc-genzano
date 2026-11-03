@@ -1,0 +1,353 @@
+{
+ "voce": [
+  {
+   "file": "voce/line_1.wav",
+   "inizio": 0.45
+  },
+  {
+   "file": "voce/line_2.wav",
+   "inizio": 9.4
+  },
+  {
+   "file": "voce/line_3.wav",
+   "inizio": 31.68
+  },
+  {
+   "file": "voce/line_4.wav",
+   "inizio": 52.92
+  },
+  {
+   "file": "voce/line_5.wav",
+   "inizio": 70.07
+  },
+  {
+   "file": "voce/line_6.wav",
+   "inizio": 88.21
+  },
+  {
+   "file": "voce/line_7.wav",
+   "inizio": 95.75
+  },
+  {
+   "file": "voce/line_8.wav",
+   "inizio": 105.01
+  },
+  {
+   "file": "voce/line_9.wav",
+   "inizio": 112.68
+  },
+  {
+   "file": "voce/line_10.wav",
+   "inizio": 123.27
+  },
+  {
+   "file": "voce/line_11.wav",
+   "inizio": 130.91
+  },
+  {
+   "file": "voce/line_12.wav",
+   "inizio": 139.56
+  },
+  {
+   "file": "voce/line_13.wav",
+   "inizio": 147.99
+  },
+  {
+   "file": "voce/line_14.wav",
+   "inizio": 155.64
+  },
+  {
+   "file": "voce/line_15.wav",
+   "inizio": 172.48
+  },
+  {
+   "file": "voce/line_16.wav",
+   "inizio": 180.36
+  },
+  {
+   "file": "voce/line_17.wav",
+   "inizio": 197.98
+  }
+ ],
+ "durata": 212.31,
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 8.95
+  },
+  {
+   "inizio": 8.95,
+   "durata": 22.28
+  },
+  {
+   "inizio": 31.23,
+   "durata": 21.24
+  },
+  {
+   "inizio": 52.47,
+   "durata": 17.15
+  },
+  {
+   "inizio": 69.62,
+   "durata": 18.14
+  },
+  {
+   "inizio": 87.76,
+   "durata": 7.54
+  },
+  {
+   "inizio": 95.3,
+   "durata": 9.26
+  },
+  {
+   "inizio": 104.56,
+   "durata": 7.67
+  },
+  {
+   "inizio": 112.23,
+   "durata": 10.59
+  },
+  {
+   "inizio": 122.82,
+   "durata": 7.64
+  },
+  {
+   "inizio": 130.46,
+   "durata": 8.65
+  },
+  {
+   "inizio": 139.11,
+   "durata": 8.43
+  },
+  {
+   "inizio": 147.54,
+   "durata": 7.65
+  },
+  {
+   "inizio": 155.19,
+   "durata": 16.84
+  },
+  {
+   "inizio": 172.03,
+   "durata": 7.88
+  },
+  {
+   "inizio": 179.91,
+   "durata": 17.62
+  },
+  {
+   "inizio": 197.53,
+   "durata": 14.78
+  }
+ ],
+ "effetti": [
+  {
+   "file": "audio/sfx/swoosh_1.mp3",
+   "evento": 3.91,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "audio/rombo1.wav",
+   "inizio": 31.18,
+   "fine": 85.258,
+   "tipo": "ambiente",
+   "entrata": 0.3,
+   "uscita": 1.5
+  },
+  {
+   "file": "audio/sfx/scossa_1.mp3",
+   "evento": 31.38,
+   "tipo": "colpo",
+   "volume": 0
+  },
+  {
+   "file": "audio/sfx/libreria_2.mp3",
+   "evento": 35.4,
+   "tipo": "colpo",
+   "volume": -8
+  },
+  {
+   "file": "audio/sfx/vaso_2.mp3",
+   "evento": 37.25,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "audio/sfx/libreria_1.mp3",
+   "evento": 39.33,
+   "tipo": "colpo",
+   "volume": -7
+  },
+  {
+   "file": "audio/sfx/libreria_2.mp3",
+   "evento": 41.5,
+   "tipo": "colpo",
+   "volume": -2
+  },
+  {
+   "file": "audio/sfx/vaso_1.mp3",
+   "evento": 43.83,
+   "tipo": "colpo",
+   "volume": -1
+  },
+  {
+   "file": "audio/sfx/libreria_1.mp3",
+   "evento": 47.86,
+   "tipo": "colpo",
+   "volume": 0
+  },
+  {
+   "file": "audio/sfx/swoosh_2.mp3",
+   "evento": 52.37,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "audio/sfx/vaso_1.mp3",
+   "evento": 55.1,
+   "tipo": "colpo",
+   "volume": -2
+  },
+  {
+   "file": "audio/sfx/vaso_2.mp3",
+   "evento": 55.47,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "audio/sfx/vaso_2.mp3",
+   "evento": 57.74,
+   "tipo": "colpo",
+   "volume": -6
+  },
+  {
+   "file": "audio/sfx/libreria_2.mp3",
+   "evento": 58.66,
+   "tipo": "colpo",
+   "volume": -2
+  },
+  {
+   "file": "audio/sfx/scossa_2.mp3",
+   "evento": 60.27,
+   "tipo": "colpo",
+   "volume": -2
+  },
+  {
+   "file": "audio/sfx/vaso_2.mp3",
+   "evento": 60.97,
+   "tipo": "colpo",
+   "volume": -7
+  },
+  {
+   "file": "audio/sfx/swoosh_1.mp3",
+   "evento": 70.02,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "audio/sfx/rewind_1.mp3",
+   "evento": 96.45,
+   "tipo": "colpo",
+   "volume": 0
+  },
+  {
+   "file": "audio/sfx/staffa_1.mp3",
+   "evento": 107.73,
+   "tipo": "colpo",
+   "volume": -2
+  },
+  {
+   "file": "audio/sfx/staffa_2.mp3",
+   "evento": 108.03,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "audio/sfx/staffa_2.mp3",
+   "evento": 114.8,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "audio/sfx/staffa_1.mp3",
+   "evento": 127.03,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "audio/sfx/staffa_2.mp3",
+   "evento": 127.43,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "audio/sfx/libreria_2.mp3",
+   "evento": 132.75,
+   "tipo": "colpo",
+   "volume": -8
+  },
+  {
+   "file": "audio/sfx/staffa_2.mp3",
+   "evento": 136.19,
+   "tipo": "colpo",
+   "volume": -6
+  },
+  {
+   "file": "audio/sfx/staffa_1.mp3",
+   "evento": 141.94,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "audio/sfx/swoosh_2.mp3",
+   "evento": 163.24,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "audio/sfx/swoosh_1.mp3",
+   "evento": 172.63,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "audio/rombo2.wav",
+   "inizio": 173.14,
+   "fine": 178.74,
+   "tipo": "ambiente",
+   "entrata": 0.3,
+   "uscita": 1.0
+  },
+  {
+   "file": "audio/sfx/scossa_2.mp3",
+   "evento": 173.29,
+   "tipo": "colpo",
+   "volume": -1
+  },
+  {
+   "file": "audio/sfx/swoosh_2.mp3",
+   "evento": 198.13,
+   "tipo": "colpo",
+   "volume": -4
+  }
+ ],
+ "musica": [
+  {
+   "file": "audio/longnote.mp3",
+   "inizio": 0,
+   "fine": 95.65,
+   "da": 0,
+   "entrata": 1.5,
+   "uscita": 0.8
+  },
+  {
+   "file": "audio/cleansoul.mp3",
+   "inizio": 95.95,
+   "fine": 212.31,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 3.0
+  }
+ ]
+}

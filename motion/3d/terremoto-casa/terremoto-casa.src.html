@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terremoto: una casa vista dall'interno</title>
+<!-- terremoto-casa.src.html — video 3D divulgativo (versione 2): una casa su due piani durante la scossa, prima senza e poi
+     con le precauzioni, con i primi piani su come si mette in sicurezza ogni cosa (Protezione Civile Genzano di Roma).
+     Scritto per Alessandro Cuollo il 03/11/2026 sul modello della skill video-3d, senza codice di terzi. Si costruisce
+     con costruisci.py di video-3d (three.js 0.181.2 MIT, motore 3D, impaginazione, font) e i dati tempi (ritmo.py) e
+     sottotitoli (voce.py tempi). Tutto dipende solo da t: render(t) deterministico.
+     Coordinate in metri: pavimento della stanza (primo piano) a y = 0, x da -3 a 3 (ovest-est), z da -2,5 (parete di
+     fondo, verso la strada) a 2,5. Il piano terra va da y = -3 a 0; strada e marciapiede dietro la casa (z < -3).
+     Il pianerottolo con scale e ascensore sta a parte, attorno a x = 12. -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #livello-scena { z-index: 2; }
+  #livello-fx { z-index: 3; pointer-events: none; }
+  #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="livello-scena"></canvas>
+  <canvas id="livello-fx"></canvas>
+  <div id="fonte" data-componente="fonte-3d"></div>
+</div>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: "Terremoto: una casa vista dall'interno",
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  capitoli: ['UNA CASA', 'I PERICOLI', 'LA SCOSSA', 'COSA FARE', 'RIAVVOLGIAMO', 'LA PREVENZIONE', 'LA PROVA', 'DOPO', 'PREPARATI'],
+  capitoloDi: [0, 1, 2, 2, 3, 3, 4, 5, 5, 5, 5, 5, 5, 5, 6, 7, 8],
+  hud: ['UNA CASA', 'I PERICOLI', 'LA SCOSSA', 'FUORI', 'COSA FARE', 'SCALE', 'RIAVVOLGIAMO', 'LIBRERIA', 'QUADRI',
+        'LA TV', 'IN ALTO', 'CUCINA', 'BALCONE', 'GAS E KIT', 'LA PROVA', 'DOPO', 'PREPARATI'],
+  nota: 'SIMULAZIONE · NON IN SCALA',
+  fonte: 'Fonte: Dipartimento della Protezione Civile\nprotezionecivilegenzano.it/rischi-prevenzione/rischio-sismico',
+  chiave: ['scossa', 'libreria', 'mensola', 'TV', 'cucina', 'ante', 'vasi', 'tegole', 'cornicione', 'cedere', 'allontana',
+           'tavolo', 'abbassa', 'ripara', 'testa', 'collo', 'tiene', 'scale', "l'ascensore", 'staffe', 'tasselli', 'ganci',
+           'cinghia', 'bassi', 'nastro', 'fermo', 'tolgono', 'gas', 'acqua', 'cassetta', 'torcia', 'radio', 'tecnico',
+           'nulla', 'scarpe', 'attesa', 'prevedere', 'preparata', 'protezionecivilegenzano.it'],
+  modo: 'parole'
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const TEMPI = dato('tempi') || { scene: Array.from({ length: 17 }, (_, i) => ({ inizio: i * 12, durata: 12 })), totale: 204 };
+const SOTT = dato('sottotitoli') || [];
+// le frasi lunghe si mostrano a pezzi (frasi intere, al massimo ~125 caratteri), così il sottotitolo resta su tre righe
+const FRASI = [];
+SOTT.forEach(f => {
+  const chiave = (f.chiave || []).concat(CONFIG.chiave), P = f.parole || [];
+  const parti = String(f.testo).trim().split(/\s+/);
+  if (f.testo.length <= 130 || P.length !== parti.length) { FRASI.push(Object.assign({}, f, { chiave })); return; }
+  let da = 0, n = 0;
+  const chiudi = (a) => {
+    FRASI.push({ inizio: da === 0 ? f.inizio : P[da].t0, fine: a === parti.length ? f.fine : P[a].t0 - .02,
+      testo: parti.slice(da, a).join(' '), parole: P.slice(da, a), chiave });
+    da = a;
+  };
+  for (let i = 0; i < parti.length; i++) {
+    n += parti[i].length + 1;
+    const fineFrase = /[.:;?!]$/.test(parti[i]) && i < parti.length - 1;
+    const resto = parti.slice(i + 1).join(' ').length;
+    if (fineFrase && n > 45 && resto > 30) { chiudi(i + 1); n = 0; }
+  }
+  if (da < parti.length) chiudi(parti.length);
+});
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const P = new URLSearchParams(location.search);
+  const formato = P.get('formato') || CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
+  const SC = TEMPI.scene, TOTAL = TEMPI.totale || SC[SC.length - 1].inizio + SC[SC.length - 1].durata;
+  const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, ease, hash } = M3;
+  const fin = M3.finestra;
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
+  const liscia = u => { u = clamp(u); return u * u * (3 - 2 * u); };
+  const esplodi = u => { u = clamp(u); return u * u * u * (u * (6 * u - 15) + 10); };   // parte e arriva piano
+
+  /* istante di una parola detta nella scena k (dai sottotitoli), con riserva in proporzione */
+  const norma = w => String(w).toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, '');
+  function parola(k, w, n = 0, riserva = 0.5) {
+    const f = SOTT[k];
+    if (f && f.parole) {
+      let c = 0;
+      for (const p of f.parole) if (norma(p.w) === norma(w) || norma(p.w).startsWith(norma(w)) && norma(w).length > 3) { if (c === n) return p.t0; c++; }
+    }
+    return S(k) + D(k) * riserva;
+  }
+
+  const stage = document.getElementById('stage');
+  const nCap = CONFIG.capitoli.length;
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud[0], passiHUD: nCap, nota: CONFIG.nota });
+  IMP.anteprima(stage);
+
+  const vicino = M3.creaRenderer(document.getElementById('livello-scena'), W, H, { scala: 0.8 });
+  const scena = new THREE.Scene();
+  const camera = M3.creaCamera(W, H, { fov: 32, zona: L.zona });
+  const fx = document.getElementById('livello-fx');
+  fx.width = W / 2; fx.height = H / 2; fx.style.width = W + 'px'; fx.style.height = H + 'px';
+  const gfx = fx.getContext('2d');
+
+  /* ---------------------------------------------------------------- luci */
+  scena.add(new THREE.HemisphereLight(0xeef3ff, 0x2a3346, 1.15));
+  const sole = new THREE.DirectionalLight(0xfff4e6, 1.55); sole.position.set(4, 8, 6); scena.add(sole);
+  const contro = new THREE.DirectionalLight(0xb7cdf5, 0.85); contro.position.set(-5, 5, -7); scena.add(contro);
+
+  /* ---------------------------------------------------------------- texture e materiali */
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 1; return t;
+  }
+  const FT = "'Titillium Web', sans-serif";
+  const tinta = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, metalness: 0.03, roughness: 0.7 }, o));
+  const base = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+  const box = (w, h, d, mat) => new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  const cil = (r1, r2, h, mat, seg = 16) => new THREE.Mesh(new THREE.CylinderGeometry(r1, r2, h, seg), mat);
+  const texOmbra = tela(128, 128, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(0,0,0,.55)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function ombra(rx, rz) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(rx * 2, rz * 2), base(0xffffff, { map: texOmbra, transparent: true, depthWrite: false }));
+    m.rotation.x = -Math.PI / 2; m.position.y = 0.006; return m;
+  }
+  const texParquet = tela(512, 512, (g, w, h) => {
+    for (let i = 0; i < 16; i++) {
+      for (let j = 0; j < 4; j++) {
+        const v = 150 + Math.floor(hash(i * 7.1 + j * 3.3) * 40);
+        g.fillStyle = `rgb(${v},${Math.floor(v * .72)},${Math.floor(v * .48)})`;
+        const off = (i % 2) * 64;
+        g.fillRect(j * 128 + off - 128, i * 32, 128, 32); g.fillRect(j * 128 + off, i * 32, 128, 32);
+      }
+      g.fillStyle = 'rgba(60,35,15,.35)'; g.fillRect(0, i * 32, w, 2);
+    }
+  });
+  texParquet.wrapS = texParquet.wrapT = THREE.RepeatWrapping; texParquet.repeat.set(3, 2.5);
+  const texCrepa = tela(256, 64, (g, w, h) => {        // crepa irregolare (balcone, cornicione)
+    g.strokeStyle = 'rgba(25,20,18,.95)'; g.lineWidth = 5; g.beginPath(); g.moveTo(0, h / 2);
+    for (let i = 1; i <= 16; i++) g.lineTo(i * w / 16, h / 2 + (hash(i * 3.7) - .5) * h * .8);
+    g.stroke(); g.lineWidth = 2;
+    for (let i = 2; i < 16; i += 3) { g.beginPath(); g.moveTo(i * w / 16, h / 2); g.lineTo(i * w / 16 + 10, h * (hash(i) > .5 ? .05 : .95)); g.stroke(); }
+  });
+  const matMuro = tinta(0xe6ebf1, { roughness: .9, emissive: 0x2a2f36, emissiveIntensity: .55 });
+  const matMuroEst = tinta(0xf0ece2, { roughness: .9 });
+  const matLegno = tinta(0x8a5a36, { roughness: .6 });
+  const matLegnoScuro = tinta(0x5b3a22, { roughness: .6 });
+  const matBianco = tinta(0xf7f8fa, { roughness: .5 });
+  const matMetallo = tinta(0xb8c0ca, { metalness: .7, roughness: .3 });
+  const matStaffa = tinta(0xdfe6ee, { metalness: .6, roughness: .25, emissive: 0x3a4655, emissiveIntensity: .6 });
+  const matOro = tinta(0xd4a017, { metalness: .6, roughness: .35, emissive: 0x3a2a00, emissiveIntensity: .45 });
+  const matFermo = tinta(0xf5c518, { roughness: .4, emissive: 0x6b4f00, emissiveIntensity: .7 });
+  const matVetroAzz = base(0x9cc6ea);
+  // pareti della stanza: faccia interna chiara, le altre in intonaco esterno (ordine facce: +x, -x, +y, -y, +z, -z)
+  const facce = interna => [0, 1, 2, 3, 4, 5].map(i => i === interna ? matMuro : matMuroEst);
+
+  /* ---------------------------------------------------------------- terreno: prato, marciapiede, strada, piazza */
+  const quartiere = new THREE.Group(); scena.add(quartiere);        // tutto ciò che trema con la scossa
+  const YT = -3;                                                     // quota del terreno
+  const terreno = new THREE.Group(); quartiere.add(terreno);
+  const zoccoloT = box(18.4, .5, 22.4, tinta(0x2a3546, { roughness: 1 })); zoccoloT.position.set(0, YT - .3, -1.5); terreno.add(zoccoloT);
+  const prato = box(18, .1, 12, tinta(0x6b9a4a, { roughness: 1 })); prato.position.set(0, YT - .05, 3.0); terreno.add(prato);
+  const marciapiede = box(18, .14, 1.4, tinta(0xc4c8cc, { roughness: .95 })); marciapiede.position.set(0, YT - .0, -3.7); terreno.add(marciapiede);
+  const cordolo = box(18, .16, .12, tinta(0x9aa1a9, { roughness: .9 })); cordolo.position.set(0, YT + .0, -4.44); terreno.add(cordolo);
+  const strada = box(18, .1, 4.6, tinta(0x3d434c, { roughness: .95 })); strada.position.set(0, YT - .05, -6.7); terreno.add(strada);
+  for (let i = -3; i <= 3; i++) {
+    const s = box(1.4, .01, .12, base(0xe5e7eb)); s.position.set(i * 2.6, YT + .006, -6.7); terreno.add(s);
+  }
+  const piazza = box(18, .1, 3.3, tinta(0xb9b0a0, { roughness: .95 })); piazza.position.set(0, YT - .05, -10.65); terreno.add(piazza);
+  [[-6.8, -10.9], [6.6, -11.1], [-7.6, 6.8]].forEach(([x, z], i) => {
+    const tr = cil(.09, .12, 1.4, tinta(0x5b3a22), 8); tr.position.set(x, YT + .7, z); terreno.add(tr);
+    const ch = new THREE.Mesh(new THREE.SphereGeometry(.8 + .15 * hash(i), 14, 10), tinta(0x3f7a35, { roughness: 1 })); ch.position.set(x, YT + 1.9, z); terreno.add(ch);
+  });
+  const vialetto = box(1.2, .02, 6.2, tinta(0xc9c2b2, { roughness: 1 })); vialetto.position.set(0, YT + .01, 5.8); terreno.add(vialetto);
+
+  /* ---------------------------------------------------------------- la casa */
+  const casa = new THREE.Group(); quartiere.add(casa);
+  const HM = 2.8, SP = 0.14;
+  // piano terra (blocco pieno con finestre e portone) e fasce
+  const pianoTerra = box(6.28, 2.95, 5.28, matMuroEst); pianoTerra.position.y = -1.525; casa.add(pianoTerra);
+  const zoccoloCasa = box(6.36, .45, 5.36, tinta(0xb9b2a4, { roughness: .95 })); zoccoloCasa.position.y = YT + .22; casa.add(zoccoloCasa);
+  const marcapiano = box(6.46, .14, 5.46, tinta(0xd6d3cc, { roughness: .9 })); marcapiano.position.y = -.08; casa.add(marcapiano);
+  function finestraEst(gr, x, y, z, verso) {          // verso = +1 facciata davanti (z+), -1 dietro (z-)
+    const f = box(1.0, 1.1, .04, matVetroAzz); f.position.set(x, y, z + verso * .02); gr.add(f);
+    const c = box(1.12, .08, .12, matBianco); c.position.set(x, y - .6, z + verso * .05); gr.add(c);
+    const m = box(.05, 1.1, .05, matBianco); m.position.set(x, y, z + verso * .045); gr.add(m);
+    [-1, 1].forEach(s => { const p = box(.32, 1.18, .03, tinta(0x3f6e4f, { roughness: .8 })); p.position.set(x + s * .68, y, z + verso * .03); gr.add(p); });
+  }
+  finestraEst(casa, -1.7, -1.45, 2.64, 1); finestraEst(casa, 1.7, -1.45, 2.64, 1);
+  finestraEst(casa, -1.7, -1.45, -2.64, -1); finestraEst(casa, 1.6, -1.45, -2.64, -1);
+  const portone = box(1.0, 2.1, .06, tinta(0x7a4b2b)); portone.position.set(0, YT + 1.05, 2.66); casa.add(portone);
+
+  // primo piano: la stanza
+  const pav = new THREE.Mesh(new THREE.BoxGeometry(6.3, 0.12, 5.3), [matLegnoScuro, matLegnoScuro, tinta(0xffffff, { map: texParquet, roughness: .75 }), matLegnoScuro, matLegnoScuro, matLegnoScuro]);
+  pav.position.y = -0.06; casa.add(pav);
+  // parete di fondo con la portafinestra del balcone (vano fra x = 1,05 e 2,05, alto 2,2)
+  const DX = 1.55, DW = 1.0, DH = 2.2, ZF = -2.5 - SP / 2;
+  const fondoA = new THREE.Mesh(new THREE.BoxGeometry(4.19, HM, SP), facce(4)); fondoA.position.set(-3.14 + 4.19 / 2, HM / 2, ZF); casa.add(fondoA);
+  const fondoB = new THREE.Mesh(new THREE.BoxGeometry(1.09, HM, SP), facce(4)); fondoB.position.set(2.05 + 1.09 / 2, HM / 2, ZF); casa.add(fondoB);
+  const fondoC = new THREE.Mesh(new THREE.BoxGeometry(DW, HM - DH, SP), facce(4)); fondoC.position.set(DX, DH + (HM - DH) / 2, ZF); casa.add(fondoC);
+  const muroSx = new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 5.28), facce(0)); muroSx.position.set(-3 - SP / 2, HM / 2, 0); casa.add(muroSx);
+  // parete destra con la porta d'ingresso (vano fra z = -1,65 e -0,75)
+  const muroDxA = new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 3.39), facce(1)); muroDxA.position.set(3 + SP / 2, HM / 2, -0.75 + 3.39 / 2); casa.add(muroDxA);
+  const muroDxB = new THREE.Mesh(new THREE.BoxGeometry(SP, HM, .99), facce(1)); muroDxB.position.set(3 + SP / 2, HM / 2, -2.64 + .99 / 2); casa.add(muroDxB);
+  const muroDxC = new THREE.Mesh(new THREE.BoxGeometry(SP, HM - 2.1, .9), facce(1)); muroDxC.position.set(3 + SP / 2, 2.1 + (HM - 2.1) / 2, -1.2); casa.add(muroDxC);
+  [[-1.95, -2.49, 2.1, 0], [-2.99, 0, 5, 1]].forEach(([x, z, l, r]) => {
+    const b = box(r ? .02 : l, .08, r ? l : .02, tinta(0xb9c3cf)); b.position.set(x, .04, z); casa.add(b);
+  });
+  const portaPerno = new THREE.Group(); portaPerno.position.set(3.0, 0, -0.75); casa.add(portaPerno);
+  const porta = box(0.05, 2.08, 0.9, tinta(0x7a4b2b, { roughness: .55 })); porta.position.set(0, 1.04, -0.45); portaPerno.add(porta);
+  const maniglia = box(0.08, 0.03, 0.12, matMetallo); maniglia.position.set(-0.05, 1.0, -0.8); portaPerno.add(maniglia);
+  const telaio = box(0.06, 0.06, 1.0, matBianco); telaio.position.set(2.98, 2.11, -1.2); casa.add(telaio);
+
+  // portafinestra: telaio, due vetri, crepa e schegge (prima scossa)
+  const pf = new THREE.Group(); pf.position.set(DX, 0, ZF); casa.add(pf);
+  [[0, DH + .03, DW + .1, .07], [-DW / 2, DH / 2, .07, DH], [DW / 2, DH / 2, .07, DH], [0, DH / 2, .05, DH]].forEach(([x, y, w, h]) => {
+    const m = box(w, h, .1, matBianco); m.position.set(x, y, 0); pf.add(m);
+  });
+  [-1, 1].forEach(s => {
+    const v = new THREE.Mesh(new THREE.PlaneGeometry(DW / 2 - .06, DH - .04), base(0xdbeeff, { transparent: true, opacity: 0.16, depthWrite: false, side: THREE.DoubleSide }));
+    v.position.set(s * DW / 4, DH / 2, 0); pf.add(v);
+  });
+  const pomolo = box(.03, .14, .04, matMetallo); pomolo.position.set(-.06, 1.05, .06); pf.add(pomolo);
+  const texCrepe = tela(512, 512, (g, w, h) => {
+    g.strokeStyle = 'rgba(255,255,255,.95)'; g.lineWidth = 3;
+    const cx = w * .55, cy = h * .42;
+    for (let i = 0; i < 11; i++) {
+      const a = i / 11 * Math.PI * 2 + hash(i) * .4; let x = cx, y = cy; g.beginPath(); g.moveTo(x, y);
+      for (let k = 0; k < 5; k++) { x += Math.cos(a + (hash(i * 9 + k) - .5) * .7) * 60; y += Math.sin(a + (hash(i * 5 + k) - .5) * .7) * 60; g.lineTo(x, y); }
+      g.stroke();
+    }
+    for (let r = 30; r < 200; r += 55) { g.beginPath(); g.arc(cx, cy, r, 0, 6.28); g.globalAlpha = .55; g.stroke(); g.globalAlpha = 1; }
+  });
+  const crepe = new THREE.Mesh(new THREE.PlaneGeometry(DW / 2 - .06, (DH - .04) * .6), base(0xffffff, { map: texCrepe, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
+  crepe.position.set(DW / 4, DH * .62, .012); pf.add(crepe);
+  const schegge = new THREE.Group(); casa.add(schegge);
+  for (let i = 0; i < 12; i++) {
+    const s = new THREE.Mesh(new THREE.CircleGeometry(.04 + .05 * hash(i * 3.1), 3), base(0xcfe6ff, { transparent: true, opacity: .85 }));
+    s.rotation.x = -Math.PI / 2; s.rotation.z = hash(i * 1.3) * 6;
+    s.position.set(DX + (hash(i * 2.7) - .2) * .7, 0.012, -2.35 + hash(i * 4.1) * .55); schegge.add(s);
+  }
+
+  // balcone: perno sul filo del muro, così può «cedere» abbassandosi verso la strada
+  const matBalc = matMuroEst.clone();
+  const matCopertina = tinta(0xd6d3cc, { roughness: .85 });
+  const balc = new THREE.Group(); balc.position.set(DX, 0, -2.64); casa.add(balc);
+  const soletta = box(1.6, .15, .96, matBalc); soletta.position.set(0, -.075, -.48); balc.add(soletta);
+  const parapetti = [[0, .5, -.92, 1.6, 1.0, .08], [-.76, .5, -.48, .08, 1.0, .88], [.76, .5, -.48, .08, 1.0, .88]];
+  parapetti.forEach(([x, y, z, w, h, d]) => { const m = box(w, h, d, matBalc); m.position.set(x, y, z); balc.add(m); });
+  [[0, 1.02, -.92, 1.68, .04, .14], [-.76, 1.02, -.48, .14, .04, .9], [.76, 1.02, -.48, .14, .04, .9]].forEach(([x, y, z, w, h, d]) => {
+    const m = box(w, h, d, matCopertina); m.position.set(x, y, z); balc.add(m);
+  });
+  const crepaBalc = new THREE.Mesh(new THREE.PlaneGeometry(1.5, .12), base(0xffffff, { map: texCrepa, transparent: true, depthWrite: false }));
+  crepaBalc.rotation.x = -Math.PI / 2; crepaBalc.position.set(0, .004, -.07); balc.add(crepaBalc);
+  const crepaSotto = new THREE.Mesh(new THREE.PlaneGeometry(1.5, .14), base(0xffffff, { map: texCrepa, transparent: true, depthWrite: false }));
+  crepaSotto.position.set(0, -.08, -.962); crepaSotto.rotation.y = Math.PI; balc.add(crepaSotto);
+  const calcinacci = [];
+  for (let i = 0; i < 5; i++) {
+    const c = box(.06 + .06 * hash(i * 2.2), .05 + .04 * hash(i), .07, tinta(0xbdb6a8, { roughness: 1 })); casa.add(c);
+    calcinacci.push({ c, p0: V(DX - .6 + i * .3, -.1, -3.3 - .2 * hash(i * 5)), p1: V(DX - .7 + i * .35 + (hash(i * 7) - .5) * .3, YT + .05, -4.0 - 1.2 * hash(i * 9)), d: i * .09 });
+  }
+
+  // vasi sul parapetto del balcone
+  const texTerra = tela(64, 64, (g, w) => { g.fillStyle = '#4a3020'; g.beginPath(); g.arc(32, 32, 30, 0, 6.29); g.fill(); g.fillStyle = '#3a2416'; for (let i = 0; i < 10; i++) { g.beginPath(); g.arc(10 + hash(i) * 44, 10 + hash(i * 3) * 44, 3 + 3 * hash(i * 5), 0, 6.29); g.fill(); } });
+  const vasiB = [];
+  [-.5, 0, .5].forEach((dx, i) => {
+    const g = new THREE.Group(); casa.add(g);
+    const pot = new THREE.Mesh(new THREE.LatheGeometry([[0, 0], [.09, 0], [.12, .2], [.13, .22], [0, .22]].map(p => new THREE.Vector2(p[0], p[1])), 18), tinta(0xc1663f, { roughness: .75 }));
+    g.add(pot);
+    const pianta = new THREE.Mesh(new THREE.SphereGeometry(.15, 12, 9), tinta([0x3f8f3a, 0x4d9a3e, 0x387f33][i], { roughness: .9 }));
+    pianta.position.y = .32; pianta.scale.set(1, .85, 1); g.add(pianta);
+    [0, 1, 2].forEach(k => { const fi = new THREE.Mesh(new THREE.SphereGeometry(.03, 6, 5), base([0xe11d48, 0xf59e0b, 0xffffff][(i + k) % 3])); fi.position.set(Math.cos(k * 2.1 + i) * .11, .38, Math.sin(k * 2.1 + i) * .11); g.add(fi); });
+    const cocci = new THREE.Group(); casa.add(cocci);
+    const terra = new THREE.Mesh(new THREE.CircleGeometry(.2, 16), base(0xffffff, { map: texTerra, transparent: true }));
+    terra.rotation.x = -Math.PI / 2; terra.position.y = .008; cocci.add(terra);
+    for (let k = 0; k < 6; k++) { const c = box(.06, .02, .05, tinta(0xc1663f)); c.position.set((hash(k * 3 + i) - .5) * .5, .012, (hash(k * 7 + i) - .5) * .4); c.rotation.y = hash(k + i * 9) * 6; cocci.add(c); }
+    const up = V(DX + dx, 1.04, -3.56), giu = V(DX + dx * 1.3 + (hash(i * 4) - .5) * .2, YT + .1, -5.0 - .45 * i), pav2 = V(DX + dx * 1.1, 0, -3.3);
+    cocci.position.set(giu.x, YT + .0, giu.z);
+    vasiB.push({ g, pianta, cocci, up, giu, pav: pav2, rx: 1.45 + .2 * i, rz: (hash(i * 6) - .5) * 1.5 });
+  });
+
+  // libreria contro la parete di fondo: perno sullo spigolo anteriore in basso, cade verso +z
+  const LBX = -1.8, LBW = 1.0, LBH = 2.1, LBD = 0.36;
+  const librPerno = new THREE.Group(); librPerno.position.set(LBX, 0, -2.5 + LBD); casa.add(librPerno);
+  const libreria = new THREE.Group(); libreria.position.z = -LBD / 2; librPerno.add(libreria);
+  [[0, LBH / 2, -LBD / 2 + .01, LBW, LBH, .02], [-LBW / 2, LBH / 2, 0, .04, LBH, LBD], [LBW / 2, LBH / 2, 0, .04, LBH, LBD], [0, LBH - .02, 0, LBW, .04, LBD]].forEach(([x, y, z, w, h, d]) => {
+    const m = box(w, h, d, matLegno); m.position.set(x, y, z); libreria.add(m);
+  });
+  const COL_LIBRI = [0xb3261e, 0x1f4e79, 0x2f7d4f, 0xe0a422, 0x6b3fa0, 0x334155, 0xc2410c, 0x0e7490];
+  const ripiani = [0.04, 0.55, 1.05, 1.55];
+  ripiani.forEach((y, r) => {
+    const rp = box(LBW - .06, .03, LBD - .02, matLegno); rp.position.set(0, y, 0); libreria.add(rp);
+    let x = -LBW / 2 + .06;
+    for (let i = 0; x < LBW / 2 - .1; i++) {
+      if (r === 3 && x > -0.1) break;            // i libri dell'ultimo ripiano a destra cadono (oggetti separati)
+      const lw = .045 + .03 * hash(r * 17 + i), lh = .26 + .12 * hash(r * 11 + i * 3);
+      const b = box(lw, lh, .22, tinta(COL_LIBRI[(r * 3 + i) % COL_LIBRI.length])); b.position.set(x + lw / 2, y + .015 + lh / 2, .02); libreria.add(b);
+      x += lw + .006;
+    }
+  });
+  // in cima: scatola pesante, statuina e orologio (nella casa preparata la scatola scende, gli altri hanno il biadesivo)
+  const scatola = box(.36, .3, .3, tinta(0x9a7b55, { roughness: .9 })); libreria.add(scatola);
+  const nastroScat = box(.37, .035, .012, tinta(0xc8a96b)); nastroScat.position.set(0, .0, .151); scatola.add(nastroScat);
+  const scatolaSu = V(0.22, LBH + .15, 0), scatolaGiu = V(0.68, .15, -0.02);
+  const statuina = new THREE.Group(); statuina.position.set(-.36, LBH + .006, 0); libreria.add(statuina);
+  const stBase = cil(.04, .045, .03, tinta(0x334155), 12); stBase.position.y = .015; statuina.add(stBase);
+  const stCorpo = cil(.025, .04, .14, tinta(0x6b8fb5, { roughness: .4 }), 12); stCorpo.position.y = .1; statuina.add(stCorpo);
+  const stTesta = new THREE.Mesh(new THREE.SphereGeometry(.03, 10, 8), tinta(0x6b8fb5, { roughness: .4 })); stTesta.position.y = .2; statuina.add(stTesta);
+  const orologio = new THREE.Group(); orologio.position.set(-.15, LBH + .006, 0); libreria.add(orologio);
+  const orCassa = cil(.065, .065, .045, tinta(0xb45309, { roughness: .5 }), 20); orCassa.rotation.x = Math.PI / 2; orCassa.position.y = .07; orologio.add(orCassa);
+  const orFaccia = new THREE.Mesh(new THREE.CircleGeometry(.052, 20), base(0xfafafa)); orFaccia.position.set(0, .07, .024); orologio.add(orFaccia);
+  const orPiede = box(.08, .012, .04, tinta(0x7c2d12)); orPiede.position.y = .006; orologio.add(orPiede);
+  const biadesivi = [statuina, orologio].map(o => {
+    const n = box(.1, .006, .08, tinta(0xffd400, { roughness: .4, emissive: 0x7a5a00, emissiveIntensity: .8 }));
+    n.position.set(o.position.x, LBH + .003, 0); libreria.add(n); return n;
+  });
+  // libri che scivolano dall'ultimo ripiano (coordinate della casa)
+  const libriCadono = [];
+  for (let i = 0; i < 5; i++) {
+    const lw = .06, lh = .3 + .06 * hash(i * 5.5);
+    const b = box(lw, lh, .22, tinta(COL_LIBRI[(i + 2) % COL_LIBRI.length]));
+    const p0 = V(LBX + 0.0 + i * .075, 1.55 + .015 + lh / 2, -2.5 + LBD / 2 + .02);
+    const p1 = V(LBX - .1 + i * .14 + (hash(i) - .5) * .1, .03, -1.85 + hash(i * 2.3) * .55);
+    casa.add(b); libriCadono.push({ b, p0, p1, lh, t0: .0 + i * .12, rot: (hash(i * 7) - .5) * 3 });
+  }
+  // staffe a L, viti e tasselli (vista esplosa nella casa preparata), mostrate grandi: è uno schema
+  const staffe = [];
+  [-LBW / 2 + .08, LBW / 2 - .08].forEach((x, i) => {
+    const g = new THREE.Group();
+    const a = box(.05, .16, .012, matStaffa); a.position.set(0, -.06, -.004); g.add(a);
+    const b = box(.05, .012, .16, matStaffa); b.position.set(0, .0, .074); g.add(b);
+    const vite = new THREE.Group(); vite.position.set(0, -.08, -.05); g.add(vite);
+    const gambo = cil(.012, .012, .14, matOro, 8); gambo.rotation.x = Math.PI / 2; vite.add(gambo);
+    const testa = cil(.024, .024, .012, matOro, 12); testa.rotation.x = Math.PI / 2; testa.position.z = .06; vite.add(testa);
+    const tassello = cil(.018, .016, .08, tinta(0xf1f5f9, { roughness: .5, emissive: 0x334155, emissiveIntensity: .4 }), 10);
+    tassello.rotation.x = Math.PI / 2; g.add(tassello);
+    g.position.set(LBX + x, LBH + .006, -2.5 + .006); g.scale.setScalar(2.6); casa.add(g);
+    staffe.push({ g, base: g.position.clone(), vite, viteBase: vite.position.clone(), tassello, tasBase: V(0, -.08, -.06) });
+  });
+
+  // mobile basso (credenza) con la TV
+  const CX = -0.25, TVZ = -2.32;
+  const credenza = box(1.0, .5, .42, matLegno); credenza.position.set(CX, .25, -2.5 + .21); casa.add(credenza);
+  [-0.2, 0.2].forEach(x => { const a = box(.46, .42, .01, tinta(0x9c6b44)); a.position.set(CX + x * 1.1, .26, -2.5 + .425); casa.add(a); });
+  const texTV = tela(256, 160, (g, w, h) => {
+    const gr = g.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#1b2b47'); gr.addColorStop(1, '#070b14'); g.fillStyle = gr; g.fillRect(0, 0, w, h);
+    g.fillStyle = 'rgba(255,255,255,.09)'; g.beginPath(); g.moveTo(w * .18, 0); g.lineTo(w * .4, 0); g.lineTo(w * .08, h); g.lineTo(0, h); g.lineTo(0, h * .75); g.fill();
+  });
+  const tv = new THREE.Group(); tv.position.set(CX, .5, TVZ); casa.add(tv);
+  const tvPiede = box(.34, .02, .17, tinta(0x1f2937, { metalness: .4, roughness: .4 })); tvPiede.position.y = .01; tv.add(tvPiede);
+  const tvCollo = box(.06, .1, .04, tinta(0x1f2937, { metalness: .4, roughness: .4 })); tvCollo.position.set(0, .07, -.02); tv.add(tvCollo);
+  const tvPannello = box(.95, .56, .045, tinta(0x111827, { metalness: .3, roughness: .35 })); tvPannello.position.y = .1 + .28; tv.add(tvPannello);
+  const tvSchermo = new THREE.Mesh(new THREE.PlaneGeometry(.91, .52), base(0xffffff, { map: texTV })); tvSchermo.position.set(0, .38, .024); tv.add(tvSchermo);
+  // cinghie anti-ribaltamento (vista esplosa) e staffetta sul piede
+  const cinghie = new THREE.Group(); casa.add(cinghie);
+  const cinghieSingole = [-.36, .36].map(dx => {
+    const g = new THREE.Group(); g.position.set(CX + dx, .5 + .62, TVZ - .025); cinghie.add(g);
+    const nastro = box(.03, .012, .2, tinta(0x111827, { roughness: .8 })); nastro.rotation.x = .71; nastro.position.set(0, .065, -.075); g.add(nastro);
+    const fibbia = box(.045, .03, .035, matFermo); fibbia.position.set(0, .035, -.04); g.add(fibbia);
+    const piastraTV = box(.06, .05, .01, matStaffa); piastraTV.position.set(0, -.01, -.002); g.add(piastraTV);
+    const piastraMuro = box(.07, .07, .012, matStaffa); piastraMuro.position.set(0, .13, -.15); g.add(piastraMuro);
+    return { g, base: g.position.clone() };
+  });
+  const staffaPiede = new THREE.Group(); staffaPiede.position.set(CX, .5, TVZ + .09); casa.add(staffaPiede);
+  const spA = box(.1, .012, .05, matStaffa); spA.position.set(0, .006, .02); staffaPiede.add(spA);
+  const spB = box(.1, .035, .012, matStaffa); spB.position.set(0, .02, .044); staffaPiede.add(spB);
+  const spBase = staffaPiede.position.clone();
+
+  // divano contro la parete sinistra, mensola con vaso e quadro sopra
+  const divano = new THREE.Group(); divano.position.set(-2.52, 0, 1.25); casa.add(divano);
+  const matDiv = tinta(0x4a6d8f, { roughness: .95 });
+  const seduta = box(.86, .42, 1.9, matDiv); seduta.position.set(0.05, .21, 0); divano.add(seduta);
+  const schienale = box(.24, .5, 1.9, matDiv); schienale.position.set(-0.36, .6, 0); divano.add(schienale);
+  [-1, 1].forEach(s => { const br = box(.86, .28, .16, matDiv); br.position.set(0.05, .56, s * .95); divano.add(br); });
+  [-.45, .45].forEach(z => { const c = box(.5, .14, .78, tinta(0x5b82a8, { roughness: .95 })); c.position.set(.12, .49, z); divano.add(c); });
+  divano.add(ombra(.6, 1.15));
+  const mensola = box(.26, .04, 1.0, matBianco.clone());   // materiale proprio: si dissolve da sola
+  mensola.position.set(-3 + .13, 1.92, 1.25); casa.add(mensola);
+  const vaso = new THREE.Group(); casa.add(vaso);
+  const vasoC = new THREE.Mesh(new THREE.LatheGeometry([[0, 0], [.08, 0], [.11, .08], [.1, .2], [.06, .28], [.07, .32], [0, .32]].map(p => new THREE.Vector2(p[0], p[1])), 20), tinta(0x2a8c8c, { roughness: .35 }));
+  vaso.add(vasoC);
+  const vasoSu = V(-2.86, 1.94, 1.25), vasoDivano = V(-2.38, .56, 1.0), vasoBasso = V(-2.72, 0, -.25);
+  const QX = -3 + .02, QY = 1.38, QZ = 1.3, QD = V(-2.42, .64, 1.62);
+  const quadro = new THREE.Group(); quadro.position.set(QX, QY, QZ); casa.add(quadro);
+  const texQuadro = tela(256, 192, (g, w, h) => {
+    const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, '#8fb6d9'); gr.addColorStop(.6, '#dfe9f2'); gr.addColorStop(.6, '#6f8f4f'); gr.addColorStop(1, '#4f6b35');
+    g.fillStyle = gr; g.fillRect(0, 0, w, h);
+    g.fillStyle = '#3d5a2a'; g.beginPath(); g.moveTo(0, h * .62); g.quadraticCurveTo(w * .35, h * .3, w * .7, h * .6); g.lineTo(w, h * .55); g.lineTo(w, h); g.lineTo(0, h); g.fill();
+  });
+  const qCorn = box(.03, .5, .7, matLegnoScuro.clone()); quadro.add(qCorn);
+  const qTela = new THREE.Mesh(new THREE.PlaneGeometry(.62, .42), base(0xffffff, { map: texQuadro })); qTela.rotation.y = Math.PI / 2; qTela.position.x = .017; quadro.add(qTela);
+  // ganci: modello aperto e chiuso (piccoli, quelli veri sopra il quadro; grandi, quelli dello schema)
+  const texNo = tela(128, 128, (g) => { g.fillStyle = '#dc2626'; g.beginPath(); g.arc(64, 64, 60, 0, 6.29); g.fill(); g.strokeStyle = '#fff'; g.lineWidth = 16; g.lineCap = 'round'; g.beginPath(); g.moveTo(40, 40); g.lineTo(88, 88); g.moveTo(88, 40); g.lineTo(40, 88); g.stroke(); });
+  const texSi = tela(128, 128, (g) => { g.fillStyle = '#16a34a'; g.beginPath(); g.arc(64, 64, 60, 0, 6.29); g.fill(); g.strokeStyle = '#fff'; g.lineWidth = 16; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath(); g.moveTo(34, 68); g.lineTo(56, 90); g.lineTo(96, 40); g.stroke(); });
+  function gancio(chiuso, cartello) {
+    const g = new THREE.Group(), r = new THREE.Group(); g.add(r);
+    const gambo = cil(.012, .012, .2, matOro, 10); gambo.position.y = .1; r.add(gambo);
+    const anello = new THREE.Mesh(new THREE.TorusGeometry(.06, .013, 10, 32, chiuso ? Math.PI * 2 : Math.PI * 1.55), matOro);
+    anello.rotation.z = Math.PI / 2; anello.position.y = -.06; r.add(anello);
+    if (chiuso) { const molla = box(.012, .05, .012, matOro); molla.position.set(.035, -.012, 0); molla.rotation.z = -.5; r.add(molla); }
+    if (cartello) {
+      const c = new THREE.Mesh(new THREE.PlaneGeometry(.12, .12), base(0xffffff, { map: chiuso ? texSi : texNo, transparent: true }));
+      c.position.set(0, -.22, 0); r.add(c);
+    }
+    r.rotation.y = Math.PI / 2;          // guardano verso la stanza (+x)
+    return g;
+  }
+  const gancioVeroAperto = gancio(false, false); gancioVeroAperto.position.set(-2.975, 1.71, QZ); gancioVeroAperto.scale.setScalar(.38); casa.add(gancioVeroAperto);
+  const gancioVeroChiuso = gancio(true, false); gancioVeroChiuso.position.set(-2.975, 1.71, QZ); gancioVeroChiuso.scale.setScalar(.38); casa.add(gancioVeroChiuso);
+  const gancioGrandeAperto = gancio(false, true); gancioGrandeAperto.position.set(-2.45, 1.52, 2.2); casa.add(gancioGrandeAperto);
+  const gancioGrandeChiuso = gancio(true, true); gancioGrandeChiuso.position.set(-2.45, 1.52, .38); casa.add(gancioGrandeChiuso);
+
+  // cucina sulla parete sinistra: base con piano, pensili con tre ante, piatti e bicchieri
+  const KZ = -1.55, KL = 1.8;
+  const matCucina = tinta(0xd5dbe1, { roughness: .55 }), matAnta = tinta(0x7f9fb6, { roughness: .45 });
+  const baseCuc = box(.6, .86, KL, matCucina); baseCuc.position.set(-2.7, .43, KZ); casa.add(baseCuc);
+  const pianoCuc = box(.64, .04, KL + .04, tinta(0x4b5563, { roughness: .45 })); pianoCuc.position.set(-2.68, .88, KZ); casa.add(pianoCuc);
+  [-.6, 0, .6].forEach(dz => { const ab = box(.02, .74, .57, matAnta); ab.position.set(-2.39, .45, KZ + dz); casa.add(ab); });
+  const pens = new THREE.Group(); pens.position.set(-2.825, 1.8, KZ); casa.add(pens);
+  [[-.16, 0, 0, .02, .7, KL], [0, .34, 0, .35, .02, KL], [0, -.34, 0, .35, .02, KL], [0, 0, -KL / 2, .35, .7, .02], [0, 0, KL / 2, .35, .7, .02], [0, 0, -.3, .33, .68, .015], [0, 0, .3, .33, .68, .015], [0, .02, 0, .33, .015, KL]].forEach(([x, y, z, w, h, d]) => {
+    const m = box(w, h, d, matCucina); m.position.set(x, y, z); pens.add(m);
+  });
+  const matPiatto = tinta(0xf8fafc, { roughness: .3 }), matBicch = tinta(0xcfe8ff, { transparent: true, opacity: .6, roughness: .1 });
+  const piatti = [], bicchieri = [];
+  [-0.6, 0, 0.6].forEach((dz, s) => {
+    for (let j = 0; j < 3; j++) {
+      const p = cil(.1, .085, .014, matPiatto, 20); casa.add(p);
+      const p0 = V(-2.83, 1.47 + .008 + j * .016, KZ + dz - .06);
+      const p1 = V(-2.15 + .5 * hash(s * 9 + j), .01 + .004 * j, KZ + dz + (hash(s * 3 + j * 7) - .5) * .7);
+      piatti.push({ p, p0, p1, d: .25 + s * .12 + j * .07, rx: (hash(s + j * 5) - .5) * .3, rz: (hash(s * 7 + j) - .5) * .3, sp: hash(s * 2 + j) * 6 });
+    }
+    const b = cil(.032, .026, .1, matBicch, 12); casa.add(b);
+    const b0 = V(-2.84, 1.82 + .05, KZ + dz + .14), b1 = V(-1.95 - .4 * hash(s * 4), .03, KZ + dz + .2);
+    bicchieri.push({ b, b0, b1, d: .4 + s * .14 });
+  });
+  const frantumi = new THREE.Group(); casa.add(frantumi);
+  for (let i = 0; i < 18; i++) {
+    const f = new THREE.Mesh(new THREE.CircleGeometry(.02 + .03 * hash(i * 1.9), 3), base(i % 3 ? 0xf1f5f9 : 0xcfe8ff));
+    f.rotation.x = -Math.PI / 2; f.rotation.z = hash(i * 2.1) * 6;
+    f.position.set(-2.25 + hash(i * 3.3) * .9, .011, KZ - .8 + hash(i * 5.7) * 1.6); frantumi.add(f);
+  }
+  const ante = [], fermi = [];
+  [-0.9, -0.3, 0.3].forEach((zh, i) => {
+    const pv = new THREE.Group(); pv.position.set(-2.64, 1.8, KZ + zh); casa.add(pv);
+    const anta = box(.02, .68, .58, matAnta); anta.position.set(.01, 0, .3); pv.add(anta);
+    const man = box(.03, .1, .015, tinta(0x1f2937, { metalness: .5, roughness: .3 })); man.position.set(.03, -.23, .55); pv.add(man);
+    ante.push(pv);
+    const fe = new THREE.Group(); casa.add(fe);
+    const fa = box(.035, .06, .08, matFermo); fe.add(fa);
+    const fb = box(.02, .02, .05, tinta(0x111827)); fb.position.set(.02, -.02, 0); fe.add(fb);
+    const fp = V(-2.615, 1.49, KZ + zh + .56);
+    fe.position.copy(fp); fermi.push({ fe, base: fp });
+  });
+
+  // tavolo robusto
+  const TX = 0.9, TZ = 0.3, TW = 1.5, TD = 0.9, TH = 0.76;
+  const tavolo = new THREE.Group(); tavolo.position.set(TX, 0, TZ); casa.add(tavolo);
+  const piano = box(TW, .06, TD, matLegno); piano.position.y = TH - .03; tavolo.add(piano);
+  [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([a, b]) => { const g = box(.08, TH - .06, .08, matLegnoScuro); g.position.set(a * (TW / 2 - .08), (TH - .06) / 2, b * (TD / 2 - .08)); tavolo.add(g); });
+  tavolo.add(ombra(1.0, .65));
+  [-1, 1].forEach(s => { const sd = new THREE.Group(); sd.position.set(s * 1.0, 0, 0); tavolo.add(sd);
+    const sed = box(.42, .04, .42, matLegno); sed.position.y = .45; sd.add(sed);
+    const sch = box(.04, .45, .42, matLegno); sch.position.set(s * .19, .7, 0); sd.add(sch);
+    [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([a, b]) => { const g = box(.035, .45, .035, matLegnoScuro); g.position.set(a * .18, .225, b * .18); sd.add(g); }); });
+
+  // lampadario sopra il tavolo (oscilla)
+  const lampPerno = new THREE.Group(); lampPerno.position.set(TX, HM, TZ); casa.add(lampPerno);
+  const rosone = cil(.08, .08, .03, matBianco); rosone.position.y = -.015; lampPerno.add(rosone);
+  const filo = cil(.008, .008, .62, tinta(0x222222)); filo.position.y = -.31; lampPerno.add(filo);
+  const paralume = new THREE.Mesh(new THREE.CylinderGeometry(.08, .26, .22, 24, 1, true), tinta(0xffbe2e, { side: THREE.DoubleSide, roughness: .5, emissive: 0x553300, emissiveIntensity: .3 }));
+  paralume.position.y = -.72; lampPerno.add(paralume);
+  const lampadina = new THREE.Mesh(new THREE.SphereGeometry(.05, 12, 8), base(0xfff3c4)); lampadina.position.y = -.76; lampPerno.add(lampadina);
+
+  // parete destra, in basso: contatore e valvola del gas, rubinetto dell'acqua, quadro elettrico
+  const gas = new THREE.Group(); gas.position.set(3 - .01, 0, 0.35); casa.add(gas);
+  const contatore = box(.18, .28, .3, tinta(0xc9ced6, { metalness: .4, roughness: .45 })); contatore.position.set(-.09, .72, 0); gas.add(contatore);
+  const display = new THREE.Mesh(new THREE.PlaneGeometry(.16, .07), base(0x1f2937)); display.rotation.y = -Math.PI / 2; display.position.set(-.185, .78, 0); gas.add(display);
+  const tubo = cil(.022, .022, .5, tinta(0xe0b000, { metalness: .4, roughness: .4 }), 10); tubo.position.set(-.06, .33, 0); gas.add(tubo);
+  const valvola = new THREE.Group(); valvola.position.set(-.1, .42, 0); gas.add(valvola);
+  const matLevaGas = tinta(0xf2c200, { roughness: .4, emissive: 0xffb000, emissiveIntensity: 0 });
+  const levaGas = box(.03, .025, .2, matLevaGas); valvola.add(levaGas);
+  const acqua = new THREE.Group(); acqua.position.set(3 - .01, 0, .85); casa.add(acqua);
+  const tuboAcqua = cil(.02, .02, .42, tinta(0x9aa4b1, { metalness: .6, roughness: .35 }), 10); tuboAcqua.position.set(-.05, .21, 0); acqua.add(tuboAcqua);
+  const matRub = tinta(0x2563eb, { roughness: .4, emissive: 0x3b82f6, emissiveIntensity: 0 });
+  const rubinetto = box(.03, .025, .16, matRub); rubinetto.position.set(-.09, .34, 0); acqua.add(rubinetto);
+  const quadroEl = new THREE.Group(); quadroEl.position.set(3 - .01, 1.05, 1.25); casa.add(quadroEl);
+  const qe = box(.08, .34, .28, tinta(0xf3f4f6, { roughness: .5 })); qe.position.x = -.04; quadroEl.add(qe);
+  const matInt = tinta(0x1f2937, { emissive: 0xffd400, emissiveIntensity: 0 });
+  const interruttore = box(.05, .1, .05, matInt); interruttore.position.set(-.1, .02, 0); quadroEl.add(interruttore);
+
+  // aloni che indicano dove si chiudono gas, acqua e luce (scena 13)
+  const aloni = [[gas, V(-.13, .42, 0)], [acqua, V(-.11, .34, 0)], [quadroEl, V(-.12, .02, 0)]].map(([o, p]) => {
+    const m = new THREE.Mesh(new THREE.RingGeometry(.09, .12, 32), base(0xffd400, { transparent: true, opacity: 0, depthWrite: false, side: THREE.DoubleSide }));
+    m.rotation.y = -Math.PI / 2; m.position.copy(p); o.add(m); return m;
+  });
+  // kit di emergenza vicino all'ingresso: zaino, cassetta di pronto soccorso, torcia, radio a pile
+  const kit = new THREE.Group(); kit.position.set(2.55, 0, 1.7); casa.add(kit);
+  const zaino = new THREE.Group(); kit.add(zaino);
+  const zc = box(.36, .46, .22, tinta(0xc81e1e, { roughness: .8 })); zc.position.y = .23; zaino.add(zc);
+  const tasca = box(.26, .18, .05, tinta(0xa51616, { roughness: .8 })); tasca.position.set(0, .16, .13); zaino.add(tasca);
+  zaino.add(ombra(.3, .2));
+  const texCroce = tela(64, 64, (g) => { g.fillStyle = '#fff'; g.fillRect(0, 0, 64, 64); g.fillStyle = '#dc2626'; g.fillRect(24, 8, 16, 48); g.fillRect(8, 24, 48, 16); });
+  const cassetta = new THREE.Group(); cassetta.position.set(-.12, 0, .42); kit.add(cassetta);
+  const cBox = box(.3, .16, .2, [base(0xffffff), base(0xffffff), base(0xffffff), base(0xffffff), base(0xffffff, { map: texCroce }), base(0xffffff)]);
+  cBox.position.y = .08; cassetta.add(cBox);
+  const cMan = box(.1, .02, .03, tinta(0x9ca3af)); cMan.position.y = .17; cassetta.add(cMan);
+  const torcia = new THREE.Group(); torcia.position.set(-.38, 0, .12); kit.add(torcia);
+  const tCorpo = cil(.025, .025, .2, tinta(0x111827, { roughness: .4 }), 12); tCorpo.rotation.z = Math.PI / 2; tCorpo.position.y = .026; torcia.add(tCorpo);
+  const tTesta = cil(.04, .028, .06, tinta(0xf59e0b, { roughness: .4 }), 14); tTesta.rotation.z = Math.PI / 2; tTesta.position.set(.12, .04, 0); torcia.add(tTesta);
+  const tLente = new THREE.Mesh(new THREE.CircleGeometry(.035, 14), base(0xfff7c2)); tLente.rotation.y = Math.PI / 2; tLente.position.set(.151, .04, 0); torcia.add(tLente);
+  const radio = new THREE.Group(); radio.position.set(-.34, 0, -.28); kit.add(radio);
+  const rCorpo = box(.26, .16, .09, tinta(0x374151, { roughness: .5 })); rCorpo.position.y = .08; radio.add(rCorpo);
+  const rGriglia = box(.12, .1, .005, tinta(0x9ca3af)); rGriglia.position.set(-.05, .08, .047); radio.add(rGriglia);
+  const rAnt = cil(.005, .005, .3, matMetallo, 6); rAnt.position.set(.1, .3, 0); rAnt.rotation.z = -.3; radio.add(rAnt);
+
+  /* ---------------------------------------------------------------- le persone (figure stilizzate) */
+  function persona(colore, s, colPant) {
+    const root = new THREE.Group();
+    const LL = .8 * s, T = .58 * s;
+    const matC = tinta(colore, { roughness: .8 }), matP = tinta(colPant, { roughness: .9 }), pelle = tinta(0xd9a27a, { roughness: .8 });
+    const anche = new THREE.Group(); anche.position.y = LL; root.add(anche);
+    const gambe = [];
+    [-1, 1].forEach(sx => {
+      const g = new THREE.Group(); g.position.set(sx * .09 * s, 0, 0); anche.add(g);
+      const m = cil(.075 * s, .065 * s, LL, matP, 10); m.position.y = -LL / 2; g.add(m);
+      const scarpa = box(.11 * s, .07 * s, .2 * s, tinta(0x2b1d14, { roughness: .7 })); scarpa.position.set(0, -LL + .035 * s, .04 * s); scarpa.visible = false; g.add(scarpa);
+      gambe.push({ g, scarpa });
+    });
+    const busto = new THREE.Group(); anche.add(busto);
+    const tronco = cil(.16 * s, .14 * s, T, matC, 14); tronco.position.y = T / 2; busto.add(tronco);
+    const spalle = new THREE.Mesh(new THREE.SphereGeometry(.16 * s, 14, 8, 0, Math.PI * 2, 0, Math.PI / 2), matC); spalle.position.y = T; busto.add(spalle);
+    const testa = new THREE.Mesh(new THREE.SphereGeometry(.12 * s, 16, 12), pelle); testa.position.y = T + .2 * s; busto.add(testa);
+    const capelli = new THREE.Mesh(new THREE.SphereGeometry(.125 * s, 16, 10, 0, Math.PI * 2, 0, Math.PI * .55), tinta(0x3b2a20, { roughness: .9 })); capelli.position.y = T + .21 * s; capelli.rotation.x = -.35; busto.add(capelli);
+    const braccia = [];
+    [-1, 1].forEach(sx => {
+      const b = new THREE.Group(); b.position.set(sx * .2 * s, T * .93, 0); busto.add(b);
+      const m = cil(.05 * s, .045 * s, .58 * s, matC, 8); m.position.y = -.29 * s; b.add(m);
+      const mano = new THREE.Mesh(new THREE.SphereGeometry(.05 * s, 8, 6), pelle); mano.position.y = -.6 * s; b.add(mano);
+      braccia.push(b);
+    });
+    const om = ombra(.32 * s, .32 * s); root.add(om);
+    /* posa: c = accucciato (0 in piedi, 1 sotto il tavolo), cop = braccia sulla testa, tieni = mano alla gamba del tavolo,
+       passo = fase del cammino (0 fermo) */
+    function posa(c, cop, tieni, passo) {
+      anche.position.y = mix(LL, .3 * s, c);
+      busto.rotation.x = mix(0, 1.25, c);
+      gambe.forEach((g, i) => {
+        const sw = passo ? Math.sin(passo + i * Math.PI) * .45 : 0;
+        g.g.rotation.x = mix(sw, -1.15, c);
+        g.g.scale.y = mix(1, .55, c);
+      });
+      braccia.forEach((b, i) => {
+        const sw = passo ? -Math.sin(passo + i * Math.PI) * .35 : 0;
+        let rx = mix(sw, -2.7, cop), rz = mix(0, (i ? -1 : 1) * .35, cop);
+        if (i === 1) { rx = mix(rx, -1.0, tieni); rz = mix(rz, -0.15, tieni); }
+        b.rotation.set(rx, 0, rz);
+      });
+    }
+    posa(0, 0, 0, 0);
+    return { root, posa, gambe, scarpe: v => gambe.forEach(g => { g.scarpa.visible = v; }), testa: () => testa.getWorldPosition(V(0, 0, 0)) };
+  }
+  const adulto = persona(0x2e6da4, 1, 0x26324a); casa.add(adulto.root);
+  const bimbo = persona(0xf2a516, .72, 0x3b4b6b); casa.add(bimbo.root);
+  const passante = persona(0x9b4d2f, 1, 0x374151); quartiere.add(passante.root); passante.scarpe(true);
+
+  /* ---------------------------------------------------------------- tetto con tegole e cornicione, parete frontale */
+  const fronte = new THREE.Group(); casa.add(fronte);
+  const mf = box(6.3 + SP * 2, HM, SP, matMuroEst); mf.position.set(0, HM / 2, 2.5 + SP / 2); fronte.add(mf);
+  [[-1.6, 1.45], [1.6, 1.45]].forEach(([x, y]) => {
+    const f = box(1.0, 1.0, .04, matVetroAzz); f.position.set(x, y, 2.5 + SP + .005); fronte.add(f);
+    const c = box(1.1, .08, .06, matBianco); c.position.set(x, y - .54, 2.5 + SP + .02); fronte.add(c);
+    const cc = box(.06, 1.0, .05, matBianco); cc.position.set(x, y, 2.5 + SP + .03); fronte.add(cc);
+    [-1, 1].forEach(s => { const p = box(.3, 1.08, .03, tinta(0x3f6e4f, { roughness: .8 })); p.position.set(x + s * .66, y, 2.5 + SP + .02); fronte.add(p); });
+  });
+  const tetto = new THREE.Group(); tetto.position.y = HM; casa.add(tetto);
+  const sezioneTetto = new THREE.Shape(); sezioneTetto.moveTo(-3.05, 0); sezioneTetto.lineTo(0, 1.5); sezioneTetto.lineTo(3.05, 0); sezioneTetto.lineTo(-3.05, 0);
+  const geoTetto = new THREE.ExtrudeGeometry(sezioneTetto, { depth: 6.8, bevelEnabled: false }); geoTetto.translate(0, 0, -3.4);
+  const corpoTetto = new THREE.Mesh(geoTetto, tinta(0xb4533a, { roughness: .85 })); corpoTetto.rotation.y = Math.PI / 2; tetto.add(corpoTetto);
+  const matCorn = matMuroEst.clone();
+  const cornicione = box(6.6, .14, 5.8, matCorn); cornicione.position.y = .02; tetto.add(cornicione);
+  const cicatrice = new THREE.Mesh(new THREE.PlaneGeometry(.95, .14), base(0x8a7f70)); cicatrice.position.set(-.8, .02, -2.905); cicatrice.rotation.y = Math.PI; tetto.add(cicatrice);
+  // pezzo di cornicione che si stacca e tegole che scivolano (coordinate della casa; seguono il tetto finché non cadono)
+  const pezzoCorn = box(.95, .17, .34, matCorn); casa.add(pezzoCorn);
+  const pcBase = V(-.8, HM + .02, -2.78), pcGiu = V(-.95, YT + .09, -4.9);
+  const PEND = Math.atan2(1.5, 3.05);
+  const tegole = [-2.45, -1.95, -1.4, .15, .55].map((x, i) => {
+    const g = box(.24, .035, .34, tinta(0x8f3a26, { roughness: .8 })); casa.add(g);
+    const zb = -2.7 + .1 * hash(i), yb = HM + (3.05 - Math.abs(zb)) * Math.tan(PEND) + .03;
+    return { g, base: V(x, yb, zb), gronda: V(x + (hash(i * 3) - .5) * .1, HM + .06, -3.12), giu: V(x + (hash(i * 5) - .5) * .5, YT + .03, -4.7 - 1.3 * hash(i * 7)), d: i * .17, sp: (hash(i * 9) - .5) * 9 };
+  });
+
+  /* ---------------------------------------------------------------- area di attesa (fuori, nel finale) */
+  const cartello = new THREE.Group(); cartello.position.set(4.4, YT, 6.2); quartiere.add(cartello);
+  const palo = cil(.04, .04, 2.0, matMetallo, 8); palo.position.y = 1.0; cartello.add(palo);
+  const texAA = tela(512, 320, (g, w, h) => {
+    g.fillStyle = '#15803d'; g.fillRect(0, 0, w, h); g.strokeStyle = '#fff'; g.lineWidth = 10; g.strokeRect(12, 12, w - 24, h - 24);
+    g.fillStyle = '#fff'; g.textAlign = 'center'; g.font = '700 70px ' + FT; g.fillText('AREA', w / 2, 112); g.fillText('DI ATTESA', w / 2, 192);
+    g.font = '600 38px ' + FT; g.fillText('PUNTO DI RACCOLTA', w / 2, 262);
+  });
+  const tabella = box(1.1, .7, .04, [base(0x15803d), base(0x15803d), base(0x15803d), base(0x15803d), base(0xffffff, { map: texAA }), base(0x0f5c2c)]);
+  tabella.position.y = 1.75; cartello.add(tabella);
+  cartello.rotation.y = -0.35;
+
+  /* ---------------------------------------------------------------- pianerottolo con scale e ascensore (scena 5) */
+  const XP = 12;
+  const pianerottolo = new THREE.Group(); pianerottolo.position.set(XP, 0, 0); scena.add(pianerottolo);
+  const pp = box(3.4, .14, 3.0, tinta(0xbfc5cc, { roughness: .85 })); pp.position.y = -.07; pianerottolo.add(pp);
+  const pFondo = box(3.4, 2.6, .12, matMuro); pFondo.position.set(0, 1.3, -1.56); pianerottolo.add(pFondo);
+  const pSx = box(.12, 2.6, 3.0, matMuro); pSx.position.set(-1.76, 1.3, 0); pianerottolo.add(pSx);
+  const asc = new THREE.Group(); asc.position.set(-.85, 0, -1.49); pianerottolo.add(asc);
+  const ascTel = box(1.1, 2.2, .04, tinta(0x6b7280, { metalness: .5, roughness: .4 })); ascTel.position.y = 1.1; asc.add(ascTel);
+  [-1, 1].forEach(s => { const a = box(.45, 2.0, .03, tinta(0xcbd2da, { metalness: .7, roughness: .3 })); a.position.set(s * .235, 1.0, .03); asc.add(a); });
+  const pulsantiera = box(.12, .25, .03, tinta(0x374151)); pulsantiera.position.set(.72, 1.15, .02); asc.add(pulsantiera);
+  const scale = new THREE.Group(); scale.position.set(.7, 0, -.2); pianerottolo.add(scale);
+  for (let i = 0; i < 7; i++) {
+    const g = box(1.2, .17, .3, tinta(0xa8b0b9, { roughness: .9 })); g.position.set(0, -.085 - i * .17, .15 + i * .3 + .3); scale.add(g);
+  }
+  const corrimano = cil(.025, .025, 2.4, tinta(0x374151), 8); corrimano.rotation.x = Math.PI / 2 - Math.atan2(.17 * 7, .3 * 7);
+  corrimano.position.set(.62, .45, 1.35); scale.add(corrimano);
+  const ringhiera = box(.03, .9, .03, tinta(0x374151)); ringhiera.position.set(.62, .45, .3); scale.add(ringhiera);
+  function croceRossa() {
+    const g = new THREE.Group();
+    [1, -1].forEach(s => { const b = box(.55, .09, .04, base(0xdc2626)); b.rotation.z = s * Math.PI / 4; g.add(b); });
+    return g;
+  }
+  const xScale = croceRossa(); scena.add(xScale);
+  const xAsc = croceRossa(); scena.add(xAsc);
+  const ospite = persona(0x2e6da4, 1, 0x26324a); scena.add(ospite.root);
+
+  /* ================================================================ TEMPI DEGLI EVENTI (dalle parole della voce) */
+  const T = {
+    entriamo: parola(0, 'entriamo'),
+    scossa1: parola(2, 'arriva') - .5,
+    libri: parola(2, 'libri'),
+    vaso: parola(2, 'cade'),
+    quadro: parola(2, 'stacca'),
+    tv: parola(2, 'scivola', 1),
+    ante: parola(2, 'spalancano'),
+    inclina: parola(2, 'inclina'),
+    vasiF: parola(3, 'cadono'),
+    tegole: parola(3, 'tegole'),
+    cornicione: parola(3, 'cornicione'),
+    cedere: parola(3, 'cedere'),
+    allontana: parola(3, 'allontana'),
+    persone: S(4) + .35,
+    corre: parola(4, 'corre'),
+    abbassa: parola(4, 'abbassa'),
+    protegge: parola(4, 'protegge'),
+    tiene: parola(4, 'tiene'),
+    lontano: parola(4, 'lontano'),
+    scale: parola(5, 'scale'),
+    ascensore: parola(5, "l'ascensore"),
+    rewind: parola(6, 'riavvolgiamo') - .1,
+    staffe: parola(7, 'staffe'),
+    ganci: parola(8, 'ganci'),
+    sopra: parola(8, 'sopra'),
+    cinghia: parola(9, 'cinghia'),
+    pesanti: parola(10, 'pesanti'),
+    nastro: parola(10, 'nastro'),
+    fermo: parola(11, 'fermo'),
+    tolgono: parola(12, 'tolgono'),
+    gas: parola(13, 'gas'),
+    acqua: parola(13, 'acqua'),
+    luceK: parola(13, 'luce'),
+    tieniK: parola(13, 'tieni'),
+    cassetta: parola(13, 'cassetta'),
+    torcia: parola(13, 'torcia'),
+    radio: parola(13, 'radio'),
+    muri: parola(13, 'muri'),
+    ora: parola(14, 'ora'),
+    scossa2: parola(14, 'arriva') - .3,
+    nulla: parola(14, 'nulla'),
+    finisce: parola(15, 'finisce'),
+    controlla: parola(15, 'controlla'),
+    scarpe: parola(15, 'scarpe'),
+    chiudi: parola(15, 'chiudi'),
+    luce: parola(15, 'luce'),
+    esci: parola(15, 'esci'),
+    attesa: parola(15, 'attesa'),
+    rientrare: parola(15, 'rientrare'),
+    su: parola(16, 'su')
+  };
+  const RW = 1.6;                                          // durata del riavvolgimento
+  const CH1 = E(2) - .3, CH2 = T.muri - .3;                // il tetto si richiude per le inquadrature da fuori
+
+  /* intensità della scossa */
+  function ampiezza(t) {
+    let lv = mix(1, .55, liscia(prog(t, T.inclina + 1.4, 1.5)));
+    lv = mix(lv, .3, liscia(prog(t, S(4) - .3, 1.0)));
+    const a1 = liscia(prog(t, T.scossa1, .8)) * lv * (1 - liscia(prog(t, T.tiene + 1.6, 2.4)));
+    const a2 = liscia(prog(t, T.scossa2, .6)) * (1 - liscia(prog(t, T.scossa2 + 3.6, 1.8)));
+    const a3 = t > S(5) && t < E(5) ? .25 * fin(t, S(5) + .8, E(5) - .4, .6, .6) : 0;
+    return { casa: t < S(5) ? a1 : (t < S(6) ? 0 : a2), pian: a3 };
+  }
+  const tremito = (t, a, k) => V(a * (.05 * Math.sin(t * 14.5 + k) + .03 * Math.sin(t * 23.3 + 1.7 + k)), a * .012 * Math.sin(t * 31 + k),
+                                 a * (.035 * Math.sin(t * 17.9 + 2.1 + k) + .025 * Math.sin(t * 27.1 + k)));
+
+  /* tempo «degli eventi» della prima scossa: avanti fino al riavvolgimento, poi all'indietro; nella casa preparata è fermo
+     a prima della scossa (nulla cade) */
+  const FINE_EVENTI = T.allontana + 4;
+  function tEventi(t) {
+    if (t < T.rewind) return t;
+    if (t < T.rewind + RW) return mix(FINE_EVENTI, T.scossa1 - .2, ease.morbida(prog(t, T.rewind, RW)));
+    return T.scossa1 - .2;
+  }
+  const preparata = t => t >= T.rewind + RW;
+  // tetto aperto (0 chiuso, 1 sollevato): si apre entrando, si richiude per le viste da fuori e nel finale
+  function aperto(t) {
+    let a = esplodi(prog(t, T.entriamo, 1.4));
+    a *= 1 - esplodi(prog(t, CH1, 1.3)) * (1 - esplodi(prog(t, S(4) + .05, 1.3)));
+    a *= 1 - esplodi(prog(t, CH2, 1.3)) * (1 - esplodi(prog(t, S(14) + .05, 1.3)));
+    a *= 1 - esplodi(prog(t, S(16) + .2, 1.5));
+    return a;
+  }
+
+  /* ================================================================ TELECAMERA */
+  // distanza per inquadrare un raggio r con il campo visivo f (come distanzaPerInquadrare del motore, ma con f a scelta):
+  // le viste laterali dentro la stanza usano un obiettivo più largo, così la telecamera resta dentro le pareti
+  const ins = (r, f = 32) => {
+    const z = camera.userData.zona, st = camera.userData.stage || { H };
+    const hz = z ? (z.basso - z.alto) / st.H : 1, tv = Math.tan(f * Math.PI / 360);
+    return r / Math.sin(Math.min(Math.atan(tv * hz * .92), Math.atan(tv * camera.aspect * .92)));
+  };
+  const rr = r => ORIZ ? r * .69 : r;
+  const K = [];
+  const chiave = (t, b, az, el, r, extra = {}) => { const f = extra.fov || 32; K.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(rr(r), f), fov: f }, extra)); };
+  const VISTE = {
+    largo: [[0, 1.15, -.1], 0, 27, 3.4],
+    balcone: [[DX, .85, -3.15], -10, 12, 1.35],
+    scossa: [[-.6, 1.1, -.4], -8, 24, 3.35],
+    dietro: [[.9, -.35, -3.5], 180, 10, 4.0],
+    tavolo: [[1.0, .7, .35], 6, 14, 2.05],
+    pian: [[XP + .05, 1.0, .1], 14, 20, 2.25],
+    staffe: [[LBX, 1.95, -2.35], 0, 22, .95],
+    quadro: [[-2.85, 1.45, 1.3], -90, 6, 1.25, 64],
+    tv: [[CX, .86, -2.3], 28, 20, .8, 50],
+    libreria: [[-1.55, 1.15, -2.2], 0, 14, 1.4],
+    cucina: [[-2.75, 1.45, -1.55], -90, 8, 1.2, 64],
+    destra: [[2.6, .6, 1.0], 90, 40, 1.2, 64],
+    tecnico: [[1.1, .55, -3.0], 180, 10, 3.0],
+    dopo: [[1.45, .95, -.1], 18, 24, 3.05],
+    fuori: [[1.2, -.6, 2.6], -22, 16, 5.6]
+  };
+  // nel 16:9 alcune viste vogliono più margine (esterni, libreria) e le viste di lato un obiettivo meno largo
+  const ORIZ_VISTE = { dietro: [.95], tecnico: [.95], libreria: [.95], staffe: [.85], tavolo: [.85], quadro: [.69, 40], cucina: [.69, 40], destra: [.69, 40] };
+  const vista = (t, nome, extra = {}) => {
+    const v = VISTE[nome], o = ORIZ ? ORIZ_VISTE[nome] : null;
+    const r = o ? v[3] * o[0] / .69 : v[3], f = (o && o[1]) || v[4] || 32;
+    chiave(t, v[0], v[1], v[2], r, Object.assign({ fov: f }, extra));
+  };
+  // 0: fuori, la casa su due piani; poi si entra
+  chiave(0, [0, .5, .2], -34, 14, 6.0);
+  chiave(T.entriamo - .3, [0, .6, .2], 0, 18, 5.6, { facilita: 'lineare' });
+  vista(E(0) - .2, 'largo');
+  // 1: la stanza (ferma), poi il balcone dalla portafinestra
+  vista(parola(1, 'balcone') - 1.15, 'largo');
+  vista(parola(1, 'vasi') - .3, 'balcone');
+  vista(E(1) - .1, 'balcone');
+  // 2: la scossa, ferma
+  vista(S(2) + .9, 'scossa');
+  vista(E(2) - .37, 'scossa');
+  // 3: fuori, dalla strada
+  chiave(E(2) + .55, [0, .8, -1.2], 90, 60, 4.5, { passa: true, fov: 32 });
+  vista(T.vasiF - .1, 'dietro');
+  vista(S(4), 'dietro');
+  // 4: vicino al tavolo
+  chiave(S(4) + .85, [.6, .5, -.6], 90, 60, 4.0, { passa: true, fov: 32 });
+  vista(S(4) + 1.7, 'tavolo');
+  vista(E(4) - .2, 'tavolo');
+  // 5: il pianerottolo
+  vista(S(5) + 1.3, 'pian');
+  vista(E(5) - .15, 'pian');
+  // 6: la stanza intera
+  vista(S(6) + 1.3, 'largo');
+  vista(E(6) - .2, 'largo');
+  // 7-13: le soluzioni, una per una, da vicino
+  vista(S(7) + 1.5, 'staffe');   vista(E(7) - .2, 'staffe');
+  vista(S(8) + 1.5, 'quadro');   vista(E(8) - .2, 'quadro');
+  vista(S(9) + 1.5, 'tv');       vista(E(9) - .2, 'tv');
+  vista(T.pesanti + .25, 'libreria'); vista(E(10) - .2, 'libreria');
+  vista(S(11) + 1.5, 'cucina');  vista(E(11) - .3, 'cucina');
+  chiave(E(11) + .25, [.2, 1.2, -1.0], -40, 38, 2.2, { passa: true, fov: 50 });
+  vista(T.tolgono - .1, 'balcone'); vista(E(12) - .2, 'balcone');
+  vista(S(13) + 1.5, 'destra');  vista(T.muri - .4, 'destra');
+  chiave(T.muri + .4, [1.2, 1.0, -1.0], 135, 62, 4.0, { passa: true, fov: 40 });
+  vista(T.muri + 1.3, 'tecnico'); vista(E(13) - .1, 'tecnico');
+  // 14: la prova
+  chiave(S(14) + .8, [.4, 1.0, -.8], 90, 62, 4.0, { passa: true, fov: 32 });
+  vista(S(14) + 1.6, 'largo');   vista(E(14) - .2, 'largo');
+  // 15: dopo
+  vista(S(15) + 1.2, 'dopo');    vista(E(15) - .2, 'dopo');
+  // 16: fuori, la casa richiusa e l'area di attesa
+  vista(S(16) + 1.8, 'fuori');   vista(TOTAL, 'fuori');
+  const cam = M3.telecamera(camera, K, {});
+
+  /* ================================================================ SCHEDE (punto 3D a ogni fotogramma) */
+  const SCH = [];
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore });
+  const vs = (dx, dy) => ORIZ ? { dx: dx * 1.5, dy: dy * .62 } : { dx, dy };
+  const mondo = (o, p) => { o.updateWorldMatrix(true, false); return o.localToWorld(p.clone()); };
+  const pos = o => o.getWorldPosition(V(0, 0, 0));
+  const ROSSO = '#ef4136', AMBRA = '#f59e0b', VERDE = '#22a04b';
+  const bal1 = parola(1, 'vasi') - .3;
+  // 1 i pericoli
+  scheda('libreria', 'Libreria alta', 'NON FISSATA AL MURO', () => mondo(libreria, V(0, 1.7, .1)), vs(120, -230), parola(1, 'libreria') + .1, parola(1, 'sopra') - .15, AMBRA);
+  scheda('mensola', 'Mensola e quadro', 'SOPRA IL DIVANO', () => mondo(mensola, V(.1, .05, 0)), vs(150, 210), parola(1, 'sopra') + .2, parola(1, 'tv') - .2, AMBRA);
+  scheda('tvp', 'TV appoggiata', 'NIENTE CHE LA TENGA', () => mondo(tv, V(0, .66, 0)), vs(160, -230), parola(1, 'tv'), parola(1, 'cucina') - .15, AMBRA);
+  scheda('cucina', 'Ante senza fermo', 'PIATTI E BICCHIERI', () => mondo(casa, V(-2.62, 1.95, -1.25)), vs(250, -170), parola(1, 'cucina') + .1, parola(1, 'balcone') - 1.25, AMBRA);
+  scheda('vasip', 'Vasi sul parapetto', 'SOPRA LA STRADA', () => mondo(casa, V(DX, 1.35, -3.56)), vs(-160, -240), bal1 + .15, E(1) - .4, AMBRA);
+  // 2 la scossa
+  scheda('vaso', 'Il vaso cade sul divano', 'DOVE POTEVI ESSERE SEDUTO', () => mondo(divano, V(.15, .7, -.25)), vs(260, -170), T.vaso + .4, T.quadro + .2, ROSSO);
+  scheda('quadro', 'Gancio aperto', 'IL QUADRO SALTA VIA', () => pos(quadro), vs(260, 150), T.quadro + .5, T.tv + .6, ROSSO);
+  scheda('tvc', 'TV non fissata', 'SCIVOLA E CADE', () => mondo(tv, V(0, .3, 0)), vs(210, -220), T.tv + 1.2, T.ante + .1, ROSSO);
+  scheda('ante', 'Ante senza fermo', 'I PIATTI FINISCONO A TERRA', () => mondo(casa, V(-2.2, 1.7, -1.1)), vs(240, -150), T.ante + .6, T.inclina + .3, ROSSO);
+  scheda('rovescia', 'Libreria non fissata', 'SI ROVESCIA', () => mondo(casa, V(LBX, .35, -.8)), vs(190, 220), T.inclina + .8, E(2) - .4, ROSSO);
+  // 3 fuori
+  scheda('vasif', 'Vasi dal balcone', 'CADONO IN STRADA', () => mondo(casa, V(DX, YT + .2, -5.3)), vs(190, -270), T.vasiF + .7, T.tegole + .1, ROSSO);
+  scheda('corn', 'Tegole e cornicione', 'SI STACCANO DAL TETTO', () => mondo(casa, V(-.8, HM + .05, -2.95)), vs(170, 170), T.tegole + .5, T.cedere - .1, ROSSO);
+  scheda('balc', 'Anche un balcone', 'PUÒ CEDERE', () => mondo(balc, V(0, -.1, -.95)), vs(180, 190), T.cedere + .3, T.allontana, ROSSO);
+  scheda('via', 'Allontanati dagli edifici', 'CERCA UNO SPAZIO LIBERO', () => passante.testa(), vs(-180, -220), T.allontana + .3, E(3) - .4, VERDE);
+  // 4 cosa fare
+  scheda('fuori', 'Non correre fuori', 'CADONO OGGETTI E CALCINACCI', () => adulto.testa(), vs(-200, -210), T.corre + .05, T.abbassa - .3, ROSSO);
+  scheda('riparo', 'Abbassati, copriti, tieniti', 'PROTEGGI TESTA E COLLO', () => mondo(tavolo, V(-.2, .35, .3)), vs(-170, 230), T.protegge - .1, T.lontano - .2, VERDE);
+  scheda('lontano', 'Lontano da finestre', 'E DA MOBILI ALTI', () => mondo(casa, V(DX - .45, 1.95, -2.5)), vs(240, 70), T.lontano, E(4) - .4, AMBRA);
+  // 5 scale e ascensore
+  scheda('noscale', 'Niente scale', 'DURANTE LA SCOSSA', () => pos(xScale), vs(200, -200), T.scale, E(5) - .35, ROSSO);
+  scheda('noasc', 'Niente ascensore', 'PUÒ BLOCCARSI', () => pos(xAsc), vs(-120, -210), T.ascensore, E(5) - .35, ROSSO);
+  // 6 riavvolgiamo
+  scheda('stessa', 'Stessa casa, stessa scossa', 'QUESTA VOLTA PREPARATA PRIMA', null, null, parola(6, 'stessa', 1) + .4, E(6) - .4, VERDE);
+  // 7-13 la prevenzione
+  scheda('staffe', 'Staffe a L, viti e tasselli', 'FISSANO LA LIBRERIA AL MURO', () => pos(staffe[1].g), vs(220, -200), T.staffe + .5, E(7) - .4, VERDE);
+  scheda('ganci', 'Ganci chiusi', 'IL QUADRO NON SALTA VIA', () => mondo(gancioGrandeChiuso, V(0, -.06, 0)), vs(-130, -250), T.ganci + .5, T.sopra - .3, VERDE);
+  scheda('divanoOk', 'Sopra il divano', 'NIENTE OGGETTI PESANTI', () => mondo(divano, V(.1, .8, .3)), vs(190, -200), T.sopra + .5, E(8) - .4, VERDE);
+  scheda('cinghia', 'Cinghia o staffa', 'LA TV RESTA AL SUO POSTO', () => pos(cinghieSingole[1].g), vs(200, -210), T.cinghia + .5, E(9) - .4, VERDE);
+  scheda('basso', 'Pesanti in basso', 'MAI IN CIMA AI MOBILI', () => pos(scatola), vs(230, -160), T.pesanti + 1.5, T.nastro - .3, VERDE);
+  scheda('nastro', 'Nastro biadesivo', 'SOTTO GLI OGGETTI IN ALTO', () => pos(biadesivi[0]), vs(-170, -230), T.nastro + .6, E(10) - .4, VERDE);
+  scheda('fermo', 'Un fermo sulle ante', 'COSÌ RESTANO CHIUSE', () => pos(fermi[1].fe), vs(-210, -230), T.fermo + .6, E(11) - .4, VERDE);
+  scheda('vasiok', 'Vasi giù dal parapetto', 'OPPURE FISSATI BENE', () => mondo(casa, V(DX, .45, -3.3)), vs(-170, -250), T.tolgono + 1.5, E(12) - .4, VERDE);
+  scheda('chiusure', 'Gas, acqua e luce', 'IMPARA DOVE SI CHIUDONO', () => mondo(gas, V(-.1, .45, 0)), vs(170, -250), T.gas + .1, T.cassetta + .1, VERDE);
+  scheda('kit', 'Cassetta, torcia, radio', 'TIENILE PRONTE IN CASA', () => pos(cassetta), vs(-160, -250), T.cassetta + .5, T.muri - .45, VERDE);
+  scheda('tecnico', 'Chiedi a un tecnico', 'MURI, SOLAI, CORNICIONI, BALCONI', () => mondo(balc, V(0, 1.05, -.9)), vs(-190, -230), T.muri + 1.5, E(13) - .4, VERDE);
+  // 14 la prova
+  scheda('nulla', 'Stessa scossa: nulla cade', 'LA PREVENZIONE SI FA PRIMA', null, null, T.nulla - .1, E(14) - .4, VERDE);
+  // 15 dopo
+  scheda('bene', 'Tutti bene?', 'CONTROLLA CHI È CON TE', () => bimbo.testa(), vs(-200, -190), T.controlla + .2, T.scarpe - .25);
+  scheda('scarpe', 'Metti le scarpe', 'A TERRA POSSONO ESSERCI VETRI', () => mondo(adulto.root, V(0, .1, 0)), vs(-230, 170), T.scarpe, T.chiudi - .25, AMBRA);
+  scheda('gasluce', 'Chiudi gas e luce', 'PRIMA DI USCIRE', () => mondo(gas, V(-.1, .5, 0)), vs(-250, -200), T.chiudi + .1, T.esci + .3);
+  scheda('esci', "Verso l'area di attesa", 'ESCI CON PRUDENZA', () => mondo(portaPerno, V(0, 1.6, -.45)), vs(-220, -170), T.attesa - .2, T.rientrare - .3, VERDE);
+  scheda('rientro', 'Non rientrare', 'FINCHÉ NON LO DICONO LE AUTORITÀ', null, null, T.rientrare, E(15) - .4, AMBRA);
+  // 16 chiusura
+  scheda('aa', 'Area di attesa', 'DOVE ASPETTARE LE INDICAZIONI', () => mondo(cartello, V(0, 2.15, 0)), vs(-190, -170), S(16) + 2.1, T.su - .3, VERDE);
+  scheda('fine', 'protezionecivilegenzano.it', 'COSA FARE · AREE DI ATTESA', null, null, T.su, TOTAL + 1);
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  const fonte = document.getElementById('fonte');
+  fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+
+  /* ================================================================ ANIMAZIONE */
+  function cammina(p, a, b, t, t0, dur) {          // posizione e fase del passo lungo il segmento a→b
+    const u = prog(t, t0, dur), s = ease.morbida(u);
+    p.set(mix(a.x, b.x, s), a.y || 0, mix(a.z, b.z, s));
+    return u > 0 && u < 1 ? (t - t0) * 9 : 0;
+  }
+  const comparsa = (o, t, t0, dur = .45) => {    // compare con un piccolo rimbalzo
+    const u = clamp(prog(t, t0, dur));
+    o.visible = u > 0;
+    o.scale.setScalar(Math.max(.001, u < 1 ? ease.morbida(u) * (1 + .15 * Math.sin(u * Math.PI)) : 1));
+  };
+  const lampeggio = (t, t0, dur) => fin(t, t0 - .1, t0 + dur, .25, .4) * (.55 + .45 * Math.sin((t - t0) * 9));
+  function anima(t) {
+    const A = ampiezza(t), te = tEventi(t), prep = preparata(t);
+    // --- scossa: la casa e il terreno tremano insieme
+    quartiere.position.copy(tremito(t, A.casa, 0));
+    pianerottolo.position.set(XP, 0, 0).add(tremito(t, A.pian, 3));
+    // --- tetto e parete frontale
+    const ap = aperto(t);
+    tetto.position.y = HM + 4.0 * ap; tetto.visible = ap < .995;
+    const fr = esplodi(prog(t, T.entriamo, 1.4)) * (1 - esplodi(prog(t, S(16) + .2, 1.5)));
+    fronte.position.set(0, 4.6 * fr, 1.8 * fr); fronte.visible = fr < .995;
+    const offTetto = tetto.position.y - HM;
+    // --- lampadario
+    const osc = (A.casa * .35 + (t > T.scossa1 && t < S(5) ? .05 * Math.exp(-(t - T.inclina) * .2) : 0)) * Math.sin(t * 5.6);
+    lampPerno.rotation.set(osc * .6, 0, osc);
+    // nelle viste di lato il lampadario starebbe davanti all'obiettivo: si toglie
+    lampPerno.visible = !((t > S(8) + .4 && t < E(8) - .1) || (t > S(11) + .4 && t < E(11) - .3) || (t > S(13) + .4 && t < T.muri - .2));
+    // --- libri che scivolano
+    libriCadono.forEach(l => {
+      const u = prog(te, T.libri + l.t0, .7), s = u * u;
+      l.b.position.set(mix(l.p0.x, l.p1.x, u), mix(l.p0.y, l.p1.y + .03, s), mix(l.p0.z, l.p1.z, u));
+      l.b.rotation.set(mix(0, Math.PI / 2, u), mix(0, l.rot, u), 0);
+    });
+    // --- vaso della mensola: sul divano; nella casa preparata va a terra
+    if (!prep) {
+      const u = prog(te, T.vaso, .65), s = u * u;
+      vaso.position.set(mix(vasoSu.x, vasoDivano.x, u), mix(vasoSu.y, vasoDivano.y, s) + Math.sin(u * Math.PI) * .12, mix(vasoSu.z, vasoDivano.z, u));
+      vaso.rotation.set(mix(0, 1.35, u), 0, mix(0, -.6, u));
+    } else {
+      const u = ease.morbida(prog(t, T.sopra + .1, 1.5));
+      vaso.position.set(mix(vasoSu.x, vasoBasso.x, u), mix(vasoSu.y, vasoBasso.y, u) + Math.sin(u * Math.PI) * .35, mix(vasoSu.z, vasoBasso.z, u));
+      vaso.rotation.set(0, u * 1.2, 0);
+    }
+    // --- mensola: sparisce nella casa preparata
+    const via = prep ? liscia(prog(t, T.sopra, 1.0)) : 0;
+    mensola.position.y = 1.92 + .4 * via; mensola.visible = via < .98;
+    mensola.material.transparent = via > 0; mensola.material.opacity = 1 - via;
+    // --- quadro: salta dal gancio aperto e cade sul divano; nella casa preparata resta (gancio chiuso)
+    if (!prep) {
+      const u = prog(te, T.quadro, .75), s = u * u;
+      quadro.position.set(mix(QX, QD.x, u), mix(QY, QD.y, s) + Math.sin(Math.min(1, u * 2.5) * Math.PI) * .07, mix(QZ, QD.z, u));
+      quadro.rotation.set(0, 0, mix(0, -1.3, liscia(u)));
+    } else {
+      quadro.position.set(QX, QY, QZ);
+      quadro.rotation.set(.012 * A.casa * Math.sin(t * 12), 0, 0);
+    }
+    gancioVeroAperto.visible = !prep || t < T.ganci + .6;
+    gancioVeroChiuso.visible = !gancioVeroAperto.visible;
+    const ug = prep ? fin(t, T.ganci - .1, T.sopra - .25, .45, .4) : 0;
+    [gancioGrandeAperto, gancioGrandeChiuso].forEach((g, i) => {
+      const u = clamp(prog(t, T.ganci - .1 + i * .35, .45)) * (ug > 0 ? 1 : 0) * ug;
+      g.visible = u > .001; g.scale.setScalar(Math.max(.001, 1.8 * ease.morbida(u)));
+      g.rotation.y = .25 * Math.sin(t * 1.3 + i);
+    });
+    // --- TV: scivola e cade; nella casa preparata cinghie e staffetta (vista esplosa)
+    if (!prep) {
+      const u = prog(te, T.tv, .55), v = prog(te, T.tv + .55, .55), vv = v * v;
+      tv.position.set(CX, mix(.5, .1, vv), mix(mix(TVZ, -2.13, liscia(u)), -1.74, v));
+      tv.rotation.set(vv * 1.55 + .05 * Math.sin(u * Math.PI * 3) * (1 - v), 0, 0);
+    } else {
+      tv.position.set(CX, .5, TVZ);
+      tv.rotation.set(.006 * A.casa * Math.sin(t * 11), 0, 0);
+    }
+    const uc = esplodi(prog(t, T.cinghia - .3, 1.0));
+    cinghie.visible = prep && t >= T.cinghia - .3;
+    cinghieSingole.forEach((c, i) => {
+      c.g.position.copy(c.base).add(V(0, .45 * (1 - uc), .75 * (1 - uc) + .05 * i * (1 - uc)));
+      c.g.rotation.set((1 - uc) * .9, 0, 0);
+    });
+    const usp = esplodi(prog(t, T.cinghia + .3, .8));
+    staffaPiede.visible = cinghie.visible;
+    staffaPiede.position.copy(spBase).add(V(0, .3 * (1 - usp), .55 * (1 - usp)));
+    staffaPiede.scale.setScalar(2.2);
+    // --- cucina: le ante si spalancano, piatti e bicchieri cadono; nella casa preparata i fermi
+    ante.forEach((a, i) => {
+      if (!prep) {
+        const u = esplodi(prog(te, T.ante + i * .12, .45));
+        a.rotation.y = u * (1.25 + .1 * i) + .08 * Math.sin(prog(te, T.ante + .45 + i * .12, .6) * Math.PI * 2) * u;
+      } else a.rotation.y = .012 * A.casa * Math.abs(Math.sin(t * 13 + i));
+    });
+    piatti.forEach(p => {
+      const u = prep ? 0 : prog(te, T.ante + p.d, .6), s = u * u;
+      const fuori = clamp(u * 3);
+      p.p.position.set(mix(p.p0.x, p.p0.x + .45, fuori) + (p.p1.x - p.p0.x - .45) * clamp((u - .2) / .5), mix(p.p0.y, p.p1.y, s), mix(p.p0.z, p.p1.z, u));
+      p.p.rotation.set(mix(0, p.rx, u) + Math.sin(u * Math.PI) * 1.2, p.sp * u, mix(0, p.rz, u));
+    });
+    bicchieri.forEach(b => {
+      const u = prep ? 0 : prog(te, T.ante + b.d, .6), s = u * u;
+      b.b.position.set(mix(b.b0.x, b.b1.x, u), mix(b.b0.y, b.b1.y, s), mix(b.b0.z, b.b1.z, u));
+      b.b.rotation.set(0, 0, mix(0, Math.PI / 2, liscia(u)));
+    });
+    frantumi.visible = !prep && te >= T.ante + .85;
+    const uf = esplodi(prog(t, T.fermo - .3, .9));
+    fermi.forEach((f, i) => {
+      f.fe.visible = prep && t >= T.fermo - .3;
+      f.fe.position.copy(f.base).add(V(.55 * (1 - uf), .12 * (1 - uf) + .02 * i * (1 - uf), 0));
+      f.fe.scale.setScalar(1.7);
+    });
+    // --- libreria: si inclina e si rovescia; fissata con le staffe nella casa preparata
+    let ang;
+    if (!prep) {
+      const w = prog(te, T.inclina - .6, .6), c = prog(te, T.inclina, 1.0);
+      ang = .06 * Math.sin(w * Math.PI * 3) * (1 - c) + 1.43 * c * c;
+      if (c >= 1) ang = 1.43 - .04 * Math.abs(Math.sin(prog(te, T.inclina + 1.0, .4) * Math.PI)) * (1 - prog(te, T.inclina + 1.4, .3));
+    } else ang = .01 * A.casa * Math.sin(t * 9);
+    librPerno.rotation.x = ang;
+    // --- scatola pesante: in cima, poi a terra; statuina e orologio con il biadesivo
+    const sg = prep ? esplodi(prog(t, T.pesanti + .1, 1.2)) : 0;
+    scatola.position.set(mix(scatolaSu.x, scatolaGiu.x, sg), mix(scatolaSu.y, scatolaGiu.y, sg) + Math.sin(sg * Math.PI) * .28, mix(scatolaSu.z, scatolaGiu.z, sg));
+    const alza = prep ? Math.sin(clamp(prog(t, T.nastro - .2, 1.3)) * Math.PI) * .24 : 0;
+    statuina.position.y = LBH + .006 + alza; orologio.position.y = LBH + .006 + alza * .9;
+    biadesivi.forEach((b, i) => { b.visible = prep && t >= T.nastro + .2; if (b.visible) comparsa(b, t, T.nastro + .2 + i * .1, .3); });
+    // --- staffe, viti e tasselli: vista esplosa che si chiude sulla libreria
+    staffe.forEach(s => {
+      const u = esplodi(prog(t, T.staffe - .1, 1.0)), resp = .12 * Math.sin(prog(t, T.staffe + .9, 1.2) * Math.PI);
+      s.g.visible = prep && t >= T.staffe - .4;
+      s.g.position.copy(s.base).add(V(0, .55 * (1 - u) + .02 * resp, .9 * (1 - u)));
+      s.tassello.position.copy(s.tasBase).add(V(0, 0, .3 * (1 - esplodi(prog(t, T.staffe - .3, .7)))));
+      s.vite.position.copy(s.viteBase).add(V(0, 0, .28 * (1 - esplodi(prog(t, T.staffe + .6, .6)))));
+    });
+    // --- portafinestra: crepa e schegge (prima scossa)
+    const rotto = !prep && te >= T.ante + .3;
+    crepe.visible = rotto; schegge.visible = rotto && te >= T.ante + .45;
+    // --- fuori: vasi dal balcone, tegole, cornicione, balcone che cede
+    vasiB.forEach((v, i) => {
+      if (!prep) {
+        const u = prog(te, T.vasiF + i * .18, .95), s = u * u;
+        v.g.position.set(mix(v.up.x, v.giu.x, u), mix(v.up.y, v.giu.y, s) + Math.sin(Math.min(1, u * 4) * Math.PI) * .06, mix(v.up.z, v.giu.z, u));
+        v.g.rotation.set(mix(0, v.rx, u), 0, mix(0, v.rz, u));
+        v.cocci.visible = u >= 1;
+        v.pianta.position.y = u >= 1 ? .2 : .32;
+      } else {
+        const u = esplodi(prog(t, T.tolgono + i * .18, 1.0));
+        v.g.position.set(mix(v.up.x, v.pav.x, u), mix(v.up.y, v.pav.y, u) + Math.sin(u * Math.PI) * .3, mix(v.up.z, v.pav.z, u));
+        v.g.rotation.set(0, 0, .015 * A.casa * Math.sin(t * 10 + i));
+        v.cocci.visible = false; v.pianta.position.y = .32;
+      }
+    });
+    tegole.forEach(g => {
+      const t0 = T.tegole + g.d, u1 = prep ? 0 : prog(te, t0, .35), u2 = prep ? 0 : prog(te, t0 + .35, .85);
+      if (u2 <= 0) {
+        g.g.position.copy(g.base).lerp(g.gronda, u1 * u1);
+        if (u1 <= 0) g.g.position.y += offTetto;
+        g.g.rotation.set(-PEND, 0, 0);
+      } else {
+        g.g.position.set(mix(g.gronda.x, g.giu.x, u2), mix(g.gronda.y, g.giu.y, u2 * u2), mix(g.gronda.z, g.giu.z, u2));
+        g.g.rotation.set(-PEND + u2 * 3, g.sp * u2 * .3, u2 * g.sp * .2);
+      }
+      g.g.visible = u1 > 0 || tetto.visible;
+    });
+    {
+      const u = prep ? 0 : prog(te, T.cornicione, .95);
+      pezzoCorn.position.set(mix(pcBase.x, pcGiu.x, u), mix(pcBase.y, pcGiu.y, u * u), mix(pcBase.z, pcGiu.z, u));
+      if (u <= 0) pezzoCorn.position.y += offTetto;
+      pezzoCorn.rotation.set(-u * 1.1, 0, u * .35);
+      pezzoCorn.visible = u > 0 || tetto.visible;
+      cicatrice.visible = u > 0;
+    }
+    const ced = prep ? 0 : esplodi(prog(te, T.cedere, .9));
+    balc.rotation.x = -.33 * ced - (ced > 0 && ced < 1 ? .01 * Math.sin(t * 40) : 0);
+    crepaBalc.visible = crepaSotto.visible = !prep && te >= T.cedere - .25;
+    calcinacci.forEach(c => {
+      const u = prep ? 0 : prog(te, T.cedere + .15 + c.d, .85);
+      c.c.visible = u > 0;
+      c.c.position.set(mix(c.p0.x, c.p1.x, u), mix(c.p0.y, c.p1.y, u * u), mix(c.p0.z, c.p1.z, u));
+      c.c.rotation.set(u * 4, u * 2, 0);
+    });
+    // --- il tecnico: balcone e cornicione evidenziati
+    const ev = prep ? fin(t, T.muri + .2, E(13), .6, .5) * (.5 + .5 * Math.sin(t * 4)) : 0;
+    matBalc.emissive.set(0x2a8cff); matBalc.emissiveIntensity = .35 * ev;
+    matCorn.emissive.set(0x2a8cff); matCorn.emissiveIntensity = .35 * ev;
+    // --- gas, acqua e luce evidenziati (scena 13); kit che compare
+    matLevaGas.emissiveIntensity = prep ? .9 * lampeggio(t, T.gas, 1.6) : 0;
+    matRub.emissiveIntensity = prep ? .9 * lampeggio(t, T.acqua, 1.4) : 0;
+    matInt.emissiveIntensity = prep ? 1.2 * lampeggio(t, T.luceK, 1.2) : 0;
+    [T.gas, T.acqua, T.luceK].forEach((t0, i) => {
+      const u = prep ? fin(t, t0 - .1, T.muri - .5, .3, .4) : 0, p = (t - t0) * 1.6 % 1;
+      aloni[i].visible = u > 0; aloni[i].material.opacity = u * (1 - .6 * p); aloni[i].scale.setScalar(1 + .5 * p);
+    });
+    const kitOn = prep;
+    [[zaino, T.tieniK - .1], [cassetta, T.cassetta], [torcia, T.torcia], [radio, T.radio]].forEach(([o, t0]) => {
+      if (kitOn) comparsa(o, t, t0); else o.visible = false;
+    });
+    // --- persone
+    const inStanza = (t >= T.persone && t < S(5)) || (t >= T.ora - .5 && t < T.esci + 2.4);
+    adulto.root.visible = bimbo.root.visible = inStanza;
+    adulto.scarpe(t >= T.scarpe + .2); bimbo.scarpe(t >= T.scarpe + .45);
+    const aFuori = V(.75, 0, 1.45), aSotto = V(.55, 0, .42), bFuori = V(1.55, 0, 1.3), bSotto = V(1.2, 0, .32);
+    if (t < S(5)) {
+      const pa = cammina(adulto.root.position, aFuori, aSotto, t, T.abbassa + .1, 1.2);
+      const pb = cammina(bimbo.root.position, bFuori, bSotto, t, T.abbassa + .3, 1.1);
+      const c = liscia(prog(t, T.abbassa, 1.1)), cb = liscia(prog(t, T.abbassa + .2, 1.1));
+      const cop = liscia(prog(t, T.protegge, .7)), tieni = liscia(prog(t, T.tiene, .6));
+      const volta = Math.sin(prog(t, T.corre - .2, 1.6) * Math.PI);
+      adulto.root.rotation.y = Math.PI + 1.1 * volta;
+      bimbo.root.rotation.y = Math.PI - .3;
+      adulto.posa(c, cop, tieni, pa); bimbo.posa(cb, cop, tieni * .8, pb);
+      const sc = liscia(prog(t, T.persone, .4));
+      adulto.root.scale.setScalar(Math.max(.001, sc)); bimbo.root.scale.setScalar(Math.max(.001, sc));
+    } else if (t < S(16)) {
+      const sc = liscia(prog(t, T.ora - .5, .4));
+      adulto.root.scale.setScalar(Math.max(.001, sc)); bimbo.root.scale.setScalar(Math.max(.001, sc));
+      const fuori = liscia(prog(t, T.finisce, 1.0));
+      const c = 1 - fuori, cop = 1 - liscia(prog(t, T.finisce - .1, .6)), tieni = cop;
+      adulto.root.position.copy(aSotto).lerp(V(.55, 0, 1.2), fuori);
+      bimbo.root.position.copy(bSotto).lerp(V(1.4, 0, 1.25), fuori);
+      const guarda = liscia(prog(t, T.controlla, .6)) * (1 - liscia(prog(t, T.scarpe + 1.6, .6)));
+      adulto.root.rotation.y = mix(Math.PI, Math.PI / 2, guarda);
+      bimbo.root.rotation.y = mix(Math.PI - .3, -Math.PI / 2, guarda);
+      let pa = 0, pb = 0;
+      const gasP = V(2.45, 0, .35), qeP = V(2.45, 0, 1.05), portaP = V(2.4, 0, -1.2), oltre = V(3.9, 0, -1.2);
+      if (t >= T.chiudi - 1.3) {
+        const tA = T.chiudi - 1.3;
+        if (t < tA + 1.2) { pa = cammina(adulto.root.position, V(.55, 0, 1.2), gasP, t, tA, 1.2); adulto.root.rotation.y = Math.PI / 2; }
+        else if (t < T.luce - .4) { adulto.root.position.copy(gasP); adulto.root.rotation.y = Math.PI / 2; }
+        else if (t < T.luce + .3) { pa = cammina(adulto.root.position, gasP, qeP, t, T.luce - .4, .7); adulto.root.rotation.y = Math.PI / 2; }
+        else if (t < T.esci) { adulto.root.position.copy(qeP); adulto.root.rotation.y = Math.PI / 2; }
+        else if (t < T.esci + 1.2) { pa = cammina(adulto.root.position, qeP, portaP, t, T.esci, 1.2); adulto.root.rotation.y = Math.PI; }
+        else { pa = cammina(adulto.root.position, portaP, oltre, t, T.esci + 1.2, 1.0); adulto.root.rotation.y = Math.PI / 2; }
+      }
+      if (t >= T.esci - .2) {
+        const b0 = V(1.4, 0, 1.25), bp = V(2.2, 0, -1.0);
+        if (t < T.esci + 1.4) { pb = cammina(bimbo.root.position, b0, bp, t, T.esci - .2, 1.6); bimbo.root.rotation.y = Math.PI * .8; }
+        else { pb = cammina(bimbo.root.position, bp, V(3.9, 0, -1.0), t, T.esci + 1.4, 1.0); bimbo.root.rotation.y = Math.PI / 2; }
+      }
+      const braccio = t >= T.chiudi - .1 && t < T.esci ? 1 : 0;
+      adulto.posa(c, cop, Math.max(tieni, braccio * .9), pa); bimbo.posa(c, cop, tieni * .8, pb);
+    } else {
+      // all'area di attesa
+      adulto.root.visible = bimbo.root.visible = true;
+      adulto.root.position.set(3.45, YT, 5.75); bimbo.root.position.set(4.0, YT, 5.6);
+      adulto.root.rotation.y = bimbo.root.rotation.y = -.4;
+      adulto.root.scale.setScalar(1); bimbo.root.scale.setScalar(1);
+      adulto.posa(0, 0, 0, 0); bimbo.posa(0, 0, 0, 0);
+      adulto.scarpe(true); bimbo.scarpe(true);
+    }
+    // gas e luce chiusi dopo la scossa
+    valvola.rotation.x = -Math.PI / 2 * liscia(prog(t, T.chiudi + .1, .5)) * (t < S(16) ? 1 : 0);
+    interruttore.rotation.z = (t >= T.luce + .2 && t < S(16)) ? .6 : -.4;
+    lampadina.material.color.set(t >= T.luce + .2 && t < S(16) ? 0x6b6b6b : 0xfff3c4);
+    portaPerno.rotation.y = -1.45 * liscia(prog(t, T.esci + .8, .6)) * (1 - liscia(prog(t, S(16) + .1, .6)));
+    // --- il passante in strada (scena 3): si ferma, guarda, poi si allontana verso la piazza
+    passante.root.visible = t > S(3) - .4 && t < S(4) + .4;
+    {
+      const YM = YT + .07, Y0 = YT;
+      const a0 = V(-.15, YM, -3.55), a1 = V(-.95, YM, -3.55), a2 = V(-1.3, Y0, -8.6);
+      let ph = 0;
+      if (t < T.allontana) {
+        ph = cammina(passante.root.position, a0, a1, t, S(3), T.vasiF - S(3) + .2) * .8;
+        const gira = liscia(prog(t, T.vasiF + .3, .7));
+        passante.root.rotation.y = mix(-Math.PI / 2, 0, gira);
+      } else {
+        ph = cammina(passante.root.position, a1, a2, t, T.allontana + .2, 3.4);
+        passante.root.position.y = mix(YM, Y0, clamp(prog(t, T.allontana + .5, .6)));
+        passante.root.rotation.y = mix(0, Math.PI, liscia(prog(t, T.allontana - .1, .5)));
+      }
+      const spav = fin(t, T.vasiF + .2, T.allontana, .3, .3) * .25;
+      passante.posa(0, spav, 0, ph);
+    }
+    // --- pianerottolo
+    pianerottolo.visible = ospite.root.visible = t > S(5) - 1.4 && t < S(6) + 1.4;
+    const sx = liscia(prog(t, T.scale - .2, .4)), sa = liscia(prog(t, T.ascensore - .2, .4));
+    xScale.visible = sx > 0 && pianerottolo.visible; xScale.scale.setScalar(Math.max(.001, sx));
+    xAsc.visible = sa > 0 && pianerottolo.visible; xAsc.scale.setScalar(Math.max(.001, sa));
+    xScale.position.set(XP + .7, .55, .6).add(tremito(t, A.pian, 3)); xAsc.position.set(XP - .85, 1.2, -1.4).add(tremito(t, A.pian, 3));
+    ospite.root.position.set(XP - .2, 0, .9).add(tremito(t, A.pian, 3));
+    ospite.root.rotation.y = Math.PI * .85; ospite.posa(0, 0, 0, 0);
+    // --- visibilità per scena (meno oggetti da disegnare)
+    quartiere.visible = !(t > S(5) + 1.4 && t < S(6) - .2);
+    // riavvolgimento: righe e tinta sopra la scena
+    gfx.clearRect(0, 0, fx.width, fx.height);
+    const rw = fin(t, T.rewind - .1, T.rewind + RW + .1, .15, .25);
+    if (rw > 0) {
+      gfx.fillStyle = 'rgba(40,90,190,' + (.16 * rw).toFixed(3) + ')'; gfx.fillRect(0, 0, fx.width, fx.height);
+      const off = (t * 220) % 12;
+      gfx.fillStyle = 'rgba(255,255,255,' + (.07 * rw).toFixed(3) + ')';
+      for (let y = -12 + off; y < fx.height; y += 12) gfx.fillRect(0, y, fx.width, 2);
+      gfx.fillStyle = 'rgba(255,255,255,' + (.85 * rw).toFixed(3) + ')';
+      const cx = fx.width / 2, cy = (ORIZ ? 240 : 470) / 2, s = ORIZ ? 22 : 26;
+      [-1, 1].forEach(d => { gfx.beginPath(); gfx.moveTo(cx + d * s * .2 + s * .9, cy - s); gfx.lineTo(cx + d * s * .2 - s * .1, cy); gfx.lineTo(cx + d * s * .2 + s * .9, cy + s); gfx.fill(); });
+    }
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    cam.applica(t);
+    camera.near = .02; camera.far = 150; camera.updateProjectionMatrix();
+    anima(t);
+    vicino.disegna(scena, camera);
+    const k = sceneA(t), c = CONFIG.capitoloDi[k], sc = SC[k];
+    const primaDelCap = CONFIG.capitoloDi.indexOf(c);
+    IMP.aggiorna(stato, t, { passoHUD: c + (k === 0 ? 1 : (k === primaDelCap ? clamp((t - sc.inizio) / .4) : 1)), hud: CONFIG.hud[k], notaVisibile: true });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const s of SCH) {
+      let punto = null, vis = true, p = null;
+      if (s.punto) {
+        p = M3.proietta(s.punto(), camera, { zona: L.zonaSchede, margine: L.margine });
+        punto = p.punto; vis = p.visibile;
+      }
+      proiezioni[s.id] = p;
+      IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
+        inizio: s.inizio, fine: s.fine, visibile: vis,
+        centro: s.punto ? null : { x: W / 2, y: L.zona.alto + (ORIZ ? 110 : 150) } });
+    }
+    const testo = k === SC.length - 1 ? CONFIG.fonte : '';
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.display = testo ? '' : 'none';
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(s => s.punto).map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine, proiezione: proiezioni[s.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  IMP.caricaFont().then(() => { casa.updateMatrixWorld(true); render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>
