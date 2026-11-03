@@ -29,7 +29,7 @@ Genzano di Roma è un paese su una collina. Le strade sono strette. Molte person
 
 Quando vai in bici, segui queste regole:
 
-- Indossa sempre il **casco**. È obbligatorio per i bambini sotto i 12 anni.
+- Indossa sempre il **casco**. Non è obbligatorio per legge, ma è molto consigliato.
 - Porta un **gilet ad alta visibilità** di notte o con poca luce.
 - Controlla che le **luci** funzionino. Bianca davanti, rossa dietro.
 - Controlla spesso **freni, ruote e catena**.

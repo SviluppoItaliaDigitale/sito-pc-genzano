@@ -19,11 +19,11 @@ Ogni anno la **terza domenica di novembre** si celebra la **Giornata Mondiale in
 
 Secondo **ISTAT** e **ACI**, nel 2024 in Italia:
 
-- **oltre 3.000 vittime** della strada;
-- **oltre 220.000 feriti**;
-- **circa 165.000 incidenti** con lesioni a persone;
+- **3.030 vittime** della strada;
+- **circa 234.000 feriti** (233.853);
+- **173.364 incidenti** con lesioni a persone;
 - **costo sociale** stimato oltre **18 miliardi di euro** annui;
-- **obiettivo UE 2030**: dimezzare le vittime rispetto al 2020.
+- **obiettivo UE 2030**: dimezzare vittime e feriti gravi rispetto al 2019.
 
 ## Le cause principali
 
@@ -40,7 +40,7 @@ Le statistiche mostrano come **causa principale**:
 ## Le categorie più vulnerabili
 
 - **motociclisti** (mortalità per km percorso molto superiore alle auto);
-- **ciclisti** (in crescita);
+- **ciclisti** (185 vittime nel 2024, in calo del 12,7% sul 2023);
 - **pedoni** (anziani in particolare);
 - **guidatori** tra 18 e 25 anni;
 - **utenti** di **monopattini elettrici** (dato recente in aumento).
@@ -87,7 +87,7 @@ Non sostituiamo ambulanze o pompieri, ma **integriamo** il sistema dove il Comun
 - **abbigliamento riflettente** al buio.
 
 ### Ai ciclisti
-- **casco** sempre (obbligatorio per minori, raccomandato per tutti);
+- **casco** sempre (in bicicletta non è obbligatorio per legge, ma è raccomandato);
 - **luci** e riflettori funzionanti;
 - **giubbotto** ad alta visibilità di notte;
 - **rispetto** del codice della strada;
@@ -110,7 +110,7 @@ Non sostituiamo ambulanze o pompieri, ma **integriamo** il sistema dove il Comun
 
 ## Iniziative in Italia
 
-Nella Giornata di oggi:
+In occasione della Giornata:
 
 - **associazioni** dei familiari delle vittime (AIFVS e altre) organizzano eventi;
 - **Comuni** depongono corone di ricordo;
@@ -153,6 +153,7 @@ Siamo tutti utenti della strada: siamo tutti **responsabili**.
 
 - [Nebbia — rischio viabilità](/comunicazioni/2026-11-12-nebbia-rischio-viabilita/)
 - [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/)
+- [ACI-ISTAT — Report incidenti stradali 2024](https://aci.gov.it/app/uploads/2025/07/Report-incidenti-stradali-2024.pdf)
 - [ACI](https://www.aci.it/)
 
 In emergenza: **112**.

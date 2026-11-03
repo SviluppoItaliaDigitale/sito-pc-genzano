@@ -38,7 +38,7 @@ Una bicicletta senza luci, al crepuscolo, è un fantasma per chi guida. Non è u
 
 ### Casco
 
-Il casco è **obbligatorio per i minorenni** (Codice della Strada). Per gli adulti è fortemente **raccomandato**: riduce significativamente il rischio di trauma cranico in caso di caduta. I traumi cranici sono la principale causa di morte e disabilità in incidenti in bicicletta.
+Il casco in bicicletta **non è obbligatorio per legge** ma è fortemente **raccomandato**, soprattutto ai minorenni: riduce significativamente il rischio di trauma cranico in caso di caduta. I traumi cranici sono la principale causa di morte e disabilità in incidenti in bicicletta.
 
 ### Comportamento in strada
 

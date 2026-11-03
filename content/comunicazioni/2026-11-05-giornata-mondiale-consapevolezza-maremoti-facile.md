@@ -24,7 +24,7 @@ Il 5 novembre è un giorno speciale. L'ONU, l'Organizzazione delle Nazioni Unite
 
 ## Perché il 5 novembre
 
-La data ricorda una storia giapponese. Il 5 novembre 1854 c'è un forte terremoto in Giappone. Un uomo capisce il pericolo. Lui dà fuoco al suo riso sulla collina. Le persone del villaggio vedono il fuoco. Corrono verso la collina. Poco dopo arriva un'onda enorme. Le persone si salvano. Questa storia insegna una cosa importante: conoscere il pericolo salva la vita.
+La data ricorda una storia giapponese del 1854. Nel calendario giapponese di allora è il 5 novembre. Per noi è il 24 dicembre 1854. C'è un forte terremoto in Giappone. Un uomo capisce il pericolo. Lui dà fuoco al suo riso sulla collina. Le persone del villaggio vedono il fuoco. Corrono verso la collina. Poco dopo arriva un'onda enorme. Le persone si salvano. Questa storia insegna una cosa importante: conoscere il pericolo salva la vita.
 
 ## Anche il Mediterraneo ha i maremoti
 

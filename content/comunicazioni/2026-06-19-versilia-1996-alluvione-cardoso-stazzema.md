@@ -1,7 +1,7 @@
 ---
 title: "Versilia, 19 giugno 1996: la notte che cancellò Cardoso"
 date: 2026-06-19T00:02:00+02:00
-description: "Un nubifragio di intensità mai registrata in Versilia: 470 mm di pioggia in poche ore tra Stazzema, Cardoso e Pietrasanta."
+description: "Un nubifragio di intensità mai registrata in Versilia: circa 480 mm di pioggia in una giornata tra Stazzema, Cardoso e Pietrasanta."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,13 +13,13 @@ allegati: []
 draft: false
 ---
 
-Tra il **18 e il 19 giugno 1996** un sistema temporalesco di intensità eccezionale si scaricò sui versanti delle Alpi Apuane, sopra la **Versilia toscana**. Furono registrati **fino a 470 millimetri di pioggia in poche ore** sulla zona di **Cardoso di Stazzema**, **Pietrasanta**, **Forte dei Marmi** e dintorni. Il torrente **Vezza** straripò. Le frane si staccarono dai versanti delle Apuane, spazzando via interi nuclei abitati. **Cardoso**, frazione del comune di Stazzema, fu **letteralmente cancellata** dall'onda di fango e detriti.
+Il **19 giugno 1996** un sistema temporalesco di intensità eccezionale si scaricò sui versanti delle Alpi Apuane, sopra la **Versilia toscana**. Furono registrati **circa 480 millimetri di pioggia in circa dodici ore** (secondo i Vigili del Fuoco) sulla zona di **Cardoso di Stazzema**, **Pietrasanta**, **Forte dei Marmi** e dintorni. Il torrente **Vezza** straripò. Le frane si staccarono dai versanti delle Apuane, spazzando via interi nuclei abitati. **Cardoso**, frazione del comune di Stazzema, fu **letteralmente cancellata** dall'onda di fango e detriti.
 
-Bilancio finale: **14 morti**, **decine di dispersi mai ritrovati** (i corpi furono probabilmente trascinati al mare dalle colate), oltre **mille senzatetto**, danni stimati in **circa 250 miliardi di lire** dell'epoca.
+Bilancio finale: **14 morti**, molte famiglie evacuate (le fonti divergono sul numero) e danni ingenti.
 
 ## La cronologia di una notte fatale
 
-Le precipitazioni iniziarono nel tardo pomeriggio del 18 giugno e si intensificarono fino al picco notturno tra le **2 e le 4 del mattino del 19**. La popolazione dormiva. Quando l'allarme arrivò, era già troppo tardi: le strade erano interrotte, le linee telefoniche cadute, i fiumi straripati.
+Il temporale cominciò verso le 6 del mattino del 19 giugno e la pioggia durò circa dodici ore, con la massima intensità intorno alle **13:50**. Quando l'allarme arrivò, era già troppo tardi: le strade erano interrotte, le linee telefoniche cadute, i fiumi straripati.
 
 {{< foto src="/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema-fonte-wikipedia.webp"
          alt="Veduta odierna della frazione di Cardoso (Stazzema): una via del paese con case basse, auto parcheggiate e panni stesi, ai piedi dei versanti boscosi delle Alpi Apuane"

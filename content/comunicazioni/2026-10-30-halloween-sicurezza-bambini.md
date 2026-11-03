@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-30-halloween-sicurezza-bambini.webp"
 image_alt: "Gruppo di bambini in costume di Halloween con luci riflettenti sui vestiti durante la raccolta di dolcetti in un quartiere"
 scadenza: "2026-10-31"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza dirigenziale n. 156 del 27 ottobre 2026 — viabilità per la Festa di Halloween"
