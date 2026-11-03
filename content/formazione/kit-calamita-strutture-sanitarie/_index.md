@@ -16,7 +16,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 | Scheda | Quando usarla |
 |---|---|
-| [Guida operatori RSA](/formazione/kit-calamita-strutture-sanitarie/00-guida-operatori-rsa.html) | **Leggere prima.** Lezioni casi reali, triage geriatrico SALT, ruolo volontari PC. |
+| [Guida operatori RSA](/formazione/kit-calamita-strutture-sanitarie/00-guida-operatori-rsa.html) | **Leggere prima.** Lezioni casi reali, triage geriatrico per priorità logistica (ispirato a SALT), ruolo volontari PC. |
 
 ### Schede per ospiti residenti
 
@@ -34,7 +34,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 |---|---|
 | [Checklist evacuazione paziente non autosufficiente](/formazione/kit-calamita-strutture-sanitarie/06-checklist-evacuazione-paziente.html) | 1 scheda per paziente trasferito. Bag 72h + ausili + presidi. |
 | [Protocollo "Non separare la coppia"](/formazione/kit-calamita-strutture-sanitarie/07-protocollo-non-separare-coppia.html) | Coniugi/conviventi nella struttura. Tenerli insieme ogni volta che lo scenario lo consente. |
-| [Triage geriatrico SALT](/formazione/kit-calamita-strutture-sanitarie/08-triage-geriatrico-salt.html) | Verde/Giallo/Arancione/Rosso per ordine evacuazione. |
+| [Triage geriatrico per priorità logistica](/formazione/kit-calamita-strutture-sanitarie/08-triage-geriatrico-salt.html) | Verde/Giallo/Arancione/Rosso per ordine di evacuazione (ispirato a SALT, da validare con la direzione sanitaria). |
 | [Comunicazione coi familiari in emergenza](/formazione/kit-calamita-strutture-sanitarie/09-comunicazione-familiari.html) | Una persona dedicata. Cosa dire, cosa NON dire, template telefonata. |
 | [Decompenso acuto post-evento](/formazione/kit-calamita-strutture-sanitarie/10-decompenso-acuto.html) | Riconoscere delirium, idratare, mobilizzare. Quando chiamare 112. |
 | [Prevenzione decubiti durante trasferimento](/formazione/kit-calamita-strutture-sanitarie/11-prevenzione-decubiti.html) | Scala di Braden, posizionamento, materasso anti-decubito. |
