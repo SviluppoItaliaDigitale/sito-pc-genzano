@@ -2,7 +2,7 @@
 # ritmo.py: aggiunge a ogni scena qualche decimo per le animazioni (vista esplosa, spostamenti, spegnimenti)
 # e riscrive tempi.json, colonna.json (voce) e sottotitoli.json spostati di conseguenza. Idempotente: parte da voce.json.
 import json
-EXTRA = [2.4, 1.2, 3.2, 1.6, 1.6, 3.4, 1.6, 2.8]
+EXTRA = [2.4, 1.4, 3.2, 2.8, 1.6, 1.4, 1.6, 2.0, 1.8, 1.8, 1.6, 1.8, 1.8, 1.4, 3.4, 1.6, 2.8]
 PRIMA, DOPO = 0.45, 0.75
 voce = json.load(open('voce/voce.json'))
 sott = json.load(open('sottotitoli.json'))

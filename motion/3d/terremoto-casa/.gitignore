@@ -1,6 +1,6 @@
 # si committano solo sorgente, testi e tempi; audio, provini e uscite si rigenerano
 audio/
-riprese/
+riprese*/
 voce/*.wav
 dist/
 out/
