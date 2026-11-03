@@ -25,7 +25,7 @@ Il **5 novembre** è la **Giornata mondiale per la consapevolezza sui maremoti**
 
 ## Perché proprio il 5 novembre
 
-La data ricorda una storia giapponese del **5 novembre 1854**. Durante il terremoto di Ansei-Nankai, un abitante di un villaggio costiero **incendiò i propri covoni di riso** sulla collina. Il fuoco richiamò i compaesani lontano dalla riva, poco prima dell'arrivo dell'onda. La storia di *Inamura-no-hi* ("il fuoco dei covoni") è diventata il simbolo di ciò che la giornata vuole insegnare: **la conoscenza e l'allerta tempestiva salvano vite**.
+La data ricorda una storia giapponese del **1854**: il 5 novembre è la data del terremoto di Ansei-Nankai nel calendario lunare giapponese di allora (24 dicembre 1854 nel calendario gregoriano). Durante quel terremoto, un abitante di un villaggio costiero **incendiò i propri covoni di riso** sulla collina. Il fuoco richiamò i compaesani lontano dalla riva, poco prima dell'arrivo dell'onda. La storia di *Inamura-no-hi* ("il fuoco dei covoni") è diventata il simbolo di ciò che la giornata vuole insegnare: **la conoscenza e l'allerta tempestiva salvano vite**.
 
 ## Anche il Mediterraneo genera maremoti
 

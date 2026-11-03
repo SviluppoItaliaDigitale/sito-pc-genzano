@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse i sei metri in alcuni quartieri. **17 morti** a Firenze, **35 in tutta la Toscana**, oltre **5.000 famiglie** senza casa, **decine di migliaia** di opere d'arte, libri antichi e archivi danneggiati o distrutti.
+Nella notte tra il 3 e il **4 novembre 1966** l'Arno esondò ed entrò a Firenze. L'acqua, mista a fango e nafta, raggiunse circa cinque metri in alcune zone della città (4,92 m la quota segnata dalla targa di via dei Neri). Il bilancio ufficiale della Prefettura, reso noto nel 2006, conta **35 morti**: **17 a Firenze** e 18 nel resto della Toscana. Furono danneggiate o distrutte opere d'arte, libri antichi e archivi.
 
 {{< foto src="/images/2026-04-23-firenze-alluvione-1966-angeli-fango.webp"
          alt="Foto storica in bianco e nero: una via del centro storico di Firenze completamente allagata, con l'acqua che arriva alle finestre dei piani bassi dei palazzi, e sullo sfondo la cupola del Duomo (Santa Maria del Fiore)"
@@ -21,7 +21,7 @@ All'alba del **4 novembre 1966** l'Arno ruppe gli argini ed entrò a Firenze. L'
 
 ## Una città sotto acqua e fango
 
-L'Arno aveva esondato già altre volte, ma mai con quell'intensità. Le piogge eccezionali dei giorni precedenti avevano saturato il bacino. Quando la diga di Levane scaricò massicciamente l'acqua, il fiume non resse. Alle sei del mattino il **rione di Santa Croce** era già allagato. Alle nove l'acqua aveva raggiunto **piazza del Duomo**.
+L'Arno aveva esondato già altre volte, ma mai con quell'intensità. Le piogge eccezionali dei giorni precedenti avevano saturato il bacino. Quando la diga di Levane scaricò massicciamente l'acqua, il fiume non resse. Nelle prime ore della notte l'acqua cominciò a invadere il centro, con il **rione di Santa Croce** già allagato verso le quattro. Intorno alle nove raggiunse **piazza del Duomo**.
 
 I monumenti della culla del Rinascimento furono in pericolo: il **Crocifisso di Cimabue** in Santa Croce, le porte del Battistero del Ghiberti, gli **Uffizi**, la **Biblioteca Nazionale Centrale** con migliaia di volumi sommersi.
 
@@ -29,7 +29,7 @@ I monumenti della culla del Rinascimento furono in pericolo: il **Crocifisso di 
 
 Nei giorni seguenti accadde qualcosa di nuovo nella storia italiana. **Migliaia di giovani**, soprattutto studenti universitari, arrivarono spontaneamente da tutto il Paese e dall'estero. Si organizzarono per liberare le strade dal fango, recuperare libri dalle biblioteche, asciugare opere d'arte negli scantinati.
 
-Furono chiamati **"Angeli del fango"**. Non erano coordinati da nessuna istituzione. Non avevano formazione tecnica. Avevano un'idea civica: **se Firenze chiama, si va**. Gli Angeli del fango sono considerati il **primo nucleo del volontariato moderno italiano**, quella forma organizzata di partecipazione che vent'anni dopo darà vita ai gruppi comunali di Protezione Civile come il nostro.
+Furono chiamati **"Angeli del fango"**. Non erano coordinati da nessuna istituzione. Non avevano formazione tecnica. Avevano un'idea civica: **se Firenze chiama, si va**. Gli Angeli del fango sono considerati il **primo nucleo del volontariato moderno italiano**, quella forma organizzata di partecipazione che negli anni successivi darà vita ai gruppi comunali di Protezione Civile come il nostro.
 
 ## Cosa ci insegna oggi
 
@@ -43,7 +43,7 @@ L'alluvione di Firenze ha insegnato all'Italia tre cose ancora valide:
 
 ## Genzano e gli Angeli del fango
 
-Quando, vent'anni dopo Firenze, prese forma il sistema italiano di Protezione Civile, molti volontari della prima ora citavano l'esperienza degli Angeli come fonte di ispirazione. Anche il nostro Gruppo Comunale, nato all'inizio degli anni Ottanta, raccoglie quella stessa idea: cittadini che decidono di organizzarsi e formarsi per intervenire in tempo di pace e in tempo di emergenza.
+Quando, nei decenni dopo Firenze, prese forma il sistema italiano di Protezione Civile, molti volontari della prima ora citavano l'esperienza degli Angeli come fonte di ispirazione. Anche il nostro Gruppo Comunale, nato all'inizio degli anni Ottanta, raccoglie quella stessa idea: cittadini che decidono di organizzarsi e formarsi per intervenire in tempo di pace e in tempo di emergenza.
 
 Se vuoi continuare quella tradizione, scopri come [diventare volontario](/diventa-volontario/).
 
@@ -54,5 +54,6 @@ Se vuoi continuare quella tradizione, scopri come [diventare volontario](/divent
 ## Per saperne di più
 
 - [4 novembre 1966 — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/notizia/4-novembre-1966-l-alluvione-di-firenze)
+- [L'alluvione di Firenze — Servizio nazionale della Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/en/pagina-base/flood-florence/)
 - [Memoria dell'alluvione — Comune di Firenze](https://www.comune.fi.it/)
 - Voce Wikipedia: [Alluvione di Firenze del 1966](https://it.wikipedia.org/wiki/Alluvione_di_Firenze_del_4_novembre_1966)
