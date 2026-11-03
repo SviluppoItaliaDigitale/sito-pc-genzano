@@ -5,38 +5,92 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-02T19:44:15+00:00",
+  "generato": "2026-11-03T01:49:46+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-02T19:39:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ondata di cyberattacchi ai supermarket europei, frigoriferi in tilt anche in Italia, in Sicilia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/02/ondata-di-cyberattacchi-ai-supermarket-europei-frigoriferi-in-tilt-anche-in-italia-in-sicilia_5e6f0b27-05c9-468a-9004-087167137119.html"
+   "data": "2026-11-02T23:23:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italiani sempre più stressati, i dati preoccupano: il 51% dei lavoratori sotto pressione",
+   "url": "https://www.adnkronos.com/salute/stress-ingestibile-italia-dati-preoccupano-esperti_1TjI7JWxn99NE9TKiiwetI"
   },
   {
-   "data": "2026-11-02T19:36:47+00:00",
+   "data": "2026-11-02T23:15:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni midterm Usa, per i sondaggi sarà onda blu senza precedenti: ma fino a che punto ci si può fidare?",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-midterm-usa-ultimi-sondaggi-new-york-times_1vx0DKa9NeFJTZSpuyrTUm"
+  },
+  {
+   "data": "2026-11-02T23:13:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maltempo, ancora allerta arancione in Puglia e Basilicata. Scuole chiuse a Chieti e Lanciano",
+   "url": "https://www.adnkronos.com/cronaca/maltempo-allerta-oggi-3-novembre-2026_BB6lhicwFOucew9ZjQAv8"
+  },
+  {
+   "data": "2026-11-02T23:10:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mali di stagione, dalla nutrizionista i consigli per sostenere le difese immunitarie a tavola",
+   "url": "https://www.adnkronos.com/salute/mali-stagione-cibi-sistema-immunitario_2GgSwvUkbjNGe9dq93TOvD"
+  },
+  {
+   "data": "2026-11-02T23:07:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Russia ha perso territorio a ottobre. Zelensky: \"Putin prepara nuovo attacco\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-news-oggi-3-novembre_2P47326BVTeziiCmDKvVup"
+  },
+  {
+   "data": "2026-11-02T23:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Midterm, è il giorno del referendum su Trump: guerra e caro benzina pesano sul voto Usa",
+   "url": "https://www.adnkronos.com/internazionale/esteri/midterm-usa-voto-trump-oggi_3iy7nwWeRwONEeOIsVUXU5"
+  },
+  {
+   "data": "2026-11-02T22:33:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Atalanta crolla in casa con il Parma, la curva contesta Sarri e calciatori",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/02/serie-a-disfatta-atalanta-il-parma-si-impone-3-0-a-bergamo_9516fa2b-9f6b-4ebd-8d9d-a26e11e997e8.html"
+  },
+  {
+   "data": "2026-11-02T20:42:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pamela Genini, strappati i sigilli della casa dove è stata uccisa: rubati abiti e gioielli",
+   "url": "https://www.adnkronos.com/cronaca/pamela-genini-furto-casa-omicidio_5v1tbdiOOw4AjdCMCiUTSV"
+  },
+  {
+   "data": "2026-11-02T20:38:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ultimo appello di Trump, 'votate e fermiamo comunisti e jihadisti'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/02/trump-le-midterm-piu-importanti-della-storia-dai-dem-candidati-jihadisti_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
+  },
+  {
+   "data": "2026-11-02T20:15:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cobolli salta il Masters 1000 di Parigi e punta alle Atp Finals: \"Non voglio rischiare\"",
+   "url": "https://www.adnkronos.com/sport/tennis-cobolli-parigi-atp-finals_6jl602FTACErbBeMmYgm5Y"
+  },
+  {
+   "data": "2026-11-02T20:13:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Leonardo Maria Del Vecchio rilancia, 22 miliardi da Citi per le quote Delfin. No da quattro soci",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/leonardo-maria-del-vecchio-rilancia-22-miliardi-da-citi-per-le-quote-delfin._600e29d0-2e87-46d0-85e0-2ef80439af6c.html"
+  },
+  {
+   "data": "2026-11-02T20:05:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Supermercati sotto attacco hacker anche in Italia, riunione a Palazzo Chigi con l'Intelligence",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/02/supermercati-sotto-attacco-hacker-anche-in-italia-riunione-a-palazzo-chigi-con_5e6f0b27-05c9-468a-9004-087167137119.html"
+  },
+  {
+   "data": "2026-11-02T19:40:07+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Attacchi hacker ai supermercati, si muove anche il Copasir",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/attacchi-hacker-ai-supermercati-si-muove-anche-il-copasir_c475b1b2-184c-4001-b904-2a40ac6fd530.html"
   },
   {
-   "data": "2026-11-02T19:34:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A, in campo Atalanta-Parma LIVE",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/02/serie-a-in-campo-atalanta-parma-live_9516fa2b-9f6b-4ebd-8d9d-a26e11e997e8.html"
-  },
-  {
-   "data": "2026-11-02T19:34:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Le midterm più importanti della storia, dai dem candidati jihadisti'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/02/trump-le-midterm-piu-importanti-della-storia-dai-dem-candidati-jihadisti_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
-  },
-  {
    "data": "2026-11-02T19:31:07+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Violati i sigilli della casa in cui è stata uccisa Pamela Genini",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/violati-i-sigilli-della-casa-in-cui-e-stata-uccisa-pamela-genini_36cdce2d-b4ca-4fd3-a8a1-63c387e89eae.html"
   },
@@ -69,12 +123,6 @@
    "fonte": "ANSA",
    "titolo": "Maltempo al Centro Sud, nevicate, allagamenti e scuole chiuse",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/maltempo-al-centro-sud-nevicate-allagamenti-e-scuole-chiuse_89bf9972-1692-4d72-95d7-ad0c9b4a5a3e.html"
-  },
-  {
-   "data": "2026-11-02T19:02:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Leonardo Maria Del Vecchio rilancia, 22 miliardi da Citi per le quote Delfin",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/leonardo-maria-del-vecchio-rilancia-22-miliardi-da-citi-per-le-quote-delfin_600e29d0-2e87-46d0-85e0-2ef80439af6c.html"
   },
   {
    "data": "2026-11-02T18:51:16+00:00",
@@ -137,58 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/in-italia-le-salme-dei-quattro-militari-morti-in-bosnia-al-celio-la-camera-ardente_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html"
   },
   {
-   "data": "2026-11-02T18:36:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ancora una sparatoria negli Usa, \"molte vittime\" vicino a spiaggia in California",
-   "url": "https://www.adnkronos.com/internazionale/esteri/sparatoria-california-usa-oggi-news_2Q2vfpCAlleGe8QyoNCa13"
-  },
-  {
    "data": "2026-11-02T18:30:03+00:00",
    "fonte": "ANSA",
    "titolo": "Daniel come Tom Hanks in The Terminal, da settimane vive a Capodichino",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/daniel-come-tom-hanks-in-the-terminal-da-settimane-vive-a-capodichino_a67fa977-85d6-49e7-9283-22c8b5458a57.html"
-  },
-  {
-   "data": "2026-11-02T18:27:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rinasce su Telegram il gruppo sessista Phica, il sito era stato chiuso in estate",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/rinasce-su-telegram-il-gruppo-sessista-phica-il-sito-era-stato-chiuso-in-estate_72fd5bdf-516c-4a09-9385-9557323e11d3.html"
-  },
-  {
-   "data": "2026-11-02T18:21:09+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Attacchi hacker ai supermercati, alert Agenzia cyber in Italia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/attacchi-hacker-ai-supermercati-alert-agenzia-cyber-in-italia_6a838d5b-aef2-48ac-b082-37c487819ded.html"
-  },
-  {
-   "data": "2026-11-02T18:20:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gabrielli (Polizia Postale): \"Creare filo antropologico con famiglie\"",
-   "url": "https://www.adnkronos.com/cronaca/gabrielli-polizia-postale-creare-filo-antropologico-con-famiglie_6iQdjZ88eF3UMEqa4kczGN"
-  },
-  {
-   "data": "2026-11-02T18:18:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Siti sessisti, su Telegram spunta la chat Phica-la rinascita: ancora classifiche e scambio di foto nude di donne ignare",
-   "url": "https://www.adnkronos.com/cronaca/siti-sessisti-chat-telegram-phica-la-rinascita_6xqwK96kLpYwzqfgzFFuc1"
-  },
-  {
-   "data": "2026-11-02T18:14:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Donna morta dopo dimissioni da ospedale, quattro indagati a Trani",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/donna-morta-dopo-dimissioni-da-ospedale-quattro-indagati-a-trani_8e009c33-c1db-4494-9804-b18dad813fb4.html"
-  },
-  {
-   "data": "2026-11-02T18:14:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Khamenei autorizza a trattare con gli Usa'. Petrolio a picco",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/iran-pronti-a-riaprire-hormuz-in-due-giorni-se-gli-usa-accettano-le-condizioni_f5315141-c840-4f45-89ca-066c867cee06.html"
-  },
-  {
-   "data": "2026-11-02T18:12:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "È morta Erminia Manfredi, il 'punto fermo' nella vita di Nino",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/02/e-morta-erminia-manfredi-vedova-di-nino-e-costumista_18953676-cafd-4617-9e78-fcca8af90610.html"
   }
  ]
 }
