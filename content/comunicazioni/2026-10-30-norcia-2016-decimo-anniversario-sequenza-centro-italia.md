@@ -67,6 +67,6 @@ Genzano si trova in **zona sismica 2B**, parte dello stesso sistema appenninico.
 - [Il terremoto dalla A alla Z: un video in 3D](/comunicazioni/2026-10-29-terremoto-dalla-a-alla-z-video-3d/) — anche il gradino lungo il Monte Vettore e il Monte Bove e le case vuote di Norcia
 - [Sequenza sismica Centro Italia — Dipartimento Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-centro-italia-0/)
 - [INGV — Lista dei terremoti](https://terremoti.ingv.it/)
-- Voce Wikipedia: [Terremoto di Norcia del 30 ottobre 2016](https://it.wikipedia.org/wiki/Terremoto_di_Norcia_del_30_ottobre_2016)
+- Voce Wikipedia: [Terremoto del Centro Italia del 2016](https://it.wikipedia.org/wiki/Terremoto_del_Centro_Italia_del_2016)
 - [Il terremoto nell'Italia Centrale](https://www.ilpost.it/2016/10/30/terremoto-marche-centro-italia/) — Il Post, 30 ottobre 2016
 - [Migliaia di sfollati per il terremoto](https://www.ilpost.it/2016/10/28/terremoto-marche-sfollati/) — Il Post, 28 ottobre 2016
