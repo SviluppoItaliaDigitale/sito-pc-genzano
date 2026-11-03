@@ -451,6 +451,10 @@ Legge 24 febbraio 1992, n. 225. Ha istituito il Servizio nazionale della protezi
 ### LIS {#lis}
 Lingua dei segni italiana. È la lingua delle persone sorde in Italia, riconosciuta dallo Stato. Alcuni contenuti del sito sono disponibili anche con video in LIS.
 
+### LIM {#lim}
+Lavagna interattiva multimediale: lo schermo touch usato in classe, collegato a un computer, su cui si proietta e si scrive col dito o con la penna. I materiali del sito per le scuole sono provati per funzionare anche su questo strumento.
+*Approfondisci: [Pronto per la LIM](/lim/).*
+
 ## M
 
 ### Magnitudo
