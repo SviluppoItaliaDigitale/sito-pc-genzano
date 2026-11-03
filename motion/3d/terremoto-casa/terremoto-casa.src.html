@@ -267,7 +267,7 @@ SOTT.forEach(f => {
   [-1, 1].forEach(s => { const br = box(.86, .28, .16, matDiv); br.position.set(0.05, .56, s * .95); divano.add(br); });
   [-.45, .45].forEach(z => { const c = box(.5, .14, .78, tinta(0x5b82a8, { roughness: .95 })); c.position.set(.12, .49, z); divano.add(c); });
   divano.add(ombra(.6, 1.15));
-  const mensola = box(.26, .04, 1.0, matBianco); mensola.position.set(-3 + .13, 1.92, 1.25); casa.add(mensola);
+  const mensola = box(.26, .04, 1.0, matBianco.clone());   // materiale proprio: si dissolve da sola mensola.position.set(-3 + .13, 1.92, 1.25); casa.add(mensola);
   const vaso = new THREE.Group(); casa.add(vaso);
   const vasoC = new THREE.Mesh(new THREE.LatheGeometry([[0, 0], [.08, 0], [.11, .08], [.1, .2], [.06, .28], [.07, .32], [0, .32]].map(p => new THREE.Vector2(p[0], p[1])), 20), tinta(0x2a8c8c, { roughness: .35 }));
   vaso.add(vasoC);
@@ -278,7 +278,7 @@ SOTT.forEach(f => {
     g.fillStyle = gr; g.fillRect(0, 0, w, h);
     g.fillStyle = '#3d5a2a'; g.beginPath(); g.moveTo(0, h * .62); g.quadraticCurveTo(w * .35, h * .3, w * .7, h * .6); g.lineTo(w, h * .55); g.lineTo(w, h); g.lineTo(0, h); g.fill();
   });
-  const qCorn = box(.03, .5, .7, matLegnoScuro); quadro.add(qCorn);
+  const qCorn = box(.03, .5, .7, matLegnoScuro.clone()); quadro.add(qCorn);
   const qTela = new THREE.Mesh(new THREE.PlaneGeometry(.62, .42), base(0xffffff, { map: texQuadro })); qTela.rotation.y = Math.PI / 2; qTela.position.x = .017; quadro.add(qTela);
 
   // tavolo robusto
@@ -598,7 +598,7 @@ SOTT.forEach(f => {
     const via = prep ? liscia(prog(t, T.sopra, 1.0)) : 0;
     mensola.position.y = 1.92 + .5 * via; mensola.visible = via < .98;
     quadro.position.y = 1.38 + .5 * via; quadro.visible = via < .98;
-    mensola.material.transparent = quadro.children[0].material.transparent = via > 0;
+    mensola.material.transparent = via > 0;
     mensola.material.opacity = 1 - via;
     // --- libreria: si inclina e si rovescia (prima scossa); fissata con le staffe nella casa preparata
     let ang = 0;
