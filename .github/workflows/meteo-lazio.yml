@@ -71,7 +71,8 @@ jobs:
           for tentativo in 1 2 3; do
             if git push 2>&1; then break; fi
             echo "Push fallito (tentativo $tentativo), rebase..."
-            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            # File generati: in caso di conflitto vince la versione appena calcolata
+            git pull --rebase -X theirs origin main || { echo "Rebase fallito"; git rebase --abort 2>/dev/null; exit 1; }
             if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
           done
           echo "Commit fatto; deploy delegato a deploy-coalescer.yml (dati non urgenti)."
