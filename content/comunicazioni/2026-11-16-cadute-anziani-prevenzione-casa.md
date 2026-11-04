@@ -112,7 +112,7 @@ La prevenzione non è solo l'adattamento della casa. Anche:
 ### Controlli medici
 - **vista** controllata ogni 1-2 anni;
 - **udito** verificato (la perdita uditiva facilita il disorientamento);
-- **farmaci** rivisti con medico (rischio ipotensione);
+- **farmaci** rivisti con il medico (rischio ipotensione);
 - **densitometria ossea** per valutare osteoporosi;
 - **pressione** e frequenza cardiaca monitorate.
 
@@ -126,8 +126,8 @@ La prevenzione non è solo l'adattamento della casa. Anche:
 
 Se un anziano cade:
 
-1. **non muoverlo** se non sicuri delle sue condizioni;
-2. **chiamare il 112** se sospetto trauma;
+1. **non muoverlo** se non si è sicuri delle sue condizioni;
+2. **chiamare il 112** se si sospetta un trauma;
 3. **parlare** e tenerlo calmo;
 4. **non offrire** cibo o bevande;
 5. **osservare** eventuale perdita di coscienza;
@@ -153,7 +153,7 @@ Molti anziani **nascondono** le cadute per paura di:
 - **bastone** da passeggio con impugnatura ergonomica;
 - **deambulatore** a ruote o statico;
 - **scelta** personalizzata dal fisioterapista;
-- **non vergogna**: sono strumenti di autonomia.
+- **nessuna vergogna**: sono strumenti di autonomia.
 
 ### Dispositivi di allarme
 - **pulsante d'emergenza** (telesoccorso);

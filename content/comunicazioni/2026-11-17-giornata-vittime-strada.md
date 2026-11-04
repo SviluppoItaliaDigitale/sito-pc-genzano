@@ -73,7 +73,7 @@ Non sostituiamo ambulanze o pompieri, ma **integriamo** il sistema dove il Comun
 - **cellulare** SPENTO o in modalità automatica alla guida;
 - **cintura** sempre;
 - **seggiolino** adeguato per bambini (regolamento UE);
-- **no alcol** prima di guidare (0.0 per neopatentati);
+- **no alcol** prima di guidare (0,0 per neopatentati);
 - **no stupefacenti** mai;
 - **velocità** adeguata;
 - **controllo** revisione veicolo;
@@ -115,7 +115,7 @@ In occasione della Giornata:
 - **associazioni** dei familiari delle vittime (AIFVS e altre) organizzano eventi;
 - **Comuni** depongono corone di ricordo;
 - **Scuole** propongono momenti educativi;
-- **Forze di polizia** rilasciano comunicati dati;
+- **Forze di polizia** rilasciano comunicati e dati;
 - **Media** dedicano spazio al tema.
 
 ## Le cose che funzionano
