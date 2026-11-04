@@ -60,7 +60,7 @@ Copie di documenti, ricette e piani terapeutici sono dati personali e, in parte,
 - non inviarli in chat e non lasciarli nella galleria del telefono, dove si sincronizzano con altri servizi;
 - non pubblicarli mai sui social;
 - non lasciare le copie in auto o in luoghi aperti a estranei;
-- quando non servono più, distruggile invece di buttarle intere.
+- quando non servono più, distruggerle invece di buttarle intere.
 
 ## Controllo due volte l'anno
 

@@ -79,7 +79,7 @@ Nel Lazio e a Genzano di Roma, un'ondata di freddo tipica porta temperature sott
 
 ### Alimenti
 - **pasti** caldi regolari;
-- **bevande calde** ma non alcolici (l'alcol disperde calore);
+- **bevande calde** ma non alcoliche (l'alcol disperde calore);
 - **idratazione** anche se non si avverte sete;
 - **frutta** e verdura anche in inverno.
 
