@@ -10,7 +10,13 @@ Il Gruppo Comunale Volontari di Genzano aderisce alla campagna **«Non c'è Prot
 
 La rilanciamo sui nostri canali social con contenuti pensati per far capire, in modo semplice e diretto, **cosa significa davvero essere volontari**: non serve essere già pronti, basta fare il primo passo. Qui trovi i materiali della campagna che stiamo pubblicando su Instagram, Facebook, Telegram e X.
 
-> I materiali grafici e video di questa pagina fanno parte della campagna **«Non c'è Protezione Civile senza di te»** della **Regione Lazio**. Il Gruppo di Genzano li rilancia sui propri canali per invitare i cittadini a diventare volontari.
+> Salvo il video «La differenza è una scelta», realizzato dal nostro Gruppo, i materiali grafici e video di questa pagina fanno parte della campagna **«Non c'è Protezione Civile senza di te»** della **Regione Lazio**. Il Gruppo di Genzano li rilancia sui propri canali per invitare i cittadini a diventare volontari.
+
+{{< video src="/video/2026-10-28-la-differenza-e-una-scelta-video.mp4"
+          poster="/video/2026-10-28-la-differenza-e-una-scelta-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: la differenza è una scelta, il grazie ai volontari di protezione civile"
+          caption="Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Foto del Gruppo e del Dipartimento della Protezione Civile – Presidenza del Consiglio dei Ministri (CC BY 4.0, flickr.com/photos/dpcgov); ritratti di repertorio: Pexels. Musica: «Titan» di Scott Buckley (scottbuckley.com.au), licenza CC BY 4.0." >}}
 
 ## Lo spot della campagna
 
