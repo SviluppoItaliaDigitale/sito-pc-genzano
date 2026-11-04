@@ -5,11 +5,35 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-03T22:30:04+00:00",
+  "generato": "2026-11-04T02:26:46+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-04T01:26:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Midterm, le proiezioni di Decision Desk HQ: 'Il dem Ossoff mantiene il suo seggio per il Senato in Georgia' - LA DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-le-proiezioni-di-decision-desk-hq-il-dem-ossoff-mantiene-il-suo-seggio-per_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
+  },
+  {
+   "data": "2026-11-03T23:02:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Garlasco, la difesa di Sempio si prepara all'udienza preliminare tra Consulta e possibili perizie",
+   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-andrea-sempio-cosa-fara-la-difesa-strategia-e-prossime-mosse_4mbUB0Pwyxbl5TWcl7dDAd"
+  },
+  {
+   "data": "2026-11-03T23:02:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morbillo, sintomi, vaccini e casi in Italia: cosa sapere su virus tra più contagiosi al mondo",
+   "url": "https://www.adnkronos.com/cronaca/morbillo-virus-casi-sintomi-vaccino-cosa-sapere_26BCth659ShzBGFhSLeQVI"
+  },
+  {
+   "data": "2026-11-03T22:30:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Manchester United ribalta tutto e batte la Roma 3-2. L'Inter vince 3-0 sul campo del Feyenoord CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/03/il-manchester-united-ribalta-tutto-e-batte-la-roma-3-2.-linter-vince-3-0-sul-campo_f4486b8c-c4ad-47f6-9339-1c5b0b649554.html"
+  },
   {
    "data": "2026-11-03T22:10:14+00:00",
    "fonte": "ADNKRONOS",
@@ -17,16 +41,10 @@
    "url": "https://www.adnkronos.com/sport/cobolli-atp-finals-qualificato-jodar_2tIbXsLiWcb0WRjovkzxLr"
   },
   {
-   "data": "2026-11-03T22:00:50+00:00",
+   "data": "2026-11-03T22:00:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Elezioni midterm Usa 2026, a mezzanotte chiudono i primi seggi: exit poll e risultati",
+   "titolo": "Elezioni midterm Usa 2026, primi dati premiano democratici",
    "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-midterm-usa-2026-risultati_OlcFniexduRKtBJupDJ58"
-  },
-  {
-   "data": "2026-11-03T21:59:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Manchester United ribalta tutto e batte la Roma 3-2. L'Inter vince in Olanda 3-0 con il Fyenoord CRONACA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/03/il-manchester-united-ribalta-tutto-e-batte-la-roma-3-2.-linter-vince-in-olanda-3-0-con_f4486b8c-c4ad-47f6-9339-1c5b0b649554.html"
   },
   {
    "data": "2026-11-03T21:35:33+00:00",
@@ -51,12 +69,6 @@
    "fonte": "ANSA",
    "titolo": "Nuovi orizzonti imprese, strategie per accrescere il valore globale del made in Italy",
    "url": "https://www.ansa.it/sito/notizie/eventi/2026/11/03/nuovi-orizzonti-imprese-strategie-per-accrescere-il-valore-globale-del-made_b0a954a7-f0d5-4a3f-b104-6f9a2e6f6d30.html"
-  },
-  {
-   "data": "2026-11-03T21:11:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Midterm, l'America al voto: seggi aperti in tutti gli Usa. Primo risultato: Guam ai repubblicani LA DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/03/midterm-lamerica-al-voto-seggi-aperti-in-tutti-gli-usa.-primo-risultato_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
   },
   {
    "data": "2026-11-03T20:59:00+00:00",
@@ -177,18 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Valditara, 'su tetto stranieri andiamo avanti, nessuna discriminazione'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/03/valditara-su-tetto-stranieri-andiamo-avanti-nessuna-discriminazione_88f261c0-ed0c-448f-a6d7-735fe935064c.html"
-  },
-  {
-   "data": "2026-11-03T19:04:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Feyenoord-Inter 0-3, Chivu cala il tris in Champions League",
-   "url": "https://www.adnkronos.com/sport/diretta-feyenoord-inter-oggi-champions-league-risultato-live_1cGWuk1i6qolDWwYIWlnRv"
-  },
-  {
-   "data": "2026-11-03T19:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manchester United-Roma 3-2, Carrick rimonta Gasperini nel finale",
-   "url": "https://www.adnkronos.com/sport/diretta-manchester-united-roma-oggi-champions-league-risultato-live_2MHh97msr5Z5VJwrUXvXTj"
   }
  ]
 }
