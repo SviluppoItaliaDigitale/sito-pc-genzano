@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-04T17:34:03+00:00",
+  "generato": "2026-11-04T22:50:32+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-04T17:22:57+00:00",
+   "data": "2026-11-04T22:42:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump dopo la sconfitta alle midterm: \"La guerra in Iran? La rifarei\". E avverte: \"Finisce quando voglio io\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-vance-scontro-guerra-iran-sconfitta-midterm_3vye4Iw9Eq6dWMyrY156kO"
+  },
+  {
+   "data": "2026-11-04T22:32:41+00:00",
    "fonte": "ANSA",
-   "titolo": "Morire di lavoro, altre 4 vittime. Sono oltre 700 nel 2026",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/morire-di-lavoro-altre-4-vittime.-sono-oltre-700-nel-2026_3e1891b9-86e6-400b-9c46-e49c201d2e84.html"
+   "titolo": "Champions: il Como scrive la storia, il Lens annientato 9-1",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/04/ansachampions-il-como-scrive-la-storia-annienta-lens-9-1_e3aefd3a-6981-430b-a834-c8a95ad8671a.html"
   },
   {
-   "data": "2026-11-04T17:22:22+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Turisti lasciano migliaia di cuffiette appese ai Fori, scatta la rimozione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/turisti-lasciano-migliaia-di-cuffiette-appese-ai-fori-scatta-la-rimozione_ec45249f-1a78-4a4e-85d9-2d777107267e.html"
+   "data": "2026-11-04T21:42:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nessy Guerra: \"Mio ex marito arrestato per nostra sicurezza, notizia fantastica\"",
+   "url": "https://www.adnkronos.com/cronaca/nessy-guerra-ex-marito-arrestato_6dCoDqiIEg8gQTWAc5YVKF"
   },
   {
-   "data": "2026-11-04T17:20:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Famiglia nel bosco: servizi sociali, 'pronti ad azioni legali'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/famiglia-nel-bosco-servizi-sociali-pronti-ad-azioni-legali_59f73e24-c499-45e8-bcdf-186335627d0e.html"
-  },
-  {
-   "data": "2026-11-04T17:19:13+00:00",
+   "data": "2026-11-04T21:34:10+00:00",
    "fonte": "ANSA",
-   "titolo": "Francia, attacco ibrido a celle frigorifere con sangue di donatori",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/04/francia-attacco-ibrido-a-celle-frigorifere-con-sangue-di-donatori_fc7ca66e-6ac2-47d7-8e20-74a039e2696b.html"
+   "titolo": "Addio a Tinto Brass, maestro del cinema erotico",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/04/addio-a-tinto-brass-maestro-del-cinema-erotico_bf039226-75f9-4f5f-867e-ae386d7959e0.html"
   },
   {
-   "data": "2026-11-04T17:17:31+00:00",
+   "data": "2026-11-04T21:28:55+00:00",
    "fonte": "ANSA",
-   "titolo": "Mattarella: 'Alluvione di Firenze simbolo dell'unità del Paese nelle emergenze'",
+   "titolo": "I mercati brindano dopo il voto Usa, giù la difesa e rally di banche e tech",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/04/i-mercati-brindano-dopo-il-voto-usa-giu-la-difesa-e-rally-di-banche-e-tech_e4cb0902-0e68-4d16-9575-cc40d4484c1a.html"
+  },
+  {
+   "data": "2026-11-04T21:09:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Gli americani hanno detto no alla guerra', ma Teheran non si illude",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/khamenei-chi-si-aspetta-un-cambiamento-nella-politica-usa-sbaglia-di-grosso_60de3609-89e4-4ddf-9dc3-fb4483a930e3.html"
+  },
+  {
+   "data": "2026-11-04T21:08:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "All'Eurocamera la mostra ANSA sulle donne. Metsola, '80 anni di traguardi'",
+   "url": "https://www.ansa.it/sito/notizie/speciali/le-donne-della-repubblica-2026/2026/11/04/metsola-alla-mostra-ansa-immagini-potenti-riflettere-sul-futuro-delle_a77669d0-fdda-44dc-a041-1d68a2041e84.html"
+  },
+  {
+   "data": "2026-11-04T21:07:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'La protezione dell'ambiente dovere per le istituzioni'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/04/mattarella-alluvione-di-firenze-simbolo-dellunita-del-paese-nelle-emergenze_a94b94b9-8c0a-4afe-91a3-213f8d38ce2b.html"
   },
   {
-   "data": "2026-11-04T17:17:05+00:00",
+   "data": "2026-11-04T21:06:59+00:00",
    "fonte": "ANSA",
    "titolo": "Midterm, la vittoria democratica TUTTI I VIDEO",
    "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-la-vittoria-democratica-tutti-i-video_011d774a-1d17-4075-8201-56372a565e0a.html"
   },
   {
-   "data": "2026-11-04T17:15:49+00:00",
+   "data": "2026-11-04T21:00:32+00:00",
    "fonte": "ANSA",
-   "titolo": "Midterm: uno tsunami blu, l'America boccia Trump. La Casa Bianca: 'Lui resta il vostro presidente'- LIVEBLOG",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-i-democratici-conquistano-il-congresso-e-strappano-governatori-chiave-liveblog_9fe187a6-3703-47e5-aef0-0d50b44ec158.html"
+   "titolo": "L'America boccia Trump, uno tsunami blu alle midterm",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/lamerica-boccia-trump-uno-tsunami-blu-alle-midterm-_fe1d49b4-c431-4e19-826f-0b6efcdbcb77.html"
   },
   {
-   "data": "2026-11-04T17:12:31+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Mamma con tumore al pancreas, impegno della Lombardia per farle arrivare la cura dagli Usa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/mamma-con-tumore-al-pancreas-impegno-lombardia-per-farle-arrivare-la-cura_a72d25b1-51f3-4072-abca-3910d48b3625.html"
-  },
-  {
-   "data": "2026-11-04T17:08:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Centro nazionale sangue, 'alzare livello d'attenzione dopo la Francia'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/centro-nazionale-sangue-alzare-livello-dattenzione-dopo-la-francia_d18c82de-e67f-439d-9e56-0f764f469471.html"
-  },
-  {
-   "data": "2026-11-04T17:04:53+00:00",
+   "data": "2026-11-04T20:50:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Bob Dylan incontra in Vaticano papa Leone",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/04/bob-dylan-incontra-in-vaticano-papa-leone_e998787a-4374-41ec-aba7-0ba7b5af5f92.html"
-  },
-  {
-   "data": "2026-11-04T17:03:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Prato, malori in Rsa: sette anziani ricoverati in ospedale, morto ospite di 90 anni",
-   "url": "https://www.adnkronos.com/cronaca/prato-rsa-malori-ospiti_pscijjjRoMWEKDIBtfnvQ"
-  },
-  {
-   "data": "2026-11-04T16:49:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Acqua, Casini (Aubac): \"Indietro su infrastrutture, dati a base pianificazione\"",
-   "url": "https://www.adnkronos.com/cronaca/acqua-casini-aubac-indietro-su-infrastrutture-dati-a-base-pianificazione_6QZF0Gw7UsVoJC3rmPolx8"
-  },
-  {
-   "data": "2026-11-04T16:48:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Metsola alla mostra ANSA, 'immagini potenti, riflettere sul futuro delle donne'",
-   "url": "https://www.ansa.it/sito/notizie/speciali/le-donne-della-repubblica-2026/2026/11/04/metsola-alla-mostra-ansa-immagini-potenti-riflettere-sul-futuro-delle_a77669d0-fdda-44dc-a041-1d68a2041e84.html"
-  },
-  {
-   "data": "2026-11-04T16:45:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra: audizioni al via da lunedì 9, Giorgetti in commissione giovedì 12",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/04/manovra-audizioni-al-via-da-lunedi-9-giorgetti-in-commissione-giovedi-12_5b85877c-31e0-4b3a-a53c-052dc7d7b8da.html"
-  },
-  {
-   "data": "2026-11-04T16:44:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Legale di Stasi, ancora qualche giorno per la richiesta di revisione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/legale-di-stasi-ancora-qualche-giorno-per-la-richiesta-di-revisione_62a79490-843e-41c3-883d-518f75bb86d4.html"
-  },
-  {
-   "data": "2026-11-04T16:42:11+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Faceva propaganda jihadista sui social, arrestato 27enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/faceva-propaganda-jihadista-sui-social-arrestato-27enne_274dc751-5f75-4fee-b59f-8e855731c4be.html"
-  },
-  {
-   "data": "2026-11-04T16:40:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Roma, turisti lasciano migliaia di cuffiette appese ai Fori Imperiali: scatta la rimozione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/roma-turisti-lasciano-migliaia-di-cuffiette-appese-ai-fori-imperiali-scatta-la-rimozione_04f1fcc0-2ddb-4ad0-933f-abbf1f15a2ba.html"
-  },
-  {
-   "data": "2026-11-04T16:39:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Prodotti assorbenti, ecodesign per un riciclo più efficiente",
-   "url": "https://www.adnkronos.com/economia/prodotti-assorbenti-ecodesign-per-un-riciclo-piu-efficiente_3GgLZKf4iy6ITyjzi53Pn2"
-  },
-  {
-   "data": "2026-11-04T16:38:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Regioni all'unanimità, 'in manovra risorse insufficienti per la sanità'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/regioni-allunanimita-in-manovra-risorse-insufficienti-per-la-sanita_4b49e5c7-8fdd-49fe-aff5-a45f437cea28.html"
-  },
-  {
-   "data": "2026-11-04T16:37:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Buzzella (Federchimica): \"Pesano caro energia e tsunami normativo da Bruxelles\"",
-   "url": "https://www.adnkronos.com/economia/buzzella-federchimica-pesano-caro-energia-e-tsunami-normativo-da-bruxelles_6B76TaHEzFeaIunGkEy4pY"
-  },
-  {
-   "data": "2026-11-04T16:36:50+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, assegnato al gup il fascicolo su Sempio. I tempi e i possibili scenari della revisione per Stasi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/garlasco-assegnato-al-gup-il-fascicolo-su-sempio.-i-tempi-e-i-possibili-scenari-della-revisione_add6088f-b6cb-40a9-8415-ae3aef53cf07.html"
-  },
-  {
-   "data": "2026-11-04T16:34:44+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "A Bergamo il Festival dell'impresa, 200 imprenditori a confronto sulle sfide perla crescita",
-   "url": "https://www.adnkronos.com/economia/a-bergamo-il-festival-dellimpresa-200-imprenditori-a-confronto-sulle-sfide-perla-crescita_1vXjsbskfG3FdMaQrzv3vO"
-  },
-  {
-   "data": "2026-11-04T16:32:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Corazza: \"Senza imprese forti non riusciremo a raggiungere obiettivi Green Deal\"",
-   "url": "https://www.adnkronos.com/economia/corazza-senza-imprese-forti-non-riusciremo-a-raggiungere-obiettivi-green-deal_1NTtcBvMe5Ag8rFipQ3apc"
-  },
-  {
-   "data": "2026-11-04T16:32:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sostenibilità, il passaporto digitale per una filiera tessile più trasparente e circolare﻿",
-   "url": "https://www.adnkronos.com/economia/sostenibilita-il-passaporto-digitale-per-una-filiera-tessile-piu-trasparente-e-circolare_s0InoiNdbE2oWZwya5puU"
-  },
-  {
-   "data": "2026-11-04T16:31:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Clima, resilienza climatica dall’Europa ai territori, fare rete per la rigenerazione",
-   "url": "https://www.adnkronos.com/cronaca/clima-resilienza-climatica-dalleuropa-ai-territori-fare-rete-per-la-rigenerazione_73IE7wfmby9IHchHNfaHd6"
-  },
-  {
-   "data": "2026-11-04T16:31:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il dem El-Sayed vince in Michigan. E prende in giro Vance: 'JD habibi'",
+   "titolo": "L'exploit di El Sayed, il primo musulmano al Senato",
    "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/il-dem-el-sayed-vince-in-michigan.-e-prende-in-giro-vance-jd-habibi_afc33428-dbc0-4079-a300-4cb3992c5620.html"
   },
   {
-   "data": "2026-11-04T16:30:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sostenibilità, Fino (Re Soil): \"Cibo sempre più povero se non nutriamo la terra\"",
-   "url": "https://www.adnkronos.com/cronaca/sostenibilita-fino-re-soil-cibo-sempre-piu-povero-se-non-nutriamo-la-terra_1VzA8HHfZpTWXLZlpC9r4K"
-  },
-  {
-   "data": "2026-11-04T16:29:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La geopolitica della green economy, focus su Cina, Usa, Europa e Africa",
-   "url": "https://www.adnkronos.com/cronaca/la-geopolitica-della-green-economy-focus-su-cina-usa-europa-e-africa_4eoegriLld5GCdUXUS9CxG"
-  },
-  {
-   "data": "2026-11-04T16:26:31+00:00",
+   "data": "2026-11-04T20:45:43+00:00",
    "fonte": "ANSA",
-   "titolo": "Wall Street apre in volata dopo le elezioni, Dj +1,95%, Nasdaq +1,31%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/04/wall-street-apre-in-volata-dopo-le-elezioni-dj-195-nasdaq-131_e4cb0902-0e68-4d16-9575-cc40d4484c1a.html"
+   "titolo": "Tutte le Regioni contro il governo. FI tira in ballo il Mef, 'trovi le coperture'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/04/manovra-audizioni-al-via-da-lunedi-9-giorgetti-in-commissione-giovedi-12_5b85877c-31e0-4b3a-a53c-052dc7d7b8da.html"
   },
   {
-   "data": "2026-11-04T16:25:33+00:00",
+   "data": "2026-11-04T20:43:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Investe operaio in A14 e non si ferma, identificato e denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/investe-operaio-in-a14-e-non-si-ferma-identificato-e-denunciato_8beb26d5-3319-4b65-a0e4-9fccbf9ee1d1.html"
+  },
+  {
+   "data": "2026-11-04T20:25:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "La vittoria dei dem tra volti nuovi e la sfida all'unità verso il 2028",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/le-star-di-midterm-tutte-le-prime-volte-dei-protagonisti-_a84c518f-3b72-46a6-a9e5-1bec214c8880.html"
+  },
+  {
+   "data": "2026-11-04T20:21:06+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Maltempo, scuole chiuse e allerta meteo rossa per temporali in Sardegna giovedì 5 novembre: i comuni interessati",
-   "url": "https://www.adnkronos.com/cronaca/maltempo-scuole-chiuse-allerta-meteo-rossa-5-novembre_knT4gT4BfFUyWr1GEd048"
+   "titolo": "Ucraina, Zelensky: \"Colloquio molto dettagliato con Witkoff e Kushner, prepariamo trilaterale\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-trilaterale-usa-negoziati-patriot_3MOhvYD093JbxzkRyhbJIS"
+  },
+  {
+   "data": "2026-11-04T20:05:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "In Francia hackerate celle frigo col sangue, l'Italia alza le difese",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/04/francia-attacco-ibrido-a-celle-frigorifere-con-sangue-di-donatori_fc7ca66e-6ac2-47d7-8e20-74a039e2696b.html"
+  },
+  {
+   "data": "2026-11-04T19:42:11+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Fondazione Laps investe un milione per una casa protetta a Novara",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/fondazione-laps-investe-un-milione-per-una-casa-protetta-a-novara_c23b6539-23c9-4f7b-bd9c-5c493384ba27.html"
+  },
+  {
+   "data": "2026-11-04T19:42:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Basket in lutto, è morto a 43 anni Taurian Fontenette, leggenda dello streetball \"Mr.720\"",
+   "url": "https://www.adnkronos.com/sport/basket-morte-fontenette-43-anni_1TdzBq7NArF5E5vGNwvwN4"
+  },
+  {
+   "data": "2026-11-04T19:14:47+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Salvini, 'famiglia nel bosco vittima di prepotenza di Stato senza senso'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/salvini-famiglia-nel-bosco-vittima-di-prepotenza-di-stato-senza-senso_a025a9fd-f897-45f1-97b8-361093a93d44.html"
+  },
+  {
+   "data": "2026-11-04T19:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions League, Lens-Como 1-9, goleada della squadra di Fabregas",
+   "url": "https://www.adnkronos.com/sport/lens-como-champions-league_52cioRoWLkQMibYLkMOwFI"
+  },
+  {
+   "data": "2026-11-04T19:10:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa incontra Bob Dylan, icona del movimento pacifista Usa",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/04/il-papa-incontra-bob-dylan-icona-del-movimento-pacifista-usa-_e998787a-4374-41ec-aba7-0ba7b5af5f92.html"
+  },
+  {
+   "data": "2026-11-04T19:05:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nessy Guerra: 'Il mio ex è stato arrestato, tiro un sospiro di sollievo'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/nessy-guerra-il-mio-ex-e-stato-arrestato-tiro-un-sospiro-di-sollievo_1f08353a-f305-4e14-8a27-6c900aedf8f9.html"
+  },
+  {
+   "data": "2026-11-04T19:05:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Consulenti di Croce Rossa, volontari non avrebbero potuto salvare Fakir",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/consulenti-di-croce-rossa-volontari-non-avrebbero-potuto-salvare-fakir_94c01765-3035-43ae-8467-50228c2da998.html"
+  },
+  {
+   "data": "2026-11-04T19:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions League, Porto-Napoli 4-1, altro ko della squadra di Allegri",
+   "url": "https://www.adnkronos.com/sport/porto-napoli-champions-league_2YelO5U2yPPi1TWrJTe9Jw"
+  },
+  {
+   "data": "2026-11-04T19:02:02+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Manager seviziato dall'ex moglie, le violenze in 30mila video",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/-manager-seviziato-dallex-moglie-le-violenze-in-30mila-video_7b615032-e5eb-4537-87ed-cea0e85f12b5.html"
+  },
+  {
+   "data": "2026-11-04T18:59:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Papa ha ricevuto Bob Dylan in Vaticano: il dono del Pontefice e il legame con la pace",
+   "url": "https://www.adnkronos.com/cronaca/bob-dylan-incontra-papa-leone-concerto-roma_Y968XoME9x6y2RVse9Fnj"
+  },
+  {
+   "data": "2026-11-04T18:48:05+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Garlasco: l'udienza per Sempio rischia di fermarsi, il nodo del condannato Stasi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/garlasco-ludienza-per-sempio-rischia-di-fermarsi-il-nodo-del-condannato-stasi_add6088f-b6cb-40a9-8415-ae3aef53cf07.html"
+  },
+  {
+   "data": "2026-11-04T18:45:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Parigi, Djokovic eliminato al secondo turno, addio alle Atp Finals dove si qualifica Fils",
+   "url": "https://www.adnkronos.com/sport/djokovic-atp-finals-masters-parigi-hijkata_PWrGszjRAOcHe9RiVu5Wa"
+  },
+  {
+   "data": "2026-11-04T18:44:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Morire di lavoro, altre 5 vittime. Sono oltre 700 nel 2026",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/morire-di-lavoro-altre-5-vittime.-sono-oltre-700-nel-2026_3e1891b9-86e6-400b-9c46-e49c201d2e84.html"
+  },
+  {
+   "data": "2026-11-04T18:40:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cinema, il Senato approva la riforma all’unanimità. Giuli: \"Dedico questa giornata a Tinto Brass\"",
+   "url": "https://www.adnkronos.com/politica/riforma-cinema-dedica-giuli-tinto-brass_6Dmin8ugl4G24o5NPntNUe"
   }
  ]
 }
