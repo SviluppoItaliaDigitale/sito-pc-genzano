@@ -144,7 +144,15 @@ jobs:
           for tentativo in 1 2 3; do
             if git push 2>&1; then break; fi
             echo "Push fallito (tentativo $tentativo), rebase..."
-            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if ! git pull --rebase origin main; then
+            # Conflitto su allerta.json: un altro giro ha già scritto. Non si sovrascrive
+            # un dato più recente: si scarta il commit locale, il giro dopo (5 min) rilegge le fonti.
+            echo "::warning::Conflitto di rebase: commit scartato, il prossimo giro ricalcola"
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
             if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
           done
           echo "committed=true" >> "$GITHUB_OUTPUT"
@@ -207,7 +215,10 @@ jobs:
           MIN=$(date -u +%-M)
           if [ "$MIN" -lt 5 ]; then
             echo "Minuto $MIN < 5: avvio meteo-lazio.yml (rigenerazione oraria)."
-            gh workflow run meteo-lazio.yml --ref main
+            for t in 1 2 3; do
+              gh workflow run meteo-lazio.yml --ref main && break
+              echo "::warning::Dispatch meteo-lazio fallito (tentativo $t)"; sleep 10
+            done || true
           else
             echo "Minuto $MIN: salto (la cartina si rigenera solo nei primi 5 min dell'ora)."
           fi
