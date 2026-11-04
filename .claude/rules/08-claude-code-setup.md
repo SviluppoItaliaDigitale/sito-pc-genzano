@@ -2,7 +2,7 @@
 
 Questo file documenta come configurare l'ambiente di Claude Code per lavorare sul sito senza essere bloccato dalla sandbox di sicurezza, in particolare per il download di foto da fonti libere e per la lettura di siti istituzionali con SPA JS o anti-bot.
 
-## Firecrawl — solo per i siti che gli altri strumenti non leggono (dal 21/10/2026)
+## Firecrawl — solo per i siti che gli altri strumenti non leggono (dal 21/10/2026; dal 04/11/2026 prima c'è il lettore locale `leggi-web`)
 
 🔴 **Firecrawl è a credito, e i crediti finiscono.** Il piano gratuito dà **1.000 crediti al mese**, che si rinnovano intorno al 19 e non si accumulano. Costi dal listino di Firecrawl: 1 credito per pagina (`scrape`, `crawl`, `map`), **1 credito per ogni pagina di un PDF**, 2 crediti ogni 10 risultati di `search`, 4 crediti in più a pagina con l'estrazione in JSON. Il credito si è esaurito il 1° ottobre 2026, la rassegna ha ricevuto errori 402 il 16 e il 19 ottobre e, il giorno dopo il rinnovo del 20 ottobre, metà dei crediti del mese era già usata. Decisione di Alessandro del 21/10/2026: «Si facciamo così in modo tale da risparmiare!».
 
@@ -11,9 +11,10 @@ Questo file documenta come configurare l'ambiente di Claude Code per lavorare su
 1. `WebSearch` per trovare una pagina, `WebFetch` per leggerla: sono inclusi nel piano di Claude e non consumano crediti Firecrawl.
 2. **PDF**: si scaricano con `curl` e si leggono in locale con `pdftotext` o `pdfplumber` (MinerU per gli scansionati, § sotto), mai con Firecrawl: un PDF di 30 pagine costa 30 crediti.
 3. **Fonti con un canale dati gratuito.** Il sito del Dipartimento è fatto con Gatsby e ogni sua pagina ha il file JSON con i dati da cui nasce, testo compreso, allo stesso indirizzo con `/page-data/` davanti e `page-data.json` in fondo: `https://www.protezionecivile.gov.it/page-data/it/<percorso>/page-data.json` (per l'archivio di notizie e comunicati `…/page-data/it/attualit-/page-data.json`, verificato il 21/10/2026). INGV: API FDSN (`webservices.ingv.it`), come il cruscotto. Dove ci sono, i feed RSS.
-4. **Firecrawl `scrape`**, una pagina alla volta, solo se i passi sopra falliscono davvero (pagina vuota, 403 anti-bot, errore di certificato): oggi è il caso di EUR-Lex, DG ECHO, UNDRR, OCHA, Crusca, Senato e Quirinale (tabelle sotto).
+4. **Lettore locale, skill `leggi-web`** (dal 04/11/2026, gratis e senza limiti, sul PC e nelle sessioni cloud): `python3 .claude/skills/leggi-web/leggi.py URL` apre la pagina in un vero browser e restituisce il testo in Markdown; legge anche i PDF dietro pagine d'attesa. Provato il 04/11/2026: EUR-Lex (pagina e PDF), DG ECHO, UNDRR, Crusca, Europeana, Library of Congress, Senato, Giustizia amministrativa, ENEA, INGV terremoti, Geoportale MASE, Parco dei Castelli Romani, Treccani, albo pretorio di Genzano, BURL, Consiglio regionale, Gazzetta Ufficiale, Normattiva e DPC si leggono. Uscita 3 = il sito blocca i programmi automatici: la skill non aggira CAPTCHA né blocchi, e si passa al passo 5.
+5. **Bloccati per il lettore locale** (prova del 04/11/2026): Quirinale e OCHA (403), Corte costituzionale (CAPTCHA), Cassazione SentenzeWeb (certificato del sito incompleto). Sul PC si aprono tutti e quattro nel Chrome di Alessandro (strumenti `claude-in-chrome`); in alternativa le fonti equivalenti (atti del Quirinale e della Corte in Gazzetta Ufficiale e su Normattiva, OCHA su ReliefWeb). Solo se nessuna di queste strade è possibile, **Firecrawl `scrape`**, una pagina alla volta.
 
-**Mai** `firecrawl_search`, `crawl`, `map` o l'estrazione in JSON per il lavoro ordinario e nelle routine: costano più crediti e `WebSearch` fa lo stesso lavoro. **Mai** aggiungere una carta di pagamento all'account Firecrawl e mai accettare l'offerta dei «1.500 crediti gratis»: chiede la carta e autorizza il passaggio automatico al piano a pagamento (19 dollari al mese). Se i crediti finiscono, si aspetta il rinnovo e intanto si lavora con i passi 1-3.
+**Mai** `firecrawl_search`, `crawl`, `map` o l'estrazione in JSON per il lavoro ordinario e nelle routine: costano più crediti e `WebSearch` fa lo stesso lavoro. **Mai** aggiungere una carta di pagamento all'account Firecrawl e mai accettare l'offerta dei «1.500 crediti gratis»: chiede la carta e autorizza il passaggio automatico al piano a pagamento (19 dollari al mese). Se i crediti finiscono, si aspetta il rinnovo e intanto si lavora con i passi 1-4.
 
 Configurazione: server MCP stdio installato il 19 maggio 2026 (`firecrawl-mcp` via `npx`, chiave nella variabile di sistema `FIRECRAWL_API_KEY`; nel repository c'è solo il riferimento in `.mcp.json`, nessuna chiave). Nelle sessioni cloud c'è anche il connettore Firecrawl di claude.ai: vale lo stesso ordine.
 
@@ -87,7 +88,7 @@ Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome
 
 **Quando NON usare Playwright:**
 
-- Per leggere contenuto testuale di una pagina (usa WebFetch, molto più veloce; Firecrawl solo se WebFetch è bloccato, § in cima).
+- Per leggere contenuto testuale di una pagina (usa WebFetch, molto più veloce; se WebFetch è bloccato, la skill `leggi-web`; Firecrawl solo per ultimo, § in cima).
 - Per audit accessibility (usa Lighthouse + axe-core, sono specifici).
 
 **Integrazione con agent esistenti:**
