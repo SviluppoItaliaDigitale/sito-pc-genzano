@@ -14,33 +14,31 @@ versione_facile: "2026-11-03-pneumatici-invernali-catene-novembre-facile"
 draft: false
 ---
 
-Dal **15 novembre al 15 aprile** scattano in Italia gli **obblighi invernali** sui pneumatici o sulle catene a bordo. Una normativa che riguarda **milioni di automobilisti** e la sicurezza di chi guida su strade fredde, bagnate o innevate.
+Dal **15 novembre al 15 aprile**, sulle strade dove è previsto, bisogna avere le **gomme invernali** montate oppure le **catene a bordo**. Qui sotto la norma, le regole pratiche e i controlli da fare sulle gomme prima dell'inverno.
 
 ## Cosa prevede la norma
 
-Il **Codice della Strada** (art. 6) e le **ordinanze prefettizie** regionali:
+L'articolo 6 del **Codice della Strada** permette all'ente proprietario o gestore della strada di imporre, con un'**ordinanza**, le gomme invernali oppure le catene a bordo. Il periodo di riferimento va **dal 15 novembre al 15 aprile**.
 
-- **obbligano** pneumatici invernali M+S **oppure** catene a bordo;
-- periodo: **dal 15 novembre al 15 aprile**;
-- **sanzioni** per chi non si adegua;
-- **responsabilità** personale del conducente;
-- l'obbligo scatta su specifiche arterie (strade di montagna e pianura a rischio); per Genzano di Roma e i Castelli Romani il **rispetto** si applica anche sulle strade principali in caso di neve o ghiaccio.
+- L'obbligo vale sulle strade e sui tratti indicati dai **cartelli**.
+- Vale anche quando non nevica.
+- In alcune zone, soprattutto di montagna, gli enti possono anticipare le date; in altre l'obbligo non c'è.
+- Chi non lo rispetta rischia una **sanzione** e non può proseguire il viaggio finché non si mette in regola.
+
+Anche sulle strade dei Castelli Romani valgono le ordinanze di chi le gestisce: per sapere se un tratto ha l'obbligo, guarda i cartelli.
 
 ## Pneumatici invernali
 
 ### Cosa sono
-- marcatura **M+S** ("Mud and Snow") sul fianco;
-- preferibile anche **simbolo fiocco di neve su montagna** (3PMSF = omologazione reale);
+- sigla **M+S** ("Mud and Snow", oppure MS, M-S, M&S) sul fianco: è quella che conta per l'obbligo;
 - mescola che lavora meglio a **basse temperature**;
 - battistrada con **lamelle** per aderenza su neve.
 
 ### Quando montarli
-- **indicativamente** dal 1° novembre;
-- **obbligatoriamente** dal 15 novembre;
-- **smontare** dal 16 aprile (o tenerli se sono "all-season" certificati).
+- chi alterna gomme estive e invernali monta le invernali **entro il 15 novembre** e le tiene **fino al 15 aprile**;
+- dove gli enti anticipano l'obbligo, valgono le date dei cartelli.
 
-### Costo e durata
-- **3-5 anni** di durata media (non superare 6 anni complessivi);
+### Costo e conservazione
 - **prezzo** variabile per marca e misura;
 - **stoccaggio** corretto in luogo fresco e asciutto;
 - alcune gommisterie offrono servizio di **custodia estiva**.
@@ -48,49 +46,47 @@ Il **Codice della Strada** (art. 6) e le **ordinanze prefettizie** regionali:
 ## Catene da neve
 
 ### Come scegliere
-- **dimensioni** adeguate ai pneumatici (scritte sul fianco);
-- **omologazione** (catene certificate);
+- **misura** adatta alle gomme: è scritta sul fianco e deve essere tra quelle indicate sulla confezione;
+- **conformità** alle norme indicata sulla confezione;
 - **peso** e **facilità di montaggio** da considerare;
 - **tensionatori** automatici migliori per principianti.
 
 ### Come usare
 - **provare** a montarle **almeno una volta** prima della stagione;
-- **avere** guanti di scorta;
-- **montare** solo su **asse motrice**;
+- **avere** in auto guanti e una torcia;
+- **montarle** sulle **ruote motrici** (con quattro ruote motrici, **seguire** il manuale);
+- **guidare** piano, senza superare i 50 km/h;
 - **rimuovere** appena non c'è più neve (rovinano pneumatico e asfalto).
 
 ### Alternativa: le calze da neve
 - **tessuto** tecnico che avvolge il pneumatico;
 - **più facili** da montare delle catene;
-- **meno durature** ma adeguate in emergenza;
-- **omologate** per uso italiano (non tutte sono accettate).
+- **meno durature** delle catene;
+- valgono come le catene solo se la confezione indica la conformità alla norma **UNI EN 16662-1**.
 
 ## Pneumatici "all-season"
 
 Una soluzione intermedia:
 
-- **omologati** per tutto l'anno;
-- **marcati** 3PMSF (sono conformi all'obbligo invernale);
+- con la sigla **M+S** valgono per l'obbligo invernale;
 - **compromesso** tra prestazioni estive e invernali;
-- **non ottimali** in zone di alta montagna con neve frequente;
-- **adeguati** per Genzano e la maggior parte del Lazio.
+- **non ottimali** in zone di alta montagna con neve frequente.
 
 ## Attenzione alla sicurezza
 
 Anche con pneumatici invernali montati:
 
 - **rallentare** su neve e ghiaccio;
-- **distanze** di sicurezza doppie o triple;
+- **aumentare molto** la distanza di sicurezza;
 - **evitare** manovre brusche (frenate, sterzate, accelerazioni);
-- **accendere** luci basse;
-- **attenzione** alle zone d'ombra (ghiaccio nascosto);
-- **attenzione** ai ponti (gelano prima);
+- **tenere accese** le luci;
+- **attenzione** ai ponti e alle zone d'ombra: lì può esserci ghiaccio anche quando il resto della strada è asciutto;
 - **tenere** uno spray scioglighiaccio in auto per i vetri.
 
 ## Il controllo delle gomme
 
 ### Battistrada
-- **profondità** minima: 1,6 mm per legge, ma **per sicurezza** almeno **3-4 mm** in inverno;
+- **profondità** minima per legge: 1,6 mm; la Polizia di Stato consiglia di cambiare la gomma quando scende a 2-3 mm;
 - **usura** uniforme (se non lo è, servono controlli di assetto);
 - **crepe** e **tagli** → sostituzione immediata.
 
@@ -101,12 +97,15 @@ Anche con pneumatici invernali montati:
 - **in inverno** la pressione cala (controllo frequente).
 
 ### Età
-- **data** di produzione sul fianco (DOT + 4 cifre);
-- **6 anni** è il limite tecnico anche se il battistrada sembra buono.
+- **data** di produzione sul fianco: dopo la sigla DOT, quattro cifre per la settimana e l'anno;
+- con il tempo la mescola si indurisce e fa meno presa, soprattutto sul freddo;
+- la legge non fissa un'età massima;
+- alcuni costruttori di auto consigliano di cambiarle dopo **6 anni** di uso, qualunque sia il battistrada;
+- altri consigliano di far controllare da un gommista quelle con più di 6 anni.
 
 ## In caso di neve a Genzano
 
-Storicamente la neve a Genzano non è frequente, ma può capitare. Se nevica:
+A Genzano la neve è rara, ma può capitare. Se nevica:
 
 - **non mettersi** in viaggio se non indispensabile;
 - **controllare** strade prima di partire;
@@ -115,9 +114,9 @@ Storicamente la neve a Genzano non è frequente, ma può capitare. Se nevica:
 - **cellulare** carico;
 - **coperta** e acqua in auto per emergenze.
 
-## In caso di incidente
+## Se resti bloccato in auto
 
-Se rimani bloccato per neve o ghiaccio:
+Se la neve o il ghiaccio ti fermano per strada:
 
 - **segnalare** la posizione con triangolo e luci di emergenza;
 - **restare** in auto se fa troppo freddo;
@@ -128,8 +127,22 @@ Se rimani bloccato per neve o ghiaccio:
 
 ## Per approfondire
 
-- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
-- [Codice della Strada — ACI](https://www.aci.it/)
-- [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
+**Sul nostro sito:**
+
+- [Neve e catene: la mossa giusta si fa a casa](/comunicazioni/2026-11-04-neve-catene-video/), il video di un minuto.
+- [Neve e gelo: la casa e l'auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/).
+- [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/).
+
+**Fonti istituzionali:**
+
+- [Codice della strada, articolo 6](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art6) — Normattiva.
+- [Dal 15 novembre scatta l'obbligo degli pneumatici invernali](https://www.poliziadistato.it/articolo/166548df9cd4e88022491004) e [Viaggiare in sicurezza: i consigli della Polizia](https://www.poliziadistato.it/articolo/1563ce686d9df4e662441665) — Polizia di Stato.
+- [Polizia di Stato e Pirelli insieme per partenze sicure](https://www.poliziadistato.it/statics/05/partenze-in-sicurezza.pdf) (PDF), con i controlli su pressione e battistrada — Polizia di Stato.
+- [Rischio meteo-idro. Sei preparato?](https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato), sezione «Cosa fare in caso di neve e gelo» — Dipartimento della Protezione Civile.
+
+**Altre fonti:**
+
+- Età delle gomme, le indicazioni di due costruttori: [manuale Hyundai](https://ownersmanual.hyundai.com/full_webhelp/SX2EV/2025/en_US/ide9f5a62c10e.html) (in inglese) e [assistenza Volvo](https://www.volvocars.com/it-ch/support/car/v60/18w46/article/73e14f8cc7f8d151c0a81f6f7932e5d8/cd555a439305fca3c0a801517af0a545/).
+- [Catene da neve: obblighi, omologazioni e come sceglierle](https://www.altroconsumo.it/auto-e-moto/automobili/news/tutto-sulle-catene-da-neve) — Altroconsumo.
 
 In emergenza: **112**.

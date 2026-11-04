@@ -878,3 +878,17 @@ dati:
         perche: "Le vittime del Vajont sono 1.917, come nel resto del sito."
         contesto: '(?i)Vajont|Longarone'
         stessa_frase: true
+
+  - id: obbligo-invernale-chi-lo-stabilisce
+    dato: "Chi stabilisce l'obbligo di gomme invernali o catene a bordo"
+    valore: "l'ente proprietario o gestore della strada, con un'ordinanza (art. 6, comma 4, lettera e, del Codice della strada), segnalata dai cartelli"
+    fonti:
+      - nome: "Codice della strada (D.Lgs. 285/1992), art. 6, comma 4, lettera e: «L'ente proprietario della strada può, con l'ordinanza di cui all'art. 5, comma 3: … e) prescrivere che i veicoli siano muniti ovvero abbiano a bordo mezzi antisdrucciolevoli o pneumatici invernali»"
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285~art6"
+      - nome: "Polizia di Stato, «Dal 15 novembre scatta l'obbligo degli pneumatici invernali»: «L'obbligo è stabilito dall'ente proprietario della strada e reso noto mediante apposito cartello»"
+        url: "https://www.poliziadistato.it/articolo/166548df9cd4e88022491004"
+    vietati:
+      - regex: '(?i)ordinanz[ae]\s+(?:prefettizi[ae]|del(?:la|le)?\s+[Pp]refett\w*|regional[ei])'
+        perche: "L'obbligo invernale lo stabilisce l'ente proprietario o gestore della strada, non il prefetto né la Regione in quanto tale."
+        contesto: '(?i)catene|pneumatic|gomme|invernal|neve'
+        finestra: 250
