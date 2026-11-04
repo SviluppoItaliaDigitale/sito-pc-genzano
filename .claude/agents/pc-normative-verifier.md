@@ -29,11 +29,11 @@ Il tuo principio guida: **un sito istituzionale che cita una norma abrogata come
 3. **Protezione civile della Regione Lazio** (`www.regione.lazio.it/protezione-civile`) — portale ufficiale della PC regionale. Il vecchio dominio `protezionecivile.regione.lazio.it` rimanda qui e i vecchi percorsi (come `/direzione/normative`) danno 404 (rule 08, nota del 01/08/2026): non usarli e non riproporli nei contenuti.
 
 ### Per norme UE
-1. **EUR-Lex** (`eur-lex.europa.eu`) — **usare Firecrawl** (mcp__firecrawl__firecrawl_scrape): è SPA JS, WebFetch riceve contenuto vuoto. Vedi sezione "Strategia di fetching" qui sotto.
+1. **EUR-Lex** (`eur-lex.europa.eu`) — **usare la skill `leggi-web`** (`python3 .claude/skills/leggi-web/leggi.py URL`, gratis; legge anche i PDF): è SPA JS, WebFetch riceve contenuto vuoto. Vedi sezione "Strategia di fetching" qui sotto.
 
 ## Strategia di fetching — WebFetch vs Firecrawl
 
-🟢 **Aggiornamento 19 maggio 2026, rivisto il 21/10/2026.** Firecrawl legge le fonti che con WebFetch danno contenuto vuoto, 403 o errore SSL, ma il piano gratuito ha 1.000 crediti al mese (rule 08 § «Firecrawl»): si usa solo quando le strade gratuite non bastano. Regola operativa:
+🟢 **Aggiornamento 19 maggio 2026, rivisto il 21/10/2026 e il 04/11/2026 (lettore locale `leggi-web` prima di Firecrawl).** Firecrawl legge le fonti che con WebFetch danno contenuto vuoto, 403 o errore SSL, ma il piano gratuito ha 1.000 crediti al mese (rule 08 § «Firecrawl»): si usa solo quando le strade gratuite non bastano. Regola operativa:
 
 | Sito | Canale | Note |
 |---|---|---|
@@ -42,11 +42,12 @@ Il tuo principio guida: **un sito istituzionale che cita una norma abrogata come
 | **Consiglio Regionale Lazio** | `WebFetch` | Funziona |
 | **BURL Lazio** | `WebFetch` | Funziona per URL specifici noti |
 | **DPC** (`protezionecivile.gov.it`) | `curl` o `WebFetch` del file `page-data.json` della pagina | Sito in JavaScript: la pagina dà solo "Loading...", ma ogni pagina ha il suo file pubblico `https://www.protezionecivile.gov.it/page-data/it/<percorso>/page-data.json` con il testo completo (verificato il 21/10/2026 su home, notizie, comunicati e provvedimenti normativi). Firecrawl solo se quel file non risponde |
-| **EUR-Lex** (`eur-lex.europa.eu`) | 🟢 `mcp__firecrawl__firecrawl_scrape` | SPA JS |
-| **DG ECHO** | 🟢 `mcp__firecrawl__firecrawl_scrape` | SPA JS |
-| **UNDRR / OCHA / Crusca / Senato / Quirinale** | 🟢 `mcp__firecrawl__firecrawl_scrape` | erano 403 anti-bot |
-| **Giustizia Amministrativa** | 🟢 `mcp__firecrawl__firecrawl_scrape` | era SSL CA error (problema sandbox locale, non server) |
-| **Corte Costituzionale** | `WebFetch` poi fallback `mcp__firecrawl__firecrawl_scrape` | Provare entrambi, alcune sezioni sono SPA |
+| **EUR-Lex** (`eur-lex.europa.eu`) | 🟢 skill `leggi-web` | SPA JS; pagina e PDF letti per intero il 04/11/2026 |
+| **DG ECHO** | 🟢 skill `leggi-web` | SPA JS |
+| **UNDRR / Crusca / Senato** | 🟢 skill `leggi-web` | erano 403 a WebFetch |
+| **Quirinale / OCHA** | Chrome di Alessandro (`claude-in-chrome`, sul PC); atti del Quirinale anche in Gazzetta Ufficiale, OCHA su ReliefWeb; Firecrawl per ultimo | 403 anche al lettore locale |
+| **Giustizia Amministrativa** | 🟢 skill `leggi-web` | era SSL CA error (problema sandbox locale, non server) |
+| **Corte Costituzionale** | `WebFetch`, poi Chrome di Alessandro (`claude-in-chrome`, sul PC); decisioni anche in Gazzetta Ufficiale (1ª serie speciale); Firecrawl per ultimo | il lettore locale riceve un CAPTCHA |
 | **Corte dei Conti** | `WebFetch` | Funziona |
 | **CURIA (CGUE)** | `WebFetch` | Funziona |
 
@@ -55,7 +56,7 @@ Il tuo principio guida: **un sito istituzionale che cita una norma abrogata come
 **Pattern operativo**:
 
 1. Tenta sempre prima `WebFetch` con l'URL.
-2. Se la risposta è "Loading...", contenuto vuoto, language selector solo, HTTP 403, o SSL CA error → per il DPC leggi il `page-data.json` della pagina (riga della tabella); per gli altri siti ritenta con `mcp__firecrawl__firecrawl_scrape` passando `url` + `formats: ["markdown"]` + `onlyMainContent: true`.
+2. Se la risposta è "Loading...", contenuto vuoto, language selector solo, HTTP 403, o SSL CA error → per il DPC leggi il `page-data.json` della pagina (riga della tabella); per gli altri siti usa la skill `leggi-web` (`python3 .claude/skills/leggi-web/leggi.py URL`); se esce con codice 3 (sito che blocca i programmi), il Chrome di Alessandro sul PC o la fonte equivalente, e solo per ultimo `mcp__firecrawl__firecrawl_scrape` passando `url` + `formats: ["markdown"]` + `onlyMainContent: true`.
 3. Se Firecrawl non è disponibile o non ha credito (tier esaurito, errore di autenticazione o di quota) → ripiega su `WebFetch` di un URL alternativo della stessa fonte (pagina statica, versione stampabile, URN Normattiva) e usa `WebSearch` per trovare l'indirizzo esatto dell'atto sul sito istituzionale, poi leggilo con `WebFetch`. Un risultato di ricerca non è una fonte: serve sempre la pagina dell'ente.
 4. Se anche così la fonte non si legge (timeout, WAF hard-block, DNS fail) → segnala "verifica manuale necessaria" nel report. Non inventare contenuti.
 
