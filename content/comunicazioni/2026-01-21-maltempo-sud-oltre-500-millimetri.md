@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Dalle prime ore di domenica 18 gennaio 2026 un'ondata di maltempo colpisce Calabria, Sardegna e Sicilia. Mercoledì 21 gennaio il Dipartimento della Protezione Civile pubblica i dati dell'evento: in tutte e tre le regioni alcune stazioni hanno misurato oltre 500 millimetri di pioggia. Il valore più alto è a San Sostene, in provincia di Catanzaro: 569,9 millimetri in 72 ore.
+Dalle prime ore di domenica 18 gennaio 2026 un'ondata di maltempo colpisce Calabria, Sardegna e Sicilia. Mercoledì 21 gennaio il Dipartimento della Protezione Civile pubblica i dati dell'evento. In tutte e tre le regioni alcune stazioni hanno misurato oltre 500 millimetri di pioggia. Il valore più alto è a San Sostene, in provincia di Catanzaro: 569,9 millimetri in 72 ore.
 
 ## I picchi di pioggia
 
@@ -30,9 +30,9 @@ Oltre 400 millimetri sono caduti anche in varie stazioni delle province di Catan
 
 ## Vento e mareggiate
 
-Il vento soffia con forza di burrasca forte, con raffiche fino a tempesta violenta. I venti medi si aggirano sui 70 km/h, con frequenti raffiche oltre i 100 km/h. Sulle coste esposte le mareggiate sono forti ed estese.
+Durante l'ondata di maltempo il vento ha soffiato con forza di burrasca forte, con raffiche fino a tempesta violenta. I venti medi sono stati intorno ai 70 km/h, con frequenti raffiche oltre i 100 km/h. Sulle coste esposte il vento ha provocato mareggiate forti ed estese.
 
-Tra il 20 e il 21 gennaio la Rete Ondametrica Nazionale registra onde alte quasi 10 metri a Catania. A Capo Colonna, in provincia di Crotone, arrivano a 7,50 metri; a Capo Boi, in provincia di Cagliari, a circa 4,50 metri.
+Tra il 20 e il 21 gennaio la Rete Ondametrica Nazionale registra onde alte quasi 10 metri a Catania. A Capo Colonna, in provincia di Crotone, arrivano a 7,50 metri. A Capo Boi, in provincia di Cagliari, toccano circa 4,50 metri.
 
 ## Come si segue un evento così
 
