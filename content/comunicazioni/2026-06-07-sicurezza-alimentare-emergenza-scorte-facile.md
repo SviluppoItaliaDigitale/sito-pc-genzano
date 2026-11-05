@@ -68,7 +68,7 @@ Durante un blackout (interruzione della corrente elettrica):
 Se l'acqua del rubinetto non è sicura:
 
 - Bevi solo acqua in bottiglia.
-- Oppure fai bollire l'acqua per 3 minuti. Aspetta che si raffreddi prima di berla.
+- Oppure fai bollire l'acqua per 1 minuto, se il Comune lo dice. Aspetta che si raffreddi prima di berla.
 - Non lavare la verdura con acqua non sicura. Usa cibi in scatola.
 - Per lavarsi puoi usare salviettine umidificate.
 

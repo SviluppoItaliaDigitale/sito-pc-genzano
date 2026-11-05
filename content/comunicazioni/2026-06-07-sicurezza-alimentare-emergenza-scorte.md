@@ -66,7 +66,7 @@ Il **Ministero della Salute** pubblica schede sintetiche sulla conservazione ali
 
 Se l'acqua del rubinetto non è potabile:
 
-- **Bevi solo acqua in bottiglia** o precedentemente bollita per 3 minuti e poi raffreddata.
+- **Bevi solo acqua in bottiglia** o bollita per 1 minuto e poi lasciata raffreddare, se l'avviso del Comune indica la bollitura ([Istituto Superiore di Sanità](https://www.epicentro.iss.it/focus/alluvioni/cibo-acqua)). Che cosa fare quando l'acqua non è potabile: [scheda Acqua non potabile](/formazione/schede-stampabili/acqua-non-potabile/).
 - **Usa disinfettanti** certificati per acqua (pastiglie a base di cloro, seguendo istruzioni).
 - **Non lavare verdura** con acqua non sicura; preferisci cibi in scatola o pelabili.
 - **Per l'igiene personale** puoi usare salviettine umidificate.
