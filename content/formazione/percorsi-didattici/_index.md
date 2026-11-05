@@ -884,7 +884,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 - Riconosce i **fenomeni di tipo secondario** osservati nell'area (emissioni di anidride carbonica dal suolo, lieve sismicità periodica, deformazioni del terreno) e il monitoraggio condotto dall'**INGV** (Sezione di Roma).
 - Conosce i vulcani italiani per i quali il DPC dichiara i livelli di allerta: Vesuvio, Campi Flegrei, Etna, Stromboli e Vulcano. Per il DPC gli unici vulcani **attivi** sono Etna e Stromboli; gli altri sono quiescenti.
 - Sa cos'è la **zona rossa** e la **zona gialla** del Piano nazionale Vesuvio, e come funziona l'evacuazione preventiva.
-- Riconosce il ruolo di **IT-alert** come canale di allerta in caso di evento vulcanico (testato a Stromboli e in esercitazione Campi Flegrei nel 2024).
+- Riconosce il ruolo di **IT-alert** come canale di allarme per il rischio vulcanico ai Campi Flegrei, al Vesuvio e a Vulcano (provato in tutta la Campania durante l'esercitazione «Exe Flegrei 2024»; per lo Stromboli è ancora in sperimentazione).
 
 #### Competenze chiave europee mobilitate
 

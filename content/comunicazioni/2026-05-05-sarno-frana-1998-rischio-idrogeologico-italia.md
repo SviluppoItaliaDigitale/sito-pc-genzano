@@ -71,7 +71,7 @@ Cosa fare in caso di pioggia intensa e allerta meteo, in tre regole:
 
 1. **Restare al chiuso** ai piani alti dell'edificio, lontano da scantinati e garage.
 2. **Non attraversare strade allagate** né a piedi né in auto: trenta centimetri di acqua corrente bastano a trascinare un'auto.
-3. **Ascoltare i canali ufficiali** (Comune, Protezione Civile regionale, IT-alert quando attivo) e non condividere notizie non verificate.
+3. **Ascoltare i canali ufficiali** (Comune, Protezione Civile regionale) e non condividere notizie non verificate.
 
 ## In ricordo
 
@@ -96,3 +96,5 @@ Fonti istituzionali:
 - [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/it/pubblicazioni/rapporti).
 - [Legge 3 agosto 1998, n. 267 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1998-08-03;267).
 - [Vigili del Fuoco — Memoria storica: Sarno](https://www.vigilfuoco.tv/storia/alluvione-sarno).
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo tolto IT-alert dai canali da seguire per frane e alluvioni: il sistema oggi non si usa per questi rischi.

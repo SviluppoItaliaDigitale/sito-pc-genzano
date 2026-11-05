@@ -45,7 +45,7 @@ I fenomeni di **alluvione lampo** (flash flood) sono particolarmente insidiosi p
 Vivere o lavorare in **seminterrati** in aree a rischio idraulico è un rischio strutturale. Molte vittime italiane da alluvioni urbane sono state registrate in spazi sotto il piano stradale.
 
 ### Allertamento immediato
-Il tempo disponibile per allertare in un flash flood può essere di **pochi minuti**. Sistemi come **IT-Alert** e **sirene locali** si sono confermati essenziali.
+Il tempo disponibile per allertare in un flash flood può essere di **pochi minuti**. Contano gli avvisi locali, come le sirene comunali dove il piano di emergenza le prevede, e i comportamenti imparati prima. IT-alert oggi non si usa per piogge e piene.
 
 ### Informazione alla popolazione
 I cittadini informati **reagiscono meglio**: sapere cosa fare quando "inizia a piovere forte" salva vite.
@@ -58,8 +58,7 @@ Dopo Livorno, molti territori hanno:
 - **mappato** seminterrati e aree urbane fragili;
 - **rafforzato** sistemi di sensori e monitoraggio idrometrico;
 - **introdotto** cartellonistica di rischio;
-- **pianificato** simulazioni specifiche;
-- **integrato** IT-Alert nei protocolli.
+- **pianificato** simulazioni specifiche.
 
 ## Il rischio nei Castelli Romani
 
@@ -73,6 +72,8 @@ I Castelli Romani, con versanti, fossi spesso tombati o intubati, aree urbanizza
 ## Un impegno di memoria
 
 Ricordare Livorno non è cronaca: è **promessa istituzionale** che nessuna vittima possa più essere considerata inevitabile se la prevenzione è possibile.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: il sistema oggi non si usa per piogge e piene.
 
 ## Per approfondire
 

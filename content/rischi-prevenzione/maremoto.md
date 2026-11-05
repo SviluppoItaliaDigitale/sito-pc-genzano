@@ -7,7 +7,7 @@ lis_section: "maremoto"
 weight: 11
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
-howto_prima: "Quando vai al mare, individua subito i percorsi per allontanarti dalla spiaggia e i punti alti raggiungibili a piedi (edifici solidi a più piani, colline). Tieni il telefono carico e attiva la ricezione dei messaggi IT-alert. Osserva la segnaletica sul rischio maremoto, presente in molti comuni costieri. Spiega ai bambini la regola di base: se la terra trema o il mare si ritira, ci si allontana subito dall'acqua."
+howto_prima: "Quando vai al mare, individua subito i percorsi per allontanarti dalla spiaggia e i punti alti raggiungibili a piedi (edifici solidi a più piani, colline). Tieni il telefono carico. Osserva la segnaletica sul rischio maremoto, presente in molti comuni costieri. Spiega ai bambini la regola di base: se la terra trema o il mare si ritira, ci si allontana subito dall'acqua."
 howto_durante: "Se avverti un terremoto forte o lungo mentre sei sulla costa, o vedi il mare ritirarsi all'improvviso, non aspettare un avviso ufficiale: allontanati subito dalla spiaggia a piedi e raggiungi un punto alto. Non scendere in spiaggia a guardare. Non usare l'auto se non indispensabile: le strade si bloccano. Ricorda che la prima onda può non essere la più grande e che tra un'onda e l'altra possono passare diversi minuti."
 howto_dopo: "Resta nel punto alto finché le autorità non comunicano il cessato allarme: il pericolo può durare ore. Non tornare sulla spiaggia per recuperare oggetti. Segui solo i canali ufficiali (Protezione Civile, Capitaneria di Porto, Comune). Se qualcuno è ferito o disperso chiama il 112. Non toccare cavi elettrici o detriti instabili portati dall'acqua."
 ---
@@ -37,13 +37,13 @@ L'allerta più rapida è quella **naturale**, che percepisci tu stesso:
 - **Ritiro improvviso del mare**, che lascia in secco un tratto insolitamente ampio di spiaggia o porto.
 - **Rumore anomalo e crescente** proveniente dal mare, simile a un treno.
 
-A questi si aggiunge l'allerta **ufficiale**: il **SiAM** (Sistema di Allertamento nazionale per i Maremoti, gestito da INGV, ISPRA e Dipartimento della Protezione Civile) diffonde i messaggi di allerta, anche tramite [IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/) sui telefoni presenti nelle zone costiere interessate.
+A questi si aggiunge l'allerta **ufficiale**: il **SiAM** (Sistema di Allertamento nazionale per i Maremoti, gestito da INGV, ISPRA e Dipartimento della Protezione Civile) dirama i messaggi di allerta alle strutture del Servizio nazionale di protezione civile, che avvisano la popolazione. Per il maremoto [IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/), il sistema di allarme pubblico sui telefoni, è ancora in sperimentazione fino al 31 dicembre 2026: per ora arrivano solo messaggi di prova.
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 
 - Quando arrivi in spiaggia, individua i **percorsi di allontanamento** e i punti alti raggiungibili a piedi (edifici solidi a più piani, vie in salita, colline).
 - Osserva la **segnaletica sul rischio maremoto** presente in molti comuni costieri (cartelli con onda stilizzata e frecce di evacuazione).
-- Tieni il telefono carico e **non disattivare IT-alert**.
+- Tieni il telefono carico per ricevere gli avvisi delle autorità.
 - Spiega ai bambini la regola d'oro: **se la terra trema o il mare si ritira, ci si allontana subito dall'acqua**, senza aspettare i genitori che raccolgono gli ombrelloni.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}

@@ -80,7 +80,7 @@ In Italia, durante le crisi maggiori, queste regole si traducono in strumenti co
 
 - Le **riunioni informative quotidiane** del Dipartimento di Protezione Civile nelle emergenze prolungate (esempio: le riunioni informative serali del Capo Dipartimento durante la sequenza sismica del Centro Italia 2016).
 - Il **portale ufficiale** [protezionecivile.gov.it](https://www.protezionecivile.gov.it/) e i canali social istituzionali verificati.
-- Il sistema **IT-alert**: invia notifiche dirette ai cellulari nelle aree colpite, senza app, anche con SIM straniera. Operativo dal 13 febbraio 2024, dopo i test regionali del 2022-2023.
+- Il sistema **IT-alert**: invia messaggi ai cellulari presenti nell'area di una grave emergenza, senza app, in italiano e in inglese. È operativo dal 13 febbraio 2024 per quattro rischi (grandi dighe, vulcani, incidenti nucleari, incidenti industriali rilevanti), dopo le prove cominciate nel 2022.
 - I **canali ufficiali** di Prefettura, Comune e Sindaco per le comunicazioni locali.
 
 Per il cittadino la regola è semplice: **in emergenza segui solo i canali ufficiali**. Non condividere notizie non verificate sui social. Non rilanciare messaggi vocali WhatsApp di "fonte certa". Aspetta che parli chi ha l'**autorità** per farlo.
@@ -117,3 +117,5 @@ A Genzano di Roma, come in ogni Comune italiano, il 9 maggio è giorno di silenz
 - [Memoria Cultura — Strage di via Fani, sequestro e assassinio di Aldo Moro](https://memoria.cultura.gov.it/)
 - [Normattiva — Legge 4 maggio 2007, n. 56 (Giorno della memoria)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2007-05-04;56)
 - [Treccani — Aldo Moro](https://www.treccani.it/enciclopedia/aldo-moro/)
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo precisato per quali rischi IT-alert è operativo.

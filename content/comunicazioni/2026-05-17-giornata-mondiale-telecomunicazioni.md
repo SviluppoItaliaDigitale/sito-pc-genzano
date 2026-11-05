@@ -41,18 +41,18 @@ In caso di evento grave le reti possono:
 
 Un'infrastruttura resiliente prevede **ridondanze**: più percorsi, più operatori, più tecnologie. Ma anche la migliore resilienza ha un limite: nei minuti/ore successivi a un evento grande, parte della rete può non funzionare.
 
-## Il sistema di allertamento pubblico IT-Alert
+## Il sistema di allarme pubblico IT-alert
 
-L'Italia ha adottato il sistema **[IT-Alert](https://www.it-alert.gov.it/)**, basato sulla tecnologia **cell broadcast**. Un messaggio con suono distintivo e testo ad alta priorità raggiunge **tutti i cellulari connessi in un'area geografica**, senza bisogno di rubrica o iscrizione. È stato attivato dal Dipartimento di Protezione Civile ed è in fase di graduale estensione e consolidamento.
+L'Italia ha adottato il sistema **[IT-alert](https://www.it-alert.gov.it/)**, basato sulla tecnologia **cell broadcast**. Un messaggio con un suono ben riconoscibile e un testo raggiunge **i cellulari connessi alle celle di un'area geografica**, senza bisogno di rubrica o iscrizione. Lo coordina il Dipartimento della Protezione Civile ed è operativo dal 13 febbraio 2024.
 
 Caratteristiche:
 
-- **Non dipende dal traffico voce**: usa canali tecnici separati.
+- **Regge la rete congestionata**: secondo il Dipartimento, il cell broadcast funziona anche quando la banda telefonica è satura.
 - **Copre l'area geografica** indipendentemente dall'operatore mobile del cittadino.
 - **È gratuito** e non richiede app.
-- **Può essere attivato** per tipologie specifiche di rischio: maremoto, eventi vulcanici, alcuni rischi industriali, grandi emergenze.
+- **Si usa** per quattro rischi: collasso di grandi dighe, attività vulcanica di Campi Flegrei, Vesuvio e Vulcano, incidenti nucleari, incidenti rilevanti negli stabilimenti industriali. Per il maremoto e lo Stromboli è ancora in sperimentazione, fino al 31 dicembre 2026.
 
-Come cittadini possiamo **verificare** che il cellulare riceva IT-Alert (le impostazioni variano per modello) e **non disattivare** gli avvisi di emergenza.
+Come cittadini **non dobbiamo impostare nulla**: il messaggio arriva anche se la voce IT-alert del telefono è disattivata. Serve solo il telefono acceso, carico e con campo.
 
 ## La ridondanza: internet, telefono, radio
 
@@ -102,3 +102,5 @@ Fonti istituzionali:
 - [AGCOM — Autorità per le Garanzie nelle Comunicazioni](https://www.agcom.it/).
 
 Le telecomunicazioni sono la **sala macchine silenziosa** del nostro mondo: funzionano così bene che raramente ci accorgiamo di loro, ma sono la spina dorsale di ogni sistema di protezione civile moderno. Buona Giornata delle Telecomunicazioni.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il paragrafo su IT-alert: i rischi per cui è operativo, il maremoto ancora in sperimentazione e le impostazioni del telefono, che non servono.

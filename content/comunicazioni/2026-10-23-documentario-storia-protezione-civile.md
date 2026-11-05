@@ -65,7 +65,7 @@ Oggi la cornice è il Codice della protezione civile, del 2018. Definisce le qua
 
 Da allora, il sistema è stato messo alla prova tante volte: il terremoto dell'Aquila nel 2009, il Centro Italia nel 2016, la pandemia di Covid, le grandi alluvioni degli ultimi anni. Ogni volta, accanto a Vigili del Fuoco e istituzioni, migliaia di volontari arrivati da tutta Italia.
 
-E la protezione civile è diventata più vicina a te. Dal 2024 il sistema IT-alert può inviare un avviso direttamente sul telefono di chi si trova in una zona a rischio. Ma la tecnologia non basta: con il cambiamento del clima gli eventi estremi sono sempre più frequenti, e servono sempre più persone preparate.
+E la protezione civile è diventata più vicina a te. Dal 2024 il sistema IT-alert può inviare un avviso direttamente sul telefono di chi si trova in una zona colpita da una grave emergenza. Ma la tecnologia non basta: con il cambiamento del clima gli eventi estremi sono sempre più frequenti, e servono sempre più persone preparate.
 
 Ma dietro ogni legge, ogni sala operativa, ogni mezzo, c'è la stessa cosa: delle persone. Volontari. Il sistema funziona perché qualcuno, nel proprio paese, ha scelto di esserci. A Genzano di Roma, dal 1981.
 

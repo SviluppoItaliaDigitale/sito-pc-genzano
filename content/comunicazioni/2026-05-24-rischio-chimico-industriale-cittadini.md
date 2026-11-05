@@ -49,7 +49,7 @@ Se vivi vicino a uno stabilimento Seveso, hai **diritto di ricevere informazioni
 - Quali **scenari di incidente** sono stati valutati.
 - Quale **area** può essere interessata in caso di rilascio.
 - Quali **azioni di autoprotezione** devi adottare.
-- Come **ricevere l'allerta** (sirene, SMS, altoparlanti, IT-Alert).
+- Come **ricevere l'allerta** (sirene, SMS, altoparlanti, IT-alert).
 
 Queste informazioni sono disponibili nel **Piano di emergenza esterno** (PEE) redatto dalla Prefettura. Se non le hai ricevute, puoi chiederle al Comune o alla Prefettura.
 
@@ -104,10 +104,10 @@ Gli stabilimenti Seveso e le Prefetture attivano allertamenti con strumenti dive
 - **Sirene** dedicate in alcune zone.
 - **Altoparlanti** su mezzi in movimento.
 - **SMS** ai residenti registrati.
-- **IT-Alert** (sistema nazionale cell broadcast) per eventi gravi.
+- **IT-alert** (sistema nazionale cell broadcast), operativo per gli incidenti rilevanti negli stabilimenti industriali.
 - **Notifiche** tramite canali ufficiali del Comune.
 
-È importante **non disattivare gli avvisi di emergenza** sul proprio smartphone.
+Per IT-alert non serve attivare nulla sul telefono: il messaggio arriva anche se la voce IT-alert fra gli avvisi di emergenza è disattivata.
 
 ## Il rischio chimico nei Castelli Romani
 
@@ -134,3 +134,5 @@ Approfondimenti divulgativi (Geopop):
 - [Disastro di Seveso, uno degli incidenti ambientali più grandi d'Italia: cos'è accaduto e perché](https://youtu.be/zAmEhiOrk6w) — ricostruzione divulgativa di Geopop sull'incidente dell'ICMESA del 1976 che ha dato origine alla Direttiva Seveso.
 
 Un rischio conosciuto è un rischio **gestibile**. La trasparenza delle informazioni e la preparazione dei cittadini sono la migliore difesa contro gli incidenti industriali.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: per riceverlo non serve tenere attivi gli avvisi di emergenza del telefono, perché il messaggio arriva anche se la voce IT-alert è disattivata.

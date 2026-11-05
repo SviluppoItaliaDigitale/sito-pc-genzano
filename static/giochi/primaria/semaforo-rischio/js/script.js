@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const situations = [
         { text: 'Piove leggermente, il cielo è grigio.', answer: 'verde', tip: 'Pioggia leggera: nessun pericolo, vita normale.' },
-        { text: 'C\'e un temporale molto forte con fulmini e grandine.', answer: 'rosso', tip: 'Temporale forte: ripararsi subito in un edificio, lontano dalle finestre!' },
-        { text: 'Il cielo e nuvoloso e tira un po\' di vento.', answer: 'verde', tip: 'Nuvole e vento leggero: niente di preoccupante.' },
+        { text: 'C\'è un temporale molto forte con fulmini e grandine.', answer: 'rosso', tip: 'Temporale forte: ripararsi subito in un edificio, lontano dalle finestre!' },
+        { text: 'Il cielo è nuvoloso e tira un po\' di vento.', answer: 'verde', tip: 'Nuvole e vento leggero: niente di preoccupante.' },
         { text: 'Senti un forte odore di gas in cucina.', answer: 'rosso', tip: 'Fuga di gas! Apri le finestre, esci e chiama un adulto. Non toccare gli interruttori!' },
         { text: 'La radio dice che domani sono previste piogge intense.', answer: 'giallo', tip: 'Allerta prevista: preparati, evita zone a rischio e tieniti informato.' },
         { text: 'Stai giocando al parco e fa bel tempo.', answer: 'verde', tip: 'Tutto tranquillo, divertiti!' },
@@ -27,26 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: 'La terra trema per qualche secondo.', answer: 'rosso', tip: 'Terremoto! Riparati sotto un tavolo, proteggiti la testa. Non uscire durante la scossa.' },
         { text: 'Il meteo prevede neve in montagna domani.', answer: 'verde', tip: 'Neve in montagna: normale in inverno. Attenzione se devi viaggiare.' },
         { text: 'L\'acqua del fosso vicino a casa sta salendo velocemente.', answer: 'rosso', tip: 'Rischio alluvione! Vai ai piani alti e non avvicinarti al fosso.' },
-        { text: 'C\'e vento forte e oggetti che volano in strada.', answer: 'giallo', tip: 'Vento forte: resta in casa se puoi, stai lontano da alberi e cartelloni.' },
+        { text: 'C\'è vento forte e oggetti che volano in strada.', answer: 'giallo', tip: 'Vento forte: resta in casa se puoi, stai lontano da alberi e cartelloni.' },
         { text: 'Il tuo vicino anziano non risponde da ieri e fa molto caldo.', answer: 'rosso', tip: 'Potrebbe stare male per il caldo! Chiama il 112 o chiedi aiuto a un adulto.' },
         { text: 'La maestra dice che oggi si fa la prova di evacuazione.', answer: 'giallo', tip: 'Esercitazione: segui le istruzioni con attenzione, è un\'occasione per imparare!' },
         { text: 'Un\'amica ti mostra un video allarmante sui social.', answer: 'giallo', tip: 'Attenzione alle fake news! Verifica sempre le notizie sulle fonti ufficiali.' },
         { text: 'Sei in macchina e il sottopassaggio è pieno d\'acqua.', answer: 'rosso', tip: 'Non entrare mai! Torna indietro e cerca un\'altra strada.' },
         { text: 'È una bella giornata di sole, sei a scuola.', answer: 'verde', tip: 'Tutto tranquillo, buona giornata!' },
         { text: 'Senti la sirena dei vigili del fuoco passare in strada.', answer: 'giallo', tip: 'Stanno andando a un intervento. Resta attento e lascia libera la strada.' },
-        { text: 'Le luci di casa si spengono all\'improvviso.', answer: 'giallo', tip: 'Blackout: usa una torcia (non candele), controlla se e solo casa tua o tutto il quartiere.' },
+        { text: 'Le luci di casa si spengono all\'improvviso.', answer: 'giallo', tip: 'Blackout: usa una torcia (non candele), controlla se è solo casa tua o tutto il quartiere.' },
         { text: 'Stai facendo merenda all\'uscita di scuola.', answer: 'verde', tip: 'Tutto normale: goditi la merenda!' },
-        { text: 'Un cane randagio abbaia forte da un cortile chiuso.', answer: 'verde', tip: 'Abbaia ma e nel cortile: allontanati con calma, non serve il 112.' },
+        { text: 'Un cane randagio abbaia forte da un cortile chiuso.', answer: 'verde', tip: 'Abbaia ma è nel cortile: allontanati con calma, non serve il 112.' },
         { text: 'Il termometro ha segnato 41 gradi per 3 giorni di fila.', answer: 'rosso', tip: 'Ondata di calore estrema: evita di uscire tra le 11 e le 18, bevi molto, controlla anziani e bambini.' },
-        { text: 'La scuola annuncia che domani c\'e un\'esercitazione antincendio.', answer: 'giallo', tip: 'Esercitazione: preparati ad ascoltare bene il segnale e seguire la maestra.' },
-        { text: 'Cammini in montagna e senti un rombo come di tuono, ma il cielo e sereno.', answer: 'rosso', tip: 'Potrebbe essere una frana o una valanga in lontananza! Allontanati dai versanti e avvisa un adulto.' },
+        { text: 'La scuola annuncia che domani c\'è un\'esercitazione antincendio.', answer: 'giallo', tip: 'Esercitazione: preparati ad ascoltare bene il segnale e seguire la maestra.' },
+        { text: 'Cammini in montagna e senti un rombo come di tuono, ma il cielo è sereno.', answer: 'rosso', tip: 'Potrebbe essere una frana o una valanga in lontananza! Allontanati dai versanti e avvisa un adulto.' },
         { text: 'È appena iniziato l\'autunno e piove per la prima volta dopo l\'estate.', answer: 'giallo', tip: 'Prima pioggia: il terreno asciutto non la assorbe e le strade possono diventare scivolose.' },
         { text: 'Il papà sta usando il barbecue in giardino con vento forte.', answer: 'rosso', tip: 'Vento forte e fuoco aperto: rischio incendio! Spegnete il barbecue finché non cala il vento.' },
         { text: 'La sirena di una casa di riposo suona per 30 secondi a mezzogiorno.', answer: 'verde', tip: 'Spesso è una prova settimanale. Se dura più a lungo o a orari strani, diventa giallo.' },
-        { text: 'Un cavo elettrico e caduto a terra in strada dopo un temporale.', answer: 'rosso', tip: 'Pericolosissimo! Resta lontano almeno 10 metri e chiama subito il 112: potrebbe essere sotto tensione.' },
+        { text: 'Un cavo elettrico è caduto a terra in strada dopo un temporale.', answer: 'rosso', tip: 'Pericolosissimo! Resta lontano almeno 10 metri e chiama subito il 112: potrebbe essere sotto tensione.' },
         { text: 'Il bollettino dice "nebbia fitta in pianura domattina".', answer: 'giallo', tip: 'Nebbia: guida piano se ci sei in auto, usa luci adeguate. Per i pedoni niente panico, ma attenzione alle strade.' },
         { text: 'Un compagno a scuola sbatte la testa e ha un piccolo bernoccolo.', answer: 'giallo', tip: 'Avvisa subito la maestra o la bidella. Se sta male, si chiama il 112.' },
-        { text: 'Al telegiornale dicono che c\'e stato un terremoto a 300 km da qui.', answer: 'verde', tip: 'Non sei nella zona colpita. Puoi informarti, ma dove sei non c\'e pericolo.' },
+        { text: 'Al telegiornale dicono che c\'è stato un terremoto a 300 km da qui.', answer: 'verde', tip: 'Non sei nella zona colpita. Puoi informarti, ma dove sei non c\'è pericolo.' },
         { text: 'Sei in spiaggia e vedi la bandiera rossa esposta.', answer: 'rosso', tip: 'Bandiera rossa: divieto di balneazione! Mare pericoloso, non entrare in acqua.' },
         { text: 'In auto con i genitori vedi una colonna di fumo nero alta nel cielo.', answer: 'rosso', tip: 'Incendio grande in corso: segnalate posizione e fumate chiamando il 112, tenetevi a distanza.' },
         { text: 'Il nonno ha dimenticato il gas acceso ma senza fiamma da 5 minuti.', answer: 'rosso', tip: 'Fuga di gas! Apri le finestre, chiudi il rubinetto del gas, esci e chiama adulti. Non accendere luci.' },
@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Tema "comunicazione del rischio" — fonti ufficiali + IT-alert + fake news
         { text: 'Tuo cugino ti gira un audio WhatsApp: "ho saputo che stanotte fanno saltare la diga di Nemi!".', answer: 'verde', tip: 'Audio anonimi su WhatsApp = quasi sempre fake news. Non lo inoltri, non ci credi, verifichi sul sito del Comune.' },
-        { text: 'Sul cellulare arriva un messaggio "IT-alert" con sirena fortissima e vibrazione.', answer: 'rosso', tip: 'IT-alert e ufficiale del Governo. Leggi attentamente le indicazioni: stanno avvisando di un pericolo concreto nella tua zona.' },
+        { text: 'Sul cellulare arriva un messaggio "IT-alert" con un suono speciale. Non è un test: è un allarme.', answer: 'rosso', tip: 'IT-alert è un allarme ufficiale per una grave emergenza. Leggi il messaggio con un adulto e segui le indicazioni delle autorità.' },
         { text: 'Un meteorologo TikTok dice: "domani il Lazio sarà colpito da uragano!".', answer: 'verde', tip: 'TikTok non è fonte ufficiale. Verifica sul sito del Centro Funzionale Regionale: senza allerta ufficiale, è sensazionalismo.' },
         { text: 'Il sindaco di Genzano pubblica un video sui canali ufficiali del Comune: allerta arancione confermata.', answer: 'rosso', tip: 'Comunicazione ufficiale del sindaco: prendi sul serio. Limita gli spostamenti e segui le indicazioni.' },
-        { text: 'Su Instagram vedi un post di un negozio "evacuazione totale di Genzano stanotte!" con tante condivisioni.', answer: 'verde', tip: 'Le condivisioni non rendono vera una notizia. Mai un\'evacuazione si comunica via post di un negozio: si comunica per IT-alert, sito Comune e sirene.' },
+        { text: 'Su Instagram vedi un post di un negozio "evacuazione totale di Genzano stanotte!" con tante condivisioni.', answer: 'verde', tip: 'Le condivisioni non rendono vera una notizia. Mai un\'evacuazione si comunica via post di un negozio: la comunicano il Comune e la Protezione Civile.' },
         { text: 'Sul sito del Centro Funzionale Regionale Lazio leggi: codice giallo per temporali domani 12-18.', answer: 'giallo', tip: 'Bollettino ufficiale codice giallo: criticità ordinaria. Preparati, ma niente panico.' },
         { text: 'Un amico ti chiede di rilanciare un suo post che chiede preghiere per "il terremoto in arrivo".', answer: 'verde', tip: 'I terremoti non si possono prevedere. Niente preghiere preventive, niente allarmismo: si chiama "diffondere falsi allarmi".' },
         { text: 'Il bollettino DPC (Dipartimento Protezione Civile) annuncia codice rosso per ondata di calore.', answer: 'rosso', tip: 'Codice rosso ufficiale: rischio elevato per anziani e bambini. Bevi tantissimo, niente sole tra 11 e 17, controlla i nonni.' },
         { text: 'Un canale Telegram non ufficiale dice "il Comune sta nascondendo l\'emergenza!".', answer: 'verde', tip: 'Tipico schema cospirazionista. Le emergenze vere vengono comunicate dai canali ufficiali, non "rivelate" da canali anonimi.' },
-        { text: 'A scuola la maestra spiega l\'app "Allerta Lazio" della Regione e ti chiede di scaricarla con i genitori.', answer: 'giallo', tip: 'L\'app ufficiale Allerta Lazio manda gli avvisi del Centro Funzionale: utile, va attivata. Pre-emergenza informativa.' }
+        { text: 'A scuola la maestra vi chiede di cercare con i genitori dove si leggono le allerte meteo ufficiali.', answer: 'giallo', tip: 'Utile per prepararsi: le allerte del Centro Funzionale Regionale si leggono sul sito della Regione Lazio, nella pagina Allerte meteo di questo sito e sui canali del Comune.' }
     ];
 
     let queue, index, score, locked;

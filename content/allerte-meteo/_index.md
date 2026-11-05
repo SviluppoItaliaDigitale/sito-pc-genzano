@@ -207,7 +207,7 @@ L'allerta si basa su previsioni emesse in anticipo. Alcuni fenomeni localizzati 
 <details class="faq-item">
 <summary><strong>Come ricevo le notifiche?</strong></summary>
 
-Puoi seguire il canale Telegram del Gruppo: [@pcalfagenzano](https://t.me/pcalfagenzano). In caso di emergenze gravi può arrivare anche un messaggio dal sistema nazionale [IT-alert](https://www.it-alert.it/it/).
+Puoi seguire il canale Telegram del Gruppo: [@pcalfagenzano](https://t.me/pcalfagenzano). Per alcune emergenze gravi, che non sono le allerte meteo, può arrivare anche un messaggio dal sistema nazionale [IT-alert](https://www.it-alert.it/it/).
 
 Per sviluppatori e altri enti: lo stato di allerta è disponibile anche come [feed CAP](/allerta-cap.xml) (standard internazionale OASIS), riutilizzabile da app e aggregatori. Dettagli nella pagina [Open data](/open-data/).
 

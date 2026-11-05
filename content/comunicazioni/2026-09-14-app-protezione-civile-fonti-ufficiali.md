@@ -23,9 +23,9 @@ In un mondo saturo di informazioni, **conoscere le fonti ufficiali** è essenzia
 - canale X (Twitter): @DPCgov
 - tematiche: bollettini nazionali, comunicazioni ufficiali, aggiornamenti emergenze.
 
-### IT-Alert
+### IT-alert
 - sito: [it-alert.gov.it](https://www.it-alert.gov.it/)
-- app: non serve — basta avere **cell broadcast attivo** sullo smartphone.
+- app: non serve, e non serve attivare nulla: il messaggio arriva anche se la voce IT-alert del telefono è disattivata.
 
 ### INGV (Istituto Nazionale di Geofisica e Vulcanologia)
 - sito: [ingv.it](https://www.ingv.it/)
@@ -66,10 +66,11 @@ In un mondo saturo di informazioni, **conoscere le fonti ufficiali** è essenzia
 
 ## Le app utili da installare
 
-- **IT-Alert** (non serve installarla, ma verificare che il cell broadcast sia attivo);
 - **INGVterremoti** (terremoti in Italia, notifiche automatiche);
 - **Meteo AM** (previsioni ufficiali dell'Aeronautica);
 - **app del proprio Comune** dove disponibile (alcuni Comuni hanno app dedicate).
+
+IT-alert non compare in questo elenco perché non è un'app: non va installato né attivato.
 
 ## Diffidare di
 
@@ -90,7 +91,9 @@ Quando circola una notizia di rischio:
 ## Per approfondire
 
 - [Differenza tra allerta e emergenza](/comunicazioni/2026-09-09-differenza-allerta-emergenza-linguaggio/)
-- [IT-Alert: cosa è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
+- [IT-alert: cosa è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
 - [Social Media Policy](/social-media-policy/)
 
 In emergenza: **112**.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto i passaggi su IT-alert: non serve verificare che il cell broadcast sia attivo, perché il messaggio arriva anche con la voce IT-alert disattivata.

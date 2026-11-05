@@ -21,68 +21,75 @@ build:
 
 > ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[IT-alert: cosa fare quando arriva il messaggio](/comunicazioni/2026-07-10-app-it-alert-test-nazionale-facile/)**.
 
-IT-alert è il sistema nazionale di allarme pubblico. Lo gestisce la Protezione Civile italiana. Manda messaggi ai telefoni in caso di pericolo grave.
+> **Nota (5 novembre 2026).** Abbiamo corretto questo articolo. Ora segue le pagine ufficiali di IT-alert.
+
+IT-alert è il sistema di allarme pubblico italiano. Lo coordina il Dipartimento della Protezione Civile. Manda messaggi ai telefoni in caso di pericolo grave.
 
 ## Cosa è IT-alert
 
-IT-alert manda un avviso al tuo telefono. Lo manda quando c'è un pericolo vicino a te. Il messaggio arriva a tutti i telefoni nella zona.
+IT-alert manda un avviso ai telefoni in una zona in pericolo. Il messaggio arriva ai telefoni accesi nella zona.
 
-Non serve scaricare nessuna app. Non serve iscriversi. Il telefono lo riceve da solo.
+Non serve scaricare app. Non serve iscriversi. Non devi cambiare le impostazioni del telefono.
 
 ## Come riconosci il messaggio
 
 Quando arriva IT-alert, il tuo telefono:
 
-- Fa un suono forte e diverso dagli altri suoni.
-- Vibra molto.
-- Mostra il messaggio al centro dello schermo.
-- Il messaggio dice "IT-alert" o "Pubblica emergenza".
+- fa un suono diverso dalle suonerie normali;
+- mostra il messaggio sullo schermo;
+- resta bloccato finché tocchi il messaggio.
 
-Il telefono suona anche se è in modalità silenziosa.
+Il messaggio comincia con la scritta "IT-alert". È in italiano e in inglese.
+
+Se il telefono è in silenzioso, il suono può non partire. Il messaggio arriva lo stesso.
 
 ## Non è una truffa
 
-Molte persone pensano che sia falso. Non lo è. IT-alert è ufficiale e sicuro.
+Molte persone pensano che sia falso. Non lo è. IT-alert è un servizio ufficiale e gratis.
 
-IT-alert non chiede mai:
+IT-alert non chiede:
 
-- La tua password.
-- I tuoi dati personali.
-- Soldi.
+- la tua password;
+- i tuoi dati personali;
+- soldi.
 
-IT-alert non ti chiede mai di cliccare un link. Se ricevi un messaggio con un link, è una truffa.
+Se un SMS o una email dice di essere IT-alert e ti chiede dati o soldi, è una truffa.
 
 ## Cosa fare quando ricevi il messaggio
 
 1. Leggi tutto il messaggio con attenzione.
-2. Il messaggio dice cosa fare: restare in casa, uscire, chiudere il gas.
-3. Segui le istruzioni del messaggio.
-4. Dì ai tuoi familiari del messaggio. Non tutti lo ricevono.
+2. Il messaggio dice cosa succede e cosa fare.
+3. Segui le istruzioni delle autorità.
+4. Di' ai tuoi familiari del messaggio. Non tutti lo ricevono.
 5. Ascolta la radio o la TV per altri aggiornamenti.
-6. Non chiamare il 112, il numero unico di emergenza, se non sei in pericolo.
+6. Chiama il 112, il numero unico di emergenza, solo se sei in pericolo.
 
 ## Per quali pericoli arriva
 
-IT-alert arriva per pericoli gravi come:
+Oggi IT-alert arriva in 4 casi:
 
-- Un maremoto (grandi onde del mare dopo un terremoto).
-- Il crollo di una diga grande.
-- Un'eruzione di un vulcano.
-- Un incidente con sostanze chimiche o nucleari.
+- una grande diga si rompe;
+- un vulcano è in attività: Campi Flegrei, Vesuvio o Vulcano;
+- un incidente nucleare;
+- un incidente grave in una grande fabbrica pericolosa.
 
-IT-alert non è per le allerte meteo ordinarie. È solo per pericoli molto gravi.
+Per il maremoto e per il vulcano Stromboli ci sono ancora i test.
+
+IT-alert non manda le allerte meteo.
 
 ## I test
 
-La Protezione Civile fa dei test ogni tanto. Durante un test, il messaggio dice chiaramente: "TEST, questa è una prova, non un'emergenza".
+Il DPC, il Dipartimento della Protezione Civile, fa dei test ogni tanto. I test sono annunciati prima sul sito di IT-alert.
 
-Prima di un test, la Protezione Civile avvisa con giorno e ora.
+Il messaggio di test comincia con la parola TEST. Non devi fare niente.
 
 ## Puoi disattivarlo?
 
-Sì, è possibile. Ma non è una buona idea. IT-alert arriva solo per pericoli gravi. Se lo disattivi, non ricevi informazioni importanti per la tua sicurezza.
+No. Il messaggio arriva anche se spegni la voce IT-alert nelle impostazioni.
+
+Il telefono deve essere acceso, carico e con il campo. Con il solo wi-fi il messaggio non arriva.
 
 ## Per sapere di più
 
-- [IT-alert — Sito ufficiale](https://www.it-alert.it/it/)
+- [IT-alert — Sito ufficiale](https://www.it-alert.gov.it/it/)
 - [Protezione Civile — sito nazionale](https://www.protezionecivile.gov.it/)

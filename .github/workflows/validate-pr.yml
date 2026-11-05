@@ -238,6 +238,14 @@ jobs:
           pip install --quiet pyyaml
           python3 scripts/genera-calendario-prevenzione.py --check
 
+      - name: "🎞️ Illustrazioni animate degli esperimenti allineate ai disegni"
+        # 05/11/2026: le versioni animate in static/formazione/illustrazioni-udl/animate/
+        # nascono dai disegni statici con scripts/genera-animazioni-esperimenti.py.
+        # Se cambia un disegno statico o la ricetta, l'animazione va rigenerata
+        # nello stesso commit; la descrizione dell'animazione nella pagina
+        # (alt_animazione) deve coincidere con quella dentro l'SVG.
+        run: python3 scripts/genera-animazioni-esperimenti.py --check
+
       - name: "🗺️ Gioco «Genzano si prepara»: aree di attesa allineate al Piano"
         # 01/11/2026: la mappa del gioco mostra le aree di attesa vere. Se
         # data/aree_emergenza.yaml cambia, luoghi.json va rigenerato con

@@ -884,8 +884,8 @@ content("Area download", [
 ], N())
 
 content("Materiali pronti da scaricare", [
-    "Podcast, infografiche, quiz e flashcard sui rischi del territorio.",
-    "Prodotti a partire da fonti istituzionali e verificati prima della pubblicazione.",
+    "Video, infografiche e presentazioni sui rischi del territorio.",
+    "Preparati da fonti istituzionali e ricontrollati: un materiale con errori esce dall'elenco.",
     "Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione.",
 ], N(), fonti="DPC · INGV · ISPRA · Centro Funzionale Regionale del Lazio · ISO")
 

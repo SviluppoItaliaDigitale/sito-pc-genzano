@@ -39,7 +39,7 @@ sitemap:
 1. La sirena dell'ambulanza ha tre toni.
 2. Il tuono fa "boom" dopo il fulmine.
 3. L'allarme della scuola dice di uscire in ordine.
-4. IT-alert è un suono lungo del telefono: leggi il messaggio.
+4. Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.
 
 ## Apri il gioco interattivo
 

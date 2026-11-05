@@ -1,16 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-11-04T22:50:53+00:00",
+  "generato": "2026-11-05T03:17:30+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 5,
-  "scaduti_scartati": 30,
+  "avvisi": 6,
+  "scaduti_scartati": 2,
   "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -23,17 +23,43 @@
    "identificativo": "2.49.0.0.380.3.IT.261104102014.012"
   },
   {
-   "in_corso": true,
-   "regione": "Sardegna",
+   "in_corso": false,
+   "regione": "Calabria",
    "fenomeno": "Temporali",
-   "livello": "arancione",
-   "evento_originale": "Orange Thunderstorm Warning",
-   "severita": "Severe",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-04T18:00:00+00:00",
-   "fine": "2026-11-04T23:59:00+00:00",
+   "inizio": "2026-11-06T18:00:00+00:00",
+   "fine": "2026-11-06T22:59:00+00:00",
    "emesso": "2026-11-04T09:20:14+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261104102014.010"
+   "identificativo": "2.49.0.0.380.3.IT.261104102014.016"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-06T12:00:00+00:00",
+   "fine": "2026-11-06T22:59:00+00:00",
+   "emesso": "2026-11-04T09:20:14+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261104102014.015"
+  },
+  {
+   "in_corso": false,
+   "regione": "Lazio",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-06T00:00:00+00:00",
+   "fine": "2026-11-06T22:59:00+00:00",
+   "emesso": "2026-11-04T09:20:14+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261104102014.014"
   },
   {
    "in_corso": true,
@@ -49,7 +75,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261104102014.009"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -60,19 +86,6 @@
    "fine": "2026-11-05T23:59:00+00:00",
    "emesso": "2026-11-04T09:20:14+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261104102014.013"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-04T09:00:00+00:00",
-   "fine": "2026-11-04T23:59:00+00:00",
-   "emesso": "2026-11-04T09:20:14+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261104102014.011"
   }
  ]
 }

@@ -108,7 +108,7 @@ Il Gruppo di PC partecipa supportando le scuole quando richiesto, con formazione
 Alcune esercitazioni coinvolgono attivamente i cittadini:
 - **"Io non rischio"** — campagna nazionale di comunicazione e prove pratiche.
 - **Simulazioni di evacuazione** di condomini o quartieri.
-- **Test IT-alert** (sistema di allertamento via SMS).
+- **Test IT-alert** (il sistema di allarme pubblico che manda un messaggio ai telefoni di una zona: non è un SMS).
 - **Prove di affluenza** in aree di attesa.
 
 La **partecipazione volontaria** di famiglie e cittadini rende l'esercitazione realistica e utile.
@@ -164,3 +164,5 @@ Chi non si esercita, **non è operativamente pronto** anche se ha seguito tutti 
 - [Campagna "Io non rischio"](https://iononrischio.protezionecivile.gov.it/it/)
 
 Esercitarsi non è un gioco. È il modo più serio per essere pronti il giorno in cui non sarà più una simulazione.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto la descrizione di IT-alert: non è un SMS.

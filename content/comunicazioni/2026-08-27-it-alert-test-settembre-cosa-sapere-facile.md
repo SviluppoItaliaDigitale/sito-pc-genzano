@@ -1,13 +1,13 @@
 ---
-title: "IT-Alert: cosa è e cosa fare"
+title: "IT-alert e i test: cosa fare"
 date: 2026-08-27T00:01:00+02:00
 draft: false
-description: "IT-Alert è il sistema di allarme sul cellulare. Cosa fare quando suona."
+description: "IT-alert è il sistema di allarme sul cellulare. Cosa fare quando suona."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-27-it-alert-test-settembre-cosa-sapere.webp"
-image_alt: "Schermo di cellulare che mostra una notifica IT-Alert di test con testo istituzionale"
+image_alt: "Cover dell'articolo: IT-alert: cosa è, come funziona, come reagire al prossimo test"
 scadenza: ""
 area: "Lazio"
 allegati: []
@@ -21,32 +21,34 @@ build:
 
 > ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[IT-alert: cosa fare quando arriva il messaggio](/comunicazioni/2026-07-10-app-it-alert-test-nazionale-facile/)**.
 
-**IT-Alert** è il sistema nazionale di allarme. Manda messaggi ai cellulari in caso di emergenza. Lo gestisce il Dipartimento della Protezione Civile.
+> **Nota (5 novembre 2026).** Abbiamo corretto questo articolo. Ora segue le pagine ufficiali di IT-alert.
+
+**IT-alert** è il sistema nazionale di allarme. Manda messaggi ai cellulari in caso di emergenza. Lo gestisce il Dipartimento della Protezione Civile.
 
 ## Come arriva il messaggio
 
-IT-Alert usa una tecnologia che si chiama **cell broadcast**. Il messaggio arriva a tutti i telefoni in una zona. Non devi scaricare app. Non devi iscriverti. Il sistema non conosce il tuo numero di telefono. Funziona anche senza Internet. Il telefono riceve il messaggio se si trova nella zona. Non importa dove abiti.
+IT-alert usa una tecnologia che si chiama **cell broadcast**. Il messaggio arriva ai telefoni accesi in una zona. Non devi scaricare app. Non devi iscriverti. Il sistema non conosce il tuo numero di telefono. Funziona anche senza Internet. Il telefono riceve il messaggio se si trova nella zona. Non importa dove abiti.
 
-Funziona su telefoni Android 11 e più recenti. Funziona su iPhone con iOS 14.5 e più recente.
+Arriva anche sui telefoni vecchi, che non sono smartphone. Il telefono deve essere acceso, carico e con il campo. Non devi cambiare le impostazioni.
 
-## Quando arriva IT-Alert
+## Quando arriva IT-alert
 
-IT-Alert può arrivare in questi casi:
+Oggi IT-alert arriva in 4 casi:
 
-- **maremoto** (onda gigante causata da un terremoto in mare)
 - **crollo di una grande diga**
 - **incidente in una fabbrica pericolosa**
 - **incidente con materiale radioattivo**
-- **eruzione di un vulcano**
-- **piogge molto forti** (ancora in prova)
+- **vulcano in attività**: Campi Flegrei, Vesuvio o Vulcano
+
+Per il maremoto e per il vulcano Stromboli ci sono ancora i test. IT-alert non manda le allerte meteo.
 
 ## Cosa succede sul telefono
 
-Quando arriva IT-Alert:
+Quando arriva IT-alert:
 
-- il telefono fa un **suono forte**. È diverso dagli altri suoni.
+- il telefono fa un **suono** diverso dagli altri suoni. Se il telefono è in silenzioso, il suono può non partire.
 - lo schermo mostra un **testo con le istruzioni**
-- il messaggio **non è un SMS**. Non si cancella da solo. Devi chiuderlo tu.
+- il telefono resta **bloccato**. Per sbloccarlo, tocca il messaggio. Il messaggio **non è un SMS**.
 
 ## Cosa fare quando arriva
 
@@ -67,11 +69,11 @@ La Protezione Civile fa dei test per verificare che il sistema funzioni. Durante
 
 ## Perché è importante
 
-Un messaggio IT-Alert può arrivare molto in fretta. In caso di maremoto o incidente, pochi minuti sono importanti. Se conosci IT-Alert, puoi reagire subito nel modo giusto.
+Un messaggio IT-alert può arrivare molto in fretta. In caso di incidente grave, pochi minuti sono importanti. Se conosci IT-alert, puoi reagire subito nel modo giusto.
 
 ## Link utili
 
-- [Sito ufficiale IT-Alert](https://www.it-alert.gov.it/)
+- [Sito ufficiale IT-alert](https://www.it-alert.gov.it/)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Piano di Emergenza Comunale](/piano-emergenza/)
 

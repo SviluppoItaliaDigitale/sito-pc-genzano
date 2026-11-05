@@ -16,6 +16,10 @@
         {{ .Content }}
       </div>
 
+      {{/* Con `sospeso: true` nel frontmatter della sezione (puntate tolte in
+         attesa di essere rifatte e verificate) la pagina mostra solo il
+         testo che spiega la sospensione: niente iscrizione, niente elenco. */}}
+      {{- if not .Params.sospeso }}
       {{/* ─── Iscriviti ─── */}}
       <section class="pcg-podcast-iscriviti" aria-labelledby="pcg-podcast-iscriviti-h">
         <h2 id="pcg-podcast-iscriviti-h" class="h5"><i class="bi bi-broadcast me-2" aria-hidden="true"></i>Iscriviti al podcast</h2>
@@ -66,6 +70,7 @@
         Preferisci leggere o ascoltare gli articoli del sito invece degli episodi audio?
         Vai agli <a href="{{ "articoli-da-ascoltare/" | relURL }}">articoli da ascoltare</a> (lettura vocale dal browser, gratuita).
       </p>
+      {{- end }}
 
     </div>
   </div>

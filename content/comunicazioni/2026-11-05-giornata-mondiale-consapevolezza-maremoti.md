@@ -39,13 +39,13 @@ Il punto chiave: nel Mediterraneo i tempi di arrivo delle onde sono **brevi** �
 
 ## Il sistema di allerta italiano
 
-Dal 2017 l'Italia ha il **SiAM**, il Sistema d'Allertamento nazionale per i Maremoti generati da sisma. Il sistema unisce tre istituzioni: l'**INGV**, con il Centro Allerta Tsunami, valuta i terremoti potenzialmente pericolosi; l'**ISPRA**, con la rete mareografica, conferma l'arrivo delle onde; il **Dipartimento della Protezione Civile** diffonde l'allerta alla popolazione. I messaggi possono raggiungere i cittadini anche attraverso **IT-alert**, il sistema di allarme pubblico che suona direttamente sui telefoni presenti nell'area a rischio.
+Dal 2017 l'Italia ha il **SiAM**, il Sistema d'Allertamento nazionale per i Maremoti generati da sisma. Il sistema unisce tre istituzioni: l'**INGV**, con il Centro Allerta Tsunami, valuta i terremoti potenzialmente pericolosi; l'**ISPRA**, con la rete mareografica, conferma l'arrivo delle onde; il **Dipartimento della Protezione Civile** dirama l'allerta alle strutture del Servizio nazionale di protezione civile, per raggiungere il prima possibile la popolazione interessata. Per il maremoto **IT-alert**, il sistema di allarme pubblico sui telefoni, è ancora in sperimentazione, fino al 31 dicembre 2026: per ora si inviano solo messaggi di prova.
 
 ## Cosa fare se sei sulla costa
 
 - **Senti un forte terremoto?** Non aspettare nessuna allerta: **allontanati subito dal mare** e raggiungi un punto alto o gli edifici più interni.
 - **Vedi il mare ritirarsi rapidamente** o comportarsi in modo anomalo? È un possibile segnale d'arrivo dell'onda: **corri verso l'alto**, non verso il mare a guardare.
-- **Ricevi un messaggio IT-alert o un'allerta maremoto?** Segui le indicazioni: allontanati da spiagge, porti e foci dei fiumi.
+- **Le autorità diramano un'allerta maremoto?** Segui le indicazioni: allontanati da spiagge, porti e foci dei fiumi.
 - **Dopo la prima onda non tornare sulla riva**: le onde di maremoto arrivano a treni successivi, anche a distanza di decine di minuti, e la prima non è sempre la più alta.
 
 ## Per approfondire
@@ -62,3 +62,5 @@ Dal 2017 l'Italia ha il **SiAM**, il Sistema d'Allertamento nazionale per i Mare
 - [Dipartimento della Protezione Civile — Rischio maremoto](https://rischi.protezionecivile.gov.it/it/maremoto-0/)
 - [INGV — Centro Allerta Tsunami](https://www.ingv.it/)
 - [UNDRR — World Tsunami Awareness Day](https://www.undrr.org/)
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: per il maremoto il sistema è ancora in sperimentazione, con soli messaggi di prova.

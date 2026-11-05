@@ -1813,7 +1813,7 @@
     "meteo",
     "volontariato"
    ],
-   "desc": "6 frasi su una giornata di allerta meteo arancione (bollettino, COC, IT-alert, volontari) da numerare in ordine cronologico. Domanda extra sul Centro Funzionale.",
+   "desc": "6 frasi su una giornata di allerta meteo arancione (bollettino, COC, volontari, avviso del Comune) da numerare in ordine cronologico. Domanda extra sul Centro Funzionale.",
    "facilitata": false
   },
   {
@@ -1843,7 +1843,7 @@
    "temi": [
     "terremoto"
    ],
-   "desc": "Brano semplificato sul terremoto di Amatrice (data, magnitudo, regioni colpite, soccorsi, IT-alert) + domande di comprensione del testo.",
+   "desc": "Brano semplificato sul terremoto di Amatrice (data, magnitudo, regioni colpite, soccorsi, perché IT-alert non avvisa dei terremoti) + domande di comprensione del testo.",
    "facilitata": false
   },
   {
@@ -2631,11 +2631,9 @@
    ],
    "minuti": 50,
    "temi": [
-    "acqua",
-    "meteo",
     "informazione"
    ],
-   "desc": "Sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio (rischio/area/tempo/azione/fonte), esempio realistico con allerta idrogeologica per Genzano, risposta in 140 caratteri alla famiglia, mini quiz.",
+   "desc": "Sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio (rischio/area/tempo/azione/fonte), esempio simulato di messaggio per un incidente industriale, risposta in 140 caratteri alla famiglia, mini quiz.",
    "facilitata": false
   },
   {
@@ -3213,7 +3211,7 @@
     "terremoto",
     "casa"
    ],
-   "desc": "Cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione.",
+   "desc": "Cronologia 24 agosto/30 ottobre 2016, evacuazioni preventive, ricostruzione, perché IT-alert non avvisa dei terremoti.",
    "facilitata": false
   },
   {
@@ -3327,7 +3325,7 @@
    "temi": [
     "meteo"
    ],
-   "desc": "Flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert.",
+   "desc": "Flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, perché IT-alert non manda le allerte meteo.",
    "facilitata": false
   },
   {
@@ -4472,6 +4470,23 @@
   },
   {
    "tipo": "esperimento",
+   "titolo": "Lo strato che scivola",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
    "titolo": "Città di asfalto, città di prato",
    "url": "/formazione/esperimenti/",
    "fasce": [
@@ -4524,6 +4539,23 @@
   {
    "tipo": "esperimento",
    "titolo": "Il tombino ostruito",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La scatola che galleggia",
    "url": "/formazione/esperimenti/",
    "fasce": [
     "primaria-bassa",
@@ -4643,6 +4675,23 @@
   {
    "tipo": "esperimento",
    "titolo": "La forza del vento (la manica a vento)",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La spirale che gira da sola",
    "url": "/formazione/esperimenti/",
    "fasce": [
     "infanzia",
