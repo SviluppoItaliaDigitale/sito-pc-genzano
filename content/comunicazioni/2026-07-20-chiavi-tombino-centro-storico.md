@@ -1,7 +1,7 @@
 ---
 title: "Chiavi recuperate da un tombino nel centro storico di Genzano"
 date: 2026-07-20T00:03:00+02:00
-description: "Su richiesta della Polizia Locale, i volontari del Gruppo hanno recuperato un mazzo di chiavi caduto in un tombino."
+description: "Su richiesta della Polizia Locale, i volontari del Gruppo hanno recuperato delle chiavi cadute in un tombino."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -16,16 +16,17 @@ social_punti: []
 draft: false
 ---
 
-Nel pomeriggio del 20 luglio 2026, un mazzo di chiavi è caduto in un tombino nel centro storico di Genzano.
+Nel tardo pomeriggio del 20 luglio 2026 delle chiavi sono cadute in un tombino nel centro storico di Genzano.
 
 ## Il recupero delle chiavi
 
-Su richiesta della Polizia Locale, i volontari del Gruppo sono intervenuti nei pressi di corso Don Minzoni. Hanno aperto il tombino con le attrezzature in dotazione. L'acqua nel pozzetto rendeva difficile vedere le chiavi. Dopo diversi tentativi, i volontari le hanno recuperate e restituite.
+Su richiesta della Polizia Locale, i volontari del Gruppo sono intervenuti all'inizio di corso Don Minzoni. Il coperchio era pesante. Il pozzetto era profondo più di un metro e mezzo e conteneva più di un metro d'acqua scura: le chiavi non si vedevano. Dopo una ventina di minuti di tentativi i volontari le hanno recuperate e restituite.
 
 ## Cosa impariamo
 
-- Se un oggetto cade in un tombino, lascia la griglia al suo posto. La [scheda sul tombino ostruito](/formazione/esperimenti/#11-il-tombino-ostruito-) spiega perché si lavora lontano dai tombini veri.
-- Per un oggetto smarrito sulla strada, rivolgiti alla Polizia Locale. Tieni il [112](/numeri-utili/#numeri-di-emergenza-e-soccorso) per le emergenze.
+- Se un oggetto cade in un tombino, non aprirlo da solo e non infilarci le mani: il coperchio è pesante e il pozzetto può essere profondo e pieno d'acqua.
+- Per un oggetto caduto sulla strada rivolgiti alla Polizia Locale. Il [112](/numeri-utili/#numeri-di-emergenza-e-soccorso) serve per le emergenze.
+- Un tombino libero fa defluire l'acqua quando piove: l'[esperimento del tombino ostruito](/formazione/esperimenti/) mostra che cosa succede quando è bloccato.
 
 Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emergenza chiama il 112.
 

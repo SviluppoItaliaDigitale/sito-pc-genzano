@@ -16,21 +16,21 @@ social_punti: []
 draft: false
 ---
 
-Il 6 gennaio 2026, dopo le piogge, un albero è caduto nella zona della Croce Santa, a Genzano. Ha danneggiato due auto parcheggiate vicino alla rotatoria.
+Il 6 gennaio 2026, con il maltempo, un albero è caduto nella zona della Croce Santa, a Genzano. Ha danneggiato due auto.
 
 ## L'albero caduto e il sottopasso di via Montegiove
 
-I volontari del Gruppo hanno eseguito i rilievi e rimosso l'albero. Sul posto sono intervenuti anche i Carabinieri e la Polizia Locale per gestire la viabilità e mettere in sicurezza l'area.
+I volontari del Gruppo hanno eseguito i rilievi e rimosso l'albero. Sul posto sono intervenuti anche i Carabinieri e la Polizia Locale, che si sono occupati della viabilità e della messa in sicurezza dell'area.
 
-Il sottopasso ferroviario di via Montegiove, al confine tra Genzano e Ariccia, è tornato percorribile. L'acqua aveva bloccato il transito il giorno precedente. Le squadre del Gruppo hanno liberato le caditoie dai detriti e usato le idrovore per togliere l'acqua dalla carreggiata.
+Il sottopasso di via Montegiove, fra Genzano e Ariccia, è tornato percorribile. L'acqua aveva bloccato il transito il giorno precedente. Le squadre hanno liberato le caditoie e usato le idrovore per togliere l'acqua.
 
 ## La squadra inviata a Ciampino
 
-Dopo un intervento su un albero in centro, la Sala Operativa regionale ha inviato una squadra a Ciampino. I volontari hanno portato un'idrovora per contribuire agli interventi contro gli allagamenti.
+Dopo un intervento su un albero in centro, la Sala Operativa regionale ha inviato una squadra a Ciampino. I volontari hanno portato un'idrovora per gli allagamenti.
 
 ## Cosa impariamo
 
-- Dopo un temporale, stai lontano da un albero caduto e rispetta le indicazioni sulla viabilità. Leggi [come comportarti durante e dopo un temporale](/rischi-prevenzione/temporali-intensi/).
+- Con il maltempo, stai lontano da un albero caduto e rispetta le indicazioni sulla viabilità. Leggi [come comportarti durante e dopo un temporale](/rischi-prevenzione/temporali-intensi/).
 - Se un sottopasso è allagato, cerca un altro percorso. Leggi [come comportarti in caso di allagamento](/rischi-prevenzione/rischio-idrogeologico/).
 
 Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emergenza chiama il 112.
