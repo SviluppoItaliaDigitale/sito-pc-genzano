@@ -155,7 +155,8 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
-- **2026-11-05 — da Claude a ChatGPT — Tre articoli d'archivio sugli interventi del Gruppo riportati dalle cronache locali** (preparata da Claude, da avviare a mano in Codex Cloud; PR in apertura; ramo `chatgpt/articoli-cronache-interventi-20261105`)
+- **2026-11-05 — da Claude a ChatGPT — Tre articoli d'archivio sugli interventi del Gruppo riportati dalle cronache locali** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1704; ramo `chatgpt/articoli-cronache-interventi-20261105`)
+  - **Avvio a mano (Alessandro).** In Codex Cloud: ambiente del repository (per social-pc-genzano, «tutti-i-repository»), ramo `chatgpt/articoli-cronache-interventi-20261105` se il selettore lo offre, poi il testo di avvio (intestazione più le sette parti qui sotto: lo stampa `passa-a.py nuovo`, lo ristampa `passa-a.py riavvia --pr 1704`). A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1704 --consegna M`.
   - **1. Obiettivo.**
     Tre articoli d'archivio, datati al giorno dei fatti, sugli interventi del Gruppo riportati dalle cronache locali. Restano in questa pull request: la unisce Alessandro dopo averli confrontati con il registro interventi.
   - **2. File.**
