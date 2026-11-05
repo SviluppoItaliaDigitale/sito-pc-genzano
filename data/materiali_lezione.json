@@ -220,6 +220,20 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "Un oggetto della guerra",
+   "url": "/formazione/schede-stampabili/oggetti-un-oggetto-della-guerra-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Lasciare dov’è un oggetto della guerra, allontanarsi e avvisare un adulto. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "Petardi e oggetti metallici",
    "url": "/formazione/schede-stampabili/oggetti-petardi-e-oggetti-metallici-secondaria1/",
    "fasce": [
@@ -258,6 +272,20 @@
     "natura"
    ],
    "desc": "Separare un’osservazione da una conclusione non dimostrata. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Residuati bellici: che cosa fare se li trovi",
+   "url": "/formazione/schede-stampabili/oggetti-residuati-bellici-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 30,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Sapere chi interviene su un residuato bellico e quali gesti spettano a chi lo trova. Con nota per l'adulto e soluzione capovolta.",
    "facilitata": false
   },
   {

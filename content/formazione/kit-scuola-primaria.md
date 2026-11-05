@@ -931,6 +931,7 @@ Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adat
 - [Non tutto si può assaggiare](/formazione/schede-stampabili/oggetti-non-tutto-si-puo-assaggiare-primaria/) — 6–8 anni. Lasciare stare cibo, bevande e piccoli oggetti trovati.
 - [Una bottiglia con un forellino](/formazione/schede-stampabili/oggetti-una-bottiglia-con-un-forellino-primaria/) — 8–11 anni. Segnalare una confezione danneggiata senza fare prove sul contenuto.
 - [Una segnalazione chiara](/formazione/schede-stampabili/oggetti-una-segnalazione-chiara-primaria/) — 8–11 anni. Riferire luogo e fatti senza avvicinarsi per raccogliere dettagli.
+- [Un oggetto della guerra](/formazione/schede-stampabili/oggetti-un-oggetto-della-guerra-primaria/) — 8–11 anni. Lasciare dov’è un oggetto della guerra, allontanarsi e avvisare un adulto.
 - [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — versione facilitata, età diverse. Chiedere aiuto attraverso il proprio modo di comunicare.
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
 - [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.

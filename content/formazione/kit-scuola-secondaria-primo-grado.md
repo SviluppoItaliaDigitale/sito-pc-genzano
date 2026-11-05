@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~773 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~778 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -898,6 +898,7 @@ Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adat
 - [Petardi e oggetti metallici](/formazione/schede-stampabili/oggetti-petardi-e-oggetti-metallici-secondaria1/) — 11–14 anni. Riconoscere quando fermarsi senza tentare identificazioni o prove.
 - [Una sfida da rifiutare](/formazione/schede-stampabili/oggetti-una-sfida-da-rifiutare-secondaria1/) — 11–14 anni. Rifiutare una pressione del gruppo e cercare un adulto.
 - [Segnali e supposizioni](/formazione/schede-stampabili/oggetti-segnali-e-supposizioni-secondaria1/) — 11–14 anni. Separare un’osservazione da una conclusione non dimostrata.
+- [Residuati bellici: che cosa fare se li trovi](/formazione/schede-stampabili/oggetti-residuati-bellici-secondaria1/) — 11–14 anni. Sapere chi interviene su un residuato bellico e quali gesti spettano a chi lo trova.
 - [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — versione facilitata, età diverse. Chiedere aiuto attraverso il proprio modo di comunicare.
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
 - [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
