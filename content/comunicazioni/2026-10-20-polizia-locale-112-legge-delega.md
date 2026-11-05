@@ -18,6 +18,8 @@ social_punti:
   - "Collegamento previsto tra il 112 e le sale operative della polizia locale"
   - "Criteri per il soccorso fuori territorio in caso di calamità"
   - "I dodici mesi della delega decorrono dall’entrata in vigore della legge"
+versione_facile: "2026-10-20-polizia-locale-112-legge-delega-facile"
+tts: true
 draft: false
 ---
 
