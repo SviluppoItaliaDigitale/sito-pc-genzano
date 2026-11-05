@@ -104,13 +104,13 @@ Le scuole di Genzano di Roma possono adattare le esercitazioni di emergenza. Per
 
 ## IT-alert
 
-IT-alert è il sistema di messaggi di emergenza sul telefono. Il messaggio arriva con un suono molto forte. Questo può spaventare le persone autistiche.
+IT-alert è il sistema di messaggi di emergenza sul telefono. Il messaggio arriva con un suono speciale, diverso dal solito. Questo può spaventare le persone autistiche.
 
 Cosa fare:
 
-- Abituare la persona al suono con qualche prova.
+- Abituare la persona al suono. Le prove sono annunciate prima sul sito di IT-alert.
 - Spiegare il significato del messaggio.
-- Ridurre il volume nelle impostazioni del telefono.
+- Sapere che le impostazioni del telefono non fermano il messaggio.
 
 ## Per approfondire
 
@@ -126,3 +126,5 @@ Fonti istituzionali:
 - [ANGSA (Associazione Nazionale Genitori Soggetti Autistici)](https://www.angsa.it/)
 - [Autismo Italia](https://www.autismoitalia.org/)
 - [ONU — Giornata dell'autismo](https://www.un.org/en/observances/autism-day)
+
+> **Nota (5 novembre 2026).** Abbiamo corretto la parte su IT-alert. Il messaggio arriva anche se cambi le impostazioni del telefono.

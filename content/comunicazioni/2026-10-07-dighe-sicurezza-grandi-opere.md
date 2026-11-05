@@ -66,7 +66,7 @@ In caso di rischio evolutivo di una diga, il sistema prevede:
 - **preallarme** (possibile criticità);
 - **allarme** (evacuazione delle aree a rischio).
 
-Gli allertamenti sono diffusi tramite **sirene**, **IT-Alert**, **sistemi locali**, **forze dell'ordine**.
+Gli allertamenti sono diffusi tramite **sirene**, **IT-alert**, **sistemi locali**, **forze dell'ordine**.
 
 ## Il Lazio e le dighe
 

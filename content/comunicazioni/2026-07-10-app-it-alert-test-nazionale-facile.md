@@ -19,103 +19,92 @@ build:
   publishResources: true
 ---
 
+> **Nota (5 novembre 2026).** Abbiamo corretto questo articolo. Ora segue le pagine ufficiali di IT-alert.
+
 ## Cos'è IT-alert
 
-IT-alert è il sistema nazionale di allarme pubblico. Il Dipartimento della Protezione Civile lo gestisce.
+IT-alert è il sistema di allarme pubblico italiano. Lo coordina il Dipartimento della Protezione Civile.
 
-IT-alert manda un messaggio al tuo telefono. Arriva quando c'è un pericolo nella tua zona.
+IT-alert manda un messaggio ai telefoni in una zona in pericolo.
 
-**Non devi scaricare nessuna app.** IT-alert funziona in automatico.
+**Non devi scaricare app e non devi cambiare le impostazioni.** IT-alert funziona da solo.
 
 ## Come arriva il messaggio
 
 Quando arriva un messaggio IT-alert:
 
-- Il telefono fa un suono forte.
-- Il telefono vibra molto.
-- Sul telefono appare un testo a schermo intero.
-- Non si può silenziare.
+- il telefono fa un suono diverso dalle suonerie normali;
+- sullo schermo appare il messaggio;
+- il telefono resta bloccato finché tocchi il messaggio.
 
-Il messaggio arriva a tutti i telefoni nella zona. Non serve il numero di telefono.
+Se il telefono è in silenzioso, il suono può non partire. Il messaggio arriva lo stesso.
+
+Il messaggio arriva ai telefoni nella zona. Arriva anche sui telefoni vecchi. Non serve il numero di telefono.
 
 ## Per quali pericoli si usa IT-alert
 
-IT-alert si usa per questi eventi gravi:
+Oggi IT-alert si usa in 4 casi:
 
-- un'ondata di mare (maremoto) dopo un terremoto in mare;
-- il crollo di una diga grande;
-- un vulcano attivo, come il Vesuvio o i Campi Flegrei;
-- un incidente in una centrale nucleare;
-- un incidente in una fabbrica pericolosa.
+- una grande diga si rompe;
+- un vulcano è in attività: Campi Flegrei, Vesuvio o Vulcano;
+- un incidente nucleare;
+- un incidente grave in una grande fabbrica pericolosa.
+
+Per il maremoto e per il vulcano Stromboli ci sono ancora i test.
 
 Non si usa per il caldo o per la pioggia forte. Per questi ci sono altri avvisi.
 
 ## Cosa sono i test
 
-Il Dipartimento della Protezione Civile (DPC), cioè i responsabili nazionali dell'emergenza, fa dei test periodici.
+Il Dipartimento della Protezione Civile (DPC) fa dei test. Un test serve a controllare che il sistema funziona bene.
 
-Un test serve a controllare che il sistema funziona bene.
+I test sono annunciati prima sul sito di IT-alert.
 
 Durante un test:
 
-- Il tuo telefono suona e vibra.
-- Vedi la scritta: "IT-alert — TEST — questo è un messaggio di test".
-- Ti chiedono di compilare un questionario sul sito. È facoltativo.
+- il messaggio comincia con la parola TEST;
+- non c'è nessun pericolo;
+- se eri nella zona e il messaggio non è arrivato, puoi dirlo con un questionario sul sito di IT-alert.
 
-Se ricevi un messaggio di test, **non devi fare nulla di speciale.** Leggi il messaggio e continua la tua giornata.
+Se ricevi un messaggio di test, **non devi fare niente.**
 
 ## Cosa fare con un messaggio vero
 
 Se il messaggio non è un test:
 
 1. Leggi bene il testo.
-2. Segui le istruzioni che il messaggio ti dà.
+2. Segui le istruzioni delle autorità.
 3. Controlla il sito del Comune di Genzano di Roma o il sito del DPC per aggiornamenti.
 4. Non mandare informazioni non verificate ad altri.
-5. Metti in pratica i comportamenti di sicurezza che conosci.
+5. Se sei in pericolo adesso, chiama il 112.
 
-## Come controllare che il telefono riceva IT-alert
+## Il telefono va impostato?
 
-IT-alert funziona in automatico sulla maggior parte dei telefoni moderni.
+No. Non devi fare niente sul telefono. Il messaggio arriva anche se la voce IT-alert nelle impostazioni è spenta.
 
-**Se hai un telefono Android:**
+**Il messaggio non arriva se:**
 
-- Vai in Impostazioni.
-- Cerca "Sicurezza ed emergenze".
-- Cerca "Avvisi wireless di emergenza".
-- Attiva "Avvisi estremi" e "Avvisi gravi".
-
-**Se hai un iPhone:**
-
-- Vai in Impostazioni.
-- Vai in Notifiche.
-- Scorri in basso fino a "Avvisi governativi".
-- Attiva "Avvisi pubblici di emergenza".
-
-**Se il messaggio non arriva:**
-
-- Aggiorna il sistema operativo del telefono.
-- Controlla che il telefono non sia in modalità aereo.
-- Spegni il telefono e riaccendilo.
-- I telefoni molto vecchi potrebbero non funzionare con IT-alert.
+- il telefono è spento o scarico;
+- il telefono è in modalità aereo;
+- il telefono non ha campo. Il solo wi-fi non basta.
 
 ## IT-alert e la tua privacy
 
-IT-alert non sa chi sei. Non conosce il tuo numero. Non salva nessun dato.
+IT-alert non sa chi sei. Non conosce il tuo numero. Non prende i tuoi dati personali.
 
-Il messaggio arriva a tutti i telefoni presenti in quella zona. Non importa chi sei.
+Il messaggio arriva ai telefoni in quella zona. Non importa chi sei.
 
 ## Attenzione ai messaggi falsi
 
-IT-alert non arriva mai come SMS normale o come email.
+IT-alert non arriva come SMS, come email o come messaggio in chat.
 
-Un messaggio vero di IT-alert:
+IT-alert è gratis. Non chiede:
 
-- Non chiede mai soldi.
-- Non chiede mai di scaricare una app.
-- Non chiede mai i tuoi dati personali.
+- soldi;
+- di scaricare una app;
+- i tuoi dati personali.
 
-Se ricevi un SMS o un'email che sembra IT-alert ma chiede queste cose, è una truffa. Non cliccare nessun link. Segnalalo alla Polizia Postale.
+Se ricevi un SMS o un'email che sembra IT-alert e chiede queste cose, è una truffa. Non cliccare nessun link. Segnalalo alla Polizia Postale.
 
 ## Per sapere di più
 

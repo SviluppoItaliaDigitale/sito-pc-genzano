@@ -195,7 +195,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <p><strong>IT-alert</strong> estas mesaĝo kiun la Ŝtato sendas al via telefono kiam estas granda danĝero.</p>
 
 <ul class="facile-elenco">
-<li>la telefono sonoras laŭte, ankaŭ se ĝi estas silenta;</li>
+<li>la telefono faras laŭtan sonon, malsaman ol kutime (se ĝi estas silenta, la sono eble ne aŭdiĝos);</li>
 <li>aperas mesaĝo sur la ekrano;</li>
 <li>legu la tutan mesaĝon trankvile;</li>
 <li>faru kion diras la mesaĝo.</li>

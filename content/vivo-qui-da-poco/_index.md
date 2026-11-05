@@ -35,7 +35,7 @@ Il quadro completo, con chi sorveglia ogni rischio e dove leggere i dati aggiorn
 - **La barra dell'allerta**, in cima alla homepage, e la pagina [Allerte meteo](/allerte-meteo/): il colore di oggi e di domani per la Zona F, preso dal bollettino della Regione Lazio.
 - **Il canale Telegram del Gruppo**, [@pcalfagenzano](https://t.me/pcalfagenzano): un messaggio quando cambia il livello di allerta o c'è un'emergenza in corso.
 - **Le notifiche del browser**, che puoi attivare dalla pagina [Allerte meteo](/allerte-meteo/).
-- **IT-alert**, il sistema nazionale di allarme pubblico: nelle emergenze gravi manda un messaggio ai telefoni della zona interessata. Non serve nessuna app, ma controlla che sul telefono siano attivi gli avvisi di emergenza.
+- **IT-alert**, il sistema nazionale di allarme pubblico: nelle emergenze gravi manda un messaggio ai telefoni della zona interessata. Non serve nessuna app e non devi cambiare le impostazioni: basta il telefono acceso e con campo.
 - **Le ordinanze del Comune**, per esempio scuole chiuse o divieti: sul sito del [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 ## Dove andare: la tua area di attesa

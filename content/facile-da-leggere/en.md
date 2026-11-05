@@ -195,7 +195,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <p><strong>IT-alert</strong> is a message the State sends to your phone when there is a big danger.</p>
 
 <ul class="facile-elenco">
-<li>the phone rings loud, also if it is silent;</li>
+<li>the phone makes a loud sound, different from usual (if it is on silent, the sound may not play);</li>
 <li>a message appears on the screen;</li>
 <li>read all the message calmly;</li>
 <li>do what the message says.</li>

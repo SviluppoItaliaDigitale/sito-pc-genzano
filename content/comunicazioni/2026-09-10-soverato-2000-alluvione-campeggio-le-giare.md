@@ -39,7 +39,7 @@ Soverato 2000 è memoria dolorosa ma essenziale. Tre lezioni:
 
 2. **Le persone con disabilità richiedono pianificazione esplicita.** Non basta dichiarare una struttura "accessibile". Bisogna prevedere come **evacuare** una persona in carrozzina, sorda, cieca, anziana fragile, in caso di emergenza. Ogni Piano di Protezione Civile comunale dovrebbe includere il **registro delle persone con esigenze specifiche** che potrebbero aver bisogno di assistenza dedicata.
 
-3. **Le piene improvvise notturne sono particolarmente letali.** Quando l'allerta arriva di notte, mentre la gente dorme, il margine di reazione è minimo. Per questo i sistemi di **allarme acustico** (sirene comunali, IT-alert sui telefoni) sono strumenti essenziali nelle zone a rischio idraulico noto.
+3. **Le piene improvvise notturne sono particolarmente letali.** Quando l'allerta arriva di notte, mentre la gente dorme, il margine di reazione è minimo. Per questo, nelle zone a rischio idraulico noto, servono avvisi che svegliano chi dorme, come le sirene comunali dove il piano di emergenza le prevede. IT-alert, il sistema di allarme pubblico sui telefoni, oggi non si usa per piogge e piene: per le precipitazioni intense la [direttiva del 12 febbraio 2026](https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/) prevede un'applicazione dedicata.
 
 ## A Genzano di Roma
 
@@ -61,3 +61,6 @@ Il nostro [Piano di Emergenza](/piano-emergenza/) considera questi aspetti.
 - [ISPRA — IdroGEO: mappe di pericolosità idrogeologica](https://idrogeo.isprambiente.it/)
 - [AISM — Associazione Italiana Sclerosi Multipla](https://www.aism.it/)
 - Voce Wikipedia: [Soverato](https://it.wikipedia.org/wiki/Soverato) (la sezione sulla storia ricorda l'alluvione del 2000)
+
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: il sistema oggi non si usa per piogge e piene.

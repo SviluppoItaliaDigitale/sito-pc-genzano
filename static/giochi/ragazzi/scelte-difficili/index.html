@@ -213,10 +213,10 @@
             ]
           },
           {
-            testo: 'L\'allerta IT-alert sul telefono dice di salire ai piani alti e attendere. Stai aspettando, ma su WhatsApp un compagno scrive che "i Vigili del Fuoco hanno detto di evacuare a piedi verso il municipio". Cosa fai?',
+            testo: 'L\'avviso ufficiale del Comune dice di salire ai piani alti e attendere. Stai aspettando, ma su WhatsApp un compagno scrive che "i Vigili del Fuoco hanno detto di evacuare a piedi verso il municipio". Cosa fai?',
             scelte: [
-              { txt: 'Esco subito, va seguito il consiglio dei Vigili', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Sui social girano <strong>fake news</strong>, soprattutto in emergenza. Le indicazioni ufficiali sono IT-alert, sito Comune, Sindaco. Mai uscire in alluvione senza conferma.' },
-              { txt: 'Resto al piano alto come dice IT-alert e cerco verifica sul sito del Comune', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Le fonti ufficiali</strong> (IT-alert, Comune, DPC) prevalgono. WhatsApp non è una fonte autorizzata. Verifica prima di agire.' },
+              { txt: 'Esco subito, va seguito il consiglio dei Vigili', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Sui social girano <strong>fake news</strong>, soprattutto in emergenza. Le indicazioni ufficiali arrivano da Comune, Sindaco e Protezione Civile. Mai uscire in alluvione senza conferma.' },
+              { txt: 'Resto al piano alto come dice l\'avviso del Comune e cerco conferma sui canali ufficiali', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Le fonti ufficiali</strong> (Comune, Protezione Civile, Prefettura) prevalgono. WhatsApp non è una fonte autorizzata. Verifica prima di agire.' },
               { txt: 'Inoltro il messaggio anche a tutti i miei contatti', pt: 0, esito: 'sbagliato', fb: 'CATASTROFICO. Hai amplificato una possibile fake news. <strong>Non condividere informazioni non verificate</strong> in emergenza: rischi di mandare persone in pericolo.' }
             ]
           }
@@ -434,7 +434,7 @@
       const debrief = document.getElementById('debrief');
       debrief.innerHTML =
         '<p><strong>Decisioni ottime</strong>: ' + ottimi + ' su ' + storia.length + '. <strong>Errori gravi</strong>: ' + sbagli + '.</p>' +
-        '<p>Le scelte migliori erano quelle che (1) <strong>privilegiano la sicurezza</strong> rispetto alla curiosità, (2) <strong>chiamano il 112</strong> con dati precisi anziché improvvisare, (3) <strong>seguono le fonti ufficiali</strong> (IT-alert, Comune) anziché WhatsApp, (4) <strong>aiutano comunicando</strong> ai professionisti anziché fare azioni rischiose in autonomia.</p>';
+        '<p>Le scelte migliori erano quelle che (1) <strong>privilegiano la sicurezza</strong> rispetto alla curiosità, (2) <strong>chiamano il 112</strong> con dati precisi anziché improvvisare, (3) <strong>seguono le fonti ufficiali</strong> (Comune, Protezione Civile) anziché WhatsApp, (4) <strong>aiutano comunicando</strong> ai professionisti anziché fare azioni rischiose in autonomia.</p>';
     }
   })();
   </script>
