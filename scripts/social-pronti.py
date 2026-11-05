@@ -272,7 +272,9 @@ def raggiungibile(slug: str, timeout: float = 15.0) -> bool:
 def cmd_mancanti(args) -> int:
     ora = S.adesso()
     scelti: dict[Path, dt.datetime] = {}
-    for p, _fm, d in S.articoli(args.ore, ora):
+    for p, fm, d in S.articoli(args.ore, ora):
+        if S.escluso_dai_social(fm):
+            continue  # `social: false`: l'articolo resta solo sul sito
         scelti[p] = d
     # File passati esplicitamente (articoli aggiunti da un push) e articoli
     # comparsi su main di recente (i retrodatati): valgono a qualunque età,
@@ -286,7 +288,8 @@ def cmd_mancanti(args) -> int:
         if not p.is_file() or p in scelti:
             continue
         fm = S.leggi_frontmatter(p)
-        if not fm or S.is_facile(p, fm) or not S.is_online(fm, ora):
+        if (not fm or S.is_facile(p, fm) or S.escluso_dai_social(fm)
+                or not S.is_online(fm, ora)):
             continue
         # Immagini tolte dalla pulizia periodica (scripts/pulisci-social-bozze.py):
         # l'articolo è uscito da mesi, i social non lo ripubblicano, quindi una
@@ -502,6 +505,8 @@ def cmd_controlla(args) -> int:
     for p, fm, d in S.articoli(args.ore, ora):
         visti.add(p.stem)
         slug = p.stem
+        if S.escluso_dai_social(fm):
+            continue  # `social: false`: nessun materiale da aspettarsi
         if not S.materiale_completo(slug):
             if ora - pronto_dal(p, d, bozze=False) >= tolleranza:
                 senza_materiale.append((slug, d))

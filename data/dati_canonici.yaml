@@ -1038,3 +1038,13 @@ dati:
         perche: "IT-alert non avvisa dei terremoti: non è uno strumento che «mancava» per un terremoto."
         contesto: '(?i)terremot|sism|Amatrice|Aquila'
         finestra: 300
+
+  - id: covid-stato-emergenza-2020
+    dato: "Che cosa accadde il 31 gennaio 2020"
+    valore: "il Consiglio dei ministri dichiarò lo stato di emergenza nazionale, per sei mesi, per il rischio sanitario legato al coronavirus; l'Organizzazione mondiale della sanità aveva dichiarato un'emergenza internazionale di salute pubblica, non una pandemia"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Coronavirus, dichiarato lo stato di emergenza» (31/01/2020)"
+        url: "https://www.protezionecivile.gov.it/it/notizia/coronavirus--dichiarato-lo-stato-di-emergenza/"
+    vietati:
+      - regex: '(?i)\bpandemi\w*[^.!?\n]{0,40}?\bdichiarat\w*[^.!?\n]{0,30}?\b31\s+gennaio\s+2020|\b31\s+gennaio\s+2020[^.!?\n]{0,60}?\bdichiar\w*\s+(?:la\s+|lo\s+stato\s+di\s+)?pandemi'
+        perche: "Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza nazionale: non fu dichiarata una pandemia."

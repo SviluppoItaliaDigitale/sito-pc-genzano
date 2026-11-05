@@ -78,6 +78,10 @@ def controlla(path: Path) -> tuple[list[str], list[str]]:
     fm, corpo = G.parse_frontmatter(testo)
     if fm.get("versione_facile_di") or path.name.endswith("-facile.md"):
         return [], ["versione facile: niente grafiche social"]
+    if _testo(fm.get("social")).strip().lower() in ("false", "no", "0"):
+        # Articolo solo per il sito (dal 05/11/2026): niente grafiche social,
+        # ma la cover del sito porta comunque il titolo e va controllata.
+        return controlla_cover(_testo(fm.get("title"))), ["social: false: niente grafiche social"]
     titolo = _testo(fm.get("title"))
     badge = _testo(fm.get("badge"))
     descrizione = _testo(fm.get("description"))
