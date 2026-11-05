@@ -692,6 +692,58 @@ def _allarme_livello():
                         "galleggiante chiude il circuito e il LED collegato alla pila si accende.")
 
 
+def _strato():
+    d = [
+        linea(14, 96, 146, 96, 2, GRIGIO),                                   # tavolo
+        rett(14, 66, 24, 30, riemp="#fff"),                                  # libri
+        linea(14, 76, 38, 76, 1.2), linea(14, 86, 38, 86, 1.2),
+        perc("M20,60 L140,92 L142,86 L22,54 Z", riemp="#c9a27c"),            # pongo
+        perc("M40,58.8 L142,86 L144,78 L42,50.8 Z", riemp=TERRA),                # sabbia scivolata in basso
+        perc("M22,54 L40,58.8", colore=ACQUA, sw=3),                         # acqua sul pongo
+        perc("M20,60 L20,48 M20,60 L140,92", sw=2),                          # bordo vaschetta
+        *[cerchio(x, y, 1.6, riemp=ACQUA, colore="none", sw=0) for x, y in ((44, 30), (52, 26), (60, 31))],
+        freccia(92, 58, 116, 64),
+        testo(80, 112, "sul pongo bagnato scivola"),
+    ]
+    return "".join(d), ("Una vaschetta inclinata su alcuni libri: sul fondo uno strato di pongo, "
+                        "sopra la sabbia. L'acqua spruzzata dall'alto si ferma sul pongo e lo "
+                        "strato di sabbia scivola verso il basso.")
+
+
+def _scatola():
+    d = [
+        perc("M16,40 L16,96 L144,96 L144,40", sw=2),                        # vaschetta
+        rett(18, 62, 124, 34, riemp=ACQUA, colore="none", sw=0),            # acqua alta
+        linea(18, 62, 142, 62, 1.5, BLU),
+        rett(78, 48, 36, 22, r=4, riemp="#fff"),                            # scatoletta che galleggia
+        cerchio(90, 63, 3, riemp="#e8b84a", colore=BLU, sw=1),
+        cerchio(102, 63, 3, riemp="#e8b84a", colore=BLU, sw=1),
+        freccia(26, 82, 62, 82),
+        testo(80, 112, "l'acqua solleva e trascina"),
+    ]
+    return "".join(d), ("Una vaschetta con acqua alta: la scatoletta chiusa, con due monete "
+                        "dentro, galleggia e l'acqua che si muove la spinge di lato.")
+
+
+def _spirale():
+    import math
+    pts = []
+    for i in range(61):
+        t = i / 60 * 2.5 * 2 * math.pi
+        r = 2 + 16 * i / 60
+        pts.append(f"{80 + r * math.cos(t):.1f},{40 + r * math.sin(t):.1f}")
+    d = [
+        linea(80, 8, 80, 38, 1.2),                                           # filo
+        perc("M" + " L".join(pts), sw=2.5),                                  # spirale
+        *[rett(44 + i * 12, 78, 9, 18, r=3, riemp="#fff") for i in range(6)],   # termosifone
+        linea(40, 96, 120, 96, 2),
+        *[perc(f"M{x},74 q-3,-5 0,-9 t0,-9", colore=CALDO, sw=2) for x in (64, 80, 96)],
+        testo(80, 112, "l'aria calda sale e la fa girare"),
+    ]
+    return "".join(d), ("Una spirale di carta appesa a un filo sopra un termosifone acceso: "
+                        "l'aria scaldata sale e fa girare la spirale.")
+
+
 # --------------------------------------------------------------- registro
 # Chiave = titolo ESATTO dell'esperimento in `genera-schede-esperimenti.py`.
 SCENE = {
@@ -702,10 +754,12 @@ SCENE = {
     "Il ritmo che fa oscillare una torre": _risonanza,
     "La spugna e il fango": _spugna,
     "Le radici che tengono la terra": _radici,
+    "Lo strato che scivola": _strato,
     "Città di asfalto, città di prato": _asfalto,
     "Quanta pioggia è caduta?": _pluviometro,
     "L'onda di maremoto": _maremoto,
     "Il tombino ostruito": _tombino,
+    "La scatola che galleggia": _scatola,
     "L'acqua risale da sola": _capillarita,
     "Il triangolo del fuoco": _triangolo_fuoco,
     "Il bosco di tessere": _bosco_tessere,
@@ -713,6 +767,7 @@ SCENE = {
     "Quale materiale conserva il calore?": _isolanti,
     "Il sale che scioglie il ghiaccio": _sale_ghiaccio,
     "La forza del vento (la manica a vento)": _manica_vento,
+    "La spirale che gira da sola": _spirale,
     "Quanto è lontano il temporale?": _distanza_temporale,
     "L'acqua che sparisce (la siccità)": _siccita,
     "Le goccioline vengono dall'aria": _condensa,
