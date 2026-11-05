@@ -45,6 +45,8 @@ Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni ou
 
 **🚫 VIETATO:** fermarsi a «PR aperta, attendo conferma per il merge»; chiedere «branch avanti di N commit, procedo?» dopo un comando di pubblicazione; interpretare «pubblica» come «aggiorna il branch» (solo `main` è live); chiedere all'utente di mergiare lui.
 
+🔴 **Ogni lavoro richiesto si pubblica, sempre e subito** (istruzione dell'utente del 05/11/2026: *«È scontato che quando ti faccio fare una cosa devi andare online!!!!! Ed è sempre di corsa lo devi fare»*). Una richiesta di lavoro sul sito o sulle sue automazioni (contenuti, script, workflow, routine, fonti, regole) vale già come «pubblica»: a controlli verdi PR + squash-merge + verifica del deploy, senza chiedere «faccio il merge?» e senza aspettare. Restano in PR non unita solo i casi che le regole riservano espressamente all'utente (notizie di stampa sull'attività del Gruppo, Categoria B delle routine).
+
 **Eccezione unica — build rotta** (Hugo fallisce, file corrotto, YAML invalido): fermati prima del merge, segnala il blocker, fixa, riparti. Build pulita e rules rispettate = vai diritto fino al merge.
 
 🔴 **Un merge per volta.** Se hai più modifiche pronte, raggruppale in **una sola PR**. Dall'08/10/2026 i deploy di contenuti si **accodano** invece di annullarsi (lo annullano solo le allerte e la pubblicazione del mattino): un merge ravvicinato non spezza più il caricamento, ma ogni merge resta un deploy in più. Dettagli, verifica dell'impronta di build e storia degli incidenti del 31/08 e dell'08/10/2026 in rule 10 § "Un merge per volta".
