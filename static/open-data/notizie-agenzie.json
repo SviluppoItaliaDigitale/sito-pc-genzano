@@ -5,11 +5,29 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-04T22:50:32+00:00",
+  "generato": "2026-11-05T03:17:21+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-04T23:11:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-11-04T23:02:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dall'Iran all'energia e all'Ucraina, cosa deve aspettarsi l'Europa dalla sconfitta di Trump alle midterm Usa",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-midterm-usa-trump-scenario-europa_7JscI1GaN1ttwmZXiR4VSy"
+  },
+  {
+   "data": "2026-11-04T23:02:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Doccia fredda, il segreto per ammalarsi meno... e che fa bene anche all'ambiente",
+   "url": "https://www.adnkronos.com/cronaca/doccia-fredda-salute-ammalarsi_6urt1pXhBI0ZXrvShNgZpC"
+  },
   {
    "data": "2026-11-04T22:42:00+00:00",
    "fonte": "ADNKRONOS",
@@ -17,7 +35,7 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-vance-scontro-guerra-iran-sconfitta-midterm_3vye4Iw9Eq6dWMyrY156kO"
   },
   {
-   "data": "2026-11-04T22:32:41+00:00",
+   "data": "2026-11-04T22:40:29+00:00",
    "fonte": "ANSA",
    "titolo": "Champions: il Como scrive la storia, il Lens annientato 9-1",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/11/04/ansachampions-il-como-scrive-la-storia-annienta-lens-9-1_e3aefd3a-6981-430b-a834-c8a95ad8671a.html"
@@ -171,24 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Garlasco: l'udienza per Sempio rischia di fermarsi, il nodo del condannato Stasi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/garlasco-ludienza-per-sempio-rischia-di-fermarsi-il-nodo-del-condannato-stasi_add6088f-b6cb-40a9-8415-ae3aef53cf07.html"
-  },
-  {
-   "data": "2026-11-04T18:45:46+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Parigi, Djokovic eliminato al secondo turno, addio alle Atp Finals dove si qualifica Fils",
-   "url": "https://www.adnkronos.com/sport/djokovic-atp-finals-masters-parigi-hijkata_PWrGszjRAOcHe9RiVu5Wa"
-  },
-  {
-   "data": "2026-11-04T18:44:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morire di lavoro, altre 5 vittime. Sono oltre 700 nel 2026",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/04/morire-di-lavoro-altre-5-vittime.-sono-oltre-700-nel-2026_3e1891b9-86e6-400b-9c46-e49c201d2e84.html"
-  },
-  {
-   "data": "2026-11-04T18:40:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cinema, il Senato approva la riforma all’unanimità. Giuli: \"Dedico questa giornata a Tinto Brass\"",
-   "url": "https://www.adnkronos.com/politica/riforma-cinema-dedica-giuli-tinto-brass_6Dmin8ugl4G24o5NPntNUe"
   }
  ]
 }
