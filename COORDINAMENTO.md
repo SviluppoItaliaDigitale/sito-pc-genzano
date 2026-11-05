@@ -155,6 +155,68 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
+- **2026-11-05 — da Claude a ChatGPT — Schede sui residuati bellici nel percorso «Oggetti sconosciuti»** (preparata da Claude, da avviare a mano in Codex Cloud; PR in apertura; ramo `chatgpt/schede-residuati-bellici-20261105`)
+  - **1. Obiettivo.**
+    Due schede stampabili nuove sui residuati bellici (ordigni della seconda guerra mondiale rimasti inesplosi), una per la primaria (8–11 anni) e una per la secondaria di primo grado (11–14 anni), inserite nel percorso «Oggetti sconosciuti» già pubblicato e collegate dai due kit per le scuole. Nessun annuncio: niente articoli, niente homepage, niente social, nessuna data sulla scheda.
+  - **2. File.**
+    Nuovi:
+    - static/formazione/schede-stampabili/oggetti-un-oggetto-della-guerra-primaria/index.html
+    - static/formazione/schede-stampabili/oggetti-residuati-bellici-secondaria1/index.html
+
+    Da modificare:
+    - content/formazione/kit-scuola-primaria.md (elenco del percorso «Oggetti sconosciuti», subito dopo «Una segnalazione chiara»)
+    - content/formazione/kit-scuola-secondaria-primo-grado.md (elenco del percorso «Oggetti sconosciuti», subito dopo «Segnali e supposizioni»)
+    - static/formazione/schede-stampabili/index.html (una scheda nel blocco «Oggetti sconosciuti — Primaria», una nel blocco «Oggetti sconosciuti — Secondaria I»)
+    - static/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/index.html (le due schede nell'elenco del percorso e le loro risposte)
+
+    Generati dagli script, mai a mano: static/formazione/schede-stampabili/pacchetti/*.html, gli ZIP dei kit prodotti da scripts/genera-pacchetti-kit.py, data/materiali_lezione.json, il collegamento «Pronto per la LIM» e l'URL canonico che gli script aggiungono alle due schede nuove.
+  - **3. Che cosa fare.**
+    1. Leggi per intero queste pagine del percorso e usale come modello: oggetti-una-segnalazione-chiara-primaria, oggetti-prima-di-raccogliere-primaria, oggetti-petardi-e-oggetti-metallici-secondaria1, oggetti-segnali-e-supposizioni-secondaria1, oggetti-sconosciuti-guida-adulti. Le schede nuove ne copiano struttura, fogli di stile, classi, intestazione, nota per l'adulto dentro la scheda, soluzione capovolta (classe `soluzione-capovolta`), riquadro delle fonti numerate e piè di pagina.
+    2. Stessi principi del percorso, scritti nella guida per gli adulti: ai ragazzi non si chiede di riconoscere un ordigno; si insegna a fermarsi, non toccare, non calciare, non spostare, non raccogliere, allontanarsi, ricordare il posto guardandolo da lontano e avvisare un adulto; l'adulto chiama il 112 da un luogo sicuro, dopo essersi allontanato e prima di usare telefono o radio; non esiste una distanza unica da insegnare; i disegni non rappresentano distanze di sicurezza; nessuna paura come leva; gli esempi sono inventati e lo si dice.
+    3. Scheda primaria «Un oggetto della guerra» (8–11 anni, circa 20 minuti):
+       - spiegazione breve: durante la seconda guerra mondiale in Italia caddero bombe e proiettili; alcuni non sono esplosi e possono trovarsi ancora nel terreno, nei boschi, nei campi, nei cantieri, nei laghi o in mare; anche dopo tanti anni possono essere pericolosi; li possono toccare solo gli artificieri delle Forze armate;
+       - racconto inventato: Flavio e Silvia passeggiano con il nonno Pasquale; nel terreno smosso vedono un oggetto di metallo arrugginito che non conoscono; Silvia vorrebbe portarlo a scuola, Flavio la ferma; si allontanano e il nonno, da lontano, chiama il 112 e spiega dove si trovano;
+       - attività 1: mettere in ordine 4–5 azioni;
+       - attività 2: vero o falso con il perché (per esempio «Se è arrugginito non è più pericoloso»: falso; «Lo porto ai Carabinieri per farlo vedere»: falso; «Lo dico subito a un adulto»: vero; «Mi avvicino per fotografarlo»: falso);
+       - attività 3: completare una segnalazione chiara (dove sei, che cosa vedi da lontano, chi è con te), senza avvicinarsi;
+       - nota per l'adulto e soluzione capovolta, come nelle altre schede.
+    4. Scheda secondaria I «Residuati bellici: che cosa fare se li trovi» (11–14 anni, circa 30 minuti):
+       - che cosa sono i residuati bellici e perché si trovano ancora oggi (scavi e lavori, terreni smossi, acque che si abbassano, mare);
+       - chi fa che cosa: chi trova si allontana e chiama il 112; intervengono le forze dell'ordine; la bonifica e il disinnesco li fanno gli artificieri delle Forze armate (in mare la Marina Militare); per gli ordigni più grandi, durante il disinnesco, le autorità possono disporre l'evacuazione dell'area. Scrivi solo i passaggi confermati dalle fonti del punto 5;
+       - cinque idee sbagliate da smontare, ognuna con il perché: «È vecchio, non esplode più»; «Lo sposto in un posto sicuro»; «Lo porto io in caserma»; «Faccio un video da vicino»; «Se è piccolo non è pericoloso»;
+       - attività: una notizia inventata (dichiarata inventata) di un ritrovamento in un cantiere, da analizzare (chi ha fatto bene, che cosa cambieresti); una segnalazione chiara al 112 (dove, che cosa si vede da lontano, se ci sono persone vicine), senza avvicinarsi;
+       - nota per l'adulto e soluzione capovolta.
+    5. Fonti: ogni fatto delle due schede ha una fonte primaria che hai letto, citata nel riquadro numerato delle fonti con ente, titolo e link: Ministero della Difesa e Forze armate (difesa.it, esercito.difesa.it, marina.difesa.it) per chi fa bonifica e disinnesco; Normattiva, solo sul testo vigente, se citi una norma (per esempio il Codice dell'ordinamento militare, decreto legislativo 15 marzo 2010, n. 66, per la bonifica da ordigni bellici); siti delle Prefetture (prefettura.it) per le evacuazioni durante i disinneschi; Treccani per i fatti storici. Per il 112 usa la stessa fonte della guida per gli adulti. Ciò che non trovi confermato non si scrive, e lo elenchi nel riassunto. Nessuna cifra senza fonte.
+    6. Nessuna data nelle due schede: niente «aggiornata al», «fonti consultate il», «nuovo» (istruzione di Alessandro: queste schede non si datano oggi). Le date delle verifiche scrivile solo nel riassunto finale.
+    7. Kit: aggiungi una voce per scheda negli elenchi del percorso, nello stesso formato delle voci vicine: `- [Titolo](/formazione/schede-stampabili/<cartella>/) — <età>. <obiettivo in una frase>.`
+    8. Indice delle schede: una scheda per blocco, copiando il markup delle schede vicine (icona Bootstrap Icons, fascia, durata, descrizione che finisce con «Con nota per l'adulto e soluzione capovolta.», pulsante «Apri e stampa» con il suo aria-label).
+    9. Guida per gli adulti: aggiungi le due schede dove la guida elenca le schede del percorso e le loro risposte nella sezione delle risposte, con la stessa numerazione progressiva e lo stesso stile.
+    10. Rigenera i file generati: `python3 scripts/genera-pacchetti-schede.py`, `python3 scripts/genera-pacchetti-kit.py`, `python3 scripts/genera-materiali-lezione.py`, `python3 scripts/segno-lim-statiche.py`, `python3 scripts/aggiungi-canonical-statiche.py` (prima leggi `--help` di ciascuno).
+  - **4. Vincoli.**
+    - Leggi prima AGENTS.md e, nella cartella delle regole del repository, lim-scuole.md, 02-content-design-pa.md (§ «Personaggi delle storie per bambini») e 09-regole-contenuti-qualita.md (§ 15-ter, stampa).
+    - Italiano corretto e semplice, frasi brevi, voce attiva, del tu ai ragazzi; nessun divieto o garanzia assoluti senza scenario.
+    - Personaggi: protagonista Flavio; altri nomi solo fra Silvia, Maria, Elio, Pasquale, Lina, Alessandro, Christian, Marco.
+    - Stampa A4: ogni scheda senza fogli bianchi né fogli quasi vuoti con le tre serie di caratteri del controllo; se serve, scala di stampa della sola scheda (`html { font-size: N% }`), al massimo il 12% in meno, poi si stringono gli spazi.
+    - Niente JavaScript nuovo. Licenza come le altre schede (CC BY-NC-SA 4.0).
+    - Nessun nome di strumenti o servizi automatici nei file, nei metadati e nei messaggi di commit. Prima del primo commit: `bash scripts/imposta-identita-git.sh` (autore Alessandro Cuollo).
+    - Uno strumento che manca si installa (`apt-get update` e `apt-get install`, poi pip o npm); se non ci riesci, scrivi nel riassunto che cosa hai provato e con quale errore.
+  - **5. Controlli.**
+    Tutti con esito senza errori:
+    - `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (nessun ERROR nel log)
+    - `python3 scripts/check-refusi.py` sui file del punto 2
+    - `python3 scripts/check-parita-schede.py`
+    - `python3 scripts/genera-materiali-lezione.py --check`
+    - `python3 scripts/segno-lim-statiche.py --check`
+    - `python3 scripts/aggiungi-canonical-statiche.py --check --sitemap public/sitemap.xml`
+    - `python3 scripts/check-qualita-pagine.py public`
+    - `python3 scripts/check-fogli-stampa.py --da-git origin/main`
+    - `python3 scripts/check-lim.py --da-git origin/main`
+    - `python3 scripts/check-dati-canonici.py` e `python3 scripts/cerca-incongruenze.py --da-git origin/main`
+  - **6. Consegna.**
+    Solo i file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti. Alla fine un riassunto breve: fatto / non fatto / perché, le fonti lette con la data della lettura, i controlli eseguiti con l'esito. `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla, non segnare pronta nessuna pull request, non toccare file fuori dall'elenco del punto 2, non scrivere articoli né pagine nuove, non inventare dati: se manca qualcosa, scrivilo nel riassunto finale.
+
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
   - **Quando**: Alessandro ti manda l'export del gestionale interventi (file `.xlsx`, di solito `gcpc-genzano-di-roma_global_reports_*.xlsx`) e scrive «aggiorna gli interventi» o simile. Lavora con **Codex** (serve eseguire gli script): il file va allegato al task.
   - **Mai nel repository il file `.xlsx`**: contiene i nomi dei volontari. Tienilo fuori dalla cartella del repository (per esempio `/tmp/`) e non fare `git add -A` senza guardare.
