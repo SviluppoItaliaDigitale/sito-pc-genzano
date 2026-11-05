@@ -64,7 +64,7 @@ Si chiamano **NaTech** gli incidenti tecnologici innescati da eventi naturali: t
 
 Per questo il **D.Lgs. 105/2015** e la norma tecnica **UNI/TS 11816-1:2021** (con il contributo dell'ISPRA) impongono di valutare anche il rischio combinato natura-industria.
 
-Il ponte con casa nostra è onesto: nei Castelli il fattore naturale rilevante sarebbe il **sisma** — il Lazio è a sismicità media — su depositi o serbatoi di GPL, **non** grandi impianti chimici.
+Il ponte con casa nostra è onesto: nei Castelli il fattore naturale rilevante sarebbe il **sisma** — i Castelli Romani sono in zona sismica 2B — su depositi o serbatoi di GPL, **non** grandi impianti chimici.
 {{< /dossier-scena >}}
 
 {{< dossier-hotspot id="mappa" image="/images/dossier/industriale-mappa-italia.webp" alt="Mappa fisica dell'Italia con rilievi in marrone e pianure in verde, su cui sono evidenziati alcuni punti del rischio industriale" titolo="La mappa invisibile del rischio" testo="Il rischio non è nascosto: è mappato. Tocca i punti per scoprire dove pesano gli stabilimenti a rischio — e perché i Castelli Romani sono un caso diverso." credito="Mappa: Eric Gaba (Sting) e NordNordWest · CC BY-SA 3.0" >}}

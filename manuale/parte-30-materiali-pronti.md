@@ -6,6 +6,8 @@ Da maggio 2026 il sito ha una sezione `/risorse-pronte/` che raccoglie **materia
 
 Questa parte del manuale spiega il workflow completo, dall'apertura di NotebookLM alla pubblicazione live sul sito.
 
+> **Stato al 5 novembre 2026.** Il podcast è sospeso: la puntata su IT-alert conteneva informazioni non corrette, e le puntate sono state tolte tutte dal sito in attesa di rifarle (indirizzi che rimandano a `/podcast/`, file audio scollegati ma non cancellati). Infografica e presentazioni IT-alert sono state tolte da `/risorse-pronte/`. Da quel giorno nessun materiale si pubblica senza la verifica descritta in `.claude/agents/pc-materiali-publisher.md`, § «Niente si pubblica senza verifica»: trascrizione completa delle puntate nella loro pagina, ogni dato con la sua fonte, nessun segno dello strumento.
+
 ---
 
 ## 30.1 Cosa contiene la pagina `/risorse-pronte/`

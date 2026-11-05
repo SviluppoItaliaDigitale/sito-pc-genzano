@@ -6,7 +6,7 @@ tts: true
 weight: 13
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
-howto_prima: "Sappi che in Italia non ci sono centrali nucleari attive: gli scenari riguardano incidenti a impianti esteri, sorgenti radioattive usate in medicina e industria, e i loro trasporti. Non comprare né assumere iodio di tua iniziativa: la iodoprofilassi è utile solo per scenari specifici, su indicazione ufficiale e per le categorie indicate. Tieni in casa una radio a pile e scorte per qualche giorno. Non disattivare IT-alert sul telefono."
+howto_prima: "Sappi che in Italia non ci sono centrali nucleari attive: gli scenari riguardano incidenti a impianti esteri, sorgenti radioattive usate in medicina e industria, e i loro trasporti. Non comprare né assumere iodio di tua iniziativa: la iodoprofilassi è utile solo per scenari specifici, su indicazione ufficiale e per le categorie indicate. Tieni in casa una radio a pile e scorte per qualche giorno. IT-alert arriva da solo sul telefono: non serve attivarlo."
 howto_durante: "Segui le indicazioni delle autorità: solo loro conoscono lo scenario reale. Se viene disposto il riparo al chiuso, resta in casa, chiudi porte e finestre, spegni la ventilazione e mettiti possibilmente in un locale interno. Se eri all'aperto, togli i vestiti esterni, chiudili in un sacchetto e fai una doccia. Assumi iodio stabile solo se e quando le autorità sanitarie lo dispongono. Ascolta i canali ufficiali e non diffondere voci non verificate."
 howto_dopo: "Resta al riparo finché le autorità non comunicano il cessato allarme. Segui le indicazioni ufficiali su acqua, alimenti e prodotti dell'orto: eventuali limitazioni vengono comunicate da ISS e autorità sanitarie. Non raccogliere né toccare oggetti metallici sconosciuti trovati per strada o in campagna: se sospetti una sorgente radioattiva abbandonata, allontanati e chiama il 112."
 ---
@@ -32,7 +32,7 @@ Per la spiegazione del fenomeno e delle autorità competenti leggi la pagina mat
 
 - **Non comprare né assumere iodio di tua iniziativa**: la iodoprofilassi protegge solo la tiroide, solo per alcuni scenari, e ha senso solo se disposta dalle autorità sanitarie, per le categorie indicate (soprattutto bambini e giovani). Assunta a caso può fare male.
 - Tieni in casa una **radio a pile** e le scorte del [kit di emergenza](/rischi-prevenzione/kit-emergenza/): le regole del riparo al chiuso sono le stesse di altri rischi.
-- **Non disattivare IT-alert**: è il canale con cui le autorità raggiungono in pochi secondi i telefoni dell'area interessata.
+- **Conosci IT-alert**: è il canale con cui le autorità raggiungono in pochi secondi i telefoni dell'area interessata. Non serve attivarlo: il messaggio arriva da solo.
 - Ricorda i tre principi della radioprotezione: **distanza** dalla sorgente, **tempo** di esposizione ridotto, **schermatura** (i muri di casa schermano).
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE {#cosa-fare-durante}

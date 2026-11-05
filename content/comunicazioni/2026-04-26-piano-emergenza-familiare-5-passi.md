@@ -24,7 +24,7 @@ Il primo passo è sapere a cosa siamo esposti. Non tutti i comuni hanno gli stes
 
 - **Rischio idrogeologico** (frane, allagamenti dopo piogge intense)
 - **Rischio incendi boschivi** (specialmente in estate)
-- **Rischio sismico** (il Lazio è una regione a sismicità media)
+- **Rischio sismico** (Genzano è in zona sismica 2B)
 - **Ondate di calore** (sempre più frequenti e lunghe)
 - **Blackout e interruzioni prolungate di servizi**
 

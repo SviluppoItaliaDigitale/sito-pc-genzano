@@ -332,7 +332,7 @@ Ogni territorio ha i suoi rischi specifici. Genzano di Roma si trova sui **Colli
 
 | Rischio | Descrizione per Genzano |
 |---|---|
-| **Sismico** | Il Lazio ha una sismicità media. Le scosse si possono avvertire, anche se i terremoti forti sono rari nella nostra zona |
+| **Sismico** | Genzano è in zona sismica 2. Le scosse si possono avvertire, anche se i terremoti forti sono rari nella nostra zona |
 | **Idrogeologico** | I pendii collinari e i fossi possono essere soggetti a frane e allagamenti localizzati in caso di piogge intense |
 | **Incendio boschivo** | La vegetazione del Parco dei Castelli Romani è esposta al rischio incendi, soprattutto in estate |
 | **Meteorologico** | Temporali intensi, grandinate, vento forte e ondate di calore |
@@ -530,7 +530,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**La mia città sicura (Agenda 2030)**](/formazione/schede-stampabili/citta-sicura-agenda2030-primaria/) — l'obiettivo 11 spiegato ai bambini: caccia agli indizi di sicurezza nel quartiere, abbinamento fra gesti e obiettivi, la mia idea per una città più sicura. *(ed. civica, geografia, classi 3ª-5ª)*
 - 👉 [**La Mappa del Mio Quartiere**](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) — mappa di quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza) da etichettare + domande di comprensione. *(territorio, classi 2ª-4ª)*
 - 👉 [**Leggi e Rispondi — Flavio e il Pompiere**](/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/) — mini-racconto di una piccola emergenza domestica + domande di comprensione (chi, cosa, dove, numero, scelta multipla). *(comprensione, classi 1ª-2ª)*
-- 👉 [**Riordina le Frasi — Una Giornata di Allerta**](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) — 6 frasi sulla cronologia di un'allerta arancione (bollettino, COC, IT-alert, volontari) da numerare. *(comprensione, classi 2ª-3ª)*
+- 👉 [**Riordina le Frasi — Una Giornata di Allerta**](/formazione/schede-stampabili/riordina-frasi-allerta-primaria/) — 6 frasi sulla cronologia di un'allerta arancione (bollettino, COC, volontari, avviso del Comune) da numerare. *(comprensione, classi 2ª-3ª)*
 
 **Schede di approfondimento per classi 3ª-5ª** — storia, matematica, geografia, ed. civica, comprensione testo, compito di realtà:
 

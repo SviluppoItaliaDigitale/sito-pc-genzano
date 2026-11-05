@@ -23,7 +23,7 @@
     durata: 'Circa 10 minuti',
     intro: [
       'Abiti a Genzano con tuo figlio Flavio e la nonna Lina, che cammina con il deambulatore.',
-      'Genzano è in zona sismica 2B, a sismicità media: qui la terra trema soprattutto con sciami di scosse, di solito piccole ma a volte avvertite.',
+      'Genzano è in zona sismica 2B, dove forti terremoti sono possibili: qui la terra trema soprattutto con sciami di scosse, di solito piccole ma a volte avvertite.',
       'Il terremoto non si può prevedere: non esistono segnali premonitori affidabili. Ci si prepara prima. È domenica pomeriggio e hai un po\' di tempo per la casa.'
     ],
     allerta: {

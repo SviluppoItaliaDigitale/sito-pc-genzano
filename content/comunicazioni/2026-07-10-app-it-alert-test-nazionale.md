@@ -14,148 +14,107 @@ versione_facile: "2026-07-10-app-it-alert-test-nazionale-facile"
 draft: false
 ---
 
-**IT-alert** è il sistema italiano di allarme pubblico che invia messaggi di allerta agli smartphone presenti in una zona specifica. Dopo i test regionali del 2022-2023, è **operativo dal 13 febbraio 2024** presso il **Dipartimento della Protezione Civile**. I **test** regionali e nazionali servono a collaudare il sistema e ad abituare la popolazione al suono e al contenuto dei messaggi.
+**IT-alert** è il sistema italiano di allarme pubblico. Invia messaggi ai telefoni cellulari presenti in un'area colpita da una grave emergenza, imminente o in corso. È **operativo dal 13 febbraio 2024**, dopo le prove del 2022 e i test del 2023 e dell'inizio del 2024. I **test** continuano: servono a collaudare il sistema e ad abituare le persone al suono e al messaggio.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto questo articolo sulle pagine ufficiali di IT-alert. La prima versione spiegava come attivare IT-alert dalle impostazioni del telefono, che non serve, e diceva che i telefoni più vecchi potrebbero non riceverlo, mentre i test del Dipartimento dicono il contrario. Riportava anche orari, frequenza e testo dei test e alcuni sviluppi futuri che le fonti ufficiali non confermano.
 
 ## Come funziona IT-alert
 
-Il sistema si basa sulla tecnologia **cell broadcast**:
-- **Non** è un'app da scaricare.
-- **Non** invia SMS nel senso tradizionale.
-- **Non** usa il numero di telefono (non c'è rubrica).
-- **Usa** le celle della rete mobile.
-- **Raggiunge** tutti gli smartphone nella zona.
-- **Funziona** senza internet.
+Il sistema usa il **cell broadcast**:
 
-Quando un messaggio viene inviato, **tutti** gli smartphone presenti sotto le celle selezionate ricevono la notifica con:
-- **Suono** forte e distintivo.
-- **Vibrazione** intensa.
-- **Messaggio** testuale visualizzato a schermo pieno.
-- **Non** si può silenziare preventivamente.
+- **non** è un'app da scaricare;
+- **non** è un SMS;
+- **non** conosce il numero di telefono e non acquisisce dati personali;
+- **usa** un gruppo di celle della rete mobile, scelte per coprire il più possibile l'area interessata;
+- **raggiunge** i telefoni collegati a quelle celle, anche quelli di vecchia generazione;
+- **non** ha bisogno di internet, ma serve il campo della rete mobile: con il solo wi-fi non arriva.
+
+Quando arriva, il telefono emette un **suono ben riconoscibile** e mostra il messaggio, preceduto dall'indicazione «IT-alert». La notifica blocca per un momento le altre funzioni: per tornare all'uso normale bisogna toccarla e confermare. In modalità silenziosa il messaggio arriva lo stesso, ma il suono specifico potrebbe non partire.
 
 ## Le tipologie di eventi
 
-IT-alert è attivato per:
-- **maremoto** generato da un sisma sottomarino;
-- **crollo** di grandi dighe;
-- **attività vulcanica** (in particolare Campi Flegrei e Vesuvio);
-- **incidente nucleare**;
-- **incidente industriale rilevante** (direttiva Seveso III).
+Dal 13 febbraio 2024 IT-alert è operativo per:
 
-Non viene usato per ondate di calore o allerte meteo ordinarie. Per queste ci sono altri canali (bollettini, sito del Comune, altoparlanti).
+- **collasso** di grandi dighe;
+- **attività vulcanica** ai Campi Flegrei, al Vesuvio e all'isola di Vulcano;
+- **incidenti nucleari** o emergenze radiologiche;
+- **incidenti rilevanti** negli stabilimenti industriali regolati dal decreto legislativo 105 del 2015.
+
+Per il **maremoto** e per lo **Stromboli** la sperimentazione continua fino al 31 dicembre 2026. Per le **precipitazioni intense** la [direttiva del Ministro del 12 febbraio 2026](https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/) prevede, al posto di IT-alert, un'applicazione dedicata, da rendere operativa entro dodici mesi.
+
+IT-alert non si usa per ondate di calore o allerte meteo. Per queste ci sono altri canali: i bollettini, i siti della Regione e del Comune.
 
 ## I test periodici
 
-Il DPC effettua test regionali e nazionali:
-- **Tipicamente** una volta al semestre per regione.
-- **In orari** diurni (10-18).
-- **In giorni** feriali (per non disturbare weekend).
-- **Annunciati** con settimane di anticipo.
+Il Dipartimento fa test periodici e li annuncia sul [sito ufficiale di IT-alert](https://www.it-alert.gov.it/it/news/), con giorno e area. Possono riguardare intere regioni o zone più piccole, per un rischio specifico: per esempio una diga o uno stabilimento industriale.
 
 Durante un test:
-1. **Squillo** degli smartphone presenti in regione.
-2. **Messaggio** di test ("IT-alert — TEST — questo è un messaggio di test").
-3. **Richiesta** di compilare un questionario (facoltativo) per valutare la ricezione.
 
-I test **non sono** allerta reali: non bisogna fare nulla se non leggere il messaggio.
+1. arriva un messaggio che comincia con la parola **«TEST»**;
+2. non c'è nessuna emergenza e non devi fare nulla;
+3. se eri nell'area e il messaggio non ti è arrivato, puoi segnalarlo con il questionario sul sito di IT-alert, entro 24 ore dall'inizio del test.
 
-## Quando riceverai un messaggio vero
+## Quando arriva un messaggio vero
 
-In un messaggio reale:
-- **Il titolo** descrive il tipo di rischio (es. "Rischio maremoto").
-- **Il testo** spiega cosa fare immediatamente.
-- **Link** al sito di riferimento per informazioni aggiornate.
-- **Istruzioni** di autoprotezione.
+Il messaggio indica il tipo di evento e le azioni da compiere. Le indicazioni operative del Dipartimento prevedono il testo in italiano e in inglese, per informare gli stranieri presenti in Italia.
 
 ## Cosa fare al ricevimento
 
-In caso di **test**:
-- **Leggi** il messaggio.
-- **Se richiesto**, compila il questionario sul sito.
-- **Non c'è** alcuna azione da intraprendere.
+In caso di **test**: leggi il messaggio. Non c'è nulla da fare.
 
-In caso di **messaggio reale**:
-1. **Leggi attentamente** il testo.
-2. **Segui** le istruzioni fornite.
-3. **Controlla fonti ufficiali** (sito DPC, Comune).
-4. **Non diffondere** informazioni non verificate.
-5. **Metti in atto** i comportamenti di autoprotezione.
+In caso di **messaggio vero**:
 
-## Come attivare la ricezione
+1. **leggi con attenzione** il testo;
+2. **segui** le indicazioni delle autorità di protezione civile;
+3. **controlla** le fonti ufficiali: Dipartimento, Regione, Comune;
+4. **non diffondere** informazioni non verificate;
+5. in caso di pericolo immediato **chiama il 112**.
 
-IT-alert è **automaticamente attivo** sulla maggior parte degli smartphone moderni. Per verificare:
+## Il telefono va impostato?
 
-### Android
-- **Impostazioni** → Sicurezza ed emergenze → Avvisi wireless di emergenza.
-- **Attiva** "Avvisi estremi", "Avvisi gravi", "Allerta pubblica".
-- **Verifica** che "IT-alert" sia riconosciuto.
-
-### iPhone
-- **Impostazioni** → Notifiche → **Avvisi governativi** (scroll in basso).
-- **Attiva**: "Avvisi pubblici di emergenza".
-- Sistema riconosciuto automaticamente come "IT-alert" nelle versioni recenti di iOS.
+No. Per ricevere i messaggi, anche quelli di test, non devi fare nulla sul telefono. Il Dipartimento spiega che i messaggi arrivano anche se la voce IT-alert, tra gli avvisi di emergenza, è disattivata: per l'invio si usa il livello più alto previsto.
 
 ### Se non lo ricevi
-- **Aggiorna** il sistema operativo.
-- **Verifica** che il telefono non sia in modalità **Aereo**.
-- **Spegni/riaccendi**.
-- Telefoni più vecchi di 5-6 anni potrebbero non supportare il protocollo.
+
+Il messaggio non arriva se il telefono è spento, scarico, in modalità aereo o senza campo della rete mobile. Nessun sistema raggiunge tutti con certezza: un telefono nell'area può non riceverlo, se la sua cella non è tra quelle attivate. Per questo IT-alert si affianca agli altri canali di informazione.
 
 ## Privacy e IT-alert
 
-IT-alert **non raccoglie** informazioni:
-- **Non** ha rubrica di numeri.
-- **Non** sa chi è destinatario.
-- **Non** salva dati personali.
-- **Non** traccia persone.
+IT-alert va in una sola direzione, dalla rete ai telefoni:
 
-Il messaggio raggiunge **chiunque** sia fisicamente in quell'area, indipendentemente da chi sia.
+- **non** conosce il numero di chi riceve;
+- **non** acquisisce dati personali;
+- **non** riceve risposte dai telefoni.
 
-## Test e esercitazioni nel Lazio
+Il messaggio raggiunge chiunque si trovi nell'area. Il Garante per la protezione dei dati personali ha dato parere favorevole al sistema.
 
-Il Lazio ha già partecipato a test nazionali. Nei prossimi mesi potrebbero esserci:
-- **Test nazionali** per aggiornamenti di sistema.
-- **Test territoriali** per aree specifiche (es. vulcaniche).
-- **Esercitazioni** coordinate con eventi meteo estremi.
+## Test nel Lazio
 
-Segui i canali ufficiali per annunci:
-- **Sito IT-alert.gov.it**.
-- **Regione Lazio — PC**.
-- **Comune di Genzano di Roma**.
+Nel Lazio il test regionale si è svolto il 27 settembre 2023. Il 6 febbraio 2024 un test ha riguardato il rischio di collasso della diga di Collemezzo, nei comuni di Ceprano, Arce e San Giovanni Incarico, in provincia di Frosinone. Il 3 dicembre 2024 un altro test ha riguardato lo stabilimento A.C.R.A.F. di Aprilia, in provincia di Latina.
+
+I prossimi test si annunciano sul sito ufficiale di IT-alert e sui canali della Regione Lazio e del Comune.
 
 ## Se ricevi un messaggio sospetto
 
-Attenzione a **messaggi falsi** che imitano IT-alert:
-- Un messaggio IT-alert arriva **automaticamente**, non è un SMS né un'email.
-- **Non** contiene mai link di pagamento, download di app, trasferimenti bancari.
-- **Non** chiede mai dati personali.
+Attenzione ai **messaggi falsi** che imitano IT-alert:
 
-Se ricevi un SMS o email che sembra IT-alert ma chiede azioni insolite, **è phishing**. Non cliccare, segnalalo alla Polizia Postale.
+- un messaggio IT-alert arriva come avviso di emergenza, non come SMS, email o messaggio in chat;
+- IT-alert è gratuito e non chiede dati personali, password o pagamenti.
+
+Se un SMS o un'email che sembra IT-alert ti chiede dati, soldi o di scaricare qualcosa, **è phishing**. Non cliccare e segnalalo alla Polizia Postale.
 
 ## Il ruolo di IT-alert nel sistema
 
-IT-alert è uno degli strumenti di comunicazione del DPC, insieme a:
-- **Sito** e social ufficiali.
-- **Conferenze stampa**.
-- **Notizie** nei telegiornali.
-- **Altoparlanti** comunali (in alcuni scenari).
-- **Volantinaggio** nelle aree colpite.
-
-**Nessun canale** è sufficiente da solo: IT-alert integra, non sostituisce.
-
-## Le frontiere dell'allertamento
-
-Il sistema sta evolvendo verso:
-- **avvisi** su frane imminenti grazie a sensori sul territorio;
-- **integrazione** con le app ufficiali di Protezione Civile;
-- **messaggi** multilingue nelle aree turistiche;
-- **coordinamento** con i sistemi europei (EU-Alert).
+IT-alert non è l'unico sistema di informazione: si affianca a quelli già usati, anche a livello locale, come i siti e i social istituzionali, radio e televisione, gli avvisi del Comune. E da solo non basta: serve sapere prima che cosa fare, con il [piano di emergenza familiare](/piano-familiare/).
 
 ## Per approfondire
 
-- Articolo: [IT-alert: come funziona](/comunicazioni/2026-06-11-it-alert-come-funziona-reagire/)
-- Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
-- [IT-alert — sito ufficiale](https://www.it-alert.gov.it/)
-- [DPC — Allertamento](https://www.protezionecivile.gov.it/)
+- Articolo: [IT-alert: storia, tecnologia, accessibilità e cinque falsi miti smontati](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/)
+- Articolo: [IT-alert: come funziona e come reagire a un messaggio](/comunicazioni/2026-06-11-it-alert-come-funziona-reagire/)
+- Pagina: [Allerte meteo](/allerte-meteo/)
+- [IT-alert — Sperimentazione e test](https://www.it-alert.gov.it/it/sperimentazione/)
+- [IT-alert — Domande frequenti](https://www.it-alert.gov.it/it/faq/)
+- [DPC — Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Polizia Postale](https://www.commissariatodips.it/)
 
-Un sistema di allerta funzionante vale quanto la preparazione delle persone che lo ricevono. IT-alert funziona bene se ne conosciamo il ruolo.
+Un sistema di allerta funziona quanto la preparazione delle persone che lo ricevono.

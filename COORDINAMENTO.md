@@ -12,7 +12,7 @@ Valido dall'11/10/2026 in tutti i repository di Alessandro: `sito-pc-genzano`, `
 
 Claude (Claude Code) e ChatGPT (chat con connettore GitHub, Codex) lavorano sugli stessi repository. La bacheca è il posto dove si passano lavoro, istruzioni e avvisi, così Alessandro non deve copiare testi da una chat all'altra e il lavoro continua anche quando una delle due non è disponibile (per esempio quando Claude ha finito i crediti).
 
-**Anche Gemini (dall'11/10/2026).** Gemini lavora sui repository con **Jules** (jules.google, legge da solo `AGENTS.md`) o con Gemini CLI. Dove questo protocollo dice «ChatGPT», vale allo stesso modo per Gemini: stesse regole, stessa autonomia, stesse eccezioni. Differenze: i suoi rami si chiamano `gemini/<argomento>-AAAAMMGG`; una richiesta indirizzata a «ChatGPT» la prende solo ChatGPT, una indirizzata a «Gemini» solo Gemini, una indirizzata a «chi è disponibile» la prende la prima che apre la bacheca, che scrive subito accanto «presa da …» con una PR in bozza, così l'altra non la riprende. Le revisioni automatiche fatte da Codex o da Gemini sulle PR sono pareri da verificare, non ordini.
+**Anche Gemini (dall'11/10/2026).** Gemini lavora sui repository (Jules chiude: sola lettura dall'11/11/2026, spento il 31/12/2026, avviso letto sul sito il 04/11/2026; non si usa più), sul PC con **Antigravity CLI** (`agy`, che dal 18/06/2026 sostituisce Gemini CLI: legge `AGENTS.md`, le skill di `.agents/skills/` e quelle di Alessandro in `~/.gemini/skills/`; si prepara con `scripts/installa-gemini-pc.sh` di `assistente-personale`, dal 04/11/2026). Dove questo protocollo dice «ChatGPT», vale allo stesso modo per Gemini: stesse regole, stessa autonomia, stesse eccezioni. Differenze: i suoi rami si chiamano `gemini/<argomento>-AAAAMMGG`; una richiesta indirizzata a «ChatGPT» la prende solo ChatGPT, una indirizzata a «Gemini» solo Gemini, una indirizzata a «chi è disponibile» la prende la prima che apre la bacheca, che scrive subito accanto «presa da …» con una PR in bozza, così l'altra non la riprende. Le revisioni automatiche fatte da Codex o da Gemini sulle PR sono pareri da verificare, non ordini.
 
 ### Chi dà le istruzioni
 
@@ -98,7 +98,7 @@ Se un lavoro non si può passare (sotto, «Che cosa non si passa»), o non si pu
 
 **Che cosa non si passa.** Allerte ed emergenze vere, articoli nuovi che devono passare dai gate editoriali, pagine legali, lavori che richiedono credenziali, spese o invii a persone: restano a Claude o ad Alessandro, come in «Quando ChatGPT non unisce e si ferma».
 
-**Gemini.** Lo stesso schema varrà per Jules (etichetta `jules` su una issue) quando Alessandro avrà autorizzato l'app sui repository; fino ad allora i lavori che sarebbero andati a Gemini li fa Claude o passano a ChatGPT.
+**Gemini.** Jules chiude il 31/12/2026 e non si usa. Gemini lavora con Antigravity: sul PC con `agy`; dal cellulare comandando il PC acceso (Remote Control, antigravity.google.com), e a PC spento con i Remote Agents di Antigravity, quando Google li avrà attivati per l'account di Alessandro (distribuzione graduale, non ancora attivi il 04/11/2026). Fino ad allora, a PC spento, i lavori che sarebbero andati a Gemini li fa Claude o passano a ChatGPT.
 
 <!-- PROTOCOLLO-COMUNE:FINE -->
 
@@ -150,15 +150,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR da aprire)
-  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
-  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
-  - Prossimo passo: versione facile del 19 maggio, poi gli altri file, i controlli, la PR e il merge.
-- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR da aprire, la unisce Alessandro)
-  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
-  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
-  - Prossimo passo: cover mancanti, revisione, PR. Merge solo con l'OK di Alessandro.
-- **2026-11-05 — Claude — Da cominciare dopo le due voci sopra:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
+- **2026-11-05 — Claude — Da cominciare:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
 
 ## Richieste
 
@@ -347,6 +339,16 @@ Formato per una richiesta di immagine:
 - **08/10/2026, 21:45 — Claude.** I pittogrammi ARASAAC si scelgono guardandoli: il primo risultato della ricerca può mostrare tutt'altro (era successo con «scappare», «ospedale», «caldo», «frana»). In `scripts/scarica-pittogrammi.sh` un quarto campo fissa l'identificativo verificato.
 
 ## Archiviati
+
+- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR #1712)
+  - **Esito (05/11/2026).** Unita con la PR #1712, con l'ok di Alessandro: i 26 articoli ricontrollati sulle fonti primarie, con le copertine col titolo e gli orari nei giorni con più uscite; nessun materiale social.
+  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
+  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
+
+- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR #1710)
+  - **Esito (05/11/2026).** Unita con la PR #1710 alle 06:45: testi su IT-alert allineati alle fonti ufficiali in tutto il sito, quattro voci nuove in `data/dati_canonici.yaml`, puntate del podcast sospese finché non saranno rifatte. Online e verificata alle 07:28.
+  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
+  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
 
 - **2026-10-13 — da Claude ad Alessandro — Ambienti Codex per i passaggi automatici.** La prima richiesta automatica (PR #1365) non è partita: il bot ha risposto «To use Codex here, create an environment for this repo». Serve, una volta sola e solo dal tuo account ChatGPT: https://chatgpt.com/codex/cloud/settings/environments → «Create environment» → repository `SviluppoItaliaDigitale/sito-pc-genzano` (impostazioni predefinite), poi lo stesso per `sito-misericordia-ariccia`, `cooprimavera`, `social-pc-genzano` e `assistente-personale`. Fino ad allora i lavori che partirebbero verso ChatGPT li fa Claude da sola, come previsto dal protocollo. Quando è fatto, Claude rilancia la prova e archivia questa voce.
   - **Esito (14/10/2026).** Ambienti creati e pubblicati da Alessandro il 13/10/2026 per tutti e cinque i repository. Il canale `@codex` sulle pull request è rimasto muto (difetto di OpenAI, openai/codex #20093): dal 14/10/2026 i passaggi si avviano a mano in Codex Cloud con il testo di avvio (protocollo comune, § «Passaggio a ChatGPT»).

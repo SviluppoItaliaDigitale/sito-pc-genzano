@@ -44,7 +44,7 @@ In futuro, seguire le variazioni delle onde sismiche potrebbe aiutare a **valuta
 
 ## Cosa significa per noi
 
-Anche i Castelli Romani si trovano in un'area a sismicità media. Studi come questo non cambiano le regole di autoprotezione, ma ci ricordano perché prepararsi conviene sempre, prima che serva.
+Anche i Castelli Romani sono in zona sismica 2B, dove forti terremoti sono possibili. Studi come questo non cambiano le regole di autoprotezione, ma ci ricordano perché prepararsi conviene sempre, prima che serva.
 
 Sapere cosa fare prima, durante e dopo una scossa è la difesa più efficace. Sul nostro territorio valgono le indicazioni del Dipartimento della Protezione Civile e le buone pratiche di sempre.
 

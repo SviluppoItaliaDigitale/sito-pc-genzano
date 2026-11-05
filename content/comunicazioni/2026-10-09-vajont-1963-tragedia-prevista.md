@@ -44,7 +44,7 @@ Paradossalmente la diga **non cedette**: è ancora lì, integra, visibile oggi. 
 
 Il Vajont è il caso scuola della **comunicazione del rischio mancata**. Tre lezioni che orientano ancora oggi il lavoro della Protezione Civile:
 
-1. **La conoscenza scientifica deve diventare decisione pubblica.** Non basta che geologi e ingegneri sappiano: serve un sistema istituzionale che traduca i loro avvertimenti in azioni di tutela. Per questo oggi esistono il [Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile), il sistema [IT-alert](https://www.it-alert.it/), e la rete di Centri di Competenza nazionali.
+1. **La conoscenza scientifica deve diventare decisione pubblica.** Non basta che geologi e ingegneri sappiano: serve un sistema istituzionale che traduca i loro avvertimenti in azioni di tutela. Oggi ci sono il [Centro Funzionale Regionale](https://www.regione.lazio.it/protezione-civile), la rete dei Centri di Competenza nazionali e, per il collasso delle grandi dighe, il sistema di allarme pubblico [IT-alert](https://www.it-alert.it/).
 
 2. **Il cittadino ha diritto di sapere.** Una popolazione informata può scegliere come comportarsi. Una popolazione tenuta all'oscuro non può difendersi. Per questo i bollettini di allerta meteo sono pubblici e immediatamente accessibili: vedi [Allerte Meteo](/allerte-meteo/).
 
@@ -73,3 +73,5 @@ Genzano è lontana dal Vajont e non ha dighe nel proprio territorio comunale. Ma
 - [Comune di Longarone — Sito ufficiale memoria](https://www.comune.longarone.bl.it/)
 - [Comitato Sopravvissuti del Vajont](https://www.sopravvissutivajont.org/)
 - Voce Wikipedia: [Disastro del Vajont](https://it.wikipedia.org/wiki/Disastro_del_Vajont)
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo precisato per quali dighe si usa IT-alert e tolto un collegamento di causa che le fonti non documentano.

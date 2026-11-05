@@ -78,6 +78,9 @@ allegati: []
 # social_punti:
 #   - "Cosa fare prima"
 #   - "Cosa fare durante"
+# Per un articolo solo per il sito, senza materiale né post social (per
+# esempio un articolo d'archivio scritto dopo e datato al giorno
+# dell'evento), aggiungi: social: false
 social_citazione: ""
 social_punti: []
 

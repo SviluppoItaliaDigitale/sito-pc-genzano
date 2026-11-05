@@ -37,9 +37,9 @@ Questo **"rumore"** è un pericolo di per sé.
 - **Comunicati stampa** ufficiali.
 
 ### IT-alert
-- **Sistema** di allerta nazionale che invia messaggi a tutti gli smartphone in una zona.
+- **Sistema** di allarme pubblico nazionale che invia messaggi ai telefoni cellulari presenti in una zona, anche a quelli che non sono smartphone.
 - **Messaggi** ufficiali del DPC e delle autorità competenti.
-- **Mai** disattivare gli avvisi pubblici di emergenza sul proprio telefono.
+- **Nessuna** impostazione da attivare: il messaggio arriva anche se la voce IT-alert del telefono è disattivata.
 
 ### Ministero della Salute
 - Per **emergenze sanitarie**.
@@ -192,9 +192,9 @@ In emergenza WhatsApp può:
 ## IT-alert: il canale che arriva a tutti
 
 Il sistema **IT-alert** permette di:
-- **Ricevere** messaggi su tutti gli smartphone in un'area.
+- **Ricevere** messaggi sui telefoni accesi e con campo in un'area.
 - **Informazioni** verificate dal DPC o autorità.
-- **Allerta** immediata (vibrazione + suono).
+- **Allerta** immediata, con un suono ben riconoscibile.
 - **Testi** concisi con istruzioni.
 
 È il canale **con garanzia istituzionale** massima.
@@ -202,7 +202,6 @@ Il sistema **IT-alert** permette di:
 ## App utili
 
 Alcune app ufficiali:
-- **IT-alert** (installata automaticamente).
 - **DPC** (Dipartimento Protezione Civile).
 - **Regione Lazio — Protezione Civile**.
 - **INGV Terremoti** (sismica).
@@ -272,7 +271,7 @@ Le **scuole** hanno percorsi di media literacy.
 Eventi recenti con comunicazione di emergenza:
 - **Covid-19** — mole di informazioni, molte notizie false.
 - **Alluvioni Emilia-Romagna** — canali ufficiali funzionanti.
-- **IT-alert** — test nazionali 2023-2024.
+- **IT-alert** — test regionali nel 2023 e all'inizio del 2024, operativo dal 13 febbraio 2024.
 - **Terremoti** — INGV come fonte primaria.
 
 L'Italia sta **migliorando** nella gestione.
@@ -286,3 +285,5 @@ L'Italia sta **migliorando** nella gestione.
 - [Commissione Europea — EU vs Disinfo](https://euvsdisinfo.eu/)
 
 In emergenza la **miglior difesa** non è l'ansia di sapere tutto, ma la **disciplina** di affidarsi alle fonti giuste. La cittadinanza digitale è parte della resilienza.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto i passaggi su IT-alert: non è un'app da installare, non richiede impostazioni e arriva anche ai telefoni che non sono smartphone.

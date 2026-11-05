@@ -85,7 +85,7 @@ Per chi vive in zona sismica — e a Genzano di Roma, classificato **2B**, vale 
 
 Il sistema di **faglie normali appenniniche** che ha generato la sequenza Centro Italia 2016 si estende per centinaia di chilometri lungo la dorsale dell'Appennino. Il **Lazio centrale**, e in particolare i **Monti della Laga, i Monti Sabini, l'area dei Castelli Romani e i Lepini**, sono parte dello stesso sistema strutturale, anche se con differenti livelli di pericolosità sismica.
 
-Genzano, classificato **zona 2B** (sismicità media), ha un'esposizione **inferiore** rispetto al Maceratese, ma non nulla. Il **Piano di Emergenza Comunale** include scenari di sisma di magnitudo significativa con epicentro a distanza variabile (dall'Appennino centrale alla zona dei Colli Albani). Per la pagina dedicata vedi [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e [Microzonazione sismica Castelli Romani](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/).
+Genzano, classificato in **zona sismica 2B**, ha un'esposizione **inferiore** rispetto al Maceratese, ma non nulla. Il **Piano di Emergenza Comunale** include scenari di sisma di magnitudo significativa con epicentro a distanza variabile (dall'Appennino centrale alla zona dei Colli Albani). Per la pagina dedicata vedi [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e [Microzonazione sismica Castelli Romani](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/).
 
 ## In ricordo
 

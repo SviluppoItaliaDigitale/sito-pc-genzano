@@ -34,7 +34,7 @@ La storia di questa rete e le frequenze utilizzate sono raccontate nella pagina 
 
 ## IT-alert: l'allarme pubblico sul telefono
 
-Accanto alla radio tradizionale, l'Italia dispone oggi di **IT-alert**, il sistema di allarme pubblico nazionale del Dipartimento della Protezione Civile, operativo dal 2024. Invia messaggi direttamente sui telefoni cellulari presenti in una determinata area in caso di gravi emergenze, usando la tecnologia **cell broadcast**: il messaggio raggiunge tutti i telefoni agganciati alle celle della zona, senza bisogno di registrarsi e senza conoscere i numeri.
+Accanto alla radio tradizionale, l'Italia dispone oggi di **IT-alert**, il sistema di allarme pubblico nazionale del Dipartimento della Protezione Civile, operativo dal 2024. Invia messaggi direttamente sui telefoni cellulari presenti in una determinata area in caso di gravi emergenze, usando la tecnologia **cell broadcast**: il messaggio parte dalle celle della zona e arriva ai telefoni accesi collegati a quelle celle, senza bisogno di registrarsi e senza conoscere i numeri.
 
 IT-alert e radio non sono in concorrenza: sono **complementari**. IT-alert avvisa rapidamente la popolazione; la radio tiene in piedi il coordinamento degli operatori. Insieme coprono esigenze diverse.
 

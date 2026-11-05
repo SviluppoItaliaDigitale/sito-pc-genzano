@@ -98,7 +98,7 @@ Per ricevere invece informazioni:
 
 - **Bollettini giornalieri** del Centro Funzionale Lazio.
 - **Allerte meteo** via email (iscrizione).
-- **IT-alert** per emergenze gravi.
+- **IT-alert** per alcune emergenze gravi, non per le allerte meteo.
 
 ## Distinguere previsioni da allerte
 

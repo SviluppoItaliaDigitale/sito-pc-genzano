@@ -197,6 +197,11 @@ def estrai_articolo(path: Path) -> dict | None:
     if social_comune.is_facile(path, fm):
         return None
 
+    # `social: false`: articolo solo per il sito (per esempio quelli
+    # d'archivio datati al giorno dell'evento), niente testi social.
+    if social_comune.escluso_dai_social(fm):
+        return None
+
     # Online come lo decide Hugo: data e ora italiane (hugo.toml timeZone).
     # Fino al 22/09/2026 qui c'era date.today() del runner, cioè UTC: fra
     # mezzanotte e le due un articolo di oggi risultava "futuro".

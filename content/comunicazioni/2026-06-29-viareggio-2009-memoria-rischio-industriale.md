@@ -16,7 +16,7 @@ social_punti:
   - "Il 29 giugno 2009 un treno merci con GPL deragliò alla stazione di Viareggio: una cisterna si squarciò e il gas prese fuoco."
   - "Persero la vita 32 persone, colpite nelle abitazioni vicine alla ferrovia. La causa tecnica fu la rottura di un assile."
   - "È il caso simbolo del rischio industriale e del trasporto di merci pericolose su rotaia (regolamento RID)."
-  - "Le lezioni: conoscere i rischi del territorio, pianificare, informare con IT-alert, sapere cosa fare. In emergenza si chiama il 112."
+  - "Le lezioni: conoscere i rischi del territorio, pianificare, informare in fretta, sapere cosa fare. In emergenza si chiama il 112."
 draft: false
 ---
 
@@ -52,7 +52,7 @@ Il trasporto di queste sostanze segue regole severe: per la ferrovia il **RID** 
 
 - **Conoscere il rischio.** Chi vive vicino a ferrovie, porti, depositi o stabilimenti dovrebbe sapere quali piani di emergenza esistono.
 - **Pianificare.** Il Comune individua scenari, vie di fuga e aree di attesa anche per gli incidenti tecnologici, non solo per quelli naturali.
-- **Informare in fretta.** In caso di rilascio di sostanze pericolose servono messaggi chiari e immediati. In Italia il sistema di allarme pubblico si chiama **IT-alert**.
+- **Informare in fretta.** In caso di rilascio di sostanze pericolose servono messaggi chiari e immediati delle autorità. Il sistema di allarme pubblico **IT-alert** oggi è previsto per gli incidenti negli stabilimenti industriali a rischio, non per quelli durante il trasporto.
 - **Sapere cosa fare.** Spesso la regola non è scappare, ma chiudersi in casa, sigillare porte e finestre e seguire le indicazioni delle autorità.
 - **Chiamare il 112.** In ogni emergenza il numero unico è il **112**.
 
@@ -68,3 +68,5 @@ A Viareggio, ogni 29 giugno, la città si ferma per ricordare. La memoria delle 
 - [Rischio chimico-industriale](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/) — come si origina e come si gestisce.
 - [Quando l'industria fa paura](/dossier/quando-l-industria-fa-paura/) — il dossier interattivo sul rischio industriale.
 - [IT-alert: come funziona e come reagire](/comunicazioni/2026-06-11-it-alert-come-funziona-reagire/) — il sistema italiano di allarme pubblico.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo precisato il ruolo di IT-alert: oggi è previsto per gli incidenti negli stabilimenti industriali, non per gli incidenti ferroviari.

@@ -56,7 +56,7 @@ L'Emilia-Romagna è stata fra le prime regioni a riclassificare integralmente il
 
 ## A Genzano di Roma
 
-Il caso emiliano è importante per noi perché dimostra che **la classificazione sismica non è teorica**. Genzano è in **zona 2B**, pericolosità media. È una valutazione scientifica, non un'opinione. Vale la pena rispettarla:
+Il caso emiliano è importante per noi perché dimostra che **la classificazione sismica non è teorica**. Genzano è in **zona sismica 2B**: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili. È una valutazione scientifica, non un'opinione. Vale la pena rispettarla:
 - Quando si costruisce o ristruttura: chiedere al tecnico se sono applicate le NTC vigenti
 - Quando si valuta un'abitazione: chiedere la **classe di rischio sismico** (esiste una scala A → G dal 2017)
 - Quando si pianifica un intervento: valutare il **Sismabonus** (D.L. 63/2013 e aggiornamenti) per gli interventi di adeguamento
