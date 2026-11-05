@@ -201,6 +201,20 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
   ## 7. Che cosa non fare
   Non toccare altri file (né `COORDINAMENTO.md`, né `.github/`, né `CLAUDE.md`, né il manuale); non riordinare la tabella; non aggiungere date, numeri di PR o righe diverse da quella del punto 3; non fare commit, push, rami o pull request; non eseguire build del sito o altri controlli lunghi: per questo file bastano i sei controlli del punto 5.
+  - **Esito del 05/11/2026, 22:49** — Gemini automatico, modello gemini-3.6-flash: lavoro non riuscito (servizio occupato (modelli provati: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash)); i file toccati fin lì sono sul ramo auto/gemini-tabella-delle-automazioni-riga-del-lavor-20261105 (la pull request la apre chi controlla). File toccati: .claude/rules/10-automazioni-github-actions.md.
+    ## Fatto
+    - Inserita la riga per lavoratore-ai.yml nella tabella dei workflow in .claude/rules/10-automazioni-github-actions.md, subito dopo la riga di rimuovi-firma-strumento.yml.
+    ## Non fatto e perché
+    - Nessuna voce omessa: la modifica è stata completata esattamente come richiesto.
+    ## Controlli eseguiti ed esito
+    - git diff --numstat: 1 riga aggiunta, 0 tolte, 1 file modificato (.claude/rules/10-automazioni-github-actions.md). OK.
+    - git status --porcelain: solo .claude/rules/10-automazioni-github-actions.md risulta modificato. OK.
+    - grep -c ^| lavoratore-ai.yml |: ha restituito 1. OK.
+    - grep -B1 ^| lavoratore-ai.yml |: ha restituito | rimuovi-firma-strumento.yml |. OK.
+    - Conteggio pipe nella nuova riga: 4 (tre celle). OK.
+    - grep -c consulto fra AI». |$: ha restituito 1. OK.
+    ## Dubbi e domande per chi controlla
+    - Nessun dubbio.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune. Dal 05/11/2026 la voce di ogni passaggio sta anche qui sul ramo principale, e per avviarla in Codex Cloud basta una riga: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #N.» (§ «Passaggi a ChatGPT in questo repository»).
 
