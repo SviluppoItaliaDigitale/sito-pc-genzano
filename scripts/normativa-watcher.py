@@ -1195,7 +1195,11 @@ def data_feed_italiana(s):
     return d.astimezone(timezone.utc).timetuple()
 
 
-def parse_feed(url, fonte, days, errori):
+def parse_feed(url, fonte, days, errori, filtro=None):
+    """Legge un feed RSS/Atom. Con `filtro` (testate e riviste) la scelta delle
+    voci la fa quella funzione, non il classificatore generale: le parole
+    chiave generali scartano notizie che il filtro delle testate tiene
+    («nubifragio, allagamenti e smottamenti»)."""
     try:
         import feedparser
     except ImportError:
@@ -1233,7 +1237,9 @@ def parse_feed(url, fonte, days, errori):
             else:
                 published_iso = None
             v = voce(fonte, 'news', titolo, link, published_iso, sommario=sommario)
-            if v['rilevanza']:
+            if filtro:
+                v = filtro(v)
+            if v and v['rilevanza']:
                 out.append(v)
     except Exception as e:  # noqa: BLE001
         print(f"  [error] {fonte}: {e}", file=sys.stderr)
@@ -1353,13 +1359,15 @@ def fetch_testate_locali(days, errori):
         for n in range(1, (TESTATE_MAX_PAGINE if t['wp'] else 1) + 1):
             url = t['feed'] + (f'?paged={n}' if n > 1 else '')
             err = []
-            voci = parse_feed(url, t['nome'], days, err)
+            voci = parse_feed(url, t['nome'], days, err, filtro=filtra_testata)
             if err:
-                # Una pagina successiva che manca (feed più corto) non è un guasto.
-                if n == 1:
+                # Solo la pagina successiva che non esiste (404: il feed è più
+                # corto) segna la fine; ogni altro errore, anche dalla seconda
+                # pagina in poi, è una raccolta incompleta e si dichiara.
+                if n == 1 or not all('HTTP 404' in x for x in err):
                     errori.extend(err)
                 break
-            out.extend(x for x in map(filtra_testata, voci) if x)
+            out.extend(voci)
             # Se la pagina conteneva notizie fuori finestra, le successive lo sono tutte.
             if not _pagina_feed_tutta_in_finestra(url, days):
                 break
@@ -1572,6 +1580,7 @@ def main():
             ('Genzano, bocciata la mozione sul plesso Marchesi', None),
             ('Genzano, alberi caduti per il maltempo in via Appia', 'diretta'),
             ('Alluvione a Latina, quanto ci vorrà per rimuovere i rifiuti?', 'indiretta'),
+            ('Nubifragio a Roma: allagamenti e smottamenti', 'indiretta'),
             ('A Cerveteri corso gratuito del Gruppo Comunale di Protezione Civile', 'diretta'),
         ]
         for titolo, attesa in testate:
