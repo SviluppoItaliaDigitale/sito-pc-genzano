@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Martedì 10 marzo 2026 il Consiglio dei ministri dichiara lo stato di emergenza di rilievo nazionale per le province di Catanzaro e di Cosenza. Dura 12 mesi e riguarda gli eventi meteorologici eccezionali dall'11 al 20 febbraio 2026.
+Martedì 10 marzo 2026 il Consiglio dei ministri dichiara lo stato di emergenza di rilievo nazionale. Riguarda le province di Catanzaro e di Cosenza, colpite da eventi meteorologici eccezionali dall'11 al 20 febbraio 2026. Dura 12 mesi.
 
 ## Che cosa è successo
 
@@ -30,7 +30,7 @@ Nei giorni del maltempo il Dipartimento aveva valutato allerta arancione su sett
 
 Gli interventi si fanno con ordinanze del Capo del Dipartimento della Protezione Civile, d'intesa con la Regione. Le ordinanze possono derogare alle norme in vigore, nel rispetto dei principi generali dell'ordinamento.
 
-Per i primi interventi la delibera stanzia 15 milioni di euro dal Fondo per le emergenze nazionali. È una prima somma, in attesa di valutare l'effettivo impatto degli eventi.
+Per i primi interventi la delibera stanzia fino a 15 milioni di euro dal Fondo per le emergenze nazionali. È una prima somma, in attesa di valutare l'effettivo impatto degli eventi.
 
 ## Che cos'è lo stato di emergenza di rilievo nazionale
 
@@ -50,6 +50,7 @@ A Genzano i colori dell'allerta hanno lo stesso significato: la pagina [Che cosa
 
 **Fonti:**
 
+- [Gazzetta Ufficiale, Serie generale n. 67 del 21 marzo 2026 — Delibera del Consiglio dei ministri 10 marzo 2026, province di Catanzaro e di Cosenza](https://www.gazzettaufficiale.it/eli/id/2026/03/21/26A01419/sg)
 - [Dipartimento della Protezione Civile — Delibera del Consiglio dei Ministri del 10 marzo 2026, province di Catanzaro e Cosenza](https://www.protezionecivile.gov.it/it/normativa/delibera-cdm-10-marzo-2026-eventi-meteo-regione-calabria-febbraio-2026/)
 - [Dipartimento della Protezione Civile — Maltempo: allerta arancione su Calabria e Sicilia (11 febbraio 2026)](https://www.protezionecivile.gov.it/it/comunicato-stampa/maltempo-allerta-arancione-su-calabria-e-sicilia/)
 - [Dipartimento della Protezione Civile — Maltempo: allerta arancione in Calabria (16 febbraio 2026)](https://www.protezionecivile.gov.it/it/comunicato-stampa/maltempo-allerta-arancione-calabria-14/)

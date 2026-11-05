@@ -1,7 +1,7 @@
 ---
 title: "Terremoto profondo Mw 6.1 al largo della Calabria, avvertito dal Lazio alla Sicilia"
 date: 2026-06-02T00:01:00+02:00
-description: "Alle 0.12 l'INGV registra una scossa Mw 6.1 (ML 6.2) in mare, a circa 250 km di profondità. Avvertita dal Lazio alla Sicilia, nessun danno segnalato."
+description: "Alle 0.12 l'INGV registra una scossa Mw 6.1 (ML 6.2) in mare, a oltre 250 km di profondità. Avvertita dal Lazio alla Sicilia, nessun danno segnalato."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Alle 0.12 di martedì 2 giugno 2026 un forte terremoto avviene nel Mar Tirreno meridionale. Lo registra la Rete sismica nazionale dell'Istituto nazionale di geofisica e vulcanologia (INGV): la magnitudo momento è **Mw 6.1** (magnitudo locale ML 6.2). L'epicentro è in mare, a circa 20 chilometri dalla costa calabra nord-occidentale, vicino ad Amantea (Cosenza). L'ipocentro è molto profondo: **circa 250 chilometri**, secondo le stime dell'INGV e del Dipartimento della Protezione Civile.
+Alle 0.12 di martedì 2 giugno 2026 un forte terremoto avviene nel Mar Tirreno meridionale. Lo registra la Rete Sismica Nazionale dell'Istituto Nazionale di Geofisica e Vulcanologia (INGV). La magnitudo momento è **Mw 6.1**, la magnitudo locale ML 6.2. L'epicentro è in mare, davanti alla costa calabra nord-occidentale, a 16 chilometri da Amantea (Cosenza). L'ipocentro è molto profondo: **circa 250 chilometri** secondo le prime stime dell'INGV e del Dipartimento della Protezione Civile. Dopo la revisione, il Bollettino Sismico Italiano dell'INGV lo colloca a 259 chilometri.
 
 ## Avvertito dal Lazio alla Sicilia, nessun danno segnalato
 
@@ -26,9 +26,9 @@ La Sala Situazione Italia del Dipartimento contatta le strutture locali di prote
 
 ## Perché un terremoto così profondo
 
-Nel Tirreno meridionale i terremoti profondi sono piuttosto frequenti. Li produce la subduzione: la litosfera del Mar Ionio scende sotto l'arco calabro e il Tirreno. Nella stessa area l'INGV ricorda le scosse di magnitudo ML 5.1 del 18 maggio 1998 e del 17 dicembre 2008. Anche i loro ipocentri erano fra 270 e 310 chilometri.
+Nel Tirreno meridionale i terremoti profondi sono piuttosto frequenti. Li produce la subduzione: la litosfera del Mar Ionio scende sotto l'arco calabro e il Tirreno. Nella stessa area l'INGV ricorda le scosse di magnitudo ML 5.1 del 18 maggio 1998 e del 17 dicembre 2008. Anche quelle ebbero ipocentri molto profondi, fra circa 270 e 310 chilometri.
 
-Con un ipocentro così profondo, fra l'arrivo delle onde P (longitudinali) e quello delle onde S (trasversali) passano molti secondi. Alla stazione sismica di Gizzeria, a circa 38 chilometri dall'epicentro, sono circa 25. Per un terremoto superficiale sarebbero circa 5. Per questo molte persone hanno pensato a due scosse: erano due tipi di onde dello stesso terremoto.
+Con un ipocentro così profondo, fra l'arrivo delle onde P (longitudinali) e quello delle onde S (trasversali) passano molti secondi. Alla stazione sismica di Gizzeria, a meno di 40 chilometri dall'epicentro, sono circa 25. Per un terremoto superficiale sarebbero circa 5. Per questo molte persone hanno pensato a due scosse: erano due tipi di onde dello stesso terremoto.
 
 ## Che cosa insegna
 

@@ -1,7 +1,7 @@
 ---
 title: "Terremoto di magnitudo 5.1 al largo della costa calabra sud-orientale"
 date: 2026-01-10T00:01:00+02:00
-description: "Alle 5.53 di sabato 10 gennaio l'INGV localizza nel Mar Ionio un terremoto di magnitudo 5.1, a 58 km di profondità, avvertito in Calabria, Sicilia e Puglia."
+description: "Sabato 10 gennaio, alle 5.53, terremoto di magnitudo 5.1 nel Mar Ionio, a 58 km di profondità. Avvertito in Calabria meridionale, Sicilia orientale e Puglia."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -20,7 +20,7 @@ Alle **5.53 di sabato 10 gennaio 2026** l'Istituto Nazionale di Geofisica e Vulc
 
 ## Dove è avvenuto
 
-L'epicentro è 72 chilometri a sud-est di Reggio Calabria e 84 chilometri a sud-est di Messina. Nessun comune italiano si trova entro 20 chilometri. La magnitudo è 5.1 sia come magnitudo locale (ML) sia come magnitudo momento (Mw).
+L'epicentro si trova 72 chilometri a sud-est di Reggio Calabria e 84 chilometri a sud-est di Messina. Nessun comune italiano si trova entro 20 chilometri. La magnitudo è 5.1 sia come magnitudo locale (ML) sia come magnitudo momento (Mw).
 
 Per un terremoto lontano dalla costa, e quindi dalle stazioni della rete sismica, la profondità è difficile da stimare. Le prime analisi della mattina indicavano 65 chilometri, e l'INGV avvertiva che il dato poteva essere rivisto.
 
@@ -30,7 +30,7 @@ La mappa di scuotimento dell'INGV (ShakeMap) stima valori fino al IV grado della
 
 Chi ha sentito il terremoto può compilare il questionario dell'INGV sul sito hsit.it. Le risposte servono a costruire la mappa del risentimento, cioè di come la scossa è stata percepita nei diversi comuni.
 
-## Una zona ad alta pericolosità sismica
+## Vicino a una zona ad alta pericolosità sismica
 
 Secondo l'INGV l'epicentro è vicino alla regione calabro-sicula, dove la pericolosità sismica è alta. Lo indicano la mappa di pericolosità sismica del territorio nazionale (MPS04) e i forti terremoti del passato. A 50-100 chilometri si trovano le aree della Calabria meridionale, dello Stretto di Messina e della Sicilia orientale. Lì sono avvenuti i terremoti del 1783 in Calabria, del 1908 nello Stretto e del 1693 nella Sicilia sud-orientale.
 

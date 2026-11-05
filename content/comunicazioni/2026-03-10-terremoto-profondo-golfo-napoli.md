@@ -1,7 +1,7 @@
 ---
 title: "Terremoto di magnitudo 5.9 nel golfo di Napoli, a oltre 400 chilometri di profondità"
 date: 2026-03-10T00:01:00+02:00
-description: "Martedì 10 marzo, alle 00:03, un terremoto ML 5.9 nel golfo di Napoli, a oltre 400 km di profondità: poco avvertito vicino, sentito fino alla Lombardia."
+description: "Martedì 10 marzo, alle 00:03, terremoto ML 5.9 nel golfo di Napoli, a oltre 400 km di profondità. Poco avvertito vicino, sentito fino alla Lombardia."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Martedì 10 marzo 2026, alle 00:03 ora italiana, l'INGV registra un terremoto di magnitudo ML 5.9 nella zona «Golfo di Napoli e Capri». L'ipocentro è a oltre 400 chilometri di profondità: la prima stima dell'INGV indica circa 414 chilometri. I terremoti italiani avvengono soprattutto nella crosta superiore, molto più vicino alla superficie. Per l'Istituto un evento profondo come questo è abbastanza raro in quest'area.
+Martedì 10 marzo 2026, alle 00:03 ora italiana, un terremoto avviene nella zona «Golfo di Napoli e Capri». Lo registra l'Istituto Nazionale di Geofisica e Vulcanologia (INGV): la magnitudo locale (ML) è 5.9. L'ipocentro è a oltre 400 chilometri di profondità. La prima stima indicava circa 414 chilometri; dopo la revisione, il Bollettino Sismico Italiano dell'INGV indica 410. I terremoti italiani avvengono soprattutto nella crosta superiore, molto più vicino alla superficie. Per l'Istituto un evento profondo come questo è abbastanza raro in quest'area.
 
 ## Dove e perché così in profondità
 
@@ -34,9 +34,9 @@ Nel golfo di Napoli e a Capri la scossa è stata poco avvertita. È stata sentit
 
 ## I precedenti
 
-Il terremoto profondo più forte conosciuto nell'area è quello del 27 dicembre 1978: magnitudo Mw 5.9, a 392 chilometri, al largo di Gaeta, in provincia di Latina.
+Secondo l'INGV il terremoto profondo più forte conosciuto nell'area è del 27 dicembre 1978, al largo di Gaeta (Latina). Ebbe magnitudo momento (Mw) 5.9 e ipocentro a 392 chilometri.
 
-Negli ultimi 40 anni la sismicità profonda del Tirreno ha raggiunto magnitudo ML 5.8 il 28 ottobre 2016, a 481 chilometri. Il 29 ottobre 2006 una scossa di magnitudo Mw 5.8 era avvenuta a 221 chilometri.
+Negli ultimi 40 anni la sismicità profonda del Tirreno ha raggiunto magnitudo ML 5.8 il 28 ottobre 2016, a 481 chilometri. Il 26 ottobre 2006 una scossa di magnitudo Mw 5.8 era avvenuta a 221 chilometri.
 
 ## Che cosa possiamo fare
 
@@ -55,4 +55,5 @@ Chi sente una scossa può compilare il questionario «Hai sentito il terremoto?�
 - [INGV — Terremoto Golfo di Napoli e Capri (Napoli), magnitudo ML 5.9, 10 marzo 2026](https://terremoti.ingv.it/event/45308482)
 - [INGVterremoti — Terremoto profondo al largo delle coste campane, ML 5.9, 10 marzo 2026](https://ingvterremoti.com/2026/03/10/terremoto-profondo-al-largo-delle-coste-campane-ml-5-9-10-marzo-2026/)
 - [INGVterremoti — Terremoti profondi nel Mar Tirreno: caratteristiche e risentimento](https://ingvterremoti.com/2026/03/10/terremoti-profondi-nel-mar-tirreno-caratteristiche-e-risentimento/)
+- [INGV — Terremoto Tirreno Meridionale, magnitudo Mw 5.8, 26 ottobre 2006](https://terremoti.ingv.it/event/1701219)
 - [INGV — Hai sentito il terremoto?](https://www.hsit.it/)

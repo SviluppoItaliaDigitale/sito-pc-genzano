@@ -20,7 +20,7 @@ Il 26 agosto 1806, alle 7.35 ora di Greenwich, un terremoto colpì i Colli Alban
 
 ## Che cosa accadde
 
-Il Catalogo dei forti terremoti in Italia dell'INGV (CFTI5Med) descrive gli effetti paese per paese. I danni maggiori si ebbero a Genzano, Rocca di Papa e Velletri. A Rocca di Papa fu quasi distrutto il quartiere più alto del paese, con morti e feriti. A Velletri tutte le case subirono danni, alcune furono demolite e i feriti furono molti.
+Il Catalogo dei forti terremoti in Italia (CFTI5Med) dell'Istituto Nazionale di Geofisica e Vulcanologia (INGV) descrive gli effetti paese per paese. I danni maggiori si ebbero a Genzano, Rocca di Papa e Velletri. A Rocca di Papa fu quasi distrutto il quartiere più alto del paese, con morti e feriti. A Velletri tutte le case subirono danni, alcune furono demolite e i feriti furono molti.
 
 Altri cinque paesi ebbero danni gravi. A Nemi crollò il convento dei Minori Osservanti. Ad Ariccia crollò il tetto della chiesa rurale di San Nicola. A Zagarolo cadde parte del palazzo baronale, ad Artena la volta di una cappella. A Frascati una villa divenne inabitabile per le lesioni nei muri. Altri nove centri, fra cui Albano Laziale e Lanuvio, ebbero danni minori. La scossa fu avvertita fino a Napoli. Seguirono alcune repliche leggere, lo stesso giorno e il 28 agosto.
 
@@ -28,7 +28,7 @@ Altri cinque paesi ebbero danni gravi. A Nemi crollò il convento dei Minori Oss
 
 Il Dipartimento della Protezione Civile distingue due grandezze. La magnitudo esprime l'energia liberata dal terremoto. L'intensità, in gradi della scala Mercalli, descrive gli effetti in un luogo su persone, edifici e ambiente.
 
-Per il terremoto del 1806 posizione e magnitudo sono calcolate dagli effetti osservati. Il Catalogo parametrico dei terremoti italiani (CPTI15) li ricava da 35 località e stima una magnitudo momento di 5,6. A Genzano il Database macrosismico italiano (DBMI15) assegna l'intensità VIII della scala Mercalli-Cancani-Sieberg (MCS). Il database riporta gli effetti di 33 terremoti a Genzano: nessuno ha avuto effetti più forti di quello del 1806. Seguono le scosse dei Colli Albani del 1892 e del 1927, entrambe di grado VII.
+Per il terremoto del 1806 posizione e magnitudo sono calcolate dagli effetti osservati. Il Catalogo parametrico dei terremoti italiani (CPTI15) li ricava da 35 località e stima una magnitudo momento di 5,6. A Genzano il Database macrosismico italiano (DBMI15) assegna l'intensità VIII della scala Mercalli-Cancani-Sieberg (MCS). Per Genzano il database elenca 33 terremoti: nessuno vi ha avuto effetti più forti di quello del 1806. Seguono le scosse dei Colli Albani del 1892 e del 1927, entrambe di grado VII.
 
 ## Che cosa insegna oggi
 
