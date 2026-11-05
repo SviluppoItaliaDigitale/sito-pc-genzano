@@ -21,6 +21,13 @@ FONTI PRIMARIE (lette direttamente, ogni giorno) — "--fonti primarie"
   arrivava solo dalla rassegna stampa del lunedì: l'audizione del 1° ottobre
   sulla PL 281 (parte civile della Regione anche per i volontari di PC) è
   stata vista quattro giorni dopo.
+- Comune di Genzano di Roma, sito istituzionale (dal 05/11/2026): avvisi,
+  comunicati e notizie, che non sempre passano dall'albo.
+- Albi pretori di Ariccia e Castel Gandolfo (stesso portale dell'albo di
+  Genzano, dal 05/11/2026): solo atti di protezione civile o che nominano
+  Genzano e i Castelli Romani.
+- Regione Lazio, Città metropolitana di Roma Capitale e Prefettura di Roma:
+  notizie dei rispettivi siti (dal 05/11/2026).
 
 FONTE ISTITUZIONALE EUROPEA (letta con le primarie, ogni giorno)
 - EU Space, «Image of the day» (eu-space.europa.eu/explore-euspace/images,
@@ -34,6 +41,9 @@ FONTE ISTITUZIONALE EUROPEA (letta con le primarie, ogni giorno)
 FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Google News RSS con query tematiche e site:
 - Feed RSS istituzionali (TGR Lazio)
+- Testate locali e agenzie lette dai loro feed (dal 05/11/2026): Castelli
+  Notizie, Il Mamilio, Il Caffè, Controluce, Terzo Binario, RomaToday,
+  ANSA Lazio e Il Giornale dei Castelli Romani
 - DPC: notizie e comunicati stampa dal file JSON pubblico del sito del
   Dipartimento (archivio completo con le date, nessuna chiave e nessun
   credito; dal 21/10/2026, prima la home e l'Area stampa via Firecrawl)
@@ -613,6 +623,224 @@ def fetch_consiglio_lazio(cutoff, errori):
 
 
 # ---------------------------------------------------------------------------
+# FONTI ISTITUZIONALI DEL TERRITORIO (dal 05/11/2026)
+# ---------------------------------------------------------------------------
+# Richiesta dell'utente del 05/11/2026: «volevo ampliare di tanto le fonti».
+# Prima di questa data le notizie del Comune di Genzano (diverse dagli atti
+# dell'albo), della Regione, della Città metropolitana, della Prefettura e
+# degli albi dei Comuni vicini arrivavano solo se una testata le riprendeva
+# su Google News. Tutte verificate il 05/11/2026 con richieste vere.
+# Gli albi di Albano Laziale, Lanuvio, Nemi e Velletri usano sistemi diversi
+# o non rispondono da fuori, e quello di Marino sul portale comune è fermo al
+# 2021: per questi Comuni restano le testate locali e la ricerca dedicata di
+# Google News (QUERIES_GOOGLE_NEWS).
+
+MESI_IT = {m: i for i, m in enumerate(
+    ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto',
+     'settembre', 'ottobre', 'novembre', 'dicembre'], start=1)}
+
+
+def parse_data_estesa(s):
+    """«5 Novembre 2026» → date."""
+    m = re.search(r'(\d{1,2})\s+([A-Za-zàé]+)\s+(\d{4})', s or '')
+    if not m or m.group(2).lower() not in MESI_IT:
+        return None
+    try:
+        return date(int(m.group(3)), MESI_IT[m.group(2).lower()], int(m.group(1)))
+    except ValueError:
+        return None
+
+
+COMUNE_BASE = 'https://www.comune.genzanodiroma.roma.it'
+COMUNE_SEZIONI = [('avvisi', 'Avviso'), ('comunicati', 'Comunicato'), ('notizie', 'Notizia')]
+
+
+def fetch_comune_genzano(cutoff, errori):
+    """Avvisi, comunicati e notizie del sito del Comune (modello Comuni di Designers Italia).
+
+    Ogni sezione è un elenco di card `it-card` con titolo, sommario e
+    `<time datetime="AAAA-MM-GG">`. Il territorio è implicito, come per l'albo.
+    """
+    out = []
+    cli = Cliente()
+    for sezione, tipo in COMUNE_SEZIONI:
+        url = f'{COMUNE_BASE}/tipi-di-notizia/{sezione}'
+        try:
+            pagina = cli.get(url)
+            card = re.findall(r'<article class="it-card.*?</article>', pagina, flags=re.S)
+            if not card:
+                raise RuntimeError('nessuna card trovata: struttura della pagina cambiata?')
+            for c in card:
+                t = re.search(r'it-card-title[^>]*>\s*<a href="([^"]+)"[^>]*>(.*?)</a>', c, flags=re.S)
+                d = parse_data_iso((re.search(r'datetime="([^"]+)"', c) or [None, ''])[1])
+                if not t or not d or d < cutoff:
+                    continue
+                sommario = solo_testo((re.search(r'it-card-text[^>]*>(.*?)</p>', c, flags=re.S) or [None, ''])[1])
+                v = voce('Comune di Genzano di Roma — avvisi e notizie', 'primaria', solo_testo(t.group(2)),
+                         urllib.parse.urljoin(COMUNE_BASE, htmllib.unescape(t.group(1))), d, tipo_atto=tipo,
+                         ente='Comune di Genzano di Roma', sommario=sommario, fonte_albo=True)
+                if v['rilevanza']:
+                    out.append(v)
+        except Exception as e:  # noqa: BLE001
+            errori.append(f'Comune di Genzano ({sezione}): {e} ({url})')
+            print(f'  [error] comune di genzano {sezione}: {e}', file=sys.stderr)
+    return out
+
+
+# Albi dei Comuni vicini sullo stesso portale dell'albo di Genzano. Si ordina
+# l'elenco per numero di registrazione: il primo clic lo ordina dal più
+# vecchio, il secondo dal più recente (verificato il 05/11/2026).
+ALBI_VICINI = [
+    ('Ariccia', 'https://ariccia.trasparenza-valutazione-merito.it'),
+    ('Castel Gandolfo', 'https://castelgandolfo.trasparenza-valutazione-merito.it'),
+]
+ALBO_ORDINA = ('/web/trasparenza/papca-ap?p_p_id=jcitygovalbopubblicazioni_WAR_jcitygovalbiportlet'
+               '&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view'
+               '&_jcitygovalbopubblicazioni_WAR_jcitygovalbiportlet_action=eseguiOrdinamentoLista'
+               '&_jcitygovalbopubblicazioni_WAR_jcitygovalbiportlet_orderBy=annoNumeroRegistrazione')
+TERRITORIO = {'genzano di roma', 'genzano', 'castelli romani'}
+
+
+def fetch_albi_vicini(cutoff, errori):
+    """Albi pretori dei Comuni vicini: solo atti di protezione civile.
+
+    Qui il territorio non è Genzano: si tengono gli atti a rilevanza diretta
+    (COC, allerte, emergenze, incendi, piani…) e quelli che nominano Genzano
+    o i Castelli Romani. Ordinanze di viabilità, sagre e concerti degli
+    altri Comuni restano fuori.
+    """
+    out = []
+    for comune, base in ALBI_VICINI:
+        cli = Cliente()
+        lista = base + '/web/trasparenza/papca-ap'
+        try:
+            cli.get(lista)
+            pagina = ''
+            for _ in range(2):
+                pagina = cli.get(base + ALBO_ORDINA, referer=lista)
+            righe = re.findall(r'<tr class="master-detail-list-line[^"]*"[^>]*data-id="(\d+)">(.*?)</tr>',
+                               pagina, flags=re.S)
+            if not righe:
+                raise RuntimeError('nessuna riga trovata: struttura della pagina cambiata?')
+            recenti = 0
+            visti = set()
+            for id_atto, riga in righe:
+                celle = re.findall(r'<td[^>]*class="([^"]+)"[^>]*>(.*?)</td>', riga, flags=re.S)
+                c = {k.split()[0]: solo_testo(v) for k, v in celle}
+                oggetto = c.get('oggetto', '')
+                inizio = parse_data_it(c.get('periodo-pubblicazione', ''))
+                if not inizio or inizio < cutoff:
+                    continue
+                recenti += 1
+                if oggetto in visti:     # lo stesso atto compare due volte (pubblicazione e archivio)
+                    continue
+                visti.add(oggetto)
+                v = voce(f'Albo pretorio — Comune di {comune}', 'primaria', oggetto,
+                         f'{base}/web/trasparenza/papca-ap/-/papca/display/{id_atto}', inizio,
+                         tipo_atto=c.get('categoria', ''), numero=c.get('annonumero', ''),
+                         ente=f'Comune di {comune}', sommario=f'Comune di {comune}')
+                if (v['rilevanza'] == 'diretta' and set(v['motivi']) - TERRITORIO) or set(v['motivi']) & TERRITORIO:
+                    out.append(v)
+            if recenti == 0 and not re.search(r'\d{2}/\d{2}/20\d\d', pagina):
+                raise RuntimeError("elenco senza date leggibili: struttura della pagina cambiata?")
+        except Exception as e:  # noqa: BLE001
+            errori.append(f'Albo pretorio di {comune}: {e}')
+            print(f'  [error] albo di {comune}: {e}', file=sys.stderr)
+    return out
+
+
+REGIONE_BASE = 'https://www.regione.lazio.it'
+REGIONE_PAGINE = 3   # dieci notizie per pagina: la Regione ne pubblica 5-10 al giorno
+
+
+def fetch_regione_lazio(cutoff, errori):
+    """Notizie della Regione Lazio (tutti i temi), elenco `GG/MM/AAAA - titolo`.
+
+    Il tema sta nell'indirizzo (`/notizie/protezione-civile/…`): si aggiunge
+    al testo da classificare, perché spesso il titolo non lo dice.
+    """
+    out = []
+    cli = Cliente()
+    try:
+        trovate = 0
+        for n in range(1, REGIONE_PAGINE + 1):
+            url = REGIONE_BASE + '/notizie' + (f'?pagina={n}' if n > 1 else '')
+            pagina = cli.get(url)
+            righe = re.findall(r'<a title="[^"]*"[^>]*href="(/notizie/[^"]+)">.*?list-item-title">\s*'
+                               r'(\d{2}/\d{2}/\d{4})\s*-(.*?)</span>', pagina, flags=re.S)
+            if not righe and n == 1:
+                raise RuntimeError('nessuna notizia trovata: struttura della pagina cambiata?')
+            vecchie = 0
+            for href, data_txt, titolo_html in righe:
+                trovate += 1
+                d = parse_data_it(data_txt)
+                if not d or d < cutoff:
+                    vecchie += 1
+                    continue
+                tema = href.split('/')[2].replace('-', ' ') if href.count('/') >= 3 else ''
+                v = voce('Regione Lazio — notizie', 'primaria', solo_testo(titolo_html), REGIONE_BASE + href, d,
+                         tipo_atto='Notizia', ente='Regione Lazio', sommario=tema)
+                if v['rilevanza']:
+                    out.append(v)
+            if vecchie == len(righe):
+                break
+    except Exception as e:  # noqa: BLE001
+        errori.append(f'Regione Lazio (notizie): {e}')
+        print(f'  [error] regione lazio: {e}', file=sys.stderr)
+    return out
+
+
+CM_NOTIZIE = 'https://www.cittametropolitanaroma.it/homepage/media-e-comunicazione/notizie/'
+PREFETTURA_NOTIZIE = 'https://prefettura.interno.gov.it/it/prefetture/roma/notizie'
+
+
+def fetch_citta_metropolitana(cutoff, errori):
+    out = []
+    try:
+        pagina = Cliente().get(CM_NOTIZIE)
+        righe = re.findall(r'<h3><a href="(https://www\.cittametropolitanaroma\.it/notizia/[^"]+)"[^>]*>(.*?)</a></h3>\s*'
+                           r'<p class="data-notizia">([^<]+)</p>(?:\s*<p class="exce-notizia">(.*?)</p>)?', pagina, flags=re.S)
+        if not righe:
+            raise RuntimeError('nessuna notizia trovata: struttura della pagina cambiata?')
+        for link, titolo, data_txt, sommario in righe:
+            d = parse_data_estesa(data_txt)
+            if not d or d < cutoff:
+                continue
+            v = voce('Città metropolitana di Roma Capitale — notizie', 'primaria', solo_testo(titolo), link, d,
+                     tipo_atto='Notizia', ente='Città metropolitana di Roma Capitale', sommario=solo_testo(sommario))
+            if v['rilevanza']:
+                out.append(v)
+    except Exception as e:  # noqa: BLE001
+        errori.append(f'Città metropolitana di Roma: {e} ({CM_NOTIZIE})')
+        print(f'  [error] città metropolitana: {e}', file=sys.stderr)
+    return out
+
+
+def fetch_prefettura_roma(cutoff, errori):
+    out = []
+    try:
+        pagina = Cliente().get(PREFETTURA_NOTIZIE)
+        righe = re.findall(r'<h3>\s*<a href="(/it/prefetture/roma/notizie/[^"]+)"[^>]*>(.*?)</a>\s*</h3>(.*?)'
+                           r'field--name-field-date.*?datetime="([^"]+)"', pagina, flags=re.S)
+        if not righe:
+            raise RuntimeError('nessuna notizia trovata: struttura della pagina cambiata?')
+        for href, titolo, resto, data_iso in righe:
+            d = parse_data_iso(data_iso)
+            if not d or d < cutoff:
+                continue
+            sommario = solo_testo((re.search(r'testo-introduttivo[^>]*>(.*?)</div>', resto, flags=re.S) or [None, ''])[1])
+            v = voce('Prefettura di Roma — notizie', 'primaria', solo_testo(titolo),
+                     'https://prefettura.interno.gov.it' + href, d, tipo_atto='Notizia',
+                     ente='Prefettura di Roma', sommario=sommario)
+            if v['rilevanza']:
+                out.append(v)
+    except Exception as e:  # noqa: BLE001
+        errori.append(f'Prefettura di Roma: {e} ({PREFETTURA_NOTIZIE})')
+        print(f'  [error] prefettura di roma: {e}', file=sys.stderr)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # FONTE ISTITUZIONALE EUROPEA — EU Space, «Image of the day» (Copernicus)
 # ---------------------------------------------------------------------------
 # Aggiunta il 13/10/2026 su richiesta dell'utente: «metti questo sito tra
@@ -927,6 +1155,12 @@ QUERIES_GOOGLE_NEWS = [
     'IT-alert protezione civile',
     'volontariato protezione civile Lazio',
     'esercitazione protezione civile Lazio',
+    # Comuni vicini senza albo leggibile (dal 05/11/2026): Albano, Lanuvio,
+    # Nemi, Velletri e Marino; Ariccia e Castel Gandolfo hanno anche l'albo.
+    'protezione civile Albano Laziale OR Ariccia OR Lanuvio OR Nemi',
+    'protezione civile Velletri OR Marino OR "Castel Gandolfo" OR Lariano',
+    'ordinanza sindaco Genzano OR Ariccia OR Albano OR Lanuvio OR Nemi',
+    'COC centro operativo comunale Castelli Romani',
     'site:normattiva.it protezione civile',
     'site:gazzettaufficiale.it protezione civile',
     'site:regione.lazio.it protezione civile',
@@ -970,6 +1204,7 @@ def parse_feed(url, fonte, days, errori):
     out = []
     try:
         feed = feedparser.parse(url, agent=UA)
+        _CACHE_FEED[url] = feed
         status = feed.get('status')
         if status and status >= 400:
             print(f"  [error] {fonte}: HTTP {status} ({url})", file=sys.stderr)
@@ -1047,6 +1282,106 @@ def fetch_dpc(cutoff, errori):
         print(f"  [error] {fonte}: {e}", file=sys.stderr)
         errori.append(f'{fonte}: {e} ({DPC_ATTUALITA})')
     return out
+
+
+# ---------------------------------------------------------------------------
+# TESTATE LOCALI E AGENZIE (dal 05/11/2026)
+# ---------------------------------------------------------------------------
+# Lette direttamente dai loro feed, invece di aspettare che Google News le
+# indicizzi. Stesse testate del controllo delle copie (scripts/controllo-copie.py)
+# per i Castelli e Roma, più ANSA Lazio e Il Giornale dei Castelli Romani,
+# che pubblica le notizie dall'API di WordPress perché il suo /feed/ rimanda
+# alla home. I feed WordPress danno dieci notizie per pagina: una testata dei
+# Castelli ne pubblica fino a una trentina al giorno, quindi si sfogliano le
+# pagine finché si esce dalla finestra (al massimo TESTATE_MAX_PAGINE).
+# Le notizie di stampa sull'attività del Gruppo restano in PR non unita
+# (rule 10, punto 5-bis della routine): qui si raccolgono soltanto.
+
+TESTATE_LOCALI = [
+    {'nome': 'Castelli Notizie', 'feed': 'https://www.castellinotizie.it/feed/', 'wp': True},
+    {'nome': 'Il Mamilio', 'feed': 'https://www.ilmamilio.it/wp/feed/', 'wp': True},
+    {'nome': 'Il Caffè', 'feed': 'https://www.ilcaffe.tv/feed/', 'wp': True},
+    {'nome': 'Controluce', 'feed': 'https://www.controluce.it/feed/', 'wp': True},
+    {'nome': 'Terzo Binario', 'feed': 'https://www.terzobinario.it/feed/', 'wp': True},
+    {'nome': 'RomaToday', 'feed': 'https://www.romatoday.it/rss', 'wp': False},
+    {'nome': 'ANSA Lazio', 'feed': 'https://www.ansa.it/lazio/notizie/lazio_rss.xml', 'wp': False},
+]
+TESTATE_MAX_PAGINE = 4
+# Le testate scrivono di tutto: le parole chiave generali pescherebbero
+# «emergenza portiere», allarmi bomba negli aeroporti, lutti e mozioni del
+# consiglio comunale (prova del 05/11/2026: 79 voci, quasi tutte rumore).
+# Per loro vale questo elenco più stretto di temi di protezione civile;
+# la rilevanza è diretta se la notizia nomina anche Genzano, i Castelli o la
+# protezione civile, altrimenti indiretta.
+KW_TESTATE = re.compile(
+    r"protezione civile|protezionecivile|centro operativo comunale|\bc\.?o\.?c\.?\b|allerta meteo|"
+    r"allerta (?:gialla|arancione|rossa)|codice (?:giallo|arancione|rosso)|maltempo|nubifragi|bomba d.acqua|"
+    r"alluvion|esondaz|allagament|\bfran[ae]\b|smottament|voragin|dissesto|rischio idrogeologico|terremot|"
+    r"scossa di magnitudo|\bsism|incendi|\brog(?:o|hi)\b|vigili del fuoco|canadair|evacua|ondata di calore|"
+    r"nevicat|grandinat|tromba d.aria|vento forte|raffiche|alber[oi] cadut|blackout|dispers[oa]\b|"
+    r"it-alert|numero unico|\b112\b|esercitazion|volontari (?:di|della) protezione", re.I)
+KW_TESTATE_VICINE = re.compile(r"genzano|castelli romani|protezione civile|protezionecivile", re.I)
+
+
+def filtra_testata(v):
+    """None se la notizia non tocca un tema di protezione civile."""
+    testo = f"{v['titolo']} {v.get('sommario', '')}"
+    temi = sorted({m.group(0).lower() for m in KW_TESTATE.finditer(testo)})
+    if not temi:
+        return None
+    v['rilevanza'] = 'diretta' if KW_TESTATE_VICINE.search(testo) else 'indiretta'
+    v['motivi'] = temi
+    return v
+
+
+GIORNALE_CASTELLI_API = ('https://www.giornaleinfocastelliromani.it/wp-json/wp/v2/posts'
+                         '?per_page=50&_fields=date,link,title,excerpt&after={dopo}')
+
+
+def fetch_testate_locali(days, errori):
+    out = []
+    for t in TESTATE_LOCALI:
+        for n in range(1, (TESTATE_MAX_PAGINE if t['wp'] else 1) + 1):
+            url = t['feed'] + (f'?paged={n}' if n > 1 else '')
+            err = []
+            voci = parse_feed(url, t['nome'], days, err)
+            if err:
+                # Una pagina successiva che manca (feed più corto) non è un guasto.
+                if n == 1:
+                    errori.extend(err)
+                break
+            out.extend(x for x in map(filtra_testata, voci) if x)
+            # Se la pagina conteneva notizie fuori finestra, le successive lo sono tutte.
+            if not _pagina_feed_tutta_in_finestra(url, days):
+                break
+    try:
+        dopo = (datetime.now(timezone.utc) - timedelta(days=days)).strftime('%Y-%m-%dT%H:%M:%S')
+        dati = json.loads(Cliente().get(GIORNALE_CASTELLI_API.format(dopo=dopo)))
+        if not isinstance(dati, list):
+            raise RuntimeError('risposta non attesa: non è un elenco di articoli')
+        for a in dati:
+            titolo = solo_testo((a.get('title') or {}).get('rendered', ''))
+            v = voce('Il Giornale dei Castelli Romani', 'news', titolo, a.get('link', ''),
+                     (a.get('date') or '')[:19], sommario=solo_testo((a.get('excerpt') or {}).get('rendered', '')))
+            v = filtra_testata(v)
+            if v:
+                out.append(v)
+    except Exception as e:  # noqa: BLE001
+        errori.append(f'Il Giornale dei Castelli Romani: {e}')
+        print(f'  [error] Il Giornale dei Castelli Romani: {e}', file=sys.stderr)
+    return out
+
+
+_CACHE_FEED = {}
+
+
+def _pagina_feed_tutta_in_finestra(url, days):
+    """True se tutte le notizie della pagina del feed stanno nella finestra."""
+    import feedparser
+    feed = _CACHE_FEED.get(url) or feedparser.parse(url, agent=UA)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    date_voci = [e.get('published_parsed') or e.get('updated_parsed') for e in feed.entries]
+    return bool(date_voci) and all(d and datetime(*d[:6], tzinfo=timezone.utc) >= cutoff for d in date_voci)
 
 
 # ---------------------------------------------------------------------------
@@ -1138,7 +1473,7 @@ def corpo_issue(output):
                 estremi = ' · '.join(x for x in [it.get('tipo_atto'), it.get('numero'), it.get('ente')] if x)
                 righe.append(f"- **{data}** — {it['fonte']}{' · ' + estremi if estremi else ''}\n  [{t}]({it['link']})\n  <sub>parole chiave: {', '.join(it['motivi'])}</sub>")
 
-    blocco(primarie, "Atti dalle fonti primarie (albo pretorio · Gazzetta Ufficiale · Normattiva · BURL · Consiglio regionale)")
+    blocco(primarie, "Atti e notizie dalle fonti primarie (albi pretori · Gazzetta Ufficiale · Normattiva · BURL · Consiglio regionale · Comune · Regione · Città metropolitana · Prefettura)")
     if immagini:
         righe.append(f"\n## Immagini satellitari dell'Unione europea — EU Space, «Image of the day» ({len(immagini)})\n")
         righe.append(ISTRUZIONI_EU_SPACE)
@@ -1199,8 +1534,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--days', type=int, default=2, help='Finestra temporale in giorni (default 2)')
     ap.add_argument('--fonti', choices=['primarie', 'news', 'tutte', 'eu-space'], default='tutte',
-                    help='primarie = albo/GU/Normattiva/BURL/Consiglio regionale + immagini EU Space; '
-                         'news = Google News/RSS/notizie del DPC; tutte (default); eu-space = solo le immagini EU Space')
+                    help='primarie = albi/GU/Normattiva/BURL/Consiglio regionale/enti del territorio + immagini EU Space; '
+                         'news = Google News/RSS/notizie del DPC/testate locali; tutte (default); eu-space = solo le immagini EU Space')
     ap.add_argument('--out', default='-', help='File output JSON (default stdout)')
     ap.add_argument('--issue-body', default=None, help='Scrive il corpo Markdown della issue in questo file')
     ap.add_argument('--dedup-issues', action='store_true', help='Scarta gli URL già comparsi nelle issue normativa-watcher (richiede gh)')
@@ -1220,7 +1555,22 @@ def main():
             ottenuta, motivi = classifica(testo, fonte_albo=albo)
             if ottenuta != attesa:
                 raise SystemExit(f'Classificazione errata: {testo!r}: {ottenuta!r}, attesa {attesa!r}; {motivi}')
-        print(f'OK: {len(casi)} verifiche di classificazione, nessuna richiesta esterna.')
+        # Testate locali (05/11/2026): il rumore della prima prova resta fuori.
+        testate = [
+            ('AS Roma, emergenza portiere: chi gioca contro il Sassuolo?', None),
+            ('Fiumicino, allarme bomba su voli da Helsinki e Dublino', None),
+            ('Genzano, bocciata la mozione sul plesso Marchesi', None),
+            ('Genzano, alberi caduti per il maltempo in via Appia', 'diretta'),
+            ('Alluvione a Latina, quanto ci vorrà per rimuovere i rifiuti?', 'indiretta'),
+            ('A Cerveteri corso gratuito del Gruppo Comunale di Protezione Civile', 'diretta'),
+        ]
+        for titolo, attesa in testate:
+            v = filtra_testata({'titolo': titolo, 'sommario': '', 'rilevanza': None, 'motivi': []})
+            if (v and v['rilevanza']) != attesa:
+                raise SystemExit(f'Filtro testate errato: {titolo!r}: {v and v["rilevanza"]!r}, attesa {attesa!r}')
+        if parse_data_estesa('5 Novembre 2026') != date(2026, 11, 5):
+            raise SystemExit('Data estesa non letta: «5 Novembre 2026»')
+        print(f'OK: {len(casi) + len(testate) + 1} verifiche di classificazione, nessuna richiesta esterna.')
         return 0
 
     cutoff = oggi_roma() - timedelta(days=args.days)
@@ -1247,7 +1597,12 @@ def main():
                          ('Gazzetta Ufficiale (Serie Generale)', fetch_gazzetta_ufficiale),
                          ('Normattiva', fetch_normattiva),
                          ('BURL Lazio', fetch_burl),
-                         ('Consiglio regionale del Lazio (notizie)', fetch_consiglio_lazio)]:
+                         ('Consiglio regionale del Lazio (notizie)', fetch_consiglio_lazio),
+                         ('Comune di Genzano di Roma (avvisi, comunicati, notizie)', fetch_comune_genzano),
+                         ('Albi pretori di Ariccia e Castel Gandolfo', fetch_albi_vicini),
+                         ('Regione Lazio (notizie)', fetch_regione_lazio),
+                         ('Città metropolitana di Roma Capitale (notizie)', fetch_citta_metropolitana),
+                         ('Prefettura di Roma (notizie)', fetch_prefettura_roma)]:
             fonti_lette.append(nome)
             aggiungi(fn(cutoff, errori), nome)
 
@@ -1272,6 +1627,9 @@ def main():
         nome = 'DPC — notizie e comunicati stampa'
         fonti_lette.append(nome)
         aggiungi(fetch_dpc(cutoff, errori_news), nome)
+        nome = f'Testate locali e agenzie ({len(TESTATE_LOCALI) + 1} fonti)'
+        fonti_lette.append(nome)
+        aggiungi(fetch_testate_locali(args.days, errori_news), nome)
 
     # Dedup contro issue precedenti / file di esclusione
     esclusi = set()
