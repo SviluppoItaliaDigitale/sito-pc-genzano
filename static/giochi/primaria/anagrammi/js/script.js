@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'EMERGENZA', cat: 'Situazione urgente', hint: 'Richiede interventi immediati',
         explain: 'Emergenza = evento in corso. Diversa dall\'allerta (previsione). Sono fasi distinte del ciclo del rischio.' },
       { w: 'TERREMOTO', cat: 'Rischio sismico', hint: 'La terra trema',
-        explain: 'I Castelli Romani sono in zona sismica 2B (sismicità media). L\'INGV monitora 24/7 con sismografi.' },
+        explain: 'I Castelli Romani sono in zona sismica 2B. L\'INGV monitora 24/7 con sismografi.' },
       { w: 'INCENDIO', cat: 'Rischio AIB', hint: 'Fuoco fuori controllo nei boschi o in casa',
         explain: 'Per gli incendi boschivi (AIB) chiama il 112: la centrale attiva i Vigili del Fuoco e le squadre AIB regionali.' },
       { w: 'ALLUVIONE', cat: 'Rischio idrogeologico', hint: 'Acqua che invade strade ed edifici',

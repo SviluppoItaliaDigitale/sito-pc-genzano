@@ -88,7 +88,7 @@ Il terremoto è il rischio **più devastante** per l'Italia:
 - **circa il 38% del territorio** a rischio sismico significativo;
 - **oltre 22 milioni** di persone residenti in zone a rischio.
 
-**Genzano** è classificata **zona 2B** (media sismicità). La casa costruita secondo normativa antisismica resiste; la casa costruita negli anni '60-'70 senza vincoli può essere vulnerabile.
+**Genzano** è classificata in **zona sismica 2B**, dove forti terremoti sono possibili. La casa costruita secondo normativa antisismica resiste; la casa costruita negli anni '60-'70 senza vincoli può essere vulnerabile.
 
 ## Cosa possiamo fare a Genzano di Roma
 

@@ -54,7 +54,7 @@ Senza pretesa di essere esaustivi, alcuni dati utili sul nostro territorio:
 - **Altitudine media**: circa **435 m s.l.m.** (il centro storico).
 - **Superficie comunale**: circa **18 km²**.
 - **Popolazione residente**: circa **24.000 abitanti** (dati ISTAT).
-- **Classificazione sismica**: zona **2B** (sismicità media).
+- **Classificazione sismica**: zona **2B**, con un'accelerazione attesa fra 0,15 e 0,20 g.
 - **Rischio idrogeologico**: versanti con classi di pericolosità variabili nel PAI (Piano di Assetto Idrogeologico).
 - **Rischio incendi AIB**: elevato nei mesi di **giugno-settembre**.
 - **Lago di Nemi**: quota circa **316 m**, massima profondità circa **33 m**.

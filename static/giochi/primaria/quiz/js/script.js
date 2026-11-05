@@ -712,12 +712,12 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'protezione-civile',
             question: 'Secondo la classificazione sismica della Regione Lazio, i Colli Albani sono in:',
             answers: [
-                { text: 'Zona 1 (sismicità alta)', correct: false },
-                { text: 'Zona 2 (sismicità media)', correct: true },
-                { text: 'Zona 4 (sismicità molto bassa)', correct: false },
+                { text: 'Zona 1', correct: false },
+                { text: 'Zona 2', correct: true },
+                { text: 'Zona 4', correct: false },
                 { text: 'Non è zona sismica', correct: false }
             ],
-            explanation: 'Genzano di Roma è in zona sismica 2, sottozona 2B: la Regione Lazio la descrive a sismicità media. Possono verificarsi terremoti di media intensità. È importante conoscere i comportamenti di autoprotezione.'
+            explanation: 'Genzano di Roma è in zona sismica 2, sottozona 2B. Secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili: per questo è importante conoscere i comportamenti di autoprotezione.'
         },
         {
             category: 'protezione-civile',

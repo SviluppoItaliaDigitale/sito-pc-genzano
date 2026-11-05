@@ -78,7 +78,7 @@ Si può invece stimare la pericolosità sismica: quali zone rischiano scosse pi�
 
 ## E Genzano?
 
-Genzano sorge sul vulcano dei Colli Albani, sul bordo esterno del cratere del Lago di Nemi. Il vulcano è **quiescente**, non spento, e lo sorveglia l'INGV. La Regione Lazio classifica Genzano in **zona sismica 2, sottozona 2B**: sismicità media.
+Genzano sorge sul vulcano dei Colli Albani, sul bordo esterno del cratere del Lago di Nemi. Il vulcano è **quiescente**, non spento, e lo sorveglia l'INGV. La Regione Lazio classifica Genzano in **zona sismica 2, sottozona 2B**: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili.
 
 La nostra storia lo conferma. Il terremoto dei Colli Albani del 26 agosto 1806 colpì Genzano con intensità VIII della scala MCS. Il catalogo storico dell'INGV parla di gravi danni, con morti e feriti. Genzano ha avuto intensità VII anche nel 1892 e nel 1927.
 
