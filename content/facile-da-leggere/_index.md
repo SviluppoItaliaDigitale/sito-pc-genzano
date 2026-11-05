@@ -277,7 +277,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <p><strong>IT-alert</strong> è un messaggio che lo Stato manda sul tuo telefono quando c'è un pericolo grande.</p>
 
 <ul class="facile-elenco">
-<li>il telefono suona forte anche se è in silenzio;</li>
+<li>il telefono fa un suono forte, diverso dal solito (se è in silenzioso, il suono può non partire);</li>
 <li>appare un messaggio sullo schermo;</li>
 <li>leggi tutto il messaggio con calma;</li>
 <li>fai quello che dice il messaggio.</li>

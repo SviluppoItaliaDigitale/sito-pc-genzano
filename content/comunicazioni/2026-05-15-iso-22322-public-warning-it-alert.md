@@ -46,16 +46,16 @@ Sono principi di **comunicazione del rischio** allineati al **D.Lgs. 1/2018** it
 
 ## IT-alert: il sistema italiano
 
-**IT-alert** è il sistema nazionale di allerta pubblica via **cell broadcast**: un canale tecnico che invia un messaggio a **tutti i telefoni** (anche stranieri in roaming) presenti in una determinata area geografica. Il telefono **non deve essere registrato**, **non serve un'app**, **non serve credito**, **non serve internet**: il messaggio passa sulla rete cellulare in modo simile a una chiamata di servizio.
+**IT-alert** è il sistema nazionale di allerta pubblica via **cell broadcast**: un canale tecnico che invia un messaggio a **tutti i telefoni** (anche stranieri in roaming) presenti in una determinata area geografica. Il telefono **non deve essere registrato**, **non serve un'app**, **non serve credito**, **non serve internet**.
 
 Caratteristiche di IT-alert in linea con ISO 22322:
 
-- **Geolocalizzato**: solo i telefoni nell'area effettivamente esposta ricevono il messaggio. Non si bombarda l'intera Italia per un'alluvione locale.
-- **Multilingue**: italiano e inglese di base, con possibilità di altre lingue per zone turistiche.
+- **Mirato su un'area**: il messaggio parte dalle celle che coprono la zona interessata, non da tutta Italia. Può arrivare anche poco fuori dall'area, e qualche telefono nell'area può non riceverlo.
+- **Multilingue**: italiano e inglese; in provincia di Bolzano italiano e tedesco e, quando possibile, inglese.
 - **Integrato con il sistema nazionale**: l'attivazione passa dal Dipartimento della Protezione Civile e dalle autorità competenti per lo scenario, secondo procedure definite.
 - **Accessibile**: il messaggio testuale è leggibile anche da chi non sente, e contiene istruzioni chiare in lingua naturale.
 
-Per quali rischi viene attivato? Il sistema è **operativo dal 13 febbraio 2024** per quattro tipologie di emergenza: incidente nucleare o emergenza radiologica; incidente rilevante in stabilimento industriale; collasso di una grande diga; attività vulcanica ai Campi Flegrei, al Vesuvio e all'isola di Vulcano. Restano invece in **fase sperimentale**, con soli messaggi di test, il maremoto generato da sisma, l'attività vulcanica dello Stromboli e le precipitazioni intense. **IT-alert non invia le allerte meteo**: per pioggia, vento e temporali valgono i canali del sistema di allertamento (bollettini del Centro Funzionale Regionale, siti istituzionali, avvisi del Comune).
+Per quali rischi viene attivato? Il sistema è **operativo dal 13 febbraio 2024** per quattro tipologie di emergenza: incidente nucleare o emergenza radiologica; incidente rilevante in stabilimento industriale; collasso di una grande diga; attività vulcanica ai Campi Flegrei, al Vesuvio e all'isola di Vulcano. Restano invece in **fase sperimentale**, con soli messaggi di test e fino al 31 dicembre 2026, il maremoto generato da sisma e l'attività vulcanica dello Stromboli. Per le precipitazioni intense la [direttiva del 12 febbraio 2026](https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/) prevede, al posto di IT-alert, un'applicazione dedicata. **IT-alert non invia le allerte meteo**: per pioggia, vento e temporali valgono i canali del sistema di allertamento (bollettini del Centro Funzionale Regionale, siti istituzionali, avvisi del Comune).
 
 ## Cosa fare quando arriva un'allerta IT-alert
 
@@ -67,7 +67,9 @@ Per quali rischi viene attivato? Il sistema è **operativo dal 13 febbraio 2024*
 
 ## In sintesi
 
-ISO 22322 è il modello internazionale di un sistema di allerta pubblica fatto bene. **IT-alert** è la versione italiana di quel modello. Il fatto che un cittadino in Lazio riceva oggi un messaggio comprensibile, geolocalizzato, multilingue e accessibile **non è scontato**: dietro c'è un decennio di lavoro tecnico e operativo, allineato a uno standard internazionale.
+ISO 22322 descrive come si progetta un sistema di allerta pubblica fatto bene. **IT-alert** ne ha molte delle caratteristiche: un messaggio comprensibile, mirato su un'area, in due lingue e leggibile anche da chi non sente. Non è scontato: dietro ci sono anni di prove, dal 2022, e le indicazioni operative scritte per ogni rischio.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio sui rischi in sperimentazione: dal 12 febbraio 2026 le precipitazioni intense non sono più fra i rischi di IT-alert. Abbiamo corretto anche la descrizione dell'area raggiunta e delle lingue, e tolto l'idea che IT-alert sia «la versione italiana» della norma: le fonti ufficiali lo fanno nascere dalla direttiva europea del 2018.
 
 ## Per approfondire
 

@@ -195,7 +195,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <p><strong>IT-alert</strong> este un mesaj pe care Statul îl trimite pe telefonul tău când există un pericol mare.</p>
 
 <ul class="facile-elenco">
-<li>telefonul sună tare, chiar dacă este pe silențios;</li>
+<li>telefonul scoate un sunet puternic, diferit de cel obișnuit (dacă este pe silențios, sunetul poate lipsi);</li>
 <li>apare un mesaj pe ecran;</li>
 <li>citește tot mesajul cu calm;</li>
 <li>fă ce spune mesajul.</li>

@@ -24,13 +24,15 @@ IT-alert è il sistema di allerta dell'Italia. Lo gestisce la **Protezione Civil
 
 C'è anche una regola internazionale. Si chiama **ISO 22322**. Dice come fare un'allerta che funziona bene.
 
+> **Nota (5 novembre 2026).** Abbiamo corretto questo articolo. Ora segue le pagine ufficiali di IT-alert.
+
 ## Come arriva l'allerta
 
-Un sensore controlla un pericolo. Per esempio un terremoto o un'onda alta.
+Gli esperti controllano un pericolo con i loro strumenti. Per esempio un vulcano o una grande diga.
 
-Poi una persona decide se mandare l'allerta. Non lo decide solo la macchina.
+Poi le autorità mandano l'allerta.
 
-Poi il messaggio arriva a tutti i telefoni nella zona del pericolo.
+Poi il messaggio arriva ai telefoni nella zona del pericolo.
 
 ## Cosa rende buona un'allerta
 
@@ -50,9 +52,9 @@ IT-alert ha tre cose importanti:
 2. **Non serve un'app**. Non serve internet. Non serve credito.
 3. Funziona anche con il telefono di un turista straniero.
 
-IT-alert si usa per pericoli grandi. Per esempio: onda alta del mare, diga che si rompe, fabbrica pericolosa, vulcano.
+Oggi IT-alert si usa in 4 casi: una grande diga che si rompe, un vulcano (Campi Flegrei, Vesuvio, Vulcano), un incidente nucleare, un incidente grave in una fabbrica pericolosa. Per il maremoto ci sono ancora le prove.
 
-Per i pericoli piccoli ci sono gli altri canali. Per esempio il sito e i social della Protezione Civile.
+Per le allerte meteo e gli altri avvisi ci sono altri canali. Per esempio il sito della Regione, il sito del Comune e i social della Protezione Civile.
 
 ## Cosa fare quando arriva l'allerta
 

@@ -1,19 +1,19 @@
 ---
 title: "Materiali pronti da scaricare"
-description: "Podcast, infografiche, quiz e flashcard sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
+description: "Video, infografiche e presentazioni sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
 layout: "list"
 tts: true
 toc: true
-dataUltimaRevisione: "2026-10-24"
+dataUltimaRevisione: "2026-11-05"
 ---
 
 In questa pagina trovi **materiali multimediali pronti da scaricare e condividere**, organizzati per tema di Protezione Civile.
 
-Sono redatti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma partendo da fonti istituzionali (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO), e sempre verificati prima della pubblicazione.
+Li prepara il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma partendo da fonti istituzionali (Dipartimento della Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale del Lazio, standard ISO). Li ricontrolliamo sulle fonti: quando troviamo un errore, togliamo il materiale dalla pagina finché non è corretto. Per questo, dal 5 novembre 2026, i podcast e i materiali su IT-alert non sono più in elenco: li stiamo rifacendo.
 
 ## Cosa puoi fare con questi materiali
 
-- **Ascolta i podcast** sul telefono o in macchina, durano 20-25 minuti ciascuno.
+- **Guarda i video** sul telefono o proiettali in classe.
 - **Scarica le infografiche** e condividile su WhatsApp, in classe, in famiglia.
 - **Usa le presentazioni** se sei un docente: sono pensate per un'ora di Educazione Civica.
 
@@ -27,9 +27,7 @@ Per un uso commerciale, per esempio da parte di un editore, o in un contesto ist
 
 ## Stiamo costruendo questa biblioteca
 
-I primi materiali stanno arrivando. Torna fra qualche giorno: aggiorniamo periodicamente, compatibilmente con il tempo del volontariato.
-
-Continueremo a pubblicare nuovi podcast, infografiche, presentazioni, quiz e flashcard su altri temi della Protezione Civile: rischio sismico, vulcanico, idrogeologico, incendi boschivi, IT-alert, kit di emergenza, piano comunale, comportamenti di autoprotezione, casi storici.
+Aggiorniamo la pagina periodicamente, compatibilmente con il tempo del volontariato. Continueremo a pubblicare nuovi materiali su altri temi della Protezione Civile: piano comunale, comportamenti di autoprotezione, casi storici.
 
 ### Hai un tema che vorresti vedere trattato?
 
@@ -39,10 +37,10 @@ Scrivici a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionec
 - il **pubblico** a cui serve (docente, famiglia, volontario, studente, caregiver);
 - il **formato** preferito (podcast da ascoltare in macchina, infografica per WhatsApp, slide per la classe, quiz per ripasso).
 
-Valuteremo la richiesta nei prossimi aggiornamenti, **compatibilmente con il tempo del volontariato** e con la disponibilità di fonti istituzionali verificate (DPC, INGV, ISPRA, Regione Lazio, standard ISO). Non ci impegniamo su tempi certi: ogni materiale viene prodotto, riletto e verificato prima della pubblicazione.
+Valuteremo la richiesta nei prossimi aggiornamenti, **compatibilmente con il tempo del volontariato** e con la disponibilità di fonti istituzionali verificate (DPC, INGV, ISPRA, Regione Lazio, standard ISO). Non ci impegniamo su tempi certi: ogni materiale nuovo viene riletto e verificato sulle fonti prima della pubblicazione.
 
 ## Altri materiali del sito
 
 - [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei micro-schede A5 stampabili con azioni concrete di autoprotezione
 - [Addestramento e buone pratiche](/esercitazioni/) — come si addestra il Gruppo: turni operativi ed esercitazioni programmate
-- [Audio e podcast](/audio-e-podcast/) — articoli ascoltabili e podcast del Gruppo
+- [Audio e podcast](/audio-e-podcast/) — articoli da ascoltare e podcast del Dipartimento della Protezione Civile

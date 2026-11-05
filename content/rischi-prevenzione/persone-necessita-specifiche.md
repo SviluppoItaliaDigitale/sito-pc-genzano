@@ -49,7 +49,7 @@ La norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for p
 
 ### Per le persone con disabilità sensoriale
 
-- **Persone non udenti:** tieni un dispositivo con vibrazione o segnale luminoso per le allerte; IT-alert, il sistema nazionale di allarme pubblico, non richiede alcuna app, ma verifica che sul telefono siano attive le notifiche di emergenza e la vibrazione.
+- **Persone non udenti:** tieni un dispositivo con vibrazione o segnale luminoso per le allerte; IT-alert, il sistema nazionale di allarme pubblico, non richiede app né impostazioni: il messaggio compare scritto sullo schermo e, in base al modello, può arrivare anche sullo smartwatch collegato al telefono.
 - **Persone non vedenti:** memorizza i percorsi di uscita da casa e dal luogo di lavoro; tieni il bastone sempre a portata di mano; segui le indicazioni tattili dove presenti.
 
 ### Per i bambini

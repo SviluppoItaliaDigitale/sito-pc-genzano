@@ -1098,11 +1098,11 @@ document.addEventListener('DOMContentLoaded', () => {
             question: 'Cosa è IT-alert?',
             answers: [
                 { text: 'Un nuovo gioco di emergenza', correct: false },
-                { text: 'Un messaggio del Governo che arriva su tutti i cellulari nella zona di pericolo', correct: true },
+                { text: 'Un messaggio della Protezione Civile che arriva sui cellulari nella zona di pericolo', correct: true },
                 { text: 'Una sigla dei volontari', correct: false },
                 { text: 'Una radio per i pompieri', correct: false }
             ],
-            explanation: 'IT-alert è il sistema italiano di allarme pubblico, attivo dal 2024: il Governo manda un messaggio (cell broadcast) a tutti i cellulari accesi nella zona del pericolo. Arriva anche se non hai i contatti del Comune.'
+            explanation: 'IT-alert è il sistema italiano di allarme pubblico, attivo dal 2024: la Protezione Civile manda un messaggio (cell broadcast) ai cellulari accesi e con campo nella zona del pericolo. Arriva anche se non hai i contatti del Comune.'
         },
         {
             category: 'comunicazione',
@@ -1128,14 +1128,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'comunicazione',
-            question: 'Perché il messaggio di IT-alert arriva fortissimo e non puoi metterlo in silenzio?',
+            question: 'Perché il messaggio di IT-alert arriva anche se hai spento la voce IT-alert nelle impostazioni?',
             answers: [
                 { text: 'Per fare uno scherzo', correct: false },
-                { text: 'Perché in emergenza l\'allarme deve raggiungere TUTTI, anche chi dorme', correct: true },
+                { text: 'Perché in emergenza l\'allarme deve raggiungere tutte le persone della zona', correct: true },
                 { text: 'Per pubblicizzare il Governo', correct: false },
                 { text: 'Perché è un test', correct: false }
             ],
-            explanation: 'IT-alert usa un suono forte e una vibrazione speciale che ignora le impostazioni silenziose: in emergenza vera, ogni minuto conta e la notifica deve svegliare anche chi dorme.'
+            explanation: 'IT-alert usa il livello più alto degli avvisi di emergenza: il messaggio arriva anche se hai spento la voce IT-alert nelle impostazioni. Se il telefono è in silenzioso, il messaggio arriva lo stesso, ma il suono speciale potrebbe non partire.'
         },
         {
             category: 'comunicazione',

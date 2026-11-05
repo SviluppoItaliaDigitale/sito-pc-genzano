@@ -106,7 +106,7 @@
         'La sirena dell\'ambulanza ha tre toni.',
         'Il tuono fa "boom" dopo il fulmine.',
         'L\'allarme della scuola dice di uscire in ordine.',
-        'IT-alert è un suono lungo del telefono: leggi il messaggio.'
+        'Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.'
       ],
       teoria: [
         { titolo: 'Allerte meteo', url: '/allerte-meteo/' }

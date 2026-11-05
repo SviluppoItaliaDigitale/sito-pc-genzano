@@ -530,7 +530,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 
 **Casi studio — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
 
-- 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione lenta. *(storia/scienze/ed. civica)*
+- 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, evacuazioni preventive, ricostruzione lenta, perché IT-alert non avvisa dei terremoti. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria/) — "dov'era e com'era": modello internazionale di ricostruzione + Legge 225/1992. *(storia/geografia)*
 - 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — il «Fate presto» del Mattino, la denuncia di Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
 - 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-secondaria/) — sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio. *(storia/scienze)*
@@ -771,7 +771,7 @@ Materiale integrativo per il docente che vuole offrire esempi **concreti, recent
 **Domande-guida**:
 - Cos'è un "evento compound"? (siccità → suolo impermeabile → alluvione rapida)
 - Perché 23 fiumi hanno rotto gli argini in 36 ore?
-- Qual è stato il ruolo di [IT-alert](https://www.it-alert.it/) nella prima sperimentazione?
+- Perché [IT-alert](https://www.it-alert.gov.it/) non si usa per le piogge intense? Quali canali avvisano la popolazione in caso di alluvione?
 - I volontari da Lazio sono stati inviati? Come si organizza la colonna mobile regionale?
 
 ### Caso studio 3 — Frana di Ischia 26 novembre 2022

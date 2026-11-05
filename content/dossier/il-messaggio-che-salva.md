@@ -42,7 +42,7 @@ Non serve scaricare un'app, non serve registrarsi, **nessun dato personale** vie
 {{< dossier-scena id="it-alert" image="/images/dossier/allertamento-it-alert.webp" alt="Schermata di uno smartphone con un messaggio di test del sistema di allerta pubblica IT-alert, in italiano e inglese" align="top" kicker="Il caso italiano" title="IT-alert: la voce<br>d'emergenza dello Stato" credito="Immagine: 0 Noctis 0 · CC BY-SA 4.0, via Wikimedia Commons" >}}
 **IT-alert**, gestito dal **Dipartimento della Protezione Civile**, è operativo dal **13 febbraio 2024**. Avvisa per il collasso di una grande diga, gli incidenti industriali rilevanti (Direttiva Seveso), gli incidenti nucleari e l'attività vulcanica di Campi Flegrei, Vesuvio e Vulcano.
 
-Il catalogo completo prevede anche **maremoto**, **Stromboli** e **precipitazioni intense**. I test nazionali del 2023 e quelli su rischi specifici del gennaio 2024 hanno collaudato il sistema in tutta Italia.
+In sperimentazione restano il **maremoto** e lo **Stromboli**, fino al 31 dicembre 2026. Per le **precipitazioni intense** la [direttiva del 12 febbraio 2026](https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/) ha scelto un'applicazione dedicata, al posto di IT-alert. I test regionali del 2023 e quelli su rischi specifici fra dicembre 2023 e febbraio 2024 hanno collaudato il sistema in tutta Italia.
 
 Il **27 settembre 2023**, attorno a mezzogiorno, anche i telefoni nel Lazio — e quindi a **Genzano** — ricevettero il messaggio di test: lo stesso sistema che un giorno potrebbe avvisare il nostro territorio.
 {{< /dossier-scena >}}

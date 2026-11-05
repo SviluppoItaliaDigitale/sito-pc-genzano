@@ -137,6 +137,7 @@
     }
   }
 
+  // Suono di esempio per il gioco: non riproduce il suono ufficiale dei messaggi IT-alert.
   function itAlert() {
     if (!init()) return;
     for (var i = 0; i < 3; i++) {

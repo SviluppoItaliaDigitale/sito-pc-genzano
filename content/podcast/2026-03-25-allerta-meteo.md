@@ -5,6 +5,14 @@ description: "Episodio podcast sull'allerta meteo nel Lazio: codici colore, diff
 episodio: 2
 audio: "/podcast/episodi/2026-03-25-allerta-meteo-podcast.m4a"
 draft: false
+# Puntata sospesa il 5 novembre 2026, in attesa di essere rifatta e
+# verificata: la pagina non si pubblica e il suo indirizzo rimanda a
+# /podcast/ (aliases in content/podcast/_index.md). Il file audio resta
+# sul server, scollegato.
+build:
+  list: never
+  render: never
+  publishResources: false
 ---
 
 Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Allerta meteo**.

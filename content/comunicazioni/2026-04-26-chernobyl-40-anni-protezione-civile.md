@@ -59,7 +59,7 @@ Il rischio di un incidente nucleare in Europa esiste ancora. Le centrali in funz
 In caso di **emergenza radiologica reale**, il comportamento corretto è semplice e si riassume in **tre azioni**:
 
 1. **Restare al chiuso**, in casa o nell'edificio in cui ci si trova. Chiudere porte e finestre, spegnere ventilazione e condizionatori. Le pareti riducono in modo significativo l'esposizione alle radiazioni esterne.
-2. **Ascoltare i canali ufficiali**: Dipartimento di Protezione Civile, Prefettura, Comune. In futuro anche **IT-alert**, il sistema di allertamento pubblico nazionale, sarà uno dei canali primari.
+2. **Ascoltare i canali ufficiali**: Dipartimento di Protezione Civile, Prefettura, Comune. Anche **IT-alert**, il sistema di allarme pubblico nazionale, è uno dei canali: dal 13 febbraio 2024 è operativo per le emergenze nucleari e radiologiche.
 3. **Seguire le istruzioni di iodoprofilassi**, se attivata dalle autorità sanitarie. Lo iodio stabile (in compresse) **non è un farmaco da prendere di propria iniziativa**: si assume solo se e quando le autorità lo dispongono, e nelle dosi indicate, perché ha controindicazioni.
 
 Quello che **non bisogna fare** è altrettanto importante: non andare a comprare scorte in farmacia in modo disordinato, non assumere iodio "preventivamente", non condividere notizie non verificate sui social media. La disinformazione in emergenza fa più danni della radiazione stessa.
@@ -93,3 +93,5 @@ Fonti istituzionali:
 - [ISS — Sistema RESORAD](https://www.iss.it/).
 - [IAEA — The Chernobyl Accident](https://www.iaea.org/topics/chornobyl).
 - [Piano nazionale emergenze radiologiche e nucleari (2022)](https://rischi.protezionecivile.gov.it/it/nucleare/attivita/).
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: è già operativo per le emergenze nucleari e radiologiche dal 13 febbraio 2024.

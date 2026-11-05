@@ -56,13 +56,13 @@ L'evento del 15 settembre 2022 ha riacceso il dibattito su due aspetti del siste
 
 **1. La precisione delle allerte meteo locali.** Per quel 15 settembre, il bollettino del **Centro Funzionale Regionale Marche** aveva emesso un'**allerta gialla** per rischio idrogeologico, non un'allerta arancione o rossa. La **previsione meteorologica** non aveva colto la **localizzazione esatta** del nucleo precipitativo né la sua **intensità eccezionale**. È un limite intrinseco delle previsioni meteorologiche italiane su scala locale per fenomeni convettivi: i modelli numerici hanno **risoluzione spaziale limitata** e i temporali estivi-autunnali sono difficili da prevedere con largo anticipo.
 
-**2. La comunicazione al cittadino.** Anche con un'allerta tempestiva, comunicare di notte a chi dorme è difficilissimo. Il sistema **IT-alert** — già in fase di sperimentazione nel 2022, oggi pienamente attivo — è stato pensato anche per rispondere a queste situazioni: una **notifica sonora forte** sul telefono cellulare, in qualunque luogo e ora, non legata ad app o configurazioni. È una delle "lezioni operative" che eventi come l'alluvione marchigiana hanno reso urgenti.
+**2. La comunicazione al cittadino.** Anche con un'allerta tempestiva, comunicare di notte a chi dorme è difficilissimo. Il sistema **IT-alert**, già in prova nel 2022, è operativo dal 13 febbraio 2024 per quattro rischi: grandi dighe, alcuni vulcani, incidenti nucleari e incidenti industriali. Per le piogge intense è rimasto in sperimentazione. Con la [direttiva del 12 febbraio 2026](https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/) si è scelta un'applicazione dedicata, da rendere operativa entro dodici mesi.
 
 ## Cosa abbiamo costruito da allora
 
 Negli anni successivi all'alluvione del 2022:
 
-- **IT-alert** è stato pienamente attivato dal 2024 e oggi il **Dipartimento di Protezione Civile** ha completato la copertura nazionale. Il sistema invia notifiche solo a chi si trova nell'area colpita ed è gratuito.
+- **IT-alert** è operativo dal 13 febbraio 2024 per quattro rischi, fra i quali non ci sono le piogge intense. Il messaggio arriva gratis ai telefoni presenti nell'area interessata.
 - I **Centri Funzionali Regionali** sono stati potenziati con strumenti di **nowcasting** (previsione a brevissimo termine, 0-3 ore) basati su radar meteorologici, satelliti e modelli ad altissima risoluzione.
 - I **Piani di Emergenza Comunali** hanno rafforzato il principio dell'**autoprotezione di prima istanza**: non si può aspettare l'intervento delle squadre di soccorso davanti a una piena improvvisa.
 - Si è acceso il dibattito sulla **manutenzione ordinaria di fossi e caditoie** comunali: un fosso intasato da rifiuti o vegetazione moltiplica gli effetti di una piena improvvisa.
@@ -73,7 +73,7 @@ Per chi vive in **zone collinari, lungo corsi d'acqua minori, in aree urbane con
 
 1. **Conoscere i livelli di allerta**: verde, giallo, arancione, rosso. Si trovano sul portale **del Centro Funzionale Regionale** della propria Regione (per il Lazio: [regione.lazio.it/protezione-civile](https://www.regione.lazio.it/protezione-civile)).
 2. **Non sottovalutare l'allerta gialla**: non è "gialla" che vuol dire "non succede niente". Significa che è **possibile** un fenomeno significativo localizzato. È il livello con cui sono accadute molte tragedie (incluso il 2022 marchigiano).
-3. **Tenere il cellulare attivo e con la suoneria alta** durante temporali notturni. **IT-alert** può svegliarvi.
+3. **Tenere il cellulare acceso e carico** durante i temporali notturni, per ricevere chiamate e avvisi delle autorità locali.
 4. **In caso di pioggia molto forte**: mai entrare in scantinati o garage allagati, mai attraversare strade allagate (ne abbiamo parlato in [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)), salire ai piani alti dell'edificio.
 5. **Pulizia dei fossi vicini a casa propria**: è una responsabilità anche dei privati. Un fosso libero salva vite a valle.
 
@@ -88,6 +88,8 @@ Il **Piano di Emergenza Comunale** di Genzano di Roma, consultabile nella pagina
 Le **13 vittime** dell'alluvione marchigiana del 15-16 settembre 2022 sono ricordate ogni anno con cerimonie nei Comuni colpiti. La memoria delle Marche si intreccia, in questi anni, con quella di altre alluvioni recenti — l'**Emilia-Romagna del maggio 2023**, le **Marche di nuovo nel 2024**, la **Toscana e l'Emilia del 2025** — disegnando una mappa preoccupante di **eventi estremi sempre più frequenti** sul territorio italiano.
 
 Quattro anni dopo, l'Italia continua a fare i conti con la propria fragilità idrogeologica e con il fatto che il **clima sta cambiando più velocemente** di quanto le infrastrutture e i piani di emergenza riescano ad adattarsi. Il volontariato di protezione civile è uno degli strumenti che il Paese si è dato per **ridurre il divario** fra rischio e capacità di risposta. Ogni anno, ogni volontario formato, ogni Piano Familiare compilato è un mattone di questa risposta.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: il sistema oggi non si usa per piogge e piene.
 
 ## Per approfondire (fonti istituzionali)
 

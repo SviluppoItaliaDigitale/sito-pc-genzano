@@ -111,7 +111,7 @@ Per evitare delusioni e fraintendimenti, vale la pena chiarire **cosa il volonta
 | **COC** | Centro Operativo Comunale (in sede del Comune, attivato dal Sindaco) |
 | **COI** | Centro Operativo Intercomunale (livello sovracomunale, Provincia) |
 | **NUE** | Numero Unico Emergenze (112) |
-| **IT-alert** | Sistema nazionale di allarme pubblico via SMS broadcast |
+| **IT-alert** | Sistema nazionale di allarme pubblico via cell broadcast (non è un SMS); non manda le allerte meteo |
 
 Per definizioni complete vedi il [Glossario](/glossario/).
 

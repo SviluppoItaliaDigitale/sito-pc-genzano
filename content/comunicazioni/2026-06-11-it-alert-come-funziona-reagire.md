@@ -1,7 +1,7 @@
 ---
 title: "IT-alert: come funziona e come reagire a un messaggio"
 date: 2026-06-11T00:01:00+02:00
-description: "IT-alert è il sistema di allarme pubblico italiano. Come riconoscere un messaggio, cosa fare, perché non è un fake quando suona forte."
+description: "IT-alert è il sistema di allarme pubblico italiano. Come riconoscere un messaggio, cosa fare, perché non è una truffa."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -16,94 +16,83 @@ draft: false
 
 > ℹ️ Su questo tema la guida di riferimento, più completa, è **[IT-alert: come si preparano i test e cosa fare al ricevimento](/comunicazioni/2026-07-10-app-it-alert-test-nazionale/)**.
 
-**IT-alert** è il sistema pubblico di **allarme nazionale** del Dipartimento della Protezione Civile. Invia messaggi a tutti i telefoni cellulari presenti in un'area geografica a rischio, in caso di emergenze gravi e imminenti. Il sistema è operativo a pieno regime dal **2024** dopo una lunga fase di test.
+**IT-alert** è il sistema di allarme pubblico del Dipartimento della Protezione Civile. Invia messaggi ai telefoni cellulari presenti in un'area colpita da una grave emergenza, imminente o in corso. È operativo dal **13 febbraio 2024**, dopo una lunga fase di test, per quattro tipi di rischio.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto questo articolo sulle pagine ufficiali di IT-alert. La prima versione elencava rischi per cui il sistema non si usa, come terremoti e incendi. Diceva anche che il suono parte sempre, perfino in modalità silenziosa, e che IT-alert si può disattivare dalle impostazioni. Indicava infine le precipitazioni intense fra i rischi in prova: dal 12 febbraio 2026 non è più così.
 
 ## Perché esiste
 
-In emergenze molto rapide (terremoti, eventi nucleari, crolli di dighe, attacchi terroristici, incendi vicino ad abitato) il tempo tra il rilevamento del rischio e l'azione necessaria è di **minuti**. I canali tradizionali — TV, radio, social, sito comunale — possono non raggiungere chi è in macchina, al cinema, in passeggiata.
+In alcune emergenze il tempo fra l'allarme e l'azione è di pochi minuti: per esempio il collasso di una grande diga o un incidente in uno stabilimento industriale. TV, radio, social e sito del Comune possono non raggiungere chi è in auto, al lavoro o fuori casa.
 
-IT-alert risolve questo: **il telefono che hai in tasca** riceve un messaggio e suona un allarme inconfondibile, anche in modalità silenziosa.
+IT-alert raggiunge **il telefono che hai in tasca**, se è acceso e ha campo, con un messaggio e un suono riconoscibile.
 
 ## Come riconoscere un messaggio IT-alert
 
 Quando arriva un messaggio IT-alert, il tuo telefono:
 
-- **Emette un suono forte e particolare** (simile a una sirena acuta), diverso dalle suonerie normali.
-- **Vibra** in modo insistente.
-- Mostra il testo del messaggio **al centro dello schermo**, a schermo intero.
-- Il messaggio è **scritto in italiano** e ripete le informazioni essenziali.
-- Viene **etichettato** chiaramente come "IT-alert" o "Pubblica emergenza".
+- emette un **suono ben riconoscibile**, diverso dalle suonerie normali;
+- mostra il testo del messaggio, preceduto dall'indicazione **«IT-alert»**, cioè il mittente;
+- blocca per un momento le altre funzioni, finché non tocchi la notifica per confermare di averla vista.
 
-**Funziona anche con il telefono in silenzioso**: è progettato per interrompere tutto in casi davvero gravi.
+Il testo è in italiano e in inglese. Il messaggio arriva anche in modalità silenziosa o «non disturbare», ma in quel caso il suono specifico potrebbe non partire.
 
 ## Non è un fake
 
-Alla prima ricezione molti pensano a uno scam, a un virus, a uno scherzo. **Non lo è**. IT-alert usa una tecnologia chiamata **Cell Broadcast**: non è un SMS, non è una chiamata, non ha un mittente. È un messaggio inviato da tutte le antenne cellulari di un'area a tutti i telefoni che vi si agganciano.
+Alla prima ricezione molti pensano a uno scherzo o a una truffa. **Non lo è**. IT-alert usa il **cell broadcast**: non è un SMS e non arriva da un numero di telefono. Il messaggio parte da un gruppo di celle della rete mobile e raggiunge i telefoni collegati a quelle celle.
 
-- **Non chiede password, dati personali, pagamenti**.
-- **Non invita a cliccare link**.
-- **Non arriva come SMS**: compare come avviso sistema.
-- **Non richiede di scaricare app**.
+- **Non chiede password, dati personali o pagamenti.**
+- **Non arriva come SMS**: compare come avviso di emergenza.
+- **Non richiede di scaricare app.**
 
-Se ricevi un messaggio che dice "allerta IT-alert, clicca qui" o "invia 100 euro", **è una truffa**.
+Se un SMS, un'email o un messaggio in chat si presenta come IT-alert e ti chiede dati, soldi o di scaricare qualcosa, **è una truffa**.
 
 ## Cosa fare quando ricevi un messaggio
 
-1. **Leggi con attenzione** il testo completo. Contiene: il tipo di emergenza, l'area interessata, le azioni da intraprendere.
-2. **Segui le indicazioni** date (restare in casa, evacuare, chiudere il gas, ecc.).
-3. **Informa** familiari e vicini: non tutti possono averlo ricevuto (es. chi ha il telefono spento).
-4. **Non saturare** i numeri di emergenza: il 112 serve a chi è effettivamente in pericolo.
-5. **Ascolta** radio, TV e canali ufficiali per aggiornamenti.
+1. **Leggi con attenzione** tutto il testo: indica il tipo di evento e le azioni da compiere.
+2. **Segui le indicazioni** delle autorità di protezione civile.
+3. **Informa** familiari e vicini: non tutti possono averlo ricevuto, per esempio chi ha il telefono spento.
+4. **Non intasare** i numeri di emergenza: il 112 serve a chi è in pericolo.
+5. **Segui** radio, TV e canali ufficiali per gli aggiornamenti.
 6. **Non diffondere** informazioni non verificate su social o chat.
 
 ## Per quali emergenze si usa
 
-Il decreto del 7 febbraio 2023 stabilisce i casi in cui IT-alert può essere attivato. Dal **13 febbraio 2024** il sistema è **operativo** per quattro tipologie di emergenza:
+I casi in cui IT-alert si può usare li stabilisce la direttiva del Presidente del Consiglio dei ministri del 23 ottobre 2020, aggiornata dalla direttiva del Ministro per la protezione civile e le politiche del mare del 7 febbraio 2023. Dal **13 febbraio 2024** il sistema è **operativo** per quattro rischi:
 
-- **Incidenti nucleari** o emergenze radiologiche.
-- **Incidenti rilevanti** in stabilimento industriale.
-- **Collasso di grandi dighe**.
-- **Attività vulcanica** ai Campi Flegrei, al Vesuvio e all'isola di Vulcano.
+- **incidenti nucleari** o emergenze radiologiche;
+- **incidenti rilevanti** negli stabilimenti industriali;
+- **collasso di grandi dighe**;
+- **attività vulcanica** ai Campi Flegrei, al Vesuvio e all'isola di Vulcano.
 
-Restano invece in **fase sperimentale**, con soli messaggi di test:
+Per il **maremoto** e per l'**attività vulcanica dello Stromboli** la sperimentazione, con soli messaggi di test, continua fino al 31 dicembre 2026. Per le **precipitazioni intense** la [direttiva del Ministro del 12 febbraio 2026](https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/) ha scelto un'altra strada: al posto di IT-alert, un'applicazione dedicata, da rendere operativa entro dodici mesi.
 
-- **Maremoti** generati da terremoto.
-- **Attività vulcanica** dello Stromboli.
-- **Precipitazioni intense**.
-
-Il sistema **non fornisce indicazioni sulle condizioni meteorologiche**: le allerte gialle, arancioni e rosse continuano a essere diffuse dal sistema di allertamento (bollettini del Centro Funzionale Regionale, canali della Regione e del Comune). IT-alert è per **eventi eccezionali**.
+IT-alert **non invia le allerte meteo**. Le allerte gialle, arancioni e rosse continuano ad arrivare dal sistema di allertamento: bollettini del Centro Funzionale Regionale, canali della Regione e del Comune.
 
 ## Test periodici
 
-Il DPC esegue **test periodici** in diverse regioni. Durante un test, il messaggio specifica chiaramente "TEST, questa è una prova, non un'emergenza reale". Gli utenti possono inviare un **questionario post-test** per migliorare il sistema.
+Il Dipartimento fa **test periodici**, annunciati sul sito ufficiale di IT-alert con giorno e area. Durante un test il messaggio comincia con la parola **«TEST»**: non devi fare nulla. Se eri nell'area e il messaggio non ti è arrivato, puoi segnalarlo con il questionario sul sito di IT-alert, entro 24 ore dall'inizio del test.
 
-Quando c'è un test nella tua zona, viene comunicato in anticipo con giorno e ora.
+## Il telefono va configurato?
 
-## Il telefono deve essere configurato?
+No. Non serve installare nulla, iscriversi o cambiare le impostazioni: il messaggio arriva anche con la voce IT-alert disattivata tra gli avvisi di emergenza. Secondo il Dipartimento, i test hanno rilevato che lo ricevono anche i telefoni di vecchia generazione, non smartphone.
 
-No. Non serve installare nulla, non serve iscriversi a nulla. **IT-alert funziona con tutti i telefoni compatibili** (praticamente tutti quelli venduti dopo il 2010 circa):
-- iPhone con iOS recente.
-- Android con versione recente.
+Servono tre cose: telefono **acceso**, **carico** e **con campo** della rete mobile. Con il solo wi-fi, in modalità aereo o a telefono spento il messaggio non arriva.
 
-Alcuni telefoni molto vecchi o "dumbphone" non ricevono i messaggi. Se sei in dubbio, verifica che il tuo dispositivo supporti il cell broadcast.
+## Si può disattivare?
 
-## Posso disattivarlo?
-
-**Tecnicamente sì**, ma è **fortemente sconsigliato**. Il messaggio arriva solo in emergenze gravi e documentate. Disattivarlo significa rinunciare a informazioni potenzialmente salvavita.
-
-Chi ha particolari esigenze (es. persone con **disturbi dell'udito sensibili**) può configurare intensità sonora ridotta mantenendo attive la vibrazione e la notifica visiva.
+No. Il Dipartimento spiega che i messaggi arrivano anche se la voce IT-alert è disattivata, perché per l'invio si usa il livello più alto previsto. In modalità silenziosa il messaggio arriva lo stesso, ma il suono specifico potrebbe non partire.
 
 ## IT-alert e volontariato
 
-Per il Gruppo comunale di Genzano di Roma, IT-alert è uno strumento che **integra** — non sostituisce — la comunicazione con i cittadini. Nelle emergenze locali, le informazioni tattiche (aree di evacuazione, punti di raccolta, messaggi personalizzati) continuano a passare per il Sindaco, la Polizia Locale, i canali comunali.
-
-Ma quando scatta un messaggio IT-alert, il Gruppo è già **attivo** o **in pronta attivazione** secondo i piani comunali.
+Per il Gruppo comunale di Genzano di Roma, IT-alert **si affianca** agli altri canali di informazione e non li sostituisce. Nelle emergenze locali, le indicazioni pratiche (aree di attesa, punti di raccolta, strade chiuse) arrivano dal Sindaco, dalla Polizia Locale e dai canali del Comune.
 
 ## Per approfondire
 
+- Articolo: [IT-alert: storia, tecnologia, accessibilità e cinque falsi miti smontati](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/)
 - Articolo: [Zone di allerta del Lazio](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
 - Articolo: [Previsioni meteo e bollettini](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
-- [IT-alert — Sito ufficiale](https://www.it-alert.it/it/)
-- [DPC — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
+- [IT-alert — Domande frequenti](https://www.it-alert.gov.it/it/faq/)
+- [IT-alert — Sito ufficiale](https://www.it-alert.gov.it/it/)
+- [DPC — Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 
-Quando il tuo telefono suonerà un allarme inconfondibile, non spaventarti. Leggi, capisci, agisci. È il sistema che sta facendo quello per cui è stato costruito.
+Quando il tuo telefono mostra un messaggio IT-alert, non spaventarti. Leggi, capisci, agisci.

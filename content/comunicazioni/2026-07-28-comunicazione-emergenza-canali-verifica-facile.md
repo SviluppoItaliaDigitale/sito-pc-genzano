@@ -29,7 +29,7 @@ In emergenza le false notizie si diffondono in fretta. Su WhatsApp e sui social 
 
 Questi canali danno informazioni sicure.
 
-**IT-alert** è il sistema ufficiale del Governo. Manda messaggi a tutti i telefoni in una zona. Non disattivare mai questo servizio sul tuo telefono.
+**IT-alert** è il sistema ufficiale del Governo. Manda messaggi a tutti i telefoni in una zona. Non devi attivare niente sul tuo telefono.
 
 **Il DPC** è il Dipartimento della Protezione Civile. Il sito ufficiale è protezionecivile.gov.it. Ha anche pagine su Facebook, Instagram e YouTube.
 
@@ -85,13 +85,12 @@ Su WhatsApp e nei gruppi circolano spesso notizie false. Non condividere messagg
 
 Su **X (Twitter)** e **Facebook** segui solo gli account ufficiali con il badge blu. Su **TikTok** fai molta attenzione: ci sono molti video fuori contesto.
 
-## IT-alert: il sistema più sicuro
+## IT-alert: il sistema di allarme pubblico
 
-**IT-alert** è il sistema di allerta pubblico dell'Italia. Quando c'è un pericolo grave, arriva un messaggio sul tuo telefono. Il messaggio vibra e suona. Contiene istruzioni brevi e verificate. Non disattivarlo mai.
+**IT-alert** è il sistema di allerta pubblico dell'Italia. Quando c'è un pericolo grave, arriva un messaggio sul tuo telefono. Il telefono fa un suono speciale, diverso dal solito. Il messaggio contiene istruzioni brevi e verificate.
 
 ## App utili da tenere installate
 
-- **IT-alert** (si installa da sola sui telefoni moderni)
 - **DPC** (Dipartimento della Protezione Civile)
 - **INGV Terremoti** (per le notizie sui terremoti)
 - App della Regione Lazio per le allerte meteo
@@ -110,7 +109,7 @@ Ogni persona ha un ruolo importante:
 Non aspettare l'emergenza. Fai queste cose adesso:
 
 - Segui i canali ufficiali sul tuo telefono.
-- Controlla che IT-alert sia attivo.
+- Tieni il telefono carico. IT-alert arriva da solo: non devi attivarlo.
 - Spiega ai tuoi familiari dove cercare le informazioni.
 
 Quando arriva l'emergenza non hai tempo per cercare i canali giusti. Devi già saperlo.
@@ -120,3 +119,5 @@ Quando arriva l'emergenza non hai tempo per cercare i canali giusti. Devi già s
 - [IT-alert: come funziona](/comunicazioni/2026-07-10-app-it-alert-test-nazionale/)
 - [Le allerte meteo: i codici colore](/allerte-meteo/)
 - [Sito ufficiale del DPC](https://www.protezionecivile.gov.it/)
+
+> **Nota (5 novembre 2026).** Abbiamo corretto la parte su IT-alert. IT-alert non è un'app e non devi attivarlo.

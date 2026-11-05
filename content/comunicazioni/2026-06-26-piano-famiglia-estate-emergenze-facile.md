@@ -190,4 +190,4 @@ Un piano che non provi non serve. In estate:
 - [Ondate di calore: proteggere gli anziani](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)
 - [Temporali estivi Castelli Romani](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
 - [Sito del Dipartimento della Protezione Civile](https://iononrischio.protezionecivile.gov.it/it/)
-- [Sito IT-alert](https://www.it-alert.gov.it/) — per ricevere avvisi di emergenza sul telefono
+- [Sito IT-alert](https://www.it-alert.gov.it/) — per sapere come arrivano gli avvisi sul telefono

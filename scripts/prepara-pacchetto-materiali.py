@@ -245,7 +245,7 @@ TEMI = {
             "Chi pubblica il bollettino: Centro Funzionale Regionale (CFR), non il meteo TV",
             "Cosa fare in giallo, arancione, rosso: azioni concrete crescenti",
             "I 3 tipi di rischio nel bollettino: idrogeologico, idraulico, temporali",
-            "App e canali: dove ricevere le allerte (sito Regione, app IT-alert, canali ufficiali)",
+            "Canali: dove leggere le allerte meteo (bollettini del Centro Funzionale sul sito della Regione, pagina Allerte meteo del sito, canali del Comune). IT-alert non manda le allerte meteo",
         ],
         "icona_emoji": "⛈️📊",
     },
@@ -465,20 +465,23 @@ TEMI = {
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
-            "IT-alert — sito ufficiale Dipartimento Protezione Civile: https://www.it-alert.it",
+            "IT-alert — sito ufficiale del Dipartimento della Protezione Civile: https://www.it-alert.gov.it/it/",
             "DPC — pagina informativa IT-alert: https://www.protezionecivile.gov.it",
             "ISO 22322:2022 — Public warning: pagina sito " + SITO_BASE + "/standard-iso/iso-22322/",
             "Direttiva del Codice Comunicazioni Elettroniche UE (cell broadcast): https://eur-lex.europa.eu",
         ],
         "focus_podcast": [
-            "Cos'è IT-alert: sistema nazionale di allarme pubblico via cell broadcast (tecnologia mobile, non SMS, non app)",
-            "Come arriva: notifica push speciale con suono forte anche se cellulare in silenzioso (escluso modalità aereo)",
-            "Per cosa: maremoto, incidente nucleare, collasso grande diga, attività vulcanica intensa, evento esplosivo radiologico (5 scenari nazionali) + sperimentazione regionali",
-            "Differenza con allerta meteo: IT-alert è per evento in corso o imminente, allerta meteo CFR è previsionale",
-            "Test nazionali 2023-2025: come riconoscere un test (testo dice 'TEST') e cosa NON fare durante un test",
-            "Falsi miti: \"è spam\", \"è dei russi\", \"posso disattivarlo\" — perché su iOS/Android non si disattiva sui canali governativi",
-            "Cosa fare quando squilla: leggere subito, seguire le istruzioni del messaggio, NON cliccare link sospetti se ce ne sono (i veri IT-alert non hanno link cliccabili)",
-            "Accessibilità: messaggi pensati per essere letti anche da chi non sente bene; futuro vibrazione e modalità accessibilità",
+            # Fatti verificati il 05/11/2026 su it-alert.gov.it (Come funziona,
+            # Quando si usa, FAQ, Sperimentazione) e sulla Direttiva del
+            # 12 febbraio 2026: le stesse regole di data/dati_canonici.yaml.
+            "Cos'è IT-alert: il sistema nazionale di allarme pubblico del Dipartimento della Protezione Civile. Usa il cell broadcast: non è un SMS, non è un'app, non è una notifica push",
+            "Come arriva: ai telefoni accesi e con campo nell'area, anche a quelli che non sono smartphone. Il testo è preceduto da «IT-alert», con un suono ben riconoscibile e diverso dalle suonerie. In modalità silenziosa il messaggio arriva, ma il suono può non partire. Non arriva con il solo wi-fi, in modalità aereo o a telefono spento",
+            "Per cosa: operativo dal 13 febbraio 2024 per collasso di grandi dighe, attività vulcanica di Campi Flegrei, Vesuvio e isola di Vulcano, incidenti nucleari o emergenze radiologiche, incidenti rilevanti negli stabilimenti industriali. Maremoto e Stromboli in sperimentazione fino al 31 dicembre 2026, con soli messaggi di test. Non si usa per terremoti, allerte meteo e precipitazioni intense",
+            "Differenza con l'allerta meteo: IT-alert è per gravi emergenze imminenti o in corso, l'allerta meteo del Centro Funzionale è una previsione",
+            "I test: annunciati sul sito it-alert.gov.it con giorno e area; il messaggio comincia con «TEST»; non bisogna fare nulla; chi era nell'area e non l'ha ricevuto può compilare il questionario sul sito",
+            "Impostazioni: non serve fare nulla. Il messaggio arriva anche se la voce IT-alert fra gli avvisi di emergenza del telefono è disattivata",
+            "Cosa fare quando arriva: leggere il messaggio, seguire le indicazioni delle autorità, informarsi sui canali ufficiali. IT-alert non chiede dati personali, password o pagamenti: un SMS o un'email che lo imita e li chiede è una truffa",
+            "Privacy: IT-alert non conosce il numero di telefono, non acquisisce dati personali e va in una sola direzione",
         ],
         "icona_emoji": "📱🚨",
     },
@@ -743,7 +746,7 @@ def prompt_presentazione(tema_data: dict) -> str:
         2007 per incendi).
 
         Slide 15: Risorse e link utili (sito Protezione Civile Genzano,
-        DPC, INGV, app IT-alert).
+        DPC, INGV, sito ufficiale di IT-alert).
 
         ## Per ogni slide includi
 

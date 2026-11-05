@@ -109,7 +109,7 @@ Anche quando l'emergenza è "classica" (terremoto, alluvione), il digitale ha un
 
 ## IT-alert e sistemi digitali di emergenza
 
-Il sistema **IT-alert** italiano — attivato dal 2022 — manda messaggi a tutti i telefoni in un'area colpita da grave emergenza. È un esempio virtuoso di **uso del digitale per la protezione civile**. Funziona anche senza app installate, tramite tecnologia **cell broadcast**.
+Il sistema **IT-alert** italiano, provato dal 2022 e operativo dal 13 febbraio 2024, manda messaggi ai telefoni presenti in un'area colpita da una grave emergenza. È un esempio virtuoso di **uso del digitale per la protezione civile**. Funziona anche senza app installate, tramite tecnologia **cell broadcast**.
 
 Ne abbiamo parlato nella sezione FAQ del sito e nell'articolo sul [piano familiare](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/).
 
@@ -131,3 +131,5 @@ Non avere paura o vergogna: denunciare aiuta a prevenire altri casi.
 - Articolo: [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
 
 Una comunità digitalmente consapevole è una comunità più sicura, anche nelle emergenze tradizionali.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto la data di IT-alert: le prove sono cominciate nel 2022, il sistema è operativo dal 13 febbraio 2024.

@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Comunicazione di crisi', icon: '📢',
             pairs: [
-                { left: 'IT-alert', right: 'SMS d\'emergenza dal Governo a tutti i cellulari nella zona' },
+                { left: 'IT-alert', right: 'Messaggio d\'allarme ai cellulari nella zona di pericolo' },
                 { left: 'Fonti ufficiali', right: 'Comune, DPC, Centro Funzionale Regionale' },
                 { left: 'Fake news', right: 'Notizia falsa: verifica prima di credere e di inoltrare' },
                 { left: 'Centro Funzionale Regionale', right: 'Emette i bollettini di allerta con i codici colore' },
