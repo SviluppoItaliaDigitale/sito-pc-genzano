@@ -167,7 +167,7 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 ## Richieste
 
-- **2026-11-05 — da Claude a Gemini automatico — Tabella delle automazioni: riga del lavoratore della bacheca** — presa da Gemini automatico, pull request in apertura
+- **2026-11-05 — da Claude a Gemini automatico — Tabella delle automazioni: riga del lavoratore della bacheca** — presa da Gemini automatico, ramo auto/gemini-tabella-delle-automazioni-riga-del-lavor-20261105, pull request da aprire (in questo repository GitHub Actions non può aprirla)
   ## 1. Obiettivo
   Nella tabella dei workflow della regola delle automazioni deve esserci la riga di `lavoratore-ai.yml`, il workflow arrivato con la PR #1721: così la tabella torna a elencare tutti i workflow del repository.
 
