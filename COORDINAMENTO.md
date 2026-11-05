@@ -150,7 +150,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **2026-11-05 — Claude — Da cominciare:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
+- Nessun lavoro a metà.
 
 ## Richieste
 

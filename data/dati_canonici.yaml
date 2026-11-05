@@ -1053,3 +1053,23 @@ dati:
     vietati:
       - regex: '(?i)\bpandemi\w*[^.!?\n]{0,40}?\bdichiarat\w*[^.!?\n]{0,30}?\b31\s+gennaio\s+2020|\b31\s+gennaio\s+2020[^.!?\n]{0,60}?\bdichiar\w*\s+(?:la\s+|lo\s+stato\s+di\s+)?pandemi'
         perche: "Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza nazionale: non fu dichiarata una pandemia."
+
+  - id: bollitura-acqua-non-potabile
+    dato: "Quanto bollire l'acqua del rubinetto quando l'avviso del Comune indica la bollitura"
+    valore: "bollore pieno per 1 minuto, poi raffreddare senza ghiaccio; per l'OMS basta raggiungere il bollore pieno; la bollitura non elimina le sostanze chimiche"
+    fonti:
+      - nome: "Istituto Superiore di Sanità, EpiCentro, «Alluvioni: sicurezza dell'acqua e degli alimenti» («basta un minuto»)"
+        url: "https://www.epicentro.iss.it/focus/alluvioni/cibo-acqua"
+      - nome: "CDC, «Use safe water during an emergency» («Boil water for 1 minute»)"
+        url: "https://www.cdc.gov/water-emergency/media/pdfs/334749-B_UseSafeWater-OnePager-508.pdf"
+      - nome: "OMS, «Boil water», nota tecnica WHO/FWC/WSH/15.02 (2015)"
+        url: "https://www.who.int/publications/i/item/WHO-FWC-WSH-15.02"
+    # Nato il 05/11/2026 con la scheda «Acqua non potabile»: un articolo diceva
+    # 3 minuti, la sua versione facile 3 minuti, il corso di radiocomunicazioni
+    # 5 minuti, senza fonte. Allineati al minuto dell'ISS.
+    vietati:
+      - regex: '\b(?:2|3|4|5|10|15|20)\s*minut'
+        perche: "Per l'ISS e i CDC basta 1 minuto di bollore pieno; per l'OMS basta raggiungere il bollore."
+        contesto: '(?i)\bbollit|\bbollire|\bbollore|\bbollirla'
+        stessa_frase: true
+        salvo_se_frase: '(?i)latte|biberon|cottura|cuoc|pasta|uov'

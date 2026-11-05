@@ -95,7 +95,7 @@ Se devi usare **acqua di fonte locale** (pozzo, fontana, fiume):
 - **filtro** portatile con pori ≤ 0,3 micron — rimuove batteri e Giardia ma si intasa presto
 - **pastiglie** di purificazione (es. Halazone, Micropur) — modificano sapore ma sono affidabili
 - **candeggina** senza profumo (per uso militare): 1/8 di cucchiaino in 1 gallone d'acqua, agitare, aspettare 30 minuti; se l'odore di cloro persiste leggermente, è potabile
-- **bollitura** 5 minuti minimo — uccide tutto tranne particolato, dà sapore piatto (recuperabile travasando ripetutamente)
+- **bollitura** a bollore pieno per 1 minuto (Istituto Superiore di Sanità) — elimina germi e parassiti ma non le sostanze chimiche; dà sapore piatto (recuperabile travasando ripetutamente)
 
 **Mai bere**:
 

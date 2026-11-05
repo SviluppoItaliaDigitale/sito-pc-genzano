@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Acqua non potabile — che cosa fare in casa</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/acqua-non-potabile/">
+  <meta name="description" content="Un A4 per la famiglia, in tre livelli di lettura: che cosa fare quando il Comune vieta di bere l'acqua del rubinetto o dopo un'alluvione, bollitura, scorta, neonati e animali.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    /* Selettore del livello di lettura: tre pulsanti di scelta nativi e
+       CSS (:checked ~), nessun JavaScript. Senza CSS si vedono tutte e tre
+       le versioni in ordine, ognuna col suo titolo. In stampa esce solo la
+       versione scelta (di partenza la completa). */
+    .ac-radio {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .ac-scelta {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 8px;
+      padding: 0.35rem 0.7rem 0.6rem 0.7rem;
+      margin: 0 0 0.7rem 0;
+      background: #f0f4f8;
+    }
+    .ac-scelta legend {
+      font-weight: 700;
+      color: var(--scheda-blu);
+      font-size: 0.95rem;
+      padding: 0 0.3rem;
+    }
+    .ac-scelta-nota {
+      margin: 0 0 0.45rem 0;
+      font-size: 0.82rem;
+      color: #495057;
+    }
+    .ac-pulsanti {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .ac-pulsanti label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.35rem 1rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--scheda-blu);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      line-height: 1.2;
+      text-align: center;
+    }
+    .ac-pulsanti label:hover { background: #e7f0fa; }
+    #ac-liv-completo:checked ~ .ac-scelta label[for="ac-liv-completo"],
+    #ac-liv-b1:checked ~ .ac-scelta label[for="ac-liv-b1"],
+    #ac-liv-a2:checked ~ .ac-scelta label[for="ac-liv-a2"] {
+      background: var(--scheda-blu);
+      color: #fff;
+    }
+    #ac-liv-completo:checked ~ .ac-scelta label[for="ac-liv-completo"]::before,
+    #ac-liv-b1:checked ~ .ac-scelta label[for="ac-liv-b1"]::before,
+    #ac-liv-a2:checked ~ .ac-scelta label[for="ac-liv-a2"]::before {
+      content: "✓\00a0";
+    }
+    #ac-liv-completo:focus ~ .ac-scelta label[for="ac-liv-completo"],
+    #ac-liv-b1:focus ~ .ac-scelta label[for="ac-liv-b1"],
+    #ac-liv-a2:focus ~ .ac-scelta label[for="ac-liv-a2"] {
+      outline: 3px solid var(--scheda-oro);
+      outline-offset: 3px;
+    }
+    .ac-versione { display: none; }
+    #ac-liv-completo:checked ~ .ac-v-completo,
+    #ac-liv-b1:checked ~ .ac-v-b1,
+    #ac-liv-a2:checked ~ .ac-v-a2 { display: block; }
+
+    .ac-versione h2 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--scheda-grigio);
+      margin: 0 0 0.35rem 0;
+    }
+    .ac-avviso {
+      background: #fde8ea;
+      border-left: 4px solid var(--scheda-rosso);
+      padding: 0.4rem 0.7rem;
+      margin: 0 0 0.55rem 0;
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+    .ac-griglia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem 0.9rem;
+    }
+    .ac-box {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 8px;
+      padding: 0.4rem 0.65rem;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .ac-box.ac-largo { grid-column: 1 / -1; }
+    .ac-box h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 0.92rem;
+      color: var(--scheda-blu);
+    }
+    .ac-box.ac-no { border-color: var(--scheda-rosso); background: #fff5f5; }
+    .ac-box.ac-no h3 { color: var(--scheda-rosso); }
+    .ac-box p, .ac-box li {
+      font-size: 0.8rem;
+      line-height: 1.38;
+      margin: 0 0 0.2rem 0;
+    }
+    .ac-box ul, .ac-box ol { margin: 0; padding-left: 1.1rem; }
+    .ac-rif {
+      font-size: 0.68rem;
+      color: var(--scheda-grigio);
+      white-space: nowrap;
+    }
+    .ac-v-a2 .ac-box p, .ac-v-a2 .ac-box li { font-size: 0.86rem; }
+    .ac-fonti {
+      margin: 0.55rem 0 0 0;
+      border-top: 2px solid var(--scheda-blu);
+      padding-top: 0.3rem;
+    }
+    .ac-fonti h2 {
+      font-size: 0.85rem;
+      color: var(--scheda-blu);
+      margin: 0 0 0.2rem 0;
+    }
+    .ac-fonti ol {
+      margin: 0;
+      padding-left: 1.3rem;
+      font-size: 0.68rem;
+      line-height: 1.3;
+      color: #343a40;
+    }
+    .ac-fonti li { margin: 0 0 0.05rem 0; overflow-wrap: anywhere; }
+    .ac-fonti p {
+      font-size: 0.68rem;
+      line-height: 1.3;
+      margin: 0.2rem 0 0 0;
+      color: #343a40;
+    }
+    @media (max-width: 600px) {
+      .ac-griglia { grid-template-columns: 1fr; }
+      .ac-pulsanti label { flex: 1 1 100%; }
+    }
+    @media print {
+      .ac-scelta { display: none; }
+      .ac-box.ac-no { background: #fff; }
+      .ac-fonti a { color: #343a40; text-decoration: none; }
+      html { font-size: 83%; }
+      .scheda-page { padding: 0.8cm 1.2cm 0.4cm 1.2cm; }
+      .scheda-header { margin-bottom: 0.45rem; padding-bottom: 0.4rem; }
+      .ac-fonti ol { column-count: 2; column-gap: 1rem; }
+      .ac-fonti li { break-inside: avoid; }
+      .ac-griglia { gap: 0.3rem 0.7rem; }
+      .ac-box { padding: 0.28rem 0.55rem; }
+      .ac-box h3 { margin-bottom: 0.15rem; }
+      .ac-avviso { margin-bottom: 0.4rem; padding: 0.3rem 0.6rem; }
+      .ac-fonti { margin-top: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Acqua non potabile — A4</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Acqua non potabile: che cosa fare in casa</h1>
+        <div class="scheda-sottotitolo">Divieto del Comune o alluvione: da tenere con il kit di casa</div>
+      </div>
+    </header>
+
+    <input class="ac-radio" type="radio" name="ac-livello" id="ac-liv-completo" value="completo" checked aria-describedby="ac-legenda">
+    <input class="ac-radio" type="radio" name="ac-livello" id="ac-liv-b1" value="b1" aria-describedby="ac-legenda">
+    <input class="ac-radio" type="radio" name="ac-livello" id="ac-liv-a2" value="a2" aria-describedby="ac-legenda">
+
+    <fieldset class="ac-scelta no-print">
+      <legend id="ac-legenda">Livello di lettura</legend>
+      <p class="ac-scelta-nota">Le tre versioni dicono le stesse cose. Si stampa quella scelta.</p>
+      <div class="ac-pulsanti">
+        <label for="ac-liv-completo">Completo</label>
+        <label for="ac-liv-b1">Semplice (B1)</label>
+        <label for="ac-liv-a2">Facile (A2)</label>
+      </div>
+    </fieldset>
+
+    <!-- ===================== VERSIONE COMPLETA ===================== -->
+    <section class="ac-versione ac-v-completo" aria-labelledby="ac-t-completo">
+      <h2 id="ac-t-completo">Versione completa</h2>
+
+      <p class="ac-avviso"><strong>Quando succede.</strong> Se le analisi trovano un pericolo per la salute, il Sindaco, su proposta dell'Azienda sanitaria locale, può vietare o limitare l'uso dell'acqua del rubinetto <span class="ac-rif">[1]</span>. Dopo un'alluvione l'acqua del rubinetto può essere contaminata: prima di berla controlla che ordinanze o avvisi del Comune non lo vietino <span class="ac-rif">[2]</span>.</p>
+
+      <div class="ac-griglia">
+        <section class="ac-box">
+          <h3>Dove si legge l'avviso</h3>
+          <ul>
+            <li>Il Sindaco, l'Azienda sanitaria locale e il gestore del servizio idrico devono informare i cittadini sui divieti e sui comportamenti da tenere <span class="ac-rif">[1]</span>.</li>
+            <li>Cerca l'ordinanza sul sito del Comune e sui suoi canali ufficiali; a Genzano di Roma il gestore dell'acquedotto è Acea ATO 2.</li>
+            <li>Leggi l'avviso per intero: dice per quali usi vale il divieto e se la bollitura basta <span class="ac-rif">[1]</span>.</li>
+          </ul>
+        </section>
+
+        <section class="ac-box ac-no">
+          <h3>Finché vale il divieto, non usare l'acqua del rubinetto per</h3>
+          <ul>
+            <li>bere e cucinare;</li>
+            <li>lavare e preparare i cibi, frutta e verdura comprese;</li>
+            <li>lavarti i denti e lavare i piatti;</li>
+            <li>fare il ghiaccio, anche con il distributore del frigorifero;</li>
+            <li>preparare il latte e lavare biberon e tettarelle. <span class="ac-rif">[3] [5] [6]</span></li>
+          </ul>
+        </section>
+
+        <section class="ac-box">
+          <h3>Gli altri usi</h3>
+          <p>Lavarsi, fare la doccia o usare lo sciacquone dipende dal tipo di avviso: alcuni vietano di bere e di cucinare, altri vietano ogni uso <span class="ac-rif">[5]</span>. Fai solo ciò che l'avviso consente.</p>
+          <p>Lava i bambini piccoli con la spugna, così non bevono l'acqua del bagno <span class="ac-rif">[8]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>La scorta d'acqua in casa</h3>
+          <p>Tieni circa 4 litri a persona al giorno, per 3 giorni, per bere e per l'igiene minima: con 4 persone sono circa 48 litri <span class="ac-rif">[7]</span>. Con il caldo ne serve di più <span class="ac-rif">[7]</span>.</p>
+          <p>Conserva l'acqua in bottiglia nella confezione chiusa, in un posto fresco e al buio <span class="ac-rif">[7]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Se l'avviso dice di bollirla</h3>
+          <ol>
+            <li>Porta l'acqua a un bollore pieno e lasciala bollire per 1 minuto <span class="ac-rif">[3] [6]</span>; per l'OMS basta arrivare al bollore pieno <span class="ac-rif">[4]</span>.</li>
+            <li>Togli dal fuoco e lascia raffreddare da sola, senza aggiungere ghiaccio <span class="ac-rif">[4]</span>.</li>
+            <li>Conservala in un contenitore pulito e chiuso <span class="ac-rif">[4]</span>.</li>
+          </ol>
+          <p>Bolli anche l'acqua passata dal filtro della caraffa <span class="ac-rif">[5]</span>. Se non puoi bollirla, un prodotto per disinfettare l'acqua va usato seguendo esattamente le istruzioni, ma non elimina tutti i parassiti come la bollitura; non usare metodi fai da te <span class="ac-rif">[3]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Neonati, persone fragili, animali</h3>
+          <ul>
+            <li>Continua ad allattare al seno, come prima <span class="ac-rif">[3] [6]</span>.</li>
+            <li>Per il latte artificiale usa quello pronto da bere; se è in polvere, preparalo con acqua in bottiglia o bollita <span class="ac-rif">[3] [6]</span>.</li>
+            <li>Per un neonato o una persona con le difese immunitarie basse, chiedi al pediatra o al medico se servono altre precauzioni.</li>
+            <li>Dai agli animali acqua in bottiglia o bollita e raffreddata <span class="ac-rif">[5]</span>.</li>
+          </ul>
+        </section>
+
+        <section class="ac-box ac-largo ac-no">
+          <h3>Se l'avviso dice di non usarla nemmeno bollita</h3>
+          <p>Non bollirla e usa solo acqua in bottiglia: la bollitura elimina germi e parassiti, non le sostanze chimiche <span class="ac-rif">[3] [5]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Quando finisce il divieto</h3>
+          <p>Solo quando il Sindaco revoca l'ordinanza, su proposta dell'Azienda sanitaria locale che ha verificato che il pericolo non c'è più. Il ritorno alla normalità viene comunicato ai cittadini <span class="ac-rif">[1]</span>.</p>
+          <p>Non decidere dall'aspetto o dall'odore: vale solo l'avviso ufficiale.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Chi chiamare</h3>
+          <p><strong>112</strong> solo per un'emergenza: un malore, una persona in pericolo.</p>
+          <p>Per informazioni sull'acqua: il Comune e il gestore del servizio idrico, ai recapiti indicati nell'avviso.</p>
+          <p>Il Gruppo Comunale non si attiva direttamente dai cittadini.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===================== VERSIONE B1 ===================== -->
+    <section class="ac-versione ac-v-b1" aria-labelledby="ac-t-b1">
+      <h2 id="ac-t-b1">Versione in italiano semplice (livello B1)</h2>
+
+      <p class="ac-avviso"><strong>Quando succede.</strong> A volte le analisi trovano un pericolo nell'acqua del rubinetto. Allora il Sindaco, su proposta dell'Azienda sanitaria locale (ASL), può vietarne o limitarne l'uso <span class="ac-rif">[1]</span>. Anche dopo un'alluvione l'acqua del rubinetto può essere sporca: prima di berla, controlla che il Comune non l'abbia vietata <span class="ac-rif">[2]</span>.</p>
+
+      <div class="ac-griglia">
+        <section class="ac-box">
+          <h3>Dove trovi l'avviso</h3>
+          <ul>
+            <li>Il Sindaco, la ASL e chi gestisce l'acquedotto devono avvisare i cittadini e dire che cosa fare <span class="ac-rif">[1]</span>.</li>
+            <li>Guarda il sito del Comune e i suoi canali ufficiali. A Genzano di Roma l'acquedotto è gestito da Acea ATO 2.</li>
+            <li>Leggi tutto l'avviso: dice per quali usi vale il divieto e se basta bollire l'acqua <span class="ac-rif">[1]</span>.</li>
+          </ul>
+        </section>
+
+        <section class="ac-box ac-no">
+          <h3>Finché c'è il divieto, non usare l'acqua del rubinetto per</h3>
+          <ul>
+            <li>bere e cucinare;</li>
+            <li>lavare e preparare il cibo, anche frutta e verdura;</li>
+            <li>lavarti i denti e lavare i piatti;</li>
+            <li>fare il ghiaccio, anche con il frigorifero;</li>
+            <li>preparare il latte e lavare biberon e tettarelle. <span class="ac-rif">[3] [5] [6]</span></li>
+          </ul>
+        </section>
+
+        <section class="ac-box">
+          <h3>Gli altri usi</h3>
+          <p>Lavarti, fare la doccia o usare lo sciacquone: dipende dall'avviso. Alcuni avvisi vietano di bere e cucinare, altri vietano ogni uso <span class="ac-rif">[5]</span>. Fai solo quello che l'avviso permette.</p>
+          <p>Lava i bambini piccoli con la spugna, così non bevono l'acqua <span class="ac-rif">[8]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>La scorta d'acqua in casa</h3>
+          <p>Tieni circa 4 litri a persona al giorno, per 3 giorni, per bere e per lavarsi un po'. Per 4 persone sono circa 48 litri <span class="ac-rif">[7]</span>. Quando fa caldo ne serve di più <span class="ac-rif">[7]</span>.</p>
+          <p>Tieni le bottiglie chiuse, in un posto fresco e al buio <span class="ac-rif">[7]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Se l'avviso dice di bollirla</h3>
+          <ol>
+            <li>Fai bollire forte l'acqua per 1 minuto <span class="ac-rif">[3] [6]</span>. Per l'OMS basta arrivare a un bollore forte <span class="ac-rif">[4]</span>.</li>
+            <li>Spegni e lasciala raffreddare da sola, senza ghiaccio <span class="ac-rif">[4]</span>.</li>
+            <li>Tienila in un contenitore pulito e chiuso <span class="ac-rif">[4]</span>.</li>
+          </ol>
+          <p>Bolli anche l'acqua passata dal filtro della caraffa <span class="ac-rif">[5]</span>. Se non puoi bollirla, puoi usare un prodotto per disinfettare l'acqua, seguendo bene le istruzioni. Però non toglie tutti i parassiti come la bollitura. Non usare metodi fai da te <span class="ac-rif">[3]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Neonati, persone fragili, animali</h3>
+          <ul>
+            <li>Se allatti al seno, continua come prima <span class="ac-rif">[3] [6]</span>.</li>
+            <li>Usa il latte artificiale già pronto. Se è in polvere, preparalo con acqua in bottiglia o bollita <span class="ac-rif">[3] [6]</span>.</li>
+            <li>Per un neonato o per una persona con le difese immunitarie basse, chiedi al pediatra o al medico se serve fare altro.</li>
+            <li>Agli animali dai acqua in bottiglia o bollita e raffreddata <span class="ac-rif">[5]</span>.</li>
+          </ul>
+        </section>
+
+        <section class="ac-box ac-largo ac-no">
+          <h3>Se l'avviso dice di non usarla neanche bollita</h3>
+          <p>Non bollirla e usa solo acqua in bottiglia. La bollitura toglie germi e parassiti, ma non le sostanze chimiche <span class="ac-rif">[3] [5]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Quando finisce il divieto</h3>
+          <p>Finisce solo quando il Sindaco toglie l'ordinanza. Lo fa su proposta della ASL, quando il pericolo non c'è più. Il Comune lo comunica ai cittadini <span class="ac-rif">[1]</span>.</p>
+          <p>Non decidere guardando o annusando l'acqua: vale solo l'avviso ufficiale.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Chi chiamare</h3>
+          <p><strong>112</strong> solo per un'emergenza: un malore, una persona in pericolo.</p>
+          <p>Per informazioni sull'acqua: il Comune e chi gestisce l'acquedotto, ai numeri scritti nell'avviso.</p>
+          <p>Il Gruppo Comunale non si attiva direttamente dai cittadini.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===================== VERSIONE A2 ===================== -->
+    <section class="ac-versione ac-v-a2" aria-labelledby="ac-t-a2">
+      <h2 id="ac-t-a2">Versione facile da leggere (livello A2)</h2>
+
+      <p class="ac-avviso"><strong>Quando succede.</strong> A volte l'acqua del rubinetto è pericolosa. Allora il Sindaco la vieta. Lo decide con la ASL, l'Azienda sanitaria locale <span class="ac-rif">[1]</span>. Anche dopo un'alluvione l'acqua può essere sporca. Prima di berla, controlla l'avviso del Comune <span class="ac-rif">[2]</span>.</p>
+
+      <div class="ac-griglia">
+        <section class="ac-box">
+          <h3>Dove trovi l'avviso</h3>
+          <ul>
+            <li>Il Comune, la ASL e l'acquedotto ti dicono che cosa fare <span class="ac-rif">[1]</span>.</li>
+            <li>Guarda il sito del Comune. A Genzano di Roma l'acquedotto è Acea ATO 2.</li>
+            <li>Leggi tutto l'avviso. Dice che cosa non puoi fare. Dice se puoi bollire l'acqua <span class="ac-rif">[1]</span>.</li>
+          </ul>
+        </section>
+
+        <section class="ac-box ac-no">
+          <h3>Con il divieto, non usare l'acqua del rubinetto per</h3>
+          <ul>
+            <li>bere e cucinare;</li>
+            <li>lavare il cibo, anche frutta e verdura;</li>
+            <li>lavare i denti e i piatti;</li>
+            <li>fare il ghiaccio, anche con il frigorifero;</li>
+            <li>fare il latte e lavare il biberon. <span class="ac-rif">[3] [5] [6]</span></li>
+          </ul>
+        </section>
+
+        <section class="ac-box">
+          <h3>Lavarsi, doccia, WC</h3>
+          <p>Puoi lavarti? Puoi fare la doccia? Puoi usare lo sciacquone del WC? Dipende dall'avviso. Alcuni avvisi vietano tutto <span class="ac-rif">[5]</span>. Fai solo quello che l'avviso permette.</p>
+          <p>Lava i bambini piccoli con la spugna. Così non bevono l'acqua <span class="ac-rif">[8]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Acqua da tenere in casa</h3>
+          <p>Tieni circa 4 litri al giorno per ogni persona, per 3 giorni. Servono per bere e per lavarsi un po'. Per 4 persone servono circa 48 litri <span class="ac-rif">[7]</span>. Con il caldo serve più acqua <span class="ac-rif">[7]</span>.</p>
+          <p>Tieni le bottiglie chiuse, al fresco e al buio <span class="ac-rif">[7]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Se l'avviso dice: bolli l'acqua</h3>
+          <ol>
+            <li>Metti l'acqua sul fuoco. Quando bolle forte, aspetta 1 minuto <span class="ac-rif">[3] [6]</span>. Per l'OMS, l'Organizzazione mondiale della sanità, basta il bollore forte <span class="ac-rif">[4]</span>.</li>
+            <li>Spegni il fuoco. Lascia raffreddare l'acqua. Non mettere ghiaccio <span class="ac-rif">[4]</span>.</li>
+            <li>Metti l'acqua in un contenitore pulito e chiuso <span class="ac-rif">[4]</span>.</li>
+          </ol>
+          <p>Bolli anche l'acqua del filtro <span class="ac-rif">[5]</span>. Non puoi bollire? Usa un prodotto per pulire l'acqua. Segui le istruzioni. Non toglie tutti i parassiti. Non inventare altri metodi <span class="ac-rif">[3]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Bambini, persone fragili, animali</h3>
+          <ul>
+            <li>Allatti al seno? Continua come prima <span class="ac-rif">[3] [6]</span>.</li>
+            <li>Usa il latte già pronto. Il latte in polvere? Usa acqua in bottiglia o bollita <span class="ac-rif">[3] [6]</span>.</li>
+            <li>Il bambino è piccolo? Una persona ha le difese immunitarie basse? Chiedi al pediatra o al medico.</li>
+            <li>Agli animali dai acqua in bottiglia o bollita e fredda <span class="ac-rif">[5]</span>.</li>
+          </ul>
+        </section>
+
+        <section class="ac-box ac-largo ac-no">
+          <h3>Se l'avviso dice: non usarla neanche bollita</h3>
+          <p>Non bollirla. Usa solo acqua in bottiglia. Bollire toglie germi e parassiti. Non toglie le sostanze chimiche <span class="ac-rif">[3] [5]</span>.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Quando finisce il divieto</h3>
+          <p>Il divieto finisce solo quando il Sindaco lo toglie. La ASL controlla l'acqua prima. Il Comune avvisa i cittadini <span class="ac-rif">[1]</span>.</p>
+          <p>Non guardare il colore. Non sentire l'odore. Vale solo l'avviso.</p>
+        </section>
+
+        <section class="ac-box">
+          <h3>Chi chiamare</h3>
+          <p><strong>112</strong>, il numero per le emergenze. Chiamalo solo se una persona sta male o è in pericolo.</p>
+          <p>Per l'acqua chiama il Comune o l'acquedotto. I numeri sono nell'avviso.</p>
+          <p>I cittadini non possono chiamare direttamente il Gruppo Comunale.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="ac-fonti" aria-labelledby="ac-t-fonti">
+      <h2 id="ac-t-fonti">Fonti</h2>
+      <ol>
+        <li>D.Lgs. 23 febbraio 2023, n. 18 (acque destinate al consumo umano), art. 15, testo vigente — <a href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-02-23;18~art15">normattiva.it</a></li>
+        <li>Dipartimento della Protezione Civile, «Io non rischio» — Alluvione, cosa fare — <a href="https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/">iononrischio.protezionecivile.gov.it</a></li>
+        <li>Istituto Superiore di Sanità, EpiCentro — Alluvioni: sicurezza dell'acqua e degli alimenti — <a href="https://www.epicentro.iss.it/focus/alluvioni/cibo-acqua">epicentro.iss.it/focus/alluvioni/cibo-acqua</a></li>
+        <li>Organizzazione mondiale della sanità (OMS), «Boil water», nota tecnica WHO/FWC/WSH/15.02, 2015 — <a href="https://www.who.int/publications/i/item/WHO-FWC-WSH-15.02">sito dell'OMS</a></li>
+        <li>Centers for Disease Control and Prevention (CDC, Stati Uniti), «Drinking Water Advisories: An Overview» — <a href="https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html">cdc.gov</a></li>
+        <li>CDC, «Use safe water during an emergency» (scheda) — <a href="https://www.cdc.gov/water-emergency/media/pdfs/334749-B_UseSafeWater-OnePager-508.pdf">cdc.gov</a></li>
+        <li>Ready.gov/FEMA, «Water» (almeno un gallone, circa 3,8 litri, a persona al giorno) e la pagina «Kit di emergenza» di questo sito — <a href="https://www.ready.gov/water">ready.gov/water</a></li>
+        <li>CDC, «Preventing Crypto at Home During a Boil Water Advisory» — <a href="https://www.cdc.gov/cryptosporidium/prevention/crypto-home-boil-water.html">cdc.gov</a></li>
+      </ol>
+      <p>Le indicazioni del tuo Comune e della ASL valgono sempre più di questa scheda.</p>
+    </section>
+
+    <footer class="scheda-footer">
+      <span>Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma</span>
+      <span class="scheda-site">protezionecivilegenzano.it/rischi-prevenzione/kit-emergenza/</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
