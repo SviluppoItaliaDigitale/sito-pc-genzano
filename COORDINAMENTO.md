@@ -150,15 +150,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR da aprire)
-  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
-  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
-  - Prossimo passo: versione facile del 19 maggio, poi gli altri file, i controlli, la PR e il merge.
-- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR da aprire, la unisce Alessandro)
-  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
-  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
-  - Prossimo passo: cover mancanti, revisione, PR. Merge solo con l'OK di Alessandro.
-- **2026-11-05 — Claude — Da cominciare dopo le due voci sopra:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
+- **2026-11-05 — Claude — Da cominciare:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
 
 ## Richieste
 
@@ -347,6 +339,16 @@ Formato per una richiesta di immagine:
 - **08/10/2026, 21:45 — Claude.** I pittogrammi ARASAAC si scelgono guardandoli: il primo risultato della ricerca può mostrare tutt'altro (era successo con «scappare», «ospedale», «caldo», «frana»). In `scripts/scarica-pittogrammi.sh` un quarto campo fissa l'identificativo verificato.
 
 ## Archiviati
+
+- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR #1712)
+  - **Esito (05/11/2026).** Unita con la PR #1712, con l'ok di Alessandro: i 26 articoli ricontrollati sulle fonti primarie, con le copertine col titolo e gli orari nei giorni con più uscite; nessun materiale social.
+  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
+  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
+
+- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR #1710)
+  - **Esito (05/11/2026).** Unita con la PR #1710 alle 06:45: testi su IT-alert allineati alle fonti ufficiali in tutto il sito, quattro voci nuove in `data/dati_canonici.yaml`, puntate del podcast sospese finché non saranno rifatte. Online e verificata alle 07:28.
+  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
+  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
 
 - **2026-10-13 — da Claude ad Alessandro — Ambienti Codex per i passaggi automatici.** La prima richiesta automatica (PR #1365) non è partita: il bot ha risposto «To use Codex here, create an environment for this repo». Serve, una volta sola e solo dal tuo account ChatGPT: https://chatgpt.com/codex/cloud/settings/environments → «Create environment» → repository `SviluppoItaliaDigitale/sito-pc-genzano` (impostazioni predefinite), poi lo stesso per `sito-misericordia-ariccia`, `cooprimavera`, `social-pc-genzano` e `assistente-personale`. Fino ad allora i lavori che partirebbero verso ChatGPT li fa Claude da sola, come previsto dal protocollo. Quando è fatto, Claude rilancia la prova e archivia questa voce.
   - **Esito (14/10/2026).** Ambienti creati e pubblicati da Alessandro il 13/10/2026 per tutti e cinque i repository. Il canale `@codex` sulle pull request è rimasto muto (difetto di OpenAI, openai/codex #20093): dal 14/10/2026 i passaggi si avviano a mano in Codex Cloud con il testo di avvio (protocollo comune, § «Passaggio a ChatGPT»).
