@@ -155,6 +155,63 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
 
+- **2026-11-05 — da Claude a ChatGPT — Tre articoli d'archivio sugli interventi del Gruppo riportati dalle cronache locali** (preparata da Claude, da avviare a mano in Codex Cloud; PR in apertura; ramo `chatgpt/articoli-cronache-interventi-20261105`)
+  - **1. Obiettivo.**
+    Tre articoli d'archivio, datati al giorno dei fatti, sugli interventi del Gruppo riportati dalle cronache locali. Restano in questa pull request: la unisce Alessandro dopo averli confrontati con il registro interventi.
+  - **2. File.**
+    - content/comunicazioni/2026-01-06-maltempo-albero-croce-santa-squadra-ciampino.md
+    - content/comunicazioni/2026-01-08-sottopasso-appia-ciampino-idrovore.md
+    - content/comunicazioni/2026-07-20-chiavi-tombino-centro-storico.md
+    - static/images/ con le tre cover prodotte da `scripts/genera-cover.py` (un file per articolo, nome uguale allo slug)
+  - **3. Che cosa fare.**
+    1. Leggi le pagine di cronaca qui sotto e verifica ogni fatto. Nel corpo entrano solo i fatti confermati dalla pagina, riscritti con parole tue.
+       - Articolo del 6 gennaio 2026. Fatti da verificare: dopo giorni di pioggia un albero cade vicino alla Croce Santa e danneggia due auto; i volontari del Gruppo fanno i rilievi e lo rimuovono, insieme a Carabinieri e Polizia Locale (https://www.castellinotizie.it/2026/01/06/genzano-cade-albero-vicino-la-croce-santa-danneggiate-due-auto-fratelli-ditalia-allattacco-ancora-una-tragedia-sfiorata/); dopo un intervento su un albero in centro, una squadra del Gruppo parte per Ciampino con un'idrovora, su disposizione della Sala Operativa regionale (https://www.ilmamilio.it/wp/2026/01/maltempo-la-protezione-civile-di-genzano-in-azione-squadra-inviata-a-ciampino/); lungo via Montegiove il sottopasso ferroviario al confine fra Genzano e Ariccia torna percorribile grazie al lavoro delle squadre del Gruppo (https://www.ilmamilio.it/wp/2026/01/castelli-roma-e-provincia-nella-morsa-del-maltempo-175-interventi-dei-vigili-del-fuoco-tra-allagamenti-e-alberi-caduti/).
+       - Articolo dell'8 gennaio 2026. Fatti da verificare: nei giorni dopo il maltempo i Gruppi di Genzano e di Albano svuotano con le idrovore il sottopasso dell'Appia a Ciampino, ancora allagato (https://www.castellinotizie.it/2026/01/08/ciampino-protezione-civile-di-genzano-e-albano-in-azione-per-liberare-il-sottopasso-dellappia-ancora-allagato-dopo-il-maltempo/).
+       - Articolo del 20 luglio 2026. Fatti da verificare: su richiesta della Polizia Locale, i volontari recuperano da un tombino del centro storico le chiavi cadute a una persona, dopo una lunga ricerca (https://www.castellinotizie.it/2026/07/20/genzano-perde-le-chiavi-nel-tombino-interviene-la-protezione-civile-e-gliele-restituisce-dopo-una-lunga-ricerca/).
+       Se una pagina non si apre o non conferma un fatto, quel fatto non si scrive e lo elenchi nel riassunto.
+    2. Frontmatter di ogni articolo, in quest'ordine:
+       ```
+       title: "<titolo informativo, senza enfasi>"
+       date: <vedi punto 6>
+       description: "<massimo 160 caratteri>"
+       badge: "Attività"
+       priorita: "normale"
+       autore: "Gruppo Comunale Volontari PC Genzano"
+       image: "/images/<slug>.webp"
+       image_alt: "Cover dell'articolo: <titolo>"
+       scadenza: ""
+       area: "Genzano di Roma"   (per l'articolo dell'8 gennaio: "Ciampino (RM)")
+       allegati: []
+       social: false
+       social_citazione: ""
+       social_punti: []
+       draft: false
+       ```
+       `social: false` resta anche se oggi gli script dei social non lo conoscono ancora: lo riconosceranno con un altro lavoro già in corso. Gli articoli d'archivio non vanno sui social.
+    3. Struttura del corpo: un primo paragrafo concreto (giorno con la data estesa, luogo, che cosa è successo); una o due sezioni `##` con il racconto; la sezione `## Cosa impariamo` con 2–4 punti di prevenzione ricavati solo dai fatti raccontati, ognuno collegato a una pagina del sito che esiste (per esempio /rischi-prevenzione/rischio-idrogeologico/, /rischi-prevenzione/temporali-intensi/, /rischi-prevenzione/vento-forte/, /numeri-utili/); la frase «Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emergenza chiama il 112.»; infine `## Per approfondire` con «Sul nostro sito:» (pagine del sito) e «Le cronache locali:» (nome della testata, titolo e link di ogni pagina usata).
+    4. Regole sulle cronache: parafrasi sempre, mai frasi copiate o virgolettati, nessun nome di testata nel corpo (se serve, «secondo le cronache locali»), testate solo in fondo. Orari arrotondati («nel pomeriggio», «in serata»), mai al minuto. Niente nomi di privati, targhe, indirizzi privati, condizioni di salute. Chi ha chiesto l'intervento: si nomina solo un ente (Polizia Locale, Carabinieri, Sala Operativa regionale); per un cittadino si scrive in forma neutra («dopo una segnalazione»). Nessuna polemica politica: il titolo della prima pagina di Castelli Notizie riporta l'attacco di un partito e non va ripreso in nessun modo.
+    5. Un mezzo o un'attrezzatura si nominano solo come li chiama content/chi-siamo/_index.md, § «Mezzi e attrezzature principali»; «idrovora» va bene come nome generico.
+    6. Date: `date: 2026-01-06` e `date: 2026-01-08` in formato semplice. Il 20 luglio ha già due articoli con `T00:01:00+02:00` e `T00:02:00+02:00`: il nuovo prende `date: 2026-07-20T00:03:00+02:00` e gli altri due non si toccano.
+    7. Cover: per ogni articolo `python3 scripts/genera-cover.py content/comunicazioni/<file>.md`, poi apri l'immagine e controlla che mostri titolo e fascia.
+  - **4. Vincoli.**
+    - Leggi prima AGENTS.md e, nella cartella delle regole del repository, 02-content-design-pa.md (§ «Fonti giornalistiche negli articoli», § «Resoconti degli interventi»).
+    - Italiano corretto, frasi sotto le 20 parole, voce attiva, niente burocratese e niente tic da testo generato (vedi AGENTS.md § 3.5).
+    - Badge «Attività». Nessuna versione facile per questi tre articoli.
+    - Nessun nome di strumenti o servizi automatici nei file, nei metadati e nei messaggi di commit. Prima del primo commit: `bash scripts/imposta-identita-git.sh` (autore Alessandro Cuollo).
+    - Uno strumento che manca si installa (`apt-get update` e `apt-get install`, poi pip); se non ci riesci, scrivi nel riassunto che cosa hai provato.
+  - **5. Controlli.**
+    Tutti senza errori:
+    - `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (nessun ERROR nel log)
+    - `python3 scripts/check-refusi.py` sui tre articoli
+    - `python3 scripts/check-grafiche-social.py` sui tre articoli
+    - `python3 scripts/cerca-incongruenze.py --da-git origin/main`
+    - `python3 scripts/check-dati-canonici.py`
+    - `git diff --name-only origin/main` deve mostrare solo i file del punto 2
+  - **6. Consegna.**
+    Solo i file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti. Alla fine un riassunto breve: fatto / non fatto / perché, e per ogni articolo l'elenco dei dati presi dalla stampa che Alessandro deve confermare con il registro interventi (giorno, luogo, che cosa, chi ha attivato il Gruppo, mezzi). `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla, non segnare pronta la pull request (la unisce Alessandro dopo il confronto con il registro), non toccare file fuori dall'elenco del punto 2, non inventare fatti: se manca qualcosa, scrivilo nel riassunto finale.
+
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
   - **Quando**: Alessandro ti manda l'export del gestionale interventi (file `.xlsx`, di solito `gcpc-genzano-di-roma_global_reports_*.xlsx`) e scrive «aggiorna gli interventi» o simile. Lavora con **Codex** (serve eseguire gli script): il file va allegato al task.
   - **Mai nel repository il file `.xlsx`**: contiene i nomi dei volontari. Tienilo fuori dalla cartella del repository (per esempio `/tmp/`) e non fare `git add -A` senza guardare.
