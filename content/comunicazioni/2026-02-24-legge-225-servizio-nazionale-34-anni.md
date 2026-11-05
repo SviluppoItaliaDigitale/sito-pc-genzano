@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Martedì 24 febbraio 2026 ricorrono 34 anni dalla legge 24 febbraio 1992, n. 225, che istituì il Servizio nazionale della protezione civile. Con quella legge la protezione civile diventò un sistema coordinato. Vi concorrono lo Stato, le Regioni, le Province e i Comuni, insieme agli enti pubblici, alla comunità scientifica, al volontariato e agli ordini professionali.
+Martedì 24 febbraio 2026 ricorrono 34 anni dalla legge 24 febbraio 1992, n. 225. È la legge che istituì il Servizio nazionale della protezione civile. Secondo il Dipartimento della Protezione Civile, con quella legge la protezione civile diventò un «sistema coordinato di competenze». Vi concorrono lo Stato, le Regioni, le Province e i Comuni. Contribuiscono anche gli enti pubblici, la comunità scientifica, il volontariato e gli ordini professionali.
 
 ## Che cosa stabilì la legge
 
@@ -30,13 +30,13 @@ La legge fece del sindaco l'autorità comunale di protezione civile. In emergenz
 
 ## Dalla legge 225 al Codice
 
-La legge uscì nella Gazzetta Ufficiale n. 64 del 17 marzo 1992. L'ha abrogata il Codice della protezione civile, il decreto legislativo 2 gennaio 2018, n. 1, in vigore dal 6 febbraio 2018.
+La legge uscì nella Gazzetta Ufficiale n. 64 del 17 marzo 1992, supplemento ordinario n. 54. Entrò in vigore il 1° aprile 1992. L'ha abrogata l'articolo 48 del Codice della protezione civile, il decreto legislativo 2 gennaio 2018, n. 1. Il Codice è in vigore dal 6 febbraio 2018.
 
-Diversi articoli del Codice indicano tra parentesi l'articolo della legge 225 da cui derivano. L'articolo 7, per esempio, divide ancora le emergenze in tre tipi e rimanda all'articolo 2 della legge del 1992. I sindaci restano autorità territoriali di protezione civile. La pianificazione di protezione civile e la direzione dei soccorsi in ambito comunale sono una funzione fondamentale dei Comuni.
+Diversi articoli del Codice indicano tra parentesi l'articolo della legge 225 da cui derivano. L'articolo 7, per esempio, divide ancora le emergenze in tre tipi e rimanda all'articolo 2 della legge del 1992. I sindaci restano autorità territoriali di protezione civile (articolo 3). Pianificare la protezione civile e dirigere i soccorsi in ambito comunale è una funzione fondamentale dei Comuni (articolo 12).
 
 ## Che cosa ci insegna oggi
 
-Il Codice dà ai cittadini un ruolo preciso. Chiede alle componenti del Servizio di informarli sugli scenari di rischio del loro territorio, anche perché sappiano proteggersi. In emergenza i cittadini devono seguire le disposizioni delle autorità di protezione civile. Chi vuole dare una mano può aderire al volontariato organizzato.
+Il Codice dà ai cittadini un ruolo preciso (articolo 31). Chiede alle componenti del Servizio di informarli sugli scenari di rischio del loro territorio, anche perché sappiano proteggersi. In emergenza i cittadini devono seguire le disposizioni delle autorità di protezione civile. Chi vuole dare una mano può aderire al volontariato organizzato.
 
 Per questo conviene conoscere il [piano di emergenza comunale](/piano-emergenza/) e la propria [area di attesa](/aree-attesa/). Per entrare in un gruppo di volontari c'è la pagina [Diventa volontario](/diventa-volontario/). In emergenza si chiama il 112: il Gruppo Comunale non può essere attivato direttamente dai cittadini.
 
@@ -53,4 +53,5 @@ Per questo conviene conoscere il [piano di emergenza comunale](/piano-emergenza/
 
 - [Dipartimento della Protezione Civile — La nascita del Servizio Nazionale](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/la-nascita-del-servizio-nazionale/)
 - [Dipartimento della Protezione Civile — Legge n. 225 del 24 febbraio 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992-0/)
+- [Normattiva — Legge 24 febbraio 1992, n. 225](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225) (abrogata dal decreto legislativo 2 gennaio 2018, n. 1)
 - [Normattiva — Decreto legislativo 2 gennaio 2018, n. 1, Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1)

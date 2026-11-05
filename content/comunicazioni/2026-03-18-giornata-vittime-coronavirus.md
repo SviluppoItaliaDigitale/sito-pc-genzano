@@ -16,21 +16,21 @@ social_punti: []
 draft: false
 ---
 
-Mercoledì 18 marzo 2026 è la Giornata nazionale in memoria delle vittime dell'epidemia di coronavirus. L'ha istituita la legge 18 marzo 2021, n. 35, per «conservare e rinnovare la memoria di tutte le persone decedute» a causa dell'epidemia. In tutti i luoghi pubblici e privati si osserva un minuto di silenzio.
+Mercoledì 18 marzo 2026 è la Giornata nazionale in memoria delle vittime dell'epidemia di coronavirus. L'ha istituita la legge 18 marzo 2021, n. 35. Lo scopo è «conservare e rinnovare la memoria di tutte le persone decedute» a causa dell'epidemia. In tutti i luoghi pubblici e privati si osserva un minuto di silenzio.
 
 ## Che cosa prevede la legge
 
 La Giornata non è un giorno festivo: la legge esclude gli effetti civili previsti per le ricorrenze festive.
 
-Lo Stato, le Regioni, le Province e i Comuni possono organizzare cerimonie, incontri e momenti di ricordo, con un'attenzione particolare ai più giovani. Le scuole possono proporre percorsi di studio sull'epidemia e sull'impegno per contenerla e per assistere le persone colpite. Il servizio pubblico radiotelevisivo dedica spazi ai temi della Giornata.
+Lo Stato, le Regioni, le Province e i Comuni possono organizzare cerimonie, incontri e momenti di ricordo. La legge chiede di favorire in particolare le iniziative rivolte ai più giovani. Le scuole possono proporre percorsi di studio sull'epidemia e sull'impegno per contenerla e per assistere le persone colpite. Il servizio pubblico radiotelevisivo dedica spazi ai temi della Giornata.
 
 La legge ricorda anche i lavoratori morti in servizio durante l'epidemia. In loro memoria i dipendenti pubblici e privati possono donare la retribuzione di una o più ore di lavoro. La somma va al Fondo per gli investimenti nella ricerca scientifica e tecnologica.
 
 ## L'emergenza e la protezione civile
 
-Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza per sei mesi, per il rischio sanitario legato al coronavirus. Il coordinamento degli interventi sul territorio nazionale fu affidato al Capo del Dipartimento della Protezione Civile.
+Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza per sei mesi. Il motivo era il rischio sanitario legato al coronavirus. Il coordinamento degli interventi sul territorio nazionale fu affidato al Capo del Dipartimento della Protezione Civile.
 
-Lo stato di emergenza fu prorogato più volte. Si è chiuso il 31 marzo 2022, con il decreto-legge n. 24 del 24 marzo 2022.
+Lo stato di emergenza fu prorogato più volte. Il decreto-legge n. 24 del 24 marzo 2022 ne dispose la chiusura al 31 marzo 2022.
 
 ## Che cosa ci insegna oggi
 

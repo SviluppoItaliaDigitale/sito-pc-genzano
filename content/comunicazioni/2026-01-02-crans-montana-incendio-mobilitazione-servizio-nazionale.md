@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Nella notte di Capodanno un grave incendio colpisce un locale notturno di **Crans-Montana**, località turistica del Cantone Vallese, in Svizzera. L'incendio provoca vittime e numerosi feriti, tra cui diversi ustionati gravi. **Venerdì 2 gennaio 2026** il Ministro per la protezione civile e le politiche del mare, Nello Musumeci, firma un decreto. Dispone la **mobilitazione straordinaria del Servizio nazionale** per un intervento all'estero.
+Nella notte di Capodanno un grave incendio colpisce un locale notturno di **Crans-Montana**, località turistica del Cantone Vallese, in Svizzera. **Venerdì 2 gennaio 2026** il Ministro per la protezione civile e le politiche del mare, Nello Musumeci, firma un decreto. Dispone la **mobilitazione straordinaria del Servizio nazionale** per un intervento all'estero. Il decreto ricorda che l'incendio ha causato vittime e numerosi feriti, tra cui diversi ustionati gravi.
 
 ## La richiesta di aiuto della Svizzera
 
@@ -28,13 +28,13 @@ Il Governo italiano presenta le sue offerte di assistenza tramite il Centro di c
 
 Il decreto applica gli articoli 23 e 29 del Codice della protezione civile. Il **Dipartimento della Protezione Civile** coordina l'intervento del Servizio nazionale a supporto delle autorità locali di protezione civile. Cura anche la ricognizione delle attività straordinarie svolte dalle strutture nazionali che attiva.
 
-Secondo il decreto, le spese delle componenti e delle strutture operative mobilitate saranno coperte dal Fondo per le emergenze nazionali. Lo stabilirà un provvedimento del Capo del Dipartimento, se non verrà dichiarato lo stato di emergenza per intervento all'estero.
+Secondo il decreto, il Fondo per le emergenze nazionali coprirà le spese delle componenti e delle strutture operative mobilitate. Lo stabilirà un provvedimento del Capo del Dipartimento, se non verrà dichiarato lo stato di emergenza per intervento all'estero.
 
 ## Come funziona l'aiuto fra Paesi
 
-L'articolo 29 del Codice regola la partecipazione del Servizio nazionale agli interventi di emergenza all'estero. In questi casi si parla di stato di mobilitazione del Servizio nazionale «per intervento all'estero». Si adotta su richiesta del Ministero degli Affari esteri.
+L'articolo 29 del Codice regola la partecipazione del Servizio nazionale agli interventi di emergenza all'estero. In questi casi si parla di stato di mobilitazione del Servizio nazionale «per intervento all'estero». La dichiarazione si adotta su richiesta del Ministero degli Affari esteri.
 
-Il Meccanismo unionale, istituito nel 2001, coordina la risposta europea alle catastrofi. Il suo centro operativo è l'ERCC, attivo 24 ore su 24 e 7 giorni su 7. Un Paese colpito, anche fuori dall'Unione europea, può chiedergli assistenza. Richieste e offerte di aiuto passano da un sistema informatico comune, il CECIS, che collega i centri operativi degli Stati.
+Il Meccanismo unionale, istituito nel 2001, coordina la risposta europea alle catastrofi. Il suo centro operativo è l'ERCC, attivo 24 ore su 24 e 7 giorni su 7. Un Paese colpito, anche fuori dall'Unione europea, può chiedergli assistenza. Richieste e offerte di aiuto passano dal Sistema comune di comunicazione e informazione in emergenza (CECIS). È un sistema informatico che collega i centri operativi degli Stati.
 
 ## Per approfondire
 
@@ -50,3 +50,4 @@ Il Meccanismo unionale, istituito nel 2001, coordina la risposta europea alle ca
 - [Gazzetta Ufficiale, Serie generale n. 7 del 10 gennaio 2026](https://www.gazzettaufficiale.it/gazzetta/serie_generale/caricaDettaglio?dataPubblicazioneGazzetta=2026-01-10&numeroGazzetta=7)
 - [Dipartimento della Protezione Civile — Il Meccanismo unionale di protezione civile](https://relazioni-internazionali.protezionecivile.gov.it/it/meccanismo-unionale-di-protezione-civile/)
 - [Dipartimento della Protezione Civile — Il Codice della Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-codice-della-protezione-civile/)
+- [Normattiva — Decreto legislativo 2 gennaio 2018, n. 1, articolo 29](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art29)

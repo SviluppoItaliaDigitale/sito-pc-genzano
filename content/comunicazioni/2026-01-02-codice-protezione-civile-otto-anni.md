@@ -20,7 +20,7 @@ Martedì **2 gennaio 2018** il decreto legislativo n. 1 introduce il **Codice de
 
 ## Perché serviva un testo unico
 
-Fino ad allora la norma di riferimento era la **legge 225 del 1992**, che aveva istituito il Servizio nazionale. Quando si decide di riformarla, quella legge ha 25 anni ed è già stata modificata molte volte. Altre regole sono finite in leggi diverse: secondo il Dipartimento della Protezione Civile, leggere l'insieme è diventato molto difficile.
+Fino ad allora la norma di riferimento era la **legge 225 del 1992**, che aveva istituito il Servizio nazionale. Quando si decise di riformarla, quella legge aveva 25 anni ed era già stata modificata molte volte. Altre regole erano finite in leggi diverse: secondo il Dipartimento della Protezione Civile, leggere l'insieme era diventato molto difficile.
 
 Il Codice nasce dalla delega della legge n. 30 del 2017. Lo prepara un gruppo di redazione con rappresentanti di Dipartimento, Regioni, Comuni, Ministeri e volontariato. L'articolo 48 abroga, fra le altre, la legge 225. Il decreto esce in Gazzetta Ufficiale il 22 gennaio 2018 ed entra in vigore il 6 febbraio.
 
@@ -30,7 +30,7 @@ Il Codice definisce le attività di protezione civile: previsione, prevenzione e
 
 Una novità è lo **stato di mobilitazione**: permette di chiedere le risorse nazionali anche prima dello stato di emergenza. Il 2 gennaio 2026 la stessa procedura, nella versione per l'estero, serve ad aiutare la Svizzera dopo l'[incendio di Crans-Montana](/comunicazioni/2026-01-02-crans-montana-incendio-mobilitazione-servizio-nazionale/).
 
-Il Codice chiede anche piani di protezione civile pienamente operativi. Per i Comuni pianificare la protezione civile e dirigere i soccorsi è una «funzione fondamentale» (articolo 12).
+Il Codice chiede anche piani di protezione civile pienamente operativi. Per i Comuni, pianificare la protezione civile e dirigere i soccorsi è una «funzione fondamentale» (articolo 12).
 
 ## Il posto dei cittadini
 

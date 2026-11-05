@@ -16,13 +16,13 @@ social_punti: []
 draft: false
 ---
 
-Sabato 12 settembre 2026 è la Giornata mondiale del primo soccorso, che cade ogni anno il secondo sabato di settembre. La coordina il Centro di riferimento mondiale per il primo soccorso della Federazione internazionale delle società di Croce Rossa e Mezzaluna Rossa. Il Centro fornisce anche i materiali alle società nazionali di Croce Rossa.
+Sabato 12 settembre 2026 è la Giornata mondiale del primo soccorso, che cade ogni anno il secondo sabato di settembre. La coordina il Centro di riferimento mondiale per il primo soccorso della Federazione internazionale delle società di Croce Rossa e Mezzaluna Rossa. Il Centro fornisce anche i materiali alle società nazionali che fanno parte della Federazione. Per il 2026 il tema è «First Aid in Migration Contexts»: il primo soccorso nei contesti di migrazione.
 
 ## Che cos'è il primo soccorso
 
-Le linee guida europee del 2025, tradotte in italiano dall'Italian Resuscitation Council (IRC), danno una definizione semplice. Il primo soccorso è un comportamento di aiuto che chiunque può dare, in qualunque emergenza. Comprende anche l'aiuto a sé stessi.
+Le linee guida 2025 dell'European Resuscitation Council (ERC), tradotte in italiano dall'Italian Resuscitation Council (IRC), danno una definizione semplice. Il primo soccorso è un comportamento di aiuto che chiunque può dare, in qualunque emergenza. Comprende anche l'aiuto a sé stessi.
 
-Prestare primo soccorso vuol dire riconoscere e valutare i bisogni della persona e stabilire le priorità. Poi si presta aiuto nei limiti delle proprie competenze e si chiama altro aiuto. Per le linee guida è il primo anello della catena della sopravvivenza.
+Prestare primo soccorso vuol dire riconoscere e valutare i bisogni della persona e stabilire le priorità. Vuol dire anche aiutare nei limiti delle proprie competenze e cercare altro aiuto, per esempio allertando il sistema di emergenza. Per le linee guida è il primo anello della catena della sopravvivenza.
 
 ## I tre principi di chi soccorre
 
@@ -32,13 +32,13 @@ Le linee guida indicano tre principi che aiutano a evitare altre lesioni e a pre
 2. Chiamare il prima possibile il sistema di emergenza. Nel Lazio il numero è il 112.
 3. Usare solo attrezzature o medicinali per i quali si è ricevuta una formazione specifica.
 
-Per alcuni soccorritori l'unica azione sarà chiamare aiuto. Per altri sarà il primo passo di una serie di interventi. Alcuni studi citati dalle linee guida suggeriscono che anche manovre semplici possono evitare la morte, come tenere libere le vie aeree o fermare un'emorragia.
+Per alcuni soccorritori l'unica azione sarà chiamare aiuto. Per altri sarà il primo passo di una serie di interventi. Alcuni studi citati dalle linee guida suggeriscono che anche manovre semplici possano evitare la morte. Si tratta di manovre come tenere libere le vie aeree o fermare un'emorragia.
 
 ## Imparare prima di averne bisogno
 
-Le linee guida chiedono corsi aperti al pubblico più ampio possibile, riducendo le barriere economiche, culturali e di lingua. Ricordano anche che il primo soccorso conta ancora di più dove l'assistenza medica arriva dopo, come nei luoghi isolati.
+Le linee guida chiedono corsi aperti al pubblico più ampio possibile, con meno barriere economiche, culturali e di lingua. Ricordano anche che il primo soccorso conta ancora di più dove l'assistenza medica arriva dopo, come nei luoghi isolati.
 
-Le pagine del nostro sito sul primo soccorso servono a informare: non sostituiscono un corso con le prove pratiche. Il Dipartimento della Protezione Civile consiglia di tenere in casa una cassetta di pronto soccorso e di far sapere a tutti dove si trova.
+Le pagine del nostro sito sul primo soccorso servono a informare: non sostituiscono un corso con le prove pratiche. Il Dipartimento della Protezione Civile consiglia di tenere in casa una cassetta di pronto soccorso. Tutti in casa dovrebbero sapere dove si trova.
 
 ## Per approfondire
 
@@ -51,6 +51,6 @@ Le pagine del nostro sito sul primo soccorso servono a informare: non sostituisc
 
 **Fonti:**
 
-- [Cochrane First Aid, «World First Aid Day»](https://firstaid.cochrane.org/news/world-first-aid-day)
+- [Centro di riferimento mondiale per il primo soccorso della Federazione internazionale delle società di Croce Rossa e Mezzaluna Rossa, «World First Aid Day»](https://www.globalfirstaidcentre.org/world-first-aid-day-2/)
 - [Italian Resuscitation Council, Linee guida ERC 2025, capitolo 12 «Primo soccorso» (PDF, 2,7 MB)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_12-PRIMO-SOCCORSO_15.04.2026.pdf)
 - [Dipartimento della Protezione Civile, «Rischio sismico. Sei preparato?»](https://rischi.protezionecivile.gov.it/it/sismico/sei-preparato/)

@@ -22,19 +22,19 @@ Sabato 3 ottobre 2026 è la Giornata nazionale in memoria delle vittime dell'imm
 
 Secondo il Ministero del Lavoro e delle Politiche Sociali, la data ricorda il naufragio del 3 ottobre 2013 al largo di Lampedusa. Morirono più di 360 migranti. Nel 2017 l'allora Ministero dell'istruzione, dell'università e della ricerca lo ha ricordato come uno dei naufragi più tragici nel Mediterraneo.
 
-La legge prevede cerimonie, iniziative e incontri in tutta Italia. Lo scopo è sensibilizzare alla solidarietà civile verso i migranti, al rispetto della dignità umana e del valore di ogni vita, all'integrazione e all'accoglienza. Le istituzioni promuovono iniziative anche nelle scuole di ogni ordine e grado, pure insieme alle associazioni del settore, per formare i giovani su questi temi.
+La legge prevede cerimonie, iniziative e incontri in tutta Italia. Lo scopo è sensibilizzare l'opinione pubblica alla solidarietà civile verso i migranti e all'accoglienza. La legge richiama anche il rispetto della dignità umana, il valore di ogni vita e l'integrazione. Nelle scuole di ogni ordine e grado le istituzioni promuovono iniziative, anche con le associazioni del settore. L'obiettivo è sensibilizzare e formare i giovani sui temi dell'immigrazione e dell'accoglienza.
 
 ## La protezione civile e l'accoglienza
 
 L'accoglienza delle persone migranti è affidata al Ministero dell'Interno. In alcune fasi lo Stato ha usato anche gli strumenti della protezione civile.
 
-Nel 2011, durante quella che il Dipartimento della Protezione Civile chiamava «emergenza umanitaria», i migranti assistiti venivano distribuiti fra le Regioni. Le quote seguivano un Piano di accoglienza condiviso dal Dipartimento con le strutture regionali di protezione civile, l'Unione delle province italiane (Upi) e l'Associazione nazionale dei comuni italiani (Anci).
+Nel 2011, durante quella che il Dipartimento della Protezione Civile chiamava «emergenza umanitaria», i migranti assistiti venivano distribuiti fra le Regioni. Le quote seguivano un Piano di accoglienza condiviso dal Dipartimento con le strutture regionali di protezione civile. Lo condividevano anche l'Unione delle province italiane (Upi) e l'Associazione nazionale dei comuni italiani (Anci).
 
 L'11 aprile 2023 il Consiglio dei ministri dichiarò lo stato di emergenza su tutto il territorio nazionale, per sei mesi. La causa era l'eccezionale aumento degli arrivi lungo le rotte del Mediterraneo. Con l'ordinanza n. 984 del 16 aprile 2023, il Capo del Dipartimento nominò un Commissario delegato del Ministero dell'Interno. Il Commissario doveva coordinare l'ampliamento dell'accoglienza e assicurare vitto, alloggio, vestiario, assistenza sanitaria e mediazione linguistico-culturale.
 
 ## Informazioni che arrivano a tutti
 
-Chi conosce poco l'italiano deve poter capire che cosa fare in un'emergenza. Sul nostro sito le pagine essenziali, cioè che cosa fare subito, i numeri utili e il piano familiare, sono anche in sette lingue, dall'inglese al rumeno. La pagina «Facile da leggere» è disponibile anche in arabo. Per chi aiuta persone straniere ci sono le schede del kit calamità per l'italiano L2.
+Chi conosce poco l'italiano deve poter capire che cosa fare in un'emergenza. Sul nostro sito le pagine essenziali sono anche in sette lingue: inglese, francese, tedesco, spagnolo, portoghese, rumeno ed esperanto. Sono le traduzioni di «Cosa fare adesso», «Numeri utili» e «Piano di emergenza familiare». La pagina «Facile da leggere» è disponibile anche in arabo. Per chi aiuta persone straniere ci sono le schede del kit calamità per l'italiano come seconda lingua (L2).
 
 ## Per approfondire
 

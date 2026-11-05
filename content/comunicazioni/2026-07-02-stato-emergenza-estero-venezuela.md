@@ -16,23 +16,23 @@ social_punti: []
 draft: false
 ---
 
-Giovedì 2 luglio 2026 il Consiglio dei ministri dichiara lo stato di emergenza per intervento all'estero dopo i terremoti del 24 giugno in Venezuela. Lo stato di emergenza dura sei mesi. Per i soccorsi la delibera mette a disposizione fino a 3 milioni di euro del Fondo per le emergenze nazionali.
+Giovedì 2 luglio 2026 il Consiglio dei ministri dichiara lo stato di emergenza per intervento all'estero. Riguarda i terremoti che il 24 giugno hanno colpito il Venezuela. Lo stato di emergenza dura sei mesi. Per i soccorsi la delibera mette a disposizione fino a 3 milioni di euro del Fondo per le emergenze nazionali.
 
 ## Che cosa dice la delibera
 
 Il 24 giugno due scosse di magnitudo stimata 7.2 e 7.5 hanno colpito il territorio a ovest di Caracas. Sono seguite diverse forti scosse di assestamento. Secondo la delibera ci sono decine di vittime, centinaia di feriti, numerosi dispersi e sfollati. Molte persone hanno dovuto lasciare la propria casa e un gran numero di edifici e infrastrutture è andato distrutto.
 
-La procedura è partita con una nota del 25 giugno del Ministero degli Affari esteri e della cooperazione internazionale, la Farnesina. Il Governo vuole assicurare il contributo dell'Italia ai soccorsi, anche nell'ambito del Meccanismo unionale di protezione civile.
+La procedura è partita il 25 giugno con una nota del Ministero degli Affari esteri, la Farnesina. Lo scopo è assicurare il contributo dell'Italia ai soccorsi, anche nell'ambito del Meccanismo unionale di protezione civile.
 
 Gli interventi di soccorso e di assistenza alla popolazione si decidono con ordinanze del Capo del Dipartimento della Protezione Civile. Le ordinanze possono derogare alle norme vigenti, ma devono rispettare i principi generali dell'ordinamento giuridico.
 
 ## Le squadre italiane sono già partite
 
-Il 25 giugno il Dipartimento della Protezione Civile e la Farnesina hanno organizzato la partenza di un team avanzato. Il suo compito era preparare, con le autorità venezuelane, l'arrivo dei soccorritori italiani.
+Il 25 giugno il Dipartimento della Protezione Civile e la Farnesina hanno predisposto la partenza di un team avanzato. Il suo compito era preparare, con le autorità venezuelane, l'arrivo dei soccorritori italiani.
 
-Venerdì 26 giugno è partito il primo volo. A bordo c'erano operatori dei Servizi sanitari regionali e dei Vigili del Fuoco, per ricerca e soccorso, assistenza medica e logistica. Con loro viaggiava anche personale del Dipartimento e dell'Unità di crisi della Farnesina.
+Venerdì 26 giugno è partito il volo con i soccorritori. A bordo c'erano operatori dei Servizi sanitari regionali e dei Vigili del Fuoco. Avevano compiti di ricerca e soccorso, assistenza medica e logistica. Con loro viaggiava anche personale del Dipartimento e dell'Unità di crisi della Farnesina.
 
-Per sabato 27 giugno il Dipartimento aveva annunciato un secondo aereo dell'Aeronautica Militare. Doveva portare tende per la popolazione e completare il modulo dei Vigili del Fuoco per il supporto logistico e cartografico al campo base.
+Per sabato 27 giugno il Dipartimento aveva annunciato un secondo aereo dell'Aeronautica Militare. Doveva portare tende per la popolazione. Doveva anche completare il modulo dei Vigili del Fuoco per il supporto logistico e cartografico al campo base.
 
 ## Che cos'è lo stato di emergenza per intervento all'estero
 
@@ -49,6 +49,7 @@ L'articolo 29 del Codice della protezione civile regola la partecipazione del Se
 **Fonti:**
 
 - [Dipartimento della Protezione Civile — Delibera del Consiglio dei ministri del 2 luglio 2026](https://www.protezionecivile.gov.it/it/normativa/delibera-cdm-2-luglio-2026-sde-intervento-estero-venezuela/) (pubblicata nella Gazzetta Ufficiale n. 161 del 14 luglio 2026)
+- [Istituto Nazionale di Geofisica e Vulcanologia — Terremoto Mw 7.2 vicino alla costa del Venezuela](https://terremoti.ingv.it/event/46330282) e [terremoto Mw 7.5](https://terremoti.ingv.it/event/45885151) (in ora italiana le due scosse risultano del 25 giugno, poco dopo mezzanotte; in Venezuela era il 24 giugno)
 - [Dipartimento della Protezione Civile — «Protezione Civile: in partenza team avanzato per il Venezuela», 25 giugno 2026](https://www.protezionecivile.gov.it/it/comunicato-stampa/protezione-civile-partenza-team-avanzato-il-venezuela/)
 - [Dipartimento della Protezione Civile — «Venezuela: in partenza altro volo con aiuti umanitari», 26 giugno 2026](https://www.protezionecivile.gov.it/it/comunicato-stampa/venezuela-partenza-altro-volo-con-aiuti-umanitari/)
 - [Normattiva — Decreto legislativo 2 gennaio 2018, n. 1, articolo 29](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art29)

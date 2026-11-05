@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Sabato 20 giugno 2026 il sistema di allarme pubblico **IT-alert** fa un test nelle Marche. Lo scenario simulato è il **collasso della Diga di Castreccioni**, tra le province di Ancona e Macerata. Il Dipartimento della Protezione Civile ha programmato l'invio del messaggio di prova alle 11.20. Il messaggio riguarda l'area che un'eventuale onda di piena potrebbe raggiungere.
+Sabato 20 giugno 2026 il sistema di allarme pubblico **IT-alert** fa un test nelle Marche. Lo scenario simulato è il **collasso della Diga di Castreccioni**, tra le province di Ancona e Macerata. Il Dipartimento della Protezione Civile ha programmato l'invio del messaggio di prova alle 11:20. Il messaggio riguarda l'area che un'eventuale onda di piena potrebbe raggiungere.
 
 ## Dove arriva il messaggio
 
@@ -25,18 +25,19 @@ L'area del test comprende 14 comuni:
 - in provincia di Macerata: Apiro, Cingoli, Recanati, Porto Recanati e Montefano;
 - in provincia di Ancona: Staffolo, Filottrano, Jesi, Santa Maria Nuova, Osimo, Castelfidardo, Loreto, Numana e Sirolo.
 
-Il testo si apre e si chiude con le parole «TEST TEST». Dichiara che è un messaggio di test e che è simulato il collasso di una diga nella zona. Poi rimanda al sito di IT-alert. Lì si legge il messaggio previsto in caso di pericolo reale e si compila un questionario. Il Dipartimento invita a rispondere anche chi, nei comuni coinvolti, non riceve la notifica.
+Il testo del messaggio si apre e si chiude con le parole «TEST TEST». Dichiara che è un messaggio di test e che è simulato il collasso di una diga nella zona. Poi rimanda al sito di IT-alert. Lì si legge il messaggio previsto in caso di pericolo reale e si compila un questionario. Il Dipartimento invita a rispondere anche chi, nei comuni coinvolti, non riceve il messaggio.
 
 ## A che cosa servono i test
 
 Secondo il Dipartimento, i test periodici controllano due cose. La prima è che le celle telefoniche della zona garantiscano la copertura necessaria. La seconda è che funzionino le comunicazioni previste dal Documento di protezione civile e dal Piano di emergenza diga (PED).
 
-Il collasso di una grande diga è uno degli scenari per cui IT-alert è operativo dal 13 febbraio 2024. Nel Lazio un test dello stesso tipo si è svolto martedì 6 febbraio 2024 alla Diga di Collemezzo. Ha riguardato i comuni di Ceprano, Arce e San Giovanni Incarico, in provincia di Frosinone.
+Il collasso di una grande diga è uno dei quattro rischi per cui IT-alert è operativo dal 13 febbraio 2024. Nel Lazio un test dello stesso tipo si è svolto martedì 6 febbraio 2024 alla Diga di Collemezzo. Ha riguardato i comuni di Ceprano, Arce e San Giovanni Incarico, in provincia di Frosinone.
 
 ## Che cosa insegna
 
-- IT-alert usa il cell broadcast, che invia il messaggio ai telefoni collegati alle celle di una zona. Non serve installare un'app e il sistema non tratta i dati personali di chi riceve il messaggio.
-- Il messaggio non arriva ai telefoni spenti o senza campo. Con la suoneria silenziata potrebbe non suonare.
+- IT-alert usa il cell broadcast: il messaggio arriva ai telefoni accesi e con campo collegati alle celle della zona. Non è un SMS, non serve un'app e non va attivata nessuna impostazione.
+- Il cell broadcast funziona anche con poco campo o con la rete telefonica satura. Ai telefoni spenti o senza campo il messaggio non arriva. In modalità silenziosa arriva, ma il suono può non partire.
+- IT-alert non tratta alcun dato personale di chi riceve il messaggio.
 - IT-alert da solo non basta: serve conoscere i rischi del proprio territorio e i comportamenti da tenere in emergenza.
 - In caso di pericolo chiama il 112.
 
@@ -54,3 +55,5 @@ Il collasso di una grande diga è uno degli scenari per cui IT-alert è operativ
 - [IT-alert, «Sperimentazione»: elenco dei test svolti](https://www.it-alert.gov.it/it/sperimentazione/)
 - [IT-alert, «Cos'è»](https://www.it-alert.gov.it/it/cose/)
 - [IT-alert, «Come funziona»](https://www.it-alert.gov.it/it/come-funziona/)
+- [IT-alert, «Quando si usa»](https://www.it-alert.gov.it/it/quando-si-usa/)
+- [IT-alert, «Domande frequenti»](https://www.it-alert.gov.it/it/faq/)

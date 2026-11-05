@@ -24,17 +24,17 @@ La delibera richiama il grave contesto di emergenza nell'area. Tra le criticità
 
 Gli interventi urgenti si decidono con **ordinanze del Capo del Dipartimento della Protezione Civile**. Le ordinanze possono derogare alle norme vigenti, nel rispetto dei principi generali dell'ordinamento. Il limite di spesa è di **2 milioni di euro**, a carico del Fondo per le emergenze nazionali.
 
-La procedura parte da una nota di mercoledì 20 maggio del Ministero degli Affari esteri e della cooperazione internazionale. La delibera è adottata su proposta del Ministro per la Protezione civile e le Politiche del mare.
+La procedura parte da una nota di mercoledì 20 maggio del Ministero degli Affari esteri e della cooperazione internazionale. La proposta è del Ministro per la Protezione civile e le Politiche del mare.
 
 ## Che cos'è lo stato di emergenza per intervento all'estero
 
-Lo prevede l'articolo 29 del Codice della protezione civile, il decreto legislativo 2 gennaio 2018, n. 1. Il Servizio nazionale della protezione civile può partecipare a interventi di emergenza e di primo soccorso all'estero. In questi casi usa gli stessi strumenti previsti per le emergenze in Italia. Li adotta su richiesta del Ministero degli Affari esteri. Restano ferme le competenze del Ministero e dell'Agenzia italiana per la cooperazione allo sviluppo.
+Lo prevede l'articolo 29 del Codice della protezione civile, il decreto legislativo 2 gennaio 2018, n. 1. Il Servizio nazionale della protezione civile può partecipare a interventi di emergenza e di primo soccorso all'estero. In questi casi si usano gli stessi provvedimenti previsti per le emergenze in Italia, adottati su richiesta del Ministero degli Affari esteri. Il Ministero e l'Agenzia italiana per la cooperazione allo sviluppo mantengono le loro competenze.
 
 La delibera del Consiglio dei ministri si chiama allora «deliberazione dello stato di emergenza per intervento all'estero».
 
 ## Perché ne parliamo
 
-Il Codice indica il volontariato organizzato di protezione civile fra le strutture operative del Servizio nazionale (articolo 13). È lo stesso sistema in cui opera il nostro Gruppo Comunale. Su richiesta del Ministero degli Affari esteri, quel sistema può intervenire anche fuori dai confini. Come funziona la cooperazione europea fra le protezioni civili lo abbiamo spiegato nell'articolo sulla Giornata dell'Europa.
+Il Codice indica il volontariato organizzato di protezione civile fra le strutture operative nazionali del Servizio (articolo 13). È lo stesso sistema in cui opera il nostro Gruppo Comunale. Su richiesta del Ministero degli Affari esteri, quel sistema può intervenire anche fuori dai confini. Come funziona la cooperazione europea fra le protezioni civili lo abbiamo spiegato nell'articolo sulla Giornata dell'Europa.
 
 ## Per approfondire
 
@@ -46,6 +46,6 @@ Il Codice indica il volontariato organizzato di protezione civile fra le struttu
 
 **Fonti:**
 
-- [Dipartimento della Protezione Civile, «Delibera del Consiglio dei Ministri del 22 maggio 2026 - Dichiarazione dello stato di emergenza per intervento all'estero»](https://www.protezionecivile.gov.it/it/normativa/delibera-cdm-22-maggio-2026-sde-intervento-estero-medio-oriente/)
+- [Dipartimento della Protezione Civile, «Delibera del Consiglio dei Ministri del 22 maggio 2026 - Dichiarazione dello stato di emergenza per intervento all'estero»](https://www.protezionecivile.gov.it/it/normativa/delibera-cdm-22-maggio-2026-sde-intervento-estero-medio-oriente/) (pubblicata nella Gazzetta Ufficiale n. 140 del 19 giugno 2026)
 - [Normattiva, decreto legislativo 2 gennaio 2018, n. 1, articolo 29](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art29)
 - [Normattiva, decreto legislativo 2 gennaio 2018, n. 1, articolo 13](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art13)

@@ -16,7 +16,7 @@ social_punti: []
 draft: false
 ---
 
-Lunedì 16 febbraio 2026 il Capo del Dipartimento della Protezione Civile, Fabio Ciciliano, firma il decreto n. 511. Il decreto nomina i componenti e i sostituti del Comitato nazionale del volontariato di protezione civile, previsto dall'articolo 42 del Codice della protezione civile. Le designazioni valgono, salvo modifiche, tre anni dalla data di insediamento del Comitato.
+Lunedì 16 febbraio 2026 il Capo del Dipartimento della Protezione Civile, Fabio Ciciliano, firma il decreto n. 511. Il decreto nomina i componenti e i sostituti del Comitato nazionale del volontariato di protezione civile. Il Comitato è previsto dall'articolo 42 del Codice della protezione civile. Salvo modifiche, le designazioni valgono tre anni dall'insediamento del Comitato.
 
 ## A che cosa serve il Comitato
 
@@ -28,13 +28,13 @@ Ogni commissione adotta un proprio regolamento e sceglie un organismo direttivo 
 
 ## Come si arriva alle nomine
 
-Il Comitato è nato con il decreto del Presidente del Consiglio dei ministri dell'11 luglio 2019. Lo stesso decreto stabilisce che, per ogni nuovo triennio, i componenti siano nominati dal Capo del Dipartimento, con un decreto da pubblicare in Gazzetta Ufficiale.
+Il Comitato è nato con il decreto del Presidente del Consiglio dei ministri dell'11 luglio 2019. Lo stesso decreto prevede che, per ogni nuovo triennio, il Capo del Dipartimento nomini i componenti. Il suo decreto va pubblicato in Gazzetta Ufficiale.
 
 Le designazioni arrivano dalle organizzazioni iscritte nell'elenco centrale. Per gli elenchi territoriali le inviano le Regioni e le Province autonome di Trento e di Bolzano. La composizione completa del Comitato è nell'allegato 1 del decreto.
 
 ## Che cosa c'entra con Genzano
 
-Il nostro Gruppo Comunale è iscritto all'elenco territoriale della Regione Lazio. Le organizzazioni iscritte negli elenchi territoriali hanno voce nel Comitato attraverso la Commissione territoriale, con il volontario designato per la loro Regione.
+Il nostro Gruppo Comunale è iscritto all'elenco territoriale della Regione Lazio. Le organizzazioni iscritte negli elenchi territoriali hanno voce nella Commissione territoriale. Le rappresenta il volontario designato per la loro Regione.
 
 Se vuoi diventare volontario di protezione civile a Genzano di Roma, trovi come fare nella pagina [Diventa volontario](/diventa-volontario/).
 

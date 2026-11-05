@@ -22,7 +22,7 @@ Mercoledì 17 giugno 2026 è la **Giornata mondiale per la lotta alla desertific
 
 La giornata vuole far conoscere il degrado del suolo e la siccità. Vuole anche spingere ad agire per proteggere e ripristinare la terra. Quando la terra si degrada o soffre la siccità, perde la capacità di sostenere la vita. Le conseguenze vanno dai raccolti perduti alle migrazioni e ai conflitti.
 
-La celebrazione è organizzata con la Convenzione delle Nazioni Unite per la lotta alla desertificazione (UNCCD), nata nel 1994. È l'unico accordo internazionale vincolante dedicato alla desertificazione e agli effetti della siccità. Ne fanno parte 197 Parti: 196 Paesi e l'Unione europea. Secondo la Convenzione, 169 dei 196 Paesi aderenti sono colpiti da desertificazione, degrado del suolo o siccità.
+La celebrazione è organizzata con la Convenzione delle Nazioni Unite per la lotta alla desertificazione (UNCCD), nata nel 1994. È l'unico accordo internazionale vincolante dedicato alla desertificazione e agli effetti della siccità. Le Parti della Convenzione sono 197: 196 Paesi e l'Unione europea. Secondo la Convenzione, 169 dei 196 Paesi aderenti sono colpiti da desertificazione, degrado del suolo o siccità.
 
 ## Il tema del 2026: le terre di pascolo
 
