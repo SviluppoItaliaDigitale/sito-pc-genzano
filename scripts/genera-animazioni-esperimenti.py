@@ -64,24 +64,24 @@ def r_viscosita(s, n):
                     '<g class="fermo" fill="#ffe9cb" stroke="#86481e" stroke-width="4">', n)
     css = (
         "@keyframes sale{0%{transform:translateY(0);opacity:0}8%{opacity:1}"
-        "88%{transform:translateY(-128px);opacity:1}100%{transform:translateY(-136px);opacity:0}}"
+        "88%{transform:translate(-30px,-128px);opacity:1}100%{transform:translate(-32px,-136px);opacity:0}}"
         ".bl{animation:sale 2.4s linear infinite}"
         "@keyframes fatica{0%{transform:translateY(0) scale(.6);opacity:0}8%{opacity:1}"
-        "70%{transform:translateY(-112px) scale(1.2);opacity:1}82%{transform:translateY(-122px) scale(1.35);opacity:1}"
-        "86%{transform:translateY(-126px) scale(1.6);opacity:0}100%{transform:translateY(-126px) scale(1.6);opacity:0}}"
+        "70%{transform:translate(-40px,-112px) scale(1.2);opacity:1}82%{transform:translate(-44px,-122px) scale(1.35);opacity:1}"
+        "86%{transform:translate(-44px,-126px) scale(1.6);opacity:0}100%{transform:translate(-44px,-126px) scale(1.6);opacity:0}}"
         ".bd{animation:fatica 7.5s ease-in infinite;transform-origin:50% 50%}"
         "@keyframes schizzo{0%,81%{opacity:0;transform:translateY(0)}84%{opacity:1}94%{opacity:0;transform:translateY(-14px)}100%{opacity:0}}"
         ".sz{animation:schizzo 7.5s linear infinite}"
     )
     o = ['<g fill="#f8ffff" stroke="#367eac" stroke-width="3">']
-    for i, (x, r) in enumerate([(238, 9), (272, 12), (300, 7), (330, 11), (356, 8), (386, 6)]):
+    for i, (x, r) in enumerate([(350, 9), (338, 12), (362, 7), (344, 11), (356, 8), (348, 6)]):
         o.append(f'<circle class="bl" style="animation-delay:-{i * 0.4:.1f}s" cx="{x}" cy="442" r="{r}"/>')
     o.append('</g><g fill="#ffe9cb" stroke="#86481e" stroke-width="4">')
-    for i, x in enumerate([820, 885, 948]):
+    for i, x in enumerate([930, 930, 930]):
         o.append(f'<circle class="bd fb" style="animation-delay:-{i * 2.5:.1f}s" cx="{x}" cy="440" r="16"/>')
     o.append('</g><g fill="none" stroke="#a8622c" stroke-width="5" stroke-linecap="round">')
-    for i, x in enumerate([820, 885, 948]):
-        o.append(f'<path class="sz" style="animation-delay:-{i * 2.5:.1f}s" d="M{x - 18} 282 l-10 -16 M{x} 276 V254 M{x + 18} 282 l10 -16"/>')
+    for i, x in enumerate([930, 930, 930]):
+        o.append(f'<path class="sz" style="animation-delay:-{i * 2.5:.1f}s" d="M{x - 62} 282 l-10 -16 M{x - 44} 276 V254 M{x - 26} 282 l10 -16"/>')
     o.append('</g>')
     return s, css, "".join(o)
 
@@ -109,9 +109,11 @@ def r_sabbia(s, n):
     s = sostituisci(s, '</g><g transform="translate(711 242)">', '</g></g><g class="scuoti"><g transform="translate(711 242)">', n)
     s = sostituisci(s, '</g>\n<path d="M117 530', '</g></g>\n<path d="M117 530', n)
     s = sostituisci(s, '<circle cx="174" cy="120" r="28"', '<circle class="affonda" cx="174" cy="38" r="28"', n)
+    s = sostituisci(s, '<path d="M170 505 l9 -8', '<path class="vibra" d="M170 505 l9 -8', n)
     css = (
-        "@keyframes sc{from{transform:translateX(-7px)}to{transform:translateX(7px)}}"
-        ".scuoti{animation:sc .18s linear infinite alternate}"
+        "@keyframes sc{0%,100%{transform:translateY(0)}15%{transform:translateY(-4px)}30%{transform:translateY(1px)}45%{transform:translateY(0)}}"
+        ".scuoti{animation:sc .5s linear infinite}"
+        "@keyframes vb{0%,100%{opacity:.25}15%{opacity:1}45%{opacity:.25}}.vibra{animation:vb .5s linear infinite}"
         "@keyframes af{0%,10%{transform:translateY(0);opacity:1}70%,88%{transform:translateY(82px);opacity:1}"
         "95%{transform:translateY(82px);opacity:0}96%{transform:translateY(0);opacity:0}100%{transform:translateY(0);opacity:1}}"
         ".affonda{animation:af 9s ease-in-out infinite}"
@@ -247,9 +249,9 @@ def r_pluviometro(s, n):
     s = sostituisci(s, '<path d="M1009 366 l-13 12 13 12"', '<path class="fermo" d="M1009 366 l-13 12 13 12"', n)
     s = sostituisci(s, '<text x="1102" y="356"', '<text class="fermo" x="1102" y="356"', n)
     css = PIOGGIA_CSS.replace("1.1s", "1.4s") + (
-        "@keyframes lv{0%,4%{transform:translateY(0)}78%,100%{transform:translateY(-85px)}}"
+        "@keyframes lv{0%,4%{transform:translateY(-35px)}78%,100%{transform:translateY(-85px)}}"
         ".lv{animation:lv 11s ease-out infinite}"
-        "@keyframes lr{0%,4%{transform:translateY(0)}78%,100%{transform:translateY(-92px)}}"
+        "@keyframes lr{0%,4%{transform:translateY(-40px)}78%,100%{transform:translateY(-92px)}}"
         ".lr{animation:lr 11s ease-out infinite}"
         "@keyframes rs{0%,90%{opacity:1}97%{opacity:0}100%{opacity:1}}"
         ".rs{animation:rs 11s linear infinite}"
@@ -259,6 +261,8 @@ def r_pluviometro(s, n):
          '<g class="rs"><g clip-path="url(#bott)"><g class="lv">'
          '<rect x="285" y="504" width="190" height="220" fill="url(#water)" opacity=".95"/>'
          '<path d="M290 504 H470" stroke="#176f9e" stroke-width="5" stroke-dasharray="9 7"/></g></g>'
+         '<path d="M560 469 H580" stroke="#176f9e" stroke-width="4"/><text x="590" y="475" font-family="Arial,sans-serif" '
+         'font-size="17" font-weight="700" fill="#176f9e">0</text>'
          '<g clip-path="url(#prov)"><g class="lr"><rect x="932" y="467" width="73" height="240" fill="#7bc3e4" opacity=".8"/></g></g>'
          '<g transform="translate(0 89)"><g class="lr"><path d="M996 378 H1102" stroke="#287eaa" stroke-width="5"/>'
          '<path d="M1009 366 l-13 12 13 12" fill="none" stroke="#287eaa" stroke-width="5"/>'
@@ -296,36 +300,56 @@ def r_tombino(s, n):
     s = sostituisci(s, '<path d="M78 131 Q113 126', '<path class="sup" d="M78 131 Q113 126', n)
     s = sostituisci(s, '<rect x="81" y="115" width="186" height="30"', '<rect class="pozza fb" x="81" y="115" width="186" height="30"', n)
     s = sostituisci(s, '<path d="M78 115 Q113 110', '<path class="sup" d="M78 115 Q113 110', n)
+    lancette = [("164.34712181799046 216.0658658130567", 45.8), ("169.9914720608301 230.58399044602578", 91.7),
+                ("163.50926361102302 244.74787431082493", 137.4)]
+    for k, (punta, gradi) in enumerate(lancette):
+        s = sostituisci(s, f'<path d="M150 230 L{punta}"', f'<path class="lan{k}" d="M150 230 L{punta}"', n)
     livelli = {}
     for i, (sx, y) in enumerate([(129, "470.6"), (521, "511.4"), (913, "548.6")]):
         s = sostituisci(s, f'<path d="M{sx} {y} Q', f'<path class="fermo" d="M{sx} {y} Q', n)
         s = sostituisci(s, f'<path d="M{sx + 1} {y} Q', f'<path class="fermo" d="M{sx + 1} {y} Q', n)
         livelli[i] = (sx, float(y))
+    # stessa velocità di lancetta per i tre orologi (137,4 gradi in 8 secondi):
+    # ciascuna si ferma quando sotto la griglia non scende più acqua. Si versa
+    # per lo stesso tempo nei tre casi (fino a fine[0]); dopo, nel caso 2
+    # l'acqua della pozza scende ancora per un po', nel caso 3 resta sopra.
+    fine = [0.4 + g / 137.4 * 8 for _, g in lancette]
     css = (
         "@keyframes cad{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(16px);opacity:0}}"
         ".cad{animation:cad .5s linear infinite}"
-        "@keyframes sc{to{stroke-dashoffset:-36}}.sc1{animation:sc .45s linear infinite}.sc2{animation:sc 1.2s linear infinite}"
-        "@keyframes pz{0%,5%{transform:scaleY(0)}60%,100%{transform:scaleY(1)}}"
-        ".pozza{transform-origin:50% 100%;animation:pz 10s ease-out infinite}"
-        "@keyframes sp{0%,55%{opacity:0}62%,100%{opacity:1}}.sup{animation:sp 10s linear infinite}"
+        "@keyframes sc{to{stroke-dashoffset:-36}}"
+        ".sc1{animation:sc .45s linear infinite,on0 10s linear infinite}"
+        ".sc2{animation:sc 1.2s linear infinite,on1 10s linear infinite}"
+        f"@keyframes pz{{0%,4%{{transform:scaleY(0)}}{fine[0] * 10:.1f}%,100%{{transform:scaleY(1)}}}}"
+        ".pozza{transform-origin:50% 100%;animation:pz 10s linear infinite}"
+        f"@keyframes sp{{0%,{fine[0] * 10 - 6:.1f}%{{opacity:0}}{fine[0] * 10:.1f}%,100%{{opacity:1}}}}"
+        ".sup{animation:sp 10s linear infinite}"
         "@keyframes gs{0%{transform:translateY(0);opacity:0}10%{opacity:1}85%{transform:translateY(80px);opacity:1}100%{transform:translateY(88px);opacity:0}}"
         ".g1{animation:gs .9s ease-in infinite}.g2{animation:gs 1.8s ease-in infinite}.g3{animation:gs 4s ease-in infinite}"
         "@keyframes rs{0%,90%{opacity:1}97%{opacity:0}100%{opacity:1}}.rs{animation:rs 10s linear infinite}"
     )
-    o = []
+    for k, (_, gradi) in enumerate(lancette):
+        css += (f"@keyframes la{k}{{0%,4%{{transform:rotate(-{gradi}deg)}}{fine[k] * 10:.1f}%,100%{{transform:rotate(0)}}}}"
+                f".lan{k}{{transform-origin:150px 230px;animation:la{k} 10s linear infinite}}"
+                f"@keyframes on{k}{{0%,{fine[k] * 10:.1f}%{{opacity:1}}{fine[k] * 10 + 1:.1f}%,100%{{opacity:0}}}}"
+                f".on{k}{{animation:on{k} 10s linear infinite}}")
+    o = ['<g class="on0">']
     for k, ox in enumerate([34, 426, 818]):
         o.append(f'<circle class="cad" style="animation-delay:-{k * 0.17:.2f}s" cx="{ox + 287}" cy="{153 + 125}" r="5" fill="#47B0DD"/>')
+    o.append('</g>')
     goccie = {0: (4, "g1", 0.22), 1: (2, "g2", 0.9), 2: (1, "g3", 0)}
     for k, ox in enumerate([0, 392, 784]):
         quante, classe, passo = goccie[k]
+        o.append(f'<g class="on{k}">')
         for j in range(quante):
             x = ox + 175 + j * 24
             o.append(f'<ellipse class="{classe}" style="animation-delay:-{j * passo:.2f}s" cx="{x}" cy="372" rx="4" ry="6" fill="#47B0DD"/>')
+        o.append('</g>')
     for k, (sx, y) in livelli.items():
         salita = 556 - y
-        css += f"@keyframes lv{k}{{0%,4%{{transform:translateY(0)}}82%,100%{{transform:translateY(-{salita:.1f}px)}}}}"
+        css += f"@keyframes lv{k}{{0%,4%{{transform:translateY(0)}}{fine[k] * 10:.1f}%,100%{{transform:translateY(-{salita:.1f}px)}}}}"
         o.append(f'<clipPath id="bk{k}"><path d="M{sx} 443 H{sx + 169} V545 Q{sx + 169} 556 {sx + 158} 556 H{sx + 11} Q{sx} 556 {sx} 545Z"/></clipPath>'
-                 f'<g class="rs"><g clip-path="url(#bk{k})"><g style="animation:lv{k} 10s ease-out infinite">'
+                 f'<g class="rs"><g clip-path="url(#bk{k})"><g style="animation:lv{k} 10s linear infinite">'
                  f'<path d="M{sx} 556 Q{sx + 84.5} 548 {sx + 169} 556 V680 H{sx}Z" fill="#5CBCE3" opacity=".91"/>'
                  f'<path d="M{sx + 1} 556 Q{sx + 84.5} 548 {sx + 168} 556" fill="none" stroke="#EFFDFF" stroke-width="5"/>'
                  '</g></g></g>')

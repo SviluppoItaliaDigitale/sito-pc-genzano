@@ -325,15 +325,16 @@ def _pluviometro():
 def _maremoto():
     d = [
         perc("M12,44 L12,88 L148,88 L148,44", sw=2),
-        rett(14, 66, 132, 22, riemp=ACQUA, colore="none", sw=0),
-        perc("M14,66 q12,-10 24,0 q12,10 24,0 q12,-10 24,0 q12,10 24,0 q12,-10 24,0"),
+        rett(14, 62, 132, 26, riemp=ACQUA, colore="none", sw=0),
+        perc("M14,88 L64,87 Q112,82 146,60 L146,88 Z", riemp=TERRA),   # fondale in salita
+        # l'onda è bassa dove l'acqua è profonda e cresce dove il fondale sale
+        perc("M14,62 q6,-3 12,0 q6,3 12,0 q8,-5 16,0 q8,5 16,0 q9,-9 18,0 q9,9 18,0 q8,-18 16,0"),
         rett(120, 88, 26, 8, riemp=GRIGIO),                       # libro che alza il lato
-        perc("M120,66 L146,52 L146,66 Z", riemp=TERRA),           # fondale in salita
-        freccia(30, 56, 62, 56),
+        freccia(30, 52, 62, 52),
         testo(80, 110, "il fondale sale: l'onda cresce"),
     ]
     return "".join(d), ("Una vaschetta con acqua tenuta inclinata da un libro sotto un'estremit&agrave;: "
-                        "l'onda parte dal lato profondo e cresce avvicinandosi al fondale in salita.")
+                        "l'onda parte bassa dal lato profondo e diventa pi&ugrave; alta dove il fondale sale.")
 
 
 def _tombino():
