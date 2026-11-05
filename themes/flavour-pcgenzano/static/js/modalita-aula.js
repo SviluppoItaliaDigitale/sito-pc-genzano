@@ -31,12 +31,28 @@
   var DIMENSIONI = [1, 1.2, 1.45];
   var INTERATTIVI = 'button, iframe, input, select, textarea, canvas, video, audio, form';
 
+  // comandi marcati .no-aula (per esempio «Guarda l'animazione» delle
+  // illustrazioni) non rendono interattivo il riquadro: in aula si tolgono
+  function interattivo(el) {
+    if (el.matches(INTERATTIVI)) return true;
+    var n = el.querySelectorAll(INTERATTIVI);
+    for (var i = 0; i < n.length; i++) {
+      if (!n[i].closest('.no-aula')) return true;
+    }
+    return false;
+  }
+
   function pulisci(nodo) {
     var c = nodo.cloneNode(true);
     c.querySelectorAll(SALTA).forEach(function (n) { n.remove(); });
     c.querySelectorAll('[id]').forEach(function (n) { n.removeAttribute('id'); });
     if (c.removeAttribute) c.removeAttribute('id');
     c.querySelectorAll('img[loading="lazy"]').forEach(function (i) { i.removeAttribute('loading'); });
+    // in aula le illustrazioni animate tornano al disegno fermo: lì non c'è il pulsante per fermarle
+    c.querySelectorAll('img[data-statica]').forEach(function (i) {
+      i.setAttribute('src', i.getAttribute('data-statica'));
+      i.setAttribute('alt', i.getAttribute('data-alt-statica') || i.getAttribute('alt'));
+    });
     return c;
   }
 
@@ -59,7 +75,7 @@
       }
       // riquadri interattivi (mappe da caricare, moduli, giochi): copiati in
       // una schermata non funzionerebbero, restano nella pagina
-      if (el.matches(INTERATTIVI) || el.querySelector(INTERATTIVI)) return;
+      if (interattivo(el)) return;
       var c = pulisci(el);
       if (!c.textContent.trim() && !c.querySelector('img, svg, table')) return;
       if (el.tagName === 'FIGURE' || el.classList.contains('galleria')) {
