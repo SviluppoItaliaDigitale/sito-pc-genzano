@@ -275,6 +275,7 @@ Dopo lo script, il resto della procedura è invariato: articoli per le giornate 
 **Regole di merito scritte nel codice, non nella configurazione:**
 
 - **`Allerta` ed `Emergenza` non si pubblicano mai in automatico.** Valgono nel momento in cui escono: vanno pubblicate a mano (`BADGE_ESCLUSI_AUTO` in `social_coda_lib.py`).
+- **`social: false` nel frontmatter** (dal 05/11/2026): l'articolo resta solo sul sito. Questo repository non genera testi né immagini (`social_comune.escluso_dai_social`), quindi il repository privato non ha materiale da pubblicare, e il controllo di salute non lo segnala né fra gli articoli senza materiale né fra i retrodatati. Nasce per gli articoli d'archivio del 2026 datati al giorno dell'evento.
 - Le versioni in italiano semplice (`-facile`) non vanno sui social.
 - **Nessun tetto giornaliero** (dal 21/09/2026): i post escono insieme agli articoli, a mezz'ora l'uno dall'altro se escono insieme, e mai prima che la pagina risponda sul sito.
 - **Finestra di tre giorni sulla data dell'articolo**: un articolo retrodatato (data più vecchia di tre giorni, per esempio il resoconto di un intervento scritto dopo) viene scartato e va pubblicato a mano; il controllo di salute lo segnala.

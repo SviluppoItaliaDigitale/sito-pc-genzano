@@ -1384,6 +1384,9 @@ def estrai_articolo(path: Path, crea_cover: bool = True) -> dict | None:
     # Le versioni "facile" (A2) sono nascoste da liste/feed: niente social dedicato.
     if fm.get("versione_facile_di"):
         return None
+    # `social: false`: articolo solo per il sito, niente immagini social.
+    if social_comune.escluso_dai_social(fm):
+        return None
     m = re.match(r"(\d{4}-\d{2}-\d{2})", social_comune.testo_campo(fm, "date"))
     if not m:
         return None
@@ -1467,6 +1470,8 @@ def trova_articoli_pubblicati() -> list[Path]:
         if fm.get("draft", "").lower() in ("true", "yes", "1"):
             continue
         if fm.get("versione_facile_di"):
+            continue
+        if social_comune.escluso_dai_social(fm):
             continue
         if not social_comune.is_online(fm):
             continue
