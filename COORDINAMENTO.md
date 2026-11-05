@@ -166,6 +166,41 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 ## Richieste
 
+- **2026-11-05 — da Claude a Gemini automatico — Tabella delle automazioni: riga del lavoratore della bacheca**
+  ## 1. Obiettivo
+  Nella tabella dei workflow della regola delle automazioni deve esserci la riga di `lavoratore-ai.yml`, il workflow arrivato con la PR #1721: così la tabella torna a elencare tutti i workflow del repository.
+
+  ## 2. File
+  .claude/rules/10-automazioni-github-actions.md
+
+  ## 3. Che cosa fare
+  1. Apri `.claude/rules/10-automazioni-github-actions.md` e trova la riga della tabella che comincia con `` | `rimuovi-firma-strumento.yml` | ``: nel file ce n'è una sola.
+  2. Subito dopo quella riga, senza righe vuote in mezzo, inserisci la riga che sta fra le due righe `RIGA-INIZIO` e `RIGA-FINE` qui sotto, identica carattere per carattere (apici inversi, virgolette basse «», puntini …, apostrofi e spazi compresi). Le due righe `RIGA-INIZIO` e `RIGA-FINE` non vanno nel file. Attenzione al rientro: in bacheca ogni riga di questa richiesta è spostata a destra di due spazi; quei due spazi non fanno parte della riga, che nel file comincia con il carattere `|` in prima colonna, come le altre righe della tabella.
+  RIGA-INIZIO
+  | `lavoratore-ai.yml` | Push su `main` che tocca `COORDINAMENTO.md` + ogni giorno 05:23 UTC + `workflow_dispatch` | **AI automatiche della bacheca** (05/11/2026, kit comune a tutti i repository): `scripts/lavoratore-ai.py` prende da sé le voci di «Richieste» di `COORDINAMENTO.md` indirizzate a «ChatGPT automatico» (Codex con l'accesso ChatGPT di Alessandro), «Gemini automatico» (chiave gratuita della Gemini API) o «DeepSeek/GLM/Kimi/Qwen automatico» (modelli gratuiti di Ollama Cloud) e scritte nelle sette parti di `scripts/passa-a.py modello`; segna la voce presa, fa lavorare il programma dell'AI senza il token di GitHub su un ramo `auto/<ai>-<argomento>-AAAAMMGG` e consegna una PR in bozza, con esito e riassunto nella voce. Le modifiche a `COORDINAMENTO.md` e `.github/` si annullano e un lavoro con un testo simile a una chiave d'accesso non si pubblica. La PR la controlla e la chiude Claude con `python3 scripts/passa-a.py chiudi --pr N --qualsiasi --titolo "…" --messaggio "…"`. Segreti `CHATGPT_ACCESSO`, `GEMINI_API_KEY` e `OLLAMA_API_KEY`, messi dal PC con `scripts/collega-ai-automatiche.sh` di `assistente-personale`: senza quello che serve la richiesta resta aperta e il run è rosso. Ogni 6 giorni il giro del mattino tiene vivo l'accesso ChatGPT. Protocollo comune di `COORDINAMENTO.md`, § «AI automatiche e consulto fra AI». |
+  RIGA-FINE
+  3. Non cambiare nient'altro: nessun'altra riga del file, nessuno spazio, nessun a capo in più o in meno, nemmeno in fondo al file.
+
+  ## 4. Vincoli
+  - Il file è un file di governo interno, non pubblicato sul sito: lì i nomi delle intelligenze artificiali sono ammessi, ma solo quelli già scritti nella riga del punto 3. Non aggiungerne altri.
+  - La riga resta una sola riga di tabella con tre celle: nessun carattere «|» dentro le celle, nessun a capo dentro la riga.
+  - Niente riformulazioni, correzioni di stile o «miglioramenti» della riga: va copiata così com'è. Se ti sembra che contenga un errore, copiala comunque e scrivilo nel riassunto.
+
+  ## 5. Controlli
+  Ogni controllo è un comando di una riga, da eseguire dalla cartella principale del repository.
+  1. `git diff --numstat` deve stampare una sola riga, con i numeri `1` e `0` e il nome `.claude/rules/10-automazioni-github-actions.md` (una riga aggiunta, nessuna tolta, un solo file).
+  2. `git status --porcelain` deve stampare una sola riga, che finisce con `.claude/rules/10-automazioni-github-actions.md`.
+  3. `grep -c '^| `lavoratore-ai.yml` |' .claude/rules/10-automazioni-github-actions.md` deve stampare `1`.
+  4. `grep -B1 '^| `lavoratore-ai.yml` |' .claude/rules/10-automazioni-github-actions.md | head -1 | cut -c1-33` deve stampare `` | `rimuovi-firma-strumento.yml` | `` (la riga nuova sta subito dopo quella).
+  5. `grep '^| `lavoratore-ai.yml` |' .claude/rules/10-automazioni-github-actions.md | tr -cd '|' | wc -c` deve stampare `4` (tre celle).
+  6. `grep -c 'consulto fra AI». |$' .claude/rules/10-automazioni-github-actions.md` deve stampare `1` (la riga finisce come nella richiesta).
+
+  ## 6. Consegna
+  Solo la modifica del file del punto 2. Alla fine il riassunto che chiede il sistema: fatto, non fatto e perché, controlli eseguiti con il loro esito, dubbi.
+
+  ## 7. Che cosa non fare
+  Non toccare altri file (né `COORDINAMENTO.md`, né `.github/`, né `CLAUDE.md`, né il manuale); non riordinare la tabella; non aggiungere date, numeri di PR o righe diverse da quella del punto 3; non fare commit, push, rami o pull request; non eseguire build del sito o altri controlli lunghi: per questo file bastano i sei controlli del punto 5.
+
 Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune. Dal 05/11/2026 la voce di ogni passaggio sta anche qui sul ramo principale, e per avviarla in Codex Cloud basta una riga: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #N.» (§ «Passaggi a ChatGPT in questo repository»).
 
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
