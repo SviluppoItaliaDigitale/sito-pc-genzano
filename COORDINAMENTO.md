@@ -167,7 +167,7 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 ## Richieste
 
-- **2026-11-05 — da Claude a Gemini automatico — Tabella delle automazioni: riga del lavoratore della bacheca** — presa da Gemini automatico, ramo auto/gemini-tabella-delle-automazioni-riga-del-lavor-20261105, pull request da aprire (in questo repository GitHub Actions non può aprirla)
+- **2026-11-05 — da Claude a Gemini automatico — Tabella delle automazioni: riga del lavoratore della bacheca** — presa da Gemini automatico, PR #1726
   ## 1. Obiettivo
   Nella tabella dei workflow della regola delle automazioni deve esserci la riga di `lavoratore-ai.yml`, il workflow arrivato con la PR #1721: così la tabella torna a elencare tutti i workflow del repository.
 
@@ -201,7 +201,7 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
   ## 7. Che cosa non fare
   Non toccare altri file (né `COORDINAMENTO.md`, né `.github/`, né `CLAUDE.md`, né il manuale); non riordinare la tabella; non aggiungere date, numeri di PR o righe diverse da quella del punto 3; non fare commit, push, rami o pull request; non eseguire build del sito o altri controlli lunghi: per questo file bastano i sei controlli del punto 5.
-  - **Esito del 05/11/2026, 22:49** — Gemini automatico, modello gemini-3.6-flash: lavoro non riuscito (servizio occupato (modelli provati: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash)); i file toccati fin lì sono sul ramo auto/gemini-tabella-delle-automazioni-riga-del-lavor-20261105 (la pull request la apre chi controlla). File toccati: .claude/rules/10-automazioni-github-actions.md.
+  - **Esito del 05/11/2026, 22:49** — Gemini automatico, modello gemini-3.6-flash: lavoro non riuscito (servizio occupato (modelli provati: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash)); i file toccati fin lì sono nella PR #1726. File toccati: .claude/rules/10-automazioni-github-actions.md.
     ## Fatto
     - Inserita la riga per lavoratore-ai.yml nella tabella dei workflow in .claude/rules/10-automazioni-github-actions.md, subito dopo la riga di rimuovi-firma-strumento.yml.
     ## Non fatto e perché
