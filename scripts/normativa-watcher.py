@@ -23,9 +23,8 @@ FONTI PRIMARIE (lette direttamente, ogni giorno) — "--fonti primarie"
   stata vista quattro giorni dopo.
 - Comune di Genzano di Roma, sito istituzionale (dal 05/11/2026): avvisi,
   comunicati e notizie, che non sempre passano dall'albo.
-- Albi pretori di Ariccia e Castel Gandolfo (stesso portale dell'albo di
-  Genzano, dal 05/11/2026): solo atti di protezione civile o che nominano
-  Genzano e i Castelli Romani.
+- Gazzetta Ufficiale, 1a Serie speciale «Corte costituzionale» (dal
+  05/11/2026): sentenze e ordinanze della Corte con l'oggetto per esteso.
 - Regione Lazio, Città metropolitana di Roma Capitale e Prefettura di Roma:
   notizie dei rispettivi siti (dal 05/11/2026).
 
@@ -43,7 +42,10 @@ FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Feed RSS istituzionali (TGR Lazio)
 - Testate locali e agenzie lette dai loro feed (dal 05/11/2026): Castelli
   Notizie, Il Mamilio, Il Caffè, Controluce, Terzo Binario, RomaToday,
-  ANSA Lazio e Il Giornale dei Castelli Romani
+  Il Messaggero (Roma), ANSA Lazio e Il Giornale dei Castelli Romani;
+  riviste giuridiche Giurisprudenza Penale e Diritto.it per le sentenze
+- Ricerche di Google News sulle sentenze in materia di protezione civile
+  (Cassazione, tribunali, TAR, Consiglio di Stato, Corte dei conti)
 - DPC: notizie e comunicati stampa dal file JSON pubblico del sito del
   Dipartimento (archivio completo con le date, nessuna chiave e nessun
   credito; dal 21/10/2026, prima la home e l'Area stampa via Firecrawl)
@@ -264,10 +266,23 @@ class Cliente:
         # Un 429 (troppe richieste dallo stesso indirizzo, tipico dei runner
         # condivisi) si riprova con attese crescenti, rispettando Retry-After
         # fino a 90 secondi; ogni altro errore risale subito.
+        # Una connessione interrotta (la Gazzetta Ufficiale lo fa spesso: il
+        # 05/11/2026 una richiesta su tre) si riprova due volte prima di
+        # dichiarare la fonte in errore.
+        interruzioni = [5, 15]
         for attesa in (15, 45, None):
             try:
-                with self.opener.open(req, timeout=TIMEOUT) as r:
-                    return decodifica(r.read(), r.headers.get_content_charset())
+                while True:
+                    try:
+                        with self.opener.open(req, timeout=TIMEOUT) as r:
+                            return decodifica(r.read(), r.headers.get_content_charset())
+                    except (ConnectionResetError, urllib.error.URLError) as e:
+                        if isinstance(e, urllib.error.HTTPError) or not interruzioni:
+                            raise
+                        pausa_rete = interruzioni.pop(0)
+                        print(f'  [info] connessione interrotta da {urllib.parse.urlparse(url).netloc}: '
+                              f'riprovo fra {pausa_rete} s ({e})', file=sys.stderr)
+                        time.sleep(pausa_rete)
             except urllib.error.HTTPError as e:
                 if e.code != 429 or attesa is None:
                     raise
@@ -402,11 +417,21 @@ GU_BASE = 'https://www.gazzettaufficiale.it'
 GU_30GIORNI = GU_BASE + '/30giorni/serie_generale'
 
 
-def fetch_gazzetta_ufficiale(cutoff, errori):
+GU_SERIE = {
+    'serie_generale': 'Serie Generale',
+    # Dal 05/11/2026: sentenze e ordinanze della Corte costituzionale, con
+    # l'oggetto scritto per esteso («Protezione civile - Norme della
+    # Regione…»). Il sito della Corte chiede un CAPTCHA già alla seconda
+    # richiesta; la Gazzetta è la pubblicazione ufficiale delle decisioni.
+    'corte_costituzionale': '1a Serie speciale — Corte costituzionale',
+}
+
+
+def fetch_gazzetta_ufficiale(cutoff, errori, serie='serie_generale'):
     out = []
     cli = Cliente()
     try:
-        elenco = cli.get(GU_30GIORNI)
+        elenco = cli.get(f'{GU_BASE}/30giorni/{serie}')
         numeri = sorted(set(re.findall(r'dataPubblicazioneGazzetta=(\d{4})(\d{2})(\d{2})&numeroGazzetta=(\d+)', elenco)))
         if not numeri:
             raise RuntimeError('elenco ultimi 30 giorni vuoto: struttura cambiata?')
@@ -414,20 +439,27 @@ def fetch_gazzetta_ufficiale(cutoff, errori):
             d = date(int(aaaa), int(mm), int(gg))
             if d < cutoff:
                 continue
-            url = f'{GU_BASE}/gazzetta/serie_generale/caricaDettaglio?dataPubblicazioneGazzetta={aaaa}-{mm}-{gg}&numeroGazzetta={n}'
+            url = f'{GU_BASE}/gazzetta/{serie}/caricaDettaglio?dataPubblicazioneGazzetta={aaaa}-{mm}-{gg}&numeroGazzetta={n}'
             try:
                 sommario = cli.get(url)
             except Exception as e:  # noqa: BLE001
-                errori.append(f'GU n. {n} del {gg}/{mm}/{aaaa}: {e}')
+                errori.append(f'GU {GU_SERIE[serie]} n. {n} del {gg}/{mm}/{aaaa}: {e}')
                 continue
-            out.extend(_parse_sommario_gu(sommario, d, n))
+            out.extend(_parse_sommario_gu(sommario, d, n, serie))
     except Exception as e:  # noqa: BLE001
-        errori.append(f'Gazzetta Ufficiale: {e}')
+        errori.append(f'Gazzetta Ufficiale ({GU_SERIE[serie]}): {e}')
         print(f'  [error] gazzetta ufficiale: {e}', file=sys.stderr)
     return out
 
 
-def _parse_sommario_gu(pagina, d, numero_gu):
+def fetch_gu_corte_costituzionale(cutoff, errori):
+    # Solo rilevanza diretta: le parole chiave indirette pescano decisioni
+    # estranee (diffamazione militare per «manifestazione», reati stradali).
+    return [v for v in fetch_gazzetta_ufficiale(cutoff, errori, serie='corte_costituzionale')
+            if v['rilevanza'] == 'diretta']
+
+
+def _parse_sommario_gu(pagina, d, numero_gu, serie='serie_generale'):
     """Scorre il sommario in ordine: rubrica/emettitore aggiornano il contesto,
     ogni coppia di link (estremi + oggetto) è un atto."""
     out = []
@@ -435,8 +467,8 @@ def _parse_sommario_gu(pagina, d, numero_gu):
     visti = set()
     token = re.compile(
         r'<span class="rubrica">(.*?)</span>|<span class="emettitore">(.*?)</span>|'
-        r'<a href="(/atto/serie_generale/caricaDettaglioAtto/originario\?[^"]+)">\s*<span class="data">(.*?)</span>\s*</a>\s*'
-        r'<a href="[^"]+">(.*?)<span class="riferimento">', flags=re.S)
+        r'<a href="(/atto/' + serie + r'/caricaDettaglioAtto/originario\?[^"]+)">\s*<span class="data">(.*?)</span>\s*</a>\s*'
+        r'<a href="[^"]+">(.*?)(?:<span class="riferimento">|</a>)', flags=re.S)
     for m in token.finditer(pagina):
         if m.group(1) is not None:
             rubrica = solo_testo(m.group(1))
@@ -452,7 +484,7 @@ def _parse_sommario_gu(pagina, d, numero_gu):
             visti.add(chiave)
             link = GU_BASE + htmllib.unescape(href)
             titolo = f'{estremi} — {oggetto}' if estremi else oggetto
-            v = voce(f'Gazzetta Ufficiale — Serie Generale n. {numero_gu}', 'primaria', titolo, link, d,
+            v = voce(f'Gazzetta Ufficiale — {GU_SERIE[serie]} n. {numero_gu}', 'primaria', titolo, link, d,
                      tipo_atto=estremi.split(' ')[0] if estremi else '', numero=estremi,
                      ente=f'{rubrica} · {ente}'.strip(' ·'))
             if v['rilevanza']:
@@ -628,12 +660,10 @@ def fetch_consiglio_lazio(cutoff, errori):
 # Richiesta dell'utente del 05/11/2026: «volevo ampliare di tanto le fonti».
 # Prima di questa data le notizie del Comune di Genzano (diverse dagli atti
 # dell'albo), della Regione, della Città metropolitana, della Prefettura e
-# degli albi dei Comuni vicini arrivavano solo se una testata le riprendeva
-# su Google News. Tutte verificate il 05/11/2026 con richieste vere.
-# Gli albi di Albano Laziale, Lanuvio, Nemi e Velletri usano sistemi diversi
-# o non rispondono da fuori, e quello di Marino sul portale comune è fermo al
-# 2021: per questi Comuni restano le testate locali e la ricerca dedicata di
-# Google News (QUERIES_GOOGLE_NEWS).
+# arrivavano solo se una testata le riprendeva su Google News. Tutte
+# verificate il 05/11/2026 con richieste vere. Gli albi dei Comuni vicini
+# NON si leggono, per decisione dell'utente dello stesso giorno: «Ma perché
+# metti gli altri albi pretori?? Non ci competono!!».
 
 MESI_IT = {m: i for i, m in enumerate(
     ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto',
@@ -684,68 +714,6 @@ def fetch_comune_genzano(cutoff, errori):
         except Exception as e:  # noqa: BLE001
             errori.append(f'Comune di Genzano ({sezione}): {e} ({url})')
             print(f'  [error] comune di genzano {sezione}: {e}', file=sys.stderr)
-    return out
-
-
-# Albi dei Comuni vicini sullo stesso portale dell'albo di Genzano. Si ordina
-# l'elenco per numero di registrazione: il primo clic lo ordina dal più
-# vecchio, il secondo dal più recente (verificato il 05/11/2026).
-ALBI_VICINI = [
-    ('Ariccia', 'https://ariccia.trasparenza-valutazione-merito.it'),
-    ('Castel Gandolfo', 'https://castelgandolfo.trasparenza-valutazione-merito.it'),
-]
-ALBO_ORDINA = ('/web/trasparenza/papca-ap?p_p_id=jcitygovalbopubblicazioni_WAR_jcitygovalbiportlet'
-               '&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view'
-               '&_jcitygovalbopubblicazioni_WAR_jcitygovalbiportlet_action=eseguiOrdinamentoLista'
-               '&_jcitygovalbopubblicazioni_WAR_jcitygovalbiportlet_orderBy=annoNumeroRegistrazione')
-TERRITORIO = {'genzano di roma', 'genzano', 'castelli romani'}
-
-
-def fetch_albi_vicini(cutoff, errori):
-    """Albi pretori dei Comuni vicini: solo atti di protezione civile.
-
-    Qui il territorio non è Genzano: si tengono gli atti a rilevanza diretta
-    (COC, allerte, emergenze, incendi, piani…) e quelli che nominano Genzano
-    o i Castelli Romani. Ordinanze di viabilità, sagre e concerti degli
-    altri Comuni restano fuori.
-    """
-    out = []
-    for comune, base in ALBI_VICINI:
-        cli = Cliente()
-        lista = base + '/web/trasparenza/papca-ap'
-        try:
-            cli.get(lista)
-            pagina = ''
-            for _ in range(2):
-                pagina = cli.get(base + ALBO_ORDINA, referer=lista)
-            righe = re.findall(r'<tr class="master-detail-list-line[^"]*"[^>]*data-id="(\d+)">(.*?)</tr>',
-                               pagina, flags=re.S)
-            if not righe:
-                raise RuntimeError('nessuna riga trovata: struttura della pagina cambiata?')
-            recenti = 0
-            visti = set()
-            for id_atto, riga in righe:
-                celle = re.findall(r'<td[^>]*class="([^"]+)"[^>]*>(.*?)</td>', riga, flags=re.S)
-                c = {k.split()[0]: solo_testo(v) for k, v in celle}
-                oggetto = c.get('oggetto', '')
-                inizio = parse_data_it(c.get('periodo-pubblicazione', ''))
-                if not inizio or inizio < cutoff:
-                    continue
-                recenti += 1
-                if oggetto in visti:     # lo stesso atto compare due volte (pubblicazione e archivio)
-                    continue
-                visti.add(oggetto)
-                v = voce(f'Albo pretorio — Comune di {comune}', 'primaria', oggetto,
-                         f'{base}/web/trasparenza/papca-ap/-/papca/display/{id_atto}', inizio,
-                         tipo_atto=c.get('categoria', ''), numero=c.get('annonumero', ''),
-                         ente=f'Comune di {comune}', sommario=f'Comune di {comune}')
-                if (v['rilevanza'] == 'diretta' and set(v['motivi']) - TERRITORIO) or set(v['motivi']) & TERRITORIO:
-                    out.append(v)
-            if recenti == 0 and not re.search(r'\d{2}/\d{2}/20\d\d', pagina):
-                raise RuntimeError("elenco senza date leggibili: struttura della pagina cambiata?")
-        except Exception as e:  # noqa: BLE001
-            errori.append(f'Albo pretorio di {comune}: {e}')
-            print(f'  [error] albo di {comune}: {e}', file=sys.stderr)
     return out
 
 
@@ -1155,12 +1123,26 @@ QUERIES_GOOGLE_NEWS = [
     'IT-alert protezione civile',
     'volontariato protezione civile Lazio',
     'esercitazione protezione civile Lazio',
-    # Comuni vicini senza albo leggibile (dal 05/11/2026): Albano, Lanuvio,
-    # Nemi, Velletri e Marino; Ariccia e Castel Gandolfo hanno anche l'albo.
-    'protezione civile Albano Laziale OR Ariccia OR Lanuvio OR Nemi',
-    'protezione civile Velletri OR Marino OR "Castel Gandolfo" OR Lariano',
-    'ordinanza sindaco Genzano OR Ariccia OR Albano OR Lanuvio OR Nemi',
-    'COC centro operativo comunale Castelli Romani',
+    # Il Messaggero, che cita spesso il Gruppo (dal 05/11/2026): il feed di
+    # Roma è fra le testate; questa ricerca prende anche le altre sezioni.
+    'site:ilmessaggero.it Genzano OR "protezione civile Genzano"',
+    # Sentenze in materia di protezione civile (dal 05/11/2026, richiesta
+    # dell'utente). La Corte costituzionale si legge dalla Gazzetta Ufficiale,
+    # 1a Serie speciale; Cassazione, tribunali, TAR, Consiglio di Stato e
+    # Corte dei conti non hanno un elenco leggibile da fuori (ItalgiureWeb non
+    # risponde in modo affidabile, gli altri siti si costruiscono con
+    # JavaScript): arrivano da queste ricerche, e la routine apre poi la
+    # sentenza sulla fonte ufficiale prima di scrivere.
+    'Cassazione sentenza "protezione civile"',
+    'Cassazione sentenza alluvione OR frana OR terremoto responsabilità',
+    'Cassazione sentenza incendio boschivo',
+    'Cassazione sentenza allerta meteo sindaco',
+    'Consiglio di Stato sentenza "protezione civile"',
+    'TAR sentenza "protezione civile" OR "ordinanza contingibile"',
+    'Corte dei conti "protezione civile"',
+    'Corte costituzionale sentenza "protezione civile"',
+    'tribunale sentenza "protezione civile" volontari',
+    'sentenza responsabilità terremoto OR alluvione OR valanga processo',
     'site:normattiva.it protezione civile',
     'site:gazzettaufficiale.it protezione civile',
     'site:regione.lazio.it protezione civile',
@@ -1193,6 +1175,26 @@ FEEDS_ISTITUZIONALI = [
 ]
 
 
+MESI_BREVI = {m: i for i, m in enumerate(
+    ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'], start=1)}
+
+
+def data_feed_italiana(s):
+    """«gio, 05 nov 2026 16:26:38 +0100» → tupla UTC come quelle di feedparser.
+
+    Il Messaggero scrive le date dei feed in italiano e feedparser non le
+    legge: senza data una notizia vecchia passerebbe per nuova.
+    """
+    m = re.search(r'(\d{1,2})\s+([a-z]{3})[a-z]*\.?\s+(\d{4})\s+(\d{2}):(\d{2}):?(\d{2})?\s*([+-]\d{4})?', (s or '').lower())
+    if not m or m.group(2) not in MESI_BREVI:
+        return None
+    tz = m.group(7) or '+0000'
+    off = timedelta(hours=int(tz[1:3]), minutes=int(tz[3:])) * (1 if tz[0] == '+' else -1)
+    d = datetime(int(m.group(3)), MESI_BREVI[m.group(2)], int(m.group(1)), int(m.group(4)), int(m.group(5)),
+                 int(m.group(6) or 0), tzinfo=timezone(off))
+    return d.astimezone(timezone.utc).timetuple()
+
+
 def parse_feed(url, fonte, days, errori):
     try:
         import feedparser
@@ -1221,7 +1223,8 @@ def parse_feed(url, fonte, days, errori):
             titolo = entry.get('title', '').strip()
             link = entry.get('link', '').strip()
             sommario = re.sub(r'<[^>]+>', ' ', entry.get('summary', '')).strip()
-            pp = entry.get('published_parsed') or entry.get('updated_parsed')
+            pp = entry.get('published_parsed') or entry.get('updated_parsed') or \
+                data_feed_italiana(entry.get('published') or entry.get('updated'))
             if pp:
                 published = datetime(*pp[:6], tzinfo=timezone.utc)
                 if published < cutoff:
@@ -1289,7 +1292,8 @@ def fetch_dpc(cutoff, errori):
 # ---------------------------------------------------------------------------
 # Lette direttamente dai loro feed, invece di aspettare che Google News le
 # indicizzi. Stesse testate del controllo delle copie (scripts/controllo-copie.py)
-# per i Castelli e Roma, più ANSA Lazio e Il Giornale dei Castelli Romani,
+# per i Castelli e Roma, più Il Messaggero (Roma, cita spesso il Gruppo),
+# ANSA Lazio e Il Giornale dei Castelli Romani,
 # che pubblica le notizie dall'API di WordPress perché il suo /feed/ rimanda
 # alla home. I feed WordPress danno dieci notizie per pagina: una testata dei
 # Castelli ne pubblica fino a una trentina al giorno, quindi si sfogliano le
@@ -1304,7 +1308,12 @@ TESTATE_LOCALI = [
     {'nome': 'Controluce', 'feed': 'https://www.controluce.it/feed/', 'wp': True},
     {'nome': 'Terzo Binario', 'feed': 'https://www.terzobinario.it/feed/', 'wp': True},
     {'nome': 'RomaToday', 'feed': 'https://www.romatoday.it/rss', 'wp': False},
+    {'nome': 'Il Messaggero (Roma)', 'feed': 'https://www.ilmessaggero.it/rss/roma.xml', 'wp': False},
     {'nome': 'ANSA Lazio', 'feed': 'https://www.ansa.it/lazio/notizie/lazio_rss.xml', 'wp': False},
+    # Riviste giuridiche che pubblicano le sentenze (Cassazione, tribunali,
+    # Corte costituzionale): passano solo quelle con un tema di protezione civile.
+    {'nome': 'Giurisprudenza Penale (sentenze)', 'feed': 'https://www.giurisprudenzapenale.com/feed/', 'wp': True},
+    {'nome': 'Diritto.it (sentenze)', 'feed': 'https://www.diritto.it/feed/', 'wp': True},
 ]
 TESTATE_MAX_PAGINE = 4
 # Le testate scrivono di tutto: le parole chiave generali pescherebbero
@@ -1380,7 +1389,8 @@ def _pagina_feed_tutta_in_finestra(url, days):
     import feedparser
     feed = _CACHE_FEED.get(url) or feedparser.parse(url, agent=UA)
     cutoff = datetime.now(timezone.utc) - timedelta(days=days)
-    date_voci = [e.get('published_parsed') or e.get('updated_parsed') for e in feed.entries]
+    date_voci = [e.get('published_parsed') or e.get('updated_parsed') or
+                 data_feed_italiana(e.get('published') or e.get('updated')) for e in feed.entries]
     return bool(date_voci) and all(d and datetime(*d[:6], tzinfo=timezone.utc) >= cutoff for d in date_voci)
 
 
@@ -1473,7 +1483,7 @@ def corpo_issue(output):
                 estremi = ' · '.join(x for x in [it.get('tipo_atto'), it.get('numero'), it.get('ente')] if x)
                 righe.append(f"- **{data}** — {it['fonte']}{' · ' + estremi if estremi else ''}\n  [{t}]({it['link']})\n  <sub>parole chiave: {', '.join(it['motivi'])}</sub>")
 
-    blocco(primarie, "Atti e notizie dalle fonti primarie (albi pretori · Gazzetta Ufficiale · Normattiva · BURL · Consiglio regionale · Comune · Regione · Città metropolitana · Prefettura)")
+    blocco(primarie, "Atti e notizie dalle fonti primarie (albo pretorio · Gazzetta Ufficiale e Corte costituzionale · Normattiva · BURL · Consiglio regionale · Comune · Regione · Città metropolitana · Prefettura)")
     if immagini:
         righe.append(f"\n## Immagini satellitari dell'Unione europea — EU Space, «Image of the day» ({len(immagini)})\n")
         righe.append(ISTRUZIONI_EU_SPACE)
@@ -1534,7 +1544,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--days', type=int, default=2, help='Finestra temporale in giorni (default 2)')
     ap.add_argument('--fonti', choices=['primarie', 'news', 'tutte', 'eu-space'], default='tutte',
-                    help='primarie = albi/GU/Normattiva/BURL/Consiglio regionale/enti del territorio + immagini EU Space; '
+                    help='primarie = albo/GU (anche Corte costituzionale)/Normattiva/BURL/Consiglio regionale/enti del territorio + immagini EU Space; '
                          'news = Google News/RSS/notizie del DPC/testate locali; tutte (default); eu-space = solo le immagini EU Space')
     ap.add_argument('--out', default='-', help='File output JSON (default stdout)')
     ap.add_argument('--issue-body', default=None, help='Scrive il corpo Markdown della issue in questo file')
@@ -1570,7 +1580,9 @@ def main():
                 raise SystemExit(f'Filtro testate errato: {titolo!r}: {v and v["rilevanza"]!r}, attesa {attesa!r}')
         if parse_data_estesa('5 Novembre 2026') != date(2026, 11, 5):
             raise SystemExit('Data estesa non letta: «5 Novembre 2026»')
-        print(f'OK: {len(casi) + len(testate) + 1} verifiche di classificazione, nessuna richiesta esterna.')
+        if tuple(data_feed_italiana('gio, 05 nov 2026 16:26:38 +0100')[:5]) != (2026, 11, 5, 15, 26):
+            raise SystemExit('Data italiana del feed non letta: «gio, 05 nov 2026 16:26:38 +0100»')
+        print(f'OK: {len(casi) + len(testate) + 2} verifiche di classificazione, nessuna richiesta esterna.')
         return 0
 
     cutoff = oggi_roma() - timedelta(days=args.days)
@@ -1595,11 +1607,11 @@ def main():
     if args.fonti in ('primarie', 'tutte'):
         for nome, fn in [('Albo pretorio Genzano di Roma', fetch_albo_genzano),
                          ('Gazzetta Ufficiale (Serie Generale)', fetch_gazzetta_ufficiale),
+                         ('Gazzetta Ufficiale (1a Serie speciale — Corte costituzionale)', fetch_gu_corte_costituzionale),
                          ('Normattiva', fetch_normattiva),
                          ('BURL Lazio', fetch_burl),
                          ('Consiglio regionale del Lazio (notizie)', fetch_consiglio_lazio),
                          ('Comune di Genzano di Roma (avvisi, comunicati, notizie)', fetch_comune_genzano),
-                         ('Albi pretori di Ariccia e Castel Gandolfo', fetch_albi_vicini),
                          ('Regione Lazio (notizie)', fetch_regione_lazio),
                          ('Città metropolitana di Roma Capitale (notizie)', fetch_citta_metropolitana),
                          ('Prefettura di Roma (notizie)', fetch_prefettura_roma)]:
