@@ -61,7 +61,6 @@ L'alluvione del 2023 ha accelerato in Italia diversi processi:
 - I **Piani di Gestione del Rischio Alluvioni (PGRA)** delle Autorità di bacino sono stati **rivisti** alla luce dei nuovi scenari climatici. La **Direttiva Alluvioni UE 2007/60/CE** prevede revisioni periodiche, e il ciclo 2022-2027 incorpora i dati del 2023.
 - Il **Piano speciale di ricostruzione** dell'Emilia-Romagna ha messo in campo **risorse straordinarie** per il territorio colpito (oltre 4 miliardi di euro nel primo biennio, con ulteriori finanziamenti programmati).
 - È stato avviato un **dibattito nazionale** sulla **manutenzione ordinaria** dei reticoli idraulici minori (canali, scoli, fossi), spesso trascurata dai Comuni e dai Consorzi di Bonifica per ragioni economiche.
-- Il sistema **IT-alert** è stato pienamente attivato (2024) anche grazie alla pressione politica e operativa post-2023.
 - La discussione sul **rischio climatico** ha generato il **Piano Nazionale di Adattamento ai Cambiamenti Climatici (PNACC)**, finalmente approvato nel 2023 dopo anni di gestazione.
 
 ## Cosa deve sapere il cittadino oggi
@@ -86,6 +85,8 @@ Per il rischio idraulico locale di Genzano vedi [Rischio idraulico urbano a Genz
 Le **17 vittime** dell'alluvione dell'Emilia-Romagna del maggio 2023 sono ricordate ogni anno con cerimonie nei Comuni colpiti. Tre anni dopo, il territorio è in piena **fase di ricostruzione**: case riparate o ricostruite, argini rifatti più alti, casse di espansione progettate o realizzate, infrastrutture rimesse in opera. Ma il lavoro è **lungo**: molte aziende agricole della Romagna ancora non hanno recuperato la piena operatività, e il **rischio di nuovi eventi** resta concreto, come dimostrato dalla **terza alluvione** del settembre 2024 che ha colpito di nuovo le stesse zone.
 
 L'Emilia-Romagna è oggi un **caso di studio europeo**: il modo in cui una regione altamente sviluppata gestisce il **trauma di un'alluvione** e si adatta al **cambiamento climatico** è osservato dalla comunità internazionale. Per la nostra protezione civile, è una **lezione viva**: non si finisce mai di imparare a leggere il territorio.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo tolto una frase su IT-alert: le fonti ufficiali non collegano la sua entrata in funzione all'alluvione del 2023, e il sistema non si usa per piogge e piene.
 
 ## Per approfondire
 

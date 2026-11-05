@@ -102,11 +102,11 @@ Le **scuole inclusive** di Genzano di Roma (e di tutto il territorio) hanno semp
 
 ## IT-alert e notifiche
 
-Il sistema **IT-alert** — i messaggi di emergenza sui cellulari — include **suono acuto** e vibrazione. Per alcune persone autistiche può essere fonte di distress. È utile:
+Il sistema **IT-alert** — i messaggi di emergenza sui cellulari — arriva con un **suono ben riconoscibile**, diverso dalle suonerie normali. Per alcune persone autistiche può essere fonte di distress. È utile:
 
-- **Abituare** la persona al suono con test periodici.
+- **Abituare** la persona al suono: i test sono annunciati in anticipo sul [sito di IT-alert](https://www.it-alert.gov.it/), con giorno e area.
 - **Spiegare il significato** del messaggio.
-- **Consultare le impostazioni** del telefono per ridurre l'intensità.
+- **Sapere** che le impostazioni del telefono non lo fermano: il messaggio arriva anche se la voce IT-alert è disattivata.
 
 Un'**emergenza è drammatica per tutti**, ma chi vive con autismo e i suoi familiari conoscono questa "in più": il rumore in più, l'imprevisto in più, la spiegazione in più da dare.
 
@@ -139,3 +139,5 @@ Fonti istituzionali:
 - [WHO — Autism spectrum disorders](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders).
 
 Una Protezione Civile che accoglie la neurodiversità è una Protezione Civile più umana.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: il messaggio arriva anche se la voce IT-alert nelle impostazioni è disattivata, quindi non serve cercare lì come ridurlo.

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-I **Castelli Romani** sono un'area di **sismicità moderata**, con episodi storici documentati. Il rischio sismico non è uniforme su tutto il territorio: **cambia strada per strada** in base al tipo di terreno, alla pendenza, alla presenza di cavità. Lo strumento che mette in evidenza queste differenze si chiama **microzonazione sismica**.
+I **Castelli Romani** sono in **zona sismica 2B**, con episodi storici documentati. Il rischio sismico non è uniforme su tutto il territorio: **cambia strada per strada** in base al tipo di terreno, alla pendenza, alla presenza di cavità. Lo strumento che mette in evidenza queste differenze si chiama **microzonazione sismica**.
 
 ## Cosa è la microzonazione sismica
 
@@ -48,7 +48,7 @@ Una scossa che altrove si tradurrebbe in poco danno può, in aree con amplificaz
 
 ## I dati di riferimento
 
-- La [**Mappa di pericolosità sismica nazionale**](https://esse1.mi.ingv.it/) dell'**INGV** mostra per i Castelli una pericolosità media. Sulla sua base la Regione Lazio classifica Genzano di Roma in **zona sismica 2B** (sismicità media).
+- La [**Mappa di pericolosità sismica nazionale**](https://esse1.mi.ingv.it/) dell'**INGV** indica l'accelerazione del suolo attesa in ogni punto del territorio. Sulla sua base la Regione Lazio classifica Genzano di Roma in **zona sismica 2B**, con un'accelerazione attesa fra 0,15 e 0,20 g.
 - Il **Piano regolatore** del Comune di Genzano di Roma recepisce gli studi di microzonazione disponibili.
 - Le **Norme tecniche per le costruzioni (NTC 2018)** impongono ai progettisti di considerare la MS nei calcoli antisismici.
 

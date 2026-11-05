@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'EMERGENZA', cat: 'Situazione urgente', hint: 'Richiede interventi immediati',
         explain: 'Emergenza = evento in corso. Diversa dall\'allerta (previsione). Sono fasi distinte del ciclo del rischio.' },
       { w: 'TERREMOTO', cat: 'Rischio sismico', hint: 'La terra trema',
-        explain: 'I Castelli Romani sono in zona sismica 2B (sismicità media). L\'INGV monitora 24/7 con sismografi.' },
+        explain: 'I Castelli Romani sono in zona sismica 2B. L\'INGV monitora 24/7 con sismografi.' },
       { w: 'INCENDIO', cat: 'Rischio AIB', hint: 'Fuoco fuori controllo nei boschi o in casa',
         explain: 'Per gli incendi boschivi (AIB) chiama il 112: la centrale attiva i Vigili del Fuoco e le squadre AIB regionali.' },
       { w: 'ALLUVIONE', cat: 'Rischio idrogeologico', hint: 'Acqua che invade strade ed edifici',
@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
         explain: 'L\'INGV ha una rete di oltre 600 sismografi in Italia: registrano in tempo reale magnitudo, profondità, epicentro.' },
       { w: 'METEOROLOGIA', cat: 'Scienza del tempo', hint: 'Studia e prevede il tempo atmosferico',
         explain: 'In Italia la fonte ufficiale meteo per la PC è il Centro Funzionale Regionale (CFR) di ogni Regione, integrato con Aeronautica.' },
-      { w: 'IT ALERT', cat: 'Allarme pubblico', hint: 'Sistema italiano di SMS d\'emergenza dal Governo',
-        explain: 'IT-alert è operativo dal 2024: invia un messaggio cell broadcast a tutti i cellulari nell\'area di pericolo, anche stranieri.' },
+      { w: 'IT ALERT', cat: 'Allarme pubblico', hint: 'Sistema italiano che manda allarmi ai cellulari',
+        explain: 'IT-alert è operativo dal 2024: invia un messaggio cell broadcast ai cellulari accesi nell\'area di pericolo, in italiano e in inglese.' },
       { w: 'ALLERTAMENTO', cat: 'Sistema di allerta', hint: 'Il sistema che avvisa prima che arrivi il pericolo',
         explain: 'Il sistema di allertamento nazionale segue la Direttiva PCM 27/02/2004: i Centri Funzionali emettono i bollettini con i codici colore.' }
     ]

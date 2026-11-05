@@ -18,7 +18,7 @@ social_citazione: "Lo stesso terremoto fa danni molto diversi a seconda di come 
 social_punti:
   - "Il rischio sismico nasce da tre fattori: pericolosità, vulnerabilità degli edifici ed esposizione."
   - "La pericolosità si misura con lo scuotimento atteso al suolo, con il 10% di probabilità di essere superato in 50 anni."
-  - "Genzano è in zona sismica 2, sottozona 2B: sismicità media, secondo la classificazione della Regione Lazio."
+  - "Genzano è in zona sismica 2, sottozona 2B, secondo la classificazione della Regione Lazio."
   - "Sulla pericolosità non si può agire. Sulla vulnerabilità sì: una casa verificata da un tecnico, arredi fissati, un piano di famiglia."
 ---
 
@@ -61,7 +61,7 @@ Ogni zona corrisponde a un intervallo di accelerazione:
 
 Gli elenchi dei Comuni li approvano le Regioni, che possono aggiungere sottozone. Il Lazio lo ha fatto con la delibera di Giunta n. 387 del 22 maggio 2009. La zona 2 è divisa nelle sottozone 2A e 2B, la zona 3 nelle sottozone 3A e 3B.
 
-**Genzano di Roma è in zona 2, sottozona 2B**: sismicità media, con un'accelerazione attesa fra 0,15 e 0,20 g. Perché i Castelli Romani si trovano in questa classe lo spieghiamo nell'articolo [Sismicità dei Castelli Romani: perché siamo in zona 2B](/comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/).
+**Genzano di Roma è in zona 2, sottozona 2B**, con un'accelerazione attesa fra 0,15 e 0,20 g. Perché i Castelli Romani si trovano in questa classe lo spieghiamo nell'articolo [Sismicità dei Castelli Romani: perché siamo in zona 2B](/comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/).
 
 Per progettare un edificio, oggi, la zona non basta. Dal 1° luglio 2009 l'accelerazione di riferimento si ricava dalle coordinate del sito, su una griglia di 5 chilometri. I confini comunali non contano. Lo prevedono le Norme tecniche per le costruzioni, oggi quelle del 2018. La classificazione resta uno strumento per la pianificazione e il controllo del territorio.
 

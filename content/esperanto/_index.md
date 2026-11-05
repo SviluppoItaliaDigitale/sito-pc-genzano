@@ -53,7 +53,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 
 <div class="en-card">
 <h2>🌍 Tertremo</h2>
-<p>Italio estas tertrema lando. Genzano estas en <strong>tertrema zono 2B</strong> (mezgrava risko). Se vi sentas tremon:</p>
+<p>Italio estas tertrema lando. Genzano estas en <strong>tertrema zono 2B</strong>, kie fortaj tertremoj eblas. Se vi sentas tremon:</p>
 <ul class="en-list">
 <li>Ŝirmu vin sub solida tablo aŭ apud interna muro</li>
 <li>Kovru vian kapon per la manoj</li>
@@ -119,7 +119,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italio havas nacian alarmsistemon nomatan <strong>IT-alert</strong>. En kazo de granda urĝo ĝi sendas laŭtan mesaĝon rekte al ĉiuj telefonoj en la trafita areo — sen aplikaĵo kaj sen interreto; la telefono nur devas esti ŝaltita kaj ene de la kovrado de la poŝtelefona reto. La mesaĝo estas en la itala kaj angla. Pli da informoj: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italio havas nacian alarmsistemon nomatan <strong>IT-alert</strong>. En kazo de granda urĝo ĝi sendas mesaĝon kun karakteriza sono al la poŝtelefonoj en la trafita areo — sen aplikaĵo kaj sen interreto; la telefono nur devas esti ŝaltita kaj ene de la kovrado de la poŝtelefona reto. La mesaĝo estas en la itala kaj angla. Pli da informoj: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">

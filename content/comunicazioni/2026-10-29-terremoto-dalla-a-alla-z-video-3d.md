@@ -139,7 +139,7 @@ Poi c'è la casa dentro:
 
 ## Il terremoto da noi
 
-Genzano di Roma è in zona sismica 2B, a sismicità media. Il vulcano dei Colli Albani è quiescente, non spento: qui la terra trema soprattutto con sciami di scosse, di solito piccole ma a volte avvertite.
+Genzano di Roma è in zona sismica 2B: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili. Al capitolo 11 nel video si dice «a sismicità media», una formula che la classificazione della Regione Lazio non usa per Genzano. Il vulcano dei Colli Albani è quiescente, non spento: qui la terra trema soprattutto con sciami di scosse, di solito piccole ma a volte avvertite.
 
 Secondo le stime della piattaforma SicuroPiù del Dipartimento della Protezione Civile, a Genzano solo un edificio su venti è molto vulnerabile. La pericolosità, però, è più alta di quella di circa due comuni italiani su tre: il nostro è un territorio sismico a tutti gli effetti. I numeri completi sono nella pagina [Rischio sismico](/rischi-prevenzione/rischio-sismico/#in-numeri).
 

@@ -102,7 +102,7 @@ La scelta dell'Emilia di **ricostruire nei luoghi originari**, non delocalizzare
 
 ## I Castelli Romani e la sismicità
 
-Il Lazio ha sismicità medio-bassa nei Castelli Romani, ma **non assente**: il territorio dei Colli Albani è di origine vulcanica e presenta attività sismica occasionale. Le mappe di pericolosità sismica dell'INGV sono disponibili sul sito istituzionale. Ogni cittadino può verificare la zona sismica del proprio comune.
+Nei Castelli Romani la sismicità **non è assente**: i Comuni dei Castelli sono in zona sismica 2B, e il territorio dei Colli Albani è di origine vulcanica, con scosse frequenti. Le mappe di pericolosità sismica dell'INGV sono disponibili sul sito istituzionale. Ogni cittadino può verificare la zona sismica del proprio comune.
 
 **Preparazione = prevenzione**. Non serve vivere in angoscia. Serve:
 

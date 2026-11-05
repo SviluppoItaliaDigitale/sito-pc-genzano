@@ -58,7 +58,7 @@ Dopo il 2004, l'Italia ha costruito progressivamente:
 - Il **Centro Allerta Tsunami (CAT)** dell'INGV, attivo dal 2017 con servizio H24.
 - Il **Sistema di Allertamento Maremoti — SiAM**, parte del Servizio Nazionale di Protezione Civile.
 - I **Piani di emergenza tsunami** per i Comuni costieri più esposti (Sicilia orientale, Calabria, Puglia ionica, Eolie, basso Tirreno).
-- L'integrazione con **IT-alert** dal 2024: in caso di tsunami imminente, una notifica push arriva ai cellulari nelle aree costiere a rischio.
+- La sperimentazione di **IT-alert** per il maremoto, prorogata fino al 31 dicembre 2026: per ora sui telefoni arrivano solo messaggi di prova.
 - **Esercitazioni periodiche** — fra cui la grande esercitazione **TwiST** (Tsunami Wave In Sicily Test) e altre — che testano la catena operativa completa.
 
 A livello internazionale, il NEAMTWS organizza ogni due anni l'esercitazione **NEAMWave**, a cui partecipano tutti i Paesi membri (oltre 30) per testare l'allerta e la risposta.
@@ -71,7 +71,7 @@ Per chi vive o visita le coste italiane (e di altri Paesi affacciati sul Mediter
 2. **Se uno di questi segnali si verifica**: NON aspettare allerta ufficiale. **Sali subito in alto** (colline, edifici di almeno tre piani, terrazzi). **Allontanati dalla costa di almeno 1 chilometro**.
 3. **Non scendere mai a osservare**: lo tsunami arriva in pochi minuti, e le onde possono essere precedute o seguite da onde più grandi.
 4. **Resta in alto per almeno due ore** dopo l'arrivo delle prime onde: il treno d'onda continua, e le onde successive possono essere maggiori.
-5. **Ascolta i canali ufficiali** (radio, IT-alert, Comune, Prefettura) per sapere quando si può tornare verso la costa.
+5. **Ascolta i canali ufficiali** (radio, Comune, Prefettura) per sapere quando si può tornare verso la costa.
 
 Per chi viaggia all'estero in aree a rischio (Asia sud-orientale, Pacifico, Caraibi), le **schede di sicurezza** dei Comuni costieri internazionali e le **app turistiche** delle agenzie locali sono riferimenti utili. Anche la **Farnesina** (sito Viaggiare Sicuri) include informazioni di rischio per Paese.
 

@@ -13,7 +13,7 @@ Il terremoto non si può prevedere. Per questo devi prepararti prima.
 
 ## Perché riguarda Genzano
 
-Genzano di Roma è in una zona con rischio sismico medio. I Colli Albani sono un vecchio vulcano. A volte la terra trema un poco. Di solito le scosse sono deboli.
+Genzano di Roma è in zona sismica 2. In questa zona possono esserci terremoti forti. I Colli Albani sono un vecchio vulcano. A volte la terra trema un poco. Di solito le scosse sono deboli.
 
 ## Prima
 

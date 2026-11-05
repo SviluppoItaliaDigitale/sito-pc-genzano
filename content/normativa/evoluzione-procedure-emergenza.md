@@ -87,7 +87,7 @@ Nel 1996 le comunicazioni di allerta viaggiavano su **carta, telex, fax**. Oggi 
 
 - ha un **Centro Funzionale Centrale** (DPC) e **Centri Funzionali Decentrati** (Regioni)
 - pubblica **bollettini quotidiani** online consultabili dai cittadini
-- dispone di **IT-alert**, il sistema di allarme pubblico che invia notifiche geolocalizzate agli smartphone
+- dispone di **IT-alert**, il sistema di allarme pubblico che invia messaggi ai telefoni cellulari presenti nell'area di una grave emergenza
 - si integra con i **canali social** istituzionali
 - usa standard europei di **early warning**
 

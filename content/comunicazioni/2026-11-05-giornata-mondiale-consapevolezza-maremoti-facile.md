@@ -43,13 +43,13 @@ Dal 2017 l'Italia ha un sistema di allerta. Si chiama SiAM, il Sistema di Allert
 - l'ISPRA controlla il livello del mare con i suoi strumenti;
 - la Protezione Civile avvisa i cittadini.
 
-L'avviso può arrivare anche con IT-alert. IT-alert è un messaggio che suona sul telefono. Arriva a chi è nella zona di pericolo.
+IT-alert è un messaggio che arriva sul telefono. Per il maremoto IT-alert è ancora in prova: per ora arrivano solo messaggi di test.
 
 ## Cosa fare se sei al mare
 
 - **Senti un forte terremoto vicino al mare?** Non aspettare l'allerta. Allontanati subito dal mare. Vai in un posto alto.
 - **Vedi il mare che si ritira veloce?** È un segnale di pericolo. Corri verso l'alto. Non andare a guardare il mare.
-- **Ricevi un messaggio IT-alert?** Segui le indicazioni. Allontanati da spiagge e porti.
+- **Le autorità danno l'allerta maremoto?** Segui le indicazioni. Allontanati da spiagge e porti.
 - **Dopo la prima onda, non tornare in spiaggia.** Le onde arrivano una dopo l'altra. La prima onda non è sempre la più grande.
 
 ## Per approfondire
@@ -66,3 +66,5 @@ L'avviso può arrivare anche con IT-alert. IT-alert è un messaggio che suona su
 - [Dipartimento della Protezione Civile — Rischio maremoto](https://rischi.protezionecivile.gov.it/it/maremoto-0/)
 - [INGV — Centro Allerta Tsunami](https://www.ingv.it/)
 - [UNDRR — World Tsunami Awareness Day](https://www.undrr.org/)
+
+> **Nota (5 novembre 2026).** Abbiamo corretto la parte su IT-alert. Per il maremoto IT-alert è ancora in prova.

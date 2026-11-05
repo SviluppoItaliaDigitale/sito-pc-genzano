@@ -139,7 +139,7 @@ In **Italia** il volontariato è il **cuore** del sistema: centinaia di migliaia
 
 {{< dossier-dati id="allertamento" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea dell'alluvione in Emilia-Romagna del 2023" >}}
 {{< dossier-dato to="2012" label="Negli USA diventano operativi i **Wireless Emergency Alerts**: messaggi di allarme inviati ai telefoni di un'area colpita tramite il sistema IPAWS della FEMA" >}}
-{{< dossier-dato to="2024" label="**IT-alert**, testato nel 2023, è operativo dal febbraio 2024: lo stesso principio, lo stesso standard tecnico internazionale (CAP)" >}}
+{{< dossier-dato to="2024" label="**IT-alert**, provato dal 2022, è operativo dal 13 febbraio 2024: lo stesso principio, un messaggio ai telefoni dell'area colpita" >}}
 {{< dossier-dato to="911" label="Il numero unico di emergenza negli **Stati Uniti**. In **Italia** è il **112**, il Numero Unico Europeo" >}}
 {{< /dossier-dati >}}
 

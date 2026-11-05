@@ -79,7 +79,7 @@ Per chi vive in **zona sismica** (e in Italia, come abbiamo visto con [San Giuli
 
 ## Genzano e il rischio sismico
 
-Genzano di Roma è in **zona sismica 2B**: sismicità media. Significa che possono verificarsi terremoti di magnitudo significativa, anche se con tempi di ritorno lunghi. Le costruzioni nuove sono progettate per resistere a sismi attesi con probabilità del 10% in 50 anni. Per i comportamenti di autoprotezione vedi [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e l'articolo del nostro archivio sulla [Microzonazione sismica dei Castelli Romani](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/).
+Genzano di Roma è in **zona sismica 2B**: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili. Le costruzioni nuove sono progettate per lo scuotimento che ha il 10% di probabilità di essere superato in 50 anni. Per i comportamenti di autoprotezione vedi [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e l'articolo del nostro archivio sulla [Microzonazione sismica dei Castelli Romani](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/).
 
 ## In ricordo
 

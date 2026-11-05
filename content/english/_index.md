@@ -81,7 +81,7 @@ This page gives you **essential information** in English. The full website is in
 
 <div class="en-card">
 <h2>🌍 Earthquake</h2>
-<p>Italy is a seismic country. Genzano is in <strong>seismic zone 2B</strong> (medium hazard). If you feel shaking:</p>
+<p>Italy is a seismic country. Genzano is in <strong>seismic zone 2B</strong>, where strong earthquakes are possible. If you feel shaking:</p>
 <ul class="en-list">
 <li>Take cover under a sturdy table or against an interior wall</li>
 <li>Cover your head with your hands</li>
@@ -148,7 +148,7 @@ This page gives you **essential information** in English. The full website is in
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italy has a national alert system called <strong>IT-alert</strong>. In case of major emergency it sends a loud message directly to all phones in the affected area — no app or internet needed, your phone just needs to be on and within mobile network coverage. The message is in Italian and English. More info: <a href="https://www.it-alert.it/en/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italy has a national alert system called <strong>IT-alert</strong>. In case of major emergency it sends a message with a distinctive sound to mobile phones in the affected area — no app or internet needed, your phone just needs to be on and within mobile network coverage. The message is in Italian and English. More info: <a href="https://www.it-alert.it/en/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">

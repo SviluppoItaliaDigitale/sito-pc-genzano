@@ -516,7 +516,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/risorse-pronte/">
   <div class="ms-card-icon"><i class="bi bi-collection-play"></i></div>
   <p class="ms-card-title">Materiali pronti da scaricare</p>
-  <p class="ms-card-desc">Podcast, infografiche, presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Liberamente scaricabili con licenza CC BY-NC-SA 4.0 per scuola, formazione e divulgazione.</p>
+  <p class="ms-card-desc">Video, infografiche, presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Liberamente scaricabili con licenza CC BY-NC-SA 4.0 per scuola, formazione e divulgazione.</p>
 </a>
 <a class="ms-card ms-edu" href="/schede-1-minuto/">
   <div class="ms-card-icon"><i class="bi bi-stopwatch"></i></div>
@@ -576,12 +576,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/audio-e-podcast/">
   <div class="ms-card-icon"><i class="bi bi-headphones"></i></div>
   <p class="ms-card-title">Audio e podcast</p>
-  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: scegli fra il podcast con episodi MP3 o gli articoli letti ad alta voce dal browser. Entrambi gratuiti, accessibili e rispettosi della privacy.</p>
+  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: gli articoli letti ad alta voce dal browser e i podcast del Dipartimento della Protezione Civile. Il podcast del Gruppo è sospeso.</p>
 </a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>
-  <p class="ms-card-desc">Il podcast del Gruppo Comunale: episodi audio sui rischi locali, esercitazioni, interviste. Feed RSS per Spotify, Apple Podcasts e ogni app.</p>
+  <p class="ms-card-desc">Il podcast del Gruppo Comunale: le puntate sono sospese dal 5 novembre 2026 e torneranno solo dopo la verifica sulle fonti, con la trascrizione.</p>
 </a>
 <a class="ms-card ms-edu" href="/articoli-da-ascoltare/">
   <div class="ms-card-icon"><i class="bi bi-volume-up-fill"></i></div>

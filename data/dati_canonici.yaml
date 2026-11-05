@@ -184,19 +184,24 @@ dati:
 
   - id: genzano-zona-sismica
     dato: "Classificazione sismica di Genzano di Roma"
-    valore: "zona sismica 2, sottozona 2B: ag tra 0,15 e 0,20 g, sismicità media"
+    valore: "zona sismica 2, sottozona 2B: accelerazione attesa fra 0,15 e 0,20 g; la Regione classifica per accelerazione e non assegna a Genzano un grado di sismicità; per il Dipartimento, in zona 2 «forti terremoti sono possibili». Nella classificazione aggiornata dal Dipartimento a maggio 2025 tutti i Comuni dei Castelli Romani sono in 2B"
     fonti:
-      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1 «Nuova classificazione sismica del territorio della Regione Lazio»"
+      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1 «Nuova classificazione sismica del territorio della Regione Lazio» (tabella 3; descrive come «media» la 2B del Viterbese e come «medio-alta» quella del Frusinate)"
         url: "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
+      - nome: "Dipartimento della Protezione Civile, «Classificazione sismica» (con la classificazione aggiornata a maggio 2025)"
+        url: "https://rischi.protezionecivile.gov.it/it/sismico/attivita/classificazione-sismica/"
     vietati:
       - regex: '\bzon[ae]\s+(?:sismic[ah]\s+)?2\s*[-–]\s*3\b|\bZ2-3\b'
         perche: "Genzano non è «al confine» fra due zone: è in zona 2, sottozona 2B."
         contesto: 'Genzano|Castelli|Colli Albani'
         finestra: 200
-      - regex: '\b(?:pericolosità|sismicità|rischio)\s+medio[- ]alt[oa]\b'
-        perche: "Per la Regione Lazio la sottozona 2B di Genzano è a sismicità media, non medio-alta."
-        contesto: '2B|[Zz]ona\s+(?:sismica\s+)?2\b'
+      - regex: '(?i)\b(?:sismicità|pericolosità(?:\s+sismica)?|rischio(?:\s+sismico)?)\s+(?:media|medio(?:[- ](?:alt[oa]|bass[oa]))?|moderat[oa])\b|\bmedi[ao]\s+(?:sismicità|pericolosità)\b'
+        perche: "La Regione Lazio classifica Genzano e i Castelli per accelerazione attesa (sottozona 2B, fra 0,15 e 0,20 g) e non assegna loro un grado di sismicità; per il Dipartimento, in zona 2 «forti terremoti sono possibili»."
+        contesto: '(?i)Genzano|Castelli|Colli Albani|\b2B\b|zona\s+(?:sismica\s+)?2\b|\bLazio\b'
         stessa_frase: true
+        # La trascrizione del video (capitolo 11) deve restare uguale all'audio,
+        # che dice «a sismicità media»; le note che lo segnalano lo citano.
+        salvo_se_frase: '^\s*Genzano è in zona sismica 2B, a\s*$|nel video si dice «a\s*»'
 
   - id: terremoto-1806-genzano
     dato: "Terremoto del 26 agosto 1806 e intensità a Genzano di Roma"
@@ -892,3 +897,159 @@ dati:
         perche: "L'obbligo invernale lo stabilisce l'ente proprietario o gestore della strada, non il prefetto né la Regione in quanto tale."
         contesto: '(?i)catene|pneumatic|gomme|invernal|neve'
         finestra: 250
+
+  # IT-alert (05/11/2026): un controllo su tutto il sito ha trovato una
+  # quarantina di file con affermazioni sbagliate (SMS, terremoti, suono in
+  # silenzioso, impostazioni da attivare, maremoto operativo, date, nascita
+  # «dopo Amatrice»). Fatti verificati sulle pagine ufficiali di
+  # it-alert.gov.it e sulla Direttiva del 12 febbraio 2026; ogni regola qui
+  # sotto ferma una delle frasi sbagliate trovate allora. Molte regole
+  # cercano «IT-alert» prima della frase sbagliata, sulla stessa riga e senza
+  # una negazione in mezzo: così «IT-alert non avvisa dei terremoti» passa.
+  - id: it-alert-tecnologia
+    dato: "Come arriva il messaggio IT-alert"
+    valore: "con il cell broadcast: non è un SMS, non è un'app, non è una notifica push; arriva da solo ai telefoni accesi e con campo nell'area, anche a quelli che non sono smartphone"
+    fonti:
+      - nome: "IT-alert, «Come funziona»"
+        url: "https://www.it-alert.gov.it/it/come-funziona/"
+      - nome: "IT-alert, «Domande frequenti»"
+        url: "https://www.it-alert.gov.it/it/faq/"
+    vietati:
+      - regex: '(?i)\bSMS[^\S\n]+IT[- ]?alert\b|\bIT[- ]?alert[^\S\n]+(?:via|tramite|per|con)[^\S\n]+SMS\b|\bSMS[^\S\n]+broadcast\b'
+        perche: "IT-alert non è un SMS: usa il cell broadcast."
+      - regex: '(?i)\bSMS\s+(?:di\s+|d[''’]\s*)(?:emergenza|allerta|allarme)\b'
+        perche: "IT-alert non è un SMS d'emergenza: usa il cell broadcast."
+        contesto: 'IT[- ]?[Aa]lert|ITALERT|IT ALERT'
+        stessa_frase: true
+        salvo_se_frase: '(?i)truff|phishing|fals[oi]|sembra|finge|imita'
+      - regex: '(?<![Nn]on )\bè\s+un\s+SMS\b'
+        perche: "IT-alert non è un SMS: usa il cell broadcast."
+        contesto: 'IT[- ]?[Aa]lert|cell[- ]?broadcast'
+        stessa_frase: true
+      - regex: '(?i)\bnotific\w+\s+push\b'
+        perche: "IT-alert non è una notifica push: è un messaggio cell broadcast."
+        contesto: 'IT[- ]?[Aa]lert|cell[- ]?broadcast'
+        stessa_frase: true
+        salvo_se_frase: '(?i)\bnon\b|\bné\b'
+      - regex: '(?i)\bapp\s+(?:di\s+|dell[''’]\s*)?IT[- ]?alert\b|\bIT[- ]?alert\s+app\b'
+        perche: "IT-alert non è un'app: non si scarica e non si installa."
+        salvo_se_frase: '(?i)\bnon\b|\bné\b|scaricato|bufal|fals|errore'
+      - regex: '(?i)\b(?:si\s+installa\s+da\s+sol[ao]|installat[ao]\s+automaticamente)\b'
+        perche: "IT-alert non è un'app: non si installa."
+        contesto: 'IT[- ]?[Aa]lert'
+        stessa_frase: true
+      - regex: '(?i)\btelefoni\s+(?:più\s+)?vecchi\s+potrebbero\s+non\b|\bsolo\s+(?:gli\s+|sugli\s+)?smartphone\b'
+        perche: "Secondo i test del Dipartimento il messaggio arriva anche ai telefoni di vecchia generazione, non solo agli smartphone."
+        contesto: 'IT[- ]?[Aa]lert|cell[- ]?broadcast'
+        stessa_frase: true
+        salvo_se_frase: '(?i)prima\s+versione|[Dd]iceva|corrett'
+
+  - id: it-alert-impostazioni-e-suono
+    dato: "Che cosa deve fare il cittadino sul telefono per IT-alert, e come suona"
+    valore: "nulla: niente app, iscrizioni o impostazioni; il messaggio arriva anche se la voce IT-alert fra gli avvisi di emergenza è disattivata. Il suono è «ben riconoscibile e differente dalle classiche suonerie»; in modalità silenziosa il messaggio arriva, ma il suono può non partire"
+    fonti:
+      - nome: "IT-alert, «Domande frequenti» (n. 8, telefono silenzioso)"
+        url: "https://www.it-alert.gov.it/it/faq/"
+      - nome: "IT-alert, «Messaggi»"
+        url: "https://www.it-alert.gov.it/it/messaggi/"
+    vietati:
+      - regex: '(?i)\b(?:attiva|attivare|attivate|abilita|abilitare|abilitate)\s+(?:la\s+ricezione\s+(?:dei\s+messaggi\s+)?(?:di\s+)?|gli\s+avvisi\s+(?:di\s+)?|le\s+notifiche\s+(?:di\s+)?)?IT[- ]?alert\b'
+        perche: "Non serve attivare nulla: il messaggio IT-alert arriva anche se la voce è disattivata."
+        salvo_se_prima: '\b(?:non|né|senza)\b[^.]{0,40}$'
+        salvo_se_frase: '(?i)prima\s+versione|[Dd]iceva|corrett|criteri\s+di\s+attivazione'
+      - regex: '(?i)\b(?:verific|controll|assicur|accert)\w*\b[^.!?\n]{0,40}?\b(?:IT[- ]?alert|il\s+cell[- ]?broadcast|gli\s+avvisi\s+di\s+emergenza|gli\s+allarmi\s+(?:pubblici|di\s+emergenza))\b[^.!?\n]{0,30}?\b(?:sia|siano)\s+(?:attiv|abilitat)'
+        perche: "Non serve verificare le impostazioni: il messaggio IT-alert arriva anche se la voce è disattivata."
+        salvo_se_prima: '\b(?:non|né)\b[^.]{0,40}$'
+        salvo_se_frase: '(?i)prima\s+versione|[Dd]iceva|corrett'
+      - regex: '(?i)\b(?:tieni|tenete|tenere|mantieni|lascia|lasciate)\s+(?:sempre\s+)?attiv[oi]\s+(?:IT[- ]?alert|il\s+cell[- ]?broadcast|gli\s+avvisi\s+di\s+emergenza)'
+        perche: "Non serve tenere attiva nessuna impostazione: il messaggio IT-alert arriva comunque."
+        salvo_se_prima: '\b(?:non|né)\b[^.]{0,40}$'
+      - regex: '(?i)\bnon\s+disattiva\w*\s+(?:mai\s+)?(?:IT[- ]?alert|gli\s+avvisi\s+di\s+emergenza|il\s+cell[- ]?broadcast)'
+        perche: "Il messaggio IT-alert arriva anche se la voce è disattivata: non serve raccomandare di non disattivarla."
+      - regex: '(?i)\b(?:suona|squilla|si\s+sente|emette\s+(?:un\s+)?suono|suono)\b[^.!?\n]{0,40}?\b(?:anche|perfino|pure)\s+(?:se\s+(?:il\s+(?:telefono|cellulare)\s+)?(?:è|e[''’])\s+)?(?:in\s+)?(?:modalità\s+)?silenz'
+        perche: "In modalità silenziosa il messaggio IT-alert arriva, ma il suono può non partire (FAQ n. 8)."
+        contesto: 'IT[- ]?[Aa]lert'
+        stesso_paragrafo: true
+        salvo_se_frase: '(?i)[Dd]iceva|prima\s+versione|corrett|può\s+non|potrebbe\s+non|bufal'
+      - regex: '(?i)\bignora\w*\s+(?:la\s+|le\s+|il\s+)?(?:modalità\s+|impostazion\w+\s+|profil\w+\s+)?silenz\w*'
+        perche: "In modalità silenziosa il messaggio IT-alert arriva, ma il suono può non partire (FAQ n. 8)."
+        contesto: 'IT[- ]?[Aa]lert'
+        stesso_paragrafo: true
+      - regex: '(?i)\brings?\b[^.!?\n]{0,30}?\b(?:also|even)\s+(?:if|when|in)\b[^.!?\n]{0,25}?\bsilent'
+        perche: "In silent mode the IT-alert message arrives, but the sound may not play (FAQ 8)."
+        contesto: 'IT[- ]?[Aa]lert'
+        stesso_paragrafo: true
+      - regex: '(?i)\b(?:8|otto)\s+toni\b|\bscampani\w*|\bsuon\w*\s+(?:simile\s+a\s+(?:una\s+)?|come\s+(?:una\s+)?|di\s+)sirena|\bsuon\w*\s+(?:molto\s+)?fort\w*|\bsuona\s+fort\w*|\bsquill\w*'
+        perche: "Le fonti ufficiali descrivono il suono come «ben riconoscibile e differente dalle classiche suonerie», senza volume, sirene o sequenze di toni."
+        contesto: 'IT[- ]?[Aa]lert'
+        stessa_frase: true
+        salvo_se_frase: '(?i)[Dd]iceva|prima\s+versione|corrett'
+
+  - id: it-alert-rischi
+    dato: "Per quali rischi si usa IT-alert"
+    valore: "operativo dal 13 febbraio 2024 per collasso di grandi dighe, attività vulcanica di Campi Flegrei, Vesuvio e isola di Vulcano, incidenti nucleari o emergenze radiologiche, incidenti rilevanti negli stabilimenti del d.lgs. 105/2015; maremoto e Stromboli in sperimentazione fino al 31 dicembre 2026 (solo messaggi di test); non si usa per terremoti, allerte meteo e precipitazioni intense (per queste la Direttiva del 12 febbraio 2026 prevede un'applicazione dedicata)"
+    fonti:
+      - nome: "IT-alert, «Quando si usa»"
+        url: "https://www.it-alert.gov.it/it/quando-si-usa/"
+      - nome: "IT-alert, «Sperimentazione»"
+        url: "https://www.it-alert.gov.it/it/sperimentazione/"
+      - nome: "Direttiva del Ministro per la protezione civile e le politiche del mare del 12 febbraio 2026"
+        url: "https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/"
+    vietati:
+      - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,80}?\bterremoti\s*,\s*(?:maremoti|eruzioni|dighe|vulcani)'
+        perche: "IT-alert non si usa per i terremoti."
+      - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,60}?\b(?:avvis|avvert|allert|segnal)\w*\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,30}?\b(?:per|di|dei|in\s+caso\s+di)\s+(?:un\s+|i\s+|il\s+)?(?:terremot|sism)'
+        perche: "IT-alert non si usa per i terremoti."
+      - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,60}?\b(?:attiv[oa]|operativ[oa]|si\s+usa|arriva|avvis\w*|serve)\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,40}?\b(?:maremot\w*|tsunami|Stromboli)'
+        perche: "Per maremoto e Stromboli IT-alert è ancora in sperimentazione: solo messaggi di test, fino al 31 dicembre 2026."
+        salvo_se_frase: '(?i)sperimenta|in\s+prova|ancora\s+una\s+prova|\btest\b|non\s+(?:è\s+)?(?:ancora\s+)?operativ'
+      - regex: '(?i)\b(?:sperimentazion\w*|test\w*|in\s+prova)\b[^.!?\n]{0,60}?\bprecipitazioni\s+intense'
+        perche: "Dal 12 febbraio 2026 le precipitazioni intense non sono più fra i rischi di IT-alert: è prevista un'applicazione dedicata."
+        contesto: 'IT[- ]?[Aa]lert'
+        stessa_frase: true
+        salvo_se_frase: '(?i)al\s+posto\s+di|applicazione|non\s+(?:sono\s+)?più'
+      - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,40}?\b(?:manda|invia|avvisa|arriva|si\s+usa|serve)\w*\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,20}?\ballert[ae]\s+meteo'
+        perche: "IT-alert non si usa per le allerte meteo."
+
+  - id: it-alert-date-e-origine
+    dato: "Quando nasce IT-alert"
+    valore: "previsto dal decreto-legge 32/2019 (art. 28), in attuazione della Direttiva (UE) 2018/1972; provato dal 2022 (esercitazioni Vulcano 2022 e Sisma dello Stretto 2022), test regionali nel 2023 e all'inizio del 2024, operativo dal 13 febbraio 2024. Le fonti ufficiali non lo collegano a un terremoto (L'Aquila, Amatrice) né a un'alluvione"
+    fonti:
+      - nome: "IT-alert, «Normativa»"
+        url: "https://www.it-alert.gov.it/it/normativa/"
+      - nome: "IT-alert, «Sperimentazione»"
+        url: "https://www.it-alert.gov.it/it/sperimentazione/"
+      - nome: "Decreto del Presidente del Consiglio dei ministri 19 giugno 2020, n. 110"
+        url: "https://www.protezionecivile.gov.it/it/normativa/decreto-del-presidente-del-consiglio-dei-ministri-del-19-giugno-2020---modalit--e-criteri-di-attivazione-e-gestione-del-servizio-it--alert/"
+    vietati:
+      - regex: '(?i)\bD\.?\s?P\.?\s?C\.?\s?M\.?\s+(?:del\s+)?19\s+giugno\s+2022|\bDPCM\s+19/0?6/2022'
+        perche: "Il DPCM n. 110 su IT-alert è del 19 giugno 2020."
+        salvo_se_frase: '(?i)prima\s+versione|[Cc]itava|conteneva\s+errori|corrett'
+      - regex: '(?i)\b(?:sperimentat\w*|test|prove)\s+(?:in\s+Italia\s+)?(?:nel|dal)\s+2023|\battiv\w*\s+da(?:l)?\s+2023|\b2023\s*\(test\)|\btest\s+regionali\s+(?:nel\s+)?2022|\b(?:dopo|segue)\s+(?:la\s+)?sperimentazione\s+(?:del\s+)?2023'
+        perche: "IT-alert è stato provato dal 2022 (test regionali nel 2023 e all'inizio del 2024) ed è operativo dal 13 febbraio 2024."
+        contesto: 'IT[- ]?[Aa]lert|ITALERT|IT ALERT|cell[- ]?broadcast'
+        stessa_frase: true
+      - regex: '(?i)\bdopo\s+(?:il\s+(?:terremoto|sisma)\s+(?:di\s+|del(?:l[''’]\s*)?\s*)?)?(?:L[''’]\s*Aquila|Amatrice|Centro\s+Italia|Rigopiano)\b[^.!?\n]{0,100}?\bIT[- ]?alert\b|\bIT[- ]?alert\b[^.!?\n]{0,60}?\bdopo\s+(?:il\s+(?:terremoto|sisma)\s+(?:di\s+|del(?:l[''’]\s*)?\s*)?)?(?:L[''’]\s*Aquila|Amatrice|Centro\s+Italia|Rigopiano)\b'
+        perche: "Le fonti ufficiali non collegano IT-alert al terremoto dell'Aquila, a quello del Centro Italia o a Rigopiano, e IT-alert non avvisa dei terremoti."
+        salvo_se_frase: '(?i)non\s+(?:è\s+)?(?:nat|collegat|legat|deriv|una\s+(?:lezione|conseguenza|risposta))|non\s+c[''’]entr|non\s+avvisa'
+      - regex: '(?i)\b(?:Amatrice|Centro\s+Italia|L[''’]\s*Aquila)\s+20(?:09|16)\b[^.!?\n]{0,40}?\bIT[- ]?alert\b|\bAmatrice\s*(?:→|->)\s*IT[- ]?alert|collegandol\w*\s+(?:all[''’]\s*introduzione\s+di|a)\s+IT[- ]?alert|\b(?:nat[oa]|nasce\w*)\s+dopo\s+(?:il\s+terremoto\s+di\s+)?Amatrice'
+        perche: "Le fonti ufficiali non collegano IT-alert al terremoto del Centro Italia o dell'Aquila, e IT-alert non avvisa dei terremoti."
+        salvo_se_frase: '(?i)non\s+(?:è\s+)?(?:nat|collegat|legat|deriv|una\s+(?:lezione|conseguenza|risposta))|non\s+c[''’]entr|non\s+avvisa'
+      - regex: '(?i)\bnasc\w*\b(?:(?!\bnon\b)[^.!?\n]){0,40}?\bIT[- ]?alert\b'
+        perche: "Le fonti ufficiali non presentano IT-alert come conseguenza di un terremoto, e IT-alert non avvisa dei terremoti."
+        contesto: '(?i)terremot|sism|Amatrice|Aquila|Rigopiano'
+        finestra: 300
+      - regex: '(?i)\bIT[- ]?alert\s+(?:sarà|sarebbe\s+stato)\s+operativo\s+solo'
+        perche: "IT-alert non avvisa dei terremoti: non è uno strumento che «mancava» per un terremoto."
+        contesto: '(?i)terremot|sism|Amatrice|Aquila'
+        finestra: 300
+
+  - id: covid-stato-emergenza-2020
+    dato: "Che cosa accadde il 31 gennaio 2020"
+    valore: "il Consiglio dei ministri dichiarò lo stato di emergenza nazionale, per sei mesi, per il rischio sanitario legato al coronavirus; l'Organizzazione mondiale della sanità aveva dichiarato un'emergenza internazionale di salute pubblica, non una pandemia"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Coronavirus, dichiarato lo stato di emergenza» (31/01/2020)"
+        url: "https://www.protezionecivile.gov.it/it/notizia/coronavirus--dichiarato-lo-stato-di-emergenza/"
+    vietati:
+      - regex: '(?i)\bpandemi\w*[^.!?\n]{0,40}?\bdichiarat\w*[^.!?\n]{0,30}?\b31\s+gennaio\s+2020|\b31\s+gennaio\s+2020[^.!?\n]{0,60}?\bdichiar\w*\s+(?:la\s+|lo\s+stato\s+di\s+)?pandemi'
+        perche: "Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza nazionale: non fu dichiarata una pandemia."

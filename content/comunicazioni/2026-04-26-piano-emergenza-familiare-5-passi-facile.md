@@ -31,7 +31,7 @@ Prima di tutto, devi sapere quali rischi ci sono a Genzano di Roma. I principali
 
 - **Frane e allagamenti** dopo piogge forti
 - **Incendi nei boschi**, soprattutto in estate
-- **Terremoti** (il Lazio ha un rischio medio)
+- **Terremoti** (Genzano è in zona sismica 2)
 - **Caldo molto forte** in estate
 - **Interruzione della corrente** per molte ore
 

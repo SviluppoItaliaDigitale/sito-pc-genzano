@@ -12,7 +12,7 @@ Valido dall'11/10/2026 in tutti i repository di Alessandro: `sito-pc-genzano`, `
 
 Claude (Claude Code) e ChatGPT (chat con connettore GitHub, Codex) lavorano sugli stessi repository. La bacheca è il posto dove si passano lavoro, istruzioni e avvisi, così Alessandro non deve copiare testi da una chat all'altra e il lavoro continua anche quando una delle due non è disponibile (per esempio quando Claude ha finito i crediti).
 
-**Anche Gemini (dall'11/10/2026).** Gemini lavora sui repository con **Jules** (jules.google, legge da solo `AGENTS.md`) o con Gemini CLI. Dove questo protocollo dice «ChatGPT», vale allo stesso modo per Gemini: stesse regole, stessa autonomia, stesse eccezioni. Differenze: i suoi rami si chiamano `gemini/<argomento>-AAAAMMGG`; una richiesta indirizzata a «ChatGPT» la prende solo ChatGPT, una indirizzata a «Gemini» solo Gemini, una indirizzata a «chi è disponibile» la prende la prima che apre la bacheca, che scrive subito accanto «presa da …» con una PR in bozza, così l'altra non la riprende. Le revisioni automatiche fatte da Codex o da Gemini sulle PR sono pareri da verificare, non ordini.
+**Anche Gemini (dall'11/10/2026).** Gemini lavora sui repository (Jules chiude: sola lettura dall'11/11/2026, spento il 31/12/2026, avviso letto sul sito il 04/11/2026; non si usa più), sul PC con **Antigravity CLI** (`agy`, che dal 18/06/2026 sostituisce Gemini CLI: legge `AGENTS.md`, le skill di `.agents/skills/` e quelle di Alessandro in `~/.gemini/skills/`; si prepara con `scripts/installa-gemini-pc.sh` di `assistente-personale`, dal 04/11/2026). Dove questo protocollo dice «ChatGPT», vale allo stesso modo per Gemini: stesse regole, stessa autonomia, stesse eccezioni. Differenze: i suoi rami si chiamano `gemini/<argomento>-AAAAMMGG`; una richiesta indirizzata a «ChatGPT» la prende solo ChatGPT, una indirizzata a «Gemini» solo Gemini, una indirizzata a «chi è disponibile» la prende la prima che apre la bacheca, che scrive subito accanto «presa da …» con una PR in bozza, così l'altra non la riprende. Le revisioni automatiche fatte da Codex o da Gemini sulle PR sono pareri da verificare, non ordini.
 
 ### Chi dà le istruzioni
 
@@ -98,7 +98,7 @@ Se un lavoro non si può passare (sotto, «Che cosa non si passa»), o non si pu
 
 **Che cosa non si passa.** Allerte ed emergenze vere, articoli nuovi che devono passare dai gate editoriali, pagine legali, lavori che richiedono credenziali, spese o invii a persone: restano a Claude o ad Alessandro, come in «Quando ChatGPT non unisce e si ferma».
 
-**Gemini.** Lo stesso schema varrà per Jules (etichetta `jules` su una issue) quando Alessandro avrà autorizzato l'app sui repository; fino ad allora i lavori che sarebbero andati a Gemini li fa Claude o passano a ChatGPT.
+**Gemini.** Jules chiude il 31/12/2026 e non si usa. Gemini lavora con Antigravity: sul PC con `agy`; dal cellulare comandando il PC acceso (Remote Control, antigravity.google.com), e a PC spento con i Remote Agents di Antigravity, quando Google li avrà attivati per l'account di Alessandro (distribuzione graduale, non ancora attivi il 04/11/2026). Fino ad allora, a PC spento, i lavori che sarebbero andati a Gemini li fa Claude o passano a ChatGPT.
 
 <!-- PROTOCOLLO-COMUNE:FINE -->
 
@@ -150,15 +150,7 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR da aprire)
-  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
-  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
-  - Prossimo passo: versione facile del 19 maggio, poi gli altri file, i controlli, la PR e il merge.
-- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR da aprire, la unisce Alessandro)
-  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
-  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
-  - Prossimo passo: cover mancanti, revisione, PR. Merge solo con l'OK di Alessandro.
-- **2026-11-05 — Claude — Da cominciare dopo le due voci sopra:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
+- **2026-11-05 — Claude — Da cominciare:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
 
 ## Richieste
 
@@ -228,65 +220,6 @@ Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passag
   - **7. Che cosa non fare.**
     Non unire nulla, non segnare pronta nessuna pull request, non toccare file fuori dall'elenco del punto 2, non scrivere articoli né pagine nuove, non inventare dati: se manca qualcosa, scrivilo nel riassunto finale.
 
-- **2026-11-05 — da Claude a ChatGPT — Tre articoli d'archivio sugli interventi del Gruppo riportati dalle cronache locali** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1704; ramo `chatgpt/articoli-cronache-interventi-20261105`)
-  - **Avvio (Alessandro): una riga.** In Codex Cloud, ambiente «sito-pc-genzano», ramo principale (non serve sceglierne un altro). Incolla: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #1704.» A lavoro finito, «Create PR» dal task. La pull request di consegna la porta nel ramo e la chiude Claude (`passa-a.py chiudi --pr 1704 --consegna M`); la unisce Alessandro, dopo il confronto con il registro interventi.
-  - **Per chi la esegue.** Esegui le sette parti qui sotto, punto per punto, con i controlli che indicano. Parti dal ramo principale; se il task è partito dal ramo `chatgpt/articoli-cronache-interventi-20261105`, va bene lo stesso. Non modificare COORDINAMENTO.md: l'esito lo scrive chi chiude il lavoro. Messaggi di commit in italiano, senza nomi di strumenti. Non unire nulla e non segnare pronta nessuna pull request. Alla fine riassumi in poche righe che cosa hai fatto, che cosa resta e perché.
-  - **1. Obiettivo.**
-    Tre articoli d'archivio, datati al giorno dei fatti, sugli interventi del Gruppo riportati dalle cronache locali. Restano in questa pull request: la unisce Alessandro dopo averli confrontati con il registro interventi.
-  - **2. File.**
-    - content/comunicazioni/2026-01-06-maltempo-albero-croce-santa-squadra-ciampino.md
-    - content/comunicazioni/2026-01-08-sottopasso-appia-ciampino-idrovore.md
-    - content/comunicazioni/2026-07-20-chiavi-tombino-centro-storico.md
-    - static/images/ con le tre cover prodotte da `scripts/genera-cover.py` (un file per articolo, nome uguale allo slug)
-  - **3. Che cosa fare.**
-    1. Leggi le pagine di cronaca qui sotto e verifica ogni fatto. Nel corpo entrano solo i fatti confermati dalla pagina, riscritti con parole tue.
-       - Articolo del 6 gennaio 2026. Fatti da verificare: dopo giorni di pioggia un albero cade vicino alla Croce Santa e danneggia due auto; i volontari del Gruppo fanno i rilievi e lo rimuovono, insieme a Carabinieri e Polizia Locale (https://www.castellinotizie.it/2026/01/06/genzano-cade-albero-vicino-la-croce-santa-danneggiate-due-auto-fratelli-ditalia-allattacco-ancora-una-tragedia-sfiorata/); dopo un intervento su un albero in centro, una squadra del Gruppo parte per Ciampino con un'idrovora, su disposizione della Sala Operativa regionale (https://www.ilmamilio.it/wp/2026/01/maltempo-la-protezione-civile-di-genzano-in-azione-squadra-inviata-a-ciampino/); lungo via Montegiove il sottopasso ferroviario al confine fra Genzano e Ariccia torna percorribile grazie al lavoro delle squadre del Gruppo (https://www.ilmamilio.it/wp/2026/01/castelli-roma-e-provincia-nella-morsa-del-maltempo-175-interventi-dei-vigili-del-fuoco-tra-allagamenti-e-alberi-caduti/).
-       - Articolo dell'8 gennaio 2026. Fatti da verificare: nei giorni dopo il maltempo i Gruppi di Genzano e di Albano svuotano con le idrovore il sottopasso dell'Appia a Ciampino, ancora allagato (https://www.castellinotizie.it/2026/01/08/ciampino-protezione-civile-di-genzano-e-albano-in-azione-per-liberare-il-sottopasso-dellappia-ancora-allagato-dopo-il-maltempo/).
-       - Articolo del 20 luglio 2026. Fatti da verificare: su richiesta della Polizia Locale, i volontari recuperano da un tombino del centro storico le chiavi cadute a una persona, dopo una lunga ricerca (https://www.castellinotizie.it/2026/07/20/genzano-perde-le-chiavi-nel-tombino-interviene-la-protezione-civile-e-gliele-restituisce-dopo-una-lunga-ricerca/).
-       Se una pagina non si apre o non conferma un fatto, quel fatto non si scrive e lo elenchi nel riassunto.
-    2. Frontmatter di ogni articolo, in quest'ordine:
-       ```
-       title: "<titolo informativo, senza enfasi>"
-       date: <vedi punto 6>
-       description: "<massimo 160 caratteri>"
-       badge: "Attività"
-       priorita: "normale"
-       autore: "Gruppo Comunale Volontari PC Genzano"
-       image: "/images/<slug>.webp"
-       image_alt: "Cover dell'articolo: <titolo>"
-       scadenza: ""
-       area: "Genzano di Roma"   (per l'articolo dell'8 gennaio: "Ciampino (RM)")
-       allegati: []
-       social: false
-       social_citazione: ""
-       social_punti: []
-       draft: false
-       ```
-       `social: false` resta anche se oggi gli script dei social non lo conoscono ancora: lo riconosceranno con un altro lavoro già in corso. Gli articoli d'archivio non vanno sui social.
-    3. Struttura del corpo: un primo paragrafo concreto (giorno con la data estesa, luogo, che cosa è successo); una o due sezioni `##` con il racconto; la sezione `## Cosa impariamo` con 2–4 punti di prevenzione ricavati solo dai fatti raccontati, ognuno collegato a una pagina del sito che esiste (per esempio /rischi-prevenzione/rischio-idrogeologico/, /rischi-prevenzione/temporali-intensi/, /rischi-prevenzione/vento-forte/, /numeri-utili/); la frase «Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emergenza chiama il 112.»; infine `## Per approfondire` con «Sul nostro sito:» (pagine del sito) e «Le cronache locali:» (nome della testata, titolo e link di ogni pagina usata).
-    4. Regole sulle cronache: parafrasi sempre, mai frasi copiate o virgolettati, nessun nome di testata nel corpo (se serve, «secondo le cronache locali»), testate solo in fondo. Orari arrotondati («nel pomeriggio», «in serata»), mai al minuto. Niente nomi di privati, targhe, indirizzi privati, condizioni di salute. Chi ha chiesto l'intervento: si nomina solo un ente (Polizia Locale, Carabinieri, Sala Operativa regionale); per un cittadino si scrive in forma neutra («dopo una segnalazione»). Nessuna polemica politica: il titolo della prima pagina di Castelli Notizie riporta l'attacco di un partito e non va ripreso in nessun modo.
-    5. Un mezzo o un'attrezzatura si nominano solo come li chiama content/chi-siamo/_index.md, § «Mezzi e attrezzature principali»; «idrovora» va bene come nome generico.
-    6. Date: `date: 2026-01-06` e `date: 2026-01-08` in formato semplice. Il 20 luglio ha già due articoli con `T00:01:00+02:00` e `T00:02:00+02:00`: il nuovo prende `date: 2026-07-20T00:03:00+02:00` e gli altri due non si toccano.
-    7. Cover: per ogni articolo `python3 scripts/genera-cover.py content/comunicazioni/<file>.md`, poi apri l'immagine e controlla che mostri titolo e fascia.
-  - **4. Vincoli.**
-    - Leggi prima AGENTS.md e, nella cartella delle regole del repository, 02-content-design-pa.md (§ «Fonti giornalistiche negli articoli», § «Resoconti degli interventi»).
-    - Italiano corretto, frasi sotto le 20 parole, voce attiva, niente burocratese e niente tic da testo generato (vedi AGENTS.md § 3.5).
-    - Badge «Attività». Nessuna versione facile per questi tre articoli.
-    - Nessun nome di strumenti o servizi automatici nei file, nei metadati e nei messaggi di commit. Prima del primo commit: `bash scripts/imposta-identita-git.sh` (autore Alessandro Cuollo).
-    - Uno strumento che manca si installa (`apt-get update` e `apt-get install`, poi pip); se non ci riesci, scrivi nel riassunto che cosa hai provato.
-  - **5. Controlli.**
-    Tutti senza errori:
-    - `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (nessun ERROR nel log)
-    - `python3 scripts/check-refusi.py` sui tre articoli
-    - `python3 scripts/check-grafiche-social.py` sui tre articoli
-    - `python3 scripts/cerca-incongruenze.py --da-git origin/main`
-    - `python3 scripts/check-dati-canonici.py`
-    - `git diff --name-only origin/main` deve mostrare solo i file del punto 2
-  - **6. Consegna.**
-    Solo i file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti. Alla fine un riassunto breve: fatto / non fatto / perché, e per ogni articolo l'elenco dei dati presi dalla stampa che Alessandro deve confermare con il registro interventi (giorno, luogo, che cosa, chi ha attivato il Gruppo, mezzi). `COORDINAMENTO.md` non si tocca.
-  - **7. Che cosa non fare.**
-    Non unire nulla, non segnare pronta la pull request (la unisce Alessandro dopo il confronto con il registro), non toccare file fuori dall'elenco del punto 2, non inventare fatti: se manca qualcosa, scrivilo nel riassunto finale.
-
 - **2026-10-11 — da Claude a ChatGPT — Procedura ricorrente: aggiornamento degli interventi dall'export del gestionale** (richiesta permanente: non si archivia, vale ogni volta che Alessandro manda il file)
   - **Quando**: Alessandro ti manda l'export del gestionale interventi (file `.xlsx`, di solito `gcpc-genzano-di-roma_global_reports_*.xlsx`) e scrive «aggiorna gli interventi» o simile. Lavora con **Codex** (serve eseguire gli script): il file va allegato al task.
   - **Mai nel repository il file `.xlsx`**: contiene i nomi dei volontari. Tienilo fuori dalla cartella del repository (per esempio `/tmp/`) e non fare `git add -A` senza guardare.
@@ -347,6 +280,76 @@ Formato per una richiesta di immagine:
 - **08/10/2026, 21:45 — Claude.** I pittogrammi ARASAAC si scelgono guardandoli: il primo risultato della ricerca può mostrare tutt'altro (era successo con «scappare», «ospedale», «caldo», «frana»). In `scripts/scarica-pittogrammi.sh` un quarto campo fissa l'identificativo verificato.
 
 ## Archiviati
+
+- **2026-11-05 — da Claude a ChatGPT — Tre articoli d'archivio sugli interventi del Gruppo riportati dalle cronache locali** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1704; ramo `chatgpt/articoli-cronache-interventi-20261105`)
+  - **Esito (05/11/2026).** Consegna della PR #1706 portata nel ramo e unita con la PR #1704 su ordine di Alessandro («pubblica la PR #1706»). Fatti ricontrollati sulle quattro pagine di cronaca: il lavoro al sottopasso dell'Appia è del 7 gennaio (articolo spostato a quella data, nuova cover); tombino con orario e dettagli dalla cronaca, link all'esperimento corretto dopo la rinumerazione; gate AGID applicato.
+  - **Avvio (Alessandro): una riga.** In Codex Cloud, ambiente «sito-pc-genzano», ramo principale (non serve sceglierne un altro). Incolla: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #1704.» A lavoro finito, «Create PR» dal task. La pull request di consegna la porta nel ramo e la chiude Claude (`passa-a.py chiudi --pr 1704 --consegna M`); la unisce Alessandro, dopo il confronto con il registro interventi.
+  - **Per chi la esegue.** Esegui le sette parti qui sotto, punto per punto, con i controlli che indicano. Parti dal ramo principale; se il task è partito dal ramo `chatgpt/articoli-cronache-interventi-20261105`, va bene lo stesso. Non modificare COORDINAMENTO.md: l'esito lo scrive chi chiude il lavoro. Messaggi di commit in italiano, senza nomi di strumenti. Non unire nulla e non segnare pronta nessuna pull request. Alla fine riassumi in poche righe che cosa hai fatto, che cosa resta e perché.
+  - **1. Obiettivo.**
+    Tre articoli d'archivio, datati al giorno dei fatti, sugli interventi del Gruppo riportati dalle cronache locali. Restano in questa pull request: la unisce Alessandro dopo averli confrontati con il registro interventi.
+  - **2. File.**
+    - content/comunicazioni/2026-01-06-maltempo-albero-croce-santa-squadra-ciampino.md
+    - content/comunicazioni/2026-01-08-sottopasso-appia-ciampino-idrovore.md
+    - content/comunicazioni/2026-07-20-chiavi-tombino-centro-storico.md
+    - static/images/ con le tre cover prodotte da `scripts/genera-cover.py` (un file per articolo, nome uguale allo slug)
+  - **3. Che cosa fare.**
+    1. Leggi le pagine di cronaca qui sotto e verifica ogni fatto. Nel corpo entrano solo i fatti confermati dalla pagina, riscritti con parole tue.
+       - Articolo del 6 gennaio 2026. Fatti da verificare: dopo giorni di pioggia un albero cade vicino alla Croce Santa e danneggia due auto; i volontari del Gruppo fanno i rilievi e lo rimuovono, insieme a Carabinieri e Polizia Locale (https://www.castellinotizie.it/2026/01/06/genzano-cade-albero-vicino-la-croce-santa-danneggiate-due-auto-fratelli-ditalia-allattacco-ancora-una-tragedia-sfiorata/); dopo un intervento su un albero in centro, una squadra del Gruppo parte per Ciampino con un'idrovora, su disposizione della Sala Operativa regionale (https://www.ilmamilio.it/wp/2026/01/maltempo-la-protezione-civile-di-genzano-in-azione-squadra-inviata-a-ciampino/); lungo via Montegiove il sottopasso ferroviario al confine fra Genzano e Ariccia torna percorribile grazie al lavoro delle squadre del Gruppo (https://www.ilmamilio.it/wp/2026/01/castelli-roma-e-provincia-nella-morsa-del-maltempo-175-interventi-dei-vigili-del-fuoco-tra-allagamenti-e-alberi-caduti/).
+       - Articolo dell'8 gennaio 2026. Fatti da verificare: nei giorni dopo il maltempo i Gruppi di Genzano e di Albano svuotano con le idrovore il sottopasso dell'Appia a Ciampino, ancora allagato (https://www.castellinotizie.it/2026/01/08/ciampino-protezione-civile-di-genzano-e-albano-in-azione-per-liberare-il-sottopasso-dellappia-ancora-allagato-dopo-il-maltempo/).
+       - Articolo del 20 luglio 2026. Fatti da verificare: su richiesta della Polizia Locale, i volontari recuperano da un tombino del centro storico le chiavi cadute a una persona, dopo una lunga ricerca (https://www.castellinotizie.it/2026/07/20/genzano-perde-le-chiavi-nel-tombino-interviene-la-protezione-civile-e-gliele-restituisce-dopo-una-lunga-ricerca/).
+       Se una pagina non si apre o non conferma un fatto, quel fatto non si scrive e lo elenchi nel riassunto.
+    2. Frontmatter di ogni articolo, in quest'ordine:
+       ```
+       title: "<titolo informativo, senza enfasi>"
+       date: <vedi punto 6>
+       description: "<massimo 160 caratteri>"
+       badge: "Attività"
+       priorita: "normale"
+       autore: "Gruppo Comunale Volontari PC Genzano"
+       image: "/images/<slug>.webp"
+       image_alt: "Cover dell'articolo: <titolo>"
+       scadenza: ""
+       area: "Genzano di Roma"   (per l'articolo dell'8 gennaio: "Ciampino (RM)")
+       allegati: []
+       social: false
+       social_citazione: ""
+       social_punti: []
+       draft: false
+       ```
+       `social: false` resta anche se oggi gli script dei social non lo conoscono ancora: lo riconosceranno con un altro lavoro già in corso. Gli articoli d'archivio non vanno sui social.
+    3. Struttura del corpo: un primo paragrafo concreto (giorno con la data estesa, luogo, che cosa è successo); una o due sezioni `##` con il racconto; la sezione `## Cosa impariamo` con 2–4 punti di prevenzione ricavati solo dai fatti raccontati, ognuno collegato a una pagina del sito che esiste (per esempio /rischi-prevenzione/rischio-idrogeologico/, /rischi-prevenzione/temporali-intensi/, /rischi-prevenzione/vento-forte/, /numeri-utili/); la frase «Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emergenza chiama il 112.»; infine `## Per approfondire` con «Sul nostro sito:» (pagine del sito) e «Le cronache locali:» (nome della testata, titolo e link di ogni pagina usata).
+    4. Regole sulle cronache: parafrasi sempre, mai frasi copiate o virgolettati, nessun nome di testata nel corpo (se serve, «secondo le cronache locali»), testate solo in fondo. Orari arrotondati («nel pomeriggio», «in serata»), mai al minuto. Niente nomi di privati, targhe, indirizzi privati, condizioni di salute. Chi ha chiesto l'intervento: si nomina solo un ente (Polizia Locale, Carabinieri, Sala Operativa regionale); per un cittadino si scrive in forma neutra («dopo una segnalazione»). Nessuna polemica politica: il titolo della prima pagina di Castelli Notizie riporta l'attacco di un partito e non va ripreso in nessun modo.
+    5. Un mezzo o un'attrezzatura si nominano solo come li chiama content/chi-siamo/_index.md, § «Mezzi e attrezzature principali»; «idrovora» va bene come nome generico.
+    6. Date: `date: 2026-01-06` e `date: 2026-01-08` in formato semplice. Il 20 luglio ha già due articoli con `T00:01:00+02:00` e `T00:02:00+02:00`: il nuovo prende `date: 2026-07-20T00:03:00+02:00` e gli altri due non si toccano.
+    7. Cover: per ogni articolo `python3 scripts/genera-cover.py content/comunicazioni/<file>.md`, poi apri l'immagine e controlla che mostri titolo e fascia.
+  - **4. Vincoli.**
+    - Leggi prima AGENTS.md e, nella cartella delle regole del repository, 02-content-design-pa.md (§ «Fonti giornalistiche negli articoli», § «Resoconti degli interventi»).
+    - Italiano corretto, frasi sotto le 20 parole, voce attiva, niente burocratese e niente tic da testo generato (vedi AGENTS.md § 3.5).
+    - Badge «Attività». Nessuna versione facile per questi tre articoli.
+    - Nessun nome di strumenti o servizi automatici nei file, nei metadati e nei messaggi di commit. Prima del primo commit: `bash scripts/imposta-identita-git.sh` (autore Alessandro Cuollo).
+    - Uno strumento che manca si installa (`apt-get update` e `apt-get install`, poi pip); se non ci riesci, scrivi nel riassunto che cosa hai provato.
+  - **5. Controlli.**
+    Tutti senza errori:
+    - `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (nessun ERROR nel log)
+    - `python3 scripts/check-refusi.py` sui tre articoli
+    - `python3 scripts/check-grafiche-social.py` sui tre articoli
+    - `python3 scripts/cerca-incongruenze.py --da-git origin/main`
+    - `python3 scripts/check-dati-canonici.py`
+    - `git diff --name-only origin/main` deve mostrare solo i file del punto 2
+  - **6. Consegna.**
+    Solo i file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti. Alla fine un riassunto breve: fatto / non fatto / perché, e per ogni articolo l'elenco dei dati presi dalla stampa che Alessandro deve confermare con il registro interventi (giorno, luogo, che cosa, chi ha attivato il Gruppo, mezzi). `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla, non segnare pronta la pull request (la unisce Alessandro dopo il confronto con il registro), non toccare file fuori dall'elenco del punto 2, non inventare fatti: se manca qualcosa, scrivilo nel riassunto finale.
+
+- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR #1712)
+  - **Esito (05/11/2026).** Unita con la PR #1712, con l'ok di Alessandro: i 26 articoli ricontrollati sulle fonti primarie, con le copertine col titolo e gli orari nei giorni con più uscite; nessun materiale social.
+  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
+  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
+
+- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR #1710)
+  - **Esito (05/11/2026).** Unita con la PR #1710 alle 06:45: testi su IT-alert allineati alle fonti ufficiali in tutto il sito, quattro voci nuove in `data/dati_canonici.yaml`, puntate del podcast sospese finché non saranno rifatte. Online e verificata alle 07:28.
+  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
+  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
 
 - **2026-10-13 — da Claude ad Alessandro — Ambienti Codex per i passaggi automatici.** La prima richiesta automatica (PR #1365) non è partita: il bot ha risposto «To use Codex here, create an environment for this repo». Serve, una volta sola e solo dal tuo account ChatGPT: https://chatgpt.com/codex/cloud/settings/environments → «Create environment» → repository `SviluppoItaliaDigitale/sito-pc-genzano` (impostazioni predefinite), poi lo stesso per `sito-misericordia-ariccia`, `cooprimavera`, `social-pc-genzano` e `assistente-personale`. Fino ad allora i lavori che partirebbero verso ChatGPT li fa Claude da sola, come previsto dal protocollo. Quando è fatto, Claude rilancia la prova e archivia questa voce.
   - **Esito (14/10/2026).** Ambienti creati e pubblicati da Alessandro il 13/10/2026 per tutti e cinque i repository. Il canale `@codex` sulle pull request è rimasto muto (difetto di OpenAI, openai/codex #20093): dal 14/10/2026 i passaggi si avviano a mano in Codex Cloud con il testo di avvio (protocollo comune, § «Passaggio a ChatGPT»).

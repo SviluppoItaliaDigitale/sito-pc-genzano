@@ -39,7 +39,7 @@ Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di
     widgetId="sismico-ingv" >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismicità). L'area dei Colli Albani, di origine vulcanica, è soggetta a scosse sismiche, generalmente di bassa magnitudo ma talvolta avvertite dalla popolazione. Questo rende essenziale conoscere i comportamenti corretti.
+Il Comune di Genzano di Roma è classificato in **zona sismica 2B**: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili. L'area dei Colli Albani, di origine vulcanica, è soggetta a scosse sismiche, generalmente di bassa magnitudo ma talvolta avvertite dalla popolazione. Questo rende essenziale conoscere i comportamenti corretti.
 
 > ℹ️ **Sismicità e vulcanismo dei Colli Albani**: il Vulcano Laziale è quiescente, non spento; la sismicità di bassa magnitudo che caratterizza il territorio è in parte di origine vulcano-tettonica. Per il contesto vulcanologico, le emissioni di CO₂ in spazi confinati e le indicazioni operative dedicate vedi la pagina [Rischio Vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/).
 
@@ -87,6 +87,8 @@ Il terremoto dalla A alla Z. Il video mostra il rilievo vero dello Stretto di Me
 **12. Durante e dopo la scossa.** Durante la scossa non correre fuori. Abbassati, copriti sotto un tavolo robusto o vicino a un muro portante, e tieniti: proteggi testa e collo. Stai lontano da finestre e mobili alti, e non usare scale e ascensore. All'aperto, allontanati da edifici, alberi, lampioni e fili elettrici. Dopo la scossa: controlla che chi è con te stia bene, chiudi gas e luce ed esci con prudenza, con le scarpe ai piedi. Raggiungi l'area di attesa, non rientrare finché non lo dicono le autorità, usa il telefono solo per le emergenze e segui le fonti ufficiali. Da Messina a Norcia, ogni terremoto ci ha insegnato qualcosa. A Norcia, dieci anni fa, le case vuote hanno fatto la differenza. Il terremoto non avvisa: prepariamoci prima. Le aree di attesa di Genzano sono [sul nostro sito](/cartografia/).
 
 </details>
+
+*Nota al capitolo 11: nel video si dice «a sismicità media», una formula che la classificazione della Regione Lazio non usa per Genzano. Genzano è in zona sismica 2, sottozona 2B: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili.*
 
 ## <i class="bi bi-bar-chart-fill text-primary me-2" aria-hidden="true"></i>Il rischio sismico a Genzano in numeri {#in-numeri}
 Il **Dipartimento della Protezione Civile**, con la **Fondazione EUCENTRE** e il **Consorzio ReLUIS**, ha stimato il rischio sismico di ogni comune italiano nella piattaforma nazionale SicuroPiù. La stima è **probabilistica** e riferita a un orizzonte di **50 anni**: dice quanto è probabile subire danni, non prevede *quando* arriverà un terremoto. I dati di base vengono dall'INGV (pericolosità) e dal censimento ISTAT 2011 (popolazione ed edifici).

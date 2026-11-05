@@ -120,17 +120,6 @@ materiali:
   dimensione: 44.7 MB
   data_pubblicazione: '2026-10-24'
   licenza: CC BY-NC-SA 4.0
-- id: allerta-meteo-podcast-2026-03-25
-  tema: allerta-meteo
-  tema_titolo: Allerta meteo
-  tipo: podcast
-  titolo: 'Podcast: Allerta meteo'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-03-25-allerta-meteo-podcast.m4a
-  dimensione: 9.7 MB
-  data_pubblicazione: '2026-03-25'
-  licenza: CC BY-NC-SA 4.0
 - id: allerta-meteo-infografica-2026-03-25
   tema: allerta-meteo
   tema_titolo: Allerta meteo
@@ -185,17 +174,6 @@ materiali:
   file_url: /video/2026-09-25-kit-emergenza-video-16x9.mp4
   dimensione: 1.9 MB
   data_pubblicazione: '2026-09-25'
-  licenza: CC BY-NC-SA 4.0
-- id: kit-emergenza-podcast-2026-04-17
-  tema: kit-emergenza
-  tema_titolo: Kit emergenza famiglia
-  tipo: podcast
-  titolo: 'Podcast: Kit emergenza famiglia'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-17-kit-emergenza-podcast.m4a
-  dimensione: 12.6 MB
-  data_pubblicazione: '2026-04-17'
   licenza: CC BY-NC-SA 4.0
 - id: kit-emergenza-presentazione-pdf-2026-04-17
   tema: kit-emergenza
@@ -310,17 +288,6 @@ materiali:
   dimensione: 16.1 MB
   data_pubblicazione: '2026-05-18'
   licenza: CC BY-NC-SA 4.0
-- id: rischio-incendio-podcast-2026-05-18
-  tema: rischio-incendio
-  tema_titolo: Rischio incendi boschivi
-  tipo: podcast
-  titolo: 'Podcast: Rischio incendi boschivi'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-18-rischio-incendio-podcast.m4a
-  dimensione: 13.1 MB
-  data_pubblicazione: '2026-05-18'
-  licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-infografica-2026-05-18
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
@@ -377,17 +344,6 @@ materiali:
   dimensione: 18.9 MB
   data_pubblicazione: '2026-03-21'
   licenza: CC BY-NC-SA 4.0
-- id: rischio-sismico-podcast-2026-03-21
-  tema: rischio-sismico
-  tema_titolo: Rischio sismico
-  tipo: podcast
-  titolo: 'Podcast: Rischio sismico'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-03-21-rischio-sismico-podcast.m4a
-  dimensione: 13.6 MB
-  data_pubblicazione: '2026-03-21'
-  licenza: CC BY-NC-SA 4.0
 - id: rischio-sismico-infografica-2026-03-21
   tema: rischio-sismico
   tema_titolo: Rischio sismico
@@ -434,17 +390,6 @@ materiali:
   dimensione: 4.6 MB
   data_pubblicazione: '2026-09-25'
   licenza: CC BY-NC-SA 4.0
-- id: rischio-idrogeologico-podcast-2026-04-08
-  tema: rischio-idrogeologico
-  tema_titolo: Rischio idrogeologico
-  tipo: podcast
-  titolo: 'Podcast: Rischio idrogeologico'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-08-rischio-idrogeologico-podcast.m4a
-  dimensione: 12.8 MB
-  data_pubblicazione: '2026-04-08'
-  licenza: CC BY-NC-SA 4.0
 - id: rischio-idrogeologico-presentazione-pdf-2026-04-08
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico
@@ -477,127 +422,6 @@ materiali:
   file_url: /infografiche/2026-04-08-rischio-idrogeologico-infografica.png
   dimensione: 4.6 MB
   data_pubblicazione: '2026-04-08'
-  licenza: CC BY-NC-SA 4.0
-- id: blackout-podcast-2026-04-30
-  tema: blackout
-  tema_titolo: Blackout
-  tipo: podcast
-  titolo: 'Podcast: Blackout'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-30-blackout-podcast.m4a
-  dimensione: 10.7 MB
-  data_pubblicazione: '2026-04-30'
-  licenza: CC BY-NC-SA 4.0
-- id: animali-emergenza-podcast-2026-05-28
-  tema: animali-emergenza
-  tema_titolo: Animali in emergenza
-  tipo: podcast
-  titolo: 'Podcast: Animali in emergenza'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-28-animali-emergenza-podcast.m4a
-  dimensione: 11.3 MB
-  data_pubblicazione: '2026-05-28'
-  licenza: CC BY-NC-SA 4.0
-- id: temporali-intensi-podcast-2026-05-09
-  tema: temporali-intensi
-  tema_titolo: Temporali intensi
-  tipo: podcast
-  titolo: 'Podcast: Temporali intensi'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-09-temporali-intensi-podcast.m4a
-  dimensione: 8.1 MB
-  data_pubblicazione: '2026-05-09'
-  licenza: CC BY-NC-SA 4.0
-- id: vento-forte-podcast-2026-05-05
-  tema: vento-forte
-  tema_titolo: Vento forte
-  tipo: podcast
-  titolo: 'Podcast: Vento forte'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-05-vento-forte-podcast.m4a
-  dimensione: 14.0 MB
-  data_pubblicazione: '2026-05-05'
-  licenza: CC BY-NC-SA 4.0
-- id: piano-familiare-podcast-2026-04-12
-  tema: piano-familiare
-  tema_titolo: Piano familiare di emergenza
-  tipo: podcast
-  titolo: 'Podcast: Piano familiare di emergenza'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-12-piano-familiare-podcast.m4a
-  dimensione: 8.1 MB
-  data_pubblicazione: '2026-04-12'
-  licenza: CC BY-NC-SA 4.0
-- id: ondate-di-calore-podcast-2026-05-14
-  tema: ondate-di-calore
-  tema_titolo: Ondate di calore
-  tipo: podcast
-  titolo: 'Podcast: Ondate di calore'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-14-ondate-di-calore-podcast.m4a
-  dimensione: 8.5 MB
-  data_pubblicazione: '2026-05-14'
-  licenza: CC BY-NC-SA 4.0
-- id: rischio-vulcanico-podcast-2026-05-23
-  tema: rischio-vulcanico
-  tema_titolo: Rischio vulcanico
-  tipo: podcast
-  titolo: 'Podcast: Rischio vulcanico'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-23-rischio-vulcanico-podcast.m4a
-  dimensione: 7.8 MB
-  data_pubblicazione: '2026-05-23'
-  licenza: CC BY-NC-SA 4.0
-- id: it-alert-podcast-2026-04-03
-  tema: it-alert
-  tema_titolo: IT-alert
-  tipo: podcast
-  titolo: 'Podcast: IT-alert'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-03-it-alert-podcast.m4a
-  dimensione: 10.1 MB
-  data_pubblicazione: '2026-04-03'
-  licenza: CC BY-NC-SA 4.0
-- id: aree-emergenza-podcast-2026-04-21
-  tema: aree-emergenza
-  tema_titolo: Aree di emergenza
-  tipo: podcast
-  titolo: 'Podcast: Aree di emergenza'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-21-aree-emergenza-podcast.m4a
-  dimensione: 4.7 MB
-  data_pubblicazione: '2026-04-21'
-  licenza: CC BY-NC-SA 4.0
-- id: dopo-emergenza-podcast-2026-04-26
-  tema: dopo-emergenza
-  tema_titolo: Dopo l'emergenza
-  tipo: podcast
-  titolo: 'Podcast: Dopo l''emergenza'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-04-26-dopo-emergenza-podcast.m4a
-  dimensione: 7.8 MB
-  data_pubblicazione: '2026-04-26'
-  licenza: CC BY-NC-SA 4.0
-- id: nue-112-podcast-2026-03-30
-  tema: nue-112
-  tema_titolo: NUE 112
-  tipo: podcast
-  titolo: 'Podcast: NUE 112'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-03-30-nue-112-podcast.m4a
-  dimensione: 5.5 MB
-  data_pubblicazione: '2026-03-30'
   licenza: CC BY-NC-SA 4.0
 - id: rischio-vulcanico-presentazione-pdf-2026-05-23
   tema: rischio-vulcanico
@@ -696,39 +520,6 @@ materiali:
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-29-animali-emergenza-infografica.png
   dimensione: 4.2 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: it-alert-infografica-2026-05-29
-  tema: it-alert
-  tema_titolo: IT-alert
-  tipo: infografica
-  titolo: 'Infografica: IT-alert'
-  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
-    A4 e affissione in bacheca.
-  file_url: /infografiche/2026-05-29-it-alert-infografica.png
-  dimensione: 3.4 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: it-alert-presentazione-pdf-2026-05-29
-  tema: it-alert
-  tema_titolo: IT-alert
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): IT-alert'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
-  dimensione: 12.3 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: it-alert-presentazione-2026-05-29
-  tema: it-alert
-  tema_titolo: IT-alert
-  tipo: presentazione
-  titolo: 'Presentazione: IT-alert'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe (formato modificabile).'
-  file_url: /presentazioni/2026-05-29-it-alert-presentazione.pptx
-  dimensione: 14.7 MB
   data_pubblicazione: '2026-05-29'
   licenza: CC BY-NC-SA 4.0
 - id: nue-112-presentazione-pdf-2026-05-29
@@ -852,17 +643,6 @@ materiali:
   dimensione: 16.6 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
-- id: blackout-podcast-2026-05-30
-  tema: blackout
-  tema_titolo: Blackout
-  tipo: podcast
-  titolo: 'Podcast: Blackout'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-30-blackout-podcast.m4a
-  dimensione: 10.7 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
 - id: blackout-infografica-2026-05-30
   tema: blackout
   tema_titolo: Blackout
@@ -894,17 +674,6 @@ materiali:
     Civica in classe (formato modificabile).'
   file_url: /presentazioni/2026-05-30-vento-forte-presentazione.pptx
   dimensione: 12.4 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: vento-forte-podcast-2026-05-30
-  tema: vento-forte
-  tema_titolo: Vento forte
-  tipo: podcast
-  titolo: 'Podcast: Vento forte'
-  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
-    o scaricabile per ascolto offline.
-  file_url: /podcast/episodi/2026-05-30-vento-forte-podcast.m4a
-  dimensione: 14.0 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
 - id: vento-forte-infografica-2026-05-30

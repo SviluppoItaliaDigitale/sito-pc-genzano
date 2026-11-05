@@ -52,7 +52,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 
 <div class="en-card">
 <h2>🌍 Cutremur</h2>
-<p>Italia este o țară seismică. Genzano se află în <strong>zona seismică 2B</strong> (pericol mediu). Dacă simțiți un cutremur:</p>
+<p>Italia este o țară seismică. Genzano se află în <strong>zona seismică 2B</strong>, unde sunt posibile cutremure puternice. Dacă simțiți un cutremur:</p>
 <ul class="en-list">
 <li>Adăpostiți-vă sub o masă solidă sau lângă un perete interior</li>
 <li>Acoperiți-vă capul cu mâinile</li>
@@ -119,7 +119,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italia are un sistem național de alertă numit <strong>IT-alert</strong>. În caz de urgență majoră trimite un mesaj sonor direct pe toate telefoanele din zona afectată — fără aplicație și fără internet; telefonul trebuie doar să fie pornit și în aria de acoperire a rețelei mobile. Mesajul este în italiană și engleză. Mai multe informații: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italia are un sistem național de alertă numit <strong>IT-alert</strong>. În caz de urgență majoră trimite un mesaj cu un sunet distinctiv pe telefoanele mobile din zona afectată — fără aplicație și fără internet; telefonul trebuie doar să fie pornit și în aria de acoperire a rețelei mobile. Mesajul este în italiană și engleză. Mai multe informații: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">

@@ -164,6 +164,14 @@ def is_facile(path: Path, fm: dict) -> bool:
     return path.stem.endswith("-facile") or bool(testo_campo(fm, "versione_facile_di"))
 
 
+def escluso_dai_social(fm: dict) -> bool:
+    """`social: false` nel frontmatter: l'articolo resta solo sul sito, senza
+    materiale social né pubblicazione (dal 05/11/2026, per gli articoli
+    d'archivio datati al giorno dell'evento; rule 04b § "Bozze social
+    automatiche")."""
+    return testo_campo(fm, "social").lower() in ("false", "no", "0")
+
+
 def online_dal(fm: dict) -> dt.datetime | None:
     """Istante da cui l'articolo è online, o None se è una bozza o senza data."""
     if is_bozza(fm):
@@ -179,6 +187,10 @@ def is_online(fm: dict, ora: dt.datetime | None = None) -> bool:
 def articoli(finestra_ore: float | None = None,
              ora: dt.datetime | None = None) -> list[tuple[Path, dict, dt.datetime]]:
     """Articoli online (non bozze, non versioni facili), dal più recente.
+
+    Li usano anche script che non riguardano i social (copia d'archivio,
+    controllo delle copie, comunicati): chi decide il materiale social
+    scarta da sé quelli con `social: false` (escluso_dai_social).
 
     Con `finestra_ore` restano solo quelli andati online nelle ultime N ore.
     """
@@ -258,6 +270,7 @@ def materiale_pubblicabile(slug: str) -> bool:
 def candidato_auto(path: Path, fm: dict) -> bool:
     """L'articolo va sui social in automatico? (materiale a parte)"""
     return (not is_facile(path, fm) and not is_bozza(fm)
+            and not escluso_dai_social(fm)
             and testo_campo(fm, "badge") not in BADGE_ESCLUSI_AUTO)
 
 

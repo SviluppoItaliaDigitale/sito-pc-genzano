@@ -46,7 +46,7 @@ Questi prodotti non li realizza il nostro Gruppo: li elaborano gli enti scientif
 {{< dossier-scena id="noi" image="/images/dossier/duelaghi.webp" alt="I due laghi di cratere dei Castelli Romani, Nemi e Albano, visti dalla Stazione Spaziale Internazionale" align="left" kicker="A cosa ci serve" title="Mappe per<br>chi soccorre" credito="I crateri dei Castelli (laghi Albano e Nemi) · NASA, Stazione Spaziale Internazionale · pubblico dominio" >}}
 Sapere **dove** il suolo si è deformato di più non è un dettaglio da scienziati: aiuta a capire dove cercare i danni, dove concentrare i sopralluoghi, come è fatta la faglia che ha rotto. È informazione che entra nella **gestione dell'emergenza** e nella **ricostruzione**.
 
-Per un Gruppo comunale di volontari il valore è diverso ma reale: capire come lo Stato osserva il territorio ci rende **cittadini e volontari più consapevoli**. I Castelli Romani sono un'area a **sismicità media**: non l'epicentro dei grandi terremoti appenninici, ma un territorio che va conosciuto, non temuto.
+Per un Gruppo comunale di volontari il valore è diverso ma reale: capire come lo Stato osserva il territorio ci rende **cittadini e volontari più consapevoli**. I Castelli Romani sono in **zona sismica 2B**, dove secondo il Dipartimento della Protezione Civile forti terremoti sono possibili: non l'epicentro dei grandi terremoti appenninici, ma un territorio che va conosciuto, non temuto.
 
 La difesa vera resta a terra e parte da ognuno di noi: sapere [cosa fare in caso di terremoto](/rischi-prevenzione/rischio-sismico/), conoscere la propria casa, avere un piano. I satelliti misurano; le persone si proteggono.
 {{< /dossier-scena >}}

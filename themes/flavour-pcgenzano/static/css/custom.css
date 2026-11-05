@@ -8583,3 +8583,26 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 .lim-pronto a { color: #003366; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
 .lim-pronto a:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }
 @media print { .lim-pronto { display: none !important; } }
+
+/* ==========================================================================
+   ILLUSTRAZIONI ANIMATE v1.0 (shortcode illustrazione-udl con «animazione»)
+   Pulsante «Guarda l'animazione»: compare solo con JavaScript e senza
+   movimento ridotto; bersaglio di almeno 44 px (LIM); niente in stampa.
+   ========================================================================== */
+.illustrazione-comandi:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem 1rem;
+  margin-top: .75rem;
+}
+.illustrazione-anima {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+@media print {
+  .illustrazione-comandi { display: none !important; }
+}

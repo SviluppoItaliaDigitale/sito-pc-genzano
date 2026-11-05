@@ -216,7 +216,7 @@ Servizio europeo di gestione delle emergenze. Fornisce mappe satellitari e prodo
 Costellazione di satelliti radar italiani, gestita dall'Agenzia Spaziale Italiana per conto della Difesa e della Protezione Civile. Osserva il territorio anche di notte e con nuvole, e produce le immagini con cui si misurano gli spostamenti del suolo (frane, terremoti, aree vulcaniche) e si mappano i danni dopo un disastro.
 
 ### COVID-19 {#covid-19}
-Malattia respiratoria causata dal coronavirus SARS-CoV-2. La pandemia dichiarata il 31 gennaio 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria, con il Capo del Dipartimento come coordinatore della risposta.
+Malattia respiratoria causata dal coronavirus SARS-CoV-2. Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza nazionale per il rischio sanitario legato al virus. Il coordinamento degli interventi fu affidato al Capo del Dipartimento della Protezione Civile.
 *Approfondisci: [Il rischio sanitario (Manuale, cap. 7.7)](/manuale/717-rischio-sanitario/).*
 
 ### CRI {#cri}

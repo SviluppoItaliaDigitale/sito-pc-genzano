@@ -52,7 +52,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 
 <div class="en-card">
 <h2>🌍 Tremblement de terre</h2>
-<p>L'Italie est un pays sismique. Genzano est en <strong>zone sismique 2B</strong> (aléa moyen). Si vous sentez un tremblement :</p>
+<p>L'Italie est un pays sismique. Genzano est en <strong>zone sismique 2B</strong>, où de forts séismes sont possibles. Si vous sentez un tremblement :</p>
 <ul class="en-list">
 <li>Mettez-vous à l'abri sous une table solide ou contre un mur intérieur</li>
 <li>Couvrez-vous la tête avec les mains</li>
@@ -119,7 +119,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>L'Italie dispose d'un système national d'alerte appelé <strong>IT-alert</strong>. En cas d'urgence majeure, il envoie un message sonore directement sur tous les téléphones de la zone touchée — sans application ni Internet ; le téléphone doit seulement être allumé et couvert par le réseau mobile. Le message est en italien et en anglais. Plus d'infos : <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>L'Italie dispose d'un système national d'alerte appelé <strong>IT-alert</strong>. En cas d'urgence majeure, il envoie un message avec un son caractéristique aux téléphones mobiles de la zone touchée — sans application ni Internet ; le téléphone doit seulement être allumé et couvert par le réseau mobile. Le message est en italien et en anglais. Plus d'infos : <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">

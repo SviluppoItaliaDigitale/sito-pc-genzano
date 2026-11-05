@@ -12,7 +12,7 @@ Il **Capo III** del Codice della Protezione Civile (articoli 16-22) è dedicato 
 
 Il Codice individua i **rischi** di cui si occupa il Servizio nazionale. L'azione di protezione civile riguarda in particolare i rischi **sismico, vulcanico, da maremoto, idraulico, idrogeologico, da fenomeni meteorologici avversi, da deficit idrico e da incendi boschivi**. Concorre inoltre, secondo le competenze, alla risposta ad altri rischi quali quello **chimico, nucleare, radiologico, tecnologico, industriale, da trasporti, ambientale, igienico-sanitario** e da rientro incontrollato di oggetti dallo spazio.
 
-Per Genzano di Roma gli scenari più rilevanti sono quello **idrogeologico** (frane superficiali, allagamenti), quello **sismico** (Lazio a pericolosità media), quello **idraulico** legato al Lago di Nemi e quello degli **incendi boschivi** estivi sui Castelli.
+Per Genzano di Roma gli scenari più rilevanti sono quello **idrogeologico** (frane superficiali, allagamenti), quello **sismico** (Genzano è in zona sismica 2B), quello **idraulico** legato al Lago di Nemi e quello degli **incendi boschivi** estivi sui Castelli.
 
 ## Articolo 17 — Sistemi di allertamento
 
