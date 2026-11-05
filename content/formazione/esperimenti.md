@@ -93,7 +93,21 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Cosa si impara:** dalla terra nuda esce acqua marrone e si formano solchi (**erosione**); dalla terra con l'erba esce acqua più pulita e il terreno resta fermo. Le radici trattengono il suolo.
 **In chiave protezione civile:** spiega perché disboscare o cementificare aumenta il rischio di frane e alluvioni. Il verde è una difesa del territorio.
 
-### 8. Città di asfalto, città di prato 🔵🟠
+### 8. Lo strato che scivola 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-strato-scivola.svg" alt="Due vaschette inclinate con sabbia sopra uno strato di pongo: a sinistra la sabbia asciutta resta ferma; a destra, dopo tanta acqua, l'acqua si ferma sul pongo e lo strato di sabbia scivola verso il basso." caption="Il pongo fa da argilla, lo strato che non lascia passare l'acqua. Il modello non dice dove o quando avverrà una frana." animazione="/formazione/illustrazioni-udl/animate/esperimento-strato-scivola-animata.svg" alt_animazione="Sulla vaschetta di destra cade acqua spruzzata dall'alto: attraversa la sabbia, si ferma sopra il pongo e a un certo punto lo strato di sabbia scivola verso il basso tutto insieme. A sinistra, all'asciutto, la sabbia resta ferma. Il modello non dice dove o quando avverrà una frana." >}}
+
+**La domanda:** Perché a volte scivola via un intero strato di terreno, e non solo un po' di terra in superficie?
+**Materiali:** Una vaschetta di plastica bassa, due o tre libri, un panetto di pongo o di argilla da modellare, sabbia o terriccio, uno spruzzino, un vassoio da mettere sotto.
+**Come si fa:** (1) Stendi sul fondo della vaschetta uno strato sottile e liscio di pongo: è lo strato che non lascia passare l'acqua, come l'argilla. (2) Premi bene il pongo sul fondo, così non scivola da solo. Coprilo con due o tre centimetri di sabbia o terriccio asciutto e premi anche questo con le mani. (3) Appoggia un'estremità della vaschetta sui libri, così il fondo è in pendenza, e guarda se la sabbia si muove. (4) Spruzza acqua sulla parte alta della sabbia, piano e a lungo, e guarda che cosa succede in basso. Se non succede nulla, alza un po' la pendenza con un altro libro; se la sabbia scivola già da asciutta, abbassala.
+**Cosa si cambia:** Solo la quantità d'acqua: prima la sabbia è asciutta, poi la bagni a poco a poco.
+**Che cosa aspettarsi:** Asciutta, la sabbia resta ferma. Bagnandola, l'acqua attraversa la sabbia, si ferma sopra il pongo e ci scorre sopra; a un certo punto lo strato di sabbia scivola verso il basso tutto insieme. Può servire qualche tentativo: con poca pendenza la sabbia resta ferma anche bagnata, con troppa scivola già da asciutta, e il pongo deve restare ben aderente al fondo.
+**Cosa si impara:** Una frana può avvenire dove uno strato di terreno che lascia passare l'acqua sta sopra uno strato che non la lascia passare, come l'argilla. Con piogge lunghe l'acqua si raccoglie fra i due strati e riduce l'attrito che tiene fermo lo strato di sopra, che a un certo punto scivola.
+**Dove il modello si ferma:** In natura gli strati sono spessi metri, l'acqua arriva anche dal sottosuolo e il movimento può essere lentissimo o improvviso: nessun esperimento da tavolo dice dove e quando avverrà una frana.
+**In chiave protezione civile:** Per questo contano anche le piogge dei giorni precedenti, non solo quelle di oggi: un terreno già pieno d'acqua può cedere con meno pioggia. Terreno che si crepa sui pendii e alberi che si inclinano all'improvviso sono segnali da riconoscere: ci si allontana e, se c'è un pericolo, si chiama il 112. Vedi [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/) [Rischio idrogeologico: cosa fare](/rischi-prevenzione/rischio-idrogeologico/).
+**Sicurezza:** Si lavora sopra un vassoio. Dopo aver toccato il terriccio lavati le mani.
+
+### 9. Città di asfalto, città di prato 🔵🟠
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/pioggia-prato-asfalto.svg" alt="La pioggia si infiltra in parte sotto un prato; su una strada asfaltata scorre soprattutto verso una caditoia." caption="Il terreno permeabile lascia infiltrare parte dell'acqua; le superfici impermeabili favoriscono il deflusso superficiale. Il modello è semplificato." animazione="/formazione/illustrazioni-udl/animate/pioggia-prato-asfalto-animata.svg" alt_animazione="La pioggia cade su prato e asfalto. Nel prato le gocce entrano nel terreno; sull'asfalto l'acqua scorre in superficie fino alla caditoia. Schema semplificato: l'infiltrazione dipende anche dal tipo e dallo stato del terreno." >}}
 **Materiali:** due vassoi; su uno della terra o un panno spugnoso, sull'altro un foglio di plastica liscio (l'"asfalto"); una bottiglia d'acqua.
@@ -101,7 +115,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Cosa si impara:** sul terreno l'acqua si infiltra lentamente; sulla superficie liscia scorre tutta e subito. Più una città è coperta di asfalto e cemento (**consumo di suolo**), più l'acqua corre verso fognature e fossi, che si sovraccaricano.
 **In chiave protezione civile:** è il motivo per cui gli **allagamenti urbani** colpiscono anche zone lontane dai fiumi.
 
-### 9. Quanta pioggia è caduta? 🔵🟠
+### 10. Quanta pioggia è caduta? 🔵🟠
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-pluviometro.svg" alt="Sezione di un semplice pluviometro: la pioggia entra nell'imbuto e viene raccolta in una bottiglia trasparente, dove se ne legge il livello con una scala graduata." caption="Misura la pioggia: una scala in millimetri va calibrata in base all'area dell'imbuto; un semplice righello indica soltanto l'altezza dell'acqua." animazione="/formazione/illustrazioni-udl/animate/esperimento-pluviometro-animata.svg" alt_animazione="La pioggia entra nell'imbuto e il livello dell'acqua nella bottiglia sale piano; a destra lo stesso livello si legge sulla scala. Per avere i millimetri di pioggia la scala va tarata sull'area dell'imbuto." >}}
 **La domanda:** Quando il bollettino dice «50 millimetri di pioggia», quanta acqua è caduta davvero?
@@ -114,7 +128,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** I livelli di allerta nascono dalla pioggia attesa su un'intera zona. Sul sito: «Allerte meteo» e «Laboratorio meteo», per confrontare le tue misure con le serie storiche. Vedi [Allerte meteo](/allerte-meteo/) [Laboratorio meteo](/laboratorio-meteo/).
 **Sicurezza:** Il taglio lo fa un adulto. Non si esce a leggere durante il temporale: si aspetta che passi.
 
-### 10. L'onda di maremoto 🔵🟠
+### 11. L'onda di maremoto 🔵🟠
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-maremoto-fondale.svg" alt="Sezione del mare: al largo l'acqua è profonda e un'imbarcazione galleggia sopra un'onda bassa; avvicinandosi alla costa il fondale sale e l'onda cresce; una persona sulla terraferma si allontana verso un punto alto." caption="Le onde di maremoto possono crescere quando raggiungono acque poco profonde. Se sulla costa avverti una forte scossa o osservi un ritiro anomalo del mare, allontanati subito verso una zona elevata." animazione="/formazione/illustrazioni-udl/animate/esperimento-maremoto-fondale-animata.svg" alt_animazione="In mare profondo l'onda corre veloce ed è bassa; quando il fondale sale verso la costa rallenta e diventa più alta. Intanto la persona si allontana dalla riva verso un punto alto." >}}
 **Materiali:** una vaschetta lunga (o una teglia) con un po' d'acqua, un libretto o una paletta.
@@ -122,7 +136,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Cosa si impara:** l'onda nasce da uno **spostamento improvviso di tanta acqua** (un terremoto sottomarino, una frana, un'eruzione). Dove il mare è profondo corre veloce ed è bassa, tanto che una barca al largo quasi non la sente; **quando il fondale si alza verso riva rallenta e l'acqua si accumula in altezza**. Non è l'onda del vento, che muove solo la superficie: qui si muove tutta la colonna d'acqua, dal fondo alla superficie, e per questo ha molta più forza.
 **In chiave protezione civile:** se al mare senti un forte terremoto o vedi il mare ritirarsi all'improvviso, allontanati subito verso un punto alto. Vedi [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/).
 
-### 11. Il tombino ostruito 🔵🟠
+### 12. Il tombino ostruito 🔵🟠
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-tombino-ostruito.svg" alt="Tre prove da tavolo con bottiglia d'acqua, colino e contenitore: nella prima la griglia è libera, nella seconda è parzialmente coperta da foglie e nella terza è quasi ostruita, con sempre più acqua che rimane sopra." caption="Osserva la differenza fra griglia libera, parzialmente coperta e quasi chiusa. Ripeti la prova usando la stessa quantità d'acqua e lo stesso modo di versarla. L'esperimento si fa sul tavolo, mai in strada." animazione="/formazione/illustrazioni-udl/animate/esperimento-tombino-ostruito-animata.svg" alt_animazione="Dalla stessa caraffa si versa la stessa acqua sulle tre griglie. Con la griglia libera l'acqua passa subito e il contenitore sotto si riempie; con la griglia mezza coperta passa meno acqua e sopra si forma una pozza; con la griglia quasi chiusa sotto arriva pochissima acqua e la pozza sopra è più alta. L'esperimento si fa sul tavolo, mai in strada." >}}
 **La domanda:** Perché una strada si allaga anche quando i tombini ci sono?
@@ -135,7 +149,21 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** È il motivo per cui la pulizia delle caditoie prima della stagione delle piogge è prevenzione vera. Segnalare un tombino ostruito al Comune è un gesto utile. Vedi [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/) [Rischio idrogeologico: cosa fare](/rischi-prevenzione/rischio-idrogeologico/).
 **Sicurezza:** Si lavora sopra un lavandino o all'aperto. Non avvicinarsi ai tombini veri, tanto meno quando piove.
 
-### 12. L'acqua risale da sola 🟢🔵
+### 13. La scatola che galleggia 🔵🟠
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-scatola-galleggia.svg" alt="Due vaschette con una scatoletta chiusa con due monete dentro e un righello accanto: con poca acqua la scatoletta resta sul fondo; con più acqua che si muove galleggia e viene spostata." caption="La scatoletta piena d'aria è come un'automobile: l'acqua la solleva e la corrente la trascina. Mai in auto su una strada allagata o in un sottopasso." animazione="/formazione/illustrazioni-udl/animate/esperimento-scatola-galleggia-animata.svg" alt_animazione="A destra l'acqua nella vaschetta sale: la scatoletta chiusa, piena d'aria e con due monete dentro, si solleva; quando l'acqua si muove, la corrente la sposta di lato. A sinistra, con poca acqua, la scatoletta resta sul fondo. Mai in auto su una strada allagata o in un sottopasso." >}}
+
+**La domanda:** Perché l'acqua di un'alluvione riesce a portare via un'automobile?
+**Materiali:** Una vaschetta larga, una scatoletta di plastica vuota con il coperchio (se perde acqua, chiudila con il nastro adesivo), qualche moneta, una brocca d'acqua, un righello.
+**Come si fa:** (1) Metti due monete nella scatoletta e chiudila bene: è l'automobile. Appoggiala sul fondo della vaschetta vuota. (2) Versa l'acqua piano e misura con il righello quanto è alta quando la scatoletta comincia a sollevarsi. (3) Quando la scatoletta galleggia, muovi l'acqua con la mano da un lato della vaschetta e guarda dove va la scatoletta. (4) Svuota, aggiungi una o due monete alla volta nella scatoletta e ripeti: misura di nuovo quando si solleva.
+**Cosa si cambia:** Quanta acqua c'è nella vaschetta e quanto pesa la scatoletta.
+**Che cosa aspettarsi:** Con poca acqua la scatoletta resta appoggiata; a un certo livello si solleva e basta muovere un po' l'acqua per spostarla. Con più monete serve più acqua per sollevarla; se ne metti troppe la scatoletta resta sul fondo, perché non basta più l'aria che contiene.
+**Cosa si impara:** Un'automobile è piena d'aria: quando l'acqua sale la spinge verso l'alto, è la spinta di Archimede, e le ruote fanno meno presa sulla strada. Se l'acqua corre, la trascina. Secondo il servizio meteorologico degli Stati Uniti circa 30 centimetri d'acqua che scorre veloce portano via la maggior parte delle auto; per il Dipartimento della Protezione Civile anche pochi centimetri d'acqua possono far perdere il controllo del veicolo.
+**Dove il modello si ferma:** La scatoletta non ha motore né portiere da cui entra l'acqua, e nella vaschetta l'acqua è pulita: in un'alluvione vera la corrente porta fango, rami e detriti, che spingono ancora di più.
+**In chiave protezione civile:** Per questo durante un'alluvione non si usa l'auto e non si attraversano strade allagate, guadi o sottopassi pieni d'acqua: si torna indietro e si cambia strada. Vedi [Rischio idrogeologico: cosa fare](/rischi-prevenzione/rischio-idrogeologico/) [«Con pochi centimetri d'acqua la strada si attraversa in auto»](/rischi-prevenzione/idee-sbagliate/#strada-allagata).
+**Sicurezza:** Si lavora sopra un lavandino o all'aperto. Asciuga subito l'acqua versata: il pavimento bagnato scivola.
+
+### 14. L'acqua risale da sola 🟢🔵
 **La domanda:** L'acqua può andare verso l'alto senza che nessuno la spinga?
 **Materiali:** Due bicchieri, acqua, colorante alimentare o succo scuro, una striscia di carta assorbente, una di stoffa e una di carta plastificata.
 **Come si fa:** (1) Colora l'acqua e mettine un dito in un bicchiere. (2) Appoggia nel bicchiere la striscia di carta assorbente, tenendola dritta, e guardala per due minuti. (3) Ripeti con la stoffa e con la carta plastificata, sempre due minuti. (4) Confronta fin dove è salita l'acqua nei tre materiali e segna il livello con una matita.
@@ -147,7 +175,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ## Incendi boschivi
 
-### 13. Il triangolo del fuoco 🔵🟠
+### 15. Il triangolo del fuoco 🔵🟠
 **Materiali:** una candelina, un barattolo di vetro, un piattino. **Solo con un adulto** — c'è una fiamma.
 **Come si fa:** l'adulto accende la candelina sul piattino e la copre con il barattolo capovolto. Osservate cosa succede dopo pochi secondi.
 **Cosa si impara:** la fiamma si indebolisce e si spegne perché dentro il barattolo l'**ossigeno scende sotto il livello che serve per bruciare** — non finisce del tutto, ne resta ancora parecchio. Per bruciare, il fuoco ha bisogno di tre cose insieme — il **triangolo del fuoco**: combustibile (il materiale che brucia), comburente (l'ossigeno) e una fonte di calore. Se ne togli una, il fuoco si spegne.
@@ -156,7 +184,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/triangolo-del-fuoco.svg" alt="Il triangolo della combustione raffigura i tre elementi che sostengono una fiamma: combustibile, comburente e calore." caption="I tre elementi del fuoco. Nel barattolo l'ossigeno, cioè il comburente, scende troppo e la fiamma si spegne." animazione="/formazione/illustrazioni-udl/animate/triangolo-del-fuoco-animata.svg" alt_animazione="Il triangolo mostra i tre elementi del fuoco: combustibile, comburente e calore. Quando l'ossigeno dell'aria viene a mancare, come sotto il barattolo, la fiamma si riduce e si spegne. Poi l'animazione ricomincia da capo. Schema semplificato, non una procedura di spegnimento." >}}
 
-### 14. Il bosco di tessere 🟢🔵
+### 16. Il bosco di tessere 🟢🔵
 **La domanda:** Perché a volte un incendio si ferma da solo e a volte no?
 **Materiali:** Una scatola di tessere del domino (o tessere di cartoncino che stiano in piedi).
 **Come si fa:** (1) Metti le tessere in fila, una vicinissima all'altra, e falle cadere: è un bosco fitto. (2) Rifai la fila allargando le distanze finché la caduta si ferma da sola. (3) Rimetti la fila fitta ma togli tre tessere in mezzo, lasciando un vuoto: prova di nuovo. (4) Prova a disegnare su un foglio dove metteresti i vuoti per proteggere una casa messa in fondo alla fila.
@@ -168,7 +196,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ## Caldo, freddo, vento, temporali e siccità
 
-### 15. Sole o ombra? Chiaro o scuro? 🟢🔵
+### 17. Sole o ombra? Chiaro o scuro? 🟢🔵
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-superfici-calore.svg" alt="Due campioni uguali sotto lo stesso sole, uno bianco e uno nero. Termometri illustrativi mostrano minore e maggiore riscaldamento; nessuna temperatura numerica è assegnata." caption="Confronta superfici identiche sotto lo stesso sole: i materiali scuri generalmente assorbono più luce. Il disegno non mostra temperature misurate." animazione="/formazione/illustrazioni-udl/animate/esperimento-superfici-calore-animata.svg" alt_animazione="Lo stesso sole illumina le due superfici. Quella chiara rimanda indietro più luce e il suo termometro sale poco; quella scura assorbe più luce, si scalda di più e il suo termometro sale di più. Non sono temperature reali." >}}
 **Materiali:** due termometri (o uno solo, da spostare); un foglio bianco e uno nero; un posto al sole.
@@ -176,7 +204,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Cosa si impara:** i colori scuri assorbono più luce del sole e si scaldano di più: è l'**irraggiamento**. Il termometro lasciato al sole misura quanto si è scaldato lui, non l'aria — per questo le stazioni meteo tengono i termometri all'ombra, dentro una casetta ventilata.
 **In chiave protezione civile:** sono le regole delle **ondate di calore**: stare all'ombra nelle ore calde, vestirsi leggeri e chiari, bere spesso. Vedi [Ondate di calore](/rischi-prevenzione/ondate-di-calore/).
 
-### 16. Quale materiale conserva il calore? 🔵🟠
+### 18. Quale materiale conserva il calore? 🔵🟠
 **La domanda:** Come si tiene fresca una casa quando fuori fa caldissimo?
 **Materiali:** Tre barattoli di vetro uguali con coperchio, acqua tiepida, un termometro, alluminio da cucina, un panno di lana o pile, un giornale.
 **Come si fa:** (1) Riempi i tre barattoli con la stessa quantità di acqua tiepida, misurata: la temperatura di partenza deve essere uguale per tutti. (2) Avvolgi il primo nell'alluminio, il secondo nella lana, il terzo nel giornale. Un quarto barattolo senza niente fa da confronto, se ne hai uno. (3) Mettili tutti nello stesso posto, lontano da sole e correnti. (4) Misura la temperatura di ciascuno dopo 10, 20 e 30 minuti e scrivi i numeri in tabella.
@@ -187,13 +215,13 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** Nelle ondate di calore si chiudono persiane e tapparelle nelle ore calde e si arieggia la notte: è lo stesso principio, applicato alle stanze. Vedi [Ondate di calore](/rischi-prevenzione/ondate-di-calore/).
 **Sicurezza:** Acqua tiepida, non bollente: la riscalda un adulto e la versa lui nei barattoli.
 
-### 17. Il sale che scioglie il ghiaccio 🔵🟠
+### 19. Il sale che scioglie il ghiaccio 🔵🟠
 **Materiali:** due cubetti di ghiaccio uguali, due piattini, un cucchiaino di sale.
 **Come si fa:** metti i due cubetti sui piattini; spargi il sale solo su uno. Aspetta e osserva quale si scioglie prima.
 **Cosa si impara:** il sale abbassa la temperatura a cui l'acqua ghiaccia, così il ghiaccio col sale si scioglie più in fretta.
 **In chiave protezione civile:** ecco perché d'inverno si sparge il **sale sulle strade** ghiacciate. Attenzione al **ghiaccio nero**, sottile e quasi invisibile: rende le strade scivolose. Vedi [Il rischio da neve e gelo](/conoscere/catalogo-dei-rischi/rischio-neve-gelo/).
 
-### 18. La forza del vento (la manica a vento) 🟢🔵
+### 20. La forza del vento (la manica a vento) 🟢🔵
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-manica-vento.svg" alt="Confronto di due maniche a vento: quella poco gonfia indica vento debole, quella più distesa vento relativamente più intenso; frecce mostrano lo spostamento dell'aria." caption="La manica a vento indica la direzione verso cui l'aria scorre e dà una stima qualitativa dell'intensità: non misura i chilometri orari." animazione="/formazione/illustrazioni-udl/animate/esperimento-manica-vento-animata.svg" alt_animazione="Con vento debole la manica si muove piano e resta poco gonfia; con vento più forte si distende nella direzione in cui scorre l'aria e vibra. Osserva da un posto sicuro, mai durante un temporale." >}}
 **Materiali:** un sacchetto di plastica leggero o un calzino, un cerchio di cartoncino, dello spago, un bastoncino.
@@ -201,7 +229,21 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Cosa si impara:** la manica mostra **direzione** e **forza** del vento. Più si alza in orizzontale, più il vento è forte.
 **In chiave protezione civile:** con il vento forte gli oggetti volano e gli alberi possono cadere. Vedi [Cosa fare con il vento forte](/rischi-prevenzione/vento-forte/).
 
-### 19. Quanto è lontano il temporale? 🔵🟠
+### 21. La spirale che gira da sola 🟢🔵
+
+{{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-spirale-calore.svg" alt="Due spirali di carta appese a un filo: lontano dal calore la spirale resta quasi ferma; sopra un termosifone acceso l'aria calda sale e la fa girare, mentre arriva aria più fresca dai lati." caption="L'aria scaldata sale e altra aria prende il suo posto: è il primo passo di come nasce il vento. Mai sopra una fiamma: la carta prende fuoco." animazione="/formazione/illustrazioni-udl/animate/esperimento-spirale-calore-animata.svg" alt_animazione="La spirale lontana dal calore resta quasi ferma. Quella sopra il termosifone acceso gira, perché l'aria scaldata sale e altra aria più fresca arriva dai lati. Mai sopra una fiamma: la carta prende fuoco." >}}
+
+**La domanda:** Da dove nasce il vento?
+**Materiali:** Un foglio di carta, una matita, forbici con la punta arrotondata, un filo di cotone, nastro adesivo, un termosifone acceso.
+**Come si fa:** (1) Disegna una spirale sul foglio e ritagliala seguendo la linea. Con i più piccoli il taglio lo fa un adulto. (2) Fai un forellino al centro, passa il filo e fermalo con un nodo o con un pezzetto di nastro adesivo. (3) Tieni la spirale appesa al filo lontano dal termosifone e guardala per qualche secondo. (4) Ora tienila sopra il termosifone acceso, a una spanna di distanza, senza toccarlo, e aspetta qualche secondo.
+**Cosa si cambia:** Solo dove tieni la spirale: lontano dal calore oppure sopra il termosifone.
+**Che cosa aspettarsi:** Lontano dal calore la spirale resta quasi ferma; sopra il termosifone comincia a girare piano. Se non gira, usa carta più leggera e chiudi porte e finestre: uno spiffero fa muovere la spirale anche lontano dal termosifone e falsa la prova.
+**Cosa si impara:** L'aria scaldata dal termosifone diventa più leggera e sale, e al suo posto arriva aria più fresca: questo movimento fa girare la spirale. Il vento nasce in modo simile, su scala molto più grande: dove il sole scalda di più (di giorno la terra si scalda più del mare), l'aria sale e altra aria arriva a prenderne il posto. La brezza che d'estate, di giorno, soffia dal mare verso la spiaggia ne è un esempio.
+**Dove il modello si ferma:** Il vento vero dipende anche dalle differenze di pressione fra zone lontane, dalla rotazione della Terra e dalle montagne: la spirale mostra solo il primo passo, l'aria calda che sale.
+**In chiave protezione civile:** Nelle giornate estive molto calde l'aria calda e umida che sale in fretta può formare temporali nel pomeriggio, con raffiche di vento forti e improvvise. Vedi [Cosa fare con i temporali intensi](/rischi-prevenzione/temporali-intensi/) [Cosa fare con il vento forte](/rischi-prevenzione/vento-forte/).
+**Sicurezza:** Mai sopra una fiamma, una candela o un fornello: la carta prende fuoco. Il termosifone basta, ma scotta: la spirale resta a una spanna e nessuno lo tocca né ci si siede sopra.
+
+### 22. Quanto è lontano il temporale? 🔵🟠
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/esperimento-lampo-tuono.svg" alt="Un bambino al riparo dietro la finestra di casa conta sulle dita i secondi fra lampo e tuono; il disegno mostra un temporale lontano e l'esempio nove secondi diviso tre, circa tre chilometri." caption="La luce del lampo arriva prima del suono del tuono. Il conteggio è soltanto una stima della distanza: al primo tuono resta al chiuso e attendi almeno trenta minuti dopo l'ultimo tuono prima di uscire." animazione="/formazione/illustrazioni-udl/animate/esperimento-lampo-tuono-animata.svg" alt_animazione="Il lampo si vede subito e il bambino comincia a contare i secondi, da 1 a 9. Il suono del tuono viaggia più lento e arriva quando il conteggio è a 9: 9 secondi diviso 3 fa circa 3 chilometri. Al primo tuono entra al chiuso ed esci 30 minuti dopo l'ultimo tuono." >}}
 **Materiali:** solo gli occhi, le orecchie e un modo per contare (osservando da un luogo sicuro, al chiuso).
@@ -210,13 +252,13 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** al primo tuono si entra subito in un edificio o in un'auto chiusa, e ci si resta finché non sono passati **30 minuti dall'ultimo tuono**. Lontano da alberi isolati e da specchi d'acqua. Vedi [Cosa fare con i temporali intensi](/rischi-prevenzione/temporali-intensi/).
 **Variante "mini fulmine" 🟢🔵:** strofina un palloncino sui capelli o su un maglione di lana, poi avvicinalo a un dito al buio: senti il crepitio e vedi una scintilla. È l'**elettricità statica**, lo stesso principio (in piccolo) del fulmine.
 
-### 20. L'acqua che sparisce (la siccità) 🟢🔵
+### 23. L'acqua che sparisce (la siccità) 🟢🔵
 **Materiali:** due piattini con la stessa quantità d'acqua, un pennarello per segnare il livello.
 **Come si fa:** metti un piattino al sole e uno all'ombra. Segna il livello e controlla dopo qualche ora e il giorno dopo.
 **Cosa si impara:** al sole e con il caldo l'acqua **evapora** più in fretta. Con poche piogge e tanto caldo, l'acqua disponibile diminuisce.
 **In chiave protezione civile:** è la **siccità**, un rischio lento. Risparmiare acqua (chiudere il rubinetto, segnalare le perdite) aiuta tutti. Vedi [Il rischio da deficit idrico](/conoscere/catalogo-dei-rischi/rischio-siccita/).
 
-### 21. Le goccioline vengono dall'aria 🟢🔵
+### 24. Le goccioline vengono dall'aria 🟢🔵
 **La domanda:** Da dove arriva l'acqua sul bicchiere della bibita fredda?
 **Materiali:** Due bicchieri uguali, acqua fredda con ghiaccio, acqua a temperatura ambiente, un panno asciutto.
 **Come si fa:** (1) Riempi un bicchiere di acqua con ghiaccio e l'altro di acqua a temperatura ambiente. (2) Asciuga bene l'esterno di tutti e due, e falli vedere: sono asciutti. (3) Aspetta cinque minuti senza toccarli. (4) Guarda e tocca l'esterno dei due bicchieri: quello freddo è bagnato, l'altro no.
@@ -228,19 +270,19 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ## Rischi legati all'attività dell'uomo
 
-### 22. Come si sparge una "nube" 🔵🟠
+### 25. Come si sparge una "nube" 🔵🟠
 **Materiali:** un batuffolo con un po' di **caffè in polvere** o **scorza di limone**. In classe sono da preferire al profumo, perché ci può essere chi ha asma o allergie: chiedilo prima. Variante **senza odori**: un diffusore di bolle di sapone, e si alza la mano quando arriva una bolla.
 **Come si fa:** mettiti in un angolo della stanza e apri il batuffolo profumato. I compagni, fermi in punti diversi, alzano la mano appena sentono l'odore.
 **Cosa si impara:** l'odore (come un gas) si **diffonde** nell'aria e si sposta con le correnti, raggiungendo prima chi è vicino e sottovento. Attenzione però: **l'olfatto non misura la pericolosità dell'aria**. Molti gas pericolosi non si sentono affatto — il monossido di carbonio non ha odore — e un odore forte non vuol dire per forza veleno. Non si annusa per capire se l'aria è respirabile: si seguono gli allarmi e le indicazioni delle autorità.
 **In chiave protezione civile:** in caso di **nube tossica** da un incidente industriale, spesso la cosa giusta **non è scappare ma chiudersi in casa** (riparo al chiuso: chiudere porte, finestre e aerazione) e seguire le indicazioni delle autorità. Vedi [Il rischio chimico-industriale](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/).
 
-### 23. Caccia ai germi (il potere del sapone) 🟢🔵
+### 26. Caccia ai germi (il potere del sapone) 🟢🔵
 **Materiali:** un piatto fondo con acqua, pepe macinato, un goccio di sapone per piatti.
 **Come si fa:** spargi il pepe sull'acqua. Tocca l'acqua con un dito pulito: il pepe resta dov'è. Ora bagna il dito nel sapone e toccala di nuovo: il pepe "scappa" verso i bordi.
 **Cosa si impara:** il pepe scappa perché il sapone abbassa la **tensione superficiale** dell'acqua: è questo che vedi, non il lavaggio dei germi. Le mani si puliscono per un altro motivo: il sapone **stacca** lo sporco e i microbi dalla pelle mentre le strofini, e l'acqua li **porta via** con il risciacquo (almeno venti secondi, dita e polsi compresi). Variante: prova con il glitter sulle mani, prima con la sola acqua, poi con il sapone ([CDC](https://www.cdc.gov/clean-hands/about/index.html)).
 **In chiave protezione civile:** l'igiene è la prima difesa contro le **epidemie**: strofinare almeno venti secondi, dita e polsi compresi, poi risciacquare. Vedi [Il rischio sanitario](/conoscere/catalogo-dei-rischi/rischio-sanitario/).
 
-### 24. Acqua limpida significa potabile? 🔵🟠
+### 27. Acqua limpida significa potabile? 🔵🟠
 **La domanda:** Se un'acqua è trasparente, vuol dire che si può bere?
 **Materiali:** Due bottiglie d'acqua del rubinetto, terra e foglioline per sporcare la prima, un cucchiaino di sale per la seconda, un imbuto, carta da filtro (o un tovagliolo di carta), due bicchieri trasparenti.
 **Come si fa:** (1) Prepara la prima bottiglia mescolando acqua e terra: è torbida e si vede. (2) Prepara la seconda sciogliendo bene il sale: resta trasparente come prima. (3) Filtra la prima con l'imbuto e la carta da filtro: guarda l'acqua che esce. (4) Filtra allo stesso modo la seconda: **non si assaggia nessuna delle due**, nemmeno questa. Confronta solo l'aspetto delle due acque filtrate.
@@ -251,7 +293,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **In chiave protezione civile:** In emergenza l'acqua sicura è quella che le autorità dichiarano tale, o quella in bottiglia sigillata del kit. Un'ordinanza di non potabilità vale anche se dal rubinetto esce acqua trasparente. Vedi [Il rischio sanitario](/conoscere/catalogo-dei-rischi/rischio-sanitario/) [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 **Sicurezza:** L'acqua di questo esperimento NON si beve e non si assaggia, nemmeno quella filtrata: si guarda soltanto. A fine attività si butta e ci si lava le mani.
 
-### 25. Più lontano, più al riparo 🟠
+### 28. Più lontano, più al riparo 🟠
 **Materiali:** una torcia (o la luce del telefono), un righello, un libro spesso.
 **Come si fa:** punta la torcia su una mano da vicino e poi da lontano: la luce è più forte da vicino. Poi metti il libro tra la torcia e la mano: la luce non passa.
 **Cosa si impara:** è un'**analogia** (la luce si vede, le radiazioni no): più sei **lontano** dalla fonte e più il tempo è breve, meno energia ricevi; un muro (**schermatura**) ti protegge.
@@ -259,19 +301,19 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ## Prepararsi e pianificare
 
-### 26. Cosa metto nello zaino? 🟢🔵🟠
+### 29. Cosa metto nello zaino? 🟢🔵🟠
 **Materiali:** uno zaino e tanti oggetti sul tavolo (torcia, radio a pile, bottiglia d'acqua, fischietto, una barretta, un peluche, le chiavi, un videogioco, un fumetto, una coperta…).
 **Come si fa:** sfida a tempo (2 minuti): mettere nello zaino **solo le cose davvero indispensabili** in un'emergenza. Alla fine si discutono insieme le scelte.
 **Cosa si impara:** a dare priorità a sicurezza e comunicazione: il fischietto per farsi sentire, la torcia per il buio, l'acqua, la radio per le notizie. Il peluche può restare: serve a stare tranquilli.
 **In chiave protezione civile:** è il **kit di emergenza** di famiglia. Confrontalo con la nostra scheda [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 
-### 27. La mappa dei pericoli e dei luoghi sicuri 🔵🟠
+### 30. La mappa dei pericoli e dei luoghi sicuri 🔵🟠
 **Materiali:** carta e colori.
 **Come si fa:** disegnate insieme la pianta della casa (o della classe). Con i bollini segnate in **rosso i pericoli** (mensole pesanti non fissate, oggetti sopra i letti, vetri, prese sovraccariche) e in **verde i punti più sicuri**. Segnate anche dove sono gli interruttori generali di luce e gas.
 **Cosa si impara:** ad allenare lo sguardo a riconoscere i punti critici *prima* che accada qualcosa.
 **In chiave protezione civile:** durante un terremoto la regola è **«mi getto, mi copro, resto»**: riparati sotto un tavolo robusto, lontano da finestre, vetri e mobili alti che possono cadere, e proteggi la testa. Le porte e gli architravi **non** sono posti sicuri, e in caso di scossa **non si usano gli ascensori**. Vedi il [Piano familiare](/piano-familiare/) e [Cosa fare in caso di terremoto](/rischi-prevenzione/rischio-sismico/).
 
-### 28. Memory dei segnali di sicurezza 🟢🔵
+### 31. Memory dei segnali di sicurezza 🟢🔵
 **Materiali:** cartoncini con i simboli di sicurezza (uscita di emergenza, punto di raccolta, estintore, direzione di evacuazione).
 **Come si fa:** un classico memory a coppie, oppure nascondi i cartelli per la stanza: quando il bambino ne trova uno, deve spiegare o mimare cosa fare quando lo vede.
 **Cosa si impara:** a riconoscere la **segnaletica di emergenza** che si trova a scuola, al supermercato, al cinema.
@@ -279,13 +321,13 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ## Comunicazione e soccorso
 
-### 29. La chiamata perfetta al 112 🔵🟠
+### 32. La chiamata perfetta al 112 🔵🟠
 **Materiali:** due telefoni giocattolo (o spenti).
 **Come si fa:** l'adulto fa l'operatore del **112**, il bambino è il cittadino. L'adulto propone uno scenario (per esempio: *"Silvia vede del fumo salire dal bosco dietro casa"*) e fa domande; il bambino deve dire, con calma, **chi è, cosa vede e soprattutto dove si trova esattamente**.
 **Cosa si impara:** gli operatori hanno bisogno di **informazioni precise** per mandare i soccorsi giusti. Essere agitati è normale: si prende un respiro e si risponde una domanda alla volta, cominciando da dove ci si trova.
 **In chiave protezione civile:** il **112** è il **Numero Unico di Emergenza**, l'unico da chiamare nel Lazio. Prova anche il gioco digitale [La chiamata al 112](/giochi/) e leggi i [Numeri utili](/numeri-utili/).
 
-### 30. Il messaggio arriva corretto? 🔵🟠
+### 33. Il messaggio arriva corretto? 🔵🟠
 **La domanda:** Perché alla radio si ripete quello che si è appena sentito?
 **Materiali:** Un foglio con cinque messaggi scritti (per esempio: «Via Italo Belardi 14, secondo piano, due persone»), carta e penna per chi riceve.
 **Come si fa:** (1) Primo giro: chi trasmette legge il messaggio una volta sola, a voce normale, e chi riceve scrive quello che ha capito. Nessuno può chiedere di ripetere. (2) Confrontate: quante parole sono arrivate storte? Segnate il numero di errori. (3) Secondo giro, messaggi nuovi: chi riceve ripete ad alta voce quello che ha scritto e chi trasmette conferma con «corretto» oppure corregge. Solo allora si passa al messaggio dopo. (4) Contate di nuovo gli errori e confrontate i due numeri. Se potete, rifate il primo giro con un po' di rumore di fondo.
@@ -295,20 +337,20 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Dove il modello si ferma:** Qui nessuno rischia niente se un messaggio arriva storto. In un'emergenza vera un indirizzo sbagliato manda i soccorsi dalla parte opposta.
 **In chiave protezione civile:** È il motivo per cui nelle comunicazioni radio si ripete e si conferma, e per cui l'operatore del 112 fa ripetere l'indirizzo. Si compita anche lettera per lettera quando serve. Vedi [Numeri utili](/numeri-utili/) [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/).
 
-### 31. Il telefono con i bicchieri 🟢🔵
+### 34. Il telefono con i bicchieri 🟢🔵
 **Materiali:** due bicchieri di plastica, uno spago lungo, uno stuzzicadenti.
 **Come si fa:** fai un forellino sul fondo di ogni bicchiere, fai passare lo spago e fermalo con un pezzetto di stuzzicadenti. Tendete bene lo spago: uno parla nel bicchiere, l'altro ascolta.
 **Cosa si impara:** la voce viaggia come **vibrazione** lungo lo spago teso. La comunicazione ha bisogno di un canale che funzioni.
 **In chiave protezione civile:** in emergenza le reti telefoniche possono cadere; per questo i volontari usano la **radio**, che non dipende dalla rete dei cellulari. Vedi [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/).
 
-### 32. La voce che guida 🔵🟠
+### 35. La voce che guida 🔵🟠
 **Materiali:** una benda per gli occhi, qualche ostacolo morbido.
 **Come si fa:** in una stanza **illuminata** e sicura si crea un piccolo percorso. Un bambino chiude gli occhi (o si benda, se se la sente) e un compagno o l'adulto lo guida verso l'uscita **usando solo la voce**, con indicazioni chiare e una alla volta: *"Due passi avanti, ora gira a destra"*. Poi si invertono i ruoli. Provate anche con **due persone che parlano insieme**: si capisce subito perché ne serve una sola.
 **Cosa si impara:** quanto contano l'**ascolto**, la calma e avere **una sola voce** che guida durante un'evacuazione. Non è una prova di come ci si muove nel fumo: qui si esercita la comunicazione, non l'autoprotezione dall'incendio.
 **In chiave protezione civile:** durante un'evacuazione si segue chi guida e la segnaletica, senza correre e senza parlare tutti insieme. Se invece c'è del **fumo** la regola cambia del tutto: si va **a carponi** verso l'uscita, perché l'aria respirabile resta in basso, vicino al pavimento. Vedi [Cosa fare in caso di blackout](/rischi-prevenzione/blackout/).
 **Sicurezza:** usa ostacoli morbidi e libera il pavimento; un adulto sorveglia sempre il percorso.
 
-### 33. Un piccolo allarme di livello 🟠
+### 36. Un piccolo allarme di livello 🟠
 **La domanda:** Come fa uno strumento a sapere da solo quando è il momento di suonare?
 **Materiali:** Una bacinella, un tappo di sughero, due fili elettrici sottili, un LED, una pila da 4,5 volt con portapile, nastro adesivo, uno stecchino di legno.
 **Come si fa:** (1) Collega il LED alla pila lasciando il circuito interrotto: due capi liberi che accendono il LED quando si toccano. (2) Fissa un capo a uno stecchino verticale sul bordo, all'altezza che scegli come soglia; l'altro sul tappo che galleggia. (3) Versa acqua piano: quando il tappo arriva alla soglia i capi si toccano e il LED si accende. (4) Sposta la soglia più in alto e più in basso; poi muovi l'acqua con la mano mentre il livello le è vicino.

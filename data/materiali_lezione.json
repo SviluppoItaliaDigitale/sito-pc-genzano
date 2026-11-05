@@ -4472,6 +4472,23 @@
   },
   {
    "tipo": "esperimento",
+   "titolo": "Lo strato che scivola",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
    "titolo": "Città di asfalto, città di prato",
    "url": "/formazione/esperimenti/",
    "fasce": [
@@ -4524,6 +4541,23 @@
   {
    "tipo": "esperimento",
    "titolo": "Il tombino ostruito",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La scatola che galleggia",
    "url": "/formazione/esperimenti/",
    "fasce": [
     "primaria-bassa",
@@ -4643,6 +4677,23 @@
   {
    "tipo": "esperimento",
    "titolo": "La forza del vento (la manica a vento)",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La spirale che gira da sola",
    "url": "/formazione/esperimenti/",
    "fasce": [
     "infanzia",

@@ -471,6 +471,52 @@ def r_lampo(s, n):
     return s, css, "".join(o)
 
 
+
+def r_strato(s, n):
+    s = sostituisci(s, '<g class="blocco" transform="translate(46 0)">', '<g class="bloccoR">', n)
+    css = (
+        "@keyframes sp{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(34px);opacity:0}}"
+        ".spruzzo{animation:sp 1s linear infinite}"
+        "@keyframes ve{0%,8%{opacity:0}45%,90%{opacity:.9}97%,100%{opacity:0}}"
+        ".velo{animation:ve 12s linear infinite}"
+        "@keyframes bl{0%,50%{transform:translateX(0);opacity:1}62%,90%{transform:translateX(46px);opacity:1}"
+        "96%{transform:translateX(46px);opacity:0}97%{transform:translateX(0);opacity:0}100%{transform:translateX(0);opacity:1}}"
+        ".bloccoR{animation:bl 12s ease-in infinite}"
+    )
+    return s, css, ""
+
+
+def r_spirale(s, n):
+    css = (
+        "@keyframes gr{to{transform:rotate(360deg)}}"
+        ".spiraleR{transform-origin:888px 300px;animation:gr 6s linear infinite}"
+        "@keyframes gl{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}"
+        ".spiraleL{transform-origin:309px 300px;animation:gl 3s ease-in-out infinite alternate}"
+        "@keyframes ca{0%{transform:translateY(10px);opacity:0}30%{opacity:1}100%{transform:translateY(-14px);opacity:0}}"
+        ".caldo{animation:ca 1.8s linear infinite}"
+        "@keyframes fr{0%,100%{opacity:.35}50%{opacity:1}}"
+        ".fresco{animation:fr 1.8s ease-in-out infinite}"
+    )
+    return s, css, ""
+
+
+def r_scatola(s, n):
+    # l'acqua che sale è tagliata alla vaschetta: sotto il fondo non deve vedersi
+    s = sostituisci(s, '<g class="acquaR">',
+                    '<clipPath id="vasca"><rect x="644" y="234" width="372" height="242"/></clipPath>'
+                    '<g clip-path="url(#vasca)"><g class="acquaR">', n)
+    s = sostituisci(s, '</g><g class="scatolaR">', '</g></g><g class="scatolaR">', n)
+    css = (
+        "@keyframes aq{0%{transform:translateY(130px)}40%,90%{transform:translateY(0)}96%,100%{transform:translateY(130px)}}"
+        ".acquaR{animation:aq 12s ease-in-out infinite}"
+        "@keyframes sb{0%,6%{transform:translate(-120px,110px);opacity:1}40%{transform:translate(-120px,0)}"
+        "80%,90%{transform:translate(0,0);opacity:1}95%{opacity:0}96%{transform:translate(-120px,110px);opacity:0}100%{transform:translate(-120px,110px);opacity:1}}"
+        ".scatolaR{animation:sb 12s ease-in-out infinite}"
+        "@keyframes cr{0%,40%{opacity:0;transform:translateX(-20px)}46%{opacity:1}80%{opacity:1;transform:translateX(20px)}86%,100%{opacity:0}}"
+        ".corrente{animation:cr 12s linear infinite}"
+    )
+    return s, css, ""
+
 RICETTE = {
     "esperimento-viscosita-gas": (r_viscosita,
         "Animazione: bolle nel liquido fluido e nella miscela densa",
@@ -514,6 +560,15 @@ RICETTE = {
     "esperimento-lampo-tuono": (r_lampo,
         "Animazione: dal lampo al tuono contando i secondi",
         "Il lampo si vede subito e il bambino comincia a contare i secondi, da 1 a 9. Il suono del tuono viaggia più lento e arriva quando il conteggio è a 9: 9 secondi diviso 3 fa circa 3 chilometri. Al primo tuono entra al chiuso ed esci 30 minuti dopo l'ultimo tuono."),
+    "esperimento-strato-scivola": (r_strato,
+        "Animazione: lo strato di sabbia che scivola sopra il pongo bagnato",
+        "Sulla vaschetta di destra cade acqua spruzzata dall'alto: attraversa la sabbia, si ferma sopra il pongo e a un certo punto lo strato di sabbia scivola verso il basso tutto insieme. A sinistra, all'asciutto, la sabbia resta ferma. Il modello non dice dove o quando avverrà una frana."),
+    "esperimento-scatola-galleggia": (r_scatola,
+        "Animazione: l'acqua che solleva e trascina la scatoletta",
+        "A destra l'acqua nella vaschetta sale: la scatoletta chiusa, piena d'aria e con due monete dentro, si solleva; quando l'acqua si muove, la corrente la sposta di lato. A sinistra, con poca acqua, la scatoletta resta sul fondo. Mai in auto su una strada allagata o in un sottopasso."),
+    "esperimento-spirale-calore": (r_spirale,
+        "Animazione: la spirale che gira sopra il termosifone",
+        "La spirale lontana dal calore resta quasi ferma. Quella sopra il termosifone acceso gira, perché l'aria scaldata sale e altra aria più fresca arriva dai lati. Mai sopra una fiamma: la carta prende fuoco."),
 }
 
 
