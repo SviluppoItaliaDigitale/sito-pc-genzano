@@ -27,6 +27,7 @@ Uso:
 
 Idempotente: rieseguirlo non cambia nulla.
 """
+import json
 import re
 import sys
 from pathlib import Path
@@ -47,6 +48,27 @@ SCAN_DIRS = [
 KIT_CALAMITA_GLOB = 'formazione/kit-calamita-*'
 
 EXCLUDE_FILES = {'404.html', 'sitemap.html'}
+
+# Etichetta del tipo di risultato (Simulazione didattica, Gioco, Scheda per la
+# scuola…) e peso delle pagine operative: stesse regole delle pagine Hugo, in
+# data/ricerca.json (audit esterno 31/10/2026, A12).
+REGOLE = json.loads(Path('data/ricerca.json').read_text(encoding='utf-8')) \
+    if Path('data/ricerca.json').exists() else {'operative': [], 'tipi': []}
+
+
+def attributi_ricerca(f: Path) -> str:
+    url = '/' + f.relative_to(PUBLIC_DIR).as_posix()
+    if url.endswith('/index.html'):
+        url = url[: -len('index.html')]
+    peso = any(url.startswith(r['percorso']) for r in REGOLE.get('operative', []))
+    tipo = 'Informazioni operative' if peso else next(
+        (r['tipo'] for r in REGOLE.get('tipi', []) if url.startswith(r['percorso'])), '')
+    attr = ''
+    if peso:
+        attr += f' data-pagefind-weight="{REGOLE.get("peso_operative", 5)}"'
+    if tipo:
+        attr += f' data-pagefind-meta="tipo:{tipo}"'
+    return attr
 
 BODY_RE = re.compile(r'<body(?![^>]*\bdata-pagefind-body\b)([^>]*)>', re.IGNORECASE)
 HA_MARCATORE_RE = re.compile(r'\bdata-pagefind-body\b', re.IGNORECASE)
@@ -118,7 +140,8 @@ def main() -> int:
         if HA_MARCATORE_RE.search(testo):
             gia_a_posto += 1
         else:
-            testo, n = BODY_RE.subn(r'<body\1 data-pagefind-body>', testo, count=1)
+            extra = attributi_ricerca(f).replace('\\', '\\\\')
+            testo, n = BODY_RE.subn(r'<body\1 data-pagefind-body' + extra + '>', testo, count=1)
             if n:
                 marcati += 1
             else:

@@ -24,7 +24,7 @@ Il 5 novembre è un giorno speciale. L'ONU, l'Organizzazione delle Nazioni Unite
 
 ## Perché il 5 novembre
 
-La data ricorda una storia giapponese. Il 5 novembre 1854 c'è un forte terremoto in Giappone. Un uomo capisce il pericolo. Lui dà fuoco al suo riso sulla collina. Le persone del villaggio vedono il fuoco. Corrono verso la collina. Poco dopo arriva un'onda enorme. Le persone si salvano. Questa storia insegna una cosa importante: conoscere il pericolo salva la vita.
+La data ricorda una storia giapponese del 1854. Nel calendario giapponese di allora è il 5 novembre. Per noi è il 24 dicembre 1854. C'è un forte terremoto in Giappone. Un uomo capisce il pericolo. Lui dà fuoco al suo riso sulla collina. Le persone del villaggio vedono il fuoco. Corrono verso la collina. Poco dopo arriva un'onda enorme. Le persone si salvano. Questa storia insegna una cosa importante: conoscere il pericolo salva la vita.
 
 ## Anche il Mediterraneo ha i maremoti
 
@@ -43,13 +43,13 @@ Dal 2017 l'Italia ha un sistema di allerta. Si chiama SiAM, il Sistema di Allert
 - l'ISPRA controlla il livello del mare con i suoi strumenti;
 - la Protezione Civile avvisa i cittadini.
 
-L'avviso può arrivare anche con IT-alert. IT-alert è un messaggio che suona sul telefono. Arriva a chi è nella zona di pericolo.
+IT-alert è un messaggio che arriva sul telefono. Per il maremoto IT-alert è ancora in prova: per ora arrivano solo messaggi di test.
 
 ## Cosa fare se sei al mare
 
 - **Senti un forte terremoto vicino al mare?** Non aspettare l'allerta. Allontanati subito dal mare. Vai in un posto alto.
 - **Vedi il mare che si ritira veloce?** È un segnale di pericolo. Corri verso l'alto. Non andare a guardare il mare.
-- **Ricevi un messaggio IT-alert?** Segui le indicazioni. Allontanati da spiagge e porti.
+- **Le autorità danno l'allerta maremoto?** Segui le indicazioni. Allontanati da spiagge e porti.
 - **Dopo la prima onda, non tornare in spiaggia.** Le onde arrivano una dopo l'altra. La prima onda non è sempre la più grande.
 
 ## Per approfondire
@@ -66,3 +66,5 @@ L'avviso può arrivare anche con IT-alert. IT-alert è un messaggio che suona su
 - [Dipartimento della Protezione Civile — Rischio maremoto](https://rischi.protezionecivile.gov.it/it/maremoto-0/)
 - [INGV — Centro Allerta Tsunami](https://www.ingv.it/)
 - [UNDRR — World Tsunami Awareness Day](https://www.undrr.org/)
+
+> **Nota (5 novembre 2026).** Abbiamo corretto la parte su IT-alert. Per il maremoto IT-alert è ancora in prova.

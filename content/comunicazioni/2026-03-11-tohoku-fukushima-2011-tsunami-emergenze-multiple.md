@@ -63,7 +63,7 @@ Anche l'Italia, a partire dal 2017, ha un proprio **Sistema di allertamento nazi
 - Quando un sisma supera soglie predefinite (magnitudo, profondità, ubicazione), il CAT emette un'**allerta tsunami** entro pochi minuti.
 - L'allerta è classificata in tre livelli: **WATCH** (atteso impatto significativo), **ADVISORY** (atteso impatto minore), **INFORMATION** (impatto trascurabile).
 - L'allerta è trasmessa al **Dipartimento di Protezione Civile**, alle **Prefetture** e ai **Comuni costieri**, che attivano le procedure di evacuazione.
-- Dal **2024** anche il sistema **IT-alert** è collegato a SiAM: in caso di tsunami imminente, una notifica push raggiunge tutti i cellulari nelle aree costiere a rischio.
+- Per il maremoto anche **IT-alert**, il sistema di allarme pubblico sui telefoni, è in sperimentazione fino al 31 dicembre 2026: per ora si inviano solo messaggi di prova.
 
 Le **zone italiane più esposte** al rischio tsunami sono la **Sicilia orientale** (faglia ionica), la **Calabria** (Stretto di Messina), la **Puglia ionica**, le **isole Eolie**, le **coste del basso Tirreno**. Sulle coste laziali e tirreniche centrali il rischio è considerato **minore**, ma non nullo: lo storico tsunami **del 1627** colpì il Tirreno meridionale.
 
@@ -72,7 +72,7 @@ Le **zone italiane più esposte** al rischio tsunami sono la **Sicilia orientale
 Per chi vive sulla costa italiana la regola è semplice:
 
 1. **Se senti una scossa sismica forte sulla costa o vedi che il mare si ritira improvvisamente**: NON aspettare l'allerta ufficiale. **Sali subito in alto** (zone elevate, piani alti degli edifici, colline). Lo tsunami può arrivare in pochi minuti.
-2. **Se ricevi un'allerta IT-alert o un'allerta del DPC**: rispetta le indicazioni. Se è "WATCH": evacua subito le zone basse della costa.
+2. **Se le autorità diramano un'allerta maremoto**: rispetta le indicazioni. Se è "WATCH": evacua subito le zone basse della costa.
 3. **Conosci il piano di emergenza tsunami** del tuo Comune (se costiero). Le mappe di evacuazione sono pubbliche.
 
 Per chi vive **nell'entroterra** — come Genzano di Roma — il messaggio di Tōhoku è diverso: **i sistemi di emergenza non funzionano se non sono testati**. Il modo migliore di onorare le 19.747 vittime è **partecipare alle esercitazioni** del proprio Comune, conoscere i piani, sapere cosa fare.
@@ -104,3 +104,5 @@ Quindici anni dopo, il messaggio di Tōhoku è semplice: **anche le società pi�
 
 - [Chernobyl, 40 anni dopo: cosa ha insegnato alla protezione civile italiana](/comunicazioni/2026-04-26-chernobyl-40-anni-protezione-civile/)
 - [Pizzo Cengalo 2017: rischi alpini del cambiamento climatico](/comunicazioni/2026-08-23-pizzo-cengalo-bondo-2017-permafrost-cambiamento-climatico/)
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: per il maremoto il sistema è ancora in sperimentazione, con soli messaggi di prova, e non usa notifiche push.

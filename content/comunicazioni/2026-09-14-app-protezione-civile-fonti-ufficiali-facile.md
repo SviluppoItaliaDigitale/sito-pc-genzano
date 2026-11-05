@@ -31,9 +31,9 @@ Questo è il sito del Dipartimento della Protezione Civile (DPC), l'ente dello S
 - Canale X: @DPCgov
 - Trovi: bollettini, allerte, notizie sulle emergenze.
 
-### IT-Alert
+### IT-alert
 
-IT-Alert è il sistema di allarme pubblico italiano. Quando c'è un pericolo grave, lo Stato ti manda un messaggio sul telefono. Non devi installare nessuna app. Devi solo tenere attivo il **cell broadcast** nel tuo telefono.
+IT-alert è il sistema di allarme pubblico italiano. Quando c'è un pericolo grave, lo Stato ti manda un messaggio sul telefono. Non devi installare nessuna app. Non devi cambiare le impostazioni del telefono.
 
 - Sito: [it-alert.gov.it](https://www.it-alert.gov.it/)
 
@@ -96,7 +96,7 @@ Ecco le app utili per stare informato:
 - **Meteo AM** — le previsioni meteo ufficiali dell'Aeronautica Militare.
 - **App del tuo Comune** — se il Comune ha una sua app, cercala nello store.
 
-Per IT-Alert non devi installare nulla. Controlla solo che il cell broadcast sia attivo nel tuo telefono.
+Per IT-alert non devi installare nulla e non devi attivare niente.
 
 ## Cosa non devi credere
 
@@ -119,7 +119,9 @@ Quando leggi una notizia su un rischio o un'emergenza:
 ## Per saperne di più
 
 - [Differenza tra allerta e emergenza](/comunicazioni/2026-09-09-differenza-allerta-emergenza-linguaggio/)
-- [IT-Alert: cos'è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
+- [IT-alert: cos'è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
 - [Social Media Policy](/social-media-policy/)
 
 In caso di emergenza chiama il **112**, il numero unico europeo di emergenza.
+
+> **Nota (5 novembre 2026).** Abbiamo corretto la parte su IT-alert. Non devi attivare niente sul telefono.

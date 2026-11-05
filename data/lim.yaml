@@ -1,0 +1,36 @@
+# Pagine «Pronto per la LIM» (regola .claude/rules/lim-scuole.md, dall'01/11/2026).
+# Il riquadro compare solo dove la compatibilità è controllata ogni settimana da
+# scripts/check-lim.py (e, per i browser vecchi, da check-lim-browser-vecchio.cjs):
+# chi aggiunge un prefisso qui deve essere coperto da quei controlli.
+#
+# hugo: prefissi di .RelPermalink (senza il sottopercorso di GitHub Pages) delle
+#   pagine Hugo; il riquadro sta sopra «Leggi questa pagina in altri modi».
+# statiche: famiglie di pagine autonome di static/; nei giochi, nei quiz e in Abili
+#   a proteggere lo inserisce site-chrome.js, nelle schede e nelle storie (che non
+#   caricano JavaScript) lo scrive scripts/segno-lim-statiche.py nella barra in alto.
+# esclusi: pagine sotto i prefissi che non sono materiali per la classe.
+pagina: /lim/
+hugo:
+  - /formazione/
+  - /giochi/
+  - /catalogo-giochi/
+  - /laboratorio-meteo/
+  - /quiz-preparazione/
+  - /tabelle-comunicazione/
+esclusi:
+  - /formazione/kit-calamita
+  - /formazione/primo-soccorso/
+  - /formazione/psicologia-emergenza/
+  - /formazione/kit-fragilita-vulnerabilita/
+  - /formazione/manuale-campo/
+  - /formazione/radiocomunicazioni-emergenza/
+  - /formazione/dirigenti-e-rspp/
+  - /formazione/scuole-strumenti/
+  - /formazione/quadro-normativo-scuola/
+statiche:
+  - /giochi/
+  - /quizpc/
+  - /formazionepc/
+  - /abili-a-proteggere/
+  - /formazione/schede-stampabili/
+  - /formazione/storie-e-racconti/

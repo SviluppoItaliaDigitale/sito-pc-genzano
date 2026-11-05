@@ -2,12 +2,14 @@
   "livello": "verde",
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-10-24T17:41:25+02:00",
-  "ultimo_controllo": "2026-10-27T14:11:57+01:00",
+  "ultimo_aggiornamento": "2026-11-02T00:02:07+01:00",
+  "ultimo_controllo": "2026-11-05T17:06:44+01:00",
   "domani": {
-    "livello": "verde",
-    "titolo": "Previsto verde",
-    "rischi": [],
-    "data": "2026-10-28"
+    "livello": "gialla",
+    "titolo": "Previsto giallo",
+    "rischi": [
+      "rischio idrogeologico"
+    ],
+    "data": "2026-11-06"
   }
 }

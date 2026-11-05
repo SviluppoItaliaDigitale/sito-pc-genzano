@@ -1,0 +1,40 @@
+{{- /* Pulsante «Trova l'area di attesa più vicina» (31/10/2026, proposta
+       dell'audit esterno). Legge la posizione del telefono solo dopo il
+       permesso, calcola nel browser la distanza in linea d'aria dalle aree di
+       attesa (AA) di data/aree_emergenza.yaml e mostra le tre più vicine.
+       Nessun dato esce dal dispositivo. Senza JavaScript o senza
+       geolocalizzazione il pulsante resta nascosto e vale la tabella delle
+       aree. Usato in /aree-attesa/, /cartografia/ e nella pagina leggera
+       /emergenza/ (che ha il suo CSS: qui lo stile minimo è in linea). */ -}}
+{{- $aree := slice -}}
+{{- range site.Data.aree_emergenza.aree -}}
+  {{- if eq .tipo "AA" -}}
+    {{- $aree = $aree | append (dict "id" .id "nome" .nome "indirizzo" .indirizzo "lat" .lat "lon" .lon) -}}
+  {{- end -}}
+{{- end -}}
+{{- $pagina := . -}}
+{{- if not ($pagina.Store.Get "areaVicinaCss") }}{{ $pagina.Store.Set "areaVicinaCss" true }}
+<style>
+.area-vicina{margin:1rem 0 1.5rem;padding:1rem;border:2px solid #003366;border-radius:6px;background:#fff}
+.area-vicina-btn{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.55rem 1rem;border:0;border-radius:4px;background:#003366;color:#fff;font-weight:700;font-size:1rem;cursor:pointer}
+.area-vicina-btn:hover{background:#00244d}
+.area-vicina-btn:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
+.area-vicina-btn[disabled]{opacity:.8;cursor:progress}
+.area-vicina-nota{margin:.5rem 0 0;font-size:.9rem;color:#333}
+.area-vicina-esito:empty{display:none}
+.area-vicina-esito{margin-top:.75rem}
+.area-vicina-esito ol{margin:.4rem 0 0;padding-left:1.4rem}
+.area-vicina-esito li{margin:.5rem 0}
+.area-vicina-esito .area-vicina-dist{font-weight:700;color:#003366}
+.area-vicina-esito a{color:#003366;text-decoration:underline}
+@media print{.area-vicina{display:none}}
+</style>
+{{- end }}
+<div class="area-vicina" data-aree="{{ $aree | jsonify }}" data-cartelli="{{ "cartelli/" | relURL }}" data-elenco="{{ "aree-attesa/" | relURL }}" hidden>
+  <button type="button" class="area-vicina-btn">Trova l'area di attesa più vicina</button>
+  <p class="area-vicina-nota">Il telefono ti chiede il permesso di usare la posizione. La distanza si calcola sul tuo dispositivo: la posizione non viene inviata a nessuno.</p>
+  <div class="area-vicina-esito" role="status" aria-live="polite"></div>
+</div>
+{{- if not ($pagina.Store.Get "areaVicinaJs") }}{{ $pagina.Store.Set "areaVicinaJs" true }}
+<script src="{{ "js/area-piu-vicina.js" | relURL }}" defer></script>
+{{- end }}

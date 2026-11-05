@@ -81,7 +81,7 @@ In caso di incidente, le autorità ti avvisano con:
 - Sirene.
 - Altoparlanti.
 - SMS sul telefono.
-- **IT-alert**, il sistema nazionale di allerta del telefono. Tieni sempre gli avvisi del telefono attivi.
+- **IT-alert**, il sistema nazionale di allerta del telefono. Arriva da solo: non devi attivare niente.
 
 ## Il rischio chimico vicino a Genzano di Roma
 
@@ -99,3 +99,5 @@ Fonti ufficiali:
 - [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/controlli-e-ispezioni/rischio-industriale-e-direttive-seveso-1)
 - [Dipartimento della Protezione Civile — Rischio chimico](https://rischi.protezionecivile.gov.it/it/industriale/)
 - [IT-alert — sito ufficiale](https://www.it-alert.gov.it/)
+
+> **Nota (5 novembre 2026).** Abbiamo corretto la parte su IT-alert. Non devi attivare niente sul telefono.

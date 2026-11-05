@@ -27,13 +27,15 @@
 
   // Override: per 2 giochi l'id-catalogo != cartella
   var PERCORSO = { "quiz-primaria": "quiz", "memory-primaria": "memory" };
-  var FASCIA_LABEL = { infanzia: "Infanzia", primaria: "Primaria", ragazzi: "Ragazzi" };
+  var FASCIA_LABEL = { infanzia: "Infanzia", primaria: "Primaria", ragazzi: "Ragazzi", tutti: "Per tutti" };
 
   function ls(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 
   function pathGioco(b) {
     var slug = PERCORSO[b.id] || b.id;
+    // I giochi "per tutti" stanno direttamente sotto /giochi/
+    if (b.fascia === "tutti") return slug + "/index.html";
     return b.fascia + "/" + slug + "/index.html";
   }
 
@@ -125,7 +127,7 @@
     griglia.innerHTML = "";
     var visibili = 0;
     badge.forEach(function (b) {
-      if (filtroAttivo && b.fascia !== filtroAttivo) return;
+      if (filtroAttivo && b.fascia !== filtroAttivo && b.fascia !== "tutti") return;
       griglia.appendChild(cardGioco(b, false));
       visibili++;
     });

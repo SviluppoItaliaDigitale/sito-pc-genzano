@@ -236,7 +236,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   background: #e9ecef;
-  color: #6c757d;
+  color: #5c636a; /* 5,14:1 su #e9ecef (#6c757d dava 3,95:1) */
   border-radius: 999px;
   padding: 0.15rem 0.7rem;
   letter-spacing: 0.04em;
@@ -674,7 +674,8 @@ html.a11y-contrast-invert :where(main, .utility-bar) :is(
   .lis-toc-link, .lis-fonte-card, .lis-fonti, .pcg-podcast-iscriviti, .lab-form,
   .crea-lezione-form, .mappa-aree-disclaimer, code, .app-card, .storia-card, .info-pedagogia,
   .segnali-bufala, .intro-card, .quiz-container, .inf-card, .schede-indice-fascia a, .inf-back,
-  .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc, .bg-light,
+  .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc,
+  .pcg-timeline-card, .pcg-timeline-lezione, .bg-light,
   .bg-white, tbody tr, tbody td, tbody th, tfoot td, button:not(.gloss-term)
 ):not(
   :where(
@@ -778,7 +779,8 @@ html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
   .lis-toc-link, .lis-fonte-card, .lis-fonti, .pcg-podcast-iscriviti, .lab-form,
   .crea-lezione-form, .mappa-aree-disclaimer, code, .app-card, .storia-card, .info-pedagogia,
   .segnali-bufala, .intro-card, .quiz-container, .inf-card, .schede-indice-fascia a, .inf-back,
-  .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc, .bg-light,
+  .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc,
+  .pcg-timeline-card, .pcg-timeline-lezione, .bg-light,
   .bg-white, tbody tr, tbody td, tbody th, tfoot td, input, textarea, select,
   button:not(.gloss-term)
 ):not(

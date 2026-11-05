@@ -97,6 +97,7 @@
 .arena-card-infanzia .arena-card-ico { background: #c2410c; }
 .arena-card-primaria .arena-card-ico { background: #15803d; }
 .arena-card-ragazzi  .arena-card-ico { background: #003366; }
+.arena-card-tutti    .arena-card-ico { background: #1e7b34; }
 
 /* Continua dove avevi lasciato — card larga in evidenza */
 .arena-continua-col { margin-bottom: 0.5rem; }

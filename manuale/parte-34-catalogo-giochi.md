@@ -130,7 +130,7 @@ I due script (`dump-coach-manifest.js` e `genera-schede-giochi.py`) **non sono n
 
 ## 34.6 Aggiungere un nuovo gioco al sito (workflow completo)
 
-Quando aggiungi un nuovo gioco interattivo al sito, segui questi sei passi:
+Quando aggiungi un nuovo gioco interattivo al sito, segui questi passi:
 
 1. **Crea la webapp del gioco** in `static/giochi/<fascia>/<slug>/index.html` (con assets correlati). Convenzione standard del repo: `<body data-coach-game="<slug>">` + `<link rel="stylesheet" href="/giochi/assets/css/coach.css">` + `<script src="/giochi/assets/js/coach.js" defer></script>`.
 2. **Aggiungi una voce al manifest `CONTENUTI`** in `static/giochi/assets/js/coach.js`:
@@ -152,6 +152,7 @@ Quando aggiungi un nuovo gioco interattivo al sito, segui questi sei passi:
 3. **Aggiungi il gioco all'Arena** in `static/giochi/index.html` (griglia di card).
 4. **Rigenera la scheda del catalogo** con i due script di 34.5: a quel punto compare una nuova `content/catalogo-giochi/<slug>.md` e l'hub viene aggiornato automaticamente con il nuovo gioco nella sezione di fascia corretta.
 5. **Verifica con `pc-article-reviewer`** (sulla nuova scheda + sull'hub aggiornato).
+5-bis. **Prova da LIM** (regola `.claude/rules/lim-scuole.md`, dall'01/11/2026): JavaScript entro ECMAScript 2018 (`node scripts/check-sintassi-js.cjs`), `python3 scripts/check-lim.py --pagine /giochi/<fascia>/<slug>/` dopo la build, una partita intera col solo tocco; ogni trascinamento ha un'alternativa a tocco singolo marcata `alternativa-al-trascinamento`; comandi di almeno 44 px; la pagina carica `/css/custom.css` e usa i marcatori delle schermate (`#intro`, `#game`, `#end`), così riceve «Schermo intero» e «Torna al menu». Il riquadro «Pronto per la LIM» compare da solo nei giochi sotto `/giochi/` (lo aggiunge `site-chrome.js`): un gioco fuori da quella cartella va aggiunto a `data/lim.yaml` e a `aggiungiProntoLim`.
 6. **Commit + push + PR + merge.** Al deploy, il workflow `scarica-foto-automatica.yml` step 2 genererà la cover tipografica banner automaticamente.
 
 ⚠️ **Non bypassare il passo 2 (manifest)**: se aggiungi il gioco senza voce nel Coach, il bottone "💡 Consigli per giocare" non avrà contenuto e il sistema Layer 3 (hint contestuale sugli errori) non funzionerà.
@@ -311,7 +312,18 @@ Quando un futuro intervento tocca i giochi del sito, ricorda:
 5. **`image: ""` resta vuoto** nel frontmatter: la cover tipografica banner è generata automaticamente (mai foto utente nel banner).
 6. **Bottone CTA = shortcode `bottone-gioco`**, non Markdown attribute syntax (incompatibile con Goldmark del sito).
 7. **D.M. 183/2024** (non 91/2024) è il riferimento corretto per l'Educazione Civica.
+8. **Ogni gioco funziona sulla LIM**: solo tocco, proiettore, browser vecchi (regola `lim-scuole.md`, passo 5-bis).
 
 ---
 
 _[Indice manuale](README.md)_
+
+## Genzano si prepara — il gioco di simulazione per tutti (01/11/2026)
+
+Gioco a scenari sulla mappa vera di Genzano (`static/giochi/genzano-si-prepara/`), per tutte le età e ogni dispositivo. Ogni scenario ha tre momenti: **prima** (quattro azioni di preparazione da scegliere fra dieci), **durante e dopo** (eventi con tre scelte, punteggio 3/1/0 e il perché), **resoconto** («i disastri che non sono successi», con le conseguenze legate alla preparazione scelta).
+
+- **Mappa**: `mappa-genzano.svg` e `luoghi.json` li genera `scripts/genera-mappa-gioco-genzano.py` dai dati OpenStreetMap (ODbL, attribuzione sotto la mappa) e da `data/aree_emergenza.yaml`. `--check` è bloccante in `validate-pr.yml`: se cambiano le aree di attesa, si rigenera `luoghi.json`.
+- **Scenari** (dal 01/11/2026 quattro): un file per scenario, `scenario-temporale.js`, `scenario-terremoto.js`, `scenario-incendio.js`, `scenario-caldo.js`, caricati da `index.html`. Il motore li elenca da solo, in ordine di `ordine`; ogni scenario dichiara icona, allerta (colore `arancione`, `rosso`, `giallo`, `info`, oppure nessuna), casa (`casa` è la chiave del luogo in `luoghi.json`: l'incendio usa `margine`), transizione al «dopo» e righe «Per la vita vera» con collegamenti `[testo](/indirizzo/)`. Un evento può andare all'area di attesa più vicina con `luogo: 'area-vicina'`; le scelte già fatte sono in `p.esiti`; `fase` può essere `prima`, `durante` o `dopo`; il cielo della mappa ha gli stati `pioggia`, `buio`, `notte`, `scossa` (un solo sussulto, mai con il movimento ridotto), `fumo` e `caldo`. Collegamento diretto a uno scenario: `#terremoto`, `#incendio`, `#caldo`, `#temporale`. I testi ripetono le pagine canoniche dei rischi elencate in testa al file: se una di quelle pagine cambia un'indicazione, si aggiorna anche lo scenario. Luoghi veri, eventi e famiglia inventati (Flavio, la nonna Lina, il signor Pasquale), dichiarati come simulazione.
+- **Fascia «tutti»**: in `progressione.js` il gioco ha `fascia: 'tutti'`; l'Arena (`arena.js`) lo mostra con ogni filtro e lo apre da `/giochi/genzano-si-prepara/`, non da una cartella di fascia.
+- **Accessibilità**: scelte come pulsanti, esito scritto oltre al colore, focus sul titolo a ogni passo, lettura ad alta voce, nessun tempo limite; pioggia, alone e movimenti della mappa si fermano con `prefers-reduced-motion` e «Pausa animazioni» anche a pagina aperta. 
+- **LIM** (01/11/2026): pulsante «Schermo intero» dentro il gioco (si esce senza tastiera), bersagli di almeno 56 px con dita e penne (`pointer: coarse`), testo che cresce con la larghezza dello schermo fino ai pannelli 4K, carta che copre sempre il riquadro, codice in ES5 per i browser vecchi dei pannelli Android. Provato a solo tocco su proiettore 1024×768, LIM 1280×800 e 1366×768, pannelli 1920×1080, 4K al 100% e al 200%, pannello Android con scala 150%: partita completa, nessuno scorrimento orizzontale, axe senza violazioni, schermo intero che entra ed esce.

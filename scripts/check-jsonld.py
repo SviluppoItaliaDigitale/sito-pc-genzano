@@ -12,7 +12,11 @@ Google scartano in silenzio.
 Per ogni pagina del campione verifica che:
   1. ogni blocco <script type="application/ld+json"> sia JSON parsabile;
   2. esista almeno un blocco con `copyrightHolder` (il JSON-LD di
-     paternità: se sparisce, la tutela IP è regredita).
+     paternità: se sparisce, la tutela IP è regredita);
+  3. nessun valore sia un elenco o un oggetto JSON scritto dentro una
+     stringa (doppio escape semantico: JSON valido, dati sbagliati). Il
+     31/10/2026 un audit esterno ha trovato `sameAs` della home servito
+     come "[\"https://…\"]" invece che come elenco di URL (A09).
 
 Uso:  python3 scripts/check-jsonld.py [dir-build]   (default: public)
 Exit code = numero di pagine con problemi. Solo stdlib.
@@ -55,6 +59,25 @@ RX_LDJSON = re.compile(
 # il contenuto/paternità vive solo sulla pagina di destinazione.
 RX_ALIAS_STUB = re.compile(r'<meta http-equiv="?refresh"?', re.I)
 
+
+def stringhe_con_json(dati, percorso="$"):
+    """Valori stringa che contengono a loro volta un elenco o un oggetto JSON."""
+    if isinstance(dati, dict):
+        for k, v in dati.items():
+            yield from stringhe_con_json(v, f"{percorso}.{k}")
+    elif isinstance(dati, list):
+        for i, v in enumerate(dati):
+            yield from stringhe_con_json(v, f"{percorso}[{i}]")
+    elif isinstance(dati, str):
+        t = dati.strip()
+        if (t.startswith("[") and t.endswith("]")) or (t.startswith("{") and t.endswith("}")):
+            try:
+                interno = json.loads(t)
+            except ValueError:
+                return
+            if isinstance(interno, (list, dict)):
+                yield percorso
+
 def main():
     errori = 0
     for pagina in campione():
@@ -79,6 +102,11 @@ def main():
                 continue
             if isinstance(dati, dict) and "copyrightHolder" in dati:
                 con_paternita = True
+            for campo in stringhe_con_json(dati):
+                problemi.append(
+                    f"blocco {i}: {campo} è un elenco/oggetto JSON scritto come "
+                    "stringa (serve `| jsonify | safeJS`)"
+                )
         if not blocchi:
             problemi.append("nessun blocco JSON-LD trovato")
         elif not con_paternita:

@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~764 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~773 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -401,9 +401,9 @@ Per saperne di più: [Chi siamo](/chi-siamo/) | [Diventa Volontario](/diventa-vo
 - c) Monitoraggio, allerta, intervento, ripristino
 
 **3. In quale zona sismica si trova Genzano di Roma?**
-- a) Zona 1 (alta sismicità)
-- b) Zona 2B (media sismicità) ✔
-- c) Zona 4 (bassa sismicità)
+- a) Zona 1 (la più pericolosa)
+- b) Zona 2, sottozona 2B (forti terremoti sono possibili) ✔
+- c) Zona 4 (la meno pericolosa)
 
 **4. Cosa significa un'allerta arancione?**
 - a) Nessun pericolo
@@ -530,15 +530,15 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 
 **Casi studio — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
 
-- 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione lenta. *(storia/scienze/ed. civica)*
+- 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, evacuazioni preventive, ricostruzione lenta, perché IT-alert non avvisa dei terremoti. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria/) — "dov'era e com'era": modello internazionale di ricostruzione + Legge 225/1992. *(storia/geografia)*
-- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — "Fate presto": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — il «Fate presto» del Mattino, la denuncia di Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
 - 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-secondaria/) — sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio. *(storia/scienze)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria/) — disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-secondaria/) — tsunami, prima legge antisismica italiana (R.D. 193/1909), cooperazione internazionale. *(storia/scienze)*
 - 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria/) — responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II. *(scienze/ed. civica)*
 - 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-secondaria/) — colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI). *(scienze/geografia)*
-- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria/) — flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert. *(scienze/geografia)*
+- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria/) — flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, perché IT-alert non manda le allerte meteo. *(scienze/geografia)*
 - 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-secondaria/) — rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco. *(scienze/ed. civica)*
 - 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) — Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione. *(scienze/geografia)*
 - 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) — caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone. *(scienze/geografia/ed. civica)*
@@ -580,10 +580,10 @@ Spunti per ampliare il percorso integrandolo con altre discipline.
 
 ### Storia — Eventi-chiave nella storia della Protezione Civile italiana
 
-- **1908 — Terremoto di Messina** (magnitudo 7.1, oltre 80.000 morti) → nascita delle prime norme sul soccorso
+- **1908 — Terremoto di Messina** (magnitudo 7.1, circa 80.000 morti) → nascita delle prime norme sul soccorso
 - **1966 — Alluvione di Firenze** (4 novembre) → nascita degli "angeli del fango", primo volontariato spontaneo organizzato
-- **1976 — Terremoto del Friuli** (magnitudo 6.5, 976 morti) → nasce il modello di ricostruzione partecipata ("com'era, dov'era")
-- **1980 — Terremoto dell'Irpinia** (magnitudo 6.9, 2.914 morti) → evidenzia la necessità di un sistema nazionale coordinato
+- **1976 — Terremoto del Friuli** (magnitudo 6.5, 965 morti) → nasce il modello di ricostruzione partecipata ("com'era, dov'era")
+- **1980 — Terremoto dell'Irpinia** (magnitudo 6.9, 2.734 morti) → evidenzia la necessità di un sistema nazionale coordinato
 - **1992 — Legge 225** → nasce il Servizio Nazionale di Protezione Civile (con Giuseppe Zamberletti)
 - **2009 — Terremoto dell'Aquila** (magnitudo 6.3, 309 morti) → caso G8 e processo alla Commissione Grandi Rischi
 - **2012 — Terremoto in Emilia** → prima vera prova del sistema attuale
@@ -602,7 +602,7 @@ Studio della segnaletica: il **Decreto Legislativo 81/2008** stabilisce forme e 
 
 ### Musica — Le sirene e i suoni dell'emergenza
 
-Storia del suono dell'allerta: la sirena antiaerea della Seconda Guerra Mondiale, il suono del sistema di allerta civile degli anni '80, il suono digitale di IT-alert. Perché certi suoni "sbloccano" istintivamente l'allerta nel nostro cervello? (Frequenze, onda modulata, effetto Doppler).
+Storia del suono dell'allerta: la sirena antiaerea della Seconda Guerra Mondiale, le sirene di oggi (per esempio quelle degli stabilimenti industriali), il suono di IT-alert. Perché certi suoni "sbloccano" istintivamente l'allerta nel nostro cervello? (Frequenze, onda modulata, effetto Doppler).
 
 ---
 
@@ -771,7 +771,7 @@ Materiale integrativo per il docente che vuole offrire esempi **concreti, recent
 **Domande-guida**:
 - Cos'è un "evento compound"? (siccità → suolo impermeabile → alluvione rapida)
 - Perché 23 fiumi hanno rotto gli argini in 36 ore?
-- Qual è stato il ruolo di [IT-alert](https://www.it-alert.it/) nella prima sperimentazione?
+- Perché [IT-alert](https://www.it-alert.gov.it/) non si usa per le piogge intense? Quali canali avvisano la popolazione in caso di alluvione?
 - I volontari da Lazio sono stati inviati? Come si organizza la colonna mobile regionale?
 
 ### Caso studio 3 — Frana di Ischia 26 novembre 2022

@@ -86,6 +86,16 @@ La stampa si controlla stampando, non leggendo il codice (rule 09 § 15-ter):
 - Niente conteggi inventario («24 schede»), niente riferimenti a strumenti automatici.
 - **Niente nomi di persone reali** (alunni, docenti, famiglie). I personaggi inventati seguono rule 02 § «Personaggi delle storie per bambini — Flavio protagonista»: protagonista Flavio; gli altri nomi solo dalla lista Silvia, Maria, Elio, Pasquale, Lina, Alessandro, Christian e Marco; unica eccezione Anna, la volontaria; nell'infanzia Tina la tartaruga. Un nome di persona fuori da questa lista (Flavia compresa) è un rilievo. Animali e persone reali citate nelle schede (es. Giuseppe Zamberletti) non rientrano nella regola.
 
+### 6-ter. 🔴 Usabile sulla lavagna interattiva (LIM) — BLOCCANTE
+
+Regola `.claude/rules/lim-scuole.md` (01/11/2026, segnalazioni delle scuole). Per ogni gioco, quiz, scheda, kit, storia, modulo o strumento per la classe nuovo o modificato:
+- `node scripts/check-sintassi-js.cjs` (con `acorn` installato): JavaScript entro ECMAScript 2018, perché i browser delle lavagne possono essere fermi a Chrome 64;
+- `python3 scripts/check-lim.py --pagine <percorso>` dopo la build: niente errori, niente pagina più larga dello schermo a 1024×768 e 1366×768, comandi dei giochi di almeno 24 px (meglio 44);
+- tutto si fa col solo tocco: il trascinamento ha un'alternativa (tocca e posa, frecce) marcata `alternativa-al-trascinamento`; niente comandi solo da tastiera o al passaggio del mouse;
+- una partita intera col solo tocco fino alla fine; il gioco usa i marcatori delle schermate (`#intro`, `#game`, `#end`) così riceve «Schermo intero» e «Torna al menu»;
+- le pagine statiche caricano `/css/custom.css`.
+Se `Agent` manca o la build non c'è, i controlli si eseguono a mano e il rapporto lo dichiara.
+
 ### 6-bis. 🔴 GATE DELLA COERENZA — il dato nuovo è uguale a quello già sul sito
 
 Istruzione dell'utente del 17/10/2026: *ogni volta che un dato viene pubblicato si verifica con quello già presente sul sito*. Prima del `git add`:

@@ -62,7 +62,7 @@ No. Raggiungi l'area di attesa con la tua famiglia. Il telefono si recupera quan
 
 {{< pittogramma src="/pittogrammi/arasaac/terremoto.png" alt="Pittogramma: terremoto, una casa che trema" caption="Nessuno sa prevedere il giorno e l'ora di un terremoto: si sa dove può avvenire e ci si prepara" size="medium" >}}
 
-**Perché è sbagliata.** Nessun metodo scientifico oggi prevede il giorno, l'ora e la magnitudo di un terremoto. Comportamenti strani degli animali, giornate afose o fasi della luna non hanno mostrato nessuna relazione affidabile con le scosse. Quello che si sa è dove i terremoti sono più probabili: Genzano è in zona sismica 2, sottozona 2B, a sismicità media. La difesa non è l'indovino ma la prevenzione: case costruite bene, piano di famiglia, comportamenti corretti.
+**Perché è sbagliata.** Nessun metodo scientifico oggi prevede il giorno, l'ora e la magnitudo di un terremoto. Comportamenti strani degli animali, giornate afose o fasi della luna non hanno mostrato nessuna relazione affidabile con le scosse. Quello che si sa è dove i terremoti sono più probabili: Genzano è in zona sismica 2, sottozona 2B, dove secondo il Dipartimento della Protezione Civile forti terremoti sono possibili. La difesa non è l'indovino ma la prevenzione: case costruite bene, piano di famiglia, comportamenti corretti.
 
 **Fonte:** [Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/), [Il rischio sismico in Italia](/conoscere/catalogo-dei-rischi/rischio-sismico/) e [Sismicità dei Castelli Romani: zona 2B](/comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/).
 

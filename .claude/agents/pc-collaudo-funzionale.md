@@ -39,6 +39,7 @@ Per ogni strumento: aprilo, compi il compito principale, prova un caso limite, r
 | Scuola | Giochi `/giochi/` (infanzia, primaria, ragazzi) | per ogni gioco: avvio, una risposta giusta e una sbagliata, «Consigli per giocare» (dialog, Esc, lettura ad alta voce), suggerimento sull'errore, fine partita, attestato se previsto; partita nuova diversa dalla precedente (pool randomizzato) |
 | Scuola | Quiz `/quiz-preparazione/`, `/quizpc/`, `/formazionepc/` | un giro completo, punteggio coerente con le risposte, ripetizione |
 | Scuola | Storie (`/formazione/storie-e-racconti/`) | lettura ad alta voce, stampa del libro |
+| Scuola | Uso sulla LIM (regola `lim-scuole.md`) | ogni gioco giocato col solo tocco (`has_touch`, `tap`, trascinamento con `Input.dispatchTouchEvent`) a 1024×768 e 1366×768; «Schermo intero» entra ed esce; `python3 scripts/check-lim.py`; nel giro mensile anche `node scripts/check-lim-browser-vecchio.cjs` con Chromium 69 |
 | Dati | Cruscotto `/cruscotto/` | ogni scheda carica o dichiara onestamente l'errore; mappe una sola volta (Leaflet); scheda terremoto da una riga del cruscotto |
 | Dati | Laboratorio meteo `/laboratorio-meteo/` | un grafico costruito e un esempio pronto; indicatore di caricamento che sparisce |
 | Dati | Sala situazioni `/monitor/` | ogni vista; livelli della cartina per vista; SOLO LA VISTA; tasti rapidi e loro spegnimento; ricarico con configurazione salvata; riquadri di terzi solo su richiesta |

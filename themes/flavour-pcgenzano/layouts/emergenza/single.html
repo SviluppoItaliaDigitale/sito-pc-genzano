@@ -35,7 +35,10 @@
 </head>
 <body>
 <a class="lite-skip" href="#main">Vai al contenuto</a>
-<main id="main">
+{{- /* data-pagefind-body: questa pagina non usa baseof.html, e senza il
+       marcatore la ricerca interna non la indicizzava (audit esterno
+       31/10/2026, A12). Peso ed etichetta da data/ricerca.json. */}}
+<main id="main" data-pagefind-body{{ partial "ricerca-pagina.html" . | safeHTMLAttr }}>
 <h1 class="lite-h1">{{ .Title }} — chiama il 112 in caso di pericolo</h1>
 {{ .Content }}
 </main>

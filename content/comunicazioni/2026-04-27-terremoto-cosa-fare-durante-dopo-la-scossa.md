@@ -15,7 +15,7 @@ tts: true
 draft: false
 ---
 
-Il Lazio è una regione a **sismicità media**. Non è un territorio a rischio estremo come l'Appennino centrale, ma eventi percepibili avvengono regolarmente e in passato il territorio ha vissuto scosse significative. Conoscere i comportamenti corretti **prima** della scossa è fondamentale: quando il terremoto arriva, non c'è tempo per pensarci.
+Nel Lazio la classificazione sismica va dalla **zona 1**, in diversi Comuni delle province di Rieti e Frosinone, alla zona 3. Genzano è in **zona sismica 2B**: eventi percepibili avvengono regolarmente e in passato il territorio ha vissuto scosse significative. Conoscere i comportamenti corretti **prima** della scossa è fondamentale: quando il terremoto arriva, non c'è tempo per pensarci.
 
 In questo articolo riassumiamo le indicazioni ufficiali del [Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/sismico/).
 

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **23 novembre 1980**, alle **19:34**, un terremoto di **magnitudo 6.9** colpì l'**Irpinia** e la **Basilicata**, causando **2.914 morti**, **oltre 8.800 feriti**, **280.000 sfollati**. Un evento che cambiò per sempre la **Protezione Civile italiana** e la coscienza del Paese rispetto al rischio sismico.
+Il **23 novembre 1980**, alle **19:34**, un terremoto di **magnitudo 6.9** colpì l'**Irpinia** e la **Basilicata**, causando **2.734 morti** secondo il Dipartimento della Protezione Civile, **oltre 8.800 feriti** e **280.000 sfollati**. Un evento che cambiò per sempre la **Protezione Civile italiana** e la coscienza del Paese rispetto al rischio sismico.
 
 ## Il sisma
 
@@ -34,10 +34,10 @@ Il **23 novembre 1980**, alle **19:34**, un terremoto di **magnitudo 6.9** colp�
 - **Valle dell'Ofanto**;
 - **Vulture-Melfese** in Basilicata;
 - **oltre 2.900 km²** ufficialmente danneggiati;
-- **687 comuni** colpiti in varia misura.
+- **688 comuni** con danni gravi, secondo il Dipartimento della Protezione Civile.
 
 ### Le vittime
-- **2.914 morti** (numeri ufficiali);
+- **2.734 morti** (Dipartimento della Protezione Civile);
 - **oltre 8.800 feriti**;
 - **280.000 sfollati**;
 - **città** come Sant'Angelo dei Lombardi, Lioni, Balvano, Conza devastate;

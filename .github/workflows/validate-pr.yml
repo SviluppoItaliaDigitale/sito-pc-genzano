@@ -108,6 +108,30 @@ jobs:
         # deve portare a una pagina della build.
         run: python3 scripts/check-navigazione.py --public public
 
+      - name: "🧑‍🏫 Script leggibili dai browser delle LIM (Chrome 64)"
+        # 01/11/2026: sulle lavagne interattive e sui PC di scuola non
+        # aggiornati Bootstrap Italia 2.x non si avviava (sintassi di Chrome
+        # 80+) e con lui menu, finestre e accordion; due giochi dell'infanzia
+        # non partivano. Ogni script del sito, file e dentro le pagine
+        # costruite, deve restare entro ECMAScript 2018. Regola:
+        # .claude/rules/lim-scuole.md.
+        run: |
+          npm install --no-save --prefix /tmp/js-lim acorn@8.14.0 >/dev/null
+          NODE_PATH=/tmp/js-lim/node_modules node scripts/check-sintassi-js.cjs --public public
+
+      - name: "🧑‍🏫 «Pronto per la LIM» su ogni scheda e storia"
+        # 01/11/2026: le schede e le storie non caricano JavaScript, il segno sta
+        # nella loro barra in alto. Una scheda nuova o rigenerata senza segno
+        # ferma la PR: python3 scripts/segno-lim-statiche.py lo aggiunge.
+        run: python3 scripts/segno-lim-statiche.py --check
+
+      - name: "📖 Libro che si esplora: versioni allineate e fonti esistenti"
+        # 01/11/2026: i testi del libro 3D riprendono le pagine dei rischi.
+        # Italiano, italiano semplice e inglese devono avere gli stessi
+        # capitoli, la stessa risposta giusta e le stesse fonti, e ogni fonte
+        # deve portare a una pagina e a un'ancora della build.
+        run: python3 scripts/check-libro-3d.py --public public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
@@ -161,6 +185,17 @@ jobs:
         # che costruisce l'HTML, anche dentro il JavaScript.
         run: python3 scripts/check-ruoli-aria.py
 
+      - name: "🎨 Contrasto delle coppie testo/sfondo nei fogli di stile"
+        # 31/10/2026, audit esterno A03: il pulsante «Allerte Meteo» della home
+        # era bianco su #FF6600 (2,94:1). axe non lo vedeva perché dietro
+        # c'è un gradiente e lo segnalava solo come «incompleto».
+        run: python3 scripts/check-contrasto-css.py
+
+      - name: "🧩 Widget esterni ammessi dalla CSP (frame-src)"
+        # 31/10/2026, audit esterno A06: il riquadro di MeteoAM restava bloccato
+        # perché il dominio non era nella CSP di .htaccess (attiva solo su Aruba).
+        run: python3 scripts/check-widget-csp.py
+
       - name: "📄 Inventario dei PDF allineato ai file pubblicati"
         # 17/10/2026, audit esterno R10: quattro PDF pubblicati mancavano
         # dall'audit pubblico e la presentazione sostituita aveva i dati
@@ -203,6 +238,23 @@ jobs:
           pip install --quiet pyyaml
           python3 scripts/genera-calendario-prevenzione.py --check
 
+      - name: "🎞️ Illustrazioni animate degli esperimenti allineate ai disegni"
+        # 05/11/2026: le versioni animate in static/formazione/illustrazioni-udl/animate/
+        # nascono dai disegni statici con scripts/genera-animazioni-esperimenti.py.
+        # Se cambia un disegno statico o la ricetta, l'animazione va rigenerata
+        # nello stesso commit; la descrizione dell'animazione nella pagina
+        # (alt_animazione) deve coincidere con quella dentro l'SVG.
+        run: python3 scripts/genera-animazioni-esperimenti.py --check
+
+      - name: "🗺️ Gioco «Genzano si prepara»: aree di attesa allineate al Piano"
+        # 01/11/2026: la mappa del gioco mostra le aree di attesa vere. Se
+        # data/aree_emergenza.yaml cambia, luoghi.json va rigenerato con
+        # scripts/genera-mappa-gioco-genzano.py, altrimenti il gioco
+        # mostrerebbe un'area spostata o un nome vecchio.
+        run: |
+          pip install --quiet pyyaml
+          python3 scripts/genera-mappa-gioco-genzano.py --check
+
       - name: "🗺️ Ogni scheda del cruscotto spiegata a parole"
         # 14/10/2026 (proposta 64, «Mappe raccontate»): ogni scheda di
         # /cruscotto/ ha la sua voce in data/mappe_raccontate.yaml, il riquadro
@@ -217,7 +269,7 @@ jobs:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
     # Ubuntu 24.04 e Playwright fissato: vedi controllo-fogli-stampa.yml.
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 60  # 35 per la stampa, più la prova da LIM (01/11/2026)
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v7
@@ -256,6 +308,14 @@ jobs:
         # il loro generatore). Il controllo completo gira ogni lunedì
         # (controllo-fogli-stampa.yml).
         run: python3 scripts/check-fogli-stampa.py --da-git "origin/${{ github.base_ref }}"
+
+      - name: "🧑‍🏫 Prova da LIM sulle pagine per le scuole toccate dalla PR"
+        # 01/11/2026, segnalazioni delle scuole: schermo touch a 1024x768 e
+        # 1366x768, niente mouse né tastiera. Blocca errori, pagine più larghe
+        # dello schermo, comandi dei giochi sotto i 24 px e giochi a
+        # trascinamento senza alternativa al tocco. Tutte le pagine se cambia
+        # un file condiviso. Giro completo ogni lunedì in controllo-lim.yml.
+        run: python3 scripts/check-lim.py --da-git "origin/${{ github.base_ref }}"
 
   fascicolo-esperimenti:
     name: "Fascicolo esperimenti: un foglio per esperimento"

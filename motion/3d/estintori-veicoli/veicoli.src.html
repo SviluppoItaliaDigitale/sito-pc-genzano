@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estintori e veicoli</title>
+<!-- veicoli.src.html — seconda puntata: incendio a bordo di auto, scuolabus, autobus, camion, auto elettriche, a GPL e a metano (Protezione Civile Genzano di Roma).
+     Scritto per Alessandro Cuollo il 28/10/2026 sul modello della skill video-3d, senza codice di terzi.
+     Si costruisce con costruisci.py di video-3d (three.js 0.181.2 MIT, motore 3D, impaginazione comune, font)
+     e i dati tempi (ritmo.py) e sottotitoli (voce.py tempi). Tutto dipende solo da t: render(t) deterministico.
+     Riusa l'estintore, il fuoco e i getti della prima puntata. Stazioni lungo l'asse x: 0 auto a benzina, 10 scuolabus,
+     21 camion con pannello arancione, 31 auto elettrica (vista esplosa del pacco batteria), 39 auto a GPL. -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #livello-scena { z-index: 2; }
+  #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="livello-scena"></canvas>
+  <div id="fonte" data-componente="fonte-3d"></div>
+</div>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: 'Estintori e veicoli',
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  capitoli: ['VEICOLI', 'IN AUTO', 'BUS E SCUOLABUS', 'CAMION', 'ELETTRICHE', 'GPL E METANO'],
+  capitoloDi: [0, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 5, 5],
+  hud: ['ESTINTORI E VEICOLI', 'FERMATI E SCENDI', 'IL COFANO', 'BENZINA E DIESEL', 'IN AUTO', 'BUS E SCUOLABUS',
+        'TUTTI FUORI', "USARE L'ESTINTORE", 'MERCI PERICOLOSE', 'AUTO ELETTRICHE', 'STAI LONTANO', 'GPL E METANO',
+        'PROTEZIONE CIVILE'],
+  nota: 'SCHEMA · NON IN SCALA',
+  fonte: 'Fonti: Vigili del Fuoco · accordo ADR sulle merci pericolose',
+  chiave: ['112', 'frecce', 'cofano', 'fessura', 'scintilla', 'fissalo', 'uscite', 'emergenza', 'martelletto', 'spina',
+           'base', 'leva', 'arancione', 'litio', 'vento', 'elettrica', 'valvole', 'serbatoio', 'scendere'],
+  modo: 'parole'
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const TEMPI = dato('tempi') || { scene: Array.from({ length: 13 }, (_, i) => ({ inizio: i * 12, durata: 12 })), totale: 156 };
+const SOTT = dato('sottotitoli') || [];
+// le frasi lunghe si mostrano a pezzi (frasi intere, al massimo ~125 caratteri), così il sottotitolo resta su tre righe
+const FRASI = [];
+SOTT.forEach(f => {
+  const chiave = (f.chiave || []).concat(CONFIG.chiave), P = f.parole || [];
+  const parti = String(f.testo).trim().split(/\s+/);
+  if (f.testo.length <= 130 || P.length !== parti.length) { FRASI.push(Object.assign({}, f, { chiave })); return; }
+  let da = 0, n = 0;
+  const chiudi = (a) => {
+    FRASI.push({ inizio: da === 0 ? f.inizio : P[da].t0, fine: a === parti.length ? f.fine : P[a].t0 - .02,
+      testo: parti.slice(da, a).join(' '), parole: P.slice(da, a), chiave });
+    da = a;
+  };
+  for (let i = 0; i < parti.length; i++) {
+    n += parti[i].length + 1;
+    const fineFrase = /[.:;?!]$/.test(parti[i]) && i < parti.length - 1;
+    const resto = parti.slice(i + 1).join(' ').length;
+    if (fineFrase && n > 45 && resto > 30) { chiudi(i + 1); n = 0; }
+  }
+  if (da < parti.length) chiudi(parti.length);
+});
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const P = new URLSearchParams(location.search);
+  const formato = P.get('formato') || CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
+  const SC = TEMPI.scene, TOTAL = TEMPI.totale || SC[SC.length - 1].inizio + SC[SC.length - 1].durata;
+  const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, ease, hash, rumore1 } = M3;
+  const fin = M3.finestra;
+
+  /* istante di una parola detta nella scena k (dai sottotitoli), con riserva in proporzione */
+  const norma = w => String(w).toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, '');
+  function parola(k, w, n = 0, riserva = 0.5) {
+    const f = SOTT[k];
+    if (f && f.parole) {
+      let c = 0;
+      for (const p of f.parole) if (norma(p.w) === norma(w) || norma(p.w).startsWith(norma(w)) && norma(w).length > 3) { if (c === n) return p.t0; c++; }
+    }
+    return S(k) + D(k) * riserva;
+  }
+
+  const stage = document.getElementById('stage');
+  const nCap = CONFIG.capitoli.length;
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud[0], passiHUD: nCap, nota: CONFIG.nota });
+  IMP.anteprima(stage);
+
+  const vicino = M3.creaRenderer(document.getElementById('livello-scena'), W, H, { scala: 0.8 });
+  const scena = new THREE.Scene();
+  const camera = M3.creaCamera(W, H, { fov: 30, zona: L.zona });
+
+  /* ---------------------------------------------------------------- luci */
+  scena.add(new THREE.HemisphereLight(0xdfe9ff, 0x1a2236, 1.05));
+  const sole = new THREE.DirectionalLight(0xffffff, 1.6); sole.position.set(3, 6, 5); scena.add(sole);
+  const contro = new THREE.DirectionalLight(0x7fb4ff, 0.9); contro.position.set(-4, 3, -4); scena.add(contro);
+
+  /* ---------------------------------------------------------------- texture su canvas */
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 1; return t;
+  }
+  const FT = "'Titillium Web', sans-serif", FM = "'Roboto Mono', monospace";
+  function tondoRett(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+  function fiammaPath(g, x, y, s) {           // fiammella stilizzata con base in (x, y)
+    g.beginPath(); g.moveTo(x, y);
+    g.bezierCurveTo(x - s * .55, y - s * .05, x - s * .45, y - s * .6, x - s * .05, y - s);
+    g.bezierCurveTo(x + s * .05, y - s * .62, x + s * .25, y - s * .55, x + s * .2, y - s * .82);
+    g.bezierCurveTo(x + s * .55, y - s * .5, x + s * .55, y - s * .05, x, y);
+    g.closePath();
+  }
+  function fiamma2D(g, x, y, s) {
+    g.fillStyle = '#f97316'; fiammaPath(g, x, y, s); g.fill();
+    g.fillStyle = '#fde047'; fiammaPath(g, x, y - s * .02, s * .55); g.fill();
+  }
+
+  /* ---------------------------------------------------------------- materiali */
+  const metallo = () => new THREE.MeshStandardMaterial({ color: 0xb8c0ca, metalness: 0.75, roughness: 0.32 });
+  const nero = () => new THREE.MeshStandardMaterial({ color: 0x1c1f24, metalness: 0.1, roughness: 0.6 });
+  const tinta = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, metalness: 0.05, roughness: 0.55 }, o));
+  const base = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+
+  /* ---------------------------------------------------------------- pavimento e pedane */
+  const pav = new THREE.Mesh(new THREE.PlaneGeometry(80, 30), tinta(0x0d1729, { roughness: 1 }));
+  pav.rotation.x = -Math.PI / 2; pav.position.set(10, 0, 0); scena.add(pav);
+  const texAlone = tela(256, 256, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(70,140,255,.55)'); gr.addColorStop(.55, 'rgba(46,144,250,.16)'); gr.addColorStop(1, 'rgba(46,144,250,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  const texOmbra = tela(128, 128, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(0,0,0,.7)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function alone(x, z, r) {
+    const m = new THREE.Mesh(new THREE.CircleGeometry(r, 48), base(0xffffff, { map: texAlone, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+    m.rotation.x = -Math.PI / 2; m.position.set(x, 0.002, z); scena.add(m); return m;
+  }
+  function ombra(gruppo, r) {
+    const m = new THREE.Mesh(new THREE.CircleGeometry(r, 32), base(0xffffff, { map: texOmbra, transparent: true, depthWrite: false }));
+    m.rotation.x = -Math.PI / 2; m.position.y = 0.004; gruppo.add(m); return m;
+  }
+  const anelloPedana = (x, z, r) => {
+    const m = new THREE.Mesh(new THREE.RingGeometry(r - 0.012, r, 96), base(0x2e90fa, { transparent: true, opacity: 0.55 }));
+    m.rotation.x = -Math.PI / 2; m.position.set(x, 0.003, z); scena.add(m); return m;
+  };
+
+  /* ---------------------------------------------------------------- l'estintore */
+  const TIPI = {
+    polvere:   { R: .16, H: .74, nome: 'POLVERE',  classi: ['A', 'B', 'C'], agente: 0xefe3b5, gauge: true, uscita: 'tubo' },
+    cartuccia: { R: .16, H: .74, nome: 'POLVERE',  classi: ['A', 'B', 'C'], agente: 0xefe3b5, gauge: false, uscita: 'tubo', cartuccia: true },
+    co2:       { R: .12, H: .88, nome: 'CO₂',      classi: ['B'],           agente: 0xd5e8ff, gauge: false, uscita: 'cono', fascia: '#4b5563' },
+    schiuma:   { R: .16, H: .74, nome: 'SCHIUMA',  classi: ['A', 'B'],      agente: 0xf5f8fb, gauge: true, uscita: 'tubo', fascia: '#e8d9a8' },
+    acqua:     { R: .16, H: .74, nome: 'ACQUA',    classi: ['A'],           agente: 0x5cb3ff, gauge: true, uscita: 'tubo', fascia: '#2e90fa' },
+    F:         { R: .15, H: .70, nome: 'CLASSE F', classi: ['F'],           agente: 0xcfeef0, gauge: true, uscita: 'lancia' },
+    D:         { R: .16, H: .74, nome: 'CLASSE D', classi: ['D'],           agente: 0xd8d2c4, gauge: true, uscita: 'lancia', fascia: '#9ca3af' }
+  };
+  const COL_CLASSE = { A: '#34b25a', B: '#2e90fa', C: '#f59e0b', D: '#8b97a8', F: '#ef4136' };
+
+  function etichetta(c) {
+    return tela(512, 640, (g, w, h) => {
+      g.fillStyle = '#f4f6f8'; g.fillRect(0, 0, w, h);
+      g.fillStyle = c.fascia || '#d9dde3'; g.fillRect(0, 0, w, 70);
+      g.fillStyle = '#0a1220'; g.font = '700 30px ' + FM; g.textAlign = 'center'; g.fillText('ESTINTORE', w / 2, 48);
+      g.font = '900 ' + (c.nome.length > 6 ? 84 : 108) + 'px ' + FT; g.fillText(c.nome, w / 2, 210);
+      const n = c.classi.length, d = 116, x0 = w / 2 - (n - 1) * d / 2;
+      c.classi.forEach((k, i) => {
+        g.fillStyle = COL_CLASSE[k]; g.beginPath(); g.arc(x0 + i * d, 330, 50, 0, 6.283); g.fill();
+        g.fillStyle = '#fff'; g.font = '900 64px ' + FT; g.fillText(k, x0 + i * d, 352);
+      });
+      g.fillStyle = '#5b6573'; g.font = '500 24px ' + FM;
+      ['1 · TOGLI LA SPINA', '2 · PUNTA ALLA BASE', '3 · PREMI LA LEVA'].forEach((r, i) => g.fillText(r, w / 2, 450 + i * 40));
+      g.fillStyle = '#c8102e'; g.fillRect(0, h - 26, w, 26);
+    });
+  }
+  function texManometro() {
+    return tela(256, 256, (g, w) => {
+      const c = w / 2;
+      g.fillStyle = '#f8fafc'; g.beginPath(); g.arc(c, c, c, 0, 6.283); g.fill();
+      g.lineWidth = 30;
+      const arco = (a0, a1, col) => { g.strokeStyle = col; g.beginPath(); g.arc(c, c, c * .72, a0, a1); g.stroke(); };
+      arco(Math.PI * .8, Math.PI * 1.25, '#ef4136'); arco(Math.PI * 1.25, Math.PI * 1.75, '#22a04b'); arco(Math.PI * 1.75, Math.PI * 2.2, '#ef4136');
+      g.fillStyle = '#0a1220'; g.font = '700 30px ' + FM; g.textAlign = 'center'; g.fillText('bar', c, c + 70);
+      g.lineWidth = 6; g.strokeStyle = '#1f2937'; g.beginPath(); g.arc(c, c, c - 4, 0, 6.283); g.stroke();
+    });
+  }
+  const TEX_MANO = { t: null };
+
+  /* ritorna { gruppo, corpo, interno, leva, spina, ago, ugello(), direzione(), taglio(d), livello(u), flusso(t,u), gas } */
+  function estintore(tipo) {
+    const c = TIPI[tipo], R = c.R, Hh = c.H;
+    const g = new THREE.Group(), corpo = new THREE.Group(); g.add(corpo);
+    const piano = new THREE.Plane(new THREE.Vector3(0, 0, -1), 1e7);
+    const rosso = new THREE.MeshStandardMaterial({ color: 0xb3161e, metalness: 0.15, roughness: 0.38, side: THREE.DoubleSide, clippingPlanes: [piano] });
+    const prof = [[0, 0], [R * .82, 0], [R * .97, .014], [R, .05], [R, Hh - .07], [R * .93, Hh - .028], [R * .72, Hh - .004],
+                  [R * .36, Hh + .018], [.042, Hh + .024], [.042, Hh + .05], [0, Hh + .05]].map(p => new THREE.Vector2(p[0], p[1]));
+    const guscio = new THREE.Mesh(new THREE.LatheGeometry(prof, 56), rosso); corpo.add(guscio);
+    // interno del guscio più scuro (si vede con lo spaccato)
+    const dentro = new THREE.Mesh(new THREE.CylinderGeometry(R * .985, R * .985, Hh - .09, 48, 1, true),
+      new THREE.MeshStandardMaterial({ color: 0x4a0b0e, roughness: .9, side: THREE.BackSide, clippingPlanes: [piano] }));
+    dentro.position.y = (Hh - .09) / 2 + .03; corpo.add(dentro);
+    const et = new THREE.Mesh(new THREE.CylinderGeometry(R + .002, R + .002, Hh * .5, 48, 1, true, -0.95, 1.9),
+      new THREE.MeshStandardMaterial({ map: etichetta(c), roughness: .5, clippingPlanes: [piano] }));
+    et.position.y = Hh * .5; corpo.add(et);
+    // valvola
+    const testa = new THREE.Mesh(new THREE.CylinderGeometry(.036, .04, .07, 24), metallo());
+    testa.position.y = Hh + .085; g.add(testa);
+    const manico = new THREE.Mesh(new THREE.BoxGeometry(.17, .016, .036), nero());
+    manico.position.set(-.075, Hh + .075, 0); g.add(manico);
+    const leva = new THREE.Group(); leva.position.set(.02, Hh + .125, 0); g.add(leva);
+    const levaB = new THREE.Mesh(new THREE.BoxGeometry(.19, .016, .036), nero()); levaB.position.x = -.09; leva.add(levaB);
+    leva.rotation.z = -0.22;
+    const spina = new THREE.Group(); spina.position.set(-.035, Hh + .1, 0); g.add(spina);
+    const spinaB = new THREE.Mesh(new THREE.CylinderGeometry(.005, .005, .09, 8), metallo()); spinaB.rotation.x = Math.PI / 2; spina.add(spinaB);
+    const anello = new THREE.Mesh(new THREE.TorusGeometry(.018, .004, 8, 24), metallo()); anello.position.z = .055; spina.add(anello);
+    const sigillo = new THREE.Mesh(new THREE.BoxGeometry(.012, .02, .006), tinta(0xffcc00)); sigillo.position.set(0, -.02, .07); spina.add(sigillo);
+    let ago = null, faccia = null;
+    if (c.gauge) {
+      const cassa = new THREE.Mesh(new THREE.CylinderGeometry(.03, .03, .014, 28), metallo());
+      cassa.rotation.x = Math.PI / 2; cassa.position.set(.0, Hh + .09, .043); g.add(cassa);
+      if (!TEX_MANO.t) TEX_MANO.t = texManometro();
+      faccia = new THREE.Mesh(new THREE.CircleGeometry(.026, 32), base(0xffffff, { map: TEX_MANO.t }));
+      faccia.position.set(0, Hh + .09, .0505); g.add(faccia);
+      ago = new THREE.Mesh(new THREE.BoxGeometry(.003, .022, .001), base(0x0a1220)); ago.geometry.translate(0, .011, 0);
+      ago.position.set(0, Hh + .09, .052); g.add(ago);
+    }
+    // uscita: tubo flessibile con ugello, cono (CO2) o lancia
+    const p0 = new THREE.Vector3(.036, Hh + .08, 0);
+    const curva = c.uscita === 'cono'
+      ? new THREE.CatmullRomCurve3([p0, new THREE.Vector3(.09, Hh + .07, .01), new THREE.Vector3(R + .04, Hh - .08, .05), new THREE.Vector3(R + .05, Hh * .55, .07)])
+      : new THREE.CatmullRomCurve3([p0, new THREE.Vector3(.09, Hh + .06, .015), new THREE.Vector3(R + .03, Hh - .1, .04), new THREE.Vector3(R + .04, Hh * .42, .06), new THREE.Vector3(R + .025, Hh * .2, .075)]);
+    const tubo = new THREE.Mesh(new THREE.TubeGeometry(curva, 40, c.uscita === 'cono' ? .014 : .011, 10), nero()); g.add(tubo);
+    const fine = curva.getPoint(1), tang = curva.getTangent(1).normalize();
+    let punta = fine.clone(), dirLocale = tang.clone();
+    if (c.uscita === 'cono') {
+      const cono = new THREE.Mesh(new THREE.CylinderGeometry(.055, .014, .17, 24, 1, true), new THREE.MeshStandardMaterial({ color: 0x23262b, roughness: .5, side: THREE.DoubleSide }));
+      const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, -1, 0), tang);
+      cono.quaternion.copy(q); cono.position.copy(fine).addScaledVector(tang, .085); g.add(cono);
+      const imp = new THREE.Mesh(new THREE.CylinderGeometry(.018, .018, .05, 12), tinta(0x3a3f47)); imp.quaternion.copy(q); imp.position.copy(fine).addScaledVector(tang, -.01); g.add(imp);
+      punta = fine.clone().addScaledVector(tang, .17);
+    } else if (c.uscita === 'lancia') {
+      const dl = new THREE.Vector3(.5, -.15, .85).normalize(), lung = .32;
+      const lancia = new THREE.Mesh(new THREE.CylinderGeometry(.008, .008, lung, 10), metallo());
+      lancia.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dl); lancia.position.copy(fine).addScaledVector(dl, lung / 2); g.add(lancia);
+      punta = fine.clone().addScaledVector(dl, lung); dirLocale = dl;
+    } else {
+      const ug = new THREE.Mesh(new THREE.CylinderGeometry(.009, .014, .04, 12), nero());
+      ug.quaternion.setFromUnitVectors(new THREE.Vector3(0, -1, 0), tang); ug.position.copy(fine).addScaledVector(tang, .02); g.add(ug);
+      punta = fine.clone().addScaledVector(tang, .04);
+    }
+    ombra(g, R * 2.4);
+
+    // interno (visibile con lo spaccato)
+    const interno = new THREE.Group(); interno.visible = false; g.add(interno);
+    const alto = Hh - .06, basso = .03, rIn = R * .93;
+    const agMat = tinta(c.agente, { roughness: tipo === 'acqua' ? .2 : .95, transparent: tipo === 'acqua', opacity: tipo === 'acqua' ? .85 : 1 });
+    const agente = new THREE.Mesh(new THREE.CylinderGeometry(rIn, rIn, 1, 40), agMat);
+    interno.add(agente);
+    const gasMat = base(0x7cc4ff, { transparent: true, opacity: .22, depthWrite: false });
+    const gas = new THREE.Mesh(new THREE.CylinderGeometry(rIn, rIn, 1, 40, 1, true), gasMat); interno.add(gas);
+    const pescante = new THREE.Mesh(new THREE.CylinderGeometry(.008, .008, alto - basso + .06, 10), tinta(0xdde3ea, { metalness: .6, roughness: .3 }));
+    pescante.position.set(0, (alto + basso) / 2 + .03, 0); interno.add(pescante);
+    let cart = null;
+    if (c.cartuccia) {
+      cart = new THREE.Mesh(new THREE.CylinderGeometry(.028, .028, .22, 20), tinta(0xd4a017, { metalness: .7, roughness: .3 }));
+      cart.position.set(-.07, alto - .14, 0); interno.add(cart);
+      const coll = new THREE.Mesh(new THREE.CylinderGeometry(.012, .028, .03, 16), tinta(0xa0780e, { metalness: .7, roughness: .3 }));
+      coll.position.set(-.07, alto - .015, 0); interno.add(coll);
+    }
+    // molecole di gas (punti che si agitano) e flusso dell'agente (punti lungo pescante e tubo)
+    const NM = 70, mPos = new Float32Array(NM * 3), mGeo = new THREE.BufferGeometry();
+    mGeo.setAttribute('position', new THREE.BufferAttribute(mPos, 3));
+    const molecole = new THREE.Points(mGeo, new THREE.PointsMaterial({ color: 0xbfe3ff, size: .012, transparent: true, opacity: .95, depthWrite: false }));
+    molecole.frustumCulled = false; interno.add(molecole);
+    const NF = 90, fPos = new Float32Array(NF * 3), fGeo = new THREE.BufferGeometry();
+    fGeo.setAttribute('position', new THREE.BufferAttribute(fPos, 3));
+    const flussoP = new THREE.Points(fGeo, new THREE.PointsMaterial({ color: c.agente, size: .016, transparent: true, opacity: 1, depthWrite: false }));
+    flussoP.frustumCulled = false; g.add(flussoP); flussoP.visible = false;
+    const percorso = new THREE.CatmullRomCurve3([new THREE.Vector3(0, basso + .03, 0), new THREE.Vector3(0, alto + .06, 0), p0.clone()].concat(curva.points.slice(1)).concat([punta.clone()]));
+
+    let livelloU = .74, gasDa = 0;
+    function livello(u, gasU = 1) {          // u = frazione di riempimento dell'agente; gasU = quanto gas c'è sopra (0..1)
+      livelloU = u;
+      const y1 = mix(basso, alto, u);
+      agente.scale.y = Math.max(y1 - basso, .001); agente.position.y = (basso + y1) / 2;
+      const hg = Math.max(alto - y1, .001) * clamp(gasU);
+      gas.scale.y = hg; gas.position.y = c.cartuccia ? alto - hg / 2 : y1 + hg / 2;
+      gasMat.opacity = .22 * Math.min(1, gasU * 1.4); gasDa = y1;
+    }
+    livello(tipo === 'co2' ? .66 : .74);
+    function agita(t, gasU = 1) {
+      for (let i = 0; i < NM; i++) {
+        const a = hash(i * 1.3) * 6.283 + t * (1.2 + hash(i) * 2), r = rIn * (.2 + .7 * hash(i * 2.1));
+        const y0 = c.cartuccia ? alto - (alto - gasDa) * gasU : gasDa;
+        const y = mix(y0 + .01, alto - .01, (hash(i * 3.7) + .25 * Math.sin(t * 3 + i)) % 1);
+        const on = (c.cartuccia && gasU < .05) ? 0 : 1;
+        mPos[i * 3] = Math.cos(a) * r; mPos[i * 3 + 1] = on ? y : -10; mPos[i * 3 + 2] = Math.sin(a) * r * .9;
+      }
+      mGeo.attributes.position.needsUpdate = true;
+    }
+    function flusso(t, u) {                  // u: intensità del flusso 0..1
+      flussoP.visible = u > .01;
+      if (!flussoP.visible) return;
+      for (let i = 0; i < NF; i++) {
+        const s = ((hash(i * 5.1) + t * .9) % 1);
+        const p = percorso.getPointAt(s);
+        const on = hash(i * 9.7) < u;
+        fPos[i * 3] = p.x; fPos[i * 3 + 1] = on ? p.y : -10; fPos[i * 3 + 2] = p.z + .002;
+      }
+      fGeo.attributes.position.needsUpdate = true;
+    }
+    function taglio(dQ, cam) {               // dQ: 0 = intero, 1 = metà anteriore tolta
+      const w = g.getWorldPosition(new THREE.Vector3());
+      const v = new THREE.Vector3(w.x - cam.position.x, 0, w.z - cam.position.z).normalize();
+      piano.normal.copy(v);
+      const d = mix(R + .05, -.005, dQ);
+      piano.constant = dQ <= 0 ? 1e7 : -v.dot(w) + d;
+      interno.visible = dQ > 0.02;
+      if (interno.visible) interno.rotation.y = 0;
+    }
+    return {
+      gruppo: g, corpo, interno, leva, spina, ago, faccia, cart, R, H: Hh, tipo,
+      punta: () => g.localToWorld(punta.clone()),
+      dir: () => dirLocale.clone().transformDirection(g.matrixWorld),
+      testa: () => g.localToWorld(new THREE.Vector3(0, Hh + .1, 0)),
+      quota: y => g.localToWorld(new THREE.Vector3(0, y, 0)),
+      mano: () => g.localToWorld(new THREE.Vector3(0, Hh + .09, .052)),
+      taglio, livello, agita, flusso, gasDa: () => gasDa,
+      pescante: () => g.localToWorld(new THREE.Vector3(0, Hh * .45, 0)),
+      cartPos: () => g.localToWorld(new THREE.Vector3(-.07, alto - .14, 0))
+    };
+  }
+
+  /* ---------------------------------------------------------------- fuoco */
+  const texFiamma = tela(128, 256, (g, w, h) => {
+    const gr = g.createRadialGradient(w / 2, h * .78, 4, w / 2, h * .62, h * .6);
+    gr.addColorStop(0, 'rgba(255,250,210,1)'); gr.addColorStop(.25, 'rgba(255,200,60,.95)'); gr.addColorStop(.55, 'rgba(255,110,20,.7)'); gr.addColorStop(1, 'rgba(255,60,0,0)');
+    g.fillStyle = gr; g.beginPath(); g.moveTo(w / 2, 6);
+    g.bezierCurveTo(w * .95, h * .45, w * .95, h * .95, w / 2, h * .97); g.bezierCurveTo(w * .05, h * .95, w * .05, h * .45, w / 2, 6); g.fill();
+  });
+  function fuoco(pos, op = {}) {
+    const g = new THREE.Group(); g.position.copy(pos); scena.add(g);
+    const N = op.numero || 9, lingue = [], larg = op.larghezza || .22, alt = op.altezza || .42;
+    for (let i = 0; i < N; i++) {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texFiamma, color: op.colore || 0xffffff, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+      g.add(s); lingue.push(s);
+    }
+    const luce = new THREE.PointLight(op.colore || 0xff8a2a, 0, 2.2); luce.position.y = .25; g.add(luce);
+    const fumo = M3.particelle({ tipo: 'fumo', centro: [pos.x, pos.y + .9, pos.z], dimensioni: [.35, 1.2, .35], numero: 12, dimensione: .18, velocita: .2, colore: '#5d6470', opacita: .35, seme: Math.round(pos.x * 7) });
+    scena.add(fumo.oggetto);
+    const scint = M3.particelle({ tipo: 'scintille', centro: [pos.x, pos.y + .08, pos.z], dimensioni: [.2, .5, .2], numero: op.scintille || 40, dimensione: .02, velocita: .6, gravita: .5, vita: 1.2, colore: op.coloreScintille || '#ffb347', seme: Math.round(pos.x * 11) });
+    scena.add(scint.oggetto);
+    return {
+      gruppo: g,
+      aggiorna(t, k, f = 0) {            // k: intensità 0..1 ; f: fumo extra
+        g.visible = k > .002 || f > .002;
+        lingue.forEach((s, i) => {
+          const n = rumore1(t * 2.6 + i * 3.1, i), m = rumore1(t * 4.1 + i * 1.7, i + 9);
+          const sc = k * (0.55 + .6 * n) * (i < 3 ? 1.15 : .8);
+          s.scale.set(larg * .9 * sc, alt * sc * (0.85 + .3 * m), 1);
+          s.position.set((hash(i * 2.3) - .5) * larg * 1.1 + .02 * Math.sin(t * 5 + i), alt * sc * .45, (hash(i * 4.1) - .5) * larg * .6);
+          s.material.opacity = clamp(k * 1.4) * (.75 + .25 * m); s.visible = k > .01;
+        });
+        luce.intensity = 2.2 * k * (.8 + .2 * rumore1(t * 6, 3));
+        fumo.aggiorna(t, clamp(k * .7 + f)); scint.aggiorna(t, clamp(k));
+      }
+    };
+  }
+
+  /* ---------------------------------------------------------------- getto dell'agente */
+  const texPallino = tela(64, 64, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(.45, 'rgba(255,255,255,.7)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function getto(op) {
+    const N = op.numero || 420, pos = new Float32Array(N * 3), geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const pt = new THREE.Points(geo, new THREE.PointsMaterial({ color: op.colore, size: op.dimensione || .03, map: texPallino, transparent: true,
+      opacity: op.opacita || .85, depthWrite: false, blending: op.additivo ? THREE.AdditiveBlending : THREE.NormalBlending }));
+    pt.frustumCulled = false; scena.add(pt);
+    const a = new THREE.Vector3(), b = new THREE.Vector3(), q = new THREE.Vector3();
+    return {
+      punti: pt,
+      aggiorna(t, k, da, verso, apertura = .18, caduta = 0) {    // da → verso, k intensità
+        pt.visible = k > .01; if (!pt.visible) return;
+        a.copy(da); b.copy(verso); const L0 = a.distanceTo(b);
+        for (let i = 0; i < N; i++) {
+          const s = (hash(i * 3.3) + t * (op.velocita || 1.6)) % 1, on = hash(i * 7.7) < k;
+          const sp = apertura * s * L0;
+          q.lerpVectors(a, b, s);
+          q.x += (hash(i * 1.1 + Math.floor(t * 2)) - .5) * sp; q.y += (hash(i * 2.2) - .5) * sp * .6 - caduta * s * s; q.z += (hash(i * 3.9) - .5) * sp;
+          pos[i * 3] = q.x; pos[i * 3 + 1] = on ? q.y : -10; pos[i * 3 + 2] = q.z;
+        }
+        geo.attributes.position.needsUpdate = true;
+      }
+    };
+  }
+  function nube(op) {                       // nube di polvere o vapore (sprite morbidi che si allargano)
+    const g = new THREE.Group(), sp = []; scena.add(g);
+    for (let i = 0; i < (op.numero || 18); i++) {
+      const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texPallino, color: op.colore, transparent: true, depthWrite: false, opacity: 0 }));
+      g.add(s); sp.push(s);
+    }
+    return {
+      aggiorna(t, k, centro, raggio) {
+        g.visible = k > .01; if (!g.visible) return;
+        sp.forEach((s, i) => {
+          const u = (hash(i * 2.7) + t * .12) % 1;
+          s.position.set(centro.x + (hash(i * 1.9) - .5) * raggio * 2, centro.y + (hash(i * 4.4) - .3) * raggio * .9 + u * raggio * .3, centro.z + (hash(i * 6.1) - .5) * raggio * 1.4);
+          s.scale.setScalar(raggio * (.6 + .9 * hash(i * 8.3)) * (.8 + .4 * u));
+          s.material.opacity = k * (op.opacita || .35) * Math.sin(Math.PI * clamp(u * 1.1));
+        });
+      }
+    };
+  }
+
+  /* ================================================================ PERSONE, LUCI, OGGETTI */
+  function persona(colore) {                // figura semplice, senza volto: corpo a capsula e testa
+    const g = new THREE.Group();
+    const corpo = new THREE.Mesh(new THREE.CapsuleGeometry(.17, .78, 6, 14), tinta(colore, { roughness: .7 }));
+    corpo.position.y = .62; g.add(corpo);
+    const testa = new THREE.Mesh(new THREE.SphereGeometry(.13, 20, 14), tinta(0xe8c4a0, { roughness: .8 }));
+    testa.position.y = 1.36; g.add(testa);
+    ombra(g, .32); scena.add(g); return g;
+  }
+  const lampeggio = t => (Math.floor(t * 3) % 2 === 0 ? 1 : 0);          // quattro frecce, 1,5 lampi al secondo
+  function freccia(colore) {              // freccia piatta sul terreno (verso +x)
+    const s = new THREE.Shape(); s.moveTo(0, -.09); s.lineTo(.55, -.09); s.lineTo(.55, -.2); s.lineTo(.85, 0); s.lineTo(.55, .2); s.lineTo(.55, .09); s.lineTo(0, .09); s.closePath();
+    const m = new THREE.Mesh(new THREE.ShapeGeometry(s), base(colore, { transparent: true, opacity: .9, depthWrite: false }));
+    m.rotation.x = -Math.PI / 2; const g = new THREE.Group(); g.add(m); g.position.y = .01; scena.add(g); return g;
+  }
+  function pannelloArancione(sopra, sotto) {
+    return tela(300, 220, (g, w, h) => {
+      g.fillStyle = '#f97316'; g.fillRect(0, 0, w, h); g.strokeStyle = '#0a1220'; g.lineWidth = 12; g.strokeRect(6, 6, w - 12, h - 12);
+      g.beginPath(); g.moveTo(6, h / 2); g.lineTo(w - 6, h / 2); g.stroke();
+      g.fillStyle = '#0a1220'; g.font = '900 84px ' + FT; g.textAlign = 'center'; g.fillText(sopra, w / 2, 92); g.fillText(sotto, w / 2, 196);
+    });
+  }
+
+  /* ---------------------------------------------------------------- l'auto (fronte verso +x) */
+  function auto(colore, op = {}) {
+    const g = new THREE.Group(), carro = new THREE.Group(); g.add(carro);
+    const vern = tinta(colore, { metalness: .15, roughness: .55 });
+    const vetro = tinta(0x24364f, { metalness: .3, roughness: .2 });
+    const telaio = new THREE.Mesh(new THREE.BoxGeometry(4.6, .5, 1.9), vern); telaio.position.y = .55; carro.add(telaio);
+    const cabina = new THREE.Mesh(new THREE.BoxGeometry(2.3, .62, 1.72), vetro); cabina.position.set(-.3, 1.11, 0); carro.add(cabina);
+    const tetto = new THREE.Mesh(new THREE.BoxGeometry(2.0, .06, 1.74), vern); tetto.position.set(-.35, 1.44, 0); carro.add(tetto);
+    // cofano incernierato verso il parabrezza
+    const cofano = new THREE.Group(); cofano.position.set(.85, .81, 0); carro.add(cofano);
+    const cof = new THREE.Mesh(new THREE.BoxGeometry(1.4, .05, 1.86), vern); cof.position.x = .7; cofano.add(cof);
+    // bagagliaio
+    const baule = new THREE.Group(); baule.position.set(-1.45, .81, 0); carro.add(baule);
+    const bau = new THREE.Mesh(new THREE.BoxGeometry(.85, .05, 1.86), vern); bau.position.x = -.42; baule.add(bau);
+    // vano motore (si vede dalla fessura)
+    const motore = new THREE.Mesh(new THREE.BoxGeometry(.9, .28, 1.1), tinta(0x2b3038, { metalness: .5 })); motore.position.set(1.55, .66, 0); carro.add(motore);
+    // ruote
+    const ruote = [];
+    [[1.45, .95], [1.45, -.95], [-1.45, .95], [-1.45, -.95]].forEach(([x, z]) => {
+      const r = new THREE.Mesh(new THREE.CylinderGeometry(.36, .36, .26, 24), tinta(0x15171b, { roughness: .9 })); r.rotation.x = Math.PI / 2; r.position.set(x, .36, z); g.add(r); ruote.push(r);
+    });
+    // fari e frecce
+    const fari = [.55, -.55].map(z => { const f = new THREE.Mesh(new THREE.BoxGeometry(.04, .14, .34), base(0xfdf8e4)); f.position.set(2.31, .66, z); carro.add(f); return f; });
+    const frecce = [[2.31, .86], [2.31, -.86], [-2.31, .86], [-2.31, -.86]].map(([x, z]) => {
+      const f = new THREE.Mesh(new THREE.BoxGeometry(.05, .1, .16), base(0x5c3a06)); f.position.set(x, .62, z); carro.add(f); return f;
+    });
+    const posteriori = [.6, -.6].map(z => { const f = new THREE.Mesh(new THREE.BoxGeometry(.04, .12, .3), base(0x7a1010)); f.position.set(-2.31, .72, z); carro.add(f); return f; });
+    ombra(g, 2.6);
+    return {
+      gruppo: g, carro, cofano, baule, motore,
+      frecce(t, on) { frecce.forEach(f => f.material.color.setHex(on && lampeggio(t) ? 0xffb020 : 0x5c3a06)); },
+      punto: (x, y, z) => g.localToWorld(new THREE.Vector3(x, y, z))
+    };
+  }
+
+  /* ---------------------------------------------------------------- scuolabus (fronte verso +x, porta sul lato +z) */
+  function scuolabus() {
+    const g = new THREE.Group(), L2 = 3.5, Wb = 2.3, Hb = 2.7;
+    const giallo = tinta(0xf2b705, { roughness: .45, metalness: .1 });
+    const lato = (z, vicino) => {
+      const m = new THREE.Mesh(new THREE.BoxGeometry(2 * L2, Hb - .35, .06), vicino
+        ? new THREE.MeshStandardMaterial({ map: texLatoBus(), roughness: .5, transparent: true, opacity: 1, depthWrite: true })
+        : new THREE.MeshStandardMaterial({ map: texLatoBus(), roughness: .5 }));
+      m.position.set(0, .35 + (Hb - .35) / 2, z); g.add(m); return m;
+    };
+    const vicino = lato(Wb / 2, true); lato(-Wb / 2, false);
+    const tetto = new THREE.Mesh(new THREE.BoxGeometry(2 * L2 + .06, .08, Wb + .06), giallo); tetto.position.y = Hb; g.add(tetto);
+    const pav = new THREE.Mesh(new THREE.BoxGeometry(2 * L2, .1, Wb), tinta(0x3b4352)); pav.position.y = .4; g.add(pav);
+    const muso = new THREE.Mesh(new THREE.BoxGeometry(.08, Hb - .35, Wb), new THREE.MeshStandardMaterial({ map: texMusoBus(), roughness: .4 })); muso.position.set(L2, .35 + (Hb - .35) / 2, 0); g.add(muso);
+    const coda = new THREE.Mesh(new THREE.BoxGeometry(.08, Hb - .35, Wb), giallo); coda.position.set(-L2, .35 + (Hb - .35) / 2, 0); g.add(coda);
+    const griglia = new THREE.Mesh(new THREE.BoxGeometry(.03, .5, 1.4), tinta(0x22262c)); griglia.position.set(-L2 - .05, .9, 0); g.add(griglia);
+    [[L2 - 1.1, 1], [L2 - 1.1, -1], [-L2 + 1.3, 1], [-L2 + 1.3, -1]].forEach(([x, z]) => {
+      const r = new THREE.Mesh(new THREE.CylinderGeometry(.48, .48, .3, 24), tinta(0x15171b, { roughness: .9 })); r.rotation.x = Math.PI / 2; r.position.set(x, .48, z * (Wb / 2 - .05)); g.add(r);
+    });
+    // interno: sedili, posto di guida, estintore sul supporto, martelletti
+    for (let i = 0; i < 5; i++) for (const z of [.6, -.6]) {
+      const s = new THREE.Mesh(new THREE.BoxGeometry(.45, .5, .8), tinta(0x2563eb, { roughness: .8 })); s.position.set(L2 - 2.2 - i * .95, .7, z); g.add(s);
+      const sch = new THREE.Mesh(new THREE.BoxGeometry(.1, .65, .8), tinta(0x1d4ed8, { roughness: .8 })); sch.position.set(L2 - 2.45 - i * .95, 1.15, z); g.add(sch);
+    }
+    const guida = new THREE.Mesh(new THREE.BoxGeometry(.5, .55, .6), tinta(0x334155)); guida.position.set(L2 - .9, .72, -.55); g.add(guida);
+    const volante = new THREE.Mesh(new THREE.TorusGeometry(.2, .03, 8, 24), nero()); volante.position.set(L2 - .45, 1.25, -.55); volante.rotation.y = Math.PI / 2; volante.rotation.x = .5; g.add(volante);
+    const supporto = new THREE.Mesh(new THREE.BoxGeometry(.04, .3, .12), metallo()); supporto.position.set(L2 - .55, .85, .95); g.add(supporto);
+    const martelli = [L2 - 2.7, L2 - 4.6].map(x => {
+      const m = new THREE.Group(); m.position.set(x, 1.95, Wb / 2 - .12); g.add(m);
+      const man = new THREE.Mesh(new THREE.BoxGeometry(.04, .18, .04), tinta(0xdc2626)); m.add(man);
+      const tes = new THREE.Mesh(new THREE.BoxGeometry(.12, .05, .05), tinta(0xdc2626)); tes.position.y = .1; m.add(tes);
+      return m;
+    });
+    scena.add(g);
+    return { gruppo: g, vicino, L2, Wb, Hb, martelli, punto: (x, y, z) => g.localToWorld(new THREE.Vector3(x, y, z)) };
+  }
+  function texLatoBus() {
+    return tela(1400, 470, (g, w, h) => {
+      g.fillStyle = '#f2b705'; g.fillRect(0, 0, w, h);
+      g.fillStyle = '#1b2a3d';
+      for (let i = 0; i < 6; i++) { tondoRett(g, 180 + i * 195, 40, 170, 170, 14); g.fill(); }
+      tondoRett(g, 1220, 40, 150, 380, 10); g.fill();                       // porta anteriore
+      g.fillStyle = '#0a1220'; g.font = '900 64px ' + FT; g.textAlign = 'center'; g.fillText('SCUOLABUS', 620, 320);
+      g.fillStyle = '#15803d'; g.fillRect(560, 40, 140, 30); g.fillStyle = '#fff'; g.font = '700 18px ' + FM; g.fillText('USCITA DI EMERGENZA', 630, 62);
+      g.fillStyle = '#0a1220'; g.fillRect(0, h - 40, w, 40);
+    });
+  }
+  function texMusoBus() {
+    return tela(470, 470, (g, w, h) => {
+      g.fillStyle = '#f2b705'; g.fillRect(0, 0, w, h); g.fillStyle = '#1b2a3d'; tondoRett(g, 30, 30, w - 60, 200, 16); g.fill();
+      g.fillStyle = '#fdf8e4'; g.fillRect(40, 330, 80, 40); g.fillRect(w - 120, 330, 80, 40);
+      g.fillStyle = '#0a1220'; g.font = '900 40px ' + FT; g.textAlign = 'center'; g.fillText('SCUOLABUS', w / 2, 300);
+    });
+  }
+
+  /* ---------------------------------------------------------------- camion cisterna con pannello arancione */
+  function camion() {
+    const g = new THREE.Group();
+    const cab = new THREE.Mesh(new THREE.BoxGeometry(1.6, 2.0, 2.2), tinta(0xe5e7eb, { metalness: .2, roughness: .4 })); cab.position.set(2.8, 1.5, 0); g.add(cab);
+    const vetroC = new THREE.Mesh(new THREE.BoxGeometry(.05, .8, 1.9), tinta(0x1b2a3d, { roughness: .15 })); vetroC.position.set(3.62, 1.95, 0); g.add(vetroC);
+    const telaioC = new THREE.Mesh(new THREE.BoxGeometry(7, .3, 1.8), tinta(0x22262c)); telaioC.position.y = .65; g.add(telaioC);
+    const cisterna = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.0, 4.9, 40), tinta(0xcfd5dc, { metalness: .7, roughness: .25 })); cisterna.rotation.z = Math.PI / 2; cisterna.position.set(-.75, 1.85, 0); g.add(cisterna);
+    [3, 0, -2.4].forEach(x => [1, -1].forEach(z => { const r = new THREE.Mesh(new THREE.CylinderGeometry(.5, .5, .32, 24), tinta(0x15171b, { roughness: .9 })); r.rotation.x = Math.PI / 2; r.position.set(x, .5, z * .95); g.add(r); }));
+    const pAnt = new THREE.Mesh(new THREE.PlaneGeometry(.5, .37), base(0xffffff, { map: pannelloArancione('33', '1203') })); pAnt.position.set(3.61, .95, 0); pAnt.rotation.y = Math.PI / 2; g.add(pAnt);
+    const pLat = new THREE.Mesh(new THREE.PlaneGeometry(.6, .44), base(0xffffff, { map: pannelloArancione('33', '1203') })); pLat.position.set(-.75, 1.85, 1.01); g.add(pLat);
+    const pPost = new THREE.Mesh(new THREE.PlaneGeometry(.5, .37), base(0xffffff, { map: pannelloArancione('33', '1203') })); pPost.position.set(-3.52, 1.2, 0); pPost.rotation.y = -Math.PI / 2; g.add(pPost);
+    const cassetta = new THREE.Mesh(new THREE.BoxGeometry(.5, .45, .3), tinta(0xdc2626)); cassetta.position.set(1.6, .95, .95); g.add(cassetta);
+    ombra(g, 4.2); scena.add(g);
+    return { gruppo: g, punto: (x, y, z) => g.localToWorld(new THREE.Vector3(x, y, z)) };
+  }
+
+  /* ================================================================ COSTRUZIONE DELLE STAZIONI */
+  // x: 0 auto a benzina · 10 scuolabus · 21 camion · 31 auto elettrica · 39 auto a GPL
+  const XA = 0, XB = 10, XC = 21, XE = 31, XG = 39;
+  const autoA = auto(0x2563eb); autoA.gruppo.position.set(XA, 0, 0); scena.add(autoA.gruppo); alone(XA, 0, 3.4);
+  const bus = scuolabus(); bus.gruppo.position.set(XB, 0, 0); alone(XB, 0, 4.2);
+  const tir = camion(); tir.gruppo.position.set(XC, 0, 0); alone(XC, 0, 4.2);
+  const autoE = auto(0xf1f5f9); autoE.gruppo.position.set(XE, 0, 0); scena.add(autoE.gruppo); alone(XE, 0, 3.4);
+  const autoG = auto(0xb91c1c); autoG.gruppo.position.set(XG, 0, 0); scena.add(autoG.gruppo); alone(XG, 0, 3.4);
+  scena.updateMatrixWorld(true);                             // le posizioni calcolate qui sotto usano le matrici dei mezzi
+  // spina di ricarica dell'elettrica e scritta GPL sul baule
+  const presa = new THREE.Mesh(new THREE.BoxGeometry(.18, .14, .03), base(0x22c55e)); presa.position.set(-1.6, .75, .96); autoE.carro.add(presa);
+  // pacco batteria dell'elettrica: celle in griglia sotto il pianale
+  const pacco = new THREE.Group(); pacco.position.set(0, .28, 0); autoE.gruppo.add(pacco);
+  const vassoio = new THREE.Mesh(new THREE.BoxGeometry(3.0, .12, 1.6), tinta(0x334155, { metalness: .5 })); pacco.add(vassoio);
+  const celle = [];
+  for (let i = 0; i < 8; i++) for (let j = 0; j < 4; j++) {
+    const c = new THREE.Mesh(new THREE.BoxGeometry(.3, .16, .32), new THREE.MeshStandardMaterial({ color: 0x3b82f6, emissive: 0x000000, roughness: .5 }));
+    c.position.set(-1.3 + i * .37, .14, -.56 + j * .37); pacco.add(c); celle.push({ m: c, ordine: hash(i * 3.7 + j * 1.3) * .5 + (Math.abs(i - 5) + Math.abs(j - 1)) * .22 });
+  }
+  // serbatoio toroidale del GPL nel vano ruota di scorta, con valvola
+  const serb = new THREE.Group(); serb.position.set(-1.85, .9, 0); autoG.carro.add(serb);
+  const toro = new THREE.Mesh(new THREE.TorusGeometry(.26, .13, 16, 40), tinta(0xd1d5db, { metalness: .7, roughness: .25 })); toro.rotation.x = Math.PI / 2; serb.add(toro);
+  const valvola = new THREE.Mesh(new THREE.BoxGeometry(.16, .1, .12), tinta(0xf59e0b, { metalness: .6 })); valvola.position.set(.2, .1, 0); serb.add(valvola);
+  const sfiato = M3.particelle({ tipo: 'fumo', centro: [XG - 1.65, .9, 0], dimensioni: [.12, .5, .12], numero: 10, dimensione: .08, velocita: .5, colore: '#e2e8f0', opacita: .35, seme: 77 });
+  scena.add(sfiato.oggetto);
+  // estintori: piccolo in auto (baule), quello dello scuolabus, quello dell'uso in auto
+  const estAuto = estintore('polvere'); estAuto.gruppo.scale.setScalar(.55); estAuto.gruppo.rotation.z = Math.PI / 2; estAuto.gruppo.position.set(XA - 1.75, .95, .1); scena.add(estAuto.gruppo);
+  const fascia = new THREE.Mesh(new THREE.TorusGeometry(.1, .012, 8, 24), tinta(0x0a1220)); fascia.rotation.y = Math.PI / 2; fascia.position.set(XA - 1.95, .95, .1); scena.add(fascia);
+  const estCofano = estintore('polvere'); estCofano.gruppo.scale.setScalar(.75); estCofano.gruppo.position.set(XA + 3.0, 0, 1.25); estCofano.gruppo.rotation.y = 2.3; scena.add(estCofano.gruppo);
+  const estBus = estintore('polvere'); estBus.gruppo.scale.setScalar(.75); scena.add(estBus.gruppo);
+  const posBus0 = bus.punto(bus.L2 - .55, .5, .87), posBus1 = bus.punto(-bus.L2 - .2, 0, 2.6);
+  // persone
+  const autista = persona(0x334155);
+  const PASS = [0xf97316, 0x22c55e, 0xa855f7, 0x0ea5e9, 0xeab308, 0x14b8a6].map(c => persona(c));
+  // braccia del passeggero che usa l'estintore: una mano sulla leva, l'altra sulla manichetta
+  const braccia = [0, 1].map(() => {
+    const m = new THREE.Mesh(new THREE.CapsuleGeometry(.045, 1, 4, 10), tinta(0x14b8a6, { roughness: .7 }));
+    m.visible = false; scena.add(m); return m;
+  });
+  const _sp = new THREE.Vector3(), _mn = new THREE.Vector3(), _ax = new THREE.Vector3(0, 1, 0);
+  function braccio(m, spalla, mano) {          // capsula dalla spalla alla mano
+    const d = spalla.distanceTo(mano);
+    m.position.copy(spalla).add(mano).multiplyScalar(.5);
+    m.scale.set(1, Math.max(d - .09, .01), 1);
+    m.quaternion.setFromUnitVectors(_ax, _mn.copy(mano).sub(spalla).normalize());
+  }
+  const SEDILI = [[.6, 0], [-.6, 0], [.6, 1], [-.6, 2], [.6, 3], [-.6, 4]].map(([z, i]) => bus.punto(bus.L2 - 2.2 - i * .95, .1, z));
+  const guidatoreA = persona(0x475569), passeggeroA = persona(0xf97316);
+  const camionista = persona(0x475569), guidatoreE = persona(0x0ea5e9);
+  // fuochi
+  const fuocoCofano = fuoco(autoA.punto(1.5, .82, 0), { larghezza: .45, altezza: .5, numero: 10 });
+  const fuocoBus = fuoco(bus.punto(-bus.L2 - .25, .7, 0), { larghezza: .7, altezza: .8, numero: 12 });
+  const fuocoTir = fuoco(tir.punto(-2.4, .6, .9), { larghezza: .8, altezza: 1.0, numero: 12 });
+  const fuocoE = fuoco(autoE.punto(0, .3, 0), { larghezza: 2.4, altezza: 1.1, numero: 14, scintille: 90 });
+  const fuocoG = fuoco(autoG.punto(-1.0, .9, 0), { larghezza: .9, altezza: .9, numero: 12 });
+  // pozza di carburante e vapori
+  const pozza = new THREE.Mesh(new THREE.CircleGeometry(.9, 40), tinta(0x2a1f0a, { roughness: .05, metalness: .3, transparent: true, opacity: .85 }));
+  pozza.rotation.x = -Math.PI / 2; pozza.position.set(XA + .8, .012, 1.2); scena.add(pozza);
+  const vapori = M3.particelle({ tipo: 'fumo', centro: [XA + .8, .3, 1.2], dimensioni: [1.4, .5, 1.0], numero: 22, dimensione: .35, velocita: .08, colore: '#c8d4e4', opacita: .4, seme: 31 });
+  scena.add(vapori.oggetto);
+  // getti
+  const gettoCofano = getto({ colore: 0xf1e7c6, dimensione: .05, velocita: 1.4, opacita: .8 });
+  const gettoBus = getto({ colore: 0xf1e7c6, dimensione: .06, velocita: 1.4, opacita: .8 });
+  const gettoE = getto({ colore: 0xf1e7c6, dimensione: .06, velocita: 1.4, opacita: .8 });
+  const nubeBus = nube({ colore: 0xe9e1c8, opacita: .5, numero: 22 });
+  // frecce sul terreno: via dal camion, vento alle spalle
+  const viaTir = freccia(0x22c55e); viaTir.position.set(XC + .6, .01, 2.5); viaTir.rotation.y = -.5;
+  const vento = [0, 1, 2].map(i => { const f = freccia(0x7dd3fc); f.scale.setScalar(.8); return f; });
+
+  /* ================================================================ TELECAMERA */
+  const ins = (r) => M3.distanzaPerInquadrare(r, camera, .9);
+  const K = [];
+  const chiave = (t, b, az, el, r, extra = {}) => K.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(r) }, extra));
+  const MV = 1.6;
+  const RA = ORIZ ? 3.0 : 2.7;                               // raggio per inquadrare un'auto
+  // 0 rassegna: dal GPL fino all'auto a benzina, passando davanti a tutti i mezzi
+  chiave(0, [XG, .9, 0], -30, 14, RA);
+  chiave(S(0) + 3.0, [XE, .9, 0], -12, 12, RA, { passa: true });
+  chiave(S(0) + 6.2, [XC, 1.5, 0], 6, 12, ORIZ ? 4.6 : 4.2, { passa: true });
+  chiave(S(0) + 9.4, [XB, 1.4, 0], 18, 12, ORIZ ? 4.4 : 4.0, { passa: true });
+  chiave(E(0) - .2, [XA, .9, 0], 32, 16, RA);
+  // 1 fermati e scendi: giro attorno all'auto
+  chiave(S(1) + 3.2, [XA - .5, .7, 1.8], 22, 20, ORIZ ? 3.8 : 3.6);
+  chiave(E(1) - .1, [XA - .5, .7, 1.8], 22, 20, ORIZ ? 3.8 : 3.6);
+  // 2 il cofano: zoom sulla fessura
+  chiave(S(2) + MV + .4, [XA + 2.1, .65, .7], -38, 20, ORIZ ? 2.0 : 1.9);
+  chiave(E(2) - .1, [XA + 2.1, .65, .7], -38, 20, ORIZ ? 2.0 : 1.9);
+  // 3 benzina e diesel: la pozza sotto il veicolo, dall'alto
+  chiave(S(3) + MV + .4, [XA + .8, .3, 1.4], -14, 34, ORIZ ? 2.0 : 1.9);
+  chiave(E(3) - .1, [XA + .8, .3, 1.4], -14, 34, ORIZ ? 2.0 : 1.9);
+  // 4 l'estintore fissato nel baule
+  chiave(S(4) + MV + .4, [XA - 1.8, 1.0, .1], 70, 32, ORIZ ? .85 : .8);
+  chiave(E(4) - .1, [XA - 1.8, 1.0, .1], 70, 32, ORIZ ? .85 : .8);
+  // 5 scuolabus: arrivo con giro, poi l'interno a parete aperta
+  chiave(S(5) + 2.4, [XB + 1.0, 1.3, .3], -28, 16, ORIZ ? 3.6 : 3.3);
+  chiave(E(5) - .1, [XB + 1.0, 1.3, .3], -28, 16, ORIZ ? 3.6 : 3.3);
+  // 6 evacuazione: più largo, si vede la porta e il lato
+  chiave(S(6) + 1.4, [XB + 1.5, 1.2, 1.4], -12, 20, ORIZ ? 4.4 : 4.1);
+  chiave(E(6) - .1, [XB + 1.5, 1.2, 1.4], -12, 20, ORIZ ? 4.4 : 4.1);
+  // 7 l'estintore sul fuoco in coda
+  chiave(S(7) + MV, [XB - bus.L2 + .4, .9, 1.6], 38, 16, ORIZ ? 3.3 : 3.1);
+  // poi vicino a chi usa l'estintore: spina, base delle fiamme, leva
+  const bUso = bus.punto(-bus.L2 - .25, .65, 1.3);
+  chiave(parola(7, 'spina') - .3, [bUso.x, bUso.y, bUso.z], 66, 12, ORIZ ? 1.55 : 1.45);
+  chiave(E(7) - .1, [bUso.x, bUso.y, bUso.z], 66, 12, ORIZ ? 1.55 : 1.45);
+  // 8 camion
+  chiave(S(8) + 2.6, [XC - .2, 1.3, 1.0], -22, 14, ORIZ ? 4.6 : 4.3);
+  chiave(E(8) - .1, [XC - .2, 1.3, 1.0], -22, 14, ORIZ ? 4.6 : 4.3);
+  // 9 elettrica: giro, la carrozzeria si solleva e mostra le celle
+  chiave(S(9) + 2.4, [XE, .9, 0], 24, 26, ORIZ ? 3.0 : 2.8);
+  chiave(E(9) - .1, [XE, .9, 0], 24, 26, ORIZ ? 3.0 : 2.8);
+  // 10 vento alle spalle: dall'alto
+  chiave(S(10) + MV, [XE + 1.0, .5, 2.0], 0, 48, ORIZ ? 3.8 : 3.6);
+  chiave(E(10) - .1, [XE + 1.0, .5, 2.0], 0, 48, ORIZ ? 3.8 : 3.6);
+  // 11 GPL e metano: zoom sul serbatoio dal baule aperto
+  chiave(S(11) + 2.2, [XG - 1.7, .8, 0], 70, 48, ORIZ ? 1.9 : 1.8);
+  chiave(E(11) - .1, [XG - 1.7, .8, 0], 70, 48, ORIZ ? 1.9 : 1.8);
+  // 12 chiusura: tutta la fila dall'alto
+  chiave(S(12) + 2.2, [XC - 1, .8, 0], 0, 34, ORIZ ? 11 : 13);
+  chiave(TOTAL, [XC - 1, .8, 0], 0, 34, ORIZ ? 11 : 13);
+  const cam = M3.telecamera(camera, K, {});
+
+  /* ================================================================ SCHEDE */
+  const SCH = [];
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore });
+  const vs = (dx, dy) => ORIZ ? { dx: dx * 1.4, dy: dy * .7 } : { dx, dy };
+  scheda('frecce', 'Quattro frecce', 'E MOTORE SPENTO', () => autoA.punto(-2.3, .62, .86), vs(-160, -230), parola(1, 'frecce') - .2, parola(1, 'lontano') - .1, '#f59e0b');
+  scheda('lontano', 'Tutti fuori', 'LONTANO DAL TRAFFICO', () => passeggeroA.position.clone().add(new THREE.Vector3(0, 1.5, 0)), vs(150, -200), parola(1, 'lontano'), parola(1, 'chiama') - .25);
+  scheda('112a', 'Chiama il 112', 'NUMERO UNICO DI EMERGENZA', null, null, parola(1, 'chiama') - .1, E(1) - .2, '#ef4136');
+  scheda('fessura', 'Cofano appena sollevato', "L'ARIA RAVVIVA LE FIAMME", () => autoA.punto(2.2, .9, 0), vs(-160, -240), parola(2, 'sollevalo') - .2, E(2) - .4);
+  scheda('scintilla', 'Non accendere niente', 'I VAPORI PRENDONO FUOCO', () => new THREE.Vector3(XA + .8, .05, 1.2), vs(170, -260), parola(3, 'accendere') - .2, E(3) - .4, '#ef4136');
+  scheda('fissato', 'Estintore fissato', 'NIENTE OGGETTI LIBERI', () => new THREE.Vector3(XA - 1.75, 1.0, .1), vs(-140, -250), parola(4, 'fissalo') - .2, E(4) - .4);
+  scheda('dovebus', "Dov'è l'estintore", 'GUARDALO QUANDO SALI', () => posBus0.clone().add(new THREE.Vector3(0, .35, 0)), vs(150, -260), parola(5, 'guarda') - .1, parola(5, 'uscite') - .1);
+  scheda('uscite', 'Uscite di emergenza', 'E MARTELLETTO PER IL VETRO', () => bus.punto(bus.L2 - 2.7, 1.95, bus.Wb / 2 - .1), vs(-150, -250), parola(5, 'uscite'), E(5) - .4, '#15803d');
+  scheda('fuori', 'Prima fate scendere tutti', 'POI SI PENSA AL FUOCO', null, null, parola(6, 'scendere') - .1, E(6) - .3, '#15803d');
+  scheda('passi', 'Spina, base, leva', 'GETTI BREVI', () => estBus.testa(), vs(-160, -240), parola(7, 'spina') - .1, parola(7, 'cala') - .2);
+  scheda('scendi', 'Non si spegne? Lascia perdere', 'ALLONTANATI CON GLI ALTRI', () => estBus.testa(), vs(-160, -240), parola(7, 'cala') - .1, E(7) - .3, '#ef4136');
+  scheda('panno', 'Pannello arancione', 'MERCI PERICOLOSE', () => tir.punto(-.75, 1.85, 1.02), vs(140, -240), parola(8, 'arancione') - .3, parola(8, 'fuoco') - .2, '#f59e0b');
+  scheda('viatir', 'Non avvicinarti', 'ALLONTANATI E CHIAMA IL 112', () => tir.punto(-2.4, 1.2, .9), vs(160, -260), parola(8, 'avvicinarti') - .2, E(8) - .3, '#ef4136');
+  scheda('litio', 'Batteria al litio', 'PUÒ RIACCENDERSI ORE DOPO', () => autoE.punto(0, .45, .8), vs(-160, -260), parola(9, 'litio') - .2, E(9) - .4, '#ef4136');
+  scheda('ventosp', 'Vento alle spalle', "DI' CHE È UN'AUTO ELETTRICA", () => guidatoreE.position.clone().add(new THREE.Vector3(0, 1.5, 0)), vs(150, -230), parola(10, 'vento') - .1, E(10) - .3);
+  scheda('valvola', 'Valvola di sicurezza', 'SERBATOIO GPL O METANO', () => autoG.punto(-1.65, .72, 0), vs(-150, -250), parola(11, 'valvole') - .2, parola(11, 'fiamme') - .1);
+  scheda('viag', 'Non provare a spegnere', 'ALLONTANATI E CHIAMA IL 112', () => autoG.punto(-1.3, 1.2, 0), vs(-150, -250), parola(11, 'fiamme'), E(11) - .3, '#ef4136');
+  scheda('fine', 'Protezione Civile', 'GRUPPO COMUNALE · GENZANO DI ROMA', null, null, S(12) + 2.4, TOTAL + 1);
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  const fonte = document.getElementById('fonte');
+  fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+  const _v = new THREE.Vector3();
+  const segui = (gr, a, b, u) => { gr.position.lerpVectors(a, b, u); };
+  const guarda = (gr, a, b) => { gr.rotation.y = Math.atan2(b.x - a.x, b.z - a.z); };
+
+  /* ================================================================ ANIMAZIONE */
+  function anima(t) {
+    const k = sceneA(t);
+    // --- auto a benzina: frecce, persone che scendono, cofano, getto
+    autoA.frecce(t, t > parola(1, 'frecce') - .2 && t < E(4));
+    const fumoCof = fin(t, S(0) + 9, E(3), .8, 1.0);
+    const accesoA = fin(t, S(1) + .6, E(2) + .5, .8, 1.0) * mix(1, .25, ease.morbida(prog(t, parola(2, 'spruzza'), 2.2)));
+    fuocoCofano.aggiorna(t, k <= 3 ? accesoA * .8 : 0, k <= 3 ? .5 * fumoCof : 0);
+    const apre = ease.morbida(prog(t, parola(2, 'sollevalo') - .1, .8)) * (1 - ease.morbida(prog(t, E(2) + .3, .6)));
+    autoA.cofano.rotation.z = .12 * apre;
+    // persone: dal posto in auto a 3 m dalla strada (lato +z, lontano dal traffico)
+    const scesi = ease.morbida(prog(t, parola(1, 'scendere') - .2, 2.2));
+    const pDa1 = autoA.punto(.0, 0, 1.2), pA1 = autoA.punto(-1.8, 0, 4.2), pDa2 = autoA.punto(-.9, 0, 1.2), pA2 = autoA.punto(-2.7, 0, 4.0);
+    segui(guidatoreA, pDa1, pA1, scesi); segui(passeggeroA, pDa2, pA2, scesi);
+    guidatoreA.visible = passeggeroA.visible = t > parola(1, 'scendere') - .3 && t < E(4);
+    // l'estintore accanto all'auto: il guidatore lo porta al cofano
+    const vaCof = ease.morbida(prog(t, S(2) + .2, 1.2));
+    estCofano.gruppo.position.copy(autoA.punto(mix(-1.8, 2.75, vaCof), 0, mix(4.0, 1.35, vaCof)));
+    estCofano.gruppo.visible = t > S(2) && t < E(2) + .5;
+    if (t > S(2) && t < E(2) + .5) { guidatoreA.position.copy(estCofano.gruppo.position).add(_v.set(.1, 0, .45)); guarda(guidatoreA, guidatoreA.position, autoA.punto(1.7, 0, 0)); }
+    else guidatoreA.rotation.y = 0;
+    const tSpruzzo = parola(2, 'spruzza') - .1;
+    const gC = fin(t, tSpruzzo, tSpruzzo + 2.6, .2, .3) * (t < E(2) + .5 ? 1 : 0);
+    estCofano.leva.rotation.z = mix(-0.22, 0.03, gC);
+    gettoCofano.aggiorna(t, gC, estCofano.punta(), autoA.punto(1.7, .84, .2).add(_v.set(0, 0, .12 * Math.sin(t * 3))), .2, 0);
+    // pozza e vapori
+    const pz = ease.morbida(prog(t, S(3) + .3, 1.6)) * (1 - prog(t, E(3) + .2, .6));
+    pozza.scale.setScalar(Math.max(pz, .001)); pozza.visible = pz > .01;
+    vapori.aggiorna(t, pz);
+    // baule aperto con l'estintore fissato
+    const bauleU = ease.morbida(prog(t, S(4) + .4, 1.2)) * (1 - ease.morbida(prog(t, E(4) + .2, .6)));
+    autoA.baule.rotation.z = -1.25 * bauleU;
+    estAuto.gruppo.visible = fascia.visible = t > S(4) - .2 && t < E(4) + 1;
+    // --- scuolabus: parete aperta, persone sedute, evacuazione, estintore usato
+    const ghost = ease.morbida(prog(t, S(5) + 2.2, 1.2));
+    bus.vicino.material.opacity = 1 - .9 * ghost; bus.vicino.material.depthWrite = ghost < .5;
+    const busFuoco = fin(t, S(6) + .4, E(7) + .5, 1.0, .8);
+    const tEsci = parola(6, 'scendere') - .2;
+    const porta = bus.punto(bus.L2 - .45, 0, bus.Wb / 2 + .4), fuori = bus.punto(bus.L2 + 1.2, 0, 4.2);
+    PASS.forEach((p, i) => {
+      const u = prog(t, tEsci + i * .55, 2.4);
+      const seduto = SEDILI[i];
+      if (u <= 0) { p.position.copy(seduto); p.scale.setScalar(.8); }
+      else if (u < .55) { segui(p, seduto, porta, ease.morbida(u / .55)); p.scale.setScalar(.8); }
+      else { segui(p, porta, fuori.clone().add(_v.set(-i * .55, 0, (i % 2) * .45)), ease.morbida((u - .55) / .45)); p.scale.setScalar(.8); }
+      p.visible = t > S(5) - .3 && t < E(7) + .3;
+    });
+    // l'autista resta al posto (non può intervenire)
+    autista.position.copy(bus.punto(bus.L2 - .9, .2, -.55)); autista.scale.setScalar(.8); autista.visible = PASS[0].visible;
+    // martelletto che si stacca e il vetro che si incrina (segnale)
+    const tMart = parola(6, 'martelletto') - .2;
+    const mU = fin(t, tMart, tMart + 2.2, .3, .6);
+    bus.martelli[0].position.z = bus.Wb / 2 - .12 + .25 * mU; bus.martelli[0].rotation.x = .6 * mU;
+    // estintore dal supporto alla coda del bus, poi il getto
+    const tSgancia = parola(7, 'sgancia') - .1;
+    const sp = ease.morbida(prog(t, tSgancia, 1.6));
+    estBus.gruppo.position.lerpVectors(posBus0, posBus1, sp); estBus.gruppo.rotation.y = mix(0, 2.6, sp);
+    estBus.gruppo.visible = t > S(5) - .5 && t < E(7) + .5;
+    estBus.spina.visible = t < parola(7, 'spina') + .6;
+    const soccorre = PASS[5];
+    // il passeggero tiene l'estintore: sollevato da terra, una mano sulla leva e una sulla manichetta
+    estBus.gruppo.position.y += .1 * sp;
+    // se il fuoco non cala: posa l'estintore e raggiunge gli altri
+    const tVia = parola(7, 'perdere') + .1, uVia = ease.morbida(prog(t, tVia, 2.2));
+    if (t > tSgancia) {
+      const posEst = estBus.gruppo.position.clone().add(_v.set(.2, 0, .3)); posEst.y = 0;
+      const posGr = fuori.clone().add(_v.set(-5 * .55, 0, .45)); posGr.y = 0;
+      soccorre.position.lerpVectors(posEst, posGr, uVia); soccorre.scale.setScalar(.85);
+      if (uVia > .02 && uVia < .98) guarda(soccorre, posEst, posGr); else guarda(soccorre, soccorre.position, bus.punto(-bus.L2, 0, 0));
+    }
+    if (uVia > 0) estBus.gruppo.position.y -= .1 * Math.min(1, uVia * 3);
+    const tiene = t > tSgancia + .2 && t < tVia && soccorre.visible && estBus.gruppo.visible;
+    braccia.forEach(m => { m.visible = tiene; });
+    if (tiene) {
+      soccorre.updateMatrixWorld(); estBus.gruppo.updateMatrixWorld();
+      braccio(braccia[0], soccorre.localToWorld(_sp.set(-.17, 1.02, .05)), estBus.mano());
+      const pn = estBus.punta(); braccio(braccia[1], soccorre.localToWorld(_sp.set(.17, 1.02, .05)), estBus.gruppo.localToWorld(new THREE.Vector3(0, 0, 0)).lerp(pn, .85));
+    }
+    const tLevaB = parola(7, 'leva') - .1;
+    const gB = fin(t, tLevaB, parola(7, 'cala') + .2, .2, .3);
+    estBus.leva.rotation.z = mix(-0.22, 0.03, gB);
+    const bersB = bus.punto(-bus.L2 - .25, .45, 0).add(_v.set(0, 0, .3 * Math.sin(t * 3)));
+    gettoBus.aggiorna(t, gB, estBus.punta(), bersB, .28, 0);
+    nubeBus.aggiorna(t, gB * .8, bus.punto(-bus.L2 - .5, .6, .6), .7);
+    const kBus = busFuoco * mix(1, .45, ease.morbida(prog(t, tLevaB + .3, 2.5)));
+    fuocoBus.aggiorna(t, k >= 6 && k <= 7 ? kBus : 0, k >= 6 && k <= 7 ? .5 : 0);
+    // --- camion: fuoco alle ruote posteriori, il camionista si allontana
+    const kT = fin(t, S(8) + 1.0, E(8) + .8, 1.0, .8) * (1 + .4 * ease.morbida(prog(t, parola(8, 'carico') - .2, 2)));
+    fuocoTir.aggiorna(t, k === 8 ? kT : 0, k === 8 ? .7 : 0);
+    const via = ease.morbida(prog(t, parola(8, 'allontanati') - .3, 2.6));
+    camionista.position.copy(tir.punto(mix(3.0, 6.5, via), 0, mix(1.6, 4.4, via))); guarda(camionista, tir.punto(3, 0, 1.6), tir.punto(6.5, 0, 4.4));
+    camionista.visible = k === 8;
+    viaTir.visible = k === 8 && t > parola(8, 'avvicinarti') - .2;
+    viaTir.children[0].material.opacity = .45 + .45 * Math.abs(Math.sin(t * 3));
+    // --- elettrica: carrozzeria che sale (vista esplosa), celle che si scaldano una dopo l'altra
+    const su = ease.morbida(prog(t, parola(9, 'batteria') - .3, 1.2)) * (1 - ease.morbida(prog(t, E(9) - .4, .8)));
+    autoE.carro.position.y = 1.15 * su;
+    const tCalda = parola(9, 'fuoco') - .5;
+    celle.forEach(c => {
+      const caldo = clamp(prog(t, tCalda + c.ordine * 1.4, .6)) * (t < E(10) + .5 ? 1 : 0);
+      c.m.material.color.setHex(caldo > .5 ? 0xef4444 : 0x3b82f6);
+      c.m.material.emissive.setRGB(caldo * .9, caldo * .25, 0);
+    });
+    const tGettoE = parola(9, 'estintore') - .3;
+    const gE = fin(t, tGettoE, tGettoE + 1.8, .2, .3) * (k === 9 ? 1 : 0);
+    gettoE.aggiorna(t, gE, autoE.punto(1.6, .7, 2.4), autoE.punto(.3, .35, .6), .3, 0);
+    const kE = clamp(prog(t, parola(9, 'riaccendersi') - .6, .8)) * (k >= 9 && k <= 10 ? 1 : 0) * (1 - .6 * gE);
+    fuocoE.aggiorna(t, kE * .9, k >= 9 && k <= 10 ? .6 * kE : 0);
+    // vento e persona che si allontana sopravento
+    const vU = ease.morbida(prog(t, S(10) + .3, 2.8));
+    guidatoreE.position.copy(autoE.punto(mix(1.6, 2.6, vU), 0, mix(2.4, 5.2, vU))); guidatoreE.visible = k >= 9 && k <= 10;
+    vento.forEach((f, i) => {
+      const s = (t * .35 + i / 3) % 1;
+      f.position.copy(autoE.punto(1.0 + (i - 1) * 1.1, .02, 6.4 - s * 2.4)); f.rotation.y = Math.PI / 2;
+      f.children[0].material.opacity = (k === 10 ? 1 : 0) * Math.sin(Math.PI * s) * .9; f.visible = k === 10;
+    });
+    // --- GPL: baule aperto, sfiato della valvola, fiamme che si avvicinano
+    const bG = ease.morbida(prog(t, S(11) + .2, 1.2));
+    autoG.baule.rotation.z = -1.3 * bG;
+    const kG = fin(t, parola(11, 'fiamme') - .2, E(11) + .5, .8, .6);
+    fuocoG.aggiorna(t, k === 11 ? kG * .8 : 0, k === 11 ? .4 : 0);
+    sfiato.aggiorna(t, k === 11 ? clamp(prog(t, parola(11, 'valvole'), .6)) * .9 : 0);
+    serb.visible = bG > .4;
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    cam.applica(t);
+    camera.near = .05; camera.far = 120; camera.updateProjectionMatrix();
+    anima(t);
+    vicino.disegna(scena, camera);
+    const k = sceneA(t), c = CONFIG.capitoloDi[k], sc = SC[k];
+    const primaDelCap = CONFIG.capitoloDi.indexOf(c);
+    IMP.aggiorna(stato, t, { passoHUD: c + (k === 0 ? 1 : (k === primaDelCap ? clamp((t - sc.inizio) / .4) : 1)), hud: CONFIG.hud[k], notaVisibile: true });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const s of SCH) {
+      let punto = null, vis = true, p = null;
+      if (s.punto) { p = M3.proietta(s.punto(), camera, { zona: L.zonaSchede, margine: L.margine }); punto = p.punto; vis = p.visibile; }
+      proiezioni[s.id] = p;
+      IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
+        inizio: s.inizio, fine: s.fine, visibile: vis,
+        centro: s.punto ? null : { x: W / 2, y: s.id === 'fine' ? (L.zona.alto + L.zona.basso) / 2 - (ORIZ ? 230 : 300) : (L.zona.alto + L.zona.basso) / 2 - (ORIZ ? 200 : 260) } });
+    }
+    const testo = k === SC.length - 1 ? CONFIG.fonte : '';
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.display = testo ? '' : 'none';
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(s => s.punto).map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine, proiezione: proiezioni[s.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  IMP.caricaFont().then(() => { scena.updateMatrixWorld(true); render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>

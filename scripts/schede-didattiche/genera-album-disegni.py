@@ -99,6 +99,7 @@ for alb in ALBUM:
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">&larr; Torna alle schede</a>
     <span class="scheda-titolo">{alb['titolo']}: album da colorare</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
     <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
   </div>
   <div class="no-print" style="max-width:21cm;margin:1.5rem auto 0;padding:0 1rem;">

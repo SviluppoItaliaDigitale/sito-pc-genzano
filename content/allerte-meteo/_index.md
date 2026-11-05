@@ -142,17 +142,7 @@ La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri mete
 
 Consulta la previsione del **Servizio Meteorologico dell'Aeronautica Militare** per Genzano di Roma. È una fonte istituzionale per le previsioni meteorologiche.
 
-{{< external-widget
-    src="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
-    title="Previsione meteo ufficiale per Genzano di Roma — Aeronautica Militare"
-    placeholderTitle="Previsione meteo — Aeronautica Militare"
-    placeholderDesc="Previsione ufficiale del <strong>Servizio Meteorologico dell'Aeronautica Militare</strong> per Genzano di Roma."
-    icon="bi-cloud-sun-fill"
-    btnLabel="Carica la previsione AM"
-    altUrl="https://www.meteoam.it/it/meteo-citta/genzano-di-roma"
-    altLabel="meteoam.it — Genzano di Roma"
-    fallbackText="Previsione meteo ufficiale per Genzano di Roma consultabile su meteoam.it (Aeronautica Militare)"
-    widgetId="meteo-aeronautica" >}}
+<p id="meteo-aeronautica"><a class="btn btn-outline-primary" href="https://www.meteoam.it/it/meteo-citta/genzano-di-roma" target="_blank" rel="noopener noreferrer"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Apri la previsione per Genzano di Roma su meteoam.it<span class="visually-hidden"> (si apre in una nuova finestra)</span></a></p>
 
 ## Come funziona il sistema di allertamento
 
@@ -217,7 +207,7 @@ L'allerta si basa su previsioni emesse in anticipo. Alcuni fenomeni localizzati 
 <details class="faq-item">
 <summary><strong>Come ricevo le notifiche?</strong></summary>
 
-Puoi seguire il canale Telegram del Gruppo: [@pcalfagenzano](https://t.me/pcalfagenzano). In caso di emergenze gravi può arrivare anche un messaggio dal sistema nazionale [IT-alert](https://www.it-alert.it/it/).
+Puoi seguire il canale Telegram del Gruppo: [@pcalfagenzano](https://t.me/pcalfagenzano). Per alcune emergenze gravi, che non sono le allerte meteo, può arrivare anche un messaggio dal sistema nazionale [IT-alert](https://www.it-alert.it/it/).
 
 Per sviluppatori e altri enti: lo stato di allerta è disponibile anche come [feed CAP](/allerta-cap.xml) (standard internazionale OASIS), riutilizzabile da app e aggregatori. Dettagli nella pagina [Open data](/open-data/).
 

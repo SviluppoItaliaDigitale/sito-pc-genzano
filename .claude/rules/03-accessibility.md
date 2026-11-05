@@ -312,6 +312,10 @@ Quando un giocatore sbaglia 2+ volte consecutive nello stesso scenario, mostrare
 
 Why: quando un bambino sbaglia ripetutamente sta perdendo il filo. Una pausa esplicativa lo rimette in carreggiata invece di lasciarlo accumulare errori e rinunciare.
 
+### 5. Giocabile col solo tocco sulla LIM (dall'01/11/2026)
+
+Ogni gioco si gioca sulla lavagna interattiva: solo tocco, niente mouse né tastiera, proiettore a 1024×768, browser fermo anche a Chrome 64. Il trascinamento ha sempre un'alternativa a tocco singolo (tocca e posa, frecce), marcata nel codice `alternativa-al-trascinamento`; i comandi misurano almeno 44 px; il JavaScript resta entro ECMAScript 2018. Regola completa e controlli: `.claude/rules/lim-scuole.md`.
+
 ### Pattern bonus: cascata di icone vettoriali
 
 Quando un gioco ha bisogno di icone, usa la **cascata di scelta** in ordine:
@@ -460,7 +464,7 @@ Da maggio 2026 (Punto 16 roadmap) ogni articolo del sito può avere una versione
 
 Questi principi descrivono effetti medi misurati in ricerca: si applicano con giudizio all'età e al materiale. In conflitto con una regola WCAG o con un'istruzione di sicurezza del DPC, vincono queste.
 
-**Illustrazioni didattiche — shortcode `illustrazione-udl`.** SVG statici in `static/formazione/illustrazioni-udl/` (1200×620, senza JavaScript né font esterni, `role="img"` con `<title>` e `<desc>` in italiano), inseriti con `{{</* illustrazione-udl src="/formazione/illustrazioni-udl/<nome>.svg" alt="…" caption="…" */>}}` (`src` e `alt` obbligatori, altrimenti la build si ferma). Criteri ed elenco in `docs/illustrazioni-cast-udl.md`.
+**Illustrazioni didattiche — shortcode `illustrazione-udl`.** SVG statici in `static/formazione/illustrazioni-udl/` (1200×620, senza JavaScript né font esterni, `role="img"` con `<title>` e `<desc>` in italiano), inseriti con `{{</* illustrazione-udl src="/formazione/illustrazioni-udl/<nome>.svg" alt="…" caption="…" */>}}` (`src` e `alt` obbligatori, altrimenti la build si ferma). Criteri ed elenco in `docs/illustrazioni-cast-udl.md`. Una figura può avere anche una **versione animata** che parte solo col pulsante «Guarda l'animazione» e si ferma con lo stesso pulsante (parametri `animazione` e `alt_animazione`, SVG generati da `scripts/genera-animazioni-esperimenti.py`; dettagli in rule 04a § «Shortcode `illustrazione-udl`»): mai avvio automatico, mai lampeggi, niente movimento con «Pausa animazioni» o movimento ridotto.
 
 🔴 **Illustrazioni fatte con strumenti esterni** (l'utente le fa preparare anche a ChatGPT): prima del commit (a) **Read** dell'immagine per vedere che cosa mostra davvero; (b) il gesto o la scena coincide con le indicazioni del DPC (`pc-didattica-reviewer` § 1, `pc-revisore-scientifico` per i fenomeni) — un disegno sbagliato insegna l'errore meglio di un testo sbagliato; (c) `alt`, `caption`, `<title>` e `<desc>` descrivono ciò che si vede, non ciò che si voleva disegnare; (d) **nessun riferimento all'IA** nel file: niente metadati, commenti o testi che citino lo strumento (CLAUDE.md § "Nessun riferimento all'IA"); (e) scritte dentro il `viewBox` e leggibili su telefono e su A4 (rule 09 § 15-ter); (f) nessun dato o luogo inventato presentato come reale.
 

@@ -105,6 +105,7 @@ def main():
         return r[i] if i is not None and i < len(r) else None
 
     data = [r for r in rows[1:] if col(r, "Numero") not in (None, "")]
+    data = gen.applica_correzioni(data, idx)
     date_exp = [d for d in (gen.parse_data_it(col(r, "Data Inizio")) for r in data) if d]
     if not date_exp:
         sys.exit("Nessuna data leggibile nell'export.")

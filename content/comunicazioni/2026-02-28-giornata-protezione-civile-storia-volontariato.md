@@ -21,7 +21,7 @@ La Protezione Civile, come la conosciamo oggi, non è nata improvvisamente. È i
 
 ### 1908 — Terremoto di Messina
 
-Il terremoto di Messina e Reggio Calabria (28 dicembre 1908), una delle più gravi catastrofi della storia italiana con oltre **80.000 vittime**, mise a nudo l'assenza di un sistema organizzato di soccorso nazionale. Fu il primo grande evento a cui il Regno rispose con un dispositivo nazionale straordinario, ma senza struttura permanente.
+Il terremoto di Messina e Reggio Calabria (28 dicembre 1908), una delle più gravi catastrofi della storia italiana con circa **80.000 vittime**, mise a nudo l'assenza di un sistema organizzato di soccorso nazionale. Fu il primo grande evento a cui il Regno rispose con un dispositivo nazionale straordinario, ma senza struttura permanente.
 
 ### 1966 — Alluvione di Firenze
 
@@ -33,7 +33,7 @@ Il terremoto del Friuli (6 maggio 1976, magnitudo 6.5) fu un evento cardinale. P
 
 ### 1980 — Terremoto dell'Irpinia
 
-Il terremoto del 23 novembre 1980 (magnitudo 6.9) segnò una svolta. **2.914 vittime**, difficoltà organizzative gravissime, ritardi nei soccorsi. L'allora Presidente della Repubblica **Sandro Pertini** denunciò in diretta televisiva le lentezze del sistema. Fu l'evento che portò all'istituzione formale della **Protezione Civile nazionale**.
+Il terremoto del 23 novembre 1980 (magnitudo 6.9) segnò una svolta. **2.734 vittime**, difficoltà organizzative gravissime, ritardi nei soccorsi. L'allora Presidente della Repubblica **Sandro Pertini** denunciò in diretta televisiva le lentezze del sistema. Fu l'evento che portò all'istituzione formale della **Protezione Civile nazionale**.
 
 ### 1982 — Giuseppe Zamberletti
 

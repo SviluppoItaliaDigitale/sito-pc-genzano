@@ -1,0 +1,39 @@
+{{- /*
+  Rimando al «Libro che si esplora» dalle pagine che il libro usa come fonte.
+  Cerca in data/libro_3d.yaml i capitoli che hanno fra le fonti questa pagina
+  (il percorso, senza l'ancora) e mostra un riquadro con il collegamento diretto
+  a ciascun capitolo (#capitolo-N). Sulle versioni facili (-facile) porta alla
+  versione in italiano semplice del libro. Nessun capitolo: nessun riquadro.
+  Incluso da rischi-prevenzione/single.html, _default/single.html e
+  _default/list.html; attivo solo nelle sezioni che il libro usa come fonte
+  (rischi-prevenzione, allerte-meteo): una fonte in un'altra sezione va
+  aggiunta alla lista qui sotto.
+*/ -}}
+{{- if in (slice "rischi-prevenzione" "allerte-meteo") .Section -}}
+{{- $base := site.BaseURL | urls.Parse -}}
+{{- $p := strings.TrimPrefix (strings.TrimSuffix "/" $base.Path) .RelPermalink -}}
+{{- $facile := strings.HasSuffix $p "-facile/" -}}
+{{- $p = replaceRE `-facile/$` "/" $p -}}
+{{- $trovati := slice -}}
+{{- range $i, $c := site.Data.libro_3d.capitoli -}}
+  {{- $ok := false -}}
+  {{- range $c.fonti -}}{{- if eq (index (split .url "#") 0) $p -}}{{- $ok = true -}}{{- end -}}{{- end -}}
+  {{- if $ok -}}
+    {{- $t := $c -}}
+    {{- if and $facile site.Data.libro_3d_facile -}}{{- $t = index site.Data.libro_3d_facile.capitoli $i -}}{{- end -}}
+    {{- $trovati = $trovati | append (dict "n" (add $i 1) "titolo" $t.titolo "domanda" $t.domanda) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $trovati -}}
+{{- $libro := cond (and $facile site.Data.libro_3d_facile) "formazione/libro-che-si-esplora-facile/" "formazione/libro-che-si-esplora/" -}}
+<aside class="libro-rimando d-print-none" aria-labelledby="libro-rimando-titolo">
+  <h2 class="h5" id="libro-rimando-titolo"><i class="bi bi-book me-2" aria-hidden="true"></i>{{ if $facile }}Prova nel libro{{ else }}Mettiti alla prova nel libro{{ end }}</h2>
+  <p>{{ if $facile }}Nel libro scegli una risposta. Poi guardi se è giusta.{{ else }}Nel «Libro che si esplora» fai la tua previsione, provi sul modellino in 3D e alzi il lembo per la risposta.{{ end }}</p>
+  <ul>
+  {{- range . }}
+    <li><a href="{{ $libro | relURL }}#capitolo-{{ .n }}">Capitolo {{ .n }}: {{ .titolo }}</a> — {{ .domanda }}</li>
+  {{- end }}
+  </ul>
+</aside>
+{{- end -}}
+{{- end -}}

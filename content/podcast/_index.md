@@ -1,6 +1,6 @@
 ---
 title: "Podcast — Voci dalla Protezione Civile di Genzano di Roma"
-description: "Podcast del Gruppo PC di Genzano di Roma: rischi locali, esercitazioni, interviste a esperti. Ascoltabile su Spotify, Apple Podcasts e via feed RSS."
+description: "Il podcast del Gruppo è sospeso: stiamo rifacendo le puntate, che torneranno solo dopo la verifica sulle fonti ufficiali, con la trascrizione."
 type: "podcast"
 layout: "list"
 outputs:
@@ -10,6 +10,31 @@ sitemap:
   priority: 0.6
   changefreq: monthly
 tts: false
+# Podcast sospeso dal 5 novembre 2026: la puntata su IT-alert conteneva
+# informazioni non corrette e le puntate sono state tolte tutte, in attesa
+# di rifarle e verificarle. `sospeso: true` nasconde iscrizione ed elenco
+# (themes/flavour-pcgenzano/layouts/podcast/list.html); gli indirizzi delle
+# puntate rimandano qui.
+sospeso: true
+aliases:
+  - /podcast/2026-03-21-rischio-sismico/
+  - /podcast/2026-03-25-allerta-meteo/
+  - /podcast/2026-03-30-nue-112/
+  - /podcast/2026-04-03-it-alert/
+  - /podcast/2026-04-08-rischio-idrogeologico/
+  - /podcast/2026-04-12-piano-familiare/
+  - /podcast/2026-04-17-kit-emergenza/
+  - /podcast/2026-04-21-aree-emergenza/
+  - /podcast/2026-04-26-dopo-emergenza/
+  - /podcast/2026-04-30-blackout/
+  - /podcast/2026-05-05-vento-forte/
+  - /podcast/2026-05-09-temporali-intensi/
+  - /podcast/2026-05-14-ondate-di-calore/
+  - /podcast/2026-05-18-rischio-incendio/
+  - /podcast/2026-05-23-rischio-vulcanico/
+  - /podcast/2026-05-28-animali-emergenza/
+  - /podcast/2026-05-30-blackout/
+  - /podcast/2026-05-30-vento-forte/
 params:
   # Metadati del canale per il feed RSS iTunes-compatible.
   # La copertina del canale è in static/images/podcast-cover.png
@@ -29,18 +54,15 @@ params:
   podcast_apple: ""
 ---
 
-<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
+**Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo Comunale Volontari. **Dal 5 novembre 2026 le puntate sono sospese.**
 
-**Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo Comunale Volontari. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa: i rischi del nostro territorio, il racconto delle esercitazioni, le interviste ai volontari e agli esperti.
+Riascoltando la puntata su IT-alert vi abbiamo trovato informazioni non corrette. Per sicurezza abbiamo tolto dal sito tutte le puntate: le rifaremo, e ognuna tornerà solo dopo la verifica sulle fonti ufficiali, con la trascrizione completa in pagina.
 
-Si ascolta gratis, senza account. Puoi seguirlo dalla tua app preferita iscrivendoti al **feed RSS** qui sotto, oppure su Spotify e Apple Podcasts non appena il podcast sarà distribuito.
+## Intanto puoi ascoltare
 
-Ogni episodio ha la **trascrizione completa** in pagina: per chi preferisce leggere, per chi non sente bene, e per ritrovare al volo un'informazione.
+- [Articoli da ascoltare](/articoli-da-ascoltare/): ogni pagina del sito si può ascoltare ad alta voce dal browser, senza app.
+- [Podcast del Dipartimento della Protezione Civile](/audio-e-podcast/#podcast-del-sistema-nazionale-di-protezione-civile): le produzioni nazionali sul clima e sulla memoria delle emergenze.
 
-## Altri materiali multimediali
+## Altri materiali
 
-Oltre al podcast, sul sito trovi **infografiche, presentazioni e cover audio** per ogni tema di Protezione Civile. Tutti pubblicati con licenza CC BY-NC-SA 4.0, scaricabili per scuola, formazione e divulgazione.
-
-[**Vai a tutti i materiali pronti →**](/risorse-pronte/)
-
-<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->
+- [Materiali pronti da scaricare](/risorse-pronte/): video, infografiche e presentazioni divisi per tema.

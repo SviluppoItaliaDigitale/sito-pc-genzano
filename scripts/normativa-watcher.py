@@ -251,8 +251,22 @@ class Cliente:
 
     def get(self, url, referer=None):
         req = urllib.request.Request(url, headers={'User-Agent': UA, **({'Referer': referer} if referer else {})})
-        with self.opener.open(req, timeout=TIMEOUT) as r:
-            return decodifica(r.read(), r.headers.get_content_charset())
+        # Un 429 (troppe richieste dallo stesso indirizzo, tipico dei runner
+        # condivisi) si riprova con attese crescenti, rispettando Retry-After
+        # fino a 90 secondi; ogni altro errore risale subito.
+        for attesa in (15, 45, None):
+            try:
+                with self.opener.open(req, timeout=TIMEOUT) as r:
+                    return decodifica(r.read(), r.headers.get_content_charset())
+            except urllib.error.HTTPError as e:
+                if e.code != 429 or attesa is None:
+                    raise
+                try:
+                    pausa = min(int(e.headers.get('Retry-After', attesa)), 90)
+                except (TypeError, ValueError):
+                    pausa = attesa
+                print(f'  [info] 429 da {urllib.parse.urlparse(url).netloc}: riprovo fra {pausa} s', file=sys.stderr)
+                time.sleep(max(pausa, attesa))
 
     def post(self, url, data, referer=None):
         body = urllib.parse.urlencode(data).encode('utf-8')
@@ -740,7 +754,12 @@ def _eu_space_feed(cli, anni):
                 d = parsedate_to_datetime((it.findtext('pubDate') or '').strip()).astimezone(ROMA).date()
             except (TypeError, ValueError):
                 pass
-            voci.append(((it.findtext('title') or '').strip(), (it.findtext('link') or '').strip(), d,
+            link = (it.findtext('link') or '').strip()
+            # Dal 29/10/2026 il feed porta anche eventi e notizie del portale: solo
+            # le pagine «image-of-the-day» hanno il riquadro dei dettagli.
+            if '/image-of-the-day/' not in link:
+                continue
+            voci.append(((it.findtext('title') or '').strip(), link, d,
                          solo_testo(it.findtext('description') or '')))
     if not voci:
         raise RuntimeError('feed RSS senza voci: struttura cambiata?')

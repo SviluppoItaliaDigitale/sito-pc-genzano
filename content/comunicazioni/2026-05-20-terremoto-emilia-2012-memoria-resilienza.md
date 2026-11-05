@@ -13,11 +13,11 @@ allegati: []
 draft: false
 ---
 
-Alle **4:03 del mattino del 20 maggio 2012**, una scossa di magnitudo 5.9 colpì la Pianura Padana tra le province di Modena, Ferrara, Bologna, Rovigo, Mantova, Reggio Emilia. Nove giorni dopo, il **29 maggio**, una seconda scossa di magnitudo 5.8 colpì le stesse aree e ne allargò l'impatto. Furono **27 le vittime**, migliaia i feriti, decine di migliaia le persone sfollate. Il patrimonio artistico, la produzione agroalimentare, il tessuto sociale emiliani furono pesantemente colpiti.
+Alle **4:03 del mattino del 20 maggio 2012**, una scossa di magnitudo 5.9 colpì la Pianura Padana tra le province di Modena, Ferrara, Bologna, Rovigo, Mantova, Reggio Emilia. Nove giorni dopo, il **29 maggio**, una seconda scossa di magnitudo 5.8 colpì le stesse aree e ne allargò l'impatto. Furono **28 le vittime** in tutto, secondo il Dipartimento della Protezione Civile, migliaia i feriti, decine di migliaia le persone sfollate. Il patrimonio artistico, la produzione agroalimentare, il tessuto sociale emiliani furono pesantemente colpiti.
 
 {{< foto src="/images/2026-evento-emilia-2012-mirandola.webp"
          alt="ShakeMap INGV del terremoto dell'Emilia del 20 maggio 2012, magnitudo 5.8 a 7 km nord-ovest di Finale Emilia"
-         caption="Mappa di intensità macrosismica della prima scossa del 20 maggio 2012 (M 5.8 alle 02:03 UTC, ipocentro 9.5 km, ID INGV 772691). L'area gialla e arancione tra Modena e Ferrara mostra l'intensità VI-VIII MCS che colpì la pianura padana. La seconda scossa del 29 maggio allargò l'area di danno. Bilancio complessivo: 27 morti, 14.000 sfollati, fragilità sismica dei capannoni industriali diventata tema nazionale. Mappa: INGV, basata su Faenza e Michelini (2010, 2011)." >}}
+         caption="Mappa di intensità macrosismica della prima scossa del 20 maggio 2012 (M 5.8 alle 02:03 UTC, ipocentro 9.5 km, ID INGV 772691). L'area gialla e arancione tra Modena e Ferrara mostra l'intensità VI-VIII MCS che colpì la pianura padana. La seconda scossa del 29 maggio allargò l'area di danno. Bilancio complessivo: 28 morti, decine di migliaia di sfollati, fragilità sismica dei capannoni industriali diventata tema nazionale. Mappa: INGV, basata su Faenza e Michelini (2010, 2011)." >}}
 
 Quattordici anni dopo, il **ricordo diventa prevenzione**: cosa abbiamo imparato da quel terremoto.
 

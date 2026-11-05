@@ -42,13 +42,14 @@ I documenti ufficiali sono pubblicati da **Italian Resuscitation Council (IRC)**
 | 3 | Sistemi che salvano vite | — | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/03/CAPITOLO_3-SISTEMI-CHE-SALVANO-VITE.pdf) |
 | 4 | Basic Life Support (adulto) | R. Cusmà Piccione, R. Giudici | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_4-BLS-ADULTO.pdf) |
 | 5 | Advanced Life Support (ALS) per adulti | G. Acquistapace, A. Boccuzzi, R. Cusmà Piccione, A. Demichelis | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/07/CAPITOLO_5-ALS.pdf) |
+| 6 | Circostanze speciali nella rianimazione | P. Isoni, F. Verginella | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/10/CAPITOLO_6-CIRCOSTANZE-SPECIALI.pdf) |
 | 8 | Supporto vitale del neonato | D. Silvagni | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_8-NLS_13.04.2026.pdf) |
 | 9 | Supporto alle funzioni vitali in età pediatrica | M. Tumolo | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_9-BLS_PEDIATRICO_02.04.2026.pdf) |
 | 10 | La formazione alla rianimazione | G. Acquistapace, G. Arlotta, S. Di Marco, G. Piras, A. Scapigliati | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/10/CAPITOLO_10-LA-FORMAZIONE-ALLA-RIANIMAZIONE.2026.pdf) |
 | 11 | Etica nella rianimazione | C. Sorlini | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_11-ETICA.pdf) |
 | 12 | Primo soccorso | A. Boccuzzi, F. Palmisano | [Scarica (PDF)](https://www.ircouncil.it/wp-content/uploads/2026/04/CAPITOLO_12-PRIMO-SOCCORSO_15.04.2026.pdf) |
 
-I capitoli 1 (Sommario esecutivo), 6 (Arresto cardiaco in circostanze speciali) e 7 (Terapia post rianimazione) sono in corso di rilascio sul sito IRC.
+I capitoli 1 (Sommario esecutivo) e 7 (Terapia post rianimazione) sono in corso di rilascio sul sito IRC.
 
 ## Formazione sul territorio
 

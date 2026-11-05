@@ -1,6 +1,6 @@
 ---
 title: "Pneumatici invernali e catene: le regole di novembre"
-date: 2026-11-03
+date: 2026-11-03T00:01:00+02:00
 draft: false
 description: "Dal 15 novembre devi avere pneumatici invernali o catene in auto. Ecco cosa fare."
 badge: "Prevenzione"
@@ -19,42 +19,42 @@ build:
   publishResources: true
 ---
 
-Dal **15 novembre** scatta un obbligo per chi guida in Italia. Devi avere pneumatici invernali oppure catene in auto. L'obbligo dura fino al **15 aprile**.
+Dal **15 novembre**, su molte strade, c'è un obbligo per chi guida. Devi avere pneumatici invernali oppure catene in auto. L'obbligo dura fino al **15 aprile**. Le strade con l'obbligo hanno un **cartello**. L'obbligo vale anche se non nevica.
 
 ## Cosa devi fare
 
 Hai 2 scelte:
 
-- montare i **pneumatici invernali** prima del 15 novembre
+- montare i **pneumatici invernali** entro il 15 novembre
 - oppure tenere le **catene da neve** in auto
 
-Se non rispetti l'obbligo, rischi una multa. La responsabilità è tua come conducente.
+Se non rispetti l'obbligo, rischi una multa. E non puoi continuare il viaggio finché non hai le catene o le gomme giuste.
 
 ## Cosa sono i pneumatici invernali
 
-I pneumatici invernali hanno una scritta sul fianco: **M+S**. Significa "fango e neve" in inglese. Alcuni hanno anche un **simbolo di fiocco di neve su una montagna**. Questi sono i migliori.
+I pneumatici invernali hanno una scritta sul fianco: **M+S**. Significa "fango e neve" in inglese.
 
 I pneumatici invernali tengono meglio sulla neve e sul ghiaccio. La gomma è più morbida al freddo.
 
-Puoi montarli dall'**1 novembre**. Devi montarli entro il **15 novembre**.
+Se cambi le gomme per l'inverno, monta quelle invernali entro il **15 novembre**. Tienile fino al **15 aprile**.
 
 ## Cosa sono le catene da neve
 
 Le catene da neve sono anelli di metallo. Si mettono sopra ai pneumatici quando nevica. Le devi montare **prima di partire**, non in strada.
 
-Prova a montarle **almeno 1 volta** prima dell'inverno. Porta con te un paio di guanti.
+Prova a montarle **almeno 1 volta** prima dell'inverno. Porta con te un paio di guanti e una torcia.
 
-Le catene si mettono solo sui pneumatici dell'**asse motore** (le ruote che spingono l'auto).
+Le catene si mettono sulle **ruote motrici**. Sono le ruote che spingono l'auto. Quali sono? Lo dice il libretto dell'auto.
 
-Toglile appena la neve finisce. Le catene rovinano il pneumatico e la strada.
+Con le catene vai piano: al massimo 50 chilometri all'ora. Toglile appena la neve finisce. Le catene rovinano il pneumatico e la strada.
 
 ## Un'altra scelta: le calze da neve
 
-Le calze da neve sono di tessuto. Si mettono sopra ai pneumatici. Sono più facili da montare rispetto alle catene. Alcune calze sono omologate in Italia. Controlla prima di comprarle.
+Le calze da neve sono di tessuto. Si mettono sopra ai pneumatici. Sono più facili da montare rispetto alle catene. Valgono come le catene solo se sulla confezione c'è scritto **UNI EN 16662-1**. Controlla prima di comprarle.
 
 ## I pneumatici 4 stagioni
 
-I pneumatici "4 stagioni" o "all-season" vanno bene tutto l'anno. Devono avere il simbolo del **fiocco di neve su montagna** sul fianco. Sono adeguati per Genzano di Roma e la maggior parte del Lazio.
+I pneumatici "4 stagioni" o "all-season" vanno bene tutto l'anno. Per l'obbligo invernale devono avere la scritta **M+S** sul fianco.
 
 ## Come guidare in sicurezza con neve e ghiaccio
 
@@ -65,8 +65,7 @@ Anche con i pneumatici invernali devi fare attenzione:
 - Non frenare di colpo.
 - Non sterzare di colpo.
 - Accendi i **fari bassi**.
-- Fai attenzione ai **ponti**: gelano prima della strada normale.
-- Fai attenzione alle **zone d'ombra**: lì c'è più ghiaccio.
+- Fai attenzione ai **ponti** e alle **zone d'ombra**. Lì può esserci ghiaccio anche se il resto della strada è asciutto.
 
 ## Se nevica a Genzano
 
@@ -92,15 +91,16 @@ Se resti bloccato per neve o ghiaccio:
 
 Controlla le gomme prima dell'inverno:
 
-- Il **battistrada** deve essere profondo almeno **3-4 mm** in inverno. Per legge il minimo è 1,6 mm, ma è poco.
+- Per legge il **battistrada** deve essere profondo almeno **1,6 mm**. La Polizia di Stato consiglia di cambiare la gomma quando arriva a 2-3 mm.
 - Controlla la **pressione** quando le gomme sono fredde.
-- Se hai gomme con più di **6 anni**, cambiale anche se sembrano buone.
+- Se le gomme hanno più di **6 anni**, falle controllare da un gommista, anche se sembrano buone. Alcune case che fanno auto dicono di cambiarle.
 
-La data di produzione è scritta sul fianco della gomma: cerca le lettere **DOT** seguite da 4 cifre.
+La data di produzione è scritta sul fianco della gomma: cerca le lettere **DOT** seguite da 4 cifre. Le cifre dicono la settimana e l'anno.
 
 ## Per saperne di più
 
-- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
+- [Neve e catene: preparati a casa](/comunicazioni/2026-11-04-neve-catene-video-facile/), un video di 1 minuto
+- [Neve e gelo: la casa e l'auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
 - [Come chiamare il 112 in emergenza](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza chiama il **112**.

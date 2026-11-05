@@ -96,6 +96,11 @@ def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
         'href="../assets/scheda-print.css"',
         'href="../../assets/scheda-print.css"',
     )
+    # Zoom della pagina dei libri pop-up (01/11/2026): lo script viaggia nello ZIP.
+    html = html.replace(
+        '/formazione/schede-stampabili/assets/zoom-pagina.js',
+        '../../assets/zoom-pagina.js',
+    )
     # Font self-hosted richiamati da una url() dentro <style>: l'alfabetiere usa
     # il corsivo scolastico. Senza questa riscrittura lo ZIP aperto offline
     # cadrebbe sul corsivo di sistema, che ha le lettere legate in modo diverso.
@@ -424,6 +429,9 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
             (tmp / "assets" / "scheda-print.css").write_text(css_testo, encoding="utf-8")
         else:
             print(f"  ⚠ CSS non trovato: {css_src}", file=sys.stderr)
+        zoom_src = SCHEDE_BASE / "assets" / "zoom-pagina.js"
+        if zoom_src.exists():
+            shutil.copy(zoom_src, tmp / "assets" / "zoom-pagina.js")
         # La banda affiliazioni (Quality Label ESC + E10435833, Reg. UE 2021/888)
         # deve stamparsi anche dal pacchetto offline: l'immagine viaggia nello ZIP
         # e i riferimenti assoluti vengono riscritti relativi (vedi patch sotto).

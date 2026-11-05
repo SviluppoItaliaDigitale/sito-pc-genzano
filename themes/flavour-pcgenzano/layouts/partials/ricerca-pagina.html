@@ -1,0 +1,17 @@
+{{- /* Attributi Pagefind del <main>: peso delle pagine operative ed etichetta
+       del tipo di risultato. Regole in data/ricerca.json (audit esterno
+       31/10/2026, A12). Restituisce una stringa di attributi già sicura. */ -}}
+{{- $r := site.Data.ricerca -}}
+{{- $url := .RelPermalink -}}
+{{- $base := "/" | relURL -}}
+{{- if ne $base "/" }}{{ $url = printf "/%s" (strings.TrimPrefix $base $url) }}{{ end -}}
+{{- $peso := "" -}}
+{{- range $r.operative }}{{ if hasPrefix $url .percorso }}{{ $peso = printf "%v" $r.peso_operative }}{{ end }}{{ end -}}
+{{- $tipo := "" -}}
+{{- if $peso }}{{ $tipo = "Informazioni operative" }}{{ end -}}
+{{- if not $tipo }}{{ range $r.tipi }}{{ if and (not $tipo) (hasPrefix $url .percorso) }}{{ $tipo = .tipo }}{{ end }}{{ end }}{{ end -}}
+{{- if strings.HasSuffix $url "-facile/" }}{{ $tipo = cond (eq $tipo "") "Italiano semplice" (printf "%s · italiano semplice" $tipo) }}{{ end -}}
+{{- $attr := "" -}}
+{{- with $peso }}{{ $attr = printf " data-pagefind-weight=%q" . }}{{ end -}}
+{{- with $tipo }}{{ $attr = printf "%s data-pagefind-meta=%q" $attr (printf "tipo:%s" .) }}{{ end -}}
+{{- return $attr -}}

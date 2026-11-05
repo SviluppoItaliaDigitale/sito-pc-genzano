@@ -48,6 +48,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  /* bersaglio comodo col dito sulla lavagna interattiva (LIM) */
+  min-height: 44px;
 }
 .scheda-toolbar a:hover,
 .scheda-toolbar a:focus {
@@ -709,4 +711,13 @@ table.scheda-tabella th {
     background: transparent;
     border-width: 1px;
   }
+}
+
+/* «Pronto per la LIM» nella barra (01/11/2026, regola lim-scuole.md delle regole del progetto;
+   lo scrive scripts/segno-lim-statiche.py). La barra non si stampa. */
+.scheda-toolbar .scheda-lim {
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  padding: 0 0.9rem;
+  font-weight: 600;
 }

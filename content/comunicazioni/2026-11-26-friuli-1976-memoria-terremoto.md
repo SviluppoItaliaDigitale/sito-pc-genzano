@@ -13,14 +13,14 @@ allegati: []
 draft: false
 ---
 
-Nel **1976** il **Friuli** fu colpito da una sequenza sismica devastante che provocò **989 morti** e costrinse **157.000 persone** a lasciare le proprie case. La **ricostruzione** che seguì è oggi considerata uno dei modelli più riusciti di recupero post-sismico in Europa, con lezioni ancora valide per la Protezione Civile italiana.
+Nel **1976** il **Friuli** fu colpito da una sequenza sismica devastante che provocò **965 morti**, secondo il Dipartimento della Protezione Civile, e lasciò senza casa **oltre 45.000 persone**. La **ricostruzione** che seguì è oggi considerata uno dei modelli più riusciti di recupero post-sismico in Europa, con lezioni ancora valide per la Protezione Civile italiana.
 
 ## Gli eventi
 
 ### 6 maggio 1976 — "Orcolat"
 - **ore 21:00**: scossa di **magnitudo 6.4**;
 - **epicentro** nelle Alpi Carniche;
-- **970 vittime**;
+- **965 vittime** in tutta la sequenza;
 - **interi paesi** distrutti (Gemona, Venzone, Osoppo);
 - **80.000** edifici danneggiati.
 

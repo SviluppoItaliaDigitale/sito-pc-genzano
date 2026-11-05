@@ -11,7 +11,9 @@ e verifica le cose che un lettore nota per prime:
     - pagina senza <title> o con titolo vuoto;
     - pagina senza <h1>;
     - <img> senza attributo alt (WCAG 1.1.1: alt="" va bene per le immagini
-      decorative, l'attributo assente no).
+      decorative, l'attributo assente no);
+    - lo stesso id su due elementi (dal 31/10/2026: l'indice di pagina copiava
+      gli <span id> dei titoli del catalogo dei giochi, audit esterno A11).
   Avvisi (non bloccano):
     - più di un <h1> nella stessa pagina (fuori dalle eccezioni dichiarate);
     - due pagine con lo stesso titolo (paginazioni escluse).
@@ -50,6 +52,7 @@ class Lettore(HTMLParser):
         self.titolo: list[str] = []
         self.in_title = False
         self.refresh = False
+        self.id_visti: dict[str, int] = defaultdict(int)
 
     def handle_starttag(self, tag, attrs):
         a = {k.lower(): v for k, v in attrs}
@@ -58,6 +61,8 @@ class Lettore(HTMLParser):
             return
         if self.dentro_script:
             return
+        if a.get("id"):
+            self.id_visti[a["id"]] += 1
         if tag == "h1":
             self.h1 += 1
         elif tag == "img" and "alt" not in a:
@@ -112,6 +117,9 @@ def main() -> int:
             avvisi.append(f"{rel}: {p.h1} titoli principali (<h1>), ne serve uno")
         for src in p.img_senza_alt:
             errori.append(f"{rel}: immagine senza testo alternativo (alt): {src[:90]}")
+        doppi = sorted(k for k, n in p.id_visti.items() if n > 1)
+        if doppi:
+            errori.append(f"{rel}: id ripetuti ({', '.join(doppi[:6])}): un collegamento #id deve avere una sola destinazione")
     for t, rels in titoli.items():
         if len(rels) > 1:
             avvisi.append(f"stesso titolo «{t[:80]}» su {len(rels)} pagine: " + ", ".join(rels[:4]))

@@ -338,6 +338,26 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Scuole: da dove cominciare</p>
   <p class="ms-card-desc">Cruscotto unico per ogni ruolo: scegli se sei docente di infanzia/primaria/sec I/sec II, di sostegno/BES, Dirigente/DSGA/RSPP, oppure genitore — e in 2 click arrivi ai materiali giusti.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/programma-dell-anno/">
+  <div class="ms-card-icon"><i class="bi bi-calendar3"></i></div>
+  <p class="ms-card-title">Programma dell'anno per la classe</p>
+  <p class="ms-card-desc">Cinque incontri da ottobre a maggio per ogni età, con le lezioni già composte, il compito a casa e il lavoro finale della classe.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/il-gruppo-a-scuola/">
+  <div class="ms-card-icon"><i class="bi bi-people"></i></div>
+  <p class="ms-card-title">Il Gruppo nella tua scuola</p>
+  <p class="ms-card-desc">Incontri in classe, percorsi, prove di evacuazione affiancate, giornate di plesso e uscite con i volontari: che cosa possiamo fare e come chiederlo.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/verifica-prima-e-dopo/">
+  <div class="ms-card-icon"><i class="bi bi-clipboard-data"></i></div>
+  <p class="ms-card-title">Verifica prima e dopo</p>
+  <p class="ms-card-desc">Cinque domande per classe, uguali prima e dopo il percorso, senza voto e senza nomi.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/video-per-la-classe/">
+  <div class="ms-card-icon"><i class="bi bi-play-btn-fill"></i></div>
+  <p class="ms-card-title">Video per la classe</p>
+  <p class="ms-card-desc">Video brevi con voce e sottotitoli da proiettare sulla LIM: terremoto, alluvione, colori dell'allerta, kit di emergenza, notizie false e incendi, con la trascrizione.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/crea-la-mia-lezione/">
   <div class="ms-card-icon"><i class="bi bi-magic"></i></div>
   <p class="ms-card-title">Crea la mia lezione</p>
@@ -398,6 +418,21 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Storie e Racconti</p>
   <p class="ms-card-desc">Fiabe e racconti per bambini 3-11 anni con valore pedagogico per la scuola: ogni storia ha un attimo decisivo + sezione "Per il/la docente" con obiettivi, competenze chiave europee, attività in classe e riferimenti curricolari.</p>
 </a>
+<a class="ms-card ms-edu" href="/lim/">
+  <div class="ms-card-icon"><i class="bi bi-easel"></i></div>
+  <p class="ms-card-title">Protezione civile sulla LIM</p>
+  <p class="ms-card-desc">Giochi, storie, schede, quiz e lezioni da usare col dito sulla lavagna interattiva: che cosa è controllato e come si usano in classe.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/libro-che-si-esplora/">
+  <div class="ms-card-icon"><i class="bi bi-book"></i></div>
+  <p class="ms-card-title">Il libro che si esplora</p>
+  <p class="ms-card-desc">Libro di protezione civile in 3D: capitoli su terremoto, allagamenti, incendi, allerte, zaino, caldo, temporali, vento, blackout, gas, maremoto, incidenti industriali e radiologici, siccità, con previsione e risposta da scoprire.</p>
+</a>
+<a class="ms-card ms-edu" href="/formazione/libro-che-si-esplora-schede/">
+  <div class="ms-card-icon"><i class="bi bi-printer"></i></div>
+  <p class="ms-card-title">Il libro che si esplora: schede da stampare</p>
+  <p class="ms-card-desc">Un capitolo per foglio A4, con le risposte da segnare e la risposta capovolta in fondo, da usare anche senza lavagna digitale.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/esperimenti/">
   <div class="ms-card-icon"><i class="bi bi-eyedropper"></i></div>
   <p class="ms-card-title">Esperimenti e attività</p>
@@ -432,6 +467,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <div class="ms-card-icon"><i class="bi bi-controller"></i></div>
   <p class="ms-card-title">Giochi della Sicurezza</p>
   <p class="ms-card-desc">Giochi educativi gratuiti per bambini 3-19 anni: terremoto, evacuazione, 112.</p>
+</a>
+<a class="ms-card ms-edu" href="/giochi/genzano-si-prepara/">
+  <div class="ms-card-icon"><i class="bi bi-map-fill"></i></div>
+  <p class="ms-card-title">Genzano si prepara</p>
+  <p class="ms-card-desc">Gioco di simulazione per tutti sulla mappa vera di Genzano: temporale, terremoto, incendio boschivo e ondata di calore.</p>
 </a>
 <a class="ms-card ms-edu" href="/catalogo-giochi/">
   <div class="ms-card-icon"><i class="bi bi-card-checklist"></i></div>
@@ -476,7 +516,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/risorse-pronte/">
   <div class="ms-card-icon"><i class="bi bi-collection-play"></i></div>
   <p class="ms-card-title">Materiali pronti da scaricare</p>
-  <p class="ms-card-desc">Podcast, infografiche, presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Liberamente scaricabili con licenza CC BY-NC-SA 4.0 per scuola, formazione e divulgazione.</p>
+  <p class="ms-card-desc">Video, infografiche, presentazioni divisi per tema di Protezione Civile (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Liberamente scaricabili con licenza CC BY-NC-SA 4.0 per scuola, formazione e divulgazione.</p>
 </a>
 <a class="ms-card ms-edu" href="/schede-1-minuto/">
   <div class="ms-card-icon"><i class="bi bi-stopwatch"></i></div>
@@ -536,12 +576,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/audio-e-podcast/">
   <div class="ms-card-icon"><i class="bi bi-headphones"></i></div>
   <p class="ms-card-title">Audio e podcast</p>
-  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: scegli fra il podcast con episodi MP3 o gli articoli letti ad alta voce dal browser. Entrambi gratuiti, accessibili e rispettosi della privacy.</p>
+  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: gli articoli letti ad alta voce dal browser e i podcast del Dipartimento della Protezione Civile. Il podcast del Gruppo è sospeso.</p>
 </a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>
-  <p class="ms-card-desc">Il podcast del Gruppo Comunale: episodi audio sui rischi locali, esercitazioni, interviste. Feed RSS per Spotify, Apple Podcasts e ogni app.</p>
+  <p class="ms-card-desc">Il podcast del Gruppo Comunale: le puntate sono sospese dal 5 novembre 2026 e torneranno solo dopo la verifica sulle fonti, con la trascrizione.</p>
 </a>
 <a class="ms-card ms-edu" href="/articoli-da-ascoltare/">
   <div class="ms-card-icon"><i class="bi bi-volume-up-fill"></i></div>

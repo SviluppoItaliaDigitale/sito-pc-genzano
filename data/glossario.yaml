@@ -137,7 +137,7 @@
     - "IT-alert"
     - "ITalert"
     - "IT Alert"
-  definizione: "Sistema di allarme pubblico nazionale: il DPC invia messaggi al cellulare nelle aree colpite da un'emergenza grave (terremoti, eruzioni, dighe)."
+  definizione: "Sistema nazionale di allarme pubblico: invia messaggi ai telefoni nell'area di una grave emergenza (grandi dighe, alcuni vulcani, incidenti nucleari o industriali). Non manda le allerte meteo."
   link: "/glossario/#it-alert"
 
 - id: bollettino-criticita
@@ -861,6 +861,12 @@
     - "LIS"
   definizione: "Lingua dei segni italiana: la lingua delle persone sorde in Italia, riconosciuta dallo Stato. Alcuni contenuti del sito sono disponibili in LIS."
   link: "/glossario/#lis"
+- id: lim
+  termine: "LIM"
+  varianti:
+    - "LIM"
+  definizione: "Lavagna interattiva multimediale: lo schermo touch usato in classe, collegato a un computer, su cui si proietta e si scrive col dito o con la penna."
+  link: "/glossario/#lim"
 - id: undrr
   termine: "UNDRR"
   varianti:
@@ -1184,7 +1190,7 @@
   varianti:
     - "COVID-19"
     - "COVID"
-  definizione: "Malattia respiratoria da coronavirus SARS-CoV-2. La pandemia del 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria."
+  definizione: "Malattia respiratoria da coronavirus SARS-CoV-2. Il 31 gennaio 2020 il Consiglio dei ministri dichiarò lo stato di emergenza nazionale per il rischio sanitario legato al virus."
   link: "/glossario/#covid-19"
 
 - id: csv

@@ -47,7 +47,7 @@ La diga, intatta, è ancora lì. Non è un monumento all'ingegneria: è il testi
 {{< dossier-dati id="numeri" image="/images/dossier/frane-hero.webp" alt="Il versante del Monte Toc con la cicatrice della frana sopra la diga" >}}
 {{< dossier-dato to="270" unita=" mln m³" label="Il volume della **frana del Monte Toc**: un'intera montagna nel lago, in meno di un minuto" >}}
 {{< dossier-dato to="250" unita=" m" label="La risalita dell'**onda** sul versante opposto, verso Casso, prima di scavalcare la diga e piombare su Longarone" >}}
-{{< dossier-dato to="1910" label="Le **vittime** del disastro, in gran parte a Longarone e nelle frazioni: una comunità intera" >}}
+{{< dossier-dato to="1917" label="Le **vittime** del disastro, in gran parte a Longarone e nelle frazioni: una comunità intera" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-confronto id="confronto" titolo="Longarone: prima e dopo l'onda" testo="A sinistra, Longarone nel **1961**: il paese sul Piave, il campanile, le case. A destra, la stessa valle nella foto aerea del **1963**, dopo l'onda: il fango ha preso il posto del paese. Trascina il cursore per confrontare. Due angolazioni diverse, la stessa valle: in mezzo, quarantacinque secondi di frana." base="/images/dossier/vajont-longarone-prima.webp" baseAlt="Longarone nel 1961, paese integro sulla valle del Piave con il campanile al centro" baseLab="1961" top="/images/dossier/storia-longarone-1963.webp" topAlt="La valle del Piave coperta di fango e detriti dopo il disastro del Vajont, Longarone cancellata" topLab="1963" ratio="16 / 10" cap="A sinistra: Longarone prima del disastro, 1961 (Biblioteca civica di Belluno · pubblico dominio). A destra: la valle dopo l'onda, 1963 (US Army · pubblico dominio). Via Wikimedia Commons." >}}

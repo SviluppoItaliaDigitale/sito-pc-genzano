@@ -24,6 +24,8 @@ In questa sezione puoi consultare la **mappa interattiva** e le tabelle con i pu
 <p class="mb-0 small">In alcuni punti il Piano di Emergenza Comunale può riportare denominazioni viarie diverse da quelle attuali. Per orientarti fai riferimento alla <strong>mappa interattiva</strong>, all'<strong>indirizzo</strong> nelle tabelle e al <strong>cartello installato sul posto</strong>.</p>
 </div>
 
+{{< area-piu-vicina >}}
+
 ## Aree di attesa della popolazione (AA)
 
 Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un evento sismico** o in caso di evacuazione. Qui verrai censito e riceverai le prime informazioni.
@@ -41,6 +43,8 @@ Luoghi sicuri all'aperto dove la popolazione deve radunarsi **subito dopo un eve
 | AA9 | Colli di Cicerone | Parcheggio Via Colli di Cicerone |
 | AA10 | Landi | Piazzale Frazione Landi |
 
+*Gli indirizzi sono quelli dei cartelli installati sul territorio e verificati dal Gruppo: in caso di differenza valgono questi. In alcuni punti il testo del [Piano di Emergenza Comunale](/piano-emergenza/) in PDF riporta indirizzi diversi o non aggiornati.*
+
 ## Aree di ammassamento soccorritori (AS)
 
 Aree destinate al **raggruppamento di uomini e mezzi di soccorso** provenienti dall'esterno. Non sono destinate alla popolazione civile.
@@ -57,7 +61,7 @@ Aree attrezzate per **l'alloggio temporaneo** della popolazione evacuata, dove v
 | ID | Denominazione | Indirizzo |
 |---|---|---|
 | AR1 | Palazzetto dello Sport | Area esterna Palazzetto dello Sport, Via G. di Vittorio |
-| AR2 | Campo Sportivo Via Sicilia | Via Sicilia *(nel testo del Piano è indicata come "Via Piemonte"; sul territorio l'accesso reale è in Via Sicilia, dove è installata la segnaletica)* |
+| AR2 | Campo Sportivo Via Sicilia | Via Sicilia |
 | AR3 | Campo Sportivo Via Sardegna | Via Sardegna |
 | AR4 | Campo Sportivo Don Bosco (Salesiani) | Viale Piave angolo Via Lega Latina |
 

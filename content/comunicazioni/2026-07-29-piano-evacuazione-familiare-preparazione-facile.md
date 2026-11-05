@@ -110,7 +110,7 @@ Scrivi il piano su un foglio. Mettilo in un posto visibile, come la porta di ing
 
 ## Allerta e IT-alert
 
-IT-alert è il sistema nazionale di allarme. Manda messaggi sul telefono quando c'è un pericolo. Ascolta sempre i messaggi di IT-alert. Segui le istruzioni delle autorità.
+IT-alert è il sistema nazionale di allarme. Manda un messaggio sui telefoni di una zona in grave pericolo. Non manda le allerte meteo. Leggi sempre i messaggi di IT-alert. Segui le istruzioni delle autorità.
 
 ## Approfondisci
 

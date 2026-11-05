@@ -18,6 +18,9 @@ Gli SVG stanno in `static/formazione/illustrazioni-udl/`; il nome del file dice 
 
 Gli asset sono SVG statici locali, senza JavaScript o font esterni, con proporzioni 1200×620. Usare il shortcode `illustrazione-udl` con `src`, `alt` e `caption`. Il testo della pagina rimane sufficiente anche senza immagini.
 
+## Versioni animate (dal 05/11/2026)
+Le illustrazioni degli esperimenti (`/formazione/esperimenti/`) hanno anche una versione animata in `static/formazione/illustrazioni-udl/animate/` (`<nome>-animata.svg`): stesso disegno, con il movimento che fa capire il fenomeno (bolle che salgono, biglia che affonda, livello che cresce, onda che rallenta e cresce). Nella pagina il disegno resta fermo e l'animazione parte solo con il pulsante «Guarda l'animazione», che la ferma anche. Principi applicati: **segmentazione** e **segnalazione** di Mayer (il movimento mostra la sequenza, non decora), nessun lampeggio (WCAG 2.3.1), controllo dell'utente (WCAG 2.2.2), niente movimento con preferenza di movimento ridotto. Gli SVG animati li genera `scripts/genera-animazioni-esperimenti.py` dai disegni statici, che non vengono mai modificati; per aggiungerne una si scrive la ricetta nel generatore, si guardano i fotogrammi a più istanti e si aggiungono `animazione` e `alt_animazione` allo shortcode.
+
 ## Illustrazioni preparate con strumenti esterni
 Prima del commit: aprire e guardare l'immagine; verificare che gesto e scena coincidano con le indicazioni del DPC; scrivere `alt`, `caption`, `<title>` e `<desc>` su ciò che si vede davvero; togliere metadati, commenti o testi che citino lo strumento usato; controllare che le scritte restino dentro il `viewBox` e si leggano su telefono e su A4. Regola completa: `.claude/rules/03-accessibility.md` § «Progettazione universale per l'apprendimento».
 

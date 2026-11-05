@@ -9,11 +9,15 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-30-halloween-sicurezza-bambini.webp"
 image_alt: "Gruppo di bambini in costume di Halloween con luci riflettenti sui vestiti durante la raccolta di dolcetti in un quartiere"
 scadenza: "2026-10-31"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza n. 156 del 27 ottobre 2026 — strade per la Festa di Halloween"
     url: "/allegati/2026/2026-10-27-ordinanza-viabilita-festa-halloween-genzano.pdf"
     dimensione: "103 KB"
+  - titolo: "Ordinanza n. 26 del 28 ottobre 2026 — niente vetro e lattine alla Festa di Halloween"
+    url: "/allegati/2026/2026-10-28-ordinanza-sindacale-26-divieto-vetro-halloween-genzano.pdf"
+    dimensione: "149 KB"
 tts: true
 versione_facile_di: "2026-10-30-halloween-sicurezza-bambini"
 build:
@@ -53,6 +57,16 @@ Sabato 31 ottobre c'è la Festa di Halloween in centro. Dalle 15:30 alle 20:30 l
 - Le auto dei residenti possono passare.
 
 I percorsi sono nel documento allegato. È il Comune che li decide. Se cambia qualcosa, guarda il [sito del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
+
+## Niente vetro e lattine alla festa
+
+Il Comune ha deciso una regola per la festa. Nella zona della festa non si vendono bevande da portare via in bottiglie di vetro, bicchieri di vetro, lattine e bombolette spray. Non si possono nemmeno portare.
+
+- La zona è: via Garibaldi fino all'incrocio con via dei Mille, piazza IV Novembre, piazza Frasconi, corso Gramsci e corso Don Minzoni. Vale anche nelle strade vicine.
+- La regola vale venerdì 30 ottobre dalle 20:00 alle 24:00.
+- Vale anche sabato 31 ottobre dalle 16:00 fino alla fine della festa.
+- Puoi comprare bevande in bicchieri di plastica.
+- Dentro i locali puoi bere come sempre.
 
 ## Durante la passeggiata
 

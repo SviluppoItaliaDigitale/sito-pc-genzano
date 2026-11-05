@@ -22,7 +22,7 @@ Un palazzo tipico presenta:
 
 - **più famiglie** con esigenze diverse;
 - **anziani**, bambini, disabili nei vari appartamenti;
-- **scale** come via di fuga principale (ascensore va evitato);
+- **scale** come via di fuga principale (l'ascensore va evitato);
 - **impianti** comuni (gas, acqua, elettricità);
 - **spazi** condivisi (cortile, androne, tetto);
 - **accesso** esterno limitato (cancello principale);
@@ -58,11 +58,11 @@ Un piano condominiale considera:
 - **contatti** della famiglia dei non autosufficienti.
 
 ### Procedure base
-- **in caso di incendio**: avvisare gli altri, chiamare 112, uscire dalle scale, non usare ascensore;
+- **in caso di incendio**: avvisare gli altri, chiamare 112, scendere per le scale, non usare l'ascensore;
 - **in caso di fuga di gas**: chiudere il contatore generale, non accendere fiamme, non azionare interruttori, chiamare il 112 e il distributore del gas;
 - **in caso di allagamento**: chiudere acqua generale, avvisare amministratore;
 - **in caso di black-out**: verificare contatore, avvisare amministratore;
-- **in caso di terremoto**: uscire dopo la scossa sulla scala principale, raggiungere area di attesa.
+- **in caso di terremoto**: uscire dopo la scossa dalla scala principale, raggiungere l'area di attesa.
 
 ### Aree di attesa
 - **cortile** del condominio (se sicuro);
@@ -116,7 +116,7 @@ L'**amministratore di condominio** ha:
 
 - **obblighi** di sicurezza sugli spazi comuni (D.Lgs. 81/2008 se ci sono lavoratori);
 - **responsabilità** per impianti e manutenzioni;
-- **documentazione** CPI per condomini di grandi dimensioni;
+- **documentazione antincendio** (D.P.R. 1 agosto 2011, n. 151) per gli edifici che rientrano nelle attività soggette ai controlli dei Vigili del Fuoco, di norma i condomini più grandi;
 - **sensibilità** su tematiche di Protezione Civile variabile.
 
 Un amministratore **collaborativo** è un alleato prezioso.

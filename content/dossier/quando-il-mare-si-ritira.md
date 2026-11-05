@@ -65,9 +65,9 @@ Questo grafico mostra l'onda del 2011 registrata a sud-est di Tokyo, circa **un'
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="messina" image="/images/dossier/maremoto-messina-1908.webp" alt="Foto storica in bianco e nero: superstiti del terremoto di Messina del 1908, donne e bambini tra edifici ridotti in macerie" align="right" kicker="28 dicembre 1908 · Stretto di Messina" title="Anche l'Italia<br>conosce i maremoti" credito="Superstiti del terremoto di Messina, 1908 · Library of Congress · pubblico dominio" >}}
-Alle 5:20 del **28 dicembre 1908** un terremoto di magnitudo stimata **7.1** colpì lo Stretto di Messina. Circa dieci minuti dopo, un **maremoto** investì le due coste con onde alte **6-12 metri**.
+Alle 5:20 del **28 dicembre 1908** un terremoto di magnitudo stimata **7.1** colpì lo Stretto di Messina. Pochi minuti dopo, un **maremoto** investì le due coste con onde alte fino a **13 metri**, a Pellaro.
 
-Tra terremoto e onde le vittime furono **circa 80.000**: il disastro più grave della storia europea. Non è un rischio lontano: è successo in Italia.
+Tra terremoto e onde le vittime furono **circa 80.000**, secondo gli studi più recenti: il disastro naturale più grave della storia d'Italia. Non è un rischio lontano: è successo in Italia.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="stromboli" image="/images/dossier/maremoto-stromboli.webp" alt="Lo Stromboli visto dal mare: il pendio grigio della Sciara del Fuoco scende fino all'acqua e un lieve pennacchio sale dalla cima sotto un cielo sereno" align="top" kicker="30 dicembre 2002 · Isole Eolie" title="Non serve<br>un terremoto" credito="Foto: Ghost-in-the-Shell · CC BY 2.0, via Wikimedia Commons" >}}

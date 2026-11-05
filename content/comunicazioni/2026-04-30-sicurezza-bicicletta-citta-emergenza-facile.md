@@ -37,7 +37,7 @@ Fuori dalla città, di notte, devi mettere anche il giubbotto giallo ad alta vis
 
 ## Il casco
 
-Il casco è obbligatorio per i bambini e i ragazzi. Gli adulti non sono obbligati, ma è molto utile. Il casco protegge la testa in caso di caduta. Le ferite alla testa sono gravi.
+Il casco in bici non è obbligatorio per legge, ma è molto utile, soprattutto per i bambini. Il casco protegge la testa in caso di caduta. Le ferite alla testa sono gravi.
 
 ## Come comportarsi in strada
 

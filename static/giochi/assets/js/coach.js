@@ -106,7 +106,7 @@
         'La sirena dell\'ambulanza ha tre toni.',
         'Il tuono fa "boom" dopo il fulmine.',
         'L\'allarme della scuola dice di uscire in ordine.',
-        'IT-alert è un suono lungo del telefono: leggi il messaggio.'
+        'Con IT-alert il telefono fa un suono speciale: chiama subito un adulto.'
       ],
       teoria: [
         { titolo: 'Allerte meteo', url: '/allerte-meteo/' }
@@ -475,6 +475,23 @@
       teoria: [
         { titolo: 'Cosa fare in emergenza', url: '/cosa-fare-adesso/' },
         { titolo: 'Diventa volontario', url: '/diventa-volontario/' }
+      ]
+    },
+    'genzano-si-prepara': {
+      fascia: 'ragazzi',
+      titolo: 'Consigli per Genzano si prepara',
+      regola: 'Quello che fai prima dell\'evento decide come va durante e dopo: la prevenzione evita i disastri.',
+      come: [
+        'Prima scegli quattro cose da fare: non puoi fare tutto, quindi parti da quelle che proteggono le persone.',
+        'Durante l\'evento leggi la situazione e scegli che cosa fare. Dopo ogni scelta leggi il perché.',
+        'Non c\'è un tempo limite: leggi con calma.',
+        'Alla fine il resoconto ti mostra i disastri che la preparazione ha evitato.'
+      ],
+      teoria: [
+        { titolo: 'Temporali intensi', url: '/rischi-prevenzione/temporali-intensi/' },
+        { titolo: 'Rischio sismico', url: '/rischi-prevenzione/rischio-sismico/' },
+        { titolo: 'Rischio incendio', url: '/rischi-prevenzione/rischio-incendio/' },
+        { titolo: 'Ondate di calore', url: '/rischi-prevenzione/ondate-di-calore/' }
       ]
     },
     'simulatore-coc': {

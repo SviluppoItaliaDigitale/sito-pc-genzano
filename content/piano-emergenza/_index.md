@@ -20,7 +20,7 @@ Il Piano di Emergenza Comunale stabilisce come organizzare i soccorsi in caso di
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>A cosa serve il Piano? {#a-cosa-serve}
 Il Piano serve prima di tutto a **proteggere la popolazione**. Definisce chi fa cosa, quali risorse usare e come coordinare i soccorsi. Individua anche le **aree di emergenza**, cioè i luoghi da usare per l'attesa, il ricovero temporaneo e il supporto ai soccorritori.
 
-L'impianto del Piano segue il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le **direttive del Dipartimento della Protezione Civile**. Sull'evacuazione di massa segue anche la norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*. Da questa norma riprende i criteri per i punti di raccolta e per l'attenzione alle persone con esigenze specifiche.
+L'impianto del Piano segue il **D.Lgs. 1/2018** (Codice della Protezione Civile) e le **direttive del Dipartimento della Protezione Civile**. Il testo del Piano non cita norme ISO. Per spiegare come si scelgono i punti di raccolta e come si tiene conto delle persone con esigenze specifiche, in questa pagina usiamo come riferimento anche la norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for planning*: è una spiegazione della redazione, non un contenuto del Piano.
 
 ## <i class="bi bi-book-fill text-primary me-2" aria-hidden="true"></i>Come leggere il Piano {#come-leggere}
 Il Piano di Emergenza è un documento tecnico. Per il cittadino, però, le informazioni principali sono poche:
@@ -93,5 +93,7 @@ Sono le sedi operative da cui viene coordinata l'emergenza: Municipio, sede dell
 ## <i class="bi bi-download text-primary me-2" aria-hidden="true"></i>Documenti scaricabili {#documenti}
 - [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
 - [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
+
+Per gli indirizzi delle aree di emergenza fanno fede i cartelli installati sul territorio, riportati nelle pagine [Aree di attesa](/aree-attesa/) e [Cartografia](/cartografia/): in alcuni punti il testo del Piano in PDF riporta indirizzi diversi o non aggiornati.
 
 Per tutti i documenti disponibili, visita l'[Area download](/area-download/).

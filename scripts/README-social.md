@@ -136,6 +136,11 @@ materiale, pronti ma non pubblicati, o retrodatati e quindi fuori dalla
 pubblicazione automatica: `python3 scripts/social-pronti.py controlla` (lo
 stesso controllo gira ogni giorno nel controllo di salute del sistema).
 
+Un articolo con `social: false` nel frontmatter resta solo sul sito (dal
+05/11/2026): i generatori non producono testi né immagini, e il controllo
+non lo segnala. Serve per gli articoli d'archivio scritti dopo e datati al
+giorno dell'evento.
+
 Si può anche lanciare manualmente da `Actions → 📱 Genera bozze social automatiche → Run workflow`.
 
 ## Costi

@@ -73,6 +73,7 @@ doc = f"""<!DOCTYPE html>
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">&larr; Torna alle schede</a>
     <span class="scheda-titolo">Alfabetiere della sicurezza: tutte le lettere su un foglio</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
     <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
   </div>
   <article class="scheda-page" id="alfabetiere-tabella">

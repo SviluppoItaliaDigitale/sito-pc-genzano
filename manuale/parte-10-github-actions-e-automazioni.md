@@ -9,7 +9,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Workflow | File | Trigger | Scopo |
 |---|---|---|---|
 | Build e Deploy | `deploy.yml` | push su `main`, manuale | Build Hugo, deploy Aruba (FTP), deploy GitHub Pages |
-| Aggiornamento Allerta Meteo | `check-allerta.yml` | **Doppio trigger fail-safe**: cron-job.org ogni 5 min (primario, ~15 sec latenza) + GitHub schedule `17 * * * *` (fail-safe orario) | Legge feed DPC, aggiorna `data/allerta.json`. Anti-spam interno (stale_check 5h45min) impedisce commit duplicati. |
+| Aggiornamento Allerta Meteo | `check-allerta.yml` | **Doppio trigger fail-safe**: cron-job.org ogni 5 min (primario, ~15 sec latenza) + GitHub schedule `17 * * * *` (fail-safe orario) | Legge feed DPC, aggiorna `data/allerta.json`. Anti-spam interno (stale_check 4h45min) impedisce commit duplicati. |
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |

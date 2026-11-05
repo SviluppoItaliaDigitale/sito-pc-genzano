@@ -136,7 +136,7 @@ Durante un **black-out**:
 
 ## Fotovoltaico e accumulo
 
-Se avete impianto **fotovoltaico**:
+Se avete un impianto **fotovoltaico**:
 
 - **controllare** che il quadro sia revisionato;
 - **batterie di accumulo** richiedono installazione in ambiente adeguato;

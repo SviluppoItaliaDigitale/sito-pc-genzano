@@ -176,6 +176,7 @@ doc = f"""<!DOCTYPE html>
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
     <span class="scheda-titolo">Alfabetiere della sicurezza A–Z · un foglio per lettera</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
     <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
   </div>
 

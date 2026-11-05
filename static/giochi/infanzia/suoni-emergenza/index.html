@@ -10,6 +10,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
   <link rel="stylesheet" href="/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <link rel="stylesheet" href="/giochi/infanzia/assets/infanzia.css">
@@ -66,7 +67,7 @@
     </div>
 
     <div id="intro" class="inf-card text-center">
-      <p class="h5">Ascolterai 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, campanello, pioggia, vento, radio PC, allarme casa, cane.</p>
+      <p class="h5">Ascolterai 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, campanello, pioggia, vento, radio PC, allarme casa, cane. Il suono di IT-alert è solo un esempio: quello vero del telefono è diverso.</p>
       <button id="start" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-play-fill"></i> Iniziamo</button>
     </div>
 
@@ -110,31 +111,35 @@
   (function(){
     // Per ogni suono, il campo `azione` dice CHE FARE quando lo si sente:
     // crea il legame "suono -> reazione corretta", non solo riconoscimento.
+    // Il campo `era` è la frase del riscontro, con l'articolo giusto per ogni suono.
+    // `consiglio` e `link` (facoltativi) sostituiscono il suggerimento generico.
     var SUONI = [
-      { id: 'ambulanza', emo: '🚑', lbl: 'Ambulanza', play: function(){ window.AudioSintetico.sirenaAmbulanza(1.5); },
+      { id: 'ambulanza', emo: '🚑', lbl: 'Ambulanza', era: 'Era l\'ambulanza', play: function(){ window.AudioSintetico.sirenaAmbulanza(1.5); },
         azione: 'Quando la senti: stai lontano dalla strada, lascia passare l\'ambulanza, non correre.' },
-      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', play: function(){ window.AudioSintetico.tuono(); },
+      { id: 'tuono', emo: '⛈️', lbl: 'Tuono', era: 'Era il tuono', play: function(){ window.AudioSintetico.tuono(); },
         azione: 'Quando lo senti: torna in casa, stai lontano da finestre e oggetti elettrici.' },
-      { id: 'allarme', emo: '🔔', lbl: 'Allarme', play: function(){ window.AudioSintetico.allarmeIncendio(1.2); },
+      { id: 'allarme', emo: '🔔', lbl: 'Allarme', era: 'Era l\'allarme della scuola', play: function(){ window.AudioSintetico.allarmeIncendio(1.2); },
         azione: 'Quando suona a scuola: ti metti in fila col capofila e segui la maestra al punto di raccolta.' },
-      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', play: function(){ window.AudioSintetico.campanello(); },
+      { id: 'campanello', emo: '🛎️', lbl: 'Campanello', era: 'Era il campanello', play: function(){ window.AudioSintetico.campanello(); },
         azione: 'Quando suona alla porta: chiama un grande prima di aprire. Mai aprire da solo a sconosciuti.' },
-      { id: 'italert', emo: '📱', lbl: 'IT-alert', play: function(){ window.AudioSintetico.itAlert(); },
-        azione: 'Quando senti questo suono fortissimo dal cellulare: leggi il messaggio. Il Governo ti sta avvisando di un pericolo.' },
-      { id: 'pioggia', emo: '🌧️', lbl: 'Pioggia', play: function(){
+      { id: 'italert', emo: '📱', lbl: 'IT-alert', era: 'Era il suono di IT-alert. Nel gioco è un esempio: quello vero è diverso', play: function(){ window.AudioSintetico.itAlert(); },
+        azione: 'Quando il telefono fa un suono speciale, diverso dal solito: chiama subito un grande, che legge il messaggio.',
+        consiglio: 'IT-alert = il telefono fa un suono speciale: chiama un grande.',
+        link: '/comunicazioni/2026-07-10-app-it-alert-test-nazionale/' },
+      { id: 'pioggia', emo: '🌧️', lbl: 'Pioggia', era: 'Era la pioggia', play: function(){
           window.AudioSintetico.rumoreBianco({durata: 1.6, gain: 0.18});
         },
         azione: 'Quando piove tantissimo: stai in casa, niente parchi, mai vicino a fiumi o sottopassi.' },
-      { id: 'vento', emo: '💨', lbl: 'Vento', play: function(){
+      { id: 'vento', emo: '💨', lbl: 'Vento', era: 'Era il vento', play: function(){
           window.AudioSintetico.rumoreBianco({durata: 1.4, gain: 0.22, freq: 350});
         },
         azione: 'Quando soffia forte: chiudi le finestre, stai lontano da alberi, cartelloni, balconi.' },
-      { id: 'radio', emo: '📻', lbl: 'Radio PC', play: function(){
+      { id: 'radio', emo: '📻', lbl: 'Radio PC', era: 'Era la radio della Protezione Civile', play: function(){
           window.AudioSintetico.pipRadio();
           setTimeout(function(){ window.AudioSintetico.pipRadio(); }, 350);
         },
         azione: 'Quando senti la radio della PC: ascolta bene, sta comunicando informazioni utili agli adulti.' },
-      { id: 'pompieri', emo: '🚒', lbl: 'Pompieri', play: function(){
+      { id: 'pompieri', emo: '🚒', lbl: 'Pompieri', era: 'Erano i pompieri', play: function(){
           var t = window.AudioSintetico.tono;
           var d = 0.35;
           for (var i = 0; i < 3; i++){
@@ -143,7 +148,7 @@
           }
         },
         azione: 'Quando senti questa sirena lenta: lascia passare i pompieri. Poi chiedi a un grande se serve evacuare.' },
-      { id: 'polizia', emo: '🚓', lbl: 'Polizia', play: function(){
+      { id: 'polizia', emo: '🚓', lbl: 'Polizia', era: 'Era la polizia', play: function(){
           var t = window.AudioSintetico.tono;
           var d = 0.08;
           for (var i = 0; i < 10; i++){
@@ -152,7 +157,7 @@
           }
         },
         azione: 'Quando senti questa sirena veloce: la polizia sta lavorando, lascia spazio e segui un grande.' },
-      { id: 'antifurto', emo: '🚨', lbl: 'Allarme casa', play: function(){
+      { id: 'antifurto', emo: '🚨', lbl: 'Allarme casa', era: 'Era l\'allarme di casa', play: function(){
           var t = window.AudioSintetico.tono;
           var on = 0.18, off = 0.06;
           for (var i = 0; i < 7; i++){
@@ -160,7 +165,7 @@
           }
         },
         azione: 'Quando suona a casa: avvisa subito un adulto, esci con calma, non aprire a nessuno.' },
-      { id: 'cane', emo: '🐕', lbl: 'Cane abbaia', play: function(){
+      { id: 'cane', emo: '🐕', lbl: 'Cane abbaia', era: 'Era il cane che abbaia', play: function(){
           var t = window.AudioSintetico.tono;
           var d = 0.13;
           t({ freq: 300, durata: d, tipo: 'square', gain: 0.22, delay: 0, attack: 0.005, release: 0.05 });
@@ -226,16 +231,20 @@
         // Feedback con riconoscimento + azione corretta da fare quando si
         // sente quel suono. Crea il legame "suono -> reazione" (livello 2
         // implicito: non solo identifica, ma sai cosa fare).
-        feedback.innerHTML = '✅ Bravo! Era il ' + target.lbl.toLowerCase() + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
+        feedback.innerHTML = '✅ Bravo! ' + target.era + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
-        feedback.innerHTML = '🐢 Era il ' + target.lbl.toLowerCase() + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
+        feedback.innerHTML = '🐢 ' + target.era + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         if (window.GameCoach && window.GameCoach.hint) {
-          window.GameCoach.hint('Sirena ambulanza = 3 toni veloci. Tuono = boom dopo il fulmine. Allarme scuola = suono lungo. IT-Alert = il telefono squilla forte.', '/allerte-meteo/');
+          if (target.consiglio) {
+            window.GameCoach.hint(target.consiglio, target.link);
+          } else {
+            window.GameCoach.hint('Sirena ambulanza = 3 toni veloci. Tuono = boom dopo il fulmine. Allarme scuola = suono lungo.', '/allerte-meteo/');
+          }
         }
       }
       setTimeout(function(){

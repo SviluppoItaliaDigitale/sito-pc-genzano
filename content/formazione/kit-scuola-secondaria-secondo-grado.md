@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nei percorsi di formazione scuola-lavoro (fino al 2024/25 chiamati PCTO).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~388 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~396 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -736,11 +736,11 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 
 **12 nuovi caso studio** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + domande di analisi + box per il docente):
 
-- 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, 80.000-120.000 vittime: la più grande catastrofe naturale d'Europa moderna, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
-- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.914 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
+- 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, circa 80.000 vittime: la più grave catastrofe naturale della storia d'Italia, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
+- 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.734 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
 - 👉 [**Caso San Giuliano di Puglia 2002**](/formazione/schede-stampabili/caso-san-giuliano-secondaria2/) — la scuola Jovine crollata: 27 bambini + maestra, OPCM 3274/2003, classificazione sismica obbligatoria di tutto il territorio. *(diritto, scienze della Terra, ed. civica, etica)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria2/) — la "tragedia annunciata": frana del Toc, 1.917 vittime, ruolo della responsabilità tecnica e della comunicazione del rischio. *(geologia, diritto, filosofia, italiano)*
-- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria2/) — «Là dov'era, com'era»: 989 vittime, ricostruzione modello, nascita della PC italiana moderna. *(storia, diritto, ed. civica)*
+- 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria2/) — «Là dov'era, com'era»: 965 vittime, ricostruzione modello, nascita della PC italiana moderna. *(storia, diritto, ed. civica)*
 - 👉 [**Caso Vermicino 1981**](/formazione/schede-stampabili/caso-vermicino-secondaria2/) — Alfredino Rampi, 18 ore di diretta TV, l'opinione pubblica scopre la PC: nasce il Ministero. *(storia, diritto, comunicazione, etica)*
 - 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria2/) — frana dei bacini di decantazione minerari, 268 vittime: il rischio industriale e la responsabilità penale. *(diritto, geologia, etica industriale)*
 - 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria2/) — alluvione di Cardoso, 14 vittime: bombe d'acqua, bacini montani, cambiamento climatico. *(geografia, geologia, ed. civica)*
@@ -1025,7 +1025,7 @@ Tracce pronte nello stile della prima prova scritta dell'Esame di Stato (tipolog
 
 **Traccia 2 (Tipologia B — argomentativo)**: Testo di partenza: estratto da *La società del rischio* di Ulrich Beck (cap. 1). «Analizza il concetto di *rischio sistemico* proposto da Beck e confrontalo con quanto emerso durante la pandemia COVID-19 e con le recenti crisi climatiche. Il rischio, oggi, è globale, democratico (colpisce anche chi lo produce) o ancora distribuito in modo diseguale?»
 
-**Traccia 3 (Tipologia C)**: «Il sistema IT-alert, sperimentato in Italia nel 2023, è stato il primo caso di allerta diretta ai cellulari della popolazione. Dopo aver descritto funzionamento e base giuridica del sistema, rifletti sul rapporto tra tecnologia e cultura della sicurezza: gli strumenti tecnologici possono sostituire la preparazione individuale, o la presuppongono?»
+**Traccia 3 (Tipologia C)**: «Il sistema IT-alert, provato in Italia dal 2022 e operativo dal 13 febbraio 2024, invia messaggi di allarme ai cellulari presenti nell'area di una grave emergenza. Dopo aver descritto funzionamento e base giuridica del sistema, rifletti sul rapporto tra tecnologia e cultura della sicurezza: gli strumenti tecnologici possono sostituire la preparazione individuale, o la presuppongono?»
 
 **Traccia 4 (Tipologia B)**: Testo di partenza: art. 2 del D.Lgs. 1/2018 (attività della protezione civile). «Il sistema italiano distingue quattro attività: **previsione, prevenzione e mitigazione, gestione delle emergenze, superamento dell'emergenza** (l'attività un tempo detta "soccorso" è oggi "gestione delle emergenze"). Analizza come questi quattro momenti si integrano in un caso a tua scelta (Amatrice 2016, Ischia 2022, Vaia 2018, alluvione Emilia-Romagna 2023). Quali sono le criticità strutturali emerse?»
 

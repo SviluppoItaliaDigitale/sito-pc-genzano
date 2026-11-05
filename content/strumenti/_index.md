@@ -109,8 +109,8 @@ Il modo più rapido per vedere tutto in un colpo d'occhio è il nostro **cruscot
     icona="bi-cloud-sun-fill"
     tipoFonte="istituzionale"
     descrizione="Previsione meteorologica ufficiale per Genzano di Roma, pubblicata dal Servizio Meteorologico dell'Aeronautica Militare."
-    tipoAccesso="widget"
-    url="/allerte-meteo/#meteo-aeronautica" >}}
+    tipoAccesso="sito"
+    url="https://www.meteoam.it/it/meteo-citta/genzano-di-roma" >}}
 
 {{< tool-card
     nome="Mappa fulmini in tempo reale"

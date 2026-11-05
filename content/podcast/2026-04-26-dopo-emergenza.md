@@ -6,6 +6,14 @@ episodio: 9
 audio: "/podcast/episodi/2026-04-26-dopo-emergenza-podcast.m4a"
 
 draft: false
+# Puntata sospesa il 5 novembre 2026, in attesa di essere rifatta e
+# verificata: la pagina non si pubblica e il suo indirizzo rimanda a
+# /podcast/ (aliases in content/podcast/_index.md). Il file audio resta
+# sul server, scollegato.
+build:
+  list: never
+  render: never
+  publishResources: false
 ---
 
 Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Dopo l'emergenza**.

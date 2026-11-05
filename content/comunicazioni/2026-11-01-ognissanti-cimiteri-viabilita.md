@@ -1,6 +1,6 @@
 ---
 title: "Ognissanti: viabilità nei pressi dei cimiteri e comportamenti"
-date: 2026-11-01
+date: 2026-11-01T00:01:00+02:00
 description: "Il 1° novembre aumenta l'afflusso verso i cimiteri. Indicazioni per la viabilità e comportamenti in sicurezza."
 badge: "Informazione"
 priorita: "normale"
@@ -77,7 +77,7 @@ Chi raggiunge il cimitero **a piedi** da zone vicine:
 ### Sicurezza
 - **attenzione** ai dislivelli (gradini, cordoli);
 - **scarpe** comode (non tacchi su pavimentazioni non livellate);
-- **luce** adeguata se visite al calare della luce;
+- **luce** adeguata se si visita al calare della luce;
 - **acqua** per pulire tombe (fontane di solito presenti);
 - **non arrampicarsi** su monumenti antichi.
 
@@ -134,7 +134,7 @@ Se durante la visita si verifica:
 - **fuoco** da lumino;
 - **smarrimento** di bambino;
 
-→ **chiamare il 112 immediatamente** e seguire istruzioni.
+→ **chiamare il 112 immediatamente** e seguire le istruzioni.
 
 ## Sul cimitero in sé
 

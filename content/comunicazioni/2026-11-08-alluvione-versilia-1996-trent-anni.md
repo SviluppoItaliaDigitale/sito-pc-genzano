@@ -1,5 +1,5 @@
 ---
-title: "Trent'anni dall'alluvione della Versilia: quella notte del 19 giugno 1996"
+title: "Trent'anni dall'alluvione della Versilia: il 19 giugno 1996"
 date: 2026-11-08
 description: "L'alluvione della Versilia del 19 giugno 1996 è stata uno dei disastri idrogeologici più gravi d'Italia. Trent'anni dopo, cosa abbiamo imparato."
 badge: "Informazione"
@@ -13,11 +13,11 @@ allegati: []
 draft: false
 ---
 
-Trent'anni fa, nella notte del **19 giugno 1996**, la **Versilia** e la **Garfagnana** furono colpite da un **evento alluvionale** di eccezionale intensità. Oltre **500 mm di pioggia in 8 ore** cancellarono borghi, strade, ponti. Quattordici persone persero la vita. Un evento che ha **segnato** la storia della Protezione Civile italiana e la coscienza delle Alpi Apuane.
+Trent'anni fa, il **19 giugno 1996**, la **Versilia** e la **Garfagnana** furono colpite da un **evento alluvionale** di eccezionale intensità. Il temporale iniziò verso le 6 del mattino e la pioggia cadde per circa 12 ore: si calcolarono **circa 480 mm** (482 mm secondo la scheda dei Vigili del Fuoco, 478 mm in 13 ore secondo uno studio dell'Università di Pisa). Furono cancellati borghi, strade e ponti. Quattordici persone persero la vita. Un evento che ha **segnato** la storia della Protezione Civile italiana e la coscienza delle Alpi Apuane.
 
 ## Il contesto
 
-Nella tarda sera del 19 giugno:
+Dalle prime ore del 19 giugno:
 
 {{< foto src="/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema-fonte-wikipedia.webp"
          alt="Cardoso, frazione di Stazzema (Lucca) colpita dall'alluvione del 1996"
@@ -27,19 +27,16 @@ Nella tarda sera del 19 giugno:
 - un **sistema temporalesco stazionario** si fermò sulle Apuane;
 - **precipitazioni** ininterrotte per ore;
 - **bacini** idrografici piccoli e ripidi si saturarono;
-- **frane** si innescarono su versanti denudati dalla vegetazione;
+- **frane** si innescarono sui versanti ripidi delle Apuane;
 - **torrenti** tracimarono simultaneamente;
-- **detriti** di enorme entità riversarono a valle.
-
-Le **cave di marmo** del territorio, dismesse o attive, contribuirono a rendere i versanti più fragili.
+- **detriti** di enorme entità si riversarono a valle.
 
 ## Le vittime
 
-- **14 persone** morirono tra Cardoso, Fornovolasco, Pescaglia, Stazzema;
-- **migliaia** di sfollati;
-- **oltre** 500 edifici distrutti o danneggiati gravemente;
-- **interi borghi** raggiungibili solo con elicottero per settimane;
-- **infrastrutture** (strade, ponti, acquedotti) distrutte.
+- **14 persone** morirono; la gran parte a Cardoso, frazione di Stazzema;
+- **molte famiglie** furono evacuate (le fonti divergono sul numero);
+- **interi borghi** rimasero isolati;
+- **infrastrutture** (strade, ponti, ferrovia) distrutte o interrotte: il fiume Versilia ruppe l'argine anche in pianura e interruppe l'Aurelia e la linea Roma-Genova.
 
 **Cardoso** fu il paese più colpito: l'alluvione portò via case, automobili, vite in pochi minuti.
 
@@ -56,8 +53,6 @@ Le **cave di marmo** del territorio, dismesse o attive, contribuirono a rendere 
 - il **sistema di allertamento** era insufficiente;
 - le **previsioni meteo** non avevano precisione adeguata;
 - i **piani di emergenza** comunali erano in molti casi inesistenti;
-- i **versanti** erano stati modificati da attività antropica senza valutazioni adeguate;
-- l'**uso del suolo** aveva ridotto la capacità di assorbimento;
 - gli **edifici** in aree ad alto rischio non erano stati delocalizzati.
 
 ## Le lezioni apprese
@@ -93,10 +88,7 @@ Dopo il 1996 l'Italia ha investito in:
 
 Oggi in Versilia:
 
-- **monumento** alle vittime a Cardoso;
-- **museo** della memoria dell'alluvione;
-- **eventi** commemorativi ogni anno;
-- **lezioni** nelle scuole;
+- **eventi** commemorativi e convegni;
 - **ricerca scientifica** sull'evento.
 
 La Versilia è diventata **un laboratorio** di buone pratiche: non ha voluto dimenticare e ha investito in **cultura del rischio**.
@@ -106,7 +98,7 @@ La Versilia è diventata **un laboratorio** di buone pratiche: non ha voluto dim
 Ogni anniversario di disastro idrogeologico ricorda che:
 
 - **nessun territorio** è immune;
-- la **frequenza** di eventi estremi aumenta con il cambiamento climatico;
+- gli **eventi estremi** vanno studiati anche alla luce del cambiamento climatico;
 - la **pianificazione** è indispensabile;
 - il **singolo cittadino** deve conoscere il rischio del proprio territorio;
 - la **preparazione** salva vite.
@@ -123,10 +115,11 @@ Le lezioni della Versilia 1996 vanno applicate **ovunque**, anche dove il rischi
 
 ## Onore alle vittime
 
-Un pensiero alle **14 persone** che persero la vita in quella notte, alle loro famiglie, alle comunità colpite. E **un grazie** a chi, da allora, lavora per **evitare** che simili tragedie si ripetano.
+Un pensiero alle **14 persone** che persero la vita quel giorno, alle loro famiglie, alle comunità colpite. E **un grazie** a chi, da allora, lavora per **evitare** che simili tragedie si ripetano.
 
 ## Per approfondire
 
+- [Scheda «Alluvione in Versilia» — Vigili del Fuoco, documentazione sugli interventi di maggiore entità dal 1951 (copia su certifico.com)](https://certifico.com/sicurezza-lavoro/documentazione-interventi-vvf-di-maggiore-entita-dal-1951)
 - [Rischio idrogeologico](/comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico/)
 - [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/)
 - [Cambiamento climatico e PC](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)

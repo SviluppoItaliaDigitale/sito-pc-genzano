@@ -302,6 +302,12 @@ jobs:
             exit 1
           fi
 
+          # Versione compatibile con i browser delle LIM (01/11/2026): Bootstrap
+          # Italia 2.x usa sintassi di Chrome 80+ e sulle lavagne non aggiornate
+          # non si avvia. Si trascrive il bundle appena installato (target Chrome
+          # 64); validate-pr.yml e controllo-lim.yml lo verificano.
+          bash scripts/js-compatibile-lim.sh
+
           # Aggiorna il file di versione
           echo "$NEW_VERSION" > .bootstrap-italia-version
 

@@ -25,7 +25,7 @@ Il **PM10** è l'insieme di **particolati** sospesi nell'aria con **diametro inf
 - **attività umane** (cantieri, risospensione polvere);
 - **fonti naturali** (polvere sahariana, pollini).
 
-Il **PM2.5** (particelle ancora più piccole) è ancora più pericoloso perché penetra profondamente.
+Il **PM2.5** (particelle ancora più piccole) è più pericoloso perché penetra profondamente.
 
 ## Perché è un problema
 
@@ -54,10 +54,10 @@ Il nuovo regolamento europeo (2024) prevede **soglie più restrittive** a partir
 
 ## La situazione in Italia
 
-- **Pianura Padana** è l'area più critica d'Europa per PM10 (Milano, Torino, Brescia, Mantova, ecc.);
-- anche **Lazio** ha superamenti frequenti a Roma, Frosinone;
+- la **Pianura Padana** è l'area più critica d'Europa per PM10 (Milano, Torino, Brescia, Mantova, ecc.);
+- anche il **Lazio** ha superamenti frequenti a Roma, Frosinone;
 - **Castelli Romani** meno critici ma non immuni;
-- **inverno** è periodo di maggiori superamenti.
+- l'**inverno** è il periodo di maggiori superamenti.
 
 ## Cosa fa il peggioramento invernale
 
@@ -76,7 +76,7 @@ Il nuovo regolamento europeo (2024) prevede **soglie più restrittive** a partir
 ### Traffico
 - **auto diesel** anziane: alta emissione;
 - **accumulo** nelle ore di punta;
-- **ridotta** velocità aumenta tempo di esposizione;
+- **ridotta** velocità aumenta il tempo di esposizione;
 - **gomme e freni**: particelle da usura.
 
 ## Cosa possiamo fare
@@ -88,7 +88,7 @@ Il nuovo regolamento europeo (2024) prevede **soglie più restrittive** a partir
 - **spostarsi** a piedi o in bicicletta quando possibile;
 - **condividere** auto (carpooling);
 - **rifiutare** riscaldamento eccessivo (ogni grado in meno riduce emissioni);
-- **vestirsi** a strati invece di alzare termostato.
+- **vestirsi** a strati invece di alzare il termostato.
 
 ### Durante i picchi
 - **limitare** attività fisica intensa all'aperto (correre, ciclismo);
@@ -99,13 +99,13 @@ Il nuovo regolamento europeo (2024) prevede **soglie più restrittive** a partir
 
 ### In famiglia
 - **bambini** piccoli: evitare uscite nelle ore di picco;
-- **asmatici**: adeguare terapia sentito il medico;
+- **asmatici**: adeguare la terapia sentito il medico;
 - **anziani** con patologie: ridurre esposizione;
 - **mascherine FFP2** hanno efficacia limitata ma non nulla.
 
 ## Il ruolo dei Comuni
 
-I Comuni possono e dovrebbero:
+I Comuni possono e dovrebbero adottare:
 
 - **blocchi del traffico** durante picchi (Roma e altri);
 - **limiti** ai riscaldamenti a biomassa;

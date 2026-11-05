@@ -228,8 +228,14 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   line-height: 1.6;
 }
 .hero-section .btn { position: relative; z-index: 1; font-weight: 600; letter-spacing: 0.01em; }
-.hero-section .btn-warning { background: var(--pc-secondary); border-color: var(--pc-secondary); color: #fff; }
-.hero-section .btn-warning:hover { background: #e65c00; border-color: #e65c00; color: #fff; transform: translateY(-1px); }
+/* Testo blu scuro sull'arancione del Gruppo: il bianco su #FF6600 dava 2,94:1,
+   sotto anche la soglia del testo grande (audit esterno 31/10/2026, A03).
+   #002244 su #FF6600 = 5,45:1; in hover #002244 su #FF7A1F = 6,14:1. */
+.hero-section .btn-warning { background: var(--pc-secondary); border-color: var(--pc-secondary); color: #002244; }
+.hero-section .btn-warning:hover,
+.hero-section .btn-warning:focus,
+.hero-section .btn-warning:active { background: #ff7a1f; border-color: #ff7a1f; color: #002244; }
+.hero-section .btn-warning:hover { transform: translateY(-1px); }
 @media (max-width: 768px) {
   .hero-section h1 { font-size: 2rem; }
   .hero-section { padding: 3rem 0; }
@@ -1306,6 +1312,19 @@ html:not(.a11y-hide-translate-button) body:has(#lang-toggle) .it-header-slim-rig
     padding-left: 10px;
     padding-right: 10px;
     font-size: 16px;
+  }
+}
+/* 01/11/2026, prova da LIM con Firefox (regola lim-scuole.md): a 1024 px, la
+   risoluzione dei proiettori delle lavagne, Firefox disegna Titillium un po'
+   più largo di Chromium e la barra sforava di 18 px (scorrimento orizzontale
+   su 110 pagine). Sotto i 1100 px corpo 15px e padding 6px: in Firefox la
+   barra arriva a ~930 px su 1024. */
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > a.nav-link,
+  .navbar.has-megamenu .navbar-collapsable .navbar-nav li.nav-item > button.nav-link {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 15px;
   }
 }
 
@@ -4898,6 +4917,22 @@ html.a11y-hide-translate-button #lang-modal { display: none !important; }
     display: none !important;
   }
 }
+/* Riquadro «Pagine di servizio» sopra i risultati (31/10/2026, audit A12):
+   le pagine operative legate alle parole cercate, da data/ricerca.json. */
+.ricerca-servizio {
+  margin: 0.75rem 0 1rem;
+  padding: 0.75rem 1rem;
+  background: #e7f0fa;
+  border-left: 4px solid #003366;
+  border-radius: 6px;
+}
+.ricerca-servizio[hidden] { display: none; }
+.ricerca-servizio-titolo { margin: 0 0 0.4rem; font-weight: 700; color: #003366; }
+.ricerca-servizio-lista { list-style: none; margin: 0; padding: 0; }
+.ricerca-servizio-lista li { margin: 0.35rem 0; }
+.ricerca-servizio-lista a { font-weight: 600; color: #003366; text-decoration: underline; }
+.ricerca-servizio-lista a:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.ricerca-servizio-desc { display: block; font-size: 0.9rem; color: #1a1a1a; }
 /* ==========================================================================
  * fine RICERCA PAGEFIND v1.0
  * ==========================================================================
@@ -7344,7 +7379,7 @@ html.a11y-pause-anim .cruscotto-home-monitor:hover { transform: none; }
 .dash-ems-titolo a:hover, .dash-ems-titolo a:focus { text-decoration: underline; }
 .dash-ems-meta { font-size: .85rem; color: #495057; margin: .2rem 0 0; }
 .dash-ems-meta i.bi { color: #6c757d; margin-right: .15rem; }
-.dash-ems-vuoto { padding: 1.2rem; text-align: center; color: #6c757d; background: #f8f9fa; border-radius: 6px; }
+.dash-ems-vuoto { padding: 1.2rem; text-align: center; color: #5c636a; background: #f8f9fa; border-radius: 6px; }
 @media print { .dash-ems-lista { grid-template-columns: 1fr; } .dash-ems-item { box-shadow: none; } }
 
 /* ─────────────────────────────────────────────────────────────
@@ -8508,4 +8543,66 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 @media print {
   .contatti-stampa { background: none; border-left-color: #000; }
   .contatti-stampa-112 strong { color: #000; }
+}
+
+/* ===== RIMANDO AL LIBRO CHE SI ESPLORA v1.0 =====
+   Riquadro in fondo alle pagine che il libro 3D usa come fonte
+   (partial libro-3d-rimando.html). Stessi colori del box strumenti. */
+.libro-rimando{background:#e7f0fa;border-left:4px solid #003366;border-radius:6px;padding:1rem 1.25rem;margin:2rem 0}
+.libro-rimando h2{color:#003366;margin:0 0 .5rem}
+.libro-rimando p{margin-bottom:.5rem}
+.libro-rimando ul{margin:0;padding-left:1.25rem}
+.libro-rimando li{margin:.25rem 0}
+
+/* ===== LIBRO CHE SI ESPLORA — VERSIONE SOLO TESTO v1.0 =====
+   Shortcode libro-3d-testo (oggi la versione inglese, /english/explorable-book/). */
+.lb-testo-lingua .lb-tl-cap{border-top:1px solid #c9d3df;padding-top:1rem;margin-top:1.5rem}
+.lb-testo-lingua .lb-tl-occhiello{margin:0;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#003366}
+
+/* ==========================================================================
+   PRONTO PER LA LIM v1.0 — 01/11/2026
+   Riquadro sulle pagine per le scuole controllate per la lavagna interattiva
+   (partial lim-pronto.html, site-chrome.js, scripts/segno-lim-statiche.py;
+   regola lim-scuole.md delle regole del progetto). Testo #1a1a1a e link #003366 su
+   #eef7f1: 15,6:1 e 11,4:1.
+   ========================================================================== */
+.lim-pronto {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #eef7f1;
+  color: #1a1a1a;
+  border-left: 4px solid #15803d;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.lim-pronto-icona { font-size: 1.5rem; color: #15803d; line-height: 1; margin-top: 0.1rem; }
+.lim-pronto a { color: #003366; font-weight: 600; text-decoration: underline; display: inline-flex; align-items: center; min-height: 44px; }
+.lim-pronto a:focus { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+@media print { .lim-pronto { display: none !important; } }
+
+/* ==========================================================================
+   ILLUSTRAZIONI ANIMATE v1.0 (shortcode illustrazione-udl con «animazione»)
+   Pulsante «Guarda l'animazione»: compare solo con JavaScript e senza
+   movimento ridotto; bersaglio di almeno 44 px (LIM); niente in stampa.
+   ========================================================================== */
+.illustrazione-comandi:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem 1rem;
+  margin-top: .75rem;
+}
+.illustrazione-anima {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+@media print {
+  .illustrazione-comandi { display: none !important; }
 }

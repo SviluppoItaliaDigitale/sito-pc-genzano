@@ -50,7 +50,7 @@ Durante la transizione stagionale:
 
 - **monitorare** i bollettini meteo della Regione e ARPA Lazio;
 - **preparare** l'autunno con manutenzione di grondaie e fossi;
-- **verificare** che il cellulare riceva le notifiche di emergenza: IT-alert, il sistema nazionale di allarme pubblico, non richiede alcuna app, ma non riguarda le allerte meteo;
+- **sapere** che IT-alert, il sistema nazionale di allarme pubblico, non richiede app né impostazioni, ma non riguarda le allerte meteo;
 - **liberare** terrazzi e balconi da vasi o mobili leggeri in caso di vento forte annunciato;
 - **evitare** di trovarsi in aree boschive durante temporali annunciati (rischio fulmini).
 
@@ -65,3 +65,5 @@ Per il Gruppo Comunale di PC questo è un momento operativo delicato: si chiude 
 - [Rischi e prevenzione](/rischi-prevenzione/)
 
 In emergenza: **112**.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto il passaggio su IT-alert: non serve verificare le impostazioni del telefono, perché il messaggio arriva anche con la voce IT-alert disattivata.

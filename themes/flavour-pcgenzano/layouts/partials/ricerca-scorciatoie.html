@@ -1,0 +1,20 @@
+{{- /* Riquadro «Pagine di servizio» sopra i risultati della ricerca interna.
+       Riceve (dict "radice" "<id del contenitore di Pagefind UI>"). Le regole
+       sono in data/ricerca.json → scorciatoie; titoli letti dalle pagine alla
+       build (audit esterno 31/10/2026, A12). Il codice è in
+       static/js/ricerca-scorciatoie.js, caricato una volta per pagina. */ -}}
+{{- $voci := slice -}}
+{{- range site.Data.ricerca.scorciatoie -}}
+  {{- $p := site.GetPage (strings.TrimSuffix "/" .percorso) -}}
+  {{- if not $p }}{{ errorf "data/ricerca.json: la pagina %q delle scorciatoie non esiste" .percorso }}{{ end -}}
+  {{- $titolo := $p.LinkTitle -}}
+  {{- $voci = $voci | append (dict "url" $p.RelPermalink "titolo" $titolo "descrizione" ($p.Description | default "") "parole" .parole) -}}
+{{- end -}}
+<div class="ricerca-servizio" data-radice="{{ .radice }}" role="region" aria-label="Pagine di servizio" hidden>
+  <p class="ricerca-servizio-titolo"><i class="bi bi-life-preserver me-1" aria-hidden="true"></i>Pagine di servizio</p>
+  <ul class="ricerca-servizio-lista"></ul>
+</div>
+<script type="application/json" class="ricerca-servizio-dati">{{ $voci | jsonify | safeJS }}</script>
+{{- if not (.pagina.Store.Get "ricercaScorciatoieJs") }}{{ .pagina.Store.Set "ricercaScorciatoieJs" true }}
+<script src="{{ "js/ricerca-scorciatoie.js" | relURL }}" defer></script>
+{{- end }}

@@ -17,7 +17,7 @@ Scegli il tuo ruolo e parti dal percorso consigliato.
 
 
 <div class="alert alert-info" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Hai poco tempo? Apri i <a href="/formazione/percorsi-didattici/">percorsi didattici pronti</a>: trovi attività già organizzate per durata, obiettivi e materiali.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Hai poco tempo? Parti dal <a href="/formazione/programma-dell-anno/">programma dell'anno</a>: cinque incontri già organizzati per la tua classe, da ottobre a maggio. Vuoi i volontari in classe? Leggi <a href="/formazione/il-gruppo-a-scuola/">Il Gruppo nella tua scuola</a>.</p>
 </div>
 
 ## Docente della scuola dell'infanzia

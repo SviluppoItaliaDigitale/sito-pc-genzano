@@ -79,7 +79,7 @@
     interruttori:  { t: "Impara dove e come chiudere gas, acqua e corrente di casa.", l: "rischi-prevenzione/" },
     aree:          { t: "Scopri dove sono le aree di attesa del tuo Comune.", l: "cartografia/" },
     piano:         { t: "Concorda un piano: punto di ritrovo, chi avvisa chi, cosa fare.", l: "piano-familiare/" },
-    italert:       { t: "Informati su IT-alert e su cosa fare quando ricevi un messaggio.", l: "comunicazioni/" },
+    italert:       { t: "Informati su IT-alert e su cosa fare quando ricevi un messaggio.", l: "comunicazioni/2026-07-10-app-it-alert-test-nazionale/" },
     fragili_lista: { t: "Prepara una lista aggiornata di farmaci e bisogni delle persone fragili con te.", l: "formazione/kit-calamita-anziani/" },
     bambini_sanno: { t: "Parla con i bambini di cosa fare in emergenza, in modo semplice e non spaventoso.", l: "formazione/kit-calamita-bambini/" },
     auto_kit:      { t: "Aggiungi un piccolo kit di scorte nell'auto.", l: "rischi-prevenzione/kit-emergenza/" },

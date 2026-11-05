@@ -67,7 +67,7 @@ Tra le strutture che organizzarono l'accoglienza dei volontari accorsi spontanea
 
 ## Friuli 1976: la nascita di un servizio strutturato
 
-**6 maggio 1976**, ore 21:00. Un terremoto di magnitudo 6,5 colpisce il **Friuli**. Crollano interi paesi — Gemona, Venzone, Osoppo. Mille morti, centomila senzatetto. Il governo nomina commissario straordinario **Giuseppe Zamberletti**, che organizzerà sul campo il primo grande coordinamento moderno della Protezione Civile italiana.
+**6 maggio 1976**, ore 21:00. Un terremoto di magnitudo 6,5 colpisce il **Friuli**. Crollano interi paesi — Gemona, Venzone, Osoppo. In tutta la sequenza i morti saranno 965, i senzatetto oltre 45.000. Il governo nomina commissario straordinario **Giuseppe Zamberletti**, che organizzerà sul campo il primo grande coordinamento moderno della Protezione Civile italiana.
 
 In quell'estate del 1976, **7.500 scout dell'AGESCI** raggiungono il Friuli. Più di **diecimila volontari** complessivamente, fra scout e altri movimenti giovanili. L'AGESCI apre una **base operativa a Udine**, presso la parrocchia del Carmine in via Aquileia, da cui distribuisce i volontari nelle aree più remote.
 
@@ -77,17 +77,17 @@ Sarà lo stesso Zamberletti a riconoscere pubblicamente, alla fine dell'emergenz
 
 {{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
          alt="Mappa ShakeMap USGS del terremoto del Friuli del 6 maggio 1976, magnitudo 6.5, con l'area di scuotimento più severo (in rosso) centrata sulle Alpi Carniche presso Gemona"
-         caption="Friuli, maggio 1976: i comuni di Gemona, Venzone e Osoppo sono devastati dal sisma di magnitudo 6,5. Mille morti, centomila senzatetto. Nell'estate successiva 7.500 scout dell'AGESCI raggiungono i luoghi del terremoto, organizzando dalla base operativa di Udine i servizi nelle aree più remote. Mappa: USGS — Public domain." >}}
+         caption="Friuli, maggio 1976: i comuni di Gemona, Venzone e Osoppo sono devastati dal sisma di magnitudo 6,5. In tutta la sequenza 965 morti e oltre 45.000 senzatetto. Nell'estate successiva 7.500 scout dell'AGESCI raggiungono i luoghi del terremoto, organizzando dalla base operativa di Udine i servizi nelle aree più remote. Mappa: USGS — Public domain." >}}
 
 ## Irpinia 1980: nasce il Settore Protezione Civile AGESCI
 
-**23 novembre 1980**, ore 19:34. Il terremoto dell'**Irpinia** colpisce la Campania e la Basilicata: 6,9 di magnitudo, quasi tremila morti, novemila feriti, 280.000 senzatetto. È la più grande catastrofe italiana dal dopoguerra.
+**23 novembre 1980**, ore 19:34. Il terremoto dell'**Irpinia** colpisce la Campania e la Basilicata: 6,9 di magnitudo, 2.734 morti, quasi novemila feriti, 280.000 senzatetto. È la più grande catastrofe italiana dal dopoguerra.
 
 Ancora una volta gli scout sono in prima linea. Ma dopo l'Irpinia il movimento prende una decisione storica: l'intervento spontaneo non basta più. Serve un'organizzazione interna **stabile**, addestrata, coordinata.
 
 {{< foto src="/images/2026-04-23-irpinia-1980-terremoto-scout.webp"
          alt="Mappa USGS dell'intensità sismica del terremoto dell'Irpinia del 23 novembre 1980"
-         caption="Mappa dell'intensità sismica del terremoto dell'Irpinia del 23 novembre 1980: 6,9 di magnitudo, quasi tremila morti, 280.000 senzatetto. Dopo questa catastrofe nasce il Settore Protezione Civile AGESCI. Foto: USGS — Public domain — via Wikimedia Commons." >}}
+         caption="Mappa dell'intensità sismica del terremoto dell'Irpinia del 23 novembre 1980: 6,9 di magnitudo, 2.734 morti, 280.000 senzatetto. Dopo questa catastrofe nasce il Settore Protezione Civile AGESCI. Foto: USGS — Public domain — via Wikimedia Commons." >}}
 
 Nel **1982**, il Consiglio Generale dell'AGESCI istituisce il **Settore Protezione Civile**. Da allora il Settore PC AGESCI è:
 
@@ -121,7 +121,7 @@ In ognuna di queste situazioni gli scout hanno fatto **gli stessi servizi**: ten
 
 ## L'Aquila 2009: turni in tendopoli
 
-**6 aprile 2009**, ore 03:33. L'Aquila trema. Magnitudo 6,3. Trecentootto morti, 1.600 feriti, 49.000 senzatetto nella prima settimana. Già nella prima settimana, i volontari del **Settore Protezione Civile AGESCI** sono in turno principalmente nell'**allestimento delle tendopoli**, in un'emergenza che si protrarrà per anni.
+**6 aprile 2009**, ore 03:33. L'Aquila trema. Magnitudo 6,3. 309 morti e oltre 1.500 feriti, secondo il Dipartimento della Protezione Civile; decine di migliaia di persone senza casa. Già nella prima settimana, i volontari del **Settore Protezione Civile AGESCI** sono in turno principalmente nell'**allestimento delle tendopoli**, in un'emergenza che si protrarrà per anni.
 
 {{< foto src="/images/2026-04-23-aquila-2009-terremoto.webp"
          alt="L'Aquila dopo il terremoto del 6 aprile 2009: edifici lesionati e centro storico inaccessibile"

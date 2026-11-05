@@ -65,7 +65,7 @@ Oggi la cornice è il Codice della protezione civile, del 2018. Definisce le qua
 
 Da allora, il sistema è stato messo alla prova tante volte: il terremoto dell'Aquila nel 2009, il Centro Italia nel 2016, la pandemia di Covid, le grandi alluvioni degli ultimi anni. Ogni volta, accanto a Vigili del Fuoco e istituzioni, migliaia di volontari arrivati da tutta Italia.
 
-E la protezione civile è diventata più vicina a te. Dal 2024 il sistema IT-alert può inviare un avviso direttamente sul telefono di chi si trova in una zona a rischio. Ma la tecnologia non basta: con il cambiamento del clima gli eventi estremi sono sempre più frequenti, e servono sempre più persone preparate.
+E la protezione civile è diventata più vicina a te. Dal 2024 il sistema IT-alert può inviare un avviso direttamente sul telefono di chi si trova in una zona colpita da una grave emergenza. Ma la tecnologia non basta: con il cambiamento del clima gli eventi estremi sono sempre più frequenti, e servono sempre più persone preparate.
 
 Ma dietro ogni legge, ogni sala operativa, ogni mezzo, c'è la stessa cosa: delle persone. Volontari. Il sistema funziona perché qualcuno, nel proprio paese, ha scelto di esserci. A Genzano di Roma, dal 1981.
 
@@ -74,6 +74,8 @@ Essere volontari non è solo guidare un mezzo. Monitoriamo il territorio. Siamo 
 **Il nostro volontario, dall'intervista della Regione Lazio.** La maggior parte degli incendi che stiamo affrontando purtroppo sono di mano dolosa. Persone che ogni giorno mettono a repentaglio la vita dei volontari e della popolazione. Dobbiamo renderci conto che ci sono persone in pericolo, e soprattutto dobbiamo fare attenzione alla nostra persona, perché se ci facciamo male noi non siamo in grado di aiutare. È un lavoro importante, è un lavoro che va fatto con testa, con cognizione di causa. Un mondo bellissimo, che te ne innamori e non riesci a farne a meno. Mi rivolgo a tutti voi giovani, come me e come tanti altri che siamo qui a far fronte a questo intervento: se vuoi darci una mano, diventa volontario. Non c'è Protezione Civile senza di te.
 
 **Cartello finale.** Diventa volontario: non c'è Protezione Civile senza di te. C'è un posto anche per te. www.protezionecivilegenzano.it, Gruppo Comunale Volontari, dal 1981.
+
+*Nota sui numeri: per la Marsica 1915 e per l'Irpinia 1980 la voce del documentario riporta stime diverse da quelle del Dipartimento della Protezione Civile, che conta [oltre 30.000 vittime per la Marsica](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-della-marsica/) e [2.734 per l'Irpinia](https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-dellirpinia/). Sono i dati che usiamo nel resto del sito.*
 
 ## Vuoi fare la tua parte?
 

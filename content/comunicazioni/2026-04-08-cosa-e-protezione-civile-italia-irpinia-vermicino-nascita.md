@@ -39,7 +39,7 @@ Ognuno di questi soggetti opera sotto il coordinamento del **Dipartimento della 
 
 ## L'Irpinia del 1980: il terremoto che cambiò il Paese
 
-La data è il **23 novembre 1980, ore 19:34**. Un sisma di **magnitudo 6.9** colpisce l'entroterra campano-lucano. Il bilancio è drammatico: **circa 2.914 vittime, 8.848 feriti e oltre 280.000 sfollati**.
+La data è il **23 novembre 1980, ore 19:34**. Un sisma di **magnitudo 6.9** colpisce l'entroterra campano-lucano. Il bilancio è drammatico: **2.734 vittime**, secondo il Dipartimento della Protezione Civile, **8.848 feriti** e **circa 280.000 sfollati**.
 
 Ma non è solo il numero delle vittime a segnare la memoria collettiva. A segnare la storia della protezione civile italiana sono le **difficoltà operative** nei primi giorni:
 

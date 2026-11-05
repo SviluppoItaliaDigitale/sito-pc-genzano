@@ -131,7 +131,7 @@ Non lasciare farmaci o alimenti sensibili al caldo in auto per lunghi periodi.
 In inverno (indicativamente novembre-marzo) aggiungi:
 
 - guanti pesanti, cappello, calze di ricambio;
-- catene da neve o pneumatici invernali, secondo l'ordinanza regionale in vigore;
+- catene da neve o pneumatici invernali, obbligatori dal 15 novembre al 15 aprile sulle strade dove l'ente che le gestisce li ha imposti (lo indicano i cartelli);
 - coperta in pile in più rispetto a quella termica;
 - bottiglietta di acqua per il radiatore.
 

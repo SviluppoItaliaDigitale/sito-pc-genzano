@@ -45,6 +45,9 @@ SIGLE_BLACKLIST = {
     # ordinali italiani come "I°", "II°"
     # nomi propri di paese/licenza/fonte che non sono sigle PC da spiegare
     "USA",  # nome di paese, non una sigla da glossario PC
+    "ARE",  # parola inglese ("Where ARE U", app 112 nelle pagine tradotte), non una sigla
+    "REAS",  # nome di un salone fieristico (REAS, Montichiari), citato solo negli articoli sull'evento
+    "FAO",  # agenzia ONU nominata per esteso nei testi (Giornata dell'alimentazione), non sigla di PC
     "FAQ",  # link a /faq/ nel testo, pagina già linkata e autoesplicativa
     "IGO",  # suffisso delle licenze Creative Commons per enti intergovernativi
              # (es. "CC BY-SA 3.0 IGO" nei crediti immagine dei dossier ESA/NASA)

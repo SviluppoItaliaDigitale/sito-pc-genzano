@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità AGID: stato di conformità, conten
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-10-17"
+dataUltimaRevisione: "2026-10-31"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -45,7 +45,7 @@ Il sito è **parzialmente conforme** ai requisiti dello standard europeo armoniz
 Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indicati. Il Gruppo si impegna a migliorare progressivamente.
 
 ### Widget di terze parti
-- **Strumenti meteo embed**: Windy.com, MeteoAM, Blitzortung e la mappa di terremoti.ingv.it sono caricati con sistema **click-to-load** (l'utente sceglie esplicitamente di attivarli). Le mappe dati del [Cruscotto](/cruscotto/) e il radar del Dipartimento della Protezione Civile si caricano invece all'apertura della pagina, perché mostrano dati che cambiano di continuo. In entrambi i casi l'interfaccia dipende dal fornitore esterno e non è sotto il nostro controllo.
+- **Strumenti meteo embed**: Windy.com, Blitzortung e la mappa di terremoti.ingv.it sono caricati con sistema **click-to-load** (l'utente sceglie esplicitamente di attivarli). Le mappe dati del [Cruscotto](/cruscotto/) e il radar del Dipartimento della Protezione Civile si caricano invece all'apertura della pagina, perché mostrano dati che cambiano di continuo. In entrambi i casi l'interfaccia dipende dal fornitore esterno e non è sotto il nostro controllo.
 - **Motivazione**: contenuto di terze parti (art. 1, par. 4, lett. e), Direttiva UE 2016/2102 — esclusione dei contenuti di terzi non finanziati, sviluppati né controllati dall'ente).
 - **Mitigazione**: per ogni widget è disponibile un link al sito ufficiale del fornitore, dove il cittadino può accedere ai contenuti con le opzioni di accessibilità del fornitore stesso.
 
@@ -64,9 +64,9 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 
 - **Dichiarazione redatta il**: 10 maggio 2026.
 - **Metodo di redazione**: **autovalutazione** condotta dal soggetto ai sensi dell'art. 3, comma 1, della Decisione di esecuzione (UE) 2018/1523.
-- **Data ultima revisione**: 26 settembre 2026 (obiettivi 2026-2027 riordinati in una sequenza coerente, con l'audit di terzi prima della piena conformità; obiettivo sui video riferito ai video pubblicati sul sito; frequenza dei controlli automatici allineata a quella reale; elenco reale delle pagine tradotte; la revisione precedente, del 21 settembre 2026, aveva aggiornato il conteggio dei PDF pubblicati — 51 → 54, con l'aggiunta di 3 ordinanze comunali — a seguito del nuovo audit automatico dello stesso giorno).
+- **Data ultima revisione**: 31 ottobre 2026 (chiarito che il calendario di AgID vale anche prima del deposito sul portale; la previsione di MeteoAM è ora un collegamento e non più un riquadro incorporato). Revisione del 26 settembre 2026: obiettivi 2026-2027 riordinati in una sequenza coerente, con l'audit di terzi prima della piena conformità; obiettivo sui video riferito ai video pubblicati sul sito; frequenza dei controlli automatici allineata a quella reale; elenco reale delle pagine tradotte; la revisione precedente, del 21 settembre 2026, aveva aggiornato il conteggio dei PDF pubblicati — 51 → 54, con l'aggiunta di 3 ordinanze comunali — a seguito del nuovo audit automatico dello stesso giorno).
 - **Dichiarazione sul portale AGID**: il deposito tramite la procedura ufficiale ([form.agid.gov.it](https://form.agid.gov.it/)) è in capo al **Comune di Genzano di Roma**, ente titolare del servizio: il Gruppo Comunale è una sua articolazione di volontariato e non dispone di un'utenza autonoma sul portale. Questa pagina è la dichiarazione nella sua forma sostanziale — contenuti non accessibili, metodo di valutazione, meccanismo di feedback e recapiti — e resta il riferimento pubblico finché il deposito formale non è completato. Il collegamento verrà aggiunto qui e nel piè di pagina non appena disponibile.
-- **Riesame**: questa pagina viene riesaminata e aggiornata **a ogni modifica sostanziale del sito**, oltre che con cadenza almeno annuale, come mostra la data di ultima revisione qui sopra. Il calendario formale degli adempimenti segue il deposito sul portale AgID e decorre da quello.
+- **Riesame**: questa pagina viene riesaminata e aggiornata **a ogni modifica sostanziale del sito**, oltre che con cadenza almeno annuale, come mostra la data di ultima revisione qui sopra. Il calendario di AgID vale comunque, deposito o no: per le pubbliche amministrazioni la dichiarazione si aggiorna **entro il 23 settembre** di ogni anno e gli obiettivi di accessibilità si pubblicano **entro il 31 marzo**. Il Gruppo riesamina questa pagina entro quelle date e la mette a disposizione del Comune per il deposito.
 - **Frequenza dei test automatici**: ogni 6 ore (workflow `audit-sito.yml`: integrità, ancore, parità dei materiali), due volte al giorno (workflow `lighthouse-audit.yml`) e a ogni proposta di modifica (workflow `pa11y-ci.yml`, verifica axe prima della pubblicazione).
 
 ## Informazioni sul sito
@@ -332,7 +332,7 @@ Puoi impostare contrasto elevato, tema scuro, dimensione testo e riduzione anima
 
 ## Contenuti di terze parti
 
-Alcune pagine includono widget e strumenti esterni, per esempio Windy.com, INGV, Radar DPC, MeteoAM e Blitzortung.
+Alcune pagine includono widget e strumenti esterni, per esempio Windy.com, INGV, Radar DPC e Blitzortung. La previsione di MeteoAM si apre sul sito dell'Aeronautica Militare con un collegamento.
 
 Questi contenuti sono caricati con un sistema **click-to-load**: prima compare un riquadro informativo con titolo, descrizione e fonte. Il widget esterno viene **scaricato e attivato solo se scegli esplicitamente** di cliccare il bottone "Carica la mappa", "Apri il radar", ecc.
 

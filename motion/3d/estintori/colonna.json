@@ -1,0 +1,153 @@
+{
+ "voce": [
+  {
+   "file": "voce/line_1.wav",
+   "inizio": 0.45
+  },
+  {
+   "file": "voce/line_2.wav",
+   "inizio": 8.55
+  },
+  {
+   "file": "voce/line_3.wav",
+   "inizio": 18.27
+  },
+  {
+   "file": "voce/line_4.wav",
+   "inizio": 48.86
+  },
+  {
+   "file": "voce/line_5.wav",
+   "inizio": 54.94
+  },
+  {
+   "file": "voce/line_6.wav",
+   "inizio": 64.25
+  },
+  {
+   "file": "voce/line_7.wav",
+   "inizio": 79.51
+  },
+  {
+   "file": "voce/line_8.wav",
+   "inizio": 92.73
+  },
+  {
+   "file": "voce/line_9.wav",
+   "inizio": 109.57
+  },
+  {
+   "file": "voce/line_10.wav",
+   "inizio": 118.86
+  },
+  {
+   "file": "voce/line_11.wav",
+   "inizio": 129.26
+  },
+  {
+   "file": "voce/line_12.wav",
+   "inizio": 141.74
+  },
+  {
+   "file": "voce/line_13.wav",
+   "inizio": 150.58
+  },
+  {
+   "file": "voce/line_14.wav",
+   "inizio": 163.71
+  },
+  {
+   "file": "voce/line_15.wav",
+   "inizio": 173.0
+  },
+  {
+   "file": "voce/line_16.wav",
+   "inizio": 182.19
+  }
+ ],
+ "durata": 188.71,
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 8.1
+  },
+  {
+   "inizio": 8.1,
+   "durata": 9.72
+  },
+  {
+   "inizio": 17.82,
+   "durata": 30.59
+  },
+  {
+   "inizio": 48.41,
+   "durata": 6.08
+  },
+  {
+   "inizio": 54.49,
+   "durata": 9.31
+  },
+  {
+   "inizio": 63.8,
+   "durata": 15.26
+  },
+  {
+   "inizio": 79.06,
+   "durata": 13.22
+  },
+  {
+   "inizio": 92.28,
+   "durata": 16.84
+  },
+  {
+   "inizio": 109.12,
+   "durata": 9.29
+  },
+  {
+   "inizio": 118.41,
+   "durata": 10.4
+  },
+  {
+   "inizio": 128.81,
+   "durata": 12.48
+  },
+  {
+   "inizio": 141.29,
+   "durata": 8.84
+  },
+  {
+   "inizio": 150.13,
+   "durata": 13.13
+  },
+  {
+   "inizio": 163.26,
+   "durata": 9.29
+  },
+  {
+   "inizio": 172.55,
+   "durata": 9.19
+  },
+  {
+   "inizio": 181.74,
+   "durata": 6.97
+  }
+ ],
+ "musica": [
+  {
+   "file": "audio/musica.mp3",
+   "inizio": 0,
+   "fine": 36.014,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 0.04
+  },
+  {
+   "file": "audio/musica.mp3",
+   "inizio": 36.014,
+   "fine": 188.71,
+   "da": 14.392,
+   "entrata": 0.04,
+   "uscita": 3.0
+  }
+ ]
+}

@@ -49,7 +49,7 @@ Ma la nebbia può diventare **improvvisamente impenetrabile**. Il banco che si a
 - **rinfrescare** liquido lavavetri e pulire tergicristalli;
 - **controllare** fari, anabbaglianti e fendinebbia;
 - **aggiornare** navigatore;
-- **avere** a bordo cellulare carico.
+- **avere** a bordo un cellulare carico.
 
 ### Durante la guida
 - **luci** anabbaglianti **sempre accese**;
@@ -112,7 +112,7 @@ Chi si muove senza auto:
 ### Nebbia in città
 - **attenzione** agli attraversamenti pedonali;
 - **velocità** drasticamente ridotta;
-- **segnalare** con luci di emergenza se guidate molto lente.
+- **segnalare** con luci di emergenza se si guida molto lenti.
 
 ## Sensori e assistenza alla guida
 

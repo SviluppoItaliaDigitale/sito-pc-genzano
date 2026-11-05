@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Tra il **14 e il 15 gennaio 1968** una sequenza di scosse sismiche colpì la **Valle del Belice**, in Sicilia occidentale. La scossa principale, di **magnitudo 6.4**, distrusse paesi interi: **Gibellina**, **Salaparuta**, **Poggioreale**, **Montevago** furono cancellati. Bilancio: **231 morti**, **623 feriti**, **circa 70.000 sfollati**.
+Tra il **14 e il 15 gennaio 1968** una sequenza di scosse sismiche colpì la **Valle del Belice**, in Sicilia occidentale. La scossa principale, di **magnitudo 6.4**, distrusse paesi interi: **Gibellina**, **Salaparuta**, **Poggioreale**, **Montevago** furono cancellati. Bilancio, secondo il Dipartimento della Protezione Civile: **296 morti**, **oltre mille feriti**, **quasi 100.000 senza casa**.
 
 ## Il primo grande terremoto del dopoguerra
 

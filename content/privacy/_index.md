@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-10-13"
+dataUltimaRevisione: "2026-10-31"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -22,7 +22,7 @@ Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivil
 
 ## Contatto privacy
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma è costituito dal Comune di Genzano di Roma ai sensi dell'art. 35 del D.Lgs. 1/2018 ed è iscritto al RUNTS nella sezione «Altri Enti del Terzo Settore». Per i trattamenti svolti nell'ambito dell'attività comunale di protezione civile, il Responsabile della protezione dei dati (RPD) di riferimento è quello designato dal Comune di Genzano di Roma, i cui recapiti sono pubblicati nella sezione privacy del [sito istituzionale del Comune](https://www.comune.genzanodiroma.roma.it/). Il sito, essendo statico, non raccoglie né conserva sui propri server dati personali oltre a quelli tecnici descritti più avanti; l'unica eccezione riguarda l'accesso alla piattaforma riservata ai volontari (Activepager), descritto più sotto nella sezione dedicata.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma è costituito dal Comune di Genzano di Roma ai sensi dell'art. 35 del D.Lgs. 1/2018 ed è iscritto al RUNTS nella sezione «Altri Enti del Terzo Settore». Per i trattamenti svolti nell'ambito dell'attività comunale di protezione civile, il Responsabile della protezione dei dati (RPD) di riferimento è quello designato dal Comune di Genzano di Roma, i cui recapiti sono pubblicati nell'[informativa privacy del Comune](https://www.comune.genzanodiroma.roma.it/informativa-privacy). Il sito, essendo statico, non raccoglie né conserva sui propri server dati personali oltre a quelli tecnici descritti più avanti; l'unica eccezione riguarda l'accesso alla piattaforma riservata ai volontari (Activepager), descritto più sotto nella sezione dedicata.
 
 Per informazioni sul trattamento dei dati personali, per esercitare i diritti previsti dal GDPR o per segnalare un problema relativo alla privacy puoi scrivere a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
@@ -117,7 +117,6 @@ Dopo il clic il browser riceve contenuti da quel servizio, che vede il tuo indir
 </thead>
 <tbody>
 <tr><td>Windy.com</td><td>Windyty, SE</td><td>Mappa meteo interattiva.</td><td>Allerte meteo.</td><td><a href="https://account.windy.com/agreements/windy-privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Windy</a></td></tr>
-<tr><td>MeteoAM</td><td>Aeronautica Militare</td><td>Previsione meteo ufficiale per Genzano di Roma.</td><td>Allerte meteo.</td><td><a href="https://www.meteoam.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy MeteoAM</a></td></tr>
 <tr><td>INGV — terremoti.ingv.it</td><td>Istituto Nazionale di Geofisica e Vulcanologia</td><td>Mappa interattiva dei terremoti recenti.</td><td>Rischio sismico.</td><td><a href="https://www.ingv.it/privacy" target="_blank" rel="noopener noreferrer">Privacy INGV</a></td></tr>
 <tr><td>Blitzortung / Lightning Maps</td><td>Rete volontaria internazionale</td><td>Mappa dei fulmini in tempo reale.</td><td>Temporali intensi.</td><td><a href="https://www.blitzortung.org/en/cover_your_area.php" target="_blank" rel="noopener noreferrer">Informazioni Blitzortung</a></td></tr>
 </tbody>
@@ -172,6 +171,8 @@ La pagina [Cartografia](/cartografia/) usa una mappa interattiva realizzata con 
 All'apertura della pagina, il browser scarica le sole porzioni di mappa necessarie alla visualizzazione. OpenStreetMap può quindi ricevere dati tecnici della richiesta, come indirizzo IP, area visualizzata e livello di zoom, secondo le proprie policy.
 
 La funzione **Centra sulla mia posizione** usa la Geolocation API del browser. La posizione viene letta solo dopo autorizzazione dell'utente, è usata localmente per centrare la mappa e non viene inviata al nostro server.
+
+Lo stesso vale per il pulsante **Trova l'area di attesa più vicina**, nelle pagine [Aree di attesa](/aree-attesa/), [Cartografia](/cartografia/) ed [Emergenza](/emergenza/): la posizione viene letta solo dopo la tua autorizzazione, la distanza dalle aree si calcola sul tuo dispositivo e la posizione non viene inviata a nessuno. Il collegamento «Indicazioni a piedi» apre Google Maps solo se lo premi, e contiene soltanto le coordinate dell'area di destinazione.
 
 ## Laboratorio meteo
 

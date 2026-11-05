@@ -3,7 +3,7 @@ title: "Dalle macerie, un sistema"
 date: 2026-06-08T19:30:00+02:00
 type: "dossier"
 tema: "storia"
-description: "La storia della Protezione Civile italiana: da Vajont, Friuli e Irpinia al «Fate presto» di Pertini, da Zamberletti alla legge 225 del 1992 e al Codice del 2018. Come l'Italia imparò a soccorrersi."
+description: "La storia della Protezione Civile italiana: da Vajont, Friuli e Irpinia al «Fate presto» del Mattino, da Zamberletti alla legge 225 del 1992 e al Codice del 2018. Come l'Italia imparò a soccorrersi."
 image: "/images/dossier/storia-longarone-1963.webp"
 image_alt: "Veduta in bianco e nero della valle del Vajont devastata: una vasta lingua di fango e detriti dove sorgeva l'abitato di Longarone"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -26,7 +26,7 @@ sezioni:
 {{< dossier-hero id="inizio" image="/images/dossier/storia-longarone-1963.webp" alt="Veduta aerea in bianco e nero della valle del Vajont dopo il disastro del 1963: una enorme distesa di fango e detriti ricopre il fondovalle dove sorgeva Longarone, con poche case superstiti sui bordi" eyebrow="Storia della Protezione Civile italiana" title="Dalle macerie,<br>un sistema" sub="La Protezione Civile italiana non è nata a tavolino. È nata dalle tragedie — il Vajont, il Friuli, l'Irpinia — e dalla rabbia di non essere stati pronti. È la storia di come un Paese imparò, a caro prezzo, a soccorrersi da solo." credito="Foto: US Army · pubblico dominio · Longarone, 1963" >}}
 
 {{< dossier-dati id="prima" image="/images/dossier/storia-longarone-1963.webp" alt="La valle del Vajont devastata, 1963" >}}
-{{< dossier-dato to="1908" label="Il terremoto di **Messina e Reggio**: oltre ottantamila morti. I soccorsi arrivano dall'esercito e dalla Marina, ma in ordine sparso, senza un piano" >}}
+{{< dossier-dato to="1908" label="Il terremoto di **Messina e Reggio**: circa ottantamila morti. I soccorsi arrivano dall'esercito e dalla Marina, ma in ordine sparso, senza un piano" >}}
 {{< dossier-dato to="1951" label="L'alluvione del **Polesine**: il Po rompe gli argini — circa cento vittime, centinaia di migliaia di sfollati. Ancora una volta si improvvisa" >}}
 {{< dossier-dato to="1963" label="Il **Vajont**: una frana nel bacino della diga genera un'onda che cancella Longarone. Quasi **duemila morti**" >}}
 {{< dossier-dato to="0" label="I sistemi **permanenti** di protezione civile in Italia, prima degli anni Ottanta: ogni emergenza si affrontava da capo, caso per caso" >}}
@@ -41,7 +41,7 @@ La ricostruzione del Friuli — *«dov'era, com'era»*, gestita dalle comunità 
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="irpinia" image="/images/dossier/storia-pertini.webp" alt="Fotografia in bianco e nero di Sandro Pertini in cappotto, accompagnato da militari e funzionari, mentre un corazziere fa il saluto" align="right" kicker="Irpinia · 23 novembre 1980" title="«Fate<br>presto»" credito="Sandro Pertini · foto d'archivio · pubblico dominio, via Wikimedia Commons" >}}
-Il **23 novembre 1980** un terremoto di magnitudo 6,9 colpisce l'**Irpinia**: quasi tremila morti tra Campania e Basilicata. Ma per giorni, in molti paesi, non arriva nessuno.
+Il **23 novembre 1980** un terremoto di magnitudo 6,9 colpisce l'**Irpinia**: 2.734 morti tra Campania e Basilicata. Ma per giorni, in molti paesi, non arriva nessuno.
 
 Il Presidente della Repubblica **Sandro Pertini** va sui luoghi e, in televisione, denuncia con parole durissime i ritardi dello Stato. *«Fate presto»* titola il quotidiano *Il Mattino*: due parole che diventano il simbolo di un Paese che non può più permettersi l'improvvisazione.
 

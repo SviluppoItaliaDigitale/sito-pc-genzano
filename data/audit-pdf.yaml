@@ -1,10 +1,10 @@
-ultimo_audit: '2026-10-27'
-totale: 72
+ultimo_audit: '2026-11-05'
+totale: 73
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 35
+  TERZO: 36
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -88,6 +88,20 @@ documenti:
   pages: 4
   errors: []
   text_chars_sample: 5412
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-10-28-ordinanza-sindacale-26-divieto-vetro-halloween-genzano.pdf
+  file: 2026-10-28-ordinanza-sindacale-26-divieto-vetro-halloween-genzano.pdf
+  size_kb: 148.8
+  sha256: 4e847f48bbae7ffa11ba33d4b8b0e6f43ec5d4fa2678e69c938a3bf4ad18b97e
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 5
+  errors: []
+  text_chars_sample: 0
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
@@ -595,8 +609,8 @@ documenti:
   verdict: PARZIALE
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
-  size_kb: 702.3
-  sha256: a7019a140bf3f0fa497bdc290a8471f86377873f9e6f4b7c1f5ee0e787691b02
+  size_kb: 703.4
+  sha256: 44a249908ad8c5e61f07826b6c7c7b37acc65cb63a6dc83e27a439f12c7a71f4
   searchable: true
   tagged: false
   language: it
@@ -638,13 +652,13 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2461.5
-  sha256: fabe28f9afa3c2e7025054f684dec4d6bf56e68caa064ac3d329ec4da4b9eabf
+  size_kb: 2475.0
+  sha256: 7267716c34f1a86a244920822a3ad0987ed1960a632b3495666dfe9ed61795e9
   searchable: true
   tagged: true
   language: en-US
   title: null
-  pages: 71
+  pages: 72
   errors: []
   text_chars_sample: 1002
   origine: GRUPPO

@@ -25,7 +25,7 @@ Il tuo palazzo ha molte famiglie. In caso di emergenza, è difficile uscire tutt
 
 Nel palazzo vivono persone diverse. Ci sono anziani, bambini, persone disabili. Le scale sono la via per uscire. L'ascensore non si usa in emergenza. Gli impianti del gas, dell'acqua e della luce sono in comune. Non tutti i vicini si conoscono bene.
 
-## Quali emergenze può capitare
+## Quali emergenze possono capitare
 
 Queste cose possono succedere in un palazzo:
 
@@ -53,7 +53,7 @@ Queste cose possono succedere in un palazzo:
 
 ### Cosa fare in caso di emergenza
 
-**Incendio:** avvisa i vicini. Chiama il 112, il numero unico di emergenza. Esci dalle scale. Non usare l'ascensore.
+**Incendio:** avvisa i vicini. Chiama il 112, il numero unico di emergenza. Scendi per le scale. Non usare l'ascensore.
 
 **Fuga di gas:** chiudi il contatore del gas. Non accendere la luce. Non usare fiamme. Chiama il 112.
 
@@ -61,7 +61,7 @@ Queste cose possono succedere in un palazzo:
 
 **Black-out:** controlla il tuo contatore. Avvisa l'amministratore.
 
-**Terremoto:** aspetta che la scossa finisca. Poi esci dalle scale. Vai nel cortile o in uno spazio aperto vicino.
+**Terremoto:** aspetta che la scossa finisca. Poi scendi per le scale. Vai nel cortile o in uno spazio aperto vicino.
 
 ### Il punto di ritrovo
 

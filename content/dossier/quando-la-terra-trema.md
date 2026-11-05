@@ -45,19 +45,19 @@ Quattro terremoti, in poco più di un secolo, hanno segnato il Paese: **Messina*
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="messina-1908" image="/images/dossier/sisma-messina-1908.webp" alt="Foto storica in bianco e nero: folla di superstiti, donne con foulard chiari e bambini, in una strada di Messina dopo il terremoto del 1908; sulla sinistra un edificio con insegna «Le Phénix», sullo sfondo edifici danneggiati" align="top" kicker="28 dicembre 1908 · Stretto di Messina" title="Il sisma più grave<br>della storia d'Europa" credito="Foto: U.S. Naval History and Heritage Command (NH 1177), Messina gennaio 1909 · pubblico dominio, via Wikimedia Commons" >}}
-Alle 5:20 del **28 dicembre 1908** un terremoto di magnitudo **Mw 7.1** colpì lo Stretto di Messina. Circa dieci minuti dopo, un violento **maremoto** investì le due coste. Messina e Reggio Calabria furono quasi del tutto distrutte.
+Alle 5:20 del **28 dicembre 1908** un terremoto di magnitudo **Mw 7.1** colpì lo Stretto di Messina. Pochi minuti dopo, un violento **maremoto** investì le due coste. Messina e Reggio Calabria furono quasi del tutto distrutte.
 
-Le vittime furono **circa 80.000** (le stime variano): il disastro sismico più catastrofico mai avvenuto in Europa. Da quella tragedia nacque, nel 1909, la prima norma antisismica italiana.
+Le vittime furono **circa 80.000**, secondo gli studi più recenti: il disastro sismico più catastrofico mai avvenuto in Europa. Da quella tragedia nacque, nel 1909, la prima norma antisismica italiana.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="friuli-1976" image="/images/dossier/sisma-friuli-1976.webp" alt="Foto in bianco e nero: le rovine del Duomo di Venzone dopo il terremoto del Friuli del 1976, con archi in pietra ancora in piedi, una montagna innevata sullo sfondo e una staccionata con cartello «Pericolo»" align="top" kicker="6 maggio 1976 · Friuli" title="Dov'era,<br>com'era" credito="Foto: Duomo di Venzone (UD) dopo il terremoto del Friuli, settembre 1976 · YukioSanjo · CC BY-SA 3.0, via Wikimedia Commons" >}}
-Il **6 maggio 1976**, alle 21:00, una scossa di magnitudo **Mw 6.4-6.5** colpì il Friuli. Le vittime furono **circa 990**, gli sfollati oltre 45.000. Centri come Gemona, Osoppo e **Venzone** furono rasi al suolo.
+Il **6 maggio 1976**, alle 21:00, una scossa di magnitudo **Mw 6.4-6.5** colpì il Friuli. Le vittime furono **965** in tutta la sequenza, i senzatetto oltre 45.000. Centri come Gemona, Osoppo e **Venzone** furono rasi al suolo.
 
 La ricostruzione divenne un modello: ricostruire **"dov'era e com'era"**, con i sindaci e le comunità protagoniste. Venzone, oggi, è di nuovo in piedi.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="irpinia-1980" image="/images/dossier/sisma-irpinia-1980.webp" alt="Foto in bianco e nero: strada bagnata di Sant'Angelo dei Lombardi dopo il terremoto dell'Irpinia del 1980, con edifici crollati su se stessi, un'automobile ribaltata sul tetto a destra, un furgone e una balaustra alberata che si affaccia sulla vallata a sinistra" align="left" kicker="23 novembre 1980 · Irpinia" title="Da qui nasce<br>la Protezione Civile" credito="Foto: Sant'Angelo dei Lombardi (AV) dopo il terremoto dell'Irpinia, 23 novembre 1980 · Michele V. · CC BY-SA 4.0, via Wikimedia Commons" >}}
-Il **23 novembre 1980**, alle 19:34, il terremoto dell'**Irpinia** (magnitudo **Mw 6.9**) colpì Campania e Basilicata. Le vittime furono **circa 2.900** (le stime variano), gli sfollati quasi 280.000. Centri come **Sant'Angelo dei Lombardi** crollarono su se stessi.
+Il **23 novembre 1980**, alle 19:34, il terremoto dell'**Irpinia** (magnitudo **Mw 6.9**) colpì Campania e Basilicata. Le vittime furono **2.734**, secondo il Dipartimento della Protezione Civile; gli sfollati circa 280.000. Centri come **Sant'Angelo dei Lombardi** crollarono su se stessi.
 
 I ritardi nei soccorsi fecero capire che serviva un sistema organizzato. Da quella esperienza, guidata da Giuseppe Zamberletti, nasce la **moderna Protezione Civile** italiana.
 {{< /dossier-scena >}}
@@ -69,13 +69,13 @@ Ricordare questi eventi, con rispetto, serve a non considerare il terremoto un p
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="centro-italia" image="/images/dossier/sisma-amatrice.webp" alt="Edifici crollati e cumuli di macerie ad Amatrice dopo il terremoto del Centro Italia del 2016, all'alba" align="top" kicker="2016 · Centro Italia" title="Una lunga<br>sequenza" credito="Amatrice 2016 · foto terremocentroitalia · CC BY 2.0" >}}
-Il **24 agosto 2016**, alle 3:36, una scossa di magnitudo **6.0** colpì **Amatrice** e Accumoli, causando la quasi totalità delle **299 vittime** della sequenza. Il **30 ottobre 2016** seguì la scossa più forte, magnitudo **6.5**, vicino a Norcia.
+Il **24 agosto 2016**, alle 3:36, una scossa di magnitudo **6.0** colpì **Amatrice** e Accumoli, causando **299 vittime**. Il **30 ottobre 2016** seguì la scossa più forte, magnitudo **6.5**, vicino a Norcia.
 
 Le immagini di Amatrice sono diventate il simbolo di quanto un evento naturale possa cambiare per sempre una comunità. Ricordarle serve a non considerare il terremoto un problema lontano.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="castelli" image="/images/dossier/vulcano-montecavo.webp" alt="Monte Cavo, la cima boscosa del Vulcano Laziale dei Castelli Romani, si alza sopra le sponde verdi e le acque scure del Lago Albano, con cielo azzurro e nuvole" align="top" kicker="Vicino a casa" title="La sismicità<br>dei Castelli Romani" credito="Monte Cavo · foto NikonZ7II · CC BY-SA 4.0 (Wikimedia Commons)" >}}
-I Castelli Romani sorgono su un vulcano quiescente, il **Vulcano Laziale**, e Genzano è in **zona sismica 2B** (sismicità media). La loro sismicità è fatta soprattutto di **scosse deboli e frequenti**, di tipo vulcano-tettonico: di rado i terremoti dell'area sono stati forti.
+I Castelli Romani sorgono su un vulcano quiescente, il **Vulcano Laziale**, e Genzano è in **zona sismica 2B**, dove secondo il Dipartimento della Protezione Civile forti terremoti sono possibili. La loro sismicità è fatta soprattutto di **scosse deboli e frequenti**, di tipo vulcano-tettonico: di rado i terremoti dell'area sono stati forti.
 
 Non vivremo i terremoti distruttivi di Messina o dell'Irpinia: sono eventi di un'altra natura, lontani da qui. Ma la memoria locale resta viva: il **26 agosto 1806** un terremoto causò gravi danni proprio a **Genzano** (intensità VIII MCS, secondo l'INGV), Rocca di Papa e Velletri. Un richiamo a non considerarci immuni.
 {{< /dossier-scena >}}
@@ -83,7 +83,7 @@ Non vivremo i terremoti distruttivi di Messina o dell'Irpinia: sono eventi di un
 {{< dossier-dati id="numeri" >}}
 {{< dossier-dato to="7896" label="I **comuni italiani**, tutti classificati in zona sismica: nessun territorio è a rischio zero (ISTAT 2025)" >}}
 {{< dossier-dato to="4" label="Le **zone sismiche** in cui è diviso il Paese" >}}
-{{< dossier-dato to="2" label="La **zona sismica** di Genzano: zona 2, sottozona **B**, sismicità media (Regione Lazio, 2009)" >}}
+{{< dossier-dato to="2" label="La **zona sismica** di Genzano: zona 2, sottozona **B**, con un'accelerazione attesa fra 0,15 e 0,20 g (Regione Lazio, 2009)" >}}
 {{< dossier-dato da="1806" label="Gli **anni** dal terremoto storico che colpì Genzano" >}}
 {{< /dossier-dati >}}
 

@@ -52,7 +52,7 @@ Esta página le ofrece la **información esencial** en español. La web completa
 
 <div class="en-card">
 <h2>🌍 Terremoto</h2>
-<p>Italia es un país sísmico. Genzano está en <strong>zona sísmica 2B</strong> (peligrosidad media). Si siente temblores:</p>
+<p>Italia es un país sísmico. Genzano está en <strong>zona sísmica 2B</strong>, donde son posibles terremotos fuertes. Si siente temblores:</p>
 <ul class="en-list">
 <li>Refúgiese debajo de una mesa robusta o contra una pared interior</li>
 <li>Cúbrase la cabeza con las manos</li>
@@ -119,7 +119,7 @@ Esta página le ofrece la **información esencial** en español. La web completa
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italia dispone de un sistema nacional de alerta llamado <strong>IT-alert</strong>. En caso de emergencia mayor envía un mensaje sonoro directamente a todos los teléfonos del área afectada — sin app ni internet; el teléfono solo debe estar encendido y con cobertura de red móvil. El mensaje está en italiano e inglés. Más info: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italia dispone de un sistema nacional de alerta llamado <strong>IT-alert</strong>. En caso de emergencia mayor envía un mensaje con un sonido característico a los teléfonos móviles del área afectada — sin app ni internet; el teléfono solo debe estar encendido y con cobertura de red móvil. El mensaje está en italiano e inglés. Más info: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">

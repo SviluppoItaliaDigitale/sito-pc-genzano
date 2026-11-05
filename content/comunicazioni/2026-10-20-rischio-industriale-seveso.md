@@ -73,7 +73,7 @@ Chiedete al vostro Comune se il territorio è interessato. **Genzano non ospita 
 
 ## Cosa fare in caso di incidente
 
-Se l'allarme viene dato (sirena, SMS IT-alert, auto di Polizia):
+Se l'allarme viene dato (sirena, messaggio IT-alert, auto di Polizia):
 
 1. **rientrare** in casa;
 2. **chiudere** porte e finestre;
@@ -116,3 +116,5 @@ Il rischio industriale non deve **spaventare**, ma essere **conosciuto**. I pian
 - [IT-alert](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
 
 In emergenza: **112**.
+
+> **Nota di aggiornamento (5 novembre 2026).** Abbiamo corretto la descrizione di IT-alert: non è un SMS.

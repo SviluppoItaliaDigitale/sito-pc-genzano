@@ -1,48 +1,48 @@
 {
-  "aggiornato": "2026-10-27T10:49:06+00:00",
+  "aggiornato": "2026-11-05T13:26:53+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-27T10:32:24Z",
+      "ultimo_run": "2026-11-05T13:13:34Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-27T10:45:30Z",
+      "ultimo_run": "2026-11-05T13:25:21Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
-      "nome": "Audit settimanale del sito",
+      "nome": "Audit del sito",
       "file": "audit-sito.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-27T04:53:49Z",
-      "descrizione": "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
+      "ultimo_run": "2026-11-05T06:33:19Z",
+      "descrizione": "Controlla contenuti, link, accessibilità e coerenza ogni 6 ore."
     },
     {
       "nome": "Verifica dopo la pubblicazione",
       "file": "smoke-test-post-deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-27T10:19:37Z",
+      "ultimo_run": "2026-11-05T10:08:47Z",
       "descrizione": "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
     },
     {
       "nome": "Allineamento delle pagine online",
       "file": "verifica-deploy-aruba.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-27T10:19:37Z",
+      "ultimo_run": "2026-11-05T10:08:47Z",
       "descrizione": "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
     },
     {
-      "nome": "Audit prestazioni e accessibilita",
+      "nome": "Audit prestazioni e accessibilità",
       "file": "lighthouse-audit.yml",
       "stato": "success",
-      "ultimo_run": "2026-10-26T22:41:54Z",
-      "descrizione": "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
+      "ultimo_run": "2026-11-04T23:42:37Z",
+      "descrizione": "Misura velocità, accessibilità e SEO con Lighthouse due volte al giorno su tre pagine."
     }
   ]
 }

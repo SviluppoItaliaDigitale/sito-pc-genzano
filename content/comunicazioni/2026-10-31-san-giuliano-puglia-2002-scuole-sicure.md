@@ -1,7 +1,7 @@
 ---
 title: "San Giuliano di Puglia, 31 ottobre 2002: il terremoto che cambiò la sicurezza sismica delle scuole italiane"
-date: 2026-10-31
-description: "31 ottobre 2002: magnitudo 5.8 a San Giuliano di Puglia, crollo della scuola Jovine. Da lì la classificazione sismica nazionale e l'adeguamento delle scuole."
+date: 2026-10-31T00:01:00+02:00
+description: "31 ottobre 2002: magnitudo 5.7 a San Giuliano di Puglia, crollo della scuola Jovine. Da lì la classificazione sismica nazionale e l'adeguamento delle scuole."
 
 badge: "Informazione"
 priorita: "normale"
@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigilia di Ognissanti, ultimo giorno di scuola della settimana per i bambini di **San Giuliano di Puglia**, piccolo Comune di **mille abitanti** della provincia di Campobasso, in **Molise**. Una scossa di **magnitudo 5.8** della scala Richter, con epicentro fra le province di Campobasso e Foggia, scosse il paese per circa venti secondi.
+Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigilia di Ognissanti, ultimo giorno di scuola della settimana per i bambini di **San Giuliano di Puglia**, piccolo Comune di **mille abitanti** della provincia di Campobasso, in **Molise**. Una scossa di **magnitudo momento 5.7**, con epicentro fra le province di Campobasso e Foggia, scosse il paese per circa venti secondi.
 
 {{< foto src="/images/2026-10-31-san-giuliano-parco-memoria.webp"
          alt="Veduta notturna di San Giuliano di Puglia: sullo sfondo il borgo antico illuminato, in primo piano decine di piccole luci allineate su steli verticali che compongono il Parco della Memoria dedicato alle vittime del terremoto del 2002"
@@ -23,9 +23,9 @@ Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigi
 
 In quei venti secondi, la **scuola elementare "Francesco Jovine"** di San Giuliano collassò sopra una sola classe: la **prima elementare**. Sotto le macerie morirono **27 bambini** — tutti i bambini della classe — e la loro maestra, **Carmela Ciniglio**. Sei alunni nati nel 1996 e venti compagni di classe nati nel 1996, una generazione intera di un piccolo paese, persi in pochi secondi. La scuola era stata costruita negli anni Cinquanta e poi sopraelevata di un piano negli anni Settanta, con tecniche e materiali che non avrebbero superato alcun controllo sismico moderno.
 
-San Giuliano non era una zona "ufficialmente" sismica. Nel **catalogo sismico italiano del 2002**, il Molise era classificato come zona **non sismica** — ovvero senza obbligo di costruzioni antisismiche. La scuola non aveva alcun motivo, secondo le norme dell'epoca, di essere progettata per resistere a un terremoto. Eppure il terremoto arrivò, e la scuola crollò.
+Prima del 2003 la classificazione sismica italiana non copriva tutto il territorio: molti Comuni non avevano alcun obbligo di costruire con criteri antisismici. Secondo le indagini giudiziarie, la scuola era stata costruita e ampliata senza adeguati criteri sismici. Eppure il terremoto arrivò, e la scuola crollò.
 
-Da quel **31 ottobre** è cambiato per sempre il modo in cui l'Italia guarda al **rischio sismico delle scuole**. Ventiquattro anni dopo, San Giuliano resta uno degli eventi più dolorosi della storia repubblicana e uno dei più importanti per la sua **eredità normativa**: nessun Comune italiano è più "non sismico", e ogni scuola pubblica nuova o ristrutturata deve essere antisismica.
+Da quel **31 ottobre** è cambiato per sempre il modo in cui l'Italia guarda al **rischio sismico delle scuole**. Ventiquattro anni dopo, San Giuliano resta uno degli eventi più dolorosi della storia repubblicana e uno dei più importanti per la sua **eredità normativa**. Da allora nessun Comune italiano è più "non sismico", e ogni scuola pubblica nuova o ristrutturata deve essere antisismica.
 
 {{< foto src="/images/2026-10-31-san-giuliano-puglia-scuola-jovine-soccorritori.webp"
          alt="Foto a colori del 31 ottobre 2002 o giorni immediatamente successivi: un gruppo di soccorritori — vigili del fuoco con casco rosso e divisa nera-gialla, operatori della Croce Rossa con divisa rossa-bianca, infermieri del 118 con divisa giallo fluo, alcuni con mascherine antipolvere — è al lavoro fra le macerie della scuola elementare \"F. Jovine\" di San Giuliano di Puglia. Le pietre e i blocchi di cemento crollati formano un cumulo basso, sopra il quale i soccorritori scavano e si passano materiale."
@@ -33,9 +33,9 @@ Da quel **31 ottobre** è cambiato per sempre il modo in cui l'Italia guarda al 
 
 ## Cosa è successo davvero
 
-La scossa principale del **31 ottobre 2002**, alle 11:32, ebbe epicentro a circa **15 chilometri** da San Giuliano, alla profondità di circa **20 chilometri**. Una scossa di **magnitudo moderata** (5.8) che, in zone con costruzioni antisismiche, avrebbe causato pochi danni e nessuna vittima. A San Giuliano, invece, distrusse parzialmente o totalmente molti edifici. Il caso più drammatico fu, appunto, la **scuola "F. Jovine"**.
+La scossa principale del **31 ottobre 2002**, alle 11:32, ebbe epicentro nell'area di **Bonefro e San Giuliano di Puglia** (magnitudo momento **5.7**, secondo le ricostruzioni sismologiche successive). A San Giuliano distrusse parzialmente o totalmente molti edifici. Il caso più drammatico fu, appunto, la **scuola "F. Jovine"**.
 
-L'edificio scolastico — secondo le perizie giudiziarie successive — era stato costruito **senza adeguati criteri sismici** (non c'erano norme che lo richiedessero), aveva subito una **sopraelevazione** non strutturalmente coerente, presentava **muri portanti con tessitura debole** e una **copertura pesante** in laterocemento. Quando le onde sismiche colpirono, il piano superiore si "**spalmò**" su quello inferiore in pochi istanti.
+Secondo le perizie giudiziarie successive, l'edificio scolastico era stato costruito **senza adeguati criteri sismici** (non c'erano norme che lo richiedessero). Aveva subito una **sopraelevazione** non strutturalmente coerente, presentava **muri portanti con tessitura debole** e una **copertura pesante** in laterocemento. Quando le onde sismiche colpirono, il piano superiore si "**spalmò**" su quello inferiore in pochi istanti.
 
 I primi soccorsi arrivarono in poche ore: **Vigili del fuoco**, **118**, **Croce Rossa**, **Polizia**, **Carabinieri**, volontari di protezione civile, **Forze armate**. Furono mobilitate squadre USAR (*Urban Search and Rescue*) da tutta Italia. Alcuni bambini furono **salvati vivi** dopo ore sotto le macerie, ma per la maggior parte non c'era stato tempo di reazione.
 
@@ -55,7 +55,7 @@ La stessa OPCM 3274 e successive integrazioni hanno introdotto l'**obbligo di ve
 Il **Decreto del Ministero delle Infrastrutture 14 gennaio 2008**, poi aggiornato dal **DM 17 gennaio 2018** (NTC 2018), ha introdotto i **moderni criteri di progettazione antisismica** per le nuove costruzioni e per gli interventi sull'esistente. Sono fra le norme tecniche più avanzate d'Europa, basate sui principi della **Performance-Based Design** (progettazione per livelli di prestazione attesi).
 
 **4. Sismabonus per privati.**
-Negli anni successivi sono stati introdotti **incentivi fiscali** (Sismabonus, oggi anche con quote del 110% nel periodo 2020-2024) per spingere i privati a verificare e migliorare sismicamente i propri edifici, soprattutto in zone 1, 2A e 2B.
+Negli anni successivi sono stati introdotti **incentivi fiscali** (il Sismabonus, con aliquote e condizioni che le leggi di bilancio hanno modificato più volte: per l'importo in vigore si consulta l'Agenzia delle Entrate) per spingere i privati a verificare e migliorare sismicamente i propri edifici nelle zone a maggiore pericolosità.
 
 ## Cosa abbiamo costruito da allora
 
@@ -96,7 +96,7 @@ Ventiquattro anni dopo, San Giuliano resta una ferita aperta. Ma ogni scuola ita
 
 ## Per approfondire (fonti istituzionali)
 
-- [INGV Terremoti — Speciale San Giuliano di Puglia 2002](https://www.ingv.it/)
+- [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/)
 - [Dipartimento di Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/)
 - [OPCM 20 marzo 2003, n. 3274 — Normattiva](https://www.normattiva.it/)
 - [Norme Tecniche per le Costruzioni 2018 — Ministero delle Infrastrutture](https://www.mit.gov.it/)

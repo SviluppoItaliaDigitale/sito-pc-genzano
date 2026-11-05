@@ -47,7 +47,9 @@
     'triage-start':           { nome: 'Triage S.T.A.R.T.',          fascia: 'ragazzi',  icona: 'bi-heart-pulse-fill' },
     'linea-tempo-eventi':     { nome: 'Linea del tempo',            fascia: 'ragazzi',  icona: 'bi-calendar-event-fill' },
     'cartelli-pericolo':      { nome: 'Cartelli di Pericolo',       fascia: 'ragazzi',  icona: 'bi-exclamation-diamond-fill' },
-    'scelte-difficili':       { nome: 'Scelte Difficili',           fascia: 'ragazzi',  icona: 'bi-signpost-split-fill' }
+    'scelte-difficili':       { nome: 'Scelte Difficili',           fascia: 'ragazzi',  icona: 'bi-signpost-split-fill' },
+    // Per tutti (simulazione sulla mappa di Genzano)
+    'genzano-si-prepara':     { nome: 'Genzano si prepara',         fascia: 'tutti',    icona: 'bi-map-fill' }
   };
 
   var IDS = Object.keys(CATALOGO);
