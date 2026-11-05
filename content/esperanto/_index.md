@@ -53,7 +53,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 
 <div class="en-card">
 <h2>🌍 Tertremo</h2>
-<p>Italio estas tertrema lando. Genzano estas en <strong>tertrema zono 2B</strong> (mezgrava risko). Se vi sentas tremon:</p>
+<p>Italio estas tertrema lando. Genzano estas en <strong>tertrema zono 2B</strong>, kie fortaj tertremoj eblas. Se vi sentas tremon:</p>
 <ul class="en-list">
 <li>Ŝirmu vin sub solida tablo aŭ apud interna muro</li>
 <li>Kovru vian kapon per la manoj</li>

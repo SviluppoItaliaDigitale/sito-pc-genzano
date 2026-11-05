@@ -52,7 +52,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 
 <div class="en-card">
 <h2>🌍 Cutremur</h2>
-<p>Italia este o țară seismică. Genzano se află în <strong>zona seismică 2B</strong> (pericol mediu). Dacă simțiți un cutremur:</p>
+<p>Italia este o țară seismică. Genzano se află în <strong>zona seismică 2B</strong>, unde sunt posibile cutremure puternice. Dacă simțiți un cutremur:</p>
 <ul class="en-list">
 <li>Adăpostiți-vă sub o masă solidă sau lângă un perete interior</li>
 <li>Acoperiți-vă capul cu mâinile</li>

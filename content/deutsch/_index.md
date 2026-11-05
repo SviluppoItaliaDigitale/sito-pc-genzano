@@ -52,7 +52,7 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 
 <div class="en-card">
 <h2>🌍 Erdbeben</h2>
-<p>Italien ist ein Erdbebengebiet. Genzano liegt in <strong>Erdbebenzone 2B</strong> (mittlere Gefährdung). Wenn Sie Erschütterungen spüren:</p>
+<p>Italien ist ein Erdbebengebiet. Genzano liegt in <strong>Erdbebenzone 2B</strong>, in der starke Erdbeben möglich sind. Wenn Sie Erschütterungen spüren:</p>
 <ul class="en-list">
 <li>Suchen Sie Schutz unter einem stabilen Tisch oder an einer Innenwand</li>
 <li>Schützen Sie Ihren Kopf mit den Händen</li>

@@ -52,7 +52,7 @@ Esta página oferece-lhe as **informações essenciais** em português. O site c
 
 <div class="en-card">
 <h2>🌍 Sismo</h2>
-<p>A Itália é um país sísmico. Genzano fica em <strong>zona sísmica 2B</strong> (perigosidade média). Se sentir tremores:</p>
+<p>A Itália é um país sísmico. Genzano fica em <strong>zona sísmica 2B</strong>, onde são possíveis sismos fortes. Se sentir tremores:</p>
 <ul class="en-list">
 <li>Abrigue-se debaixo de uma mesa robusta ou contra uma parede interior</li>
 <li>Cubra a cabeça com as mãos</li>
