@@ -1,6 +1,6 @@
 ---
 title: "Terremoto di magnitudo 5.1 al largo della costa calabra sud-orientale"
-date: 2026-01-10
+date: 2026-01-10T00:01:00+02:00
 description: "Alle 5.53 di sabato 10 gennaio l'INGV localizza nel Mar Ionio un terremoto di magnitudo 5.1, a 58 km di profondità, avvertito in Calabria, Sicilia e Puglia."
 badge: "Informazione"
 priorita: "normale"

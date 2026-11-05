@@ -1,6 +1,6 @@
 ---
 title: "Il Codice della protezione civile compie otto anni"
-date: 2026-01-02
+date: 2026-01-02T00:01:00+02:00
 description: "Il 2 gennaio 2018 il decreto legislativo n. 1 riunisce in un unico testo le regole del Servizio nazionale della protezione civile."
 badge: "Informazione"
 priorita: "normale"

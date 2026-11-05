@@ -1,6 +1,6 @@
 ---
 title: "Terremoto profondo Mw 6.1 al largo della Calabria, avvertito dal Lazio alla Sicilia"
-date: 2026-06-02
+date: 2026-06-02T00:01:00+02:00
 description: "Alle 0.12 l'INGV registra una scossa Mw 6.1 (ML 6.2) in mare, a circa 250 km di profondità. Avvertita dal Lazio alla Sicilia, nessun danno segnalato."
 badge: "Informazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Test di IT-alert nelle Marche: simulato il collasso della Diga di Castreccioni"
-date: 2026-06-20
+date: 2026-06-20T00:03:00+02:00
 description: "Sabato 20 giugno IT-alert prova l'allarme in 14 comuni delle province di Ancona e Macerata: lo scenario è il collasso della Diga di Castreccioni."
 badge: "Informazione"
 priorita: "normale"

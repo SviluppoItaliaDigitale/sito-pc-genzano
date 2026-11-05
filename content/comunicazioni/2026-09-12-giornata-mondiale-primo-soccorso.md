@@ -1,6 +1,6 @@
 ---
 title: "Giornata mondiale del primo soccorso: i tre principi di chi presta aiuto"
-date: 2026-09-12
+date: 2026-09-12T00:01:00+02:00
 description: "Sabato 12 settembre è la Giornata mondiale del primo soccorso. Che cosa dicono le linee guida europee 2025 su chi aiuta nei primi minuti."
 badge: "Informazione"
 priorita: "normale"

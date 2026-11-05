@@ -1,6 +1,6 @@
 ---
 title: "Incendio a Crans-Montana: mobilitato il Servizio nazionale per aiutare la Svizzera"
-date: 2026-01-02
+date: 2026-01-02T00:02:00+02:00
 description: "Dopo l'incendio di Capodanno in un locale di Crans-Montana, il Ministro dispone la mobilitazione straordinaria del Servizio nazionale per i feriti ustionati."
 badge: "Informazione"
 priorita: "normale"

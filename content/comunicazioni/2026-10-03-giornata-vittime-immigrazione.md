@@ -1,6 +1,6 @@
 ---
 title: "Giornata nazionale in memoria delle vittime dell'immigrazione: perché il 3 ottobre"
-date: 2026-10-03
+date: 2026-10-03T00:01:00+02:00
 description: "Sabato 3 ottobre la Repubblica ricorda chi è morto cercando di arrivare in Italia. La legge del 2016 e il naufragio di Lampedusa del 2013."
 badge: "Informazione"
 priorita: "normale"
