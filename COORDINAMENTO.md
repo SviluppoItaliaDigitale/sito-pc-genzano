@@ -122,6 +122,7 @@ I testi delle routine di Claude che lavorano qui sono in `riferimenti-interni/ro
 
 - Li prepara Claude con `python3 scripts/passa-a.py nuovo` (ramo `chatgpt/…`, voce in bacheca, PR in bozza, testo di avvio con la richiesta intera); li avvia Alessandro in Codex Cloud incollando il testo di avvio e, a lavoro finito, premendo «Create PR» nel task (i soli due gesti a mano); li controlla Claude con `passa-a.py stato` e li chiude con `passa-a.py chiudi --pr N --consegna M` (pull request di consegna portata nel ramo e chiusa con titolo neutro, commit riscritti a nome di Alessandro se serve, voce di bacheca archiviata con l'esito, PR pronta, controlli verdi, squash merge). Dettagli e criteri nel protocollo comune, § «Passaggio a ChatGPT».
 - Titolo e descrizione della PR descrivono il lavoro senza nomi di strumenti (lo script si rifiuta di aprirla se ne trova uno); la richiesta per esteso sta in questa bacheca e nel testo di avvio. Codex non tocca la bacheca: l'esito lo scrive `chiudi`. Il commento `@codex …` resta solo per riprovare il canale automatico (`nuovo --con-codex`, `riavvia --con-codex`): `chiudi` lo toglie insieme alle risposte dello strumento. Le revisioni automatiche di Codex sulle PR pronte restano visibili (una revisione del bot non si può cancellare, a differenza dei commenti): dipendono da un'impostazione di Codex che solo Alessandro può cambiare, e per ora ha scelto di lasciarle (13/10/2026).
+- **Avvio con una riga (dal 05/11/2026).** Istruzione di Alessandro: «Devi scrivere sul file coordinamento altrimenti è troppo complicato così copiare». Dopo `passa-a.py nuovo`, Claude porta la voce del passaggio anche sul ramo principale, con una PR della sola bacheca unita a controlli verdi, prima di dare il via ad Alessandro. Il testo da incollare in Codex Cloud diventa una riga: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #N.», con l'ambiente «sito-pc-genzano» e il ramo principale. Ogni voce porta il riquadro «Per chi la esegue» (non toccare la bacheca, non unire, riassunto finale). Prima di `chiudi`, il ramo `chatgpt/…` si allinea a `main` prendendo la bacheca di `main`. Finché `passa-a.py` non lo fa da sé, questi passi li fa Claude.
 - Se la sessione che ha preparato il passaggio non lo chiude, lo chiude la routine giornaliera delle issue (14:07 italiane, rule 10 § «Lavorazione autonoma delle issue automatiche»).
 
 ### Quando qui ChatGPT non unisce
@@ -149,11 +150,142 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-
+- **2026-11-05 — Claude — Correzione delle informazioni su IT-alert** (ramo `claude/correzioni-it-alert-20261105`; PR da aprire)
+  - Che cosa: l'articolo del 19 maggio è riscritto sulle pagine ufficiali di IT-alert e del Dipartimento; restano la sua versione facile, le frasi su IT-alert e «precipitazioni intense» negli altri contenuti, le nuove voci del registro dei dati, i controlli e la pubblicazione.
+  - File: articoli e versioni facili su IT-alert del 15 maggio, 19 maggio, 11 giugno, 10 luglio e 27 agosto; dossier «Il messaggio che salva»; traccia d'esame della secondaria di secondo grado e indice delle schede, con i pacchetti rigenerati; articoli su Soverato, Marche e Livorno; gioco «Scelte difficili»; assistente; percorsi didattici; `a11y-toolbar.css`; `data/dati_canonici.yaml`. Se un altro lavoro tocca l'indice delle schede o `data/materiali_lezione.json`, dopo il merge i file generati si rigenerano con gli script.
+  - Prossimo passo: versione facile del 19 maggio, poi gli altri file, i controlli, la PR e il merge.
+- **2026-11-05 — Claude — Articoli d'archivio del 2026, un articolo per evento, senza social** (ramo `claude/archivio-2026-articoli-20261105`; PR da aprire, la unisce Alessandro)
+  - Che cosa: 26 articoli datati al giorno dell'evento (ricorrenze, eventi nazionali, norme, atti del Comune), tutti con `social: false`; gli script dei social imparano a saltare gli articoli con `social: false`.
+  - File: gli articoli nuovi in `content/comunicazioni/` (dal 2 gennaio al 3 ottobre 2026) con le loro cover; `archetypes/comunicazioni.md`; `scripts/genera-social.py`, `genera-immagini-social.py`, `check-grafiche-social.py`, `social-pronti.py`, `social_comune.py`, `README-social.md`; rule 04b e 10; `CLAUDE.md`.
+  - Prossimo passo: cover mancanti, revisione, PR. Merge solo con l'OK di Alessandro.
+- **2026-11-05 — Claude — Da cominciare dopo le due voci sopra:** scheda «Acqua non potabile» nel kit di emergenza per la casa e selettore del livello di lettura (Completo, B1, A2).
 
 ## Richieste
 
-Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune.
+Lavori che una sessione (o Alessandro) chiede all'altra. Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola (protocollo comune, § «Passaggio a ChatGPT»: voce qui sotto con la nota «preparata da Claude, da avviare a mano in Codex Cloud» e PR in bozza) e li avvia Alessandro in Codex Cloud con il testo di avvio; per le richieste a Gemini, e per quelle che Alessandro scrive qui a mano, resta l'avviso «guarda la bacheca». Formato nel protocollo comune. Dal 05/11/2026 la voce di ogni passaggio sta anche qui sul ramo principale, e per avviarla in Codex Cloud basta una riga: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #N.» (§ «Passaggi a ChatGPT in questo repository»).
+
+- **2026-11-05 — da Claude a ChatGPT — Schede sui residuati bellici nel percorso «Oggetti sconosciuti»** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1703; ramo `chatgpt/schede-residuati-bellici-20261105`)
+  - **Avvio (Alessandro): una riga.** In Codex Cloud, ambiente «sito-pc-genzano», ramo principale (non serve sceglierne un altro). Incolla: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #1703.» A lavoro finito, «Create PR» dal task. La pull request di consegna la porta nel ramo e la chiude Claude (`passa-a.py chiudi --pr 1703 --consegna M`).
+  - **Per chi la esegue.** Esegui le sette parti qui sotto, punto per punto, con i controlli che indicano. Parti dal ramo principale; se il task è partito dal ramo `chatgpt/schede-residuati-bellici-20261105`, va bene lo stesso. Non modificare COORDINAMENTO.md: l'esito lo scrive chi chiude il lavoro. Messaggi di commit in italiano, senza nomi di strumenti. Non unire nulla e non segnare pronta nessuna pull request. Alla fine riassumi in poche righe che cosa hai fatto, che cosa resta e perché.
+  - **1. Obiettivo.**
+    Due schede stampabili nuove sui residuati bellici (ordigni della seconda guerra mondiale rimasti inesplosi), una per la primaria (8–11 anni) e una per la secondaria di primo grado (11–14 anni), inserite nel percorso «Oggetti sconosciuti» già pubblicato e collegate dai due kit per le scuole. Nessun annuncio: niente articoli, niente homepage, niente social, nessuna data sulla scheda.
+  - **2. File.**
+    Nuovi:
+    - static/formazione/schede-stampabili/oggetti-un-oggetto-della-guerra-primaria/index.html
+    - static/formazione/schede-stampabili/oggetti-residuati-bellici-secondaria1/index.html
+
+    Da modificare:
+    - content/formazione/kit-scuola-primaria.md (elenco del percorso «Oggetti sconosciuti», subito dopo «Una segnalazione chiara»)
+    - content/formazione/kit-scuola-secondaria-primo-grado.md (elenco del percorso «Oggetti sconosciuti», subito dopo «Segnali e supposizioni»)
+    - static/formazione/schede-stampabili/index.html (una scheda nel blocco «Oggetti sconosciuti — Primaria», una nel blocco «Oggetti sconosciuti — Secondaria I»)
+    - static/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/index.html (le due schede nell'elenco del percorso e le loro risposte)
+
+    Generati dagli script, mai a mano: static/formazione/schede-stampabili/pacchetti/*.html, gli ZIP dei kit prodotti da scripts/genera-pacchetti-kit.py, data/materiali_lezione.json, il collegamento «Pronto per la LIM» e l'URL canonico che gli script aggiungono alle due schede nuove.
+  - **3. Che cosa fare.**
+    1. Leggi per intero queste pagine del percorso e usale come modello: oggetti-una-segnalazione-chiara-primaria, oggetti-prima-di-raccogliere-primaria, oggetti-petardi-e-oggetti-metallici-secondaria1, oggetti-segnali-e-supposizioni-secondaria1, oggetti-sconosciuti-guida-adulti. Le schede nuove ne copiano struttura, fogli di stile, classi, intestazione, nota per l'adulto dentro la scheda, soluzione capovolta (classe `soluzione-capovolta`), riquadro delle fonti numerate e piè di pagina.
+    2. Stessi principi del percorso, scritti nella guida per gli adulti: ai ragazzi non si chiede di riconoscere un ordigno; si insegna a fermarsi, non toccare, non calciare, non spostare, non raccogliere, allontanarsi, ricordare il posto guardandolo da lontano e avvisare un adulto; l'adulto chiama il 112 da un luogo sicuro, dopo essersi allontanato e prima di usare telefono o radio; non esiste una distanza unica da insegnare; i disegni non rappresentano distanze di sicurezza; nessuna paura come leva; gli esempi sono inventati e lo si dice.
+    3. Scheda primaria «Un oggetto della guerra» (8–11 anni, circa 20 minuti):
+       - spiegazione breve: durante la seconda guerra mondiale in Italia caddero bombe e proiettili; alcuni non sono esplosi e possono trovarsi ancora nel terreno, nei boschi, nei campi, nei cantieri, nei laghi o in mare; anche dopo tanti anni possono essere pericolosi; li possono toccare solo gli artificieri delle Forze armate;
+       - racconto inventato: Flavio e Silvia passeggiano con il nonno Pasquale; nel terreno smosso vedono un oggetto di metallo arrugginito che non conoscono; Silvia vorrebbe portarlo a scuola, Flavio la ferma; si allontanano e il nonno, da lontano, chiama il 112 e spiega dove si trovano;
+       - attività 1: mettere in ordine 4–5 azioni;
+       - attività 2: vero o falso con il perché (per esempio «Se è arrugginito non è più pericoloso»: falso; «Lo porto ai Carabinieri per farlo vedere»: falso; «Lo dico subito a un adulto»: vero; «Mi avvicino per fotografarlo»: falso);
+       - attività 3: completare una segnalazione chiara (dove sei, che cosa vedi da lontano, chi è con te), senza avvicinarsi;
+       - nota per l'adulto e soluzione capovolta, come nelle altre schede.
+    4. Scheda secondaria I «Residuati bellici: che cosa fare se li trovi» (11–14 anni, circa 30 minuti):
+       - che cosa sono i residuati bellici e perché si trovano ancora oggi (scavi e lavori, terreni smossi, acque che si abbassano, mare);
+       - chi fa che cosa: chi trova si allontana e chiama il 112; intervengono le forze dell'ordine; la bonifica e il disinnesco li fanno gli artificieri delle Forze armate (in mare la Marina Militare); per gli ordigni più grandi, durante il disinnesco, le autorità possono disporre l'evacuazione dell'area. Scrivi solo i passaggi confermati dalle fonti del punto 5;
+       - cinque idee sbagliate da smontare, ognuna con il perché: «È vecchio, non esplode più»; «Lo sposto in un posto sicuro»; «Lo porto io in caserma»; «Faccio un video da vicino»; «Se è piccolo non è pericoloso»;
+       - attività: una notizia inventata (dichiarata inventata) di un ritrovamento in un cantiere, da analizzare (chi ha fatto bene, che cosa cambieresti); una segnalazione chiara al 112 (dove, che cosa si vede da lontano, se ci sono persone vicine), senza avvicinarsi;
+       - nota per l'adulto e soluzione capovolta.
+    5. Fonti: ogni fatto delle due schede ha una fonte primaria che hai letto, citata nel riquadro numerato delle fonti con ente, titolo e link: Ministero della Difesa e Forze armate (difesa.it, esercito.difesa.it, marina.difesa.it) per chi fa bonifica e disinnesco; Normattiva, solo sul testo vigente, se citi una norma (per esempio il Codice dell'ordinamento militare, decreto legislativo 15 marzo 2010, n. 66, per la bonifica da ordigni bellici); siti delle Prefetture (prefettura.it) per le evacuazioni durante i disinneschi; Treccani per i fatti storici. Per il 112 usa la stessa fonte della guida per gli adulti. Ciò che non trovi confermato non si scrive, e lo elenchi nel riassunto. Nessuna cifra senza fonte.
+    6. Nessuna data nelle due schede: niente «aggiornata al», «fonti consultate il», «nuovo» (istruzione di Alessandro: queste schede non si datano oggi). Le date delle verifiche scrivile solo nel riassunto finale.
+    7. Kit: aggiungi una voce per scheda negli elenchi del percorso, nello stesso formato delle voci vicine: `- [Titolo](/formazione/schede-stampabili/<cartella>/) — <età>. <obiettivo in una frase>.`
+    8. Indice delle schede: una scheda per blocco, copiando il markup delle schede vicine (icona Bootstrap Icons, fascia, durata, descrizione che finisce con «Con nota per l'adulto e soluzione capovolta.», pulsante «Apri e stampa» con il suo aria-label).
+    9. Guida per gli adulti: aggiungi le due schede dove la guida elenca le schede del percorso e le loro risposte nella sezione delle risposte, con la stessa numerazione progressiva e lo stesso stile.
+    10. Rigenera i file generati: `python3 scripts/genera-pacchetti-schede.py`, `python3 scripts/genera-pacchetti-kit.py`, `python3 scripts/genera-materiali-lezione.py`, `python3 scripts/segno-lim-statiche.py`, `python3 scripts/aggiungi-canonical-statiche.py` (prima leggi `--help` di ciascuno).
+  - **4. Vincoli.**
+    - Leggi prima AGENTS.md e, nella cartella delle regole del repository, lim-scuole.md, 02-content-design-pa.md (§ «Personaggi delle storie per bambini») e 09-regole-contenuti-qualita.md (§ 15-ter, stampa).
+    - Italiano corretto e semplice, frasi brevi, voce attiva, del tu ai ragazzi; nessun divieto o garanzia assoluti senza scenario.
+    - Personaggi: protagonista Flavio; altri nomi solo fra Silvia, Maria, Elio, Pasquale, Lina, Alessandro, Christian, Marco.
+    - Stampa A4: ogni scheda senza fogli bianchi né fogli quasi vuoti con le tre serie di caratteri del controllo; se serve, scala di stampa della sola scheda (`html { font-size: N% }`), al massimo il 12% in meno, poi si stringono gli spazi.
+    - Niente JavaScript nuovo. Licenza come le altre schede (CC BY-NC-SA 4.0).
+    - Nessun nome di strumenti o servizi automatici nei file, nei metadati e nei messaggi di commit. Prima del primo commit: `bash scripts/imposta-identita-git.sh` (autore Alessandro Cuollo).
+    - Uno strumento che manca si installa (`apt-get update` e `apt-get install`, poi pip o npm); se non ci riesci, scrivi nel riassunto che cosa hai provato e con quale errore.
+  - **5. Controlli.**
+    Tutti con esito senza errori:
+    - `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (nessun ERROR nel log)
+    - `python3 scripts/check-refusi.py` sui file del punto 2
+    - `python3 scripts/check-parita-schede.py`
+    - `python3 scripts/genera-materiali-lezione.py --check`
+    - `python3 scripts/segno-lim-statiche.py --check`
+    - `python3 scripts/aggiungi-canonical-statiche.py --check --sitemap public/sitemap.xml`
+    - `python3 scripts/check-qualita-pagine.py public`
+    - `python3 scripts/check-fogli-stampa.py --da-git origin/main`
+    - `python3 scripts/check-lim.py --da-git origin/main`
+    - `python3 scripts/check-dati-canonici.py` e `python3 scripts/cerca-incongruenze.py --da-git origin/main`
+  - **6. Consegna.**
+    Solo i file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti. Alla fine un riassunto breve: fatto / non fatto / perché, le fonti lette con la data della lettura, i controlli eseguiti con l'esito. `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla, non segnare pronta nessuna pull request, non toccare file fuori dall'elenco del punto 2, non scrivere articoli né pagine nuove, non inventare dati: se manca qualcosa, scrivilo nel riassunto finale.
+
+- **2026-11-05 — da Claude a ChatGPT — Tre articoli d'archivio sugli interventi del Gruppo riportati dalle cronache locali** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1704; ramo `chatgpt/articoli-cronache-interventi-20261105`)
+  - **Avvio (Alessandro): una riga.** In Codex Cloud, ambiente «sito-pc-genzano», ramo principale (non serve sceglierne un altro). Incolla: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #1704.» A lavoro finito, «Create PR» dal task. La pull request di consegna la porta nel ramo e la chiude Claude (`passa-a.py chiudi --pr 1704 --consegna M`); la unisce Alessandro, dopo il confronto con il registro interventi.
+  - **Per chi la esegue.** Esegui le sette parti qui sotto, punto per punto, con i controlli che indicano. Parti dal ramo principale; se il task è partito dal ramo `chatgpt/articoli-cronache-interventi-20261105`, va bene lo stesso. Non modificare COORDINAMENTO.md: l'esito lo scrive chi chiude il lavoro. Messaggi di commit in italiano, senza nomi di strumenti. Non unire nulla e non segnare pronta nessuna pull request. Alla fine riassumi in poche righe che cosa hai fatto, che cosa resta e perché.
+  - **1. Obiettivo.**
+    Tre articoli d'archivio, datati al giorno dei fatti, sugli interventi del Gruppo riportati dalle cronache locali. Restano in questa pull request: la unisce Alessandro dopo averli confrontati con il registro interventi.
+  - **2. File.**
+    - content/comunicazioni/2026-01-06-maltempo-albero-croce-santa-squadra-ciampino.md
+    - content/comunicazioni/2026-01-08-sottopasso-appia-ciampino-idrovore.md
+    - content/comunicazioni/2026-07-20-chiavi-tombino-centro-storico.md
+    - static/images/ con le tre cover prodotte da `scripts/genera-cover.py` (un file per articolo, nome uguale allo slug)
+  - **3. Che cosa fare.**
+    1. Leggi le pagine di cronaca qui sotto e verifica ogni fatto. Nel corpo entrano solo i fatti confermati dalla pagina, riscritti con parole tue.
+       - Articolo del 6 gennaio 2026. Fatti da verificare: dopo giorni di pioggia un albero cade vicino alla Croce Santa e danneggia due auto; i volontari del Gruppo fanno i rilievi e lo rimuovono, insieme a Carabinieri e Polizia Locale (https://www.castellinotizie.it/2026/01/06/genzano-cade-albero-vicino-la-croce-santa-danneggiate-due-auto-fratelli-ditalia-allattacco-ancora-una-tragedia-sfiorata/); dopo un intervento su un albero in centro, una squadra del Gruppo parte per Ciampino con un'idrovora, su disposizione della Sala Operativa regionale (https://www.ilmamilio.it/wp/2026/01/maltempo-la-protezione-civile-di-genzano-in-azione-squadra-inviata-a-ciampino/); lungo via Montegiove il sottopasso ferroviario al confine fra Genzano e Ariccia torna percorribile grazie al lavoro delle squadre del Gruppo (https://www.ilmamilio.it/wp/2026/01/castelli-roma-e-provincia-nella-morsa-del-maltempo-175-interventi-dei-vigili-del-fuoco-tra-allagamenti-e-alberi-caduti/).
+       - Articolo dell'8 gennaio 2026. Fatti da verificare: nei giorni dopo il maltempo i Gruppi di Genzano e di Albano svuotano con le idrovore il sottopasso dell'Appia a Ciampino, ancora allagato (https://www.castellinotizie.it/2026/01/08/ciampino-protezione-civile-di-genzano-e-albano-in-azione-per-liberare-il-sottopasso-dellappia-ancora-allagato-dopo-il-maltempo/).
+       - Articolo del 20 luglio 2026. Fatti da verificare: su richiesta della Polizia Locale, i volontari recuperano da un tombino del centro storico le chiavi cadute a una persona, dopo una lunga ricerca (https://www.castellinotizie.it/2026/07/20/genzano-perde-le-chiavi-nel-tombino-interviene-la-protezione-civile-e-gliele-restituisce-dopo-una-lunga-ricerca/).
+       Se una pagina non si apre o non conferma un fatto, quel fatto non si scrive e lo elenchi nel riassunto.
+    2. Frontmatter di ogni articolo, in quest'ordine:
+       ```
+       title: "<titolo informativo, senza enfasi>"
+       date: <vedi punto 6>
+       description: "<massimo 160 caratteri>"
+       badge: "Attività"
+       priorita: "normale"
+       autore: "Gruppo Comunale Volontari PC Genzano"
+       image: "/images/<slug>.webp"
+       image_alt: "Cover dell'articolo: <titolo>"
+       scadenza: ""
+       area: "Genzano di Roma"   (per l'articolo dell'8 gennaio: "Ciampino (RM)")
+       allegati: []
+       social: false
+       social_citazione: ""
+       social_punti: []
+       draft: false
+       ```
+       `social: false` resta anche se oggi gli script dei social non lo conoscono ancora: lo riconosceranno con un altro lavoro già in corso. Gli articoli d'archivio non vanno sui social.
+    3. Struttura del corpo: un primo paragrafo concreto (giorno con la data estesa, luogo, che cosa è successo); una o due sezioni `##` con il racconto; la sezione `## Cosa impariamo` con 2–4 punti di prevenzione ricavati solo dai fatti raccontati, ognuno collegato a una pagina del sito che esiste (per esempio /rischi-prevenzione/rischio-idrogeologico/, /rischi-prevenzione/temporali-intensi/, /rischi-prevenzione/vento-forte/, /numeri-utili/); la frase «Il Gruppo Comunale non può essere attivato direttamente dai cittadini: in emergenza chiama il 112.»; infine `## Per approfondire` con «Sul nostro sito:» (pagine del sito) e «Le cronache locali:» (nome della testata, titolo e link di ogni pagina usata).
+    4. Regole sulle cronache: parafrasi sempre, mai frasi copiate o virgolettati, nessun nome di testata nel corpo (se serve, «secondo le cronache locali»), testate solo in fondo. Orari arrotondati («nel pomeriggio», «in serata»), mai al minuto. Niente nomi di privati, targhe, indirizzi privati, condizioni di salute. Chi ha chiesto l'intervento: si nomina solo un ente (Polizia Locale, Carabinieri, Sala Operativa regionale); per un cittadino si scrive in forma neutra («dopo una segnalazione»). Nessuna polemica politica: il titolo della prima pagina di Castelli Notizie riporta l'attacco di un partito e non va ripreso in nessun modo.
+    5. Un mezzo o un'attrezzatura si nominano solo come li chiama content/chi-siamo/_index.md, § «Mezzi e attrezzature principali»; «idrovora» va bene come nome generico.
+    6. Date: `date: 2026-01-06` e `date: 2026-01-08` in formato semplice. Il 20 luglio ha già due articoli con `T00:01:00+02:00` e `T00:02:00+02:00`: il nuovo prende `date: 2026-07-20T00:03:00+02:00` e gli altri due non si toccano.
+    7. Cover: per ogni articolo `python3 scripts/genera-cover.py content/comunicazioni/<file>.md`, poi apri l'immagine e controlla che mostri titolo e fascia.
+  - **4. Vincoli.**
+    - Leggi prima AGENTS.md e, nella cartella delle regole del repository, 02-content-design-pa.md (§ «Fonti giornalistiche negli articoli», § «Resoconti degli interventi»).
+    - Italiano corretto, frasi sotto le 20 parole, voce attiva, niente burocratese e niente tic da testo generato (vedi AGENTS.md § 3.5).
+    - Badge «Attività». Nessuna versione facile per questi tre articoli.
+    - Nessun nome di strumenti o servizi automatici nei file, nei metadati e nei messaggi di commit. Prima del primo commit: `bash scripts/imposta-identita-git.sh` (autore Alessandro Cuollo).
+    - Uno strumento che manca si installa (`apt-get update` e `apt-get install`, poi pip); se non ci riesci, scrivi nel riassunto che cosa hai provato.
+  - **5. Controlli.**
+    Tutti senza errori:
+    - `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (nessun ERROR nel log)
+    - `python3 scripts/check-refusi.py` sui tre articoli
+    - `python3 scripts/check-grafiche-social.py` sui tre articoli
+    - `python3 scripts/cerca-incongruenze.py --da-git origin/main`
+    - `python3 scripts/check-dati-canonici.py`
+    - `git diff --name-only origin/main` deve mostrare solo i file del punto 2
+  - **6. Consegna.**
+    Solo i file del punto 2, con messaggi di commit in italiano e senza nomi di strumenti. Alla fine un riassunto breve: fatto / non fatto / perché, e per ogni articolo l'elenco dei dati presi dalla stampa che Alessandro deve confermare con il registro interventi (giorno, luogo, che cosa, chi ha attivato il Gruppo, mezzi). `COORDINAMENTO.md` non si tocca.
+  - **7. Che cosa non fare.**
+    Non unire nulla, non segnare pronta la pull request (la unisce Alessandro dopo il confronto con il registro), non toccare file fuori dall'elenco del punto 2, non inventare fatti: se manca qualcosa, scrivilo nel riassunto finale.
 
 - **2026-11-05 — da Claude a ChatGPT — Schede sui residuati bellici nel percorso «Oggetti sconosciuti»** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1703; ramo `chatgpt/schede-residuati-bellici-20261105`)
   - **Avvio a mano (Alessandro).** In Codex Cloud: ambiente del repository (per social-pc-genzano, «tutti-i-repository»), ramo `chatgpt/schede-residuati-bellici-20261105` se il selettore lo offre, poi il testo di avvio (intestazione più le sette parti qui sotto: lo stampa `passa-a.py nuovo`, lo ristampa `passa-a.py riavvia --pr 1703`). A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1703 --consegna M`.
