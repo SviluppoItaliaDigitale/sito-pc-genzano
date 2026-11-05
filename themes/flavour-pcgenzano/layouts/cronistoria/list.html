@@ -1,0 +1,184 @@
+{{/* Cronistoria dell'anno: il 2026 giorno per giorno (/cronistoria/).
+
+     Mette insieme, per ogni giorno:
+     - le voci di data/cronistoria.yaml (ricorrenze, eventi nazionali,
+       norme, atti del Comune di Genzano, notizie di stampa), con la data
+       del giorno a cui si riferiscono e la loro fonte;
+     - gli articoli di content/comunicazioni/ dello stesso anno (le versioni
+       in italiano semplice non sono nelle liste e restano fuori).
+     Una voce con «articolo» (nome del file in content/comunicazioni/)
+     racconta lo stesso fatto di un nostro articolo:
+     - voce di stampa: non compare da sola, la testata va sotto l'articolo
+       («Ne ha scritto anche»);
+     - ogni altra voce: mostra l'articolo («Sul nostro sito») e l'articolo
+       non compare una seconda volta da solo.
+     Se l'articolo non è nella build, la voce resta da sola e la build lo
+     segnala con un avviso.
+     Mostra le voci fino a oggi, in ora italiana: si confrontano istanti
+     (mezzanotte del giorno a Roma contro «now»), non date scritte, così il
+     risultato non dipende dal fuso del computer che costruisce il sito.
+     Gli articoli con data futura non sono nella build (buildFuture = false).
+     Anno: parametro «anno» della pagina (predefinito 2026).
+     Stile: sezione CRONISTORIA di custom.css. */}}
+{{ define "main" }}
+{{- $anno := string (.Params.anno | default 2026) -}}
+{{- $adesso := now -}}
+{{- $s := newScratch -}}
+{{- $etichette := dict
+      "ricorrenza" "Ricorrenza"
+      "nazionale" "In Italia"
+      "norma" "Norme"
+      "comune" "Comune di Genzano"
+      "stampa" "Sulla stampa"
+      "sito" "Sul nostro sito" -}}
+
+{{- /* 1. Voci curate a mano. */ -}}
+{{- $voci := slice -}}
+{{- with site.Data.cronistoria }}{{ with .voci }}{{ $voci = . }}{{ end }}{{ end -}}
+{{- $verifica := "" -}}
+{{- range $voci -}}
+  {{- $d := time.Format "2006-01-02" .data -}}
+  {{- $inizio := time.AsTime (printf "%sT00:00:00" $d) "Europe/Rome" -}}
+  {{- if and (hasPrefix $d (printf "%s-" $anno)) (not ($adesso.Before $inizio)) -}}
+    {{- with .verificato_il }}{{ $v := time.Format "2006-01-02" . }}{{ if gt $v $verifica }}{{ $verifica = $v }}{{ end }}{{ end -}}
+    {{- $p := false -}}
+    {{- with .articolo -}}
+      {{- with site.GetPage (printf "/comunicazioni/%s" .) -}}
+        {{- $p = . -}}
+      {{- else -}}
+        {{- warnf "cronistoria: l'articolo %q della voce del %s non è nella build; la voce compare da sola" . $d -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if and $p (eq .tipo "stampa") -}}
+      {{- $s.Add (printf "stampa:%s" $p.RelPermalink) (slice (dict "titolo" .titolo "fonte" .fonte "url" .url)) -}}
+    {{- else -}}
+      {{- $voce := dict "tipo" .tipo "titolo" .titolo "testo" (.testo | default "") "fonte" (.fonte | default "") "url" (.url | default "") -}}
+      {{- with $p -}}
+        {{- $voce = merge $voce (dict "pagina_titolo" .Title "pagina_url" .RelPermalink) -}}
+        {{- $s.Set (printf "assorbito:%s" .RelPermalink) true -}}
+      {{- end -}}
+      {{- $s.Add (printf "g:%s" $d) (slice $voce) -}}
+      {{- $s.SetInMap "giorni" $d true -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 2. Articoli del sito dello stesso anno, in ordine di pubblicazione. */ -}}
+{{- range sort (where site.RegularPages "Section" "comunicazioni") "Date" -}}
+  {{- if and (eq (.Date.Format "2006") $anno) (not .Params.versione_facile_di) (not ($s.Get (printf "assorbito:%s" .RelPermalink))) -}}
+    {{- $d := .Date.Format "2006-01-02" -}}
+    {{- $s.Add (printf "g:%s" $d) (slice (dict "tipo" "sito" "titolo" .Title "pagina_url" .RelPermalink)) -}}
+    {{- $s.SetInMap "giorni" $d true -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $giorni := $s.Get "giorni" -}}
+{{- range $d, $_ := $giorni }}{{ $s.SetInMap "mesi" (substr $d 0 7) true }}{{ end -}}
+
+<div class="page-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" . }}
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+
+      {{- if ne .Params.tts false }}
+      <div class="strumenti-articolo strumenti-lettura" role="region" aria-label="Strumenti di lettura della pagina">
+        <div class="strumenti-articolo-header">
+          <i class="bi bi-info-circle me-2" aria-hidden="true"></i>
+          Leggi questa pagina in altri modi
+        </div>
+        <div class="strumenti-articolo-body">
+          {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".cronistoria-corpo") }}
+        </div>
+      </div>
+      {{- end }}
+
+      <div class="cronistoria-corpo">
+      <div class="list-intro-content mb-4">
+        {{ .Content }}
+      </div>
+
+      {{- with $giorni }}
+      <nav class="cronistoria-mesi tts-salta mb-4" aria-label="Mesi della cronistoria">
+        <ul class="list-inline mb-0">
+          {{- range $m, $_ := $s.Get "mesi" }}
+          <li class="list-inline-item"><a href="#mese-{{ $m }}">{{ (time.AsTime (printf "%s-01" $m)) | time.Format "January" | strings.FirstUpper }}</a></li>
+          {{- end }}
+        </ul>
+      </nav>
+
+      {{- range $m, $_ := $s.Get "mesi" }}
+      <section class="cronistoria-mese" aria-labelledby="mese-{{ $m }}">
+        <h2 id="mese-{{ $m }}" class="h3 mt-5">{{ (time.AsTime (printf "%s-01" $m)) | time.Format "January 2006" | strings.FirstUpper }}</h2>
+        <ol class="pcg-timeline" role="list">
+          {{- range $d, $_ := $giorni }}
+          {{- if hasPrefix $d $m }}
+          <li class="pcg-timeline-voce" role="listitem" id="giorno-{{ $d }}">
+            <div class="pcg-timeline-marker" aria-hidden="true"></div>
+            <div class="pcg-timeline-card">
+              <h3 class="pcg-timeline-anno"><time datetime="{{ $d }}">{{ (time.AsTime $d) | time.Format ":date_full" | strings.FirstUpper }}</time></h3>
+              <ul class="cronistoria-voci list-unstyled mb-0">
+                {{- range $s.Get (printf "g:%s" $d) }}
+                {{- $v := . }}
+                <li class="cronistoria-voce">
+                  <span class="cronistoria-badge cronistoria-badge-{{ $v.tipo }}">{{ index $etichette $v.tipo | default "Altro" }}</span>
+                  {{- if eq $v.tipo "sito" }}
+                  <a class="cronistoria-titolo" href="{{ $v.pagina_url }}">{{ $v.titolo }}</a>
+                  {{- else }}
+                  <span class="cronistoria-titolo">{{ $v.titolo }}</span>
+                  {{- with $v.testo }}
+                  <p class="cronistoria-testo">{{ $.RenderString . }}</p>
+                  {{- end }}
+                  {{- with $v.pagina_url }}
+                  <p class="cronistoria-pagina small"><i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>Sul nostro sito: <a href="{{ . }}">{{ $v.pagina_titolo }}</a></p>
+                  {{- end }}
+                  {{- with $v.url }}
+                  <p class="cronistoria-fonte small">Fonte: <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $v.fonte | default "vai alla fonte" }}<span class="visually-hidden"> (si apre in una nuova scheda)</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></p>
+                  {{- end }}
+                  {{- end }}
+                  {{- with $v.pagina_url }}
+                  {{- with $s.Get (printf "stampa:%s" .) }}
+                  <div class="cronistoria-stampa small">
+                    <p class="mb-1">{{ if gt (len .) 1 }}Ne hanno scritto anche:{{ else }}Ne ha scritto anche:{{ end }}</p>
+                    <ul class="mb-0">
+                      {{- range . }}
+                      <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .titolo }} ({{ .fonte }})<span class="visually-hidden">, si apre in una nuova scheda</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></li>
+                      {{- end }}
+                    </ul>
+                  </div>
+                  {{- end }}
+                  {{- end }}
+                </li>
+                {{- end }}
+              </ul>
+            </div>
+          </li>
+          {{- end }}
+          {{- end }}
+        </ol>
+      </section>
+      {{- end }}
+      {{- else }}
+      <p>La cronistoria è in preparazione.</p>
+      {{- end }}
+      </div>
+
+      <div class="alert alert-light mt-5" role="note">
+        {{- with $verifica }}
+        <p><i class="bi bi-bookmark-check me-2" aria-hidden="true"></i>Fonti delle voci controllate il {{ (time.AsTime .) | time.Format ":date_long" }}. Gli articoli del sito entrano da soli, alla loro data di pubblicazione.</p>
+        {{- end }}
+        {{- with site.Params.email }}
+        <p class="mb-0"><i class="bi bi-envelope me-2" aria-hidden="true"></i>Hai notato un errore, o manca un fatto documentato? Scrivi a <a href="mailto:{{ . }}">{{ . }}</a> indicando la fonte.</p>
+        {{- end }}
+      </div>
+
+      {{ partial "page-tools.html" . }}
+
+    </div>
+  </div>
+</div>
+{{ end }}

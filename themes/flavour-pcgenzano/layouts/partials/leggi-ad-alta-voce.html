@@ -101,7 +101,9 @@
 
   // 5. Estrae il testo leggibile dall'elemento target, escludendo
   //    elementi non leggibili (toolbar TTS stessa, popover glossario,
-  //    pittogrammi, codice, elementi nascosti).
+  //    pittogrammi, codice, elementi nascosti). La classe .tts-salta
+  //    esclude dalla lettura i blocchi di sola navigazione che restano
+  //    visibili e accessibili (per esempio i mesi della cronistoria).
   function extractText(el) {
     if (!el) return '';
     var clone = el.cloneNode(true);
@@ -109,7 +111,7 @@
       'script', 'style', 'pre', 'code',
       '.visually-hidden', '[aria-hidden="true"]',
       '.tts-wrapper', '.gloss-popover', '.gloss-icon',
-      '.pittogramma', '.pittogramma-figure'
+      '.pittogramma', '.pittogramma-figure', '.tts-salta'
     ];
     clone.querySelectorAll(skip.join(',')).forEach(function (n) { n.remove(); });
     var text = clone.innerText || clone.textContent || '';

@@ -673,6 +673,7 @@ html.a11y-contrast-invert :where(main, .utility-bar) :is(
   .app-disclaimer, .fascia-card, .gloss-popover, .list-group-item, .risorsa-tipo, .lis-video-item,
   .lis-toc-link, .lis-fonte-card, .lis-fonti, .pcg-podcast-iscriviti, .lab-form,
   .crea-lezione-form, .mappa-aree-disclaimer, code, .app-card, .storia-card, .info-pedagogia,
+  .pcg-timeline-card, .pcg-timeline-lezione, .cronistoria-stampa,
   .segnali-bufala, .intro-card, .quiz-container, .inf-card, .schede-indice-fascia a, .inf-back,
   .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc, .bg-light,
   .bg-white, tbody tr, tbody td, tbody th, tfoot td, button:not(.gloss-term)
@@ -777,6 +778,7 @@ html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
   .app-disclaimer, .fascia-card, .gloss-popover, .list-group-item, .risorsa-tipo, .lis-video-item,
   .lis-toc-link, .lis-fonte-card, .lis-fonti, .pcg-podcast-iscriviti, .lab-form,
   .crea-lezione-form, .mappa-aree-disclaimer, code, .app-card, .storia-card, .info-pedagogia,
+  .pcg-timeline-card, .pcg-timeline-lezione, .cronistoria-stampa,
   .segnali-bufala, .intro-card, .quiz-container, .inf-card, .schede-indice-fascia a, .inf-back,
   .abili-indice a, .abili-categoria, .color-legend, .storia-card .meta span, .lis-toc, .bg-light,
   .bg-white, tbody tr, tbody td, tbody th, tfoot td, input, textarea, select,

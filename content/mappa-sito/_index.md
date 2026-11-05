@@ -538,6 +538,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Storia del territorio</p>
   <p class="ms-card-desc">Linea del tempo dei Castelli Romani: natura vulcanica, terremoti storici, evoluzione del sistema di protezione civile. Ogni voce con fonte istituzionale.</p>
 </a>
+<a class="ms-card ms-edu" href="/cronistoria/">
+  <div class="ms-card-icon"><i class="bi bi-calendar3"></i></div>
+  <p class="ms-card-title">Cronistoria 2026</p>
+  <p class="ms-card-desc">L'anno giorno per giorno: articoli del sito, ricorrenze, eventi nazionali, norme, atti del Comune e notizie di stampa, ciascuno con la sua fonte.</p>
+</a>
 <a class="ms-card ms-edu" href="/lanterna/">
   <div class="ms-card-icon"><i class="bi bi-lightbulb"></i></div>
   <p class="ms-card-title">Modalità Lanterna</p>

@@ -5378,6 +5378,144 @@ html.a11y-pause-anim .pcg-timeline-voce {
  */
 
 /* ==========================================================================
+ * CRONISTORIA v1.0 — l'anno giorno per giorno (/cronistoria/)
+ * Layout: layouts/cronistoria/list.html — Dati: data/cronistoria.yaml
+ * Riusa la linea del tempo di /storia/ (.pcg-timeline): ogni voce è un
+ * giorno e contiene le notizie di quel giorno. Le etichette del tipo hanno
+ * «badge» nel nome della classe, così le modalità di contrasto del pannello
+ * di accessibilità le lasciano nei loro colori: testo bianco da 5,0:1
+ * (#b45309) a 12,6:1 (#003366). Nessuna informazione sta nel solo colore:
+ * l'etichetta è scritta.
+ * ==========================================================================
+ */
+
+.cronistoria-mesi ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.cronistoria-mesi .list-inline-item {
+  margin: 0;
+}
+
+.cronistoria-mesi a {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  color: #003366;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cronistoria-mesi a:hover {
+  text-decoration: underline;
+}
+
+.cronistoria-mesi a:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+
+.cronistoria-mese h2 {
+  color: #003366;
+  scroll-margin-top: 6rem;
+}
+
+.cronistoria-mese .pcg-timeline-voce {
+  scroll-margin-top: 6rem;
+}
+
+.cronistoria-voce {
+  padding: 0.55rem 0;
+  border-top: 1px solid #e3e8ef;
+}
+
+.cronistoria-voce:first-child {
+  border-top: 0;
+  padding-top: 0.2rem;
+}
+
+.cronistoria-badge {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  background: #003366;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  vertical-align: 0.1em;
+}
+
+.cronistoria-badge-ricorrenza { background: #4338ca; }
+.cronistoria-badge-nazionale { background: #003366; }
+.cronistoria-badge-norma { background: #15803d; }
+.cronistoria-badge-comune { background: #0e7490; }
+.cronistoria-badge-stampa { background: #b45309; }
+.cronistoria-badge-sito { background: #075985; }
+
+.cronistoria-titolo {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+a.cronistoria-titolo {
+  color: #003366;
+}
+
+.cronistoria-testo {
+  margin: 0.25rem 0 0;
+  color: #333333;
+}
+
+.cronistoria-fonte {
+  margin: 0.2rem 0 0;
+  color: #5b6770;
+}
+
+/* «Sul nostro sito»: l'articolo che racconta lo stesso fatto della voce. */
+.cronistoria-pagina {
+  margin: 0.3rem 0 0;
+  color: #333333;
+}
+
+/* «Ne ha scritto anche»: le testate che hanno raccontato un nostro articolo.
+   Ogni collegamento ha il titolo della notizia: due notizie della stessa
+   testata restano distinguibili anche fuori dal contesto. */
+.cronistoria-stampa {
+  margin: 0.35rem 0 0;
+  padding: 0.4rem 0.75rem;
+  border-left: 3px solid #b45309;
+  background: #fbf7f2;
+  color: #333333;
+}
+
+.cronistoria-stampa ul {
+  padding-left: 1.1rem;
+}
+
+@media print {
+  .cronistoria-mesi { display: none; }
+  .cronistoria-stampa {
+    background: none;
+    border-left-color: #000000;
+  }
+  .cronistoria-badge {
+    background: none;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+}
+/* ==========================================================================
+ * fine CRONISTORIA v1.0
+ * ==========================================================================
+ */
+
+/* ==========================================================================
  * LIS v1.0 — badge "Disponibile in LIS" + finestra video/trascrizione
  * Partial: partials/lis-badge.html — Indice: layouts/lis/list.html
  * Dati: data/lis.yaml. Idea #10 roadmap.

@@ -176,7 +176,7 @@ Bottone "🔊 Ascolta" nella `.storia-toolbar` di tutte le fiabe in `static/form
 **Caso d'uso target:** anziani con vista debole, persone in stress/emergenza, parlanti italiano L2, bambini che leggono lentamente, utenti con dislessia.
 
 **Regole operative:**
-- Per le **pagine Hugo**: niente da fare. Il TTS è ON di default. Per **disattivarlo** su una pagina specifica aggiungere `tts: false` nel frontmatter. Per **escludere una nuova categoria** (es. nuove pagine legali future) aggiungere il path alla blacklist `$ttsBlacklist` in `single.html` e `list.html`.
+- Per le **pagine Hugo**: niente da fare. Il TTS è ON di default. Per **disattivarlo** su una pagina specifica aggiungere `tts: false` nel frontmatter. Per **escludere una nuova categoria** (es. nuove pagine legali future) aggiungere il path alla blacklist `$ttsBlacklist` in `single.html` e `list.html`. Un blocco di sola navigazione dentro il testo letto (per esempio i mesi della Cronistoria) si esclude dalla lettura con la classe `tts-salta` (dal 05/11/2026): resta visibile e accessibile, la lettura ad alta voce lo salta.
 - Per **giochi statici**: il TTS dentro il coach è già attivo via `coach.js` su tutti i giochi con `data-coach-game` sul `<body>` — niente da fare manualmente.
 - Per **nuove storie/racconti**: includere `<script src="/formazione/storie-e-racconti/assets/tts-storia.js" defer></script>` prima di `</body>` nell'index.html della storia. Il modulo trova `.storia-toolbar` e inietta il bottone.
 - **Non aggiungere altri TTS provider** (es. Google Cloud TTS, AWS Polly) che richiedono API key/costo: Web Speech API browser è gratuita, sempre aggiornata col testo, e raccomandata da W3C-WAI per PA.

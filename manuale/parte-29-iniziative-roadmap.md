@@ -33,6 +33,18 @@ Pagina pubblica `/stato-sistema/`: cruscotto di trasparenza tecnica — stato di
 
 Pagina `/storia/`: linea del tempo dei Castelli Romani (natura vulcanica, terremoti storici, evoluzione della protezione civile). Le voci stanno in `data/eventi_storici.yaml` — **ogni voce DEVE avere una fonte istituzionale verificabile** (niente contenuti non verificati).
 
+## 29.5-bis Cronistoria dell'anno (05/11/2026)
+
+Pagina `/cronistoria/` («Cronistoria 2026»): il 2026 giorno per giorno. Mette insieme gli articoli del sito, che entrano da soli alla loro data, e le voci scritte a mano in `data/cronistoria.yaml`: ricorrenze e giornate della memoria, eventi nazionali di protezione civile, norme, atti del Comune di Genzano, notizie della stampa locale sul Gruppo. Layout `themes/flavour-pcgenzano/layouts/cronistoria/list.html`, stile nella sezione CRONISTORIA di `custom.css`. Non è in homepage né nel menu (decisione di Alessandro del 05/11/2026): si raggiunge da `/storia/` e dalla mappa del sito.
+
+Regole per una voce nuova (le ripete l'intestazione del file):
+
+- `data` è il giorno a cui il fatto si riferisce (l'evento, la firma dell'atto, il fatto raccontato dalla stampa), mai il giorno in cui si scrive la voce. Una voce con data futura compare da sola quando arriva il suo giorno.
+- Il testo usa parole nostre e solo fatti che la fonte dice. Le cifre coincidono con `data/dati_canonici.yaml` (il controllo lo legge); dove le fonti non concordano, la cifra non si scrive.
+- `fonte` e `url` indicano la fonte primaria, aperta e letta; `verificato_il` la data della verifica.
+- `articolo` (nome del file in `content/comunicazioni/` senza `.md`) collega la voce al nostro articolo sullo stesso fatto: una voce di stampa finisce sotto l'articolo («Ne ha scritto anche»), ogni altra voce mostra l'articolo («Sul nostro sito») e l'articolo non compare due volte. Se l'articolo non è nella build, la voce resta da sola e la build lo segnala.
+- Una notizia di stampa che racconta da sola un'attività del Gruppo porta la nota «da confermare con il registro interventi» e non si pubblica prima della conferma di Alessandro (rule 10 § 5-bis).
+
 ## 29.6 Assistente vocale (#5)
 
 L'`/assistente/` ha un bottone microfono: l'utente fa una domanda **a voce** (Web Speech API `SpeechRecognition`), la trascrizione confluisce nella ricerca dell'assistente, un riepilogo è letto ad alta voce. Niente IA esterna, niente backend. Nota privacy esplicita in pagina.

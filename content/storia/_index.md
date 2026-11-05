@@ -16,3 +16,5 @@ Gli eventi non capitano "una volta ogni mai". Il territorio dei Castelli Romani 
 Questa linea del tempo mette in fila le tappe che hanno formato il rischio del territorio di Genzano di Roma e l'evoluzione del sistema che oggi ci protegge — dalla nascita geologica del Vulcano Laziale fino al Giubileo 2025 e al recente adeguamento normativo dell'identità visiva nazionale.
 
 Ogni voce è documentata da una **fonte istituzionale verificabile**: INGV (Istituto Nazionale di Geofisica e Vulcanologia), ISPRA, Centro Funzionale Regionale Lazio, Dipartimento della Protezione Civile, Normattiva. Niente leggende: solo ciò che è accertato.
+
+Il 2026, giorno per giorno, è nella [Cronistoria 2026](/cronistoria/): articoli del sito, ricorrenze, eventi nazionali, norme, atti del Comune e notizie di stampa, ciascuno con la sua fonte.
