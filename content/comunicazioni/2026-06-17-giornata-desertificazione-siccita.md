@@ -5,8 +5,8 @@ description: "Il 17 giugno l'ONU dedica una giornata a desertificazione e siccit
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-06-17-giornata-desertificazione-siccita.webp"
+image_alt: "Cover dell'articolo: Giornata contro la desertificazione e la siccità: nel 2026 al centro i pascoli"
 scadenza: ""
 area: ""
 allegati: []

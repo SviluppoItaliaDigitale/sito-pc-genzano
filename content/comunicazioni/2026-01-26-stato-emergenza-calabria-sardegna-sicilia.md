@@ -5,8 +5,8 @@ description: "Stato di emergenza di 12 mesi per il maltempo iniziato il 18 genna
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-26-stato-emergenza-calabria-sardegna-sicilia.webp"
+image_alt: "Cover dell'articolo: Maltempo al Sud: stato di emergenza per Calabria, Sardegna e Sicilia"
 scadenza: ""
 area: ""
 allegati: []

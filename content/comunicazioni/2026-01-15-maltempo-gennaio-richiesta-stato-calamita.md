@@ -5,8 +5,8 @@ description: "La Giunta comunale chiede alla Regione Lazio lo stato di calamità
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-15-maltempo-gennaio-richiesta-stato-calamita.webp"
+image_alt: "Cover dell'articolo: Maltempo del 5 e 6 gennaio: il Comune chiede lo stato di calamità naturale"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

@@ -5,8 +5,8 @@ description: "Dal 18 gennaio alcune stazioni superano i 500 millimetri di pioggi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-21-maltempo-sud-oltre-500-millimetri.webp"
+image_alt: "Cover dell'articolo: Maltempo al Sud: oltre 500 millimetri di pioggia in Calabria, Sardegna e Sicilia"
 scadenza: ""
 area: ""
 allegati: []

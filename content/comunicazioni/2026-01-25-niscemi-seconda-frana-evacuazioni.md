@@ -5,8 +5,8 @@ description: "Domenica 25 gennaio si riattiva il fronte della frana del 1997 a N
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-25-niscemi-seconda-frana-evacuazioni.webp"
+image_alt: "Cover dell'articolo: Niscemi, una seconda frana colpisce il sud del paese: circa 500 evacuati"
 scadenza: ""
 area: ""
 allegati: []

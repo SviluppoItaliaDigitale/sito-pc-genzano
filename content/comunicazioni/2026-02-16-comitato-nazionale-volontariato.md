@@ -5,8 +5,8 @@ description: "Con il decreto n. 511 il Capo del Dipartimento rinnova il Comitato
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-16-comitato-nazionale-volontariato.webp"
+image_alt: "Cover dell'articolo: Nominati i componenti del Comitato nazionale del volontariato di protezione civile"
 scadenza: ""
 area: ""
 allegati: []

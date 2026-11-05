@@ -5,8 +5,8 @@ description: "Sabato 3 ottobre la Repubblica ricorda chi è morto cercando di ar
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-10-03-giornata-vittime-immigrazione.webp"
+image_alt: "Cover dell'articolo: Giornata nazionale in memoria delle vittime dell'immigrazione: perché il 3 ottobre"
 scadenza: ""
 area: ""
 allegati: []

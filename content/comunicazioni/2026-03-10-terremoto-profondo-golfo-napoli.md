@@ -5,8 +5,8 @@ description: "Martedì 10 marzo, alle 00:03, un terremoto ML 5.9 nel golfo di Na
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-03-10-terremoto-profondo-golfo-napoli.webp"
+image_alt: "Cover dell'articolo: Terremoto di magnitudo 5.9 nel golfo di Napoli, a oltre 400 chilometri di profondità"
 scadenza: ""
 area: ""
 allegati: []

@@ -5,8 +5,8 @@ description: "Ogni 18 aprile i radioamatori di tutto il mondo vanno in onda per 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-04-18-giornata-mondiale-radioamatore-iaru.webp"
+image_alt: "Cover dell'articolo: Giornata mondiale del radioamatore: il 18 aprile 1925 nasceva la IARU"
 scadenza: ""
 area: ""
 allegati: []

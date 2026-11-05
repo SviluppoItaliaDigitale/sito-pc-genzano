@@ -5,8 +5,8 @@ description: "Alle 0.12 l'INGV registra una scossa Mw 6.1 (ML 6.2) in mare, a ci
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-06-02-terremoto-profondo-costa-calabra.webp"
+image_alt: "Cover dell'articolo: Terremoto profondo Mw 6.1 al largo della Calabria, avvertito dal Lazio alla Sicilia"
 scadenza: ""
 area: ""
 allegati: []

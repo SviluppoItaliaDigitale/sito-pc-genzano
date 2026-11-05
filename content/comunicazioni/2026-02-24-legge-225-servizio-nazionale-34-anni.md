@@ -5,8 +5,8 @@ description: "Il 24 febbraio 1992 la legge n. 225 istituì il Servizio nazionale
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-24-legge-225-servizio-nazionale-34-anni.webp"
+image_alt: "Cover dell'articolo: Servizio nazionale della protezione civile: 34 anni dalla legge 225 del 1992"
 scadenza: ""
 area: ""
 allegati: []

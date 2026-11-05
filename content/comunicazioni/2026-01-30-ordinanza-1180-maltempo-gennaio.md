@@ -5,8 +5,8 @@ description: "L'ordinanza nomina commissari i Presidenti di Calabria, Sardegna e
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-30-ordinanza-1180-maltempo-gennaio.webp"
+image_alt: "Cover dell'articolo: Ordinanza n. 1180: i primi interventi dopo il maltempo di gennaio al Sud"
 scadenza: ""
 area: ""
 allegati: []

@@ -5,8 +5,8 @@ description: "Il Consiglio dei ministri dichiara per sei mesi lo stato di emerge
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-07-02-stato-emergenza-estero-venezuela.webp"
+image_alt: "Cover dell'articolo: Terremoti in Venezuela: stato di emergenza per l'intervento all'estero"
 scadenza: ""
 area: ""
 allegati: []

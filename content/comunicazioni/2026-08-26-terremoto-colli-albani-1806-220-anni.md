@@ -5,8 +5,8 @@ description: "Il 26 agosto 1806 un terremoto dei Colli Albani causò gravi danni
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-08-26-terremoto-colli-albani-1806-220-anni.webp"
+image_alt: "Cover dell'articolo: Terremoto dei Colli Albani, 220 anni fa i gravi danni a Genzano"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []

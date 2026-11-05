@@ -5,8 +5,8 @@ description: "Sabato 12 settembre è la Giornata mondiale del primo soccorso. Ch
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-09-12-giornata-mondiale-primo-soccorso.webp"
+image_alt: "Cover dell'articolo: Giornata mondiale del primo soccorso: i tre principi di chi presta aiuto"
 scadenza: ""
 area: ""
 allegati: []

@@ -5,8 +5,8 @@ description: "Avviso di maltempo per Sardegna, Sicilia e Calabria: per lunedì 1
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-18-maltempo-sud-allerta-rossa-sardegna-sicilia.webp"
+image_alt: "Cover dell'articolo: Maltempo: allerta rossa in Sardegna e in parte della Sicilia per il 19 gennaio"
 scadenza: ""
 area: ""
 allegati: []

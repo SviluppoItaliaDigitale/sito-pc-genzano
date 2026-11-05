@@ -5,8 +5,8 @@ description: "Il 10 marzo il Consiglio dei ministri dichiara per 12 mesi lo stat
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-03-10-stato-emergenza-catanzaro-cosenza.webp"
+image_alt: "Cover dell'articolo: Stato di emergenza per il maltempo di febbraio nelle province di Catanzaro e Cosenza"
 scadenza: ""
 area: ""
 allegati: []

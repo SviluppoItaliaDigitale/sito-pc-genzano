@@ -5,8 +5,8 @@ description: "Sabato 20 giugno IT-alert prova l'allarme in 14 comuni delle provi
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-06-20-it-alert-test-diga-castreccioni.webp"
+image_alt: "Cover dell'articolo: Test di IT-alert nelle Marche: simulato il collasso della Diga di Castreccioni"
 scadenza: ""
 area: ""
 allegati: []

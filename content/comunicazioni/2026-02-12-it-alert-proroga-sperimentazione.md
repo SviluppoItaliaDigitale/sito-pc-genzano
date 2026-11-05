@@ -5,8 +5,8 @@ description: "Una direttiva proroga al 31 dicembre 2026 la sperimentazione di IT
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-12-it-alert-proroga-sperimentazione.webp"
+image_alt: "Cover dell'articolo: IT-alert: prorogata la sperimentazione per maremoto e Stromboli"
 scadenza: ""
 area: ""
 allegati: []

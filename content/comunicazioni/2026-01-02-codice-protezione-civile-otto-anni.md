@@ -5,8 +5,8 @@ description: "Il 2 gennaio 2018 il decreto legislativo n. 1 riunisce in un unico
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-02-codice-protezione-civile-otto-anni.webp"
+image_alt: "Cover dell'articolo: Il Codice della protezione civile compie otto anni"
 scadenza: ""
 area: ""
 allegati: []

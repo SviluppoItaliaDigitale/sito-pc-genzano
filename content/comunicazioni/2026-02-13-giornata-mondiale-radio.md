@@ -5,8 +5,8 @@ description: "Il 13 febbraio è la Giornata mondiale della radio, proclamata dal
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-13-giornata-mondiale-radio.webp"
+image_alt: "Cover dell'articolo: Giornata mondiale della radio: perché tenere una radio a pile nel kit di emergenza"
 scadenza: ""
 area: ""
 allegati: []

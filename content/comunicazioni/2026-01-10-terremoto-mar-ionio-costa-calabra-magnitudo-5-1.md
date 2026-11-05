@@ -5,8 +5,8 @@ description: "Alle 5.53 di sabato 10 gennaio l'INGV localizza nel Mar Ionio un t
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-10-terremoto-mar-ionio-costa-calabra-magnitudo-5-1.webp"
+image_alt: "Cover dell'articolo: Terremoto di magnitudo 5.1 al largo della costa calabra sud-orientale"
 scadenza: ""
 area: ""
 allegati: []

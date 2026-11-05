@@ -5,8 +5,8 @@ description: "Mercoledì 18 marzo l'Italia ricorda le vittime dell'epidemia di c
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-03-18-giornata-vittime-coronavirus.webp"
+image_alt: "Cover dell'articolo: 18 marzo, Giornata nazionale in memoria delle vittime dell'epidemia di coronavirus"
 scadenza: ""
 area: ""
 allegati: []

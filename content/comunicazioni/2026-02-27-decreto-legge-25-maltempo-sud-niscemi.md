@@ -5,8 +5,8 @@ description: "Dal 27 febbraio il decreto-legge n. 25: fondi e sospensioni per Ca
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-02-27-decreto-legge-25-maltempo-sud-niscemi.webp"
+image_alt: "Cover dell'articolo: Decreto-legge n. 25 del 2026: misure per il maltempo al Sud e per la frana di Niscemi"
 scadenza: ""
 area: ""
 allegati: []

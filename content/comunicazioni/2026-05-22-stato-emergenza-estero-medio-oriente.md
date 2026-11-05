@@ -5,8 +5,8 @@ description: "Il Consiglio dei ministri dichiara lo stato di emergenza per inter
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-22-stato-emergenza-estero-medio-oriente.webp"
+image_alt: "Cover dell'articolo: Medio Oriente: 12 mesi di stato di emergenza per l'intervento all'estero"
 scadenza: ""
 area: ""
 allegati: []

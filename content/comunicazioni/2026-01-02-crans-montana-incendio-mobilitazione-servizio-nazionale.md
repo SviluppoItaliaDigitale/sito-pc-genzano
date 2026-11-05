@@ -5,8 +5,8 @@ description: "Dopo l'incendio di Capodanno in un locale di Crans-Montana, il Min
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-01-02-crans-montana-incendio-mobilitazione-servizio-nazionale.webp"
+image_alt: "Cover dell'articolo: Incendio a Crans-Montana: mobilitato il Servizio nazionale per aiutare la Svizzera"
 scadenza: ""
 area: ""
 allegati: []
