@@ -21,7 +21,7 @@ Genzano sorge sul vulcano dei Colli Albani, sul bordo del cratere che ospita il 
 
 | Rischio | Che cosa vuol dire qui | Dove approfondire |
 |---|---|---|
-| **Terremoto** | Genzano è in zona sismica 2, sottozona 2B: sismicità media. Le scosse dei Colli Albani sono di solito deboli, ma non sempre: nel 1806 un terremoto causò a Genzano gravi danni, con morti e feriti. | [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e [Storia del territorio](/storia/) |
+| **Terremoto** | Genzano è in zona sismica 2, sottozona 2B: secondo il Dipartimento della Protezione Civile, in zona 2 forti terremoti sono possibili. Le scosse dei Colli Albani sono di solito deboli, ma non sempre: nel 1806 un terremoto causò a Genzano gravi danni, con morti e feriti. | [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e [Storia del territorio](/storia/) |
 | **Vulcano** | I Colli Albani sono un vulcano quiescente, non spento: l'ultima eruzione risale a circa 36.000 anni fa. Li sorveglia l'Istituto Nazionale di Geofisica e Vulcanologia (INGV); in alcune aree escono gas dal suolo. | [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) |
 | **Frane e allagamenti** | Versanti ripidi verso il lago e zone basse dove l'acqua si raccoglie. Il rischio cresce con le piogge forti o lunghe; le prime d'autunno, sul terreno secco, sono le più insidiose. Per la Regione, Genzano è nella zona di allerta F, Bacini Costieri Sud. | [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) |
 | **Temporali e vento** | Temporali intensi e localizzati, soprattutto fra maggio e ottobre. Con il vento forte possono cadere rami dalle alberature lungo le strade. | [Temporali intensi](/rischi-prevenzione/temporali-intensi/) e [Vento forte](/rischi-prevenzione/vento-forte/) |

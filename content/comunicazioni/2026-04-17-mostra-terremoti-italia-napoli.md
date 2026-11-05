@@ -65,7 +65,7 @@ L'inaugurazione del 20 aprile vedrà la presenza del **Capo del Dipartimento, Fa
 
 ## Perché segnaliamo questa mostra
 
-Il rischio sismico è uno dei temi centrali del lavoro di un Gruppo Comunale di Protezione Civile. Genzano e i Castelli Romani sono in **zona sismica 2B** (sismicità media): non l'Appennino centrale, ma neanche un territorio esente. Le ricognizioni storiche documentano risentimenti locali importanti dei grandi terremoti dell'Italia centrale (Avezzano 1915, Irpinia 1980, L'Aquila 2009, Centro Italia 2016).
+Il rischio sismico è uno dei temi centrali del lavoro di un Gruppo Comunale di Protezione Civile. Genzano e i Castelli Romani sono in **zona sismica 2B**: non l'Appennino centrale, ma neanche un territorio esente. Le ricognizioni storiche documentano risentimenti locali importanti dei grandi terremoti dell'Italia centrale (Avezzano 1915, Irpinia 1980, L'Aquila 2009, Centro Italia 2016).
 
 Iniziative come «Terremoti d'Italia» fanno **comunicazione del rischio nel modo giusto**:
 

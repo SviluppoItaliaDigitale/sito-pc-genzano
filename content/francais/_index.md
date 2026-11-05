@@ -52,7 +52,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 
 <div class="en-card">
 <h2>🌍 Tremblement de terre</h2>
-<p>L'Italie est un pays sismique. Genzano est en <strong>zone sismique 2B</strong> (aléa moyen). Si vous sentez un tremblement :</p>
+<p>L'Italie est un pays sismique. Genzano est en <strong>zone sismique 2B</strong>, où de forts séismes sont possibles. Si vous sentez un tremblement :</p>
 <ul class="en-list">
 <li>Mettez-vous à l'abri sous une table solide ou contre un mur intérieur</li>
 <li>Couvrez-vous la tête avec les mains</li>

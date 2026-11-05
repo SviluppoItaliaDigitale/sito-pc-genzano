@@ -81,7 +81,7 @@ This page gives you **essential information** in English. The full website is in
 
 <div class="en-card">
 <h2>🌍 Earthquake</h2>
-<p>Italy is a seismic country. Genzano is in <strong>seismic zone 2B</strong> (medium hazard). If you feel shaking:</p>
+<p>Italy is a seismic country. Genzano is in <strong>seismic zone 2B</strong>, where strong earthquakes are possible. If you feel shaking:</p>
 <ul class="en-list">
 <li>Take cover under a sturdy table or against an interior wall</li>
 <li>Cover your head with your hands</li>

@@ -332,7 +332,7 @@ Ogni territorio ha i suoi rischi specifici. Genzano di Roma si trova sui **Colli
 
 | Rischio | Descrizione per Genzano |
 |---|---|
-| **Sismico** | Il Lazio ha una sismicità media. Le scosse si possono avvertire, anche se i terremoti forti sono rari nella nostra zona |
+| **Sismico** | Genzano è in zona sismica 2. Le scosse si possono avvertire, anche se i terremoti forti sono rari nella nostra zona |
 | **Idrogeologico** | I pendii collinari e i fossi possono essere soggetti a frane e allagamenti localizzati in caso di piogge intense |
 | **Incendio boschivo** | La vegetazione del Parco dei Castelli Romani è esposta al rischio incendi, soprattutto in estate |
 | **Meteorologico** | Temporali intensi, grandinate, vento forte e ondate di calore |

@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~773 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~774 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -401,9 +401,9 @@ Per saperne di più: [Chi siamo](/chi-siamo/) | [Diventa Volontario](/diventa-vo
 - c) Monitoraggio, allerta, intervento, ripristino
 
 **3. In quale zona sismica si trova Genzano di Roma?**
-- a) Zona 1 (alta sismicità)
-- b) Zona 2B (media sismicità) ✔
-- c) Zona 4 (bassa sismicità)
+- a) Zona 1 (la più pericolosa)
+- b) Zona 2, sottozona 2B (forti terremoti sono possibili) ✔
+- c) Zona 4 (la meno pericolosa)
 
 **4. Cosa significa un'allerta arancione?**
 - a) Nessun pericolo

@@ -63,10 +63,10 @@ Nessun fenomeno meteo-idro rilevante previsto. La situazione è ordinaria: si vi
 Fenomeni localizzati con possibili danni limitati: frane, allagamenti puntuali, piene di piccoli corsi d'acqua. Sui versanti dei Castelli anche una pioggia moderata può bastare.
 {{< /dossier-punto >}}
 {{< dossier-punto x="63" y="50" titolo="Arancione · pericolo" >}}
-Fenomeni più intensi e diffusi, pericolosità media: allagamenti estesi, frane, esondazioni. Si evitano spostamenti non necessari e zone a rischio.
+Fenomeni più intensi e diffusi, criticità moderata: allagamenti estesi, frane, esondazioni. Si evitano spostamenti non necessari e zone a rischio.
 {{< /dossier-punto >}}
 {{< dossier-punto x="88" y="50" titolo="Rosso · pericolo elevato" >}}
-Fenomeni molto intensi, pericolosità elevata per le persone e danni estesi. Si seguono solo le indicazioni delle autorità: in pericolo immediato si chiama il 112.
+Fenomeni molto intensi, criticità elevata: pericolo per le persone e danni estesi. Si seguono solo le indicazioni delle autorità: in pericolo immediato si chiama il 112.
 {{< /dossier-punto >}}
 {{< /dossier-hotspot >}}
 

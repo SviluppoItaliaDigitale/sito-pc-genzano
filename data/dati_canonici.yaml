@@ -184,19 +184,24 @@ dati:
 
   - id: genzano-zona-sismica
     dato: "Classificazione sismica di Genzano di Roma"
-    valore: "zona sismica 2, sottozona 2B: ag tra 0,15 e 0,20 g, sismicità media"
+    valore: "zona sismica 2, sottozona 2B: accelerazione attesa fra 0,15 e 0,20 g; la Regione classifica per accelerazione e non assegna a Genzano un grado di sismicità; per il Dipartimento, in zona 2 «forti terremoti sono possibili». Nella classificazione aggiornata dal Dipartimento a maggio 2025 tutti i Comuni dei Castelli Romani sono in 2B"
     fonti:
-      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1 «Nuova classificazione sismica del territorio della Regione Lazio»"
+      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1 «Nuova classificazione sismica del territorio della Regione Lazio» (tabella 3; descrive come «media» la 2B del Viterbese e come «medio-alta» quella del Frusinate)"
         url: "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
+      - nome: "Dipartimento della Protezione Civile, «Classificazione sismica» (con la classificazione aggiornata a maggio 2025)"
+        url: "https://rischi.protezionecivile.gov.it/it/sismico/attivita/classificazione-sismica/"
     vietati:
       - regex: '\bzon[ae]\s+(?:sismic[ah]\s+)?2\s*[-–]\s*3\b|\bZ2-3\b'
         perche: "Genzano non è «al confine» fra due zone: è in zona 2, sottozona 2B."
         contesto: 'Genzano|Castelli|Colli Albani'
         finestra: 200
-      - regex: '\b(?:pericolosità|sismicità|rischio)\s+medio[- ]alt[oa]\b'
-        perche: "Per la Regione Lazio la sottozona 2B di Genzano è a sismicità media, non medio-alta."
-        contesto: '2B|[Zz]ona\s+(?:sismica\s+)?2\b'
+      - regex: '(?i)\b(?:sismicità|pericolosità(?:\s+sismica)?|rischio(?:\s+sismico)?)\s+(?:media|medio(?:[- ](?:alt[oa]|bass[oa]))?|moderat[oa])\b|\bmedi[ao]\s+(?:sismicità|pericolosità)\b'
+        perche: "La Regione Lazio classifica Genzano e i Castelli per accelerazione attesa (sottozona 2B, fra 0,15 e 0,20 g) e non assegna loro un grado di sismicità; per il Dipartimento, in zona 2 «forti terremoti sono possibili»."
+        contesto: '(?i)Genzano|Castelli|Colli Albani|\b2B\b|zona\s+(?:sismica\s+)?2\b|\bLazio\b'
         stessa_frase: true
+        # La trascrizione del video (capitolo 11) deve restare uguale all'audio,
+        # che dice «a sismicità media»; le note che lo segnalano lo citano.
+        salvo_se_frase: '^\s*Genzano è in zona sismica 2B, a\s*$|nel video si dice «a\s*»'
 
   - id: terremoto-1806-genzano
     dato: "Terremoto del 26 agosto 1806 e intensità a Genzano di Roma"
