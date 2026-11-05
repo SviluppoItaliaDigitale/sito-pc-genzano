@@ -97,7 +97,7 @@ Conoscere il rischio rende ogni messaggio di allerta **immediatamente comprensib
 {{< /dossier-scena >}}
 
 {{< dossier-chiusura id="fine" titolo="Quando il telefono suona, ascoltalo" cta1="Le allerte meteo di oggi" cta1url="/allerte-meteo/" cta2="Cosa fare adesso" cta2url="/numeri-utili/" >}}
-A Genzano l'avviso arriva da tre direzioni: **IT-alert** dello Stato, le **allerte meteo** del Centro Funzionale Regionale del Lazio, e i canali del **Comune** e del **Gruppo Comunale Volontari**. Tieni il telefono acceso e aggiornato: IT-alert arriva **senza app**. Segui le allerte sui canali ufficiali. **Fidati solo delle fonti ufficiali**, non delle chat. E in emergenza chiama il **112**.
+A Genzano l'avviso arriva da tre direzioni: **IT-alert** dello Stato, le **allerte meteo** del Centro Funzionale Regionale del Lazio, e i canali del **Comune** e del **Gruppo Comunale Volontari**. Tieni il telefono acceso: IT-alert arriva **senza app**. Segui le allerte sui canali ufficiali. **Fidati solo delle fonti ufficiali**, non delle chat. E in emergenza chiama il **112**.
 
 Un avviso è utile solo se qualcuno lo ascolta e sa cosa fare.
 {{< /dossier-chiusura >}}

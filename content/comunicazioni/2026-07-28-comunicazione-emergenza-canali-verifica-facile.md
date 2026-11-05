@@ -29,7 +29,7 @@ In emergenza le false notizie si diffondono in fretta. Su WhatsApp e sui social 
 
 Questi canali danno informazioni sicure.
 
-**IT-alert** è il sistema ufficiale del Governo. Manda messaggi a tutti i telefoni in una zona. Non devi attivare niente sul tuo telefono.
+**IT-alert** è il sistema ufficiale del Governo. Manda un messaggio ai telefoni accesi di una zona in grave pericolo. Non devi attivare niente sul tuo telefono.
 
 **Il DPC** è il Dipartimento della Protezione Civile. Il sito ufficiale è protezionecivile.gov.it. Ha anche pagine su Facebook, Instagram e YouTube.
 

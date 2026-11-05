@@ -538,7 +538,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-secondaria/) — tsunami, prima legge antisismica italiana (R.D. 193/1909), cooperazione internazionale. *(storia/scienze)*
 - 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria/) — responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II. *(scienze/ed. civica)*
 - 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-secondaria/) — colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI). *(scienze/geografia)*
-- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria/) — flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert. *(scienze/geografia)*
+- 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria/) — flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, perché IT-alert non manda le allerte meteo. *(scienze/geografia)*
 - 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-secondaria/) — rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco. *(scienze/ed. civica)*
 - 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) — Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione. *(scienze/geografia)*
 - 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) — caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone. *(scienze/geografia/ed. civica)*
@@ -602,7 +602,7 @@ Studio della segnaletica: il **Decreto Legislativo 81/2008** stabilisce forme e 
 
 ### Musica — Le sirene e i suoni dell'emergenza
 
-Storia del suono dell'allerta: la sirena antiaerea della Seconda Guerra Mondiale, il suono del sistema di allerta civile degli anni '80, il suono digitale di IT-alert. Perché certi suoni "sbloccano" istintivamente l'allerta nel nostro cervello? (Frequenze, onda modulata, effetto Doppler).
+Storia del suono dell'allerta: la sirena antiaerea della Seconda Guerra Mondiale, le sirene di oggi (per esempio quelle degli stabilimenti industriali), il suono di IT-alert. Perché certi suoni "sbloccano" istintivamente l'allerta nel nostro cervello? (Frequenze, onda modulata, effetto Doppler).
 
 ---
 

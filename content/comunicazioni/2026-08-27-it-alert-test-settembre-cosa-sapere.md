@@ -1,12 +1,12 @@
 ---
-title: "IT-Alert: cosa è, come funziona, come reagire al prossimo test"
+title: "IT-alert: cosa è, come funziona, come reagire al prossimo test"
 date: 2026-08-27T00:01:00+02:00
 description: "IT-alert è il sistema nazionale di allarme pubblico via cellulare. Come riconoscerlo, cosa fare al suono, perché è importante."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-27-it-alert-test-settembre-cosa-sapere.webp"
-image_alt: "Schermo di cellulare che mostra una notifica IT-Alert di test con testo istituzionale"
+image_alt: "Cover dell'articolo: IT-alert: cosa è, come funziona, come reagire al prossimo test"
 scadenza: ""
 area: "Lazio"
 allegati: []
@@ -22,7 +22,7 @@ draft: false
 
 ## Come funziona
 
-IT-alert utilizza la tecnologia **cell broadcast**. Un messaggio viene inviato a **tutti i telefoni cellulari agganciati alle celle di una specifica area**, senza bisogno di iscrizioni, contatti salvati o app da scaricare. Il sistema è:
+IT-alert utilizza la tecnologia **cell broadcast**. Un messaggio parte dalle celle di una specifica area e arriva ai **telefoni cellulari accesi collegati a quelle celle**, senza bisogno di iscrizioni, contatti salvati o app da scaricare. Il sistema è:
 
 - **anonimo**: non raccoglie dati personali né numeri di telefono;
 - **indipendente** dalla connessione Internet;
@@ -50,7 +50,7 @@ Quando un messaggio IT-alert raggiunge il cellulare:
 
 - il telefono emette un **suono distintivo**, diverso dalla notifica ordinaria; in modalità silenziosa il messaggio arriva lo stesso, ma il suono potrebbe non partire;
 - lo schermo mostra **testo di allerta** con istruzioni;
-- il messaggio **non è un SMS**: in base al modello resta nell'elenco degli avvisi di emergenza;
+- il messaggio **non è un SMS**: a seconda del telefono e del sistema operativo, dovrebbe restare nell'elenco degli avvisi di emergenza;
 - blocca per un momento le altre funzioni del telefono, **finché non tocchi la notifica** per confermare.
 
 ## Cosa fare se si riceve IT-alert
@@ -64,12 +64,12 @@ Quando un messaggio IT-alert raggiunge il cellulare:
 
 ## I test periodici
 
-Per garantire il funzionamento del sistema, il Dipartimento organizza **test regionali periodici**. Durante un test:
+Per verificare il funzionamento del sistema, il Dipartimento organizza **test periodici**, annunciati sul sito it-alert.gov.it con il giorno e l'area. Durante un test:
 
 - il messaggio contiene la parola "**TEST**" ben visibile;
 - non c'è emergenza reale;
 - si può rispondere a un **questionario** online ospitato sul sito it-alert.gov.it per fornire feedback;
-- il test serve a verificare la **copertura geografica** e l'efficacia del sistema.
+- il test serve a verificare che i messaggi vengano **inviati e ricevuti** correttamente.
 
 ## Perché è importante
 

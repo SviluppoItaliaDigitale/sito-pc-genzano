@@ -992,9 +992,9 @@ dati:
         url: "https://www.protezionecivile.gov.it/it/normativa/direttiva-ministro-pcpm-12-febbraio-2026/"
     vietati:
       - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,80}?\bterremoti\s*,\s*(?:maremoti|eruzioni|dighe|vulcani)'
-        perche: "IT-alert non avvisa dei terremoti, che non si possono prevedere."
+        perche: "IT-alert non si usa per i terremoti."
       - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,60}?\b(?:avvis|avvert|allert|segnal)\w*\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,30}?\b(?:per|di|dei|in\s+caso\s+di)\s+(?:un\s+|i\s+|il\s+)?(?:terremot|sism)'
-        perche: "IT-alert non avvisa dei terremoti, che non si possono prevedere."
+        perche: "IT-alert non si usa per i terremoti."
       - regex: '(?i)\bIT[- ]?alert\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,60}?\b(?:attiv[oa]|operativ[oa]|si\s+usa|arriva|avvis\w*|serve)\b(?:(?!\bnon\b|\bné\b)[^.!?\n]){0,40}?\b(?:maremot\w*|tsunami|Stromboli)'
         perche: "Per maremoto e Stromboli IT-alert è ancora in sperimentazione: solo messaggi di test, fino al 31 dicembre 2026."
         salvo_se_frase: '(?i)sperimenta|in\s+prova|ancora\s+una\s+prova|\btest\b|non\s+(?:è\s+)?(?:ancora\s+)?operativ'

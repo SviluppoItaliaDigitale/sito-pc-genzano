@@ -91,7 +91,7 @@ Quando circola una notizia di rischio:
 ## Per approfondire
 
 - [Differenza tra allerta e emergenza](/comunicazioni/2026-09-09-differenza-allerta-emergenza-linguaggio/)
-- [IT-Alert: cosa è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
+- [IT-alert: cosa è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
 - [Social Media Policy](/social-media-policy/)
 
 In emergenza: **112**.

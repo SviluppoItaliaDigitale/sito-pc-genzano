@@ -1,5 +1,5 @@
 ---
-title: "IT-Alert: cosa è e cosa fare"
+title: "IT-alert e i test: cosa fare"
 date: 2026-08-27T00:01:00+02:00
 draft: false
 description: "IT-alert è il sistema di allarme sul cellulare. Cosa fare quando suona."
@@ -7,7 +7,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-27-it-alert-test-settembre-cosa-sapere.webp"
-image_alt: "Schermo di cellulare che mostra una notifica IT-Alert di test con testo istituzionale"
+image_alt: "Cover dell'articolo: IT-alert: cosa è, come funziona, come reagire al prossimo test"
 scadenza: ""
 area: "Lazio"
 allegati: []
@@ -27,7 +27,7 @@ build:
 
 ## Come arriva il messaggio
 
-IT-alert usa una tecnologia che si chiama **cell broadcast**. Il messaggio arriva a tutti i telefoni in una zona. Non devi scaricare app. Non devi iscriverti. Il sistema non conosce il tuo numero di telefono. Funziona anche senza Internet. Il telefono riceve il messaggio se si trova nella zona. Non importa dove abiti.
+IT-alert usa una tecnologia che si chiama **cell broadcast**. Il messaggio arriva ai telefoni accesi in una zona. Non devi scaricare app. Non devi iscriverti. Il sistema non conosce il tuo numero di telefono. Funziona anche senza Internet. Il telefono riceve il messaggio se si trova nella zona. Non importa dove abiti.
 
 Arriva anche sui telefoni vecchi, che non sono smartphone. Il telefono deve essere acceso, carico e con il campo. Non devi cambiare le impostazioni.
 
@@ -48,7 +48,7 @@ Quando arriva IT-alert:
 
 - il telefono fa un **suono** diverso dagli altri suoni. Se il telefono è in silenzioso, il suono può non partire.
 - lo schermo mostra un **testo con le istruzioni**
-- il telefono resta **bloccato** finché tocchi il messaggio. Il messaggio **non è un SMS**.
+- il telefono resta **bloccato**. Per sbloccarlo, tocca il messaggio. Il messaggio **non è un SMS**.
 
 ## Cosa fare quando arriva
 

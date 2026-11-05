@@ -119,7 +119,7 @@ Quando leggi una notizia su un rischio o un'emergenza:
 ## Per saperne di più
 
 - [Differenza tra allerta e emergenza](/comunicazioni/2026-09-09-differenza-allerta-emergenza-linguaggio/)
-- [IT-Alert: cos'è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
+- [IT-alert: cos'è e come funziona](/comunicazioni/2026-08-27-it-alert-test-settembre-cosa-sapere/)
 - [Social Media Policy](/social-media-policy/)
 
 In caso di emergenza chiama il **112**, il numero unico europeo di emergenza.

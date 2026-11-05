@@ -46,7 +46,7 @@ Sono principi di **comunicazione del rischio** allineati al **D.Lgs. 1/2018** it
 
 ## IT-alert: il sistema italiano
 
-**IT-alert** è il sistema nazionale di allerta pubblica via **cell broadcast**: un canale tecnico che invia un messaggio a **tutti i telefoni** (anche stranieri in roaming) presenti in una determinata area geografica. Il telefono **non deve essere registrato**, **non serve un'app**, **non serve credito**, **non serve internet**.
+**IT-alert** è il sistema nazionale di allerta pubblica via **cell broadcast**: un canale tecnico che invia un messaggio ai **telefoni accesi e con campo** presenti in una determinata area geografica, in italiano e in inglese. Il telefono **non deve essere registrato**, **non serve un'app**, **non serve credito**, **non serve internet**.
 
 Caratteristiche di IT-alert in linea con ISO 22322:
 
