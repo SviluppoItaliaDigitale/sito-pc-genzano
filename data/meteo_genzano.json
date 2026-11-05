@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-05T19:04",
+  "aggiornato": "2026-11-05T20:05",
   "data_lunga": "giovedì 5 novembre 2026",
-  "aggiornato_label": "giovedì 5 novembre 2026, ore 19:04",
+  "aggiornato_label": "giovedì 5 novembre 2026, ore 20:05",
   "alba": "06:45",
   "tramonto": "16:59",
   "corrente": {
-    "temp": 11.9,
-    "percepita": 10.9,
+    "temp": 11.1,
+    "percepita": 9.7,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 83,
+    "umidita": 79,
     "vento": 5,
-    "raffiche": 14
+    "raffiche": 16
   },
   "giorni": [
     {
@@ -47,8 +47,8 @@
       "pioggia": 23,
       "pioggia_mm": 0,
       "raffiche": 23,
-      "uv": 2,
-      "uv_label": "basso"
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Dom 8",
@@ -59,8 +59,8 @@
       "pioggia": 5,
       "pioggia_mm": 0,
       "raffiche": 18,
-      "uv": 2,
-      "uv_label": "basso"
+      "uv": 3,
+      "uv_label": "moderato"
     }
   ],
   "fonte": "Open-Meteo",
