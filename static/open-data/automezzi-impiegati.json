@@ -4,11 +4,11 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-11-01",
-    "ultimo_numero": "222/2026"
+    "al": "2026-11-05",
+    "ultimo_numero": "223/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-11-01",
+  "generato_il": "2026-11-06",
   "dati": [
     {
       "automezzo": "AB01 Atego (Mezzo speciale)",
@@ -20,7 +20,7 @@
     },
     {
       "automezzo": "M04 Evo (Pickup)",
-      "interventi": 59
+      "interventi": 60
     },
     {
       "automezzo": "M05 Doblò (Autovettura)",
@@ -35,11 +35,11 @@
       "interventi": 9
     },
     {
-      "automezzo": "M03 WM-90 (Fuoristrada)",
-      "interventi": 4
+      "automezzo": "AG01 Stralis (Autocarro)",
+      "interventi": 5
     },
     {
-      "automezzo": "AG01 Stralis (Autocarro)",
+      "automezzo": "M03 WM-90 (Fuoristrada)",
       "interventi": 4
     },
     {

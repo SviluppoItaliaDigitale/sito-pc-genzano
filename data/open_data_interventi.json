@@ -1,7 +1,7 @@
 {
  "titolo": "Interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
  "fonte": "Registro interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, dati aggregati e anonimi",
- "aggiornato": "2026-11-01",
+ "aggiornato": "2026-11-05",
  "testi": {
   "tutto": "tutto il periodo",
   "rivivi": "Rivivi l'attività del Gruppo giorno per giorno"
@@ -1066,6 +1066,26 @@
    "d": "2026-11-01",
    "n": 1,
    "ore": 2.1
+  },
+  {
+   "d": "2026-11-02",
+   "n": 0,
+   "ore": 0.0
+  },
+  {
+   "d": "2026-11-03",
+   "n": 0,
+   "ore": 0.0
+  },
+  {
+   "d": "2026-11-04",
+   "n": 0,
+   "ore": 0.0
+  },
+  {
+   "d": "2026-11-05",
+   "n": 1,
+   "ore": 1.9
   }
  ],
  "serie": {
@@ -1078,7 +1098,7 @@
     "Agosto",
     "Settembre",
     "Ottobre",
-    "Novembre (fino al 1)"
+    "Novembre (fino al 5)"
    ],
    "chiavi": [
     "2026-04",
@@ -1103,7 +1123,7 @@
       52,
       46,
       48,
-      1
+      2
      ]
     },
     {
@@ -1118,7 +1138,7 @@
       227.2,
       133.6,
       94.9,
-      2.1
+      4.0
      ]
     },
     {
@@ -1133,7 +1153,7 @@
       1495,
       977,
       355,
-      6
+      14
      ]
     }
    ]
@@ -1147,8 +1167,8 @@
     "Taglio pianta",
     "Allagamento",
     "Incendio sterpaglie",
-    "Attività Coordinamento",
     "Servizio tecnico",
+    "Attività Coordinamento",
     "Evento Nazionale",
     "Evento Regionale",
     "Incendio boschivo interfaccia",
@@ -1169,7 +1189,7 @@
       13,
       11,
       5,
-      4,
+      5,
       4,
       1,
       1,
@@ -1189,8 +1209,8 @@
      7,
      0,
      1,
-     0,
      3,
+     0,
      0,
      0,
      0,
@@ -1206,8 +1226,8 @@
      2,
      0,
      3,
-     0,
      1,
+     0,
      0,
      0,
      0,
@@ -1257,8 +1277,8 @@
      1,
      0,
      0,
-     2,
      0,
+     2,
      1,
      1,
      0,
@@ -1274,8 +1294,8 @@
      0,
      2,
      0,
-     1,
      0,
+     1,
      0,
      0,
      0,
@@ -1291,8 +1311,8 @@
      0,
      9,
      0,
-     1,
      0,
+     1,
      0,
      0,
      0,
@@ -1308,7 +1328,7 @@
      0,
      0,
      0,
-     0,
+     1,
      0,
      0,
      0,
@@ -1337,7 +1357,7 @@
       73,
       21,
       45,
-      46,
+      47,
       25,
       11
      ]
@@ -1404,7 +1424,7 @@
      0,
      0,
      0,
-     0,
+     1,
      0,
      1
     ]
@@ -1430,11 +1450,11 @@
      "valori": [
       71,
       64,
-      59,
+      60,
       49,
       11,
       9,
-      4,
+      5,
       4,
       1
      ]
@@ -1521,11 +1541,11 @@
     "2026-11": [
      0,
      0,
+     2,
+     0,
+     0,
+     0,
      1,
-     0,
-     0,
-     0,
-     0,
      0,
      0
     ]
