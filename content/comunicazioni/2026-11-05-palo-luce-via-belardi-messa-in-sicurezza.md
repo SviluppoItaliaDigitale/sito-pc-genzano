@@ -1,12 +1,12 @@
 ---
-title: "Palo della luce inclinato in via Italo Belardi: area messa in sicurezza"
+title: "Palo della luce danneggiato in corso Don Minzoni: area messa in sicurezza"
 date: 2026-11-05T00:03:00+02:00
-description: "Giovedì pomeriggio un palo della luce urtato da un mezzo rischiava di cadere in via Italo Belardi. Il Gruppo ha delimitato l'area con la Polizia Locale."
+description: "Giovedì pomeriggio un palo della luce urtato da un mezzo si è piegato in corso Don Minzoni. Il Gruppo ha delimitato l'area; il palo è stato rimosso."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-05-palo-luce-via-belardi-messa-in-sicurezza.webp"
-image_alt: "Cover dell'articolo: Palo della luce inclinato in via Italo Belardi: area messa in sicurezza"
+image_alt: "Cover dell'articolo: Palo della luce danneggiato in corso Don Minzoni: area messa in sicurezza"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -14,21 +14,31 @@ draft: false
 tts: true
 social_citazione: "Un palo o un cartello che si inclina non si tocca e non si raddrizza: ci si allontana e si lascia spazio a chi lo mette in sicurezza."
 social_punti:
-  - "Giovedì 5 novembre, poco prima delle 17, un palo della luce urtato da un mezzo rischiava di cadere in via Italo Belardi."
+  - "Giovedì 5 novembre, poco prima delle 17, un palo della luce urtato da un mezzo si è piegato in corso Don Minzoni."
   - "Su richiesta del Sindaco, quattro volontari hanno delimitato l'area intorno al palo."
-  - "Sul posto anche la Polizia Locale; l'intervento si è chiuso verso le 18:30."
+  - "In serata il palo è stato rimosso e il Comune ha riaperto la strada."
   - "Se vedi un palo pericolante resta a distanza e chiama il 112 se è un pericolo immediato."
 ---
 
-Giovedì **5 novembre 2026**, poco prima delle 17, un **palo della luce** in **via Italo Belardi**, a Genzano di Roma, è stato urtato da un mezzo e si è inclinato: rischiava di cadere sulla strada. Su richiesta del **Sindaco**, quattro volontari del Gruppo sono intervenuti per mettere in sicurezza la zona.
+Giovedì **5 novembre 2026**, poco prima delle 17, un **palo della pubblica illuminazione** in **corso Don Giovanni Minzoni**, nel centro di Genzano di Roma, è stato urtato da un mezzo in movimento: la base si è spezzata e il palo si è piegato di lato. Su richiesta del **Sindaco**, quattro volontari del Gruppo sono intervenuti per mettere in sicurezza la zona.
 
-Sul posto c'era anche la **Polizia Locale**.
+Sul posto c'erano anche i **Vigili del Fuoco** e la **Polizia Locale** di Genzano e di Ariccia. Il Comune ha chiuso in via precauzionale il tratto di strada interessato.
 
 ## L'intervento
 
-I volontari hanno **delimitato l'area** intorno al palo, così che nessuno passasse sotto o accanto alla struttura finché non fosse stabile. Abbiamo impiegato l'autocarro **Iveco Stralis**, del Coordinamento FE.P.I.VOL. e in deposito presso il Gruppo, e il pickup **EVO Cross 4**. L'intervento si è chiuso verso le 18:30.
+I volontari hanno **delimitato l'area** intorno al palo, così che nessuno passasse sotto o accanto alla struttura. Abbiamo impiegato l'autocarro **Iveco Stralis**, del Coordinamento FE.P.I.VOL. e in deposito presso il Gruppo, e il pickup **EVO Cross 4**. Il nostro intervento si è chiuso verso le 18:30.
 
-Ringraziamo la Polizia Locale per il lavoro fatto insieme.
+{{< foto src="/images/2026-11-05-corso-minzoni-palo-inclinato.webp"
+         alt="Corso Don Giovanni Minzoni di giorno: in primo piano un lampione a più bracci con la base spezzata e piegato di lato, circondato da transenne e nastro bianco e rosso. A sinistra il cassone di un autocarro, a destra la facciata bianca di una chiesa e alcuni passanti lontani."
+         caption="Il palo piegato e l'area delimitata in corso Don Giovanni Minzoni. Foto: Comune di Genzano di Roma, dalla pagina Facebook ufficiale." >}}
+
+In serata, comunica il Comune, il palo danneggiato è stato rimosso, l'area è stata messa in sicurezza e il tratto di corso Don Minzoni è stato riaperto al traffico.
+
+{{< foto src="/images/2026-11-05-corso-minzoni-strada-riaperta.webp"
+         alt="Di sera, l'incrocio del centro storico con la strada riaperta: due auto e uno scooter passano davanti a un palazzo arancione con una vetrina illuminata; a sinistra la facciata illuminata di una chiesa. Il palo danneggiato non c'è più. Targhe e conducente sono oscurati."
+         caption="La strada riaperta dopo la rimozione del palo. Foto: Comune di Genzano di Roma, dalla pagina Facebook ufficiale." >}}
+
+Ringraziamo i Vigili del Fuoco, la Polizia Locale di Genzano e di Ariccia, l'Ufficio Tecnico del Comune e la ditta che gestisce l'illuminazione pubblica per il lavoro fatto insieme.
 
 ## Le statistiche aggiornate
 
@@ -62,8 +72,9 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 
 **Fonti istituzionali:**
 
+- [Comune di Genzano di Roma — pagina Facebook ufficiale](https://www.facebook.com/ComuneGenzano/), post del 5 novembre 2026 sulla chiusura e sulla riapertura di corso Don Giovanni Minzoni
 - [Dipartimento della Protezione Civile — Portale dei rischi](https://rischi.protezionecivile.gov.it/it/)
 
 **Fonti:**
 
-- Per il resoconto: registro degli interventi del Gruppo, rapporto approvato 223/2026. Dati aggregati nella pagina [Open data](/open-data/).
+- Per il resoconto: registro degli interventi del Gruppo, rapporto approvato 223/2026, che indica il luogo in via Italo Belardi, la strada che comincia a pochi metri. Dati aggregati nella pagina [Open data](/open-data/).
