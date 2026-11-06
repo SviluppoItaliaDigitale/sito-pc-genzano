@@ -119,7 +119,7 @@ Alle 4 regole si affiancano tre **istruzioni permanenti** più recenti, anch'ess
 Sito statico **Hugo** (tema custom `flavour-pcgenzano`, base Bootstrap Italia 2.x) del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
 
 - **Produzione (Aruba):** https://www.protezionecivilegenzano.it/
-- **Preview (GitHub Pages):** https://sviluppoitaliadigitale.github.io/sito-pc-genzano/
+- **Preview (GitHub Pages):** https://sviluppoitaliadigitale.github.io/sito-pc-genzano/ — copia alleggerita dal 06/11/2026: video, audio, presentazioni e, se serve, i PDF e gli ZIP più pesanti non ci sono e i loro collegamenti portano ad Aruba (`scripts/alleggerisci-copia-pages.py`). Non è un guasto da riparare: Aruba resta completo e non si tocca.
 - **Deploy:** automatico ad ogni push su `main` via GitHub Actions (`.github/workflows/deploy.yml`).
 - **Branch di produzione:** `main`. Tutto il resto sono feature branch.
 

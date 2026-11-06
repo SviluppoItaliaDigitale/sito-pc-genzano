@@ -28,9 +28,10 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 1. Checkout del repository (fetch-depth 0 per ottenere la storia completa).
 2. Setup Hugo extended.
 3. Build principale con `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (per Aruba).
-4. Build secondario con `hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"` (per GitHub Pages).
-5. Deploy FTP su Aruba usando i secret `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
-6. Deploy su GitHub Pages tramite `actions/deploy-pages`.
+4. Deploy FTP su Aruba usando i secret `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, poi verifica del sito pubblicato contro la build e nuovo caricamento dei soli file rimasti vecchi.
+5. Build secondario con `hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"` (per GitHub Pages).
+6. Alleggerimento della copia per GitHub Pages (dal 06/11/2026): `scripts/alleggerisci-copia-pages.py` toglie dalla sola copia video, audio e presentazioni e, se la copia supera ancora 800 MB, i PDF e gli ZIP più pesanti; i collegamenti a quei file portano alle copie su Aruba. GitHub limita un sito Pages a 1 GB e la sua pubblicazione a 10 minuti, e la copia completa pesava circa 1,9 GB. Su Aruba non cambia nulla: il passo viene dopo il caricamento su Aruba e lo script si ferma se la cartella non è la build per GitHub Pages.
+7. Deploy su GitHub Pages tramite `actions/deploy-pages`.
 
 **Durata tipica**: 2–4 minuti.
 
