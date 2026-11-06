@@ -132,6 +132,15 @@ jobs:
         # deve portare a una pagina e a un'ancora della build.
         run: python3 scripts/check-libro-3d.py --public public
 
+      - name: "🪶 Copia per GitHub Pages: prove dell'alleggerimento"
+        # 06/11/2026: deploy.yml toglie dalla sola copia per GitHub Pages video,
+        # audio, presentazioni e, se serve, i PDF e gli ZIP più pesanti, e ne
+        # porta i collegamenti su Aruba. Qui lo script si prova su cartelle
+        # finte e controlla che questa build, quella per Aruba, sia
+        # riconosciuta e lasciata stare: se la guardia la scambiasse per la
+        # copia per GitHub Pages, la PR si ferma.
+        run: python3 scripts/alleggerisci-copia-pages.py --prova public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"

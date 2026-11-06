@@ -3,7 +3,7 @@
 Sito istituzionale del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
 
 - **Produzione**: https://www.protezionecivilegenzano.it/
-- **Preview GitHub Pages**: https://sviluppoitaliadigitale.github.io/sito-pc-genzano/
+- **Preview GitHub Pages**: https://sviluppoitaliadigitale.github.io/sito-pc-genzano/ (copia alleggerita: video, audio, presentazioni e i PDF più pesanti si aprono dal sito di produzione)
 - **Tecnologia**: [Hugo](https://gohugo.io/) (static site generator) + [Bootstrap Italia](https://italia.github.io/bootstrap-italia/) 2.x
 - **Conformità**: AGID / Designers Italia, WCAG 2.2 AA
 - **Deploy**: automatico a ogni push su `main` (GitHub Actions → Aruba via FTP + GitHub Pages)

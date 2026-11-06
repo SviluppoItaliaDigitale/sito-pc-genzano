@@ -4,6 +4,8 @@
 
 **Ordine esplicito di Alessandro:** immagini, documenti, audio, video e altri allegati devono restare sempre disponibili sul sito. Si eliminano dal sito soltanto su suo ordine esplicito. Una richiesta di liberare spazio in Git non autorizza la loro rimozione, neppure delle immagini social più vecchie.
 
+**Copia di anteprima su GitHub Pages: alleggerita (06/11/2026, sì di Alessandro).** GitHub limita un sito Pages a 1 GB e la sua pubblicazione a 10 minuti; la copia completa pesava circa 1,9 GB e il 05/11/2026 tre pubblicazioni su circa 27 sono andate in timeout (issue #1724). A ogni deploy `scripts/alleggerisci-copia-pages.py` toglie dalla **sola copia per GitHub Pages** video, audio e presentazioni e, se la copia supera ancora 800 MB, i PDF e gli ZIP più pesanti; i loro collegamenti nella copia portano ai file su Aruba. Istruzione di Alessandro: *«Vai devi alleggerire il sito. L'importante è che i files sul server Aruba non vengano toccati»*. Per questo il passo viene dopo il caricamento su Aruba e la sua verifica, e lo script si ferma con uscita 2 se la cartella non è la build per GitHub Pages; `validate-pr.yml` controlla su ogni PR che riconosca la build per Aruba (`--prova public`). Su Aruba e nel repository non si toglie nulla: l'ordine riguarda solo la copia di anteprima. Un tipo di file nuovo da togliere si aggiunge agli insiemi in testa allo script; le immagini restano sempre.
+
 Per spostare un allegato fuori dall'indice Git occorrono prima una copia permanente verificata e il ripristino automatico nello stesso percorso pubblico prima di ogni build. Conservare le copie nella release `allegati-permanenti`; non sovrascriverle né eliminarle automaticamente. Il recupero in `scripts/immagini-meteo-release.py` deve bloccare la pubblicazione se manca un allegato o non coincide la sua impronta. La pulizia periodica delle immagini social rimane in modalità `--dry-run`.
 
 **Cronologia ripulita il 18/10/2026:** rimossi soltanto vecchi output Pagefind, ECMWF, sinottica e Open Kit; file attuali del sito e contenuti delle PR #1439 e #1440 verificati identici. Il [backup completo verificato](https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/releases/tag/backup-storico-20261018-39152697296-1) conserva i riferimenti originali, le istruzioni di recupero e la mappa dei commit.
@@ -23,9 +25,10 @@ Il sito viene pubblicato su due ambienti distinti ad ogni push su `main`:
 
 Il file `.github/workflows/deploy.yml` gestisce il deploy automatico:
 1. Esegue `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` per Aruba
-2. Esegue `hugo --minify` per GitHub Pages
-3. Carica su Aruba via FTP usando i secret GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`
-4. Pubblica su GitHub Pages tramite l'azione ufficiale
+2. Carica su Aruba via FTP usando i secret GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, e verifica il sito pubblicato contro la build
+3. Esegue `hugo --minify` con l'indirizzo di GitHub Pages
+4. Alleggerisce la sola copia per GitHub Pages (`scripts/alleggerisci-copia-pages.py`, § «Conservare immagini e allegati»)
+5. Pubblica su GitHub Pages tramite l'azione ufficiale
 
 ## Cartelle escluse dal deploy FTP (contenuto lato server)
 

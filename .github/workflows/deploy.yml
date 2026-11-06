@@ -349,6 +349,20 @@ jobs:
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (GitHub Pages)"
         run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
 
+      - name: "🪶 Alleggerisci la copia per GitHub Pages (Aruba non si tocca)"
+        # 06/11/2026: la copia per GitHub Pages pesava circa 1,9 GB, quasi il
+        # doppio del limite di 1 GB di GitHub, e il 05/11/2026 tre caricamenti
+        # su circa 27 sono andati oltre i 10 minuti concessi (issue #1724).
+        # Lo script toglie dalla sola copia video, audio e presentazioni, poi i
+        # PDF e gli ZIP più pesanti finché la copia resta sotto 800 MB, e porta
+        # i loro collegamenti alle copie su Aruba, così l'anteprima funziona.
+        # Il passo viene dopo il caricamento su Aruba e la sua verifica, e lo
+        # script si ferma se la cartella non è la build per GitHub Pages: i file
+        # sul server Aruba non si toccano (sì di Alessandro del 06/11/2026).
+        # Se si ferma, o se la copia resta oltre 1 GB, l'anteprima non si
+        # carica e il run diventa rosso: Aruba è già aggiornato e verificato.
+        run: python3 scripts/alleggerisci-copia-pages.py public --tetto-mb 800
+
       - name: "📜 Manifesto della build (GitHub Pages)"
         # Stesso manifesto per la copia su GitHub Pages: permette di provare la
         # guardia anche contro quell'ambiente (--base https://sviluppoitaliadigitale.github.io/sito-pc-genzano).
