@@ -89,7 +89,17 @@ def main() -> int:
         except Exception:
             return t
 
-    if precedente and senza_ts(precedente) == senza_ts(nuovo):
+    def vecchio_di_un_giorno(t: str) -> bool:
+        # Se i dati non cambiano per giorni, il timestamp resterebbe fermo e il
+        # controllo di freschezza di check-fonti-cruscotto.py (soglia 168 h) darebbe
+        # un falso allarme: si rinnova il timestamp al massimo una volta al giorno.
+        try:
+            gen = json.loads(t)["_snapshot"]["generato"]
+            return (datetime.now(timezone.utc) - datetime.fromisoformat(gen)).total_seconds() > 86400
+        except Exception:
+            return True
+
+    if precedente and senza_ts(precedente) == senza_ts(nuovo) and not vecchio_di_un_giorno(precedente):
         print(f"[ok] EMS invariato: {len(snellite)} attivazioni ({aperte} aperte).")
         return 0
 
