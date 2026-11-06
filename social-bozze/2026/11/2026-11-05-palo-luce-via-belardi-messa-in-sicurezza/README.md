@@ -1,4 +1,4 @@
-# Immagini e testi social per «Palo della luce inclinato in via Italo Belardi: area messa in sicurezza»
+# Immagini e testi social per «Palo della luce danneggiato in corso Don Minzoni: area messa in sicurezza»
 
 - **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-11-05-palo-luce-via-belardi-messa-in-sicurezza/
 - **Data**: 2026-11-05
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg`, `feed-carosello-5.jpg`, `feed-carosello-6.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `testi-alternativi.json` | testo alternativo di ogni immagine, per chi usa un lettore di schermo: la pubblicazione automatica lo invia a Instagram e Facebook; chi pubblica a mano lo incolla come testo alternativo di ciascuna immagine |
 | `instagram.txt` | testo per Instagram |
