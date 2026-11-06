@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-05T23:52:14+00:00",
+  "generato": "2026-11-06T05:35:39+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-06T05:27:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, si corre a Interlagos: dalle libere al Gran Premio, il programma del Gp del Brasile e dove vederlo",
+   "url": "https://www.adnkronos.com/sport/formula-1-oggi-prove-libere-gp-brasile-orario-programma-gp-dove-vederlo_7eOYNFbXiueFCMHsyFIKts"
+  },
+  {
+   "data": "2026-11-06T05:25:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, si corre a Lusail: dalle libere al Gran Premio, orari, programma Gp Qatar e dove vederlo",
+   "url": "https://www.adnkronos.com/sport/motogp-qatar-lusail-libere-oggi_4HLmiteRdcZcWkwqNwsiiC"
+  },
   {
    "data": "2026-11-05T23:07:35+00:00",
    "fonte": "ADNKRONOS",
@@ -35,7 +47,7 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/05/-trump-non-si-arrende-le-elezioni-negli-usa-sono-truccate_f97bbbdf-4ed5-49b4-a42c-7e13e9cdfec8.html"
   },
   {
-   "data": "2026-11-05T22:42:42+00:00",
+   "data": "2026-11-05T22:42:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Campo largo, Conte e le primarie con Schlein: \"Era più saggio un nostro passo indietro\"",
    "url": "https://www.adnkronos.com/politica/conte-schlein-m5s-pd-piazzapulita_G6GqX2rHF4dXyhzzvATt6"
@@ -137,22 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/05/la-francia-si-ferma-per-lo-sciopero-almeno-600-mila-in-piazza_df510ebe-b004-47ce-9763-a6b8755813ea.html"
   },
   {
-   "data": "2026-11-05T19:54:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atalanta-Kairat Almaty 1-1, Krstovic non basta alla Dea",
-   "url": "https://www.adnkronos.com/sport/atalanta-kairat-almaty-1-1-gol-krstovic-classifica_4OulRy9Vq3M1qtDoayCHmq"
-  },
-  {
    "data": "2026-11-05T19:48:08+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/05/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-11-05T19:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanremo 2027, la Gialappa's Band alla conduzione del ControFestival: l'annuncio di De Martino",
-   "url": "https://www.adnkronos.com/spettacoli/sanremo-2027-stefano-de-martino-controfestival-gialappas-band_3MvLcAqm57yxFJk5cgPhwu"
   },
   {
    "data": "2026-11-05T19:38:18+00:00",
