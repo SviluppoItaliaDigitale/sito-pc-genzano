@@ -108,6 +108,15 @@ jobs:
         # deve portare a una pagina della build.
         run: python3 scripts/check-navigazione.py --public public
 
+      - name: "📰 Rassegna normativa: voci del territorio riconosciute e controllo di copertura"
+        # 07/11/2026: la notizia sulla delibera n. 189 (alberi di Genzano) era
+        # fra le voci trovate ma è stata chiusa in silenzio. Le prove
+        # verificano che le voci del territorio siano riconosciute e che il
+        # controllo di copertura blocchi un commento che non le nomina.
+        run: |
+          python3 scripts/normativa-watcher.py --self-test
+          python3 scripts/check-rassegna-coperta.py --prova
+
       - name: "🧑‍🏫 Script leggibili dai browser delle LIM (Chrome 64)"
         # 01/11/2026: sulle lavagne interattive e sui PC di scuola non
         # aggiornati Bootstrap Italia 2.x non si avviava (sintassi di Chrome

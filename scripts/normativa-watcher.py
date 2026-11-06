@@ -302,6 +302,31 @@ class Cliente:
             return decodifica(r.read(), r.headers.get_content_charset())
 
 
+# Territorio del Gruppo per la sezione «Notizie del territorio» della issue
+# (07/11/2026). Il 06/11/2026 la notizia di Castelli Notizie sui 345 mila euro
+# per gli alberi di Genzano era fra le voci trovate, ma la routine ha guardato
+# solo una parte della rassegna e ha chiuso il giro senza nominarla. Le voci
+# del territorio stanno ora in cima alla issue, tutte e in chiaro, e
+# scripts/check-rassegna-coperta.py blocca la chiusura se il commento non le
+# nomina una per una.
+TERRITORIO_LOCALE = [
+    'genzano', 'castelli romani', 'ariccia', 'albano', 'lanuvio', 'nemi', 'velletri',
+    'marino', 'castel gandolfo', 'frascati', 'grottaferrata', 'rocca di papa',
+    'rocca priora', 'monte porzio catone', 'monte compatri', 'colonna', 'lariano',
+    'cecchina', 'pavona', 'landi', 'lago albano', 'lago di nemi',
+]
+
+
+def e_locale(voce_rassegna):
+    """True se titolo o sommario parlano di Genzano o dei Castelli Romani."""
+    if voce_rassegna.get('fonte_tipo') == 'primaria' and voce_rassegna.get('fonte', '').startswith(('Albo pretorio', 'Comune di Genzano')):
+        return True
+    testo = normalizza((voce_rassegna.get('titolo') or '') + ' ' + (voce_rassegna.get('sommario') or ''))
+    # Il nome di una testata nel titolo («… - Il Giornale dei Castelli Romani») non è un luogo.
+    testo = re.sub(r'(il )?giornale dei castelli romani|castelli notizie', ' ', testo)
+    return bool(_trova(TERRITORIO_LOCALE, testo))
+
+
 def decodifica(raw, charset=None):
     for enc in ([charset] if charset else []) + ['utf-8', 'latin-1']:
         try:
@@ -1472,6 +1497,18 @@ def corpo_issue(output):
         righe.append("> ⚠️ Fonti non raggiunte in questo giro (da ricontrollare a mano; c'è una issue `fonte-rotta`): "
                      + '; '.join(output.get('errori', []) + output.get('errori_news', [])) + "\n")
 
+    locali = [h for h in hits if h.get('locale') and h['rilevanza'] in ('diretta', 'indiretta')]
+    if locali:
+        righe.append(f"\n## 📍 Notizie e atti del territorio: Genzano e Castelli Romani ({len(locali)})\n")
+        righe.append("**Ognuna va aperta, letta e nominata nel commento di chiusura con il suo link**, scrivendo se diventa un articolo "
+                     "(o aggiorna un articolo esistente, con il link) oppure perché si scarta. Prima di chiudere la issue: "
+                     "`python3 scripts/check-rassegna-coperta.py --novita /tmp/novita.json --commento <file del commento>`. "
+                     "Un atto citato dalla stampa ma non ancora all'albo non si scarta: resta in una issue «In attesa» finché esce.\n")
+        for it in locali:
+            data = (it.get('published') or '')[:10]
+            t = it['titolo'].replace('|', '\\|').replace('\n', ' ')
+            righe.append(f"- **{data}** — {it['fonte']} · rilevanza {it['rilevanza']}\n  [{t}]({it['link']})")
+
     def blocco(items, titolo):
         if not items:
             return
@@ -1521,7 +1558,7 @@ def corpo_issue(output):
         for n in news:
             per_fonte[n['fonte']].append(n)
         for fonte, items in sorted(per_fonte.items()):
-            righe.append(f"\n<details><summary><b>{fonte}</b> ({len(items)})</summary>\n")
+            righe.append(f"\n<details open><summary><b>{fonte}</b> ({len(items)})</summary>\n")
             for it in items[:15]:
                 data = (it.get('published') or '')[:10]
                 t = it['titolo'].replace('|', '\\|')
@@ -1587,11 +1624,18 @@ def main():
             v = filtra_testata({'titolo': titolo, 'sommario': '', 'rilevanza': None, 'motivi': []})
             if (v and v['rilevanza']) != attesa:
                 raise SystemExit(f'Filtro testate errato: {titolo!r}: {v and v["rilevanza"]!r}, attesa {attesa!r}')
+        if not e_locale({'fonte_tipo': 'news', 'fonte': 'Castelli Notizie',
+                         'titolo': 'Genzano, alberi a rischio dopo il maltempo: stanziati 345mila euro', 'sommario': ''}):
+            raise SystemExit('Voce del territorio non riconosciuta: notizia su Genzano')
+        if e_locale({'fonte_tipo': 'news', 'fonte': 'Google News', 'titolo': 'Maltempo, allerta arancione in Puglia - Il Giornale dei Castelli Romani', 'sommario': ''}):
+            raise SystemExit('Il nome della testata scambiato per un luogo')
+        if e_locale({'fonte_tipo': 'news', 'fonte': 'Fanpage', 'titolo': 'Allerta meteo a Roma e nel Lazio', 'sommario': ''}):
+            raise SystemExit('Voce non locale scambiata per locale')
         if parse_data_estesa('5 Novembre 2026') != date(2026, 11, 5):
             raise SystemExit('Data estesa non letta: «5 Novembre 2026»')
         if tuple(data_feed_italiana('gio, 05 nov 2026 16:26:38 +0100')[:5]) != (2026, 11, 5, 15, 26):
             raise SystemExit('Data italiana del feed non letta: «gio, 05 nov 2026 16:26:38 +0100»')
-        print(f'OK: {len(casi) + len(testate) + 2} verifiche di classificazione, nessuna richiesta esterna.')
+        print(f'OK: {len(casi) + len(testate) + 5} verifiche di classificazione, nessuna richiesta esterna.')
         return 0
 
     cutoff = oggi_roma() - timedelta(days=args.days)
@@ -1667,6 +1711,9 @@ def main():
         hits = [h for h in hits if h['link'] not in esclusi]
     scartati = prima - len(hits)
 
+    for h in hits:
+        h['locale'] = e_locale(h)
+
     ordine = {'diretta': 0, 'indiretta': 1, 'scuola': 2}
     ordine_tipo = {'primaria': 0, 'immagini': 1, 'news': 2}
     hits.sort(key=lambda x: x.get('published') or '', reverse=True)
@@ -1686,6 +1733,7 @@ def main():
         "totale_primarie": len(primarie),
         "totale_immagini": len(immagini),
         "totale_dirette": len([h for h in hits if h['rilevanza'] == 'diretta']),
+        "totale_locali": len([h for h in hits if h.get('locale')]),
         "novita": hits,
     }
     print(f"[info] Totale: {len(hits)} voci ({len(primarie)} da fonti primarie, {len(immagini)} immagini EU Space, "
