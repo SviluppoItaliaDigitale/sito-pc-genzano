@@ -5,34 +5,166 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-06T19:58:35+00:00",
+  "generato": "2026-11-06T23:59:23+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-06T19:48:35+00:00",
+   "data": "2026-11-06T23:21:15+00:00",
    "fonte": "ANSA",
-   "titolo": "Il Papa in Sudamerica, è atterrato a Montevideo: 'Benedetti check-up, mai avuto dubbi su questo viaggio'",
+   "titolo": "Mandato di arresto per Santiago Pena, Pedro Alliana nuovo presidente del Paraguay",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/mandato-di-arresto-per-santiago-pena-pedro-alliana-nuovo-presidente-del_b5c78e44-e52e-43f5-ad28-a2227aab6d8e.html"
+  },
+  {
+   "data": "2026-11-06T23:20:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Papa Leone XIV in Uruguay: \"Mai avuto dubbi sul viaggio. Fiero di essere americano e di aver votato\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/papa-leone-xiv-uruguay-viaggio-america-latina_1HgUKwIC2fCvG8s2yhB15S"
+  },
+  {
+   "data": "2026-11-06T23:16:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cancro alla prostata, studio italiano rivela motivo per cui sfugge a immunoterapia",
+   "url": "https://www.adnkronos.com/salute/tumore-prostata-immunoterapia-scoperta_4dnxTij7LjLaApDo8byqUO"
+  },
+  {
+   "data": "2026-11-06T23:11:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Irlanda, allarme per minacce bomba a pochi giorni da vertici Ue e Cpe",
+   "url": "https://www.adnkronos.com/internazionale/esteri/irlanda-allarme-per-minacce-bomba-cosa-succede_2GEJUZ1D6enO4H5SFxrBJ6"
+  },
+  {
+   "data": "2026-11-06T23:11:51+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tensione a manifestazione Trieste, feriti tre poliziotti, fermata una donna",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/tensione-a-manifestazione-trieste-feriti-tre-poliziotti-fermata-una-donna_3ddb3dce-d2bd-4867-9bd5-f33b75e339c1.html"
+  },
+  {
+   "data": "2026-11-06T23:11:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "ANSA Newsroom | In tenebra età, i giovani, gli scontri a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/ansa-newsroom-in-tenebra-eta-i-giovani-gli-scontri-a-milano_81c1ce83-96c5-410a-bdd2-ea1fc819ddb3.html"
+  },
+  {
+   "data": "2026-11-06T23:09:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fine vita, reset delle leggi regionali: due provvedimenti fermi in Senato, il quadro",
+   "url": "https://www.adnkronos.com/politica/fine-vita-leggi-regionali-governo-veneto_6ac91q38jGqa3lHu6wcooW"
+  },
+  {
+   "data": "2026-11-06T23:07:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Anac, scontro tra governo e opposizioni: salta candidatura Altieri",
+   "url": "https://www.adnkronos.com/politica/anac-scontro-governo-opposizioni-altieri_2W3g10ltMrBfgFyFtpEa24"
+  },
+  {
+   "data": "2026-11-06T23:05:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bollette luce, arriva una nuova stangata: aumenti fino al 51% tra novembre e dicembre",
+   "url": "https://www.adnkronos.com/economia/bollette-luce-aumenti-novembre-dicembre-rincari-famiglie_70SfUYExh1BEYoiI3GYK24"
+  },
+  {
+   "data": "2026-11-06T23:02:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vaccini, dal Covid all'influenza: perché le mamme in gravidanza devono farli",
+   "url": "https://www.adnkronos.com/salute/vaccini-gravidanza-quali-fare_2u3bpWeMNMNdDj9D9EPOae"
+  },
+  {
+   "data": "2026-11-06T22:50:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Fbi arresta in Florida il padre di Meghan Markle",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/lfbi-arresta-in-florida-il-padre-di-meghan-markle-_404b4dee-1f32-4233-83f4-5dcbbc0afa5d.html"
+  },
+  {
+   "data": "2026-11-06T22:49:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Media Iran, due missili colpiscono l'isola di Qeshm",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/06/media-iran-due-missili-colpiscono-lisola-di-qeshm_d3eb6266-aaec-4271-9d11-336fd196698b.html"
+  },
+  {
+   "data": "2026-11-06T22:42:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-11-06T22:16:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Francia di nuovo in piazza, polizia schierata al massimo con 70.000 agenti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/domani-la-francia-di-nuovo-in-piazza-polizia-schierata-al-massimo-con-70.000-agenti_707c8697-f1ce-4ab9-85ed-1b3735e589f2.html"
+  },
+  {
+   "data": "2026-11-06T22:13:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
    "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html"
   },
   {
-   "data": "2026-11-06T19:47:04+00:00",
+   "data": "2026-11-06T22:11:14+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: Venezia-Udinese 0-0 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/06/serie-a-venezia-udinese-0-0-diretta-e-foto_b7f53128-638d-409c-a912-b3265c94615c.html"
+   "titolo": "Scontro tra opposizioni e governo sulla nomina alla presidenza dell'Anac, il leghista Altieri si ritira",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/scoppia-il-caso-della-nomina-alla-guida-dellanac-altieri-si-ritira_213db7a9-2dd1-48af-8305-c65f12fa1116.html"
   },
   {
-   "data": "2026-11-06T19:46:28+00:00",
+   "data": "2026-11-06T21:16:32+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Stephen Miller nuovo capo staff della Casa Bianca, Trump 'fa fuori' Susue Wiles",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-capo-staff-casa-bianca-miller-wiles_3RwIn9VtiFootNGRZ8ZOhI"
+   "titolo": "Garlasco, Sempio su richiesta rinvio a giudizio: \"Paura no ma tensione\". Buono postale da 85mila euro, ira dei legali",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-sempio-rinvio-giudizio_5mu8JBEosQSBHpoRbjfqlQ"
   },
   {
-   "data": "2026-11-06T19:44:55+00:00",
+   "data": "2026-11-06T21:00:39+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Garlasco, Sempio 'Speriamo di andare presto in aula e risolvere tutto\"",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/garlasco-sempio-speriamo-di-andare-presto-in-aula-e-risolvere-tutto_1c5c2249-76c4-4e3c-8c64-1001e3f70d27.html"
+  },
+  {
+   "data": "2026-11-06T20:58:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "James Bond, Josh O'Connor sarà il nuovo 007: l'indiscrezione del Sun",
+   "url": "https://www.adnkronos.com/spettacoli/james-bond-josh-oconnor-nuovo-007_6BXCWUhar8yB8PSmRcQbXy"
+  },
+  {
+   "data": "2026-11-06T20:52:31+00:00",
    "fonte": "ANSA",
-   "titolo": "E' un caso Altieri all'Anac. Le opposizioni a Meloni: 'Ritiri la nomina'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/e-un-caso-altieri-allanac.-le-opposizioni-a-meloni-ritiri-la-nomina_213db7a9-2dd1-48af-8305-c65f12fa1116.html"
+   "titolo": "A Potenza \"chiude\" il ponte Musmeci, gioiello del '900",
+   "url": "https://www.ansa.it/basilicata/notizie/2026/11/06/ansa-box-a-potenza-chiude-il-ponte-musmeci-gioiello-del-900_aec2977d-4ae9-4c38-90e6-88aa13c99302.html"
+  },
+  {
+   "data": "2026-11-06T20:43:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Copernicus: 'Il mese di ottobre è stato il più caldo mai registrato'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/06/copernicus-il-mese-di-ottobre-2026-e-stato-il-piu-caldo-mai-registrato_6bcacc14-ee82-44d1-a5f1-9a609d8d83a8.html"
+  },
+  {
+   "data": "2026-11-06T20:12:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, numeri estrazione vincente oggi 6 novembre. I 5 vincono oltre 33mila euro",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-6-novembre-numeri_3PptatprPdDDrYTzyir0x4"
+  },
+  {
+   "data": "2026-11-06T20:09:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Midterm: Trump torna all'attacco, 'non mollerò mai'. E nomina Miller capo dello staff",
+   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/06/midterm-trump-torna-allattacco-non-mollero-mai.-e-nomina-miller-capo_4b1dc648-5e25-4e4c-856c-8a949fe1762f.html"
+  },
+  {
+   "data": "2026-11-06T20:08:55+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Chiesto il processo per 30 agenti della polizia locale di Genova",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/chiesto-il-processo-per-30-agenti-della-polizia-locale-di-genova_d28b0fd7-292b-45f8-b349-ff1a2bdbd3c8.html"
+  },
+  {
+   "data": "2026-11-06T20:03:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "I pm insistono: 'Sul caso Ramy una perizia in incidente probatorio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/i-pm-insistono-sul-caso-ramy-una-perizia-in-incidente-probatorio_c833b7dd-318c-4dcf-b55f-3629bfbbafd8.html"
+  },
+  {
+   "data": "2026-11-06T19:46:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Stephen Miller nuovo capo staff della Casa Bianca, Trump 'fa fuori' Susie Wiles",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-capo-staff-casa-bianca-miller-wiles_3RwIn9VtiFootNGRZ8ZOhI"
   },
   {
    "data": "2026-11-06T19:43:43+00:00",
@@ -49,146 +181,14 @@
   {
    "data": "2026-11-06T19:42:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Papa Leone XIV in Uruguay, prima tappa in America Latina: \"Mai avuto dubbi che avrei fatto questo viaggio\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/papa-uruguay-viaggio-america-latina_7BwPt6tP6dnYuQQbnKk8Zr"
+   "titolo": "Papa Leone XIV in Uruguay: \"Fiero di essere americano e di esercitare il diritto di voto\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/papa-uruguay-viaggio-america-latina-oggi_7BwPt6tP6dnYuQQbnKk8Zr"
   },
   {
    "data": "2026-11-06T19:36:30+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Allarme bomba sul volo Pescara-Charleroi, passeggera, 'equipaggio agitato'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/allarme-bomba-sul-volo-pescara-charleroi-passeggera-equipaggio-agitato_387d584b-ea92-48c9-ab79-b39c4c1e2b06.html"
-  },
-  {
-   "data": "2026-11-06T19:23:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'Fbi arresta in Florida il padre di Meghan Markle",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/lfbi-arresta-in-florida-il-padre-di-meghan-markle-_404b4dee-1f32-4233-83f4-5dcbbc0afa5d.html"
-  },
-  {
-   "data": "2026-11-06T19:15:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Misogini e razzisti, le mail dai 'Combattenti dello stato maschile'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/05/ansamisogini-e-razzisti-le-mail-dai-combattenti-dello-stato-maschile_5fed0bec-3a8d-4e8e-a075-fd53c33649dc.html"
-  },
-  {
-   "data": "2026-11-06T19:15:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Martine Rose nuova direttrice creativa di Balenciaga",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/11/06/martine-rose-nuova-direttrice-creativa-di-balenciaga_bf26e208-1ab7-4b00-afd8-615686eae5d6.html"
-  },
-  {
-   "data": "2026-11-06T19:14:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Esperto: 'Paura e visibilità mediatica, è la strategia Psyops'",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/cybersecurity/2026/11/06/esperto-paura-e-visibilita-mediatica-e-la-strategia-psyops_40229df9-4297-4c61-98cf-ce7b80f0181e.html"
-  },
-  {
-   "data": "2026-11-06T19:11:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'incubo degli allarmi bomba nei cieli europei: 'È solo l'inizio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/lincubo-degli-allarmi-bomba-nei-cieli-europei-e-solo-linizio_d4594eb9-5523-489a-a9ed-4c4ae79c242d.html"
-  },
-  {
-   "data": "2026-11-06T19:10:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump ammette con i sostenitori: 'Le midterm non sono andate come volevamo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/06/trump-ammette-con-i-sostenitori-le-midterm-non-sono-andate-come-volevamo_4b1dc648-5e25-4e4c-856c-8a949fe1762f.html"
-  },
-  {
-   "data": "2026-11-06T19:09:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Neonato trovato in una chiesa a Roma, lasciato in una borsa sull'altare",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/neonato-trovato-in-una-chiesa-a-roma-lasciato-in-una-borsa-sullaltare_95575398-3d92-434e-a516-33510925a6d1.html"
-  },
-  {
-   "data": "2026-11-06T19:09:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuovo schiaffo a Trump, una giudice blocca il suo arco di trionfo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/bloccato-il-progetto-dellarco-di-trionfo-a-washington-voluto-da-trump_9248e3b5-e1dd-4340-8985-d80ae7b197a3.html"
-  },
-  {
-   "data": "2026-11-06T19:05:57+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Legali Sempio, buono postale da 85mila euro gravissima fake news",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/legali-sempio-buono-postale-da-85mila-euro-gravissima-fake-news_e89b57c9-52a4-4d5b-968a-e85b3fcf0624.html"
-  },
-  {
-   "data": "2026-11-06T18:53:41+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": ">>>ANSA/ La Cassazione, 'Saman uccisa dal clan perché voleva una vita diversa'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/ansa-la-cassazione-saman-uccisa-dal-clan-perche-voleva-una-vita_70b9bf2d-0eae-4737-bd06-00e8a97d3cf0.html"
-  },
-  {
-   "data": "2026-11-06T18:49:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, neonato ritrovato vicino all'altare di una chiesa: è in buone condizioni",
-   "url": "https://www.adnkronos.com/cronaca/neonato-trovato-chiesa-roma_ZpwxN53YVWS7367SpK0lk"
-  },
-  {
-   "data": "2026-11-06T18:44:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ex Ilva, spenta l'area a caldo. Tavolo sulla cigs aggiornato al 10 novembre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/ex-ilva-spenta-larea-a-caldo.-tavolo-sulla-cigs-aggiornato-al-10-novembre_ff5c4603-24e6-416c-9a44-ddcb5ec4c51c.html"
-  },
-  {
-   "data": "2026-11-06T18:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morto a 52 anni Sebastian Lelio, il regista di 'Una donna fantastica'",
-   "url": "https://www.adnkronos.com/spettacoli/sebastian-lelio-regista-cileno-morto-una-donna-fantastica_2JpLSZ2ma51r4jaCmzRaty"
-  },
-  {
-   "data": "2026-11-06T18:43:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sei italiani fermati in Cisgiordania, 'rilasciarli subito'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/tajani-conferma-italiani-fermati-in-cisgiordania-non-hanno-fatto-nulla-_5fc7c29a-dae6-45da-8b2a-201e9fe95515.html"
-  },
-  {
-   "data": "2026-11-06T18:39:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La Silicon Valley cerca un'altra giravolta. Ma i dem hanno il dente avvelenato",
-   "url": "https://www.adnkronos.com/economia/la-silicon-valley-cerca-unaltra-giravolta-ma-i-dem-hanno-il-dente-avvelenato_6qQ89QOQXorCsIwl0iYzGi"
-  },
-  {
-   "data": "2026-11-06T18:37:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Copernicus: 'Il mese di ottobre è stato il più caldo mai registrato'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/06/copernicus-il-mese-di-ottobre-2026-e-stato-il-piu-caldo-mai-registrato_6bcacc14-ee82-44d1-a5f1-9a609d8d83a8.html"
-  },
-  {
-   "data": "2026-11-06T18:25:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "\"Ma cosa ho fatto?\". Il filosofo femminista Lorenzo Gasparrini inaugura il Festival Women & the City",
-   "url": "https://www.ansa.it/donne/notizie/2026/11/05/ma-cosa-ho-fatto.-il-filosofo-femminista-lorenzo-gasparrini-inaugura-il-festival-women-the_bfc41468-7d08-45ad-bf17-db4f103c3cd9.html"
-  },
-  {
-   "data": "2026-11-06T18:20:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'ex vicepresidente della Sicilia, Armao, ai domiciliari per corruzione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/lex-vicepresidente-della-sicilia-armao-ai-domiciliari-per-corruzione-_38595096-a498-4fae-8a9a-c589a975a616.html"
-  },
-  {
-   "data": "2026-11-06T18:20:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giustizia, esperienza negativa in un processo per più della metà degli italiani: il sondaggio",
-   "url": "https://www.adnkronos.com/politica/giustizia-sondaggio-processi-costa_AmyA5AbKArFzGl5kHASAU"
-  },
-  {
-   "data": "2026-11-06T18:18:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Trovato morto il pilota del Cessna disperso nella Bergamasca",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/trovato-morto-il-pilota-del-cessna-disperso-nella-bergamasca_419546ed-5f0f-4ee5-91bf-68b962557e18.html"
-  },
-  {
-   "data": "2026-11-06T18:10:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fisco, al XV Forum di Wolters Kluwer le sfide del sistema tributario",
-   "url": "https://www.adnkronos.com/economia/fisco-al-xv-forum-di-wolters-kluwer-le-sfide-del-sistema-tributario_39omdCbozVuUf0dPiv8jua"
-  },
-  {
-   "data": "2026-11-06T18:09:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "È morto don Vergari, il prete amico di De Pedis",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/e-morto-don-vergari-il-prete-amico-di-de-pedis_cd18b692-30d2-432b-b750-00fd262792c7.html"
   }
  ]
 }
