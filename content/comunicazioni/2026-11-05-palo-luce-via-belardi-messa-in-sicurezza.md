@@ -14,13 +14,13 @@ draft: false
 tts: true
 social_citazione: "Un palo o un cartello che si inclina non si tocca e non si raddrizza: ci si allontana e si lascia spazio a chi lo mette in sicurezza."
 social_punti:
-  - "Giovedì 5 novembre, poco prima delle 17, un palo della luce urtato da un mezzo si è piegato in corso Don Minzoni."
+  - "Giovedì 5 novembre, poco prima delle 17, un palo della luce urtato da un mezzo si è piegato all'angolo fra corso Don Minzoni e via Italo Belardi."
   - "Su richiesta del Sindaco, quattro volontari hanno delimitato l'area intorno al palo."
   - "In serata il palo è stato rimosso e il Comune ha riaperto la strada."
   - "Se vedi un palo pericolante resta a distanza e chiama il 112 se è un pericolo immediato."
 ---
 
-Giovedì **5 novembre 2026**, poco prima delle 17, un **palo della pubblica illuminazione** in **corso Don Giovanni Minzoni**, nel centro di Genzano di Roma, è stato urtato da un mezzo in movimento: la base si è spezzata e il palo si è piegato di lato. Su richiesta del **Sindaco**, quattro volontari del Gruppo sono intervenuti per mettere in sicurezza la zona.
+Giovedì **5 novembre 2026**, poco prima delle 17, un **palo della pubblica illuminazione** all'angolo fra **corso Don Giovanni Minzoni** e **via Italo Belardi**, nel centro di Genzano di Roma, è stato urtato da un mezzo in movimento: la base si è spezzata e il palo si è piegato di lato. Su richiesta del **Sindaco**, quattro volontari del Gruppo sono intervenuti per mettere in sicurezza la zona.
 
 Sul posto c'erano anche i **Vigili del Fuoco** e la **Polizia Locale** di Genzano e di Ariccia. Il Comune ha chiuso in via precauzionale il tratto di strada interessato.
 
@@ -77,4 +77,4 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 
 **Fonti:**
 
-- Per il resoconto: registro degli interventi del Gruppo, rapporto approvato 223/2026, che indica il luogo in via Italo Belardi, la strada che comincia a pochi metri. Dati aggregati nella pagina [Open data](/open-data/).
+- Per il resoconto: registro degli interventi del Gruppo, rapporto approvato 223/2026. Dati aggregati nella pagina [Open data](/open-data/).
