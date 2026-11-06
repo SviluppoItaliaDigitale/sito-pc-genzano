@@ -135,6 +135,15 @@ Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un
 - Caption e alt **per ogni singola foto**, mai riusati.
 - Se non c'è una foto evidente, lasciare l'articolo senza foto inline: la cover tipografica col titolo basta.
 
+### Foto e aggiornamenti dei profili social del Comune di Genzano (dal 06/11/2026)
+
+🟢 **Istruzione di Alessandro del 06/11/2026:** gli aggiornamenti e le immagini pubblicati sui profili social ufficiali del **Comune di Genzano di Roma** (Instagram `@comunegenzanodiroma`, pagina Facebook del Comune) si possono usare negli articoli del sito, **citando sempre la fonte**.
+
+- **Attribuzione obbligatoria** nella didascalia di ogni foto: *«Foto: Comune di Genzano di Roma, dal profilo Instagram ufficiale»* (o *«dalla pagina Facebook ufficiale»*), più il link al post nella sezione «Per approfondire» → «Fonti istituzionali». È l'eccezione «con evidenza certa» alla regola dell'attribuzione al Gruppo (CLAUDE.md § «Foto utente e banner», punto 3): vale solo per immagini che vengono davvero da quei profili.
+- **Valgono tutte le altre regole**: foto sempre inline con `{{< foto >}}` e mai nel banner; Read della foto prima di `alt` e didascalia; fascia blu con `applica-fascia-foto.sh` (materiale di terzi adattato, eccezione dichiarata in `/note-legali/`); volti di minorenni e di persone in stato di necessità oscurati (`comunicazione-social.md` § «Persone nelle foto»); nessun fotomontaggio che aggiunge.
+- **Testi**: i fatti dei post del Comune entrano parafrasati, come fonte istituzionale; per i fatti del Gruppo prevale il registro interventi.
+- **Come si leggono**: Instagram e Facebook chiedono l'accesso, quindi dalle sessioni cloud non si leggono. Sul PC si aprono nel Chrome di Alessandro (strumenti del browser); altrimenti Alessandro inoltra post o immagini e la sessione li usa con l'attribuzione sopra.
+
 ### Foto utente — banner pulito (sito) vs carosello (social)
 
 Le foto utente **non vanno mai nel banner/copertina** del sito (campo `image:`). Il banner resta pulito col solo titolo + page-hero blu istituzionale: scelta di design che non si tocca.
