@@ -40,7 +40,7 @@ Gli aggregati, le tipologie, l'impiego dei mezzi e i grafici sono nella pagina [
 
 ## Cosa impariamo
 
-- **Un palo inclinato può cedere da un momento all'altro.** Non si tocca e non si prova a raddrizzarlo: ci si allontana e si lascia spazio a chi lo mette in sicurezza. Per la segnalazione vedi i [numeri utili](/numeri-utili/).
+- **Da un palo danneggiato ci si allontana.** Non si tocca e non si prova a raddrizzarlo: si lascia spazio a chi lo mette in sicurezza. Restare lontani da pali della luce e cavi danneggiati è anche tra le indicazioni della pagina sul [vento forte](/rischi-prevenzione/vento-forte/); per la segnalazione vedi i [numeri utili](/numeri-utili/).
 - **Un'area delimitata serve a proteggere chi passa.** Il perimetro si rispetta anche quando il pericolo sembra piccolo, come nel caso dell'[albero caduto in viale Fratelli Rosselli](/comunicazioni/2026-11-01-albero-caduto-viale-fratelli-rosselli-auto/).
 
 ## Cosa puoi fare tu
@@ -56,9 +56,14 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 **Sul nostro sito:**
 
 - [Albero caduto in viale Fratelli Rosselli: colpite due auto in sosta](/comunicazioni/2026-11-01-albero-caduto-viale-fratelli-rosselli-auto/)
+- [Vento forte: cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/)
 - [Numeri utili](/numeri-utili/)
 - [Open data](/open-data/)
 
+**Fonti istituzionali:**
+
+- [Dipartimento della Protezione Civile — Portale dei rischi](https://rischi.protezionecivile.gov.it/it/)
+
 **Fonti:**
 
-- Registro degli interventi del Gruppo: rapporto approvato 223/2026. Dati aggregati nella pagina [Open data](/open-data/).
+- Per il resoconto: registro degli interventi del Gruppo, rapporto approvato 223/2026. Dati aggregati nella pagina [Open data](/open-data/).
