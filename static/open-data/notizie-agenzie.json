@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-06T23:59:23+00:00",
+  "generato": "2026-11-07T05:14:35+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-06T23:31:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Papa Leone: 'Fiero di essere americano e di avere votato'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/07/papa-leone-fiero-di-essere-americano-e-di-avere-votato_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html"
+  },
   {
    "data": "2026-11-06T23:21:15+00:00",
    "fonte": "ANSA",
@@ -93,12 +99,6 @@
    "fonte": "ANSA",
    "titolo": "La Francia di nuovo in piazza, polizia schierata al massimo con 70.000 agenti",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/domani-la-francia-di-nuovo-in-piazza-polizia-schierata-al-massimo-con-70.000-agenti_707c8697-f1ce-4ab9-85ed-1b3735e589f2.html"
-  },
-  {
-   "data": "2026-11-06T22:13:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html"
   },
   {
    "data": "2026-11-06T22:11:14+00:00",
