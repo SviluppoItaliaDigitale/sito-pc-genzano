@@ -52,10 +52,14 @@ renderer.domElement.setAttribute('aria-hidden','true');
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xdfe6ee);
 const camera = new THREE.PerspectiveCamera(34, 1, 0.05, 50);
+camera.layers.enable(1);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false; controls.enableDamping = true; controls.dampingFactor = .08;
-controls.minPolarAngle = .35; controls.maxPolarAngle = 1.2;
-controls.minAzimuthAngle = -.75; controls.maxAzimuthAngle = .75;
+/* Il libro si gira tutto intorno e si guarda da ogni lato, anche dall'alto e da sotto (07/11/2026, richiesta
+   dell'utente: «devo poter girare in ogni angolazione»). Da sotto il tavolo si nasconde (ciclo). */
+controls.minPolarAngle = .03; controls.maxPolarAngle = Math.PI - .03;
+controls.minAzimuthAngle = -Infinity; controls.maxAzimuthAngle = Infinity;
+controls.autoRotateSpeed = 1.6;
 controls.target.set(0, .05, .02);
 /* Avvicinarsi e spostarsi (01/11/2026, richiesta per leggere da telefono): con due dita si allarga e si sposta
    il libro, la rotella e il pizzico avvicinano verso il punto indicato, il tasto destro del mouse sposta.
@@ -109,7 +113,9 @@ function textSprite(text, size=.045, color='#14223a', bg='rgba(255,255,255,.94)'
   x.fillStyle = color; x.textBaseline = 'middle'; x.fillText(text, 22, c.height/2+2);
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4;
   const s = new THREE.Sprite(new THREE.SpriteMaterial({map:t, depthTest:false, transparent:true}));
-  s.renderOrder = 20; s.scale.set(size*c.width/c.height, size, 1); return s;
+  s.renderOrder = 20; s.scale.set(size*c.width/c.height, size, 1);
+  s.layers.set(1); /* livello delle etichette: si nasconde quando si guarda il libro da sotto (ciclo) */
+  return s;
 }
 function pawn(color=0xe0a100){
   const g = new THREE.Group();
@@ -132,7 +138,28 @@ function moveTo(obj, target, dur=.9, hop=.05, done){
   const a = obj.position.clone();
   tween(dur, p=>{ const e = ease(p); obj.position.lerpVectors(a,target,e); obj.position.y += Math.sin(Math.PI*e)*hop; }, done);
 }
-const say = t => { $('status').textContent = t; };
+/* Stato dei comandi, annunciato agli screen reader. Durante un'animazione lunga (l'acqua che sale, la giornata
+   che passa) il testo cambia a vista ma non viene annunciato a ogni passo: si annuncia solo il messaggio finale. */
+const say = t => { const el = $('status'); if (el.textContent !== t) el.textContent = t; };
+function liveMuto(){ $('status').setAttribute('aria-live','off'); }
+function liveRiapri(){ const el = $('status'); if (el.getAttribute('aria-live') === 'polite') return;
+  const t = el.textContent; el.setAttribute('aria-live','polite'); el.textContent = ''; requestAnimationFrame(()=>{ el.textContent = t; }); }
+/* pioggia che cade in un riquadro della scena: si vede solo mentre è accesa e mai con «Pausa animazioni» */
+function pioggia(g, a){
+  /* ogni goccia è un trattino sottile (InstancedMesh: una sola chiamata di disegno), visibile anche dall'alto */
+  const N = 260, gocce = new THREE.InstancedMesh(new THREE.BoxGeometry(.004,.045,.004),
+    new THREE.MeshBasicMaterial({color:0x2a6fc0, transparent:true, opacity:.8, depthWrite:false}), N);
+  const r = (x0,x1)=>x0+Math.random()*(x1-x0), P = [], M = new THREE.Matrix4();
+  for (let k=0;k<N;k++) P.push([r(a.x0,a.x1), r(a.y0,a.y1), r(a.z0,a.z1)]);
+  const scrivi = ()=>{ P.forEach((q,k)=>{ M.makeTranslation(q[0],q[1],q[2]); gocce.setMatrixAt(k,M); }); gocce.instanceMatrix.needsUpdate = true; };
+  scrivi(); gocce.visible = false; gocce.frustumCulled = false; g.add(gocce);
+  const o = { on:false,
+    set(v){ o.on = v; gocce.visible = v && !RM(); },
+    update(dt){ gocce.visible = o.on && !RM(); if (!gocce.visible || !dt) return;
+      for (const q of P){ q[1] -= dt*1.4; if (q[1] < a.y0){ q[0] = r(a.x0,a.x1); q[1] = a.y1; q[2] = r(a.z0,a.z1); } }
+      scrivi(); } };
+  return o;
+}
 
 /* ---------- Il libro ---------- */
 const book = new THREE.Group(); scene.add(book);
@@ -325,6 +352,31 @@ function ingresso(){
 }
 const clampP = v => (v.x = Math.max(-.42, Math.min(.42, v.x)), v.z = Math.max(-.55, Math.min(.5, v.z)), v);
 
+/* Acqua viva (07/11/2026, segnalazione dell'utente: «l'acqua era statica e non si muoveva»): sopra ogni acqua
+   della scena c'è una superficie con onde che si muovono di continuo e riflettono la luce. L'ampiezza è in
+   unità di scena, divisa per la scala verticale del blocco d'acqua, così l'onda resta uguale anche quando il
+   livello sale o scende. Con «Pausa animazioni» le onde si fermano (muoviAcque riceve dt = 0). */
+const ACQUE = [];
+function onde(mesh, o){
+  const w = o.w ?? 1, d = o.d ?? 1, top = o.top ?? .5, seg = 24;
+  const geo = new THREE.PlaneGeometry(w, d, seg, seg);
+  const m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({color:o.colore ?? 0x9fd0f5, roughness:.18, metalness:.1,
+    transparent:true, opacity:o.opacita ?? .6, side:THREE.DoubleSide, depthWrite:false}));
+  m.rotation.x = -Math.PI/2; m.position.y = top + .0005; m.renderOrder = 2; mesh.add(m); mesh.userData.onda = m;
+  ACQUE.push({m, mesh, geo, base:Float32Array.from(geo.attributes.position.array), A:o.A ?? .003, k:o.k ?? 38, v:o.v ?? 2.2});
+  return m;
+}
+function muoviAcque(dt, t){
+  if (!dt) return;
+  for (const q of ACQUE){
+    const a = q.geo.attributes.position.array, sx = q.mesh.scale.x, sz = q.mesh.scale.z, sy = Math.max(.002, q.mesh.scale.y);
+    const amp = q.A / sy;
+    for (let i=0;i<a.length;i+=3){ const X = q.base[i]*sx, Z = q.base[i+1]*sz;
+      a[i+2] = amp*(.6*Math.sin(X*q.k + t*q.v) + .4*Math.sin(Z*q.k*1.3 - t*q.v*1.4) + .25*Math.sin((X+Z)*q.k*2.1 + t*q.v*2.3)); }
+    q.geo.attributes.position.needsUpdate = true; q.geo.computeVertexNormals();
+  }
+}
+
 const BUILD = {
  sisma(){
   const g = new THREE.Group(), room = new THREE.Group(); g.add(room);
@@ -382,6 +434,7 @@ const BUILD = {
   const wMat = {opacity:.55, edges:false, shadow:false, depthWrite:false};
   const inside = part(box(1,1,1), 0x3f86c9, wMat), outL = part(box(1,1,1), 0x3f86c9, wMat), outR = part(box(1,1,1), 0x3f86c9, wMat);
   g.add(inside, outL, outR);
+  [inside, outL, outR].forEach(m=>onde(m, {A:.003}));
   const p = pawn(); at(p,.02,.135,-.05); g.add(p);
   let lvl = 0;
   function setLevel(v){ lvl = v; const h = .008 + v*.27;
@@ -392,11 +445,14 @@ const BUILD = {
     say(m);
   }
   setLevel(.15);
+  const rain = pioggia(g, {x0:-.42, x1:.42, y0:.13, y1:.8, z0:-.5, z1:.05});
   const T = [new THREE.Vector3(-.09,.015,-.12), new THREE.Vector3(.0,.318,-.14), new THREE.Vector3(.13,.015,-.12)];
   const groups = [cant, alto, gar];
-  return { g, tools:[{range:true, label:'Livello dell’acqua', min:0, max:100, value:15, fn(v){ setLevel(v/100); }}],
+  return { g, tools:[{range:true, label:'Livello dell’acqua', min:0, max:100, value:15, fn(v){ setLevel(v/100); },
+      nota:'Puoi anche trascinare l’acqua sulla pagina, verso l’alto o verso il basso.', trascina:[inside, outL, outR],
+      play:{label:'Fai piovere: l’acqua sale', to:100, dur:9, auto:true, inizio(){ rain.set(true); }, fine(){ rain.set(false); }}}],
     choose(i){ groups.forEach((o,k)=>glow(o,0xffb000,k===i?.5:0)); moveTo(p, T[i], 1.1, .08); },
-    update(){} };
+    update(dt){ rain.update(dt); } };
  },
  sottopasso(){
   const g = new THREE.Group(), EARTH = 0x9c8461, ROAD = 0x5b6270;
@@ -412,11 +468,13 @@ const BUILD = {
   const hole = new THREE.Mesh(new THREE.CircleGeometry(.024,20), new THREE.MeshBasicMaterial({color:0x111111}));
   hole.rotation.x = -Math.PI/2; at(hole,.035,.031,-.03); g.add(hole);
   const lid = part(new THREE.CylinderGeometry(.026,.026,.006,20), 0x444a55); at(lid,-.03,.034,-.06); lid.rotation.z = .5; g.add(lid);
-  const water = part(box(1,1,1), 0x8a744c, {opacity:.9, edges:false, shadow:false, depthWrite:false}); g.add(water);
+  const water = part(box(1,1,1), 0x24557f, {opacity:.92, edges:false, shadow:false, depthWrite:false}); g.add(water);
+  onde(water, {A:.0025, colore:0x6fa8dc, opacita:.65});
   let murky = true, lvl = .4;
   function setLevel(v){ lvl = v; const h = .008 + v*.08, d = .17 + 2*(h/.12*.16);
     water.scale.set(.2,h,d); water.position.set(0,.03+h/2,-.025); }
   setLevel(lvl);
+  const rain = pioggia(g, {x0:-.4, x1:.4, y0:.04, y1:.7, z0:-.5, z1:.45});
   const car = new THREE.Group();
   car.add(at(part(box(.11,.035,.2), 0x2f6fb5),0,.04,0), at(part(box(.095,.035,.1), 0xdfe8f2),0,.075,.01));
   for (const [wx,wz] of [[-.058,-.065],[.058,-.065],[-.058,.065],[.058,.065]]){ const w = part(new THREE.CylinderGeometry(.022,.022,.018,14), 0x222831); w.rotation.z = Math.PI/2; at(w,wx,.022,wz); car.add(w); }
@@ -426,15 +484,19 @@ const BUILD = {
     tween(dur, q=>{ const z = z0 + (toZ-z0)*ease(q); car.position.z = z; car.position.y = yRoad(z)+.005;
       const s = (yRoad(z+.01)-yRoad(z-.01))/.02; car.rotation.x = Math.atan(s); }, after); }
   return { g, tools:[
-      {range:true, label:'Livello dell’acqua', min:0, max:100, value:40, fn(v){ setLevel(v/100); say(v<25 ? 'Il velo d’acqua sembra sottile, ma da qui non si vede il fondo.' : 'L’acqua copre il fondo del sottopassaggio.'); }},
-      {label:'Guarda sotto la superficie', fn(){ murky = !murky; water.material.color.setHex(murky ? 0x8a744c : 0x6fa8dc); water.material.opacity = murky ? .9 : .28;
+      {range:true, label:'Livello dell’acqua', min:0, max:100, value:40, fn(v){ setLevel(v/100); say(v<25 ? 'Il velo d’acqua sembra sottile, ma da qui non si vede il fondo.' : v<80 ? 'L’acqua copre il fondo del sottopassaggio.' : 'Il sottopassaggio è allagato: in pochi minuti l’acqua è salita fino alle ruote e oltre.'); },
+        nota:'Puoi anche trascinare l’acqua sulla pagina, verso l’alto o verso il basso.', trascina:[water],
+        play:{label:'Fai piovere: il sottopassaggio si allaga', to:100, dur:7, auto:true, inizio(){ rain.set(true); }, fine(){ rain.set(false); }}},
+      {label:'Guarda sotto la superficie', fn(){ murky = !murky; /* torbida = blu scura e coprente (il fondo non si vede), mai del colore della terra (segnalazione dell'utente, 07/11/2026) */
+        water.material.color.setHex(murky ? 0x24557f : 0x6fa8dc); water.material.opacity = murky ? .92 : .28;
+        water.userData.onda.material.color.setHex(murky ? 0x6fa8dc : 0x9fd0f5); water.userData.onda.material.opacity = murky ? .65 : .35;
         this.textContent = murky ? 'Guarda sotto la superficie' : 'Rendi l’acqua torbida';
         say(murky ? 'L’acqua è torbida: buche e tombini non si vedono.' : 'Sotto la superficie c’è un tombino aperto. Dall’auto non lo vedresti.'); }},
       {label:'Riporta l’auto in cima', fn(){ carHome(); say('L’auto è di nuovo davanti al sottopassaggio.'); }} ],
     choose(i){ carHome();
       if (i===2){ tween(1.0, q=>{ car.rotation.y = Math.PI*ease(q); car.position.z = .38 + .08*ease(q); }); say('Torni indietro e cerchi un’altra strada.'); }
       else drive(.08, i===0 ? 1.8 : .9, ()=>{ tween(.5,q=>{ car.rotation.z = .06*Math.sin(q*Math.PI*3); }); say('L’auto entra nell’acqua e si ferma: il motore si è spento.'); }); },
-    update(){} };
+    update(dt){ rain.update(dt); } };
  },
  incendio(){
   const g = new THREE.Group();
@@ -564,7 +626,9 @@ const BUILD = {
     const inp = document.getElementById('r-caldo-0'); if (inp) inp.value = h; }
   setHour(9);
   return { g, tools:[
-      {range:true, label:'Ora del giorno', min:6, max:21, value:9, fn(v){ setHour(v); }},
+      {range:true, label:'Ora del giorno', min:6, max:21, value:9, fn(v){ setHour(v); },
+        nota:'Puoi anche trascinare il sole sulla pagina, verso destra o verso sinistra.', trascina:[sunM], asse:'x',
+        play:{label:'Fai passare la giornata', to:21, dur:10}},
       {label:'Abbassa le tapparelle', fn(){ closed = !closed; shut.forEach(s=>{ const a = s.scale.y, b = closed ? 9 : 1; tween(.5,q=>{ s.scale.y = a+(b-a)*ease(q); s.position.y = .205 - (s.scale.y-1)*.005; }); });
         this.textContent = closed ? 'Alza le tapparelle' : 'Abbassa le tapparelle';
         say(closed ? 'Tapparelle abbassate: nelle ore di sole diretto la casa resta più fresca.' : 'Tapparelle alzate.'); }} ],
@@ -586,13 +650,16 @@ const BUILD = {
   for (let k=0;k<pts.length-1;k++){ const [x1,y1]=pts[k],[x2,y2]=pts[k+1]; const L = Math.hypot(x2-x1,y2-y1);
     const s = part(box(.012,L,.012), 0xfff3a0, {emissive:0xffe066, ei:1, edges:false, shadow:false}); at(s,(x1+x2)/2,(y1+y2)/2,-.2); s.rotation.z = Math.atan2(x2-x1,y2-y1)*-1; bolt.add(s); }
   bolt.visible = false; g.add(bolt);
+  /* durante il temporale piove, e sul prato si formano pozzanghere */
+  const rain = pioggia(g, {x0:-.42, x1:.42, y0:.01, y1:.6, z0:-.5, z1:.45}); rain.set(true);
+  [[-.05,.18,.16,.1],[.08,-.05,.12,.08],[-.32,.3,.1,.07]].forEach(([x,z,w,d])=>{ const pz = part(box(w,.004,d), 0x5d8fc0, {opacity:.75, edges:false, shadow:false, depthWrite:false}); at(pz,x,.014,z); g.add(pz); onde(pz, {w, d, top:.002, A:.0008, k:70, v:3}); });
   const flash = new THREE.PointLight(0xfff6c8, 0, 2); at(flash,-.2,.5,-.2); g.add(flash);
   const p = pawn(); at(p,0,0,.05); g.add(p);
   const T = [new THREE.Vector3(-.21,0,-.15), new THREE.Vector3(.25,0,-.25), new THREE.Vector3(.2,0,.32)];
   return { g, tools:[{label:'Arriva il fulmine', fn(){ bolt.visible = true; tween(.5,q=>{ flash.intensity = 6*(1-q); }, ()=>{ bolt.visible = false; });
       say('Il fulmine colpisce l’albero isolato: è il punto più alto del prato. Al riparo si sta nella casa o in auto con i finestrini chiusi.'); }}],
     choose(i){ [tree,roof,safe].forEach((o,k)=>glow(o,0xffb000,k===i?.45:0)); moveTo(p, T[i], 1, .05); },
-    update(dt,t){ cloud.position.x = -.15 + Math.sin(t*.4)*.03; } };
+    update(dt,t){ cloud.position.x = -.15 + Math.sin(t*.4)*.03; rain.update(dt); } };
  },
  vento(){
   const g = new THREE.Group();
@@ -614,9 +681,10 @@ const BUILD = {
   const tree = new THREE.Group(); tree.add(at(part(new THREE.CylinderGeometry(.01,.014,.12,8), 0x6b4f33),0,.06,0), at(part(new THREE.SphereGeometry(.07,12,9), 0x3f7a45),0,.16,0)); at(tree,-.28,0,.22); g.add(tree);
   const leaves = []; for (let k=0;k<18;k++){ const l = part(box(.014,.003,.01), 0x5e8d43, {edges:false, shadow:false}); l.userData.o = Math.random(); g.add(l); leaves.push(l); }
   const p = pawn(); at(p,0,0,.25); g.add(p);
-  let wind = .7;
+  let wind = .3;
   const T = [new THREE.Vector3(-.2,0,-.13), new THREE.Vector3(-.12,0,-.17), new THREE.Vector3(.24,0,.22)];
-  return { g, tools:[{range:true, label:'Forza del vento', min:0, max:100, value:70, fn(v){ wind = v/100; say(v>60 ? 'Raffiche forti: cartelloni, impalcature e alberi possono cedere o perdere pezzi.' : 'Vento moderato.'); }}],
+  return { g, tools:[{range:true, label:'Forza del vento', min:0, max:100, value:30, fn(v){ wind = v/100; say(v>60 ? 'Raffiche forti: cartelloni, impalcature e alberi possono cedere o perdere pezzi.' : v>20 ? 'Vento moderato.' : 'Quasi nessun vento.'); },
+      play:{label:'Arriva la raffica', to:100, dur:3}}],
     choose(i){ [cornice,null,bill].forEach((o,k)=>o && glow(o,0xffb000,k===i?.5:0)); moveTo(p, T[i], 1, .04, ()=>{ if (i===1) say('Sei dentro l’edificio: resta lontano dalle finestre.'); }); },
     update(dt,t){ const s = RM() ? .3 : 1;
       bill.rotation.z = Math.sin(t*6)*.05*wind*s; tree.rotation.z = Math.sin(t*3.3)*.12*wind*s; scaf.rotation.z = Math.sin(t*5)*.015*wind*s;
@@ -672,7 +740,9 @@ const BUILD = {
   return { g, tools:[
       {label:'Mostra il gas', fn(){ show = !show; vis(); this.textContent = show ? 'Nascondi il gas' : 'Mostra il gas';
         say(show ? 'Così si vedrebbe la CO₂: pesante, si raccoglie in basso nella cantina. Nella realtà è invisibile e senza odore.' : 'Nella realtà la CO₂ non si vede e non ha odore.'); }},
-      {range:true, label:'Gas accumulato in cantina', min:0, max:100, value:50, fn(v){ setLvl(v/100); if (!show){ show = true; vis(); } }} ],
+      {range:true, label:'Gas accumulato in cantina', min:0, max:100, value:50, fn(v){ setLvl(v/100); if (!show){ show = true; vis(); const b = document.getElementById('t-gas-0'); if (b) b.textContent = 'Nascondi il gas'; }
+          say(v<30 ? 'Poco gas in cantina, ma non si vede e non ha odore.' : v<80 ? 'La CO₂ riempie la cantina dal basso.' : 'La cantina è piena di CO₂: chi scende lì non respira.'); },
+        play:{label:'Il gas si accumula', to:100, dur:7}} ],
     choose(i){ const T = [new THREE.Vector3(-.06,.015,-.18), new THREE.Vector3(.1,.004,.32), new THREE.Vector3(.12,.015,-.2)];
       moveTo(p, T[i], 1.1, .06, ()=>{ glow(p, i===1 ? 0 : 0xd23a2f, i===1 ? 0 : .5); });
       say(i===1 ? 'Sei all’aria aperta. Ora chiama il 112 e tieni lontane le altre persone.' : 'Sei rimasto dove si accumula il gas: è il punto più pericoloso.'); },
@@ -683,12 +753,16 @@ const BUILD = {
   g.add(at(part(box(.84,.02,.95), 0xe8d7a8),0,.01,-.03));
   const wet = at(part(box(.84,.004,.3), 0xc6b48a, {edges:false}),0,.022,-.25); g.add(wet);
   const sea = part(box(.84,.04,1), 0x3f86c9, {opacity:.8, edges:false, shadow:false}); g.add(sea);
+  onde(sea, {w:.84, top:.02, A:.004, k:30, v:1.8});
   const hill = part(new THREE.CylinderGeometry(.1,.2,.2,8), 0x8f9a5e); at(hill,.26,.1,.28); g.add(hill);
   const hut = casetta(.12,.1,.1); at(hut,-.25,0,.3); g.add(hut);
   const umb = new THREE.Group(); umb.add(at(part(new THREE.CylinderGeometry(.004,.004,.12,6), 0x8a8f99),0,.06,0), at(part(new THREE.ConeGeometry(.06,.03,10), 0xd23a2f),0,.13,0)); at(umb,-.05,0,0); g.add(umb);
   const p = pawn(); at(p,.0,.02,.05); g.add(p);
   let zFront = -.15;
-  function setSea(front){ zFront = front; const back = -.5, d = front-back; sea.scale.z = d; sea.position.set(0,.03,(front+back)/2); }
+  /* la risacca: il bordo del mare va avanti e indietro anche quando nessuno tocca i comandi */
+  let risacca = 0;
+  function posSea(){ const back = -.5, front = zFront + risacca, d = front-back; sea.scale.z = d; sea.position.set(0,.03,(front+back)/2); }
+  function setSea(front){ zFront = front; posSea(); }
   setSea(-.15);
   function to(front, dur, after){ const a = zFront; tween(dur, q=>setSea(a+(front-a)*ease(q)), after); }
   return { g, tools:[
@@ -696,7 +770,7 @@ const BUILD = {
       {label:'Arriva l’onda', fn(){ to(.24, 1.6); say('L’acqua invade la spiaggia. Chi è sulla collina è al sicuro; la prima onda può non essere la più grande.'); }},
       {label:'Ricomincia', fn(){ setSea(-.15); p.position.set(0,.02,.05); say('La spiaggia è tornata com’era.'); }} ],
     choose(i){ const T = [new THREE.Vector3(.02,.02,-.3), new THREE.Vector3(0,.02,.05), new THREE.Vector3(.26,.2,.28)]; moveTo(p, T[i], 1.3, .05); },
-    update(){} };
+    update(dt,t){ if (!dt) return; risacca = .014*Math.sin(t*1.3); posSea(); } };
  },
  industriale(){
   const g = new THREE.Group();
@@ -753,6 +827,7 @@ const BUILD = {
   const basin = new THREE.Group(); at(basin,-.15,0,-.3);
   basin.add(at(part(box(.4,.015,.26), 0xb8b0a0),0,.008,0)); for (const [x,z,w,d] of [[0,-.13,.4,.012],[0,.13,.4,.012],[-.2,0,.012,.26],[.2,0,.012,.26]]) basin.add(at(part(box(w,.12,d), 0xd8d2c4),x,.06,z));
   const water = part(box(.38,1,.24), 0x3f86c9, {opacity:.7, edges:false, shadow:false}); basin.add(water); g.add(basin);
+  onde(water, {w:.38, d:.24, A:.0015, k:45, v:1.6});
   const home = casetta(.18,.15,.15); at(home,.25,0,-.25); g.add(pick(home,1));
   const car = carro(0x2f6fb5); at(car,.25,0,.22); g.add(pick(car,0));
   const hose = new THREE.Mesh(new THREE.TorusGeometry(.05,.005,6,16,Math.PI*1.4), new THREE.MeshStandardMaterial({color:0x2e9e4f})); hose.rotation.x = Math.PI/2; at(hose,.14,.01,.22); g.add(hose);
@@ -760,8 +835,10 @@ const BUILD = {
   const p = pawn(); at(p,.05,0,.05); g.add(p);
   function setLvl(v){ const h = .005 + v*.1; water.scale.y = h; water.position.y = .015+h/2;
     say(v<.25 ? 'Il serbatoio è quasi vuoto: ogni litro risparmiato serve per bere e cucinare.' : v<.6 ? 'Il livello scende: è il momento delle ordinanze e del risparmio.' : 'Il serbatoio è ancora pieno.'); }
-  setLvl(.35);
-  return { g, tools:[{range:true, label:'Livello del serbatoio', min:0, max:100, value:35, fn(v){ setLvl(v/100); }}],
+  setLvl(1);
+  return { g, tools:[{range:true, label:'Livello del serbatoio', min:0, max:100, value:100, fn(v){ setLvl(v/100); },
+      nota:'Puoi anche trascinare l’acqua del serbatoio sulla pagina, verso l’alto o verso il basso.', trascina:[water],
+      play:{label:'Passano settimane senza pioggia', to:0, dur:8, auto:true}}],
     choose(i){ [car,home,font].forEach((o,k)=>glow(o,0xffb000,k===i?.45:0)); const T = [new THREE.Vector3(.13,0,.3), new THREE.Vector3(.2,0,-.1), new THREE.Vector3(-.26,0,.36)]; moveTo(p, T[i], 1, .04); },
     update(){} };
  }
@@ -770,7 +847,9 @@ const BUILD = {
 let current = null;
 function mount(i){
   if (current){ current.dispose?.(); anchor.remove(current.g); current.g.traverse(o=>{ o.geometry?.dispose(); if (o.material){ o.material.map?.dispose(); o.material.dispose(); } }); }
+  ACQUE.length = 0;
   current = BUILD[CH[i].key](); anchor.add(current.g);
+  current.tools.forEach((t,k)=>(t.trascina || []).forEach(m=>m.traverse(o=>{ o.userData.trascina = k; })));
   popUp(current.g); atmosfera(CH[i].key);
 }
 
@@ -778,16 +857,48 @@ function mount(i){
 const dots = $('dots');
 CH.forEach((c,k)=>{ const b = document.createElement('button'); b.className = 'dot'; b.textContent = k+1; b.setAttribute('aria-label',`Capitolo ${k+1}: ${c.title}`); b.onclick = ()=>goTo(k); dots.append(b); });
 
+/* ---------- Animazioni dei livelli ----------
+   Un comando «▶» porta da solo il cursore dal valore attuale a quello finale (l'acqua che sale, la giornata
+   che passa), con il pulsante che diventa «Ferma». Nei capitoli con l'acqua parte da sola all'apertura.
+   Con «Pausa animazioni» o movimento ridotto il valore finale arriva subito, senza movimento. */
+let corsa = null, autoTimer = 0;
+/* l'avvio automatico vale solo finché il lettore non tocca il comando: qualunque gesto lo annulla */
+function annullaAuto(){ clearTimeout(autoTimer); autoTimer = 0; }
+function fermaCorsa(){
+  annullaAuto();
+  if (!corsa) return; const c = corsa; corsa = null;
+  const i = tweens.indexOf(c.tw); if (i >= 0) tweens.splice(i,1);
+  c.btn.textContent = '▶ ' + c.t.play.label; c.t.play.fine?.(); liveRiapri();
+}
+function avviaCorsa(t, input, btn){
+  fermaCorsa();
+  const to = t.play.to; let da = +input.value;
+  if (da === to) da = to === +t.max ? +t.min : +t.max;
+  const applica = v => { input.value = v; t.fn(v); };
+  if (RM()){ applica(to); return; }
+  liveMuto(); t.play.inizio?.(); btn.textContent = '⏸ Ferma';
+  const tw = tween(t.play.dur, p=>applica(Math.round(da + (to-da)*p)), ()=>{ if (corsa && corsa.tw === tw){ corsa = null; btn.textContent = '▶ ' + t.play.label; t.play.fine?.(); liveRiapri(); } });
+  corsa = {tw, t, btn};
+}
+
 function renderPanel(i){
   const c = CH[i];
   $('kicker').textContent = c.kicker; $('titolo').textContent = c.title; $('intro').textContent = c.intro; $('question').textContent = c.q;
   [...dots.children].forEach((d,k)=> k===i ? d.setAttribute('aria-current','step') : d.removeAttribute('aria-current'));
   $('prev').disabled = i===0; $('next').disabled = i===CH.length-1;
-  const tools = $('tools'); tools.replaceChildren();
+  fermaCorsa(); const tools = $('tools'); tools.replaceChildren();
   current.tools.forEach((t,k)=>{
     if (t.range){ const w = document.createElement('div'); w.className = 'range';
       const id = `r-${c.key}-${k}`; w.innerHTML = `<label for="${id}">${t.label}</label><input type="range" id="${id}" min="${t.min}" max="${t.max}" value="${t.value}">`;
-      w.querySelector('input').addEventListener('input', e=>t.fn(+e.target.value)); tools.append(w); }
+      const input = w.querySelector('input');
+      input.addEventListener('input', e=>{ annullaAuto(); if (corsa && corsa.t === t) fermaCorsa(); t.fn(+e.target.value); });
+      if (t.nota){ const n = document.createElement('small'); n.textContent = t.nota; w.append(n); }
+      tools.append(w);
+      if (t.play){ const b = document.createElement('button'); b.type = 'button'; b.id = `p-${c.key}-${k}`; b.className = 'lb-play';
+        b.textContent = '▶ ' + t.play.label;
+        b.addEventListener('click', ()=>{ if (corsa && corsa.t === t) fermaCorsa(); else avviaCorsa(t, input, b); });
+        tools.append(b);
+        if (t.play.auto && !RM()){ const sc = current; autoTimer = setTimeout(()=>{ autoTimer = 0; if (current === sc && !corsa && !trascino) avviaCorsa(t, input, b); }, 1600); } } }
     else { const b = document.createElement('button'); b.type = 'button'; b.textContent = t.label; b.id = `t-${c.key}-${k}`; b.addEventListener('click', function(){ t.fn.call(this); }); tools.append(b); }
   });
   const opts = $('opts'); opts.replaceChildren();
@@ -950,7 +1061,75 @@ renderer.domElement.addEventListener('pointerup', e=>{
   else if (typeof id==='number') choose(id);
   else current.onPick?.(id);
 });
-renderer.domElement.addEventListener('pointermove', e=>{ if (e.buttons) return; renderer.domElement.style.cursor = hitAt(e)!==undefined ? 'pointer' : 'grab'; });
+renderer.domElement.addEventListener('pointermove', e=>{ if (e.buttons) return;
+  const k = trascinaAt(e);
+  renderer.domElement.style.cursor = k !== undefined ? (current.tools[k].asse === 'x' ? 'ew-resize' : 'ns-resize') : hitAt(e)!==undefined ? 'pointer' : 'grab'; });
+
+/* ---------- Trascinare l'acqua o il sole sulla pagina ----------
+   Sulle parti segnate (userData.trascina = numero del comando) il trascinamento non gira il libro ma cambia
+   il livello: su e giù (o destra e sinistra per il sole). Lo stesso valore resta regolabile con il cursore
+   nel pannello, che è l'alternativa senza trascinamento (WCAG 2.5.7). */
+let trascino = null;
+function trascinaAt(e){
+  if (!current) return undefined;
+  const r = renderer.domElement.getBoundingClientRect();
+  ptr.set(((e.clientX-r.left)/r.width)*2-1, -((e.clientY-r.top)/r.height)*2+1);
+  ray.setFromCamera(ptr, camera);
+  for (const h of ray.intersectObject(current.g, true)){
+    let o = h.object; while (o && o.userData.trascina === undefined && o.userData.pick === undefined) o = o.parent;
+    if (!o || !o.visible) continue;
+    return o.userData.trascina;
+  }
+  return undefined;
+}
+stage.addEventListener('pointerdown', e=>{
+  if (e.target !== renderer.domElement || e.button > 0 || trascino) return;
+  const k = trascinaAt(e); if (k === undefined) return;
+  const t = current.tools[k], input = document.getElementById(`r-${CH[chapter].key}-${k}`); if (!input) return;
+  e.stopPropagation(); e.preventDefault();
+  fermaCorsa();
+  liveMuto(); $('hint').classList.add('off');
+  trascino = {id:e.pointerId, t, input, x:e.clientX, y:e.clientY, v:+input.value};
+  try { renderer.domElement.setPointerCapture(e.pointerId); } catch(_){}
+}, {capture:true});
+renderer.domElement.addEventListener('pointermove', e=>{
+  if (!trascino || e.pointerId !== trascino.id) return;
+  const d = trascino.t.asse === 'x' ? (e.clientX - trascino.x)/(stage.clientWidth*.45) : (trascino.y - e.clientY)/(stage.clientHeight*.45);
+  const min = +trascino.t.min, max = +trascino.t.max;
+  const v = Math.round(Math.min(max, Math.max(min, trascino.v + d*(max-min))));
+  if (v !== +trascino.input.value){ trascino.input.value = v; trascino.t.fn(v); }
+});
+function fineTrascino(e){ if (!trascino || e.pointerId !== trascino.id) return; trascino = null; liveRiapri(); }
+renderer.domElement.addEventListener('pointerup', fineTrascino);
+renderer.domElement.addEventListener('pointercancel', fineTrascino);
+
+/* ---------- Girare il libro senza trascinare ----------
+   Frecce per girarlo di 45 gradi o guardarlo più dall'alto o più dal basso, e «Gira da solo» (rotazione
+   continua, ferma con «Pausa animazioni»): l'alternativa ai gesti per tastiera, LIM e chi non trascina. */
+const _off = new THREE.Vector3(), _sf = new THREE.Spherical();
+let giroAuto = false;
+const btnGiro = $('giro');
+function setGiro(on){ giroAuto = on; btnGiro.setAttribute('aria-pressed', String(on));
+  if (on && RM()) say('Con le animazioni in pausa il libro non gira da solo: usa le frecce per girarlo.'); }
+function ruota(dAz, dPol){
+  if (tweenCamera) chiudiTween(tweenCamera);
+  setGiro(false);
+  document.querySelectorAll('#lb-vista button').forEach(b=>b.setAttribute('aria-pressed','false'));
+  const t = controls.target.clone();
+  _sf.setFromVector3(_off.copy(camera.position).sub(t));
+  const a0 = _sf.theta, p0 = _sf.phi, r = _sf.radius;
+  const a1 = a0 + dAz, p1 = Math.min(controls.maxPolarAngle, Math.max(controls.minPolarAngle, p0 + dPol));
+  const metti = (a,p)=>{ _sf.set(r, p, a); camera.position.copy(t).add(_off.setFromSpherical(_sf)); camera.lookAt(t); };
+  const eraAttivo = controls.enabled; controls.enabled = false;
+  tweenCamera = tween(.5, q=>{ const e = ease(q); metti(a0+(a1-a0)*e, p0+(p1-p0)*e); }, ()=>{ controls.enabled = eraAttivo || controls.enabled; controls.update(); });
+}
+const PASSO = Math.PI/4, PASSO_SU = Math.PI/9;
+document.querySelectorAll('#lb-ruota button[data-ruota]').forEach(b=>b.addEventListener('click', ()=>{
+  const d = b.dataset.ruota;
+  ruota(d==='sinistra' ? -PASSO : d==='destra' ? PASSO : 0, d==='su' ? -PASSO_SU : d==='giu' ? PASSO_SU : 0);
+}));
+btnGiro.addEventListener('click', ()=>setGiro(!giroAuto));
+controls.addEventListener('start', ()=>{ if (giroAuto) setGiro(false); });
 
 /* ---------- Dimensioni e ciclo ---------- */
 function resize(){
@@ -996,8 +1175,14 @@ function loop(){
   /* «Pausa animazioni» o movimento ridotto: i movimenti continui (fiamme, fumo, nube, vento, ventola) si fermano; restano solo le transizioni brevi dei comandi. RM() si rilegge a ogni fotogramma, quindi vale anche se la preferenza cambia a pagina aperta. */
   const still = RM(); if (!still) animT += dt;
   for (let k=tweens.length-1; k>=0; k--){ const tw = tweens[k]; tw.t += dt; const p = Math.min(1, tw.t/tw.dur); tw.fn(p); if (p>=1){ tweens.splice(k,1); tw.done?.(); } }
-  current?.update(still ? 0 : dt, animT); muoviPolvere(still ? 0 : dt, animT); muoviScintille(dt, still);
-  if (controls.enabled){ controls.update(); tieniSulLibro(); } renderer.render(scene, camera);
+  current?.update(still ? 0 : dt, animT); muoviPolvere(still ? 0 : dt, animT); muoviAcque(still ? 0 : dt, animT); muoviScintille(dt, still);
+  controls.autoRotate = giroAuto && !still;
+  if (controls.enabled){ controls.update(dt); tieniSulLibro(); }
+  /* da sotto il libro il tavolo non c'è: si vede la copertina */
+  const sopra = camera.position.y > 0;
+  table.visible = mat.visible = sopra;
+  if (sopra) camera.layers.enable(1); else camera.layers.disable(1); /* le etichette non trasparirebbero dalla copertina */
+  renderer.render(scene, camera);
   requestAnimationFrame(loop);
 }
 
@@ -1006,6 +1191,6 @@ function loop(){
   try{ await Promise.race([Promise.all([document.fonts.load(F(700,40)), document.fonts.load(F(400,40)), document.fonts.load(F(600,40))]), new Promise(r=>setTimeout(r,2500))]); }catch(_){}
   const m = /^#capitolo-(\d{1,2})$/.exec(location.hash); chapter = m ? Math.min(CH.length, Math.max(1,+m[1]))-1 : 0;
   drawLeft(chapter); drawRight(chapter); mount(chapter); renderPanel(chapter);
-  $('loading').remove(); $('vista').hidden = false; resize(); ingresso(); loop();
+  $('loading').remove(); $('vista').hidden = false; $('ruota').hidden = false; resize(); ingresso(); loop();
   setTimeout(()=>$('hint').classList.add('off'), 9000);
 })();

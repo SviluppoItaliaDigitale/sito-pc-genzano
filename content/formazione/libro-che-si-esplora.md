@@ -4,7 +4,7 @@ description: "Un libro di protezione civile da esplorare in 3D, dal terremoto al
 layout: "single"
 image: ""
 date: 2026-10-31
-dataUltimaRevisione: "2026-11-01"
+dataUltimaRevisione: "2026-11-07"
 versione_facile: "libro-che-si-esplora-facile"
 hreflang:
   - lang: "it"
@@ -18,7 +18,7 @@ indice: false
 
 Questo libro non si sfoglia soltanto: **si esplora**. Ogni capitolo ha una pagina con una situazione e una domanda, e accanto un modellino in 3D da muovere. Prima fai la tua previsione, poi provi sulla pagina e infine **alzi il lembo** per vedere la risposta.
 
-Trascina il libro per girarlo e tocca gli oggetti sulla pagina di destra. Puoi usare anche la tastiera: i pulsanti del pannello fanno le stesse cose e le frecce sinistra e destra cambiano capitolo. Sotto il libro c'è la **versione testuale** con tutti i capitoli, le domande e le risposte.
+Trascina il libro per girarlo da ogni lato, anche dall'alto e da sotto, e tocca gli oggetti sulla pagina di destra. Nei capitoli con l'acqua la pioggia la fa salire da sola, e puoi alzarla o abbassarla trascinandola. Puoi usare anche la tastiera: i pulsanti sulla scena girano il libro, quelli del pannello fanno le stesse cose dei gesti e le frecce sinistra e destra cambiano capitolo. Sotto il libro c'è la **versione testuale** con tutti i capitoli, le domande e le risposte.
 
 {{< libro-3d >}}
 
