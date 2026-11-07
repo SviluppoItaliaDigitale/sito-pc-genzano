@@ -352,11 +352,12 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Regole di dettaglio (file separati)
 
+`04a-hugo-shortcode-partial.md` (componenti, shortcode, partial) e `10-automazioni-github-actions.md` (workflow, routine, deploy) si caricano da soli quando si lavora sui file che descrivono (`paths:` nel loro frontmatter). Prima di toccare un componente o un'automazione da un altro punto, leggili.
+
 @.claude/rules/01-governance-pa.md
 @.claude/rules/02-content-design-pa.md
 @.claude/rules/03-accessibility.md
 @.claude/rules/04-hugo-architecture.md
-@.claude/rules/04a-hugo-shortcode-partial.md
 @.claude/rules/04b-hugo-template-css.md
 @.claude/rules/04c-hugo-static-cartelle.md
 @.claude/rules/05-github-aruba-deploy.md
@@ -364,7 +365,6 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 @.claude/rules/07-proattivita-coerenza.md
 @.claude/rules/08-claude-code-setup.md
 @.claude/rules/09-regole-contenuti-qualita.md
-@.claude/rules/10-automazioni-github-actions.md
 @.claude/rules/lim-scuole.md
 
 ---
@@ -392,97 +392,15 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | Legale | `pc-conformita-legale` |
 
 
-| Agent | Trigger naturali |
-|---|---|
-| `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" — gate AGID + legalità |
-| `pc-photo-caption-verifier` | gate visivo (Read multimodale) richiamato da article-reviewer su articoli con `{{< foto >}}`: alt/caption coerenti col visibile + attribuzione corretta |
-| `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG", "alt e contrasto?" — WCAG 2.2 AA sui markdown (≠ Lighthouse) |
-| `pc-content-freshness` | "articoli vecchi/da aggiornare", "scadenze passate" |
-| `pc-italian-l2-writer` | "versione facile", "italiano semplice A2" — produce `<slug>-facile.md` CEFR A2 |
-| `pc-internal-linker` | "linkografia interna", "abbastanza link interni?" |
-| `pc-seo-checker` | "controlla il SEO", "meta description", "Open Graph" |
-| `pc-normative-verifier` | "norme vigenti?", "verifica leggi" — Normattiva + BURL Lazio |
-| `pc-image-fixer` | "ecco una foto", "applica fascia blu", "scarica foto da Wikipedia/NASA/USGS/NOAA" |
-| `pc-issue-triage` | "controlla le issue", "issue da chiudere?" |
-| `pc-deploy-validator` | "verifica prima del push", "build OK?", "pubblico in sicurezza?" |
-| `pc-social-publisher` | "rivedi le bozze social", "immagini Instagram" |
-| `pc-print-card-qa` | "controlla le schede stampabili", "QA kit calamità" |
-| `pc-site-auditor` | "fotografia tecnica del repo", "che bug ci sono?" — lettura rapida in sola lettura; l'audit completo è di `pc-audit-completo` |
-| `pc-materiali-publisher` | "pubblica output NotebookLM per il tema X" |
-| `pc-revisore-linguistico` | 🔴 gate linguistico obbligato richiamato da `pc-article-reviewer`: script deterministici (refusi + grammatica) **e** lettura sintattica per articoli mancanti, accordi, preposizioni. Riferimento Treccani |
-| `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
-| `pc-fact-checker` | 🔴 gate dei fatti: "verifica i dati/le fonti", ogni contenuto con date, orari, bilanci, cause, norme, dataset — fonte primaria o riformulazione prudente |
-| `pc-didattica-reviewer` | 🔴 gate materiali scolastici: schede, kit, rubriche, giochi — sicurezza DPC, pedagogia, età, normativa scuola, esercizi, parità dei 4 formati |
-| `pc-revisore-scientifico` | "è scientificamente corretto?", pagine rischio, dossier, divulgazione — meccanismi, scale, fasi, tono della comunicazione del rischio |
-| `pc-desk-giornalistico` | cronaca, anniversari, vicende giudiziarie, persone e minori — attribuzione, deontologia, presunzione di non colpevolezza |
-| `pc-conformita-legale` | "la privacy è a posto?", "la dichiarazione di accessibilità è aggiornata?" — RPD, basi giuridiche PA, calendario AgID, note legali, licenze |
-| `pc-integrita-tecnica` | "il sito è integro?", "gli ZIP funzionano offline?", "le ancore?" — script di integrità, ancore, parità, codifiche, stati UI |
-| `pc-coerenza-trasversale` | "il sito si contraddice?", "ci sono incongruenze nei testi?", stessa informazione in più pagine, issue settimanale «Incongruenze fra i testi del sito» — parte da `scripts/cerca-incongruenze.py`, allinea alla fonte canonica e registra il dato in `data/dati_canonici.yaml` |
-| `pc-revisore-codice` | diff a template/partial/CSS/JS/script — escape, subpath, stati UI, idempotenza, a11y dei componenti |
-| `pc-revisore-automazioni` | workflow e routine — YAML, timeout, pin SHA, trigger, priorità deploy, watchdog, documentazione |
-| `pc-sicurezza` | CSP, header, segreti, supply chain, superficie JS, catena allerta — hardening in Report-Only prima dell'enforcing |
-| `pc-revisore-traduzioni` | "le traduzioni sono aggiornate?" — 7 lingue + facile multilingua allineate all'italiano canonico |
-| `pc-dati-e-feed` | open data, data/, CAP, RSS, sitemap, JSON endpoint — validità, coerenza fra formati, metadati, freschezza |
-| `pc-esercitazione-emergenza` | "se scatta un'allerta rossa adesso funziona tutto?" — esercitazione end-to-end in locale con verbale |
-| `pc-verifica-visiva` | markup custom, schede, stampa, mobile — screenshot letti davvero (Playwright) |
-| `pc-usabilita` | menu, hub, percorsi, "l'utente lo trova?" — architettura dell'informazione, Miller, orfane, vicoli ciechi |
-| `pc-documentazione` | dopo ogni modifica strutturale — CLAUDE.md, rules, agenti, manuale, AGENTS.md, CONTESTO allineati ai componenti reali |
-| `pc-calendario-editoriale` | 🔴 gate del calendario: ogni articolo programmato nuovo o modificato, ogni correzione di data in un articolo in coda — la data di uscita deve essere coerente con ciò che annuncia (`scripts/check-data-uscita.py`, bloccante su PR + controllo serale `controllo-data-uscita.yml`) |
-| `pc-visitatore-reale` | "un anziano trova i numeri utili?", "si usa da telefono?" — usa il sito pubblicato come persone diverse senza la mappa: indirizzi scritti a mano, ricerca con le parole della gente, compiti per profilo |
-| `pc-collaudo-funzionale` | "funziona ancora tutto?", "il pulsante non fa niente" — prova sul sito pubblicato ogni strumento interattivo (assistente, giochi, quiz, cruscotto, Sala, Crea la mia lezione, Modalità Aula, salvataggi, ricerca, condivisione, stampa) |
-| `pc-prestazioni` | "il sito è lento?", "in emergenza si apre?" — peso e velocità per tipo di pagina su rete mobile lenta, budget e crescita rispetto alla misura precedente (registro in `riferimenti-interni/prestazioni/`) |
-| `pc-audit-completo` | "fammi l'audit completo", routine mensile — orchestra script e specialisti, rapporto in formato rilievi, correzioni fino a live |
-| `pc-pianificatore-emergenza` | "le aree di attesa sono giuste?", "il sito dice le stesse cose del Piano?" — coerenza con il Piano di Emergenza Comunale, aree, COC, scenari |
-| `pc-cartografo-gis` | "le coordinate sono giuste?", "la mappa è accessibile?" — dati geografici (aree, DAE, idranti), mappe Leaflet, attribuzioni |
-| `pc-medico-emergenza` | "è corretto dal punto di vista sanitario?" — primo soccorso (linee guida IRC), DAE, caldo, kit sanitari; mai consigli clinici individuali |
-| `pc-psicologo-emergenza` | "questo testo spaventa i bambini?", anniversari di tragedie — reazioni normalizzate, niente paura come leva, rimandi ai servizi |
-| `pc-radiocomunicazioni` | articoli Radiocomunicazioni, vista RADIO — frequenze solo da fonti verificate, mai quelle assegnate al Gruppo, solo ascolto |
-| `pc-volontariato-terzo-settore` | "come si diventa volontari?", tutele e limiti di giorni — Codice di protezione civile (artt. 35, 39), sicurezza dei volontari |
-| `pc-inclusione-fragilita` | "il kit serve davvero a una persona con disabilità?" — persone fragili in emergenza, CAA, facile da leggere (il codice WCAG resta all'accessibility auditor) |
-| `pc-comunicazione-crisi` | allerta o emergenza reale o simulata — sei punti ISO 22329, barra di allerta (livello, titolo e descrizione insieme), banner, Telegram, post a mano, disinformazione |
-| `pc-ufficio-stampa` | "scrivi un comunicato stampa", "chi ha ripreso il nostro articolo?" — comunicati per le testate (registro non-AGID su richiesta), rettifiche, rassegna; dal 24/10/2026 lo usa la procedura «Comunicati stampa automatici», punto 6-bis della rassegna (07:52, 12:52, 19:52: comunicato dal solo testo dell'articolo, PDF, pubblicazione nella Sala stampa; invio alle redazioni solo su ordine dell'utente) |
-| `pc-strategia-comunicazione` | "che cosa pubblichiamo il mese prossimo?", campagne — piano editoriale, pubblici, canali, tono istituzionale |
-| `pc-art-director` | "com'è venuta questa locandina?", brief per grafiche — regola dei 4 loghi con E10435833, grafica.md, contrasti, licenze |
-| `pc-produzione-multimediale` | "ho un video da mettere", "facciamo un Reel", podcast — codifica, sottotitoli, trascrizioni, peso, metadati |
-| `pc-testi-nel-codice` | "l'assistente dice cose giuste?", "i giochi danno consigli corretti?", ogni modifica ad assistente, giochi, «Crea la mia lezione», messaggi Telegram, generatori di schede — testi nel codice uguali alla fonte, HTML generato con la sua semantica, combinazioni coerenti |
-| `pc-auditor-indipendente` | "perché non te ne sei accorto?", "fai l'audit come uno esterno", dopo ogni audit esterno e come ultima fase dell'audit mensile — misure sul sito pubblicato senza fidarsi dei controlli, e per ogni rilievo il controllo che lo avrebbe bloccato |
+Le descrizioni complete degli agenti, con i trigger, sono nel frontmatter dei file in `.claude/agents/` e arrivano a ogni sessione insieme all'elenco degli agenti.
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
 
 ---
 
-## Skill globali — invocazione obbligata col tool `Skill`
+## Skill — invocazione col tool `Skill`
 
-🔴 ~100 skill installate in `~/.claude/skills/`. Prima di un task ≥3 step o ≥3 tool call: **c'è una skill che fa già questo?** Se sì → invocala col tool `Skill` (non con Read+Bash). Vietato dire "so che esiste ma procedo a mano". Non citare una skill senza invocarla. Non usare skill marketing sui contenuti AGID. Per task banali (1-2 tool call) bastano i tool atomici.
-
-**Routing rapido:**
-
-| Contesto | Skill |
-|---|---|
-| Accessibility WCAG | `accessibility` (+ agent `pc-accessibility-auditor`) |
-| SEO / schema / AI Overviews | `seo` · `seo-audit` · `schema` · `ai-seo` |
-| Script Python | `python-patterns` → `python-testing` |
-| Test / TDD | `tdd-workflow` · `verification-loop` · `eval-harness` |
-| Decisioni ambigue | `council` (4 voci) |
-| Output alto rischio (lega/medicina/sicurezza) | `santa-method` |
-| Git non banale / GitHub | `git-workflow` · `github-ops` |
-| Lookup API/framework | `documentation-lookup` (Context7) |
-| Ricerca web | `search-first` · `deep-research` · `exa-search` |
-| Pre-push completo | `production-audit` + `pc-deploy-validator` |
-| Sicurezza | `security-scan` · `security-review` · `ecc-security-review` |
-| Refactor diff | `simplify` |
-| Audit repo cross-stack | `repo-scan` · `production-audit` |
-| settings.json / hook / permessi | `update-config` · `hookify-rules` · `fewer-permission-prompts` |
-| Pianificare multi-step/PR | `blueprint` · `plan-orchestrate` |
-| ADR / distillare rules | `architecture-decision-records` · `rules-distill` |
-| Onboarding repo | `codebase-onboarding` · `code-tour` |
-| Bug "pulsante non funziona" | `click-path-audit` |
-| Audit budget contesto | `context-budget` · `token-budget-advisor` |
-| Recurring / poll | `loop` · `schedule` |
-| Browser/QA post-deploy | `browser-qa` · `e2e-testing` |
-| Workspace GSuite | `google-workspace-ops` |
-| Meta-work su skill/agent | `skill-stocktake` · `agent-sort` · `agent-architecture-audit` |
-| Imparare dal lavoro | `continuous-learning-v2` |
+🔴 Prima di un task ≥3 step: se fra le skill disponibili nella sessione ce n'è una che fa già questo, invocala col tool `Skill` (non con Read+Bash). Non citare una skill senza invocarla; non usare skill di marketing sui contenuti AGID.
 
 **Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-calendario-editoriale` (se programmato) → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`; allerta o emergenza → `pc-comunicazione-crisi` → `pc-fact-checker` → `pc-psicologo-emergenza` (se tocca persone); contenuto sanitario → `pc-medico-emergenza` → `pc-fact-checker`; grafica istituzionale → `pc-art-director` → `pc-verifica-visiva`; modifica a uno strumento interattivo o a CSS/JS comuni → `pc-revisore-codice` → `pc-collaudo-funzionale` → `pc-prestazioni`; menu, home o ricerca → `pc-usabilita` → `pc-visitatore-reale`.
 

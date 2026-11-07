@@ -8,74 +8,7 @@ Questo file contiene la **mappa generale** dell'architettura Hugo: struttura del
 
 ## Struttura del progetto
 
-```
-sito-pc-genzano/
-├── content/
-│   ├── comunicazioni/       # Articoli/news (archetype: comunicazioni.md)
-│   │   └── AAAA-MM-GG-titolo.md
-│   └── [sezioni statiche]/  # Pagine statiche (accessibilita, allerte-meteo,
-│                            # area-download, cartografia, cerca, chi-siamo,
-│                            # contatti, cosa-fare-adesso, diventa-volontario,
-│                            # faq, formazione, note-legali, numeri-utili,
-│                            # piano-emergenza, piano-familiare, privacy,
-│                            # rischi-prevenzione, siti-utili, social-media-policy)
-│                            # con _index.md
-├── data/
-│   ├── emergenza.json       # Modalità emergenza on/off
-│   ├── allerta.json         # Livello allerta meteo (verde/giallo/arancione/rosso)
-│   ├── risk_cards.yaml      # Card rischi e prevenzione
-│   ├── numeri_utili.yaml    # Numeri di emergenza
-│   ├── quick_links.yaml     # CTA homepage hero
-│   ├── social_links.yaml    # Link social
-│   └── codici_colore.yaml   # Descrizioni codici colore allerte
-├── themes/flavour-pcgenzano/
-│   ├── layouts/
-│   │   ├── index.html       # Homepage (dual-mode: normale / emergenza)
-│   │   ├── 404.html         # Pagina errore 404
-│   │   ├── _default/        # baseof.html, list.html, single.html
-│   │   ├── partials/        # navbar, footer, emergency-banner, allerta-card,
-│   │   │                    # cookie-banner, breadcrumb, page-tools,
-│   │   │                    # accessibility-toolbar.html (FAB strumenti a11y), ecc.
-│   │   ├── shortcodes/      # foto.html (click-per-ingrandire accessibile)
-│   │   │                    # pittogramma.html (ISO 7010 + ARASAAC)
-│   │   ├── comunicazioni/   # list.html con filtri per badge
-│   │   └── cerca/           # list.html con motore di ricerca JS
-│   └── static/
-│       ├── css/custom.css   # Override CSS su Bootstrap Italia + regole
-│       │                    # @media print globali (stampa solo l'articolo)
-│       ├── css/a11y-toolbar.css  # Stili FAB + dialog Strumenti di Accessibilità
-│       │                         # + classi html.a11y-* per le preferenze utente
-│       ├── js/a11y-toolbar.js    # Logica del toolbar di accessibilità
-│       │                         # (apri/chiudi, focus trap, persistenza
-│       │                         # localStorage, applicazione classi su <html>)
-│       └── images/          # Asset statici
-├── archetypes/
-│   ├── comunicazioni.md     # Archetype completo per news
-│   └── default.md           # Archetype minimale
-├── scripts/
-│   ├── genera-cover.py              # Genera copertine tipografiche automatiche
-│   ├── aggiorna-image-frontmatter.py # Aggiorna il campo image negli articoli
-│   ├── applica-fascia-foto.sh       # Applica fascia blu istituzionale a una
-│   │                                # foto sorgente fornita dall'utente e la
-│   │                                # converte in WebP 1200px pronta per l'uso
-│   │                                # via shortcode {{< foto >}}
-│   ├── scarica-pittogrammi.sh       # Scarica/aggiorna libreria pittogrammi
-│   │                                # ISO 7010 (Wikimedia) + ARASAAC.
-│   │                                # Output: static/pittogrammi/...
-│   ├── auto-cover-mancanti.py       # Genera cover tipografiche banner per
-│   │                                # articoli con image:"" o con file mancante
-│   │                                # (sicuro: mai sovrascrive foto utente).
-│   │                                # Chiama genera-cover.py + popola frontmatter.
-│   ├── proponi-marker-foto.py       # DEPRECATO 2026-05-03: il marker TODO-foto-*
-│   │                                # è bandito (CLAUDE.md punto 9). Lo script
-│   │                                # resta per riferimento storico ma il suo
-│   │                                # output non va più applicato. Per foto
-│   │                                # inline usare l'agent pc-image-fixer.
-│   └── export-contesto-progetto.sh        # Export di tutta la documentazione in
-│                                    # un unico CONTESTO-PROGETTO.md per altra AI
-├── .claude/rules/           # Regole di governance (questo file)
-└── CLAUDE.md                # Istruzioni per Claude Code
-```
+La struttura si legge dal repository (`content/`, `data/`, `themes/flavour-pcgenzano/`, `scripts/`, `archetypes/`): i punti non ricavabili dal codice sono nelle sezioni qui sotto.
 
 ## Regole Hugo fondamentali
 

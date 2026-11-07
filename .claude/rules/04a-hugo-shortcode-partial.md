@@ -1,3 +1,15 @@
+---
+paths:
+  - "themes/**"
+  - "layouts/**"
+  - "static/**/*.js"
+  - "static/**/*.css"
+  - "static/monitor/**"
+  - "static/api/**"
+  - "data/**"
+  - "hugo.toml"
+---
+
 # Hugo — Shortcode, Render Hook, Partial
 
 Questo file raccoglie gli **shortcode**, i **render hook Markdown** e i **partial** del tema. Per la struttura del progetto, le regole Hugo fondamentali e i comandi vedi `04-hugo-architecture.md`. Per template, CSS, menu di navigazione e UX vedi `04b-hugo-template-css.md`.
