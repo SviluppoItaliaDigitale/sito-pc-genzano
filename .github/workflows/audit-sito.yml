@@ -59,7 +59,7 @@ jobs:
         run: hugo --minify
 
       - name: "🐍 Dipendenze per i controlli di integrità (sezioni 46-49)"
-        run: pip install --quiet pillow pypdf
+        run: pip install --quiet pillow pypdf cryptography
 
       - name: "🧪 Audit contenuti"
         id: audit
