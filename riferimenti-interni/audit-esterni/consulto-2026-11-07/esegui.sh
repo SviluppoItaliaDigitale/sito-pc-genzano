@@ -81,11 +81,13 @@ case "$lettere_fatte" in *,* | *" e "*) cosa="rapporti dei revisori" ;; *) cosa=
 git commit -q -m "Audit del sito: $cosa $lettere_fatte (consulto del 07/11/2026)" \
   -m "Rapporti scritti dai revisori sul fascicolo pubblico del sito, da verificare rilievo per rilievo prima di unire."
 git push -q -u origin "$RAMO"
-if url=$(gh pr view "$RAMO" --json url --jq .url 2>/dev/null); then
+# API REST e non «gh pr»: funziona anche dove GraphQL non è disponibile (sessioni cloud)
+url=$(gh api "repos/{owner}/{repo}/pulls?head=SviluppoItaliaDigitale:$RAMO&state=open" --jq '.[0].html_url // empty')
+if [ -n "$url" ]; then
   echo "PR già aperta, aggiornata: $url"
 else
-  url=$(gh pr create --draft --base main --head "$RAMO" --title "Audit del sito: rapporti dei revisori del consulto" \
-        --body-file "$tmp/corpo-pr.md")
+  url=$(gh api "repos/{owner}/{repo}/pulls" -f base=main -f head="$RAMO" \
+        -f title="Audit del sito: rapporti dei revisori del consulto" -F body=@"$tmp/corpo-pr.md" -F draft=true --jq .html_url)
   echo "PR in bozza: $url"
 fi
 cd "$radice"
