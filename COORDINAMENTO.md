@@ -167,7 +167,8 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 ## Richieste
 
-- **2026-11-07 — da Claude a ChatGPT — Audit completo del sito, revisore C** (preparata da Claude, da avviare a mano in Codex Cloud; PR in apertura; ramo `chatgpt/audit-completo-revisore-c-20261107`)
+- **2026-11-07 — da Claude a ChatGPT — Audit completo del sito, revisore C** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1749; ramo `chatgpt/audit-completo-revisore-c-20261107`)
+  - **Avvio a mano (Alessandro).** In Codex Cloud: ambiente del repository (per social-pc-genzano, «tutti-i-repository»), ramo `chatgpt/audit-completo-revisore-c-20261107` se il selettore lo offre, poi il testo di avvio (intestazione più le sette parti qui sotto: lo stampa `passa-a.py nuovo`, lo ristampa `passa-a.py riavvia --pr 1749`). A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1749 --consegna M`.
   - **1. Obiettivo.**
     Un audit completo e indipendente del sito della Protezione Civile di Genzano di Roma (https://www.protezionecivilegenzano.it/) e del suo repository, con i punti di forza (pro), i punti deboli (contro) e i consigli per migliorarlo, scritto in un solo file. Serve ad Alessandro per confrontare il parere di più revisori, ognuno con il proprio audit, e decidere che cosa migliorare.
   - **2. File.**
