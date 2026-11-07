@@ -161,69 +161,17 @@ Domande fra le sessioni (o per Alessandro). Chi la legge risponde accanto, alla 
 
 Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
-- **07/11/2026 — Claude, audit completo del sito con più revisori.** Richiesta di Alessandro: «Fai fare un audit completo del sito ... a tutte le intelligenze artificiali che abbiamo collegato. Ogni intelligenza fa il suo audit. Pro e contro del sito. Consigli per migliorarlo». Ogni revisore scrive il proprio file `riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-<lettera>.md`. Stato alle 11:10 del 07/11/2026. **A Claude**: fatto (PR #1751). **B Gemini automatico**: riparte con il lavoratore corretto (PR #103 di `assistente-personale`, copiato qui): il limite al minuto di gemini-3.6-flash non è più preso per quota del giorno finita; il ramo del primo tentativo, `auto/gemini-audit-completo-del-sito-revisore-b-20261107` (solo lo scheletro), si toglie dal PC o dalla pagina del ramo quando B è chiuso. **C ChatGPT**: passaggio, PR #1749, avvio a mano di Alessandro in Codex Cloud; manca ancora `CHATGPT_ACCESSO`, quindi niente ChatGPT automatico. **D DeepSeek, F Kimi e G Qwen**: non si fanno, perché dal 07/11/2026 Ollama Cloud chiede crediti a pagamento per ogni modello e nessuno dei tre è gratis altrove (richieste in «Archiviati»). **E GLM e tre revisori nuovi, H OpenRouter (Nemotron 3 Ultra, modello gratuito), I Cloudflare Workers AI (GPT-OSS 120B) e J Cohere (Command A)**: con il consulto (`scripts/consulto-ai.py`), le cui chiavi stanno solo sul PC; Claude prepara in `riferimenti-interni/audit-esterni/consulto-2026-11-07/` il fascicolo pubblico del sito e il comando unico, che la prima sessione di Claude sul PC esegue. Prossimo passo: Claude verifica ogni rilievo, scrive l'esito accanto e chiude ogni consegna (`passa-a.py chiudi`); il confronto dei revisori va ad Alessandro.
+- **07/11/2026 — Claude, audit completo del sito con più revisori.** Richiesta di Alessandro: «Fai fare un audit completo del sito ... a tutte le intelligenze artificiali che abbiamo collegato. Ogni intelligenza fa il suo audit. Pro e contro del sito. Consigli per migliorarlo». Ogni revisore scrive il proprio file `riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-<lettera>.md`. Stato alle 11:26 del 07/11/2026. **A Claude**: fatto (PR #1751). **C ChatGPT**: passaggio, PR #1749, avvio a mano di Alessandro in Codex Cloud; manca ancora `CHATGPT_ACCESSO`, quindi niente ChatGPT automatico. **D DeepSeek, F Kimi e G Qwen**: non si fanno, perché dal 07/11/2026 Ollama Cloud chiede crediti a pagamento per ogni modello e nessuno dei tre è gratis altrove (richieste in «Archiviati»). **B Gemini, E Z.ai (GLM Flash), H OpenRouter, I Cloudflare Workers AI e J Cohere**: consulto sul PC, dove stanno le chiavi, con il comando unico della richiesta «da Claude a Claude sul PC»; B ci passa dopo due giri del lavoratore fermati dai limiti del piano gratuito. Prossimo passo: Claude verifica ogni rilievo, scrive l'esito accanto e chiude ogni consegna (`passa-a.py chiudi`); il confronto dei revisori va ad Alessandro.
 
 ## Richieste
 
-- **2026-11-07 — da Claude a Gemini automatico — Audit completo del sito, revisore B, secondo tentativo**
-  ## 1. Obiettivo
-  Un audit completo e indipendente del sito della Protezione Civile di Genzano di Roma (https://www.protezionecivilegenzano.it/) e del suo repository, con i punti di forza (pro), i punti deboli (contro) e i consigli per migliorarlo, scritto in un solo file. Serve ad Alessandro per confrontare il parere di più revisori, ognuno con il proprio audit, e decidere che cosa migliorare.
-
-  ## 2. File
-  - `riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md` (da creare). Nessun altro file si crea o si modifica.
-
-  ## 3. Che cosa fare
-  Prima di cominciare: la quota gratuita del tuo servizio è di circa 20 richieste al giorno per modello, e il primo tentativo del 7 novembre si è fermato dopo lo scheletro. Lavora quindi a blocchi grandi, con pochi passi: un solo comando scarica in `/tmp/audit/` tutte le pagine del passo 3 con le loro intestazioni e stampa per ognuna codice HTTP, peso, titolo, h1 e descrizione; un secondo comando legge insieme i file del repository che ti servono; scrivi il file intero in una o due volte; esegui tutti i controlli della parte 5 in un solo comando.
-  1. Per prima cosa crea il file con lo scheletro delle sezioni del passo 6 e riempilo man mano: se il lavoro si interrompe, ciò che hai già scritto resta.
-  2. Raccogli le prove solo da queste fonti:
-     - il sito pubblicato, con richieste vere: `curl -sS -L -A "Mozilla/5.0" -o /tmp/pagina.html -w "%{http_code} %{size_download}\n" URL` per pagina e peso, `curl -sSI URL` per le intestazioni HTTP; l'elenco delle pagine è in https://www.protezionecivilegenzano.it/sitemap.xml;
-     - il repository: template in `themes/flavour-pcgenzano/layouts/`, CSS e JavaScript in `themes/flavour-pcgenzano/static/` e `static/`, contenuti in `content/`, dati in `data/`, script in `scripts/`, automazioni in `.github/workflows/`;
-     - i rapporti già fatti in `riferimenti-interni/audit-esterni/` e `riferimenti-interni/audit-interni/`: non ripetere un rilievo già segnato come corretto, salvo che tu lo ritrovi ancora sul sito pubblicato (in quel caso scrivilo).
-  3. Guarda almeno queste pagine del sito pubblicato: `/`, `/emergenza/`, `/cosa-fare-adesso/`, `/allerte-meteo/`, `/numeri-utili/`, `/rischi-prevenzione/rischio-sismico/`, `/piano-emergenza/`, `/aree-attesa/`, `/cruscotto/`, `/monitor/`, `/assistente/`, `/comunicazioni/` e l'articolo più recente che trovi lì, `/formazione/`, `/giochi/`, `/lim/`, `/diventa-volontario/`, `/chi-siamo/`, `/contatti/`, `/accessibilita/`, `/privacy/`, `/open-data/`, `/cerca/`, `/english/`, `/facile-da-leggere/`, `/mappa-sito/`. Puoi aggiungerne altre. Fai al massimo 200 richieste al sito, una al secondo: è su un hosting condiviso.
-  4. Valuta questi ambiti, uno per uno: (a) informazioni d'emergenza e allerta, chiare per il cittadino; (b) contenuti: correttezza, fonti, coerenza fra pagine diverse, aggiornamento; (c) navigazione, ricerca, organizzazione delle pagine; (d) accessibilità secondo WCAG 2.2 livello AA (titoli, testi alternativi, etichette, contrasti, uso da tastiera, nomi accessibili dei comandi); (e) peso e velocità delle pagine su rete mobile; (f) motori di ricerca e dati strutturati; (g) sicurezza (HTTPS, intestazioni HTTP, Content-Security-Policy) e privacy; (h) materiali per le scuole e uso sulla lavagna interattiva; (i) affidabilità tecnica: build, automazioni, controlli; (j) grafica e identità.
-  5. Se nel tuo ambiente puoi aprire le pagine con un browser, provale anche lì (per esempio con un controllo di accessibilità automatico); se non puoi, controlla l'HTML e scrivi nel § 2 del file che la prova nel browser non è stata fatta. Se il sito non risponde dal tuo ambiente, fai l'audit sul solo repository e scrivilo nel § 2.
-  6. Il file ha esattamente queste sezioni, con questi titoli:
-     - `# Audit completo del sito — revisore B`
-     - `## 1. Giudizio complessivo`: da 5 a 10 righe, senza punteggi o percentuali che non hai misurato.
-     - `## 2. Perimetro e metodo`: data e ora italiane delle misure, pagine e file guardati, comandi usati, che cosa non hai potuto verificare e perché.
-     - `## 3. Pro: punti di forza`: elenco numerato, almeno 5 punti, ognuno con la sua prova.
-     - `## 4. Contro: punti deboli`: un rilievo per titolo `### R1 — <titolo breve>`, `### R2 — …`, ciascuno con le cinque voci del formato di `riferimenti-interni/audit-esterni/README.md`: «Dove», «Che cosa non va», «Prova», «Priorità» (P1 sbagliato o pericoloso per il cittadino · P2 da correggere · P3 miglioramento) ed «Esito», dove scrivi «(da compilare da chi verifica)».
-     - `## 5. Consigli per migliorarlo`: elenco numerato in ordine di importanza; per ogni consiglio una riga «Perché», una riga «Impegno» (piccolo, medio o grande) e i rilievi del § 4 che risolve, se ce ne sono. Solo consigli gratuiti e compatibili con i vincoli del punto 4.
-     - `## 6. Domande e dubbi`: ciò che non hai potuto chiarire.
-  7. Ogni punto di forza e ogni rilievo ha una prova verificabile: l'URL con il risultato della richiesta (codice HTTP, misura, frase esatta copiata dalla pagina), oppure il percorso del file con il numero di riga. Quello che non hai verificato non si scrive. Meglio otto rilievi provati che trenta senza prova.
-  8. Prima di finire rileggi il file come un revisore ostile che vuole smentirti: ricontrolla ogni prova, togli ciò che non regge, controlla che i consigli rispettino i vincoli del punto 4.
-
-  ## 4. Vincoli
-  - Il file è in italiano chiaro, con frasi brevi. Nel file non compaiono nomi di programmi o di servizi usati per fare il lavoro: la firma è «revisore B».
-  - I consigli rispettano queste decisioni del progetto, che non si rimettono in discussione:
-    - budget zero: solo interventi gratuiti, senza servizi, piani o licenze a pagamento;
-    - sito statico generato con Hugo e Bootstrap Italia, senza backend, CMS o database;
-    - solo JavaScript senza framework; nelle pagine per le scuole, JavaScript compatibile con ECMAScript 2018;
-    - niente app installabile, niente service worker, niente funzionamento offline basato sulla cache del browser;
-    - la cache HTTP è disattivata per scelta (intestazioni `no-store`): non proporre di riattivarla; se un controllo automatico la segnala, è una conseguenza nota, non un rilievo;
-    - nessuna modifica al CSS della barra di navigazione di Bootstrap Italia;
-    - niente overlay di accessibilità commerciali; l'assistente del sito resta un percorso di scelte fisse, mai un programma che genera risposte;
-    - i contenuti pubblicati non citano i programmi usati per scrivere i testi o fare le immagini;
-    - niente conteggi dei materiali disponibili (quante schede, quanti giochi) e niente widget di valutazione delle pagine;
-    - i colori dell'allerta (verde, giallo, arancione, rosso) sono quelli del sistema nazionale di protezione civile e non si cambiano;
-    - il Gruppo non interviene su chiamata dei cittadini: in emergenza si chiama il 112.
-  - Niente dati personali nel file. Niente testi copiati da siti di terzi: si citano solo frasi brevi del sito che si sta valutando, come prova.
-
-  ## 5. Controlli
-  - `test -f riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md && echo presente` stampa «presente».
-  - `grep -cE "^## [1-6]\. " riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md` stampa 6.
-  - `grep -c "^### R[0-9]" riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md` stampa un numero maggiore di 0, e ogni rilievo ha le righe «Dove», «Che cosa non va», «Prova», «Priorità» ed «Esito».
-  - `python3 -c "import importlib.util as u; s=u.spec_from_file_location('l','scripts/lavoratore-ai.py'); m=u.module_from_spec(s); s.loader.exec_module(m); t=open('riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md',encoding='utf-8').read(); print(len(m.VIETATE.findall(t))+len(m.VIETATE_SIGLE.findall(t)))"` stampa 0 (nessun nome di strumento nel file).
-  - `git status --porcelain` elenca solo il file del punto 2.
-
-  ## 6. Consegna
-  Solo il file del punto 2. Alla fine un riassunto breve: fatto, non fatto e perché, controlli eseguiti con l'esito. `COORDINAMENTO.md` non si tocca: l'esito in bacheca lo scrive chi chiude il lavoro.
-
-  ## 7. Che cosa non fare
-  - Non correggere nulla del sito né del repository: chi fa l'audit non corregge, le correzioni le fa chi verifica i rilievi.
-  - Non toccare file fuori dall'elenco del punto 2; non unire nulla, non aprire e non segnare pronta nessuna pull request.
-  - Non inventare dati, misure, punteggi, norme o citazioni: se una cosa non si può verificare, va nel § 6 del file.
-  - Non mandare dati del repository o del sito a servizi esterni, salvo le richieste al sito pubblicato del passo 3.
+- **2026-11-07 — da Claude a Claude sul PC — Audit completo del sito, revisori B, E, H, I e J (consulto)**
+  - **Che cosa serve.** I revisori che lavorano con il consulto (`scripts/consulto-ai.py`) hanno le chiavi gratuite solo sul PC: B Gemini (Gemini API, al posto del lavoratore, vedi «Archiviati»), E Z.ai (GLM Flash), H OpenRouter (modelli «:free»), I Cloudflare Workers AI e J Cohere. Ognuno riceve la stessa richiesta e il fascicolo del sito pubblicato e scrive il proprio rapporto.
+  - **Comando unico**, dalla sessione di Claude sul PC, in background perché dura fino a mezz'ora (non tocca la copia di lavoro aperta: lavora in una cartella a parte da `origin/main`): `cd ~/sito-pc-genzano && git fetch -q origin && bash <(git show origin/main:riferimenti-interni/audit-esterni/consulto-2026-11-07/esegui.sh)`. Per rifare solo alcuni revisori, le loro lettere in fondo (`… esegui.sh) b j`).
+  - **File.** Cartella `riferimenti-interni/audit-esterni/consulto-2026-11-07/` (`README.md`, `richiesta.md`, `fascicolo.md`, `esegui.sh`, `rapporto.py`); i rapporti vanno in `riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-<lettera>.md`.
+  - **Controlli.** Li fa il comando: titolo esatto, sei sezioni, rilievi completi, nomi di strumenti da togliere. Poi scrive qui sotto, al posto del segno, l'esito: servizio, modello e numeri di ogni revisore.
+  - **Dove si pubblica.** PR in bozza sul ramo `claude/audit-consulto-revisori-20261107`, aperta dal comando. La chiude Claude, anche dal cellulare, dopo aver verificato ogni rilievo e scritto l'esito accanto. Nella stessa sessione sul PC si toglie anche il ramo del primo tentativo di B, rimasto con il solo scheletro: `git push origin --delete auto/gemini-audit-completo-del-sito-revisore-b-20261107`.
+  <!-- esito-consulto-revisori -->
 
 - **2026-11-07 — da Claude a ChatGPT — Audit completo del sito, revisore C** (preparata da Claude, da avviare a mano in Codex Cloud; PR #1749; ramo `chatgpt/audit-completo-revisore-c-20261107`)
   - **Avvio a mano (Alessandro).** In Codex Cloud, ambiente «sito-pc-genzano», ramo principale, incolla una riga: «Leggi COORDINAMENTO.md ed esegui la richiesta della PR #1749.». A lavoro finito, «Create PR» dal task: la pull request di consegna la porta nel ramo e la chiude `passa-a.py chiudi --pr 1749 --consegna M`.
@@ -341,6 +289,67 @@ Formato per una richiesta di immagine:
 - **08/10/2026, 21:45 — Claude.** I pittogrammi ARASAAC si scelgono guardandoli: il primo risultato della ricerca può mostrare tutt'altro (era successo con «scappare», «ospedale», «caldo», «frana»). In `scripts/scarica-pittogrammi.sh` un quarto campo fissa l'identificativo verificato.
 
 ## Archiviati
+
+- **2026-11-07 — da Claude a Gemini automatico — Audit completo del sito, revisore B, secondo tentativo** — archiviata da Claude, non eseguita
+  - **Esito (07/11/2026).** Non eseguita con il lavoratore, in tre giri: alle 6:00 si è fermato dopo lo scheletro del file (ramo `auto/gemini-audit-completo-del-sito-revisore-b-20261107`), alle 9:06 e alle 11:05 prima di toccare un file. I primi due si sono fermati per il servizio occupato e per i limiti del piano gratuito; il terzo (run 42362476924), dopo la correzione del lavoratore che distingue il limite al minuto dalla quota del giorno (PR #103 di `assistente-personale`), per la quota gratuita del giorno finita su gemini-3.8-flash, gemini-3.7-flash e gemini-3.6-flash. Un audit a molti passi chiede più richieste di quante il piano gratuito ne dia in un giorno per modello. Il revisore B passa al consulto sul PC, con il fascicolo del sito: una sola richiesta, che prova tutti i modelli flash (richiesta «da Claude a Claude sul PC» in «Richieste»).
+  ## 1. Obiettivo
+  Un audit completo e indipendente del sito della Protezione Civile di Genzano di Roma (https://www.protezionecivilegenzano.it/) e del suo repository, con i punti di forza (pro), i punti deboli (contro) e i consigli per migliorarlo, scritto in un solo file. Serve ad Alessandro per confrontare il parere di più revisori, ognuno con il proprio audit, e decidere che cosa migliorare.
+
+  ## 2. File
+  - `riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md` (da creare). Nessun altro file si crea o si modifica.
+
+  ## 3. Che cosa fare
+  Prima di cominciare: la quota gratuita del tuo servizio è di circa 20 richieste al giorno per modello, e il primo tentativo del 7 novembre si è fermato dopo lo scheletro. Lavora quindi a blocchi grandi, con pochi passi: un solo comando scarica in `/tmp/audit/` tutte le pagine del passo 3 con le loro intestazioni e stampa per ognuna codice HTTP, peso, titolo, h1 e descrizione; un secondo comando legge insieme i file del repository che ti servono; scrivi il file intero in una o due volte; esegui tutti i controlli della parte 5 in un solo comando.
+  1. Per prima cosa crea il file con lo scheletro delle sezioni del passo 6 e riempilo man mano: se il lavoro si interrompe, ciò che hai già scritto resta.
+  2. Raccogli le prove solo da queste fonti:
+     - il sito pubblicato, con richieste vere: `curl -sS -L -A "Mozilla/5.0" -o /tmp/pagina.html -w "%{http_code} %{size_download}\n" URL` per pagina e peso, `curl -sSI URL` per le intestazioni HTTP; l'elenco delle pagine è in https://www.protezionecivilegenzano.it/sitemap.xml;
+     - il repository: template in `themes/flavour-pcgenzano/layouts/`, CSS e JavaScript in `themes/flavour-pcgenzano/static/` e `static/`, contenuti in `content/`, dati in `data/`, script in `scripts/`, automazioni in `.github/workflows/`;
+     - i rapporti già fatti in `riferimenti-interni/audit-esterni/` e `riferimenti-interni/audit-interni/`: non ripetere un rilievo già segnato come corretto, salvo che tu lo ritrovi ancora sul sito pubblicato (in quel caso scrivilo).
+  3. Guarda almeno queste pagine del sito pubblicato: `/`, `/emergenza/`, `/cosa-fare-adesso/`, `/allerte-meteo/`, `/numeri-utili/`, `/rischi-prevenzione/rischio-sismico/`, `/piano-emergenza/`, `/aree-attesa/`, `/cruscotto/`, `/monitor/`, `/assistente/`, `/comunicazioni/` e l'articolo più recente che trovi lì, `/formazione/`, `/giochi/`, `/lim/`, `/diventa-volontario/`, `/chi-siamo/`, `/contatti/`, `/accessibilita/`, `/privacy/`, `/open-data/`, `/cerca/`, `/english/`, `/facile-da-leggere/`, `/mappa-sito/`. Puoi aggiungerne altre. Fai al massimo 200 richieste al sito, una al secondo: è su un hosting condiviso.
+  4. Valuta questi ambiti, uno per uno: (a) informazioni d'emergenza e allerta, chiare per il cittadino; (b) contenuti: correttezza, fonti, coerenza fra pagine diverse, aggiornamento; (c) navigazione, ricerca, organizzazione delle pagine; (d) accessibilità secondo WCAG 2.2 livello AA (titoli, testi alternativi, etichette, contrasti, uso da tastiera, nomi accessibili dei comandi); (e) peso e velocità delle pagine su rete mobile; (f) motori di ricerca e dati strutturati; (g) sicurezza (HTTPS, intestazioni HTTP, Content-Security-Policy) e privacy; (h) materiali per le scuole e uso sulla lavagna interattiva; (i) affidabilità tecnica: build, automazioni, controlli; (j) grafica e identità.
+  5. Se nel tuo ambiente puoi aprire le pagine con un browser, provale anche lì (per esempio con un controllo di accessibilità automatico); se non puoi, controlla l'HTML e scrivi nel § 2 del file che la prova nel browser non è stata fatta. Se il sito non risponde dal tuo ambiente, fai l'audit sul solo repository e scrivilo nel § 2.
+  6. Il file ha esattamente queste sezioni, con questi titoli:
+     - `# Audit completo del sito — revisore B`
+     - `## 1. Giudizio complessivo`: da 5 a 10 righe, senza punteggi o percentuali che non hai misurato.
+     - `## 2. Perimetro e metodo`: data e ora italiane delle misure, pagine e file guardati, comandi usati, che cosa non hai potuto verificare e perché.
+     - `## 3. Pro: punti di forza`: elenco numerato, almeno 5 punti, ognuno con la sua prova.
+     - `## 4. Contro: punti deboli`: un rilievo per titolo `### R1 — <titolo breve>`, `### R2 — …`, ciascuno con le cinque voci del formato di `riferimenti-interni/audit-esterni/README.md`: «Dove», «Che cosa non va», «Prova», «Priorità» (P1 sbagliato o pericoloso per il cittadino · P2 da correggere · P3 miglioramento) ed «Esito», dove scrivi «(da compilare da chi verifica)».
+     - `## 5. Consigli per migliorarlo`: elenco numerato in ordine di importanza; per ogni consiglio una riga «Perché», una riga «Impegno» (piccolo, medio o grande) e i rilievi del § 4 che risolve, se ce ne sono. Solo consigli gratuiti e compatibili con i vincoli del punto 4.
+     - `## 6. Domande e dubbi`: ciò che non hai potuto chiarire.
+  7. Ogni punto di forza e ogni rilievo ha una prova verificabile: l'URL con il risultato della richiesta (codice HTTP, misura, frase esatta copiata dalla pagina), oppure il percorso del file con il numero di riga. Quello che non hai verificato non si scrive. Meglio otto rilievi provati che trenta senza prova.
+  8. Prima di finire rileggi il file come un revisore ostile che vuole smentirti: ricontrolla ogni prova, togli ciò che non regge, controlla che i consigli rispettino i vincoli del punto 4.
+
+  ## 4. Vincoli
+  - Il file è in italiano chiaro, con frasi brevi. Nel file non compaiono nomi di programmi o di servizi usati per fare il lavoro: la firma è «revisore B».
+  - I consigli rispettano queste decisioni del progetto, che non si rimettono in discussione:
+    - budget zero: solo interventi gratuiti, senza servizi, piani o licenze a pagamento;
+    - sito statico generato con Hugo e Bootstrap Italia, senza backend, CMS o database;
+    - solo JavaScript senza framework; nelle pagine per le scuole, JavaScript compatibile con ECMAScript 2018;
+    - niente app installabile, niente service worker, niente funzionamento offline basato sulla cache del browser;
+    - la cache HTTP è disattivata per scelta (intestazioni `no-store`): non proporre di riattivarla; se un controllo automatico la segnala, è una conseguenza nota, non un rilievo;
+    - nessuna modifica al CSS della barra di navigazione di Bootstrap Italia;
+    - niente overlay di accessibilità commerciali; l'assistente del sito resta un percorso di scelte fisse, mai un programma che genera risposte;
+    - i contenuti pubblicati non citano i programmi usati per scrivere i testi o fare le immagini;
+    - niente conteggi dei materiali disponibili (quante schede, quanti giochi) e niente widget di valutazione delle pagine;
+    - i colori dell'allerta (verde, giallo, arancione, rosso) sono quelli del sistema nazionale di protezione civile e non si cambiano;
+    - il Gruppo non interviene su chiamata dei cittadini: in emergenza si chiama il 112.
+  - Niente dati personali nel file. Niente testi copiati da siti di terzi: si citano solo frasi brevi del sito che si sta valutando, come prova.
+
+  ## 5. Controlli
+  - `test -f riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md && echo presente` stampa «presente».
+  - `grep -cE "^## [1-6]\. " riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md` stampa 6.
+  - `grep -c "^### R[0-9]" riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md` stampa un numero maggiore di 0, e ogni rilievo ha le righe «Dove», «Che cosa non va», «Prova», «Priorità» ed «Esito».
+  - `python3 -c "import importlib.util as u; s=u.spec_from_file_location('l','scripts/lavoratore-ai.py'); m=u.module_from_spec(s); s.loader.exec_module(m); t=open('riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md',encoding='utf-8').read(); print(len(m.VIETATE.findall(t))+len(m.VIETATE_SIGLE.findall(t)))"` stampa 0 (nessun nome di strumento nel file).
+  - `git status --porcelain` elenca solo il file del punto 2.
+
+  ## 6. Consegna
+  Solo il file del punto 2. Alla fine un riassunto breve: fatto, non fatto e perché, controlli eseguiti con l'esito. `COORDINAMENTO.md` non si tocca: l'esito in bacheca lo scrive chi chiude il lavoro.
+
+  ## 7. Che cosa non fare
+  - Non correggere nulla del sito né del repository: chi fa l'audit non corregge, le correzioni le fa chi verifica i rilievi.
+  - Non toccare file fuori dall'elenco del punto 2; non unire nulla, non aprire e non segnare pronta nessuna pull request.
+  - Non inventare dati, misure, punteggi, norme o citazioni: se una cosa non si può verificare, va nel § 6 del file.
+  - Non mandare dati del repository o del sito a servizi esterni, salvo le richieste al sito pubblicato del passo 3.
 
 - **07/11/2026 — Claude ad Alessandro (superata, archiviata da Claude).** Il revisore G dell'audit completo doveva essere Qwen, ma oggi Ollama Cloud non ha modelli Qwen. Al suo posto posso far lavorare MiniMax M3, che usa la stessa chiave gratuita di Ollama Cloud: serve aggiungere «MiniMax automatico» al kit comune delle AI automatiche, in tutti i repository. Raccomandazione di Claude: sì. In alternativa l'audit resta con sei revisori.
   - **Risposta (07/11/2026).** Superata senza bisogno di risposta: anche MiniMax passa da Ollama Cloud, che da oggi chiede crediti a pagamento per ogni modello. Il revisore G non si fa: Qwen non è gratis né su Ollama Cloud né fra i modelli «:free» di OpenRouter.
