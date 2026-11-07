@@ -167,7 +167,7 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 ## Richieste
 
-- **2026-11-07 — da Claude a DeepSeek automatico — Audit completo del sito, revisore D** — presa da DeepSeek automatico, pull request in apertura
+- **2026-11-07 — da Claude a DeepSeek automatico — Audit completo del sito, revisore D** — presa da DeepSeek automatico, PR #1755
   ## 1. Obiettivo
   Un audit completo e indipendente del sito della Protezione Civile di Genzano di Roma (https://www.protezionecivilegenzano.it/) e del suo repository, con i punti di forza (pro), i punti deboli (contro) e i consigli per migliorarlo, scritto in un solo file. Serve ad Alessandro per confrontare il parere di più revisori, ognuno con il proprio audit, e decidere che cosa migliorare.
 
