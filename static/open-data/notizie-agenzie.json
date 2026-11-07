@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-07T05:14:35+00:00",
+  "generato": "2026-11-07T11:45:23+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-06T23:31:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone: 'Fiero di essere americano e di avere votato'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/07/papa-leone-fiero-di-essere-americano-e-di-avere-votato_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html"
-  },
-  {
-   "data": "2026-11-06T23:21:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mandato di arresto per Santiago Pena, Pedro Alliana nuovo presidente del Paraguay",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/mandato-di-arresto-per-santiago-pena-pedro-alliana-nuovo-presidente-del_b5c78e44-e52e-43f5-ad28-a2227aab6d8e.html"
-  },
-  {
-   "data": "2026-11-06T23:20:29+00:00",
+   "data": "2026-11-07T11:36:38+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Papa Leone XIV in Uruguay: \"Mai avuto dubbi sul viaggio. Fiero di essere americano e di aver votato\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/papa-leone-xiv-uruguay-viaggio-america-latina_1HgUKwIC2fCvG8s2yhB15S"
+   "titolo": "Dal memoir su Dacia Maraini ad Alessandro D'Avenia, le novità in libreria",
+   "url": "https://www.adnkronos.com/cultura/novita-in-libreria_4kRL7RKL0kVb5khhsVZwRc"
   },
   {
-   "data": "2026-11-06T23:16:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cancro alla prostata, studio italiano rivela motivo per cui sfugge a immunoterapia",
-   "url": "https://www.adnkronos.com/salute/tumore-prostata-immunoterapia-scoperta_4dnxTij7LjLaApDo8byqUO"
-  },
-  {
-   "data": "2026-11-06T23:11:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Irlanda, allarme per minacce bomba a pochi giorni da vertici Ue e Cpe",
-   "url": "https://www.adnkronos.com/internazionale/esteri/irlanda-allarme-per-minacce-bomba-cosa-succede_2GEJUZ1D6enO4H5SFxrBJ6"
-  },
-  {
-   "data": "2026-11-06T23:11:51+00:00",
+   "data": "2026-11-07T11:34:24+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Tensione a manifestazione Trieste, feriti tre poliziotti, fermata una donna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/tensione-a-manifestazione-trieste-feriti-tre-poliziotti-fermata-una-donna_3ddb3dce-d2bd-4867-9bd5-f33b75e339c1.html"
+   "titolo": "Cyberattacchi, Tajani e le istituzioni italiane da anni nel mirino dei Noname057(16): i precedenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/cyberattacchi-tajani-e-le-istituzioni-italiane-da-anni-nel-mirino-dei-noname05716-i-precedenti_d0be33a5-2a42-4536-a9d9-bda74f8def9a.html"
   },
   {
-   "data": "2026-11-06T23:11:17+00:00",
+   "data": "2026-11-07T11:31:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Taglia degli hacker sul dark web su Tajani e Lo Voi. Cyberattacco alla Galleria del Brennero",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html"
+  },
+  {
+   "data": "2026-11-07T11:22:57+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidenti a Trieste, Fedriga, fermare continue tensioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/incidenti-a-trieste-fedriga-fermare-continue-tensioni_338d48c2-6d89-4e0a-9a45-5d59704f0744.html"
+  },
+  {
+   "data": "2026-11-07T11:21:54+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Doppia tromba d'aria davanti ai Faraglioni di Capri",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/doppia-tromba-daria-davanti-ai-faraglioni-di-capri_ba41f6f7-288b-44e4-884a-76f3b1878cef.html"
+  },
+  {
+   "data": "2026-11-07T11:18:06+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidenti a Trieste, dimesso dall'ospedale funzionario di Polizia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/incidenti-a-trieste-dimesso-dallospedale-funzionario-di-polizia_f7c84c0d-4444-40d0-9de6-477ce82dbb15.html"
+  },
+  {
+   "data": "2026-11-07T11:17:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bonaccini pubblica foto di Tajani con cappellino Maga, poi la rimuove: \"Meme ironico\", scoppia la polemica",
+   "url": "https://www.adnkronos.com/politica/bonaccini-tajani-foto-meme-maga-cosa-e-successo_2GkUfQSgQH0VWhJaStqp3W"
+  },
+  {
+   "data": "2026-11-07T11:10:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Al Papa le chiavi di Montevideo. Oggi a Paysandù, la città 'italiana' dell'Uruguay",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/07/il-papa-oggi-a-paysandu-la-citta-italiana-delluruguay_8a4a02e2-1700-4980-9449-f12650e408c7.html"
+  },
+  {
+   "data": "2026-11-07T11:08:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Doppia tromba d'aria davanti ai Faraglioni di Capri",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/doppia-tromba-daria-davanti-ai-faraglioni-di-capri_6e2f08fa-ea38-4106-b070-5a0e36279701.html"
+  },
+  {
+   "data": "2026-11-07T11:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Influenza, il bollettino non c'è ma i virus sì. La stima di Pregliasco: \"Oltre 500mila casi a settimana\"",
+   "url": "https://www.adnkronos.com/cronaca/influenza-virus-casi-italia-pregliasco-ultime-notizie_1dR0yCx3ya6wvBif8motuO"
+  },
+  {
+   "data": "2026-11-07T11:01:26+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Maltratta la moglie e le sgonfia le ruote dell'auto, allontanato da casa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/maltratta-la-moglie-e-le-sgonfia-le-ruote-dellauto-allontanato-da-casa_b4c86a08-b23b-47dc-a5d9-1b076ee84632.html"
+  },
+  {
+   "data": "2026-11-07T10:55:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "'A Via Fani non c'erano solo le Br, lo racconta una foto'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/a-via-fani-non-cerano-solo-le-br-lo-racconta-una-foto_a0ee617c-18e1-40ae-aadf-c29421662057.html"
+  },
+  {
+   "data": "2026-11-07T10:47:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Salvini: 'Altieri aveva i requisiti per l'Anac, altro nome lunedì in Cdm'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/07/salvini-altieri-aveva-i-requisiti-per-lanac-altro-nome-lunedi-in-cdm_3e222450-c5fa-457b-9a5b-6171d5587a41.html"
+  },
+  {
+   "data": "2026-11-07T10:42:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Auto finisce fuori strada e poi si ribalta, morta 17enne nel Salernitano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/auto-finisce-fuori-strada-e-poi-si-ribalta-morta-17enne-nel-salernitano_4fcc5390-5c4d-4320-a20b-a2953a9ca667.html"
+  },
+  {
+   "data": "2026-11-07T10:40:27+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidente sulla A13 a Padova, morte due persone",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/incidente-sulla-a13-a-padova-morte-due-persone_b7c54a12-cba8-4fca-b679-9ddfb194ab11.html"
+  },
+  {
+   "data": "2026-11-07T10:34:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, Gualtieri: \"Mi ricandido a sindaco per altri 5 anni\"",
+   "url": "https://www.adnkronos.com/politica/roma-campidoglio-sindaco-gualtieri-ultime-notizie_1gSWxetlD0RQnESnenwORj"
+  },
+  {
+   "data": "2026-11-07T10:33:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Papa Leone in volo verso l'Uruguay visita la cabina di pilotaggio, l'equipaggio: \"Emozione unica\"",
+   "url": "https://www.adnkronos.com/cronaca/papa-leone-viaggio-sudamerica-visita-cabina-pilota-ita_4ihdSgXba4F3riq8mMPZkA"
+  },
+  {
+   "data": "2026-11-07T10:27:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ascolti tv, 'The Voice Senior' su Rai1 vince la prima serata",
+   "url": "https://www.adnkronos.com/spettacoli/ascolti-tv-6-novembre-chi-ha-vinto_70BJbz0lkROxxiZ8NZ8wIO"
+  },
+  {
+   "data": "2026-11-07T10:14:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Battista dopo l'operazione: \"Scrivevano che ero in coma. Ho pensato: meno male che mia madre è morta\"",
+   "url": "https://www.adnkronos.com/cronaca/di-battista-ricovero-cuba-mamma-social_7KdKPcb3x2hmmZQziG9jTy"
+  },
+  {
+   "data": "2026-11-07T10:13:07+00:00",
    "fonte": "ANSA",
    "titolo": "ANSA Newsroom | In tenebra età, i giovani, gli scontri a Milano",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/ansa-newsroom-in-tenebra-eta-i-giovani-gli-scontri-a-milano_81c1ce83-96c5-410a-bdd2-ea1fc819ddb3.html"
   },
   {
-   "data": "2026-11-06T23:09:48+00:00",
+   "data": "2026-11-07T10:05:42+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Fine vita, reset delle leggi regionali: due provvedimenti fermi in Senato, il quadro",
-   "url": "https://www.adnkronos.com/politica/fine-vita-leggi-regionali-governo-veneto_6ac91q38jGqa3lHu6wcooW"
+   "titolo": "Francia, nuova giornata di mobilitazione: decine di migliaia di manifestanti attesi a Parigi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/francia-nuova-giornata-di-mobilitazione-ultime-news-in-diretta_1Wn3LoHoZRIESDVGdOPxZo"
   },
   {
-   "data": "2026-11-06T23:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Anac, scontro tra governo e opposizioni: salta candidatura Altieri",
-   "url": "https://www.adnkronos.com/politica/anac-scontro-governo-opposizioni-altieri_2W3g10ltMrBfgFyFtpEa24"
-  },
-  {
-   "data": "2026-11-06T23:05:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bollette luce, arriva una nuova stangata: aumenti fino al 51% tra novembre e dicembre",
-   "url": "https://www.adnkronos.com/economia/bollette-luce-aumenti-novembre-dicembre-rincari-famiglie_70SfUYExh1BEYoiI3GYK24"
-  },
-  {
-   "data": "2026-11-06T23:02:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vaccini, dal Covid all'influenza: perché le mamme in gravidanza devono farli",
-   "url": "https://www.adnkronos.com/salute/vaccini-gravidanza-quali-fare_2u3bpWeMNMNdDj9D9EPOae"
-  },
-  {
-   "data": "2026-11-06T22:50:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'Fbi arresta in Florida il padre di Meghan Markle",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/lfbi-arresta-in-florida-il-padre-di-meghan-markle-_404b4dee-1f32-4233-83f4-5dcbbc0afa5d.html"
-  },
-  {
-   "data": "2026-11-06T22:49:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Media Iran, due missili colpiscono l'isola di Qeshm",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/06/media-iran-due-missili-colpiscono-lisola-di-qeshm_d3eb6266-aaec-4271-9d11-336fd196698b.html"
-  },
-  {
-   "data": "2026-11-06T22:42:28+00:00",
+   "data": "2026-11-07T10:02:30+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+   "titolo": "'Sul darkweb taglia degli hacker di Noname057 su Tajani e Lo Voi'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/sul-darkweb-taglia-degli-hacker-di-noname057-su-tajani-e-lo-voi_815097c7-140d-4f71-b1e5-270b07f58c28.html"
   },
   {
-   "data": "2026-11-06T22:16:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Francia di nuovo in piazza, polizia schierata al massimo con 70.000 agenti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/06/domani-la-francia-di-nuovo-in-piazza-polizia-schierata-al-massimo-con-70.000-agenti_707c8697-f1ce-4ab9-85ed-1b3735e589f2.html"
-  },
-  {
-   "data": "2026-11-06T22:11:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scontro tra opposizioni e governo sulla nomina alla presidenza dell'Anac, il leghista Altieri si ritira",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/scoppia-il-caso-della-nomina-alla-guida-dellanac-altieri-si-ritira_213db7a9-2dd1-48af-8305-c65f12fa1116.html"
-  },
-  {
-   "data": "2026-11-06T21:16:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, Sempio su richiesta rinvio a giudizio: \"Paura no ma tensione\". Buono postale da 85mila euro, ira dei legali",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-sempio-rinvio-giudizio_5mu8JBEosQSBHpoRbjfqlQ"
-  },
-  {
-   "data": "2026-11-06T21:00:39+00:00",
+   "data": "2026-11-07T09:45:43+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, Sempio 'Speriamo di andare presto in aula e risolvere tutto\"",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/garlasco-sempio-speriamo-di-andare-presto-in-aula-e-risolvere-tutto_1c5c2249-76c4-4e3c-8c64-1001e3f70d27.html"
+   "titolo": "Picchiato a morte a Cervia, chiesto il giudizio immediato per 5 giovani",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/picchiato-a-morte-a-cervia-chiesto-il-giudizio-immediato-per-5-giovani_8c8835bc-94ce-4668-b2ba-42fdbad216fc.html"
   },
   {
-   "data": "2026-11-06T20:58:47+00:00",
+   "data": "2026-11-07T09:33:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "James Bond, Josh O'Connor sarà il nuovo 007: l'indiscrezione del Sun",
-   "url": "https://www.adnkronos.com/spettacoli/james-bond-josh-oconnor-nuovo-007_6BXCWUhar8yB8PSmRcQbXy"
+   "titolo": "Cyberattacchi, la denuncia di Tajani: \"Miei dati su dark web e minacce alla mia famiglia per sostegno Italia a Kiev\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/cyberattacchi-tajani-minaccia-denuncia-dark-web_2VgzZjfeX65D2THSO6s4gq"
   },
   {
-   "data": "2026-11-06T20:52:31+00:00",
+   "data": "2026-11-07T09:27:14+00:00",
    "fonte": "ANSA",
-   "titolo": "A Potenza \"chiude\" il ponte Musmeci, gioiello del '900",
-   "url": "https://www.ansa.it/basilicata/notizie/2026/11/06/ansa-box-a-potenza-chiude-il-ponte-musmeci-gioiello-del-900_aec2977d-4ae9-4c38-90e6-88aa13c99302.html"
+   "titolo": "Il racconto della settimana in immagini",
+   "url": "https://www.ansa.it/sito/videogallery/short_video/2026/11/07/il-racconto-della-settimana-in-immagini_83264205-b4c2-4546-86f0-abd173279325.html"
   },
   {
-   "data": "2026-11-06T20:43:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Copernicus: 'Il mese di ottobre è stato il più caldo mai registrato'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/06/copernicus-il-mese-di-ottobre-2026-e-stato-il-piu-caldo-mai-registrato_6bcacc14-ee82-44d1-a5f1-9a609d8d83a8.html"
+   "data": "2026-11-07T09:19:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Furto da mezzo milione nella villa del calciatore del Parma El Bilal Tourè",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/furto-da-mezzo-milione-nella-villa-del-calciatore-del-parma-el-bilal_e8617f75-e8bd-42f2-8a86-04c95f9732bb.html"
   },
   {
-   "data": "2026-11-06T20:12:21+00:00",
+   "data": "2026-11-07T09:13:07+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, numeri estrazione vincente oggi 6 novembre. I 5 vincono oltre 33mila euro",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-6-novembre-numeri_3PptatprPdDDrYTzyir0x4"
+   "titolo": "Uomo di 39 anni investito da un treno a Cascina, disagi sulla linea ferroviaria: ritardi e cancellazioni sulla Firenze-Pisa-Livorno",
+   "url": "https://www.adnkronos.com/cronaca/cascina-treno-uomo-investito-ritardi-cancellazioni_4j8fhLEQuGYezLAZ8KHxX2"
   },
   {
-   "data": "2026-11-06T20:09:07+00:00",
+   "data": "2026-11-07T09:05:38+00:00",
    "fonte": "ANSA",
-   "titolo": "Midterm: Trump torna all'attacco, 'non mollerò mai'. E nomina Miller capo dello staff",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/06/midterm-trump-torna-allattacco-non-mollero-mai.-e-nomina-miller-capo_4b1dc648-5e25-4e4c-856c-8a949fe1762f.html"
+   "titolo": "Sfonda la porta e tenta di strangolare la moglie davanti ai figli",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/sfonda-la-porta-e-tenta-di-strangolare-la-moglie-davanti-ai-figli_5aad1401-e48c-4296-a5ef-5249632da078.html"
   },
   {
-   "data": "2026-11-06T20:08:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Chiesto il processo per 30 agenti della polizia locale di Genova",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/chiesto-il-processo-per-30-agenti-della-polizia-locale-di-genova_d28b0fd7-292b-45f8-b349-ff1a2bdbd3c8.html"
-  },
-  {
-   "data": "2026-11-06T20:03:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I pm insistono: 'Sul caso Ramy una perizia in incidente probatorio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/i-pm-insistono-sul-caso-ramy-una-perizia-in-incidente-probatorio_c833b7dd-318c-4dcf-b55f-3629bfbbafd8.html"
-  },
-  {
-   "data": "2026-11-06T19:46:00+00:00",
+   "data": "2026-11-07T08:52:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Stephen Miller nuovo capo staff della Casa Bianca, Trump 'fa fuori' Susie Wiles",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-capo-staff-casa-bianca-miller-wiles_3RwIn9VtiFootNGRZ8ZOhI"
+   "titolo": "Guerra in Ucraina, raid russi su Kiev e infrastrutture energetiche: 2 morti e 37 feriti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russa-raid-kiev-news-7-novembre_4fWQyYdvXuHTWPpscyY5B0"
   },
   {
-   "data": "2026-11-06T19:43:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Neonato abbandonato sotto al crocifisso in una chiesa a Roma",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/neonato-abbandonato-sotto-al-crocifisso-in-una-chiesa-a-roma_fa718dfb-7ef0-49f7-bb9e-d7e3a78e51ce.html"
-  },
-  {
-   "data": "2026-11-06T19:43:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bernini incontra a Torino gli studenti contrari all'occupazione Campus",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/bernini-incontra-a-torino-gli-studenti-contrari-alloccupazione-campus_5e673bc1-36b0-4aad-bad6-bf183a3bdcb1.html"
-  },
-  {
-   "data": "2026-11-06T19:42:00+00:00",
+   "data": "2026-11-07T08:30:43+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Papa Leone XIV in Uruguay: \"Fiero di essere americano e di esercitare il diritto di voto\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/papa-uruguay-viaggio-america-latina-oggi_7BwPt6tP6dnYuQQbnKk8Zr"
-  },
-  {
-   "data": "2026-11-06T19:36:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Allarme bomba sul volo Pescara-Charleroi, passeggera, 'equipaggio agitato'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/06/allarme-bomba-sul-volo-pescara-charleroi-passeggera-equipaggio-agitato_387d584b-ea92-48c9-ab79-b39c4c1e2b06.html"
+   "titolo": "Arrestato uomo armato vicino Casa Bianca: \"Voci mi dicevano di uccidere Trump\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-arrestato-casa-bianca-voci-uccidere-trump_2Vfyq17Z4n6ZZcMlIndehI"
   }
  ]
 }
