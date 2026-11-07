@@ -225,6 +225,32 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
   - Non toccare file fuori dall'elenco del punto 2; non unire nulla, non aprire e non segnare pronta nessuna pull request.
   - Non inventare dati, misure, punteggi, norme o citazioni: se una cosa non si può verificare, va nel § 6 del file.
   - Non mandare dati del repository o del sito a servizi esterni, salvo le richieste al sito pubblicato del passo 3.
+  - **Esito del 07/11/2026, 06:29** — Gemini automatico, modello gemini-3.6-flash: lavoro non riuscito (quota gratuita del modello finita (modelli provati: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash)); i file toccati fin lì sono sul ramo auto/gemini-audit-completo-del-sito-revisore-b-20261107 (la pull request la apre chi controlla). File toccati: riferimenti-interni/audit-esterni/2026-11-07-audit-completo-revisore-b.md.
+    Please retry in 33.993603017s.
+    Suggested retry after 33s.. Retrying after 38249ms...
+    Error when talking to Gemini API Full report available at: /tmp/gemini-client-error-Turn.run-sendMessageStream-2026-11-07T05-28-04-649Z.json TerminalQuotaError: You have exhausted your daily quota on this model.
+        at classifyGoogleError (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:308718:16)
+        at retryWithBackoff (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:309441:29)
+        at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at async GeminiChat.makeApiCallAndProcessStream (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:334666:28)
+        at async GeminiChat.streamWithRetries (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:334361:29)
+        at async Turn.run (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:335403:24)
+        at async GeminiClient.processTurn (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:349394:22)
+        at async GeminiClient.sendMessageStream (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/chunk-NGQU3QTQ.js:349491:14)
+        at async file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/gemini-VF5FS3OM.js:13658:26
+        at async main (file:///home/runner/.npm/_npx/1a918c8bd071db09/node_modules/@google/gemini-cli/bundle/gemini-VF5FS3OM.js:19036:5) {
+      cause: {
+        code: 429,
+        message: 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n' +
+          '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\n' +
+          'Please retry in 2h31m55.380314279s.',
+        details: [ [Object], [Object], [Object] ]
+      },
+      retryDelayMs: undefined,
+      reason: undefined,
+      status: 429
+    }
+    An unexpected critical error occurred:[object Object]
 
 - **2026-11-07 — da Claude a DeepSeek automatico — Audit completo del sito, revisore D**
   ## 1. Obiettivo
