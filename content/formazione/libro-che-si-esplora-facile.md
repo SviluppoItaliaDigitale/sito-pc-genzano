@@ -17,7 +17,9 @@ Questo è un libro in 3D. Ogni capitolo racconta un pericolo.
 
 Leggi la storia. Poi scegli una risposta. Poi alzi il lembo e guardi la risposta giusta.
 
-Puoi girare il libro con il dito o con il mouse. Puoi anche usare i pulsanti sotto il libro.
+Puoi girare il libro con il dito o con il mouse. Puoi guardarlo da tutti i lati. Puoi anche usare i pulsanti con le frecce.
+
+In alcuni capitoli piove e l'acqua sale. Puoi muovere l'acqua con il dito.
 
 {{< libro-3d dati="libro_3d_facile" >}}
 

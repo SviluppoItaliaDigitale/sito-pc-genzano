@@ -21,14 +21,21 @@
 <div class="lb d-print-none" id="lb">
   {{- /* Ancore dei capitoli (#capitolo-N): portano al libro, che legge il numero e apre quel capitolo. */ -}}
   {{- range $i, $c := $d.capitoli }}<span class="lb-ancora" id="capitolo-{{ add $i 1 }}"></span>{{ end }}
-  <section class="lb-stage" id="lb-stage" aria-label="Libro in 3D: trascina per girarlo, con due dita avvicinalo e spostalo, oppure usa i pulsanti per inquadrare una pagina; tocca gli oggetti sulla pagina di destra. Gli stessi contenuti sono nel pannello accanto e nella versione testuale.">
+  <section class="lb-stage" id="lb-stage" aria-label="Libro in 3D: trascina per girarlo da ogni lato, con due dita avvicinalo e spostalo, oppure usa i pulsanti per inquadrare una pagina o girarlo; tocca gli oggetti sulla pagina di destra e trascina l’acqua per alzarla o abbassarla. Gli stessi contenuti sono nel pannello accanto e nella versione testuale.">
     <div class="lb-loading" id="lb-loading">Sto aprendo il libro…</div>
     <div class="lb-vista" id="lb-vista" role="group" aria-label="Inquadratura del libro" hidden>
       <button type="button" data-vista="sinistra" aria-pressed="false">Pagina sinistra</button>
       <button type="button" data-vista="tutto" aria-pressed="true"><span aria-hidden="true">↺</span> Ripristina</button>
       <button type="button" data-vista="destra" aria-pressed="false">Pagina destra</button>
     </div>
-    <div class="lb-hint" id="lb-hint" aria-hidden="true">Trascina per girare · con due dita avvicini e sposti</div>
+    <div class="lb-ruota" id="lb-ruota" role="group" aria-label="Gira il libro" hidden>
+      <button type="button" data-ruota="sinistra" aria-label="Gira il libro verso sinistra"><span aria-hidden="true">◀</span></button>
+      <button type="button" data-ruota="su" aria-label="Guarda il libro più dall’alto"><span aria-hidden="true">▲</span></button>
+      <button type="button" data-ruota="giu" aria-label="Guarda il libro più dal basso"><span aria-hidden="true">▼</span></button>
+      <button type="button" data-ruota="destra" aria-label="Gira il libro verso destra"><span aria-hidden="true">▶</span></button>
+      <button type="button" id="lb-giro" aria-pressed="false"><span aria-hidden="true">⟳</span> Gira da solo</button>
+    </div>
+    <div class="lb-hint" id="lb-hint" aria-hidden="true">Trascina per girarlo da ogni lato · con due dita avvicini e sposti</div>
   </section>
   <section class="lb-panel" aria-labelledby="lb-titolo">
     <nav class="lb-nav" aria-label="Capitoli del libro">
