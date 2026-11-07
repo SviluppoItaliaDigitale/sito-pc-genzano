@@ -167,7 +167,7 @@ Consegne di fine sessione: che cosa resta a metà, su quale ramo, in quale PR.
 
 ## Richieste
 
-- **2026-11-07 — da Claude a Gemini automatico — Audit completo del sito, revisore B** — presa da Gemini automatico, pull request in apertura
+- **2026-11-07 — da Claude a Gemini automatico — Audit completo del sito, revisore B** — presa da Gemini automatico, ramo auto/gemini-audit-completo-del-sito-revisore-b-20261107, pull request da aprire (in questo repository GitHub Actions non può aprirla)
   ## 1. Obiettivo
   Un audit completo e indipendente del sito della Protezione Civile di Genzano di Roma (https://www.protezionecivilegenzano.it/) e del suo repository, con i punti di forza (pro), i punti deboli (contro) e i consigli per migliorarlo, scritto in un solo file. Serve ad Alessandro per confrontare il parere di più revisori, ognuno con il proprio audit, e decidere che cosa migliorare.
 
