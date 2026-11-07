@@ -1,3 +1,14 @@
+---
+paths:
+  - ".github/**"
+  - "scripts/**"
+  - "data/allerta.json"
+  - "data/emergenza.json"
+  - "static/open-data/**"
+  - "social-bozze/**"
+  - "riferimenti-interni/routine-prompts/**"
+---
+
 # Automazioni periodiche — GitHub Actions
 
 Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della settimana), scaglionati in orari diversi per non caricare il runner nello stesso momento. L'utente ha scelto il lunedì per avere una finestra settimanale costante di issue/verifica da affrontare.
