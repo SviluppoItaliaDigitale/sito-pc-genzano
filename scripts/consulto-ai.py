@@ -6,7 +6,8 @@ Uso:  consulto-ai.py <ai> "domanda"      ai: deepseek, qwen, glm, kimi, gptoss, 
                                          groq, openrouter, sambanova, nvidia, cloudflare, cohere, zai (dal 07/11/2026)
       consulto-ai.py tutti "domanda" [--ai deepseek,qwen,glm,gemini] [--giri 2]
       consulto-ai.py elenco               quali AI rispondono adesso e con quale modello
-Opzioni: --file F (aggiunge il testo di F alla domanda), --json (uscita completa in JSON).
+Opzioni: --file F (aggiunge il testo di F alla domanda), --json (uscita completa in JSON). Variabili: CONSULTO_ATTESA
+(secondi di attesa), CONSULTO_MAX_TOKENS (lunghezza massima della risposta, per esempio 8000 per un audit).
 Chiavi gratuite, mai nel repository: OLLAMA_API_KEY (ollama.com/settings/keys) e GEMINI_API_KEY (aistudio.google.com);
 sul PC anche in ~/.config/consulto-ai/ollama e ~/.config/gemini-api/chiave; per gli altri servizi la variabile della voce
 in SERVIZI_COMPATIBILI o il file in ~/.config/consulto-ai/ (li raccoglie scripts/aggiungi-chiavi-ai.sh). Si sceglie sempre il modello più nuovo che
@@ -33,6 +34,11 @@ import urllib.request
 OLLAMA = os.environ.get("CONSULTO_OLLAMA_URL", "https://ollama.com").rstrip("/")
 GEMINI = os.environ.get("CONSULTO_GEMINI_URL", "https://generativelanguage.googleapis.com/v1beta").rstrip("/")
 ATTESA = int(os.environ.get("CONSULTO_ATTESA", "240"))   # secondi per una risposta (i modelli grandi pensano a lungo)
+# Lunghezza massima della risposta, in token. Senza, ogni servizio usa la sua predefinita, e alcune sono corte: Cloudflare
+# Workers AI dà 256 token (pagina del modello @cf/openai/gpt-oss-120b, letta il 07/11/2026), quindi un parere si
+# interrompeva a metà. CONSULTO_MAX_TOKENS la imposta per tutti (per esempio 8000 per un audit); «uscita» di un servizio
+# vale quando la variabile manca.
+MAX_TOKENS = int(os.environ.get("CONSULTO_MAX_TOKENS") or 0)
 
 # Famiglie su Ollama Cloud: nome mostrato e inizio del nome del modello nell'elenco del servizio.
 OLLAMA_FAMIGLIE = {
@@ -96,7 +102,7 @@ SERVIZI_COMPATIBILI = [
          variabile="CLOUDFLARE_API_TOKEN", file=".config/consulto-ai/cloudflare",
          preferiti=[r"gpt-oss-120b", r"llama-4", r"llama-3\.3-70b"], esclusi="",
          fissi=["@cf/openai/gpt-oss-120b", "@cf/meta/llama-3.3-70b-instruct-fp8-fast"], insieme=1, riservati=False,
-         sito="dash.cloudflare.com/profile/api-tokens (permesso Workers AI)"),
+         uscita=4000, sito="dash.cloudflare.com/profile/api-tokens (permesso Workers AI)"),
     # Cohere: chiave di prova gratuita, 20 al minuto e 1.000 chiamate al mese (docs.cohere.com/docs/rate-limits), non
     # per la produzione. Regole sui dati non verificate: niente testi riservati.
     dict(sigla="cohere", nome="Cohere", servizio="Cohere (chiave di prova)", url="https://api.cohere.ai/compatibility/v1",
@@ -110,7 +116,7 @@ SERVIZI_COMPATIBILI = [
          variabile="ZAI_API_KEY", file=".config/consulto-ai/zai", preferiti=[r"^glm-4\.7-flash$", r"^glm-4\.5-flash$"], esclusi=r"v-|vision",
          fissi=["glm-4.7-flash", "glm-4.5-flash"], insieme=1, riservati=False, sito="z.ai/manage-apikey/apikey-list"),
 ]
-COMPATIBILI = {v["sigla"]: {"solo": "", "fissi": [], **v} for v in SERVIZI_COMPATIBILI}
+COMPATIBILI = {v["sigla"]: {"solo": "", "fissi": [], "uscita": 0, **v} for v in SERVIZI_COMPATIBILI}
 TUTTE = list(OLLAMA_FAMIGLIE) + ["gemini"] + list(COMPATIBILI)
 # Quelle che rispondevano con le chiavi vere il 07/11/2026, più DeepSeek e GLM per quando Ollama torna gratuito.
 PREDEFINITE_TUTTI = ["gemini", "openrouter", "cloudflare", "zai", "cohere", "deepseek", "glm"]
@@ -244,7 +250,8 @@ class Ollama:
                 try:
                     with self.blocco:
                         dati = http_json(f"{OLLAMA}/api/chat", self.intestazioni(), {
-                            "model": modello, "stream": False, "options": {"temperature": 0.3},
+                            "model": modello, "stream": False,
+                            "options": {"temperature": 0.3, **({"num_predict": MAX_TOKENS} if MAX_TOKENS else {})},
                             "messages": [{"role": "system", "content": sistema}, {"role": "user", "content": domanda}],
                         })
                     testo = ((dati.get("message") or {}).get("content") or "").strip()
@@ -314,7 +321,8 @@ class Gemini:
                         dati = http_json(f"{GEMINI}/models/{modello}:generateContent", self.intestazioni(), {
                             "systemInstruction": {"parts": [{"text": sistema}]},
                             "contents": [{"role": "user", "parts": [{"text": domanda}]}],
-                            "generationConfig": {"temperature": 0.3},
+                            "generationConfig": {"temperature": 0.3,
+                                                 **({"maxOutputTokens": MAX_TOKENS} if MAX_TOKENS else {})},
                         }, attesa=min(ATTESA, 120))
                     testo = "".join(p.get("text", "") for c in dati.get("candidates", [])
                                     for p in (c.get("content") or {}).get("parts", [])).strip()
@@ -400,6 +408,7 @@ class Compatibile:
                     with self.blocco:
                         dati = http_json(f"{self.url}/chat/completions", self.intestazioni(), {
                             "model": modello, "temperature": 0.3, "stream": False,
+                            **({"max_tokens": MAX_TOKENS or self.v["uscita"]} if MAX_TOKENS or self.v["uscita"] else {}),
                             "messages": [{"role": "system", "content": sistema}, {"role": "user", "content": domanda}],
                         })
                     scelte = dati.get("choices") or [{}]
