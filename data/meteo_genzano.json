@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-08T11:02",
+  "aggiornato": "2026-11-08T12:02",
   "data_lunga": "domenica 8 novembre 2026",
-  "aggiornato_label": "domenica 8 novembre 2026, ore 11:02",
+  "aggiornato_label": "domenica 8 novembre 2026, ore 12:02",
   "alba": "06:49",
   "tramonto": "16:55",
   "corrente": {
-    "temp": 13.3,
-    "percepita": 12.2,
+    "temp": 13.5,
+    "percepita": 12.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 68,
-    "vento": 4,
-    "raffiche": 15
+    "umidita": 71,
+    "vento": 5,
+    "raffiche": 17
   },
   "giorni": [
     {
@@ -68,7 +68,7 @@
     {
       "nome": "Viterbo",
       "tmax": 14,
-      "tmin": 8,
+      "tmin": 7,
       "cielo": "Coperto"
     },
     {
@@ -86,7 +86,7 @@
     {
       "nome": "Latina",
       "tmax": 18,
-      "tmin": 9,
+      "tmin": 8,
       "cielo": "Coperto"
     },
     {
