@@ -353,6 +353,18 @@ jobs:
         # un file condiviso. Giro completo ogni lunedì in controllo-lim.yml.
         run: python3 scripts/check-lim.py --da-git "origin/${{ github.base_ref }}"
 
+      - name: "📖 Libro che si esplora: il tocco prende l'oggetto giusto"
+        # 08/11/2026: il tocco colpiva i contorni di tutta la scena e in 11
+        # capitoli su 15 prendeva l'oggetto più vicino alla telecamera (nello
+        # zaino ogni oggetto rispondeva come la candela), con build e controlli
+        # verdi. Gira solo se la PR tocca il libro.
+        run: |
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qE 'libro-3d|libro_3d|vendor/three/'; then
+            python3 scripts/check-libro-3d-tocchi.py --public public
+          else
+            echo "La PR non tocca il libro: prova saltata."
+          fi
+
   fascicolo-esperimenti:
     name: "Fascicolo esperimenti: un foglio per esperimento"
     runs-on: ubuntu-latest
