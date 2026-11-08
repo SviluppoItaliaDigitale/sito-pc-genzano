@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-08T06:02",
+  "aggiornato": "2026-11-08T07:02",
   "data_lunga": "domenica 8 novembre 2026",
-  "aggiornato_label": "domenica 8 novembre 2026, ore 06:02",
+  "aggiornato_label": "domenica 8 novembre 2026, ore 07:02",
   "alba": "06:49",
   "tramonto": "16:55",
   "corrente": {
-    "temp": 9.2,
-    "percepita": 7.5,
+    "temp": 8.7,
+    "percepita": 6.7,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 83,
-    "vento": 5,
-    "raffiche": 13
+    "umidita": 80,
+    "vento": 6,
+    "raffiche": 12
   },
   "giorni": [
     {
@@ -67,7 +67,7 @@
   "province": [
     {
       "nome": "Viterbo",
-      "tmax": 15,
+      "tmax": 14,
       "tmin": 8,
       "cielo": "Coperto"
     },
@@ -92,7 +92,7 @@
     {
       "nome": "Frosinone",
       "tmax": 16,
-      "tmin": 7,
+      "tmin": 6,
       "cielo": "Nebbia"
     }
   ]
