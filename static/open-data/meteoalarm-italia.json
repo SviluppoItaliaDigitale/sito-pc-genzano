@@ -1,42 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-11-07T17:00:49+00:00",
+  "generato": "2026-11-08T05:22:13+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 6,
+  "avvisi": 4,
   "scaduti_scartati": 5,
-  "in_corso": 2,
+  "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
    "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-07T08:00:00+00:00",
-   "fine": "2026-11-08T00:59:00+00:00",
-   "emesso": "2026-11-07T09:00:12+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261107100012.015"
-  },
-  {
-   "in_corso": true,
-   "regione": "Campania",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-07T13:00:00+00:00",
-   "fine": "2026-11-08T00:59:00+00:00",
-   "emesso": "2026-11-07T09:00:12+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261107100012.013"
-  },
-  {
-   "in_corso": false,
    "regione": "Emilia e Romagna",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -49,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261107100012.012"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lombardia",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -62,7 +36,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261107100012.011"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Nebbia",
    "livello": "gialla",
