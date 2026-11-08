@@ -590,13 +590,17 @@ const BUILD = {
     if (o.bad){ const x0 = o.obj.position.x; tween(.6,q=>{ o.obj.position.x = x0 + Math.sin(q*Math.PI*6)*.015*(1-q); }); glow(o.obj,0xd23a2f,.6); setTimeout(()=>glow(o.obj,0,0),900);
       say('La candela resta fuori: per fare luce usa la torcia, le candele possono provocare un incendio.'); return; }
     o.in = true; const a = o.obj.position.clone();
-    tween(.8,q=>{ o.obj.position.lerpVectors(a,BAG,ease(q)); o.obj.position.y += Math.sin(Math.PI*q)*.18; o.obj.scale.setScalar(1-.6*q); }, ()=>{ o.obj.visible = false; });
+    o.tw = tween(.8,q=>{ o.obj.position.lerpVectors(a,BAG,ease(q)); o.obj.position.y += Math.sin(Math.PI*q)*.18; o.obj.scale.setScalar(1-.6*q); }, ()=>{ o.tw = null; o.obj.visible = false; });
     const n = count(); say(n===good ? `Zaino pronto: ${n} oggetti su ${good}. La candela è rimasta fuori.` : `Nello zaino: ${o.name}. Oggetti messi: ${n} su ${good}.`);
   }
   const map = {0:items[0], 1:items[6], 2:items[5]};
+  let attese = [];
   return { g, tools:[
-      {label:'Prepara lo zaino', fn(){ items.filter(o=>!o.bad).forEach((o,k)=>setTimeout(()=>put(o), k*250)); }},
-      {label:'Svuota lo zaino', fn(){ items.forEach(o=>{ o.in = false; o.obj.visible = true; o.obj.position.copy(o.home); o.obj.scale.setScalar(1); }); say('Lo zaino è vuoto. Tocca gli oggetti per metterli dentro.'); }} ],
+      {label:'Prepara lo zaino', fn(){ attese.forEach(clearTimeout); attese = items.filter(o=>!o.bad && !o.in).map((o,k)=>setTimeout(()=>put(o), k*250)); }},
+      /* svuotando si fermano anche gli oggetti ancora in volo, che altrimenti sparirebbero all'arrivo */
+      {label:'Svuota lo zaino', fn(){ attese.forEach(clearTimeout); attese = [];
+        items.forEach(o=>{ if (o.tw) chiudiTween(o.tw); o.tw = null; o.in = false; o.obj.visible = true; o.obj.position.copy(o.home); o.obj.scale.setScalar(1); });
+        say('Lo zaino è vuoto. Tocca gli oggetti per metterli dentro.'); }} ],
     onPick(id){ if (String(id).startsWith('item')) put(items[+String(id).slice(4)]); },
     choose(i){ Object.values(map).forEach((o,k)=>glow(o.obj,0xffb000,k===i?.55:0)); },
     update(dt,t){ flame.scale.y = 1+.2*Math.sin(t*12); }
@@ -1045,13 +1049,18 @@ mostraAvanzamento();
 
 /* ---------- Selezione con puntatore ---------- */
 const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(); let down = null;
+/* I contorni dei pezzi sono linee: il raggio le colpirebbe entro un'unità intera (quasi tutto il libro) e il tocco
+   andrebbe sempre all'oggetto più vicino alla telecamera. Si contano solo le superfici, e solo se visibili. */
+ray.params.Line.threshold = 0; ray.params.Points.threshold = 0;
+function colpibile(h){ if (h.object.isLine || h.object.isPoints) return false;
+  for (let o = h.object; o; o = o.parent) if (o.visible === false) return false; return true; }
 renderer.domElement.addEventListener('pointerdown', e=>{ down = [e.clientX, e.clientY]; $('hint').classList.add('off'); });
 function hitAt(e){
   const r = renderer.domElement.getBoundingClientRect();
   ptr.set(((e.clientX-r.left)/r.width)*2-1, -((e.clientY-r.top)/r.height)*2+1);
   ray.setFromCamera(ptr, camera);
   const hits = ray.intersectObjects([flap, flapBack, ...(current ? [current.g] : [])], true);
-  for (const h of hits){ let o = h.object; while (o && o.userData.pick===undefined) o = o.parent; if (o && o.visible !== false) return o.userData.pick; }
+  for (const h of hits){ if (!colpibile(h)) continue; let o = h.object; while (o && o.userData.pick===undefined) o = o.parent; if (o) return o.userData.pick; }
   return undefined;
 }
 renderer.domElement.addEventListener('pointerup', e=>{
@@ -1076,6 +1085,7 @@ function trascinaAt(e){
   ptr.set(((e.clientX-r.left)/r.width)*2-1, -((e.clientY-r.top)/r.height)*2+1);
   ray.setFromCamera(ptr, camera);
   for (const h of ray.intersectObject(current.g, true)){
+    if (!colpibile(h)) continue;
     let o = h.object; while (o && o.userData.trascina === undefined && o.userData.pick === undefined) o = o.parent;
     if (!o || !o.visible) continue;
     return o.userData.trascina;
