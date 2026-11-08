@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-08T22:02",
+  "aggiornato": "2026-11-08T23:02",
   "data_lunga": "domenica 8 novembre 2026",
-  "aggiornato_label": "domenica 8 novembre 2026, ore 22:02",
+  "aggiornato_label": "domenica 8 novembre 2026, ore 23:02",
   "alba": "06:49",
   "tramonto": "16:55",
   "corrente": {
-    "temp": 9.9,
-    "percepita": 8.6,
+    "temp": 9.7,
+    "percepita": 8.3,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 81,
+    "umidita": 80,
     "vento": 4,
-    "raffiche": 8
+    "raffiche": 10
   },
   "giorni": [
     {
@@ -32,7 +32,7 @@
       "cielo": "Coperto",
       "tmax": 14,
       "tmin": 9,
-      "pioggia": 3,
+      "pioggia": 0,
       "pioggia_mm": 0.1,
       "raffiche": 42,
       "uv": 3,
@@ -44,7 +44,7 @@
       "cielo": "Temporale",
       "tmax": 15,
       "tmin": 13,
-      "pioggia": 91,
+      "pioggia": 85,
       "pioggia_mm": 13.5,
       "raffiche": 67,
       "uv": 1,
@@ -56,7 +56,7 @@
       "cielo": "Temporale",
       "tmax": 17,
       "tmin": 14,
-      "pioggia": 85,
+      "pioggia": 68,
       "pioggia_mm": 3.0,
       "raffiche": 40,
       "uv": 3,
