@@ -17,7 +17,7 @@ social_punti:
   - "Riguarda l'assistenza alla popolazione in territorio estero, non il territorio italiano"
 allegati:
   - titolo: "Gazzetta Ufficiale n. 260 del 7 novembre 2026, pagina con la delibera (PDF)"
-    url: "/allegati/2026/2026-11-07-gu-260-proroga-stato-emergenza-ucraina.pdf"
+    url: "/allegati/2026/gazzetta-ufficiale-2026-11-07-n-260-proroga-stato-emergenza-ucraina.pdf"
     dimensione: "1,4 MB"
 draft: false
 ---
