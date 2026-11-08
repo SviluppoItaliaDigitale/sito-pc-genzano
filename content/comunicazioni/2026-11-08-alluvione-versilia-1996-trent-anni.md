@@ -1,6 +1,6 @@
 ---
 title: "Trent'anni dall'alluvione della Versilia: il 19 giugno 1996"
-date: 2026-11-08
+date: 2026-11-08T00:01:00+02:00
 description: "L'alluvione della Versilia del 19 giugno 1996 è stata uno dei disastri idrogeologici più gravi d'Italia. Trent'anni dopo, cosa abbiamo imparato."
 badge: "Informazione"
 priorita: "normale"
