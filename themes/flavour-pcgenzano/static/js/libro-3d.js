@@ -943,8 +943,12 @@ ROOT.addEventListener('keydown', e=>{
   if (e.key==='ArrowRight') goTo(chapter+1); else if (e.key==='ArrowLeft') goTo(chapter-1);
 });
 
+/* un cambio chiesto mentre la pagina gira (freccia, indirizzo, pallino) non va perso: si esegue l'ultimo alla fine del giro */
+let inAttesa = -1;
 function goTo(i){
-  if (busy || i<0 || i>=CH.length || i===chapter) return;
+  if (i<0 || i>=CH.length) return;
+  if (busy){ inAttesa = i; return; }
+  if (i===chapter) return;
   const dir = i > chapter ? 1 : -1; busy = true;
   if (revealed){ revealed = false; setFlap(false); }
   choice = -1;
@@ -955,7 +959,8 @@ function goTo(i){
   tween(.85, p=>{ sheetPivot.rotation.z = from + (to-from)*ease(p);
       if (!swapped && p>=.5){ swapped = true; swap(); }
       current.g.scale.setScalar(p<.5 ? Math.max(.001, 1-p*2) : 1); },
-    ()=>{ sheet.visible = false; busy = false; current.g.scale.setScalar(1); });
+    ()=>{ sheet.visible = false; busy = false; current.g.scale.setScalar(1);
+      if (inAttesa >= 0){ const k = inAttesa; inAttesa = -1; goTo(k); } });
 }
 
 /* ---------- Strumenti per la classe ----------
