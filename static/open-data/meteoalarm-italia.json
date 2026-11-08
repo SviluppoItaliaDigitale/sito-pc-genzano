@@ -1,65 +1,52 @@
 {
  "_snapshot": {
-  "generato": "2026-11-08T05:22:13+00:00",
+  "generato": "2026-11-08T12:06:18+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 4,
-  "scaduti_scartati": 5,
-  "in_corso": 3,
+  "avvisi": 3,
+  "scaduti_scartati": 8,
+  "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": true,
-   "regione": "Emilia e Romagna",
+   "in_corso": false,
+   "regione": "Puglia",
    "fenomeno": "Nebbia",
    "livello": "gialla",
    "evento_originale": "Yellow Fog Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-08T01:00:00+00:00",
-   "fine": "2026-11-08T06:59:00+00:00",
-   "emesso": "2026-11-07T09:00:12+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261107100012.012"
-  },
-  {
-   "in_corso": true,
-   "regione": "Lombardia",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-08T01:00:00+00:00",
-   "fine": "2026-11-08T06:59:00+00:00",
-   "emesso": "2026-11-07T09:00:12+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261107100012.011"
-  },
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-08T01:00:00+00:00",
-   "fine": "2026-11-08T06:59:00+00:00",
-   "emesso": "2026-11-07T09:00:12+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261107100012.010"
+   "inizio": "2026-11-09T18:00:00+00:00",
+   "fine": "2026-11-10T06:59:00+00:00",
+   "emesso": "2026-11-08T09:25:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261108102502.007"
   },
   {
    "in_corso": false,
    "regione": "Puglia",
-   "fenomeno": "Pioggia",
+   "fenomeno": "Nebbia",
    "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
+   "evento_originale": "Yellow Fog Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-08T07:00:00+00:00",
-   "fine": "2026-11-08T18:59:00+00:00",
-   "emesso": "2026-11-07T09:00:12+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261107100012.014"
+   "inizio": "2026-11-08T18:00:00+00:00",
+   "fine": "2026-11-09T06:59:00+00:00",
+   "emesso": "2026-11-08T09:25:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261108102502.006"
+  },
+  {
+   "in_corso": false,
+   "regione": "Veneto",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-09T00:00:00+00:00",
+   "fine": "2026-11-09T06:59:00+00:00",
+   "emesso": "2026-11-08T09:25:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261108102502.003"
   }
  ]
 }
