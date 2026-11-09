@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-09T06:02",
+  "aggiornato": "2026-11-09T07:04",
   "data_lunga": "lunedì 9 novembre 2026",
-  "aggiornato_label": "lunedì 9 novembre 2026, ore 06:02",
+  "aggiornato_label": "lunedì 9 novembre 2026, ore 07:04",
   "alba": "06:50",
   "tramonto": "16:54",
   "corrente": {
-    "temp": 9.0,
-    "percepita": 7.3,
+    "temp": 8.9,
+    "percepita": 7.2,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 88,
     "vento": 6,
-    "raffiche": 17
+    "raffiche": 15
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 9,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 40,
+      "raffiche": 45,
       "uv": 3,
       "uv_label": "moderato"
     },
@@ -33,7 +33,7 @@
       "tmax": 15,
       "tmin": 13,
       "pioggia": 85,
-      "pioggia_mm": 10.8,
+      "pioggia_mm": 10.6,
       "raffiche": 67,
       "uv": 1,
       "uv_label": "basso"
@@ -59,8 +59,8 @@
       "pioggia": 99,
       "pioggia_mm": 26.5,
       "raffiche": 110,
-      "uv": 3,
-      "uv_label": "moderato"
+      "uv": 2,
+      "uv_label": "basso"
     }
   ],
   "fonte": "Open-Meteo",
@@ -69,29 +69,29 @@
       "nome": "Viterbo",
       "tmax": 16,
       "tmin": 9,
-      "cielo": "Pioggia debole"
-    },
-    {
-      "nome": "Rieti",
-      "tmax": 16,
-      "tmin": 6,
-      "cielo": "Pioggia debole"
-    },
-    {
-      "nome": "Roma",
-      "tmax": 18,
-      "tmin": 10,
       "cielo": "Coperto"
     },
     {
-      "nome": "Latina",
+      "nome": "Rieti",
+      "tmax": 15,
+      "tmin": 5,
+      "cielo": "Nebbia"
+    },
+    {
+      "nome": "Roma",
       "tmax": 18,
       "tmin": 9,
       "cielo": "Coperto"
     },
     {
+      "nome": "Latina",
+      "tmax": 17,
+      "tmin": 9,
+      "cielo": "Coperto"
+    },
+    {
       "nome": "Frosinone",
-      "tmax": 16,
+      "tmax": 15,
       "tmin": 7,
       "cielo": "Coperto"
     }
