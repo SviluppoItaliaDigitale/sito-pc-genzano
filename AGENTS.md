@@ -20,6 +20,10 @@ Istruzioni di Alessandro del 21/10/2026, dopo tre giorni senza Claude per i cred
 - **AI automatiche e consulto (dal 05/11/2026).** Le richieste della bacheca indirizzate a «ChatGPT automatico», «Gemini automatico», «DeepSeek automatico», «GLM automatico», «Kimi automatico» o «Qwen automatico» partono da sole su GitHub (protocollo comune di `COORDINAMENTO.md`, § «AI automatiche e consulto fra AI»): quando lavori al posto di Claude, le loro PR in bozza sui rami `auto/…` le controlli e le chiudi tu come ogni consegna. Se sei tu un'AI automatica, segui le istruzioni con cui il sistema ti ha avviato: prevalgono su questo file dove sono più strette. Per un parere su un punto difficile: `python3 scripts/consulto-ai.py tutti "domanda"` (gratuito; mai dati personali nella domanda).
 <!-- RISERVA-COMUNE:FINE -->
 
+## Grok Bot (dal 09/11/2026)
+
+Grok Bot è un **aiutante in parallelo**: non sostituisce Claude né la catena Piano B (ChatGPT prima, Gemini seconda). Legge e aggiorna il Cervello su Google Drive (scheda «Grok Bot»: https://docs.google.com/document/d/1czBaarb9dG6aAiEWdg24YFtR5ZiA-SHTfmbWA9_UKxA/edit). Sui repository lavora tramite pull request su un ramo dedicato, mai commit diretti su `main`. Niente nomi di AI nei contenuti pubblici; niente segreti nel repository.
+
 ## Code Review Rules
 
 - **Firma dei commit: non giudicarla dai commit del tuo ambiente.** I commit che vedi mentre rivedi una pull request li crea l'ambiente di revisione, con un'identità di servizio, e possono riportare la descrizione della pull request: non sono i commit della pull request. Non segnalare autore, committer o righe di firma dei commit: li controlla e li corregge chi unisce (`scripts/passa-a.py chiudi` riscrive a nome di Alessandro Cuollo i commit con un altro autore e toglie i trailer, regola `.claude/rules/firma-dei-lavori.md`). Segnala invece nomi di strumenti o righe di firma nei file modificati che vengono pubblicati; i file di governo interni (`CLAUDE.md`, `AGENTS.md`, `COORDINAMENTO.md`, `.claude/`, `memoria/`) ne parlano per forza.
