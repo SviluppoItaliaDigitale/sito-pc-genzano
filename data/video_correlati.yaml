@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 336 / Video unici usati: 274 /
-# Link totali: 1146 (max 5 per pagina,
+# Pagine coperte: 345 / Video unici usati: 282 /
+# Link totali: 1192 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -19,7 +19,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 635
+    video_count: 636
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -49,12 +49,12 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1356
+    video_count: 1363
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 161
+    video_count: 164
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -79,7 +79,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 648
+    video_count: 650
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2017
+    video_count: 2032
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -407,6 +407,261 @@ pagine:
       score: 2.0
       titolo: VULC - L'essenza di un legame |4K| Campi Flegrei, Vesuvio, Stromboli e Etna
       url: https://youtu.be/rMX2xGhgqLM
+  comunicazioni/2026-01-10-terremoto-mar-ionio-costa-calabra-magnitudo-5-1:
+    title: Terremoto di magnitudo 5.1 al largo della costa calabra sud-orientale
+    url: /comunicazioni/2026-01-10-terremoto-mar-ionio-costa-calabra-magnitudo-5-1/
+    video:
+    - anchored:
+      - magnitudo
+      canale: rai-news
+      id: RmDN-R7NJNk
+      is_lis: false
+      overlap:
+      - magnitudo
+      - prime
+      - scossa
+      - terremoto
+      score: 8.6
+      titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
+      url: https://youtu.be/RmDN-R7NJNk
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: 0ZIMo5GmkTM
+      is_lis: false
+      overlap:
+      - forti
+      - magnitudo
+      - mercalli
+      - terremoto
+      score: 8.6
+      titolo: Terremoti di magnitudo 4 non sono forti. Lo dicono Mercalli e una convenzione tra scienziati
+      url: https://youtu.be/0ZIMo5GmkTM
+    - anchored:
+      - magnitudo
+      canale: ingv-terremoti
+      id: 2ZVvY4ufdYM
+      is_lis: false
+      overlap:
+      - magnitudo
+      - sismica
+      - terremoto
+      score: 7.6
+      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.8 del 29 maggio'
+      url: https://youtu.be/2ZVvY4ufdYM
+    - anchored:
+      - magnitudo
+      canale: ingv-terremoti
+      id: RiIOiejhOHc
+      is_lis: false
+      overlap:
+      - magnitudo
+      - sismica
+      - terremoto
+      score: 7.6
+      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.1 del 3 giugno'
+      url: https://youtu.be/RiIOiejhOHc
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: DCI9q2IzFtM
+      is_lis: false
+      overlap:
+      - magnitudo
+      - terremoto
+      score: 6.6
+      titolo: 5 terremoti di magnitudo superiore a 3 nello stesso giorno. Ci sono precedenti?
+      url: https://youtu.be/DCI9q2IzFtM
+  comunicazioni/2026-01-15-maltempo-gennaio-richiesta-stato-calamita:
+    title: 'Maltempo del 5 e 6 gennaio: il Comune chiede lo stato di calamità naturale'
+    url: /comunicazioni/2026-01-15-maltempo-gennaio-richiesta-stato-calamita/
+    video:
+    - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 2.8
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
+      canale: rai-news
+      id: XqAePTXBEWg
+      is_lis: false
+      overlap:
+      - altri
+      - frana
+      score: 2.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+  comunicazioni/2026-01-25-niscemi-seconda-frana-evacuazioni:
+    title: Niscemi, una seconda frana colpisce il sud del paese
+    url: /comunicazioni/2026-01-25-niscemi-seconda-frana-evacuazioni/
+    video:
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: YKzuDqox1qE
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      - palazzetto
+      - sport
+      - torre
+      score: 15.0
+      titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre – Frana Niscemi 2026
+      url: https://youtu.be/YKzuDqox1qE
+    - anchored:
+      - frana
+      - niscemi
+      canale: rai-news
+      id: XqAePTXBEWg
+      is_lis: false
+      overlap:
+      - altri
+      - frana
+      - niscemi
+      score: 12.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 12.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 12.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 12.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
+      url: https://youtu.be/L98tBMJZn0k
+  comunicazioni/2026-01-30-ordinanza-1180-maltempo-gennaio:
+    title: 'Ordinanza n. 1180: i primi interventi dopo il maltempo di gennaio al Sud'
+    url: /comunicazioni/2026-01-30-ordinanza-1180-maltempo-gennaio/
+    video:
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - capo
+      - frana
+      - niscemi
+      score: 5.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 4.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 4.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
+      url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: YKzuDqox1qE
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 4.0
+      titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre – Frana Niscemi 2026
+      url: https://youtu.be/YKzuDqox1qE
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: k90I_coJTsA
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 4.0
+      titolo: Operazioni di salvataggio animali – Frana Niscemi 2026
+      url: https://youtu.be/k90I_coJTsA
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione:
     title: 'Neve nei Castelli Romani: come ci organizziamo'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/
@@ -496,20 +751,9 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 8.6
+      score: 4.4
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - idrogeologico
-      - rischio
-      score: 6.6
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - alluvione
       - frana
@@ -543,6 +787,209 @@ pagine:
       score: 2.0
       titolo: 'Kit siccità: cittadini IT'
       url: https://youtu.be/3zLaQO7QvTw
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: 6go6B2sB2SY
+      is_lis: false
+      overlap:
+      - siccità
+      score: 2.0
+      titolo: 'Kit siccità: turisti IT'
+      url: https://youtu.be/6go6B2sB2SY
+  comunicazioni/2026-02-12-it-alert-proroga-sperimentazione:
+    title: 'IT-alert: prorogata la sperimentazione per maremoto e Stromboli'
+    url: /comunicazioni/2026-02-12-it-alert-proroga-sperimentazione/
+    video:
+    - anchored:
+      - stromboli
+      canale: geopop
+      id: rMX2xGhgqLM
+      is_lis: false
+      overlap:
+      - campi
+      - flegrei
+      - stromboli
+      - vesuvio
+      score: 9.0
+      titolo: VULC - L'essenza di un legame |4K| Campi Flegrei, Vesuvio, Stromboli e Etna
+      url: https://youtu.be/rMX2xGhgqLM
+    - anchored:
+      - stromboli
+      canale: geopop
+      id: _6QHp5XkI0Q
+      is_lis: false
+      overlap:
+      - stromboli
+      - vulcanica
+      - vulcano
+      score: 8.0
+      titolo: 'La storia vulcanica di Stromboli: come e quando si è formato il vulcano delle Eolie?'
+      url: https://youtu.be/_6QHp5XkI0Q
+    - anchored:
+      - stromboli
+      canale: dpc-gov
+      id: AsI_Jg1bhSo
+      is_lis: false
+      overlap:
+      - campi
+      - campo
+      - stromboli
+      score: 7.6
+      titolo: Il campo di Stromboli (ME) – Campi scuola "Anch'io sono la protezione civile" 2019 (2 di 2)
+      url: https://youtu.be/AsI_Jg1bhSo
+    - anchored:
+      - stromboli
+      canale: dpc-gov
+      id: vdFZ34XCF7o
+      is_lis: false
+      overlap:
+      - campi
+      - campo
+      - stromboli
+      score: 7.6
+      titolo: Il campo di Stromboli (ME) – Campi scuola "Anch'io sono la protezione civile" 2019 (1 di 2)
+      url: https://youtu.be/vdFZ34XCF7o
+    - anchored:
+      - stromboli
+      canale: dpc-gov
+      id: 2LkIejoezIM
+      is_lis: false
+      overlap:
+      - sistema
+      - stromboli
+      - vulcanica
+      score: 7.2
+      titolo: 'Stromboli: l''attività vulcanica di luglio e agosto 2019 e l''impegno del sistema di protezione civile'
+      url: https://youtu.be/2LkIejoezIM
+  comunicazioni/2026-02-27-decreto-legge-25-maltempo-sud-niscemi:
+    title: 'Decreto-legge n. 25 del 2026: misure per il maltempo al Sud e per la frana di Niscemi'
+    url: /comunicazioni/2026-02-27-decreto-legge-25-maltempo-sud-niscemi/
+    video:
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - capo
+      - frana
+      - niscemi
+      score: 13.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      - niscemi
+      canale: rai-news
+      id: XqAePTXBEWg
+      is_lis: false
+      overlap:
+      - altri
+      - frana
+      - niscemi
+      score: 12.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 12.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 12.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
+      url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      - niscemi
+      canale: dpc-gov
+      id: YKzuDqox1qE
+      is_lis: false
+      overlap:
+      - frana
+      - niscemi
+      score: 12.0
+      titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre – Frana Niscemi 2026
+      url: https://youtu.be/YKzuDqox1qE
+  comunicazioni/2026-03-10-terremoto-profondo-golfo-napoli:
+    title: Terremoto di magnitudo 5.9 nel golfo di Napoli, a oltre 400 chilometri di profondità
+    url: /comunicazioni/2026-03-10-terremoto-profondo-golfo-napoli/
+    video:
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: DCI9q2IzFtM
+      is_lis: false
+      overlap:
+      - magnitudo
+      - precedenti
+      - superiore
+      - terremoto
+      score: 8.6
+      titolo: 5 terremoti di magnitudo superiore a 3 nello stesso giorno. Ci sono precedenti?
+      url: https://youtu.be/DCI9q2IzFtM
+    - anchored:
+      - magnitudo
+      canale: rai-news
+      id: RmDN-R7NJNk
+      is_lis: false
+      overlap:
+      - magnitudo
+      - scossa
+      - terremoto
+      score: 7.6
+      titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
+      url: https://youtu.be/RmDN-R7NJNk
+    - anchored:
+      - magnitudo
+      canale: ingv-terremoti
+      id: 2ZVvY4ufdYM
+      is_lis: false
+      overlap:
+      - magnitudo
+      - terremoto
+      score: 6.6
+      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.8 del 29 maggio'
+      url: https://youtu.be/2ZVvY4ufdYM
+    - anchored:
+      - magnitudo
+      canale: ingv-terremoti
+      id: RiIOiejhOHc
+      is_lis: false
+      overlap:
+      - magnitudo
+      - terremoto
+      score: 6.6
+      titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.1 del 3 giugno'
+      url: https://youtu.be/RiIOiejhOHc
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: 0ZIMo5GmkTM
+      is_lis: false
+      overlap:
+      - magnitudo
+      - terremoto
+      score: 6.6
+      titolo: Terremoti di magnitudo 4 non sono forti. Lo dicono Mercalli e una convenzione tra scienziati
+      url: https://youtu.be/0ZIMo5GmkTM
   comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple:
     title: 'Tōhoku, 11 marzo 2011: il terremoto, lo tsunami e Fukushima — quindici anni dopo l''emergenza tripla che ha cambiato
       il mondo'
@@ -646,6 +1093,70 @@ pagine:
       score: 7.0
       titolo: Cosa succede al cuore dal punto di vista tecnico quando usi un defibrillatore
       url: https://youtu.be/3mgqw3BCeWw
+  comunicazioni/2026-03-18-giornata-vittime-coronavirus:
+    title: 18 marzo, Giornata nazionale in memoria delle vittime dell'epidemia di coronavirus
+    url: /comunicazioni/2026-03-18-giornata-vittime-coronavirus/
+    video:
+    - anchored:
+      - coronavirus
+      - epidemia
+      canale: wired-italia
+      id: 56qeUyN2mew
+      is_lis: false
+      overlap:
+      - coronavirus
+      - dell
+      - epidemia
+      score: 12.6
+      titolo: Le tappe dell'epidemia di nuovo coronavirus
+      url: https://youtu.be/56qeUyN2mew
+    - anchored:
+      - coronavirus
+      - epidemia
+      canale: wired-italia
+      id: zr6L8DsvNtU
+      is_lis: false
+      overlap:
+      - coronavirus
+      - dell
+      - epidemia
+      score: 12.6
+      titolo: Perché non possiamo prevedere quando sarà il picco dell'epidemia da coronavirus
+      url: https://youtu.be/zr6L8DsvNtU
+    - anchored:
+      - coronavirus
+      - epidemia
+      canale: wired-italia
+      id: -2aPNpoL_64
+      is_lis: false
+      overlap:
+      - coronavirus
+      - epidemia
+      score: 12.0
+      titolo: Quali numeri raccontano davvero l'epidemia di coronavirus in Italia
+      url: https://youtu.be/-2aPNpoL_64
+    - anchored:
+      - coronavirus
+      - epidemia
+      canale: wired-italia
+      id: wuyIcfaCZIY
+      is_lis: false
+      overlap:
+      - coronavirus
+      - epidemia
+      score: 12.0
+      titolo: Di quali informazioni avremmo bisogno per capire meglio l'epidemia di nuovo coronavirus?
+      url: https://youtu.be/wuyIcfaCZIY
+    - anchored:
+      - epidemia
+      canale: rai-news
+      id: Oo3Dlj1RPP0
+      is_lis: false
+      overlap:
+      - epidemia
+      score: 6.0
+      titolo: Epidemia di Chikungunya in Cina, scattano le disinfestazioni. Droni e multe contro l'epidemia
+      url: https://youtu.be/Oo3Dlj1RPP0
   comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa:
     title: 'Diciassette anni fa il terremoto dell''Aquila: quando i volontari di Genzano di Roma portarono la speranza a Fossa'
     url: /comunicazioni/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa/
@@ -930,7 +1441,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 8.2
+      score: 7.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -1067,19 +1578,6 @@ pagine:
     url: /comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/
     video:
     - anchored:
-      - frana
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - dissesto
-      - frana
-      - idrogeologico
-      - rischio
-      score: 8.2
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
       - caratteristiche
       - frana
       canale: dpc-gov
@@ -1091,6 +1589,19 @@ pagine:
       score: 8.0
       titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
       url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dissesto
+      - frana
+      - idrogeologico
+      - rischio
+      score: 7.8
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
       - frana
       canale: dpc-gov
@@ -1137,7 +1648,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 8.2
+      score: 7.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -1530,7 +2041,7 @@ pagine:
       - idrogeologico
       - mappa
       - rischio
-      score: 13.6
+      score: 9.4
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -1545,17 +2056,6 @@ pagine:
       titolo: 'Sarno 1998-2023: il ricordo dei funzionari del Dipartimento'
       url: https://youtu.be/8v4izQL7MuA
     - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - idrogeologico
-      - rischio
-      score: 6.6
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
       - frana
       canale: cima-foundation
       id: gsBgcnO6qfc
@@ -1565,6 +2065,16 @@ pagine:
       score: 6.0
       titolo: Frana di Arenzano 2016
       url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
   comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile:
     title: 'Friuli 1976, cinquant''anni dopo: il terremoto che ha fatto nascere la protezione civile italiana'
     url: /comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/
@@ -2037,18 +2547,6 @@ pagine:
     video:
     - anchored:
       - frana
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - rischio
-      score: 3.2
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - frana
       canale: rai-news
       id: i5Yj1DQExuo
       is_lis: false
@@ -2058,6 +2556,18 @@ pagine:
       score: 3.0
       titolo: Frana a Niscemi, il video di un nuovo cedimento in diretta
       url: https://youtu.be/i5Yj1DQExuo
+    - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 2.8
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
       - frana
       canale: cima-foundation
@@ -2552,6 +3062,71 @@ pagine:
       score: 2.4
       titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
       url: https://youtu.be/qxQJQEjzRwc
+  comunicazioni/2026-06-02-terremoto-profondo-costa-calabra:
+    title: Terremoto profondo Mw 6.1 al largo della Calabria, avvertito dal Lazio alla Sicilia
+    url: /comunicazioni/2026-06-02-terremoto-profondo-costa-calabra/
+    video:
+    - anchored:
+      - scossa
+      canale: rai-news
+      id: RmDN-R7NJNk
+      is_lis: false
+      overlap:
+      - magnitudo
+      - prime
+      - scossa
+      - terremoto
+      score: 4.6
+      titolo: Terremoto in Myanmar, ecco cosa è successo nelle prime ore dalla scossa di magnitudo 7.7
+      url: https://youtu.be/RmDN-R7NJNk
+    - anchored:
+      - scossa
+      canale: geopop
+      id: kb3-B7bF6HM
+      is_lis: false
+      overlap:
+      - scossa
+      - situazione
+      - terremoto
+      score: 3.6
+      titolo: 'Scossa di terremoto a Napoli sul Vesuvio: sintesi della situazione'
+      url: https://youtu.be/kb3-B7bF6HM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      is_lis: false
+      overlap:
+      - danni
+      - scossa
+      - terremoto
+      score: 3.2
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
   comunicazioni/2026-06-03-infiorata-2026-attivazione-coc:
     title: 'Infiorata 2026: il Sindaco attiva il Centro Operativo Comunale'
     url: /comunicazioni/2026-06-03-infiorata-2026-attivazione-coc/
@@ -2597,7 +3172,7 @@ pagine:
       - idrogeologico
       - mappa
       - rischio
-      score: 8.2
+      score: 7.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -3106,6 +3681,52 @@ pagine:
       score: 2.4
       titolo: 'Incendi boschivi: le buone pratiche'
       url: https://youtu.be/MzVgNeBjJSQ
+  comunicazioni/2026-06-17-giornata-desertificazione-siccita:
+    title: 'Giornata contro la desertificazione e la siccità: nel 2026 al centro i pascoli'
+    url: /comunicazioni/2026-06-17-giornata-desertificazione-siccita/
+    video:
+    - anchored:
+      - siccità
+      canale: geopop
+      id: xbkBI9oAO9w
+      is_lis: false
+      overlap:
+      - crisi
+      - idrica
+      - siccità
+      score: 8.0
+      titolo: Cos'è il cuneo salino? Sintesi sull'emergenza siccità in Italia e la crisi idrica del Po
+      url: https://youtu.be/xbkBI9oAO9w
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: 3zLaQO7QvTw
+      is_lis: false
+      overlap:
+      - siccità
+      score: 6.0
+      titolo: 'Kit siccità: cittadini IT'
+      url: https://youtu.be/3zLaQO7QvTw
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: 6go6B2sB2SY
+      is_lis: false
+      overlap:
+      - siccità
+      score: 6.0
+      titolo: 'Kit siccità: turisti IT'
+      url: https://youtu.be/6go6B2sB2SY
+    - anchored:
+      - siccità
+      canale: cima-foundation
+      id: d3PnplO-uGI
+      is_lis: false
+      overlap:
+      - siccità
+      score: 6.0
+      titolo: 'Kit siccità: gestori di strutture turistiche IT'
+      url: https://youtu.be/d3PnplO-uGI
   comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026:
     title: 'Incendi boschivi: l''ordinanza del Sindaco per l''estate 2026. Divieti e obblighi fino al 15 ottobre'
     url: /comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/
@@ -3264,6 +3885,32 @@ pagine:
       score: 3.8
       titolo: Nubifragio si abbatte su Milano, una forte pioggia e un vento impetuoso sferzano la città
       url: https://youtu.be/21ZzYWU9Y_E
+  comunicazioni/2026-06-20-it-alert-test-diga-castreccioni:
+    title: 'Test di IT-alert nelle Marche: simulato il collasso della Diga di Castreccioni'
+    url: /comunicazioni/2026-06-20-it-alert-test-diga-castreccioni/
+    video:
+    - anchored:
+      - diga
+      canale: geopop
+      id: ts9vqg-I7f4
+      is_lis: false
+      overlap:
+      - diga
+      - funziona
+      score: 6.6
+      titolo: 'Una diga romana di 2mila anni fa ha salvato una città dall’alluvione in Spagna: ecco come funziona'
+      url: https://youtu.be/ts9vqg-I7f4
+    - anchored:
+      - marche
+      canale: abili-a-proteggere
+      id: jJpZO_erLUQ
+      is_lis: false
+      overlap:
+      - marche
+      - regione
+      score: 6.2
+      titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
+      url: https://youtu.be/jJpZO_erLUQ
   comunicazioni/2026-06-20-servizio-saggio-danza-parco-sforza-cesarini:
     title: Volontari di presidio al saggio di danza nel Parco Sforza Cesarini
     url: /comunicazioni/2026-06-20-servizio-saggio-danza-parco-sforza-cesarini/
@@ -3391,34 +4038,6 @@ pagine:
     url: /comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/
     video:
     - anchored:
-      - frana
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - mappa
-      - rischio
-      score: 9.6
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - degli
-      - edifici
-      - idrogeologico
-      - rischio
-      score: 8.4
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
       - siccità
       canale: cima-foundation
       id: d3PnplO-uGI
@@ -3449,6 +4068,30 @@ pagine:
       score: 6.0
       titolo: 'Kit siccità: turisti IT'
       url: https://youtu.be/6go6B2sB2SY
+    - anchored:
+      - siccità
+      canale: geopop
+      id: xbkBI9oAO9w
+      is_lis: false
+      overlap:
+      - siccità
+      score: 6.0
+      titolo: Cos'è il cuneo salino? Sintesi sull'emergenza siccità in Italia e la crisi idrica del Po
+      url: https://youtu.be/xbkBI9oAO9w
+    - anchored:
+      - frana
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - mappa
+      - rischio
+      score: 5.4
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
   comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge-facile:
     title: 'Estate e piogge forti: cosa può succedere e cosa fare'
     url: /comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge-facile/
@@ -3462,7 +4105,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 3.4
+      score: 3.0
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -7075,65 +7718,9 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 4.2
+      score: 3.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
-  comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico:
-    title: 'Ottobre: il mese del rischio idrogeologico'
-    url: /comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico/
-    video:
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - degli
-      - edifici
-      - idrogeologico
-      - rischio
-      score: 8.4
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - idrogeologico
-      - rischio
-      score: 6.6
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-  comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico-facile:
-    title: 'Ottobre: attenzione al rischio idrogeologico'
-    url: /comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico-facile/
-    video:
-    - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - rischio
-      score: 7.6
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - idrogeologico
-      - rischio
-      score: 6.6
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
   comunicazioni/2026-10-04-giampilieri-2009-colate-di-fango-messina:
     title: 'Giampilieri, 1° ottobre 2009: le colate di fango che travolsero i borghi di Messina'
     url: /comunicazioni/2026-10-04-giampilieri-2009-colate-di-fango-messina/
@@ -7158,37 +7745,6 @@ pagine:
       score: 6.0
       titolo: 'Nat Geo Italia: nel numero di maggio la vita sullo Stretto di Messina e tanto altro'
       url: https://youtu.be/o4BFEUB_0ak
-  comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio:
-    title: 'Geoportali: come leggere le mappe di rischio del proprio territorio'
-    url: /comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio/
-    video:
-    - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - dati
-      - dissesto
-      - frana
-      - idrogeologico
-      - mappa
-      - rischio
-      score: 6.2
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - idrogeologico
-      - rischio
-      score: 3.2
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
   comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b:
     title: 'Sismicità dei Castelli Romani: perché siamo in zona 2B'
     url: /comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/
@@ -8682,6 +9238,67 @@ pagine:
       score: 3.6
       titolo: Terremoti in pillole 28. Chi ha cambiato la magnitudo?
       url: https://youtu.be/TCALB5mhddU
+  comunicazioni/2026-11-03-terremoto-casa-interno-video-3d:
+    title: 'Terremoto: una casa vista dall''interno, un video in 3D'
+    url: /comunicazioni/2026-11-03-terremoto-casa-interno-video-3d/
+    video:
+    - anchored:
+      - scossa
+      - succede
+      canale: geopop
+      id: ROlhXYtdP_w
+      is_lis: false
+      overlap:
+      - scossa
+      - succede
+      - terremoto
+      score: 4.6
+      titolo: Tanti terremoti ai Campi Flegrei, cosa succede e perché la scossa di M3.9 si è sentita così forte
+      url: https://youtu.be/ROlhXYtdP_w
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 0--y1oKrz-4
+      is_lis: false
+      overlap:
+      - scossa
+      - terremoto
+      score: 2.6
+      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/0--y1oKrz-4
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - scossa
+      - terremoto
+      score: 2.6
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: KjQSuaVrjlY
+      is_lis: false
+      overlap:
+      - scossa
+      - terremoto
+      score: 2.6
+      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
+      url: https://youtu.be/KjQSuaVrjlY
+    - anchored:
+      - scossa
+      canale: dpc-gov
+      id: beYhBfj9LoE
+      is_lis: false
+      overlap:
+      - scossa
+      - terremoto
+      score: 2.6
+      titolo: Sant'Agostino, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/beYhBfj9LoE
   comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano:
     title: 'Genova, 4 novembre 2011: l''alluvione del Fereggiano e la lezione dei rii tombati'
     url: /comunicazioni/2026-11-04-genova-2011-alluvione-fereggiano/
@@ -8706,6 +9323,66 @@ pagine:
       score: 6.0
       titolo: Terremoti a Fontanigorda (Genova) ottobre 2024
       url: https://youtu.be/quun4sD4YQw
+    - anchored:
+      - alluvione
+      - vittime
+      canale: geopop
+      id: cijPrtMm8o0
+      is_lis: false
+      overlap:
+      - alluvione
+      - vittime
+      score: 3.8
+      titolo: '▶️INONDAZIONI, NUBIFRAGI, ALLUVIONI, VITTIME: COSA STA SUCCEDENDO? |GeologiaPOP🌍'
+      url: https://youtu.be/cijPrtMm8o0
+  comunicazioni/2026-11-04-neve-catene-video:
+    title: 'Neve e catene: la mossa giusta si fa a casa'
+    url: /comunicazioni/2026-11-04-neve-catene-video/
+    video:
+    - anchored:
+      - neve
+      canale: cnsas
+      id: CyIq3dZGscc
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: 'Covid-19: “Sì allo sport in montagna, ma quest’anno prima la prudenza”. Sicuri sulla Neve 2021'
+      url: https://youtu.be/CyIq3dZGscc
+    - anchored:
+      - neve
+      canale: cnsas
+      id: _eRFm4JSkYs
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
+      url: https://youtu.be/_eRFm4JSkYs
+  comunicazioni/2026-11-04-neve-catene-video-facile:
+    title: 'Neve e catene: preparati a casa'
+    url: /comunicazioni/2026-11-04-neve-catene-video-facile/
+    video:
+    - anchored:
+      - neve
+      canale: cnsas
+      id: CyIq3dZGscc
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: 'Covid-19: “Sì allo sport in montagna, ma quest’anno prima la prudenza”. Sicuri sulla Neve 2021'
+      url: https://youtu.be/CyIq3dZGscc
+    - anchored:
+      - neve
+      canale: cnsas
+      id: _eRFm4JSkYs
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
+      url: https://youtu.be/_eRFm4JSkYs
   comunicazioni/2026-11-05-giornata-mondiale-consapevolezza-maremoti:
     title: '5 novembre, Giornata mondiale per la consapevolezza sui maremoti: cosa deve sapere chi va al mare'
     url: /comunicazioni/2026-11-05-giornata-mondiale-consapevolezza-maremoti/
@@ -8863,31 +9540,6 @@ pagine:
       titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
       url: https://youtu.be/fpeEmFI5G8s
     - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - rischio
-      score: 3.2
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - degli
-      - idrogeologico
-      - rischio
-      score: 3.0
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
       - alluvione
       canale: io-non-rischio
       id: DbGSeVbDLCg
@@ -8912,7 +9564,7 @@ pagine:
       titolo: Io non rischio Alluvione – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/pRNdk6d1tWg
   comunicazioni/2026-11-08-alluvione-versilia-1996-trent-anni:
-    title: 'Trent''anni dall''alluvione della Versilia: quella notte del 19 giugno 1996'
+    title: 'Trent''anni dall''alluvione della Versilia: il 19 giugno 1996'
     url: /comunicazioni/2026-11-08-alluvione-versilia-1996-trent-anni/
     video:
     - anchored:
@@ -8925,31 +9577,6 @@ pagine:
       score: 6.0
       titolo: SUV-scooter crash in Versilia, 17-year-old dies
       url: https://youtu.be/FFoUC5_3Ark
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - edifici
-      - idrogeologico
-      - rischio
-      score: 3.8
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - rischio
-      score: 3.2
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
       - alluvione
       canale: io-non-rischio
@@ -9014,35 +9641,6 @@ pagine:
       score: 2.0
       titolo: Islanda, nuova eruzione vulcanica. Evacuati gli abitanti di Grindavik
       url: https://youtu.be/eYZMSEKA-Ro
-  comunicazioni/2026-11-21-giornata-nazionale-alberi:
-    title: 'Giornata nazionale degli alberi: boschi, prevenzione, rischio idrogeologico'
-    url: /comunicazioni/2026-11-21-giornata-nazionale-alberi/
-    video:
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - degli
-      - idrogeologico
-      - rischio
-      score: 7.8
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - rischio
-      score: 7.6
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
   comunicazioni/2026-11-23-irpinia-1980-anniversario-46:
     title: '23 novembre 1980: 46 anni dal terremoto dell''Irpinia'
     url: /comunicazioni/2026-11-23-irpinia-1980-anniversario-46/
@@ -9089,7 +9687,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 8.2
+      score: 7.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -9826,7 +10424,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 18.6
+      score: 14.4
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -9841,18 +10439,6 @@ pagine:
       score: 7.8
       titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
       url: https://youtu.be/fpeEmFI5G8s
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - idrogeologico
-      - rischio
-      score: 7.2
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - frana
       canale: dpc-gov
@@ -9875,6 +10461,16 @@ pagine:
       score: 6.6
       titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
       url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
   conoscere/catalogo-dei-rischi/rischio-incendio:
     title: Il rischio da incendi boschivi
     url: /conoscere/catalogo-dei-rischi/rischio-incendio/
@@ -10773,7 +11369,7 @@ pagine:
       - dissesto
       - frana
       - idrogeologico
-      score: 4.0
+      score: 3.6
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -11584,31 +12180,6 @@ pagine:
     url: /dossier/troppa-acqua/
     video:
     - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - dati
-      - frana
-      - idrogeologico
-      - rischio
-      score: 4.0
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - idrogeologico
-      - rischio
-      score: 3.0
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
       - piena
       canale: natgeo-italia
       id: 87iroPg26Qk
@@ -11639,6 +12210,16 @@ pagine:
       score: 2.0
       titolo: Una Super-Tempesta di Meteore in Arrivo?
       url: https://youtu.be/Z51K4zh0APg
+    - anchored:
+      - tempesta
+      canale: link4universe
+      id: dbtYw22YtLU
+      is_lis: false
+      overlap:
+      - tempesta
+      score: 2.0
+      titolo: Il Titanic "affondato" da una tempesta solare ?
+      url: https://youtu.be/dbtYw22YtLU
   dossier/vajont-la-diga-che-resse:
     title: La diga che resse, la montagna che cadde
     url: /dossier/vajont-la-diga-che-resse/
@@ -12793,7 +13374,7 @@ pagine:
       - idrogeologico
       - mappa
       - rischio
-      score: 15.6
+      score: 11.4
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -12808,19 +13389,6 @@ pagine:
       score: 7.8
       titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
       url: https://youtu.be/fpeEmFI5G8s
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - degli
-      - idrogeologico
-      - rischio
-      score: 7.4
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - frana
       canale: dpc-gov
@@ -12843,6 +13411,16 @@ pagine:
       score: 6.6
       titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
       url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
   manuale/714-rischio-meteo-idrologico:
     title: 'Il rischio meteo-idrologico: temporali, vento, neve, calore'
     url: /manuale/714-rischio-meteo-idrologico/
@@ -12892,18 +13470,17 @@ pagine:
       titolo: 'L’erosione del suolo e il cambiamento climatico: il contributo del Servizio Copernicus C3S'
       url: https://youtu.be/6bN8KRvWJPM
     - anchored:
+      - cambiamento
       - climatico
-      - meteo
-      canale: italiameteo
-      id: GX_FkaORWkw
+      canale: cicap
+      id: 2i0qXtiPXwY
       is_lis: false
       overlap:
+      - cambiamento
       - climatico
-      - italiameteo
-      - meteo
-      score: 4.8
-      titolo: ItaliaMeteo lancia un’indagine sulle esigenze degli utenti del settore meteo-climatico
-      url: https://youtu.be/GX_FkaORWkw
+      score: 4.0
+      titolo: Storie e immagini del cambiamento climatico - con Marco Cattaneo
+      url: https://youtu.be/2i0qXtiPXwY
   manuale/715-rischio-incendio:
     title: Il rischio incendi boschivi e di interfaccia
     url: /manuale/715-rischio-incendio/
@@ -13382,6 +13959,17 @@ pagine:
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
       - disabilità
+      canale: dpc-gov
+      id: ZTDrRHbiR3M
+      is_lis: false
+      overlap:
+      - disabilità
+      - messaggio
+      score: 3.0
+      titolo: 'Giornata internazionale delle persone con disabilità: il messaggio di Borrelli'
+      url: https://youtu.be/ZTDrRHbiR3M
+    - anchored:
+      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -13410,16 +13998,6 @@ pagine:
       score: 2.0
       titolo: Giornata internazionale delle persone con disabilità
       url: https://youtu.be/b5W1-Cj7eu0
-    - anchored:
-      - disabilità
-      canale: abili-a-proteggere
-      id: e_bwJY-3fh8
-      is_lis: false
-      overlap:
-      - disabilità
-      score: 2.0
-      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
-      url: https://youtu.be/e_bwJY-3fh8
   rischi-prevenzione/rischi-in-parole-semplici:
     title: Rischi principali in parole semplici
     url: /rischi-prevenzione/rischi-in-parole-semplici/
@@ -13472,21 +14050,9 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 8.6
+      score: 4.4
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - aree
-      - idrogeologico
-      - rischio
-      score: 7.2
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - alluvione
       - frana
@@ -13519,6 +14085,16 @@ pagine:
       score: 2.0
       titolo: Le attività operative in corso – Frana Niscemi 2026
       url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
   rischi-prevenzione/rischio-idrogeologico-facile:
     title: 'Alluvioni e frane: cosa fare (italiano semplice)'
     url: /rischi-prevenzione/rischio-idrogeologico-facile/
@@ -14217,7 +14793,7 @@ pagine:
       overlap:
       - climatico
       - meteo
-      score: 6.6
+      score: 6.2
       titolo: ItaliaMeteo lancia un’indagine sulle esigenze degli utenti del settore meteo-climatico
       url: https://youtu.be/GX_FkaORWkw
     - anchored:
@@ -14277,7 +14853,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 7.2
+      score: 6.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -14587,32 +15163,6 @@ pagine:
       score: 2.0
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
-  strumenti:
-    title: Strumenti di consultazione in tempo reale
-    url: /strumenti/
-    video:
-    - anchored:
-      - idrogeologico
-      canale: cmcc
-      id: CiSTPzoI_zs
-      is_lis: false
-      overlap:
-      - idrogeologico
-      - rischio
-      score: 2.4
-      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
-      url: https://youtu.be/CiSTPzoI_zs
-    - anchored:
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - idrogeologico
-      - rischio
-      score: 2.4
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
   tabelle-comunicazione:
     title: Tabelle di comunicazione (CAA)
     url: /tabelle-comunicazione/

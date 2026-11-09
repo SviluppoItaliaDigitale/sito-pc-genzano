@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 9096 video (18 canali).
+# Totale: 9124 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -15,7 +15,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 635
+    video_count: 636
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -45,12 +45,12 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1356
+    video_count: 1363
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 161
+    video_count: 164
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -75,7 +75,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 648
+    video_count: 650
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2017
+    video_count: 2032
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -2172,6 +2172,11 @@ video:
     id: PrQIdd9g2bw
     titolo: 'Radio Cicap presenta: "I numeri del gioco"'
     url: https://youtu.be/PrQIdd9g2bw
+  cicap-PvB2VZfhnzQ:
+    canale: cicap
+    id: PvB2VZfhnzQ
+    titolo: Il costo ambientale dei conflitti - con Danilo Zagaria
+    url: https://youtu.be/PvB2VZfhnzQ
   cicap-Q16NH58SpFQ:
     canale: cicap
     id: Q16NH58SpFQ
@@ -13777,6 +13782,11 @@ video:
     id: E-tykxLbkxs
     titolo: How Italians travel from home to work - mobility statistics in Italy
     url: https://youtu.be/E-tykxLbkxs
+  geopop-E1-qLBS_U9w:
+    canale: geopop
+    id: E1-qLBS_U9w
+    titolo: 'Smart city: se ne sente parlare sempre più spesso. Ma cosa sono, nel concreto?'
+    url: https://youtu.be/E1-qLBS_U9w
   geopop-E1ECVfHbQIM:
     canale: geopop
     id: E1ECVfHbQIM
@@ -14437,6 +14447,11 @@ video:
     id: KWyUXTOWBbA
     titolo: STRANEZZE EROTICHE DELLA GEOLOGIA |GeologiaPOP🌍
     url: https://youtu.be/KWyUXTOWBbA
+  geopop-KXiEE3zI0UY:
+    canale: geopop
+    id: KXiEE3zI0UY
+    titolo: Perché gli hacker attaccano i supermercati e come hanno portato i frigoriferi a 50 °C
+    url: https://youtu.be/KXiEE3zI0UY
   geopop-KZyAISKzqVc:
     canale: geopop
     id: KZyAISKzqVc
@@ -15292,6 +15307,11 @@ video:
     id: SBzCu3Ej4cw
     titolo: 'What happened in Nepal: reconstructing the possible scenarios, from the glacier to the flood'
     url: https://youtu.be/SBzCu3Ej4cw
+  geopop-SDkXDPlZ5KQ:
+    canale: geopop
+    id: SDkXDPlZ5KQ
+    titolo: Come disporre 10 monete così da ottenere 5 righe da 4 monete l'una?
+    url: https://youtu.be/SDkXDPlZ5KQ
   geopop-SHEbzDzrB4c:
     canale: geopop
     id: SHEbzDzrB4c
@@ -15682,6 +15702,11 @@ video:
     id: VZ_SUkXMz1Y
     titolo: 'How Bin Laden Was Found and Killed: Reconstructing Operation Neptune Spear'
     url: https://youtu.be/VZ_SUkXMz1Y
+  geopop-VdBwr76opkM:
+    canale: geopop
+    id: VdBwr76opkM
+    titolo: 'Terremoto e soccorsi mirati: ecco come funziona la tecnologia di Armonia Atlas'
+    url: https://youtu.be/VdBwr76opkM
   geopop-VdpcA9qi_B8:
     canale: geopop
     id: VdpcA9qi_B8
@@ -16212,6 +16237,11 @@ video:
     id: _x0dT_shM9E
     titolo: 'Energia: la soluzione al problema energetico è un ventaglio di soluzioni (NON UNA)'
     url: https://youtu.be/_x0dT_shM9E
+  geopop-a0KLaUFyDMU:
+    canale: geopop
+    id: a0KLaUFyDMU
+    titolo: Cosa cambia tra farina 00, 0, 1, 2, integrale? La scienza degli impasti
+    url: https://youtu.be/a0KLaUFyDMU
   geopop-a9Hi26yjlkM:
     canale: geopop
     id: a9Hi26yjlkM
@@ -18077,6 +18107,11 @@ video:
     id: rMX2xGhgqLM
     titolo: VULC - L'essenza di un legame |4K| Campi Flegrei, Vesuvio, Stromboli e Etna
     url: https://youtu.be/rMX2xGhgqLM
+  geopop-rOszx1DzEHM:
+    canale: geopop
+    id: rOszx1DzEHM
+    titolo: Incidente aereo in Florida, cosa sappiamo sullo schianto del jet privato e l'indagine NTSB
+    url: https://youtu.be/rOszx1DzEHM
   geopop-rSKCFKGdkVw:
     canale: geopop
     id: rSKCFKGdkVw
@@ -18717,6 +18752,11 @@ video:
     id: xZiI-xXYZiA
     titolo: Does the Bermuda Triangle really exist? The "mystery" actually has a scientific explanation.
     url: https://youtu.be/xZiI-xXYZiA
+  geopop-xZpj8MRXumY:
+    canale: geopop
+    id: xZpj8MRXumY
+    titolo: In Italia, 1 donna su 2 non lavora. Ma oggi vediamo un piccolo aspetto positivo
+    url: https://youtu.be/xZpj8MRXumY
   geopop-xaGtJlYzjjg:
     canale: geopop
     id: xaGtJlYzjjg
@@ -19032,6 +19072,11 @@ video:
     id: 0GhmsBHH3XI
     titolo: Dove registriamo gli sciami sismici? Where do we record earthquake swarms?
     url: https://youtu.be/0GhmsBHH3XI
+  ingv-terremoti-0b6V0xHAU4E:
+    canale: ingv-terremoti
+    id: 0b6V0xHAU4E
+    titolo: Giornate ONT 2026 |  Catalogo delle rilocalizzazioni della sismicità italiana dal 1981 al 2018
+    url: https://youtu.be/0b6V0xHAU4E
   ingv-terremoti-1-evU28PZh8:
     canale: ingv-terremoti
     id: 1-evU28PZh8
@@ -19367,6 +19412,11 @@ video:
     id: StOjg8WyoU4
     titolo: INGV-TsunamiWarning
     url: https://youtu.be/StOjg8WyoU4
+  ingv-terremoti-TWgdKwP4ogg:
+    canale: ingv-terremoti
+    id: TWgdKwP4ogg
+    titolo: Giornate ONT 2026 | Il progetto Aristotle per il supporto alle emergenze
+    url: https://youtu.be/TWgdKwP4ogg
   ingv-terremoti-U63oC355QtY:
     canale: ingv-terremoti
     id: U63oC355QtY
@@ -19412,6 +19462,11 @@ video:
     id: V4q6fxfjq8U
     titolo: The INGV seismic and GPS station in Salò, northern Italy
     url: https://youtu.be/V4q6fxfjq8U
+  ingv-terremoti-VWt73tkFK_U:
+    canale: ingv-terremoti
+    id: VWt73tkFK_U
+    titolo: Giornate ONT 2026 | Percezione del rischio maremoto
+    url: https://youtu.be/VWt73tkFK_U
   ingv-terremoti-V_5u8CKvLjY:
     canale: ingv-terremoti
     id: V_5u8CKvLjY
@@ -29637,6 +29692,11 @@ video:
     id: eJrD9UwW-3Q
     titolo: Meglio non scherzare con la furia di una madre
     url: https://youtu.be/eJrD9UwW-3Q
+  natgeo-italia-eLzbn2k4Sgk:
+    canale: natgeo-italia
+    id: eLzbn2k4Sgk
+    titolo: Le incredibili riprese di uno squalo bianco che strappa un pesce dalla lenza
+    url: https://youtu.be/eLzbn2k4Sgk
   natgeo-italia-eMVXMJRoJyY:
     canale: natgeo-italia
     id: eMVXMJRoJyY
@@ -30007,6 +30067,11 @@ video:
     id: kqZVGPZJdSQ
     titolo: Quando il cibo scarseggia e il freddo è pungente, i ghiottoni mostrano la propria natura
     url: https://youtu.be/kqZVGPZJdSQ
+  natgeo-italia-kyL90UoIMlA:
+    canale: natgeo-italia
+    id: kyL90UoIMlA
+    titolo: 'National Geographic di novembre: un viaggio straordinario nel cuore blu del pianeta'
+    url: https://youtu.be/kyL90UoIMlA
   natgeo-italia-l-TYFWizFHU:
     canale: natgeo-italia
     id: l-TYFWizFHU
@@ -31157,6 +31222,11 @@ video:
     id: 0nI-70w9wJ4
     titolo: 'DJ Godzi''s father dies in Ibiza: "Autopsy performed hastily"'
     url: https://youtu.be/0nI-70w9wJ4
+  rai-news-0nqVg-6E_QA:
+    canale: rai-news
+    id: 0nqVg-6E_QA
+    titolo: 'Milly Carlucci: "Siamo una famiglia. Se attacchi uno di noi, attacchi tutti"'
+    url: https://youtu.be/0nqVg-6E_QA
   rai-news-0pjlCy6knV0:
     canale: rai-news
     id: 0pjlCy6knV0
@@ -32387,6 +32457,11 @@ video:
     id: 8bqYk98FNKE
     titolo: End of life, green light in Umbria for assisted suicide law
     url: https://youtu.be/8bqYk98FNKE
+  rai-news-8eHwuxF1pew:
+    canale: rai-news
+    id: 8eHwuxF1pew
+    titolo: La pizza diventa un caso politico a Mosca
+    url: https://youtu.be/8eHwuxF1pew
   rai-news-8hMpngUvwLs:
     canale: rai-news
     id: 8hMpngUvwLs
@@ -32527,6 +32602,11 @@ video:
     id: 9qBEp6n8hrQ
     titolo: Vessicchio's memory at the Ariston received a standing ovation.
     url: https://youtu.be/9qBEp6n8hrQ
+  rai-news-9rsFL9mnXrM:
+    canale: rai-news
+    id: 9rsFL9mnXrM
+    titolo: 'Kimi Antonelli torna in Italia: i complimenti dalla torre di controllo'
+    url: https://youtu.be/9rsFL9mnXrM
   rai-news-9uXTmHPQqbY:
     canale: rai-news
     id: 9uXTmHPQqbY
@@ -32812,6 +32892,11 @@ video:
     id: BY13w1dOL5Q
     titolo: Il multiverso di Sanremo, il Festival tra musica, gioco e social
     url: https://youtu.be/BY13w1dOL5Q
+  rai-news-BYl0yGqKP3U:
+    canale: rai-news
+    id: BYl0yGqKP3U
+    titolo: 'MappaMondi: Scacco democratico al re. Quale sarà la prossima mossa di Trump?'
+    url: https://youtu.be/BYl0yGqKP3U
   rai-news-BaFBdrNAdEA:
     canale: rai-news
     id: BaFBdrNAdEA
@@ -33447,6 +33532,11 @@ video:
     id: FNxLlw4cgIQ
     titolo: 'Sanremo2025: Noemi, le prime prove con l’orchestra'
     url: https://youtu.be/FNxLlw4cgIQ
+  rai-news-FP5slnC8pYE:
+    canale: rai-news
+    id: FP5slnC8pYE
+    titolo: 'Leone, l’abbraccio dell’Argentina: oltre due milioni e mezzo alla messa'
+    url: https://youtu.be/FP5slnC8pYE
   rai-news-FPE_HdAVoqc:
     canale: rai-news
     id: FPE_HdAVoqc
@@ -33897,6 +33987,11 @@ video:
     id: HzDM2gMRroc
     titolo: Buon compleanno a Ornella Muti che compie 70 anni
     url: https://youtu.be/HzDM2gMRroc
+  rai-news-Hz_dKZI-sUA:
+    canale: rai-news
+    id: Hz_dKZI-sUA
+    titolo: L'Europol si è attivata nelle indagini sugli attacchi hacker, all'Aja vertice tra investigatori
+    url: https://youtu.be/Hz_dKZI-sUA
   rai-news-I-Ew0FTrv2A:
     canale: rai-news
     id: I-Ew0FTrv2A
@@ -34487,6 +34582,11 @@ video:
     id: Ln4ZesYGyxU
     titolo: 'Donna e neonata trovate morte a Villa Pamphili, un testimone: "C''era un corpicino tra i rovi"'
     url: https://youtu.be/Ln4ZesYGyxU
+  rai-news-LohhgTbpaNM:
+    canale: rai-news
+    id: LohhgTbpaNM
+    titolo: 'Cracovia: a casa del killer i corpi dei genitori e della sorella'
+    url: https://youtu.be/LohhgTbpaNM
   rai-news-LowlKYSKnGc:
     canale: rai-news
     id: LowlKYSKnGc
@@ -34787,6 +34887,11 @@ video:
     id: NlRFIKRQWzw
     titolo: 'Sanremo 2025: September, first rehearsals with the orchestra'
     url: https://youtu.be/NlRFIKRQWzw
+  rai-news-NmrsYRD9_eo:
+    canale: rai-news
+    id: NmrsYRD9_eo
+    titolo: A Gadi Eisenkot incarico per il nuovo governo
+    url: https://youtu.be/NmrsYRD9_eo
   rai-news-NmxJdG0SHrs:
     canale: rai-news
     id: NmxJdG0SHrs
@@ -34817,6 +34922,11 @@ video:
     id: NrOOPyEy-c4
     titolo: At 13, Geppino is among the first large-breed dogs to fly in the cabin
     url: https://youtu.be/NrOOPyEy-c4
+  rai-news-Nvp6EJBud6g:
+    canale: rai-news
+    id: Nvp6EJBud6g
+    titolo: Stasera e domani su Rai1 "Livatino - Il giudice e i suoi assassini"
+    url: https://youtu.be/Nvp6EJBud6g
   rai-news-NyGlwFDmgQw:
     canale: rai-news
     id: NyGlwFDmgQw
@@ -35202,6 +35312,11 @@ video:
     id: PvM_1-Kw0OE
     titolo: Top stories from Italy in English 07-01-2025
     url: https://youtu.be/PvM_1-Kw0OE
+  rai-news-PvyfyStVGww:
+    canale: rai-news
+    id: PvyfyStVGww
+    titolo: Il fisico Cervellati muore travolto da un monopattino
+    url: https://youtu.be/PvyfyStVGww
   rai-news-Q0ZJuFl29T0:
     canale: rai-news
     id: Q0ZJuFl29T0
@@ -35832,6 +35947,11 @@ video:
     id: UKElR3tXYm8
     titolo: Treviso shocked by the arrest of a teacher accused of pedophilia along with her partner.
     url: https://youtu.be/UKElR3tXYm8
+  rai-news-UP6zkCM-yoo:
+    canale: rai-news
+    id: UP6zkCM-yoo
+    titolo: Rissa tra sub durante l'immersione alle Maldive
+    url: https://youtu.be/UP6zkCM-yoo
   rai-news-UXMYPBfwSMg:
     canale: rai-news
     id: UXMYPBfwSMg
@@ -38557,6 +38677,11 @@ video:
     id: l27UKHAMOQI
     titolo: 27-year-old man falls from balcony in Rome
     url: https://youtu.be/l27UKHAMOQI
+  rai-news-l2pEX0yAIzM:
+    canale: rai-news
+    id: l2pEX0yAIzM
+    titolo: Papa Leone benedice un neonato
+    url: https://youtu.be/l2pEX0yAIzM
   rai-news-l317eBqhBQ4:
     canale: rai-news
     id: l317eBqhBQ4
@@ -38717,6 +38842,11 @@ video:
     id: mABiujl41Is
     titolo: Al Tg1 Rudy Giuliani, ex sindaco di New York, difende Trump sull'Iran
     url: https://youtu.be/mABiujl41Is
+  rai-news-mAbfmMWeiNw:
+    canale: rai-news
+    id: mAbfmMWeiNw
+    titolo: Giustizia e Vangelo nella vita di Rosario Livatino, il magistrato beato e protettore dei giudici
+    url: https://youtu.be/mAbfmMWeiNw
   rai-news-mGxCiMXiW1U:
     canale: rai-news
     id: mGxCiMXiW1U
@@ -39977,6 +40107,11 @@ video:
     id: t63FX2J90gY
     titolo: 'Elezioni Europee 2024: Come si decide il numero dei deputati italiani nel Parlamento europeo?'
     url: https://youtu.be/t63FX2J90gY
+  rai-news-t6CZB2MpBHo:
+    canale: rai-news
+    id: t6CZB2MpBHo
+    titolo: Italian News in English - 9/11/2026
+    url: https://youtu.be/t6CZB2MpBHo
   rai-news-tApyh11FvC8:
     canale: rai-news
     id: tApyh11FvC8
@@ -40092,6 +40227,11 @@ video:
     id: ttlz8LbHhsM
     titolo: Player avatars in the World Cup VAR
     url: https://youtu.be/ttlz8LbHhsM
+  rai-news-tuIiE9sO-8Q:
+    canale: rai-news
+    id: tuIiE9sO-8Q
+    titolo: Monopattini, l’appello delle figlie di Cervellati
+    url: https://youtu.be/tuIiE9sO-8Q
   rai-news-u-Z99VLUI74:
     canale: rai-news
     id: u-Z99VLUI74
