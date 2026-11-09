@@ -1,26 +1,26 @@
 {
  "_snapshot": {
-  "generato": "2026-11-09T08:00:43+00:00",
+  "generato": "2026-11-09T18:38:26+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 7,
-  "scaduti_scartati": 7,
-  "in_corso": 0,
+  "avvisi": 14,
+  "scaduti_scartati": 4,
+  "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Liguria",
    "fenomeno": "Pioggia",
    "livello": "arancione",
    "evento_originale": "Orange Rain Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-10T00:00:00+00:00",
-   "fine": "2026-11-10T18:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.004"
+   "inizio": "2026-11-09T00:00:00+00:00",
+   "fine": "2026-11-11T22:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.017"
   },
   {
    "in_corso": false,
@@ -31,25 +31,103 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-11-10T00:00:00+00:00",
-   "fine": "2026-11-10T22:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.010"
+   "fine": "2026-11-10T17:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.022"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-10T00:00:00+00:00",
+   "fine": "2026-11-11T00:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.027"
+  },
+  {
+   "in_corso": true,
+   "regione": "Emilia e Romagna",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-09T12:00:00+00:00",
+   "fine": "2026-11-11T17:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.016"
   },
   {
    "in_corso": false,
    "regione": "Lazio",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-10T00:00:00+00:00",
+   "fine": "2026-11-10T23:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.026"
+  },
+  {
+   "in_corso": false,
+   "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-10T12:00:00+00:00",
+   "inizio": "2026-11-10T07:00:00+00:00",
    "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.005"
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.018"
   },
   {
    "in_corso": false,
+   "regione": "Marche",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-10T00:00:00+00:00",
+   "fine": "2026-11-10T23:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.024"
+  },
+  {
+   "in_corso": false,
+   "regione": "Piemonte",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-10T17:00:00+00:00",
+   "fine": "2026-11-11T07:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.011"
+  },
+  {
+   "in_corso": false,
+   "regione": "Piemonte",
+   "fenomeno": "Nebbia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Fog Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-10T00:00:00+00:00",
+   "fine": "2026-11-10T07:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.010"
+  },
+  {
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -57,9 +135,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-11-09T18:00:00+00:00",
-   "fine": "2026-11-10T06:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.007"
+   "fine": "2026-11-10T07:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.008"
   },
   {
    "in_corso": false,
@@ -70,9 +148,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-11-10T18:00:00+00:00",
-   "fine": "2026-11-10T22:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.008"
+   "fine": "2026-11-10T23:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.009"
   },
   {
    "in_corso": false,
@@ -82,10 +160,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-10T06:00:00+00:00",
-   "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.009"
+   "inizio": "2026-11-10T00:00:00+00:00",
+   "fine": "2026-11-11T06:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.028"
   },
   {
    "in_corso": false,
@@ -95,10 +173,23 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-10T12:00:00+00:00",
+   "inizio": "2026-11-10T00:00:00+00:00",
    "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.011"
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.020"
+  },
+  {
+   "in_corso": false,
+   "regione": "Umbria",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-10T00:00:00+00:00",
+   "fine": "2026-11-10T23:59:00+00:00",
+   "emesso": "2026-11-09T10:21:31+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261109112131.025"
   }
  ]
 }

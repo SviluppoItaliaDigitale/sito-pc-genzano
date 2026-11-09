@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-09T08:00:35+00:00",
+  "generato": "2026-11-09T18:38:17+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-09T07:48:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "E' morto l'autore della strage di Cracovia, ancora gravi i feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/morto-lautore-della-strage-di-cracovia_58c72e95-1620-4020-b93b-a624f4b491cf.html"
-  },
-  {
-   "data": "2026-11-09T07:28:59+00:00",
+   "data": "2026-11-09T18:29:28+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Starbucks assumerà 7.500 nuovi dipendenti nel Regno Unito nei prossimi cinque anni",
-   "url": "https://www.adnkronos.com/economia/starbucks-assunzioni-5-anni-7500-dipendenti-nuovi_3z3j4knPKH0b2SjAOHz3BQ"
+   "titolo": "Testo unico legislazione farmaceutica, a Roma evento sulle sfide fra accessibilità e competitività",
+   "url": "https://www.adnkronos.com/economia/testo-unico-legislazione-farmaceutica-a-roma-evento-sulle-sfide-fra-accessibilita-e-competitivita_21Z2juWFedBMTxiUTm5ZYW"
   },
   {
-   "data": "2026-11-09T07:12:00+00:00",
+   "data": "2026-11-09T18:29:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Credit Agricole propone a Banco Bpm avvio trattative per una fusione",
-   "url": "https://www.adnkronos.com/economia/credit-agricole-banco-bpm-proposta-di-fusione_3QCbbsah8u1N4ip3RDprqe"
+   "titolo": "Caso Garlasco, gli ex avvocati di Stasi: \"Diffamati da Lovati, nessuna macchinazione contro Sempio\"",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-ex-avvocati-stasi-processo-diffamazione-lovati-sempio_3hIdvilbtylfgcBjOAdD6C"
   },
   {
-   "data": "2026-11-09T07:00:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Eisenkot ha il mandato per il governo, \"Israele può fidarsi\"",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/09/prime-pagine-eisenkot-ha-il-mandato-per-il-governo-israele-puo-fidarsi_b193d641-1277-4b03-80e8-9bd839866159.html"
-  },
-  {
-   "data": "2026-11-09T06:52:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sparatoria Cracovia, morto in ospedale l'autore della strage",
-   "url": "https://www.adnkronos.com/internazionale/esteri/cracovia-sparatoria-strage-morto-autore-michal-oksinski_5WZ1rx7sG3TtqMzTRBNtB9"
-  },
-  {
-   "data": "2026-11-09T06:32:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Una Terra virtuale per trovare la firma della vita su altri pianeti",
-   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/09/una-terra-virtuale-per-trovare-la-firma-della-vita-su-altri-pianeti_e8fc8045-835b-4d22-8380-acea93cf5989.html"
-  },
-  {
-   "data": "2026-11-09T06:09:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "G7 a Parigi, focus su attacchi hacker. Tajani: \"Chiederemo un segnale forte\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/attacchi-hacker-g7-parigi-focus-oggi_2bl18RGG8kAYew59t1o03w"
-  },
-  {
-   "data": "2026-11-08T23:07:08+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bastano 8 minuti di esercizio per abbassare la pressione, lo studio sul 'wall sit'",
-   "url": "https://www.adnkronos.com/salute/bastano-8-minuti-di-esercizio-per-abbassare-la-pressione-lo-studio-sul-wall-sit_7vve5sXC5JzXs81j1M07m8"
-  },
-  {
-   "data": "2026-11-08T23:02:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran, Trump frena: \"Nuovo attacco è improbabile\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-trump-nuovo-attacco-news_Dqo369qIxMDBDtHAQ81bG"
-  },
-  {
-   "data": "2026-11-08T23:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, anche Europa ai colloqui di Abu Dhabi. Zelensky: \"Putin usa la tregua di Oleshky per schierare soldati\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-zelensky-accusa-putin_6eWr6UIYZEvWNEzFA68akU"
-  },
-  {
-   "data": "2026-11-08T22:53:42+00:00",
+   "data": "2026-11-09T18:22:32+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Incendio in appartamento a Trieste, evacuato edificio di otto piani",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/incendio-in-appartamento-a-trieste-evacuato-edificio-di-otto-piani_896aae3f-48db-49d9-8669-1ddd42f71336.html"
+   "titolo": "Pregiudicato muore a Palermo, il corteo funebre diventa uno show",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/pregiudicato-muore-a-palermo-il-corteo-funebre-diventa-uno-show-_8f95c035-b1b4-4d92-aa26-8970ea71bff5.html"
   },
   {
-   "data": "2026-11-08T22:40:22+00:00",
+   "data": "2026-11-09T18:19:53+00:00",
    "fonte": "ANSA",
-   "titolo": "La lezione del Papa a Milei, 'l'economia sia al servizio dell'uomo'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-in-argentina-milei-lo-accoglie-con-una-lunga-stretta-di-mano_b1a9c1ef-f58d-4638-863e-926dd7986a78.html"
+   "titolo": "Si è costituito il conducente del monopattino che ha investito il fisico Cervellati. 'Ho visto il sangue e sono fuggito'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/si-e-costituito-il-conducente-del-monopattino-che-ha-investito-il-fisico-cervellati_f8f14bf1-e335-45b1-b82b-13cf8a4929c1.html"
   },
   {
-   "data": "2026-11-08T22:02:42+00:00",
+   "data": "2026-11-09T18:14:15+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: la Lazio frena e l'Inter si avvicina, Juve pari a Firenze",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/08/serie-a-la-lazio-frena-e-linter-si-avvicina-juve-pari-a-firenze_cb549bce-56d4-48af-9f8a-1bccc4410d4e.html"
+   "titolo": "Credit Agricole propone le nozze a Bpm, ai soci 1 miliardo e premio del 20%",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/credit-agricole-propone-le-nozze-a-bpm-ai-soci-1-miliardo-e-premio-del-20_1f4370d5-8277-4bc4-9aea-4cb9ca81d368.html"
   },
   {
-   "data": "2026-11-08T21:37:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiorentina-Juventus, mano di Joao Mario in area ma niente rigore: furia Spalletti",
-   "url": "https://www.adnkronos.com/sport/fiorentina-juventus-mano-joao-mario-rigore_3dkT84dpSzTA23JVIk6rMY"
-  },
-  {
-   "data": "2026-11-08T21:25:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiorentina-Juventus, proteste sul gol di Bremer: cos'è successo",
-   "url": "https://www.adnkronos.com/sport/fiorentina-juventus-gol-bremer-mano-testa-cose-successo_1TAI6B494SIfnDWVGGVmM"
-  },
-  {
-   "data": "2026-11-08T21:08:12+00:00",
+   "data": "2026-11-09T18:12:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Di Pasquale-Piervincenzi al timone di Report, 'c'è chi sperava di cancellarlo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/08/di-pasquale-e-piervincenzi-qualcuno-sperava-che-report-venisse-cancellato_d197062a-41cf-48c2-9fa6-a58ee0321ca5.html"
+   "titolo": "Gli studenti in Parlamento: 'Non è una manovra per giovani'",
+   "url": "https://www.ansa.it/canale_legalita_scuola/notizie/2026/11/09/gli-studenti-in-parlamento-non-e-una-manovra-per-giovani_b18f2dc2-4367-4884-bb19-4ef4e69aace4.html"
   },
   {
-   "data": "2026-11-08T21:04:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Da Consob via libera a offerta Intesa per Mps, al via dal 24 novembre",
-   "url": "https://www.adnkronos.com/economia/da-consob-via-libera-a-offerta-intesa-per-mps-al-via-dal-24-novembre_2Rj70K9nmp0ahSNQSlpa8U"
-  },
-  {
-   "data": "2026-11-08T20:34:13+00:00",
+   "data": "2026-11-09T18:11:58+00:00",
    "fonte": "ANSA",
-   "titolo": "Via libera della Consob all'offerta di Intesa per Mps, si parte il 24 novembre",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/via-libera-della-consob-allofferta-di-intesa-per-mps-si-parte-il-24-novembre_15c55497-bc22-4473-aef0-930c9724f4f4.html"
+   "titolo": "La Francia apre un'inchiesta, 'ipotesi: la mano dell'Iran dietro gli attacchi hacker ai frigoriferi'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/09/francia-apre-inchiesta-ipotesi-mano-iran-dietro-gli-hacker-dei_de65c382-657a-4efa-8666-9ff0e05b25d1.html"
   },
   {
-   "data": "2026-11-08T20:30:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sinner, il consiglio di Cahill: \"Non accontentarti mai, ricordati le cinque 'P'...\"",
-   "url": "https://www.adnkronos.com/sport/cahill-sinner-addio-video-consiglio_4sQ41pQuyITuG3cxv9BquA"
-  },
-  {
-   "data": "2026-11-08T20:18:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tajani posta foto con nuovo cane: \"Benvenuto Argo, guardiano anti-hacker\"",
-   "url": "https://www.adnkronos.com/politica/tajani-posta-foto-cane-ironia-social-cyberattacchi_1w3HNQxyF0Ubl6453jKiI8"
-  },
-  {
-   "data": "2026-11-08T20:13:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Inondazioni a Gaza, lo sfogo di un bambino: \"Per quanto ancora dovremo vivere così?\"",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/08/inondazioni-a-gaza-lo-sfogo-di-un-bambino-per-quanto-ancora-dovremo-vivere-cosi_0488357e-ab37-4c82-a8da-87a75e4800b9.html"
-  },
-  {
-   "data": "2026-11-08T20:02:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra alla Camera, il governo vuole solo piccole modifiche",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/manovra-alla-camera-il-governo-vuole-solo-piccole-modifiche_7d9c1a4f-8dc8-4127-9d48-8261a159eb29.html"
-  },
-  {
-   "data": "2026-11-08T19:55:57+00:00",
+   "data": "2026-11-09T18:09:58+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Travolto da un monopattino a Roma, muore il fisico Cervellati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/travolto-da-un-monopattino-a-roma-muore-il-fisico-cervellati_9244c177-5ea9-4601-b32b-a2d2f835d201.html"
+   "titolo": "Difesa del campione di poker Camosci, 'vittima di attacco ingiustificato'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/difesa-del-campione-di-poker-camosci-vittima-di-attacco-ingiustificato_cbbee23a-4a4f-48b3-8cf9-3696440325d2.html"
   },
   {
-   "data": "2026-11-08T19:53:41+00:00",
+   "data": "2026-11-09T18:09:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Kimi Antonelli torna in Italia: l’abbraccio di Bologna al nuovo campione del mondo",
+   "url": "https://www.adnkronos.com/sport/kimi-antonelli-torna-in-italia-labbraccio-di-bologna-al-nuovo-campione-del-mondo_1wPd5roiVwgUaQp5NmB0x5"
+  },
+  {
+   "data": "2026-11-09T18:09:43+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Specializzazioni mediche, sentenza stravolge le graduatorie",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/specializzazioni-mediche-sentenza-stravolge-le-graduatorie_de96b3cc-44fc-4f89-8310-4351e51fdfda.html"
+   "titolo": "Museo Egizio diventa anche Ente pubblico di ricerca, via libera dal Cdm",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/museo-egizio-diventa-anche-ente-pubblico-di-ricerca-via-libera-dal_5be8736e-ed32-42d4-83b0-33e1aef264fe.html"
   },
   {
-   "data": "2026-11-08T19:45:40+00:00",
+   "data": "2026-11-09T18:09:16+00:00",
    "fonte": "ANSA",
-   "titolo": "Eisenkot ha il mandato per il governo, 'momento fragile per la democrazia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/herzog-affida-a-eisenkot-lincarico-di-formare-il-nuovo-governo_9bce6d47-9f8f-434e-b62a-b429a911d586.html"
+   "titolo": "Corsa a due per l'ex Ilva, Arvedi sfida gli indiani di Jindal",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/corsa-a-due-per-lex-ilva-arvedi-sfida-gli-indiani-di-jindal_96c4adb2-e1b6-4568-b94e-d40eee5a89e4.html"
   },
   {
-   "data": "2026-11-08T19:25:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attacchi hacker, martedì al Viminale un vertice su falle e contromisure",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_2ff3c55f-8d26-4dfe-830b-5bc7344a1033.html"
+   "data": "2026-11-09T18:08:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conte: \"Dibattito surreale su reddito di cittadinanza\"",
+   "url": "https://www.adnkronos.com/politica/conte-m5s-reddito-cittadinanza_aGO8kcAayYUbCRiw8bGGi"
   },
   {
-   "data": "2026-11-08T19:21:15+00:00",
+   "data": "2026-11-09T18:08:25+00:00",
    "fonte": "ANSA",
-   "titolo": "Trump lancia l'era Miller ma Vance trema, finanziatori in fuga",
-   "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/08/trump-lancia-lera-miller-ma-vance-trema-finanziatori-in-fuga_185e5971-a7a8-47f4-b15a-df683dc8bdc1.html"
+   "titolo": "Il judoka Teddy Riner in corsa per l'Eliseo: 'La Francia può rialzarsi'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/il-judoka-teddy-riner-in-corsa-per-leliseo-la-francia-puo-rialzarsi_f9fb683a-83b8-45e0-b006-100cce631e6a.html"
   },
   {
-   "data": "2026-11-08T19:10:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scontro tra treni in Egitto, 7 morti e oltre 100 feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/08/scontro-fra-due-treni-a-giza-in-egitto-almeno-7-morti-e-112-feriti_d275111b-249d-41dd-a29f-7e7b6fb13fb7.html"
+   "data": "2026-11-09T18:08:07+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Misure liberticide del governo', torna la polemica su testo di storia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/misure-liberticide-del-governo-torna-la-polemica-su-testo-di-storia_558bfcb8-8c67-4833-8684-8402d93f8fde.html"
   },
   {
-   "data": "2026-11-08T19:08:47+00:00",
+   "data": "2026-11-09T18:06:35+00:00",
    "fonte": "ANSA",
-   "titolo": "'Godzilla Minus Zero' è il Re del botteghino Usa con 32 milioni di incassi",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/08/godzilla-minus-zero-e-il-re-del-botteghino-usa-con-32-milioni-di-incassi_056acfde-df13-4b33-a0ee-c59f2cc6283b.html"
+   "titolo": "L'ad di Nvidia ammette la relazione con una spia cinese, il titolo crolla a Wall Street",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/lad-di-nvidia-ammette-la-relazione-con-una-spia-cinese-il-titolo-crolla_b836320f-e2c1-45f4-afe6-4a8f097fa5b6.html"
   },
   {
-   "data": "2026-11-08T19:05:15+00:00",
+   "data": "2026-11-09T18:02:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Settantenne uccisa in casa a coltellate, fermato il figlio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/donna-uccisa-in-casa-nel-bergamasco-sospetti-su-uno-dei-due-figli_225ce1b2-18e9-4ecb-a1c3-d0a0121c41c5.html"
+   "titolo": "Il Cdm approva il decreto legge Bollette. Pichetto: '15 euro in meno al megawattora'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/il-cdm-approva-il-decreto-legge-bollette.-pichetto-15-euro-in-meno-al-megawattora_cbf74d76-2c12-4718-89af-73ab9c1e6fec.html"
+  },
+  {
+   "data": "2026-11-09T18:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dl bollette, via libera al decreto con taglio ai costi dell'elettricità per famiglie e imprese",
+   "url": "https://www.adnkronos.com/politica/via-libera-dl-bollette-tagli-costi-elettricita-cosa-prevede_5erH8FF2cklRoDjuKJef47"
+  },
+  {
+   "data": "2026-11-09T17:57:32+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-11-09T17:56:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cortei, il 'fantasma' Siher resta in silenzio: attivista lontano da giornalisti e politica",
+   "url": "https://www.adnkronos.com/cronaca/cortei-youssef-siher-news_2A0XNhovw2Mp3MCCGVnEyq"
+  },
+  {
+   "data": "2026-11-09T17:46:39+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Pregiudicato morto a Palermo, funerale con petardi e motorini rombanti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/pregiudicato-morto-a-palermo-funerale-con-petardi-e-motorini-rombanti_1aa9fbce-a243-4909-88be-a322d6683d3c.html"
+  },
+  {
+   "data": "2026-11-09T17:46:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gaza, Save the Children: \"Circa 58% della popolazione vive in condizioni abitative critiche o catastrofiche\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/gaza-save-the-children_4XFPS1wG0JVhvPTs6svZaC"
+  },
+  {
+   "data": "2026-11-09T17:45:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Uefa, multa alla Francia di 10mila euro per colpa dei calzini",
+   "url": "https://www.adnkronos.com/sport/uefa-multa-alla-francia-di-10mila-euro-per-colpa-dei-calzini_2gbdBP9CAW6Zh5zTes4luz"
+  },
+  {
+   "data": "2026-11-09T17:43:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Petardi e motorini rombanti al funerale di Emanuele Rubino, pregiudicato morto a Palermo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/petardi-e-motorini-rombanti-al-funerale-di-emanuele-rubino-pregiudicato-morto-a-palermo_8f95c035-b1b4-4d92-aa26-8970ea71bff5.html"
+  },
+  {
+   "data": "2026-11-09T17:41:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diaco e Carlucci, nessun contatto diretto dopo l'intervista a Ravagnani",
+   "url": "https://www.adnkronos.com/spettacoli/diaco-milly-carlucci-ravagnani-intervista_1mAemDmrSxAG9Jhts18XgO"
+  },
+  {
+   "data": "2026-11-09T17:40:30+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Presidio davanti al Comune di Trieste dopo incidenti in piazza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/presidio-davanti-al-comune-di-trieste-dopo-incidenti-in-piazza_61531cf6-64ac-42e1-8307-8d380e8d10c0.html"
+  },
+  {
+   "data": "2026-11-09T17:40:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fondazione Cariplo presenta programma da 33 milioni per reinserimento detenuti",
+   "url": "https://www.adnkronos.com/cronaca/fondazione-cariplo-presenta-programma-da-33-milioni-per-reinserimento-detenuti_7tTgg42Guvhqnry2RaX21w"
+  },
+  {
+   "data": "2026-11-09T17:39:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cacciatore trovato senza vita in un bosco di Asiago",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/cacciatore-trovato-senza-vita-in-un-bosco-di-asiago_dd93937f-0390-4f72-84ce-dbf352116ed7.html"
+  },
+  {
+   "data": "2026-11-09T17:37:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pensioni, Manageritalia: \"Tagliare perequazione significa tagliare fiducia nel sistema\"",
+   "url": "https://www.adnkronos.com/economia/pensioni-manageritalia-tagliare-perequazione-significa-tagliare-fiducia-nel-sistema_27syQKYzzyaX07JRHlyp8q"
+  },
+  {
+   "data": "2026-11-09T17:35:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "All'asta da Christie's il manoscritto di 'I Have a Dream'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/allasta-da-christies-il-manoscritto-di-i-have-a-dream_26abeb7b-4bc4-461c-9a34-6a6eec5ac141.html"
+  },
+  {
+   "data": "2026-11-09T17:32:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Folla record per la messa del Papa a Buenos Aires, due milioni e mezzo di fedeli. 'Lavoro precario e instabilità distruggono le famiglie'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/09/folla-record-per-la-messa-del-papa-a-buenos-aires-due-milioni_e6b2b28c-9177-4894-a5e0-c7a2b99cb27d.html"
   }
  ]
 }
