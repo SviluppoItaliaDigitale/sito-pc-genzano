@@ -5,16 +5,46 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-08T21:48:11+00:00",
+  "generato": "2026-11-09T01:15:45+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-08T21:43:54+00:00",
+   "data": "2026-11-08T23:07:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bastano 8 minuti di esercizio per abbassare la pressione, lo studio sul 'wall sit'",
+   "url": "https://www.adnkronos.com/salute/bastano-8-minuti-di-esercizio-per-abbassare-la-pressione-lo-studio-sul-wall-sit_7vve5sXC5JzXs81j1M07m8"
+  },
+  {
+   "data": "2026-11-08T23:02:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, anche Europa ai colloqui di Abu Dhabi. Zelensky: \"Putin usa la tregua di Oleshky per schierare soldati\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-zelensky-accusa-putin_6eWr6UIYZEvWNEzFA68akU"
+  },
+  {
+   "data": "2026-11-08T23:02:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, Trump frena: \"Nuovo attacco è improbabile\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-trump-nuovo-attacco-news_Dqo369qIxMDBDtHAQ81bG"
+  },
+  {
+   "data": "2026-11-08T22:53:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incendio in appartamento a Trieste, evacuato edificio di otto piani",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/incendio-in-appartamento-a-trieste-evacuato-edificio-di-otto-piani_896aae3f-48db-49d9-8669-1ddd42f71336.html"
+  },
+  {
+   "data": "2026-11-08T22:40:22+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A, Fiorentina-Juventus 2-2",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-fiorentina-juventus-2-2_f14e0417-2435-4476-933e-30be9285b4d5.html"
+   "titolo": "La lezione del Papa a Milei, 'l'economia sia al servizio dell'uomo'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-in-argentina-milei-lo-accoglie-con-una-lunga-stretta-di-mano_b1a9c1ef-f58d-4638-863e-926dd7986a78.html"
+  },
+  {
+   "data": "2026-11-08T22:02:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: la Lazio frena e l'Inter si avvicina, Juve pari a Firenze",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/08/serie-a-la-lazio-frena-e-linter-si-avvicina-juve-pari-a-firenze_cb549bce-56d4-48af-9f8a-1bccc4410d4e.html"
   },
   {
    "data": "2026-11-08T21:37:21+00:00",
@@ -39,12 +69,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Da Consob via libera a offerta Intesa per Mps, al via dal 24 novembre",
    "url": "https://www.adnkronos.com/economia/da-consob-via-libera-a-offerta-intesa-per-mps-al-via-dal-24-novembre_2Rj70K9nmp0ahSNQSlpa8U"
-  },
-  {
-   "data": "2026-11-08T20:46:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa in Argentina, Milei lo accoglie con una lunga stretta di mano",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-in-argentina-milei-lo-accoglie-con-una-lunga-stretta-di-mano_b1a9c1ef-f58d-4638-863e-926dd7986a78.html"
   },
   {
    "data": "2026-11-08T20:34:13+00:00",
@@ -133,7 +157,7 @@
   {
    "data": "2026-11-08T19:05:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Fiorentina-Juventus 2-2 - Diretta",
+   "titolo": "Fiorentina-Juventus 2-2, Vanoli ferma Spalletti sul pari",
    "url": "https://www.adnkronos.com/sport/diretta-fiorentina-juventus-oggi-serie-a-risultato-live_6rlqjxRQOc8fOXmWb5VS0o"
   },
   {
@@ -165,30 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Il sindaco di Trieste: 'Se lanciano bombe carta nella mia città gli sparo in testa'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/sindaco-trieste-se-lanciano-bombe-carta-nella-mia-citta-gli-sparo_6b41211c-2917-4e18-b9ad-29ca0e7572ee.html"
-  },
-  {
-   "data": "2026-11-08T18:48:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ex Ilva: scade il termine per le offerte, Flacks si sfila",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/ex-ilva-scade-il-termine-per-le-offerte-flacks-si-sfila_d6889385-e4fe-42af-85c4-a6d6ef0ad901.html"
-  },
-  {
-   "data": "2026-11-08T18:37:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il turismo di lusso negli alberghi vale 10,4 miliardi, dal 2008 presenze a +111%",
-   "url": "https://www.ansa.it/canale_viaggi/notizie/news/2026/11/06/turismo-di-lusso-negli-alberghi-vale-104-miliardi-dal-2008-presenze_d5536c32-4614-4152-9069-88638f958563.html"
-  },
-  {
-   "data": "2026-11-08T18:22:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina: Europei e Francia al trilaterale di Abu Dhabi, ma i Volenterosi si esercitano",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/ucraina-europei-e-francia-al-trilaterale-di-abu-dhabi-ma-i-volenterosi-si-esercitano_093f3a23-531b-4851-ab34-fd51d14f1168.html"
-  },
-  {
-   "data": "2026-11-08T18:17:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "In Polonia si indaga per terrorismo, ancora gravi i feriti della strage di Cracovia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/in-polonia-si-indaga-per-terrorismo-ancora-gravi-i-feriti-della-strage-di-cracovia_83b09fd3-1468-4bbc-80be-f708664a5b9a.html"
   }
  ]
 }
