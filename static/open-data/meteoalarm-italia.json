@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-09T01:15:55+00:00",
+  "generato": "2026-11-09T08:00:43+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 9,
-  "scaduti_scartati": 5,
-  "in_corso": 2,
+  "avvisi": 7,
+  "scaduti_scartati": 7,
+  "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -75,19 +75,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261108102502.008"
   },
   {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-08T18:00:00+00:00",
-   "fine": "2026-11-09T06:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.006"
-  },
-  {
    "in_corso": false,
    "regione": "Sardegna",
    "fenomeno": "Temporali",
@@ -112,19 +99,6 @@
    "fine": "2026-11-10T17:59:00+00:00",
    "emesso": "2026-11-08T09:25:03+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261108102502.011"
-  },
-  {
-   "in_corso": true,
-   "regione": "Veneto",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-09T00:00:00+00:00",
-   "fine": "2026-11-09T06:59:00+00:00",
-   "emesso": "2026-11-08T09:25:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261108102502.003"
   }
  ]
 }

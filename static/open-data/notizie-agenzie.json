@@ -5,11 +5,53 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-09T01:15:45+00:00",
+  "generato": "2026-11-09T08:00:35+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-09T07:48:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "E' morto l'autore della strage di Cracovia, ancora gravi i feriti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/morto-lautore-della-strage-di-cracovia_58c72e95-1620-4020-b93b-a624f4b491cf.html"
+  },
+  {
+   "data": "2026-11-09T07:28:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Starbucks assumerà 7.500 nuovi dipendenti nel Regno Unito nei prossimi cinque anni",
+   "url": "https://www.adnkronos.com/economia/starbucks-assunzioni-5-anni-7500-dipendenti-nuovi_3z3j4knPKH0b2SjAOHz3BQ"
+  },
+  {
+   "data": "2026-11-09T07:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Credit Agricole propone a Banco Bpm avvio trattative per una fusione",
+   "url": "https://www.adnkronos.com/economia/credit-agricole-banco-bpm-proposta-di-fusione_3QCbbsah8u1N4ip3RDprqe"
+  },
+  {
+   "data": "2026-11-09T07:00:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Eisenkot ha il mandato per il governo, \"Israele può fidarsi\"",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/09/prime-pagine-eisenkot-ha-il-mandato-per-il-governo-israele-puo-fidarsi_b193d641-1277-4b03-80e8-9bd839866159.html"
+  },
+  {
+   "data": "2026-11-09T06:52:49+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sparatoria Cracovia, morto in ospedale l'autore della strage",
+   "url": "https://www.adnkronos.com/internazionale/esteri/cracovia-sparatoria-strage-morto-autore-michal-oksinski_5WZ1rx7sG3TtqMzTRBNtB9"
+  },
+  {
+   "data": "2026-11-09T06:32:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Una Terra virtuale per trovare la firma della vita su altri pianeti",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/09/una-terra-virtuale-per-trovare-la-firma-della-vita-su-altri-pianeti_e8fc8045-835b-4d22-8380-acea93cf5989.html"
+  },
+  {
+   "data": "2026-11-09T06:09:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "G7 a Parigi, focus su attacchi hacker. Tajani: \"Chiederemo un segnale forte\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/attacchi-hacker-g7-parigi-focus-oggi_2bl18RGG8kAYew59t1o03w"
+  },
   {
    "data": "2026-11-08T23:07:08+00:00",
    "fonte": "ADNKRONOS",
@@ -17,16 +59,16 @@
    "url": "https://www.adnkronos.com/salute/bastano-8-minuti-di-esercizio-per-abbassare-la-pressione-lo-studio-sul-wall-sit_7vve5sXC5JzXs81j1M07m8"
   },
   {
-   "data": "2026-11-08T23:02:46+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, anche Europa ai colloqui di Abu Dhabi. Zelensky: \"Putin usa la tregua di Oleshky per schierare soldati\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-zelensky-accusa-putin_6eWr6UIYZEvWNEzFA68akU"
-  },
-  {
    "data": "2026-11-08T23:02:01+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Iran, Trump frena: \"Nuovo attacco è improbabile\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-trump-nuovo-attacco-news_Dqo369qIxMDBDtHAQ81bG"
+  },
+  {
+   "data": "2026-11-08T23:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, anche Europa ai colloqui di Abu Dhabi. Zelensky: \"Putin usa la tregua di Oleshky per schierare soldati\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-zelensky-accusa-putin_6eWr6UIYZEvWNEzFA68akU"
   },
   {
    "data": "2026-11-08T22:53:42+00:00",
@@ -107,22 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/travolto-da-un-monopattino-a-roma-muore-il-fisico-cervellati_9244c177-5ea9-4601-b32b-a2d2f835d201.html"
   },
   {
-   "data": "2026-11-08T19:55:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Report, Piervincenzi e Di Pasquale aprono la nuova edizione: \"Siamo qui a difendere il programma\"",
-   "url": "https://www.adnkronos.com/spettacoli/report-stasera-ranucci-piervincenzi-di-pasquale_1xaJa3trJ0Ggu1dwllK4XM"
-  },
-  {
    "data": "2026-11-08T19:53:41+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Specializzazioni mediche, sentenza stravolge le graduatorie",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/specializzazioni-mediche-sentenza-stravolge-le-graduatorie_de96b3cc-44fc-4f89-8310-4351e51fdfda.html"
-  },
-  {
-   "data": "2026-11-08T19:49:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Specializzazione mediche, la decisione del Consiglio di Stato stravolge le graduatorie",
-   "url": "https://www.adnkronos.com/cronaca/specializzazioni-mediche-consiglio-di-stato-graduatorie_4MMRSNElmf4tDk8bRaUEYy"
   },
   {
    "data": "2026-11-08T19:45:40+00:00",
@@ -149,46 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/08/scontro-fra-due-treni-a-giza-in-egitto-almeno-7-morti-e-112-feriti_d275111b-249d-41dd-a29f-7e7b6fb13fb7.html"
   },
   {
+   "data": "2026-11-08T19:08:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Godzilla Minus Zero' è il Re del botteghino Usa con 32 milioni di incassi",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/08/godzilla-minus-zero-e-il-re-del-botteghino-usa-con-32-milioni-di-incassi_056acfde-df13-4b33-a0ee-c59f2cc6283b.html"
+  },
+  {
    "data": "2026-11-08T19:05:15+00:00",
    "fonte": "ANSA",
    "titolo": "Settantenne uccisa in casa a coltellate, fermato il figlio",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/donna-uccisa-in-casa-nel-bergamasco-sospetti-su-uno-dei-due-figli_225ce1b2-18e9-4ecb-a1c3-d0a0121c41c5.html"
-  },
-  {
-   "data": "2026-11-08T19:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiorentina-Juventus 2-2, Vanoli ferma Spalletti sul pari",
-   "url": "https://www.adnkronos.com/sport/diretta-fiorentina-juventus-oggi-serie-a-risultato-live_6rlqjxRQOc8fOXmWb5VS0o"
-  },
-  {
-   "data": "2026-11-08T19:04:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Diaco si scusa con Ravagnani ma avverte, 'pronto a querele'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/08/diaco-si-scusa-con-ravagnani-ma-avverte-pronto-a-querele_522d4334-b691-4a0e-9340-f8755681b297.html"
-  },
-  {
-   "data": "2026-11-08T19:04:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sconfitta",
-   "url": "https://www.ansa.it/sito/podcast/la_parola_della_settimana/2026/11/07/sconfitta_41eaf25f-8a1d-4314-b603-83a497d8f626.html"
-  },
-  {
-   "data": "2026-11-08T18:54:31+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Prof denuncia: 'Linkedin mi ha chiuso il profilo dopo un post su Gaza'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/prof-denuncia-linkedin-mi-ha-chiuso-il-profilo-dopo-un-post-su-gaza_274e1c3d-14e5-4681-8f93-34a0ee0483a2.html"
-  },
-  {
-   "data": "2026-11-08T18:53:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, ordine d'arrivo del Gp del Brasile e classifiche del Mondiale",
-   "url": "https://www.adnkronos.com/sport/norris-antonelli-ordine-arrivo-gp-brasile-classifiche-mondiale-formula-1_2xvEVOOrqHNe7IXHfgYoQw"
-  },
-  {
-   "data": "2026-11-08T18:51:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il sindaco di Trieste: 'Se lanciano bombe carta nella mia città gli sparo in testa'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/sindaco-trieste-se-lanciano-bombe-carta-nella-mia-citta-gli-sparo_6b41211c-2917-4e18-b9ad-29ca0e7572ee.html"
   }
  ]
 }
