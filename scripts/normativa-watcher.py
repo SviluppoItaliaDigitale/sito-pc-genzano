@@ -783,7 +783,7 @@ def fetch_regione_lazio(cutoff, errori):
     return out
 
 
-CM_NOTIZIE = 'https://www.cittametropolitanaroma.it/homepage/media-e-comunicazione/notizie/'
+CM_NOTIZIE = 'https://www.cittametropolitanaroma.it/tipi-di-notizia/notizie'
 PREFETTURA_NOTIZIE = 'https://prefettura.interno.gov.it/it/prefetture/roma/notizie'
 
 
@@ -791,18 +791,29 @@ def fetch_citta_metropolitana(cutoff, errori):
     out = []
     try:
         pagina = Cliente().get(CM_NOTIZIE)
-        righe = re.findall(r'<h3><a href="(https://www\.cittametropolitanaroma\.it/notizia/[^"]+)"[^>]*>(.*?)</a></h3>\s*'
-                           r'<p class="data-notizia">([^<]+)</p>(?:\s*<p class="exce-notizia">(.*?)</p>)?', pagina, flags=re.S)
-        if not righe:
-            raise RuntimeError('nessuna notizia trovata: struttura della pagina cambiata?')
-        for link, titolo, data_txt, sommario in righe:
-            d = parse_data_estesa(data_txt)
-            if not d or d < cutoff:
+        schede = re.findall(r'<article\b[^>]*>(.*?)</article>', pagina, flags=re.S)
+        date_lette = False
+        for scheda in schede:
+            titolo = re.search(r'<h3\b[^>]*>\s*<a\b[^>]*\bhref="(/novita/[^"]+)"[^>]*>(.*?)</a>',
+                               scheda, flags=re.S)
+            data = re.search(r'<time\b[^>]*\bdatetime="([^"]+)"', scheda)
+            if not titolo or not data:
                 continue
-            v = voce('Città metropolitana di Roma Capitale — notizie', 'primaria', solo_testo(titolo), link, d,
-                     tipo_atto='Notizia', ente='Città metropolitana di Roma Capitale', sommario=solo_testo(sommario))
+            d = parse_data_iso(data[1])
+            if not d:
+                continue
+            date_lette = True
+            if d < cutoff:
+                continue
+            sommario = re.search(r'<p class="it-card-text"[^>]*>(.*?)</p>', scheda, flags=re.S)
+            link = urllib.parse.urljoin(CM_NOTIZIE, titolo[1])
+            v = voce('Città metropolitana di Roma Capitale — notizie', 'primaria', solo_testo(titolo[2]), link, d,
+                     tipo_atto='Notizia', ente='Città metropolitana di Roma Capitale',
+                     sommario=solo_testo(sommario[1]) if sommario else '')
             if v['rilevanza']:
                 out.append(v)
+        if not date_lette:
+            raise RuntimeError('nessuna notizia datata trovata: struttura della pagina cambiata?')
     except Exception as e:  # noqa: BLE001
         errori.append(f'Città metropolitana di Roma: {e} ({CM_NOTIZIE})')
         print(f'  [error] città metropolitana: {e}', file=sys.stderr)
