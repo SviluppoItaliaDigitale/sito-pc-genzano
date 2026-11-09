@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-09T05:02",
+  "aggiornato": "2026-11-09T06:02",
   "data_lunga": "lunedì 9 novembre 2026",
-  "aggiornato_label": "lunedì 9 novembre 2026, ore 05:02",
+  "aggiornato_label": "lunedì 9 novembre 2026, ore 06:02",
   "alba": "06:50",
   "tramonto": "16:54",
   "corrente": {
-    "temp": 9.2,
-    "percepita": 7.5,
+    "temp": 9.0,
+    "percepita": 7.3,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 84,
+    "umidita": 88,
     "vento": 6,
-    "raffiche": 15
+    "raffiche": 17
   },
   "giorni": [
     {
@@ -44,7 +44,7 @@
       "cielo": "Nebbia",
       "tmax": 18,
       "tmin": 14,
-      "pioggia": 68,
+      "pioggia": 33,
       "pioggia_mm": 0.3,
       "raffiche": 46,
       "uv": 3,
@@ -56,7 +56,7 @@
       "cielo": "Temporale",
       "tmax": 17,
       "tmin": 15,
-      "pioggia": 87,
+      "pioggia": 99,
       "pioggia_mm": 26.5,
       "raffiche": 110,
       "uv": 3,
