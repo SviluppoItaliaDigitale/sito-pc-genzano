@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 9124 video (18 canali).
+# Totale: 9125 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2032
+    video_count: 2033
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -31617,6 +31617,11 @@ video:
     id: 3NO1sKnslAI
     titolo: 'Alex Britti: "Environmental risks exist because of each of us" - #OnePeopleOnePlanet'
     url: https://youtu.be/3NO1sKnslAI
+  rai-news-3PW3x45BBig:
+    canale: rai-news
+    id: 3PW3x45BBig
+    titolo: Il "santuario" degli animali maltrattati
+    url: https://youtu.be/3PW3x45BBig
   rai-news-3Qtg0LjIBEo:
     canale: rai-news
     id: 3Qtg0LjIBEo
