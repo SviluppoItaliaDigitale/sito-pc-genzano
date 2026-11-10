@@ -52,7 +52,6 @@
     { nome: 'Ancona', lat: 43.6158, lon: 13.5189, allinea: 'e', priorita: 15 },
     { nome: 'Perugia', lat: 43.1107, lon: 12.3908, allinea: 'w', priorita: 16 },
     { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 'w', priorita: 1 },
-    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true, priorita: 9 },
     { nome: 'Napoli', lat: 40.8518, lon: 14.2681, allinea: 'w', priorita: 3 },
     { nome: 'Bari', lat: 41.1171, lon: 16.8719, allinea: 'e', priorita: 10 },
     { nome: 'Palermo', lat: 38.1157, lon: 13.3615, allinea: 'w', priorita: 11 },
@@ -1468,6 +1467,7 @@
       if (cardW > 160) cardW = 160;
       cardH = iconS - overlap + tempR * 2 + 4 + nomeH;
       ancore = ancoreScheda(xy, cardW, cardH, loc.allinea || 's');
+      if (loc.soloAncore) ancore = ancore.slice(0, 0).concat(loc.soloAncore.map(function (n) { return ancoreScheda(xy, cardW, cardH, n)[0]; }));
       ok = false;
       for (k = 0; k < ancore.length; k++) {
         a = ancore[k];
@@ -1487,11 +1487,14 @@
     for (i = 0; i < schede.length; i++) {
       var s = schede[i];
       var cx = s.box.x + s.box.w / 2;
-      var iconBottom = s.box.y + s.iconS;
-      var attaccoY = (s.temp !== null) ? (iconBottom - s.overlap + s.tempR * 2 + 2) : iconBottom;
+      var cy = s.box.y + s.box.h / 2;
+      var hx = s.box.w / 2 - 6, hy = s.box.h / 2 - 6;
+      var dxL = s.xy[0] - cx, dyL = s.xy[1] - cy;
+      var kL = Math.max(Math.abs(dxL) / (hx || 1), Math.abs(dyL) / (hy || 1), 1);
+      var tx = cx + dxL / kL, ty = cy + dyL / kL;
       ctx.beginPath();
       ctx.moveTo(s.xy[0], s.xy[1]);
-      ctx.lineTo(cx, (s.box.y < s.xy[1] ? attaccoY : s.box.y + 4));
+      ctx.lineTo(tx, ty);
       ctx.strokeStyle = 'rgba(255,255,255,0.9)';
       ctx.lineWidth = 3.2;
       ctx.lineCap = 'round';
@@ -2034,6 +2037,7 @@
           lat: c.lat,
           lon: c.lon,
           allinea: c.allinea || 's',
+          soloAncore: c.soloAncore || null,
           evidenziato: !!c.evidenziato,
           priorita: c.priorita || (i + 20),
           orari: h.time || [],
