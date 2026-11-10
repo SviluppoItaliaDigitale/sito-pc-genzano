@@ -7,7 +7,7 @@ type: "page"
 layout: "single"
 toc: true
 lis_section: "kit-emergenza"
-dataUltimaRevisione: "2026-09-25"
+dataUltimaRevisione: "2026-11-10"
 ---
 
 Preparare un kit di emergenza non significa vivere nella paura. Significa avere a disposizione le cose essenziali se un terremoto, un'alluvione, un blackout, un incendio o un'evacuazione interrompono la normalità.
@@ -44,6 +44,8 @@ Preparalo oggi.
 Fonti: Dipartimento della Protezione Civile, campagna «Io non rischio»; [Commissione europea, Strategia dell'Unione per la preparazione](https://ec.europa.eu/commission/presscorner/detail/it/ip_25_856) (26 marzo 2025) per le 72 ore.
 
 </details>
+
+Il 30 ottobre 2026 la Commissione europea ha adottato orientamenti non vincolanti. Precisano le 72 ore già citate dalla strategia del 2025. Il testo non fissa i litri d'acqua. Distingue le scorte di casa dallo zaino per uscire. I dettagli sono nell'[articolo del 10 novembre 2026](/comunicazioni/2026-11-10-orientamenti-ue-preparazione-popolazione/).
 
 ## I tre kit da preparare
 
