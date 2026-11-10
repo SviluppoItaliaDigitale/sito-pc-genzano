@@ -513,6 +513,13 @@ jobs:
           python3 scripts/test-testi-alternativi.py
           python3 scripts/test-genera-social.py
 
+      # 10/11/2026: il mirror del bollettino DPC può restare su un timbro
+      # ancora valido. La prova controlla che si prenda il bollettino completo
+      # più recente fra fonte ufficiale e mirror, e che una fonte muta non
+      # svuoti lo snapshot.
+      - name: "🗺️ Timbro del bollettino DPC"
+        run: python3 scripts/test-genera-dpc-bollettino.py
+
       # 22/10/2026: la cornice di microtesto si mette anche sulle grafiche fatte in
       # altro modo (locandine, programmi di grafica esterni) con
       # `python3 scripts/microtesto_cornice.py GRAFICA.png`. Prove con grafiche

@@ -13,30 +13,38 @@ colorano le zone sulla cartina della Sala situazioni.
 
 DA DOVE SI PRENDE IL TIMBRO
 ---------------------------
-🔴 Dal **mirror opendatasicilia**, la stessa fonte che il sito usa già per la
-barra di allerta (`scripts/check-allerta.py`). Quel repository ripubblica i
-bollettini del DPC in CSV con **nomi di file fissi** (`bollettino-oggi-zone-
-latest.csv`) e, dentro, il campo `data_pubblicazione`: `2026-09-22T14:21:59`
-corrisponde esattamente al file ufficiale `20260922_1421.json`. Verificato su
-sei giorni consecutivi (17→22 settembre 2026): sei timbri su sei coincidono e
-sei file ufficiali esistono.
+Si leggono **entrambe** le fonti e si tiene il bollettino completo più recente.
 
-È la strada più solida perché non dipende da nessuna quota: leggere l'elenco
-dei commit dall'**API di GitHub** costa **60 richieste l'ora per indirizzo IP**
-senza credenziali, e fatto dal browser di ogni visitatore significa che in sede,
-con più postazioni sullo stesso IP, la cartina resta senza colori. L'API resta
-qui solo come ripiego, se il mirror non risponde.
+1. **Fonte ufficiale.** L'albero git del repository elenca `files/*.json` e
+   `files/topojson/*`. Il timbro è nel nome (`20261109_1402.json` insieme a
+   `_today.json` e `_tomorrow.json`). Bastano tre richieste, fatte in CI: il
+   browser della Sala non le fa, legge solo questo snapshot.
+2. **Mirror opendatasicilia**, la stessa fonte della barra di allerta
+   (`scripts/check-allerta.py`). Il CSV a nome fisso
+   `bollettino-oggi-zone-latest.csv` ha `data_pubblicazione`
+   (`2026-09-22T14:21:59+01:00` → `20260922_1421`).
 
-🔴 **Il contenuto resta del Dipartimento.** Il mirror serve solo a sapere QUALE
-bollettino è quello corrente: le due carte delle zone si scaricano dal
-repository ufficiale, che è la fonte primaria (rule 06, gerarchia delle fonti).
-Lo script non accetta un timbro che sulla fonte ufficiale non esiste.
+Si sceglie il timbro più alto fra quelli trovati, ma solo se sulla fonte
+ufficiale esiste la terna (`<timbro>.json` + le due carte). Un timbro più
+vecchio non sostituisce lo snapshot già scritto.
 
-🔴 FAIL-SAFE. Se le fonti non rispondono, lo snapshot resta quello di prima e lo
-script esce 0: mai un deploy rotto per una fonte di terzi, mai un file svuotato.
-🔴 E una risposta che si legge ma è vuota non è un dato: se il CSV arriva senza
-`data_pubblicazione` leggibile, lo schema è cambiato — si lascia il file com'era
-e si dichiara l'anomalia, invece di scrivere uno snapshot nullo.
+🔴 **Perché non basta il mirror.** Dall'8 al 10 novembre 2026 il CSV è rimasto
+fermo a `20261108_1422` mentre il Dipartimento aveva già pubblicato
+`20261109_1402`. Lo script accettava il mirror appena la terna dell'8 novembre
+esisteva ancora, e non guardava la fonte ufficiale (issue #1796).
+
+🔴 **Il contenuto resta del Dipartimento.** Il mirror e l'albero servono solo a
+sapere QUALE bollettino è il più recente: le carte si scaricano dal repository
+ufficiale (rule 06, gerarchia delle fonti). Lo script non accetta un timbro
+che sulla fonte ufficiale non ha la terna completa.
+
+Se l'albero ufficiale non si legge, si ripiega sull'elenco dei commit (l'API
+di GitHub). Se una delle due fonti è ferma o non risponde, si usa l'altra. Se
+non si riconosce nessun timbro, lo snapshot resta quello di prima e lo script
+esce 0: mai un deploy rotto per una fonte di terzi, mai un file svuotato.
+Una risposta che si legge ma è vuota non è un dato: CSV senza
+`data_pubblicazione`, o albero senza terna, si dichiarano e non si scrive uno
+snapshot nullo.
 
 Licenza dei dati: CC BY 4.0 — Dipartimento della Protezione Civile.
 
@@ -44,6 +52,8 @@ Uso:  python3 scripts/genera-dpc-bollettino.py [--dry-run] [--stamp AAAAMMGG_HHM
 """
 from __future__ import annotations
 
+import csv
+import io
 import json
 import os
 import re
@@ -63,8 +73,16 @@ MIRROR = ("https://raw.githubusercontent.com/opendatasicilia/"
 OUT = Path(__file__).resolve().parent.parent / "static" / "open-data" / "dpc-bollettino.json"
 UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/ Sala situazioni)"
 STAMP = re.compile(r"(\d{8}_\d{4})")
-COMMIT_DA_LEGGERE = 8      # solo per il ripiego: il pipeline del DPC committa anche altro
+# Quanti bollettini recenti dell'albero ufficiale si confrontano col mirror.
+# Il più nuovo basta quasi sempre; i precedenti servono se la sua terna non
+# risponde ancora su raw.githubusercontent.com.
+FINESTRA_UFFICIALE = 8
+COMMIT_DA_LEGGERE = 20     # solo per il ripiego: il pipeline del DPC committa anche altro
 TIMEOUT = 30
+NOTA = ("Il timbro è il bollettino completo più recente fra il repository "
+        "ufficiale del Dipartimento e il mirror opendatasicilia. Le carte "
+        "restano quelle ufficiali. Se una fonte è ferma o non risponde, si "
+        "usa l'altra.")
 
 
 def prendi(url: str, json_atteso: bool = True):
@@ -93,18 +111,25 @@ def terna_completa(t: str) -> bool:
             and esiste(f"{RAW}topojson/{t}_tomorrow.json"))
 
 
-def stamp_dal_mirror() -> str | None:
-    """Il timbro ricavato da `data_pubblicazione` del CSV a nome fisso."""
-    testo = prendi(MIRROR, json_atteso=False)
-    righe = testo.splitlines()
-    if len(righe) < 2:
+def timbro_da_csv(testo: str) -> str | None:
+    """`data_pubblicazione` del CSV, nell'ora del bollettino (non in UTC).
+
+    `2026-11-08T14:22:59+01:00` è il file `20261108_1422.json`: si tiene l'ora
+    scritta, non la si converte.
+    """
+    try:
+        righe = csv.reader(io.StringIO(testo))
+        intestazione = [c.strip() for c in next(righe)]
+    except StopIteration:
         return None
-    intestazione = [c.strip() for c in righe[0].split(",")]
     if "data_pubblicazione" not in intestazione:
-        return None                                   # schema cambiato
+        return None
     i = intestazione.index("data_pubblicazione")
-    campi = righe[1].split(",")
-    if i >= len(campi):
+    try:
+        campi = next(righe)
+    except StopIteration:
+        return None
+    if i >= len(campi) or not campi[i].strip():
         return None
     try:
         d = datetime.fromisoformat(campi[i].strip())
@@ -113,22 +138,189 @@ def stamp_dal_mirror() -> str | None:
     return d.strftime("%Y%m%d_%H%M")
 
 
-def stamp_dall_api() -> str | None:
-    """Ripiego: i nomi dei file toccati dagli ultimi commit del DPC."""
+def stamp_dal_mirror() -> str | None:
+    """Il timbro ricavato da `data_pubblicazione` del CSV a nome fisso."""
+    return timbro_da_csv(prendi(MIRROR, json_atteso=False))
+
+
+def timbri_completi(nomi_json: list[str], nomi_topo: list[str]) -> list[str]:
+    """Timbri che nell'albero hanno il JSON e le due carte, dal più recente."""
+    topo = set(nomi_topo)
+    trovati = []
+    for nome in nomi_json:
+        m = re.fullmatch(r"(\d{8}_\d{4})\.json", nome)
+        if not m:
+            continue
+        t = m.group(1)
+        if f"{t}_today.json" in topo and f"{t}_tomorrow.json" in topo:
+            trovati.append(t)
+    return sorted(set(trovati), reverse=True)
+
+
+def timbri_da_alberi(albero_files: dict, albero_topo: dict) -> list[str]:
+    """Legge i due alberi git già scaricati. Un albero troncato non è la lista
+    vera: meglio fallire e passare al ripiego che scegliere un bollettino vecchio."""
+    if albero_files.get("truncated") or albero_topo.get("truncated"):
+        raise RuntimeError("albero ufficiale troncato")
+    nomi_json = [t.get("path", "") for t in albero_files.get("tree") or []
+                 if t.get("type") == "blob"]
+    nomi_topo = [t.get("path", "") for t in albero_topo.get("tree") or []
+                 if t.get("type") == "blob"]
+    return timbri_completi(nomi_json, nomi_topo)
+
+
+def _url_sottoalbero(albero: dict, nome: str) -> str:
+    for t in albero.get("tree") or []:
+        if t.get("path") == nome and t.get("type") == "tree" and t.get("url"):
+            return t["url"]
+    raise RuntimeError(f"manca l'albero {nome}")
+
+
+def timbri_ufficiali() -> list[str]:
+    """Timbri completi nel repository del Dipartimento, dal più recente."""
+    root = prendi(f"{API}/git/trees/master")
+    files = prendi(_url_sottoalbero(root, "files"))
+    topo = prendi(_url_sottoalbero(files, "topojson"))
+    return timbri_da_alberi(files, topo)
+
+
+def timbri_nei_nomi(nomi: list[str]) -> list[str]:
+    return sorted({m.group(1) for n in nomi if (m := STAMP.search(n or ""))}, reverse=True)
+
+
+def timbri_dai_commit() -> list[str]:
+    """Ripiego se l'albero non si legge: i timbri nominati dagli ultimi commit."""
     commit = prendi(f"{API}/commits?per_page={COMMIT_DA_LEGGERE}")
     if not isinstance(commit, list) or not commit:
-        return None
+        return []
+    trovati: set[str] = set()
     for c in commit:
         sha = c.get("sha")
         if not sha:
             continue
         det = prendi(f"{API}/commits/{sha}")
-        timbri = sorted({m.group(1) for f in (det.get("files") or [])
-                         if (m := STAMP.search(f.get("filename", "")))}, reverse=True)
-        for t in timbri:
-            if terna_completa(t):
-                return t
-    return None
+        nomi = [f.get("filename", "") for f in (det.get("files") or [])]
+        trovati.update(timbri_nei_nomi(nomi))
+    return sorted(trovati, reverse=True)
+
+
+def raggruppa(candidati: list[tuple[str, str]]) -> dict[str, list[str]]:
+    by: dict[str, list[str]] = {}
+    for stamp, fonte in candidati:
+        if not STAMP.fullmatch(stamp or ""):
+            continue
+        fonti = by.setdefault(stamp, [])
+        if fonte not in fonti:
+            fonti.append(fonte)
+    return by
+
+
+def etichetta(fonti: list[str]) -> str:
+    if len(fonti) == 1:
+        return fonti[0]
+    return " e ".join(fonti) + " (concordi)"
+
+
+def scegli_timbro(candidati: list[tuple[str, str]], completo):
+    """Il timbro più recente la cui terna esiste. Ritorna
+    (timbro, fonte, raggruppati, incompleti). Senza un timbro usabile i primi
+    due valori sono vuoti."""
+    by = raggruppa(candidati)
+    incompleti = []
+    for stamp in sorted(by, reverse=True):
+        if completo(stamp):
+            return stamp, etichetta(by[stamp]), by, incompleti
+        incompleti.append(stamp)
+    return "", "", by, incompleti
+
+
+def migliori_per_fonte(candidati: list[tuple[str, str]]) -> dict[str, str]:
+    """Per ogni fonte, solo il timbro più recente che ha proposto."""
+    migliori: dict[str, str] = {}
+    for stamp, fonte in candidati:
+        if not STAMP.fullmatch(stamp or ""):
+            continue
+        if fonte not in migliori or stamp > migliori[fonte]:
+            migliori[fonte] = stamp
+    return migliori
+
+
+def messaggio_scelta(timbro: str, via: str, candidati: list[tuple[str, str]],
+                     incompleti: list[str], problemi: list[str]) -> str:
+    """Una riga: timbro scelto, fonte, e che cosa dicevano le altre."""
+    migliori = migliori_per_fonte(candidati)
+    per_timbro: dict[str, list[str]] = {}
+    for fonte, stamp in migliori.items():
+        per_timbro.setdefault(stamp, [])
+        if fonte not in per_timbro[stamp]:
+            per_timbro[stamp].append(fonte)
+    pezzi = [f"scelto {timbro} ({via})"]
+    piu_vecchi = [f"{s} dal {etichetta(per_timbro[s])}"
+                  for s in sorted(per_timbro, reverse=True) if s != timbro]
+    if piu_vecchi:
+        pezzi.append("più vecchi: " + "; ".join(piu_vecchi))
+    if incompleti:
+        dett = []
+        for s in incompleti:
+            fonti = per_timbro.get(s) or []
+            dett.append(f"{s} ({etichetta(fonti)})" if fonti else s)
+        pezzi.append("senza terna completa: " + ", ".join(dett))
+    if problemi:
+        pezzi.append("fonti: " + "; ".join(problemi))
+    return "[dpc] " + " — ".join(pezzi)
+
+
+def decisione(timbro: str, vecchio: str, manuale: bool = False) -> str:
+    """`scrivi`, `invariato` o `piu_vecchio`. Un ripristino a mano può tornare
+    indietro; una lettura delle fonti no."""
+    if not vecchio or timbro == vecchio:
+        return "invariato" if vecchio and timbro == vecchio else "scrivi"
+    if manuale or timbro > vecchio:
+        return "scrivi"
+    return "piu_vecchio"
+
+
+def candidati_dalle_fonti() -> tuple[list[tuple[str, str]], list[str]]:
+    """Legge fonte ufficiale e mirror. Ognuna può mancare senza fermare l'altra."""
+    candidati: list[tuple[str, str]] = []
+    problemi: list[str] = []
+    ufficiali: list[str] = []
+    try:
+        ufficiali = timbri_ufficiali()
+    except Exception as e:
+        problemi.append(f"albero ufficiale non raggiungibile ({e})")
+    if ufficiali:
+        for t in ufficiali[:FINESTRA_UFFICIALE]:
+            candidati.append((t, "fonte ufficiale"))
+    else:
+        if not problemi:
+            problemi.append("albero ufficiale senza una terna completa")
+        try:
+            for t in timbri_dai_commit():
+                candidati.append((t, "API dei commit"))
+            if not any(f == "API dei commit" for _, f in candidati):
+                problemi.append("API dei commit senza un bollettino riconoscibile")
+        except Exception as e:
+            problemi.append(f"API dei commit non raggiungibile ({e})")
+    try:
+        t = stamp_dal_mirror()
+        if t:
+            candidati.append((t, "mirror opendatasicilia"))
+        else:
+            problemi.append("mirror senza data_pubblicazione riconoscibile")
+    except Exception as e:
+        problemi.append(f"mirror non raggiungibile ({e})")
+    return candidati, problemi
+
+
+def leggi_snapshot(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        dati = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return dati if isinstance(dati, dict) else {}
 
 
 def main() -> int:
@@ -144,36 +336,38 @@ def main() -> int:
         print(f"[dpc] timbro non valido: {manuale}")
         return 1
 
-    timbro, via = None, ""
+    problemi: list[str] = []
     if manuale:
         if not terna_completa(manuale):
             print(f"[dpc] il bollettino {manuale} non è completo sulla fonte ufficiale")
             return 1
         timbro, via = manuale, "indicato a mano"
+        candidati, incompleti = [(manuale, "indicato a mano")], []
     else:
-        try:
-            t = stamp_dal_mirror()
-            if t and terna_completa(t):
-                timbro, via = t, "mirror opendatasicilia"
-            elif t:
-                print(f"[dpc] il mirror indica {t}, ma sulla fonte ufficiale non c'è "
-                      "la terna completa: provo l'API")
-        except Exception as e:
-            print(f"[dpc] mirror non raggiungibile ({e}): provo l'API")
-
-        if not timbro:
-            try:
-                t = stamp_dall_api()
-                if t:
-                    timbro, via = t, "API di GitHub (ripiego)"
-            except Exception as e:
-                print(f"[dpc] anche l'API non risponde ({e}): snapshot lasciato com'era")
-                return 0
+        candidati, problemi = candidati_dalle_fonti()
+        timbro, via, _, incompleti = scegli_timbro(candidati, terna_completa)
 
     if not timbro:
-        # non è "nessun bollettino": è che non lo abbiamo riconosciuto
-        print("[dpc] ATTENZIONE: nessun timbro riconosciuto — schema dei nomi o "
-              "del CSV forse cambiato. Snapshot lasciato com'era.")
+        for p in problemi:
+            print(f"[dpc] {p}")
+        print("[dpc] ATTENZIONE: nessun bollettino completo riconosciuto. "
+              "Snapshot lasciato com'era.")
+        return 0
+
+    vecchio = leggi_snapshot(OUT)
+    vecchio_stamp = vecchio.get("stamp") or ""
+    if not STAMP.fullmatch(str(vecchio_stamp)):
+        vecchio_stamp = ""
+    esito = decisione(timbro, vecchio_stamp, manuale=bool(manuale))
+    print(messaggio_scelta(timbro, via, candidati, incompleti,
+                           [] if manuale else problemi))
+
+    if esito == "invariato":
+        print(f"[dpc] {timbro} invariato ({via})")
+        return 0
+    if esito == "piu_vecchio":
+        print(f"[dpc] {timbro} più vecchio dello snapshot {vecchio_stamp}: "
+              "lasciato com'era")
         return 0
 
     try:
@@ -191,22 +385,9 @@ def main() -> int:
             "fonte": f"https://github.com/{REPO}",
             "timbro_da": via,
             "licenza": "CC BY 4.0 — Dipartimento della Protezione Civile",
-            "nota": "Il repository del DPC non espone un nome di file stabile: il "
-                    "timbro del bollettino corrente si ricava dal mirror "
-                    "opendatasicilia (stessa fonte della barra di allerta del sito) "
-                    "e si verifica sulla fonte ufficiale, da cui restano le carte.",
+            "nota": NOTA,
         },
     }
-
-    vecchio = {}
-    if OUT.exists():
-        try:
-            vecchio = json.loads(OUT.read_text(encoding="utf-8"))
-        except Exception:
-            vecchio = {}
-    if vecchio.get("stamp") == timbro:
-        print(f"[dpc] {timbro} invariato ({via})")
-        return 0
 
     if secco:
         print(f"[dpc] (prova) scriverei {timbro} — {nome} [{via}]")
