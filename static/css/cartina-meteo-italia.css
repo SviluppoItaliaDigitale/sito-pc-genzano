@@ -432,6 +432,9 @@
   box-shadow: none;
 }
 #cmi-mappa, #cmi-mappa-b { height: 640px; }
+@media (min-width: 992px) {
+  #cmi-mappa, #cmi-mappa-b { height: 880px; max-height: 88vh; }
+}
 #cmi-mappa-citta { height: 480px; background: #e8eef3; }
 @media (max-width: 575px) {
   #cmi-mappa, #cmi-mappa-b { height: 440px; }
