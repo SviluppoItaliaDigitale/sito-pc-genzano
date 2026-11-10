@@ -41,23 +41,21 @@
     { nome: 'Terracina', lat: 41.2917, lon: 13.2486, allinea: 's', priorita: 14 }
   ];
   var COMUNI_ITALIA = [
-    { nome: 'Milano', lat: 45.4642, lon: 9.1900, allinea: 'n', priorita: 2 },
-    { nome: 'Torino', lat: 45.0703, lon: 7.6869, allinea: 'w', priorita: 4 },
-    { nome: 'Genova', lat: 44.4056, lon: 8.9463, allinea: 's', priorita: 8 },
-    { nome: 'Venezia', lat: 45.4408, lon: 12.3155, allinea: 'e', priorita: 7 },
-    { nome: 'Bolzano', lat: 46.4983, lon: 11.3548, allinea: 'n', priorita: 14 },
-    { nome: 'Trieste', lat: 45.6495, lon: 13.7768, allinea: 'e', priorita: 13 },
-    { nome: 'Bologna', lat: 44.4949, lon: 11.3426, allinea: 'n', priorita: 6 },
-    { nome: 'Firenze', lat: 43.7696, lon: 11.2558, allinea: 'w', priorita: 5 },
-    { nome: 'Ancona', lat: 43.6158, lon: 13.5189, allinea: 'e', priorita: 15 },
-    { nome: 'Perugia', lat: 43.1107, lon: 12.3908, allinea: 'w', priorita: 16 },
-    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 'w', priorita: 1 },
-    { nome: 'Napoli', lat: 40.8518, lon: 14.2681, allinea: 'w', priorita: 3 },
-    { nome: 'Bari', lat: 41.1171, lon: 16.8719, allinea: 'e', priorita: 10 },
-    { nome: 'Palermo', lat: 38.1157, lon: 13.3615, allinea: 'w', priorita: 11 },
-    { nome: 'Catania', lat: 37.5079, lon: 15.0830, allinea: 'e', priorita: 12 },
-    { nome: 'Cagliari', lat: 39.2238, lon: 9.1217, allinea: 's', priorita: 17 },
-    { nome: 'Reggio Calabria', etichetta: 'Reggio C.', lat: 38.1113, lon: 15.6471, allinea: 'e', priorita: 18 }
+    { nome: 'Torino', lat: 45.0703, lon: 7.6869, priorita: 4 },
+    { nome: 'Milano', lat: 45.4642, lon: 9.1900, priorita: 2 },
+    { nome: 'Venezia', lat: 45.4408, lon: 12.3155, priorita: 6 },
+    { nome: 'Bologna', lat: 44.4949, lon: 11.3426, priorita: 7 },
+    { nome: 'Genova', lat: 44.4056, lon: 8.9463, priorita: 8 },
+    { nome: 'Firenze', lat: 43.7696, lon: 11.2558, priorita: 5 },
+    { nome: 'Ancona', lat: 43.6158, lon: 13.5189, priorita: 10 },
+    { nome: 'Roma', lat: 41.9028, lon: 12.4964, priorita: 1 },
+    { nome: 'Pescara', lat: 42.4618, lon: 14.2160, priorita: 11 },
+    { nome: 'Napoli', lat: 40.8518, lon: 14.2681, priorita: 3 },
+    { nome: 'Bari', lat: 41.1171, lon: 16.8719, priorita: 9 },
+    { nome: 'Potenza', lat: 40.6395, lon: 15.8056, priorita: 13 },
+    { nome: 'Reggio Calabria', etichetta: 'Reggio C.', lat: 38.1113, lon: 15.6471, priorita: 14 },
+    { nome: 'Palermo', lat: 38.1157, lon: 13.3615, priorita: 12 },
+    { nome: 'Cagliari', lat: 39.2238, lon: 9.1217, priorita: 15 }
   ];
   var NOTA_DOMINIO_LOCALE = 'Anche i modelli a 1,5–2 km risolvono quest\'area in modo approssimativo: un punto della griglia rappresenta qualche chilometro, non il singolo abitato. ICON-2I copre Lazio e Castelli Romani. ICON-D2, AROME, AROME HD e ICON-CH coprono soprattutto il Nord e l\'arco alpino e in genere restano fuori da questa inquadratura.';
 
@@ -128,7 +126,7 @@
   };
 
   var VARIABILI = [
-    { id: 'tempo_previsto', nome: 'Tempo previsto', unita: '', campi: ['weather_code', 'cloud_cover', 'precipitation', 'snowfall', 'cape', 'showers'], scala: 'tempo', tempo: true, info: 'Icone del tempo sui comuni, calcolate sul punto esatto dell\'abitato. Lo sfondo morbido indica nuvolosità e precipitazioni in modo continuo, non a mosaico. I temporali con grandine (codici 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un\'allerta ufficiale.' },
+    { id: 'tempo_previsto', nome: 'Tempo previsto', unita: '', campi: ['weather_code', 'cloud_cover', 'precipitation', 'snowfall', 'cape', 'showers'], scala: 'tempo', tempo: true, info: 'Pittogramma del tempo all\'ora scelta sulle principali città, con temperatura minima (blu) e massima (rosso) del giorno mostrato, su una cartina pulita. I temporali con grandine (codici 96 e 99) arrivano solo da alcuni modelli.' },
     { id: 'pressure_msl', nome: 'Pressione al livello del mare', unita: 'hPa', campi: ['pressure_msl'], scala: 'mslp' },
     { id: 'precipitation', nome: 'Precipitazioni orarie', unita: 'mm', campi: ['precipitation'], scala: 'prec' },
     { id: 'precipitation_6h', nome: 'Precipitazioni in 6 ore', unita: 'mm', campi: ['precipitation'], scala: 'prec6', derivata: 'somma6' },
@@ -1325,8 +1323,8 @@
   }
   function massimoSchede(vista) {
     var stretta = eVistaStretta(vista);
-    if (dominioId === 'italia') return stretta ? 8 : 18;
-    if (dominioId === 'lazio') return stretta ? 7 : 12;
+    if (dominioId === 'italia') return stretta ? 10 : 15;
+    if (dominioId === 'lazio') return stretta ? 8 : 16;
     return stretta ? 8 : 10;
   }
   function indiceOraLocale(loc, iso) {
@@ -1424,18 +1422,26 @@
     ctx.restore();
   }
 
+  function minMaxGiorno(loc, iso) {
+    if (!loc || !loc.orari || !loc.temp || !iso) return null;
+    var giorno = String(iso).slice(0, 10), i, v, mn = Infinity, mx = -Infinity;
+    for (i = 0; i < loc.orari.length; i++) {
+      if (String(loc.orari[i]).slice(0, 10) !== giorno) continue;
+      v = loc.temp[i];
+      if (v === null || typeof v === 'undefined' || isNaN(v)) continue;
+      if (v < mn) mn = v;
+      if (v > mx) mx = v;
+    }
+    return mn === Infinity ? null : { min: mn, max: mx };
+  }
   function disegnaSchedeTempo(ctx, vista, stato, opts) {
     var locali = (stato && stato.locali) || [];
     if (!locali.length) return;
     var iso = (stato.orari && stato.orari[stato.indice]) || null;
     var stretta = eVistaStretta(vista);
-    var dist = distanzaMinimaComuni(vista, locali);
-    var denso = dist < 110;
-    var iconS = stretta ? 42 : (denso ? 48 : 58);
-    if (denso && stretta) iconS = 38;
-    var tempR = stretta ? 11 : (denso ? 12 : 13.5);
-    var nomeH = stretta ? 14 : 16;
-    var overlap = Math.round(tempR * 0.45);
+    var piccolo = dominioId === 'italia' || stretta;
+    var iconS = stretta ? 36 : (piccolo ? 42 : 52);
+    var fontT = piccolo ? 12 : 14, fontN = piccolo ? 11 : 12;
     var maxN = massimoSchede(vista);
     var occupati = [];
     if (opts && opts.decorazioni) {
@@ -1444,105 +1450,93 @@
     }
     occupati.push({ x: 0, y: 0, w: 44, h: 80 });
     var elenco = locali.slice().sort(function (a, b) { return (a.priorita || 99) - (b.priorita || 99); });
-    var schede = [], i, loc, idx, code, temp, cat, nome, tw, cardW, cardH, xy, ancore, a, k, ok, box, img, cape;
+    var schede = [], i, j, loc, idx, code, cat, mm, nome, tw, w, h, xy, cand, box, ok, o, img;
+    var spost = [[0, 0], [0, -1], [0, 1], [1, 0], [-1, 0], [1, -1], [-1, -1], [1, 1], [-1, 1], [0, -1.6], [0, 1.6], [1.6, 0], [-1.6, 0], [1.4, -1.4], [-1.4, -1.4], [1.4, 1.4], [-1.4, 1.4]];
     ctx.save();
-    ctx.font = 'bold ' + (stretta ? '11' : '12') + 'px Titillium Web, Arial, sans-serif';
     for (i = 0; i < elenco.length && schede.length < maxN; i++) {
       loc = elenco[i];
       idx = indiceOraLocale(loc, iso);
       if (idx < 0) continue;
       code = (loc.code && loc.code[idx] !== null && typeof loc.code[idx] !== 'undefined') ? loc.code[idx] : null;
-      temp = (loc.temp && loc.temp[idx] !== null && typeof loc.temp[idx] !== 'undefined') ? loc.temp[idx] : null;
-      cat = raffinaCategoria(
-        categoriaDaCodice(code),
-        (loc.snow && loc.snow[idx]) || 0,
-        0
-      );
-      if (!cat && code === null && temp === null) continue;
+      cat = raffinaCategoria(categoriaDaCodice(code), (loc.snow && loc.snow[idx]) || 0, 0);
+      mm = minMaxGiorno(loc, iso);
+      if (!cat && !mm) continue;
       xy = vista.xy(loc.lat, loc.lon);
-      if (xy[0] < 10 || xy[1] < 10 || xy[0] > vista.w - 10 || xy[1] > vista.h - 10) continue;
+      if (xy[0] < 6 || xy[1] < 6 || xy[0] > vista.w - 6 || xy[1] > vista.h - 6) continue;
       nome = loc.etichetta || loc.nome;
+      ctx.font = '600 ' + fontN + 'px Titillium Web, Arial, sans-serif';
       tw = ctx.measureText(nome).width;
-      cardW = Math.max(iconS, tw, tempR * 2 + 4) + 10;
-      if (cardW > 160) cardW = 160;
-      cardH = iconS - overlap + tempR * 2 + 4 + nomeH;
-      ancore = ancoreScheda(xy, cardW, cardH, loc.allinea || 's');
-      if (loc.soloAncore) ancore = ancore.slice(0, 0).concat(loc.soloAncore.map(function (n) { return ancoreScheda(xy, cardW, cardH, n)[0]; }));
+      w = Math.max(iconS, tw + 4, piccolo ? 50 : 60);
+      h = iconS + fontT + fontN + 6;
       ok = false;
-      for (k = 0; k < ancore.length; k++) {
-        a = ancore[k];
-        if (a.x < 2 || a.y < 2 || a.x + cardW > vista.w - 2 || a.y + cardH > vista.h - 2) continue;
-        box = { x: a.x, y: a.y, w: cardW, h: cardH };
-        var collision = false, o;
-        for (o = 0; o < occupati.length; o++) {
-          if (rettangoliSovrapposti(box, occupati[o], denso ? 2 : 4)) { collision = true; break; }
-        }
-        if (collision) continue;
+      for (j = 0; j < spost.length && !ok; j++) {
+        var dx = spost[j][0] * (w * 0.6 + 6), dy = spost[j][1] * (h * 0.55 + 4);
+        cand = { x: xy[0] - w / 2 + dx, y: xy[1] - iconS / 2 - 4 + dy, w: w, h: h };
+        if (cand.x < 2 || cand.y < 2 || cand.x + w > vista.w - 2 || cand.y + h > vista.h - 2) continue;
         ok = true;
-        occupati.push(box);
-        schede.push({ loc: loc, xy: xy, box: box, cat: cat, code: code, temp: temp, nome: nome, iconS: iconS, tempR: tempR, overlap: overlap, nomeH: nomeH });
-        break;
+        for (o = 0; o < occupati.length; o++) {
+          if (rettangoliSovrapposti(cand, occupati[o], 1)) { ok = false; break; }
+        }
       }
+      if (!ok) continue;
+      occupati.push(cand);
+      schede.push({ loc: loc, xy: xy, box: cand, cat: cat, mm: mm, nome: nome, spostato: j > 1 });
     }
     for (i = 0; i < schede.length; i++) {
-      var s = schede[i];
-      var cx = s.box.x + s.box.w / 2;
-      var cy = s.box.y + s.box.h / 2;
-      var hx = s.box.w / 2 - 6, hy = s.box.h / 2 - 6;
-      var dxL = s.xy[0] - cx, dyL = s.xy[1] - cy;
-      var kL = Math.max(Math.abs(dxL) / (hx || 1), Math.abs(dyL) / (hy || 1), 1);
-      var tx = cx + dxL / kL, ty = cy + dyL / kL;
-      ctx.beginPath();
-      ctx.moveTo(s.xy[0], s.xy[1]);
-      ctx.lineTo(tx, ty);
-      ctx.strokeStyle = 'rgba(255,255,255,0.9)';
-      ctx.lineWidth = 3.2;
-      ctx.lineCap = 'round';
-      ctx.stroke();
-      ctx.strokeStyle = 'rgba(26,26,26,0.55)';
-      ctx.lineWidth = 1.15;
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(s.xy[0], s.xy[1], s.loc.evidenziato ? 4.5 : 3, 0, Math.PI * 2);
-      ctx.fillStyle = s.loc.evidenziato ? '#003366' : 'rgba(26,26,26,0.85)';
-      ctx.fill();
-      ctx.strokeStyle = s.loc.evidenziato ? '#ffbe2e' : '#ffffff';
-      ctx.lineWidth = s.loc.evidenziato ? 2 : 1.2;
-      ctx.stroke();
-    }
-    for (i = 0; i < schede.length; i++) {
-      s = schede[i];
-      box = s.box;
-      var iconX = box.x + (box.w - s.iconS) / 2;
-      var iconY = box.y;
-      img = s.cat ? iconeTempo[s.cat] : null;
-      if (img) disegnaIconaConAureola(ctx, img, iconX, iconY, s.iconS);
-      cape = (s.loc.cape && s.cat === 'temporale') ? s.loc.cape[indiceOraLocale(s.loc, iso)] : null;
-      if (s.cat === 'temporale' && cape !== null && typeof cape !== 'undefined' && cape >= 1000) {
+      var s = schede[i], bx = s.box;
+      var cx = bx.x + bx.w / 2, cy = bx.y + iconS / 2 + 4;
+      if (s.spostato) {
         ctx.beginPath();
-        ctx.moveTo(iconX + s.iconS - 11, iconY + 10);
-        ctx.lineTo(iconX + s.iconS - 2, iconY + 10);
-        ctx.lineTo(iconX + s.iconS - 6.5, iconY + 2);
-        ctx.closePath();
-        ctx.fillStyle = '#b45309';
-        ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 1.2;
+        ctx.moveTo(s.xy[0], s.xy[1]);
+        ctx.lineTo(cx, cy);
+        ctx.strokeStyle = 'rgba(0,51,102,0.55)';
+        ctx.lineWidth = 1;
         ctx.stroke();
-        ctx.fill();
       }
-      var tempCy = box.y + s.iconS - s.overlap + s.tempR;
-      if (s.temp !== null) {
-        disegnaCerchioTemperatura(ctx, box.x + box.w / 2, tempCy, s.tempR, s.temp, s.loc.evidenziato);
+      ctx.beginPath();
+      ctx.arc(s.xy[0], s.xy[1], s.loc.evidenziato ? 3.5 : 2.4, 0, Math.PI * 2);
+      ctx.fillStyle = s.loc.evidenziato ? '#ffbe2e' : '#003366';
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    for (i = 0; i < schede.length; i++) {
+      s = schede[i]; bx = s.box;
+      cx = bx.x + bx.w / 2;
+      img = s.cat ? iconeTempo[s.cat] : null;
+      if (img) disegnaIconaConAureola(ctx, img, cx - iconS / 2, bx.y, iconS);
+      var yT = bx.y + iconS + 2;
+      ctx.textBaseline = 'top';
+      if (s.mm) {
+        ctx.font = '700 ' + fontT + 'px Titillium Web, Arial, sans-serif';
+        ctx.textAlign = 'right';
+        testoConAureola(ctx, Math.round(s.mm.min) + '°', cx - 4, yT, 50, '#1d4f8c');
+        ctx.textAlign = 'left';
+        testoConAureola(ctx, Math.round(s.mm.max) + '°', cx + 4, yT, 50, '#b42318');
+        ctx.fillStyle = 'rgba(0,51,102,0.4)';
+        ctx.fillRect(cx - 0.5, yT + 2, 1, fontT - 2);
       }
-      ctx.font = 'bold ' + (stretta ? '11' : '12') + 'px Titillium Web, Arial, sans-serif';
+      ctx.font = '600 ' + fontN + 'px Titillium Web, Arial, sans-serif';
       ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      var nomeY = (s.temp !== null) ? (tempCy + s.tempR + 4 + s.nomeH / 2) : (box.y + s.iconS + 8);
-      testoConAureola(ctx, s.nome, box.x + box.w / 2, nomeY, box.w - 4, s.loc.evidenziato ? '#003366' : '#1a1a1a');
+      testoConAureola(ctx, s.nome, cx, yT + fontT + 3, bx.w + 20, s.loc.evidenziato ? '#003366' : '#1a1a1a');
     }
     ctx.restore();
   }
 
+  function disegnaTerraPulita(ctx, vista) {
+    if (!geojson || !geojson.features) return;
+    var i, f;
+    for (i = 0; i < geojson.features.length; i++) {
+      f = geojson.features[i];
+      if (!f.properties) continue;
+      ctx.fillStyle = f.properties.tipo === 'italia' ? '#f3edd9' : '#e4ddd0';
+      perAnello(f.geometry, function (ring) {
+        tracciaAnello(ctx, ring, vista);
+        ctx.fill();
+      });
+    }
+  }
   function disegnaVista(ctx, vista, stato, opts) {
 
     opts = opts || {};
@@ -1556,8 +1550,14 @@
       disegnaComuni(ctx, vista);
       return;
     }
-    disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, stato.variabile.tempo ? 0.72 : 0.84);
-    applicaSfocatura(ctx, vista.w, vista.h, raggioSfocatura());
+    if (stato.variabile.tempo) {
+      ctx.fillStyle = '#b7d4ea';
+      ctx.fillRect(0, 0, vista.w, vista.h);
+      disegnaTerraPulita(ctx, vista);
+    } else {
+      disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, 0.84);
+      applicaSfocatura(ctx, vista.w, vista.h, raggioSfocatura());
+    }
     disegnaHillshade(ctx, vista);
     disegnaConfini(ctx, vista);
     disegnaLaghi(ctx, vista);
@@ -1566,7 +1566,6 @@
       disegnaFrecce(ctx, vista, stato.matrice);
     }
     if (stato.variabile.tempo) {
-      disegnaEtichetteLaghi(ctx, vista);
       disegnaSchedeTempo(ctx, vista, stato, opts);
     } else {
       disegnaEtichetteLaghi(ctx, vista);
@@ -2300,7 +2299,7 @@
       scala.appendChild(griglia);
       var nota = document.createElement('p');
       nota.className = 'cmi-legenda-note';
-      nota.textContent = "Le icone mostrano il tempo nel comune, sul punto dell'abitato; il cerchio colorato indica la temperatura. Lo sfondo morbido indica nuvolosità e precipitazioni in modo continuo. I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un'allerta ufficiale.";
+      nota.textContent = "Le icone mostrano il tempo previsto all'ora scelta nel comune. Sotto: temperatura minima (in blu) e massima (in rosso) del giorno di calendario mostrato, secondo il modello scelto. I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli.";
       scala.appendChild(nota);
       return;
     }
