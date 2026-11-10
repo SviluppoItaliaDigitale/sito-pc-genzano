@@ -2112,3 +2112,6 @@ aib
 subemendamenti
 # Gioco «Genzano si prepara» 01/11/2026: formula di attribuzione obbligatoria «© OpenStreetMap contributors»
 contributors
+
+# --- Cartina meteo Italia 10/11/2026: termine tecnico meteorologico corretto, assente dal dizionario ---
+meteogramma

@@ -85,6 +85,8 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/da-dove-comincio/" role="menuitem"><span>Da dove comincio?</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" role="menuitem"><span>Cosa Fare Adesso</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartina-meteo-italia/" role="menuitem"><span>Cartina meteo Italia</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappe-meteo-professionali/" role="menuitem"><span>Mappe meteo professionali</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/rischi-prevenzione/" role="menuitem"><span>Rischi e Prevenzione</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartografia/" role="menuitem"><span>Cartografia</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
@@ -199,6 +201,8 @@
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-emergenza/" style="color:rgba(255,255,255,0.85);">Piano di Emergenza</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" style="color:rgba(255,255,255,0.85);">Piano Familiare</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" style="color:rgba(255,255,255,0.85);">Allerte Meteo</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartina-meteo-italia/" style="color:rgba(255,255,255,0.85);">Cartina meteo Italia</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/mappe-meteo-professionali/" style="color:rgba(255,255,255,0.85);">Mappe meteo professionali</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/area-download/" style="color:rgba(255,255,255,0.85);">Area Download</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartografia/" style="color:rgba(255,255,255,0.85);">Cartografia Operativa</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" style="color:rgba(255,255,255,0.85);">Cosa Fare Adesso</a></li>' +

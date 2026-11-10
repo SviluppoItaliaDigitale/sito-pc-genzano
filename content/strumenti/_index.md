@@ -95,6 +95,24 @@ Il modo più rapido per vedere tutto in un colpo d'occhio è il nostro **cruscot
     url="/allerte-meteo/#meteo-windy" >}}
 
 {{< tool-card
+    nome="Cartina meteo Italia"
+    fonte="Open-Meteo"
+    icona="bi-cloud-sun-fill"
+    tipoFonte="consultazione"
+    descrizione="Cartina interattiva dell'Italia, del Lazio e dei Castelli Romani: più modelli, tempo previsto, animazione e download di GIF e immagini."
+    tipoAccesso="sito"
+    url="/cartina-meteo-italia/" >}}
+
+{{< tool-card
+    nome="Mappe meteo professionali"
+    fonte="GFS, ECMWF, ICON"
+    icona="bi-layers-fill"
+    tipoFonte="consultazione"
+    descrizione="Carte meteorologiche professionali per l'Italia, aggiornate automaticamente, da consultare, scaricare e condividere."
+    tipoAccesso="sito"
+    url="/mappe-meteo-professionali/" >}}
+
+{{< tool-card
     nome="Radar nazionale precipitazioni"
     fonte="Dipartimento Protezione Civile"
     icona="bi-broadcast-pin"
@@ -341,6 +359,8 @@ Per emergenze in corso chiama sempre il **[112](tel:112)**.
 ## Vedi anche
 
 - [Allerte meteo](/allerte-meteo/) — stato di allerta corrente
+- [Cartina meteo Italia](/cartina-meteo-italia/) — cartina interattiva e previsioni per l'Italia
+- [Mappe meteo professionali](/mappe-meteo-professionali/) — carte dei modelli, aggiornate automaticamente
 - [Cartografia](/cartografia/) — mappe del territorio
 - [Siti utili](/siti-utili/) — fonti istituzionali esterne
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
