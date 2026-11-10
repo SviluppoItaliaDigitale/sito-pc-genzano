@@ -31,6 +31,22 @@
 
   var manifesto = null;
   var prodottoAttivo = null;
+  var SPIEGAZIONI = {
+    mslp_precip: 'Questa carta mostra le linee della pressione dell\'aria e, con i colori, dove cadrà la pioggia nelle sei ore. Ti aiuta a capire se si avvicina un\'area di maltempo e quanto potrà piovere.',
+    t850_vento10: 'Il colore dice se l\'aria a circa 1.500 metri è calda o fredda. Le linee del vento mostrano come tira il vento vicino al suolo, quello che sentiamo noi.',
+    h500: 'Questa è una carta dell\'aria molto in alto, a circa 5.500 metri. Mostra le grandi onde che guidano il tempo, dove l\'aria è più fredda e dove sta salendo, cioè dove possono formarsi le nubi.',
+    ivt_h700: 'Qui vedi i «fiumi» di aria umida che viaggiano in atmosfera e la forma delle correnti a circa 3.000 metri. Quando un fiume umido punta verso le montagne o verso di noi, può piovere tanto.',
+    h850_cape_shear: 'Questa carta serve per i temporali. Mostra se l\'aria è instabile (pronta a salire) e se il vento cambia molto con l\'altezza. Insieme, queste due cose possono favorire temporali anche forti.',
+    spessore_mslp_jet: 'Qui vedi tre cose insieme: la pressione al suolo, se lo strato d\'aria è più mite o più freddo, e il vento fortissimo in alta quota. Serve a capire se arriva aria calda o fredda e quanto il tempo potrà cambiare in fretta.',
+    h700_pw: 'Questa carta mostra l\'aria a circa 3.000 metri e quanta acqua, sotto forma di vapore, c\'è nella colonna d\'aria. Valori alti significano che, se arrivano i moti giusti, può piovere molto.',
+    thetae850: 'Questa carta descrive il «tipo» di massa d\'aria a circa 1.500 metri: se è calda e umida oppure più fresca e secca. Dove aria diversa si incontra, il tempo può diventare instabile.',
+    pv_jet: 'Qui si guarda l\'aria molto in alto, vicino alla corrente a getto. I colori aiutano a capire se in quota c\'è una «spinta» che può far nascere o rafforzare un\'area di maltempo anche più in basso.',
+    dt_2pvu: 'La tropopausa è il «tetto» della nostra aria. Questa carta mostra dove quel tetto è più basso o più alto e cosa succede anche vicino al suolo. Un tetto più basso può favorire maltempo.',
+    isent_330: 'Questa carta segue un particolare strato di aria in quota, come se lo si percorresse da un lato all\'altro. Serve a vedere da dove arriva quell\'aria e se porta con sé disturbi del tempo.',
+    isent_310_350: 'Qui si confrontano due strati di aria a altezze diverse. Aiuta a capire come l\'aria in quota è collegata a quella un po\' più in basso, e se il maltempo può organizzarsi.',
+    coupling_index: 'Questo indice confronta l\'aria altissima con quella a circa 1.500 metri. Quando i due strati sono legati fra loro, i disturbi in quota possono arrivare più facilmente verso il basso e il tempo può peggiorare.'
+  };
+
   var indice = 0;
   var timer = null;
   var cacheImg = {};
@@ -160,6 +176,7 @@
     }
     titoloVista.textContent = p.titolo;
     sottoVista.textContent = p.sottotitolo || '';
+    aggiornaSpiegazione(id, p);
     cursore.min = '0';
     cursore.max = String(p.fotogrammi.length - 1);
     cursore.disabled = false;
@@ -190,6 +207,14 @@
     });
     mostraFotogramma(indice);
     precacheVicini();
+  }
+
+  function aggiornaSpiegazione(id, p) {
+    var titoloEl = document.getElementById('mmp-spiegazione-titolo');
+    var testoEl = document.getElementById('mmp-spiegazione-testo');
+    if (!titoloEl || !testoEl) return;
+    titoloEl.textContent = (p && p.titolo) ? p.titolo : '';
+    testoEl.textContent = SPIEGAZIONI[id] || 'Questa carta mostra la grandezza scelta, con i colori e le linee della legenda.';
   }
 
   function nomeFile(id, ext) {
