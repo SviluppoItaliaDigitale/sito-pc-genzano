@@ -254,7 +254,7 @@
   </div>
 </div>
 
-{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) "iconeUrl" ("images/meteo-icone/" | relURL) "laghiUrl" ("data/laghi-castelli-romani.geojson" | relURL) "hillshadeCastelliUrl" ("images/cartina-meteo-hillshade-castelli.png" | relURL) -}}
+{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) "iconeUrl" ("images/meteo-icone/" | relURL) "laghiUrl" ("data/laghi-castelli-romani.geojson" | relURL) "regioniUrl" ("data/italia-regioni.geojson" | relURL) "hillshadeCastelliUrl" ("images/cartina-meteo-hillshade-castelli.png" | relURL) -}}
 {{- if $b -}}
   {{- $bPub := dict "emesso_il" $b.emesso_il "validita_da" $b.validita_da "validita_a" $b.validita_a "situazione_generale" $b.situazione_generale -}}
   {{- $cfg = merge $cfg (dict "bollettino" $bPub) -}}
