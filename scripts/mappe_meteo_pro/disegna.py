@@ -16,13 +16,14 @@ from .config import (
     CITTA_EUROPA,
     CITTA_ITALIA,
     CONFINE,
-    CONFINE_IT,
     COSTA,
     DOMINI,
+    FONDO_FIGURA,
     FONDO_MARE,
     FONDO_TERRA,
-    FONDO_TITOLO,
     MODELLI,
+    TESTO,
+    TESTO_SECONDARIO,
     data_italiana,
 )
 from .campi import Stato
@@ -117,93 +118,135 @@ def _proiezione(chiave: str):
     )
 
 
-def _feature_italia():
-    """Geometria dell'Italia, per evidenziare il confine nazionale."""
-    import cartopy.io.shapereader as shpreader
+# Scala unica di Natural Earth: riempimento e perimetro devono
+# venire dallo stesso strato, altrimenti costa e fondo non coincidono.
+_NE_SCALA = "50m"
 
-    shp = shpreader.natural_earth(resolution="50m", category="cultural", name="admin_0_countries")
-    for rec in shpreader.Reader(shp).records():
-        nome = (rec.attributes.get("ADMIN") or rec.attributes.get("NAME") or "").lower()
-        if nome in {"italy", "italia"}:
-            return rec.geometry
-    return None
+_FONT_SANS = None
 
 
-_ITALIA_GEOM = None
+def _font_sans() -> str:
+    """Titillium Web (carattere del sito) se i file sono disponibili, altrimenti DejaVu Sans."""
+    global _FONT_SANS
+    if _FONT_SANS:
+        return _FONT_SANS
+    from matplotlib import font_manager as fm
+
+    radici = [
+        Path(__file__).resolve().parent / "fonts",
+        Path("/usr/share/fonts/truetype/sand-box/google/Titillium Web"),
+        Path("/usr/share/fonts/truetype/titillium-web"),
+    ]
+    for radice in radici:
+        if not radice.is_dir():
+            continue
+        for ttf in sorted(radice.glob("TitilliumWeb-*.ttf")):
+            try:
+                fm.fontManager.addfont(str(ttf))
+            except (OSError, ValueError):
+                continue
+    if any(getattr(f, "name", "") == "Titillium Web" for f in fm.fontManager.ttflist):
+        _FONT_SANS = "Titillium Web"
+    else:
+        _FONT_SANS = "DejaVu Sans"
+    return _FONT_SANS
 
 
-def _italia():
-    global _ITALIA_GEOM
-    if _ITALIA_GEOM is None:
-        try:
-            _ITALIA_GEOM = _feature_italia()
-        except Exception:
-            _ITALIA_GEOM = False
-    return _ITALIA_GEOM if _ITALIA_GEOM else None
+def _elemento(categoria: str, nome: str, **kw):
+    import cartopy.feature as cfeature
+
+    return cfeature.NaturalEarthFeature(categoria, nome, _NE_SCALA, **kw)
 
 
 def nuova_carta(stato: Stato, dominio: str, titolo: str, sottotitolo: str):
     """Crea figura, assi della mappa e riservati per testata, barra e piede."""
     import cartopy.crs as ccrs
-    import cartopy.feature as cfeature
 
     cfg = DOMINI[dominio]
     proj = _proiezione(dominio)
     pc = ccrs.PlateCarree()
-    fig = plt.figure(figsize=cfg["figsize"], facecolor=FONDO_TITOLO, dpi=140)
+    font = _font_sans()
+    fig = plt.figure(figsize=cfg["figsize"], facecolor=FONDO_FIGURA, dpi=140)
     # [sinistra, basso, larghezza, altezza] in frazione della figura
-    ax = fig.add_axes([0.03, 0.10, 0.80, 0.76], projection=proj)
+    ax = fig.add_axes([0.03, 0.10, 0.80, 0.745], projection=proj)
     cax = fig.add_axes([0.845, 0.16, 0.018, 0.62])
     ax.set_extent(cfg["extent"], crs=pc)
+    # Un solo strato fisico «land» a 50 m: il riempimento e la costa
+    # sono la stessa geometria. Non si usa COASTLINE (altro shapefile)
+    # né il perimetro di admin_0_countries (offset rispetto alla costa).
+    # Il mare è il fondo dell'asse, senza un secondo poligono OCEAN.
     ax.set_facecolor(FONDO_MARE)
-    ax.add_feature(cfeature.OCEAN.with_scale("50m"), facecolor=FONDO_MARE, zorder=0)
-    ax.add_feature(cfeature.LAND.with_scale("50m"), facecolor=FONDO_TERRA, zorder=0)
-    ax.add_feature(cfeature.LAKES.with_scale("50m"), facecolor="#c5d6e4", edgecolor="#7a8c99", linewidth=0.3, zorder=1)
-    ax.add_feature(cfeature.COASTLINE.with_scale("50m"), edgecolor=COSTA, linewidth=0.7, zorder=4)
-    ax.add_feature(cfeature.BORDERS.with_scale("50m"), edgecolor=CONFINE, linewidth=0.45, linestyle="-", zorder=4)
-    geom = _italia()
-    if geom is not None:
-        import cartopy.feature as cfeat
-        ax.add_geometries(
-            [geom], crs=pc, facecolor="none", edgecolor=CONFINE_IT, linewidth=1.35, zorder=5,
-        )
+    ax.add_feature(
+        _elemento("physical", "land", facecolor=FONDO_TERRA, edgecolor="none"),
+        linewidth=0, zorder=0,
+    )
+    ax.add_feature(
+        _elemento("physical", "lakes", facecolor="#c5d6e4", edgecolor="none"),
+        linewidth=0, zorder=1,
+    )
+    ax.add_feature(
+        _elemento("physical", "land", facecolor="none", edgecolor=COSTA),
+        linewidth=0.7, zorder=4,
+    )
+    ax.add_feature(
+        _elemento("cultural", "admin_0_boundary_lines_land", facecolor="none", edgecolor=CONFINE),
+        linewidth=0.55, zorder=4,
+    )
     gl = ax.gridlines(draw_labels=True, linewidth=0.3, color="#6a7680", alpha=0.45, linestyle="--")
     gl.top_labels = False
     gl.right_labels = False
-    gl.xlabel_style = {"size": 7, "color": "#e8eef3"}
-    gl.ylabel_style = {"size": 7, "color": "#e8eef3"}
+    gl.x_inline = False
+    gl.y_inline = False
+    gl.rotate_labels = False
+    gl.xlabel_style = {"size": 7, "color": TESTO_SECONDARIO, "fontfamily": font}
+    gl.ylabel_style = {"size": 7, "color": TESTO_SECONDARIO, "fontfamily": font}
     gl.xlocator = mticker.FixedLocator(range(-20, 45, 4 if dominio == "italia" else 8))
     gl.ylocator = mticker.FixedLocator(range(28, 75, 2 if dominio == "italia" else 5))
-    # Le etichette delle gridline cadono sul fondo scuro della figura: le coloriamo chiare.
+    # Le etichette cadono sul margine chiaro della figura.
     return fig, ax, cax, proj, pc
 
 
 def testata_e_piede(fig, ax, stato: Stato, dominio: str, titolo: str, sottotitolo: str, unita: str):
     meta = MODELLI[stato.modello]
-    # Testata
+    font = _font_sans()
+    # Barra istituzionale in alto e filetti, come l'header chiaro del sito.
     fig.patches.append(
         FancyBboxPatch(
-            (0.0, 0.875), 1.0, 0.125,
-            transform=fig.transFigure, facecolor=FONDO_TITOLO,
+            (0.0, 0.993), 1.0, 0.007,
+            transform=fig.transFigure, facecolor=BLU,
+            edgecolor="none", zorder=-1, boxstyle="square,pad=0",
+        )
+    )
+    fig.patches.append(
+        FancyBboxPatch(
+            (0.0, 0.858), 1.0, 0.0026,
+            transform=fig.transFigure, facecolor=BLU,
+            edgecolor="none", zorder=-1, boxstyle="square,pad=0",
+        )
+    )
+    fig.patches.append(
+        FancyBboxPatch(
+            (0.0, 0.080), 1.0, 0.002,
+            transform=fig.transFigure, facecolor=BLU,
             edgecolor="none", zorder=-1, boxstyle="square,pad=0",
         )
     )
     fig.text(
         0.03, 0.965,
         "Protezione Civile di Genzano di Roma",
-        color="#8fb4d4", fontsize=8.5, fontweight="normal", va="top",
-        fontfamily="sans-serif",
+        color=BLU, fontsize=8.5, fontweight="normal", va="top",
+        fontfamily=font,
     )
     fig.text(
         0.03, 0.932,
         titolo,
-        color="white", fontsize=14.5, fontweight="bold", va="top",
-        fontfamily="sans-serif",
+        color=BLU, fontsize=14.5, fontweight="bold", va="top",
+        fontfamily=font,
     )
     fig.text(
         0.03, 0.895,
         sottotitolo,
-        color="#d5e3ee", fontsize=8, va="top", fontfamily="sans-serif",
+        color=TESTO_SECONDARIO, fontsize=8, va="top", fontfamily=font,
     )
     # Blocco orari a destra, in stile «init / valid / Fxxx»
     blocco = (
@@ -213,31 +256,23 @@ def testata_e_piede(fig, ax, stato: Stato, dominio: str, titolo: str, sottotitol
     )
     fig.text(
         0.97, 0.960, blocco,
-        color="white", fontsize=8, va="top", ha="right",
-        fontfamily="DejaVu Sans Mono", linespacing=1.45,
-    )
-    # Piede
-    fig.patches.append(
-        FancyBboxPatch(
-            (0.0, 0.0), 1.0, 0.08,
-            transform=fig.transFigure, facecolor=FONDO_TITOLO,
-            edgecolor="none", zorder=-1, boxstyle="square,pad=0",
-        )
+        color=BLU, fontsize=8, va="top", ha="right",
+        fontfamily=font, linespacing=1.45,
     )
     fig.text(
         0.03, 0.048,
         f"Fonte: {meta['attribuzione']}. Elaborazione: Gruppo Comunale Volontari di "
         f"Protezione Civile di Genzano di Roma. {DOMINI[dominio]['nome']}.",
-        color="#c5d4e0", fontsize=6.7, va="center",
+        color=TESTO_SECONDARIO, fontsize=6.7, va="center", fontfamily=font,
     )
     fig.text(
         0.03, 0.022,
         "Carta modellistica di inquadramento. Non sostituisce i bollettini ufficiali "
         "del Centro Funzionale Regionale né lo stato di allerta. In emergenza chiama il 112.",
-        color="#8fa3b3", fontsize=6.3, va="center",
+        color=TESTO_SECONDARIO, fontsize=6.3, va="center", fontfamily=font,
     )
     if unita:
-        fig.text(0.845, 0.795, unita, color="#e8eef3", fontsize=7.5, ha="left", va="bottom")
+        fig.text(0.845, 0.795, unita, color=BLU, fontsize=7.5, ha="left", va="bottom", fontfamily=font)
 
 
 def citta(ax, dominio: str, pc):
@@ -253,7 +288,8 @@ def citta(ax, dominio: str, pc):
         ax.text(
             lo + 0.08, la + 0.08, nome,
             transform=pc, fontsize=6.4 if evidenza else 5.8,
-            color="#1a1a1a", fontweight="bold" if evidenza else "normal",
+            color=TESTO, fontweight="bold" if evidenza else "normal",
+            fontfamily=_font_sans(),
             path_effects=_HALO_SOTTILE, zorder=7,
         )
 
@@ -309,10 +345,12 @@ def barbette(ax, pc, lon, lat, u, v, passo=None, colore="#1a1a1a"):
 
 
 def colorbar(cax, cf, etichette=None):
-    cax.set_facecolor(FONDO_TITOLO)
+    cax.set_facecolor(FONDO_FIGURA)
     cb = plt.colorbar(cf, cax=cax, orientation="vertical")
-    cb.ax.tick_params(colors="#e8eef3", labelsize=7, length=2)
-    cb.outline.set_edgecolor("#8fb4d4")
+    cb.ax.tick_params(colors=BLU, labelsize=7, length=2)
+    cb.outline.set_edgecolor(BLU)
+    for lab in cb.ax.get_yticklabels():
+        lab.set_fontfamily(_font_sans())
     if etichette is not None:
         cb.set_ticks(etichette)
     return cb

@@ -74,7 +74,7 @@ def h500(stato: Stato, dominio: str, dest: Path) -> Path:
         vo = stato.campi["vo500"] * 1.0e5
         liv_v = [-20, -16, -12, -8, -4, -2, 2, 4, 8, 12, 16, 20]
         cf = d.campo_ombreggiato(ax, pc, lon, lat, vo, liv_v, d.CMAP_VORT, extend="both")
-        unita = "vorticità relativa  (10⁻⁵ s⁻¹)"
+        unita = "vorticità relativa (10^-5 / s)"
     else:
         # fallback: ombreggia la temperatura
         liv_t = list(range(-50, 12, 2))
@@ -114,7 +114,7 @@ def ivt_h700(stato: Stato, dominio: str, dest: Path) -> Path:
         )
     d.citta(ax, dominio, pc)
     d.colorbar(cax, cf, liv)
-    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"], "kg m⁻¹ s⁻¹")
+    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"], "kg / (m s)")
     return d.salva(fig, dest)
 
 

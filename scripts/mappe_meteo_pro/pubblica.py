@@ -59,11 +59,23 @@ def _blocco_modello(mid: str, info: dict) -> dict:
 
 def costruisci_manifesto(uscita: Path, modelli_info: dict, generato: datetime | None = None,
                          precedente: dict | None = None) -> dict:
-    """Scrive il manifesto: i modelli rielaborati sostituiscono i loro blocchi, gli altri restano."""
+    """Scrive il manifesto: i modelli rielaborati aggiornano il loro blocco, gli altri restano.
+
+    Se la corsa è la stessa, i prodotti appena generati si uniscono a quelli
+    già presenti, così un giro parziale (`--prodotti`) non cancella le altre carte.
+    """
     quando = generato or datetime.now(timezone.utc)
     modelli = dict((precedente or {}).get("modelli") or {})
     for mid, info in modelli_info.items():
-        modelli[mid] = _blocco_modello(mid, info)
+        nuovo = _blocco_modello(mid, info)
+        vecchio = modelli.get(mid)
+        if vecchio and vecchio.get("corsa") == nuovo.get("corsa"):
+            for dominio, dd in (vecchio.get("domini") or {}).items():
+                dest = nuovo["domini"].setdefault(dominio, {"prodotti": {}})
+                fusi = dict(dd.get("prodotti") or {})
+                fusi.update(dest.get("prodotti") or {})
+                dest["prodotti"] = fusi
+        modelli[mid] = nuovo
     # Un modello tolto dalla configurazione esce anche dal manifesto.
     modelli = {k: v for k, v in modelli.items() if k in MODELLI}
     manifesto = {

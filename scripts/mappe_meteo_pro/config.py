@@ -35,15 +35,22 @@ MESI_IT = (
     "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre",
 )
 
-# Colori istituzionali del sito.
+# Colori istituzionali del sito
+# (themes/flavour-pcgenzano/static/css/custom.css: --pc-primary e correlati).
 BLU = "#003366"
-BLU_MEDIO = "#0055a4"
+BLU_SCURO = "#00244d"
+BLU_MEDIO = "#004080"
 BLU_CHIARO = "#0066cc"
-FONDO_TITOLO = "#0b1c2c"
+ARANCIO = "#FF6600"
+FONDO_FIGURA = "#ffffff"
+FONDO_CARTA = "#fafbfc"
+TESTO = "#1a1a1a"
+TESTO_SECONDARIO = "#42515c"
+FONDO_TITOLO = FONDO_FIGURA  # testata, piede e figura: tema chiaro del sito
 FONDO_MARE = "#c3d3df"
 FONDO_TERRA = "#efe6d6"
 COSTA = "#1c2833"
-CONFINE = "#5a6570"
+CONFINE = "#003366"
 CONFINE_IT = "#003366"
 
 # Proiezioni e riquadri. Il riquadro di scarico è l'unione, così un solo
