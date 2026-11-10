@@ -5,22 +5,142 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-10T08:51:34+00:00",
+  "generato": "2026-11-10T10:07:10+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-11-10T10:01:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il valore della coesione. La presentazione del Rapporto Svimez 2026",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/09/il-valore-della-coesione.-la-presentazione-del-rapporto-svimez-2026_1353bc1f-7f4a-4cd7-b4c2-dba32ea51d4a.html"
+  },
+  {
+   "data": "2026-11-10T10:00:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Telefonata Giorgetti-Meloni ieri sera, 'la mancata firma solo perché fuori Roma'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/telefonata-giorgetti-meloni-ieri-sera-mancata-firma-solo-perche-fuori_83808254-a528-4178-aee1-ade2f46fc15d.html"
+  },
+  {
+   "data": "2026-11-10T09:59:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Foggia, assalto a portavalori: banditi armati e mezzi incendiati",
+   "url": "https://www.adnkronos.com/cronaca/assalto-portavolori-banditi-statale-16-foggia_6Za7GxSFqyiQpFiE2I53DU"
+  },
+  {
+   "data": "2026-11-10T09:58:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Energia, Zehentner (Snam): \"Supportiamo bisognosi su territorio italiano\"",
+   "url": "https://www.adnkronos.com/economia/energia-zehentner-snam-supportiamo-bisognosi-su-territorio-italiano_3dtXy1ByQe3VGWZIQ3l511"
+  },
+  {
+   "data": "2026-11-10T09:57:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Energia, Scornajenchi (Snam): \"Mostra racconta la sua essenzialità invisibile nella quotidianità\"",
+   "url": "https://www.adnkronos.com/economia/energia-scornajenchi-snam-mostra-racconta-la-sua-essenzialita-invisibile-nella-quotidianita_4pbkDRoIzWrrKULtV7Bq2f"
+  },
+  {
+   "data": "2026-11-10T09:56:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "In visita a Coverciano tre ragazzi sopravvissuti alla tragedia di Crans Montana",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/09/in-visita-a-coverciano-tre-ragazzi-sopravvissuti-a-tragedia-di-crans-montana_fc290331-13af-47c8-aba6-86269885103c.html"
+  },
+  {
+   "data": "2026-11-10T09:55:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Femminicidio Cinzia Pinna, aperto il processo contro reo confesso Ragnedda",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/femminicidio-cinzia-pinna-aperto-il-processo-contro-reo-confesso-ragnedda_ae191fd1-0b29-4f37-ae4c-f23c44acba4d.html"
+  },
+  {
+   "data": "2026-11-10T09:53:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Precipitazioni frequenti, neve sulle Alpi e vento teso fino a sabato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/precipitazioni-frequenti-neve-sulle-alpi-e-vento-teso-fino-a-sabato_68c53710-a182-4bc8-a106-e8847b76be80.html"
+  },
+  {
+   "data": "2026-11-10T09:48:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Abi: 'Sulle banche dal 2025 misure fiscali per 22 miliardi di euro'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/labi-sulle-banche-dal-2025-misure-fiscali-per-22-miliardi-di-euro_c2e7ae7d-cb17-4bcb-80d1-2c3b67244d5f.html"
+  },
+  {
+   "data": "2026-11-10T09:47:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Telefonata Giorgetti-Meloni ieri sera, 'mancata firma solo perché fuori Roma' ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/11/10/telefonata-giorgetti-meloni-ieri-sera-mancata-firma-solo-perche-fuori_6646b112-a25c-4336-9391-8b0d10500e6a.html"
+  },
+  {
+   "data": "2026-11-10T09:46:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il 5 dicembre studenti e medici insieme in piazza per la sanità",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/il-5-dicembre-studenti-e-medici-insieme-in-piazza-per-la-sanita_f0ee4eeb-dc12-4f70-91da-79dace74b2bb.html"
+  },
+  {
+   "data": "2026-11-10T09:45:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'BellaMa'', il programma di Diaco cresce dopo la bufera Ravagnani: share al 6,7%",
+   "url": "https://www.adnkronos.com/spettacoli/bellama-diaco-ascolti-share-bufera-ravagnani_1zcVrHrbVlEvUxZ8nWLLTU"
+  },
+  {
+   "data": "2026-11-10T09:41:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morta Toukie Smith, ex top model e attrice: fu la compagna di Robert De Niro",
+   "url": "https://www.adnkronos.com/spettacoli/morta-ex-robert-de-niro-toukie-smith_2ZuFMrmslFehgJomTBweYH"
+  },
+  {
+   "data": "2026-11-10T09:41:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Wanderlust e Strategia: Come il Black Friday sta Riscrivendo le Regole (e lo Stile) dei Viaggi del Futuro",
+   "url": "https://www.adnkronos.com/economia/wanderlust-e-strategia-come-il-black-friday-sta-riscrivendo-le-regole-e-lo-stile-dei-viaggi-del-futuro_7lnn6i1d9BzW6w39e2NeJB"
+  },
+  {
+   "data": "2026-11-10T09:40:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tensione al Gf Vip, scontro tra Ilary Blasi e Selvaggia Lucarelli: \"Non chiederò scusa\"",
+   "url": "https://www.adnkronos.com/spettacoli/gf-vip-scontro-blasi-lucarelli-guendalina-cosa-e-successo_6Ty4PG7RL04NOXNConNkwm"
+  },
+  {
+   "data": "2026-11-10T09:36:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Botta e risposta tra Andrea Scanzi e Leonardo Maria Del Vecchio: \"Continua lo stalking mediatico del Fatto Quotidiano, così trattate i vostri azionisti?\"",
+   "url": "https://www.adnkronos.com/cronaca/del-vecchio-scanzi-fatto-quotidiano-botta-e-risposta_6tr2mkaAXscz3eMcr6WBFF"
+  },
+  {
+   "data": "2026-11-10T09:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sclerosi multipla e disturbi del pavimento pelvico, neurologa Laroni: \"Non rassegnarsi\"",
+   "url": "https://www.adnkronos.com/cronaca/sclerosi-multipla-e-disturbi-del-pavimento-pelvico-neurologa-laroni-non-rassegnarsi_NpUqVHoe2RuUYdfR4FIiT"
+  },
+  {
+   "data": "2026-11-10T09:16:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Napoli, malore mentre lavora in nero in falegnameria: morto 63enne a Cercola",
+   "url": "https://www.adnkronos.com/cronaca/napoli-cercola-morto-lavoro-falegnameria_5Csle2mtMKxjCghsilQX4c"
+  },
+  {
+   "data": "2026-11-10T09:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Guerra in Ucraina, iniziati i colloqui di Abu Dhabi con Russia e Usa - Diretta",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-negoziati-news-oggi-10-novembre-2026_6cKju7WJybrWDAKaSIMACn"
+  },
+  {
+   "data": "2026-11-10T08:53:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto oggi a Cosenza, scossa di magnitudo 3.5 a Cerisano: paura tra la popolazione, scuole evacuate",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-cosenza-oggi-epicentro-cerisano-magnitudo-danni_6GJyB881JtQsHdgO1ajdWP"
+  },
+  {
+   "data": "2026-11-10T08:48:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Turismo Lgbtq+, Spagna al top tra le mete preferite, Italia fanalino di coda",
+   "url": "https://www.ansa.it/canale_viaggi/notizie/news/2026/11/09/turismo-lgbtq-spagna-al-top-tra-le-mete-preferite-italia-fanalino-di-coda_6d1e2f0d-1f33-46da-9b7d-e42607c42d34.html"
+  },
+  {
    "data": "2026-11-10T08:46:06+00:00",
    "fonte": "ANSA",
    "titolo": "Camorra e appalti, 13 arresti c'è anche il presidente della centrale appalti della Campania",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/camorra-e-appalti-13-arresti-e-sequestro-tra-napoli-e-provincia_8c3d9e11-7107-44b2-91db-c7410fcf6426.html"
-  },
-  {
-   "data": "2026-11-10T08:42:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran, evacuato aereo militare Usa da base Raf per minaccia Teheran",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-conflitto-ultime-news-oggi-10-novembre_2qHUPlVwnrB45RjcFk5axZ"
   },
   {
    "data": "2026-11-10T08:38:19+00:00",
@@ -41,28 +161,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/nvidia-e-huang-citati-in-giudizio-dagli-azionisti-per-la-relazione-con-la-ex-manager_bcc2009d-acf1-41aa-bbd3-7a65a6a40575.html"
   },
   {
-   "data": "2026-11-10T08:35:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Credit Agricole propone le nozze a Bpm, ai soci 1 miliardo e premio del 20%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/credit-agricole-propone-le-nozze-a-bpm-ai-soci-1-miliardo-e-premio-del-20_1f4370d5-8277-4bc4-9aea-4cb9ca81d368.html"
-  },
-  {
    "data": "2026-11-10T08:34:43+00:00",
    "fonte": "ANSA",
    "titolo": "Wsj: \"Minacce Iran, gli Usa spostano aerei dalla seconda base in Gb\"",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/minacce-iran-usa-spostano-aerei-da-seconda-base-in-gb_80d16469-b089-40b0-bbae-a4e8999e799c.html"
-  },
-  {
-   "data": "2026-11-10T08:24:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sarà possibile estendere il Fondo Nuovi Nati ai versamenti per figli minorenni",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/le-audizioni-per-la-legge-di-bilancio-alla-camera_c2e7ae7d-cb17-4bcb-80d1-2c3b67244d5f.html"
-  },
-  {
-   "data": "2026-11-10T07:56:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Camorra e appalti a Napoli, 13 arresti tra imprenditori, amministratori e funzionari pubblici",
-   "url": "https://www.adnkronos.com/cronaca/napoli-camorra-appalti-arresti_4hw9UW1LXODpEkVAW8yK64"
   },
   {
    "data": "2026-11-10T07:33:17+00:00",
@@ -71,10 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/camorra-e-appalti-13-arresti-e-sequestro-tra-napoli-e-provincia_0c4a44eb-d476-4837-b6f4-0bce95e1dc34.html"
   },
   {
-   "data": "2026-11-10T07:22:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Tajani: \"Giorgetti firmerà pacchetto aiuti militari, nessun giallo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-decreto-giorgetti-firma-tajani_2FyWMLxVW7tWCnv5T47KXA"
+   "data": "2026-11-10T07:01:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'atmosfera può eliminare il metano, è successo 20mila anni fa",
+   "url": "https://www.ansa.it/canale_scienza/notizie/terra_poli/2026/11/10/latmosfera-puo-eliminare-il-metano-e-successo-20mila-anni-fa-_f7455636-8d88-424a-913d-7072773da483.html"
   },
   {
    "data": "2026-11-10T06:59:07+00:00",
@@ -87,108 +189,6 @@
    "fonte": "ANSA",
    "titolo": "PRIME PAGINE | Giallo sul decreto armi per Kiev, Giorgetti non lo firma",
    "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/10/prime-pagine-giallo-sul-decreto-armi-per-kiev-giorgetti-non_ba33a588-369f-4514-bc37-9651bc6d8920.html"
-  },
-  {
-   "data": "2026-11-10T06:44:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "In visita a Coverciano tre ragazzi sopravvissuti a tragedia di Crans Montana",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/09/in-visita-a-coverciano-tre-ragazzi-sopravvissuti-a-tragedia-di-crans-montana_fc290331-13af-47c8-aba6-86269885103c.html"
-  },
-  {
-   "data": "2026-11-10T06:44:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Covid, influenza e raffreddore: per Pregliasco \"si possono distinguere\", ecco come",
-   "url": "https://www.adnkronos.com/salute/covid-influenza-raffreddore-sintomi-pregliasco_5KISIBr7g59VzwmKythSz1"
-  },
-  {
-   "data": "2026-11-10T06:25:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scambiano funghi velenosi per chiodini, 4 persone ricoverate",
-   "url": "https://www.adnkronos.com/cronaca/funghi-velenosi-intossicazioni-frosinone_6wY8OiF2Dep0UFTvV5blDM"
-  },
-  {
-   "data": "2026-11-10T06:17:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa in Argentina, oggi la messa a Cordoba",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/10/il-papa-in-argentina-oggi-la-messa-a-cordoba_c68c68e5-14cc-4f99-bcae-d9c8393c68bb.html"
-  },
-  {
-   "data": "2026-11-10T06:14:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Grande Fratello, Carmen Di Pietro lascia la Casa. Il rientro di Alex Belli",
-   "url": "https://www.adnkronos.com/spettacoli/grande-fratello-9-novembre-vip-eiminato-alex-belli_2NaYZIinrqlS9DtldaI1D5"
-  },
-  {
-   "data": "2026-11-10T05:47:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Clima, 2026 tra gli anni più caldi di sempre: El Niño rischia di aggravare gli eventi estremi",
-   "url": "https://www.adnkronos.com/economia/clima-allarme-onu-2026-caldo-record-el-nino-2027_1ThzV6A6FZasTTTFRP3Q8m"
-  },
-  {
-   "data": "2026-11-09T23:41:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'ira della Lega sul decreto armi, Giorgetti non lo firma",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/lira-della-lega-sul-decreto-armi-giorgetti-non-lo-firma_bd84e8d5-bb54-4f9e-ab20-c050f5ae3632.html"
-  },
-  {
-   "data": "2026-11-09T23:37:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "All'asta da Christie's il manoscritto di 'I Have a Dream'",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/people/2026/11/09/allasta-da-christies-il-manoscritto-di-i-have-a-dream_165cb7ac-5d45-482c-849d-42ce4bbdbfdb.html"
-  },
-  {
-   "data": "2026-11-09T23:17:24+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cyberattacchi e frigoriferi hackerati, quali sono i rischi per gli elettrodomestici di casa?",
-   "url": "https://www.adnkronos.com/cronaca/frigoriferi-casa-rischio-hacker-come-evitare-attacchi_3yVHeFKXNpPfDfFURwmlTU"
-  },
-  {
-   "data": "2026-11-09T23:15:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Casa Bianca si prepara a trilaterale ad Abu Dhabi. Il funzionario Usa: \"Russia mostra segnali positivi\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-usa-trilaterale-abu-dhabi-casa-bianca_5ESrlHXzgMdvLFulAh6PTy"
-  },
-  {
-   "data": "2026-11-09T23:07:46+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "G7, Tajani invoca unità contro guerra ibrida: tra hacker filo-russi e accuse della Francia all'Iran",
-   "url": "https://www.adnkronos.com/internazionale/esteri/g7-cyberattacchi-europa-ucraina-guerra-ibrida-tajani_8yKi5SihZskY3cMYu0xSm"
-  },
-  {
-   "data": "2026-11-09T23:04:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dl Bollette, taglio ai costi dell'elettricità da gennaio: la misura per famiglie e imprese",
-   "url": "https://www.adnkronos.com/politica/dl-bollette-misure-governo-elettricita-gas_KQULigfAnPSMuB9KBWikX"
-  },
-  {
-   "data": "2026-11-09T22:54:39+00:00",
-   "fonte": "ANSA",
-   "titolo": "Antonelli rientra a Bologna: 'Ora riposo e tagliatelle'. Ferrari in testacoda",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/09/antonelli-rientra-a-bologna-ora-riposo-e-tagliatelle-ferrari-in-testacoda_56ea8338-5a4c-4656-a2a8-8b62c2830865.html"
-  },
-  {
-   "data": "2026-11-09T22:52:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fisico travolto a Roma, si è costituito il conducente del monopattino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/si-e-costituito-il-conducente-del-monopattino-che-ha-investito-il-fisico-cervellati_f8f14bf1-e335-45b1-b82b-13cf8a4929c1.html"
-  },
-  {
-   "data": "2026-11-09T22:48:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Assoluzione definitiva per Massimo Galli nell'inchiesta sui concorsi pilotati alla Statale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/concorsopoli-in-statale-assoluzione-definitiva-per-massimo-galli_de0811f5-7429-47ec-a760-b9851f43375d.html"
-  },
-  {
-   "data": "2026-11-09T22:38:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Da un deputato Gop l'impeachment di Hegseth, ma Trump lo difende",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/da-un-deputato-gop-limpeachment-di-hegseth-ma-trump-lo-difende_3d87a61b-9723-4cbb-837a-60826be1273b.html"
-  },
-  {
-   "data": "2026-11-09T21:48:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Giorgetti non ha firmato il pacchetto di aiuti militari a Kiev",
-   "url": "https://www.adnkronos.com/economia/ucraina-aiuti-militari-italia-news_4bd0Zl84TBWnmyLz47xAXc"
   }
  ]
 }
