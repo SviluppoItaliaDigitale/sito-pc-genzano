@@ -5,8 +5,8 @@ description: "Orientamenti UE del 30 ottobre 2026 sulla preparazione della popol
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-10-orientamenti-ue-preparazione-popolazione.webp"
+image_alt: "Cover dell'articolo: Orientamenti UE sulla preparazione della popolazione: nessun obbligo per i cittadini"
 scadenza: ""
 area: "Europa"
 allegati: []

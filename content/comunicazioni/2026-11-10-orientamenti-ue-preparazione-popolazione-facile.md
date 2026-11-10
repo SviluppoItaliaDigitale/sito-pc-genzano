@@ -5,8 +5,8 @@ description: "L'Unione europea dà consigli per prepararsi alle emergenze. Non s
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-10-orientamenti-ue-preparazione-popolazione-facile.webp"
+image_alt: "Cover dell'articolo: Consigli europei per le emergenze: non sono un obbligo"
 scadenza: ""
 area: "Europa"
 allegati: []
