@@ -1310,6 +1310,7 @@ pagefind
 pain
 paleofrana
 paleofrane
+panel
 paper
 papiers
 pappalardo
