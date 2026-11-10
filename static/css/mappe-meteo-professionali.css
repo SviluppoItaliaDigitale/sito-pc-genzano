@@ -189,3 +189,44 @@
   .mmp-vista-sotto { color: #000; }
   .mmp-tela { overflow: visible; }
 }
+
+/* Riquadro «Cosa mostra questa carta»: spiegazione semplice del prodotto scelto. */
+.mmp-spiegazione {
+  margin: 0 0 1rem;
+  padding: 0.9rem 1.05rem 1rem;
+  border: 1px solid #c5d4e2;
+  border-left: 5px solid #003366;
+  background: #f4f8fb;
+  color: #1a1a1a;
+  border-radius: 0 6px 6px 0;
+}
+.mmp-spiegazione-etichetta {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #003366;
+}
+.mmp-spiegazione-titolo {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #003366;
+  line-height: 1.3;
+}
+.mmp-spiegazione-testo {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+@media print {
+  .mmp-spiegazione {
+    background: #fff;
+    border-color: #000;
+    break-inside: avoid;
+  }
+  .mmp-spiegazione-etichetta,
+  .mmp-spiegazione-titolo { color: #000; }
+}

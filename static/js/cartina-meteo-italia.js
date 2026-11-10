@@ -183,6 +183,35 @@
     { id: 'freezing_level_height', nome: 'Quota dello zero termico', unita: 'm', campi: ['freezing_level_height'], scala: 'zero' }
   ];
 
+  var SPIEGAZIONI = {
+    tempo_previsto: 'Questa cartina ti mostra che tempo farà: sole, nuvole, pioggia, temporali o neve. Sulle città vedi anche la temperatura più bassa (in blu) e quella più alta (in rosso) di quel giorno.',
+    pressure_msl: 'Qui vedi quanto è «pesante» l\'aria. Dove i valori sono più bassi spesso arrivano nuvole e pioggia. Dove sono più alti il cielo è più spesso sereno.',
+    precipitation: 'Questa cartina dice dove cadrà la pioggia o la neve in un\'ora. I colori più intensi vogliono dire più acqua.',
+    precipitation_6h: 'Qui vedi quanta pioggia o neve è prevista in sei ore. Serve per capire se l\'acqua si accumula e il terreno può allagarsi.',
+    temperature_2m: 'Questa è la temperatura dell\'aria all\'altezza di una persona, quella che sentiamo quando usciamo di casa. I colori caldi indicano caldo, quelli freddi indicano freddo.',
+    dew_point_2m: 'Il punto di rugiada dice quanto l\'aria è umida. Se è vicino alla temperatura, l\'aria è molto umida e può formarsi nebbia o afa. Se è molto più basso, l\'aria è secca.',
+    temperature_850hPa: 'Qui vedi se l\'aria a circa 1.500 metri di altezza è calda o fredda. Questa aria un po\' più in alto aiuta a capire se arriverà un rialzo o un calo di temperatura anche al suolo.',
+    temperature_500hPa: 'Questa è la temperatura molto in alto, a circa 5.500 metri. L\'aria fredda in quota può favorire temporali; l\'aria meno fredda è in genere più tranquilla.',
+    wind_10m: 'Qui vedi quanto è forte il vento vicino al suolo, all\'altezza di un palazzo basso, e da che parte tira. I colori più intensi indicano vento più forte.',
+    wind_gusts_10m: 'Le raffiche sono i colpi di vento più forti, più intensi del vento medio. Questa cartina ti avvisa se potranno essere molto violente.',
+    wind_850hPa: 'Questa è la direzione e la forza del vento a circa 1.500 metri. Mostra come si muove l\'aria un po\' più in alto, che spesso guida le nuvole e le piogge.',
+    wind_700hPa: 'Qui vedi il vento a circa 3.000 metri. Serve a capire da dove arriva l\'aria e se porta umidità verso le montagne o verso il mare.',
+    wind_500hPa: 'Questa è la corrente dell\'aria a circa 5.500 metri. Indica la «strada» che seguono le aree di maltempo.',
+    wind_250hPa: 'La corrente a getto è un vento fortissimo molto in alto, a circa 10.000 metri, dove volano gli aerei. Quando è vicina e ondulata, il tempo a terra può cambiare in fretta.',
+    geopotential_height_700hPa: 'Questa cartina mostra le «colline» e le «valli» dell\'aria a circa 3.000 metri. Nelle valli l\'aria gira spesso in modo da favorire nuvole e pioggia; sulle colline il tempo è in genere più stabile.',
+    geopotential_height_500hPa: 'Qui vedi la forma delle correnti a circa 5.500 metri. Le grandi «fosse» (valori più bassi) portano spesso aria fredda e maltempo; le «cupole» (valori più alti) portano aria più mite e tempo più stabile.',
+    relative_humidity_850hPa: 'Questa cartina dice quanto è piena d\'acqua l\'aria a circa 1.500 metri. Se l\'umidità è alta possono formarsi nubi basse, pioggia o nebbia.',
+    relative_humidity_700hPa: 'Qui vedi l\'umidità a circa 3.000 metri. Se è alta, in quota ci sono spesso nubi e può piovere; se è bassa il cielo in alta quota è più pulito.',
+    cloud_cover: 'Questa cartina mostra quanto cielo è coperto dalle nuvole, da quelle basse a quelle alte. I colori chiari indicano poco coperto, i grigi più scuri indicano cielo molto nuvoloso.',
+    cloud_cover_low: 'Qui vedi solo le nuvole più vicine al suolo, come quelle che coprono le colline o portano pioggerella. Non considera le nuvole molto alte.',
+    cape: 'Il CAPE misura quanta «spinta» ha l\'aria calda per salire in alto. Dove i valori sono alti possono nascere nubi a sviluppo verticale e temporali. Non dice da solo se pioverà, ma indica il rischio di temporali forti.',
+    convective_inhibition: 'Questa cartina mostra se c\'è un «coperchio» di aria che impedisce ai temporali di partire. Valori più forti significano che l\'aria fa più fatica a salire. Se il coperchio si rompe, i temporali possono essere improvvisi.',
+    lifted_index: 'Questo indice dice se l\'aria, salendo, diventa più instabile. I numeri sotto zero indicano che i temporali sono più probabili; i numeri sopra zero indicano un\'atmosfera più tranquilla.',
+    total_column_integrated_water_vapour: 'Qui vedi quanta acqua, sotto forma di vapore, c\'è in tutta la colonna d\'aria, dal suolo fino in alto. Più vapore c\'è, più può piovere se arrivano i movimenti giusti.',
+    snowfall: 'Questa cartina mostra dove e quanta neve è prevista in un\'ora. I colori più intensi indicano nevicata più abbondante.',
+    freezing_level_height: 'Lo zero termico è l\'altezza a cui la temperatura arriva a zero gradi. Se è basso, la neve può arrivare anche in pianura; se è alto, in basso pioverà e la neve resterà solo in montagna.'
+  };
+
   var SCALE = {
     temp: [[-15, 15, 40, 120], [0, 40, 90, 180], [10, 80, 170, 80], [20, 230, 200, 40], [30, 200, 40, 20], [40, 120, 0, 40]],
     temp500: [[-40, 15, 40, 120], [-25, 40, 90, 180], [-15, 80, 170, 80], [0, 230, 200, 40], [10, 200, 40, 20]],
@@ -677,6 +706,14 @@
     var v = variabileById($('cmi-variabile').value);
     var el = $('cmi-variabile-info');
     if (el) el.textContent = v.info || '';
+    aggiornaSpiegazione(v);
+  }
+  function aggiornaSpiegazione(v) {
+    var titoloEl = $('cmi-spiegazione-titolo');
+    var testoEl = $('cmi-spiegazione-testo');
+    if (!titoloEl || !testoEl || !v) return;
+    titoloEl.textContent = v.nome;
+    testoEl.textContent = SPIEGAZIONI[v.id] || 'Questa cartina mostra la grandezza scelta, con i colori della legenda.';
   }
   function aggiornaOpzioniVariabile() {
     var mid = $('cmi-modello').value;
