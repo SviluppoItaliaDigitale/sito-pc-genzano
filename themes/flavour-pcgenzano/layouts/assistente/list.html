@@ -492,6 +492,8 @@
         { text: 'Da dove comincio? (i contenuti giusti per la tua situazione)', next: 'info_cittadino_da_dove' },
         { text: 'Cosa fare in caso di emergenza', next: 'info_cittadino_cosa_fare' },
         { text: 'Allerte meteo e codici colore', next: 'info_cittadino_allerte' },
+        { text: 'Cartina meteo Italia', next: 'info_cittadino_cartina' },
+        { text: 'Mappe meteo professionali', next: 'info_cittadino_mappe_pro' },
         { text: 'Rischi del territorio (sismico, idro, incendi)', next: 'info_cittadino_rischi' },
         { text: 'Cartografia operativa (aree di attesa)', next: 'info_cittadino_cartografia' },
         { text: 'Numeri utili (112 e altri)', next: 'info_cittadino_numeri' },
@@ -520,6 +522,25 @@
         { text: 'Spiegazione codici colore', url: '/allerte-meteo/' },
         { text: 'Stato allerta attuale (homepage)', url: '/' },
         { text: 'Bollettino ufficiale Regione Lazio', url: 'https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti' }
+      ]
+    },
+    info_cittadino_cartina: {
+      kind: 'answer',
+      title: 'Cartina meteo Italia',
+      body: ['Una cartina interattiva dell\'Italia, del Lazio e dei Castelli Romani: puoi scegliere il modello, vedere il tempo previsto, far partire l\'animazione e scaricare o condividere una GIF o un fotogramma. C\'è anche il bollettino scritto per Nord, Centro, Sud, Isole e Castelli Romani. Non sostituisce i bollettini ufficiali del Centro Funzionale Regionale.'],
+      links: [
+        { text: 'Apri la cartina meteo Italia', url: '/cartina-meteo-italia/' },
+        { text: 'Allerte meteo', url: '/allerte-meteo/' }
+      ]
+    },
+    info_cittadino_mappe_pro: {
+      kind: 'answer',
+      title: 'Mappe meteo professionali',
+      body: ['Carte meteorologiche professionali per l\'Italia, elaborate dai modelli GFS, ECMWF e ICON e aggiornate automaticamente. Puoi scorrere le ore di previsione, avviare l\'animazione e scaricare le immagini. Servono a inquadrare la situazione su scala nazionale; non sostituiscono i bollettini ufficiali.'],
+      links: [
+        { text: 'Apri le mappe meteo professionali', url: '/mappe-meteo-professionali/' },
+        { text: 'Cartina meteo Italia', url: '/cartina-meteo-italia/' },
+        { text: 'Allerte meteo', url: '/allerte-meteo/' }
       ]
     },
     info_cittadino_organizzazioni: {
@@ -1028,7 +1049,9 @@
       links: [
         { text: 'Cruscotto del territorio', url: '/cruscotto/' },
         { text: 'Strumenti in tempo reale', url: '/strumenti/' },
-        { text: 'Allerte meteo', url: '/allerte-meteo/' }
+        { text: 'Allerte meteo', url: '/allerte-meteo/' },
+        { text: 'Cartina meteo Italia', url: '/cartina-meteo-italia/' },
+        { text: 'Mappe meteo professionali', url: '/mappe-meteo-professionali/' }
       ]
     },
     info_cittadino_poster: {
