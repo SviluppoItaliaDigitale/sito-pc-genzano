@@ -270,8 +270,9 @@ def chk_dpc_bollettino():
         ok, det, _, _ = _get(base + nome, expect_json=False)
         if not ok:
             return False, f"{nome} non raggiungibile ({det})"
-    # il mirror da cui si ricava il timbro: se muore si resta sull'API di
-    # ripiego, che ha una quota per IP — meglio saperlo prima
+    # Il mirror è una delle due fonti del timbro (l'altra è l'albero git
+    # ufficiale). Se muore lo snapshot può aggiornarsi lo stesso, ma una
+    # fonte ferma va vista prima che resti l'unica.
     mirror = ("https://raw.githubusercontent.com/opendatasicilia/"
               "DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/"
               "data/bollettini/bollettino-oggi-zone-latest.csv")
