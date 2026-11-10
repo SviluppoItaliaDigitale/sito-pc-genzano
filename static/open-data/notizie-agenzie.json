@@ -5,11 +5,59 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-10T16:36:11+00:00",
+  "generato": "2026-11-10T16:51:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-10T16:45:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Comuni, La Spina (Unpli): \"Con firma protocollo con Anci possibile avviare piccoli musei\"",
+   "url": "https://www.adnkronos.com/cronaca/comuni-la-spina-unpli-con-firma-protocollo-con-anci-possibile-avviare-piccoli-musei_6Et0IP49M7PGc16JsxjYbY"
+  },
+  {
+   "data": "2026-11-10T16:44:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giustizia, Mattarella: \"Magistrati non condizionati da interessi e volontà di altri poteri\"﻿",
+   "url": "https://www.adnkronos.com/politica/giustizia-mattarella-magistrati_5fM1taquwzStQKvRdlCREn"
+  },
+  {
+   "data": "2026-11-10T16:38:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ex Ilva, non c'è l'accordo con i sindacati sulla cigs",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/ex-ilva-non-ce-laccordo-con-i-sindacati-sulla-cigs_1f0a8e77-efff-43d5-a6ee-716e84ca53d9.html"
+  },
+  {
+   "data": "2026-11-10T16:38:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pellegrini Calace (Federfarma): \"Il fascicolo sanitario elettronico migliora la presa in carico dei pazienti\"",
+   "url": "https://www.adnkronos.com/cronaca/pellegrini-calace-federfarma-il-fascicolo-sanitario-elettronico-migliora-la-presa-in-carico-dei-pazienti_5girnwuMZxyCScdh6znfSj"
+  },
+  {
+   "data": "2026-11-10T16:37:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Marra (Diabete Italia): \"Garantire equità cure e percorsi omogenei sul territorio\"",
+   "url": "https://www.adnkronos.com/cronaca/marra-diabete-italia-garantire-equita-cure-e-percorsi-omogenei-sul-territorio_NFmF9nVt7aDoCvXwdTRjl"
+  },
+  {
+   "data": "2026-11-10T16:34:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Prevenire complicanze del diabete di tipo 2, al Senato confronto su nuove strategie di cura",
+   "url": "https://www.adnkronos.com/cronaca/prevenire-complicanze-del-diabete-di-tipo-2-al-senato-confronto-su-nuove-strategie-di-cura_6Im1QQIRK4WfL7j8bBmoUH"
+  },
+  {
+   "data": "2026-11-10T16:33:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sinner: 'Sto bene, sto facendo di tutto per tornare presto e più forte'",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/10/sinner-sto-bene-sto-facendo-di-tutto-per-tornare-presto-e-piu_3e76c8cf-29a7-4049-9df7-61cd27b11f7a.html"
+  },
+  {
+   "data": "2026-11-10T16:31:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Agenzia Ue, attacchi hacker potrebbero colpire anche elettrodomestici ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/11/10/-agenzia-ue-attacchi-hacker-potrebbero-colpire-anche-elettrodomestici-_9c3d86bf-5aa8-4ffc-9a9a-2944ccafb98d.html"
+  },
   {
    "data": "2026-11-10T16:29:43+00:00",
    "fonte": "ANSA",
@@ -27,12 +75,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Vallifuoco (Social Reporters): \"Necessario patto etico tra attori dell'ecosistema editoriale\"",
    "url": "https://www.adnkronos.com/economia/vallifuoco-social-reporters-necessario-patto-etico-tra-attori-dellecosistema-editoriale_6FTjvyCqrjwVJ4aZ9aWrPB"
-  },
-  {
-   "data": "2026-11-10T16:23:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sinner: 'Sto bene, sto facendo di tutto per tornare presto e più forte'",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/10/sinner-sto-bene-sto-facendo-di-tutto-per-tornare-presto-e-piu_3e76c8cf-29a7-4049-9df7-61cd27b11f7a.html"
   },
   {
    "data": "2026-11-10T16:23:41+00:00",
@@ -89,46 +131,16 @@
    "url": "https://www.adnkronos.com/cronaca/irene-pivetti-processo-roma-bancarotta-fraudolenta_2jJrhHO3FObdrz9MhjZckH"
   },
   {
-   "data": "2026-11-10T16:08:14+00:00",
+   "data": "2026-11-10T16:08:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Ex Ilva, fumata nera al ministero: niente accordo su cassa integrazione per gli oltre 8.600 lavoratori",
    "url": "https://www.adnkronos.com/cronaca/ex-ilva-cassa-integrazione-lavoratori_3zRFgI2BrwM9zLGPWJrwoo"
-  },
-  {
-   "data": "2026-11-10T16:07:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ex Ilva, non c'è l'accordo con i sindacati sulla cigs",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/ex-ilva-non-ce-laccordo-con-i-sindacati-sulla-cigs_1f0a8e77-efff-43d5-a6ee-716e84ca53d9.html"
-  },
-  {
-   "data": "2026-11-10T16:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Maltempo, allerta meteo arancione e gialla per domani 11 novembre: le regioni a rischio",
-   "url": "https://www.adnkronos.com/cronaca/meteo-allerte-maltempo-mercoledi-11-novembre-protezione-civile_YynKc1xqr3h4lCKoIF0Zt"
-  },
-  {
-   "data": "2026-11-10T15:57:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Migliore (min.Salute): \"Comunicazione più precisa e vicina a cittadino con nuove tecnologie\"",
-   "url": "https://www.adnkronos.com/economia/migliore-minsalute-comunicazione-piu-precisa-e-vicina-a-cittadino-con-nuove-tecnologie_4pgOTgw17agc6ePzUgNA2n"
   },
   {
    "data": "2026-11-10T15:56:39+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Disabilità, 'nasce QB Network per opportunità lavoro nella ristorazione'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/disabilita-nasce-qb-network-per-opportunita-lavoro-nella-ristorazione_8bd7c8b9-5409-4136-a248-7b0edaf6cbd6.html"
-  },
-  {
-   "data": "2026-11-10T15:56:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ai, Bianco (Teha): \"I giovani la usano per dubbi sulla salute, ma si fidano poco\"",
-   "url": "https://www.adnkronos.com/cronaca/ai-bianco-teha-i-giovani-la-usano-per-dubbi-sulla-salute-ma-si-fidano-poco_7jC03gY6WsnGsP39J4oeoP"
-  },
-  {
-   "data": "2026-11-10T15:56:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Biffoli (Mimit): \"L'Europa deve migliorare la propria posizione nelle scienze della vita\"",
-   "url": "https://www.adnkronos.com/economia/biffoli-mimit-leuropa-deve-migliorare-la-propria-posizione-nelle-scienze-della-vita_3AxgM9uDFEgJYXCllD2Rcv"
   },
   {
    "data": "2026-11-10T15:56:12+00:00",
@@ -173,22 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/10/hegseth-terra-oggi-una-conferenza-stampa-dopo-la-richiesta-di-impeachment_2979584a-b939-48f3-bb33-2ca237fbebf5.html"
   },
   {
-   "data": "2026-11-10T15:41:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dl Bollette, il Price Cap sul gas abbassa il prezzo della luce? Cosa cambia da gennaio 2027, l'analisi",
-   "url": "https://www.adnkronos.com/economia/dl-bollette-analisi-stime-prezzi-luce-gennaio-2027-cosa-cambia_292sQGA9obnEOYDX7RunnJ"
-  },
-  {
    "data": "2026-11-10T15:27:31+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Riscoprire le origini, il turismo delle radici strumento di diplomazia culturale",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/riscoprire-le-origini-il-turismo-delle-radici-strumento-di-diplomazia-culturale_d99b5be1-ba96-4a23-b3d6-98b4e8f9d29a.html"
-  },
-  {
-   "data": "2026-11-10T15:26:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Chi è Alice Huang, la donna che minaccia il mondo dell'IA",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/alice-huang-la-donna-che-minaccia-il-mondo-dellia_96b091d9-8e72-4bac-b4fa-7b9ce6ef3167.html"
   }
  ]
 }
