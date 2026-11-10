@@ -25,9 +25,17 @@
 
       <section class="cmi-sezione" id="cartina-interattiva" aria-labelledby="cmi-cartina-titolo">
         <h2 id="cmi-cartina-titolo">Cartina interattiva dell'Italia</h2>
-        <p>Scegli un modello e una grandezza, poi sposta il cursore sulle ore di previsione. Il colore è un campo interpolato in modo continuo sulla griglia dei punti: è una lettura sinottica, non una previsione puntuale per ogni comune. I modelli a dominio limitato lasciano senza colore le zone che non coprono. Puoi fare clic su un punto per il meteogramma, confrontare due modelli e scaricare un'animazione GIF o un fotogramma PNG.</p>
+        <p>Scegli l'area (Italia, Lazio o Castelli Romani), il modello e la grandezza, poi sposta il cursore sulle ore di previsione. Il colore è un campo interpolato in modo continuo sulla griglia dei punti: è una lettura sinottica, non una previsione puntuale per ogni comune. Nei Castelli Romani la griglia è più densa, ma anche i modelli a 2 km restano una lettura approssimativa. I modelli a dominio limitato lasciano senza colore le zone che non coprono. Puoi fare clic su un punto per il meteogramma, confrontare due modelli, scaricare o condividere un'animazione GIF o un fotogramma PNG. Lo stato della cartina è anche nel collegamento della pagina.</p>
 
         <form class="cmi-comandi" id="cmi-comandi" aria-controls="cmi-mappa">
+          <div class="cmi-campo cmi-campo-dominio">
+            <label for="cmi-dominio">Area della cartina</label>
+            <select id="cmi-dominio" name="dominio">
+              <option value="italia" selected>Italia</option>
+              <option value="lazio">Lazio</option>
+              <option value="castelli">Castelli Romani</option>
+            </select>
+          </div>
           <div class="cmi-campo">
             <label for="cmi-modello">Modello</label>
             <select id="cmi-modello" name="modello"></select>
@@ -44,6 +52,7 @@
             <p class="cmi-modello-info" id="cmi-modello-b-info"></p>
           </div>
         </form>
+        <p class="cmi-dominio-note" id="cmi-dominio-note" hidden></p>
 
         <div class="cmi-opzioni" role="group" aria-label="Opzioni di visualizzazione">
           <label class="cmi-check">
@@ -245,7 +254,7 @@
   </div>
 </div>
 
-{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) "iconeUrl" ("images/meteo-icone/" | relURL) -}}
+{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) "iconeUrl" ("images/meteo-icone/" | relURL) "laghiUrl" ("data/laghi-castelli-romani.geojson" | relURL) "hillshadeCastelliUrl" ("images/cartina-meteo-hillshade-castelli.png" | relURL) -}}
 {{- if $b -}}
   {{- $bPub := dict "emesso_il" $b.emesso_il "validita_da" $b.validita_da "validita_a" $b.validita_a "situazione_generale" $b.situazione_generale -}}
   {{- $cfg = merge $cfg (dict "bollettino" $bPub) -}}

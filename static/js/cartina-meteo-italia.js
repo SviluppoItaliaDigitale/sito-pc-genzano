@@ -10,6 +10,65 @@
   var BATCH = 50;
   var GENZANO = { nome: 'Genzano di Roma', lat: 41.7085, lon: 12.6916 };
 
+  var COMUNI_CASTELLI = [
+    { nome: 'Frascati', lat: 41.8081, lon: 12.6812, allinea: 'n' },
+    { nome: 'Marino', lat: 41.7706, lon: 12.6611, allinea: 'w' },
+    { nome: 'Rocca di Papa', lat: 41.7619, lon: 12.7097, allinea: 'ne' },
+    { nome: 'Castel Gandolfo', lat: 41.7464, lon: 12.6519, allinea: 'w' },
+    { nome: 'Albano Laziale', lat: 41.7264, lon: 12.6590, allinea: 'sw' },
+    { nome: 'Ariccia', lat: 41.7208, lon: 12.6716, allinea: 'e' },
+    { nome: 'Nemi', lat: 41.7217, lon: 12.7150, allinea: 'e' },
+    { nome: 'Genzano di Roma', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true },
+    { nome: 'Lanuvio', lat: 41.6747, lon: 12.6978, allinea: 'sw' },
+    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e' }
+  ];
+  var COMUNI_LAZIO = [
+    { nome: 'Viterbo', lat: 42.4178, lon: 12.1087, allinea: 'n' },
+    { nome: 'Rieti', lat: 42.4048, lon: 12.8617, allinea: 'n' },
+    { nome: 'Civitavecchia', lat: 42.0919, lon: 11.7968, allinea: 'w' },
+    { nome: 'Bracciano', lat: 42.1036, lon: 12.1756, allinea: 'e' },
+    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 'w' },
+    { nome: 'Tivoli', lat: 41.9636, lon: 12.8010, allinea: 'e' },
+    { nome: 'Guidonia', lat: 41.9936, lon: 12.7223, allinea: 'n' },
+    { nome: 'Fiumicino', lat: 41.7676, lon: 12.2299, allinea: 'sw' },
+    { nome: 'Genzano di Roma', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true },
+    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e' },
+    { nome: 'Latina', lat: 41.4676, lon: 12.9037, allinea: 's' },
+    { nome: 'Anzio', lat: 41.4474, lon: 12.6287, allinea: 's' },
+    { nome: 'Frosinone', lat: 41.6398, lon: 13.3515, allinea: 'e' },
+    { nome: 'Cassino', lat: 41.4901, lon: 13.8306, allinea: 'e' },
+    { nome: 'Gaeta', lat: 41.2096, lon: 13.5707, allinea: 's' },
+    { nome: 'Terracina', lat: 41.2917, lon: 13.2486, allinea: 's' }
+  ];
+  var NOTA_DOMINIO_LOCALE = 'Anche i modelli a 1,5–2 km risolvono quest\'area in modo approssimativo: un punto della griglia rappresenta qualche chilometro, non il singolo abitato. ICON-2I copre Lazio e Castelli Romani. ICON-D2, AROME, AROME HD e ICON-CH coprono soprattutto il Nord e l\'arco alpino e in genere restano fuori da questa inquadratura.';
+
+  var DOMINI = [
+    {
+      id: 'italia', nome: 'Italia', titolo: 'Cartina meteo dell\'Italia',
+      latMin: 36.0, latMax: 47.2, lonMin: 6.4, lonMax: 18.8,
+      passo: 0.6, fade: 0.4, minZoom: 5, maxZoom: 9, maxZoomFit: 7,
+      modello: 'ecmwf_ifs', locali: false, laghi: false, hillshade: false, comuni: []
+    },
+    {
+      id: 'lazio', nome: 'Lazio', titolo: 'Cartina meteo del Lazio',
+      latMin: 40.78, latMax: 42.90, lonMin: 11.45, lonMax: 14.15,
+      passo: 0.1, fade: 0.08, minZoom: 7, maxZoom: 11, maxZoomFit: 9,
+      modello: 'italia_meteo_arpae_icon_2i', locali: true, laghi: true, hillshade: false, comuni: COMUNI_LAZIO,
+      nota: NOTA_DOMINIO_LOCALE
+    },
+    {
+      id: 'castelli', nome: 'Castelli Romani', titolo: 'Cartina meteo dei Castelli Romani',
+      latMin: 41.60, latMax: 41.85, lonMin: 12.50, lonMax: 12.85,
+      passo: 0.015, fade: 0.015, minZoom: 10, maxZoom: 14, maxZoomFit: 12,
+      modello: 'italia_meteo_arpae_icon_2i', locali: true, laghi: true, hillshade: true, comuni: COMUNI_CASTELLI,
+      nota: NOTA_DOMINIO_LOCALE
+    }
+  ];
+  var dominioId = 'italia';
+  var hillshadeImg = null;
+  var laghiGeo = null;
+  var oraIniziale = null;
+
   var MODELLI = [
     { id: 'ecmwf_ifs', gruppo: 'globali', nome: 'ECMWF IFS HRES', risoluzione: '9 km', aggiornamento: 'ogni 6 ore', giorni: 15, dominio: 'Italia intera', ente: 'ECMWF' },
     { id: 'ecmwf_ifs025', gruppo: 'globali', nome: 'ECMWF IFS 0,25°', risoluzione: '25 km', aggiornamento: 'ogni 6 ore', giorni: 15, dominio: 'Italia intera', ente: 'ECMWF' },
@@ -36,7 +95,7 @@
     { id: 'chmi_aladin_central_europe_2km', gruppo: 'europa', nome: 'CHMI ALADIN Europa centrale', risoluzione: '2 km', aggiornamento: 'ogni 6 ore', giorni: 3, dominio: 'Centro-Nord; la Sicilia può restare fuori', ente: 'CHMI' },
     { id: 'geosphere_claef_austria', gruppo: 'europa', nome: 'GeoSphere C-LAEF', risoluzione: '1 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Prevalentemente Nord-Est e arco alpino', ente: 'GeoSphere Austria' },
 
-    { id: 'italia_meteo_arpae_icon_2i', gruppo: 'alta', nome: 'ItaliaMeteo ARPAE ICON-2I', risoluzione: '2 km', aggiornamento: 'ogni 12 ore', giorni: 3, dominio: 'Italia intera e Mediterraneo centrale', ente: 'ItaliaMeteo / ARPAE' },
+    { id: 'italia_meteo_arpae_icon_2i', gruppo: 'alta', nome: 'ItaliaMeteo ARPAE ICON-2I', risoluzione: '2 km', aggiornamento: 'ogni 12 ore', giorni: 3, dominio: 'Italia intera e Mediterraneo centrale', ente: 'ItaliaMeteo / ARPAE', consigliatoLocali: true },
     { id: 'dwd_icon_d2', gruppo: 'alta', nome: 'DWD ICON-D2', risoluzione: '2 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Prevalentemente Nord Italia', ente: 'DWD', nota: 'Canale classico annunciato in dismissione il 30 novembre 2026; è disponibile anche la versione nativa.' },
     { id: 'dwd_icon_d2_native', gruppo: 'alta', nome: 'DWD ICON-D2 (nativo)', risoluzione: '2 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Prevalentemente Nord Italia', ente: 'DWD' },
     { id: 'meteofrance_arome_france', gruppo: 'alta', nome: 'Météo-France AROME', risoluzione: '2,5 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Nord e parte del Centro; Sud e Isole spesso fuori', ente: 'Météo-France' },
@@ -192,6 +251,58 @@
     for (var i = 0; i < VARIABILI.length; i++) if (VARIABILI[i].id === id) return VARIABILI[i];
     return VARIABILI[0];
   }
+  function dominioById(id) {
+    for (var i = 0; i < DOMINI.length; i++) if (DOMINI[i].id === id) return DOMINI[i];
+    return DOMINI[0];
+  }
+  function dominioCorrente() { return dominioById(dominioId); }
+  function applicaDominio(d) {
+    if (!d) d = dominioCorrente();
+    dominioId = d.id;
+    LAT_MIN = d.latMin;
+    LAT_MAX = d.latMax;
+    LON_MIN = d.lonMin;
+    LON_MAX = d.lonMax;
+    PASSO = d.passo;
+  }
+  function boundsCampo() {
+    return L.latLngBounds([[LAT_MIN, LON_MIN], [LAT_MAX, LON_MAX]]);
+  }
+  function leggiQuery() {
+    var out = {};
+    try {
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('dominio')) out.dominio = p.get('dominio');
+      if (p.get('modello')) out.modello = p.get('modello');
+      if (p.get('var')) out.var = p.get('var');
+      if (p.get('ora')) out.ora = p.get('ora');
+    } catch (e) {}
+    return out;
+  }
+  function aggiornaUrl() {
+    try {
+      var p = new URLSearchParams();
+      p.set('dominio', dominioId);
+      if ($('cmi-modello') && $('cmi-modello').value) p.set('modello', $('cmi-modello').value);
+      if ($('cmi-variabile') && $('cmi-variabile').value) p.set('var', $('cmi-variabile').value);
+      var iso = statoMappa.orari && statoMappa.orari[statoMappa.indice];
+      if (iso) p.set('ora', iso);
+      var url = window.location.pathname + '?' + p.toString();
+      if (window.history && window.history.replaceState) window.history.replaceState(null, '', url);
+    } catch (e) {}
+  }
+  function aggiornaNotaDominio() {
+    var el = $('cmi-dominio-note');
+    if (!el) return;
+    var d = dominioCorrente();
+    if (d.nota) {
+      el.hidden = false;
+      el.textContent = d.nota;
+    } else {
+      el.hidden = true;
+      el.textContent = '';
+    }
+  }
   function arrotonda(x, n) {
     var f = Math.pow(10, n || 0);
     return Math.round(x * f) / f;
@@ -317,9 +428,12 @@
   }
   function costruisciGriglia() {
     var punti = [];
+    var dec = 2;
+    if (PASSO < 0.05) dec = 3;
+    if (PASSO < 0.005) dec = 4;
     for (var lat = LAT_MIN; lat <= LAT_MAX + 1e-9; lat += PASSO) {
       for (var lon = LON_MIN; lon <= LON_MAX + 1e-9; lon += PASSO) {
-        punti.push({ lat: arrotonda(lat, 2), lon: arrotonda(lon, 2) });
+        punti.push({ lat: arrotonda(lat, dec), lon: arrotonda(lon, dec) });
       }
     }
     return punti;
@@ -412,38 +526,84 @@
   }
 
   function popolaSelectModello(sel, valore) {
+    var precedente = valore || sel.value;
     sel.textContent = '';
-    var gruppi = ['globali', 'europa', 'alta'];
+    var locali = dominioCorrente().locali;
+    var gruppi = locali ? ['consigliati', 'globali', 'europa', 'alta'] : ['globali', 'europa', 'alta'];
+    var etichette = { consigliati: 'Consigliati per quest\'area', globali: GRUPPI.globali, europa: GRUPPI.europa, alta: GRUPPI.alta };
     for (var g = 0; g < gruppi.length; g++) {
       var og = document.createElement('optgroup');
-      og.label = GRUPPI[gruppi[g]];
+      og.label = etichette[gruppi[g]];
       for (var i = 0; i < MODELLI.length; i++) {
-        if (MODELLI[i].gruppo !== gruppi[g]) continue;
+        if (gruppi[g] === 'consigliati') {
+          if (!MODELLI[i].consigliatoLocali) continue;
+        } else {
+          if (MODELLI[i].gruppo !== gruppi[g]) continue;
+          if (locali && MODELLI[i].consigliatoLocali) continue;
+        }
         var o = document.createElement('option');
         o.value = MODELLI[i].id;
         o.textContent = MODELLI[i].nome + ' — ' + MODELLI[i].risoluzione;
         og.appendChild(o);
       }
-      sel.appendChild(og);
+      if (og.childNodes.length) sel.appendChild(og);
     }
-    sel.value = valore;
+    if (precedente) sel.value = precedente;
+    if (!sel.value) sel.value = dominioCorrente().modello || 'ecmwf_ifs';
   }
   function popolaSelect() {
     var selM = $('cmi-modello');
     var selV = $('cmi-variabile');
     var selB = $('cmi-modello-b');
+    var selD = $('cmi-dominio');
     if (!selM || !selV) return;
-    popolaSelectModello(selM, 'ecmwf_ifs');
+    if (selD) selD.value = dominioId;
+    popolaSelectModello(selM, dominioCorrente().modello || 'ecmwf_ifs');
     if (selB) popolaSelectModello(selB, 'ncep_gfs_global');
-    for (var v = 0; v < VARIABILI.length; v++) {
-      var ov = document.createElement('option');
-      ov.value = VARIABILI[v].id;
-      ov.textContent = VARIABILI[v].nome;
-      selV.appendChild(ov);
+    if (!selV.options.length) {
+      for (var v = 0; v < VARIABILI.length; v++) {
+        var ov = document.createElement('option');
+        ov.value = VARIABILI[v].id;
+        ov.textContent = VARIABILI[v].nome;
+        selV.appendChild(ov);
+      }
     }
     selV.value = 'tempo_previsto';
     aggiornaInfoModello();
     aggiornaInfoVariabile();
+    aggiornaNotaDominio();
+  }
+  function applicaParametriUrl() {
+    var q = leggiQuery();
+    var d = dominioById(q.dominio || 'italia');
+    applicaDominio(d);
+    var selD = $('cmi-dominio');
+    if (selD) selD.value = d.id;
+    var predefM = d.modello || 'ecmwf_ifs';
+    popolaSelectModello($('cmi-modello'), q.modello || predefM);
+    if ($('cmi-modello-b')) popolaSelectModello($('cmi-modello-b'), $('cmi-modello-b').value || 'ncep_gfs_global');
+    if (q.var && $('cmi-variabile')) $('cmi-variabile').value = q.var;
+    if (q.ora) oraIniziale = q.ora;
+    aggiornaInfoModello();
+    aggiornaInfoVariabile();
+    aggiornaNotaDominio();
+  }
+  function cambiaDominio(id) {
+    var d = dominioById(id);
+    var stesso = d.id === dominioId;
+    fermaPlay(true);
+    applicaDominio(d);
+    var modelloAttuale = $('cmi-modello') ? $('cmi-modello').value : '';
+    popolaSelectModello($('cmi-modello'), modelloAttuale || d.modello);
+    if ($('cmi-modello-b')) popolaSelectModello($('cmi-modello-b'), $('cmi-modello-b').value);
+    aggiornaInfoModello();
+    aggiornaNotaDominio();
+    adattaMappe();
+    aggiornaUrl();
+    if (stesso) return Promise.resolve();
+    var jobs = [caricaGriglia('a')];
+    if (confrontoAttivo()) jobs.push(caricaGriglia('b', { mantieniOra: true }));
+    return Promise.all(jobs);
   }
   function testoInfoModello(m) {
     var parti = [m.ente, 'risoluzione ' + m.risoluzione, 'orizzonte ' + m.giorni + (m.giorni === 1 ? ' giorno' : ' giorni'), 'aggiornamento ' + m.aggiornamento, m.dominio];
@@ -499,11 +659,13 @@
     return L.latLngBounds([[36.2, 6.6], [47.2, 18.7]]);
   }
   function creaMappaBase(id, conClick) {
-    var bounds = boundsItalia();
+    var d = dominioCorrente();
+    var campo = boundsCampo();
     var map = L.map(id, {
       scrollWheelZoom: false,
-      maxBounds: bounds.pad(0.35),
-      minZoom: 5,
+      maxBounds: campo.pad(0.45),
+      minZoom: d.minZoom,
+      maxZoom: d.maxZoom,
       zoomSnap: 0.25,
       zoomDelta: 0.25,
       zoomControl: true,
@@ -511,11 +673,25 @@
     });
     map.attributionControl.setPrefix('');
     map.attributionControl.addAttribution('Confini: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> · Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> CC BY 4.0');
-    map.fitBounds(L.latLngBounds([[LAT_MIN, LON_MIN], [LAT_MAX, LON_MAX]]), { padding: [4, 4], maxZoom: 7 });
+    map.fitBounds(campo, { padding: [8, 8], maxZoom: d.maxZoomFit });
     if (conClick) map.on('click', onClickMappa);
     var st = creaStratoCanvas(map);
     map.on('move zoom resize', function () { if (st) st.ridisegna(); });
     return { map: map, strato: st };
+  }
+  function adattaMappe() {
+    var d = dominioCorrente();
+    var campo = boundsCampo();
+    function sistema(map) {
+      if (!map) return;
+      map.setMinZoom(d.minZoom);
+      map.setMaxZoom(d.maxZoom);
+      map.setMaxBounds(campo.pad(0.45));
+      map.invalidateSize();
+      map.fitBounds(campo, { padding: [8, 8], maxZoom: d.maxZoomFit });
+    }
+    sistema(mappa);
+    sistema(mappaB);
   }
   function creaMappe() {
     var a = creaMappaBase('cmi-mappa', true);
@@ -529,9 +705,7 @@
     }).addTo(mappaCitta);
     mappaCitta.fitBounds(bounds, { padding: [16, 16], maxZoom: 7 });
     function adatta() {
-      var campo = L.latLngBounds([[LAT_MIN, LON_MIN], [LAT_MAX, LON_MAX]]);
-      if (mappa) { mappa.invalidateSize(); mappa.fitBounds(campo, { padding: [4, 4], maxZoom: 7 }); }
-      if (mappaB) { mappaB.invalidateSize(); mappaB.fitBounds(campo, { padding: [4, 4], maxZoom: 7 }); }
+      adattaMappe();
       if (mappaCitta) { mappaCitta.invalidateSize(); mappaCitta.fitBounds(bounds, { padding: [16, 16], maxZoom: 7 }); }
     }
     setTimeout(adatta, 300);
@@ -731,7 +905,7 @@
     return arr[iy * mat.nx + ix];
   }
   function fadeBordo(lat, lon) {
-    var m = 0.4;
+    var m = dominioCorrente().fade || 0.4;
     var fx = 1, fy = 1;
     if (lon < LON_MIN + m) fx = (lon - LON_MIN) / m;
     if (lon > LON_MAX - m) fx = (LON_MAX - lon) / m;
@@ -1064,17 +1238,141 @@
     ctx.fillStyle = '#c5d8e8';
     ctx.fillRect(0, 0, vista.w, vista.h);
     if (!stato || !stato.variabile || !stato.matrice) {
+      disegnaHillshade(ctx, vista);
       disegnaConfini(ctx, vista);
+      disegnaLaghi(ctx, vista);
+      disegnaEtichetteLaghi(ctx, vista);
+      disegnaComuni(ctx, vista);
       return;
     }
     disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, stato.variabile.tempo ? 0.62 : 0.84);
+    disegnaHillshade(ctx, vista);
     disegnaConfini(ctx, vista);
+    disegnaLaghi(ctx, vista);
     if (isolineeAttive() && !stato.variabile.tempo) disegnaIsolinee(ctx, vista, stato.matrice, stato.variabile.scala);
     if (stato.variabile.vento && (opts.frecce || !particelleAttive() || motoRidotto())) {
       disegnaFrecce(ctx, vista, stato.matrice);
     }
     if (stato.variabile.tempo) disegnaIconeTempo(ctx, vista, stato.matrice);
+    disegnaEtichetteLaghi(ctx, vista);
+    disegnaComuni(ctx, vista);
     if (opts.decorazioni) disegnaDecorazioni(ctx, vista, stato);
+  }
+  function disegnaHillshade(ctx, vista) {
+    var d = dominioCorrente();
+    if (!d.hillshade || !hillshadeImg) return;
+    var p0 = vista.xy(d.latMax, d.lonMin);
+    var p1 = vista.xy(d.latMin, d.lonMax);
+    var x = Math.min(p0[0], p1[0]);
+    var y = Math.min(p0[1], p1[1]);
+    var w = Math.abs(p1[0] - p0[0]);
+    var h = Math.abs(p1[1] - p0[1]);
+    if (w < 8 || h < 8) return;
+    ctx.save();
+    ctx.globalAlpha = 0.34;
+    ctx.globalCompositeOperation = 'multiply';
+    try { ctx.drawImage(hillshadeImg, x, y, w, h); } catch (e) {}
+    ctx.restore();
+  }
+  function disegnaLaghi(ctx, vista) {
+    if (!laghiGeo || !laghiGeo.features) return;
+    var i, f, nome, xy, c;
+    ctx.save();
+    for (i = 0; i < laghiGeo.features.length; i++) {
+      f = laghiGeo.features[i];
+      if (!f.geometry) continue;
+      perAnello(f.geometry, function (ring) {
+        tracciaAnello(ctx, ring, vista);
+        ctx.fillStyle = 'rgba(70, 130, 180, 0.55)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(20, 55, 90, 0.85)';
+        ctx.lineWidth = 1.4;
+        ctx.stroke();
+      });
+    }
+    ctx.restore();
+  }
+  function disegnaEtichetteLaghi(ctx, vista) {
+    if (!laghiGeo || !laghiGeo.features) return;
+    var i, f, nome, xy, c, tw;
+    ctx.save();
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    for (i = 0; i < laghiGeo.features.length; i++) {
+      f = laghiGeo.features[i];
+      nome = f.properties && f.properties.nome;
+      c = centroideAnello(f.geometry);
+      if (!nome || !c) continue;
+      xy = vista.xy(c.lat, c.lon);
+      if (xy[0] < 8 || xy[1] < 8 || xy[0] > vista.w - 8 || xy[1] > vista.h - 8) continue;
+      ctx.font = 'bold 10px Titillium Web, Arial, sans-serif';
+      tw = ctx.measureText(nome).width;
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+      ctx.strokeText(nome, xy[0], xy[1]);
+      ctx.fillStyle = '#003366';
+      ctx.fillText(nome, xy[0], xy[1]);
+    }
+    ctx.restore();
+  }
+  function centroideAnello(geom) {
+    var sommaLat = 0, sommaLon = 0, n = 0;
+    perAnello(geom, function (ring) {
+      var i, max = ring.length - 1;
+      if (max < 1) return;
+      if (ring[0][0] === ring[max][0] && ring[0][1] === ring[max][1]) max -= 1;
+      for (i = 0; i <= max; i++) {
+        sommaLon += ring[i][0];
+        sommaLat += ring[i][1];
+        n += 1;
+      }
+    });
+    if (!n) return null;
+    return { lat: sommaLat / n, lon: sommaLon / n };
+  }
+  function disegnaComuni(ctx, vista) {
+    var comuni = dominioCorrente().comuni || [];
+    if (!comuni.length) return;
+    var i, c, xy, allinea, evid, r, testo, tw, tx, ty, ax, ay;
+    ctx.save();
+    ctx.font = 'bold 12px Titillium Web, Arial, sans-serif';
+    ctx.textBaseline = 'middle';
+    for (i = 0; i < comuni.length; i++) {
+      c = comuni[i];
+      xy = vista.xy(c.lat, c.lon);
+      if (xy[0] < 4 || xy[1] < 4 || xy[0] > vista.w - 4 || xy[1] > vista.h - 4) continue;
+      evid = !!c.evidenziato;
+      r = evid ? 5 : 3.5;
+      ctx.beginPath();
+      ctx.arc(xy[0], xy[1], r, 0, Math.PI * 2);
+      ctx.fillStyle = evid ? '#003366' : '#1a1a1a';
+      ctx.fill();
+      ctx.strokeStyle = evid ? '#ffbe2e' : '#ffffff';
+      ctx.lineWidth = evid ? 2 : 1.2;
+      ctx.stroke();
+      testo = c.nome;
+      tw = ctx.measureText(testo).width;
+      allinea = c.allinea || 'e';
+      ax = 0; ay = 0;
+      ctx.textAlign = 'left';
+      if (allinea === 'w') { ctx.textAlign = 'right'; ax = -r - 5; }
+      else if (allinea === 'e') { ax = r + 5; }
+      else if (allinea === 'n') { ctx.textAlign = 'center'; ay = -r - 9; }
+      else if (allinea === 's') { ctx.textAlign = 'center'; ay = r + 9; }
+      else if (allinea === 'ne') { ax = r + 4; ay = -r - 6; }
+      else if (allinea === 'nw') { ctx.textAlign = 'right'; ax = -r - 4; ay = -r - 6; }
+      else if (allinea === 'se') { ax = r + 4; ay = r + 6; }
+      else if (allinea === 'sw') { ctx.textAlign = 'right'; ax = -r - 4; ay = r + 6; }
+      tx = xy[0] + ax;
+      ty = xy[1] + ay;
+      ctx.fillStyle = 'rgba(255,255,255,0.86)';
+      if (ctx.textAlign === 'center') ctx.fillRect(tx - tw / 2 - 2, ty - 7, tw + 4, 14);
+      else if (ctx.textAlign === 'right') ctx.fillRect(tx - tw - 2, ty - 7, tw + 4, 14);
+      else ctx.fillRect(tx - 2, ty - 7, tw + 4, 14);
+      ctx.fillStyle = evid ? '#003366' : '#1a1a1a';
+      ctx.fillText(testo, tx, ty);
+    }
+    ctx.restore();
   }
   function nuovaParticella() {
     return {
@@ -1368,7 +1666,7 @@
     });
   }
   function chiaveCache(modelId, varId, giorni) {
-    return modelId + '|' + varId + '|' + giorni;
+    return dominioId + '|' + modelId + '|' + varId + '|' + giorni;
   }
 
   function caricaGriglia(target, opzioni) {
@@ -1520,7 +1818,7 @@
     }
     stato.passi = indici;
     var meglio = 0, dist = Infinity, p, t, d;
-    var ancora = mantieniOra && statoMappa.orari[statoMappa.indice];
+    var ancora = (mantieniOra && statoMappa.orari[statoMappa.indice]) || (!isB && oraIniziale) || null;
     if (ancora) {
       for (p = 0; p < indici.length; p++) {
         if (pacchetto.orari[indici[p]] === ancora) { meglio = p; dist = 0; break; }
@@ -1548,10 +1846,12 @@
       aggiornaLegenda();
       if (strato) strato.ridisegna();
       if (confrontoAttivo() && statoMappaB.orari.length) allineaB();
-      var extra = pacchetto.fuoriDominio ? ' Il modello non copre tutta l\'Italia: le zone fuori dal dominio restano senza colore.' : '';
-      impostaStato('Cartina pronta: ' + modello.nome + ', ' + variabile.nome + '.' + extra, false, false);
+      var extra = pacchetto.fuoriDominio ? ' Il modello non copre tutta l\'area scelta: le zone fuori dal dominio restano senza colore.' : '';
+      impostaStato('Cartina pronta: ' + dominioCorrente().nome + ', ' + modello.nome + ', ' + variabile.nome + '.' + extra, false, false);
       aggiornaCorsa();
       assicuraMarcatoreGenzano();
+      aggiornaUrl();
+      if (!isB) oraIniziale = null;
       if (prontoRisovi) { prontoRisovi(); prontoRisovi = null; }
     } else {
       allineaB();
@@ -1670,6 +1970,7 @@
     aggiornaOraUI();
     if (strato) strato.ridisegna();
     if (confrontoAttivo()) allineaB();
+    aggiornaUrl();
   }
   function fermaPlay(aggiornaBottone) {
     if (timerPlay) { clearInterval(timerPlay); timerPlay = null; }
@@ -1999,12 +2300,13 @@
     canvas.width = w;
     canvas.height = h;
     var ctx = canvas.getContext('2d');
-    var testata = 92, piede = 78;
+    var haRilievo = !!(dominioCorrente().hillshade && hillshadeImg);
+    var testata = 92, piede = haRilievo ? 96 : 78;
     ctx.fillStyle = '#003366';
     ctx.fillRect(0, 0, w, testata);
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 22px Titillium Web, Arial, sans-serif';
-    ctx.fillText('Cartina meteo dell\'Italia', 16, 28);
+    ctx.fillText((dominioCorrente().titolo || 'Cartina meteo dell\'Italia'), 16, 28);
     ctx.font = '16px Titillium Web, Arial, sans-serif';
     ctx.fillText((stato.modello ? stato.modello.nome : '') + ' · ' + (stato.variabile ? stato.variabile.nome : ''), 16, 52);
     ctx.font = '15px Titillium Web, Arial, sans-serif';
@@ -2024,8 +2326,9 @@
     ctx.fillRect(0, h - piede, w, piede);
     ctx.fillStyle = '#ffffff';
     ctx.font = '14px Titillium Web, Arial, sans-serif';
-    ctx.fillText('Dati: Open-Meteo, licenza CC BY 4.0. Confini: Natural Earth, pubblico dominio.', 16, h - 48);
-    ctx.fillText('protezionecivilegenzano.it/cartina-meteo-italia/', 16, h - 28);
+    ctx.fillText('Dati: Open-Meteo, licenza CC BY 4.0. Confini: Natural Earth, pubblico dominio.', 16, h - (haRilievo ? 66 : 48));
+    ctx.fillText('protezionecivilegenzano.it/cartina-meteo-italia/', 16, h - (haRilievo ? 46 : 28));
+    if (haRilievo) ctx.fillText('Rilievo: SRTM NASA/USGS, pubblico dominio.', 16, h - 28);
     ctx.fillText('Aggiornato alle ' + formatDataOraLocale(ultimoAggiornamento || stato.scaricatoIl) + ' (Europe/Rome).', 16, h - 10);
     return canvas;
   }
@@ -2219,13 +2522,20 @@
     Promise.all(jobs).then(function () { aggiornaCorsa(); });
   }
   function bind() {
+    if ($('cmi-dominio')) {
+      $('cmi-dominio').addEventListener('change', function () {
+        cambiaDominio($('cmi-dominio').value);
+      });
+    }
     $('cmi-modello').addEventListener('change', function () {
       aggiornaInfoModello();
       aggiornaOpzioniVariabile();
+      aggiornaUrl();
       caricaGriglia('a');
     });
     $('cmi-variabile').addEventListener('change', function () {
       aggiornaInfoVariabile();
+      aggiornaUrl();
       caricaGriglia('a');
       if (confrontoAttivo()) caricaGriglia('b', { mantieniOra: true });
     });
@@ -2302,15 +2612,32 @@
       return r.json();
     }).then(function (g) { geojson = g; }).catch(function () { geojson = null; });
   }
+  function caricaLaghi() {
+    var url = (leggiConfig().laghiUrl) || '/data/laghi-castelli-romani.geojson';
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error('laghi');
+      return r.json();
+    }).then(function (g) { laghiGeo = g; }).catch(function () { laghiGeo = null; });
+  }
+  function caricaHillshade() {
+    var url = (leggiConfig().hillshadeCastelliUrl) || '/images/cartina-meteo-hillshade-castelli.png';
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () { hillshadeImg = img; resolve(); };
+      img.onerror = function () { hillshadeImg = null; resolve(); };
+      img.src = url;
+    });
+  }
   function avvia() {
     leggiVelocitaSalvata();
     aggiornaVelocitaUI();
     popolaSelect();
+    applicaParametriUrl();
     bind();
     pianificaRefresh();
     var cfg = leggiConfig();
     loadScript(cfg.leafletJs || '/vendor/leaflet/leaflet.js').then(function () {
-      return Promise.all([caricaConfini(), caricaIconeTempo()]);
+      return Promise.all([caricaConfini(), caricaLaghi(), caricaHillshade(), caricaIconeTempo()]);
     }).then(function () {
       creaMappe();
       return Promise.all([caricaGriglia('a'), caricaCitta()]);
@@ -2345,9 +2672,14 @@
       return caricaGriglia('a');
     },
     impostaVelocita: function (n) { impostaFattoreVelocita(n, false); },
+    impostaDominio: function (id) {
+      if ($('cmi-dominio')) $('cmi-dominio').value = id;
+      return cambiaDominio(id);
+    },
     avviaPlay: avviaPlay,
     fermaPlay: function () { fermaPlay(true); },
-    inPlay: function () { return !!timerPlay; }
+    inPlay: function () { return !!timerPlay; },
+    dominio: function () { return dominioId; }
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia);
   else avvia();

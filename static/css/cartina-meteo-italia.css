@@ -596,3 +596,20 @@
 @media print {
   .cmi-velocita, .cmi-play-aiuto, #cmi-condividi-png, #cmi-condividi-gif { display: none !important; }
 }
+
+@media (min-width: 1100px) {
+  .cmi-comandi { grid-template-columns: 1fr 1fr 1fr; }
+}
+.cmi-dominio-note {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border-left: 4px solid #003366;
+  background: #eef4fa;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+.cmi-dominio-note[hidden] { display: none !important; }
+#cmi-dominio option { padding: 0.2rem 0; }
+@media print {
+  .cmi-dominio-note, .cmi-campo-dominio { display: none !important; }
+}
