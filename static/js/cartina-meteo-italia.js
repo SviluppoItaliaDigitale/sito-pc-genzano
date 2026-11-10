@@ -131,10 +131,17 @@
     95: 'Temporale', 96: 'Temporale con grandine debole', 97: 'Temporale intenso', 99: 'Temporale con grandine intensa'
   };
 
+  var INTERVALLO_AGGIORNAMENTO = 45 * 60 * 1000;
   var cache = {};
   var nonDisponibili = {};
-  var statoMappa = { punti: [], orari: [], indice: 0, variabile: null, modello: null, scaricatoIl: null };
-  var mappa, mappaCitta, strato, timerPlay = null, datiCitta = null, markerGenzano = null;
+  var statoMappa = { punti: [], orari: [], indice: 0, variabile: null, modello: null, scaricatoIl: null, matrice: null };
+  var statoMappaB = { punti: [], orari: [], indice: 0, variabile: null, modello: null, scaricatoIl: null, matrice: null };
+  var mappa, mappaB, mappaCitta, strato, stratoB, timerPlay = null, datiCitta = null, markerGenzano = null, markerGenzanoB = null;
+  var geojson = null, timerRefresh = null, ultimoAggiornamento = null, syncing = false, ventoRaf = null;
+  var particelle = [];
+  var prontoRisovi = null;
+  var prontoPromessa = new Promise(function (r) { prontoRisovi = r; });
+  var esportazioneInCorso = false;
 
   function $(id) { return document.getElementById(id); }
   function modelloById(id) {
@@ -148,6 +155,23 @@
   function arrotonda(x, n) {
     var f = Math.pow(10, n || 0);
     return Math.round(x * f) / f;
+  }
+  function confrontoAttivo() {
+    var el = $('cmi-confronto');
+    return el && el.checked;
+  }
+  function isolineeAttive() {
+    var el = $('cmi-isolinee');
+    return el && el.checked;
+  }
+  function particelleAttive() {
+    var el = $('cmi-particelle');
+    return el && el.checked;
+  }
+  function motoRidotto() {
+    return document.documentElement.classList.contains('a11y-pause-animations') ||
+      document.documentElement.classList.contains('a11y-pause-anim') ||
+      (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
   function costruisciGriglia() {
     var punti = [];
@@ -177,7 +201,6 @@
     }
     return [last[1], last[2], last[3]];
   }
-  function cssRgb(c) { return c ? 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')' : 'transparent'; }
   function gradiente(scalaId) {
     var stops = SCALE[scalaId] || SCALE.temp;
     var parts = [];
@@ -191,7 +214,7 @@
     var stops = SCALE[scalaId] || SCALE.temp;
     return { min: stops[0][0], max: stops[stops.length - 1][0] };
   }
-
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
   function formatOra(iso) {
     if (!iso) return '—';
     var p = iso.split('T');
@@ -214,6 +237,23 @@
     if (!m) return iso;
     return parseInt(m[3], 10) + '/' + m[2] + '/' + m[1] + ', ore ' + m[4] + ':' + m[5];
   }
+  function formatDataIt(iso) {
+    if (!iso) return '';
+    var p = String(iso).split('-');
+    if (p.length !== 3) return iso;
+    return parseInt(p[2], 10) + '/' + p[1] + '/' + p[0];
+  }
+  function formatDataOraLocale(d) {
+    if (!d) return '—';
+    return pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear() + ', ore ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+  }
+  function formatOraCorta(iso) {
+    if (!iso) return '';
+    var p = iso.split('T');
+    var d = p[0] ? p[0].split('-') : [];
+    var h = p[1] ? p[1].slice(0, 5) : '';
+    return (d[2] || '') + '/' + (d[1] || '') + ' ' + h;
+  }
 
   function impostaStato(msg, errore, loading) {
     var el = $('cmi-stato');
@@ -229,10 +269,8 @@
     el.appendChild(document.createTextNode(msg || ''));
   }
 
-  function popolaSelect() {
-    var selM = $('cmi-modello');
-    var selV = $('cmi-variabile');
-    if (!selM || !selV) return;
+  function popolaSelectModello(sel, valore) {
+    sel.textContent = '';
     var gruppi = ['globali', 'europa', 'alta'];
     for (var g = 0; g < gruppi.length; g++) {
       var og = document.createElement('optgroup');
@@ -244,9 +282,17 @@
         o.textContent = MODELLI[i].nome + ' — ' + MODELLI[i].risoluzione;
         og.appendChild(o);
       }
-      selM.appendChild(og);
+      sel.appendChild(og);
     }
-    selM.value = 'ecmwf_ifs';
+    sel.value = valore;
+  }
+  function popolaSelect() {
+    var selM = $('cmi-modello');
+    var selV = $('cmi-variabile');
+    var selB = $('cmi-modello-b');
+    if (!selM || !selV) return;
+    popolaSelectModello(selM, 'ecmwf_ifs');
+    if (selB) popolaSelectModello(selB, 'ncep_gfs_global');
     for (var v = 0; v < VARIABILI.length; v++) {
       var ov = document.createElement('option');
       ov.value = VARIABILI[v].id;
@@ -257,25 +303,23 @@
     aggiornaInfoModello();
     aggiornaInfoVariabile();
   }
-
-  function aggiornaInfoModello() {
-    var m = modelloById($('cmi-modello').value);
-    var parti = [
-      m.ente,
-      'risoluzione ' + m.risoluzione,
-      'orizzonte ' + m.giorni + (m.giorni === 1 ? ' giorno' : ' giorni'),
-      'aggiornamento ' + m.aggiornamento,
-      m.dominio
-    ];
+  function testoInfoModello(m) {
+    var parti = [m.ente, 'risoluzione ' + m.risoluzione, 'orizzonte ' + m.giorni + (m.giorni === 1 ? ' giorno' : ' giorni'), 'aggiornamento ' + m.aggiornamento, m.dominio];
     var txt = parti.join(' · ');
     if (m.nota) txt += ' ' + m.nota;
-    $('cmi-modello-info').textContent = txt;
+    return txt;
+  }
+  function aggiornaInfoModello() {
+    var el = $('cmi-modello-info');
+    if (el) el.textContent = testoInfoModello(modelloById($('cmi-modello').value));
+    var elb = $('cmi-modello-b-info');
+    if (elb && $('cmi-modello-b')) elb.textContent = testoInfoModello(modelloById($('cmi-modello-b').value));
   }
   function aggiornaInfoVariabile() {
     var v = variabileById($('cmi-variabile').value);
-    $('cmi-variabile-info').textContent = v.info || '';
+    var el = $('cmi-variabile-info');
+    if (el) el.textContent = v.info || '';
   }
-
   function aggiornaOpzioniVariabile() {
     var mid = $('cmi-modello').value;
     var blocco = nonDisponibili[mid] || {};
@@ -294,13 +338,11 @@
       aggiornaInfoVariabile();
     }
   }
-
   function marcaNonDisponibile(modelId, varId) {
     if (!nonDisponibili[modelId]) nonDisponibili[modelId] = {};
     nonDisponibili[modelId][varId] = true;
     aggiornaOpzioniVariabile();
   }
-
   function loadScript(src) {
     return new Promise(function (resolve, reject) {
       if (window.L) { resolve(); return; }
@@ -311,94 +353,122 @@
       document.head.appendChild(s);
     });
   }
-
+  function boundsItalia() {
+    return L.latLngBounds([[36.2, 6.6], [47.2, 18.7]]);
+  }
+  function creaMappaBase(id, conClick) {
+    var bounds = boundsItalia();
+    var map = L.map(id, {
+      scrollWheelZoom: false,
+      maxBounds: bounds.pad(0.35),
+      minZoom: 5,
+      zoomSnap: 0.25,
+      zoomDelta: 0.25,
+      zoomControl: true,
+      attributionControl: true
+    });
+    map.attributionControl.setPrefix('');
+    map.attributionControl.addAttribution('Confini: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> · Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> CC BY 4.0');
+    map.fitBounds(L.latLngBounds([[LAT_MIN, LON_MIN], [LAT_MAX, LON_MAX]]), { padding: [4, 4], maxZoom: 7 });
+    if (conClick) map.on('click', onClickMappa);
+    var st = creaStratoCanvas(map);
+    map.on('move zoom resize', function () { if (st) st.ridisegna(); });
+    return { map: map, strato: st };
+  }
   function creaMappe() {
-    var osm = function () {
-      return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
-      });
-    };
-    var bounds = L.latLngBounds([[36.2, 6.6], [47.2, 18.7]]);
-    mappa = L.map('cmi-mappa', { scrollWheelZoom: false, maxBounds: bounds.pad(0.5), minZoom: 6 });
-    osm().addTo(mappa);
-    mappa.fitBounds(bounds, { padding: [8, 8], maxZoom: 7 });
-    mappa.on('click', onClickMappa);
-    strato = creaStratoCanvas(mappa);
-    mappa.on('move zoom resize', function () { if (strato) strato.ridisegna(); });
-
+    var a = creaMappaBase('cmi-mappa', true);
+    mappa = a.map;
+    strato = a.strato;
+    var bounds = boundsItalia();
     mappaCitta = L.map('cmi-mappa-citta', { scrollWheelZoom: false, minZoom: 6, maxBounds: bounds.pad(0.5) });
-    osm().addTo(mappaCitta);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+    }).addTo(mappaCitta);
     mappaCitta.fitBounds(bounds, { padding: [16, 16], maxZoom: 7 });
     function adatta() {
-      if (mappa) { mappa.invalidateSize(); mappa.fitBounds(bounds, { padding: [8, 8], maxZoom: 7 }); }
+      var campo = L.latLngBounds([[LAT_MIN, LON_MIN], [LAT_MAX, LON_MAX]]);
+      if (mappa) { mappa.invalidateSize(); mappa.fitBounds(campo, { padding: [4, 4], maxZoom: 7 }); }
+      if (mappaB) { mappaB.invalidateSize(); mappaB.fitBounds(campo, { padding: [4, 4], maxZoom: 7 }); }
       if (mappaCitta) { mappaCitta.invalidateSize(); mappaCitta.fitBounds(bounds, { padding: [16, 16], maxZoom: 7 }); }
     }
     setTimeout(adatta, 300);
     setTimeout(adatta, 1200);
   }
-
+  function assicuraMappaB() {
+    if (mappaB) {
+      setTimeout(function () {
+        mappaB.invalidateSize();
+        if (mappa) sincronizza(mappa, mappaB);
+      }, 80);
+      return;
+    }
+    var b = creaMappaBase('cmi-mappa-b', false);
+    mappaB = b.map;
+    stratoB = b.strato;
+    mappa.on('move', function () { if (confrontoAttivo()) sincronizza(mappa, mappaB); });
+    mappaB.on('move', function () { if (confrontoAttivo()) sincronizza(mappaB, mappa); });
+    setTimeout(function () {
+      mappa.invalidateSize();
+      mappaB.invalidateSize();
+      sincronizza(mappa, mappaB);
+    }, 80);
+  }
+  function sincronizza(src, dest) {
+    if (syncing || !dest) return;
+    syncing = true;
+    dest.setView(src.getCenter(), src.getZoom(), { animate: false });
+    syncing = false;
+  }
   function creaStratoCanvas(map) {
-    var canvas = L.DomUtil.create('canvas', 'cmi-grid-canvas');
-    map.getPanes().overlayPane.appendChild(canvas);
-    canvas.style.position = 'absolute';
-    canvas.style.pointerEvents = 'none';
-    function ridisegna() {
-      if (!map) return;
+    var campo = L.DomUtil.create('canvas', 'cmi-campo-canvas');
+    var vento = L.DomUtil.create('canvas', 'cmi-vento-canvas');
+    map.getPanes().overlayPane.appendChild(campo);
+    map.getPanes().overlayPane.appendChild(vento);
+    campo.style.position = 'absolute';
+    campo.style.pointerEvents = 'none';
+    vento.style.position = 'absolute';
+    vento.style.pointerEvents = 'none';
+    function layout(cv) {
       var size = map.getSize();
       var b = map.getBounds();
       var topLeft = map.latLngToLayerPoint(b.getNorthWest());
-      L.DomUtil.setPosition(canvas, topLeft);
-      canvas.width = size.x;
-      canvas.height = size.y;
-      var ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, size.x, size.y);
-      var v = statoMappa.variabile;
-      if (!v || !statoMappa.punti.length || !statoMappa.orari.length) return;
-      var idx = statoMappa.indice;
-      var half = PASSO / 2;
-      for (var i = 0; i < statoMappa.punti.length; i++) {
-        var p = statoMappa.punti[i];
-        var val = valorePunto(p, v, idx);
-        var col = coloreDi(val, v.scala);
-        if (!col) continue;
-        var sw = map.latLngToLayerPoint(L.latLng(p.lat - half, p.lon - half));
-        var ne = map.latLngToLayerPoint(L.latLng(p.lat + half, p.lon + half));
-        var x = sw.x - topLeft.x;
-        var y = ne.y - topLeft.y;
-        var w = ne.x - sw.x;
-        var h = sw.y - ne.y;
-        ctx.fillStyle = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',0.62)';
-        ctx.fillRect(x, y, w, h);
-        if (v.vento && p.dir && p.dir[idx] !== null && typeof p.dir[idx] !== 'undefined' && val !== null) {
-          disegnaFreccia(ctx, (sw.x + ne.x) / 2 - topLeft.x, (sw.y + ne.y) / 2 - topLeft.y, p.dir[idx], Math.min(w, h) * 0.35);
-        }
-      }
+      L.DomUtil.setPosition(cv, topLeft);
+      if (cv.width !== size.x) cv.width = size.x;
+      if (cv.height !== size.y) cv.height = size.y;
+      return { size: size, topLeft: topLeft };
     }
-    return { ridisegna: ridisegna, canvas: canvas };
-  }
-
-  function disegnaFreccia(ctx, x, y, dir, len) {
-    if (!len || len < 4) return;
-    var rad = (dir - 90) * Math.PI / 180;
-    var x2 = x + Math.cos(rad) * len;
-    var y2 = y + Math.sin(rad) * len;
-    ctx.save();
-    ctx.strokeStyle = 'rgba(20,20,20,0.85)';
-    ctx.fillStyle = 'rgba(20,20,20,0.85)';
-    ctx.lineWidth = 1.2;
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x2, y2);
-    ctx.stroke();
-    var a = rad + 2.6, b = rad - 2.6;
-    ctx.beginPath();
-    ctx.moveTo(x2, y2);
-    ctx.lineTo(x2 + Math.cos(a) * 5, y2 + Math.sin(a) * 5);
-    ctx.lineTo(x2 + Math.cos(b) * 5, y2 + Math.sin(b) * 5);
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
+    function proietta(lat, lon, topLeft) {
+      var pt = map.latLngToLayerPoint(L.latLng(lat, lon));
+      return [pt.x - topLeft.x, pt.y - topLeft.y];
+    }
+    function inversa(x, y, topLeft) {
+      var ll = map.layerPointToLatLng(L.point(x + topLeft.x, y + topLeft.y));
+      return { lat: ll.lat, lon: ll.lng };
+    }
+    function ridisegna() {
+      if (!map) return;
+      var lay = layout(campo);
+      layout(vento);
+      var ctx = campo.getContext('2d');
+      ctx.clearRect(0, 0, lay.size.x, lay.size.y);
+      var stato = (map === mappaB) ? statoMappaB : statoMappa;
+      disegnaVista(ctx, {
+        w: lay.size.x,
+        h: lay.size.y,
+        xy: function (lat, lon) { return proietta(lat, lon, lay.topLeft); },
+        inv: function (x, y) { return inversa(x, y, lay.topLeft); }
+      }, stato, { frecce: !dovrebbeAnimareVento(stato) });
+      if (map !== mappaB) avviaOFermaVento();
+    }
+    function ridisegnaVento() {
+      var lay = layout(vento);
+      var ctx = vento.getContext('2d');
+      ctx.clearRect(0, 0, lay.size.x, lay.size.y);
+      if (!particelleAttive() || motoRidotto()) return;
+      disegnaParticelle(ctx, function (lat, lon) { return proietta(lat, lon, lay.topLeft); });
+    }
+    return { ridisegna: ridisegna, ridisegnaVento: ridisegnaVento, canvasCampo: campo, canvasVento: vento, map: map };
   }
 
   function valorePunto(p, v, idx) {
@@ -416,30 +486,578 @@
     var n = p.val[idx];
     return (n === null || typeof n === 'undefined') ? null : n;
   }
+  function componentiVento(vel, dir) {
+    if (vel === null || typeof vel === 'undefined' || dir === null || typeof dir === 'undefined') return null;
+    var rad = dir * Math.PI / 180;
+    return { u: -vel * Math.sin(rad), v: -vel * Math.cos(rad) };
+  }
+  function costruisciMatrice(punti, variabile, idx) {
+    var lats = [], lons = [], seenLat = {}, seenLon = {};
+    var i, k, p;
+    for (i = 0; i < punti.length; i++) {
+      p = punti[i];
+      k = String(p.lat);
+      if (!seenLat[k]) { seenLat[k] = true; lats.push(p.lat); }
+      k = String(p.lon);
+      if (!seenLon[k]) { seenLon[k] = true; lons.push(p.lon); }
+    }
+    lats.sort(function (a, b) { return a - b; });
+    lons.sort(function (a, b) { return a - b; });
+    var ny = lats.length, nx = lons.length;
+    var latIx = {}, lonIx = {};
+    for (i = 0; i < ny; i++) latIx[String(lats[i])] = i;
+    for (i = 0; i < nx; i++) lonIx[String(lons[i])] = i;
+    var val = new Array(ny * nx);
+    var u = new Array(ny * nx);
+    var v = new Array(ny * nx);
+    for (i = 0; i < ny * nx; i++) { val[i] = null; u[i] = null; v[i] = null; }
+    for (i = 0; i < punti.length; i++) {
+      p = punti[i];
+      var iy = latIx[String(p.lat)], ix = lonIx[String(p.lon)];
+      if (iy === undefined || ix === undefined) continue;
+      var j = iy * nx + ix;
+      val[j] = valorePunto(p, variabile, idx);
+      if (variabile.vento && p.dir) {
+        var c = componentiVento(val[j], p.dir[idx]);
+        if (c) { u[j] = c.u; v[j] = c.v; }
+      }
+    }
+    return { lats: lats, lons: lons, nx: nx, ny: ny, val: val, u: u, v: v };
+  }
+  function indiceSotto(arr, x) {
+    var lo = 0, hi = arr.length - 1;
+    if (x <= arr[0]) return -1;
+    if (x >= arr[hi]) return hi;
+    while (hi - lo > 1) {
+      var mid = (lo + hi) >> 1;
+      if (arr[mid] <= x) lo = mid; else hi = mid;
+    }
+    return lo;
+  }
+  function mescolaAngoli(v00, v10, v01, v11, tx, ty) {
+    var pezzi = [];
+    if (v00 !== null && typeof v00 !== 'undefined') pezzi.push({ v: v00, w: (1 - tx) * (1 - ty) });
+    if (v10 !== null && typeof v10 !== 'undefined') pezzi.push({ v: v10, w: tx * (1 - ty) });
+    if (v01 !== null && typeof v01 !== 'undefined') pezzi.push({ v: v01, w: (1 - tx) * ty });
+    if (v11 !== null && typeof v11 !== 'undefined') pezzi.push({ v: v11, w: tx * ty });
+    if (!pezzi.length) return null;
+    var s = 0, w = 0, i;
+    for (i = 0; i < pezzi.length; i++) {
+      if (pezzi[i].w <= 0) continue;
+      s += pezzi[i].v * pezzi[i].w;
+      w += pezzi[i].w;
+    }
+    if (w <= 0) return null;
+    return s / w;
+  }
+  function campionaCampo(mat, lat, lon, campo) {
+    if (!mat || !mat.nx) return null;
+    var arr = campo === 'u' ? mat.u : (campo === 'v' ? mat.v : mat.val);
+    if (lon < mat.lons[0] - PASSO || lon > mat.lons[mat.nx - 1] + PASSO) return null;
+    if (lat < mat.lats[0] - PASSO || lat > mat.lats[mat.ny - 1] + PASSO) return null;
+    var ix = indiceSotto(mat.lons, lon);
+    var iy = indiceSotto(mat.lats, lat);
+    if (ix < 0) ix = 0;
+    if (iy < 0) iy = 0;
+    if (ix > mat.nx - 2) ix = mat.nx - 2;
+    if (iy > mat.ny - 2) iy = mat.ny - 2;
+    var x0 = mat.lons[ix], x1 = mat.lons[ix + 1];
+    var y0 = mat.lats[iy], y1 = mat.lats[iy + 1];
+    var tx = (lon - x0) / ((x1 - x0) || 1);
+    var ty = (lat - y0) / ((y1 - y0) || 1);
+    return mescolaAngoli(arr[iy * mat.nx + ix], arr[iy * mat.nx + ix + 1], arr[(iy + 1) * mat.nx + ix], arr[(iy + 1) * mat.nx + ix + 1], tx, ty);
+  }
+  function fadeBordo(lat, lon) {
+    var m = 0.4;
+    var fx = 1, fy = 1;
+    if (lon < LON_MIN + m) fx = (lon - LON_MIN) / m;
+    if (lon > LON_MAX - m) fx = (LON_MAX - lon) / m;
+    if (lat < LAT_MIN + m) fy = (lat - LAT_MIN) / m;
+    if (lat > LAT_MAX - m) fy = (LAT_MAX - lat) / m;
+    if (fx < 0 || fy < 0) return 0;
+    var f = Math.min(fx, fy, 1);
+    return f * f * (3 - 2 * f);
+  }
+  function disegnaCampo(ctx, vista, mat, scalaId, alphaBase) {
+    if (!mat) return;
+    var step = 2;
+    var imgW = Math.max(1, Math.ceil(vista.w / step));
+    var imgH = Math.max(1, Math.ceil(vista.h / step));
+    var tmp = document.createElement('canvas');
+    tmp.width = imgW;
+    tmp.height = imgH;
+    var tctx = tmp.getContext('2d');
+    var img = tctx.createImageData(imgW, imgH);
+    var data = img.data;
+    var px, py, i, ll, val, col, a;
+    for (py = 0; py < imgH; py++) {
+      for (px = 0; px < imgW; px++) {
+        ll = vista.inv(px * step + step / 2, py * step + step / 2);
+        val = campionaCampo(mat, ll.lat, ll.lon, 'val');
+        col = coloreDi(val, scalaId);
+        if (!col) continue;
+        a = (alphaBase || 0.82) * fadeBordo(ll.lat, ll.lon);
+        i = (py * imgW + px) * 4;
+        data[i] = col[0];
+        data[i + 1] = col[1];
+        data[i + 2] = col[2];
+        data[i + 3] = Math.round(a * 255);
+      }
+    }
+    tctx.putImageData(img, 0, 0);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(tmp, 0, 0, vista.w, vista.h);
+  }
+  function perAnello(geom, fn) {
+    var t = geom.type, i, j;
+    if (t === 'Polygon') {
+      for (i = 0; i < geom.coordinates.length; i++) fn(geom.coordinates[i]);
+    } else if (t === 'MultiPolygon') {
+      for (i = 0; i < geom.coordinates.length; i++) {
+        for (j = 0; j < geom.coordinates[i].length; j++) fn(geom.coordinates[i][j]);
+      }
+    }
+  }
+  function tracciaAnello(ctx, ring, vista) {
+    var i, xy;
+    ctx.beginPath();
+    for (i = 0; i < ring.length; i++) {
+      xy = vista.xy(ring[i][1], ring[i][0]);
+      if (i === 0) ctx.moveTo(xy[0], xy[1]);
+      else ctx.lineTo(xy[0], xy[1]);
+    }
+    ctx.closePath();
+  }
+  function disegnaConfini(ctx, vista) {
+    if (!geojson || !geojson.features) return;
+    var f, i;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    for (i = 0; i < geojson.features.length; i++) {
+      f = geojson.features[i];
+      if (!f.properties || f.properties.tipo !== 'vicino') continue;
+      perAnello(f.geometry, function (ring) {
+        tracciaAnello(ctx, ring, vista);
+        ctx.fillStyle = 'rgba(255,255,255,0.14)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(40,70,95,0.55)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      });
+    }
+    for (i = 0; i < geojson.features.length; i++) {
+      f = geojson.features[i];
+      if (!f.properties || f.properties.tipo !== 'italia') continue;
+      perAnello(f.geometry, function (ring) {
+        tracciaAnello(ctx, ring, vista);
+        ctx.strokeStyle = '#003366';
+        ctx.lineWidth = 1.6;
+        ctx.stroke();
+      });
+    }
+  }
+
+  function livelliIsolinee(scalaId) {
+    var step, min, max;
+    if (scalaId === 'mslp') { min = 980; max = 1044; step = 2; }
+    else if (scalaId === 'temp') { min = -16; max = 42; step = 2; }
+    else if (scalaId === 'temp500') { min = -40; max = 10; step = 2; }
+    else if (scalaId === 'geo500') { min = 5000; max = 6000; step = 40; }
+    else if (scalaId === 'geo700') { min = 2700; max = 3300; step = 20; }
+    else if (scalaId === 'umidita' || scalaId === 'nubi') { min = 10; max = 100; step = 10; }
+    else return [];
+    var out = [];
+    for (var v = min; v <= max + 1e-9; v += step) out.push(Math.round(v * 100) / 100);
+    return out;
+  }
+  function lerpPunto(a, b, va, vb, livello) {
+    var t = (livello - va) / ((vb - va) || 1e-9);
+    if (t < 0) t = 0;
+    if (t > 1) t = 1;
+    return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+  }
+  function isolineeDi(mat, livello) {
+    var segs = [];
+    var ny = mat.ny, nx = mat.nx, iy, ix;
+    for (iy = 0; iy < ny - 1; iy++) {
+      for (ix = 0; ix < nx - 1; ix++) {
+        var v00 = mat.val[iy * nx + ix];
+        var v10 = mat.val[iy * nx + ix + 1];
+        var v01 = mat.val[(iy + 1) * nx + ix];
+        var v11 = mat.val[(iy + 1) * nx + ix + 1];
+        if (v00 === null || v10 === null || v01 === null || v11 === null) continue;
+        if (typeof v00 === 'undefined' || typeof v10 === 'undefined' || typeof v01 === 'undefined' || typeof v11 === 'undefined') continue;
+        var c = 0;
+        if (v00 >= livello) c |= 1;
+        if (v10 >= livello) c |= 2;
+        if (v11 >= livello) c |= 4;
+        if (v01 >= livello) c |= 8;
+        if (c === 0 || c === 15) continue;
+        var sw = [mat.lats[iy], mat.lons[ix]];
+        var se = [mat.lats[iy], mat.lons[ix + 1]];
+        var ne = [mat.lats[iy + 1], mat.lons[ix + 1]];
+        var nw = [mat.lats[iy + 1], mat.lons[ix]];
+        var bottom = lerpPunto(sw, se, v00, v10, livello);
+        var right = lerpPunto(se, ne, v10, v11, livello);
+        var top = lerpPunto(nw, ne, v01, v11, livello);
+        var left = lerpPunto(sw, nw, v00, v01, livello);
+        var coppie;
+        if (c === 1 || c === 14) coppie = [left, bottom];
+        else if (c === 2 || c === 13) coppie = [bottom, right];
+        else if (c === 4 || c === 11) coppie = [right, top];
+        else if (c === 8 || c === 7) coppie = [top, left];
+        else if (c === 3 || c === 12) coppie = [left, right];
+        else if (c === 6 || c === 9) coppie = [bottom, top];
+        else if (c === 5) coppie = [left, top, bottom, right];
+        else if (c === 10) coppie = [left, bottom, top, right];
+        else continue;
+        for (var s = 0; s < coppie.length; s += 2) segs.push([coppie[s], coppie[s + 1]]);
+      }
+    }
+    return segs;
+  }
+  function disegnaIsolinee(ctx, vista, mat, scalaId) {
+    var livelli = livelliIsolinee(scalaId);
+    if (!livelli.length) return;
+    ctx.save();
+    ctx.lineWidth = 1;
+    ctx.lineJoin = 'round';
+    ctx.font = '11px Titillium Web, Arial, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    var L, s, segs, a, b, xy1, xy2;
+    for (L = 0; L < livelli.length; L++) {
+      segs = isolineeDi(mat, livelli[L]);
+      ctx.strokeStyle = 'rgba(20,30,45,0.55)';
+      ctx.beginPath();
+      for (s = 0; s < segs.length; s++) {
+        a = segs[s][0]; b = segs[s][1];
+        xy1 = vista.xy(a[0], a[1]);
+        xy2 = vista.xy(b[0], b[1]);
+        ctx.moveTo(xy1[0], xy1[1]);
+        ctx.lineTo(xy2[0], xy2[1]);
+      }
+      ctx.stroke();
+      var passoEtichetta = (scalaId === 'mslp' || scalaId === 'temp' || scalaId === 'temp500') ? 2 : 1;
+      if (Math.round(livelli[L] / ((livelli[1] - livelli[0]) || 1)) % passoEtichetta !== 0) continue;
+      for (s = 8; s < segs.length; s += 28) {
+        a = segs[s][0]; b = segs[s][1];
+        xy1 = vista.xy((a[0] + b[0]) / 2, (a[1] + b[1]) / 2);
+        if (xy1[0] < 24 || xy1[1] < 16 || xy1[0] > vista.w - 24 || xy1[1] > vista.h - 20) continue;
+        var et = String(livelli[L]);
+        ctx.fillStyle = 'rgba(255,255,255,0.85)';
+        var tw = ctx.measureText(et).width + 4;
+        ctx.fillRect(xy1[0] - tw / 2, xy1[1] - 7, tw, 14);
+        ctx.fillStyle = 'rgba(20,30,45,0.9)';
+        ctx.fillText(et, xy1[0], xy1[1]);
+      }
+    }
+    ctx.restore();
+  }
+  function disegnaFreccia(ctx, x, y, rad, len) {
+    if (!len || len < 4) return;
+    var x2 = x + Math.sin(rad) * len;
+    var y2 = y - Math.cos(rad) * len;
+    ctx.strokeStyle = 'rgba(20,20,20,0.8)';
+    ctx.fillStyle = 'rgba(20,20,20,0.8)';
+    ctx.lineWidth = 1.1;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    var a = rad + Math.PI + 0.45, b = rad + Math.PI - 0.45;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 + Math.sin(a) * 5, y2 - Math.cos(a) * 5);
+    ctx.lineTo(x2 + Math.sin(b) * 5, y2 - Math.cos(b) * 5);
+    ctx.closePath();
+    ctx.fill();
+  }
+  function disegnaFrecce(ctx, vista, mat) {
+    var iy, ix, j, vel, dir, xy, len;
+    ctx.save();
+    for (iy = 0; iy < mat.ny; iy += 1) {
+      for (ix = 0; ix < mat.nx; ix += 1) {
+        if ((iy + ix) % 2 !== 0) continue;
+        j = iy * mat.nx + ix;
+        if (mat.u[j] === null || mat.v[j] === null) continue;
+        vel = Math.sqrt(mat.u[j] * mat.u[j] + mat.v[j] * mat.v[j]);
+        if (!vel) continue;
+        dir = Math.atan2(mat.u[j], mat.v[j]);
+        xy = vista.xy(mat.lats[iy], mat.lons[ix]);
+        len = 7 + Math.min(18, vel / 6);
+        disegnaFreccia(ctx, xy[0], xy[1], dir, len);
+      }
+    }
+    ctx.restore();
+  }
+  function dovrebbeAnimareVento(stato) {
+    return !!(stato && stato.variabile && stato.variabile.vento && particelleAttive() && !motoRidotto() && stato.matrice);
+  }
+  function disegnaDecorazioni(ctx, vista, stato) {
+    var ext = etichettaScala(stato.variabile.scala);
+    var x = 16, y = vista.h - 52, w = Math.min(260, vista.w - 32);
+    ctx.fillStyle = 'rgba(255,255,255,0.88)';
+    ctx.fillRect(x, y, w, 38);
+    ctx.strokeStyle = 'rgba(0,51,102,0.35)';
+    ctx.strokeRect(x, y, w, 38);
+    var grd = ctx.createLinearGradient(x + 8, 0, x + w - 8, 0);
+    var stops = SCALE[stato.variabile.scala] || SCALE.temp;
+    for (var i = 0; i < stops.length; i++) {
+      grd.addColorStop(i / (stops.length - 1), 'rgb(' + stops[i][1] + ',' + stops[i][2] + ',' + stops[i][3] + ')');
+    }
+    ctx.fillStyle = grd;
+    ctx.fillRect(x + 8, y + 8, w - 16, 10);
+    ctx.fillStyle = '#003366';
+    ctx.font = '11px Titillium Web, Arial, sans-serif';
+    ctx.fillText(String(ext.min), x + 8, y + 32);
+    ctx.textAlign = 'right';
+    ctx.fillText(String(ext.max) + ' ' + stato.variabile.unita, x + w - 8, y + 32);
+    ctx.textAlign = 'left';
+  }
+  function disegnaVista(ctx, vista, stato, opts) {
+    opts = opts || {};
+    ctx.fillStyle = '#c5d8e8';
+    ctx.fillRect(0, 0, vista.w, vista.h);
+    if (!stato || !stato.variabile || !stato.matrice) {
+      disegnaConfini(ctx, vista);
+      return;
+    }
+    disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, 0.84);
+    disegnaConfini(ctx, vista);
+    if (isolineeAttive()) disegnaIsolinee(ctx, vista, stato.matrice, stato.variabile.scala);
+    if (stato.variabile.vento && (opts.frecce || !particelleAttive() || motoRidotto())) {
+      disegnaFrecce(ctx, vista, stato.matrice);
+    }
+    if (opts.decorazioni) disegnaDecorazioni(ctx, vista, stato);
+  }
+  function nuovaParticella() {
+    return {
+      lat: LAT_MIN + Math.random() * (LAT_MAX - LAT_MIN),
+      lon: LON_MIN + Math.random() * (LON_MAX - LON_MIN),
+      vita: 30 + Math.random() * 70,
+      coda: []
+    };
+  }
+  function assicuraParticelle(n) {
+    while (particelle.length < n) particelle.push(nuovaParticella());
+    if (particelle.length > n) particelle.length = n;
+  }
+  function passoParticelle(dt) {
+    var mat = statoMappa.matrice;
+    if (!mat) return;
+    var i, p, u, v, dlat, dlon, factor = 55;
+    for (i = 0; i < particelle.length; i++) {
+      p = particelle[i];
+      u = campionaCampo(mat, p.lat, p.lon, 'u');
+      v = campionaCampo(mat, p.lat, p.lon, 'v');
+      if (u === null || v === null) { particelle[i] = nuovaParticella(); continue; }
+      dlat = (v / 111) * (dt / 1000) * factor;
+      dlon = (u / (111 * Math.max(0.2, Math.cos(p.lat * Math.PI / 180)))) * (dt / 1000) * factor;
+      p.coda.push([p.lat, p.lon]);
+      if (p.coda.length > 9) p.coda.shift();
+      p.lat += dlat;
+      p.lon += dlon;
+      p.vita -= 1;
+      if (p.vita <= 0 || p.lat < LAT_MIN || p.lat > LAT_MAX || p.lon < LON_MIN || p.lon > LON_MAX) {
+        particelle[i] = nuovaParticella();
+      }
+    }
+  }
+  function disegnaParticelle(ctx, xyFn) {
+    var i, p, k, a, b, xy1, xy2, t;
+    ctx.lineCap = 'round';
+    for (i = 0; i < particelle.length; i++) {
+      p = particelle[i];
+      if (!p.coda.length) continue;
+      for (k = 1; k < p.coda.length; k++) {
+        a = p.coda[k - 1];
+        b = p.coda[k];
+        xy1 = xyFn(a[0], a[1]);
+        xy2 = xyFn(b[0], b[1]);
+        t = k / p.coda.length;
+        ctx.strokeStyle = 'rgba(15,25,40,' + (0.15 + t * 0.65) + ')';
+        ctx.lineWidth = 0.8 + t * 1.6;
+        ctx.beginPath();
+        ctx.moveTo(xy1[0], xy1[1]);
+        ctx.lineTo(xy2[0], xy2[1]);
+        ctx.stroke();
+      }
+    }
+  }
+  var ultimoVentoTs = 0;
+  function cicloVento(ts) {
+    if (!dovrebbeAnimareVento(statoMappa) || !strato) {
+      ventoRaf = null;
+      if (strato) strato.ridisegnaVento();
+      return;
+    }
+    if (!ultimoVentoTs) ultimoVentoTs = ts;
+    var dt = Math.min(50, ts - ultimoVentoTs);
+    ultimoVentoTs = ts;
+    assicuraParticelle(320);
+    passoParticelle(dt || 16);
+    strato.ridisegnaVento();
+    ventoRaf = window.requestAnimationFrame(cicloVento);
+  }
+  function avviaOFermaVento() {
+    if (dovrebbeAnimareVento(statoMappa)) {
+      if (!ventoRaf) {
+        ultimoVentoTs = 0;
+        ventoRaf = window.requestAnimationFrame(cicloVento);
+      }
+    } else if (ventoRaf) {
+      window.cancelAnimationFrame(ventoRaf);
+      ventoRaf = null;
+      if (strato) strato.ridisegnaVento();
+    }
+  }
 
   function onClickMappa(ev) {
     if (!statoMappa.punti.length) return;
-    var vicino = null, dist = Infinity;
-    for (var i = 0; i < statoMappa.punti.length; i++) {
-      var p = statoMappa.punti[i];
-      var d = Math.abs(p.lat - ev.latlng.lat) + Math.abs(p.lon - ev.latlng.lng);
+    apriMeteogramma(ev.latlng.lat, ev.latlng.lng, ev.latlng);
+  }
+  function apriMeteogramma(lat, lon, latlng) {
+    var vicino = null, dist = Infinity, i, p, d;
+    for (i = 0; i < statoMappa.punti.length; i++) {
+      p = statoMappa.punti[i];
+      d = Math.abs(p.lat - lat) + Math.abs(p.lon - lon);
       if (d < dist) { dist = d; vicino = p; }
     }
-    if (!vicino || dist > PASSO * 1.5) return;
     var v = statoMappa.variabile;
-    var val = valorePunto(vicino, v, statoMappa.indice);
-    var testo = v.nome + ': ' + (val === null ? 'dato non disponibile' : (Math.round(val * 10) / 10) + ' ' + v.unita);
-    L.popup().setLatLng(ev.latlng).setContent(testo).openOn(mappa);
+    var val = vicino ? valorePunto(vicino, v, statoMappa.indice) : null;
+    var testoVal = (val === null ? 'dato non disponibile' : (Math.round(val * 10) / 10) + ' ' + v.unita);
+    var contenuto = '<p style="margin:0 0 .3rem"><strong>' + arrotonda(lat, 2) + '°N, ' + arrotonda(lon, 2) + '°E</strong></p>' +
+      '<p style="margin:0">' + v.nome + ': ' + testoVal + '</p>' +
+      '<p style="margin:.3rem 0 0;font-size:.9em">Meteogramma nelle prossime 72 ore sotto la cartina.</p>';
+    if (mappa && window.L) {
+      L.popup().setLatLng(latlng || L.latLng(lat, lon)).setContent(contenuto).openOn(mappa);
+    }
+    var box = $('cmi-meteogramma');
+    var dove = $('cmi-meteo-dove');
+    var valori = $('cmi-meteo-valori');
+    var grafico = $('cmi-meteo-grafico');
+    if (!box) return;
+    box.hidden = false;
+    dove.textContent = 'Punto ' + arrotonda(lat, 2) + '°N, ' + arrotonda(lon, 2) + '°E · ' +
+      (statoMappa.modello ? statoMappa.modello.nome : '') + ' · validità ' + formatOra(statoMappa.orari[statoMappa.indice]);
+    valori.textContent = '';
+    function voce(dt, dd) {
+      var a = document.createElement('dt'); a.textContent = dt;
+      var b = document.createElement('dd'); b.textContent = dd;
+      valori.appendChild(a); valori.appendChild(b);
+    }
+    voce('Valore sulla cartina', testoVal);
+    grafico.textContent = 'Carico il meteogramma…';
+    var mid = statoMappa.modello ? statoMappa.modello.id : $('cmi-modello').value;
+    var url = API + '?latitude=' + arrotonda(lat, 4) + '&longitude=' + arrotonda(lon, 4) +
+      '&hourly=' + encodeURIComponent('temperature_2m,precipitation,pressure_msl,wind_speed_10m,wind_direction_10m,weather_code,cloud_cover,relative_humidity_2m') +
+      '&forecast_hours=72&timezone=' + encodeURIComponent(TZ) +
+      '&wind_speed_unit=kmh&cell_selection=nearest&models=' + encodeURIComponent(mid);
+    fetchJson(url).then(function (body) {
+      var lista = Array.isArray(body) ? body : [body];
+      var h = (lista[0] && lista[0].hourly) || {};
+      var idx = 0;
+      var oraIso = statoMappa.orari[statoMappa.indice];
+      if (h.time && oraIso) {
+        for (i = 0; i < h.time.length; i++) if (h.time[i] === oraIso) { idx = i; break; }
+      }
+      function n(arr) { return arr && arr[idx] !== null && typeof arr[idx] !== 'undefined' ? arr[idx] : null; }
+      valori.textContent = '';
+      voce('Valore sulla cartina', testoVal);
+      var t = n(h.temperature_2m); if (t !== null) voce('Temperatura nel punto', Math.round(t * 10) / 10 + ' °C');
+      var pr = n(h.pressure_msl); if (pr !== null) voce('Pressione', Math.round(pr) + ' hPa');
+      var ws = n(h.wind_speed_10m); var wd = n(h.wind_direction_10m);
+      if (ws !== null) voce('Vento', Math.round(ws) + ' km/h' + (wd !== null ? ' da ' + Math.round(wd) + '°' : ''));
+      var pc = n(h.precipitation); if (pc !== null) voce('Precipitazioni', Math.round(pc * 10) / 10 + ' mm');
+      var rh = n(h.relative_humidity_2m); if (rh !== null) voce('Umidità', Math.round(rh) + ' %');
+      var cc = n(h.cloud_cover); if (cc !== null) voce('Nuvolosità', Math.round(cc) + ' %');
+      renderMeteogramma(grafico, h);
+    }).catch(function () {
+      grafico.textContent = 'Non è stato possibile caricare il meteogramma per questo punto.';
+    });
   }
-
+  function renderMeteogramma(dest, h) {
+    dest.textContent = '';
+    var times = h.time || [];
+    var n = Math.min(times.length, 72);
+    if (!n) { dest.textContent = 'Nessun dato orario per il meteogramma.'; return; }
+    var W = 720, H = 280, padL = 42, padR = 16, padT = 18, padB = 36;
+    var i, tmin = Infinity, tmax = -Infinity, pmax = 0.4;
+    for (i = 0; i < n; i++) {
+      var tv = h.temperature_2m ? h.temperature_2m[i] : null;
+      var pv = h.precipitation ? h.precipitation[i] : null;
+      if (tv !== null && typeof tv !== 'undefined') {
+        if (tv < tmin) tmin = tv;
+        if (tv > tmax) tmax = tv;
+      }
+      if (pv !== null && pv > pmax) pmax = pv;
+    }
+    if (!isFinite(tmin)) { tmin = 0; tmax = 10; }
+    if (tmax - tmin < 6) { var midt = (tmax + tmin) / 2; tmin = midt - 3; tmax = midt + 3; }
+    tmin = Math.floor(tmin) - 1;
+    tmax = Math.ceil(tmax) + 1;
+    function xdi(i) { return padL + i * (W - padL - padR) / Math.max(1, n - 1); }
+    function yT(v) { return padT + (tmax - v) / (tmax - tmin) * (H - padT - padB); }
+    function yP(v) { return (H - padB) - (v / pmax) * (H - padT - padB) * 0.38; }
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'Meteogramma: temperatura e precipitazioni nelle prossime 72 ore.');
+    function el(name, attrs, text) {
+      var e = document.createElementNS(ns, name);
+      Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); });
+      if (text) e.textContent = text;
+      svg.appendChild(e);
+      return e;
+    }
+    el('rect', { x: 0, y: 0, width: W, height: H, fill: '#f8fafc' });
+    var g, y;
+    for (g = 0; g <= 4; g++) {
+      y = padT + g * (H - padT - padB) / 4;
+      el('line', { x1: padL, y1: y, x2: W - padR, y2: y, stroke: '#d5dee8', 'stroke-width': 1 });
+      var tvl = tmax - g * (tmax - tmin) / 4;
+      el('text', { x: padL - 6, y: y + 4, 'text-anchor': 'end', fill: '#003366', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif' }, Math.round(tvl) + '°');
+    }
+    var barW = Math.max(2, (W - padL - padR) / n * 0.7);
+    for (i = 0; i < n; i++) {
+      var prc = h.precipitation ? h.precipitation[i] : 0;
+      if (!prc) continue;
+      var bh = (H - padB) - yP(prc);
+      el('rect', { x: xdi(i) - barW / 2, y: yP(prc), width: barW, height: bh, fill: 'rgba(30,90,180,0.55)' });
+    }
+    var dpath = '';
+    for (i = 0; i < n; i++) {
+      var te = h.temperature_2m ? h.temperature_2m[i] : null;
+      if (te === null || typeof te === 'undefined') continue;
+      dpath += (dpath ? ' L ' : 'M ') + xdi(i) + ' ' + yT(te);
+    }
+    if (dpath) el('path', { d: dpath, fill: 'none', stroke: '#b42318', 'stroke-width': 2.2, 'stroke-linejoin': 'round' });
+    for (i = 0; i < n; i += 6) {
+      el('text', { x: xdi(i), y: H - 12, 'text-anchor': 'middle', fill: '#3a3a3a', 'font-size': 10, 'font-family': 'Titillium Web, Arial, sans-serif' }, formatOraCorta(times[i]));
+    }
+    el('text', { x: padL, y: 12, fill: '#b42318', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif', 'font-weight': 700 }, 'Temperatura (°C)');
+    el('text', { x: W - padR, y: 12, 'text-anchor': 'end', fill: '#1e5ab4', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif', 'font-weight': 700 }, 'Precipitazioni (mm)');
+    dest.appendChild(svg);
+  }
   function spezza(arr, n) {
     var out = [];
     for (var i = 0; i < arr.length; i += n) out.push(arr.slice(i, i + n));
     return out;
   }
-
-  function fetchJson(url) {
+  function attesa(ms) {
+    return new Promise(function (resolve) { setTimeout(resolve, ms); });
+  }
+  function fetchJson(url, tentativo) {
+    tentativo = tentativo || 0;
     return fetch(url).then(function (res) {
+      if (res.status === 429 && tentativo < 3) {
+        return attesa(2000 * (tentativo + 1) * (tentativo + 1)).then(function () {
+          return fetchJson(url, tentativo + 1);
+        });
+      }
       return res.json().then(function (body) {
         if (!res.ok || (body && body.error)) {
           var err = new Error((body && body.reason) || ('Errore ' + res.status));
@@ -451,27 +1069,32 @@
       });
     });
   }
-
   function chiaveCache(modelId, varId, giorni) {
     return modelId + '|' + varId + '|' + giorni;
   }
 
-  function caricaGriglia() {
-    var mid = $('cmi-modello').value;
+  function caricaGriglia(target, opzioni) {
+    opzioni = opzioni || {};
+    var isB = target === 'b';
+    var mid = isB ? $('cmi-modello-b').value : $('cmi-modello').value;
     var vid = $('cmi-variabile').value;
     var modello = modelloById(mid);
     var variabile = variabileById(vid);
     var giorni = Math.min(modello.giorni, 7);
     var key = chiaveCache(mid, vid, giorni);
-    fermaPlay(false);
-    aggiornaInfoModello();
-    aggiornaInfoVariabile();
+    if (!isB) {
+      fermaPlay(false);
+      aggiornaInfoModello();
+      aggiornaInfoVariabile();
+    }
     if (cache[key]) {
-      applicaDati(cache[key], variabile, modello);
+      applicaDati(cache[key], variabile, modello, target, opzioni.mantieniOra);
       return Promise.resolve();
     }
-    impostaStato('Scarico i dati del modello ' + modello.nome + '…', false, true);
-    $('cmi-ora').disabled = true;
+    if (!isB) {
+      impostaStato('Scarico i dati del modello ' + modello.nome + '…', false, true);
+      $('cmi-ora').disabled = true;
+    }
     var puntiBase = costruisciGriglia();
     var campi = variabile.campi.join(',');
     function urlGruppo(gruppo) {
@@ -494,9 +1117,7 @@
       return fetchJson(urlGruppo(gruppo)).then(function (body) {
         var lista = Array.isArray(body) ? body : [body];
         var out = [];
-        for (var i = 0; i < lista.length; i++) {
-          out.push({ punto: gruppo[i] || null, dati: lista[i] });
-        }
+        for (var i = 0; i < lista.length; i++) out.push({ punto: gruppo[i] || null, dati: lista[i] });
         return out;
       }).catch(function () {
         if (gruppo.length === 1) return [];
@@ -539,59 +1160,102 @@
         });
       }
       if (!orari || !orari.length || tuttiNull || !punti.length) {
-        marcaNonDisponibile(mid, vid);
+        if (!isB) marcaNonDisponibile(mid, vid);
         throw new Error('Questa grandezza non è disponibile per il modello scelto, oppure il modello non copre l\'Italia in questo punto.');
       }
       var pacchetto = { punti: punti, orari: orari, scaricatoIl: new Date(), fuoriDominio: punti.length < puntiBase.length * 0.7 };
       cache[key] = pacchetto;
-      applicaDati(pacchetto, variabile, modello);
+      applicaDati(pacchetto, variabile, modello, target, opzioni.mantieniOra);
     }).catch(function (err) {
       var msg = (err && err.message) ? err.message : 'Non è stato possibile scaricare i dati.';
       if (err && err.reason && /hourly|invalid string|weather variable/i.test(err.reason)) {
-        marcaNonDisponibile(mid, vid);
+        if (!isB) marcaNonDisponibile(mid, vid);
         msg = 'Questa grandezza non è disponibile per il modello ' + modello.nome + '. Scegline un\'altra.';
       }
-      impostaStato(msg, true, false);
+      if (!isB) impostaStato(msg, true, false);
+      else impostaStato('Confronto: ' + msg, true, false);
     });
   }
-
-  function applicaDati(pacchetto, variabile, modello) {
-    statoMappa.punti = pacchetto.punti;
-    statoMappa.orari = pacchetto.orari;
-    statoMappa.variabile = variabile;
-    statoMappa.modello = modello;
-    statoMappa.scaricatoIl = pacchetto.scaricatoIl;
+  function applicaDati(pacchetto, variabile, modello, target, mantieniOra) {
+    var isB = target === 'b';
+    var stato = isB ? statoMappaB : statoMappa;
+    stato.punti = pacchetto.punti;
+    stato.orari = pacchetto.orari;
+    stato.variabile = variabile;
+    stato.modello = modello;
+    stato.scaricatoIl = pacchetto.scaricatoIl;
     var indici = [];
     for (var i = 0; i < pacchetto.orari.length; i++) {
       if (i % 3 === 0 || i === pacchetto.orari.length - 1) indici.push(i);
     }
-    statoMappa.passi = indici;
-    var ora = new Date();
-    var meglio = 0, dist = Infinity;
-    for (var p = 0; p < indici.length; p++) {
-      var t = Date.parse(pacchetto.orari[indici[p]]);
-      var d = Math.abs(t - ora.getTime());
-      if (d < dist) { dist = d; meglio = p; }
+    stato.passi = indici;
+    var meglio = 0, dist = Infinity, p, t, d;
+    var ancora = mantieniOra && statoMappa.orari[statoMappa.indice];
+    if (ancora) {
+      for (p = 0; p < indici.length; p++) {
+        if (pacchetto.orari[indici[p]] === ancora) { meglio = p; dist = 0; break; }
+      }
     }
-    statoMappa.indicePasso = meglio;
-    statoMappa.indice = indici[meglio];
-    var sl = $('cmi-ora');
-    sl.disabled = false;
-    sl.min = 0;
-    sl.max = String(indici.length - 1);
-    sl.value = String(meglio);
-    aggiornaOraUI();
-    aggiornaLegenda();
-    if (strato) strato.ridisegna();
-    var extra = pacchetto.fuoriDominio ? ' Il modello non copre tutta l\'Italia: le zone fuori dal dominio restano senza colore.' : '';
-    impostaStato('Cartina pronta: ' + modello.nome + ', ' + variabile.nome + '.' + extra, false, false);
-    aggiornaCorsa();
-    assicuraMarcatoreGenzano();
+    if (dist !== 0) {
+      var oraRif = ancora ? Date.parse(ancora) : Date.now();
+      for (p = 0; p < indici.length; p++) {
+        t = Date.parse(pacchetto.orari[indici[p]]);
+        d = Math.abs(t - oraRif);
+        if (d < dist) { dist = d; meglio = p; }
+      }
+    }
+    stato.indicePasso = meglio;
+    stato.indice = indici[meglio];
+    stato.matrice = costruisciMatrice(stato.punti, stato.variabile, stato.indice);
+    if (!isB) {
+      ultimoAggiornamento = pacchetto.scaricatoIl;
+      var sl = $('cmi-ora');
+      sl.disabled = false;
+      sl.min = 0;
+      sl.max = String(indici.length - 1);
+      sl.value = String(meglio);
+      aggiornaOraUI();
+      aggiornaLegenda();
+      if (strato) strato.ridisegna();
+      if (confrontoAttivo() && statoMappaB.orari.length) allineaB();
+      var extra = pacchetto.fuoriDominio ? ' Il modello non copre tutta l\'Italia: le zone fuori dal dominio restano senza colore.' : '';
+      impostaStato('Cartina pronta: ' + modello.nome + ', ' + variabile.nome + '.' + extra, false, false);
+      aggiornaCorsa();
+      assicuraMarcatoreGenzano();
+      if (prontoRisovi) { prontoRisovi(); prontoRisovi = null; }
+    } else {
+      allineaB();
+      if (stratoB) stratoB.ridisegna();
+      assicuraMarcatoreGenzano();
+      aggiornaEtichetteConfronto();
+    }
   }
-
+  function allineaB() {
+    if (!statoMappaB.orari.length || !statoMappa.orari.length) return;
+    var iso = statoMappa.orari[statoMappa.indice];
+    var i, meglio = 0, dist = Infinity, d;
+    for (i = 0; i < statoMappaB.orari.length; i++) {
+      if (statoMappaB.orari[i] === iso) { meglio = i; dist = 0; break; }
+      d = Math.abs(Date.parse(statoMappaB.orari[i]) - Date.parse(iso));
+      if (d < dist) { dist = d; meglio = i; }
+    }
+    statoMappaB.indice = meglio;
+    if (statoMappaB.passi) {
+      var p, bestP = 0, bestD = Infinity;
+      for (p = 0; p < statoMappaB.passi.length; p++) {
+        d = Math.abs(statoMappaB.passi[p] - meglio);
+        if (d < bestD) { bestD = d; bestP = p; }
+      }
+      statoMappaB.indicePasso = bestP;
+      statoMappaB.indice = statoMappaB.passi[bestP];
+    }
+    statoMappaB.matrice = costruisciMatrice(statoMappaB.punti, statoMappaB.variabile, statoMappaB.indice);
+    if (stratoB) stratoB.ridisegna();
+  }
   function aggiornaOraUI() {
     var iso = statoMappa.orari[statoMappa.indice];
-    $('cmi-ora-etichetta').textContent = formatOra(iso);
+    var el = $('cmi-ora-etichetta');
+    if (el) el.textContent = formatOra(iso);
   }
   function aggiornaLegenda() {
     var v = statoMappa.variabile;
@@ -613,24 +1277,32 @@
   function aggiornaCorsa() {
     var el = $('cmi-corsa');
     if (!el || !statoMappa.modello) return;
-    var quando = statoMappa.scaricatoIl ? formatOra(statoMappa.scaricatoIl.toISOString().replace('Z', '')) : '';
-    // Use local format
-    if (statoMappa.scaricatoIl) {
-      var d = statoMappa.scaricatoIl;
-      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
-      quando = pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear() + ', ore ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
-    }
-    el.textContent = 'Modello ' + statoMappa.modello.nome + ' (' + statoMappa.modello.risoluzione + ', ' + statoMappa.modello.ente + '). Dati scaricati il ' + quando + ' (ora locale). Fonte: Open-Meteo, licenza CC BY 4.0.';
+    var m = statoMappa.modello;
+    var quando = formatDataOraLocale(ultimoAggiornamento || statoMappa.scaricatoIl);
+    el.innerHTML = '<strong>Ultima corsa:</strong> Open-Meteo non comunica l\'ora di inizializzazione della corsa; il modello ' +
+      m.nome + ' si aggiorna ' + m.aggiornamento + '.<br>' +
+      '<strong>Aggiornato alle:</strong> ' + quando + ' (ora locale Europe/Rome). Fonte: Open-Meteo, licenza CC BY 4.0. Confini: Natural Earth, pubblico dominio.';
+  }
+  function aggiornaEtichetteConfronto() {
+    var a = $('cmi-etichetta-a');
+    var b = $('cmi-etichetta-b');
+    if (a) a.textContent = statoMappa.modello ? ('Modello A: ' + statoMappa.modello.nome) : 'Modello A';
+    if (b) b.textContent = statoMappaB.modello ? ('Modello B: ' + statoMappaB.modello.nome) : 'Modello B';
   }
   function assicuraMarcatoreGenzano() {
-    if (!mappa || !window.L) return;
-    if (markerGenzano) { mappa.removeLayer(markerGenzano); }
-    markerGenzano = L.circleMarker([GENZANO.lat, GENZANO.lon], {
-      radius: 6, color: '#ffbe2e', weight: 2, fillColor: '#003366', fillOpacity: 1
-    }).addTo(mappa);
-    markerGenzano.bindTooltip('Genzano di Roma');
+    if (!window.L) return;
+    var opt = { radius: 6, color: '#ffbe2e', weight: 2, fillColor: '#003366', fillOpacity: 1 };
+    if (mappa) {
+      if (markerGenzano) mappa.removeLayer(markerGenzano);
+      markerGenzano = L.circleMarker([GENZANO.lat, GENZANO.lon], opt).addTo(mappa);
+      markerGenzano.bindTooltip('Genzano di Roma');
+    }
+    if (mappaB) {
+      if (markerGenzanoB) mappaB.removeLayer(markerGenzanoB);
+      markerGenzanoB = L.circleMarker([GENZANO.lat, GENZANO.lon], opt).addTo(mappaB);
+      markerGenzanoB.bindTooltip('Genzano di Roma');
+    }
   }
-
   function vaiAPasso(n) {
     if (!statoMappa.passi || !statoMappa.passi.length) return;
     var max = statoMappa.passi.length - 1;
@@ -638,9 +1310,11 @@
     if (n > max) n = 0;
     statoMappa.indicePasso = n;
     statoMappa.indice = statoMappa.passi[n];
+    statoMappa.matrice = costruisciMatrice(statoMappa.punti, statoMappa.variabile, statoMappa.indice);
     $('cmi-ora').value = String(n);
     aggiornaOraUI();
     if (strato) strato.ridisegna();
+    if (confrontoAttivo()) allineaB();
   }
   function fermaPlay(aggiornaBottone) {
     if (timerPlay) { clearInterval(timerPlay); timerPlay = null; }
@@ -653,10 +1327,7 @@
     }
   }
   function avviaPlay() {
-    var ridotto = document.documentElement.classList.contains('a11y-pause-animations') ||
-      document.documentElement.classList.contains('a11y-pause-anim') ||
-      (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-    var attesa = ridotto ? 1400 : 500;
+    var attesa = motoRidotto() ? 1400 : 500;
     fermaPlay(false);
     var btn = $('cmi-play');
     btn.setAttribute('aria-pressed', 'true');
@@ -688,7 +1359,6 @@
       if (vuoto) vuoto.textContent = 'Temperature in diretta non disponibili in questo momento.';
     });
   }
-
   function renderCitta(lista) {
     var wrap = $('cmi-citta-lista');
     wrap.textContent = '';
@@ -703,7 +1373,6 @@
       var desc = (code !== null && typeof CODICI[code] !== 'undefined') ? CODICI[code] : 'Tempo non indicato';
       var scheda = document.createElement('article');
       scheda.className = 'cmi-citta-scheda' + (c.locale ? ' cmi-citta-genzano' : '');
-      scheda.innerHTML = '';
       var h = document.createElement('h4');
       h.className = 'cmi-citta-nome';
       h.textContent = c.nome;
@@ -715,7 +1384,6 @@
       q.textContent = desc;
       scheda.appendChild(h); scheda.appendChild(p); scheda.appendChild(q);
       wrap.appendChild(scheda);
-
       if (mappaCitta && window.L && !c.soloScheda) {
         var html = '<div class="cmi-marker' + (c.locale ? ' cmi-marker-genzano' : '') + '">' +
           '<span class="cmi-marker-nome">' + c.nome + '</span>' +
@@ -731,7 +1399,6 @@
     }
     renderSchedeGenzano(lista);
   }
-
   function renderSchedeGenzano(lista) {
     var dest = $('cmi-schede-giorni');
     dest.textContent = '';
@@ -762,7 +1429,6 @@
       dest.appendChild(art);
     }
   }
-
   function iconaMeteo(code) {
     var cls = 'bi-cloud';
     if (code === 0 || code === 1) cls = 'bi-sun';
@@ -774,23 +1440,17 @@
     else if (code !== null) cls = 'bi-cloud-rain';
     return '<i class="bi ' + cls + '"></i>';
   }
-
   function messaggioCondividi(txt) {
     var el = $('cmi-condividi-esito');
     if (el) el.textContent = txt || '';
   }
-
-  function urlPagina() {
-    return window.location.href.split('#')[0];
-  }
-
+  function urlPagina() { return window.location.href.split('#')[0]; }
   function testoCondivisione() {
     var b = (leggiConfig().bollettino) || {};
     var titolo = 'Previsioni meteo per l\'Italia';
     var testo = (b.situazione_generale || titolo) + ' ' + urlPagina();
     return { title: titolo, text: testo, url: urlPagina() };
   }
-
   function copiaLink() {
     var url = urlPagina();
     if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -814,7 +1474,6 @@
     }
     document.body.removeChild(ta);
   }
-
   function condividi() {
     var p = testoCondivisione();
     if (navigator.share) {
@@ -828,7 +1487,6 @@
       copiaLink();
     }
   }
-
   function wrapText(ctx, text, x, y, maxWidth, lineHeight, maxLines) {
     var words = String(text || '').split(/\s+/);
     var line = '';
@@ -841,7 +1499,7 @@
         y += lineHeight;
         lines += 1;
         if (maxLines && lines >= maxLines) {
-          ctx.fillText(line.replace(/.{0}$/, '…'), x, y);
+          ctx.fillText('…', x, y);
           return y + lineHeight;
         }
       } else {
@@ -852,7 +1510,7 @@
     return y;
   }
 
-  function scaricaImmagine() {
+  function costruisciCanvasBollettino() {
     var canvas = document.createElement('canvas');
     canvas.width = 1080;
     canvas.height = 1350;
@@ -867,23 +1525,20 @@
     ctx.fillText('Previsioni meteo per l\'Italia', 48, 130);
     ctx.font = '24px Titillium Web, Arial, sans-serif';
     ctx.fillText('Emesso il ' + formatEmesso(b.emesso_il) + '  ·  Valido dal ' + formatDataIt(b.validita_da) + ' al ' + formatDataIt(b.validita_a), 48, 180);
-
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 220, 1080, 1130);
     ctx.fillStyle = '#003366';
     ctx.fillRect(0, 220, 1080, 8);
-
     ctx.fillStyle = '#1a1a1a';
     ctx.font = '28px Titillium Web, Arial, sans-serif';
     var y = wrapText(ctx, b.situazione_generale || '', 48, 280, 984, 38, 8);
-
     y += 20;
     ctx.fillStyle = '#003366';
     ctx.font = 'bold 32px Titillium Web, Arial, sans-serif';
     ctx.fillText('Oggi nelle città', 48, y);
     y += 20;
     if (datiCitta) {
-      var colW = 486, rowH = 58, startY = y + 16, col = 0;
+      var colW = 486, rowH = 48, startY = y + 10, col = 0;
       for (var i = 0; i < CITTA.length; i++) {
         var c = CITTA[i];
         var day = (datiCitta[i] && datiCitta[i].daily) || {};
@@ -903,10 +1558,11 @@
       }
       y = startY + Math.ceil(CITTA.length / 2) * rowH + 20;
     }
-
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 1188, 1080, 72);
     ctx.fillStyle = '#3a2e0e';
-    ctx.font = '22px Titillium Web, Arial, sans-serif';
-    y = wrapText(ctx, 'Non è un\'allerta ufficiale. Per i colori di allerta consulta la pagina Allerte meteo del sito. In emergenza chiama il 112.', 48, Math.min(y, 1180), 984, 32, 3);
+    ctx.font = '20px Titillium Web, Arial, sans-serif';
+    wrapText(ctx, 'Non è un\'allerta ufficiale. Per i colori di allerta consulta la pagina Allerte meteo del sito. In emergenza chiama il 112.', 48, 1214, 984, 26, 2);
     ctx.fillStyle = '#003366';
     ctx.fillRect(0, 1260, 1080, 90);
     ctx.fillStyle = '#ffffff';
@@ -914,47 +1570,264 @@
     ctx.fillText('protezionecivilegenzano.it/cartina-meteo-italia/', 48, 1300);
     ctx.font = '20px Titillium Web, Arial, sans-serif';
     ctx.fillText('Dati modellistici: Open-Meteo, licenza CC BY 4.0.', 48, 1332);
-
-    function scarica() {
-      canvas.toBlob(function (blob) {
-        if (!blob) return;
-        var a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'previsioni-meteo-italia-' + (b.validita_da || 'bollettino') + '.png';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+    return caricaLogo().then(function (logo) {
+      if (logo) {
+        try { ctx.drawImage(logo, 920, 40, 110, 110); } catch (e) {}
+      }
+      return canvas;
+    });
+  }
+  function caricaLogo() {
+    return new Promise(function (resolve) {
+      var logo = new Image();
+      logo.onload = function () { resolve(logo); };
+      logo.onerror = function () { resolve(null); };
+      var cfg = leggiConfig();
+      logo.src = cfg.logoUrl || '/images/logo-pc-genzano.png';
+    });
+  }
+  function canvasToBlob(canvas, tipo) {
+    return new Promise(function (resolve) {
+      canvas.toBlob(function (blob) { resolve(blob || null); }, tipo || 'image/png');
+    });
+  }
+  function scaricaBlob(blob, nome) {
+    if (!blob) return;
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = nome;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+  function scaricaImmagine() {
+    return costruisciCanvasBollettino().then(function (canvas) {
+      return canvasToBlob(canvas, 'image/png').then(function (blob) {
+        var b = (leggiConfig().bollettino) || {};
+        scaricaBlob(blob, 'previsioni-meteo-italia-' + (b.validita_da || 'bollettino') + '.png');
         messaggioCondividi('Immagine scaricata.');
-      }, 'image/png');
-    }
-
-    var logo = new Image();
-    logo.onload = function () {
-      try { ctx.drawImage(logo, 920, 40, 110, 110); } catch (e) {}
-      scarica();
+        return blob;
+      });
+    });
+  }
+  function esportaBollettinoBlob() {
+    return costruisciCanvasBollettino().then(function (canvas) {
+      return canvasToBlob(canvas, 'image/png');
+    });
+  }
+  function vistaFissa(w, h, pad) {
+    pad = pad || 8;
+    var W = LON_MAX - LON_MIN, Hgt = LAT_MAX - LAT_MIN;
+    return {
+      w: w,
+      h: h,
+      xy: function (lat, lon) {
+        return [
+          pad + (lon - LON_MIN) / W * (w - 2 * pad),
+          pad + (LAT_MAX - lat) / Hgt * (h - 2 * pad)
+        ];
+      },
+      inv: function (x, y) {
+        return {
+          lon: LON_MIN + ((x - pad) / (w - 2 * pad)) * W,
+          lat: LAT_MAX - ((y - pad) / (h - 2 * pad)) * Hgt
+        };
+      }
     };
-    logo.onerror = function () { scarica(); };
-    var cfg = leggiConfig();
-    logo.src = cfg.logoUrl || '/images/logo-pc-genzano.png';
+  }
+  function costruisciFotogramma(stato, logo, w, h) {
+    var canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    var ctx = canvas.getContext('2d');
+    var testata = 92, piede = 78;
+    ctx.fillStyle = '#003366';
+    ctx.fillRect(0, 0, w, testata);
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 22px Titillium Web, Arial, sans-serif';
+    ctx.fillText('Cartina meteo dell\'Italia', 16, 28);
+    ctx.font = '16px Titillium Web, Arial, sans-serif';
+    ctx.fillText((stato.modello ? stato.modello.nome : '') + ' · ' + (stato.variabile ? stato.variabile.nome : ''), 16, 52);
+    ctx.font = '15px Titillium Web, Arial, sans-serif';
+    ctx.fillText('Validità: ' + formatOra(stato.orari[stato.indice]), 16, 74);
+    if (logo) {
+      try { ctx.drawImage(logo, w - 78, 10, 64, 64); } catch (e) {}
+    }
+    var mw = w, mh = h - testata - piede;
+    var off = document.createElement('canvas');
+    off.width = mw;
+    off.height = mh;
+    var octx = off.getContext('2d');
+    var vista = vistaFissa(mw, mh, 6);
+    disegnaVista(octx, vista, stato, { frecce: true, decorazioni: true });
+    ctx.drawImage(off, 0, testata);
+    ctx.fillStyle = '#003366';
+    ctx.fillRect(0, h - piede, w, piede);
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '14px Titillium Web, Arial, sans-serif';
+    ctx.fillText('Dati: Open-Meteo, licenza CC BY 4.0. Confini: Natural Earth, pubblico dominio.', 16, h - 48);
+    ctx.fillText('protezionecivilegenzano.it/cartina-meteo-italia/', 16, h - 28);
+    ctx.fillText('Aggiornato alle ' + formatDataOraLocale(ultimoAggiornamento || stato.scaricatoIl) + ' (Europe/Rome).', 16, h - 10);
+    return canvas;
+  }
+  function mostraProgresso(visibile, testo, perc) {
+    var wrap = $('cmi-export-progress');
+    var lab = $('cmi-export-progress-testo');
+    var bar = $('cmi-export-progress-barra');
+    if (!wrap) return;
+    wrap.hidden = !visibile;
+    if (lab) lab.textContent = testo || '';
+    if (bar) bar.style.width = Math.max(0, Math.min(100, perc || 0)) + '%';
+  }
+  function tick() {
+    return new Promise(function (resolve) { setTimeout(resolve, 0); });
+  }
+  function indiciExport() {
+    var passi = statoMappa.passi || [];
+    if (passi.length <= 28) return passi.slice();
+    var out = [], n = 28;
+    for (var i = 0; i < n; i++) out.push(passi[Math.round(i * (passi.length - 1) / (n - 1))]);
+    return out;
+  }
+  function esportaPngBlob() {
+    if (!statoMappa.matrice) return Promise.reject(new Error('Cartina non pronta.'));
+    return caricaLogo().then(function (logo) {
+      var canvas = costruisciFotogramma(statoMappa, logo, 720, 900);
+      return canvasToBlob(canvas, 'image/png');
+    });
+  }
+  function scaricaPngCartina() {
+    return esportaPngBlob().then(function (blob) {
+      var iso = (statoMappa.orari[statoMappa.indice] || '').replace(/[:T]/g, '-').slice(0, 16);
+      scaricaBlob(blob, 'cartina-meteo-italia-' + iso + '.png');
+      impostaStato('Fotogramma PNG scaricato.', false, false);
+      return blob;
+    });
+  }
+  function esportaGifBlob() {
+    if (!statoMappa.punti.length) return Promise.reject(new Error('Cartina non pronta.'));
+    if (!window.CMI_GIF || !window.CMI_GIF.encode) {
+      return Promise.reject(new Error('Encoder GIF non disponibile.'));
+    }
+    if (esportazioneInCorso) return Promise.reject(new Error('Esportazione già in corso.'));
+    esportazioneInCorso = true;
+    var W = 720, H = 900;
+    var indici = indiciExport();
+    var frames = [];
+    var idxOrig = statoMappa.indice;
+    mostraProgresso(true, 'Preparazione dell\'animazione…', 2);
+    return caricaLogo().then(function (logo) {
+      var catena = Promise.resolve();
+      indici.forEach(function (idx, i) {
+        catena = catena.then(function () {
+          statoMappa.indice = idx;
+          statoMappa.matrice = costruisciMatrice(statoMappa.punti, statoMappa.variabile, idx);
+          var canvas = costruisciFotogramma(statoMappa, logo, W, H);
+          var ctx = canvas.getContext('2d');
+          var data = ctx.getImageData(0, 0, W, H).data;
+          var delay = (i === indici.length - 1) ? 90 : 28;
+          frames.push({ data: data, delay: delay });
+          mostraProgresso(true, 'Fotogramma ' + (i + 1) + ' di ' + indici.length + '…', Math.round(((i + 1) / (indici.length + 1)) * 90));
+          return tick();
+        });
+      });
+      return catena.then(function () {
+        mostraProgresso(true, 'Codifica della GIF…', 92);
+        return tick();
+      }).then(function () {
+        var bytes = window.CMI_GIF.encode(W, H, frames, 28, 0);
+        var blob = new Blob([bytes], { type: 'image/gif' });
+        mostraProgresso(true, 'GIF pronta.', 100);
+        return blob;
+      });
+    }).then(function (blob) {
+      statoMappa.indice = idxOrig;
+      statoMappa.matrice = costruisciMatrice(statoMappa.punti, statoMappa.variabile, idxOrig);
+      if (strato) strato.ridisegna();
+      esportazioneInCorso = false;
+      setTimeout(function () { mostraProgresso(false, '', 0); }, 1200);
+      return blob;
+    }).catch(function (err) {
+      statoMappa.indice = idxOrig;
+      statoMappa.matrice = costruisciMatrice(statoMappa.punti, statoMappa.variabile, idxOrig);
+      if (strato) strato.ridisegna();
+      esportazioneInCorso = false;
+      mostraProgresso(false, '', 0);
+      throw err;
+    });
+  }
+  function scaricaGifCartina() {
+    mostraProgresso(true, 'Preparazione dell\'animazione…', 1);
+    return esportaGifBlob().then(function (blob) {
+      var mid = statoMappa.modello ? statoMappa.modello.id : 'modello';
+      var vid = statoMappa.variabile ? statoMappa.variabile.id : 'variabile';
+      scaricaBlob(blob, 'cartina-meteo-italia-' + mid + '-' + vid + '.gif');
+      impostaStato('Animazione GIF scaricata.', false, false);
+      return blob;
+    }).catch(function (err) {
+      impostaStato((err && err.message) || 'Non è stato possibile creare la GIF.', true, false);
+    });
   }
 
-  function formatDataIt(iso) {
-    if (!iso) return '';
-    var p = String(iso).split('-');
-    if (p.length !== 3) return iso;
-    return parseInt(p[2], 10) + '/' + p[1] + '/' + p[0];
+  function aggiornaConfrontoUI() {
+    var on = confrontoAttivo();
+    var campo = $('cmi-campo-confronto');
+    var col = $('cmi-col-b');
+    var etA = $('cmi-etichetta-a');
+    var mappe = $('cmi-mappe');
+    if (campo) campo.hidden = !on;
+    if (col) col.hidden = !on;
+    if (etA) etA.hidden = !on;
+    if (mappe) {
+      if (on) mappe.classList.add('cmi-mappe-doppie');
+      else mappe.classList.remove('cmi-mappe-doppie');
+    }
+    if (on) {
+      assicuraMappaB();
+      aggiornaEtichetteConfronto();
+      caricaGriglia('b', { mantieniOra: true });
+    }
+    setTimeout(function () {
+      if (mappa) mappa.invalidateSize();
+      if (mappaB) mappaB.invalidateSize();
+    }, 80);
   }
-
+  function pianificaRefresh() {
+    if (timerRefresh) clearInterval(timerRefresh);
+    timerRefresh = setInterval(function () {
+      if (document.hidden) return;
+      eseguiRefresh();
+    }, INTERVALLO_AGGIORNAMENTO);
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && ultimoAggiornamento && (Date.now() - ultimoAggiornamento.getTime() > INTERVALLO_AGGIORNAMENTO)) {
+        eseguiRefresh();
+      }
+    });
+  }
+  function eseguiRefresh() {
+    cache = {};
+    impostaStato('Aggiorno i dati del modello…', false, true);
+    var jobs = [caricaGriglia('a', { mantieniOra: true }), caricaCitta()];
+    if (confrontoAttivo()) jobs.push(caricaGriglia('b', { mantieniOra: true }));
+    Promise.all(jobs).then(function () { aggiornaCorsa(); });
+  }
   function bind() {
     $('cmi-modello').addEventListener('change', function () {
       aggiornaInfoModello();
       aggiornaOpzioniVariabile();
-      caricaGriglia();
+      caricaGriglia('a');
     });
     $('cmi-variabile').addEventListener('change', function () {
       aggiornaInfoVariabile();
-      caricaGriglia();
+      caricaGriglia('a');
+      if (confrontoAttivo()) caricaGriglia('b', { mantieniOra: true });
     });
+    if ($('cmi-modello-b')) {
+      $('cmi-modello-b').addEventListener('change', function () {
+        aggiornaInfoModello();
+        caricaGriglia('b', { mantieniOra: true });
+      });
+    }
     $('cmi-ora').addEventListener('input', function () {
       vaiAPasso(parseInt($('cmi-ora').value, 10) || 0);
     });
@@ -968,29 +1841,80 @@
     $('cmi-condividi').addEventListener('click', condividi);
     $('cmi-copia-link').addEventListener('click', copiaLink);
     $('cmi-scarica').addEventListener('click', scaricaImmagine);
+    if ($('cmi-scarica-png')) $('cmi-scarica-png').addEventListener('click', scaricaPngCartina);
+    if ($('cmi-scarica-gif')) $('cmi-scarica-gif').addEventListener('click', scaricaGifCartina);
+    if ($('cmi-isolinee')) $('cmi-isolinee').addEventListener('change', function () { if (strato) strato.ridisegna(); if (stratoB) stratoB.ridisegna(); });
+    if ($('cmi-particelle')) $('cmi-particelle').addEventListener('change', function () { if (strato) strato.ridisegna(); avviaOFermaVento(); });
+    if ($('cmi-confronto')) $('cmi-confronto').addEventListener('change', aggiornaConfrontoUI);
+    if ($('cmi-meteo-chiudi')) {
+      $('cmi-meteo-chiudi').addEventListener('click', function () {
+        $('cmi-meteogramma').hidden = true;
+        if (mappa) mappa.closePopup();
+      });
+    }
     var emesso = $('cmi-emesso-il');
     if (emesso) emesso.textContent = formatEmesso(emesso.getAttribute('datetime') || emesso.textContent);
+    document.addEventListener('keydown', function (ev) {
+      var t = ev.target;
+      var tag = (t && t.tagName) ? t.tagName.toLowerCase() : '';
+      if (tag === 'input' || tag === 'select' || tag === 'textarea' || (t && t.isContentEditable)) return;
+      if (ev.key === ' ' || ev.key === 'Spacebar') {
+        ev.preventDefault();
+        if (timerPlay) fermaPlay(true);
+        else avviaPlay();
+      } else if (ev.key === 'ArrowLeft') {
+        ev.preventDefault();
+        fermaPlay(true);
+        vaiAPasso((statoMappa.indicePasso || 0) - 1);
+      } else if (ev.key === 'ArrowRight') {
+        ev.preventDefault();
+        fermaPlay(true);
+        vaiAPasso((statoMappa.indicePasso || 0) + 1);
+      }
+    });
   }
-
+  function caricaConfini() {
+    var url = (leggiConfig().geoJsonUrl) || '/data/italia-confini.geojson';
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error('confini');
+      return r.json();
+    }).then(function (g) { geojson = g; }).catch(function () { geojson = null; });
+  }
   function avvia() {
     popolaSelect();
     bind();
+    pianificaRefresh();
     var cfg = leggiConfig();
     loadScript(cfg.leafletJs || '/vendor/leaflet/leaflet.js').then(function () {
+      return caricaConfini();
+    }).then(function () {
       creaMappe();
-      return Promise.all([caricaGriglia(), caricaCitta()]);
+      return Promise.all([caricaGriglia('a'), caricaCitta()]);
     }).catch(function (err) {
       impostaStato((err && err.message) || 'Impossibile avviare la cartina.', true, false);
+      if (prontoRisovi) { prontoRisovi(); prontoRisovi = null; }
     });
   }
-
   function leggiConfig() {
     var el = document.getElementById('cmi-config');
     if (!el) return {};
     try { return JSON.parse(el.value || el.textContent || '{}'); }
     catch (e) { return {}; }
   }
-
+  function attivaConfronto(modelId) {
+    var chk = $('cmi-confronto');
+    if (chk) chk.checked = true;
+    if (modelId && $('cmi-modello-b')) $('cmi-modello-b').value = modelId;
+    aggiornaConfrontoUI();
+  }
+  window.CMI_API = {
+    pronto: function () { return prontoPromessa; },
+    esportaGifBlob: esportaGifBlob,
+    esportaPngBlob: esportaPngBlob,
+    esportaBollettinoBlob: esportaBollettinoBlob,
+    apriMeteogramma: apriMeteogramma,
+    attivaConfronto: attivaConfronto
+  };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia);
   else avvia();
 })();

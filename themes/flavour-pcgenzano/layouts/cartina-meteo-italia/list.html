@@ -25,7 +25,7 @@
 
       <section class="cmi-sezione" id="cartina-interattiva" aria-labelledby="cmi-cartina-titolo">
         <h2 id="cmi-cartina-titolo">Cartina interattiva dell'Italia</h2>
-        <p>Scegli un modello e una grandezza, poi sposta il cursore sulle ore di previsione. Il colore sulla cartina è calcolato su una griglia di punti e interpolato: è una lettura sinottica, non una previsione puntuale per ogni comune. I modelli a dominio limitato lasciano senza colore le zone che non coprono.</p>
+        <p>Scegli un modello e una grandezza, poi sposta il cursore sulle ore di previsione. Il colore è un campo interpolato in modo continuo sulla griglia dei punti: è una lettura sinottica, non una previsione puntuale per ogni comune. I modelli a dominio limitato lasciano senza colore le zone che non coprono. Puoi fare clic su un punto per il meteogramma, confrontare due modelli e scaricare un'animazione GIF o un fotogramma PNG.</p>
 
         <form class="cmi-comandi" id="cmi-comandi" aria-controls="cmi-mappa">
           <div class="cmi-campo">
@@ -38,7 +38,27 @@
             <select id="cmi-variabile" name="variabile"></select>
             <p class="cmi-variabile-info" id="cmi-variabile-info"></p>
           </div>
+          <div class="cmi-campo cmi-campo-confronto" id="cmi-campo-confronto" hidden>
+            <label for="cmi-modello-b">Secondo modello (confronto)</label>
+            <select id="cmi-modello-b" name="modello_b"></select>
+            <p class="cmi-modello-info" id="cmi-modello-b-info"></p>
+          </div>
         </form>
+
+        <div class="cmi-opzioni" role="group" aria-label="Opzioni di visualizzazione">
+          <label class="cmi-check">
+            <input type="checkbox" id="cmi-isolinee" checked>
+            <span>Isolinee (isobare, isoterme o geopotenziale)</span>
+          </label>
+          <label class="cmi-check">
+            <input type="checkbox" id="cmi-particelle" checked>
+            <span>Particelle o frecce del vento</span>
+          </label>
+          <label class="cmi-check">
+            <input type="checkbox" id="cmi-confronto">
+            <span>Confronta due modelli</span>
+          </label>
+        </div>
 
         <div class="cmi-tempo">
           <div class="cmi-tempo-azioni">
@@ -48,6 +68,12 @@
             </button>
             <button type="button" class="btn btn-outline-primary" id="cmi-precedente">Ora precedente</button>
             <button type="button" class="btn btn-outline-primary" id="cmi-successiva">Ora successiva</button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-scarica-png">
+              <i class="bi bi-image me-1" aria-hidden="true"></i>Scarica PNG
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-scarica-gif">
+              <i class="bi bi-film me-1" aria-hidden="true"></i>Scarica GIF
+            </button>
           </div>
           <div class="cmi-cursore">
             <label for="cmi-ora">Ora di previsione: <strong id="cmi-ora-etichetta">—</strong></label>
@@ -55,17 +81,44 @@
           </div>
         </div>
 
-        <p class="cmi-stato" id="cmi-stato" role="status" aria-live="polite"></p>
+        <p class="cmi-tastiera" id="cmi-tastiera">Tastiera: <kbd>spazio</kbd> avvia o mette in pausa, <kbd>←</kbd> e <kbd>→</kbd> avanzano di un passo. Il clic sulla cartina apre il meteogramma del punto.</p>
 
-        <div class="cmi-mappa-wrap">
-          <div id="cmi-mappa" role="application" aria-label="Cartina meteorologica interattiva dell'Italia. I valori sono descritti anche nella legenda e nello stato sopra la mappa."></div>
-          <div class="cmi-legenda" id="cmi-legenda" aria-label="Legenda della scala di colori">
-            <p class="cmi-legenda-titolo" id="cmi-legenda-titolo">Legenda</p>
-            <div class="cmi-legenda-scala" id="cmi-legenda-scala"></div>
-          </div>
+        <p class="cmi-stato" id="cmi-stato" role="status" aria-live="polite"></p>
+        <div class="cmi-export-progress" id="cmi-export-progress" hidden>
+          <p id="cmi-export-progress-testo" role="status" aria-live="polite">Preparazione dell'animazione…</p>
+          <div class="cmi-progress" aria-hidden="true"><span id="cmi-export-progress-barra"></span></div>
         </div>
 
-        <p class="cmi-corsa small text-muted" id="cmi-corsa"></p>
+        <div class="cmi-mappe" id="cmi-mappe">
+          <div class="cmi-mappa-col">
+            <p class="cmi-mappa-etichetta" id="cmi-etichetta-a" hidden>Modello A</p>
+            <div class="cmi-mappa-wrap">
+              <div id="cmi-mappa" role="application" aria-label="Cartina meteorologica interattiva dell'Italia. I valori sono descritti anche nella legenda, nello stato e nel meteogramma."></div>
+            </div>
+          </div>
+          <div class="cmi-mappa-col" id="cmi-col-b" hidden>
+            <p class="cmi-mappa-etichetta" id="cmi-etichetta-b">Modello B</p>
+            <div class="cmi-mappa-wrap">
+              <div id="cmi-mappa-b" role="application" aria-label="Cartina del secondo modello, per il confronto."></div>
+            </div>
+          </div>
+        </div>
+        <div class="cmi-legenda" id="cmi-legenda" aria-label="Legenda della scala di colori">
+          <p class="cmi-legenda-titolo" id="cmi-legenda-titolo">Legenda</p>
+          <div class="cmi-legenda-scala" id="cmi-legenda-scala"></div>
+        </div>
+
+        <p class="cmi-corsa small" id="cmi-corsa"></p>
+
+        <aside class="cmi-meteogramma" id="cmi-meteogramma" hidden>
+          <div class="cmi-meteogramma-testata">
+            <h3 id="cmi-meteo-titolo">Meteogramma del punto</h3>
+            <button type="button" class="btn btn-sm btn-outline-primary" id="cmi-meteo-chiudi" aria-label="Chiudi il meteogramma">Chiudi</button>
+          </div>
+          <p class="cmi-meteo-dove" id="cmi-meteo-dove"></p>
+          <dl class="cmi-meteo-valori" id="cmi-meteo-valori"></dl>
+          <div class="cmi-meteo-grafico" id="cmi-meteo-grafico" role="img" aria-label="Grafico di temperatura, precipitazioni e vento nelle prossime 72 ore."></div>
+        </aside>
 
         <noscript>
           <div class="alert alert-warning" role="note">
@@ -159,7 +212,8 @@
 
       <p class="cmi-fonti small text-muted mt-4">
         Dati modellistici: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>).
-        Cartine di base: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>, libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 conservata sul sito.
+        Confini e coste della cartina interattiva: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a>, pubblico dominio.
+        Cartina delle città: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>, libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 conservata sul sito.
         Allerte ufficiali: <a href="{{ "allerte-meteo/" | relURL }}">Allerte meteo</a>
         e <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.
         In emergenza: <strong>112</strong>.
@@ -169,11 +223,12 @@
   </div>
 </div>
 
-{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) -}}
+{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) -}}
 {{- if $b -}}
   {{- $bPub := dict "emesso_il" $b.emesso_il "validita_da" $b.validita_da "validita_a" $b.validita_a "situazione_generale" $b.situazione_generale -}}
   {{- $cfg = merge $cfg (dict "bollettino" $bPub) -}}
 {{- end -}}
 <textarea id="cmi-config" class="visually-hidden" readonly hidden aria-hidden="true" tabindex="-1">{{ $cfg | jsonify }}</textarea>
+<script src="{{ "js/cmi-gif.js" | relURL }}" defer></script>
 <script src="{{ "js/cartina-meteo-italia.js" | relURL }}" defer></script>
 {{ end }}
