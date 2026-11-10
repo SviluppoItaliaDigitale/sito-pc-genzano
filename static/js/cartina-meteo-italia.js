@@ -141,7 +141,7 @@
     { id: 'chmi_aladin_central_europe_2km', gruppo: 'europa', nome: 'CHMI ALADIN Europa centrale', risoluzione: '2 km', aggiornamento: 'ogni 6 ore', giorni: 3, dominio: 'Centro-Nord; la Sicilia può restare fuori', ente: 'CHMI' },
     { id: 'geosphere_claef_austria', gruppo: 'europa', nome: 'GeoSphere C-LAEF', risoluzione: '1 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Prevalentemente Nord-Est e arco alpino', ente: 'GeoSphere Austria' },
 
-    { id: 'italia_meteo_arpae_icon_2i', gruppo: 'alta', nome: 'ItaliaMeteo ARPAE ICON-2I', risoluzione: '2 km', aggiornamento: 'ogni 12 ore', giorni: 3, dominio: 'Italia intera e Mediterraneo centrale', ente: 'ItaliaMeteo / ARPAE', consigliatoLocali: true },
+    { id: 'italia_meteo_arpae_icon_2i', gruppo: 'alta', nome: 'ItaliaMeteo ARPAE ICON-2I', risoluzione: '2 km', aggiornamento: 'ogni 12 ore', giorni: 3, dominio: 'Italia intera e Mediterraneo centrale', ente: 'ItaliaMeteo / ARPAE', consigliatoLocali: true, attribuzione: 'ItaliaMeteo-ARPAE ICON-2I, CC BY 4.0', nonDisponibili: ['lifted_index'], nota: 'Licenza CC BY 4.0. Orizzonte circa 72 ore. Il Lifted Index non è fornito da questa fonte.' },
     { id: 'dwd_icon_d2', gruppo: 'alta', nome: 'DWD ICON-D2', risoluzione: '2 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Prevalentemente Nord Italia', ente: 'DWD', nota: 'Canale classico annunciato in dismissione il 30 novembre 2026; è disponibile anche la versione nativa.' },
     { id: 'dwd_icon_d2_native', gruppo: 'alta', nome: 'DWD ICON-D2 (nativo)', risoluzione: '2 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Prevalentemente Nord Italia', ente: 'DWD' },
     { id: 'meteofrance_arome_france', gruppo: 'alta', nome: 'Météo-France AROME', risoluzione: '2,5 km', aggiornamento: 'ogni 3 ore', giorni: 2, dominio: 'Nord e parte del Centro; Sud e Isole spesso fuori', ente: 'Météo-France' },
@@ -701,6 +701,7 @@
     if (el) el.textContent = testoInfoModello(modelloById($('cmi-modello').value));
     var elb = $('cmi-modello-b-info');
     if (elb && $('cmi-modello-b')) elb.textContent = testoInfoModello(modelloById($('cmi-modello-b').value));
+    aggiornaAttribuzioneModello();
   }
   function aggiornaInfoVariabile() {
     var v = variabileById($('cmi-variabile').value);
@@ -715,7 +716,32 @@
     titoloEl.textContent = v.nome;
     testoEl.textContent = SPIEGAZIONI[v.id] || 'Questa cartina mostra la grandezza scelta, con i colori della legenda.';
   }
+  function applicaNonDisponibiliDichiarati() {
+    for (var i = 0; i < MODELLI.length; i++) {
+      var elenco = MODELLI[i].nonDisponibili;
+      if (!elenco) continue;
+      if (!nonDisponibili[MODELLI[i].id]) nonDisponibili[MODELLI[i].id] = {};
+      for (var j = 0; j < elenco.length; j++) nonDisponibili[MODELLI[i].id][elenco[j]] = true;
+    }
+  }
+  var attribuzioneExtra = '';
+  function aggiornaAttribuzioneModello() {
+    var m = modelloById($('cmi-modello').value);
+    var txt = (m && m.attribuzione) ? ('Modello: ' + m.attribuzione) : '';
+    var maps = [mappa, mappaB];
+    for (var i = 0; i < maps.length; i++) {
+      if (!maps[i] || !maps[i].attributionControl) continue;
+      if (attribuzioneExtra) maps[i].attributionControl.removeAttribution(attribuzioneExtra);
+      if (txt) maps[i].attributionControl.addAttribution(txt);
+    }
+    attribuzioneExtra = txt;
+  }
+  function testoCreditoModello() {
+    var m = (statoMappa && statoMappa.modello) ? statoMappa.modello : modelloById($('cmi-modello').value);
+    return (m && m.attribuzione) ? (' ' + m.attribuzione + '.') : '';
+  }
   function aggiornaOpzioniVariabile() {
+    applicaNonDisponibiliDichiarati();
     var mid = $('cmi-modello').value;
     var blocco = nonDisponibili[mid] || {};
     var sel = $('cmi-variabile');
@@ -2450,7 +2476,7 @@
     var quando = formatDataOraLocale(ultimoAggiornamento || statoMappa.scaricatoIl);
     el.innerHTML = '<strong>Ultima corsa:</strong> Open-Meteo non comunica l\'ora di inizializzazione della corsa; il modello ' +
       m.nome + ' si aggiorna ' + m.aggiornamento + '.<br>' +
-      '<strong>Aggiornato alle:</strong> ' + quando + ' (ora locale Europe/Rome). Fonte: Open-Meteo, licenza CC BY 4.0. Confini: Natural Earth, pubblico dominio.';
+      '<strong>Aggiornato alle:</strong> ' + quando + ' (ora locale Europe/Rome). Fonte: Open-Meteo, licenza CC BY 4.0.' + (m.attribuzione ? (' Modello: ' + m.attribuzione + '.') : '') + ' Confini: Natural Earth, pubblico dominio.';
   }
   function aggiornaEtichetteConfronto() {
     var a = $('cmi-etichetta-a');
@@ -2748,7 +2774,7 @@
     ctx.font = '22px Titillium Web, Arial, sans-serif';
     ctx.fillText('protezionecivilegenzano.it/cartina-meteo-italia/', 48, 1300);
     ctx.font = '20px Titillium Web, Arial, sans-serif';
-    ctx.fillText('Dati modellistici: Open-Meteo, licenza CC BY 4.0.', 48, 1332);
+    ctx.fillText('Dati modellistici: Open-Meteo, licenza CC BY 4.0.' + testoCreditoModello(), 48, 1332);
     return caricaLogo().then(function (logo) {
       if (logo) {
         try { ctx.drawImage(logo, 920, 40, 110, 110); } catch (e) {}
@@ -2867,7 +2893,7 @@
     ctx.fillRect(0, h - piede, w, piede);
     ctx.fillStyle = '#ffffff';
     ctx.font = '14px Titillium Web, Arial, sans-serif';
-    ctx.fillText('Dati: Open-Meteo, licenza CC BY 4.0. Confini: Natural Earth, pubblico dominio.', 16, h - (haRilievo ? 66 : 48));
+    ctx.fillText('Dati: Open-Meteo, licenza CC BY 4.0.' + testoCreditoModello() + ' Confini: Natural Earth, pubblico dominio.', 16, h - (haRilievo ? 66 : 48));
     ctx.fillText('protezionecivilegenzano.it/cartina-meteo-italia/', 16, h - (haRilievo ? 46 : 28));
     if (haRilievo) ctx.fillText('Rilievo: Copernicus DEM GLO-30, Unione europea. Laghi: OpenStreetMap.', 16, h - 28);
     ctx.fillText('Aggiornato alle ' + formatDataOraLocale(ultimoAggiornamento || stato.scaricatoIl) + ' (Europe/Rome).', 16, h - 10);

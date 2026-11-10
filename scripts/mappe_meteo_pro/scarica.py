@@ -1,4 +1,4 @@
-"""Prelievo dei GRIB da fonti aperte: GFS (NOMADS, con riserva AWS), ECMWF Open Data, ICON-EU (DWD)."""
+"""Prelievo dei GRIB da fonti aperte: GFS (NOMADS, con riserva AWS), ECMWF Open Data, ICON-EU (DWD), ICON-2I (ItaliaMeteo/ARPAE)."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import bz2
 import io
 import json
 import re
+import struct
 import time
 import urllib.error
 import urllib.request
@@ -418,6 +419,183 @@ def scarica_icon_eu_step(corsa: datetime, step: int, cache: Path) -> Path:
     return _scrivi_atomico(dest, dati)
 
 
+
+# ---------------------------------------------------------------------------
+# ICON-2I (ItaliaMeteo / ARPAE, MeteoHub, CC BY 4.0)
+# ---------------------------------------------------------------------------
+# Ogni variabile è un unico GRIB orario (73 messaggi, da +0 a +72). Non serve
+# un token: l'indice HTTP è pubblico. Scarichiamo solo i fotogrammi a 6 ore
+# con richieste Range, così non si preleva l'intero file da 80 MB.
+
+ICON2I_BASE = "https://meteohub.agenziaitaliameteo.it/nwp/ICON-2I_SURFACE_PRESSURE_LEVELS"
+ICON2I_LIVELLI = (1000, 925, 850, 700, 500, 250)
+ICON2I_SFC = (
+    ("PMSL", "meanSea-0"),
+    ("TOT_PREC", "surface-0"),
+    ("CAPE_ML", "atmML-0"),
+    ("TQV", "surface-0"),
+    ("U_10M", "heightAboveGround-10"),
+    ("V_10M", "heightAboveGround-10"),
+)
+ICON2I_PL = ("T", "U", "V", "FI", "QV")
+# OMEGA serve solo a 500 hPa (campo opzionale della carta h500).
+ICON2I_OMEGA = (500,)
+
+
+def _icon2i_url(corsa: datetime, variabile: str, livello: str) -> str:
+    dth = corsa.strftime("%Y%m%d%H")
+    fn = f"ICON_2I_SURFACE_PRESSURE_LEVELS_{dth}_{livello}.grib"
+    return f"{ICON2I_BASE}/{dth}/{variabile}/{fn}"
+
+
+def _icon2i_lavori() -> list[tuple[str, str]]:
+    lavori = list(ICON2I_SFC)
+    for nome in ICON2I_PL:
+        for lv in ICON2I_LIVELLI:
+            lavori.append((nome, f"isobaricInhPa-{lv}"))
+    for lv in ICON2I_OMEGA:
+        lavori.append(("OMEGA", f"isobaricInhPa-{lv}"))
+    return lavori
+
+
+def _icon2i_range(url: str, a: int, b: int) -> tuple[bytes, int | None]:
+    """Scarica un intervallo e, se presente, la dimensione totale dal Content-Range."""
+    ultimo = None
+    for i in range(TENTATIVI):
+        try:
+            with urllib.request.urlopen(_req(url, range_bytes=(a, b)), timeout=TIMEOUT) as r:
+                dati = r.read()
+                totale = None
+                cr = r.headers.get("Content-Range") or ""
+                if "/" in cr:
+                    coda = cr.rsplit("/", 1)[1].strip()
+                    if coda.isdigit():
+                        totale = int(coda)
+                return dati, totale
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            ultimo = e
+            time.sleep(PAUSA * (i + 1))
+    raise ScaricoErrore(f"Prelievo non riuscito: {url} [{a}-{b}] ({ultimo})")
+
+
+def _icon2i_indice(url: str) -> list[tuple[int, int]]:
+    """Indice (offset, lunghezza) di ogni messaggio orario nel file.
+
+    Quasi tutti i file hanno 73 messaggi della stessa taglia. La precipitazione
+    accumulata ha un primo messaggio più corto (lo step +0, tutto zero) e poi
+    72 messaggi di taglia costante.
+    """
+    head, totale = _icon2i_range(url, 0, 15)
+    if head[:4] != b"GRIB" or (len(head) > 7 and head[7] != 2) or len(head) < 16:
+        raise ScaricoErrore(f"ICON-2I: file non GRIB2: {url}")
+    m0 = struct.unpack(">Q", head[8:16])[0]
+    if m0 < 100 or not totale:
+        raise ScaricoErrore(
+            f"ICON-2I: lunghezza messaggio non valida ({m0}, totale {totale}) in {url}"
+        )
+    if totale % m0 == 0:
+        return [(i * m0, m0) for i in range(totale // m0)]
+    head2, _tot = _icon2i_range(url, m0, m0 + 15)
+    if head2[:4] != b"GRIB" or len(head2) < 16:
+        raise ScaricoErrore(f"ICON-2I: secondo messaggio non valido in {url}")
+    m1 = struct.unpack(">Q", head2[8:16])[0]
+    resto = totale - m0
+    if m1 < 1000 or resto % m1 != 0:
+        raise ScaricoErrore(
+            f"ICON-2I: taglia dei messaggi non costante dopo il preambolo in {url}"
+        )
+    return [(0, m0)] + [(m0 + i * m1, m1) for i in range(resto // m1)]
+
+
+def trova_corsa_icon_2i() -> datetime:
+    for corsa in ultime_corse_possibili(MODELLI["icon-2i"]["corse_utc"], 3.0):
+        url = _icon2i_url(corsa, "PMSL", "meanSea-0")
+        try:
+            indice = _icon2i_indice(url)
+        except ScaricoErrore:
+            continue
+        # La corsa è completa se arrivano tutti i 73 orari (+0…+72).
+        if len(indice) >= 73:
+            return corsa
+    raise ScaricoErrore("Nessuna corsa ICON-2I recente risulta disponibile.")
+
+
+def _icon2i_messaggio(url: str, step: int, indice: list[tuple[int, int]]) -> bytes:
+    if step < 0 or step >= len(indice):
+        raise ScaricoErrore(f"ICON-2I: lo step +{step} non è nel file ({len(indice)} orari).")
+    a, ln = indice[step]
+    dati, _tot = _icon2i_range(url, a, a + ln - 1)
+    if len(dati) != ln or dati[:4] != b"GRIB" or dati[-4:] != b"7777":
+        raise ScaricoErrore(
+            f"ICON-2I: messaggio +{step} incompleto o non valido in {url}"
+        )
+    return dati
+
+
+def scarica_icon_2i_step(corsa: datetime, step: int, cache: Path) -> Path:
+    """Compone il GRIB dello step unendo i soli messaggi orari che servono."""
+    dest = cache / "icon-2i" / corsa.strftime("%Y%m%d%H") / f"f{step:03d}.grib2"
+    if file_pronto(dest, 50_000):
+        return dest
+    lavori = _icon2i_lavori()
+    # Prima info dal PMSL: tutti i file della stessa corsa hanno la stessa taglia.
+    url_pmsl = _icon2i_url(corsa, "PMSL", "meanSea-0")
+    nmsg = len(_icon2i_indice(url_pmsl))
+    if step >= nmsg:
+        raise ScaricoErrore(
+            f"ICON-2I: lo step +{step} supera l'orizzonte della corsa ({nmsg - 1} ore)."
+        )
+
+    pezzi_dir = dest.parent / f"f{step:03d}.d"
+    pezzi_dir.mkdir(parents=True, exist_ok=True)
+
+    def uno(var_lv: tuple[str, str]) -> Path | None:
+        variabile, livello = var_lv
+        pezzo = pezzi_dir / f"{variabile}_{livello}.grib2"
+        if file_pronto(pezzo, 1000):
+            return pezzo
+        url = _icon2i_url(corsa, variabile, livello)
+        try:
+            indice = _icon2i_indice(url)
+            dati = _icon2i_messaggio(url, step, indice)
+        except ScaricoErrore:
+            return None
+        return _scrivi_atomico(pezzo, dati)
+
+    ok = 0
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        fut = {pool.submit(uno, lv): lv for lv in lavori}
+        for f in as_completed(fut):
+            if f.result() is not None:
+                ok += 1
+    if ok < 8:
+        raise ScaricoErrore(
+            f"ICON-2I: solo {ok} campi su {len(lavori)} per la corsa "
+            f"{corsa:%Y%m%d%H} step {step}."
+        )
+    buf = io.BytesIO()
+    for var_lv in lavori:
+        pezzo = pezzi_dir / f"{var_lv[0]}_{var_lv[1]}.grib2"
+        if file_pronto(pezzo, 1000):
+            buf.write(pezzo.read_bytes())
+    dati = buf.getvalue()
+    if len(dati) < 50_000:
+        raise ScaricoErrore("ICON-2I: GRIB concatenato troppo piccolo")
+    scritto = _scrivi_atomico(dest, dati)
+    # I pezzi singoli non servono più, una volta composto lo step.
+    for var_lv in lavori:
+        pezzo = pezzi_dir / f"{var_lv[0]}_{var_lv[1]}.grib2"
+        try:
+            pezzo.unlink()
+        except OSError:
+            pass
+    try:
+        pezzi_dir.rmdir()
+    except OSError:
+        pass
+    return scritto
+
+
 # ---------------------------------------------------------------------------
 # Interfaccia unica
 # ---------------------------------------------------------------------------
@@ -429,6 +607,8 @@ def trova_corsa(modello: str) -> datetime:
         return trova_corsa_ecmwf(modello)
     if modello == "icon-eu":
         return trova_corsa_icon_eu()
+    if modello == "icon-2i":
+        return trova_corsa_icon_2i()
     raise ScaricoErrore(f"Modello sconosciuto: {modello}")
 
 
@@ -439,6 +619,8 @@ def scarica_step(modello: str, corsa: datetime, step: int, cache: Path) -> Path:
         return scarica_ecmwf_step(corsa, step, cache, modello)
     if modello == "icon-eu":
         return scarica_icon_eu_step(corsa, step, cache)
+    if modello == "icon-2i":
+        return scarica_icon_2i_step(corsa, step, cache)
     raise ScaricoErrore(f"Modello sconosciuto: {modello}")
 
 

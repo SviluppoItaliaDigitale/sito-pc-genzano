@@ -33,6 +33,7 @@ def _blocco_modello(mid: str, info: dict) -> dict:
         "licenza": MODELLI[mid]["licenza"],
         "attribuzione": MODELLI[mid]["attribuzione"],
         "url_licenza": MODELLI[mid]["url_licenza"],
+        "nota": MODELLI[mid].get("nota") or "",
         "corsa": info["corsa"].strftime("%Y%m%d%H"),
         "init_iso": info["corsa"].strftime("%Y-%m-%dT%H:%M:%SZ"),
         "init_testo": data_italiana(info["corsa"]),

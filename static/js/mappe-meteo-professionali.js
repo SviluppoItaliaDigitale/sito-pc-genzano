@@ -71,7 +71,7 @@
 
   function modelliOrdinati() {
     var ids = Object.keys(manifesto.modelli || {});
-    var ordine = ['gfs', 'ecmwf', 'ecmwf-aifs', 'icon-eu'];
+    var ordine = ['gfs', 'ecmwf', 'ecmwf-aifs', 'icon-eu', 'icon-2i'];
     ids.sort(function (a, b) {
       var ia = ordine.indexOf(a);
       var ib = ordine.indexOf(b);
@@ -120,7 +120,9 @@
     }
     var attrib = m.attribuzione || m.ente;
     var corsa = m.init_testo || m.corsa;
-    infoModello.textContent = m.risoluzione + ' · ' + attrib + ' · corsa ' + corsa;
+    var txt = m.risoluzione + ' · ' + attrib + ' · corsa ' + corsa;
+    if (m.nota) txt += ' · ' + m.nota;
+    infoModello.textContent = txt;
   }
 
   function disegnaGriglia() {
