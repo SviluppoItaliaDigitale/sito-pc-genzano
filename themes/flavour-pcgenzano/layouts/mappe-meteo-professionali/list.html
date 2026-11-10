@@ -1,0 +1,121 @@
+{{ define "main" }}
+{{- $vCss := readFile "static/css/mappe-meteo-professionali.css" | hash.FNV32a -}}
+{{- $vJs := readFile "static/js/mappe-meteo-professionali.js" | hash.FNV32a -}}
+<link rel="stylesheet" href="{{ "css/mappe-meteo-professionali.css" | relURL }}?v={{ $vCss }}">
+
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+
+<div class="container py-4 mmp-pagina" id="mmp-pagina"
+     data-manifesto="https://raw.githubusercontent.com/SviluppoItaliaDigitale/sito-pc-genzano/mappe-meteo-dati/manifesto.json"
+     data-api="https://api.github.com/repos/SviluppoItaliaDigitale/sito-pc-genzano/contents/manifesto.json?ref=mappe-meteo-dati">
+
+  <div class="row">
+    <div class="col-lg-11 mx-auto">
+
+      <div class="list-intro-content">{{ .Content }}</div>
+
+      <p class="mmp-stato" id="mmp-stato" role="status" aria-live="polite">Caricamento delle carte in corso.</p>
+
+      <form class="mmp-comandi" id="mmp-comandi" hidden>
+        <div class="mmp-campo">
+          <label for="mmp-modello">Modello</label>
+          <select id="mmp-modello" name="modello"></select>
+          <p class="mmp-aiuto" id="mmp-modello-info"></p>
+        </div>
+        <div class="mmp-campo">
+          <label for="mmp-dominio">Dominio</label>
+          <select id="mmp-dominio" name="dominio"></select>
+        </div>
+      </form>
+
+      <section class="mmp-sezione" id="mmp-miniature-sezione" aria-labelledby="mmp-miniature-titolo" hidden>
+        <h2 id="mmp-miniature-titolo">Le carte disponibili</h2>
+        <p>Scegli una grandezza per aprirla nel visualizzatore. La miniatura è un fotogramma della corsa più recente.</p>
+        <ul class="mmp-griglia" id="mmp-griglia"></ul>
+      </section>
+
+      <section class="mmp-sezione mmp-visualizzatore" id="mmp-visualizzatore" aria-labelledby="mmp-vista-titolo" hidden>
+        <div class="mmp-vista-testata">
+          <h2 id="mmp-vista-titolo">Visualizzatore</h2>
+          <p class="mmp-vista-sotto" id="mmp-vista-sotto"></p>
+        </div>
+
+        <div class="mmp-vista-azioni">
+          <button type="button" class="btn btn-primary" id="mmp-play" aria-pressed="false">
+            <i class="bi bi-play-fill" aria-hidden="true"></i>
+            <span id="mmp-play-etichetta">Avvia animazione</span>
+          </button>
+          <button type="button" class="btn btn-outline-primary" id="mmp-precedente">Ora precedente</button>
+          <button type="button" class="btn btn-outline-primary" id="mmp-successiva">Ora successiva</button>
+          <label class="mmp-velocita" for="mmp-velocita">
+            Velocità
+            <select id="mmp-velocita">
+              <option value="800">Lenta</option>
+              <option value="450" selected>Normale</option>
+              <option value="250">Veloce</option>
+              <option value="140">Molto veloce</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mmp-cursore">
+          <label for="mmp-ora">Ora di previsione: <strong id="mmp-ora-etichetta">—</strong></label>
+          <input type="range" id="mmp-ora" name="ora" min="0" max="0" value="0" step="1" disabled>
+        </div>
+
+        <figure class="mmp-tela" id="mmp-tela">
+          <img id="mmp-immagine" alt="Carta meteorologica di previsione" width="1600" height="1200">
+          <figcaption class="visually-hidden" id="mmp-didascalia"></figcaption>
+        </figure>
+
+        <div class="mmp-scarica">
+          <a class="btn btn-primary" id="mmp-scarica-gif" href="#" download>
+            <i class="bi bi-download" aria-hidden="true"></i> Scarica GIF
+          </a>
+          <a class="btn btn-outline-primary" id="mmp-scarica-png" href="#" download>
+            <i class="bi bi-download" aria-hidden="true"></i> Scarica PNG
+          </a>
+          <a class="btn btn-outline-primary" id="mmp-scarica-mp4" href="#" download hidden>
+            <i class="bi bi-download" aria-hidden="true"></i> Scarica MP4
+          </a>
+          <button type="button" class="btn btn-outline-primary" id="mmp-condividi" hidden>
+            <i class="bi bi-share" aria-hidden="true"></i> Condividi GIF
+          </button>
+        </div>
+        <p class="mmp-esito" id="mmp-esito" role="status" aria-live="polite"></p>
+
+        <p class="mmp-tastiera">Tasti: freccia sinistra e destra per cambiare ora, spazio per avviare o fermare l'animazione, Inizio e Fine per il primo e l'ultimo fotogramma.</p>
+      </section>
+
+      <section class="mmp-sezione" aria-labelledby="mmp-fonti-titolo">
+        <h2 id="mmp-fonti-titolo">Fonti, licenze e aggiornamento</h2>
+        <ul>
+          <li><strong>GFS</strong> — NOAA/NCEP, dati pubblici del Governo degli Stati Uniti.</li>
+          <li><strong>ECMWF IFS</strong> e <strong>ECMWF AIFS</strong> — Open Data, licenza CC BY 4.0.</li>
+          <li><strong>ICON-EU</strong> — Deutscher Wetterdienst, licenza «Data licence Germany – attribution – Version 2.0».</li>
+        </ul>
+        <p>Le carte si aggiornano da sole dopo ogni corsa dei modelli, di solito più volte al giorno. In ogni immagine compaiono l'orario di inizializzazione, l'orario di validità e l'attribuzione della fonte. Le anomalie standardizzate non sono presenti: servirebbe una climatologia di riferimento che in questa prima versione non è inclusa.</p>
+      </section>
+
+      <noscript>
+        <div class="alert alert-warning" role="note">
+          Per usare il visualizzatore serve JavaScript. Le allerte ufficiali restano nella pagina <a href="{{ "allerte-meteo/" | relURL }}">Allerte meteo</a>.
+        </div>
+      </noscript>
+
+    </div>
+  </div>
+</div>
+
+<script src="{{ "js/mappe-meteo-professionali.js" | relURL }}?v={{ $vJs }}"></script>
+{{ end }}

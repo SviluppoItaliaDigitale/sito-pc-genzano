@@ -1,0 +1,15 @@
+# Dipendenze per scripts/genera-mappe-meteo-professionali.py
+# Richiede anche la libreria C ecCodes (apt: libeccodes-dev).
+cfgrib>=0.9.10
+eccodes>=2.37.0
+xarray>=2024.1.0
+metpy>=1.6.0
+cartopy>=0.22.0
+matplotlib>=3.8.0
+pillow>=10.0.0
+imageio>=2.33.0
+numpy>=1.26.0
+scipy>=1.11.0
+ecmwf-opendata>=0.3.0
+netcdf4>=1.6.0
+dask>=2024.1.0
