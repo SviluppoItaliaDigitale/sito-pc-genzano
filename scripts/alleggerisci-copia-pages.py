@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Alleggerisce la sola copia del sito per GitHub Pages, che deve restare sotto 1 GB: toglie video, audio e
-presentazioni (e i PDF e gli ZIP più pesanti se serve) e ne porta i link alle copie su Aruba, che non si toccano.
+"""Alleggerisce la sola copia del sito per GitHub Pages. La pubblicazione si interrompe da sola a
+10 minuti (tetto di actions/deploy-pages, non alzabile) e una copia da circa 780 MB spesso non fa in tempo.
+
+Dalla sola copia escono sempre: video, audio, presentazioni, tutti gli archivi ZIP, i PDF oltre 2 MB
+e i raster non ottimizzati (PNG, JPEG) oltre 2 MB. I collegamenti a quei file puntano alle copie su Aruba,
+che non si toccano. WebP, SVG e i documenti sotto i 2 MB restano, così l'anteprima si legge da sola.
+Se dopo questi tagli la copia supera ancora il tetto, escono anche i PDF più pesanti fra quelli rimasti.
 
 Uso in deploy.yml, dopo la build per GitHub Pages e prima del manifesto e del caricamento:
-    python3 scripts/alleggerisci-copia-pages.py public [--tetto-mb 800]
+    python3 scripts/alleggerisci-copia-pages.py public [--tetto-mb 500]
     python3 scripts/alleggerisci-copia-pages.py --prova [public]   # prove su cartelle finte e, se
                                         # data, sulla build per Aruba, che deve essere riconosciuta e lasciata stare
 Uscita 2 se la cartella non è la build per GitHub Pages (la build per Aruba non si tocca mai); uscita 1 se la
@@ -33,7 +38,14 @@ VIDEO = {".mp4", ".m4v", ".mov", ".webm", ".ogv"}
 AUDIO = {".m4a", ".mp3", ".wav", ".ogg", ".oga", ".opus", ".aac", ".flac"}
 PRESENTAZIONI = {".pptx", ".ppt", ".odp", ".key"}
 SEMPRE = VIDEO | AUDIO | PRESENTAZIONI
-# Fuori solo se la copia supera ancora il tetto, dal più pesante.
+# Archivi da scaricare: la pagina che li linka resta, il file si apre da Aruba.
+ARCHIVI = {".zip"}
+# Raster non ottimizzati. WebP e SVG restano: sono già il formato delle foto e dei pittogrammi.
+RASTER = {".png", ".jpg", ".jpeg", ".gif", ".tif", ".tiff", ".bmp"}
+# 2 MB: sotto restano ordinanze, comunicati, schede e il manuale; sopra ci sono carte, presentazioni
+# in PDF e le infografiche PNG da circa 4 MB l'una, che l'anteprima non deve sincronizzare.
+SOGLIA_VOLUMINOSO = 2 * MB
+# Fuori solo se la copia supera ancora il tetto, dal più pesante: i PDF sotto la soglia.
 SE_SERVE = {".pdf", ".zip"}
 # File di testo in cui si riscrivono i collegamenti (i file dell'indice Pagefind sono compressi e non citano i media).
 TESTO = {".html", ".htm", ".xml", ".json", ".js", ".css", ".txt", ".webmanifest"}
@@ -55,7 +67,21 @@ def categoria(percorso):
         return "audio"
     if est in PRESENTAZIONI:
         return "presentazioni"
-    return "pdf e zip"
+    if est in ARCHIVI:
+        return "archivi zip"
+    if est in RASTER:
+        return "immagini non ottimizzate"
+    return "pdf"
+
+
+def voluminoso(percorso):
+    """File che la copia di anteprima non deve sincronizzare: su Aruba ci sono già."""
+    est = percorso.suffix.lower()
+    if est in SEMPRE or est in ARCHIVI:
+        return True
+    if est == ".pdf" or est in RASTER:
+        return percorso.stat().st_size > SOGLIA_VOLUMINOSO
+    return False
 
 
 def e_build_pages(cartella):
@@ -71,10 +97,11 @@ def scegli(cartella, tetto):
     """Restituisce (da togliere, peso totale prima, peso totale dopo)."""
     file = [p for p in cartella.rglob("*") if p.is_file() and not p.is_symlink()]
     totale = sum(p.stat().st_size for p in file)
-    togli = sorted((p for p in file if p.suffix.lower() in SEMPRE), key=lambda p: p.as_posix())
+    togli = sorted((p for p in file if voluminoso(p)), key=lambda p: p.as_posix())
+    gia = set(togli)
     dopo = totale - sum(p.stat().st_size for p in togli)
     if dopo > tetto:
-        altri = sorted((p for p in file if p.suffix.lower() in SE_SERVE),
+        altri = sorted((p for p in file if p not in gia and p.suffix.lower() in SE_SERVE),
                        key=lambda p: (-p.stat().st_size, p.as_posix()))
         for p in altri:
             if dopo <= tetto:
@@ -144,8 +171,12 @@ def alleggerisci(cartella, tetto_mb, riepilogo=None):
     for p in togli:
         n, peso = per_cat.get(categoria(p), (0, 0))
         per_cat[categoria(p)] = (n + 1, peso + p.stat().st_size)
-    # i documenti tolti si elencano uno per uno: chi guarda l'anteprima sa quali si aprono da Aruba
-    documenti = [(p.relative_to(cartella).as_posix(), p.stat().st_size) for p in togli if p.suffix.lower() in SE_SERVE]
+    # i documenti e le immagini tolti si elencano uno per uno: chi guarda l'anteprima sa che si aprono da Aruba
+    elenchi = {}
+    for p in togli:
+        if p.suffix.lower() in SEMPRE:
+            continue
+        elenchi.setdefault(categoria(p), []).append((p.relative_to(cartella).as_posix(), p.stat().st_size))
     for p in togli:
         p.unlink()
     cambiati, riscritti = riscrivi(cartella, rel)
@@ -154,8 +185,8 @@ def alleggerisci(cartella, tetto_mb, riepilogo=None):
              f"limite di GitHub {leggibile(LIMITE_PAGES)}). Su Aruba non cambia nulla."]
     for cat, (n, peso) in sorted(per_cat.items()):
         righe.append(f"- {cat}: {n} file, {peso / MB:.0f} MB tolti dalla copia")
-        if cat == "pdf e zip":
-            righe += [f"  - {doc} ({peso_doc / MB:.0f} MB)" for doc, peso_doc in documenti]
+        if cat in elenchi:
+            righe += [f"  - {doc} ({peso_doc / MB:.0f} MB)" for doc, peso_doc in elenchi[cat]]
     righe.append(f"- collegamenti portati su {BASE_ARUBA}: {riscritti} in {cambiati} file")
     if resto:
         righe.append(f"- collegamenti rimasti verso file tolti: {len(resto)} (sulla copia danno 404)")
@@ -255,6 +286,42 @@ def prova(build_aruba=None):
                   "PDF tolto non portato su Aruba")
     with tempfile.TemporaryDirectory() as t:
         c = Path(t) / "public"
+        (c / "infografiche").mkdir(parents=True)
+        (c / "manuali").mkdir()
+        (c / "formazione/pacchetti").mkdir(parents=True)
+        (c / "images").mkdir()
+        (c / "index.html").write_text(
+            '<link href="/sito-pc-genzano/css/x.css" rel="stylesheet">'
+            '<img src="/sito-pc-genzano/infografiche/grande.png">'
+            '<img src="/sito-pc-genzano/infografiche/piccola.png">'
+            '<img src="/sito-pc-genzano/images/foto.webp">'
+            '<a href="/sito-pc-genzano/manuali/grosso.pdf">g</a>'
+            '<a href="/sito-pc-genzano/manuali/snello.pdf">s</a>'
+            '<a href="/sito-pc-genzano/formazione/pacchetti/kit.zip">z</a>', "utf-8")
+        (c / "infografiche/grande.png").write_bytes(b"0" * (SOGLIA_VOLUMINOSO + 1))
+        (c / "infografiche/piccola.png").write_bytes(b"0" * (MB // 2))
+        (c / "images/foto.webp").write_bytes(b"0" * (3 * MB))
+        (c / "manuali/grosso.pdf").write_bytes(b"0" * (SOGLIA_VOLUMINOSO + 10))
+        (c / "manuali/snello.pdf").write_bytes(b"0" * (MB // 2))
+        (c / "formazione/pacchetti/kit.zip").write_bytes(b"0" * 5000)
+        # tetto altissimo: escono lo stesso voluminosi e archivi, non perché si supera il tetto
+        controlla(alleggerisci(c, tetto_mb=10000) == 0, "soglia voluminosi: uscita diversa da 0")
+        for tolto in ("infografiche/grande.png", "manuali/grosso.pdf", "formazione/pacchetti/kit.zip"):
+            controlla(not (c / tolto).exists(), f"{tolto} doveva uscire anche sotto il tetto")
+        for resta in ("infografiche/piccola.png", "images/foto.webp", "manuali/snello.pdf"):
+            controlla((c / resta).exists(), f"{resta} doveva restare")
+        html = (c / "index.html").read_text("utf-8")
+        controlla(f'src="{BASE_ARUBA}infografiche/grande.png"' in html, "png voluminoso non portato su Aruba")
+        controlla('src="/sito-pc-genzano/infografiche/piccola.png"' in html, "png piccola toccata")
+        controlla('src="/sito-pc-genzano/images/foto.webp"' in html, "webp toccato")
+        controlla(f'href="{BASE_ARUBA}manuali/grosso.pdf"' in html, "pdf voluminoso non portato su Aruba")
+        controlla('href="/sito-pc-genzano/manuali/snello.pdf"' in html, "pdf snello toccato")
+        controlla(f'href="{BASE_ARUBA}formazione/pacchetti/kit.zip"' in html, "zip non portato su Aruba")
+        controlla(residui(c, ["infografiche/grande.png", "manuali/grosso.pdf",
+                              "formazione/pacchetti/kit.zip"]) == [],
+                  "restano collegamenti ai voluminosi tolti")
+    with tempfile.TemporaryDirectory() as t:
+        c = Path(t) / "public"
         (c / "video").mkdir(parents=True)
         (c / "index.html").write_text('<link href="/css/x.css" rel="stylesheet"><video src="/video/a.mp4">', "utf-8")
         (c / "video/a.mp4").write_bytes(b"0" * 10)
@@ -271,7 +338,7 @@ def prova(build_aruba=None):
             controlla(alleggerisci(c, tetto_mb=1) == 1, "copia oltre il limite: l'uscita doveva essere 1")
         finally:
             LIMITE_PAGES = limite
-        controlla((c / "images/grande.webp").exists(), "tolta un'immagine: le immagini restano sempre")
+        controlla((c / "images/grande.webp").exists(), "tolto un WebP: le immagini ottimizzate restano")
     if build_aruba:
         c = Path(build_aruba)
         indice = c / "index.html"
@@ -294,7 +361,7 @@ def prova(build_aruba=None):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("cartella", nargs="?")
-    ap.add_argument("--tetto-mb", type=int, default=800)
+    ap.add_argument("--tetto-mb", type=int, default=500)
     ap.add_argument("--prova", action="store_true")
     a = ap.parse_args()
     if a.prova:
