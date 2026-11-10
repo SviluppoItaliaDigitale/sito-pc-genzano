@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-10T16:36:33+00:00",
+  "generato": "2026-11-10T22:11:04+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 15,
-  "scaduti_scartati": 3,
-  "in_corso": 12,
+  "avvisi": 11,
+  "scaduti_scartati": 7,
+  "in_corso": 8,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -88,19 +88,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261110111132.035"
   },
   {
-   "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-10T09:00:00+00:00",
-   "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-10T10:11:32+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261110111132.026"
-  },
-  {
    "in_corso": false,
    "regione": "Liguria",
    "fenomeno": "Temporali",
@@ -141,19 +128,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-10T09:00:00+00:00",
-   "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-10T10:11:32+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261110111132.034"
-  },
-  {
-   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -164,32 +138,6 @@
    "fine": "2026-11-11T23:59:00+00:00",
    "emesso": "2026-11-10T10:11:32+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261110111132.039"
-  },
-  {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-10T09:00:00+00:00",
-   "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-10T10:11:32+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261110111132.028"
-  },
-  {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-10T09:00:00+00:00",
-   "fine": "2026-11-10T17:59:00+00:00",
-   "emesso": "2026-11-10T10:11:32+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261110111132.027"
   },
   {
    "in_corso": true,
