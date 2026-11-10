@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-10T01:46:59+00:00",
+  "generato": "2026-11-10T08:45:44+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 21,
-  "scaduti_scartati": 1,
-  "in_corso": 11,
+  "avvisi": 19,
+  "scaduti_scartati": 3,
+  "in_corso": 10,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -114,7 +114,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261109112131.019"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -177,32 +177,6 @@
    "fine": "2026-11-11T07:59:00+00:00",
    "emesso": "2026-11-09T10:21:31+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261109112131.011"
-  },
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-10T00:00:00+00:00",
-   "fine": "2026-11-10T07:59:00+00:00",
-   "emesso": "2026-11-09T10:21:31+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261109112131.010"
-  },
-  {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Nebbia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Fog Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-09T18:00:00+00:00",
-   "fine": "2026-11-10T07:59:00+00:00",
-   "emesso": "2026-11-09T10:21:31+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261109112131.008"
   },
   {
    "in_corso": false,
