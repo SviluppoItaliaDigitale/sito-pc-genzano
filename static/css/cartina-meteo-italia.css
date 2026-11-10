@@ -1,0 +1,619 @@
+/* Cartina e previsioni meteo per l'Italia — stili di pagina.
+   I colori istituzionali seguono la palette del sito (#003366).
+   Contrasto testi su fondo chiaro almeno 4.5:1. */
+
+.cmi-pagina { color: #1a1a1a; }
+.cmi-sezione { margin: 2.5rem 0 3rem; }
+.cmi-sezione > h2,
+.cmi-sottotitolo,
+.cmi-giorno-titolo {
+  color: #003366;
+  font-weight: 700;
+}
+.cmi-sottotitolo { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.35rem; }
+
+.cmi-comandi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+@media (min-width: 768px) {
+  .cmi-comandi { grid-template-columns: 1fr 1fr; }
+}
+.cmi-campo label {
+  display: block;
+  font-weight: 650;
+  margin-bottom: 0.35rem;
+  color: #003366;
+}
+.cmi-campo select {
+  width: 100%;
+  min-height: 44px;
+  border: 2px solid #003366;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  background: #fff;
+  color: #1a1a1a;
+}
+.cmi-campo select:focus-visible,
+.cmi-cursore input[type="range"]:focus-visible,
+.cmi-tempo-azioni .btn:focus-visible,
+.cmi-azioni-bollettino .btn:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.cmi-campo option:disabled { color: #6c757d; }
+.cmi-modello-info,
+.cmi-variabile-info {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+  min-height: 1.3em;
+}
+
+.cmi-tempo { margin: 1rem 0 1.25rem; }
+.cmi-tempo-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.cmi-tempo-azioni .btn,
+.cmi-azioni-bollettino .btn {
+  min-height: 44px;
+}
+.cmi-cursore label { display: block; margin-bottom: 0.35rem; }
+.cmi-cursore input[type="range"] {
+  width: 100%;
+  min-height: 44px;
+}
+
+.cmi-stato { min-height: 1.5em; margin: 0.5rem 0 0.75rem; }
+.cmi-stato.cmi-stato-errore {
+  color: #7f1d1d;
+  background: #fff5f5;
+  border-left: 4px solid #d9364f;
+  padding: 0.6rem 0.8rem;
+}
+.cmi-stato .pc-spinner { margin-right: 0.5rem; }
+
+.cmi-mappa-wrap,
+.cmi-mappa-citta-wrap {
+  position: relative;
+  margin: 0.75rem 0 1rem;
+}
+#cmi-mappa,
+#cmi-mappa-citta {
+  width: 100%;
+  height: 560px;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  background: #e8eef3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+#cmi-mappa-citta { height: 480px; }
+@media (max-width: 575px) {
+  #cmi-mappa { height: 440px; }
+  #cmi-mappa-citta { height: 400px; }
+}
+
+.cmi-legenda {
+  margin-top: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  background: #f4f7fa;
+  border-radius: 6px;
+  border: 1px solid #c5d0db;
+}
+.cmi-legenda-titolo {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+  color: #003366;
+  font-size: 0.95rem;
+}
+.cmi-legenda-barra {
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid #4a4a4a;
+}
+.cmi-legenda-valori {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  color: #1a1a1a;
+}
+.cmi-corsa { margin-top: 0.5rem; }
+
+/* Bollettino */
+.cmi-bollettino {
+  background: linear-gradient(180deg, #003366 0 8px, #fff 8px);
+  border: 1px solid #c5d0db;
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.08);
+}
+.cmi-bollettino-testata { margin-bottom: 1rem; }
+.cmi-bollettino-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 0.25rem;
+}
+.cmi-bollettino-testata h2 { margin-top: 0; }
+.cmi-bollettino-meta { color: #3a3a3a; margin: 0.4rem 0 0; }
+
+.cmi-azioni-bollettino {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.cmi-condividi-esito { min-height: 1.3em; margin: 0.25rem 0 0.75rem; }
+
+.cmi-citta-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+.cmi-citta-scheda {
+  border: 1px solid #c5d0db;
+  border-radius: 8px;
+  padding: 0.7rem 0.8rem;
+  background: #fff;
+}
+.cmi-citta-scheda.cmi-citta-genzano {
+  border: 2px solid #003366;
+  background: #f0f5fa;
+}
+.cmi-citta-nome { font-weight: 700; color: #003366; margin: 0 0 0.2rem; }
+.cmi-citta-temp { font-size: 1.15rem; margin: 0; }
+.cmi-citta-desc { margin: 0.15rem 0 0; font-size: 0.9rem; color: #3a3a3a; }
+
+.cmi-schede-giorni {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.cmi-scheda-giorno {
+  border: 1px solid #c5d0db;
+  border-radius: 8px;
+  padding: 0.85rem 0.8rem;
+  background: #fff;
+  text-align: center;
+}
+.cmi-scheda-giorno .giorno { font-weight: 700; color: #003366; }
+.cmi-scheda-giorno .icona { font-size: 1.8rem; color: #003366; margin: 0.3rem 0; }
+.cmi-scheda-giorno .temp { font-size: 1.1rem; }
+.cmi-scheda-giorno .dettaglio { font-size: 0.85rem; color: #3a3a3a; margin: 0.25rem 0 0; }
+
+.cmi-situazione {
+  background: #003366;
+  color: #fff;
+  padding: 1.1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.cmi-situazione p { margin: 0; font-size: 1.05rem; line-height: 1.55; }
+/* Testo bianco su #003366: contrasto alto, adatto alla stampa a colori. */
+
+.cmi-giorno { margin: 1.5rem 0; }
+.cmi-giorno-titolo {
+  border-bottom: 3px solid #003366;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.85rem;
+}
+.cmi-aree {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .cmi-aree { grid-template-columns: 1fr 1fr; }
+  .cmi-area-lazio { grid-column: 1 / -1; }
+}
+.cmi-area {
+  background: #f4f7fa;
+  border-left: 6px solid #003366;
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1rem;
+}
+.cmi-area-nord { border-left-color: #0369a1; }
+.cmi-area-centro { border-left-color: #15803d; }
+.cmi-area-sud { border-left-color: #b45309; }
+.cmi-area-isole { border-left-color: #0f766e; }
+.cmi-area-lazio { border-left-color: #003366; background: #eef4fa; }
+.cmi-area h4 {
+  margin: 0 0 0.35rem;
+  color: #003366;
+  font-size: 1.05rem;
+}
+.cmi-area p { margin: 0; }
+
+.cmi-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  background: #fff8e1;
+  border-left: 6px solid #b45309;
+  border-radius: 6px;
+  color: #3a2e0e;
+}
+.cmi-note h3 { color: #854d0e; margin-top: 0; }
+.cmi-note ul { margin: 0; padding-left: 1.2rem; }
+.cmi-note li { margin: 0.4rem 0; }
+
+/* Marcatori città */
+.cmi-marker {
+  background: #fff;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 2px 5px 3px;
+  text-align: center;
+  line-height: 1.15;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  color: #003366;
+  font-weight: 700;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.cmi-marker.cmi-marker-genzano {
+  background: #003366;
+  color: #fff;
+  border-color: #ffbe2e;
+}
+.cmi-marker .cmi-marker-nome { display: block; }
+.cmi-marker .cmi-marker-temp { display: block; font-weight: 650; }
+
+/* Stampa A4: colori conservati, niente cromature del sito. */
+@media print {
+  @page { size: A4; margin: 12mm; }
+  html, body { background: #fff !important; }
+  .skip-to-content,
+  .site-header,
+  .cookiebar,
+  [id*="cookie"],
+  footer,
+  .utility-bar,
+  .bottom-nav,
+  .it-bottom-nav,
+  .language-selector,
+  #sos-112,
+  .sos-112,
+  .a11y-toolbar,
+  #a11y-toolbar,
+  .assistente-launcher,
+  [data-assistente],
+  #cookie-banner,
+  .cookie-banner,
+  .page-hero .breadcrumb,
+  #cartina-interattiva,
+  .cmi-comandi,
+  .cmi-tempo,
+  .cmi-azioni-bollettino,
+  .cmi-condividi-esito,
+  .cmi-mappa-wrap,
+  #cmi-stato,
+  #cmi-corsa,
+  noscript { display: none !important; }
+
+  .page-hero {
+    background: #003366 !important;
+    color: #fff !important;
+    padding: 0.8rem 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page-hero h1 { color: #fff !important; margin: 0; }
+  .cmi-pagina { max-width: none; }
+  .cmi-bollettino {
+    box-shadow: none;
+    border: 1px solid #003366;
+  }
+  .list-intro-content { margin-bottom: 0.6rem; }
+  .cmi-situazione,
+  .cmi-area,
+  .cmi-area-lazio,
+  .cmi-note,
+  .cmi-citta-scheda,
+  .cmi-scheda-giorno,
+  .cmi-bollettino-kicker {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cmi-giorno,
+  .cmi-area,
+  .cmi-scheda-giorno,
+  .cmi-citta-scheda { break-inside: avoid; }
+  #cmi-mappa-citta { height: 360px; break-inside: avoid; }
+  .leaflet-control-zoom, .leaflet-control-attribution { display: none !important; }
+  a[href]::after { content: none !important; }
+}
+
+/* v2: controlli, confronto, meteogramma, esportazione, resa più curata */
+.cmi-opzioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  background: #f4f7fa;
+  border: 1px solid #c5d0db;
+  border-radius: 8px;
+}
+.cmi-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin: 0;
+  font-weight: 600;
+  color: #003366;
+  cursor: pointer;
+}
+.cmi-check input {
+  width: 22px;
+  height: 22px;
+  accent-color: #003366;
+}
+.cmi-tastiera {
+  font-size: 0.92rem;
+  color: #3a3a3a;
+  margin: 0.25rem 0 0.75rem;
+}
+.cmi-tastiera kbd {
+  display: inline-block;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid #c5d0db;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.85em;
+  color: #003366;
+}
+.cmi-export-progress {
+  margin: 0.5rem 0 0.85rem;
+  padding: 0.7rem 0.9rem;
+  background: #eef4fa;
+  border-left: 4px solid #003366;
+  border-radius: 4px;
+}
+.cmi-export-progress p { margin: 0 0 0.45rem; color: #003366; font-weight: 650; }
+.cmi-progress {
+  height: 10px;
+  background: #d5deE8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cmi-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #003366;
+  border-radius: 5px;
+  transition: width 0.2s ease;
+}
+
+.cmi-mappe {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+.cmi-mappe.cmi-mappe-doppie {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .cmi-mappe.cmi-mappe-doppie { grid-template-columns: 1fr 1fr; }
+}
+.cmi-mappa-etichetta {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  color: #003366;
+  font-size: 0.95rem;
+}
+.cmi-mappa-wrap {
+  position: relative;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 51, 102, 0.12);
+}
+#cmi-mappa,
+#cmi-mappa-b,
+#cmi-mappa-citta {
+  width: 100%;
+  height: 580px;
+  border: 1px solid #8aa0b5;
+  border-radius: 12px;
+  background: #c5d8e8;
+  box-shadow: none;
+}
+#cmi-mappa, #cmi-mappa-b { height: 640px; }
+@media (min-width: 992px) {
+  #cmi-mappa, #cmi-mappa-b { height: 880px; max-height: 88vh; }
+}
+#cmi-mappa-citta { height: 480px; background: #e8eef3; }
+@media (max-width: 575px) {
+  #cmi-mappa, #cmi-mappa-b { height: 440px; }
+  #cmi-mappa-citta { height: 400px; }
+}
+.cmi-legenda {
+  margin-top: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(180deg, #fff, #f4f7fa);
+  border-radius: 10px;
+  border: 1px solid #c5d0db;
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.05);
+}
+.cmi-corsa {
+  margin-top: 0.7rem;
+  color: #3a3a3a;
+  line-height: 1.5;
+}
+.cmi-corsa strong { color: #003366; }
+
+.cmi-meteogramma {
+  margin: 1.1rem 0 0.5rem;
+  padding: 1rem 1.1rem 1.15rem;
+  background: #fff;
+  border: 1px solid #c5d0db;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 51, 102, 0.08);
+  border-top: 6px solid #003366;
+}
+.cmi-meteogramma-testata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+.cmi-meteogramma-testata h3 {
+  margin: 0;
+  color: #003366;
+  font-size: 1.2rem;
+}
+.cmi-meteo-dove { margin: 0 0 0.6rem; color: #3a3a3a; }
+.cmi-meteo-valori {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.35rem 1rem;
+  margin: 0 0 0.85rem;
+}
+.cmi-meteo-valori dt {
+  font-weight: 700;
+  color: #003366;
+  font-size: 0.85rem;
+  margin: 0;
+}
+.cmi-meteo-valori dd { margin: 0 0 0.35rem; }
+.cmi-meteo-grafico { width: 100%; overflow-x: auto; }
+.cmi-meteo-grafico svg { display: block; width: 100%; height: auto; max-width: 720px; }
+
+.cmi-comandi { align-items: start; }
+@media (min-width: 768px) {
+  .cmi-comandi { grid-template-columns: 1fr 1fr; }
+  .cmi-campo-confronto { grid-column: 1 / -1; }
+}
+
+#cmi-mappa .leaflet-container,
+#cmi-mappa-b .leaflet-container { background: #c5d8e8; font-family: inherit; }
+
+@media print {
+  .cmi-opzioni,
+  .cmi-tastiera,
+  .cmi-export-progress,
+  .cmi-meteogramma,
+  #cmi-scarica-png,
+  #cmi-scarica-gif,
+  .cmi-mappe,
+  #cmi-col-b { display: none !important; }
+}
+
+
+/* Tempo previsto, velocità, condivisione fotogrammi */
+.cmi-play-aiuto {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+}
+#cmi-play.cmi-play-on {
+  background: #00264d;
+  border-color: #00264d;
+}
+#cmi-play.cmi-play-on #cmi-play-etichetta {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.cmi-velocita { margin: 0.85rem 0 0.25rem; }
+.cmi-velocita > label {
+  display: block;
+  font-weight: 650;
+  color: #003366;
+  margin-bottom: 0.35rem;
+}
+.cmi-velocita-riga {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cmi-velocita-riga select {
+  min-height: 44px;
+  min-width: 11rem;
+  border: 2px solid #003366;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  background: #fff;
+  color: #1a1a1a;
+}
+#cmi-velocita-meno, #cmi-velocita-piu {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0;
+}
+.cmi-velocita-info { color: #3a3a3a; font-size: 0.95rem; }
+.cmi-velocita-riga select:focus-visible,
+#cmi-velocita-meno:focus-visible,
+#cmi-velocita-piu:focus-visible,
+#cmi-condividi-png:focus-visible,
+#cmi-condividi-gif:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.cmi-legenda-icone {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.45rem 0.75rem;
+}
+.cmi-legenda-voce {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: #1a1a1a;
+}
+.cmi-legenda-voce img,
+.cmi-icona-meteo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 1.2px rgba(18,48,74,0.28));
+}
+.cmi-legenda-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+  color: #3a3a3a;
+}
+.cmi-meteo-icona-ora {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cmi-meteo-icona-ora img { width: 40px; height: 40px; }
+@media print {
+  .cmi-velocita, .cmi-play-aiuto, #cmi-condividi-png, #cmi-condividi-gif { display: none !important; }
+}
+
+@media (min-width: 1100px) {
+  .cmi-comandi { grid-template-columns: 1fr 1fr 1fr; }
+}
+.cmi-dominio-note {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border-left: 4px solid #003366;
+  background: #eef4fa;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+.cmi-dominio-note[hidden] { display: none !important; }
+#cmi-dominio option { padding: 0.2rem 0; }
+@media print {
+  .cmi-dominio-note, .cmi-campo-dominio { display: none !important; }
+}
