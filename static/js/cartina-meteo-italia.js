@@ -15,10 +15,10 @@
     { nome: 'Marino', lat: 41.7706, lon: 12.6611, allinea: 'nw', off: [0, 0], priorita: 2 },
     { nome: 'Rocca di Papa', lat: 41.7619, lon: 12.7097, allinea: 'e', off: [0, 0], priorita: 3 },
     { nome: 'Castel Gandolfo', lat: 41.7464, lon: 12.6519, allinea: 'w', off: [0, 0], priorita: 4 },
-    { nome: 'Albano Laziale', etichetta: 'Albano', lat: 41.7264, lon: 12.6590, allinea: 'w', off: [0, 0], priorita: 5 },
-    { nome: 'Ariccia', lat: 41.7208, lon: 12.6716, allinea: 's', off: [0, 0], priorita: 6 },
+    { nome: 'Albano Laziale', etichetta: 'Albano', lat: 41.7264, lon: 12.6590, allinea: 'w', off: [-10, -10], priorita: 5 },
+    { nome: 'Ariccia', lat: 41.7208, lon: 12.6716, allinea: 's', off: [8, 12], priorita: 6 },
     { nome: 'Nemi', lat: 41.7217, lon: 12.7150, allinea: 'e', off: [0, 0], priorita: 7 },
-    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', off: [0, 0], evidenziato: true, priorita: 8 },
+    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', off: [6, 6], evidenziato: true, priorita: 8 },
     { nome: 'Lanuvio', lat: 41.6747, lon: 12.6978, allinea: 's', off: [0, 0], priorita: 9 },
     { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 's', off: [0, 0], priorita: 10 }
   ];
@@ -28,11 +28,11 @@
     { nome: 'Civitavecchia', lat: 42.0919, lon: 11.7968, allinea: 'n', off: [0, 0], priorita: 3 },
     { nome: 'Bracciano', lat: 42.1036, lon: 12.1756, allinea: 'e', off: [0, 0], priorita: 4 },
     { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 's', off: [0, 0], priorita: 5 },
-    { nome: 'Tivoli', lat: 41.9636, lon: 12.8010, allinea: 'e', off: [0, 0], priorita: 6 },
-    { nome: 'Guidonia', lat: 41.9936, lon: 12.7223, allinea: 'n', off: [0, 0], priorita: 7 },
+    { nome: 'Tivoli', lat: 41.9636, lon: 12.8010, allinea: 'e', off: [15, 15], priorita: 6 },
+    { nome: 'Guidonia', lat: 41.9936, lon: 12.7223, allinea: 'n', off: [-15, -15], priorita: 7 },
     { nome: 'Fiumicino', lat: 41.7676, lon: 12.2299, allinea: 'n', off: [0, 0], priorita: 8 },
-    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', off: [0, 0], evidenziato: true, priorita: 9 },
-    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e', off: [0, 0], priorita: 10 },
+    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', off: [-15, -5], evidenziato: true, priorita: 9 },
+    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e', off: [15, 10], priorita: 10 },
     { nome: 'Latina', lat: 41.4676, lon: 12.9037, allinea: 'e', off: [0, 0], priorita: 11 },
     { nome: 'Anzio', lat: 41.4474, lon: 12.6287, allinea: 's', off: [0, 0], priorita: 12 },
     { nome: 'Frosinone', lat: 41.6398, lon: 13.3515, allinea: 's', off: [0, 0], priorita: 13 },
@@ -41,36 +41,36 @@
     { nome: 'Terracina', lat: 41.2917, lon: 13.2486, allinea: 's', off: [0, 0], priorita: 16 }
   ];
   var COMUNI_ITALIA = [
-    { nome: 'Aosta', lat: 45.7370, lon: 7.3201, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 1 },
+    { nome: 'Aosta', lat: 45.7370, lon: 7.3201, allinea: 'n', livello: 1, off: [0, -4], off2: [0, 0], priorita: 1 },
     { nome: 'Torino', lat: 45.0703, lon: 7.6869, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 2 },
     { nome: 'Milano', lat: 45.4642, lon: 9.1900, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 3 },
     { nome: 'Genova', lat: 44.4056, lon: 8.9463, allinea: 'e', livello: 1, off: [0, 0], off2: [0, 0], priorita: 4 },
-    { nome: 'Bolzano', lat: 46.4983, lon: 11.3548, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 5 },
-    { nome: 'Trento', lat: 46.0748, lon: 11.1217, allinea: 'w', livello: 1, off: [0, 0], off2: [0, 0], priorita: 6 },
+    { nome: 'Bolzano', lat: 46.4983, lon: 11.3548, allinea: 'n', livello: 1, off: [0, -15], off2: [0, 0], priorita: 5 },
+    { nome: 'Trento', lat: 46.0748, lon: 11.1217, allinea: 'w', livello: 1, off: [0, 15], off2: [0, 0], priorita: 6 },
     { nome: 'Venezia', lat: 45.4408, lon: 12.3155, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 7 },
     { nome: 'Trieste', lat: 45.6495, lon: 13.7768, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 8 },
     { nome: 'Bologna', lat: 44.4949, lon: 11.3426, allinea: 'e', livello: 1, off: [0, 0], off2: [0, 0], priorita: 9 },
     { nome: 'Firenze', lat: 43.7696, lon: 11.2558, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 10 },
     { nome: 'Perugia', lat: 43.1107, lon: 12.3908, allinea: 'e', livello: 1, off: [0, 0], off2: [0, 0], priorita: 11 },
     { nome: 'Ancona', lat: 43.6158, lon: 13.5189, allinea: 'w', livello: 1, off: [0, 0], off2: [0, 0], priorita: 12 },
-    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 13 },
-    { nome: 'L\'Aquila', lat: 42.3498, lon: 13.3995, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 14 },
-    { nome: 'Campobasso', lat: 41.5603, lon: 14.6627, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 15 },
+    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 's', livello: 1, off: [-5, 0], off2: [0, 0], priorita: 13 },
+    { nome: 'L\'Aquila', lat: 42.3498, lon: 13.3995, allinea: 's', livello: 1, off: [5, 0], off2: [0, 0], priorita: 14 },
+    { nome: 'Campobasso', lat: 41.5603, lon: 14.6627, allinea: 'n', livello: 1, off: [0, -4], off2: [0, 0], priorita: 15 },
     { nome: 'Napoli', lat: 40.8518, lon: 14.2681, allinea: 'w', livello: 1, off: [0, 0], off2: [0, 0], priorita: 16 },
     { nome: 'Bari', lat: 41.1171, lon: 16.8719, allinea: 'w', livello: 1, off: [0, 0], off2: [0, 0], priorita: 17 },
     { nome: 'Potenza', lat: 40.6395, lon: 15.8056, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 18 },
     { nome: 'Catanzaro', lat: 38.9098, lon: 16.5877, allinea: 'e', livello: 1, off: [0, 0], off2: [0, 0], priorita: 19 },
     { nome: 'Palermo', lat: 38.1157, lon: 13.3615, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 20 },
     { nome: 'Cagliari', lat: 39.2238, lon: 9.1217, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 21 },
-    { nome: 'Sassari', lat: 40.7259, lon: 8.5557, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 22 },
+    { nome: 'Sassari', lat: 40.7259, lon: 8.5557, allinea: 's', livello: 2, off: [0, 0], off2: [0, 0], priorita: 22 },
     { nome: 'Catania', lat: 37.5079, lon: 15.0830, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 23 },
     { nome: 'Lecce', lat: 40.3515, lon: 18.1750, allinea: 'w', livello: 1, off: [0, 0], off2: [0, 0], priorita: 24 },
-    { nome: 'Grosseto', lat: 42.7635, lon: 11.1124, allinea: 'w', livello: 1, off: [0, 0], off2: [0, 0], priorita: 25 },
-    { nome: 'Foggia', lat: 41.4622, lon: 15.5446, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 26 },
-    { nome: 'Cosenza', lat: 39.2983, lon: 16.2537, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 27 },
-    { nome: 'Trapani', lat: 38.0176, lon: 12.5372, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 28 },
-    { nome: 'Verona', lat: 45.4384, lon: 10.9916, allinea: 's', livello: 1, off: [0, 0], off2: [0, 0], priorita: 29 },
-    { nome: 'Udine', lat: 46.0711, lon: 13.2346, allinea: 'n', livello: 1, off: [0, 0], off2: [0, 0], priorita: 30 },
+    { nome: 'Grosseto', lat: 42.7635, lon: 11.1124, allinea: 'w', livello: 2, off: [0, 0], off2: [0, 0], priorita: 25 },
+    { nome: 'Foggia', lat: 41.4622, lon: 15.5446, allinea: 's', livello: 2, off: [0, 0], off2: [0, 0], priorita: 26 },
+    { nome: 'Cosenza', lat: 39.2983, lon: 16.2537, allinea: 's', livello: 2, off: [0, 0], off2: [0, 0], priorita: 27 },
+    { nome: 'Trapani', lat: 38.0176, lon: 12.5372, allinea: 'n', livello: 2, off: [0, 0], off2: [0, 0], priorita: 28 },
+    { nome: 'Verona', lat: 45.4384, lon: 10.9916, allinea: 's', livello: 2, off: [0, 0], off2: [0, 0], priorita: 29 },
+    { nome: 'Udine', lat: 46.0711, lon: 13.2346, allinea: 'n', livello: 2, off: [0, 0], off2: [0, 0], priorita: 30 },
     { nome: 'Cuneo', lat: 44.3845, lon: 7.5427, allinea: 's', livello: 2, off: [0, 0], off2: [0, 0], priorita: 31 },
     { nome: 'Pisa', lat: 43.7228, lon: 10.4017, allinea: 's', livello: 2, off: [0, 0], off2: [0, 0], priorita: 32 },
     { nome: 'Rimini', lat: 44.0678, lon: 12.5695, allinea: 'w', livello: 2, off: [0, 0], off2: [0, 0], priorita: 33 },
@@ -1525,36 +1525,11 @@
     if (L > 15) { x *= 15 / L; y *= 15 / L; }
     return [x, y];
   }
-  function posTestoScheda(cx, cy, S, k, fT, fN, allinea) {
-    var a = allinea || 's';
-    var gap = 2 * k, lh = 18 * k, half = S / 2;
-    var p = { xT: cx, xN: cx, yT: 0, yN: 0, nameAlign: 'center', tempsMode: 'split' };
-    if (a === 'e') {
-      p.tempsMode = 'row-left';
-      p.nameAlign = 'left';
-      p.xT = p.xN = cx + half + 4 * k;
-      p.yT = cy - lh * 0.6;
-      p.yN = cy + 4 * k;
-    } else if (a === 'w') {
-      p.tempsMode = 'row-right';
-      p.nameAlign = 'right';
-      p.xT = p.xN = cx - half - 4 * k;
-      p.yT = cy - lh * 0.6;
-      p.yN = cy + 4 * k;
-    } else {
-      var dx = 0;
-      if (a === 'se' || a === 'ne') dx = half * 0.55;
-      if (a === 'sw' || a === 'nw') dx = -half * 0.55;
-      p.xT = p.xN = cx + dx;
-      if (a === 'n' || a === 'ne' || a === 'nw') {
-        p.yN = cy - half - gap - fN;
-        p.yT = p.yN - lh;
-      } else {
-        p.yT = cy + half + gap;
-        p.yN = p.yT + lh;
-      }
-    }
-    return p;
+  function misuraUnitaTempo(k) {
+    var S = Math.round(40 * k);
+    var fT = (k >= 1) ? 12 : 11;
+    var fN = 10;
+    return { S: S, fT: fT, fN: fN, gap: 1 };
   }
   function disegnaSchedeTempo(ctx, vista, stato, opts) {
     var locali = (stato && stato.locali) || [];
@@ -1571,9 +1546,9 @@
     var dettaglio = (vista && typeof vista.zoom === 'number' && typeof vista.zoomFit === 'number')
       ? (vista.zoom >= vista.zoomFit + 1)
       : (kGrezzo / k >= 1.4);
-    var S = Math.round(62 * k);
-    var fT = Math.max(11, Math.round(15 * k)), fN = Math.max(10, Math.round(12 * k));
-    var i, loc, idx, code, cat, mm, xy, off, ix, iy, cx, yT, img, cape, schede = [], s, tp;
+    var u = misuraUnitaTempo(k);
+    var S = u.S, fT = u.fT, fN = u.fN, gap = u.gap;
+    var i, loc, idx, code, cat, mm, xy, off, ix, iy, cx, yT, yN, img, cape, schede = [], s;
     for (i = 0; i < locali.length; i++) {
       loc = locali[i];
       idx = indiceOraLocale(loc, iso);
@@ -1587,11 +1562,7 @@
       if (xy[0] < -40 || xy[1] < -40 || xy[0] > vista.w + 40 || xy[1] > vista.h + 40) continue;
       off = limitaNudge((dettaglio && loc.off2) ? loc.off2 : (loc.off || [0, 0]));
       cape = (loc.cape && loc.cape[idx] !== null && typeof loc.cape[idx] !== 'undefined') ? loc.cape[idx] : null;
-      schede.push({
-        loc: loc, xy: xy, cat: cat, mm: mm, cape: cape,
-        cx: xy[0] + off[0], cy: xy[1] + off[1],
-        allinea: (dettaglio && loc.allinea2) ? loc.allinea2 : (loc.allinea || 's')
-      });
+      schede.push({ loc: loc, xy: xy, cat: cat, mm: mm, cape: cape, cx: xy[0] + off[0], cy: xy[1] + off[1] });
     }
     ctx.save();
     for (i = 0; i < schede.length; i++) {
@@ -1600,7 +1571,7 @@
       img = s.cat ? iconeTempo[s.cat] : null;
       if (img) disegnaIconaConAureola(ctx, img, ix, iy, S);
       if ((s.cat === 'temporale' || s.cat === 'temporale-grandine') && s.cape !== null && s.cape >= 1000) {
-        var r = Math.max(4, 6 * k), tx = ix + S - r, ty = iy + r + 1;
+        var r = Math.max(3, 5 * k), tx = ix + S - r, ty = iy + r + 1;
         ctx.beginPath();
         ctx.moveTo(tx, ty - r);
         ctx.lineTo(tx + r, ty + r * 0.8);
@@ -1608,36 +1579,25 @@
         ctx.closePath();
         ctx.fillStyle = '#d97706';
         ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 1.4;
+        ctx.lineWidth = 1.2;
         ctx.stroke();
         ctx.fill();
       }
-      var tp = posTestoScheda(s.cx, s.cy, S, k, fT, fN, s.allinea);
+      yT = s.cy + S / 2 + gap;
+      yN = yT + fT + gap;
       ctx.textBaseline = 'top';
       if (s.mm) {
         ctx.font = '700 ' + fT + 'px Titillium Web, Arial, sans-serif';
-        if (tp.tempsMode === 'row-left' || tp.tempsMode === 'row-right') {
-          var tMin = Math.round(s.mm.min) + '°', tMax = Math.round(s.mm.max) + '°';
-          var wMin = ctx.measureText(tMin).width, wMax = ctx.measureText(tMax).width;
-          var gapT = 8 * k, wBar = 1, wAll = wMin + gapT + wBar + gapT + wMax;
-          var x0 = (tp.tempsMode === 'row-right') ? (tp.xT - wAll) : tp.xT;
-          ctx.textAlign = 'left';
-          testoConAureola(ctx, tMin, x0, tp.yT, 60, '#1d4f8c');
-          ctx.fillStyle = 'rgba(0,51,102,0.35)';
-          ctx.fillRect(x0 + wMin + gapT, tp.yT + 2 * k, wBar, 12 * k);
-          testoConAureola(ctx, tMax, x0 + wMin + gapT + wBar + gapT, tp.yT, 60, '#b42318');
-        } else {
-          ctx.textAlign = 'right';
-          testoConAureola(ctx, Math.round(s.mm.min) + '°', tp.xT - 3 * k, tp.yT, 60, '#1d4f8c');
-          ctx.textAlign = 'left';
-          testoConAureola(ctx, Math.round(s.mm.max) + '°', tp.xT + 3 * k, tp.yT, 60, '#b42318');
-          ctx.fillStyle = 'rgba(0,51,102,0.35)';
-          ctx.fillRect(tp.xT - 0.5, tp.yT + 2 * k, 1, 12 * k);
-        }
+        ctx.textAlign = 'right';
+        testoConAureola(ctx, Math.round(s.mm.min) + '°', cx - 3, yT, 60, '#1d4f8c');
+        ctx.textAlign = 'left';
+        testoConAureola(ctx, Math.round(s.mm.max) + '°', cx + 3, yT, 60, '#b42318');
+        ctx.fillStyle = 'rgba(0,51,102,0.35)';
+        ctx.fillRect(cx - 0.5, yT + 2, 1, fT - 3);
       }
       ctx.font = '600 ' + fN + 'px Titillium Web, Arial, sans-serif';
-      ctx.textAlign = tp.nameAlign;
-      testoConAureola(ctx, s.loc.etichetta || s.loc.nome, tp.xN, tp.yN, 200, s.loc.evidenziato ? '#003366' : '#1a1a1a');
+      ctx.textAlign = 'center';
+      testoConAureola(ctx, s.loc.etichetta || s.loc.nome, cx, yN, 200, s.loc.evidenziato ? '#003366' : '#1a1a1a');
     }
     ctx.restore();
   }
