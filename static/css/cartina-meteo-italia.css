@@ -509,3 +509,90 @@
   .cmi-mappe,
   #cmi-col-b { display: none !important; }
 }
+
+
+/* Tempo previsto, velocità, condivisione fotogrammi */
+.cmi-play-aiuto {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+}
+#cmi-play.cmi-play-on {
+  background: #00264d;
+  border-color: #00264d;
+}
+#cmi-play.cmi-play-on #cmi-play-etichetta {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.cmi-velocita { margin: 0.85rem 0 0.25rem; }
+.cmi-velocita > label {
+  display: block;
+  font-weight: 650;
+  color: #003366;
+  margin-bottom: 0.35rem;
+}
+.cmi-velocita-riga {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cmi-velocita-riga select {
+  min-height: 44px;
+  min-width: 11rem;
+  border: 2px solid #003366;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  background: #fff;
+  color: #1a1a1a;
+}
+#cmi-velocita-meno, #cmi-velocita-piu {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0;
+}
+.cmi-velocita-info { color: #3a3a3a; font-size: 0.95rem; }
+.cmi-velocita-riga select:focus-visible,
+#cmi-velocita-meno:focus-visible,
+#cmi-velocita-piu:focus-visible,
+#cmi-condividi-png:focus-visible,
+#cmi-condividi-gif:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.cmi-legenda-icone {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.45rem 0.75rem;
+}
+.cmi-legenda-voce {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: #1a1a1a;
+}
+.cmi-legenda-voce img,
+.cmi-icona-meteo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.cmi-legenda-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+  color: #3a3a3a;
+}
+.cmi-meteo-icona-ora {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cmi-meteo-icona-ora img { width: 40px; height: 40px; }
+@media print {
+  .cmi-velocita, .cmi-play-aiuto, #cmi-condividi-png, #cmi-condividi-gif { display: none !important; }
+}

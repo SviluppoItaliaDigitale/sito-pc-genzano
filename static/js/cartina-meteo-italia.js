@@ -50,6 +50,7 @@
   };
 
   var VARIABILI = [
+    { id: 'tempo_previsto', nome: 'Tempo previsto', unita: '', campi: ['weather_code', 'precipitation', 'snowfall', 'cape', 'showers'], scala: 'tempo', tempo: true, info: 'Tipo di tempo previsto dal codice WMO di Open-Meteo. I temporali con grandine (codici 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un\'allerta ufficiale.' },
     { id: 'pressure_msl', nome: 'Pressione al livello del mare', unita: 'hPa', campi: ['pressure_msl'], scala: 'mslp' },
     { id: 'precipitation', nome: 'Precipitazioni orarie', unita: 'mm', campi: ['precipitation'], scala: 'prec' },
     { id: 'precipitation_6h', nome: 'Precipitazioni in 6 ore', unita: 'mm', campi: ['precipitation'], scala: 'prec6', derivata: 'somma6' },
@@ -132,6 +133,45 @@
   };
 
   var INTERVALLO_AGGIORNAMENTO = 45 * 60 * 1000;
+  var VELOCITA_BASE = 900;
+  var FATTORI_VELOCITA = [0.25, 0.5, 1, 1.5, 2];
+  var fattoreVelocita = 1;
+  var iconeTempo = {};
+  var campiTempoPerModello = {};
+
+  var LEGENDA_TEMPO = [
+    { id: 'sole', nome: 'Sole' },
+    { id: 'poco-nuvoloso', nome: 'Poco nuvoloso' },
+    { id: 'nuvoloso', nome: 'Nuvoloso' },
+    { id: 'coperto', nome: 'Coperto' },
+    { id: 'nebbia', nome: 'Nebbia' },
+    { id: 'pioggerella', nome: 'Pioggerella' },
+    { id: 'pioggia-debole', nome: 'Pioggia debole' },
+    { id: 'pioggia-moderata', nome: 'Pioggia moderata' },
+    { id: 'pioggia-forte', nome: 'Pioggia forte' },
+    { id: 'rovesci', nome: 'Rovesci' },
+    { id: 'temporale', nome: 'Temporale' },
+    { id: 'temporale-grandine', nome: 'Temporale con grandine' },
+    { id: 'neve', nome: 'Neve' },
+    { id: 'pioggia-gelata', nome: 'Nevischio o pioggia gelata' }
+  ];
+  var COLORI_TEMPO = {
+    'sole': [255, 228, 120],
+    'poco-nuvoloso': [255, 240, 185],
+    'nuvoloso': [210, 220, 232],
+    'coperto': [160, 172, 186],
+    'nebbia': [196, 202, 208],
+    'pioggerella': [176, 210, 232],
+    'pioggia-debole': [140, 184, 222],
+    'pioggia-moderata': [90, 140, 200],
+    'pioggia-forte': [48, 88, 158],
+    'rovesci': [70, 118, 198],
+    'temporale': [124, 100, 172],
+    'temporale-grandine': [176, 78, 128],
+    'neve': [226, 238, 255],
+    'pioggia-gelata': [166, 210, 220]
+  };
+
   var cache = {};
   var nonDisponibili = {};
   var statoMappa = { punti: [], orari: [], indice: 0, variabile: null, modello: null, scaricatoIl: null, matrice: null };
@@ -172,6 +212,108 @@
     return document.documentElement.classList.contains('a11y-pause-animations') ||
       document.documentElement.classList.contains('a11y-pause-anim') ||
       (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+
+  function baseIconeUrl() {
+    var base = (leggiConfig().iconeUrl) || '/images/meteo-icone/';
+    if (base.charAt(base.length - 1) !== '/') base += '/';
+    return base;
+  }
+  function urlIcona(cat) { return baseIconeUrl() + cat + '.svg'; }
+  function categoriaDaCodice(code) {
+    if (code === null || typeof code === 'undefined' || isNaN(code)) return null;
+    var c = Math.round(code);
+    if (c === 0) return 'sole';
+    if (c === 1) return 'poco-nuvoloso';
+    if (c === 2) return 'nuvoloso';
+    if (c === 3) return 'coperto';
+    if (c === 45 || c === 48) return 'nebbia';
+    if (c === 51 || c === 53 || c === 55) return 'pioggerella';
+    if (c === 61) return 'pioggia-debole';
+    if (c === 63) return 'pioggia-moderata';
+    if (c === 65) return 'pioggia-forte';
+    if (c === 80 || c === 81 || c === 82) return 'rovesci';
+    if (c === 95 || c === 97) return 'temporale';
+    if (c === 96 || c === 99) return 'temporale-grandine';
+    if (c === 71 || c === 73 || c === 75 || c === 77 || c === 85 || c === 86) return 'neve';
+    if (c === 56 || c === 57 || c === 66 || c === 67) return 'pioggia-gelata';
+    return null;
+  }
+  function raffinaCategoria(cat, snow, showers) {
+    if (!cat) return cat;
+    if (cat !== 'temporale-grandine' && cat !== 'neve' && cat !== 'temporale' && snow >= 0.2) return 'neve';
+    if ((cat === 'pioggia-debole' || cat === 'pioggia-moderata' || cat === 'pioggia-forte') && showers >= 0.2) return 'rovesci';
+    return cat;
+  }
+  function etichettaTempo(code) {
+    if (code === null || typeof code === 'undefined') return 'dato non disponibile';
+    var c = Math.round(code);
+    return (typeof CODICI[c] !== 'undefined') ? CODICI[c] : ('Codice WMO ' + c);
+  }
+  function htmlIconaTempo(code, cls) {
+    var cat = categoriaDaCodice(code);
+    if (!cat) return '';
+    return '<img class="' + (cls || 'cmi-icona-meteo') + '" src="' + urlIcona(cat) + '" alt="' + etichettaTempo(code) + '" width="32" height="32">';
+  }
+  function caricaIconeTempo() {
+    var base = baseIconeUrl();
+    var jobs = LEGENDA_TEMPO.map(function (item) {
+      return new Promise(function (resolve) {
+        if (iconeTempo[item.id]) { resolve(); return; }
+        var img = new Image();
+        img.onload = function () { iconeTempo[item.id] = img; resolve(); };
+        img.onerror = function () { resolve(); };
+        img.src = base + item.id + '.svg';
+      });
+    });
+    return Promise.all(jobs);
+  }
+  function leggiVelocitaSalvata() {
+    try {
+      var s = window.localStorage.getItem('cmi-fattore-velocita');
+      var n = parseFloat(s);
+      if (FATTORI_VELOCITA.indexOf(n) !== -1) fattoreVelocita = n;
+    } catch (e) {}
+  }
+  function salvaVelocita() {
+    try { window.localStorage.setItem('cmi-fattore-velocita', String(fattoreVelocita)); }
+    catch (e) {}
+  }
+  function durataFrame() {
+    var ms = Math.round(VELOCITA_BASE / (fattoreVelocita || 1));
+    if (motoRidotto()) ms = Math.max(ms, 1400);
+    return ms;
+  }
+  function delayGifCs() {
+    var cs = Math.round(durataFrame() / 10);
+    if (cs < 8) cs = 8;
+    if (cs > 200) cs = 200;
+    return cs;
+  }
+  function aggiornaVelocitaUI() {
+    var sel = $('cmi-velocita');
+    if (sel) sel.value = String(fattoreVelocita);
+    var info = $('cmi-velocita-info');
+    if (info) info.textContent = durataFrame() + ' ms per fotogramma';
+  }
+  function impostaFattoreVelocita(n, riavvia) {
+    var i, vicino = FATTORI_VELOCITA[0], dist = Infinity, d;
+    for (i = 0; i < FATTORI_VELOCITA.length; i++) {
+      d = Math.abs(FATTORI_VELOCITA[i] - n);
+      if (d < dist) { dist = d; vicino = FATTORI_VELOCITA[i]; }
+    }
+    fattoreVelocita = vicino;
+    salvaVelocita();
+    aggiornaVelocitaUI();
+    if (riavvia !== false && timerPlay) avviaPlay();
+  }
+  function cambiaFattore(delta) {
+    var i = FATTORI_VELOCITA.indexOf(fattoreVelocita);
+    if (i < 0) i = FATTORI_VELOCITA.indexOf(1);
+    i += delta;
+    if (i < 0) i = 0;
+    if (i > FATTORI_VELOCITA.length - 1) i = FATTORI_VELOCITA.length - 1;
+    impostaFattoreVelocita(FATTORI_VELOCITA[i]);
   }
   function costruisciGriglia() {
     var punti = [];
@@ -299,7 +441,7 @@
       ov.textContent = VARIABILI[v].nome;
       selV.appendChild(ov);
     }
-    selV.value = 'temperature_2m';
+    selV.value = 'tempo_previsto';
     aggiornaInfoModello();
     aggiornaInfoVariabile();
   }
@@ -510,7 +652,9 @@
     var val = new Array(ny * nx);
     var u = new Array(ny * nx);
     var v = new Array(ny * nx);
-    for (i = 0; i < ny * nx; i++) { val[i] = null; u[i] = null; v[i] = null; }
+    var cat = new Array(ny * nx);
+    var cape = new Array(ny * nx);
+    for (i = 0; i < ny * nx; i++) { val[i] = null; u[i] = null; v[i] = null; cat[i] = null; cape[i] = null; }
     for (i = 0; i < punti.length; i++) {
       p = punti[i];
       var iy = latIx[String(p.lat)], ix = lonIx[String(p.lon)];
@@ -521,8 +665,14 @@
         var c = componentiVento(val[j], p.dir[idx]);
         if (c) { u[j] = c.u; v[j] = c.v; }
       }
+      if (variabile.tempo) {
+        var snow = (p.snow && p.snow[idx] !== null && typeof p.snow[idx] !== 'undefined') ? p.snow[idx] : 0;
+        var showers = (p.showers && p.showers[idx] !== null && typeof p.showers[idx] !== 'undefined') ? p.showers[idx] : 0;
+        cat[j] = raffinaCategoria(categoriaDaCodice(val[j]), snow, showers);
+        cape[j] = (p.cape && p.cape[idx] !== null && typeof p.cape[idx] !== 'undefined') ? p.cape[idx] : null;
+      }
     }
-    return { lats: lats, lons: lons, nx: nx, ny: ny, val: val, u: u, v: v };
+    return { lats: lats, lons: lons, nx: nx, ny: ny, val: val, u: u, v: v, cat: cat, cape: cape, tempo: !!(variabile && variabile.tempo) };
   }
   function indiceSotto(arr, x) {
     var lo = 0, hi = arr.length - 1;
@@ -567,6 +717,19 @@
     var ty = (lat - y0) / ((y1 - y0) || 1);
     return mescolaAngoli(arr[iy * mat.nx + ix], arr[iy * mat.nx + ix + 1], arr[(iy + 1) * mat.nx + ix], arr[(iy + 1) * mat.nx + ix + 1], tx, ty);
   }
+  function campionaVicino(mat, lat, lon, campo) {
+    if (!mat || !mat.nx) return null;
+    var arr = (campo && mat[campo]) ? mat[campo] : mat.val;
+    if (lon < mat.lons[0] - PASSO || lon > mat.lons[mat.nx - 1] + PASSO) return null;
+    if (lat < mat.lats[0] - PASSO || lat > mat.lats[mat.ny - 1] + PASSO) return null;
+    var ix = indiceSotto(mat.lons, lon);
+    var iy = indiceSotto(mat.lats, lat);
+    if (ix < 0) ix = 0;
+    if (iy < 0) iy = 0;
+    if (ix < mat.nx - 1 && Math.abs(mat.lons[ix + 1] - lon) < Math.abs(mat.lons[ix] - lon)) ix += 1;
+    if (iy < mat.ny - 1 && Math.abs(mat.lats[iy + 1] - lat) < Math.abs(mat.lats[iy] - lat)) iy += 1;
+    return arr[iy * mat.nx + ix];
+  }
   function fadeBordo(lat, lon) {
     var m = 0.4;
     var fx = 1, fy = 1;
@@ -593,8 +756,13 @@
     for (py = 0; py < imgH; py++) {
       for (px = 0; px < imgW; px++) {
         ll = vista.inv(px * step + step / 2, py * step + step / 2);
-        val = campionaCampo(mat, ll.lat, ll.lon, 'val');
-        col = coloreDi(val, scalaId);
+        if (mat.tempo) {
+          var ccat = campionaVicino(mat, ll.lat, ll.lon, 'cat');
+          col = ccat ? (COLORI_TEMPO[ccat] || null) : null;
+        } else {
+          val = campionaCampo(mat, ll.lat, ll.lon, 'val');
+          col = coloreDi(val, scalaId);
+        }
         if (!col) continue;
         a = (alphaBase || 0.82) * fadeBordo(ll.lat, ll.lon);
         i = (py * imgW + px) * 4;
@@ -795,7 +963,42 @@
   function dovrebbeAnimareVento(stato) {
     return !!(stato && stato.variabile && stato.variabile.vento && particelleAttive() && !motoRidotto() && stato.matrice);
   }
+  function misureLegendaTempo(vista) {
+    var cols = 5, rows = 3, pad = 8, cellH = 26;
+    var w = Math.max(280, vista.w - 20);
+    var h = rows * cellH + pad * 2;
+    return { cols: cols, rows: rows, pad: pad, cellH: cellH, w: w, h: h, x: 10, y: vista.h - h - 8, cellW: (w - pad * 2) / cols };
+  }
+  function disegnaLegendaTempo(ctx, vista) {
+    var m = misureLegendaTempo(vista);
+    ctx.fillStyle = 'rgba(255,255,255,0.94)';
+    ctx.fillRect(m.x, m.y, m.w, m.h);
+    ctx.strokeStyle = 'rgba(0,51,102,0.35)';
+    ctx.strokeRect(m.x, m.y, m.w, m.h);
+    ctx.font = '11px Titillium Web, Arial, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = '#003366';
+    var i, cx, cy, item, img, iw = 18, nome, maxW;
+    for (i = 0; i < LEGENDA_TEMPO.length; i++) {
+      item = LEGENDA_TEMPO[i];
+      cx = m.x + m.pad + (i % m.cols) * m.cellW;
+      cy = m.y + m.pad + Math.floor(i / m.cols) * m.cellH + m.cellH / 2;
+      img = iconeTempo[item.id];
+      if (img) ctx.drawImage(img, cx, cy - iw / 2, iw, iw);
+      nome = item.nome;
+      maxW = m.cellW - iw - 8;
+      if (ctx.measureText(nome).width > maxW) ctx.font = '10px Titillium Web, Arial, sans-serif';
+      ctx.fillText(nome, cx + iw + 4, cy, maxW);
+      ctx.font = '11px Titillium Web, Arial, sans-serif';
+    }
+  }
   function disegnaDecorazioni(ctx, vista, stato) {
+
+    if (stato.variabile && stato.variabile.tempo) {
+      disegnaLegendaTempo(ctx, vista);
+      return;
+    }
     var ext = etichettaScala(stato.variabile.scala);
     var x = 16, y = vista.h - 52, w = Math.min(260, vista.w - 32);
     ctx.fillStyle = 'rgba(255,255,255,0.88)';
@@ -816,7 +1019,47 @@
     ctx.fillText(String(ext.max) + ' ' + stato.variabile.unita, x + w - 8, y + 32);
     ctx.textAlign = 'left';
   }
+  function disegnaIconeTempo(ctx, vista, mat) {
+    if (!mat || !mat.tempo) return;
+    var p0 = vista.xy(mat.lats[0], mat.lons[0]);
+    var p1 = vista.xy(mat.lats[0], mat.lons[Math.min(1, mat.nx - 1)]);
+    var dx = Math.abs(p1[0] - p0[0]) || 40;
+    var ogni = Math.max(1, Math.round(48 / dx));
+    var size = Math.max(22, Math.min(36, dx * ogni * 0.72));
+    var iy, ix, j, cat, xy, img, cape;
+    for (iy = 0; iy < mat.ny; iy += ogni) {
+      for (ix = 0; ix < mat.nx; ix += ogni) {
+        j = iy * mat.nx + ix;
+        cat = mat.cat[j];
+        if (!cat) continue;
+        xy = vista.xy(mat.lats[iy], mat.lons[ix]);
+        var limY = vista.h - 8;
+        if (mat.tempo) {
+          var ml = misureLegendaTempo(vista);
+          limY = ml.y - 4;
+        }
+        if (xy[0] < 8 || xy[1] < 8 || xy[0] > vista.w - 8 || xy[1] > limY) continue;
+        ctx.beginPath();
+        ctx.arc(xy[0], xy[1], size / 2 + 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.86)';
+        ctx.fill();
+        img = iconeTempo[cat];
+        if (img) ctx.drawImage(img, xy[0] - size / 2, xy[1] - size / 2, size, size);
+        cape = mat.cape[j];
+        if (cat === 'temporale' && cape !== null && cape >= 1000) {
+          ctx.beginPath();
+          ctx.moveTo(xy[0] + size / 2 - 2, xy[1] - size / 2 - 1);
+          ctx.lineTo(xy[0] + size / 2 + 7, xy[1] - size / 2 - 1);
+          ctx.lineTo(xy[0] + size / 2 + 2.5, xy[1] - size / 2 - 10);
+          ctx.closePath();
+          ctx.fillStyle = '#b45309';
+          ctx.fill();
+        }
+      }
+    }
+  }
   function disegnaVista(ctx, vista, stato, opts) {
+
     opts = opts || {};
     ctx.fillStyle = '#c5d8e8';
     ctx.fillRect(0, 0, vista.w, vista.h);
@@ -824,12 +1067,13 @@
       disegnaConfini(ctx, vista);
       return;
     }
-    disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, 0.84);
+    disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, stato.variabile.tempo ? 0.62 : 0.84);
     disegnaConfini(ctx, vista);
-    if (isolineeAttive()) disegnaIsolinee(ctx, vista, stato.matrice, stato.variabile.scala);
+    if (isolineeAttive() && !stato.variabile.tempo) disegnaIsolinee(ctx, vista, stato.matrice, stato.variabile.scala);
     if (stato.variabile.vento && (opts.frecce || !particelleAttive() || motoRidotto())) {
       disegnaFrecce(ctx, vista, stato.matrice);
     }
+    if (stato.variabile.tempo) disegnaIconeTempo(ctx, vista, stato.matrice);
     if (opts.decorazioni) disegnaDecorazioni(ctx, vista, stato);
   }
   function nuovaParticella() {
@@ -927,9 +1171,12 @@
     }
     var v = statoMappa.variabile;
     var val = vicino ? valorePunto(vicino, v, statoMappa.indice) : null;
-    var testoVal = (val === null ? 'dato non disponibile' : (Math.round(val * 10) / 10) + ' ' + v.unita);
+    var testoVal = (v.tempo)
+      ? etichettaTempo(val)
+      : (val === null ? 'dato non disponibile' : (Math.round(val * 10) / 10) + ' ' + v.unita);
+    var iconaHtml = (v.tempo && val !== null) ? htmlIconaTempo(val, 'cmi-icona-meteo') : '';
     var contenuto = '<p style="margin:0 0 .3rem"><strong>' + arrotonda(lat, 2) + '°N, ' + arrotonda(lon, 2) + '°E</strong></p>' +
-      '<p style="margin:0">' + v.nome + ': ' + testoVal + '</p>' +
+      '<p style="margin:0;display:flex;align-items:center;gap:.4rem">' + iconaHtml + ' ' + v.nome + ': ' + testoVal + '</p>' +
       '<p style="margin:.3rem 0 0;font-size:.9em">Meteogramma nelle prossime 72 ore sotto la cartina.</p>';
     if (mappa && window.L) {
       L.popup().setLatLng(latlng || L.latLng(lat, lon)).setContent(contenuto).openOn(mappa);
@@ -948,14 +1195,34 @@
       var b = document.createElement('dd'); b.textContent = dd;
       valori.appendChild(a); valori.appendChild(b);
     }
-    voce('Valore sulla cartina', testoVal);
+    if (v.tempo) {
+      var riga = document.createElement('div');
+      riga.className = 'cmi-meteo-icona-ora';
+      riga.innerHTML = iconaHtml + '<span>' + testoVal + '</span>';
+      valori.appendChild(riga);
+    } else {
+      voce('Valore sulla cartina', testoVal);
+    }
     grafico.textContent = 'Carico il meteogramma…';
     var mid = statoMappa.modello ? statoMappa.modello.id : $('cmi-modello').value;
-    var url = API + '?latitude=' + arrotonda(lat, 4) + '&longitude=' + arrotonda(lon, 4) +
-      '&hourly=' + encodeURIComponent('temperature_2m,precipitation,pressure_msl,wind_speed_10m,wind_direction_10m,weather_code,cloud_cover,relative_humidity_2m') +
-      '&forecast_hours=72&timezone=' + encodeURIComponent(TZ) +
-      '&wind_speed_unit=kmh&cell_selection=nearest&models=' + encodeURIComponent(mid);
-    fetchJson(url).then(function (body) {
+    var campiMeteo = [
+      'temperature_2m,precipitation,pressure_msl,wind_speed_10m,wind_direction_10m,weather_code,cloud_cover,relative_humidity_2m,snowfall,cape',
+      'temperature_2m,precipitation,pressure_msl,wind_speed_10m,wind_direction_10m,weather_code,cloud_cover,relative_humidity_2m,snowfall',
+      'temperature_2m,precipitation,pressure_msl,wind_speed_10m,wind_direction_10m,weather_code,cloud_cover,relative_humidity_2m'
+    ];
+    function urlMeteogramma(campi) {
+      return API + '?latitude=' + arrotonda(lat, 4) + '&longitude=' + arrotonda(lon, 4) +
+        '&hourly=' + encodeURIComponent(campi) +
+        '&forecast_hours=72&timezone=' + encodeURIComponent(TZ) +
+        '&wind_speed_unit=kmh&cell_selection=nearest&models=' + encodeURIComponent(mid);
+    }
+    function scaricaMeteogramma(i) {
+      return fetchJson(urlMeteogramma(campiMeteo[i])).catch(function (err) {
+        if (i < campiMeteo.length - 1) return scaricaMeteogramma(i + 1);
+        throw err;
+      });
+    }
+    scaricaMeteogramma(0).then(function (body) {
       var lista = Array.isArray(body) ? body : [body];
       var h = (lista[0] && lista[0].hourly) || {};
       var idx = 0;
@@ -965,7 +1232,16 @@
       }
       function n(arr) { return arr && arr[idx] !== null && typeof arr[idx] !== 'undefined' ? arr[idx] : null; }
       valori.textContent = '';
-      voce('Valore sulla cartina', testoVal);
+      var codeOra = n(h.weather_code);
+      if (codeOra !== null || v.tempo) {
+        var riga2 = document.createElement('div');
+        riga2.className = 'cmi-meteo-icona-ora';
+        riga2.innerHTML = htmlIconaTempo(codeOra !== null ? codeOra : val, 'cmi-icona-meteo') +
+          '<span>' + etichettaTempo(codeOra !== null ? codeOra : val) + '</span>';
+        valori.appendChild(riga2);
+      } else {
+        voce('Valore sulla cartina', testoVal);
+      }
       var t = n(h.temperature_2m); if (t !== null) voce('Temperatura nel punto', Math.round(t * 10) / 10 + ' °C');
       var pr = n(h.pressure_msl); if (pr !== null) voce('Pressione', Math.round(pr) + ' hPa');
       var ws = n(h.wind_speed_10m); var wd = n(h.wind_direction_10m);
@@ -973,6 +1249,13 @@
       var pc = n(h.precipitation); if (pc !== null) voce('Precipitazioni', Math.round(pc * 10) / 10 + ' mm');
       var rh = n(h.relative_humidity_2m); if (rh !== null) voce('Umidità', Math.round(rh) + ' %');
       var cc = n(h.cloud_cover); if (cc !== null) voce('Nuvolosità', Math.round(cc) + ' %');
+      var sn = n(h.snowfall); if (sn !== null && sn > 0) voce('Neve', Math.round(sn * 10) / 10 + ' cm');
+      var cp = n(h.cape); if (cp !== null) voce('CAPE', Math.round(cp) + ' J/kg');
+      var wmo = n(h.weather_code);
+      if (wmo === 96 || wmo === 99) voce('Grandine', 'Prevista dal modello (codice WMO ' + wmo + ')');
+      else if (cp !== null && cp >= 1000 && wmo !== null && (wmo === 95 || wmo === 97 || wmo >= 80)) {
+        voce('Indizio convettivo', "CAPE elevato. Non è un'allerta ufficiale e il modello non indica grandine (96/99).");
+      }
       renderMeteogramma(grafico, h);
     }).catch(function () {
       grafico.textContent = 'Non è stato possibile caricare il meteogramma per questo punto.';
@@ -983,7 +1266,7 @@
     var times = h.time || [];
     var n = Math.min(times.length, 72);
     if (!n) { dest.textContent = 'Nessun dato orario per il meteogramma.'; return; }
-    var W = 720, H = 280, padL = 42, padR = 16, padT = 18, padB = 36;
+    var W = 720, H = 310, padL = 42, padR = 16, padT = 40, padB = 36;
     var i, tmin = Infinity, tmax = -Infinity, pmax = 0.4;
     for (i = 0; i < n; i++) {
       var tv = h.temperature_2m ? h.temperature_2m[i] : null;
@@ -1005,7 +1288,7 @@
     var svg = document.createElementNS(ns, 'svg');
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     svg.setAttribute('role', 'img');
-    svg.setAttribute('aria-label', 'Meteogramma: temperatura e precipitazioni nelle prossime 72 ore.');
+    svg.setAttribute('aria-label', 'Meteogramma: tempo previsto, temperatura e precipitazioni nelle prossime 72 ore.');
     function el(name, attrs, text) {
       var e = document.createElementNS(ns, name);
       Object.keys(attrs).forEach(function (k) { e.setAttribute(k, attrs[k]); });
@@ -1038,8 +1321,23 @@
     for (i = 0; i < n; i += 6) {
       el('text', { x: xdi(i), y: H - 12, 'text-anchor': 'middle', fill: '#3a3a3a', 'font-size': 10, 'font-family': 'Titillium Web, Arial, sans-serif' }, formatOraCorta(times[i]));
     }
-    el('text', { x: padL, y: 12, fill: '#b42318', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif', 'font-weight': 700 }, 'Temperatura (°C)');
-    el('text', { x: W - padR, y: 12, 'text-anchor': 'end', fill: '#1e5ab4', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif', 'font-weight': 700 }, 'Precipitazioni (mm)');
+    el('text', { x: padL, y: 14, fill: '#b42318', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif', 'font-weight': 700 }, 'Temperatura (°C)');
+    el('text', { x: W - padR, y: 14, 'text-anchor': 'end', fill: '#1e5ab4', 'font-size': 11, 'font-family': 'Titillium Web, Arial, sans-serif', 'font-weight': 700 }, 'Precipitazioni (mm)');
+    if (h.weather_code) {
+      for (i = 0; i < n; i += 3) {
+        var wc = h.weather_code[i];
+        var catI = categoriaDaCodice(wc);
+        if (!catI) continue;
+        var im = el('image', {
+          href: urlIcona(catI),
+          x: xdi(i) - 9,
+          y: 16,
+          width: 18,
+          height: 18
+        });
+        im.setAttributeNS('http://www.w3.org/1999/xlink', 'href', urlIcona(catI));
+      }
+    }
     dest.appendChild(svg);
   }
   function spezza(arr, n) {
@@ -1097,6 +1395,29 @@
     }
     var puntiBase = costruisciGriglia();
     var campi = variabile.campi.join(',');
+    function procediConCampi(elencoCampi) {
+      campi = elencoCampi.join(',');
+      return eseguiScarico();
+    }
+    function scopriCampiTempo(modelId) {
+      if (campiTempoPerModello[modelId]) return Promise.resolve(campiTempoPerModello[modelId]);
+      var candidati = ['weather_code', 'precipitation', 'snowfall', 'cape', 'showers'];
+      function prova(lista) {
+        var url = API + '?latitude=' + GENZANO.lat + '&longitude=' + GENZANO.lon +
+          '&hourly=' + encodeURIComponent(lista.join(',')) +
+          '&forecast_days=1&timezone=' + encodeURIComponent(TZ) +
+          '&models=' + encodeURIComponent(modelId);
+        return fetchJson(url).then(function () {
+          campiTempoPerModello[modelId] = lista;
+          return lista;
+        }).catch(function (err) {
+          if (lista.length <= 1) throw err;
+          return prova(lista.slice(0, lista.length - 1));
+        });
+      }
+      return prova(candidati);
+    }
+    function eseguiScarico() {
     function urlGruppo(gruppo) {
       var lats = [], lons = [];
       for (var i = 0; i < gruppo.length; i++) {
@@ -1137,7 +1458,7 @@
     return catena.then(function (lista) {
       var orari = null;
       var punti = [];
-      var campoVal = variabile.vento ? variabile.vento.vel : variabile.campi[0];
+      var campoVal = variabile.tempo ? 'weather_code' : (variabile.vento ? variabile.vento.vel : variabile.campi[0]);
       var campoDir = variabile.vento ? variabile.vento.dir : null;
       var tuttiNull = true;
       for (var i = 0; i < lista.length; i++) {
@@ -1156,7 +1477,11 @@
           lat: item.punto ? item.punto.lat : d.latitude,
           lon: item.punto ? item.punto.lon : d.longitude,
           val: serie,
-          dir: dirs
+          dir: dirs,
+          prec: h.precipitation || null,
+          snow: h.snowfall || null,
+          cape: h.cape || null,
+          showers: h.showers || null
         });
       }
       if (!orari || !orari.length || tuttiNull || !punti.length) {
@@ -1175,6 +1500,11 @@
       if (!isB) impostaStato(msg, true, false);
       else impostaStato('Confronto: ' + msg, true, false);
     });
+    }
+    if (variabile.tempo) {
+      return scopriCampiTempo(mid).then(function (elenco) { return procediConCampi(elenco); });
+    }
+    return procediConCampi(variabile.campi);
   }
   function applicaDati(pacchetto, variabile, modello, target, mantieniOra) {
     var isB = target === 'b';
@@ -1260,10 +1590,35 @@
   function aggiornaLegenda() {
     var v = statoMappa.variabile;
     if (!v) return;
-    var ext = etichettaScala(v.scala);
-    $('cmi-legenda-titolo').textContent = 'Legenda: ' + v.nome + ' (' + v.unita + ')';
     var scala = $('cmi-legenda-scala');
     scala.innerHTML = '';
+    if (v.tempo) {
+      $('cmi-legenda-titolo').textContent = 'Legenda: Tempo previsto';
+      var griglia = document.createElement('div');
+      griglia.className = 'cmi-legenda-icone';
+      LEGENDA_TEMPO.forEach(function (item) {
+        var voce = document.createElement('div');
+        voce.className = 'cmi-legenda-voce';
+        var img = document.createElement('img');
+        img.src = urlIcona(item.id);
+        img.alt = '';
+        img.width = 32;
+        img.height = 32;
+        var sp = document.createElement('span');
+        sp.textContent = item.nome;
+        voce.appendChild(img);
+        voce.appendChild(sp);
+        griglia.appendChild(voce);
+      });
+      scala.appendChild(griglia);
+      var nota = document.createElement('p');
+      nota.className = 'cmi-legenda-note';
+      nota.textContent = "I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un'allerta ufficiale.";
+      scala.appendChild(nota);
+      return;
+    }
+    var ext = etichettaScala(v.scala);
+    $('cmi-legenda-titolo').textContent = 'Legenda: ' + v.nome + (v.unita ? ' (' + v.unita + ')' : '');
     var barra = document.createElement('div');
     barra.className = 'cmi-legenda-barra';
     barra.style.background = gradiente(v.scala);
@@ -1322,16 +1677,18 @@
       var btn = $('cmi-play');
       btn.setAttribute('aria-pressed', 'false');
       $('cmi-play-etichetta').textContent = 'Avvia animazione';
+      btn.classList.remove('cmi-play-on');
       var icon = btn.querySelector('i');
       if (icon) icon.className = 'bi bi-play-fill';
     }
   }
   function avviaPlay() {
-    var attesa = motoRidotto() ? 1400 : 500;
+    var attesa = durataFrame();
     fermaPlay(false);
     var btn = $('cmi-play');
     btn.setAttribute('aria-pressed', 'true');
-    $('cmi-play-etichetta').textContent = 'Metti in pausa';
+    btn.classList.add('cmi-play-on');
+    $('cmi-play-etichetta').textContent = 'Pausa';
     var icon = btn.querySelector('i');
     if (icon) icon.className = 'bi bi-pause-fill';
     timerPlay = setInterval(function () {
@@ -1430,6 +1787,8 @@
     }
   }
   function iconaMeteo(code) {
+    var svgHtml = htmlIconaTempo(code, 'cmi-icona-meteo');
+    if (svgHtml) return svgHtml;
     var cls = 'bi-cloud';
     if (code === 0 || code === 1) cls = 'bi-sun';
     else if (code === 2) cls = 'bi-cloud-sun';
@@ -1725,7 +2084,8 @@
           var canvas = costruisciFotogramma(statoMappa, logo, W, H);
           var ctx = canvas.getContext('2d');
           var data = ctx.getImageData(0, 0, W, H).data;
-          var delay = (i === indici.length - 1) ? 90 : 28;
+          var cs = delayGifCs();
+          var delay = (i === indici.length - 1) ? Math.min(200, cs * 2) : cs;
           frames.push({ data: data, delay: delay });
           mostraProgresso(true, 'Fotogramma ' + (i + 1) + ' di ' + indici.length + '…', Math.round(((i + 1) / (indici.length + 1)) * 90));
           return tick();
@@ -1735,7 +2095,7 @@
         mostraProgresso(true, 'Codifica della GIF…', 92);
         return tick();
       }).then(function () {
-        var bytes = window.CMI_GIF.encode(W, H, frames, 28, 0);
+        var bytes = window.CMI_GIF.encode(W, H, frames, delayGifCs(), 0);
         var blob = new Blob([bytes], { type: 'image/gif' });
         mostraProgresso(true, 'GIF pronta.', 100);
         return blob;
@@ -1769,6 +2129,53 @@
     });
   }
 
+  function nomePngCartina() {
+    var iso = (statoMappa.orari[statoMappa.indice] || '').replace(/[:T]/g, '-').slice(0, 16);
+    return 'cartina-meteo-italia-' + iso + '.png';
+  }
+  function nomeGifCartina() {
+    var mid = statoMappa.modello ? statoMappa.modello.id : 'modello';
+    var vid = statoMappa.variabile ? statoMappa.variabile.id : 'variabile';
+    return 'cartina-meteo-italia-' + mid + '-' + vid + '.gif';
+  }
+  function condividiBlob(blob, nome, titolo) {
+    if (!blob) return Promise.resolve();
+    var file = null;
+    try { file = new File([blob], nome, { type: blob.type || 'application/octet-stream' }); }
+    catch (e) { file = null; }
+    var dati = file ? { files: [file], title: titolo, text: titolo } : null;
+    if (dati && navigator.canShare) {
+      var ok = false;
+      try { ok = navigator.canShare(dati); } catch (e2) { ok = false; }
+      if (ok) {
+        return navigator.share(dati).then(function () {
+          impostaStato('Condivisione avviata.', false, false);
+        }).catch(function (err) {
+          if (err && err.name === 'AbortError') return;
+          scaricaBlob(blob, nome);
+          impostaStato('Condivisione non disponibile: file scaricato.', false, false);
+        });
+      }
+    }
+    scaricaBlob(blob, nome);
+    impostaStato('Condivisione file non supportata su questo browser: file scaricato.', false, false);
+    return Promise.resolve();
+  }
+  function condividiPngCartina() {
+    return esportaPngBlob().then(function (blob) {
+      return condividiBlob(blob, nomePngCartina(), 'Cartina meteo dell\'Italia');
+    }).catch(function (err) {
+      impostaStato((err && err.message) || 'Non è stato possibile preparare l\'immagine.', true, false);
+    });
+  }
+  function condividiGifCartina() {
+    mostraProgresso(true, 'Preparazione dell\'animazione…', 1);
+    return esportaGifBlob().then(function (blob) {
+      return condividiBlob(blob, nomeGifCartina(), 'Animazione della cartina meteo dell\'Italia');
+    }).catch(function (err) {
+      impostaStato((err && err.message) || 'Non è stato possibile creare la GIF.', true, false);
+    });
+  }
   function aggiornaConfrontoUI() {
     var on = confrontoAttivo();
     var campo = $('cmi-campo-confronto');
@@ -1842,7 +2249,16 @@
     $('cmi-copia-link').addEventListener('click', copiaLink);
     $('cmi-scarica').addEventListener('click', scaricaImmagine);
     if ($('cmi-scarica-png')) $('cmi-scarica-png').addEventListener('click', scaricaPngCartina);
+    if ($('cmi-condividi-png')) $('cmi-condividi-png').addEventListener('click', condividiPngCartina);
     if ($('cmi-scarica-gif')) $('cmi-scarica-gif').addEventListener('click', scaricaGifCartina);
+    if ($('cmi-condividi-gif')) $('cmi-condividi-gif').addEventListener('click', condividiGifCartina);
+    if ($('cmi-velocita')) {
+      $('cmi-velocita').addEventListener('change', function () {
+        impostaFattoreVelocita(parseFloat($('cmi-velocita').value) || 1);
+      });
+    }
+    if ($('cmi-velocita-meno')) $('cmi-velocita-meno').addEventListener('click', function () { cambiaFattore(-1); });
+    if ($('cmi-velocita-piu')) $('cmi-velocita-piu').addEventListener('click', function () { cambiaFattore(1); });
     if ($('cmi-isolinee')) $('cmi-isolinee').addEventListener('change', function () { if (strato) strato.ridisegna(); if (stratoB) stratoB.ridisegna(); });
     if ($('cmi-particelle')) $('cmi-particelle').addEventListener('change', function () { if (strato) strato.ridisegna(); avviaOFermaVento(); });
     if ($('cmi-confronto')) $('cmi-confronto').addEventListener('change', aggiornaConfrontoUI);
@@ -1870,6 +2286,12 @@
         ev.preventDefault();
         fermaPlay(true);
         vaiAPasso((statoMappa.indicePasso || 0) + 1);
+      } else if (ev.key === '+' || ev.key === '=' || ev.key === 'Add') {
+        ev.preventDefault();
+        cambiaFattore(1);
+      } else if (ev.key === '-' || ev.key === '_' || ev.key === 'Subtract') {
+        ev.preventDefault();
+        cambiaFattore(-1);
       }
     });
   }
@@ -1881,12 +2303,14 @@
     }).then(function (g) { geojson = g; }).catch(function () { geojson = null; });
   }
   function avvia() {
+    leggiVelocitaSalvata();
+    aggiornaVelocitaUI();
     popolaSelect();
     bind();
     pianificaRefresh();
     var cfg = leggiConfig();
     loadScript(cfg.leafletJs || '/vendor/leaflet/leaflet.js').then(function () {
-      return caricaConfini();
+      return Promise.all([caricaConfini(), caricaIconeTempo()]);
     }).then(function () {
       creaMappe();
       return Promise.all([caricaGriglia('a'), caricaCitta()]);
@@ -1913,7 +2337,17 @@
     esportaPngBlob: esportaPngBlob,
     esportaBollettinoBlob: esportaBollettinoBlob,
     apriMeteogramma: apriMeteogramma,
-    attivaConfronto: attivaConfronto
+    attivaConfronto: attivaConfronto,
+    impostaVariabile: function (id) {
+      var sel = $('cmi-variabile');
+      if (sel) sel.value = id;
+      aggiornaInfoVariabile();
+      return caricaGriglia('a');
+    },
+    impostaVelocita: function (n) { impostaFattoreVelocita(n, false); },
+    avviaPlay: avviaPlay,
+    fermaPlay: function () { fermaPlay(true); },
+    inPlay: function () { return !!timerPlay; }
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', avvia);
   else avvia();

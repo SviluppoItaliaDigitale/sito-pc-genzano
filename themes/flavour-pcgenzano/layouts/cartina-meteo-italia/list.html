@@ -60,28 +60,50 @@
           </label>
         </div>
 
-        <div class="cmi-tempo">
+        <div class="cmi-tempo" id="cmi-tempo">
           <div class="cmi-tempo-azioni">
             <button type="button" class="btn btn-primary" id="cmi-play" aria-pressed="false">
               <i class="bi bi-play-fill" aria-hidden="true"></i>
               <span id="cmi-play-etichetta">Avvia animazione</span>
             </button>
-            <button type="button" class="btn btn-outline-primary" id="cmi-precedente">Ora precedente</button>
-            <button type="button" class="btn btn-outline-primary" id="cmi-successiva">Ora successiva</button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-precedente" title="Un fotogramma indietro">Ora precedente</button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-successiva" title="Un fotogramma avanti">Ora successiva</button>
             <button type="button" class="btn btn-outline-primary" id="cmi-scarica-png">
               <i class="bi bi-image me-1" aria-hidden="true"></i>Scarica PNG
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-condividi-png">
+              <i class="bi bi-share me-1" aria-hidden="true"></i>Condividi immagine
             </button>
             <button type="button" class="btn btn-outline-primary" id="cmi-scarica-gif">
               <i class="bi bi-film me-1" aria-hidden="true"></i>Scarica GIF
             </button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-condividi-gif">
+              <i class="bi bi-share me-1" aria-hidden="true"></i>Condividi GIF
+            </button>
           </div>
+          <p class="cmi-play-aiuto" id="cmi-play-aiuto">Durante l'animazione il pulsante diventa <strong>Pausa</strong>. Da fermo, «Ora precedente» e «Ora successiva» (o le frecce) mostrano un fotogramma alla volta.</p>
           <div class="cmi-cursore">
             <label for="cmi-ora">Ora di previsione: <strong id="cmi-ora-etichetta">—</strong></label>
             <input type="range" id="cmi-ora" name="ora" min="0" max="0" value="0" step="1" disabled>
           </div>
+          <div class="cmi-velocita" id="cmi-velocita-box">
+            <label for="cmi-velocita">Velocità dell'animazione</label>
+            <div class="cmi-velocita-riga">
+              <button type="button" class="btn btn-outline-primary" id="cmi-velocita-meno" aria-label="Rallenta l'animazione">−</button>
+              <select id="cmi-velocita" name="velocita">
+                <option value="0.25">0,25× (lenta)</option>
+                <option value="0.5">0,5×</option>
+                <option value="1" selected>1× (predefinita)</option>
+                <option value="1.5">1,5×</option>
+                <option value="2">2× (rapida)</option>
+              </select>
+              <button type="button" class="btn btn-outline-primary" id="cmi-velocita-piu" aria-label="Accelera l'animazione">+</button>
+              <span class="cmi-velocita-info" id="cmi-velocita-info">900 ms per fotogramma</span>
+            </div>
+          </div>
         </div>
 
-        <p class="cmi-tastiera" id="cmi-tastiera">Tastiera: <kbd>spazio</kbd> avvia o mette in pausa, <kbd>←</kbd> e <kbd>→</kbd> avanzano di un passo. Il clic sulla cartina apre il meteogramma del punto.</p>
+        <p class="cmi-tastiera" id="cmi-tastiera">Tastiera: <kbd>spazio</kbd> avvia o mette in <strong>pausa</strong>, <kbd>←</kbd> e <kbd>→</kbd> avanzano di un fotogramma, <kbd>+</kbd> e <kbd>−</kbd> cambiano la velocità. Il clic sulla cartina apre il meteogramma del punto.</p>
 
         <p class="cmi-stato" id="cmi-stato" role="status" aria-live="polite"></p>
         <div class="cmi-export-progress" id="cmi-export-progress" hidden>
@@ -223,7 +245,7 @@
   </div>
 </div>
 
-{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) -}}
+{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) "geoJsonUrl" ("data/italia-confini.geojson" | relURL) "iconeUrl" ("images/meteo-icone/" | relURL) -}}
 {{- if $b -}}
   {{- $bPub := dict "emesso_il" $b.emesso_il "validita_da" $b.validita_da "validita_a" $b.validita_a "situazione_generale" $b.situazione_generale -}}
   {{- $cfg = merge $cfg (dict "bollettino" $bPub) -}}
