@@ -11,34 +11,54 @@
   var GENZANO = { nome: 'Genzano di Roma', lat: 41.7085, lon: 12.6916 };
 
   var COMUNI_CASTELLI = [
-    { nome: 'Frascati', lat: 41.8081, lon: 12.6812, allinea: 'n' },
-    { nome: 'Marino', lat: 41.7706, lon: 12.6611, allinea: 'w' },
-    { nome: 'Rocca di Papa', lat: 41.7619, lon: 12.7097, allinea: 'ne' },
-    { nome: 'Castel Gandolfo', lat: 41.7464, lon: 12.6519, allinea: 'w' },
-    { nome: 'Albano Laziale', lat: 41.7264, lon: 12.6590, allinea: 'sw' },
-    { nome: 'Ariccia', lat: 41.7208, lon: 12.6716, allinea: 'e' },
-    { nome: 'Nemi', lat: 41.7217, lon: 12.7150, allinea: 'e' },
-    { nome: 'Genzano di Roma', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true },
-    { nome: 'Lanuvio', lat: 41.6747, lon: 12.6978, allinea: 'sw' },
-    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e' }
+    { nome: 'Frascati', lat: 41.8081, lon: 12.6812, allinea: 'n', priorita: 6 },
+    { nome: 'Marino', lat: 41.7706, lon: 12.6611, allinea: 'w', priorita: 9 },
+    { nome: 'Rocca di Papa', lat: 41.7619, lon: 12.7097, allinea: 'ne', priorita: 8 },
+    { nome: 'Castel Gandolfo', etichetta: 'Castel Gandolfo', lat: 41.7464, lon: 12.6519, allinea: 'w', priorita: 4 },
+    { nome: 'Albano Laziale', etichetta: 'Albano', lat: 41.7264, lon: 12.6590, allinea: 'sw', priorita: 2 },
+    { nome: 'Ariccia', lat: 41.7208, lon: 12.6716, allinea: 'e', priorita: 3 },
+    { nome: 'Nemi', lat: 41.7217, lon: 12.7150, allinea: 'e', priorita: 5 },
+    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true, priorita: 1 },
+    { nome: 'Lanuvio', lat: 41.6747, lon: 12.6978, allinea: 'sw', priorita: 10 },
+    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e', priorita: 7 }
   ];
   var COMUNI_LAZIO = [
-    { nome: 'Viterbo', lat: 42.4178, lon: 12.1087, allinea: 'n' },
-    { nome: 'Rieti', lat: 42.4048, lon: 12.8617, allinea: 'n' },
-    { nome: 'Civitavecchia', lat: 42.0919, lon: 11.7968, allinea: 'w' },
-    { nome: 'Bracciano', lat: 42.1036, lon: 12.1756, allinea: 'e' },
-    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 'w' },
-    { nome: 'Tivoli', lat: 41.9636, lon: 12.8010, allinea: 'e' },
-    { nome: 'Guidonia', lat: 41.9936, lon: 12.7223, allinea: 'n' },
-    { nome: 'Fiumicino', lat: 41.7676, lon: 12.2299, allinea: 'sw' },
-    { nome: 'Genzano di Roma', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true },
-    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e' },
-    { nome: 'Latina', lat: 41.4676, lon: 12.9037, allinea: 's' },
-    { nome: 'Anzio', lat: 41.4474, lon: 12.6287, allinea: 's' },
-    { nome: 'Frosinone', lat: 41.6398, lon: 13.3515, allinea: 'e' },
-    { nome: 'Cassino', lat: 41.4901, lon: 13.8306, allinea: 'e' },
-    { nome: 'Gaeta', lat: 41.2096, lon: 13.5707, allinea: 's' },
-    { nome: 'Terracina', lat: 41.2917, lon: 13.2486, allinea: 's' }
+    { nome: 'Viterbo', lat: 42.4178, lon: 12.1087, allinea: 'n', priorita: 5 },
+    { nome: 'Rieti', lat: 42.4048, lon: 12.8617, allinea: 'n', priorita: 6 },
+    { nome: 'Civitavecchia', lat: 42.0919, lon: 11.7968, allinea: 'w', priorita: 7 },
+    { nome: 'Bracciano', lat: 42.1036, lon: 12.1756, allinea: 'e', priorita: 15 },
+    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 'w', priorita: 1 },
+    { nome: 'Tivoli', lat: 41.9636, lon: 12.8010, allinea: 'e', priorita: 11 },
+    { nome: 'Guidonia', lat: 41.9936, lon: 12.7223, allinea: 'n', priorita: 16 },
+    { nome: 'Fiumicino', lat: 41.7676, lon: 12.2299, allinea: 'sw', priorita: 9 },
+    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true, priorita: 2 },
+    { nome: 'Velletri', lat: 41.6861, lon: 12.7775, allinea: 'e', priorita: 12 },
+    { nome: 'Latina', lat: 41.4676, lon: 12.9037, allinea: 's', priorita: 3 },
+    { nome: 'Anzio', lat: 41.4474, lon: 12.6287, allinea: 's', priorita: 13 },
+    { nome: 'Frosinone', lat: 41.6398, lon: 13.3515, allinea: 'e', priorita: 4 },
+    { nome: 'Cassino', lat: 41.4901, lon: 13.8306, allinea: 'e', priorita: 10 },
+    { nome: 'Gaeta', lat: 41.2096, lon: 13.5707, allinea: 's', priorita: 8 },
+    { nome: 'Terracina', lat: 41.2917, lon: 13.2486, allinea: 's', priorita: 14 }
+  ];
+  var COMUNI_ITALIA = [
+    { nome: 'Milano', lat: 45.4642, lon: 9.1900, allinea: 'n', priorita: 2 },
+    { nome: 'Torino', lat: 45.0703, lon: 7.6869, allinea: 'w', priorita: 4 },
+    { nome: 'Genova', lat: 44.4056, lon: 8.9463, allinea: 's', priorita: 8 },
+    { nome: 'Venezia', lat: 45.4408, lon: 12.3155, allinea: 'e', priorita: 7 },
+    { nome: 'Bolzano', lat: 46.4983, lon: 11.3548, allinea: 'n', priorita: 14 },
+    { nome: 'Trieste', lat: 45.6495, lon: 13.7768, allinea: 'e', priorita: 13 },
+    { nome: 'Bologna', lat: 44.4949, lon: 11.3426, allinea: 'n', priorita: 6 },
+    { nome: 'Firenze', lat: 43.7696, lon: 11.2558, allinea: 'w', priorita: 5 },
+    { nome: 'Ancona', lat: 43.6158, lon: 13.5189, allinea: 'e', priorita: 15 },
+    { nome: 'Perugia', lat: 43.1107, lon: 12.3908, allinea: 'w', priorita: 16 },
+    { nome: 'Roma', lat: 41.9028, lon: 12.4964, allinea: 'w', priorita: 1 },
+    { nome: 'Genzano di Roma', etichetta: 'Genzano', lat: 41.7085, lon: 12.6916, allinea: 's', evidenziato: true, priorita: 9 },
+    { nome: 'Napoli', lat: 40.8518, lon: 14.2681, allinea: 'w', priorita: 3 },
+    { nome: 'Bari', lat: 41.1171, lon: 16.8719, allinea: 'e', priorita: 10 },
+    { nome: 'Palermo', lat: 38.1157, lon: 13.3615, allinea: 'w', priorita: 11 },
+    { nome: 'Catania', lat: 37.5079, lon: 15.0830, allinea: 'e', priorita: 12 },
+    { nome: 'Cagliari', lat: 39.2238, lon: 9.1217, allinea: 's', priorita: 17 },
+    { nome: 'Reggio Calabria', etichetta: 'Reggio C.', lat: 38.1113, lon: 15.6471, allinea: 'e', priorita: 18 }
   ];
   var NOTA_DOMINIO_LOCALE = 'Anche i modelli a 1,5–2 km risolvono quest\'area in modo approssimativo: un punto della griglia rappresenta qualche chilometro, non il singolo abitato. ICON-2I copre Lazio e Castelli Romani. ICON-D2, AROME, AROME HD e ICON-CH coprono soprattutto il Nord e l\'arco alpino e in genere restano fuori da questa inquadratura.';
 
@@ -47,7 +67,7 @@
       id: 'italia', nome: 'Italia', titolo: 'Cartina meteo dell\'Italia',
       latMin: 36.0, latMax: 47.2, lonMin: 6.4, lonMax: 18.8,
       passo: 0.6, fade: 0.4, minZoom: 5, maxZoom: 9, maxZoomFit: 7,
-      modello: 'ecmwf_ifs', locali: false, laghi: false, hillshade: false, comuni: []
+      modello: 'ecmwf_ifs', locali: false, laghi: false, hillshade: false, comuni: COMUNI_ITALIA
     },
     {
       id: 'lazio', nome: 'Lazio', titolo: 'Cartina meteo del Lazio',
@@ -109,7 +129,7 @@
   };
 
   var VARIABILI = [
-    { id: 'tempo_previsto', nome: 'Tempo previsto', unita: '', campi: ['weather_code', 'precipitation', 'snowfall', 'cape', 'showers'], scala: 'tempo', tempo: true, info: 'Tipo di tempo previsto dal codice WMO di Open-Meteo. I temporali con grandine (codici 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un\'allerta ufficiale.' },
+    { id: 'tempo_previsto', nome: 'Tempo previsto', unita: '', campi: ['weather_code', 'cloud_cover', 'precipitation', 'snowfall', 'cape', 'showers'], scala: 'tempo', tempo: true, info: 'Icone del tempo sui comuni, calcolate sul punto esatto dell\'abitato. Lo sfondo morbido indica nuvolosità e precipitazioni in modo continuo, non a mosaico. I temporali con grandine (codici 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un\'allerta ufficiale.' },
     { id: 'pressure_msl', nome: 'Pressione al livello del mare', unita: 'hPa', campi: ['pressure_msl'], scala: 'mslp' },
     { id: 'precipitation', nome: 'Precipitazioni orarie', unita: 'mm', campi: ['precipitation'], scala: 'prec' },
     { id: 'precipitation_6h', nome: 'Precipitazioni in 6 ore', unita: 'mm', campi: ['precipitation'], scala: 'prec6', derivata: 'somma6' },
@@ -684,14 +704,19 @@
     var campo = boundsCampo();
     function sistema(map) {
       if (!map) return;
-      map.setMinZoom(d.minZoom);
-      map.setMaxZoom(d.maxZoom);
+      if (map.options) {
+        map.options.minZoom = d.minZoom;
+        map.options.maxZoom = d.maxZoom;
+      }
+      if (map.setMinZoom) map.setMinZoom(d.minZoom);
+      if (map.setMaxZoom) map.setMaxZoom(d.maxZoom);
       map.setMaxBounds(campo.pad(0.45));
       map.invalidateSize();
-      map.fitBounds(campo, { padding: [8, 8], maxZoom: d.maxZoomFit });
+      map.fitBounds(campo, { padding: [8, 8], maxZoom: d.maxZoomFit, animate: false });
     }
     sistema(mappa);
     sistema(mappaB);
+    setTimeout(function () { sistema(mappa); sistema(mappaB); }, 120);
   }
   function creaMappe() {
     var a = creaMappaBase('cmi-mappa', true);
@@ -828,7 +853,9 @@
     var v = new Array(ny * nx);
     var cat = new Array(ny * nx);
     var cape = new Array(ny * nx);
-    for (i = 0; i < ny * nx; i++) { val[i] = null; u[i] = null; v[i] = null; cat[i] = null; cape[i] = null; }
+    var nubi = new Array(ny * nx);
+    var pioggia = new Array(ny * nx);
+    for (i = 0; i < ny * nx; i++) { val[i] = null; u[i] = null; v[i] = null; cat[i] = null; cape[i] = null; nubi[i] = null; pioggia[i] = null; }
     for (i = 0; i < punti.length; i++) {
       p = punti[i];
       var iy = latIx[String(p.lat)], ix = lonIx[String(p.lon)];
@@ -844,9 +871,13 @@
         var showers = (p.showers && p.showers[idx] !== null && typeof p.showers[idx] !== 'undefined') ? p.showers[idx] : 0;
         cat[j] = raffinaCategoria(categoriaDaCodice(val[j]), snow, showers);
         cape[j] = (p.cape && p.cape[idx] !== null && typeof p.cape[idx] !== 'undefined') ? p.cape[idx] : null;
+        if (p.nubi && p.nubi[idx] !== null && typeof p.nubi[idx] !== 'undefined') nubi[j] = p.nubi[idx];
+        else nubi[j] = nuvolositaDaCodice(val[j]);
+        if (p.prec && p.prec[idx] !== null && typeof p.prec[idx] !== 'undefined') pioggia[j] = p.prec[idx];
+        else pioggia[j] = 0;
       }
     }
-    return { lats: lats, lons: lons, nx: nx, ny: ny, val: val, u: u, v: v, cat: cat, cape: cape, tempo: !!(variabile && variabile.tempo) };
+    return { lats: lats, lons: lons, nx: nx, ny: ny, val: val, u: u, v: v, cat: cat, cape: cape, nubi: nubi, pioggia: pioggia, tempo: !!(variabile && variabile.tempo) };
   }
   function indiceSotto(arr, x) {
     var lo = 0, hi = arr.length - 1;
@@ -876,7 +907,7 @@
   }
   function campionaCampo(mat, lat, lon, campo) {
     if (!mat || !mat.nx) return null;
-    var arr = campo === 'u' ? mat.u : (campo === 'v' ? mat.v : mat.val);
+    var arr = (campo && mat[campo]) ? mat[campo] : mat.val;
     if (lon < mat.lons[0] - PASSO || lon > mat.lons[mat.nx - 1] + PASSO) return null;
     if (lat < mat.lats[0] - PASSO || lat > mat.lats[mat.ny - 1] + PASSO) return null;
     var ix = indiceSotto(mat.lons, lon);
@@ -915,9 +946,90 @@
     var f = Math.min(fx, fy, 1);
     return f * f * (3 - 2 * f);
   }
+  function nuvolositaDaCodice(code) {
+    if (code === null || typeof code === 'undefined' || isNaN(code)) return null;
+    var c = Math.round(code);
+    if (c === 0) return 8;
+    if (c === 1) return 25;
+    if (c === 2) return 55;
+    if (c === 3) return 88;
+    if (c === 45 || c === 48) return 92;
+    if (c === 51 || c === 53 || c === 55 || c === 56 || c === 57) return 80;
+    if (c === 61 || c === 63 || c === 65 || c === 66 || c === 67) return 85;
+    if (c === 71 || c === 73 || c === 75 || c === 77 || c === 85 || c === 86) return 78;
+    if (c === 80 || c === 81 || c === 82) return 90;
+    if (c === 95 || c === 96 || c === 97 || c === 99) return 95;
+    return 60;
+  }
+  function coloreFondoTempo(nubi, pioggia) {
+    var stops = [
+      [0, 255, 236, 196],
+      [25, 240, 228, 200],
+      [50, 210, 218, 228],
+      [75, 168, 180, 200],
+      [100, 128, 140, 162]
+    ];
+    var n = (nubi === null || typeof nubi === 'undefined' || isNaN(nubi)) ? 50 : nubi;
+    if (n < 0) n = 0;
+    if (n > 100) n = 100;
+    var i, t, col;
+    for (i = 0; i < stops.length - 1; i++) {
+      if (n <= stops[i + 1][0] || i === stops.length - 2) {
+        t = (n - stops[i][0]) / ((stops[i + 1][0] - stops[i][0]) || 1);
+        if (t < 0) t = 0;
+        if (t > 1) t = 1;
+        col = [
+          Math.round(stops[i][1] + (stops[i + 1][1] - stops[i][1]) * t),
+          Math.round(stops[i][2] + (stops[i + 1][2] - stops[i][2]) * t),
+          Math.round(stops[i][3] + (stops[i + 1][3] - stops[i][3]) * t)
+        ];
+        break;
+      }
+    }
+    if (!col) col = [210, 218, 228];
+    var p = (pioggia === null || typeof pioggia === 'undefined' || isNaN(pioggia)) ? 0 : pioggia;
+    if (p > 0) {
+      var f = p / 6;
+      if (f > 1) f = 1;
+      f = f * f * (3 - 2 * f);
+      col = [
+        Math.round(col[0] * (1 - f) + 64 * f),
+        Math.round(col[1] * (1 - f) + 112 * f),
+        Math.round(col[2] * (1 - f) + 186 * f)
+      ];
+    }
+    return col;
+  }
+  function raggioSfocatura() {
+    var px = Math.round((PASSO || 0.6) * 18);
+    if (px < 2) px = 2;
+    if (px > 12) px = 12;
+    return px;
+  }
+  function applicaSfocatura(ctx, w, h, raggio) {
+    if (!raggio || raggio < 1 || w < 4 || h < 4) return;
+    var tmp = document.createElement('canvas');
+    tmp.width = w;
+    tmp.height = h;
+    var tctx = tmp.getContext('2d');
+    if (!tctx) return;
+    try {
+      if (typeof tctx.filter === 'string') {
+        tctx.filter = 'blur(' + raggio + 'px)';
+        tctx.drawImage(ctx.canvas, 0, 0, w, h, 0, 0, w, h);
+        ctx.save();
+        ctx.globalCompositeOperation = 'copy';
+        ctx.drawImage(tmp, 0, 0);
+        ctx.restore();
+        return;
+      }
+    } catch (e) {}
+    tctx.drawImage(ctx.canvas, 0, 0, w, h, 0, 0, w, h);
+    ctx.drawImage(tmp, 0, 0);
+  }
   function disegnaCampo(ctx, vista, mat, scalaId, alphaBase) {
     if (!mat) return;
-    var step = 2;
+    var step = PASSO >= 0.4 ? 3 : 2;
     var imgW = Math.max(1, Math.ceil(vista.w / step));
     var imgH = Math.max(1, Math.ceil(vista.h / step));
     var tmp = document.createElement('canvas');
@@ -926,13 +1038,14 @@
     var tctx = tmp.getContext('2d');
     var img = tctx.createImageData(imgW, imgH);
     var data = img.data;
-    var px, py, i, ll, val, col, a;
+    var px, py, i, ll, val, col, a, nubi, pioggia;
     for (py = 0; py < imgH; py++) {
       for (px = 0; px < imgW; px++) {
         ll = vista.inv(px * step + step / 2, py * step + step / 2);
         if (mat.tempo) {
-          var ccat = campionaVicino(mat, ll.lat, ll.lon, 'cat');
-          col = ccat ? (COLORI_TEMPO[ccat] || null) : null;
+          nubi = campionaCampo(mat, ll.lat, ll.lon, 'nubi');
+          pioggia = campionaCampo(mat, ll.lat, ll.lon, 'pioggia');
+          col = (nubi === null && (pioggia === null || pioggia === 0)) ? null : coloreFondoTempo(nubi, pioggia);
         } else {
           val = campionaCampo(mat, ll.lat, ll.lon, 'val');
           col = coloreDi(val, scalaId);
@@ -948,7 +1061,7 @@
     }
     tctx.putImageData(img, 0, 0);
     ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
+    if (typeof ctx.imageSmoothingQuality === 'string') ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(tmp, 0, 0, vista.w, vista.h);
   }
   function perAnello(geom, fn) {
@@ -1193,44 +1306,178 @@
     ctx.fillText(String(ext.max) + ' ' + stato.variabile.unita, x + w - 8, y + 32);
     ctx.textAlign = 'left';
   }
-  function disegnaIconeTempo(ctx, vista, mat) {
-    if (!mat || !mat.tempo) return;
-    var p0 = vista.xy(mat.lats[0], mat.lons[0]);
-    var p1 = vista.xy(mat.lats[0], mat.lons[Math.min(1, mat.nx - 1)]);
-    var dx = Math.abs(p1[0] - p0[0]) || 40;
-    var ogni = Math.max(1, Math.round(48 / dx));
-    var size = Math.max(22, Math.min(36, dx * ogni * 0.72));
-    var iy, ix, j, cat, xy, img, cape;
-    for (iy = 0; iy < mat.ny; iy += ogni) {
-      for (ix = 0; ix < mat.nx; ix += ogni) {
-        j = iy * mat.nx + ix;
-        cat = mat.cat[j];
-        if (!cat) continue;
-        xy = vista.xy(mat.lats[iy], mat.lons[ix]);
-        var limY = vista.h - 8;
-        if (mat.tempo) {
-          var ml = misureLegendaTempo(vista);
-          limY = ml.y - 4;
-        }
-        if (xy[0] < 8 || xy[1] < 8 || xy[0] > vista.w - 8 || xy[1] > limY) continue;
-        ctx.beginPath();
-        ctx.arc(xy[0], xy[1], size / 2 + 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255,255,255,0.86)';
-        ctx.fill();
-        img = iconeTempo[cat];
-        if (img) ctx.drawImage(img, xy[0] - size / 2, xy[1] - size / 2, size, size);
-        cape = mat.cape[j];
-        if (cat === 'temporale' && cape !== null && cape >= 1000) {
-          ctx.beginPath();
-          ctx.moveTo(xy[0] + size / 2 - 2, xy[1] - size / 2 - 1);
-          ctx.lineTo(xy[0] + size / 2 + 7, xy[1] - size / 2 - 1);
-          ctx.lineTo(xy[0] + size / 2 + 2.5, xy[1] - size / 2 - 10);
-          ctx.closePath();
-          ctx.fillStyle = '#b45309';
-          ctx.fill();
-        }
+  function rettangoloArrotondato(ctx, x, y, w, h, r) {
+    if (r > w / 2) r = w / 2;
+    if (r > h / 2) r = h / 2;
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+  function rettangoliSovrapposti(a, b, pad) {
+    pad = pad || 0;
+    return !(a.x + a.w + pad < b.x || b.x + b.w + pad < a.x || a.y + a.h + pad < b.y || b.y + b.h + pad < a.y);
+  }
+  function eVistaStretta(vista) {
+    return vista.w < 640 || (window.innerWidth && window.innerWidth < 720);
+  }
+  function massimoSchede(vista) {
+    var stretta = eVistaStretta(vista);
+    if (dominioId === 'italia') return stretta ? 8 : 18;
+    if (dominioId === 'lazio') return stretta ? 7 : 12;
+    return stretta ? 8 : 10;
+  }
+  function indiceOraLocale(loc, iso) {
+    if (!loc || !loc.orari || !loc.orari.length) return -1;
+    var i, meglio = 0, dist = Infinity, d;
+    for (i = 0; i < loc.orari.length; i++) {
+      if (loc.orari[i] === iso) return i;
+      if (iso) {
+        d = Math.abs(Date.parse(loc.orari[i]) - Date.parse(iso));
+        if (d < dist) { dist = d; meglio = i; }
       }
     }
+    return iso ? meglio : 0;
+  }
+  function ancoreScheda(xy, w, h, preferita) {
+    var g = 8;
+    var tutte = {
+      s: { x: xy[0] - w / 2, y: xy[1] + g },
+      n: { x: xy[0] - w / 2, y: xy[1] - h - g },
+      e: { x: xy[0] + g, y: xy[1] - h / 2 },
+      w: { x: xy[0] - w - g, y: xy[1] - h / 2 },
+      ne: { x: xy[0] + g, y: xy[1] - h - g },
+      nw: { x: xy[0] - w - g, y: xy[1] - h - g },
+      se: { x: xy[0] + g, y: xy[1] + g },
+      sw: { x: xy[0] - w - g, y: xy[1] + g }
+    };
+    var ordine = [preferita || 's', 's', 'n', 'e', 'w', 'ne', 'nw', 'se', 'sw'];
+    var out = [], visti = {}, i, k;
+    for (i = 0; i < ordine.length; i++) {
+      k = ordine[i];
+      if (!tutte[k] || visti[k]) continue;
+      visti[k] = true;
+      out.push(tutte[k]);
+    }
+    return out;
+  }
+  function distanzaMinimaComuni(vista, locali) {
+    var min = Infinity, i, j, a, b, dx, dy, d;
+    for (i = 0; i < locali.length; i++) {
+      a = vista.xy(locali[i].lat, locali[i].lon);
+      for (j = i + 1; j < locali.length; j++) {
+        b = vista.xy(locali[j].lat, locali[j].lon);
+        dx = a[0] - b[0]; dy = a[1] - b[1];
+        d = Math.sqrt(dx * dx + dy * dy);
+        if (d < min) min = d;
+      }
+    }
+    return min;
+  }
+  function disegnaSchedeTempo(ctx, vista, stato, opts) {
+    var locali = (stato && stato.locali) || [];
+    if (!locali.length) return;
+    var iso = (stato.orari && stato.orari[stato.indice]) || null;
+    var stretta = eVistaStretta(vista);
+    var dist = distanzaMinimaComuni(vista, locali);
+    var denso = dist < 110;
+    var iconS = stretta ? 40 : (denso ? 44 : 56);
+    if (denso && stretta) iconS = 36;
+    var maxN = massimoSchede(vista);
+    var occupati = [];
+    if (opts && opts.decorazioni) {
+      var ml = misureLegendaTempo(vista);
+      occupati.push({ x: ml.x - 4, y: ml.y - 4, w: ml.w + 8, h: ml.h + 8 });
+    }
+    occupati.push({ x: 0, y: 0, w: 44, h: 80 });
+    var elenco = locali.slice().sort(function (a, b) { return (a.priorita || 99) - (b.priorita || 99); });
+    var schede = [], i, loc, idx, code, temp, cat, nome, testo, tw, cardW, cardH, xy, ancore, a, k, ok, box, img, cape;
+    ctx.save();
+    ctx.font = (stretta ? '11' : '12') + 'px Titillium Web, Arial, sans-serif';
+    for (i = 0; i < elenco.length && schede.length < maxN; i++) {
+      loc = elenco[i];
+      idx = indiceOraLocale(loc, iso);
+      if (idx < 0) continue;
+      code = (loc.code && loc.code[idx] !== null && typeof loc.code[idx] !== 'undefined') ? loc.code[idx] : null;
+      temp = (loc.temp && loc.temp[idx] !== null && typeof loc.temp[idx] !== 'undefined') ? loc.temp[idx] : null;
+      cat = raffinaCategoria(
+        categoriaDaCodice(code),
+        (loc.snow && loc.snow[idx]) || 0,
+        0
+      );
+      if (!cat && code === null && temp === null) continue;
+      xy = vista.xy(loc.lat, loc.lon);
+      if (xy[0] < 10 || xy[1] < 10 || xy[0] > vista.w - 10 || xy[1] > vista.h - 10) continue;
+      nome = loc.etichetta || loc.nome;
+      testo = nome + (temp !== null ? '  ' + Math.round(temp) + '°' : '');
+      ctx.font = 'bold ' + (stretta ? '11' : '13') + 'px Titillium Web, Arial, sans-serif';
+      tw = ctx.measureText(testo).width;
+      cardW = Math.max(iconS + 14, tw + 16);
+      if (cardW > 150) cardW = 150;
+      cardH = iconS + 10 + 22;
+      ancore = ancoreScheda(xy, cardW, cardH, loc.allinea || 's');
+      ok = false;
+      for (k = 0; k < ancore.length; k++) {
+        a = ancore[k];
+        if (a.x < 4 || a.y < 4 || a.x + cardW > vista.w - 4 || a.y + cardH > vista.h - 4) continue;
+        box = { x: a.x, y: a.y, w: cardW, h: cardH };
+        var collision = false, o;
+        for (o = 0; o < occupati.length; o++) {
+          if (rettangoliSovrapposti(box, occupati[o], denso ? 2 : 4)) { collision = true; break; }
+        }
+        if (collision) continue;
+        ok = true;
+        occupati.push(box);
+        schede.push({ loc: loc, xy: xy, box: box, cat: cat, code: code, temp: temp, testo: testo, iconS: iconS });
+        break;
+      }
+    }
+    for (i = 0; i < schede.length; i++) {
+      var s = schede[i];
+      ctx.beginPath();
+      ctx.arc(s.xy[0], s.xy[1], s.loc.evidenziato ? 4.5 : 3, 0, Math.PI * 2);
+      ctx.fillStyle = s.loc.evidenziato ? '#003366' : 'rgba(26,26,26,0.85)';
+      ctx.fill();
+      ctx.strokeStyle = s.loc.evidenziato ? '#ffbe2e' : '#ffffff';
+      ctx.lineWidth = s.loc.evidenziato ? 2 : 1.2;
+      ctx.stroke();
+    }
+    for (i = 0; i < schede.length; i++) {
+      s = schede[i];
+      box = s.box;
+      ctx.save();
+      ctx.fillStyle = 'rgba(0, 31, 63, 0.16)';
+      rettangoloArrotondato(ctx, box.x + 2, box.y + 3, box.w, box.h, 10);
+      ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,0.96)';
+      rettangoloArrotondato(ctx, box.x, box.y, box.w, box.h, 10);
+      ctx.fill();
+      ctx.strokeStyle = s.loc.evidenziato ? '#ffbe2e' : 'rgba(0,51,102,0.28)';
+      ctx.lineWidth = s.loc.evidenziato ? 1.8 : 1;
+      ctx.stroke();
+      img = s.cat ? iconeTempo[s.cat] : null;
+      if (img) ctx.drawImage(img, box.x + (box.w - s.iconS) / 2, box.y + 5, s.iconS, s.iconS);
+      cape = (s.loc.cape && s.cat === 'temporale') ? s.loc.cape[indiceOraLocale(s.loc, iso)] : null;
+      if (s.cat === 'temporale' && cape !== null && typeof cape !== 'undefined' && cape >= 1000) {
+        ctx.beginPath();
+        ctx.moveTo(box.x + box.w - 14, box.y + 10);
+        ctx.lineTo(box.x + box.w - 4, box.y + 10);
+        ctx.lineTo(box.x + box.w - 9, box.y + 2);
+        ctx.closePath();
+        ctx.fillStyle = '#b45309';
+        ctx.fill();
+      }
+      ctx.fillStyle = s.loc.evidenziato ? '#003366' : '#1a1a1a';
+      ctx.font = 'bold ' + (stretta ? '11' : '13') + 'px Titillium Web, Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(s.testo, box.x + box.w / 2, box.y + s.iconS + 14, box.w - 10);
+      ctx.restore();
+    }
+    ctx.restore();
   }
   function disegnaVista(ctx, vista, stato, opts) {
 
@@ -1245,7 +1492,8 @@
       disegnaComuni(ctx, vista);
       return;
     }
-    disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, stato.variabile.tempo ? 0.62 : 0.84);
+    disegnaCampo(ctx, vista, stato.matrice, stato.variabile.scala, stato.variabile.tempo ? 0.72 : 0.84);
+    applicaSfocatura(ctx, vista.w, vista.h, raggioSfocatura());
     disegnaHillshade(ctx, vista);
     disegnaConfini(ctx, vista);
     disegnaLaghi(ctx, vista);
@@ -1253,9 +1501,13 @@
     if (stato.variabile.vento && (opts.frecce || !particelleAttive() || motoRidotto())) {
       disegnaFrecce(ctx, vista, stato.matrice);
     }
-    if (stato.variabile.tempo) disegnaIconeTempo(ctx, vista, stato.matrice);
-    disegnaEtichetteLaghi(ctx, vista);
-    disegnaComuni(ctx, vista);
+    if (stato.variabile.tempo) {
+      disegnaEtichetteLaghi(ctx, vista);
+      disegnaSchedeTempo(ctx, vista, stato, opts);
+    } else {
+      disegnaEtichetteLaghi(ctx, vista);
+      disegnaComuni(ctx, vista);
+    }
     if (opts.decorazioni) disegnaDecorazioni(ctx, vista, stato);
   }
   function disegnaHillshade(ctx, vista) {
@@ -1269,12 +1521,13 @@
     var h = Math.abs(p1[1] - p0[1]);
     if (w < 8 || h < 8) return;
     ctx.save();
-    ctx.globalAlpha = 0.34;
+    ctx.globalAlpha = 0.40;
     ctx.globalCompositeOperation = 'multiply';
     try { ctx.drawImage(hillshadeImg, x, y, w, h); } catch (e) {}
     ctx.restore();
   }
   function disegnaLaghi(ctx, vista) {
+    if (!dominioCorrente().laghi) return;
     if (!laghiGeo || !laghiGeo.features) return;
     var i, f, nome, xy, c;
     ctx.save();
@@ -1293,6 +1546,7 @@
     ctx.restore();
   }
   function disegnaEtichetteLaghi(ctx, vista) {
+    if (!dominioCorrente().laghi) return;
     if (!laghiGeo || !laghiGeo.features) return;
     var i, f, nome, xy, c, tw;
     ctx.save();
@@ -1331,9 +1585,11 @@
     return { lat: sommaLat / n, lon: sommaLon / n };
   }
   function disegnaComuni(ctx, vista) {
-    var comuni = dominioCorrente().comuni || [];
+    var comuni = (dominioCorrente().comuni || []).slice();
     if (!comuni.length) return;
-    var i, c, xy, allinea, evid, r, testo, tw, tx, ty, ax, ay;
+    comuni.sort(function (a, b) { return (a.priorita || 99) - (b.priorita || 99); });
+    var i, c, xy, allinea, evid, r, testo, tw, tx, ty, ax, ay, box;
+    var occupati = [];
     ctx.save();
     ctx.font = 'bold 12px Titillium Web, Arial, sans-serif';
     ctx.textBaseline = 'middle';
@@ -1350,7 +1606,7 @@
       ctx.strokeStyle = evid ? '#ffbe2e' : '#ffffff';
       ctx.lineWidth = evid ? 2 : 1.2;
       ctx.stroke();
-      testo = c.nome;
+      testo = c.etichetta || c.nome;
       tw = ctx.measureText(testo).width;
       allinea = c.allinea || 'e';
       ax = 0; ay = 0;
@@ -1365,10 +1621,17 @@
       else if (allinea === 'sw') { ctx.textAlign = 'right'; ax = -r - 4; ay = r + 6; }
       tx = xy[0] + ax;
       ty = xy[1] + ay;
+      if (ctx.textAlign === 'center') box = { x: tx - tw / 2 - 2, y: ty - 7, w: tw + 4, h: 14 };
+      else if (ctx.textAlign === 'right') box = { x: tx - tw - 2, y: ty - 7, w: tw + 4, h: 14 };
+      else box = { x: tx - 2, y: ty - 7, w: tw + 4, h: 14 };
+      var collision = false, o;
+      for (o = 0; o < occupati.length; o++) {
+        if (rettangoliSovrapposti(box, occupati[o], 2)) { collision = true; break; }
+      }
+      if (collision) continue;
+      occupati.push(box);
       ctx.fillStyle = 'rgba(255,255,255,0.86)';
-      if (ctx.textAlign === 'center') ctx.fillRect(tx - tw / 2 - 2, ty - 7, tw + 4, 14);
-      else if (ctx.textAlign === 'right') ctx.fillRect(tx - tw - 2, ty - 7, tw + 4, 14);
-      else ctx.fillRect(tx - 2, ty - 7, tw + 4, 14);
+      ctx.fillRect(box.x, box.y, box.w, box.h);
       ctx.fillStyle = evid ? '#003366' : '#1a1a1a';
       ctx.fillText(testo, tx, ty);
     }
@@ -1669,6 +1932,59 @@
     return dominioId + '|' + modelId + '|' + varId + '|' + giorni;
   }
 
+  function scaricaLocali(mid, giorni) {
+    var comuni = (dominioCorrente().comuni || []).slice();
+    if (!comuni.length) return Promise.resolve([]);
+    var lats = [], lons = [], i;
+    for (i = 0; i < comuni.length; i++) {
+      lats.push(comuni[i].lat);
+      lons.push(comuni[i].lon);
+    }
+    var candidati = [
+      'weather_code,temperature_2m,precipitation,cloud_cover,snowfall,cape',
+      'weather_code,temperature_2m,precipitation,cloud_cover',
+      'weather_code,temperature_2m'
+    ];
+    function urlCampi(campi) {
+      return API + '?latitude=' + lats.join(',') +
+        '&longitude=' + lons.join(',') +
+        '&hourly=' + encodeURIComponent(campi) +
+        '&forecast_days=' + giorni +
+        '&timezone=' + encodeURIComponent(TZ) +
+        '&cell_selection=nearest' +
+        '&models=' + encodeURIComponent(mid);
+    }
+    function prova(idx) {
+      return fetchJson(urlCampi(candidati[idx])).catch(function (err) {
+        if (idx < candidati.length - 1) return prova(idx + 1);
+        throw err;
+      });
+    }
+    return prova(0).then(function (body) {
+      var lista = Array.isArray(body) ? body : [body];
+      var out = [], d, h, c;
+      for (i = 0; i < comuni.length; i++) {
+        c = comuni[i];
+        d = lista[i] || {};
+        h = d.hourly || {};
+        out.push({
+          nome: c.nome,
+          etichetta: c.etichetta || c.nome,
+          lat: c.lat,
+          lon: c.lon,
+          allinea: c.allinea || 's',
+          evidenziato: !!c.evidenziato,
+          priorita: c.priorita || (i + 20),
+          orari: h.time || [],
+          code: h.weather_code || [],
+          temp: h.temperature_2m || [],
+          cape: h.cape || [],
+          snow: h.snowfall || []
+        });
+      }
+      return out;
+    }).catch(function () { return []; });
+  }
   function caricaGriglia(target, opzioni) {
     opzioni = opzioni || {};
     var isB = target === 'b';
@@ -1699,7 +2015,7 @@
     }
     function scopriCampiTempo(modelId) {
       if (campiTempoPerModello[modelId]) return Promise.resolve(campiTempoPerModello[modelId]);
-      var candidati = ['weather_code', 'precipitation', 'snowfall', 'cape', 'showers'];
+      var candidati = ['weather_code', 'cloud_cover', 'precipitation', 'snowfall', 'cape', 'showers'];
       function prova(lista) {
         var url = API + '?latitude=' + GENZANO.lat + '&longitude=' + GENZANO.lon +
           '&hourly=' + encodeURIComponent(lista.join(',')) +
@@ -1779,16 +2095,21 @@
           prec: h.precipitation || null,
           snow: h.snowfall || null,
           cape: h.cape || null,
-          showers: h.showers || null
+          showers: h.showers || null,
+          nubi: h.cloud_cover || null
         });
       }
       if (!orari || !orari.length || tuttiNull || !punti.length) {
         if (!isB) marcaNonDisponibile(mid, vid);
         throw new Error('Questa grandezza non è disponibile per il modello scelto, oppure il modello non copre l\'Italia in questo punto.');
       }
-      var pacchetto = { punti: punti, orari: orari, scaricatoIl: new Date(), fuoriDominio: punti.length < puntiBase.length * 0.7 };
-      cache[key] = pacchetto;
-      applicaDati(pacchetto, variabile, modello, target, opzioni.mantieniOra);
+      var pacchetto = { punti: punti, orari: orari, scaricatoIl: new Date(), fuoriDominio: punti.length < puntiBase.length * 0.7, locali: [] };
+      var dopo = variabile.tempo ? scaricaLocali(mid, giorni) : Promise.resolve([]);
+      return dopo.then(function (locali) {
+        pacchetto.locali = locali || [];
+        cache[key] = pacchetto;
+        applicaDati(pacchetto, variabile, modello, target, opzioni.mantieniOra);
+      });
     }).catch(function (err) {
       var msg = (err && err.message) ? err.message : 'Non è stato possibile scaricare i dati.';
       if (err && err.reason && /hourly|invalid string|weather variable/i.test(err.reason)) {
@@ -1812,6 +2133,7 @@
     stato.variabile = variabile;
     stato.modello = modello;
     stato.scaricatoIl = pacchetto.scaricatoIl;
+    stato.locali = pacchetto.locali || [];
     var indici = [];
     for (var i = 0; i < pacchetto.orari.length; i++) {
       if (i % 3 === 0 || i === pacchetto.orari.length - 1) indici.push(i);
@@ -1913,7 +2235,7 @@
       scala.appendChild(griglia);
       var nota = document.createElement('p');
       nota.className = 'cmi-legenda-note';
-      nota.textContent = "I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un'allerta ufficiale.";
+      nota.textContent = "Le icone mostrano il tempo e la temperatura nel comune, sul punto esatto dell'abitato. Lo sfondo morbido indica nuvolosità e precipitazioni in modo continuo. I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un'allerta ufficiale.";
       scala.appendChild(nota);
       return;
     }
@@ -1946,6 +2268,11 @@
   }
   function assicuraMarcatoreGenzano() {
     if (!window.L) return;
+    if (statoMappa.variabile && statoMappa.variabile.tempo) {
+      if (markerGenzano && mappa) { mappa.removeLayer(markerGenzano); markerGenzano = null; }
+      if (markerGenzanoB && mappaB) { mappaB.removeLayer(markerGenzanoB); markerGenzanoB = null; }
+      return;
+    }
     var opt = { radius: 6, color: '#ffbe2e', weight: 2, fillColor: '#003366', fillOpacity: 1 };
     if (mappa) {
       if (markerGenzano) mappa.removeLayer(markerGenzano);
