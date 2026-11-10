@@ -1,19 +1,19 @@
 {
-  "aggiornato": "2026-11-10T10:14:19+00:00",
+  "aggiornato": "2026-11-10T13:42:01+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-11-10T10:08:11Z",
+      "ultimo_run": "2026-11-10T13:12:55Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
       "stato": "success",
-      "ultimo_run": "2026-11-10T10:10:30Z",
+      "ultimo_run": "2026-11-10T13:40:31Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
@@ -27,14 +27,14 @@
       "nome": "Verifica dopo la pubblicazione",
       "file": "smoke-test-post-deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-11-10T08:45:51Z",
+      "ultimo_run": "2026-11-10T11:17:48Z",
       "descrizione": "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
     },
     {
       "nome": "Allineamento delle pagine online",
       "file": "verifica-deploy-aruba.yml",
       "stato": "success",
-      "ultimo_run": "2026-11-10T08:46:07Z",
+      "ultimo_run": "2026-11-10T11:17:48Z",
       "descrizione": "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
     },
     {
