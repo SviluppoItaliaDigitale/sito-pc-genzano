@@ -1,0 +1,76 @@
+{
+  "versione": 1,
+  "emesso_il": "2026-11-10T12:00:00+01:00",
+  "validita_da": "2026-11-10",
+  "validita_a": "2026-11-14",
+  "autore": "Grok Bot",
+  "modelli_consultati": [
+    "ECMWF IFS HRES 9 km",
+    "DWD ICON-EU",
+    "NCEP GFS"
+  ],
+  "fonte_dati": "Open-Meteo (https://open-meteo.com/), licenza CC BY 4.0. Valori letti la mattina del 10 novembre 2026, orari in Europe/Rome.",
+  "situazione_generale": "Martedì 10 novembre la pressione al livello del mare è ancora relativamente alta sulla penisola, intorno a 1020-1024 hPa al mattino, ma è in calo nel corso della giornata, verso 1011-1015 hPa la sera. I tre modelli consultati (ECMWF IFS a 9 km, ICON-EU e GFS) descrivono l'arrivo di una perturbazione atlantica. Oggi i fenomeni più organizzati e i temporali riguardano soprattutto il Centro, in particolare Toscana, Umbria e il versante adriatico. Da giovedì 12 e venerdì 13 novembre il peggioramento è più marcato al Nord-Est, in Liguria e su parte del Centro, con accumuli abbondanti e raffiche sostenute. I modelli sono d'accordo sulla tendenza, ma divergono sugli accumuli e sull'intensità del vento: ICON è in genere più severo di ECMWF e GFS, soprattutto sulle raffiche. Il Sud estremo e la Sicilia restano in gran parte asciutti e più miti. Questi numeri sono previsioni modellistiche e non costituiscono un'allerta ufficiale.",
+  "giorni": [
+    {
+      "data": "2026-11-10",
+      "titolo": "Martedì 10 novembre",
+      "aree": {
+        "nord": "Al Nord-Ovest cielo coperto, con foschia o nebbia soprattutto fra Torino e la pianura: poca o nessuna pioggia, massime in pianura intorno a 10-13 °C. A Milano gli accumuli restano sotto 1 mm. In Emilia e al Nord-Est la pioggia è più insistente: a Bologna i modelli indicano circa 14 mm e a Trieste tra circa 13 e 40 mm, a seconda del modello, con massime ferme a 10-13 °C. Su Genova rovesci deboli o moderati, in genere pochi millimetri per ECMWF e ICON, più abbondanti secondo GFS. Venti deboli in pianura, un po' più vivi sul litorale ligure.",
+        "centro": "Giornata perturbata. Su Firenze e Perugia i modelli indicano temporali o rovesci frequenti, con accumuli tipicamente fra 18 e 30 mm e pioggia su molte ore. Anche Ancona è interessata, con valori intorno a 18 mm secondo ECMWF. Su Roma i rovesci sono più deboli, intorno a 6 mm, con massime vicine a 20 °C. In Abruzzo, all'Aquila, piogge deboli o moderate e un'escursione termica più ampia, da circa 7 °C al mattino a 16-17 °C.",
+        "sud": "Fenomeni deboli o assenti. Su Napoli possibile qualche rovescio debole, intorno a 2 mm, con raffiche in serata che possono superare i 50 km/h. Bari resta quasi asciutta, con temperature fra 13 e 19 °C. Sulla Calabria meridionale cielo coperto o nebbia, senza pioggia di rilievo, e valori fra 17 e 21 °C.",
+        "isole": "Sicilia in gran parte asciutta e mite: a Palermo massime intorno a 26 °C, a Catania intorno a 24 °C, con cielo da nuvoloso a poco nuvoloso e qualche raffica. In Sardegna, a Cagliari, possibile una debole pioviggine (meno di 1 mm) e temperature fra 18 e 23 °C.",
+        "lazio": "Cielo coperto e rovesci sparsi. A Genzano di Roma la minima è intorno a 11-12 °C e la massima intorno a 16 °C, con circa 6-9 mm in molte ore e raffiche che possono avvicinarsi o superare i 50 km/h: ICON le vede più sostenute rispetto a ECMWF e GFS. Roma è un po' più mite, 15-20 °C, con accumuli intorno a 6 mm. Latina ha un quadro simile a Roma."
+      }
+    },
+    {
+      "data": "2026-11-11",
+      "titolo": "Mercoledì 11 novembre",
+      "aree": {
+        "nord": "Tregua parziale rispetto a martedì, ma non ovunque. Al Nord-Ovest ancora foschia o nebbia, con cielo coperto e poca pioggia; a Torino la giornata può restare asciutta, con 5-12 °C. A Milano accumuli molto bassi e massime intorno a 11 °C. In Emilia restano i rovesci, intorno a 6-7 mm a Bologna. A Genova piogge deboli o sparse. A Trieste la pioggia può continuare, con accumuli ancora a due cifre secondo i modelli.",
+        "centro": "I fenomeni si attenuano rispetto a martedì, ma non spariscono. A Firenze sono ancora possibili rovesci, con accumuli intorno a 7-11 mm. Su Roma e i Castelli Romani restano al più deboli pioviggini, sotto 1 mm, e le massime salgono un poco, verso 18-22 °C. All'Aquila piogge deboli.",
+        "sud": "Su Napoli possibili rovesci, intorno a 4-5 mm. Bari resta quasi asciutta e più mite, con massime che possono avvicinarsi a 24 °C. Sulla Calabria meridionale prevale il cielo nuvoloso o poco nuvoloso, senza pioggia di rilievo.",
+        "isole": "Ancora un giorno in gran parte asciutto e mite sulla Sicilia e sulla Sardegna, con massime spesso fra 22 e 25 °C e vento in genere più debole rispetto a martedì.",
+        "lazio": "Attenuazione. A Genzano di Roma e a Roma restano al più deboli residui, sotto 1 mm, con cielo ancora nuvoloso e massime intorno a 17-18 °C sui Castelli e vicine a 21-22 °C a Roma. Vento in calo rispetto a martedì, anche se ICON mantiene raffiche ancora sostenute."
+      }
+    },
+    {
+      "data": "2026-11-12",
+      "titolo": "Giovedì 12 novembre",
+      "aree": {
+        "nord": "Peggioramento più netto, sul quale i tre modelli concordano. Al Nord-Est e in Liguria gli accumuli diventano abbondanti: a Genova i modelli indicano all'incirca 34-60 mm, a Venezia 26-37 mm, a Trieste intorno a 26-51 mm, a Milano 19-48 mm. A Bologna la pioggia resta significativa, intorno a 10 mm. A Torino rovesci più contenuti, intorno a 8 mm. In pianura le massime restano basse, in genere 10-13 °C. Il vento rinforza, soprattutto verso il Golfo di Trieste e il litorale.",
+        "centro": "Nuova fase instabile, con rovesci e temporali. A Firenze gli accumuli tornano consistenti, fra circa 18 e 32 mm a seconda del modello. Anche Perugia è interessata da temporali e da vento in rinforzo. Su Roma i rovesci sono in genere più deboli, pochi millimetri, ma con raffiche sostenute. Temperature ancora miti, con minime intorno a 15-17 °C e massime vicine a 18-21 °C.",
+        "sud": "Meno pioggia rispetto al Centro e al Nord-Est, ma con vento in aumento. A Napoli possibili rovesci, intorno a 4 mm, e raffiche oltre 50 km/h. Bari resta quasi asciutta, con vento sostenuto e massime ancora miti, intorno a 24 °C. In Calabria meridionale poca o nessuna pioggia, ma raffiche in rinforzo.",
+        "isole": "Sicilia ancora in gran parte asciutta e mite. Il segnale principale è il vento: a Palermo le raffiche possono superare i 50-60 km/h. In Sardegna, a Cagliari, possibile qualche debole rovescio e vento in rinforzo, con massime intorno a 24 °C.",
+        "lazio": "Rovesci e temporali, più evidenti sui Castelli che sul litorale romano. A Genzano di Roma ECMWF indica circa 9 mm e temporali, GFS circa 15 mm, ICON valori più alti, intorno a 19 mm. Le raffiche sono il punto di maggiore incertezza: ECMWF le porta verso 75 km/h, GFS intorno a 50 km/h, ICON ancora più alte. Temperature fra 16 e 18 °C a Genzano e fra 16 e 21 °C a Roma. È un giorno da seguire sui bollettini ufficiali prima di spostamenti."
+      }
+    },
+    {
+      "data": "2026-11-13",
+      "titolo": "Venerdì 13 novembre",
+      "aree": {
+        "nord": "L'instabilità resta forte al Nord-Est e in Emilia, mentre il Nord-Ovest migliora. A Trieste i modelli indicano ancora accumuli molto abbondanti, all'incirca 40-64 mm, con temporali e raffiche che possono superare i 60 km/h e, in ICON ed ECMWF, avvicinarsi o superare i 80 km/h. A Venezia ulteriori 10-40 mm e vento sostenuto. A Bologna la pioggia può essere persistente, con valori anche superiori a 40 mm secondo ECMWF. A Milano e Torino i fenomeni si attenuano, con poca pioggia e massime in lieve rialzo, verso 15-16 °C.",
+        "centro": "Ancora una giornata instabile. Su Firenze e Perugia restano rovesci o temporali, con accumuli ancora consistenti, da circa 19 mm fino a oltre 40 mm in Umbria secondo ECMWF. Su Roma possibili rovesci, intorno a 12 mm. Temperature in lieve calo rispetto a giovedì verso sera, ma ancora miti al mattino.",
+        "sud": "Su Napoli possibili temporali o rovesci, con accumuli intorno a 7 mm e raffiche ancora sostenute, oltre 50-60 km/h. Bari quasi asciutta e ancora mite, con massime intorno a 23 °C. In Calabria meridionale poca pioggia.",
+        "isole": "Poca pioggia. A Palermo possibile qualche debole rovescio, intorno a 1 mm, e raffiche ancora sostenute. Cagliari in un quadro simile, con al più 1 mm e vento vivo. Temperature ancora miti, in lieve calo rispetto ai giorni precedenti.",
+        "lazio": "Ancora instabile, con rovesci o temporali. A Genzano di Roma gli accumuli restano intorno a 8-18 mm a seconda del modello, con raffiche ancora sostenute e incertezza fra i modelli. A Roma circa 12 mm e massime vicine a 21-22 °C. È il secondo giorno consecutivo da verificare sui bollettini ufficiali."
+      }
+    },
+    {
+      "data": "2026-11-14",
+      "titolo": "Sabato 14 novembre",
+      "aree": {
+        "nord": "Miglioramento al Nord-Est e in pianura padana, con poca o nessuna pioggia a Milano, Venezia e Trieste. Resta però vento sostenuto, in particolare verso Trieste, dove le raffiche possono restare elevate anche a cielo in miglioramento, come accade dopo il passaggio di una perturbazione. A Bologna possibili residui, pochi millimetri. A Torino qualche rovescio ancora possibile. Temperature in calo, con minime in pianura intorno a 4-6 °C e massime intorno a 11-13 °C.",
+        "centro": "I residui più evidenti restano al Centro, soprattutto in Umbria e sui rilievi. A Perugia i modelli possono ancora indicare accumuli consistenti. A Firenze la pioggia si attenua. Su Roma possibili ulteriori rovesci, intorno a 10-15 mm secondo ECMWF, con massime in calo verso 18 °C.",
+        "sud": "Fenomeni in attenuazione. A Napoli piogge deboli o moderate, intorno a 6 mm. Bari con poca pioggia e massime ancora miti, intorno a 22 °C. Calabria meridionale in prevalenza asciutta.",
+        "isole": "Quadro in gran parte asciutto sulla Sicilia. In Sardegna, a Cagliari, possibili ancora alcuni millimetri. Temperature in lieve calo, con massime in genere fra 21 e 23 °C.",
+        "lazio": "Residui ancora possibili, più evidenti sui Castelli che non al Nord. A Genzano di Roma ECMWF indica ancora accumuli intorno a 20 mm e massime in calo, verso 13 °C; GFS e ICON sono più asciutti, con pochi millimetri o meno. È un disaccordo da tenere presente: la tendenza più sicura è il calo termico, non l'ammontare esatto della pioggia. A Roma massime verso 18 °C e possibili ulteriori rovesci."
+      }
+    }
+  ],
+  "avvisi_e_note": [
+    "Questo bollettino non è un'allerta ufficiale e non assegna i colori del sistema di allertamento. Per lo stato di allerta a Genzano di Roma e nel Lazio consulta la pagina [Allerte meteo](/allerte-meteo/) del sito e i bollettini del [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti). In emergenza chiama il 112.",
+    "I tre modelli concordano sulla tendenza: fenomeni al Centro già oggi, tregua parziale mercoledì, peggioramento più deciso giovedì e venerdì al Nord-Est, in Liguria e su parte del Centro, poi miglioramento sabato al Nord con residui possibili al Centro. Divergono invece sugli accumuli e sulle raffiche, in particolare a Trieste, Genova, Bologna e sui Castelli Romani. ICON è in genere il più severo.",
+    "I valori citati sono previsioni modellistiche lette da Open-Meteo la mattina del 10 novembre 2026 e vanno considerati indicativi. La previsione scritta va aggiornata ogni giorno."
+  ]
+}

@@ -1,0 +1,179 @@
+{{ define "main" }}
+{{- $b := .Site.Data.previsioni.bollettino -}}
+{{- $areeOrdine := slice "nord" "centro" "sud" "isole" "lazio" -}}
+{{- $areeNomi := dict "nord" "Nord" "centro" "Centro" "sud" "Sud" "isole" "Isole maggiori" "lazio" "Lazio e Castelli Romani" -}}
+<link rel="stylesheet" href="{{ "vendor/leaflet/leaflet.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/cartina-meteo-italia.css" | relURL }}">
+
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+
+<div class="container py-4 cmi-pagina">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+
+      <div class="list-intro-content">{{ .Content }}</div>
+
+      <section class="cmi-sezione" id="cartina-interattiva" aria-labelledby="cmi-cartina-titolo">
+        <h2 id="cmi-cartina-titolo">Cartina interattiva dell'Italia</h2>
+        <p>Scegli un modello e una grandezza, poi sposta il cursore sulle ore di previsione. Il colore sulla cartina è calcolato su una griglia di punti e interpolato: è una lettura sinottica, non una previsione puntuale per ogni comune. I modelli a dominio limitato lasciano senza colore le zone che non coprono.</p>
+
+        <form class="cmi-comandi" id="cmi-comandi" aria-controls="cmi-mappa">
+          <div class="cmi-campo">
+            <label for="cmi-modello">Modello</label>
+            <select id="cmi-modello" name="modello"></select>
+            <p class="cmi-modello-info" id="cmi-modello-info"></p>
+          </div>
+          <div class="cmi-campo">
+            <label for="cmi-variabile">Grandezza</label>
+            <select id="cmi-variabile" name="variabile"></select>
+            <p class="cmi-variabile-info" id="cmi-variabile-info"></p>
+          </div>
+        </form>
+
+        <div class="cmi-tempo">
+          <div class="cmi-tempo-azioni">
+            <button type="button" class="btn btn-primary" id="cmi-play" aria-pressed="false">
+              <i class="bi bi-play-fill" aria-hidden="true"></i>
+              <span id="cmi-play-etichetta">Avvia animazione</span>
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-precedente">Ora precedente</button>
+            <button type="button" class="btn btn-outline-primary" id="cmi-successiva">Ora successiva</button>
+          </div>
+          <div class="cmi-cursore">
+            <label for="cmi-ora">Ora di previsione: <strong id="cmi-ora-etichetta">—</strong></label>
+            <input type="range" id="cmi-ora" name="ora" min="0" max="0" value="0" step="1" disabled>
+          </div>
+        </div>
+
+        <p class="cmi-stato" id="cmi-stato" role="status" aria-live="polite"></p>
+
+        <div class="cmi-mappa-wrap">
+          <div id="cmi-mappa" role="application" aria-label="Cartina meteorologica interattiva dell'Italia. I valori sono descritti anche nella legenda e nello stato sopra la mappa."></div>
+          <div class="cmi-legenda" id="cmi-legenda" aria-label="Legenda della scala di colori">
+            <p class="cmi-legenda-titolo" id="cmi-legenda-titolo">Legenda</p>
+            <div class="cmi-legenda-scala" id="cmi-legenda-scala"></div>
+          </div>
+        </div>
+
+        <p class="cmi-corsa small text-muted" id="cmi-corsa"></p>
+
+        <noscript>
+          <div class="alert alert-warning" role="note">
+            Per usare la cartina interattiva serve JavaScript. Il bollettino scritto è comunque leggibile qui sotto. Per le allerte ufficiali vai alla pagina <a href="{{ "allerte-meteo/" | relURL }}">Allerte meteo</a>.
+          </div>
+        </noscript>
+      </section>
+
+      <section class="cmi-sezione cmi-bollettino" id="previsioni-meteo-italia" aria-labelledby="cmi-bollettino-titolo">
+        <div class="cmi-bollettino-testata">
+          <p class="cmi-bollettino-kicker">Bollettino</p>
+          <h2 id="cmi-bollettino-titolo">Previsioni meteo per l'Italia</h2>
+          {{- if $b }}
+          <p class="cmi-bollettino-meta">
+            Emesso il <time datetime="{{ $b.emesso_il }}" id="cmi-emesso-il">{{ $b.emesso_il }}</time>
+            · Valido dal {{ $b.validita_da }} al {{ $b.validita_a }}
+            {{- with $b.modelli_consultati }}
+            · Modelli consultati: {{ delimit . ", " }}
+            {{- end }}
+          </p>
+          {{- end }}
+        </div>
+
+        <div class="cmi-azioni-bollettino" role="group" aria-label="Azioni sul bollettino">
+          <button type="button" class="btn btn-primary" id="cmi-stampa">
+            <i class="bi bi-printer me-1" aria-hidden="true"></i>Stampa
+          </button>
+          <button type="button" class="btn btn-outline-primary" id="cmi-condividi">
+            <i class="bi bi-share me-1" aria-hidden="true"></i>Condividi
+          </button>
+          <button type="button" class="btn btn-outline-primary" id="cmi-copia-link">
+            <i class="bi bi-link-45deg me-1" aria-hidden="true"></i>Copia collegamento
+          </button>
+          <button type="button" class="btn btn-outline-primary" id="cmi-scarica">
+            <i class="bi bi-image me-1" aria-hidden="true"></i>Scarica immagine
+          </button>
+        </div>
+        <p class="cmi-condividi-esito" id="cmi-condividi-esito" role="status" aria-live="polite"></p>
+
+        <h3 class="cmi-sottotitolo">Città in diretta</h3>
+        <p>Temperature minime e massime di oggi e il tempo previsto, aggiornati dal modello ECMWF IFS a 9 km tramite Open-Meteo. Genzano di Roma è evidenziato.</p>
+        <div id="cmi-citta-stato" class="cmi-stato" role="status" aria-live="polite"></div>
+        <div class="cmi-mappa-citta-wrap">
+          <div id="cmi-mappa-citta" role="application" aria-label="Mappa delle città italiane con icona del tempo e temperature minime e massime di oggi."></div>
+        </div>
+        <div class="cmi-citta-lista" id="cmi-citta-lista">
+          <p class="text-muted" id="cmi-citta-vuoto">Caricamento delle temperature in corso…</p>
+        </div>
+
+        <h3 class="cmi-sottotitolo">I prossimi giorni a Genzano di Roma</h3>
+        <div class="cmi-schede-giorni" id="cmi-schede-giorni" aria-label="Schede giornaliere per Genzano di Roma"></div>
+
+        {{- if $b }}
+        <h3 class="cmi-sottotitolo">Situazione generale</h3>
+        <div class="cmi-situazione">
+          <p>{{ $b.situazione_generale }}</p>
+        </div>
+
+        {{- range $b.giorni }}
+        {{- $giorno := . }}
+        <article class="cmi-giorno" aria-labelledby="cmi-giorno-{{ $giorno.data }}">
+          <h3 class="cmi-giorno-titolo" id="cmi-giorno-{{ $giorno.data }}">{{ $giorno.titolo }}</h3>
+          <div class="cmi-aree">
+            {{- range $areeOrdine }}
+              {{- $chiave := . }}
+              {{- with (index $giorno.aree $chiave) }}
+              <div class="cmi-area cmi-area-{{ $chiave }}">
+                <h4>{{ index $areeNomi $chiave }}</h4>
+                <p>{{ . }}</p>
+              </div>
+              {{- end }}
+            {{- end }}
+          </div>
+        </article>
+        {{- end }}
+
+        {{- with $b.avvisi_e_note }}
+        <div class="cmi-note" role="note">
+          <h3 class="cmi-sottotitolo">Avvisi e note</h3>
+          <ul>
+            {{- range . }}
+            <li>{{ . | markdownify }}</li>
+            {{- end }}
+          </ul>
+        </div>
+        {{- end }}
+        {{- else }}
+        <div class="alert alert-warning" role="status">Il bollettino scritto non è ancora disponibile.</div>
+        {{- end }}
+      </section>
+
+      <p class="cmi-fonti small text-muted mt-4">
+        Dati modellistici: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>).
+        Cartine di base: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>, libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 conservata sul sito.
+        Allerte ufficiali: <a href="{{ "allerte-meteo/" | relURL }}">Allerte meteo</a>
+        e <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.
+        In emergenza: <strong>112</strong>.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+{{- $cfg := dict "leafletJs" ("vendor/leaflet/leaflet.js" | relURL) "logoUrl" ("images/logo-pc-genzano.png" | relURL) -}}
+{{- if $b -}}
+  {{- $bPub := dict "emesso_il" $b.emesso_il "validita_da" $b.validita_da "validita_a" $b.validita_a "situazione_generale" $b.situazione_generale -}}
+  {{- $cfg = merge $cfg (dict "bollettino" $bPub) -}}
+{{- end -}}
+<textarea id="cmi-config" class="visually-hidden" readonly hidden aria-hidden="true" tabindex="-1">{{ $cfg | jsonify }}</textarea>
+<script src="{{ "js/cartina-meteo-italia.js" | relURL }}" defer></script>
+{{ end }}
