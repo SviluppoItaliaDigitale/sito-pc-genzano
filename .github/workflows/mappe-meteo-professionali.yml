@@ -1,7 +1,7 @@
 name: "🗺️ Mappe meteo professionali (Italia)"
 
 # Elabora carte sinottiche da dati aperti (NOAA GFS, ECMWF IFS e AIFS Open Data,
-# DWD ICON-EU) e le pubblica sul ramo orfano `mappe-meteo-dati`, con un solo
+# DWD ICON-EU, ItaliaMeteo/ARPAE ICON-2I) e le pubblica sul ramo orfano `mappe-meteo-dati`, con un solo
 # commit e la storia azzerata a ogni giro. La pagina /mappe-meteo-professionali/
 # legge il manifesto da raw.githubusercontent.com.
 #
@@ -16,14 +16,14 @@ on:
   schedule:
     # Orari UTC, minuto 52 (fuori dai quarti d'ora canonici). Ogni orario
     # aspetta che la corsa sia completa fino a +120 ore:
-    #   04:52 GFS 00 e ICON-EU 00   · 08:52 ECMWF IFS e AIFS 00
-    #   10:52 GFS 06                · 16:52 GFS 12, ICON-EU 12 e AIFS 12
+    #   04:52 GFS 00, ICON-EU 00 e ICON-2I 00   · 08:52 ECMWF IFS e AIFS 00
+    #   10:52 GFS 06                · 16:52 GFS 12, ICON-EU 12, ICON-2I 12 e AIFS 12
     #   20:52 ECMWF IFS 12          · 22:52 GFS 18
     - cron: "52 4,8,10,16,20,22 * * *"
   workflow_dispatch:
     inputs:
       modelli:
-        description: "Modelli (virgola): gfs, ecmwf, ecmwf-aifs, icon-eu, oppure tutti"
+        description: "Modelli (virgola): gfs, ecmwf, ecmwf-aifs, icon-eu, icon-2i, oppure tutti"
         required: false
         default: "tutti"
       forza:

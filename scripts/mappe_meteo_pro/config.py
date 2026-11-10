@@ -177,6 +177,22 @@ MODELLI: dict[str, dict[str, Any]] = {
         "passo_ore": 6,
         "orizzonte_ore": 120,
     },
+    "icon-2i": {
+        "nome": "ICON-2I",
+        "nome_lungo": "ICON-2I (ex COSMO-2I) sull'Italia",
+        "ente": "ItaliaMeteo / ARPAE",
+        "risoluzione": "2,2 km",
+        "licenza": "CC BY 4.0",
+        "attribuzione": "ItaliaMeteo-ARPAE ICON-2I, CC BY 4.0",
+        "url_licenza": "https://dati.agenziaitaliameteo.it/dataset/previsioni-meteorologiche-modello-icon-2i",
+        "url_dati": "https://meteohub.agenziaitaliameteo.it/nwp/ICON-2I_SURFACE_PRESSURE_LEVELS/",
+        "nota": "Previsione fino a 72 ore, corse alle 00 e alle 12 UTC. Livelli di pressione pubblicati: 1000, 925, 850, 700, 500 e 250 hPa.",
+        "corse_utc": (0, 12),
+        "domini": ("italia",),
+        "ritardo_ore": 3.0,
+        "passo_ore": 6,
+        "orizzonte_ore": 72,
+    },
 }
 
 # Prodotti in stile Albany (Alicia Bentley). "richiede" elenca i campi

@@ -89,6 +89,12 @@ def elabora_modello(modello: str, ore: list[int], domini: list[str], prodotti: l
     print(f"\n=== {MODELLI[modello]['nome']} ===", flush=True)
     corsa = corsa_forzata or trova_corsa(modello)
     print(f"Corsa {corsa:%Y%m%d %H} UTC", flush=True)
+    limite = int(MODELLI[modello].get("orizzonte_ore") or 0)
+    if limite:
+        ore = [h for h in ore if 0 <= h <= limite]
+        if not ore:
+            print(f"Nessuna ora entro l'orizzonte di {limite} ore.", flush=True)
+            return {"corsa": corsa, "domini": {d: {} for d in domini}}
     extent = _union_extent(domini)
     etichetta_corsa = corsa.strftime("%Y%m%d%H")
     acc_prec = None
@@ -157,7 +163,7 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(
         description=(
             "Genera le mappe meteo professionali per l'Italia a partire da dati aperti "
-            "(GFS, ECMWF IFS/AIFS, ICON-EU)."
+            "(GFS, ECMWF IFS/AIFS, ICON-EU, ICON-2I)."
         )
     )
     p.add_argument("--modelli", default="gfs,ecmwf,icon-eu",
