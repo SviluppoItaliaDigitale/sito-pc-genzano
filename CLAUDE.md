@@ -408,7 +408,7 @@ Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. A
 
 ## Project overview
 
-Sito statico del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, Hugo + tema custom `flavour-pcgenzano` (Bootstrap Italia 2.x). Deploy a ogni push su `main` via GitHub Actions: **Aruba** (`https://www.protezionecivilegenzano.it/`, FTP) + **GitHub Pages** (`https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`). Dal 06/11/2026 la copia su GitHub Pages è alleggerita: senza video, audio, presentazioni e, se serve, i PDF e gli ZIP più pesanti, che si aprono da Aruba (`scripts/alleggerisci-copia-pages.py`, rule 05 § «Conservare immagini e allegati»). Aruba resta completo e non si tocca.
+Sito statico del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, Hugo + tema custom `flavour-pcgenzano` (Bootstrap Italia 2.x). Deploy a ogni push su `main` via GitHub Actions: **Aruba** (`https://www.protezionecivilegenzano.it/`, FTP) + **GitHub Pages** (`https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`). Dal 06/11/2026 la copia su GitHub Pages è alleggerita, e dal 10/11/2026 il taglio è più stretto perché la pubblicazione si interrompe a 10 minuti e non si può allungare: senza video, audio, presentazioni, archivi ZIP, PDF oltre 2 MB e raster non ottimizzati oltre 2 MB, che si aprono da Aruba (`scripts/alleggerisci-copia-pages.py`, rule 05 § «Conservare immagini e allegati»). Aruba resta completo e non si tocca.
 
 Architettura completa: rule `04`-`04c`. Manuali nella root: `MANUALE-SITO.md` (indice, split in `manuale/parte-NN-*.md`), `MANUALE-MOBILE.md` (workflow mobile/cloud), `PIANO-EDITORIALE.md` (fonti + calendario), `README.md`, `CONTESTO-PROGETTO.md` (export per altre AI).
 

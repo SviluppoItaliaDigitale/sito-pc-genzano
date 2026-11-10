@@ -353,15 +353,24 @@ jobs:
         # 06/11/2026: la copia per GitHub Pages pesava circa 1,9 GB, quasi il
         # doppio del limite di 1 GB di GitHub, e il 05/11/2026 tre caricamenti
         # su circa 27 sono andati oltre i 10 minuti concessi (issue #1724).
-        # Lo script toglie dalla sola copia video, audio e presentazioni, poi i
-        # PDF e gli ZIP più pesanti finché la copia resta sotto 800 MB, e porta
-        # i loro collegamenti alle copie su Aruba, così l'anteprima funziona.
+        # Dal 10/11/2026 il taglio dei soli file oltre 800 MB non basta: la
+        # copia resta circa 786 MB e l'artifact zip circa 669 MB, e il passo
+        # «Deploy GitHub Pages» si interrompe spesso con «Timeout reached,
+        # aborting!» dopo 10 minuti ancora in syncing_files (run 42785262755
+        # e 42785886025). Quei 10 minuti sono il tetto di actions/deploy-pages
+        # (MAX_TIMEOUT = 600000): un valore più alto viene ignorato e la
+        # documentazione di GitHub dice che la pubblicazione si interrompe
+        # dopo 10 minuti. Non si alza il timeout: si alleggerisce la copia.
+        # Dalla sola copia escono sempre video, audio, presentazioni, tutti
+        # gli ZIP, i PDF oltre 2 MB e i PNG/JPEG oltre 2 MB. WebP, SVG e i
+        # documenti più leggeri restano. I collegamenti portano su Aruba.
+        # Il tetto di 500 MB toglie altri PDF solo se la copia cresce ancora.
         # Il passo viene dopo il caricamento su Aruba e la sua verifica, e lo
         # script si ferma se la cartella non è la build per GitHub Pages: i file
         # sul server Aruba non si toccano (sì di Alessandro del 06/11/2026).
         # Se si ferma, o se la copia resta oltre 1 GB, l'anteprima non si
         # carica e il run diventa rosso: Aruba è già aggiornato e verificato.
-        run: python3 scripts/alleggerisci-copia-pages.py public --tetto-mb 800
+        run: python3 scripts/alleggerisci-copia-pages.py public --tetto-mb 500
 
       - name: "📜 Manifesto della build (GitHub Pages)"
         # Stesso manifesto per la copia su GitHub Pages: permette di provare la
@@ -383,4 +392,6 @@ jobs:
     steps:
       - name: "🌐 Deploy GitHub Pages"
         id: deployment
-        uses: actions/deploy-pages@v5
+        # Il timeout dell'azione è al massimo 10 minuti (600000 ms): un valore
+        # più alto viene scartato con un avviso. Vedi il passo di alleggerimento.
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
