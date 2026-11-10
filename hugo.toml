@@ -123,28 +123,40 @@ enableGitInfo = true
   weight = 3
 
 [[menus.main]]
+  name = "Cartina meteo Italia"
+  url = "/cartina-meteo-italia/"
+  parent = "per-il-cittadino"
+  weight = 4
+
+[[menus.main]]
+  name = "Mappe meteo professionali"
+  url = "/mappe-meteo-professionali/"
+  parent = "per-il-cittadino"
+  weight = 5
+
+[[menus.main]]
   name = "Rischi e Prevenzione"
   url = "/rischi-prevenzione/"
   parent = "per-il-cittadino"
-  weight = 4
+  weight = 6
 
 [[menus.main]]
   name = "Cartografia"
   url = "/cartografia/"
   parent = "per-il-cittadino"
-  weight = 5
+  weight = 7
 
 [[menus.main]]
   name = "Numeri Utili"
   url = "/numeri-utili/"
   parent = "per-il-cittadino"
-  weight = 6
+  weight = 8
 
 [[menus.main]]
   name = "Piano Familiare"
   url = "/piano-familiare/"
   parent = "per-il-cittadino"
-  weight = 7
+  weight = 9
 
 # Spostato da "Educazione e Inclusione" a maggio 2026: il Kit Calamità è
 # rivolto al cittadino in situazione di vulnerabilità (anziano in casa,
@@ -154,13 +166,13 @@ enableGitInfo = true
   name = "Kit pronti per situazioni vulnerabili"
   url = "/formazione/kit-calamita/"
   parent = "per-il-cittadino"
-  weight = 8
+  weight = 10
 
 [[menus.main]]
   name = "Cruscotto del territorio"
   url = "/cruscotto/"
   parent = "per-il-cittadino"
-  weight = 9
+  weight = 11
 
 # --- Dropdown: Per le scuole (7 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per
@@ -524,6 +536,16 @@ enableGitInfo = true
 [[menus.servizi]]
   name = "Allerte Meteo"
   url = "/allerte-meteo/"
+  weight = 5
+
+[[menus.servizi]]
+  name = "Cartina meteo Italia"
+  url = "/cartina-meteo-italia/"
+  weight = 5
+
+[[menus.servizi]]
+  name = "Mappe meteo professionali"
+  url = "/mappe-meteo-professionali/"
   weight = 5
 
 # Tassonomie

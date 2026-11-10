@@ -184,6 +184,18 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">Codici colore, sistema di allertamento, widget Windy/Radar DPC/MeteoAM, fonti ufficiali.</p>
   <span class="ms-card-arrow">Apri →</span>
 </a>
+<a class="ms-card ms-emerg" href="/cartina-meteo-italia/">
+  <div class="ms-card-icon"><i class="bi bi-cloud-sun-fill"></i></div>
+  <p class="ms-card-title">Cartina meteo Italia</p>
+  <p class="ms-card-desc">Cartina interattiva dell'Italia, del Lazio e dei Castelli Romani: modelli, tempo previsto, animazione e download.</p>
+  <span class="ms-card-arrow">Apri →</span>
+</a>
+<a class="ms-card ms-emerg" href="/mappe-meteo-professionali/">
+  <div class="ms-card-icon"><i class="bi bi-layers-fill"></i></div>
+  <p class="ms-card-title">Mappe meteo professionali</p>
+  <p class="ms-card-desc">Carte meteorologiche professionali per l'Italia, aggiornate automaticamente, da consultare, scaricare e condividere.</p>
+  <span class="ms-card-arrow">Apri →</span>
+</a>
 <a class="ms-card ms-emerg" href="/non-e-vero-che/">
   <div class="ms-card-icon"><i class="bi bi-megaphone-fill"></i></div>
   <p class="ms-card-title">Non è vero che</p>
