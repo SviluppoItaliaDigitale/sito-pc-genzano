@@ -5,16 +5,40 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-10T08:45:33+00:00",
+  "generato": "2026-11-10T08:51:34+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-11-10T08:46:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Camorra e appalti, 13 arresti c'è anche il presidente della centrale appalti della Campania",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/camorra-e-appalti-13-arresti-e-sequestro-tra-napoli-e-provincia_8c3d9e11-7107-44b2-91db-c7410fcf6426.html"
+  },
+  {
+   "data": "2026-11-10T08:42:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, evacuato aereo militare Usa da base Raf per minaccia Teheran",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-conflitto-ultime-news-oggi-10-novembre_2qHUPlVwnrB45RjcFk5axZ"
+  },
+  {
    "data": "2026-11-10T08:38:19+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Corteo per funerali pregiudicato: arcivescovo Palermo, 'aprire riflessione'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/corteo-per-funerali-pregiudicato-arcivescovo-palermo-aprire-riflessione_f9f8df74-2c9b-41f5-baa4-9619776ff97e.html"
+  },
+  {
+   "data": "2026-11-10T08:37:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Pichetto: \"Dal Decreto Bollette una riduzione del 4-5% del prezzo finale dell'energia\"",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/pichetto-dal-decreto-bollette-una-riduzione-del-4-5-del-prezzo-finale_b82bd521-c9c0-4149-a7d3-f8659452c9d7.html"
+  },
+  {
+   "data": "2026-11-10T08:37:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Nvidia e Huang citati in giudizio dagli azionisti per la relazione con la ex manager di Megaspeed",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/nvidia-e-huang-citati-in-giudizio-dagli-azionisti-per-la-relazione-con-la-ex-manager_bcc2009d-acf1-41aa-bbd3-7a65a6a40575.html"
   },
   {
    "data": "2026-11-10T08:35:00+00:00",
@@ -29,34 +53,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/minacce-iran-usa-spostano-aerei-da-seconda-base-in-gb_80d16469-b089-40b0-bbae-a4e8999e799c.html"
   },
   {
-   "data": "2026-11-10T08:29:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Pichetto: \"Dal Decreto Bollette una riduzione del 4-5% del prezzo finale dell'energia\"",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/pichetto-dal-decreto-bollette-una-riduzione-del-4-5-del-prezzo-finale_b82bd521-c9c0-4149-a7d3-f8659452c9d7.html"
-  },
-  {
-   "data": "2026-11-10T08:29:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Nvidia e Huang citati in giudizio dagli azionisti per la relazione con la ex manager di Megaspeed",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/nvidia-e-huang-citati-in-giudizio-dagli-azionisti-per-la-relazione-con-la-ex-manager_bcc2009d-acf1-41aa-bbd3-7a65a6a40575.html"
-  },
-  {
    "data": "2026-11-10T08:24:15+00:00",
    "fonte": "ANSA",
    "titolo": "Sarà possibile estendere il Fondo Nuovi Nati ai versamenti per figli minorenni",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/le-audizioni-per-la-legge-di-bilancio-alla-camera_c2e7ae7d-cb17-4bcb-80d1-2c3b67244d5f.html"
   },
   {
-   "data": "2026-11-10T07:56:12+00:00",
+   "data": "2026-11-10T07:56:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Camorra e appalti a Napoli, 13 arresti tra imprenditori, amministratori e funzionari pubblici",
    "url": "https://www.adnkronos.com/cronaca/napoli-camorra-appalti-arresti_4hw9UW1LXODpEkVAW8yK64"
-  },
-  {
-   "data": "2026-11-10T07:53:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Camorra e appalti, 13 arresti e sequestro tra Napoli e provincia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/camorra-e-appalti-13-arresti-e-sequestro-tra-napoli-e-provincia_8c3d9e11-7107-44b2-91db-c7410fcf6426.html"
   },
   {
    "data": "2026-11-10T07:33:17+00:00",
@@ -69,6 +75,12 @@
    "fonte": "ADNKRONOS",
    "titolo": "Ucraina, Tajani: \"Giorgetti firmerà pacchetto aiuti militari, nessun giallo\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-decreto-giorgetti-firma-tajani_2FyWMLxVW7tWCnv5T47KXA"
+  },
+  {
+   "data": "2026-11-10T06:59:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Terra ha una nuova mini-luna, resterà fino a dicembre",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/10/la-terra-ha-una-nuova-mini-luna-restera-fino-a-dicembre_63e6f230-d023-48fe-93d1-dfa0671c9bdc.html"
   },
   {
    "data": "2026-11-10T06:58:28+00:00",
@@ -117,6 +129,12 @@
    "fonte": "ANSA",
    "titolo": "L'ira della Lega sul decreto armi, Giorgetti non lo firma",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/lira-della-lega-sul-decreto-armi-giorgetti-non-lo-firma_bd84e8d5-bb54-4f9e-ab20-c050f5ae3632.html"
+  },
+  {
+   "data": "2026-11-09T23:37:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "All'asta da Christie's il manoscritto di 'I Have a Dream'",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/people/2026/11/09/allasta-da-christies-il-manoscritto-di-i-have-a-dream_165cb7ac-5d45-482c-849d-42ce4bbdbfdb.html"
   },
   {
    "data": "2026-11-09T23:17:24+00:00",
@@ -171,24 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Ucraina, Giorgetti non ha firmato il pacchetto di aiuti militari a Kiev",
    "url": "https://www.adnkronos.com/economia/ucraina-aiuti-militari-italia-news_4bd0Zl84TBWnmyLz47xAXc"
-  },
-  {
-   "data": "2026-11-09T21:43:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milano, Consiglio comunale vota stop a progetto nuovo stadio: \"Valutare anche impatti sanitari\"",
-   "url": "https://www.adnkronos.com/cronaca/milano-nuovo-stadio-voto-consiglio-comunale_5WHU8hBf6bDslIZFLueM7p"
-  },
-  {
-   "data": "2026-11-09T21:01:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Femminicidio di Cinzia Pinna, parte il processo a Ragnedda",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/femminicidio-di-cinzia-pinna-parte-il-processo-a-ragnedda-_e3c84307-01ad-40c5-88fb-3cc71417c55c.html"
-  },
-  {
-   "data": "2026-11-09T20:54:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Parigi accusa: 'C'è Teheran dietro agli attacchi ai frigoriferi'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/09/francia-apre-inchiesta-ipotesi-mano-iran-dietro-gli-hacker-dei_de65c382-657a-4efa-8666-9ff0e05b25d1.html"
   }
  ]
 }

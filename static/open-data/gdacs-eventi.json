@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-11-10T08:45:36+00:00",
+  "generato": "2026-11-10T08:51:37+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -53,6 +53,23 @@
    "name": "Earthquake in Japan",
    "severitytext": "Magnitude 4.7M, Depth:10km",
    "todate": "2026-11-10T06:36:48"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Japan",
+   "datemodified": "2026-11-10T08:50:36",
+   "description": "Tropical Cyclone CEMPAKA-26",
+   "episodeid": 17,
+   "eventid": 1001347,
+   "eventname": "CEMPAKA-26",
+   "eventtype": "TC",
+   "fromdate": "2026-11-06T06:00:00",
+   "iso3": "JPN",
+   "lat": 25.4,
+   "lon": 139.9,
+   "name": "Tropical Cyclone CEMPAKA-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 176 km/h)",
+   "todate": "2026-11-10T06:00:00"
   },
   {
    "alertlevel": "Green",
@@ -354,23 +371,6 @@
    "lon": 25.7374,
    "name": "Forest fires in South Sudan",
    "severitytext": "Green impact for forestfire in 12201 ha",
-   "todate": "2026-11-10T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Japan",
-   "datemodified": "2026-11-10T05:50:02",
-   "description": "Tropical Cyclone CEMPAKA-26",
-   "episodeid": 16,
-   "eventid": 1001347,
-   "eventname": "CEMPAKA-26",
-   "eventtype": "TC",
-   "fromdate": "2026-11-06T06:00:00",
-   "iso3": "JPN",
-   "lat": 25.0,
-   "lon": 138.0,
-   "name": "Tropical Cyclone CEMPAKA-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 176 km/h)",
    "todate": "2026-11-10T00:00:00"
   },
   {
@@ -930,7 +930,7 @@
   {
    "alertlevel": "Green",
    "country": "South Sudan",
-   "datemodified": "2026-11-10T04:26:16",
+   "datemodified": "2026-11-10T08:49:14",
    "description": "Forest fires in South Sudan",
    "episodeid": 2,
    "eventid": 1033671,
@@ -1282,7 +1282,7 @@
   {
    "alertlevel": "Green",
    "country": "Tanzania",
-   "datemodified": "2026-11-10T04:27:41",
+   "datemodified": "2026-11-10T08:48:09",
    "description": "Forest fires in Tanzania",
    "episodeid": 4,
    "eventid": 1033642,
