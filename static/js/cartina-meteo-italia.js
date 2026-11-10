@@ -1377,6 +1377,54 @@
     }
     return min;
   }
+
+  function luminositaRgb(rgb) {
+    if (!rgb) return 0;
+    return (0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]) / 255;
+  }
+  function testoConAureola(ctx, testo, x, y, maxW, fill) {
+    ctx.save();
+    ctx.lineJoin = 'round';
+    ctx.miterLimit = 2;
+    ctx.lineWidth = 4.5;
+    ctx.strokeStyle = 'rgba(255,255,255,0.96)';
+    ctx.strokeText(testo, x, y, maxW);
+    ctx.fillStyle = fill || '#1a1a1a';
+    ctx.fillText(testo, x, y, maxW);
+    ctx.restore();
+  }
+  function disegnaIconaConAureola(ctx, img, x, y, s) {
+    ctx.save();
+    if (typeof ctx.filter !== 'undefined') {
+      ctx.filter = 'drop-shadow(0 1px 1.6px rgba(18,48,74,0.38))';
+    }
+    ctx.drawImage(img, x, y, s, s);
+    ctx.restore();
+  }
+  function disegnaCerchioTemperatura(ctx, x, y, r, temp, evidenziato) {
+    var rgb = coloreDi(temp, 'temp');
+    if (!rgb) rgb = [230, 200, 40];
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x + 0.6, y + 1, r + 0.6, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(18,48,74,0.22)';
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+    ctx.fill();
+    ctx.lineWidth = evidenziato ? 2.2 : 1.8;
+    ctx.strokeStyle = evidenziato ? '#ffbe2e' : '#ffffff';
+    ctx.stroke();
+    var etichetta = String(Math.round(temp)) + '°';
+    ctx.font = 'bold ' + Math.max(10, Math.round(r * 0.95)) + 'px Titillium Web, Arial, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = luminositaRgb(rgb) > 0.55 ? '#1a1a1a' : '#ffffff';
+    ctx.fillText(etichetta, x, y + 0.5);
+    ctx.restore();
+  }
+
   function disegnaSchedeTempo(ctx, vista, stato, opts) {
     var locali = (stato && stato.locali) || [];
     if (!locali.length) return;
@@ -1384,8 +1432,11 @@
     var stretta = eVistaStretta(vista);
     var dist = distanzaMinimaComuni(vista, locali);
     var denso = dist < 110;
-    var iconS = stretta ? 40 : (denso ? 44 : 56);
-    if (denso && stretta) iconS = 36;
+    var iconS = stretta ? 42 : (denso ? 48 : 58);
+    if (denso && stretta) iconS = 38;
+    var tempR = stretta ? 11 : (denso ? 12 : 13.5);
+    var nomeH = stretta ? 14 : 16;
+    var overlap = Math.round(tempR * 0.45);
     var maxN = massimoSchede(vista);
     var occupati = [];
     if (opts && opts.decorazioni) {
@@ -1394,9 +1445,9 @@
     }
     occupati.push({ x: 0, y: 0, w: 44, h: 80 });
     var elenco = locali.slice().sort(function (a, b) { return (a.priorita || 99) - (b.priorita || 99); });
-    var schede = [], i, loc, idx, code, temp, cat, nome, testo, tw, cardW, cardH, xy, ancore, a, k, ok, box, img, cape;
+    var schede = [], i, loc, idx, code, temp, cat, nome, tw, cardW, cardH, xy, ancore, a, k, ok, box, img, cape;
     ctx.save();
-    ctx.font = (stretta ? '11' : '12') + 'px Titillium Web, Arial, sans-serif';
+    ctx.font = 'bold ' + (stretta ? '11' : '12') + 'px Titillium Web, Arial, sans-serif';
     for (i = 0; i < elenco.length && schede.length < maxN; i++) {
       loc = elenco[i];
       idx = indiceOraLocale(loc, iso);
@@ -1412,17 +1463,15 @@
       xy = vista.xy(loc.lat, loc.lon);
       if (xy[0] < 10 || xy[1] < 10 || xy[0] > vista.w - 10 || xy[1] > vista.h - 10) continue;
       nome = loc.etichetta || loc.nome;
-      testo = nome + (temp !== null ? '  ' + Math.round(temp) + '°' : '');
-      ctx.font = 'bold ' + (stretta ? '11' : '13') + 'px Titillium Web, Arial, sans-serif';
-      tw = ctx.measureText(testo).width;
-      cardW = Math.max(iconS + 14, tw + 16);
-      if (cardW > 150) cardW = 150;
-      cardH = iconS + 10 + 22;
+      tw = ctx.measureText(nome).width;
+      cardW = Math.max(iconS, tw, tempR * 2 + 4) + 10;
+      if (cardW > 160) cardW = 160;
+      cardH = iconS - overlap + tempR * 2 + 4 + nomeH;
       ancore = ancoreScheda(xy, cardW, cardH, loc.allinea || 's');
       ok = false;
       for (k = 0; k < ancore.length; k++) {
         a = ancore[k];
-        if (a.x < 4 || a.y < 4 || a.x + cardW > vista.w - 4 || a.y + cardH > vista.h - 4) continue;
+        if (a.x < 2 || a.y < 2 || a.x + cardW > vista.w - 2 || a.y + cardH > vista.h - 2) continue;
         box = { x: a.x, y: a.y, w: cardW, h: cardH };
         var collision = false, o;
         for (o = 0; o < occupati.length; o++) {
@@ -1431,12 +1480,25 @@
         if (collision) continue;
         ok = true;
         occupati.push(box);
-        schede.push({ loc: loc, xy: xy, box: box, cat: cat, code: code, temp: temp, testo: testo, iconS: iconS });
+        schede.push({ loc: loc, xy: xy, box: box, cat: cat, code: code, temp: temp, nome: nome, iconS: iconS, tempR: tempR, overlap: overlap, nomeH: nomeH });
         break;
       }
     }
     for (i = 0; i < schede.length; i++) {
       var s = schede[i];
+      var cx = s.box.x + s.box.w / 2;
+      var iconBottom = s.box.y + s.iconS;
+      var attaccoY = (s.temp !== null) ? (iconBottom - s.overlap + s.tempR * 2 + 2) : iconBottom;
+      ctx.beginPath();
+      ctx.moveTo(s.xy[0], s.xy[1]);
+      ctx.lineTo(cx, (s.box.y < s.xy[1] ? attaccoY : s.box.y + 4));
+      ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+      ctx.lineWidth = 3.2;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+      ctx.strokeStyle = 'rgba(26,26,26,0.55)';
+      ctx.lineWidth = 1.15;
+      ctx.stroke();
       ctx.beginPath();
       ctx.arc(s.xy[0], s.xy[1], s.loc.evidenziato ? 4.5 : 3, 0, Math.PI * 2);
       ctx.fillStyle = s.loc.evidenziato ? '#003366' : 'rgba(26,26,26,0.85)';
@@ -1448,37 +1510,36 @@
     for (i = 0; i < schede.length; i++) {
       s = schede[i];
       box = s.box;
-      ctx.save();
-      ctx.fillStyle = 'rgba(0, 31, 63, 0.16)';
-      rettangoloArrotondato(ctx, box.x + 2, box.y + 3, box.w, box.h, 10);
-      ctx.fill();
-      ctx.fillStyle = 'rgba(255,255,255,0.96)';
-      rettangoloArrotondato(ctx, box.x, box.y, box.w, box.h, 10);
-      ctx.fill();
-      ctx.strokeStyle = s.loc.evidenziato ? '#ffbe2e' : 'rgba(0,51,102,0.28)';
-      ctx.lineWidth = s.loc.evidenziato ? 1.8 : 1;
-      ctx.stroke();
+      var iconX = box.x + (box.w - s.iconS) / 2;
+      var iconY = box.y;
       img = s.cat ? iconeTempo[s.cat] : null;
-      if (img) ctx.drawImage(img, box.x + (box.w - s.iconS) / 2, box.y + 5, s.iconS, s.iconS);
+      if (img) disegnaIconaConAureola(ctx, img, iconX, iconY, s.iconS);
       cape = (s.loc.cape && s.cat === 'temporale') ? s.loc.cape[indiceOraLocale(s.loc, iso)] : null;
       if (s.cat === 'temporale' && cape !== null && typeof cape !== 'undefined' && cape >= 1000) {
         ctx.beginPath();
-        ctx.moveTo(box.x + box.w - 14, box.y + 10);
-        ctx.lineTo(box.x + box.w - 4, box.y + 10);
-        ctx.lineTo(box.x + box.w - 9, box.y + 2);
+        ctx.moveTo(iconX + s.iconS - 11, iconY + 10);
+        ctx.lineTo(iconX + s.iconS - 2, iconY + 10);
+        ctx.lineTo(iconX + s.iconS - 6.5, iconY + 2);
         ctx.closePath();
         ctx.fillStyle = '#b45309';
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
         ctx.fill();
       }
-      ctx.fillStyle = s.loc.evidenziato ? '#003366' : '#1a1a1a';
-      ctx.font = 'bold ' + (stretta ? '11' : '13') + 'px Titillium Web, Arial, sans-serif';
+      var tempCy = box.y + s.iconS - s.overlap + s.tempR;
+      if (s.temp !== null) {
+        disegnaCerchioTemperatura(ctx, box.x + box.w / 2, tempCy, s.tempR, s.temp, s.loc.evidenziato);
+      }
+      ctx.font = 'bold ' + (stretta ? '11' : '12') + 'px Titillium Web, Arial, sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(s.testo, box.x + box.w / 2, box.y + s.iconS + 14, box.w - 10);
-      ctx.restore();
+      var nomeY = (s.temp !== null) ? (tempCy + s.tempR + 4 + s.nomeH / 2) : (box.y + s.iconS + 8);
+      testoConAureola(ctx, s.nome, box.x + box.w / 2, nomeY, box.w - 4, s.loc.evidenziato ? '#003366' : '#1a1a1a');
     }
     ctx.restore();
   }
+
   function disegnaVista(ctx, vista, stato, opts) {
 
     opts = opts || {};
@@ -2235,7 +2296,7 @@
       scala.appendChild(griglia);
       var nota = document.createElement('p');
       nota.className = 'cmi-legenda-note';
-      nota.textContent = "Le icone mostrano il tempo e la temperatura nel comune, sul punto esatto dell'abitato. Lo sfondo morbido indica nuvolosità e precipitazioni in modo continuo. I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un'allerta ufficiale.";
+      nota.textContent = "Le icone mostrano il tempo nel comune, sul punto dell'abitato; il cerchio colorato indica la temperatura. Lo sfondo morbido indica nuvolosità e precipitazioni in modo continuo. I temporali con grandine (codici WMO 96 e 99) arrivano solo da alcuni modelli. Un triangolo su un temporale indica CAPE elevato: è un indizio convettivo, non un'allerta ufficiale.";
       scala.appendChild(nota);
       return;
     }

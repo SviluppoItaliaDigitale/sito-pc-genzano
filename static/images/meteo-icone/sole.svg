@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-hidden="true">
-  <circle cx="32" cy="32" r="12" fill="#F5B942" stroke="#E09A1A" stroke-width="1.2"/>
-  <g stroke="#E09A1A" stroke-width="2.4" stroke-linecap="round">
-    <line x1="32" y1="6" x2="32" y2="14"/>
-    <line x1="32" y1="50" x2="32" y2="58"/>
-    <line x1="6" y1="32" x2="14" y2="32"/>
-    <line x1="50" y1="32" x2="58" y2="32"/>
-    <line x1="13.4" y1="13.4" x2="19" y2="19"/>
-    <line x1="45" y1="45" x2="50.6" y2="50.6"/>
-    <line x1="50.6" y1="13.4" x2="45" y2="19"/>
-    <line x1="19" y1="45" x2="13.4" y2="50.6"/>
+  <defs>
+    <filter id="halo-sole" x="-22%" y="-22%" width="144%" height="148%" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="2.2" result="d"/>
+      <feFlood flood-color="#ffffff" result="w"/>
+      <feComposite in="w" in2="d" operator="in" result="outline"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.05" result="b"/>
+      <feOffset in="b" dx="0" dy="1.15" result="o"/>
+      <feFlood flood-color="#12304a" flood-opacity="0.32" result="sc"/>
+      <feComposite in="sc" in2="o" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="sun-sole" cx="36%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#FFF3A8"/>
+      <stop offset="45%" stop-color="#F7C444"/>
+      <stop offset="100%" stop-color="#E89014"/>
+    </radialGradient>
+    <radialGradient id="sunhi-sole" cx="34%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloud-sole" x1="32" y1="14" x2="32" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="48%" stop-color="#F0F4F8"/>
+      <stop offset="100%" stop-color="#C5D0DC"/>
+    </linearGradient>
+    <linearGradient id="cloud-dark-sole" x1="32" y1="14" x2="32" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D8DEE6"/>
+      <stop offset="55%" stop-color="#A8B4C2"/>
+      <stop offset="100%" stop-color="#7E8B9A"/>
+    </linearGradient>
+    <linearGradient id="cloud-storm-sole" x1="32" y1="12" x2="32" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B8C0CC"/>
+      <stop offset="50%" stop-color="#8A96A6"/>
+      <stop offset="100%" stop-color="#5C6A7A"/>
+    </linearGradient>
+    <linearGradient id="bolt-sole" x1="28" y1="36" x2="34" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE566"/>
+      <stop offset="55%" stop-color="#F5C518"/>
+      <stop offset="100%" stop-color="#E09200"/>
+    </linearGradient>
+    <radialGradient id="drop-sole" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#6BA8E0"/>
+      <stop offset="70%" stop-color="#2E6BB0"/>
+      <stop offset="100%" stop-color="#1D4E89"/>
+    </radialGradient>
+    <radialGradient id="drop-dark-sole" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#4A8ED0"/>
+      <stop offset="80%" stop-color="#1D4E89"/>
+      <stop offset="100%" stop-color="#163A68"/>
+    </radialGradient>
+    <radialGradient id="hail-sole" cx="35%" cy="32%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#E8EEF4"/>
+      <stop offset="100%" stop-color="#C5D0DC"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#halo-sole)">
+    <g fill="#F0A825" transform="translate(32,32)">
+      <path transform="rotate(0)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(45)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(90)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(135)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(180)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(225)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(270)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+      <path transform="rotate(315)" d="M0 -23.6c.65 0 1.2.38 1.45 1.02l1.9 8.0c.28.75-.2 1.55-.98 1.8-1.55.48-3.2.48-4.74 0-.78-.25-1.26-1.05-.98-1.8l1.9 -8.0C-1.2 -23.2 -.65 -23.6 0 -23.6z"/>
+    </g>
+    <circle cx="32" cy="32" r="12.4" fill="url(#sun-sole)" stroke="#E08A12" stroke-width="0.9"/>
+    <ellipse cx="28.6" cy="28.4" rx="6.0" ry="4.5" fill="url(#sunhi-sole)"/>
   </g>
 </svg>
