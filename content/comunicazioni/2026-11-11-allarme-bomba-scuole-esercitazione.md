@@ -1,7 +1,7 @@
 ---
 title: "Scuole evacuate per un allarme bomba: la stessa risposta che proviamo nelle esercitazioni"
 date: 2026-11-11T00:02:00+02:00
-description: "Anche a Genzano scuole evacuate per una mail con minacce arrivata a circa 300 istituti italiani. Come funziona la risposta e che cosa cambia con un terremoto."
+description: "Anche a Genzano scuole evacuate per una mail con minacce arrivata a migliaia di istituti italiani. Come funziona la risposta e che cosa cambia con un terremoto."
 badge: "Avviso"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -17,14 +17,14 @@ tts: true
 versione_facile: "2026-11-11-allarme-bomba-scuole-esercitazione-facile"
 social_citazione: "Le prove di evacuazione servono proprio a giornate come questa."
 social_punti:
-  - "11 novembre 2026: una mail con minacce arriva a circa 300 scuole italiane. Anche a Genzano scatta l'evacuazione."
+  - "11 novembre 2026: una mail con minacce arriva a migliaia di scuole italiane. Anche a Genzano scatta l'evacuazione."
   - "Si esce in fila, si raggiunge il punto di raccolta, si aspetta il cessato allarme: come nelle prove."
   - "Con un terremoto cambia il primo gesto: durante la scossa ci si protegge sotto il banco e si esce solo quando è finita."
   - "Non andare davanti alla scuola se non te lo chiedono e segui solo le fonti ufficiali. In emergenza chiama il 112."
 draft: false
 ---
 
-**Mercoledì 11 novembre 2026**, verso mezzogiorno, l'evacuazione è scattata anche nelle scuole di Genzano di Roma. All'origine c'è una **mail con minacce**, arrivata in mattinata a circa 300 scuole in tutta Italia secondo il Ministro dell'Istruzione e del Merito. Studenti e personale sono usciti dagli edifici per permettere i controlli delle forze dell'ordine.
+**Mercoledì 11 novembre 2026**, verso mezzogiorno, l'evacuazione è scattata anche nelle scuole di Genzano di Roma. All'origine c'è una **mail con minacce**. Secondo il Ministero dell'Istruzione e del Merito è arrivata a circa 6.000 scuole in tutta Italia, e non tutte sono state evacuate. In mattinata la prima stima del Ministro parlava di circa 300 scuole. Studenti e personale sono usciti dagli edifici per permettere i controlli delle forze dell'ordine.
 
 Secondo le cronache, nel primo pomeriggio le bonifiche già concluse in Italia avevano dato tutte esito negativo. Per il Governo, dalle verifiche non emerge alcun pericolo concreto. Alla stessa ora il Comune non aveva ancora comunicato l'esito dei controlli nelle scuole di Genzano. Ha annunciato aggiornamenti sui propri canali istituzionali. L'ordinanza vale solo per l'11 novembre: per i giorni successivi segui le comunicazioni della scuola e del Comune.
 
@@ -40,7 +40,7 @@ Una minaccia come questa non va sminuita. La giornata però ha messo alla prova,
 
 ## Che cosa è successo
 
-In mattinata la stessa mail è arrivata a centinaia di istituti, da Nord a Sud. In molte scuole di Roma, della provincia e dei Castelli Romani i dirigenti scolastici hanno avvisato subito le forze dell'ordine. Poi hanno fatto uscire alunni e personale, per prudenza. Le forze dell'ordine, con gli artificieri, hanno controllato gli edifici.
+In mattinata la stessa mail è arrivata a migliaia di istituti, da Nord a Sud. In molte scuole di Roma, della provincia e dei Castelli Romani i dirigenti scolastici hanno avvisato subito le forze dell'ordine. Poi hanno fatto uscire alunni e personale, per prudenza. Le forze dell'ordine, con gli artificieri, hanno controllato gli edifici.
 
 Non è la prima volta. Il 19 ottobre mail simili avevano raggiunto circa cento scuole italiane, il 2 novembre oltre 270. Per un episodio precedente, nel Padovano, è stato aperto un fascicolo per procurato allarme e interruzione di pubblico servizio. Sui fatti di oggi le indagini sono in corso.
 
@@ -121,7 +121,7 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 **Le cronache**
 
 - [ANSA, 11 novembre 2026: evacuazioni e bonifiche, finora tutte con esito negativo](https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allarme-bomba-in-oltre-300-scuole-in-italia-evacuazioni-e-controlli.-grande-attenzione_870b0024-72d2-4b15-bab5-0c74dcc1d653.html)
-- [Il Fatto Quotidiano, 11 novembre 2026: circa 300 scuole coinvolte secondo il Ministro](https://www.ilfattoquotidiano.it/2026/11/11/allarme-bomba-scuole-mail-anonima-notizie/8567829/)
+- [Il Fatto Quotidiano, 11 novembre 2026: la diretta, dalla prima stima di circa 300 scuole alle circa 6.000 indicate dal Ministero](https://www.ilfattoquotidiano.it/cronaca/live-post/2026/11/11/allarme-bomba-scuole-italia-diretta/8567853/)
 - [Castelli Notizie, 11 novembre 2026: l'allarme nelle scuole dei Castelli Romani](https://www.castellinotizie.it/2026/11/11/allarme-bomba-nelle-scuole-dei-castelli-romani-evacuazioni-e-genitori-in-apprensione-nella-mail-minatoria-siamo-venuti-per-annientarvi/)
 - [La Capitale News, 11 novembre 2026: le evacuazioni a Roma e in provincia](https://www.lacapitalenews.it/cronaca/terrore-nelle-scuole-italiane-evacuati-gli-studenti/)
 - [TPI, 11 novembre 2026: le scuole evacuate e le bonifiche](https://www.tpi.it/cronaca/allarme-bomba-scuole-italiane-202611111261526/)
