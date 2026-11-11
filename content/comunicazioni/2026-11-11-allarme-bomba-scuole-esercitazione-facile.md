@@ -23,6 +23,8 @@ Mercoledì **11 novembre 2026** molte scuole in Italia hanno ricevuto una mail. 
 
 Anche le scuole di Genzano hanno fatto uscire tutti: bambini, ragazzi e insegnanti. Questa si chiama **evacuazione**. Le forze dell'ordine controllano le scuole.
 
+In molte città d'Italia i controlli sono già finiti. Non hanno trovato bombe. Per le scuole di Genzano il Comune ha detto che darà altre notizie. Per i prossimi giorni, leggi le notizie della scuola e del Comune.
+
 Il Sindaco ha firmato un'**ordinanza**. L'ordinanza è una decisione ufficiale del Comune. Dice che tutte le scuole di Genzano devono uscire dagli edifici. Dice anche che oggi, 11 novembre, non si fanno lezioni. I presidi guidano l'uscita. I bambini aspettano al punto di raccolta, finché i genitori li vengono a prendere.
 
 ## Come in una prova di evacuazione
