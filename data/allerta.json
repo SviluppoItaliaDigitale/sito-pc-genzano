@@ -3,7 +3,7 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-11-10T13:02:04+01:00",
-  "ultimo_controllo": "2026-11-11T12:21:24+01:00",
+  "ultimo_controllo": "2026-11-11T17:54:30+01:00",
   "domani": {
     "livello": "gialla",
     "titolo": "Previsto giallo",
@@ -11,5 +11,14 @@
       "rischio idrogeologico"
     ],
     "data": "2026-11-12"
+  },
+  "avviso_meteo": {
+    "tipo": "vento",
+    "livello": "gialla",
+    "validita_inizio": "2026-11-12T00:00:00+01:00",
+    "validita_fine": "2026-11-13T12:00:00+01:00",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/Allertamento12-11-2026.pdf",
+    "fonte_data": "2026-11-12",
+    "descrizione": "Venti da forti a burrasca sud-occidentali, con raffiche fino a burrasca forte sui crinali appenninici"
   }
 }
