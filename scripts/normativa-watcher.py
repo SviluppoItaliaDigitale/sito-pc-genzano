@@ -42,7 +42,7 @@ FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Feed RSS istituzionali (TGR Lazio)
 - Testate locali e agenzie lette dai loro feed (dal 05/11/2026): Castelli
   Notizie, Il Mamilio, Il Caffè, Controluce, Terzo Binario, RomaToday,
-  Il Messaggero (Roma), ANSA Lazio e Il Giornale dei Castelli Romani;
+  Il Messaggero (Roma), ANSA Lazio e Il Giornale dei Castelli Romani (dalla home);
   riviste giuridiche Giurisprudenza Penale e Diritto.it per le sentenze
 - Ricerche di Google News sulle sentenze in materia di protezione civile
   (Cassazione, tribunali, TAR, Consiglio di Stato, Corte dei conti)
@@ -1349,8 +1349,8 @@ def fetch_dpc(cutoff, errori):
 # indicizzi. Stesse testate del controllo delle copie (scripts/controllo-copie.py)
 # per i Castelli e Roma, più Il Messaggero (Roma, cita spesso il Gruppo),
 # ANSA Lazio e Il Giornale dei Castelli Romani,
-# che pubblica le notizie dall'API di WordPress perché il suo /feed/ rimanda
-# alla home. I feed WordPress danno dieci notizie per pagina: una testata dei
+# che non ha feed (il suo /feed/ rimanda alla home) e dal 09/11/2026 ha chiuso
+# anche l'API di WordPress: si legge dalla home (leggi_home_giornale). I feed WordPress danno dieci notizie per pagina: una testata dei
 # Castelli ne pubblica fino a una trentina al giorno, quindi si sfogliano le
 # pagine finché si esce dalla finestra (al massimo TESTATE_MAX_PAGINE).
 # Le notizie di stampa sull'attività del Gruppo restano in PR non unita
@@ -1398,8 +1398,41 @@ def filtra_testata(v):
     return v
 
 
-GIORNALE_CASTELLI_API = ('https://www.giornaleinfocastelliromani.it/wp-json/wp/v2/posts'
-                         '?per_page=50&_fields=date,link,title,excerpt&after={dopo}')
+# Dal 09/11/2026 il giornale ha spento l'API WordPress (HTTP 401 ai programmi)
+# e non ha un feed RSS: gli articoli si leggono dalla home, che è aperta.
+# Ogni articolo ha titolo e link in «entry-title td-module-title» seguiti
+# dalla data in <time datetime="…">; il titolo intero è nell'attributo title
+# del link (nel testo visibile alcuni moduli lo accorciano con «...»).
+GIORNALE_CASTELLI_HOME = 'https://www.giornaleinfocastelliromani.it/'
+_GIORNALE_ARTICOLO = re.compile(
+    r'class="entry-title td-module-title"><a href="([^"]+)"[^>]*?title="([^"]*)"[^>]*>[^<]*</a>'
+    r'(?:(?!entry-title).){0,1500}?<time[^>]+datetime="([^"]+)"', re.S)
+
+
+def leggi_home_giornale(pagina, days, adesso=None):
+    """Articoli (titolo, link, data ISO) della home del giornale nella finestra di giorni.
+
+    Una home senza nessun articolo riconoscibile è un cambio di struttura del
+    sito, non «nessuna notizia»: solleva un errore, che il controllo dichiara."""
+    adesso = adesso or datetime.now(timezone.utc)
+    trovati = _GIORNALE_ARTICOLO.findall(pagina)
+    if not trovati:
+        raise RuntimeError('home letta, ma nessun articolo riconosciuto: struttura del sito cambiata')
+    visti, out = set(), []
+    for link, titolo, quando in trovati:
+        if link in visti:
+            continue
+        visti.add(link)
+        try:
+            dt = datetime.fromisoformat(quando)
+        except ValueError:
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        if adesso - dt > timedelta(days=days):
+            continue
+        out.append((solo_testo(titolo), link, dt.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')))
+    return out
 
 
 def fetch_testate_locali(days, errori):
@@ -1421,15 +1454,8 @@ def fetch_testate_locali(days, errori):
             if not _pagina_feed_tutta_in_finestra(url, days):
                 break
     try:
-        dopo = (datetime.now(timezone.utc) - timedelta(days=days)).strftime('%Y-%m-%dT%H:%M:%S')
-        dati = json.loads(Cliente().get(GIORNALE_CASTELLI_API.format(dopo=dopo)))
-        if not isinstance(dati, list):
-            raise RuntimeError('risposta non attesa: non è un elenco di articoli')
-        for a in dati:
-            titolo = solo_testo((a.get('title') or {}).get('rendered', ''))
-            v = voce('Il Giornale dei Castelli Romani', 'news', titolo, a.get('link', ''),
-                     (a.get('date') or '')[:19], sommario=solo_testo((a.get('excerpt') or {}).get('rendered', '')))
-            v = filtra_testata(v)
+        for titolo, link, quando in leggi_home_giornale(Cliente().get(GIORNALE_CASTELLI_HOME), days):
+            v = filtra_testata(voce('Il Giornale dei Castelli Romani', 'news', titolo, link, quando))
             if v:
                 out.append(v)
     except Exception as e:  # noqa: BLE001
