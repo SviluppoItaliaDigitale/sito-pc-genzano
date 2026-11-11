@@ -1,10 +1,10 @@
-ultimo_audit: '2026-11-10'
-totale: 74
+ultimo_audit: '2026-11-11'
+totale: 76
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 37
+  TERZO: 39
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -102,6 +102,34 @@ documenti:
   pages: 5
   errors: []
   text_chars_sample: 0
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-11-11-delibera-giunta-189-allegati-a-b-variazione-bilancio.pdf
+  file: 2026-11-11-delibera-giunta-189-allegati-a-b-variazione-bilancio.pdf
+  size_kb: 43.6
+  sha256: 75a67c76f3e84bd2e3afed1c5550dc61121d490af63881b5636885dd7418e641
+  searchable: true
+  tagged: false
+  language: null
+  title: Stampa variazione (totali - nuovo ordinamento)
+  pages: 6
+  errors: []
+  text_chars_sample: 4847
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/2026-11-11-delibera-giunta-189-messa-in-sicurezza-alberature.pdf
+  file: 2026-11-11-delibera-giunta-189-messa-in-sicurezza-alberature.pdf
+  size_kb: 171.4
+  sha256: 1f3dbee9deb4e71c0362b9633a127e6cf54baa4513c46fe6b35284dd6c0dec8a
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Nome_Comune
+  pages: 7
+  errors: []
+  text_chars_sample: 6630
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
