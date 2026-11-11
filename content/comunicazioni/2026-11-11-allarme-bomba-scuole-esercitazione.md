@@ -9,7 +9,10 @@ image: "/images/2026-11-11-allarme-bomba-scuole-esercitazione.webp"
 image_alt: "Cover dell'articolo: Scuole evacuate per un allarme bomba: la stessa risposta che proviamo nelle esercitazioni"
 scadenza: ""
 area: "Genzano di Roma"
-allegati: []
+allegati:
+  - titolo: "Ordinanza sindacale dell'11 novembre 2026: evacuazione delle scuole e sospensione delle attività (Comune di Genzano di Roma)"
+    url: "/allegati/2026/ordinanza-sindacale-evacuazione-scuole-genzano-2026-11-11.pdf"
+    dimensione: "0,2 MB"
 tts: true
 versione_facile: "2026-11-11-allarme-bomba-scuole-esercitazione-facile"
 social_citazione: "Le prove di evacuazione servono proprio a giornate come questa."
@@ -23,7 +26,13 @@ draft: false
 
 **Mercoledì 11 novembre 2026**, verso mezzogiorno, l'evacuazione è scattata anche nelle scuole di Genzano di Roma. All'origine c'è una **mail con minacce**, arrivata in mattinata a circa 300 scuole in tutta Italia secondo il Ministro dell'Istruzione e del Merito. Studenti e personale sono usciti dagli edifici per permettere i controlli delle forze dell'ordine. Al momento in cui scriviamo, i controlli sono in corso.
 
-Gli eventuali provvedimenti del Comune, come un'ordinanza del Sindaco, sono pubblicati all'albo pretorio. Aggiorneremo questa pagina appena escono.
+Il Comune ha pubblicato l'[avviso sul proprio sito](https://www.comune.genzanodiroma.roma.it/novita/evacuazione-precauzionale-degli-edifici-scolastici-segnalazione-di-potenziale-rischio) e l'ordinanza del Sindaco dell'11 novembre 2026. Il provvedimento, adottato in via precauzionale dopo una segnalazione di possibile minaccia di ordigno, dispone tre cose:
+
+- l'evacuazione immediata di tutti i plessi scolastici del territorio comunale, dagli asili nido alle scuole secondarie di secondo grado, pubblici e paritari o privati;
+- la sospensione di ogni attività didattica, educativa ed extrascolastica per la giornata dell'11 novembre;
+- l'attivazione dei Piani di emergenza e di evacuazione di ciascun istituto, sotto la direzione dei dirigenti scolastici.
+
+I dirigenti coordinano l'esodo verso le aree di attesa e i punti di raccolta previsti dai piani, fino all'affidamento dei minori ai genitori o a chi ne fa le veci, o a un loro delegato. L'ordinanza richiama l'articolo 54, comma 4, del D.Lgs. 267/2000 (poteri contingibili e urgenti del Sindaco) e l'articolo 15 del D.Lgs. 1/2018 (il Sindaco come autorità locale di protezione civile). Il testo integrale è in allegato.
 
 Una minaccia come questa non va sminuita. La giornata però ha messo alla prova, dal vero, il meccanismo che le scuole allenano nelle prove di evacuazione. È lo stesso che la protezione civile usa in ogni emergenza: un piano scritto prima, ruoli chiari, gesti imparati, informazioni da poche fonti ufficiali. Qui sotto lo raccontiamo passo per passo, confrontandolo con un'esercitazione e con un terremoto.
 
@@ -103,6 +112,7 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 **Fonti istituzionali**
 
 - [Codice della protezione civile (D.Lgs. 1/2018), art. 2 — attività di protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art2)
+- [Comune di Genzano di Roma: avviso sull'evacuazione precauzionale delle scuole, 11 novembre 2026](https://www.comune.genzanodiroma.roma.it/novita/evacuazione-precauzionale-degli-edifici-scolastici-segnalazione-di-potenziale-rischio)
 - [Albo pretorio del Comune di Genzano di Roma — atti in pubblicazione](https://genzanodiroma.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/igrid/5986)
 
 **Le cronache**
