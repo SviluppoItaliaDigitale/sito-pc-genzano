@@ -416,11 +416,26 @@ jobs:
 
       - name: "🔬 Valida YAML di .github/workflows/"
         run: |
-          for f in .github/workflows/*.yml; do
+          for f in .github/workflows/*.yml .github/actions/*/action.yml; do
             python3 -c "import yaml; yaml.safe_load(open('$f'))" \
               || { echo "::error file=$f::YAML invalido"; exit 1; }
             echo "OK: $f"
           done
+
+      - name: "📤 Caricamento su Aruba: prove su un server FTPS locale"
+        # 11/11/2026: scripts/carica-aruba.py carica su Aruba solo i file
+        # cambiati, in parallelo, con nome provvisorio e rinomina. Le prove
+        # (nessun collegamento ad Aruba) controllano: solo i file cambiati,
+        # ordine cartelle → risorse → pagine → indici → cancellazioni, ultima
+        # versione dopo due giri, giro interrotto e ripreso, file rifiutato e
+        # ripreso, due giri insieme (il secondo aspetta), server che non
+        # rinomina sopra un file, accesso rifiutato (ripiego), assenza del
+        # file di stato, file che non sale (deploy rosso, manifesto fermo),
+        # meno collegamenti del previsto. Un errore qui ferma la PR.
+        run: |
+          pip install --quiet pyftpdlib==2.2.0 pyopenssl==26.4.0
+          python3 scripts/prova-carica-aruba.py 2>&1 | grep -v '^\[[IW] '
+          exit "${PIPESTATUS[0]}"
 
   frontmatter-validity:
     name: "Frontmatter articoli modificati"

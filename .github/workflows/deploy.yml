@@ -6,209 +6,99 @@ on:
   workflow_dispatch:
     inputs:
       priority:
-        description: "Priorità deploy: urgent (preempta) | background (cede ad allerta/contenuti)"
+        description: "Origine del deploy: urgent (allerta, pubblicazione del mattino, lancio a mano) | background (coalescer). Dall'11/11/2026 decide solo la copia d'archivio: la fila del caricamento è una sola."
         required: false
         default: "urgent"
 
+# Permessi minimi a livello di workflow; ogni job chiede i suoi.
 permissions:
   contents: read
-  pages: write
-  id-token: write
-  actions: write  # per chiamare genera-social-bozze.yml e archivia-wayback.yml a fine caricamento
 
-concurrency:
-  group: "pages"
-  # Cancella un deploy IN CORSO solo per: (a) push di CONTENUTI reali (merge PR:
-  # messaggio SENZA marker [skip-*]) e (b) dispatch urgent (allerta/manuale).
-  # I push degli auto-commit di sfondo ([skip-meteo|qr|indice|ecmwf|clima|stato|
-  # foto-wiki|pacchetti|aggiorna-video|social|...]) e i dispatch background NON
-  # cancellano: si ACCODANO. Così un deploy di contenuti arriva sempre in fondo
-  # all'upload FTP. Prima ogni auto-commit push cancellava il deploy in corso e,
-  # con push fitti, nessun deploy completava (incidente 2-3/07/2026: 7h di deploy
-  # tutti cancellati, pagine nuove a 403 per cartella vuota da upload parziale).
-  #
-  # Dall'08/10/2026 anche i push di CONTENUTI si accodano: annullano un deploy
-  # in corso solo i dispatch urgent (allerta meteo, pubblicazione programmata
-  # del mattino). Motivo: con più sessioni (Claude e ChatGPT) che uniscono PR a
-  # pochi minuti di distanza, ogni merge annullava il caricamento FTP del
-  # precedente a metà e il sito restava servito a pezzi (08/10/2026: tre push
-  # in cinque minuti, due deploy annullati). Dal 01/10/2026 un deploy di
-  # contenuti dura ~5 minuti, quindi aspettare costa poco; GitHub tiene un solo
-  # deploy in attesa, sempre l'ultimo, che pubblica tutto ciò che è stato unito
-  # nel frattempo. La regola «un merge per volta» diventa automatica.
-  cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background' }}
+# ─────────────────────────────────────────────────────────────────────────
+# Un solo percorso, veloce, in un'unica fila (11/11/2026)
+#
+# Richiesta di Alessandro: online in 1-2 minuti dall'unione, come gli altri
+# siti; nessuna corsia speciale (Allerta ed Emergenza seguono lo stesso
+# percorso, con gli stessi controlli). Il 11/11/2026 un deploy durava 13-18
+# minuti: 5 in coda, 49 s di checkout, 6,5 minuti di caricamento FTP su un
+# solo collegamento (587 file), 4 minuti di verifica, 1 minuto di GitHub
+# Pages nello stesso job. Da qui:
+#
+#  - job `aruba`: build + caricamento + verifica, in un'unica fila
+#    (`concurrency` del job, MAI annullato: un caricamento iniziato arriva in
+#    fondo). GitHub tiene un solo giro in attesa, sempre l'ultimo: un'unione
+#    nuova prende il posto di quella ancora in attesa, che non serve più
+#    perché la nuova costruisce `main` con tutto dentro. Fino all'11/11/2026
+#    i dispatch urgent (allerta meteo, pubblicazione del mattino) annullavano
+#    il deploy in corso: con un caricamento da un minuto non serve più, e un
+#    caricamento interrotto è proprio ciò che lasciava il sito a pezzi;
+#  - il caricamento lo fa scripts/carica-aruba.py: solo i file cambiati, più
+#    collegamenti in parallelo, nome provvisorio e rinomina, ricontrollo di
+#    ogni file, cartelle nuove prima e cancellazioni dopo, lucchetto sul
+#    server (mai due caricamenti insieme). L'azione FTP-Deploy resta come
+#    ripiego solo se lo script non è riuscito a toccare nulla;
+#  - job `pages`: la copia di anteprima su GitHub Pages si costruisce su
+#    un'altra macchina, in parallelo, senza tenere occupata la fila di Aruba.
+#
+# Storia della concurrency, in breve: fino al 02/07/2026 ogni push annullava
+# il deploy in corso e con push fitti nessun deploy completava (7 ore di
+# deploy annullati, pagine nuove a 403 per cartelle vuote); dall'08/10/2026
+# anche i push di contenuti si accodavano e annullavano solo i dispatch
+# urgent (tre unioni in cinque minuti avevano lasciato il sito servito a
+# pezzi). Dall'11/11/2026 non annulla più nessuno.
+# ─────────────────────────────────────────────────────────────────────────
 
 jobs:
-  build-and-deploy:
+  aruba:
+    name: "Build e caricamento su Aruba"
     runs-on: ubuntu-latest
-    # 90 min (non 30): un upload FTP INTEGRALE su Aruba — quello forzato da un
-    # bump di `state-name`, che ri-carica l'intero sito (centinaia di file +
-    # ~577 immagini) — supera i 30 minuti. Col vecchio limite il job veniva
-    # ucciso PRIMA di salvare il sync-state → il deploy successivo ripartiva da
-    # capo con un altro upload integrale → altri 30 min → timeout → loop
-    # bloccato e sito congelato (incidente 03/07/2026: 12 deploy consecutivi
-    # non completati, articolo da calendario mai andato live). Con più tempo il
-    # primo upload integrale completa UNA volta, salva lo stato, e da lì i
-    # deploy tornano incrementali (~1-2 min, ben sotto i 30 min di prima).
-    timeout-minutes: 90
+    concurrency:
+      group: aruba-caricamento
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      actions: write  # per chiamare genera-social-bozze.yml e archivia-wayback.yml a fine caricamento
+    # 60 minuti: un caricamento normale dura un paio di minuti; il margine
+    # serve al giro che, senza file di stato sul server, deve ricaricare
+    # tutto l'indice di ricerca. Un job ucciso dal tempo riceve SIGINT e
+    # SIGTERM: lo script lascia il lucchetto e l'elenco dei file in sospeso,
+    # e il giro successivo riparte da lì.
+    timeout-minutes: 60
     steps:
       - name: "📥 Checkout"
+        # La storia serve a enableGitInfo (data di ultima modifica). Con
+        # `filter: blob:none` arrivano commit e cartelle di tutta la storia ma
+        # solo i contenuti dei file di adesso: Hugo legge le date con
+        # `git log --name-only` e `diff.renames=0` (bep/gitmap), che non
+        # chiede i contenuti vecchi. Fino all'11/11/2026 `fetch-depth: 0`
+        # scaricava tutto in 49 s.
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          filter: blob:none
 
-      - name: "⚙️ Setup Hugo"
-        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
-        with:
-          hugo-version: '0.154.5'
-          extended: true
-
-      - name: "⚙️ Setup Node.js (per npx pagefind)"
-        uses: actions/setup-node@v7
-        with:
-          node-version: '20'
-
-      - name: "🔖 Scrivi le informazioni di build (data/buildinfo.json)"
-        # SHA e orario di QUESTO deploy: finiscono in /build-info.js (output
-        # BUILDINFO, un file solo, letto dal browser per «Sito aggiornato il…»)
-        # e in /build-manifest.json. Dal 01/10/2026 le pagine NON portano più
-        # la meta pc-build-sha: cambiava a ogni commit e costringeva l'FTP a
-        # ricaricare ~1.100 pagine a ogni deploy. La guardia anti-stale
-        # confronta ora le pagine live con il manifesto delle impronte.
-        # Scritto PRIMA di entrambe le build, non committato: artefatto di build.
+      - name: "🧭 La storia di git c'è tutta (date di ultima modifica)"
         run: |
           set -euo pipefail
-          cat > data/buildinfo.json <<EOF
-          {
-            "sha": "${GITHUB_SHA:0:7}",
-            "sha_full": "${GITHUB_SHA}",
-            "ref": "${GITHUB_REF_NAME}",
-            "run_id": "${GITHUB_RUN_ID}",
-            "time": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          }
-          EOF
-          python3 -c "import json; print(json.load(open('data/buildinfo.json'))['sha'])"
+          test "$(git rev-parse --is-shallow-repository)" = "false"
+          echo "Commit nella storia: $(git rev-list --count HEAD)"
 
-      - name: "♿ Setup liblouis (braille) + segno (QR) + Pillow/font (cover) + dipendenze Python"
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y python3-louis liblouis-data python3-yaml fonts-liberation
-          pip install --break-system-packages segno pillow
+      - name: "🏗️ Prepara e costruisci per Aruba"
+        uses: ./.github/actions/prepara-build
+        with:
+          base-url: "https://www.protezionecivilegenzano.it/"
+          gh-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "🖼️ Genera cover tipografiche mancanti per gli articoli"
-        # Idempotente: genera la cover col titolo (gradiente blu + badge + fascia)
-        # e popola image:/image_alt: SOLO per articoli con image:"" o file mancante.
-        # Non sovrascrive mai una foto utente custom già impostata.
-        # Fail-safe per il SITO: garantisce che nessun articolo vada live col banner
-        # SVG di default invece della cover col titolo, anche se la sessione che lo
-        # ha scritto (mobile/cloud) ha saltato lo step locale e prima che
-        # scarica-foto-automatica.yml (che gira DOPO deploy.yml) faccia la sua passata.
-        # Storia: 04/06/2026 articolo "Tromba d'aria a Roma" andò live con image:""
-        # → banner default SVG, perché creato da altra sessione senza generare la cover.
-        run: python3 scripts/auto-cover-mancanti.py
-
-      - name: "🔲 Genera QR code mancanti per gli articoli"
-        # Idempotente: salta i QR già presenti in static/qr/.
-        # Genera <slug>.png (600x600) + <slug>.svg (vettoriale) per articoli
-        # nuovi pubblicati da mobile senza esecuzione locale dello script.
-        # Storia: 16/05/2026 articolo Giro Formia andò live senza bottone "Scarica QR"
-        # perché lo script non era in CI e nessuno l'aveva lanciato manualmente.
-        run: python3 scripts/genera-qr-articoli.py
-
-      - name: "🧰 Pacchetti dell'Open Kit"
-        # 06/10/2026: i componenti riusabili del sito (pagina /open-kit/) sono
-        # ZIP costruiti qui dai file veri, mai committati: un kit copiato a mano
-        # invecchierebbe dal giorno dopo. ZIP riproducibili (data fissa).
-        run: python3 scripts/genera-open-kit.py
-
-      - name: "⚑ Aggiorna snapshot attivazioni Copernicus EMS"
-        # L'API Rapid Mapping risponde 200 ma NON espone Access-Control-Allow-Origin
-        # (verificato 24/08/2026): da browser la scheda EMS del cruscotto veniva
-        # bloccata dalla same-origin policy e falliva in silenzio. Il server non ha
-        # questo limite: scarichiamo qui e serviamo la copia in same-origin da
-        # static/open-data/ems-attivazioni.json. Se l'API è giù lo script lascia
-        # invariato lo snapshot ed esce 0 (mai un deploy rotto per una fonte terza).
-        run: python3 scripts/genera-ems-attivazioni.py
-
-      - name: "🌍 Snapshot allerte globali GDACS (per la Sala situazioni)"
-        # Stesso pattern dello snapshot EMS: l'API GDACS non è leggibile dal
-        # browser (CORS), la copia locale static/open-data/gdacs-eventi.json
-        # è servita same-origin a /monitor/. Fail-safe: API giù = snapshot
-        # invariato, exit 0.
-        run: python3 scripts/genera-gdacs-eventi.py
-
-      - name: "📰 Snapshot notizie agenzie (barra NOTIZIE della Sala situazioni)"
-        # ANSA + Adnkronos via RSS pubblici (titolo + link + fonte, con
-        # attribuzione): i feed non espongono CORS, la copia locale
-        # static/open-data/notizie-agenzie.json è letta same-origin da
-        # /monitor/. Fail-safe per feed e globale: tutto giù = snapshot
-        # invariato, exit 0.
-        run: python3 scripts/genera-notizie-agenzie.py
-
-      - name: "📖 Genera versioni Braille (.brf) per gli articoli /comunicazioni/"
-        # Specifiche: manuale/parte-24-output-braille-articoli.md
-        # Output in static/braille/comunicazioni/<slug>.brf (ASCII puro, BRF/ICEB).
-        # Idempotente (mtime-based): solo articoli nuovi/modificati vengono rigenerati.
-        run: python3 scripts/genera-braille.py
-
-      - name: "🖨️ Genera pacchetti HTML stampabili 1-click per fascia"
-        # Genera 4 file in static/formazione/schede-stampabili/pacchetti/ con tutte
-        # le schede di una fascia concatenate, pronte per la stampa diretta dal browser
-        # (bottone "Stampa tutto" sulla hub schede-stampabili).
-        # Fonte di verità: content/formazione/kit-scuola-<fascia>.md (la stessa usata
-        # per gli ZIP scaricabili offline). Idempotente: ricrea sempre da zero.
-        # Auto-aggiornamento: ogni push → pacchetti riflettono lo stato corrente.
-        run: python3 scripts/genera-pacchetti-schede.py
-
-      - name: "🌦️ Immagini meteo dalla release (carte ECMWF e sinottica)"
-        # Dal 10/10/2026 non sono più in git (crescevano la storia di ~2 GB
-        # l'anno): stanno nella release `immagini-meteo`. Se la release non
-        # risponde le prende dal sito pubblicato; se mancano anche lì il deploy
-        # si ferma, perché il caricamento FTP le cancellerebbe da Aruba.
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/immagini-meteo-release.py scarica --rigoroso
-
-      - name: "🏗️ Build per Aruba"
-        # TZ Europe/Rome: gli orari mostrati al cittadino (utility-bar "Sito
-        # aggiornato alle...", banner caldo stagionale) escono in ora italiana
-        # invece che in UTC del runner (audit esterno 11/07/2026).
-        env:
-          TZ: Europe/Rome
-        run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
-
-      - name: "🔎 Prepara le pagine statiche per la ricerca (Aruba)"
-        # Il tema marca il contenuto con data-pagefind-body sul <main>. Per
-        # Pagefind quel marcatore è esclusivo: se una pagina lo porta, vengono
-        # indicizzate solo le pagine che lo hanno. Le schede stampabili, i
-        # giochi, i kit e le storie vivono in static/ come HTML autonomi e non
-        # lo hanno mai avuto: erano online e linkate, ma invisibili a /cerca/
-        # e a Ctrl+K. Lo script lo aggiunge in public/ prima dell'indicizzazione.
-        run: python3 scripts/prepara-statiche-per-pagefind.py
-
-      - name: "🔎 Genera indice Pagefind (Aruba)"
-        # L'indice di ricerca full-text è un ARTEFATTO DI BUILD, non un file
-        # sorgente: dal 15/07/2026 NON è più committato in static/pagefind/
-        # (era arrivato a ~432 MB / ~18.000 file versionati, gonfiando repo,
-        # commit e checkout — audit esterno 15/07/2026). Viene generato qui,
-        # fresco a ogni deploy, direttamente in public/pagefind/: stessa URL
-        # pubblica /pagefind/, sempre allineato ai contenuti appena costruiti.
-        # Versione pinnata: allineata a PAGEFIND_VERSION in
-        # scripts/genera-indice-ricerca.sh (aggiornare in coppia).
-        run: npx -y pagefind@1.5.2 --site public
-
-      - name: "🔎 Estendi indice cerca con pagine HTML statiche (Aruba)"
-        run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
+      - name: "📅 Date di ultima modifica uguali a quelle servite"
+        continue-on-error: true
+        run: python3 scripts/controlla-lastmod.py public/sitemap.xml
 
       - name: "📜 Manifesto della build e manifesto servito prima del caricamento"
         # build-manifest.json = impronta sha256 di ogni file di public/
-        # (scripts/genera-manifest-build.py). È il riferimento della guardia
-        # anti-stale: una pagina live con impronta diversa è rimasta vecchia.
-        # Prima di caricare, si scarica il manifesto che il sito serve ADESSO:
-        # il confronto fra i due dice esattamente quali file questo deploy
-        # deve cambiare, e sono quelli che lo step di verifica ricontrolla
-        # uno per uno dopo l'FTP. Al primo deploy con manifesto non esiste:
-        # si verificano solo le pagine critiche.
+        # (scripts/genera-manifest-build.py). Quello servito adesso dal sito
+        # è il riferimento del caricamento insieme al file di stato: un file
+        # che il manifesto servito dà diverso dalla build si ricarica anche
+        # se il file di stato lo crede uguale.
         run: |
           set -euo pipefail
           python3 scripts/genera-manifest-build.py public
@@ -216,57 +106,19 @@ jobs:
             "https://www.protezionecivilegenzano.it/build-manifest.json?cb=$RANDOM$RANDOM" \
             -o /tmp/manifesto-precedente.json \
             && python3 -c "import json; m=json.load(open('/tmp/manifesto-precedente.json')); print('Manifesto live precedente: build', m.get('sha'), m.get('time'))" \
-            || { echo "::notice::Nessun manifesto precedente sul sito: si controllano le pagine critiche."; rm -f /tmp/manifesto-precedente.json; }
+            || { echo "::notice::Nessun manifesto precedente sul sito: il riferimento è il solo file di stato."; rm -f /tmp/manifesto-precedente.json; }
 
-      - name: "📤 Deploy FTP su Aruba"
-        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # FTPS esplicito (AUTH TLS sulla porta 21): senza questa riga l'action
-          # usa FTP in chiaro e credenziali + contenuti viaggiano non cifrati a
-          # ogni deploy (audit 25/09/2026, rilievo F01). Se Aruba rifiutasse la
-          # negoziazione TLS, provare `ftps-legacy`; in ogni caso ruotare la
-          # password FTP dopo il primo deploy cifrato riuscito.
-          protocol: ftps
-          local-dir: ./public/
-          server-dir: /www.protezionecivilegenzano.it/
-          dangerous-clean-slate: false
-          # DEPLOY INCREMENTALE (ripristinato 03/07/2026): il deploy carica solo
-          # i file cambiati rispetto al sync-state salvato su Aruba, in ~1-2 min.
-          #
-          # 🔴 NON bumpare `state-name` per "sanare il drift": su questo sito NON
-          # funziona. Un bump forza il re-upload INTEGRALE di ~25.000 file (di cui
-          # migliaia di micro-file dell'indice Pagefind `pagefind/fragment/*`, ~5 KB
-          # l'uno): su FTP Aruba ogni file = una connessione dati completa (~0,3 s),
-          # quindi l'integrale supera 90 minuti e non completa. Il 03/07/2026 il
-          # bump al `...-2026-07-01.json` ha innescato un loop di upload integrali
-          # mai completati → sync-state mai salvato → sito congelato per l'intera
-          # giornata (12 deploy falliti, articolo da calendario mai andato live).
-          #
-          # Torniamo al sync-state pre-bump (09/06), che rispecchia un sito già
-          # caricato per intero: gli upload ripartono incrementali contro di esso.
-          # Per il drift di singole pagine usare un fix MIRATO (toccare il file
-          # perché cambi e venga re-caricato, o cancellarlo lato server), MAI un
-          # re-upload integrale. Rilevamento drift: verifica-deploy-aruba.yml.
-          state-name: .ftp-deploy-sync-state-2026-06-09.json
-          timeout: 60000
-          log-level: verbose
-          exclude: |
-            **/documenti/**
-
-      - name: "🔁 Verifica il sito live contro la build e ripara i file rimasti vecchi"
-        # Guardia anti-stale, dentro il deploy (01/10/2026). Confronta con il
-        # manifesto: build-info.js, le pagine critiche, l'ultimo articolo, TUTTI
-        # i file che questo deploy doveva cambiare (fino a 250, poi un
-        # campione) e 30 pagine a caso. Un file diverso viene ricaricato subito
-        # via FTPS dalla build appena fatta e ricontrollato: è la risposta
-        # all'incidente del 01/07/2026 (lo stato di sincronizzazione credeva
-        # aggiornate pagine rimaste vecchie per mesi) senza mai ricaricare
-        # tutto il sito. Non ferma il deploy: se la riparazione non basta lo
-        # dice qui, e verifica-deploy-aruba.yml, che gira dopo in modo
-        # indipendente, apre l'issue.
+      - name: "📤 Caricamento su Aruba (solo i file cambiati, in parallelo)"
+        id: carica
+        # Uscite (scripts/carica-aruba.py): ok · ripiego (nulla toccato: si
+        # può usare l'azione) · rosso (caricamento iniziato e non completo:
+        # manifesto e stato del server restano quelli di prima e il giro
+        # successivo ricarica tutto ciò che è ancora diverso) · blocca (né
+        # stato né manifesto leggibili) · occupato (lucchetto di un altro
+        # caricamento oltre l'attesa).
+        # 🔴 `--stato-nome` è lo `state-name` di sempre: NON cambiarlo
+        # (03/07/2026: un nome nuovo = ricaricare tutto il sito, ore, sito
+        # congelato per un giorno). Mai documenti/, gestita a mano sul server.
         continue-on-error: true
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
@@ -275,16 +127,102 @@ jobs:
           FTP_SERVER_DIR: /www.protezionecivilegenzano.it/
         run: |
           set -uo pipefail
-          ARGS=""
-          [ -s /tmp/manifesto-precedente.json ] && ARGS="--precedente /tmp/manifesto-precedente.json"
-          python3 scripts/verifica-deploy-aruba.py \
-            --manifesto public/build-manifest.json --public public \
-            --sha-atteso "${GITHUB_SHA:0:7}" $ARGS \
-            --campione 30 --seme "$GITHUB_RUN_ID" \
-            --tentativi 3 --attesa 20 --ripara | tee /tmp/verifica-deploy.txt
+          ARGS=()
+          if [ -s /tmp/manifesto-precedente.json ]; then ARGS=(--manifesto-servito /tmp/manifesto-precedente.json); fi
+          python3 scripts/carica-aruba.py --public public \
+            --stato-nome .ftp-deploy-sync-state-2026-06-09.json \
+            --connessioni 4 "${ARGS[@]}" | tee /tmp/carica-aruba.txt
           rc=${PIPESTATUS[0]}
           {
-            echo "### Verifica del sito live contro la build"
+            echo "### Caricamento su Aruba"
+            echo '```'
+            grep -v '^  ' /tmp/carica-aruba.txt | tail -40
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$rc"
+
+      - name: "📤 Ripiego: azione FTP-Deploy (solo se il caricamento non ha toccato nulla)"
+        # Legge lo stesso file di stato che carica-aruba.py scrive nel suo
+        # formato (provato con l'azione vera l'11/11/2026: dopo un
+        # caricamento dello script vede zero differenze), quindi riparte da
+        # dove lo script è arrivato. Solo con l'esito «ripiego»: dopo un
+        # caricamento iniziato e fallito si ferma tutto in rosso, perché
+        # l'azione non ricontrolla i file e aggiornerebbe il manifesto.
+        if: ${{ steps.carica.outcome == 'failure' && steps.carica.outputs.esito == 'ripiego' }}
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # FTPS esplicito (audit 25/09/2026, rilievo F01).
+          protocol: ftps
+          local-dir: ./public/
+          server-dir: /www.protezionecivilegenzano.it/
+          dangerous-clean-slate: false
+          # 🔴 NON bumpare `state-name` (incidente 03/07/2026, vedi sopra).
+          state-name: .ftp-deploy-sync-state-2026-06-09.json
+          timeout: 60000
+          log-level: standard
+          exclude: |
+            **/documenti/**
+
+      - name: "🛑 Caricamento non completo"
+        if: ${{ steps.carica.outcome == 'failure' && steps.carica.outputs.esito != 'ripiego' }}
+        env:
+          ESITO: ${{ steps.carica.outputs.esito }}
+        run: |
+          echo "::error::Caricamento su Aruba non completo (esito: ${ESITO:-interrotto}). Manifesto e stato del server non sono stati aggiornati: il prossimo deploy ricarica tutto ciò che è ancora diverso. Dettagli nel riepilogo del run."
+          exit 1
+
+      - name: "📣 Materiale social per gli articoli appena online"
+        # Ogni articolo che esce sul sito esce anche sui social (21/09/2026).
+        # workflow_dispatch perché `workflow_run` non parte per i run lanciati
+        # col GITHUB_TOKEN (22/09/2026). Non blocca mai il deploy.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run genera-social-bozze.yml --repo "$GITHUB_REPOSITORY" --ref main -f recupero=true \
+            || echo "::warning::Chiamata al materiale social non riuscita: ci pensa il giro orario."
+
+      - name: "🗄️ Copia d'archivio degli articoli appena online"
+        # Solo per i deploy di contenuti (unioni, pubblicazione programmata,
+        # lanci a mano): quelli di sfondo del coalescer arrivano ogni mezz'ora.
+        if: ${{ (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip-')) || (github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background') }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run archivia-wayback.yml --repo "$GITHUB_REPOSITORY" --ref main \
+            || echo "::warning::Chiamata alla copia d'archivio non riuscita: ci pensa il giro giornaliero."
+
+      - name: "🔁 Verifica il sito servito contro la build"
+        # Guardia anti-stale dal lato del visitatore (01/10/2026): build-info.js,
+        # pagine critiche, ultimo articolo e 30 pagine a caso, scaricate dal
+        # sito senza cache e confrontate col manifesto; un file diverso si
+        # ricarica via FTPS. Dall'11/11/2026 i file cambiati li ha già
+        # ricontrollati il caricamento sul server uno per uno, quindi qui non
+        # si ripetono, e le richieste vanno 8 alla volta: da 4 minuti a
+        # pochi secondi. Resta nel job (dentro la fila) perché una riparazione
+        # non deve mai incrociare il caricamento del giro dopo.
+        # Non ferma il deploy: verifica-deploy-aruba.yml rifà il controllo e
+        # apre l'issue.
+        continue-on-error: true
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: /www.protezionecivilegenzano.it/
+        run: |
+          set -uo pipefail
+          python3 scripts/verifica-deploy-aruba.py \
+            --manifesto public/build-manifest.json --public public \
+            --sha-atteso "${GITHUB_SHA:0:7}" \
+            --campione 30 --seme "$GITHUB_RUN_ID" --paralleli 8 \
+            --tentativi 2 --attesa 10 --ripara | tee /tmp/verifica-deploy.txt
+          rc=${PIPESTATUS[0]}
+          {
+            echo "### Verifica del sito servito contro la build"
             echo '```'
             tail -40 /tmp/verifica-deploy.txt
             echo '```'
@@ -294,87 +232,42 @@ jobs:
           fi
           exit "$rc"
 
-      - name: "📣 Materiale social per gli articoli appena online"
-        # Il sito è appena stato caricato su Aruba: è l'istante in cui un
-        # articolo calendarizzato diventa online, e ogni articolo che esce sul
-        # sito esce anche sui social (istruzione dell'utente del 21/09/2026).
-        # Si chiama genera-social-bozze.yml in modo esplicito perché il suo
-        # innesco `workflow_run` non partirebbe: GitHub non crea quell'evento
-        # per i run lanciati con il GITHUB_TOKEN, cioè per tutti i deploy che
-        # non vengono da un push (coalescer, allerta, rebuild del mattino) e
-        # quindi proprio per quelli notturni (22/09/2026). Un workflow_dispatch
-        # invece crea sempre il run. Non blocca mai il deploy.
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run genera-social-bozze.yml --repo "$GITHUB_REPOSITORY" --ref main -f recupero=true \
-            || echo "::warning::Chiamata al materiale social non riuscita: ci pensa il giro orario."
+  pages:
+    name: "Build per GitHub Pages"
+    runs-on: ubuntu-latest
+    # Copia di anteprima: conta solo l'ultima, quindi un giro nuovo annulla
+    # quello in corso. È su un'altra macchina: Aruba non si tocca mai da qui.
+    concurrency:
+      group: pages-build
+      cancel-in-progress: true
+    permissions:
+      contents: read
+    timeout-minutes: 30
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          filter: blob:none
 
-      - name: "🗄️ Copia d'archivio degli articoli appena online"
-        # Stesso istante e stesso motivo del passo precedente: appena caricato
-        # su Aruba, un articolo nuovo o corretto si fa archiviare dalla Wayback
-        # Machine, che ne data la prima pubblicazione in modo indipendente.
-        # Il giro giornaliero di archivia-wayback.yml fa da rete. Non blocca
-        # mai il deploy.
-        # Solo per i deploy di contenuti (merge, pubblicazione programmata,
-        # allerta): quelli di sfondo del coalescer arrivano ogni mezz'ora per
-        # meteo e QR e chiederebbero a Internet Archive le stesse verifiche
-        # decine di volte al giorno. Stessa condizione della concurrency.
-        if: ${{ (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip-')) || (github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background') }}
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run archivia-wayback.yml --repo "$GITHUB_REPOSITORY" --ref main \
-            || echo "::warning::Chiamata alla copia d'archivio non riuscita: ci pensa il giro giornaliero."
-
-      - name: "🏗️ Build per GitHub Pages"
-        env:
-          TZ: Europe/Rome
-        run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
-
-      - name: "🔎 Prepara le pagine statiche per la ricerca (GitHub Pages)"
-        # Il tema marca il contenuto con data-pagefind-body sul <main>. Per
-        # Pagefind quel marcatore è esclusivo: se una pagina lo porta, vengono
-        # indicizzate solo le pagine che lo hanno. Le schede stampabili, i
-        # giochi, i kit e le storie vivono in static/ come HTML autonomi e non
-        # lo hanno mai avuto: erano online e linkate, ma invisibili a /cerca/
-        # e a Ctrl+K. Lo script lo aggiunge in public/ prima dell'indicizzazione.
-        run: python3 scripts/prepara-statiche-per-pagefind.py
-
-      - name: "🔎 Genera indice Pagefind (GitHub Pages)"
-        run: npx -y pagefind@1.5.2 --site public
-
-      - name: "🔎 Estendi indice cerca con pagine HTML statiche (GitHub Pages)"
-        run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
+      - name: "🏗️ Prepara e costruisci per GitHub Pages"
+        uses: ./.github/actions/prepara-build
+        with:
+          base-url: "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
+          gh-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "🪶 Alleggerisci la copia per GitHub Pages (Aruba non si tocca)"
-        # 06/11/2026: la copia per GitHub Pages pesava circa 1,9 GB, quasi il
-        # doppio del limite di 1 GB di GitHub, e il 05/11/2026 tre caricamenti
-        # su circa 27 sono andati oltre i 10 minuti concessi (issue #1724).
-        # Dal 10/11/2026 il taglio dei soli file oltre 800 MB non basta: la
-        # copia resta circa 786 MB e l'artifact zip circa 669 MB, e il passo
-        # «Deploy GitHub Pages» si interrompe spesso con «Timeout reached,
-        # aborting!» dopo 10 minuti ancora in syncing_files (run 42785262755
-        # e 42785886025). Quei 10 minuti sono il tetto di actions/deploy-pages
-        # (MAX_TIMEOUT = 600000): un valore più alto viene ignorato e la
-        # documentazione di GitHub dice che la pubblicazione si interrompe
-        # dopo 10 minuti. Non si alza il timeout: si alleggerisce la copia.
-        # Dalla sola copia escono sempre video, audio, presentazioni, tutti
-        # gli ZIP, i PDF oltre 2 MB e i PNG/JPEG oltre 2 MB. WebP, SVG e i
-        # documenti più leggeri restano. I collegamenti portano su Aruba.
-        # Il tetto di 500 MB toglie altri PDF solo se la copia cresce ancora.
-        # Il passo viene dopo il caricamento su Aruba e la sua verifica, e lo
-        # script si ferma se la cartella non è la build per GitHub Pages: i file
-        # sul server Aruba non si toccano (sì di Alessandro del 06/11/2026).
-        # Se si ferma, o se la copia resta oltre 1 GB, l'anteprima non si
-        # carica e il run diventa rosso: Aruba è già aggiornato e verificato.
+        # 06/11/2026 e 10/11/2026: la copia completa pesava ~1,9 GB (limite
+        # GitHub 1 GB) e la pubblicazione si interrompe a 10 minuti
+        # (MAX_TIMEOUT di actions/deploy-pages, non alzabile; issue #1724,
+        # run 42785262755 e 42785886025). Dalla sola copia escono video,
+        # audio, presentazioni, ZIP, PDF e PNG/JPEG oltre 2 MB; tetto 500 MB.
+        # Lo script si ferma (uscita 2) se la cartella è la build per Aruba
+        # (sì di Alessandro del 06/11/2026: «i files sul server Aruba non
+        # vengano toccati»); dall'11/11/2026 gira anche su un'altra macchina.
         run: python3 scripts/alleggerisci-copia-pages.py public --tetto-mb 500
 
       - name: "📜 Manifesto della build (GitHub Pages)"
-        # Stesso manifesto per la copia su GitHub Pages: permette di provare la
-        # guardia anche contro quell'ambiente (--base https://sviluppoitaliadigitale.github.io/sito-pc-genzano).
         run: python3 scripts/genera-manifest-build.py public
 
       - name: "📦 Upload artifact GitHub Pages"
@@ -383,15 +276,21 @@ jobs:
           path: ./public
 
   deploy-pages:
+    needs: pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    concurrency:
+      group: pages-pubblicazione
+      cancel-in-progress: false
+    permissions:
+      pages: write
+      id-token: write
     timeout-minutes: 45
-    needs: build-and-deploy
     steps:
       - name: "🌐 Deploy GitHub Pages"
         id: deployment
-        # Il timeout dell'azione è al massimo 10 minuti (600000 ms): un valore
-        # più alto viene scartato con un avviso. Vedi il passo di alleggerimento.
+        # Il timeout dell'azione è al massimo 10 minuti (600000 ms): vedi il
+        # passo di alleggerimento.
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5

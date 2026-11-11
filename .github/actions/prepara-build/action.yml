@@ -1,0 +1,134 @@
+name: "Prepara e costruisci il sito"
+description: >
+  Passi comuni ai due job di deploy.yml (Aruba e GitHub Pages): strumenti,
+  file generati prima della build (cover, QR, braille, pacchetti, snapshot,
+  immagini meteo), build Hugo con l'indirizzo dato e indice di ricerca.
+  Dall'11/11/2026 i due job girano su macchine diverse e in parallelo, così
+  la copia di anteprima non tiene occupata la fila del caricamento su Aruba:
+  i passi stanno qui una volta sola perché le due build restino uguali.
+
+inputs:
+  base-url:
+    description: "baseURL della build (Aruba o GitHub Pages)"
+    required: true
+  gh-token:
+    description: "token per scaricare le immagini meteo dalla release"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: "⚙️ Setup Hugo"
+      uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+      with:
+        hugo-version: '0.154.5'
+        extended: true
+
+    - name: "⚙️ Setup Node.js (per npx pagefind)"
+      uses: actions/setup-node@v7
+      with:
+        node-version: '20'
+
+    - name: "🔖 Scrivi le informazioni di build (data/buildinfo.json)"
+      # SHA e orario di QUESTO deploy: finiscono in /build-info.js (output
+      # BUILDINFO, un file solo, letto dal browser per «Sito aggiornato il…»)
+      # e in /build-manifest.json. Dal 01/10/2026 le pagine NON portano più
+      # la meta pc-build-sha: cambiava a ogni commit e costringeva l'FTP a
+      # ricaricare ~1.100 pagine a ogni deploy. Scritto prima della build,
+      # non committato: artefatto di build.
+      shell: bash
+      run: |
+        set -euo pipefail
+        cat > data/buildinfo.json <<EOF
+        {
+          "sha": "${GITHUB_SHA:0:7}",
+          "sha_full": "${GITHUB_SHA}",
+          "ref": "${GITHUB_REF_NAME}",
+          "run_id": "${GITHUB_RUN_ID}",
+          "time": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+        }
+        EOF
+        python3 -c "import json; print(json.load(open('data/buildinfo.json'))['sha'])"
+
+    - name: "♿ Setup liblouis (braille) + segno (QR) + Pillow/font (cover) + dipendenze Python"
+      shell: bash
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y python3-louis liblouis-data python3-yaml fonts-liberation
+        pip install --break-system-packages segno pillow
+
+    - name: "🖼️ Genera cover tipografiche mancanti per gli articoli"
+      # Idempotente: genera la cover col titolo e popola image:/image_alt: SOLO
+      # per articoli con image:"" o file mancante; mai sopra una foto utente.
+      # Storia: 04/06/2026 articolo "Tromba d'aria a Roma" andò live con il
+      # banner SVG di default perché creato da altra sessione senza cover.
+      shell: bash
+      run: python3 scripts/auto-cover-mancanti.py
+
+    - name: "🔲 Genera QR code mancanti per gli articoli"
+      # Idempotente. Storia: 16/05/2026 articolo Giro Formia live senza
+      # bottone "Scarica QR" perché lo script non era in CI.
+      shell: bash
+      run: python3 scripts/genera-qr-articoli.py
+
+    - name: "🧰 Pacchetti dell'Open Kit"
+      # ZIP costruiti dai file veri, mai committati; riproducibili (data fissa).
+      shell: bash
+      run: python3 scripts/genera-open-kit.py
+
+    - name: "⚑ Aggiorna snapshot attivazioni Copernicus EMS"
+      # L'API Rapid Mapping non espone CORS (24/08/2026): copia same-origin.
+      # API giù = snapshot invariato, exit 0.
+      shell: bash
+      run: python3 scripts/genera-ems-attivazioni.py
+
+    - name: "🌍 Snapshot allerte globali GDACS (per la Sala situazioni)"
+      shell: bash
+      run: python3 scripts/genera-gdacs-eventi.py
+
+    - name: "📰 Snapshot notizie agenzie (barra NOTIZIE della Sala situazioni)"
+      shell: bash
+      run: python3 scripts/genera-notizie-agenzie.py
+
+    - name: "📖 Genera versioni Braille (.brf) per gli articoli /comunicazioni/"
+      # manuale/parte-24. Idempotente (mtime-based).
+      shell: bash
+      run: python3 scripts/genera-braille.py
+
+    - name: "🖨️ Genera pacchetti HTML stampabili 1-click per fascia"
+      shell: bash
+      run: python3 scripts/genera-pacchetti-schede.py
+
+    - name: "🌦️ Immagini meteo dalla release (carte ECMWF e sinottica)"
+      # Dal 10/10/2026 non sono in git: release `immagini-meteo`, ripiego sul
+      # sito pubblicato; se mancano anche lì il deploy si ferma, perché il
+      # caricamento le cancellerebbe da Aruba.
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.gh-token }}
+      run: python3 scripts/immagini-meteo-release.py scarica --rigoroso
+
+    - name: "🏗️ Build Hugo"
+      # TZ Europe/Rome: gli orari mostrati al cittadino escono in ora italiana
+      # (audit esterno 11/07/2026).
+      shell: bash
+      env:
+        TZ: Europe/Rome
+        BASE_URL: ${{ inputs.base-url }}
+      run: hugo --minify --baseURL "$BASE_URL"
+
+    - name: "🔎 Prepara le pagine statiche per la ricerca"
+      # data-pagefind-body è esclusivo per Pagefind: lo script lo aggiunge alle
+      # pagine HTML autonome di static/ (schede, giochi, kit, storie…).
+      shell: bash
+      run: python3 scripts/prepara-statiche-per-pagefind.py
+
+    - name: "🔎 Genera indice Pagefind"
+      # Artefatto di build dal 15/07/2026 (non più committato). Versione
+      # allineata a PAGEFIND_VERSION in scripts/genera-indice-ricerca.sh.
+      shell: bash
+      run: npx -y pagefind@1.5.2 --site public
+
+    - name: "🔎 Estendi indice cerca con pagine HTML statiche"
+      shell: bash
+      run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py

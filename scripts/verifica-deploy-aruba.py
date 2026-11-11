@@ -59,6 +59,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 BASE_DEFAULT = "https://www.protezionecivilegenzano.it"
@@ -333,6 +334,7 @@ def main() -> int:
     ap.add_argument("--attesa", "--wait", dest="attesa", type=int, default=30, help="secondi fra un tentativo e l'altro")
     ap.add_argument("--ore-massime", "--stale-hours", dest="ore_massime", type=int, default=12,
                     help="età massima dell'ultima build servita")
+    ap.add_argument("--paralleli", type=int, default=8, help="richieste HTTP contemporanee")
     ap.add_argument("--ripara", action="store_true", help="ricarica via FTPS i file diversi (serve --public)")
     ap.add_argument("--diagnostica", action="store_true", help="stampa le impronte senza giudicare")
     a = ap.parse_args()
@@ -429,28 +431,28 @@ def main() -> int:
     # 4. Controllo con ritentativi (propagazione subito dopo il caricamento).
     def controlla(rels: list[str]) -> dict[str, str]:
         """rel → esito: 'ok' | 'diverso' | 'assente(<status>)' | 'irraggiungibile'."""
-        esiti = {}
-        for rel in rels:
+        def uno(rel: str) -> tuple[str, str]:
             st, corpo = scarica(url_di(base, rel))
             if rel in rimossi_set:
                 # Deve NON esserci più: qualunque risposta diversa da 200 va bene.
-                esiti[rel] = "irraggiungibile" if st == 0 else ("ok" if st != 200 else "ancora online")
-                continue
+                return rel, "irraggiungibile" if st == 0 else ("ok" if st != 200 else "ancora online")
             if st == 0:
-                esiti[rel] = "irraggiungibile"
-            elif reindirizzato(st):
+                return rel, "irraggiungibile"
+            if reindirizzato(st):
                 # Il server manda altrove (regola .htaccess): il file della build
                 # non è confrontabile da fuori, e non è un file rimasto vecchio.
-                esiti[rel] = f"ok(redirect {st})"
-            elif st != 200:
-                esiti[rel] = f"assente({st})"
-            else:
-                atteso = manifesto_locale_bytes and rel == MANIFESTO and sha256(manifesto_locale_bytes) or file.get(rel, "")
-                if rel == MANIFESTO and manifesto_locale_bytes:
-                    esiti[rel] = "ok" if corpo == manifesto_locale_bytes else "diverso"
-                else:
-                    esiti[rel] = "ok" if sha256(corpo) == atteso else "diverso"
-        return esiti
+                return rel, f"ok(redirect {st})"
+            if st != 200:
+                return rel, f"assente({st})"
+            if rel == MANIFESTO and manifesto_locale_bytes:
+                return rel, "ok" if corpo == manifesto_locale_bytes else "diverso"
+            return rel, "ok" if sha256(corpo) == file.get(rel, "") else "diverso"
+
+        # Richieste in parallelo (11/11/2026): una per volta, 500-600 file
+        # facevano 4 minuti di deploy. Con 8 alla volta il sito non se ne
+        # accorge e la verifica scende sotto il minuto.
+        with ThreadPoolExecutor(max_workers=max(1, a.paralleli)) as ex:
+            return dict(ex.map(uno, rels))
 
     rimossi_set = set(rimossi[: a.max_cambiati])
     for k in rimossi_set:
