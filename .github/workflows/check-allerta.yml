@@ -73,10 +73,14 @@ jobs:
         # è il CSV opendatasicilia). `apt-get update` prima dell'install evita il
         # 404 sul .deb stantio dell'immagine runner; se l'install fallisce comunque,
         # il job prosegue (warning) anziché bloccare l'intera verifica allerta.
+        # 11/11/2026: con i server di Ubuntu irraggiungibili dai runner pdftotext
+        # non si installava, il PDF regionale non si leggeva e, con il CSV del
+        # Dipartimento fermo all'8/11, il bollettino di oggi non entrava nel sito.
+        # Ora l'installazione passa da scripts/apt-installa.sh, che ripiega su
+        # mirror fuori da ubuntu.com, con 4 minuti al massimo (il job ne ha 15).
         run: |
           if command -v pdftotext >/dev/null 2>&1; then exit 0; fi
-          sudo apt-get update -qq || true
-          sudo apt-get install -y --no-install-recommends poppler-utils \
+          APT_TEMPO_MASSIMO=240 bash scripts/apt-installa.sh --no-install-recommends poppler-utils \
             || echo "::warning::poppler-utils non installato: fallback PDF Regione Lazio disattivato per questo run (resta attivo il percorso CSV primario)."
 
       - name: "🔍 Verifica livello allerta DPC per Genzano di Roma"

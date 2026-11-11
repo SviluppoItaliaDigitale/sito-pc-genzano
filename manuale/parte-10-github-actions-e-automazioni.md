@@ -28,7 +28,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 
 - **`aruba`**, in un'unica fila (`concurrency` del job, mai annullato: un caricamento iniziato arriva in fondo; GitHub tiene un solo giro in attesa, l'ultimo, che costruisce `main` con tutto dentro):
   1. checkout con la storia completa ma senza i contenuti dei file vecchi (`filter: blob:none`), che bastano alle date di ultima modifica;
-  2. passi comuni nell'azione locale `.github/actions/prepara-build` (cover, QR, braille, pacchetti, snapshot, immagini meteo, build Hugo per Aruba, indice di ricerca);
+  2. passi comuni nell'azione locale `.github/actions/prepara-build` (pacchetti Ubuntu, cover, QR, braille, pacchetti, snapshot, immagini meteo, build Hugo per Aruba, indice di ricerca). Dall'11/11/2026 i pacchetti Ubuntu li installa `scripts/apt-installa.sh`: server di Ubuntu, poi mirror fuori da ubuntu.com, poi i `.deb` conservati nella cache di GitHub con chiave mensile, così il deploy non si ferma se i server di Ubuntu non rispondono;
   3. manifesto della build e manifesto servito dal sito;
   4. caricamento con `scripts/carica-aruba.py`: solo i file cambiati rispetto al file di stato del server e al manifesto servito, 4 collegamenti FTPS in parallelo, ogni file su un nome provvisorio e poi rinominato sul nome vero, riscaricato e confrontato con la build; ordine cartelle nuove → risorse (CSS, JS, immagini, ricerca) → pagine → indici (home, elenchi, feed, sitemap) → cancellazioni → manifesto e stato. Un lucchetto sul server impedisce due caricamenti insieme. Se un file non torna, il job è rosso, manifesto e stato del server restano quelli di prima e il giro dopo ricarica tutto ciò che è ancora diverso (più l'elenco dei file «in sospeso» lasciato dal giro interrotto). L'azione `SamKirkland/FTP-Deploy-Action` resta come ripiego solo se lo script non ha toccato nulla (per esempio un errore di collegamento): legge lo stesso file di stato;
   5. verifica del sito servito (pagine critiche, ultimo articolo, 30 pagine a caso, 8 richieste alla volta) con nuovo caricamento dei file rimasti vecchi.
@@ -40,6 +40,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 **Fallimenti comuni:**
 - build Hugo rotto (frontmatter malformato, shortcode non definito, YAML data invalido): il commit va revertito o corretto subito;
 - caricamento non completo (passo «🛑 Caricamento non completo»): il riepilogo del run elenca i file; il deploy successivo li ricarica da solo, non serve altro;
+- guasto esterno (per esempio i server dei pacchetti irraggiungibili, come l'11/11/2026): `deploy-coalescer.yml` rilancia il deploy dello stesso commit fino a 6 volte, solo se nessun deploy di quel commit è riuscito; il nuovo tentativo parte come `background`, quindi la copia d'archivio la recupera il giro giornaliero di `archivia-wayback.yml`;
 - secret scaduto: aggiornare nei Settings del repo.
 
 **Come usarlo manualmente**: Actions → "🚀 Build e Deploy" → Run workflow. Utile per ripubblicare dopo aver corretto un secret o dopo un rollback DNS.
@@ -110,7 +111,7 @@ Dopo i tre script, lo step di commit:
 
 **Permessi**: `contents: write` + `actions: write` (per il trigger esplicito del deploy).
 
-**Dipendenze runtime**: `poppler-utils` per `pdftotext` (preinstallato su `ubuntu-latest`, installazione difensiva nel workflow se mancasse).
+**Dipendenze runtime**: `poppler-utils` per `pdftotext` (preinstallato su `ubuntu-latest`, installazione difensiva nel workflow se mancasse). Dall'11/11/2026 l'installazione passa da `scripts/apt-installa.sh`, che ripiega su mirror fuori da ubuntu.com quando i server di Ubuntu non rispondono, come per il deploy e i controlli delle PR.
 
 **Quando NON intervenire manualmente**: mai, se non per test. L'automazione è affidabile e le modifiche umane vengono sovrascritte al ciclo successivo (5 min).
 

@@ -166,15 +166,16 @@ var prima=Date.parse(box.getAttribute("data-controllo")),ultimo=prima;
 /* Oltre 6 ore dall'ultimo controllo riuscito lo stato non si presenta
    come attuale: box neutro e rimando al bollettino, come la barra della
    home (home-allerta.js). Il colore non diventa verde né sparisce
-   l'ultimo livello noto: non verificato non vuol dire nessun pericolo.
-   Audit esterno del 17/10/2026, rilievo R12. */
+   l'ultimo livello noto: da confermare non vuol dire nessun pericolo.
+   Audit esterno del 17/10/2026, rilievo R12. Testi resi più chiari
+   l'11/11/2026, come nella barra della home. */
 function scadenza(){if(!(ultimo>0)||Date.now()-ultimo<=216e5)return;
 var t=document.getElementById("lite-allerta-titolo"),l=document.getElementById("lite-allerta-liv"),de=document.getElementById("lite-allerta-desc");
 var liv=(l.textContent.match(/livello ([a-z]+)/)||[])[1]||"";
 box.className="lite-allerta lite-allerta-nonverificato";
-t.textContent="Stato allerta meteo non verificato da oltre 6 ore";
+t.textContent="Stato allerta meteo da confermare: ultimo controllo di oltre 6 ore fa";
 l.textContent=liv?"(ultimo livello noto: "+liv+")":"";
-de.textContent="Il sito non riesce ad aggiornare il dato: controlla il bollettino del Centro Funzionale della Regione Lazio (link qui sotto).";}
+de.textContent="Per la situazione aggiornata consulta il bollettino del Centro Funzionale della Regione Lazio (link qui sotto).";}
 if(!window.fetch){scadenza();return}
 var ac=window.AbortController?new AbortController():null;if(ac)setTimeout(function(){ac.abort()},4000);
 fetch({{ "allerta-stato/index.json" | relURL | jsonify | safeJS }},{cache:"no-store",signal:ac?ac.signal:undefined}).then(function(r){return r.ok?r.json():null}).then(function(j){

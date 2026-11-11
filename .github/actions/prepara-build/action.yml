@@ -50,12 +50,43 @@ runs:
         EOF
         python3 -c "import json; print(json.load(open('data/buildinfo.json'))['sha'])"
 
-    - name: "♿ Setup liblouis (braille) + segno (QR) + Pillow/font (cover) + dipendenze Python"
+    # 11/11/2026: dalle 15 i runner non risolvevano i server di Ubuntu e ogni
+    # deploy si fermava qui (apt-get, codice 100) per ore. I pacchetti ora li
+    # installa scripts/apt-installa.sh: server predefiniti, poi mirror fuori da
+    # ubuntu.com, poi la copia conservata nella cache di GitHub (chiave mensile,
+    # salvata al primo giro riuscito del mese).
+    - name: "🗃️ Chiave della cache dei pacchetti Ubuntu"
+      id: chiave-apt
       shell: bash
       run: |
-        sudo apt-get update -qq
-        sudo apt-get install -y python3-louis liblouis-data python3-yaml fonts-liberation
+        prefisso="apt-deb-${ImageOS:-ubuntu}-build-"
+        echo "prefisso=$prefisso" >> "$GITHUB_OUTPUT"
+        echo "chiave=${prefisso}$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+    - name: "🗃️ Pacchetti Ubuntu conservati (riserva se i server non rispondono)"
+      id: cache-apt
+      continue-on-error: true
+      uses: actions/cache/restore@v6
+      with:
+        path: ~/.cache/apt-deb
+        key: ${{ steps.chiave-apt.outputs.chiave }}
+        restore-keys: ${{ steps.chiave-apt.outputs.prefisso }}
+
+    - name: "♿ Setup liblouis (braille) + segno (QR) + Pillow/font (cover) + dipendenze Python"
+      id: apt
+      shell: bash
+      run: |
+        bash scripts/apt-installa.sh python3-louis liblouis-data python3-yaml fonts-liberation
         pip install --break-system-packages segno pillow
+
+    - name: "🗃️ Conserva i pacchetti Ubuntu per la prossima volta"
+      # Solo se c'è qualcosa da conservare (deb = .deb scaricati in questo giro o già in cache).
+      if: steps.cache-apt.outputs.cache-hit != 'true' && steps.apt.outputs.fonte != 'cache' && steps.apt.outputs.deb != '0'
+      continue-on-error: true
+      uses: actions/cache/save@v6
+      with:
+        path: ~/.cache/apt-deb
+        key: ${{ steps.chiave-apt.outputs.chiave }}
 
     - name: "🖼️ Genera cover tipografiche mancanti per gli articoli"
       # Idempotente: genera la cover col titolo e popola image:/image_alt: SOLO
