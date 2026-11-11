@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-11T08:58:27+00:00",
+  "generato": "2026-11-11T16:57:07+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-11T08:47:51+00:00",
+   "data": "2026-11-11T16:47:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Netflix aumenta i prezzi degli abbonamenti: rincari fino a 2 euro al mese, ecco le nuove tariffe",
+   "url": "https://www.adnkronos.com/spettacoli/netflix-abbonamento-prezzo-aumento-dicembre_6NGhKGzJhI5xSv1M8gjcOv"
+  },
+  {
+   "data": "2026-11-11T16:46:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Garlasco, l'ex pm Venditti: \"Amareggiato da indagine su di me, ho risposto a tutto\"",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-venditti-corruzione-sempio-testimone_6IdTqBRNQM6mMbt8Biqzq6"
+  },
+  {
+   "data": "2026-11-11T16:40:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Tajani: 'Fi non vuole vessare le banche, la nostra posizione è diversa dalla Lega'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/tajani-fi-non-vuole-vessare-le-banche-la-nostra-posizione-e-diversa-dalla-lega_02f7edf5-bea9-4d3f-ab18-7b8f3facd2b5.html"
+   "titolo": "Allarme bomba in oltre 6000 scuole. Le opposizioni: 'Versioni dei ministri discordanti, Meloni chiarisca in Aula'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allarme-bomba-in-oltre-6000-scuole.-le-opposizioni-versioni-dei-ministri-discordanti_870b0024-72d2-4b15-bab5-0c74dcc1d653.html"
   },
   {
-   "data": "2026-11-11T08:44:46+00:00",
+   "data": "2026-11-11T16:39:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lindsey Vonn, nono intervento dopo la caduta olimpica: rimosse placche e viti",
+   "url": "https://www.adnkronos.com/sport/vonn-non-intervento-chirurgico_41g3lCbSL4dc1DS6CBpkMr"
+  },
+  {
+   "data": "2026-11-11T16:34:41+00:00",
    "fonte": "ANSA",
-   "titolo": "Mosca punge: 'Gli europei stabiliscano con la morra cinese chi deve parlare con Mosca'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/mosca-punge-gli-europei-stabiliscano-con-la-morra-cinese-chi-deve_74686c15-cdda-47c8-a22d-a0bbb8279708.html"
+   "titolo": "Conferenza sul clima, Guterres: 'Le fonti fossili devono scomparire come i dinosauri'",
+   "url": "https://www.ansa.it/ansa2030/notizie/energia_energie/2026/11/11/conferenza-sul-clima-lula-alla-cop31-guerre-e-dazi-oscurano-lagenda_ff93a15d-609c-4280-b9b1-ac465d9e787f.html"
   },
   {
-   "data": "2026-11-11T08:39:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran, il retroscena: \"Lite furibonda Trump-Netanyahu sulla possibilità di riprendere la guerra\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-iran-usa-israele-news-oggi-11-novembre_2ixavWwRmrcdtbAhipLH1c"
-  },
-  {
-   "data": "2026-11-11T08:35:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Davide Iacopini, a un mese dall'aggressione: \"Di quella sera non ricordo nulla\"",
-   "url": "https://www.adnkronos.com/cronaca/davide-iacopini-come-sta-banda-minicar-riabilitazione_6GgBLbsjIYlGpWn5NjpVPd"
-  },
-  {
-   "data": "2026-11-11T08:25:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Crosetto: \"Serve un centro nazionale ed europeo contro la guerra ibrida\"",
-   "url": "https://www.adnkronos.com/economia/crosetto-serve-un-centro-nazionale-ed-europeo-contro-la-guerra-ibrida_5LOGqg0G6KOTMLjlHdrWIC"
-  },
-  {
-   "data": "2026-11-11T08:24:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Strazzullo (Tim), 'sovranità digitale per proteggere i dati europei, serve reciprocità con i player globali'",
-   "url": "https://www.adnkronos.com/economia/strazzullo-tim-sovranita-digitale-per-proteggere-i-dati-europei-serve-reciprocita-con-i-player-globali_5nkyqYVzzx2CWiNrcDMnjR"
-  },
-  {
-   "data": "2026-11-11T08:23:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cyberattacchi, Tajani: \"Minacce provengono da est, non abbiamo prove del coinvolgimento dell'Iran\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/cyberattacchi-ucraina-tajani-intervista-mattino-cinque_3B9UqQNBF6HB7ZB7aZWMX4"
-  },
-  {
-   "data": "2026-11-11T08:16:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Appalti Asl Bari, arrestati due dipendenti e un imprenditore per corruzione e subappalto illecito",
-   "url": "https://www.adnkronos.com/cronaca/appalti-asl-bari-arresti-corruzione_2vkoo54GpFeAvDeenlLaE3"
-  },
-  {
-   "data": "2026-11-11T08:14:42+00:00",
+   "data": "2026-11-11T16:32:27+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "'Nessuna corruzione né pressioni, archiviare Sala, Boeri e Catella'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/nessuna-corruzione-ne-pressioni-archiviare-sala-boeri-e-catella_88fa0456-761c-47e9-b672-004558a268c2.html"
+   "titolo": "Crollo durante ristrutturazione, morti due operai nell'Aquilano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/crollo-durante-ristrutturazione-morti-due-operai-nellaquilano_9e64a322-74e8-4722-bf41-00a1c1315026.html"
   },
   {
-   "data": "2026-11-11T08:14:00+00:00",
+   "data": "2026-11-11T16:24:42+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Lavoro, Tajani: \"Formazione, innovazione e ricerca sono le chiavi per crescere\"",
-   "url": "https://www.adnkronos.com/economia/lavoro-tajani-formazione-innovazione-e-ricerca-sono-le-chiavi-per-crescere_7gHWXQ5VC7hahvYh2Mze79"
+   "titolo": "Bresh, online il nuovo video 'Tutto a puttane' girato in Marocco",
+   "url": "https://www.adnkronos.com/spettacoli/bresh-online-il-nuovo-video-tutto-a-puttane-girato-in-marocco_476csN0LJocZRNacVY4wT1"
   },
   {
-   "data": "2026-11-11T08:13:59+00:00",
+   "data": "2026-11-11T16:24:30+00:00",
    "fonte": "ANSA",
-   "titolo": "Errani e Paolini vincono ancora, sono in semifinale alle Wta Finals",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/11/errani-e-paolini-vincono-ancora-e-semifinale-alle-wta-finals_d54ed35e-96e1-46f4-940e-c511e7a1f3a4.html"
+   "titolo": "La fuga di Bertulazzi in un video, messa una taglia da 11mila euro",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/la-fuga-di-bertulazzi-in-un-video-messa-una-taglia-da-11mila-euro_676135fe-cfa1-4a7a-954f-c2740b78a722.html"
   },
   {
-   "data": "2026-11-11T07:55:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Incursioni di droni in Lituania, scatta l'allarme: decollano i jet della Nato",
-   "url": "https://www.adnkronos.com/internazionale/esteri/droni-lituania-nato_2eDVtdl3COzxYZ0GdcUwb4"
-  },
-  {
-   "data": "2026-11-11T07:47:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanità, Foti: \"Raggiunti gli obiettivi Pnnr e poste le basi per migliorare i servizi\"",
-   "url": "https://www.adnkronos.com/economia/sanita-foti-raggiunti-gli-obiettivi-pnnr-e-poste-le-basi-per-migliorare-i-servizi_64I5ef6YTOyloAcElF0zaC"
-  },
-  {
-   "data": "2026-11-11T07:47:05+00:00",
+   "data": "2026-11-11T16:16:26+00:00",
    "fonte": "ANSA",
-   "titolo": "Lewis Hamilton in visita al valico di Rafah",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/10/f1-hamilton-in-visita-al-confine-egiziano-con-gaza_b3b08256-9950-4735-9644-bb0c4c3c9a06.html"
+   "titolo": "La Rai avvia accertamenti su Bellama' di Diaco. Il conduttore: 'La mia giornata più difficile, ma bisogna andare avanti'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/11/la-rai-avvia-accertamenti-su-bellama-di-diaco_227263e9-89b9-4ac4-995c-60f27cad298a.html"
   },
   {
-   "data": "2026-11-11T07:46:31+00:00",
+   "data": "2026-11-11T16:13:17+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Piogge intense sull'Italia, arriva la lunga fase instabile: le previsioni meteo",
-   "url": "https://www.adnkronos.com/cronaca/meteo-previsioni-maltempo-oggi-11-novembre_2EzVxdVLqEWwEbGHMM4Wbx"
+   "titolo": "Inter, solo un affaticamento muscolare per Thuram",
+   "url": "https://www.adnkronos.com/sport/inter-thuram-affaticamento-muscolare_2hEQGb3AyBsogoaG2KWkb9"
   },
   {
-   "data": "2026-11-11T07:29:12+00:00",
+   "data": "2026-11-11T16:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diaco in tv a BellaMà: \"Oggi la mia giornata più difficile sul piano personale e professionale, sono un servitore della Rai\"",
+   "url": "https://www.adnkronos.com/spettacoli/diaco-sfogo-bellama-tv-giornata-piu-difficile_W7Q9cN3MwWOxNUvEKxoS2"
+  },
+  {
+   "data": "2026-11-11T16:02:20+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "A Milano 14 giovani in arresto, sono accusati di rapine sui mezzi pubblici",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/a-milano-14-giovani-in-arresto-sono-accusati-di-rapine-sui-mezzi-pubblici_7c8d19af-cd7e-441f-8e03-654987501e10.html"
+   "titolo": "Il caso del Trentino Alto Agide, nessuna scuola coinvolta nell'allarme bomba",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/il-caso-del-trentino-alto-agide-nessuna-scuola-coinvolta-nellallarme-bomba_b243072e-a068-43d3-be5e-cdc1a5411dc0.html"
   },
   {
-   "data": "2026-11-11T07:16:22+00:00",
+   "data": "2026-11-11T15:58:43+00:00",
    "fonte": "ANSA",
-   "titolo": "A Milano 14 giovani in arresto, sono accusati di rapine sui mezzi pubblici",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/a-milano-14-giovani-in-arresto-sono-accusati-di-rapine-sui-mezzi-pubblici_72f20f20-1f8b-4aac-ae20-6274af47b203.html"
+   "titolo": "UniNettuno compie vent'anni, a Roma l'evento celebrativo",
+   "url": "https://www.ansa.it/canale_legalita_scuola/notizie/2026/11/10/uninettuno-compie-ventanni-a-roma-levento-celebrativo_2b1ec9bb-f444-4bf2-b916-f2408504898b.html"
   },
   {
-   "data": "2026-11-11T06:55:00+00:00",
+   "data": "2026-11-11T15:58:09+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Terremoto in Sicilia, sciame sismico al largo delle coste: scossa più alta di magnitudo 4.1",
-   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-sicilia-sciame-sismico-news_38JqX9TC1dWq2ll8TMmQPV"
+   "titolo": "Ballando, Ravagnani dopo intervista di Diaco: \"La mia famiglia ha sofferto più di me\"",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-ravagnani-intervista-diaco_1JgODfIfEOEDWLuxEc83ar"
   },
   {
-   "data": "2026-11-11T06:51:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Scontro sulle banche. Verso un nuovo vertice di maggioranza",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/11/prime-pagine-scontro-sulle-banche.-verso-un-nuovo-vertice-di-maggioranza_1829e03b-abfc-4850-a452-4ee26aee33bc.html"
+   "data": "2026-11-11T15:53:46+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Allerta rossa per maltempo in Toscana, arancione in tre regioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allerta-rossa-per-maltempo-in-toscana-arancione-in-tre-regioni_8e24ea9c-68bc-4518-aeea-5487ea4ee781.html"
   },
   {
-   "data": "2026-11-11T06:35:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, droni di Kiev attaccano sul Mar Baltico: incendio nel porto di Ust-Luga in Russia",
-   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-11-novembre_1JQY8TnrW9UrhBjdwVQXuK"
+   "data": "2026-11-11T15:51:54+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Processo Grillo jr, giovedì a Sassari l'appello con il rischio di rinvio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/processo-grillo-jr-domani-a-sassari-lappello-con-rischio-rinvio_537a0752-3371-4245-ab47-5338dd86c891.html"
   },
   {
-   "data": "2026-11-11T06:16:30+00:00",
+   "data": "2026-11-11T15:51:28+00:00",
    "fonte": "ANSA",
    "titolo": "La Camera Usa boccia la procedura di impeachment per Hegseth",
    "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/11/la-camera-usa-boccia-la-procedura-di-impeachment-per-hegseth_2979584a-b939-48f3-bb33-2ca237fbebf5.html"
   },
   {
-   "data": "2026-11-11T06:07:58+00:00",
+   "data": "2026-11-11T15:48:45+00:00",
    "fonte": "ANSA",
-   "titolo": "'Favoritismi a Bolsonaro alle elezioni', il Brasile multa Meta",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/favoritismi-a-bolsonaro-alle-elezioni-il-brasile-multa-meta_86ed2e39-f285-44fe-976d-5a5718361523.html"
+   "titolo": "Ucraina, colloqui trilaterali ad Abu Dhabi, Kushner: 'Domani vedremo Putin a Mosca, poi Zelensky a Dublino'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/ucraina-colloqui-trilaterali-ad-abu-dhabi-kushner-domani-vedremo-putin-a-mosca_275a59ea-50f5-4e6e-8d90-89aa9c12e2d0.html"
   },
   {
-   "data": "2026-11-11T00:54:42+00:00",
+   "data": "2026-11-11T15:46:23+00:00",
    "fonte": "ANSA",
-   "titolo": "Il Papa ai giovani, 'non vi inginocchiate davanti agli idoli'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/11/il-papa-ai-giovani-non-vi-inginocchiate-davanti-agli-idoli_9c87d5f1-bff8-47a1-ba0a-c427b3968c5a.html"
+   "titolo": "Confindustria: 'Dalle imprese il 43% delle coperture della manovra'",
+   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/11/11/istat-frena-la-crescita-delloccupazione-nel-2026-2027-giu-la-disoccupazione_c6c2b0c5-93d2-4ea9-99a9-84315413c5b2.html"
   },
   {
-   "data": "2026-11-10T23:09:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tensione sulle armi all'Ucraina, la Lega avvisa gli alleati",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/tensione-sulle-armi-allucraina-la-lega-avvisa-gli-alleati_83808254-a528-4178-aee1-ade2f46fc15d.html"
-  },
-  {
-   "data": "2026-11-10T22:17:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'ex Br Bertulazzi scappa dai domiciliari a Buenos Aires, è caccia all'uomo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/lex-br-bertulazzi-scappa-dai-domiciliari-a-buenos-aires-e-caccia-alluomo_7c3d4755-c715-4de4-9077-d5c8575229da.html"
-  },
-  {
-   "data": "2026-11-10T22:15:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il trapper Baby Gang non va in udienza, 'pestato in carcere'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/il-trapper-baby-gang-non-va-in-udienza-pestato-in-carcere_cfb6958b-b204-460d-9239-bc8794c5087d.html"
-  },
-  {
-   "data": "2026-11-10T21:21:41+00:00",
+   "data": "2026-11-11T15:45:09+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "'Dopo 35 anni indagini difficili', nessun colpevole per la Moby Prince",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/dopo-35-anni-indagini-difficili-nessun-colpevole-per-la-moby-prince_96c61983-4596-4302-ad5b-9daec82cebbb.html"
+   "titolo": "Femminicidio Scialdone, in appello bis ergastolo per l'ex",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/femminicidio-scialdone-in-appello-bis-ergastolo-per-lex_d4ead827-5f5a-42fb-8715-e50adec18b34.html"
   },
   {
-   "data": "2026-11-10T21:20:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuovo allarme Ue, 'nel mirino degli hacker anche gli elettrodomestici'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/agenzia-ue-attacchi-hacker-potrebbero-colpire-anche-elettrodomestici_28703d89-c3b2-4c05-8315-d0e77f5339ba.html"
+   "data": "2026-11-11T15:44:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maltempo, scuole chiuse per allerta meteo giovedì 12 novembre: l'elenco dei Comuni",
+   "url": "https://www.adnkronos.com/cronaca/scuole-chiuse-allerta-meteo-12-novembre-elenco-comuni_5wjJuaV4ll7oDqXMkhk4vc"
   },
   {
-   "data": "2026-11-10T20:24:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Unifil: 'Una nostra pattuglia bersagliata da colpi, nessun soldato è stato ferito'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/unifil-nostra-pattuglia-bersagliata-da-colpi-nessun-soldato-ferito_6fb8dca0-f873-4c54-b6b7-e69fe8cc38de.html"
-  },
-  {
-   "data": "2026-11-10T19:48:33+00:00",
+   "data": "2026-11-11T15:42:39+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Eternit, disposto nuovo processo di appello per Schmidheiny",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/eternit-disposto-nuovo-processo-di-appello-per-schmidheiny_9dfd62e0-995f-4129-9cf1-3a6a6a33ce01.html"
+   "titolo": "Maxi scritta 'Tirol' in occasione di Milano-Cortina, multa confermata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/maxi-scritta-tirol-in-occasione-di-milano-cortina-multa-confermata_1ef2a5bc-6e9f-4805-9b54-3c6e4656dfd7.html"
+  },
+  {
+   "data": "2026-11-11T15:42:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tajani: 'Ricevuti nuovi cyberattacchi, taglia anche su minori della mia famiglia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/11/tajani-ricevuti-nuovi-cyberattacchi-taglia-anche-su-minori-della-mia-famiglia_4747829e-9536-4d27-98df-0169f9ec722c.html"
+  },
+  {
+   "data": "2026-11-11T15:40:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Paura per Robert Sanchez, Ferrari distrutta dopo un violento schianto al Nürburgring: portiere illeso",
+   "url": "https://www.adnkronos.com/sport/robert-sanchez-incidente-al-nurburgring_6eurYT9ioMADyJFfbpTemf"
+  },
+  {
+   "data": "2026-11-11T15:34:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Omicidio Martina Scialdone, Bonaiuti condannato all’ergastolo in Appello bis",
+   "url": "https://www.adnkronos.com/cronaca/omicidio-martina-scialdone-costantino-bonaiuti-condanna-ergastolo_5YrJLjx6UHashsY61RqA1O"
+  },
+  {
+   "data": "2026-11-11T15:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Allarmi bomba, Guerini: \"Aggressione a nostra società, capire se rivendicazioni reali o depistaggi\"",
+   "url": "https://www.adnkronos.com/politica/allarmi-bomba-guerini-aggressione-a-nostra-societa-capire-se-rivendicazioni-reali-o-depistaggi_3fZym4ekYRpOcIhz1VkQuL"
+  },
+  {
+   "data": "2026-11-11T15:12:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Debora Caprioglio, il furto in casa da 60mila euro: \"Hanno portato via i ricordi di mamma\"",
+   "url": "https://www.adnkronos.com/spettacoli/debora-caprioglio-furto-casa-la-volta-buona-oggi_1w5vt10UAPiOUNzRWWcyxd"
+  },
+  {
+   "data": "2026-11-11T15:10:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Turismo delle origini, nuove prospettive dal Roots-In 2026",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/turismo-delle-origini-nuove-prospettive-dal-roots-in-2026_9da84c4d-65d0-446a-8895-f5af486bbdd0.html"
+  },
+  {
+   "data": "2026-11-11T15:08:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Si infittisce il mistero sull'asteroide che sta accelerando",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/11/si-infittisce-il-mistero-sullasteroide-che-sta-accelerando_1507b4cf-ea2e-4406-8ca6-7f834b5a9833.html"
+  },
+  {
+   "data": "2026-11-11T15:03:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Andrea Lattanzi: 'Il mio primo poliziotto in Chiaroscuro'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/10/andrea-lattanzi-il-mio-primo-poliziotto-in-chiaroscuro_c2bd2bf3-e20d-4fad-b1db-6b65f0a8ad9f.html"
   }
  ]
 }
