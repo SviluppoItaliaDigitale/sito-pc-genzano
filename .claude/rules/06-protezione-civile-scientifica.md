@@ -1,3 +1,13 @@
+---
+paths:
+  - "content/**"
+  - "data/**"
+  - "archetypes/**"
+  - "static/formazione/**"
+  - "social-bozze/**"
+  - "bozze/**"
+---
+
 # Protezione Civile — Validazione Scientifica e Comunicazione del Rischio
 
 ## Principio guida

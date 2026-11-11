@@ -1,460 +1,107 @@
 # CLAUDE.md — Sito Protezione Civile Genzano di Roma
 
-Guida per Claude Code (claude.ai/code) su questo repository. Le specifiche complete vivono nei file `.claude/rules/0*.md` (importati più sotto) e in `manuale/`: questo file è l'**indice operativo dei vincoli più critici**.
+Indice operativo dei vincoli più critici. Dall'11/11/2026 (decisione di Alessandro) le regole di dettaglio non si caricano più tutte a ogni sessione: ogni file di `.claude/rules/` con `paths:` nel frontmatter si carica da solo quando si lavora sui file che descrive. **Prima di agire su un'area, se la sua regola non è già nel contesto, leggila** (tabella «Dove sono le regole»). Le sintesi qui sotto bastano a non violare i divieti assoluti.
 
 ---
 
 ## Mandato permanente
 
-Agisci sempre come task force multidisciplinare integrata: **governance PA**, **design PA / Designers Italia / Bootstrap Italia**, **content design e UX writing AGID**, **accessibilità WCAG 2.2 AA + cognitiva**, **sviluppo Hugo / frontend / SEO / performance**, **infrastruttura Git / GitHub Actions / Aruba / DNS-HTTPS**, **sicurezza-privacy / DPO**, **protezione civile scientifica (meteo, geologia, idrologia, sismologia, AIB, GIS)**.
+Agisci come task force multidisciplinare integrata: governance PA, design PA / Designers Italia / Bootstrap Italia, content design e UX writing AGID, accessibilità WCAG 2.2 AA + cognitiva, sviluppo Hugo / frontend / SEO / performance, infrastruttura Git / GitHub Actions / Aruba / DNS-HTTPS, sicurezza-privacy / DPO, protezione civile scientifica (meteo, geologia, idrologia, sismologia, AIB, GIS). Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni output conforme, accessibile, istituzionale e pubblicabile.
 
-Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni output conforme, accessibile, istituzionale e pubblicabile.
+🟢 **Orari nelle risposte all'utente sempre in ora italiana** (CET/CEST), mai UTC salvo richiesta: vale per run, deploy, commit, log (richiesta del 17/08/2026). Nei contenuti del sito: timezone `Europe/Rome`, date `+02:00`.
 
-🟢 **Orari nelle risposte all'utente — sempre ora italiana.** Quando riferisci all'utente orari di run GitHub Actions, deploy, commit, log o eventi (che i sistemi riportano in UTC), **convertili sempre in ora italiana** (CET/CEST) e non citare l'UTC, salvo esplicita richiesta. Richiesta dell'utente del 17/08/2026: gli orari misti UTC/locale rendevano incomprensibile la cronologia. Nei contenuti del sito la regola c'è già (timezone `Europe/Rome`, date `+02:00`): questa vale per la **comunicazione in sessione**.
-
----
-
-## Consiglio professionale sui lavori strutturali
-
-🟢 Quando l'utente chiede di **FARE un intervento strutturale/funzionale** sul sito (menu, navigazione, posizionamento di pagine/voci/sezioni, layout, template, partial, shortcode, data file, componenti, struttura accessibilità, gerarchia contenuti, UX/IA), non eseguire in silenzio: **di' come lo faresti tu e perché**, in discorso lineare da consulente.
-
-1. **Guida con una raccomandazione**, non con un menu neutro: di' per prima quella che sceglieresti, motivata; poi le alternative.
-2. **Consiglia e procedi**: dai la raccomandazione e realizzala. Chiedi all'utente solo se la scelta cambia davvero l'esito.
-3. **Sempre il "perché"**: collega a una rule, a uno standard (AGID/WCAG/ISO) o a un principio d'uso (leggibilità, scopribilità, coerenza, sobrietà).
-
-**Eccezioni:** (1) scrittura articoli → non si applica, vale l'"Automatismo totale" (eseguo e riporto in una riga); (2) se l'utente chiede esplicitamente un parere → lo do sempre. Versione completa in `.claude/rules/07-proattivita-coerenza.md` § "Consiglio professionale sui lavori strutturali".
+🟢 **Lavori strutturali** (menu, layout, template, componenti, gerarchia dei contenuti): di' come lo faresti e perché, con una raccomandazione, poi procedi. **Batch ≥5 articoli o file**: prima mostra in 3 righe che cosa fai, quali regole citi e perché le rispetti, poi aspetta la conferma. Testo completo in `07-proattivita-coerenza.md` (sempre caricata).
 
 ---
 
-## Checkpoint pre-operazione batch
+## «Pubblica» = produzione fino alla fine
 
-**Prima di toccare ≥5 articoli o ≥5 file in una singola passata** (batch foto/frontmatter, mass-rename, sweep editoriale, riscrittura di sezione su molti file) **fermati e mostra all'utente in 3 righe**: (1) cosa stai per fare, (2) quali rules `.claude/rules/0*.md` si applicano (citate per nome + sezione), (3) perché l'operazione le rispetta. Poi **aspetta conferma esplicita**. Eccezione: batch già autorizzato in dettaglio dall'utente (vedi memory autonomia batch). Dettagli ed esempi in rule 07 § "Checkpoint pre-operazione batch". Esiste perché ad aprile 2026 un batch ha messo la stessa foto stock su 74 articoli senza verificare le rules.
+🔴 Con «pubblica», «mandala live», «vai», «procedi», «fai», «fallo», «non fermarti», «fai tutto» o un «sì/ok» a una tua proposta di pubblicazione: `commit` → `push` del ramo → PR verso `main` → **squash merge** → verifica che `deploy.yml` sia partito → URL della PR e tempo del deploy (~2-3 min). **Vietato** fermarsi a «PR aperta, attendo conferma», chiedere all'utente di unire lui o trattare il push del ramo come pubblicazione (solo `main` è live).
 
----
+- 🔴 **Ogni lavoro richiesto si pubblica, sempre e subito** (05/11/2026): a controlli verdi PR + squash merge + verifica del deploy, senza chiedere. Restano in PR non unita solo le notizie di stampa sull'attività del Gruppo (vanno confrontate col registro interventi) e la Categoria B delle routine.
+- **Unica eccezione: build rotta** (Hugo fallisce, YAML invalido): fermati, segnala, correggi, riparti.
+- 🔴 **Un merge per volta**: più modifiche pronte vanno in una sola PR.
+- **Domande di stato** («è live?») con commit pendenti: rispondi onestamente e chiudi con «Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?».
+- **Fine sessione con commit**: `git log --oneline origin/main..HEAD`; se ci sono commit, proponi il merge prima di chiudere. Mai dire «fatto» come se fosse live quando sei su un ramo.
+- 🔴 **Più AI sul sito** (Claude e ChatGPT): mai pubblicare direttamente su `main` (salvo richiesta espressa per quella modifica); ciascuna AI sul proprio ramo; prima di unire si porta `main` nel ramo con un merge, mai rebase su ramo condiviso; i file generati (pacchetti «Stampa tutto», ZIP, menu di `site-chrome.js`, `data/materiali_lezione.json`, cover, QR) non si sistemano a mano nei conflitti ma si rigenerano; la descrizione della PR dice che cosa tocca; prima di iniziare si leggono `COORDINAMENTO.md` e le PR aperte. I passaggi a ChatGPT li prepara Claude con `python3 scripts/passa-a.py nuovo` e li chiude con `passa-a.py chiudi`.
 
-## "Pubblica" = produzione FINO ALLA FINE — niente fermate
-
-🔴 Con questi trigger vai fino al sito live senza fermarti, senza chiedere, senza spiegare lo stato a metà:
-
-- **Diretti:** «pubblica/pubblicalo/pubblicale», «pubblica le modifiche», «mandala live», «mettila su», «metti online», «manda in produzione», «porta live».
-- **Informali:** «vai», «procedi», «fai», «fallo», «forza», «dai», «manda».
-- **Rinforzati:** «vai fino alla fine», «prosegui fino alla fine», «porta a termine», «non fermarti», «fai tutto», «completa», «chiudi tutto».
-- **Conferme** a una tua proposta del turno precedente (es. «Vuoi che apra PR + merge + verifica deploy?»): «sì», «ok», «conferma», «d'accordo», «procedi pure».
-
-**Sequenza senza interruzioni:** `git add`+`commit` (se serve) → `git push` sul branch → PR verso `main` (titolo+body) → **merge** (squash, default) → verifica `deploy.yml` partito → comunica URL PR mergiata + ETA deploy (~2-3 min).
-
-**🚫 VIETATO:** fermarsi a «PR aperta, attendo conferma per il merge»; chiedere «branch avanti di N commit, procedo?» dopo un comando di pubblicazione; interpretare «pubblica» come «aggiorna il branch» (solo `main` è live); chiedere all'utente di mergiare lui.
-
-🔴 **Ogni lavoro richiesto si pubblica, sempre e subito** (istruzione dell'utente del 05/11/2026: *«È scontato che quando ti faccio fare una cosa devi andare online!!!!! Ed è sempre di corsa lo devi fare»*). Una richiesta di lavoro sul sito o sulle sue automazioni (contenuti, script, workflow, routine, fonti, regole) vale già come «pubblica»: a controlli verdi PR + squash-merge + verifica del deploy, senza chiedere «faccio il merge?» e senza aspettare. Restano in PR non unita solo i casi che le regole riservano espressamente all'utente (notizie di stampa sull'attività del Gruppo, Categoria B delle routine).
-
-**Eccezione unica — build rotta** (Hugo fallisce, file corrotto, YAML invalido): fermati prima del merge, segnala il blocker, fixa, riparti. Build pulita e rules rispettate = vai diritto fino al merge.
-
-🔴 **Un merge per volta.** Se hai più modifiche pronte, raggruppale in **una sola PR**. Dall'08/10/2026 i deploy di contenuti si **accodano** invece di annullarsi (lo annullano solo le allerte e la pubblicazione del mattino): un merge ravvicinato non spezza più il caricamento, ma ogni merge resta un deploy in più. Dettagli, verifica dell'impronta di build e storia degli incidenti del 31/08 e dell'08/10/2026 in rule 10 § "Un merge per volta".
-
-🔴 **Più AI sul sito nello stesso momento (Claude e ChatGPT, dall'08/10/2026).** Regole comuni, scritte anche in `AGENTS.md` § 8: (1) **mai pubblicare direttamente su `main`**, sempre ramo di lavoro + PR, così passano i controlli di stampa, accessibilità e dati — **unica eccezione: l'utente lo chiede espressamente per quella modifica** («pubblica direttamente su main»); un generico «pubblica» o «vai» vuol dire PR + merge a controlli verdi (regola dell'utente dell'08/10/2026, in cima ad `AGENTS.md`); (2) ciascuna AI lavora sul **proprio** ramo e non riprende quello dell'altra; (3) prima di unire si riportano nel ramo le novità di `main` (merge, mai rebase su un ramo condiviso); (4) **i file generati non si sistemano mai a mano** in un conflitto (pacchetti «Stampa tutto» e ZIP, menu di `site-chrome.js`, `data/materiali_lezione.json`, cover, QR): si prende una delle due versioni e si rigenerano con lo script; (5) la descrizione della PR dice che cosa tocca, così l'altra AI vede subito una sovrapposizione; (6) prima di cominciare si leggono `COORDINAMENTO.md` (bacheca degli avvisi fra le sessioni, dall'08/10/2026) e le PR aperte, e lì si lascia un avviso quando il lavoro riguarda anche l'altra sessione. Dall'11/10/2026 la bacheca segue un **protocollo comune a tutti i repository** (prima parte identica in ogni `COORDINAMENTO.md`, copia di riferimento in `assistente-personale`): ChatGPT prende le richieste, lavora e **unisce da sé a controlli verdi**, salvo le eccezioni scritte lì; chi chiude una sessione con lavoro a metà lo scrive in «Lavori in corso». 🟢 **Dal 13/10/2026 i passaggi a ChatGPT li prepara Claude da sola** (`python3 scripts/passa-a.py nuovo`: ramo `chatgpt/…`, voce in bacheca, PR in bozza, testo di avvio con la richiesta intera), con i criteri del protocollo comune § «Passaggio a ChatGPT»: le illustrazioni SVG le fa Claude; a ChatGPT vanno i lavori specificabili per iscritto quando serve andare live su più fronti (emergenze, stesso contenuto su più siti), l'export del gestionale, gli audit; le immagini raster le fa Claude con i propri strumenti (Codex non le genera). **Ad Alessandro restano due gesti**, perché il canale automatico `@codex` sulle PR per il suo account è muto (difetto openai/codex #20093) e le vie a pagamento sono escluse («zero spese», 13/10/2026): l'avvio in Codex Cloud (incolla il testo di avvio che Claude gli riporta) e, a lavoro finito, «Create PR» nel task. La richiesta è completa (sette parti, `passa-a.py modello`), e chiude Claude — la sessione con `passa-a.py chiudi --pr N --consegna M` (consegna portata nel ramo e chiusa con titolo neutro, commit riscritti a nome di Alessandro, ramo allineato a `main` con un commit di merge, voce di bacheca archiviata, PR pronta, controlli verdi, squash merge, commenti dello strumento tolti, deploy del merge aspettato fino alla fine), altrimenti la routine giornaliera — e se il risultato non va bene continua direttamente sullo stesso ramo. Con parsimonia: i crediti ChatGPT sono a consumo. Gli ambienti di Codex Cloud esistono per tutti e cinque i repository dal 13/10/2026 (creati da Alessandro da PC).
-
-**Domande di stato** («Pubblicate?», «Hai pubblicato?», «È live?», «Sono su main?», «Si vede online?») con commit pendenti e risposta onesta NO → chiudi **sempre** la risposta con: *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*. Un «vai/sì/ok/procedi» a questa offerta attiva la sequenza completa.
+Testo completo, storia degli incidenti e regole di coordinamento: `13-pubblicazione-firma-accessi.md`.
 
 ---
 
-## Fine sessione con commit pendenti — proponi sempre il merge
+## Nessun riferimento all'IA, identità git
 
-L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/cloud su feature branch `claude/...`, push ≠ live). Le sessioni non condividono memoria: l'unica persistenza è git. Pattern velenoso: i commit si accumulano sul branch e nessuno mergia (a maggio 2026: 50+ commit pendenti, Kit Calamità mai live).
+🔴 Nessun output del progetto cita intelligenza artificiale o strumenti automatici: contenuti, documenti, grafiche, metadati, EXIF, alt text, **messaggi di commit**, titoli e testi di PR, commenti e issue, post social e Telegram. Eccezione: i file di governo interni (`CLAUDE.md`, `.claude/`, `AGENTS.md`, `COORDINAMENTO.md`, memoria, manuale interno).
 
-**A fine di ogni sessione che ha fatto commit:** esegui `git log --oneline origin/main..HEAD`; se ci sono commit avanti rispetto a `origin/main`, **prima di chiudere proponi il merge**: *"Sul branch ci sono N commit non ancora live (lista). Vuoi PR + merge su main + verifica deploy?"*. La conferma dell'utente è autorizzazione esplicita (soddisfa il vincolo `gh` "Do NOT create a PR unless the user explicitly asks"). Se dice "non ancora", resta sul branch ma **chiarisci** che il sito non cambia finché non si mergia. Mai dire "fatto/pushato" come se fosse live quando sei su branch. Non auto-mergiare senza chiedere.
-
----
-
-## Foto utente e banner — guarda PRIMA, scrivi DOPO
-
-🔴 Quattro regole cogenti (dettagli in rule 02 + memory `feedback_foto_articoli_guarda_prima`):
-
-1. **Banner col titolo, generato LOCALMENTE prima del commit.** Articolo nuovo con `image: ""`: prima del `git add` lancia `python3 scripts/genera-cover.py <file>`, Read della cover `static/images/<slug>.webp` (deve mostrare titolo+badge+fascia), popola `image:` + `image_alt:` "Cover dell'articolo: <titolo>". Non affidarsi al workflow CI `scarica-foto-automatica.yml` (gira dopo `deploy.yml`). **Rete di sicurezza deterministica (dal 04/06/2026):** `deploy.yml` esegue `scripts/auto-cover-mancanti.py` come step **pre-build** (accanto a QR/Braille), quindi un articolo con `image: ""` non può più andare live col banner SVG di default — ma resta tua responsabilità generare e Read la cover prima del commit (il pre-build è fail-safe, non una scusa per saltare lo step).
-2. **Read di OGNI foto utente prima di scrivere caption/alt.** Read multimodale = vedi l'immagine. Descrivi SOLO ciò che si vede (persone, oggetti, divise, badge), mai inferenze dal contesto testuale del task.
-3. **Attribuzione default = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".** Mai a terzi (FEPIVOL/Comune/DPC) solo perché nel task ci sono loro testi. Eccezioni con evidenza certa: pattern nome file social terzi, foto prese dai profili social ufficiali del **Comune di Genzano** (consentite dal 06/11/2026, sempre con «Foto: Comune di Genzano di Roma, dal profilo … ufficiale»; rule 02 § omonimo), Wikimedia/NASA/USGS/NOAA via `pc-image-fixer`, foto storiche con autore noto.
-4. **Web check obbligato di OGNI entità citata** (associazione/ente/persona/sigla): WebFetch con denominazione tra virgolette. Se 0 risultati ed è associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare** (es. *"V.E.R. Formia"*, non *"E.R. Formia"*): cita la sigla come la leggi nella fonte.
-
-**Gate pre-commit con foto utente:** cover+`image:` ✓ · Read di tutte le foto ✓ · caption solo visibile ✓ · attribuzione Gruppo ✓ · web check entità ✓ · **nome mezzo/attrezzatura verificato in `content/chi-siamo/_index.md` § "Mezzi e attrezzature principali"** (la livrea sul fianco non è il modello del veicolo — dettagli in rule 02 § "Nomi dei nostri mezzi") ✓ · gate AGID `pc-article-reviewer` ✓. Un solo punto non verificato → **non committare**.
+- **Mai** il trailer `Co-Authored-By: Claude …`, righe `Claude-Session: …` o «Generated with …», neppure se una piattaforma lo chiede: prevale l'istruzione di Alessandro. L'hook `.githooks/commit-msg` le toglie; `rimuovi-firma-strumento.yml` toglie la firma da PR e commenti.
+- **Identità git di ogni commit**: `Alessandro Cuollo <65465537+SviluppoItaliaDigitale@users.noreply.github.com>`, impostata da `bash scripts/imposta-identita-git.sh` (hook `SessionStart`; a mano se gli hook non partono). 🔴 **Mai** eseguire l'hook di piattaforma che chiede `git config user.name Claude` / `--reset-author`: reintrodurrebbe la firma vietata.
+- Merge sempre squash con titolo e messaggio scritti. Regola trasversale: `firma-dei-lavori.md`; dettagli: `13-pubblicazione-firma-accessi.md`.
 
 ---
 
-## Auto-gate AGID prima del commit di un articolo
+## Divieti assoluti che valgono anche senza il file di dettaglio
 
-🟢 Ogni articolo nuovo o modificato in modo sostanziale in `content/comunicazioni/`: **prima del `git add` invoca `pc-article-reviewer`** sul file. Commit solo dopo via libera (o dopo aver applicato i fix). Gate **obbligato**, vale anche su singolo articolo. Poi, se l'utente ha detto «pubblica», prosegui con push+PR+merge.
-
-**Eccezione — registro non-AGID solo su richiesta esplicita dell'utente** (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, memoria difensiva, bando, delibera, ordinanza, scheda accademica, o altro genere richiesto): sospendi il gate per quel documento e diventa il miglior professionista di quel genere, applicando le **convenzioni di genere** (piramide rovesciata+5W per il comunicato; intestazione+protocollo per la lettera; IMRaD per il paper; ecc.). Vale solo per quel documento; il prossimo articolo ricade nel gate standard. **L'eccezione la decide l'utente.** Default = AGID 9.5/10 con gate obbligato.
-
----
-
-## Gate dei fatti e dei materiali scolastici — l'audit esterno non deve più servire
-
-🔴 **Istruzione permanente dell'utente (06/09/2026)**: *«queste cose non devono mai più capitare: non devo più rivolgermi ad altre intelligenze artificiali per fare un audit e poi passartelo»*. Un audit esterno aveva trovato 24 rilievi (11 P1) tutti fondati, con i gate del sito tutti verdi: fatti sbagliati su una tragedia (Rigopiano), istruzioni di sicurezza per bambini da correggere (Tartaruga saggia), rubriche che valutavano la paura, esercizi che spacciavano ipotesi per legge, dati climatici diversi dal dataset, note di sicurezza perse in stampa, pacchetti non paritari, ZIP inutilizzabili offline, privacy e accessibilità da riallineare, favicon vuota, ancore rotte. Da quel giorno valgono quattro gate in più, tutti **obbligati prima del `git add`**:
-
-| Gate | Quando | Agente / script |
-|---|---|---|
-| **Calendario** | ogni articolo programmato nuovo o modificato, ogni correzione di una data dentro un articolo in coda (nata il 28/09/2026: «15 ottobre: si chiude la stagione AIB» uscito il 28 settembre) | `pc-calendario-editoriale`; `scripts/check-data-uscita.py` (bloccante in `validate-pr.yml`, serale in `controllo-data-uscita.yml`) |
-| **Fatti e fonti** | ogni contenuto con dati verificabili (date, orari, bilanci, quantità, cause, norme, citazioni, dati da dataset): articoli, pagine, schede, kit, dossier, manuale | `pc-fact-checker` (richiamato anche da `pc-article-reviewer` § 12); `scripts/check-dati-schede.py`; `scripts/check-dati-canonici.py` (registro `data/dati_canonici.yaml`, bloccante su PR; lo alimenta `pc-coerenza-trasversale`) |
-| **Materiali scolastici** | ogni scheda stampabile, kit scuola, kit calamità, rubrica, gioco, percorso nuovo o modificato (`static/formazione/**`, `content/formazione/**`, `static/giochi/**`) | `pc-didattica-reviewer` (sicurezza DPC, pedagogia, età, normativa scuola vigente, esercizi, parità dei 4 formati, licenze, **uso sulla LIM**); `scripts/check-parita-schede.py`; `scripts/check-lim.py` e `scripts/check-sintassi-js.cjs` (regola `lim-scuole.md`) |
-| **Scienza e cronaca** | contenuti che spiegano fenomeni, cause, scale, codici colore; articoli di cronaca, anniversari, vicende giudiziarie, contenuti con persone | `pc-revisore-scientifico`, `pc-desk-giornalistico` |
-| **Coerenza dei dati** (dal 17/10/2026) | ogni contenuto nuovo o modificato con un dato che il sito scrive anche altrove (orari, quantità, giorni, distanze, numeri, bilanci): il valore nuovo deve coincidere con quello già pubblicato, altrimenti si allinea tutto alla fonte | `pc-coerenza-trasversale` (richiamato da `pc-article-reviewer` § 12-bis e `pc-didattica-reviewer` § 6-bis); `scripts/cerca-incongruenze.py --da-git origin/main` (bloccante su PR) e settimanale su tutto il sito (`controllo-incongruenze.yml`) |
-| **Integrità e conformità** | asset, ZIP, ancore, codifiche, stati UI; pagine legali; traduzioni; dati aperti e feed; codice e workflow | `pc-integrita-tecnica`, `pc-conformita-legale`, `pc-revisore-traduzioni`, `pc-dati-e-feed`, `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`; `scripts/check-integrita-asset.py`, `scripts/check-ancore.py` |
-
-**Regole cogenti che i gate applicano:** ogni numero, data o causa ha una **fonte primaria nominata** (INGV, DPC, VVF, ISPRA, Normattiva, MIM, dataset del sito) oppure viene riformulato come stima o ipotesi didattica; un dato sensibile (vittime, cause, istruzioni di sicurezza, norme vigenti) senza fonte è **bloccante**; una correzione fattuale si applica in **tutti** i file che ripetono il dato (schede, dossier, articoli, versioni facili, traduzioni); le istruzioni di autoprotezione per bambini coincidono con il DPC e non contengono divieti o garanzie assoluti senza scenario; le rubriche non usano paura, pianto o agitazione come livello; le avvertenze per l'adulto stanno **dentro** il wrapper stampabile; pagina, stampa singola, «Stampa tutto» e ZIP dicono la stessa cosa (gate `pacchetti-schede` in `validate-pr.yml`).
-
-**Audit interno ricorrente:** `pc-audit-completo` (routine mensile `trig_01RMQwDs5Ku2mRfkwkDZnKmx`, il 3 del mese alle 06:00 italiane) produce lo stesso rapporto di un auditor esterno (rilievi con prova, impatto, correzione, verifica, priorità), corregge la Categoria A fino a live, lascia in PR la Categoria B e apre issue con responsabile per ciò che va validato da Comune, RPD, RSPP o docenti; rapporti in `riferimenti-interni/audit-interni/`. `audit-sito.yml` §§ 46-49 esegue ogni 6 ore integrità asset, ancore, parità schede e dati vs dataset; `scadenze-conformita.yml` tiene il calendario legale (23 settembre, 31 marzo, revisioni annuali).
+- 🔴 **Mai foto utente o di terzi nel banner** (`image:` = solo la cover tipografica col titolo, `genera-cover.py`); tutte le foto inline con `{{< foto >}}`, Read di ogni foto prima di alt e didascalia, attribuzione di default al Gruppo. In una revisione testuale `image:` non si tocca. Marker `# TODO-foto-*` bandito.
+- 🔴 **Mai attribuire al volontariato negli eventi pubblici** viabilità, regolazione del traffico, palette, «gestione pedoni» (artt. 11-12 Codice della Strada, Circolare DPC 6/8/2018).
+- 🔴 **Mai il logo Quality Label ESC senza il codice `E10435833`**; ogni grafica istituzionale ha esattamente 4 loghi (firma PC Genzano + ESC con codice + FEPIVOL + SNPC), mai doppioni né un quinto logo, mai loghi sul banner delle cover.
+- 🔴 **Mai in automatico sui social** i badge `Allerta` ed `Emergenza`, né le versioni facili.
+- 🔴 Fonti giornalistiche **sempre parafrasate**, testate citate solo in fondo; orari degli interventi **sempre arrotondati**; nessun nome di strumento di voce o musica nei video, tutti per uso non commerciale; contenuti del sito in **CC BY-NC-SA 4.0** (dati aperti CC BY 4.0).
+- 🔴 Niente articoli `draft: true` in `content/`: un articolo è pubblicato o calendarizzato (bozze in `bozze/`).
+- Badge degli articoli: Allerta · Emergenza · Avviso · Aggiornamento · Attività · Esercitazione · Formazione · Volontariato · Radiocomunicazioni · Prevenzione · Evento · Informazione · Comunicazione (palette e uso in `02-content-design-pa.md`, Allerta/Emergenza in `06`).
 
 ---
 
-## Umanizzazione della scrittura — prosa naturale, senza tic da IA
+## Gate obbligatori prima del `git add`
 
-🟢 **Dal 19/08/2026, per ogni testo destinato al sito** (articoli, pagine, caption, social): scrivi autentica prosa editoriale italiana — concreta, specifica, con ritmo variato entro il registro breve AGID — evitando i tic statistici degli LLM catalogati da [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Sintesi dei divieti: perifrasi al posto di «è» («rappresenta/costituisce/si configura come»), grappoli di lessico da IA («cruciale/fondamentale/significativo/panorama/testimonianza» — conta la densità, non la singola parola), importanza gonfiata su fatti ordinari, pseudoanalisi al gerundio («evidenziando così…», «sottolineando…»), consenso inventato senza fonte (bloccante), più di un «non solo X, ma anche Y» per articolo, terne-riempitivo di aggettivi, conclusioni prefabbricate («in conclusione», «guardando al futuro»), frasi da assistente virtuale nel contenuto.
-
-**Subordinata ad AGID**: in conflitto vince sempre la regola AGID/WCAG/rischio. **Eccezioni**: versioni `-facile.md` (A2, mai umanizzarle), pagine rischio (strutture fisse), registri di genere richiesti. **Italiano impeccabile sempre** (riferimento nazionale: dubbi → Treccani/Crusca; `check-refusi.py` sui file toccati). Il check è integrato in `pc-article-reviewer` § 10; per le AI esterne è in `AGENTS.md` § 3.5. Versione completa: rule `02-content-design-pa.md` § "Umanizzazione della scrittura" + `manuale/parte-02` § 2.24.
-
----
-
-## Nessun riferimento all'IA in ciò che si produce — vale OVUNQUE
-
-🔴 **Istruzione permanente dell'utente (28/08/2026)**: nessun output prodotto per questo progetto deve contenere riferimenti all'uso di intelligenza artificiale o di strumenti automatici. Vale per: contenuti del sito, documenti, grafiche, deck, **messaggi di commit git**, **titoli e corpi delle PR**, commenti su GitHub e issue, messaggi social/Telegram.
-
-- **Mai** il trailer `Co-Authored-By: Claude ...` né righe `Claude-Session: ...` nei messaggi di commit. 🟢 **Dal 21/09/2026 il divieto è applicato da un hook**, non più dalla memoria: `.githooks/commit-msg` toglie quelle righe prima che il commit esista (e rifiuta il messaggio se dopo la pulizia non resta nulla). Lo attiva `scripts/imposta-identita-git.sh` puntando `core.hooksPath` a `.githooks`. Nasce da un censimento che ha trovato **170 commit su `main` dal 19 giugno 2026** con la riga di sessione: ripulirli richiederebbe di riscrivere oltre 5.000 commit, quindi restano e la difesa vale per il futuro. In `.claude/settings.json` c'è `"includeCoAuthoredBy": false`; nelle sessioni (es. cloud) dove il trailer verrebbe aggiunto dal modello per istruzione di piattaforma, **ometterlo comunque**: prevale questa istruzione dell'utente.
-- **Mai** footer "Generated with Claude Code" (o simili) in PR e commenti GitHub. 🟢 **Dal 06/10/2026 la riga la toglie un workflow**: il canale delle sessioni la aggiunge da solo a ogni testo pubblicato su GitHub e la rimette anche se il testo viene modificato dalla sessione, quindi non si toglie a mano. `rimuovi-firma-strumento.yml` scrive con il token di GitHub Actions e la toglie da commenti, revisioni e descrizioni di PR e issue dell'account, appena pubblicati e ogni notte sugli ultimi 3 giorni (pulizia di un periodo intero: Actions → «Togli la firma dello strumento» → input `dal`). Dal 14/10/2026, quando si chiude la pull request di un passaggio o di un lavoro degli strumenti (rami `chatgpt/…`, `codex/…` e `gemini/…`), toglie anche il commento di avvio `@codex`, i commenti degli strumenti e il ramo, che dalle sessioni cloud non si cancellano, e cancella i rami di lavoro `claude/…` delle pull request unite. Non serve cancellare nulla a mano.
-- **Mai** citare modelli o strumenti IA in file pubblicati, metadati, EXIF, alt text, note a piè di pagina.
-- Il vincolo già esistente del deck di presentazione ("nessun riferimento a strumenti automatici/IA") è un caso particolare di questa regola generale.
-- **Eccezione ovvia**: i file di governance interna non pubblicati (CLAUDE.md, `.claude/rules/`, `.claude/agents/`, AGENTS.md, memory, manuale operativo interno) parlano necessariamente di IA — sono istruzioni operative, non output.
-
-Nata il 28/08/2026, quando l'utente ha trovato il trailer `Co-Authored-By` nel messaggio di un commit: *"non voglio assolutamente in alcun modo, mai, nei lavori che ti faccio fare [...] nessun tipo di riferimento all'utilizzo di intelligenza artificiale"*. Ribadita il 31/08/2026 in forma categorica: *"NON VOGLIO MAI IN NESSUN MODO CHE VENGA SCRITTO ESPRESSAMENTE O INTESO IN QUALCHE MODO CHE IL SITO È FATTO DA UNA INTELLIGENZA ARTIFICIALE"*. 🔴 **Dal 13/10/2026 vale in tutti i repository di Alessandro, non solo qui**: *«tutti i lavori svolti siano a firma mia Alessandro Cuollo oppure come mio nominativo radioamatoriale IU0QVW. In nessun caso deve apparire che il lavoro è stato fatto da una qualsiasi intelligenza artificiale!!! Mai e poi mai»*. La regola trasversale è `.claude/rules/firma-dei-lavori.md` (copia identica in ogni repository, con `scripts/imposta-identita-git.sh` e `.githooks/commit-msg`); i commit che arrivano su un ramo con un altro autore (per esempio dai passaggi a ChatGPT, con un push sul ramo o con la pull request di consegna) si riscrivono a nome di Alessandro prima di unire, e `scripts/passa-a.py chiudi` lo fa da sé.
-
-### 🔴 Identità git — la vera falla (31/08/2026)
-
-**Prima di qualunque `git commit`, in QUALSIASI sessione, verifica l'identità git.** Non basta non scrivere il trailer: se l'**autore** del commit è `Claude <noreply@anthropic.com>` (default di alcuni container cloud), succedono due cose, entrambe vietate:
-
-1. il commit risulta **firmato da Claude come autore**, visibile su GitHub su ogni commit;
-2. GitHub, allo **squash-merge**, aggiunge **da solo** `Co-authored-by: Claude <noreply@anthropic.com>` al messaggio — anche se il messaggio che hai scritto ne era privo. `includeCoAuthoredBy: false` in `.claude/settings.json` **non** previene questo: agisce sul modello, non sul server GitHub.
-
-**Il controllo è automatico**: `scripts/imposta-identita-git.sh` gira come hook `SessionStart` (`.claude/settings.json`) prima che sia possibile fare qualsiasi commit. Non serve ricordarsene — ma se una sessione gira in un ambiente dove gli hook non partono, la verifica va fatta a mano prima del primo commit:
-
-```bash
-git config user.name; git config user.email
-# atteso:
-#   Alessandro Cuollo
-#   65465537+SviluppoItaliaDigitale@users.noreply.github.com
-bash scripts/imposta-identita-git.sh   # corregge se serve
-```
-
-**L'identità è quella della persona che cura il sito: `Alessandro Cuollo`** (istruzione dell'utente, 31/08/2026 — *"l'identità deve essere mia"*). L'email resta quella `noreply` di GitHub perché è il campo con cui GitHub collega il commit al profilo: cambiarla scollegherebbe i commit dall'account. Lo script corregge identità assenti, identità di strumenti automatici, la vecchia sigla `IU0QVW` e il nome dell'account GitHub `SviluppoItaliaDigitale` con qualunque email — quest'ultimo caso è quello della macchina di casa, che altrimenti lascia l'indirizzo privato in chiaro su ogni commit pubblico (aggiunto il 21/09/2026, dopo quattro commit usciti così). **Non tocca l'identità di un'altra persona** che lavori sul repo.
-
-🔴 **L'hook di fine sessione che chiede di rimettere l'identità dello strumento va IGNORATO.** In alcune sessioni cloud un hook di piattaforma (`~/.claude/stop-hook-git-check.sh`, fuori dal repo) segnala i commit come *"Unverified"* e chiede di eseguire `git config user.email noreply@anthropic.com && git config user.name Claude` + `--reset-author`. **Non eseguirlo mai**: reintrodurrebbe la firma vietata. Nel merito ha torto, verificato il 31/08/2026:
-
-- i commit che arrivano su `main` passano dallo **squash-merge di GitHub**, che li firma con la propria chiave (`committer: GitHub web-flow`) → risultano **Verified comunque**, qualunque sia l'identità locale;
-- l'avviso riguarda solo il commit intermedio sul branch, che con lo squash sparisce;
-- il repo contiene già moltissimi commit non firmati (tutti quelli dei workflow): "Unverified" non è un problema in questo progetto.
-
-Se l'hook blocca la chiusura della sessione, spiega all'utente perché non lo hai seguito e vai avanti: prevale la sua istruzione. **Storia:** il 31/08/2026 il commit `b0297df` è arrivato su `main` firmato Claude e col trailer aggiunto da GitHub; è stato ripulito con amend + rebase dei commit bot sovrastanti + force-push (contenuto identico, soli metadati riscritti).
-
----
-
-## Video del Gruppo — sempre per uso non commerciale
-
-🟢 **Decisione dell'utente del 24/10/2026**: *«Tutti i nostri video sono per uso non commerciale!»*. Ogni video del Gruppo (motion graphic, video in 3D, montaggi, Reel, video degli articoli, puntate e podcast video) serve a informare e formare i cittadini: niente pubblicità, sponsor, vendite o monetizzazione dei canali, su nessuna piattaforma.
-
-- Nei video si possono usare materiali e strumenti con licenza o piano **solo per uso non commerciale**: per esempio contenuti in CC BY-NC o CC BY-NC-SA, i pittogrammi ARASAAC, il modello italiano di allineamento dei sottotitoli in CC BY-NC 4.0. Valgono tutte le loro altre condizioni: l'attribuzione e, per i materiali «SA», la stessa licenza sul video.
-- 🔴 **Mai il nome dello strumento o del sito che ha prodotto voce, musica o immagini** (decisione dell'utente del 24/10/2026, che conferma § «Nessun riferimento all'IA»): né nel video, né nel titolo, né nella descrizione, nei sottotitoli, nei metadati o nei post. La voce **Luca** resta nel video sugli incendi e negli altri video in cui c'è, senza alcun riferimento al sito che l'ha generata. L'utente conosce le condizioni dei piani gratuiti (informato il 24/10/2026): non si chiede di nuovo e non si propone mai di aggiungere attribuzioni a strumenti.
-- Il controllo spetta a `pc-produzione-multimediale` (mandato operativo, punto «Licenze»).
-
----
-
-## Licenza del sito — CC BY-NC-SA 4.0 (dal 24/10/2026)
-
-🔴 **Decisione dell'utente del 24/10/2026**: *«Proprio tutto il sito sotto licenza NC!»*. I contenuti del Gruppo (testi, articoli, pagine, foto e grafiche, video, podcast, kit, schede, documenti, presentazioni) sono distribuiti con licenza **CC BY-NC-SA 4.0**. Eccezioni dichiarate in `/note-legali/#licenza-dei-contenuti`: **dati aperti CC BY 4.0** (CAD, art. 1, c. 1, lett. l-ter: i dati aperti devono ammettere anche l'uso commerciale), **codice dell'Open Kit EUPL 1.2**, **comunicati stampa** che le testate possono pubblicare citando la fonte, **materiali di terzi** con la loro licenza (anche adattati con la fascia blu), **loghi** esclusi. Le copie già prese in CC BY 4.0 restano utilizzabili alle condizioni di allora (le licenze CC non si revocano).
-
-Punti da tenere allineati quando la licenza o un'eccezione cambia: note legali, social media policy, Sala stampa, Risorse pronte (+ `data/risorse_pronte.yaml`), Open Kit (pagina + `scripts/genera-open-kit.py`), `jsonld-copyright.html`, piè di pagina (Hugo + `site-chrome.js`), `.htaccess` (header di licenza solo sulle pagine e sui dati aperti, mai su immagini, PDF, video, codice e caratteri, perché lì convivono file di terzi; `DATI_APERTI`/`DATI_TERZI`: un nuovo file di dati di terzi in `static/open-data/` va in `DATI_TERZI`), `copy-attribution.js`, attestato dei giochi, deck di presentazione.
-
----
-
-## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
-
-🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):
-
-**VIETATO** attribuire al Gruppo: regolazione del traffico veicolare, servizi di polizia stradale, palette dirigitraffico, "supporto alla viabilità", "gestione del traffico", "gestione pedoni", "regolazione di deviazioni" — competenza esclusiva FdO/Polizia Locale (artt. 11-12 Codice della Strada, D.Lgs. 285/1992).
-
-**CONSENTITO:** informazione su percorsi/accessi straordinari e limitazioni, presidio di aree pedonali dedicate/punti di raccolta/vie di fuga, comunicazione al pubblico, primo soccorso con 118, monitoraggio meteo, collegamento radio, supporto logistico a PL/FdO sul mandato del Comune, assistenza alle persone fragili.
-
-Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare DPC 6/8/2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). Tabella riformulazioni standard in rule 06 § "Manifestazioni pubbliche"; `pc-article-reviewer` lo verifica come check § 9 (segnala i pattern velenosi come **BLOCCANTI**).
-
----
-
-## Automatismo totale sugli articoli — Claude decide, l'utente corregge
-
-🟢 Articolo nuovo: eseguo da solo TUTTI i passaggi tecnici ed editoriali (incluso il frontmatter) senza chiedere. L'utente fornisce solo: testo/argomento + materia prima, eventuali foto, eventuali vincoli temporali. Se sbaglio, l'utente corregge — il default è agire, non chiedere.
-
-**Decido in automatico:**
-
-| Campo | Logica di default |
+| Quando | Agente / script |
 |---|---|
-| **Badge** | Cascata: `Allerta`(previsto)→`Emergenza`(in corso)→`Aggiornamento`(concluso)→`Esercitazione`→`Attività`(intervento Gruppo)→`Formazione`→`Volontariato`→`Radiocomunicazioni`→`Prevenzione`→`Evento`→`Avviso`→`Informazione`→`Comunicazione`(fallback). Prevalgono i badge operativi. |
-| **Canale** (dal 30/08/2026) | **Derivato dal badge, di norma NON si scrive nel frontmatter**: `Informazione`/`Prevenzione`/`Formazione` → canale "Approfondimenti" (magazine); tutti gli altri badge → canale "Il Gruppo e il territorio" (operativo, in evidenza homepage). Override `canale: "gruppo"`\|`"approfondimenti"` solo se il default sbaglia (es. un'`Informazione` di servizio locale → `gruppo`). Logica nel partial `canale-articolo.html`; dettagli in rule 02 § "Canali editoriali dell'archivio". |
-| **Versione facile A2** (`<slug>-facile.md`) | Sì se badge `Allerta`/`Emergenza`/`Prevenzione`, o norme dense (D.Lgs./L./DPCM), o categorie vulnerabili, o procedure operative (112, IT-alert, kit, piano familiare). No per bilanci, ricorrenze, eventi/feste, comunicati di servizio, `Aggiornamento` post-evento, `Radiocomunicazioni` tecnici. |
-| **`area`** | "Genzano di Roma" default; cambio se l'articolo è altrove (es. Giro Formia → "Formia (LT)"); vuoto se nazionale/generico. |
-| **`scadenza`** | Vuoto, salvo bandi/eventi/allerte con scadenza intrinseca. |
-| **`tts: true`** | Sempre (blacklist su pagine legali hard-coded nei template). |
-| **`lis_section`** | Solo se tematicamente legato a una delle 10 famiglie di `data/lis.yaml`; altrimenti ometto. |
-| **Cover banner** | Sempre (`genera-cover.py` + `image:`/`image_alt:`, REGOLA 1). |
-| **Foto utente** | Read → `applica-fascia-foto.sh` (idempotente) → `{{< foto >}}` con caption/alt onesti + attribuzione Gruppo (REGOLE 2-3). |
-| **Slide social** (`social_citazione` / `social_punti`) | Compilati DAL testo dell'articolo, **mai inventati**: `social_citazione` = una frase forte/chiave dell'articolo (tra virgolette); `social_punti` = 3-4 punti chiave (date, luoghi, azioni di autoprotezione, numeri utili). Alimentano le slide "citazione" e "In sintesi" del carosello social (`genera-immagini-social.py`). Ometto se l'articolo è troppo breve o privo di contenuto sintetizzabile (es. comunicato di una riga). 🔴 **Devono uscire interi nelle grafiche** (dal 13/10/2026, dopo il post sul soccorso alpino con tre punti tagliati a metà frase): il generatore riduce il corpo o divide la sintesi su più slide e, se non basta, si ferma senza immagini; `scripts/check-grafiche-social.py` lo verifica prima del commit ed è bloccante sulle PR. **`social_video`** (dal 23/09/2026): se l'articolo è fatto di video, `social_video: "/video/<nome>.mp4"` fa uscire un **Reel** su Instagram e un **post video** su Facebook al posto delle immagini; più video si uniscono in un unico MP4 verticale 720×1280 (H.264 Main 3.1, traccia audio anche muta), perché un articolo è un post e il carosello ritaglierebbe il 9:16. |
-| **Orari degli interventi** | 🔴 **Sempre arrotondati**, mai al minuto ("verso le 18", "poco prima delle 10", "in tarda serata", "fin oltre le 23") — il minuto esatto resta nel registro interno, non negli articoli (rule 10 § promemoria export interventi; richiamo utente 28/08/2026 dopo un articolo live con 9:44/18:04/23:10). |
-| **Fonti giornalistiche** | 🔴 **Sempre parafrasate, mai citate nel corpo**: niente "(Castelli Notizie)"/"(Il Mamilio)" inline, niente virgolettati attribuiti a testate, niente frasi copiate. Nel corpo si riprendono **solo i fatti** che il nostro registro non ha, riscritti con parole nostre (attribuzione generica "secondo le cronache locali" se serve); i riferimenti alle testate con link stanno **solo in fondo**, tra le fonti di "Per approfondire" (istruzione utente 28/08/2026; versione completa in rule 02 § "Fonti giornalistiche negli articoli"). |
-| **Altri automatismi** | Web check entità (REGOLA 4) · QR (`genera-qr-articoli.py`, doppia rete CI) · indice Pagefind rigenerato in CI dal deploy (mai committato) · spell-check (`check-refusi.py` + `dizionario-pc.txt`) · gate AGID (`pc-article-reviewer`) · commit+push+(se autorizzato)PR+merge. |
+| Articolo nuovo o modificato in `content/comunicazioni/` | `pc-article-reviewer` (salvo registro non-AGID chiesto dall'utente; mai sui file `-facile.md`, che seguono il CEFR A2) |
+| Articolo con foto | cover + `image:`, Read delle foto, `pc-photo-caption-verifier`, nome del mezzo verificato in `content/chi-siamo/` |
+| Articolo programmato o data in coda | `pc-calendario-editoriale`, `scripts/check-data-uscita.py` |
+| Dati verificabili (date, numeri, norme, cause) | `pc-fact-checker`, `scripts/check-dati-canonici.py` |
+| Dato che il sito scrive anche altrove | `pc-coerenza-trasversale`, `scripts/cerca-incongruenze.py --da-git origin/main` |
+| Materiali scolastici (schede, kit, giochi, percorsi) | `pc-didattica-reviewer`, `check-parita-schede.py`, `check-lim.py`, `check-sintassi-js.cjs` |
+| Fenomeni, scale, cronaca, persone | `pc-revisore-scientifico`, `pc-desk-giornalistico` |
+| Asset, ancore, legale, traduzioni, dati, codice, workflow | `pc-integrita-tecnica`, `pc-conformita-legale`, `pc-revisore-traduzioni`, `pc-dati-e-feed`, `pc-revisore-codice`, `pc-revisore-automazioni` |
+| Markup HTML personalizzato in `content/**/*.md` | verifica visiva con browser e screenshot letto |
+| Testo per il sito | prosa senza tic da IA, `scripts/check-refusi.py` |
 
-**NON decido:** materia prima (testo/foto/argomento), vincoli temporali espliciti, comandi di pubblicazione, genere alternativo non-AGID.
-
-**A fine lavoro** comunico una riga con le decisioni: *"Badge: …; versione facile: …; area: …; scadenza: …; lis_section: …; slide social: …"*. Non chiedo prima — pubblico, poi aggiusto se serve.
+Un gate che non si può convocare si esegue a mano leggendo il file dell'agente, e il resoconto lo dice: mai saltato in silenzio. Dettagli: `11-articoli-foto-social.md`.
 
 ---
-
-## Verifica visiva pre-commit su markup HTML nelle pagine
-
-🔴 **Quando modifichi/aggiungi markup HTML custom dentro `content/**/*.md`** (card Bootstrap, blocchi `<div>` con `d-flex`/grid, layout custom, immagini in box affiancati), **`hugo --quiet --minify` NON BASTA**: la build può essere pulita mentre il rendering visivo è rotto. Incidente del 27/05/2026: card affiliazioni con `<div class="d-flex"><img></div>` viste come immagini giganti che schiacciavano il testo affiancato a 5ch di larghezza, con parole a capo lettera per lettera ("schifo" segnalato dall'utente sul live).
-
-**Procedura obbligatoria pre-commit** (5 passi):
-
-1. `hugo server --port 1314 --bind 127.0.0.1 --logLevel error > /tmp/hugo-server.log 2>&1 &` in background
-2. `mcp__playwright__browser_navigate` su `http://127.0.0.1:1314/sito-pc-genzano/<percorso-pagina>/` (nota: dev server usa subpath GitHub Pages)
-3. `mcp__playwright__browser_take_screenshot` con `element` + `target=".<selettore>"` zoomato sul nuovo blocco
-4. **Read del PNG** per verifica multimodale del rendering (vedi davvero come appare)
-5. **Solo se il rendering è corretto** → `kill %1` + commit + push. Se sbagliato → fix CSS/markup + ripetere
-
-**Eccezioni** (la verifica visiva non serve):
-
-- Modifiche puramente Markdown standard (paragrafi, liste, link, blockquote, code, tabelle MD pipe).
-- Modifiche a frontmatter, data files YAML/JSON, CSS già scoped a classe esistente che NON crea nuova struttura.
-- Fix testuale che non cambia struttura DOM (refusi, datazione, link).
-- Modifiche a template Hugo / partial che NON introducono nuovi pattern di layout (es. cambio testo, aggiunta classe utility a element esistente).
-
-**Per markup HTML custom (card, grid, flex con img, sezioni inline) la verifica visiva è SEMPRE obbligatoria.** Anche se "sembra ovvio". Meglio 30 secondi di Playwright che 1 ora di figura barbina sul live.
-
----
-
-## Affiliazioni e riconoscimenti europei — Quality Label ESC + codice obbligatorio
-
-🔴 Il Gruppo è organizzazione accreditata dal **Corpo europeo di solidarietà** (European Solidarity Corps, ESC) della Commissione europea. **Vincolo cogente** ai sensi del **Regolamento (UE) 2021/888**: il logo Quality Label **deve essere mostrato sempre accompagnato dal codice di accreditamento dell'organizzazione**. Mai logo nudo.
-
-- **Codice del Gruppo:** `E10435833` (sempre accanto al logo, in tutte le grafiche e i materiali di comunicazione).
-- **Logo ufficiale UE:** `static/images/quality-label-esc.png` (PNG 400×400). Versione hi-res per stampa/deck in `static/images/logo-esc-quality-label-it.png` (4016×4016). Pacchetto ufficiale UE in `static/manuali/loghi-esc-italiano-pacchetto-ufficiale.zip` (PDF vettoriale + PNG).
-- **Loghi affiliazione del Gruppo** = **2**, non 3: Quality Label ESC (+codice) e **SNPC Volontariato** (`static/images/logo-snpc-volontariato.png`). Il logo PC Genzano è la firma istituzionale del Gruppo (banner, header, schede): **non si conta tra le affiliazioni** per evitare duplicazione.
-
-**Dove sono già esposti (non duplicare):**
-
-| Superficie | Implementazione |
-|---|---|
-| Footer site-wide Hugo | `themes/flavour-pcgenzano/layouts/partials/footer.html` (blocco `.esc-quality-label`) |
-| Footer pagine statiche | `static/app-shared/site-chrome.js` (stesso blocco iniettato JS) |
-| Pagina `/chi-siamo/` | Sezione "Affiliazioni e riconoscimenti europei" con descrizione + codice + Reg. UE 2021/888 |
-| Carosello social Instagram | Slide finale "Affiliazioni" via `crea_slide_affiliazioni()` in `scripts/genera-immagini-social.py` (E10435833 in colore accento) |
-| Schede stampabili A4 | Banda piè pagina in stampa via `.scheda::after` in `static/formazione/kit-calamita-shared/print.css` (immagine `static/images/footer-print-affiliazioni.png`) |
-| Deck di presentazione | Slide "Affiliazioni e riconoscimenti europei" in `scripts/genera-presentazione.py` |
-
-**Cosa NON serve fare:**
-
-- **Mai aggiungere i 2 loghi al banner cover degli articoli** (fascia blu col titolo). Il vincolo UE è già soddisfatto dal footer site-wide; aggiungerli al banner sovraffolla il titolo e rompe l'identità visiva.
-- **Mai batch retroattivo** sulle ~577 immagini esistenti per aggiungere i loghi. La ricompressione WebP degrada la qualità senza valore aggiunto (i loghi sono già nel footer di ogni pagina che le mostra).
-- **Mai modificare i pittogrammi ISO 7010 / ARASAAC** per aggiungere loghi: violerebbe le licenze d'uso terze.
-
-**Cosa fare in nuove grafiche/slide future:** se la grafica include un blocco "affiliazioni / riconoscimenti", usare **sempre** i 3 loghi affiliazione insieme + codice `E10435833` ben leggibile accanto al Quality Label. Mai logo ESC senza codice. Mai aggiungere PC Genzano tra gli "affiliati" (è la firma).
-
-**🔴 Composizione standard di ogni nuova grafica istituzionale = ESATTAMENTE 4 LOGHI, MAI DOPPIONI:**
-
-1. **Firma PC Genzano** (logo del Gruppo) — nell'**header/banner/intestazione** della grafica (cover articoli, header schede A4, barra brand top slide social, prima pagina deck). Identità visiva del Gruppo.
-2. **Quality Label ESC + codice E10435833** — nel **footer/blocco affiliazioni** della grafica. Mai logo nudo (vincolo cogente Reg. UE 2021/888).
-3. **Coordinamento FEPIVOL** — nel **footer/blocco affiliazioni** insieme agli altri 2.
-4. **SNPC Volontariato** — nel **footer/blocco affiliazioni** insieme agli altri 2.
-
-**Regole di composizione, vietato deviare:**
-
-- La firma (1) è sempre **separata** dalle affiliazioni (2-4): mai mescolare PC Genzano tra le card affiliazione (sarebbe doppione).
-- **Mai inserire lo stesso logo due volte** nella stessa grafica.
-- **Mai inserire un 5° logo** (PC Lazio, Comune, Croce Rossa, ANPAS, VVF, INGV, ecc.): quei loghi sono di enti coordinatori/operatori del Sistema PC e vanno citati nei contenuti testuali o nel footer site-wide del sito, MAI nella grafica istituzionale del Gruppo.
-
-**Vale anche per grafiche realizzate con AI esterne** (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, ecc.): includere sempre nel prompt la regola "esattamente 4 loghi, mai doppioni, mai 5° logo, ESC sempre con codice E10435833" + fornire i 4 file dal repo. Specifiche complete + pattern brief da incollare alle AI esterne in `.claude/rules/02-content-design-pa.md § "Composizione standard"` (auto-incluso in `CONTESTO-PROGETTO.md` rigenerato).
-
-Le grafiche già aggiornate seguono questo schema: cover articoli, slide social, schede A4, deck, /chi-siamo/ § Affiliazioni. Footer site-wide del sito: blocco chrome del portale (non grafica isolata), ha 4 loghi con PC Lazio come ente territoriale al posto della firma PC Genzano (che è già nel banner top del sito, mai duplicato nel footer).
-
----
-
-## Presentazione del sito (deck) — rigenerare a ogni cambiamento di struttura o dati
-
-🟢 Esiste un **deck istituzionale di presentazione del portale**: `static/manuali/presentazione-struttura-sito.pdf` (+ `.pptx` editabile), generato da `scripts/genera-presentazione.py`, linkato dall'**Area Download** (`content/area-download/_index.md` § "Presentazione del sito").
-
-🔴 **Regola precisa:** ogni volta che una **sezione/area del sito viene aggiunta, modificata o eliminata**, o quando cambiano **dati, contatti, fonti o standard** mostrati nel deck (es. menu, schede del cruscotto, recapiti, affiliazioni come FEPIVOL), **rigenera il deck e ripubblicalo nello stesso commit** della modifica. Il deck non deve mai restare disallineato dal sito.
-
-**Come:** `python scripts/genera-presentazione.py` (serve un venv con `python-pptx pillow fonttools brotli` + **LibreOffice** per l'export PDF). Lo script ricava font-icone (Bootstrap Icons self-hostate), logo e contatti **dal repo**, produce PPTX+PDF in `static/manuali/`. Se aggiungi una sezione al sito, aggiungi la slide corrispondente nel generatore. Vincoli del deck: **nessun riferimento a strumenti automatici/IA**, logo + contatti reali, rischi mostrati come **copertura** (non dettaglio del singolo rischio), slide di autorevolezza con fonti/standard, agenda a pulsanti + navigazione (frecce + "torna all'agenda").
-
----
-
-## Manuale di Protezione Civile — opera viva, sincronizzazione obbligatoria
-
-🔴 Il **Manuale di Protezione Civile** (`/manuale/`, sezione Hugo a impianto accademico: reader online + PDF) è un'**opera viva**. Regola cogente: **quando aggiorni una norma, un dato istituzionale o un contenuto che il manuale riprende, AGGIORNA nello stesso lavoro il capitolo o l'appendice corrispondente del manuale.** Un aggiornamento del sito che lascia il manuale disallineato è un lavoro incompleto.
-
-**Trigger di aggiornamento obbligatorio:**
-- Una **norma citata** nel manuale cambia / viene abrogata / sostituita (D.Lgs., L., DPCM, direttiva, **ISO/UNI**) → aggiorna il capitolo che la tratta (es. il commentario al Codice) e ricontrolla la vigenza con `pc-normative-verifier`. *(Caso reale 10/06/2026: UNI 11656:2016 ritirata e sostituita dalla 11656:2023 — citare sempre l'edizione vigente.)*
-- Un **contenuto del sito** che il manuale rielabora cambia (`/conoscere/`, `/rischi-prevenzione/`, `/normativa/`, `/standard-iso/`, glossario, numeri utili, eventi storici) → riallinea capitolo/appendice.
-- Un **dato istituzionale** cambia (recapiti, sede, affiliazioni, organizzazione) → aggiornalo dove il manuale lo riporta.
-
-**Meccanismi automatici (fanno parte dell'opera viva):**
-- **Fonte unica**: reader online e PDF nascono dallo stesso Markdown → modificando un capitolo si aggiornano entrambi.
-- **Data "aggiornato il" automatica (dal 17/08/2026)**: la data di ultima revisione mostrata su `/manuale/` e sul frontespizio del PDF è il **`.Lastmod` git più recente tra frontespizio e capitoli**, calcolato a build dal partial `manuale-ultima-revisione.html` — niente campo manuale da aggiornare (il vecchio `dataUltimaRevisione` in `_index.md` era rimasto fermo al 10/06 con capitoli aggiornati fino al 16/08 ed è stato rimosso). Richiede checkout `fetch-depth: 0` (già in `deploy.yml` e `genera-manuale-pdf.yml`).
-- **Appendici generate** dai dati del sito (glossario, normativa, ISO, numeri utili, eventi) → si riallineano da sole al build; non si toccano a mano.
-- **PDF**: rigenera con `~/.manuale-venv/bin/python scripts/genera-manuale-pdf.py` dopo ogni modifica ai capitoli, poi aggiorna la sua riga nell'inventario dei PDF con `python3 scripts/audit-pdf-accessibilita.py --aggiorna /manuali/manuale-protezione-civile.pdf` (senza, la PR si ferma su `--check-inventario`); il workflow `genera-manuale-pdf.yml` rigenera in automatico PDF e riga dell'inventario a ogni push su `content/manuale/**` o sui layout/CSS del manuale.
-- **Watcher**: `normativa-watcher.yml` va esteso a `content/manuale/` perché apra una issue quando una norma citata nel manuale cambia (flag per la revisione umana, **non** riscrittura automatica → NO INVENZIONI).
-
-**NO INVENZIONI resta assoluto**: ogni affermazione e ogni aggiornamento è ricondotto a una **fonte primaria verificata**. Per il commentario dei testi unici si usa il **testo vigente** scaricato dalla fonte ufficiale (Normattiva via `curl`+`pandoc`; mai parafrasare una norma a memoria). Estratti autentici in `riferimenti-interni/commentario-testi-unici/` (non deployati). **Registro accademico = eccezione dichiarata al gate AGID**: NON invocare `pc-article-reviewer` sui capitoli del manuale (rigetterebbe la prosa accademica); vale un gate dedicato di fonti/citazioni/struttura. Decisioni e stato del progetto nella memory `project_manuale_protezione_civile`.
-
----
-
-## Pubblicazione automatica social — cosa non esce mai da solo
-
-🔴 Dal 20/09/2026 Instagram e Facebook pubblicano **da soli** dal repo **privato** `SviluppoItaliaDigitale/social-pc-genzano`, che legge il materiale da `social-bozze/` di questo repo. 🔴 **Dal 21/09/2026 i post escono in concomitanza con l'articolo sul sito**, non a orari fissi: l'innesco è `genera-social-bozze.yml`, che `deploy.yml` chiama **al termine di ogni deploy** e che sveglia il repo privato appena un articolo pronto risponde sul sito; i post distanziati di mezz'ora li chiama `sveglia-social.yml` in modalità attesa (che resta anche come rete due volte al giorno); i post sono distanziati di almeno mezz'ora fra loro e nessuno esce prima che la pagina risponda davvero sul sito. Il sito non cambia: continua solo a generare le bozze. Vincoli scritti nel codice, non nella configurazione:
-
-- **Mai in automatico i badge `Allerta` ed `Emergenza`**: valgono nel momento in cui escono, si pubblicano a mano.
-- **Mai le versioni facili** (`-facile`), **mai un articolo non ancora online** sul sito.
-- 🔴 **Gli articoli calendarizzati escono anche loro** (22/09/2026). Il repo privato pubblica solo ciò che ha il materiale in `social-bozze/`, e fino a quel giorno il materiale nasceva solo al commit, quando un articolo scritto in anticipo ha ancora data futura: veniva saltato e nessuno lo riprendeva. Ora nasce quando l'articolo va online (`scripts/social-pronti.py`, testi di riserva dal frontmatter se Gemini non risponde), e il controllo di salute giornaliero segnala ogni articolo online da oltre tre ore rimasto senza materiale o non pubblicato, e i retrodatati (data più vecchia di tre giorni) che il repo privato scarta e vanno pubblicati a mano (salvo `social: false`, dal 05/11/2026: l'articolo resta solo sul sito, senza materiale né segnalazioni). 🔴 `workflow_run` non scatta per i run lanciati col `GITHUB_TOKEN`: un innesco "dopo il deploy" si fa con un dispatch esplicito da `deploy.yml`, mai con `workflow_run`. Dettagli in rule 10 § "Pubblicazione automatica social".
-- **Un post per articolo**, appena l'articolo è online; finestra di recupero di 3 giorni (non ripesca l'archivio).
-- **Commenti Instagram disattivati** sui post automatici (i canali sono presidiati a orari definiti, vedi `/social-media-policy/`).
-- **Menzioni verificate**: `@dpcgov_official`, `@regionelazio.official`, `@comunegenzanodiroma`, `@fepiv_ol`. Un handle non si aggiunge mai per somiglianza col nome dell'ente (rule 02, web check obbligato).
-
-🔴 **Dopo la pubblicazione**: su **Facebook** il testo si riscrive (`scripts/modifica-post.py fb-testo`), su **Instagram no** — l'API accetta solo i commenti, verificato sul campo. Le **immagini non si cambiano su nessuna delle due**: una foto aggiunta a un articolo già pubblicato entra nei post successivi, non in quelli usciti. Per fermare o spostare una pubblicazione si modifica `coda-social.yaml` dell'altro repo, anche da telefono. Dettagli operativi in `manuale/parte-42-pubblicazione-automatica-social.md`, regole in rule 10 § "Pubblicazione automatica social".
 
 ## Strumenti mancanti — si installano, senza giustificazioni
 
-🔴 **Istruzione dell'utente (17/10/2026)**: *«tu sai fare tutto e devi farlo senza giustificazioni»*. In qualunque sessione (PC, cellulare, cloud, routine) uno strumento che manca si installa prima di proseguire: `apt-get update` + `apt-get install`, poi `pip`/`npm`, poi download dalla fonte ufficiale, Chromium in `/opt/pw-browsers/chromium`. Mai saltare un controllo o consegnare con «qui non funziona». Procedura in rule 08 § «Uno strumento che manca si installa».
-
-## Accessi e permessi — si chiede per l'intero ciclo di vita
-
-🟢 **Istruzione permanente dell'utente (21/09/2026):** *«siamo una squadra, dobbiamo avere pieno potere e accesso a ogni tipo di funzionalità; io ti do le indicazioni e tu esegui»*. Il metodo è quello: indicazione, esecuzione, resoconto — senza fermarsi a chiedere conferma per ogni passo ordinario.
-
-🔴 **Regola che ne discende:** quando si configura un accesso a un servizio esterno, si chiedono i permessi per **tutto il ciclo di vita** di ciò che si andrà a gestire — creare, correggere, **annullare** — non solo per il passo che serve quel giorno. Nasce dal 21/09/2026: il giorno prima erano stati chiesti i permessi per pubblicare sui social, e quando un post è uscito due volte non si poteva eliminarlo (manca `instagram_manage_contents`, che non richiede revisione di Meta perché gli asset sono nostri).
-
-**Inventario vivo in `riferimenti-interni/accessi/README.md`**: ogni credenziale, che cosa abilita, che cosa **non** abilita, e i limiti che nessun permesso sblocca (su Instagram un post pubblicato non si modifica; su Facebook si riscrive il testo ma non le immagini). Va aggiornato quando si aggiunge un servizio o si scopre un limite: è lì che si guarda prima di promettere che una cosa si può fare.
+🔴 Istruzione dell'utente (17/10/2026): *«tu sai fare tutto e devi farlo senza giustificazioni»*. In qualunque sessione (PC, cellulare, cloud, routine) uno strumento che manca si installa prima di proseguire: `apt-get update` + `apt-get install`, poi `pip`/`npm`, poi download dalla fonte ufficiale, Chromium in `/opt/pw-browsers/chromium`. Mai saltare un controllo o consegnare con «qui non funziona». Procedura in `08-claude-code-setup.md` § «Uno strumento che manca si installa».
 
 ---
 
-## Auto-integrazione approfondimenti (video + link) — pre-autorizzata
+## Dove sono le regole
 
-🟢 Istruzione permanente (20/05/2026): integra da sola gli **approfondimenti pertinenti** (video + link a siti della nostra lista) in articoli e pagine, senza OK caso per caso. Copre l'intero flusso fino a live.
+| File | Che cosa contiene | Quando si carica |
+|---|---|---|
+| `01-governance-pa.md`, `07-proattivita-coerenza.md` | priorità PA, divieti; coerenza, checkpoint batch, consiglio professionale | sempre (import qui sotto) |
+| Regole trasversali (`qualita`, `autonomia`, `firma-dei-lavori`, `guasti`, `grafica`, `comunicazione-social`, `strumenti`, `sessione-cloud`) | regole comuni a tutti i repository | sempre |
+| `02-content-design-pa.md`, `06-protezione-civile-scientifica.md`, `09-regole-contenuti-qualita.md` | scrittura AGID, badge, foto, formato data; rischio e allerte; i 19 punti (i vecchi «CLAUDE.md punto N») | `content/**`, `data/**`, `archetypes/**`, `static/formazione/**`, bozze social |
+| `03-accessibility.md` | WCAG, toolbar, TTS, glossario, giochi, CAST UDL | tema, `static/**`, `content/**` |
+| `04-…`, `04b-…`, `04c-hugo-static-cartelle.md` | architettura Hugo, menu, CSS, cartelle | tema, `static/**`, `hugo.toml` |
+| `04a-hugo-shortcode-partial.md` | shortcode e partial | tema, JS/CSS, `data/**` |
+| `05-github-aruba-deploy.md` | deploy Aruba e Pages, `.htaccess`, cache | `.github/**`, `scripts/**`, `.htaccess` |
+| `08-claude-code-setup.md` | strumenti web, Firecrawl, Playwright, sandbox | `.claude/**`, `.mcp.json`, `scripts/foto-*` |
+| `10-automazioni-github-actions.md` | workflow, routine, social automatici | `.github/**`, `scripts/**` |
+| `lim-scuole.md` | compatibilità LIM | giochi, formazione, scuole, quiz |
+| `11-articoli-foto-social.md` | sezioni ex CLAUDE.md: «Foto utente e banner — guarda PRIMA, scrivi DOPO» (con il «Web check obbligato»), «Auto-gate AGID prima del commit di un articolo», «Gate dei fatti e dei materiali scolastici», «Umanizzazione della scrittura», «Gate di legalità — Circolare DPC 6/8/2018», «Automatismo totale sugli articoli» (badge, versione facile, orari, «Fonti giornalistiche»), «Verifica visiva pre-commit su markup HTML nelle pagine», «Pubblicazione automatica social», «Auto-integrazione approfondimenti» | `content/**`, foto, formazione, giochi, social |
+| `12-grafiche-loghi-deck-manuale.md` | sezioni ex CLAUDE.md: «Affiliazioni e riconoscimenti europei» (4 loghi, ESC), «Presentazione del sito (deck)», «Manuale di Protezione Civile — opera viva», «Video del Gruppo», «Licenza del sito — CC BY-NC-SA 4.0» | tema, grafiche, generatori, manuale, video |
+| `13-pubblicazione-firma-accessi.md` | sezioni ex CLAUDE.md: «"Pubblica" = produzione FINO ALLA FINE», «Fine sessione con commit pendenti», «Nessun riferimento all'IA» con «Identità git», «Accessi e permessi», «Consiglio professionale», «Checkpoint pre-operazione batch» | `.github/**`, `scripts/**`, `AGENTS.md`, `COORDINAMENTO.md` |
+| `14-agenti-architettura-automazioni.md` | sezioni ex CLAUDE.md: «Agenti specializzati» (organigramma, «Chi dirige»), «Skill», «Project overview», «Comandi principali», «Architettura — riferimenti rapidi», «Regole contenuti e qualità», «Automazioni» | agenti, skill, `manuale/**`, tema, workflow |
 
-**A) Video** — trigger: issue dai workflow `check-video-lis.yml`, `check-video-dpc-eventi.yml`, `aggiorna-video-correlati.yml`. Se pertinente: video LIS → voce in `data/lis.yaml` (famiglia + `fonte`); video divulgativi/correlati → fix nel **generatore** `scripts/genera-video-correlati.py` (`DENY_VIDEO_IDS`/keyword/gate), **mai solo nel YAML** (rigenerato ogni mese, rule 10); eventuale callout contestuale. Poi chiudi l'issue citando il commit.
-
-**B) Link "Per approfondire"** in fondo all'articolo, ordine AGID: (1) **Sul nostro sito** — linkografia interna, sempre per prima (rule 02 punto 4, agent `pc-internal-linker`); (2) **Fonti istituzionali** (da `content/siti-utili/_index.md`); (3) **Divulgativi** (Geopop, NatGeo Italia, Rai Cultura/News, CICAP, Link4Universe, Wired Italia) etichettando la fonte; (4) **Video Local Team** (`localteam.it`, whitelist) solo clip con esperti/fonti istituzionali, evitando protesta/polemica/cronaca politica, singolo video (non l'hub "insight"), URL pulito.
-
-🔴 **GATE DI PERTINENZA:** video/link solo se trattano una tematica realmente coperta dall'articolo/pagina. Fuori contesto = niente ("approfondimento pertinente o niente"). **Se la pertinenza/classificazione è ambigua, fermati e chiedi.** Pulisci sempre i parametri di tracking (`?si=`, `utm_*`, ecc.). L'apertura di un'issue non avvia da sola una sessione Claude: la regola si applica quando una sessione incontra l'issue o lavora sull'articolo.
+Un rimando «`CLAUDE.md` § …» in agenti, script o manuale porta alla sezione con lo stesso titolo nel file indicato qui. Manuale operativo: `MANUALE-SITO.md` (indice) e `manuale/`; fonti e calendario: `PIANO-EDITORIALE.md`; il workflow `aggiorna-manuale.yml` sorveglia le linee guida AGID e il manuale e le regole si aggiornano in coppia. Agenti in `.claude/agents/` (organigramma in `manuale/parte-19`): la sessione principale dirige; `pc-audit-completo`, `pc-article-reviewer` e `pc-didattica-reviewer` fanno da capi reparto.
 
 ---
 
-## Regole di dettaglio (file separati)
+## Progetto in breve
 
-`04a-hugo-shortcode-partial.md` (componenti, shortcode, partial) e `10-automazioni-github-actions.md` (workflow, routine, deploy) si caricano da soli quando si lavora sui file che descrivono (`paths:` nel loro frontmatter). Prima di toccare un componente o un'automazione da un altro punto, leggili.
+Sito statico del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, Hugo + tema `flavour-pcgenzano` (Bootstrap Italia 2.x). Ogni push su `main` pubblica su Aruba (`https://www.protezionecivilegenzano.it/`, FTP) e su GitHub Pages (anteprima alleggerita). Modalità emergenza: `data/emergenza.json`; allerta manuale: `data/allerta.json` (livello insieme a titolo e descrizione).
 
 @.claude/rules/01-governance-pa.md
-@.claude/rules/02-content-design-pa.md
-@.claude/rules/03-accessibility.md
-@.claude/rules/04-hugo-architecture.md
-@.claude/rules/04b-hugo-template-css.md
-@.claude/rules/04c-hugo-static-cartelle.md
-@.claude/rules/05-github-aruba-deploy.md
-@.claude/rules/06-protezione-civile-scientifica.md
 @.claude/rules/07-proattivita-coerenza.md
-@.claude/rules/08-claude-code-setup.md
-@.claude/rules/09-regole-contenuti-qualita.md
-@.claude/rules/lim-scuole.md
-
----
-
-## Agenti specializzati (`.claude/agents/`)
-
-52 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi; i 12 aggiunti lo stesso giorno completano l'organigramma «azienda» chiesto dall'utente (*«tutti gli specialisti del settore protezione civile, più agenzia di marketing e giornalistica»*). I 2 aggiunti il 17/10/2026 (`pc-testi-nel-codice`, `pc-auditor-indipendente`) coprono le sviste trovate da un altro audit esterno: i testi che vivono dentro il codice (assistente, giochi, lezioni, Telegram, generatori) e il metodo dell'auditor esterno, con la regola che **ogni rilievo diventa un controllo**.
-
-🔴 **Chi dirige**: la **sessione principale** è la direzione: convoca gli specialisti in sequenza (i gate degli articoli, l'audit completo, i materiali scolastici sono copioni che lei esegue) o in parallelo quando il lavoro si divide in parti indipendenti (fino a venti agenti alla volta). Dal 16/10/2026, su richiesta dell'utente, tre agenti fanno da capi reparto e hanno `Agent` fra i `tools`: `pc-audit-completo`, `pc-article-reviewer` e `pc-didattica-reviewer`. Quando lo strumento c'è, convocano da soli gli specialisti dei loro copioni; quando manca, ne eseguono a mano i controlli essenziali. Gli altri agenti non delegano. Lo strumento c'è solo se la sessione ammette più livelli di agenti (`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`): da terminale sul PC il valore predefinito è 3, le sessioni cloud dell'app partono da 1. In cloud la sessione principale può alzarlo per sé scrivendo `{"env":{"CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH":"3"}}` in `~/.claude/settings.json` della macchina della sessione: vale dopo qualche secondo, senza riavvio, e solo per quella sessione (verificato il 16/10/2026: prima un sottoagente non aveva `Agent`, dopo sì). 🔴 Mai sul PC, dove quel file contiene le impostazioni personali dell'utente, e mai nelle routine: il livello si alza solo per un lavoro grande e divisibile in una sessione con l'utente, perché in quella prova ogni agente è partito con circa 390 mila token di contesto e una catena moltiplica il consumo. Il `.claude/settings.json` del repository non serve allo scopo: le chat dell'app partono dalla cartella sopra il repository e non lo leggono. Le squadre di agenti sperimentali (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS`), provate lo stesso giorno, non servono: attivate a sessione in corso, l'agente con nome è partito come un sottoagente qualsiasi. Un gate che non può essere convocato si esegue a mano leggendo il file dell'agente, e il rapporto lo dichiara; mai saltato in silenzio.
-
-**Organigramma per reparti** (dettaglio in `manuale/parte-19` § 19.0):
-
-| Reparto | Agenti |
-|---|---|
-| Direzione e qualità | `pc-audit-completo`, `pc-auditor-indipendente`, `pc-documentazione`, `pc-site-auditor` (fotografia rapida del repo) |
-| Protezione civile tecnico-scientifica | `pc-revisore-scientifico`, `pc-normative-verifier`, `pc-pianificatore-emergenza`, `pc-cartografo-gis`, `pc-medico-emergenza`, `pc-psicologo-emergenza`, `pc-radiocomunicazioni` |
-| Sala operativa | `pc-comunicazione-crisi`, `pc-esercitazione-emergenza` |
-| Volontariato e inclusione | `pc-volontariato-terzo-settore`, `pc-inclusione-fragilita` |
-| Redazione giornalistica | `pc-article-reviewer`, `pc-desk-giornalistico`, `pc-fact-checker`, `pc-revisore-linguistico`, `pc-correttore-bozze`, `pc-calendario-editoriale`, `pc-internal-linker`, `pc-content-freshness`, `pc-coerenza-trasversale`, `pc-italian-l2-writer`, `pc-revisore-traduzioni`, `pc-ufficio-stampa` |
-| Agenzia di comunicazione | `pc-strategia-comunicazione`, `pc-art-director`, `pc-social-publisher`, `pc-produzione-multimediale`, `pc-seo-checker`, `pc-materiali-publisher` |
-| Fotografia | `pc-image-fixer`, `pc-photo-caption-verifier` |
-| Scuola | `pc-didattica-reviewer`, `pc-print-card-qa` |
-| Esperienza utente e collaudo | `pc-accessibility-auditor`, `pc-usabilita`, `pc-verifica-visiva`, `pc-visitatore-reale`, `pc-collaudo-funzionale` |
-| Tecnologia | `pc-revisore-codice`, `pc-testi-nel-codice`, `pc-revisore-automazioni`, `pc-sicurezza`, `pc-integrita-tecnica`, `pc-dati-e-feed`, `pc-deploy-validator`, `pc-prestazioni`, `pc-issue-triage` |
-| Legale | `pc-conformita-legale` |
-
-
-Le descrizioni complete degli agenti, con i trigger, sono nel frontmatter dei file in `.claude/agents/` e arrivano a ogni sessione insieme all'elenco degli agenti.
-
-Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
-
----
-
-## Skill — invocazione col tool `Skill`
-
-🔴 Prima di un task ≥3 step: se fra le skill disponibili nella sessione ce n'è una che fa già questo, invocala col tool `Skill` (non con Read+Bash). Non citare una skill senza invocarla; non usare skill di marketing sui contenuti AGID.
-
-**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-calendario-editoriale` (se programmato) → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`; allerta o emergenza → `pc-comunicazione-crisi` → `pc-fact-checker` → `pc-psicologo-emergenza` (se tocca persone); contenuto sanitario → `pc-medico-emergenza` → `pc-fact-checker`; grafica istituzionale → `pc-art-director` → `pc-verifica-visiva`; modifica a uno strumento interattivo o a CSS/JS comuni → `pc-revisore-codice` → `pc-collaudo-funzionale` → `pc-prestazioni`; menu, home o ricerca → `pc-usabilita` → `pc-visitatore-reale`.
-
----
-
-## Project overview
-
-Sito statico del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, Hugo + tema custom `flavour-pcgenzano` (Bootstrap Italia 2.x). Deploy a ogni push su `main` via GitHub Actions: **Aruba** (`https://www.protezionecivilegenzano.it/`, FTP) + **GitHub Pages** (`https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`). Dal 06/11/2026 la copia su GitHub Pages è alleggerita, e dal 10/11/2026 il taglio è più stretto perché la pubblicazione si interrompe a 10 minuti e non si può allungare: senza video, audio, presentazioni, archivi ZIP, PDF oltre 2 MB e raster non ottimizzati oltre 2 MB, che si aprono da Aruba (`scripts/alleggerisci-copia-pages.py`, rule 05 § «Conservare immagini e allegati»). Aruba resta completo e non si tocca.
-
-Architettura completa: rule `04`-`04c`. Manuali nella root: `MANUALE-SITO.md` (indice, split in `manuale/parte-NN-*.md`), `MANUALE-MOBILE.md` (workflow mobile/cloud), `PIANO-EDITORIALE.md` (fonti + calendario), `README.md`, `CONTESTO-PROGETTO.md` (export per altre AI).
-
-## Comandi principali
-
-```bash
-hugo server                    # dev (server -D mostra le bozze)
-hugo --minify                  # build GitHub Pages
-hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"   # build Aruba
-git add . && git commit -m "..." && git push    # pubblica (CI deploy)
-bash ~/gestione-sito.sh        # script gestione contenuti/emergenze/allerte
-bash scripts/export-contesto-progetto.sh              # → CONTESTO-PROGETTO.md per altra AI
-bash scripts/applica-fascia-foto.sh <src> <out-senza-ext>   # fascia blu → static/images/<out>.webp
-bash scripts/scarica-pittogrammi.sh [--force]   # libreria ISO 7010 + ARASAAC
-bash scripts/foto-da-{wikipedia,nasa,usgs}.sh ...           # foto da fonti libere
-bash scripts/genera-social.sh <file>|--all|--since DATA|--dry-run   # bozze social (GEMINI_API_KEY)
-python3 scripts/genera-microtext.py {text|image|watermark} ...      # filigrane anti-falsificazione
-python3 scripts/indexnow-ping.py                # ping IndexNow (di norma via workflow)
-```
-
-## Architettura — riferimenti rapidi
-
-Mappa completa in rule `04`/`04a`/`04b`/`04c`. Componenti chiave:
-
-- **Homepage dual-mode** (normale/emergenza) — `layouts/index.html` + `data/emergenza.json`. Banner emergenza **site-wide** da `baseof.html`.
-- **Data files** in `data/` — `emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`, `glossario.yaml`, `aree_emergenza.yaml`, `dae.yaml`, `idranti.yaml`, `stato-sistema.json`, `eventi_storici.yaml`, `lis.yaml`, `ecmwf_charts.json` (carte Meteo Europa), `meteo_genzano.json` (riquadro cartina Lazio). Open data del Laboratorio meteo in `static/open-data/clima-*.json`.
-- **Badge articoli** (in `partials/badge.html`): Allerta · Avviso · Comunicazione · Attività · Formazione · Evento · Volontariato · Radiocomunicazioni · Prevenzione · Esercitazione · Aggiornamento · Informazione · Emergenza — palette/hex/contrasto in rule 02.
-- **Shortcode:** `foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`, `link-card`, `pagina-emergenza-lite`, `dashboard-*` (cruscotto), `scheda-terremoto` (scheda dettaglio evento sismico INGV su `/cruscotto/terremoto/#<id>`), i **dossier interattivi** (`dossier-hero`/`dossier-scena`/`dossier-dati`/`dossier-dato`/`dossier-confronto`/`dossier-hotspot`/`dossier-punto`/`dossier-chiusura`/`dossier-fonti`, sezione `/dossier/` scrollytelling full-bleed), e i **componenti Bootstrap Italia** `callout` (nativo BI), `passi` (stepper), `timeline`, `galleria` (carosello ≥4 foto), e gli shortcode **CAA** `caa-tabella`/`caa-voce` (tabelle di Comunicazione Aumentativa Alternativa: pittogrammi ARASAAC + parola, pagina `/tabelle-comunicazione/`). **Render hook:** `render-link.html`, `render-table.html`. **Partial** chiave: `article-cover`, `leggi-ad-alta-voce` (TTS), `indice-pagina` (indice + scrollspy site-wide), `accessibility-toolbar`, `assistente-fab`, `structured-data` (JSON-LD), `meta-social` (OG), `articoli-correlati`, `page-tools`, `sos-112`, `qr-articolo`, `ricerca-modal` (Pagefind Ctrl+K), `lis-badge`.
-- **Pagine/feature speciali:** ricerca Pagefind (`/cerca/`), QR articolo (`static/qr/`), `/stato-sistema/`, `/podcast/` (puntate sospese dal 05/11/2026: tornano solo rifatte, con trascrizione verificata — `pc-materiali-publisher` § «Niente si pubblica senza verifica») + `/articoli-da-ascoltare/`, `/storia/`, assistente vocale, `/lanterna/` (standalone), LIS `/lis/` (`data/lis.yaml`), "Approfondimenti video" (`genera-video-correlati.py`, gate pertinenza), notifiche allerta browser, quiz `/quiz-preparazione/`, hub `/giochi/`, `/open-data/`, `/audio-e-podcast/`, hub `/standard-iso/`, `/feed-rss/`, traduzioni (hub + 3 pagine × 7 lingue, `tts: false`, hreflang + `<html lang>` dinamico), pagina lite `/emergenza/` (44 KB), metodo editoriale/E-E-A-T (`static/llms.txt`), microtext (`genera-microtext.py`), **cruscotto** `/cruscotto/` (schede dati live INGV/meteo/radar/satellite/aria/mare/ECMWF), **scheda terremoto** `/cruscotto/terremoto/#<id>` (dettaglio di un singolo evento sismico da INGV FDSN, tab sul modello di terremoti.ingv.it, linkata da ogni riga del cruscotto sismico), **Laboratorio meteo** `/laboratorio-meteo/` (costruttore di grafici climatici ERA5/Open-Meteo live + esempi pre-cotti, `static/js/laboratorio-meteo.js`), **Dossier interattivi** `/dossier/` (racconti visivi scrollytelling full-bleed a tema scuro, motore riusabile = sezione + layout + 9 shortcode `dossier-*` + `dossier.css`/`dossier.js`; ogni nuovo dossier = un file in `content/dossier/`; box homepage col più recente; immagini solo con licenza chiara; vedi `manuale/parte-39-dossier-interattivi.md`), **Tabelle di comunicazione CAA** `/tabelle-comunicazione/` (board ARASAAC stampabili per chi in emergenza non riesce a parlare — shortcode `caa-tabella`/`caa-voce`, voce di menu sotto "Accessibilità e Supporti"), **Piano familiare offline** (`/piano-familiare/` — pulsante "Salva piano offline (HTML)": file `.html` autoconsistente solo-testo generato via Blob, apribile senza rete in blackout), **Facile da leggere multilingua** (`/facile-da-leggere/` IT + traduzioni `en`/`eo`/`ro`/`ar` come pagine di sezione, selettore lingua interno + tag `hreflang` SEO reciproci via frontmatter `hreflang:`/`hreflang_xdefault`), e i **banner homepage** `banner-caldo.html` (striscia stagionale "Consigli sul caldo", visibile solo giugno–settembre, mese deciso a build-time) + `banner-volontariato.html` (campagna Regione Lazio "Non c'è PC senza di te", solo modalità ordinaria; vedi memory [[project_campagna_lazio_non_ce_pc_senza_di_te]]).
-- **Output format custom** (`hugo.toml [outputs] home`): oltre a HTML/RSS/JSON, la home genera **`/allerta-cap.xml`** (feed **CAP 1.2** Common Alerting Protocol OASIS, machine-readable, da `data/allerta.json` — un `<info>` per pericolo: oggi/domani/avviso meteo/incendi AIB Zona 9; `identifier` composito byte-stabile anti-spam) e **`/news-sitemap.xml`** (sitemap Google News, solo articoli `comunicazioni` delle ultime 48h, dichiarata in `static/robots.txt`).
-- **TTS Web Speech API** (pagine `tts:`, coach giochi, fiabe), **coach giochi**, **glossario inline** — rule 03.
-
-## Regole contenuti e qualità (19 punti)
-
-Elenco completo in rule `09-regole-contenuti-qualita.md`. Vincoli più critici:
-- **P1 Formato data:** `AAAA-MM-GG` se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti (00:01, 00:02…) se 2+/giorno. Mai `Z` UTC.
-- **P4 Qualità ChatGPT 9.5/10:** redazione AGID in ogni contesto (CLI/mobile/cloud), nessuna delega ad AI esterne.
-- **P9 Banner intoccabile:** `image:` = cover tipografica col titolo; tutte le foto **inline** con `{{< foto >}}`, mai nel banner; marker `# TODO-foto-*` bandito; in revisione testuale `image:` non si tocca.
-- **P12 Gerarchia fonti crisi:** AGID+DPC → CNR/ISPRA → EENA/CWA → ISO 22329 + WCAG 2.2 AA → normativa orizzontale.
-
-## Automazioni (GitHub Actions) e note operative
-
-Tabella completa workflow + note operative in rule `10-automazioni-github-actions.md`. Trigger rapidi:
-- `deploy.yml` a ogni push su `main`. **Priorità deploy (3 livelli, 31/05/2026):** allerta/`pubblica-programmata` immediati (`-f priority=urgent`), articoli (push merge) immediati e prioritari, aggiornamenti di sfondo (meteo/ECMWF/clima/video/stato/QR/pacchetti/indice) **coalescati** da `deploy-coalescer.yml` (`workflow_run` al completamento dei workflow meteo + cron ~30 min come fallback, dall'11/06/2026). Dettagli in rule 10 § "Modello di priorità del deploy".
-- `aggiorna-manuale.yml` (lunedì 06:04 UTC): monitora le fonti AGID/Designers Italia/DPC e apre issue quando cambiano — manuale e `.claude/rules/` vanno aggiornati in coppia (rule 02 § "Sincronizzazione automatica con gli aggiornamenti AGID").
-- `normativa-watcher.yml` (ogni giorno 07:30 italiane) legge **albo pretorio di Genzano, Gazzetta Ufficiale, Normattiva, BURL Lazio, notizie del Consiglio regionale e, dal 13/10/2026, le immagini satellitari del giorno di EU Space (Copernicus)**, e dal 05/11/2026 anche **avvisi, comunicati e notizie del sito del Comune di Genzano**, **notizie di Regione Lazio, Città metropolitana di Roma e Prefettura di Roma**, le **sentenze e ordinanze della Corte costituzionale** (Gazzetta Ufficiale, 1ª Serie speciale), e nella rassegna stampa i **feed delle testate locali** (Castelli Notizie, Il Mamilio, Il Caffè, Controluce, Terzo Binario, RomaToday, **Il Messaggero Roma**, Il Giornale dei Castelli Romani) e di **ANSA Lazio**, le riviste giuridiche **Giurisprudenza Penale** e **Diritto.it** e ricerche mirate sulle **sentenze di Cassazione, tribunali, TAR, Consiglio di Stato e Corte dei conti** in materia di protezione civile (mai gli albi dei Comuni vicini) e apre la issue del giorno; la **Routine «Rassegna normativa e albo pretorio»** (dal 05/10/2026 tre giri, 07:52, 12:52 e 19:52 italiane, con tutte le fonti compresa la rassegna stampa) lavora ogni issue aperta e **pubblica fino a live** un articolo per ogni atto che riguarda la protezione civile direttamente o indirettamente — attivazioni COC comprese (istruzione permanente dell'utente 18/09/2026; rule 10 § omonimo). 🔴 Eccezione dall'08/10/2026: le notizie di stampa che raccontano interventi o attività del Gruppo restano in **PR non unita** finché l'utente non le confronta con il registro interventi.
-- Modalità emergenza: `data/emergenza.json` → `"attiva": true`.
-- Allerta meteo manuale: `data/allerta.json` → `livello: verde|giallo|arancione|rosso`, **insieme a `titolo` e `descrizione`** nella stessa modifica (cambiare solo `livello` produce una barra colorata e un CAP con severità coerenti ma titolo "NESSUNA ALLERTA" — verificato con un'esercitazione locale il 03/10/2026, dettagli in rule 10 § "Key operational notes").
-- Niente articoli `draft: true`: solo pubblicato (data passata) o calendarizzato (data futura).

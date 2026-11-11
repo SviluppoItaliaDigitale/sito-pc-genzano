@@ -1,3 +1,12 @@
+---
+paths:
+  - ".github/**"
+  - "themes/flavour-pcgenzano/static/.htaccess"
+  - "scripts/**"
+  - "hugo.toml"
+  - "static/api/**"
+---
+
 # GitHub + Aruba — Deploy e Infrastruttura
 
 ## Conservare immagini e allegati (18/10/2026)

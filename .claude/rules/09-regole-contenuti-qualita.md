@@ -1,3 +1,14 @@
+---
+paths:
+  - "content/**"
+  - "data/**"
+  - "archetypes/**"
+  - "static/formazione/**"
+  - "static/images/**"
+  - "social-bozze/**"
+  - "bozze/**"
+---
+
 # Regole contenuti e qualità
 
 Questa è la **checklist numerata di regole di progetto** che si applicano alla redazione, agli articoli, alle pagine legali, alle automazioni di immagini, ai kit calamità, ai feed RSS, alle traduzioni e agli standard ISO. Le specifiche operative complete vivono nelle altre rules `.claude/rules/` e nel manuale (`manuale/parte-NN-*.md`); questo file consolida le 19 regole come riferimento rapido.

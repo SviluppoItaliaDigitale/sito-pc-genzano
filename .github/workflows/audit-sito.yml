@@ -671,7 +671,12 @@ jobs:
                    .claude/rules/07-proattivita-coerenza.md \
                    .claude/rules/08-claude-code-setup.md \
                    .claude/rules/09-regole-contenuti-qualita.md \
-                   .claude/rules/10-automazioni-github-actions.md; do
+                   .claude/rules/10-automazioni-github-actions.md \
+                   .claude/rules/11-articoli-foto-social.md \
+                   .claude/rules/12-grafiche-loghi-deck-manuale.md \
+                   .claude/rules/13-pubblicazione-firma-accessi.md \
+                   .claude/rules/14-agenti-architettura-automazioni.md \
+                   .claude/rules/lim-scuole.md; do
             [ -f "$f" ] || GOV_MISSING="${GOV_MISSING}- \`$f\`\n"
           done
           # Verifica anche che le 29 parti del manuale esistano (parte-00 a parte-28).

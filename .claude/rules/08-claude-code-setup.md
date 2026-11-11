@@ -1,3 +1,10 @@
+---
+paths:
+  - ".claude/**"
+  - ".mcp.json"
+  - "scripts/foto-*"
+---
+
 # Claude Code — Setup ambiente di sviluppo
 
 Questo file documenta come configurare l'ambiente di Claude Code per lavorare sul sito senza essere bloccato dalla sandbox di sicurezza, in particolare per il download di foto da fonti libere e per la lettura di siti istituzionali con SPA JS o anti-bot.

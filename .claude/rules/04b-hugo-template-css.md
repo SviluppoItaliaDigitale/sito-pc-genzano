@@ -1,3 +1,12 @@
+---
+paths:
+  - "themes/**"
+  - "layouts/**"
+  - "static/**"
+  - "assets/**"
+  - "hugo.toml"
+---
+
 # Hugo — Template, CSS, Menu, UX
 
 Questo file raccoglie le regole su **template** principali, **menu di navigazione**, **toolbar di accessibilità**, **tipografia**, **stampa**, **404** e sistema **bozze social**. Per la struttura del progetto e le regole Hugo fondamentali vedi `04-hugo-architecture.md`. Per shortcode, render hook e partial vedi `04a-hugo-shortcode-partial.md`. Per cartelle statiche e deploy vedi `04c-hugo-static-cartelle.md`.

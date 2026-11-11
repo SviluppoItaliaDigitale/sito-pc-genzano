@@ -1,3 +1,12 @@
+---
+paths:
+  - "themes/**"
+  - "layouts/**"
+  - "static/**"
+  - "content/**"
+  - "assets/**"
+---
+
 # Accessibilità
 
 ## Standard di riferimento

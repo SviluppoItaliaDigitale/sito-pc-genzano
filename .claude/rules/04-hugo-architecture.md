@@ -1,3 +1,13 @@
+---
+paths:
+  - "themes/**"
+  - "layouts/**"
+  - "static/**"
+  - "assets/**"
+  - "hugo.toml"
+  - "archetypes/**"
+---
+
 # Hugo Architecture
 
 Questo file contiene la **mappa generale** dell'architettura Hugo: struttura del progetto, regole fondamentali, comandi e divieti. Il dettaglio è suddiviso per area:

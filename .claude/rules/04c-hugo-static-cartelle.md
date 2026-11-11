@@ -1,3 +1,14 @@
+---
+paths:
+  - "themes/**"
+  - "layouts/**"
+  - "static/**"
+  - "assets/**"
+  - "hugo.toml"
+  - "riferimenti-interni/**"
+  - "bozze/**"
+---
+
 # Hugo — Cartelle Statiche e Riferimenti Interni
 
 Questo file raccoglie le convenzioni sulle **cartelle statiche** (`static/`) e sulla cartella di livello root **`riferimenti-interni/`** non deployata. Per la struttura del progetto vedi `04-hugo-architecture.md`. Per shortcode/partial vedi `04a-hugo-shortcode-partial.md`. Per template/CSS/UX vedi `04b-hugo-template-css.md`.
