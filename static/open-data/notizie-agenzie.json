@@ -5,11 +5,89 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-10T22:10:55+00:00",
+  "generato": "2026-11-11T01:57:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-11T00:50:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa ai giovani, 'non vi inginocchiate davanti agli idoli'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/11/il-papa-ai-giovani-non-vi-inginocchiate-davanti-agli-idoli_9c87d5f1-bff8-47a1-ba0a-c427b3968c5a.html"
+  },
+  {
+   "data": "2026-11-10T23:42:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Camera Usa boccia la procedura di impeachment per Hegseth",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/11/la-camera-usa-boccia-la-procedura-di-impeachment-per-hegseth_2979584a-b939-48f3-bb33-2ca237fbebf5.html"
+  },
+  {
+   "data": "2026-11-10T23:36:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Zelensky: \"Putin non si fermerà se lasciamo il Donbass\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/zelensky-putin-incontro-donbass-guerra_7ngvDwAaiADljBPiCqVVVh"
+  },
+  {
+   "data": "2026-11-10T23:36:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tajani al G7: \"Avanti con gli aiuti a Kiev, le minacce hacker non mi intimidiscono\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/antonio-tajani-minacce-hacker-cybersicurezza-g7_60EacoRlcKW4X9KUuzEqhB"
+  },
+  {
+   "data": "2026-11-10T23:31:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Governo alle prese con il pacchetto aiuti all'Ucraina, Meloni: \"Giorgetti firmerà, linea non cambia\"",
+   "url": "https://www.adnkronos.com/politica/ucraina-aiuti-italia-meloni-centrodestra_6ZVbG1Mf21FuA0v0C3RQF8"
+  },
+  {
+   "data": "2026-11-10T23:19:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrodestra, Forza Italia perde i pezzi al Senato: lasciano Silvestro e De Rosa. Patriarca e Bicchielli tentati dall'addio",
+   "url": "https://www.adnkronos.com/politica/forza-italia-silvestro-de-rosa_6Swo3MbGP40ct9qXdVoHWP"
+  },
+  {
+   "data": "2026-11-10T23:11:49+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sesso, l'allarme degli andrologi: \"Due uomini su tre credono a fake news\". Dall'erezione ai testicoli, la top ten delle bufale",
+   "url": "https://www.adnkronos.com/salute/medicina/sesso-fake-news-top-ten-andrologi_4RuxyVTx4snHQcoTuggT6b"
+  },
+  {
+   "data": "2026-11-10T23:09:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tensione sulle armi all'Ucraina, la Lega avvisa gli alleati",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/tensione-sulle-armi-allucraina-la-lega-avvisa-gli-alleati_83808254-a528-4178-aee1-ade2f46fc15d.html"
+  },
+  {
+   "data": "2026-11-10T23:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Zelensky: \"Pronti a scambiare fino a 1.500 prigionieri\". Nuovo round di colloqui ad Abu Dhabi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-abu-dhabi-zelensky_33WtgXG7r691KHGfVjlRW6"
+  },
+  {
+   "data": "2026-11-10T22:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terrorismo, ex Br Bertulazzi evade dai domiciliari a Buenos Aires: è caccia all'uomo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ex-br-leonardo-bertulazzi-evade-dai-domiciliari_1rN4JR49ZUw28SUTVmYdjw"
+  },
+  {
+   "data": "2026-11-10T22:18:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Change Bloc trova i numeri con gli arabi alla Knesset, ma è rebus governo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/media-abbas-verso-riconoscimento-di-hamas-come-gruppo-terroristico_9fa547ca-d8a3-4c82-b3d9-db39b7a90e19.html"
+  },
+  {
+   "data": "2026-11-10T22:17:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ex Br Bertulazzi scappa dai domiciliari a Buenos Aires, è caccia all'uomo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/lex-br-bertulazzi-scappa-dai-domiciliari-a-buenos-aires-e-caccia-alluomo_7c3d4755-c715-4de4-9077-d5c8575229da.html"
+  },
+  {
+   "data": "2026-11-10T22:15:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il trapper Baby Gang non va in udienza, 'pestato in carcere'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/il-trapper-baby-gang-non-va-in-udienza-pestato-in-carcere_cfb6958b-b204-460d-9239-bc8794c5087d.html"
+  },
   {
    "data": "2026-11-10T21:49:00+00:00",
    "fonte": "ADNKRONOS",
@@ -17,16 +95,10 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/bambino-5-mesi-problemi-cuore-doberman_ECar0fiJiirlI8iunajN"
   },
   {
-   "data": "2026-11-10T21:47:21+00:00",
+   "data": "2026-11-10T21:47:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Vannacci: \"Gli italiani non arrivano a fine mese, no a dar da mangiare cannoni\"",
    "url": "https://www.adnkronos.com/politica/roberto-vannacci-ospite-filorosso-raitre_79HI4gRCtgPljtoSSmFUXc"
-  },
-  {
-   "data": "2026-11-10T21:30:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scontro sulle armi a Kiev. Meloni sente Giorgetti, firmerà il decreto",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/ucraina-meloni-sempre-trovata-una-sintesi-la-posizione-dellitalia-non-cambiera_83808254-a528-4178-aee1-ade2f46fc15d.html"
   },
   {
    "data": "2026-11-10T21:24:55+00:00",
@@ -36,7 +108,7 @@
   },
   {
    "data": "2026-11-10T21:21:41+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "'Dopo 35 anni indagini difficili', nessun colpevole per la Moby Prince",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/dopo-35-anni-indagini-difficili-nessun-colpevole-per-la-moby-prince_96c61983-4596-4302-ad5b-9daec82cebbb.html"
   },
@@ -45,12 +117,6 @@
    "fonte": "ANSA",
    "titolo": "Nuovo allarme Ue, 'nel mirino degli hacker anche gli elettrodomestici'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/agenzia-ue-attacchi-hacker-potrebbero-colpire-anche-elettrodomestici_28703d89-c3b2-4c05-8315-d0e77f5339ba.html"
-  },
-  {
-   "data": "2026-11-10T21:11:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'ex Br Leonardo Bertulazzi scappa dai domiciliari a Buenos Aires",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/lex-br-leonardo-bertulazzi-scappa-dai-domiciliari-a-buenos-aires_7c3d4755-c715-4de4-9077-d5c8575229da.html"
   },
   {
    "data": "2026-11-10T20:55:00+00:00",
@@ -77,12 +143,6 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/unifil-nostra-pattuglia-bersagliata-da-colpi-nessun-soldato-ferito_6fb8dca0-f873-4c54-b6b7-e69fe8cc38de.html"
   },
   {
-   "data": "2026-11-10T20:20:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Change Bloc trova i numeri con gli arabi alla Knesset, ma è rebus governo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/media-abbas-verso-riconoscimento-di-hamas-come-gruppo-terroristico_9fa547ca-d8a3-4c82-b3d9-db39b7a90e19.html"
-  },
-  {
    "data": "2026-11-10T20:16:36+00:00",
    "fonte": "ANSA",
    "titolo": "'Nessuna corruzione né pressioni, archiviare Sala, Boeri e Catella'",
@@ -102,7 +162,7 @@
   },
   {
    "data": "2026-11-10T19:48:33+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Eternit, disposto nuovo processo di appello per Schmidheiny",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/eternit-disposto-nuovo-processo-di-appello-per-schmidheiny_9dfd62e0-995f-4129-9cf1-3a6a6a33ce01.html"
   },
@@ -129,66 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Dl Bollette, risparmi annui da 7 a 23 euro. Meloni: 'Per le imprese 520mila'",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/pichetto-dal-decreto-bollette-una-riduzione-del-4-5-del-prezzo-finale_b82bd521-c9c0-4149-a7d3-f8659452c9d7.html"
-  },
-  {
-   "data": "2026-11-10T19:19:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dele Alli dà fuoco alla maglia dell’Arsenal in diretta, tifosi infuriati",
-   "url": "https://www.adnkronos.com/sport/dele-alli-maglia-arsenal-brucia-tottenham_39nhmuMb2SHvORiDhxHQES"
-  },
-  {
-   "data": "2026-11-10T19:10:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Assalto a un portavalori con esplosivo, kalashnikov e ostaggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/assalto-a-un-portavalori-con-esplosivo-kalashnikov-e-ostaggi_97692916-e925-4405-b345-21f8b9be1ba2.html"
-  },
-  {
-   "data": "2026-11-10T19:06:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Hegseth in trincea, 'sabotaggio, contro di me una farsa politica'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/10/hegseth-terra-oggi-una-conferenza-stampa-dopo-la-richiesta-di-impeachment_2979584a-b939-48f3-bb33-2ca237fbebf5.html"
-  },
-  {
-   "data": "2026-11-10T19:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Automobilista falciato in autostrada sulla A29 Palermo-Mazara del Vallo",
-   "url": "https://www.adnkronos.com/cronaca/incidente-autostrada-palermo-mazara-del-vallo_6RC4DaYCBYJONq5uTGqOBJ"
-  },
-  {
-   "data": "2026-11-10T18:59:35+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Libero su cauzione il 15enne italiano da quasi sei mesi in cella a Malta",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/libero-su-cauzione-il-15enne-italiano-da-quasi-sei-mesi-in-cella-a-malta_a3e01cb3-adca-4aed-aa6b-3509d87456a8.html"
-  },
-  {
-   "data": "2026-11-10T18:56:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Intesa-Mps, tutte le novità del documento di offerta: dalla soglia del 50% alla partita Mediobanca, ecco il piano per Siena",
-   "url": "https://www.adnkronos.com/economia/operazione-intesa-mps_7N1HZm6ViNcSHOksQHhEDx"
-  },
-  {
-   "data": "2026-11-10T18:53:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella difende l'indipendenza delle toghe, 'gli altri poteri non devono condizionarli'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/mattarella-toghe-non-devono-avere-soggezione-di-tipo-gerarchico_e1de678a-708c-4d26-b7a5-f23e92faf14a.html"
-  },
-  {
-   "data": "2026-11-10T18:49:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Regole certe, Milano prova a guardare avanti sull'urbanistica",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/regole-certe-milano-prova-a-guardare-avanti-sullurbanistica_555bb540-1b5e-4444-b8a9-bac4ab906a56.html"
-  },
-  {
-   "data": "2026-11-10T18:46:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "San Benedetto licenzia 120 dipendenti su mille nella casa madre veneziana",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/san-benedetto-licenzia-120-dipendenti-su-mille-nella-casa-madre-veneziana_df513fbd-76f4-431a-8ebe-804081a91055.html"
-  },
-  {
-   "data": "2026-11-10T18:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Eternit bis, Cassazione dispone un nuovo appello per Schmidheiny",
-   "url": "https://www.adnkronos.com/cronaca/processo-eternit-bis-cassazione-imprenditore-svizzero_1VZbPQNyB2iktnGJEyW74Y"
   }
  ]
 }
