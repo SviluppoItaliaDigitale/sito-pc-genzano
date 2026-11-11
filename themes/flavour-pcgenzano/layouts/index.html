@@ -182,8 +182,9 @@
 {{- /* Logica homepage estratta in moduli il 15/07/2026 (audit esterno:
      il template superava 500 righe con JS inline e parser CSV naïf).
      - home-contatori.js: contatori animati del hero
-     - home-allerta.js: barre allerta DPC (CSV robusto RFC 4180) +
-       guard scadenza barra incendi */}}
+     - home-allerta.js: barre allerta (stato del sito da
+       /allerta-stato/index.json, giorni delle strisce) + guard scadenza
+       barra incendi */}}
 <script src="{{ "js/home-contatori.js" | relURL }}" defer></script>
 <script src="{{ "js/home-allerta.js" | relURL }}" defer></script>
 {{ end }}

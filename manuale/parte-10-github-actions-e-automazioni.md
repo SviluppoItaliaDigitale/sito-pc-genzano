@@ -80,11 +80,11 @@ Esecuzione manuale via Actions tab GitHub sempre disponibile.
 A ogni run il workflow esegue in sequenza tre script Python, ognuno responsabile di un dominio specifico:
 
 1. **`scripts/check-allerta.py` — criticità idrogeologica/idraulica**
-   - Scarica entrambi i CSV opendatasicilia `bollettino-oggi-comuni-latest.csv` e `bollettino-domani-comuni-latest.csv`
+   - Dall'11/11/2026 legge il bollettino nazionale dal **repository ufficiale del Dipartimento** (carte `topojson/<timbro>_today.json` e `_tomorrow.json`, zona che contiene Genzano): il bollettino più recente lo trova la ricerca di `genera-dpc-bollettino.py`, più il timbro dello snapshot del repository. I CSV opendatasicilia `bollettino-oggi-comuni-latest.csv` e `bollettino-domani-comuni-latest.csv` sono la riserva, letti solo se la fonte ufficiale non dà un bollettino valido adesso (quel giorno il mirror era fermo all'8/11). Dettagli in parte 09 § 9.3
    - Filtra per validità temporale `data_validita_inizio ≤ now ≤ data_validita_fine` (timezone `Europe/Rome` dinamica, CET/CEST automatico)
    - Calcola MAX livello tra i bollettini validi (avviso_criticita, avviso_idrogeologico, avviso_temporali, avviso_idraulico)
-   - Estrae il blocco `domani` separato come pre-allerta SE il bollettino-domani CSV punta a una data strettamente futura
-   - **Bollettino PDF della Regione Lazio a ogni giro** (dall'08/10/2026, prima solo se entrambi i CSV non rispondevano): scarica `criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf` del giorno corrente (o di ieri se manca), parsa con `pdftotext -layout`, estrae Zona F (Genzano) e, per ogni giorno, tiene il livello più alto fra PDF e CSV
+   - Estrae il blocco `domani` separato come pre-allerta SE una riga (Dipartimento, mirror o Regione) riguarda un giorno strettamente futuro
+   - **Bollettino PDF della Regione Lazio a ogni giro** (dall'08/10/2026, prima solo se entrambi i CSV non rispondevano): scarica `criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf` del giorno corrente (o di ieri se manca), parsa con `pdftotext -layout`, estrae Zona F (Genzano) e, per ogni giorno, tiene il bollettino più recente e, a parità, il livello più alto fra PDF e Dipartimento
    - Aggiorna i campi `livello`, `titolo`, `descrizione`, `ultimo_aggiornamento`, `ultimo_controllo`, `domani` di `data/allerta.json`
 
 2. **`scripts/check-avvisi-meteo.py` — avvisi meteo avversi (vento, neve, calore, gelate, mareggiate)**
