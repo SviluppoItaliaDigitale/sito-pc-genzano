@@ -65,14 +65,33 @@ jobs:
             echo "→ C'è già un deploy attivo (in corso/in coda): skip per non accavallare."
             exit 0
           fi
-          # headSha dell'ultimo run di deploy.yml (qualsiasi stato): se coincide
-          # con HEAD, un deploy per questo commit è già partito/concluso → skip.
-          LAST_SHA="$(gh run list --workflow=deploy.yml --limit=1 --json headSha -q '.[0].headSha' 2>/dev/null || echo "")"
+          # headSha e conclusione dell'ultimo run di deploy.yml. Se è di un commit
+          # diverso da HEAD, c'è qualcosa da pubblicare. Se è di HEAD ed è fallito,
+          # si riprova (dall'11/11/2026: un deploy fallito per un guasto esterno,
+          # per esempio i server di Ubuntu irraggiungibili, restava fallito finché
+          # non arrivava un commit nuovo), al massimo MAX_TENTATIVI volte per lo
+          # stesso commit, perché una build rotta non riparta ogni mezz'ora.
+          MAX_TENTATIVI=6
+          ULTIMO="$(gh run list --workflow=deploy.yml --limit=1 --json headSha,conclusion -q '.[0] | "\(.headSha) \(.conclusion)"' 2>/dev/null || echo "")"
+          LAST_SHA="${ULTIMO%% *}"
+          LAST_ESITO="${ULTIMO#* }"
           echo "HEAD main      = $HEAD_SHA"
-          echo "ultimo deploy  = ${LAST_SHA:-<nessuno>}"
+          echo "ultimo deploy  = ${LAST_SHA:-<nessuno>} (${LAST_ESITO:-?})"
           if [ -z "$LAST_SHA" ] || [ "$LAST_SHA" != "$HEAD_SHA" ]; then
             echo "→ Ci sono commit non ancora deployati: lancio un deploy (priorità background)."
             gh workflow run deploy.yml --ref main -f priority=background
+          elif [ "$LAST_ESITO" = "failure" ] || [ "$LAST_ESITO" = "timed_out" ]; then
+            # Un deploy riuscito dello stesso commit basta: un doppione fallito dopo non si ritenta.
+            RIUSCITI="$(gh run list --workflow=deploy.yml --limit=40 --json headSha,conclusion -q "[.[] | select(.headSha==\"$HEAD_SHA\" and .conclusion==\"success\")] | length" 2>/dev/null || echo 0)"
+            FALLITI="$(gh run list --workflow=deploy.yml --limit=40 --json headSha,conclusion -q "[.[] | select(.headSha==\"$HEAD_SHA\" and (.conclusion==\"failure\" or .conclusion==\"timed_out\"))] | length" 2>/dev/null || echo 0)"
+            if [ "${RIUSCITI:-0}" -gt 0 ]; then
+              echo "→ Questo commit è già stato pubblicato da un deploy riuscito: niente altri tentativi."
+            elif [ "${FALLITI:-0}" -lt "$MAX_TENTATIVI" ]; then
+              echo "→ L'ultimo deploy di questo commit è fallito ($FALLITI tentativi falliti): riprovo (priorità background)."
+              gh workflow run deploy.yml --ref main -f priority=background
+            else
+              echo "::warning::Il deploy di $HEAD_SHA è fallito $FALLITI volte: niente altri tentativi automatici. Serve una correzione, il guasto lo segnala il watchdog."
+            fi
           else
             echo "→ Nessun commit nuovo da deployare. Skip (niente deploy ridondante)."
           fi
