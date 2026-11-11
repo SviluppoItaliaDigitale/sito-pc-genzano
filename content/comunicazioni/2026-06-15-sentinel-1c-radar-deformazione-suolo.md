@@ -69,4 +69,4 @@ C'è un ultimo motivo per cui questa notizia conta: i dati di Copernicus sono **
 **Fonti istituzionali:**
 
 - [Programma Copernicus](https://www.copernicus.eu/) — Unione Europea ed ESA.
-- [ESA — missione Sentinel-1](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1) — dati tecnici della missione.
+- [ESA — missione Sentinel-1](https://www.esa.int/missions/about-us/directorates/earth-observation-programmes/copernicus/sentinel-1) — dati tecnici della missione.

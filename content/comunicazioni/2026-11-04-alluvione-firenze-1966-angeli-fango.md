@@ -53,7 +53,6 @@ Se vuoi continuare quella tradizione, scopri come [diventare volontario](/divent
 
 ## Per saperne di più
 
-- [4 novembre 1966 — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/notizia/4-novembre-1966-l-alluvione-di-firenze)
 - [L'alluvione di Firenze — Servizio nazionale della Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/en/pagina-base/flood-florence/)
 - [Memoria dell'alluvione — Comune di Firenze](https://www.comune.fi.it/)
 - Voce Wikipedia: [Alluvione di Firenze del 1966](https://it.wikipedia.org/wiki/Alluvione_di_Firenze_del_4_novembre_1966)

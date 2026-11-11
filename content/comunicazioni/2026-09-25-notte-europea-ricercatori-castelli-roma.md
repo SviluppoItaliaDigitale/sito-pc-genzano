@@ -66,7 +66,6 @@ Sempre a Roma, dalle 18, l'**INMI Spallanzani** e l'**Ospedale pediatrico Bambin
 - [Frascati Scienza — la Notte europea 2026](https://www.frascatiscienza.it/notte-europea-dei-ricercatori-e-delle-ricercatrici-2026/)
 - [CNR — mappa degli eventi in Italia](https://www.cnr.it/it/notte-europea-ricercatrici-ricercatori-2026)
 - [INGV — appuntamenti regione per regione](https://www.ingv.it/stampa-urp/ufficio-stampa/comunicati-stampa/notte-europea-dei-ricercatori-2026-gli-appuntamenti-dell-ingv-per-conoscere-il-nostro-pianeta)
-- [Città metropolitana di Roma Capitale — scheda dell'evento](https://www.cittametropolitanaroma.it/events/event/frascati-settimana-della-scienza-e-notte-europea-dei-ricercatori/)
 
 ## Per approfondire sul nostro sito
 
