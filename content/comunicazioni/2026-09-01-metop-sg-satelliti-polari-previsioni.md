@@ -109,4 +109,4 @@ Il bollettino migliora, ma serve leggerlo.
 - [EUMETSAT — MetOp Second Generation](https://www.eumetsat.int/metop-sg)
 - [EUMETSAT — Il Microwave Sounder entra in servizio operativo](https://www.eumetsat.int/metop-sga1s-microwave-sounder-enters-operational-service)
 - [EUMETSAT — Il primo strumento di MetOp-SGA1 diventa operativo](https://www.eumetsat.int/metop-sga1s-first-instrument-becomes-operational)
-- [ESA — MetOp Second Generation](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/MetOp_Second_Generation)
+- [ESA — MetOp Second Generation](https://www.esa.int/missions/about-us/directorates/earth-observation-programmes/meteorological-missions/metop-second-generation)

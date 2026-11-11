@@ -63,7 +63,7 @@ Prima di entrare in servizio, Sentinel-3C deve completare il collaudo: secondo l
 
 **Fonti istituzionali:**
 
-- [ESA — Sentinel-3C returns its first views of Earth](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-3/Sentinel-3C_returns_its_first_views_of_Earth)
+- [ESA — Sentinel-3C returns its first views of Earth](https://www.esa.int/missions/about-us/directorates/earth-observation-programmes/copernicus/sentinel-3/Sentinel-3C_returns_its_first_views_of_Earth)
 - [Commissione europea, EU Space — Copernicus Sentinel-3C satellite delivers its first views of Earth](https://eu-space.europa.eu/news/copernicus-sentinel-3c-satellite-delivers-its-first-views-earth)
 
 **Le cronache:**
