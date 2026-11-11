@@ -125,10 +125,13 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER_DIR: /www.protezionecivilegenzano.it/
-          # Nome per cui è emesso il certificato dell'FTP di Aruba (variabile
-          # del repository, non segreta): se c'è, il certificato si verifica
-          # su quel nome; il log del caricamento stampa i nomi da fissare.
-          FTP_TLS_NOME: ${{ vars.FTP_TLS_NOME }}
+          # Nome per cui è emesso il certificato dell'FTP di Aruba, letto dal
+          # log del primo caricamento (11/11/2026): il certificato si verifica
+          # su quel nome. Se Aruba lo cambia, il collegamento non parte, lo
+          # script esce con 3 senza toccare nulla e il ripiego carica; il log
+          # stampa il nome nuovo. Una variabile del repository FTP_TLS_NOME
+          # prende il posto di questo valore.
+          FTP_TLS_NOME: ${{ vars.FTP_TLS_NOME || 'ftplnx02.aruba.it' }}
         run: |
           set -uo pipefail
           ARGS=()
