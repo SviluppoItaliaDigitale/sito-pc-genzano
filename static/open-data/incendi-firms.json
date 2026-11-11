@@ -1,6 +1,6 @@
 {
  "_snapshot": {
-  "generato": "2026-11-11T01:57:19+00:00",
+  "generato": "2026-11-11T08:58:42+00:00",
   "fonte": "NASA FIRMS — VIIRS (Suomi-NPP, NOAA-20 e NOAA-21), dati near real-time",
   "fonte_url": "https://firms.modaps.eosdis.nasa.gov/",
   "sensori": [
@@ -9,8 +9,394 @@
    "VIIRS_NOAA21_NRT"
   ],
   "finestra_ore": 24,
-  "punti": 0,
+  "punti": 35,
   "avvertenza": "Un punto caldo non è un incendio confermato: è un'anomalia termica vista dal satellite, che può essere anche una fiaccola industriale, una bruciatura agricola o un falso positivo. La segnalazione al 112 vale su ciò che si vede a terra, non su questa mappa."
  },
- "punti": []
+ "punti": [
+  {
+   "lat": 36.0849,
+   "lon": 6.8037,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.52,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.7604,
+   "lon": 7.3092,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.18,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8647,
+   "lon": 6.9787,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 8.87,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8702,
+   "lon": 6.9847,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 7.59,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8705,
+   "lon": 6.9792,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "h",
+   "potenza_radiativa_mw": 8.87,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.878,
+   "lon": 6.9438,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.51,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8831,
+   "lon": 6.9593,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.74,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 37.1199,
+   "lon": 15.2192,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.77,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 37.4371,
+   "lon": 15.0303,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.68,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 38.2043,
+   "lon": 15.2682,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.92,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 38.792,
+   "lon": 15.2094,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.89,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 38.7958,
+   "lon": 15.2096,
+   "data": "2026-11-11",
+   "ora_utc": "32",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.89,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.7627,
+   "lon": 7.3097,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 0.78,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8668,
+   "lon": 6.9859,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "h",
+   "potenza_radiativa_mw": 6.33,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8677,
+   "lon": 6.9875,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 5.94,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.868,
+   "lon": 6.9817,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 6.33,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8688,
+   "lon": 6.9833,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 5.94,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8765,
+   "lon": 6.9508,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.76,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8783,
+   "lon": 6.9479,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.43,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8794,
+   "lon": 6.962,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.26,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.88,
+   "lon": 6.9636,
+   "data": "2026-11-11",
+   "ora_utc": "213",
+   "sensore": "VIIRS",
+   "satellite": "N21",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.86,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.6781,
+   "lon": 9.9182,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 0.75,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.7152,
+   "lon": 10.2259,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 0.53,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.7171,
+   "lon": 10.224,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 0.5,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.7637,
+   "lon": 7.3074,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 0.81,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8674,
+   "lon": 6.9778,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.65,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.87,
+   "lon": 6.9828,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 10.79,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8792,
+   "lon": 6.9452,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.0,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8838,
+   "lon": 6.9596,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.11,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 37.1223,
+   "lon": 15.2168,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.03,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 37.4385,
+   "lon": 15.0276,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.03,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 39.0816,
+   "lon": 9.0163,
+   "data": "2026-11-11",
+   "ora_utc": "130",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 1.06,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 38.7944,
+   "lon": 15.2124,
+   "data": "2026-11-11",
+   "ora_utc": "128",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 2.86,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 38.7956,
+   "lon": 15.211,
+   "data": "2026-11-11",
+   "ora_utc": "128",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 3.81,
+   "giorno_notte": "N"
+  },
+  {
+   "lat": 41.3732,
+   "lon": 15.8689,
+   "data": "2026-11-11",
+   "ora_utc": "128",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 0.58,
+   "giorno_notte": "N"
+  }
+ ]
 }

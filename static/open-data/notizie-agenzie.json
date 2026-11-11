@@ -5,76 +5,154 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-11T01:57:01+00:00",
+  "generato": "2026-11-11T08:58:27+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-11T00:50:23+00:00",
+   "data": "2026-11-11T08:47:51+00:00",
    "fonte": "ANSA",
-   "titolo": "Il Papa ai giovani, 'non vi inginocchiate davanti agli idoli'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/11/il-papa-ai-giovani-non-vi-inginocchiate-davanti-agli-idoli_9c87d5f1-bff8-47a1-ba0a-c427b3968c5a.html"
+   "titolo": "Tajani: 'Fi non vuole vessare le banche, la nostra posizione è diversa dalla Lega'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/tajani-fi-non-vuole-vessare-le-banche-la-nostra-posizione-e-diversa-dalla-lega_02f7edf5-bea9-4d3f-ab18-7b8f3facd2b5.html"
   },
   {
-   "data": "2026-11-10T23:42:16+00:00",
+   "data": "2026-11-11T08:44:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mosca punge: 'Gli europei stabiliscano con la morra cinese chi deve parlare con Mosca'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/mosca-punge-gli-europei-stabiliscano-con-la-morra-cinese-chi-deve_74686c15-cdda-47c8-a22d-a0bbb8279708.html"
+  },
+  {
+   "data": "2026-11-11T08:39:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, il retroscena: \"Lite furibonda Trump-Netanyahu sulla possibilità di riprendere la guerra\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-iran-usa-israele-news-oggi-11-novembre_2ixavWwRmrcdtbAhipLH1c"
+  },
+  {
+   "data": "2026-11-11T08:35:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Davide Iacopini, a un mese dall'aggressione: \"Di quella sera non ricordo nulla\"",
+   "url": "https://www.adnkronos.com/cronaca/davide-iacopini-come-sta-banda-minicar-riabilitazione_6GgBLbsjIYlGpWn5NjpVPd"
+  },
+  {
+   "data": "2026-11-11T08:25:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Crosetto: \"Serve un centro nazionale ed europeo contro la guerra ibrida\"",
+   "url": "https://www.adnkronos.com/economia/crosetto-serve-un-centro-nazionale-ed-europeo-contro-la-guerra-ibrida_5LOGqg0G6KOTMLjlHdrWIC"
+  },
+  {
+   "data": "2026-11-11T08:24:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Strazzullo (Tim), 'sovranità digitale per proteggere i dati europei, serve reciprocità con i player globali'",
+   "url": "https://www.adnkronos.com/economia/strazzullo-tim-sovranita-digitale-per-proteggere-i-dati-europei-serve-reciprocita-con-i-player-globali_5nkyqYVzzx2CWiNrcDMnjR"
+  },
+  {
+   "data": "2026-11-11T08:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cyberattacchi, Tajani: \"Minacce provengono da est, non abbiamo prove del coinvolgimento dell'Iran\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/cyberattacchi-ucraina-tajani-intervista-mattino-cinque_3B9UqQNBF6HB7ZB7aZWMX4"
+  },
+  {
+   "data": "2026-11-11T08:16:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Appalti Asl Bari, arrestati due dipendenti e un imprenditore per corruzione e subappalto illecito",
+   "url": "https://www.adnkronos.com/cronaca/appalti-asl-bari-arresti-corruzione_2vkoo54GpFeAvDeenlLaE3"
+  },
+  {
+   "data": "2026-11-11T08:14:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Nessuna corruzione né pressioni, archiviare Sala, Boeri e Catella'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/nessuna-corruzione-ne-pressioni-archiviare-sala-boeri-e-catella_88fa0456-761c-47e9-b672-004558a268c2.html"
+  },
+  {
+   "data": "2026-11-11T08:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lavoro, Tajani: \"Formazione, innovazione e ricerca sono le chiavi per crescere\"",
+   "url": "https://www.adnkronos.com/economia/lavoro-tajani-formazione-innovazione-e-ricerca-sono-le-chiavi-per-crescere_7gHWXQ5VC7hahvYh2Mze79"
+  },
+  {
+   "data": "2026-11-11T08:13:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Errani e Paolini vincono ancora, sono in semifinale alle Wta Finals",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/11/errani-e-paolini-vincono-ancora-e-semifinale-alle-wta-finals_d54ed35e-96e1-46f4-940e-c511e7a1f3a4.html"
+  },
+  {
+   "data": "2026-11-11T07:55:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Incursioni di droni in Lituania, scatta l'allarme: decollano i jet della Nato",
+   "url": "https://www.adnkronos.com/internazionale/esteri/droni-lituania-nato_2eDVtdl3COzxYZ0GdcUwb4"
+  },
+  {
+   "data": "2026-11-11T07:47:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sanità, Foti: \"Raggiunti gli obiettivi Pnnr e poste le basi per migliorare i servizi\"",
+   "url": "https://www.adnkronos.com/economia/sanita-foti-raggiunti-gli-obiettivi-pnnr-e-poste-le-basi-per-migliorare-i-servizi_64I5ef6YTOyloAcElF0zaC"
+  },
+  {
+   "data": "2026-11-11T07:47:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lewis Hamilton in visita al valico di Rafah",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/10/f1-hamilton-in-visita-al-confine-egiziano-con-gaza_b3b08256-9950-4735-9644-bb0c4c3c9a06.html"
+  },
+  {
+   "data": "2026-11-11T07:46:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Piogge intense sull'Italia, arriva la lunga fase instabile: le previsioni meteo",
+   "url": "https://www.adnkronos.com/cronaca/meteo-previsioni-maltempo-oggi-11-novembre_2EzVxdVLqEWwEbGHMM4Wbx"
+  },
+  {
+   "data": "2026-11-11T07:29:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "A Milano 14 giovani in arresto, sono accusati di rapine sui mezzi pubblici",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/a-milano-14-giovani-in-arresto-sono-accusati-di-rapine-sui-mezzi-pubblici_7c8d19af-cd7e-441f-8e03-654987501e10.html"
+  },
+  {
+   "data": "2026-11-11T07:16:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Milano 14 giovani in arresto, sono accusati di rapine sui mezzi pubblici",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/a-milano-14-giovani-in-arresto-sono-accusati-di-rapine-sui-mezzi-pubblici_72f20f20-1f8b-4aac-ae20-6274af47b203.html"
+  },
+  {
+   "data": "2026-11-11T06:55:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto in Sicilia, sciame sismico al largo delle coste: scossa più alta di magnitudo 4.1",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-sicilia-sciame-sismico-news_38JqX9TC1dWq2ll8TMmQPV"
+  },
+  {
+   "data": "2026-11-11T06:51:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Scontro sulle banche. Verso un nuovo vertice di maggioranza",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/11/prime-pagine-scontro-sulle-banche.-verso-un-nuovo-vertice-di-maggioranza_1829e03b-abfc-4850-a452-4ee26aee33bc.html"
+  },
+  {
+   "data": "2026-11-11T06:35:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, droni di Kiev attaccano sul Mar Baltico: incendio nel porto di Ust-Luga in Russia",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-11-novembre_1JQY8TnrW9UrhBjdwVQXuK"
+  },
+  {
+   "data": "2026-11-11T06:16:30+00:00",
    "fonte": "ANSA",
    "titolo": "La Camera Usa boccia la procedura di impeachment per Hegseth",
    "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/11/la-camera-usa-boccia-la-procedura-di-impeachment-per-hegseth_2979584a-b939-48f3-bb33-2ca237fbebf5.html"
   },
   {
-   "data": "2026-11-10T23:36:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Zelensky: \"Putin non si fermerà se lasciamo il Donbass\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/zelensky-putin-incontro-donbass-guerra_7ngvDwAaiADljBPiCqVVVh"
+   "data": "2026-11-11T06:07:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Favoritismi a Bolsonaro alle elezioni', il Brasile multa Meta",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/favoritismi-a-bolsonaro-alle-elezioni-il-brasile-multa-meta_86ed2e39-f285-44fe-976d-5a5718361523.html"
   },
   {
-   "data": "2026-11-10T23:36:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tajani al G7: \"Avanti con gli aiuti a Kiev, le minacce hacker non mi intimidiscono\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/antonio-tajani-minacce-hacker-cybersicurezza-g7_60EacoRlcKW4X9KUuzEqhB"
-  },
-  {
-   "data": "2026-11-10T23:31:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Governo alle prese con il pacchetto aiuti all'Ucraina, Meloni: \"Giorgetti firmerà, linea non cambia\"",
-   "url": "https://www.adnkronos.com/politica/ucraina-aiuti-italia-meloni-centrodestra_6ZVbG1Mf21FuA0v0C3RQF8"
-  },
-  {
-   "data": "2026-11-10T23:19:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Centrodestra, Forza Italia perde i pezzi al Senato: lasciano Silvestro e De Rosa. Patriarca e Bicchielli tentati dall'addio",
-   "url": "https://www.adnkronos.com/politica/forza-italia-silvestro-de-rosa_6Swo3MbGP40ct9qXdVoHWP"
-  },
-  {
-   "data": "2026-11-10T23:11:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sesso, l'allarme degli andrologi: \"Due uomini su tre credono a fake news\". Dall'erezione ai testicoli, la top ten delle bufale",
-   "url": "https://www.adnkronos.com/salute/medicina/sesso-fake-news-top-ten-andrologi_4RuxyVTx4snHQcoTuggT6b"
+   "data": "2026-11-11T00:54:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa ai giovani, 'non vi inginocchiate davanti agli idoli'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/11/il-papa-ai-giovani-non-vi-inginocchiate-davanti-agli-idoli_9c87d5f1-bff8-47a1-ba0a-c427b3968c5a.html"
   },
   {
    "data": "2026-11-10T23:09:44+00:00",
    "fonte": "ANSA",
    "titolo": "Tensione sulle armi all'Ucraina, la Lega avvisa gli alleati",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/tensione-sulle-armi-allucraina-la-lega-avvisa-gli-alleati_83808254-a528-4178-aee1-ade2f46fc15d.html"
-  },
-  {
-   "data": "2026-11-10T23:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Zelensky: \"Pronti a scambiare fino a 1.500 prigionieri\". Nuovo round di colloqui ad Abu Dhabi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-abu-dhabi-zelensky_33WtgXG7r691KHGfVjlRW6"
-  },
-  {
-   "data": "2026-11-10T22:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Terrorismo, ex Br Bertulazzi evade dai domiciliari a Buenos Aires: è caccia all'uomo",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ex-br-leonardo-bertulazzi-evade-dai-domiciliari_1rN4JR49ZUw28SUTVmYdjw"
-  },
-  {
-   "data": "2026-11-10T22:18:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Change Bloc trova i numeri con gli arabi alla Knesset, ma è rebus governo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/media-abbas-verso-riconoscimento-di-hamas-come-gruppo-terroristico_9fa547ca-d8a3-4c82-b3d9-db39b7a90e19.html"
   },
   {
    "data": "2026-11-10T22:17:58+00:00",
@@ -89,24 +167,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/il-trapper-baby-gang-non-va-in-udienza-pestato-in-carcere_cfb6958b-b204-460d-9239-bc8794c5087d.html"
   },
   {
-   "data": "2026-11-10T21:49:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Mio figlio malato di cuore, il dobermann ci ha aiutato a salvarlo\", la storia di Saraya",
-   "url": "https://www.adnkronos.com/internazionale/esteri/bambino-5-mesi-problemi-cuore-doberman_ECar0fiJiirlI8iunajN"
-  },
-  {
-   "data": "2026-11-10T21:47:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vannacci: \"Gli italiani non arrivano a fine mese, no a dar da mangiare cannoni\"",
-   "url": "https://www.adnkronos.com/politica/roberto-vannacci-ospite-filorosso-raitre_79HI4gRCtgPljtoSSmFUXc"
-  },
-  {
-   "data": "2026-11-10T21:24:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, numeri combinazione vincente di oggi 10 novembre",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-10-novembre-numeri-vincenti_2Lpi3L99XHeAKoxjyM5YSO"
-  },
-  {
    "data": "2026-11-10T21:21:41+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "'Dopo 35 anni indagini difficili', nessun colpevole per la Moby Prince",
@@ -119,76 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/agenzia-ue-attacchi-hacker-potrebbero-colpire-anche-elettrodomestici_28703d89-c3b2-4c05-8315-d0e77f5339ba.html"
   },
   {
-   "data": "2026-11-10T20:55:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Libano, spari contro pattuglia finlandese Unifil: aperta inchiesta",
-   "url": "https://www.adnkronos.com/internazionale/esteri/spari-militari-unifil-libano-oggi_3NdIvgo2RumqCj8sfkIizu"
-  },
-  {
-   "data": "2026-11-10T20:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Israele, scontro Eisenkot-Netanyahu: \"Sue parole piene d'odio\". Annullato l'incontro con il Likud",
-   "url": "https://www.adnkronos.com/internazionale/esteri/israele-scontro-eisenkot-netanyahu_6bKDvXaWixhwmLvTXw7zoa"
-  },
-  {
-   "data": "2026-11-10T20:30:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Militare americano arrestato in Gran Bretagna, è sospettato di aver spiato per Mosca",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/militare-americano-arrestato-in-gb-e-sospettato-di-aver-spiato-per-mosca_bb4138a7-69b3-44df-a606-50354b6bc6b5.html"
-  },
-  {
    "data": "2026-11-10T20:24:17+00:00",
    "fonte": "ANSA",
    "titolo": "Unifil: 'Una nostra pattuglia bersagliata da colpi, nessun soldato è stato ferito'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/unifil-nostra-pattuglia-bersagliata-da-colpi-nessun-soldato-ferito_6fb8dca0-f873-4c54-b6b7-e69fe8cc38de.html"
   },
   {
-   "data": "2026-11-10T20:16:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Nessuna corruzione né pressioni, archiviare Sala, Boeri e Catella'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/nessuna-corruzione-ne-pressioni-archiviare-sala-boeri-e-catella_88fa0456-761c-47e9-b672-004558a268c2.html"
-  },
-  {
-   "data": "2026-11-10T20:08:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra: alta tensione sulle banche. Verso un nuovo vertice di maggioranza",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/manovra-labi-sulle-banche-dal-2025-misure-fiscali-per-22-miliardi_c2e7ae7d-cb17-4bcb-80d1-2c3b67244d5f.html"
-  },
-  {
-   "data": "2026-11-10T20:05:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Leone sui passi di Francesco, 'state con la gente e fate chiasso'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/10/il-papa-in-argentina-oggi-la-messa-a-cordoba_c68c68e5-14cc-4f99-bcae-d9c8393c68bb.html"
-  },
-  {
    "data": "2026-11-10T19:48:33+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Eternit, disposto nuovo processo di appello per Schmidheiny",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/eternit-disposto-nuovo-processo-di-appello-per-schmidheiny_9dfd62e0-995f-4129-9cf1-3a6a6a33ce01.html"
-  },
-  {
-   "data": "2026-11-10T19:47:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mr. Nvidia travolto, gli azionisti fanno causa. In campo l'Fbi",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/mr.-nvidia-travolto-gli-azionisti-fanno-causa.-in-campo-lfbi_d60500af-5cac-4db9-9c44-211ff3ba2ce7.html"
-  },
-  {
-   "data": "2026-11-10T19:37:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Pressing Usa ma Mosca chiude, 'niente tregua come vuole l'Ue'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/rubio-plaude-ai-colloqui-di-pace-ad-abu-dhabi-sullucraina-ma-la-strada-e-ancora-lunga_22e143a9-4f98-46fe-97f9-b037c9f33370.html"
-  },
-  {
-   "data": "2026-11-10T19:30:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'Italia come la Germania, rebus missili nel pacchetto per Kiev",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/litalia-come-la-germania-rebus-missili-nel-pacchetto-per-kiev_3aa014b2-89af-47bb-b705-cbdcf6f637df.html"
-  },
-  {
-   "data": "2026-11-10T19:20:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dl Bollette, risparmi annui da 7 a 23 euro. Meloni: 'Per le imprese 520mila'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/pichetto-dal-decreto-bollette-una-riduzione-del-4-5-del-prezzo-finale_b82bd521-c9c0-4149-a7d3-f8659452c9d7.html"
   }
  ]
 }
