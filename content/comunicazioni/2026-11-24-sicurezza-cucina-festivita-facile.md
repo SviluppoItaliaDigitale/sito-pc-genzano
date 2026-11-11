@@ -56,7 +56,7 @@ I bambini non devono stare vicino ai fornelli. Decidi una zona sicura per loro. 
 
 Spiega ai bambini cosa non devono toccare. Usa parole semplici e un tono calmo.
 
-Puoi fare fare ai bambini cose sicure. Per esempio: apparecchiare la tavola o mescolare ingredienti freddi.
+Puoi far fare ai bambini cose sicure. Per esempio: apparecchiare la tavola o mescolare ingredienti freddi.
 
 ## Se si accende un fuoco
 

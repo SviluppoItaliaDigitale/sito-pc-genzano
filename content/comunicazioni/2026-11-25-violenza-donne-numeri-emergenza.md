@@ -17,7 +17,7 @@ Il **25 novembre** è la **Giornata Internazionale per l'eliminazione della viol
 
 ## I numeri in Italia
 
-Secondo **ISTAT** e **Ministero degli Interni**:
+Secondo **ISTAT** e **Ministero dell'Interno**:
 
 - **oltre 100 femminicidi** in Italia ogni anno (stima 2024);
 - **una donna ogni 3 giorni** uccisa da un uomo;

@@ -46,7 +46,7 @@ La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — *
 ### Scivolamenti
 - **pavimento bagnato**;
 - **pavimento unto**;
-- **tappeti** sposati.
+- **tappeti** spostati.
 
 ## Prevenzione durante la preparazione
 
@@ -78,7 +78,7 @@ La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — *
 
 ## Bambini in cucina
 
-La cucina NON è un parco giochi. Se bambini sono presenti:
+La cucina NON è un parco giochi. Se i bambini sono presenti:
 
 - **zona sicura** definita (lontana da fornelli e piani caldi);
 - **rubinetto** di acqua fredda raggiungibile (per emergenze ustioni);
@@ -114,7 +114,7 @@ In una cucina "sicura" dovrebbero esserci:
 3. **attendere** che si estingua da solo;
 4. **se dura** più di 1-2 minuti: **chiamare 112**.
 
-### Vestiti presi fuoco
+### Vestiti che prendono fuoco
 1. **fermarsi** (non correre, alimenta le fiamme);
 2. **sdraiarsi** a terra;
 3. **rotolare** per soffocare le fiamme;
