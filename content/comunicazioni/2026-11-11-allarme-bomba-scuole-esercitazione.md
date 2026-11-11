@@ -10,7 +10,7 @@ image_alt: "Cover dell'articolo: Scuole evacuate per un allarme bomba: la stessa
 scadenza: ""
 area: "Genzano di Roma"
 allegati:
-  - titolo: "Ordinanza sindacale dell'11 novembre 2026: evacuazione delle scuole e sospensione delle attività (Comune di Genzano di Roma)"
+  - titolo: "Ordinanza sindacale n. 28 dell'11 novembre 2026: evacuazione delle scuole e sospensione delle attività (Comune di Genzano di Roma)"
     url: "/allegati/2026/ordinanza-sindacale-evacuazione-scuole-genzano-2026-11-11.pdf"
     dimensione: "0,2 MB"
 tts: true
@@ -24,9 +24,11 @@ social_punti:
 draft: false
 ---
 
-**Mercoledì 11 novembre 2026**, verso mezzogiorno, l'evacuazione è scattata anche nelle scuole di Genzano di Roma. All'origine c'è una **mail con minacce**, arrivata in mattinata a circa 300 scuole in tutta Italia secondo il Ministro dell'Istruzione e del Merito. Studenti e personale sono usciti dagli edifici per permettere i controlli delle forze dell'ordine. Al momento in cui scriviamo, i controlli sono in corso.
+**Mercoledì 11 novembre 2026**, verso mezzogiorno, l'evacuazione è scattata anche nelle scuole di Genzano di Roma. All'origine c'è una **mail con minacce**, arrivata in mattinata a circa 300 scuole in tutta Italia secondo il Ministro dell'Istruzione e del Merito. Studenti e personale sono usciti dagli edifici per permettere i controlli delle forze dell'ordine.
 
-Il Comune ha pubblicato l'[avviso sul proprio sito](https://www.comune.genzanodiroma.roma.it/novita/evacuazione-precauzionale-degli-edifici-scolastici-segnalazione-di-potenziale-rischio) e l'ordinanza del Sindaco dell'11 novembre 2026. Il provvedimento, adottato in via precauzionale dopo una segnalazione di possibile minaccia di ordigno, dispone tre cose:
+Secondo le cronache, nel primo pomeriggio le bonifiche già concluse in Italia avevano dato tutte esito negativo. Per il Governo, dalle verifiche non emerge alcun pericolo concreto. Alla stessa ora il Comune non aveva ancora comunicato l'esito dei controlli nelle scuole di Genzano. Ha annunciato aggiornamenti sui propri canali istituzionali. L'ordinanza vale solo per l'11 novembre: per i giorni successivi segui le comunicazioni della scuola e del Comune.
+
+Il Comune ha pubblicato l'[avviso sul proprio sito](https://www.comune.genzanodiroma.roma.it/novita/evacuazione-precauzionale-degli-edifici-scolastici-segnalazione-di-potenziale-rischio) e l'ordinanza del Sindaco n. 28 dell'11 novembre 2026. L'ordinanza è anche all'albo pretorio, con il numero di registro 1867/2026, fino al 26 novembre. Il provvedimento, adottato in via precauzionale dopo una segnalazione di possibile minaccia di ordigno, dispone tre cose:
 
 - l'evacuazione immediata di tutti i plessi scolastici del territorio comunale, dagli asili nido alle scuole secondarie di secondo grado, pubblici e paritari o privati;
 - la sospensione di ogni attività didattica, educativa ed extrascolastica per la giornata dell'11 novembre;
@@ -114,11 +116,11 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emerg
 
 - [Codice della protezione civile (D.Lgs. 1/2018), art. 2 — attività di protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art2)
 - [Comune di Genzano di Roma: avviso sull'evacuazione precauzionale delle scuole, 11 novembre 2026](https://www.comune.genzanodiroma.roma.it/novita/evacuazione-precauzionale-degli-edifici-scolastici-segnalazione-di-potenziale-rischio)
-- [Albo pretorio del Comune di Genzano di Roma — atti in pubblicazione](https://genzanodiroma.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/igrid/5986)
+- [Albo pretorio del Comune di Genzano di Roma: ordinanza n. 28/2026, in pubblicazione fino al 26 novembre](https://genzanodiroma.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/igrid/5986)
 
 **Le cronache**
 
-- [ANSA, 11 novembre 2026: allarme bomba in decine di scuole italiane partito da una mail anonima](https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allarme-bomba-in-decine-di-scuole-in-italia-partito-da-una-mail-anonima_870b0024-72d2-4b15-bab5-0c74dcc1d653.html)
+- [ANSA, 11 novembre 2026: evacuazioni e bonifiche, finora tutte con esito negativo](https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allarme-bomba-in-oltre-300-scuole-in-italia-evacuazioni-e-controlli.-grande-attenzione_870b0024-72d2-4b15-bab5-0c74dcc1d653.html)
 - [Il Fatto Quotidiano, 11 novembre 2026: circa 300 scuole coinvolte secondo il Ministro](https://www.ilfattoquotidiano.it/2026/11/11/allarme-bomba-scuole-mail-anonima-notizie/8567829/)
 - [Castelli Notizie, 11 novembre 2026: l'allarme nelle scuole dei Castelli Romani](https://www.castellinotizie.it/2026/11/11/allarme-bomba-nelle-scuole-dei-castelli-romani-evacuazioni-e-genitori-in-apprensione-nella-mail-minatoria-siamo-venuti-per-annientarvi/)
 - [La Capitale News, 11 novembre 2026: le evacuazioni a Roma e in provincia](https://www.lacapitalenews.it/cronaca/terrore-nelle-scuole-italiane-evacuati-gli-studenti/)
