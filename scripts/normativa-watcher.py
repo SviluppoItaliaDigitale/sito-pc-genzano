@@ -81,8 +81,10 @@ import argparse
 import html as htmllib
 import json
 import os
+import pathlib
 import re
 import shutil
+import ssl
 import subprocess
 import sys
 import time
@@ -259,7 +261,18 @@ class Cliente:
     def __init__(self):
         import http.cookiejar
         self.jar = http.cookiejar.CookieJar()
-        self.opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(self.jar))
+        # Il sito del Consiglio regionale del Lazio non invia il certificato
+        # intermedio (GlobalSign RSA OV SSL CA 2018): senza, la verifica fallisce
+        # con «unable to get local issuer certificate» (guasto dell'11/11/2026).
+        # L'intermedio ufficiale (AIA di GlobalSign, valido fino al 2028) sta in
+        # scripts/certificati/ e si aggiunge ai certificati di sistema: la
+        # verifica resta completa, nessun controllo viene disattivato.
+        ctx = ssl.create_default_context()
+        pem = pathlib.Path(__file__).parent / 'certificati' / 'globalsign-rsa-ov-ssl-ca-2018.pem'
+        if pem.exists():
+            ctx.load_verify_locations(cafile=str(pem))
+        self.opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(self.jar),
+                                                  urllib.request.HTTPSHandler(context=ctx))
 
     def get(self, url, referer=None):
         req = urllib.request.Request(url, headers={'User-Agent': UA, **({'Referer': referer} if referer else {})})
