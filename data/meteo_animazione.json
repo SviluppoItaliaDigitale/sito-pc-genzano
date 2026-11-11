@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-11-11T10:37",
+  "aggiornato": "2026-11-11T22:28",
   "frame": 12,
   "passo_ore": 6,
   "durata_s": 24,
   "fonte": "Open-Meteo",
-  "span_da": "2026-11-11T12:00",
-  "span_a": "2026-11-14T06:00"
+  "span_da": "2026-11-12T00:00",
+  "span_a": "2026-11-14T18:00"
 }
