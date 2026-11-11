@@ -24,27 +24,29 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 
 **Trigger**: push su `main`, esecuzione manuale.
 
-**Cosa fa:**
-1. Checkout del repository (fetch-depth 0 per ottenere la storia completa).
-2. Setup Hugo extended.
-3. Build principale con `hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"` (per Aruba).
-4. Deploy FTP su Aruba usando i secret `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`, poi verifica del sito pubblicato contro la build e nuovo caricamento dei soli file rimasti vecchi.
-5. Build secondario con `hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"` (per GitHub Pages).
-6. Alleggerimento della copia per GitHub Pages (dal 06/11/2026, stretto il 10/11/2026): `scripts/alleggerisci-copia-pages.py` toglie dalla sola copia video, audio e presentazioni, tutti gli ZIP, i PDF oltre 2 MB e i PNG/JPEG oltre 2 MB; se la copia supera ancora 500 MB toglie anche i PDF più pesanti rimasti. I collegamenti a quei file portano alle copie su Aruba. WebP, SVG e i documenti sotto i 2 MB restano. GitHub limita un sito Pages a 1 GB e la pubblicazione a 10 minuti (tetto di `actions/deploy-pages`, non alzabile), e la copia completa pesava circa 1,9 GB. Su Aruba non cambia nulla: il passo viene dopo il caricamento su Aruba e lo script si ferma se la cartella non è la build per GitHub Pages.
-7. Deploy su GitHub Pages tramite `actions/deploy-pages`.
+**Cosa fa** (dall'11/11/2026 tre job; richiesta di Alessandro: online in 1-2 minuti dall'unione, un solo percorso per tutti, Allerta ed Emergenza comprese):
 
-**Durata tipica**: 2–4 minuti.
+- **`aruba`**, in un'unica fila (`concurrency` del job, mai annullato: un caricamento iniziato arriva in fondo; GitHub tiene un solo giro in attesa, l'ultimo, che costruisce `main` con tutto dentro):
+  1. checkout con la storia completa ma senza i contenuti dei file vecchi (`filter: blob:none`), che bastano alle date di ultima modifica;
+  2. passi comuni nell'azione locale `.github/actions/prepara-build` (cover, QR, braille, pacchetti, snapshot, immagini meteo, build Hugo per Aruba, indice di ricerca);
+  3. manifesto della build e manifesto servito dal sito;
+  4. caricamento con `scripts/carica-aruba.py`: solo i file cambiati rispetto al file di stato del server e al manifesto servito, 4 collegamenti FTPS in parallelo, ogni file su un nome provvisorio e poi rinominato sul nome vero, riscaricato e confrontato con la build; ordine cartelle nuove → risorse (CSS, JS, immagini, ricerca) → pagine → indici (home, elenchi, feed, sitemap) → cancellazioni → manifesto e stato. Un lucchetto sul server impedisce due caricamenti insieme. Se un file non torna, il job è rosso, manifesto e stato del server restano quelli di prima e il giro dopo ricarica tutto ciò che è ancora diverso (più l'elenco dei file «in sospeso» lasciato dal giro interrotto). L'azione `SamKirkland/FTP-Deploy-Action` resta come ripiego solo se lo script non ha toccato nulla (per esempio un errore di collegamento): legge lo stesso file di stato;
+  5. verifica del sito servito (pagine critiche, ultimo articolo, 30 pagine a caso, 8 richieste alla volta) con nuovo caricamento dei file rimasti vecchi.
+- **`pages`**, su un'altra macchina e in parallelo: stessi passi comuni con l'indirizzo di GitHub Pages, poi l'alleggerimento della copia (dal 06/11/2026, stretto il 10/11/2026: `scripts/alleggerisci-copia-pages.py` toglie dalla sola copia video, audio e presentazioni, tutti gli ZIP, i PDF oltre 2 MB e i PNG/JPEG oltre 2 MB; oltre 500 MB anche i PDF più pesanti rimasti; GitHub limita un sito Pages a 1 GB e la pubblicazione a 10 minuti, tetto di `actions/deploy-pages`, non alzabile). Aruba da qui non si tocca mai.
+- **`deploy-pages`**: pubblicazione su GitHub Pages.
+
+**Durata tipica**: circa 4 minuti dall'avvio al sito online (stima, da misurare al primo deploy vero: circa 2 per la build, 1,5-2 per il caricamento di un articolo nuovo, meno di 1 per la verifica). Prima dell'11/11/2026: 13-18 minuti.
 
 **Fallimenti comuni:**
 - build Hugo rotto (frontmatter malformato, shortcode non definito, YAML data invalido): il commit va revertito o corretto subito;
-- FTP timeout: retry automatico, altrimenti richiede intervento;
+- caricamento non completo (passo «🛑 Caricamento non completo»): il riepilogo del run elenca i file; il deploy successivo li ricarica da solo, non serve altro;
 - secret scaduto: aggiornare nei Settings del repo.
 
 **Come usarlo manualmente**: Actions → "🚀 Build e Deploy" → Run workflow. Utile per ripubblicare dopo aver corretto un secret o dopo un rollback DNS.
 
 #### Cartelle protette (escluse dal deploy FTP)
 
-Il workflow usa `SamKirkland/FTP-Deploy-Action` con `dangerous-clean-slate: false` e una lista di **esclusioni esplicite**: i file presenti in queste cartelle sul server Aruba **non vengono toccati** dal deploy (né aggiunti, né aggiornati, né rimossi). Sono aree gestite **direttamente sul server** — tipicamente con contenuto storico, caricamenti manuali via FTP o materiali legacy.
+Il caricamento (`scripts/carica-aruba.py`, e l'azione `SamKirkland/FTP-Deploy-Action` quando fa da ripiego, con `dangerous-clean-slate: false`) ha una lista di **esclusioni esplicite**: i file presenti in queste cartelle sul server Aruba **non vengono toccati** dal deploy (né aggiunti, né aggiornati, né rimossi). Sono aree gestite **direttamente sul server** — tipicamente con contenuto storico, caricamenti manuali via FTP o materiali legacy.
 
 ```yaml
 exclude: |
