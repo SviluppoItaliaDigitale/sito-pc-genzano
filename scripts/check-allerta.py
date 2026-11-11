@@ -77,7 +77,7 @@ import shutil
 import subprocess
 import sys
 import urllib.request
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -138,6 +138,7 @@ HTTP_TIMEOUT = 30
 ROME_TZ = ZoneInfo("Europe/Rome")
 
 LEVEL_NAME = {0: "verde", 1: "gialla", 2: "arancione", 3: "rossa"}
+LIVELLO_INDICE = {nome: n for n, nome in LEVEL_NAME.items()}
 LEVEL_FROM_PDF = {"VERDE": 0, "GIALLO": 1, "GIALLA": 1, "ARANCIONE": 2, "ROSSO": 3, "ROSSA": 3}
 
 RISK_FIELDS = {
@@ -398,30 +399,37 @@ def riga_dpc(zona, giorno, pubblicazione, etichetta):
 
 
 def leggi_dpc_ufficiale(now):
-    """Righe "oggi"/"domani" per Genzano dal repository ufficiale del
-    Dipartimento. Le carte di giorni già passati non si scaricano. Ogni guasto
-    si annota: la riserva (il mirror) la decide main()."""
+    """(righe, dubbi) dal repository ufficiale del Dipartimento.
+
+    righe: "oggi"/"domani" per Genzano; le carte di giorni già passati non si
+    scaricano. dubbi: i giorni non passati che l'ultimo bollettino doveva
+    coprire (il giorno di emissione e il successivo) e che non si sono letti;
+    oggi e domani se il bollettino non si trova, non si legge o è fermo. Ogni
+    guasto si annota; riserva e prudenza le decide main()."""
+    oggi = now.date()
+    tutti = {oggi, oggi + timedelta(days=1)}
     timbro, via, problemi = timbro_dpc()
     for p in problemi:
         print(f"  ℹ️  ricerca del bollettino: {p}")
     if not timbro:
         segnala_fonte_ko(DPC_FONTE, "nessun bollettino riconosciuto: " + ("; ".join(problemi) or "—"))
-        return {}
+        return {}, tutti
     print(f"🏛️  Bollettino del Dipartimento {timbro} ({via})")
     try:
         boll = http_get_json(f"{DPC_RAW}{timbro}.json")
     except Exception as e:
         segnala_fonte_ko(DPC_FONTE, f"{timbro}.json non leggibile ({e})")
-        return {}
+        return {}, tutti
     pubblicazione = datetime.strptime(timbro, "%Y%m%d_%H%M").replace(tzinfo=ROME_TZ)
     righe = {}
+    letti = set()
     giorni = giorni_del_bollettino(boll, pubblicazione)
-    if giorni and all(g < now.date() for g in giorni.values()):
+    if giorni and all(g < oggi for g in giorni.values()):
         segnala_fonte_ko(DPC_FONTE, f"l'ultimo bollettino trovato ({timbro}) riguarda solo giorni "
                                     "già passati: fonte ferma o in ritardo")
-        return {}
+        return {}, tutti
     for etichetta, giorno in giorni.items():
-        if giorno < now.date():
+        if giorno < oggi:
             print(f"  ⏭️  carta «{etichetta}» del {timbro}: giorno {giorno} già passato, non la scarico")
             continue
         chiave = "today" if etichetta == "oggi" else "tomorrow"
@@ -431,8 +439,14 @@ def leggi_dpc_ufficiale(now):
             segnala_fonte_ko(DPC_FONTE, f"carta «{chiave}» del {timbro} non leggibile ({e})")
             continue
         righe[etichetta] = riga_dpc(zona, giorno, pubblicazione, etichetta)
+        letti.add(giorno)
         print(f"  ✅ {etichetta} {giorno}: {righe[etichetta]['avviso_criticita']}")
-    return righe
+    attesi = {pubblicazione.date(), pubblicazione.date() + timedelta(days=1)}
+    dubbi = {g for g in attesi if g >= oggi and g not in letti}
+    for g in sorted(dubbi):
+        if not any(v == g for v in giorni.values()):
+            segnala_fonte_ko(DPC_FONTE, f"il bollettino {timbro} non ha la valutazione per il {g}")
+    return righe, dubbi
 
 
 def copre_adesso(righe, now):
@@ -656,6 +670,14 @@ def parse_iso(s):
         return None
 
 
+def data_iso(s):
+    """Data 'AAAA-MM-GG' o None."""
+    try:
+        return date.fromisoformat(str(s or ""))
+    except ValueError:
+        return None
+
+
 def gh_output(**kwargs):
     gh_out = os.environ.get("GITHUB_OUTPUT", "")
     if not gh_out:
@@ -670,17 +692,20 @@ def main():
 
     # ── 1. Fonte nazionale: repository ufficiale del Dipartimento ──
     # Righe "dpc_oggi"/"dpc_domani". Dall'11/11/2026 è la strada principale.
-    ufficiali = leggi_dpc_ufficiale(now)
+    ufficiali, dubbi = leggi_dpc_ufficiale(now)
     bollettini = {"dpc_" + label: row for label, row in ufficiali.items()}
     fonti = ["dpc-ufficiale"] if ufficiali else []
 
     # ── 1-bis. Riserva: il mirror opendatasicilia ──
-    # Si legge solo se la fonte ufficiale non dà nessuna riga valida adesso:
-    # non risponde, oppure l'ultimo bollettino trovato non copre più oggi.
-    if not copre_adesso(ufficiali, now):
-        if ufficiali:
+    # Si legge quando la fonte ufficiale non dà una riga valida adesso (non
+    # risponde, oppure l'ultimo bollettino trovato non copre più oggi) e
+    # quando manca un giorno che il bollettino doveva coprire (una carta che
+    # non si legge): le sue righe valgono solo dove sono le più recenti (1-quater).
+    if dubbi or not copre_adesso(ufficiali, now):
+        if ufficiali and not copre_adesso(ufficiali, now):
             segnala_fonte_ko(DPC_FONTE, "l'ultimo bollettino trovato non copre questo momento")
-        print("⚠️  Nessun bollettino del Dipartimento valido adesso: leggo il mirror opendatasicilia come riserva")
+        mancanti = ", ".join(g.isoformat() for g in sorted(dubbi)) or "adesso"
+        print(f"⚠️  Dipartimento non letto per {mancanti}: leggo il mirror opendatasicilia come riserva")
         for label, url in CSV_URLS.items():
             row = fetch_csv(url, label)
             if row:
@@ -777,6 +802,14 @@ def main():
     livello = LEVEL_NAME[max_level]
     print(f"📊 MAX level={livello}, dal bollettino '{bollettino_attivo_label}'")
 
+    # Stato pubblicato: serve alla prudenza sulla pre-allerta (3-ter) e al
+    # confronto (5).
+    try:
+        with open(ALLERTA_PATH, "r", encoding="utf-8") as f:
+            current = json.load(f)
+    except Exception:
+        current = {}
+
     # ── 3-bis. Blocco "domani" SEPARATO se data_validita_inizio > today ──
     # Fra le righe di domani (Dipartimento, eventuale mirror e bollettino
     # regionale) vale la più alta.
@@ -820,6 +853,24 @@ def main():
             }
             print(f"📅 Bollettino DOMANI ({inizio_d.date()}): {liv_dom}, rischi={risks_dom_order}")
 
+    # ── 3-ter. Un errore di lettura non abbassa né cancella la pre-allerta ──
+    # Se il Dipartimento non si è letto per il giorno della pre-allerta già
+    # pubblicata (carta illeggibile, bollettino non trovato o fermo), quella
+    # resta finché una fonte letta non dice di più o il giorno arriva: vale
+    # la più alta fra la pubblicata e quella delle altre fonti lette. Senza,
+    # un timeout sulla carta di domani, con la Regione muta, toglieva la
+    # pre-allerta e la notificava come rientrata (revisione dell'11/11/2026).
+    dom_pub = current.get("domani") if isinstance(current.get("domani"), dict) else None
+    data_pub = data_iso(dom_pub.get("data")) if dom_pub else None
+    if data_pub and data_pub > today_in_rome and data_pub in dubbi:
+        stessa = domani_block and domani_block.get("data") == dom_pub.get("data")
+        nuovo = LIVELLO_INDICE.get(domani_block["livello"], 0) if stessa else -1
+        if nuovo < LIVELLO_INDICE.get(dom_pub.get("livello"), 0):
+            print(f"::warning::Dipartimento non letto per il {data_pub}: resta la pre-allerta "
+                  f"pubblicata ({dom_pub.get('livello')}) invece di "
+                  f"{domani_block['livello'] if stessa else 'nessuna'}")
+            domani_block = dict(dom_pub)
+
     # ── 4. Costruisci titolo e descrizione ricca ──
     # Il titolo include la lista rischi attivi (es. "ALLERTA GIALLA — temporali").
     # La descrizione integra: frase fenomeno DPC + zona Lazi-F + data emissione
@@ -837,12 +888,6 @@ def main():
     timestamp_now = now.isoformat(timespec="seconds")
 
     # ── 5. Diff vs stato corrente ──
-    try:
-        with open(ALLERTA_PATH, "r", encoding="utf-8") as f:
-            current = json.load(f)
-    except Exception:
-        current = {}
-
     old_level = current.get("livello", "sconosciuto")
     level_changed = current.get("livello") != livello
     old_domani_level = ((current.get("domani") or {}).get("livello") or "verde")

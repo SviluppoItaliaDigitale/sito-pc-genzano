@@ -53,7 +53,7 @@
     {{ if gt now.Unix $tf.Unix }}
       {{ $avviso = merge $avviso (dict "stato" "scaduto") }}
     {{ else if ge now.Unix $ti.Unix }}
-      {{ $fino := partial "etichetta-giorno.html" (dict "data" ($tf.Add (time.ParseDuration "-1m")) "forma" "fino") }}
+      {{ $fino := partial "etichetta-giorno.html" (dict "data" ($tf.Add (time.ParseDuration "-1m")) "forma" "fino" "fine" $tf) }}
       {{ $avviso = merge $avviso (dict "stato" "in-vigore" "quando" (partial "etichetta-giorno.html" (dict "data" now)) "validita" $fino) }}
     {{ else }}
       {{ $parti := slice }}

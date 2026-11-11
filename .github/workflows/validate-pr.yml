@@ -439,6 +439,12 @@ jobs:
           python3 scripts/prova-carica-aruba.py 2>&1 | grep -v '^\[[IW] '
           exit "${PIPESTATUS[0]}"
 
+      - name: "📦 Pacchetti Ubuntu: tempo riservato ai ripieghi"
+        # 11/11/2026: scripts/apt-installa.sh con comandi finti (nessuna rete,
+        # sistema intatto): server predefiniti che rispondono, e server appesi
+        # che non devono consumare il tempo di mirror alternativi e cache.
+        run: bash scripts/prova-apt-installa.sh
+
   frontmatter-validity:
     name: "Frontmatter articoli modificati"
     runs-on: ubuntu-latest

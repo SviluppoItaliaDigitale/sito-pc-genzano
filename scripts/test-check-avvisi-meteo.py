@@ -202,5 +202,50 @@ with tempfile.TemporaryDirectory() as cartella:
           ("2026-11-12T06:00:00+01:00", "2026-11-14T00:00:00+01:00", "dal mattino", "24-36 ore"))
     prova("secondo giro con lo stesso PDF: nessun cambio", secondo, "false")
 
+
+# 9. Validità non leggibile nel bollettino nuovo (revisione dell'11/11/2026): la
+#    stima «giorno del file per 36 ore» non accorcia né fa scadere un avviso in
+#    vigore dello stesso tipo e livello; un livello diverso invece si salva.
+def senza_validita(livello):
+    return ("REGIONE.LAZIO.REGISTRO UFFICIALE.U.1139799.12-11-2026\n"
+            "ALLERTAMENTO DEL SISTEMA DI PROTEZIONE CIVILE REGIONALE\n"
+            "PER I SEGUENTI RISCHI: VENTO .\n"
+            "Si confermano sul Lazio venti da forti a burrasca sud-occidentali.\n"
+            f"ALLERTA PER VENTO\n ALLERTA {livello} su tutte le Zone di Allerta\n")
+
+
+IN_VIGORE = {
+    "tipo": "vento", "livello": "gialla",
+    "validita_inizio": "2026-11-12T06:00:00+01:00", "validita_fine": "2026-11-14T00:00:00+01:00",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/Allertamento12-11-2026.pdf",
+    "fonte_data": "2026-11-12", "validita_dal": "dal mattino", "validita_durata": "24-36 ore",
+}
+
+
+def giro_con(testo, nome_pdf):
+    with tempfile.TemporaryDirectory() as cartella:
+        allerta = Path(cartella) / "allerta.json"
+        allerta.write_text(json.dumps({"livello": "verde", "avviso_meteo": dict(IN_VIGORE)}), encoding="utf-8")
+        cam.ALLERTA_PATH = allerta
+        cam.http_get_text = lambda url: ('<a href="/sites/default/files/allertamentiregionali-allegati/2026/'
+                                         f'{nome_pdf}">Allertamento</a>')
+        cam.parse_pdf = lambda dati: testo
+        stdout = sys.stdout
+        sys.stdout = open(os.devnull, "w", encoding="utf-8")
+        try:
+            cambiato = giro(cartella)
+        finally:
+            sys.stdout.close()
+            sys.stdout = stdout
+        return cambiato, json.loads(allerta.read_text(encoding="utf-8")).get("avviso_meteo")
+
+
+cambiato, avviso = giro_con(senza_validita("GIALLA"), "Allertamento12-11-2026.pdf")
+prova("stima di validità, stesso tipo e livello: avviso in vigore intatto", (cambiato, avviso), ("false", IN_VIGORE))
+cambiato, avviso = giro_con(senza_validita("ARANCIONE"), "Allertamento12-11-2026.pdf")
+prova("stima di validità, livello più alto: si salva", (cambiato, avviso["livello"]), ("true", "arancione"))
+cambiato, avviso = giro_con(senza_validita("GIALLA"), "Allertamento10-11-2026.pdf")
+prova("scaduto solo secondo la stima: l'avviso in vigore non si toglie", (cambiato, avviso), ("false", IN_VIGORE))
+
 print(f"\n{sum(ESITI)}/{len(ESITI)} prove superate")
 sys.exit(0 if all(ESITI) else 1)

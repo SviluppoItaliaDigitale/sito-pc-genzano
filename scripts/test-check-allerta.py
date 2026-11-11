@@ -19,7 +19,7 @@ import json
 import os
 import tempfile
 import unittest
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from unittest.mock import patch
 from zoneinfo import ZoneInfo
@@ -101,8 +101,9 @@ def riga_csv(inizio, fine, pubblicazione, criticita=NESSUNA, idrogeo=NESSUNA):
 
 
 @contextlib.contextmanager
-def ambiente():
-    """File temporanei per allerta.json, uscite del workflow e fonti non lette."""
+def ambiente(**pubblicato):
+    """File temporanei per allerta.json, uscite del workflow e fonti non lette.
+    Le chiavi passate (per esempio domani=…) si aggiungono allo stato pubblicato."""
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         allerta = tmp / "allerta.json"
@@ -111,6 +112,7 @@ def ambiente():
             "ultimo_aggiornamento": "2026-11-01T10:00:00+01:00",
             "ultimo_controllo": "2026-11-01T10:00:00+01:00",
             "avviso_meteo": {"tipo": "vento", "livello": "gialla"},
+            **pubblicato,
         }), encoding="utf-8")
         env = {"GITHUB_OUTPUT": str(tmp / "out.txt"), "FONTI_KO_FILE": str(tmp / "ko.txt")}
         with patch.dict(os.environ, env), patch.object(CA, "ALLERTA_PATH", allerta):
@@ -207,8 +209,9 @@ class LetturaUfficiale(unittest.TestCase):
         with ambiente(), contextlib.redirect_stdout(io.StringIO()), \
                 patch.object(CA, "timbro_dpc", lambda: ("20261111_1540", "fonte ufficiale", [])), \
                 patch.object(CA, "http_get_json", prendi):
-            righe = CA.leggi_dpc_ufficiale(ora(2026, 11, 12, 9))
+            righe, dubbi = CA.leggi_dpc_ufficiale(ora(2026, 11, 12, 9))
         self.assertEqual(sorted(righe), ["domani"])
+        self.assertEqual(dubbi, set())    # il bollettino dell'11/11 non copre il 13/11: non è un guasto
         self.assertFalse(any(u.endswith("_today.json") for u in chiesti))
         self.assertTrue(CA.copre_adesso(righe, ora(2026, 11, 12, 9)))
 
@@ -217,9 +220,17 @@ class LetturaUfficiale(unittest.TestCase):
         with ambiente() as (tmp, _), contextlib.redirect_stdout(io.StringIO()), \
                 patch.object(CA, "timbro_dpc", lambda: ("20261111_1540", "fonte ufficiale", [])), \
                 patch.object(CA, "http_get_json", prendi):
-            righe = CA.leggi_dpc_ufficiale(ora(2026, 11, 11, 18))
+            righe, dubbi = CA.leggi_dpc_ufficiale(ora(2026, 11, 11, 18))
             self.assertIn("today", fonti_ko(tmp))
         self.assertEqual(sorted(righe), ["domani"])
+        self.assertEqual(dubbi, {date(2026, 11, 11)})
+
+    def test_fonte_muta_oggi_e_domani_in_dubbio(self):
+        with ambiente(), contextlib.redirect_stdout(io.StringIO()), \
+                patch.object(CA, "timbro_dpc", lambda: ("", "", ["albero non raggiungibile"])):
+            righe, dubbi = CA.leggi_dpc_ufficiale(ora(2026, 11, 11, 18))
+        self.assertEqual(righe, {})
+        self.assertEqual(dubbi, {date(2026, 11, 11), date(2026, 11, 12)})
 
 
 class SceltaDelTimbro(unittest.TestCase):
@@ -378,6 +389,85 @@ class FonteUfficialePrimaIlMirrorDopo(unittest.TestCase):
                       fallback_pdf_regione_lazio=lambda now: regione)
             dati = json.loads(allerta.read_text(encoding="utf-8"))
         self.assertEqual(dati["livello"], "verde")
+
+
+PRE_ALLERTA = {"livello": "gialla", "titolo": "Previsto giallo",
+               "rischi": ["rischio idrogeologico"], "data": "2026-11-12"}
+CARTA_DOMANI_VERDE = carta(
+    zona("Bacini Costieri Sud", ["Albano Laziale", "Ariccia", "Genzano di Roma", "Velletri"]),
+    nome="20261111_1540_tomorrow",
+)
+
+
+class PrudenzaSullaPreAllerta(unittest.TestCase):
+    """Un errore di lettura non abbassa né cancella la pre-allerta pubblicata
+    (revisione della PR #1841: un timeout sulla carta di domani, con la
+    Regione muta, la toglieva e la segnalava come rientrata)."""
+
+    def _gira(self, carte=None, regione=None, timbro=("20261111_1540", "fonte ufficiale", [])):
+        prendi, _ = fonte_finta(carte=carte)
+        letti = []
+
+        def mirror(url, label):
+            letti.append(label)
+            return None    # mirror fermo o muto
+        with ambiente(domani=dict(PRE_ALLERTA)) as (tmp, allerta):
+            gira_main(ora(2026, 11, 11, 18, 30), timbro_dpc=lambda: timbro,
+                      http_get_json=prendi, fetch_csv=mirror,
+                      fallback_pdf_regione_lazio=lambda now: regione or {})
+            return json.loads(allerta.read_text(encoding="utf-8")), uscite(tmp), letti, fonti_ko(tmp)
+
+    def test_carta_di_domani_illeggibile_resta_la_pre_allerta(self):
+        dati, out, letti, ko = self._gira(carte={"today": CARTA_OGGI, "tomorrow": OSError("timeout")})
+        self.assertEqual(sorted(letti), ["domani", "oggi"])    # la riserva si legge
+        self.assertEqual(dati["domani"], PRE_ALLERTA)
+        self.assertEqual(out["sostanziale"], "false")         # niente deploy urgente né Telegram
+        self.assertIn("tomorrow", ko)
+
+    def test_regione_piu_bassa_non_abbassa_se_il_dipartimento_non_si_legge(self):
+        regione = {"domani": riga_csv("2026-11-12T00:00:00+01:00", "2026-11-12T23:59:59+01:00",
+                                      "2026-11-11T12:00:00+01:00")}
+        dati, out, _, _ = self._gira(carte={"today": CARTA_OGGI, "tomorrow": OSError("timeout")},
+                                     regione=regione)
+        self.assertEqual(dati["domani"]["livello"], "gialla")
+        self.assertEqual(out["sostanziale"], "false")
+
+    def test_regione_piu_alta_vale_anche_se_il_dipartimento_non_si_legge(self):
+        regione = {"domani": riga_csv("2026-11-12T00:00:00+01:00", "2026-11-12T23:59:59+01:00",
+                                      "2026-11-11T12:00:00+01:00",
+                                      "Moderata per rischio idrogeologico / ALLERTA ARANCIONE",
+                                      "Moderata / ALLERTA ARANCIONE")}
+        dati, out, _, _ = self._gira(carte={"today": CARTA_OGGI, "tomorrow": OSError("timeout")},
+                                     regione=regione)
+        self.assertEqual(dati["domani"]["livello"], "arancione")
+        self.assertEqual(out["sostanziale"], "true")
+
+    def test_domani_letto_verde_toglie_davvero_la_pre_allerta(self):
+        dati, out, letti, _ = self._gira(carte={"today": CARTA_OGGI, "tomorrow": CARTA_DOMANI_VERDE})
+        self.assertEqual(letti, [])                            # fonte ufficiale completa: niente riserva
+        self.assertEqual(dati["domani"]["livello"], "verde")
+        self.assertEqual(out["sostanziale"], "true")
+
+    def test_dipartimento_muto_resta_la_pre_allerta(self):
+        regione = {"oggi": riga_csv("2026-11-11T00:00:00+01:00", "2026-11-11T23:59:59+01:00",
+                                    "2026-11-11T12:00:00+01:00")}
+        dati, out, letti, _ = self._gira(regione=regione, timbro=("", "", ["albero non raggiungibile"]))
+        self.assertEqual(sorted(letti), ["domani", "oggi"])
+        self.assertEqual(dati["livello"], "verde")
+        self.assertEqual(dati["domani"], PRE_ALLERTA)
+        self.assertEqual(out["sostanziale"], "false")
+
+    def test_a_mezzanotte_la_pre_allerta_di_oggi_non_si_tiene(self):
+        # Il 12/11 la pre-allerta «per il 12/11» è diventata il livello di oggi:
+        # anche con la carta di domani mancante non resta come pre-allerta.
+        prendi, _ = fonte_finta(carte={"today": CARTA_OGGI, "tomorrow": CARTA_DOMANI})
+        with ambiente(domani=dict(PRE_ALLERTA)) as (tmp, allerta):
+            gira_main(ora(2026, 11, 12, 0, 5), timbro_dpc=lambda: ("20261111_1540", "fonte ufficiale", []),
+                      http_get_json=prendi, fetch_csv=mirror_vietato,
+                      fallback_pdf_regione_lazio=lambda now: {})
+            dati = json.loads(allerta.read_text(encoding="utf-8"))
+        self.assertEqual(dati["livello"], "gialla")
+        self.assertNotIn("domani", dati)
 
 
 if __name__ == "__main__":
