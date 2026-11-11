@@ -346,14 +346,22 @@ class Collegamenti:
                 self.tutti.append(ftp)
         return ftp
 
-    def butta(self) -> None:
+    def butta(self, cortese: bool = False) -> None:
+        """Chiude il collegamento del thread e lo toglie dall'elenco, così
+        il server lo libera subito (conta nel limite per indirizzo)."""
         ftp = getattr(self.locale, "ftp", None)
         self.locale.ftp = None
         if ftp is not None:
+            with self._lock:
+                if ftp in self.tutti:
+                    self.tutti.remove(ftp)
             try:
-                ftp.close()
+                ftp.quit() if cortese else ftp.close()
             except Exception:
-                pass
+                try:
+                    ftp.close()
+                except Exception:
+                    pass
 
     def chiudi_tutti(self) -> None:
         with self._lock:
@@ -413,6 +421,7 @@ class Caricamento:
         self.cartelle_fatte: set[str] = set()
         self._clock = threading.Lock()
         self.errori: list[str] = []
+        self.limite: int | None = None  # collegamenti per fase, se il server ne accetta meno
         self.battito_stop = threading.Event()
         self.lucchetto_mio = False
         self.contatori = {"caricati": 0, "tentativi_in_più": 0, "cancellati": 0}
@@ -649,20 +658,25 @@ class Caricamento:
                 with lock:
                     rifiutati.append(str(e)[:120])
                 return
-            while True:
-                try:
-                    x = q.get_nowait()
-                except queue.Empty:
-                    return
-                try:
-                    ok = funzione(*x) if isinstance(x, tuple) else funzione(x)
-                except Exception as e:  # un errore imprevisto conta come fallimento, mai come riuscita
-                    self.errori.append(f"{x}: errore imprevisto ({type(e).__name__}: {str(e)[:160]})")
-                    ok = False
-                with lock:
-                    esiti.append(ok)
+            try:
+                while True:
+                    try:
+                        x = q.get_nowait()
+                    except queue.Empty:
+                        return
+                    try:
+                        ok = funzione(*x) if isinstance(x, tuple) else funzione(x)
+                    except Exception as e:  # un errore imprevisto conta come fallimento, mai come riuscita
+                        self.errori.append(f"{x}: errore imprevisto ({type(e).__name__}: {str(e)[:160]})")
+                        ok = False
+                    with lock:
+                        esiti.append(ok)
+            finally:
+                # A fase finita il collegamento del lavoratore si chiude: la
+                # fase dopo deve trovare i posti liberi sul server.
+                self.coll.butta(cortese=True)
 
-        n = max(1, min(self.a.connessioni, len(lavori)))
+        n = max(1, min(self.a.connessioni, self.limite or self.a.connessioni, len(lavori)))
         th = [threading.Thread(target=lavoratore, daemon=True) for _ in range(n)]
         for x in th:
             x.start()
@@ -670,8 +684,13 @@ class Caricamento:
             x.join()
         falliti = len(lavori) - esiti.count(True)
         if rifiutati:
+            accettati = n - len(rifiutati)
+            # Le fasi dopo chiedono un collegamento in meno di quelli
+            # accettati: resta un posto per il battito del lucchetto.
+            self.limite = max(1, accettati - 1)
             log(f"   ℹ️  {nome}: {len(rifiutati)} collegamenti su {n} rifiutati dal server, "
-                f"lavoro fatto con {n - len(rifiutati)} ({rifiutati[0]})")
+                f"lavoro fatto con {accettati} ({rifiutati[0]}); "
+                f"da qui {self.limite} collegamenti per fase")
         log(f"   {nome}: {len(lavori) - falliti}/{len(lavori)} in {time.time() - t0:.1f} s"
             + (f" — ❌ {falliti} non riusciti" if falliti else ""))
         return falliti == 0
@@ -835,9 +854,10 @@ class Caricamento:
                             with dlock:
                                 diversi.append(f"{r}: non leggibile ({type(e).__name__})")
                 return False
-            self.in_parallelo(sorted(carica), controlla, "controllo finale")
-            if diversi:
-                self.errori.extend(diversi)
+            fatto = self.in_parallelo(sorted(carica), controlla, "controllo finale")
+            if diversi or not fatto:
+                self.errori.extend(diversi or ["controllo finale non eseguito su tutti i file "
+                                               "(collegamenti non disponibili)"])
                 return self._fallito()
             log(f"   controllo finale chiuso in {time.time() - t0:.1f} s")
 

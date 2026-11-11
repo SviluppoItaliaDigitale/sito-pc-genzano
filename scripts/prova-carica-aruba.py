@@ -502,13 +502,19 @@ def prova_10(b: Banco) -> None:
     semina_server(b, public)
     for i in range(20):
         v[f"z/p{i}.html"] = f"pagina {i}".encode()
+        v[f"z/img{i}.css"] = f"risorsa {i}".encode()
+    v["index.html"] = b"home nuova"
     scrivi_build(public, v)
-    b.server.max_cons_per_ip = 3  # il collegamento principale più due
+    # il collegamento principale più due: risorse, pagine, indici e
+    # controllo finale devono tutti trovare posto (rilievo di revisione)
+    b.server.max_cons_per_ip = 3
     try:
         rc, out = lancia(b, public)
     finally:
         b.server.max_cons_per_ip = 0
     verifica(rc == 0 and "rifiutati dal server" in out, "si prosegue con i collegamenti accettati", out)
+    verifica("controllo finale: " in out and "controllo finale: 0/" not in out,
+             "il controllo finale lavora davvero", out)
     verifica(all(contenuto(b, r) == d for r, d in v.items()), "sul server c'è esattamente la build")
 
 
