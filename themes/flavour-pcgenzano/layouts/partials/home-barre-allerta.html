@@ -19,22 +19,75 @@
 {{ $livRawAllerta := lower (string ($allerta.livello | default "verde")) }}
 {{ $livAllerta := $livRawAllerta }}
 {{ with index $norm $livRawAllerta }}{{ $livAllerta = . }}{{ end }}
-<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $livAllerta }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}">
+{{ $t := time.AsTime $controllo }}
+{{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
+{{/* ── AVVISO METEO AVVERSO (vento, neve, calore...) — dati ──
+     Si calcola prima delle barre perché decide dove va la sua striscia e che
+     cosa dice quella di oggi. Ogni striscia dice il suo giorno (11/11/2026:
+     la striscia del vento previsto per il giorno dopo non lo diceva e, sotto
+     «Nessuna allerta» di oggi, sembrava già in vigore):
+     - non ancora cominciato: «Da domani, giovedì 12 novembre: avviso meteo per
+       vento — allerta gialla dal mattino, per 24-36 ore», toni tenui come la
+       pre-allerta di domani, role="status", dopo la striscia di domani;
+     - in vigore: «Oggi, giovedì 12 novembre: avviso meteo in vigore per vento
+       — allerta gialla fino a domani, venerdì 13 novembre», toni pieni,
+       role="alert", subito sotto la striscia di oggi;
+     - scaduto: non si mostra (lo toglie anche check-avvisi-meteo.py).
+     Il passaggio da un caso all'altro, e «Oggi»/«Domani» a mezzanotte, lo
+     rifà il browser a ogni minuto (home-allerta.js, aggiornaGiorni). */}}
+{{ $avviso := dict }}
+{{ with $allerta.avviso_meteo }}
+  {{/* Difesa: blocco visibile SOLO se tipo non vuoto.
+       Evita render "Avviso meteo: — allerta verde" se dati popolati a metà. */}}
+  {{ if .tipo }}
+  {{ $avvisoLivRaw := lower (string (.livello | default "verde")) }}
+  {{ $avvisoLiv := $avvisoLivRaw }}{{ with index $norm $avvisoLivRaw }}{{ $avvisoLiv = . }}{{ end }}
+  {{ $avviso = dict "tipo" .tipo "livello" $avvisoLiv "descrizione" (.descrizione | default "") "url" (.url | default "") "dal" (.validita_dal | default "") "durata" (.validita_durata | default "") "inizio" "" "fine" "" "stato" "" "quando" "" "validita" "" }}
+  {{/* try(): una data scritta male a mano non deve fermare la build della home. */}}
+  {{ $rI := try (time.AsTime .validita_inizio) }}
+  {{ $rF := try (time.AsTime .validita_fine) }}
+  {{ if and .validita_inizio .validita_fine (not $rI.Err) (not $rF.Err) }}
+    {{ $ti := $rI.Value }}{{ $tf := $rF.Value }}
+    {{ $avviso = merge $avviso (dict "inizio" .validita_inizio "fine" .validita_fine) }}
+    {{ if gt now.Unix $tf.Unix }}
+      {{ $avviso = merge $avviso (dict "stato" "scaduto") }}
+    {{ else if ge now.Unix $ti.Unix }}
+      {{ $fino := partial "etichetta-giorno.html" (dict "data" ($tf.Add (time.ParseDuration "-1m")) "forma" "fino") }}
+      {{ $avviso = merge $avviso (dict "stato" "in-vigore" "quando" (partial "etichetta-giorno.html" (dict "data" now)) "validita" $fino) }}
+    {{ else }}
+      {{ $parti := slice }}
+      {{ with .validita_dal }}{{ $parti = $parti | append . }}{{ end }}
+      {{ with .validita_durata }}{{ $parti = $parti | append (printf "per %s" .) }}{{ end }}
+      {{ $avviso = merge $avviso (dict "stato" "previsto" "quando" (partial "etichetta-giorno.html" (dict "data" $ti "forma" "da")) "validita" (delimit $parti ", ")) }}
+    {{ end }}
+  {{ end }}
+  {{ end }}
+{{ end }}
+{{ $avvisoInVigore := eq (index $avviso "stato") "in-vigore" }}
+{{ $avvisoMostrato := and (index $avviso "tipo") (ne (index $avviso "stato") "scaduto") }}
+{{/* Oggi verde con un avviso meteo in vigore: «Nessuna allerta» da sola
+     contraddirebbe la striscia dell'avviso. Si dice di quale rischio parla. */}}
+{{ $titoloOggi := $allerta.titolo }}
+{{ $descOggi := $allerta.descrizione }}
+{{ if and $avvisoInVigore (eq $livAllerta "verde") }}
+  {{ $titoloOggi = "NESSUNA ALLERTA PER RISCHIO IDROGEOLOGICO E IDRAULICO" }}
+  {{ $descOggi = printf "È in vigore l'avviso meteo per %s qui sotto." (index $avviso "tipo") }}
+{{ end }}
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $livAllerta }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo di oggi" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}" data-titolo="{{ $allerta.titolo }}" data-desc="{{ $allerta.descrizione }}">
 <noscript><style>.allerta-bar-loading{opacity:1!important}</style></noscript>
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center">
       <div>
         {{ if eq $livAllerta "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
         {{ else }}<i id="allerta-icon" class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>{{ end }}
-        <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
-        <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
+        <span class="allerta-giorno"><span id="allerta-giorno" data-giorno="{{ $t.Format "2006-01-02" }}">{{ partial "etichetta-giorno.html" (dict "data" $t) }}</span>:</span>
+        <strong id="allerta-titolo">{{ $titoloOggi }}</strong>
+        <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $descOggi }}</span>
       </div>
       <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
         Bollettino Ufficiale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
       </a>
     </div>
-    {{ $t := time.AsTime $controllo }}
-    {{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
     <div class="allerta-bar-meta">
       <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
       Verificato: <span id="allerta-controllo">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span>
@@ -42,6 +95,8 @@
     </div>
   </div>
 </div>
+{{/* Un avviso in vigore sta subito sotto la striscia di oggi. */}}
+{{ if and $avvisoMostrato $avvisoInVigore }}{{ partial "avviso-meteo-barra.html" $avviso }}{{ end }}
 {{/* ── PRE-ALLERTA DOMANI — visibile solo se livello-domani ≥ gialla.
      Il div esce SEMPRE dal template (per consentire al JS client di
      aggiornarlo dinamicamente anche se al build domani era verde), ma
@@ -49,7 +104,8 @@
 {{ $domaniLivelliVisibili := slice "gialla" "arancione" "rossa" }}
 {{ $domaniVisibile := false }}
 {{ $domaniLiv := "verde" }}
-{{ $domaniDataLeg := "" }}
+{{ $domaniGiorno := "" }}
+{{ $domaniEtichetta := "Domani" }}
 {{ $domaniTitolo := "" }}
 {{ $domaniRischi := "" }}
 {{ with $allerta.domani }}
@@ -72,7 +128,8 @@
     {{ $rDom := try (time.AsTime .data) }}
     {{ if not $rDom.Err }}
     {{ $td := $rDom.Value }}
-    {{ $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year }}
+    {{ $domaniGiorno = $td.Format "2006-01-02" }}
+    {{ $domaniEtichetta = partial "etichetta-giorno.html" (dict "data" $td) }}
     {{ end }}
     {{ end }}
   {{ end }}
@@ -82,49 +139,17 @@
      con il segnaposto "Previsto domani:" nascosto solo via display:none
      era letta dai browser testuali e dai fetcher senza CSS come fascia
      vuota (stesso difetto già corretto sull'avviso meteo l'11/07/2026). */}}
-<div id="allerta-bar-domani" class="allerta-bar-domani allerta-bar-domani-{{ $domaniLiv }}" role="status" aria-label="Pre-allerta meteo per domani"{{ if not $domaniVisibile }} style="display:none"{{ end }}>
+<div id="allerta-bar-domani" class="allerta-bar-domani allerta-bar-domani-{{ $domaniLiv }}" role="status" aria-label="Previsione allerta meteo per domani"{{ if not $domaniVisibile }} style="display:none"{{ end }}>
   {{- if $domaniVisibile }}
   <div class="container">
     <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>
-    <strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong>
-    <span id="allerta-domani-titolo">{{ $domaniTitolo }}</span>{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
+    <strong><span{{ with $domaniGiorno }} data-giorno="{{ . }}"{{ end }}>{{ $domaniEtichetta }}</span>:</strong>
+    prevista <span id="allerta-domani-titolo">{{ $domaniTitolo }}</span>{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
   </div>
   {{- end }}
 </div>
-{{/* ── AVVISO METEO AVVERSO (vento, neve, calore...) — solo se attivo ── */}}
-{{ $avvisoLiv := "verde" }}
-{{ $avvisoTipo := "" }}
-{{ $avvisoDescr := "" }}
-{{ $avvisoUrl := "" }}
-{{ $avvisoVisibile := false }}
-{{ with $allerta.avviso_meteo }}
-  {{/* Difesa: blocco visibile SOLO se tipo non vuoto.
-       Evita render "Avviso meteo: — allerta verde" se dati popolati a metà. */}}
-  {{ if .tipo }}
-  {{ $avvisoLivRaw := lower (string (.livello | default "verde")) }}
-  {{ $avvisoLiv = $avvisoLivRaw }}{{ with index $norm $avvisoLivRaw }}{{ $avvisoLiv = . }}{{ end }}
-  {{ $avvisoTipo = .tipo }}
-  {{ $avvisoDescr = .descrizione }}
-  {{ $avvisoUrl = .url }}
-  {{ $avvisoVisibile = true }}
-  {{ end }}
-{{ end }}
-{{- /* Emessa SOLO quando c'è un avviso attivo: la versione sempre-nel-DOM
-     nascosta via display:none mostrava il segnaposto "Avviso meteo: — allerta
-     verde" a browser testuali e modalità lettura (audit esterno 11/07/2026).
-     Nessun JS richiede l'elemento (aggiornamento solo a build). */}}
-{{ if $avvisoVisibile }}
-<div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ $avvisoLiv }}" role="alert" aria-label="Avviso meteo avverso">
-  <div class="container">
-    <i class="bi bi-wind me-2" aria-hidden="true"></i>
-    <strong>Avviso meteo:</strong>
-    <span id="avviso-meteo-tipo">{{ $avvisoTipo }}</span>
-    <span id="avviso-meteo-livello" class="ms-1">— allerta {{ $avvisoLiv }}</span>
-    {{ if $avvisoDescr }}<span id="avviso-meteo-descr" class="d-none d-md-inline ms-2">({{ $avvisoDescr }})</span>{{ end }}
-    {{ if $avvisoUrl }}<a id="avviso-meteo-url" href="{{ $avvisoUrl }}" target="_blank" rel="noopener noreferrer" class="ms-2 avviso-meteo-link">PDF ufficiale <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{{ end }}
-  </div>
-</div>
-{{ end }}
+{{/* Un avviso non ancora cominciato, o senza date leggibili, sta con le previsioni. */}}
+{{ if and $avvisoMostrato (not $avvisoInVigore) }}{{ partial "avviso-meteo-barra.html" $avviso }}{{ end }}
 {{/* ── RISCHIO INCENDI BOSCHIVI (AIB) — solo se livello-oggi ≥ MEDIO (gialla) ── */}}
 {{ $incendiVisibile := false }}
 {{ $incendiLiv := "verde" }}

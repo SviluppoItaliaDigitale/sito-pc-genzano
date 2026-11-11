@@ -1,0 +1,32 @@
+{{- /* Etichetta di un giorno rispetto al giorno della build (ora italiana: la
+     build gira con TZ=Europe/Rome, .github/actions/prepara-build).
+     Parametri: dict "data" (time.Time) e "forma":
+     - "giorno" (predefinita): «Oggi, mercoledì 11 novembre», «Domani, giovedì
+       12 novembre», altrimenti «Giovedì 12 novembre»;
+     - "da": «Da oggi, …», «Da domani, …», altrimenti «Da giovedì 12 novembre»;
+     - "fino": «fino a fine giornata», «fino a domani, …», «fino a …».
+     Restituisce la stringa (partial con return). Il browser rifà lo stesso
+     calcolo con il proprio orologio, in ora italiana, al caricamento e ogni
+     minuto (static/js/home-allerta.js, etichetta()), così a mezzanotte «Domani»
+     diventa «Oggi» anche a pagina aperta: chi cambia una delle due cambia
+     anche l'altra. Nato l'11/11/2026, quando la striscia del vento previsto per
+     il giorno dopo non diceva il giorno e sembrava già in vigore. */ -}}
+{{- $d := .data -}}
+{{- $forma := .forma | default "giorno" -}}
+{{- $giorni := slice "domenica" "lunedì" "martedì" "mercoledì" "giovedì" "venerdì" "sabato" -}}
+{{- $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" -}}
+{{- $ymd := $d.Format "2006-01-02" -}}
+{{- $oggi := now.Format "2006-01-02" -}}
+{{- $domani := (now.AddDate 0 0 1).Format "2006-01-02" -}}
+{{- $nome := printf "%s %d %s" (index $giorni (int $d.Weekday)) $d.Day (index $mesi (int $d.Month)) -}}
+{{- $out := strings.FirstUpper $nome -}}
+{{- if eq $forma "da" -}}
+  {{- $out = printf "Da %s" $nome -}}
+  {{- if eq $ymd $oggi -}}{{- $out = printf "Da oggi, %s" $nome -}}{{- else if eq $ymd $domani -}}{{- $out = printf "Da domani, %s" $nome -}}{{- end -}}
+{{- else if eq $forma "fino" -}}
+  {{- $out = printf "fino a %s" $nome -}}
+  {{- if eq $ymd $oggi -}}{{- $out = "fino a fine giornata" -}}{{- else if eq $ymd $domani -}}{{- $out = printf "fino a domani, %s" $nome -}}{{- end -}}
+{{- else -}}
+  {{- if eq $ymd $oggi -}}{{- $out = printf "Oggi, %s" $nome -}}{{- else if eq $ymd $domani -}}{{- $out = printf "Domani, %s" $nome -}}{{- end -}}
+{{- end -}}
+{{- return $out -}}

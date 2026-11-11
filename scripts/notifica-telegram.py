@@ -24,6 +24,7 @@ e TELEGRAM_CHAT_ID. Se mancano, exit pulito senza inviare (non blocca CI).
 import json
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 
 # Lib condivisa
@@ -133,6 +134,31 @@ def _norm_livello(liv: str | None) -> str:
     return {"giallo": "gialla", "rosso": "rossa"}.get(liv, liv)
 
 
+GIORNI_IT = ("lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica")
+MESI_IT = ("gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
+           "agosto", "settembre", "ottobre", "novembre", "dicembre")
+
+
+def _validita_avviso(curr: dict) -> str:
+    """Da quando e per quanto vale l'avviso, con le parole del bollettino.
+
+    «Dal mattino di giovedì 12 novembre, per le successive 24-36 ore.» Sempre
+    con la data, mai «domani»: il messaggio resta nel canale anche dopo la
+    mezzanotte. Stringa vuota se l'avviso non porta la data d'inizio.
+    """
+    try:
+        inizio = datetime.fromisoformat((curr.get("validita_inizio") or "").strip())
+    except ValueError:
+        return ""
+    giorno = f"{GIORNI_IT[inizio.weekday()]} {inizio.day} {MESI_IT[inizio.month - 1]}"
+    dal = (curr.get("validita_dal") or "").strip()
+    testo = f"{dal} di {giorno}" if dal else f"da {giorno}"
+    durata = (curr.get("validita_durata") or "").strip()
+    if durata:
+        testo += f", per le successive {durata}"
+    return testo[:1].upper() + testo[1:] + "."
+
+
 def _blocco_cosa_fare(livello: str) -> list[str]:
     azioni = COSA_FARE.get(livello) or COSA_FARE["gialla"]
     return ["<b>Cosa fare</b>"] + [f"• {a}" for a in azioni]
@@ -239,6 +265,9 @@ def msg_avviso_meteo(curr: dict | None) -> str:
     sotto = (f"Allerta {livello}. Comune di Genzano di Roma." if livello
              else "Avviso per fenomeni meteo avversi. Comune di Genzano di Roma.")
     parti = [header, "", sotto]
+    validita = _validita_avviso(curr)
+    if validita:
+        parti.append(validita)
     if descrizione:
         parti.extend(["", descrizione])
     parti.append("")

@@ -40,6 +40,8 @@
 .lite-domani-gialla { background: #fff3cd; border-color: #f9a825; color: #5a3e00; }
 .lite-domani-arancione { background: #ffe0b2; border-color: #ef6c00; color: #6f2c00; }
 .lite-domani-rossa { background: #f8d7da; border-color: #c62828; color: #7f1414; }
+/* La pagina lite non carica Bootstrap: testo per i soli lettori di schermo. */
+.lite-pagina .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 .lite-emergenza-on { background: #c1121f; color: #fff; padding: 1rem 1.2rem; border-radius: 10px; margin: 1rem 0; font-size: 1.05rem; }
 .lite-numeri { list-style: none; padding: 0; margin: 1rem 0; }
 .lite-numeri li { padding: 0.7rem 0.9rem; border: 2px solid #003366; border-radius: 8px; margin: 0.5rem 0; font-size: 1rem; }
@@ -86,6 +88,7 @@
 {{- $controllo := or .ultimo_controllo .ultimo_aggiornamento -}}
 {{- $t := time.AsTime $controllo -}}
 {{- $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" -}}
+{{- $giorni := slice "domenica" "lunedì" "martedì" "mercoledì" "giovedì" "venerdì" "sabato" -}}
 {{- /* Livelli nella forma femminile dei data file ("gialla"/"rossa", check-allerta.py);
        accettate anche le forme maschili. Esercitazione 06/09/2026: la classe
        generata (-gialla/-rossa) non trovava il CSS (-giallo/-rosso) e il box
@@ -103,17 +106,41 @@
   {{- /* Guard anti-crash: una data non valida in .data (es. da un data file
          corretto a mano) farebbe fallire time.AsTime e con essa l'intera
          build Hugo (non solo questa pagina). try() intercetta l'errore. */ -}}
-  {{- $domaniDataLeg := "" -}}
+  {{- /* Sempre il giorno per nome, mai «domani» (11/11/2026): la pagina resta
+         aperta o si apre dopo la mezzanotte, e «domani» diventerebbe falso. */ -}}
+  {{- $domaniGiorno := "" -}}
   {{- with .data -}}
     {{- $r := try (time.AsTime .) -}}
     {{- if not $r.Err -}}
       {{- $td := $r.Value -}}
-      {{- $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year -}}
+      {{- $domaniGiorno = printf "%s %d %s" (index $giorni (int $td.Weekday)) $td.Day (index $mesi (int $td.Month)) -}}
     {{- end -}}
   {{- end -}}
-  <p class="lite-domani lite-domani-{{ $dl }}" id="lite-domani" role="status"><strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong> allerta {{ $dl }}{{ with .rischi }} — {{ delimit . ", " }}{{ end }}</p>
+  <p class="lite-domani lite-domani-{{ $dl }}" id="lite-domani" role="status"><strong>{{ if $domaniGiorno }}Previsto per {{ $domaniGiorno }}{{ else }}Previsto domani{{ end }}:</strong> allerta {{ $dl }}{{ with .rischi }} — {{ delimit . ", " }}{{ end }}</p>
   {{- end }}
   {{- end }}
+  {{- /* Avviso meteo avverso (vento, neve, calore…), con le parole del bollettino
+         e il giorno per nome: «Avviso meteo per vento: allerta gialla dal mattino
+         di giovedì 12 novembre, per le successive 24-36 ore». Vero a qualunque
+         ora lo si legga, quindi senza calcoli nel browser. Non si mostra se è
+         già scaduto alla build. Aggiunto l'11/11/2026: la pagina mostrava solo
+         il rischio idrogeologico, e con il solo vento diceva «nessuna allerta». */ -}}
+  {{- with .avviso_meteo }}{{ if .tipo }}
+  {{- $al := index $norm (lower (string (.livello | default "verde"))) | default (lower (string (.livello | default "verde"))) -}}
+  {{- $rI := try (time.AsTime .validita_inizio) -}}
+  {{- $rF := try (time.AsTime .validita_fine) -}}
+  {{- $scaduto := and .validita_fine (not $rF.Err) (gt now.Unix $rF.Value.Unix) -}}
+  {{- if and (in (slice "gialla" "arancione" "rossa") $al) (not $scaduto) }}
+  {{- $quando := "" -}}
+  {{- if and .validita_inizio (not $rI.Err) -}}
+    {{- $ti := $rI.Value -}}
+    {{- $giorno := printf "%s %d %s" (index $giorni (int $ti.Weekday)) $ti.Day (index $mesi (int $ti.Month)) -}}
+    {{- $quando = cond (ne (.validita_dal | default "") "") (printf "%s di %s" .validita_dal $giorno) (printf "da %s" $giorno) -}}
+    {{- with .validita_durata }}{{ $quando = printf "%s, per le successive %s" $quando . }}{{ end -}}
+  {{- end }}
+  <p class="lite-domani lite-domani-{{ $al }}" id="lite-avviso" role="status"{{ with .validita_fine }} data-fine="{{ . }}"{{ end }}><strong>Avviso meteo per {{ .tipo }}:</strong> allerta {{ $al }}{{ with $quando }} {{ . }}{{ end }}.{{ with .url }} <a href="{{ . }}" target="_blank" rel="noopener noreferrer">PDF ufficiale<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>{{ end }}</p>
+  {{- end }}
+  {{- end }}{{ end }}
   <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: <span id="lite-allerta-ver">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span> <span id="lite-allerta-nota">(dato dell'ultima pubblicazione del sito)</span> · Fonte: <a href="https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></p>
 </div>
 {{- end }}
@@ -176,6 +203,8 @@ box.className="lite-allerta lite-allerta-nonverificato";
 t.textContent="Stato allerta meteo da confermare: ultimo controllo di oltre 6 ore fa";
 l.textContent=liv?"(ultimo livello noto: "+liv+")":"";
 de.textContent="Per la situazione aggiornata consulta il bollettino del Centro Funzionale della Regione Lazio (link qui sotto).";}
+/* Avviso meteo scaduto dopo la build: non resta a schermo (11/11/2026). */
+var av0=document.getElementById("lite-avviso");if(av0&&Date.parse(av0.getAttribute("data-fine"))<Date.now())av0.remove();
 if(!window.fetch){scadenza();return}
 var ac=window.AbortController?new AbortController():null;if(ac)setTimeout(function(){ac.abort()},4000);
 fetch({{ "allerta-stato/index.json" | relURL | jsonify | safeJS }},{cache:"no-store",signal:ac?ac.signal:undefined}).then(function(r){return r.ok?r.json():null}).then(function(j){
@@ -193,9 +222,23 @@ var n=document.getElementById("lite-allerta-nota");if(n)n.remove();
 var old=document.getElementById("lite-domani");if(old)old.remove();
 var dm=j.domani||{},dl=lv(dm.livello);
 if(dl!=="verde"&&dm.titolo){var p=document.createElement("p");p.id="lite-domani";p.className="lite-domani lite-domani-"+dl;p.setAttribute("role","status");
-var s=document.createElement("strong");s.textContent="Previsto domani:";p.appendChild(s);
+var G=["domenica","luned\u00ec","marted\u00ec","mercoled\u00ec","gioved\u00ec","venerd\u00ec","sabato"],M=["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+var a=String(dm.data||"").split("-"),x=a.length===3?new Date(Date.UTC(+a[0],+a[1]-1,+a[2])):null,gn=x&&!isNaN(x.getTime())?G[x.getUTCDay()]+" "+x.getUTCDate()+" "+M[x.getUTCMonth()]:"";
+var s=document.createElement("strong");s.textContent=gn?"Previsto per "+gn+":":"Previsto domani:";p.appendChild(s);
 p.appendChild(document.createTextNode(" allerta "+dl+(dm.rischi&&dm.rischi.length?" \u2014 "+dm.rischi.join(", "):"")));
-box.insertBefore(p,document.getElementById("lite-allerta-ver").parentNode)}
+box.insertBefore(p,document.getElementById("lite-avviso")||document.getElementById("lite-allerta-ver").parentNode)}
+/* Avviso meteo dal dato più recente: tolto se scaduto o sparito, riscritto
+   con il giorno per nome e le parole del bollettino (11/11/2026). */
+var av=document.getElementById("lite-avviso");if(av)av.remove();
+var am=j.avviso_meteo||{},al=lv(am.livello),fi=Date.parse(am.validita_fine);
+if(am.tipo&&al!=="verde"&&!(fi<Date.now())){var pa=document.createElement("p");pa.id="lite-avviso";pa.className="lite-domani lite-domani-"+al;pa.setAttribute("role","status");
+var sa=document.createElement("strong");sa.textContent="Avviso meteo per "+am.tipo+":";pa.appendChild(sa);
+var q="",ia=Date.parse(am.validita_inizio);
+if(ia>0){try{var gi=new Date(ia).toLocaleDateString("it-IT",{timeZone:"Europe/Rome",weekday:"long",day:"numeric",month:"long"});q=(am.validita_dal?am.validita_dal+" di "+gi:"da "+gi)+(am.validita_durata?", per le successive "+am.validita_durata:"")}catch(e2){q=""}}
+pa.appendChild(document.createTextNode(" allerta "+al+(q?" "+q:"")+"."));
+if(/^https:\/\//.test(am.url||"")){pa.appendChild(document.createTextNode(" "));var la=document.createElement("a");la.href=am.url;la.target="_blank";la.rel="noopener noreferrer";la.textContent="PDF ufficiale";
+var hs=document.createElement("span");hs.className="visually-hidden";hs.textContent=" (si apre in una nuova finestra)";la.appendChild(hs);pa.appendChild(la)}
+box.insertBefore(pa,document.getElementById("lite-allerta-ver").parentNode)}
 var em=document.getElementById("lite-emergenza");
 if(j.emergenza_attiva&&!em){em=document.createElement("div");em.id="lite-emergenza";em.className="lite-emergenza-on";em.setAttribute("role","alert");
 var b=document.createElement("strong");b.textContent="\u26a0\ufe0f EMERGENZA IN CORSO: ";em.appendChild(b);em.appendChild(document.createTextNode(j.emergenza_titolo||""));

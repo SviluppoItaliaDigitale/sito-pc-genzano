@@ -1,0 +1,29 @@
+{{- /* Striscia dell'avviso meteo avverso (vento, neve, calore…) della home.
+     La chiama home-barre-allerta.html, che prepara il dizionario: tipo,
+     livello, descrizione, url, dal, durata (parole del bollettino), inizio e
+     fine (date ISO), stato («previsto», «in-vigore» o vuoto se le date non si
+     leggono), quando («Da domani, giovedì 12 novembre» / «Oggi, …»), validita
+     («dal mattino, per 24-36 ore» / «fino a domani, venerdì 13 novembre»).
+     Le date stanno anche negli attributi data-*: il browser ricalcola giorno,
+     stato e posizione a ogni minuto (home-allerta.js, aggiornaAvviso), così la
+     striscia passa da «Da domani» a «in vigore» all'ora giusta e sparisce alla
+     scadenza anche se la pagina non è stata ricostruita. */ -}}
+{{- $previsto := eq .stato "previsto" -}}
+<div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ .livello }}{{ if $previsto }} avviso-meteo-bar-previsto{{ end }}" role="{{ if $previsto }}status{{ else }}alert{{ end }}" aria-label="Avviso meteo avverso"{{ with .inizio }} data-inizio="{{ . }}"{{ end }}{{ with .fine }} data-fine="{{ . }}"{{ end }}{{ with .dal }} data-dal="{{ . }}"{{ end }}{{ with .durata }} data-durata="{{ . }}"{{ end }}>
+  <div class="container">
+    <i class="bi bi-wind me-2" aria-hidden="true"></i>
+    {{- if .quando }}
+    <strong><span id="avviso-meteo-quando">{{ .quando }}</span>:</strong>
+    avviso meteo<span id="avviso-meteo-stato">{{ if eq .stato "in-vigore" }} in vigore{{ end }}</span> per <span id="avviso-meteo-tipo">{{ .tipo }}</span> — <span id="avviso-meteo-livello">allerta {{ .livello }}</span> <span id="avviso-meteo-validita">{{ .validita }}</span>
+    {{- else }}
+    <strong>Avviso meteo:</strong>
+    <span id="avviso-meteo-tipo">{{ .tipo }}</span>
+    <span id="avviso-meteo-livello" class="ms-1">— allerta {{ .livello }}</span>
+    {{- /* Date non leggibili (dato corretto a mano male): senza giorno la striscia
+         sembrerebbe in vigore oggi, quindi lo si dice e si rimanda al PDF. */}}
+    <span class="ms-1">— date di validità non disponibili: vedi il PDF ufficiale</span>
+    {{- end }}
+    {{ with .descrizione }}<span id="avviso-meteo-descr" class="d-none d-md-inline ms-2">({{ . }})</span>{{ end }}
+    {{ with .url }}<a id="avviso-meteo-url" href="{{ . }}" target="_blank" rel="noopener noreferrer" class="ms-2 avviso-meteo-link">PDF ufficiale<span class="visually-hidden"> (si apre in una nuova finestra)</span> <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{{ end }}
+  </div>
+</div>
