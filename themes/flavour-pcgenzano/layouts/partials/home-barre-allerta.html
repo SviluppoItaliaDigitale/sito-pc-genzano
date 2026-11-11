@@ -2,8 +2,9 @@
      BARRE DI STATO HOMEPAGE — allerta meteo oggi/domani,
      avviso meteo avverso, rischio incendi boschivi (AIB).
      Estratto da index.html il 15/07/2026 (audit esterno: il template
-     homepage superava 500 righe). La logica client (CSV DPC, guard
-     scadenza incendi) vive in static/js/home-allerta.js.
+     homepage superava 500 righe). La logica client (stato dell'allerta
+     dal sito, giorni delle strisce, guard scadenza incendi) vive in
+     static/js/home-allerta.js.
      ═══════════════════════════════════════════════════ */}}
 {{/* ── BARRA ALLERTA METEO ── */}}
 {{ $allerta := .Site.Data.allerta }}
@@ -73,7 +74,7 @@
   {{ $titoloOggi = "NESSUNA ALLERTA PER RISCHIO IDROGEOLOGICO E IDRAULICO" }}
   {{ $descOggi = printf "È in vigore l'avviso meteo per %s qui sotto." (index $avviso "tipo") }}
 {{ end }}
-<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $livAllerta }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo di oggi" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}" data-titolo="{{ $allerta.titolo }}" data-desc="{{ $allerta.descrizione }}">
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $livAllerta }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo di oggi" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}" data-titolo="{{ $allerta.titolo }}" data-desc="{{ $allerta.descrizione }}" data-stato="{{ "allerta-stato/index.json" | relURL }}">
 <noscript><style>.allerta-bar-loading{opacity:1!important}</style></noscript>
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center">

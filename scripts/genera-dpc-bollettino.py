@@ -19,10 +19,15 @@ Si leggono **entrambe** le fonti e si tiene il bollettino completo più recente.
    `files/topojson/*`. Il timbro è nel nome (`20261109_1402.json` insieme a
    `_today.json` e `_tomorrow.json`). Bastano tre richieste, fatte in CI: il
    browser della Sala non le fa, legge solo questo snapshot.
-2. **Mirror opendatasicilia**, la stessa fonte della barra di allerta
-   (`scripts/check-allerta.py`). Il CSV a nome fisso
-   `bollettino-oggi-zone-latest.csv` ha `data_pubblicazione`
+2. **Mirror opendatasicilia**, che per la barra di allerta
+   (`scripts/check-allerta.py`) è dall'11/11/2026 solo la riserva. Il CSV a
+   nome fisso `bollettino-oggi-zone-latest.csv` ha `data_pubblicazione`
    (`2026-09-22T14:21:59+01:00` → `20260922_1421`).
+
+Dall'11/11/2026 questa ricerca la usa anche `scripts/check-allerta.py`, che
+importa le funzioni di questo file per leggere le carte della zona di
+Genzano dal repository ufficiale: chi cambia la scelta del timbro la cambia
+per entrambi.
 
 Si sceglie il timbro più alto fra quelli trovati, ma solo se sulla fonte
 ufficiale esiste la terna (`<timbro>.json` + le due carte). Un timbro più
@@ -53,6 +58,7 @@ Uso:  python3 scripts/genera-dpc-bollettino.py [--dry-run] [--stamp AAAAMMGG_HHM
 from __future__ import annotations
 
 import csv
+import gzip
 import io
 import json
 import os
@@ -66,7 +72,7 @@ from pathlib import Path
 REPO = "pcm-dpc/DPC-Bollettini-Criticita-Idrogeologica-Idraulica"
 API = f"https://api.github.com/repos/{REPO}"
 RAW = f"https://raw.githubusercontent.com/{REPO}/master/files/"
-# stessa fonte della barra di allerta del sito (check-allerta.py): nome fisso
+# mirror opendatasicilia, CSV a nome fisso: qui serve solo come indizio del timbro
 MIRROR = ("https://raw.githubusercontent.com/opendatasicilia/"
           "DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/"
           "data/bollettini/bollettino-oggi-zone-latest.csv")
@@ -86,12 +92,17 @@ NOTA = ("Il timbro è il bollettino completo più recente fra il repository "
 
 
 def prendi(url: str, json_atteso: bool = True):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+    # Compressione richiesta: gli alberi git ufficiali sono di qualche MB e,
+    # dall'11/11/2026, li legge anche check-allerta.py ogni 5 minuti.
+    req = urllib.request.Request(
+        url, headers={"User-Agent": UA, "Accept": "*/*", "Accept-Encoding": "gzip"})
     tok = os.environ.get("GITHUB_TOKEN")
     if tok and url.startswith(API):
         req.add_header("Authorization", f"Bearer {tok}")
     with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
         dati = r.read()
+        if (r.headers.get("Content-Encoding") or "").lower() == "gzip":
+            dati = gzip.decompress(dati)
     return json.loads(dati) if json_atteso else dati.decode("utf-8", "replace")
 
 

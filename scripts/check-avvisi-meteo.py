@@ -4,7 +4,7 @@ Aggiorna data/allerta.json con il blocco "avviso_meteo" leggendo la pagina
 "Allertamenti" della Regione Lazio, filtrando i PDF degli avvisi di
 condizioni meteorologiche avverse (vento, neve, ondate di calore, ghiaccio,
 gelate, mareggiate) — distinti dai normali allertamenti di criticità
-idrogeologica e idraulica già coperti dal check-allerta sul CSV opendatasicilia.
+idrogeologica e idraulica già coperti da check-allerta.py (bollettino di criticità del Dipartimento e della Regione).
 
 Logica:
 1. Scarica la pagina HTML degli "allertamenti".
@@ -87,7 +87,7 @@ HTTP_TIMEOUT = 30
 LOOKBACK_DAYS = 5
 
 # Mapping: parola chiave nel campo "PER I SEGUENTI RISCHI:" → tipo umano.
-# IDROGEOLOG e IDRAULICA sono ignorati: già coperti dal CSV opendatasicilia.
+# IDROGEOLOG e IDRAULICA sono ignorati: già coperti da check-allerta.py (bollettini di criticità).
 RISK_TYPES = {
     "VENTO": "vento",
     "NEVE": "neve",
@@ -157,7 +157,7 @@ def classifica_rischio(rischio_raw):
 
     Caso composito: 'VENTO, NEVE, CRITICITÀ IDROGEOLOGICA ED IDRAULICA' →
     estraggo "vento, neve" e ignoro la parte idrogeologica che è già
-    coperta dal CSV opendatasicilia.
+    coperta da check-allerta.py (bollettini di criticità).
     """
     if not rischio_raw:
         return None

@@ -3,7 +3,24 @@
 Aggiorna data/allerta.json con i dati di criticità idrogeologica/idraulica
 per Genzano di Roma (Zona F — Bacini Costieri Sud) leggendo:
 
-1. Fonte PRIMARIA: CSV opendatasicilia (mirror DPC nazionale)
+1. Fonte nazionale PRIMARIA dall'11/11/2026: il repository ufficiale del
+   Dipartimento della Protezione Civile (pcm-dpc/DPC-Bollettini-Criticita-
+   Idrogeologica-Idraulica). Il bollettino più recente si trova con la stessa
+   ricerca della Sala situazioni (genera-dpc-bollettino.py: albero git
+   ufficiale, elenco dei commit, timbro del mirror come indizio) più il
+   timbro dello snapshot static/open-data/dpc-bollettino.json: vale il più
+   recente che sulla fonte ufficiale ha le sue carte. Dal
+   bollettino si leggono le carte `topojson/<timbro>_today.json` e
+   `_tomorrow.json` (solo quelle ancora valide) e la zona che contiene
+   Genzano di Roma: «Per rischio idrogeologico», «Per rischio temporali»,
+   «Per rischio idraulico», «Rappresentata nella mappa».
+   Nasce l'11/11/2026: il mirror opendatasicilia, fino ad allora fonte
+   primaria, era fermo all'8/11, e il sito restava indietro rispetto al
+   Dipartimento (istruzione di Alessandro: le fonti ufficiali prima, il
+   mirror come riserva).
+
+   RISERVA: i CSV opendatasicilia (mirror del DPC), letti solo se la fonte
+   ufficiale non dà un bollettino valido adesso:
    - bollettino-oggi-comuni-latest.csv
    - bollettino-domani-comuni-latest.csv
 
@@ -11,14 +28,14 @@ per Genzano di Roma (Zona F — Bacini Costieri Sud) leggendo:
    GIRO dall'08/10/2026 e non più solo come ripiego:
    www.regione.lazio.it/sites/default/files/criticita-idrogeologica/AAAA/bollettino_DD_MM_AAAA.pdf
    Si parsa con pdftotext -layout ("Valutazioni per OGGI/DOMANI", riga della
-   Zona F) e le sue righe si affiancano a quelle del CSV: per ogni giorno vale
-   il bollettino pubblicato più di recente (a parità di giorno, il livello
-   più alto). Nasce l'08/10/2026: il Centro
+   Zona F) e le sue righe si affiancano a quelle del Dipartimento: per ogni
+   giorno vale il bollettino pubblicato più di recente (a parità di giorno, il
+   livello più alto). Nasce l'08/10/2026: il Centro
    Funzionale ha portato la Zona F ad arancione con il bollettino di
    mezzogiorno, mentre il CSV DPC del giorno prima diceva ancora gialla, e il
    sito è rimasto giallo per ore. In Lazio l'allerta la emette il Centro
    Funzionale regionale (rule 06): la sua valutazione non può restare
-   indietro rispetto al mirror nazionale.
+   indietro rispetto al bollettino nazionale.
 
 Logica: filtra per data_validita_inizio ≤ now ≤ data_validita_fine (tz
 Europe/Rome), prende il MAX livello tra i bollettini validi, espone anche
@@ -36,7 +53,8 @@ Output GH:
 - old_level / new_level
 - descrizione / motivo
 - level_changed=true|false
-- source=opendatasicilia|pdf-regione-lazio|misto
+- source=dpc-ufficiale|opendatasicilia|pdf-regione-lazio, unite con «+»
+                            (le fonti che hanno dato almeno una riga)
 - fonti_ko=true|false     → almeno una fonte non è stata letta (rete, 404,
                             schema cambiato): il workflow la segnala con una
                             issue `fonte-rotta` se il guasto persiste.
@@ -49,6 +67,8 @@ dati letti dalle altre fonti deve partire comunque.
 """
 
 import csv
+import gzip
+import importlib.util
 import io
 import json
 import os
@@ -63,6 +83,24 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 ALLERTA_PATH = ROOT / "data" / "allerta.json"
+
+# Fonte nazionale primaria (dall'11/11/2026): il repository ufficiale del
+# Dipartimento. Le carte si chiamano col timbro del bollettino, che non ha un
+# nome fisso: lo trova genera-dpc-bollettino.py, che qui si riusa.
+DPC_RAW = ("https://raw.githubusercontent.com/pcm-dpc/"
+           "DPC-Bollettini-Criticita-Idrogeologica-Idraulica/master/files/")
+DPC_SNAPSHOT = ROOT / "static" / "open-data" / "dpc-bollettino.json"
+DPC_SCRIPT_TIMBRO = ROOT / "scripts" / "genera-dpc-bollettino.py"
+DPC_FONTE = "Repository ufficiale del Dipartimento (bollettino di criticità)"
+# Campi della zona nelle carte ufficiali → colonne del CSV del mirror, così il
+# resto dello script tratta allo stesso modo le due fonti.
+CAMPI_DPC = {
+    "avviso_idrogeologico": "Per rischio idrogeologico",
+    "avviso_temporali": "Per rischio temporali",
+    "avviso_idraulico": "Per rischio idraulico",
+    "avviso_criticita": "Rappresentata nella mappa",
+}
+ZONA_DPC_NOME = "Bacini Costieri Sud"
 
 CSV_URLS = {
     "oggi": (
@@ -199,16 +237,212 @@ def costruisci_titolo_ricco(livello, rischi_attivi):
     return f"{base} — {', '.join(rischi_attivi)}"
 
 
-def http_get_text(url, timeout=HTTP_TIMEOUT):
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8")
-
-
 def http_get_bytes(url, timeout=HTTP_TIMEOUT):
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    """Scarica un indirizzo chiedendo la compressione: le carte del
+    Dipartimento passano da 1,2 MB a circa 400 KB, i CSV del mirror da 3 MB
+    a un centinaio di KB (lo script gira ogni 5 minuti)."""
+    req = urllib.request.Request(
+        url, headers={"User-Agent": USER_AGENT, "Accept-Encoding": "gzip"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read()
+        dati = r.read()
+        if (r.headers.get("Content-Encoding") or "").lower() == "gzip":
+            dati = gzip.decompress(dati)
+        return dati
+
+
+def http_get_text(url, timeout=HTTP_TIMEOUT):
+    return http_get_bytes(url, timeout).decode("utf-8")
+
+
+def http_get_json(url, timeout=HTTP_TIMEOUT):
+    return json.loads(http_get_bytes(url, timeout))
+
+
+# ── Fonte nazionale primaria: repository ufficiale del Dipartimento ──
+
+def modulo_timbro_dpc():
+    """genera-dpc-bollettino.py sa già trovare il bollettino più recente
+    (albero ufficiale, commit, mirror, terna completa): si riusa, così le due
+    automazioni scelgono lo stesso bollettino con la stessa logica."""
+    spec = importlib.util.spec_from_file_location(
+        "genera_dpc_bollettino", DPC_SCRIPT_TIMBRO)
+    modulo = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(modulo)
+    return modulo
+
+
+def timbro_snapshot():
+    """Timbro dello snapshot che aggiorna-dati-sala.yml tiene nel repository
+    (static/open-data/dpc-bollettino.json), "" se non si legge."""
+    try:
+        snap = json.loads(DPC_SNAPSHOT.read_text(encoding="utf-8"))
+    except Exception:
+        return ""
+    timbro = str((snap or {}).get("stamp") or "")
+    return timbro if re.fullmatch(r"\d{8}_\d{4}", timbro) else ""
+
+
+def timbro_dpc():
+    """(timbro, da dove, problemi) del bollettino completo più recente.
+
+    I candidati sono quelli di genera-dpc-bollettino.py (albero ufficiale o
+    elenco dei commit, più il timbro del mirror) e il timbro dello snapshot del
+    repository: vale il più recente che sulla fonte ufficiale ha le sue carte.
+    Lo snapshot conta anche quando l'API risponde: se l'API non risponde e il
+    mirror è fermo, il timbro del mirror sarebbe più vecchio dello snapshot
+    (11/11/2026: mirror all'8/11, snapshot all'11/11)."""
+    problemi = []
+    candidati = []
+    modulo = None
+    try:
+        modulo = modulo_timbro_dpc()
+        candidati, problemi = modulo.candidati_dalle_fonti()
+    except Exception as e:
+        problemi.append(f"ricerca del bollettino non riuscita ({e})")
+    snap = timbro_snapshot()
+    if snap:
+        candidati.append((snap, "snapshot del repository"))
+    else:
+        problemi.append("snapshot del repository senza un timbro leggibile")
+    if not candidati:
+        return "", "", problemi
+    if modulo is None:
+        # Senza la ricerca resta il solo snapshot: se le sue carte non ci
+        # sono, lo dirà il download.
+        return snap, "snapshot del repository", problemi
+    try:
+        timbro, via, _, incompleti = modulo.scegli_timbro(candidati, modulo.terna_completa)
+    except Exception as e:
+        problemi.append(f"verifica delle carte non riuscita ({e})")
+        return "", "", problemi
+    if incompleti:
+        problemi.append("senza terna completa: " + ", ".join(incompleti))
+    return timbro, via, problemi
+
+
+def giorni_del_bollettino(boll, pubblicazione):
+    """{"oggi": data, "domani": data} per i blocchi presenti nel bollettino.
+
+    Il bollettino emesso il giorno D valuta D («oggi») e D+1 («domani»): le
+    date vengono dal timbro. Se il testo del Dipartimento («Per la giornata di
+    oggi, mercoledì 11 novembre 2026») dice un altro giorno, lo si segnala:
+    vale il timbro, ma una differenza vuol dire che qualcosa è cambiato."""
+    mesi = "|".join(MESI_IT[1:])
+    giorni = {}
+    for etichetta, chiave, scarto in (("oggi", "today", 0), ("domani", "tomorrow", 1)):
+        blocco = boll.get(chiave)
+        if not isinstance(blocco, dict):
+            continue
+        giorno = (pubblicazione + timedelta(days=scarto)).date()
+        testo = blocco.get("html_descrition") or blocco.get("html_description") or ""
+        m = re.search(rf"giornata\s+di\s+{etichetta}\b[^0-9<]*?(\d{{1,2}})\s+({mesi})\s+(\d{{4}})",
+                      testo, re.I)
+        if m:
+            letto = (int(m.group(3)), MESI_IT.index(m.group(2).lower()), int(m.group(1)))
+            if letto != (giorno.year, giorno.month, giorno.day):
+                segnala_fonte_ko(DPC_FONTE, f"il testo del bollettino dice {m.group(1)} {m.group(2)} "
+                                            f"{m.group(3)} per «{etichetta}», il timbro {giorno.isoformat()}: "
+                                            "vale il timbro, controllare")
+        giorni[etichetta] = giorno
+    return giorni
+
+
+def zona_genzano(carta):
+    """Le proprietà della zona che contiene Genzano di Roma in una carta
+    topojson del Dipartimento. Se Genzano non c'è, la carta è cambiata: è un
+    errore, non «nessuna allerta». Se la contengono più zone (oggi non
+    succede) per ogni rischio vale il livello più alto."""
+    trovate = []
+    for oggetto in ((carta or {}).get("objects") or {}).values():
+        for geometria in oggetto.get("geometries") or []:
+            prop = geometria.get("properties") or {}
+            comuni = prop.get("Comuni") or []
+            if isinstance(comuni, str):
+                comuni = [c.strip() for c in comuni.split(",")]
+            if COMUNE in comuni:
+                trovate.append(prop)
+    if not trovate:
+        raise ValueError(f"{COMUNE} non è in nessuna zona della carta (schema cambiato?)")
+    mancanti = [nome for nome in CAMPI_DPC.values() if nome not in trovate[0]]
+    if mancanti:
+        raise ValueError(f"campi mancanti nella zona di {COMUNE}: {mancanti}")
+    zona = dict(trovate[0])
+    if len(trovate) > 1:
+        print(f"::warning::{COMUNE} compare in {len(trovate)} zone della carta: vale il livello più alto")
+        for nome in CAMPI_DPC.values():
+            zona[nome] = max((p.get(nome, "") for p in trovate), key=extract_level)
+        zona["Nome zona"] = ", ".join(p.get("Nome zona", "") for p in trovate)
+    if zona.get("Nome zona") != ZONA_DPC_NOME:
+        print(f"::warning::{COMUNE} è nella zona «{zona.get('Nome zona')}» e non in «{ZONA_DPC_NOME}»")
+    return zona
+
+
+def riga_dpc(zona, giorno, pubblicazione, etichetta):
+    """Riga nello stesso formato del CSV del mirror. Come nel mirror, la
+    valutazione per oggi vale dall'emissione del bollettino a fine giornata,
+    quella per domani dall'inizio alla fine del giorno."""
+    inizio = datetime(giorno.year, giorno.month, giorno.day, tzinfo=ROME_TZ)
+    if etichetta == "oggi" and pubblicazione.date() == giorno:
+        inizio = pubblicazione
+    fine = datetime(giorno.year, giorno.month, giorno.day, 23, 59, 59, tzinfo=ROME_TZ)
+    riga = {
+        "comune_nome": COMUNE,
+        "zona_nome": zona.get("Nome zona", ""),
+        "data_pubblicazione": pubblicazione.isoformat(),
+        "data_validita_inizio": inizio.isoformat(),
+        "data_validita_fine": fine.isoformat(),
+    }
+    for campo, nome in CAMPI_DPC.items():
+        riga[campo] = zona.get(nome, "")
+    return riga
+
+
+def leggi_dpc_ufficiale(now):
+    """Righe "oggi"/"domani" per Genzano dal repository ufficiale del
+    Dipartimento. Le carte di giorni già passati non si scaricano. Ogni guasto
+    si annota: la riserva (il mirror) la decide main()."""
+    timbro, via, problemi = timbro_dpc()
+    for p in problemi:
+        print(f"  ℹ️  ricerca del bollettino: {p}")
+    if not timbro:
+        segnala_fonte_ko(DPC_FONTE, "nessun bollettino riconosciuto: " + ("; ".join(problemi) or "—"))
+        return {}
+    print(f"🏛️  Bollettino del Dipartimento {timbro} ({via})")
+    try:
+        boll = http_get_json(f"{DPC_RAW}{timbro}.json")
+    except Exception as e:
+        segnala_fonte_ko(DPC_FONTE, f"{timbro}.json non leggibile ({e})")
+        return {}
+    pubblicazione = datetime.strptime(timbro, "%Y%m%d_%H%M").replace(tzinfo=ROME_TZ)
+    righe = {}
+    giorni = giorni_del_bollettino(boll, pubblicazione)
+    if giorni and all(g < now.date() for g in giorni.values()):
+        segnala_fonte_ko(DPC_FONTE, f"l'ultimo bollettino trovato ({timbro}) riguarda solo giorni "
+                                    "già passati: fonte ferma o in ritardo")
+        return {}
+    for etichetta, giorno in giorni.items():
+        if giorno < now.date():
+            print(f"  ⏭️  carta «{etichetta}» del {timbro}: giorno {giorno} già passato, non la scarico")
+            continue
+        chiave = "today" if etichetta == "oggi" else "tomorrow"
+        try:
+            zona = zona_genzano(http_get_json(f"{DPC_RAW}topojson/{timbro}_{chiave}.json"))
+        except Exception as e:
+            segnala_fonte_ko(DPC_FONTE, f"carta «{chiave}» del {timbro} non leggibile ({e})")
+            continue
+        righe[etichetta] = riga_dpc(zona, giorno, pubblicazione, etichetta)
+        print(f"  ✅ {etichetta} {giorno}: {righe[etichetta]['avviso_criticita']}")
+    return righe
+
+
+def copre_adesso(righe, now):
+    """True se almeno una riga è valida in questo momento."""
+    for row in righe.values():
+        inizio = parse_iso(row.get("data_validita_inizio", ""))
+        fine = parse_iso(row.get("data_validita_fine", ""))
+        if inizio and fine and inizio <= now <= fine:
+            return True
+    return False
 
 
 def fetch_csv(url, label):
@@ -434,42 +668,42 @@ def gh_output(**kwargs):
 def main():
     now = datetime.now(ROME_TZ)
 
-    # ── 1. Tenta fonte primaria opendatasicilia ──
-    bollettini = {}
-    for label, url in CSV_URLS.items():
-        row = fetch_csv(url, label)
-        if row:
-            bollettini[label] = row
+    # ── 1. Fonte nazionale: repository ufficiale del Dipartimento ──
+    # Righe "dpc_oggi"/"dpc_domani". Dall'11/11/2026 è la strada principale.
+    ufficiali = leggi_dpc_ufficiale(now)
+    bollettini = {"dpc_" + label: row for label, row in ufficiali.items()}
+    fonti = ["dpc-ufficiale"] if ufficiali else []
 
-    # ── 1-bis. Bollettino del Centro Funzionale Regione Lazio, a ogni giro ──
-    # Le sue righe si aggiungono come "reg_oggi"/"reg_domani": il MAX
-    # time-aware qui sotto sceglie il livello più alto fra le due fonti.
+    # ── 1-bis. Riserva: il mirror opendatasicilia ──
+    # Si legge solo se la fonte ufficiale non dà nessuna riga valida adesso:
+    # non risponde, oppure l'ultimo bollettino trovato non copre più oggi.
+    if not copre_adesso(ufficiali, now):
+        if ufficiali:
+            segnala_fonte_ko(DPC_FONTE, "l'ultimo bollettino trovato non copre questo momento")
+        print("⚠️  Nessun bollettino del Dipartimento valido adesso: leggo il mirror opendatasicilia come riserva")
+        for label, url in CSV_URLS.items():
+            row = fetch_csv(url, label)
+            if row:
+                bollettini["csv_" + label] = row
+        if any(k.startswith("csv_") for k in bollettini):
+            fonti.append("opendatasicilia")
+
+    # ── 1-ter. Bollettino del Centro Funzionale Regione Lazio, a ogni giro ──
+    # Righe "reg_oggi"/"reg_domani": per ogni giorno vale il bollettino più
+    # recente e, a parità, il livello più alto (1-quater).
     regionali = fallback_pdf_regione_lazio(now)
-    source = "opendatasicilia"
+    for label, row in regionali.items():
+        bollettini["reg_" + label] = row
+    if regionali:
+        fonti.append("pdf-regione-lazio")
+    source = "+".join(fonti) or "none"
     if not bollettini:
-        print("⚠️  Entrambi i CSV opendatasicilia irraggiungibili: uso il solo bollettino della Regione Lazio")
-        if regionali:
-            bollettini = dict(regionali)
-            source = "pdf-regione-lazio"
-        else:
-            print("::warning::Anche il bollettino regionale non è leggibile. Non aggiorno allerta.json")
-            gh_output(changed="false", sostanziale="false", source="none")
-            sys.exit(0)
-    else:
-        for label, row in regionali.items():
-            bollettini["reg_" + label] = row
-        if regionali:
-            source = "misto"
-    if 0 < len([k for k in bollettini if not k.startswith("reg_")]) < 2:
-        # Solo uno dei due CSV è arrivato. Tentiamo di completare via PDF
-        # ma SOLO se possiamo (e ricomponendo: NON sovrascrivere il CSV
-        # che c'è già). Strategia conservativa: NON attiviamo fallback per
-        # "solo uno", perché un fetch a vuoto su un singolo CSV è rumore
-        # comune (es. CDN GitHub temporaneamente). La logica MAX time-aware
-        # downstream gestisce gracefully il caso "solo oggi" o "solo domani".
-        print(f"ℹ️  Solo CSV {list(bollettini.keys())} disponibile, non attivo fallback (rumore CDN)")
+        print("::warning::Né il Dipartimento, né il mirror, né il bollettino regionale sono leggibili. "
+              "Non aggiorno allerta.json")
+        gh_output(changed="false", sostanziale="false", source="none")
+        sys.exit(0)
 
-    # ── 1-ter. Per ogni giorno vale il bollettino PIÙ RECENTE ──
+    # ── 1-quater. Per ogni giorno vale il bollettino PIÙ RECENTE ──
     # Se Regione e DPC coprono lo stesso giorno, si tiene quello pubblicato
     # per ultimo (per data di pubblicazione): così un declassamento o una
     # cessazione del Centro Funzionale non resta coperta dal livello più alto
@@ -510,7 +744,7 @@ def main():
         # passato per verificato. Ora nessun bollettino valido adesso = fonti
         # ferme: il file resta com'era e il guasto si dichiara.
         segnala_fonte_ko(
-            "Bollettini di criticità (CSV + PDF)",
+            "Bollettini di criticità (Dipartimento, mirror e Regione)",
             f"nessun bollettino valido adesso fra {sorted(bollettini)}: fonti ferme o in ritardo",
         )
         gh_output(changed="false", sostanziale="false", source=source)
@@ -544,16 +778,14 @@ def main():
     print(f"📊 MAX level={livello}, dal bollettino '{bollettino_attivo_label}'")
 
     # ── 3-bis. Blocco "domani" SEPARATO se data_validita_inizio > today ──
-    # Fra le righe di domani (CSV DPC e bollettino regionale) vale la più alta.
+    # Fra le righe di domani (Dipartimento, eventuale mirror e bollettino
+    # regionale) vale la più alta.
     domani_block = None
     today_in_rome = now.date()
     righe_domani = []
-    for label in ("domani", "reg_domani", "reg_oggi"):
-        row_d = bollettini.get(label)
-        if not row_d:
-            continue
+    for label, row_d in bollettini.items():
         inizio_d = parse_iso(row_d.get("data_validita_inizio", ""))
-        if inizio_d and inizio_d.date() > today_in_rome:
+        if inizio_d and inizio_d.astimezone(ROME_TZ).date() > today_in_rome:
             righe_domani.append((inizio_d, row_d))
     if righe_domani:
         inizio_d = min(r[0] for r in righe_domani)
@@ -594,7 +826,8 @@ def main():
     # bollettino + finestra validità (es. "Ordinaria per rischio temporali,
     # Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del
     # 12 maggio 2026, validità 13 maggio 00:00–23:59.").
-    # Il dato grezzo del CSV opendatasicilia ha già tutti i campi necessari.
+    # Le righe del Dipartimento, del mirror e della Regione hanno tutte gli
+    # stessi campi (formato del CSV del mirror).
     titolo = costruisci_titolo_ricco(livello, active_risks)
     # Per la descrizione passo la riga "vincente" dell'attivo (quella che ha
     # determinato il MAX); per livello verde la riga può essere None.

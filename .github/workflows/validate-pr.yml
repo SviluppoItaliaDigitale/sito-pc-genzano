@@ -544,6 +544,16 @@ jobs:
       - name: "🌬️ Validità degli avvisi meteo"
         run: python3 scripts/test-check-avvisi-meteo.py
 
+      # 11/11/2026: il mirror opendatasicilia, fonte primaria del livello di
+      # allerta, era fermo all'8/11. Ora il bollettino nazionale si legge dal
+      # repository ufficiale del Dipartimento e il mirror è solo la riserva.
+      # Prove senza rete sui valori veri del bollettino dell'11/11 ore 15:40:
+      # zona di Genzano, validità, carte già scadute non scaricate, riserva
+      # solo quando la fonte ufficiale non copre adesso, scelta del timbro con
+      # l'API ferma e il mirror fermo, bollettino regionale più recente.
+      - name: "🏛️ Fonti del livello di allerta"
+        run: python3 scripts/test-check-allerta.py
+
       # 22/10/2026: la cornice di microtesto si mette anche sulle grafiche fatte in
       # altro modo (locandine, programmi di grafica esterni) con
       # `python3 scripts/microtesto_cornice.py GRAFICA.png`. Prove con grafiche

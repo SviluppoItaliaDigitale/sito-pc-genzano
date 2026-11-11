@@ -68,11 +68,14 @@ jobs:
           echo "FONTI_KO_FILE=$RUNNER_TEMP/fonti-ko.txt" >> "$GITHUB_ENV"
           : > "$RUNNER_TEMP/fonti-ko.txt"
 
-      - name: "🛠️ Setup pdftotext (per fallback PDF Regione Lazio)"
-        # pdftotext serve SOLO al fallback PDF Regione Lazio (il percorso primario
-        # è il CSV opendatasicilia). `apt-get update` prima dell'install evita il
-        # 404 sul .deb stantio dell'immagine runner; se l'install fallisce comunque,
-        # il job prosegue (warning) anziché bloccare l'intera verifica allerta.
+      - name: "🛠️ Setup pdftotext (per il PDF della Regione Lazio)"
+        # pdftotext serve al bollettino PDF del Centro Funzionale della Regione
+        # Lazio, letto a ogni giro accanto al repository ufficiale del
+        # Dipartimento (dall'11/11/2026 la fonte nazionale primaria; il CSV
+        # opendatasicilia resta la riserva). `apt-get update` prima dell'install
+        # evita il 404 sul .deb stantio dell'immagine runner; se l'install
+        # fallisce comunque, il job prosegue (warning) anziché bloccare l'intera
+        # verifica allerta.
         # 11/11/2026: con i server di Ubuntu irraggiungibili dai runner pdftotext
         # non si installava, il PDF regionale non si leggeva e, con il CSV del
         # Dipartimento fermo all'8/11, il bollettino di oggi non entrava nel sito.
@@ -81,10 +84,15 @@ jobs:
         run: |
           if command -v pdftotext >/dev/null 2>&1; then exit 0; fi
           APT_TEMPO_MASSIMO=240 bash scripts/apt-installa.sh --no-install-recommends poppler-utils \
-            || echo "::warning::poppler-utils non installato: fallback PDF Regione Lazio disattivato per questo run (resta attivo il percorso CSV primario)."
+            || echo "::warning::poppler-utils non installato: bollettino PDF della Regione Lazio non letto in questo run (resta il bollettino del Dipartimento)."
 
       - name: "🔍 Verifica livello allerta DPC per Genzano di Roma"
         id: check
+        env:
+          # Il bollettino più recente del Dipartimento si trova con l'API di
+          # GitHub (albero del repository ufficiale): col token le richieste
+          # non consumano il limite di 60 l'ora per indirizzo.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/check-allerta.py
 
 
@@ -143,7 +151,7 @@ jobs:
           fi
           echo "sostanziale=$SOSTANZIALE" >> "$GITHUB_OUTPUT"
           git commit -m "Allerta meteo: $MSG_HEAD" \
-                     -m "Aggiornamento automatico da bollettino DPC (opendatasicilia), avvisi meteo e bollettino AIB Regione Lazio."
+                     -m "Aggiornamento automatico dai bollettini di criticità (fonti: ${{ steps.check.outputs.source }}), avvisi meteo e bollettino AIB Regione Lazio."
           # Retry+rebase per evitare conflitti di concorrenza con altri workflow
           for tentativo in 1 2 3; do
             if git push 2>&1; then break; fi
