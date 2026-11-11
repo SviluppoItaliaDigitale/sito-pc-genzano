@@ -1,10 +1,10 @@
 ultimo_audit: '2026-11-11'
-totale: 76
+totale: 77
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 39
+  TERZO: 40
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -300,6 +300,20 @@ documenti:
   pages: 4
   errors: []
   text_chars_sample: 5518
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/ordinanza-sindacale-evacuazione-scuole-genzano-2026-11-11.pdf
+  file: ordinanza-sindacale-evacuazione-scuole-genzano-2026-11-11.pdf
+  size_kb: 198.1
+  sha256: cc058f80b5e0fc3bbcdd5f3e97865da079c94d39ddc120892f3bf82c28e5038f
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Genzano di Roma _____________
+  pages: 2
+  errors: []
+  text_chars_sample: 4759
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
