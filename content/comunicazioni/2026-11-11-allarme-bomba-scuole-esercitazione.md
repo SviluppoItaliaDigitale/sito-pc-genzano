@@ -49,24 +49,25 @@ Una prova di evacuazione, l'allarme di oggi e un terremoto seguono lo stesso sch
 ### 1. L'allarme
 
 - **Nella prova** suona il segnale previsto dal Piano di emergenza della scuola: campanella prolungata, sirena o annuncio.
-- **Oggi** l'allarme è arrivato per mail. Il dirigente scolastico, che spesso coordina l'emergenza, ha avvisato le forze dell'ordine e ha attivato il piano.
+- **Oggi** sono arrivate al Sindaco e alle forze dell'ordine segnalazioni di una possibile minaccia di ordigno nelle scuole. Il Sindaco ha ordinato di evacuare tutte le scuole, nidi compresi, e di attivare il Piano di emergenza di ogni istituto.
 - **Con il terremoto** l'allarme è la scossa stessa. Non c'è preavviso: per questo ognuno deve sapere già che cosa fare.
 
 ### 2. Il primo gesto
 
-- **Nella prova e oggi** si interrompe la lezione e si esce in fila, senza correre e senza spingere. L'apri-fila sta davanti, il chiudi-fila in fondo.
+- **Nella prova** si interrompe la lezione e si esce in fila, senza correre e senza spingere. L'apri-fila sta davanti, il chiudi-fila in fondo.
+- **Oggi** l'uscita segue lo stesso Piano di emergenza. La guidano i dirigenti scolastici e i responsabili della sicurezza, come prevede l'ordinanza.
 - **Con il terremoto** il primo gesto è l'opposto: **durante la scossa non si esce**. Ci si abbassa, ci si copre sotto il banco o vicino a un muro portante e ci si tiene. Si proteggono testa e collo, lontano dalle finestre. Si esce solo quando la scossa è finita, senza usare l'ascensore.
 
 ### 3. Il punto di raccolta e l'appello
 
 - **In tutti e tre i casi** ogni classe raggiunge il suo punto di raccolta all'esterno. L'insegnante fa l'appello: è il momento in cui si verifica che ci siano tutti.
-- **Oggi** l'attesa è più lunga di una prova: si resta fuori finché le forze dell'ordine non hanno finito i controlli.
+- **Oggi** bambini e ragazzi restano ai punti di raccolta previsti dal piano della scuola. Aspettano lì finché non vengono affidati ai genitori, a chi ne fa le veci o a un loro delegato.
 - **Con il terremoto** il punto di raccolta deve essere lontano da edifici, alberi, lampioni e fili elettrici. Per le famiglie il Piano di emergenza comunale indica le [aree di attesa](/aree-attesa/).
 
 ### 4. Il cessato allarme
 
 - **Nella prova** lo dà il coordinatore dell'emergenza.
-- **Oggi** si rientra, o si torna a casa, solo quando le forze dell'ordine hanno finito i controlli.
+- **Oggi** non si rientra in classe: l'ordinanza sospende ogni attività didattica ed educativa per tutta la giornata dell'11 novembre.
 - **Con il terremoto** non si rientra finché l'edificio non è stato controllato e le autorità non lo consentono.
 
 ### 5. Le famiglie
