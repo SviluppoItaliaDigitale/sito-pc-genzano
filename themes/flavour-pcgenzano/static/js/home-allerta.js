@@ -69,12 +69,31 @@
     return GIORNI[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + MESI_NOMI[d.getUTCMonth()];
   }
 
-  function etichetta(g, forma, oggi) {
+  // Ora di scadenza in ora italiana, nella forma del partial: «alle 18»,
+  // «all'una», «alle 18:30»; "" a mezzanotte (allora vale «fine giornata»).
+  function oraFine(d) {
+    var h, m;
+    try {
+      var p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(d);
+      var o = {};
+      for (var i = 0; i < p.length; i++) o[p[i].type] = p[i].value;
+      h = +o.hour % 24; m = +o.minute;
+    } catch (e) { h = d.getHours(); m = d.getMinutes(); }
+    if (isNaN(h) || isNaN(m) || (h === 0 && m === 0)) return '';
+    if (m) return 'alle ' + h + ':' + due(m);
+    return h === 1 ? 'all\'una' : 'alle ' + h;
+  }
+
+  function etichetta(g, forma, oggi, ora) {
     var nome = nomeGiorno(g);
     var dd = utcDaGiorno(oggi, 1);
     var domani = dd.getUTCFullYear() + '-' + due(dd.getUTCMonth() + 1) + '-' + due(dd.getUTCDate());
     if (forma === 'da') return g === oggi ? 'Da oggi, ' + nome : (g === domani ? 'Da domani, ' + nome : 'Da ' + nome);
-    if (forma === 'fino') return g === oggi ? 'fino a fine giornata' : (g === domani ? 'fino a domani, ' + nome : 'fino a ' + nome);
+    if (forma === 'fino') {
+      if (g === oggi) return ora ? 'fino ' + ora : 'fino a fine giornata';
+      if (g === domani) return 'fino a domani, ' + nome + (ora ? ', ' + ora : '');
+      return 'fino a ' + nome + (ora ? ' ' + ora : '');
+    }
     return g === oggi ? 'Oggi, ' + nome : (g === domani ? 'Domani, ' + nome : nome.charAt(0).toUpperCase() + nome.slice(1));
   }
 
@@ -120,10 +139,12 @@
     var q = document.getElementById('avviso-meteo-quando');
     var st = document.getElementById('avviso-meteo-stato');
     var va = document.getElementById('avviso-meteo-validita');
+    // scrivi(): ogni minuto si riscrive solo ciò che cambia, perché la striscia
+    // in vigore è role="alert" e lo stesso testo riscritto si rileggerebbe.
     if (inVigore) {
-      if (q) q.textContent = etichetta(oggi, 'giorno', oggi);
-      if (st) st.textContent = ' in vigore';
-      if (va) va.textContent = etichetta(giornoRoma(new Date(fin.getTime() - 60000)), 'fino', oggi);
+      scrivi(q, etichetta(oggi, 'giorno', oggi));
+      scrivi(st, ' in vigore');
+      scrivi(va, etichetta(giornoRoma(new Date(fin.getTime() - 60000)), 'fino', oggi, oraFine(fin)));
       bar.classList.remove('avviso-meteo-bar-previsto');
       bar.setAttribute('role', 'alert');
       var oggiBar = document.getElementById('allerta-bar');
@@ -131,13 +152,13 @@
         oggiBar.parentNode.insertBefore(bar, oggiBar.nextSibling);
       }
     } else {
-      if (q) q.textContent = etichetta(giornoRoma(ini), 'da', oggi);
-      if (st) st.textContent = '';
+      scrivi(q, etichetta(giornoRoma(ini), 'da', oggi));
+      scrivi(st, '');
       if (va) {
         var parti = [];
         if (bar.getAttribute('data-dal')) parti.push(bar.getAttribute('data-dal'));
         if (bar.getAttribute('data-durata')) parti.push('per ' + bar.getAttribute('data-durata'));
-        va.textContent = parti.join(', ');
+        scrivi(va, parti.join(', '));
       }
       bar.classList.add('avviso-meteo-bar-previsto');
       bar.setAttribute('role', 'status');

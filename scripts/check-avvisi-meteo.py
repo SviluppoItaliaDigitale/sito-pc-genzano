@@ -469,6 +469,7 @@ def main():
     print(f"Candidati ultimi {LOOKBACK_DAYS} giorni: {len(candidates)}")
 
     avviso_attivo = None
+    validita_stimata = False
     for data_pdf, path, filename in candidates:
         # Il link può essere relativo o assoluto e contenere spazi
         # («REGISTRO UFFICIALE(U)», «vento 30 03 2026»): si codificano solo quelli.
@@ -514,15 +515,23 @@ def main():
             continue
 
         inizio, fine, descrizione, dal, durata = estrai_validita_e_descrizione(testo, data_pdf, tipo)
-        if not dal:
-            # Nessuna frase «dal mattino di domani, …, e per le successive N ore»:
-            # vale la regola di prima (giorno del file per 36 ore), ma è un modello
-            # che lo script non conosce e va guardato. I dati si aggiornano lo stesso.
-            segnala_fonte_ko(f"{filename}: validità dell'avviso non trovata nel testo (formato cambiato?), "
-                             "usato il giorno del file per 36 ore")
+        stimata = not dal
+        motivo_stima = (f"{filename}: validità dell'avviso non trovata nel testo (formato cambiato?), "
+                        "stimata dal giorno del file per 36 ore")
         if now > fine:
+            if stimata:
+                # Scaduto secondo la stima, non secondo il bollettino: non basta
+                # per togliere l'avviso salvato (lettura incompleta, segnalata
+                # più sotto con le altre).
+                non_letti.append((data_pdf, motivo_stima))
             print(f"  ⏭️  {filename}: tipo={tipo}, livello={LEVEL_NAMES[livello]}, ma scaduto ({fine.isoformat()})")
             continue
+        if stimata:
+            # Nessuna frase «dal mattino di domani, …, e per le successive N ore»:
+            # vale la regola di prima (giorno del file per 36 ore), ma è un modello
+            # che lo script non conosce e va guardato. Una stima non accorcia la
+            # validità dichiarata dell'avviso in vigore (più sotto).
+            segnala_fonte_ko(motivo_stima)
 
         # Trovato un avviso valido. Prendiamo il PIÙ RECENTE che soddisfa.
         avviso_attivo = {
@@ -542,6 +551,7 @@ def main():
         if descrizione:
             avviso_attivo["descrizione"] = descrizione
         print(f"  ✅ {filename}: tipo={tipo}, livello={LEVEL_NAMES[livello]}, valido fino a {fine.isoformat(timespec='seconds')}")
+        validita_stimata = stimata
         break
 
     # Aggiorna allerta.json se serve
@@ -566,6 +576,17 @@ def main():
             changed = True
         else:
             print("ℹ️  Lettura incompleta e nessun avviso salvato: nulla da cambiare")
+    elif (avviso_attivo and validita_stimata and avviso_corrente
+          and not avviso_scaduto(avviso_corrente, now)
+          and avviso_corrente.get("tipo") == avviso_attivo["tipo"]
+          and avviso_corrente.get("livello") == avviso_attivo["livello"]):
+        # Stesso tipo e livello, ma la validità del bollettino nuovo è solo una
+        # stima: resta quella dichiarata dall'avviso in vigore, fino alla sua
+        # scadenza (revisione dell'11/11/2026: le 36 ore presunte anticipavano
+        # dal 14 alle 0 al 13 alle 12 la fine di un avviso ancora valido). Un tipo
+        # o un livello diversi sono informazione nuova e si salvano (ramo sotto).
+        print("⚠️  Validità del bollettino nuovo non letta: l'avviso in vigore resta com'era "
+              f"fino a {avviso_corrente.get('validita_fine')}")
     elif avviso_attivo:
         # Si salva ogni cambio dell'avviso, anche con lo stesso tipo e livello:
         # un bollettino nuovo che sposta o allunga la validità, o cambia il testo,

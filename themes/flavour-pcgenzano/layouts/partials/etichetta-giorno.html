@@ -4,7 +4,11 @@
      - "giorno" (predefinita): «Oggi, mercoledì 11 novembre», «Domani, giovedì
        12 novembre», altrimenti «Giovedì 12 novembre»;
      - "da": «Da oggi, …», «Da domani, …», altrimenti «Da giovedì 12 novembre»;
-     - "fino": «fino a fine giornata», «fino a domani, …», «fino a …».
+     - "fino": «fino a fine giornata», «fino a domani, …», «fino a …»; con
+       "fine" (l'istante di scadenza) che non cade a mezzanotte si aggiunge
+       l'ora: «fino alle 18», «fino a domani, giovedì 12 novembre, alle 18»
+       (revisione dell'11/11/2026: un avviso che finiva alle 18 risultava
+       valido «fino a fine giornata»). "data" resta il giorno: fine meno un minuto.
      Restituisce la stringa (partial con return). Il browser rifà lo stesso
      calcolo con il proprio orologio, in ora italiana, al caricamento e ogni
      minuto (static/js/home-allerta.js, etichetta()), così a mezzanotte «Domani»
@@ -24,8 +28,20 @@
   {{- $out = printf "Da %s" $nome -}}
   {{- if eq $ymd $oggi -}}{{- $out = printf "Da oggi, %s" $nome -}}{{- else if eq $ymd $domani -}}{{- $out = printf "Da domani, %s" $nome -}}{{- end -}}
 {{- else if eq $forma "fino" -}}
+  {{- $ora := "" -}}
+  {{- with .fine -}}
+    {{- if or (ne .Hour 0) (ne .Minute 0) -}}
+      {{- $ora = printf "alle %d" .Hour -}}
+      {{- if ne .Minute 0 -}}{{- $ora = printf "alle %d:%02d" .Hour .Minute -}}{{- else if eq .Hour 1 -}}{{- $ora = "all'una" -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
   {{- $out = printf "fino a %s" $nome -}}
-  {{- if eq $ymd $oggi -}}{{- $out = "fino a fine giornata" -}}{{- else if eq $ymd $domani -}}{{- $out = printf "fino a domani, %s" $nome -}}{{- end -}}
+  {{- if $ora -}}{{- $out = printf "fino a %s %s" $nome $ora -}}{{- end -}}
+  {{- if eq $ymd $oggi -}}
+    {{- $out = "fino a fine giornata" -}}{{- if $ora -}}{{- $out = printf "fino %s" $ora -}}{{- end -}}
+  {{- else if eq $ymd $domani -}}
+    {{- $out = printf "fino a domani, %s" $nome -}}{{- if $ora -}}{{- $out = printf "fino a domani, %s, %s" $nome $ora -}}{{- end -}}
+  {{- end -}}
 {{- else -}}
   {{- if eq $ymd $oggi -}}{{- $out = printf "Oggi, %s" $nome -}}{{- else if eq $ymd $domani -}}{{- $out = printf "Domani, %s" $nome -}}{{- end -}}
 {{- end -}}
