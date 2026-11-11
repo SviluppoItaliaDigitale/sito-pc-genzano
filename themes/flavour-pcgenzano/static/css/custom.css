@@ -153,7 +153,17 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 .avviso-meteo-bar-rossa { background: #f6b1b8 !important; color: #6f0f1c !important; }
 .avviso-meteo-bar i { font-size: 1rem; opacity: 0.85; vertical-align: -0.1em; }
 .avviso-meteo-bar strong { font-weight: 600; }
-.avviso-meteo-bar #avviso-meteo-tipo { text-transform: capitalize; font-weight: 600; }
+.avviso-meteo-bar #avviso-meteo-tipo { font-weight: 600; }
+/* Avviso non ancora in vigore (11/11/2026): stessi toni tenui della
+   pre-allerta di domani, perché a colpo d'occhio si distingua ciò che vale
+   oggi da ciò che varrà. Non basta il colore: lo dice anche il testo
+   («Da domani, giovedì 12 novembre: …»). Contrasti come la fascia di domani
+   (#664d03 su #fff3cd 7,2:1). */
+.avviso-meteo-bar-previsto.avviso-meteo-bar-gialla { background: #fff3cd !important; color: #664d03 !important; }
+.avviso-meteo-bar-previsto.avviso-meteo-bar-arancione { background: #ffe8d0 !important; color: #7a3a00 !important; }
+.avviso-meteo-bar-previsto.avviso-meteo-bar-rossa { background: #fad7da !important; color: #841a26 !important; }
+/* Il giorno a cui si riferisce la striscia di oggi («Oggi, mercoledì 11 novembre:»). */
+.allerta-giorno { font-weight: 600; margin-right: 0.25rem; }
 .avviso-meteo-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; font-weight: 500; }
 .avviso-meteo-link:hover { opacity: 0.85; }
 .avviso-meteo-link:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }

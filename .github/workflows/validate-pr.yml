@@ -536,6 +536,14 @@ jobs:
       - name: "🗺️ Timbro del bollettino DPC"
         run: python3 scripts/test-genera-dpc-bollettino.py
 
+      # 11/11/2026: l'avviso del vento «dal mattino di domani, giovedì
+      # 12.11.2026, e per le successive 24-36 ore» risultava valido fino a
+      # venerdì alle 12 invece che a fine giornata, e una validità corretta con
+      # lo stesso tipo e livello non si salvava. Prove sul testo vero
+      # dell'allertamento, senza rete e con l'ora fissa.
+      - name: "🌬️ Validità degli avvisi meteo"
+        run: python3 scripts/test-check-avvisi-meteo.py
+
       # 22/10/2026: la cornice di microtesto si mette anche sulle grafiche fatte in
       # altro modo (locandine, programmi di grafica esterni) con
       # `python3 scripts/microtesto_cornice.py GRAFICA.png`. Prove con grafiche

@@ -109,10 +109,12 @@ Dal 13 maggio 2026 il file `data/allerta.json` è diventato il **bus unico di st
     "tipo": "vento",
     "livello": "gialla",
     "descrizione": "Venti da forti a burrasca dai quadranti settentrionali",
-    "validita_inizio": "2026-05-13T00:00:00+02:00",
-    "validita_fine": "2026-05-14T12:00:00+02:00",
-    "url": "https://protezionecivile.regione.lazio.it/.../allertamento_13_05_2026.pdf",
-    "fonte_data": "2026-05-12"
+    "validita_inizio": "2026-05-13T06:00:00+02:00",
+    "validita_fine": "2026-05-15T00:00:00+02:00",
+    "validita_dal": "dal mattino",
+    "validita_durata": "24-36 ore",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/Allertamento13-05-2026.pdf",
+    "fonte_data": "2026-05-13"
   },
   "rischio_incendi": {
     "livello": "gialla",
@@ -133,9 +135,14 @@ Dal 13 maggio 2026 il file `data/allerta.json` è diventato il **bus unico di st
 - `ultimo_aggiornamento` *(ISO 8601)*: timestamp dell'**ultimo cambio livello**. Suffisso `+02:00` o `+01:00` automatico in base alla data (fuso Europe/Rome dinamico).
 - `ultimo_controllo` *(ISO 8601)*: timestamp dell'**ultima verifica**. Cambia ogni volta che il workflow committa.
 
-**Blocco `domani` (pre-allerta criticità idrogeologica):** popolato solo quando il bollettino-domani del DPC ha `data_validita_inizio` **strettamente futura** rispetto a oggi (filtro che evita la falsa pre-allerta tra 00:00 e ~14:00 quando il CSV "domani" copre ancora il giorno corrente). Mostrato in homepage come fascia "Previsto domani: …" solo se `livello ≥ gialla`.
+**Blocco `domani` (pre-allerta criticità idrogeologica):** popolato solo quando il bollettino-domani del DPC ha `data_validita_inizio` **strettamente futura** rispetto a oggi (filtro che evita la falsa pre-allerta tra 00:00 e ~14:00 quando il CSV "domani" copre ancora il giorno corrente). Mostrato in homepage come fascia «Domani, giovedì 12 novembre: prevista allerta gialla — …» solo se `livello ≥ gialla`.
 
 **Blocco `avviso_meteo` (vento, neve, calore, gelate, mareggiate):** popolato dal parser PDF degli "Allertamenti" Regione Lazio quando rileva un avviso di condizioni meteorologiche avverse **non già coperto** dal bollettino di criticità idrogeologica. Frequenza tipica: 1-3 emissioni al mese (a evento). Cessazione automatica quando l'avviso scade. Campo `tipo` può essere composito (es. `"vento, neve"`).
+
+- **Validità** (dall'11/11/2026): `validita_inizio` e `validita_fine` si ricavano dalle frasi del PDF come «dal mattino di domani, giovedì 12.11.2026, e per le successive 24-36 ore»: parte del giorno, data (o «domani» contato dalla data di protocollo) e durata. Si prende sempre l'intervallo più largo, cioè l'inizio più presto della parte del giorno e la fine più tardi più la durata massima: un avviso deve comparire prima e scadere dopo, mai il contrario. Per l'avviso valgono le frasi che parlano del suo fenomeno (il primo periodo dopo «si prevedono»); se nessuna lo nomina, valgono tutte. `validita_dal` («dal mattino») e `validita_durata` («24-36 ore») sono le parole del bollettino, mostrate così come sono. Senza frasi di validità resta la regola di prima: dal giorno del file per 36 ore. Fino a quel giorno lo script riconosceva solo «dalle prime ore di domani» e il vento del 12/11/2026 risultava valido fino alle 12 di venerdì invece che a fine giornata.
+- **Salvataggio**: si salva ogni cambio dell'avviso (tipo, livello, validità, testo, PDF), anche con lo stesso tipo e livello; prima solo il cambio di tipo o livello, e una validità corretta non arrivava mai sul sito. Il messaggio Telegram resta legato al cambio di tipo o livello. Prove: `scripts/test-check-avvisi-meteo.py` (bloccante in `validate-pr.yml`).
+- **In homepage** (`partials/home-barre-allerta.html` + `partials/avviso-meteo-barra.html`): ogni striscia dice il suo giorno. Prima che cominci: «Da domani, giovedì 12 novembre: avviso meteo per vento — allerta gialla dal mattino, per 24-36 ore», toni tenui come la pre-allerta di domani, dopo quella striscia. In vigore: «Oggi, giovedì 12 novembre: avviso meteo in vigore per vento — allerta gialla fino a domani, venerdì 13 novembre», toni pieni, subito sotto la striscia di oggi; se oggi è verde, la striscia di oggi dice «NESSUNA ALLERTA PER RISCHIO IDROGEOLOGICO E IDRAULICO», perché «Nessuna allerta» da sola contraddirebbe quella del vento. Scaduto: non si mostra.
+- **Mezzanotte**: le parole «Oggi», «Domani», «Da domani», «in vigore» le scrive la build in ora italiana (`partials/etichetta-giorno.html`) e le ricalcola il browser, in ora italiana, al caricamento, ogni minuto e quando la scheda torna in primo piano (`static/js/home-allerta.js`, sezione 3): a mezzanotte «Domani, giovedì 12 novembre» diventa «Oggi, giovedì 12 novembre» anche a pagina aperta, e alla scadenza la striscia sparisce senza aspettare una nuova build. Le parole del partial e quelle dello script devono restare uguali. Il messaggio Telegram scrive sempre la data e mai «domani», perché resta nel canale anche dopo la mezzanotte.
 
 **Blocco `rischio_incendi` (campagna AIB Lazio):** popolato dal parser PDF del "Bollettino di Pericolosità da Incendi Boschivi" durante la campagna giugno-ottobre. Genzano di Roma è in **Zona AIB 9** (confermato dal PDF ufficiale "Tabelle Comuni_Zone Allerta AIB" 2019). Mapping: BASSO→verde (nascosto), MEDIO→gialla, MODERATO→arancione, ELEVATO→rossa. Fuori stagione il blocco non esiste (cessazione automatica quando i PDF AIB non sono più pubblicati).
 

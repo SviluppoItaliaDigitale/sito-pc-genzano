@@ -31,10 +31,17 @@ validità dichiarata dall'avviso salvato è scaduta. Ogni lettura fallita si
 annota in $FONTI_KO_FILE («fonte<TAB>motivo») e in GITHUB_OUTPUT fonti_ko=true:
 il workflow apre la issue `fonte-rotta` se il guasto persiste. Uscita sempre 0.
 
-Anti-spam: lo script aggiorna allerta.json solo se cambia il "tipo" o il
-"livello" dell'avviso_meteo (non per refresh periodici). La notifica Telegram
-del blocco avviso_meteo è gestita da scripts/notifica-telegram.py
-(Priorità 3: comparsa/variazione/rientro di tipo o livello) — risolto 01/06/2026.
+Validità (dall'11/11/2026): inizio e fine si ricavano dalle frasi del PDF
+«dal mattino di domani, giovedì 12.11.2026, e per le successive 24-36 ore»
+(parte del giorno + data + durata, sempre l'intervallo più largo), e si
+salvano anche le parole del bollettino («validita_dal», «validita_durata»)
+che la home e Telegram mostrano. Prove: scripts/test-check-avvisi-meteo.py.
+
+Anti-spam: lo script aggiorna allerta.json quando cambia qualcosa dell'avviso
+(tipo, livello, validità, testo, PDF), mai per i soli refresh periodici: a
+ogni giro, con lo stesso PDF, il risultato è identico. La notifica Telegram
+del blocco avviso_meteo è gestita da scripts/notifica-telegram.py e parte solo
+alla comparsa, al cambio o al rientro di tipo o livello (Priorità 3).
 """
 
 import json
@@ -182,40 +189,183 @@ def estrai_livello(testo):
     return 0
 
 
-def estrai_validita_e_descrizione(testo, data_emissione):
-    """Estrae validità + descrizione fenomeno dal PDF.
+# Parti del giorno con cui l'allertamento indica da quando si attendono i fenomeni
+# («dal mattino di domani», «dalla tarda mattinata di domani», «dalle prime ore di
+# domani»). Per ognuna: l'ora più presto in cui può cominciare e l'ora più tardi,
+# contate dalla mezzanotte del giorno indicato (24 = mezzanotte del giorno dopo,
+# 30 = le 6 del giorno dopo). Le ore sono volutamente larghe: decidono solo da
+# quando il sito mostra l'avviso «in vigore» e quando lo toglie, e un avviso deve
+# comparire prima e scadere dopo, mai il contrario. Le parole mostrate al cittadino
+# restano quelle del bollettino («dal mattino», «per 24-36 ore»). L'ordine conta:
+# le forme lunghe prima delle brevi («tarda mattinata» prima di «mattinata»).
+PARTI_DEL_GIORNO = (
+    (r"prime\s+ore", 0, 6),
+    (r"primo\s+mattino", 5, 9),
+    (r"prima\s+mattinata", 6, 10),
+    (r"tarda\s+mattinata", 10, 13),
+    (r"mattin(?:o|ata)", 6, 12),
+    (r"primo\s+pomeriggio", 12, 15),
+    (r"tardo\s+pomeriggio", 16, 19),
+    (r"pomeriggio", 12, 18),
+    (r"tarda\s+ser(?:a|ata)", 21, 24),
+    (r"ser(?:a|ata)", 18, 24),
+    (r"mezzanotte", 0, 0),
+    (r"nott(?:e|ata)", 0, 30),
+    (r"ore\s+(?P<ora>\d{1,2})(?:[:.](?P<minuti>\d{2}))?", None, None),  # «dalle ore 12 di domani», «dalle ore 18.30»
+)
+RE_INIZIO = re.compile(
+    r"\b(?P<dal>(?:a\s+partire\s+)?dal(?:l[ae]|l['’])?)\s*(?P<parte>"
+    + "|".join(f"(?P<p{i}>{rx})" for i, (rx, _, _) in enumerate(PARTI_DEL_GIORNO))
+    + r")\b",
+    re.IGNORECASE,
+)
+# Dopo la parte del giorno: «di domani», «di oggi», «del giorno», poi la data.
+RE_QUANDO = re.compile(r"\s*(?:di|del)\s+(?:giorno\s+)?(?P<quando>oggi|domani|dopodomani)?", re.IGNORECASE)
+RE_DATA = re.compile(r"(\d{1,2})[./](\d{1,2})[./](\d{4})")
+RE_DURATA = re.compile(r"(?:successiv[ei]|prossim[ei])\s+(\d{1,2})(?:\s*[-–÷]\s*(\d{1,2}))?\s*ore", re.IGNORECASE)
+# Data di emissione scritta nell'allertamento: protocollo regionale, poi data
+# dell'avviso del Dipartimento. Serve solo se una frase dice «domani» senza la
+# data: dall'autunno 2026 il nome del file porta il giorno di validità (il PDF
+# emesso l'11/11/2026 si chiama «Allertamento12-11-2026.pdf»), non l'emissione.
+RE_EMISSIONE = (
+    re.compile(r"REGISTRO\s+UFFICIALE\.U\.\d+\.(\d{1,2})-(\d{1,2})-(\d{4})", re.IGNORECASE),
+    re.compile(r"avverse\s+n\.?\s*\d+\s+del\s+(\d{1,2})[./](\d{1,2})[./](\d{4})", re.IGNORECASE),
+)
+# Parole che dicono di quale fenomeno parla una frase, per tipo di avviso. Si
+# guarda solo il primo periodo dopo «si prevedono»: nel PDF dell'11/11/2026 la
+# frase sulle piogge cita anche le «forti raffiche di vento» dei temporali, ma
+# l'avviso per il vento è la frase che comincia con «Venti da forti a burrasca».
+PAROLE_TIPO = {
+    "vento": r"\bvent[oi]\b",
+    "neve": r"\bnev(?:e|i|icat)",
+    "ghiaccio e gelate": r"\b(?:gelat|ghiacc)",
+    "ondate di calore": r"\b(?:calor|temperatur)",
+    "mareggiate": r"\bmareggiat",
+    "temporali": r"\btemporal",
+}
 
-    Pattern frequenti:
-    - 'dalle prime ore di domani, martedì 31.03.2026, e per le successive 24-36 ore'
-    - 'a partire dalla mezzanotte di domani'
-    - 'dalle prossime ore'
 
-    Se non trova validità esplicita, assume:
-    - inizio: data emissione (o domani 00:00 se 'dalle prime ore di domani')
-    - fine: inizio + 36 ore
+def _data_emissione_testo(t):
+    """Data di emissione scritta nel PDF (protocollo o avviso DPC), o None."""
+    for rx in RE_EMISSIONE:
+        m = rx.search(t)
+        if m:
+            try:
+                return datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)), tzinfo=ROME_TZ)
+            except ValueError:
+                continue
+    return None
+
+
+def _primo_periodo_previsto(segmento):
+    """Primo periodo dopo «si prevedono (sul Lazio):», cioè il fenomeno della frase."""
+    m = re.search(r"si\s+prevedono(?:\s+sul\s+Lazio)?\s*:?\s*(.+?)(?:\.\s|\.$|$)", segmento, re.IGNORECASE)
+    return m.group(1).strip() if m else ""
+
+
+def frasi_validita(testo, data_emissione):
+    """Frasi dell'allertamento che dicono da quando e per quanto valgono i fenomeni.
+
+    Per ogni frase «dal mattino di domani, giovedì 12.11.2026, e per le successive
+    24-36 ore, si prevedono …» restituisce un dizionario con inizio più presto,
+    fine più tardi, le parole del bollettino («dal mattino», «24-36 ore») e il
+    fenomeno previsto. Una frase senza giorno (né data né oggi/domani) si scarta,
+    e così una frase con «domani» senza data se il PDF non scrive la data di
+    emissione: contarlo dal nome del file sbaglierebbe di un giorno.
     """
-    inizio = data_emissione
-    fine = data_emissione + timedelta(hours=36)
+    t = re.sub(r"\s+", " ", testo)
+    base_testo = _data_emissione_testo(t)
+    trovate = list(RE_INIZIO.finditer(t))
+    frasi = []
+    for i, m in enumerate(trovate):
+        dopo = t[m.end():m.end() + 70]
+        mq = RE_QUANDO.match(dopo)
+        md = RE_DATA.search(dopo[:50])
+        if not mq and not md:
+            continue
+        quando = (mq.group("quando") or "").lower() if mq else ""
+        if md:
+            try:
+                giorno = datetime(int(md.group(3)), int(md.group(2)), int(md.group(1)), tzinfo=ROME_TZ)
+            except ValueError:
+                continue
+        elif quando and base_testo:
+            giorno = base_testo + timedelta(days={"oggi": 0, "domani": 1, "dopodomani": 2}[quando])
+        else:
+            continue
+        idx = next(k for k in range(len(PARTI_DEL_GIORNO)) if m.group(f"p{k}"))
+        _, ora_da, ora_a = PARTI_DEL_GIORNO[idx]
+        if ora_da is None:  # «dalle ore 12», «dalle ore 18.30»
+            ora_da = int(m.group("ora"))
+            if ora_da > 24:
+                continue
+            # Con i minuti la fine si arrotonda all'ora dopo: sempre larga.
+            ora_a = ora_da + (1 if int(m.group("minuti") or 0) else 0)
+        fine_frase = trovate[i + 1].start() if i + 1 < len(trovate) else len(t)
+        segmento = t[m.end():min(fine_frase, m.end() + 600)]
+        mdur = RE_DURATA.search(segmento[:160])
+        if mdur:
+            ore = int(mdur.group(2) or mdur.group(1))
+            durata = f"{mdur.group(1)}-{mdur.group(2)} ore" if mdur.group(2) else f"{mdur.group(1)} ore"
+        else:
+            ore, durata = 36, None
+        giorno = giorno.replace(hour=0, minute=0, second=0, microsecond=0)
+        frasi.append({
+            "inizio": giorno + timedelta(hours=ora_da),
+            "fine": giorno + timedelta(hours=ora_a + ore),
+            "dal": re.sub(r"\s+", " ", f"{m.group('dal')} {m.group('parte')}".lower()).replace("' ", "'").replace("’ ", "’"),
+            "durata": durata,
+            "previsto": _primo_periodo_previsto(segmento),
+        })
+    return frasi
 
-    # Cerca "dalle prime ore di domani, ..., DD.MM.YYYY"
-    m = re.search(r"dalle\s+prime\s+ore\s+di\s+domani.*?(\d{1,2})[./](\d{1,2})[./](\d{4})", testo, re.IGNORECASE)
-    if m:
-        try:
-            inizio = datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)), 0, 0, tzinfo=ROME_TZ)
-            fine = inizio + timedelta(hours=36)
-        except ValueError:
-            pass
 
-    # Estrazione descrizione fenomeno: frase tipica "si prevedono sul Lazio:\n<descr>."
+def estrai_validita_e_descrizione(testo, data_emissione, tipo=None):
+    """Validità e descrizione dell'avviso dal testo del PDF.
+
+    Restituisce (inizio, fine, descrizione, dal, durata). Inizio e fine sono il
+    più presto e il più tardi fra le frasi che parlano del fenomeno dell'avviso
+    (``tipo``, es. «vento»); se nessuna frase lo nomina valgono tutte, e se il PDF
+    non ha frasi di validità si torna alla regola di prima: dal giorno del file
+    per 36 ore. ``dal`` e ``durata`` sono le parole del bollettino della frase
+    che comincia per prima («dal mattino», «24-36 ore»), o None.
+
+    Fino all'11/11/2026 si riconosceva solo «dalle prime ore di domani»: per
+    «dal mattino di domani, giovedì 12.11.2026, e per le successive 24-36 ore»
+    l'avviso del vento risultava valido dal giorno del file per 36 ore, cioè
+    fino a venerdì alle 12 invece che fino a sera.
+    """
+    frasi = frasi_validita(testo, data_emissione)
+    scelte = frasi
+    parole = [PAROLE_TIPO[p.strip()] for p in (tipo or "").split(",") if p.strip() in PAROLE_TIPO]
+    if parole:
+        dello_stesso_tipo = [f for f in frasi if any(re.search(rx, f["previsto"], re.IGNORECASE) for rx in parole)]
+        if dello_stesso_tipo:
+            scelte = dello_stesso_tipo
+
     descrizione = None
-    m2 = re.search(r"si\s+prevedono\s+sul\s+Lazio\s*:?\s*\n?\s*([^\n]+?)\.", testo, re.IGNORECASE | re.DOTALL)
-    if m2:
-        descrizione = m2.group(1).strip().replace("\n", " ")
-        descrizione = re.sub(r"\s+", " ", descrizione)
+    if scelte:
+        prima = min(scelte, key=lambda f: f["inizio"])
+        inizio = prima["inizio"]
+        fine = max(f["fine"] for f in scelte)
+        dal, durata = prima["dal"], prima["durata"]
+        descrizione = prima["previsto"] or None
+    else:
+        inizio = data_emissione
+        fine = data_emissione + timedelta(hours=36)
+        dal = durata = None
+
+    if not descrizione:
+        # Frase tipica "si prevedono sul Lazio:\n<descr>."
+        m2 = re.search(r"si\s+prevedono\s+sul\s+Lazio\s*:?\s*\n?\s*([^\n]+?)\.", testo, re.IGNORECASE | re.DOTALL)
+        if m2:
+            descrizione = m2.group(1).strip()
+    if descrizione:
+        descrizione = re.sub(r"\s+", " ", descrizione.replace("\n", " "))
         if len(descrizione) > 250:
             descrizione = descrizione[:247] + "..."
 
-    return inizio, fine, descrizione
+    return inizio, fine, descrizione, dal, durata
 
 
 FONTE = "Allertamenti meteo Regione Lazio"
@@ -363,7 +513,13 @@ def main():
             print(f"  ⏭️  {filename}: tipo={tipo} ma nessun livello allerta esplicito")
             continue
 
-        inizio, fine, descrizione = estrai_validita_e_descrizione(testo, data_pdf)
+        inizio, fine, descrizione, dal, durata = estrai_validita_e_descrizione(testo, data_pdf, tipo)
+        if not dal:
+            # Nessuna frase «dal mattino di domani, …, e per le successive N ore»:
+            # vale la regola di prima (giorno del file per 36 ore), ma è un modello
+            # che lo script non conosce e va guardato. I dati si aggiornano lo stesso.
+            segnala_fonte_ko(f"{filename}: validità dell'avviso non trovata nel testo (formato cambiato?), "
+                             "usato il giorno del file per 36 ore")
         if now > fine:
             print(f"  ⏭️  {filename}: tipo={tipo}, livello={LEVEL_NAMES[livello]}, ma scaduto ({fine.isoformat()})")
             continue
@@ -377,6 +533,12 @@ def main():
             "url": full_url.replace(" ", "%20"),
             "fonte_data": data_pdf.date().isoformat(),
         }
+        # Le parole del bollettino sulla validità («dal mattino», «24-36 ore»):
+        # la home e il messaggio Telegram le mostrano così come sono scritte.
+        if dal:
+            avviso_attivo["validita_dal"] = dal
+        if durata:
+            avviso_attivo["validita_durata"] = durata
         if descrizione:
             avviso_attivo["descrizione"] = descrizione
         print(f"  ✅ {filename}: tipo={tipo}, livello={LEVEL_NAMES[livello]}, valido fino a {fine.isoformat(timespec='seconds')}")
@@ -405,8 +567,18 @@ def main():
         else:
             print("ℹ️  Lettura incompleta e nessun avviso salvato: nulla da cambiare")
     elif avviso_attivo:
-        if not avviso_corrente or avviso_corrente.get("tipo") != avviso_attivo["tipo"] or avviso_corrente.get("livello") != avviso_attivo["livello"]:
-            print(f"⚠️  Aggiornamento avviso_meteo: {avviso_corrente.get('tipo') if avviso_corrente else 'nessuno'} → {avviso_attivo['tipo']} ({avviso_attivo['livello']})")
+        # Si salva ogni cambio dell'avviso, anche con lo stesso tipo e livello:
+        # un bollettino nuovo che sposta o allunga la validità, o cambia il testo,
+        # deve arrivare sul sito. Fino all'11/11/2026 si salvava solo al cambio
+        # di tipo o livello, e una validità corretta non arrivava mai. Il
+        # messaggio Telegram resta legato al solo cambio di tipo o livello
+        # (notifica-telegram.py), quindi qui non nasce nessun messaggio in più.
+        if avviso_corrente != avviso_attivo:
+            if not avviso_corrente or avviso_corrente.get("tipo") != avviso_attivo["tipo"] or avviso_corrente.get("livello") != avviso_attivo["livello"]:
+                print(f"⚠️  Aggiornamento avviso_meteo: {avviso_corrente.get('tipo') if avviso_corrente else 'nessuno'} → {avviso_attivo['tipo']} ({avviso_attivo['livello']})")
+            else:
+                print(f"ℹ️  Avviso meteo {avviso_attivo['tipo']} ({avviso_attivo['livello']}): aggiornati validità o testo "
+                      f"({avviso_attivo['validita_inizio']} → {avviso_attivo['validita_fine']})")
             changed = True
         allerta["avviso_meteo"] = avviso_attivo
     elif avviso_corrente:
