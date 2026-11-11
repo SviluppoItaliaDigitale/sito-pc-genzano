@@ -125,6 +125,10 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER_DIR: /www.protezionecivilegenzano.it/
+          # Nome per cui è emesso il certificato dell'FTP di Aruba (variabile
+          # del repository, non segreta): se c'è, il certificato si verifica
+          # su quel nome; il log del caricamento stampa i nomi da fissare.
+          FTP_TLS_NOME: ${{ vars.FTP_TLS_NOME }}
         run: |
           set -uo pipefail
           ARGS=()

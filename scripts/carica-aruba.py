@@ -210,12 +210,31 @@ class FTPS(ftplib.FTP_TLS):
     """Riuso della sessione TLS sul canale dati (Aruba lo richiede, come
     scripts/verifica-deploy-aruba.py)."""
 
+    # Nome con cui si verifica il certificato: di norma l'host, oppure il
+    # nome per cui il certificato del server è davvero emesso (FTP_TLS_NOME).
+    nome_tls: str | None = None
+
+    def auth(self):
+        if isinstance(self.sock, ssl.SSLSocket):
+            raise ValueError("Already using TLS")
+        resp = self.voidcmd("AUTH TLS")
+        self.sock = self.context.wrap_socket(self.sock, server_hostname=self.nome_tls or self.host)
+        self.file = self.sock.makefile(mode="r", encoding=self.encoding)
+        return resp
+
     def ntransfercmd(self, cmd, rest=None):
         conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
         if self._prot_p:
-            conn = self.context.wrap_socket(conn, server_hostname=self.host,
+            conn = self.context.wrap_socket(conn, server_hostname=self.nome_tls or self.host,
                                             session=self.sock.session)  # type: ignore[attr-defined]
         return conn, size
+
+    def nomi_certificato(self) -> list[str]:
+        try:
+            cert = self.sock.getpeercert() or {}  # type: ignore[union-attr]
+        except Exception:
+            return []
+        return [v for k, v in cert.get("subjectAltName", ()) if k == "DNS"]
 
 
 class ErroreAccesso(Exception):
@@ -243,35 +262,46 @@ class Server:
             self.porta = int(p)
         self.host = server
         self.ctx: ssl.SSLContext | None = None
+        self.nome_tls: str | None = None
         self._lock = threading.Lock()
 
-    def _livelli(self) -> list[tuple[str, ssl.SSLContext]]:
+    def _livelli(self) -> list[tuple[str, ssl.SSLContext, str | None]]:
         # Il certificato dell'FTP di Aruba è emesso per un nome diverso
-        # dall'host (01/10/2026): si accetta la catena senza il nome.
-        # Nessun ripiego senza verifica del certificato: se la catena non
-        # si verifica, il collegamento fallisce prima di toccare file
-        # (uscita 3) e il job passa all'azione FTP-Deploy. Il certificato
-        # non verificato si accetta solo con FTP_TLS_INSECURE=1, cioè
-        # nelle prove con il server FTPS locale e il certificato di prova.
-        liv: list[tuple[str, ssl.SSLContext]] = []
+        # dall'host (01/10/2026). Livelli, sempre con la catena verificata:
+        # 1. verifica piena sull'host;
+        # 2. se FTP_TLS_NOME è impostato, verifica piena su quel nome (il
+        #    nome per cui il certificato è emesso: identità fissata);
+        # 3. solo se FTP_TLS_NOME non c'è, catena senza il controllo del
+        #    nome, con i nomi del certificato scritti nel log perché si
+        #    possa fissare FTP_TLS_NOME e togliere questo livello.
+        # Mai senza verifica del certificato: se nessun livello regge, lo
+        # script esce con 3 prima di toccare file e il job passa all'azione
+        # FTP-Deploy. Il certificato non verificato si accetta solo con
+        # FTP_TLS_INSECURE=1, nelle prove con il server FTPS locale.
+        liv: list[tuple[str, ssl.SSLContext, str | None]] = []
         if os.environ.get("FTP_TLS_INSECURE") == "1":
             c = ssl.create_default_context()
             c.check_hostname = False
             c.verify_mode = ssl.CERT_NONE
-            liv.append(("senza verifica del certificato (solo prove locali)", c))
+            liv.append(("senza verifica del certificato (solo prove locali)", c, None))
             return liv
-        liv.append(("verifica piena", ssl.create_default_context()))
+        liv.append(("verifica piena", ssl.create_default_context(), None))
+        nome = os.environ.get("FTP_TLS_NOME", "").strip()
+        if nome:
+            liv.append((f"verifica piena sul nome del certificato {nome}", ssl.create_default_context(), nome))
+            return liv
         c = ssl.create_default_context()
         c.check_hostname = False
-        liv.append(("catena verificata, nome host non controllato", c))
+        liv.append(("catena verificata, nome host non controllato", c, None))
         return liv
 
     def apri(self) -> FTPS:
         with self._lock:
-            livelli = [("già scelto", self.ctx)] if self.ctx else self._livelli()
+            livelli = [("già scelto", self.ctx, self.nome_tls)] if self.ctx else self._livelli()
         ultimo = ""
-        for nome, ctx in livelli:
+        for nome, ctx, nome_tls in livelli:
             ftp = FTPS(context=ctx, timeout=60)
+            ftp.nome_tls = nome_tls
             try:
                 ftp.connect(self.host, self.porta)
                 ftp.login(self.utente, self.password)
@@ -282,8 +312,10 @@ class Server:
                 with self._lock:
                     if self.ctx is None:
                         self.ctx = ctx
+                        self.nome_tls = nome_tls
                         if nome != "verifica piena":
-                            log(f"ℹ️  FTPS: {nome}.")
+                            nomi = ", ".join(ftp.nomi_certificato()) or "non letti"
+                            log(f"ℹ️  FTPS: {nome}; nomi del certificato: {nomi}.")
                 return ftp
             except ftplib.all_errors as e:
                 ultimo = f"{type(e).__name__}: {e}"
