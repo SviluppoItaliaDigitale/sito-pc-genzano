@@ -1,17 +1,9 @@
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-11-10T13:02:04+01:00",
-  "ultimo_controllo": "2026-11-11T22:41:18+01:00",
-  "domani": {
-    "livello": "gialla",
-    "titolo": "Previsto giallo",
-    "rischi": [
-      "rischio idrogeologico"
-    ],
-    "data": "2026-11-12"
-  },
+  "livello": "gialla",
+  "titolo": "ALLERTA GIALLA — rischio idrogeologico",
+  "descrizione": "Ordinaria per rischio idrogeologico, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio dell'11 novembre 2026, validità 12 novembre 00:00–23:59.",
+  "ultimo_aggiornamento": "2026-11-12T00:02:05+01:00",
+  "ultimo_controllo": "2026-11-12T00:02:05+01:00",
   "avviso_meteo": {
     "tipo": "vento",
     "livello": "gialla",
