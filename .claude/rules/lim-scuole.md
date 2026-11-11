@@ -1,3 +1,16 @@
+---
+paths:
+  - "static/giochi/**"
+  - "static/formazione/**"
+  - "static/scuole/**"
+  - "content/formazione/**"
+  - "static/quizpc/**"
+  - "static/formazionepc/**"
+  - "static/abili-a-proteggere/**"
+  - "content/lim/**"
+  - "data/lim.yaml"
+---
+
 # Regola LIM: ogni materiale per le scuole funziona sulla lavagna interattiva
 
 Vale per tutto ciò che il sito offre alle scuole, presente e futuro: giochi (`static/giochi/`), schede stampabili, kit per le scuole e kit calamità, storie, Abili a proteggere, quiz (`static/quizpc/`, `static/formazionepc/`, `/quiz-preparazione/`), moduli per le scuole (`static/scuole/`), libro che si esplora, esperimenti, laboratorio meteo, tabelle CAA, Crea la mia lezione, Modalità Aula, pagine `content/formazione/**`. Istruzione dell'utente dell'01/11/2026, dopo le segnalazioni delle scuole: *«Rendi tutto perfettamente compatibile. Ho avuto segnalazioni in merito che non va bene sulle lim i contenuti del nostro sito!!!»* e *«scrivi poi una regola che il lavoro che hai fatto adesso sia replicato in futuro coi prossimi giochi kit eccetera, ogni documentazione utile utilizzabile per le scuole»*.

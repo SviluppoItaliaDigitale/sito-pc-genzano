@@ -165,6 +165,9 @@ def carica_rules() -> str:
             stampa_err(f"Rule mancante: {p}")
             continue
         testo = p.read_text(encoding="utf-8")
+        # Dall'11/11/2026 le rules hanno il frontmatter `paths:` (quando si
+        # caricano nelle sessioni): non serve al prompt, si toglie.
+        testo = re.sub(r"\A---\n.*?\n---\n+", "", testo, flags=re.S)
         for titolo in SEZIONI_ESCLUSE.get(nome, []):
             testo, trovata = togli_sezione(testo, titolo)
             if not trovata:

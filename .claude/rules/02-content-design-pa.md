@@ -1,3 +1,14 @@
+---
+paths:
+  - "content/**"
+  - "data/**"
+  - "archetypes/**"
+  - "static/formazione/**"
+  - "static/images/**"
+  - "social-bozze/**"
+  - "bozze/**"
+---
+
 # Content Design PA
 
 ## Principi di scrittura

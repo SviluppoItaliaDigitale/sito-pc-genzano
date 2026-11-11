@@ -81,7 +81,7 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 
 **Copertura di questo file:**
 - Istruzioni generali (\`CLAUDE.md\`)
-- 11 regole di governance (\`.claude/rules/\` — 01-08 incluse 04a/b/c)
+- Regole di governance (\`.claude/rules/\` — 01-09, 04a/b/c, 11-14, lim-scuole)
 - Manuale operativo completo (\`MANUALE-SITO.md\` indice + 21 file \`manuale/parte-NN.md\`)
 - Piano editoriale con fonti e calendario (\`PIANO-EDITORIALE.md\`)
 - README del progetto
@@ -99,7 +99,7 @@ Gemini, Claude web, Mistral, altre sessioni di Claude Code, ecc.).
 
 1. [README — Panoramica del progetto](#1-readme--panoramica-del-progetto)
 2. [CLAUDE.md — Istruzioni principali](#2-claudemd--istruzioni-principali)
-3. [Regole di governance (11 file in \`.claude/rules/\`)](#3-regole-di-governance)
+3. [Regole di governance (\`.claude/rules/\`)](#3-regole-di-governance)
 4. [MANUALE-SITO — Manuale operativo completo (split in 21 file)](#4-manuale-sito--manuale-operativo-completo-split-in-18-file)
 5. [PIANO-EDITORIALE — Fonti e calendario](#5-piano-editoriale--fonti-e-calendario)
 6. [Archetype articoli (\`archetypes/comunicazioni.md\`)](#6-archetype-articoli)
@@ -155,7 +155,7 @@ include_file "README.md" "1. README — Panoramica del progetto"
 include_file "CLAUDE.md" "2. CLAUDE.md — Istruzioni principali"
 
 # ── 3. Regole di governance ─────────────────────────────────────────────────
-echo -e "\n## 3. Regole di governance\n\nQuesti file sono importati automaticamente da CLAUDE.md e definiscono le regole operative per dominio.\n\n---\n" >> "$OUTPUT"
+echo -e "\n## 3. Regole di governance\n\nQuesti file definiscono le regole operative per dominio: Claude Code li carica quando si lavora sui file che descrivono (\`paths:\` nel frontmatter); 01 e 07 sono importati da CLAUDE.md.\n\n---\n" >> "$OUTPUT"
 
 include_file ".claude/rules/01-governance-pa.md" "3.1 01-governance-pa.md"
 include_file ".claude/rules/02-content-design-pa.md" "3.2 02-content-design-pa.md"
@@ -171,6 +171,19 @@ include_file ".claude/rules/06-protezione-civile-scientifica.md" "3.9 06-protezi
 include_file ".claude/rules/07-proattivita-coerenza.md" "3.10 07-proattivita-coerenza.md"
 if [ $SLIM_MODE -eq 0 ]; then
     include_file ".claude/rules/08-claude-code-setup.md" "3.11 08-claude-code-setup.md"
+fi
+include_file ".claude/rules/09-regole-contenuti-qualita.md" "3.12 09-regole-contenuti-qualita.md"
+# Dall'11/11/2026 le sezioni lunghe di CLAUDE.md stanno in questi file
+# (articoli e foto, loghi e grafiche, pubblicazione e firma): vanno sempre
+# nel contesto, anche nella versione ridotta, perché contengono i divieti
+# che un'altra AI deve conoscere (4 loghi ESC, foto mai nel banner,
+# Circolare DPC, nessun riferimento all'IA).
+include_file ".claude/rules/11-articoli-foto-social.md" "3.13 11-articoli-foto-social.md"
+include_file ".claude/rules/12-grafiche-loghi-deck-manuale.md" "3.14 12-grafiche-loghi-deck-manuale.md"
+include_file ".claude/rules/13-pubblicazione-firma-accessi.md" "3.15 13-pubblicazione-firma-accessi.md"
+if [ $SLIM_MODE -eq 0 ]; then
+    include_file ".claude/rules/lim-scuole.md" "3.16 lim-scuole.md"
+    include_file ".claude/rules/14-agenti-architettura-automazioni.md" "3.17 14-agenti-architettura-automazioni.md"
 fi
 
 # ── 4. MANUALE-SITO (indice + 21 parti) — solo in FULL ──────────────────────
@@ -209,7 +222,7 @@ if [ $SLIM_MODE -eq 0 ]; then
     include_file "data/allerta.json" "9.3 allerta.json (esempio struttura)" "json"
 
     # ── 10. Workflow GitHub Actions ──────────────────────────────────────────
-    echo -e "\n## 10. Workflow GitHub Actions principali\n\nIl sito ha 9 workflow attivi. Includiamo i 3 più importanti per dare contesto all'AI: deploy, audit completo (38 sezioni), smoke test post-deploy. Gli altri 6 sono descritti in CLAUDE.md sezione 'Automazioni periodiche'.\n\n---\n" >> "$OUTPUT"
+    echo -e "\n## 10. Workflow GitHub Actions principali\n\nIl sito ha 9 workflow attivi. Includiamo i 3 più importanti per dare contesto all'AI: deploy, audit completo (38 sezioni), smoke test post-deploy. Gli altri sono descritti in .claude/rules/10-automazioni-github-actions.md.\n\n---\n" >> "$OUTPUT"
     include_file ".github/workflows/deploy.yml" "10.1 deploy.yml — build + Aruba + GitHub Pages" "yaml"
     include_file ".github/workflows/audit-sito.yml" "10.2 audit-sito.yml — 38 sezioni di audit completo (lun 09:00)" "yaml"
     include_file ".github/workflows/smoke-test-post-deploy.yml" "10.3 smoke-test-post-deploy.yml — verifica live post-deploy" "yaml"
