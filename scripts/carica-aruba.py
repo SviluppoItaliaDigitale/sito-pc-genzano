@@ -246,18 +246,24 @@ class Server:
         self._lock = threading.Lock()
 
     def _livelli(self) -> list[tuple[str, ssl.SSLContext]]:
-        # Stessi tre livelli di verifica-deploy-aruba.py: il certificato
-        # dell'FTP di Aruba è emesso per un nome diverso dall'host (01/10/2026).
+        # Il certificato dell'FTP di Aruba è emesso per un nome diverso
+        # dall'host (01/10/2026): si accetta la catena senza il nome.
+        # Nessun ripiego senza verifica del certificato: se la catena non
+        # si verifica, il collegamento fallisce prima di toccare file
+        # (uscita 3) e il job passa all'azione FTP-Deploy. Il certificato
+        # non verificato si accetta solo con FTP_TLS_INSECURE=1, cioè
+        # nelle prove con il server FTPS locale e il certificato di prova.
         liv: list[tuple[str, ssl.SSLContext]] = []
-        if os.environ.get("FTP_TLS_INSECURE") != "1":
-            liv.append(("verifica piena", ssl.create_default_context()))
+        if os.environ.get("FTP_TLS_INSECURE") == "1":
             c = ssl.create_default_context()
             c.check_hostname = False
-            liv.append(("catena verificata, nome host non controllato", c))
+            c.verify_mode = ssl.CERT_NONE
+            liv.append(("senza verifica del certificato (solo prove locali)", c))
+            return liv
+        liv.append(("verifica piena", ssl.create_default_context()))
         c = ssl.create_default_context()
         c.check_hostname = False
-        c.verify_mode = ssl.CERT_NONE
-        liv.append(("senza verifica del certificato, come l'azione FTP-Deploy", c))
+        liv.append(("catena verificata, nome host non controllato", c))
         return liv
 
     def apri(self) -> FTPS:

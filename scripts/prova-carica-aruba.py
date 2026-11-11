@@ -26,7 +26,9 @@ Prove (richieste di Alessandro dell'11/11/2026 comprese):
   9. un file che non si riesce a caricare: uscita 1, manifesto e stato
      del server NON aggiornati, elenco in sospeso lasciato;
  10. il server accetta meno collegamenti di quelli chiesti: si prosegue
-     con quelli accettati.
+     con quelli accettati;
+ 11. certificato che non si verifica (senza FTP_TLS_INSECURE): uscita 3,
+     nulla toccato, mai un collegamento senza verifica.
 
 Uso: python3 scripts/prova-carica-aruba.py   (serve: pip install pyftpdlib pyopenssl)
 Exit 0 se tutte le prove passano.
@@ -153,10 +155,13 @@ class Banco:
         self.server.max_cons = 64
         threading.Thread(target=self.server.serve_forever, kwargs={"timeout": 0.5}, daemon=True).start()
 
-    def env(self, password: str = "segreta") -> dict:
+    def env(self, password: str = "segreta", insicuro: bool = True) -> dict:
         e = dict(os.environ)
         e.update({"FTP_SERVER": f"127.0.0.1:{self.porta}", "FTP_USERNAME": "prova",
-                  "FTP_PASSWORD": password, "FTP_SERVER_DIR": "/www.sito/", "FTP_TLS_INSECURE": "1"})
+                  "FTP_PASSWORD": password, "FTP_SERVER_DIR": "/www.sito/"})
+        e.pop("FTP_TLS_INSECURE", None)
+        if insicuro:
+            e["FTP_TLS_INSECURE"] = "1"
         e.pop("GITHUB_OUTPUT", None)
         return e
 
@@ -191,12 +196,12 @@ def semina_server(b: Banco, public: Path, con_stato: bool = True) -> None:
 
 
 def lancia(b: Banco, public: Path, *extra: str, password: str = "segreta",
-           manifesto: Path | None = None, attendi: bool = True):
+           manifesto: Path | None = None, attendi: bool = True, insicuro: bool = True):
     cmd = [sys.executable, str(SCRIPT), "--public", str(public), "--stato-nome", STATO,
            "--connessioni", "4", "--pausa-lucchetto", "1", *extra]
     if manifesto:
         cmd += ["--manifesto-servito", str(manifesto)]
-    p = subprocess.Popen(cmd, env=b.env(password), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    p = subprocess.Popen(cmd, env=b.env(password, insicuro), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     if not attendi:
         return p
     out, _ = p.communicate(timeout=180)
@@ -507,10 +512,20 @@ def prova_10(b: Banco) -> None:
     verifica(all(contenuto(b, r) == d for r, d in v.items()), "sul server c'è esattamente la build")
 
 
+def prova_11(b: Banco) -> None:
+    print("\n11. Certificato non verificabile (senza FTP_TLS_INSECURE)")
+    reset()
+    public = b.tmp / "p11"
+    scrivi_build(public, base_v1())
+    rc, out = lancia(b, public, insicuro=False)
+    verifica(rc == 3, "uscita 3: collegamento rifiutato, ripiego ammesso", out)
+    verifica(not EVENTI, "nulla toccato sul server")
+
+
 def main() -> int:
     b = Banco()
     try:
-        for prova in (prova_1, prova_2, prova_3, prova_4, prova_5, prova_6, prova_7, prova_8, prova_9, prova_10):
+        for prova in (prova_1, prova_2, prova_3, prova_4, prova_5, prova_6, prova_7, prova_8, prova_9, prova_10, prova_11):
             prova(b)
             # ogni prova riparte da un server vuoto
             for p in list(b.sito.iterdir()):
