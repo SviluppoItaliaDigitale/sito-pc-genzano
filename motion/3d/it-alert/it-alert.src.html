@@ -641,7 +641,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     });
     tavolaColori.visible = vP && t > E.col_da - 0.2;
     if (tavolaColori.visible) blocchi.forEach((b, i) => {
-      const u = scatto(prog(t, E.colori + i * 0.26, 0.5)), respiro = 1 + 0.035 * Math.sin(t * 1.7 - i * 0.9) * prog(t, E.colori + 1.6, 0.6);
+      const u = scatto(prog(t, E.colori + i * 0.26, 0.5)), respiro = 1 + 0.13 * Math.pow(Math.max(0, Math.sin(t * 2.1 - i * 1.15)), 2) * prog(t, E.colori + 1.6, 0.6);   // un'onda passa da un colore all'altro
       b.perno.visible = u > 0.001; b.perno.scale.set(1, Math.max(0.001, u * respiro), 1);
     });
 
