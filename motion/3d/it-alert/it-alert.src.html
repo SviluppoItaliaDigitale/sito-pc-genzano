@@ -579,7 +579,10 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     telefono.position.copy(pos);
     if (!posato && t >= E.tuffo) telefono.position.y += 0.035 * sc * Math.sin(t * 1.5);
     telefono.scale.setScalar(Math.max(0.001, sc * scatto(compare)));
-    telefono.rotation.set(0, -s.az * GR * 0.85 + 0.05 * Math.sin(t * 0.7), 0);
+    // in attesa dell'avviso e mentre si legge lo schermo il telefono si gira piano, così l'immagine non resta ferma
+    const gira = 0.3 * Math.sin((t - E.telefono) * 1.6) * fin(t, E.telefono + 0.3, E.avviso1, 0.4, 0.3)
+               + 0.14 * Math.sin(t * 2.4) * fin(t, E.zoom_a, E.cerchia + 0.2, 0.3, 0.3);
+    telefono.rotation.set(0, -s.az * GR * 0.85 + 0.05 * Math.sin(t * 0.7) + gira, 0);
     telCorpo.rotation.set(-0.07, 0, vb * 0.045 * Math.sin(t * 2 * Math.PI * 8.5));
     telCorpo.position.x = vb * 0.03 * Math.sin(t * 2 * Math.PI * 11);
     for (const o of onde) {
@@ -643,7 +646,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     });
     tavolaColori.visible = vP && t > E.col_da - 0.2;
     if (tavolaColori.visible) blocchi.forEach((b, i) => {
-      const u = scatto(prog(t, E.colori + i * 0.26, 0.5)), respiro = 1 + 0.13 * Math.pow(Math.max(0, Math.sin(t * 2.1 - i * 1.15)), 2) * prog(t, E.colori + 1.6, 0.6);   // un'onda passa da un colore all'altro
+      const u = scatto(prog(t, E.colori + i * 0.26, 0.5)), respiro = 1 + (ORIZ ? 0.25 : 0.13) * Math.pow(Math.max(0, Math.sin(t * 2.1 - i * 1.15)), 2) * prog(t, E.colori + 1.6, 0.6);   // un'onda passa da un colore all'altro
       b.perno.visible = u > 0.001; b.perno.scale.set(1, Math.max(0.001, u * respiro), 1);
     });
 

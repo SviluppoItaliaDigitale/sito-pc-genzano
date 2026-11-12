@@ -556,7 +556,7 @@ SOTT.forEach(f => {
   chiave(S(3) + 1.2, [2, 2.4, 11], -30, 13, 8, { passa: true });                    // carrellata lungo il muro
   chiave(T.allont - .3, [-5.5, 2.4, 12], -30, 13, 8); chiave(S(4), [-5.5, 2.4, 12], -30, 13, 8);
   vista(S(4) + 1.95, 'alto'); vista(T.giro5, 'alto'); vista(S(5), 'alto2');
-  vista(S(5) + .001, 'pedana'); vista(T.cut6, 'pedana');
+  chiave(S(5) + .001, [0, 1.0, 60], -16, 14, 2.9); vista(T.rann - .45, 'pedana'); vista(T.cut6, 'pedana');   // lento avvicinamento, poi ferma
   chiave(T.cut6 + .001, [-4.6, 12.4, -12.2], -40, 26, 9.4); vista(T.cut6 + 1.0, 'ciglio2'); vista(S(6), 'ciglio2');
   vista(S(6) + 1.5, 'strada'); vista(T.carta - .35, 'strada'); vista(TOTAL, 'fine');
   const camP = M3.telecamera(camera, KP, {});
@@ -574,7 +574,7 @@ SOTT.forEach(f => {
   scheda('piogge', 'Piogge forti', 'O CHE DURANO A LUNGO', () => V(XT, h0(XT, -4) - 1.1, -4), vs(40, -330), parola(1, 'piogge') - .15, T.cut2 - .3);
   scheda('crepeT', 'Crepe nel terreno', null, () => terra(-3.2, -12.6, .1), vs(150, 250), T.crepe + .1, T.muri - .5, AMBRA);
   scheda('crepeM', 'Crepe nei muri', null, () => V(-4.6, 1.2, 10.3), vs(230, 250), T.muri + .25, T.smott - .05, AMBRA);
-  scheda('inclina', 'Alberi e pali inclinati', null, () => paloSegno.localToWorld(V(0, 5.4, 0)), vs(-60, -230), T.alberi + .45, T.smott - .05, AMBRA);
+  scheda('inclina', 'Alberi e pali inclinati', null, () => paloSegno.localToWorld(V(0, 5.4, 0)), ORIZ ? { dx: -330, dy: -120 } : vs(-60, -230), T.alberi + .45, T.smott - .05, AMBRA);
   scheda('smott', 'Piccoli smottamenti', null, () => terra(-9.3, -1.2, .2), vs(170, 250), T.smott + .75, T.avvisa + 1.1, AMBRA);
   scheda('comune', 'Avvisa il Comune', 'SE NOTI QUESTI SEGNALI', null, null, T.avvisa - .1, E(2) - .4, VERDE);
   scheda('via', 'Allontanati subito', 'SE LA TERRA SI MUOVE', () => persB.testa(), vs(-150, -260), T.allont + .05, E(3) - .4, VERDE);
