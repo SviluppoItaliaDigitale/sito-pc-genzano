@@ -1,7 +1,7 @@
 ---
 title: "IT-alert: un video in 3D spiega il messaggio che avvisa di un grave pericolo"
 date: 2026-11-12T00:06:00+01:00
-description: "Un video di poco più di un minuto, con voce e sottotitoli, spiega come arriva un messaggio IT-alert, per quali emergenze si usa e che cosa fare quando lo ricevi."
+description: "Un video di poco più di un minuto, con voce e sottotitoli, spiega come arriva un messaggio IT-alert, per quali emergenze si usa e che fare quando lo ricevi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -55,7 +55,7 @@ Se il messaggio comincia con la parola TEST, è solo una prova: non devi fare ni
 
 ## Come arriva
 
-Il messaggio arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app e non serve iscriversi.
+Il messaggio arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app e non serve iscriversi. Il telefono deve avere campo: il messaggio non arriva se è spento, in modalità aereo o senza segnale.
 
 Il telefono fa un suono diverso dalle solite suonerie. Sullo schermo compare un testo che comincia con la scritta «IT-alert».
 
