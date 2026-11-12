@@ -632,25 +632,25 @@
  {
   "n": 6,
   "file": "line_6.wav",
-  "durata": 6.872,
+  "durata": 8.27,
   "testo": "Dopo il vento, non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chiama il 112.",
-  "sentito": "Dopo il vento, non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chiama il 112.",
+  "sentito": "Dopo il vento, non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chiama l'1-1-2.",
   "uno_a_uno": true,
   "parole": [
    {
     "w": "Dopo",
     "t0": 0.0,
-    "t1": 0.3
+    "t1": 0.32
    },
    {
     "w": "il",
-    "t0": 0.3,
+    "t0": 0.32,
     "t1": 0.4
    },
    {
     "w": "vento,",
     "t0": 0.4,
-    "t1": 0.84
+    "t1": 0.9
    },
    {
     "w": "non",
@@ -689,63 +689,63 @@
    },
    {
     "w": "Se",
-    "t0": 3.3,
-    "t1": 3.58
+    "t0": 3.32,
+    "t1": 3.66
    },
    {
     "w": "un",
-    "t0": 3.58,
-    "t1": 3.76
+    "t0": 3.66,
+    "t1": 3.86
    },
    {
     "w": "albero",
-    "t0": 3.76,
-    "t1": 4.1
+    "t0": 3.86,
+    "t1": 4.26
    },
    {
     "w": "o",
-    "t0": 4.1,
-    "t1": 4.24
+    "t0": 4.26,
+    "t1": 4.56
    },
    {
     "w": "un",
-    "t0": 4.24,
-    "t1": 4.3
+    "t0": 4.56,
+    "t1": 4.68
    },
    {
     "w": "cavo",
-    "t0": 4.3,
-    "t1": 4.6
+    "t0": 4.68,
+    "t1": 5.06
    },
    {
     "w": "blocca",
-    "t0": 4.6,
-    "t1": 4.86
+    "t0": 5.06,
+    "t1": 5.34
    },
    {
     "w": "la",
-    "t0": 4.86,
-    "t1": 4.98
+    "t0": 5.34,
+    "t1": 5.48
    },
    {
     "w": "strada,",
-    "t0": 4.98,
-    "t1": 5.42
+    "t0": 5.48,
+    "t1": 6.08
    },
    {
     "w": "chiama",
-    "t0": 5.48,
-    "t1": 5.7
+    "t0": 6.3,
+    "t1": 6.62
    },
    {
     "w": "il",
-    "t0": 5.7,
-    "t1": 5.86
+    "t0": 6.62,
+    "t1": 6.82
    },
    {
     "w": "112.",
-    "t0": 5.86,
-    "t1": 6.24
+    "t0": 6.82,
+    "t1": 8.02
    }
   ]
  }
