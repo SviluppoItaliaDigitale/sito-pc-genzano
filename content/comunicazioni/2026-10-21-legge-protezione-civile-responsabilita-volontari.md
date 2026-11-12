@@ -1,7 +1,8 @@
 ---
 title: "Volontari di protezione civile: il Parlamento approva la nuova legge sulla responsabilità penale"
 date: 2026-10-21T00:02:00+02:00
-description: "La Camera approva in via definitiva la legge che limita alla colpa grave la responsabilità penale colposa di volontari e operatori di protezione civile."
+lastmod: 2026-11-12
+description: "Approvata in via definitiva e promulgata la legge che limita alla colpa grave la responsabilità penale colposa dei volontari di protezione civile."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -18,12 +19,28 @@ social_punti:
   - "Approvazione definitiva alla Camera il 21 ottobre 2026: 131 voti favorevoli, 95 astensioni, nessun contrario"
   - "Per i reati colposi, il volontario risponde solo per colpa grave; chi ha seguito linee guida o buone pratiche adeguate al caso non è punibile"
   - "Nuove sezioni contrattuali per il personale delle strutture di protezione civile di Regioni, Comuni, Province e Città metropolitane"
-  - "La legge non è ancora in vigore: attende la promulgazione e la pubblicazione in Gazzetta Ufficiale"
+  - "Il 12 novembre 2026 il Presidente della Repubblica ha promulgato la legge; entrerà in vigore 15 giorni dopo la pubblicazione in Gazzetta Ufficiale"
 versione_facile: "2026-10-21-legge-protezione-civile-responsabilita-volontari-facile"
 draft: false
 ---
 
 La Camera dei Deputati ha approvato in via definitiva, **mercoledì 21 ottobre 2026**, il disegno di legge «Disposizioni in materia di protezione civile» (atto Camera 3076). Il Senato lo aveva già approvato il 4 agosto 2026, come atto Senato 1779. Il voto finale: **131 favorevoli, 95 astensioni, nessun contrario**, su 226 deputati presenti in Aula.
+
+## Aggiornamento del 12 novembre 2026: la legge è stata promulgata
+
+Il Presidente della Repubblica, Sergio Mattarella, **ha promulgato la legge il 12 novembre 2026**. Insieme alla firma ha inviato una lettera ai Presidenti del Senato e della Camera, Ignazio La Russa e Lorenzo Fontana, e alla Presidente del Consiglio, Giorgia Meloni.
+
+Nella lettera il Presidente spiega di aver firmato per la portata complessiva della legge, che regola il trattamento economico e giuridico del personale di protezione civile. Poi fa alcune osservazioni sulle nuove regole per la responsabilità penale:
+
+- la non punibilità è una deroga molto ampia alla regola generale, perché copre anche la colpa grave e non solo l'imperizia, ma anche la negligenza e l'imprudenza;
+- in altri ambiti professionali le tutele di questo tipo sono più ristrette;
+- per i volontari, in alcuni casi la legge esclude la responsabilità per colpa lieve.
+
+Per questo il Presidente invita Parlamento e Governo a valutare se convenga introdurre regole diverse per singoli settori senza un coordinamento con criteri omogenei. L'obiettivo indicato è un quadro coerente, in cui eventuali regimi diversi siano ragionevoli ed equi.
+
+La lettera non cambia il testo approvato: la legge resta quella descritta qui sotto. Ora manca la pubblicazione in Gazzetta Ufficiale; la legge entrerà in vigore quindici giorni dopo.
+
+## Che cosa ha approvato il Parlamento
 
 Il testo non ha subito modifiche rispetto a quello licenziato dal Senato: le Commissioni riunite Affari costituzionali e Lavoro pubblico e privato della Camera hanno concluso l'esame senza emendamenti l'8 ottobre. La legge riguarda due aspetti: il trattamento del personale delle strutture regionali e locali di protezione civile, e la responsabilità penale di chi opera durante le emergenze, **volontari compresi**.
 
@@ -61,12 +78,13 @@ La parte iniziale della legge (articoli 1-5) riguarda il personale, dirigenziale
 
 ## Che cosa manca ancora
 
-La legge **non è ancora vigente**. Dopo l'approvazione del Parlamento, il testo deve essere promulgato dal Presidente della Repubblica e pubblicato in Gazzetta Ufficiale. Il testo non fissa una data di entrata in vigore diversa da quella ordinaria: entrerà quindi in vigore il quindicesimo giorno successivo alla pubblicazione (la regola generale per le leggi italiane), non il giorno stesso della pubblicazione. Solo da quel momento decorrono i termini della legge, incluso quello di dodici mesi per le linee guida nazionali. Il Ministro per la protezione civile e le politiche del mare dovrà poi presentare alle Camere, ogni due anni, una relazione sull'attuazione della legge.
+La legge è stata promulgata il 12 novembre 2026, ma **non è ancora vigente**: deve essere pubblicata in Gazzetta Ufficiale. Il testo non prevede una data propria: vale la regola generale delle leggi italiane, cioè il quindicesimo giorno dopo la pubblicazione. Solo da quel momento decorrono i termini della legge, incluso quello di dodici mesi per le linee guida nazionali. Il Ministro per la protezione civile e le politiche del mare dovrà poi presentare alle Camere, ogni due anni, una relazione sull'attuazione della legge.
 
 Seguiremo la pubblicazione in Gazzetta Ufficiale e aggiorneremo la pagina del [Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/) non appena la legge sarà vigente.
 
 ## Per approfondire
 
 - Sul nostro sito: [Codice della protezione civile, Capo VI](/normativa/testo-unico-protezione-civile/capo-6-misure-strumenti/) · [Diventare volontari del Gruppo](/diventa-volontario/) · [Normativa di protezione civile](/normativa/)
+- Fonte primaria: [comunicato e lettera del Presidente della Repubblica del 12 novembre 2026](https://www.quirinale.it/it/notizie/mattarella-promulga-legge-recante-disposizioni-materia-protezione-civile-invia-lettera-presidenti-camere-presidente-consiglio-ministri)
 - Fonte primaria: [scheda del provvedimento sul sito della Camera dei Deputati (atto Camera 3076)](https://www.camera.it/leg19/126?tab=1&leg=19&idDocumento=3076&sede=&tipo=)
 - Copia sul sito: [testo del disegno di legge, come approvato dal Senato e trasmesso alla Camera](/allegati/2026/camera-ac3076-protezione-civile-approvato-21-10-2026.pdf)
