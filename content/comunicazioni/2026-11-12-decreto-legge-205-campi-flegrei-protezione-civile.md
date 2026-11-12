@@ -14,7 +14,7 @@ social_punti:
   - "Decreto-legge 11 novembre 2026, n. 205, pubblicato nella Gazzetta Ufficiale n. 263 e in vigore dal 12 novembre"
   - "Il Presidente della Regione Campania diventa Commissario straordinario fino al 31 dicembre 2036"
   - "Due fondi da 50 milioni l'anno ciascuno, dal 2027 al 2036, per edifici privati e pubblici"
-  - "Il decreto non riguarda il Lazio: va convertito in legge dal Parlamento"
+  - "Le misure sui Campi Flegrei riguardano la Campania; altre norme toccano anche i Comuni del sisma 2016, fra cui quelli del Lazio"
 allegati:
   - titolo: "Gazzetta Ufficiale n. 263 dell'11 novembre 2026: decreto-legge n. 205 (estratto in PDF)"
     url: "/allegati/2026/gazzetta-ufficiale-2026-11-11-n-263-decreto-legge-205-campi-flegrei.pdf"
@@ -24,7 +24,7 @@ draft: false
 
 L'11 novembre 2026 la Gazzetta Ufficiale ha pubblicato il **decreto-legge n. 205**, intitolato «Piano straordinario per i Campi Flegrei nonché ulteriori disposizioni urgenti di protezione civile». È entrato in vigore il giorno dopo, il 12 novembre. Il Parlamento deve convertirlo in legge entro 60 giorni dalla pubblicazione, cioè entro il 10 gennaio 2027. Fino ad allora il testo può ancora cambiare.
 
-Il decreto riguarda la Campania, non il Lazio. Lo raccontiamo perché cambia l'organizzazione nazionale della protezione civile su uno dei rischi vulcanici più seguiti in Italia.
+Le misure sul bradisismo riguardano la Campania. Altre disposizioni toccano anche il Lazio, in particolare i Comuni del sisma del Centro Italia 2016 (si veda più sotto). Lo raccontiamo perché cambia l'organizzazione nazionale della protezione civile su uno dei rischi vulcanici più seguiti in Italia.
 
 ## Un Commissario unico per il bradisismo
 
@@ -58,13 +58,13 @@ In totale sono 100 milioni l'anno. Per i primi tre anni, dal 2027 al 2029, i sol
 Il decreto contiene anche norme che non riguardano i Campi Flegrei:
 
 - **Alluvioni del 2023 e 2024 (Emilia-Romagna, Marche, Toscana).** Il termine della gestione commissariale per la ricostruzione slitta al 31 marzo 2027.
-- **Sisma del Centro Italia 2016.** Le strutture di emergenza realizzate dopo il terremoto vengono assegnate gratuitamente ai Comuni interessati, che possono renderle permanenti o rimuoverle.
+- **Sisma del Centro Italia 2016.** Le strutture di emergenza realizzate dopo il terremoto vengono assegnate gratuitamente ai Comuni interessati, che possono renderle permanenti o rimuoverle. La norma vale anche per i Comuni del Lazio colpiti dal sisma, come Amatrice e Accumoli, di cui abbiamo scritto [qui](/comunicazioni/2026-10-07-proroga-ricostruzione-sisma-centro-italia-2016/).
 - **Niscemi (dissesti del gennaio 2026).** Il contributo per delocalizzare le attività economiche si estende anche a chi non è proprietario dei locali.
 - **Bagnoli-Coroglio.** Cambiano i fondi per la bonifica dell'area.
 
 ## Perché ci riguarda
 
-Genzano di Roma e i Castelli Romani non sono nell'area dei Campi Flegrei. Il decreto non cambia nulla per i nostri piani di emergenza. Mostra però come il Servizio nazionale della protezione civile sta cambiando il modo di gestire un rischio che dura anni: un unico responsabile, fondi pluriennali e programmi di prevenzione, non solo l'intervento dopo l'evento.
+Genzano di Roma e i Castelli Romani non sono nell'area dei Campi Flegrei, e il decreto non cambia i nostri piani di emergenza. Mostra però come il Servizio nazionale della protezione civile sta cambiando il modo di gestire un rischio che dura anni: un unico responsabile, fondi pluriennali e programmi di prevenzione, non solo l'intervento dopo l'evento.
 
 Il decreto ribadisce che le sue misure si applicano nel rispetto del Codice della protezione civile (D.Lgs. 1/2018) e della legge quadro sulla ricostruzione (legge 40/2025).
 
