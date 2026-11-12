@@ -215,6 +215,21 @@ Notizie vere e notizie false: come riconoscerle in un'emergenza. In un'emergenza
 
 Per approfondire: [Scheda «Notizie false in emergenza»](/formazione/schede-stampabili/fake-news-emergenza-secondaria/).
 
+## IT-alert: il messaggio che avvisa di un grave pericolo
+
+**Durata:** 59 s · **Nel programma dell'anno:** Secondaria di primo grado, ottobre: «Informarsi in emergenza»
+
+{{< video src="/video/2026-11-12-it-alert-video-16x9.mp4" poster="/video/2026-11-12-it-alert-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: IT-alert: il messaggio che avvisa di un grave pericolo" >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+IT-alert: il messaggio che avvisa di un grave pericolo. È il sistema di allarme pubblico italiano. Arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app, e non serve iscriversi. Il telefono fa un suono diverso dalle solite suonerie, e sullo schermo compare un testo che comincia con la scritta IT-alert. Si usa per poche emergenze gravi: un incidente in uno stabilimento industriale, un incidente nucleare, il crollo di una grande diga, l'attività di alcuni vulcani. Non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo, guarda il colore dell'allerta sul sito del Gruppo. Se lo ricevi, fermati e leggi tutto il messaggio. Poi segui le indicazioni delle autorità. Se il messaggio comincia con la parola TEST, è solo una prova: non devi fare niente. In emergenza chiama il 112.
+
+</details>
+
+Per approfondire: [Il messaggio che salva](/dossier/il-messaggio-che-salva/).
+
 ## La protezione civile e i volontari
 
 **Durata:** 49 s · **Nel programma dell'anno:** Infanzia, maggio: «Le persone che ci aiutano»; secondaria di secondo grado, maggio
