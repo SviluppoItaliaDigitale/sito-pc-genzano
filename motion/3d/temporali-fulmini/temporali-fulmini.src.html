@@ -721,7 +721,6 @@ SOTT.forEach(f => {
 
   const fonte = document.getElementById('fonte');
   fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
-  const attribuzione = ((RILIEVO && RILIEVO.attribuzione) || 'Rilievo: Mapzen Terrain Tiles (AWS Open Data) da EU-DEM (Copernicus), ETOPO1 (NOAA), SRTM e GMTED (USGS)').replace(' da EU-DEM', '\nda EU-DEM');
   const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
   let tAttuale = 0, proiezioni = {};
   const colNube = new THREE.Color(), CHIARA = new THREE.Color(0xf4f6fa), SCURA = new THREE.Color(0x7d8696);
@@ -843,7 +842,7 @@ SOTT.forEach(f => {
         visibile: vis, centro: s.punto ? null : { x: W / 2, y: L.zona.alto + (ORIZ ? 110 : 96) } });
     }
     sovrimpressioni(t, mp);
-    const testo = mp > .5 ? CONFIG.fonte : CONFIG.fonte + '\n' + attribuzione;
+    const testo = CONFIG.fonte;      // l'attribuzione del rilievo va nella descrizione del video, non dentro il video
     if (fonte.textContent !== testo) fonte.textContent = testo;
     fonte.style.left = L.margine + 'px';
     fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
