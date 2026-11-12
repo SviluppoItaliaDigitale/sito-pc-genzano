@@ -470,5 +470,27 @@ class PrudenzaSullaPreAllerta(unittest.TestCase):
         self.assertNotIn("domani", dati)
 
 
+class PreAllertaConLivelliDiversi(unittest.TestCase):
+    """12/11/2026: domani arancione idrogeologico e gialla idraulica (Regione Lazio,
+    prot. U.1143007). La barra non deve dire che l'arancione vale anche per l'idraulico."""
+
+    def test_il_rischio_piu_basso_porta_il_suo_livello(self):
+        prendi, _ = fonte_finta()
+        domani = riga_csv("2026-11-12T00:00:00+01:00", "2026-11-12T23:59:59+01:00",
+                          "2026-11-11T12:00:00+01:00",
+                          "Moderata per rischio idrogeologico / ALLERTA ARANCIONE",
+                          "Moderata / ALLERTA ARANCIONE")
+        domani["avviso_idraulico"] = "Ordinaria / ALLERTA GIALLA"
+        with ambiente() as (tmp, allerta):
+            gira_main(ora(2026, 11, 11, 18, 30),
+                      timbro_dpc=lambda: ("20261111_1540", "fonte ufficiale", []),
+                      http_get_json=prendi, fetch_csv=mirror_vietato,
+                      fallback_pdf_regione_lazio=lambda now: {"domani": domani})
+            dati = json.loads(allerta.read_text(encoding="utf-8"))
+        self.assertEqual(dati["domani"]["livello"], "arancione")
+        self.assertEqual(dati["domani"]["rischi"],
+                         ["rischio idrogeologico", "rischio idraulico (gialla)"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
