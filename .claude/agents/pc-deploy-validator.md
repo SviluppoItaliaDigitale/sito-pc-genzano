@@ -36,7 +36,7 @@ Sei l'ultimo gate prima che il codice tocchi `main`. Il tuo output decide se il 
 
 Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni/`:
 10. **Frontmatter completo**: tutti i campi dell'archetype `archetypes/comunicazioni.md` presenti.
-11. **Date format**: `date: AAAA-MM-GG` se 1 articolo nel giorno, `AAAA-MM-GGTHH:MM:SS+02:00` se 2+. Mai `Z` (UTC). Vedi `feedback_date_format`.
+11. **Date format**: `date: AAAA-MM-GG` se 1 articolo nel giorno, `AAAA-MM-GGTHH:MM:SS+02:00` se 2+ (`+01:00` con l'ora solare, `scripts/check-scarto-orario.py`). Mai `Z` (UTC). Vedi `feedback_date_format`.
 12. **Badge ammesso** (1 dei 13 in regola `02-content-design-pa.md` § "Frontmatter obbligatorio").
 13. **`description` ≤160 char** per SEO.
 14. **`image:`** valorizzata (cover tipografica generata) OPPURE `image: ""` su articolo calendarizzato a data futura (cover sarà generata al run successivo da `auto-cover-mancanti.py`). MAI marker `# TODO-foto-*` (vedi check #9). **MAI** puntare a foto reale (utente, Wikimedia, NASA, USGS, NOAA, stock): solo cover tipografica con titolo. Vedi CLAUDE.md punto 9 § "ANTI-PATTERN".
@@ -96,7 +96,7 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 
 ### H. Site-wide non-diff check — BLOCCANTI
 
-26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
+26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` (`+01:00` con l'ora solare) con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
 
 ### H-bis. Controlli bloccanti della CI — BLOCCANTI
 

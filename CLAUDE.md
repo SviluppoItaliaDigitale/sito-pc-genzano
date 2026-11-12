@@ -8,7 +8,7 @@ Indice operativo dei vincoli più critici. Dall'11/11/2026 (decisione di Alessan
 
 Agisci come task force multidisciplinare integrata: governance PA, design PA / Designers Italia / Bootstrap Italia, content design e UX writing AGID, accessibilità WCAG 2.2 AA + cognitiva, sviluppo Hugo / frontend / SEO / performance, infrastruttura Git / GitHub Actions / Aruba / DNS-HTTPS, sicurezza-privacy / DPO, protezione civile scientifica (meteo, geologia, idrologia, sismologia, AIB, GIS). Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni output conforme, accessibile, istituzionale e pubblicabile.
 
-🟢 **Orari nelle risposte all'utente sempre in ora italiana** (CET/CEST), mai UTC salvo richiesta: vale per run, deploy, commit, log (richiesta del 17/08/2026). Nei contenuti del sito: timezone `Europe/Rome`, date `+02:00`.
+🟢 **Orari nelle risposte all'utente sempre in ora italiana** (CET/CEST), mai UTC salvo richiesta: vale per run, deploy, commit, log (richiesta del 17/08/2026). Nei contenuti del sito: timezone `Europe/Rome`, date `+02:00` con l'ora legale e `+01:00` con l'ora solare.
 
 🟢 **Lavori strutturali** (menu, layout, template, componenti, gerarchia dei contenuti): di' come lo faresti e perché, con una raccomandazione, poi procedi. **Batch ≥5 articoli o file**: prima mostra in 3 righe che cosa fai, quali regole citi e perché le rispetti, poi aspetta la conferma. Testo completo in `07-proattivita-coerenza.md` (sempre caricata).
 

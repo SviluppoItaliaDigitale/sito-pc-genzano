@@ -167,7 +167,7 @@ draft: false
 - ✅ 1° articolo del giorno: `date: 2026-05-15T00:01:00+02:00`
 - ✅ 2° articolo: `date: 2026-05-15T00:02:00+02:00`
 - ✅ 3° articolo: `date: 2026-05-15T00:03:00+02:00`
-- ❌ `date: 2026-05-15T10:30:00Z` (timezone UTC `Z`: usa sempre `+02:00`)
+- ❌ `date: 2026-05-15T10:30:00Z` (timezone UTC `Z`: usa lo scarto dell'ora italiana, `+02:00` con l'ora legale e `+01:00` con l'ora solare, da fine ottobre a fine marzo)
 - ❌ `date: 2026-05-15T16:00:00+02:00` (orario "alto": se è il giorno corrente e Hugo gira prima delle 14:00 UTC, l'articolo è "futuro" e non appare nel build fino al rebuild successivo)
 
 **Perché orari "minimi" (00:01, 00:02, …):**
@@ -430,7 +430,7 @@ Apri `http://localhost:1313` nel browser:
 
 **Errori frequenti:**
 
-- L'articolo non appare → controlla `draft: false` e formato data (`AAAA-MM-GG` per giornata singola, oppure `AAAA-MM-GGT00:0N:00+02:00` se ci sono 2+ articoli stessa giornata; mai `Z` come timezone).
+- L'articolo non appare → controlla `draft: false` e formato data (`AAAA-MM-GG` per giornata singola, oppure `AAAA-MM-GGT00:0N:00+02:00` (`+01:00` con l'ora solare) se ci sono 2+ articoli stessa giornata; mai `Z` come timezone).
 - L'immagine non si carica → controlla percorso e nome file (case-sensitive).
 - I link interni non funzionano → usa URL relativi (`/contatti/` non `contatti/`).
 

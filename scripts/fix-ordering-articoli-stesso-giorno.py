@@ -14,8 +14,10 @@ correttamente e l'ultimo scritto finisce in cima.
 
 Articoli singoli giornalieri restano `date: AAAA-MM-GG` (no modifica).
 """
+import datetime
 import re
 import subprocess
+from zoneinfo import ZoneInfo
 from collections import defaultdict
 from pathlib import Path
 
@@ -126,7 +128,10 @@ def process():
         print(f"{date_str} ({n} articoli, ordinati per git first-commit asc):")
         for f, orario in zip(sorted_files, orari):
             text = f.read_text(encoding="utf-8")
-            new_value = f"{date_str}T{orario}+02:00"
+            # scarto dell'ora italiana di quel giorno: +01:00 d'inverno (12/11/2026)
+            s = datetime.datetime.fromisoformat(f"{date_str}T{orario}").replace(
+                tzinfo=ZoneInfo("Europe/Rome")).strftime("%z")
+            new_value = f"{date_str}T{orario}{s[:3]}:{s[3:]}"
             new_text = DATE_RE.sub(rf'\g<1>{new_value}', text, count=1)
             if new_text == text:  # il file aveva già un orario: riassegna
                 new_text = DATETIME_RE.sub(rf'\g<1>{new_value}', text, count=1)
