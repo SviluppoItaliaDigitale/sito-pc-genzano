@@ -22,7 +22,7 @@ const ANIM = {
   },
   prima: (el, u, t) => {
     const scuro = inOutCubic(prog(u, 5.5, 1.6)), via = inOutCubic(prog(u, 7.0, 1.5)), gioca = 1 - prog(u, 6.3, .5);
-    op(el, ".buio", scuro * .42); raggi(el, t);
+    op(el, ".buio", scuro * .42); raggi(el, t); op(el, ".sole", 1 - prog(u, 6.0, .6));
     el.querySelector(".arriva").setAttribute("transform", `translate(${lerp(640, 352, scuro).toFixed(1)} 52)`);
     pop(el, ".prev", prog(u, 2.9, .8)); op(el, ".barra", .7 + Math.sin(t * 5) * .3);
     const q = (Math.sin(u * 2.6) + 1) / 2, salto = Math.abs(Math.sin(u * 2.6 * 2)) * 60 * gioca;
