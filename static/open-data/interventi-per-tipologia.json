@@ -4,11 +4,11 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-11-05",
-    "ultimo_numero": "223/2026"
+    "al": "2026-11-10",
+    "ultimo_numero": "227/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-11-06",
+  "generato_il": "2026-11-12",
   "dati": [
     {
       "tipologia": "Antincendio",
@@ -16,7 +16,7 @@
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
-      "numero_interventi": 58
+      "numero_interventi": 61
     },
     {
       "tipologia": "Evento Locale",
@@ -24,7 +24,7 @@
     },
     {
       "tipologia": "Oggetti su sede stradale",
-      "numero_interventi": 14
+      "numero_interventi": 15
     },
     {
       "tipologia": "Taglio pianta",
@@ -35,15 +35,15 @@
       "numero_interventi": 11
     },
     {
-      "tipologia": "Servizio tecnico",
-      "numero_interventi": 5
-    },
-    {
       "tipologia": "Incendio sterpaglie",
       "numero_interventi": 5
     },
     {
       "tipologia": "Attività Coordinamento",
+      "numero_interventi": 5
+    },
+    {
+      "tipologia": "Servizio tecnico",
       "numero_interventi": 4
     },
     {
