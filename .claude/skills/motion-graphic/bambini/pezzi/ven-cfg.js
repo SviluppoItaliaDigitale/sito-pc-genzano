@@ -10,7 +10,7 @@ const CONFIG = {
   posterT: 0,
   scene: [
     { ill: "titolo", illh: 520, dur: 7.8, chip: "Protezione Civile · Genzano di Roma",
-      righe: ["Vento <span class='a'>forte</span>:", "che cosa fare"], sotto: "Le raffiche fanno cadere <b>rami, tegole e vasi</b>.",
+      righe: ["Vento <span class='a'>forte</span>:", "che cosa fare"], sotto: "Cadono <b>rami, tegole e vasi</b>.",
       sottotitolo: "Vento forte: che cosa fare. Le raffiche possono spezzare i rami e far cadere tegole e vasi." },
     { ill: "balcone", illh: 420, dur: 9.3, chip: "Prima",
       righe: ["Metti tutto", "al <span class='a'>riparo</span>"], sotto: "Vasi e sedie di balconi e davanzali: <b>dentro casa o fissati bene</b>.",
@@ -19,10 +19,10 @@ const CONFIG = {
       righe: ["Guarda", "l'<span class='a'>allerta</span>"], sotto: "Parcheggia <b>lontano da alberi e impalcature</b>.",
       sottotitolo: "Guarda l'allerta del giorno, e parcheggia l'auto lontano da alberi e impalcature." },
     { ill: "casa", illh: 420, dur: 8.6, chip: "Durante",
-      righe: ["Resta", "in <span class='a'>casa</span>"], sotto: "Chiudi porte e finestre. <b>Stai lontano dai vetri.</b>",
+      righe: ["Resta", "in <span class='a'>casa</span>"], sotto: "Chiudi tutto e <b>stai lontano dai vetri</b>.",
       sottotitolo: "Quando il vento soffia forte, resta in casa se puoi. Chiudi porte e finestre, e stai lontano dai vetri." },
     { ill: "fuori", illh: 240, dur: 12.3, chip: "Se sei fuori",
-      get listaAt() { return ["i parchi", "impalcature", "cartelloni", "cornicioni"].map(p => quando(4, p) - .25); },
+      get listaAt() { return ["i parchi", "impalcature", "cartelloni", "cornicioni"].map(p => quando(4, p) - .5); },
       righe: ["Lontano", "dagli <span class='a'>alberi</span>"], lista: [
         ["alberi", "Parchi e strade alberate"],
         ["impalcatura", "Impalcature"],

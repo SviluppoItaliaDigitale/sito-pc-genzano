@@ -1,0 +1,88 @@
+{
+ "musica": {
+  "file": ".cache/suoni/voice-over-under.mp3",
+  "da": 0,
+  "credito": "Musica: «Voice Over Under» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0 (creativecommons.org/licenses/by/4.0)",
+  "origine": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Voice%20Over%20Under.mp3"
+ },
+ "effetti": [
+  {
+   "file": ".cache/suoni/avviso.wav",
+   "scena": 0,
+   "dopo": 0,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/avviso.wav",
+   "scena": 2,
+   "dopo": 0,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 1,
+   "dopo": 4.5,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 1,
+   "dopo": 6.1,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 4,
+   "dopo": 1.2,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 6,
+   "dopo": 2.9,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 1,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 2,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 3,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 4,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 5,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 6,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  }
+ ]
+}

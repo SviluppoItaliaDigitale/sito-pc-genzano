@@ -40,6 +40,9 @@ const NO = (cls, x, y, r = 40, k = .24) => { const w = r * k, b = r * .68; retur
 const NUMERO = (cls, x, y, n) => `<g class="${cls}" transform="translate(${x} ${y})"><g><circle r="21" fill="#ffd43b" stroke="${INK}" stroke-width="5"/><text x="0" y="10" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="28" fill="${INK}">${n}</text></g></g>`;
 const ETI = (x, y, w, testo) => `<rect x="${x - w / 2}" y="${y - 21}" width="${w}" height="30" rx="15" fill="#fff" stroke="${INK}" stroke-width="3"/><text x="${x}" y="${y}" text-anchor="middle" font-family="Titillium Web" font-weight="800" font-size="19" fill="${INK}">${testo}</text>`;
 const TXT = (x, y, s, testo, peso = 800, col = INK) => `<text x="${x}" y="${y}" text-anchor="middle" font-family="Titillium Web" font-weight="${peso}" font-size="${s}" fill="${col}">${testo}</text>`;
+/* fiori nel prato: si vedono solo nei formati larghi, dove il riquadro mostra anche la parte bassa del disegno */
+const FIORI = (y0, n = 7) => Array.from({ length: n }, (_, i) => { const x = 36 + i * (528 / (n - 1)) + (hash(i + 21) - .5) * 30, y = y0 + hash(i + 40) * 46, c = ["#ff8787", "#fff", "#ffd43b", "#b197fc"][i % 4];
+  return `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)})" stroke="${INK}" stroke-width="3">${[0, 1, 2, 3, 4].map(k => `<circle cx="${(Math.cos(k * 1.2566) * 7).toFixed(1)}" cy="${(Math.sin(k * 1.2566) * 7).toFixed(1)}" r="5.5" fill="${c}"/>`).join("")}<circle r="4" fill="#ff922b"/></g>`; }).join("");
 const LIVELLI = [["#40c057", "verde"], ["#ffd43b", "giallo"], ["#ff922b", "arancione"], ["#e03131", "rosso"]];
 
 const ILL = {
@@ -59,7 +62,7 @@ const ILL = {
     <g class="vib">${TREMA("tr", "#9775fa")}</g>
     ${ITEL("tel", `<g class="alt" ${O}><path d="M-34 -22 H-14 L12 -46 V34 L-14 10 H-34Z" fill="#9775fa"/><path d="M28 -30 q16 24 0 48" fill="none" stroke="#9775fa" stroke-width="8"/></g>${AVVISO("avv")}`)}
     ${PG("flavio")}</svg>`,
-  casi: () => `<svg ${S0}><rect width="600" height="510" fill="#fff9db"/>${NUVOLA(60, 24, .5)}${NUVOLA(400, 40, .55)}${PRATO(378)}
+  casi: () => `<svg ${S0}><rect width="600" height="510" fill="#fff9db"/>${NUVOLA(60, 24, .5)}${NUVOLA(400, 40, .55)}${PRATO(378)}${FIORI(430)}
     ${[["fabbrica", 215, 222], ["nucleare", 322, 262], ["diga", 429, 222], ["vulcano", 536, 262]].map(([n, x, y], j) =>
       `<circle cx="${x}" cy="${y}" r="48" fill="none" stroke="${INK}" stroke-width="4" stroke-dasharray="8 10" opacity=".3"/><g class="c${j}" transform="translate(${x} ${y})"><g><circle r="50" fill="#fff" ${O}/><g transform="translate(-35 -35) scale(.7)">${INTERNO(n)}</g></g></g>`).join("")}
     ${PG("flavio")}${MINITEL("t0", 134, 282)}</svg>`,
@@ -85,7 +88,7 @@ const ILL = {
     <g class="fre" transform="translate(498 206)"><g><rect x="-62" y="-36" width="124" height="72" rx="26" fill="#fff" ${O}/><path d="M-10 34 L-2 56 L18 34" fill="#fff" ${O}/>
       <path d="M-34 0 H26 M6 -20 L28 0 L6 20" fill="none" stroke="${INK}" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M-34 0 H26 M6 -20 L28 0 L6 20" fill="none" stroke="#40c057" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
     ${NUMERO("n1", 150, 208, 1)}${NUMERO("n2", 372, 122, 2)}${NUMERO("n3", 572, 176, 3)}</svg>`,
-  prova: () => `<svg ${S0}><rect width="600" height="510" fill="#ebfbee"/>${NUVOLA(40, 22, .5)}${NUVOLA(430, 18, .5)}${PRATO(392)}
+  prova: () => `<svg ${S0}><rect width="600" height="510" fill="#ebfbee"/>${NUVOLA(40, 22, .5)}${NUVOLA(430, 18, .5)}${PRATO(392)}${FIORI(440)}
     ${ITEL("tel", AVVISO("avv", "TEST"))}${SPUNTA("ok", 216, 164, 30)}
     <g class="niente" transform="translate(420 150)"><g><rect x="-152" y="-27" width="304" height="54" rx="27" fill="#fff" ${O}/>${TXT(0, 9, 26, "Non devi fare niente", 900)}</g></g>
     ${PG("flavio")}${PG("silvia", { tipo: "silvia", maglia: "#9775fa", pantaloni: "#f783ac", capelli: "#3b2412" })}</svg>`

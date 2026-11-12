@@ -1,0 +1,100 @@
+{
+ "musica": {
+  "file": ".cache/suoni/on-my-way.mp3",
+  "da": 0,
+  "credito": "Musica: «On My Way» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0 (creativecommons.org/licenses/by/4.0)",
+  "origine": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/On%20My%20Way.mp3"
+ },
+ "effetti": [
+  {
+   "file": ".cache/suoni/frana.wav",
+   "scena": 0,
+   "dopo": 0,
+   "tipo": "ambiente",
+   "durata": 4.5
+  },
+  {
+   "file": ".cache/suoni/pioggia-lunga.wav",
+   "scena": 1,
+   "dopo": 0,
+   "tipo": "ambiente",
+   "durata": 8.2,
+   "entrata": 0.8,
+   "uscita": 1.5
+  },
+  {
+   "file": ".cache/suoni/frana.wav",
+   "scena": 3,
+   "dopo": 0.6,
+   "tipo": "ambiente",
+   "durata": 4.5
+  },
+  {
+   "file": ".cache/suoni/frana.wav",
+   "scena": 4,
+   "dopo": 0.5,
+   "tipo": "ambiente",
+   "durata": 4.5
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 2,
+   "dopo": 6.2,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 4,
+   "dopo": 5.0,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 5,
+   "dopo": 4.4,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 1,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 2,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 3,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 4,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 5,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 6,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  }
+ ]
+}

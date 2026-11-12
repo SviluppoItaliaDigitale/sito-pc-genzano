@@ -4,13 +4,6 @@ const voceDi = k => (DUR.length && DUR[k] != null) ? DUR[k] : CONFIG.scene[k].du
 const quando = (k, parola) => { const s = CONFIG.scene[k].sottotitolo, i = s.indexOf(parola); return .45 + voceDi(k) * (i < 0 ? 0 : i / s.length); };
 CONFIG.scene[2].listaAt = ["crepe", "alberi", "piccoli", "Se li noti"].map(p => +quando(2, p).toFixed(2));
 const pop = (el, sel, p) => { const g = el.querySelector(sel); if (g) svgPop(g.querySelector(":scope > g") || g, p); };
-/* punto e inclinazione lungo una curva di pendio (Bézier quadratica); n = distanza dalla superficie verso l'esterno */
-function sulPendio(c, s, n = 0) {
-  const [x0, y0, x1, y1, x2, y2] = c, a = 1 - s;
-  const x = a * a * x0 + 2 * a * s * x1 + s * s * x2, y = a * a * y0 + 2 * a * s * y1 + s * s * y2;
-  const tx = 2 * a * (x1 - x0) + 2 * s * (x2 - x1), ty = 2 * a * (y1 - y0) + 2 * s * (y2 - y1), m = Math.hypot(tx, ty);
-  return [x + ty / m * n, y - tx / m * n, Math.atan2(ty, tx) * 180 / Math.PI];
-}
 const metti = (g, x, y, r = 0) => g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${r.toFixed(1)})`);
 function piove(el, t, v = 1) {
   const g = el.querySelector(".pioggia"); if (!g) return; const y0 = +g.dataset.y0, y1 = +g.dataset.y1;
@@ -18,7 +11,6 @@ function piove(el, t, v = 1) {
     p.setAttribute("transform", `translate(${(+p.dataset.x - q * 40).toFixed(1)} ${(y0 + q * (y1 - y0)).toFixed(1)})`); });
 }
 const disegna = (el, sel, p) => { const c = el.querySelector(sel); c.setAttribute("stroke-dasharray", "1 1"); c.setAttribute("stroke-dashoffset", (1 - clamp(p)).toFixed(3)); c.setAttribute("opacity", p > 0 ? 1 : 0); };
-const P_TIT = [130, 410, 380, 320, 610, 80], P_SEG = [330, 345, 470, 300, 610, 200], P_CASA = [330, 432, 470, 330, 610, 70];
 const ANIM = {
   titolo: (el, u, t, D) => {
     const P = D / 2, ph = ((u + P * .42) % P) / P, q = inOutCubic(prog(ph, .1, .55)), vis = Math.min(prog(ph, 0, .06), 1 - prog(ph, .92, .08));
@@ -27,7 +19,6 @@ const ANIM = {
     el.querySelectorAll(".sassi > g").forEach(g => { const i = +g.dataset.i, qq = outCubic(prog(ph, .14 + i * .05, .6));
       const ss = lerp(.62 - i * .04, .16 - i * .035, qq), salto = Math.abs(Math.sin(qq * Math.PI * (3 + i))) * 16 * (1 - qq);
       const [sx, sy] = sulPendio(P_TIT, ss, 12 + salto); metti(g, sx, sy, -qq * 500); g.setAttribute("opacity", vis.toFixed(2)); });
-    el.querySelector(".al1").setAttribute("transform", `rotate(${(-6 + Math.sin(t * 2) * 1.5).toFixed(1)})`);
     anima(el, ".flavio", t, { x: 66, y: 486, s: .5, aD: 128, aS: 14, bocca: q > .05 && q < 1 ? "o" : "sorriso" });
   },
   pioggia: (el, u, t, D) => {
@@ -64,11 +55,11 @@ const ANIM = {
     el.querySelector(".via").setAttribute("opacity", (prog(u, tv - .2, .4) * (.75 + Math.sin(t * 5) * .25)).toFixed(2));
   },
   lato: (el, u, t, D) => {
-    const Lf = lerp(.16, 1, inOutCubic(prog(u, D * .06, D * .62))), yb = 112 + 300 * Lf, wb = 22 + 66 * Lf;
-    el.querySelector(".lingua").setAttribute("d", `M278 112 Q300 98 322 112 L${(300 + wb).toFixed(1)} ${yb.toFixed(1)} Q${(300 + wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} 300 ${(yb + 26).toFixed(1)} Q${(300 - wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} ${(300 - wb).toFixed(1)} ${yb.toFixed(1)}Z`);
+    const Lf = lerp(.16, 1, inOutCubic(prog(u, D * .06, D * .62))), yb = 176 + 236 * Lf, wb = 22 + 66 * Lf;
+    el.querySelector(".lingua").setAttribute("d", `M276 178 Q300 158 324 178 L${(300 + wb).toFixed(1)} ${yb.toFixed(1)} Q${(300 + wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} 300 ${(yb + 26).toFixed(1)} Q${(300 - wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} ${(300 - wb).toFixed(1)} ${yb.toFixed(1)}Z`);
     el.querySelectorAll(".sassi > g").forEach(g => { const i = +g.dataset.i; metti(g, 300 + (i - 2) * wb * .42, yb + 20 - Math.abs(i - 2) * 9 + Math.abs(Math.sin(t * 7 + i * 1.7)) * -8 * (Lf < 1 ? 1 : 0), t * 160 * (Lf < 1 ? 1 : 0) + i * 40); });
     const ff = el.querySelector(".fFrana"); ff.setAttribute("opacity", (prog(u, D * .05, .4) * (1 - prog(u, D * .56, D * .08)) * (.75 + Math.sin(t * 5) * .25)).toFixed(2));
-    ff.setAttribute("transform", `translate(0 ${(Math.min(yb - 330, 0) + Math.sin(t * 5) * 5).toFixed(1)})`);
+    ff.setAttribute("transform", `translate(0 ${(Math.min(yb - 300, 40) + Math.sin(t * 5) * 5).toFixed(1)})`);
     const tv = quando(4, "spostati di lato"), p = inOutCubic(prog(u, tv, Math.max(1.8, D * .24))), mov = p > 0 && p < 1 ? 1 : 0;
     anima(el, ".flavio", t, { x: lerp(300, 512, p), y: lerp(488, 334, p * p), s: .45, cammina: mov, bocca: p < 1 ? "o" : "sorriso", aS: p >= 1 ? 150 : 14, aD: p >= 1 ? 150 : 14, agitaS: p >= 1, agitaD: p >= 1 });
     el.querySelector(".fVia").setAttribute("opacity", (prog(u, tv - .2, .4) * (1 - prog(u, quando(4, "Non fermarti") - .4, .5)) * (.75 + Math.sin(t * 5) * .25)).toFixed(2));
@@ -77,8 +68,8 @@ const ANIM = {
     el.querySelector(".al1").setAttribute("transform", `rotate(${(Math.sin(t * 2.2) * 2).toFixed(1)})`);
   },
   rannicchia: (el, u, t, D) => {
-    const tB = quando(5, "Non avvicinarti"), a = 1 - prog(u, tB - .35, .5), b = prog(u, tB - .2, .5);
-    el.querySelector(".gA").style.opacity = a; el.querySelector(".gB").style.opacity = b;
+    const tB = quando(5, "Non avvicinarti"), b = prog(u, tB - .2, .5);
+    el.querySelector(".gB").style.opacity = b;
     const giu = prog(u, quando(5, "rannicchiati") - .5, .7), e = outElastic(giu), g = el.querySelector(".giu");
     g.setAttribute("transform", `translate(300 ${(446 + Math.sin(t * 3.2) * .8).toFixed(1)}) scale(${(1.15 * lerp(.75, 1, e)).toFixed(3)} ${(1.15 * lerp(1.25, 1, e)).toFixed(3)})`);
     const bl = (t % 3.4) < .13 ? .12 : 1; g.querySelector(".occhi").setAttribute("transform", `translate(0 6) scale(1 ${bl}) translate(0 -6)`);
@@ -101,7 +92,7 @@ const ANIM = {
     el.querySelector(".autoB").setAttribute("transform", `translate(${lerp(-70, 62, pb).toFixed(1)} 326) scale(.85)`);
     const su = prog(u, tv - .6, .4);
     anima(el, ".mamma", t, { x: 196, y: 404, s: .4, aS: su > 0 ? 150 : 14, aD: su > 0 ? 150 : 14, agitaS: su > 0, agitaD: su > 0 });
-    anima(el, ".flavio", t, { x: 248, y: 408, s: .32, fase: 1.4, aS: 14, aD: 14 });
+    anima(el, ".flavio", t, { x: 146, y: 408, s: .32, fase: 1.4, aS: 14, aD: 14 });
     el.querySelector(".mamma").style.opacity = el.querySelector(".flavio").style.opacity = prog(u, Math.max(1.2, D * .18), .4);
     pop(el, ".fum", prog(u, tv - .3, .8));
   }

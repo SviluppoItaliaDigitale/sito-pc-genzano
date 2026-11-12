@@ -1,0 +1,106 @@
+{
+ "musica": {
+  "file": ".cache/suoni/easy-lemon.mp3",
+  "da": 0,
+  "credito": "Musica: «Easy Lemon» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0 (creativecommons.org/licenses/by/4.0)",
+  "origine": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Easy%20Lemon.mp3"
+ },
+ "effetti": [
+  {
+   "file": ".cache/suoni/vento-lungo.wav",
+   "scena": 0,
+   "dopo": 0,
+   "tipo": "ambiente",
+   "durata": 6.5,
+   "entrata": 0.4,
+   "uscita": 1.5
+  },
+  {
+   "file": ".cache/suoni/vento-lungo.wav",
+   "scena": 3,
+   "dopo": 0,
+   "tipo": "ambiente",
+   "durata": 4.2,
+   "entrata": 0.6,
+   "uscita": 1.5
+  },
+  {
+   "file": ".cache/suoni/vento-lungo.wav",
+   "scena": 4,
+   "dopo": 0,
+   "tipo": "ambiente",
+   "durata": 10.2,
+   "entrata": 0.6,
+   "uscita": 1.5
+  },
+  {
+   "file": ".cache/suoni/vento-lungo.wav",
+   "scena": 5,
+   "dopo": 0.5,
+   "tipo": "ambiente",
+   "durata": 5.5,
+   "entrata": 0.6,
+   "uscita": 1.5
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 1,
+   "dopo": 2.7,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 2,
+   "dopo": 3.7,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 3,
+   "dopo": 6.0,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 1,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 2,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 3,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 4,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 5,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 6,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  }
+ ]
+}

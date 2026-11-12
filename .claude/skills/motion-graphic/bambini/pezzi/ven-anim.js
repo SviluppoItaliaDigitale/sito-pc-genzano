@@ -27,10 +27,10 @@ const ANIM = {
   titolo: (el, u, t) => {
     piega(el, ".a1", 92, 452, 1.12, t); piega(el, ".a2", 300, 450, .82, t, 1.3);
     soffia(el, t, -60, 470, [78, 138, 196, 300, 384]); volano(el, t, -30, 640, 110, 400);
-    const tT = quando(0, "tegole") - .25, pT = prog(u, tT, .65), gT = pT * pT;          // la tegola scivola dal tetto e cade
+    const tT = quando(0, "tegole") - .75, pT = prog(u, tT, .65), gT = pT * pT;          // la tegola scivola dal tetto e cade
     metti(el, ".teg", lerp(408, 398, pT), lerp(214, 436, gT), 1, pT > 0 ? lerp(-37, 170, pT) : -37 + Math.sin(t * 22) * 4 * forza(t));
     botto(el, ".b1", u, tT + .65);
-    const tV = quando(0, "vasi") - .25, pV = prog(u, tV, .6), gV = pV * pV;             // il vaso cade dal davanzale
+    const tV = quando(0, "vasi") - .85, pV = prog(u, tV, .6), gV = pV * pV;             // il vaso cade dal davanzale
     metti(el, ".vaso", lerp(470, 476, pV), lerp(356, 440, gV) - (pV >= 1 ? 16 : 0), 1.05, pV > 0 ? lerp(0, 96, pV) : Math.sin(t * 9) * 5 * forza(t));
     botto(el, ".b2", u, tV + .6);
     anima(el, ".flavio", t, { x: 196, y: 494, s: .5, aS: 20, aD: 112, bocca: "o" });
@@ -42,7 +42,7 @@ const ANIM = {
     const x = p2 > 0 ? lerp(150, 372, p2) : lerp(262, 150, p1), mov = (p1 > 0 && p1 < 1) || (p2 > 0 && p2 < 1) ? 1 : 0;
     const dentro = prog(p1, .78, .22), fine = prog(u, t3 + 1.3, .3);
     anima(el, ".flavio", t, { x, y: 400, s: .52, cammina: mov, flip: p2 > 0 && p2 < 1, aS: p1 > 0 && p1 < 1 ? 70 : fine ? 150 : 14, agitaS: fine > 0, aD: p2 >= 1 && !fine ? 60 : 14 });
-    metti(el, ".vA", p1 > 0 ? x - 44 : 312, 400 - (p1 > 0 ? 34 : 0), 1.5 * (1 - .45 * dentro), 0, 1 - dentro);
+    metti(el, ".vA", p1 > 0 ? x - 38 : 312, 400 - (p1 > 0 ? 10 : 0), 1.15 * (1 - .4 * dentro), 0, 1 - dentro);
     pop(el, ".ok1", prog(u, t1 + d1, .7));
     el.querySelector(".cinghia").setAttribute("stroke-dashoffset", (330 * (1 - outCubic(prog(u, t2 + .9, .8)))).toFixed(1));
     pop(el, ".ok2", prog(u, t2 + 1.6, .7));
@@ -61,7 +61,7 @@ const ANIM = {
     el.querySelector(".autoB").setAttribute("transform", el.querySelector(".autoB").getAttribute("transform") + " scale(-1 1)");
     const tN = quando(2, "lontano");
     pop(el, ".no", prog(u, tN, .7)); pop(el, ".si", prog(u, tN + .9, .7));
-    anima(el, ".flavio", t, { x: 356, y: 478, s: .46, aD: u < tP ? 150 : 14, aS: u > tN ? 110 : 14 });
+    anima(el, ".flavio", t, { x: 352, y: 436, s: .46, aD: u < tP ? 150 : 14, aS: u > tN ? 110 : 14 });
   },
   casa: (el, u, t) => {
     const tP = quando(3, "Chiudi"), tF = quando(3, "finestre") - .2, tL = quando(3, "stai lontano");
@@ -81,10 +81,10 @@ const ANIM = {
     soffia(el, t, -60, 500, [150, 200, 250, 320]); volano(el, t, -30, 640, 140, 350);
     pop(el, ".no", prog(u, quando(4, "evita") - .2, .7));
     const tR = quando(4, "i rami") - .15, p = prog(u, tR, .7), g = p * p;               // il ramo si spezza e cade
-    metti(el, ".ramo", lerp(322, 352, p), lerp(250, 392, g), 1, p > 0 ? lerp(-10, 62, p) : -10 + Math.sin(t * 7) * 9 * forza(t));
+    metti(el, ".ramo", lerp(322, 350, p), lerp(250, 364, g), 1, p > 0 ? lerp(-10, 8, p) + Math.sin(p * Math.PI) * 50 : -10 + Math.sin(t * 7) * 9 * forza(t));
     botto(el, ".crac", u, tR);
     const tS = quando(4, "Stai lontano"), q = inOutCubic(prog(u, tS, 1));
-    anima(el, ".flavio", t, { x: lerp(500, 540, q), y: 392, s: .46, cammina: q > 0 && q < 1 ? 1 : 0, aS: u > tS ? 14 : 105, aD: 14, bocca: u > tR && u < tR + 2 ? "o" : "sorriso" });
+    anima(el, ".flavio", t, { x: lerp(504, 548, q), y: 386, s: .46, cammina: q > 0 && q < 1 ? 1 : 0, aS: u > tS ? 14 : 105, aD: 14, bocca: u > tR && u < tR + 2 ? "o" : "sorriso" });
   },
   strada: (el, u, t, D) => {
     const urto = x => Math.max(0, 1 - ((x - 250) / 60) ** 2) + Math.max(0, 1 - ((x - 478) / 62) ** 2);   // zone delle raffiche: uscita e viadotto

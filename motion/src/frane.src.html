@@ -304,6 +304,22 @@ const POP = (cls, x, y, inner) => `<g class="${cls}" transform="translate(${x} $
 const TERRA = "#b98a55", TERRA2 = "#8f6236";
 const SASSO = (cls, r = 12, c = "#ced4da") => `<path class="${cls}" d="M${-r} ${r * .3} Q${-r * 1.1} ${-r * .7} ${-r * .2} ${-r} Q${r * .9} ${-r * 1.05} ${r} ${-r * .1} Q${r * 1.05} ${r * .8} ${r * .1} ${r} Q${-r * .8} ${r * 1.05} ${-r} ${r * .3}Z" fill="${c}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>`;
 const SASSI = (cls, n, r = 11) => `<g class="${cls}">${Array.from({ length: n }, (_, i) => `<g data-i="${i}">${SASSO("", r - (i % 3) * 2, i % 2 ? "#adb5bd" : "#ced4da")}</g>`).join("")}</g>`;
+/* punto e inclinazione lungo una curva di pendio (Bézier quadratica); n = distanza dalla superficie verso l'esterno */
+function sulPendio(c, s, n = 0) {
+  const [x0, y0, x1, y1, x2, y2] = c, a = 1 - s;
+  const x = a * a * x0 + 2 * a * s * x1 + s * s * x2, y = a * a * y0 + 2 * a * s * y1 + s * s * y2;
+  const tx = 2 * a * (x1 - x0) + 2 * s * (x2 - x1), ty = 2 * a * (y1 - y0) + 2 * s * (y2 - y1), m = Math.hypot(tx, ty);
+  return [x + ty / m * n, y - tx / m * n, Math.atan2(ty, tx) * 180 / Math.PI];
+}
+const P_TIT = [130, 410, 380, 320, 610, 80], P_SEG = [330, 345, 470, 300, 610, 200], P_CASA = [330, 432, 470, 330, 610, 70];
+/* nicchia di distacco (lente scavata nel pendio) e colata (massa di terra appoggiata sul pendio) */
+function LENTE(c, s0, s1, prof, fuori = 0) {
+  const N = 12, su = [], giu = [];
+  for (let i = 0; i <= N; i++) { const k = i / N, s = lerp(s0, s1, k), g = Math.sin(k * Math.PI);
+    su.push(sulPendio(c, s, fuori * g * (1 + .22 * Math.sin(k * 17))).slice(0, 2).map(v => v.toFixed(1)).join(" "));
+    giu.push(sulPendio(c, s, -prof * g).slice(0, 2).map(v => v.toFixed(1)).join(" ")); }
+  return "M" + su.join(" L") + " L" + giu.reverse().join(" L") + "Z";
+}
 /* albero e palo: origine alla base; il gruppo interno (classe) si inclina */
 const ALBERO = (cls, x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><g class="${cls}"><rect x="-9" y="-84" width="18" height="84" fill="#a0703c" ${O}/><circle cx="0" cy="-112" r="46" fill="#40c057" ${O}/><circle cx="-16" cy="-124" r="9" fill="#8ce99a" stroke="none"/></g></g>`;
 const PALO = (cls, x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})"><g class="${cls}"><rect x="-6" y="-170" width="12" height="170" fill="#c08a4f" ${O}/><rect x="-34" y="-158" width="68" height="11" rx="4" fill="#c08a4f" ${O}/><circle cx="-26" cy="-164" r="6" fill="#fff" ${O}/><circle cx="26" cy="-164" r="6" fill="#fff" ${O}/></g></g>`;
@@ -321,14 +337,14 @@ function ACCUCCIATO(cls, o = {}) {
     <rect x="-78" y="-34" width="96" height="34" rx="16" fill="${c.pantaloni}"/><ellipse cx="-80" cy="-12" rx="14" ry="13" fill="#495057"/>
     <rect x="-58" y="-86" width="42" height="70" rx="18" fill="${c.pantaloni}"/>
     <rect x="-52" y="-150" width="72" height="98" rx="30" fill="${c.maglia}" transform="rotate(38 -16 -70)"/>
-    <path d="M-16 -122 Q-40 -186 8 -196 Q30 -200 44 -190" fill="none" stroke="${c.maglia}" stroke-width="20"/>
+    <path d="M-16 -122 Q-40 -186 8 -196 Q30 -200 44 -190" fill="none" stroke-width="30"/><path d="M-16 -122 Q-40 -186 8 -196 Q30 -200 44 -190" fill="none" stroke="${c.maglia}" stroke-width="20"/>
     <g class="testa" transform="translate(40 -118)"><circle r="50" fill="${c.pelle}"/>
       <path d="M-46 -14 Q-44 -56 0 -52 Q40 -54 48 -14 Q30 -34 2 -30 Q-26 -36 -46 -14Z" fill="${c.capelli}"/>
       <g class="occhi"><ellipse cx="2" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/><ellipse cx="30" cy="6" rx="6" ry="9" fill="${INK}" stroke="none"/></g>
       <circle cx="40" cy="24" r="8" fill="#ff8787" opacity=".55" stroke="none"/>
       <path class="bocca sorriso" d="M8 26 Q20 36 32 26" fill="none"/><ellipse class="bocca o" cx="20" cy="30" rx="7" ry="8" fill="#c92a2a" opacity="0"/></g>
     <circle cx="48" cy="-188" r="12" fill="${c.pelle}"/>
-    <path d="M-2 -132 Q14 -186 52 -176 Q82 -168 84 -150" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle cx="84" cy="-148" r="12" fill="${c.pelle}"/>
+    <path d="M-2 -132 Q14 -186 52 -176 Q82 -168 84 -150" fill="none" stroke-width="30"/><path d="M-2 -132 Q14 -186 52 -176 Q82 -168 84 -150" fill="none" stroke="${c.maglia}" stroke-width="20"/><circle cx="84" cy="-148" r="12" fill="${c.pelle}"/>
   </g></g>`;
 }
 Object.assign(ICONE, {
@@ -339,8 +355,7 @@ Object.assign(ICONE, {
 const ILL = {
   titolo: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(40, 36, .55)}${NUVOLA(290, 22, .45)}
     <path d="M-10 430 L130 410 Q380 320 610 80 V520 H-10Z" fill="#8ce99a" ${O}/>
-    <path d="M556 138 Q470 196 420 250 Q360 300 290 338 L312 366 Q390 322 446 276 Q520 214 580 176Z" fill="${TERRA2}" ${O}/>
-    ${ALBERO("al1", 500, 196, .5)}
+    <path d="${LENTE(P_TIT, .34, .86, 30)}" fill="${TERRA2}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>
     <g class="lembo"><path d="M-66 4 Q-74 -30 -34 -36 Q0 -46 38 -36 Q76 -30 66 4 Q0 18 -66 4Z" fill="${TERRA}" ${O}/><path d="M-52 -30 Q-26 -44 2 -43 Q30 -43 54 -30" fill="none" stroke="#40c057" stroke-width="13" stroke-linecap="round"/><circle cx="-24" cy="-8" r="7" fill="${TERRA2}"/><circle cx="20" cy="-12" r="5" fill="${TERRA2}"/></g>
     ${SASSI("sassi", 4, 13)}${PG("flavio")}</svg>`,
   pioggia: () => `<svg ${S0}><rect width="600" height="510" fill="#c5dff8"/>${NERA(20, 18, .9)}${NERA(230, 34, 1)}${NERA(440, 14, .8)}
@@ -355,7 +370,7 @@ const ILL = {
     ${PIOGGIA(30)}${TARGA("tgG", 78, 110, "Genzano", 120)}${TARGA("tgL", 436, 448, "lago di Nemi", 164)}</svg>`,
   segnali: () => `<svg ${S0}><rect width="600" height="510" fill="#e7f5ff"/>${NUVOLA(50, 26, .6)}${NUVOLA(300, 50, .45)}
     <path d="M330 345 Q470 300 610 200 V400 H330Z" fill="#69db7c" ${O}/>
-    <path class="nicchia" d="M500 270 Q470 282 440 300 L452 318 Q486 300 512 286Z" fill="${TERRA2}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>
+    <path class="nicchia" d="${LENTE(P_SEG, .36, .62, 16)}" fill="${TERRA2}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>
     <g class="smot"><path d="M-30 6 Q-34 -14 -10 -16 Q14 -22 30 -8 Q36 6 22 12 Q-8 18 -30 6Z" fill="${TERRA}" ${O}/><path d="M-22 -12 Q-4 -22 20 -14" fill="none" stroke="#40c057" stroke-width="9" stroke-linecap="round"/></g>
     ${SASSI("sassi", 3, 9)}
     <path d="M-10 336 Q300 330 610 372 V520 H-10Z" fill="#8ce99a" ${O}/>
@@ -367,10 +382,10 @@ const ILL = {
     ${PG("flavio")}</svg>`,
   casa: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(30, 34, .5)}${NUVOLA(250, 60, .4)}
     <path d="M-10 432 H330 Q470 330 610 70 V520 H-10Z" fill="#8ce99a" ${O}/>
-    <path d="M578 124 Q536 196 498 253 L522 268 Q560 210 600 150Z" fill="${TERRA2}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>
+    <path d="${LENTE(P_CASA, .5, .93, 26)}" fill="${TERRA2}" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>
     ${CASA(120, 432, 150, 104)}
-    <g class="massa"><path d="M560 160 Q530 138 510 152 L456 232 Q402 308 378 336 Q364 364 398 374 L422 348 L498 253Z" fill="${TERRA}" ${O}/><circle cx="484" cy="226" r="9" fill="${TERRA2}"/><circle cx="430" cy="300" r="7" fill="${TERRA2}"/><circle cx="518" cy="176" r="6" fill="${TERRA2}"/>
-      <g transform="translate(404 340)">${SASSO("", 11)}</g><g transform="translate(462 258)">${SASSO("", 9, "#adb5bd")}</g></g>
+    <g class="massa"><path d="${LENTE(P_CASA, .24, .8, 0, 52)}" fill="${TERRA}" ${O}/>${[.34, .46, .58, .7].map((s, i) => { const [x, y] = sulPendio(P_CASA, s, 18 + (i % 2) * 14); return `<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${7 + (i % 2) * 3}" fill="${TERRA2}" stroke="none"/>`; }).join("")}
+      ${[.3, .52].map((s, i) => { const [x, y] = sulPendio(P_CASA, s, 30); return `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)})">${SASSO("", 11 - i * 2, i ? "#adb5bd" : "#ced4da")}</g>`; }).join("")}</g>
     ${SASSI("sassi", 3, 10)}
     <g transform="translate(336 434)"><g class="muro" ${O}><rect x="-13" y="-96" width="26" height="96" fill="#ced4da"/><path d="M-13 -64 H13 M-13 -32 H13" stroke-width="3"/></g></g>
     ${FRECCIA("via", "M252 196 H76 M120 160 L76 196 L120 232", "#40c057")}
@@ -386,7 +401,7 @@ const ILL = {
   rannicchia: () => `<svg ${S0}><rect width="600" height="510" fill="#e7f5ff"/>
     <g class="gA"><path d="M-10 330 Q300 210 610 300 V520 H-10Z" fill="#8ce99a" ${O}/>${PRATO(440)}
       ${SASSI("sassi", 3, 9)}
-      <path class="scudo" d="M196 300 A130 130 0 0 1 444 300" fill="none" stroke="#f59f00" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 22"/>
+      <path class="scudo" d="M214 318 A132 132 0 0 1 478 318" fill="none" stroke="#f59f00" stroke-width="11" stroke-linecap="round" stroke-dasharray="2 24"/>
       ${ACCUCCIATO("giu")}${STELLA("brav1", 500, 150, 26)}${STELLA("brav2", 548, 214, 18, "#ff922b")}${STELLA("brav3", 446, 108, 16, "#4dabf7")}</g>
     <g class="gB"><rect width="600" height="510" fill="#d0ebff"/>${NUVOLA(40, 40, .55)}
       <path d="M-10 520 V476 Q120 410 300 452 L290 520Z" fill="${TERRA}" ${O}/><g transform="translate(90 462)">${SASSO("", 14)}</g><g transform="translate(170 448)">${SASSO("", 10, "#adb5bd")}</g><g transform="translate(232 466)">${SASSO("", 12)}</g>
@@ -394,9 +409,8 @@ const ILL = {
       <path d="M322 252 H610 V288 H334 Q314 276 322 252Z" fill="#8ce99a" ${O}/>
       <g class="zolla"><path d="M322 252 H384 L374 312 L316 312 L304 292Z" fill="${TERRA}" ${O}/><path d="M322 252 H384 L380 284 H330 Q314 274 322 252Z" fill="#8ce99a" ${O}/></g>
       <path class="crepaB" pathLength="1" d="M386 250 L378 276 L388 296 L374 318" fill="none" stroke="${INK}" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-      <path d="M430 262 V284 M470 262 V284 M510 262 V284 M550 262 V284 M590 262 V284" stroke="#e03131" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 0"/>
       ${PG("silvia", { tipo: "silvia", maglia: "#9775fa", pantaloni: "#f783ac", capelli: "#3b2412" })}${DIVIETO("np", 372, 150, 50)}</g></svg>`,
-  strada: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${SOLE(70, 168, 28)}${NUVOLA(210, 120, .45)}
+  strada: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${SOLE(52, 162, 26)}${NUVOLA(330, 118, .45)}
     <path d="M-10 300 V268 Q110 236 270 300Z" fill="#69db7c" ${O}/><path d="M240 300 Q430 250 610 96 V300Z" fill="#8ce99a" ${O}/>
     <path d="M604 130 Q560 190 536 250 L560 262 Q580 200 610 170Z" fill="${TERRA2}" stroke="${INK}" stroke-width="4"/>
     <rect x="-10" y="296" width="620" height="86" fill="#868e96" ${O}/><path d="M0 339 H480" stroke="#fff" stroke-width="6" stroke-dasharray="34 26"/>
@@ -472,13 +486,6 @@ const voceDi = k => (DUR.length && DUR[k] != null) ? DUR[k] : CONFIG.scene[k].du
 const quando = (k, parola) => { const s = CONFIG.scene[k].sottotitolo, i = s.indexOf(parola); return .45 + voceDi(k) * (i < 0 ? 0 : i / s.length); };
 CONFIG.scene[2].listaAt = ["crepe", "alberi", "piccoli", "Se li noti"].map(p => +quando(2, p).toFixed(2));
 const pop = (el, sel, p) => { const g = el.querySelector(sel); if (g) svgPop(g.querySelector(":scope > g") || g, p); };
-/* punto e inclinazione lungo una curva di pendio (Bézier quadratica); n = distanza dalla superficie verso l'esterno */
-function sulPendio(c, s, n = 0) {
-  const [x0, y0, x1, y1, x2, y2] = c, a = 1 - s;
-  const x = a * a * x0 + 2 * a * s * x1 + s * s * x2, y = a * a * y0 + 2 * a * s * y1 + s * s * y2;
-  const tx = 2 * a * (x1 - x0) + 2 * s * (x2 - x1), ty = 2 * a * (y1 - y0) + 2 * s * (y2 - y1), m = Math.hypot(tx, ty);
-  return [x + ty / m * n, y - tx / m * n, Math.atan2(ty, tx) * 180 / Math.PI];
-}
 const metti = (g, x, y, r = 0) => g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${r.toFixed(1)})`);
 function piove(el, t, v = 1) {
   const g = el.querySelector(".pioggia"); if (!g) return; const y0 = +g.dataset.y0, y1 = +g.dataset.y1;
@@ -486,7 +493,6 @@ function piove(el, t, v = 1) {
     p.setAttribute("transform", `translate(${(+p.dataset.x - q * 40).toFixed(1)} ${(y0 + q * (y1 - y0)).toFixed(1)})`); });
 }
 const disegna = (el, sel, p) => { const c = el.querySelector(sel); c.setAttribute("stroke-dasharray", "1 1"); c.setAttribute("stroke-dashoffset", (1 - clamp(p)).toFixed(3)); c.setAttribute("opacity", p > 0 ? 1 : 0); };
-const P_TIT = [130, 410, 380, 320, 610, 80], P_SEG = [330, 345, 470, 300, 610, 200], P_CASA = [330, 432, 470, 330, 610, 70];
 const ANIM = {
   titolo: (el, u, t, D) => {
     const P = D / 2, ph = ((u + P * .42) % P) / P, q = inOutCubic(prog(ph, .1, .55)), vis = Math.min(prog(ph, 0, .06), 1 - prog(ph, .92, .08));
@@ -495,7 +501,6 @@ const ANIM = {
     el.querySelectorAll(".sassi > g").forEach(g => { const i = +g.dataset.i, qq = outCubic(prog(ph, .14 + i * .05, .6));
       const ss = lerp(.62 - i * .04, .16 - i * .035, qq), salto = Math.abs(Math.sin(qq * Math.PI * (3 + i))) * 16 * (1 - qq);
       const [sx, sy] = sulPendio(P_TIT, ss, 12 + salto); metti(g, sx, sy, -qq * 500); g.setAttribute("opacity", vis.toFixed(2)); });
-    el.querySelector(".al1").setAttribute("transform", `rotate(${(-6 + Math.sin(t * 2) * 1.5).toFixed(1)})`);
     anima(el, ".flavio", t, { x: 66, y: 486, s: .5, aD: 128, aS: 14, bocca: q > .05 && q < 1 ? "o" : "sorriso" });
   },
   pioggia: (el, u, t, D) => {
@@ -532,11 +537,11 @@ const ANIM = {
     el.querySelector(".via").setAttribute("opacity", (prog(u, tv - .2, .4) * (.75 + Math.sin(t * 5) * .25)).toFixed(2));
   },
   lato: (el, u, t, D) => {
-    const Lf = lerp(.16, 1, inOutCubic(prog(u, D * .06, D * .62))), yb = 112 + 300 * Lf, wb = 22 + 66 * Lf;
-    el.querySelector(".lingua").setAttribute("d", `M278 112 Q300 98 322 112 L${(300 + wb).toFixed(1)} ${yb.toFixed(1)} Q${(300 + wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} 300 ${(yb + 26).toFixed(1)} Q${(300 - wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} ${(300 - wb).toFixed(1)} ${yb.toFixed(1)}Z`);
+    const Lf = lerp(.16, 1, inOutCubic(prog(u, D * .06, D * .62))), yb = 176 + 236 * Lf, wb = 22 + 66 * Lf;
+    el.querySelector(".lingua").setAttribute("d", `M276 178 Q300 158 324 178 L${(300 + wb).toFixed(1)} ${yb.toFixed(1)} Q${(300 + wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} 300 ${(yb + 26).toFixed(1)} Q${(300 - wb * .6).toFixed(1)} ${(yb + 34).toFixed(1)} ${(300 - wb).toFixed(1)} ${yb.toFixed(1)}Z`);
     el.querySelectorAll(".sassi > g").forEach(g => { const i = +g.dataset.i; metti(g, 300 + (i - 2) * wb * .42, yb + 20 - Math.abs(i - 2) * 9 + Math.abs(Math.sin(t * 7 + i * 1.7)) * -8 * (Lf < 1 ? 1 : 0), t * 160 * (Lf < 1 ? 1 : 0) + i * 40); });
     const ff = el.querySelector(".fFrana"); ff.setAttribute("opacity", (prog(u, D * .05, .4) * (1 - prog(u, D * .56, D * .08)) * (.75 + Math.sin(t * 5) * .25)).toFixed(2));
-    ff.setAttribute("transform", `translate(0 ${(Math.min(yb - 330, 0) + Math.sin(t * 5) * 5).toFixed(1)})`);
+    ff.setAttribute("transform", `translate(0 ${(Math.min(yb - 300, 40) + Math.sin(t * 5) * 5).toFixed(1)})`);
     const tv = quando(4, "spostati di lato"), p = inOutCubic(prog(u, tv, Math.max(1.8, D * .24))), mov = p > 0 && p < 1 ? 1 : 0;
     anima(el, ".flavio", t, { x: lerp(300, 512, p), y: lerp(488, 334, p * p), s: .45, cammina: mov, bocca: p < 1 ? "o" : "sorriso", aS: p >= 1 ? 150 : 14, aD: p >= 1 ? 150 : 14, agitaS: p >= 1, agitaD: p >= 1 });
     el.querySelector(".fVia").setAttribute("opacity", (prog(u, tv - .2, .4) * (1 - prog(u, quando(4, "Non fermarti") - .4, .5)) * (.75 + Math.sin(t * 5) * .25)).toFixed(2));
@@ -545,8 +550,8 @@ const ANIM = {
     el.querySelector(".al1").setAttribute("transform", `rotate(${(Math.sin(t * 2.2) * 2).toFixed(1)})`);
   },
   rannicchia: (el, u, t, D) => {
-    const tB = quando(5, "Non avvicinarti"), a = 1 - prog(u, tB - .35, .5), b = prog(u, tB - .2, .5);
-    el.querySelector(".gA").style.opacity = a; el.querySelector(".gB").style.opacity = b;
+    const tB = quando(5, "Non avvicinarti"), b = prog(u, tB - .2, .5);
+    el.querySelector(".gB").style.opacity = b;
     const giu = prog(u, quando(5, "rannicchiati") - .5, .7), e = outElastic(giu), g = el.querySelector(".giu");
     g.setAttribute("transform", `translate(300 ${(446 + Math.sin(t * 3.2) * .8).toFixed(1)}) scale(${(1.15 * lerp(.75, 1, e)).toFixed(3)} ${(1.15 * lerp(1.25, 1, e)).toFixed(3)})`);
     const bl = (t % 3.4) < .13 ? .12 : 1; g.querySelector(".occhi").setAttribute("transform", `translate(0 6) scale(1 ${bl}) translate(0 -6)`);
@@ -569,7 +574,7 @@ const ANIM = {
     el.querySelector(".autoB").setAttribute("transform", `translate(${lerp(-70, 62, pb).toFixed(1)} 326) scale(.85)`);
     const su = prog(u, tv - .6, .4);
     anima(el, ".mamma", t, { x: 196, y: 404, s: .4, aS: su > 0 ? 150 : 14, aD: su > 0 ? 150 : 14, agitaS: su > 0, agitaD: su > 0 });
-    anima(el, ".flavio", t, { x: 248, y: 408, s: .32, fase: 1.4, aS: 14, aD: 14 });
+    anima(el, ".flavio", t, { x: 146, y: 408, s: .32, fase: 1.4, aS: 14, aD: 14 });
     el.querySelector(".mamma").style.opacity = el.querySelector(".flavio").style.opacity = prog(u, Math.max(1.2, D * .18), .4);
     pop(el, ".fum", prog(u, tv - .3, .8));
   }

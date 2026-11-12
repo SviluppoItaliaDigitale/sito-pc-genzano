@@ -18,8 +18,8 @@ const CONFIG = {
     { ill: "suono", illh: 420, dur: 10, chip: "Come si riconosce",
       righe: ["Un suono", "<span class='a'>diverso</span>"], sotto: "Sullo schermo, un testo che comincia con <b>IT-alert</b>.",
       sottotitolo: "Il telefono fa un suono diverso dalle solite suonerie, e sullo schermo compare un testo che comincia con la scritta IT-alert." },
-    { ill: "casi", illh: 240, dur: 12.5, chip: "Quando si usa",
-      righe: ["Poche", "emergenze <span class='a'>gravi</span>"], lista: [
+    { ill: "casi", illh: 240, dur: 12.5, chip: "Per quali emergenze",
+      righe: ["Poche", "e <span class='a'>gravi</span>"], lista: [
         ["fabbrica", "Incidente in uno stabilimento industriale"],
         ["nucleare", "Incidente nucleare"],
         ["diga", "Crollo di una grande diga"],

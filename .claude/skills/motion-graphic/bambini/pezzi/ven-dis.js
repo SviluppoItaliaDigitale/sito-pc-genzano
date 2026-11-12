@@ -13,8 +13,8 @@ const VASO = (cls, fiore = "#f783ac") => `<g class="${cls}"><g ${O} stroke-width
 const TEGOLA = cls => `<g class="${cls}"><path d="M-24 -6 Q0 -18 24 -6 V7 Q0 -5 -24 7Z" fill="#e8590c" ${O} stroke-width="4"/></g>`;
 const BOTTO = (cls, x, y) => `<g class="${cls}" transform="translate(${x} ${y})"><g fill="none" stroke="#e8590c" stroke-width="6" stroke-linecap="round">${[0, 1, 2, 3, 4, 5, 6].map(i =>
   `<path d="M0 -16 V-34" transform="rotate(${-78 + i * 26})"/>`).join("")}</g></g>`;
-const SEDIA = `<g ${O} stroke-width="4"><path d="M-20 0 V-44 M20 0 V-44 M-20 -44 V-92" fill="none" stroke-width="6"/><rect x="-25" y="-50" width="50" height="10" rx="4" fill="#4dabf7"/>
-  <rect x="-26" y="-94" width="12" height="40" rx="5" fill="#4dabf7"/></g>`;
+const SEDIA = `<g ${O} stroke-width="4"><path d="M-20 0 V-44 M20 0 V-44 M-20 -44 V-92" fill="none" stroke-width="6"/><rect x="-25" y="-50" width="50" height="10" rx="4" fill="#e03131"/>
+  <rect x="-26" y="-94" width="12" height="40" rx="5" fill="#e03131"/></g>`;
 const AUTO = (cls, c = "#ff8787") => `<g class="${cls}"><g transform="translate(-50 -81)" ${O}><path d="M8 68 V52 L22 32 H66 L84 52 H92 V68Z" fill="${c}"/><path d="M28 36 H62 L74 50 H22Z" fill="#d0ebff"/>
   <circle cx="28" cy="70" r="11" fill="#495057"/><circle cx="72" cy="70" r="11" fill="#495057"/><circle cx="89" cy="58" r="3.5" fill="#ffd43b" stroke-width="2"/></g></g>`;
 const MOTO = cls => `<g class="${cls}"><g ${O} stroke-width="4"><path d="M-24 -13 L-6 -32 H14 L26 -13 M14 -32 L22 -50 H30" fill="none" stroke-width="6"/>
@@ -50,8 +50,8 @@ const ILL = {
       <rect x="396" y="92" width="150" height="150" rx="6" fill="#fff"/><rect x="408" y="104" width="126" height="126" fill="#2c5282"/>
       <g class="ante"><rect x="408" y="104" width="63" height="126" fill="#a5d8ff"/><rect x="471" y="104" width="63" height="126" fill="#a5d8ff"/><path d="M420 122 l14 16 M484 122 l14 16" stroke="#fff"/></g>
       <rect x="386" y="240" width="170" height="13" rx="3" fill="#ced4da"/></g>
-    ${VASO("vD", "#ffd43b")}${VASO("vA")}<g class="sed" transform="translate(538 400)">${SEDIA}</g><g transform="translate(462 400) scale(1.45)">${VASO("vB", "#da77f2")}</g>
-    ${PG("flavio")}${RINGHIERA}
+    ${VASO("vD", "#ffd43b")}<g class="sed" transform="translate(540 400) scale(1.35)">${SEDIA}</g><g transform="translate(462 400) scale(1.45)">${VASO("vB", "#da77f2")}</g>
+    ${PG("flavio")}${VASO("vA")}${RINGHIERA}
     <path class="cinghia" d="M424 304 V352 Q424 372 444 372 H556 Q576 372 576 352 V304" fill="none" stroke="#f59f00" stroke-width="9" stroke-linecap="round" stroke-dasharray="330" stroke-dashoffset="330"/>
     ${SPUNTA("ok1", 186, 128, 26)}${SPUNTA("ok2", 578, 300, 26)}${SPUNTA("ok3", 548, 96, 24)}</svg>`,
   /* 3 — allerta del giorno; auto sotto l'albero (no), auto nello spazio libero (sì) */
