@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-12T10:02",
+  "aggiornato": "2026-11-12T11:02",
   "data_lunga": "giovedì 12 novembre 2026",
-  "aggiornato_label": "giovedì 12 novembre 2026, ore 10:02",
+  "aggiornato_label": "giovedì 12 novembre 2026, ore 11:02",
   "alba": "06:54",
   "tramonto": "16:51",
   "corrente": {
     "temp": 17.5,
-    "percepita": 14.9,
+    "percepita": 15.2,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 79,
-    "vento": 26,
-    "raffiche": 68
+    "umidita": 81,
+    "vento": 25,
+    "raffiche": 64
   },
   "giorni": [
     {
@@ -73,7 +73,7 @@
     },
     {
       "nome": "Rieti",
-      "tmax": 19,
+      "tmax": 20,
       "tmin": 15,
       "cielo": "Temporale"
     },
