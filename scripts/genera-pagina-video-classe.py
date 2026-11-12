@@ -26,6 +26,8 @@ V = [
    "Secondaria di secondo grado, marzo-aprile: «Il caldo e le persone fragili»; tutte le classi prima dell'estate", "/rischi-prevenzione/ondate-di-calore/", "Ondate di calore"),
   ("2026-11-01-notizie-false-emergenza-video", "Notizie vere e notizie false in emergenza",
    "Primaria 3ª-5ª, maggio; secondaria di primo grado, ottobre; secondaria di secondo grado, gennaio-febbraio", "/formazione/schede-stampabili/fake-news-emergenza-secondaria/", "Scheda «Notizie false in emergenza»"),
+  ("2026-11-12-it-alert-video", "IT-alert: il messaggio che avvisa di un grave pericolo",
+   "Secondaria di primo grado, ottobre: «Informarsi in emergenza»", "/dossier/il-messaggio-che-salva/", "Il messaggio che salva"),
   ("2026-11-01-volontariato-protezione-civile-video", "La protezione civile e i volontari",
    "Infanzia, maggio: «Le persone che ci aiutano»; secondaria di secondo grado, maggio", "/diventa-volontario/", "Diventa volontario"),
 ]

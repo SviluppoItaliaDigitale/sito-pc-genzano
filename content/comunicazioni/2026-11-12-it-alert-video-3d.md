@@ -1,20 +1,20 @@
 ---
 title: "IT-alert: un video in 3D spiega il messaggio che avvisa di un grave pericolo"
-date: @@D@@T00:0@@T@@:00+01:00
-description: "Un video di un minuto e mezzo, con voce e sottotitoli, spiega come arriva un messaggio IT-alert, per quali emergenze si usa e che cosa fare quando lo ricevi."
+date: 2026-11-12T00:06:00+01:00
+description: "Un video di poco più di un minuto, con voce e sottotitoli, spiega come arriva un messaggio IT-alert, per quali emergenze si usa e che fare quando lo ricevi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/@@D@@-it-alert-video-3d.webp"
+image: "/images/2026-11-12-it-alert-video-3d.webp"
 image_alt: "Cover dell'articolo: IT-alert: un video in 3D spiega il messaggio che avvisa di un grave pericolo"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
-versione_facile: "@@D@@-it-alert-video-3d-facile"
+versione_facile: "2026-11-12-it-alert-video-3d-facile"
 tts: true
 lis_section: "allerte-meteo"
-social_video: "/video/@@D@@-it-alert-video-3d.mp4"
+social_video: "/video/2026-11-12-it-alert-video-3d.mp4"
 social_crediti: "Musica: «Voice Over Under» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (coqui.ai/cpml)."
 social_citazione: "Se ricevi un messaggio IT-alert, fermati e leggi tutto il messaggio. Poi segui le indicazioni delle autorità."
 social_punti:
@@ -24,12 +24,12 @@ social_punti:
   - "Se comincia con la parola TEST è solo una prova: non devi fare niente."
 ---
 
-IT-alert è il sistema di allarme pubblico italiano: un messaggio che avvisa di un grave pericolo. Lo spieghiamo in un **video in 3D di un minuto e mezzo**, ambientato sul rilievo dei Castelli Romani. Dice come arriva, per quali emergenze si usa e che cosa fare quando lo ricevi.
+IT-alert è il sistema di allarme pubblico italiano: un messaggio che avvisa di un grave pericolo. Lo spieghiamo in un **video in 3D di poco più di un minuto**, ambientato sul rilievo dei Castelli Romani. Dice come arriva, per quali emergenze si usa e che cosa fare quando lo ricevi.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
-{{< video src="/video/@@D@@-it-alert-video-3d.mp4"
-          poster="/video/@@D@@-it-alert-video-3d-poster.webp"
+{{< video src="/video/2026-11-12-it-alert-video-3d.mp4"
+          poster="/video/2026-11-12-it-alert-video-3d-poster.webp"
           verticale="true"
           titolo="Video in 3D con voce e sottotitoli: IT-alert, il messaggio che avvisa di un grave pericolo"
           caption="IT-alert: il messaggio che avvisa di un grave pericolo. Il rilievo dei Castelli Romani è ricostruito dai dati altimetrici, con le altezze raddoppiate; telefoni, antenne e oggetti sono schemi non in scala, e il messaggio mostrato è un esempio. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -55,7 +55,7 @@ Se il messaggio comincia con la parola TEST, è solo una prova: non devi fare ni
 
 ## Come arriva
 
-Il messaggio arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app e non serve iscriversi.
+Il messaggio arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app e non serve iscriversi. Il telefono deve avere campo: il messaggio non arriva se è spento, in modalità aereo o senza segnale.
 
 Il telefono fa un suono diverso dalle solite suonerie. Sullo schermo compare un testo che comincia con la scritta «IT-alert».
 
@@ -84,8 +84,8 @@ In emergenza chiama il **112**.
 
 Dello stesso video c'è una versione a disegni, pensata per i bambini e per la classe, con le stesse parole.
 
-{{< video src="/video/@@D@@-it-alert-video.mp4"
-          poster="/video/@@D@@-it-alert-video-poster.webp"
+{{< video src="/video/2026-11-12-it-alert-video.mp4"
+          poster="/video/2026-11-12-it-alert-video-poster.webp"
           verticale="true"
           titolo="Video a disegni con voce e sottotitoli: IT-alert, il messaggio che avvisa di un grave pericolo"
           caption="La versione a disegni per i bambini. Il testo è lo stesso del video in 3D, trascritto sopra. La versione orizzontale, da proiettare a scuola, è in [Video per la classe](/formazione/video-per-la-classe/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
