@@ -29,7 +29,7 @@
    "inizio": 62.48
   }
  ],
- "durata": 72.56,
+ "durata": 73.75,
  "scene": [
   {
    "inizio": 0.0,
@@ -57,7 +57,7 @@
   },
   {
    "inizio": 61.68,
-   "durata": 10.88
+   "durata": 12.07
   }
  ],
  "effetti": [
@@ -259,32 +259,32 @@
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -3,
-   "inizio": 64.57
+   "inizio": 64.79
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -3,
-   "inizio": 65.7
+   "inizio": 66
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -3,
-   "inizio": 67.59
+   "inizio": 68.349
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -3,
-   "inizio": 69.29
+   "inizio": 70.049
   }
  ],
  "musica": [
   {
    "file": "../../.cache/suoni/on-my-way.mp3",
    "inizio": 0,
-   "fine": 72.56,
+   "fine": 73.75,
    "da": 0,
    "entrata": 1.2,
    "uscita": 3.0

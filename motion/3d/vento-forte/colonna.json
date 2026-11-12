@@ -1,5 +1,5 @@
 {
- "durata": 73.65,
+ "durata": 75.05,
  "voce": [
   {
    "file": "../../voce/vento-forte/line_0.wav",
@@ -34,7 +34,7 @@
   {
    "file": "../../.cache/suoni/easy-lemon.mp3",
    "inizio": 0,
-   "fine": 73.65,
+   "fine": 75.05,
    "da": 0,
    "entrata": 1.2,
    "uscita": 3.0
@@ -251,19 +251,19 @@
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 66.09,
+   "evento": 66.11,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 68.19,
+   "evento": 69.15,
    "tipo": "colpo",
    "volume": -2
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 69.84,
+   "evento": 70.8,
    "tipo": "colpo",
    "volume": -4
   }

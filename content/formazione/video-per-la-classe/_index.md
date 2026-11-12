@@ -97,7 +97,7 @@ Per approfondire: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeolog
 
 ## Le frane: riconoscerle e mettersi al sicuro
 
-**Durata:** 1 min 01 s · **Nel programma dell'anno:** Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»
+**Durata:** 1 min 03 s · **Nel programma dell'anno:** Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»
 
 {{< video src="/video/2026-11-12-frane-video-16x9.mp4" poster="/video/2026-11-12-frane-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Le frane: riconoscerle e mettersi al sicuro" >}}
 
@@ -142,7 +142,7 @@ Per approfondire: [Temporali intensi](/rischi-prevenzione/temporali-intensi/).
 
 ## Vento forte: che cosa fare
 
-**Durata:** 56 s · **Nel programma dell'anno:** Infanzia e primaria 1ª-2ª, gennaio-febbraio: «Pioggia, vento e temporale», «Il tempo che cambia»
+**Durata:** 57 s · **Nel programma dell'anno:** Infanzia e primaria 1ª-2ª, gennaio-febbraio: «Pioggia, vento e temporale», «Il tempo che cambia»
 
 {{< video src="/video/2026-11-12-vento-forte-video-16x9.mp4" poster="/video/2026-11-12-vento-forte-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Vento forte: che cosa fare" >}}
 
