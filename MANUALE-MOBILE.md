@@ -708,7 +708,7 @@ Controlla la `date:` nel frontmatter:
   in cima all'archivio invece del più recente → manca l'orario nel
   `date:`. Il formato deve essere `AAAA-MM-GGT00:01:00+02:00` per
   il primo, `T00:02:00+02:00` per il secondo, ecc. (orari minimi
-  crescenti). Da PC: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`
+  crescenti; da fine ottobre a fine marzo `+01:00`, l'ora solare). Da PC: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`
   fa tutto in un colpo. Da mobile: modifica i 2 articoli a mano via
   GitHub web editor. Specifiche in [`manuale/parte-01-scrivere-un-articolo-passo-per-passo.md`](manuale/parte-01-scrivere-un-articolo-passo-per-passo.md) § frontmatter
   `date`.

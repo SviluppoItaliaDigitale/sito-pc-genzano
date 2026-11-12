@@ -241,13 +241,18 @@ date: 2026-04-30T00:01:00+02:00
 
 # 2° articolo (ultimo scritto, in cima):
 date: 2026-04-30T00:02:00+02:00
+
+# d'inverno (ora solare):
+date: 2026-11-12T00:01:00+01:00
 ```
+
+🔴 **Lo scarto segue l'ora italiana di quel giorno** (dal 12/11/2026): `+02:00` con l'ora legale, `+01:00` con l'ora solare, da fine ottobre a fine marzo. Con `+02:00` a novembre `T00:02:00` cade alle 23:02 del giorno prima, sotto la mezzanotte degli articoli a data semplice: il resoconto degli interventi del 6 e 10 novembre era finito al quarto posto in homepage invece che al primo. Lo controlla `scripts/check-scarto-orario.py`, bloccante sulle PR per gli articoli toccati (`--correggi FILE` corregge); `fix-ordering-articoli-stesso-giorno.py` scrive già lo scarto giusto.
 
 **Perché orari minimi (00:01, 00:02…) e non semantici:** l'orario non è mai mostrato (il template formatta solo "30 aprile 2026"), serve solo come tie-break per l'ordering `Date desc`. Orari minimi evitano che gli articoli del **giorno corrente** risultino "futuri" per Hugo (esclusi dal build fino al rebuild di `pubblica-programmata.yml`, 06:07 UTC).
 
 **Perché la regola esiste:** ad aprile 2026 si è scoperto che con due articoli a `date: AAAA-MM-GG` identico Hugo usa come tie-break l'ordine alfabetico del filename, non quello di pubblicazione: 47 giornate avevano articoli in ordine arbitrario. L'orario crescente risolve.
 
-**Cosa NON usare:** `date: ...Z` (UTC esplicita: rischio "articolo futuro", usa sempre `+02:00`); `date: "2026-04-06"` (con virgolette: accettato ma sconsigliato per coerenza).
+**Cosa NON usare:** `date: ...Z` (UTC esplicita: rischio "articolo futuro", usa lo scarto dell'ora italiana); `+02:00` da fine ottobre a fine marzo (lì vale `+01:00`); `date: "2026-04-06"` (con virgolette: accettato ma sconsigliato per coerenza).
 
 **Workflow operativo:** `hugo new comunicazioni/AAAA-MM-GG-titolo.md` produce `date: {{ .Date }}` → timestamp completo (va bene per il caso B); per il caso A riducilo a `AAAA-MM-GG`. Se ti accorgi a posteriori di 2 articoli stesso giorno con `date` solo-data, lancia `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente, riassegna `00:01, 00:02, ...` da git first-commit asc).
 

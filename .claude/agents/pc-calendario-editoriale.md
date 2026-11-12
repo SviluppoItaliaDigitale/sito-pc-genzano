@@ -42,7 +42,7 @@ Per ogni articolo indicato (o, senza indicazioni, per tutti quelli in uscita nei
 Per ogni incoerenza scegli la soluzione che rende l'articolo vero il giorno in cui esce, in quest'ordine di preferenza:
 
 1. **Sposta la data di uscita** vicino al fatto: il giorno stesso per «oggi si chiude», uno o due giorni prima per un avviso («da giovedì scatta»). Prima di spostarla:
-   - controlla gli altri articoli di quel giorno (`ls content/comunicazioni/<nuova-data>-*`): se sono due o più, usa il formato con l'orario crescente (`T00:01:00+02:00`, `T00:02:00+02:00`…, rule 02 § "Regola critica formato data");
+   - controlla gli altri articoli di quel giorno (`ls content/comunicazioni/<nuova-data>-*`): se sono due o più, usa il formato con l'orario crescente (`T00:01:00+02:00`, `T00:02:00+02:00`…, con `+01:00` da fine ottobre a fine marzo, rule 02 § "Regola critica formato data");
    - rinomina il file perché il prefisso coincida con la nuova data, **aggiorna tutti i link** che puntano al vecchio slug (`grep -rn "<vecchio-slug>" content/ static/ data/`), rinomina cover e QR (`static/images/<slug>.webp`, `static/qr/<slug>.png|svg`) o rigenera la cover con `scripts/genera-cover.py`, e sposta la cartella `social-bozze/` se esiste;
    - se esiste la versione `-facile.md`, spostala insieme, allineando `versione_facile` e `versione_facile_di`.
 2. **Riscrivi al futuro** quando anticipare l'uscita ha senso (un preavviso utile): «Il 15 ottobre si chiuderà…», «Fino al 15 ottobre restano in vigore…». Titolo, descrizione, primo paragrafo e testi social insieme.

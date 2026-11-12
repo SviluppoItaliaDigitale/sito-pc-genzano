@@ -65,7 +65,7 @@ Tutti i campi dell'archetype `archetypes/comunicazioni.md` devono essere present
 
 ### 2. Formato data
 - 1 articolo nel giorno: `date: AAAA-MM-GG` semplice.
-- 2+ articoli stesso giorno: `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari minimi crescenti (00:01, 00:02, ...). MAI `Z` (UTC), sempre `+02:00`.
+- 2+ articoli stesso giorno: `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari minimi crescenti (00:01, 00:02, ...). MAI `Z` (UTC); lo scarto è quello dell'ora italiana di quel giorno: `+02:00` con l'ora legale, `+01:00` con l'ora solare (da fine ottobre a fine marzo), controllato da `scripts/check-scarto-orario.py`.
 - Verifica con `find content/comunicazioni -name "AAAA-MM-GG-*.md"` se ci sono altri articoli stesso giorno.
 - Specifiche complete in `.claude/rules/02-content-design-pa.md` § "Regola critica formato data".
 

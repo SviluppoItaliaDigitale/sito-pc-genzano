@@ -100,7 +100,7 @@ Pagine certe da linkare quando pertinenti:
 
 ### Formato data
 - **1 articolo nella giornata** (default): `date: AAAA-MM-GG` semplice.
-- **2+ articoli stesso giorno**: `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti minimi (00:01, 00:02, ...). MAI `Z` (UTC).
+- **2+ articoli stesso giorno**: `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti minimi (00:01, 00:02, ...); `+01:00` al posto di `+02:00` da fine ottobre a fine marzo. MAI `Z` (UTC).
 
 ### Badge — palette delle 13 categorie
 `Allerta` · `Avviso` · `Comunicazione` · `Attività` · `Formazione` · `Evento` · `Volontariato` · `Radiocomunicazioni` · `Prevenzione` · `Esercitazione` · `Aggiornamento` · `Informazione` · `Emergenza`

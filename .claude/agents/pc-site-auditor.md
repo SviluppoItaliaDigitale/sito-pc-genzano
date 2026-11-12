@@ -50,7 +50,7 @@ Storia: il **25 aprile 2026** un sweep proattivo segnalò "8 articoli non scritt
 - Per ciascun bug reale: href + file(i) che lo citano + fix proposto (slug corretto, o rimozione, o URL assoluto).
 
 ### C. Ordering articoli stesso giorno
-- Giornate con ≥2 articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti (`00:01`, `00:02`, ...). Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG` → ordering instabile (Hugo usa il filename come tie-break). Rule `02-content-design-pa.md` § "Regola critica formato data".
+- Giornate con ≥2 articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` (`+01:00` con l'ora solare) con orari crescenti (`00:01`, `00:02`, ...). Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG` → ordering instabile (Hugo usa il filename come tie-break). Rule `02-content-design-pa.md` § "Regola critica formato data".
 - Fix (da proporre, non eseguire): `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente).
 
 ### D. Frontmatter articoli
@@ -63,7 +63,7 @@ Storia: il **25 aprile 2026** un sweep proattivo segnalò "8 articoli non scritt
 - `draft: true` in `content/` → vietato (`feedback_no_draft_in_revisione`).
 - `_build:` con underscore → rimosso da Hugo 0.145+, rompe il build (la chiave è `build:`).
 - Marker `# TODO-foto-*` → bandito (CLAUDE.md punto 9): renderizzato come H1 + sovrascrive il banner.
-- `date:` con `Z` (UTC) → usare sempre `+02:00`.
+- `date:` con `Z` (UTC) → usare lo scarto dell'ora italiana del giorno (`+02:00` legale, `+01:00` solare; `scripts/check-scarto-orario.py`).
 - `^# ` (H1) nel corpo di un articolo `comunicazioni/` → il titolo è già `<h1>`.
 - Residui `images-social/` (cartella spostata in `social-bozze/<slug>/` il 2 maggio 2026).
 - Shortcode `{{< foto >}}` / `{{< pittogramma >}}` senza `alt`.

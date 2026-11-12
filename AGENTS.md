@@ -317,7 +317,7 @@ Solo dopo la passata pulita procedi al commit. Vale anche per un singolo articol
 
 Ognuna è elaborata per esteso in `CLAUDE.md` sezione "Regole contenuti e qualità". Qui solo i punti operativi.
 
-1. **Formato data nel frontmatter:** `AAAA-MM-GG` semplice se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti `00:01, 00:02, …` se 2+ articoli/giorno (mai `Z` UTC, sempre `+02:00`). Tie-break Hugo `Date desc` su date uguali = ordine alfabetico filename, non ordine pubblicazione → orari minimi risolvono. Fix retroattivo: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`.
+1. **Formato data nel frontmatter:** `AAAA-MM-GG` semplice se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti `00:01, 00:02, …` se 2+ articoli/giorno (mai `Z` UTC; lo scarto è quello dell'ora italiana di quel giorno: `+02:00` con l'ora legale, `+01:00` con l'ora solare (da fine ottobre a fine marzo)). Tie-break Hugo `Date desc` su date uguali = ordine alfabetico filename, non ordine pubblicazione → orari minimi risolvono. Fix retroattivo: `python3 scripts/fix-ordering-articoli-stesso-giorno.py`.
 
 2. **Conformità AGID:** Bootstrap Italia + WCAG 2.2 AA + struttura AGID. Niente eccezioni "estetiche".
 

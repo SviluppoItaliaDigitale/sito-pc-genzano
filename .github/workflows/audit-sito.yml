@@ -730,18 +730,25 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
-          section "26. Formato data articoli (no UTC, sì +02:00 Europe/Rome)"
+          section "26. Formato data articoli (no UTC, scarto dell'ora italiana del giorno)"
           # NB: la sezione 8 verifica il range dell'anno; questa verifica il formato.
           # Regola 02-content-design-pa.md § "Regola critica formato data":
           #   - 1 articolo/giorno → date: AAAA-MM-GG (semplice)
-          #   - 2+ articoli/giorno → date: AAAA-MM-GGTHH:MM:SS+02:00 (orari crescenti)
+          #   - 2+ articoli/giorno → date: AAAA-MM-GGTHH:MM:SS+02:00 con l'ora legale, +01:00 con l'ora solare (orari crescenti)
           # Il bug VERO è solo `T...Z` (UTC esplicito), non un T qualunque.
           BAD_DATE_FORMAT=$(grep -lrE '^date: [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9:]+Z' content/comunicazioni/ 2>/dev/null || true)
           if [ -n "$BAD_DATE_FORMAT" ]; then
-            err "Articoli con data in formato \`AAAA-MM-DDTHH:MM:SSZ\` UTC (regola 02: usare \`+02:00\` Europe/Rome, mai \`Z\`):"
+            err "Articoli con data in formato \`AAAA-MM-DDTHH:MM:SSZ\` UTC (regola 02: scarto dell'ora italiana, mai \`Z\`):"
             echo "$BAD_DATE_FORMAT" | sed 's/^/- `/; s/$/`/' >> "$REPORT"
           else
-            ok "Tutte le date articolo in formato corretto (\`AAAA-MM-GG\` o \`AAAA-MM-GGTHH:MM:SS+02:00\`)."
+            ok "Nessuna data articolo in UTC (\`Z\`)."
+          fi
+          SCARTO=$(python3 scripts/check-scarto-orario.py 2>&1 | grep '::error' | sed 's/^::error file=//; s/::/ — /' || true)
+          if [ -n "$SCARTO" ]; then
+            err "Articoli con lo scarto orario diverso dall'ora italiana del giorno (correzione: \`python3 scripts/check-scarto-orario.py --correggi FILE\`):"
+            echo "$SCARTO" | sed 's/^/- /' >> "$REPORT"
+          else
+            ok "Scarto orario delle date coerente con l'ora italiana."
           fi
 
           # ----------------------------------------------------------------

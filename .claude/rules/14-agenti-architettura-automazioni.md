@@ -98,7 +98,7 @@ Mappa completa in rule `04`/`04a`/`04b`/`04c`. Componenti chiave:
 ## Regole contenuti e qualità (19 punti)
 
 Elenco completo in rule `09-regole-contenuti-qualita.md`. Vincoli più critici:
-- **P1 Formato data:** `AAAA-MM-GG` se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti (00:01, 00:02…) se 2+/giorno. Mai `Z` UTC.
+- **P1 Formato data:** `AAAA-MM-GG` se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti (00:01, 00:02…) se 2+/giorno, `+01:00` con l'ora solare. Mai `Z` UTC.
 - **P4 Qualità ChatGPT 9.5/10:** redazione AGID in ogni contesto (CLI/mobile/cloud), nessuna delega ad AI esterne.
 - **P9 Banner intoccabile:** `image:` = cover tipografica col titolo; tutte le foto **inline** con `{{< foto >}}`, mai nel banner; marker `# TODO-foto-*` bandito; in revisione testuale `image:` non si tocca.
 - **P12 Gerarchia fonti crisi:** AGID+DPC → CNR/ISPRA → EENA/CWA → ISO 22329 + WCAG 2.2 AA → normativa orizzontale.
