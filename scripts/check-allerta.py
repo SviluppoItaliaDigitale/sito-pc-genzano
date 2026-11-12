@@ -904,7 +904,13 @@ def main():
     level_changed = current.get("livello") != livello
     old_domani_level = ((current.get("domani") or {}).get("livello") or "verde")
     new_domani_level = (domani_block.get("livello") if domani_block else "verde")
-    domani_level_changed = old_domani_level != new_domani_level
+    # Cambia anche quando cambia solo il testo dei rischi (per esempio il livello
+    # scritto accanto a ciascuno): senza, una correzione del testo non arriverebbe
+    # mai alla barra finché il livello massimo resta lo stesso.
+    old_domani_rischi = list((current.get("domani") or {}).get("rischi") or [])
+    new_domani_rischi = list(domani_block.get("rischi") or []) if domani_block else []
+    domani_level_changed = (old_domani_level != new_domani_level
+                            or (new_domani_level != "verde" and old_domani_rischi != new_domani_rischi))
 
     stale_check = True
     last_check_str = current.get("ultimo_controllo") or current.get("ultimo_aggiornamento")
