@@ -18,15 +18,15 @@
   },
   {
    "inizio": 45.2,
-   "durata": 9.6
+   "durata": 9.1
   },
   {
-   "inizio": 54.8,
+   "inizio": 54.3,
    "durata": 10.5
   },
   {
-   "inizio": 65.3,
-   "durata": 11.3
+   "inizio": 64.8,
+   "durata": 12.1
   }
  ],
  "voce": [
@@ -35,8 +35,8 @@
   22.3,
   31.05,
   45.8,
-  55.7,
-  66.2
+  55.2,
+  65.7
  ],
  "eventi": {
   "tuffo": 3.9,
@@ -77,33 +77,33 @@
   "tutti_a": 42.73,
   "no_arrivo": 46.0,
   "pan1": 46.1,
-  "no1": 46.95,
-  "pan2": 47.74,
-  "no2": 48.73,
-  "col_da": 49.14,
-  "col_a": 50.09,
-  "colori": 50.14,
-  "card_sito": 51.8,
-  "s4_fine": 54.4,
-  "p1_arr": 55.6,
-  "p1": 55.96,
-  "p1_eti": 56.34,
-  "p2_da": 56.83,
-  "p2_a": 57.33,
-  "leggi_da": 57.38,
-  "leggi_a": 58.6,
-  "p3_da": 58.8,
-  "p3_a": 59.3,
-  "passi_da": 61.72,
-  "passi_a": 62.82,
-  "test_arr": 66.2,
-  "test_msg": 66.35,
-  "test_cerchia": 67.64,
-  "card_test": 68.39,
-  "card_test_fine": 71.14,
-  "n112_da": 71.59,
-  "n112_a": 72.45,
-  "card_fine": 73.81
+  "no1": 46.77,
+  "pan2": 47.16,
+  "no2": 48.29,
+  "col_da": 48.9,
+  "col_a": 49.85,
+  "colori": 49.9,
+  "card_sito": 51.26,
+  "s4_fine": 53.9,
+  "p1_arr": 55.1,
+  "p1": 55.46,
+  "p1_eti": 55.84,
+  "p2_da": 56.33,
+  "p2_a": 56.83,
+  "leggi_da": 56.88,
+  "leggi_a": 58.1,
+  "p3_da": 58.3,
+  "p3_a": 58.8,
+  "passi_da": 61.22,
+  "passi_a": 62.32,
+  "test_arr": 65.7,
+  "test_msg": 65.85,
+  "test_cerchia": 67.14,
+  "card_test": 67.89,
+  "card_test_fine": 70.64,
+  "n112_da": 71.09,
+  "n112_a": 71.99,
+  "card_fine": 74.12
  },
- "totale": 76.6
+ "totale": 76.9
 }

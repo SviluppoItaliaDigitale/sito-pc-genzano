@@ -1,5 +1,5 @@
 {
- "durata": 76.6,
+ "durata": 76.9,
  "voce": [
   {
    "file": "../../voce/it-alert/line_0.wav",
@@ -23,18 +23,18 @@
   },
   {
    "file": "../../voce/it-alert/line_5.wav",
-   "inizio": 55.7
+   "inizio": 55.2
   },
   {
    "file": "../../voce/it-alert/line_6.wav",
-   "inizio": 66.2
+   "inizio": 65.7
   }
  ],
  "musica": [
   {
    "file": "../../.cache/suoni/voice-over-under.mp3",
    "inizio": 0,
-   "fine": 76.6,
+   "fine": 76.9,
    "da": 0,
    "entrata": 1.5,
    "uscita": 3.0
@@ -123,67 +123,67 @@
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 46.95
+   "evento": 46.77
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 48.73
+   "evento": 48.29
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
    "tipo": "colpo",
    "volume": -3,
-   "evento": 49.62
+   "evento": 49.38
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 51.8
+   "evento": 51.26
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
    "tipo": "colpo",
    "volume": -3,
-   "evento": 55.2
+   "evento": 54.7
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 55.96
+   "evento": 55.46
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 59.3
+   "evento": 58.8
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
    "tipo": "colpo",
    "volume": -3,
-   "evento": 65.75
+   "evento": 65.25
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
    "tipo": "colpo",
    "volume": -3,
-   "evento": 72.02
+   "evento": 71.54
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 72.45
+   "evento": 71.99
   },
   {
    "file": "../../.cache/suoni/pop.wav",
    "tipo": "colpo",
    "volume": -2,
-   "evento": 73.81
+   "evento": 74.12
   }
  ],
  "crediti": [
