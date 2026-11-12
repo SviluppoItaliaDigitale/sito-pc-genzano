@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-11T23:21:11+00:00",
+  "generato": "2026-11-12T04:02:26+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-12T01:16:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli inviati Usa da Putin dopo Abu Dhabi, poi da Zelensky a Dublino",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/gli-inviati-usa-da-putin-dopo-abu-dhabi-poi-da-zelensky-a-dublino_275a59ea-50f5-4e6e-8d90-89aa9c12e2d0.html"
+  },
+  {
+   "data": "2026-11-11T23:44:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nvidia pensa alla successione di Huang, in pole il genero Caprez",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/nvidia-pensa-alla-successione-di-huang-in-pole-il-genero-caprez_c0ff1f75-ed2a-4b7e-bfeb-c9da809cc657.html"
+  },
   {
    "data": "2026-11-11T23:02:47+00:00",
    "fonte": "ADNKRONOS",
@@ -101,12 +113,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/vi-annienteremo-lallarme-bomba-in-6.000-scuole-italiane.-meloni-strategia-per-il-caos_870b0024-72d2-4b15-bab5-0c74dcc1d653.html"
   },
   {
-   "data": "2026-11-11T20:16:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli inviati Usa da Putin dopo Abu Dhabi, poi da Zelensky a Dublino",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/gli-inviati-usa-da-putin-dopo-abu-dhabi-poi-da-zelensky-a-dublino_275a59ea-50f5-4e6e-8d90-89aa9c12e2d0.html"
-  },
-  {
    "data": "2026-11-11T19:52:18+00:00",
    "fonte": "ANSA",
    "titolo": "Von der Leyen a Cop31, sì dell'Ue all'impegno per l'elettrificazione '35 by 35'",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "'Padre Roberto' torna a casa, gioia incontenibile in Perù per Leone",
    "url": "https://www.ansa.it/vaticano/notizie/2026/11/11/padre-roberto-torna-a-casa-gioia-incontenibile-in-peru-per-leone_9c87d5f1-bff8-47a1-ba0a-c427b3968c5a.html"
-  },
-  {
-   "data": "2026-11-11T18:38:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Allarme bomba, l'ansia degli studenti costretti a lasciare il cellulare in classe",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allarme-bomba-lansia-degli-studenti-costretti-a-lasciare-il-cellulare-in-classe_bef17e2d-39df-4503-b461-03418f8b9b1a.html"
   }
  ]
 }

@@ -1,12 +1,43 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-11-11T23:21:12+00:00",
+  "generato": "2026-11-12T04:02:28+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 100,
  "events": [
+  {
+   "alertlevel": "Green",
+   "datemodified": "2026-11-12T02:52:12",
+   "description": "Tropical Cyclone PENA-26",
+   "episodeid": 22,
+   "eventid": 1001348,
+   "eventname": "PENA-26",
+   "eventtype": "TC",
+   "fromdate": "2026-11-06T21:00:00",
+   "lat": 9.8,
+   "lon": -170.6,
+   "name": "Tropical Cyclone PENA-26",
+   "severitytext": "Tropical Storm (maximum wind speed of 93 km/h)",
+   "todate": "2026-11-12T03:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Russia",
+   "datemodified": "2026-11-12T01:59:03",
+   "description": "Earthquake in Russia",
+   "episodeid": 1746094,
+   "eventid": 1576886,
+   "eventtype": "EQ",
+   "fromdate": "2026-11-12T01:18:44",
+   "iso3": "RUS",
+   "lat": 50.4399,
+   "lon": 156.6137,
+   "name": "Earthquake in Russia",
+   "severitytext": "Magnitude 4.8M, Depth:74.47km",
+   "todate": "2026-11-12T01:18:44"
+  },
   {
    "alertlevel": "Green",
    "country": "Portugal",
@@ -42,7 +73,7 @@
   {
    "alertlevel": "Green",
    "country": "Nepal",
-   "datemodified": "2026-11-11T23:18:16",
+   "datemodified": "2026-11-11T23:40:40",
    "description": "Earthquake in Nepal",
    "episodeid": 1746083,
    "eventid": 1576877,
@@ -58,32 +89,17 @@
   {
    "alertlevel": "Green",
    "country": "Ascension Island Region",
-   "datemodified": "2026-11-11T22:44:14",
+   "datemodified": "2026-11-12T01:27:12",
    "description": "Earthquake in Ascension Island Region",
-   "episodeid": 1746075,
+   "episodeid": 1746092,
    "eventid": 1576872,
    "eventtype": "EQ",
    "fromdate": "2026-11-11T22:03:42",
-   "lat": -7.957,
-   "lon": -13.4059,
+   "lat": -7.9928,
+   "lon": -13.3536,
    "name": "Earthquake in Ascension Island Region",
    "severitytext": "Magnitude 4.9M, Depth:10km",
    "todate": "2026-11-11T22:03:42"
-  },
-  {
-   "alertlevel": "Green",
-   "datemodified": "2026-11-11T20:51:23",
-   "description": "Tropical Cyclone PENA-26",
-   "episodeid": 21,
-   "eventid": 1001348,
-   "eventname": "PENA-26",
-   "eventtype": "TC",
-   "fromdate": "2026-11-06T21:00:00",
-   "lat": 9.9,
-   "lon": -169.4,
-   "name": "Tropical Cyclone PENA-26",
-   "severitytext": "Tropical Storm (maximum wind speed of 93 km/h)",
-   "todate": "2026-11-11T21:00:00"
   },
   {
    "alertlevel": "Green",
@@ -182,7 +198,7 @@
   {
    "alertlevel": "Green",
    "country": "Japan",
-   "datemodified": "2026-11-11T22:35:04",
+   "datemodified": "2026-11-12T03:22:55",
    "description": "Tropical Cyclone CEMPAKA-26",
    "episodeid": 22,
    "eventid": 1001347,
@@ -1583,22 +1599,6 @@
    "lon": 22.803,
    "name": "Forest fires in Botswana",
    "severitytext": "Green impact for forestfire in 7749 ha",
-   "todate": "2026-11-11T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "South Sudan",
-   "datemodified": "2026-11-11T20:04:40",
-   "description": "Forest fires in South Sudan",
-   "episodeid": 3,
-   "eventid": 1033675,
-   "eventtype": "WF",
-   "fromdate": "2026-11-08T00:00:00",
-   "iso3": "SSD",
-   "lat": 8.8619,
-   "lon": 28.8215,
-   "name": "Forest fires in South Sudan",
-   "severitytext": "Green impact for forestfire in 7588 ha",
    "todate": "2026-11-11T00:00:00"
   }
  ]
