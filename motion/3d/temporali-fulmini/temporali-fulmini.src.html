@@ -279,7 +279,9 @@ SOTT.forEach(f => {
   const FULMINI_R = [
     { t: EV.lampo0, f: fulmine(baseNube(.3, .2), pColpo, { spessore: .07, alone: 2.4, seme: 11 }) },
     { t: EV.lampo2, f: fulmine(baseNube(-.5, .4), colpo2, { spessore: .07, alone: 2.4, seme: 23 }) },
-    { t: EV.lampo6, f: fulmine(baseNube(ALLONTANA.x * u6 + .6, ALLONTANA.z * u6), colpo6, { spessore: .04, alone: 1.8, seme: 37 }) }
+    { t: EV.lampo6, f: ORIZ
+      ? fulmine(baseNube(ALLONTANA.x * u6 + 1.5, ALLONTANA.z * u6 + 1.7), (() => { const g = ril.geo(cNube.x + ALLONTANA.x * u6 + 2.6, cNube.z + ALLONTANA.z * u6 + 3.4); return ril.sopra(g.lat, g.lon, 0); })(), { spessore: .07, alone: 2.2, seme: 37 })
+      : fulmine(baseNube(ALLONTANA.x * u6 + .6, ALLONTANA.z * u6), colpo6, { spessore: .04, alone: 1.8, seme: 37 }) }
   ];
   FULMINI_R.forEach(x => scenaR.add(x.f.gruppo));
 
@@ -589,6 +591,11 @@ SOTT.forEach(f => {
     { t: EV.esce + 1.6, bersaglio: [.3, 4.4, -1.2], az: -10, el: 37, dist: 39 },          // si torna su: il temporale si allontana
     { t: TOTAL, az: 4 }
   ];
+  if (ORIZ) {
+    KR.forEach(k => { if (k.dist) k.dist *= .64; });
+    Object.assign(KR[KR.length - 2], { t: EV.esce + .9, bersaglio: [6.4, 1.2, .6], dist: 27, el: 37 });   // rilievo a sinistra, cartello a destra, ultimo fulmine in vista
+    Object.assign(KR[7], { bersaglio: [mix(pGen(0).x, colpo2.x, .42), 2.3, mix(pGen(0).z, colpo2.z, .42)], dist: 14.5 });
+  }
   const cam1 = M3.telecamera(camR, KR, { rilievo: ril });
   const ins = (r, f = 32) => {
     const z = camP.userData.zona, st = camP.userData.stage || { H };
@@ -605,6 +612,10 @@ SOTT.forEach(f => {
     casa: [[XC, 2.3, 1.1], 0, 35, 5.9], finestra: [[XC - 3.1, 1.95, -LZ], -8, 12, 1.3], tv: [[XC - .45, 1.0, -1.65], 5, 21, 1.6],
     telefono: [[XC + TEL.x + .02, 1.28, TEL.z], 6, 13, .66], acqua: [[XC + LX - .55, 1.45, -.35], 36, 23, 2.25]
   };
+  if (ORIZ) Object.assign(VISTE, {                     // nel 16:9 alcune viste vogliono più aria sopra e sotto
+    edificio: [[0, 3.5, -4.6], -15, 20, 7.6], auto: [[0, 1.3, 9.2], 30, 20, 4.3], casa: [[XC, 2.9, .7], 0, 35, 7.4],
+    bLargo: [[XB + .4, 2.9, -.6], 14, 33, 12.6], no: [[0, 2.6, -.9], 30, 33, 9.4]
+  });
   const vista = (t, nome, extra = {}) => { const v = VISTE[nome]; chiave(t, v[0], v[1], v[2], v[3], extra); };
   chiave(EV.entra - .3, [0, 2.2, .8], -22, 66, 40);
   vista(E(2) - .15, 'aLargo'); vista(S(3) + .2, 'aLargo');
@@ -637,8 +648,8 @@ SOTT.forEach(f => {
   scheda('R', 'scuro', 'Il cielo si fa scuro?', 'CAMBIA PROGRAMMA', () => pNube, vs(-170, 230), T.se1 + .95, E(1) - .2, AMBRA);
   scheda('R', 'pochi', 'A pochi chilometri', 'SE SENTI IL TUONO, È VICINO', () => pMezzo, vs(-190, -150), T.pochi - .1, T.sei - .1, AMBRA);
   scheda('R', 'pericolo', 'Sei già in pericolo', 'RAGGIUNGI UN LUOGO CHIUSO', () => pGen(60), vs(190, -200), T.sei + .15, EV.zoom - .1, ROSSO);
-  scheda('P', 'edificio', 'Un edificio', 'È IL RIPARO GIUSTO', () => mondo(casaA, V(-3.2, 5.5, 3.0)), vs(-60, -200), T.riparo + .05, T.se3 - .15, VERDE);
-  scheda('P', 'auto', "L'automobile", 'PORTE E FINESTRINI CHIUSI', () => mondo(auto, V(-.4, 1.66, .8)), vs(-90, -240), T.va + .3, T.chiusi + .1, VERDE);
+  scheda('P', 'edificio', 'Un edificio', 'È IL RIPARO GIUSTO', () => mondo(casaA, V(-3.2, 5.5, 3.0)), ORIZ ? { dx: -340, dy: -30 } : vs(-60, -200), T.riparo + .05, T.se3 - .15, VERDE);
+  scheda('P', 'auto', "L'automobile", 'PORTE E FINESTRINI CHIUSI', () => mondo(auto, V(-.4, 1.66, .8)), ORIZ ? { dx: -360, dy: -70 } : vs(-90, -240), T.va + .3, T.chiusi + .1, VERDE);
   scheda('P', 'no', 'Non riparano', 'TETTOIE · GAZEBO · BALCONI', null, null, T.non3 - .1, E(3) - .15, ROSSO);
   scheda('P', 'albero', 'Mai sotto un albero', 'NON È UN RIPARO', () => V(XB + ALB.x + .9, 2.0, ALB.z + 1.2), vs(250, 60), S(4) + 1.2, T.fulmini + .35, ROSSO);
   const ET = [];
@@ -646,7 +657,7 @@ SOTT.forEach(f => {
   etichetta('R', 'genzano', 'Genzano di Roma', () => pGen(40), vs(0, -46), S(1) + 1.3, T.guarda - .45, null, true);
   etichetta('R', 'nemi', 'Lago di Nemi', () => ril.sopra(41.7135, 12.7035, 30), vs(96, -36), S(1) + 1.7, T.guarda - .45, null, true);
   etichetta('R', 'albano', 'Lago Albano', () => ril.sopra(41.7475, 12.667, 30), vs(-40, -44), S(1) + 2.1, T.guarda - .45, null, true);
-  etichetta('R', 'genzano2', 'Genzano di Roma', () => pGen(40), vs(-185, 0), EV.lampo2 + .5, T.sei - .2, null, true);
+  etichetta('R', 'genzano2', 'Genzano di Roma', () => pGen(40), ORIZ ? { dx: 210, dy: 0 } : vs(-185, 0), EV.lampo2 + .5, T.sei - .2, null, true);
   etichetta('P', 'tettoia', 'Tettoia', () => mondo(tettoia, V(0, 2.7, 0)), vs(-10, 96), T.tettoie - .15, E(3) - .15, ROSSO);
   etichetta('P', 'gazebo', 'Gazebo', () => mondo(gazebo, V(0, 3.4, 0)), vs(20, 150), T.gazebo - .15, E(3) - .15, ROSSO);
   etichetta('P', 'balcone', 'Balcone', () => mondo(balcone, V(0, .9, .6)), vs(-150, -64), T.balconi - .15, E(3) - .15, ROSSO);
@@ -704,7 +715,8 @@ SOTT.forEach(f => {
   const elTitolo = document.getElementById('titolo'), elOrologio = document.getElementById('orologio'), elEmergenza = document.getElementById('emergenza');
   const el112 = elEmergenza.querySelector('.n'), elSito = elEmergenza.querySelector('.w'), elR1 = elTitolo.querySelector('.r1'), elR2 = elTitolo.querySelector('.r2');
   [elTitolo, elOrologio, elEmergenza].forEach(e => { e.style.left = L.margine + 'px'; e.style.top = (L.zonaSchede.alto + 16) + 'px'; });
-  elOrologio.style.width = elEmergenza.style.width = (W - 2 * L.margine) + 'px';
+  elOrologio.style.width = elEmergenza.style.width = (ORIZ ? 800 : W - 2 * L.margine) + 'px';
+  if (ORIZ) { elOrologio.style.left = elEmergenza.style.left = (W - L.margine - 800) + 'px'; elOrologio.style.height = '210px'; el112.style.fontSize = '170px'; elR1.style.fontSize = '72px'; elR2.style.fontSize = '44px'; }
   const blocco = (el, v) => { el.style.opacity = v.toFixed(3); el.style.transform = 'translateY(' + ((1 - esplodi(v)) * 18).toFixed(1) + 'px)'; };
 
   const fonte = document.getElementById('fonte');
