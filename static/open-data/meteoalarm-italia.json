@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-12T12:31:54+00:00",
+  "generato": "2026-11-12T20:21:27+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 74,
-  "scaduti_scartati": 0,
-  "in_corso": 38,
+  "avvisi": 72,
+  "scaduti_scartati": 2,
+  "in_corso": 40,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -88,7 +88,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.174"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -114,7 +114,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.182"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -647,7 +647,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.155"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Friuli Venezia Giulia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -869,32 +869,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Trentino Alto Adige",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-12T09:00:00+00:00",
-   "fine": "2026-11-12T17:59:00+00:00",
-   "emesso": "2026-11-12T10:29:48+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.116"
-  },
-  {
-   "in_corso": true,
-   "regione": "Trentino Alto Adige",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-12T09:00:00+00:00",
-   "fine": "2026-11-12T17:59:00+00:00",
-   "emesso": "2026-11-12T10:29:48+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.115"
-  },
-  {
-   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -946,7 +920,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.157"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Vento",
    "livello": "gialla",
