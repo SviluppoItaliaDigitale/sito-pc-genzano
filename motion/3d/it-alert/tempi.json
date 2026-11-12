@@ -6,37 +6,37 @@
   },
   {
    "inizio": 8.3,
-   "durata": 8.7
+   "durata": 8.4
   },
   {
-   "inizio": 17.0,
+   "inizio": 16.7,
    "durata": 11.2
   },
   {
-   "inizio": 28.2,
+   "inizio": 27.9,
    "durata": 13.7
   },
   {
-   "inizio": 41.9,
+   "inizio": 41.6,
    "durata": 9.7
   },
   {
-   "inizio": 51.6,
+   "inizio": 51.3,
    "durata": 9.9
   },
   {
-   "inizio": 61.5,
-   "durata": 11.1
+   "inizio": 61.2,
+   "durata": 10.6
   }
  ],
  "voce": [
   0.45,
   8.75,
-  21.1,
-  28.65,
-  42.5,
-  52.5,
-  62.4
+  20.8,
+  28.35,
+  42.2,
+  52.2,
+  62.1
  ],
  "eventi": {
   "tuffo": 3.9,
@@ -48,59 +48,62 @@
   "orbita_fine": 12.15,
   "card_app": 13.1,
   "card_iscr": 14.15,
-  "s1_fine": 16.6,
-  "gru_fine": 18.9,
-  "avviso2": 19.0,
-  "avviso2_fine": 21.0,
-  "card_suono": 21.8,
-  "card_suono_fine": 23.7,
-  "zoom_da": 23.9,
-  "zoom_a": 24.7,
-  "righe_da": 24.5,
-  "cerchia": 26.25,
-  "card_italert": 26.35,
-  "s2_fine": 27.8,
+  "s1_fine": 16.3,
+  "gru_fine": 18.6,
+  "avviso2": 18.7,
+  "avviso2_fine": 20.7,
+  "card_suono": 21.5,
+  "card_suono_fine": 23.4,
+  "zoom_da": 23.6,
+  "zoom_a": 24.4,
+  "righe_da": 24.2,
+  "cerchia": 25.95,
+  "card_italert": 26.05,
+  "s2_fine": 27.5,
+  "m_largo": 28.85,
+  "m_via": 29.65,
   "m_arr": [
-   30.2,
-   33.3,
-   35.0,
-   36.6
+   30.35,
+   33.0,
+   34.7,
+   36.3
   ],
   "m_par": [
-   32.75,
-   34.45,
-   36.05
+   32.45,
+   34.15,
+   35.75
   ],
-  "tutti_da": 38.4,
-  "tutti_a": 39.6,
-  "no_arrivo": 43.0,
-  "pan1": 43.0,
-  "no1": 43.55,
-  "pan2": 44.35,
-  "no2": 44.95,
-  "col_da": 45.35,
-  "col_a": 46.3,
-  "colori": 46.35,
-  "card_sito": 47.5,
-  "s4_fine": 51.2,
-  "p1_arr": 52.7,
-  "p1": 53.35,
-  "p2_da": 53.95,
-  "p2_a": 54.45,
-  "leggi_da": 54.5,
-  "leggi_a": 55.5,
-  "p3_da": 55.5,
-  "p3_a": 56.0,
-  "passi_da": 58.0,
-  "passi_a": 59.1,
-  "test_arr": 62.4,
-  "test_msg": 62.55,
-  "test_cerchia": 63.8,
-  "card_test": 64.6,
-  "card_test_fine": 66.95,
-  "n112_da": 67.0,
-  "n112_a": 67.9,
-  "card_fine": 69.3
+  "tutti_da": 38.1,
+  "tutti_a": 39.3,
+  "no_arrivo": 42.4,
+  "pan1": 42.5,
+  "no1": 43.25,
+  "pan2": 44.05,
+  "no2": 44.65,
+  "col_da": 45.05,
+  "col_a": 46.0,
+  "colori": 46.05,
+  "card_sito": 47.2,
+  "s4_fine": 50.9,
+  "p1_arr": 52.1,
+  "p1": 52.6,
+  "p1_eti": 53.05,
+  "p2_da": 53.65,
+  "p2_a": 54.15,
+  "leggi_da": 54.2,
+  "leggi_a": 55.2,
+  "p3_da": 55.2,
+  "p3_a": 55.7,
+  "passi_da": 57.7,
+  "passi_a": 58.8,
+  "test_arr": 62.1,
+  "test_msg": 62.25,
+  "test_cerchia": 63.5,
+  "card_test": 64.3,
+  "card_test_fine": 66.65,
+  "n112_da": 66.7,
+  "n112_a": 67.6,
+  "card_fine": 69.0
  },
- "totale": 72.6
+ "totale": 71.8
 }

@@ -325,9 +325,9 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     return { g, sopra, r, x, z, parti: [] };
   }
   const parte = (is, ritardo, ...figli) => { const g = gruppo(...figli); is.sopra.add(g); is.parti.push({ g, ritardo }); return g; };
-  function comparsa(is, t, t0) {                          // la base e poi le parti, una dopo l'altra
-    cresci(is.g, prog(t, t0, 0.35));
-    for (const p of is.parti) cresci(p.g, prog(t, t0 + 0.12 + p.ritardo, 0.45));
+  function comparsa(is, t, tBase, tParti) {              // prima la base, poi le parti una dopo l'altra
+    cresci(is.g, prog(t, tBase, 0.35));
+    for (const p of is.parti) cresci(p.g, prog(t, (tParti == null ? tBase + 0.12 : tParti) + p.ritardo, 0.45));
   }
   const cGrigio = 0xdfe5ee, cGrigio2 = 0xa9b8cc, cCemento = 0xd3d8df;
 
@@ -475,11 +475,13 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     { t: E.zoom_da },
     { t: E.zoom_a, bersaglio: [ZX, YS + 0.25, ZZ], dist: 11 },                          // avvicinamento allo schermo
     { t: S(3) },
-    { t: E.m_arr[0], bersaglio: su(MP[0], 0.5), az: 18, el: 36, dist: 15 },              // carrellata ai modellini
+    { t: E.m_largo, bersaglio: [GX, YS + 0.3, 0.4], az: 8, el: 46, dist: 45 },           // carrellata: le quattro basi vuote
+    { t: E.m_via },
+    { t: E.m_arr[0], bersaglio: su(MP[0], 0.5), az: 18, el: 36, dist: 15 },              // avvicinamento al primo modellino
     { t: E.m_par[0] }, { t: E.m_arr[1], bersaglio: su(MP[1], 0.5) },
     { t: E.m_par[1] }, { t: E.m_arr[2], bersaglio: su(MP[2], 0.5) },
     { t: E.m_par[2] }, { t: E.m_arr[3], bersaglio: su(MP[3], 0.5) },
-    { t: E.tutti_da }, { t: E.tutti_a, bersaglio: [GX, YS + 0.5, 0], az: 10, el: 46, dist: 39 },   // tutti e quattro
+    { t: E.tutti_da }, { t: E.tutti_a, bersaglio: [GX, YS + 0.3, 0.4], az: 8, el: 46, dist: 45 },   // tutti e quattro
     { t: S(4) },
     { t: E.no_arrivo, bersaglio: [PX, YS + 2.3, 0], az: 0, el: 14, dist: 27 },           // i due «no»
     { t: E.col_da }, { t: E.col_a, bersaglio: [CX, YS + 1.3, 0], az: 22, el: 26, dist: 33 },      // i colori
@@ -487,7 +489,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     { t: E.p1_arr, bersaglio: [SX - 3.2, YS + 0.6, 5.3], az: -14, el: 30, dist: 15 },      // passo 1
     { t: E.p2_da }, { t: E.p2_a, bersaglio: [SX, YS + 1.55, 0], az: 0, el: 12, dist: 13 },        // passo 2: il telefono
     { t: E.p3_da }, { t: E.p3_a, bersaglio: [SX + 3.2, YS + 0.6, -5.3], az: 14, el: 30, dist: 15 }, // passo 3
-    { t: E.passi_da }, { t: E.passi_a, bersaglio: [SX, YS + 1.0, 0], az: 0, el: 50, dist: 50 },   // i tre passi insieme
+    { t: E.passi_da }, { t: E.passi_a, bersaglio: [SX, YS + 0.7, 0], az: 0, el: 50, dist: 46 },   // i tre passi insieme
     { t: S(6) },
     { t: E.test_arr, bersaglio: [SX, YS + 1.75, 0], az: 0, el: 10, dist: 11.5 },         // lo schermo con «TEST»
     { t: E.n112_da }, { t: E.n112_a, bersaglio: [NX, YS + 1.3, 0], az: -16, el: 20, dist: 19 },   // il 112
@@ -530,7 +532,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   etichetta('diga', 'Grande diga', 'CROLLO', M[2], E.m_arr[2] + 0.25, mEnd);
   etichetta('vulcani', 'Alcuni vulcani', 'ATTIVITÀ', M[3], E.m_arr[3] + 0.25, mEnd);
   etichetta('colori', 'Verde, giallo, arancione, rosso', null, { x: CX, z: 0, r: 1.7 }, E.colori + 0.9, E.s4_fine, ARA);
-  etichetta('passo1', '1 · Fermati', null, PASSI[0], E.p1 + 0.05, pEnd);
+  etichetta('passo1', '1 · Fermati', null, PASSI[0], E.p1_eti, pEnd);
   etichetta('passo2', '2 · Leggi tutto', 'IL MESSAGGIO', PASSI[1], E.p2_da + 0.3, pEnd);
   etichetta('passo3', '3 · Segui le indicazioni', 'DELLE AUTORITÀ', PASSI[2], E.p3_a + 0.05, pEnd);
   function aggiornaEtichette(t, az) {
@@ -619,7 +621,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 
     /* --- modellini (scena 4) */
     const vM = t > S(3) - 0.2 && t < S(4) + 1.2;
-    M.forEach((is, i) => { is.g.visible = vM; if (vM) { comparsa(is, t, E.m_arr[i]); is.sopra.rotation.y = 0.1 * Math.sin(t * 0.6 + i); } });
+    M.forEach((is, i) => { is.g.visible = vM; if (vM) { comparsa(is, t, E.m_largo + i * 0.1, E.m_arr[i]); is.sopra.rotation.y = 0.1 * Math.sin(t * 0.6 + i); } });
     if (vM) for (const q of vapore) {
       const f = ((t * 0.3 + q.k / 4) % 1);
       q.m.position.set(q.x + 0.1 * Math.sin(q.k * 2.4 + t * 0.8) * f, q.y + f * 1.0, q.z);
@@ -647,7 +649,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     const vS = t > S(5) - 0.2;
     PASSI.forEach((is, i) => { is.g.visible = vS && t < E.n112_a + 0.4; });
     if (vS) {
-      comparsa(PASSI[0], t, E.p1 - 0.15); comparsa(PASSI[1], t, E.p2_da - 0.2); comparsa(PASSI[2], t, E.p3_a - 0.1);
+      comparsa(PASSI[0], t, E.p1_arr, E.p1); comparsa(PASSI[1], t, E.p2_da - 0.2); comparsa(PASSI[2], t, E.p3_a - 0.1, E.p3_a);
       const via = 1 - prog(t, S(6) + 0.05, 0.4);
       if (via < 1) { cresci(PASSI[0].g, via); cresci(PASSI[2].g, via); }
       PASSI[0].sopra.rotation.y = 14 * GR + 0.08 * Math.sin(t * 0.9); PASSI[2].sopra.rotation.y = -14 * GR + 0.08 * Math.sin(t * 0.8 + 1);
@@ -655,7 +657,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     }
     isola112.g.visible = t > E.n112_da - 0.1;
     if (isola112.g.visible) {
-      comparsa(isola112, t, E.n112_a - 0.12);
+      comparsa(isola112, t, E.n112_a - 0.3, E.n112_a - 0.05);
       isola112.sopra.rotation.y = 0.16 * Math.sin((t - E.n112_a) * 0.7);
       cifre.forEach((c, i) => { c.position.y = 0.05 * Math.sin(t * 1.6 - i * 0.8) * prog(t, E.n112_a + 0.8, 0.5); });
     }

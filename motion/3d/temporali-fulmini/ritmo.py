@@ -87,4 +87,16 @@ colonna = {'durata': totale, 'voce': voce, 'scene': [{'inizio': s['inizio'], 'du
            'musica': [{'file': SUONI + 'light-thought-var-1.mp3', 'inizio': 0, 'fine': totale, 'da': 0, 'entrata': 1.2, 'uscita': 3.0}],
            'effetti': effetti}
 json.dump(colonna, open(qui / 'colonna.json', 'w'), ensure_ascii=False, indent=1)
+# sottotitoli per il sito (WebVTT): una battuta per frase intera
+def ora(x):
+    return '%02d:%02d:%06.3f' % (x // 3600, x % 3600 // 60, x % 60)
+battute = []
+for f in sott:
+    P, da = f['parole'], 0
+    for i, p in enumerate(P):
+        if i == len(P) - 1 or p['w'][-1] in '.:;?!':
+            battute.append((P[da]['t0'], P[i]['t1'] if i < len(P) - 1 else f['fine'], ' '.join(q['w'] for q in P[da:i + 1])))
+            da = i + 1
+vtt = 'WEBVTT\n\n' + ''.join(f'{n}\n{ora(a)} --> {ora(b)}\n{txt}\n\n' for n, (a, b, txt) in enumerate(battute, 1))
+(qui / 'temporali-fulmini-3d.vtt').write_text(vtt, encoding='utf-8')
 print('totale', totale, [s['inizio'] for s in scene]); print(ev)

@@ -9,7 +9,7 @@ parole = json.loads((qui / 'parole.json').read_text(encoding='utf-8'))
 
 # attesa prima della voce e durata di ogni scena: in 3D le scene durano più della frase (voli, comparse, letture)
 PRIMA = [0.45, 0.45, 4.10, 0.45, 0.60, 0.90, 0.90]
-DURATA = [8.3, 8.7, 11.2, 13.7, 9.7, 9.9, 11.1]
+DURATA = [8.3, 8.4, 11.2, 13.7, 9.7, 9.9, 10.6]
 S, V, t = [], [], 0.0
 for k, f in enumerate(parole):
     assert DURATA[k] >= PRIMA[k] + f['durata'] + 0.4, f'scena {k} troppo corta per la sua frase'
@@ -25,11 +25,11 @@ E = dict(
     gru_fine=S[2] + 1.9, avviso2=S[2] + 2.0, avviso2_fine=S[2] + 4.0, card_suono=V[2] + 0.7, card_suono_fine=V[2] + 2.6,
     zoom_da=V[2] + 2.8, zoom_a=V[2] + 3.6, righe_da=V[2] + 3.4, cerchia=V[2] + 5.15, card_italert=V[2] + 5.25,
     s2_fine=S[3] - 0.4,
-    m_arr=[V[3] + 1.55, V[3] + 4.65, V[3] + 6.35, V[3] + 7.95], m_par=[V[3] + 4.1, V[3] + 5.8, V[3] + 7.4],
+    m_largo=S[3] + 0.95, m_via=V[3] + 1.3, m_arr=[V[3] + 2.0, V[3] + 4.65, V[3] + 6.35, V[3] + 7.95], m_par=[V[3] + 4.1, V[3] + 5.8, V[3] + 7.4],
     tutti_da=V[3] + 9.75, tutti_a=V[3] + 10.95,
-    no_arrivo=S[4] + 1.1, pan1=V[4] + 0.5, no1=V[4] + 1.05, pan2=V[4] + 1.85, no2=V[4] + 2.45,
+    no_arrivo=S[4] + 0.8, pan1=V[4] + 0.3, no1=V[4] + 1.05, pan2=V[4] + 1.85, no2=V[4] + 2.45,
     col_da=V[4] + 2.85, col_a=V[4] + 3.8, colori=V[4] + 3.85, card_sito=V[4] + 5.0, s4_fine=S[5] - 0.4,
-    p1_arr=S[5] + 1.1, p1=V[5] + 0.85, p2_da=V[5] + 1.45, p2_a=V[5] + 1.95, leggi_da=V[5] + 2.0, leggi_a=V[5] + 3.0,
+    p1_arr=S[5] + 0.8, p1=V[5] + 0.4, p1_eti=V[5] + 0.85, p2_da=V[5] + 1.45, p2_a=V[5] + 1.95, leggi_da=V[5] + 2.0, leggi_a=V[5] + 3.0,
     p3_da=V[5] + 3.0, p3_a=V[5] + 3.5, passi_da=V[5] + 5.5, passi_a=V[5] + 6.6,
     test_arr=S[6] + 0.9, test_msg=S[6] + 1.05, test_cerchia=V[6] + 1.4, card_test=V[6] + 2.2, card_test_fine=V[6] + 4.55,
     n112_da=V[6] + 4.6, n112_a=V[6] + 5.5, card_fine=V[6] + 6.9,
@@ -87,7 +87,7 @@ def colpo(nome, evento=None, inizio=None, volume=0):
 # avviso generico sul telefono (scene 1 e 3), nelle pause della voce
 colpo('avviso.wav', inizio=E['avviso1']); colpo('avviso.wav', inizio=E['avviso2'])
 # fruscio sui voli della telecamera: il punto più forte cade a metà del volo
-for a, b in [(1.6, E['tuffo']), (S[1], E['s1_arrivo']), (S[2], E['gru_fine']), (S[3], E['m_arr'][0]),
+for a, b in [(1.6, E['tuffo']), (S[1], E['s1_arrivo']), (S[2], E['gru_fine']), (S[3], E['m_largo']),
              (S[4], E['no_arrivo']), (E['col_da'], E['col_a']), (S[5], E['p1_arr']), (S[6], E['test_arr']),
              (E['n112_da'], E['n112_a'])]:
     colpo('passaggio.wav', evento=(a + b) / 2, volume=-3)

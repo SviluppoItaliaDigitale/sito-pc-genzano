@@ -702,8 +702,8 @@ SOTT.forEach(f => {
   const lancetta = svg('line', { x1: 0, y1: 0, x2: 0, y2: -70, stroke: '#ffffff', 'stroke-width': 7, 'stroke-linecap': 'round' });
   svg('circle', { r: 8, fill: '#ffffff' });
   const elTitolo = document.getElementById('titolo'), elOrologio = document.getElementById('orologio'), elEmergenza = document.getElementById('emergenza');
-  const elSito = elEmergenza.querySelector('.w'), elR1 = elTitolo.querySelector('.r1'), elR2 = elTitolo.querySelector('.r2');
-  [elTitolo, elOrologio, elEmergenza].forEach(e => { e.style.left = L.margine + 'px'; e.style.top = (L.zona.alto + 16) + 'px'; });
+  const el112 = elEmergenza.querySelector('.n'), elSito = elEmergenza.querySelector('.w'), elR1 = elTitolo.querySelector('.r1'), elR2 = elTitolo.querySelector('.r2');
+  [elTitolo, elOrologio, elEmergenza].forEach(e => { e.style.left = L.margine + 'px'; e.style.top = (L.zonaSchede.alto + 16) + 'px'; });
   elOrologio.style.width = elEmergenza.style.width = (W - 2 * L.margine) + 'px';
   const blocco = (el, v) => { el.style.opacity = v.toFixed(3); el.style.transform = 'translateY(' + ((1 - esplodi(v)) * 18).toFixed(1) + 'px)'; };
 
@@ -782,7 +782,8 @@ SOTT.forEach(f => {
       spicchio.setAttribute('d', a < .001 ? '' : 'M0,0 L0,-86 A86,86 0 ' + (a > Math.PI ? 1 : 0) + ',1 ' + x.toFixed(2) + ',' + y.toFixed(2) + ' Z');
       lancetta.setAttribute('x2', (Math.sin(a) * 70).toFixed(2)); lancetta.setAttribute('y2', (-Math.cos(a) * 70).toFixed(2));
     }
-    const ve = fin(t, T.n112 - .35, TOTAL + 1, .3, .3); blocco(elEmergenza, ve);
+    const ve = fin(t, T.emergenza - .05, TOTAL + 1, .3, .3); blocco(elEmergenza, ve);
+    el112.style.opacity = clamp(prog(t, T.n112 - .12, .25)).toFixed(3);
     elSito.style.opacity = clamp(prog(t, T.n112 + .9, .35)).toFixed(3);
     // etichette
     for (const e of ET) {

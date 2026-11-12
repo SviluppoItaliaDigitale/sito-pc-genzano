@@ -529,8 +529,8 @@ SOTT.forEach(f => {
   const camR = M3.telecamera(camera, [
     { t: 0, bersaglio: { lat: 41.726, lon: 12.684, sopra: 0 }, az: 8, el: 86, dist: 40, fov: 32 },
     { t: T.cut1 + .5, bersaglio: { lat: 41.7098, lon: 12.6945, sopra: 0 }, az: -48, el: 38, dist: 7.5 },
-    { t: T.cut2, bersaglio: { lat: 41.7096, lon: 12.6950, sopra: 60 }, az: 238, el: 17, dist: 4.4 },
-    { t: S(2), bersaglio: { lat: 41.7093, lon: 12.6942, sopra: 60 }, az: 212, el: 12, dist: 3.1, facilita: 'lineare' }
+    { t: T.cut2, bersaglio: { lat: 41.7098, lon: 12.6952, sopra: 60 }, az: 262, el: 21, dist: 5.0 },
+    { t: S(2), bersaglio: { lat: 41.7092, lon: 12.6940, sopra: 60 }, az: 208, el: 11, dist: 2.9, facilita: 'lineare' }
   ], { rilievo: ril });
   // plastico (m)
   const KP = [];
@@ -591,7 +591,7 @@ SOTT.forEach(f => {
   /* eventi per la colonna sonora (colonna.py li legge dalla pagina: gli effetti cadono sull'immagine) */
   window.EVENTI = {
     passaggi: [T.cut1, T.giro0 + .6, T.cut2, S(2), T.muri - .1, T.smott + .4, S(4) + .9, S(5), T.cut6, S(6) + .7],
-    frane: [[T.frana1, T.frana1 + 4.5, 0], [T.smott + .75, T.smott + 2.4, -8], [T.frana4, T.frana4 + 4.5, 0], [T.frana4 + 3.6, T.frana4 + 8.1, -3],
+    frane: [[T.frana1, T.frana1 + 4.5, 0], [T.smott + .75, T.smott + 2.4, -8], [T.frana4, T.frana4 + 4.5, 0], [T.frana4 + 3.6, T.frana4 + 8.1, -3], [S(4) + 3.4, S(4) + 7.9, -7],
             [T.cedere - .05, T.cedere + 2.2, -4]],
     pioggia: [[T.pioggia0, S(2) + .3]],
     schede: SCH.map(s => s.inizio).concat([.35, T.carta, T.sito]),
@@ -623,7 +623,7 @@ SOTT.forEach(f => {
       ST.bagnato = liscia(prog(t, T.pioggia0 + .2, 2.2)); ST.fronte = t < T.zuppa ? 0 : .12 + 2.3 * liscia(prog(t, T.zuppa, T.zuppad));
     } else {
       ST.a = .04 * liscia(prog(t, T.crepe, .8)) + .68 * ease.morbida(prog(t, T.frana4, T.frana4d)) + .28 * liscia(prog(t, S(4) + .2, D(4) - 2.4));
-      ST.s = liscia(prog(t, T.smott + .75, 1.1)); ST.c = liscia(prog(t, T.cedere, 1.3));
+      ST.s = .75 * liscia(prog(t, T.smott + .75, 1.1)) + .25 * liscia(prog(t, T.smott + 1.6, S(3) - T.smott - 1.7)); ST.c = liscia(prog(t, T.cedere, 1.3));
       ST.bagnato = 0; ST.fronte = 0;
     }
     set.visible = !selva;
@@ -664,8 +664,9 @@ SOTT.forEach(f => {
         ang = u < 1 ? Math.PI * .8 : Math.PI * 1.25; if (u > 0 && u < 1) ph = (t - t1) * 11; }
       persB.root.position.set(p[0], Math.max(.08, quotaT(p[0], p[1]) + .03), p[1]);
       persB.root.rotation.y = ang; persB.posa(0, 0, ph);
-      persB.root.visible = !selva && t >= S(3) + .25;
+      persB.root.visible = !selva && t >= S(3) + .25 && t < S(6);
       anelloB.oggetto.position.set(p[0], Math.max(.1, quotaT(p[0], p[1])) + .22, p[1]); anelloB.aggiorna(t, { inizio: S(4) + .8, fine: T.verso - .3 }); }
+    pedana.rotation.y = .22 * (t - S(5));
     persC.posa(liscia(prog(t, T.rann - .1, .7)), liscia(prog(t, T.proteggi - .15, .6)), 0);
     // --- frecce del percorso (scena «spostati di lato»)
     const fr = fin(t, S(4) + .5, S(5), .3, .3);
@@ -721,7 +722,7 @@ SOTT.forEach(f => {
     sito.style.opacity = fin(t, T.sito, TOTAL + 1, .4, .2).toFixed(3); sito.style.top = (L.zona.alto + 690) + 'px';
     const testo = R ? attribuzione : (t >= T.carta - .3 ? CONFIG.fonte : '');
     if (fonte.textContent !== testo) fonte.textContent = testo;
-    fonte.style.display = testo ? '' : 'none';
+    fonte.style.display = testo ? '' : 'none'; fonte.style.fontSize = R ? '17px' : '22px';
     fonte.style.left = L.margine + 'px';
     fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
   }
