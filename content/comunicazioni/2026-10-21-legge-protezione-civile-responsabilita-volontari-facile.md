@@ -1,6 +1,7 @@
 ---
 title: "Nuova legge: più protezione per i volontari"
 date: 2026-10-21T00:02:00+02:00
+lastmod: 2026-11-12
 description: "La Camera approva una legge. La legge protegge di più i volontari di Protezione Civile."
 badge: "Informazione"
 priorita: "normale"
@@ -48,9 +49,13 @@ Il Governo deve scrivere delle nuove regole precise. Si chiamano linee guida naz
 
 Attenzione: questa legge non è ancora in vigore. "In vigore" vuol dire attiva e valida.
 
-Prima deve succedere una cosa. Il Presidente della Repubblica deve firmare la legge.
+Il 12 novembre 2026 il Presidente della Repubblica ha firmato la legge. Il Presidente della Repubblica è Sergio Mattarella.
 
-Poi la legge esce sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale ufficiale delle leggi italiane.
+Il Presidente ha scritto anche una lettera al Parlamento e al Governo. Nella lettera dice questo: la protezione per i volontari è molto ampia. Per altri lavori le regole sono diverse. Il Presidente chiede regole simili per tutti, giuste ed equilibrate.
+
+La lettera non cambia la legge.
+
+Adesso la legge deve uscire sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale ufficiale delle leggi italiane.
 
 La legge non diventa attiva subito dopo. Di solito una legge italiana diventa attiva 15 giorni dopo essere uscita sulla Gazzetta Ufficiale.
 
