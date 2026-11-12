@@ -827,6 +827,7 @@ def main():
             max_dom = 0
             risks_dom_order = []
             risks_dom_set = set()
+            risks_dom_lev = {}
             for _, row_d in righe_domani:
                 crit_d = extract_level(row_d.get("avviso_criticita", ""))
                 if crit_d > max_dom:
@@ -836,9 +837,20 @@ def main():
                     if lev_d > 0 and risk_label not in risks_dom_set:
                         risks_dom_set.add(risk_label)
                         risks_dom_order.append(risk_label)
+                    if lev_d > risks_dom_lev.get(risk_label, 0):
+                        risks_dom_lev[risk_label] = lev_d
                     if lev_d > max_dom:
                         max_dom = lev_d
             liv_dom = LEVEL_NAME[max_dom]
+            # Il livello della striscia è il più alto: un rischio con livello
+            # più basso lo dice fra parentesi, perché «arancione — idrogeologico,
+            # idraulico» attribuirebbe l'arancione anche all'idraulico
+            # (12/11/2026: nella fonte era gialla).
+            risks_dom_order = [
+                r if risks_dom_lev.get(r, max_dom) >= max_dom
+                else f"{r} ({LEVEL_NAME[risks_dom_lev[r]]})"
+                for r in risks_dom_order
+            ]
             titolo_dom = {
                 "verde": "Previsto verde",
                 "gialla": "Previsto giallo",
