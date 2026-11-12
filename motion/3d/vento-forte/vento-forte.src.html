@@ -617,7 +617,8 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 
   /* ================================================================ ANIMAZIONE */
   // forza del vento nel quartiere (0-1): apertura, poi da «quando il vento soffia forte» fino alla fine di «fuori»
-  const vento = t => Math.max(fin(t, 2.6, S(1) + .5, .5, .9), fin(t, S(3) + .2, S(5) + .2, .7, .5));
+  const vento = t => Math.max(fin(t, 2.6, S(1) + .5, .5, .9), fin(t, S(3) + .2, S(5) + .2, .7, .5),
+    .55 * fin(t, EV.vasi1 + 1.2, S(2) + .3, 1.4, .5));          // le prime raffiche arrivano mentre il balcone è già in ordine
   const cade = (o, a, b, u, giri) => {              // caduta: parte piano, accelera
     const q = u * u;
     o.position.set(mix(a.x, b.x, u), mix(a.y, b.y, q), mix(a.z, b.z, u)); o.rotation.set(giri * u, 0, giri * .6 * u);
