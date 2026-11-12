@@ -2,78 +2,78 @@
  "scene": [
   {
    "inizio": 0.0,
-   "durata": 8.81
+   "durata": 9.55
   },
   {
-   "inizio": 8.81,
-   "durata": 8.7
+   "inizio": 9.55,
+   "durata": 9.26
   },
   {
-   "inizio": 17.51,
-   "durata": 9.19
+   "inizio": 18.81,
+   "durata": 10.0
   },
   {
-   "inizio": 26.7,
-   "durata": 9.05
+   "inizio": 28.81,
+   "durata": 10.13
   },
   {
-   "inizio": 35.75,
-   "durata": 12.49
+   "inizio": 38.94,
+   "durata": 13.11
   },
   {
-   "inizio": 48.24,
-   "durata": 9.71
+   "inizio": 52.05,
+   "durata": 9.93
   },
   {
-   "inizio": 57.95,
-   "durata": 11.15
+   "inizio": 61.98,
+   "durata": 11.67
   }
  ],
- "totale": 69.1,
+ "totale": 73.65,
  "voce": [
   1.5,
-  9.26,
-  18.71,
-  27.15,
-  36.2,
-  48.69,
-  58.4
+  10.0,
+  20.01,
+  29.26,
+  39.39,
+  52.5,
+  62.43
  ],
  "ev": {
   "tuffo": 3.3,
   "arrivo0": 4.6,
-  "rami": 4.74,
-  "tegole": 5.92,
-  "vasi0": 6.54,
-  "arrivo1": 10.41,
-  "riparo": 10.982,
-  "fissa": 11.412,
-  "vasi1": 11.938,
-  "davanzali": 14.234,
-  "arrivo2": 18.61,
-  "allertaFine": 20.51,
-  "carr2": 20.61,
-  "auto": 22.01,
-  "parte": 23.01,
-  "parcheggiata": 24.81,
-  "arrivo3": 28.2,
-  "resta": 28.788,
-  "chiudi": 30.045,
-  "stai3": 31.519,
-  "arrivo4": 37.25,
-  "evita": 36.98,
-  "spezzano": 40.24,
-  "volo4": 41.9,
-  "impalcature": 43.08,
-  "cartelloni": 43.98,
-  "cornicioni": 44.7,
-  "rallenta": 49.659,
-  "volo5": 50.94,
-  "arrivo5": 54.54,
-  "arrivo6": 59.15,
-  "toccare": 59.42,
-  "se": 61.26,
-  "chiama": 63.46,
-  "n112": 63.82
+  "rami": 5.54,
+  "tegole": 6.76,
+  "vasi0": 7.3,
+  "arrivo1": 11.15,
+  "riparo": 11.922,
+  "fissa": 12.403,
+  "vasi1": 12.99,
+  "davanzali": 15.553,
+  "arrivo2": 19.91,
+  "allertaFine": 21.81,
+  "carr2": 21.91,
+  "auto": 23.31,
+  "parte": 24.31,
+  "parcheggiata": 26.11,
+  "arrivo3": 30.31,
+  "resta": 30.8,
+  "chiudi": 32.72,
+  "stai3": 34.84,
+  "arrivo4": 40.44,
+  "evita": 40.15,
+  "spezzano": 43.35,
+  "volo4": 45.03,
+  "impalcature": 46.75,
+  "cartelloni": 47.79,
+  "cornicioni": 48.55,
+  "rallenta": 53.501,
+  "volo5": 54.75,
+  "arrivo5": 58.35,
+  "arrivo6": 63.18,
+  "toccare": 63.45,
+  "se": 65.73,
+  "chiama": 67.91,
+  "n112": 68.29
  }
 }

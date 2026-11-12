@@ -20,7 +20,7 @@
   #stage canvas { position: absolute; left: 0; top: 0; display: block; }
   #livello-rilievo { z-index: 1; } #livello-scena { z-index: 2; }
   #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
-           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: nowrap; padding: 5px 12px; border-radius: 10px;
            background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
   #titolo, #grande { position: absolute; z-index: 31; left: 96px; width: 888px; text-align: center; opacity: 0;
            box-sizing: border-box;
@@ -56,7 +56,7 @@ const CONFIG = {
   esagerazione: 2,                                   // rilievo ×2: lo dice la nota in alto
   notaRilievo: 'RILIEVO ×2 · NON IN SCALA',
   nota: 'SCHEMA · NON IN SCALA',
-  fonte: 'Fonte: Dipartimento della Protezione Civile,\n«Cosa fare in caso di venti e mareggiate»',
+  fonte: 'Fonte: Dipartimento della Protezione Civile, «Cosa fare in caso di venti e mareggiate»',
   chiave: ['raffiche', 'rami', 'tegole', 'vasi', 'riparo', 'fissa', "l'allerta", 'alberi', 'impalcature', 'casa', 'porte',
            'finestre', 'vetri', 'parchi', 'alberate', 'cartelloni', 'cornicioni', 'rallenta', 'gallerie', 'viadotti',
            'cavi', '112'],
@@ -76,8 +76,8 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 (function () {
   'use strict';
   const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
-  const ente = CONFIG.ente, formato = CONFIG.formato;
-  const L = IMP.layout(formato), W = L.W, H = L.H;
+  const ente = CONFIG.ente, formato = new URLSearchParams(location.search).get('formato') || CONFIG.formato;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
   const SC = TEMPI.scene, TOTAL = TEMPI.totale, EV = TEMPI.ev, VOCE = TEMPI.voce;
   const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
   window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
@@ -570,7 +570,8 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 
   /* ================================================================ SCHEDE */
   const SCH = [];
-  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore, centroY) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore, centroY });
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore, centroY) => SCH.push({ id, titolo, sotto, punto,
+    verso: verso && ORIZ ? { dx: verso.dx * 1.5, dy: verso.dy * .62 } : verso, inizio, fine, colore, centroY });
   const ROSSO = '#ef4136', AMBRA = '#f59e0b', VERDE = '#22a04b';
   const mondoS = p => V(p.x, p.y, p.z + RZ);
   scheda('raffiche', 'Rami, tegole e vasi', 'LE RAFFICHE POSSONO FARLI CADERE', null, null, EV.arrivo0 + .1, E(0) - .4, ROSSO);
@@ -588,7 +589,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   scheda('viadotti', 'Viadotti', 'RALLENTA', () => mondoS(V(27, -.9, 4.7)), { dx: 150, dy: 230 }, EV.arrivo5 + .6, E(5) - .4, AMBRA);
   scheda('cavi', 'Non toccare', 'I CAVI CADUTI A TERRA', () => PUNTA_CAVO, { dx: -200, dy: -300 }, EV.toccare + .05, EV.se - .15, ROSSO);
   scheda('blocca', 'Albero o cavo sulla strada', 'CHIAMA IL 112', () => V(36.3, 1.0, 5.4), { dx: 20, dy: -330 }, EV.se + .35, EV.chiama + .05, AMBRA);
-  scheda('fine', 'protezionecivilegenzano.it', 'RISCHI E PREVENZIONE · VENTO FORTE', null, null, EV.n112 + 1.5, TOTAL + 1, null, 760);
+  scheda('fine', 'protezionecivilegenzano.it', 'RISCHI E PREVENZIONE · VENTO FORTE', null, null, EV.n112 + 1.5, TOTAL + 1, null, ORIZ ? 478 : 760);
   const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
   PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
 
@@ -610,8 +611,10 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 
   const fonte = document.getElementById('fonte'), titolo = document.getElementById('titolo'), grande = document.getElementById('grande');
   fonte.style.fontFamily = titolo.style.fontFamily = grande.style.fontFamily = IMP.ENTI[ente].font.testo;
-  titolo.style.top = (L.zona.alto + 24) + 'px'; grande.style.top = (L.zona.alto + 22) + 'px';
-  const attribuzione = ((RILIEVO && RILIEVO.attribuzione) || 'Rilievo: Mapzen Terrain Tiles (AWS Open Data) da EU-DEM (Copernicus), ETOPO1 (NOAA), SRTM e GMTED (USGS)').replace(' da EU-DEM', '\nda EU-DEM');
+  titolo.style.left = L.margine + 'px'; titolo.style.width = (W - 2 * L.margine) + 'px'; titolo.style.top = (L.zonaSchede.alto + 24) + 'px';
+  const XG = ORIZ ? 500 : W / 2;                                        // nel 16:9 numero e sito stanno a sinistra, la strada resta libera
+  grande.style.left = (XG - 250) + 'px'; grande.style.top = (L.zonaSchede.alto + (ORIZ ? 6 : 22)) + 'px'; grande.style.transformOrigin = '50% 0';
+  const KG = ORIZ ? .78 : 1;                                            // nel 16:9 il numero è un po' più piccolo
   const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
   let tAttuale = 0, proiezioni = {};
 
@@ -748,7 +751,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
       }
       proiezioni[s.id] = p;
       IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
-        inizio: s.inizio, fine: s.fine, visibile: vis, centro: s.punto ? null : { x: W / 2, y: s.centroY || L.zona.alto + 62 } });
+        inizio: s.inizio, fine: s.fine, visibile: vis, centro: s.punto ? null : { x: s.id === 'fine' ? XG : W / 2, y: s.centroY || L.zonaSchede.alto + (ORIZ ? 48 : 62) } });
     }
     // titolo dell'apertura e numero di emergenza della chiusura
     const vt = fin(t, .2, 3.0, .35, .35);
@@ -756,9 +759,9 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     titolo.style.transform = 'translateY(' + ((1 - ease.morbida(prog(t, .2, .5))) * 18).toFixed(1) + 'px)';
     const ug = prog(t, EV.n112 - .15, .45);
     grande.style.opacity = clamp(ug * 2).toFixed(3); grande.style.display = ug > 0 ? '' : 'none';
-    grande.style.transform = 'scale(' + (ug < 1 ? ease.morbida(ug) * (1 + .12 * Math.sin(ug * Math.PI)) : 1 + .02 * Math.sin((t - EV.n112 - .3) * 3)).toFixed(4) + ')';
-    // crediti: attribuzione del rilievo finché si vede, fonte nella chiusura
-    const testo = t < 3.3 ? attribuzione : k === SC.length - 1 ? CONFIG.fonte : '';
+    grande.style.transform = 'scale(' + (KG * (ug < 1 ? ease.morbida(ug) * (1 + .12 * Math.sin(ug * Math.PI)) : 1 + .02 * Math.sin((t - EV.n112 - .3) * 3))).toFixed(4) + ')';
+    // fonte dei consigli, nella chiusura
+    const testo = k === SC.length - 1 ? CONFIG.fonte : '';
     if (fonte.textContent !== testo) fonte.textContent = testo;
     fonte.style.display = testo ? '' : 'none';
     fonte.style.left = L.margine + 'px';

@@ -84,8 +84,8 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 (function () {
   'use strict';
   const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
-  const formato = CONFIG.formato, ente = CONFIG.ente;
-  const L = IMP.layout(formato), W = L.W, H = L.H;
+  const formato = new URLSearchParams(location.search).get('formato') || CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
   const SC = TEMPI.scene, TOTAL = TEMPI.totale, E = TEMPI.eventi;
   const S = i => SC[i].inizio;
   window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
@@ -495,20 +495,23 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     { t: E.n112_da }, { t: E.n112_a, bersaglio: [NX, YS + 1.3, 0], az: -16, el: 20, dist: 19 },   // il 112
     { t: TOTAL }
   ];
+  // in orizzontale la zona delle animazioni è più bassa che larga: la telecamera si avvicina (non nel tuffo dal globo)
+  if (ORIZ) K.forEach(k => { if (k.dist && k.dist < 500) k.dist *= 0.75; });
   const cam = M3.telecamera(camera, K, { rilievo: ril, raggioGlobo: globo.raggio });
 
   /* ================================================================ SCHEDE (a telecamera ferma) ===================== */
   const SCH = [];
   const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore, centro) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore, centro });
-  const ALTO = { x: W / 2, y: L.zona.alto + 62 };
-  scheda('app', 'Niente app', 'NON SERVE SCARICARLA', null, null, E.card_app, E.s1_fine, AZZ, { x: 290, y: ALTO.y });
-  scheda('iscr', 'Niente iscrizione', 'NON SERVE ISCRIVERSI', null, null, E.card_iscr, E.s1_fine, AZZ, { x: 760, y: ALTO.y });
+  const ALTO = { x: W / 2, y: L.zonaSchede.alto + 62 };
+  const LATO = ORIZ ? { dx: 430, dy: 70 } : { dx: 170, dy: 330 };   // scheda dello schermo: sotto in verticale, di lato in orizzontale
+  scheda('app', 'Niente app', 'NON SERVE SCARICARLA', null, null, E.card_app, E.s1_fine, AZZ, { x: W / 2 - 250, y: ALTO.y });
+  scheda('iscr', 'Niente iscrizione', 'NON SERVE ISCRIVERSI', null, null, E.card_iscr, E.s1_fine, AZZ, { x: W / 2 + 220, y: ALTO.y });
   scheda('suono', 'Un suono diverso', 'DALLE SOLITE SUONERIE', null, null, E.card_suono, E.card_suono_fine, ARA, ALTO);
   scheda('italert', 'Comincia con «IT-alert»', 'LA PRIMA PAROLA DEL TESTO', () => puntoSchermo(PAROLA.x + 30, PAROLA.y + PAROLA.h + 6),
-    { dx: 170, dy: 330 }, E.card_italert, E.s2_fine, ARA);
+    LATO, E.card_italert, E.s2_fine, ARA);
   scheda('sito', 'protezionecivilegenzano.it', "GUARDA IL COLORE DELL'ALLERTA", null, null, E.card_sito, E.s4_fine, AZZ, ALTO);
   scheda('test', 'TEST: è solo una prova', 'NON DEVI FARE NIENTE', () => puntoSchermo(PAROLA.x + 30, PAROLA.y + PAROLA.h + 6),
-    { dx: 170, dy: 330 }, E.card_test, E.card_test_fine, '#34b25a');
+    LATO, E.card_test, E.card_test_fine, '#34b25a');
   scheda('fine', 'protezionecivilegenzano.it', 'IN EMERGENZA CHIAMA IL 112', null, null, E.card_fine, TOTAL + 1, AZZ, ALTO);
   const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })),
     [{ id: 'telefono', t: E.telefono }].concat(E.m_arr.map((t, i) => ({ id: 'modellino-' + (i + 1), t: t + 0.001 }))));
@@ -554,8 +557,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
 
   const fonte = document.getElementById('fonte'), titolo = document.getElementById('titolo');
   fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
-  const attribuzione = (datiRilievo.attribuzione || '').replace(' da EU-DEM', '\nda EU-DEM');
-  const testoTerre = (TERRE && TERRE.attribuzione) || 'Terre emerse: Natural Earth (pubblico dominio)';
+  if (ORIZ) { titolo.querySelector('b').style.fontSize = '64px'; titolo.querySelector('span').style.fontSize = '25px'; }
   const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
   let tAttuale = 0, proiezioni = {};
 
@@ -689,10 +691,11 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     // titolo: in alto nella zona delle animazioni, sopra il globo e poi sopra il telefono
     const vt = fin(t, 0.3, S(1) - 0.35, 0.35, 0.3);
     titolo.style.opacity = vt.toFixed(3);
-    titolo.style.transform = 'translate(' + ((W - titolo.offsetWidth) / 2).toFixed(1) + 'px,' + (L.zona.alto + 4) + 'px)';
-    // crediti: fonte dei contenuti e, finché si vedono, attribuzione di terre emerse e rilievo
+    titolo.style.transform = ORIZ ? 'translate(' + L.margine + 'px,' + (L.zonaSchede.alto + 120) + 'px)'
+      : 'translate(' + ((W - titolo.offsetWidth) / 2).toFixed(1) + 'px,' + (L.zona.alto + 4) + 'px)';
+    // fonte dei contenuti, in basso nella zona delle animazioni
     const conFonte = t < E.gru_fine || t >= E.n112_a;
-    const testo = !conFonte ? '' : CONFIG.fonte + (vg > 0.5 ? '\n' + testoTerre : conRilievo ? '\n' + attribuzione : '');
+    const testo = conFonte ? CONFIG.fonte : '';     // una riga sola: i crediti dei dati stanno nella descrizione, non nel video
     if (fonte.textContent !== testo) fonte.textContent = testo;
     fonte.style.display = testo ? '' : 'none';
     fonte.style.left = L.margine + 'px';

@@ -2,108 +2,108 @@
  "scene": [
   {
    "inizio": 0.0,
-   "durata": 8.3
+   "durata": 9.1
   },
   {
-   "inizio": 8.3,
-   "durata": 8.4
+   "inizio": 9.1,
+   "durata": 9.1
   },
   {
-   "inizio": 16.7,
-   "durata": 11.2
+   "inizio": 18.2,
+   "durata": 12.4
   },
   {
-   "inizio": 27.9,
-   "durata": 13.7
+   "inizio": 30.6,
+   "durata": 14.6
   },
   {
-   "inizio": 41.6,
-   "durata": 9.7
+   "inizio": 45.2,
+   "durata": 9.6
   },
   {
-   "inizio": 51.3,
-   "durata": 9.9
+   "inizio": 54.8,
+   "durata": 10.5
   },
   {
-   "inizio": 61.2,
-   "durata": 10.6
+   "inizio": 65.3,
+   "durata": 11.3
   }
  ],
  "voce": [
   0.45,
-  8.75,
-  20.8,
-  28.35,
-  42.2,
-  52.2,
-  62.1
+  9.55,
+  22.3,
+  31.05,
+  45.8,
+  55.7,
+  66.2
  ],
  "eventi": {
   "tuffo": 3.9,
   "telefono": 4.0,
-  "avviso1": 5.75,
-  "avviso1_fine": 7.7,
-  "s1_arrivo": 10.0,
-  "onde": 9.8,
-  "orbita_fine": 12.15,
-  "card_app": 13.1,
-  "card_iscr": 14.15,
-  "s1_fine": 16.3,
-  "gru_fine": 18.6,
-  "avviso2": 18.7,
-  "avviso2_fine": 20.7,
-  "card_suono": 21.5,
-  "card_suono_fine": 23.4,
-  "zoom_da": 23.6,
-  "zoom_a": 24.4,
-  "righe_da": 24.2,
-  "cerchia": 25.95,
-  "card_italert": 26.05,
-  "s2_fine": 27.5,
-  "m_largo": 28.85,
-  "m_via": 29.65,
+  "avviso1": 6.59,
+  "avviso1_fine": 8.54,
+  "s1_arrivo": 10.8,
+  "onde": 10.6,
+  "orbita_fine": 12.96,
+  "card_app": 14.22,
+  "card_iscr": 15.49,
+  "s1_fine": 17.8,
+  "gru_fine": 20.1,
+  "avviso2": 20.2,
+  "avviso2_fine": 22.2,
+  "card_suono": 22.97,
+  "card_suono_fine": 25.1,
+  "zoom_da": 25.3,
+  "zoom_a": 26.1,
+  "righe_da": 25.92,
+  "cerchia": 28.01,
+  "card_italert": 28.11,
+  "s2_fine": 30.2,
+  "m_largo": 31.55,
+  "m_via": 32.54,
   "m_arr": [
-   30.35,
-   33.0,
-   34.7,
-   36.3
+   33.24,
+   36.21,
+   37.72,
+   39.55
   ],
   "m_par": [
-   32.45,
-   34.15,
-   35.75
+   35.66,
+   37.17,
+   39.0
   ],
-  "tutti_da": 38.1,
-  "tutti_a": 39.3,
-  "no_arrivo": 42.4,
-  "pan1": 42.5,
-  "no1": 43.25,
-  "pan2": 44.05,
-  "no2": 44.65,
-  "col_da": 45.05,
-  "col_a": 46.0,
-  "colori": 46.05,
-  "card_sito": 47.2,
-  "s4_fine": 50.9,
-  "p1_arr": 52.1,
-  "p1": 52.6,
-  "p1_eti": 53.05,
-  "p2_da": 53.65,
-  "p2_a": 54.15,
-  "leggi_da": 54.2,
-  "leggi_a": 55.2,
-  "p3_da": 55.2,
-  "p3_a": 55.7,
-  "passi_da": 57.7,
-  "passi_a": 58.8,
-  "test_arr": 62.1,
-  "test_msg": 62.25,
-  "test_cerchia": 63.5,
-  "card_test": 64.3,
-  "card_test_fine": 66.65,
-  "n112_da": 66.7,
-  "n112_a": 67.6,
-  "card_fine": 69.0
+  "tutti_da": 41.53,
+  "tutti_a": 42.73,
+  "no_arrivo": 46.0,
+  "pan1": 46.1,
+  "no1": 46.95,
+  "pan2": 47.74,
+  "no2": 48.73,
+  "col_da": 49.14,
+  "col_a": 50.09,
+  "colori": 50.14,
+  "card_sito": 51.8,
+  "s4_fine": 54.4,
+  "p1_arr": 55.6,
+  "p1": 55.96,
+  "p1_eti": 56.34,
+  "p2_da": 56.83,
+  "p2_a": 57.33,
+  "leggi_da": 57.38,
+  "leggi_a": 58.6,
+  "p3_da": 58.8,
+  "p3_a": 59.3,
+  "passi_da": 61.72,
+  "passi_a": 62.82,
+  "test_arr": 66.2,
+  "test_msg": 66.35,
+  "test_cerchia": 67.64,
+  "card_test": 68.39,
+  "card_test_fine": 71.14,
+  "n112_da": 71.59,
+  "n112_a": 72.45,
+  "card_fine": 73.81
  },
- "totale": 71.8
+ "totale": 76.6
 }

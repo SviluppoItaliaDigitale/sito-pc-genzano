@@ -2,460 +2,460 @@
  {
   "n": 0,
   "file": "line_0.wav",
-  "durata": 4.925,
+  "durata": 5.889,
   "testo": "IT-alert: il messaggio che avvisa di un grave pericolo. È il sistema di allarme pubblico italiano.",
-  "sentito": "The Alert, il messaggio che avvisa di un brave pericolo, è il sistema di allarme pubblico italiano.",
+  "sentito": "Italert, il messaggio che avvisa di un grave pericolo, è il sistema di allarme pubblico italiano.",
   "parole": [
    {
     "w": "IT-alert:",
     "t0": 0.0,
-    "t1": 0.44
+    "t1": 0.58
    },
    {
     "w": "il",
-    "t0": 0.8,
-    "t1": 0.92
+    "t0": 0.96,
+    "t1": 1.22
    },
    {
     "w": "messaggio",
-    "t0": 0.92,
-    "t1": 1.32
+    "t0": 1.22,
+    "t1": 1.66
    },
    {
     "w": "che",
-    "t0": 1.32,
-    "t1": 1.44
-   },
-   {
-    "w": "avvisa",
-    "t0": 1.44,
-    "t1": 1.74
-   },
-   {
-    "w": "di",
-    "t0": 1.74,
+    "t0": 1.66,
     "t1": 1.82
    },
    {
-    "w": "un",
+    "w": "avvisa",
     "t0": 1.82,
-    "t1": 1.88
-   },
-   {
-    "w": "grave",
-    "t0": 1.88,
-    "t1": 2.1
-   },
-   {
-    "w": "pericolo.",
-    "t0": 2.1,
-    "t1": 2.6
-   },
-   {
-    "w": "È",
-    "t0": 2.8,
-    "t1": 2.92
-   },
-   {
-    "w": "il",
-    "t0": 2.92,
-    "t1": 3.0
-   },
-   {
-    "w": "sistema",
-    "t0": 3.0,
-    "t1": 3.32
+    "t1": 2.18
    },
    {
     "w": "di",
-    "t0": 3.32,
-    "t1": 3.5
+    "t0": 2.18,
+    "t1": 2.28
    },
    {
-    "w": "allarme",
-    "t0": 3.5,
+    "w": "un",
+    "t0": 2.28,
+    "t1": 2.4
+   },
+   {
+    "w": "grave",
+    "t0": 2.4,
+    "t1": 2.58
+   },
+   {
+    "w": "pericolo.",
+    "t0": 2.58,
+    "t1": 3.18
+   },
+   {
+    "w": "È",
+    "t0": 3.62,
     "t1": 3.8
    },
    {
-    "w": "pubblico",
+    "w": "il",
     "t0": 3.8,
-    "t1": 4.28
+    "t1": 3.9
+   },
+   {
+    "w": "sistema",
+    "t0": 3.9,
+    "t1": 4.22
+   },
+   {
+    "w": "di",
+    "t0": 4.22,
+    "t1": 4.4
+   },
+   {
+    "w": "allarme",
+    "t0": 4.4,
+    "t1": 4.72
+   },
+   {
+    "w": "pubblico",
+    "t0": 4.72,
+    "t1": 5.2
    },
    {
     "w": "italiano.",
-    "t0": 4.28,
-    "t1": 4.4
+    "t0": 5.2,
+    "t1": 5.42
    }
   ]
  },
  {
   "n": 1,
   "file": "line_1.wav",
-  "durata": 6.548,
+  "durata": 7.302,
   "testo": "Arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app, e non serve iscriversi.",
-  "sentito": "arriva su tutti i telefoni accesi che si trovano nella zona del pericolo, non serve scaricare un app e non serve scriversi.",
+  "sentito": "arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un app e non serve iscriversi.",
   "parole": [
    {
     "w": "Arriva",
     "t0": 0.0,
-    "t1": 0.38
+    "t1": 0.34
    },
    {
     "w": "su",
-    "t0": 0.38,
-    "t1": 0.5
+    "t0": 0.34,
+    "t1": 0.46
    },
    {
     "w": "tutti",
-    "t0": 0.5,
+    "t0": 0.46,
     "t1": 0.7
    },
    {
     "w": "i",
     "t0": 0.7,
-    "t1": 0.84
+    "t1": 0.8
    },
    {
     "w": "telefoni",
-    "t0": 0.84,
-    "t1": 1.28
+    "t0": 0.8,
+    "t1": 1.18
    },
    {
     "w": "accesi",
-    "t0": 1.28,
-    "t1": 1.68
+    "t0": 1.18,
+    "t1": 1.54
    },
    {
     "w": "che",
-    "t0": 1.68,
-    "t1": 1.78
+    "t0": 1.54,
+    "t1": 1.62
    },
    {
     "w": "si",
-    "t0": 1.78,
-    "t1": 1.9
+    "t0": 1.62,
+    "t1": 1.76
    },
    {
     "w": "trovano",
-    "t0": 1.9,
-    "t1": 2.26
+    "t0": 1.76,
+    "t1": 2.12
    },
    {
     "w": "nella",
-    "t0": 2.26,
-    "t1": 2.44
+    "t0": 2.12,
+    "t1": 2.3
    },
    {
     "w": "zona",
-    "t0": 2.44,
-    "t1": 2.74
+    "t0": 2.3,
+    "t1": 2.56
    },
    {
     "w": "del",
-    "t0": 2.74,
-    "t1": 2.94
+    "t0": 2.56,
+    "t1": 2.76
    },
    {
     "w": "pericolo.",
-    "t0": 2.94,
-    "t1": 3.4
+    "t0": 2.76,
+    "t1": 3.22
    },
    {
     "w": "Non",
     "t0": 3.56,
-    "t1": 3.72
+    "t1": 3.92
    },
    {
     "w": "serve",
-    "t0": 3.72,
-    "t1": 3.96
+    "t0": 3.92,
+    "t1": 4.28
    },
    {
     "w": "scaricare",
-    "t0": 3.96,
-    "t1": 4.5
-   },
-   {
-    "w": "un'app,",
-    "t0": 4.5,
+    "t0": 4.28,
     "t1": 4.82
    },
    {
-    "w": "e",
+    "w": "un'app,",
     "t0": 4.82,
-    "t1": 5.4
+    "t1": 5.26
+   },
+   {
+    "w": "e",
+    "t0": 5.26,
+    "t1": 5.94
    },
    {
     "w": "non",
-    "t0": 5.4,
-    "t1": 5.52
+    "t0": 5.94,
+    "t1": 6.12
    },
    {
     "w": "serve",
-    "t0": 5.52,
-    "t1": 5.76
+    "t0": 6.12,
+    "t1": 6.4
    },
    {
     "w": "iscriversi.",
-    "t0": 5.76,
-    "t1": 6.42
+    "t0": 6.4,
+    "t1": 7.16
    }
   ]
  },
  {
   "n": 2,
   "file": "line_2.wav",
-  "durata": 6.037,
+  "durata": 6.759,
   "testo": "Il telefono fa un suono diverso dalle solite suonerie, e sullo schermo compare un testo che comincia con la scritta IT-alert.",
-  "sentito": "Il telefono fa un suono diverso dalle solite suonerie, e solo schermo compare un testo che comincia con la scritta Ithalerth.",
+  "sentito": "Il telefono fa un suono diverso dalle solite suonerie, e sullo schermo compare un testo che comincia con la scritta IT Alert.",
   "parole": [
    {
     "w": "Il",
     "t0": 0.0,
-    "t1": 0.16
+    "t1": 0.14
    },
    {
     "w": "telefono",
-    "t0": 0.16,
-    "t1": 0.58
+    "t0": 0.14,
+    "t1": 0.54
    },
    {
     "w": "fa",
-    "t0": 0.58,
-    "t1": 0.74
+    "t0": 0.54,
+    "t1": 0.68
    },
    {
     "w": "un",
-    "t0": 0.74,
-    "t1": 0.84
+    "t0": 0.68,
+    "t1": 0.82
    },
    {
     "w": "suono",
-    "t0": 0.84,
-    "t1": 1.06
+    "t0": 0.82,
+    "t1": 1.08
    },
    {
     "w": "diverso",
-    "t0": 1.06,
-    "t1": 1.46
+    "t0": 1.08,
+    "t1": 1.54
    },
    {
     "w": "dalle",
-    "t0": 1.46,
-    "t1": 1.66
+    "t0": 1.54,
+    "t1": 1.74
    },
    {
     "w": "solite",
-    "t0": 1.66,
-    "t1": 2.02
+    "t0": 1.74,
+    "t1": 2.06
    },
    {
     "w": "suonerie,",
-    "t0": 2.02,
-    "t1": 2.54
+    "t0": 2.06,
+    "t1": 2.62
    },
    {
     "w": "e",
-    "t0": 2.78,
-    "t1": 2.88
+    "t0": 3.0,
+    "t1": 3.2
    },
    {
     "w": "sullo",
-    "t0": 2.88,
-    "t1": 3.04
+    "t0": 3.2,
+    "t1": 3.44
    },
    {
     "w": "schermo",
-    "t0": 3.04,
-    "t1": 3.4
+    "t0": 3.44,
+    "t1": 3.72
    },
    {
     "w": "compare",
-    "t0": 3.4,
-    "t1": 3.78
+    "t0": 3.72,
+    "t1": 4.1
    },
    {
     "w": "un",
-    "t0": 3.78,
-    "t1": 3.88
-   },
-   {
-    "w": "testo",
-    "t0": 3.88,
-    "t1": 4.24
-   },
-   {
-    "w": "che",
-    "t0": 4.24,
+    "t0": 4.1,
     "t1": 4.32
    },
    {
-    "w": "comincia",
+    "w": "testo",
     "t0": 4.32,
     "t1": 4.72
    },
    {
-    "w": "con",
+    "w": "che",
     "t0": 4.72,
-    "t1": 4.84
+    "t1": 4.8
+   },
+   {
+    "w": "comincia",
+    "t0": 4.8,
+    "t1": 5.2
+   },
+   {
+    "w": "con",
+    "t0": 5.2,
+    "t1": 5.34
    },
    {
     "w": "la",
-    "t0": 4.84,
-    "t1": 4.96
+    "t0": 5.34,
+    "t1": 5.46
    },
    {
     "w": "scritta",
-    "t0": 4.96,
-    "t1": 5.3
+    "t0": 5.46,
+    "t1": 5.86
    },
    {
     "w": "IT-alert.",
-    "t0": 5.3,
-    "t1": 5.86
+    "t0": 5.86,
+    "t1": 6.32
    }
   ]
  },
  {
   "n": 3,
   "file": "line_3.wav",
-  "durata": 9.232,
+  "durata": 10.081,
   "testo": "Si usa per poche emergenze gravi: un incidente in uno stabilimento industriale, un incidente nucleare, il crollo di una grande diga, l'attività di alcuni vulcani.",
   "sentito": "Si usa per poche emergenze gravi, un incidente in uno stabilimento industriale, un incidente nucleare, il crollo di una grande diga, l 'attività di alcuni vulcani.",
   "parole": [
    {
     "w": "Si",
     "t0": 0.0,
-    "t1": 0.2
+    "t1": 0.18
    },
    {
     "w": "usa",
-    "t0": 0.2,
-    "t1": 0.34
+    "t0": 0.18,
+    "t1": 0.36
    },
    {
     "w": "per",
-    "t0": 0.34,
-    "t1": 0.52
+    "t0": 0.36,
+    "t1": 0.58
    },
    {
     "w": "poche",
-    "t0": 0.52,
-    "t1": 0.76
+    "t0": 0.58,
+    "t1": 0.86
    },
    {
     "w": "emergenze",
-    "t0": 0.76,
-    "t1": 1.2
+    "t0": 0.86,
+    "t1": 1.36
    },
    {
     "w": "gravi:",
-    "t0": 1.2,
-    "t1": 1.62
+    "t0": 1.36,
+    "t1": 1.82
    },
    {
     "w": "un",
-    "t0": 1.94,
-    "t1": 2.04
+    "t0": 2.24,
+    "t1": 2.46
    },
    {
     "w": "incidente",
-    "t0": 2.04,
-    "t1": 2.58
+    "t0": 2.46,
+    "t1": 3.02
    },
    {
     "w": "in",
-    "t0": 2.58,
-    "t1": 2.68
+    "t0": 3.02,
+    "t1": 3.1
    },
    {
     "w": "uno",
-    "t0": 2.68,
-    "t1": 2.8
+    "t0": 3.1,
+    "t1": 3.24
    },
    {
     "w": "stabilimento",
-    "t0": 2.8,
-    "t1": 3.34
+    "t0": 3.24,
+    "t1": 3.82
    },
    {
     "w": "industriale,",
-    "t0": 3.34,
-    "t1": 4.04
+    "t0": 3.82,
+    "t1": 4.62
    },
    {
     "w": "un",
-    "t0": 4.42,
-    "t1": 4.58
+    "t0": 5.06,
+    "t1": 5.18
    },
    {
     "w": "incidente",
-    "t0": 4.58,
-    "t1": 5.1
+    "t0": 5.18,
+    "t1": 5.74
    },
    {
     "w": "nucleare,",
-    "t0": 5.1,
-    "t1": 5.64
+    "t0": 5.74,
+    "t1": 6.32
    },
    {
     "w": "il",
-    "t0": 6.08,
-    "t1": 6.16
+    "t0": 6.62,
+    "t1": 6.66
    },
    {
     "w": "crollo",
-    "t0": 6.16,
-    "t1": 6.46
+    "t0": 6.66,
+    "t1": 7.0
    },
    {
     "w": "di",
-    "t0": 6.46,
-    "t1": 6.58
+    "t0": 7.0,
+    "t1": 7.14
    },
    {
     "w": "una",
-    "t0": 6.58,
-    "t1": 6.7
+    "t0": 7.14,
+    "t1": 7.26
    },
    {
     "w": "grande",
-    "t0": 6.7,
-    "t1": 6.98
+    "t0": 7.26,
+    "t1": 7.56
    },
    {
     "w": "diga,",
-    "t0": 6.98,
-    "t1": 7.42
+    "t0": 7.56,
+    "t1": 8.28
    },
    {
     "w": "l'attività",
-    "t0": 7.66,
-    "t1": 8.14
+    "t0": 8.48,
+    "t1": 8.94
    },
    {
     "w": "di",
-    "t0": 8.14,
-    "t1": 8.24
+    "t0": 8.94,
+    "t1": 9.06
    },
    {
     "w": "alcuni",
-    "t0": 8.24,
-    "t1": 8.54
+    "t0": 9.06,
+    "t1": 9.38
    },
    {
     "w": "vulcani.",
-    "t0": 8.54,
-    "t1": 9.04
+    "t0": 9.38,
+    "t1": 9.94
    }
   ]
  },
  {
   "n": 4,
   "file": "line_4.wav",
-  "durata": 6.369,
+  "durata": 7.361,
   "testo": "Non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo, guarda il colore dell'allerta sul sito del Gruppo.",
-  "sentito": "Non si usa per i terremoti e nemmeno per le allerte meteo, per il maltempo, guarda il colore dell 'allerta sul sito del gruppo.",
+  "sentito": "non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo guarda il colore dell 'allerta sul sito del gruppo.",
   "parole": [
    {
     "w": "Non",
@@ -465,121 +465,121 @@
    {
     "w": "si",
     "t0": 0.16,
-    "t1": 0.3
+    "t1": 0.34
    },
    {
     "w": "usa",
-    "t0": 0.3,
-    "t1": 0.44
-   },
-   {
-    "w": "per",
-    "t0": 0.44,
+    "t0": 0.34,
     "t1": 0.6
    },
    {
-    "w": "i",
+    "w": "per",
     "t0": 0.6,
-    "t1": 0.68
+    "t1": 0.82
+   },
+   {
+    "w": "i",
+    "t0": 0.82,
+    "t1": 0.9
    },
    {
     "w": "terremoti",
-    "t0": 0.68,
-    "t1": 1.16
+    "t0": 0.9,
+    "t1": 1.42
    },
    {
     "w": "e",
-    "t0": 1.16,
-    "t1": 1.46
-   },
-   {
-    "w": "nemmeno",
-    "t0": 1.46,
-    "t1": 1.8
-   },
-   {
-    "w": "per",
-    "t0": 1.8,
+    "t0": 1.42,
     "t1": 1.94
    },
    {
-    "w": "le",
+    "w": "nemmeno",
     "t0": 1.94,
-    "t1": 2.04
+    "t1": 2.28
+   },
+   {
+    "w": "per",
+    "t0": 2.28,
+    "t1": 2.42
+   },
+   {
+    "w": "le",
+    "t0": 2.42,
+    "t1": 2.54
    },
    {
     "w": "allerte",
-    "t0": 2.04,
-    "t1": 2.3
+    "t0": 2.54,
+    "t1": 2.88
    },
    {
     "w": "meteo.",
-    "t0": 2.3,
-    "t1": 2.76
+    "t0": 2.88,
+    "t1": 3.44
    },
    {
     "w": "Per",
-    "t0": 2.9,
-    "t1": 2.98
+    "t0": 3.64,
+    "t1": 4.12
    },
    {
     "w": "il",
-    "t0": 2.98,
-    "t1": 3.08
+    "t0": 4.12,
+    "t1": 4.24
    },
    {
     "w": "maltempo,",
-    "t0": 3.08,
-    "t1": 3.62
+    "t0": 4.24,
+    "t1": 4.78
    },
    {
     "w": "guarda",
-    "t0": 3.92,
-    "t1": 4.28
+    "t0": 4.78,
+    "t1": 5.2
    },
    {
     "w": "il",
-    "t0": 4.28,
-    "t1": 4.32
+    "t0": 5.2,
+    "t1": 5.28
    },
    {
     "w": "colore",
-    "t0": 4.32,
-    "t1": 4.62
+    "t0": 5.28,
+    "t1": 5.62
    },
    {
     "w": "dell'allerta",
-    "t0": 4.62,
-    "t1": 5.16
+    "t0": 5.62,
+    "t1": 6.12
    },
    {
     "w": "sul",
-    "t0": 5.16,
-    "t1": 5.34
+    "t0": 6.12,
+    "t1": 6.36
    },
    {
     "w": "sito",
-    "t0": 5.34,
-    "t1": 5.68
+    "t0": 6.36,
+    "t1": 6.66
    },
    {
     "w": "del",
-    "t0": 5.68,
-    "t1": 5.78
+    "t0": 6.66,
+    "t1": 6.78
    },
    {
     "w": "Gruppo.",
-    "t0": 5.78,
-    "t1": 6.22
+    "t0": 6.78,
+    "t1": 7.26
    }
   ]
  },
  {
   "n": 5,
   "file": "line_5.wav",
-  "durata": 5.07,
+  "durata": 5.774,
   "testo": "Se lo ricevi, fermati e leggi tutto il messaggio. Poi segui le indicazioni delle autorità.",
-  "sentito": "Se lo ricevi, fermati e leggi tutto il messaggio. Poi segui le indicazioni delle autorità.",
+  "sentito": "Se lo ricevi, fermati e leggi tutto il messaggio, poi segui le indicazioni delle autorità.",
   "parole": [
    {
     "w": "Se",
@@ -594,76 +594,76 @@
    {
     "w": "ricevi,",
     "t0": 0.28,
-    "t1": 0.72
+    "t1": 0.68
    },
    {
     "w": "fermati",
-    "t0": 1.02,
-    "t1": 1.54
+    "t0": 0.76,
+    "t1": 1.24
    },
    {
     "w": "e",
-    "t0": 1.54,
-    "t1": 1.76
+    "t0": 1.24,
+    "t1": 1.38
    },
    {
     "w": "leggi",
-    "t0": 1.76,
-    "t1": 2.08
+    "t0": 1.38,
+    "t1": 1.76
    },
    {
     "w": "tutto",
-    "t0": 2.08,
-    "t1": 2.24
+    "t0": 1.76,
+    "t1": 1.98
    },
    {
     "w": "il",
-    "t0": 2.24,
-    "t1": 2.4
+    "t0": 1.98,
+    "t1": 2.2
    },
    {
     "w": "messaggio.",
-    "t0": 2.4,
-    "t1": 2.92
+    "t0": 2.2,
+    "t1": 2.84
    },
    {
     "w": "Poi",
-    "t0": 3.1,
-    "t1": 3.26
+    "t0": 3.3,
+    "t1": 3.62
    },
    {
     "w": "segui",
-    "t0": 3.26,
-    "t1": 3.6
+    "t0": 3.62,
+    "t1": 4.06
    },
    {
     "w": "le",
-    "t0": 3.6,
-    "t1": 3.64
+    "t0": 4.06,
+    "t1": 4.12
    },
    {
     "w": "indicazioni",
-    "t0": 3.64,
-    "t1": 4.16
+    "t0": 4.12,
+    "t1": 4.72
    },
    {
     "w": "delle",
-    "t0": 4.16,
-    "t1": 4.36
+    "t0": 4.72,
+    "t1": 4.98
    },
    {
     "w": "autorità.",
-    "t0": 4.36,
-    "t1": 4.86
+    "t0": 4.98,
+    "t1": 5.58
    }
   ]
  },
  {
   "n": 6,
   "file": "line_6.wav",
-  "durata": 6.513,
+  "durata": 7.263,
   "testo": "Se il messaggio comincia con la parola TEST, è solo una prova: non devi fare niente. In emergenza chiama il 112.",
-  "sentito": "Se il messaggio comincia con la parola test e sono una prova, non devi fare niente, in emergenza chiama il 112.",
+  "sentito": "Se il messaggio comincia con la parola test, è solo una prova. Non devi fare niente. In emergenza chiama il 112.",
   "parole": [
    {
     "w": "Se",
@@ -673,102 +673,102 @@
    {
     "w": "il",
     "t0": 0.16,
-    "t1": 0.22
+    "t1": 0.26
    },
    {
     "w": "messaggio",
-    "t0": 0.22,
-    "t1": 0.6
+    "t0": 0.26,
+    "t1": 0.66
    },
    {
     "w": "comincia",
-    "t0": 0.6,
-    "t1": 1.0
+    "t0": 0.66,
+    "t1": 1.06
    },
    {
     "w": "con",
-    "t0": 1.0,
-    "t1": 1.1
+    "t0": 1.06,
+    "t1": 1.18
    },
    {
     "w": "la",
-    "t0": 1.1,
-    "t1": 1.2
+    "t0": 1.18,
+    "t1": 1.28
    },
    {
     "w": "parola",
-    "t0": 1.2,
-    "t1": 1.48
+    "t0": 1.28,
+    "t1": 1.54
    },
    {
     "w": "TEST,",
-    "t0": 1.48,
-    "t1": 1.78
+    "t0": 1.54,
+    "t1": 1.86
    },
    {
     "w": "è",
-    "t0": 1.78,
-    "t1": 2.42
+    "t0": 2.24,
+    "t1": 2.46
    },
    {
     "w": "solo",
-    "t0": 2.42,
+    "t0": 2.46,
     "t1": 2.66
    },
    {
     "w": "una",
     "t0": 2.66,
-    "t1": 2.84
+    "t1": 2.86
    },
    {
     "w": "prova:",
-    "t0": 2.84,
+    "t0": 2.86,
     "t1": 3.14
    },
    {
     "w": "non",
-    "t0": 3.48,
-    "t1": 3.56
+    "t0": 3.76,
+    "t1": 3.86
    },
    {
     "w": "devi",
-    "t0": 3.56,
-    "t1": 3.78
+    "t0": 3.86,
+    "t1": 4.06
    },
    {
     "w": "fare",
-    "t0": 3.78,
-    "t1": 4.0
+    "t0": 4.06,
+    "t1": 4.26
    },
    {
     "w": "niente.",
-    "t0": 4.0,
-    "t1": 4.46
+    "t0": 4.26,
+    "t1": 4.64
    },
    {
     "w": "In",
-    "t0": 4.68,
-    "t1": 4.78
+    "t0": 5.14,
+    "t1": 5.4
    },
    {
     "w": "emergenza",
-    "t0": 4.78,
-    "t1": 5.26
+    "t0": 5.4,
+    "t1": 5.92
    },
    {
     "w": "chiama",
-    "t0": 5.26,
-    "t1": 5.54
+    "t0": 5.92,
+    "t1": 6.24
    },
    {
     "w": "il",
-    "t0": 5.54,
-    "t1": 5.64
+    "t0": 6.24,
+    "t1": 6.4
    },
    {
     "w": "112.",
-    "t0": 5.64,
-    "t1": 5.9
+    "t0": 6.4,
+    "t1": 6.7
    }
   ]
  }

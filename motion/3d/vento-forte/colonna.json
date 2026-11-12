@@ -1,5 +1,5 @@
 {
- "durata": 69.1,
+ "durata": 73.65,
  "voce": [
   {
    "file": "../../voce/vento-forte/line_0.wav",
@@ -7,34 +7,34 @@
   },
   {
    "file": "../../voce/vento-forte/line_1.wav",
-   "inizio": 9.26
+   "inizio": 10.0
   },
   {
    "file": "../../voce/vento-forte/line_2.wav",
-   "inizio": 18.71
+   "inizio": 20.01
   },
   {
    "file": "../../voce/vento-forte/line_3.wav",
-   "inizio": 27.15
+   "inizio": 29.26
   },
   {
    "file": "../../voce/vento-forte/line_4.wav",
-   "inizio": 36.2
+   "inizio": 39.39
   },
   {
    "file": "../../voce/vento-forte/line_5.wav",
-   "inizio": 48.69
+   "inizio": 52.5
   },
   {
    "file": "../../voce/vento-forte/line_6.wav",
-   "inizio": 58.4
+   "inizio": 62.43
   }
  ],
  "musica": [
   {
    "file": "../../.cache/suoni/easy-lemon.mp3",
    "inizio": 0,
-   "fine": 69.1,
+   "fine": 73.65,
    "da": 0,
    "entrata": 1.2,
    "uscita": 3.0
@@ -44,7 +44,7 @@
   {
    "file": "../../.cache/suoni/vento-lungo.wav",
    "inizio": 0,
-   "fine": 9.21,
+   "fine": 9.95,
    "da": 0,
    "tipo": "ambiente",
    "entrata": 0.6,
@@ -53,9 +53,9 @@
   },
   {
    "file": "../../.cache/suoni/vento-lungo.wav",
-   "inizio": 13.34,
-   "fine": 18.01,
-   "da": 13.34,
+   "inizio": 14.39,
+   "fine": 19.31,
+   "da": 14.39,
    "tipo": "ambiente",
    "entrata": 0.6,
    "uscita": 1.2,
@@ -63,9 +63,9 @@
   },
   {
    "file": "../../.cache/suoni/vento-lungo.wav",
-   "inizio": 26.9,
-   "fine": 48.14,
-   "da": 26.9,
+   "inizio": 29.01,
+   "fine": 51.95,
+   "da": 29.01,
    "tipo": "ambiente",
    "entrata": 0.6,
    "uscita": 1.2,
@@ -73,9 +73,9 @@
   },
   {
    "file": "../../.cache/suoni/vento-lungo.wav",
-   "inizio": 48.24,
-   "fine": 57.65,
-   "da": 18.24,
+   "inizio": 52.05,
+   "fine": 61.68,
+   "da": 22.05,
    "tipo": "ambiente",
    "entrata": 0.6,
    "uscita": 1.2,
@@ -89,55 +89,55 @@
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 9.61,
+   "evento": 10.35,
    "tipo": "colpo",
    "volume": -3
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 18.06,
+   "evento": 19.36,
    "tipo": "colpo",
    "volume": -3
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 21.31,
+   "evento": 22.61,
    "tipo": "colpo",
    "volume": -5
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 27.45,
+   "evento": 29.56,
    "tipo": "colpo",
    "volume": -3
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 36.5,
+   "evento": 39.69,
    "tipo": "colpo",
    "volume": -3
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 42.4,
+   "evento": 45.53,
    "tipo": "colpo",
    "volume": -3
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 48.29,
+   "evento": 52.1,
    "tipo": "colpo",
    "volume": -5
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 52.54,
+   "evento": 56.35,
    "tipo": "colpo",
    "volume": -5
   },
   {
    "file": "../../.cache/suoni/passaggio.wav",
-   "evento": 58.45,
+   "evento": 62.48,
    "tipo": "colpo",
    "volume": -5
   },
@@ -149,121 +149,121 @@
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 12.13,
+   "evento": 13.07,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 12.91,
+   "evento": 13.9,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 15.23,
+   "evento": 16.55,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 18.71,
+   "evento": 20.01,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 22.11,
+   "evento": 23.41,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 24.96,
+   "evento": 26.26,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 28.81,
+   "evento": 30.82,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 31.05,
+   "evento": 33.72,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 32.07,
+   "evento": 35.39,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 37.13,
+   "evento": 40.3,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 43.13,
+   "evento": 46.8,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 44.0,
+   "evento": 47.81,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 44.72,
+   "evento": 48.57,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 49.19,
+   "evento": 53.0,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 54.66,
+   "evento": 58.47,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 55.16,
+   "evento": 58.97,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 59.47,
+   "evento": 63.5,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 61.62,
+   "evento": 66.09,
    "tipo": "colpo",
    "volume": -4
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 63.72,
+   "evento": 68.19,
    "tipo": "colpo",
    "volume": -2
   },
   {
    "file": "../../.cache/suoni/pop.wav",
-   "evento": 65.37,
+   "evento": 69.84,
    "tipo": "colpo",
    "volume": -4
   }

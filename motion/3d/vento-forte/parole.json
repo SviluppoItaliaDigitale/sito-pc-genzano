@@ -2,9 +2,9 @@
  {
   "n": 0,
   "file": "line_0.wav",
-  "durata": 5.562,
+  "durata": 6.3,
   "testo": "Vento forte: che cosa fare. Le raffiche possono spezzare i rami e far cadere tegole e vasi.",
-  "sentito": "Vento forte, che cosa fare? Le raffite possono spezzare i rami e far cadere tegole e vasi.",
+  "sentito": "Vento forte. Che cosa fare? Le raffiche possono spezzare i rami e far cadere tegole e vasi.",
   "uno_a_uno": true,
   "parole": [
    {
@@ -15,626 +15,626 @@
    {
     "w": "forte:",
     "t0": 0.34,
-    "t1": 0.66
+    "t1": 0.72
    },
    {
     "w": "che",
-    "t0": 1.08,
-    "t1": 1.2
+    "t0": 1.26,
+    "t1": 1.34
    },
    {
     "w": "cosa",
-    "t0": 1.2,
-    "t1": 1.44
+    "t0": 1.34,
+    "t1": 1.62
    },
    {
     "w": "fare.",
-    "t0": 1.44,
-    "t1": 1.76
+    "t0": 1.62,
+    "t1": 1.98
    },
    {
     "w": "Le",
-    "t0": 1.94,
-    "t1": 2.02
+    "t0": 2.46,
+    "t1": 2.72
    },
    {
     "w": "raffiche",
-    "t0": 2.02,
-    "t1": 2.38
+    "t0": 2.72,
+    "t1": 3.12
    },
    {
     "w": "possono",
-    "t0": 2.38,
-    "t1": 2.64
+    "t0": 3.12,
+    "t1": 3.34
    },
    {
     "w": "spezzare",
-    "t0": 2.64,
-    "t1": 3.14
+    "t0": 3.34,
+    "t1": 3.92
    },
    {
     "w": "i",
-    "t0": 3.14,
-    "t1": 3.24
+    "t0": 3.92,
+    "t1": 4.04
    },
    {
     "w": "rami",
-    "t0": 3.24,
-    "t1": 3.54
+    "t0": 4.04,
+    "t1": 4.4
    },
    {
     "w": "e",
-    "t0": 3.54,
-    "t1": 4.0
+    "t0": 4.4,
+    "t1": 4.74
    },
    {
     "w": "far",
-    "t0": 4.0,
-    "t1": 4.14
+    "t0": 4.74,
+    "t1": 4.92
    },
    {
     "w": "cadere",
-    "t0": 4.14,
-    "t1": 4.42
+    "t0": 4.92,
+    "t1": 5.26
    },
    {
     "w": "tegole",
-    "t0": 4.42,
-    "t1": 4.86
+    "t0": 5.26,
+    "t1": 5.66
    },
    {
     "w": "e",
-    "t0": 4.86,
-    "t1": 5.04
+    "t0": 5.66,
+    "t1": 5.8
    },
    {
     "w": "vasi.",
-    "t0": 5.04,
-    "t1": 5.36
+    "t0": 5.8,
+    "t1": 6.14
    }
   ]
  },
  {
   "n": 1,
   "file": "line_1.wav",
-  "durata": 5.703,
+  "durata": 6.256,
   "testo": "Prima che arrivi il vento, metti al riparo o fissa bene vasi, sedie e tutto quello che sta su balconi e davanzali.",
-  "sentito": "Prima che arrivi il vento, metti al riparo fissa bene vasi, sedie e tutto quello che sta su balconi ed avanzali.",
+  "sentito": "Prima che arrivi il vento metti al riparo fissa bene vasi, sedie e tutto quello che sta su balconi ed avanzali.",
   "uno_a_uno": false,
   "parole": [
    {
     "w": "Prima",
     "t0": 0.0,
-    "t1": 0.287
+    "t1": 0.32
    },
    {
     "w": "che",
-    "t0": 0.287,
-    "t1": 0.478
+    "t0": 0.32,
+    "t1": 0.534
    },
    {
     "w": "arrivi",
-    "t0": 0.478,
-    "t1": 0.813
+    "t0": 0.534,
+    "t1": 0.908
    },
    {
     "w": "il",
-    "t0": 0.813,
-    "t1": 0.957
+    "t0": 0.908,
+    "t1": 1.068
    },
    {
     "w": "vento,",
-    "t0": 0.957,
-    "t1": 1.291
+    "t0": 1.068,
+    "t1": 1.442
    },
    {
     "w": "metti",
-    "t0": 1.291,
-    "t1": 1.578
+    "t0": 1.442,
+    "t1": 1.762
    },
    {
     "w": "al",
-    "t0": 1.578,
-    "t1": 1.722
+    "t0": 1.762,
+    "t1": 1.922
    },
    {
     "w": "riparo",
-    "t0": 1.722,
-    "t1": 2.057
+    "t0": 1.922,
+    "t1": 2.296
    },
    {
     "w": "o",
-    "t0": 2.057,
-    "t1": 2.152
+    "t0": 2.296,
+    "t1": 2.403
    },
    {
     "w": "fissa",
-    "t0": 2.152,
-    "t1": 2.439
+    "t0": 2.403,
+    "t1": 2.723
    },
    {
     "w": "bene",
-    "t0": 2.439,
-    "t1": 2.678
+    "t0": 2.723,
+    "t1": 2.99
    },
    {
     "w": "vasi,",
-    "t0": 2.678,
-    "t1": 2.965
+    "t0": 2.99,
+    "t1": 3.31
    },
    {
     "w": "sedie",
-    "t0": 2.965,
-    "t1": 3.252
+    "t0": 3.31,
+    "t1": 3.631
    },
    {
     "w": "e",
-    "t0": 3.252,
-    "t1": 3.348
+    "t0": 3.631,
+    "t1": 3.737
    },
    {
     "w": "tutto",
-    "t0": 3.348,
-    "t1": 3.635
+    "t0": 3.737,
+    "t1": 4.058
    },
    {
     "w": "quello",
-    "t0": 3.635,
-    "t1": 3.97
+    "t0": 4.058,
+    "t1": 4.431
    },
    {
     "w": "che",
-    "t0": 3.97,
-    "t1": 4.161
+    "t0": 4.431,
+    "t1": 4.645
    },
    {
     "w": "sta",
-    "t0": 4.161,
-    "t1": 4.352
+    "t0": 4.645,
+    "t1": 4.859
    },
    {
     "w": "su",
-    "t0": 4.352,
-    "t1": 4.496
+    "t0": 4.859,
+    "t1": 5.019
    },
    {
     "w": "balconi",
-    "t0": 4.496,
-    "t1": 4.878
+    "t0": 5.019,
+    "t1": 5.446
    },
    {
     "w": "e",
-    "t0": 4.878,
-    "t1": 4.974
+    "t0": 5.446,
+    "t1": 5.553
    },
    {
     "w": "davanzali.",
-    "t0": 4.974,
-    "t1": 5.5
+    "t0": 5.553,
+    "t1": 6.14
    }
   ]
  },
  {
   "n": 2,
   "file": "line_2.wav",
-  "durata": 4.141,
+  "durata": 4.946,
   "testo": "Guarda l'allerta del giorno, e parcheggia l'auto lontano da alberi e impalcature.",
-  "sentito": "Guarda l'allerta del giorno e parcheggia l'auto lontano da alberire in palcature.",
+  "sentito": "Guarda l'allerta del giorno e parcheggia l'auto lontano da alberi e in palcature.",
   "uno_a_uno": false,
   "parole": [
    {
     "w": "Guarda",
     "t0": 0.0,
-    "t1": 0.331
+    "t1": 0.401
    },
    {
     "w": "l'allerta",
-    "t0": 0.331,
-    "t1": 0.804
+    "t0": 0.401,
+    "t1": 0.974
    },
    {
     "w": "del",
-    "t0": 0.804,
-    "t1": 0.994
+    "t0": 0.974,
+    "t1": 1.204
    },
    {
     "w": "giorno,",
-    "t0": 0.994,
-    "t1": 1.372
+    "t0": 1.204,
+    "t1": 1.662
    },
    {
     "w": "e",
-    "t0": 1.372,
-    "t1": 1.467
+    "t0": 1.662,
+    "t1": 1.777
    },
    {
     "w": "parcheggia",
-    "t0": 1.467,
-    "t1": 1.987
+    "t0": 1.777,
+    "t1": 2.407
    },
    {
     "w": "l'auto",
-    "t0": 1.987,
-    "t1": 2.319
+    "t0": 2.407,
+    "t1": 2.809
    },
    {
     "w": "lontano",
-    "t0": 2.319,
-    "t1": 2.697
+    "t0": 2.809,
+    "t1": 3.267
    },
    {
     "w": "da",
-    "t0": 2.697,
-    "t1": 2.839
+    "t0": 3.267,
+    "t1": 3.439
    },
    {
     "w": "alberi",
-    "t0": 2.839,
-    "t1": 3.17
+    "t0": 3.439,
+    "t1": 3.84
    },
    {
     "w": "e",
-    "t0": 3.17,
-    "t1": 3.265
+    "t0": 3.84,
+    "t1": 3.955
    },
    {
     "w": "impalcature.",
-    "t0": 3.265,
-    "t1": 3.88
+    "t0": 3.955,
+    "t1": 4.7
    }
   ]
  },
  {
   "n": 3,
   "file": "line_3.wav",
-  "durata": 5.848,
+  "durata": 6.93,
   "testo": "Quando il vento soffia forte, resta in casa se puoi. Chiudi porte e finestre, e stai lontano dai vetri.",
-  "sentito": "Quando il vento soffia forte, resta in casa se puoi. Chiudi portere finestre e stai lontano dai vetri.",
-  "uno_a_uno": false,
+  "sentito": "Quando il vento soffia forte, resta in casa se puoi, chiudi porte e finestre e stai lontano dai vetri.",
+  "uno_a_uno": true,
   "parole": [
    {
     "w": "Quando",
     "t0": 0.0,
-    "t1": 0.382
+    "t1": 0.16
    },
    {
     "w": "il",
-    "t0": 0.382,
-    "t1": 0.546
+    "t0": 0.16,
+    "t1": 0.32
    },
    {
     "w": "vento",
-    "t0": 0.546,
-    "t1": 0.874
+    "t0": 0.32,
+    "t1": 0.6
    },
    {
     "w": "soffia",
-    "t0": 0.874,
-    "t1": 1.256
+    "t0": 0.6,
+    "t1": 0.86
    },
    {
     "w": "forte,",
-    "t0": 1.256,
-    "t1": 1.638
+    "t0": 0.86,
+    "t1": 1.2
    },
    {
     "w": "resta",
-    "t0": 1.638,
-    "t1": 1.966
+    "t0": 1.54,
+    "t1": 2.06
    },
    {
     "w": "in",
-    "t0": 1.966,
-    "t1": 2.13
+    "t0": 2.06,
+    "t1": 2.12
    },
    {
     "w": "casa",
-    "t0": 2.13,
-    "t1": 2.403
+    "t0": 2.12,
+    "t1": 2.42
    },
    {
     "w": "se",
-    "t0": 2.403,
-    "t1": 2.567
+    "t0": 2.42,
+    "t1": 2.6
    },
    {
     "w": "puoi.",
-    "t0": 2.567,
-    "t1": 2.895
+    "t0": 2.6,
+    "t1": 3.08
    },
    {
     "w": "Chiudi",
-    "t0": 2.895,
-    "t1": 3.277
+    "t0": 3.46,
+    "t1": 3.82
    },
    {
     "w": "porte",
-    "t0": 3.277,
-    "t1": 3.605
+    "t0": 3.82,
+    "t1": 4.18
    },
    {
     "w": "e",
-    "t0": 3.605,
-    "t1": 3.714
+    "t0": 4.18,
+    "t1": 4.4
    },
    {
     "w": "finestre,",
-    "t0": 3.714,
-    "t1": 4.26
+    "t0": 4.4,
+    "t1": 5.04
    },
    {
     "w": "e",
-    "t0": 4.26,
-    "t1": 4.369
+    "t0": 5.04,
+    "t1": 5.58
    },
    {
     "w": "stai",
-    "t0": 4.369,
-    "t1": 4.642
+    "t0": 5.58,
+    "t1": 5.84
    },
    {
     "w": "lontano",
-    "t0": 4.642,
-    "t1": 5.079
+    "t0": 5.84,
+    "t1": 6.28
    },
    {
     "w": "dai",
-    "t0": 5.079,
-    "t1": 5.298
+    "t0": 6.28,
+    "t1": 6.42
    },
    {
     "w": "vetri.",
-    "t0": 5.298,
-    "t1": 5.68
+    "t0": 6.42,
+    "t1": 6.84
    }
   ]
  },
  {
   "n": 4,
   "file": "line_4.wav",
-  "durata": 9.29,
+  "durata": 9.91,
   "testo": "Se sei fuori, evita i parchi e le strade alberate: i rami che si spezzano sono il pericolo più frequente. Stai lontano da impalcature, cartelloni e cornicioni.",
-  "sentito": "se sei fuori evita i parchi e le strade alberate. I rami che si spezzano sono il pericolo più frequente, stai lontano da impalcature, cartelloni e cornicioni.",
+  "sentito": "Se sei fuori evita i parchi e le strade alberate, i rami che si spezzano sono il pericolo più frequente. Stai lontano da impalcature, cartelloni e cornicioni.",
   "uno_a_uno": true,
   "parole": [
    {
     "w": "Se",
     "t0": 0.0,
-    "t1": 0.2
+    "t1": 0.16
    },
    {
     "w": "sei",
-    "t0": 0.2,
-    "t1": 0.36
+    "t0": 0.16,
+    "t1": 0.38
    },
    {
     "w": "fuori,",
-    "t0": 0.36,
-    "t1": 0.78
+    "t0": 0.38,
+    "t1": 0.76
    },
    {
     "w": "evita",
-    "t0": 0.78,
-    "t1": 1.3
+    "t0": 0.76,
+    "t1": 1.12
    },
    {
     "w": "i",
-    "t0": 1.3,
-    "t1": 1.36
+    "t0": 1.12,
+    "t1": 1.22
    },
    {
     "w": "parchi",
-    "t0": 1.36,
-    "t1": 1.78
+    "t0": 1.22,
+    "t1": 1.64
    },
    {
     "w": "e",
-    "t0": 1.78,
-    "t1": 2.08
+    "t0": 1.64,
+    "t1": 1.74
    },
    {
     "w": "le",
-    "t0": 2.08,
-    "t1": 2.16
+    "t0": 1.74,
+    "t1": 1.86
    },
    {
     "w": "strade",
-    "t0": 2.16,
-    "t1": 2.46
+    "t0": 1.86,
+    "t1": 2.18
    },
    {
     "w": "alberate:",
-    "t0": 2.46,
-    "t1": 2.96
+    "t0": 2.18,
+    "t1": 2.76
    },
    {
     "w": "i",
-    "t0": 3.48,
-    "t1": 3.54
+    "t0": 3.18,
+    "t1": 3.28
    },
    {
     "w": "rami",
-    "t0": 3.54,
-    "t1": 3.78
+    "t0": 3.28,
+    "t1": 3.64
    },
    {
     "w": "che",
-    "t0": 3.78,
-    "t1": 3.9
+    "t0": 3.64,
+    "t1": 3.8
    },
    {
     "w": "si",
-    "t0": 3.9,
-    "t1": 4.04
+    "t0": 3.8,
+    "t1": 3.96
    },
    {
     "w": "spezzano",
-    "t0": 4.04,
+    "t0": 3.96,
     "t1": 4.44
    },
    {
     "w": "sono",
     "t0": 4.44,
-    "t1": 4.66
+    "t1": 4.62
    },
    {
     "w": "il",
-    "t0": 4.66,
-    "t1": 4.78
+    "t0": 4.62,
+    "t1": 4.76
    },
    {
     "w": "pericolo",
-    "t0": 4.78,
-    "t1": 5.16
+    "t0": 4.76,
+    "t1": 5.14
    },
    {
     "w": "più",
-    "t0": 5.16,
-    "t1": 5.32
+    "t0": 5.14,
+    "t1": 5.26
    },
    {
     "w": "frequente.",
-    "t0": 5.32,
+    "t0": 5.26,
     "t1": 5.88
    },
    {
     "w": "Stai",
-    "t0": 6.06,
-    "t1": 6.3
+    "t0": 6.32,
+    "t1": 6.72
    },
    {
     "w": "lontano",
-    "t0": 6.3,
-    "t1": 6.68
+    "t0": 6.72,
+    "t1": 7.16
    },
    {
     "w": "da",
-    "t0": 6.68,
-    "t1": 6.8
+    "t0": 7.16,
+    "t1": 7.28
    },
    {
     "w": "impalcature,",
-    "t0": 6.8,
-    "t1": 7.4
+    "t0": 7.28,
+    "t1": 7.96
    },
    {
     "w": "cartelloni",
-    "t0": 7.78,
-    "t1": 8.38
+    "t0": 8.4,
+    "t1": 9.04
    },
    {
     "w": "e",
-    "t0": 8.38,
-    "t1": 8.5
+    "t0": 9.04,
+    "t1": 9.16
    },
    {
     "w": "cornicioni.",
-    "t0": 8.5,
-    "t1": 9.04
+    "t0": 9.16,
+    "t1": 9.72
    }
   ]
  },
  {
   "n": 5,
   "file": "line_5.wav",
-  "durata": 6.107,
+  "durata": 6.326,
   "testo": "In auto o in moto rallenta: le raffiche fanno sbandare, soprattutto all'uscita delle gallerie e sui viadotti.",
-  "sentito": "In auto o in moto rallenta. Le raffiche fanno sbandare, soprattutto all'uscita delle gallerie e sui viadotti.",
+  "sentito": "In auto o in moto rallenta, le raffiche fanno sbandare, soprattutto all'uscita delle gallerie e sui viadotti.",
   "uno_a_uno": false,
   "parole": [
    {
     "w": "In",
     "t0": 0.0,
-    "t1": 0.161
+    "t1": 0.167
    },
    {
     "w": "auto",
-    "t0": 0.161,
-    "t1": 0.431
+    "t0": 0.167,
+    "t1": 0.445
    },
    {
     "w": "o",
-    "t0": 0.431,
-    "t1": 0.538
+    "t0": 0.445,
+    "t1": 0.556
    },
    {
     "w": "in",
-    "t0": 0.538,
-    "t1": 0.7
+    "t0": 0.556,
+    "t1": 0.723
    },
    {
     "w": "moto",
-    "t0": 0.7,
-    "t1": 0.969
+    "t0": 0.723,
+    "t1": 1.001
    },
    {
     "w": "rallenta:",
-    "t0": 0.969,
-    "t1": 1.507
+    "t0": 1.001,
+    "t1": 1.558
    },
    {
     "w": "le",
-    "t0": 1.507,
-    "t1": 1.668
+    "t0": 1.558,
+    "t1": 1.725
    },
    {
     "w": "raffiche",
-    "t0": 1.668,
-    "t1": 2.153
+    "t0": 1.725,
+    "t1": 2.225
    },
    {
     "w": "fanno",
-    "t0": 2.153,
-    "t1": 2.476
+    "t0": 2.225,
+    "t1": 2.559
    },
    {
     "w": "sbandare,",
-    "t0": 2.476,
-    "t1": 3.014
+    "t0": 2.559,
+    "t1": 3.116
    },
    {
     "w": "soprattutto",
-    "t0": 3.014,
-    "t1": 3.66
+    "t0": 3.116,
+    "t1": 3.783
    },
    {
     "w": "all'uscita",
-    "t0": 3.66,
-    "t1": 4.252
+    "t0": 3.783,
+    "t1": 4.395
    },
    {
     "w": "delle",
-    "t0": 4.252,
-    "t1": 4.575
+    "t0": 4.395,
+    "t1": 4.729
    },
    {
     "w": "gallerie",
-    "t0": 4.575,
-    "t1": 5.059
+    "t0": 4.729,
+    "t1": 5.23
    },
    {
     "w": "e",
-    "t0": 5.059,
-    "t1": 5.167
+    "t0": 5.23,
+    "t1": 5.341
    },
    {
     "w": "sui",
-    "t0": 5.167,
-    "t1": 5.382
+    "t0": 5.341,
+    "t1": 5.564
    },
    {
     "w": "viadotti.",
-    "t0": 5.382,
-    "t1": 5.92
+    "t0": 5.564,
+    "t1": 6.12
    }
   ]
  },
  {
   "n": 6,
   "file": "line_6.wav",
-  "durata": 6.352,
+  "durata": 6.872,
   "testo": "Dopo il vento, non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chiama il 112.",
-  "sentito": "Dopo il vento, non toccare i cari caduti a terra, se un albero o un cavo blocca la strada, chiama il 112.",
+  "sentito": "Dopo il vento, non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chiama il 112.",
   "uno_a_uno": true,
   "parole": [
    {
@@ -645,107 +645,107 @@
    {
     "w": "il",
     "t0": 0.3,
-    "t1": 0.36
+    "t1": 0.4
    },
    {
     "w": "vento,",
-    "t0": 0.36,
-    "t1": 0.78
+    "t0": 0.4,
+    "t1": 0.84
    },
    {
     "w": "non",
     "t0": 1.02,
-    "t1": 1.12
+    "t1": 1.16
    },
    {
     "w": "toccare",
-    "t0": 1.12,
-    "t1": 1.5
+    "t0": 1.16,
+    "t1": 1.68
    },
    {
     "w": "i",
-    "t0": 1.5,
-    "t1": 1.62
+    "t0": 1.68,
+    "t1": 1.78
    },
    {
     "w": "cavi",
-    "t0": 1.62,
-    "t1": 1.82
+    "t0": 1.78,
+    "t1": 2.06
    },
    {
     "w": "caduti",
-    "t0": 1.82,
-    "t1": 2.12
+    "t0": 2.06,
+    "t1": 2.36
    },
    {
     "w": "a",
-    "t0": 2.12,
-    "t1": 2.22
+    "t0": 2.36,
+    "t1": 2.48
    },
    {
     "w": "terra.",
-    "t0": 2.22,
-    "t1": 2.5
+    "t0": 2.48,
+    "t1": 2.82
    },
    {
     "w": "Se",
-    "t0": 2.86,
-    "t1": 3.0
+    "t0": 3.3,
+    "t1": 3.58
    },
    {
     "w": "un",
-    "t0": 3.0,
-    "t1": 3.14
+    "t0": 3.58,
+    "t1": 3.76
    },
    {
     "w": "albero",
-    "t0": 3.14,
-    "t1": 3.44
+    "t0": 3.76,
+    "t1": 4.1
    },
    {
     "w": "o",
-    "t0": 3.44,
-    "t1": 3.56
+    "t0": 4.1,
+    "t1": 4.24
    },
    {
     "w": "un",
-    "t0": 3.56,
-    "t1": 3.62
+    "t0": 4.24,
+    "t1": 4.3
    },
    {
     "w": "cavo",
-    "t0": 3.62,
-    "t1": 3.84
+    "t0": 4.3,
+    "t1": 4.6
    },
    {
     "w": "blocca",
-    "t0": 3.84,
-    "t1": 4.14
+    "t0": 4.6,
+    "t1": 4.86
    },
    {
     "w": "la",
-    "t0": 4.14,
-    "t1": 4.26
+    "t0": 4.86,
+    "t1": 4.98
    },
    {
     "w": "strada,",
-    "t0": 4.26,
-    "t1": 4.76
-   },
-   {
-    "w": "chiama",
-    "t0": 5.06,
-    "t1": 5.36
-   },
-   {
-    "w": "il",
-    "t0": 5.36,
+    "t0": 4.98,
     "t1": 5.42
    },
    {
-    "w": "112.",
-    "t0": 5.42,
+    "w": "chiama",
+    "t0": 5.48,
     "t1": 5.7
+   },
+   {
+    "w": "il",
+    "t0": 5.7,
+    "t1": 5.86
+   },
+   {
+    "w": "112.",
+    "t0": 5.86,
+    "t1": 6.24
    }
   ]
  }
