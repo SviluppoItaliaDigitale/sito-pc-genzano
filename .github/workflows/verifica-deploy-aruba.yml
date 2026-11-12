@@ -55,15 +55,18 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: "🔁 Confronta le pagine live con il manifesto della build"
         id: check
+        env:
+          EV_WORKFLOW_RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          IN_SHA: ${{ github.event.inputs.sha }}
         run: |
           set -uo pipefail
-          EXPECTED="${{ github.event.workflow_run.head_sha }}"
+          EXPECTED="${EV_WORKFLOW_RUN_HEAD_SHA}"
           EXPECTED="${EXPECTED:0:7}"
-          [ -z "$EXPECTED" ] && EXPECTED="${{ github.event.inputs.sha }}"
+          [ -z "$EXPECTED" ] && EXPECTED="${IN_SHA}"
           ARGS=""
           [ -n "$EXPECTED" ] && ARGS="--sha-atteso $EXPECTED"
           # Ritentativi ampi: assorbono la coda del caricamento FTP subito dopo il deploy.

@@ -46,7 +46,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       # Guasti delle fonti (17/10/2026, istruzione dell'utente: «gli errori 404
       # e simili non devono mai essere ignorati»). I tre script annotano in
@@ -57,7 +57,7 @@ jobs:
       # contatore riempirebbe la storia e farebbe partire il coalescer.
       - name: "♻️ Stato dei guasti delle fonti (giro precedente)"
         id: stato_restore
-        uses: actions/cache/restore@v6
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: ${{ runner.temp }}/stato-fonti
           key: allerta-fonti-${{ github.run_id }}-${{ github.run_attempt }}
@@ -106,6 +106,16 @@ jobs:
 
       - name: "📝 Commit e push se allerta/avviso/incendi cambiato"
         id: commit
+        env:
+          S_CHECK_CHANGED: ${{ steps.check.outputs.changed }}
+          S_CHECK_MOTIVO: ${{ steps.check.outputs.motivo }}
+          S_AVVISI_CHANGED: ${{ steps.avvisi.outputs.changed }}
+          S_AVVISI_TIPO: ${{ steps.avvisi.outputs.tipo }}
+          S_AVVISI_LIVELLO: ${{ steps.avvisi.outputs.livello }}
+          S_INCENDI_CHANGED: ${{ steps.incendi.outputs.changed }}
+          S_INCENDI_LIVELLO_AIB: ${{ steps.incendi.outputs.livello_aib }}
+          S_CHECK_SOSTANZIALE: ${{ steps.check.outputs.sostanziale }}
+          S_CHECK_SOURCE: ${{ steps.check.outputs.source }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -117,19 +127,19 @@ jobs:
           fi
           # Messaggio commit combinato: descrive cosa è cambiato
           MSG_PARTS=()
-          if [ "${{ steps.check.outputs.changed }}" = "true" ]; then
-            MSG_PARTS+=("${{ steps.check.outputs.motivo }}")
+          if [ "${S_CHECK_CHANGED}" = "true" ]; then
+            MSG_PARTS+=("${S_CHECK_MOTIVO}")
           fi
-          if [ "${{ steps.avvisi.outputs.changed }}" = "true" ]; then
-            if [ -n "${{ steps.avvisi.outputs.tipo }}" ]; then
-              MSG_PARTS+=("avviso meteo: ${{ steps.avvisi.outputs.tipo }} ${{ steps.avvisi.outputs.livello }}")
+          if [ "${S_AVVISI_CHANGED}" = "true" ]; then
+            if [ -n "${S_AVVISI_TIPO}" ]; then
+              MSG_PARTS+=("avviso meteo: ${S_AVVISI_TIPO} ${S_AVVISI_LIVELLO}")
             else
               MSG_PARTS+=("avviso meteo cessato")
             fi
           fi
-          if [ "${{ steps.incendi.outputs.changed }}" = "true" ]; then
-            if [ -n "${{ steps.incendi.outputs.livello_aib }}" ]; then
-              MSG_PARTS+=("rischio incendi: ${{ steps.incendi.outputs.livello_aib }}")
+          if [ "${S_INCENDI_CHANGED}" = "true" ]; then
+            if [ -n "${S_INCENDI_LIVELLO_AIB}" ]; then
+              MSG_PARTS+=("rischio incendi: ${S_INCENDI_LIVELLO_AIB}")
             else
               MSG_PARTS+=("rischio incendi cessato")
             fi
@@ -144,14 +154,14 @@ jobs:
           # ~4 volte al giorno senza che nulla fosse cambiato per il
           # cittadino (audit 25/09/2026, F19). Lo raccoglie deploy-coalescer.yml.
           SOSTANZIALE=false
-          if [ "${{ steps.check.outputs.sostanziale }}" = "true" ] \
-             || [ "${{ steps.avvisi.outputs.changed }}" = "true" ] \
-             || [ "${{ steps.incendi.outputs.changed }}" = "true" ]; then
+          if [ "${S_CHECK_SOSTANZIALE}" = "true" ] \
+             || [ "${S_AVVISI_CHANGED}" = "true" ] \
+             || [ "${S_INCENDI_CHANGED}" = "true" ]; then
             SOSTANZIALE=true
           fi
           echo "sostanziale=$SOSTANZIALE" >> "$GITHUB_OUTPUT"
           git commit -m "Allerta meteo: $MSG_HEAD" \
-                     -m "Aggiornamento automatico dai bollettini di criticità (fonti: ${{ steps.check.outputs.source }}), avvisi meteo e bollettino AIB Regione Lazio."
+                     -m "Aggiornamento automatico dai bollettini di criticità (fonti: ${S_CHECK_SOURCE}), avvisi meteo e bollettino AIB Regione Lazio."
           # Retry+rebase per evitare conflitti di concorrenza con altri workflow
           for tentativo in 1 2 3; do
             if git push 2>&1; then break; fi
@@ -367,7 +377,7 @@ jobs:
 
       - name: "💾 Salva lo stato dei guasti"
         if: always() && steps.guasti.outcome == 'success'
-        uses: actions/cache/save@v6
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: ${{ runner.temp }}/stato-fonti
           key: allerta-fonti-${{ github.run_id }}-${{ github.run_attempt }}

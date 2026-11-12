@@ -44,12 +44,12 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.11'
 
@@ -130,6 +130,9 @@ jobs:
       - name: Commit modifiche
         if: steps.diff.outputs.has_changes == 'true'
         env:
+          S_DIFF_CAT_COUNT: ${{ steps.diff.outputs.cat_count }}
+          S_DIFF_PAG_COUNT: ${{ steps.diff.outputs.pag_count }}
+          S_DIFF_LINK_COUNT: ${{ steps.diff.outputs.link_count }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
@@ -141,9 +144,9 @@ jobs:
           Re-scraping mensile dei 3 canali monitorati + rigenerazione mappa
           pagina→video_correlati via algoritmo IDF cross-match.
 
-          - Video totali nel catalogo: ${{ steps.diff.outputs.cat_count }}
-          - Pagine del sito con video correlati: ${{ steps.diff.outputs.pag_count }}
-          - Link totali integrati: ${{ steps.diff.outputs.link_count }}
+          - Video totali nel catalogo: ${S_DIFF_CAT_COUNT}
+          - Pagine del sito con video correlati: ${S_DIFF_PAG_COUNT}
+          - Link totali integrati: ${S_DIFF_LINK_COUNT}
 
           Generato dal workflow aggiorna-video-correlati.yml (cron mensile).
           La selezione resta editoriale: per escludere video falsi positivi

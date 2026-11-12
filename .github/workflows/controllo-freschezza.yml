@@ -31,7 +31,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Rileva articoli da riverificare
         id: scan
@@ -62,10 +62,12 @@ jobs:
       - name: Apri/aggiorna issue se ci sono articoli da riverificare
         if: steps.scan.outputs.total != '0'
         env:
+          S_SCAN_OLD: ${{ steps.scan.outputs.old }}
+          S_SCAN_SOON: ${{ steps.scan.outputs.soon }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TITLE="Freschezza contenuti: ${{ steps.scan.outputs.old }} vecchi + ${{ steps.scan.outputs.soon }} in uscita da riverificare"
+          TITLE="Freschezza contenuti: ${S_SCAN_OLD} vecchi + ${S_SCAN_SOON} in uscita da riverificare"
           # Label garantita (idempotente): senza, gh issue create fallisce
           # con "could not add label" e il job muore (audit 10/06/2026).
           gh label create "freschezza" --color "FBCA04" \

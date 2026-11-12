@@ -26,7 +26,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Confronto pagina IRC ↔ tabella del sito
         id: check
@@ -42,10 +42,11 @@ jobs:
       - name: Apri/aggiorna issue se ci sono capitoli da allineare
         if: steps.check.outputs.fails != '0'
         env:
+          S_CHECK_FAILS: ${{ steps.check.outputs.fails }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TITLE="Linee Guida RCP 2025: ${{ steps.check.outputs.fails }} aggiornamento/i dalla pagina IRC"
+          TITLE="Linee Guida RCP 2025: ${S_CHECK_FAILS} aggiornamento/i dalla pagina IRC"
           {
             echo ""
             echo "_Issue generata da \`check-linee-guida-irc.yml\` (lunedì 11:31 UTC). Aggiornare la tabella di \`/formazione/primo-soccorso/\` e la nota sui capitoli in corso di rilascio; poi ricontrollare le schede figlie che citano i capitoli._"
