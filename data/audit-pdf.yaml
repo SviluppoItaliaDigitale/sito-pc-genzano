@@ -681,8 +681,8 @@ documenti:
   verdict: PARZIALE
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
-  size_kb: 703.4
-  sha256: 8f8feae8211fb185b71f4f76854bfa27b65ea17ccb6387b0feeb6172d8fb8a18
+  size_kb: 703.6
+  sha256: d6c4dbd9edf32f6093ceebd552c80f343ef4469ab5014aeb850010f95f9e7e23
   searchable: true
   tagged: false
   language: it
@@ -690,7 +690,7 @@ documenti:
     per articolo, del Codice della protezione civile. — Manuale di Protezione Civile
   pages: 125
   errors: []
-  text_chars_sample: 3571
+  text_chars_sample: 3572
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
