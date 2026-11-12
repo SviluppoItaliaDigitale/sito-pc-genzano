@@ -1,7 +1,7 @@
 ---
 
 title: "Ondate di Calore"
-dataUltimaRevisione: "2026-10-09"
+dataUltimaRevisione: "2026-11-12"
 description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini e persone fragili."
 tts: true
 weight: 6
@@ -34,6 +34,35 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - Nei casi più gravi: perdita di conoscenza (colpo di calore)
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è utile per la sua scorta d'acqua (almeno 12 litri a persona) e i farmaci. In caso di blackout estivo prolungato — molto frequente quando i condizionatori sovraccaricano la rete — saper restare autonomi 3 giorni è cruciale soprattutto per anziani e persone con patologie croniche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
+
+I gesti per proteggersi dal caldo, in meno di un minuto.
+
+{{< video src="/video/2026-11-01-caldo-ondate-di-calore-video.mp4"
+          poster="/video/2026-11-01-caldo-ondate-di-calore-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: il caldo, come proteggersi"
+          caption="Come proteggersi nei giorni di caldo intenso. La versione orizzontale, per la proiezione a scuola, è in [Video per la classe](/formazione/video-per-la-classe/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Quando fa troppo caldo: come proteggersi dalle ondate di calore.
+
+Bevi acqua spesso, anche se non hai sete. Meglio fresca, non ghiacciata, a piccoli sorsi.
+
+Dalle 11 alle 18 resta al fresco o all'ombra e non fare sforzi.
+
+Indossa abiti leggeri e chiari, cappello e occhiali da sole. Fai pasti leggeri, con frutta e verdura.
+
+Non lasciare mai persone o animali in un'auto parcheggiata al sole.
+
+Insieme alla tua famiglia, chiedi come stanno i vicini anziani e chi vive da solo.
+
+Se qualcuno sta male per il caldo, avvisa un adulto e chiamate il 112. Intanto portatelo in un posto fresco.
+
+Acqua, ombra e fresco. In emergenza chiama il 112.
+
+</details>
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Consulta ogni giorno il **bollettino sulle ondate di calore** del [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore): puoi farlo anche dallo smartphone con l'app gratuita **Caldo e Salute** ([come funziona e dove scaricarla](/comunicazioni/2026-06-07-caldo-salute-app-bollettini/))

@@ -5,7 +5,7 @@ tts: true
 layout: "single"
 aliases:
   - /numeri-utili/
-dataUltimaRevisione: "2026-05-24"
+dataUltimaRevisione: "2026-11-12"
 ---
 
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
@@ -118,6 +118,33 @@ Prima di chiamare tieni pronte queste informazioni:
 3. **se ci sono feriti** o persone in pericolo;
 4. **se ci sono rischi aggiuntivi**, come fumo, gas, cavi elettrici, acqua alta o ostacoli sulla strada;
 5. **parla con calma** e non chiudere la chiamata finché l'operatore non te lo dice.
+
+Come si chiama il 112, spiegato in un video breve adatto anche ai bambini.
+
+{{< video src="/video/2026-11-01-112-numero-emergenza-video.mp4"
+          poster="/video/2026-11-01-112-numero-emergenza-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: il 112, come si chiama in emergenza"
+          caption="Quando chiamare il 112 e che cosa dire all'operatore. La versione orizzontale, per la proiezione a scuola, è in [Video per la classe](/formazione/video-per-la-classe/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Il 112 è il numero da chiamare in ogni emergenza.
+
+Chiamalo se qualcuno sta male, se vedi fuoco o fumo, se c'è un incidente o un pericolo serio.
+
+Al telefono di' chi sei, dove sei, che cosa è successo e se ci sono feriti.
+
+Parla con calma e rispondi alle domande. Non chiudere finché l'operatore non te lo dice.
+
+Se c'è un adulto vicino, avvisalo e chiamate insieme. Se sei da solo, chiama tu.
+
+Non chiamare mai per scherzo: occupi la linea di chi ha davvero bisogno di aiuto.
+
+Ricorda il numero: 112. Uno, uno, due.
+
+</details>
 
 ## In caso di emergenza
 

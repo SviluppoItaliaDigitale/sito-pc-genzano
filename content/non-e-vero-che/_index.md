@@ -3,7 +3,7 @@ title: "Non è vero che: le voci smentite durante un evento"
 description: "Durante un'allerta o un'emergenza a Genzano di Roma questa pagina raccoglie, con data e ora, le voci false che circolano e che cosa risulta davvero alle fonti ufficiali."
 layout: "single"
 date: 2026-10-13
-dataUltimaRevisione: "2026-10-13"
+dataUltimaRevisione: "2026-11-12"
 image: ""
 tts: true
 indice: false
@@ -24,6 +24,35 @@ Durante un'allerta o un'emergenza le notizie false corrono più veloci di quelle
 ## Hai visto una voce che non torna?
 
 Scrivici dalla pagina [Contatti](/contatti/) o segnalala ai volontari che incontri sul posto: indicando dove l'hai letta e a che ora, ci aiuti a verificarla prima. Se la voce riguarda un pericolo immediato, non aspettare la smentita: chiama il **112**.
+
+## Un video per riconoscere le notizie false
+
+In meno di un minuto, come distinguere una notizia vera da una falsa durante un'emergenza.
+
+{{< video src="/video/2026-11-01-notizie-false-emergenza-video.mp4"
+          poster="/video/2026-11-01-notizie-false-emergenza-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: notizie vere e notizie false in emergenza"
+          caption="Come riconoscere una notizia falsa in emergenza e dove trovare quelle ufficiali. La versione orizzontale, per la proiezione a scuola, è in [Video per la classe](/formazione/video-per-la-classe/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Notizie vere e notizie false: come riconoscerle in un'emergenza.
+
+In un'emergenza girano in fretta anche notizie false: messaggi inoltrati, foto vecchie, voci senza una fonte.
+
+Prima di crederci, fai tre controlli. Chi lo dice? È di oggi, e parla davvero del nostro paese? Lo confermano le fonti ufficiali?
+
+Le fonti ufficiali sono il Comune, la Protezione Civile, i messaggi di allarme sul cellulare e il sito del nostro Gruppo comunale.
+
+Se non sei sicuro, non inoltrare il messaggio. Una notizia falsa spaventa le persone e confonde chi deve aiutare.
+
+Se un messaggio ti fa paura, parlane con un adulto di fiducia, un genitore o un insegnante, e controllate insieme.
+
+Segui solo le fonti ufficiali. In emergenza chiama il 112.
+
+</details>
 
 ## Dove trovare le informazioni ufficiali
 

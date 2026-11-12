@@ -1,7 +1,7 @@
 ---
 
 title: "Blackout e Interruzione Servizi"
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-11-12"
 description: "Cosa fare in caso di interruzione dell'energia elettrica, dell'acqua o delle telecomunicazioni."
 tts: true
 weight: 7
@@ -25,6 +25,41 @@ A Genzano di Roma la rete di distribuzione attraversa aree boschive e collinari.
 {{< foto src="/images/blackout-luci-notturne-nasa.webp"
          alt="L'Italia e la Sicilia di notte viste dalla Stazione Spaziale Internazionale: le luci dorate delle città tracciano la forma della penisola e dell'isola sul buio del mare Tirreno e Adriatico, con una sottile fascia verde luminescente dell'atmosfera sullo sfondo."
          caption="L'Italia di notte vista dalla ISS a circa 385 km di quota, ottobre 2013. Le luci delle città illuminano la penisola e la Sicilia: un blackout su vasta scala renderebbe visibile dall'orbita l'assenza di queste luci. Foto: Michael Hopkins / NASA, [iss037e018864](https://images.nasa.gov/details/iss037e018864), pubblico dominio." >}}
+
+Che cosa succede quando si spegne un intero Paese, e come ci si prepara: lo raccontiamo in un video di due minuti.
+
+{{< video src="/video/2026-10-10-blackout-nazionale-video.mp4"
+          poster="/video/2026-10-10-blackout-nazionale-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: blackout nazionale, come si prepara un Paese a restare senza corrente"
+          caption="Dal blackout italiano del 2003 a quello di Spagna e Portogallo del 2025. Dati e fonti nell'articolo [Blackout nazionale: come si prepara un Paese a restare senza corrente](/comunicazioni/2026-10-10-blackout-nazionale-come-si-prepara-un-paese/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Blackout nazionale: come si prepara un Paese a restare senza corrente.
+
+28 settembre 2003, poco dopo le tre di notte. Una linea dalla Svizzera cede, poi le altre, a catena. Quasi tutta l'Italia resta al buio. Solo la Sardegna non è coinvolta.
+
+Per riaccendere il Paese serve una giornata. Il Nord torna prima delle 8, il Centro verso mezzogiorno, il resto della penisola alle 17. La Sicilia alle 21:40.
+
+28 aprile 2025, alle 12:33. In Spagna e Portogallo si spegne tutta la rete: treni e metropolitane fermi, semafori spenti, telefoni e pagamenti in difficoltà.
+
+Una rete elettrica sta in piedi se produzione e consumo restano in equilibrio, istante per istante. In Italia lo garantisce Terna. Il segnale è la frequenza: 50 hertz.
+
+Se la frequenza crolla, le protezioni automatiche staccano una parte dei consumi in una frazione di secondo. Qualche quartiere al buio, per non spegnere tutto il Paese.
+
+Se la carenza di energia si vede arrivare, scattano i distacchi programmati: turni di un'ora e mezza, a rotazione, al massimo tre al giorno.
+
+Dopo un blackout, la rete riparte da centrali capaci di accendersi da sole, spesso idroelettriche: una linea, poi un'area, fino a tutto il Paese. Questi piani sono obbligatori in tutta l'Unione europea.
+
+E tu? Tieni in casa una torcia con le pile di ricambio, una radio a pile, una power bank carica e una scorta d'acqua. Evita le candele: possono causare un incendio.
+
+Se c'è un pericolo reale, come persone bloccate in ascensore o un apparecchio salvavita senza corrente, chiama il 112.
+
+Prepararsi prima fa la differenza. In emergenza chiama il 112.
+
+</details>
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA — Preparati {#cosa-fare-prima}
 - Tieni sempre a portata di mano una **torcia elettrica** con pile di scorta.
