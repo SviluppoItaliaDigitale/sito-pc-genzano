@@ -86,10 +86,10 @@ const ANIM = {
   strada: (el, u, t, D) => {
     el.querySelector(".raggi").setAttribute("transform", `rotate(${(t * 25).toFixed(1)})`);
     const pa = outCubic(prog(u, .1, Math.max(1.4, D * .2)));
-    el.querySelector(".autoA").setAttribute("transform", `translate(${lerp(120, 318, pa).toFixed(1)} 322) scale(.95)`);
+    el.querySelector(".autoA").setAttribute("transform", `translate(${lerp(120, 318, pa).toFixed(1)} 308) scale(.8)`);
     el.querySelectorAll(".luce").forEach(l => l.setAttribute("opacity", pa >= 1 && (t % .9) < .45 ? 1 : 0));
     const tv = quando(6, "avvisa"), pb = outCubic(prog(u, tv - .2, Math.max(1.8, D * .28)));
-    el.querySelector(".autoB").setAttribute("transform", `translate(${lerp(-70, 62, pb).toFixed(1)} 326) scale(.85)`);
+    el.querySelector(".autoB").setAttribute("transform", `translate(${lerp(-70, 62, pb).toFixed(1)} 312) scale(.72)`);
     const su = prog(u, tv - .6, .4);
     anima(el, ".mamma", t, { x: 196, y: 404, s: .4, aS: su > 0 ? 150 : 14, aD: su > 0 ? 150 : 14, agitaS: su > 0, agitaD: su > 0 });
     anima(el, ".flavio", t, { x: 146, y: 408, s: .32, fase: 1.4, aS: 14, aD: 14 });

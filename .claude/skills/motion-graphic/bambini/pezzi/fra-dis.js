@@ -111,8 +111,8 @@ const ILL = {
   strada: () => `<svg ${S0}><rect width="600" height="510" fill="#d0ebff"/>${SOLE(52, 162, 26)}${NUVOLA(330, 118, .45)}
     <path d="M-10 300 V268 Q110 236 270 300Z" fill="#69db7c" ${O}/><path d="M240 300 Q430 250 610 96 V300Z" fill="#8ce99a" ${O}/>
     <path d="M604 130 Q560 190 536 250 L560 262 Q580 200 610 170Z" fill="${TERRA2}" stroke="${INK}" stroke-width="4"/>
-    <rect x="-10" y="296" width="620" height="86" fill="#868e96" ${O}/><path d="M0 339 H480" stroke="#fff" stroke-width="6" stroke-dasharray="34 26"/>
-    <path d="M-10 382 H610 V520 H-10Z" fill="#69db7c" ${O}/>
+    <rect x="-10" y="290" width="620" height="62" fill="#868e96" ${O}/><path d="M0 321 H480" stroke="#fff" stroke-width="5" stroke-dasharray="34 26"/>
+    <path d="M-10 352 H610 V520 H-10Z" fill="#69db7c" ${O}/>
     <g class="mucchio"><path d="M610 196 Q560 250 528 296 Q492 340 506 388 H610Z" fill="${TERRA}" ${O}/><circle cx="572" cy="300" r="9" fill="${TERRA2}"/><circle cx="548" cy="350" r="7" fill="${TERRA2}"/>
       <g transform="translate(520 372)">${SASSO("", 13)}</g><g transform="translate(556 330)">${SASSO("", 10, "#adb5bd")}</g><g transform="translate(486 380)">${SASSO("", 8)}</g></g>
     <g class="autoB"><g transform="translate(-50 -50)">${INTERNO("auto").replace("#ff8787", "#74c0fc")}</g></g>
