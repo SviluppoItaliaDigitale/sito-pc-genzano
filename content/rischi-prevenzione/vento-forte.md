@@ -1,7 +1,7 @@
 ---
 
 title: "Vento Forte"
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-11-12"
 description: "Cosa fare prima, durante e dopo episodi di vento forte e raffiche violente sul territorio di Genzano di Roma."
 tts: true
 weight: 4
@@ -17,6 +17,14 @@ Il vento forte colpisce spesso i Castelli Romani, soprattutto in autunno e in in
 {{< emergenza-ora >}}
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/vento-balcone-oggetti.svg" alt="Confronto tra balcone con oggetti riposti al sicuro e balcone con vaso trascinato da vento forte e rischio di caduta." caption="Prima dell'allerta metti al riparo o fissa i vasi, le sedie e gli oggetti leggeri. Durante il vento forte non esporti per recuperarli." >}}
+
+Che cosa fare prima, durante e dopo il vento forte: lo mostriamo in un video in 3D di poco più di un minuto.
+
+{{< video src="/video/2026-11-12-vento-forte-video-3d.mp4"
+          poster="/video/2026-11-12-vento-forte-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video in 3D con voce e sottotitoli: vento forte, che cosa fare"
+          caption="Vento forte: che cosa fare. Alberi, case, auto e oggetti sono schemi non in scala. Trascrizione, crediti e versione a disegni per i bambini nell'articolo [Vento forte: un video in 3D su che cosa fare prima, durante e dopo](/comunicazioni/2026-11-12-vento-forte-video-3d/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare durante le perturbazioni atlantiche. La presenza di alberature storiche lungo le strade comunali e nei parchi aumenta il rischio di caduta rami, soprattutto in caso di terreno inzuppato dalle piogge.
@@ -59,6 +67,7 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 
 - **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Allerte meteo](/allerte-meteo/) — avvisi per vento forte del Centro Funzionale Regione Lazio
+- [Vento forte: un video in 3D su che cosa fare prima, durante e dopo](/comunicazioni/2026-11-12-vento-forte-video-3d/) — con la versione a disegni per i bambini
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Numeri utili](/numeri-utili/)
 
 **Fonti istituzionali**

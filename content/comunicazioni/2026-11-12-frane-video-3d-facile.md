@@ -1,28 +1,28 @@
 ---
 title: "Frane: come metterti al sicuro"
-date: @@D@@T00:0@@T@@:00+01:00
-description: "Un video di 1 minuto e mezzo sulle frane. Spiega i segnali e che cosa fare."
+date: 2026-11-12T00:05:00+01:00
+description: "Un video di 1 minuto sulle frane. Spiega i segnali e che cosa fare."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/@@D@@-frane-video-3d.webp"
+image: "/images/2026-11-12-frane-video-3d.webp"
 image_alt: "Cover dell'articolo: Frane: un video in 3D per riconoscerle e mettersi al sicuro"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
 tts: true
-versione_facile_di: "@@D@@-frane-video-3d"
+versione_facile_di: "2026-11-12-frane-video-3d"
 build:
   list: never
   render: always
   publishResources: true
 ---
 
-Questo è un **video di 1 minuto e mezzo**. Parla delle frane. Una frana è terra, fango o roccia che scende da una collina. Il video ha una voce e le scritte. Lo capisci anche senza audio.
+Questo è un **video di 1 minuto**. Parla delle frane. Una frana è terra, fango o roccia che scende da una collina. Il video ha una voce e le scritte. Lo capisci anche senza audio.
 
-{{< video src="/video/@@D@@-frane-video-3d.mp4"
-          poster="/video/@@D@@-frane-video-3d-poster.webp"
+{{< video src="/video/2026-11-12-frane-video-3d.mp4"
+          poster="/video/2026-11-12-frane-video-3d-poster.webp"
           verticale="true"
           titolo="Video con voce e scritte: le frane, riconoscerle e mettersi al sicuro"
           caption="Le frane: riconoscerle e mettersi al sicuro. Le scene sono disegni al computer, non riprese vere. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -53,4 +53,4 @@ Se vedi questi segnali, avvisa il Comune.
 - Avvisa le altre persone.
 - Chiama il **112**.
 
-[Leggi l'articolo completo](/comunicazioni/@@D@@-frane-video-3d/).
+[Leggi l'articolo completo](/comunicazioni/2026-11-12-frane-video-3d/).

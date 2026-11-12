@@ -1,20 +1,20 @@
 ---
 title: "Frane: un video in 3D per riconoscerle e mettersi al sicuro"
-date: @@D@@T00:0@@T@@:00+01:00
-description: "Un video di un minuto e mezzo, con voce e sottotitoli, mostra i segnali che annunciano una frana e che cosa fare se la terra si muove."
+date: 2026-11-12T00:05:00+01:00
+description: "Un video di poco più di un minuto, con voce e sottotitoli, mostra i segnali che annunciano una frana e che cosa fare se la terra si muove."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/@@D@@-frane-video-3d.webp"
+image: "/images/2026-11-12-frane-video-3d.webp"
 image_alt: "Cover dell'articolo: Frane: un video in 3D per riconoscerle e mettersi al sicuro"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
-versione_facile: "@@D@@-frane-video-3d-facile"
+versione_facile: "2026-11-12-frane-video-3d-facile"
 tts: true
 lis_section: "allerte-meteo"
-social_video: "/video/@@D@@-frane-video-3d.mp4"
+social_video: "/video/2026-11-12-frane-video-3d.mp4"
 social_crediti: "Musica: «On My Way» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (coqui.ai/cpml)."
 social_citazione: "Nessun muro e nessuna casa possono fermare una frana. Se la terra si muove, allontanati subito."
 social_punti:
@@ -24,12 +24,12 @@ social_punti:
   - "Frana sulla strada: fermati lontano, avvisa chi arriva e chiama il 112."
 ---
 
-Una frana è terra, fango o roccia che scivola lungo un pendio. Lo spieghiamo in un **video in 3D di un minuto e mezzo**, ambientato sul rilievo dei Castelli Romani. Mostra i segnali da riconoscere e che cosa fare se la terra si muove.
+Una frana è terra, fango o roccia che scivola lungo un pendio. Lo spieghiamo in un **video in 3D di poco più di un minuto**, ambientato sul rilievo dei Castelli Romani. Mostra i segnali da riconoscere e che cosa fare se la terra si muove.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
-{{< video src="/video/@@D@@-frane-video-3d.mp4"
-          poster="/video/@@D@@-frane-video-3d-poster.webp"
+{{< video src="/video/2026-11-12-frane-video-3d.mp4"
+          poster="/video/2026-11-12-frane-video-3d-poster.webp"
           verticale="true"
           titolo="Video in 3D con voce e sottotitoli: le frane, riconoscerle e mettersi al sicuro"
           caption="Le frane: riconoscerle e mettersi al sicuro. Il rilievo dei Castelli Romani è ricostruito dai dati altimetrici, con le altezze raddoppiate; la frana, le case e gli oggetti sono schemi non in scala e non indicano luoghi a rischio. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -83,8 +83,8 @@ Se trovi una frana sulla strada, fermati lontano, avvisa chi sta arrivando e chi
 
 Dello stesso video c'è una versione a disegni, pensata per i bambini e per la classe, con le stesse parole.
 
-{{< video src="/video/@@D@@-frane-video.mp4"
-          poster="/video/@@D@@-frane-video-poster.webp"
+{{< video src="/video/2026-11-12-frane-video.mp4"
+          poster="/video/2026-11-12-frane-video-poster.webp"
           verticale="true"
           titolo="Video a disegni con voce e sottotitoli: le frane, riconoscerle e mettersi al sicuro"
           caption="La versione a disegni per i bambini. Il testo è lo stesso del video in 3D, trascritto sopra. La versione orizzontale, da proiettare a scuola, è in [Video per la classe](/formazione/video-per-la-classe/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}

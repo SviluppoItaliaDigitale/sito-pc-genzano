@@ -1,20 +1,20 @@
 ---
 title: "Vento forte: un video in 3D su che cosa fare prima, durante e dopo"
-date: @@D@@T00:0@@T@@:00+01:00
-description: "Un video di un minuto e mezzo, con voce e sottotitoli, mostra che cosa fare quando è previsto vento forte: in casa, a piedi, in auto e dopo le raffiche."
+date: 2026-11-12T00:04:00+01:00
+description: "Un video di poco più di un minuto, con voce e sottotitoli, mostra che cosa fare quando è previsto vento forte: in casa, a piedi, in auto e dopo le raffiche."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/@@D@@-vento-forte-video-3d.webp"
+image: "/images/2026-11-12-vento-forte-video-3d.webp"
 image_alt: "Cover dell'articolo: Vento forte: un video in 3D su che cosa fare prima, durante e dopo"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
-versione_facile: "@@D@@-vento-forte-video-3d-facile"
+versione_facile: "2026-11-12-vento-forte-video-3d-facile"
 tts: true
 lis_section: "allerte-meteo"
-social_video: "/video/@@D@@-vento-forte-video-3d.mp4"
+social_video: "/video/2026-11-12-vento-forte-video-3d.mp4"
 social_crediti: "Musica: «Easy Lemon» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (coqui.ai/cpml)."
 social_citazione: "Se sei fuori, evita i parchi e le strade alberate: i rami che si spezzano sono il pericolo più frequente."
 social_punti:
@@ -24,12 +24,12 @@ social_punti:
   - "Dopo: non toccare i cavi caduti a terra. Per un albero o un cavo sulla strada chiama il 112."
 ---
 
-Le raffiche di vento possono spezzare i rami e far cadere tegole e vasi. Lo spieghiamo in un **video in 3D di un minuto e mezzo**, ambientato sul rilievo dei Castelli Romani. Dice che cosa fare prima, durante e dopo.
+Le raffiche di vento possono spezzare i rami e far cadere tegole e vasi. Lo spieghiamo in un **video in 3D di poco più di un minuto**, ambientato sul rilievo dei Castelli Romani. Dice che cosa fare prima, durante e dopo.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
-{{< video src="/video/@@D@@-vento-forte-video-3d.mp4"
-          poster="/video/@@D@@-vento-forte-video-3d-poster.webp"
+{{< video src="/video/2026-11-12-vento-forte-video-3d.mp4"
+          poster="/video/2026-11-12-vento-forte-video-3d-poster.webp"
           verticale="true"
           titolo="Video in 3D con voce e sottotitoli: vento forte, che cosa fare"
           caption="Vento forte: che cosa fare. Il rilievo dei Castelli Romani è ricostruito dai dati altimetrici, con le altezze raddoppiate; alberi, case, auto e oggetti sono schemi non in scala. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -81,8 +81,8 @@ Non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chia
 
 Dello stesso video c'è una versione a disegni, pensata per i bambini e per la classe, con le stesse parole.
 
-{{< video src="/video/@@D@@-vento-forte-video.mp4"
-          poster="/video/@@D@@-vento-forte-video-poster.webp"
+{{< video src="/video/2026-11-12-vento-forte-video.mp4"
+          poster="/video/2026-11-12-vento-forte-video-poster.webp"
           verticale="true"
           titolo="Video a disegni con voce e sottotitoli: vento forte, che cosa fare"
           caption="La versione a disegni per i bambini. Il testo è lo stesso del video in 3D, trascritto sopra. La versione orizzontale, da proiettare a scuola, è in [Video per la classe](/formazione/video-per-la-classe/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}

@@ -1,7 +1,7 @@
 ---
 
 title: "Rischio Idrogeologico"
-dataUltimaRevisione: "2026-10-24"
+dataUltimaRevisione: "2026-11-12"
 description: "Le norme di comportamento da adottare in caso di alluvioni, frane e temporali intensi sul territorio di Genzano di Roma."
 tts: true
 lis_section: "rischio-idrogeologico"
@@ -117,6 +117,14 @@ In emergenza chiama il numero 112, e segui solo le fonti ufficiali.
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/pioggia-prato-asfalto.svg" alt="Due sezioni a confronto: sotto il prato parte dell'acqua piovana filtra nel terreno; sulla strada impermeabile si accumula e scorre verso uno scarico." caption="L'impermeabilizzazione del suolo può aumentare il deflusso superficiale. È uno dei fattori da considerare per capire gli allagamenti urbani." >}}
 
+Come riconoscere i segnali di una frana e che cosa fare se la terra si muove: lo mostriamo in un video in 3D di poco più di un minuto.
+
+{{< video src="/video/2026-11-12-frane-video-3d.mp4"
+          poster="/video/2026-11-12-frane-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video in 3D con voce e sottotitoli: le frane, riconoscerle e mettersi al sicuro"
+          caption="Le frane: riconoscerle e mettersi al sicuro. Il rilievo è ricostruito dai dati altimetrici, con le altezze raddoppiate; la frana, le case e gli oggetti sono schemi non in scala e non indicano luoghi a rischio. Trascrizione, crediti e versione a disegni per i bambini nell'articolo [Frane: un video in 3D per riconoscerle e mettersi al sicuro](/comunicazioni/2026-11-12-frane-video-3d/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 - Piogge intense e prolungate per diverse ore
 - Innalzamento rapido del livello dell'acqua nei fossi e nei canali
@@ -181,6 +189,7 @@ In emergenza chiama il numero 112, e segui solo le fonti ufficiali.
 - [Allerte meteo](/allerte-meteo/) — bollettini e codici colore del Centro Funzionale Regione Lazio
 - [Cartografia del territorio](/cartografia/) — aree e zone di allerta
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Piano di emergenza comunale](/piano-emergenza/)
+- [Frane: un video in 3D per riconoscerle e mettersi al sicuro](/comunicazioni/2026-11-12-frane-video-3d/) — i segnali e che cosa fare, con la versione a disegni per i bambini
 - [Pioggia forte e alluvioni: un video in 3D sui Castelli Romani](/comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d/) — perché da noi l'acqua scende veloce, quattro idee sbagliate e che cosa fare
 - [Scheda alluvione con i simboli (CAA, PDF)](/manuali/schede-caa/scheda-caa-alluvione.pdf) — cosa fare in caso di alluvione in Comunicazione Aumentativa Alternativa (DPC · Abili a Proteggere)
 

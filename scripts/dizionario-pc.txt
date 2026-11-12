@@ -2117,3 +2117,5 @@ contributors
 # --- Cartina meteo Italia 10/11/2026: termine tecnico meteorologico corretto, assente dal dizionario ---
 meteogramma
 var
+coqui
+cpml
