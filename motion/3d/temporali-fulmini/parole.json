@@ -5,7 +5,6 @@
   "durata": 7.458,
   "testo": "Temporali e fulmini: come stare al sicuro. Un temporale si forma in fretta e lascia poco tempo per ripararsi.",
   "sentito": "Temporali e fulmini. Come stare al sicuro? Un temporale si forma in fretta e lascia poco tempo per ripararsi.",
-  "uno_a_uno": true,
   "parole": [
    {
     "w": "Temporali",
@@ -109,127 +108,126 @@
   "file": "line_1.wav",
   "durata": 7.741,
   "testo": "Prima di una gita o di una partita all'aperto, guarda le previsioni e l'allerta del giorno. Se il cielo si fa scuro, cambia programma.",
-  "sentito": "Prima di una gita o di una partita all'aperto, guarda le previsioni e l'allerta del giorno. Se il cielo si fa scuro, cambia programma.",
-  "uno_a_uno": false,
+  "sentito": "Prima di una gita o di una partita all 'aperto, guarda le previsioni e l 'allerta del giorno. Se il cielo si fa scuro, cambia programma.",
   "parole": [
    {
     "w": "Prima",
     "t0": 0.0,
-    "t1": 0.339
+    "t1": 0.28
    },
    {
     "w": "di",
-    "t0": 0.339,
-    "t1": 0.508
+    "t0": 0.28,
+    "t1": 0.4
    },
    {
     "w": "una",
-    "t0": 0.508,
-    "t1": 0.734
+    "t0": 0.4,
+    "t1": 0.54
    },
    {
     "w": "gita",
-    "t0": 0.734,
-    "t1": 1.016
+    "t0": 0.54,
+    "t1": 0.96
    },
    {
     "w": "o",
-    "t0": 1.016,
-    "t1": 1.129
+    "t0": 0.96,
+    "t1": 1.1
    },
    {
     "w": "di",
-    "t0": 1.129,
-    "t1": 1.298
+    "t0": 1.1,
+    "t1": 1.2
    },
    {
     "w": "una",
-    "t0": 1.298,
-    "t1": 1.524
+    "t0": 1.2,
+    "t1": 1.32
    },
    {
     "w": "partita",
-    "t0": 1.524,
-    "t1": 1.976
+    "t0": 1.32,
+    "t1": 1.74
    },
    {
     "w": "all'aperto,",
-    "t0": 1.976,
-    "t1": 2.653
+    "t0": 1.74,
+    "t1": 2.32
    },
    {
     "w": "guarda",
-    "t0": 2.653,
-    "t1": 3.048
+    "t0": 2.5,
+    "t1": 2.92
    },
    {
     "w": "le",
-    "t0": 3.048,
-    "t1": 3.217
+    "t0": 2.92,
+    "t1": 3.0
    },
    {
     "w": "previsioni",
-    "t0": 3.217,
-    "t1": 3.838
+    "t0": 3.0,
+    "t1": 3.68
    },
    {
     "w": "e",
-    "t0": 3.838,
-    "t1": 3.951
+    "t0": 3.68,
+    "t1": 3.8
    },
    {
     "w": "l'allerta",
-    "t0": 3.951,
-    "t1": 4.516
+    "t0": 3.8,
+    "t1": 4.2
    },
    {
     "w": "del",
-    "t0": 4.516,
-    "t1": 4.741
+    "t0": 4.2,
+    "t1": 4.44
    },
    {
     "w": "giorno.",
-    "t0": 4.741,
-    "t1": 5.193
+    "t0": 4.44,
+    "t1": 4.8
    },
    {
     "w": "Se",
-    "t0": 5.193,
-    "t1": 5.362
+    "t0": 5.2,
+    "t1": 5.42
    },
    {
     "w": "il",
-    "t0": 5.362,
-    "t1": 5.532
+    "t0": 5.42,
+    "t1": 5.54
    },
    {
     "w": "cielo",
-    "t0": 5.532,
-    "t1": 5.87
+    "t0": 5.54,
+    "t1": 5.74
    },
    {
     "w": "si",
-    "t0": 5.87,
-    "t1": 6.04
+    "t0": 5.74,
+    "t1": 5.92
    },
    {
     "w": "fa",
-    "t0": 6.04,
-    "t1": 6.209
+    "t0": 5.92,
+    "t1": 6.08
    },
    {
     "w": "scuro,",
-    "t0": 6.209,
-    "t1": 6.604
+    "t0": 6.08,
+    "t1": 6.46
    },
    {
     "w": "cambia",
-    "t0": 6.604,
-    "t1": 6.999
+    "t0": 6.7,
+    "t1": 7.06
    },
    {
     "w": "programma.",
-    "t0": 6.999,
+    "t0": 7.06,
     "t1": 7.62
    }
   ]
@@ -240,7 +238,6 @@
   "durata": 7.942,
   "testo": "Se senti il tuono, anche lontano, il temporale è a pochi chilometri: sei già in pericolo. Raggiungi subito un luogo chiuso.",
   "sentito": "Se senti il tuono, anche lontano, il temporale è a pochi chilometri, sei già in pericolo. Raggiungi subito un luogo chiuso.",
-  "uno_a_uno": true,
   "parole": [
    {
     "w": "Se",
@@ -354,122 +351,121 @@
   "file": "line_3.wav",
   "durata": 9.836,
   "testo": "Il riparo giusto è un edificio. Se non c'è, va bene l'automobile, con porte e finestrini chiusi. Tettoie, gazebo e balconi non riparano.",
-  "sentito": "Il riparo giusto è un edificio. Se non c'è, va bene l'automobile, con porte e finestrini chiusi. Tettoie, gazebo e balconi non riparano.",
-  "uno_a_uno": false,
+  "sentito": "Il riparo giusto è un edificio. Se non c 'è, va bene l 'automobile, con porte e finestrini chiusi. Tettoie, gazebo e balconi non riparano.",
   "parole": [
    {
     "w": "Il",
     "t0": 0.0,
-    "t1": 0.21
+    "t1": 0.16
    },
    {
     "w": "riparo",
-    "t0": 0.21,
-    "t1": 0.701
+    "t0": 0.16,
+    "t1": 0.52
    },
    {
     "w": "giusto",
-    "t0": 0.701,
-    "t1": 1.191
+    "t0": 0.52,
+    "t1": 1.02
    },
    {
     "w": "è",
-    "t0": 1.191,
-    "t1": 1.331
+    "t0": 1.02,
+    "t1": 1.22
    },
    {
     "w": "un",
-    "t0": 1.331,
-    "t1": 1.542
+    "t0": 1.22,
+    "t1": 1.34
    },
    {
     "w": "edificio.",
-    "t0": 1.542,
-    "t1": 2.242
+    "t0": 1.34,
+    "t1": 1.92
    },
    {
     "w": "Se",
-    "t0": 2.242,
-    "t1": 2.453
+    "t0": 2.38,
+    "t1": 2.46
    },
    {
     "w": "non",
-    "t0": 2.453,
-    "t1": 2.733
+    "t0": 2.46,
+    "t1": 2.62
    },
    {
     "w": "c'è,",
-    "t0": 2.733,
-    "t1": 3.083
+    "t0": 2.62,
+    "t1": 3.06
    },
    {
     "w": "va",
-    "t0": 3.083,
-    "t1": 3.293
+    "t0": 3.2,
+    "t1": 3.3
    },
    {
     "w": "bene",
-    "t0": 3.293,
-    "t1": 3.644
+    "t0": 3.3,
+    "t1": 3.48
    },
    {
     "w": "l'automobile,",
-    "t0": 3.644,
-    "t1": 4.625
+    "t0": 3.48,
+    "t1": 4.14
    },
    {
     "w": "con",
-    "t0": 4.625,
-    "t1": 4.905
+    "t0": 4.4,
+    "t1": 4.58
    },
    {
     "w": "porte",
-    "t0": 4.905,
-    "t1": 5.326
+    "t0": 4.58,
+    "t1": 4.98
    },
    {
     "w": "e",
-    "t0": 5.326,
-    "t1": 5.466
+    "t0": 4.98,
+    "t1": 5.28
    },
    {
     "w": "finestrini",
-    "t0": 5.466,
-    "t1": 6.236
+    "t0": 5.28,
+    "t1": 5.82
    },
    {
     "w": "chiusi.",
-    "t0": 6.236,
-    "t1": 6.797
+    "t0": 5.82,
+    "t1": 6.3
    },
    {
     "w": "Tettoie,",
-    "t0": 6.797,
-    "t1": 7.428
+    "t0": 6.78,
+    "t1": 7.34
    },
    {
     "w": "gazebo",
-    "t0": 7.428,
-    "t1": 7.918
+    "t0": 7.5,
+    "t1": 8.02
    },
    {
     "w": "e",
-    "t0": 7.918,
-    "t1": 8.058
+    "t0": 8.02,
+    "t1": 8.1
    },
    {
     "w": "balconi",
-    "t0": 8.058,
-    "t1": 8.619
+    "t0": 8.1,
+    "t1": 8.72
    },
    {
     "w": "non",
-    "t0": 8.619,
-    "t1": 8.899
+    "t0": 8.72,
+    "t1": 9.0
    },
    {
     "w": "riparano.",
-    "t0": 8.899,
+    "t0": 9.0,
     "t1": 9.6
    }
   ]
@@ -479,122 +475,121 @@
   "file": "line_4.wav",
   "durata": 9.819,
   "testo": "Non ripararti sotto un albero: i fulmini colpiscono le cose alte e appuntite. Stai lontano da pali, tralicci, recinzioni di metallo e dall'acqua.",
-  "sentito": "Non ripararti sotto un albero. I fulmini colpiscono le cose alte e appuntite. Stai lontano da pali, tra lici, recensioni di metallo e dall'acqua.",
-  "uno_a_uno": false,
+  "sentito": "Non ripararti sotto un albero. I fulmini colpiscono le cose alte e appuntite. Stai lontano da pali, tra lici, recensioni di metallo e dall 'acqua.",
   "parole": [
    {
     "w": "Non",
     "t0": 0.0,
-    "t1": 0.266
+    "t1": 0.22
    },
    {
     "w": "ripararti",
-    "t0": 0.266,
-    "t1": 0.93
+    "t0": 0.22,
+    "t1": 0.84
    },
    {
     "w": "sotto",
-    "t0": 0.93,
-    "t1": 1.329
+    "t0": 0.84,
+    "t1": 1.08
    },
    {
     "w": "un",
-    "t0": 1.329,
-    "t1": 1.528
+    "t0": 1.08,
+    "t1": 1.34
    },
    {
     "w": "albero:",
-    "t0": 1.528,
-    "t1": 2.06
+    "t0": 1.34,
+    "t1": 1.7
    },
    {
     "w": "i",
-    "t0": 2.06,
-    "t1": 2.192
+    "t0": 2.2,
+    "t1": 2.28
    },
    {
     "w": "fulmini",
-    "t0": 2.192,
-    "t1": 2.724
+    "t0": 2.28,
+    "t1": 2.76
    },
    {
     "w": "colpiscono",
-    "t0": 2.724,
-    "t1": 3.455
+    "t0": 2.76,
+    "t1": 3.36
    },
    {
     "w": "le",
-    "t0": 3.455,
-    "t1": 3.654
+    "t0": 3.36,
+    "t1": 3.5
    },
    {
     "w": "cose",
-    "t0": 3.654,
-    "t1": 3.986
+    "t0": 3.5,
+    "t1": 3.72
    },
    {
     "w": "alte",
-    "t0": 3.986,
-    "t1": 4.318
+    "t0": 3.72,
+    "t1": 4.14
    },
    {
     "w": "e",
-    "t0": 4.318,
-    "t1": 4.451
+    "t0": 4.14,
+    "t1": 4.4
    },
    {
     "w": "appuntite.",
-    "t0": 4.451,
-    "t1": 5.182
+    "t0": 4.4,
+    "t1": 5.02
    },
    {
     "w": "Stai",
-    "t0": 5.182,
-    "t1": 5.514
+    "t0": 5.44,
+    "t1": 5.74
    },
    {
     "w": "lontano",
-    "t0": 5.514,
-    "t1": 6.046
+    "t0": 5.74,
+    "t1": 6.14
    },
    {
     "w": "da",
-    "t0": 6.046,
-    "t1": 6.245
+    "t0": 6.14,
+    "t1": 6.28
    },
    {
     "w": "pali,",
-    "t0": 6.245,
-    "t1": 6.644
+    "t0": 6.28,
+    "t1": 6.76
    },
    {
     "w": "tralicci,",
-    "t0": 6.644,
-    "t1": 7.308
+    "t0": 6.88,
+    "t1": 7.547
    },
    {
     "w": "recinzioni",
-    "t0": 7.308,
-    "t1": 8.039
+    "t0": 7.547,
+    "t1": 8.28
    },
    {
     "w": "di",
-    "t0": 8.039,
-    "t1": 8.238
+    "t0": 8.28,
+    "t1": 8.36
    },
    {
     "w": "metallo",
-    "t0": 8.238,
-    "t1": 8.77
+    "t0": 8.36,
+    "t1": 8.98
    },
    {
     "w": "e",
-    "t0": 8.77,
-    "t1": 8.903
+    "t0": 8.98,
+    "t1": 9.1
    },
    {
     "w": "dall'acqua.",
-    "t0": 8.903,
+    "t0": 9.1,
     "t1": 9.7
    }
   ]
@@ -605,7 +600,6 @@
   "durata": 10.206,
   "testo": "In casa chiudi le finestre e stacca le spine di televisore e computer. Non usare il telefono fisso: il cellulare sì. Doccia e piatti, dopo il temporale.",
   "sentito": "In casa chiudi le finestre e stacca le spine di televisore e computer, non usare il telefono fisso. Il cellulare sì, doccia e piatti dopo il temporale.",
-  "uno_a_uno": true,
   "parole": [
    {
     "w": "In",
@@ -749,82 +743,81 @@
   "file": "line_6.wav",
   "durata": 6.337,
   "testo": "Aspetta 30 minuti dopo l'ultimo tuono, prima di tornare fuori. In emergenza chiama il 112.",
-  "sentito": "Aspetta 30 minuti dopo l'ultimo tuono, prima di tornare fuori. In emergenza chiama il 112.",
-  "uno_a_uno": false,
+  "sentito": "Aspetta 30 minuti dopo l 'ultimo tuono, prima di tornare fuori. In emergenza chiama il 112.",
   "parole": [
    {
     "w": "Aspetta",
     "t0": 0.0,
-    "t1": 0.45
+    "t1": 0.5
    },
    {
     "w": "30",
-    "t0": 0.45,
-    "t1": 0.845
+    "t0": 0.5,
+    "t1": 0.76
    },
    {
     "w": "minuti",
-    "t0": 0.845,
-    "t1": 1.239
+    "t0": 0.76,
+    "t1": 1.34
    },
    {
     "w": "dopo",
-    "t0": 1.239,
-    "t1": 1.52
+    "t0": 1.34,
+    "t1": 1.5
    },
    {
     "w": "l'ultimo",
-    "t0": 1.52,
-    "t1": 2.027
+    "t0": 1.5,
+    "t1": 1.94
    },
    {
     "w": "tuono,",
-    "t0": 2.027,
-    "t1": 2.421
+    "t0": 1.94,
+    "t1": 2.36
    },
    {
     "w": "prima",
-    "t0": 2.421,
-    "t1": 2.759
+    "t0": 2.52,
+    "t1": 2.76
    },
    {
     "w": "di",
-    "t0": 2.759,
-    "t1": 2.928
+    "t0": 2.76,
+    "t1": 2.92
    },
    {
     "w": "tornare",
-    "t0": 2.928,
-    "t1": 3.379
+    "t0": 2.92,
+    "t1": 3.3
    },
    {
     "w": "fuori.",
-    "t0": 3.379,
-    "t1": 3.773
+    "t0": 3.3,
+    "t1": 3.68
    },
    {
     "w": "In",
-    "t0": 3.773,
-    "t1": 3.942
+    "t0": 4.06,
+    "t1": 4.24
    },
    {
     "w": "emergenza",
-    "t0": 3.942,
-    "t1": 4.505
+    "t0": 4.24,
+    "t1": 4.9
    },
    {
     "w": "chiama",
-    "t0": 4.505,
-    "t1": 4.899
+    "t0": 4.9,
+    "t1": 5.32
    },
    {
     "w": "il",
-    "t0": 4.899,
-    "t1": 5.068
+    "t0": 5.32,
+    "t1": 5.44
    },
    {
     "w": "112.",
-    "t0": 5.068,
+    "t0": 5.44,
     "t1": 5.8
    }
   ]

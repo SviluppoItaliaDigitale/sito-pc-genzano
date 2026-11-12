@@ -1,0 +1,10 @@
+# si committano solo sorgente, testi e tempi; audio, provini e uscite si rigenerano
+audio/
+riprese*/
+voce/*.wav
+dist/
+out/
+provini*/
+generazioni.txt
+fotogrammi*/
+*.log
