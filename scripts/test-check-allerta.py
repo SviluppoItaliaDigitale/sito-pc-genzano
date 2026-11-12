@@ -492,5 +492,25 @@ class PreAllertaConLivelliDiversi(unittest.TestCase):
                          ["rischio idrogeologico", "rischio idraulico (gialla)"])
 
 
+    def test_pubblicato_con_testo_vecchio_si_riscrive(self):
+        """Stesso livello, rischi scritti senza livello: la barra va riscritta."""
+        prendi, _ = fonte_finta()
+        domani = riga_csv("2026-11-12T00:00:00+01:00", "2026-11-12T23:59:59+01:00",
+                          "2026-11-11T12:00:00+01:00",
+                          "Moderata per rischio idrogeologico / ALLERTA ARANCIONE",
+                          "Moderata / ALLERTA ARANCIONE")
+        domani["avviso_idraulico"] = "Ordinaria / ALLERTA GIALLA"
+        vecchio = {"livello": "arancione", "titolo": "Previsto arancione",
+                   "rischi": ["rischio idrogeologico", "rischio idraulico"], "data": "2026-11-12"}
+        with ambiente(domani=vecchio, ultimo_controllo="2026-11-11T18:28:00+01:00") as (tmp, allerta):
+            gira_main(ora(2026, 11, 11, 18, 30),
+                      timbro_dpc=lambda: ("20261111_1540", "fonte ufficiale", []),
+                      http_get_json=prendi, fetch_csv=mirror_vietato,
+                      fallback_pdf_regione_lazio=lambda now: {"domani": domani})
+            dati = json.loads(allerta.read_text(encoding="utf-8"))
+        self.assertEqual(dati["domani"]["rischi"],
+                         ["rischio idrogeologico", "rischio idraulico (gialla)"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
