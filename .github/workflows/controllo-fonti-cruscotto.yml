@@ -33,7 +33,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Ping delle fonti e controllo dell'età dei dati
         id: ping
@@ -53,10 +53,11 @@ jobs:
       - name: Apri/aggiorna issue se una fonte è giù o un dato è fermo
         if: steps.ping.outputs.fails != '0'
         env:
+          S_PING_FAILS: ${{ steps.ping.outputs.fails }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          TITLE="Cruscotto: ${{ steps.ping.outputs.fails }} fonte/i dati da verificare"
+          TITLE="Cruscotto: ${S_PING_FAILS} fonte/i dati da verificare"
           FIRMA=$(grep -o 'firma-guasti:[^>]*' /tmp/fonti-report.md | tail -1 || true)
           {
             echo ""
@@ -103,6 +104,8 @@ jobs:
         # ignorano): la issue sopra non basta, il run deve essere rosso perché
         # lo veda anche il controllo di salute giornaliero.
         if: steps.ping.outputs.fails != '0'
+        env:
+          S_PING_FAILS: ${{ steps.ping.outputs.fails }}
         run: |
-          echo "::error::${{ steps.ping.outputs.fails }} fonte/i o dati da verificare (issue «Cruscotto» aperta o aggiornata)."
+          echo "::error::${S_PING_FAILS} fonte/i o dati da verificare (issue «Cruscotto» aperta o aggiornata)."
           exit 1

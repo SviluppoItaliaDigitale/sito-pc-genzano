@@ -85,7 +85,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 2
 
@@ -96,21 +96,24 @@ jobs:
         run: git pull --ff-only origin main || echo "::warning::Allineamento a main non riuscito, proseguo dal commit dell'evento."
 
       - name: "🐍 Setup Python"
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: "3.x"
 
       - name: "📝 Articoli da processare"
         id: lista
         env:
+          IN_ARTICOLO: ${{ github.event.inputs.articolo }}
+          IN_RECUPERO: ${{ github.event.inputs.recupero }}
+          EV_BEFORE: ${{ github.event.before }}
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ -n "${{ github.event.inputs.articolo }}" ]; then
+          if [ -n "${IN_ARTICOLO}" ]; then
             echo "modalita=singolo" >> "$GITHUB_OUTPUT"
-            echo "articolo=${{ github.event.inputs.articolo }}" >> "$GITHUB_OUTPUT"
+            echo "articolo=${IN_ARTICOLO}" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.recupero }}" != "true" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${IN_RECUPERO}" != "true" ]; then
             echo "modalita=batch" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -125,7 +128,7 @@ jobs:
           CHANGED=""
           if [ "${{ github.event_name }}" = "push" ]; then
             CHANGED=$(git diff --name-only --diff-filter=A \
-              "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null \
+              "${EV_BEFORE}" "${{ github.sha }}" 2>/dev/null \
               | grep -E '^content/comunicazioni/[0-9].+\.md$' || true)
           fi
 
@@ -155,6 +158,10 @@ jobs:
       - name: "🤖 Genera i testi (Gemini)"
         if: steps.lista.outputs.modalita != 'nessuno'
         env:
+          IN_FORCE: ${{ github.event.inputs.force }}
+          S_LISTA_MODALITA: ${{ steps.lista.outputs.modalita }}
+          S_LISTA_ARTICOLO: ${{ steps.lista.outputs.articolo }}
+          S_LISTA_FILES: ${{ steps.lista.outputs.files }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           if [ -z "$GEMINI_API_KEY" ]; then
@@ -162,13 +169,13 @@ jobs:
           fi
 
           FORCE=""
-          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+          if [ "${IN_FORCE}" = "true" ]; then
             FORCE="--force"
           fi
 
-          case "${{ steps.lista.outputs.modalita }}" in
+          case "${S_LISTA_MODALITA}" in
             singolo)
-              python3 scripts/genera-social.py $FORCE "${{ steps.lista.outputs.articolo }}"
+              python3 scripts/genera-social.py $FORCE "${S_LISTA_ARTICOLO}"
               ;;
             batch)
               python3 scripts/genera-social.py --all $FORCE
@@ -182,16 +189,21 @@ jobs:
                 RISERVA=""
                 [ "$riserva" = "1" ] && RISERVA="--riserva"
                 python3 scripts/genera-social.py $FORCE $RISERVA "$f" || echo "  (errore non fatale, continuo)"
-              done <<< "${{ steps.lista.outputs.files }}"
+              done <<< "${S_LISTA_FILES}"
               ;;
           esac
 
       - name: "🖼️ Genera le immagini (Pillow)"
         id: immagini
         if: steps.lista.outputs.modalita != 'nessuno'
+        env:
+          IN_FORCE: ${{ github.event.inputs.force }}
+          S_LISTA_MODALITA: ${{ steps.lista.outputs.modalita }}
+          S_LISTA_ARTICOLO: ${{ steps.lista.outputs.articolo }}
+          S_LISTA_FILES: ${{ steps.lista.outputs.files }}
         run: |
           FORCE=""
-          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+          if [ "${IN_FORCE}" = "true" ]; then
             FORCE="--force"
           fi
 
@@ -202,9 +214,9 @@ jobs:
           # Gli altri articoli vanno avanti e vengono committati; il giro finisce
           # in rosso nell'ultimo passo, così il guasto non resta silenzioso.
           FALLITI=0
-          case "${{ steps.lista.outputs.modalita }}" in
+          case "${S_LISTA_MODALITA}" in
             singolo)
-              python3 scripts/genera-immagini-social.py $FORCE "${{ steps.lista.outputs.articolo }}" || FALLITI=1
+              python3 scripts/genera-immagini-social.py $FORCE "${S_LISTA_ARTICOLO}" || FALLITI=1
               ;;
             batch)
               python3 scripts/genera-immagini-social.py --all $FORCE || FALLITI=1
@@ -213,7 +225,7 @@ jobs:
               while IFS=$'\t' read -r f _riserva; do
                 [ -z "$f" ] && continue
                 python3 scripts/genera-immagini-social.py $FORCE "$f" || FALLITI=1
-              done <<< "${{ steps.lista.outputs.files }}"
+              done <<< "${S_LISTA_FILES}"
               ;;
           esac
           echo "falliti=$FALLITI" >> "$GITHUB_OUTPUT"
@@ -294,10 +306,11 @@ jobs:
         # minuti di questo repository sono gratuiti, quelli dell'altro no.
         if: steps.sveglia.outputs.attesa_min != '' && steps.sveglia.outputs.attesa_min != '0'
         env:
+          S_SVEGLIA_ATTESA_MIN: ${{ steps.sveglia.outputs.attesa_min }}
           GH_TOKEN: ${{ github.token }}
         run: |
           gh workflow run sveglia-social.yml --repo "$GITHUB_REPOSITORY" --ref main -f attendi=true \
-            && echo "Attesa affidata a sveglia-social.yml (prossima voce fra ${{ steps.sveglia.outputs.attesa_min }} min)." \
+            && echo "Attesa affidata a sveglia-social.yml (prossima voce fra ${S_SVEGLIA_ATTESA_MIN} min)." \
             || echo "::warning::Non sono riuscito ad affidare l'attesa: ci penseranno i giri programmati."
 
       - name: "🛑 Grafiche non generate per testo che non entra"

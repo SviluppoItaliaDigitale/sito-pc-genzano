@@ -209,10 +209,23 @@ def ultimo_articolo(file: dict[str, str]) -> str | None:
 # ──────────────────────────────────────────────────────────────
 
 class FTPS(ftplib.FTP_TLS):
+    # Nome con cui si verifica il certificato: di norma l'host, oppure il
+    # nome per cui il certificato del server è davvero emesso (FTP_TLS_NOME),
+    # come in scripts/carica-aruba.py.
+    nome_tls: str | None = None
+
+    def auth(self):
+        if isinstance(self.sock, ssl.SSLSocket):
+            raise ValueError("Already using TLS")
+        resp = self.voidcmd("AUTH TLS")
+        self.sock = self.context.wrap_socket(self.sock, server_hostname=self.nome_tls or self.host)
+        self.file = self.sock.makefile(mode="r", encoding=self.encoding)
+        return resp
+
     def ntransfercmd(self, cmd, rest=None):
         conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
         if self._prot_p:
-            conn = self.context.wrap_socket(conn, server_hostname=self.host,
+            conn = self.context.wrap_socket(conn, server_hostname=self.nome_tls or self.host,
                                             session=self.sock.session)  # type: ignore[attr-defined]
         return conn, size
 
@@ -229,29 +242,39 @@ def apri_ftps() -> tuple[FTPS, str] | None:
     if ":" in server:
         server, p = server.rsplit(":", 1)
         porta = int(p)
-    # Tre livelli di verifica TLS, dal più severo in giù: (1) catena + nome
-    # host; (2) solo catena, perché il certificato dell'FTP di Aruba è
-    # emesso per un nome diverso da quello con cui ci si collega (verificato
-    # il 01/10/2026: «Hostname mismatch»); (3) nessuna verifica, cioè la
-    # stessa posizione dell'action FTP-Deploy (`security: loose`, il suo
-    # default) che carica il sito da mesi. Il canale resta cifrato in tutti
-    # e tre i casi; si scrive nel log a quale livello ci si è fermati.
-    livelli: list[tuple[str, ssl.SSLContext]] = []
-    if os.environ.get("FTP_TLS_INSECURE") != "1":  # il server di prova locale è autofirmato
-        pieno = ssl.create_default_context()
-        livelli.append(("verifica piena", pieno))
-        senza_nome = ssl.create_default_context()
-        senza_nome.check_hostname = False
-        livelli.append(("catena verificata, nome host non controllato", senza_nome))
-    nessuna = ssl.create_default_context()
-    nessuna.check_hostname = False
-    nessuna.verify_mode = ssl.CERT_NONE
-    livelli.append(("senza verifica del certificato, come l'action FTP-Deploy", nessuna))
+    # Livelli di verifica TLS, come scripts/carica-aruba.py, sempre con la
+    # catena del certificato verificata: (1) verifica piena sull'host; (2) se
+    # FTP_TLS_NOME è impostato, verifica piena su quel nome, cioè il nome per
+    # cui il certificato dell'FTP di Aruba è emesso (diverso dall'host con
+    # cui ci si collega: «Hostname mismatch», 01/10/2026); (3) solo se
+    # FTP_TLS_NOME manca, catena senza il controllo del nome.
+    # Mai senza verifica del certificato: chi si mettesse in mezzo fra il
+    # runner e Aruba con un certificato qualsiasi riceverebbe utente e
+    # password FTP, cioè il sito. Se nessun livello regge, la riparazione non
+    # si fa e lo dice. Il certificato non verificato si accetta solo con
+    # FTP_TLS_INSECURE=1, nelle prove con il server FTPS locale.
+    livelli: list[tuple[str, ssl.SSLContext, str | None]] = []
+    if os.environ.get("FTP_TLS_INSECURE") == "1":
+        nessuna = ssl.create_default_context()
+        nessuna.check_hostname = False
+        nessuna.verify_mode = ssl.CERT_NONE
+        livelli.append(("senza verifica del certificato (solo prove locali)", nessuna, None))
+    else:
+        livelli.append(("verifica piena", ssl.create_default_context(), None))
+        nome_cert = os.environ.get("FTP_TLS_NOME", "").strip()
+        if nome_cert:
+            livelli.append((f"verifica piena sul nome del certificato {nome_cert}",
+                            ssl.create_default_context(), nome_cert))
+        else:
+            senza_nome = ssl.create_default_context()
+            senza_nome.check_hostname = False
+            livelli.append(("catena verificata, nome host non controllato", senza_nome, None))
     ftp = None
     ultimo = ""
-    for nome, ctx in livelli:
+    for nome, ctx, nome_tls in livelli:
         try:
             ftp = FTPS(context=ctx, timeout=60)
+            ftp.nome_tls = nome_tls
             ftp.connect(server, porta)
             ftp.login(utente, password)
             ftp.prot_p()

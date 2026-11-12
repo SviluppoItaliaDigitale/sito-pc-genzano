@@ -1,10 +1,10 @@
-ultimo_audit: '2026-11-11'
-totale: 77
+ultimo_audit: '2026-11-12'
+totale: 78
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 40
+  TERZO: 41
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -214,6 +214,21 @@ documenti:
   pages: 1
   errors: []
   text_chars_sample: 4597
+  origine: TERZO
+  origine_descrizione: Gazzetta Ufficiale della Repubblica Italiana (testi legislativi
+    originali)
+  verdict: TERZO
+- path: /allegati/2026/gazzetta-ufficiale-2026-11-11-n-263-decreto-legge-205-campi-flegrei.pdf
+  file: gazzetta-ufficiale-2026-11-11-n-263-decreto-legge-205-campi-flegrei.pdf
+  size_kb: 3985.5
+  sha256: 9f06fb54e7b23b1f324136674a9cbae64c1c4da50c15fb2c195f7c1f58be1e12
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 19
+  errors: []
+  text_chars_sample: 19185
   origine: TERZO
   origine_descrizione: Gazzetta Ufficiale della Repubblica Italiana (testi legislativi
     originali)
@@ -667,7 +682,7 @@ documenti:
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
   size_kb: 703.4
-  sha256: fad9b920a83e619db2b2e9f6d79ab68b073a83be763961fafa6acdd797f4167a
+  sha256: 8f8feae8211fb185b71f4f76854bfa27b65ea17ccb6387b0feeb6172d8fb8a18
   searchable: true
   tagged: false
   language: it

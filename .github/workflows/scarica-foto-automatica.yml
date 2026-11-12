@@ -51,7 +51,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip-foto-wiki]')"
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -299,6 +299,9 @@ jobs:
         if: |
           (steps.download.outputs.processed != '0' && steps.download.outputs.processed != '') ||
           (steps.cover.outputs.generated != '0' && steps.cover.outputs.generated != '')
+        env:
+          S_DOWNLOAD_PROCESSED: ${{ steps.download.outputs.processed }}
+          S_COVER_GENERATED: ${{ steps.cover.outputs.generated }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -308,8 +311,8 @@ jobs:
             echo "did_commit=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          PHOTO_COUNT="${{ steps.download.outputs.processed }}"
-          COVER_COUNT="${{ steps.cover.outputs.generated }}"
+          PHOTO_COUNT="${S_DOWNLOAD_PROCESSED}"
+          COVER_COUNT="${S_COVER_GENERATED}"
           git commit -m "[skip-foto-wiki] Cover automatiche: ${PHOTO_COUNT:-0} foto + ${COVER_COUNT:-0} cover tipografiche
 
           Workflow: scarica-foto-automatica.yml
@@ -340,11 +343,13 @@ jobs:
       - name: "🚨 Apri issue se ci sono fallimenti"
         if: steps.download.outputs.failed != '0' && steps.download.outputs.failed != ''
         env:
+          S_DOWNLOAD_FAILED: ${{ steps.download.outputs.failed }}
+          S_DOWNLOAD_ITEMS: ${{ steps.download.outputs.items }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TITLE="📷 Foto automatiche non scaricate ($(date +%Y-%m-%d))"
           BODY=$(cat <<EOF
-          Il workflow \`scarica-foto-automatica.yml\` non e riuscito a scaricare le foto per ${{ steps.download.outputs.failed }} articoli.
+          Il workflow \`scarica-foto-automatica.yml\` non e riuscito a scaricare le foto per ${S_DOWNLOAD_FAILED} articoli.
 
           **Cosa ha fatto il workflow al posto tuo:**
           - Ha **rimosso il marker** \`# TODO-foto-*\` da questi articoli (per evitare loop infinito di issue ad ogni run)
@@ -353,7 +358,7 @@ jobs:
 
           **Articoli su cui il download ha fallito:**
 
-          ${{ steps.download.outputs.items }}
+          ${S_DOWNLOAD_ITEMS}
 
           **Cosa fare se vuoi davvero una foto vera (non la cover tipografica):**
           1. Apri l'articolo nella lista sopra
