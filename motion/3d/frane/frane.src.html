@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le frane: riconoscerle e mettersi al sicuro</title>
+<!-- frane.src.html — video 3D divulgativo «Le frane: riconoscerle e mettersi al sicuro» (Protezione Civile Genzano di
+     Roma), versione con telecamera in volo della pillola 2D: stesso testo e stessa voce.
+     Scritto per Alessandro Cuollo il 12/11/2026 sul modello della skill video-3d, senza codice di terzi. Si costruisce
+     con costruisci.py di video-3d (three.js 0.181.2 MIT, motore 3D, impaginazione, font) e i dati rilievo (rilievo.py),
+     tempi (ritmo.py) e sottotitoli (ritmo.py da parole.py). Tutto dipende solo da t: render(t) deterministico.
+     Due «set» nella stessa scena 3D: il rilievo vero dei Castelli Romani (chilometri) e il plastico di un versante
+     (metri: x di traverso al pendio, z verso valle, y in alto; il pendio scende da z = -16 a z = 12). -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #livello-scena { z-index: 2; }
+  #velo { position: absolute; left: 0; top: 0; z-index: 3; background: #0a1220; opacity: 0; pointer-events: none; }
+  .sovra { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; color: #eef2f7; pointer-events: none; }
+  #fonte { font-weight: 400; font-size: 17px; line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre;
+           padding: 5px 12px; border-radius: 10px; background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+  #titolo { left: 96px; width: 888px; box-sizing: border-box; padding: 26px 34px 30px; border-radius: 18px;
+            background: rgba(10, 18, 32, .78); border-left: 10px solid #f59e0b; }
+  #titolo b { display: block; font-weight: 700; font-size: 124px; line-height: 1; letter-spacing: 2px; }
+  #titolo span { display: block; margin-top: 14px; font-weight: 600; font-size: 46px; line-height: 1.15; color: #dbe5f2; }
+  .luogo { font-weight: 700; font-size: 30px; letter-spacing: 2.5px; white-space: nowrap; padding: 4px 12px;
+           border-radius: 8px; background: rgba(10, 18, 32, .58); text-shadow: 0 1px 2px rgba(5, 8, 15, .95); }
+  .punto { position: absolute; z-index: 29; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%;
+           background: #eef2f7; box-shadow: 0 0 0 3px rgba(10, 18, 32, .75); }
+  #chiusura { left: 96px; width: 888px; text-align: center; }
+  #chiusura i { display: block; font-style: normal; font-weight: 600; font-size: 54px; letter-spacing: 6px; color: #dbe5f2; }
+  #chiusura b { display: inline-block; margin-top: 18px; padding: 0 56px 12px; border-radius: 28px; background: #2e90fa;
+                color: #fff; font-weight: 700; font-size: 280px; line-height: 1.12; letter-spacing: 6px; }
+  #sito { left: 96px; width: 888px; text-align: center; font-weight: 700; font-size: 50px; color: #eef2f7; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="livello-scena"></canvas>
+  <div id="velo"></div>
+  <div id="titolo" class="sovra" data-componente="titolo"><b>LE FRANE</b><span>riconoscerle e mettersi al sicuro</span></div>
+  <div id="p-genzano" class="punto"></div><div id="l-genzano" class="sovra luogo" data-componente="luogo-genzano">GENZANO DI ROMA</div>
+  <div id="p-nemi" class="punto"></div><div id="l-nemi" class="sovra luogo" data-componente="luogo-nemi">LAGO DI NEMI</div>
+  <div id="chiusura" class="sovra" data-componente="chiusura"><i>CHIAMA IL</i><b>112</b></div>
+  <div id="sito" class="sovra" data-componente="sito">protezionecivilegenzano.it</div>
+  <div id="fonte" class="sovra" data-componente="fonte-3d"></div>
+</div>
+<script type="application/json" id="dato-rilievo">/*DATO:rilievo*/</script>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: 'Le frane: riconoscerle e mettersi al sicuro',
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  hud: ['LE FRANE', 'QUANDO SUCCEDE', 'I SEGNALI', 'NON SI FERMA', 'SPOSTATI DI LATO', 'PROTEGGITI', 'SULLA STRADA'],
+  esagerazione: 2,                                   // altezze del rilievo: la nota dice di quanto
+  notaRilievo: 'RILIEVO ×2 · NON IN SCALA',
+  notaSchema: 'SCHEMA · NON IN SCALA',
+  fonte: 'Fonte: Dipartimento della Protezione Civile, «In caso di frana»',
+  luoghi: { genzano: { lat: 41.7068, lon: 12.6890 }, nemi: { lat: 41.7122, lon: 12.7022 } },
+  etichette: { genzano: { lat: 41.7072, lon: 12.6905 }, nemi: { lat: 41.7112, lon: 12.6992 } },
+  chiave: ['frane:', 'frana', 'piogge', 'pendii', 'ripidi,', 'crepe', 'inclinano,', 'smottamenti.', 'Comune.', 'allontanati',
+           'lato,', 'alto', 'stabile.', 'rannicchiati', 'testa.', 'bordo', 'lontano,', 'avvisa', '112.'],
+  modo: 'parole'
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const RILIEVO = dato('rilievo');
+const TEMPI = dato('tempi') || { scene: Array.from({ length: 7 }, (_, i) => ({ inizio: i * 10, durata: 10 })), totale: 70 };
+const SOTT = dato('sottotitoli') || [];
+// le frasi lunghe si mostrano a pezzi (frasi intere), così il sottotitolo resta su tre righe
+const FRASI = [];
+SOTT.forEach(f => {
+  const chiave = (f.chiave || []).concat(CONFIG.chiave), P = f.parole || [];
+  const parti = String(f.testo).trim().split(/\s+/);
+  if (f.testo.length <= 96 || P.length !== parti.length) { FRASI.push(Object.assign({}, f, { chiave })); return; }
+  let da = 0, n = 0;
+  const chiudi = (a) => {
+    FRASI.push({ inizio: da === 0 ? f.inizio : P[da].t0, fine: a === parti.length ? f.fine : P[a].t0 - .02,
+      testo: parti.slice(da, a).join(' '), parole: P.slice(da, a), chiave });
+    da = a;
+  };
+  for (let i = 0; i < parti.length; i++) {
+    n += parti[i].length + 1;
+    const fineFrase = /[.:;?!]$/.test(parti[i]) && i < parti.length - 1;
+    const resto = parti.slice(i + 1).join(' ').length;
+    if (fineFrase && n > 30 && resto > 20) { chiudi(i + 1); n = 0; }
+  }
+  if (da < parti.length) chiudi(parti.length);
+});
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const formato = CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H;
+  const SC = TEMPI.scene, TOTAL = TEMPI.totale || SC[SC.length - 1].inizio + SC[SC.length - 1].durata;
+  const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, ease, hash } = M3;
+  const fin = M3.finestra;
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
+  const liscia = u => { u = clamp(u); return u * u * (3 - 2 * u); };
+  const esplodi = u => { u = clamp(u); return u * u * u * (u * (6 * u - 15) + 10); };   // parte e arriva piano
+
+  /* istante di una parola detta nella scena k (dai sottotitoli), con riserva in proporzione */
+  const norma = w => String(w).toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, '');
+  function parola(k, w, n = 0, riserva = 0.5) {
+    const f = SOTT[k];
+    if (f && f.parole) {
+      let c = 0;
+      for (const p of f.parole) if (norma(p.w) === norma(w)) { if (c === n) return p.t0; c++; }
+    }
+    return S(k) + D(k) * riserva;
+  }
+
+  /* ================================================================ TEMPI degli eventi (tutti dalla voce) */
+  const T = {};
+  T.cut1 = parola(0, 'Una') - .05;                 // dal rilievo al plastico
+  T.frana1 = T.cut1 + .3; T.frana1d = 4.0;
+  T.giro0 = T.frana1 + T.frana1d + .12; T.giro1 = E(0) - .15;   // la telecamera gira di lato per lo spaccato
+  T.pioggia0 = E(0) - .7;
+  T.apre = E(0) - .35; T.apred = 1.1;
+  T.zuppa = S(1) + .8; T.zuppad = 2.5;
+  T.cut2 = parola(1, 'Anche') - .07;               // dal plastico al rilievo
+  T.genzano = parola(1, 'Genzano') - .15; T.nemi = parola(1, 'lago') - .15;
+  T.crepe = parola(2, 'crepe') - .15; T.muri = parola(2, 'muri'); T.alberi = parola(2, 'alberi');
+  T.inclinano = parola(2, 'inclinano'); T.smott = parola(2, 'smottamenti'); T.avvisa = parola(2, 'avvisa');
+  T.frana4 = S(3) + .3; T.frana4d = 6.3;
+  T.allont = parola(3, 'allontanati');
+  T.spostati = parola(4, 'spostati'); T.verso = parola(4, 'verso', 1); T.non5 = parola(4, 'Non');
+  T.giro5 = E(4) - 2.1;
+  T.rann = parola(5, 'rannicchiati'); T.proteggi = parola(5, 'proteggi'); T.non6 = parola(5, 'Non', 1); T.cedere = parola(5, 'cedere');
+  T.cut6 = T.non6 - .25;
+  T.fermati = parola(6, 'fermati'); T.avvisa7 = parola(6, 'avvisa'); T.chiama = parola(6, 'chiama');
+  T.carta = T.chiama + .2; T.sito = T.carta + 1.9;
+  const SELVA = t => t < S(2);                      // prima parte: versante senza strada né case
+  const inRilievo = t => t < T.cut1 || (t >= T.cut2 && t < S(2));
+
+  const stage = document.getElementById('stage');
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud[0], passiHUD: SC.length, nota: CONFIG.notaRilievo });
+  IMP.anteprima(stage);
+  const C = IMP.ENTI[ente].colori;
+
+  const vicino = M3.creaRenderer(document.getElementById('livello-scena'), W, H, { scala: 0.8 });
+  const scena = new THREE.Scene();
+  const camera = M3.creaCamera(W, H, { fov: 32, zona: L.zona });
+  const velo = document.getElementById('velo'); velo.style.width = W + 'px'; velo.style.height = H + 'px';
+
+  /* ---------------------------------------------------------------- luci (solo per il plastico) */
+  scena.add(new THREE.HemisphereLight(0xeef3ff, 0x39404e, 1.25));
+  const sole = new THREE.DirectionalLight(0xfff4e6, 1.7); sole.position.set(-14, 22, 16); scena.add(sole);
+  const contro = new THREE.DirectionalLight(0xb7cdf5, 0.6); contro.position.set(12, 8, -14); scena.add(contro);
+
+  /* ---------------------------------------------------------------- materiali e aiuti */
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 1; return t;
+  }
+  const tinta = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, metalness: 0.03, roughness: 0.8 }, o));
+  const base = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+  const box = (w, h, d, mat) => new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  const cil = (r1, r2, h, mat, seg = 12) => new THREE.Mesh(new THREE.CylinderGeometry(r1, r2, h, seg), mat);
+  const texOmbra = tela(128, 128, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(0,0,0,.5)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function ombra(rx, rz) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(rx * 2, rz * 2), base(0xffffff, { map: texOmbra, transparent: true, depthWrite: false }));
+    m.rotation.x = -Math.PI / 2; m.position.y = 0.05; return m;
+  }
+
+  /* ================================================================ RILIEVO VERO (chilometri) */
+  const ril = M3.rilievo(RILIEVO || M3.rilievoDiProva(), { esagerazione: CONFIG.esagerazione, passo: 1, laghi: RILIEVO ? [
+    { nome: 'Lago Albano', lat: 41.748, lon: 12.668, profondita: 160 },
+    { nome: 'Lago di Nemi', lat: CONFIG.luoghi.nemi.lat, lon: CONFIG.luoghi.nemi.lon, profondita: 30 }] : [] });
+  scena.add(ril.gruppo);
+  const pioggiaR = M3.particelle({ tipo: 'pioggia', numero: 2400, centro: ril.sopra(41.7098, 12.6965, 700), dimensioni: [7, 2.6, 7],
+                                   vento: [-.5, .2], opacita: .5, seme: 3 });
+  scena.add(pioggiaR.oggetto);
+
+  /* ================================================================ PLASTICO DEL VERSANTE (metri) */
+  const X0 = -22, X1 = 22, XT = 6, Z0 = -26, Z1 = 26, PASSO = 0.5, YB = -8;
+  const NZ = Math.round((Z1 - Z0) / PASSO) + 1;
+  const TERRAZZO = 5.2;
+  function terrazzo(x, z) { return liscia((x - 7.5) / 4.5) * (1 - liscia((x - 17.5) / 4)) * liscia((z - .5) / 4.5) * (1 - liscia((z - 8.5) / 4.5)); }
+  function h0(x, z) {
+    let y = 14 * (1 - liscia((z + 16) / 28));
+    const a = .34 * liscia((z + 25) / 6) * (1 - liscia((z - 8) / 3.5));
+    y += a * ((M3.rumore2(x * .16 + 3, z * .16 + 7, 5) - .5) * 2 + (M3.rumore2(x * .43, z * .43, 9) - .5) * .7);
+    const tz = terrazzo(x, z);
+    if (tz > 0) y = mix(y, Math.max(y, TERRAZZO), tz);
+    return y;
+  }
+  // frane: A = quella grande, CR = la zolla del ciglio che cede ancora, SM = il piccolo smottamento
+  const FA = { xc: -5, hw: 6.2, zt: -12, zb: 9, depth: 2.9, adv: .7, lobo: .3 };
+  const FC = { xc: -5, hw: 3.1, zt: -15.3, zb: -9.5, depth: 1.5, adv: .25, lobo: .35 };
+  const FS = { xc: -9.3, hw: 1.7, zt: -4.5, zb: .8, depth: .8, adv: .3, lobo: .35 };
+  const ST = { a: 0, c: 0, s: 0, bagnato: 0, fronte: 0 };       // stato del terreno al tempo t
+  const eff = { dy: 0, e: 0, sc: 0 };
+  function effetto(fr, x, z, s) {
+    if (s <= 0) return;
+    const v = (z - fr.zt) / (fr.zb - fr.zt), vc = .55 + fr.adv * s, vmax = vc + fr.lobo;
+    if (v < -.04 || v > vmax + .05) return;
+    const hw = fr.hw * (.74 + .34 * clamp(v)), u = (x - fr.xc) / hw, au = Math.abs(u);
+    if (au >= 1) return;
+    const mx = 1 - u * u;
+    const dep = liscia(v / .06) * (1 - liscia((v - .28) / .42));
+    const q = (v - vc) / fr.lobo, acc = Math.abs(q) < 1 ? Math.pow(1 - q * q, 1.25) : 0;
+    eff.dy += s * fr.depth * (-dep * Math.pow(mx, .55) + acc * Math.pow(mx, .7) * (1 + .22 * Math.sin(v * 46 + u * 3) * liscia((1 - Math.abs(q)) / .5)));
+    const e = liscia((1 - au) / .1) * liscia((v + .04) / .05) * (1 - liscia((v - vmax + .04) / .06)) * liscia((s - .05) / .12);
+    if (e > eff.e) eff.e = e;
+    if (e * dep > eff.sc) eff.sc = e * dep;
+  }
+  function campo(x, z, base0) {                                  // quota e terra smossa al tempo corrente
+    eff.dy = 0; eff.e = 0; eff.sc = 0;
+    effetto(FA, x, z, ST.a); effetto(FC, x, z, ST.c); effetto(FS, x, z, ST.s);
+    return (base0 == null ? h0(x, z) : base0) + eff.dy;
+  }
+  const quotaT = (x, z) => campo(x, z);
+
+  const plastico = new THREE.Group(); scena.add(plastico);
+  const matTop = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: .95, metalness: 0 });
+  const matLato = new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.DoubleSide });
+  const PROF = [0, .4, .8, 1.2, 1.6, 2.0, 2.39, 2.41, 3.9, 5.49, 5.51];   // profondità delle righe dei fianchi (m)
+  const KR = PROF.length + 2;                                               // + due righe fino al fondo
+  const SUOLO = [.33, .23, .16], MEDIO = [.66, .54, .36], ROCCIA = [.47, .49, .54], ZUPPO = [.16, .27, .43];
+  function pezzo(xa, xb) {
+    const nx = Math.round((xb - xa) / PASSO) + 1, n = nx * NZ;
+    const pos = new Float32Array(n * 3), col = new Float32Array(n * 3), H0 = new Float32Array(n), RU = new Float32Array(n), RK = new Float32Array(n);
+    const idx = [];
+    for (let i = 0; i < NZ; i++) for (let j = 0; j < nx; j++) {
+      const k = i * nx + j, x = xa + j * PASSO, z = Z0 + i * PASSO;
+      pos[k * 3] = x; pos[k * 3 + 2] = z; H0[k] = h0(x, z);
+      RU[k] = M3.rumore2(x * .55 + 11, z * .55 + 5, 2) * .6 + hash(k * 1.37) * .4;
+      const tz = terrazzo(x, z), yb = 14 * (1 - liscia((z + 16) / 28));
+      RK[k] = 0;
+      if (i < NZ - 1 && j < nx - 1) idx.push(k, k + nx, k + 1, k + 1, k + nx, k + nx + 1);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setAttribute('color', new THREE.BufferAttribute(col, 3));
+    g.setIndex(idx);
+    // fianchi: per ogni punto del bordo una colonna di righe a profondità fisse (strati netti)
+    const bordo = [];
+    for (let i = 0; i < NZ; i++) bordo.push([xa, Z0 + i * PASSO, 0]);
+    bordo.push(null);
+    for (let i = 0; i < NZ; i++) bordo.push([xb, Z0 + i * PASSO, 1]);
+    bordo.push(null);
+    for (let j = 0; j < nx; j++) bordo.push([xa + j * PASSO, Z0, 2]);
+    bordo.push(null);
+    for (let j = 0; j < nx; j++) bordo.push([xa + j * PASSO, Z1, 3]);
+    const nb = bordo.length, pl = new Float32Array(nb * KR * 3), cl = new Float32Array(nb * KR * 3), il = [], HB = new Float32Array(nb);
+    bordo.forEach((b, c) => {
+      if (!b) return;
+      HB[c] = h0(b[0], b[1]);
+      for (let r = 0; r < KR; r++) { pl[(c * KR + r) * 3] = b[0]; pl[(c * KR + r) * 3 + 2] = b[1]; }
+      if (c + 1 < nb && bordo[c + 1]) for (let r = 0; r < KR - 1; r++) {
+        const a = c * KR + r, d = (c + 1) * KR + r;
+        il.push(a, a + 1, d, d, a + 1, d + 1);
+      }
+    });
+    const gl = new THREE.BufferGeometry();
+    gl.setAttribute('position', new THREE.BufferAttribute(pl, 3)); gl.setAttribute('color', new THREE.BufferAttribute(cl, 3));
+    gl.setIndex(il);
+    const gruppo = new THREE.Group();
+    const top = new THREE.Mesh(g, matTop), lato = new THREE.Mesh(gl, matLato);
+    top.frustumCulled = lato.frustumCulled = false;
+    const fondo = box(xb - xa, .4, Z1 - Z0, base(0x1c2536)); fondo.position.set((xa + xb) / 2, YB - .2, (Z0 + Z1) / 2);
+    gruppo.add(top, lato, fondo); plastico.add(gruppo);
+    function aggiorna() {
+      for (let k = 0; k < n; k++) {
+        const x = pos[k * 3], z = pos[k * 3 + 2];
+        pos[k * 3 + 1] = campo(x, z, H0[k]);
+        const u = RU[k], e = eff.e, rk = RK[k] * (1 - e);
+        let r = mix(.30, .43, u), gg = mix(.50, .63, u), b = mix(.20, .29, u);
+        r = mix(r, mix(.55, .63, u), rk); gg = mix(gg, mix(.55, .62, u), rk); b = mix(b, mix(.54, .6, u), rk);
+        const sc = 1 - .28 * eff.sc;
+        const zl = .82 + .36 * M3.rumore2(x * 1.3 + 2, z * .9 - ST.a * 9, 4);
+        r = mix(r, mix(.47, .60, u) * sc * zl, e); gg = mix(gg, mix(.33, .42, u) * sc * zl, e); b = mix(b, mix(.21, .27, u) * sc * zl, e);
+        const w = 1 - .22 * ST.bagnato;
+        col[k * 3] = r * w; col[k * 3 + 1] = gg * w; col[k * 3 + 2] = b * (w + .06 * ST.bagnato);
+      }
+      g.attributes.position.needsUpdate = true; g.attributes.color.needsUpdate = true;
+      g.computeVertexNormals();
+      for (let c = 0; c < nb; c++) {
+        const b = bordo[c]; if (!b) continue;
+        const ys = campo(b[0], b[1], HB[c]), hb = HB[c], smossa = eff.e;
+        for (let r = 0; r < KR; r++) {
+          const o = (c * KR + r) * 3;
+          let y, cr;
+          if (r === 0) { y = ys; cr = SUOLO; }
+          else if (r < PROF.length) { y = Math.min(hb - PROF[r], ys); cr = r <= 6 ? SUOLO : r <= 9 ? MEDIO : ROCCIA; }
+          else { y = r === KR - 1 ? YB : mix(hb - 5.51, YB, .5); cr = ROCCIA; }
+          if (y < YB) y = YB;
+          pl[o + 1] = y;
+          const d = hb - y, fascia = cr === ROCCIA ? .93 + .09 * Math.sin(y * 2.3 + b[1] * .12 + b[0] * .1) : 1;
+          let zup = cr === SUOLO ? ST.bagnato * (.25 + .75 * liscia((ST.fronte - d + .25) / .5)) * (ST.fronte > 0 || r === 0 ? 1 : 0) : 0;
+          if (cr === SUOLO && ST.fronte <= 0) zup = r === 0 ? .3 * ST.bagnato : 0;
+          const ch = cr === SUOLO && smossa > 0 && y > hb - .2 ? 1.35 : 1;
+          cl[o] = mix(cr[0] * fascia * ch, ZUPPO[0], zup * .85); cl[o + 1] = mix(cr[1] * fascia * ch, ZUPPO[1], zup * .85);
+          cl[o + 2] = mix(cr[2] * fascia * ch, ZUPPO[2], zup * .85);
+        }
+      }
+      gl.attributes.position.needsUpdate = true; gl.attributes.color.needsUpdate = true;
+    }
+    return { gruppo, aggiorna };
+  }
+  const sinistro = pezzo(X0, XT), destro = pezzo(XT, X1);
+
+  /* ---------------------------------------------------------------- alberi e pali */
+  const matTronco = tinta(0x6b4a2e), matChioma = tinta(0x3f8a3a, { roughness: 1 }), matChioma2 = tinta(0x57a04a, { roughness: 1 });
+  function albero(s = 1) {
+    const g = new THREE.Group();
+    const tr = cil(.16 * s, .24 * s, 2.6 * s, matTronco, 8); tr.position.y = 1.3 * s; g.add(tr);
+    const c1 = new THREE.Mesh(new THREE.SphereGeometry(1.5 * s, 12, 9), matChioma); c1.position.y = 3.6 * s; c1.scale.y = 1.15; g.add(c1);
+    const c2 = new THREE.Mesh(new THREE.SphereGeometry(1.05 * s, 12, 9), matChioma2); c2.position.set(.5 * s, 4.7 * s, .2 * s); g.add(c2);
+    return g;
+  }
+  function palo() {
+    const g = new THREE.Group(), m = tinta(0x8a6a48, { roughness: .9 });
+    const p = cil(.11, .14, 6.4, m, 8); p.position.y = 3.2; g.add(p);
+    const tr = box(1.9, .12, .12, m); tr.position.y = 5.9; g.add(tr);
+    [-.8, 0, .8].forEach(x => { const i = cil(.05, .05, .22, tinta(0xdfe6ee), 6); i.position.set(x, 6.06, 0); g.add(i); });
+    return g;
+  }
+  const alberi = [];        // { g, x, z, pezzo, frana }
+  function pianta(x, z, s, gruppo, frana) { const g = albero(s); gruppo.add(g); const a = { g, x, z, frana }; alberi.push(a); return a; }
+  [[-17, -21, 1.1], [-9, -22, .95], [-1, -20.5, 1.15], [-18.5, -6, 1], [-17.5, 4.5, .9], [3.5, -19.5, .9]].forEach(a => pianta(a[0], a[1], a[2], sinistro.gruppo));
+  [[10.5, -21, 1.05], [17.5, -19, 1.1], [18.5, -8, .95], [12, -3.5, .9]].forEach(a => pianta(a[0], a[1], a[2], destro.gruppo));
+  const alberoSelva = pianta(-6.2, -2.5, .9, sinistro.gruppo, 'selva');         // scende con la frana dell'apertura
+  const alberoSegno = pianta(-7.6, 5.2, .95, sinistro.gruppo, 'segno');         // si inclina, poi scende
+  const paloSegno = palo(); sinistro.gruppo.add(paloSegno);
+  const alberoVia = pianta(2.9, 12.7, .95, sinistro.gruppo), paloVia = palo(); destro.gruppo.add(paloVia);
+
+  /* ---------------------------------------------------------------- sassi e zolle della frana */
+  const NS = 84;
+  const sassi = new THREE.InstancedMesh(new THREE.DodecahedronGeometry(.34, 0), tinta(0xffffff, { roughness: 1, flatShading: true }), NS);
+  sassi.frustumCulled = false; plastico.add(sassi);
+  { const c = new THREE.Color();
+    for (let i = 0; i < NS; i++) { const u = hash(i * 3.1); sassi.setColorAt(i, hash(i * 7.7) < .45 ? c.setRGB(.5 + .12 * u, .5 + .1 * u, .5 + .08 * u) : c.setRGB(.42 + .1 * u, .29 + .07 * u, .18 + .05 * u)); }
+    sassi.instanceColor.needsUpdate = true; }
+  const mSasso = new THREE.Matrix4(), qSasso = new THREE.Quaternion(), eSasso = new THREE.Euler(), vS = V(0, 0, 0), sS = V(1, 1, 1);
+  function muoviSassi(fr, s, da, quanti) {
+    for (let i = da; i < da + quanti; i++) {
+      const v0 = .04 + .5 * hash(i * 1.93), u0 = (hash(i * 4.71) - .5) * 1.5, corsa = (.5 + .45 * hash(i * 2.27)) * (.5 + fr.adv);
+      const v = Math.min(v0 + corsa * ease.morbida(clamp(s * (1.08 + .3 * hash(i * 9.1)) - .06 * hash(i * 5.3))), .55 + fr.adv * s + fr.lobo * (.25 + .5 * hash(i * 8.3)));
+      const z = fr.zt + v * (fr.zb - fr.zt), x = fr.xc + u0 * fr.hw * (.74 + .34 * clamp(v)) * .8;
+      const k = liscia((s - .04) / .1) * (.55 + .9 * hash(i * 6.13)) * (fr === FA ? 1 : .6);
+      vS.set(x, quotaT(x, z) + .2 * k, z); sS.setScalar(Math.max(.0001, k));
+      eSasso.set(v * 9 * (1 + hash(i)), hash(i * 3) * 6, v * 5); qSasso.setFromEuler(eSasso);
+      sassi.setMatrixAt(i, mSasso.compose(vS, qSasso, sS));
+    }
+  }
+
+  /* ---------------------------------------------------------------- il «set» abitato: strada, muro, casa, auto */
+  const set = new THREE.Group(); plastico.add(set);
+  const strada = box(X1 - X0, .1, 4, tinta(0x474d57, { roughness: .95 })); strada.position.set(0, .03, 16.5); set.add(strada);
+  for (let i = -5; i <= 5; i++) { const s = box(1.6, .02, .14, base(0xe5e7eb)); s.position.set(i * 3.8, .09, 16.5); set.add(s); }
+  [14.52, 18.48].forEach(z => { const s = box(X1 - X0, .02, .1, base(0xc9ced6)); s.position.set(0, .09, z); set.add(s); });
+  const matMuro = tinta(0xb9b3a6, { roughness: .95 });
+  const texCrepa = tela(128, 256, (g, w, h) => {
+    g.strokeStyle = 'rgba(22,18,16,.96)'; g.lineWidth = 7; g.lineJoin = 'round'; g.beginPath(); g.moveTo(w * .5, 0);
+    for (let i = 1; i <= 12; i++) g.lineTo(w * .5 + (hash(i * 3.7) - .5) * w * .62, i * h / 12);
+    g.stroke(); g.lineWidth = 3;
+    for (let i = 2; i < 12; i += 3) { const x = w * .5 + (hash(i * 3.7) - .5) * w * .62; g.beginPath(); g.moveTo(x, i * h / 12); g.lineTo(x + (hash(i) > .5 ? 26 : -26), i * h / 12 + 22); g.stroke(); }
+  });
+  const muro = [];
+  for (let i = 0; i < 9; i++) {
+    const x = -13 + i * 2, perno = new THREE.Group(); perno.position.set(x, 0, 10); set.add(perno);
+    const m = box(1.96, 1.9, .5, matMuro); m.position.y = .95; perno.add(m);
+    const cop = box(2, .14, .64, tinta(0x9a958a, { roughness: .9 })); cop.position.y = 1.95; perno.add(cop);
+    muro.push({ perno, x, dentro: clamp(1.25 - Math.abs(x - FA.xc) / 5.2), soglia: .3 + .06 * hash(i * 2.3) });
+  }
+  const crepeMuro = [[-7.2, .95], [-4.6, 1.05]].map(([x, alt], i) => {
+    const c = new THREE.Mesh(new THREE.PlaneGeometry(.8, 1.7 * alt), base(0xffffff, { map: texCrepa, transparent: true, depthWrite: false }));
+    c.position.set(x, .92, 10.262); c.rotation.z = (i ? -.12 : .1); set.add(c); return c;
+  });
+  const casa = new THREE.Group(); casa.position.set(-16.5, 0, 22.7); set.add(casa);
+  { const mc = tinta(0xefe7d6, { roughness: .9 }), mt = tinta(0xb5563a, { roughness: .85 });
+    const corpo = box(7, 3.3, 4.6, mc); corpo.position.y = 1.65; casa.add(corpo);
+    [-1, 1].forEach(sx => { const f = box(7.6, .22, 3.05, mt); f.position.set(0, 3.95, sx * 1.22); f.rotation.x = sx * .52; casa.add(f); });
+    const timp = box(6.98, 1.3, .2, mc); timp.position.set(0, 3.6, 0); casa.add(timp);
+    [[-2.1, 1.9], [2.1, 1.9]].forEach(([x, y]) => { const f = box(1.1, 1.1, .1, base(0x9cc6ea)); f.position.set(x, y, -2.32); casa.add(f); });
+    const porta = box(1, 2, .1, tinta(0x6b4a2e)); porta.position.set(0, 1, -2.32); casa.add(porta); }
+  function automobile(colore) {
+    const g = new THREE.Group(), m = tinta(colore, { roughness: .5 });
+    const sc = box(4.6, .85, 2.0, m); sc.position.y = .78; g.add(sc);
+    const ab = box(2.5, .78, 1.8, base(0x9cc6ea)); ab.position.set(.25, 1.55, 0); g.add(ab);
+    const te = box(2.56, .1, 1.86, m); te.position.set(.25, 1.97, 0); g.add(te);
+    [[-1.5, 1], [-1.5, -1], [1.5, 1], [1.5, -1]].forEach(([x, z]) => { const r = cil(.42, .42, .3, tinta(0x1c1f24), 14); r.rotation.x = Math.PI / 2; r.position.set(x, .42, z * .92); g.add(r); });
+    const frecce = [];
+    [[-2.31, .8], [-2.31, -.8], [2.31, .8], [2.31, -.8]].forEach(([x, z]) => { const f = box(.08, .22, .34, base(0x7a4a00)); f.position.set(x, .9, z); g.add(f); frecce.push(f); });
+    [[-2.31, .45], [-2.31, -.45]].forEach(([x, z]) => { const f = box(.06, .2, .3, base(0xfff3c4)); f.position.set(x, .9, z); g.add(f); });
+    g.add(ombra(3, 1.6));
+    return { g, frecce };
+  }
+  const autoA = automobile(0xd8dde4), autoB = automobile(0x5b7fa6); set.add(autoA.g, autoB.g);
+  autoB.g.scale.setScalar(.999);
+
+  /* ---------------------------------------------------------------- le persone (figure stilizzate, fuori scala) */
+  function persona(colore, s, colPant) {
+    const root = new THREE.Group();
+    const LL = .8 * s, TT = .58 * s;
+    const matC = tinta(colore, { roughness: .8 }), matP = tinta(colPant, { roughness: .9 }), pelle = tinta(0xd9a27a, { roughness: .8 });
+    const anche = new THREE.Group(); anche.position.y = LL; root.add(anche);
+    const gambe = [];
+    [-1, 1].forEach(sx => {
+      const g = new THREE.Group(); g.position.set(sx * .09 * s, 0, 0); anche.add(g);
+      const m = cil(.075 * s, .065 * s, LL, matP, 10); m.position.y = -LL / 2; g.add(m);
+      gambe.push(g);
+    });
+    const busto = new THREE.Group(); anche.add(busto);
+    const tronco = cil(.16 * s, .14 * s, TT, matC, 14); tronco.position.y = TT / 2; busto.add(tronco);
+    const spalle = new THREE.Mesh(new THREE.SphereGeometry(.16 * s, 14, 8, 0, Math.PI * 2, 0, Math.PI / 2), matC); spalle.position.y = TT; busto.add(spalle);
+    const testa = new THREE.Mesh(new THREE.SphereGeometry(.12 * s, 16, 12), pelle); testa.position.y = TT + .2 * s; busto.add(testa);
+    const capelli = new THREE.Mesh(new THREE.SphereGeometry(.125 * s, 16, 10, 0, Math.PI * 2, 0, Math.PI * .55), tinta(0x3b2a20, { roughness: .9 })); capelli.position.y = TT + .21 * s; capelli.rotation.x = -.35; busto.add(capelli);
+    const braccia = [];
+    [-1, 1].forEach(sx => {
+      const b = new THREE.Group(); b.position.set(sx * .2 * s, TT * .93, 0); busto.add(b);
+      const m = cil(.05 * s, .045 * s, .58 * s, matC, 8); m.position.y = -.29 * s; b.add(m);
+      const mano = new THREE.Mesh(new THREE.SphereGeometry(.05 * s, 8, 6), pelle); mano.position.y = -.6 * s; b.add(mano);
+      braccia.push(b);
+    });
+    root.add(ombra(.36 * s, .36 * s));
+    /* posa: c = rannicchiato (0 in piedi, 1 a terra), cop = braccia sulla testa, passo = fase del cammino (0 fermo) */
+    function posa(c, cop, passo) {
+      anche.position.y = mix(LL, .3 * s, c);
+      busto.rotation.x = mix(0, 1.2, c);
+      gambe.forEach((g, i) => { const sw = passo ? Math.sin(passo + i * Math.PI) * .5 : 0; g.rotation.x = mix(sw, -1.15, c); g.scale.y = mix(1, .55, c); });
+      braccia.forEach((b, i) => { const sw = passo ? -Math.sin(passo + i * Math.PI) * .4 : 0; b.rotation.set(mix(sw, -2.75, cop), 0, mix(0, (i ? -1 : 1) * .38, cop)); });
+    }
+    posa(0, 0, 0);
+    return { root, posa, testa: () => testa.getWorldPosition(V(0, 0, 0)) };
+  }
+  const PS = 1.55;
+  const persB = persona(0xf2a516, PS, 0x3b4b6b); set.add(persB.root);
+  const anelloB = M3.anello({ raggio: 1.5, colore: C.arancio }); set.add(anelloB.oggetto);
+  // lo schema «rannicchiati»: una pedana a parte
+  const pedana = new THREE.Group(); pedana.position.set(0, 0, 60); scena.add(pedana);
+  { const d = cil(2.6, 2.6, .3, tinta(0x24324d, { roughness: .9 }), 48); d.position.y = -.15; pedana.add(d);
+    const bordo = cil(2.68, 2.68, .12, base(0x2e90fa), 48); bordo.position.y = -.26; pedana.add(bordo);
+    [[-1.5, .6, .28], [1.35, -.5, .22], [-.9, -1.4, .18], [1.6, 1.0, .16]].forEach(([x, z, r], i) => {
+      const q = new THREE.Mesh(new THREE.DodecahedronGeometry(r, 0), tinta(i % 2 ? 0x8a8d93 : 0x7a5a3c, { roughness: 1, flatShading: true })); q.position.set(x, r * .7, z); q.rotation.set(i, i * 2, 0); pedana.add(q); }); }
+  const persC = persona(0xf2a516, 1.25, 0x3b4b6b); pedana.add(persC.root); persC.root.rotation.y = .5;
+
+  /* ---------------------------------------------------------------- segni: divieto, croci, frecce, crepe */
+  const texDivieto = tela(256, 256, (g, w) => {
+    g.fillStyle = '#fff'; g.beginPath(); g.arc(w / 2, w / 2, w * .46, 0, 6.2832); g.fill();
+    g.strokeStyle = '#d92b22'; g.lineWidth = w * .12; g.beginPath(); g.arc(w / 2, w / 2, w * .4, 0, 6.2832); g.stroke();
+    g.lineWidth = w * .11; g.beginPath(); g.moveTo(w * .22, w * .22); g.lineTo(w * .78, w * .78); g.stroke();
+  });
+  const texCroce = tela(128, 128, (g, w) => {
+    g.lineCap = 'round'; g.strokeStyle = '#fff'; g.lineWidth = 34;
+    g.beginPath(); g.moveTo(26, 26); g.lineTo(102, 102); g.moveTo(102, 26); g.lineTo(26, 102); g.stroke();
+    g.strokeStyle = '#e0342a'; g.lineWidth = 22;
+    g.beginPath(); g.moveTo(26, 26); g.lineTo(102, 102); g.moveTo(102, 26); g.lineTo(26, 102); g.stroke();
+  });
+  const sprite = (tex, s) => { const q = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthTest: false })); q.scale.setScalar(s); q.renderOrder = 9; return q; };
+  const croceAlbero = sprite(texCroce, 2.4), crocePalo = sprite(texCroce, 2.4); plastico.add(croceAlbero, crocePalo);
+  const divieto = new THREE.Group(); plastico.add(divieto);
+  { const p = cil(.07, .07, 2.3, tinta(0xc9ced6, { metalness: .5, roughness: .4 }), 8); p.position.y = 1.15; divieto.add(p);
+    const d = sprite(texDivieto, 1.7); d.material.depthTest = true; d.position.y = 2.7; divieto.add(d); }
+  // nastri appoggiati al terreno (frecce del percorso e crepe): si ridisegnano a ogni fotogramma sulla quota del momento
+  function nastro(punti, larg, colore, o = {}) {
+    const N = o.n || 56, cum = [0];
+    for (let i = 1; i < punti.length; i++) cum.push(cum[i - 1] + Math.hypot(punti[i][0] - punti[i - 1][0], punti[i][1] - punti[i - 1][1]));
+    const tot = cum[cum.length - 1];
+    const a = u => { const d = u * tot; let k = 1; while (k < punti.length - 1 && cum[k] < d) k++; const w = (d - cum[k - 1]) / Math.max(1e-6, cum[k] - cum[k - 1]);
+      return [mix(punti[k - 1][0], punti[k][0], w), mix(punti[k - 1][1], punti[k][1], w)]; };
+    const pos = new Float32Array((N * 2 + 3) * 3), idx = [];
+    for (let i = 0; i < N - 1; i++) idx.push(i * 2, i * 2 + 1, i * 2 + 2, i * 2 + 2, i * 2 + 1, i * 2 + 3);
+    idx.push(N * 2, N * 2 + 1, N * 2 + 2);
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setIndex(idx);
+    const m = new THREE.Mesh(g, base(colore, { side: THREE.DoubleSide, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));
+    m.frustumCulled = false; m.renderOrder = 4; plastico.add(m);
+    const su = o.su == null ? .22 : o.su;
+    function aggiorna(u, alfa = 1) {
+      m.visible = u > .01 && alfa > .01; if (!m.visible) return;
+      m.material.opacity = alfa;
+      const punta = o.punta ? 2.2 * larg / tot : 0, uc = Math.max(.02, u * (1 - punta));
+      for (let i = 0; i < N; i++) {
+        const q = uc * i / (N - 1), p = a(q), p2 = a(Math.min(1, q + .01)), p1 = a(Math.max(0, q - .01));
+        let dx = p2[0] - p1[0], dz = p2[1] - p1[1]; const l = Math.hypot(dx, dz) || 1; dx /= l; dz /= l;
+        const lw = larg * (o.fuso ? Math.sin(Math.PI * clamp(i / (N - 1))) * .85 + .15 : 1) * .5;
+        const ax = p[0] - dz * lw, az = p[1] + dx * lw, bx = p[0] + dz * lw, bz = p[1] - dx * lw;
+        pos.set([ax, quotaT(ax, az) + su, az, bx, quotaT(bx, bz) + su, bz], i * 6);
+        if (i === N - 1) {
+          const hw = o.punta ? larg * 1.15 : 0, lp = o.punta ? 2.2 * larg : 0, tx = p[0] + dx * lp, tz = p[1] + dz * lp;
+          pos.set([p[0] - dz * hw, quotaT(p[0] - dz * hw, p[1] + dx * hw) + su, p[1] + dx * hw,
+                   p[0] + dz * hw, quotaT(p[0] + dz * hw, p[1] - dx * hw) + su, p[1] - dx * hw, tx, quotaT(tx, tz) + su, tz], N * 6);
+        }
+      }
+      g.attributes.position.needsUpdate = true;
+    }
+    return { aggiorna, a, mesh: m };
+  }
+  const PB = [[-5, 20.4], [6.2, 19.8], [8.6, 10.6], [12.6, 5.6]];              // la via di fuga: di lato, poi più in alto
+  const frecciaRossa = nastro([[-5, -9.5], [-5.2, -3], [-4.8, 4], [-5, 12.6]], 1.5, 0xe0342a, { punta: true, su: .35 });
+  const frecciaVerde = nastro([[-3.4, 20.3], PB[1], PB[2], [12, 6.3]], 1.25, 0x2fbf62, { punta: true, su: .3 });
+  const arco = (dz, amp) => Array.from({ length: 15 }, (_, i) => { const u = i / 14 - .5; return [FA.xc + u * 9.4, FA.zt + dz + amp * 4 * u * u + (hash(i * 5.3 + dz) - .5) * .5]; });
+  const crepaCiglio = nastro(Array.from({ length: 13 }, (_, i) => { const u = i / 12 - .5; return [FC.xc + u * 7, FC.zt - .15 + 5.2 * u * u + (hash(i * 3.9) - .5) * .35]; }), .34, 0x1b1410, { fuso: true, su: .07, n: 36 });
+  const crepeTerra = [nastro(arco(-.9, 1.9), .42, 0x1b1410, { fuso: true, su: .07, n: 40 }), nastro(arco(.9, 1.5).slice(3, 12), .26, 0x1b1410, { fuso: true, su: .07, n: 28 })];
+
+  /* ---------------------------------------------------------------- pioggia sul plastico */
+  const pioggiaP = M3.particelle({ tipo: 'pioggia', numero: 1500, centro: [-4, 12, 0], dimensioni: [52, 30, 54], vento: [-3, 1.2], opacita: .6, seme: 7, colore: '#cfe2ff' });
+  scena.add(pioggiaP.oggetto);
+
+  /* ================================================================ TELECAMERE */
+  const ins = (r, f = 32) => {
+    const z = camera.userData.zona, st = camera.userData.stage || { H };
+    const hz = z ? (z.basso - z.alto) / st.H : 1, tv = Math.tan(f * Math.PI / 360);
+    return r / Math.sin(Math.min(Math.atan(tv * hz * .92), Math.atan(tv * camera.aspect * .92)));
+  };
+  // rilievo (km): tuffo dall'alto, poi il volo radente da Genzano verso il lago
+  const G = CONFIG.luoghi.genzano, N = CONFIG.luoghi.nemi;
+  const camR = M3.telecamera(camera, [
+    { t: 0, bersaglio: { lat: 41.726, lon: 12.684, sopra: 0 }, az: 8, el: 86, dist: 40, fov: 32 },
+    { t: T.cut1 + .5, bersaglio: { lat: 41.7098, lon: 12.6945, sopra: 0 }, az: -48, el: 38, dist: 7.5 },
+    { t: T.cut2, bersaglio: { lat: 41.7096, lon: 12.6950, sopra: 60 }, az: 238, el: 17, dist: 4.4 },
+    { t: S(2), bersaglio: { lat: 41.7093, lon: 12.6942, sopra: 60 }, az: 212, el: 12, dist: 3.1, facilita: 'lineare' }
+  ], { rilievo: ril });
+  // plastico (m)
+  const KP = [];
+  const chiave = (t, b, az, el, r, extra = {}) => KP.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(r), fov: 32 }, extra));
+  const VISTE = {
+    pendio: [[-4, 6.5, -1.5], -22, 24, 19],
+    fianco: [[1, 3.5, -1], -66, 15, 20],
+    ciglio: [[-5, 13, -12.3], -18, 30, 5.8],
+    ciglio2: [[-4.6, 12.6, -12.6], -34, 24, 7.2],
+    piede: [[-4.6, 2.3, 7.6], 12, 18, 6.6],
+    smott: [[-9.3, 6.6, -1.9], -24, 30, 4.8],
+    alto: [[-.5, 2.5, 5.5], 8, 52, 21],
+    alto2: [[-.5, 2.5, 5.5], 36, 46, 21],
+    pedana: [[0, 1.0, 60], -16, 14, 2.25],
+    strada: [[5.5, 1.5, 16.6], -60, 17, 10.5],
+    fine: [[3, 2.5, 11], -40, 30, 20]
+  };
+  const vista = (t, nome, extra) => { const v = VISTE[nome]; chiave(t, v[0], v[1], v[2], v[3], extra); };
+  vista(T.cut1, 'pendio'); vista(T.giro0, 'pendio'); vista(T.giro1, 'fianco'); vista(T.cut2, 'fianco');
+  chiave(S(2), [-5, 12.8, -12], -18, 30, 7.4); vista(S(2) + .5, 'ciglio'); vista(T.muri - .4, 'ciglio');
+  vista(T.muri + .2, 'piede'); vista(T.smott + .1, 'piede');
+  vista(T.smott + .7, 'smott'); vista(S(3), 'smott');
+  chiave(S(3) + 1.2, [2, 2.4, 11], -30, 13, 8, { passa: true });                    // carrellata lungo il muro
+  chiave(T.allont - .3, [-5.5, 2.4, 12], -30, 13, 8); chiave(S(4), [-5.5, 2.4, 12], -30, 13, 8);
+  vista(S(4) + 1.95, 'alto'); vista(T.giro5, 'alto'); vista(S(5), 'alto2');
+  vista(S(5) + .001, 'pedana'); vista(T.cut6, 'pedana');
+  chiave(T.cut6 + .001, [-4.6, 12.4, -12.2], -40, 26, 9.4); vista(T.cut6 + 1.0, 'ciglio2'); vista(S(6), 'ciglio2');
+  vista(S(6) + 1.5, 'strada'); vista(T.carta - .35, 'strada'); vista(TOTAL, 'fine');
+  const camP = M3.telecamera(camera, KP, {});
+  // movimenti veri: ogni telecamera conta solo nei tratti in cui è lei a inquadrare
+  const tratti = (mv, finestre) => { const r = []; mv.forEach(m => finestre.forEach(([a, b]) => { const i = Math.max(a, m.inizio), f = Math.min(b, m.fine); if (f - i > .02) r.push({ inizio: i, fine: f }); })); return r; };
+  const cam = { movimenti: () => tratti(camR.movimenti(), [[0, T.cut1], [T.cut2, S(2)]]).concat(tratti(camP.movimenti(), [[T.cut1, T.cut2], [S(2), TOTAL]])) };
+
+  /* ================================================================ SCHEDE */
+  const SCH = [];
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore });
+  const vs = (dx, dy) => ({ dx, dy });
+  const ROSSO = '#ef4136', AMBRA = '#f59e0b', VERDE = '#22a04b';
+  const terra = (x, z, su = 0) => V(x, quotaT(x, z) + su, z);
+  scheda('frana', 'Terra, fango o roccia', 'CHE SCIVOLA LUNGO UN PENDIO', () => terra(-5, 1, .4), vs(170, -330), parola(0, 'terra') - .2, T.giro0 - .3, AMBRA);
+  scheda('piogge', 'Piogge forti', 'O CHE DURANO A LUNGO', () => V(XT, h0(XT, -4) - 1.1, -4), vs(40, -330), parola(1, 'piogge') - .15, T.cut2 - .3);
+  scheda('crepeT', 'Crepe nel terreno', null, () => terra(-3.2, -12.6, .1), vs(150, 250), T.crepe + .1, T.muri - .5, AMBRA);
+  scheda('crepeM', 'Crepe nei muri', null, () => V(-4.6, 1.2, 10.3), vs(230, 250), T.muri + .25, T.smott - .05, AMBRA);
+  scheda('inclina', 'Alberi e pali inclinati', null, () => paloSegno.localToWorld(V(0, 5.4, 0)), vs(-60, -230), T.alberi + .45, T.smott - .05, AMBRA);
+  scheda('smott', 'Piccoli smottamenti', null, () => terra(-9.3, -1.2, .2), vs(170, 250), T.smott + .75, T.avvisa + 1.1, AMBRA);
+  scheda('comune', 'Avvisa il Comune', 'SE NOTI QUESTI SEGNALI', null, null, T.avvisa - .1, E(2) - .4, VERDE);
+  scheda('via', 'Allontanati subito', 'SE LA TERRA SI MUOVE', () => persB.testa(), vs(-150, -260), T.allont + .05, E(3) - .4, VERDE);
+  scheda('lato', 'Spostati di lato', 'FUORI DAL PERCORSO DELLA FRANA', () => terra(1.2, 20.1, .4), vs(120, 250), T.spostati + .05, T.verso - .2, VERDE);
+  scheda('alto', 'Un punto più alto e stabile', null, () => terra(12.6, 5.6, .3), vs(-160, -300), T.verso + .1, T.non5 - .2, VERDE);
+  scheda('sotto', 'Non fermarti', 'SOTTO ALBERI E PALI', () => paloVia.localToWorld(V(0, 6.2, 0)), vs(-250, -210), T.non5 + .15, T.giro5 - .25, ROSSO);
+  scheda('rann', 'Rannicchiati e proteggi la testa', 'SE NON RIESCI A SCAPPARE', () => persC.testa(), vs(40, -330), T.rann - .3, T.cut6 - .25, AMBRA);
+  scheda('bordo', 'Non avvicinarti al bordo', 'PUÒ CEDERE ANCORA', () => terra(-4.2, -14.3, .2), vs(190, 290), T.cut6 + 1.05, E(5) - .4, ROSSO);
+  scheda('fermati', 'Fermati lontano', null, () => autoA.g.localToWorld(V(0, 2.1, 0)), vs(-60, -270), T.fermati + .15, T.carta - .45, VERDE);
+  scheda('avvisa', 'Avvisa chi sta arrivando', null, () => autoB.g.localToWorld(V(0, 2.1, 0)), vs(-130, 280), T.avvisa7 + .2, T.carta - .45, VERDE);
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  /* eventi per la colonna sonora (colonna.py li legge dalla pagina: gli effetti cadono sull'immagine) */
+  window.EVENTI = {
+    passaggi: [T.cut1, T.giro0 + .6, T.cut2, S(2), T.muri - .1, T.smott + .4, S(4) + .9, S(5), T.cut6, S(6) + .7],
+    frane: [[T.frana1, T.frana1 + 4.5, 0], [T.smott + .75, T.smott + 2.4, -8], [T.frana4, T.frana4 + 4.5, 0], [T.frana4 + 3.6, T.frana4 + 8.1, -3],
+            [T.cedere - .05, T.cedere + 2.2, -4]],
+    pioggia: [[T.pioggia0, S(2) + .3]],
+    schede: SCH.map(s => s.inizio).concat([.35, T.carta, T.sito]),
+    cartello: T.carta
+  };
+
+  const fonte = document.getElementById('fonte'), titolo = document.getElementById('titolo');
+  const chiusura = document.getElementById('chiusura'), sito = document.getElementById('sito');
+  const luoghi = ['genzano', 'nemi'].map(k => ({ k, e: document.getElementById('l-' + k), p: document.getElementById('p-' + k), da: T[k],
+    pos: ril.sopra(CONFIG.etichette[k].lat, CONFIG.etichette[k].lon, 25) }));
+  const attribuzione = ((RILIEVO && RILIEVO.attribuzione) || '').replace(' da EU-DEM', '\nda EU-DEM');
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+  const comparsa = (o, t, t0, dur = .4) => { const u = clamp(prog(t, t0, dur)); o.visible = u > 0; o.scale.setScalar(Math.max(.001, ease.morbida(u) * (1 + .12 * Math.sin(u * Math.PI)))); };
+
+  /* ================================================================ ANIMAZIONE */
+  function anima(t) {
+    const R = inRilievo(t), selva = SELVA(t);
+    ril.gruppo.visible = R; plastico.visible = !R && !(t >= S(5) && t < T.cut6);
+    pedana.visible = t >= S(5) - .05 && t < T.cut6 + .05;
+    pioggiaR.oggetto.visible = R && t >= T.cut2;
+    if (pioggiaR.oggetto.visible) pioggiaR.aggiorna(t, 1);
+    pioggiaP.oggetto.visible = !R && t >= T.pioggia0 && t < T.cut2;
+    if (pioggiaP.oggetto.visible) pioggiaP.aggiorna(t, liscia(prog(t, T.pioggia0, 1.2)));
+    if (!plastico.visible && !pedana.visible) return;
+    // --- stato del terreno
+    if (selva) {
+      ST.a = ease.morbida(prog(t, T.frana1, T.frana1d)); ST.s = 0; ST.c = 0;
+      ST.bagnato = liscia(prog(t, T.pioggia0 + .2, 2.2)); ST.fronte = t < T.zuppa ? 0 : .12 + 2.3 * liscia(prog(t, T.zuppa, T.zuppad));
+    } else {
+      ST.a = .04 * liscia(prog(t, T.crepe, .8)) + .68 * ease.morbida(prog(t, T.frana4, T.frana4d)) + .28 * liscia(prog(t, S(4) + .2, D(4) - 2.4));
+      ST.s = liscia(prog(t, T.smott + .75, 1.1)); ST.c = liscia(prog(t, T.cedere, 1.3));
+      ST.bagnato = 0; ST.fronte = 0;
+    }
+    set.visible = !selva;
+    destro.gruppo.position.set(selva ? 19 * esplodi(prog(t, T.apre, T.apred)) : 0, selva ? -9 * esplodi(prog(t, T.apre, T.apred)) : 0, 0);
+    if (plastico.visible) { sinistro.aggiorna(); destro.aggiorna(); }
+    // --- alberi
+    const sa = ST.a, avanti = clamp((sa - .04) / .96);
+    for (const a of alberi) {
+      let x = a.x, z = a.z, incl = 0;
+      if (a.frana === 'selva') { a.g.visible = selva; z += 10.5 * sa; incl = .55 * liscia(sa * 1.6); }
+      if (a.frana === 'segno') { a.g.visible = !selva; z += 7.5 * avanti; incl = .2 * liscia(prog(t, T.alberi, T.inclinano + .5 - T.alberi)) + .75 * liscia(avanti * 1.8); }
+      a.g.position.set(x, quotaT(x, z) - .1, z); a.g.rotation.set(incl, 0, incl * .25);
+    }
+    paloSegno.visible = !selva;
+    { const z = 6.4 + 6.5 * avanti, incl = .26 * liscia(prog(t, T.alberi + .15, T.inclinano + .5 - T.alberi)) + 1.05 * liscia(avanti * 1.7);
+      paloSegno.position.set(-2.4, quotaT(-2.4, z) - .15, z); paloSegno.rotation.set(incl, .3, -incl * .2); }
+    alberoVia.g.visible = paloVia.visible = !selva;
+    paloVia.position.set(6.7, quotaT(6.7, 13.3) - .1, 13.3);
+    // --- sassi
+    muoviSassi(FA, sa, 0, 60); muoviSassi(FS, ST.s, 60, 10); muoviSassi(FC, ST.c, 70, 14);
+    sassi.instanceMatrix.needsUpdate = true;
+    // --- crepe nel terreno (scena dei segnali) e nei muri
+    const cr = selva ? 0 : liscia(prog(t, T.crepe, .9)), crVia = 1 - liscia(prog(t, T.frana4 + .5, 1.2));
+    crepeTerra.forEach((c, i) => c.aggiorna(liscia(cr * 1.3 - i * .25), crVia));
+    crepaCiglio.aggiorna(t >= T.cut6 - .05 ? 1 : 0, 1 - liscia(prog(t, T.cedere + .1, .6)));
+    crepeMuro.forEach((c, i) => { c.material.opacity = selva ? 0 : liscia(prog(t, T.muri - .1 + i * .25, .5)); c.visible = c.material.opacity > .01 && sa < muro[i ? 4 : 3].soglia; });
+    // --- muro che cede sotto la spinta
+    muro.forEach((m, i) => {
+      const c = liscia((sa - m.soglia) / .13) * m.dentro;
+      m.perno.rotation.x = 1.42 * c; m.perno.position.set(m.x, -.25 * c, 10 + 1.5 * c);
+    });
+    // --- persone
+    { const ta = T.allont - .2, t0 = T.spostati - .05, t1 = T.verso - .25, t2 = T.non5 - .5;
+      let p, ang = Math.PI, ph = 0;
+      if (t < t0) { const u = ease.morbida(prog(t, ta, 1.5)); p = [-5, mix(17.9, PB[0][1], u)]; if (u > 0 && u < 1) { ph = (t - ta) * 11; ang = 0; } }
+      else if (t < t1) { const u = ease.morbida(prog(t, t0, t1 - t0)); p = [mix(PB[0][0], PB[1][0], u), mix(PB[0][1], PB[1][1], u)]; ang = Math.PI / 2; if (u > 0 && u < 1) ph = (t - t0) * 11; }
+      else { const u = ease.morbida(prog(t, t1, t2 - t1)); p = u < .55 ? [mix(PB[1][0], PB[2][0], u / .55), mix(PB[1][1], PB[2][1], u / .55)] : [mix(PB[2][0], PB[3][0], (u - .55) / .45), mix(PB[2][1], PB[3][1], (u - .55) / .45)];
+        ang = u < 1 ? Math.PI * .8 : Math.PI * 1.25; if (u > 0 && u < 1) ph = (t - t1) * 11; }
+      persB.root.position.set(p[0], Math.max(.08, quotaT(p[0], p[1]) + .03), p[1]);
+      persB.root.rotation.y = ang; persB.posa(0, 0, ph);
+      persB.root.visible = !selva && t >= S(3) + .25;
+      anelloB.oggetto.position.set(p[0], Math.max(.1, quotaT(p[0], p[1])) + .22, p[1]); anelloB.aggiorna(t, { inizio: S(4) + .8, fine: T.verso - .3 }); }
+    persC.posa(liscia(prog(t, T.rann - .1, .7)), liscia(prog(t, T.proteggi - .15, .6)), 0);
+    // --- frecce del percorso (scena «spostati di lato»)
+    const fr = fin(t, S(4) + .5, S(5), .3, .3);
+    frecciaRossa.aggiorna(liscia(prog(t, S(4) + .5, 1.4)), fr * .92);
+    frecciaVerde.aggiorna(liscia(prog(t, T.spostati, T.non5 - .6 - T.spostati)), fr * .95);
+    // --- croci su albero e palo, divieto sul ciglio
+    const cx = fin(t, T.non5, S(5), .3, .2);
+    [[croceAlbero, V(2.9, quotaT(2.9, 12.7) + 6.6, 12.7)], [crocePalo, V(6.7, quotaT(6.7, 13.3) + 7.6, 13.3)]].forEach(([c, p], i) => {
+      c.visible = cx > .01; c.position.copy(p); c.material.opacity = cx; c.scale.setScalar(2.6 * (1 + .12 * Math.sin((t - T.non5) * 6 + i))); });
+    divieto.visible = !selva && t >= T.cut6 - .05 && t < S(6) + 1.6;
+    divieto.position.set(-.6, quotaT(-.6, -17.2), -17.2);
+    // --- automobili
+    { const u = prog(t, S(6) + .9, T.fermati + .1 - S(6) - .9), x = mix(27, 12.6, 1 - (1 - u) * (1 - u));
+      autoA.g.visible = t >= S(6) && x < 22.2; autoA.g.position.set(x, .06, 17.5);
+      const lam = t > T.fermati + .2 && Math.sin((t - T.fermati) * 9) > 0;
+      autoA.frecce.forEach(f => f.material.color.set(lam ? 0xffb020 : 0x7a4a00)); }
+    { const u = prog(t, T.avvisa7 - .7, 1.3), x = mix(27.5, 19.4, 1 - (1 - u) * (1 - u));
+      autoB.g.visible = t >= S(6) && x < 22.2; autoB.g.position.set(x, .06, 17.5); }
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    const R = inRilievo(t);
+    (R ? camR : camP).applica(t);
+    anima(t);
+    plastico.updateMatrixWorld(true); pedana.updateMatrixWorld(true);
+    vicino.disegna(scena, camera);
+    const k = sceneA(t), sc = SC[k];
+    IMP.aggiorna(stato, t, { passoHUD: k + (k === 0 ? 1 : clamp((t - sc.inizio) / .4)), hud: CONFIG.hud[k], notaVisibile: true,
+                             nota: R ? CONFIG.notaRilievo : CONFIG.notaSchema });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const s of SCH) {
+      let punto = null, vis = true, p = null;
+      const attiva = t >= s.inizio - .1 && t <= s.fine + .5;
+      if (s.punto && attiva) { p = M3.proietta(s.punto(), camera, { zona: L.zonaSchede, margine: L.margine }); punto = p.punto; vis = p.visibile; }
+      proiezioni[s.id] = p;
+      IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
+        inizio: s.inizio, fine: s.fine, visibile: vis, centro: s.punto ? null : { x: W / 2, y: L.zona.alto + 150 } });
+    }
+    // titolo, nomi dei luoghi, cartello finale
+    const vt = fin(t, .3, T.cut1 - .05, .45, .2);
+    titolo.style.opacity = vt.toFixed(3); titolo.style.top = (L.zona.alto + 70 + 30 * (1 - ease.outCubic(prog(t, .3, .5)))) + 'px';
+    for (const l of luoghi) {
+      const v = R ? fin(t, l.da, S(2) - .05, .35, .2) : 0;
+      const p = v > 0 ? M3.proietta(l.pos, camera, { zona: L.zona, margine: L.margine + 110 }) : null, ok = p && p.visibile ? v : 0;
+      l.e.style.opacity = l.p.style.opacity = ok.toFixed(3);
+      if (ok > 0) { l.p.style.left = p.x + 'px'; l.p.style.top = p.y + 'px'; l.e.style.left = (p.x - l.e.offsetWidth / 2) + 'px'; l.e.style.top = (p.y - 66) + 'px'; }
+    }
+    const vc = fin(t, T.carta, TOTAL + 1, .4, .2);
+    velo.style.opacity = (.74 * liscia(prog(t, T.carta - .3, .6))).toFixed(3);
+    chiusura.style.opacity = vc.toFixed(3); chiusura.style.top = (L.zona.alto + 130 + 26 * (1 - ease.outCubic(prog(t, T.carta, .5)))) + 'px';
+    sito.style.opacity = fin(t, T.sito, TOTAL + 1, .4, .2).toFixed(3); sito.style.top = (L.zona.alto + 690) + 'px';
+    const testo = R ? attribuzione : (t >= T.carta - .3 ? CONFIG.fonte : '');
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.display = testo ? '' : 'none';
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(s => s.punto).map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine, proiezione: proiezioni[s.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  IMP.caricaFont().then(() => { render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>

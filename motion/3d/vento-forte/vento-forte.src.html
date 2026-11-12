@@ -23,9 +23,11 @@
            line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
            background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
   #titolo, #grande { position: absolute; z-index: 31; left: 96px; width: 888px; text-align: center; opacity: 0;
+           box-sizing: border-box;
            font-family: 'Titillium Web', sans-serif; color: #eef2f7; }
   #titolo .a { font-weight: 700; font-size: 104px; line-height: 1.02; text-shadow: 0 2px 4px rgba(4, 8, 16, .95), 0 0 2px rgba(4, 8, 16, .9); }
   #titolo .b { font-weight: 600; font-size: 50px; line-height: 1.2; color: #ffcc00; text-shadow: 0 2px 4px rgba(4, 8, 16, .95), 0 0 2px rgba(4, 8, 16, .9); }
+  #grande { left: 290px; width: 500px; padding: 14px 0 6px; border-radius: 22px; background: rgba(10, 18, 32, .78); border: 3px solid #ffcc00; }
   #grande .a { font-weight: 600; font-size: 40px; line-height: 1.1; letter-spacing: 1px; }
   #grande .b { font-weight: 700; font-size: 212px; line-height: .98; color: #ffcc00; }
 </style>
@@ -149,7 +151,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     for (const s of SEGNI) {
       const u = prog(t, s.t0, .4), via = prog(t, s.t1, .25);
       s.sp.visible = u > 0 && via < 1;
-      const k = (u < 1 ? ease.morbida(u) * (1 + .22 * Math.sin(u * Math.PI)) : 1 + .035 * Math.sin((t - s.t0) * 3.2)) * (1 - liscia(via));
+      const k = (u < 1 ? ease.morbida(u) * (1 + .22 * Math.sin(u * Math.PI)) : 1 + .06 * Math.sin((t - s.t0) * 3.2)) * (1 - liscia(via));
       s.sp.scale.setScalar(Math.max(.001, s.lato * k));
     }
   }
@@ -180,12 +182,12 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   const ril = M3.rilievo(RILIEVO || M3.rilievoDiProva(), { esagerazione: CONFIG.esagerazione, laghi: RILIEVO ? [
     { nome: 'Lago Albano', lat: 41.750, lon: 12.665, profondita: 167 }, { nome: 'Lago di Nemi', lat: 41.715, lon: 12.700, profondita: 33 }] : [] });
   scenaRil.add(ril.gruppo);
-  const BB = ril.riquadro, lat0 = BB[0], lon0 = BB[1], lat1 = BB[2], lon1 = BB[3];
+  const BB = ril.riquadro, lat0 = BB.lat_min, lon0 = BB.lon_min, lat1 = BB.lat_max, lon1 = BB.lon_max;
   const nastriRil = creaNastri(30, 12); scenaRil.add(nastriRil.mesh);
   const DIR_EST = V(1, 0, 0), DIR_SUD = V(0, 0, 1);
   const camRil = M3.telecamera(cameraRil, [
     { t: 0, bersaglio: { lat: 41.722, lon: 12.684, sopra: 0 }, az: 0, el: 80, dist: 62, fov: 32 },
-    { t: 3.9, bersaglio: { lat: 41.7075, lon: 12.689, sopra: 0 }, az: -14, el: 40, dist: 5.2, facilita: 'lineare' }
+    { t: 3.9, bersaglio: { lat: 41.7075, lon: 12.689, sopra: 0 }, az: -14, el: 42, dist: 8.5, facilita: 'lineare' }
   ], { rilievo: ril });
 
   /* ================================================================ IL QUARTIERE (plastico) */
@@ -217,8 +219,9 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   }
   const T0 = albero(-22.2, 1.1, 6.2, 1), TA = albero(10.8, 1.1, 6.4, 2), TC = albero(27.2, -8.5, 5.6, 3);
   const VN = [albero(30, 1.1, 6.4, 4), albero(36, 1.1, 6.8, 5), albero(42, 1.1, 6.2, 6)];
-  const VS = [albero(33, 9.9, 6.2, 7), albero(39, 9.9, 6.6, 8), albero(45, 9.9, 6.0, 9)];
+  const VS = [albero(40.5, 9.9, 6.6, 8), albero(46, 9.9, 6.0, 9)];
   albero(41, 14.5, 5.6, 10); albero(45.4, 18, 6.0, 11); albero(-39.5, 16, 5.4, 12);
+  const zolla = cil(1.0, .7, .3, matTerra, 10); zolla.position.y = .05; zolla.visible = false; VN[1].g.add(zolla);   // la zolla dell'albero caduto
   // panchina del parco
   metti(quartiere, box(1.8, .08, .5, matLegno), 43, .55, 12.4); metti(quartiere, box(1.8, .5, .06, matLegno), 43, .85, 12.15);
   [-.8, .8].forEach(d => metti(quartiere, box(.08, .5, .5, matScuro), 43 + d, .3, 12.4));
@@ -263,7 +266,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   }
   [0, 3.2, 6.4].forEach((y, p) => {
     [-6.5, 6.5].forEach(x => finestra(pal, x, y + 1.0, PZ + .01));
-    if (p > 0) finestra(pal, 0, y + 1.0, PZ + .01, 1.2, 1.4, false, p === 2);       // al secondo piano è aperta (davanzale)
+    if (p > 0) finestra(pal, .65, y + 1.0, PZ + .01, 1.2, 1.4, false, p === 2);       // al secondo piano è aperta (davanzale)
     [-4.4, -8.4].forEach(z => finestra(pal, 8.01, y + 1.0, z, 1.2, 1.4, true));
   });
   metti(pal, box(1.5, 2.3, .08, tinta(0x7a4b2b)), 0, 1.15, PZ + .02);
@@ -318,7 +321,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   metti(fascia, box(.62, .07, .78, matGiallo), 0, 0, 0); metti(fascia, box(.1, .12, .1, matScuro), -.3, 0, .2);
   // davanzale della finestra centrale del secondo piano
   const vasoDav = vaso(1, 1.25); quartiere.add(vasoDav);
-  const davSu = V(.05, 7.4, PZ + .12), davDentro = V(.05, 7.45, PZ - .4);
+  const davSu = V(.7, 7.4, PZ + .12), davDentro = V(.7, 7.45, PZ - .4);
 
   /* ---------------------------------------------------------------- edificio con l'impalcatura (x da -38 a -18) */
   const edW = new THREE.Group(); quartiere.add(edW);
@@ -409,7 +412,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
       g.fillRect(c * 16 - (r % 2) * 8, r * 16, 15, 15); g.fillStyle = 'rgba(40,12,4,.35)'; g.fillRect(c * 16 - (r % 2) * 8, r * 16 + 14, 16, 2);
     }
   });
-  const matFalda = [matTegola, matTegola, tinta(0xffffff, { map: texTegole, roughness: .85 }), tinta(0x9c8a72), matTegola, matTegola];
+  const matFalda = [matTegola, matTegola, tinta(0xffffff, { map: texTegole, roughness: .85 }), tinta(0xcdb898, { emissive: 0x4a3f2c, emissiveIntensity: .6 }), matTegola, matTegola];
   const tetto = new THREE.Group(); tetto.position.set(CX, Y0 + HM, CZ - 4.3); casa.add(tetto);
   const PEND = Math.atan2(2.0, 4.6), LF = Math.hypot(2.0, 4.6) + .25;
   const faldaS = new THREE.Mesh(new THREE.BoxGeometry(11.3, .2, LF), matFalda); faldaS.position.set(0, 1.05, 4.3 + 2.4); faldaS.rotation.x = PEND; tetto.add(faldaS);
@@ -452,13 +455,13 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   const percorso = new THREE.CatmullRomCurve3([V(-23.4, .03, 3.3), V(-27.6, .03, 3.9), V(-30.6, .03, 6.6), V(-30.9, .03, 11.4), V(-30.3, .03, 16.4)]);
 
   /* ---------------------------------------------------------------- pali e cavo (prima teso, dopo il vento a terra) */
-  const PALI = [V(27.4, 0, .45), V(47.2, 0, .45)];
+  const PALI = [V(26, 0, .45), V(47.2, 0, .45)];
   PALI.forEach(p => { metti(quartiere, cil(.1, .14, 7.6, matLegnoScuro, 8), p.x, 3.9, p.z); metti(quartiere, box(.1, .1, 1.3, matLegnoScuro), p.x, 7.3, p.z); });
-  const matCavo = tinta(0x16191f, { roughness: .6 });
-  const cavoTeso = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(27.4, 7.3, .95), V(32.5, 6.75, .95), V(37.3, 6.55, .95), V(42.1, 6.75, .95), V(47.2, 7.3, .95)]), 24, .05, 5), matCavo); quartiere.add(cavoTeso);
-  const cavoTerra = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(27.4, 7.3, .95), V(27.75, 4.2, 1.25), V(28.3, 1.2, 1.9), V(28.9, .2, 2.9), V(29.9, .12, 3.9), V(31.1, .12, 4.1), V(31.8, .12, 5.0), V(31.3, .12, 5.9), V(30.4, .12, 5.7)]), 48, .06, 5), matCavo); quartiere.add(cavoTerra);
+  const matCavo = tinta(0xc3c9d1, { roughness: .6 });
+  const cavoTeso = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(26, 7.3, .95), V(31.5, 6.75, .95), V(36.6, 6.55, .95), V(41.9, 6.75, .95), V(47.2, 7.3, .95)]), 24, .06, 5), matCavo); quartiere.add(cavoTeso);
+  const cavoTerra = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(26, 7.3, .95), V(26.4, 4.2, 1.3), V(27, 1.2, 2.0), V(27.8, .22, 3.0), V(29.2, .14, 4.0), V(30.6, .14, 4.2), V(31.5, .14, 5.0), V(31.1, .14, 5.9), V(30.2, .14, 5.7)]), 48, .09, 6), matCavo); quartiere.add(cavoTerra);
   const cavoMonco = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(47.2, 7.3, .95), V(46.9, 4.6, 1.1), V(46.75, 2.4, 1.2)]), 10, .05, 5), matCavo); quartiere.add(cavoMonco);
-  const PUNTA_CAVO = V(30.4, .25, 5.7);
+  const PUNTA_CAVO = V(30.2, .25, 5.7);
   // foglie a terra dopo il vento (si muovono appena)
   const foglie = [];
   for (let i = 0; i < 16; i++) {
@@ -527,23 +530,23 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   const K = [];
   const chiave = (t, b, az, el, r, extra = {}) => K.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(r), fov: 32 }, extra));
   const VISTE = {
-    quartiere: [[8.5, 4.2, -.5], -30, 24, 13.5],
-    balcone: [[2.1, 7.35, -1.3], -16, 26, 3.25],
-    via: [[-7, 3.2, 3], 14, 28, 13],
+    quartiere: [[7.5, 5, -4], -32, 22, 11],
+    balcone: [[2.75, 7.35, -1.3], -16, 26, 2.75],
+    via: [[-7.5, 4.6, -1.5], 14, 26, 11.5],
     auto: [[-23.6, 2.6, 2.2], 22, 26, 6.6],
     posto: [[-29.4, 1.8, 13.2], 22, 34, 7.2],
-    casa: [[CX + .2, 1.5, CZ - .3], 0, 47, 6.9],
-    vialeA: [[35.5, 3.4, 5], -34, 20, 9.5],
-    vialeB: [[35.5, 3.4, 5], -6, 20, 9.5],
+    casa: [[CX + .1, 1.3, CZ - .2], 0, 47, 5.9],
+    vialeA: [[32.5, 3.2, 3.2], 38, 17, 7.6],
+    vialeB: [[32.5, 3.2, 3.2], 14, 17, 7.6],
     tre: [[-13.6, 5.4, -1], -34, 18, 12.4],
     portale: [[4.2, 2.4, RZ + 1.2], -62, 17, 8.4],
     viadotto: [[23.5, -2.6, RZ], -30, 21, 25],
-    cavoAlto: [[32.6, 4.4, 4.4], -22, 52, 13],
-    cavo: [[32.6, 4.3, 4.4], -22, 31, 8.4]
+    cavoAlto: [[33, 4.2, 4.6], 82, 56, 13],
+    cavo: [[33, 4.2, 4.6], 82, 29, 7.6]
   };
   const vista = (t, n, extra = {}) => { const v = VISTE[n]; chiave(t, v[0], v[1], v[2], v[3], extra); };
   // 0: dall'alto (in dissolvenza con il rilievo) fino al quartiere
-  chiave(2.9, [8.5, 2, -.5], -12, 74, 52);
+  chiave(2.9, [7.5, 2, -4], -12, 74, 52);
   vista(EV.arrivo0, 'quartiere'); vista(S(1), 'quartiere');
   // 1: avvicinamento al balcone del secondo piano
   vista(EV.arrivo1, 'balcone'); vista(S(2), 'balcone');
@@ -585,7 +588,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   scheda('viadotti', 'Viadotti', 'RALLENTA', () => mondoS(V(27, -.9, 4.7)), { dx: 150, dy: 230 }, EV.arrivo5 + .6, E(5) - .4, AMBRA);
   scheda('cavi', 'Non toccare', 'I CAVI CADUTI A TERRA', () => PUNTA_CAVO, { dx: -200, dy: -300 }, EV.toccare + .05, EV.se - .15, ROSSO);
   scheda('blocca', 'Albero o cavo sulla strada', 'CHIAMA IL 112', () => V(36.3, 1.0, 5.4), { dx: 20, dy: -330 }, EV.se + .35, EV.chiama + .05, AMBRA);
-  scheda('fine', 'protezionecivilegenzano.it', 'RISCHI E PREVENZIONE · VENTO FORTE', null, null, EV.n112 + 1.5, TOTAL + 1, null, 742);
+  scheda('fine', 'protezionecivilegenzano.it', 'RISCHI E PREVENZIONE · VENTO FORTE', null, null, EV.n112 + 1.5, TOTAL + 1, null, 760);
   const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
   PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
 
@@ -593,17 +596,17 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
   const fineS1 = S(2) + .5;
   segno(true, V(B2.x - .45, B2.y + 1.75, B2.z + 1.45), .6, EV.riparo + 1.1, fineS1);
   segno(true, V(B2.x + 1.3, B2.y + 1.75, B2.z + .6), .6, EV.fissa + 1.45, fineS1);
-  segno(true, V(.05, 9.15, PZ + .2), .6, EV.davanzali + .95, fineS1);
+  segno(true, V(.7, 9.1, PZ + .2), .55, EV.davanzali + .95, fineS1);
   segno(false, V(-23.4, 3.5, 3.3), 1.7, EV.auto + .05, EV.parte - .1);
   segno(true, V(-30.3, 3.1, 16.4), 1.6, EV.parcheggiata + .1, S(3) + .4);
   segno(true, V(FX[0], Y0 + 1.7, CZ - 3.9), .75, EV.chiudi + .95, S(4) + .3);
   segno(true, V(FX[1], Y0 + 1.7, CZ - 3.9), .75, EV.chiudi + 1.1, S(4) + .3);
   segno(true, V(CX + 4.9, Y0 + 2.5, -5.8), .75, EV.chiudi + .8, S(4) + .3);
-  segno(false, V(36, 9.6, 3), 2.3, EV.evita + .1, EV.volo4 + .1);
+  segno(false, V(33, 9.2, 1.5), 2.0, EV.evita + .1, EV.volo4 + .1);
   segno(false, V(-24.4, 9.9, -1.3), 2.2, EV.impalcature, S(5));
   segno(false, V(-12.6, 7.1, .2), 2.0, EV.cartelloni - .05, S(5));
   segno(false, V(-4.45, PH + 1.9, PZ + .3), 2.0, EV.cornicioni - .05, S(5));
-  segno(false, V(30.6, 1.5, 5.3), 1.5, EV.toccare, 1e9);
+  segno(false, V(30.7, 1.5, 5.0), 1.5, EV.toccare, 1e9);
 
   const fonte = document.getElementById('fonte'), titolo = document.getElementById('titolo'), grande = document.getElementById('grande');
   fonte.style.fontFamily = titolo.style.fontFamily = grande.style.fontFamily = IMP.ENTI[ente].font.testo;
@@ -631,6 +634,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
         a.g.rotation.set(0, 0, -w * .2 * g);
         a.chioma.rotation.z = -w * .16 * g; a.chioma.rotation.x = w * .05 * Math.sin(t * 3.1 + a.seme);
       }
+      zolla.visible = t >= S(6);
       if (t >= S(6)) { VN[1].g.rotation.set(1.5, 0, -.12); VN[1].chioma.rotation.set(0, 0, 0); }
       aggiornaRamo(ramoA, t, EV.rami - .05, w); aggiornaRamo(ramoV, t, EV.spezzano - .05, w);
       // apertura: la tegola scivola e cade, il vaso cade dal balcone
@@ -674,7 +678,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
       cavoTeso.visible = !dopo; cavoTerra.visible = cavoMonco.visible = dopo;
       foglie.forEach(o => {
         o.f.visible = dopo;
-        if (dopo) { o.f.position.set(o.x + .5 * Math.sin((t - S(6)) * .45 + o.fase), .1, o.z + .25 * Math.sin((t - S(6)) * .6 + o.fase * 2)); o.f.rotation.set(-Math.PI / 2 + .25 * Math.sin(t * 1.4 + o.fase), 0, o.fase + (t - S(6)) * .5); }
+        if (dopo) { o.f.position.set(o.x + .9 * Math.sin((t - S(6)) * .7 + o.fase), .1 + .05 * Math.abs(Math.sin(t * 2.2 + o.fase)), o.z + .45 * Math.sin((t - S(6)) * .9 + o.fase * 2)); o.f.rotation.set(-Math.PI / 2 + .25 * Math.sin(t * 1.4 + o.fase), 0, o.fase + (t - S(6)) * .5); }
       });
       // nastri del vento attorno al punto guardato
       if (w > .02) {
@@ -696,7 +700,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
       manica.rotation.set(-.12 - .3 * (1 - gm) + .05 * Math.sin(t * 9), .1 * Math.sin(t * 5.3), 0);
       const cx = clamp(st.bersaglio.x, 4, 30), r = clamp(st.dist / 40, .5, 1.5), Lp = 26;
       aggiornaNastri(nastriS, camera, DIR_SUD, .1 * r * (.55 + .45 * gm), (i, j, v) => {
-        const s = fr(t * .6 + hash(i * 7.3)), a = s * Lp - j / nastriS.seg * (5 + 3 * hash(i * 2.9));
+        const s = fr(t * .6 + hash(i * 7.3)), a = s * Lp - j / nastriS.seg * (5 + 3 * hash(i * 2.9)) * Math.max(1, r * 1.7);
         v.set(cx + (hash(i * 5.1) - .5) * 30 * r + .4 * Math.sin(a * .33 + i * 2), .9 + 5.5 * hash(i * 3.7) + .3 * Math.sin(a * .5 + i), RZ - Lp * .5 + a);
         return Math.sin(Math.PI * j / nastriS.seg) * Math.sin(Math.PI * s);
       });
@@ -713,7 +717,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     if (vRil > 0) {
       camRil.applica(t);
       const lonL = lon1 - lon0;
-      aggiornaNastri(nastriRil, cameraRil, DIR_EST, .05 + .0035 * camRil.stato(t).dist, (i, j, v) => {
+      aggiornaNastri(nastriRil, cameraRil, DIR_EST, .016 + .0022 * camRil.stato(t).dist, (i, j, v) => {
         const s = fr(t * .42 + hash(i * 7.3)), lon = lon0 + .02 * lonL + s * lonL * .96 - j / nastriRil.seg * lonL * (.14 + .1 * hash(i * 2.9));
         const lat = lat0 + (.06 + .88 * hash(i * 5.1)) * (lat1 - lat0) + .004 * Math.sin((lon - lon0) * 160 + i);
         const lonC = clamp(lon, lon0 + 1e-4, lon1 - 1e-4);
@@ -751,7 +755,7 @@ const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).conc
     titolo.style.transform = 'translateY(' + ((1 - ease.morbida(prog(t, .2, .5))) * 18).toFixed(1) + 'px)';
     const ug = prog(t, EV.n112 - .15, .45);
     grande.style.opacity = clamp(ug * 2).toFixed(3); grande.style.display = ug > 0 ? '' : 'none';
-    grande.style.transform = 'scale(' + (ug < 1 ? ease.morbida(ug) * (1 + .12 * Math.sin(ug * Math.PI)) : 1).toFixed(4) + ')';
+    grande.style.transform = 'scale(' + (ug < 1 ? ease.morbida(ug) * (1 + .12 * Math.sin(ug * Math.PI)) : 1 + .02 * Math.sin((t - EV.n112 - .3) * 3)).toFixed(4) + ')';
     // crediti: attribuzione del rilievo finché si vede, fonte nella chiusura
     const testo = t < 3.3 ? attribuzione : k === SC.length - 1 ? CONFIG.fonte : '';
     if (fonte.textContent !== testo) fonte.textContent = testo;

@@ -74,7 +74,7 @@ effetti = [
     pop(parola(4, "dall'acqua") + 0.1, -6),
     passaggio(ev['apre'] + 0.5),
     pop(parola(5, 'finestre') + 0.45),
-    pop(parola(5, 'spine') + 0.3),
+    pop(parola(5, 'spine') + 1.1),
     pop(parola(5, 'fisso') + 0.3),
     pop(parola(5, 'piatti') + 0.5),
     passaggio(ev['esce']),

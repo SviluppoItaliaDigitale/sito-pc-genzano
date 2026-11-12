@@ -1,0 +1,8 @@
+# si committano solo sorgente, testi e tempi; fotogrammi, provini, audio e video stanno in motion/out/temporali-fulmini-3d
+dist/
+out/
+provini*/
+fotogrammi*/
+*.log
+*.wav
+*.mp4

@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temporali e fulmini: come stare al sicuro</title>
+<!-- temporali-fulmini.src.html — video 3D divulgativo «Temporali e fulmini: come stare al sicuro» (Protezione Civile
+     Genzano di Roma). Scritto per Alessandro Cuollo il 12/11/2026 sul modello della skill video-3d, senza codice di terzi.
+     Si costruisce con costruisci.py di video-3d (three.js 0.181.2 MIT, motore 3D, impaginazione, font) e i dati
+     rilievo (rilievo.py), tempi e sottotitoli (ritmo.py). Tutto dipende solo da t: render(t) è deterministico.
+     Due mondi: il RILIEVO vero dei Castelli Romani (chilometri; scene 0, 1, 2 e 6) e i PLASTICI (metri; scene 3, 4, 5),
+     ognuno con la sua telecamera; fra i due si passa con uno zoom e una dissolvenza breve.
+     Plastici: A «il riparo» attorno a x = 0, B «all'aperto» attorno a x = 48, C «in casa» attorno a x = 96. -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #livello-rilievo { z-index: 2; }
+  #livello-plastico { z-index: 3; }
+  #strato { position: absolute; left: 0; top: 0; z-index: 36; pointer-events: none; }
+  #strato svg { position: absolute; left: 0; top: 0; overflow: visible; }
+  .et { position: absolute; left: 0; top: 0; box-sizing: border-box; white-space: nowrap; opacity: 0;
+        font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 25px; letter-spacing: 1.5px; text-transform: uppercase;
+        color: #eef2f7; padding: 9px 16px; border-radius: 12px; background: rgba(10, 18, 32, .92); border: 3px solid #2e90fa;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .45); }
+  .et.nuda { font-family: 'Titillium Web', sans-serif; font-size: 27px; letter-spacing: .5px; text-transform: none; padding: 0 4px;
+        background: none; border: 0; box-shadow: none; text-shadow: 0 1px 3px rgba(0, 0, 0, .95), 0 0 2px rgba(0, 0, 0, .9); }
+  .blocco { position: absolute; box-sizing: border-box; opacity: 0; border-radius: 18px; background: rgba(10, 18, 32, .86);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .45); font-family: 'Titillium Web', sans-serif; color: #eef2f7; }
+  #titolo { left: 96px; top: 396px; padding: 20px 30px 24px; border-left: 8px solid #2e90fa; }
+  #titolo .r1 { font-weight: 700; font-size: 84px; line-height: 1.02; }
+  #titolo .r2 { font-weight: 600; font-size: 50px; line-height: 1.15; color: #6db3ff; margin-top: 6px; }
+  #orologio { left: 96px; top: 396px; width: 888px; height: 250px; padding: 0 30px; display: flex; align-items: center; gap: 34px;
+        border-left: 8px solid #f59e0b; }
+  #orologio .n { font-weight: 700; font-size: 96px; line-height: 1; }
+  #orologio .s { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 27px; letter-spacing: 2px; color: #f5b949; margin-top: 12px; }
+  #emergenza { left: 96px; top: 396px; width: 888px; padding: 22px 30px 26px; border-left: 8px solid #ef4136; }
+  #emergenza .s { font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 30px; letter-spacing: 2.5px; color: #ff8d85; }
+  #emergenza .n { font-weight: 700; font-size: 210px; line-height: .95; letter-spacing: 4px; }
+  #emergenza .w { font-weight: 600; font-size: 44px; line-height: 1.2; color: #6db3ff; margin-top: 10px; opacity: 0; }
+  #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="livello-rilievo"></canvas>
+  <canvas id="livello-plastico"></canvas>
+  <div id="strato">
+    <svg id="strato-linee"></svg>
+    <div id="titolo" class="blocco" data-componente="titolo" data-scatola="1"><div class="r1">Temporali e fulmini</div><div class="r2">Come stare al sicuro</div></div>
+    <div id="orologio" class="blocco" data-componente="orologio" data-scatola="1">
+      <svg id="quadrante" width="190" height="190" viewBox="-100 -100 200 200" style="position:static;flex:none"></svg>
+      <div><div class="n">30 minuti</div><div class="s">DOPO L'ULTIMO TUONO</div></div>
+    </div>
+    <div id="emergenza" class="blocco" data-componente="emergenza" data-scatola="1"><div class="s">IN EMERGENZA CHIAMA</div><div class="n">112</div><div class="w">protezionecivilegenzano.it</div></div>
+  </div>
+  <div id="fonte" data-componente="fonte-3d"></div>
+</div>
+<script type="application/json" id="dato-rilievo">/*DATO:rilievo*/</script>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: 'Temporali e fulmini: come stare al sicuro',
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  hud: ['TEMPORALI', 'PRIMA DI USCIRE', 'IL TUONO', 'IL RIPARO', "ALL'APERTO", 'IN CASA', 'DOPO'],
+  esagerazione: 2,                                   // rilievo ×2: lo dice la nota
+  notaRilievo: 'SIMULAZIONE · RILIEVO ×2 · NON IN SCALA',
+  notaPlastico: 'SCHEMA · NON IN SCALA',
+  fonte: 'Fonte: Dipartimento della Protezione Civile, «In caso di temporali e fulmini»',
+  chiave: ['temporale', 'previsioni', "l'allerta", 'scuro', 'tuono', 'chilometri', 'pericolo', 'chiuso', 'edificio', "l'automobile",
+           'chiusi', 'albero', 'alte', 'appuntite', 'pali', 'tralicci', 'recinzioni', "dall'acqua", 'finestre', 'spine', 'fisso',
+           'cellulare', 'dopo', '30', 'minuti', '112'],
+  modo: 'parole',
+  genzano: { lat: 41.7075, lon: 12.6895 },
+  laghi: [{ nome: 'Lago Albano', lat: 41.750, lon: 12.665, profondita: 167 }, { nome: 'Lago di Nemi', lat: 41.715, lon: 12.700, profondita: 33 }],
+  nube: { lat: 41.750, lon: 12.738 },                // centro del nuvolone, sopra i boschi a est di Monte Cavo
+  colpo: { lat: 41.746, lon: 12.744 }                // dove cadono i fulmini lontani (bosco, non un paese)
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const RILIEVO = dato('rilievo');
+const TEMPI = dato('tempi') || { totale: 84.65,
+  scene: [[0, 11.46, 2.6], [11.46, 10.24, 12.76], [21.7, 11.54, 22.7], [33.24, 12.44, 34.34], [45.68, 12.42, 46.78], [58.1, 14.71, 60.3], [72.81, 11.84, 74.71]]
+    .map(a => ({ inizio: a[0], durata: a[1], voce: a[2] })),
+  eventi: { tuffo: 1.5, lampo0: 8.27, lampo2: 22.0, tuono2: 22.81, zoom: 28.84, entra: 31.99, lampo4: 49.69, apre: 58.35, esce: 73.56, lampo6: 74.56 } };
+const SOTT = dato('sottotitoli') || [];
+// le frasi lunghe si mostrano a pezzi (frasi intere), così il sottotitolo resta su tre righe
+const FRASI = [];
+SOTT.forEach(f => {
+  const chiave = (f.chiave || []).concat(CONFIG.chiave), P = f.parole || [];
+  const parti = String(f.testo).trim().split(/\s+/);
+  if (f.testo.length <= 96 || P.length !== parti.length) { FRASI.push(Object.assign({}, f, { chiave })); return; }
+  let da = 0, n = 0;
+  const chiudi = a => {
+    FRASI.push({ inizio: da === 0 ? f.inizio : P[da].t0, fine: a === parti.length ? f.fine : P[a].t0 - .02,
+      testo: parti.slice(da, a).join(' '), parole: P.slice(da, a), chiave });
+    da = a;
+  };
+  for (let i = 0; i < parti.length; i++) {
+    n += parti[i].length + 1;
+    const fineFrase = /[.:;?!]$/.test(parti[i]) && i < parti.length - 1;
+    const resto = parti.slice(i + 1).join(' ').length;
+    if (fineFrase && n > 24 && resto > 18) { chiudi(i + 1); n = 0; }
+  }
+  if (da < parti.length) chiudi(parti.length);
+});
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const Q = new URLSearchParams(location.search);
+  const formato = Q.get('formato') || CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
+  const SC = TEMPI.scene, EV = TEMPI.eventi, TOTAL = TEMPI.totale;
+  const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, hash } = M3;
+  const fin = M3.finestra;
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
+  const liscia = u => { u = clamp(u); return u * u * (3 - 2 * u); };
+  const esplodi = u => { u = clamp(u); return u * u * u * (u * (6 * u - 15) + 10); };   // parte e arriva piano
+  const AZZ = '#2e90fa', ROSSO = '#ef4136', AMBRA = '#f59e0b', VERDE = '#22a04b';
+
+  /* istante di una parola detta nella scena k (dai sottotitoli) */
+  const norma = w => String(w).toLowerCase().normalize('NFC').replace(/[^\p{L}\p{N}]+/gu, '');
+  function parola(k, w, n = 0, riserva = 0.5) {
+    const f = SOTT[k];
+    if (f && f.parole) {
+      let c = 0;
+      for (const p of f.parole) if (norma(p.w) === norma(w) || norma(p.w).startsWith(norma(w)) && norma(w).length > 3) { if (c === n) return p.t0; c++; }
+    }
+    return S(k) + D(k) * riserva;
+  }
+
+  const stage = document.getElementById('stage');
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud[0], passiHUD: SC.length, nota: CONFIG.notaRilievo });
+  IMP.anteprima(stage);
+
+  const livR = M3.creaRenderer(document.getElementById('livello-rilievo'), W, H, { scala: 0.8 });
+  const livP = M3.creaRenderer(document.getElementById('livello-plastico'), W, H, { scala: 0.8 });
+  const scenaR = new THREE.Scene(), scenaP = new THREE.Scene();
+  const camR = M3.creaCamera(W, H, { fov: 32, zona: L.zona }), camP = M3.creaCamera(W, H, { fov: 32, zona: L.zona });
+
+  /* ---------------------------------------------------------------- aiuti di costruzione */
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 1; return t;
+  }
+  const tinta = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, metalness: 0.03, roughness: 0.75 }, o));
+  const base = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+  const box = (w, h, d, mat) => new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  const cil = (r1, r2, h, mat, seg = 14) => new THREE.Mesh(new THREE.CylinderGeometry(r1, r2, h, seg), mat);
+  const metti = (m, x, y, z, g) => { m.position.set(x, y, z); if (g) g.add(m); return m; };
+  const SU = V(0, 1, 0);
+  function orientaAsta(m, a, b) {                     // mette un'asta lunga 1 (asse y) fra i punti a e b
+    const d = b.clone().sub(a), l = d.length();
+    m.position.copy(a).addScaledVector(d, .5);
+    m.scale.y = Math.max(l, 1e-6);
+    m.quaternion.setFromUnitVectors(SU, d.normalize());
+    return m;
+  }
+  const asta = (a, b, sp, mat, g) => { const m = orientaAsta(box(sp, 1, sp, mat), a, b); if (g) g.add(m); return m; };
+  function tettoPrisma(larg, alt, lung, mat) {        // tetto a due falde: colmo lungo z, largo «larg» in x
+    const s = new THREE.Shape(); s.moveTo(-larg / 2, 0); s.lineTo(larg / 2, 0); s.lineTo(0, alt); s.closePath();
+    const g = new THREE.ExtrudeGeometry(s, { depth: lung, bevelEnabled: false }); g.translate(0, 0, -lung / 2);
+    return new THREE.Mesh(g, mat);
+  }
+  const texAlone = tela(128, 128, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(.35, 'rgba(225,238,255,.5)'); gr.addColorStop(1, 'rgba(210,230,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  /* distintivi: spunta verde, croce rossa del divieto («no»), orologio ambra («dopo») */
+  const texDistintivo = tipo => tela(160, 160, (g, w) => {
+    const c = w / 2;
+    g.fillStyle = '#ffffff'; g.beginPath(); g.arc(c, c, c - 2, 0, 6.283); g.fill();
+    g.fillStyle = tipo === 'ok' ? VERDE : tipo === 'no' ? ROSSO : AMBRA; g.beginPath(); g.arc(c, c, c - 11, 0, 6.283); g.fill();
+    g.strokeStyle = tipo === 'dopo' ? '#0a1220' : '#ffffff'; g.lineWidth = 17; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath();
+    if (tipo === 'ok') { g.moveTo(c - 36, c + 3); g.lineTo(c - 11, c + 28); g.lineTo(c + 38, c - 26); }
+    else if (tipo === 'no') { g.moveTo(c - 30, c - 30); g.lineTo(c + 30, c + 30); g.moveTo(c + 30, c - 30); g.lineTo(c - 30, c + 30); }
+    else { g.lineWidth = 12; g.arc(c, c, 44, 0, 6.283); g.moveTo(c, c - 30); g.lineTo(c, c); g.lineTo(c + 22, c + 14); }
+    g.stroke();
+  });
+  const TEX = { ok: texDistintivo('ok'), no: texDistintivo('no'), dopo: texDistintivo('dopo') };
+  const DISTINTIVI = [];
+  function distintivo(tipo, pos, lato, inizio, fine, genitore) {
+    const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: TEX[tipo], transparent: true, depthTest: false, depthWrite: false }));
+    s.renderOrder = 30; s.position.copy(pos); genitore.add(s);
+    DISTINTIVI.push({ s, lato, inizio, fine });
+    return s;
+  }
+  /* fulmine: spezzata fra due punti con uno scarto laterale deterministico, due rami e un alone locale (mai a tutto schermo) */
+  function fulmine(da, a, o) {
+    const g = new THREE.Group(), sp = o.spessore, seme = o.seme || 1, n = o.pezzi || 13;
+    const matN = base(0xfffbe6, { transparent: true, depthWrite: false }), matA = base(0xa9cdff, { transparent: true, depthWrite: false });
+    const asse = a.clone().sub(da), lung = asse.length(), dir = asse.clone().normalize();
+    const lato1 = V(dir.z, 0, -dir.x).normalize(); if (lato1.lengthSq() < .5) lato1.set(1, 0, 0);
+    const lato2 = dir.clone().cross(lato1).normalize();
+    const punto = (u, s) => da.clone().addScaledVector(asse, u)
+      .addScaledVector(lato1, (hash(s * 3.1 + u * 97) - .5) * lung * .16 * Math.sin(Math.PI * u) ** .6)
+      .addScaledVector(lato2, (hash(s * 5.7 + u * 53) - .5) * lung * .10 * Math.sin(Math.PI * u) ** .6);
+    const pts = []; for (let i = 0; i <= n; i++) pts.push(i === 0 ? da.clone() : i === n ? a.clone() : punto(i / n, seme));
+    for (let i = 0; i < n; i++) { asta(pts[i], pts[i + 1], sp, matN, g); asta(pts[i], pts[i + 1], sp * 3.2, matA, g); }
+    [4, 8].forEach((k, j) => {                         // due rami che si perdono a metà strada
+      let p = pts[k].clone();
+      for (let i = 1; i <= 4; i++) {
+        const q = p.clone().addScaledVector(dir, lung * .06).addScaledVector(lato1, (j ? -1 : 1) * lung * (.035 + .03 * hash(seme + i * 7 + j)))
+          .addScaledVector(lato2, (hash(seme * 2 + i * 3 + j) - .5) * lung * .05);
+        asta(p, q, sp * .6, matN, g); p = q;
+      }
+    });
+    const alone = new THREE.Sprite(new THREE.SpriteMaterial({ map: texAlone, transparent: true, depthWrite: false, depthTest: false }));
+    alone.position.copy(a); alone.scale.setScalar(o.alone); alone.renderOrder = 8; g.add(alone);
+    g.renderOrder = 7;
+    return { gruppo: g, forza(k) { g.visible = k > .01; matN.opacity = k; matA.opacity = .28 * k; alone.material.opacity = .3 * k; } };
+  }
+  /* un solo lampo per fulmine: pieno per un decimo di secondo, poi si spegne in mezzo secondo (mai più di 2 al secondo) */
+  const lampo = (t, t0) => { const d = t - t0; return d < 0 || d > .62 ? 0 : d < .1 ? 1 : Math.exp(-(d - .1) / .13) * (1 - liscia((d - .42) / .2)); };
+
+  /* ================================================================ MONDO 1: IL RILIEVO VERO (chilometri) */
+  const ril = M3.rilievo(RILIEVO || M3.rilievoDiProva(), { esagerazione: CONFIG.esagerazione, laghi: RILIEVO ? CONFIG.laghi : [], passo: 1 });
+  scenaR.add(ril.gruppo);
+  const matRilievo = []; ril.gruppo.traverse(o => { if (o.material) (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => { if (m.color && !matRilievo.includes(m)) matRilievo.push(m); }); });
+  scenaR.add(new THREE.HemisphereLight(0xffffff, 0x4a5466, 2.3));
+  const soleR = new THREE.DirectionalLight(0xfff6ea, 1.5); soleR.position.set(-6, 9, 7); scenaR.add(soleR);
+  const GEN = CONFIG.genzano, pGen = m => ril.sopra(GEN.lat, GEN.lon, m);
+  const pColpo = ril.sopra(CONFIG.colpo.lat, CONFIG.colpo.lon, 0);
+  const cNube = ril.posizione(CONFIG.nube.lat, CONFIG.nube.lon, 0);
+  const Y_NUBE = 3.7;
+
+  // il nuvolone: sbuffi che crescono dal basso verso l'alto (scena 0) e una coltre che si allarga (scena 1)
+  const nube = new THREE.Group(); scenaR.add(nube);
+  const matNube = new THREE.MeshLambertMaterial({ color: 0xe3e8f0, emissive: 0xbcd2ff, emissiveIntensity: 0 });
+  const geoSbuffo = new THREE.SphereGeometry(1, 20, 14);
+  const SBUFFI = [];
+  const sbuffo = (x, y, z, r, sy, quando, durata) => {
+    const m = new THREE.Mesh(geoSbuffo, matNube); m.position.set(cNube.x + x, y, cNube.z + z); nube.add(m);
+    SBUFFI.push({ m, r, sy, quando, durata });
+  };
+  const T0N = 2.9;                                    // la nube comincia a crescere qui
+  for (let i = 0; i < 9; i++) { const a = i / 9 * 6.283 + hash(i) * .6, d = i === 0 ? 0 : .9 + 1.5 * hash(i * 3.3);
+    sbuffo(Math.cos(a) * d, Y_NUBE + .25 * hash(i * 7), Math.sin(a) * d, 1.25 + .55 * hash(i * 1.7), .62, T0N + .5 * hash(i * 2.3), 1.9); }
+  for (let i = 0; i < 6; i++) { const a = i / 6 * 6.283 + 1 + hash(i + 20) * .5, d = .3 + .9 * hash(i * 3.3 + 20);
+    sbuffo(Math.cos(a) * d, Y_NUBE + 1.25 + .3 * hash(i + 30), Math.sin(a) * d, 1.1 + .4 * hash(i * 1.7 + 20), .8, T0N + 1.2 + .5 * hash(i * 2.3 + 20), 1.9); }
+  for (let i = 0; i < 4; i++) { const a = i / 4 * 6.283 + 2 + hash(i + 40) * .5, d = .2 + .55 * hash(i * 3.3 + 40);
+    sbuffo(Math.cos(a) * d, Y_NUBE + 2.5 + .3 * hash(i + 50), Math.sin(a) * d, .95 + .35 * hash(i * 1.7 + 40), .9, T0N + 2.0 + .5 * hash(i * 2.3 + 40), 1.9); }
+  for (let i = 0; i < 6; i++) { const a = i / 6 * 6.283 + hash(i + 60) * .5, d = i === 0 ? 0 : 1.5 + .9 * hash(i * 3.3 + 60);   // incudine
+    sbuffo(Math.cos(a) * d + .5, Y_NUBE + 3.55, Math.sin(a) * d - .3, 1.45 + .5 * hash(i * 1.7 + 60), .36, T0N + 2.9 + .4 * hash(i * 2.3 + 60), 1.9); }
+  const tScuro = parola(1, 'cielo') - .35;            // la coltre si allarga verso i laghi quando «il cielo si fa scuro»
+  const versoGen = pGen(0).sub(cNube).setY(0).normalize(), traverso = V(-versoGen.z, 0, versoGen.x);
+  for (let i = 0; i < 12; i++) { const lungo = .6 + 2.6 * (i / 11), lato = (hash(i * 9.1 + 3) - .5) * 4.6;
+    sbuffo(versoGen.x * lungo + traverso.x * lato, Y_NUBE - .05 + .2 * hash(i + 80), versoGen.z * lungo + traverso.z * lato,
+           1.5 + .7 * hash(i * 1.3 + 80), .3, tScuro + .28 * lungo, 1.5); }
+  // la pioggia sotto la nube
+  const pioggiaR = M3.particelle({ tipo: 'pioggia', centro: [cNube.x - .4, 1.9, cNube.z + .4], dimensioni: [7.5, 2.9, 7.5], numero: 950,
+                                   vento: [.5, .25], lunghezza: .22, opacita: .6, seme: 3 });
+  nube.add(pioggiaR.oggetto);
+  // i fulmini lontani: primo (scena 0), quello del tuono (scena 2), l'ultimo mentre il temporale se ne va (scena 6)
+  const ALLONTANA = V(8.5, 0, -6.5);                  // verso nord-est, fuori dal riquadro
+  const viaNube = t => liscia(prog(t, S(6) + .4, 8.5));
+  const baseNube = (dx, dz) => V(cNube.x + dx, Y_NUBE - .55, cNube.z + dz);
+  const colpo2 = ril.sopra(CONFIG.colpo.lat + .004, CONFIG.colpo.lon - .006, 0);
+  const u6 = viaNube(EV.lampo6), colpo6 = (() => { const g = ril.geo(cNube.x + ALLONTANA.x * u6 + .9, cNube.z + ALLONTANA.z * u6 + .2); return ril.sopra(g.lat, g.lon, 0); })();
+  const FULMINI_R = [
+    { t: EV.lampo0, f: fulmine(baseNube(.3, .2), pColpo, { spessore: .07, alone: 2.4, seme: 11 }) },
+    { t: EV.lampo2, f: fulmine(baseNube(-.5, .4), colpo2, { spessore: .07, alone: 2.4, seme: 23 }) },
+    { t: EV.lampo6, f: fulmine(baseNube(ALLONTANA.x * u6 + .6, ALLONTANA.z * u6), colpo6, { spessore: .04, alone: 1.8, seme: 37 }) }
+  ];
+  FULMINI_R.forEach(x => scenaR.add(x.f.gruppo));
+
+  // anelli del tuono: partono dal fulmine e si allargano adagiati sul rilievo; il primo arriva a Genzano col tuono
+  const dGen = Math.hypot(pGen(0).x - colpo2.x, pGen(0).z - colpo2.z);                 // chilometri veri in pianta
+  const vAnello = dGen / Math.max(EV.tuono2 - EV.lampo2, .2);
+  const SEG = 96, bb = ril.riquadro;
+  function nastro(colore) {
+    const pos = new Float32Array((SEG + 1) * 2 * 3), idx = [];
+    for (let i = 0; i < SEG; i++) { const a = i * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setIndex(idx);
+    const m = new THREE.Mesh(g, base(colore, { transparent: true, depthWrite: false, depthTest: false, side: THREE.DoubleSide }));
+    m.frustumCulled = false; m.renderOrder = 6; scenaR.add(m);
+    return { m, pos, g };
+  }
+  const yTerra = (x, z, su) => { const q = ril.geo(x, z); return ril.metriInY(ril.quota(clamp(q.lat, bb.lat_min, bb.lat_max), clamp(q.lon, bb.lon_min, bb.lon_max)) + su); };
+  const dentroR = (x, z) => { const q = ril.geo(x, z); return q.lat > bb.lat_min && q.lat < bb.lat_max && q.lon > bb.lon_min && q.lon < bb.lon_max; };
+  const ANELLI = [0, 1, 2, 3].map(() => nastro(0xdcebff));
+  const yAnello = new Float32Array(SEG + 1);
+  function aggiornaAnello(A, r, sp, alfa) {
+    A.m.visible = alfa > .01 && r > .05; if (!A.m.visible) return;
+    A.m.material.opacity = alfa;
+    // quota dell'anello: quella del terreno, lisciata lungo il giro (l'onda non deve seguire ogni fosso)
+    for (let i = 0; i < SEG; i++) { const a = i / SEG * 6.2832; yAnello[i] = yTerra(colpo2.x + Math.cos(a) * r, colpo2.z + Math.sin(a) * r, 0); }
+    for (let i = 0; i <= SEG; i++) {
+      const a = i / SEG * 6.2832, c = Math.cos(a), s = Math.sin(a);
+      let y = 0; for (let j = -16; j <= 16; j++) y = Math.max(y, yAnello[((i + j) % SEG + SEG) % SEG] - Math.abs(j) * .02);
+      y += .06;
+      const xi = colpo2.x + c * (r - sp), zi = colpo2.z + s * (r - sp), xo = colpo2.x + c * (r + sp), zo = colpo2.z + s * (r + sp), k = i * 6;
+      const ok = dentroR(xo, zo);
+      A.pos[k] = xi; A.pos[k + 1] = y; A.pos[k + 2] = zi;
+      A.pos[k + 3] = ok ? xo : xi; A.pos[k + 4] = y; A.pos[k + 5] = ok ? zo : zi;
+    }
+    A.g.attributes.position.needsUpdate = true;
+  }
+  // linea della distanza fra il fulmine e Genzano («a pochi chilometri»): una fila di tratti adagiati sul rilievo
+  const TRATTI = 26, lineaDist = [];
+  for (let i = 0; i < TRATTI; i++) {
+    const u0 = (i + .18) / TRATTI, u1 = (i + .82) / TRATTI;
+    const p = u => { const x = mix(colpo2.x, pGen(0).x, u), z = mix(colpo2.z, pGen(0).z, u); return V(x, yTerra(x, z, 45), z); };
+    const m = asta(p(u0), p(u1), .07, base(0xffd166, { transparent: true, depthWrite: false }), scenaR); m.renderOrder = 6;
+    lineaDist.push({ m, u: u0 });
+  }
+  const pMezzo = (() => { const x = mix(colpo2.x, pGen(0).x, .5), z = mix(colpo2.z, pGen(0).z, .5); return V(x, yTerra(x, z, 60), z); })();
+  const anelloGen = M3.anello({ raggio: .42, colore: AMBRA }); scenaR.add(anelloGen.oggetto);
+  const anelloGenR = M3.anello({ raggio: .42, colore: ROSSO }); scenaR.add(anelloGenR.oggetto);
+
+  /* ================================================================ MONDO 2: I PLASTICI (metri) */
+  scenaP.add(new THREE.HemisphereLight(0xe3ebff, 0x2a3346, 1.0));
+  const soleP = new THREE.DirectionalLight(0xfff1e0, 1.2); soleP.position.set(6, 10, 8); scenaP.add(soleP);
+  const controP = new THREE.DirectionalLight(0xa9c2f0, .7); controP.position.set(-7, 6, -6); scenaP.add(controP);
+  const matMuro = tinta(0xe9edf2, { roughness: .9, emissive: 0x2a2f36, emissiveIntensity: .5 });
+  const matMuroEst = tinta(0xefe7d6, { roughness: .9 });
+  const matTetto = tinta(0x9c4f37, { roughness: .85 });
+  const matLegno = tinta(0x8a5a36, { roughness: .6 }), matLegnoChiaro = tinta(0xc79a63, { roughness: .6 });
+  const matBianco = tinta(0xf7f8fa, { roughness: .5 });
+  const matMetallo = tinta(0xb4bcc8, { metalness: .65, roughness: .35 });
+  const matScuro = tinta(0x262b34, { roughness: .6 });
+  const matVetro = base(0x9cc6ea);
+  const matPrato = tinta(0x5f9247, { roughness: 1 }), matZoccolo = tinta(0x243044, { roughness: 1 });
+  function piattaforma(g, lx, lz) {
+    metti(box(lx + .7, .8, lz + .7, matZoccolo), 0, -.46, 0, g);
+    metti(box(lx, .12, lz, matPrato), 0, -.06, 0, g);
+    for (let i = 0; i < 26; i++) {                      // ciuffi più scuri, perché il prato non sia una tinta piatta
+      const c = new THREE.Mesh(new THREE.CircleGeometry(.5 + .9 * hash(i * 3.7), 12), base(0x4f7f3c, { transparent: true, opacity: .55, depthWrite: false }));
+      c.rotation.x = -Math.PI / 2; metti(c, (hash(i * 1.3) - .5) * lx * .92, .004, (hash(i * 2.9 + 5) - .5) * lz * .92, g);
+    }
+  }
+  function finestraEst(g, x, y, z, w = 1.0, h = 1.2) {
+    metti(box(w, h, .05, matVetro), x, y, z + .02, g);
+    metti(box(w + .14, .08, .14, matBianco), x, y - h / 2 - .04, z + .06, g);
+    metti(box(.05, h, .06, matBianco), x, y, z + .05, g);
+    [-1, 1].forEach(s => metti(box(.34, h + .08, .04, tinta(0x3f6e4f, { roughness: .8 })), x + s * (w / 2 + .2), y, z + .03, g));
+  }
+
+  /* ---------------------------------------------------------------- plastico A: edificio, automobile, tettoia, gazebo, balcone */
+  const areaA = new THREE.Group(); scenaP.add(areaA);
+  piattaforma(areaA, 25, 25);
+  metti(box(3.4, .03, 9.2, tinta(0xbdb6a6, { roughness: 1 })), 0, .015, 4.6, areaA);         // vialetto
+  metti(box(7.0, .03, 3.6, tinta(0x8b9099, { roughness: 1 })), 0, .016, 9.3, areaA);         // piazzale dell'auto
+  const casaA = new THREE.Group(); casaA.position.set(0, 0, -6); areaA.add(casaA);
+  metti(box(8, 5.6, 6, matMuroEst), 0, 2.8, 0, casaA);
+  metti(box(8.14, .5, 6.14, tinta(0xb9b2a4, { roughness: .95 })), 0, .25, 0, casaA);
+  metti(box(8.16, .14, 6.16, tinta(0xd6d3cc, { roughness: .9 })), 0, 2.86, 0, casaA);
+  const tettoA = tettoPrisma(7.0, 2.3, 9.0, matTetto); tettoA.rotation.y = Math.PI / 2; metti(tettoA, 0, 5.6, 0, casaA);
+  finestraEst(casaA, -2.4, 1.55, 3.0); finestraEst(casaA, 2.4, 1.55, 3.0); finestraEst(casaA, -2.4, 4.3, 3.0);
+  metti(box(1.1, 2.2, .08, tinta(0x7a4b2b, { roughness: .6 })), 0, 1.1, 3.03, casaA);         // portone
+  metti(box(1.0, 2.0, .05, matVetro), 2.1, 3.95, 3.02, casaA);                                // portafinestra del balcone
+  const balcone = new THREE.Group(); balcone.position.set(2.1, 2.9, 3.6); casaA.add(balcone);
+  metti(box(2.9, .16, 1.25, tinta(0xcfcac0, { roughness: .9 })), 0, 0, 0, balcone);
+  metti(box(2.9, .05, .05, matScuro), 0, 1.02, .58, balcone);
+  [-1.43, 1.43].forEach(x => metti(box(.05, .05, 1.2, matScuro), x, 1.02, 0, balcone));
+  for (let i = 0; i <= 10; i++) metti(box(.03, .96, .03, matScuro), -1.43 + i * .286, .54, .58, balcone);
+  [-1.43, 1.43].forEach(x => [-.2, .2].forEach(z => metti(box(.03, .96, .03, matScuro), x, .54, z, balcone)));
+  // tettoia: quattro pali e una lamiera
+  const tettoia = new THREE.Group(); tettoia.position.set(-6.3, 0, 2.6); areaA.add(tettoia);
+  [[-1.75, -1.35, 2.62], [1.75, -1.35, 2.62], [-1.75, 1.35, 2.3], [1.75, 1.35, 2.3]].forEach(([x, z, h]) => metti(cil(.07, .07, h, matMetallo, 8), x, h / 2, z, tettoia));
+  const lamiera = metti(box(4.0, .09, 3.3, tinta(0x74808d, { metalness: .4, roughness: .5 })), 0, 2.5, 0, tettoia); lamiera.rotation.x = .118;
+  metti(box(1.7, .08, .45, matLegno), 0, .46, -.5, tettoia); [-.7, .7].forEach(x => metti(box(.08, .46, .4, matLegno), x, .23, -.5, tettoia));
+  // gazebo: quattro pali e un telo a punta
+  const gazebo = new THREE.Group(); gazebo.position.set(6.3, 0, 2.6); areaA.add(gazebo);
+  [[-1.5, -1.5], [1.5, -1.5], [-1.5, 1.5], [1.5, 1.5]].forEach(([x, z]) => metti(cil(.06, .06, 2.3, matBianco, 8), x, 1.15, z, gazebo));
+  const telo = new THREE.Mesh(new THREE.ConeGeometry(2.45, 1.25, 4), tinta(0xf1ede2, { roughness: .9 })); telo.rotation.y = Math.PI / 4; metti(telo, 0, 2.92, 0, gazebo);
+  metti(cil(.55, .55, .05, matLegnoChiaro, 20), 0, .74, 0, gazebo); metti(cil(.06, .1, .72, matLegno, 8), 0, .36, 0, gazebo);
+  // automobile (non un mezzo di soccorso): di fianco, con il finestrino che si chiude
+  const auto = new THREE.Group(); auto.position.set(0, 0, 9.2); areaA.add(auto);
+  const matAuto = tinta(0x2f6fd0, { metalness: .35, roughness: .4 });
+  metti(box(4.2, .62, 1.75, matAuto), 0, .64, 0, auto);
+  metti(box(2.3, .12, 1.62, matAuto), -.15, 1.56, 0, auto);
+  metti(box(2.26, .5, 1.5, tinta(0x8fa0b4, { roughness: .8 })), -.15, 1.24, 0, auto);          // abitacolo (si vede a finestrino aperto)
+  [-1.27, -.15, .97].forEach(x => metti(box(.1, .56, 1.64, matAuto), x, 1.24, 0, auto));
+  const matVetroAuto = tinta(0x1b2a3e, { metalness: .5, roughness: .15 });
+  metti(box(1.02, .5, .03, matVetroAuto), -.71, 1.24, .81, auto);                              // finestrino dietro, già chiuso
+  [-.71, .41].forEach(x => metti(box(1.02, .5, .03, matVetroAuto), x, 1.24, -.81, auto));
+  metti(box(.03, .46, 1.46, matVetroAuto), -1.3, 1.24, 0, auto); metti(box(.03, .46, 1.46, matVetroAuto), 1.0, 1.24, 0, auto);
+  const finestrino = metti(box(1.02, .5, .03, matVetroAuto), .41, 1.24, .81, auto);
+  metti(box(.12, .03, .04, matMetallo), .1, 1.0, .9, auto); metti(box(.12, .03, .04, matMetallo), -1.0, 1.0, .9, auto);   // maniglie
+  [[-1.35, .82], [1.35, .82], [-1.35, -.82], [1.35, -.82]].forEach(([x, z]) => {
+    const r = cil(.36, .36, .24, matScuro, 18); r.rotation.x = Math.PI / 2; metti(r, x, .36, z, auto);
+    const c = cil(.17, .17, .26, matMetallo, 12); c.rotation.x = Math.PI / 2; metti(c, x, .36, z, auto);
+  });
+  metti(box(.05, .16, .4, base(0xfff3c4)), 2.1, .72, .55, auto); metti(box(.05, .16, .4, base(0xfff3c4)), 2.1, .72, -.55, auto);
+  metti(box(.05, .14, .36, base(0xd93a2f)), -2.1, .76, .58, auto); metti(box(.05, .14, .36, base(0xd93a2f)), -2.1, .76, -.58, auto);
+  const pioggiaA = M3.particelle({ tipo: 'pioggia', centro: [0, 6.5, 2], dimensioni: [30, 13, 30], numero: 520, vento: [2.2, .8], lunghezza: .7, opacita: .5, seme: 5 });
+  scenaP.add(pioggiaA.oggetto);
+
+  /* ---------------------------------------------------------------- plastico B: albero isolato, palo, traliccio, recinzione, acqua */
+  const XB = 48, areaB = new THREE.Group(); areaB.position.x = XB; scenaP.add(areaB);
+  piattaforma(areaB, 27, 25);
+  const ALB = V(-3, 0, -1);
+  metti(cil(.2, .3, 2.4, matLegno, 10), ALB.x, 1.2, ALB.z, areaB);
+  const matChioma = tinta(0x3f8a49, { roughness: 1 }), matCima = tinta(0x4a9a54, { roughness: 1 });
+  [[2.0, 3.0, 3.3, matChioma], [1.55, 2.7, 4.95, matChioma], [1.05, 2.5, 6.45, matCima]].forEach(([r, h, y, m]) => metti(new THREE.Mesh(new THREE.ConeGeometry(r, h, 14), m), ALB.x, y, ALB.z, areaB));
+  const PUNTA = V(XB + ALB.x, 7.68, ALB.z);
+  const fumoB = M3.particelle({ tipo: 'fumo', centro: [PUNTA.x, PUNTA.y + 1.3, PUNTA.z], dimensioni: [.9, 2.6, .9], numero: 9, dimensione: .8, vita: 2.4, colore: '#aeb4bd', opacita: .5, seme: 7 });
+  scenaP.add(fumoB.oggetto);
+  const fulmineB = fulmine(V(PUNTA.x + 2.5, 30, PUNTA.z - 3), PUNTA, { spessore: .07, alone: 5, seme: 51 }); scenaP.add(fulmineB.gruppo);
+  // palo della luce
+  const PALO = V(6.8, 0, -5.2);
+  metti(cil(.08, .12, 6.2, matMetallo, 10), PALO.x, 3.1, PALO.z, areaB);
+  asta(V(PALO.x, 6.1, PALO.z), V(PALO.x - 1.1, 6.35, PALO.z), .07, matMetallo, areaB); metti(box(.55, .1, .22, matScuro), PALO.x - 1.2, 6.3, PALO.z, areaB);
+  // traliccio con i fili
+  const TRA = V(-8.4, 0, -8.6), HT = 9.6, traliccio = new THREE.Group(); traliccio.position.copy(TRA); areaB.add(traliccio);
+  const semi = y => mix(1.5, .28, y / HT), angoli = y => [[-1, -1], [1, -1], [1, 1], [-1, 1]].map(([a, b]) => V(a * semi(y), y, b * semi(y)));
+  const a0 = angoli(0), a1 = angoli(HT);
+  for (let i = 0; i < 4; i++) asta(a0[i], a1[i], .09, matMetallo, traliccio);
+  [0, 2.4, 4.8, 7.2].forEach(y => {
+    const p = angoli(y), q = angoli(Math.min(y + 2.4, HT));
+    for (let i = 0; i < 4; i++) { if (y > 0) asta(p[i], p[(i + 1) % 4], .05, matMetallo, traliccio); asta(p[i], q[(i + 1) % 4], .04, matMetallo, traliccio); }
+  });
+  [[7.5, 2.5], [8.9, 1.8]].forEach(([y, l]) => {
+    metti(box(.12, .12, l * 2, matMetallo), 0, y, 0, traliccio);
+    [-l, l].forEach(z => { metti(cil(.05, .05, .4, matScuro, 6), 0, y - .26, z, traliccio);
+      asta(V(0, y - .46, z), V(-5.4, y - 1.2, z * 1.02), .03, matScuro, traliccio); asta(V(0, y - .46, z), V(21.5, y - 1.9, z * 1.05), .03, matScuro, traliccio); });
+  });
+  // recinzione di metallo
+  const ZR = 7.4, X0R = -3.5, X1R = 11.5;
+  for (let x = X0R; x <= X1R + .01; x += 1.875) metti(cil(.045, .045, 1.35, matMetallo, 6), x, .675, ZR, areaB);
+  [.3, .72, 1.14].forEach(y => asta(V(X0R, y, ZR), V(X1R, y, ZR), .035, matMetallo, areaB));
+  for (let x = X0R + .31; x < X1R; x += .3125) metti(box(.016, .84, .016, matMetallo), x, .72, ZR, areaB);
+  // specchio d'acqua
+  const ACQ = V(6.6, 0, 1.6);
+  [[3.25, 0xb8ad8a, .008], [3.0, 0x3f8fd9, .016], [2.2, 0x5aa5e6, .022]].forEach(([r, c, y]) => {
+    const m = new THREE.Mesh(new THREE.CircleGeometry(r, 40), base(c)); m.rotation.x = -Math.PI / 2; m.scale.set(1.25, .8, 1); metti(m, ACQ.x, y, ACQ.z, areaB);
+  });
+  function cerchioTerra(r, colore, x, z) {            // «stai lontano»: cerchio a terra con un'onda che si allarga
+    const g = new THREE.Group(), mat = () => base(colore, { transparent: true, depthWrite: false, side: THREE.DoubleSide });
+    const fisso = new THREE.Mesh(new THREE.RingGeometry(r - .16, r, 56), mat()), onda = new THREE.Mesh(new THREE.RingGeometry(r - .1, r, 56), mat());
+    fisso.rotation.x = onda.rotation.x = -Math.PI / 2; g.add(fisso, onda); g.position.set(x, .05, z); areaB.add(g);
+    return (t, inizio) => { const v = fin(t, inizio, null, .35, .3), f = ((t - inizio) * .7) % 1;
+      g.visible = v > .01; fisso.material.opacity = v; onda.scale.setScalar(1 + .55 * f); onda.material.opacity = v * (1 - f) * .8; };
+  }
+  const cerchi = [cerchioTerra(1.5, AMBRA, PALO.x, PALO.z), cerchioTerra(2.9, AMBRA, TRA.x, TRA.z), cerchioTerra(1.6, AMBRA, 4, ZR), cerchioTerra(4.5, AMBRA, ACQ.x, ACQ.z)];
+  const pioggiaB = M3.particelle({ tipo: 'pioggia', centro: [XB, 6.5, 0], dimensioni: [32, 13, 30], numero: 520, vento: [2.2, .8], lunghezza: .7, opacita: .5, seme: 9 });
+  scenaP.add(pioggiaB.oggetto);
+
+  /* ---------------------------------------------------------------- plastico C: la casa che si apre (tetto su, facciata giù) */
+  const XC = 96, areaC = new THREE.Group(); areaC.position.x = XC; scenaP.add(areaC);
+  piattaforma(areaC, 21, 19);
+  const casaC = new THREE.Group(); casaC.position.set(0, .3, 0); areaC.add(casaC);
+  const HM = 2.8, SP = .14, LX = 4.5, LZ = 2.3;
+  metti(box(2 * LX + .5, .3, 2 * LZ + .5, tinta(0xb9b2a4, { roughness: .95 })), 0, -.19, 0, casaC);
+  metti(box(2 * LX + 2 * SP, .1, 2 * LZ + 2 * SP, tinta(0xb98a5a, { roughness: .7 })), 0, -.05, 0, casaC);
+  metti(box(1.6, .02, 1.75, tinta(0xcdd9e3, { roughness: .5 })), LX - .8, .011, -LZ + .875, casaC);               // piastrelle del bagno
+  const facce = interna => [0, 1, 2, 3, 4, 5].map(i => i === interna ? matMuro : matMuroEst);     // facce: +x, -x, +y, -y, +z, -z
+  const ZF = -LZ - SP / 2, FX0 = -3.7, FX1 = -2.5, FY0 = 1.0, FY1 = 2.2;
+  const muroFondo = (x0, x1, y0, y1) => metti(new THREE.Mesh(new THREE.BoxGeometry(x1 - x0, y1 - y0, SP), facce(4)), (x0 + x1) / 2, (y0 + y1) / 2, ZF, casaC);
+  muroFondo(-LX - SP, FX0, 0, HM); muroFondo(FX1, LX + SP, 0, HM); muroFondo(FX0, FX1, 0, FY0); muroFondo(FX0, FX1, FY1, HM);
+  metti(new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 2 * LZ), facce(0)), -LX - SP / 2, HM / 2, 0, casaC);
+  metti(new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 2 * LZ), facce(1)), LX + SP / 2, HM / 2, 0, casaC);
+  // facciata incernierata in basso: si apre come una casa delle bambole
+  const facciata = new THREE.Group(); facciata.position.set(0, 0, LZ + SP / 2); casaC.add(facciata);
+  metti(new THREE.Mesh(new THREE.BoxGeometry(2 * LX + 2 * SP, HM, SP), facce(5)), 0, HM / 2, 0, facciata);
+  finestraEst(facciata, -2.6, 1.6, SP / 2); finestraEst(facciata, 2.9, 1.6, SP / 2);
+  metti(box(1.0, 2.1, .06, tinta(0x7a4b2b, { roughness: .6 })), .4, 1.05, SP / 2 + .02, facciata);
+  // tetto che si solleva
+  const tettoC = new THREE.Group(); tettoC.position.set(0, HM, 0); casaC.add(tettoC);
+  const falde = tettoPrisma(2 * LZ + 1.0, 1.75, 2 * LX + 1.0, matTetto); falde.rotation.y = Math.PI / 2; tettoC.add(falde);
+  // finestra sul fondo: due ante che si chiudono
+  const telaioF = (x, y, w, h) => metti(box(w, h, .1, matBianco), x, y, -LZ + .02, casaC);
+  telaioF((FX0 + FX1) / 2, FY0 - .03, 1.3, .07); telaioF((FX0 + FX1) / 2, FY1 + .03, 1.3, .07); telaioF(FX0 - .03, 1.6, .07, 1.3); telaioF(FX1 + .03, 1.6, .07, 1.3);
+  const ante = [-1, 1].map(s => {
+    const perno = new THREE.Group(); perno.position.set(s < 0 ? FX0 : FX1, 1.6, -LZ + .06); casaC.add(perno);
+    const a = new THREE.Group(); a.position.x = -s * .3; perno.add(a);
+    metti(box(.6, .05, .05, matBianco), 0, .575, 0, a); metti(box(.6, .05, .05, matBianco), 0, -.575, 0, a);
+    metti(box(.05, 1.2, .05, matBianco), -.275, 0, 0, a); metti(box(.05, 1.2, .05, matBianco), .275, 0, 0, a);
+    const v = new THREE.Mesh(new THREE.PlaneGeometry(.5, 1.1), base(0xbfe0ff, { transparent: true, opacity: .34, depthWrite: false, side: THREE.DoubleSide })); a.add(v);
+    return { perno, s };
+  });
+  metti(box(.05, .12, .03, matMetallo), (FX0 + FX1) / 2 - .05, 1.6, -LZ + .1, casaC);
+  // televisore sul mobile e computer sulla scrivania, con la ciabatta a terra
+  metti(box(1.5, .5, .45, matLegno), -1.4, .25, -1.98, casaC);
+  metti(box(.34, .05, .2, matScuro), -1.4, .525, -1.98, casaC); metti(box(.06, .12, .05, matScuro), -1.4, .6, -2.0, casaC);
+  metti(box(1.22, .72, .05, matScuro), -1.4, 1.0, -2.02, casaC);
+  const texSchermo = tela(256, 144, (g, w, h) => {
+    const gr = g.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#2e90fa'); gr.addColorStop(1, '#1a4f9e'); g.fillStyle = gr; g.fillRect(0, 0, w, h);
+    g.fillStyle = 'rgba(255,255,255,.85)'; g.fillRect(18, 18, 110, 16); g.fillStyle = 'rgba(255,255,255,.5)'; [48, 70, 92].forEach((y, i) => g.fillRect(18, y, 190 - i * 34, 10));
+    g.fillStyle = 'rgba(255,255,255,.28)'; g.fillRect(150, 100, 88, 28);
+  });
+  const matAcceso = () => base(0xffffff, { map: texSchermo }), matSpento = base(0x0d1219);
+  const schermoTV = metti(new THREE.Mesh(new THREE.PlaneGeometry(1.14, .64), matAcceso()), -1.4, 1.0, -1.99, casaC);
+  const schermoTVoff = metti(new THREE.Mesh(new THREE.PlaneGeometry(1.14, .64), matSpento), -1.4, 1.0, -1.992, casaC);
+  metti(box(1.3, .05, .62, matLegnoChiaro), .5, .74, -1.95, casaC);
+  [[-.58, -.25], [.58, -.25], [-.58, .25], [.58, .25]].forEach(([x, z]) => metti(box(.05, .72, .05, matLegnoChiaro), .5 + x, .36, -1.95 + z, casaC));
+  metti(box(.2, .03, .16, matScuro), .5, .78, -2.08, casaC); metti(box(.04, .14, .03, matScuro), .5, .85, -2.1, casaC);
+  metti(box(.66, .42, .04, matScuro), .5, 1.1, -2.1, casaC);
+  const schermoPC = metti(new THREE.Mesh(new THREE.PlaneGeometry(.6, .36), matAcceso()), .5, 1.1, -2.078, casaC);
+  const schermoPCoff = metti(new THREE.Mesh(new THREE.PlaneGeometry(.6, .36), matSpento), .5, 1.1, -2.08, casaC);
+  metti(box(.44, .02, .15, tinta(0xd9dee6)), .5, .775, -1.8, casaC);
+  metti(box(.2, .44, .44, matScuro), 1.32, .22, -2.0, casaC); metti(box(.02, .02, .02, base(0x5cff8a)), 1.26, .38, -1.775, casaC);
+  const CIAB = V(-.45, .03, -1.15);
+  metti(box(.66, .06, .14, matBianco), CIAB.x, CIAB.y, CIAB.z, casaC);
+  [-.24, -.08, .08, .24].forEach(dx => metti(box(.07, .012, .07, tinta(0xcfd5dd)), CIAB.x + dx, .063, CIAB.z, casaC));
+  asta(V(CIAB.x + .33, .03, CIAB.z), V(CIAB.x + .9, .03, CIAB.z - 1.05), .025, matBianco, casaC);                // filo verso la presa a muro
+  const matCavo = tinta(0x20242c, { roughness: .8 });
+  const spine = [{ dx: -.24, capo: V(-.95, .04, -1.76) }, { dx: .08, capo: V(.42, .04, -1.74) }].map(o => {
+    const s = metti(box(.075, .09, .075, matScuro), CIAB.x + o.dx, .105, CIAB.z, casaC);
+    const cavo = box(.024, 1, .024, matCavo); casaC.add(cavo);
+    return { s, cavo, capo: o.capo, x: CIAB.x + o.dx };
+  });
+  // tavolino del telefono: fisso (con filo) e cellulare
+  const TEL = V(2.1, .74, -1.95);
+  metti(box(.66, .04, .5, matLegno), TEL.x, .72, TEL.z, casaC);
+  [[-.28, -.2], [.28, -.2], [-.28, .2], [.28, .2]].forEach(([x, z]) => metti(box(.04, .7, .04, matLegno), TEL.x + x, .35, TEL.z + z, casaC));
+  const FISSO = V(TEL.x - .15, .74, TEL.z - .02), CELL = V(TEL.x + .2, .74, TEL.z + .06);
+  metti(box(.26, .07, .2, tinta(0xd9d2c0, { roughness: .5 })), FISSO.x, .775, FISSO.z, casaC);
+  metti(box(.1, .012, .1, matScuro), FISSO.x + .05, .812, FISSO.z + .03, casaC);
+  metti(box(.07, .05, .25, tinta(0xcfc7b3, { roughness: .5 })), FISSO.x - .08, .835, FISSO.z, casaC);
+  asta(V(FISSO.x - .1, .76, FISSO.z - .1), V(FISSO.x - .35, .4, -LZ + .02), .02, matCavo, casaC); metti(box(.09, .09, .02, matBianco), FISSO.x - .35, .4, -LZ + .01, casaC);
+  const cell = new THREE.Group(); cell.position.set(CELL.x, .86, CELL.z); cell.rotation.x = -.32; casaC.add(cell);
+  cell.add(box(.11, .22, .016, matScuro)); metti(new THREE.Mesh(new THREE.PlaneGeometry(.095, .2), base(0x56a8ff)), 0, 0, .009, cell);
+  metti(box(.14, .03, .09, matScuro), CELL.x, .755, CELL.z - .03, casaC);
+  // doccia nell'angolo e lavello con i piatti
+  const DOC = V(LX - .5, 0, -LZ + .5);
+  metti(box(.95, .08, .95, matBianco), DOC.x, .04, DOC.z, casaC);
+  const matCristallo = base(0xcfe8ff, { transparent: true, opacity: .2, depthWrite: false, side: THREE.DoubleSide });
+  metti(new THREE.Mesh(new THREE.PlaneGeometry(.95, 2.0), matCristallo), DOC.x, 1.08, DOC.z + .475, casaC);
+  const cr2 = new THREE.Mesh(new THREE.PlaneGeometry(.95, 2.0), matCristallo); cr2.rotation.y = Math.PI / 2; metti(cr2, DOC.x - .475, 1.08, DOC.z, casaC);
+  [[DOC.x - .475, DOC.z + .475], [DOC.x + .47, DOC.z + .475], [DOC.x - .475, DOC.z - .47]].forEach(([x, z]) => metti(box(.03, 2.0, .03, matMetallo), x, 1.08, z, casaC));
+  asta(V(DOC.x + .38, .3, DOC.z - .42), V(DOC.x + .38, 2.2, DOC.z - .42), .04, matMetallo, casaC);
+  asta(V(DOC.x + .38, 2.2, DOC.z - .42), V(DOC.x + .05, 2.2, DOC.z - .12), .04, matMetallo, casaC);
+  metti(cil(.15, .15, .035, matMetallo, 16), DOC.x + .05, 2.17, DOC.z - .12, casaC);
+  const LAV = V(LX - .32, 0, .95);
+  metti(box(.62, .86, 1.4, matBianco), LAV.x, .43, LAV.z, casaC); metti(box(.66, .04, 1.44, tinta(0x8f98a4, { roughness: .4 })), LAV.x, .88, LAV.z, casaC);
+  metti(box(.42, .02, .52, tinta(0x5d6570, { metalness: .6, roughness: .3 })), LAV.x - .02, .902, LAV.z + .32, casaC);
+  asta(V(LAV.x + .2, .9, LAV.z + .32), V(LAV.x + .2, 1.18, LAV.z + .32), .035, matMetallo, casaC); asta(V(LAV.x + .2, 1.18, LAV.z + .32), V(LAV.x, 1.18, LAV.z + .32), .035, matMetallo, casaC);
+  const PIATTI = V(LAV.x - .02, .9, LAV.z - .32);
+  for (let i = 0; i < 5; i++) metti(cil(.15, .11, .022, matBianco, 20), PIATTI.x, .912 + i * .026, PIATTI.z, casaC);
+  metti(cil(.045, .04, .11, base(0xcfe8ff, { transparent: true, opacity: .5 }), 12), PIATTI.x - .02, .955, PIATTI.z - .28, casaC);
+  const pioggiaC = M3.particelle({ tipo: 'pioggia', centro: [XC, 5.5, -8.5], dimensioni: [24, 11, 9], numero: 380, vento: [2.2, .5], lunghezza: .7, opacita: .5, seme: 13 });
+  scenaP.add(pioggiaC.oggetto);
+  const mondoC = (x, y, z) => V(XC + x, .3 + y, z);
+
+  /* ================================================================ TEMPI */
+  const v5 = SC[5].voce;
+  const T = {
+    titolo: SC[0].voce - .1, come: parola(0, 'come') - .1, un: parola(0, 'un') - .15,
+    guarda: parola(1, 'guarda'), se1: parola(1, 'se'), scuro: parola(1, 'scuro'),
+    pochi: parola(2, 'pochi'), sei: parola(2, 'sei'),
+    riparo: parola(3, 'riparo'), se3: parola(3, 'se'), va: parola(3, 'va'), porte: parola(3, 'porte'), chiusi: parola(3, 'chiusi'),
+    tettoie: parola(3, 'tettoie'), gazebo: parola(3, 'gazebo'), balconi: parola(3, 'balconi'), non3: parola(3, 'non', 1),
+    albero: parola(4, 'albero'), fulmini: parola(4, 'fulmini'), alte: parola(4, 'alte'), stai: parola(4, 'stai'),
+    pali: parola(4, 'pali'), tralicci: parola(4, 'tralicci'), recinzioni: parola(4, 'recinzioni'), acqua: parola(4, "dall'acqua"),
+    chiudi: parola(5, 'chiudi'), finestre: parola(5, 'finestre'), stacca: parola(5, 'stacca'), spine: parola(5, 'spine'),
+    telefono: parola(5, 'telefono'), fisso: parola(5, 'fisso'), cellulare: parola(5, 'cellulare'), doccia: parola(5, 'doccia'),
+    piatti: parola(5, 'piatti'), dopo5: parola(5, 'dopo'),
+    trenta: parola(6, '30'), emergenza: parola(6, 'emergenza'), n112: parola(6, '112')
+  };
+  // la telecamera in casa: quattro primi piani, uno per consiglio, poi di nuovo tutta la casa
+  const C5 = { fin0: T.chiudi - .65, fin1: T.chiudi + .2, tv0: T.stacca - .1, tv1: T.stacca + .75, tel0: T.telefono - 1.05, tel1: T.telefono - .2,
+               acq0: T.doccia - .3, acq1: T.doccia + .55, fine0: E(5) - 2.2, fine1: E(5) - 1.25 };
+
+  /* ================================================================ TELECAMERE */
+  const KR = [
+    { t: 0, bersaglio: [0, .8, 0], az: 0, el: 84, dist: 95, fov: 32 },
+    { t: 2.5, bersaglio: [.6, 1.3, -.8], az: -12, el: 38, dist: 27 },                    // tuffo: arrivo sopra i Castelli Romani
+    { t: T.un + .1 },
+    { t: T.un + 2.0, bersaglio: [cNube.x - 1.2, 3.0, cNube.z + 1.0], az: 10, el: 21, dist: 27 },   // gru: si alza lo sguardo verso la nube
+    { t: S(1) + .05 },
+    { t: S(1) + 1.2, bersaglio: pGen(250), az: 6, el: 36, dist: 15 },                    // avvicinamento a Genzano
+    { t: T.se1 - .3 },
+    { t: T.se1 + .9, bersaglio: [mix(pGen(0).x, colpo2.x, .42), 1.6, mix(pGen(0).z, colpo2.z, .42)], az: 40, el: 15, dist: 17 },   // il cielo e la strada del tuono
+    { t: EV.zoom },
+    { t: EV.zoom + 1.5, bersaglio: pGen(120), az: 6, el: 46, dist: 5.2, passa: true },
+    { t: EV.entra + .25, bersaglio: pGen(30), az: 0, el: 64, dist: .75 },                 // zoom su Genzano, verso l'edificio
+    { t: EV.esce - .25 },
+    { t: EV.esce + 1.6, bersaglio: [.3, 4.4, -1.2], az: -10, el: 37, dist: 39 },          // si torna su: il temporale si allontana
+    { t: TOTAL, az: 4 }
+  ];
+  const cam1 = M3.telecamera(camR, KR, { rilievo: ril });
+  const ins = (r, f = 32) => {
+    const z = camP.userData.zona, st = camP.userData.stage || { H };
+    const hz = z ? (z.basso - z.alto) / st.H : 1, tv = Math.tan(f * Math.PI / 360);
+    return r / Math.sin(Math.min(Math.atan(tv * hz * .92), Math.atan(tv * camP.aspect * .92)));
+  };
+  const rr = r => ORIZ ? r * .72 : r;
+  const KP = [];
+  const chiave = (t, b, az, el, r, extra = {}) => KP.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(rr(r)), fov: 32 }, extra));
+  const VISTE = {
+    aLargo: [[0, 2.2, .8], -22, 31, 11.2], edificio: [[0, 3.3, -4.6], -15, 20, 6.5], auto: [[0, 1.0, 9.2], 30, 20, 3.5],
+    no: [[0, 2.2, -.9], 30, 33, 8.5],
+    albero: [[XB + ALB.x, 3.9, ALB.z], -14, 15, 5.2], punta: [[PUNTA.x, PUNTA.y - .55, PUNTA.z], 32, 7, 1.9], bLargo: [[XB + .4, 2.4, -.6], 14, 33, 11.9],
+    casa: [[XC, 2.3, 1.1], 0, 35, 5.9], finestra: [[XC - 3.1, 1.95, -LZ], -8, 12, 1.3], tv: [[XC - .45, 1.0, -1.65], 5, 21, 1.6],
+    telefono: [[XC + TEL.x + .02, 1.28, TEL.z], 6, 13, .66], acqua: [[XC + LX - .55, 1.45, -.35], 36, 23, 2.25]
+  };
+  const vista = (t, nome, extra = {}) => { const v = VISTE[nome]; chiave(t, v[0], v[1], v[2], v[3], extra); };
+  chiave(EV.entra - .3, [0, 2.2, .8], -22, 66, 40);
+  vista(E(2) - .15, 'aLargo'); vista(S(3) + .2, 'aLargo');
+  vista(S(3) + 1.1, 'edificio'); vista(T.se3 - .05, 'edificio');
+  vista(T.se3 + .9, 'auto'); vista(T.chiusi + .15, 'auto');
+  vista(T.chiusi + 1.0, 'no'); vista(E(3), 'no');
+  chiave(S(4) + .5, [24, 3, 0], 0, 38, 14, { passa: true });
+  vista(S(4) + 1.0, 'albero'); vista(EV.lampo4 + .3, 'albero');
+  vista(T.stai - .25, 'punta', { facilita: 'arriva' }); vista(T.stai - .05, 'punta');
+  vista(T.stai + .85, 'bLargo'); vista(E(4), 'bLargo');
+  chiave(S(5) + .55, [72, 3, 0], 6, 40, 14, { passa: true });
+  vista(S(5) + 1.15, 'casa'); vista(C5.fin0, 'casa');
+  vista(C5.fin1, 'finestra'); vista(C5.tv0, 'finestra');
+  vista(C5.tv1, 'tv'); vista(C5.tel0, 'tv');
+  vista(C5.tel1, 'telefono'); vista(C5.acq0, 'telefono');
+  vista(C5.acq1, 'acqua'); vista(C5.fine0, 'acqua');
+  vista(C5.fine1, 'casa'); vista(S(6) + .25, 'casa');
+  chiave(EV.esce + .3, [XC, 2.2, .9], 0, 64, 40);
+  const cam2 = M3.telecamera(camP, KP, {});
+  // quanto si vede il mondo dei plastici (0 = rilievo, 1 = plastici): dissolvenza breve in mezzo allo zoom
+  const plastici = t => liscia(prog(t, EV.entra - .2, .4)) * (1 - liscia(prog(t, EV.esce - .2, .4)));
+
+  /* ================================================================ SCHEDE (IMP, a telecamera ferma) ed ETICHETTE */
+  const SCH = [];
+  const scheda = (cam, id, titolo, sotto, punto, verso, inizio, fine, colore) => SCH.push({ cam, id, titolo, sotto, punto, verso, inizio, fine, colore });
+  const vs = (dx, dy) => ORIZ ? { dx: dx * 1.5, dy: dy * .62 } : { dx, dy };
+  const mondo = (o, p) => { o.updateWorldMatrix(true, false); return o.localToWorld(p.clone()); };
+  const pNube = V(cNube.x + versoGen.x * 2.2, Y_NUBE - .35, cNube.z + versoGen.z * 2.2);
+  scheda('R', 'previsioni', 'Previsioni e allerta', 'DEL GIORNO: GUARDALE PRIMA', () => pGen(60), vs(150, -250), T.guarda - .15, T.se1 - .4, AZZ);
+  scheda('R', 'scuro', 'Il cielo si fa scuro?', 'CAMBIA PROGRAMMA', () => pNube, vs(-170, 230), T.se1 + .95, E(1) - .2, AMBRA);
+  scheda('R', 'pochi', 'A pochi chilometri', 'SE SENTI IL TUONO, È VICINO', () => pMezzo, vs(-190, -150), T.pochi - .1, T.sei - .1, AMBRA);
+  scheda('R', 'pericolo', 'Sei già in pericolo', 'RAGGIUNGI UN LUOGO CHIUSO', () => pGen(60), vs(190, -200), T.sei + .15, EV.zoom - .1, ROSSO);
+  scheda('P', 'edificio', 'Un edificio', 'È IL RIPARO GIUSTO', () => mondo(casaA, V(-3.2, 5.5, 3.0)), vs(-60, -200), T.riparo + .05, T.se3 - .15, VERDE);
+  scheda('P', 'auto', "L'automobile", 'PORTE E FINESTRINI CHIUSI', () => mondo(auto, V(-.4, 1.66, .8)), vs(-90, -240), T.va + .3, T.chiusi + .1, VERDE);
+  scheda('P', 'no', 'Non riparano', 'TETTOIE · GAZEBO · BALCONI', null, null, T.non3 - .1, E(3) - .15, ROSSO);
+  scheda('P', 'albero', 'Mai sotto un albero', 'NON È UN RIPARO', () => V(XB + ALB.x + .9, 2.0, ALB.z + 1.2), vs(250, 60), S(4) + 1.2, T.fulmini + .35, ROSSO);
+  const ET = [];
+  const etichetta = (cam, id, testo, punto, verso, inizio, fine, colore, nuda) => ET.push({ cam, id, testo, punto, verso, inizio, fine, colore, nuda });
+  etichetta('R', 'genzano', 'Genzano di Roma', () => pGen(40), vs(0, -46), S(1) + 1.3, T.guarda - .45, null, true);
+  etichetta('R', 'nemi', 'Lago di Nemi', () => ril.sopra(41.7135, 12.7035, 30), vs(96, -36), S(1) + 1.7, T.guarda - .45, null, true);
+  etichetta('R', 'albano', 'Lago Albano', () => ril.sopra(41.7475, 12.667, 30), vs(-40, -44), S(1) + 2.1, T.guarda - .45, null, true);
+  etichetta('R', 'genzano2', 'Genzano di Roma', () => pGen(40), vs(-185, 0), EV.lampo2 + .5, T.sei - .2, null, true);
+  etichetta('P', 'tettoia', 'Tettoia', () => mondo(tettoia, V(0, 2.7, 0)), vs(-10, 96), T.tettoie - .15, E(3) - .15, ROSSO);
+  etichetta('P', 'gazebo', 'Gazebo', () => mondo(gazebo, V(0, 3.4, 0)), vs(20, 150), T.gazebo - .15, E(3) - .15, ROSSO);
+  etichetta('P', 'balcone', 'Balcone', () => mondo(balcone, V(0, .9, .6)), vs(-150, -64), T.balconi - .15, E(3) - .15, ROSSO);
+  etichetta('P', 'punta', 'Alte e appuntite: lì cade il fulmine', () => PUNTA, vs(0, 150), T.alte - .2, T.stai + .1, AMBRA);
+  etichetta('P', 'pali', 'Pali', () => V(XB + PALO.x, 5.4, PALO.z), vs(96, 0), T.pali - .15, E(4) - .15, AMBRA);
+  etichetta('P', 'tralicci', 'Tralicci', () => V(XB + TRA.x, 8.2, TRA.z), vs(150, 26), T.tralicci - .15, E(4) - .15, AMBRA);
+  etichetta('P', 'recinzioni', 'Recinzioni di metallo', () => V(XB + 4, 1.3, ZR), vs(-60, 74), T.recinzioni - .15, E(4) - .15, AMBRA);
+  etichetta('P', 'acqua', 'Acqua', () => V(XB + ACQ.x, .1, ACQ.z), vs(120, -52), T.acqua - .15, E(4) - .15, AMBRA);
+  etichetta('P', 'finestre', 'Finestre chiuse', () => mondoC(-3.1, 2.5, -LZ), vs(210, 40), T.finestre - .1, C5.tv0 + .35, VERDE);
+  etichetta('P', 'spine', 'Spine staccate', () => mondoC(CIAB.x, .3, CIAB.z + .1), vs(140, 120), T.spine + 1.1, C5.tel0 + .35, VERDE);
+  etichetta('P', 'fisso', 'Telefono fisso: no', () => mondoC(FISSO.x - .05, 1.22, FISSO.z), vs(-190, -70), T.fisso - .1, C5.acq0 + .3, ROSSO);
+  etichetta('P', 'cellulare', 'Cellulare: sì', () => mondoC(CELL.x + .03, 1.22, CELL.z), vs(170, -70), T.cellulare - .1, C5.acq0 + .3, VERDE);
+  etichetta('P', 'dopo', 'Doccia e piatti: dopo il temporale', () => mondoC(PIATTI.x - .15, 1.4, PIATTI.z), vs(-260, 200), T.dopo5 - .25, C5.fine0 + .3, AMBRA);
+  // distintivi: spunte, croci e orologi accanto agli oggetti
+  distintivo('ok', V(-3.2, 6.6, -2.6), 1.5, T.riparo + .25, T.se3 + .3, areaA);
+  distintivo('ok', V(.2, 2.35, 9.2), .8, T.va + .45, T.chiusi + .5, areaA);
+  distintivo('no', V(-6.3, 3.5, 2.6), 1.25, T.tettoie, null, areaA);
+  distintivo('no', V(6.3, 4.4, 2.6), 1.25, T.gazebo, null, areaA);
+  distintivo('no', V(2.1, 4.9, -1.9), 1.25, T.balconi, null, areaA);
+  distintivo('no', V(ALB.x + .9, 1.5, ALB.z + 1.2), 1.1, S(4) + 1.25, T.fulmini + .6, areaB);
+  distintivo('ok', V(-3.1, 2.5, -LZ + .1), .42, T.finestre - .1, null, casaC);
+  distintivo('ok', V(CIAB.x, .3, CIAB.z + .1), .3, T.spine + 1.1, null, casaC);
+  distintivo('no', V(FISSO.x - .05, 1.22, FISSO.z), .26, T.fisso - .1, null, casaC);
+  distintivo('ok', V(CELL.x + .03, 1.22, CELL.z), .26, T.cellulare - .1, null, casaC);
+  distintivo('dopo', V(DOC.x - .1, 2.5, DOC.z + .35), .5, T.doccia + .35, null, casaC);
+  distintivo('dopo', V(PIATTI.x - .15, 1.4, PIATTI.z), .5, T.piatti + .15, null, casaC);
+
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam1, SCH.filter(s => s.cam === 'R').map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), [])
+    .concat(M3.controllaTempi(cam2, SCH.filter(s => s.cam === 'P').map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []));
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  // etichette nel DOM (con il loro filo), controllate insieme alle schede da IMP.controlli
+  const strato = document.getElementById('strato'), linee = document.getElementById('strato-linee');
+  strato.style.width = W + 'px'; strato.style.height = H + 'px';
+  linee.setAttribute('width', W); linee.setAttribute('height', H); linee.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  ET.forEach(e => {
+    const d = document.createElement('div'); d.className = 'et' + (e.nuda ? ' nuda' : ''); d.id = 'et-' + e.id; d.dataset.componente = 'et-' + e.id;
+    if (!e.nuda) { d.dataset.scatola = '1'; d.style.borderColor = e.colore || AZZ; }
+    d.textContent = e.testo; strato.appendChild(d); e.el = d;
+    const g = document.createElementNS(SVGNS, 'g');
+    const riga = (c, w) => { const l = document.createElementNS(SVGNS, 'line'); l.setAttribute('stroke', c); l.setAttribute('stroke-width', w); l.setAttribute('stroke-linecap', 'round'); g.appendChild(l); return l; };
+    e.ombra = riga('rgba(0,0,0,.45)', 6); e.riga = riga('#ffffff', 2.5);
+    const p = document.createElementNS(SVGNS, 'circle'); p.setAttribute('r', e.nuda ? 5 : 7); p.setAttribute('fill', '#ffffff'); p.setAttribute('stroke', e.colore || '#0a1220'); p.setAttribute('stroke-width', 2.5); g.appendChild(p);
+    e.pallino = p; e.g = g; linee.appendChild(g);
+  });
+  // orologio dei 30 minuti
+  const quadrante = document.getElementById('quadrante');
+  const svg = (tag, attr) => { const e = document.createElementNS(SVGNS, tag); for (const k in attr) e.setAttribute(k, attr[k]); quadrante.appendChild(e); return e; };
+  svg('circle', { r: 94, fill: '#0a1220', stroke: '#eef2f7', 'stroke-width': 7 });
+  const spicchio = svg('path', { fill: AMBRA, opacity: .92 });
+  for (let i = 0; i < 12; i++) { const a = i / 12 * 6.2832; svg('line', { x1: Math.sin(a) * 76, y1: -Math.cos(a) * 76, x2: Math.sin(a) * 88, y2: -Math.cos(a) * 88, stroke: '#eef2f7', 'stroke-width': i % 3 ? 3 : 6, 'stroke-linecap': 'round' }); }
+  const lancetta = svg('line', { x1: 0, y1: 0, x2: 0, y2: -70, stroke: '#ffffff', 'stroke-width': 7, 'stroke-linecap': 'round' });
+  svg('circle', { r: 8, fill: '#ffffff' });
+  const elTitolo = document.getElementById('titolo'), elOrologio = document.getElementById('orologio'), elEmergenza = document.getElementById('emergenza');
+  const elSito = elEmergenza.querySelector('.w'), elR1 = elTitolo.querySelector('.r1'), elR2 = elTitolo.querySelector('.r2');
+  [elTitolo, elOrologio, elEmergenza].forEach(e => { e.style.left = L.margine + 'px'; e.style.top = (L.zona.alto + 16) + 'px'; });
+  elOrologio.style.width = elEmergenza.style.width = (W - 2 * L.margine) + 'px';
+  const blocco = (el, v) => { el.style.opacity = v.toFixed(3); el.style.transform = 'translateY(' + ((1 - esplodi(v)) * 18).toFixed(1) + 'px)'; };
+
+  const fonte = document.getElementById('fonte');
+  fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
+  const attribuzione = ((RILIEVO && RILIEVO.attribuzione) || 'Rilievo: Mapzen Terrain Tiles (AWS Open Data) da EU-DEM (Copernicus), ETOPO1 (NOAA), SRTM e GMTED (USGS)').replace(' da EU-DEM', '\nda EU-DEM');
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+  const colNube = new THREE.Color(), CHIARA = new THREE.Color(0xf4f6fa), SCURA = new THREE.Color(0x7d8696);
+  const colCima = new THREE.Color(), CIMA_VERDE = new THREE.Color(0x4a9a54), CIMA_BRUCIATA = new THREE.Color(0x2a2620);
+
+  /* ================================================================ ANIMAZIONE */
+  function animaRilievo(t) {
+    // la nube cresce, si scurisce, poi se ne va
+    const via = viaNube(t);
+    for (const s of SBUFFI) { const g = esplodi(prog(t, s.quando, s.durata)) * (1 - .25 * via), r = s.r * g; s.m.visible = g > .01; s.m.scale.set(r, r * s.sy, r); }
+    nube.position.set(ALLONTANA.x * via, 0, ALLONTANA.z * via);
+    const buio = clamp(.3 * liscia(prog(t, T0N + 2.5, 3)) + .7 * liscia(prog(t, tScuro, 1.9))) * (1 - liscia(prog(t, S(6) + 1.2, 5.5)));
+    let lampi = 0;
+    for (const x of FULMINI_R) { const k = lampo(t, x.t); x.f.forza(k); lampi = Math.max(lampi, k); }
+    colNube.copy(CHIARA).lerp(SCURA, buio); matNube.color.copy(colNube); matNube.emissiveIntensity = .12 * lampi;
+    const luce = 1 - .46 * buio;
+    for (const m of matRilievo) m.color.setScalar(luce);
+    pioggiaR.aggiorna(t, clamp(liscia(prog(t, EV.lampo0 - .2, 2.2)) * (1 - liscia(prog(t, S(6) + .8, 3.2)))));
+    // anelli del tuono e linea della distanza
+    ANELLI.forEach((A, i) => {
+      const d = t - EV.lampo2 - i * .2, r = d * vAnello;
+      aggiornaAnello(A, r, .03 + .004 * r, d < 0 ? 0 : (.8 - .12 * i) * (1 - liscia((r - dGen * .85) / (dGen * .6))));
+    });
+    const cresce = prog(t, T.pochi - .75, .7), vl = fin(t, T.pochi - .75, EV.zoom + .1, .1, .5);
+    lineaDist.forEach(l => { l.m.visible = vl > .01 && l.u <= cresce; l.m.material.opacity = vl; });
+    anelloGen.oggetto.position.copy(pGen(8)); anelloGen.aggiorna(t, { inizio: T.guarda - .3, fine: T.se1 - .3 });
+    anelloGenR.oggetto.position.copy(pGen(8)); anelloGenR.aggiorna(t, { inizio: EV.tuono2 - .05, fine: EV.zoom + .4 });
+  }
+  function animaPlastici(t) {
+    const k = sceneA(t), inA = t < S(4) + .9, inB = t > S(4) + .1 && t < S(5) + 1.0, inC = t > S(5) + .1;
+    areaA.visible = inA; areaB.visible = inB; areaC.visible = inC;
+    pioggiaA.oggetto.visible = inA; pioggiaB.oggetto.visible = inB; pioggiaC.oggetto.visible = inC;
+    if (inA) pioggiaA.aggiorna(t, 1);
+    if (inB) pioggiaB.aggiorna(t, 1);
+    if (inC) pioggiaC.aggiorna(t, 1);
+    // A: il finestrino dell'auto si chiude con «finestrini chiusi»
+    const su = esplodi(prog(t, T.porte + .35, .9)); finestrino.position.y = mix(.86, 1.24, su); finestrino.scale.y = mix(.25, 1, su);
+    // B: il fulmine cade sulla punta dell'albero, che resta annerita e fuma
+    const kb = lampo(t, EV.lampo4); fulmineB.forza(kb);
+    soleP.intensity = 1.2 * (1 + .3 * kb);
+    colCima.copy(CIMA_VERDE).lerp(CIMA_BRUCIATA, liscia(prog(t, EV.lampo4 + .05, .4)) * .7); matCima.color.copy(colCima);
+    fumoB.oggetto.visible = inB; if (inB) fumoB.aggiorna(t - EV.lampo4, fin(t, EV.lampo4 + .15, EV.lampo4 + 6, .4, 2));
+    [T.pali, T.tralicci, T.recinzioni, T.acqua].forEach((q, i) => cerchi[i](t, q - .1));
+    // C: la casa si apre, poi i quattro gesti
+    const ap = esplodi(prog(t, EV.apre, 1.3)), ut = esplodi(prog(t, EV.apre + .15, 1.3)), resp = ut * (1 + .11 * Math.sin((t - EV.apre) * 1.15));
+    facciata.rotation.x = 1.5 * ap;
+    tettoC.position.set(0, HM + 4.3 * resp, -1.5 * resp);
+    const ch = esplodi(prog(t, T.chiudi + .15, .75));
+    ante.forEach(a => { a.perno.rotation.y = -a.s * 1.3 * (1 - ch); });
+    spine.forEach((s, i) => {
+      const u = prog(t, T.spine + .35 + i * .45, .6), e = esplodi(u);
+      s.s.position.set(s.x, .105 + .2 * Math.sin(Math.PI * u) - .06 * e, CIAB.z + .36 * e); s.s.rotation.x = 1.1 * e;
+      orientaAsta(s.cavo, s.s.position.clone().add(V(0, .02, 0)), s.capo);
+    });
+    const tvSpenta = t > T.spine + .7, pcSpento = t > T.spine + 1.15;
+    schermoTV.visible = !tvSpenta; schermoTVoff.visible = tvSpenta; schermoPC.visible = !pcSpento; schermoPCoff.visible = pcSpento;
+    for (const d of DISTINTIVI) {
+      const v = esplodi(prog(t, d.inizio, .32)) * (d.fine == null ? 1 : 1 - liscia(prog(t, d.fine, .25)));
+      d.s.visible = v > .01; d.s.scale.setScalar(d.lato * (v + .1 * Math.sin(Math.PI * clamp(prog(t, d.inizio, .45)))));
+    }
+  }
+  function sovrimpressioni(t, mp) {
+    // titolo d'apertura: con la voce, una riga per volta
+    const vt = fin(t, T.titolo, T.un, .3, .3); blocco(elTitolo, vt);
+    elR1.style.opacity = clamp(prog(t, T.titolo, .3)).toFixed(3); elR2.style.opacity = clamp(prog(t, T.come, .3)).toFixed(3);
+    // orologio dei 30 minuti, poi il 112
+    const vo = fin(t, T.trenta - .25, T.emergenza - .15, .3, .25); blocco(elOrologio, vo);
+    if (vo > 0) {
+      const a = Math.PI * esplodi(prog(t, T.trenta, 2.2)), x = Math.sin(a) * 86, y = -Math.cos(a) * 86;
+      spicchio.setAttribute('d', a < .001 ? '' : 'M0,0 L0,-86 A86,86 0 ' + (a > Math.PI ? 1 : 0) + ',1 ' + x.toFixed(2) + ',' + y.toFixed(2) + ' Z');
+      lancetta.setAttribute('x2', (Math.sin(a) * 70).toFixed(2)); lancetta.setAttribute('y2', (-Math.cos(a) * 70).toFixed(2));
+    }
+    const ve = fin(t, T.n112 - .35, TOTAL + 1, .3, .3); blocco(elEmergenza, ve);
+    elSito.style.opacity = clamp(prog(t, T.n112 + .9, .35)).toFixed(3);
+    // etichette
+    for (const e of ET) {
+      const plast = e.cam === 'P', cam = plast ? camP : camR;
+      let v = fin(t, e.inizio, e.fine, .22, .25) * (plast ? (mp > .98 ? 1 : 0) : (mp < .02 ? 1 : 0));
+      let p = null;
+      if (v > 0) { p = M3.proietta(e.punto(), cam, plast ? {} : { rilievo: ril }); if (!p.davanti || (!plast && p.coperto)) v = 0; }
+      if (v <= 0) { e.el.style.opacity = '0'; e.g.style.display = 'none'; continue; }
+      const w = e.el.offsetWidth, h = e.el.offsetHeight;
+      const x = clamp(p.x + e.verso.dx - w / 2, L.margine, W - L.margine - w), y = clamp(p.y + e.verso.dy - h / 2, L.zona.alto, L.zona.basso - h);
+      e.el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + (y + (1 - esplodi(v)) * 10).toFixed(1) + 'px)'; e.el.style.opacity = v.toFixed(3);
+      const qx = clamp(p.x, x, x + w), qy = clamp(p.y, y, y + h), dist = Math.hypot(qx - p.x, qy - p.y);
+      const mostra = dist > 10 && p.x > 0 && p.x < W && p.y > L.zona.alto - 40 && p.y < L.zona.basso + 10;
+      e.g.style.display = mostra ? '' : 'none'; e.g.style.opacity = v.toFixed(3);
+      if (mostra) {
+        for (const l of [e.ombra, e.riga]) { l.setAttribute('x1', p.x.toFixed(1)); l.setAttribute('y1', p.y.toFixed(1)); l.setAttribute('x2', qx.toFixed(1)); l.setAttribute('y2', qy.toFixed(1)); }
+        e.pallino.setAttribute('cx', p.x.toFixed(1)); e.pallino.setAttribute('cy', p.y.toFixed(1));
+      }
+    }
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    const mp = plastici(t);
+    cam1.applica(t);
+    cam2.applica(t); camP.near = .1; camP.far = 400; camP.updateProjectionMatrix();
+    livR.canvas.style.visibility = mp < 1 ? 'visible' : 'hidden';
+    livP.canvas.style.visibility = mp > 0 ? 'visible' : 'hidden'; livP.canvas.style.opacity = mp.toFixed(3);
+    if (mp < 1) { animaRilievo(t); livR.disegna(scenaR, camR); }
+    if (mp > 0) { animaPlastici(t); livP.disegna(scenaP, camP); }
+    const k = sceneA(t), sc = SC[k];
+    IMP.aggiorna(stato, t, { passoHUD: k + (k === 0 ? 1 : clamp((t - sc.inizio) / .4)), hud: CONFIG.hud[k], notaVisibile: true,
+                             nota: mp > .5 ? CONFIG.notaPlastico : CONFIG.notaRilievo });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const s of SCH) {
+      const plast = s.cam === 'P', attiva = plast ? mp > .98 : mp < .02;
+      let punto = null, vis = attiva, p = null;
+      if (s.punto && attiva) {
+        p = M3.proietta(s.punto(), plast ? camP : camR, plast ? { zona: L.zonaSchede, margine: L.margine } : { rilievo: ril, zona: L.zonaSchede, margine: L.margine });
+        punto = p.punto; vis = p.visibile;
+      }
+      proiezioni[s.id] = p;
+      IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso, inizio: s.inizio, fine: s.fine,
+        visibile: vis, centro: s.punto ? null : { x: W / 2, y: L.zona.alto + (ORIZ ? 110 : 96) } });
+    }
+    sovrimpressioni(t, mp);
+    const testo = mp > .5 ? CONFIG.fonte : CONFIG.fonte + '\n' + attribuzione;
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(s => s.punto && proiezioni[s.id]).map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine, proiezione: proiezioni[s.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  IMP.caricaFont().then(() => { scenaP.updateMatrixWorld(true); render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>
