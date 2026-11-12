@@ -48,10 +48,10 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Setup Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.11'
 
@@ -63,9 +63,12 @@ jobs:
 
       - name: Decidi finestra e fonti
         id: piano
+        env:
+          IN_DAYS: ${{ inputs.days }}
+          IN_FONTI: ${{ inputs.fonti }}
         run: |
-          DAYS="${{ inputs.days }}"
-          FONTI="${{ inputs.fonti }}"
+          DAYS="${IN_DAYS}"
+          FONTI="${IN_FONTI}"
           if [ "$(date -u +%u)" = "1" ]; then
             [ -z "$DAYS" ] && DAYS=7
             [ -z "$FONTI" ] && FONTI=tutte
@@ -81,10 +84,12 @@ jobs:
         id: sweep
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          S_PIANO_DAYS: ${{ steps.piano.outputs.days }}
+          S_PIANO_FONTI: ${{ steps.piano.outputs.fonti }}
         run: |
           python3 scripts/normativa-watcher.py \
-            --days "${{ steps.piano.outputs.days }}" \
-            --fonti "${{ steps.piano.outputs.fonti }}" \
+            --days "${S_PIANO_DAYS}" \
+            --fonti "${S_PIANO_FONTI}" \
             --dedup-issues \
             --out novita.json --issue-body issue_body.md
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
@@ -110,18 +115,23 @@ jobs:
       - name: Apri issue (se ci sono voci nuove)
         if: steps.sweep.outputs.totale != '0'
         env:
+          S_SWEEP_IMMAGINI: ${{ steps.sweep.outputs.immagini }}
+          S_PIANO_FONTI: ${{ steps.piano.outputs.fonti }}
+          S_SWEEP_PRIMARIE: ${{ steps.sweep.outputs.primarie }}
+          S_SWEEP_DIRETTE: ${{ steps.sweep.outputs.dirette }}
+          S_SWEEP_TOTALE: ${{ steps.sweep.outputs.totale }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           DATA=$(TZ=Europe/Rome date +"%d/%m/%Y")
-          case "${{ steps.sweep.outputs.immagini }}" in
+          case "${S_SWEEP_IMMAGINI}" in
             0|"") IMMAGINI="" ;;
             1) IMMAGINI=", 1 immagine EU Space" ;;
-            *) IMMAGINI=", ${{ steps.sweep.outputs.immagini }} immagini EU Space" ;;
+            *) IMMAGINI=", ${S_SWEEP_IMMAGINI} immagini EU Space" ;;
           esac
-          if [ "${{ steps.piano.outputs.fonti }}" = "primarie" ]; then
-            TITOLO="Rassegna normativa e albo pretorio — $DATA (${{ steps.sweep.outputs.primarie }} atti${IMMAGINI}, ${{ steps.sweep.outputs.dirette }} diretti)"
+          if [ "${S_PIANO_FONTI}" = "primarie" ]; then
+            TITOLO="Rassegna normativa e albo pretorio — $DATA (${S_SWEEP_PRIMARIE} atti${IMMAGINI}, ${S_SWEEP_DIRETTE} diretti)"
           else
-            TITOLO="Novità normative PC — settimana al $DATA (${{ steps.sweep.outputs.totale }} voci, ${{ steps.sweep.outputs.dirette }} dirette)"
+            TITOLO="Novità normative PC — settimana al $DATA (${S_SWEEP_TOTALE} voci, ${S_SWEEP_DIRETTE} dirette)"
           fi
           gh issue create \
             --title "$TITOLO" \
@@ -182,7 +192,7 @@ jobs:
 
       - name: Upload risultato come artifact (debug)
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: normativa-watcher-results
           path: |
@@ -192,6 +202,9 @@ jobs:
 
       - name: Run rosso se una fonte non risponde
         if: steps.sweep.outputs.errori != '0' || steps.sweep.outputs.errori_news != '0'
+        env:
+          S_SWEEP_ERRORI: ${{ steps.sweep.outputs.errori }}
+          S_SWEEP_ERRORI_NEWS: ${{ steps.sweep.outputs.errori_news }}
         run: |
-          echo "::error::Fonti in errore: ${{ steps.sweep.outputs.errori }} primarie/EU Space, ${{ steps.sweep.outputs.errori_news }} della rassegna stampa. Elenco nella issue fonte-rotta e in novita.json."
+          echo "::error::Fonti in errore: ${S_SWEEP_ERRORI} primarie/EU Space, ${S_SWEEP_ERRORI_NEWS} della rassegna stampa. Elenco nella issue fonte-rotta e in novita.json."
           exit 1

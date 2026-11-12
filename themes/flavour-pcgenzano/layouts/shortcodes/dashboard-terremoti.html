@@ -298,7 +298,7 @@
         if(!r.ok) throw new Error('HTTP '+r.status);
         return r.text().then(function(t){ return t ? JSON.parse(t) : {features:[]}; });
       }).then(function(j){
-        eventi=(j.features||[]).map(function(f){var p=f.properties||{},g=(f.geometry&&f.geometry.coordinates)||null;if(!g)return null;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0],id:p.eventId};}).filter(function(e){return e && typeof e.mag==='number' && isItaliano(e);});
+        eventi=(j.features||[]).map(function(f){var p=f.properties||{},g=(f.geometry&&f.geometry.coordinates)||null;if(!g)return null;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0],id:(/^\d+$/.test(String(p.eventId))?String(p.eventId):'')};}).filter(function(e){return e && typeof e.mag==='number' && isItaliano(e);});
         render();
         stato.textContent=(eventi.length?'Aggiornato':'Nessuna scossa · aggiornato')+' alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
         if(window.pcCache) pcCache.salva('sisma:'+zona+':'+win+':'+minmag, eventi);

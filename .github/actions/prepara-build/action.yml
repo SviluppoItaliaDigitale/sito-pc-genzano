@@ -25,7 +25,7 @@ runs:
         extended: true
 
     - name: "⚙️ Setup Node.js (per npx pagefind)"
-      uses: actions/setup-node@v7
+      uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
       with:
         node-version: '20'
 
@@ -66,7 +66,7 @@ runs:
     - name: "🗃️ Pacchetti Ubuntu conservati (riserva se i server non rispondono)"
       id: cache-apt
       continue-on-error: true
-      uses: actions/cache/restore@v6
+      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
       with:
         path: ~/.cache/apt-deb
         key: ${{ steps.chiave-apt.outputs.chiave }}
@@ -83,7 +83,7 @@ runs:
       # Solo se c'è qualcosa da conservare (deb = .deb scaricati in questo giro o già in cache).
       if: steps.cache-apt.outputs.cache-hit != 'true' && steps.apt.outputs.fonte != 'cache' && steps.apt.outputs.deb != '0'
       continue-on-error: true
-      uses: actions/cache/save@v6
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
       with:
         path: ~/.cache/apt-deb
         key: ${{ steps.chiave-apt.outputs.chiave }}

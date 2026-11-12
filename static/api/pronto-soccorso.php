@@ -62,6 +62,9 @@ function scarica(string $url): ?string {
             CURLOPT_CONNECTTIMEOUT => 5,
             CURLOPT_USERAGENT      => UA,
             CURLOPT_FOLLOWLOCATION => false,
+            // solo https e risposte piccole: difesa in piu' se la fonte venisse dirottata
+            CURLOPT_PROTOCOLS      => CURLPROTO_HTTPS,
+            CURLOPT_MAXFILESIZE    => 2097152,
             CURLOPT_HTTPHEADER     => ['Accept: application/json'],
         ]);
         $r  = curl_exec($c);
@@ -70,6 +73,7 @@ function scarica(string $url): ?string {
         return $ok ? (string)$r : null;
     }
     $ctx = stream_context_create(['http' => [
+        'follow_location' => 0, 'max_redirects' => 0,
         'timeout' => TIMEOUT_SEC,
         'header'  => "Accept: application/json\r\nUser-Agent: " . UA . "\r\n",
     ]]);
@@ -153,6 +157,9 @@ function scaricaInsieme(array $urls, int $tetto): array {
             CURLOPT_CONNECTTIMEOUT => 5,
             CURLOPT_USERAGENT      => UA,
             CURLOPT_FOLLOWLOCATION => false,
+            // solo https e risposte piccole: difesa in piu' se la fonte venisse dirottata
+            CURLOPT_PROTOCOLS      => CURLPROTO_HTTPS,
+            CURLOPT_MAXFILESIZE    => 2097152,
             CURLOPT_HTTPHEADER     => ['Accept: application/json'],
         ]);
         curl_multi_add_handle($multi, $c);

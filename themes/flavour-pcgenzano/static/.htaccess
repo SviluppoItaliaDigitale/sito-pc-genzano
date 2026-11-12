@@ -319,6 +319,15 @@ FileETag None
   </FilesMatch>
 </IfModule>
 
+# Copie di lavoro, archivi di dati, registri e script non sono contenuti del
+# sito: se uno finisse per errore nello spazio web, non si serve (audit di
+# sicurezza del 12/11/2026). Oggi nella build non ce ne sono.
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.(bak|old|orig|save|swp|sql|log|ini|env|sh|py|inc|pem|key)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
 # Charset esplicito nell'header Content-Type (le pagine sono già UTF-8 nel
 # <meta charset>, ma senza questa riga i client che seguono la RFC leggono
 # ISO-8859-1 e i feed/JSON senza meta risultano con accenti corrotti).

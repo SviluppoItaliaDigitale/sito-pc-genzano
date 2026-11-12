@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
 
@@ -161,7 +161,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: "🖨️ I pacchetti 'Stampa tutto' devono corrispondere ai kit"
         # Audit esterno 06/09/2026 (rilievo F08): il pacchetto secondaria I
@@ -290,7 +290,7 @@ jobs:
     timeout-minutes: 60  # 35 per la stampa, più la prova da LIM (01/11/2026)
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
 
@@ -364,7 +364,7 @@ jobs:
     timeout-minutes: 12
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: "🧰 Server dei pacchetti Ubuntu raggiungibili (per le librerie del browser)"
         # 11/11/2026: `playwright install --with-deps` usa apt da solo; se i server
@@ -397,7 +397,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: "🧭 Verifica che il menu di site-chrome.js sia generato da hugo.toml"
         # Il blocco MENU-AUTOGEN di site-chrome.js è GENERATO da
@@ -414,7 +414,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: "🔬 Valida YAML di .github/workflows/"
         run: |
@@ -451,7 +451,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
 
@@ -587,7 +587,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
 
@@ -620,9 +620,11 @@ jobs:
         # Gli errori che richiedono una LETTURA (articolo mancante, accordi,
         # reggenze) non sono intercettabili qui: se ne occupa l'agent
         # pc-revisore-linguistico, gate obbligato prima del commit.
+        env:
+          EV_PULL_REQUEST_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           set -euo pipefail
-          BASE="${{ github.event.pull_request.base.sha }}"
+          BASE="${EV_PULL_REQUEST_BASE_SHA}"
           git diff --name-only "$BASE"...HEAD -- 'content/**/*.md' \
             'static/formazione/**/*.html' 'static/giochi/**/*.html' \
             'static/scuole/**/*.html' > /tmp/changed.txt || true

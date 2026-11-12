@@ -44,7 +44,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Verifica il lettore dei feed
         run: python3 scripts/controllo-copie.py --self-test

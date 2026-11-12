@@ -72,7 +72,7 @@ jobs:
         # `git log --name-only` e `diff.renames=0` (bep/gitmap), che non
         # chiede i contenuti vecchi. Fino all'11/11/2026 `fetch-depth: 0`
         # scaricava tutto in 49 s.
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
           filter: blob:none
@@ -220,6 +220,9 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER_DIR: /www.protezionecivilegenzano.it/
+          # Stesso nome del certificato usato dal caricamento: la riparazione
+          # non si collega mai senza verificare il certificato.
+          FTP_TLS_NOME: ${{ vars.FTP_TLS_NOME || 'ftplnx02.aruba.it' }}
         run: |
           set -uo pipefail
           python3 scripts/verifica-deploy-aruba.py \
@@ -252,7 +255,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
           filter: blob:none
@@ -278,7 +281,7 @@ jobs:
         run: python3 scripts/genera-manifest-build.py public
 
       - name: "📦 Upload artifact GitHub Pages"
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: ./public
 

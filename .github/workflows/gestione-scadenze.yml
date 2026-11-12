@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Sweep articoli con scadenza superata
         id: sweep
@@ -87,6 +87,7 @@ jobs:
       - name: Crea/aggiorna issue
         if: steps.sweep.outputs.no_archived != '0'
         env:
+          S_SWEEP_NO_ARCHIVED: ${{ steps.sweep.outputs.no_archived }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
@@ -94,7 +95,7 @@ jobs:
           # con "could not add label" e il job muore (audit 10/06/2026).
           gh label create "scadenze" --color "D93F0B" \
             --description "Articoli con scadenza superata" 2>/dev/null || true
-          TITLE="Articoli con scadenza superata: ${{ steps.sweep.outputs.no_archived }} da archiviare"
+          TITLE="Articoli con scadenza superata: ${S_SWEEP_NO_ARCHIVED} da archiviare"
           EXISTING=$(gh issue list --label "automazione" --label "scadenze" --state open --json number --jq '.[0].number // empty')
           if [ -n "$EXISTING" ]; then
             gh issue edit "$EXISTING" --title "$TITLE"

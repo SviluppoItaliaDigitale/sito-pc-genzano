@@ -52,7 +52,8 @@
     toolbar.appendChild(titoloSpan);
     toolbar.appendChild(chiudiBtn);
 
-    // Iframe
+    // Iframe: solo indirizzi https (mai javascript:, data: o http in chiaro)
+    if (!/^https:\/\//i.test(String(src || ''))) { return; }
     var iframe = document.createElement('iframe');
     iframe.setAttribute('src', src);
     iframe.setAttribute('title', title);
