@@ -2,6 +2,6 @@ It alert: il messaggio che avvisa di un grave pericolo. È il sistema di allarme
 Arriva su tutti i telefoni accesi che si trovano nella zona del pericolo. Non serve scaricare un'app, e non serve iscriversi.
 Il telefono fa un suono diverso dalle solite suonerie, e sullo schermo compare un testo che comincia con la scritta It alert.
 Si usa per poche emergenze gravi: un incidente in uno stabilimento industriale, un incidente nucleare, il crollo di una grande diga, l'attività di alcuni vulcani.
-Non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo, guarda il colore dell'allerta sul sito del Gruppo.
+Non si usa per i terremoti e nemmeno per le allerte mèteo. Per il maltempo, guarda il colore dell'allerta sul sito del Gruppo.
 Se lo ricevi, fermati e leggi tutto il messaggio. Poi segui le indicazioni delle autorità.
-Se il messaggio comincia con la parola test, è solo una prova: non devi fare niente. In emergenza chiama il centododici.
+Se il messaggio comincia con la parola test, è solo una prova: non devi fare niente. In emergenza chiama l'uno, uno, due.
