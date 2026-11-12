@@ -1,0 +1,106 @@
+{
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 8.3
+  },
+  {
+   "inizio": 8.3,
+   "durata": 8.7
+  },
+  {
+   "inizio": 17.0,
+   "durata": 11.2
+  },
+  {
+   "inizio": 28.2,
+   "durata": 13.7
+  },
+  {
+   "inizio": 41.9,
+   "durata": 9.7
+  },
+  {
+   "inizio": 51.6,
+   "durata": 9.9
+  },
+  {
+   "inizio": 61.5,
+   "durata": 11.1
+  }
+ ],
+ "voce": [
+  0.45,
+  8.75,
+  21.1,
+  28.65,
+  42.5,
+  52.5,
+  62.4
+ ],
+ "eventi": {
+  "tuffo": 3.9,
+  "telefono": 4.0,
+  "avviso1": 5.75,
+  "avviso1_fine": 7.7,
+  "s1_arrivo": 10.0,
+  "onde": 9.8,
+  "orbita_fine": 12.15,
+  "card_app": 13.1,
+  "card_iscr": 14.15,
+  "s1_fine": 16.6,
+  "gru_fine": 18.9,
+  "avviso2": 19.0,
+  "avviso2_fine": 21.0,
+  "card_suono": 21.8,
+  "card_suono_fine": 23.7,
+  "zoom_da": 23.9,
+  "zoom_a": 24.7,
+  "righe_da": 24.5,
+  "cerchia": 26.25,
+  "card_italert": 26.35,
+  "s2_fine": 27.8,
+  "m_arr": [
+   30.2,
+   33.3,
+   35.0,
+   36.6
+  ],
+  "m_par": [
+   32.75,
+   34.45,
+   36.05
+  ],
+  "tutti_da": 38.4,
+  "tutti_a": 39.6,
+  "no_arrivo": 43.0,
+  "pan1": 43.0,
+  "no1": 43.55,
+  "pan2": 44.35,
+  "no2": 44.95,
+  "col_da": 45.35,
+  "col_a": 46.3,
+  "colori": 46.35,
+  "card_sito": 47.5,
+  "s4_fine": 51.2,
+  "p1_arr": 52.7,
+  "p1": 53.35,
+  "p2_da": 53.95,
+  "p2_a": 54.45,
+  "leggi_da": 54.5,
+  "leggi_a": 55.5,
+  "p3_da": 55.5,
+  "p3_a": 56.0,
+  "passi_da": 58.0,
+  "passi_a": 59.1,
+  "test_arr": 62.4,
+  "test_msg": 62.55,
+  "test_cerchia": 63.8,
+  "card_test": 64.6,
+  "card_test_fine": 66.95,
+  "n112_da": 67.0,
+  "n112_a": 67.9,
+  "card_fine": 69.3
+ },
+ "totale": 72.6
+}

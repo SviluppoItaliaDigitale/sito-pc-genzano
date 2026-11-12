@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vento forte: che cosa fare</title>
+<!-- vento-forte.src.html — video 3D divulgativo «Vento forte: che cosa fare» (Protezione Civile Genzano di Roma):
+     tuffo sul rilievo vero dei Castelli Romani con le linee del vento, poi un quartiere in plastico (palazzina con i
+     balconi, casa in spaccato, viale alberato, impalcatura, cartellone) e una strada con galleria e viadotto.
+     Scritto per Alessandro Cuollo il 12/11/2026 sul modello della skill video-3d, senza codice di terzi. Si costruisce
+     con costruisci.py di video-3d (three.js 0.181.2 MIT, motore 3D, impaginazione, font) e i dati rilievo (rilievo.py),
+     tempi e sottotitoli (ritmo.py). Tutto dipende solo da t: render(t) deterministico.
+     Plastico in metri: x verso est, z verso sud, terreno a y = 0. La strada del quartiere corre lungo x fra z = 2 e 9;
+     gli edifici stanno a nord (z < 0). La strada con galleria e viadotto sta a parte, 220 m più a sud. -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #livello-rilievo { z-index: 1; } #livello-scena { z-index: 2; }
+  #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+  #titolo, #grande { position: absolute; z-index: 31; left: 96px; width: 888px; text-align: center; opacity: 0;
+           font-family: 'Titillium Web', sans-serif; color: #eef2f7; }
+  #titolo .a { font-weight: 700; font-size: 104px; line-height: 1.02; text-shadow: 0 2px 4px rgba(4, 8, 16, .95), 0 0 2px rgba(4, 8, 16, .9); }
+  #titolo .b { font-weight: 600; font-size: 50px; line-height: 1.2; color: #ffcc00; text-shadow: 0 2px 4px rgba(4, 8, 16, .95), 0 0 2px rgba(4, 8, 16, .9); }
+  #grande .a { font-weight: 600; font-size: 40px; line-height: 1.1; letter-spacing: 1px; }
+  #grande .b { font-weight: 700; font-size: 212px; line-height: .98; color: #ffcc00; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="livello-rilievo"></canvas>
+  <canvas id="livello-scena"></canvas>
+  <div id="fonte" data-componente="fonte-3d"></div>
+  <div id="titolo" data-componente="titolo"><div class="a">Vento forte</div><div class="b">che cosa fare</div></div>
+  <div id="grande" data-componente="numero-112"><div class="a">Chiama il</div><div class="b">112</div></div>
+</div>
+<script type="application/json" id="dato-rilievo">/*DATO:rilievo*/</script>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: 'Vento forte: che cosa fare',
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  hud: ['VENTO FORTE', 'PRIMA', "L'ALLERTA", 'IN CASA', 'SE SEI FUORI', 'IN STRADA', 'DOPO'],
+  esagerazione: 2,                                   // rilievo ×2: lo dice la nota in alto
+  notaRilievo: 'RILIEVO ×2 · NON IN SCALA',
+  nota: 'SCHEMA · NON IN SCALA',
+  fonte: 'Fonte: Dipartimento della Protezione Civile,\n«Cosa fare in caso di venti e mareggiate»',
+  chiave: ['raffiche', 'rami', 'tegole', 'vasi', 'riparo', 'fissa', "l'allerta", 'alberi', 'impalcature', 'casa', 'porte',
+           'finestre', 'vetri', 'parchi', 'alberate', 'cartelloni', 'cornicioni', 'rallenta', 'gallerie', 'viadotti',
+           'cavi', '112'],
+  modo: 'parole'
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const RILIEVO = dato('rilievo');
+const TEMPI = dato('tempi');
+if (!TEMPI) throw new Error('manca tempi.json: lancia ritmo.py e costruisci con --dato tempi=tempi.json');
+const SOTT = dato('sottotitoli') || [];
+const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).concat(CONFIG.chiave) }));
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const ente = CONFIG.ente, formato = CONFIG.formato;
+  const L = IMP.layout(formato), W = L.W, H = L.H;
+  const SC = TEMPI.scene, TOTAL = TEMPI.totale, EV = TEMPI.ev, VOCE = TEMPI.voce;
+  const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, ease, hash } = M3;
+  const fin = M3.finestra;
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
+  const liscia = u => { u = clamp(u); return u * u * (3 - 2 * u); };
+  const esplodi = u => { u = clamp(u); return u * u * u * (u * (6 * u - 15) + 10); };   // parte e arriva piano
+  const fr = x => x - Math.floor(x);
+
+  const stage = document.getElementById('stage');
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud[0], passiHUD: SC.length, nota: CONFIG.notaRilievo });
+  IMP.anteprima(stage);
+
+  const lontano = M3.creaRenderer(document.getElementById('livello-rilievo'), W, H, { scala: 0.8 });
+  const vicino = M3.creaRenderer(document.getElementById('livello-scena'), W, H, { scala: 0.8 });
+  const scenaRil = new THREE.Scene(), scena = new THREE.Scene();
+  const cameraRil = M3.creaCamera(W, H, { fov: 32, zona: L.zona });
+  const camera = M3.creaCamera(W, H, { fov: 32, zona: L.zona });
+
+  /* ---------------------------------------------------------------- luci (plastico) */
+  scena.add(new THREE.HemisphereLight(0xeef3ff, 0x39425a, 1.2));
+  const sole = new THREE.DirectionalLight(0xfff4e6, 1.6); sole.position.set(9, 14, 12); scena.add(sole);
+  const contro = new THREE.DirectionalLight(0xb7cdf5, 0.7); contro.position.set(-8, 6, -9); scena.add(contro);
+
+  /* ---------------------------------------------------------------- aiuti: texture, materiali, solidi */
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 1; return t;
+  }
+  const tinta = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: c, metalness: 0.03, roughness: 0.8 }, o));
+  const base = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+  const box = (w, h, d, mat) => new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  const cil = (r1, r2, h, mat, seg = 12) => new THREE.Mesh(new THREE.CylinderGeometry(r1, r2, h, seg), mat);
+  const metti = (gr, m, x, y, z) => { m.position.set(x, y, z); gr.add(m); return m; };
+  const texOmbra = tela(128, 128, (g, w) => {
+    const gr = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2);
+    gr.addColorStop(0, 'rgba(0,0,0,.5)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = gr; g.fillRect(0, 0, w, w);
+  });
+  function ombra(rx, rz, y = 0.05) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(rx * 2, rz * 2), base(0xffffff, { map: texOmbra, transparent: true, depthWrite: false }));
+    m.rotation.x = -Math.PI / 2; m.position.y = y; return m;
+  }
+  const matIntonaco = tinta(0xf0e6d2), matIntonaco2 = tinta(0xe4d3bd), matIntonaco3 = tinta(0xd9dee6);
+  const matBianco = tinta(0xf7f8fa, { roughness: .5 }), matScuro = tinta(0x2b3442), matGrigio = tinta(0x9aa3ad);
+  const matLegno = tinta(0x8a5a36, { roughness: .6 }), matLegnoScuro = tinta(0x5b3a22, { roughness: .6 });
+  const matMetallo = tinta(0xb8c0ca, { metalness: .6, roughness: .35 });
+  const matVetro = base(0x8fc1ea), matVetroBuio = base(0x25344d);
+  const matAsfalto = tinta(0x3d434c, { roughness: .95 }), matMarciapiede = tinta(0xc4c8cc, { roughness: .95 });
+  const matPrato = tinta(0x6b9a4a, { roughness: 1 }), matTerra = tinta(0x8a7350, { roughness: 1 });
+  const matCotto = tinta(0xc1663f, { roughness: .75 }), matTegola = tinta(0xb5532f, { roughness: .8 });
+  const matGiallo = tinta(0xffcc00, { roughness: .45, emissive: 0x6b4f00, emissiveIntensity: .7 });
+  const VERDI = [0x3f8f3a, 0x4d9a3e, 0x387f33, 0x5aa045];
+
+  /* segni: spunta verde e divieto rosso (sprite sempre rivolti alla telecamera) */
+  const texSi = tela(128, 128, g => { g.fillStyle = '#16a34a'; g.beginPath(); g.arc(64, 64, 60, 0, 6.29); g.fill(); g.strokeStyle = '#fff'; g.lineWidth = 6; g.stroke();
+    g.lineWidth = 16; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath(); g.moveTo(34, 68); g.lineTo(56, 90); g.lineTo(96, 40); g.stroke(); });
+  const texNo = tela(128, 128, g => { g.fillStyle = '#ffffff'; g.beginPath(); g.arc(64, 64, 60, 0, 6.29); g.fill();
+    g.strokeStyle = '#dc2626'; g.lineWidth = 15; g.beginPath(); g.arc(64, 64, 50, 0, 6.29); g.stroke();
+    g.beginPath(); g.moveTo(29, 29); g.lineTo(99, 99); g.stroke(); });
+  const SEGNI = [];
+  function segno(si, pos, lato, t0, t1, dove = scena) {
+    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: si ? texSi : texNo, transparent: true, depthTest: false, depthWrite: false }));
+    sp.position.copy(pos); sp.renderOrder = 20; sp.visible = false; dove.add(sp);
+    const s = { sp, lato, t0, t1: t1 == null ? 1e9 : t1 };
+    SEGNI.push(s); return s;
+  }
+  function aggiornaSegni(t) {
+    for (const s of SEGNI) {
+      const u = prog(t, s.t0, .4), via = prog(t, s.t1, .25);
+      s.sp.visible = u > 0 && via < 1;
+      const k = (u < 1 ? ease.morbida(u) * (1 + .22 * Math.sin(u * Math.PI)) : 1 + .035 * Math.sin((t - s.t0) * 3.2)) * (1 - liscia(via));
+      s.sp.scale.setScalar(Math.max(.001, s.lato * k));
+    }
+  }
+
+  /* nastri del vento: strisce chiare che scorrono, rivolte alla telecamera */
+  function creaNastri(n, seg) {
+    const pos = new Float32Array(n * (seg + 1) * 2 * 3), idx = [];
+    for (let i = 0; i < n; i++) for (let j = 0; j < seg; j++) { const a = (i * (seg + 1) + j) * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setIndex(idx);
+    const mesh = new THREE.Mesh(g, base(0xf4f8ff, { transparent: true, opacity: .82, depthWrite: false, side: THREE.DoubleSide }));
+    mesh.frustumCulled = false; mesh.renderOrder = 8;
+    return { mesh, pos, n, seg, g };
+  }
+  const _v = V(0, 0, 0), _s = V(0, 0, 0), _c = V(0, 0, 0);
+  // punto(i, j, v): scrive in v il nodo j del nastro i e restituisce lo spessore relativo (0-1)
+  function aggiornaNastri(N, cam, dir, largh, punto) {
+    let k = 0;
+    for (let i = 0; i < N.n; i++) for (let j = 0; j <= N.seg; j++) {
+      const w = punto(i, j, _v) * largh;
+      _c.copy(cam.position).sub(_v); _s.crossVectors(dir, _c).normalize().multiplyScalar(w);
+      N.pos[k++] = _v.x + _s.x; N.pos[k++] = _v.y + _s.y; N.pos[k++] = _v.z + _s.z;
+      N.pos[k++] = _v.x - _s.x; N.pos[k++] = _v.y - _s.y; N.pos[k++] = _v.z - _s.z;
+    }
+    N.g.attributes.position.needsUpdate = true;
+  }
+
+  /* ================================================================ RILIEVO VERO (apertura) */
+  const ril = M3.rilievo(RILIEVO || M3.rilievoDiProva(), { esagerazione: CONFIG.esagerazione, laghi: RILIEVO ? [
+    { nome: 'Lago Albano', lat: 41.750, lon: 12.665, profondita: 167 }, { nome: 'Lago di Nemi', lat: 41.715, lon: 12.700, profondita: 33 }] : [] });
+  scenaRil.add(ril.gruppo);
+  const BB = ril.riquadro, lat0 = BB[0], lon0 = BB[1], lat1 = BB[2], lon1 = BB[3];
+  const nastriRil = creaNastri(30, 12); scenaRil.add(nastriRil.mesh);
+  const DIR_EST = V(1, 0, 0), DIR_SUD = V(0, 0, 1);
+  const camRil = M3.telecamera(cameraRil, [
+    { t: 0, bersaglio: { lat: 41.722, lon: 12.684, sopra: 0 }, az: 0, el: 80, dist: 62, fov: 32 },
+    { t: 3.9, bersaglio: { lat: 41.7075, lon: 12.689, sopra: 0 }, az: -14, el: 40, dist: 5.2, facilita: 'lineare' }
+  ], { rilievo: ril });
+
+  /* ================================================================ IL QUARTIERE (plastico) */
+  const quartiere = new THREE.Group(); scena.add(quartiere);
+  // basamento, prato, strada, marciapiedi, parcheggio, giardino
+  metti(quartiere, box(91, 1.2, 37, tinta(0x2a3546, { roughness: 1 })), 3, -.75, 4);
+  metti(quartiere, box(90, .3, 36, matPrato), 3, -.15, 4);
+  metti(quartiere, box(90, .06, 7, matAsfalto), 3, .0, 5.5);
+  metti(quartiere, box(90, .16, 1.8, matMarciapiede), 3, .06, 1.1);
+  metti(quartiere, box(90, .16, 1.8, matMarciapiede), 3, .06, 9.9);
+  for (let i = 0; i < 22; i++) metti(quartiere, box(2, .01, .14, base(0xe5e7eb)), -39 + i * 4, .04, 5.5);
+  metti(quartiere, box(15, .06, 8.4, tinta(0x4a515b, { roughness: .95 })), -29, .0, 15);          // parcheggio libero
+  for (let i = 0; i < 6; i++) metti(quartiere, box(.12, .01, 4.2, base(0xe5e7eb)), -35.5 + i * 2.6, .04, 16.9);
+  metti(quartiere, box(5, .06, 2, tinta(0x4a515b, { roughness: .95 })), -30.2, .0, 11);            // ingresso del parcheggio
+
+  /* alberi: tronco e chioma a sfere sfaccettate; si piegano col vento attorno alla base */
+  const ALBERI = [];
+  function albero(x, z, h, seme, dove = quartiere) {
+    const g = new THREE.Group(); g.position.set(x, .1, z); dove.add(g);
+    metti(g, cil(.14, .24, h * .55, matLegnoScuro, 8), 0, h * .275, 0);
+    const chioma = new THREE.Group(); chioma.position.y = h * .55; g.add(chioma);
+    const r = h * .3;
+    [[0, r * .9, 0, 1], [-r * .62, r * .35, r * .2, .72], [r * .6, r * .45, -r * .25, .76], [r * .1, r * .3, r * .62, .66]].forEach(([a, b, c, k], i) => {
+      const s = new THREE.Mesh(new THREE.IcosahedronGeometry(r * k, 1), tinta(VERDI[(seme + i) % 4], { roughness: 1, flatShading: true }));
+      s.position.set(a, b, c); s.rotation.y = hash(seme * 3.1 + i) * 6; chioma.add(s);
+    });
+    const om = ombra(r * 1.5, r * 1.3, .1); om.position.set(x + .6, .16, z + .3); dove.add(om);
+    const a = { g, chioma, h, seme, caduto: null }; ALBERI.push(a); return a;
+  }
+  const T0 = albero(-22.2, 1.1, 6.2, 1), TA = albero(10.8, 1.1, 6.4, 2), TC = albero(27.2, -8.5, 5.6, 3);
+  const VN = [albero(30, 1.1, 6.4, 4), albero(36, 1.1, 6.8, 5), albero(42, 1.1, 6.2, 6)];
+  const VS = [albero(33, 9.9, 6.2, 7), albero(39, 9.9, 6.6, 8), albero(45, 9.9, 6.0, 9)];
+  albero(41, 14.5, 5.6, 10); albero(45.4, 18, 6.0, 11); albero(-39.5, 16, 5.4, 12);
+  // panchina del parco
+  metti(quartiere, box(1.8, .08, .5, matLegno), 43, .55, 12.4); metti(quartiere, box(1.8, .5, .06, matLegno), 43, .85, 12.15);
+  [-.8, .8].forEach(d => metti(quartiere, box(.08, .5, .5, matScuro), 43 + d, .3, 12.4));
+
+  // rami che si spezzano: quello dell'apertura (albero TA) e quello del viale (primo albero a nord)
+  function ramo(al, lato, giu) {
+    const g = new THREE.Group(); quartiere.add(g);
+    const l = cil(.06, .1, 2.0, matLegnoScuro, 6); l.rotation.z = Math.PI / 2; g.add(l);
+    const f = new THREE.Mesh(new THREE.IcosahedronGeometry(.75, 1), tinta(VERDI[1], { roughness: 1, flatShading: true })); f.position.set(lato * 1.1, .15, 0); g.add(f);
+    const f2 = new THREE.Mesh(new THREE.IcosahedronGeometry(.5, 1), tinta(VERDI[3], { roughness: 1, flatShading: true })); f2.position.set(lato * .35, .25, .25); g.add(f2);
+    return { g, su: V(al.g.position.x + lato * 1.25, al.h * .62, al.g.position.z + .5), giu, lato };
+  }
+  const ramoA = ramo(TA, 1, V(12.4, .45, 3.3)), ramoV = ramo(VN[0], -1, V(28.6, .45, 3.6));
+  function aggiornaRamo(r, t, t0, piega) {
+    const u = prog(t, t0, .85), q = u * u;
+    r.g.position.set(mix(r.su.x + piega * 2.2, r.giu.x, liscia(u)), mix(r.su.y, r.giu.y, q), mix(r.su.z, r.giu.z, liscia(u)));
+    r.g.rotation.set(0, u * 1.1 * r.lato, r.lato * (-.35 + .25 * piega) * (1 - u) + u * .12 + (u > 0 && u < 1 ? Math.sin(u * 9) * .3 : 0));
+  }
+
+  /* ---------------------------------------------------------------- palazzina con i balconi (x da -8 a 8) */
+  const pal = new THREE.Group(); quartiere.add(pal);
+  const PZ = -2, PH = 9.6;
+  metti(pal, box(16, PH, 9, matIntonaco), 0, PH / 2, -6.5);
+  metti(pal, box(16.1, .5, 9.1, tinta(0xb9b2a4, { roughness: .95 })), 0, .25, -6.5);
+  // cornicione: tre tratti, quello a ovest è lesionato (scena «fuori»)
+  const matCorn = tinta(0xd6d3cc, { roughness: .9 });
+  metti(pal, box(10.9, .45, 9.9, matCorn), 2.95, PH + .22, -6.5);
+  metti(pal, box(2, .45, 9.9, matCorn), -7.45, PH + .22, -6.5);
+  metti(pal, box(3.9, .45, 8.9, matCorn), -4.45, PH + .22, -7.0);
+  const cornRotto = box(3.8, .45, .95, tinta(0xcbc6bc, { roughness: .9 })); cornRotto.position.set(-4.45, PH + .1, -2.02); cornRotto.rotation.set(.16, 0, -.045); pal.add(cornRotto);
+  const texCrepa = tela(256, 64, (g, w, h) => {
+    g.strokeStyle = 'rgba(25,20,18,.95)'; g.lineWidth = 5; g.beginPath(); g.moveTo(0, h / 2);
+    for (let i = 1; i <= 16; i++) g.lineTo(i * w / 16, h / 2 + (hash(i * 3.7) - .5) * h * .8);
+    g.stroke();
+  });
+  const crepa = new THREE.Mesh(new THREE.PlaneGeometry(3.6, .5), base(0xffffff, { map: texCrepa, transparent: true, depthWrite: false })); crepa.position.set(-4.45, PH - .35, PZ + .02); pal.add(crepa);
+  metti(pal, box(15.6, .5, 8.6, tinta(0x8f8a80)), 0, PH + .55, -6.5);
+  function finestra(gr, x, y, z, w = 1.2, h = 1.4, lato = false, buia = false) {
+    const f = box(lato ? .06 : w, h, lato ? w : .06, buia ? matVetroBuio : matVetro); f.position.set(x, y + h / 2, z); gr.add(f);
+    const d = box(lato ? .24 : w + .2, .08, lato ? w + .2 : .24, matBianco); d.position.set(x + (lato ? .08 : 0), y - .04, z + (lato ? 0 : .08)); gr.add(d);
+    return f;
+  }
+  [0, 3.2, 6.4].forEach((y, p) => {
+    [-6.5, 6.5].forEach(x => finestra(pal, x, y + 1.0, PZ + .01));
+    if (p > 0) finestra(pal, 0, y + 1.0, PZ + .01, 1.2, 1.4, false, p === 2);       // al secondo piano è aperta (davanzale)
+    [-4.4, -8.4].forEach(z => finestra(pal, 8.01, y + 1.0, z, 1.2, 1.4, true));
+  });
+  metti(pal, box(1.5, 2.3, .08, tinta(0x7a4b2b)), 0, 1.15, PZ + .02);
+  metti(pal, box(2.2, .12, 1.0, matCorn), 0, 2.5, PZ + .5);
+  // balconi: soletta, parapetto basso, ringhiera, portafinestra
+  const BALC = {};
+  [[1, -3.4], [1, 3.4], [2, -3.4], [2, 3.4]].forEach(([p, x]) => {
+    const g = new THREE.Group(); g.position.set(x, p * 3.2, PZ); pal.add(g);
+    metti(g, box(3.4, .18, 1.5, matCorn), 0, -.09, .75);
+    [[0, .225, 1.44, 3.4, .45, .12], [-1.64, .225, .75, .12, .45, 1.5], [1.64, .225, .75, .12, .45, 1.5]].forEach(([a, b, c, w, h, d]) => metti(g, box(w, h, d, matIntonaco2), a, b, c));
+    [[0, 1.0, 1.44, 3.4, .05, .06], [-1.64, 1.0, .75, .06, .05, 1.5], [1.64, 1.0, .75, .06, .05, 1.5]].forEach(([a, b, c, w, h, d]) => metti(g, box(w, h, d, matScuro), a, b, c));
+    for (let i = 0; i <= 8; i++) metti(g, box(.035, .55, .035, matScuro), -1.64 + i * .41, .72, 1.44);
+    metti(g, box(1.1, 2.2, .1, matVetroBuio), 0, 1.1, .0);                               // portafinestra aperta (interno in ombra)
+    metti(g, box(1.3, .1, .16, matBianco), 0, 2.25, .03);
+    [-.6, .6].forEach(s => metti(g, box(.1, 2.2, .16, matBianco), s, 1.1, .03));
+    BALC[p + (x < 0 ? 'o' : 'e')] = g;
+  });
+  function vaso(colore = 0, k = 1) {
+    const g = new THREE.Group();
+    const pot = new THREE.Mesh(new THREE.LatheGeometry([[0, 0], [.1, 0], [.14, .22], [.15, .25], [0, .25]].map(p => new THREE.Vector2(p[0] * k, p[1] * k)), 14), matCotto); g.add(pot);
+    const pi = new THREE.Mesh(new THREE.IcosahedronGeometry(.19 * k, 1), tinta(VERDI[colore % 4], { roughness: .9, flatShading: true })); pi.position.y = .38 * k; g.add(pi);
+    [0, 1, 2].forEach(j => { const fi = new THREE.Mesh(new THREE.SphereGeometry(.045 * k, 6, 5), base([0xe11d48, 0xf59e0b, 0xffffff][(colore + j) % 3])); fi.position.set(Math.cos(j * 2.1 + colore) * .14 * k, .47 * k, Math.sin(j * 2.1 + colore) * .14 * k); g.add(fi); });
+    return g;
+  }
+  function cocci(x, z) {
+    const g = new THREE.Group(); g.position.set(x, .15, z); quartiere.add(g);
+    const terra = new THREE.Mesh(new THREE.CircleGeometry(.34, 12), base(0x4a3020)); terra.rotation.x = -Math.PI / 2; g.add(terra);
+    for (let k = 0; k < 6; k++) { const c = box(.12, .04, .09, matCotto); c.position.set((hash(k * 3 + x) - .5) * .7, .02, (hash(k * 7 + z) - .5) * .6); c.rotation.y = hash(k + x * 9) * 6; g.add(c); }
+    return g;
+  }
+  // vasi sui parapetti: quello del primo piano a est cade nell'apertura; quelli del secondo piano a est si mettono al riparo
+  const vasoCade = vaso(1, 1.25); quartiere.add(vasoCade);
+  const vasoSu = V(2.3, 3.2 + .45, PZ + 1.44), vasoGiu = V(2.5, .2, PZ + 2.9), cocciVaso = cocci(vasoGiu.x, vasoGiu.z);
+  [[3.6, 0], [4.5, 2]].forEach(([x, c]) => { const v = vaso(c, 1.25); v.position.set(x, 3.2 + .45, PZ + 1.44); pal.add(v); });
+  [[-4.4, 1, 1], [-2.6, 3, 1], [-3.5, 0, 2]].forEach(([x, c, p]) => { const v = vaso(c, 1.25); v.position.set(x, p * 3.2 + .45, PZ + 1.44); pal.add(v); });
+  const B2 = V(3.4, 6.4, PZ);                                                          // balcone del secondo piano a est
+  const vasiB = [[-1.2, 0], [-.45, 2], [.35, 3]].map(([dx, c], i) => {
+    const g = vaso(c, 1.25); quartiere.add(g);
+    return { g, su: V(B2.x + dx, B2.y + .45, B2.z + 1.44), d: i * .16 };
+  });
+  const portaB = V(B2.x, B2.y + .25, B2.z - .25);
+  // sedie e tavolino del balcone, fascia che li fissa
+  const sedie = [-1, 1].map((s, i) => {
+    const g = new THREE.Group(); quartiere.add(g);
+    metti(g, box(.42, .04, .42, matBianco), 0, .45, 0); metti(g, box(.42, .5, .04, matBianco), 0, .72, -.2);
+    [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([a, b]) => metti(g, box(.035, .45, .035, matGrigio), a * .18, .225, b * .18));
+    return { g, a: V(B2.x + .75 + i * .62, B2.y, B2.z + .62 + i * .28), b: V(B2.x + 1.28, B2.y + i * .0, B2.z + .32 + i * .1), ra: i ? -.5 : .35, rb: -Math.PI / 2, i };
+  });
+  const tavolino = new THREE.Group(); tavolino.position.set(B2.x + 1.05, B2.y, B2.z + 1.0); quartiere.add(tavolino);
+  metti(tavolino, cil(.3, .3, .04, matBianco, 16), 0, .6, 0); metti(tavolino, cil(.03, .03, .6, matGrigio, 8), 0, .3, 0);
+  const fascia = new THREE.Group(); fascia.position.set(B2.x + 1.32, B2.y + .62, B2.z + .4); quartiere.add(fascia);
+  metti(fascia, box(.62, .07, .78, matGiallo), 0, 0, 0); metti(fascia, box(.1, .12, .1, matScuro), -.3, 0, .2);
+  // davanzale della finestra centrale del secondo piano
+  const vasoDav = vaso(1, 1.25); quartiere.add(vasoDav);
+  const davSu = V(.05, 7.4, PZ + .12), davDentro = V(.05, 7.45, PZ - .4);
+
+  /* ---------------------------------------------------------------- edificio con l'impalcatura (x da -38 a -18) */
+  const edW = new THREE.Group(); quartiere.add(edW);
+  metti(edW, box(20, 8, 9.8, matIntonaco3), -28, 4, -7.1);
+  metti(edW, box(20.4, .4, 10.2, tinta(0x8f959d)), -28, 8.2, -7.1);
+  [0, 1].forEach(p => [-36, -32.5, -29, -25.5, -22, -19.6].forEach(x => finestra(edW, x, p * 3.6 + 1.2, -2.19, 1.1, 1.5)));
+  [-4.5, -9].forEach(z => [0, 1].forEach(p => finestra(edW, -17.99, p * 3.6 + 1.2, z, 1.1, 1.5, true)));
+  const matTubo = tinta(0xd0d6de, { metalness: .5, roughness: .4 }), matTavola = tinta(0xc79a5b, { roughness: .9 });
+  const IMPX = [-30.4, -27.4, -24.4, -21.4, -18.4];
+  IMPX.forEach(x => [-2.0, -.75].forEach(z => metti(edW, cil(.05, .05, 8.8, matTubo, 6), x, 4.4, z)));
+  [2.2, 4.4, 6.6].forEach(y => {
+    metti(edW, box(12.2, .08, 1.15, matTavola), -24.4, y, -1.37);
+    metti(edW, box(12.2, .05, .05, matTubo), -24.4, y + 1.0, -.75); metti(edW, box(12.2, .05, .05, matTubo), -24.4, y + .5, -.75);
+  });
+  metti(edW, box(12.2, .05, .05, matTubo), -24.4, 8.75, -.75);
+  for (let i = 0; i < 4; i++) { const d = cil(.035, .035, 3.75, matTubo, 6); d.position.set(IMPX[i] + 1.5, 1.1 + (i % 3) * 2.2, -.73); d.rotation.z = (i % 2 ? 1 : -1) * .94; edW.add(d); }
+  const rete = new THREE.Mesh(new THREE.PlaneGeometry(6, 4.3), base(0x2f9e63, { transparent: true, opacity: .32, depthWrite: false, side: THREE.DoubleSide })); rete.position.set(-27.4, 6.5, -.7); edW.add(rete);
+
+  /* ---------------------------------------------------------------- cartellone fra l'edificio e la palazzina */
+  const cartellone = new THREE.Group(); cartellone.position.set(-12.6, 0, .0); quartiere.add(cartellone);
+  [-1.9, 1.9].forEach(x => metti(cartellone, box(.2, 6.2, .2, matScuro), x, 3.1, 0));
+  const texCart = tela(256, 128, (g, w, h) => {
+    g.fillStyle = '#f2ede2'; g.fillRect(0, 0, w, h); g.fillStyle = '#2e90fa'; g.fillRect(0, 0, w, 44);
+    g.fillStyle = '#f59e0b'; g.beginPath(); g.arc(200, 86, 26, 0, 6.29); g.fill();
+    g.fillStyle = '#c9c2b2'; g.fillRect(18, 62, 130, 14); g.fillRect(18, 86, 96, 14);
+  });
+  const pannello = box(5.2, 2.8, .16, [matScuro, matScuro, matScuro, matScuro, base(0xffffff, { map: texCart }), matScuro]);
+  pannello.position.set(0, 4.7, .05); cartellone.add(pannello);
+
+  /* ---------------------------------------------------------------- la casa in spaccato (x da 14 a 24, z da -11 a -3) */
+  const casa = new THREE.Group(); quartiere.add(casa);
+  const CX = 19, CZ = -7, HM = 3, SP = .25;
+  const matMuroInt = tinta(0xe9edf2, { roughness: .9, emissive: 0x2a2f36, emissiveIntensity: .5 });
+  const facce = interna => [0, 1, 2, 3, 4, 5].map(i => i === interna ? matMuroInt : matIntonaco2);   // +x, -x, +y, -y, +z, -z
+  const texParquet = tela(256, 256, (g, w) => {
+    for (let i = 0; i < 8; i++) { for (let j = 0; j < 3; j++) {
+      const v = 165 + Math.floor(hash(i * 7.1 + j * 3.3) * 35); g.fillStyle = `rgb(${v},${Math.floor(v * .74)},${Math.floor(v * .5)})`;
+      const off = (i % 2) * 64; g.fillRect(j * 128 + off - 128, i * 32, 128, 32); g.fillRect(j * 128 + off, i * 32, 128, 32); }
+      g.fillStyle = 'rgba(60,35,15,.3)'; g.fillRect(0, i * 32, w, 2); }
+  });
+  texParquet.wrapS = texParquet.wrapT = THREE.RepeatWrapping; texParquet.repeat.set(4, 3);
+  metti(casa, new THREE.Mesh(new THREE.BoxGeometry(10.5, .2, 8.5), [matIntonaco2, matIntonaco2, tinta(0xffffff, { map: texParquet, roughness: .75 }), matIntonaco2, matIntonaco2, matIntonaco2]), CX, .1, CZ);
+  const Y0 = .2;
+  // parete di fondo (nord) con due finestre: vani fra x = 15,7-17,3 e 20,7-22,3, da y = 1 a 2,4
+  const FX = [16.5, 21.5], FW = 1.6;
+  [[14, 15.7], [17.3, 20.7], [22.3, 24]].forEach(([a, b]) => metti(casa, new THREE.Mesh(new THREE.BoxGeometry(b - a, HM, SP), facce(4)), (a + b) / 2, Y0 + HM / 2, CZ - 4 - SP / 2));
+  FX.forEach(x => { metti(casa, new THREE.Mesh(new THREE.BoxGeometry(FW, 1.0, SP), facce(4)), x, Y0 + .5, CZ - 4 - SP / 2); metti(casa, new THREE.Mesh(new THREE.BoxGeometry(FW, .6, SP), facce(4)), x, Y0 + 2.7, CZ - 4 - SP / 2); });
+  metti(casa, new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 8.5), facce(0)), CX - 5 - SP / 2, Y0 + HM / 2, CZ);
+  // parete est con la porta (vano fra z = -6,3 e -5,3)
+  metti(casa, new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 4.7), facce(1)), CX + 5 + SP / 2, Y0 + HM / 2, -8.9);
+  metti(casa, new THREE.Mesh(new THREE.BoxGeometry(SP, HM, 2.55), facce(1)), CX + 5 + SP / 2, Y0 + HM / 2, -4.02);
+  metti(casa, new THREE.Mesh(new THREE.BoxGeometry(SP, HM - 2.1, 1.0), facce(1)), CX + 5 + SP / 2, Y0 + 2.1 + (HM - 2.1) / 2, -5.8);
+  // parete sud: si abbassa nello spaccato
+  const muroSud = new THREE.Group(); casa.add(muroSud);
+  metti(muroSud, new THREE.Mesh(new THREE.BoxGeometry(10.5, HM, SP), facce(5)), CX, Y0 + HM / 2, CZ + 4 + SP / 2);
+  [16.5, 21.5].forEach(x => finestra(muroSud, x, Y0 + 1.0, CZ + 4 + SP + .02, 1.4, 1.3));
+  metti(muroSud, box(1.1, 2.1, .08, tinta(0x7a4b2b)), CX, Y0 + 1.05, CZ + 4 + SP + .02);
+  // ante a vetri delle finestre di fondo (aperte verso l'interno, poi si chiudono)
+  const matAnta = base(0xbfe0fa, { transparent: true, opacity: .55, depthWrite: false, side: THREE.DoubleSide });
+  const ANTE = [];
+  FX.forEach(x => [-1, 1].forEach(s => {
+    const pv = new THREE.Group(); pv.position.set(x + s * FW / 2, Y0 + 1.7, CZ - 4 + .02); casa.add(pv);
+    const v = new THREE.Mesh(new THREE.PlaneGeometry(FW / 2 - .04, 1.36), matAnta); v.position.x = -s * FW / 4; pv.add(v);
+    [[0, .68, FW / 2, .06], [0, -.68, FW / 2, .06], [-s * FW / 2 + s * .03, 0, .06, 1.4], [-s * .03, 0, .06, 1.4]].forEach(([a, b, w, h]) => metti(pv, box(w, h, .05, matBianco), a === 0 ? -s * FW / 4 : a, b, 0));
+    ANTE.push({ pv, s });
+  }));
+  // porta sulla parete est: perno a z = -5,3, aperta verso l'interno
+  const portaPerno = new THREE.Group(); portaPerno.position.set(CX + 5, Y0, -5.3); casa.add(portaPerno);
+  metti(portaPerno, box(.07, 2.08, 1.0, tinta(0x7a4b2b, { roughness: .55 })), 0, 1.04, -.5);
+  metti(portaPerno, box(.12, .04, .14, matMetallo), -.06, 1.0, -.88);
+  // arredo: divano, tappeto, tavolo con due sedie, mobile basso
+  const matDiv = tinta(0x4a6d8f, { roughness: .95 });
+  const divano = new THREE.Group(); divano.position.set(15.0, Y0, -6.4); casa.add(divano);
+  metti(divano, box(.95, .45, 2.4, matDiv), .1, .225, 0); metti(divano, box(.28, .55, 2.4, matDiv), -.36, .68, 0);
+  [-1, 1].forEach(s => metti(divano, box(.95, .3, .2, matDiv), .1, .6, s * 1.2));
+  metti(casa, box(2.6, .02, 2.0, tinta(0xb85c4a, { roughness: 1 })), 17.4, Y0 + .012, -6.4);
+  const tavolo = new THREE.Group(); tavolo.position.set(21.2, Y0, -5.4); casa.add(tavolo);
+  metti(tavolo, box(1.7, .07, 1.0, matLegno), 0, .76, 0);
+  [[-1, -1], [1, -1], [-1, 1], [1, 1]].forEach(([a, b]) => metti(tavolo, box(.09, .74, .09, matLegnoScuro), a * .72, .37, b * .4));
+  tavolo.add(ombra(1.1, .75, .01));
+  metti(casa, box(2.2, .6, .5, matLegno), 19, Y0 + .3, CZ - 3.7);
+  metti(casa, box(.9, .55, .06, matScuro), 19, Y0 + .98, CZ - 3.75);
+  // tetto a due falde con le tegole: si apre come un coperchio, con il perno sul muro di fondo
+  const texTegole = tela(256, 256, (g, w, h) => {
+    g.fillStyle = '#b5532f'; g.fillRect(0, 0, w, h);
+    for (let r = 0; r < 16; r++) for (let c = 0; c < 17; c++) {
+      const v = hash(r * 13.7 + c * 3.1); g.fillStyle = v > .5 ? 'rgba(255,190,150,.16)' : 'rgba(60,20,5,.18)';
+      g.fillRect(c * 16 - (r % 2) * 8, r * 16, 15, 15); g.fillStyle = 'rgba(40,12,4,.35)'; g.fillRect(c * 16 - (r % 2) * 8, r * 16 + 14, 16, 2);
+    }
+  });
+  const matFalda = [matTegola, matTegola, tinta(0xffffff, { map: texTegole, roughness: .85 }), tinta(0x9c8a72), matTegola, matTegola];
+  const tetto = new THREE.Group(); tetto.position.set(CX, Y0 + HM, CZ - 4.3); casa.add(tetto);
+  const PEND = Math.atan2(2.0, 4.6), LF = Math.hypot(2.0, 4.6) + .25;
+  const faldaS = new THREE.Mesh(new THREE.BoxGeometry(11.3, .2, LF), matFalda); faldaS.position.set(0, 1.05, 4.3 + 2.4); faldaS.rotation.x = PEND; tetto.add(faldaS);
+  const faldaN = new THREE.Mesh(new THREE.BoxGeometry(11.3, .2, LF), matFalda); faldaN.position.set(0, 1.05, 4.3 - 2.4); faldaN.rotation.x = -PEND; tetto.add(faldaN);
+  const tri = new THREE.Shape(); tri.moveTo(-4.45, 0); tri.lineTo(4.45, 0); tri.lineTo(0, 1.93); tri.closePath();
+  [-5.25, 5.0].forEach(x => { const m = new THREE.Mesh(new THREE.ExtrudeGeometry(tri, { depth: .25, bevelEnabled: false }), matIntonaco2); m.rotation.y = Math.PI / 2; m.position.set(x, 0, 4.3); tetto.add(m); });
+  // la tegola che cade (apertura) e i suoi cocci
+  const tegola = box(.5, .09, .42, matTegola); quartiere.add(tegola);
+  const tegSu = V(17.4, Y0 + HM + 1.0, -4.6), tegBordo = V(17.4, Y0 + HM - .02, -2.05), tegGiu = V(17.7, .16, -1.2);
+  const cocciTeg = new THREE.Group(); cocciTeg.position.copy(tegGiu); quartiere.add(cocciTeg);
+  for (let k = 0; k < 5; k++) { const c = box(.2, .05, .14, matTegola); c.position.set((hash(k * 3.3) - .5) * .9, 0, (hash(k * 7.7) - .5) * .7); c.rotation.y = hash(k * 2.1) * 6; cocciTeg.add(c); }
+
+  /* figura stilizzata */
+  function persona(colore, colPant) {
+    const g = new THREE.Group();
+    [-1, 1].forEach(s => metti(g, cil(.085, .075, .82, tinta(colPant), 8), s * .1, .41, 0));
+    metti(g, cil(.19, .16, .62, tinta(colore), 12), 0, 1.13, 0);
+    const sp = new THREE.Mesh(new THREE.SphereGeometry(.19, 12, 8, 0, Math.PI * 2, 0, Math.PI / 2), tinta(colore)); sp.position.y = 1.44; g.add(sp);
+    metti(g, new THREE.Mesh(new THREE.SphereGeometry(.14, 14, 10), tinta(0xd9a27a)), 0, 1.68, 0);
+    [-1, 1].forEach(s => { const b = cil(.055, .05, .58, tinta(colore), 8); b.position.set(s * .25, 1.16, 0); b.rotation.z = s * .12; g.add(b); });
+    g.add(ombra(.45, .4, .012));
+    return g;
+  }
+  const abitante = persona(0xf59e0b, 0x334155); casa.add(abitante);
+  const abA = V(21.5, Y0, -9.9), abB = V(18.0, Y0, -6.2);
+
+  /* ---------------------------------------------------------------- automobili e moto */
+  function auto(colore) {
+    const g = new THREE.Group();
+    metti(g, box(4.1, .7, 1.75, tinta(colore, { roughness: .45, metalness: .2 })), 0, .62, 0);
+    metti(g, box(2.2, .62, 1.6, tinta(colore, { roughness: .45, metalness: .2 })), -.15, 1.26, 0);
+    metti(g, box(2.24, .44, 1.5, matVetroBuio), -.15, 1.28, 0); metti(g, box(2.0, .46, 1.64, matVetroBuio), -.15, 1.28, 0);
+    [[-1.3, -1], [1.3, -1], [-1.3, 1], [1.3, 1]].forEach(([x, s]) => { const r = cil(.36, .36, .26, matScuro, 14); r.rotation.x = Math.PI / 2; r.position.set(x, .36, s * .82); g.add(r); });
+    [-.55, .55].forEach(z => { metti(g, box(.06, .16, .34, base(0xfff3c4)), 2.06, .7, z); metti(g, box(.06, .14, .34, base(0xd92d20)), -2.06, .72, z); });
+    g.add(ombra(2.7, 1.5, .03));
+    return g;
+  }
+  const autoBlu = auto(0x2e6fd0); quartiere.add(autoBlu);
+  const autoFerma = auto(0xa8b0ba); autoFerma.position.set(-35.2, .03, 16.6); autoFerma.rotation.y = Math.PI / 2; quartiere.add(autoFerma);
+  const percorso = new THREE.CatmullRomCurve3([V(-23.4, .03, 3.3), V(-27.6, .03, 3.9), V(-30.6, .03, 6.6), V(-30.9, .03, 11.4), V(-30.3, .03, 16.4)]);
+
+  /* ---------------------------------------------------------------- pali e cavo (prima teso, dopo il vento a terra) */
+  const PALI = [V(27.4, 0, .45), V(47.2, 0, .45)];
+  PALI.forEach(p => { metti(quartiere, cil(.1, .14, 7.6, matLegnoScuro, 8), p.x, 3.9, p.z); metti(quartiere, box(.1, .1, 1.3, matLegnoScuro), p.x, 7.3, p.z); });
+  const matCavo = tinta(0x16191f, { roughness: .6 });
+  const cavoTeso = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(27.4, 7.3, .95), V(32.5, 6.75, .95), V(37.3, 6.55, .95), V(42.1, 6.75, .95), V(47.2, 7.3, .95)]), 24, .05, 5), matCavo); quartiere.add(cavoTeso);
+  const cavoTerra = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(27.4, 7.3, .95), V(27.75, 4.2, 1.25), V(28.3, 1.2, 1.9), V(28.9, .2, 2.9), V(29.9, .12, 3.9), V(31.1, .12, 4.1), V(31.8, .12, 5.0), V(31.3, .12, 5.9), V(30.4, .12, 5.7)]), 48, .06, 5), matCavo); quartiere.add(cavoTerra);
+  const cavoMonco = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V(47.2, 7.3, .95), V(46.9, 4.6, 1.1), V(46.75, 2.4, 1.2)]), 10, .05, 5), matCavo); quartiere.add(cavoMonco);
+  const PUNTA_CAVO = V(30.4, .25, 5.7);
+  // foglie a terra dopo il vento (si muovono appena)
+  const foglie = [];
+  for (let i = 0; i < 16; i++) {
+    const f = new THREE.Mesh(new THREE.CircleGeometry(.11 + .07 * hash(i * 3.3), 5), base([0x7aa03a, 0xb08a2e, 0x8f6a2a, 0x5e8f3a][i % 4], { side: THREE.DoubleSide }));
+    quartiere.add(f); foglie.push({ f, x: 27.5 + hash(i * 1.7) * 11, z: 2.4 + hash(i * 5.9) * 6.2, fase: hash(i * 9.1) * 6 });
+  }
+
+  const nastriQ = creaNastri(26, 10); scena.add(nastriQ.mesh);
+
+  /* ================================================================ LA STRADA: galleria e viadotto (a parte) */
+  const RZ = 220;
+  const strada = new THREE.Group(); strada.position.set(0, 0, RZ); scena.add(strada);
+  const YV = -10;                                                           // fondo della valle
+  metti(strada, box(92, 1.2, 36, tinta(0x2a3546, { roughness: 1 })), 16, YV - .75, 0);
+  metti(strada, box(91, .3, 35, tinta(0x7ea05a, { roughness: 1 })), 16, YV - .05, 0);
+  metti(strada, box(5, .06, 35, tinta(0x4f8fc4, { roughness: .4 })), 23, YV + .12, 0);                 // torrente
+  const matRoccia = tinta(0x8a8271, { roughness: 1, flatShading: true }), matBosco = tinta(0x5d8a48, { roughness: 1, flatShading: true });
+  metti(strada, box(30, 10, 35, matRoccia), -14.5, YV + 5, 0);                                         // versante ovest
+  metti(strada, box(16, 10, 35, matRoccia), 53.5, YV + 5, 0);                                          // versante est
+  metti(strada, box(30.2, .3, 35.1, matBosco), -14.5, .0, 0); metti(strada, box(16.1, .3, 35.1, matBosco), 53.5, 0, 0);
+  const monte = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 2), matBosco); monte.scale.set(13.6, 12.5, 16.5); monte.position.set(-14.4, 0, -1); strada.add(monte);
+  const monte2 = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 1), matBosco); monte2.scale.set(6, 4.5, 7); monte2.position.set(56, 0, -9); strada.add(monte2);
+  // portale della galleria
+  const matCls = tinta(0xbfc4ca, { roughness: .9 });
+  metti(strada, box(1.4, 7.2, 12, matCls), -.9, 3.6, 0);
+  metti(strada, box(1.5, 5.0, 8.2, base(0x0b0f17)), -.88, 2.5, 0);
+  metti(strada, box(1.9, .5, 12.6, tinta(0x9aa1a9)), -.9, 7.4, 0);
+  [-1, 1].forEach(s => { const m = box(1.2, 5.2, 4.2, matCls); m.position.set(-.9, 2.6, s * 8); strada.add(m); });
+  metti(strada, box(8, 5.0, 8.2, base(0x0b0f17)), -5.4, 2.5, 0);
+  // impalcato del viadotto, pile, barriere, segnaletica
+  metti(strada, box(47.4, .9, 9.4, matCls), 22.6, -.45, 0);
+  metti(strada, box(62, .06, 7.6, matAsfalto), 30, .03, 0);
+  [9, 23, 37].forEach(x => { metti(strada, box(1.8, 9.6, 5, matCls), x, YV + 4.75, 0); metti(strada, box(3, .7, 7.6, matCls), x, -1.2, 0); });
+  [-1, 1].forEach(s => {
+    metti(strada, box(60, .3, .2, matMetallo), 30.5, .75, s * 4.25);
+    for (let i = 0; i < 21; i++) metti(strada, box(.14, .8, .14, matGrigio), 1 + i * 2.95, .4, s * 4.25);
+    metti(strada, box(61, .01, .14, base(0xe5e7eb)), 30.5, .07, s * 3.55);
+  });
+  for (let i = 0; i < 15; i++) metti(strada, box(2, .01, .14, base(0xe5e7eb)), 2 + i * 4, .07, 0);
+  // manica a vento all'uscita della galleria
+  const manicaPalo = cil(.06, .06, 4.6, matGrigio, 6); manicaPalo.position.set(3.2, 2.3, 5.4); strada.add(manicaPalo);
+  const manica = new THREE.Group(); manica.position.set(3.2, 4.5, 5.4); strada.add(manica);
+  [0, 1, 2, 3].forEach(i => { const c = new THREE.Mesh(new THREE.CylinderGeometry(.3 - i * .055, .245 - i * .055, .55, 10, 1, true), base(i % 2 ? 0xffffff : 0xdc2626, { side: THREE.DoubleSide })); c.rotation.x = Math.PI / 2; c.position.z = .3 + i * .55; manica.add(c); });
+  // veicoli
+  const autoV = auto(0xd92d20); strada.add(autoV);
+  const moto = new THREE.Group(); strada.add(moto);
+  [-.72, .72].forEach(x => { const r = cil(.34, .34, .14, matScuro, 14); r.rotation.x = Math.PI / 2; r.position.set(x, .34, 0); moto.add(r); });
+  metti(moto, box(1.2, .34, .3, tinta(0x1f6f4a, { roughness: .4, metalness: .3 })), 0, .68, 0); metti(moto, box(.1, .5, .62, matScuro), .62, 1.0, 0);
+  metti(moto, cil(.2, .17, .62, tinta(0x1f2937), 10), -.12, 1.2, 0).rotation.z = -.35;
+  metti(moto, new THREE.Mesh(new THREE.SphereGeometry(.19, 12, 9), tinta(0xf5f5f5, { roughness: .3 })), .1, 1.62, 0);
+  moto.add(ombra(1.3, .6, .03));
+  const nastriS = creaNastri(22, 10); scena.add(nastriS.mesh);
+  const CORSIA = 1.9;
+  const xVeicolo = (t, t0) => {                       // rallenta dopo la parola «rallenta»
+    const v0 = 9, v1 = 4.5, Dr = 1.2, tr = EV.rallenta - .2, u = prog(t, tr, Dr);
+    const A = t < tr ? 0 : t < tr + Dr ? Dr * (u * u * u - u * u * u * u / 2) : Dr * .5 + (t - tr - Dr);
+    return v0 * (t - t0) - (v0 - v1) * A;
+  };
+  const raffica = (t, x) => liscia((x - .5) / 3) * (.6 * Math.sin(t * 2.3) + .4 * Math.sin(t * 3.7 + 1.3));   // spinta di lato, fuori dalla galleria
+
+  /* ================================================================ TELECAMERA DEL PLASTICO */
+  const ins = (r, f = 32) => {
+    const z = camera.userData.zona, hz = (z.basso - z.alto) / H, tv = Math.tan(f * Math.PI / 360);
+    return r / Math.sin(Math.min(Math.atan(tv * hz * .92), Math.atan(tv * camera.aspect * .92)));
+  };
+  const K = [];
+  const chiave = (t, b, az, el, r, extra = {}) => K.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(r), fov: 32 }, extra));
+  const VISTE = {
+    quartiere: [[8.5, 4.2, -.5], -30, 24, 13.5],
+    balcone: [[2.1, 7.35, -1.3], -16, 26, 3.25],
+    via: [[-7, 3.2, 3], 14, 28, 13],
+    auto: [[-23.6, 2.6, 2.2], 22, 26, 6.6],
+    posto: [[-29.4, 1.8, 13.2], 22, 34, 7.2],
+    casa: [[CX + .2, 1.5, CZ - .3], 0, 47, 6.9],
+    vialeA: [[35.5, 3.4, 5], -34, 20, 9.5],
+    vialeB: [[35.5, 3.4, 5], -6, 20, 9.5],
+    tre: [[-13.6, 5.4, -1], -34, 18, 12.4],
+    portale: [[4.2, 2.4, RZ + 1.2], -62, 17, 8.4],
+    viadotto: [[23.5, -2.6, RZ], -30, 21, 25],
+    cavoAlto: [[32.6, 4.4, 4.4], -22, 52, 13],
+    cavo: [[32.6, 4.3, 4.4], -22, 31, 8.4]
+  };
+  const vista = (t, n, extra = {}) => { const v = VISTE[n]; chiave(t, v[0], v[1], v[2], v[3], extra); };
+  // 0: dall'alto (in dissolvenza con il rilievo) fino al quartiere
+  chiave(2.9, [8.5, 2, -.5], -12, 74, 52);
+  vista(EV.arrivo0, 'quartiere'); vista(S(1), 'quartiere');
+  // 1: avvicinamento al balcone del secondo piano
+  vista(EV.arrivo1, 'balcone'); vista(S(2), 'balcone');
+  // 2: indietro sulla via, poi carrellata fino all'auto e al posto libero
+  vista(EV.arrivo2, 'via'); vista(EV.carr2, 'via');
+  vista(EV.auto, 'auto'); vista(EV.parte, 'auto');
+  vista(EV.parcheggiata, 'posto'); vista(S(3), 'posto');
+  // 3: volo fino alla casa, che si apre
+  chiave(S(3) + .8, [-3, 5, 0], 6, 40, 15, { passa: true });
+  vista(EV.arrivo3, 'casa'); vista(S(4), 'casa');
+  // 4: il viale alberato (orbita lenta), poi impalcatura, cartellone e cornicione
+  vista(EV.arrivo4, 'vialeA'); vista(EV.volo4, 'vialeB', { facilita: 'lineare' });
+  vista(EV.impalcature - .12, 'tre'); vista(S(5) - .001, 'tre');
+  // 5: stacco sulla strada: uscita della galleria, poi volo lungo il viadotto
+  vista(S(5), 'portale'); vista(EV.volo5, 'portale');
+  chiave(EV.volo5 + 1.9, [16, .8, RZ + .6], -44, 20, 11.5, { passa: true });
+  vista(EV.arrivo5, 'viadotto'); vista(S(6) - .001, 'viadotto');
+  // 6: stacco sul viale dopo il vento, la telecamera scende
+  vista(S(6), 'cavoAlto'); vista(EV.arrivo6, 'cavo'); vista(TOTAL, 'cavo');
+  const cam = M3.telecamera(camera, K, { vicinoLontano: false });
+
+  /* ================================================================ SCHEDE */
+  const SCH = [];
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore, centroY) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore, centroY });
+  const ROSSO = '#ef4136', AMBRA = '#f59e0b', VERDE = '#22a04b';
+  const mondoS = p => V(p.x, p.y, p.z + RZ);
+  scheda('raffiche', 'Rami, tegole e vasi', 'LE RAFFICHE POSSONO FARLI CADERE', null, null, EV.arrivo0 + .1, E(0) - .4, ROSSO);
+  scheda('riparo', 'Vasi e sedie', 'AL RIPARO O FISSATI BENE', () => V(B2.x - .45, B2.y + .5, B2.z + 1.5), { dx: -150, dy: 210 }, EV.vasi1, E(1) - .4, VERDE);
+  scheda('allerta', "Guarda l'allerta del giorno", null, null, null, EV.arrivo2 + .08, EV.allertaFine, AMBRA);
+  scheda('posto', 'Parcheggia lontano', 'DA ALBERI E IMPALCATURE', () => autoBlu.getWorldPosition(V(0, 0, 0)).add(V(0, 1.6, 0)), { dx: 130, dy: -230 }, EV.parcheggiata + .15, E(2) - .4, VERDE);
+  scheda('resta', 'Resta in casa', 'SE PUOI', null, null, EV.arrivo3 + .1, EV.chiudi - .2, VERDE);
+  scheda('chiudi', 'Chiudi porte e finestre', null, () => V(FX[0], Y0 + 2.45, CZ - 4), { dx: -40, dy: -190 }, EV.chiudi + .1, E(3) - .4, VERDE);
+  scheda('vetri', 'Lontano dai vetri', null, () => abitante.getWorldPosition(V(0, 0, 0)).add(V(0, 1.85, 0)), { dx: 190, dy: 250 }, EV.stai3 + .55, E(3) - .4, VERDE);
+  scheda('impalcature', 'Impalcature', 'STAI LONTANO', () => V(-19.2, 8.0, -.75), { dx: -40, dy: -200 }, EV.impalcature + .05, E(4) - .4, ROSSO);
+  scheda('cartelloni', 'Cartelloni', 'STAI LONTANO', () => V(-12.6, 3.2, .1), { dx: -150, dy: 250 }, EV.cartelloni, E(4) - .4, ROSSO);
+  scheda('cornicioni', 'Cornicioni', 'STAI LONTANO', () => V(-4.45, PH - .1, PZ + .4), { dx: 150, dy: 250 }, EV.cornicioni, E(4) - .4, ROSSO);
+  scheda('rallenta', 'In auto o in moto', 'RALLENTA', null, null, S(5) + .9, EV.volo5 - .2, AMBRA);
+  scheda('gallerie', 'Uscita delle gallerie', 'LE RAFFICHE FANNO SBANDARE', () => mondoS(V(-.2, 7.4, 2)), { dx: 60, dy: -170 }, EV.arrivo5 + .1, E(5) - .4, AMBRA);
+  scheda('viadotti', 'Viadotti', 'RALLENTA', () => mondoS(V(27, -.9, 4.7)), { dx: 150, dy: 230 }, EV.arrivo5 + .6, E(5) - .4, AMBRA);
+  scheda('cavi', 'Non toccare', 'I CAVI CADUTI A TERRA', () => PUNTA_CAVO, { dx: -200, dy: -300 }, EV.toccare + .05, EV.se - .15, ROSSO);
+  scheda('blocca', 'Albero o cavo sulla strada', 'CHIAMA IL 112', () => V(36.3, 1.0, 5.4), { dx: 20, dy: -330 }, EV.se + .35, EV.chiama + .05, AMBRA);
+  scheda('fine', 'protezionecivilegenzano.it', 'RISCHI E PREVENZIONE · VENTO FORTE', null, null, EV.n112 + 1.5, TOTAL + 1, null, 742);
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })), []);
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  /* segni nel plastico */
+  const fineS1 = S(2) + .5;
+  segno(true, V(B2.x - .45, B2.y + 1.75, B2.z + 1.45), .6, EV.riparo + 1.1, fineS1);
+  segno(true, V(B2.x + 1.3, B2.y + 1.75, B2.z + .6), .6, EV.fissa + 1.45, fineS1);
+  segno(true, V(.05, 9.15, PZ + .2), .6, EV.davanzali + .95, fineS1);
+  segno(false, V(-23.4, 3.5, 3.3), 1.7, EV.auto + .05, EV.parte - .1);
+  segno(true, V(-30.3, 3.1, 16.4), 1.6, EV.parcheggiata + .1, S(3) + .4);
+  segno(true, V(FX[0], Y0 + 1.7, CZ - 3.9), .75, EV.chiudi + .95, S(4) + .3);
+  segno(true, V(FX[1], Y0 + 1.7, CZ - 3.9), .75, EV.chiudi + 1.1, S(4) + .3);
+  segno(true, V(CX + 4.9, Y0 + 2.5, -5.8), .75, EV.chiudi + .8, S(4) + .3);
+  segno(false, V(36, 9.6, 3), 2.3, EV.evita + .1, EV.volo4 + .1);
+  segno(false, V(-24.4, 9.9, -1.3), 2.2, EV.impalcature, S(5));
+  segno(false, V(-12.6, 7.1, .2), 2.0, EV.cartelloni - .05, S(5));
+  segno(false, V(-4.45, PH + 1.9, PZ + .3), 2.0, EV.cornicioni - .05, S(5));
+  segno(false, V(30.6, 1.5, 5.3), 1.5, EV.toccare, 1e9);
+
+  const fonte = document.getElementById('fonte'), titolo = document.getElementById('titolo'), grande = document.getElementById('grande');
+  fonte.style.fontFamily = titolo.style.fontFamily = grande.style.fontFamily = IMP.ENTI[ente].font.testo;
+  titolo.style.top = (L.zona.alto + 24) + 'px'; grande.style.top = (L.zona.alto + 22) + 'px';
+  const attribuzione = ((RILIEVO && RILIEVO.attribuzione) || 'Rilievo: Mapzen Terrain Tiles (AWS Open Data) da EU-DEM (Copernicus), ETOPO1 (NOAA), SRTM e GMTED (USGS)').replace(' da EU-DEM', '\nda EU-DEM');
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+
+  /* ================================================================ ANIMAZIONE */
+  // forza del vento nel quartiere (0-1): apertura, poi da «quando il vento soffia forte» fino alla fine di «fuori»
+  const vento = t => Math.max(fin(t, 2.6, S(1) + .5, .5, .9), fin(t, S(3) + .2, S(5) + .2, .7, .5));
+  const cade = (o, a, b, u, giri) => {              // caduta: parte piano, accelera
+    const q = u * u;
+    o.position.set(mix(a.x, b.x, u), mix(a.y, b.y, q), mix(a.z, b.z, u)); o.rotation.set(giri * u, 0, giri * .6 * u);
+  };
+  function anima(t, k, st) {
+    const w = vento(t);
+    const inStrada = k === 5;
+    quartiere.visible = !inStrada; strada.visible = inStrada;
+    nastriS.mesh.visible = inStrada; nastriQ.mesh.visible = !inStrada && w > .02;
+    if (!inStrada) {
+      // alberi piegati dalle raffiche; quello del viale cade per ultimo (lo si trova a terra dopo il vento)
+      for (const a of ALBERI) {
+        const g = .62 + .38 * Math.sin(t * 2.4 + a.seme * 1.7) * Math.sin(t * .9 + a.seme);
+        a.g.rotation.set(0, 0, -w * .2 * g);
+        a.chioma.rotation.z = -w * .16 * g; a.chioma.rotation.x = w * .05 * Math.sin(t * 3.1 + a.seme);
+      }
+      if (t >= S(6)) { VN[1].g.rotation.set(1.5, 0, -.12); VN[1].chioma.rotation.set(0, 0, 0); }
+      aggiornaRamo(ramoA, t, EV.rami - .05, w); aggiornaRamo(ramoV, t, EV.spezzano - .05, w);
+      // apertura: la tegola scivola e cade, il vaso cade dal balcone
+      const ut = prog(t, EV.tegole - .25, .55), ug = prog(t, EV.tegole + .3, .6);
+      if (ug <= 0) { tegola.position.lerpVectors(tegSu, tegBordo, ut * ut); tegola.rotation.set(PEND, 0, 0); }
+      else cade(tegola, tegBordo, tegGiu, ug, 5);
+      tegola.visible = ug < 1; cocciTeg.visible = ug >= 1;
+      const uv = prog(t, EV.vasi0 - .1, .7);
+      cade(vasoCade, vasoSu, vasoGiu, uv, 4); if (uv <= 0) vasoCade.position.x += w * .03 * Math.sin(t * 14);
+      vasoCade.visible = uv < 1; cocciVaso.visible = uv >= 1;
+      // balcone: i vasi rientrano, le sedie si accostano e si legano, il vaso del davanzale rientra
+      vasiB.forEach(v => {
+        const u = esplodi(prog(t, EV.riparo + v.d, .95));
+        v.g.position.lerpVectors(v.su, portaB, u); v.g.position.y += Math.sin(u * Math.PI) * .55;
+        v.g.visible = u < .97; v.g.scale.setScalar(1 - .35 * u);
+      });
+      sedie.forEach(s => {
+        const u = esplodi(prog(t, EV.fissa + .25 + s.i * .2, .85));
+        s.g.position.lerpVectors(s.a, s.b, u); s.g.position.y += Math.sin(u * Math.PI) * .12 + s.i * .47 * u;
+        s.g.rotation.y = mix(s.ra, s.rb, u);
+      });
+      const uf = prog(t, EV.fissa + 1.25, .4);
+      fascia.visible = uf > 0; fascia.scale.setScalar(Math.max(.001, ease.morbida(uf) * (1 + .2 * Math.sin(uf * Math.PI))));
+      const ud = esplodi(prog(t, EV.davanzali, .85));
+      vasoDav.position.lerpVectors(davSu, davDentro, ud); vasoDav.position.y += Math.sin(ud * Math.PI) * .25; vasoDav.visible = ud < .97;
+      // l'auto: dal bordo della strada sotto l'albero al posto libero
+      const ua = liscia(prog(t, EV.parte + .1, EV.parcheggiata - EV.parte - .2));
+      const pa = percorso.getPoint(ua), ta = percorso.getTangent(Math.min(ua, .999));
+      autoBlu.position.copy(pa); autoBlu.rotation.y = Math.atan2(-ta.z, ta.x);
+      // la casa: il tetto si apre, la parete sud si abbassa; ante e porta si chiudono; chi è in casa si allontana dai vetri
+      const apri = esplodi(prog(t, S(3) + .55, 1.25)) * (1 - esplodi(prog(t, S(4) + .05, .9)));
+      tetto.rotation.x = -apri * 1.32; muroSud.position.y = -apri * 2.85;
+      const uc = liscia(prog(t, EV.chiudi + .15, .8)) * (t < S(4) + 1.2 ? 1 : 0);
+      ANTE.forEach((a, i) => { a.pv.rotation.y = a.s * (1 - uc) * (1.25 + w * .1 * Math.sin(t * 7 + i * 1.9)); });
+      portaPerno.rotation.y = -(1 - liscia(prog(t, EV.chiudi, .7)) * (t < S(4) + 1.2 ? 1 : 0)) * 1.35;
+      const up = liscia(prog(t, EV.stai3, 1.25));
+      abitante.position.lerpVectors(abA, abB, up); abitante.position.y += up > 0 && up < 1 ? Math.abs(Math.sin((t - EV.stai3) * 9)) * .05 : 0;
+      abitante.rotation.y = mix(Math.PI, Math.PI * 1.25, up);
+      // dopo il vento: il cavo è a terra, le foglie si muovono appena
+      const dopo = t >= S(6);
+      cavoTeso.visible = !dopo; cavoTerra.visible = cavoMonco.visible = dopo;
+      foglie.forEach(o => {
+        o.f.visible = dopo;
+        if (dopo) { o.f.position.set(o.x + .5 * Math.sin((t - S(6)) * .45 + o.fase), .1, o.z + .25 * Math.sin((t - S(6)) * .6 + o.fase * 2)); o.f.rotation.set(-Math.PI / 2 + .25 * Math.sin(t * 1.4 + o.fase), 0, o.fase + (t - S(6)) * .5); }
+      });
+      // nastri del vento attorno al punto guardato
+      if (w > .02) {
+        const cx = st.bersaglio.x, cz = st.bersaglio.z, r = clamp(st.dist / 34, .45, 1.6), Lp = 34 * r;
+        aggiornaNastri(nastriQ, camera, DIR_EST, .085 * r * w, (i, j, v) => {
+          const s = fr(t * .55 + hash(i * 7.3)), a = s * Lp - j / nastriQ.seg * (5 + 4 * hash(i * 2.9)) * r;
+          v.set(cx - Lp * .45 + a, (1.2 + 9 * hash(i * 3.7)) * r + st.bersaglio.y * .4 + .3 * Math.sin(a * .5 + i), cz + (hash(i * 5.1) - .5) * 16 * r + .5 * Math.sin(a * .33 + i * 2));
+          return Math.sin(Math.PI * j / nastriQ.seg) * Math.sin(Math.PI * s);
+        });
+      }
+    } else {
+      // veicoli: escono dalla galleria, rallentano e oscillano appena con le raffiche di lato
+      [[autoV, S(5) + .3, .22, .035, 0], [moto, S(5) + 1.25, .3, .05, 1]].forEach(([o, t0, amp, imb, m]) => {
+        const x = xVeicolo(t, t0), g = raffica(t + m * .4, x);
+        o.visible = x > -3.5; o.position.set(x, .06, CORSIA + amp * g);
+        o.rotation.set(m ? -.13 * g : -.02 * g, -imb * (.6 * 2.3 * Math.cos((t + m * .4) * 2.3)) * liscia((x - .5) / 3) * .5, 0);
+      });
+      const gm = .6 + .4 * Math.sin(t * 2.3);
+      manica.rotation.set(-.12 - .3 * (1 - gm) + .05 * Math.sin(t * 9), .1 * Math.sin(t * 5.3), 0);
+      const cx = clamp(st.bersaglio.x, 4, 30), r = clamp(st.dist / 40, .5, 1.5), Lp = 26;
+      aggiornaNastri(nastriS, camera, DIR_SUD, .1 * r * (.55 + .45 * gm), (i, j, v) => {
+        const s = fr(t * .6 + hash(i * 7.3)), a = s * Lp - j / nastriS.seg * (5 + 3 * hash(i * 2.9));
+        v.set(cx + (hash(i * 5.1) - .5) * 30 * r + .4 * Math.sin(a * .33 + i * 2), .9 + 5.5 * hash(i * 3.7) + .3 * Math.sin(a * .5 + i), RZ - Lp * .5 + a);
+        return Math.sin(Math.PI * j / nastriS.seg) * Math.sin(Math.PI * s);
+      });
+    }
+    aggiornaSegni(t);
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    const k = sceneA(t), sc = SC[k];
+    // apertura: rilievo vero con le linee del vento, in dissolvenza verso il plastico
+    const vRil = 1 - prog(t, 3.05, .6), vPla = prog(t, 3.0, .6);
+    lontano.canvas.style.display = vRil > 0 ? '' : 'none';
+    if (vRil > 0) {
+      camRil.applica(t);
+      const lonL = lon1 - lon0;
+      aggiornaNastri(nastriRil, cameraRil, DIR_EST, .05 + .0035 * camRil.stato(t).dist, (i, j, v) => {
+        const s = fr(t * .42 + hash(i * 7.3)), lon = lon0 + .02 * lonL + s * lonL * .96 - j / nastriRil.seg * lonL * (.14 + .1 * hash(i * 2.9));
+        const lat = lat0 + (.06 + .88 * hash(i * 5.1)) * (lat1 - lat0) + .004 * Math.sin((lon - lon0) * 160 + i);
+        const lonC = clamp(lon, lon0 + 1e-4, lon1 - 1e-4);
+        v.copy(ril.sopra(lat, lonC, 260 + 160 * hash(i * 3.7)));
+        return Math.sin(Math.PI * j / nastriRil.seg) * Math.sin(Math.PI * clamp(s)) * (lon === lonC ? 1 : 0);
+      });
+      lontano.canvas.style.opacity = vRil.toFixed(3);
+      lontano.disegna(scenaRil, cameraRil);
+    }
+    vicino.canvas.style.display = vPla > 0 ? '' : 'none';
+    if (vPla > 0) {
+      const st = cam.applica(t);
+      camera.near = Math.max(.15, st.dist * .01); camera.far = 700; camera.updateProjectionMatrix();
+      anima(t, k, st);
+      vicino.canvas.style.opacity = vPla.toFixed(3);
+      vicino.disegna(scena, camera);
+    }
+    IMP.aggiorna(stato, t, { passoHUD: k + (k === 0 ? 1 : clamp((t - sc.inizio) / .4)), hud: CONFIG.hud[k], notaVisibile: true,
+      nota: t < 3.3 ? CONFIG.notaRilievo : CONFIG.nota });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const s of SCH) {
+      let punto = null, vis = true, p = null;
+      if (s.punto) {
+        p = M3.proietta(s.punto(), camera, { zona: L.zonaSchede, margine: L.margine });
+        punto = p.punto; vis = p.visibile;
+      }
+      proiezioni[s.id] = p;
+      IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
+        inizio: s.inizio, fine: s.fine, visibile: vis, centro: s.punto ? null : { x: W / 2, y: s.centroY || L.zona.alto + 62 } });
+    }
+    // titolo dell'apertura e numero di emergenza della chiusura
+    const vt = fin(t, .2, 3.0, .35, .35);
+    titolo.style.opacity = vt.toFixed(3); titolo.style.display = vt > 0 ? '' : 'none';
+    titolo.style.transform = 'translateY(' + ((1 - ease.morbida(prog(t, .2, .5))) * 18).toFixed(1) + 'px)';
+    const ug = prog(t, EV.n112 - .15, .45);
+    grande.style.opacity = clamp(ug * 2).toFixed(3); grande.style.display = ug > 0 ? '' : 'none';
+    grande.style.transform = 'scale(' + (ug < 1 ? ease.morbida(ug) * (1 + .12 * Math.sin(ug * Math.PI)) : 1).toFixed(4) + ')';
+    // crediti: attribuzione del rilievo finché si vede, fonte nella chiusura
+    const testo = t < 3.3 ? attribuzione : k === SC.length - 1 ? CONFIG.fonte : '';
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.display = testo ? '' : 'none';
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(s => s.punto).map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine, proiezione: proiezioni[s.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  IMP.caricaFont().then(() => { scena.updateMatrixWorld(true); render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 8.81
+  },
+  {
+   "inizio": 8.81,
+   "durata": 8.7
+  },
+  {
+   "inizio": 17.51,
+   "durata": 9.19
+  },
+  {
+   "inizio": 26.7,
+   "durata": 9.05
+  },
+  {
+   "inizio": 35.75,
+   "durata": 12.49
+  },
+  {
+   "inizio": 48.24,
+   "durata": 9.71
+  },
+  {
+   "inizio": 57.95,
+   "durata": 11.15
+  }
+ ],
+ "totale": 69.1,
+ "voce": [
+  1.5,
+  9.26,
+  18.71,
+  27.15,
+  36.2,
+  48.69,
+  58.4
+ ],
+ "ev": {
+  "tuffo": 3.3,
+  "arrivo0": 4.6,
+  "rami": 4.74,
+  "tegole": 5.92,
+  "vasi0": 6.54,
+  "arrivo1": 10.41,
+  "riparo": 10.982,
+  "fissa": 11.412,
+  "vasi1": 11.938,
+  "davanzali": 14.234,
+  "arrivo2": 18.61,
+  "allertaFine": 20.51,
+  "carr2": 20.61,
+  "auto": 22.01,
+  "parte": 23.01,
+  "parcheggiata": 24.81,
+  "arrivo3": 28.2,
+  "resta": 28.788,
+  "chiudi": 30.045,
+  "stai3": 31.519,
+  "arrivo4": 37.25,
+  "evita": 36.98,
+  "spezzano": 40.24,
+  "volo4": 41.9,
+  "impalcature": 43.08,
+  "cartelloni": 43.98,
+  "cornicioni": 44.7,
+  "rallenta": 49.659,
+  "volo5": 50.94,
+  "arrivo5": 54.54,
+  "arrivo6": 59.15,
+  "toccare": 59.42,
+  "se": 61.26,
+  "chiama": 63.46,
+  "n112": 63.82
+ }
+}
