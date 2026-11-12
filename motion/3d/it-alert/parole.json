@@ -453,9 +453,9 @@
  {
   "n": 4,
   "file": "line_4.wav",
-  "durata": 7.361,
+  "durata": 6.818,
   "testo": "Non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo, guarda il colore dell'allerta sul sito del Gruppo.",
-  "sentito": "non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo guarda il colore dell 'allerta sul sito del gruppo.",
+  "sentito": "Non si usa per i terremoti e nemmeno per le allerte meteo. Per il maltempo guarda il colore dell 'allerta sul sito del gruppo.",
   "parole": [
    {
     "w": "Non",
@@ -465,112 +465,112 @@
    {
     "w": "si",
     "t0": 0.16,
-    "t1": 0.34
+    "t1": 0.32
    },
    {
     "w": "usa",
-    "t0": 0.34,
-    "t1": 0.6
+    "t0": 0.32,
+    "t1": 0.48
    },
    {
     "w": "per",
-    "t0": 0.6,
-    "t1": 0.82
+    "t0": 0.48,
+    "t1": 0.64
    },
    {
     "w": "i",
-    "t0": 0.82,
-    "t1": 0.9
+    "t0": 0.64,
+    "t1": 0.72
    },
    {
     "w": "terremoti",
-    "t0": 0.9,
-    "t1": 1.42
+    "t0": 0.72,
+    "t1": 1.2
    },
    {
     "w": "e",
-    "t0": 1.42,
-    "t1": 1.94
+    "t0": 1.2,
+    "t1": 1.36
    },
    {
     "w": "nemmeno",
-    "t0": 1.94,
-    "t1": 2.28
+    "t0": 1.36,
+    "t1": 1.7
    },
    {
     "w": "per",
-    "t0": 2.28,
-    "t1": 2.42
+    "t0": 1.7,
+    "t1": 1.9
    },
    {
     "w": "le",
-    "t0": 2.42,
-    "t1": 2.54
+    "t0": 1.9,
+    "t1": 2.04
    },
    {
     "w": "allerte",
-    "t0": 2.54,
-    "t1": 2.88
+    "t0": 2.04,
+    "t1": 2.44
    },
    {
     "w": "meteo.",
-    "t0": 2.88,
-    "t1": 3.44
+    "t0": 2.44,
+    "t1": 2.98
    },
    {
     "w": "Per",
-    "t0": 3.64,
-    "t1": 4.12
+    "t0": 3.4,
+    "t1": 3.56
    },
    {
     "w": "il",
-    "t0": 4.12,
-    "t1": 4.24
+    "t0": 3.56,
+    "t1": 3.7
    },
    {
     "w": "maltempo,",
-    "t0": 4.24,
-    "t1": 4.78
+    "t0": 3.7,
+    "t1": 4.24
    },
    {
     "w": "guarda",
-    "t0": 4.78,
-    "t1": 5.2
+    "t0": 4.24,
+    "t1": 4.66
    },
    {
     "w": "il",
-    "t0": 5.2,
-    "t1": 5.28
+    "t0": 4.66,
+    "t1": 4.74
    },
    {
     "w": "colore",
-    "t0": 5.28,
-    "t1": 5.62
+    "t0": 4.74,
+    "t1": 5.08
    },
    {
     "w": "dell'allerta",
-    "t0": 5.62,
-    "t1": 6.12
+    "t0": 5.08,
+    "t1": 5.58
    },
    {
     "w": "sul",
-    "t0": 6.12,
-    "t1": 6.36
+    "t0": 5.58,
+    "t1": 5.8
    },
    {
     "w": "sito",
-    "t0": 6.36,
-    "t1": 6.66
+    "t0": 5.8,
+    "t1": 6.14
    },
    {
     "w": "del",
-    "t0": 6.66,
-    "t1": 6.78
+    "t0": 6.14,
+    "t1": 6.24
    },
    {
     "w": "Gruppo.",
-    "t0": 6.78,
-    "t1": 7.26
+    "t0": 6.24,
+    "t1": 6.72
    }
   ]
  },
@@ -661,9 +661,9 @@
  {
   "n": 6,
   "file": "line_6.wav",
-  "durata": 7.263,
+  "durata": 8.072,
   "testo": "Se il messaggio comincia con la parola TEST, è solo una prova: non devi fare niente. In emergenza chiama il 112.",
-  "sentito": "Se il messaggio comincia con la parola test, è solo una prova. Non devi fare niente. In emergenza chiama il 112.",
+  "sentito": "Se il messaggio comincia con la parola test, è solo una prova. Non devi fare nienti. In emergenza chiama l '1, 1, 2.",
   "parole": [
    {
     "w": "Se",
@@ -703,7 +703,7 @@
    {
     "w": "TEST,",
     "t0": 1.54,
-    "t1": 1.86
+    "t1": 1.84
    },
    {
     "w": "è",
@@ -727,7 +727,7 @@
    },
    {
     "w": "non",
-    "t0": 3.76,
+    "t0": 3.72,
     "t1": 3.86
    },
    {
@@ -738,37 +738,37 @@
    {
     "w": "fare",
     "t0": 4.06,
-    "t1": 4.26
+    "t1": 4.24
    },
    {
     "w": "niente.",
-    "t0": 4.26,
-    "t1": 4.64
+    "t0": 4.24,
+    "t1": 4.7
    },
    {
     "w": "In",
     "t0": 5.14,
-    "t1": 5.4
+    "t1": 5.42
    },
    {
     "w": "emergenza",
-    "t0": 5.4,
-    "t1": 5.92
+    "t0": 5.42,
+    "t1": 6.02
    },
    {
     "w": "chiama",
-    "t0": 5.92,
-    "t1": 6.24
+    "t0": 6.02,
+    "t1": 6.36
    },
    {
     "w": "il",
-    "t0": 6.24,
-    "t1": 6.4
+    "t0": 6.36,
+    "t1": 6.893
    },
    {
     "w": "112.",
-    "t0": 6.4,
-    "t1": 6.7
+    "t0": 6.893,
+    "t1": 7.78
    }
   ]
  }

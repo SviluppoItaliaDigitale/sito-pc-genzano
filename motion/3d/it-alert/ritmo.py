@@ -7,9 +7,14 @@ from pathlib import Path
 qui = Path(__file__).resolve().parent
 parole = json.loads((qui / 'parole.json').read_text(encoding='utf-8'))
 
+# la voce legge «l'uno, uno, due» e a schermo c'è «il 112»: il numero resta acceso per tutta la lettura delle tre cifre
+_u = parole[6]['parole']
+assert _u[-1]['w'] == '112.' and _u[-2]['w'] == 'il'
+_u[-2]['t1'] = round(_u[-2]['t0'] + 0.08, 3); _u[-1]['t0'] = _u[-2]['t1']; _u[-1]['t1'] = round(parole[6]['durata'] - 0.05, 3)
+
 # attesa prima della voce e durata di ogni scena: in 3D le scene durano più della frase (voli, comparse, letture)
 PRIMA = [0.45, 0.45, 4.10, 0.45, 0.60, 0.90, 0.90]
-DURATA = [9.1, 9.1, 12.4, 14.6, 9.6, 10.5, 11.3]
+DURATA = [9.1, 9.1, 12.4, 14.6, 9.1, 10.5, 12.1]
 S, V, t = [], [], 0.0
 for k, f in enumerate(parole):
     assert DURATA[k] >= PRIMA[k] + f['durata'] + 0.4, f'scena {k} troppo corta per la sua frase'
