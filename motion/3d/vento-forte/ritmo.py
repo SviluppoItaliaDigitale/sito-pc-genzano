@@ -67,6 +67,7 @@ passaggio = lambda x, vol=-3: {'file': SUONI + 'passaggio.wav', 'evento': round(
 pop = lambda x, vol=-4: {'file': SUONI + 'pop.wav', 'evento': round(x, 2), 'tipo': 'colpo', 'volume': vol}
 effetti = [
     vento(0, E(0) + .4),                               # raffiche sul rilievo e nel quartiere
+    vento(ev['vasi1'] + 1.4, S(2) + .5, -4),           # le prime raffiche, a balcone già in ordine
     vento(S(3) + .2, S(5) - .1),                       # il vento soffia forte: in casa e fuori
     vento(S(5), E(5) - .3, -2),                        # raffiche sul viadotto
     passaggio(ev['tuffo']),                            # dal rilievo al quartiere

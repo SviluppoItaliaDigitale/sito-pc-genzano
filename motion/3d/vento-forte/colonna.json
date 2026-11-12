@@ -53,6 +53,16 @@
   },
   {
    "file": "../../.cache/suoni/vento-lungo.wav",
+   "inizio": 13.34,
+   "fine": 18.01,
+   "da": 13.34,
+   "tipo": "ambiente",
+   "entrata": 0.6,
+   "uscita": 1.2,
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/vento-lungo.wav",
    "inizio": 26.9,
    "fine": 48.14,
    "da": 26.9,
