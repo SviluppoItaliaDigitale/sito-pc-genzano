@@ -1,0 +1,299 @@
+{
+ "voce": [
+  {
+   "file": "../../voce/frane/line_0.wav",
+   "inizio": 0.45
+  },
+  {
+   "file": "../../voce/frane/line_1.wav",
+   "inizio": 9.47
+  },
+  {
+   "file": "../../voce/frane/line_2.wav",
+   "inizio": 20.45
+  },
+  {
+   "file": "../../voce/frane/line_3.wav",
+   "inizio": 29.71
+  },
+  {
+   "file": "../../voce/frane/line_4.wav",
+   "inizio": 37.52
+  },
+  {
+   "file": "../../voce/frane/line_5.wav",
+   "inizio": 48.83
+  },
+  {
+   "file": "../../voce/frane/line_6.wav",
+   "inizio": 57.46
+  }
+ ],
+ "durata": 67.72,
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 9.02
+  },
+  {
+   "inizio": 9.02,
+   "durata": 10.83
+  },
+  {
+   "inizio": 19.85,
+   "durata": 9.41
+  },
+  {
+   "inizio": 29.26,
+   "durata": 7.81
+  },
+  {
+   "inizio": 37.07,
+   "durata": 10.76
+  },
+  {
+   "inizio": 47.83,
+   "durata": 8.83
+  },
+  {
+   "inizio": 56.66,
+   "durata": 11.06
+  }
+ ],
+ "effetti": [
+  {
+   "file": "../../.cache/suoni/frana.wav",
+   "tipo": "ambiente",
+   "inizio": 3.44,
+   "fine": 7.94,
+   "entrata": 0.25,
+   "uscita": 0.9,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/frana.wav",
+   "tipo": "ambiente",
+   "inizio": 25.9,
+   "fine": 27.55,
+   "entrata": 0.25,
+   "uscita": 0.9,
+   "volume": -8
+  },
+  {
+   "file": "../../.cache/suoni/frana.wav",
+   "tipo": "ambiente",
+   "inizio": 29.56,
+   "fine": 34.06,
+   "entrata": 0.25,
+   "uscita": 0.9,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/frana.wav",
+   "tipo": "ambiente",
+   "inizio": 33.16,
+   "fine": 37.66,
+   "entrata": 0.25,
+   "uscita": 0.9,
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/frana.wav",
+   "tipo": "ambiente",
+   "inizio": 40.47,
+   "fine": 44.97,
+   "entrata": 0.25,
+   "uscita": 0.9,
+   "volume": -7
+  },
+  {
+   "file": "../../.cache/suoni/frana.wav",
+   "tipo": "ambiente",
+   "inizio": 54.167,
+   "fine": 56.417,
+   "entrata": 0.25,
+   "uscita": 0.9,
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pioggia-lunga.wav",
+   "tipo": "ambiente",
+   "inizio": 8.32,
+   "fine": 20.15,
+   "entrata": 1.0,
+   "uscita": 1.5
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 0.35
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 3.14
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 3.597
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 8.16
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 10.54
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 12.84
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 19.85
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 21.22
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 22.41
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 22.76
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 23.56
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 25.55
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 26.71
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 34.04
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 37.97
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 39.19
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 41.84
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 43.79
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 47.83
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 49.71
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 52.06
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 53.11
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 57.36
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 59.49
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 60.82
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 62.38
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "inizio": 64.28
+  }
+ ],
+ "musica": [
+  {
+   "file": "../../.cache/suoni/on-my-way.mp3",
+   "inizio": 0,
+   "fine": 67.72,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 3.0
+  }
+ ]
+}

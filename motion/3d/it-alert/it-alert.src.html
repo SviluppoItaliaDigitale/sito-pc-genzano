@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IT-alert: il messaggio che avvisa del pericolo</title>
+<!-- it-alert.src.html — video 3D divulgativo «IT-alert: il messaggio che avvisa del pericolo» (Protezione Civile Genzano
+     di Roma), sette scene, una per frase della voce. Scritto per Alessandro Cuollo il 12/11/2026 sul modello della
+     skill video-3d, senza codice di terzi. Si costruisce con costruisci.py di video-3d (three.js 0.181.2 MIT, motore
+     3D, impaginazione, font) e i dati rilievo e terre (rilievo.py), tempi e sottotitoli (ritmo.py).
+     Tutto dipende solo da t: render(t) deterministico.
+     Coordinate in km: il rilievo dei Colli Albani ha il centro in (0, 0, 0), x verso est, y in alto, z verso sud.
+     Le scene 1-2 stanno sul rilievo; dalla 3 in poi gli oggetti stanno in uno «studio» a quota YS, sopra il rilievo,
+     che a quell'altezza esce dall'inquadratura (e viene spento). Lo schermo del telefono è un riquadro di avviso
+     generico disegnato qui: nessun logo ufficiale, nessuna imitazione della grafica vera del messaggio. -->
+<!--FONT-->
+<style>
+  html, body { margin: 0; background: #05080f; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; overflow: hidden;
+           background: radial-gradient(ellipse at 50% 42%, #1d2d4f 0%, #111c33 48%, #0a1220 100%); }
+  #stage canvas { position: absolute; left: 0; top: 0; display: block; }
+  #stelle { z-index: 0; } #livello-fondo { z-index: 1; } #livello-scena { z-index: 2; }
+  #fonte { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; font-weight: 400; font-size: 17px;
+           line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre; padding: 5px 12px; border-radius: 10px;
+           background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
+  #titolo { position: absolute; z-index: 31; left: 0; top: 0; box-sizing: border-box; text-align: center; opacity: 0;
+            padding: 8px 30px 12px; border-radius: 18px; background: rgba(10, 18, 32, .78); border: 3px solid #2e90fa;
+            white-space: nowrap; }
+  #titolo b { display: block; font-family: 'Titillium Web', sans-serif; font-weight: 700; font-size: 82px; line-height: 1.02;
+              color: #f3f4f6; letter-spacing: .5px; }
+  #titolo span { display: block; font-family: 'Titillium Web', sans-serif; font-weight: 600; font-size: 30px; line-height: 1.25;
+                 color: #f59e0b; }
+  .etichetta { position: absolute; z-index: 31; left: 0; top: 0; box-sizing: border-box; text-align: center; opacity: 0;
+               padding: 9px 20px 10px; border-radius: 14px; background: rgba(17, 24, 39, .92); border: 3px solid #2e90fa;
+               box-shadow: 0 8px 24px rgba(0, 0, 0, .45); white-space: nowrap; }
+  .etichetta b { display: block; font-family: 'Titillium Web', sans-serif; font-weight: 700; font-size: 31px; line-height: 1.12;
+                 color: #f3f4f6; }
+  .etichetta span { display: block; margin-top: 4px; font-family: 'Roboto Mono', monospace; font-weight: 500; font-size: 19px;
+                    line-height: 1.25; letter-spacing: 1.5px; text-transform: uppercase; color: #9ca3af; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="stelle"></canvas>
+  <canvas id="livello-fondo"></canvas>
+  <canvas id="livello-scena"></canvas>
+  <div id="fonte" data-componente="fonte-3d"></div>
+  <div id="titolo" data-componente="titolo-video" data-scatola="1"><b>IT-alert</b><span>il messaggio che avvisa del pericolo</span></div>
+</div>
+<script type="application/json" id="dato-rilievo">/*DATO:rilievo*/</script>
+<script type="application/json" id="dato-terre">/*DATO:terre*/</script>
+<script type="application/json" id="dato-tempi">/*DATO:tempi*/</script>
+<script type="application/json" id="dato-sottotitoli">/*DATO:sottotitoli*/</script>
+<!--LIBRERIE-->
+<!--THREE-->
+<!--MOTORE3D-->
+<script>
+/* ============================================================ CONFIG ============ */
+const CONFIG = {
+  titolo: 'IT-alert: il messaggio che avvisa del pericolo',
+  ente: 'pc-genzano',
+  formato: 'verticale',
+  hud: ['IT-ALERT', 'A CHI ARRIVA', 'COME SI RICONOSCE', 'QUANDO SI USA', 'QUANDO NO', 'SE LO RICEVI', 'TEST E 112'],
+  nota: 'SCHEMA · NON IN SCALA',
+  notaRilievo: 'SCHEMA · RILIEVO ×2 · NON IN SCALA',     // finché si vede il rilievo, esagerato due volte in altezza
+  fonte: 'Fonte: it-alert.gov.it, Dipartimento della Protezione Civile',
+  rilievo: { esagerazione: 2, laghi: [
+    { nome: 'Lago Albano', lat: 41.750, lon: 12.665, profondita: 167 },
+    { nome: 'Lago di Nemi', lat: 41.715, lon: 12.700, profondita: 33 } ] },
+  globo: { svanisce: [900, 90] },
+  chiave: ['IT-alert', 'telefoni', 'zona', "un'app", 'iscriversi', 'suono', 'testo', 'stabilimento', 'nucleare', 'diga',
+           'vulcani', 'terremoti', 'meteo', 'colore', 'fermati', 'leggi', 'segui', 'TEST', 'prova', '112'],
+  modo: 'parole'
+};
+function dato(nome) {
+  const e = document.getElementById('dato-' + nome), s = e ? e.textContent.trim() : '';
+  return !s || s.startsWith('/*DATO:') ? null : JSON.parse(s);
+}
+const RILIEVO = dato('rilievo'), TERRE = dato('terre'), TEMPI = dato('tempi'), SOTT = dato('sottotitoli') || [];
+if (!TEMPI) throw new Error('manca tempi.json: costruisci la pagina con --dato tempi=tempi.json (lo scrive ritmo.py)');
+const FRASI = SOTT.map(f => Object.assign({}, f, { chiave: (f.chiave || []).concat(CONFIG.chiave) }));
+/* ============================================================ fine CONFIG ======= */
+
+(function () {
+  'use strict';
+  const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
+  const formato = CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H;
+  const SC = TEMPI.scene, TOTAL = TEMPI.totale, E = TEMPI.eventi;
+  const S = i => SC[i].inizio;
+  window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
+  document.title = CONFIG.titolo;
+  const { clamp, prog, mix, ease, hash } = M3;
+  const fin = M3.finestra;
+  const V = (x, y, z) => new THREE.Vector3(x, y, z);
+  const GR = Math.PI / 180;
+  const liscia = u => { u = clamp(u); return u * u * (3 - 2 * u); };
+  const scatto = u => { u = clamp(u); const c = 0.9; return 1 + (c + 1) * Math.pow(u - 1, 3) + c * Math.pow(u - 1, 2); };  // arriva con il 3% di slancio
+  const AZZ = '#2e90fa', ARA = '#f59e0b', BLU = '#0a1220', CHIARO = '#eef2f7';
+
+  const stage = document.getElementById('stage');
+  const stato = IMP.monta(stage, { ente, formato, hud: CONFIG.hud, passiHUD: SC.length, nota: CONFIG.notaRilievo });
+  IMP.anteprima(stage);
+
+  /* ---------------------------------------------------------------- livelli: globo a metà risoluzione, scena all'80% */
+  const fondo = M3.creaRenderer(document.getElementById('livello-fondo'), W, H, { scala: 0.5 });
+  const vicino = M3.creaRenderer(document.getElementById('livello-scena'), W, H, { scala: 0.8 });
+  const scenaFondo = new THREE.Scene(), scena = new THREE.Scene();
+  const camera = M3.creaCamera(W, H, { fov: 30, zona: L.zona });
+
+  const stelle = document.getElementById('stelle');
+  stelle.width = W / 2; stelle.height = H / 2; stelle.style.width = W + 'px'; stelle.style.height = H + 'px';
+  (function () {
+    const g = stelle.getContext('2d');
+    for (let k = 0; k < 420; k++) {
+      g.fillStyle = 'rgba(220,232,255,' + (0.25 + 0.6 * hash(k * 3.3 + 1)).toFixed(2) + ')';
+      g.beginPath(); g.arc(hash(k * 1.7) * W / 2, hash(k * 2.9 + 4) * H / 2, 0.4 + 1.1 * hash(k * 5.1), 0, 6.283); g.fill();
+    }
+  })();
+
+  /* ---------------------------------------------------------------- rilievo e globo */
+  const datiRilievo = RILIEVO || M3.rilievoDiProva();
+  const ril = M3.rilievo(datiRilievo, RILIEVO ? CONFIG.rilievo : { esagerazione: 2 });
+  scena.add(ril.gruppo);
+  const globo = M3.globo(TERRE, { punto: ril.centro, terra: '#9aae68' });
+  scenaFondo.add(globo.gruppo);
+  const opacitaGlobo = d => {
+    const [pieno, via] = CONFIG.globo.svanisce;
+    return clamp((Math.log(d) - Math.log(via)) / (Math.log(pieno) - Math.log(via)));
+  };
+  const yTerra = (x, z) => { const g = ril.geo(x, z); return ril.metriInY(ril.quota(g.lat, g.lon)); };
+
+  /* ---------------------------------------------------------------- luci (il rilievo ha i colori già ombreggiati) */
+  scena.add(new THREE.HemisphereLight(0xf2f6ff, 0x39435a, 1.9));
+  const sole = new THREE.DirectionalLight(0xfff6ea, 2.1); sole.position.set(4, 8, 7); scena.add(sole);
+  const contro = new THREE.DirectionalLight(0xb7cdf5, 1.1); contro.position.set(-6, 4, -5); scena.add(contro);
+
+  /* ---------------------------------------------------------------- aiuti per gli oggetti */
+  const FT = "'Titillium Web', sans-serif";
+  const lam = (c, o = {}) => new THREE.MeshLambertMaterial(Object.assign({ color: c }, o));
+  const bas = (c, o = {}) => new THREE.MeshBasicMaterial(Object.assign({ color: c }, o));
+  const box = (w, h, d, mat) => new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+  const cil = (r1, r2, h, mat, seg = 20) => new THREE.Mesh(new THREE.CylinderGeometry(r1, r2, h, seg), mat);
+  const sfera = (r, mat, seg = 14) => new THREE.Mesh(new THREE.SphereGeometry(r, seg, Math.max(8, seg - 4)), mat);
+  const metti = (o, x, y, z) => { o.position.set(x, y, z); return o; };
+  const gruppo = (...figli) => { const g = new THREE.Group(); figli.forEach(f => g.add(f)); return g; };
+  function tela(w, h, disegna) {
+    const c = document.createElement('canvas'); c.width = w; c.height = h;
+    disegna(c.getContext('2d'), w, h);
+    const t = new THREE.CanvasTexture(c); t.anisotropy = 4; return t;
+  }
+  function rettTondo(g, x, y, w, h, r) {
+    g.beginPath(); g.moveTo(x + r, y); g.lineTo(x + w - r, y); g.arcTo(x + w, y, x + w, y + r, r); g.lineTo(x + w, y + h - r);
+    g.arcTo(x + w, y + h, x + w - r, y + h, r); g.lineTo(x + r, y + h); g.arcTo(x, y + h, x, y + h - r, r); g.lineTo(x, y + r);
+    g.arcTo(x, y, x + r, y, r); g.closePath();
+  }
+  function formaTonda(w, h, r) {                         // rettangolo con gli angoli tondi, centrato
+    const s = new THREE.Shape(), x = -w / 2, y = -h / 2;
+    s.moveTo(x + r, y); s.lineTo(x + w - r, y); s.absarc(x + w - r, y + r, r, -Math.PI / 2, 0, false);
+    s.lineTo(x + w, y + h - r); s.absarc(x + w - r, y + h - r, r, 0, Math.PI / 2, false);
+    s.lineTo(x + r, y + h); s.absarc(x + r, y + h - r, r, Math.PI / 2, Math.PI, false);
+    s.lineTo(x, y + r); s.absarc(x + r, y + r, r, Math.PI, Math.PI * 1.5, false);
+    return s;
+  }
+  const estrusa = (forma, spessore, mat, smusso = 0.02) => {
+    const geo = new THREE.ExtrudeGeometry(forma, { depth: spessore, bevelEnabled: smusso > 0, bevelSize: smusso, bevelThickness: smusso,
+      bevelSegments: 1, curveSegments: 8 });
+    geo.translate(0, 0, -spessore / 2);
+    return new THREE.Mesh(geo, mat);
+  };
+  // cresce dal basso con un piccolo slancio; a 0 è spento
+  const cresci = (o, u) => { o.visible = u > 0.001; if (o.visible) o.scale.setScalar(Math.max(0.001, scatto(u))); };
+
+  /* ================================================================ TELEFONO (protagonista) =========================
+     Alto 2 km a scala 1, guarda verso +z. Lo schermo è una tela ridisegnata dal tempo: riquadro di avviso generico
+     con la prima parola («IT-alert» o «TEST») e righe grigie al posto del testo. */
+  const TEL = { w: 0.98, h: 2.0, d: 0.12, sw: 0.88, sh: 1.90, cw: 480, ch: 1036 };
+  const telefono = new THREE.Group(), telCorpo = new THREE.Group();
+  telefono.add(telCorpo); scena.add(telefono);
+  telCorpo.add(estrusa(formaTonda(TEL.w, TEL.h, 0.14), TEL.d, lam(0x1a2233)));
+  telCorpo.add(metti(box(0.03, 0.26, 0.05, lam(0x39465c)), TEL.w / 2 + 0.012, 0.42, 0));        // tasti sul fianco
+  telCorpo.add(metti(box(0.03, 0.16, 0.05, lam(0x39465c)), TEL.w / 2 + 0.012, 0.12, 0));
+  const telaSchermo = document.createElement('canvas'); telaSchermo.width = TEL.cw; telaSchermo.height = TEL.ch;
+  const gS = telaSchermo.getContext('2d');
+  const texSchermo = new THREE.CanvasTexture(telaSchermo); texSchermo.anisotropy = 4;
+  const schermo = new THREE.Mesh(new THREE.PlaneGeometry(TEL.sw, TEL.sh), bas(0xffffff, { map: texSchermo, transparent: true, alphaTest: 0.5 }));
+  schermo.position.z = TEL.d / 2 + 0.022; telCorpo.add(schermo);
+  const RIQ = { x: 30, y: 236, w: 420, h: 520, fascia: 104 };
+  const PAROLA = { x: RIQ.x + 34, y: RIQ.y + RIQ.fascia + 28, h: 84 };       // riquadro della prima parola, sulla tela
+  let chiaveSchermo = '';
+  function disegnaSchermo(o) {
+    const chiave = [o.testo, o.u.toFixed(3), o.righe.toFixed(2), o.leggi.toFixed(3), o.cerchia.toFixed(2)].join('|');
+    if (chiave === chiaveSchermo) return;
+    chiaveSchermo = chiave;
+    const g = gS, w = TEL.cw, h = TEL.ch;
+    g.clearRect(0, 0, w, h);
+    const sf = g.createLinearGradient(0, 0, 0, h); sf.addColorStop(0, '#16294f'); sf.addColorStop(1, '#0c1730');
+    g.fillStyle = sf; rettTondo(g, 0, 0, w, h, 54); g.fill();
+    g.fillStyle = '#05080f'; rettTondo(g, w / 2 - 62, 26, 124, 30, 15); g.fill();           // tacca in alto
+    g.fillStyle = 'rgba(238,242,247,.5)'; rettTondo(g, w / 2 - 70, h - 34, 140, 10, 5); g.fill();   // barra in basso
+    if (o.u > 0.01) {
+      const R = RIQ, cx = R.x + R.w / 2, cy = R.y + R.h / 2, k = scatto(o.u);
+      g.save(); g.translate(cx, cy); g.scale(k, k); g.translate(-cx, -cy);
+      g.fillStyle = 'rgba(0,0,0,.4)'; rettTondo(g, R.x + 6, R.y + 12, R.w, R.h, 30); g.fill();
+      g.fillStyle = ARA; rettTondo(g, R.x, R.y, R.w, R.h, 30); g.fill();
+      g.fillStyle = '#f5f7fa'; rettTondo(g, R.x, R.y + R.fascia - 30, R.w, R.h - R.fascia + 30, 30); g.fill();
+      g.fillStyle = ARA; g.fillRect(R.x, R.y + R.fascia - 31, R.w, 32);
+      g.fillStyle = '#f5f7fa'; g.fillRect(R.x, R.y + R.fascia, R.w, 40);
+      // triangolo di avviso generico
+      const tx = cx, ty = R.y + 18;
+      g.fillStyle = BLU; g.beginPath(); g.moveTo(tx, ty); g.lineTo(tx + 42, ty + 70); g.lineTo(tx - 42, ty + 70); g.closePath(); g.fill();
+      g.fillStyle = ARA; g.fillRect(tx - 5, ty + 24, 10, 24); g.beginPath(); g.arc(tx, ty + 58, 6, 0, 6.283); g.fill();
+      // prima parola del testo
+      g.fillStyle = BLU; g.font = '700 74px ' + FT; g.textBaseline = 'middle'; g.textAlign = 'left';
+      g.fillText(o.testo, PAROLA.x + 8, PAROLA.y + PAROLA.h / 2 + 3);
+      const lp = g.measureText(o.testo).width + 16;
+      if (o.cerchia > 0.01) {
+        g.globalAlpha = clamp(o.cerchia); g.strokeStyle = '#ef4136'; g.lineWidth = 8;
+        rettTondo(g, PAROLA.x - 6, PAROLA.y - 4, lp + 12, PAROLA.h + 8, 20); g.stroke(); g.globalAlpha = 1;
+      }
+      // righe del testo (schema: barre grigie); con «leggi» si scuriscono una dopo l'altra, come lette
+      const larg = [0.90, 0.80, 0.86, 0.66, 0.42], x0 = R.x + 34, y0 = PAROLA.y + PAROLA.h + 34, lmax = R.w - 68;
+      for (let i = 0; i < larg.length; i++) {
+        const f = clamp(o.righe - i);
+        if (f <= 0) continue;
+        const lw = lmax * larg[i] * f, y = y0 + i * 50;
+        g.fillStyle = '#b6c0cf'; rettTondo(g, x0, y, Math.max(lw, 20), 20, 10); g.fill();
+        const fl = clamp(o.leggi * larg.length - i);
+        if (fl > 0) { g.fillStyle = '#33415c'; rettTondo(g, x0, y, Math.max(lw * fl, 20), 20, 10); g.fill(); }
+      }
+      g.restore();
+    }
+    texSchermo.needsUpdate = true;
+  }
+  // punto del mondo corrispondente a un punto della tela dello schermo
+  const puntoSchermo = (cx, cy) => { telCorpo.updateWorldMatrix(true, false);
+    return telCorpo.localToWorld(V((cx / TEL.cw - 0.5) * TEL.sw, (0.5 - cy / TEL.ch) * TEL.sh, TEL.d / 2 + 0.03)); };
+  // onde del suono ai lati del telefono (archi che si allargano e svaniscono)
+  const onde = [];
+  for (const lato of [1, -1]) for (let k = 0; k < 3; k++) {
+    const m = new THREE.Mesh(new THREE.TorusGeometry(1, 0.035, 6, 28, 64 * GR), bas(ARA, { transparent: true, depthWrite: false }));
+    m.rotation.z = (lato > 0 ? 0 : Math.PI) - 32 * GR;
+    telefono.add(m); onde.push({ m, k, lato });
+  }
+
+  /* ================================================================ SCENA 2: zona, antenna, telefoni ================= */
+  const ZX = -2.2, ZZ = 2.4, RZ = 3.0;                    // centro e raggio della zona, in km sul rilievo
+  const zona = new THREE.Group(); scena.add(zona);
+  const SEG = 72;
+  function nastro(colore, opacita) {                      // anello adagiato sul rilievo, ridisegnato a ogni raggio
+    const geo = new THREE.BufferGeometry(), pos = new Float32Array((SEG + 1) * 2 * 3), idx = [];
+    for (let i = 0; i < SEG; i++) { const a = i * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+    geo.setAttribute('position', new THREE.BufferAttribute(pos, 3)); geo.setIndex(idx);
+    const m = new THREE.Mesh(geo, bas(colore, { transparent: true, opacity: opacita, side: THREE.DoubleSide, depthWrite: false }));
+    m.renderOrder = 4; m.frustumCulled = false; zona.add(m);
+    return { m, raggio(r0, r1) {
+      for (let i = 0; i <= SEG; i++) {
+        const a = i / SEG * 2 * Math.PI, c = Math.cos(a), s = Math.sin(a);
+        const x0 = ZX + c * r0, z0 = ZZ + s * r0, x1 = ZX + c * r1, z1 = ZZ + s * r1;
+        pos.set([x0, yTerra(x0, z0) + 0.07, z0, x1, yTerra(x1, z1) + 0.07, z1], i * 6);
+      }
+      geo.attributes.position.needsUpdate = true;
+    } };
+  }
+  (function () {                                          // fondo della zona: disco adagiato sul rilievo
+    const NR = 12, pos = [], idx = [];
+    for (let j = 0; j <= NR; j++) for (let i = 0; i <= SEG; i++) {
+      const r = RZ * j / NR, a = i / SEG * 2 * Math.PI, x = ZX + Math.cos(a) * r, z = ZZ + Math.sin(a) * r;
+      pos.push(x, yTerra(x, z) + 0.05, z);
+    }
+    for (let j = 0; j < NR; j++) for (let i = 0; i < SEG; i++) {
+      const a = j * (SEG + 1) + i, b = a + SEG + 1; idx.push(a, b, a + 1, a + 1, b, b + 1);
+    }
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); geo.setIndex(idx);
+    const m = new THREE.Mesh(geo, bas(ARA, { transparent: true, opacity: 0.2, side: THREE.DoubleSide, depthWrite: false }));
+    m.renderOrder = 3; zona.add(m); zona.userData.disco = m;
+  })();
+  const bordoZona = nastro(ARA, 0.95); bordoZona.raggio(RZ - 0.09, RZ);
+  const ondeZona = [0, 1, 2].map(() => nastro('#ffd27a', 1));
+  // antenna (cella): traliccio stilizzato al centro della zona
+  const antenna = new THREE.Group(); zona.add(antenna);
+  antenna.position.set(ZX, yTerra(ZX, ZZ), ZZ);
+  antenna.add(metti(cil(0.05, 0.22, 2.0, lam(0xeef2f7), 4), 0, 1.0, 0));
+  for (const y of [0.6, 1.25]) antenna.add(metti(cil(0.155 - y * 0.085, 0.172 - y * 0.085, 0.2, lam(0xef4136), 4), 0, y, 0));
+  for (let k = 0; k < 3; k++) { const a = k * 2.094; antenna.add(metti(box(0.1, 0.42, 0.07, lam(0xdfe6ee)), Math.cos(a) * 0.14, 1.9, Math.sin(a) * 0.14)); }
+  antenna.add(metti(sfera(0.085, bas(ARA)), 0, 2.16, 0));
+  // telefoni piccoli: 30 dentro la zona (si accendono al passaggio della prima onda), 9 fuori (restano spenti)
+  const piccoli = [], geoP = new THREE.BoxGeometry(0.3, 0.6, 0.06), geoSch = new THREE.PlaneGeometry(0.25, 0.52),
+        geoBarra = new THREE.PlaneGeometry(0.19, 0.11), matP = lam(0x1a2233), matStelo = lam(0x9aa6b8);
+  function piccolo(x, z, dentro, k) {
+    const g = new THREE.Group(), testa = new THREE.Group();
+    const sch = new THREE.Mesh(geoSch, bas(0x2a3550)), barra = new THREE.Mesh(geoBarra, bas(ARA));
+    sch.position.z = 0.032; barra.position.set(0, 0.1, 0.036);
+    testa.add(new THREE.Mesh(geoP, matP), sch, barra); testa.position.y = 0.55;
+    g.add(metti(cil(0.012, 0.012, 0.3, matStelo, 5), 0, 0.15, 0), testa);
+    g.position.set(x, yTerra(x, z), z); zona.add(g);
+    const d = Math.hypot(x - ZX, z - ZZ);
+    piccoli.push({ g, testa, sch, barra, dentro, d, k });
+  }
+  for (let k = 0, n = 0; n < 30 && k < 400; k++) {
+    const r = RZ * (0.2 + 0.72 * Math.sqrt(hash(k * 3.17 + 2))), a = hash(k * 7.31 + 5) * 6.283;
+    const x = ZX + Math.cos(a) * r, z = ZZ + Math.sin(a) * r;
+    if (piccoli.some(p => Math.hypot(p.g.position.x - x, p.g.position.z - z) < 0.62)) continue;
+    piccolo(x, z, true, n++);
+  }
+  for (let k = 0, n = 0; n < 9 && k < 400; k++) {
+    const r = RZ * (1.22 + 0.42 * hash(k * 5.9 + 1)), a = hash(k * 9.7 + 3) * 6.283;
+    const x = ZX + Math.cos(a) * r, z = ZZ + Math.sin(a) * r;
+    if (Math.abs(x) > ril.larghezza / 2 - 0.5 || Math.abs(z) > ril.profondita / 2 - 0.5) continue;
+    if (piccoli.some(p => Math.hypot(p.g.position.x - x, p.g.position.z - z) < 0.7)) continue;
+    piccolo(x, z, false, 100 + n++);
+  }
+  const VEL_ONDA = RZ / 1.7, PERIODO = 2.1;               // km al secondo e secondi fra un'onda e la successiva
+  const ATTERRA = V(ZX + 0.95, yTerra(ZX + 0.95, ZZ + 0.75) + 0.62, ZZ + 0.75);     // dove si posa il telefono grande
+
+  /* ================================================================ STUDIO (scene 3-7): isole con i modellini ========= */
+  const YS = 16;
+  const matBase = lam(0x24324d), matBordo = bas(AZZ);
+  function isola(x, z, r) {                               // base rotonda da plastico; il modellino sta in «sopra»
+    const g = new THREE.Group(), sopra = new THREE.Group();
+    g.add(metti(cil(r, r * 0.96, 0.22, matBase, 40), 0, -0.11, 0));
+    const an = new THREE.Mesh(new THREE.RingGeometry(r * 0.955, r, 48), matBordo); an.rotation.x = -Math.PI / 2; an.position.y = 0.004;
+    g.add(an, sopra); g.position.set(x, YS, z); scena.add(g);
+    return { g, sopra, r, x, z, parti: [] };
+  }
+  const parte = (is, ritardo, ...figli) => { const g = gruppo(...figli); is.sopra.add(g); is.parti.push({ g, ritardo }); return g; };
+  function comparsa(is, t, tBase, tParti) {              // prima la base, poi le parti una dopo l'altra
+    cresci(is.g, prog(t, tBase, 0.35));
+    for (const p of is.parti) cresci(p.g, prog(t, (tParti == null ? tBase + 0.12 : tParti) + p.ritardo, 0.45));
+  }
+  const cGrigio = 0xdfe5ee, cGrigio2 = 0xa9b8cc, cCemento = 0xd3d8df;
+
+  // --- quattro modellini (scena 4): stabilimento, impianto nucleare, diga, vulcano
+  const GX = 26, MP = [[GX - 3.2, 3.5], [GX + 3.2, 3.5], [GX - 3.2, -3.5], [GX + 3.2, -3.5]];
+  const M = MP.map(p => isola(p[0], p[1], 1.6));
+  (function stabilimento(is) {
+    const tetto = [-0.62, -0.2, 0.22].map(x => { const p = cil(0.245, 0.245, 0.95, lam(cGrigio2), 3); p.rotation.x = Math.PI / 2; return metti(p, x, 0.66, 0.2); });
+    parte(is, 0, metti(box(1.3, 0.55, 0.95, lam(cGrigio)), -0.2, 0.275, 0.2), ...tetto,
+      metti(box(1.32, 0.1, 0.02, lam(0x33415c)), -0.2, 0.3, 0.68),
+      metti(box(0.28, 0.3, 0.02, lam(0x33415c)), -0.5, 0.15, 0.68));
+    parte(is, 0.14, metti(cil(0.3, 0.3, 0.72, lam(0xf2f4f7)), 0.82, 0.36, 0.45), metti(sfera(0.3, lam(AZZ)), 0.82, 0.72, 0.45),
+      metti(cil(0.24, 0.24, 0.6, lam(0xf2f4f7)), 0.5, 0.3, -0.55), metti(sfera(0.24, lam(AZZ)), 0.5, 0.6, -0.55),
+      metti(cil(0.035, 0.035, 0.9, lam(cGrigio2), 8), 0.66, 0.5, -0.05).rotateX(Math.PI / 2));
+    parte(is, 0.28, metti(cil(0.085, 0.12, 1.9, lam(0xf2f4f7), 14), -0.6, 0.95, -0.6),
+      metti(cil(0.106, 0.11, 0.16, lam(0xef4136), 14), -0.6, 1.25, -0.6), metti(cil(0.094, 0.098, 0.16, lam(0xef4136), 14), -0.6, 1.62, -0.6),
+      metti(box(0.55, 0.3, 0.45, lam(cGrigio2)), 0.05, 0.15, -0.65));
+  })(M[0]);
+  const vapore = [];
+  (function nucleare(is) {
+    const profilo = []; for (let i = 0; i <= 12; i++) { const y = 1.75 * i / 12, u = (y - 1.15) / 1.15; profilo.push(new THREE.Vector2(0.4 + 0.3 * u * u, y)); }
+    const torre = s => { const m = new THREE.Mesh(new THREE.LatheGeometry(profilo, 28), lam(0xdfe5ec, { side: THREE.DoubleSide })); m.scale.setScalar(s); return m; };
+    parte(is, 0, metti(torre(1), -0.5, 0, -0.25));
+    parte(is, 0.14, metti(torre(0.78), 0.42, 0, -0.7));
+    parte(is, 0.28, metti(cil(0.33, 0.33, 0.55, lam(cGrigio2)), 0.72, 0.275, 0.5), metti(sfera(0.33, lam(cGrigio)), 0.72, 0.55, 0.5),
+      metti(box(0.8, 0.32, 0.5, lam(cGrigio)), -0.15, 0.16, 0.72), metti(box(0.82, 0.07, 0.02, lam(0x33415c)), -0.15, 0.2, 0.98));
+    const sb = parte(is, 0.5);
+    for (let k = 0; k < 4; k++) { const m = sfera(0.2, bas(0xffffff, { transparent: true, depthWrite: false })); sb.add(m); vapore.push({ m, k, x: -0.5, z: -0.25, y: 1.8, tinta: 1 }); }
+  })(M[1]);
+  (function diga(is) {
+    const verde = lam(0x71905f, { flatShading: true }), verde2 = lam(0x5f7d52, { flatShading: true }), acq = lam(0x2f8be8);
+    parte(is, 0, metti(cil(0.2, 0.78, 1.35, verde, 7), -0.95, 0.675, -0.3), metti(cil(0.16, 0.6, 1.0, verde2, 6), -0.82, 0.5, 0.5),
+      metti(cil(0.2, 0.78, 1.4, verde, 7), 0.95, 0.7, -0.3), metti(cil(0.16, 0.6, 0.95, verde2, 6), 0.84, 0.475, 0.5),
+      metti(cil(0.25, 0.85, 1.25, verde2, 7), 0, 0.625, -1.05));
+    const arco = new THREE.Shape(); arco.absarc(0, -0.75, 1.0, 38 * GR, 142 * GR, false); arco.absarc(0, -0.75, 0.84, 142 * GR, 38 * GR, true);
+    const muro = new THREE.Mesh(new THREE.ExtrudeGeometry(arco, { depth: 1.05, bevelEnabled: false, curveSegments: 20 }), lam(cCemento));
+    muro.rotation.x = -Math.PI / 2;                       // la forma è disegnata in pianta: l'estrusione diventa l'altezza
+    const lago = new THREE.Mesh(new THREE.CylinderGeometry(0.86, 0.86, 0.88, 24, 1, false, 128 * GR, 104 * GR), acq);
+    parte(is, 0.16, muro, metti(lago, 0, 0.44, 0.75), metti(box(1.2, 0.88, 0.75, acq), 0, 0.44, -0.55));
+    parte(is, 0.3, metti(box(0.2, 0.03, 0.95, acq), 0, 0.02, 0.62), metti(box(0.24, 0.5, 0.06, lam(0x9aa6b8)), 0, 0.5, -0.07),
+      metti(box(0.5, 0.22, 0.3, lam(cGrigio)), 0.5, 0.11, 0.95));
+  })(M[2]);
+  (function vulcano(is) {
+    const pr = [[1.42, 0], [1.02, 0.3], [0.62, 0.86], [0.36, 1.36], [0.27, 1.52], [0.17, 1.44], [0.0, 1.38]].map(p => new THREE.Vector2(p[0], p[1]));
+    const cono = new THREE.Mesh(new THREE.LatheGeometry(pr, 9), lam(0x7b6c5f, { flatShading: true }));
+    const piede = new THREE.Mesh(new THREE.LatheGeometry([[1.47, 0], [1.03, 0.33], [0.9, 0.33]].map(p => new THREE.Vector2(p[0], p[1])), 9), lam(0x71905f, { flatShading: true }));
+    parte(is, 0, cono, piede);
+    parte(is, 0.2, metti(cil(0.165, 0.165, 0.02, bas(0xff8a00), 12), 0, 1.445, 0));
+    const sb = parte(is, 0.35);
+    for (let k = 0; k < 4; k++) { const m = sfera(0.2, bas(0xc9ced6, { transparent: true, depthWrite: false })); sb.add(m); vapore.push({ m, k, x: 0, z: 0, y: 1.55, tinta: 0 }); }
+  })(M[3]);
+
+  // --- scena 5: due pannelli con il «no», poi i quattro colori dell'allerta
+  const PX = 52, CX = 70;
+  function pannello(x, disegna) {
+    const perno = new THREE.Group(); perno.position.set(x, YS, 0); scena.add(perno);
+    const lastra = estrusa(formaTonda(3.3, 4.4, 0.22), 0.2, lam(0x24324d)); lastra.position.y = 2.2;
+    const faccia = new THREE.Mesh(new THREE.PlaneGeometry(3.0, 4.1), bas(0xffffff, { map: tela(600, 820, disegna) }));
+    faccia.position.set(0, 2.2, 0.125);
+    const no = new THREE.Group(); no.position.set(0.95, 3.45, 0.2); no.rotation.z = -0.2;
+    no.add(metti(cil(0.92, 0.92, 0.12, lam(0xef4136), 40), 0, 0, 0).rotateX(Math.PI / 2));
+    const scritta = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 1.5), bas(0xffffff, { transparent: true, map: tela(256, 256, (g, w) => {
+      g.fillStyle = '#ffffff'; g.font = '700 150px ' + FT; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('NO', w / 2, w / 2 + 8); }) }));
+    scritta.position.z = 0.065; no.add(scritta);
+    perno.add(lastra, faccia, no);
+    return { perno, no };
+  }
+  const fondoCarta = (g, w, h) => { g.fillStyle = '#eef2f7'; rettTondo(g, 0, 0, w, h, 34); g.fill(); };
+  const titoloCarta = (g, w, h, righe) => { g.fillStyle = BLU; g.font = '700 86px ' + FT; g.textAlign = 'center'; g.textBaseline = 'middle';
+    righe.forEach((r, i) => g.fillText(r, w / 2, h - 150 - (righe.length - 1 - i) * 92 + (righe.length - 1) * 46)); };
+  let pan1 = null, pan2 = null;
+  function creaPannelli() {
+    pan1 = pannello(PX - 1.8, (g, w, h) => {              // terremoti: traccia di un sismografo
+      fondoCarta(g, w, h); titoloCarta(g, w, h, ['TERREMOTI']);
+      g.strokeStyle = '#33415c'; g.lineWidth = 12; g.lineJoin = 'round'; g.lineCap = 'round'; g.beginPath();
+      const y0 = 380, amp = [0, 0, 14, 40, 150, 210, 120, 170, 80, 46, 22, 10, 0, 0];
+      g.moveTo(60, y0);
+      for (let i = 0; i < amp.length; i++) g.lineTo(60 + (i + 0.5) * (w - 120) / amp.length, y0 + (i % 2 ? 1 : -1) * amp[i]);
+      g.lineTo(w - 60, y0); g.stroke();
+    });
+    pan2 = pannello(PX + 1.8, (g, w, h) => {              // allerte meteo: nuvola con la pioggia
+      fondoCarta(g, w, h); titoloCarta(g, w, h, ['ALLERTE', 'METEO']);
+      g.fillStyle = '#7f8ea6';
+      [[210, 300, 86], [300, 250, 110], [400, 300, 90], [300, 320, 96]].forEach(c => { g.beginPath(); g.arc(c[0], c[1], c[2], 0, 6.283); g.fill(); });
+      g.fillRect(190, 300, 230, 86);
+      g.strokeStyle = AZZ; g.lineWidth = 16; g.lineCap = 'round';
+      [[220, 440], [300, 440], [380, 440]].forEach(p => { g.beginPath(); g.moveTo(p[0], p[1]); g.lineTo(p[0] - 26, p[1] + 70); g.stroke(); });
+    });
+  }
+  const tavolaColori = new THREE.Group(); tavolaColori.position.set(CX, YS, 0); scena.add(tavolaColori);
+  tavolaColori.add(metti(estrusa(formaTonda(8.7, 2.2, 0.3), 0.22, matBase, 0).rotateX(-Math.PI / 2), 0, -0.11, 0));
+  const blocchi = ['#34b25a', '#ffcc00', '#ff8a00', '#ef4136'].map((c, i) => {
+    const hb = 1.0 + i * 0.62, perno = new THREE.Group();
+    perno.add(metti(box(1.7, hb, 1.3, lam(c)), 0, hb / 2, 0));
+    perno.position.set((i - 1.5) * 2.08, 0, 0); tavolaColori.add(perno);
+    return { perno, hb };
+  });
+
+  // --- scena 6: tre passi (mano che ferma, telefono da leggere, freccia da seguire)
+  const SX = 92, PASSI = [isola(SX - 3.2, 5.3, 1.5), isola(SX, 0, 1.5), isola(SX + 3.2, -5.3, 1.5)];
+  let mano = null;
+  function creaMano() {
+    const lastra = estrusa(formaTonda(1.9, 1.9, 0.3), 0.26, lam(AZZ)); lastra.position.y = 1.35;
+    const faccia = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 1.6), bas(0xffffff, { transparent: true, map: tela(384, 384, (g, w) => {
+      g.fillStyle = '#ffffff';                            // mano aperta: palmo, quattro dita, pollice
+      rettTondo(g, 112, 186, 168, 150, 46); g.fill();
+      [[116, 96, 146], [158, 62, 180], [200, 74, 168], [242, 110, 132]].forEach(d => { rettTondo(g, d[0], d[1], 36, d[2], 18); g.fill(); });
+      g.save(); g.translate(104, 250); g.rotate(-0.75); rettTondo(g, -18, -92, 36, 110, 18); g.fill(); g.restore();
+    }) }));
+    faccia.position.set(0, 1.35, 0.16);
+    mano = parte(PASSI[0], 0, metti(cil(0.07, 0.07, 0.5, lam(0x9aa6b8), 8), 0, 0.25, 0), lastra, faccia);
+  }
+  (function freccia(is) {
+    const f = new THREE.Shape();
+    [[-0.95, -0.24], [0.3, -0.24], [0.3, -0.52], [0.98, 0], [0.3, 0.52], [0.3, 0.24], [-0.95, 0.24]].forEach((p, i) => i ? f.lineTo(p[0], p[1]) : f.moveTo(p[0], p[1]));
+    parte(is, 0, metti(cil(0.07, 0.07, 2.3, lam(0x9aa6b8), 8), -0.5, 1.15, 0));
+    parte(is, 0.15, metti(estrusa(f, 0.16, lam(0x34b25a)), 0.1, 1.85, 0.02));
+    parte(is, 0.3, metti(estrusa(f, 0.16, lam(0x34b25a)), 0.1, 1.0, 0.02));
+  })(PASSI[2]);
+  const POSA_TEL = V(SX, YS + 1.4, 0);                    // il telefono grande sul secondo passo (scala 1,15)
+
+  // --- scena 7: il numero 112 in rilievo
+  const NX = 110, isola112 = isola(NX, 0, 2.5), cifre = [];
+  (function () {
+    const uno = [[0.35, 0], [0.8, 0], [0.8, 2.6], [0.42, 2.6], [0, 2.1], [0, 1.72], [0.35, 2.0]];
+    const due = [[0, 0], [1.6, 0], [1.6, 0.48], [0.48, 0.48], [0.48, 1.06], [1.6, 1.06], [1.6, 2.6], [0, 2.6], [0, 2.12], [1.12, 2.12], [1.12, 1.54], [0, 1.54]];
+    const forma = pts => { const s = new THREE.Shape(); pts.forEach((p, i) => i ? s.lineTo(p[0], p[1]) : s.moveTo(p[0], p[1])); return s; };
+    [[uno, -2.05], [uno, -0.95], [due, 0.25]].forEach((c, i) => {
+      const m = estrusa(forma(c[0]), 0.6, lam(0xf2f5f9, { emissive: 0x2c3442 }), 0.04); m.position.set(c[1], 0.06, 0);
+      cifre.push(parte(isola112, i * 0.12, m));
+    });
+  })();
+
+  /* ================================================================ TELECAMERA ====================================== */
+  const su = (p, dy) => [p[0], YS + dy, p[1]];
+  const K = [
+    { t: 0, bersaglio: [0, 0, 0], az: 0, el: 90, dist: 52000, fov: 30 },                 // la Terra, l'Italia al centro
+    { t: 2.6, el: 82, dist: 700, passa: true },                                          // tuffo senza fermarsi
+    { t: E.tuffo, bersaglio: [0, 3.2, 0], az: 10, el: 24, dist: 13 },                    // arrivo: qui compare il telefono
+    { t: S(1) },
+    { t: E.s1_arrivo, bersaglio: [ZX, 0.9, ZZ], az: 20, el: 38, dist: 24 },              // allontanamento sulla zona
+    { t: E.orbita_fine, az: 54 },                                                        // orbita
+    { t: S(2) },
+    { t: E.gru_fine, bersaglio: [ZX, YS + 0.12, ZZ], az: 8, el: 8, dist: 14 },                  // gru: su, davanti al telefono
+    { t: E.zoom_da },
+    { t: E.zoom_a, bersaglio: [ZX, YS + 0.25, ZZ], dist: 11 },                          // avvicinamento allo schermo
+    { t: S(3) },
+    { t: E.m_largo, bersaglio: [GX, YS + 0.3, 0.4], az: 8, el: 46, dist: 45 },           // carrellata: le quattro basi vuote
+    { t: E.m_via },
+    { t: E.m_arr[0], bersaglio: su(MP[0], 0.5), az: 18, el: 36, dist: 15 },              // avvicinamento al primo modellino
+    { t: E.m_par[0] }, { t: E.m_arr[1], bersaglio: su(MP[1], 0.5) },
+    { t: E.m_par[1] }, { t: E.m_arr[2], bersaglio: su(MP[2], 0.5) },
+    { t: E.m_par[2] }, { t: E.m_arr[3], bersaglio: su(MP[3], 0.5) },
+    { t: E.tutti_da }, { t: E.tutti_a, bersaglio: [GX, YS + 0.3, 0.4], az: 8, el: 46, dist: 45 },   // tutti e quattro
+    { t: S(4) },
+    { t: E.no_arrivo, bersaglio: [PX, YS + 2.3, 0], az: 0, el: 14, dist: 27 },           // i due «no»
+    { t: E.col_da }, { t: E.col_a, bersaglio: [CX, YS + 1.3, 0], az: 22, el: 26, dist: 33 },      // i colori
+    { t: S(5) },
+    { t: E.p1_arr, bersaglio: [SX - 3.2, YS + 0.6, 5.3], az: -14, el: 30, dist: 15 },      // passo 1
+    { t: E.p2_da }, { t: E.p2_a, bersaglio: [SX, YS + 1.55, 0], az: 0, el: 12, dist: 13 },        // passo 2: il telefono
+    { t: E.p3_da }, { t: E.p3_a, bersaglio: [SX + 3.2, YS + 0.6, -5.3], az: 14, el: 30, dist: 15 }, // passo 3
+    { t: E.passi_da }, { t: E.passi_a, bersaglio: [SX, YS + 0.7, 0], az: 0, el: 50, dist: 46 },   // i tre passi insieme
+    { t: S(6) },
+    { t: E.test_arr, bersaglio: [SX, YS + 1.75, 0], az: 0, el: 10, dist: 11.5 },         // lo schermo con «TEST»
+    { t: E.n112_da }, { t: E.n112_a, bersaglio: [NX, YS + 1.3, 0], az: -16, el: 20, dist: 19 },   // il 112
+    { t: TOTAL }
+  ];
+  const cam = M3.telecamera(camera, K, { rilievo: ril, raggioGlobo: globo.raggio });
+
+  /* ================================================================ SCHEDE (a telecamera ferma) ===================== */
+  const SCH = [];
+  const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore, centro) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore, centro });
+  const ALTO = { x: W / 2, y: L.zona.alto + 62 };
+  scheda('app', 'Niente app', 'NON SERVE SCARICARLA', null, null, E.card_app, E.s1_fine, AZZ, { x: 290, y: ALTO.y });
+  scheda('iscr', 'Niente iscrizione', 'NON SERVE ISCRIVERSI', null, null, E.card_iscr, E.s1_fine, AZZ, { x: 760, y: ALTO.y });
+  scheda('suono', 'Un suono diverso', 'DALLE SOLITE SUONERIE', null, null, E.card_suono, E.card_suono_fine, ARA, ALTO);
+  scheda('italert', 'Comincia con «IT-alert»', 'LA PRIMA PAROLA DEL TESTO', () => puntoSchermo(PAROLA.x + 30, PAROLA.y + PAROLA.h + 6),
+    { dx: 170, dy: 330 }, E.card_italert, E.s2_fine, ARA);
+  scheda('sito', 'protezionecivilegenzano.it', "GUARDA IL COLORE DELL'ALLERTA", null, null, E.card_sito, E.s4_fine, AZZ, ALTO);
+  scheda('test', 'TEST: è solo una prova', 'NON DEVI FARE NIENTE', () => puntoSchermo(PAROLA.x + 30, PAROLA.y + PAROLA.h + 6),
+    { dx: 170, dy: 330 }, E.card_test, E.card_test_fine, '#34b25a');
+  scheda('fine', 'protezionecivilegenzano.it', 'IN EMERGENZA CHIAMA IL 112', null, null, E.card_fine, TOTAL + 1, AZZ, ALTO);
+  const PROBLEMI_TEMPI = M3.controllaTempi(cam, SCH.map(s => ({ id: s.id, inizio: s.inizio, fine: s.fine })),
+    [{ id: 'telefono', t: E.telefono }].concat(E.m_arr.map((t, i) => ({ id: 'modellino-' + (i + 1), t: t + 0.001 }))));
+  PROBLEMI_TEMPI.forEach(p => console.warn('Controllo tempi:', p.chi.join(', '), '·', p.dettagli));
+
+  /* ================================================================ ETICHETTE (seguono il loro oggetto) =============
+     Nomi semplici sotto i modellini: restano anche mentre la telecamera passa piano da uno all'altro e svaniscono
+     quando l'oggetto esce dall'inquadratura. */
+  const ETI = [];
+  function etichetta(id, titolo, sotto, is, inizio, fine, colore) {
+    const e = document.createElement('div'); e.className = 'etichetta'; e.dataset.componente = 'etichetta-' + id; e.dataset.scatola = '1';
+    e.style.borderColor = colore || AZZ;
+    const b = document.createElement('b'); b.textContent = titolo; e.appendChild(b);
+    if (sotto) { const s = document.createElement('span'); s.textContent = sotto; e.appendChild(s); }
+    stage.appendChild(e);
+    ETI.push({ e, is, inizio, fine, w: 0, h: 0 });
+  }
+  const mEnd = S(4) - 0.4, pEnd = S(6) - 0.4;
+  etichetta('stabilimento', 'Stabilimento industriale', 'INCIDENTE', M[0], E.m_arr[0] + 0.3, mEnd);
+  etichetta('nucleare', 'Nucleare', 'INCIDENTE', M[1], E.m_arr[1] + 0.25, mEnd);
+  etichetta('diga', 'Grande diga', 'CROLLO', M[2], E.m_arr[2] + 0.25, mEnd);
+  etichetta('vulcani', 'Alcuni vulcani', 'ATTIVITÀ', M[3], E.m_arr[3] + 0.25, mEnd);
+  etichetta('colori', 'Verde, giallo, arancione, rosso', null, { x: CX, z: 0, r: 1.7 }, E.colori + 0.9, E.s4_fine, ARA);
+  etichetta('passo1', '1 · Fermati', null, PASSI[0], E.p1_eti, pEnd);
+  etichetta('passo2', '2 · Leggi tutto', 'IL MESSAGGIO', PASSI[1], E.p2_da + 0.3, pEnd);
+  etichetta('passo3', '3 · Segui le indicazioni', 'DELLE AUTORITÀ', PASSI[2], E.p3_a + 0.05, pEnd);
+  function aggiornaEtichette(t, az) {
+    const A = az * GR, M0 = L.margine, zs = L.zonaSchede;
+    for (const q of ETI) {
+      const v = fin(t, q.inizio, q.fine, 0.3, 0.25);
+      if (v <= 0.01) { q.e.style.opacity = '0'; continue; }
+      if (!q.w) { q.w = q.e.offsetWidth; q.h = q.e.offsetHeight; }
+      // punto davanti alla base, dalla parte della telecamera
+      const p = M3.proietta(V(q.is.x - Math.sin(A) * (q.is.r + 0.2), YS, q.is.z + Math.cos(A) * (q.is.r + 0.2)), camera, {});
+      const cx = p.x, cy = p.y + q.h / 2 + 12;
+      const fuori = Math.max(M0 + q.w / 2 - 40 - cx, cx - (W - M0 - q.w / 2 + 40), zs.alto + q.h / 2 - cy, cy - (zs.basso + 260), 0);
+      const op = p.davanti ? v * clamp(1 - fuori / 70) : 0;
+      const x = clamp(cx - q.w / 2, M0, W - M0 - q.w), y = clamp(cy - q.h / 2, zs.alto, zs.basso - q.h);
+      q.e.style.opacity = op.toFixed(3);
+      q.e.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
+    }
+  }
+
+  const fonte = document.getElementById('fonte'), titolo = document.getElementById('titolo');
+  fonte.style.fontFamily = IMP.ENTI[ente].font.testo;
+  const attribuzione = (datiRilievo.attribuzione || '').replace(' da EU-DEM', '\nda EU-DEM');
+  const testoTerre = (TERRE && TERRE.attribuzione) || 'Terre emerse: Natural Earth (pubblico dominio)';
+  const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
+  let tAttuale = 0, proiezioni = {};
+
+  /* ================================================================ ANIMAZIONE ====================================== */
+  const vibra = t => fin(t, E.avviso1, E.avviso1_fine, 0.15, 0.3) + fin(t, E.avviso2, E.avviso2_fine, 0.15, 0.3);
+  function anima(t, s) {
+    const rilievoVisibile = t < E.gru_fine + 0.05;
+    ril.gruppo.visible = rilievoVisibile;
+
+    /* --- telefono grande: posizione, scala, faccia verso la telecamera */
+    let pos, sc, compare = 1, posato = false;
+    const P0 = V(0, 3.0, 0), PH = V(ZX, YS, ZZ);
+    if (t < S(1)) { pos = P0; sc = 1; compare = prog(t, E.telefono, 0.45); }
+    else if (t < S(2)) { const u = liscia(prog(t, S(1), E.s1_arrivo - S(1))); pos = P0.clone().lerp(ATTERRA, u); sc = mix(1, 0.52, u); posato = u > 0.99; }
+    else if (t < S(4)) { const u = ease.morbida(prog(t, S(2), E.gru_fine - S(2))); pos = ATTERRA.clone().lerp(PH, u); sc = mix(0.52, 1.08, u); }
+    else { pos = POSA_TEL.clone(); sc = 1.15; compare = prog(t, E.p2_da - 0.1, 0.4); if (t >= S(6)) compare = 1; }
+    const vb = vibra(t);
+    telefono.visible = t >= E.telefono && compare > 0.001;
+    telefono.position.copy(pos);
+    if (!posato && t >= E.tuffo) telefono.position.y += 0.035 * sc * Math.sin(t * 1.5);
+    telefono.scale.setScalar(Math.max(0.001, sc * scatto(compare)));
+    telefono.rotation.set(0, -s.az * GR * 0.85 + 0.05 * Math.sin(t * 0.7), 0);
+    telCorpo.rotation.set(-0.07, 0, vb * 0.045 * Math.sin(t * 2 * Math.PI * 8.5));
+    telCorpo.position.x = vb * 0.03 * Math.sin(t * 2 * Math.PI * 11);
+    for (const o of onde) {
+      const f = (t * 1.25 - o.k / 3) % 1, ff = f < 0 ? f + 1 : f;
+      o.m.visible = vb > 0.02;
+      o.m.scale.setScalar(0.78 + 0.62 * ff);
+      o.m.material.opacity = vb * Math.sin(Math.PI * ff) * 0.95;
+    }
+    /* --- schermo */
+    let sch;
+    if (t < S(2)) sch = { testo: 'IT-alert', u: prog(t, E.avviso1, 0.4), righe: 5 * prog(t, E.avviso1 + 0.3, 0.8), leggi: 0, cerchia: 0 };
+    else if (t < S(4)) sch = { testo: 'IT-alert', u: t < E.avviso2 ? 1 - prog(t, S(2), 0.4) : prog(t, E.avviso2, 0.4),
+                               righe: t < E.avviso2 ? 5 : 5 * prog(t, E.righe_da, 1.3), leggi: 0,
+                               cerchia: fin(t, E.cerchia, E.s2_fine + 0.3, 0.3, 0.2) };
+    else if (t < S(6)) sch = { testo: 'IT-alert', u: 1 - prog(t, S(6) - 0.3, 0.25), righe: 5, leggi: prog(t, E.leggi_da, E.leggi_a - E.leggi_da + 0.6), cerchia: 0 };
+    else sch = { testo: 'TEST', u: prog(t, E.test_msg, 0.4), righe: 5 * prog(t, E.test_msg + 0.3, 0.8), leggi: 0,
+                 cerchia: fin(t, E.test_cerchia, E.n112_da, 0.3, 0.2) };
+    if (telefono.visible) disegnaSchermo(sch);
+
+    /* --- zona, onde, telefoni piccoli */
+    zona.visible = t >= S(1) && rilievoVisibile;
+    if (zona.visible) {
+      const vz = prog(t, E.onde - 0.3, 0.6);
+      zona.userData.disco.material.opacity = 0.2 * vz;
+      bordoZona.m.material.opacity = 0.95 * vz;
+      cresci(antenna, prog(t, S(1) + 0.9, 0.5));
+      ondeZona.forEach((o, k) => {
+        const tt = t - E.onde - k * PERIODO / 3, f = tt < 0 ? -1 : (tt % PERIODO) / PERIODO;
+        o.m.visible = f >= 0;
+        if (f >= 0) { const r = Math.max(0.12, RZ * f); o.raggio(Math.max(0.02, r - 0.1), r); o.m.material.opacity = 0.9 * (1 - f * f); }
+      });
+      for (const p of piccoli) {
+        cresci(p.g, prog(t, S(1) + 0.6 + 0.02 * (p.k % 30), 0.4));
+        const acceso = p.dentro ? prog(t, E.onde + p.d / VEL_ONDA, 0.3) : 0;
+        p.g.rotation.y = -s.az * GR;
+        p.sch.material.color.set(acceso > 0.5 ? 0xf3f6fa : 0x2a3550);
+        p.barra.visible = acceso > 0.5;
+        p.testa.scale.setScalar(1 + 0.35 * Math.sin(Math.PI * acceso));
+      }
+    }
+
+    /* --- modellini (scena 4) */
+    const vM = t > S(3) - 0.2 && t < S(4) + 1.2;
+    M.forEach((is, i) => { is.g.visible = vM; if (vM) { comparsa(is, t, E.m_largo + i * 0.1, E.m_arr[i]); is.sopra.rotation.y = 0.1 * Math.sin(t * 0.6 + i); } });
+    if (vM) for (const q of vapore) {
+      const f = ((t * 0.3 + q.k / 4) % 1);
+      q.m.position.set(q.x + 0.1 * Math.sin(q.k * 2.4 + t * 0.8) * f, q.y + f * 1.0, q.z);
+      q.m.scale.setScalar(0.5 + 1.1 * f);
+      q.m.material.opacity = (q.tinta ? 0.9 : 0.75) * Math.sin(Math.PI * Math.min(1, f * 1.15));
+    }
+
+    /* --- pannelli con il «no» e colori (scena 5) */
+    const vP = t > S(4) - 0.1 && t < S(5) + 1.2;
+    [[pan1, E.pan1, E.no1], [pan2, E.pan2, E.no2]].forEach(([p, ta, tn], i) => {
+      p.perno.visible = vP && t >= ta;
+      if (!p.perno.visible) return;
+      p.perno.rotation.x = -Math.PI / 2 * (1 - scatto(prog(t, ta, 0.5)));
+      p.perno.rotation.y = 0.05 * Math.sin(t * 0.9 + i * 2);
+      const un = prog(t, tn, 0.28);
+      p.no.visible = un > 0.001; p.no.scale.setScalar(mix(2.1, 1, ease.arriva(un)) * (1 + 0.03 * Math.sin(t * 2.2 + i)));
+    });
+    tavolaColori.visible = vP && t > E.col_da - 0.2;
+    if (tavolaColori.visible) blocchi.forEach((b, i) => {
+      const u = scatto(prog(t, E.colori + i * 0.26, 0.5)), respiro = 1 + 0.13 * Math.pow(Math.max(0, Math.sin(t * 2.1 - i * 1.15)), 2) * prog(t, E.colori + 1.6, 0.6);   // un'onda passa da un colore all'altro
+      b.perno.visible = u > 0.001; b.perno.scale.set(1, Math.max(0.001, u * respiro), 1);
+    });
+
+    /* --- tre passi (scena 6) e 112 (scena 7) */
+    const vS = t > S(5) - 0.2;
+    PASSI.forEach((is, i) => { is.g.visible = vS && t < E.n112_a + 0.4; });
+    if (vS) {
+      comparsa(PASSI[0], t, E.p1_arr, E.p1); comparsa(PASSI[1], t, E.p2_da - 0.2); comparsa(PASSI[2], t, E.p3_a - 0.1, E.p3_a);
+      const via = 1 - prog(t, S(6) + 0.05, 0.4);
+      if (via < 1) { cresci(PASSI[0].g, via); cresci(PASSI[2].g, via); }
+      PASSI[0].sopra.rotation.y = 14 * GR + 0.08 * Math.sin(t * 0.9); PASSI[2].sopra.rotation.y = -14 * GR + 0.08 * Math.sin(t * 0.8 + 1);
+      mano.scale.multiplyScalar(1 + 0.03 * Math.sin(t * 2.4));
+    }
+    isola112.g.visible = t > E.n112_da - 0.1;
+    if (isola112.g.visible) {
+      comparsa(isola112, t, E.n112_a - 0.3, E.n112_a - 0.05);
+      isola112.sopra.rotation.y = 0.16 * Math.sin((t - E.n112_a) * 0.7);
+      cifre.forEach((c, i) => { c.position.y = 0.05 * Math.sin(t * 1.6 - i * 0.8) * prog(t, E.n112_a + 0.8, 0.5); });
+    }
+  }
+
+  function render(t) {
+    t = clamp(t, 0, TOTAL); tAttuale = t;
+    const s = cam.applica(t);
+    const vg = opacitaGlobo(s.dist);
+    globo.aggiorna(camera, vg, t);
+    stelle.style.opacity = clamp((Math.log(s.dist) - Math.log(4000)) / (Math.log(15000) - Math.log(4000))).toFixed(3);
+    anima(t, s);
+    if (vg > 0.002) fondo.disegna(scenaFondo, camera); else fondo.pulisci();
+    vicino.disegna(scena, camera);
+
+    const k = sceneA(t), sc = SC[k], conRilievo = t < E.gru_fine + 0.05;
+    IMP.aggiorna(stato, t, { passoHUD: k + (k === 0 ? 1 : clamp((t - sc.inizio) / 0.4)), hud: CONFIG.hud[k], notaVisibile: true,
+                             nota: conRilievo ? CONFIG.notaRilievo : CONFIG.nota });
+    IMP.sottotitoli(stato, t, FRASI, { modo: CONFIG.modo });
+    proiezioni = {};
+    for (const c of SCH) {
+      let punto = null, vis = true, p = null;
+      if (c.punto) { p = M3.proietta(c.punto(), camera, { zona: L.zonaSchede, margine: L.margine }); punto = p.punto; vis = p.visibile; }
+      proiezioni[c.id] = p;
+      IMP.scheda(stato, t, { id: c.id, titolo: c.titolo, sotto: c.sotto, colore: c.colore, punto, verso: c.verso,
+        inizio: c.inizio, fine: c.fine, visibile: vis, centro: c.punto ? null : c.centro });
+    }
+    aggiornaEtichette(t, s.az);
+    // titolo: in alto nella zona delle animazioni, sopra il globo e poi sopra il telefono
+    const vt = fin(t, 0.3, S(1) - 0.35, 0.35, 0.3);
+    titolo.style.opacity = vt.toFixed(3);
+    titolo.style.transform = 'translate(' + ((W - titolo.offsetWidth) / 2).toFixed(1) + 'px,' + (L.zona.alto + 4) + 'px)';
+    // crediti: fonte dei contenuti e, finché si vedono, attribuzione di terre emerse e rilievo
+    const conFonte = t < E.gru_fine || t >= E.n112_a;
+    const testo = !conFonte ? '' : CONFIG.fonte + (vg > 0.5 ? '\n' + testoTerre : conRilievo ? '\n' + attribuzione : '');
+    if (fonte.textContent !== testo) fonte.textContent = testo;
+    fonte.style.display = testo ? '' : 'none';
+    fonte.style.left = L.margine + 'px';
+    fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
+  }
+
+  window.renderFrame = t => render(t);
+  window.__controlli = () => IMP.controlli(stato)
+    .concat(M3.controlliSchede(tAttuale, SCH.filter(c => c.punto).map(c => ({ id: c.id, inizio: c.inizio, fine: c.fine, proiezione: proiezioni[c.id], attivo: true }))))
+    .concat(PROBLEMI_TEMPI.filter(p => tAttuale >= p.inizio && tAttuale <= p.fine));
+  // le tele con le scritte si disegnano quando i font sono pronti
+  IMP.caricaFont().then(() => { creaPannelli(); creaMano(); scena.updateMatrixWorld(true); render(0); window.__ready = true; });
+})();
+</script>
+</body>
+</html>

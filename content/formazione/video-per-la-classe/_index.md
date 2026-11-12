@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-11-03"
+dataUltimaRevisione: "2026-11-12"
 ---
 
 Video brevi da proiettare in classe sulla LIM o con il proiettore. Hanno la voce e i sottotitoli già nel video, quindi si capiscono anche con l'audio basso. Sono in formato orizzontale 16:9: avviali e usa lo schermo intero del lettore.
@@ -109,6 +109,21 @@ Verde, giallo, arancione, rosso: i colori dell'allerta meteo. Ogni giorno la Reg
 </details>
 
 Per approfondire: [Allerte meteo](/allerte-meteo/).
+
+## Temporali e fulmini: come stare al sicuro
+
+**Durata:** 1 min 08 s · **Nel programma dell'anno:** Infanzia e primaria 1ª-2ª, gennaio-febbraio: «Pioggia, vento e temporale», «Il tempo che cambia»
+
+{{< video src="/video/2026-11-12-temporali-fulmini-video-16x9.mp4" poster="/video/2026-11-12-temporali-fulmini-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Temporali e fulmini: come stare al sicuro" >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Temporali e fulmini: come stare al sicuro. Un temporale si forma in fretta e lascia poco tempo per ripararsi. Prima di una gita o di una partita all'aperto, guarda le previsioni e l'allerta del giorno. Se il cielo si fa scuro, cambia programma. Se senti il tuono, anche lontano, il temporale è a pochi chilometri: sei già in pericolo. Raggiungi subito un luogo chiuso. Il riparo giusto è un edificio. Se non c'è, va bene l'automobile, con porte e finestrini chiusi. Tettoie, gazebo e balconi non riparano. Non ripararti sotto un albero: i fulmini colpiscono le cose alte e appuntite. Stai lontano da pali, tralicci, recinzioni di metallo e dall'acqua. In casa chiudi le finestre e stacca le spine di televisore e computer. Non usare il telefono fisso: il cellulare sì. Doccia e piatti, dopo il temporale. Aspetta 30 minuti dopo l'ultimo tuono, prima di tornare fuori. In emergenza chiama il 112.
+
+</details>
+
+Per approfondire: [Temporali intensi](/rischi-prevenzione/temporali-intensi/).
 
 ## Il kit di emergenza
 

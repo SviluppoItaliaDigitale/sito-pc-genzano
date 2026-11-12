@@ -1,0 +1,192 @@
+{
+ "durata": 71.8,
+ "voce": [
+  {
+   "file": "../../voce/it-alert/line_0.wav",
+   "inizio": 0.45
+  },
+  {
+   "file": "../../voce/it-alert/line_1.wav",
+   "inizio": 8.75
+  },
+  {
+   "file": "../../voce/it-alert/line_2.wav",
+   "inizio": 20.8
+  },
+  {
+   "file": "../../voce/it-alert/line_3.wav",
+   "inizio": 28.35
+  },
+  {
+   "file": "../../voce/it-alert/line_4.wav",
+   "inizio": 42.2
+  },
+  {
+   "file": "../../voce/it-alert/line_5.wav",
+   "inizio": 52.2
+  },
+  {
+   "file": "../../voce/it-alert/line_6.wav",
+   "inizio": 62.1
+  }
+ ],
+ "musica": [
+  {
+   "file": "../../.cache/suoni/voice-over-under.mp3",
+   "inizio": 0,
+   "fine": 71.8,
+   "da": 0,
+   "entrata": 1.5,
+   "uscita": 3.0
+  }
+ ],
+ "effetti": [
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 2.75
+  },
+  {
+   "file": "../../.cache/suoni/avviso.wav",
+   "tipo": "colpo",
+   "volume": 0,
+   "inizio": 5.75
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 9.15
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 13.1
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 14.15
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 17.65
+  },
+  {
+   "file": "../../.cache/suoni/avviso.wav",
+   "tipo": "colpo",
+   "volume": 0,
+   "inizio": 18.7
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 28.38
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 30.35
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 33.0
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 34.7
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 36.3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 42.0
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 43.25
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 44.65
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 45.52
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 47.2
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 51.7
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 52.6
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 55.7
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 61.65
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "tipo": "colpo",
+   "volume": -3,
+   "evento": 67.15
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 67.6
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "tipo": "colpo",
+   "volume": -2,
+   "evento": 69.0
+  }
+ ],
+ "crediti": [
+  "Musica: «Voice Over Under» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0 (creativecommons.org/licenses/by/4.0)"
+ ]
+}

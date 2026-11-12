@@ -1,7 +1,7 @@
 ---
 
 title: "Temporali Intensi"
-dataUltimaRevisione: "2026-10-24"
+dataUltimaRevisione: "2026-11-12"
 description: "Norme di comportamento in caso di temporali violenti, fulmini, grandine e piogge intense."
 tts: true
 weight: 5
@@ -18,6 +18,14 @@ I temporali intensi portano piogge forti, fulmini, grandine e raffiche di vento 
 {{< emergenza-ora >}}
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/fulmini-riparo-sicuro.svg" alt="Confronto: edificio solido e auto chiusa offrono riparo dai fulmini; un albero isolato, segnato con una croce, non è un riparo." caption="Riparati in un edificio solido o in un'automobile con tetto rigido e finestrini chiusi. Evita gli alberi isolati." >}}
+
+Dove ripararsi quando arriva un temporale, e che cosa evitare: lo mostriamo in un video in 3D di un minuto e mezzo sul rilievo dei Castelli Romani.
+
+{{< video src="/video/2026-11-12-temporali-fulmini-video-3d.mp4"
+          poster="/video/2026-11-12-temporali-fulmini-video-3d-poster.webp"
+          verticale="true"
+          titolo="Video in 3D con voce e sottotitoli: temporali e fulmini, come stare al sicuro"
+          caption="Temporali e fulmini: come stare al sicuro. Il rilievo è ricostruito dai dati altimetrici, con le altezze raddoppiate; nuvole, fulmini, case e oggetti sono schemi non in scala. Trascrizione, crediti e versione a disegni per i bambini nell'articolo [Temporali e fulmini: un video in 3D per sapere dove ripararsi](/comunicazioni/2026-11-12-temporali-fulmini-video-3d/). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## <i class="bi bi-lightning-charge-fill text-primary me-2" aria-hidden="true"></i>Fulmini in tempo reale {#fulmini-realtime}
 Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volontaria **Blitzortung / Lightning Maps**. Utile quando è in corso un temporale per capire dove si sta muovendo la cella e quanto è distante.
@@ -132,6 +140,7 @@ In emergenza chiama il numero 112, e segui solo le fonti ufficiali.
 - **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Allerte meteo](/allerte-meteo/) — bollettini e codici colore del Centro Funzionale Regione Lazio
 - [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — allagamenti lampo che i temporali possono innescare
+- [Temporali e fulmini: un video in 3D per sapere dove ripararsi](/comunicazioni/2026-11-12-temporali-fulmini-video-3d/) — dove ripararsi dai fulmini, con la versione a disegni per i bambini
 - [Pioggia forte e alluvioni: un video in 3D sui Castelli Romani](/comunicazioni/2026-10-24-pioggia-forte-alluvioni-video-3d/) — perché un temporale forte allaga le strade e che cosa fare
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/)
 

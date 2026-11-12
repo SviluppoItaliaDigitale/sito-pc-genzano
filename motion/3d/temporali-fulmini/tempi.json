@@ -1,0 +1,52 @@
+{
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 11.46,
+   "voce": 2.6
+  },
+  {
+   "inizio": 11.46,
+   "durata": 10.24,
+   "voce": 12.76
+  },
+  {
+   "inizio": 21.7,
+   "durata": 11.54,
+   "voce": 22.7
+  },
+  {
+   "inizio": 33.24,
+   "durata": 12.44,
+   "voce": 34.34
+  },
+  {
+   "inizio": 45.68,
+   "durata": 12.42,
+   "voce": 46.78
+  },
+  {
+   "inizio": 58.1,
+   "durata": 14.71,
+   "voce": 60.3
+  },
+  {
+   "inizio": 72.81,
+   "durata": 11.84,
+   "voce": 74.71
+  }
+ ],
+ "totale": 84.65,
+ "eventi": {
+  "tuffo": 1.5,
+  "lampo0": 8.27,
+  "lampo2": 22.0,
+  "tuono2": 22.81,
+  "zoom": 28.84,
+  "entra": 31.99,
+  "lampo4": 49.69,
+  "apre": 58.35,
+  "esce": 73.56,
+  "lampo6": 74.56
+ }
+}

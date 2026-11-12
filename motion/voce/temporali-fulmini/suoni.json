@@ -1,0 +1,109 @@
+{
+ "musica": {
+  "file": ".cache/suoni/light-thought-var-1.mp3",
+  "da": 0,
+  "credito": "Musica: «Light Thought var 1» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0 (creativecommons.org/licenses/by/4.0)",
+  "origine": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Light%20Thought%20var%201.mp3"
+ },
+ "effetti": [
+  {
+   "file": ".cache/suoni/tuono.wav",
+   "scena": 0,
+   "dopo": 0.0,
+   "tipo": "ambiente",
+   "durata": 4.5
+  },
+  {
+   "file": ".cache/suoni/pioggia-lunga.wav",
+   "scena": 0,
+   "dopo": 0.0,
+   "tipo": "ambiente",
+   "durata": 8.4,
+   "entrata": 0.5,
+   "uscita": 1.5
+  },
+  {
+   "file": ".cache/suoni/tuono.wav",
+   "scena": 2,
+   "dopo": 0.2,
+   "tipo": "ambiente",
+   "durata": 4.5
+  },
+  {
+   "file": ".cache/suoni/pioggia-lunga.wav",
+   "scena": 2,
+   "dopo": 0.0,
+   "tipo": "ambiente",
+   "durata": 31.0,
+   "entrata": 1.5,
+   "uscita": 2.5
+  },
+  {
+   "file": ".cache/suoni/tuono.wav",
+   "scena": 4,
+   "dopo": 4.5,
+   "tipo": "ambiente",
+   "durata": 4.5
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 3,
+   "dopo": 2.0,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 5,
+   "dopo": 2.0,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/pop.wav",
+   "scena": 6,
+   "dopo": 0.9,
+   "tipo": "colpo"
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 1,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 2,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 3,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 4,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 5,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  },
+  {
+   "file": ".cache/suoni/passaggio.wav",
+   "scena": 6,
+   "dopo": 0,
+   "tipo": "colpo",
+   "evento": true
+  }
+ ]
+}

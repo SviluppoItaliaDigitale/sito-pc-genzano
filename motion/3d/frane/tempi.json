@@ -1,0 +1,33 @@
+{
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 9.02
+  },
+  {
+   "inizio": 9.02,
+   "durata": 10.83
+  },
+  {
+   "inizio": 19.85,
+   "durata": 9.41
+  },
+  {
+   "inizio": 29.26,
+   "durata": 7.81
+  },
+  {
+   "inizio": 37.07,
+   "durata": 10.76
+  },
+  {
+   "inizio": 47.83,
+   "durata": 8.83
+  },
+  {
+   "inizio": 56.66,
+   "durata": 11.06
+  }
+ ],
+ "totale": 67.72
+}

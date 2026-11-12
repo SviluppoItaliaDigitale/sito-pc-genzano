@@ -1,0 +1,261 @@
+{
+ "durata": 84.65,
+ "voce": [
+  {
+   "file": "../../voce/temporali-fulmini/line_0.wav",
+   "inizio": 2.6
+  },
+  {
+   "file": "../../voce/temporali-fulmini/line_1.wav",
+   "inizio": 12.76
+  },
+  {
+   "file": "../../voce/temporali-fulmini/line_2.wav",
+   "inizio": 22.7
+  },
+  {
+   "file": "../../voce/temporali-fulmini/line_3.wav",
+   "inizio": 34.34
+  },
+  {
+   "file": "../../voce/temporali-fulmini/line_4.wav",
+   "inizio": 46.78
+  },
+  {
+   "file": "../../voce/temporali-fulmini/line_5.wav",
+   "inizio": 60.3
+  },
+  {
+   "file": "../../voce/temporali-fulmini/line_6.wav",
+   "inizio": 74.71
+  }
+ ],
+ "scene": [
+  {
+   "inizio": 0.0,
+   "durata": 11.46
+  },
+  {
+   "inizio": 11.46,
+   "durata": 10.24
+  },
+  {
+   "inizio": 21.7,
+   "durata": 11.54
+  },
+  {
+   "inizio": 33.24,
+   "durata": 12.44
+  },
+  {
+   "inizio": 45.68,
+   "durata": 12.42
+  },
+  {
+   "inizio": 58.1,
+   "durata": 14.71
+  },
+  {
+   "inizio": 72.81,
+   "durata": 11.84
+  }
+ ],
+ "musica": [
+  {
+   "file": "../../.cache/suoni/light-thought-var-1.mp3",
+   "inizio": 0,
+   "fine": 84.65,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 3.0
+  }
+ ],
+ "effetti": [
+  {
+   "file": "../../.cache/suoni/vento-lungo.wav",
+   "inizio": 0.0,
+   "fine": 8.77,
+   "tipo": "ambiente",
+   "entrata": 0.6,
+   "uscita": 1.5
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 1.5,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/tuono.wav",
+   "inizio": 8.27,
+   "fine": 12.77,
+   "tipo": "ambiente",
+   "entrata": 0.02,
+   "uscita": 1.2,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/pioggia-lunga.wav",
+   "inizio": 8.47,
+   "fine": 49.24,
+   "tipo": "ambiente",
+   "entrata": 1.5,
+   "uscita": 1.0
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 15.91,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 19.14,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/tuono.wav",
+   "inizio": 22.81,
+   "fine": 27.31,
+   "tipo": "ambiente",
+   "entrata": 0.02,
+   "uscita": 1.2,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 27.98,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 31.99,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 35.88,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 38.32,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 43.54,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 46.18,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "../../.cache/suoni/pioggia-lunga.wav",
+   "inizio": 48.24,
+   "fine": 76.76,
+   "tipo": "ambiente",
+   "entrata": 1.0,
+   "uscita": 3.0
+  },
+  {
+   "file": "../../.cache/suoni/tuono.wav",
+   "inizio": 49.69,
+   "fine": 54.19,
+   "tipo": "ambiente",
+   "entrata": 0.02,
+   "uscita": 1.2,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 53.16,
+   "tipo": "colpo",
+   "volume": -6
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 53.76,
+   "tipo": "colpo",
+   "volume": -6
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 54.43,
+   "tipo": "colpo",
+   "volume": -6
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 55.98,
+   "tipo": "colpo",
+   "volume": -6
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 58.85,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 61.81,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 63.76,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 66.36,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 69.18,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 73.56,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/tuono.wav",
+   "inizio": 74.56,
+   "fine": 79.06,
+   "tipo": "ambiente",
+   "entrata": 0.02,
+   "uscita": 1.2,
+   "volume": -6
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 75.26,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 80.2,
+   "tipo": "colpo",
+   "volume": -2
+  }
+ ]
+}

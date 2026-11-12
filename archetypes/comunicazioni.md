@@ -81,6 +81,8 @@ allegati: []
 # Per un articolo solo per il sito, senza materiale né post social (per
 # esempio un articolo d'archivio scritto dopo e datato al giorno
 # dell'evento), aggiungi: social: false
+# social_crediti: crediti dovuti per licenza di un video (musica, rilievo, voce di
+#   riserva), in una riga: escono in fondo ai post Instagram e Facebook.
 social_citazione: ""
 social_punti: []
 

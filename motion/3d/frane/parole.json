@@ -1,0 +1,780 @@
+[
+ {
+  "n": 0,
+  "file": "line_0.wav",
+  "durata": 6.072,
+  "testo": "Le frane: riconoscerle e mettersi al sicuro. Una frana è terra, fango o roccia che scivola lungo un pendio.",
+  "sentito": "le frane, i conoscerle e mettersi al sicuro, una frana eterva, fango roccia che scivola lungo un pendio.",
+  "parole": [
+   {
+    "w": "Le",
+    "t0": 0.0,
+    "t1": 0.16
+   },
+   {
+    "w": "frane:",
+    "t0": 0.16,
+    "t1": 0.54
+   },
+   {
+    "w": "riconoscerle",
+    "t0": 0.54,
+    "t1": 1.52
+   },
+   {
+    "w": "e",
+    "t0": 1.52,
+    "t1": 1.6
+   },
+   {
+    "w": "mettersi",
+    "t0": 1.6,
+    "t1": 2.04
+   },
+   {
+    "w": "al",
+    "t0": 2.04,
+    "t1": 2.12
+   },
+   {
+    "w": "sicuro.",
+    "t0": 2.12,
+    "t1": 2.56
+   },
+   {
+    "w": "Una",
+    "t0": 2.74,
+    "t1": 2.88
+   },
+   {
+    "w": "frana",
+    "t0": 2.88,
+    "t1": 3.16
+   },
+   {
+    "w": "è",
+    "t0": 3.16,
+    "t1": 3.347
+   },
+   {
+    "w": "terra,",
+    "t0": 3.347,
+    "t1": 4.0
+   },
+   {
+    "w": "fango",
+    "t0": 4.0,
+    "t1": 4.32
+   },
+   {
+    "w": "o",
+    "t0": 4.32,
+    "t1": 4.32
+   },
+   {
+    "w": "roccia",
+    "t0": 4.32,
+    "t1": 4.68
+   },
+   {
+    "w": "che",
+    "t0": 4.68,
+    "t1": 4.8
+   },
+   {
+    "w": "scivola",
+    "t0": 4.8,
+    "t1": 5.14
+   },
+   {
+    "w": "lungo",
+    "t0": 5.14,
+    "t1": 5.48
+   },
+   {
+    "w": "un",
+    "t0": 5.48,
+    "t1": 5.5
+   },
+   {
+    "w": "pendio.",
+    "t0": 5.5,
+    "t1": 5.9
+   }
+  ]
+ },
+ {
+  "n": 1,
+  "file": "line_1.wav",
+  "durata": 7.229,
+  "testo": "Succede soprattutto con piogge forti, o che durano a lungo. Anche a Genzano ci sono pendii ripidi, come quelli verso il lago di Nemi.",
+  "sentito": "succede soprattutto con piogge forti o che durano a lungo. Anche Agenzano ci sono pendìi ripidi, come quelli verso il Lago di Nemi.",
+  "parole": [
+   {
+    "w": "Succede",
+    "t0": 0.0,
+    "t1": 0.42
+   },
+   {
+    "w": "soprattutto",
+    "t0": 0.42,
+    "t1": 0.7
+   },
+   {
+    "w": "con",
+    "t0": 0.7,
+    "t1": 1.22
+   },
+   {
+    "w": "piogge",
+    "t0": 1.22,
+    "t1": 1.56
+   },
+   {
+    "w": "forti,",
+    "t0": 1.56,
+    "t1": 2.24
+   },
+   {
+    "w": "o",
+    "t0": 2.24,
+    "t1": 2.36
+   },
+   {
+    "w": "che",
+    "t0": 2.36,
+    "t1": 2.5
+   },
+   {
+    "w": "durano",
+    "t0": 2.5,
+    "t1": 2.82
+   },
+   {
+    "w": "a",
+    "t0": 2.82,
+    "t1": 2.9
+   },
+   {
+    "w": "lungo.",
+    "t0": 2.9,
+    "t1": 3.3
+   },
+   {
+    "w": "Anche",
+    "t0": 3.44,
+    "t1": 3.74
+   },
+   {
+    "w": "a",
+    "t0": 3.74,
+    "t1": 3.836
+   },
+   {
+    "w": "Genzano",
+    "t0": 3.836,
+    "t1": 4.22
+   },
+   {
+    "w": "ci",
+    "t0": 4.22,
+    "t1": 4.36
+   },
+   {
+    "w": "sono",
+    "t0": 4.36,
+    "t1": 4.56
+   },
+   {
+    "w": "pendii",
+    "t0": 4.56,
+    "t1": 4.9
+   },
+   {
+    "w": "ripidi,",
+    "t0": 4.9,
+    "t1": 5.28
+   },
+   {
+    "w": "come",
+    "t0": 5.6,
+    "t1": 5.84
+   },
+   {
+    "w": "quelli",
+    "t0": 5.84,
+    "t1": 6.1
+   },
+   {
+    "w": "verso",
+    "t0": 6.1,
+    "t1": 6.34
+   },
+   {
+    "w": "il",
+    "t0": 6.34,
+    "t1": 6.46
+   },
+   {
+    "w": "lago",
+    "t0": 6.46,
+    "t1": 6.62
+   },
+   {
+    "w": "di",
+    "t0": 6.62,
+    "t1": 6.74
+   },
+   {
+    "w": "Nemi.",
+    "t0": 6.74,
+    "t1": 7.08
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "file": "line_2.wav",
+  "durata": 7.358,
+  "testo": "I segnali: crepe nel terreno o nei muri, alberi e pali che si inclinano, piccoli smottamenti. Se li noti, avvisa il Comune.",
+  "sentito": "i segnali, clepe nel terreno o nei muri, alberi e pali che sinchinano, piccoli smottamenti. Se li noti, avvisa il comune.",
+  "parole": [
+   {
+    "w": "I",
+    "t0": 0.0,
+    "t1": 0.12
+   },
+   {
+    "w": "segnali:",
+    "t0": 0.12,
+    "t1": 0.82
+   },
+   {
+    "w": "crepe",
+    "t0": 0.82,
+    "t1": 1.28
+   },
+   {
+    "w": "nel",
+    "t0": 1.28,
+    "t1": 1.46
+   },
+   {
+    "w": "terreno",
+    "t0": 1.46,
+    "t1": 1.88
+   },
+   {
+    "w": "o",
+    "t0": 1.88,
+    "t1": 1.96
+   },
+   {
+    "w": "nei",
+    "t0": 1.96,
+    "t1": 2.06
+   },
+   {
+    "w": "muri,",
+    "t0": 2.06,
+    "t1": 2.44
+   },
+   {
+    "w": "alberi",
+    "t0": 2.66,
+    "t1": 3.02
+   },
+   {
+    "w": "e",
+    "t0": 3.02,
+    "t1": 3.06
+   },
+   {
+    "w": "pali",
+    "t0": 3.06,
+    "t1": 3.34
+   },
+   {
+    "w": "che",
+    "t0": 3.34,
+    "t1": 3.42
+   },
+   {
+    "w": "si",
+    "t0": 3.42,
+    "t1": 3.609
+   },
+   {
+    "w": "inclinano,",
+    "t0": 3.609,
+    "t1": 4.3
+   },
+   {
+    "w": "piccoli",
+    "t0": 4.3,
+    "t1": 4.7
+   },
+   {
+    "w": "smottamenti.",
+    "t0": 4.7,
+    "t1": 5.4
+   },
+   {
+    "w": "Se",
+    "t0": 5.52,
+    "t1": 5.66
+   },
+   {
+    "w": "li",
+    "t0": 5.66,
+    "t1": 5.78
+   },
+   {
+    "w": "noti,",
+    "t0": 5.78,
+    "t1": 6.24
+   },
+   {
+    "w": "avvisa",
+    "t0": 6.36,
+    "t1": 6.7
+   },
+   {
+    "w": "il",
+    "t0": 6.7,
+    "t1": 6.78
+   },
+   {
+    "w": "Comune.",
+    "t0": 6.78,
+    "t1": 7.16
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "file": "line_3.wav",
+  "durata": 5.41,
+  "testo": "Nessun muro e nessuna casa possono fermare una frana. Se la terra si muove, allontanati subito.",
+  "sentito": "Mesù un muro e nessuna casa possono fermare una frana, se la terra si muove, allontanati subito.",
+  "parole": [
+   {
+    "w": "Nessun",
+    "t0": 0.0,
+    "t1": 0.4
+   },
+   {
+    "w": "muro",
+    "t0": 0.4,
+    "t1": 0.68
+   },
+   {
+    "w": "e",
+    "t0": 0.68,
+    "t1": 0.9
+   },
+   {
+    "w": "nessuna",
+    "t0": 0.9,
+    "t1": 1.28
+   },
+   {
+    "w": "casa",
+    "t0": 1.28,
+    "t1": 1.54
+   },
+   {
+    "w": "possono",
+    "t0": 1.54,
+    "t1": 1.88
+   },
+   {
+    "w": "fermare",
+    "t0": 1.88,
+    "t1": 2.34
+   },
+   {
+    "w": "una",
+    "t0": 2.34,
+    "t1": 2.46
+   },
+   {
+    "w": "frana.",
+    "t0": 2.46,
+    "t1": 2.84
+   },
+   {
+    "w": "Se",
+    "t0": 3.1,
+    "t1": 3.22
+   },
+   {
+    "w": "la",
+    "t0": 3.22,
+    "t1": 3.34
+   },
+   {
+    "w": "terra",
+    "t0": 3.34,
+    "t1": 3.54
+   },
+   {
+    "w": "si",
+    "t0": 3.54,
+    "t1": 3.72
+   },
+   {
+    "w": "muove,",
+    "t0": 3.72,
+    "t1": 4.08
+   },
+   {
+    "w": "allontanati",
+    "t0": 4.28,
+    "t1": 4.82
+   },
+   {
+    "w": "subito.",
+    "t0": 4.82,
+    "t1": 5.24
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "file": "line_4.wav",
+  "durata": 7.86,
+  "testo": "Se la frana viene verso di te, spostati di lato, fuori dal suo percorso, verso un punto più alto e stabile. Non fermarti sotto alberi e pali.",
+  "sentito": "Se la frana viene verso di te, spostati di lato, fuori dal suo percorso, verso un punto più altrestabile. Non fermarti sotto alberi e pali.",
+  "parole": [
+   {
+    "w": "Se",
+    "t0": 0.0,
+    "t1": 0.16
+   },
+   {
+    "w": "la",
+    "t0": 0.16,
+    "t1": 0.26
+   },
+   {
+    "w": "frana",
+    "t0": 0.26,
+    "t1": 0.48
+   },
+   {
+    "w": "viene",
+    "t0": 0.48,
+    "t1": 0.66
+   },
+   {
+    "w": "verso",
+    "t0": 0.66,
+    "t1": 0.96
+   },
+   {
+    "w": "di",
+    "t0": 0.96,
+    "t1": 1.16
+   },
+   {
+    "w": "te,",
+    "t0": 1.16,
+    "t1": 1.3
+   },
+   {
+    "w": "spostati",
+    "t0": 1.62,
+    "t1": 2.1
+   },
+   {
+    "w": "di",
+    "t0": 2.1,
+    "t1": 2.22
+   },
+   {
+    "w": "lato,",
+    "t0": 2.22,
+    "t1": 2.6
+   },
+   {
+    "w": "fuori",
+    "t0": 2.82,
+    "t1": 3.08
+   },
+   {
+    "w": "dal",
+    "t0": 3.08,
+    "t1": 3.2
+   },
+   {
+    "w": "suo",
+    "t0": 3.2,
+    "t1": 3.36
+   },
+   {
+    "w": "percorso,",
+    "t0": 3.36,
+    "t1": 3.94
+   },
+   {
+    "w": "verso",
+    "t0": 4.22,
+    "t1": 4.46
+   },
+   {
+    "w": "un",
+    "t0": 4.46,
+    "t1": 4.64
+   },
+   {
+    "w": "punto",
+    "t0": 4.64,
+    "t1": 4.86
+   },
+   {
+    "w": "più",
+    "t0": 4.86,
+    "t1": 5.06
+   },
+   {
+    "w": "alto",
+    "t0": 5.06,
+    "t1": 5.391
+   },
+   {
+    "w": "e",
+    "t0": 5.391,
+    "t1": 5.524
+   },
+   {
+    "w": "stabile.",
+    "t0": 5.524,
+    "t1": 6.12
+   },
+   {
+    "w": "Non",
+    "t0": 6.12,
+    "t1": 6.28
+   },
+   {
+    "w": "fermarti",
+    "t0": 6.28,
+    "t1": 6.68
+   },
+   {
+    "w": "sotto",
+    "t0": 6.68,
+    "t1": 6.9
+   },
+   {
+    "w": "alberi",
+    "t0": 6.9,
+    "t1": 7.32
+   },
+   {
+    "w": "e",
+    "t0": 7.32,
+    "t1": 7.4
+   },
+   {
+    "w": "pali.",
+    "t0": 7.4,
+    "t1": 7.74
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "file": "line_5.wav",
+  "durata": 6.58,
+  "testo": "Se non riesci a scappare, rannicchiati e proteggi la testa. Non avvicinarti al bordo della frana: può cedere ancora.",
+  "sentito": "Se non riesci a scappare, brandicchiati, reprateggi la testa, non avvicinarti a bordo della frana. Poccedere ancora.",
+  "parole": [
+   {
+    "w": "Se",
+    "t0": 0.0,
+    "t1": 0.18
+   },
+   {
+    "w": "non",
+    "t0": 0.18,
+    "t1": 0.3
+   },
+   {
+    "w": "riesci",
+    "t0": 0.3,
+    "t1": 0.6
+   },
+   {
+    "w": "a",
+    "t0": 0.6,
+    "t1": 0.68
+   },
+   {
+    "w": "scappare,",
+    "t0": 0.68,
+    "t1": 1.18
+   },
+   {
+    "w": "rannicchiati",
+    "t0": 1.18,
+    "t1": 2.036
+   },
+   {
+    "w": "e",
+    "t0": 2.036,
+    "t1": 2.167
+   },
+   {
+    "w": "proteggi",
+    "t0": 2.167,
+    "t1": 2.76
+   },
+   {
+    "w": "la",
+    "t0": 2.76,
+    "t1": 2.86
+   },
+   {
+    "w": "testa.",
+    "t0": 2.86,
+    "t1": 3.3
+   },
+   {
+    "w": "Non",
+    "t0": 3.48,
+    "t1": 3.56
+   },
+   {
+    "w": "avvicinarti",
+    "t0": 3.56,
+    "t1": 4.16
+   },
+   {
+    "w": "al",
+    "t0": 4.16,
+    "t1": 4.26
+   },
+   {
+    "w": "bordo",
+    "t0": 4.26,
+    "t1": 4.52
+   },
+   {
+    "w": "della",
+    "t0": 4.52,
+    "t1": 4.68
+   },
+   {
+    "w": "frana:",
+    "t0": 4.68,
+    "t1": 5.06
+   },
+   {
+    "w": "può",
+    "t0": 5.06,
+    "t1": 5.387
+   },
+   {
+    "w": "cedere",
+    "t0": 5.387,
+    "t1": 5.96
+   },
+   {
+    "w": "ancora.",
+    "t0": 5.96,
+    "t1": 6.18
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "file": "line_6.wav",
+  "durata": 5.906,
+  "testo": "Se trovi una frana sulla strada, fermati lontano, avvisa chi sta arrivando e chiama il 112.",
+  "sentito": "Se trovi una frana sulla strada, fermati lontano, avvisa chi sta arrivando e chiama il 112.",
+  "parole": [
+   {
+    "w": "Se",
+    "t0": 0.0,
+    "t1": 0.18
+   },
+   {
+    "w": "trovi",
+    "t0": 0.18,
+    "t1": 0.48
+   },
+   {
+    "w": "una",
+    "t0": 0.48,
+    "t1": 0.6
+   },
+   {
+    "w": "frana",
+    "t0": 0.6,
+    "t1": 0.86
+   },
+   {
+    "w": "sulla",
+    "t0": 0.86,
+    "t1": 1.0
+   },
+   {
+    "w": "strada,",
+    "t0": 1.0,
+    "t1": 1.54
+   },
+   {
+    "w": "fermati",
+    "t0": 1.88,
+    "t1": 2.32
+   },
+   {
+    "w": "lontano,",
+    "t0": 2.32,
+    "t1": 2.82
+   },
+   {
+    "w": "avvisa",
+    "t0": 3.16,
+    "t1": 3.52
+   },
+   {
+    "w": "chi",
+    "t0": 3.52,
+    "t1": 3.64
+   },
+   {
+    "w": "sta",
+    "t0": 3.64,
+    "t1": 3.82
+   },
+   {
+    "w": "arrivando",
+    "t0": 3.82,
+    "t1": 4.28
+   },
+   {
+    "w": "e",
+    "t0": 4.28,
+    "t1": 4.72
+   },
+   {
+    "w": "chiama",
+    "t0": 4.72,
+    "t1": 4.94
+   },
+   {
+    "w": "il",
+    "t0": 4.94,
+    "t1": 5.04
+   },
+   {
+    "w": "112.",
+    "t0": 5.04,
+    "t1": 5.3
+   }
+  ]
+ }
+]

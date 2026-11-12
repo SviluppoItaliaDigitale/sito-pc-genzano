@@ -1,0 +1,272 @@
+{
+ "durata": 69.1,
+ "voce": [
+  {
+   "file": "../../voce/vento-forte/line_0.wav",
+   "inizio": 1.5
+  },
+  {
+   "file": "../../voce/vento-forte/line_1.wav",
+   "inizio": 9.26
+  },
+  {
+   "file": "../../voce/vento-forte/line_2.wav",
+   "inizio": 18.71
+  },
+  {
+   "file": "../../voce/vento-forte/line_3.wav",
+   "inizio": 27.15
+  },
+  {
+   "file": "../../voce/vento-forte/line_4.wav",
+   "inizio": 36.2
+  },
+  {
+   "file": "../../voce/vento-forte/line_5.wav",
+   "inizio": 48.69
+  },
+  {
+   "file": "../../voce/vento-forte/line_6.wav",
+   "inizio": 58.4
+  }
+ ],
+ "musica": [
+  {
+   "file": "../../.cache/suoni/easy-lemon.mp3",
+   "inizio": 0,
+   "fine": 69.1,
+   "da": 0,
+   "entrata": 1.2,
+   "uscita": 3.0
+  }
+ ],
+ "effetti": [
+  {
+   "file": "../../.cache/suoni/vento-lungo.wav",
+   "inizio": 0,
+   "fine": 9.21,
+   "da": 0,
+   "tipo": "ambiente",
+   "entrata": 0.6,
+   "uscita": 1.2,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/vento-lungo.wav",
+   "inizio": 13.34,
+   "fine": 18.01,
+   "da": 13.34,
+   "tipo": "ambiente",
+   "entrata": 0.6,
+   "uscita": 1.2,
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/vento-lungo.wav",
+   "inizio": 26.9,
+   "fine": 48.14,
+   "da": 26.9,
+   "tipo": "ambiente",
+   "entrata": 0.6,
+   "uscita": 1.2,
+   "volume": 0
+  },
+  {
+   "file": "../../.cache/suoni/vento-lungo.wav",
+   "inizio": 48.24,
+   "fine": 57.65,
+   "da": 18.24,
+   "tipo": "ambiente",
+   "entrata": 0.6,
+   "uscita": 1.2,
+   "volume": -2
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 3.3,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 9.61,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 18.06,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 21.31,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 27.45,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 36.5,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 42.4,
+   "tipo": "colpo",
+   "volume": -3
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 48.29,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 52.54,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "../../.cache/suoni/passaggio.wav",
+   "evento": 58.45,
+   "tipo": "colpo",
+   "volume": -5
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 4.72,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 12.13,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 12.91,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 15.23,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 18.71,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 22.11,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 24.96,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 28.81,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 31.05,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 32.07,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 37.13,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 43.13,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 44.0,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 44.72,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 49.19,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 54.66,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 55.16,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 59.47,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 61.62,
+   "tipo": "colpo",
+   "volume": -4
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 63.72,
+   "tipo": "colpo",
+   "volume": -2
+  },
+  {
+   "file": "../../.cache/suoni/pop.wav",
+   "evento": 65.37,
+   "tipo": "colpo",
+   "volume": -4
+  }
+ ],
+ "crediti": "Musica: «Easy Lemon» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0 (creativecommons.org/licenses/by/4.0)"
+}
