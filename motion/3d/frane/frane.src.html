@@ -20,7 +20,7 @@
   #livello-scena { z-index: 2; }
   #velo { position: absolute; left: 0; top: 0; z-index: 3; background: #0a1220; opacity: 0; pointer-events: none; }
   .sovra { position: absolute; z-index: 30; font-family: 'Titillium Web', sans-serif; color: #eef2f7; pointer-events: none; }
-  #fonte { font-weight: 400; font-size: 17px; line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: pre;
+  #fonte { font-weight: 400; font-size: 22px; line-height: 1.3; color: rgba(238, 242, 247, .86); white-space: nowrap;
            padding: 5px 12px; border-radius: 10px; background: rgba(10, 18, 32, .62); text-shadow: 0 1px 3px rgba(0, 0, 0, .8); }
   #titolo { left: 96px; width: 888px; box-sizing: border-box; padding: 26px 34px 30px; border-radius: 18px;
             background: rgba(10, 18, 32, .78); border-left: 10px solid #f59e0b; }
@@ -103,8 +103,8 @@ SOTT.forEach(f => {
 (function () {
   'use strict';
   const M3 = window.Motore3D, IMP = window.IMP, THREE = window.THREE;
-  const formato = CONFIG.formato, ente = CONFIG.ente;
-  const L = IMP.layout(formato), W = L.W, H = L.H;
+  const formato = new URLSearchParams(location.search).get('formato') || CONFIG.formato, ente = CONFIG.ente;
+  const L = IMP.layout(formato), W = L.W, H = L.H, ORIZ = formato === 'orizzontale';
   const SC = TEMPI.scene, TOTAL = TEMPI.totale || SC[SC.length - 1].inizio + SC[SC.length - 1].durata;
   const S = i => SC[i].inizio, D = i => SC[i].durata, E = i => SC[i].inizio + SC[i].durata;
   window.TOTAL = TOTAL; window.STAGE_W = W; window.STAGE_H = H;
@@ -145,7 +145,7 @@ SOTT.forEach(f => {
   T.rann = parola(5, 'rannicchiati'); T.proteggi = parola(5, 'proteggi'); T.non6 = parola(5, 'Non', 1); T.cedere = parola(5, 'cedere');
   T.cut6 = T.non6 - .25;
   T.fermati = parola(6, 'fermati'); T.avvisa7 = parola(6, 'avvisa'); T.chiama = parola(6, 'chiama');
-  T.carta = T.chiama + .2; T.sito = T.carta + 1.9;
+  T.carta = parola(6, '112') + .35; T.sito = T.carta + 1.7;
   const SELVA = t => t < S(2);                      // prima parte: versante senza strada né case
   const inRilievo = t => t < T.cut1 || (t >= T.cut2 && t < S(2));
 
@@ -437,10 +437,10 @@ SOTT.forEach(f => {
     root.add(ombra(.36 * s, .36 * s));
     /* posa: c = rannicchiato (0 in piedi, 1 a terra), cop = braccia sulla testa, passo = fase del cammino (0 fermo) */
     function posa(c, cop, passo) {
-      anche.position.y = mix(LL, .3 * s, c);
-      busto.rotation.x = mix(0, 1.2, c);
-      gambe.forEach((g, i) => { const sw = passo ? Math.sin(passo + i * Math.PI) * .5 : 0; g.rotation.x = mix(sw, -1.15, c); g.scale.y = mix(1, .55, c); });
-      braccia.forEach((b, i) => { const sw = passo ? -Math.sin(passo + i * Math.PI) * .4 : 0; b.rotation.set(mix(sw, -2.75, cop), 0, mix(0, (i ? -1 : 1) * .38, cop)); });
+      anche.position.y = mix(LL, .1 * s, c);
+      busto.rotation.x = mix(0, .9, c);
+      gambe.forEach((g, i) => { const sw = passo ? Math.sin(passo + i * Math.PI) * .5 : 0; g.rotation.x = mix(sw, -1.5, c); g.scale.y = mix(1, .55, c); });
+      braccia.forEach((b, i) => { const sw = passo ? -Math.sin(passo + i * Math.PI) * .4 : 0; b.rotation.set(mix(sw, -2.95, cop), 0, mix(0, (i ? -1 : 1) * .6, cop)); b.scale.y = mix(1, .62, cop); });
     }
     posa(0, 0, 0);
     return { root, posa, testa: () => testa.getWorldPosition(V(0, 0, 0)) };
@@ -534,7 +534,7 @@ SOTT.forEach(f => {
   ], { rilievo: ril });
   // plastico (m)
   const KP = [];
-  const chiave = (t, b, az, el, r, extra = {}) => KP.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(r), fov: 32 }, extra));
+  const chiave = (t, b, az, el, r, extra = {}) => KP.push(Object.assign({ t, bersaglio: b, az, el, dist: ins(ORIZ ? r * .85 : r), fov: 32 }, extra));
   const VISTE = {
     pendio: [[-4, 6.5, -1.5], -22, 24, 19],
     fianco: [[1, 3.5, -1], -66, 15, 20],
@@ -556,7 +556,7 @@ SOTT.forEach(f => {
   chiave(S(3) + 1.2, [2, 2.4, 11], -30, 13, 8, { passa: true });                    // carrellata lungo il muro
   chiave(T.allont - .3, [-5.5, 2.4, 12], -30, 13, 8); chiave(S(4), [-5.5, 2.4, 12], -30, 13, 8);
   vista(S(4) + 1.95, 'alto'); vista(T.giro5, 'alto'); vista(S(5), 'alto2');
-  vista(S(5) + .001, 'pedana'); vista(T.cut6, 'pedana');
+  chiave(S(5) + .001, [0, 1.0, 60], -16, 14, 2.9); vista(T.rann - .45, 'pedana'); vista(T.cut6, 'pedana');   // lento avvicinamento, poi ferma
   chiave(T.cut6 + .001, [-4.6, 12.4, -12.2], -40, 26, 9.4); vista(T.cut6 + 1.0, 'ciglio2'); vista(S(6), 'ciglio2');
   vista(S(6) + 1.5, 'strada'); vista(T.carta - .35, 'strada'); vista(TOTAL, 'fine');
   const camP = M3.telecamera(camera, KP, {});
@@ -567,14 +567,14 @@ SOTT.forEach(f => {
   /* ================================================================ SCHEDE */
   const SCH = [];
   const scheda = (id, titolo, sotto, punto, verso, inizio, fine, colore) => SCH.push({ id, titolo, sotto, punto, verso, inizio, fine, colore });
-  const vs = (dx, dy) => ({ dx, dy });
+  const vs = (dx, dy) => ORIZ ? { dx: dx * 1.5, dy: dy * .62 } : { dx, dy };
   const ROSSO = '#ef4136', AMBRA = '#f59e0b', VERDE = '#22a04b';
   const terra = (x, z, su = 0) => V(x, quotaT(x, z) + su, z);
   scheda('frana', 'Terra, fango o roccia', 'CHE SCIVOLA LUNGO UN PENDIO', () => terra(-5, 1, .4), vs(170, -330), parola(0, 'terra') - .2, T.giro0 - .3, AMBRA);
   scheda('piogge', 'Piogge forti', 'O CHE DURANO A LUNGO', () => V(XT, h0(XT, -4) - 1.1, -4), vs(40, -330), parola(1, 'piogge') - .15, T.cut2 - .3);
   scheda('crepeT', 'Crepe nel terreno', null, () => terra(-3.2, -12.6, .1), vs(150, 250), T.crepe + .1, T.muri - .5, AMBRA);
   scheda('crepeM', 'Crepe nei muri', null, () => V(-4.6, 1.2, 10.3), vs(230, 250), T.muri + .25, T.smott - .05, AMBRA);
-  scheda('inclina', 'Alberi e pali inclinati', null, () => paloSegno.localToWorld(V(0, 5.4, 0)), vs(-60, -230), T.alberi + .45, T.smott - .05, AMBRA);
+  scheda('inclina', 'Alberi e pali inclinati', null, () => paloSegno.localToWorld(V(0, 5.4, 0)), ORIZ ? { dx: -330, dy: -120 } : vs(-60, -230), T.alberi + .45, T.smott - .05, AMBRA);
   scheda('smott', 'Piccoli smottamenti', null, () => terra(-9.3, -1.2, .2), vs(170, 250), T.smott + .75, T.avvisa + 1.1, AMBRA);
   scheda('comune', 'Avvisa il Comune', 'SE NOTI QUESTI SEGNALI', null, null, T.avvisa - .1, E(2) - .4, VERDE);
   scheda('via', 'Allontanati subito', 'SE LA TERRA SI MUOVE', () => persB.testa(), vs(-150, -260), T.allont + .05, E(3) - .4, VERDE);
@@ -602,7 +602,8 @@ SOTT.forEach(f => {
   const chiusura = document.getElementById('chiusura'), sito = document.getElementById('sito');
   const luoghi = ['genzano', 'nemi'].map(k => ({ k, e: document.getElementById('l-' + k), p: document.getElementById('p-' + k), da: T[k],
     pos: ril.sopra(CONFIG.etichette[k].lat, CONFIG.etichette[k].lon, 25) }));
-  const attribuzione = ((RILIEVO && RILIEVO.attribuzione) || '').replace(' da EU-DEM', '\nda EU-DEM');
+  titolo.style.left = L.margine + 'px'; chiusura.style.left = sito.style.left = ((W - 888) / 2) + 'px';
+  if (ORIZ) chiusura.querySelector('b').style.fontSize = '230px';
   const sceneA = t => { let k = 0; SC.forEach((s, i) => { if (t >= s.inizio) k = i; }); return k; };
   let tAttuale = 0, proiezioni = {};
   const comparsa = (o, t, t0, dur = .4) => { const u = clamp(prog(t, t0, dur)); o.visible = u > 0; o.scale.setScalar(Math.max(.001, ease.morbida(u) * (1 + .12 * Math.sin(u * Math.PI)))); };
@@ -705,11 +706,11 @@ SOTT.forEach(f => {
       if (s.punto && attiva) { p = M3.proietta(s.punto(), camera, { zona: L.zonaSchede, margine: L.margine }); punto = p.punto; vis = p.visibile; }
       proiezioni[s.id] = p;
       IMP.scheda(stato, t, { id: s.id, titolo: s.titolo, sotto: s.sotto, colore: s.colore, punto, verso: s.verso,
-        inizio: s.inizio, fine: s.fine, visibile: vis, centro: s.punto ? null : { x: W / 2, y: L.zona.alto + 150 } });
+        inizio: s.inizio, fine: s.fine, visibile: vis, centro: s.punto ? null : { x: W / 2, y: L.zona.alto + (ORIZ ? 120 : 150) } });
     }
     // titolo, nomi dei luoghi, cartello finale
     const vt = fin(t, .3, T.cut1 - .05, .45, .2);
-    titolo.style.opacity = vt.toFixed(3); titolo.style.top = (L.zona.alto + 70 + 30 * (1 - ease.outCubic(prog(t, .3, .5)))) + 'px';
+    titolo.style.opacity = vt.toFixed(3); titolo.style.top = (L.zonaSchede.alto + (ORIZ ? 36 : 70) + 30 * (1 - ease.outCubic(prog(t, .3, .5)))) + 'px';
     for (const l of luoghi) {
       const v = R ? fin(t, l.da, S(2) - .05, .35, .2) : 0;
       const p = v > 0 ? M3.proietta(l.pos, camera, { zona: L.zona, margine: L.margine + 110 }) : null, ok = p && p.visibile ? v : 0;
@@ -718,11 +719,11 @@ SOTT.forEach(f => {
     }
     const vc = fin(t, T.carta, TOTAL + 1, .4, .2);
     velo.style.opacity = (.74 * liscia(prog(t, T.carta - .3, .6))).toFixed(3);
-    chiusura.style.opacity = vc.toFixed(3); chiusura.style.top = (L.zona.alto + 130 + 26 * (1 - ease.outCubic(prog(t, T.carta, .5)))) + 'px';
-    sito.style.opacity = fin(t, T.sito, TOTAL + 1, .4, .2).toFixed(3); sito.style.top = (L.zona.alto + 690) + 'px';
-    const testo = R ? attribuzione : (t >= T.carta - .3 ? CONFIG.fonte : '');
+    chiusura.style.opacity = vc.toFixed(3); chiusura.style.top = (L.zona.alto + (ORIZ ? 66 : 130) + 26 * (1 - ease.outCubic(prog(t, T.carta, .5)))) + 'px';
+    sito.style.opacity = fin(t, T.sito, TOTAL + 1, .4, .2).toFixed(3); sito.style.top = (L.zona.alto + (ORIZ ? 520 : 690)) + 'px';
+    const testo = t >= T.carta - .3 ? CONFIG.fonte : '';       // dentro il video solo la fonte, su una riga
     if (fonte.textContent !== testo) fonte.textContent = testo;
-    fonte.style.display = testo ? '' : 'none'; fonte.style.fontSize = R ? '17px' : '22px';
+    fonte.style.display = testo ? '' : 'none';
     fonte.style.left = L.margine + 'px';
     fonte.style.top = (L.zona.basso - fonte.offsetHeight - 6) + 'px';
   }

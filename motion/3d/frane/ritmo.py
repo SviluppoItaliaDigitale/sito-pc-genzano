@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 qui = Path(__file__).resolve().parent
 PRIMA = [0.45, 0.45, 0.60, 0.45, 0.45, 1.00, 0.80]      # attesa prima della voce in ogni scena
-EXTRA = [1.75, 2.40, 0.70, 1.20, 1.70, 0.50, 3.60]      # secondi in più per telecamera e chiusura
+EXTRA = [1.20, 1.20, 0.70, 1.20, 1.70, 0.50, 3.60]      # secondi in più per telecamera e chiusura
 DOPO = 0.75
 VOCE = '../../voce/frane/'
 par = json.load(open(qui / 'parole.json'))

@@ -95,6 +95,21 @@ Quando piove forte: come stare al sicuro dall'acqua. Con la pioggia forte, l'acq
 
 Per approfondire: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
+## Le frane: riconoscerle e mettersi al sicuro
+
+**Durata:** 1 min 01 s · **Nel programma dell'anno:** Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»
+
+{{< video src="/video/2026-11-12-frane-video-16x9.mp4" poster="/video/2026-11-12-frane-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Le frane: riconoscerle e mettersi al sicuro" >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Le frane: riconoscerle e mettersi al sicuro. Una frana è terra, fango o roccia che scivola lungo un pendio. Succede soprattutto con piogge forti, o che durano a lungo. Anche a Genzano ci sono pendii ripidi, come quelli verso il lago di Nemi. I segnali: crepe nel terreno o nei muri, alberi e pali che si inclinano, piccoli smottamenti. Se li noti, avvisa il Comune. Nessun muro e nessuna casa possono fermare una frana. Se la terra si muove, allontanati subito. Se la frana viene verso di te, spostati di lato, fuori dal suo percorso, verso un punto più alto e stabile. Non fermarti sotto alberi e pali. Se non riesci a scappare, rannicchiati e proteggi la testa. Non avvicinarti al bordo della frana: può cedere ancora. Se trovi una frana sulla strada, fermati lontano, avvisa chi sta arrivando e chiama il 112.
+
+</details>
+
+Per approfondire: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
+
 ## I colori dell'allerta meteo e che cosa fare
 
 **Durata:** 1 min 00 s · **Nel programma dell'anno:** Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre
@@ -124,6 +139,21 @@ Temporali e fulmini: come stare al sicuro. Un temporale si forma in fretta e las
 </details>
 
 Per approfondire: [Temporali intensi](/rischi-prevenzione/temporali-intensi/).
+
+## Vento forte: che cosa fare
+
+**Durata:** 56 s · **Nel programma dell'anno:** Infanzia e primaria 1ª-2ª, gennaio-febbraio: «Pioggia, vento e temporale», «Il tempo che cambia»
+
+{{< video src="/video/2026-11-12-vento-forte-video-16x9.mp4" poster="/video/2026-11-12-vento-forte-video-16x9-poster.webp" titolo="Video con voce e sottotitoli: Vento forte: che cosa fare" >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Vento forte: che cosa fare. Le raffiche possono spezzare i rami e far cadere tegole e vasi. Prima che arrivi il vento, metti al riparo o fissa bene vasi, sedie e tutto quello che sta su balconi e davanzali. Guarda l'allerta del giorno, e parcheggia l'auto lontano da alberi e impalcature. Quando il vento soffia forte, resta in casa se puoi. Chiudi porte e finestre, e stai lontano dai vetri. Se sei fuori, evita i parchi e le strade alberate: i rami che si spezzano sono il pericolo più frequente. Stai lontano da impalcature, cartelloni e cornicioni. In auto o in moto rallenta: le raffiche fanno sbandare, soprattutto all'uscita delle gallerie e sui viadotti. Dopo il vento, non toccare i cavi caduti a terra. Se un albero o un cavo blocca la strada, chiama il 112.
+
+</details>
+
+Per approfondire: [Vento forte](/rischi-prevenzione/vento-forte/).
 
 ## Il kit di emergenza
 

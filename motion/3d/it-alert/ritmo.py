@@ -9,30 +9,38 @@ parole = json.loads((qui / 'parole.json').read_text(encoding='utf-8'))
 
 # attesa prima della voce e durata di ogni scena: in 3D le scene durano più della frase (voli, comparse, letture)
 PRIMA = [0.45, 0.45, 4.10, 0.45, 0.60, 0.90, 0.90]
-DURATA = [8.3, 8.4, 11.2, 13.7, 9.7, 9.9, 10.6]
+DURATA = [9.1, 9.1, 12.4, 14.6, 9.6, 10.5, 11.3]
 S, V, t = [], [], 0.0
 for k, f in enumerate(parole):
     assert DURATA[k] >= PRIMA[k] + f['durata'] + 0.4, f'scena {k} troppo corta per la sua frase'
     S.append(round(t, 2)); V.append(round(t + PRIMA[k], 2)); t += DURATA[k]
 TOT = round(t, 2)
 r = lambda x: round(x, 2)
+norma = lambda x: re.sub(r'[^a-zà-ù0-9]', '', x.lower())
+def w(k, parola, n=0):                              # istante (dall'inizio del video) in cui la voce dice la parola
+    trovate = [p['t0'] for p in parole[k]['parole'] if norma(p['w']) == norma(parola)]
+    return V[k] + trovate[n]
+fine_voce = lambda k: V[k] + parole[k]['durata']
 
 # istanti degli eventi (secondi dall'inizio): li legge la pagina, e da qui vengono gli effetti sonori
 E = dict(
-    tuffo=3.9, telefono=4.0, avviso1=5.75, avviso1_fine=7.7,
-    s1_arrivo=S[1] + 1.7, onde=S[1] + 1.5, orbita_fine=V[1] + 3.4, card_app=V[1] + 4.35, card_iscr=V[1] + 5.40,
-    s1_fine=S[2] - 0.4,
-    gru_fine=S[2] + 1.9, avviso2=S[2] + 2.0, avviso2_fine=S[2] + 4.0, card_suono=V[2] + 0.7, card_suono_fine=V[2] + 2.6,
-    zoom_da=V[2] + 2.8, zoom_a=V[2] + 3.6, righe_da=V[2] + 3.4, cerchia=V[2] + 5.15, card_italert=V[2] + 5.25,
-    s2_fine=S[3] - 0.4,
-    m_largo=S[3] + 0.95, m_via=V[3] + 1.3, m_arr=[V[3] + 2.0, V[3] + 4.65, V[3] + 6.35, V[3] + 7.95], m_par=[V[3] + 4.1, V[3] + 5.8, V[3] + 7.4],
-    tutti_da=V[3] + 9.75, tutti_a=V[3] + 10.95,
-    no_arrivo=S[4] + 0.8, pan1=V[4] + 0.3, no1=V[4] + 1.05, pan2=V[4] + 1.85, no2=V[4] + 2.45,
-    col_da=V[4] + 2.85, col_a=V[4] + 3.8, colori=V[4] + 3.85, card_sito=V[4] + 5.0, s4_fine=S[5] - 0.4,
-    p1_arr=S[5] + 0.8, p1=V[5] + 0.4, p1_eti=V[5] + 0.85, p2_da=V[5] + 1.45, p2_a=V[5] + 1.95, leggi_da=V[5] + 2.0, leggi_a=V[5] + 3.0,
-    p3_da=V[5] + 3.0, p3_a=V[5] + 3.5, passi_da=V[5] + 5.5, passi_a=V[5] + 6.6,
-    test_arr=S[6] + 0.9, test_msg=S[6] + 1.05, test_cerchia=V[6] + 1.4, card_test=V[6] + 2.2, card_test_fine=V[6] + 4.55,
-    n112_da=V[6] + 4.6, n112_a=V[6] + 5.5, card_fine=V[6] + 6.9,
+    tuffo=3.9, telefono=4.0, avviso1=fine_voce(0) + 0.25, avviso1_fine=fine_voce(0) + 2.2,
+    s1_arrivo=S[1] + 1.7, onde=S[1] + 1.5, orbita_fine=w(1, 'Non') - 0.15, card_app=w(1, "un'app") - 0.15,
+    card_iscr=w(1, 'non', 1), s1_fine=S[2] - 0.4,
+    gru_fine=S[2] + 1.9, avviso2=S[2] + 2.0, avviso2_fine=S[2] + 4.0, card_suono=w(2, 'suono') - 0.15,
+    card_suono_fine=w(2, 'sullo') - 0.4, zoom_da=w(2, 'sullo') - 0.2, zoom_a=w(2, 'sullo') + 0.6, righe_da=w(2, 'compare') - 0.1,
+    cerchia=w(2, 'IT-alert') - 0.15, card_italert=w(2, 'IT-alert') - 0.05, s2_fine=S[3] - 0.4,
+    m_largo=S[3] + 0.95, m_via=w(3, 'un') - 0.75,
+    m_arr=[w(3, 'un') - 0.05, w(3, 'un', 1) + 0.1, w(3, 'il') + 0.05, w(3, "l'attività") + 0.02],
+    m_par=[w(3, 'un', 1) - 0.45, w(3, 'il') - 0.5, w(3, "l'attività") - 0.53],
+    tutti_da=fine_voce(3) + 0.4, tutti_a=fine_voce(3) + 1.6,
+    no_arrivo=S[4] + 0.8, pan1=V[4] + 0.3, no1=w(4, 'terremoti') + 0.25, pan2=w(4, 'nemmeno'), no2=w(4, 'meteo') + 0.05,
+    col_da=w(4, 'Per', 2) - 0.3, col_a=w(4, 'Per', 2) + 0.65, colori=w(4, 'Per', 2) + 0.7, card_sito=w(4, 'sul') - 0.12, s4_fine=S[5] - 0.4,
+    p1_arr=S[5] + 0.8, p1=w(5, 'fermati') - 0.5, p1_eti=w(5, 'fermati') - 0.12, p2_da=w(5, 'leggi') - 0.25, p2_a=w(5, 'leggi') + 0.25,
+    leggi_da=w(5, 'leggi') + 0.3, leggi_a=w(5, 'Poi') - 0.4, p3_da=w(5, 'Poi') - 0.2, p3_a=w(5, 'Poi') + 0.3,
+    passi_da=fine_voce(5) + 0.25, passi_a=fine_voce(5) + 1.35,
+    test_arr=S[6] + 0.9, test_msg=S[6] + 1.05, test_cerchia=w(6, 'TEST') - 0.1, card_test=w(6, 'è') - 0.05,
+    card_test_fine=w(6, 'In') - 0.2, n112_da=w(6, 'In') + 0.25, n112_a=w(6, '112') - 0.15, card_fine=fine_voce(6) + 0.35,
 )
 E = {k: ([r(x) for x in v] if isinstance(v, list) else r(v)) for k, v in E.items()}
 scene = [dict(inizio=S[k], durata=DURATA[k]) for k in range(len(S))]

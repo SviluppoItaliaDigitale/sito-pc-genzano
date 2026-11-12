@@ -1,28 +1,28 @@
 ---
 title: "Vento forte: che cosa fare"
-date: @@D@@T00:0@@T@@:00+01:00
-description: "Un video di 1 minuto e mezzo sul vento forte. Spiega che cosa fare in casa e fuori."
+date: 2026-11-12T00:04:00+01:00
+description: "Un video di 1 minuto sul vento forte. Spiega che cosa fare in casa e fuori."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/@@D@@-vento-forte-video-3d.webp"
+image: "/images/2026-11-12-vento-forte-video-3d.webp"
 image_alt: "Cover dell'articolo: Vento forte: un video in 3D su che cosa fare prima, durante e dopo"
 scadenza: ""
 area: "Castelli Romani"
 allegati: []
 draft: false
 tts: true
-versione_facile_di: "@@D@@-vento-forte-video-3d"
+versione_facile_di: "2026-11-12-vento-forte-video-3d"
 build:
   list: never
   render: always
   publishResources: true
 ---
 
-Questo è un **video di 1 minuto e mezzo**. Parla del vento forte. Il video ha una voce e le scritte. Lo capisci anche senza audio.
+Questo è un **video di 1 minuto**. Parla del vento forte. Il video ha una voce e le scritte. Lo capisci anche senza audio.
 
-{{< video src="/video/@@D@@-vento-forte-video-3d.mp4"
-          poster="/video/@@D@@-vento-forte-video-3d-poster.webp"
+{{< video src="/video/2026-11-12-vento-forte-video-3d.mp4"
+          poster="/video/2026-11-12-vento-forte-video-3d-poster.webp"
           verticale="true"
           titolo="Video con voce e scritte: vento forte, che cosa fare"
           caption="Vento forte: che cosa fare. Le scene sono disegni al computer, non riprese vere. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -53,4 +53,4 @@ Vai piano. Il vento può spostare l'automobile e la moto.
 - Non toccare i fili caduti a terra.
 - Se un albero o un filo blocca la strada, chiama il **112**.
 
-[Leggi l'articolo completo](/comunicazioni/@@D@@-vento-forte-video-3d/).
+[Leggi l'articolo completo](/comunicazioni/2026-11-12-vento-forte-video-3d/).
