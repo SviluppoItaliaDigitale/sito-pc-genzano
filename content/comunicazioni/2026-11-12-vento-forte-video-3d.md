@@ -101,7 +101,7 @@ Voce sintetica: modello distribuito con licenza Coqui Public Model License ([coq
 
 **Sul nostro sito:**
 
-- [Vento forte](/rischi-prevenzione/vento-forte/): che cosa fare prima, durante e dopo.
+- [Vento forte](/rischi-prevenzione/vento-forte/): che cosa fare prima, durante e dopo. Da questa pagina vengono le indicazioni su finestre, cornicioni, cartelloni e cavi caduti.
 - [Allerte meteo](/allerte-meteo/): il colore dell'allerta di oggi per Genzano di Roma.
 - [Vento forte: terrazzi e balconi](/comunicazioni/2026-09-10-vento-forte-terrazzi-balconi/).
 - [Video per la classe](/formazione/video-per-la-classe/): i video da proiettare a scuola.
