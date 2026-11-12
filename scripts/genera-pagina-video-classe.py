@@ -12,6 +12,8 @@ V = [
    "Primaria 3ª-5ª, novembre-dicembre: «Acqua, frane e alluvioni»; secondaria, marzo-aprile e novembre-dicembre", "/rischi-prevenzione/rischio-idrogeologico/", "Rischio idrogeologico"),
   ("2026-11-01-allerta-colori-bambini-video", "I colori dell'allerta meteo e che cosa fare",
    "Infanzia e primaria, gennaio-febbraio: «I colori dell'allerta»; secondaria di primo grado, novembre-dicembre", "/allerte-meteo/", "Allerte meteo"),
+  ("2026-11-12-temporali-fulmini-video", "Temporali e fulmini: come stare al sicuro",
+   "Infanzia e primaria 1ª-2ª, gennaio-febbraio: «Pioggia, vento e temporale», «Il tempo che cambia»", "/rischi-prevenzione/temporali-intensi/", "Temporali intensi"),
   ("2026-11-01-kit-emergenza-bambini-video", "Il kit di emergenza",
    "Infanzia e primaria, marzo-maggio: «Il mio zainetto», «La mia casa preparata», «Il piano della mia famiglia»", "/rischi-prevenzione/kit-emergenza/", "Kit di emergenza"),
   ("2026-11-01-incendi-bambini-video", "Il fuoco nel bosco: come nasce e che cosa fare",
@@ -88,5 +90,21 @@ Le pagine [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/), [
 - [Verifica prima e dopo](/formazione/verifica-prima-e-dopo/)
 - [Audio e podcast](/audio-e-podcast/)
 """
-open("content/formazione/video-per-la-classe/_index.md", "w").write(testa + "\n".join(corpo) + coda)
+# Blocco del 12/11/2026: la pagina ha anche sezioni aggiunte a mano (per esempio il video in 3D sulla casa e il
+# terremoto, del 03/11/2026). Riscriverla da zero le cancellerebbe: lo script si ferma se nella pagina c'è un titolo
+# che l'elenco V non produce. Per aggiungere un video: voce in V e poi «--sezione BASE», che stampa la sola sezione
+# da incollare nella pagina; «--forza» riscrive tutto comunque.
+import re, sys
+PAGINA = "content/formazione/video-per-la-classe/_index.md"
+nuova = testa + "\n".join(corpo) + coda
+if "--sezione" in sys.argv:
+    base = sys.argv[sys.argv.index("--sezione") + 1]
+    print(corpo[[v[0] for v in V].index(base)])
+    sys.exit(0)
+vecchi = set(re.findall(r"^## (.+)$", open(PAGINA).read(), re.M))
+persi = sorted(vecchi - set(re.findall(r"^## (.+)$", nuova, re.M)))
+if persi and "--forza" not in sys.argv:
+    sys.exit("Mi fermo: la pagina ha sezioni che l'elenco V non produce e che andrebbero perse: " + "; ".join(persi)
+             + ". Usa «--sezione BASE» per avere la sola sezione nuova da incollare.")
+open(PAGINA, "w").write(nuova)
 print("pagina scritta")

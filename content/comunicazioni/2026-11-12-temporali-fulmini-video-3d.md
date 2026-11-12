@@ -1,7 +1,7 @@
 ---
 title: "Temporali e fulmini: un video in 3D per sapere dove ripararsi"
 date: 2026-11-12T00:02:00+01:00
-description: "Un video di un minuto e mezzo, con voce e sottotitoli, mostra sul rilievo dei Castelli Romani che cosa fare quando arriva un temporale: dove ripararsi e che cosa evitare."
+description: "Un video di un minuto e mezzo, con voce e sottotitoli, mostra sul rilievo dei Castelli Romani dove ripararsi quando arriva un temporale e che cosa evitare."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -23,7 +23,7 @@ social_punti:
   - "Aspetta 30 minuti dopo l'ultimo tuono prima di tornare fuori."
 ---
 
-Un temporale si forma in fretta e lascia poco tempo per ripararsi. In un **video in 3D di un minuto e mezzo** mostriamo, sul rilievo dei Castelli Romani, che cosa fare prima, durante e dopo: dove ripararsi dai fulmini e che cosa evitare.
+Un temporale si forma in fretta e lascia poco tempo per ripararsi. Lo spieghiamo in un **video in 3D di un minuto e mezzo**, ambientato sul rilievo dei Castelli Romani. Dice che cosa fare prima, durante e dopo: dove ripararsi dai fulmini e che cosa evitare.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
@@ -58,7 +58,7 @@ Se hai in programma una gita, una partita o un lavoro all'aperto, guarda le prev
 
 ## Se senti il tuono
 
-Se vedi i lampi ma non senti il tuono, il temporale può essere ancora lontano: allontanati per tempo. Se senti il tuono, anche lontano, il temporale è a pochi chilometri e sei già in pericolo. Raggiungi subito un luogo chiuso.
+Se senti il tuono, anche lontano, il temporale è a pochi chilometri e sei già in pericolo. Raggiungi subito un luogo chiuso.
 
 ## Dove ripararsi
 
@@ -84,7 +84,7 @@ Se vedi i lampi ma non senti il tuono, il temporale può essere ancora lontano: 
 
 Aspetta **30 minuti dopo l'ultimo tuono** prima di tornare alle attività all'aperto.
 
-Chi è stato colpito da un fulmine non resta carico di elettricità: si può soccorrere subito, senza rischi. In emergenza chiama il **112**.
+Chi è stato colpito da un fulmine non resta carico di elettricità: si può soccorrere subito. In emergenza chiama il **112**.
 
 ## La versione per le scuole
 
