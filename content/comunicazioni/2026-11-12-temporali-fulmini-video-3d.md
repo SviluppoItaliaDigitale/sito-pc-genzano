@@ -15,6 +15,7 @@ versione_facile: "2026-11-12-temporali-fulmini-video-3d-facile"
 tts: true
 lis_section: "allerte-meteo"
 social_video: "/video/2026-11-12-temporali-fulmini-video-3d.mp4"
+social_crediti: "Musica: «Light Thought var 1» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS)."
 social_citazione: "Se senti il tuono, anche lontano, sei già in pericolo: raggiungi subito un luogo chiuso."
 social_punti:
   - "Il riparo giusto è un edificio. Se non c'è, va bene l'automobile con porte e finestrini chiusi."

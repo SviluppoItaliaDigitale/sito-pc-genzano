@@ -56,5 +56,23 @@ class RegoleDelPrompt(unittest.TestCase):
         self.assertIn("non trovata", errori.getvalue())
 
 
+class CreditiDeiVideo(unittest.TestCase):
+    CRED = "Musica: «Prova» di Autore (sito.example), CC BY 4.0."
+
+    def test_prima_degli_hashtag(self):
+        ig = "Titolo\n\nTesto.\n\nLink in bio.\n\n\n\n#Uno #Due"
+        esito = S.con_crediti(ig, self.CRED)
+        self.assertTrue(esito.endswith("\n\n\n\n#Uno #Due"))
+        self.assertIn("Link in bio.\n\n" + self.CRED, esito)
+
+    def test_senza_hashtag_e_senza_doppioni(self):
+        esito = S.con_crediti("Testo.", self.CRED)
+        self.assertEqual(esito, "Testo.\n\n" + self.CRED)
+        self.assertEqual(S.con_crediti(esito, self.CRED), esito)
+
+    def test_senza_crediti_non_cambia(self):
+        self.assertEqual(S.con_crediti("Testo.\n\n#Uno", ""), "Testo.\n\n#Uno")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

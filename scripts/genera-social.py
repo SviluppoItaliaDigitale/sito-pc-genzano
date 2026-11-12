@@ -236,6 +236,7 @@ def estrai_articolo(path: Path) -> dict | None:
         "url": url,
         "estratto": estratto,
         "punti": [str(x).strip() for x in punti if str(x).strip()] if isinstance(punti, list) else [],
+        "crediti": social_comune.testo_campo(fm, "social_crediti"),
     }
 
 
@@ -434,9 +435,32 @@ def chiama_gemini(api_key: str, system_prompt: str, user_prompt: str,
     return None
 
 
+def con_crediti(testo: str, crediti: str) -> str:
+    """Mette i crediti dovuti per licenza (campo `social_crediti` dell'articolo:
+    musica, dati del rilievo, licenza della voce) in fondo al testo, prima
+    degli hashtag, che restano l'ultima riga. Dal 12/11/2026 i crediti di un
+    video non stanno nel video ma nel testo dei post dove compare: li scrive
+    lo script, parola per parola, non il modello. Se ci sono già non li ripete.
+    """
+    crediti = " ".join((crediti or "").split())
+    if not crediti or not testo or crediti in " ".join(testo.split()):
+        return testo
+    righe = testo.rstrip().split("\n")
+    coda = []
+    while righe and (righe[-1].strip().startswith("#") or not righe[-1].strip()):
+        coda.insert(0, righe.pop())
+    corpo = "\n".join(righe).rstrip() + "\n\n" + crediti
+    return corpo + ("\n" + "\n".join(coda) if coda else "")
+
+
 def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Path:
     """Scrive 4 file .txt + un README.md in social-bozze/<slug>/."""
     out_dir = SOCIAL_BOZZE / slug_to_path(slug)
+    if art.get("crediti"):
+        bozze = dict(bozze)
+        for piattaforma in ("facebook", "instagram"):
+            if bozze.get(piattaforma):
+                bozze[piattaforma] = con_crediti(bozze[piattaforma], art["crediti"])
     if dry_run:
         stampa_info(f"\n=== DRY-RUN: {out_dir} ===")
         for piattaforma in ("x", "facebook", "instagram", "telegram"):
