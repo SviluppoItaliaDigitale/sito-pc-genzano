@@ -1112,3 +1112,23 @@ dati:
         contesto: '(?i)\bbollit|\bbollire|\bbollore|\bbollirla'
         stessa_frase: true
         salvo_se_frase: '(?i)latte|biberon|cottura|cuoc|pasta|uov'
+
+  - id: lessico-persone-con-disabilita
+    dato: "Come si nominano le persone con disabilità"
+    valore: "«persona con disabilità», «persone con disabilità», «accessibile»; mai «i disabili», «il disabile», «per disabili»"
+    fonti:
+      - nome: "D.Lgs. 3 maggio 2024, n. 62, art. 4 (terminologia), e regola del sito comunicazione-social.md § «Parole e immagini su disabilità e fragilità»"
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2024-05-03;62~art4"
+    # Nasce il 13/11/2026: «disabili» compariva in una ventina di file (articoli,
+    # kit, manuale di campo, giochi, schede) nonostante la regola.
+    escludi:
+      # Titoli ufficiali di video di terzi, riportati come sono.
+      - "data/video_correlati.yaml"
+      - "data/video_dpc_catalogo.yaml"
+      # Nomi di variabili del gioco (disabili: 15), non testo mostrato.
+      - "static/giochi/ragazzi/codice-arancione/index.html"
+    vietati:
+      # Solo minuscole per le forme senza articolo, così i nomi propri
+      # («Federazione Associazioni Nazionali Disabili») restano liberi.
+      - regex: '(?i:\b(?:i|ai|dei|dai|coi|per|il|al|del|dal|un|uno|ogni)\s+)disabil[ei]\b|,\s*disabili\b(?!\s*:)|\(\s*disabili\b|\bdisabili\s*[,)]'
+        perche: "Si scrive «persone con disabilità» (o «accessibile» per bagni, moduli, percorsi): d.lgs. 62/2024, art. 4, e regola comunicazione-social.md."
