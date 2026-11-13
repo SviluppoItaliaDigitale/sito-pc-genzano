@@ -26,7 +26,7 @@ Tutte le cifre che seguono sono **stime** pubblicate da enti nazionali e interna
 
 ## Quanto costano i disastri
 
-Nel rapporto mondiale del 2025 sulla riduzione del rischio, l'ufficio delle Nazioni Unite per la riduzione del rischio di disastri (UNDRR) stima i **danni diretti** dei disastri in circa **200 miliardi di dollari l'anno**. Se si contano anche gli effetti su salute, scuola, lavoro ed ecosistemi, il costo supera i **2.300 miliardi di dollari l'anno**.
+Nel rapporto mondiale del 2025 sulla riduzione del rischio, l'ufficio delle Nazioni Unite per la riduzione del rischio di disastri (UNDRR) stima i **danni diretti** dei disastri in circa **200 miliardi di dollari l'anno**. Se si contano anche gli effetti su salute, scuola, lavoro ed ecosistemi, il costo arriva a circa **2.300 miliardi di dollari l'anno**.
 
 In Europa, l'Agenzia europea dell'ambiente stima perdite per **822 miliardi di euro** nell'Unione europea, fra il 1980 e il 2024, causate da eventi meteorologici e climatici estremi. Meno del 20% era coperto da un'assicurazione privata. L'Italia è fra i Paesi con le perdite più alte in valore assoluto. La stima non comprende i terremoti.
 
