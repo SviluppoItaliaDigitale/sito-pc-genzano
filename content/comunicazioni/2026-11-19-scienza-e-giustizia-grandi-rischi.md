@@ -15,8 +15,8 @@ social_citazione: "Un terremoto non si può prevedere. Il rischio, invece, si pu
 social_punti:
   - "31 marzo 2009: la Commissione Grandi Rischi si riunisce all'Aquila durante lo sciame sismico"
   - "6 aprile 2009: la scossa di magnitudo 6.3 provoca 309 vittime"
-  - "L'accusa non riguardava la mancata previsione del terremoto, ma informazioni giudicate incomplete e rassicuranti"
-  - "Esito definitivo: sei esperti assolti, condannato a due anni un dirigente del Dipartimento della protezione civile"
+  - "L'accusa non riguardava la mancata previsione del terremoto, ma informazioni che per la Procura erano incomplete e rassicuranti"
+  - "Esito definitivo: sei imputati assolti, condannato a due anni un dirigente del Dipartimento della protezione civile"
 draft: false
 ---
 
@@ -26,7 +26,7 @@ In questa serie raccontiamo la protezione civile da punti di vista diversi. Oggi
 
 ## La riunione del 31 marzo 2009
 
-Da mesi L'Aquila viveva uno **sciame sismico**: centinaia di scosse, quasi tutte leggere, e una paura crescente. Molte famiglie avevano preso l'abitudine di uscire di casa a ogni scossa avvertita.
+Da mesi L'Aquila viveva uno **sciame sismico**: una lunga serie di scosse, per lo più leggere, e una preoccupazione crescente. Secondo le ricostruzioni del processo, molte persone avevano preso l'abitudine di uscire di casa alle scosse avvertite.
 
 Il pomeriggio del 31 marzo la **Commissione nazionale per la previsione e la prevenzione dei grandi rischi** si riunisce all'Aquila. È l'organo di consulenza tecnico-scientifica del Dipartimento della protezione civile. Il comunicato che annunciava l'incontro ne indicava lo scopo: dare ai cittadini tutte le informazioni disponibili sull'attività sismica delle ultime settimane. La riunione dura circa un'ora. Al termine alcuni partecipanti rispondono alle domande delle televisioni.
 
@@ -52,7 +52,7 @@ Per capire il processo bisogna separare tre azioni che spesso si confondono.
 
 ## Che cosa diceva l'accusa
 
-L'accusa non contestava agli imputati di non aver previsto il terremoto. Non contestava nemmeno la mancata evacuazione della città. Sosteneva invece che la valutazione del rischio fosse stata approssimativa e che ai cittadini fossero arrivate **informazioni incomplete, imprecise e contraddittorie**. Secondo la Procura, quel messaggio rassicurante aveva spinto alcune persone ad abbandonare le cautele di sempre, come uscire di casa alle prime scosse. Quelle persone erano rimaste nelle loro abitazioni la notte del 6 aprile.
+L'accusa non contestava agli imputati di non aver previsto il terremoto. Non contestava nemmeno la mancata evacuazione della città. Sosteneva invece che la valutazione del rischio fosse stata approssimativa e che ai cittadini fossero arrivate **informazioni incomplete, imprecise e contraddittorie**. Secondo la Procura, quel messaggio rassicurante aveva spinto alcune persone ad abbandonare le cautele di sempre, come uscire di casa alle prime scosse. Sempre secondo l'accusa, alcune di loro erano rimaste in casa la notte del 6 aprile e sono morte o rimaste ferite nei crolli.
 
 I reati contestati erano **omicidio colposo** e **lesioni personali colpose**. «Colposo» vuol dire senza intenzione: per negligenza, imprudenza o imperizia.
 
@@ -60,11 +60,11 @@ I reati contestati erano **omicidio colposo** e **lesioni personali colpose**. �
 
 **Primo grado.** Il 22 ottobre 2012 il Tribunale dell'Aquila condanna tutti e sette gli imputati a sei anni di reclusione. Le motivazioni vengono depositate il 19 gennaio 2013.
 
-**Appello.** Il 10 novembre 2014 la Corte d'appello dell'Aquila cambia l'esito. Assolve sei imputati, fra cui tutti gli scienziati. Condanna a due anni, con pena sospesa, il vicecapo del settore tecnico operativo del Dipartimento, per una parte dei casi.
+**Appello.** Il 10 novembre 2014 la Corte d'appello dell'Aquila cambia l'esito. Assolve sei imputati. Condanna a due anni, con pena sospesa, il vicecapo del settore tecnico operativo del Dipartimento, per una parte dei casi.
 
-**Cassazione.** La quarta sezione penale della Corte di cassazione decide dopo l'udienza del 19 novembre 2015 e conferma la sentenza d'appello. Le motivazioni sono depositate il 24 marzo 2016, con la **sentenza n. 12478/2016**. Le sei assoluzioni diventano definitive, come la condanna a due anni.
+**Cassazione.** La quarta sezione penale della Corte di cassazione decide dopo l'udienza del 19 novembre 2015 e conferma la sentenza d'appello. Le motivazioni sono depositate il 24 marzo 2016, con la **sentenza n. 12478/2016**. Le sei assoluzioni e la condanna a due anni, con pena sospesa, diventano definitive.
 
-Per la Cassazione un dirigente della protezione civile può rispondere di omicidio colposo quando, senza adeguati riscontri scientifici, diffonde dichiarazioni rassicuranti su un fenomeno in corso. Così può spingere i cittadini ad abbandonare i comportamenti di autoprotezione. I giudici hanno quindi separato due piani: la valutazione degli esperti e il messaggio arrivato alla popolazione.
+Nella sentenza la Cassazione afferma questo principio. Un dirigente della protezione civile può rispondere di omicidio colposo se diffonde dichiarazioni rassicuranti su uno sciame sismico in corso, senza adeguati riscontri scientifici. È così se quelle parole inducono i cittadini ad abbandonare i comportamenti di autoprotezione. La sentenza distingue quindi due piani: la valutazione degli esperti e il messaggio arrivato alla popolazione.
 
 ## Che cosa è cambiato per il sistema
 

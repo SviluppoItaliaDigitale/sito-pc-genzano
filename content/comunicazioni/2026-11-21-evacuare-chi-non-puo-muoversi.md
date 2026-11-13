@@ -53,7 +53,7 @@ Entrambe chiedono che le aree di degenza consentano l'**esodo orizzontale progre
 
 ## Le carceri
 
-Il decreto 81/2008 vale anche negli istituti penitenziari. Lì si applica «tenendo conto delle effettive particolari esigenze connesse al servizio» (articolo 3). Le procedure di sicurezza interne non sono pubbliche, per ragioni comprensibili. Per il territorio conta un dato: le carceri sono fra le strutture che il piano comunale di protezione civile deve indicare sulla mappa.
+Il decreto 81/2008 vale anche negli istituti penitenziari. Lì si applica «tenendo conto delle effettive particolari esigenze connesse al servizio» (articolo 3). Le procedure interne le definisce l'amministrazione penitenziaria e qui non le descriviamo. Per il territorio conta un dato: le carceri sono fra le strutture che il piano comunale di protezione civile deve indicare sulla mappa.
 
 ## Il collegamento con il piano comunale
 
@@ -73,7 +73,7 @@ Un piano mai provato è solo carta. Il decreto del 2 settembre 2021 prevede eser
 - **Concorda chi ti chiamerà.** Chiedi il nome della persona che ti darà notizie in caso di trasferimento.
 - **Preparati alla telefonata.** La scheda [Cosa chiedere alla RSA dopo un evento](/formazione/kit-calamita-strutture-sanitarie/14-cosa-chiedere-rsa.html) mette in ordine le domande utili, senza intasare il centralino.
 
-Se il tuo familiare vive a casa e ha bisogno di aiuto per uscire, trovi indicazioni nella pagina sulle [persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/). In caso di pericolo chiama sempre il **112**, il numero unico di emergenza.
+Se il tuo familiare vive a casa e ha bisogno di aiuto per uscire, trovi indicazioni nella pagina sulle [persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/). In caso di pericolo chiama sempre il **112**, il numero unico di emergenza, e di' subito che la persona ha bisogno di aiuto per muoversi.
 
 ## Per approfondire
 

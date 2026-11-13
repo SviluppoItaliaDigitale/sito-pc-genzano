@@ -53,7 +53,7 @@ Poi, se serve, le porta fuori dall'edificio.
 
 ## Le carceri
 
-Anche in carcere ci sono regole di sicurezza. Molte regole non sono pubbliche, per motivi di sicurezza.
+Anche in carcere ci sono regole di sicurezza. Le decide l'amministrazione del carcere. Qui non le raccontiamo.
 
 Il Comune deve sapere dove sono le carceri del suo territorio.
 
@@ -83,7 +83,7 @@ Hai un familiare in ospedale, in una casa per anziani o in un'altra struttura? P
 4. **Tieni una lista.** Scrivi su un foglio i farmaci e gli ausili del tuo familiare.
 5. **Chiedi un nome.** Chiedi chi ti telefona se il tuo familiare va in un altro posto.
 
-Se c'è un pericolo, chiama il **112**. Il 112 è il numero unico per le emergenze.
+Se c'è un pericolo, chiama il **112**. Il 112 è il numero unico per le emergenze. Di' che la persona ha bisogno di aiuto per muoversi.
 
 ## Per saperne di più
 

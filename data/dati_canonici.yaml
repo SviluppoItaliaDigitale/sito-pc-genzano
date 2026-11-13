@@ -290,7 +290,7 @@ dati:
         perche: "103,30 euro è il tetto originario del 2018, superato dal decreto 22/09/2023: oggi 120,55 euro."
         contesto: 'volontari|autonom|mancato guadagno|art\. 39'
         finestra: 300
-        salvo_se_prima: '(?:originari\w*|2018|fino al)\s*$'
+        salvo_se_prima: '(?:originari\w*|2018|fino al|fissava\s+un\s+tetto\s+di)\s*$'
 
   - id: indicazioni-nazionali-curricolo
     dato: "Indicazioni nazionali per il curricolo dell'infanzia e del primo ciclo"
