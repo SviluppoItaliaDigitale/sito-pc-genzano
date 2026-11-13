@@ -54,7 +54,7 @@ Le stesse cautele le seguiamo anche noi quando raccontiamo un nostro intervento:
 
 ## Le notizie false
 
-Nelle emergenze tornano sempre le stesse voci: la scuola chiusa che non lo è, l'evacuazione che nessuno ha ordinato, la scossa «prevista» per stanotte. I terremoti non si possono prevedere, e chi annuncia l'ora di una scossa diffonde una notizia falsa.
+Nelle emergenze tornano sempre le stesse voci: la scuola chiusa che non lo è, l'evacuazione che nessuno ha ordinato, la scossa «prevista» per stanotte. Il Dipartimento della Protezione Civile lo dice chiaramente: non è ancora possibile prevedere con certezza quando, con quale forza e dove arriverà il prossimo terremoto. Chi annuncia l'ora di una scossa diffonde una notizia falsa.
 
 Alcuni segnali aiutano a riconoscerle:
 
