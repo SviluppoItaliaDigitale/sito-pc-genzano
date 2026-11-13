@@ -15,7 +15,7 @@ tts: true
 versione_facile: "2026-11-13-chi-non-vuole-lasciare-casa-facile"
 social_citazione: "Chi esita davanti a una richiesta di evacuazione non è irresponsabile: di solito ha paura di perdere qualcosa a cui tiene."
 social_punti:
-  - "A volte allontanarsi vuol dire solo salire al piano di sopra per qualche ora."
+  - "A volte allontanarsi vuol dire solo salire al piano di sopra."
   - "In emergenza i cittadini hanno il dovere di seguire le disposizioni delle autorità di protezione civile."
   - "Prepara prima il piano familiare, lo zaino con documenti e farmaci, il trasportino per gli animali."
   - "Se conosci un vicino solo o con difficoltà di movimento, scambiate i numeri di telefono."
@@ -27,9 +27,9 @@ In questo articolo guardiamo l'emergenza con gli occhi di chi non vuole andarsen
 
 ## Allontanarsi non vuol dire sempre partire
 
-Un'evacuazione può riguardare un quartiere intero. Altre volte basta lasciare il seminterrato o il piano terra. La campagna nazionale «Io non rischio» lo scrive fra i comportamenti da seguire durante un'alluvione: chi si trova in un locale seminterrato o al piano terra sale ai piani superiori, senza usare l'ascensore.
+Un'evacuazione può riguardare un quartiere intero. Altre volte viene chiesto di lasciare il seminterrato o il piano terra. La campagna nazionale «Io non rischio» lo scrive fra i comportamenti da seguire durante un'alluvione: chi si trova in un locale seminterrato o al piano terra sale ai piani superiori, senza usare l'ascensore.
 
-Capire che cosa viene chiesto aiuta ad accettarlo. A volte si tratta di poche ore e di pochi metri.
+Sapere che cosa viene chiesto può rendere la richiesta meno spaventosa. A volte si tratta solo di salire di un piano.
 
 ## Perché si dice di no
 

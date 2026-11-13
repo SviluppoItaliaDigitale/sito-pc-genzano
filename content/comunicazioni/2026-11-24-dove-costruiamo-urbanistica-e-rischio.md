@@ -5,8 +5,8 @@ description: "Il rischio nasce anche dalle scelte su dove e come costruire. Mapp
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-24-dove-costruiamo-urbanistica-e-rischio.webp"
+image_alt: "Cover dell'articolo: Dove e come costruiamo: il rischio visto dall'urbanista"
 scadenza: ""
 area: ""
 allegati: []

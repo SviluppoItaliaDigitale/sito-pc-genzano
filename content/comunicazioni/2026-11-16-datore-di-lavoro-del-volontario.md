@@ -62,7 +62,7 @@ L'articolo 40 e la direttiva del Presidente del Consiglio dei ministri del 24 fe
 2. va presentata **entro due anni** dalla conclusione dell'intervento o dell'attività;
 3. è una dichiarazione sostitutiva dell'atto di notorietà (articolo 47 del D.P.R. 445/2000);
 4. servono la comunicazione di attivazione e l'**attestato nominativo di partecipazione** del dipendente;
-5. il modello nazionale per i datori di lavoro è pubblicato sul sito del Dipartimento; le Regioni possono avere moduli propri.
+5. il modello nazionale per i datori di lavoro è pubblicato sul sito del Dipartimento, mentre le Regioni possono avere moduli propri.
 
 La direttiva chiede alle organizzazioni di dare a ogni volontario una copia dell'attivazione da consegnare al datore di lavoro. È il primo documento da conservare.
 
