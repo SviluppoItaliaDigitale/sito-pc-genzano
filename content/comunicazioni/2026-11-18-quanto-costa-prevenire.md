@@ -44,18 +44,18 @@ Chi sostiene quindi la spesa? In gran parte lo Stato, cioè tutti i contribuenti
 
 ## L'obbligo di polizza per le imprese
 
-La legge di bilancio 2024 (legge 30 dicembre 2023, n. 213, articolo 1, commi 101-111) ha introdotto un **obbligo di assicurazione contro le catastrofi naturali** per le imprese. Riguarda le imprese iscritte nel registro delle imprese, con sede in Italia o con una stabile organizzazione nel nostro Paese. Le imprese agricole sono escluse: per loro valgono altre regole.
+La legge di bilancio 2024 (legge 30 dicembre 2023, n. 213, articolo 1, commi 101-111) ha introdotto un **obbligo di assicurazione contro le catastrofi naturali** per le imprese. Riguarda le imprese tenute all'iscrizione nel registro delle imprese, con sede legale in Italia o con sede legale all'estero e una stabile organizzazione nel nostro Paese. Le imprese agricole (articolo 2135 del codice civile) sono escluse: per loro valgono altre regole.
 
 La polizza deve coprire terreni, fabbricati, impianti, macchinari e attrezzature. Gli eventi sono cinque: **terremoti, alluvioni, frane, inondazioni ed esondazioni**. Il valore da assicurare è il costo per ricostruire a nuovo o per sostituire i beni.
 
 La legge fissa anche alcune garanzie:
 
-- la franchigia o lo scoperto non può superare il 15% del danno, salvo per le grandi imprese;
+- la franchigia o lo scoperto non può superare il 15% del danno, salvo per le grandi imprese e per i gruppi con una polizza globale;
 - il premio deve essere proporzionale al rischio;
-- le compagnie non possono rifiutarsi di assicurare: rischiano una sanzione da 100.000 a 500.000 euro;
+- le compagnie non possono rifiutarsi di assicurare: rischiano una sanzione da 100.000 a 500.000 euro, che applica l'IVASS;
 - la società pubblica SACE può riassicurare fino al 50% degli indennizzi, con la garanzia dello Stato.
 
-Chi non si assicura ne risente quando chiede contributi pubblici, anche quelli dati dopo una calamità. Non sono assicurabili gli immobili costruiti senza un titolo edilizio valido, a meno che sia in corso una sanatoria o un condono. Per loro non spetta alcun contributo pubblico.
+Chi non si assicura ne risente quando chiede contributi pubblici, anche quelli dati dopo una calamità. Non sono assicurabili gli immobili costruiti o ampliati senza un titolo edilizio valido, salvo quelli costruiti quando il titolo non era obbligatorio e quelli con una sanatoria o un condono, anche solo in corso. Per gli immobili non assicurabili non spetta alcun indennizzo né contributo a carico di risorse pubbliche.
 
 La scadenza è stata rinviata più volte. Questi sono i termini in vigore, verificati su Normattiva il 13 novembre 2026:
 
@@ -64,6 +64,8 @@ La scadenza è stata rinviata più volte. Questi sono i termini in vigore, verif
 - **piccole imprese e microimprese**: 31 dicembre 2025;
 - **piccole e microimprese di bar, ristoranti e strutture turistico-ricettive**: 31 marzo 2026;
 - **imprese della pesca e dell'acquacoltura**: 31 dicembre 2026.
+
+A novembre 2026 tutti i termini sono già scaduti, tranne quello delle imprese della pesca e dell'acquacoltura.
 
 Le dimensioni dell'impresa seguono la definizione europea. Per l'economista il punto chiave è il premio proporzionale al rischio. Il rischio diventa una voce di costo visibile ogni anno, non solo un conto che arriva dopo il disastro.
 
@@ -100,7 +102,7 @@ Fonti istituzionali (consultate il 13 novembre 2026):
 - Normattiva, [legge 30 dicembre 2023, n. 213](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2023-12-30;213) (legge di bilancio 2024), articolo 1, commi 101-111
 - Normattiva, [decreto-legge 31 marzo 2025, n. 39](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2025-03-31;39), convertito dalla legge 27 maggio 2025, n. 78: termini per medie, piccole e microimprese
 - Normattiva, [decreto-legge 31 dicembre 2025, n. 200](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2025-12-31;200), convertito dalla legge 27 febbraio 2026, n. 26, articolo 16, comma 2: bar, ristoranti e imprese turistico-ricettive
-- Normattiva, [decreto-legge 27 febbraio 2026, n. 25](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2026-02-27;25), articolo 9, comma 6: pesca e acquacoltura
+- Normattiva, [decreto-legge 27 febbraio 2026, n. 25](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2026-02-27;25), convertito dalla legge 27 aprile 2026, n. 59, articolo 9, comma 6: pesca e acquacoltura (modifica l'articolo 19, comma 1-quater, del [decreto-legge 27 dicembre 2024, n. 202](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2024-12-27;202), convertito dalla legge 21 febbraio 2025, n. 15)
 - Normattiva, [decreto legislativo 2 gennaio 2018, n. 1](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1) (Codice della protezione civile), articoli 25, 28 e 44
 - IVASS, [Rischi da catastrofi naturali e di sostenibilità: monitoraggio annuale, rapporto 2026](https://www.ivass.it/pubblicazioni-e-statistiche/pubblicazioni/stabilita-finanziaria/2026/2026-rischi-cat-nat-sost/Rischi_cat_nat_e_sost_IV_monitoraggio_annuale_2026.pdf) (agosto 2026)
 - IVASS, [Prezzi effettivi delle polizze per i rischi catastrofali](https://www.ivass.it/pubblicazioni-e-statistiche/statistiche/prezzi-effettivi-polizze-cat-nat/index.html)
