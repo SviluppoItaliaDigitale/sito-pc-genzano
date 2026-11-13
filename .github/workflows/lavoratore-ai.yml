@@ -232,7 +232,7 @@ jobs:
           cp scripts/lavoratore-ai.py scripts/consulto-ai.py scripts/riserva-credenziale.sh "$RUNNER_TEMP/fidati/"
 
       - name: "🔐 Accesso ChatGPT: copia cifrata in cache"
-        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ runner.temp }}/chatgpt-cache
           key: chatgpt-${{ github.run_id }}
@@ -268,7 +268,7 @@ jobs:
 
       - name: "🔐 Accesso ChatGPT in cache"
         if: always() && steps.salva.outputs.cambiato == 'true'
-        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ runner.temp }}/chatgpt-cache
           key: chatgpt-${{ github.run_id }}-${{ github.run_attempt }}
@@ -369,7 +369,7 @@ jobs:
           persist-credentials: false
 
       - name: "🔐 Accesso ChatGPT: copia cifrata in cache"
-        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ runner.temp }}/chatgpt-cache
           key: chatgpt-${{ github.run_id }}
@@ -427,7 +427,7 @@ jobs:
 
       - name: "🔐 Accesso ChatGPT in cache"
         if: always() && steps.salva.outputs.cambiato == 'true'
-        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ${{ runner.temp }}/chatgpt-cache
           key: chatgpt-${{ github.run_id }}-${{ github.run_attempt }}
