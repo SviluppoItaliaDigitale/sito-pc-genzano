@@ -5,8 +5,8 @@ description: "Versione semplificata (italiano A2) dell'articolo su chi non vuole
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-13-chi-non-vuole-lasciare-casa-facile.webp"
+image_alt: "Cover dell'articolo: Chi non vuole lasciare la casa. Versione facile da leggere"
 scadenza: ""
 area: ""
 allegati: []
