@@ -26,7 +26,7 @@ In questa serie guardiamo la protezione civile con gli occhi di chi la incontra 
 
 ## Prima la fonte, poi la notizia
 
-Chi fa informazione in Italia segue il **Codice deontologico delle giornaliste e dei giornalisti**. Lo ha approvato il Consiglio nazionale dell'Ordine dei giornalisti l'11 dicembre 2024 ed è in vigore dal 1° giugno 2025. Ha preso il posto del Testo unico dei doveri del giornalista del 2016 ed è oggi l'unico riferimento deontologico della professione.
+Chi fa informazione in Italia segue il **Codice deontologico delle giornaliste e dei giornalisti**. Lo ha approvato l'11 dicembre 2024 il Consiglio nazionale dell'Ordine dei giornalisti. È in vigore dal 1° giugno 2025, al posto del Testo unico dei doveri del giornalista del 2016, e oggi è l'unico riferimento deontologico della professione.
 
 L'articolo 18 chiede di accertare l'attendibilità delle informazioni e di citare le fonti. L'articolo 26, sull'informazione ambientale, scientifica e sanitaria, chiede di verificare l'autorevolezza delle fonti e di non suscitare timori o speranze infondate.
 
@@ -36,7 +36,7 @@ In protezione civile le fonti hanno un nome preciso. L'allerta meteo la emette i
 
 L'informazione corre a minuti. Il soccorso ha i suoi tempi. Nelle prime ore di un evento i dati cambiano di continuo: quante persone sono coinvolte, quali strade sono chiuse, che cosa è successo. Chi deve pubblicare subito rischia di dare per certa una prima stima.
 
-Per questo il Codice prevede la rettifica. L'articolo 16 chiede di correggere le informazioni rivelatesi inesatte con tempestività e con il giusto rilievo, anche senza una richiesta, e vale anche per le immagini. Formule come «secondo le prime ricostruzioni» sono oneste: dicono al lettore che il quadro può cambiare.
+Per questo il Codice prevede la rettifica. L'articolo 16 chiede di correggere con tempestività e con appropriato rilievo le informazioni rivelatesi inesatte, anche senza una richiesta. Il dovere vale anche per le immagini. Formule come «secondo le prime ricostruzioni» sono oneste: dicono al lettore che il quadro può cambiare.
 
 Per chi legge la differenza è concreta. Un'informazione sbagliata su una strada o su un'area di attesa manda le persone nel posto sbagliato, a volte proprio dove devono passare i mezzi di soccorso.
 
@@ -46,9 +46,9 @@ In ogni emergenza ci sono persone in difficoltà: chi è ferito, chi ha perso la
 
 - **Minori.** L'articolo 12 chiede di non diffondere dati o altri elementi che permettano, anche in modo indiretto, di riconoscerli, che siano protagonisti, vittime o testimoni. Le eccezioni sono poche e definite, come la scomparsa di un minore. Il Codice recepisce la **Carta di Treviso**, firmata nel 1990 dall'Ordine, dalla Federazione nazionale della stampa italiana (FNSI) e da Telefono Azzurro.
 - **Persone fragili.** L'articolo 11 chiede di rispettare la dignità di chi è malato, ha una disabilità o vive una condizione di vulnerabilità, e di evitare il sensazionalismo.
-- **Vittime e familiari.** L'articolo 25 esclude i nomi dei familiari delle persone coinvolte, salvo che servano davvero a capire i fatti.
+- **Vittime e familiari.** L'articolo 25 esclude i nomi dei familiari delle persone coinvolte in fatti di cronaca, salvo che siano indispensabili a capire i fatti.
 
-Sulle immagini l'articolo 20 è esplicito: se serve a rendere non riconoscibili minori, vittime, protagonisti di eventi tragici e testimoni, le immagini si modificano o si escludono dettagli dall'inquadratura. Sono compresi i luoghi, le case e i veicoli.
+Sulle immagini l'articolo 20 è esplicito. Quando serve a non rendere riconoscibili minori, vittime, protagonisti di eventi tragici e testimoni, il giornalista modifica le immagini o esclude alcuni particolari dall'inquadratura. Vale anche per i luoghi, i domicili e i veicoli.
 
 Le stesse cautele le seguiamo anche noi quando raccontiamo un nostro intervento: niente nomi, orari arrotondati, nessun dettaglio che porti a una persona.
 
@@ -67,13 +67,13 @@ Smentire una voce ripetendola per intero la aiuta a circolare. Per questo nella 
 
 ## Gli uffici stampa delle istituzioni
 
-La legge 150 del 2000 permette alle pubbliche amministrazioni di avere un **ufficio stampa**, composto da persone iscritte all'albo dei giornalisti. Il capo ufficio stampa cura i rapporti con gli organi di informazione e deve assicurare, dice l'articolo 9, «il massimo grado di trasparenza, chiarezza e tempestività» delle comunicazioni. L'articolo 32 del Codice deontologico chiede a chi lavora in un ufficio stampa di tenere separato il proprio ruolo da quello di chi fa marketing.
+La legge 150 del 2000 permette alle pubbliche amministrazioni di avere un **ufficio stampa**, composto da persone iscritte all'albo dei giornalisti. Il capo ufficio stampa cura i rapporti con gli organi di informazione. Secondo l'articolo 9 deve assicurare «il massimo grado di trasparenza, chiarezza e tempestività» delle comunicazioni. L'articolo 32 del Codice deontologico chiede a chi lavora in un ufficio stampa di tenere distinto il proprio ruolo da quello di altri soggetti che operano nella comunicazione e di evitare attività che creino conflitti di interesse.
 
-In emergenza un ufficio stampa che funziona dà dati confermati, dice quando arriverà il prossimo aggiornamento e offre a tutte le redazioni la stessa versione dei fatti. Per chi scrive di Genzano abbiamo preparato la [Sala stampa](/sala-stampa/): contatti, comunicati e le precisazioni che evitano gli errori più frequenti, come chi decide le chiusure e chi emette le allerte.
+In emergenza un ufficio stampa che funziona dà dati confermati e dice quando arriverà il prossimo aggiornamento. Offre a tutte le redazioni la stessa versione dei fatti. Per chi scrive di Genzano abbiamo preparato la [Sala stampa](/sala-stampa/). Trovi contatti, comunicati e le precisazioni che evitano gli errori più frequenti, come chi decide le chiusure e chi emette le allerte.
 
 ## Quando a raccontare sei tu
 
-Oggi chiunque, con un telefono, raggiunge centinaia di persone in pochi secondi. Il Codice deontologico vale per gli iscritti all'Ordine, ma le ragioni che lo ispirano valgono per tutti. E il Codice della protezione civile (decreto legislativo 1/2018, articolo 31) ricorda che in emergenza i cittadini hanno il dovere di rispettare le disposizioni delle autorità di protezione civile.
+Oggi chiunque, con un telefono, raggiunge centinaia di persone in pochi secondi. Il Codice deontologico vale per gli iscritti all'Ordine, ma le sue ragioni valgono per tutti. In emergenza, poi, il Codice della protezione civile (decreto legislativo 1/2018, articolo 31) chiede ai cittadini di rispettare le disposizioni delle autorità di protezione civile.
 
 ## Che cosa puoi fare tu
 

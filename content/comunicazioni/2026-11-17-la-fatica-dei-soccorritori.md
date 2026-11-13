@@ -38,14 +38,14 @@ Quanto è diffuso il problema? Una revisione ha riunito 28 studi su oltre 20.000
 
 ## I segnali, in te e nei compagni
 
-Le reazioni allo stress sono reazioni normali a situazioni fuori dal normale. Il CDC le raccoglie in quattro gruppi:
+Molte reazioni allo stress sono normali in situazioni fuori dal normale. Il CDC le raccoglie in quattro gruppi:
 
 - **nel corpo**: stanchezza, mal di testa, nausea, mascella serrata;
 - **nel pensiero**: confusione, difficoltà a concentrarsi, vuoti di memoria, incubi;
 - **nelle emozioni**: ansia, senso di colpa, tristezza, paura, irritabilità, sensazione di essere sopraffatti;
 - **nel comportamento**: chiudersi, scatti di rabbia, bere troppo, sonno e appetito che cambiano.
 
-Un segnale passeggero, nelle ore dopo un intervento, è atteso. Conta quando dura, peggiora o pesa sulla vita di tutti i giorni. Dolore al petto, fatica a respirare o segni di shock sono invece un'urgenza medica: si chiama subito il **112**.
+Un segnale passeggero, nelle ore dopo un intervento, è atteso. Anche i pensieri e i ricordi che tornano, scrive il CDC, sono normali e di solito si attenuano col tempo. Conta quando dura, peggiora o pesa sulla vita di tutti i giorni. Dolore al petto, fatica a respirare o segni di shock sono invece un'urgenza medica: si chiama subito il **112**.
 
 Spesso i segnali li vede prima un compagno di squadra. Il CDC chiede ai soccorritori di «tenersi d'occhio a vicenda». Un collega che si chiude, che ha scatti di rabbia insoliti o che beve più del solito non va giudicato. Gli si chiede come sta, e lo si ascolta senza insistere.
 

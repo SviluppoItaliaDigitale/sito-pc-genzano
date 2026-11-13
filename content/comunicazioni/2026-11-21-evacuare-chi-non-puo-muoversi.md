@@ -59,11 +59,11 @@ Il decreto 81/2008 vale anche negli istituti penitenziari. Lì si applica «tene
 
 Il piano interno dice che cosa fare dentro l'edificio. Il piano comunale dice che cosa succede fuori. Lo regola la [direttiva del Presidente del Consiglio dei ministri 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf). Il piano deve indicare dove sono ospedali, case di cura, ambulatori e carceri. Chiede anche di stimare quante persone con disabilità o in condizioni di fragilità vivono sul territorio, con i dati del Servizio sanitario regionale.
 
-Gli obiettivi sono due: conoscere le specifiche necessità assistenziali di queste persone e sapere quali risorse ci sono per loro. La direttiva fa tre esempi: alloggi, mezzi di trasporto speciali, personale specializzato. Se una residenza deve essere sgomberata, il Comune deve già sapere dove possono andare gli ospiti e con quali mezzi. Puoi leggere come è organizzato il [Piano di emergenza comunale di Genzano](/piano-emergenza/).
+Gli obiettivi sono due: conoscere le specifiche necessità assistenziali di queste persone e sapere quali risorse ci sono per loro. La direttiva fa tre esempi: alloggi, mezzi di trasporto speciali, personale specializzato. Il Dipartimento della protezione civile entra nel dettaglio con le sue [indicazioni operative per le persone con specifiche necessità](https://www.protezionecivile.gov.it/static/2ea242ef9eb8c7f7198774ac828934ad/indicazioni-operative-la-pianificazione-degli-interventi-di-protezione-civile-favore-di-persone-con-specifiche-necessita.pdf). Per ogni struttura sociosanitaria del territorio chiede di conoscere la posizione, il numero massimo di ospiti e quante persone con bisogno di sostegno elevato può accogliere. Chiede anche di censire i mezzi adatti al trasporto di persone con disabilità motoria. Così, se una residenza deve essere sgomberata, il Comune sa già dove possono andare gli ospiti e con quali mezzi. Puoi leggere come è organizzato il [Piano di emergenza comunale di Genzano](/piano-emergenza/).
 
 ## Le esercitazioni
 
-Un piano mai provato è solo carta. Il decreto del 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega la pianificazione alle esercitazioni (articolo 18). Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
+Un piano mai provato è solo carta. Il decreto del 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega la pianificazione alle esercitazioni (articolo 18). Le indicazioni del Dipartimento chiedono che le esercitazioni di protezione civile coinvolgano anche le persone con specifiche necessità, le loro famiglie e chi le assiste. Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
 
 ## Che cosa puoi fare tu, se hai un familiare in struttura
 
@@ -90,11 +90,12 @@ Se il tuo familiare vive a casa e ha bisogno di aiuto per uscire, trovi indicazi
 
 - [Decreto legislativo 9 aprile 2008, n. 81 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81)
 - [Decreto del Ministro dell'interno 2 settembre 2021 (Gazzetta Ufficiale n. 237 del 4 ottobre 2021)](https://www.gazzettaufficiale.it/eli/id/2021/10/04/21A05748/sg)
-- [Decreto del Ministro dell'interno 18 settembre 2002 (Gazzetta Ufficiale n. 227 del 27 settembre 2002)](https://www.gazzettaufficiale.it/eli/gu/2002/09/27/227/sg/pdf)
-- [Decreto del Ministro dell'interno 19 marzo 2015 (Gazzetta Ufficiale n. 70 del 25 marzo 2015)](https://www.gazzettaufficiale.it/eli/gu/2015/03/25/70/sg/pdf)
-- [Decreto del Ministro dell'interno 29 marzo 2021 (Gazzetta Ufficiale n. 85 del 9 aprile 2021)](https://www.gazzettaufficiale.it/eli/gu/2021/04/09/85/sg/pdf)
+- [Decreto del Ministro dell'interno 18 settembre 2002 (Gazzetta Ufficiale n. 227 del 27 settembre 2002, PDF 720 KB)](https://www.gazzettaufficiale.it/eli/gu/2002/09/27/227/sg/pdf)
+- [Decreto del Ministro dell'interno 19 marzo 2015 (Gazzetta Ufficiale n. 70 del 25 marzo 2015, PDF 4,5 MB)](https://www.gazzettaufficiale.it/eli/gu/2015/03/25/70/sg/pdf)
+- [Decreto del Ministro dell'interno 29 marzo 2021 (Gazzetta Ufficiale n. 85 del 9 aprile 2021, PDF 2,7 MB)](https://www.gazzettaufficiale.it/eli/gu/2021/04/09/85/sg/pdf)
 - [Decreto del Presidente della Repubblica 1° agosto 2011, n. 151 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151)
-- [Direttiva del Presidente del Consiglio dei ministri 30 aprile 2021 (Gazzetta Ufficiale n. 160 del 6 luglio 2021)](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf)
+- [Direttiva del Presidente del Consiglio dei ministri 30 aprile 2021 (Gazzetta Ufficiale n. 160 del 6 luglio 2021, PDF 3,3 MB)](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf)
+- [Dipartimento della protezione civile — Indicazioni operative per la pianificazione degli interventi di protezione civile a favore di persone con specifiche necessità (PDF, 400 KB)](https://www.protezionecivile.gov.it/static/2ea242ef9eb8c7f7198774ac828934ad/indicazioni-operative-la-pianificazione-degli-interventi-di-protezione-civile-favore-di-persone-con-specifiche-necessita.pdf)
 - [Codice della protezione civile, articolo 18 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18)
 
 *Fonti verificate il 13 novembre 2026.*
