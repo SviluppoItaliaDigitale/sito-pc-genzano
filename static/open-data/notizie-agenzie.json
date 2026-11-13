@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-13T08:33:47+00:00",
+  "generato": "2026-11-13T16:42:52+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-13T08:29:57+00:00",
+   "data": "2026-11-13T16:28:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ingerenze in elezioni Paesi membri al centro del dibattito 'Danger zone: dai media alle urne'",
-   "url": "https://www.adnkronos.com/cronaca/ingerenze-in-elezioni-paesi-membri-al-centro-del-dibattito-danger-zone-dai-media-alle-urne_4wkCVnleFYYseFYekGPBa6"
+   "titolo": "Schillaci: \"Legge 130 per screening diabete 1 e celiachia strada che percorreremo fino in fondo\"",
+   "url": "https://www.adnkronos.com/politica/schillaci-legge-130-per-screening-diabete-1-e-celiachia-strada-che-percorreremo-fino-in-fondo_1aFQNowFWkMAZ0KMcpspHg"
   },
   {
-   "data": "2026-11-13T08:28:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morta a 27 anni Beau Jessup, figlia dell'attrice britannica Lisa Maxwell: ignote le cause del decesso",
-   "url": "https://www.adnkronos.com/spettacoli/beau-jessup-morta-figlia-lisa-maxwell_4QyIpwYWktjSDzcMeUhUdl"
+   "data": "2026-11-13T16:23:21+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Stalking, minacce e lesioni all'ex compagna. 39enne arrestato a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/stalking-minacce-e-lesioni-allex-compagna.-39enne-arrestato-a-milano_e367a006-663d-4e93-9d21-d8809bdfcdc4.html"
   },
   {
-   "data": "2026-11-13T08:24:52+00:00",
+   "data": "2026-11-13T16:15:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia, infortunio per Frattesi: lascia il ritiro della Nazionale",
+   "url": "https://www.adnkronos.com/sport/infortunio-frattesi-ritiro-italia-come-sta-quando-torna-lazio_6eS6YDrMn073a0mXMIzD5p"
+  },
+  {
+   "data": "2026-11-13T16:15:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tony Effe è ufficialmente un atleta, il 'supercoach': \"Tutto è cominciato con una sigaretta non fumata...\"",
+   "url": "https://www.adnkronos.com/sport/tony-effe-tessera-fidal-atleta-lorenzo-lotti_1IkPIR3ejKIMIg2YnMOxSH"
+  },
+  {
+   "data": "2026-11-13T16:08:59+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Lo calmiamo con l'accendino', mamma registra le maestre e le denuncia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/lo-calmiamo-con-laccendino-genitori-bimbo-autistico-denunciano-maestre_8479204c-cb85-4fc3-9c2c-09d02f11c473.html"
+  },
+  {
+   "data": "2026-11-13T16:04:02+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Uccise la ex a fucilate a Roma, confermato l'ergastolo in appello",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/uccise-la-ex-a-fucilate-a-roma-confermato-lergastolo-in-appello_106bf38f-7453-4402-b75e-81baa4abea9d.html"
+  },
+  {
+   "data": "2026-11-13T15:55:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bild: \"La Russia vuole il ritiro della Finlandia dalla Nato\". Helsinki: \"Un oltraggio, questione assolutamente non negoziabile\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/russia-finlandia-nato-ultime-news_3uxpkfl8V0ixyU6pOMPdzZ"
+  },
+  {
+   "data": "2026-11-13T15:54:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lavazza: 35esimo Calendario 2027, 'Always a pleasure' con immagini per raccontare il piacere racchiuso in un istante",
+   "url": "https://www.adnkronos.com/cronaca/lavazza-35esimo-calendario-2027-always-a-pleasure-con-immagini-per-raccontare-il-piacere-racchiuso-in-un-istante_3UconPl1p5eVfkb6YG6SGq"
+  },
+  {
+   "data": "2026-11-13T15:49:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nazionale, Frattesi lascia il raduno azzurro per risentimento muscolare",
+   "url": "https://www.adnkronos.com/sport/nazionale-frattesi-infortunio-lascia-raduno-cosa-e-successo_76prmJI3pP1c1TkCEnGc6f"
+  },
+  {
+   "data": "2026-11-13T15:45:31+00:00",
    "fonte": "ANSA",
-   "titolo": "Outlook down: 'le misure per risolvere le falle non stanno andando come era previsto'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/outlook-down-le-misure-per-risolvere-le-falle-non-stanno-andando-come_820a9d7d-9b9d-4214-8537-0834b1378b3d.html"
+   "titolo": "Il Nyt: 'Trump ha chiamato Huang martedì per incoraggiarlo a non cedere'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/il-nyt-trump-ha-chiamato-huang-martedi-per-incoraggiarlo-a-non-cedere_4d7049c8-ca5c-4c4e-b34a-a6d5007a4fd6.html"
   },
   {
-   "data": "2026-11-13T08:02:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Terremoto Campi Flegrei, scossa di magnitudo 2.6 a Pozzuoli: avvertita anche in quartieri ovest Napoli",
-   "url": "https://www.adnkronos.com/cronaca/terremoto-campi-flegrei-13-novembre-epicentro-magnitudo_4l3vtxFLhH28o93GjjyojC"
-  },
-  {
-   "data": "2026-11-13T07:52:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allarmi bomba nelle scuole, oggi tavolo tecnico a Palazzo Chigi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/allarme-bomba-oggi-misure-governo-ultime-notizie_7otbBP3JBvJyXUhyV2hFGb"
-  },
-  {
-   "data": "2026-11-13T07:50:16+00:00",
+   "data": "2026-11-13T15:42:29+00:00",
    "fonte": "ANSA",
-   "titolo": "Gli 007 americani non sono sicuri che Alice Huang sia una spia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/gli-007-americani-non-sono-sicuri-che-alice-huang-sia_4d7049c8-ca5c-4c4e-b34a-a6d5007a4fd6.html"
+   "titolo": "Outlook down, Microsoft: 'Miglioramenti in Nord America ed Europa'. Il titolo soffre in Borsa",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/outlook-down-microsoft-miglioramenti-in-nord-america-ed-europa.-il-titolo-soffre-in-borsa_820a9d7d-9b9d-4214-8537-0834b1378b3d.html"
   },
   {
-   "data": "2026-11-13T07:00:09+00:00",
+   "data": "2026-11-13T15:42:07+00:00",
    "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Huang getta la spugna, il titolo di Nvidia crolla a Wall Street",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/13/prime-pagine-huang-getta-la-spugna-il-titolo-di-nvidia-crolla-a-wall-street_545643d5-48e1-463c-8ed5-fc1f965f49fd.html"
+   "titolo": "Microsoft down, l’ironia dei dipendenti per lo stop di Outlook fa impazzire il web",
+   "url": "https://www.ansa.it/sito/videogallery/short_video/2026/11/13/microsoft-down-lironia-dei-dipendenti-per-lo-stop-di-outlook-fa-impazzire-il-web_d4f083eb-af4b-4448-9201-b38d1171dda6.html"
   },
   {
-   "data": "2026-11-13T06:44:50+00:00",
+   "data": "2026-11-13T15:38:47+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tra i parametri per evacuare il ritrovamento di oggetti sospetti o precedenti minacce",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/tra-i-parametri-per-evacuare-il-ritrovamento-oggetti-sospetti-o-precedenti-minacce_f7048a98-2ed2-4076-8a48-94311f9d5d0b.html"
+  },
+  {
+   "data": "2026-11-13T15:37:37+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Caro termosifoni? Ecco come leggere i contacalorie mettendosi al riparo da sorprese",
-   "url": "https://www.adnkronos.com/economia/caro-termosifone-come-leggere-contacalorie_3atlsb7E5sv1DdQRU0UBZQ"
+   "titolo": "BellaMà, Rai avvia audit interno sulla gestione del programma",
+   "url": "https://www.adnkronos.com/spettacoli/bellama-diaco-audit-interno-rai_32sSLWj5dS6Okn9nAcHK4S"
   },
   {
-   "data": "2026-11-13T06:40:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nations League, chi gioca oggi? Le partite in programma e dove vederle",
-   "url": "https://www.adnkronos.com/sport/natiions-league-germania-olanda_7aXrXSgX5N4voTr9HDpgjI"
-  },
-  {
-   "data": "2026-11-13T06:37:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Outlook, Teams e Copilot in down. Microsoft assicura: \"Nessun segno di attacco informatico\"",
-   "url": "https://www.adnkronos.com/economia/outlook-down-oggi-cosa-succede-news_2VNlVPeAqgNb3AvnFv66qf"
-  },
-  {
-   "data": "2026-11-13T06:30:59+00:00",
+   "data": "2026-11-13T15:37:08+00:00",
    "fonte": "ANSA",
-   "titolo": "L'inviato speciale americano Kushner: 'Progressi significativi nei negoziati Ucraina-Russia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/linviato-speciale-americano-kushner-progressi-significativi-nei-negoziati-ucraina-russia_44817c41-c94b-49c5-82d4-c2480ddd3563.html"
+   "titolo": "Allarmi bomba, la circolare del Viminale: 'Minaccia inattendibile se attraverso mail seriali'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/circolare-viminale-minaccia-inattendibile-se-attraverso-mail-bombing_ca1d2b9c-c7e2-4e00-afb9-6dccb59191fb.html"
   },
   {
-   "data": "2026-11-13T06:21:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Persistono i disservizi Microsoft, ma in via di risoluzione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/persistono-i-disservizi-microsoft-ma-in-via-di-risoluzione_5a79e3ac-8079-48c2-9000-3be74c314bb0.html"
-  },
-  {
-   "data": "2026-11-13T06:09:22+00:00",
+   "data": "2026-11-13T15:37:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Italia sotto assedio del maltempo: arriva una lunga fase di piogge e temporali. Le date da segnare",
-   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-dal-16-novembre-maltempo-pioggia-e-neve_38g237q8uyLphYJBqYclcT"
+   "titolo": "Sindrome di Lennox-Gastaut: 'sfida garantire continuità cure nel passaggio all'età adulta'",
+   "url": "https://www.adnkronos.com/cronaca/sindrome-di-lennox-gastaut-sfida-garantire-continuita-cure-nel-passaggio-alleta-adulta_4lrTDn6epLGJl09ugZb3eC"
   },
   {
-   "data": "2026-11-13T05:56:05+00:00",
+   "data": "2026-11-13T15:36:12+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Ue (a piccoli passi) verso voce unica ai negoziati: leader divisi ma \"sulla buona strada\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-negoziati-ue_JxivnUKoNwUKzW97Oda3k"
+   "titolo": "Monica Busetto torna libera, ok all'istanza di revisione del processo per l'infermiera condannata per l'omicidio della vicina",
+   "url": "https://www.adnkronos.com/cronaca/monica-busetto-libera-istanza-revisione-processo-trento_1GGRAVrP9b39ixOSg7jKhB"
   },
   {
-   "data": "2026-11-12T23:17:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vannacci: \"Antifascismo non è un valore per la Costituzione\"",
-   "url": "https://www.adnkronos.com/politica/vannacci-piazzapulita-la7-formigli_2CBd8B67NzbWQkwl4K2wVM"
-  },
-  {
-   "data": "2026-11-12T23:10:48+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sciopero oggi 13 novembre, mezzi pubblici fermi a Milano e Venezia",
-   "url": "https://www.adnkronos.com/cronaca/sciopero-13-novembre-oggi-milano-venezia-orari-fasce-garanzia_1cvVBLhzcA27hhk2F8nCeL"
-  },
-  {
-   "data": "2026-11-12T23:09:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nvidia, Huang lascia: le dimissioni del Ceo e le ombre su Trump",
-   "url": "https://www.adnkronos.com/internazionale/esteri/nvidia-huang-trump_4SYG7JpfJp4omyt5LuyolJ"
-  },
-  {
-   "data": "2026-11-12T22:43:36+00:00",
+   "data": "2026-11-13T15:35:27+00:00",
    "fonte": "ANSA",
-   "titolo": "Una grande Italia ribalta la Francia e ora è prima in Nations League. Mancini: 'C'è voglia di riscatto'",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/12/una-grande-italia-ribalta-la-francia-e-ora-e-prima-in-nations-league.-mancini_9abbe0f2-e908-4b0b-820e-37f829bbca46.html"
+   "titolo": "Ucraina, Bild: 'Mosca chiede la Finlandia fuori dalla Nato e la Moldavia divisa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/ucraina-bild-mosca-chiede-la-finlandia-fuori-dalla-nato-e-la-moldavia-divisa_44817c41-c94b-49c5-82d4-c2480ddd3563.html"
   },
   {
-   "data": "2026-11-12T21:53:54+00:00",
+   "data": "2026-11-13T15:33:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Donnarumma, 39esimo errore della carriera contro la Francia: tifosi del City lo scaricano",
+   "url": "https://www.adnkronos.com/sport/donnarumma-manchester-city-tifosi-errori-italia-francia_1womfXwTU6MIunGc8UP5m3"
+  },
+  {
+   "data": "2026-11-13T15:28:17+00:00",
    "fonte": "ANSA",
-   "titolo": "Nuovi allarmi bomba in 3.800 scuole, ma si resta in classe",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/nuovi-allarmi-bomba-in-3.800-scuole-ma-si-resta-in-classe_8e554317-0de6-4431-82f1-76e9da9afb9d.html"
+   "titolo": "Kimi Antonelli oggi al Quirinale da Mattarella",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/kimi-antonelli-oggi-al-quirinale-da-mattarella_4cda0886-5b0e-4e5a-b8d4-c11d25bc6910.html"
   },
   {
-   "data": "2026-11-12T21:52:57+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cyber team e sistemi 'anti-buco', Asl allertate su cybersecurity",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/cyber-team-e-sistemi-anti-buco-asl-allertate-su-cybersecurity_82350fa7-36c4-4dea-8347-1da8e9bb25e5.html"
+   "data": "2026-11-13T15:24:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mondiali 'privatizzati', Infantino dovrà svelare le carte della trattativa segreta",
+   "url": "https://www.adnkronos.com/sport/mondiali-privatizzati-caos-fifa-infantino-cosa-e-successo_7jCqeYGW1nJhzXEqbz1q6L"
   },
   {
-   "data": "2026-11-12T21:50:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I presidi, 'serve un canale di allerta centralizzato'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/i-presidi-serve-un-canale-di-allerta-centralizzato_44f745bf-af57-4bad-a936-ee236137da96.html"
+   "data": "2026-11-13T15:19:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Malattie rare, Moroncini (Simi): \"In Egpa terapie mirate per evitare il cortisone\"",
+   "url": "https://www.adnkronos.com/cronaca/malattie-rare-moroncini-simi-in-egpa-terapie-mirate-per-evitare-il-cortisone_6FkzU1LfLLbQ2paZ1lNfOj"
   },
   {
-   "data": "2026-11-12T21:46:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ancora 'Andropov' firma nuovo mail bombing, più account usati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/ancora-andropov-firma-nuovo-mail-bombing-piu-account-usati_2fc3c4dd-91b2-42f6-b08b-b7ed8596753e.html"
-  },
-  {
-   "data": "2026-11-12T21:39:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Nuovi allarmi bomba nelle scuole, palazzo Chigi: 'Coinvolti 3.788 istituti, solo 77 evacuati' - LIVEBLOG",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/nuovo-allarme-bomba-nelle-scuole-indagano-i-pm-dellantiterrorismo-liveblog_97a3c6b7-93f4-44a2-940b-dd33198f2f91.html"
-  },
-  {
-   "data": "2026-11-12T20:59:58+00:00",
+   "data": "2026-11-13T15:10:31+00:00",
    "fonte": "ANSA",
-   "titolo": "Greta alla Cop31: 'La crisi climatica è questione di vita o di morte'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/gretathunberg-il-pianeta-viene-ucciso-e-un-dovere-battersi-per-i-diritti_d92cd0a0-0b97-4bff-adae-efa599e3015b.html"
+   "titolo": "Manovra: Meloni, 'La sinistra pensa alle patrimoniali, noi ad abbassare le tasse'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/manovra-meloni-difesa-del-ceto-medio-e-premio-al-merito-ad-altri-la-retorica_a9e7d8e3-ebe1-4229-a908-26b2f2a973d6.html"
   },
   {
-   "data": "2026-11-12T20:55:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Presunti fondi ad Hamas, il governo chiede un risarcimento da 18 milioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/presunti-fondi-ad-hamas-il-governo-chiede-un-risarcimento-da-18-milioni_a01230e6-f0b5-4929-8cd6-546ff009fd47.html"
+   "data": "2026-11-13T15:07:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ulteriori elementi su BellaMa' di Diaco, la Rai avvia un audit interno",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/ulteriori-elementi-su-bellama-di-diaco-la-rai-avvia-un-audit-interno_2b465eba-9d87-4b75-8890-75c0d12d31d9.html"
   },
   {
-   "data": "2026-11-12T20:51:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Travolse e uccise Rebellin, in Appello deciso il non doversi procedere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/travolse-e-uccise-rebellin-in-appello-deciso-il-non-doversi-procedere_2ca8f830-452d-4f28-8c9f-edbeb1573909.html"
+   "data": "2026-11-13T15:02:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Pillon: 'Rigettato il ricorso della famiglia del bosco'. No al rientro definitivo dei bimbi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/pillon-rigettato-il-ricorso-della-famiglia-del-bosco.-no-al-rientro-definitivo-dei_796a5aab-263b-44ce-aa32-966d9dec0e04.html"
   },
   {
-   "data": "2026-11-12T20:50:12+00:00",
+   "data": "2026-11-13T15:00:32+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Al via il processo d'appello a Grillo jr, sarà a porte chiuse",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/al-via-il-processo-dappello-a-grillo-jr-sara-a-porte-chiuse_58ec7967-0a8c-4a2b-a03c-2d1754256f49.html"
+   "titolo": "Il Tar annulla la multa dell'Antitrust di 1mln a Poltronesofà per una pratica scorretta",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/il-tar-annulla-la-multa-dellantitrust-di-1mln-a-poltronesofa-per-una-pratica-scorretta_faced456-ab6f-4b6a-8baa-5ce664875b93.html"
   },
   {
-   "data": "2026-11-12T20:49:47+00:00",
+   "data": "2026-11-13T14:57:40+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il 25 febbraio l'udienza per Sempio per l'omicidio di Chiara Poggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/il-25-febbraio-ludienza-per-sempio-per-lomicidio-di-chiara-poggi_e27733db-732a-41af-9832-aa6eb5bde397.html"
+   "titolo": "La Consulta: 'Urgenti interventi del legislatore contro il sovraffollamento delle carceri'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/la-consulta-urgenti-interventi-del-legislatore-contro-il-sovraffollamento-delle-carceri_b523cc07-c605-464c-a651-ef54ce879957.html"
   },
   {
-   "data": "2026-11-12T20:44:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Gli autori del manuale di storia a Valditara: 'Non ci facciamo intimidire'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/gli-autori-del-manuale-di-storia-a-valditara-non-ci-facciamo-intimidire_597f8c5c-4533-471a-9d91-4d8b9374a3c9.html"
+   "data": "2026-11-13T14:51:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "'E' tanto che non ci vediamo'. 'Tu non volevi...'. La battuta di Zelensky con Meloni",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/e-tanto-che-non-ci-vediamo.-tu-non-volevi....-la-battuta-di-zelensky-con-meloni_5114ed32-8a6a-4cf8-92a5-0fcdbba06178.html"
   },
   {
-   "data": "2026-11-12T20:34:48+00:00",
+   "data": "2026-11-13T14:37:38+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Da gennaio molestava una 15enne sulla metro di Roma, arrestato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/da-gennaio-molestava-15enne-sulla-metro-di-roma-arrestato_07d3769d-ccaf-494e-b6fd-6516347be53e.html"
+   "titolo": "Mamma uccide il figlio di 9 anni: 'Nell'agenda della donna riti malauguranti'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/mamma-uccide-figlio-di-9-anni-nellagenda-della-donna-riti-malauguranti_3b4a2a06-c99d-4962-8abc-0dc37434c1de.html"
+  },
+  {
+   "data": "2026-11-13T14:29:21+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Frane nella notte ed evacuazioni in provincia di Genova",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/frane-nella-notte-ed-evacuazioni-in-provincia-di-genova_1a6f2dbc-539e-4a57-aab6-351140c778d0.html"
   }
  ]
 }
