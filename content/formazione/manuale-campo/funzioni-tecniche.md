@@ -194,7 +194,7 @@ Nelle prime 24–48 ore, quando il modulo container non è ancora installato:
 ### Installazione definitiva
 
 - **Moduli container** 3×2,5 m con WC + lavabo + doccia
-- **Modulo disabili** obbligatorio (almeno 1)
+- **Modulo accessibile alle persone con disabilità** obbligatorio (almeno 1)
 - **Separazione** servizi soccorritori / ospiti
 - **Pulizia giornaliera** programmata e verbalizzata
 - **Disinfezione** con prodotti clorati

@@ -16,7 +16,7 @@ versione_facile: "2026-02-11-giornata-europea-112-numero-unico-facile"
 
 L'**11 febbraio** si celebra in tutti i paesi dell'Unione Europea la **Giornata Europea del 112** (*European Emergency Number Day*). La data non è casuale: ricorda la numerazione stessa (11/2) e sottolinea il ruolo del **112** come **Numero Unico di Emergenza** per tutto il continente.
 
-Nel Lazio, dal 2017, il 112 è **l'unico numero da chiamare** in qualsiasi situazione di emergenza: medica, di sicurezza, di incendio, di soccorso tecnico.
+Nel Lazio, dal 2015, il 112 è **l'unico numero da chiamare** in qualsiasi situazione di emergenza: medica, di sicurezza, di incendio, di soccorso tecnico.
 
 ## Cos'è il 112
 
@@ -35,9 +35,9 @@ Quando chiami il 112, arrivi alla **Centrale Unica di Risposta**, che valuta la 
 - **Forze dell'Ordine** (Carabinieri, Polizia) per sicurezza pubblica.
 - **Squadre AIB** (Antincendio Boschivo) per incendi nei boschi.
 
-## Cosa è cambiato nel Lazio dal 2017
+## Cosa è cambiato nel Lazio dal 2015
 
-Fino al 2017, in Italia convivevano più numeri di emergenza:
+Fino al 2015, in Italia convivevano più numeri di emergenza:
 
 - **113** — Polizia di Stato
 - **112** — Carabinieri

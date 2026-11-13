@@ -386,7 +386,7 @@
         'Alluvione: niente fiamme libere, generatore obbligatorio (no candele).',
         'Sisma: priorità presidio sanitario rinforzato + sicurezza struttura.',
         'AIB (estate): priorità acqua potabile + climatizzazione (anziani a rischio).',
-        'Accessibilità per disabili sempre dovuta per legge.'
+        'Accessibilità per tutti sempre dovuta per legge.'
       ],
       teoria: [
         { titolo: 'Persone con necessità specifiche', url: '/rischi-prevenzione/persone-necessita-specifiche/' },

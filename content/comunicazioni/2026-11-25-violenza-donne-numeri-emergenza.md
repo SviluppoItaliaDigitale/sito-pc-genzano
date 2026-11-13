@@ -44,7 +44,7 @@ Secondo **ISTAT** e **Ministero dell'Interno**:
 
 ### 113 — Pronto intervento Polizia
 - **numero alternativo** a 112 dove la NUE non è attiva;
-- **nel Lazio** dal 2017 la NUE 112 è il riferimento unico.
+- **nel Lazio** dal 2015 la NUE 112 è il riferimento unico.
 
 ### App YouPol (Polizia di Stato)
 - **segnalazione** anche silenziosa di violenza domestica;

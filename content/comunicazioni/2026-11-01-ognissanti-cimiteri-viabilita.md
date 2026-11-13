@@ -40,7 +40,7 @@ Tra le **9:00 e le 13:00** e tra le **15:00 e le 18:00** si registra maggior aff
 
 - **rallentare** nelle vie d'accesso;
 - **parcheggiare** negli spazi predisposti (attenzione ai divieti di sosta);
-- **non occupare** aree riservate a disabili senza permesso;
+- **non occupare** aree riservate alle persone con disabilità senza permesso;
 - **attenzione** agli anziani e ai pedoni con piante e fiori;
 - **non ostruire** i cancelli o le corsie di servizio.
 

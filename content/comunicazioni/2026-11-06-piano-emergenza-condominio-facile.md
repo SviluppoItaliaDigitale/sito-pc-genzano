@@ -23,7 +23,7 @@ Il tuo palazzo ha molte famiglie. In caso di emergenza, è difficile uscire tutt
 
 ## Perché serve un piano
 
-Nel palazzo vivono persone diverse. Ci sono anziani, bambini, persone disabili. Le scale sono la via per uscire. L'ascensore non si usa in emergenza. Gli impianti del gas, dell'acqua e della luce sono in comune. Non tutti i vicini si conoscono bene.
+Nel palazzo vivono persone diverse. Ci sono anziani, bambini, persone con disabilità. Le scale sono la via per uscire. L'ascensore non si usa in emergenza. Gli impianti del gas, dell'acqua e della luce sono in comune. Non tutti i vicini si conoscono bene.
 
 ## Quali emergenze possono capitare
 
@@ -95,7 +95,7 @@ Puoi fare una prova di evacuazione. Non è obbligatoria, ma è molto utile. Dura
 
 ## Da dove partire
 
-Prima fai il piano della tua famiglia. Sul sito trovi la pagina [Piano familiare di emergenza](/piano-familiare/). Puoi stamparla e compilarla. Per anziani, persone disabili, neonati e animali ci sono i [kit pronti](/formazione/kit-calamita/). Cosa fare per ogni rischio è nelle pagine [Rischi e prevenzione](/rischi-prevenzione/).
+Prima fai il piano della tua famiglia. Sul sito trovi la pagina [Piano familiare di emergenza](/piano-familiare/). Puoi stamparla e compilarla. Per anziani, persone con disabilità, neonati e animali ci sono i [kit pronti](/formazione/kit-calamita/). Cosa fare per ogni rischio è nelle pagine [Rischi e prevenzione](/rischi-prevenzione/).
 
 ---
 

@@ -21,7 +21,7 @@ Il **piano di emergenza familiare** è ormai un concetto noto. Ma un altro livel
 Un palazzo tipico presenta:
 
 - **più famiglie** con esigenze diverse;
-- **anziani**, bambini, disabili nei vari appartamenti;
+- **anziani**, bambini, persone con disabilità nei vari appartamenti;
 - **scale** come via di fuga principale (l'ascensore va evitato);
 - **impianti** comuni (gas, acqua, elettricità);
 - **spazi** condivisi (cortile, androne, tetto);
@@ -54,7 +54,7 @@ Un piano condominiale considera:
 - **amministratore** del condominio e suo recapito;
 - **un referente** condominiale per le emergenze (volontario);
 - **portiere** (se presente);
-- **elenco** degli anziani e disabili del palazzo (con loro consenso, nel rispetto della privacy);
+- **elenco** degli anziani e delle persone con disabilità del palazzo (con loro consenso, nel rispetto della privacy);
 - **contatti** della famiglia dei non autosufficienti.
 
 ### Procedure base

@@ -223,7 +223,7 @@ Una volta individuato il luogo designato dal sistema di coordinamento regionale/
 
 **2. Identificazione e sistemazione degli sfollati**
 
-Quando iniziano ad arrivare i primi nuclei familiari, vengono **identificati** (registrando dati anagrafici e composizione del nucleo) e **assegnati alle tende** secondo un piano di sistemazione che tiene conto di fragilità (anziani, disabili, bambini piccoli) e composizione familiare.
+Quando iniziano ad arrivare i primi nuclei familiari, vengono **identificati** (registrando dati anagrafici e composizione del nucleo) e **assegnati alle tende** secondo un piano di sistemazione che tiene conto di fragilità (anziani, persone con disabilità, bambini piccoli) e composizione familiare.
 
 **3. Dotazione delle tende**
 

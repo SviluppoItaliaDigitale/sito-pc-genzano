@@ -54,7 +54,7 @@ Per le spiegazioni estese, vedi [Capitolo 2 — Scouting](/formazione/manuale-ca
 ### Intervento previsto
 
 - Tipologia/obiettivi missione · Tempistica (partenza/viaggio/arrivo/regime) · Destinazione
-- Popolazione: totale, suddivisa uomini/donne, fasce età (0-4, 5-14, 15-44, >44), soggetti vulnerabili (disabili, minori non accompagnati, donne incinte/allattamento)
+- Popolazione: totale, suddivisa uomini/donne, fasce età (0-4, 5-14, 15-44, >44), soggetti vulnerabili (persone con disabilità, minori non accompagnati, donne incinte/allattamento)
 
 ### Logistica
 

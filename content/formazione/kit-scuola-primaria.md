@@ -731,7 +731,7 @@ Il Piano di Emergenza della scuola (obbligatorio ai sensi del **D.M. 26/08/1992*
 | Punto di raccolta | Punto di raccolta indicato nel Piano | Usa sempre quello ufficiale, non improvvisarne altri |
 | Cartelli di emergenza | Segnaletica conforme D.Lgs. 81/2008 | Usa i cartelli reali della scuola come esempio durante il Modulo 2 |
 | Scheda chiamata 112 | Procedure di chiamata emergenza previste dal Piano | La scheda è pensata per il cittadino; per l'emergenza scolastica interna la chiamata la fa il Dirigente o il DSGA |
-| Alunni con fragilità | Allegato alunni disabili del Piano | Coordina con il docente di sostegno: le procedure del Piano sono prioritarie |
+| Alunni con fragilità | Allegato alunni con disabilità del Piano | Coordina con il docente di sostegno: le procedure del Piano sono prioritarie |
 
 Prima di avviare il kit, **chiedi una copia del Piano di Emergenza della scuola** al Dirigente o al RSPP: è la mappa di cosa può succedere nell'edificio e di cosa è già previsto.
 
@@ -903,7 +903,7 @@ Da adattare con intestazione della scuola:
 >
 > **Come possiamo collaborare in famiglia:**
 > - Compilate insieme ai bambini il [Piano di Emergenza Familiare](/piano-familiare/) che trovate sul sito del Gruppo Volontari. È un'attività che si fa in mezz'ora, da aggiornare ogni 6 mesi.
-> - Verificate insieme che il vostro telefono abbia il 112 nei numeri rapidi (Italia, dal 2017 **il 112 è il numero unico** per ogni emergenza).
+> - Verificate insieme che il vostro telefono abbia il 112 nei numeri rapidi (Italia, dal 2015 **il 112 è il numero unico** per ogni emergenza).
 > - Individuate la **Area di Attesa** più vicina a casa vostra consultando la [Cartografia Operativa](/cartografia/) del Comune.
 > - Preparate un piccolo **zainetto di emergenza** domestico con torcia, acqua, coperta termica, fischietto, copia dei documenti.
 >

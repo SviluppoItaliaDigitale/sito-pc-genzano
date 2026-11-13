@@ -18,7 +18,7 @@ tts: false
 
 ## Numere de urgență și salvare
 
-În regiunea Lazio, din 2017, **singurul număr la care se sună în caz de urgență este 112**. Toate apelurile ajung la Centrala Unică a NUE, care trimite intervenția la serviciul competent (Pompieri, urgență sanitară, Carabinieri, Poliție, incendii forestiere).
+În regiunea Lazio, din 2015, **singurul număr la care se sună în caz de urgență este 112**. Toate apelurile ajung la Centrala Unică a NUE, care trimite intervenția la serviciul competent (Pompieri, urgență sanitară, Carabinieri, Poliție, incendii forestiere).
 
 | Număr | Serviciu | Când să sunați |
 |---|---|---|

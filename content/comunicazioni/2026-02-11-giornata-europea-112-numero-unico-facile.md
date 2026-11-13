@@ -33,7 +33,7 @@ Quando chiami il 112, parli con un operatore. L'operatore capisce il problema. P
 
 ## Un solo numero da ricordare
 
-Prima del 2017, in Italia c'erano più numeri. C'era il 115 per i Vigili del Fuoco. C'era il 118 per l'ambulanza. C'era il 113 per la Polizia.
+Prima del 2015, in Italia c'erano più numeri. C'era il 115 per i Vigili del Fuoco. C'era il 118 per l'ambulanza. C'era il 113 per la Polizia.
 
 Adesso nel Lazio devi ricordare solo il **112**. La centrale pensa lei a chiamare chi serve. Non devi scegliere tu.
 

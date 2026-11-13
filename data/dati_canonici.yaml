@@ -164,9 +164,15 @@ dati:
     dato: "Numero da chiamare in emergenza nel Lazio"
     valore: "112 (NUE); i vecchi 115, 118 e 1515 non si comunicano come numeri da chiamare"
     fonti:
-      - nome: "Regola del sito 06, § Numeri di emergenza; NUE 112 attivo nel Lazio dal 2017"
-        url: "https://www.protezionecivilegenzano.it/numeri-utili/"
+      - nome: "Regione Lazio, «Inaugurata nuova sala Numero Unico Emergenza 112» (settembre 2021): «Nel Lazio il NUE 112 è partito il 18 novembre 2015» (prima centrale: Roma e provincia)"
+        url: "https://regione.lazio.it/notizie/Inaugurata-nuova-sala-numero-unico-emergenza-112"
+      - nome: "QuotidianoSanità, «Lazio. Al via numero unico dell'emergenza 112 per Roma e Provincia»"
+        url: "https://www.quotidianosanita.it/?p=37605"
     vietati:
+      - regex: '(?:\b(?:dal|Dal|dall.anno|nel|Nel|Fino al|fino al|Prima del|prima del|since|desde|depuis|seit|ekde|din|desde)\s+2017\b|\bil NUE nel 2017\b)'
+        perche: "Il NUE 112 nel Lazio è partito il 18 novembre 2015 (Roma e provincia); «2017» è una data sbagliata (fonte: Regione Lazio, settembre 2021)."
+        contesto: '\b112\b|\bNUE\b'
+        finestra: 160
       - regex: '\bchiam(?:a|are|ate|ando)\s+(?:subito\s+)?(?:il\s+)?(?:115|118|1515)\b'
         perche: "Nel Lazio si chiama il 112: il cittadino deve ricordare un solo numero."
         # «Non chiamare», «Non devi chiamare», «Evita di chiamare»: la frase

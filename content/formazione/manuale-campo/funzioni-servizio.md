@@ -83,7 +83,7 @@ La **funzione sanità** integra le strutture sanitarie del campo (PMA 1° o 2° 
 - **prima assistenza** a ospiti e soccorritori
 - **gestione farmaci** del PMA (registro carico/scarico, scadenze)
 - **raccordo** con l'ospedale di riferimento (Ospedale dei Castelli di Ariccia per Genzano) e con l'**ARES 118** via 112 NUE
-- **assistenza a persone fragili** (anziani, disabili, malati cronici)
+- **assistenza a persone fragili** (anziani, persone con disabilità, malati cronici)
 - **igiene** del campo (in raccordo con funzione pulizie)
 - **controllo** della qualità dell'acqua (ASL Roma 6)
 

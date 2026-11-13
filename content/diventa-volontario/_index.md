@@ -130,7 +130,7 @@ Niente di "eroico": è lavoro tecnico fatto bene. La maggior parte delle attivit
 {{< timeline >}}
 - **18:00** — il Capo Gruppo riceve l'attivazione dal Comune (COC)
 - **18:30** — volontari reperibili si presentano in sede in turni
-- **19:00** — presidio del territorio: cancelli su strade allagabili, supporto ai Vigili del Fuoco se richiesto, monitoraggio radio
+- **19:00** — presidio del territorio: segnalazione al COC delle strade allagate o impraticabili (chiusure e regolazione del traffico spettano alla Polizia Locale e alle Forze dell'ordine), supporto ai Vigili del Fuoco se richiesto, monitoraggio radio
 - **dopo cessazione allerta** — ripristino mezzi, segnalazione situazioni residue, archiviazione
 {{< /timeline >}}
 

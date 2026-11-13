@@ -18,7 +18,7 @@ tts: false
 
 ## Notruf- und Hilfsnummern
 
-In der Region Latium ist seit 2017 **die einzige Notrufnummer die 112**. Alle Anrufe gehen an die Einheitliche Notrufzentrale (NUE), die den Einsatz an den zuständigen Dienst weiterleitet (Feuerwehr, Rettungsdienst, Carabinieri, Polizei, Waldbrandbekämpfung).
+In der Region Latium ist seit 2015 **die einzige Notrufnummer die 112**. Alle Anrufe gehen an die Einheitliche Notrufzentrale (NUE), die den Einsatz an den zuständigen Dienst weiterleitet (Feuerwehr, Rettungsdienst, Carabinieri, Polizei, Waldbrandbekämpfung).
 
 | Nummer | Dienst | Wann anrufen |
 |---|---|---|

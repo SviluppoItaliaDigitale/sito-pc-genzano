@@ -31,7 +31,7 @@ La norma internazionale **ISO 22315:2014** *Mass evacuation — Guidelines for p
 - Prepara un [kit di emergenza](/rischi-prevenzione/kit-emergenza/) personalizzato con i medicinali, le protesi, gli ausili necessari
 - Tieni una lista scritta delle terapie in corso, dei medici curanti e dei numeri da chiamare
 - Individua i vicini o le persone di fiducia che possono intervenire rapidamente
-- Se la persona usa apparecchiature elettriche salvavita (ventilatore, dialisi), contatta la ASL di riferimento per farti iscrivere nella lista delle utenze prioritarie in caso di blackout.
+- Se la persona usa apparecchiature elettriche salvavita (ventilatore, dialisi), chiedi alla ASL di riferimento il certificato per il bonus elettrico per disagio fisico (domanda al Comune o a un CAF, senza ISEE): protegge dalla sospensione della fornitura per morosità, ma non garantisce la corrente durante un guasto. Concorda con il medico un piano per le ore senza elettricità e tieni una batteria di riserva.
 
 ### Per le persone anziane che vivono sole
 

@@ -59,7 +59,7 @@ Nel Lazio e a Genzano di Roma, un'ondata di freddo tipica porta temperature sott
 - **bambini** piccoli;
 - **persone** con malattie croniche (cuore, diabete, broncopatia);
 - **persone senza dimora**;
-- **disabili** e persone non autosufficienti;
+- **persone con disabilità** e persone non autosufficienti;
 - **chi assume farmaci** che alterano la termoregolazione.
 
 ## Prevenzione in casa

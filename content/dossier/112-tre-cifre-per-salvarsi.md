@@ -31,7 +31,7 @@ L'idea è semplice e profonda: **in emergenza non devi fare diagnosi**. Non devi
 
 {{< dossier-dati id="numeri" image="/images/dossier/112-telefono-disco.webp" alt="Un telefono nero a disco rotante degli anni del boom" >}}
 {{< dossier-dato to="1991" label="La **decisione europea** che istituisce il 112 come numero unico di emergenza per tutta l'Unione" >}}
-{{< dossier-dato to="2017" label="L'anno in cui il **NUE 112 arriva nel Lazio**: da allora, per il cittadino, l'unico numero da ricordare è uno" >}}
+{{< dossier-dato to="2015" label="L'anno in cui il **NUE 112 parte nel Lazio** (18 novembre 2015, a Roma e provincia): da allora, per il cittadino, l'unico numero da ricordare è uno" >}}
 {{< dossier-dato to="2018" label="Da marzo, ogni **auto nuova** omologata in UE ha l'eCall: in caso di incidente grave chiama il 112 da sola" >}}
 {{< /dossier-dati >}}
 
