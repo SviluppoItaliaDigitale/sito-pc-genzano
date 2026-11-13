@@ -24,12 +24,12 @@ Diversi passaggi fondamentali hanno riscritto il quadro:
 
 | Anno | Cambiamento | Impatto |
 |---|---|---|
-| **1997** | Introduzione del **Metodo Augustus** per la pianificazione comunale | 14 funzioni di supporto negli enti locali |
+| **1997** | Introduzione del **Metodo Augustus** per la pianificazione comunale | Prime funzioni di supporto numerate (schema poi superato dalla Direttiva 2021) |
 | **2001** | Riforma del Titolo V della Costituzione | La protezione civile diventa materia di **legislazione concorrente** |
 | **2008** | Direttiva 3 dicembre 2008 "Indirizzi operativi" | Prima modernizzazione sistematica post-225/92 |
 | **2012** | Direttiva 9 novembre 2012 su *metodo Augustus* | Aggiornamento metodologico |
 | **2018** | **D.Lgs. 1/2018** — Codice della Protezione Civile | Sostituisce integralmente la L. 225/92 |
-| **2021** | **Direttiva PCM 30 aprile 2021** | Nuovi indirizzi per la pianificazione ai diversi livelli |
+| **2021** | **Direttiva PCM 30 aprile 2021** | Nuovi indirizzi per la pianificazione ai diversi livelli; 16 funzioni di supporto non numerate, che il Comune sceglie nel Piano |
 | **2022** | **IT-alert** avviato in forma sperimentale | Comunicazione diretta Dipartimento → cittadini |
 
 ## I punti che sono rimasti (perché funzionano)

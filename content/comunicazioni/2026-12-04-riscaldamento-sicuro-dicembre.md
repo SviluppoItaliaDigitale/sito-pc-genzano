@@ -183,11 +183,11 @@ Il Sindaco può modificare orari e periodi con ordinanza: fai riferimento al [si
 5. **radunare** familiari in punto prestabilito.
 
 ### Odore di gas
-1. **non accendere** luci o fiamme;
-2. **aprire** finestre per aerare;
-3. **chiudere** rubinetto del gas;
-4. **uscire** e chiamare Gas Emergenza (800 900 999 per Italgas area Lazio) o **112**;
-5. **non usare** telefono cellulare nell'appartamento (rischio scintilla).
+1. **non accendere** luci, fiamme o interruttori;
+2. **non usare** telefoni, fissi o cellulari, nel locale (rischio scintilla);
+3. **aprire** finestre e porte verso l'esterno;
+4. **chiudere** il rubinetto del gas solo se lo raggiungi subito e senza rischi;
+5. **uscire** e, da fuori, chiamare il **112** e il numero di pronto intervento gas scritto in bolletta.
 
 ### Sintomi da CO
 1. **uscire** immediatamente all'aria aperta;
@@ -231,4 +231,4 @@ Fonti istituzionali:
 - [ARERA — Autorità Reti e Ambiente](https://www.arera.it/).
 - [ISS — Salute e ambiente domestico](https://www.iss.it/).
 
-In emergenza: **112**. Pronto intervento gas Italgas Lazio: 800 900 999.
+In emergenza: **112**. Per il gas, il numero di pronto intervento scritto in bolletta.

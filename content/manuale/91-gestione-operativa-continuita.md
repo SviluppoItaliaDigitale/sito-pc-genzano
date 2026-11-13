@@ -12,9 +12,9 @@ Dietro ogni soccorso visibile c'è una macchina invisibile che lo rende possibil
 
 ## 9.1 La logistica dell'emergenza
 
-La logistica è la funzione di supporto (Metodo Augustus, Parte V) che assicura **materiali, mezzi e risorse** al posto giusto nel momento giusto. A livello regionale, lo strumento principale è la **colonna mobile**: un insieme modulare e già pronto di moduli operativi (assistenza alla popolazione, sanità, telecomunicazioni, cucine, ecc.) che può essere attivato e schierato rapidamente, anche fuori dal proprio territorio in soccorso ad altre Regioni. Il volontariato organizzato — compresi i gruppi comunali — fornisce a questa colonna persone, mezzi e competenze.
+La logistica è la funzione di supporto (Direttiva PCM 2021, Parte V) che assicura **materiali, mezzi e risorse** al posto giusto nel momento giusto. A livello regionale, lo strumento principale è la **colonna mobile**: un insieme modulare e già pronto di moduli operativi (assistenza alla popolazione, sanità, telecomunicazioni, cucine, ecc.) che può essere attivato e schierato rapidamente, anche fuori dal proprio territorio in soccorso ad altre Regioni. Il volontariato organizzato — compresi i gruppi comunali — fornisce a questa colonna persone, mezzi e competenze.
 
-La forza della logistica sta nella **standardizzazione**: moduli uguali, procedure note, attrezzature compatibili. È lo stesso principio del Metodo Augustus applicato alle cose: se tutti usano lo stesso schema, squadre diverse possono integrarsi senza confusione.
+La forza della logistica sta nella **standardizzazione**: moduli uguali, procedure note, attrezzature compatibili. È lo stesso principio della pianificazione per funzioni applicato alle cose: se tutti usano lo stesso schema, squadre diverse possono integrarsi senza confusione.
 
 ## 9.2 La gestione del volontariato in operazione
 
@@ -38,6 +38,6 @@ L'emergenza non sospende la legge: la spesa va **tracciata e rendicontata**, anc
 
 1. **Codice della protezione civile**, decreto legislativo 2 gennaio 2018, n. 1, artt. 25, 27, 39, 40, 41 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 2. **ISO 22301** (sistemi di gestione della continuità operativa).
-3. Dipartimento della Protezione Civile — **Metodo Augustus** e colonna mobile del Servizio nazionale.
+3. Dipartimento della Protezione Civile — funzioni di supporto (Direttiva PCM 30 aprile 2021) e colonna mobile del Servizio nazionale.
 
 </div>

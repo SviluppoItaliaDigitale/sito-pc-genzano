@@ -52,7 +52,7 @@ Il primo errore è chiamare il venditore della bolletta. Le reti hanno un **dist
 
 - **Acqua.** A Genzano di Roma il servizio idrico è gestito da Acea Ato 2. Il numero per i guasti è **800 130 335**, gratuito e attivo 24 ore su 24. Tieni pronti il CAP e, se manca l'acqua o la pressione è bassa, il codice utenza o la matricola del contatore.
 - **Energia elettrica.** Cerca in bolletta il numero del distributore. Per la rete di e-distribuzione il numero verde è **803 500**, attivo giorno e notte per guasti e situazioni di pericolo.
-- **Gas.** Per un guasto usa il numero di pronto intervento indicato in bolletta. Se senti odore di gas in casa, non toccare interruttori né fiamme e apri le finestre. Esci e chiama il **112** da fuori, come spiega la [Biblioteca delle idee sbagliate](/rischi-prevenzione/idee-sbagliate/#gas-luce).
+- **Gas.** Per un guasto usa il numero di pronto intervento indicato in bolletta. Se senti odore di gas in casa, non toccare interruttori né fiamme e non usare telefoni nel locale. Apri le finestre, chiudi il rubinetto del gas solo se lo raggiungi subito e senza rischi. Esci e chiama il **112** da fuori, come spiega la [Biblioteca delle idee sbagliate](/rischi-prevenzione/idee-sbagliate/#gas-luce).
 - **Telefono e internet.** Segnala il guasto all'assistenza del tuo operatore.
 
 Un cavo a terra, un palo caduto, un albero sulla strada sono un pericolo immediato: tieniti lontano e chiama il **112**. Per un'interruzione senza pericoli per le persone, il numero giusto è quello del gestore.

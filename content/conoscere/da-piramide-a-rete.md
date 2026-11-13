@@ -66,7 +66,7 @@ Non è una preferenza ideologica: è una questione di funzionamento sotto stress
 
 **Ridondanza.** In una piramide, se il vertice è sopraffatto si ferma tutto. In una rete, se un nodo va in difficoltà gli altri lo sostengono: è il meccanismo delle **colonne mobili regionali**, con cui le Regioni inviano volontari e mezzi nelle zone colpite di altre Regioni, coordinate dal sistema nazionale. È successo, ad esempio, con l'alluvione dell'Emilia-Romagna del maggio 2023, che raccontiamo nel dossier [Due scuole di soccorso](/dossier/italia-stati-uniti-due-scuole/) — un confronto con il modello federale statunitense, più centrato sullo Stato.
 
-La rete non significa assenza di guida. Dentro ogni centro di coordinamento il lavoro è organizzato per **funzioni di supporto** secondo il **Metodo Augustus** (introdotto nel 1997): ogni funzione ha un responsabile e chiunque arrivi al tavolo sa «chi fa cosa». Il coordinamento sostituisce il comando gerarchico, non l'organizzazione.
+La rete non significa assenza di guida. Dentro ogni centro di coordinamento il lavoro è organizzato per **funzioni di supporto**, lo schema introdotto con il Metodo Augustus (1997) e oggi definito dalla Direttiva PCM 30 aprile 2021 (sedici funzioni, che il Comune sceglie nel Piano): ogni funzione ha un responsabile e chiunque arrivi al tavolo sa «chi fa cosa». Il coordinamento sostituisce il comando gerarchico, non l'organizzazione.
 
 ## Approfondimenti sul nostro sito
 

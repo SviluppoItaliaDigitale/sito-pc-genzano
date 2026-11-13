@@ -433,6 +433,26 @@ dati:
         finestra: 400
         salvo_se_frase: 'cellular|smartphone|nessun telefono|qualsiasi telefono|qualunque telefono'
 
+  - id: gas-sequenza-odore
+    dato: "Odore di gas: sequenza e numero di pronto intervento"
+    valore: "niente luci, interruttori, fiamme né telefoni nel locale; aprire finestre e porte; chiudere il rubinetto o il contatore del gas solo se si raggiunge subito e senza rischi; uscire; da fuori chiamare il 112 e il numero di pronto intervento del distributore scritto in bolletta"
+    fonti:
+      - nome: "Italgas, servizio di pronto intervento (verificata il 13/11/2026): aprire le finestre, chiudere il contatore, niente luci, ascensore, campanelli, telefoni fissi e cellulari"
+        url: "https://www.italgas.it/clienti/pronto-intervento/"
+      - nome: "Corpo nazionale dei Vigili del Fuoco, vademecum, sezione «Fuga di gas»"
+        url: "https://www.vigilfuoco.it/sites/default/files/2024-07/ita_vademecum.pdf"
+    # Nato il 13/11/2026 dall'allineamento dell'articolo sul riscaldamento
+    # (4/12) con la Biblioteca delle idee sbagliate: l'articolo citava
+    # «800 900 999 per Italgas area Lazio» senza fonte su chi distribuisce il
+    # gas a Genzano. 800 900 999 è il numero di Italgas; Genzano non è
+    # nell'elenco comuni 2i Rete Gas/Italgas (luglio 2025) e il gestore locale
+    # non è verificato: si rimanda al numero in bolletta.
+    vietati:
+      - regex: '800\s?900\s?999'
+        perche: "Numero di Italgas: il gestore del gas a Genzano non è verificato. Scrivere «il numero di pronto intervento gas scritto in bolletta»."
+        contesto: '[Gg]as'
+        finestra: 300
+
   - id: farmaci-scorta-giorni
     dato: "Scorta di farmaci abituali nel kit di casa"
     valore: "almeno 7 giorni; per le terapie salvavita 7-14 giorni, secondo indicazione medica"

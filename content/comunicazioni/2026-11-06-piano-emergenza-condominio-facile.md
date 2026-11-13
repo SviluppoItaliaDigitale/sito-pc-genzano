@@ -55,7 +55,7 @@ Queste cose possono succedere in un palazzo:
 
 **Incendio:** avvisa i vicini. Chiama il 112, il numero unico di emergenza. Scendi per le scale. Non usare l'ascensore.
 
-**Fuga di gas:** chiudi il contatore del gas. Non accendere la luce. Non usare fiamme. Chiama il 112.
+**Fuga di gas:** non accendere la luce. Non usare fiamme. Non usare il telefono dentro casa. Apri le finestre. Chiudi il contatore del gas solo se lo raggiungi subito e senza rischi. Esci. Da fuori chiama il 112.
 
 **Allagamento:** chiudi il rubinetto generale dell'acqua. Avvisa l'amministratore.
 

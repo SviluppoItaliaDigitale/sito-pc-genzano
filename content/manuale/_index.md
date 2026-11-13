@@ -34,7 +34,7 @@ La struttura del manuale copre le competenze tecnico-professionali del **disaste
 - l'ordinamento italiano: **Codice della protezione civile** (d.lgs. 1/2018) e **Testo Unico sulla sicurezza** (d.lgs. 81/2008), letti articolo per articolo;
 - le campagne e i materiali del **Dipartimento della Protezione Civile**, in particolare **«Io non rischio»** per l'autoprotezione e il volume istituzionale per le scuole;
 - la prospettiva dell'inclusione di **«Abili a Proteggere»** per le persone con disabilità nelle emergenze;
-- la pianificazione all'italiana del **Metodo Augustus** — le linee guida nazionali di riferimento per i piani di emergenza e per le **funzioni di supporto** — sviluppato per esteso nella Parte V;
+- la pianificazione per **funzioni di supporto** — dal Metodo Augustus (1997, origine storica) alla Direttiva PCM 30 aprile 2021, riferimento attuale per i piani di emergenza — sviluppata per esteso nella Parte V;
 - il quadro internazionale, mettendo il modello italiano a confronto con la dottrina della **FEMA** statunitense (gestione per funzioni, *whole community*) e con il **Meccanismo unionale** di protezione civile.
 
 ## Piano dell'opera {#piano-dell-opera}

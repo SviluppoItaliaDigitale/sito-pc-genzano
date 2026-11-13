@@ -231,14 +231,14 @@ Bassi, a quattro zampe, dove l'aria è più pulita, verso la porta o la finestra
 
 {{< pittogramma src="/pittogrammi/arasaac/aprire-finestra.png" alt="Pittogramma: aprire una finestra" caption="Con odore di gas: finestre aperte, niente interruttori né fiamme, si esce e si chiama da fuori" size="medium" >}}
 
-**Perché è sbagliata.** Un interruttore, un campanello o un telefono, fisso o cellulare, possono fare una scintilla, e una scintilla in una stanza piena di gas provoca un'esplosione. Si aprono le finestre, non si toccano interruttori né fiamme, si esce di casa e si chiama il 112 dall'esterno.
+**Perché è sbagliata.** Un interruttore, un campanello o un telefono, fisso o cellulare, possono fare una scintilla, e una scintilla in una stanza piena di gas provoca un'esplosione. Si aprono finestre e porte verso l'esterno, non si toccano interruttori né fiamme e non si usa nessun telefono nel locale. Se il rubinetto del gas si raggiunge subito e senza rischi, si chiude; poi si esce di casa e si chiama il 112 dall'esterno, insieme al numero di pronto intervento del distributore del gas scritto in bolletta.
 
-**Fonte:** la scheda [Cosa faccio se sento odore di gas](/formazione/schede-stampabili/odore-gas-infanzia/) e [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/), in linea con le indicazioni dei Vigili del Fuoco.
+**Fonte:** la scheda [Cosa faccio se sento odore di gas](/formazione/schede-stampabili/odore-gas-infanzia/) e [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/), in linea con le indicazioni dei Vigili del Fuoco e con quelle del distributore ([Italgas, servizio di pronto intervento](https://www.italgas.it/clienti/pronto-intervento/), verificate il 13/11/2026).
 
 <details class="faq-item">
 <summary><strong>Verifica: entri in casa di sera, è buio e c'è un forte odore di gas. Che cosa fai per primo?</strong></summary>
 
-Non accendi la luce. Apri le finestre, esci e chiami il 112 da fuori, avvisando i vicini senza suonare i campanelli.
+Non accendi la luce. Apri le finestre, chiudi il rubinetto del gas solo se lo raggiungi subito, esci e chiami il 112 da fuori, avvisando i vicini senza suonare i campanelli.
 
 </details>
 

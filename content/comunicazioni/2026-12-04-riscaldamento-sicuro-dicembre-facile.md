@@ -52,11 +52,12 @@ Guarda la pressione dell'acqua. Deve essere tra 1 e 1,5 bar quando è fredda. Gu
 
 Se senti odore di gas:
 
-1. Non accendere le luci.
-2. Apri le finestre.
-3. Chiudi il rubinetto del gas.
-4. Esci di casa.
-5. Chiama il 112, il numero unico di emergenza.
+1. Non accendere le luci e non usare interruttori.
+2. Non usare il telefono dentro casa.
+3. Apri le finestre.
+4. Chiudi il rubinetto del gas, solo se lo raggiungi subito e senza rischi.
+5. Esci di casa.
+6. Da fuori chiama il 112, il numero unico di emergenza.
 
 ## Il camino e la stufa a legna
 
@@ -106,12 +107,12 @@ Questo apparecchio suona un allarme se c'è monossido di carbonio in casa. Può 
 
 ### Senti odore di gas
 
-1. Non accendere luci o fiamme.
-2. Apri le finestre.
-3. Chiudi il rubinetto del gas.
-4. Esci di casa subito.
-5. Chiama il Gas Emergenza Italgas Lazio: 800 900 999. Oppure chiama il 112.
-6. Non usare il cellulare dentro casa.
+1. Non accendere luci, fiamme o interruttori.
+2. Non usare nessun telefono dentro casa, né fisso né cellulare.
+3. Apri le finestre.
+4. Chiudi il rubinetto del gas, solo se lo raggiungi subito e senza rischi.
+5. Esci di casa subito.
+6. Da fuori chiama il 112. Chiama anche il numero di pronto intervento gas scritto nella bolletta.
 
 ### Hai mal di testa, nausea, sonno forte (forse è il CO)
 
@@ -147,4 +148,4 @@ Sul nostro sito:
 - [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/)
 
 In emergenza chiama il **112**.
-Per il gas chiama il **800 900 999** (Italgas Lazio, numero gratuito).
+Per il gas chiama il numero di pronto intervento scritto nella bolletta.

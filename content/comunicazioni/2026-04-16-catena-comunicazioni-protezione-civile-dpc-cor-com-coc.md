@@ -81,17 +81,7 @@ Al COR viene assegnata la **gestione dei COM** operativi nel proprio territorio.
 
 Il **COM — Centro Operativo Misto** è il livello intermedio tra COR e COC. Viene **attivato in aree colpite** che comprendono più Comuni, per coordinare l'intervento a scala sovracomunale.
 
-All'interno del COM sono presenti le **funzioni di supporto** previste dal **Metodo Augustus** (il sistema di pianificazione dell'emergenza elaborato dal DPC negli anni '90):
-
-- **Funzione 1: Tecnica scientifica e pianificazione**
-- **Funzione 2: Sanità, assistenza sociale e veterinaria**
-- **Funzione 3: Volontariato**
-- **Funzione 4: Materiali e mezzi**
-- **Funzione 5: Servizi essenziali** (elettricità, acqua, gas, telecomunicazioni)
-- **Funzione 6: Censimento danni a persone e cose**
-- **Funzione 7: Strutture operative** (VVF, FFOO, Forze Armate)
-- **Funzione 8: Telecomunicazioni**
-- **Funzione 9: Assistenza alla popolazione**
+All'interno del COM operano le **funzioni di supporto** definite dalla Direttiva PCM 30 aprile 2021 (sedici, non numerate, tra cui Volontariato, Telecomunicazioni d'emergenza, Logistica, Assistenza alla popolazione). Il Metodo Augustus degli anni '90, con le funzioni numerate da 1 a 9 o da 1 a 14, è lo schema storico superato.
 
 Il compito del COM è il **coordinamento logistico e di risorse** tra i vari **COC** e i **campi di accoglienza** attivati nella zona di sua competenza. Non prende decisioni politiche (quelle restano ai Sindaci), ma gestisce la filiera operativa.
 
@@ -127,7 +117,7 @@ Il COC si attiva:
 - **in emergenza**, quando l'evento richiede una gestione strutturata (allerte rosse, eventi sismici con danni, incendi di rilevanza)
 - **in via ordinaria**, per le attività di pianificazione, aggiornamento del Piano di Emergenza Comunale, esercitazioni
 
-All'interno del COC sono presenti le **stesse funzioni di supporto** del Metodo Augustus, dimensionate però al livello comunale. Il **Gruppo Comunale Volontari di Protezione Civile** è la componente operativa del COC per la **Funzione 3 — Volontariato** e interviene direttamente nei servizi operativi coordinati dal Comune.
+All'interno del COC sono presenti le funzioni di supporto che il Piano comunale sceglie di attivare, tra quelle della Direttiva. Il **Gruppo Comunale Volontari di Protezione Civile** è una componente del volontariato che il COC impiega, nell'ambito della funzione **Volontariato**, e interviene direttamente nei servizi operativi coordinati dal Comune.
 
 ---
 
@@ -195,7 +185,7 @@ In ogni scenario, il Gruppo non agisce mai in modo isolato: è sempre un **tasse
 
 La catena descritta in questo articolo è teoria organizzativa. La sua efficacia reale dipende da una sola cosa: **quanto è esercitata**. Le **esercitazioni periodiche** — comunali, intercomunali, regionali, nazionali — servono esattamente a questo. Verificano che i flussi informativi funzionino e che i referenti si conoscano. E che le sigle (COC, COM, COR, DI.COMA.C.) non siano solo parole, ma **persone con un telefono, una procedura e un orario di reperibilità**.
 
-Ogni volontario di protezione civile, nel proprio piccolo, contribuisce a questa catena. Quando sale sul pickup con la radio in mano e chiama la Sala Operativa, non sta parlando con "la radio". Sta parlando con la **Funzione 8 del COC**, che a sua volta comunica con la **Funzione 8 del COM**, che riporta al COR. E così il sistema tiene.
+Ogni volontario di protezione civile, nel proprio piccolo, contribuisce a questa catena. Quando sale sul pickup con la radio in mano e chiama la Sala Operativa, non sta parlando con "la radio". Sta parlando con la funzione **Telecomunicazioni d'emergenza** del COC, che a sua volta comunica con la stessa funzione del COM, che riporta al COR. E così il sistema tiene.
 
 ---
 
@@ -212,5 +202,5 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
-- [Metodo Augustus — Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
+- [Direttiva PCM 30 aprile 2021, «Indirizzi per la predisposizione dei piani di protezione civile» (GU n. 160 del 6 luglio 2021)](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

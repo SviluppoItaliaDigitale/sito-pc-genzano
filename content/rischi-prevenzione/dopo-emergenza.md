@@ -48,7 +48,7 @@ Quando le autorità dicono che si può rientrare:
 
 Controlla gli impianti con prudenza, uno alla volta.
 
-- **Gas**: se senti odore di gas, non accendere luci o fiamme, non usare interruttori. Apri le finestre, chiudi il contatore e esci. Chiama i soccorsi dall'esterno.
+- **Gas**: se senti odore di gas, non accendere luci o fiamme, non usare interruttori né telefoni nel locale. Apri finestre e porte verso l'esterno, chiudi il rubinetto del gas solo se lo raggiungi subito e senza rischi, ed esci. Chiama il 112 dall'esterno.
 - **Elettricità**: se vedi fili scoperti, prese annerite o hai avuto allagamenti, non toccare gli interruttori con le mani bagnate. Stacca il contatore se puoi farlo in sicurezza.
 - **Acqua**: dopo un'alluvione, prima di bere l'acqua del rubinetto assicurati che ordinanze o avvisi del Comune non lo vietino. Dopo un guasto alla rete idrica, segui le indicazioni del gestore. Se l'uso è vietato, per bere e cucinare usa acqua in bottiglia.
 
@@ -98,7 +98,7 @@ Dopo un evento difficile è normale sentirsi scossi, stanchi o irritabili. Anche
 
 {{< cosa-non-fare titolo="Cosa NON fare dopo l'emergenza" >}}
 - **Non rientrare** in edifici lesionati prima del via libera dei tecnici.
-- **Non accendere** luci, fiamme o interruttori se senti odore di gas.
+- **Non accendere** luci, fiamme o interruttori e non usare telefoni nel locale se senti odore di gas: esci e chiama dall'esterno.
 - **Non bere** l'acqua del rubinetto dopo un'alluvione prima di aver controllato che il Comune non lo vieti.
 - **Non diffondere** notizie non verificate o messaggi di origine sconosciuta.
 - **Non intasare** il 112 con richieste non urgenti: lascialo libero per le emergenze.

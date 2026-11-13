@@ -86,7 +86,7 @@ Chiama subito un tecnico se vedi o senti:
 - fiamma di colore non blu;
 - odore di gas.
 
-Se senti odore di gas, chiudi il gas e chiama il 112, il numero unico di emergenza. Poi chiama il numero del tuo fornitore di gas: 800 900 999.
+Se senti odore di gas, non accendere luci e non usare telefoni dentro casa. Apri le finestre. Chiudi il gas solo se lo raggiungi subito e senza rischi. Esci di casa. Da fuori chiama il 112, il numero unico di emergenza. Chiama anche il numero di pronto intervento gas scritto nella bolletta.
 
 Se hai mal di testa, nausea o sonnolenza improvvisa, potrebbe essere monossido di carbonio. Esci subito di casa. Chiama il 112.
 

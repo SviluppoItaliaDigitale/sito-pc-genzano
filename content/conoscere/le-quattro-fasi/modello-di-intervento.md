@@ -35,9 +35,9 @@ A ogni livello corrisponde un **centro di coordinamento**, cioè un tavolo dove 
 
 Il primo anello, e il più vicino al cittadino, è il **Centro Operativo Comunale (COC)**: lo attiva il Sindaco e riunisce le funzioni necessarie a gestire l'evento sul territorio. Lo abbiamo descritto in dettaglio nell'articolo [Centro Operativo Comunale (COC): cos'è e come funziona](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/). A livello regionale opera la **Sala Operativa Regionale**, mentre per le grandi emergenze il Dipartimento attiva il **Comitato Operativo** della protezione civile, che riunisce i vertici delle strutture operative nazionali. L'intera catena delle comunicazioni tra questi centri è spiegata nella scheda [La catena delle comunicazioni: DPC, COR, COM, COC](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
 
-## Le funzioni di supporto (Metodo Augustus)
+## Le funzioni di supporto
 
-Dentro ogni centro di coordinamento il lavoro è organizzato **per funzioni di supporto**, secondo il cosiddetto **Metodo Augustus** elaborato dal Dipartimento e dal Ministero dell'Interno. Ogni funzione raggruppa attività omogenee e ha un responsabile, così che in emergenza si sappia subito «chi fa cosa». Tra le funzioni tipiche:
+Dentro ogni centro di coordinamento il lavoro è organizzato **per funzioni di supporto**. L'elenco attuale, con sedici funzioni, è nella Direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021; il Comune sceglie nel Piano quali attivare. Lo schema nasce con il Metodo Augustus (1997), oggi superato. Ogni funzione raggruppa attività omogenee e ha un responsabile, così che in emergenza si sappia subito «chi fa cosa». Tra le funzioni tipiche:
 
 - **sanità e assistenza sociale**;
 - **volontariato**;
@@ -48,7 +48,7 @@ Dentro ogni centro di coordinamento il lavoro è organizzato **per funzioni di s
 - **strutture operative e viabilità** (di competenza delle autorità preposte);
 - **assistenza alla popolazione**.
 
-Il vantaggio del metodo è la **prevedibilità**: chiunque arrivi al tavolo sa come è organizzato il lavoro, anche se proviene da un altro territorio o da un'altra struttura. È lo stesso principio che permette a squadre diverse di collaborare senza confusione.
+Il vantaggio di questo schema è la **prevedibilità**: chiunque arrivi al tavolo sa come è organizzato il lavoro, anche se proviene da un altro territorio o da un'altra struttura. È lo stesso principio che permette a squadre diverse di collaborare senza confusione.
 
 Fonte: DPC; Ministero dell'Interno, [Che cosa sono CCS, COC, COM](https://www1.interno.gov.it/mininterno/export/sites/default/it/sezioni/sala_stampa/speciali/Protezione_Civile/che_cosa_i_centri_operativi.html).
 

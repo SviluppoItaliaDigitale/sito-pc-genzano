@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 4 — Gestione dei messaggi e controllo di maglia"
-description: "Net Control Station, Net Manager, maglie dirette e libere, precedenze, formato del messaggio radioamatoriale, collegamento con ICS e Metodo Augustus."
+description: "Net Control Station, Net Manager, maglie dirette e libere, precedenze, formato del messaggio radioamatoriale, collegamento con ICS e funzioni di supporto."
 layout: "single"
 toc: true
 ---
@@ -225,9 +225,9 @@ Esistono formati cartacei (vedi [Capitolo 6 del Manuale da Campo — Registro di
 
 ## Integrazione con la struttura di comando
 
-### Il Metodo Augustus (Italia)
+### Le funzioni di supporto (Italia)
 
-In Italia, la **funzione TLC** è una delle **funzioni di supporto** del COC secondo il **Metodo Augustus** (DPC, 1997; aggiornato nei piani comunali moderni). La funzione è presidiata da:
+In Italia, la **funzione TLC** è una delle **funzioni di supporto** del COC («Telecomunicazioni d'emergenza» nella Direttiva PCM 30 aprile 2021; il Metodo Augustus del 1997 è lo schema storico, superato). La funzione è presidiata da:
 
 - un **Responsabile di Funzione** nominato dal Sindaco
 - uno o più **operatori**

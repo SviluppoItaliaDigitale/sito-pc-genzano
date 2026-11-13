@@ -8,7 +8,7 @@ tts: true
 date: 2026-06-10
 ---
 
-In emergenza, la differenza tra una risposta efficace e il caos sta nell'**organizzazione**. Il Codice individua le autorità e le strutture (Parte II, commentario ai Capi I–II); questa parte spiega *come* si dispongono in azione, livello per livello, e con quale metodo di pianificazione — il **Metodo Augustus**, il riferimento italiano per eccellenza.
+In emergenza, la differenza tra una risposta efficace e il caos sta nell'**organizzazione**. Il Codice individua le autorità e le strutture (Parte II, commentario ai Capi I–II); questa parte spiega *come* si dispongono in azione, livello per livello, e con quale schema di pianificazione: le funzioni di supporto, il cui elenco attuale è nella Direttiva PCM 30 aprile 2021 e che trovano origine storica nel **Metodo Augustus** (1997).
 
 ## 5.1 La catena del coordinamento
 
