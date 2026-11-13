@@ -165,7 +165,7 @@
         ora: '03:55',
         testo: 'Senza zaino ed equipaggiamento, al COC non sei utilizzabile per attività di presidio. Ti assegnano compiti di retrovia.',
         scelte: [
-          { testo: 'Accetto: organizzo le registrazioni di chi arriva al centro di accoglienza.', next: 'retrovia', delta: { sicurezza: 0, aiutate: 2 }, fb: 'Anche la retrovia è essenziale: registrare chi arriva è parte della funzione di assistenza alla popolazione (F9).' }
+          { testo: 'Accetto: organizzo le registrazioni di chi arriva al centro di accoglienza.', next: 'retrovia', delta: { sicurezza: 0, aiutate: 2 }, fb: 'Anche la retrovia è essenziale: registrare chi arriva è parte della funzione «Assistenza alla popolazione».' }
         ]
       },
       strada_piedi: {
@@ -173,7 +173,7 @@
         testo: 'Arrivi al COC di Genzano. Il Responsabile ti dà scelta: pattuglia con un collega esperto in un quartiere, oppure supporto radio in sala.',
         scelte: [
           { testo: 'Pattuglia sul territorio: rischioso ma utile.', next: 'pattuglia', delta: { sicurezza: -1, aiutate: 3 }, fb: 'La pattuglia serve, ma sempre in coppia con un esperto e secondo le procedure: mai da soli sul territorio.' },
-          { testo: 'Supporto radio in sala: gestisco le comunicazioni.', next: 'radio', delta: { sicurezza: 1, aiutate: 2 }, fb: 'La sala radio è il sistema nervoso del COC: comunicazioni ordinate significano soccorsi efficaci (funzione F8).' }
+          { testo: 'Supporto radio in sala: gestisco le comunicazioni.', next: 'radio', delta: { sicurezza: 1, aiutate: 2 }, fb: 'La sala radio è il sistema nervoso del COC: comunicazioni ordinate significano soccorsi efficaci (funzione «Telecomunicazioni d\'emergenza»).' }
         ]
       },
       strada_auto: {
@@ -186,7 +186,7 @@
       },
       arrivo_coc: {
         ora: '04:25',
-        testo: 'Al COC la sala è attivata: F1, F3, F7 e F8 già operative. Ti affiancano a un volontario esperto. Arriva una chiamata sulla quale dovrai operare. Quale risposta dai?',
+        testo: 'Al COC la sala è attivata: le funzioni «Tecnica e di valutazione», «Volontariato», «Rappresentanze delle strutture operative» e «Telecomunicazioni d\'emergenza» sono già operative. Ti affiancano a un volontario esperto. Arriva una chiamata sulla quale dovrai operare. Quale risposta dai?',
         scelte: [
           { testo: 'Accolgo la chiamata seguendo la procedura COC: ascolto, prendo nota, attivo la squadra giusta.',
             nextRandom: ['arrivo_famiglia', 'arrivo_falso_allarme', 'arrivo_turista'],
@@ -203,7 +203,7 @@
         ora: '04:35',
         testo: 'La chiamata è di una famiglia di 4 persone sotto choc, in una casa dichiarata inagibile. Servono squadra sanitaria + accoglienza.',
         scelte: [
-          { testo: 'Accompagno la squadra sanitaria e segnalo la famiglia all\'area di accoglienza.', next: 'finale_buono', delta: { sicurezza: 0, aiutate: 4 }, fb: 'Corretto: squadra sanitaria più segnalazione all\'accoglienza. Le funzioni F2 e F9 lavorano insieme.' },
+          { testo: 'Accompagno la squadra sanitaria e segnalo la famiglia all\'area di accoglienza.', next: 'finale_buono', delta: { sicurezza: 0, aiutate: 4 }, fb: 'Corretto: squadra sanitaria più segnalazione all\'accoglienza. Le funzioni «Sanità e assistenza sociale» e «Assistenza alla popolazione» lavorano insieme.' },
           { testo: 'Vado da solo a rassicurarli e li porto fuori senza attendere la squadra.', next: 'finale_medio', delta: { sicurezza: -2, aiutate: 2 }, fb: 'Da solo in un edificio dichiarato inagibile ti metti in pericolo: servono la squadra e la verifica strutturale.' }
         ]
       },
@@ -212,10 +212,10 @@
       // chiamano per lo stesso fatto).
       arrivo_falso_allarme: {
         ora: '04:35',
-        testo: 'La chiamata segnala "boato fortissimo" in via degli Olmi. Cinque minuti dopo arriva un\'altra chiamata: stessa via, stessa descrizione. F8 verifica: era un tuono di un temporale fuori zona, niente di legato al sisma. Cosa fai?',
+        testo: 'La chiamata segnala "boato fortissimo" in via degli Olmi. Cinque minuti dopo arriva un\'altra chiamata: stessa via, stessa descrizione. La funzione «Telecomunicazioni d\'emergenza» verifica: era un tuono di un temporale fuori zona, niente di legato al sisma. Cosa fai?',
         scelte: [
           { testo: 'Annoto sul registro come "duplicato verificato — non sismico", senza inviare squadre. Risorse risparmiate per emergenze vere.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 2 }, fb: 'Verificare e annotare evita di sprecare squadre: in emergenza le risorse servono alle richieste reali.' },
-          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Comprensibile, ma la verifica era già stata fatta da F8: mandare squadre su segnalazioni chiuse toglie risorse altrove.' }
+          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Comprensibile, ma la verifica era già stata fatta dalla funzione «Telecomunicazioni d\'emergenza»: mandare squadre su segnalazioni chiuse toglie risorse altrove.' }
         ]
       },
       // Evento "shock" #2: chiamata da turista in inglese. Educa alla
@@ -246,9 +246,9 @@
       },
       retrovia: {
         ora: '05:00',
-        testo: 'Al centro di accoglienza del Palazzetto comunale registri 35 persone nelle prime 2 ore. Organizzi la distribuzione di pasti caldi con la squadra F9.',
+        testo: 'Al centro di accoglienza del Palazzetto comunale registri 35 persone nelle prime 2 ore. Organizzi la distribuzione di pasti caldi con la squadra «Assistenza alla popolazione».',
         scelte: [
-          { testo: 'Finisco il turno come supporto F9.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 3 }, fb: 'L\'assistenza alla popolazione (F9) è una delle funzioni fondamentali del Metodo Augustus.' }
+          { testo: 'Finisco il turno come supporto «Assistenza alla popolazione».', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 3 }, fb: 'L\'assistenza alla popolazione è una delle funzioni di supporto previste dalla Direttiva PCM 30 aprile 2021.' }
         ]
       },
       finale_buono: {

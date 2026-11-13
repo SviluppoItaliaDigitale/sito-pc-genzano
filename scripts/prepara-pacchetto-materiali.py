@@ -521,7 +521,7 @@ TEMI = {
         ],
         "fonti_istituzionali": [
             "Linee guida DPC sui Piani di Emergenza Comunali: https://www.protezionecivile.gov.it",
-            "Direttiva PCM 9 novembre 2012 (piani comunali): https://www.normattiva.it",
+            "Direttiva PCM 9 novembre 2012 (partecipazione del volontariato): https://www.normattiva.it",
             "Cartografia Geoportale Regione Lazio: https://geoportale.regione.lazio.it",
             "Codice della Protezione Civile (D.Lgs. 1/2018) art. 12: https://www.normattiva.it",
         ],
