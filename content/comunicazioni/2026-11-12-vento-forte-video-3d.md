@@ -1,6 +1,6 @@
 ---
 title: "Vento forte: un video in 3D su che cosa fare prima, durante e dopo"
-date: 2026-11-12T00:04:00+01:00
+date: 2026-11-12T00:07:00+01:00
 description: "Un video di poco più di un minuto, con voce e sottotitoli, mostra che cosa fare quando è previsto vento forte: in casa, a piedi, in auto e dopo le raffiche."
 badge: "Prevenzione"
 priorita: "normale"

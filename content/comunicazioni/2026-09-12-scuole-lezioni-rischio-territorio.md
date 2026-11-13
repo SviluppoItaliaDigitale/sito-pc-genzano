@@ -1,6 +1,6 @@
 ---
 title: "Lezioni nelle scuole: la Protezione Civile racconta il territorio ai ragazzi"
-date: 2026-09-12
+date: 2026-09-12T00:02:00+02:00
 description: "Il Gruppo Comunale di PC porta nelle scuole di Genzano di Roma lezioni sui rischi del territorio e sui comportamenti di autoprotezione."
 badge: "Formazione"
 priorita: "normale"

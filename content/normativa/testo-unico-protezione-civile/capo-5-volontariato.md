@@ -27,7 +27,7 @@ Definisce le **forme** del volontariato organizzato di protezione civile, raccor
 
 ## Articolo 34 — Elenco nazionale del volontariato di protezione civile
 
-Istituisce l'**Elenco nazionale** del volontariato di protezione civile, articolato negli **elenchi territoriali** delle Regioni e delle Province autonome e in un **elenco centrale** presso il Dipartimento. Solo le organizzazioni **iscritte** possono essere attivate ufficialmente e beneficiare delle **tutele** previste dal Codice. Per la Regione Lazio l'iscrizione è gestita dall'**Agenzia Regionale di Protezione Civile**.
+Istituisce l'**Elenco nazionale** del volontariato di protezione civile, articolato negli **elenchi territoriali** delle Regioni e delle Province autonome e in un **elenco centrale** presso il Dipartimento. Le organizzazioni che intendono partecipare alle attività di protezione civile **devono essere iscritte** (comma 2), e le **tutele** dell'art. 39 spettano ai volontari dei soggetti iscritti. Per la Regione Lazio l'iscrizione è gestita dall'**Agenzia Regionale di Protezione Civile**.
 
 ## Articolo 35 — Gruppi comunali di protezione civile
 
@@ -50,15 +50,15 @@ Le organizzazioni di volontariato di protezione civile partecipano all'elaborazi
 Questo articolo è **cruciale** per chi svolge attività di volontariato. Stabilisce che, durante attività **pianificate e autorizzate**, i volontari iscritti hanno diritto a:
 
 - **Mantenimento del posto di lavoro** pubblico o privato — il datore di lavoro è tenuto a concedere i permessi per partecipare alle attività di protezione civile
-- **Mantenimento del trattamento economico e previdenziale** — il datore viene rimborsato dallo Stato per i giorni in cui il lavoratore è impegnato (o il lavoratore autonomo riceve un'indennità giornaliera)
+- **Mantenimento del trattamento economico e previdenziale** — il datore che ne fa richiesta viene rimborsato, nei limiti delle risorse finanziarie disponibili, dell'equivalente degli emolumenti versati (in alternativa, come credito d'imposta); il lavoratore autonomo che ne fa richiesta ha il rimborso del mancato guadagno giornaliero, fino a un tetto aggiornato ogni tre anni (oggi 120,55 euro)
 - **Copertura assicurativa** per infortuni e responsabilità civile verso terzi durante l'attività
 - **Limiti di attivazione**: nel soccorso e nell'assistenza fino a 30 giorni consecutivi e 90 giorni l'anno, elevabili a 60 giorni consecutivi e 180 l'anno nelle emergenze di rilievo nazionale, su autorizzazione del Dipartimento della protezione civile e per i casi di effettiva necessità singolarmente individuati (commi 1 e 2); nella pianificazione, nelle esercitazioni, nella formazione e nella diffusione della cultura di protezione civile fino a 10 giorni consecutivi e 30 giorni l'anno (comma 3)
 
-Questi diritti si applicano solo per attività **ufficialmente attivate** (con nota di attivazione) e **svolte sotto il coordinamento** di un'autorità competente. Partecipare ad attività **non autorizzate** può far venir meno la copertura. Per questo ogni intervento del nostro Gruppo deve essere **tracciato**.
+Questi diritti si applicano solo ai volontari di soggetti iscritti all'Elenco nazionale e per attività **ufficialmente attivate**, con apposita comunicazione di attivazione del Dipartimento (elenco centrale) o della Regione (elenchi territoriali), anche su richiesta del Sindaco e **svolte sotto il coordinamento** di un'autorità competente. Partecipare ad attività **non autorizzate** può far venir meno la copertura. Per questo ogni intervento del nostro Gruppo deve essere **tracciato**.
 
 ## Articolo 40 — Rimborso delle spese al volontariato organizzato
 
-Le organizzazioni di volontariato iscritte e i datori di lavoro possono richiedere il **rimborso delle spese autorizzate** per attività di pianificazione, emergenza, addestramento e formazione, e diffusione della cultura di protezione civile. Le istanze sono presentate al soggetto che ha emesso la comunicazione di attivazione entro due anni dalla conclusione dell'attività.
+Le organizzazioni di volontariato iscritte e i datori di lavoro possono richiedere il **rimborso delle spese autorizzate** per attività di pianificazione, emergenza, addestramento e formazione, e diffusione della cultura di protezione civile. I rimborsi sono erogati nei limiti delle rispettive disponibilità di bilancio. Le istanze sono presentate al soggetto che ha emesso la comunicazione di attivazione entro due anni dalla conclusione dell'attività.
 
 ## Articolo 41 — Modalità di intervento del volontariato in emergenza
 
@@ -71,7 +71,7 @@ Istituisce il **Comitato nazionale del volontariato di protezione civile**, orga
 ## In sintesi: cosa significa tutto questo per il Gruppo Comunale di Genzano di Roma
 
 1. **Siamo un'organizzazione ufficialmente riconosciuta**: il nostro Gruppo Comunale è iscritto all'elenco territoriale della Regione Lazio.
-2. **Operiamo sotto attivazione formale**: nessun intervento è "privato". Ogni attività parte da una **nota di attivazione** del Comune, della Prefettura o della Regione.
+2. **Operiamo sotto attivazione formale**: nessun intervento è "privato". Le tutele dell'art. 39 scattano con la **comunicazione di attivazione** della Regione (o del Dipartimento per l'elenco centrale), anche quando la richiesta arriva dal Sindaco.
 3. **I nostri volontari hanno tutele**: permessi, copertura assicurativa, rimborso spese — se sono iscritti all'Elenco e se l'attività è autorizzata.
 4. **La formazione è valorizzata**: il corso base regionale è il primo passo per operare in sicurezza.
 5. **La gratuità è un valore, non un limite**: il volontariato di protezione civile è gratuito per principio, non per carenza di risorse.

@@ -1,6 +1,6 @@
 ---
 title: "Cucina sicura durante le feste"
-date: 2026-11-24
+date: 2026-11-24T00:01:00+01:00
 draft: false
 description: "Consigli semplici per cucinare in sicurezza a Natale e Capodanno."
 badge: "Prevenzione"

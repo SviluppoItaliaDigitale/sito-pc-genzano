@@ -106,7 +106,7 @@ Altri articoli completano la disciplina del volontariato organizzato:
 </div>
 <div class="commento-spiega">
 <h4>Che cosa dice</h4>
-<p>Sono i celebri <strong>«benefici di legge»</strong>. Il volontario impiegato in attività autorizzate — anche su richiesta del Sindaco — non deve rimetterci: gli sono garantiti il <strong>mantenimento del posto di lavoro</strong>, del <strong>trattamento economico</strong> e della <strong>copertura assicurativa</strong> per il periodo dell'impiego.</p>
+<p>Sono i celebri <strong>«benefici di legge»</strong>. Il volontario di un soggetto iscritto all'Elenco nazionale, impiegato in attività autorizzate con comunicazione di attivazione del Dipartimento o della Regione — anche su richiesta del Sindaco — non deve rimetterci: gli sono garantiti il <strong>mantenimento del posto di lavoro</strong>, del <strong>trattamento economico</strong> e della <strong>copertura assicurativa</strong> per il periodo dell'impiego. Al datore di lavoro che lo chiede è rimborsato l'equivalente degli emolumenti, nei limiti delle risorse finanziarie disponibili; ai lavoratori autonomi, il mancato guadagno giornaliero fino a 120,55 euro.</p>
 <h4>Perché conta</h4>
 <p>È ciò che rende il volontariato di protezione civile <strong>sostenibile e affidabile</strong>: un lavoratore può rispondere a un'attivazione senza perdere stipendio o posto. Senza questi benefici, il sistema non potrebbe contare sulla disponibilità di migliaia di volontari nei momenti critici.</p>
 </div>
@@ -114,7 +114,7 @@ Altri articoli completano la disciplina del volontariato organizzato:
 </div>
 </div>
 
-- **Art. 40** — *Rimborso delle spese*: i datori di lavoro e le organizzazioni ottengono il **rimborso** delle spese sostenute per i volontari impiegati in attività autorizzate. È il meccanismo che rende concreti i benefici dell'art. 39.
+- **Art. 40** — *Rimborso delle spese*: i datori di lavoro e le organizzazioni possono chiedere il **rimborso** delle spese sostenute per i volontari impiegati in attività autorizzate, che il soggetto che ha reso la comunicazione di attivazione eroga **nei limiti delle rispettive disponibilità di bilancio**. È il meccanismo che rende concreti i benefici dell'art. 39.
 
 <div class="commento-articolo">
 <div class="commento-art-head">

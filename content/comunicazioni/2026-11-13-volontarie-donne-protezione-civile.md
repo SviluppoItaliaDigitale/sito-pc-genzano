@@ -1,6 +1,6 @@
 ---
 title: "Le donne nel volontariato di Protezione Civile"
-date: 2026-11-13
+date: 2026-11-13T00:01:00+01:00
 description: "Le donne nel volontariato di Protezione Civile: ruoli, competenze, ostacoli ancora presenti e un invito a chi pensa di iscriversi."
 badge: "Volontariato"
 priorita: "normale"

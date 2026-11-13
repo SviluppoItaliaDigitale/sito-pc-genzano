@@ -1,6 +1,6 @@
 ---
 title: "Giornata mondiale delle vittime della strada"
-date: 2026-11-15T00:02:00+01:00
+date: 2026-11-17T00:01:00+01:00
 description: "Ogni anno la terza domenica di novembre ricorda le vittime di incidenti stradali. Numeri, fatti, prevenzione."
 badge: "Informazione"
 priorita: "normale"

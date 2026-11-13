@@ -1,6 +1,6 @@
 ---
 title: "Temporali e fulmini: un video in 3D per sapere dove ripararsi"
-date: 2026-11-12T00:02:00+01:00
+date: 2026-11-12T00:06:00+01:00
 description: "Un video di un minuto e mezzo, con voce e sottotitoli, mostra sul rilievo dei Castelli Romani dove ripararsi quando arriva un temporale e che cosa evitare."
 badge: "Prevenzione"
 priorita: "normale"

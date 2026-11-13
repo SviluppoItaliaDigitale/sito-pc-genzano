@@ -46,7 +46,7 @@ Il beneficio è riconosciuto:
 ### Rimborso al datore di lavoro
 Il **datore di lavoro pubblico o privato** che versa la retribuzione al volontario attivato può chiedere il **rimborso** dell'equivalente degli emolumenti, nei limiti delle risorse disponibili e con la procedura dell'articolo 40. In alternativa il rimborso può essere riconosciuto come credito d'imposta (art. 39, comma 4).
 
-Il **volontario lavoratore autonomo** (libero professionista, artigiano) può chiedere il **rimborso del mancato guadagno** giornaliero, calcolato sulla dichiarazione dei redditi dell'anno precedente ed entro un limite giornaliero aggiornato ogni tre anni (art. 39, comma 5).
+Il **volontario lavoratore autonomo** (libero professionista, artigiano) può chiedere il **rimborso del mancato guadagno** giornaliero, calcolato sulla dichiarazione dei redditi dell'anno precedente ed entro un limite giornaliero aggiornato ogni tre anni, oggi 120,55 euro (art. 39, comma 5).
 
 ### Copertura assicurativa
 Durante l'attività, il volontario ha la **copertura assicurativa** prevista dall'articolo 18 del Codice del Terzo settore (D.Lgs. 117/2017). Nelle emergenze di rilievo nazionale di lunga durata e negli interventi all'estero il Dipartimento o la Regione possono attivare polizze integrative (art. 39, comma 1, lettera c).
@@ -89,7 +89,7 @@ I rapporti con il datore di lavoro funzionano meglio se:
 
 ## A Genzano di Roma
 
-L'attestazione dell'attivazione da consegnare al datore di lavoro è rilasciata dall'autorità che ha attivato il volontario (Comune, Regione o Dipartimento), secondo la modulistica prevista dalla Regione Lazio. I volontari che hanno bisogno di chiarimenti possono rivolgersi al **Responsabile del Gruppo**.
+L'attestazione dell'attivazione da consegnare al datore di lavoro riporta la comunicazione di attivazione che, per i soggetti iscritti all'elenco territoriale, rende la Regione (il Dipartimento per l'elenco centrale), anche quando la richiesta di intervento viene dal Sindaco (art. 39, comma 1); la modulistica è quella prevista dalla Regione Lazio. I volontari che hanno bisogno di chiarimenti possono rivolgersi al **Responsabile del Gruppo**.
 
 ## Per approfondire
 

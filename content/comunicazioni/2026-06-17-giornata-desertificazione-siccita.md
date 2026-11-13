@@ -1,6 +1,6 @@
 ---
 title: "Giornata contro la desertificazione e la siccità: nel 2026 al centro i pascoli"
-date: 2026-06-17T00:01:00+02:00
+date: 2026-06-17T00:02:00+02:00
 description: "Il 17 giugno l'ONU dedica una giornata a desertificazione e siccità. Nel 2026 la ospita il Kenya, sul tema dei pascoli. Che cosa insegna ai Castelli Romani."
 badge: "Informazione"
 priorita: "normale"

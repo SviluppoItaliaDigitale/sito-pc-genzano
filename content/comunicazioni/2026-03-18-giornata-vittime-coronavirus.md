@@ -1,6 +1,6 @@
 ---
 title: "18 marzo, Giornata nazionale in memoria delle vittime dell'epidemia di coronavirus"
-date: 2026-03-18T00:02:00+02:00
+date: 2026-03-18T00:01:00+01:00
 description: "Mercoledì 18 marzo l'Italia ricorda le vittime dell'epidemia di coronavirus con un minuto di silenzio. Che cosa prevede la legge n. 35 del 2021."
 badge: "Informazione"
 priorita: "normale"

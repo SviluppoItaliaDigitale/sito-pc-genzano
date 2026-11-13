@@ -1,6 +1,6 @@
 ---
 title: "Pioggia forte e alluvioni: un video in 3D sui Castelli Romani"
-date: 2026-10-24T00:04:00+02:00
+date: 2026-10-24T00:05:00+02:00
 description: "Un video di circa tre minuti, con voce e sottotitoli, mostra sul rilievo dei Castelli Romani perché un temporale forte allaga le strade e che cosa fare."
 badge: "Prevenzione"
 priorita: "normale"

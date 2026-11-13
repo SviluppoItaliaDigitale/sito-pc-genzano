@@ -1,6 +1,6 @@
 ---
 title: "Cucina di festa: sicurezza domestica durante le feste"
-date: 2026-11-24
+date: 2026-11-24T00:01:00+01:00
 description: "La cucina è il luogo più pericoloso della casa, soprattutto durante le feste. Consigli pratici per evitare incidenti."
 badge: "Prevenzione"
 priorita: "normale"

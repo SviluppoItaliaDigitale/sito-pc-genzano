@@ -1,6 +1,6 @@
 ---
 title: "2 giugno: Festa della Repubblica e volontariato civico"
-date: 2026-06-02
+date: 2026-06-02T00:01:00+02:00
 description: "La Festa della Repubblica ci ricorda che la Protezione Civile nasce come espressione di solidarietà costituzionale."
 badge: "Informazione"
 priorita: "normale"

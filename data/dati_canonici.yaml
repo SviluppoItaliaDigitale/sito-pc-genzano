@@ -279,6 +279,19 @@ dati:
         contesto: 'volontari|giorni consecutivi'
         finestra: 200
 
+  - id: volontari-autonomi-tetto-mancato-guadagno
+    dato: "Tetto giornaliero del rimborso del mancato guadagno ai volontari lavoratori autonomi (art. 39, comma 5, Codice di protezione civile)"
+    valore: "120,55 euro al giorno (aggiornato ogni 3 anni; il testo originale del 2018 indicava 103,30 euro)"
+    fonti:
+      - nome: "D.Lgs. 2 gennaio 2018, n. 1, art. 39, comma 5, con nota di aggiornamento: decreto 22/09/2023 (GU 17/02/2024, n. 40), verificato su Normattiva il 13/11/2026"
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art39"
+    vietati:
+      - regex: '103,30'
+        perche: "103,30 euro è il tetto originario del 2018, superato dal decreto 22/09/2023: oggi 120,55 euro."
+        contesto: 'volontari|autonom|mancato guadagno|art\. 39'
+        finestra: 300
+        salvo_se_prima: '(?:originari\w*|2018|fino al|fissava\s+un\s+tetto\s+di)\s*$'
+
   - id: indicazioni-nazionali-curricolo
     dato: "Indicazioni nazionali per il curricolo dell'infanzia e del primo ciclo"
     valore: "D.M. 9 dicembre 2025, n. 221 (dal 2026/27, con gradualità); D.M. 254/2012 solo per le classi già avviate nel 2025/26"

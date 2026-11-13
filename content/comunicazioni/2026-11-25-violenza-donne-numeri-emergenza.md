@@ -1,6 +1,6 @@
 ---
 title: "25 novembre: contro la violenza sulle donne, i numeri da conoscere"
-date: 2026-11-25
+date: 2026-11-25T00:01:00+01:00
 description: "Giornata internazionale contro la violenza sulle donne. I numeri di emergenza, i servizi, come riconoscere e segnalare."
 badge: "Informazione"
 priorita: "normale"

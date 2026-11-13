@@ -1,6 +1,6 @@
 ---
 title: "Giornata mondiale dei monumenti: tutela del patrimonio nelle emergenze"
-date: 2026-04-18
+date: 2026-04-18T00:02:00+02:00
 description: "Il 18 aprile è la Giornata internazionale dei monumenti e dei siti. Proteggere il patrimonio culturale è parte integrante della Protezione Civile italiana."
 badge: "Informazione"
 priorita: "normale"
