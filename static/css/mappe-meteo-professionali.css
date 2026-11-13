@@ -75,11 +75,14 @@
 
 .mmp-scheda.is-attiva { outline: 3px solid #FF6600; outline-offset: 2px; }
 
+/* Miniatura intera, senza ritaglio: con un'altezza fissa e «cover» sul telefono
+   restava solo una striscia della carta (segnalazione del 13/11/2026). */
 .mmp-scheda img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
   background: #f2f5f8;
   display: block;
 }
@@ -165,13 +168,19 @@
   margin-bottom: 0.8rem;
 }
 
+.mmp-scorri { display: none; font-size: 0.85rem; color: #42515c; margin: -0.5rem 0 1rem; }
+
 .mmp-tastiera { font-size: 0.85rem; color: #42515c; margin: 0; }
 
 .mmp-esito { font-size: 0.9rem; color: #003366; min-height: 1.2em; margin: 0 0 0.6rem; }
 
 @media (max-width: 767px) {
   .mmp-comandi { grid-template-columns: 1fr; }
-  .mmp-scheda img { height: 130px; }
+  /* Sul telefono la carta resta leggibile: larga 760 px in un riquadro che si
+     scorre col dito (lo script la centra sull'Italia). */
+  .mmp-tela { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .mmp-tela img { width: 760px; max-width: none; }
+  .mmp-scorri { display: block; }
   .mmp-visualizzatore { padding: 0.9rem; }
   .mmp-vista-azioni .btn { flex: 1 1 auto; }
 }
