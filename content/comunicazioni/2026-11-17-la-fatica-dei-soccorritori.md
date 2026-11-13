@@ -1,7 +1,7 @@
 ---
 title: "La fatica dei soccorritori: stanchezza, stress e ritorno a casa"
 date: 2026-11-17
-description: "Che cosa resta addosso a chi soccorre: stanchezza che si accumula, stress da evento critico, trauma vicario. I segnali da riconoscere e che cosa fanno le organizzazioni."
+description: "Stanchezza che si accumula, stress da evento critico, trauma vicario: i segnali da riconoscere e che cosa fanno le organizzazioni per chi soccorre."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -10,7 +10,7 @@ image_alt: "Cover dell'articolo: La fatica dei soccorritori: stanchezza, stress 
 scadenza: ""
 area: ""
 tts: true
-social_citazione: "Prendersi cura di chi soccorre è un compito dell'organizzazione, non un fatto privato di chi ha paura di sembrare debole."
+social_citazione: "Prendersi cura di chi soccorre è un compito dell'organizzazione. Non si lascia alla buona volontà del singolo."
 social_punti:
   - "Tre fatiche diverse: la stanchezza che si accumula, lo stress da evento critico, il trauma vicario"
   - "Segnali da osservare in te e nei compagni: sonno e appetito che cambiano, irritabilità, scatti di rabbia, isolamento, più alcol"
@@ -20,21 +20,21 @@ allegati: []
 draft: false
 ---
 
-Immagina un volontario che rientra a casa all'alba, dopo una notte di pioggia passata a controllare i punti dove l'acqua si raccoglie. Si toglie gli stivali, mette il telefono in carica, prova a dormire. Il sonno non arriva. Nella testa tornano la strada allagata, la voce di una persona anziana che non voleva uscire di casa, il pensiero di aver dimenticato qualcosa.
+Immagina un volontario che rientra a casa all'alba. Ha passato la notte sotto la pioggia, a controllare i punti dove l'acqua si raccoglie. Si toglie gli stivali, mette il telefono in carica, prova a dormire. Il sonno non arriva. Nella testa tornano la strada allagata e la voce di una persona anziana che non voleva uscire di casa. E il pensiero di aver dimenticato qualcosa.
 
-Succede a molti. Chi soccorre porta a casa la fatica del corpo e, a volte, anche quella di ciò che ha visto e sentito. In questo articolo guardiamo l'emergenza con gli occhi di chi presta aiuto. Non è un testo clinico: se qualcosa ti riguarda da vicino, il riferimento resta un professionista.
+Può succedere a chiunque presti aiuto. Chi soccorre porta a casa la fatica del corpo. A volte anche quella di ciò che ha visto e sentito. In questo articolo guardiamo l'emergenza con gli occhi di chi presta aiuto. Non è un testo clinico: se qualcosa ti riguarda da vicino, il riferimento resta un professionista.
 
 ## Tre fatiche diverse
 
-La prima è la **stanchezza che si accumula**. La guida dell'Organizzazione Mondiale della Sanità (OMS) sul primo soccorso psicologico indica come principale fonte di stress per chi aiuta il lavoro di tutti i giorni durante una crisi: orari lunghi, responsabilità pesanti, compiti poco chiari, comunicazione scarsa, luoghi poco sicuri. Nessuno di questi fattori è drammatico da solo. Sommati per giorni, logorano.
+La prima è la **stanchezza che si accumula**. L'Organizzazione Mondiale della Sanità (OMS) ne parla nella sua guida sul primo soccorso psicologico. Per chi aiuta, scrive, la principale fonte di stress è il lavoro di tutti i giorni durante una crisi. Orari lunghi, responsabilità pesanti, compiti poco chiari, comunicazione scarsa, luoghi poco sicuri: sono fatiche ordinarie, che si sommano giorno dopo giorno.
 
-La seconda è lo **stress da evento critico**. Nasce da un episodio singolo e intenso. I Centri per il controllo delle malattie degli Stati Uniti (CDC) citano fra queste esperienze il contatto con persone gravemente ferite, con la morte o con la perdita di un collega.
+La seconda è lo **stress da evento critico**. Nasce da un episodio singolo e intenso. Ne parlano i Centri per il controllo delle malattie degli Stati Uniti (CDC). Fra gli esempi citano il contatto con persone gravemente ferite o con la morte, e la perdita di un collega.
 
 La terza ha un nome meno noto: **trauma vicario**, chiamato anche stress traumatico secondario. È il peso emotivo che nasce dall'ascoltare il racconto di un trauma vissuto da un'altra persona. Non serve essere stati in pericolo. Basta aver raccolto, ora dopo ora, le storie di chi ha perso la casa.
 
-La direttiva del Presidente del Consiglio dei Ministri del 13 giugno 2006 sui criteri per gli interventi psicosociali nelle catastrofi lo dice in modo chiaro. Fra i destinatari dell'assistenza psicologica mette anche i soccorritori, «volontari e professionisti», e intere squadre di soccorso.
+In Italia lo dice in modo chiaro una direttiva del Presidente del Consiglio dei Ministri, del 13 giugno 2006. Riguarda gli interventi psicosociali nelle catastrofi. Fra i destinatari dell'assistenza psicologica mette anche i soccorritori, «volontari e professionisti», e intere squadre di soccorso.
 
-Quanto è diffuso il problema? Una revisione di 28 studi su oltre 20.000 soccorritori, in gran parte vigili del fuoco, personale delle ambulanze e forze dell'ordine, ha stimato che circa uno su dieci presentava, al momento dello studio, un disturbo da stress post-traumatico. È molto più che nella popolazione generale. Il dato non riguarda direttamente il volontariato e non è una previsione per il singolo: dice che il rischio è reale e che va gestito.
+Quanto è diffuso il problema? Una revisione ha riunito 28 studi su oltre 20.000 soccorritori, soprattutto vigili del fuoco, personale delle ambulanze e forze dell'ordine. Circa uno su dieci presentava, al momento dello studio, un disturbo da stress post-traumatico. È molto più che nella popolazione generale. Il dato non riguarda direttamente il volontariato e non è una previsione per il singolo. Dice che il rischio esiste e che va gestito.
 
 ## I segnali, in te e nei compagni
 
@@ -47,7 +47,7 @@ Le reazioni allo stress sono reazioni normali a situazioni fuori dal normale. Il
 
 Un segnale passeggero, nelle ore dopo un intervento, è atteso. Conta quando dura, peggiora o pesa sulla vita di tutti i giorni. Dolore al petto, fatica a respirare o segni di shock sono invece un'urgenza medica: si chiama subito il **112**.
 
-Spesso i segnali li vede prima un compagno di squadra. Il CDC chiede ai soccorritori di «tenersi d'occhio a vicenda». Un collega che non scherza più, che si offre sempre per il turno successivo o che evita una certa strada non va giudicato. Gli si chiede come sta, e lo si ascolta senza insistere.
+Spesso i segnali li vede prima un compagno di squadra. Il CDC chiede ai soccorritori di «tenersi d'occhio a vicenda». Un collega che si chiude, che ha scatti di rabbia insoliti o che beve più del solito non va giudicato. Gli si chiede come sta, e lo si ascolta senza insistere.
 
 ## Il ritorno alla vita normale
 
@@ -57,15 +57,15 @@ Il CDC aggiunge che il recupero non è lineare: ci sono giorni buoni e giorni me
 
 ## Che cosa fanno le organizzazioni
 
-Prendersi cura di chi soccorre è un compito dell'organizzazione, non un fatto privato di chi ha paura di sembrare debole.
+Prendersi cura di chi soccorre è un compito dell'organizzazione. Non si lascia alla buona volontà del singolo.
 
-Il primo strumento sono **i turni**. L'OMS raccomanda orari ragionevoli, carico di lavoro diviso, turni nella fase acuta e pause regolari. Il CDC chiede ai capisquadra di rispettare la rotazione e di osservare chi è esausto o distratto: un soccorritore stremato rischia di ferire sé stesso e gli altri.
+Il primo strumento sono **i turni**. L'OMS raccomanda orari ragionevoli, carico di lavoro diviso, turni nella fase acuta e pause regolari. Il CDC chiede ai capisquadra di rispettare la rotazione e di osservare chi è esausto o distratto. Un soccorritore stremato rischia di ferire sé stesso e gli altri.
 
-Il secondo è **la prevenzione**. La direttiva del 2006 chiede di valutare in anticipo i fattori di rischio di ogni scenario, per prevenire disagi psicofisici nei soccorritori. Per gli operatori sanitari sul posto prevede un monitoraggio dei segni di stress.
+Il secondo è **la prevenzione**. La direttiva del 2006 chiede di valutare in anticipo i fattori di rischio di ogni scenario. Lo scopo è prevenire disagi psicofisici nei soccorritori. Per gli operatori sanitari sul posto prevede un monitoraggio dei segni di stress.
 
-Il terzo è **il confronto dopo l'intervento**. Qui serve una distinzione. La riunione operativa ripercorre fatti, consegne e procedure, e nessuno è obbligato a raccontare le proprie emozioni. Il «debriefing psicologico» è un'altra cosa: l'OMS, dal 2012, raccomanda di non usarlo per prevenire lo stress post-traumatico nelle persone esposte da poco a un trauma.
+Il terzo è **il confronto dopo l'intervento**. Qui serve una distinzione. La riunione operativa ripercorre fatti, consegne e procedure, e nessuno è obbligato a raccontare le proprie emozioni. Il «debriefing psicologico» è un'altra cosa. Dal 2012 l'OMS raccomanda di non usarlo per prevenire lo stress post-traumatico in chi è stato esposto da poco a un trauma.
 
-Il quarto è **il supporto professionale**. La direttiva del 2006 affida alle Regioni le équipe psicosociali per l'emergenza: psicologi e psichiatri che intervengono sul luogo del disastro, riconoscibili dalla casacca verde con la sigla «PSIC». Il loro referente regionale dispone anche il ricambio degli operatori dell'équipe. Fuori dall'emergenza, per un sostegno personale, i riferimenti sono il medico di famiglia, i servizi della ASL e gli psicologi iscritti all'Ordine.
+Il quarto è **il supporto professionale**. La direttiva del 2006 affida alle Regioni le équipe psicosociali per l'emergenza. Le formano operatori dei servizi regionali, a cui si possono aggiungere volontari e professionisti degli ordini. Lavorano vicino al posto medico avanzato e nei luoghi di accoglienza, con la casacca verde e la sigla «PSIC». Il loro referente regionale dispone anche il ricambio degli operatori dell'équipe. Fuori dall'emergenza, per un sostegno personale, ci si rivolge al medico di famiglia. Ci sono poi i servizi della ASL Roma 6 e gli psicologi iscritti all'Ordine.
 
 ## Che cosa puoi fare tu
 
@@ -77,7 +77,7 @@ Il quarto è **il supporto professionale**. La direttiva del 2006 affida alle Re
 - parla di ciò che hai vissuto quando lo scegli tu, con chi scegli tu;
 - se il disagio dura, peggiora o ti ostacola, parlane con il medico o con uno psicologo. L'OMS indica di farlo se le difficoltà continuano oltre un mese, ma non serve aspettare se ti preoccupano.
 
-**Se sei un familiare o un amico**, ascolta senza fare domande a raffica e senza pretendere racconti. Pazienza e normalità aiutano più dei consigli.
+**Se sei un familiare o un amico**, ascolta senza fare domande a raffica e senza pretendere racconti. Il CDC suggerisce alle famiglie pazienza, comprensione e dialogo.
 
 In caso di pericolo immediato, anche se pensi di farti del male, chiama il **112**.
 

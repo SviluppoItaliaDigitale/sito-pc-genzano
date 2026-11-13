@@ -21,17 +21,17 @@ social_punti:
 draft: false
 ---
 
-Se a casa suona l'allarme antincendio, quasi tutti possiamo alzarci e uscire. In un reparto di ospedale, in una residenza per anziani o in una cella le cose vanno diversamente. Chi vive lì dipende da altre persone per lasciare la stanza: per una malattia, per un letto da cui non si alza, per un ausilio, oppure perché le porte si aprono solo dall'esterno. Per queste persone la sicurezza non si improvvisa. Si decide prima, nei piani, nei turni e nelle prove.
+Se a casa suona l'allarme antincendio, quasi tutti possiamo alzarci e uscire. In un reparto di ospedale, in una residenza per anziani o in una cella le cose vanno diversamente. Chi vive lì dipende da altre persone per lasciare la stanza. Può essere per una malattia, per un letto da cui non si alza o per un ausilio. Oppure perché le porte si aprono solo dall'esterno. Per queste persone la sicurezza non si improvvisa. Si decide prima, nei piani, nei turni e nelle prove.
 
 In questa serie raccontiamo la protezione civile da punti di vista diversi. Oggi guardiamo a chi abita in luoghi da cui non si esce da soli.
 
 ## Di chi parliamo
 
-Le strutture sono diverse fra loro. Ci sono gli ospedali e le case di cura, le residenze sanitarie assistenziali (RSA) e le case di riposo, le strutture per persone con disabilità e gli istituti penitenziari. In tutte convivono due gruppi: chi ci lavora e chi ci vive. Le norme sulla sicurezza partono dai primi, che hanno il compito di proteggere anche i secondi.
+Le strutture sono diverse fra loro. Ci sono gli ospedali e le case di cura, le residenze sanitarie assistenziali (RSA) e le case di riposo. Ci sono le strutture per persone con disabilità e gli istituti penitenziari. In tutte convivono due gruppi: chi ci lavora e chi ci vive. Le norme sulla sicurezza partono dai primi, che hanno il compito di proteggere anche i secondi.
 
 ## Il piano di emergenza interno
 
-Il Testo unico sulla sicurezza sul lavoro, il [decreto legislativo 81/2008](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81), chiede al datore di lavoro di organizzare la gestione delle emergenze e i rapporti con i servizi pubblici di soccorso (articolo 43). Ne abbiamo parlato nell'articolo sul [Testo unico 81/2008](/comunicazioni/2026-10-21-sicurezza-lavoro-81-2008/).
+La base è il Testo unico sulla sicurezza sul lavoro, il [decreto legislativo 81/2008](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81). L'articolo 43 chiede al datore di lavoro di organizzare la gestione delle emergenze e i rapporti con i servizi pubblici di soccorso. Ne abbiamo parlato nell'articolo sul [Testo unico 81/2008](/comunicazioni/2026-10-21-sicurezza-lavoro-81-2008/).
 
 I dettagli li fissa il [decreto del Ministro dell'interno 2 settembre 2021](https://www.gazzettaufficiale.it/eli/id/2021/10/04/21A05748/sg), in vigore dall'ottobre 2022. Il piano di emergenza scritto è obbligatorio in tre casi:
 
@@ -39,7 +39,7 @@ I dettagli li fissa il [decreto del Ministro dell'interno 2 settembre 2021](http
 - quando il luogo è aperto al pubblico con più di cinquanta presenti;
 - quando l'attività è soggetta ai controlli dei Vigili del fuoco.
 
-Fra le attività soggette ai controlli ci sono le strutture sanitarie con ricovero e le case di riposo per anziani con oltre 25 posti letto (attività 68 del [DPR 151/2011](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151)).
+Fra queste attività ci sono le strutture sanitarie con ricovero e le case di riposo per anziani con oltre 25 posti letto. Lo dice l'attività 68 del [DPR 151/2011](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151).
 
 Il piano deve contenere anche «le specifiche misure per assistere le persone con esigenze speciali». Il decreto chiede di individuare le loro necessità e di prevederle nelle procedure di evacuazione. Indica anche come dare l'allarme a chi non sente o non vede bene: luci, scritte luminose, dispositivi a vibrazione, messaggi da altoparlante. Gli ascensori non si usano per uscire, salvo quelli costruiti apposta.
 
@@ -57,17 +57,17 @@ Il decreto 81/2008 vale anche negli istituti penitenziari. Lì si applica «tene
 
 ## Il collegamento con il piano comunale
 
-Il piano interno dice che cosa fare dentro l'edificio. Il piano comunale dice che cosa succede fuori. La [direttiva del Presidente del Consiglio dei ministri 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf) chiede ai Comuni di indicare dove sono ospedali, case di cura, ambulatori e carceri. Chiede anche di stimare quante persone con disabilità o in condizioni di fragilità vivono sul territorio, con i dati del Servizio sanitario regionale.
+Il piano interno dice che cosa fare dentro l'edificio. Il piano comunale dice che cosa succede fuori. Lo regola la [direttiva del Presidente del Consiglio dei ministri 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf). Il piano deve indicare dove sono ospedali, case di cura, ambulatori e carceri. Chiede anche di stimare quante persone con disabilità o in condizioni di fragilità vivono sul territorio, con i dati del Servizio sanitario regionale.
 
 Gli obiettivi sono due: conoscere le specifiche necessità assistenziali di queste persone e sapere quali risorse ci sono per loro. La direttiva fa tre esempi: alloggi, mezzi di trasporto speciali, personale specializzato. Se una residenza deve essere sgomberata, il Comune deve già sapere dove possono andare gli ospiti e con quali mezzi. Puoi leggere come è organizzato il [Piano di emergenza comunale di Genzano](/piano-emergenza/).
 
 ## Le esercitazioni
 
-Un piano mai provato è solo carta. Il decreto del 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega i piani comunali alle esercitazioni (articolo 18). Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
+Un piano mai provato è solo carta. Il decreto del 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega la pianificazione alle esercitazioni (articolo 18). Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
 
 ## Che cosa puoi fare tu, se hai un familiare in struttura
 
-- **Chiedi del piano.** Domanda come è organizzata l'evacuazione e come è considerato il tuo familiare, per esempio se usa la carrozzina o ha un apparecchio acustico.
+- **Chiedi del piano.** Domanda come è organizzata l'evacuazione e come si tiene conto del tuo familiare: per esempio, se usa la carrozzina o un apparecchio acustico.
 - **Lascia più di un contatto.** Indica almeno due numeri di telefono e aggiornali quando cambiano.
 - **Tieni aggiornate terapie e ausili.** Segnala alla struttura ogni cambio di farmaci, ausili e allergie. Conserva anche tu un elenco aggiornato.
 - **Concorda chi ti chiamerà.** Chiedi il nome della persona che ti darà notizie in caso di trasferimento.

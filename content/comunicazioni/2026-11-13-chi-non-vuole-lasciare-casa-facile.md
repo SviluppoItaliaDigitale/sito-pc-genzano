@@ -81,7 +81,7 @@ Il **112** è il numero unico per tutte le emergenze.
 
 Questi consigli non sono aiuto psicologico. Il Gruppo non dà aiuto psicologico.
 
-Se la paura pesa su di te, parla con il medico di famiglia. Puoi anche rivolgerti ai servizi dell'ASL Roma 6.
+Se la paura pesa su di te, parla con il medico di famiglia. Puoi anche chiedere aiuto alla ASL Roma 6, l'azienda sanitaria della tua zona.
 
 ## Sul nostro sito
 

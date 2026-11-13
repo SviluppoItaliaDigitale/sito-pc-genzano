@@ -33,7 +33,7 @@ Sapere che cosa viene chiesto può rendere la richiesta meno spaventosa. A volte
 
 ## Perché si dice di no
 
-Dietro un rifiuto possono esserci ragioni molto concrete e comprensibili. Paura, attaccamento e incertezza sono reazioni comuni davanti a una richiesta improvvisa.
+Dietro un rifiuto possono esserci ragioni molto concrete. Davanti a una richiesta improvvisa, esitare è una reazione comprensibile.
 
 - **La casa.** È il posto dove si è vissuto, a volte da sempre. Lasciarla, anche per una notte, fa sentire più esposti.
 - **Gli animali.** Nel luglio 1997 un gruppo di ricercatori ha intervistato 397 famiglie della contea di Yuba, in California, sei mesi dopo un ordine di evacuazione per alluvione. Il 19,4% delle famiglie non aveva lasciato la casa. Fra le famiglie senza bambini, avere animali aumentava il rischio di restare, e il rischio cresceva con il numero di animali. Pesavano anche dettagli pratici, come non avere un trasportino per il gatto.
@@ -83,7 +83,7 @@ Per un vicino:
 
 In emergenza il riferimento resta il **112**, il numero unico di emergenza.
 
-I consigli su come parlare sono indicazioni di attenzione per le conversazioni di ogni giorno: non sono supporto psicologico, che il Gruppo non offre. Se la paura o l'ansia per l'evacuazione pesano su di te o su un familiare, puoi rivolgerti al medico di famiglia o ai servizi dell'ASL Roma 6. Alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) trovi i riferimenti, anche per i minori.
+I consigli su come parlare sono indicazioni di attenzione per le conversazioni di ogni giorno: non sono supporto psicologico, che il Gruppo non offre. Se la paura o l'ansia per l'evacuazione pesano su di te o su un familiare, puoi rivolgerti al medico di famiglia o ai servizi dell'Azienda sanitaria locale (ASL) Roma 6. Alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) trovi i riferimenti, anche per i minori.
 
 ## Per approfondire
 

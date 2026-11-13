@@ -1,6 +1,6 @@
 ---
 title: "Dove e come costruiamo: il rischio visto dall'urbanista"
-date: 2026-11-24
+date: 2026-11-24T00:02:00+01:00
 description: "Il rischio nasce anche dalle scelte su dove e come costruire. Mappe di frane e terremoti, consumo di suolo, piani comunali: il caso di Genzano."
 badge: "Informazione"
 priorita: "normale"
@@ -32,21 +32,21 @@ Sulla pericolosità possiamo fare poco. Un versante ripido resta ripido. Su dove
 
 **Frane e alluvioni.** Le Autorità di bacino distrettuali redigono i **Piani di assetto idrogeologico** (PAI). I piani delimitano le aree a pericolosità da frana e idraulica e stabiliscono che cosa vi si può fare. L'Istituto superiore per la protezione e la ricerca ambientale (ISPRA) riunisce i PAI di tutta Italia in un'unica mappa. Le classi sono cinque: molto elevata (P4), elevata (P3), media (P2), moderata (P1) e aree di attenzione.
 
-Secondo il rapporto ISPRA sul dissesto idrogeologico (edizione 2024), le classi P3 e P4 coprono il 9,5% del territorio nazionale. Sono le aree con i vincoli d'uso più restrittivi. Ci vivono 1,28 milioni di persone, il 2,2% della popolazione.
+Secondo il rapporto ISPRA sul dissesto idrogeologico (edizione 2024), le aree a pericolosità da frana più elevata (classi P3 e P4) coprono il 9,5% del territorio nazionale. Sono le aree con i vincoli d'uso più restrittivi. Ci vivono 1,28 milioni di persone, il 2,2% della popolazione.
 
 **Terremoti.** Ogni Comune italiano ha una zona sismica, da 1, la più pericolosa, a 4. La stabiliscono le Regioni, con i criteri fissati dall'Ordinanza del Presidente del Consiglio dei Ministri n. 3274 del 2003. Dalla zona dipendono le regole per progettare gli edifici.
 
 **Il terreno strada per strada.** La zona sismica vale per tutto il Comune. Due quartieri vicini, però, possono tremare in modo diverso, perché poggiano su terreni diversi. Lo mostrano gli studi di **microzonazione sismica**, che distinguono zone stabili, zone dove la scossa si amplifica e zone instabili. Il Dipartimento li indica come base per due scelte: dove far crescere un paese e dove collocare aree ed edifici strategici per l'emergenza. Ne abbiamo scritto in [Microzonazione sismica dei Castelli Romani](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/).
 
-## Il suolo che non beve più
+## Il consumo di suolo
 
 C'è poi un fattore che cresce ogni anno: il **consumo di suolo**. Ogni nuovo edificio, piazzale o strada copre il terreno naturale. Dove il suolo è impermeabilizzato, la pioggia si infiltra meno, scorre in superficie e arriva a valle più in fretta.
 
-Il 27 ottobre 2026 l'ISPRA e il Sistema nazionale per la protezione dell'ambiente (SNPA) hanno presentato il nuovo rapporto. Nel 2025 il suolo consumato ha raggiunto il **7,19%** del territorio italiano. In un anno sono spariti altri 102 km² di aree naturali, più di 3 metri quadrati al secondo. Il Lazio ha aggiunto oltre 1.400 ettari, secondo solo alla Sicilia. Il cemento avanza anche dove il territorio è fragile: 1.106 ettari in più nelle zone a rischio alluvione, 707 in quelle a rischio frana.
+Il 27 ottobre 2026 l'ISPRA e il Sistema nazionale per la protezione dell'ambiente (SNPA) hanno presentato il nuovo rapporto. Nel 2025 il suolo consumato ha raggiunto il **7,19%** del territorio italiano. In un anno sono stati coperti altri 102 km², più di 3 metri quadrati al secondo. Il Lazio ha aggiunto oltre 1.400 ettari, secondo solo alla Sicilia. Il consumo di suolo cresce anche dove il territorio è fragile: in Italia 1.106 ettari in più nelle zone a rischio alluvione e 707 in quelle a rischio frana.
 
 ## Piano di protezione civile e piani urbanistici
 
-Il Codice della protezione civile (decreto legislativo 1/2018) lega i due mondi. L'articolo 18 definisce la pianificazione di protezione civile come attività di prevenzione non strutturale, costruita sugli scenari di rischio. Il comma 3 chiede di coordinare con i piani di protezione civile i piani di tutela del territorio e gli altri strumenti di pianificazione territoriale. Lo scopo è renderli coerenti con gli scenari e le strategie operative dei piani di emergenza.
+Il Codice della protezione civile (decreto legislativo 1/2018) lega i due mondi. L'articolo 18 definisce la pianificazione di protezione civile come attività di prevenzione non strutturale, costruita sugli scenari di rischio. Il comma 3 chiede di coordinare con i piani di protezione civile i piani di tutela del territorio e gli altri strumenti di pianificazione territoriale. Lo scopo è la coerenza con gli scenari di rischio e con le strategie operative dei piani di emergenza.
 
 Un esempio aiuta a capire. Se il piano di emergenza indica un'area di attesa, una nuova lottizzazione non dovrebbe occuparla. Se uno scenario prevede una strada che si allaga, quella strada non dovrebbe diventare l'unico accesso di una nuova scuola.
 
@@ -66,15 +66,15 @@ L'ultimo dato non significa che a Genzano l'acqua non faccia danni. I temporali 
 
 Sul consumo di suolo, i dati comunali del rapporto SNPA danno per Genzano **368 ettari** di superfici artificiali nel 2025, il **20,7%** del territorio. È quasi il triplo della media italiana e più della media della Città metropolitana di Roma Capitale (13,2%). Fra il 2024 e il 2025 il valore comunale non è cresciuto.
 
-C'è infine il vulcano. Genzano sorge sui Colli Albani, un vulcano quiescente che l'Istituto nazionale di geofisica e vulcanologia (INGV) sorveglia. Per chi abita e costruisce conta soprattutto un aspetto: l'anidride carbonica che risale dal suolo può accumularsi in cantine, scantinati e pozzi. Lo spieghiamo nella pagina sul [vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/).
+C'è infine il vulcano. Genzano sorge sui Colli Albani, un vulcano quiescente che l'Istituto nazionale di geofisica e vulcanologia (INGV) sorveglia. Per chi abita e costruisce conta soprattutto un aspetto: l'anidride carbonica che risale dal suolo può accumularsi in cantine, scantinati e pozzi. Lo spieghiamo nella pagina sul [vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/); le regole pratiche sono in [Rischio vulcanico: che cosa fare](/rischi-prevenzione/rischio-vulcanico/).
 
 ## Che cosa puoi fare tu
 
-- Prima di comprare casa, prendere in affitto un locale o ristrutturare, cerca l'indirizzo su [IdroGEO](https://idrogeo.isprambiente.it/app/). La mappa mostra le aree a pericolosità da frana e idraulica dei PAI.
+- Prima di comprare o affittare un immobile, o di ristrutturare, cerca l'indirizzo su [IdroGEO](https://idrogeo.isprambiente.it/app/). La mappa mostra le aree a pericolosità da frana e idraulica dei PAI.
 - Chiedi all'ufficio tecnico del Comune quali vincoli e quali studi riguardano quella zona. Per un terreno puoi chiedere il certificato di destinazione urbanistica, con le prescrizioni urbanistiche dell'area. Il Comune lo rilascia entro trenta giorni dalla domanda.
 - Per un edificio esistente, fatti consigliare da un tecnico abilitato sulla sua vulnerabilità sismica, soprattutto se è stato costruito molti anni fa.
 - Leggi il [Piano di emergenza comunale](/piano-emergenza/) e scopri qual è la tua [area di attesa](/aree-attesa/).
-- Se vivi o lavori in un seminterrato, ricorda che con una pioggia forte è il primo locale ad allagarsi.
+- Se vivi o lavori in un seminterrato, non scendere durante un temporale forte: è il primo locale che si allaga. Trovi le regole complete in [Rischio idrogeologico: che cosa fare](/rischi-prevenzione/rischio-idrogeologico/).
 
 Se il pericolo è in corso, chiama il **112**.
 
@@ -88,6 +88,7 @@ Se il pericolo è in corso, chiama il **112**.
 - [I rischi di casa nostra](/dossier/genzano-castelli-i-nostri-rischi/)
 - [Microzonazione sismica dei Castelli Romani](/comunicazioni/2026-06-19-microzonazione-sismica-castelli-romani/)
 - [Rischio idrogeologico: che cosa fare](/rischi-prevenzione/rischio-idrogeologico/)
+- [Rischio vulcanico: che cosa fare](/rischi-prevenzione/rischio-vulcanico/)
 - [Cartografia operativa del Piano di emergenza](/cartografia/)
 
 **Fonti istituzionali:**
@@ -97,6 +98,7 @@ Se il pericolo è in corso, chiama il **112**.
 - [Dipartimento della Protezione Civile: classificazione sismica](https://rischi.protezionecivile.gov.it/it/sismico/attivita/classificazione-sismica/)
 - [Dipartimento della Protezione Civile: microzonazione sismica](https://rischi.protezionecivile.gov.it/it/sismico/attivita/microzonazione-sismica/)
 - [Regione Lazio: DGR n. 387 del 22 maggio 2009, nuova classificazione sismica (Allegato 1, PDF)](https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf)
+- [ISPRA: piattaforma IdroGEO (frane e alluvioni per Comune, consultata il 13 novembre 2026)](https://idrogeo.isprambiente.it/app/)
 - [ISPRA: mosaicatura della pericolosità da frana dei PAI](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico/le-frane-1/mosaicatura-della-pericolosita-da-frana-dei-piani-di-assetto-idrogeologico-pai)
 - [ISPRA: sintesi del rapporto «Dissesto idrogeologico in Italia», edizione 2024 (PDF)](https://www.isprambiente.gov.it/files2025/pubblicazioni/rapporti/executive-summary_rapporto_dissesto_2024.pdf)
 - [SNPA: «Consumo di suolo, ecosistemi urbani e stato del territorio», edizione 2026](https://www.snpambiente.it/pubblicazioni/report-snpa/consumo-di-suolo-ecosistemi-urbani-e-stato-del-territorio-edizione-2026/), con i dati comunali (licenza CC BY 4.0)

@@ -1,6 +1,6 @@
 ---
 title: "Negozi e piccole imprese: prepararsi all'emergenza e ripartire dopo"
-date: 2026-11-23
+date: 2026-11-23T00:02:00+01:00
 description: "Un piano in una pagina, copie dei dati, merce al sicuro dall'acqua, polizza: come un negozio o una piccola impresa si prepara a un'emergenza e riapre dopo."
 badge: "Prevenzione"
 priorita: "normale"
@@ -23,11 +23,11 @@ social_punti:
 
 Quando l'acqua entra in un negozio al piano strada, il danno non finisce con lo straccio. C'è la merce da buttare, una cassa che non si accende, i fornitori da avvisare. E ci sono i clienti che trovano la saracinesca abbassata. Per una piccola impresa ogni giorno di chiusura pesa.
 
-Questo articolo guarda l'emergenza dal banco del commerciante, del laboratorio artigiano, del piccolo studio. La sicurezza di clienti e dipendenti durante un terremoto, un incendio o un blackout la trovi nel nostro [kit per le attività commerciali](/kit-organizzazioni/attivita-commerciali/). Qui parliamo dell'altra metà del problema: come far ripartire l'attività.
+Questo articolo guarda l'emergenza dal banco del commerciante, del laboratorio artigiano, del piccolo studio. Per la sicurezza di clienti e dipendenti durante un terremoto, un incendio o un blackout c'è il nostro [kit per le attività commerciali](/kit-organizzazioni/attivita-commerciali/). Qui parliamo dell'altra metà del problema: come far ripartire l'attività.
 
 ## Prima: un piano di continuità in una pagina
 
-Le organizzazioni strutturate seguono la norma [ISO 22301](/standard-iso/iso-22301/), lo standard internazionale sulla continuità operativa. Per un negozio basta un foglio che risponda a poche domande. Tienine una copia nel locale e una a casa.
+Le organizzazioni più strutturate adottano la norma [ISO 22301](/standard-iso/iso-22301/), lo standard internazionale sulla continuità operativa. Per un negozio basta un foglio che risponda a poche domande. Tienine una copia nel locale e una a casa.
 
 - **Chi apre e chi chiude.** Decidi chi può scegliere di non aprire o di chiudere prima, e chi lo sostituisce se è assente. Scrivi chi ha le chiavi e i codici dell'allarme.
 - **Chi chiamare.** Proprietario dei locali, agente assicurativo, commercialista, tecnici di gas ed elettricità, fornitori principali. Su carta, non solo sul telefono.
@@ -42,7 +42,7 @@ Una volta l'anno fotografa il locale, l'arredo, i macchinari e il magazzino. Con
 
 ### Merce e locali esposti all'acqua
 
-Molti negozi sono al piano strada o hanno un magazzino seminterrato. Il Dipartimento della Protezione Civile indica piani terra, seminterrati e garage fra i luoghi più pericolosi durante un'alluvione. Per questo conviene muoversi prima:
+Molti negozi sono al piano strada o hanno un magazzino seminterrato. Il Dipartimento della Protezione Civile indica i piani terra e i seminterrati come luoghi pericolosi durante un'alluvione. Per questo conviene muoversi prima:
 
 - tieni la merce di valore e i documenti sugli scaffali alti, mai a terra;
 - non usare il seminterrato come unico magazzino per ciò che non puoi perdere;
@@ -53,7 +53,7 @@ Molti negozi sono al piano strada o hanno un magazzino seminterrato. Il Dipartim
 
 Rileggi la polizza con il tuo agente. Verifica quali eventi copre, se copre la merce e il fermo dell'attività, quali franchigie applica.
 
-C'è anche un obbligo di legge. La legge di bilancio 2024 (legge 30 dicembre 2023, n. 213) impone alle imprese iscritte al registro delle imprese di assicurare terreni, fabbricati, impianti, macchinari e attrezzature contro terremoti, alluvioni, frane, inondazioni ed esondazioni. Le imprese agricole sono escluse. I termini sono stati rinviati più volte e divisi per dimensione e settore. Secondo il Ministero delle imprese e del made in Italy, per quasi tutte le imprese sono già scaduti; per pesca e acquacoltura il termine è il 31 dicembre 2026. Chi non è in regola rischia di perderci quando lo Stato assegna contributi e agevolazioni, anche dopo una calamità. Ne parliamo più a fondo in [Quanto costa prevenire](/comunicazioni/2026-11-18-quanto-costa-prevenire/).
+C'è anche un obbligo di legge. La legge di bilancio 2024 (legge 30 dicembre 2023, n. 213) impone alle imprese con sede in Italia, iscritte al registro delle imprese, di assicurare terreni, fabbricati, impianti e macchinari, attrezzature industriali e commerciali contro terremoti, alluvioni, frane, inondazioni ed esondazioni. Le imprese agricole sono escluse. I termini cambiano con la dimensione e il settore dell'impresa. Secondo il Ministero delle imprese e del made in Italy sono già scaduti per quasi tutte; per pesca e acquacoltura la scadenza è il 31 dicembre 2026. Dell'inadempimento si tiene conto quando lo Stato assegna contributi, sovvenzioni o agevolazioni, anche per eventi calamitosi. Ne parliamo più a fondo in [Quanto costa prevenire](/comunicazioni/2026-11-18-quanto-costa-prevenire/).
 
 ## Durante: prima le persone, poi la merce
 
@@ -66,7 +66,7 @@ C'è anche un obbligo di legge. La legge di bilancio 2024 (legge 30 dicembre 202
 
 ### Prima la sicurezza
 
-Rientra solo quando le autorità lo consentono. Dopo un terremoto, un locale lesionato si riapre dopo la verifica dei tecnici. Gas ed elettricità si riattivano con il parere di un tecnico, se serve. I cibi toccati dall'acqua dell'alluvione non si mangiano: per un negozio di alimentari vuol dire che non tornano sugli scaffali.
+Rientra solo quando le autorità lo consentono. Se il locale è lesionato, riapri solo dopo il controllo di un tecnico. Gas ed elettricità si riattivano con il parere di un tecnico, se serve. I cibi toccati dall'acqua dell'alluvione non si mangiano: per un negozio di alimentari vuol dire che non tornano sugli scaffali.
 
 ### Foto dei danni
 
@@ -76,9 +76,9 @@ Prima di pulire o buttare, fotografa tutto: il segno dell'acqua sui muri, la mer
 
 Per i danni non urgenti il riferimento è il Comune. Una segnalazione rapida conta: per chiedere alla Regione Lazio lo stato di calamità, il Comune deve mandare una stima dei danni entro dieci giorni dall'evento, come abbiamo spiegato a proposito del [maltempo di gennaio](/comunicazioni/2026-01-15-maltempo-gennaio-richiesta-stato-calamita/).
 
-Se il Governo dichiara lo stato di emergenza, il Codice della protezione civile (decreto legislativo 2 gennaio 2018, n. 1, articolo 25) prevede ordinanze che avviano la **ricognizione dei fabbisogni**. Riguarda i danni alle strutture pubbliche e private, comprese le attività economiche e produttive. Le stesse ordinanze possono prevedere un primo sostegno economico per le attività colpite. Moduli e scadenze li fissa ogni volta l'ordinanza, e il Comune li rende pubblici con un avviso.
+Se il Consiglio dei ministri dichiara lo stato di emergenza, il Codice della protezione civile (decreto legislativo 2 gennaio 2018, n. 1, articolo 25) prevede ordinanze che avviano la **ricognizione dei fabbisogni**. Riguarda i danni alle strutture pubbliche e private, comprese le attività economiche e produttive. Le stesse ordinanze possono prevedere un primo sostegno economico per le attività colpite. Moduli e scadenze li fissa ogni volta l'ordinanza, e il Comune li rende pubblici con un avviso.
 
-Il modello che il Dipartimento ha preparato per le imprese si chiama «Modulo C1». Chiede, fra l'altro, le foto dei danni se disponibili, la perizia dell'assicurazione e gli indennizzi che hai diritto a ricevere. Per questo le foto e la polizza in ordine servono due volte.
+Il modello che il Dipartimento ha preparato per le imprese si chiama «Modulo C1». Chiede, fra l'altro, le foto dei danni se disponibili, la perizia dell'assicurazione e gli indennizzi assicurativi. Per questo le foto e la polizza in ordine servono due volte.
 
 ### Riaprire
 
