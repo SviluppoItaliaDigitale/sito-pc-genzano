@@ -1,6 +1,6 @@
 ---
 title: "5 novembre: giornata mondiale sui maremoti"
-date: 2026-11-05T00:02:00+02:00
+date: 2026-11-05T00:02:00+01:00
 description: "Il 5 novembre è la giornata mondiale sui maremoti. Ecco cosa fare se sei al mare."
 badge: "Prevenzione"
 priorita: "normale"

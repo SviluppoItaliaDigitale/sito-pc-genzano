@@ -47,7 +47,7 @@ La conoscenza del territorio si fonda su strumenti tecnici: la **cartografia** d
 ## Fonti
 
 1. **Codice della protezione civile**, decreto legislativo 2 gennaio 2018, n. 1, artt. 17, 18 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
-2. Dipartimento della Protezione Civile — **Metodo Augustus** (pianificazione); **IT-alert** (sistema di allarme pubblico); aree di emergenza.
+2. Dipartimento della Protezione Civile — Direttiva PCM 30 aprile 2021 (pianificazione, funzioni di supporto); **IT-alert** (sistema di allarme pubblico); aree di emergenza.
 3. **Copernicus Emergency Management Service** (Unione europea) per la mappatura satellitare delle emergenze.
 
 </div>

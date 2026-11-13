@@ -54,7 +54,7 @@ Per le spiegazioni estese, vedi [Capitolo 2 — Scouting](/formazione/manuale-ca
 ### Intervento previsto
 
 - Tipologia/obiettivi missione · Tempistica (partenza/viaggio/arrivo/regime) · Destinazione
-- Popolazione: totale, suddivisa uomini/donne, fasce età (0-4, 5-14, 15-44, >44), soggetti vulnerabili (disabili, minori non accompagnati, donne incinte/allattamento)
+- Popolazione: totale, suddivisa uomini/donne, fasce età (0-4, 5-14, 15-44, >44), soggetti vulnerabili (persone con disabilità, minori non accompagnati, donne incinte/allattamento)
 
 ### Logistica
 
@@ -108,7 +108,7 @@ Dotazione dettagliata: vedi [Capitolo 2 — Check-list 4](/formazione/manuale-ca
 - **Moduli TLC-Segreteria-Comando** adiacenti
 - **InfoPoint** in posizione visibile e accessibile
 - **Cucina-mensa** lontano dai servizi igienici
-- **Servizi igienici** distribuiti su almeno due lati, 1 per disabili, 1 dedicato cucina, 1 dedicato area sanitaria
+- **Servizi igienici** distribuiti su almeno due lati, 1 accessibile alle persone con disabilità, 1 dedicato cucina, 1 dedicato area sanitaria
 - **Separazione** servizi soccorritori / ospiti
 
 ### Standard UNHCR (riferimento internazionale)

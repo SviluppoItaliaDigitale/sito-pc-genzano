@@ -31,7 +31,7 @@ L'idea è semplice e profonda: **in emergenza non devi fare diagnosi**. Non devi
 
 {{< dossier-dati id="numeri" image="/images/dossier/112-telefono-disco.webp" alt="Un telefono nero a disco rotante degli anni del boom" >}}
 {{< dossier-dato to="1991" label="La **decisione europea** che istituisce il 112 come numero unico di emergenza per tutta l'Unione" >}}
-{{< dossier-dato to="2017" label="L'anno in cui il **NUE 112 arriva nel Lazio**: da allora, per il cittadino, l'unico numero da ricordare è uno" >}}
+{{< dossier-dato to="2015" label="L'anno in cui il **NUE 112 parte nel Lazio** (18 novembre 2015, a Roma e provincia): da allora, per il cittadino, l'unico numero da ricordare è uno" >}}
 {{< dossier-dato to="2018" label="Da marzo, ogni **auto nuova** omologata in UE ha l'eCall: in caso di incidente grave chiama il 112 da sola" >}}
 {{< /dossier-dati >}}
 
@@ -63,7 +63,7 @@ E tienilo per quello che è: il numero dei momenti peggiori, da proteggere usand
 
 {{< dossier-fonti >}}
 - **Immagini:** aula della Sala Operativa della Regione Lazio con la segnaletica Emergenza 112 (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · operatrici al centralino Bell System (National Archives and Records Administration · pubblico dominio) · telefono a disco W49 (Raimond Spekking · CC BY-SA 4.0). Via Wikimedia Commons.
-- **Fonti:** [Decisione del Consiglio 91/396/CEE](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:31991D0396) (istituzione del numero unico europeo) · [Regolamento (UE) 2015/758](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32015R0758) (eCall obbligatorio sulle nuove omologazioni dal 31 marzo 2018) · [NUE 112 — il servizio e l'app Where Are U](https://www.areu.lombardia.it/web/home/app-where-are-u) · [EENA — European Emergency Number Association](https://eena.org/) (AML, accessibilità del 112) · per il Lazio: NUE 112 operativo dal 2017 (Regione Lazio).
+- **Fonti:** [Decisione del Consiglio 91/396/CEE](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:31991D0396) (istituzione del numero unico europeo) · [Regolamento (UE) 2015/758](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32015R0758) (eCall obbligatorio sulle nuove omologazioni dal 31 marzo 2018) · [NUE 112 — il servizio e l'app Where Are U](https://www.areu.lombardia.it/web/home/app-where-are-u) · [EENA — European Emergency Number Association](https://eena.org/) (AML, accessibilità del 112) · per il Lazio: NUE 112 operativo dal 2015 (Regione Lazio).
 - **Sul nostro sito:** [Numeri utili](/numeri-utili/) · [Cosa fare adesso](/cosa-fare-adesso/) · [Dossier: Il messaggio che salva](/dossier/il-messaggio-che-salva/) · [Dossier: Radio che salvano](/dossier/radio-che-salvano/) · [L'assistente virtuale](/assistente/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

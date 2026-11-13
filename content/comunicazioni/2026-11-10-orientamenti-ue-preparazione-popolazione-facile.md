@@ -1,6 +1,6 @@
 ---
 title: "Consigli europei per le emergenze: non sono un obbligo"
-date: 2026-11-10T00:02:00+02:00
+date: 2026-11-10T00:02:00+01:00
 description: "L'Unione europea dà consigli per prepararsi alle emergenze. Non sono un obbligo per le famiglie."
 badge: "Informazione"
 priorita: "normale"

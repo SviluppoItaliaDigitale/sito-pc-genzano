@@ -36,7 +36,7 @@ In emergenza, le **persone con disabilità** sono:
 - **potenzialmente isolate** se vivono sole.
 
 ### La storia insegna
-- **uragano Katrina** (2005): molte vittime anziane e disabili non evacuate;
+- **uragano Katrina** (2005): molte vittime anziane e con disabilità non evacuate;
 - **terremoti italiani**: testimonianze di persone recuperate con difficoltà;
 - **incendi** in RSA: tragedie ripetute;
 - **pandemie**: difficoltà di accesso a cure.

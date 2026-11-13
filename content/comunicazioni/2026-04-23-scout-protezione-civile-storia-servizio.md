@@ -131,7 +131,7 @@ In ognuna di queste situazioni gli scout hanno fatto **gli stessi servizi**: ten
 
 Il terremoto del **24 agosto 2016** distrugge Amatrice, Accumoli e Arquata del Tronto (magnitudo 6,0, con una sequenza sismica protrattasi fino a gennaio 2017). Gli scout dell'**AGESCI Umbria** propongono allora ai gruppi di tutta Italia un servizio diverso: non più solo emergenza immediata, ma **ricostruzione del tessuto sociale**.
 
-Tra il **17 giugno e il 10 settembre 2017** organizzano **cinque route di strada e servizio** in Valnerina: settimane di cammino e lavoro che attraversano i territori colpiti, con attività con bambini, anziani, disabili, e attività di recupero materiale. È una formula nuova: l'emergenza è passata, ma la **comunità ferita** ha bisogno di compagnia, di vita, di mani che lavorino accanto.
+Tra il **17 giugno e il 10 settembre 2017** organizzano **cinque route di strada e servizio** in Valnerina: settimane di cammino e lavoro che attraversano i territori colpiti, con attività con bambini, anziani, persone con disabilità, e attività di recupero materiale. È una formula nuova: l'emergenza è passata, ma la **comunità ferita** ha bisogno di compagnia, di vita, di mani che lavorino accanto.
 
 {{< foto src="/images/2026-evento-amatrice-2016-prima-scossa.webp"
          alt="ShakeMap INGV del terremoto del 24 agosto 2016, magnitudo 6.0 a 1 km ovest di Accumoli"

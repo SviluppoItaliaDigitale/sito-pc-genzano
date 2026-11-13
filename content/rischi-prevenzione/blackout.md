@@ -7,7 +7,7 @@ tts: true
 weight: 7
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
-howto_prima: "Tieni sempre a portata di mano una torcia elettrica con pile di scorta. Disponi di una radio a pile per ricevere comunicazioni ufficiali. Carica preventivamente telefono e power bank quando sono previste allerte. Tieni in casa una scorta minima di acqua potabile (almeno 4 litri a persona). Se usi apparecchiature elettromedicali, informa la tua ASL e il tuo fornitore di energia per la lista delle utenze non disalimentabili."
+howto_prima: "Tieni sempre a portata di mano una torcia elettrica con pile di scorta. Disponi di una radio a pile per ricevere comunicazioni ufficiali. Carica preventivamente telefono e power bank quando sono previste allerte. Tieni in casa una scorta minima di acqua potabile (almeno 4 litri a persona). Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il bonus per disagio fisico: protegge dalla sospensione per morosità, ma non dà priorità durante un guasto. Concorda con il medico un piano per le ore senza corrente."
 howto_durante: "Non farti prendere dal panico: i blackout sono generalmente temporanei. Scollega gli elettrodomestici per evitare danni da sbalzi al ritorno della corrente (lascia accesa una luce per sapere quando torna). Non aprire frigorifero e congelatore se non strettamente necessario (il cibo si conserva per ore). Usa torce elettriche, non candele (rischio incendio). Se sei bloccato in ascensore, premi il pulsante di allarme e attendi i soccorsi. Non usare generatori a combustibile all'interno di locali chiusi (rischio monossido di carbonio)."
 howto_dopo: "Riaccendi gli elettrodomestici uno alla volta per evitare sovraccarichi. Verifica lo stato degli alimenti nel congelatore: se lo hai tenuto chiuso, il cibo può resistere anche 24 ore. Controlla eventuali danni all'impianto elettrico. Segnala al fornitore eventuali ritardi nel ripristino del servizio. Se hai usato apparecchiature elettromedicali, verifica che funzionino correttamente."
 ---
@@ -66,7 +66,7 @@ Prepararsi prima fa la differenza. In emergenza chiama il 112.
 - Disponi di una **radio a pile** per ricevere comunicazioni ufficiali.
 - Carica telefono e power bank quando sono previste allerte.
 - Tieni in casa almeno 4 litri di acqua potabile a persona.
-- Se usi apparecchiature elettromedicali, informa la tua ASL e il tuo fornitore di energia: esiste una lista di utenze non disalimentabili.
+- Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il bonus per disagio fisico (domanda al Comune o a un CAF): la fornitura non si può sospendere per morosità, ma il bonus non protegge da un guasto. Prepara con il medico un piano per le ore senza corrente e una batteria di riserva.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE il blackout {#cosa-fare-durante}
 - Mantieni la calma: i blackout sono di solito temporanei.

@@ -1,6 +1,6 @@
 ---
 title: "5 novembre, Giornata mondiale per la consapevolezza sui maremoti: cosa deve sapere chi va al mare"
-date: 2026-11-05T00:02:00+02:00
+date: 2026-11-05T00:02:00+01:00
 description: "L'ONU dedica il 5 novembre ai maremoti. Anche l'Italia ha un sistema di allerta tsunami: cosa sapere e cosa fare sulle coste del Lazio."
 badge: "Prevenzione"
 priorita: "normale"

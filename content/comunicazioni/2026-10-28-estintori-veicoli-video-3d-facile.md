@@ -1,6 +1,6 @@
 ---
 title: "Fuoco su un'auto o su un bus: un video in 3D"
-date: 2026-10-28T00:04:00+02:00
+date: 2026-10-28T00:04:00+01:00
 description: "Un video breve dice cosa fare se c'è fuoco su un'auto, un camion o un bus."
 badge: "Prevenzione"
 priorita: "normale"

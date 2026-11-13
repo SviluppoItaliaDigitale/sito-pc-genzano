@@ -76,7 +76,7 @@ I volontari del Gruppo **non si auto-attivano**. Quando l'autorità competente (
 
 - riceve la chiamata di attivazione dal Capo Gruppo;
 - si organizza in **turni di presidio** in sede;
-- monta presidi sul territorio se richiesto (cancelli su strade pericolose, supporto evacuazione, assistenza alla popolazione);
+- partecipa se richiesto ai presidi sul territorio: segnala al COC le strade pericolose, supporta l'evacuazione, assiste la popolazione. Chiusure delle strade e regolazione del traffico spettano alla Polizia Locale e alle Forze dell'ordine;
 - alimenta la rete radio del Gruppo per coordinamento;
 - comunica al cittadino tramite i canali ufficiali (sito, Telegram, social).
 

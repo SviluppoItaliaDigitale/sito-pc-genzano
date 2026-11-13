@@ -1,6 +1,6 @@
 ---
 title: "Caldaia e termosifoni: il controllo annuale obbligatorio"
-date: 2026-10-27T00:01:00+02:00
+date: 2026-10-27T00:01:00+01:00
 description: "Prima dell'accensione invernale, la caldaia va controllata. Un obbligo normativo e una questione di sicurezza domestica."
 badge: "Prevenzione"
 priorita: "normale"
@@ -92,7 +92,7 @@ Fermarsi e chiamare subito un tecnico se:
 - **rumori** insoliti dalla caldaia;
 - **acqua** che esce da tubature;
 - **fiamme** di colore strano (non blu pulito);
-- **puzza** di gas (attenzione, chiamare 800 900 999 del distributore e **112**);
+- **puzza** di gas (non toccare interruttori né telefoni nel locale, aprire le finestre, uscire e chiamare da fuori il **112** e il numero di pronto intervento del distributore scritto in bolletta);
 - **emicrania**, nausea, sonnolenza anomala (sintomi di intossicazione CO);
 - **caldaia** che si spegne frequentemente.
 

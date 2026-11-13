@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 1 — Struttura organizzativa e catena di comando"
-description: "Dalla struttura nazionale al COC di Genzano di Roma: chi fa cosa in emergenza secondo il Codice PC e il metodo Augustus aggiornato."
+description: "Dalla struttura nazionale al COC di Genzano di Roma: chi fa cosa in emergenza secondo il Codice PC e la Direttiva PCM 30 aprile 2021."
 layout: "single"
 toc: true
 ---
@@ -62,7 +62,7 @@ Chi vi siede — l'**Unità di Crisi Locale** — è composto in forma tipica da
 - un **rappresentante dell'Arma dei Carabinieri** (Stazione di Genzano di Roma)
 - il **Responsabile del Gruppo Comunale Volontari PC**
 - l'**Ufficiale dell'Anagrafe**
-- **rappresentanti delle 9 funzioni di supporto** (vedi §1.4)
+- **referenti delle funzioni di supporto attivate** secondo il Piano (vedi §1.5)
 
 ### Centro Operativo Misto (COM)
 
@@ -115,30 +115,28 @@ La DI.COMA.C. è la struttura di coordinamento unificato tra DPC, Regione, Prefe
 
 Il **flusso informativo** è bidirezionale: le richieste di supporto salgono, le direttive e le risorse scendono.
 
-## 1.5 Funzioni di supporto — Metodo Augustus aggiornato
+## 1.5 Funzioni di supporto
 
-Il **Metodo Augustus** — introdotto nel 1997 dal Dipartimento della Protezione Civile — organizza il lavoro dei centri di coordinamento per **funzioni di supporto**: ciascuna funzione corrisponde a un ambito tematico e a un responsabile con competenze specifiche.
+I centri di coordinamento lavorano per **funzioni di supporto**: ciascuna corrisponde a un ambito tematico e a un referente con competenze specifiche. Lo schema nasce con il **Metodo Augustus** (Dipartimento della Protezione Civile, 1997), oggi superato: l'elenco attuale è nella **Direttiva PCM 30 aprile 2021**, che ne indica **sedici**, senza numerarle:
 
-La **Direttiva PCM 30 aprile 2021** ha aggiornato e confermato l'impianto del metodo Augustus. Le funzioni sono **14 per i centri sovracomunali** (COM, CCS, SOUR, Sistema, DI.COMA.C.) e **9 per i Centri Operativi Comunali**:
+- Unità di coordinamento.
+- Rappresentanze delle strutture operative.
+- Assistenza alla popolazione.
+- Sanità e assistenza sociale.
+- Logistica.
+- Telecomunicazioni d'emergenza.
+- Accessibilità e mobilità.
+- Servizi essenziali.
+- Attività aeree e marittime.
+- Tecnica e di valutazione.
+- Censimento danni e rilievo dell'agibilità.
+- Volontariato.
+- Rappresentanza dei Beni Culturali.
+- Stampa e comunicazione.
+- Supporto amministrativo e finanziario.
+- Continuità amministrativa.
 
-| N° | COC (Comunale, 9 funzioni) | COM/CCS/SOUR (Sovracomunale, 14 funzioni) |
-|---|---|---|
-| 1 | Tecnico scientifico e pianificazione | Tecnico scientifico e pianificazione |
-| 2 | Sanità e assistenza sociale | Sanità, assistenza sociale, veterinaria |
-| 3 | Volontariato | Mass-media e informazione |
-| 4 | Materiali e mezzi | Volontariato |
-| 5 | Servizi essenziali e attività scolastica | Materiali e mezzi |
-| 6 | Censimento danni, persone e cose | Trasporti, circolazione e viabilità |
-| 7 | Strutture operative locali | Telecomunicazioni |
-| 8 | Telecomunicazioni | Servizi essenziali |
-| 9 | Assistenza alla popolazione | Censimento danni, persone e cose |
-| 10 | — | Strutture operative, Ricerca e Soccorso (SAR) |
-| 11 | — | Enti locali |
-| 12 | — | Materiali pericolosi |
-| 13 | — | Logistica evacuati e zone ospitanti |
-| 14 | — | Coordinamento centri operativi |
-
-Oltre alle funzioni tradizionali possono essere attivate **funzioni accessorie** per ambiti specifici (es. tutela dei beni culturali, gestione animali, assistenza a persone con disabilità).
+Le funzioni sono definite nel piano di protezione civile sulla base delle attività previste e possono essere accorpate, ridotte o implementate in base al personale formato disponibile; per ciascuna è individuato un referente. Quali funzioni attivi il COC di Genzano di Roma lo decide il Piano comunale. I compiti sono descritti nell'Allegato 1 alle Indicazioni operative del Capo del Dipartimento del 31 marzo 2015 (n. 1099).
 
 ## 1.6 Dove si colloca il Gruppo Comunale di Genzano
 

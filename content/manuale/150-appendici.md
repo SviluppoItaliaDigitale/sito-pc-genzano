@@ -110,7 +110,7 @@ Dove trovare i concetti principali.
 - **Allerta e codici colore** → Parte IV (capitolo 4); rischio meteo-idrologico (7.4).
 - **Aree di emergenza** → Parte VIII.
 - **Codice della protezione civile (commento)** → Parte II.
-- **Funzioni di supporto / Metodo Augustus** → Parte V.
+- **Funzioni di supporto (Direttiva PCM 2021; Metodo Augustus, origine storica)** → Parte V.
 - **Formula del rischio (R = P × V × E)** → Parte IV.
 - **Rischi (catalogo)** → Parte VII (capitoli 7.1-7.10).
 - **Sendai e riduzione del rischio** → Parte IV (capitolo 4, sez. 4.6-4.9).

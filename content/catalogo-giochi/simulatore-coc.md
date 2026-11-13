@@ -32,7 +32,7 @@ sitemap:
 
 ## In una frase
 
-> Il Centro Operativo Comunale coordina l'emergenza a livello di Comune. Nove funzioni, ognuna con compiti precisi.
+> Il Centro Operativo Comunale coordina l'emergenza a livello di Comune. Il gioco usa nove funzioni di supporto semplificate; la Direttiva PCM 2021 ne elenca sedici e il Comune sceglie nel Piano quali attivare.
 
 ## Come si gioca
 

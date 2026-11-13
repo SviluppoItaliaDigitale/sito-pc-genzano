@@ -50,7 +50,7 @@ Se sei in auto:
 - Verifica se ci sono feriti e chiama il 112 se serve.
 - Esci con prudenza solo quando la scossa è terminata.
 - Indossa scarpe chiuse: a terra possono esserci vetri e detriti.
-- Non usare fiamme libere se senti odore di gas.
+- Se senti odore di gas: niente fiamme, interruttori o telefoni nel locale; apri le finestre, chiudi il rubinetto del gas solo se lo raggiungi subito, esci e chiama il 112 da fuori.
 - Chiudi gas, acqua ed energia elettrica solo se sai farlo in sicurezza.
 - Raggiungi l'area di attesa prevista dal piano comunale, se indicato dalle autorità.
 - Preparati a eventuali repliche.

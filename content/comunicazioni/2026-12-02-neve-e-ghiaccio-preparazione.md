@@ -95,7 +95,7 @@ A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma 
 In Italia, la **responsabilità** dello sgombero neve/ghiaccio davanti alla propria abitazione spetta al **proprietario** (proprietà private) o al **Comune** (spazi pubblici).
 
 - **sale** antighiaccio dopo aver spalato;
-- **fare attenzione** a chi passa (anziani e disabili prima);
+- **fare attenzione** a chi passa (anziani e persone con disabilità prima);
 - **non buttare** neve in mezzo alla strada;
 - **rispettare** spazi di accessibilità (rampe, passi carrabili).
 

@@ -18,7 +18,7 @@ tts: false
 
 ## Numéros d'urgence et de secours
 
-Dans la région du Latium, depuis 2017, **le seul numéro à appeler en cas d'urgence est le 112**. Tous les appels arrivent à la Centrale Unique du NUE qui transmet l'intervention au service compétent (Pompiers, urgence sanitaire, Carabiniers, Police, incendies de forêt).
+Dans la région du Latium, depuis 2015, **le seul numéro à appeler en cas d'urgence est le 112**. Tous les appels arrivent à la Centrale Unique du NUE qui transmet l'intervention au service compétent (Pompiers, urgence sanitaire, Carabiniers, Police, incendies de forêt).
 
 | Numéro | Service | Quand appeler |
 |---|---|---|

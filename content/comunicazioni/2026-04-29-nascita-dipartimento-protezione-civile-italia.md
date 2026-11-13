@@ -95,7 +95,7 @@ Ogni emergenza è una scuola. Ogni scuola produce **direttive, circolari, modifi
 - **Legge 401/2001** — assegna al Capo del Dipartimento un ruolo politico più marcato, con poteri di ordinanza per il superamento dell'emergenza.
 - **Direttiva PCM 27 febbraio 2004** — fissa gli indirizzi operativi del **sistema di allertamento nazionale e regionale** per il rischio idrogeologico e idraulico, basato sulla rete dei Centri Funzionali.
 - **DPCM 12 gennaio 2012** — definisce gli **indirizzi operativi per la formazione del volontariato di protezione civile**: standard nazionali per i corsi base, per la specializzazione, per l'aggiornamento continuo.
-- **Direttiva PCM 9 novembre 2012** — disciplina la **catena di comando** in emergenza tra Stato, Regioni, Province e Comuni, con una novità storica: il **DICOMAC** (Direzione di Comando e Controllo) che riunisce tutti i livelli istituzionali in un unico luogo fisico durante le emergenze nazionali.
+- **Direttiva PCM 9 novembre 2012** — fissa gli **indirizzi operativi per l'unitaria partecipazione delle organizzazioni di volontariato** all'attività di protezione civile: elenco nazionale, impiego nelle emergenze, rimborsi (Gazzetta Ufficiale n. 27 del 1° febbraio 2013).
 
 In questi anni il Dipartimento smette di essere "la macchina di Zamberletti" e diventa una **istituzione tecnica matura**. I Capi del Dipartimento si succedono — Elveno Pastorelli, Franco Gabrielli, Fabrizio Curcio, Angelo Borrelli (durante la pandemia COVID-19), Fabrizio Curcio di nuovo, Fabio Ciciliano (in carica) — ognuno lasciando una traccia diversa: chi sulla *prevenzione*, chi sulla *gestione operativa delle grandi emergenze*, chi sulla *comunicazione del rischio*.
 

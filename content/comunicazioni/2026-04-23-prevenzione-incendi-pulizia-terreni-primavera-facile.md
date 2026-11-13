@@ -70,7 +70,7 @@ Porta i rami e l'erba al centro di raccolta del Comune. Puoi anche usare i punti
 
 ## Se vedi un incendio: chiama il 112
 
-Il **112 è il Numero Unico Europeo di Emergenza**. Nel Lazio, dal 2017, il 112 è l'unico numero da chiamare in emergenza. La centrale chiama i vigili del fuoco e le squadre antincendio.
+Il **112 è il Numero Unico Europeo di Emergenza**. Nel Lazio, dal 2015, il 112 è l'unico numero da chiamare in emergenza. La centrale chiama i vigili del fuoco e le squadre antincendio.
 
 Quando chiami il 112:
 

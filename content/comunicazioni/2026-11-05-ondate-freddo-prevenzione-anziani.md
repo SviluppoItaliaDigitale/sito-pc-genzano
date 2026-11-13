@@ -1,6 +1,6 @@
 ---
 title: "Ondate di freddo: come prepararsi e proteggere gli anziani"
-date: 2026-11-05T00:01:00+02:00
+date: 2026-11-05T00:01:00+01:00
 description: "Le ondate di freddo non sono solo disagio: sono un rischio concreto per salute, specialmente per anziani e persone fragili. Come prepararsi."
 badge: "Prevenzione"
 priorita: "normale"
@@ -59,7 +59,7 @@ Nel Lazio e a Genzano di Roma, un'ondata di freddo tipica porta temperature sott
 - **bambini** piccoli;
 - **persone** con malattie croniche (cuore, diabete, broncopatia);
 - **persone senza dimora**;
-- **disabili** e persone non autosufficienti;
+- **persone con disabilità** e persone non autosufficienti;
 - **chi assume farmaci** che alterano la termoregolazione.
 
 ## Prevenzione in casa

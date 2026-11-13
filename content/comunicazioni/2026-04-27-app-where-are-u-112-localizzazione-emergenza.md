@@ -111,7 +111,7 @@ Compilato a freddo (a casa, con calma), include:
 
 ## Where Are U e il sistema 112 italiano
 
-Il NUE 112 in Italia è coordinato dalle Centrali Uniche di Risposta regionali. Il **Lazio** ha attivato il NUE nel 2017, e da allora **tutte le chiamate** dei numeri di emergenza tradizionali (112 Carabinieri, 113 Polizia, 115 Vigili del Fuoco, 118 Sanitario) vengono inoltrate alla Centrale Unica di Roma, che smista all'ente competente.
+Il NUE 112 in Italia è coordinato dalle Centrali Uniche di Risposta regionali. Il **Lazio** ha attivato il NUE nel 2015, e da allora **tutte le chiamate** dei numeri di emergenza tradizionali (112 Carabinieri, 113 Polizia, 115 Vigili del Fuoco, 118 Sanitario) vengono inoltrate alla Centrale Unica di Roma, che smista all'ente competente.
 
 L'app Where Are U è **interoperabile** con il sistema italiano: che tu sia a Milano, Roma o Genzano, la chiamata arriva alla Centrale Unica giusta sulla base della tua posizione.
 

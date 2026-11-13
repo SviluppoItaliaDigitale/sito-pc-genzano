@@ -25,21 +25,28 @@ In tempi ordinari operano gli uffici comunali e le strutture previste dal Piano.
 
 ## Come è organizzato: le funzioni di supporto
 
-Il COC è organizzato per **funzioni di supporto**, ciascuna con un responsabile e un ambito preciso. Le funzioni principali sono (Metodo Augustus, riferimento nazionale):
+Il COC è organizzato per **funzioni di supporto**: settori di attività, ciascuno con un referente e un ambito preciso. La [Direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf) ne elenca sedici. Le Indicazioni operative del Dipartimento del 31 marzo 2015 ne descrivono i compiti ([Allegato 1](https://www.protezionecivile.gov.it/static/58a1bbd12cd9b57cb231fec4f2fe8ecc/all-1-funzioni-di-supporto.pdf)).
 
-| Funzione | Ambito |
-|---|---|
-| **F1 Tecnico-scientifica** | Analisi dell'evento, rapporto con enti tecnici (Regione, DPC, INGV) |
-| **F2 Sanità** | Coordinamento con ASL, ARES 118 e servizi sanitari |
-| **F3 Volontariato** | Attivazione e gestione dei gruppi di volontariato |
-| **F4 Materiali e mezzi** | Inventario e gestione delle risorse operative |
-| **F5 Servizi essenziali** | Gas, elettricità, acqua, telefonia, rifiuti |
-| **F6 Censimento danni** | Rilievo e classificazione dei danni |
-| **F7 Strutture operative** | Coordinamento con forze dell'ordine e VVF |
-| **F8 Telecomunicazioni** | Reti radio e comunicazioni di emergenza |
-| **F9 Assistenza alla popolazione** | Sfollati, accoglienza, ristoro |
+- Unità di coordinamento.
+- Rappresentanze delle strutture operative.
+- Assistenza alla popolazione.
+- Sanità e assistenza sociale.
+- Logistica.
+- Telecomunicazioni d'emergenza.
+- Accessibilità e mobilità.
+- Servizi essenziali.
+- Attività aeree e marittime.
+- Tecnica e di valutazione.
+- Censimento danni e rilievo dell'agibilità.
+- Volontariato.
+- Rappresentanza dei Beni Culturali.
+- Stampa e comunicazione.
+- Supporto amministrativo e finanziario.
+- Continuità amministrativa.
 
-Non tutte le funzioni sono sempre attivate: dipende dalla natura e dalla dimensione dell'evento.
+La Direttiva non numera le funzioni e lascia a ogni Comune la scelta: il Piano comunale definisce quali attivare, e può accorparle o ridurle in base al personale formato disponibile. Quali funzioni attivi il COC di Genzano di Roma lo stabilisce quindi il [Piano](/piano-emergenza/). Non tutte sono sempre attive: dipende dalla natura e dalla dimensione dell'evento.
+
+Le sigle «F1–F9» e il Metodo Augustus (1997) sono lo schema precedente. Si trovano ancora in molti testi e piani, ma la Direttiva del 2021 lo ha superato.
 
 ## Chi partecipa al COC
 

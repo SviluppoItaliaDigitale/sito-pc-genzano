@@ -1,6 +1,6 @@
 ---
 title: "Ucraina: il Governo proroga di dodici mesi lo stato di emergenza per l'assistenza all'estero"
-date: 2026-11-08T00:02:00+02:00
+date: 2026-11-08T00:02:00+01:00
 description: "Il Consiglio dei ministri ha prorogato di dodici mesi lo stato di emergenza per l'assistenza all'estero. Delibera del 28 ottobre, in Gazzetta il 7 novembre."
 badge: "Informazione"
 priorita: "normale"

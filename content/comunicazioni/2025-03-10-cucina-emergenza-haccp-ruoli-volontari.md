@@ -1,6 +1,6 @@
 ---
 title: "Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria"
-date: 2025-03-10T00:02:00+02:00
+date: 2025-03-10T00:02:00+01:00
 description: "Nei campi di accoglienza la cucina è un'area a rischio regolata per legge. Ecco i ruoli dei volontari, la formazione richiesta."
 badge: "Formazione"
 priorita: "normale"

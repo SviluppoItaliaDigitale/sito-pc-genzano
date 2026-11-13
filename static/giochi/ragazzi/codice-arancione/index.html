@@ -203,7 +203,7 @@
         sopravvenuto: {
           dopoSelezioni: 4,
           titolo: 'Aggiornamento dalla SOI',
-          testo: 'La frana si è estesa: arrivano <strong>30 sfollati in più</strong>, fra cui 5 disabili. Il bisogno di posti letto sale a 230, l\'accessibilità diventa critica.',
+          testo: 'La frana si è estesa: arrivano <strong>30 sfollati in più</strong>, fra cui 5 con disabilità. Il bisogno di posti letto sale a 230, l\'accessibilità diventa critica.',
           delta: { popolazione: 30, disabili: 5, bonusBudget: 25 }
         }
       },
@@ -212,7 +212,7 @@
         titolo: 'Codice Arancione — Alluvione zona Lago',
         icon: 'bi-water',
         coloreScenario: '#0369a1',
-        briefing: 'Esondazione del lago di Nemi dopo 48h di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 disabili, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
+        briefing: 'Esondazione del lago di Nemi dopo 48h di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 con disabilità, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
         popolazione: 150, anziani: 25, disabili: 10, bambini: 35,
         budget: 180,
         priorita: ['elettricita', 'acqua', 'telecom'],
@@ -228,7 +228,7 @@
         titolo: 'Codice Arancione — Sisma Castelli Romani',
         icon: 'bi-house-exclamation-fill',
         coloreScenario: '#7f1d1d',
-        briefing: 'Magnitudo 5.4 epicentrale a sud dei Castelli Romani: <strong>250 persone</strong> evacuate (50 anziani, 20 disabili, 80 bambini). Edifici ancora da verificare. Budget <strong>220 unità</strong>.',
+        briefing: 'Magnitudo 5.4 epicentrale a sud dei Castelli Romani: <strong>250 persone</strong> evacuate (50 anziani, 20 con disabilità, 80 bambini). Edifici ancora da verificare. Budget <strong>220 unità</strong>.',
         popolazione: 250, anziani: 50, disabili: 20, bambini: 80,
         budget: 220,
         priorita: ['elettricita', 'telecom', 'sicurezza', 'sanita'],
@@ -244,7 +244,7 @@
         titolo: 'Codice Arancione — Incendio boschivo Lazio',
         icon: 'bi-fire',
         coloreScenario: '#dc2626',
-        briefing: 'Fronte di fuoco in avvicinamento: <strong>100 persone</strong> evacuate (30 anziani, 5 disabili, 25 bambini). Estate, calore estremo. Budget <strong>160 unità</strong>.',
+        briefing: 'Fronte di fuoco in avvicinamento: <strong>100 persone</strong> evacuate (30 anziani, 5 con disabilità, 25 bambini). Estate, calore estremo. Budget <strong>160 unità</strong>.',
         popolazione: 100, anziani: 30, disabili: 5, bambini: 25,
         budget: 160,
         priorita: ['acqua', 'fresco', 'sanita'],
@@ -394,7 +394,7 @@
       check.push({ ok: ig >= bagniMin, msg: 'Bagni ≥ ' + bagniMin + ' (hai ' + ig + ') — minimo 1 ogni 25 persone', punti: 15 });
       check.push({ ok: pasti >= pastiMin, msg: 'Pasti ≥ ' + pastiMin + '/giorno (hai ' + pasti + ')', punti: 15 });
       check.push({ ok: san, msg: 'Copertura sanitaria presente', punti: 10 });
-      check.push({ ok: access, msg: 'Soluzioni accessibili per disabili', punti: 10 });
+      check.push({ ok: access, msg: 'Soluzioni accessibili alle persone con disabilità', punti: 10 });
       check.push({ ok: bambini, msg: 'Area bambini protetta', punti: 5 });
       // Priorita' dello scenario specifico (peso maggiore)
       scenario.priorita.forEach(function(p){

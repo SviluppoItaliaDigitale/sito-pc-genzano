@@ -182,7 +182,7 @@ L'autorizzazione generale per radioamatori consente **sperimentazione e addestra
 Nel territorio comunale:
 
 - Il **COC** viene attivato presso l'Ufficio Protezione Civile del Comune.
-- Il **Gruppo Comunale Volontari** fornisce, fra le altre, la **funzione TLC** (telecomunicazioni) secondo il Metodo Augustus.
+- Il **Gruppo Comunale Volontari** fornisce, fra le altre, la **funzione TLC** (telecomunicazioni d'emergenza) previste dalla Direttiva PCM 30 aprile 2021, se il Piano comunale le attiva.
 - I volontari con patente da radioamatore possono integrare il nucleo TLC oppure operare come raccordo con gruppi associati (ARI-RE, CISAR, SER).
 - Le comunicazioni istituzionali avvengono tramite i **canali Regione Lazio** assegnati al Comune dalla Sala Operativa Regionale.
 - Il **NUE 112** resta il riferimento per il cittadino: il volontario non riceve né smista chiamate di emergenza popolari.

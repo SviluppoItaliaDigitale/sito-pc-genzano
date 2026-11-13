@@ -1,6 +1,6 @@
 ---
 title: "Terremoto di magnitudo 5.9 nel golfo di Napoli, a oltre 400 chilometri di profondità"
-date: 2026-03-10T00:01:00+02:00
+date: 2026-03-10T00:01:00+01:00
 description: "Martedì 10 marzo, alle 00:03, terremoto ML 5.9 nel golfo di Napoli, a oltre 400 km di profondità. Poco avvertito vicino, sentito fino alla Lombardia."
 badge: "Informazione"
 priorita: "normale"

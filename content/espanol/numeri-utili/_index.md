@@ -18,7 +18,7 @@ tts: false
 
 ## Números de emergencia y rescate
 
-En la región del Lacio, desde 2017, **el único número al que llamar en caso de emergencia es el 112**. Todas las llamadas llegan a la Central Única del NUE, que despacha la intervención al servicio competente (Bomberos, urgencias sanitarias, Carabinieri, Policía, incendios forestales).
+En la región del Lacio, desde 2015, **el único número al que llamar en caso de emergencia es el 112**. Todas las llamadas llegan a la Central Única del NUE, que despacha la intervención al servicio competente (Bomberos, urgencias sanitarias, Carabinieri, Policía, incendios forestales).
 
 | Número | Servicio | Cuándo llamar |
 |---|---|---|

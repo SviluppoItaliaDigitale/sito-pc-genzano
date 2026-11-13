@@ -386,7 +386,7 @@
         'Alluvione: niente fiamme libere, generatore obbligatorio (no candele).',
         'Sisma: priorità presidio sanitario rinforzato + sicurezza struttura.',
         'AIB (estate): priorità acqua potabile + climatizzazione (anziani a rischio).',
-        'Accessibilità per disabili sempre dovuta per legge.'
+        'Accessibilità per tutti sempre dovuta per legge.'
       ],
       teoria: [
         { titolo: 'Persone con necessità specifiche', url: '/rischi-prevenzione/persone-necessita-specifiche/' },
@@ -497,7 +497,7 @@
     'simulatore-coc': {
       fascia: 'ragazzi',
       titolo: 'Consigli per Simulatore COC',
-      regola: 'Il Centro Operativo Comunale coordina l\'emergenza a livello di Comune. Nove funzioni, ognuna con compiti precisi.',
+      regola: 'Il Centro Operativo Comunale coordina l\'emergenza a livello di Comune. Il gioco usa nove funzioni di supporto semplificate; la Direttiva PCM 2021 ne elenca sedici e il Comune sceglie nel Piano quali attivare.',
       come: [
         'F1 Tecnica e pianificazione: coordina ingegneri, geologi, dati territoriali.',
         'F2 Sanità: ASL, 112, ambulanze, evacuazione di feriti.',

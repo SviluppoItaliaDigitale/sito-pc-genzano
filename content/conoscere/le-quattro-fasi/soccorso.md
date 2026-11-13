@@ -39,7 +39,7 @@ L'emergenza si gestisce per livelli, secondo il principio di sussidiarietà: si 
 | **CCS** | Centro Coordinamento Soccorsi | Provinciale |
 | **DiComaC** | Direzione di Comando e Controllo | Nazionale, sul luogo dell'evento |
 
-Questi centri organizzano il coordinamento secondo il cosiddetto **Metodo Augustus**, per «funzioni di supporto» (sanità, volontariato, telecomunicazioni e così via). Il CCS opera a livello provinciale ed è presieduto dal Prefetto; il COM è una struttura sovracomunale istituita vicino al luogo dell'evento; la DiComaC è il centro di coordinamento nazionale, attivato dal Dipartimento nelle grandi emergenze. La trattazione organica completa della catena è prevista in una sezione dedicata.
+Questi centri organizzano il coordinamento per «funzioni di supporto» (Direttiva PCM 30 aprile 2021; il Metodo Augustus del 1997 ne è l'origine storica) (sanità, volontariato, telecomunicazioni e così via). Il CCS opera a livello provinciale ed è presieduto dal Prefetto; il COM è una struttura sovracomunale istituita vicino al luogo dell'evento; la DiComaC è il centro di coordinamento nazionale, attivato dal Dipartimento nelle grandi emergenze. La trattazione organica completa della catena è prevista in una sezione dedicata.
 
 Fonte: Ministero dell'Interno, [Che cosa sono CCS, COC, COM](https://www1.interno.gov.it/mininterno/export/sites/default/it/sezioni/sala_stampa/speciali/Protezione_Civile/che_cosa_i_centri_operativi.html).
 

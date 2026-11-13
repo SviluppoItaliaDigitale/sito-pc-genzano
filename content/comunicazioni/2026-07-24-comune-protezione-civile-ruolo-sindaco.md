@@ -81,18 +81,9 @@ Dal COC partono **ordini** e **decisioni operative**.
 
 ## Le funzioni di supporto
 
-Il COC si organizza in **funzioni di supporto** (Metodo Augustus):
-1. **Funzione 1**: Tecnica e di pianificazione.
-2. **Funzione 2**: Sanità, assistenza sociale e veterinaria.
-3. **Funzione 3**: Volontariato.
-4. **Funzione 4**: Materiali e mezzi.
-5. **Funzione 5**: Servizi essenziali.
-6. **Funzione 6**: Censimento danni.
-7. **Funzione 7**: Strutture operative locali, viabilità.
-8. **Funzione 8**: Telecomunicazioni.
-9. **Funzione 9**: Assistenza alla popolazione.
+Il COC si organizza in **funzioni di supporto**. La Direttiva PCM 30 aprile 2021 ne elenca sedici (tra cui assistenza alla popolazione, sanità e assistenza sociale, logistica, telecomunicazioni d'emergenza, volontariato, stampa e comunicazione). Il Comune sceglie nel proprio Piano quali attivare e può accorparle.
 
-Ognuna è **responsabile** di un settore.
+Ciascuna ha un referente per il proprio settore.
 
 ## Le ordinanze contingibili e urgenti
 

@@ -1,6 +1,6 @@
 ---
 title: "Terremoto: una casa vista dall'interno, un video in 3D"
-date: 2026-11-03T00:02:00+02:00
+date: 2026-11-03T00:02:00+01:00
 description: "Un video di tre minuti e mezzo mostra che cosa succede in una casa durante una scossa e come metterla in sicurezza, una cosa alla volta."
 badge: "Prevenzione"
 priorita: "normale"

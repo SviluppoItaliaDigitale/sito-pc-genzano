@@ -222,7 +222,7 @@ Il **riunione informativa** iniziale in Sala Operativa (prima della partenza) e 
 - Tipologia di supporto — **obiettivi della missione**
 - Tempistica: partenza, viaggio, attivazione e arrivo Colonna Mobile, regime
 - Destinazione
-- Popolazione da assistere: totale, suddivisa per fasce età (0-4, 5-14, 15-44, >44), soggetti vulnerabili (disabili, minori non accompagnati, donne incinte/in allattamento)
+- Popolazione da assistere: totale, suddivisa per fasce età (0-4, 5-14, 15-44, >44), soggetti vulnerabili (persone con disabilità, minori non accompagnati, donne incinte/in allattamento)
 
 #### Logistica
 
@@ -265,7 +265,7 @@ Quando lo scouting conferma la necessità di un **modulo di colonna mobile**, la
 - 250 brandine pieghevoli
 - Pavimentazione (grelle livellanti)
 - Recinzione leggera
-- 18 bagni e 12 docce (con moduli dedicati a disabili)
+- 18 bagni e 12 docce (con moduli accessibili)
 - 4 serbatoi acqua 1000 l
 - Generatore 150 kW + quadristica
 - Torre faro >8 m, 8 gruppi illuminanti
@@ -359,7 +359,7 @@ Quando l'area è confermata idonea, la **progettazione del campo** segue questi 
 
 #### Servizi igienici
 
-- Non dimenticare servizi per **disabili**
+- Non dimenticare servizi **accessibili**
 - 1 servizio igienico/doccia dedicato alla **cucina**
 - 1 servizio igienico/doccia dedicato all'area **sanitaria**
 - Separazione soccorritori / ospiti

@@ -18,7 +18,7 @@ La gestione di un'emergenza richiede tre funzioni che la norma internazionale **
 - l'**informazione operativa** — la raccolta, la valutazione e la diffusione delle informazioni che alimentano le decisioni;
 - la **cooperazione e il coordinamento** — il raccordo *fra* organizzazioni diverse che operano sullo stesso evento (Vigili del Fuoco, sanità, volontariato, forze dell'ordine, Comune).
 
-La protezione civile italiana realizza queste funzioni con il **modello per funzioni di supporto** del Metodo Augustus e con la catena dei centri di coordinamento (COC, CCS, DiComaC), descritti nella **Parte V**. La logica internazionale e quella italiana convergono: organizzare la risposta per **funzioni** e per **livelli**, non per improvvisazione.
+La protezione civile italiana realizza queste funzioni con il **modello per funzioni di supporto** (Direttiva PCM 30 aprile 2021; origine storica nel Metodo Augustus) e con la catena dei centri di coordinamento (COC, CCS, DiComaC), descritti nella **Parte V**. La logica internazionale e quella italiana convergono: organizzare la risposta per **funzioni** e per **livelli**, non per improvvisazione.
 
 ## 11.5 I principi dell'organizzazione
 
@@ -60,7 +60,7 @@ La fiducia reciproca, costruita nell'addestramento e nelle esercitazioni, è ci�
 ## Fonti
 
 1. **ISO 22320:2018** — *Security and resilience — Emergency management — Guidelines for incident management* (comando e controllo, informazione operativa, cooperazione e coordinamento).
-2. **Dipartimento della Protezione Civile** — Metodo Augustus e modello per funzioni di supporto (Parte V del manuale).
+2. **Dipartimento della Protezione Civile** — Direttiva PCM 30 aprile 2021 e modello per funzioni di supporto (Parte V del manuale).
 3. **FEMA** — principi dell'*Incident Command System* (unità di comando, ampiezza del controllo, gestione per obiettivi), adattati al contesto italiano.
 4. **Codice della protezione civile**, d.lgs. 1/2018, art. 18 (formazione e addestramento) — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 

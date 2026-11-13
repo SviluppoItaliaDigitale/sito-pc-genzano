@@ -1,6 +1,6 @@
 ---
 title: "Dentro l'estintore: un video in 3D"
-date: 2026-10-28T00:03:00+02:00
+date: 2026-10-28T00:03:00+01:00
 description: "Un video breve mostra come funziona l'estintore e come si usa."
 badge: "Prevenzione"
 priorita: "normale"

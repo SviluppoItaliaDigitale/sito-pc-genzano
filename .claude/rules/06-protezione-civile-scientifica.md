@@ -118,7 +118,7 @@ Per allerte meteo usa solo i dati ufficiali di ARPAM Lazio o del Centro Funziona
 
 ## Numeri di emergenza da citare sempre correttamente
 
-Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112** (NUE — Numero Unico Europeo). Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (vigili del fuoco, emergenza sanitaria, forze dell'ordine, squadre AIB). Le vecchie linee 115, 118 e 1515 non sono più il riferimento da comunicare al cittadino.
+Nel Lazio, dal 2015, **l'unico numero di emergenza per il cittadino è il 112** (NUE — Numero Unico Europeo). Tutte le chiamate arrivano alla Centrale Unica del NUE, che smista l'intervento all'ente competente (vigili del fuoco, emergenza sanitaria, forze dell'ordine, squadre AIB). Le vecchie linee 115, 118 e 1515 non sono più il riferimento da comunicare al cittadino.
 
 | Numero | Servizio |
 |---|---|

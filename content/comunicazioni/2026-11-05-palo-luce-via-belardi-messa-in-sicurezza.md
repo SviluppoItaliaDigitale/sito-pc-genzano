@@ -1,6 +1,6 @@
 ---
 title: "Palo della luce danneggiato in corso Don Minzoni: area messa in sicurezza"
-date: 2026-11-05T00:03:00+02:00
+date: 2026-11-05T00:03:00+01:00
 description: "Giovedì pomeriggio un palo della luce urtato da un mezzo si è piegato in corso Don Minzoni. Il Gruppo ha delimitato l'area; il palo è stato rimosso."
 badge: "Attività"
 priorita: "normale"

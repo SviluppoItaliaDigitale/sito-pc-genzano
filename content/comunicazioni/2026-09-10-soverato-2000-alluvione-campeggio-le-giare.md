@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità** in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla). Il bilancio fu di **13 morti**: molti ragazzi disabili non riuscirono a fuggire dalle tende invase dall'acqua e dal fango.
+Nella notte tra il **9 e il 10 settembre 2000**, una piena improvvisa del torrente **Beltrame** travolse il **campeggio Le Giare** a Soverato (Catanzaro), in Calabria. Il campeggio ospitava un gruppo di **persone con disabilità** in vacanza con familiari e accompagnatori dell'associazione **AISM** (Associazione Italiana Sclerosi Multipla). Il bilancio fu di **13 morti**: molti ragazzi con disabilità non riuscirono a fuggire dalle tende invase dall'acqua e dal fango.
 
 ## La cronologia
 

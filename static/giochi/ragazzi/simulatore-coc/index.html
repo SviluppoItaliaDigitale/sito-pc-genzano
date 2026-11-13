@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simulatore COC — Giochi Ragazzi</title>
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/ragazzi/simulatore-coc/">
-  <meta name="description" content="Sei funzionario di sala al Centro Operativo Comunale: gestisci un'allerta arancione coordinando le 9 funzioni di supporto.">
+  <meta name="description" content="Sei funzionario di sala al Centro Operativo Comunale: gestisci un'allerta arancione coordinando le nove funzioni di supporto del gioco, uno schema semplificato.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -79,9 +79,9 @@
       <div id="intro" class="rag-panel">
         <h2>Riunione informativa operativo</h2>
         <p>Sei funzionario di sala al <strong>Centro Operativo Comunale (COC)</strong> di Genzano di Roma. La Regione Lazio ha diramato un'<strong>allerta arancione</strong> per rischio idrogeologico e temporali forti.</p>
-        <p>Il tuo compito: per ogni evento che arriva, assegnare la <strong>funzione di supporto</strong> giusta del <strong>Metodo Augustus</strong>. Hai 8 eventi da gestire, estratti a sorte a ogni partita.</p>
+        <p>Il tuo compito: per ogni evento che arriva, assegnare la <strong>funzione di supporto</strong> giusta tra le nove del gioco, uno schema semplificato derivato dal Metodo Augustus (1997). La Direttiva PCM 30 aprile 2021 ne elenca sedici e ogni Comune sceglie nel Piano quali attivare. Hai 8 eventi da gestire, estratti a sorte a ogni partita.</p>
         <details class="mb-3">
-          <summary class="fw-bold text-primary">Le 9 funzioni di supporto (clicca per espandere)</summary>
+          <summary class="fw-bold text-primary">Le 9 funzioni del gioco (clicca per espandere)</summary>
           <ol class="small mt-2">
             <li><strong>F1 — Tecnica e pianificazione</strong>: monitoraggio, scenari, cartografia</li>
             <li><strong>F2 — Sanità e assistenza sociale</strong>: ASL, ARES 118, psicologi</li>
@@ -271,7 +271,7 @@
         ko++; errateEl.textContent = ko;
         feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0 small"><i class="bi bi-exclamation-triangle-fill me-1"></i> Era <strong>F' + ev.corretta + '</strong>. ' + ev.spiega + '</div>';
         if (window.GameCoach && window.GameCoach.hint) {
-          window.GameCoach.hint('Le 9 funzioni del Metodo Augustus: F1=tecnica/cartografia, F2=sanità, F3=volontariato, F4=materiali/mezzi, F5=servizi essenziali, F6=danni, F7=strutture/viabilità, F8=telecomunicazioni, F9=accoglienza popolazione.', '/normativa/');
+          window.GameCoach.hint('Le 9 funzioni del gioco (schema semplificato): F1=tecnica/cartografia, F2=sanità, F3=volontariato, F4=materiali/mezzi, F5=servizi essenziali, F6=danni, F7=strutture/viabilità, F8=telecomunicazioni, F9=accoglienza popolazione.', '/normativa/');
         }
       }
       kpiFill.style.width = Math.round(((idx+1) / EVENTI_PARTITA.length) * 100) + '%';
@@ -289,10 +289,10 @@
       finalScore.textContent = ok;
       finalMax.textContent = EVENTI_PARTITA.length;
       var perc = (ok / EVENTI_PARTITA.length) * 100;
-      if (perc >= 90) finalMsg.textContent = 'Eccellente! Hai coordinato il COC con grande padronanza del Metodo Augustus.';
+      if (perc >= 90) finalMsg.textContent = 'Eccellente! Hai coordinato il COC con grande padronanza delle funzioni di supporto.';
       else if (perc >= 70) finalMsg.textContent = 'Buon lavoro! Hai gestito bene l\'allerta: ripassa le funzioni meno chiare.';
       else if (perc >= 50) finalMsg.textContent = 'Discreto. Ripassa le 9 funzioni: ogni decisione in sala è rapida.';
-      else finalMsg.textContent = 'Ripassa il Metodo Augustus e le 9 funzioni di supporto, poi riprova.';
+      else finalMsg.textContent = 'Ripassa le 9 funzioni di supporto del gioco, poi riprova.';
       if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('simulatore-coc', ok, EVENTI_PARTITA.length, '#end');
     }
 

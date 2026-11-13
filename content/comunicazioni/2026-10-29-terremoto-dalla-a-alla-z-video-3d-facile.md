@@ -1,6 +1,6 @@
 ---
 title: "Il terremoto spiegato bene: un video in 3D"
-date: 2026-10-29T00:02:00+02:00
+date: 2026-10-29T00:02:00+01:00
 description: "Un video spiega che cos'è il terremoto, come si misura e come ci proteggiamo."
 badge: "Prevenzione"
 priorita: "normale"

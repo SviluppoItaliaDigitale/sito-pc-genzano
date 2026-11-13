@@ -18,7 +18,7 @@ tts: false
 
 ## Urĝaj kaj sav-numeroj
 
-En la regiono Lazio, ekde 2017, **la sola numero por telefoni en urĝa kazo estas 112**. Ĉiuj vokoj atingas la Unikan Centron de NUE, kiu sendas la intervenon al la kompetenta servo (Fajrobrigado, sanitara urĝo, Karabenistoj, Polico, arbarafajroj).
+En la regiono Lazio, ekde 2015, **la sola numero por telefoni en urĝa kazo estas 112**. Ĉiuj vokoj atingas la Unikan Centron de NUE, kiu sendas la intervenon al la kompetenta servo (Fajrobrigado, sanitara urĝo, Karabenistoj, Polico, arbarafajroj).
 
 | Numero | Servo | Kiam telefoni |
 |---|---|---|

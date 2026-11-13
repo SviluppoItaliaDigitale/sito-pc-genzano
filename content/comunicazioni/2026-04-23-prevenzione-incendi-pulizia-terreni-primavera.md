@@ -73,7 +73,7 @@ I residui vegetali vanno portati nei centri di raccolta o nei punti di compostag
 
 ## Se vedi un incendio: chiama il 112
 
-Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112**, il Numero Unico Europeo. La centrale di ricezione smista la chiamata a vigili del fuoco e squadre antincendio boschivo. Quando chiami:
+Nel Lazio, dal 2015, **l'unico numero di emergenza per il cittadino è il 112**, il Numero Unico Europeo. La centrale di ricezione smista la chiamata a vigili del fuoco e squadre antincendio boschivo. Quando chiami:
 
 - Indica **dove** stai vedendo il fuoco (strada, località, riferimenti visibili).
 - Descrivi cosa stai vedendo: dimensione del fumo, colore, se ci sono case o persone vicine.

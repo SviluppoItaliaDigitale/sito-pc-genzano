@@ -1,6 +1,6 @@
 ---
 title: "Allarme bomba nelle scuole: che cosa è successo, in parole semplici"
-date: 2026-11-11T00:02:00+02:00
+date: 2026-11-11T00:02:00+01:00
 description: "L'11 novembre 2026 le scuole sono uscite dagli edifici per una mail con minacce. Che cosa fare se succede, e che cosa cambia con un terremoto."
 badge: "Avviso"
 priorita: "normale"

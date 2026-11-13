@@ -24,7 +24,7 @@ Il manuale non sostituisce la **formazione di base regionale** del volontario (a
 
 | Capitolo | Contenuto |
 |---|---|
-| [1. Struttura organizzativa e catena di comando](/formazione/manuale-campo/struttura-organizzativa/) | Inquadramento istituzionale dal livello nazionale al comunale, centri di coordinamento, funzioni di supporto (metodo Augustus aggiornato) |
+| [1. Struttura organizzativa e catena di comando](/formazione/manuale-campo/struttura-organizzativa/) | Inquadramento istituzionale dal livello nazionale al comunale, centri di coordinamento, funzioni di supporto (Direttiva PCM 2021) |
 | [2. Scouting e valutazione iniziale](/formazione/manuale-campo/scouting/) | Nucleo di valutazione, azioni prima/durante/dopo l'evento, **7 check-list operative** (kit personale, squadre, informazioni, attivazione colonna mobile, area accoglienza, progettazione, area esterna) |
 | [3. Funzioni tecniche](/formazione/manuale-campo/funzioni-tecniche/) | Rete TLC, impiantistica elettrica e idrica, tende e tensostrutture, ristorazione, magazzini, servizi igienici, sicurezza |
 | [4. Funzioni di servizio](/formazione/manuale-campo/funzioni-servizio/) | Direzione (Capo Missione, Capo Campo), segreteria, sanità, supporto psicosociale, infopoint, guardiania, pulizie e disinfezione |

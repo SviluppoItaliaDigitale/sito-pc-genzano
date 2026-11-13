@@ -61,7 +61,7 @@ Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, *
 {{< dossier-dati id="sindaco" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea dell'alluvione in Emilia-Romagna del 2023" >}}
 {{< dossier-dato to="1" unita=" autorità" label="Il **Sindaco** è la prima autorità di protezione civile: valuta l'allerta e decide cosa attivare" >}}
 {{< dossier-dato to="3" unita=" mosse" label="Può **attivare il COC** (Centro Operativo Comunale), **informare la popolazione** e **allertare il Gruppo** di volontari" >}}
-{{< dossier-dato to="9" label="Nel COC le **funzioni di supporto** (Metodo Augustus) si mettono in moto: volontariato, sanità, logistica, viabilità, telecomunicazioni" >}}
+{{< dossier-dato to="16" label="Le **funzioni di supporto** elencate dalla Direttiva del 2021: nel COC il Comune attiva quelle previste dal Piano, dal volontariato alla sanità, dalla logistica alle telecomunicazioni" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-dati id="it-alert" image="/images/dossier/allertamento-eu-alert.webp" alt="Mappa politica dell'Europa con i confini dei Paesi, su sfondo azzurro" >}}

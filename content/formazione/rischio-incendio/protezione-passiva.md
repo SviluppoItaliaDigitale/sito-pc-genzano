@@ -154,7 +154,7 @@ Per **locali in genere**:
 
 ### Persone con disabilità o fragilità
 
-La "sicurezza delle persone disabili" in emergenza riguarda **tutti coloro** che possono avere difficoltà di esodo autonomo:
+La "sicurezza delle persone con disabilità" in emergenza riguarda **tutti coloro** che possono avere difficoltà di esodo autonomo:
 
 - persone con disabilità motoria, sensoriale, cognitiva
 - persone anziane

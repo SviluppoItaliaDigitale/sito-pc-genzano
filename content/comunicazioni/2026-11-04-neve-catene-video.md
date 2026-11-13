@@ -1,6 +1,6 @@
 ---
 title: "Neve e catene: la mossa giusta si fa a casa"
-date: 2026-11-04T00:04:00+02:00
+date: 2026-11-04T00:04:00+01:00
 description: "Un video di un minuto: prima neve, catene mai provate e gomme invernali vecchie. Tu cosa faresti? Le cose da fare prima del 15 novembre."
 badge: "Prevenzione"
 priorita: "normale"

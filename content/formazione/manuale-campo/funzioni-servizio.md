@@ -83,7 +83,7 @@ La **funzione sanità** integra le strutture sanitarie del campo (PMA 1° o 2° 
 - **prima assistenza** a ospiti e soccorritori
 - **gestione farmaci** del PMA (registro carico/scarico, scadenze)
 - **raccordo** con l'ospedale di riferimento (Ospedale dei Castelli di Ariccia per Genzano) e con l'**ARES 118** via 112 NUE
-- **assistenza a persone fragili** (anziani, disabili, malati cronici)
+- **assistenza a persone fragili** (anziani, persone con disabilità, malati cronici)
 - **igiene** del campo (in raccordo con funzione pulizie)
 - **controllo** della qualità dell'acqua (ASL Roma 6)
 
@@ -185,7 +185,7 @@ La guardiania **non sostituisce** le Forze dell'Ordine: in caso di reati o situa
 | **Mensa — tavoli ospiti** | Dopo ogni pasto | Detergente sanificante |
 | **Tende alloggi — spazi comuni** | 1 volta al giorno | Detergente neutro |
 | **Infopoint / segreteria** | 1 volta al giorno | Detergente neutro |
-| **Servizi igienici per disabili** | 3 volte al giorno | Detergente clorato + verifica accessibilità |
+| **Servizi igienici accessibili** | 3 volte al giorno | Detergente clorato + verifica accessibilità |
 
 ### Disinfezione straordinaria
 

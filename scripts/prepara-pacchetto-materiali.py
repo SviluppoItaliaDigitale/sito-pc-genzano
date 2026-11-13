@@ -445,7 +445,7 @@ TEMI = {
             "App 'Where Are U' — geolocalizzazione 112: https://www.where-are-u.it",
         ],
         "focus_podcast": [
-            "Dal 2017 nel Lazio l'UNICO numero da chiamare in emergenza è il 112 — perché ha sostituito 115, 118, 1515",
+            "Dal 2015 nel Lazio l'UNICO numero da chiamare in emergenza è il 112 — perché ha sostituito 115, 118, 1515",
             "Cosa succede quando chiami: l'operatore di centrale unica risponde, identifica l'emergenza, smista a VVF/118/CC/PS",
             "Cosa dire all'operatore: cosa sta succedendo, dove (indirizzo preciso o riferimenti visibili), quante persone coinvolte, telefono di richiamo",
             "Geolocalizzazione: il 112 ha già la tua posizione approssimativa, ma confermala. App 'Where Are U' la rende precisa al metro",
@@ -521,7 +521,7 @@ TEMI = {
         ],
         "fonti_istituzionali": [
             "Linee guida DPC sui Piani di Emergenza Comunali: https://www.protezionecivile.gov.it",
-            "Direttiva PCM 9 novembre 2012 (piani comunali): https://www.normattiva.it",
+            "Direttiva PCM 9 novembre 2012 (partecipazione del volontariato): https://www.normattiva.it",
             "Cartografia Geoportale Regione Lazio: https://geoportale.regione.lazio.it",
             "Codice della Protezione Civile (D.Lgs. 1/2018) art. 12: https://www.normattiva.it",
         ],
@@ -736,7 +736,7 @@ def prompt_presentazione(tema_data: dict) -> str:
         ricongiungimento familiare).
 
         Slide 12: Il numero da chiamare — sempre 112. Mai 115, 118,
-        1515 (sono superati nel Lazio dal 2017).
+        1515 (sono superati nel Lazio dal 2015).
 
         Slide 13: Il ruolo del volontariato di Protezione Civile
         (riferimento al Gruppo Comunale di Genzano).

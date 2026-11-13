@@ -78,7 +78,7 @@ Segui le ordinanze del Comune. Non attraversare l'acqua. Sali ai piani alti se p
 
 ## Cosa fare in caso di fuga di gas
 
-Non accendere la luce. Non usare il telefono dentro casa. Apri le finestre. Chiudi il gas alla valvola principale. Esci subito. Chiama il 112 da fuori. Avvisa i vicini.
+Non accendere la luce. Non usare il telefono dentro casa. Apri le finestre. Chiudi il gas alla valvola principale solo se la raggiungi subito e senza rischi. Esci subito. Chiama il 112 da fuori. Avvisa i vicini.
 
 ## I bambini
 
