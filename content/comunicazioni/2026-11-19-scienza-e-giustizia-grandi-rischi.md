@@ -1,7 +1,7 @@
 ---
 title: "La protezione civile vista dal giudice: il processo Grandi Rischi dopo il terremoto dell'Aquila"
 date: 2026-11-19
-description: "Dal 2012 al 2016 tre gradi di giudizio sulla riunione del 31 marzo 2009. L'accusa riguardava la comunicazione del rischio, non la mancata previsione."
+description: "Tre gradi di giudizio, dal 2012 al 2016, sulla riunione del 31 marzo 2009. Al centro la valutazione e la comunicazione del rischio, non la mancata previsione."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -14,13 +14,13 @@ tts: true
 social_citazione: "Un terremoto non si può prevedere. Il rischio, invece, si può valutare e comunicare, e su come si comunica si può essere chiamati a rispondere."
 social_punti:
   - "31 marzo 2009: la Commissione Grandi Rischi si riunisce all'Aquila durante lo sciame sismico"
-  - "6 aprile 2009: la scossa di magnitudo 6.3 provoca 309 vittime"
+  - "6 aprile 2009: la scossa di magnitudo momento 6.3 provoca 309 vittime"
   - "L'accusa non riguardava la mancata previsione del terremoto, ma informazioni che per la Procura erano incomplete e rassicuranti"
   - "Esito definitivo: sei imputati assolti, condannato a due anni un dirigente del Dipartimento della protezione civile"
 draft: false
 ---
 
-Il 6 aprile 2009, alle 3:32, un terremoto di magnitudo 6.3 colpisce L'Aquila e il suo territorio. Il Dipartimento della protezione civile conta **309 vittime** e più di 1.500 feriti. Dopo il sisma la Procura dell'Aquila indaga su una riunione tenuta sei giorni prima della scossa. Ne nasce un processo che si chiude nel 2016.
+Il 6 aprile 2009, alle 3:32, un terremoto di magnitudo momento (Mw) 6.3 colpisce L'Aquila e il suo territorio. Il Dipartimento della protezione civile conta **309 vittime** e più di 1.500 feriti. Dopo il sisma la Procura dell'Aquila indaga su una riunione tenuta sei giorni prima della scossa. Ne nasce un processo che si chiude nel 2016.
 
 In questa serie raccontiamo la protezione civile da punti di vista diversi. Oggi è il turno del giudice. Lo facciamo con rispetto per le vittime e per i loro familiari, che hanno atteso per anni una risposta. E con le parole esatte del processo, perché su questa vicenda circolano ancora molte semplificazioni.
 
@@ -44,11 +44,11 @@ Sette persone saranno poi imputate. Ne indichiamo il ruolo di allora:
 
 Per capire il processo bisogna separare tre azioni che spesso si confondono.
 
-**Prevedere un terremoto** vuol dire indicare in anticipo luogo, momento e forza di una scossa. Oggi nessuno sa farlo. Lo ha scritto nel 2009 la Commissione internazionale nominata dal Dipartimento dopo L'Aquila: con le conoscenze attuali i singoli forti terremoti non si possono predire in modo affidabile.
+**Prevedere un terremoto** vuol dire indicare in anticipo luogo, momento e forza di una scossa. Gli scienziati la chiamano «predizione», e oggi nessun metodo la rende possibile. Lo ha scritto nel 2009 la Commissione internazionale nominata dal Dipartimento dopo L'Aquila: i singoli forti terremoti non si possono predire in modo affidabile per intervalli di anni o meno. Si può invece stimare quanto è probabile una scossa: è la previsione probabilistica, sempre con ampi margini di incertezza.
 
-**Valutare il rischio** è un'altra cosa. Significa stimare quanto è probabile una scossa forte e quali danni potrebbe causare, tenendo conto degli edifici e delle persone esposte. È un lavoro fatto di probabilità, sempre con un margine di incertezza.
+**Valutare il rischio** è un'altra cosa. Il rischio sismico dipende da tre fattori: la pericolosità, cioè quanto può tremare la terra in quel luogo; la vulnerabilità, cioè quanto sono fragili gli edifici; l'esposizione, cioè quante persone e quanti beni ci sono. Anche questa stima ha sempre un margine di incertezza.
 
-**Comunicare il rischio** significa dire ai cittadini che cosa si sa, che cosa non si sa e come proteggersi. È qui che si è concentrato il processo.
+**Comunicare il rischio** significa dire ai cittadini che cosa si sa, che cosa non si sa e come proteggersi. Su questo punto, e non sulla mancata previsione, si fonda la condanna definitiva.
 
 ## Che cosa diceva l'accusa
 
@@ -64,27 +64,27 @@ I reati contestati erano **omicidio colposo** e **lesioni personali colpose**. �
 
 **Cassazione.** La quarta sezione penale della Corte di cassazione decide dopo l'udienza del 19 novembre 2015 e conferma la sentenza d'appello. Le motivazioni sono depositate il 24 marzo 2016, con la **sentenza n. 12478/2016**. Le sei assoluzioni e la condanna a due anni, con pena sospesa, diventano definitive.
 
-Nella sentenza la Cassazione afferma questo principio. Un dirigente della protezione civile può rispondere di omicidio colposo se diffonde dichiarazioni rassicuranti su uno sciame sismico in corso, senza adeguati riscontri scientifici. È così se quelle parole inducono i cittadini ad abbandonare i comportamenti di autoprotezione. La sentenza distingue quindi due piani: la valutazione degli esperti e il messaggio arrivato alla popolazione.
+Nella sentenza la Cassazione afferma questo principio. Un dirigente della protezione civile può rispondere di omicidio colposo se diffonde dichiarazioni rassicuranti su uno sciame sismico in corso, senza adeguati riscontri scientifici. È così se quelle parole inducono i cittadini ad abbandonare i comportamenti di autoprotezione. Il processo si chiude con sei assoluzioni e una sola condanna, per le dichiarazioni rassicuranti rese al pubblico.
 
 ## Che cosa è cambiato per il sistema
 
 Il 12 maggio 2009 si riunisce per la prima volta all'Aquila la **Commissione internazionale sulla previsione dei terremoti**, nominata dal Capo del Dipartimento. Il suo rapporto, consegnato il 2 ottobre 2009, chiede di ragionare in termini di probabilità. Raccomanda di informare il pubblico con continuità, anche quando la probabilità di forti scosse è bassa.
 
-Oggi il [Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/) (decreto legislativo 2 gennaio 2018, n. 1) mette in chiaro questi passaggi:
+Il [Codice della protezione civile](/normativa/testo-unico-protezione-civile/) (decreto legislativo 2 gennaio 2018, n. 1) disciplina oggi questi aspetti:
 
-- l'**articolo 2** distingue previsione, prevenzione, gestione e superamento dell'emergenza. Fra le attività di prevenzione indica l'allertamento «in termini probabilistici, ove possibile» e l'informazione alla popolazione sugli scenari di rischio;
-- l'**articolo 19** ammette nelle attività di protezione civile solo le conoscenze scientifiche che hanno raggiunto un livello di maturazione e consenso riconosciuto;
+- l'**articolo 2** distingue previsione, prevenzione, gestione e superamento dell'emergenza. Qui «previsione» vuol dire studiare gli scenari di rischio possibili, non dire quando avverrà un evento. Fra le attività di prevenzione indica l'allertamento «in termini probabilistici, ove possibile» e l'informazione alla popolazione sugli scenari di rischio;
+- l'**articolo 19** definisce il ruolo della comunità scientifica: contribuisce con risultati di ricerca che abbiano raggiunto «un livello di maturazione e consenso riconosciuto»;
 - l'**articolo 20** conferma la Commissione Grandi Rischi come organo di consulenza tecnico-scientifica del Dipartimento;
-- l'**articolo 21** disciplina i **Centri di competenza**, come l'INGV, che forniscono al sistema dati e prodotti scientifici;
-- l'**articolo 31** impegna chi fa protezione civile a informare i cittadini sui rischi del territorio, perché possano proteggersi.
+- l'**articolo 21** disciplina i **[Centri di competenza](/normativa/testo-unico-protezione-civile/capo-3-previsione-prevenzione/)**, come l'INGV, che forniscono al sistema dati e prodotti scientifici;
+- l'**articolo 31** prevede che le componenti del Servizio nazionale informino i cittadini sugli scenari di rischio del territorio, perché possano adottare misure di autoprotezione.
 
 Il messaggio che resta è semplice. Un terremoto non si può prevedere. Il rischio, invece, si può valutare e comunicare, e su come si comunica si può essere chiamati a rispondere.
 
 ## Che cosa puoi fare tu
 
-- **Conosci il rischio del tuo territorio.** Anche Genzano di Roma è in zona sismica: trovi tutto nella pagina sul [rischio sismico](/rischi-prevenzione/rischio-sismico/).
+- **Conosci il rischio del tuo territorio.** Genzano di Roma è in zona sismica 2, sottozona 2B: trovi tutto nella pagina sul [rischio sismico](/rischi-prevenzione/rischio-sismico/).
 - **Diffida di chi annuncia un terremoto** con data e ora. Nessuno può farlo.
-- **Durante una sequenza di scosse**, segui le indicazioni ufficiali del Comune, della Regione e del Dipartimento della protezione civile. I comportamenti di autoprotezione restano validi anche quando le scosse sono deboli.
+- **Durante una sequenza di scosse**, segui le indicazioni ufficiali del Comune, della Regione e del Dipartimento della protezione civile. Anche quando le scosse sono deboli, valgono i comportamenti di autoprotezione: durante la scossa ripàrati vicino a un muro portante o sotto un tavolo robusto, senza correre fuori.
 - **Prepara la tua famiglia** con il [piano familiare di emergenza](/piano-familiare/).
 - In emergenza chiama il **112**, il numero unico di emergenza.
 
