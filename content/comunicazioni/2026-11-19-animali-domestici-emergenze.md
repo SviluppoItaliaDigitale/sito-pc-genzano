@@ -1,6 +1,6 @@
 ---
 title: "Animali domestici in emergenza: piani, kit, responsabilità"
-date: 2026-11-19
+date: 2026-11-19T00:01:00+01:00
 description: "Anche gli animali domestici fanno parte della famiglia. In emergenza vanno protetti, evacuati e accolti in modo adeguato."
 badge: "Prevenzione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Alberi dopo il maltempo: la Giunta stanzia 225 mila euro per metterli in sicurezza"
-date: 2026-11-11T00:01:00+02:00
+date: 2026-11-11T00:02:00+01:00
 description: "Il 6 novembre la Giunta di Genzano ha approvato, con delibera n. 189, una variazione urgente di bilancio di 225.396,94 euro per mettere in sicurezza gli alberi."
 badge: "Informazione"
 canale: "gruppo"

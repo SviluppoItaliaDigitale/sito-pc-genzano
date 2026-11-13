@@ -1,6 +1,6 @@
 ---
 title: "La fatica dei soccorritori: stanchezza, stress e ritorno a casa"
-date: 2026-11-17
+date: 2026-11-17T00:02:00+01:00
 description: "Stanchezza che si accumula, stress da evento critico, trauma vicario: i segnali da riconoscere e che cosa fanno le organizzazioni per chi soccorre."
 badge: "Volontariato"
 priorita: "normale"
@@ -42,18 +42,18 @@ Molte reazioni allo stress sono normali in situazioni fuori dal normale. Il CDC 
 
 - **nel corpo**: stanchezza, mal di testa, nausea, mascella serrata;
 - **nel pensiero**: confusione, difficoltà a concentrarsi, vuoti di memoria, incubi;
-- **nelle emozioni**: ansia, senso di colpa, tristezza, paura, irritabilità, sensazione di essere sopraffatti;
+- **nelle emozioni**: ansia, senso di colpa, lutto, paura, irritabilità, sensazione di essere sopraffatti;
 - **nel comportamento**: chiudersi, scatti di rabbia, bere troppo, appetito che cambia, difficoltà a riposare.
 
 Un segnale passeggero, nelle ore dopo un intervento, è atteso. Anche i pensieri e i ricordi che tornano, scrive il CDC, sono normali e di solito si attenuano col tempo. Conta quando dura, peggiora o pesa sulla vita di tutti i giorni. Dolore al petto, fatica a respirare o segni di shock sono invece un'urgenza medica: si chiama subito il **112**.
 
-Spesso i segnali li vede prima un compagno di squadra. Il CDC chiede ai soccorritori di «tenersi d'occhio a vicenda». Un collega che si chiude, che ha scatti di rabbia insoliti o che beve più del solito non va giudicato. Gli si chiede come sta, e lo si ascolta senza insistere.
+Spesso i segnali li vede prima un compagno di squadra. Il CDC osserva che questi cambiamenti si notano in sé stessi o nei colleghi. Un collega che si chiude, che ha scatti di rabbia insoliti o che beve più del solito non va giudicato. Gli si chiede come sta, e lo si ascolta senza insistere.
 
 ## Il ritorno alla vita normale
 
 La fine dell'intervento non chiude la fatica. L'OMS suggerisce alcuni passaggi semplici. Parlare dell'esperienza con un responsabile, un collega o una persona di fiducia. Riconoscere ciò che si è riusciti a fare, anche in piccolo. Accettare ciò che non è andato bene e i limiti imposti dalla situazione. Riposare, quando possibile, prima di riprendere il lavoro e gli impegni di casa.
 
-Il CDC aggiunge che il recupero non è lineare: ci sono giorni buoni e giorni meno buoni. Consiglia di tornare alle abitudini un passo alla volta e di rimandare le decisioni importanti. Ricorda anche che la famiglia ha vissuto l'emergenza a modo suo, con l'attesa e la preoccupazione. Ne abbiamo scritto nell'articolo sulla [famiglia del volontario](/comunicazioni/2026-11-14-la-famiglia-del-volontario/).
+Il CDC aggiunge che il recupero non è lineare: ci sono giorni buoni e giorni meno buoni. Consiglia di tornare alle abitudini un passo alla volta e di rimandare le decisioni importanti. Ricorda anche che la famiglia vive l'emergenza insieme a te. Ne abbiamo scritto nell'articolo sulla [famiglia del volontario](/comunicazioni/2026-11-14-la-famiglia-del-volontario/).
 
 ## Che cosa fanno le organizzazioni
 
@@ -65,7 +65,7 @@ Il secondo è **la prevenzione**. La direttiva del 2006 chiede di valutare in an
 
 Il terzo è **il confronto dopo l'intervento**. Qui serve una distinzione. La riunione operativa ripercorre fatti, consegne e procedure, e nessuno è obbligato a raccontare le proprie emozioni. Il «debriefing psicologico» è un'altra cosa. Dal 2012 l'OMS raccomanda di non usarlo per prevenire lo stress post-traumatico in chi è stato esposto da poco a un trauma.
 
-Il quarto è **il supporto professionale**. La direttiva del 2006 affida alle Regioni le équipe psicosociali per l'emergenza. Le formano operatori dei servizi regionali, a cui si possono aggiungere volontari e professionisti degli ordini. Lavorano vicino al posto medico avanzato e nei luoghi di accoglienza, con la casacca verde e la sigla «PSIC». Il loro referente regionale dispone anche il ricambio degli operatori dell'équipe. Fuori dall'emergenza, per un sostegno personale, ci si rivolge al medico di famiglia. Ci sono poi i servizi della ASL Roma 6 e gli psicologi iscritti all'Ordine.
+Il quarto è **il supporto professionale**. La direttiva del 2006 affida alle Regioni le équipe psicosociali per l'emergenza. Le formano operatori dei servizi regionali, a cui si possono aggiungere risorse di associazioni di volontariato, enti locali e ordini professionali. Lavorano vicino al posto medico avanzato e nei luoghi di accoglienza, con la casacca verde e la sigla «PSIC». Il loro referente regionale dispone anche il ricambio degli operatori dell'équipe. Fuori dall'emergenza, per un sostegno personale, ci si rivolge al medico di famiglia. Ci sono poi i servizi della ASL Roma 6 e gli psicologi iscritti all'Ordine.
 
 ## Che cosa puoi fare tu
 

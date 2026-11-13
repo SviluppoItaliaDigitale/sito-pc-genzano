@@ -1,6 +1,6 @@
 ---
 title: "Parrocchie e comunità di fede: che cosa possono fare in un'emergenza"
-date: 2026-11-25
+date: 2026-11-25T00:02:00+01:00
 description: "Ascolto, conoscenza delle persone sole, aiuti, tutela delle chiese e rispetto dei riti: la protezione civile vista dalle comunità di fede."
 badge: "Informazione"
 priorita: "normale"

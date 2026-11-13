@@ -1,6 +1,6 @@
 ---
 title: "Prevenire o riparare? La protezione civile vista da un economista"
-date: 2026-11-18
+date: 2026-11-18T00:02:00+01:00
 description: "Chi paga i danni di terremoti e alluvioni, perché pochi sono assicurati, l'obbligo di polizza per le imprese e quanto rende la prevenzione."
 badge: "Informazione"
 priorita: "normale"

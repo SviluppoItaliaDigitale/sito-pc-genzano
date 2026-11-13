@@ -1,6 +1,6 @@
 ---
 title: "Il semaforo di attenzione degli alimenti: come classificare ciò che si recupera per solidarietà"
-date: 2026-03-18
+date: 2026-03-18T00:02:00+01:00
 description: "Alto, medio o basso livello di attenzione: il manuale Caritas-Banco Alimentare classifica gli alimenti da recuperare in tre macrocategorie a semaforo."
 badge: "Prevenzione"
 priorita: "normale"

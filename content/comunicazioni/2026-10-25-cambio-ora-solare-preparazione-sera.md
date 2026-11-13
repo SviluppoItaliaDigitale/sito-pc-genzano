@@ -1,6 +1,6 @@
 ---
 title: "Cambio ora solare: cosa cambia per la sicurezza serale"
-date: 2026-10-24T00:02:00+02:00
+date: 2026-10-24T00:07:00+02:00
 description: "Nella notte fra sabato 24 e domenica 25 ottobre torna l'ora solare e la sera fa buio un'ora prima. Come adattare abitudini e sicurezza."
 badge: "Informazione"
 priorita: "normale"

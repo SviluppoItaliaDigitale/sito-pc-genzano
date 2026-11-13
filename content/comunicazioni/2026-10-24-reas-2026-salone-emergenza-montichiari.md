@@ -1,6 +1,6 @@
 ---
 title: "REAS 2026: il bilancio del Salone dell'emergenza di Montichiari"
-date: 2026-10-24T00:02:00+02:00
+date: 2026-10-24T00:06:00+02:00
 description: "Sensori nei boschi, droni solari, mezzi per le zone allagate: il bilancio del 25° Salone dell'emergenza e la prossima edizione, dal 7 al 9 ottobre 2027."
 badge: "Informazione"
 priorita: "normale"

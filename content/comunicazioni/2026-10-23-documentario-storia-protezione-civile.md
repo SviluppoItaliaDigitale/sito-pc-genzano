@@ -1,6 +1,6 @@
 ---
 title: "Da dove nasce la protezione civile, e perché ha bisogno di te: il nostro documentario"
-date: 2026-10-23T00:03:00+02:00
+date: 2026-10-23T00:01:00+02:00
 description: "Meno di cinque minuti di storia, da Messina 1908 a IT-alert, con le foto vere dei disastri, le riprese dei nostri interventi e la voce di un nostro volontario."
 badge: "Volontariato"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Strada allagata davanti all'auto: perché non si attraversa"
-date: 2026-10-23
+date: 2026-10-23T00:02:00+02:00
 description: "Sottopassi, guadi e strade sommerse: pochi centimetri d'acqua bastano a spegnere il motore o a portare via l'auto. Che cosa fare quando la strada è allagata."
 badge: "Prevenzione"
 priorita: "normale"

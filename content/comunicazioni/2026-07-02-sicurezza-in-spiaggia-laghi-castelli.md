@@ -1,6 +1,6 @@
 ---
 title: "Sicurezza in spiaggia e sui laghi dei Castelli"
-date: 2026-07-02
+date: 2026-07-02T00:01:00+02:00
 description: "I laghi di Nemi e Albano attraggono ogni estate migliaia di persone. Regole semplici per vivere il fresco dell'acqua senza trasformare una giornata in tragedia."
 badge: "Prevenzione"
 priorita: "normale"

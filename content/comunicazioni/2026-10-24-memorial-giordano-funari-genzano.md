@@ -1,6 +1,6 @@
 ---
 title: "Memorial Giordano Funari: il Gruppo in piazza Frasconi"
-date: 2026-10-24T00:06:00+02:00
+date: 2026-10-24T00:04:00+02:00
 description: "I volontari del Gruppo al terzo Memorial Giordano Funari, sabato 24 ottobre in piazza Frasconi a Genzano, insieme alla famiglia e agli amici."
 badge: "Evento"
 priorita: "normale"

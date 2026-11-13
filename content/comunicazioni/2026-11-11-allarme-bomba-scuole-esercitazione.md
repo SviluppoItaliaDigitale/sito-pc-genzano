@@ -1,6 +1,6 @@
 ---
 title: "Scuole evacuate per un allarme bomba: la stessa risposta che proviamo nelle esercitazioni"
-date: 2026-11-11T00:02:00+02:00
+date: 2026-11-11T00:01:00+01:00
 description: "Anche a Genzano scuole evacuate per una mail con minacce arrivata a migliaia di istituti italiani. Come funziona la risposta e che cosa cambia con un terremoto."
 badge: "Avviso"
 priorita: "normale"

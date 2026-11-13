@@ -1,6 +1,6 @@
 ---
 title: "Se devi lasciare casa in un'emergenza: che cosa succede"
-date: 2026-11-15
+date: 2026-11-15T00:02:00+01:00
 description: "Dove vai, chi ti aiuta, che cosa portare e quando torni a casa, se in un'emergenza devi uscire di casa."
 badge: "Informazione"
 priorita: "normale"

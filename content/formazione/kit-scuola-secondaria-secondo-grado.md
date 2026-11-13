@@ -960,7 +960,7 @@ R. Un PCTO con il Gruppo copre 30-50 ore. Le ore restanti vanno completate con a
 R. Gli studenti maggiorenni possono iscriversi direttamente al Gruppo. Gli studenti dai 16 anni possono farlo con il consenso del genitore o di chi esercita la responsabilità genitoriale, secondo il regolamento del Gruppo (vedi `/diventa-volontario/`); la piena operatività sul campo resta comunque al compimento dei 18 anni. Il PCTO può essere la porta di ingresso.
 
 **D. Il processo Grandi Rischi dell'Aquila è un tema politicamente sensibile. Come lo affronto?**
-R. Come un **caso di studio di diritto penale e di filosofia della scienza**. Fatti: condanne in primo grado, assoluzioni in appello (eccetto De Bernardinis), dibattito sul ruolo della scienza nella comunicazione del rischio. Il tema è ricchissimo per il colloquio di Esame di Stato perché attraversa diritto, filosofia, scienza, comunicazione.
+R. Come un **caso di studio di diritto penale e di filosofia della scienza**. Fatti: condanne in primo grado, assoluzione in appello di sei imputati e condanna a due anni, con pena sospesa, del vicecapo del settore tecnico operativo del Dipartimento, esito reso definitivo dalla Cassazione (sentenza n. 12478/2016), dibattito sul ruolo della scienza nella comunicazione del rischio. Il tema è ricchissimo per il colloquio di Esame di Stato perché attraversa diritto, filosofia, scienza, comunicazione.
 
 **D. Come gestisco il negazionismo climatico tra gli studenti?**
 R. Non è più un tema di "dibattito": le posizioni scientifiche sono univoche (IPCC). Il dibattito legittimo è su **come reagire** al cambiamento climatico, non sul fatto che esista. Distinguere fatto e scelta politica è un esercizio di cittadinanza.
@@ -1014,7 +1014,7 @@ Per ogni caso sono indicati: (1) fenomeno fisico, (2) fattori predisponenti, (3)
 
 **Caso 4 — Terremoto L'Aquila 6 aprile 2009 e processo Grandi Rischi**
 - *Fenomeno*: terremoto M 6.3, 309 vittime.
-- *Caso giudiziario*: condanna in primo grado (poi assolti in appello) di 7 membri della Commissione Grandi Rischi per comunicazione del rischio inadeguata.
+- *Caso giudiziario*: processo a sette componenti e partecipanti alla riunione della Commissione Grandi Rischi del 31 marzo 2009, per omicidio colposo legato alla comunicazione del rischio. Primo grado (Tribunale dell'Aquila, 22/10/2012): sei anni a tutti e sette. Appello (10/11/2014): sei assolti; condannato a due anni, con pena sospesa, il vicecapo del settore tecnico operativo del Dipartimento della protezione civile. La Cassazione (sezione IV penale, udienza del 19/11/2015, sentenza n. 12478/2016 depositata il 24/3/2016) ha reso definitivo questo esito.
 - *Lezione*: il ruolo della scienza nella comunicazione pubblica, limiti della previsione, responsabilità del decisore politico. Caso studio obbligatorio per ogni corso di risk communication.
 
 ### Tracce per l'Esame di Stato — 5 esempi per la prima prova

@@ -1,6 +1,6 @@
 ---
 title: "Documenti importanti: copie pronte prima dell'emergenza"
-date: 2026-11-18
+date: 2026-11-18T00:01:00+01:00
 description: "Carta d'identità, tessera sanitaria, ricette, polizze: quali documenti copiare prima di un'emergenza, dove tenere le copie e come proteggere i dati."
 badge: "Prevenzione"
 priorita: "normale"

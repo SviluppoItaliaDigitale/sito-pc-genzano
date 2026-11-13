@@ -2119,3 +2119,21 @@ meteogramma
 var
 coqui
 cpml
+# Falsi positivi verificati — serie «Gli sguardi della protezione civile» (13/11/2026): termini di legge e ARERA (catastrofali, microimprese, disalimentabile), titoli inglesi delle fonti citate in «Per approfondire», sigla della rivista AJE nel DOI
+aid
+aje
+analysis
+catastrofali
+disalimentabile
+disasters
+extremes
+factors
+higher
+household
+losses
+microimprese
+preliminary
+previously
+summary
+times
+weather

@@ -1,6 +1,6 @@
 ---
 title: "Giornata dell'Infanzia: insegnare il rischio ai bambini senza spaventarli"
-date: 2026-11-20
+date: 2026-11-20T00:01:00+01:00
 description: "Il 20 novembre è la Giornata Internazionale dell'Infanzia. Come educare i bambini al rischio in modo chiaro, utile e non traumatico."
 badge: "Informazione"
 priorita: "normale"

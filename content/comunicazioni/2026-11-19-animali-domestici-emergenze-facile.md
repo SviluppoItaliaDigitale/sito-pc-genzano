@@ -1,6 +1,6 @@
 ---
 title: "Animali domestici in emergenza: cosa fare"
-date: 2026-11-19
+date: 2026-11-19T00:01:00+01:00
 draft: false
 description: "In emergenza porta via il tuo animale. Questa pagina spiega cosa fare."
 badge: "Prevenzione"

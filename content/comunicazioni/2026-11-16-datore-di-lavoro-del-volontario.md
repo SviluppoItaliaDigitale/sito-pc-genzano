@@ -1,6 +1,6 @@
 ---
 title: "Il datore di lavoro del volontario: che cosa prevede la legge quando un dipendente viene attivato"
-date: 2026-11-16
+date: 2026-11-16T00:02:00+01:00
 description: "Posto di lavoro, stipendio, rimborso, limiti di giorni e lavoratori autonomi: il Codice della protezione civile spiegato a chi ha un volontario in azienda."
 badge: "Volontariato"
 priorita: "normale"

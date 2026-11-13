@@ -1,6 +1,6 @@
 ---
 title: "Il tuo negozio e l'emergenza: come prepararti e come ripartire"
-date: 2026-11-23
+date: 2026-11-23T00:02:00+01:00
 description: "Hai un negozio o una piccola impresa? Prepara un piano semplice. Così dopo un'emergenza riapri prima."
 badge: "Prevenzione"
 priorita: "normale"

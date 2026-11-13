@@ -1,6 +1,6 @@
 ---
 title: "Orientamenti UE sulla preparazione della popolazione: nessun obbligo per i cittadini"
-date: 2026-11-10T00:02:00+02:00
+date: 2026-11-10T00:01:00+01:00
 description: "Orientamenti UE del 30 ottobre 2026 sulla preparazione della popolazione: non vincolanti, nessun obbligo per i cittadini."
 badge: "Informazione"
 priorita: "normale"

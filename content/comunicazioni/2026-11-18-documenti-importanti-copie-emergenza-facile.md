@@ -1,6 +1,6 @@
 ---
 title: "Fai le copie dei documenti prima dell'emergenza"
-date: 2026-11-18
+date: 2026-11-18T00:01:00+01:00
 description: "In emergenza puoi dover uscire di casa in fretta. Prepara prima le copie dei documenti. Ecco come."
 badge: "Prevenzione"
 priorita: "normale"

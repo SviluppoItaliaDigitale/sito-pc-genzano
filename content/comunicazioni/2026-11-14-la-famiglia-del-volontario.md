@@ -1,6 +1,6 @@
 ---
 title: "La famiglia del volontario: la protezione civile vista da chi resta a casa"
-date: 2026-11-14
+date: 2026-11-14T00:02:00+01:00
 description: "La telefonata di notte, i giorni fuori con la colonna mobile, l'attesa, i figli: come vive la protezione civile chi resta a casa e come sostenerlo."
 badge: "Volontariato"
 priorita: "normale"

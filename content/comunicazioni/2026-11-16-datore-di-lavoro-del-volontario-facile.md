@@ -1,6 +1,6 @@
 ---
 title: "Il datore di lavoro del volontario: versione facile da leggere"
-date: 2026-11-16
+date: 2026-11-16T00:02:00+01:00
 description: "Versione semplificata (italiano A2) dell'articolo sul datore di lavoro di un volontario di protezione civile. Frasi corte, parole comuni."
 badge: "Volontariato"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Che cosa succede quando chiami il 112? Versione facile da leggere"
-date: 2026-11-20
+date: 2026-11-20T00:02:00+01:00
 description: "Versione semplificata (italiano A2) dell'articolo sulla sala operativa e sulla chiamata al 112. Frasi corte, parole comuni."
 badge: "Informazione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "Friuli 1976: la ricostruzione che divenne modello nazionale"
-date: 2026-11-26
+date: 2026-11-26T00:01:00+01:00
 description: "Il 6 maggio e 15 settembre 1976 due terremoti devastarono il Friuli. La ricostruzione è considerata un modello europeo."
 badge: "Informazione"
 priorita: "normale"

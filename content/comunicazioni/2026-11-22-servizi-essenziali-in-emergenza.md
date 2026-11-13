@@ -1,6 +1,6 @@
 ---
 title: "Acqua, luce, gas, strade e telefoni: chi li tiene accesi in emergenza"
-date: 2026-11-22
+date: 2026-11-22T00:02:00+01:00
 description: "Come entrano nella protezione civile i gestori di acqua, luce, gas, strade e telefoni, a chi segnalare un guasto e che tutele ha chi usa apparecchi salvavita."
 badge: "Informazione"
 priorita: "normale"

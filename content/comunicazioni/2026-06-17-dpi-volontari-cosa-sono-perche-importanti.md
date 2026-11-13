@@ -1,6 +1,6 @@
 ---
 title: "I DPI del volontario di Protezione Civile: cosa sono e perché contano"
-date: 2026-06-17
+date: 2026-06-17T00:01:00+02:00
 description: "Ogni volontario di Protezione Civile indossa Dispositivi di Protezione Individuale specifici per l'intervento."
 badge: "Formazione"
 priorita: "normale"

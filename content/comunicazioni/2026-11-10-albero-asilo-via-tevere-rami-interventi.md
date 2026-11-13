@@ -1,6 +1,6 @@
 ---
 title: "Un albero pericolante all'asilo nido di via Tevere e due rami sulle strade: gli interventi del 6 e del 10 novembre"
-date: 2026-11-12T00:02:00+01:00
+date: 2026-11-12T00:01:00+01:00
 description: "Un ramo sopra via Stati Uniti d'America, un albero abbattuto all'asilo nido di via Tevere, rami in viale Fratelli Rosselli e una giornata di logistica."
 badge: "Attività"
 priorita: "normale"

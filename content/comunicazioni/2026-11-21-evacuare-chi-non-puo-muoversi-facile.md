@@ -1,6 +1,6 @@
 ---
 title: "Chi non può uscire da solo: versione facile da leggere"
-date: 2026-11-21
+date: 2026-11-21T00:02:00+01:00
 description: "Versione in italiano semplice. Come si protegge chi vive in ospedale, in una casa per anziani o in carcere. Cosa può fare la famiglia."
 badge: "Prevenzione"
 priorita: "normale"

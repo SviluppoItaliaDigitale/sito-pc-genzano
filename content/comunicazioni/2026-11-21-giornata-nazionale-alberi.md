@@ -1,6 +1,6 @@
 ---
 title: "Giornata nazionale degli alberi: boschi, prevenzione, rischio idrogeologico"
-date: 2026-11-21
+date: 2026-11-21T00:01:00+01:00
 description: "Il 21 novembre è la Giornata nazionale degli alberi. Il ruolo dei boschi nella prevenzione del rischio idrogeologico."
 badge: "Prevenzione"
 priorita: "normale"

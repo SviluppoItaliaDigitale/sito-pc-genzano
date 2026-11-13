@@ -1,6 +1,6 @@
 ---
 title: "Chi non vuole lasciare la casa. Versione facile da leggere"
-date: 2026-11-13
+date: 2026-11-13T00:02:00+01:00
 description: "Versione semplificata (italiano A2) dell'articolo su chi non vuole lasciare la casa in emergenza. Frasi corte, parole comuni."
 badge: "Prevenzione"
 priorita: "normale"

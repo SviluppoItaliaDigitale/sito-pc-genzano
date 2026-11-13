@@ -1,6 +1,6 @@
 ---
 title: "Chi non vuole andarsene: perché si resta in casa e come parlarne"
-date: 2026-11-13
+date: 2026-11-13T00:02:00+01:00
 description: "Perché c'è chi non vuole lasciare casa quando l'autorità lo chiede, che cosa dice la legge e come prepararsi, per sé e per un vicino."
 badge: "Prevenzione"
 priorita: "normale"
