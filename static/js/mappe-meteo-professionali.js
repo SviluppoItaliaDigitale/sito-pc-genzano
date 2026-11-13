@@ -229,7 +229,17 @@
       b.setAttribute('aria-pressed', attiva ? 'true' : 'false');
     });
     mostraFotogramma(indice);
+    centraTela();
     precacheVicini();
+  }
+
+  // Sul telefono la carta è più larga del riquadro: si porta al centro la parte
+  // con l'Italia (circa il 42% della larghezza), una volta per carta aperta,
+  // così chi la scorre durante l'animazione non viene riportato indietro.
+  function centraTela() {
+    var tela = document.getElementById('mmp-tela');
+    if (!tela || tela.scrollWidth <= tela.clientWidth + 4) return;
+    tela.scrollLeft = Math.max(0, img.clientWidth * 0.42 - tela.clientWidth / 2);
   }
 
   function aggiornaSpiegazione(id, p) {
