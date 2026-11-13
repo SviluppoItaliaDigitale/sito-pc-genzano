@@ -1,7 +1,7 @@
 ---
 title: "Acqua, luce, gas, strade e telefoni: chi li tiene accesi in emergenza"
 date: 2026-11-22
-description: "Come entrano nella protezione civile i gestori di acqua, energia, gas, strade e telefoni, a chi segnalare un guasto e che tutele ha chi usa apparecchi salvavita."
+description: "Come entrano nella protezione civile i gestori di acqua, luce, gas, strade e telefoni, a chi segnalare un guasto e che tutele ha chi usa apparecchi salvavita."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -26,13 +26,13 @@ In questa serie abbiamo raccontato la protezione civile con gli occhi di molte p
 
 ## I gestori dentro il sistema di protezione civile
 
-Il Codice della protezione civile (decreto legislativo 2 gennaio 2018, n. 1) distingue due gruppi. L'articolo 13, comma 1, elenca le **strutture operative**: Vigili del fuoco, Forze armate, Forze di polizia, Servizio sanitario, volontariato organizzato e altre. Il comma 2 aggiunge chi **concorre** alle attività di protezione civile, fra cui «aziende, società e altre organizzazioni pubbliche o private che svolgono funzioni utili per le finalità di protezione civile». Qui rientrano i gestori di reti e servizi.
+Il Codice della protezione civile (decreto legislativo 2 gennaio 2018, n. 1) distingue due gruppi. L'articolo 13, comma 1, elenca le **strutture operative**: Vigili del fuoco, Forze armate, Forze di polizia, Servizio sanitario, volontariato organizzato e altre. Il comma 2 aggiunge chi **concorre** alle attività di protezione civile. Fra questi ci sono «aziende, società e altre organizzazioni pubbliche o private che svolgono funzioni utili per le finalità di protezione civile». Vi rientrano i gestori di reti e servizi.
 
-Il loro compito diventa centrale dopo l'evento. L'articolo 2, comma 7, definisce il superamento dell'emergenza: fra i suoi scopi c'è proprio «ripristinare i servizi essenziali».
+Il loro lavoro conta soprattutto dopo l'evento. L'articolo 2, comma 7, definisce il superamento dell'emergenza: fra i suoi scopi c'è proprio «ripristinare i servizi essenziali».
 
 ## Al tavolo del Comune: la funzione «Servizi essenziali»
 
-Quando il Sindaco attiva il **Centro operativo comunale** (COC), il lavoro si divide in **funzioni di supporto**. La direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021, che dà gli indirizzi per i piani di protezione civile, ne elenca sedici. Una si chiama **Servizi essenziali**. La direttiva non le numera: il piano comunale può accorparle, ridurle o ampliarle secondo il personale disponibile. La numerazione «funzione 5» viene dal vecchio Metodo Augustus del 1997.
+Quando il Sindaco attiva il **Centro operativo comunale** (COC), il lavoro si divide in **funzioni di supporto**. La direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021, che dà gli indirizzi per i piani di protezione civile, ne elenca sedici. Una si chiama **Servizi essenziali**. La direttiva non le numera: il piano comunale può accorparle, ridurle o ampliarle secondo il personale disponibile.
 
 Che cosa fa questa funzione lo descrivono le indicazioni operative del Dipartimento della Protezione Civile del 31 marzo 2015, a cui la direttiva rimanda. Tiene il quadro di come funzionano i servizi nell'area colpita, insieme ai gestori nazionali e locali. Stima quante utenze sono senza servizio e in quanto tempo torneranno. Indica le riparazioni con la priorità più alta e facilita il lavoro delle squadre tecniche delle aziende.
 
@@ -42,7 +42,7 @@ Due altre funzioni lavorano accanto. **Accessibilità e mobilità** raccoglie le
 
 ## Che cosa succede quando salta un servizio
 
-La riparazione spetta al gestore, con le sue squadre e le sue procedure. Il Comune, tramite il COC, raccoglie i dati sui disservizi e sui tempi di ripristino, informa i cittadini e organizza l'assistenza per chi è più esposto. La squadra che ripara la linea è del gestore; il quadro della situazione lo tiene il Comune.
+La riparazione spetta al gestore, con le sue squadre e le sue procedure. Il Comune, tramite il COC, raccoglie i dati sui disservizi e sui tempi di ripristino. Informa i cittadini e organizza l'assistenza per chi è più esposto. La squadra che ripara la linea è del gestore; il quadro della situazione lo tiene il Comune.
 
 Il nostro Gruppo, se il Comune lo attiva, dà assistenza alla popolazione e supporto logistico. Non ripara reti e non regola il traffico: la circolazione spetta alla Polizia Locale e alle forze di polizia.
 
@@ -52,14 +52,14 @@ Il primo errore è chiamare il venditore della bolletta. Le reti hanno un **dist
 
 - **Acqua.** A Genzano di Roma il servizio idrico è gestito da Acea Ato 2. Il numero per i guasti è **800 130 335**, gratuito e attivo 24 ore su 24. Tieni pronti il CAP e, se manca l'acqua o la pressione è bassa, il codice utenza o la matricola del contatore.
 - **Energia elettrica.** Cerca in bolletta il numero del distributore. Per la rete di e-distribuzione il numero verde è **803 500**, attivo giorno e notte per guasti e situazioni di pericolo.
-- **Gas.** Per un guasto usa il numero di pronto intervento indicato in bolletta. Se senti odore di gas in casa, non toccare interruttori né fiamme, apri le finestre, esci e chiama il **112** da fuori, come spiega la [Biblioteca delle idee sbagliate](/rischi-prevenzione/idee-sbagliate/#gas-luce).
+- **Gas.** Per un guasto usa il numero di pronto intervento indicato in bolletta. Se senti odore di gas in casa, non toccare interruttori né fiamme e apri le finestre. Esci e chiama il **112** da fuori, come spiega la [Biblioteca delle idee sbagliate](/rischi-prevenzione/idee-sbagliate/#gas-luce).
 - **Telefono e internet.** Segnala il guasto all'assistenza del tuo operatore.
 
 Un cavo a terra, un palo caduto, un albero sulla strada sono un pericolo immediato: tieniti lontano e chiama il **112**. Per un'interruzione senza pericoli per le persone, il numero giusto è quello del gestore.
 
 ## Apparecchi salvavita: che cosa prevedono le regole ARERA
 
-Chi in casa usa apparecchi elettromedicali salvavita può chiedere il **bonus elettrico per disagio fisico**. Serve un certificato della ASL che attesti la condizione, il tipo di apparecchio e le ore di uso al giorno. La domanda si presenta al Comune di residenza del titolare della fornitura, o a un ente da esso indicato, come un CAF. Non serve l'ISEE.
+Chi in casa usa apparecchi elettromedicali salvavita può chiedere il **bonus elettrico per disagio fisico**. Serve un certificato dell'Azienda sanitaria locale (ASL) che attesti la condizione, il tipo di apparecchio e le ore di uso al giorno. La domanda si presenta al Comune di residenza del titolare della fornitura, o a un ente da esso indicato, come un Centro di assistenza fiscale (CAF). Non serve l'ISEE, l'indicatore della situazione economica.
 
 Con il bonus riconosciuto, il Testo integrato morosità elettrica dell'ARERA (articolo 23) classifica la fornitura come **non disalimentabile**: in caso di bollette non pagate, la corrente non può essere sospesa.
 
@@ -68,9 +68,9 @@ Questa tutela però non ferma un guasto. Se una linea si interrompe, resta al bu
 ## Che cosa puoi fare tu
 
 - Prendi l'ultima bolletta di luce e gas e salva in rubrica i numeri dei distributori. Aggiungi quello di Acea Ato 2.
-- Quando segnali un guasto, indica via, numero civico e che cosa vedi. Una segnalazione precisa fa arrivare prima la squadra.
-- Se un familiare usa un apparecchio salvavita, chiedi il bonus per disagio fisico e verifica con il medico quanto dura la batteria dell'apparecchio.
-- Tieni in casa una torcia, una radio a pile e un power bank carico, come indicato nella pagina [Blackout e interruzione servizi](/rischi-prevenzione/blackout/).
+- Indica via, numero civico e che cosa vedi quando segnali un guasto. Una segnalazione precisa fa arrivare prima la squadra.
+- Chiedi il bonus per disagio fisico se un familiare usa un apparecchio salvavita, e verifica con il medico quanto dura la batteria dell'apparecchio.
+- Tieni in casa una torcia, una radio a pile e una batteria portatile per il telefono (power bank) carica, come indicato nella pagina [Blackout e interruzione servizi](/rischi-prevenzione/blackout/).
 - Chiama il **112** solo per un pericolo per le persone.
 
 ## Per approfondire

@@ -22,7 +22,7 @@ draft: false
 
 Immagina un volontario che rientra a casa all'alba. Ha passato la notte sotto la pioggia, a controllare i punti dove l'acqua si raccoglie. Si toglie gli stivali, mette il telefono in carica, prova a dormire. Il sonno non arriva. Nella testa tornano la strada allagata e la voce di una persona anziana che non voleva uscire di casa. E il pensiero di aver dimenticato qualcosa.
 
-Può succedere a chiunque presti aiuto, e sono reazioni comuni, non un segno di debolezza. Chi soccorre porta a casa la fatica del corpo. A volte anche quella di ciò che ha visto e sentito. In questo articolo guardiamo l'emergenza con gli occhi di chi presta aiuto. Non è un testo clinico: se qualcosa ti riguarda da vicino, il riferimento resta un professionista. Il Gruppo non offre supporto psicologico.
+Può succedere a chiunque presti aiuto. Sono reazioni comuni, non un segno di debolezza. Chi soccorre porta a casa la fatica del corpo. A volte anche quella di ciò che ha visto e sentito. In questo articolo guardiamo l'emergenza con gli occhi di chi presta aiuto. Non è un testo clinico: se qualcosa ti riguarda da vicino, il riferimento resta un professionista. Il Gruppo non offre supporto psicologico.
 
 ## Tre fatiche diverse
 

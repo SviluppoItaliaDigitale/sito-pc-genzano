@@ -43,13 +43,15 @@ Fonte: INGV, [Mappa di pericolosità sismica](https://esse1.mi.ingv.it/) e [Zone
 
 Sulla base della pericolosità, il territorio italiano è suddiviso in quattro **zone sismiche**. La classificazione moderna nasce con l'**Ordinanza del Presidente del Consiglio dei Ministri n. 3274 del 2003**, che dopo il terremoto di San Giuliano di Puglia (2002) ha riclassificato tutti i comuni italiani, ed è collegata alle norme tecniche per le costruzioni (**DM 14 gennaio 2008** e **NTC 2018**):
 
-| Zona | Pericolosità | Esempi nel Lazio |
+| Zona | Accelerazione attesa (10% di probabilità di superamento in 50 anni) | Esempi nel Lazio |
 |---|---|---|
-| **1** | Alta (accelerazione attesa oltre 0,25 g) | parte del Reatino |
-| **2A** | Media-alta | alcune aree dell'Appennino |
-| **2B** | Media | **Castelli Romani**, area romana orientale |
-| **3A / 3B** | Bassa-media | aree pianeggianti e costiere |
-| **4** | Bassa | poche aree |
+| **1** | da 0,25 g in su (massimo nel Lazio 0,278 g) | parte del Frusinate e del Reatino |
+| **2A** | fra 0,20 e 0,25 g | alcune aree del Frusinate e del Reatino |
+| **2B** | fra 0,15 e 0,20 g | **Castelli Romani**, gran parte della provincia di Roma |
+| **3A / 3B** | fra 0,10 e 0,15 g / sotto 0,10 g | aree pianeggianti e costiere |
+| **4** | — | nessun Comune del Lazio dal 2009 |
+
+Le soglie e la ripartizione dei Comuni sono quelle della riclassificazione della Regione Lazio (DGR n. 387 del 22 maggio 2009, Allegato 1, tabelle 3 e 5), che ha eliminato la zona 4.
 
 **Genzano di Roma**, come la maggior parte dei Castelli Romani, è classificata in **zona 2B**: non la classe più alta d'Italia (la 1), ma nemmeno trascurabile. La classificazione si fonda sulla pericolosità sismica, che si stima anche dalla sismicità storica documentata: nei Colli Albani, vulcano quiescente, sono avvenuti terremoti con magnitudo fino a 5,6. Nel catalogo strumentale dell'INGV, dal 1985 a oggi, le scosse più forti entro 30 chilometri da Genzano hanno magnitudo **3.9** (aprile 1987, ottobre 1989 e aprile 2008). I terremoti storici con danni nei paesi dei Colli Albani, di magnitudo stimata fra 4,9 e 5,6, risalgono al 1806, 1829, 1899 e 1927. A Genzano il più intenso fu quello del 1806: grado VIII della scala Mercalli-Cancani-Sieberg (INGV, CPTI15 e DBMI15).
 

@@ -34,7 +34,7 @@ In Italia una parte del conto si vede nei bilanci delle compagnie. Secondo l'Ist
 
 ## Chi paga oggi
 
-Quando un evento è troppo grande per il Comune e la Regione, il Consiglio dei ministri delibera lo **stato di emergenza di rilievo nazionale**. Le risorse arrivano dal **Fondo per le emergenze nazionali**, presso la Presidenza del Consiglio dei ministri e il Dipartimento della protezione civile (articolo 44 del [Codice della protezione civile](/normativa/testo-unico-protezione-civile/)).
+Quando un evento è troppo grande per il Comune e la Regione, il Consiglio dei ministri delibera lo **stato di emergenza di rilievo nazionale**. Le risorse arrivano dal **Fondo per le emergenze nazionali**, presso la Presidenza del Consiglio dei ministri, Dipartimento della protezione civile (articolo 44 del [Codice della protezione civile](/normativa/testo-unico-protezione-civile/)).
 
 Con le **ordinanze di protezione civile** si organizzano il soccorso e il ripristino dei servizi. Si danno anche le **prime misure economiche di immediato sostegno** alle famiglie e alle attività colpite. Poi si fa la **ricognizione dei danni** a case, imprese, beni culturali e infrastrutture (articolo 25).
 
@@ -55,7 +55,7 @@ La legge fissa anche alcune garanzie:
 - le compagnie non possono rifiutarsi di assicurare: rischiano una sanzione da 100.000 a 500.000 euro;
 - la società pubblica SACE può riassicurare fino al 50% degli indennizzi, con la garanzia dello Stato.
 
-Chi non si assicura ne risente quando chiede contributi pubblici, anche quelli dati dopo una calamità. Gli immobili costruiti senza un titolo edilizio valido, e non sanati, non sono assicurabili. Per loro non spetta alcun contributo pubblico.
+Chi non si assicura ne risente quando chiede contributi pubblici, anche quelli dati dopo una calamità. Gli immobili costruiti senza un titolo edilizio valido, e senza una sanatoria o un condono anche solo in corso, non sono assicurabili. Per loro non spetta alcun contributo pubblico.
 
 La scadenza è stata rinviata più volte. Questi sono i termini in vigore, verificati su Normattiva il 13 novembre 2026:
 
@@ -69,7 +69,7 @@ Le dimensioni dell'impresa seguono la definizione europea. Per l'economista il p
 
 ## Quanto rende prevenire
 
-Le stime più citate sul rapporto fra costi e benefici vengono da studi internazionali. Nel rapporto «Lifelines» del 2019, la Banca mondiale ha calcolato che nei Paesi a reddito medio e basso rendere le infrastrutture più resistenti costa circa il **3%** in più. Nello scenario centrale, ogni dollaro investito porta circa **4 dollari di benefici**, grazie a meno interruzioni e meno danni. L'investimento conviene nel 96% delle migliaia di scenari studiati.
+Le stime più citate sul rapporto fra costi e benefici vengono da studi internazionali. Nel rapporto «Lifelines» del 2019, la Banca mondiale ha calcolato che nei Paesi a reddito medio e basso rendere le infrastrutture più resistenti costa circa il **3%** in più degli investimenti necessari. Nello scenario centrale, ogni dollaro investito porta circa **4 dollari di benefici**, grazie a meno interruzioni e meno danni. L'investimento conviene nel 96% delle migliaia di scenari studiati.
 
 Sono numeri riferiti ai Paesi in via di sviluppo, non all'Italia. Il rapporto fra costi e benefici cambia da opera a opera e da territorio a territorio. Il principio però regge: spendere prima costa meno che riparare dopo.
 
