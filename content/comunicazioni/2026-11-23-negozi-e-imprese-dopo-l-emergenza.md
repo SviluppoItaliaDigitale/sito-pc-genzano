@@ -1,6 +1,6 @@
 ---
 title: "Negozi e piccole imprese: prepararsi all'emergenza e ripartire dopo"
-date: 2026-11-23T00:02:00+01:00
+date: 2026-11-23
 description: "Un piano in una pagina, copie dei dati, merce al sicuro dall'acqua, polizza: come un negozio o una piccola impresa si prepara a un'emergenza e riapre dopo."
 badge: "Prevenzione"
 priorita: "normale"
