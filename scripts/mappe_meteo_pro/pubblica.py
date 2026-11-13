@@ -49,6 +49,7 @@ def _blocco_modello(mid: str, info: dict) -> dict:
                 "titolo": PRODOTTI[pid]["titolo"],
                 "sottotitolo": PRODOTTI[pid]["sottotitolo"],
                 "ordine": PRODOTTI[pid]["ordine"],
+                "gruppo": PRODOTTI[pid].get("gruppo", "esperti"),
                 "fotogrammi": [{"ora": ora, "png": rel} for ora, rel in dati.get("fotogrammi", [])],
             }
             for k in ("gif", "mp4", "miniatura"):

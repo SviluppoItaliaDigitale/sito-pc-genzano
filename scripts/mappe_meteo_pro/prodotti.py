@@ -281,7 +281,81 @@ def coupling_index(stato: Stato, dominio: str, dest: Path) -> Path:
     return d.salva(fig, dest)
 
 
+# ---------------------------------------------------------------------------
+# Carte «per tutti» in stile WXCharts
+# ---------------------------------------------------------------------------
+
+def temperatura_2m(stato: Stato, dominio: str, dest: Path) -> Path:
+    fig, ax, cax, pc, meta = _prepara(stato, dominio, "temperatura_2m")
+    lon, lat = stato.lon, stato.lat
+    t = stato.campi["t2m"]
+    cf = d.campo_ombreggiato(ax, pc, lon, lat, t, d.LIV_T2M, d.CMAP_T2M, extend="both")
+    # Lo zero in evidenza: dove sotto c'è il gelo.
+    d.isolinee(ax, pc, lon, lat, t, [0], colore="#1a1a6e", spessore=0.9, fmt="%d °C", etichette=False)
+    d.bordi_sopra(ax)
+    d.citta_valori(ax, dominio, pc, lon, lat, t, fmt="{:.0f}°")
+    d.colorbar(cax, cf, list(range(-30, 43, 5)))
+    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"], "°C")
+    return d.salva(fig, dest)
+
+
+def raffiche(stato: Stato, dominio: str, dest: Path) -> Path:
+    fig, ax, cax, pc, meta = _prepara(stato, dominio, "raffiche")
+    lon, lat = stato.lon, stato.lat
+    r = stato.campi["raffica"]
+    cf = d.campo_ombreggiato(ax, pc, lon, lat, r, d.LIV_RAFFICHE, d.CMAP_RAFFICHE, extend="max")
+    d.bordi_sopra(ax)
+    d.citta_valori(ax, dominio, pc, lon, lat, r, fmt="{:.0f}")
+    d.colorbar(cax, cf, d.LIV_RAFFICHE)
+    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"], "km/h")
+    return d.salva(fig, dest)
+
+
+def pioggia_totale(stato: Stato, dominio: str, dest: Path) -> Path:
+    fig, ax, cax, pc, meta = _prepara(stato, dominio, "pioggia_totale")
+    lon, lat = stato.lon, stato.lat
+    pr = np.clip(stato.campi["tp_tot"], 0, None)
+    cf = d.campo_ombreggiato(ax, pc, lon, lat, np.ma.masked_less(pr, 1), d.LIV_PIOGGIA_TOT,
+                             d.CMAP_PIOGGIA_TOT, extend="max")
+    d.bordi_sopra(ax)
+    d.citta_valori(ax, dominio, pc, lon, lat, pr, fmt="{:.0f}")
+    d.colorbar(cax, cf, d.LIV_PIOGGIA_TOT)
+    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"],
+                      f"mm dall'inizio (+{stato.step} ore)")
+    return d.salva(fig, dest)
+
+
+def neve_al_suolo(stato: Stato, dominio: str, dest: Path) -> Path:
+    fig, ax, cax, pc, meta = _prepara(stato, dominio, "neve_al_suolo")
+    lon, lat = stato.lon, stato.lat
+    # Sul mare il modello non scrive l'altezza della neve (dato assente): vale zero.
+    h = np.clip(np.nan_to_num(stato.campi["neve_cm"], nan=0.0), 0, None)
+    cf = d.campo_ombreggiato(ax, pc, lon, lat, np.ma.masked_less(h, 1), d.LIV_NEVE, d.CMAP_NEVE, extend="max")
+    d.bordi_sopra(ax)
+    d.citta_valori(ax, dominio, pc, lon, lat, h, fmt="{:.0f}")
+    d.colorbar(cax, cf, d.LIV_NEVE)
+    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"], "cm")
+    return d.salva(fig, dest)
+
+
+def nuvolosita(stato: Stato, dominio: str, dest: Path) -> Path:
+    fig, ax, cax, pc, meta = _prepara(stato, dominio, "nuvolosita")
+    lon, lat = stato.lon, stato.lat
+    n = stato.campi["nubi"]
+    cf = d.campo_ombreggiato(ax, pc, lon, lat, np.ma.masked_less(n, 10), d.LIV_NUBI, d.CMAP_NUBI, extend="neither")
+    d.bordi_sopra(ax)
+    d.citta_valori(ax, dominio, pc, lon, lat, n, fmt="{:.0f}%")
+    d.colorbar(cax, cf, d.LIV_NUBI)
+    d.testata_e_piede(fig, ax, stato, dominio, meta["titolo"], meta["sottotitolo"], "% di cielo coperto")
+    return d.salva(fig, dest)
+
+
 DISEGNATORI = {
+    "temperatura_2m": temperatura_2m,
+    "raffiche": raffiche,
+    "pioggia_totale": pioggia_totale,
+    "neve_al_suolo": neve_al_suolo,
+    "nuvolosita": nuvolosita,
     "mslp_precip": mslp_precip,
     "t850_vento10": t850_vento10,
     "h500": h500,

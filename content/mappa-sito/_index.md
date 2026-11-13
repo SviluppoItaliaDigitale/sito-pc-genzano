@@ -193,7 +193,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/mappe-meteo-professionali/">
   <div class="ms-card-icon"><i class="bi bi-layers-fill"></i></div>
   <p class="ms-card-title">Mappe meteo professionali</p>
-  <p class="ms-card-desc">Carte meteorologiche professionali per l'Italia, aggiornate automaticamente, da consultare, scaricare e condividere.</p>
+  <p class="ms-card-desc">Carte di previsione per l'Italia e l'Europa: temperatura, vento, pioggia, neve e nuvole con i valori sulle città, più le carte sinottiche. Aggiornate a ogni corsa dei modelli.</p>
   <span class="ms-card-arrow">Apri →</span>
 </a>
 <a class="ms-card ms-emerg" href="/non-e-vero-che/">
