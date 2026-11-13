@@ -66,7 +66,7 @@ Prepararsi prima fa la differenza. In emergenza chiama il 112.
 - Disponi di una **radio a pile** per ricevere comunicazioni ufficiali.
 - Carica telefono e power bank quando sono previste allerte.
 - Tieni in casa almeno 4 litri di acqua potabile a persona.
-- Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il [bonus per disagio fisico](/comunicazioni/2026-11-22-servizi-essenziali-in-emergenza/#apparecchi-salvavita-che-cosa-prevedono-le-regole-arera) (domanda al Comune o a un CAF): la fornitura non si può sospendere per morosità, ma il bonus non protegge da un guasto. Prepara con il medico un piano per le ore senza corrente e una batteria di riserva.
+- Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il bonus per disagio fisico (domanda al Comune o a un CAF): la fornitura non si può sospendere per morosità, ma il bonus non protegge da un guasto. Prepara con il medico un piano per le ore senza corrente e una batteria di riserva.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE il blackout {#cosa-fare-durante}
 - Mantieni la calma: i blackout sono di solito temporanei.
