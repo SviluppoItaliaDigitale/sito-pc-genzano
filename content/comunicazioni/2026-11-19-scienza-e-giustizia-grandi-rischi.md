@@ -20,7 +20,7 @@ social_punti:
 draft: false
 ---
 
-Il 6 aprile 2009, alle 3:32, un terremoto di magnitudo 6.3 colpisce L'Aquila e il suo territorio. Il Dipartimento della protezione civile conta **309 vittime** e più di 1.500 feriti. Pochi giorni dopo, la Procura dell'Aquila apre un'indagine su una riunione che si era tenuta sei giorni prima della scossa. Ne nasce un processo durato fino al 2016, seguito con attenzione anche dalla comunità scientifica internazionale.
+Il 6 aprile 2009, alle 3:32, un terremoto di magnitudo 6.3 colpisce L'Aquila e il suo territorio. Il Dipartimento della protezione civile conta **309 vittime** e più di 1.500 feriti. Dopo il sisma la Procura dell'Aquila indaga su una riunione tenuta sei giorni prima della scossa. Ne nasce un processo che si chiude nel 2016.
 
 In questa serie raccontiamo la protezione civile da punti di vista diversi. Oggi è il turno del giudice. Lo facciamo con rispetto per le vittime e per i loro familiari, che hanno atteso per anni una risposta. E con le parole esatte del processo, perché su questa vicenda circolano ancora molte semplificazioni.
 
@@ -58,7 +58,7 @@ I reati contestati erano **omicidio colposo** e **lesioni personali colpose**. �
 
 ## I tre gradi di giudizio
 
-**Primo grado.** Il 22 ottobre 2012 il Tribunale dell'Aquila condanna tutti e sette gli imputati a sei anni di reclusione. Le motivazioni vengono depositate il 19 gennaio 2013. La sentenza suscita preoccupazione nella comunità scientifica di molti Paesi.
+**Primo grado.** Il 22 ottobre 2012 il Tribunale dell'Aquila condanna tutti e sette gli imputati a sei anni di reclusione. Le motivazioni vengono depositate il 19 gennaio 2013.
 
 **Appello.** Il 10 novembre 2014 la Corte d'appello dell'Aquila cambia l'esito. Assolve sei imputati, fra cui tutti gli scienziati. Condanna a due anni, con pena sospesa, il vicecapo del settore tecnico operativo del Dipartimento, per una parte dei casi.
 
