@@ -681,8 +681,8 @@ documenti:
   verdict: PARZIALE
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
-  size_kb: 704.1
-  sha256: 79e2282d41d9619b82af13b8845f375fe72aa41ff37f283ab866ffc5434f3d9b
+  size_kb: 705.3
+  sha256: 935a5ee9656f74a9e44a772d88d773a25fe377e33edd9a3e19335166126d6020
   searchable: true
   tagged: false
   language: it
