@@ -5,8 +5,8 @@ description: "Ascolto, conoscenza delle persone sole, aiuti, tutela delle chiese
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-25-parrocchie-e-comunita-di-fede.webp"
+image_alt: "Cover dell'articolo: Parrocchie e comunità di fede: che cosa possono fare in un'emergenza"
 scadenza: ""
 area: ""
 allegati: []

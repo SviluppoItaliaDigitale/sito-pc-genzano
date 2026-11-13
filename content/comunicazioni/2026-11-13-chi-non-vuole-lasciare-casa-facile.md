@@ -31,7 +31,7 @@ Altre volte devi solo salire al piano di sopra.
 
 Per esempio, con l'acqua alta: se sei al piano terra, sali ai piani alti. Non usare l'ascensore.
 
-A volte sono poche ore e pochi metri.
+A volte devi solo salire di un piano.
 
 ## Perché alcune persone dicono di no
 
