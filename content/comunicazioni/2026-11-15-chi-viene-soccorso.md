@@ -31,7 +31,7 @@ Il primo posto dove andare è l'**area di attesa**. Il Dipartimento della Protez
 
 A Genzano di Roma il Piano di emergenza comunale ne indica **10**, da AA1 ad AA10. Le trovi, con gli indirizzi, nella pagina [Aree di attesa](/aree-attesa/). La campagna «Io non rischio» lo dice in modo semplice: dopo una scossa raggiungi le aree di attesa previste dal Piano del tuo Comune.
 
-Nell'area ti chiedono chi sei e con chi sei. Non è burocrazia: serve a sapere chi manca all'appello e chi ha bisogno di aiuto. Resta lì finché non ti dicono che cosa fare.
+Nell'area, di solito, ti chiedono chi sei e con chi sei. Non è burocrazia: serve a sapere chi manca all'appello e chi ha bisogno di aiuto. Resta lì finché non ti dicono che cosa fare.
 
 ## Se non si può tornare a casa: l'accoglienza
 
@@ -74,7 +74,7 @@ Per raccogliere le esigenze immediate esiste uno strumento dedicato, la scheda S
 
 ## Privacy e dignità
 
-Chi è assistito vive giorni difficili accanto a persone che non conosce. Il decreto del 2025 chiede ai Comuni di tutelare i dati delle persone con specifiche necessità. Sono informazioni sulla salute: vanno trattate con cura, e ciascuno decide che cosa raccontare e a chi.
+Chi è assistito vive giorni difficili accanto a persone che non conosce. Il decreto del 2025 chiede ai Comuni di tutelare i dati delle persone con specifiche necessità. Sono informazioni sulla salute e vanno trattate con cura.
 
 Anche noi seguiamo una regola. Nelle foto che pubblichiamo non mostriamo il volto né i dettagli di chi viene soccorso o assistito.
 

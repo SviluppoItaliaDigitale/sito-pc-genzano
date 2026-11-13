@@ -13,7 +13,7 @@ allegati: []
 draft: false
 tts: true
 versione_facile: "2026-11-13-chi-non-vuole-lasciare-casa-facile"
-social_citazione: "Chi esita davanti a una richiesta di evacuazione non è irresponsabile: di solito ha paura di perdere qualcosa a cui tiene."
+social_citazione: "Chi esita davanti a una richiesta di evacuazione non è irresponsabile: spesso ha paura di perdere qualcosa a cui tiene."
 social_punti:
   - "A volte allontanarsi vuol dire solo salire al piano di sopra."
   - "In emergenza i cittadini hanno il dovere di seguire le disposizioni delle autorità di protezione civile."
@@ -21,7 +21,7 @@ social_punti:
   - "Se conosci un vicino solo o con difficoltà di movimento, scambiate i numeri di telefono."
 ---
 
-Quando arriva la richiesta di lasciare la casa, o anche solo di salire al piano di sopra, non tutti dicono subito di sì. Chi esita davanti a una richiesta di evacuazione non è irresponsabile: di solito ha paura di perdere qualcosa a cui tiene.
+Quando arriva la richiesta di lasciare la casa, o anche solo di salire al piano di sopra, non tutti dicono subito di sì. Chi esita davanti a una richiesta di evacuazione non è irresponsabile: spesso ha paura di perdere qualcosa a cui tiene.
 
 In questo articolo guardiamo l'emergenza con gli occhi di chi non vuole andarsene. Spieghiamo perché succede, che cosa dice la legge e come puoi prepararti, per te e per chi ti abita vicino.
 
@@ -33,7 +33,7 @@ Sapere che cosa viene chiesto può rendere la richiesta meno spaventosa. A volte
 
 ## Perché si dice di no
 
-Dietro un rifiuto possono esserci ragioni molto concrete.
+Dietro un rifiuto possono esserci ragioni molto concrete e comprensibili. Paura, attaccamento e incertezza sono reazioni comuni davanti a una richiesta improvvisa.
 
 - **La casa.** È il posto dove si è vissuto, a volte da sempre. Lasciarla, anche per una notte, fa sentire più esposti.
 - **Gli animali.** Nel luglio 1997 un gruppo di ricercatori ha intervistato 397 famiglie della contea di Yuba, in California, sei mesi dopo un ordine di evacuazione per alluvione. Il 19,4% delle famiglie non aveva lasciato la casa. Fra le famiglie senza bambini, avere animali aumentava il rischio di restare, e il rischio cresceva con il numero di animali. Pesavano anche dettagli pratici, come non avere un trasportino per il gatto.
@@ -57,8 +57,10 @@ Il primo soccorso psicologico dell'Organizzazione mondiale della sanità (OMS) o
 - chiedi che cosa lo preoccupa, prima di ripetere la richiesta;
 - spiega il pericolo con parole semplici, senza minacce e senza ironia;
 - risolvi il problema pratico: il gatto nel trasportino, i farmaci della sera, le chiavi, una telefonata a un figlio;
-- di' dove si andrà e, se lo sai, per quanto tempo;
+- di' dove si andrà e, se lo sai, per quanto tempo; se non lo sai, dillo, senza promettere che sarà breve;
 - evita i rimproveri, anche dopo, quando tutto è finito.
+
+Rispettare la scelta di una persona non vuol dire tacere sul pericolo. Si dice con onestà che cosa si rischia e che la disposizione viene dalle autorità, senza forzarla e senza fare pressione.
 
 Se la persona rifiuta e il pericolo è grave, chi la incontra lo segnala a chi coordina. Nel nostro racconto di fantasia [la signora Lina](/dossier/lo-stesso-temporale-molti-sguardi/#lina) dice di no per il gatto, per i ladri e perché «non è mai successo niente». Sale dalla vicina quando qualcuno ascolta i suoi motivi e li risolve uno alla volta.
 
@@ -76,10 +78,12 @@ Per un vicino:
 
 - **Scambiate i numeri di telefono**, se vive da solo o si muove con difficoltà.
 - **Mettete per iscritto chi aiuta chi** con l'[accordo di aiuto fra vicini](/formazione/schede-stampabili/accordo-vicini/).
-- **Segnala al Comune** se una persona ha bisogno di particolare assistenza, come consiglia «Io non rischio».
+- **Segnala al Comune**, se la persona è d'accordo, che ha bisogno di particolare assistenza, come consiglia «Io non rischio».
 - **Chiama il 112** se una persona è in pericolo.
 
 In emergenza il riferimento resta il **112**, il numero unico di emergenza.
+
+I consigli su come parlare sono indicazioni di attenzione per le conversazioni di ogni giorno: non sono supporto psicologico, che il Gruppo non offre. Se la paura o l'ansia per l'evacuazione pesano su di te o su un familiare, puoi rivolgerti al medico di famiglia o ai servizi dell'ASL Roma 6. Alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/) trovi i riferimenti, anche per i minori.
 
 ## Per approfondire
 

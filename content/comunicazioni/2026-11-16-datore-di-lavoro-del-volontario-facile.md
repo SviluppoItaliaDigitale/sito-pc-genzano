@@ -68,7 +68,7 @@ Servono 2 fogli:
 1. il foglio di attivazione;
 2. il foglio che dice che il volontario ha lavorato. Si chiama attestato di partecipazione.
 
-Lo Stato paga se ci sono i soldi per questo.
+L'ufficio paga solo se ha i soldi per questo.
 
 ## Chi lavora da solo
 

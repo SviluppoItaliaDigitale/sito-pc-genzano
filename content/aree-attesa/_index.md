@@ -44,7 +44,7 @@ Questa pagina elenca le 10 aree di attesa del Comune di Genzano di Roma. Per la 
 
 1. **Resta nell'area**, non andare via prima che ti dicano cosa fare.
 2. **Fatti censire** dai volontari della Protezione Civile o dal personale comunale presente.
-3. **Aiuta chi è in difficoltà** se puoi farlo in sicurezza (anziani, bambini, disabili).
+3. **Aiuta chi è in difficoltà** se puoi farlo in sicurezza (anziani, bambini, persone con disabilità).
 4. **Non intralciare** mezzi di soccorso in arrivo.
 5. **Segui solo fonti ufficiali** (Comune, Protezione Civile, 112). Non amplificare voci o messaggi non verificati.
 

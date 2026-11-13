@@ -21,7 +21,7 @@ build:
 
 A volte in emergenza il Comune chiede di uscire di casa. Questo si chiama **evacuazione**.
 
-Alcune persone non vogliono uscire. Non sono cattive persone. Hanno paura di perdere qualcosa.
+Alcune persone non vogliono uscire. Non è colpa loro. Hanno paura di perdere qualcosa. Avere paura è normale.
 
 ## Uscire non vuol dire sempre partire
 
@@ -36,9 +36,9 @@ Per esempio, con l'acqua alta: se sei al piano terra, sali ai piani alti. Non us
 - **La casa.** È il posto della loro vita. Lasciarla fa paura.
 - **Gli animali.** Alcune persone non vogliono lasciare il cane o il gatto. Uno studio negli Stati Uniti lo ha visto.
 - **I ladri.** Hanno paura dei furti.
-- **La sfiducia.** Non credono a chi bussa alla porta.
+- **La sfiducia.** Non si fidano di chi bussa alla porta.
 - **«Non è mai successo niente».** Ma la volta dopo può essere diversa.
-- **Le difficoltà.** Una persona anziana, sola o con disabilità non sa come uscire.
+- **Le difficoltà.** Alcune persone anziane, sole o con disabilità non sanno come uscire.
 
 ## Che cosa dice la legge
 

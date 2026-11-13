@@ -34,7 +34,7 @@ Le tutele non valgono per qualsiasi attività. Servono due condizioni:
 
 La comunicazione la rende il Dipartimento della protezione civile, per le organizzazioni dell'elenco centrale. Per quelle degli elenchi territoriali la rende la Regione. Il nostro Gruppo è iscritto all'elenco territoriale del Lazio, quindi per noi è la Regione Lazio. L'attivazione può partire anche su richiesta del sindaco.
 
-Con l'attivazione, il datore di lavoro «è tenuto a consentire» l'assenza per il periodo di effettivo impiego (articolo 39, comma 1). Senza una comunicazione di attivazione non scattano né l'obbligo per l'azienda né il diritto al rimborso. Un turno interno del Gruppo, senza attivazione, si concorda con l'azienda come qualsiasi altro impegno personale.
+Con l'attivazione, il volontario ha diritto a restare assente dal lavoro per il periodo di effettivo impiego, entro i limiti di giorni indicati sotto (articolo 39). Senza una comunicazione di attivazione non scattano né l'obbligo per l'azienda né il diritto al rimborso. Un turno interno del Gruppo, senza attivazione, si concorda con l'azienda come qualsiasi altro impegno personale.
 
 ## Per quanti giorni
 
@@ -70,7 +70,7 @@ La direttiva chiede alle organizzazioni di dare a ogni volontario una copia dell
 
 Il libero professionista o l'artigiano non ha un datore che lo paga. Per lui il Codice prevede il **rimborso del mancato guadagno giornaliero** (articolo 39, comma 5). Si calcola sulla dichiarazione dei redditi dell'anno precedente.
 
-Il testo del Codice fissava un tetto di 103,30 euro al giorno, da aggiornare ogni tre anni. Il decreto del Capo del Dipartimento del 22 settembre 2023, pubblicato in Gazzetta Ufficiale il 17 febbraio 2024, lo ha portato a **120,55 euro**. Anche questa domanda va all'ente che ha attivato il volontario, con l'attestato di partecipazione.
+Il testo del Codice fissava un tetto di 103,30 euro al giorno, da aggiornare ogni tre anni. Il decreto del Capo del Dipartimento del 22 settembre 2023, pubblicato in Gazzetta Ufficiale il 17 febbraio 2024, lo ha portato a **120,55 euro**. Per la domanda ci si rivolge all'ente che ha attivato il volontario, che indica i documenti da allegare (di norma anche l'attestato di partecipazione).
 
 ## Che cosa ne ricava l'azienda
 
