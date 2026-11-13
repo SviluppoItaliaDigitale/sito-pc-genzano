@@ -50,11 +50,11 @@ Lo sguardo di chi decide e risponde delle decisioni: [scienza, incertezza e resp
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="volontario" image="/images/dossier/allertamento-hero.webp" alt="Il volto di una persona illuminato nel buio dalla sola luce dello schermo di uno smartphone" align="left" kicker="Ore 21 · Il volontario e la sua famiglia" title="La telefonata<br>della sera" credito="Persona che guarda lo smartphone al buio (immagine illustrativa) · foto Japanexperterna.se · CC BY-SA 2.0, via Wikimedia Commons" >}}
-Marco è a cena quando squilla il telefono. È il Capo Gruppo: il COC ha chiesto il supporto dei volontari. Marco non parte da solo: **il Gruppo Comunale non si attiva da sé**, lo attiva l'autorità.
+Marco è a cena quando squilla il telefono. È il Capo Gruppo: il COC ha chiesto il supporto dei volontari. Marco non parte di sua iniziativa: **il Gruppo Comunale non si attiva da sé**, lo attiva l'autorità.
 
 Silvia, sua moglie, prepara il thermos e controlla che lui abbia la divisa asciutta. I bambini chiedono quando torna. Nessuno lo sa.
 
-Per tutta la notte i volontari presidiano i punti dove l'acqua si raccoglie, controllano griglie e caditoie, svuotano gli scantinati con le idrovore, aiutano chi deve lasciare il piano terra. Silvia resta sveglia con il telefono in mano.
+Per tutta la notte i volontari monitorano i punti dove l'acqua si raccoglie e li segnalano al COC, assistono la popolazione, aiutano chi deve lasciare il piano terra. Le chiusure di strade e sottopassi restano alla Polizia Locale. Silvia resta sveglia con il telefono in mano.
 
 Lo sguardo di chi resta a casa: [la famiglia del volontario](/comunicazioni/2026-11-14-la-famiglia-del-volontario/). E quello di chi lo aspetta in ufficio il giorno dopo: [il datore di lavoro](/comunicazioni/2026-11-16-datore-di-lavoro-del-volontario/).
 {{< /dossier-scena >}}
@@ -62,7 +62,7 @@ Lo sguardo di chi resta a casa: [la famiglia del volontario](/comunicazioni/2026
 {{< dossier-scena id="operatore" image="/images/dossier/allertamento-como-funziona.webp" alt="Traliccio rosso e bianco di telefonia mobile carico di antenne, contro un cielo azzurro velato" align="right" kicker="Ore 23 · L'operatore del 112" title="Tre domande<br>per capire" credito="Traliccio di telefonia mobile (immagine illustrativa) · foto Cvmontuy · CC BY-SA 4.0, via Wikimedia Commons" >}}
 Alla Centrale unica di risposta del 112 le chiamate aumentano. Un'operatrice risponde, chiede **dove sei**, **che cosa succede**, **se ci sono persone in pericolo**. Poi passa la chiamata all'ente giusto: Vigili del fuoco, soccorso sanitario, forze dell'ordine.
 
-Molte telefonate quella sera chiedono solo «è allerta?». Occupano la linea mentre qualcuno, da qualche parte, aspetta. Per le informazioni ci sono i siti e i canali ufficiali; il 112 serve quando c'è un pericolo.
+Molte telefonate quella sera chiedono solo «è allerta?»: è comprensibile, quando si ha paura. Per le informazioni però ci sono i siti e i canali ufficiali, e la linea del 112 resta libera per chi è in pericolo.
 
 Lo sguardo di chi risponde: [dentro la sala operativa](/comunicazioni/2026-11-20-dentro-la-sala-operativa/).
 {{< /dossier-scena >}}
@@ -70,15 +70,15 @@ Lo sguardo di chi risponde: [dentro la sala operativa](/comunicazioni/2026-11-20
 {{< dossier-scena id="lina" image="/images/dossier/temporali-autoprotezione.webp" alt="Gocce di pioggia su un vetro che sfocano i palazzi sullo sfondo, viste dall'interno di una casa" align="left" kicker="Mezzanotte · La signora Lina" title="«Io da qui<br>non mi muovo»" credito="Pioggia sul vetro (immagine illustrativa) · foto Pongola · CC BY 4.0, via Wikimedia Commons" >}}
 La signora Lina abita da sola al piano terra, in una strada dove l'acqua scende veloce. La Polizia Locale e due volontari le chiedono di salire dalla vicina del primo piano finché la pioggia non cala.
 
-Lei dice di no. Ha il gatto, ha paura dei ladri, e «tanto non è mai successo niente». I volontari non alzano la voce. Le spiegano perché, le dicono che il gatto può venire con lei, le portano su i farmaci della sera. Dopo venti minuti la signora Lina sale.
+Lei dice di no. Ha il gatto, ha paura dei ladri, e «tanto non è mai successo niente». I volontari non alzano la voce. La ascoltano, le spiegano perché, le dicono che il gatto può venire con lei, le portano su i farmaci della sera. Dopo venti minuti la signora Lina sale, quando decide lei.
 
 Lo sguardo di chi esita: [chi non vuole andarsene](/comunicazioni/2026-11-13-chi-non-vuole-lasciare-casa/). E di chi da solo non può uscire: [evacuare chi non può muoversi](/comunicazioni/2026-11-21-evacuare-chi-non-puo-muoversi/).
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="negozio" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea di una casa di campagna circondata dall'acqua marrone di un'alluvione, con gli alberi del giardino che spuntano dall'acqua" align="right" kicker="Ore 7 · Il signor Pasquale" title="Il negozio<br>il mattino dopo" credito="Alluvione in Emilia-Romagna, 2023 (immagine illustrativa, non Genzano) · foto Cesare Barillà · CC BY-SA 4.0, via Wikimedia Commons" >}}
-Il signor Pasquale apre la serranda e trova dieci centimetri d'acqua sul pavimento. Non tocca il quadro elettrico bagnato: stacca il generale solo se può farlo all'asciutto, altrimenti aspetta l'elettricista.
+Il signor Pasquale apre la serranda e vede dieci centimetri d'acqua sul pavimento. Non entra: con l'impianto elettrico sotto tensione e l'acqua sul pavimento il rischio è la folgorazione. Non tocca quadro e prese bagnati e chiama un elettricista, che verifica l'impianto prima di riaccendere.
 
-Fotografa i danni prima di spostare qualcosa. Tiene gli scontrini delle spese. Segue le indicazioni del Comune per segnalare i danni e chiama l'assicurazione. La merce più cara, da anni, la tiene sugli scaffali alti: questa volta l'ha salvata.
+Fotografa i danni dalla soglia e non sposta nulla finché il locale non è sicuro. Tiene gli scontrini delle spese. Segue le indicazioni del Comune per segnalare i danni e chiama l'assicurazione. La merce più cara, da anni, la tiene sugli scaffali alti: questa volta l'ha salvata.
 
 Lo sguardo di chi lavora: [negozi e imprese dopo l'emergenza](/comunicazioni/2026-11-23-negozi-e-imprese-dopo-l-emergenza/). E di chi fa i conti: [quanto costa prevenire](/comunicazioni/2026-11-18-quanto-costa-prevenire/).
 {{< /dossier-scena >}}
@@ -98,7 +98,7 @@ Ognuno vede un pezzo. Il sistema funziona quando questi pezzi si conoscono già 
 {{< /dossier-scena >}}
 
 {{< dossier-chiusura id="fine" titolo="Il tuo sguardo conta" cta1="Prepara il piano familiare" cta1url="/piano-familiare/" cta2="Cosa succede quando scatta un'allerta" cta2url="/cosa-succede-quando-scatta-allerta/" >}}
-Anche tu fai parte del racconto. Conosci l'allerta del giorno sui canali ufficiali. Sai qual è la tua [area di attesa](/aree-attesa/). Hai pronto il [piano familiare](/piano-familiare/), con i farmaci, i documenti e un posto per gli animali. Se abiti al piano terra o hai uno scantinato, durante l'allerta non scendere a salvare le cose. E chiama il **112** solo quando c'è un pericolo: lascia la linea libera a chi ne ha bisogno.
+Anche tu fai parte del racconto. Conosci l'allerta del giorno sui canali ufficiali. Sai qual è la tua [area di attesa](/aree-attesa/). Se non hai ancora il [piano familiare](/piano-familiare/), si comincia con poco: i farmaci, i documenti e un posto per gli animali. Se vivi solo o fai fatica a muoverti, chiedi a una persona di fiducia, un vicino o un familiare, di avvisarti e di ospitarti in caso di bisogno. Se abiti al piano terra o hai uno scantinato, durante l'allerta non scendere a salvare le cose. Chiama il **112** quando c'è un pericolo: anche se non riesci a uscire o a salire le scale, dì la tua condizione e dove ti trovi. Per le semplici informazioni usa i canali ufficiali, così la linea resta libera.
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
