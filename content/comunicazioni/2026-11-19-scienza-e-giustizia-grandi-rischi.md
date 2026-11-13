@@ -84,7 +84,7 @@ Il messaggio che resta è semplice. Un terremoto non si può prevedere. Il risch
 
 - **Conosci il rischio del tuo territorio.** Genzano di Roma è in zona sismica 2, sottozona 2B: trovi tutto nella pagina sul [rischio sismico](/rischi-prevenzione/rischio-sismico/).
 - **Diffida di chi annuncia un terremoto** con data e ora. Nessuno può farlo.
-- **Durante una sequenza di scosse**, segui le indicazioni ufficiali del Comune, della Regione e del Dipartimento della protezione civile. Anche quando le scosse sono deboli, valgono i comportamenti di autoprotezione: durante la scossa riparati vicino a un muro portante o sotto un tavolo robusto, senza correre fuori.
+- **Durante una sequenza di scosse**, segui le indicazioni ufficiali del Comune, della Regione e del Dipartimento della protezione civile. Anche quando le scosse sono deboli, valgono i comportamenti di autoprotezione: durante la scossa riparati vicino a un muro portante o sotto un tavolo robusto, senza correre fuori; a scossa finita esci con prudenza.
 - **Prepara la tua famiglia** con il [piano familiare di emergenza](/piano-familiare/).
 - In emergenza chiama il **112**, il numero unico di emergenza.
 
