@@ -31,8 +31,6 @@ Altre volte devi solo salire al piano di sopra.
 
 Per esempio, con l'acqua alta: se sei al piano terra, sali ai piani alti. Non usare l'ascensore.
 
-A volte devi solo salire di un piano.
-
 ## Perché alcune persone dicono di no
 
 - **La casa.** È il posto della loro vita. Lasciarla fa paura.

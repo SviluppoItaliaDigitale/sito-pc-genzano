@@ -84,7 +84,7 @@ In emergenza chiama il **112**.
 **Fonti istituzionali** (verificate il 13 novembre 2026):
 
 - [Dipartimento della Protezione Civile — Indicazioni operative per la pianificazione degli interventi di protezione civile a favore di persone con specifiche necessità](https://www.protezionecivile.gov.it/static/2ea242ef9eb8c7f7198774ac828934ad/indicazioni-operative-la-pianificazione-degli-interventi-di-protezione-civile-favore-di-persone-con-specifiche-necessita.pdf)
-- [Dipartimento della Protezione Civile — Decreto rep. 511 del 16 febbraio 2026, nomina del Comitato nazionale del volontariato di protezione civile](https://www.protezionecivile.gov.it/static/36d8f9963ba1b5912ec93df0e221c7e8/20035753decreto-rep-5112026-comitato-volontariato-nazionale-signed.pdf)
+- [Dipartimento della Protezione Civile — Decreto del Capo del Dipartimento del 16 febbraio 2026 (repertorio 511), nomina del Comitato nazionale del volontariato di protezione civile](https://www.protezionecivile.gov.it/static/36d8f9963ba1b5912ec93df0e221c7e8/20035753decreto-rep-5112026-comitato-volontariato-nazionale-signed.pdf)
 - [Caritas Italiana — Intervento di Gemona, 2 maggio 2026 (statuto, gemellaggi, Centri di comunità)](https://www.caritas.it/wp-content/uploads/sites/2/2026/05/Gemona-2-maggio-2026-Testo-Intervento.pdf)
 - [Caritas Italiana — Gemellaggi](https://www.caritas.it/gemellaggi-2/) e [Vademecum dei Centri di ascolto](https://www.caritas.it/vademecum-centri-di-ascolto/)
 - [Ministero della cultura, Soprintendenza archivistica della Liguria — Strumenti per fronteggiare le emergenze](https://sabliguria.cultura.gov.it/wp-content/uploads/2026/03/Strumenti_per_fronteggiare_le_emergenze_def.pdf)

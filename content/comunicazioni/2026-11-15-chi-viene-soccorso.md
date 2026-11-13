@@ -1,7 +1,7 @@
 ---
 title: "L'emergenza vista da chi viene soccorso: aree, accoglienza e rientro a casa"
 date: 2026-11-15
-description: "Che cosa succede a chi lascia casa in emergenza: area di attesa, accoglienza, documenti, bisogni specifici, dignità e verifiche di agibilità."
+description: "Che cosa succede a chi lascia casa in emergenza: area di attesa, accoglienza, documenti, specifiche necessità, dignità e verifiche di agibilità."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -31,7 +31,7 @@ Il primo posto dove andare è l'**area di attesa**. Il Dipartimento della Protez
 
 A Genzano di Roma il Piano di emergenza comunale ne indica **10**, da AA1 ad AA10. Le trovi, con gli indirizzi, nella pagina [Aree di attesa](/aree-attesa/). La campagna «Io non rischio» lo dice in modo semplice: dopo una scossa raggiungi le aree di attesa previste dal Piano del tuo Comune.
 
-Nell'area ti chiedono chi sei e con chi sei. Non è burocrazia. Serve a sapere chi manca all'appello e chi ha bisogno di aiuto. Resta lì finché non ti dicono che cosa fare.
+Nell'area ti chiedono chi sei e con chi sei. Non è burocrazia: serve a sapere chi manca all'appello e chi ha bisogno di aiuto. Resta lì finché non ti dicono che cosa fare.
 
 ## Se non si può tornare a casa: l'accoglienza
 
@@ -50,15 +50,15 @@ In accoglienza si dorme, si mangia e ci si lava, spesso insieme a sconosciuti. A
 
 Molte persone escono di casa con le ciabatte e il telefono. È normale, ma rende tutto più difficile dopo. «Io non rischio» consiglia un kit con la copia dei documenti, una cassetta di pronto soccorso, una torcia e una radio a pile.
 
-La copia conta perché un documento si può perdere o restare in una casa chiusa. Se succede, dillo agli operatori dell'area e chiedi a chi rivolgerti. Una foto dei documenti sul telefono aiuta, ma da sola non basta se la batteria si scarica.
+La copia conta perché un documento si può perdere o restare in una casa chiusa. Se succede, dillo agli operatori dell'area e chiedi a chi rivolgerti. Una foto dei documenti sul telefono aiuta. Da sola però non basta: la batteria si può scaricare.
 
 Per i farmaci porta la confezione e una lista scritta delle terapie, con il nome del medico. Le quantità consigliate sono nella pagina sul [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 
-## Chi ha bisogni specifici
+## Persone con specifiche necessità
 
-Una persona con disabilità, un anziano solo o chi dipende da un apparecchio salvavita ha esigenze in più. Dal 2025 c'è un riferimento nazionale preciso. È il decreto del Capo del DPC del **10 marzo 2025**, pubblicato nella Gazzetta Ufficiale n. 68 del 22 marzo 2025.
+Una persona con disabilità, un anziano che vive solo o chi usa un apparecchio salvavita ha esigenze in più. Dal 2025 c'è un riferimento nazionale preciso. È il decreto del Capo del DPC del **10 marzo 2025**, pubblicato nella Gazzetta Ufficiale n. 68 del 22 marzo 2025.
 
-Il decreto chiede di prevedere, nelle aree di emergenza, la presenza dei servizi sociosanitari del territorio. Sono gli infermieri delle aziende sanitarie locali (ASL) e gli assistenti sociali. Il loro compito è valutare le priorità e il sostegno per ogni persona.
+Il decreto chiede di prevedere, nelle aree di emergenza, la presenza dei servizi sociosanitari del territorio. Sono gli infermieri delle aziende sanitarie locali (ASL) e gli assistenti sociali. Valutano le priorità e il tipo di sostegno per ogni persona. Alla valutazione partecipano anche la persona, i familiari, chi la assiste e il medico curante.
 
 Qualunque sia l'alloggio, il decreto chiede di considerare:
 
@@ -74,7 +74,7 @@ Per raccogliere le esigenze immediate esiste uno strumento dedicato, la scheda S
 
 ## Privacy e dignità
 
-Chi è assistito vive giorni difficili davanti a persone che non conosce. Il decreto del 2025 chiede ai Comuni attenzione ai dati delle persone con specifiche necessità. Sono informazioni sulla salute e vanno trattate con cura.
+Chi è assistito vive giorni difficili accanto a persone che non conosce. Il decreto del 2025 chiede ai Comuni di tutelare i dati delle persone con specifiche necessità. Sono informazioni sulla salute: vanno trattate con cura, e ciascuno decide che cosa raccontare e a chi.
 
 Anche noi seguiamo una regola. Nelle foto che pubblichiamo non mostriamo il volto né i dettagli di chi viene soccorso o assistito.
 
