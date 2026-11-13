@@ -56,8 +56,9 @@ I **volontari** del Gruppo non danno ordini. Spiegano e aiutano.
 - Ascolta senza fretta.
 - Spiega il pericolo con parole semplici.
 - Non arrabbiarti e non prendere in giro.
+- Non fare pressione e non fare paura.
 - Aiuta con le cose pratiche: il gatto, le medicine, le chiavi.
-- Di' dove andate e per quanto tempo.
+- Di' dove andate. Se non sai per quanto tempo, dillo.
 
 ## Che cosa puoi fare tu
 
@@ -71,10 +72,16 @@ Per te e la tua famiglia:
 Per un vicino:
 
 - Se vive da solo, scambiate il numero di telefono.
-- Se ha bisogno di aiuto, dillo al Comune.
+- Se ha bisogno di aiuto, e lui è d'accordo, dillo al Comune.
 - Se è in pericolo, chiama il **112**.
 
 Il **112** è il numero unico per tutte le emergenze.
+
+## Se hai molta paura
+
+Questi consigli non sono aiuto psicologico. Il Gruppo non dà aiuto psicologico.
+
+Se la paura pesa su di te, parla con il medico di famiglia. Puoi anche rivolgerti ai servizi dell'ASL Roma 6.
 
 ## Sul nostro sito
 
