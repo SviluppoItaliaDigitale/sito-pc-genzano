@@ -1,6 +1,6 @@
 ---
 title: "Ognissanti: viabilità nei pressi dei cimiteri e comportamenti"
-date: 2026-11-01T00:01:00+02:00
+date: 2026-11-01T00:01:00+01:00
 description: "Il 1° novembre aumenta l'afflusso verso i cimiteri. Indicazioni per la viabilità e comportamenti in sicurezza."
 badge: "Informazione"
 priorita: "normale"
@@ -53,7 +53,7 @@ Chi arriva in **autobus**:
 - le **fermate** possono essere più affollate del solito;
 - **verificare** gli orari sul sito del gestore;
 - **salire** ordinatamente dando precedenza agli anziani;
-- **rispettare** le priorità per disabili e persone con difficoltà.
+- **rispettare** le priorità per le persone con disabilità o con difficoltà di movimento.
 
 ## Spostamenti a piedi
 

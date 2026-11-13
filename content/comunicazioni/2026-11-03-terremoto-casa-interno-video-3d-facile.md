@@ -1,6 +1,6 @@
 ---
 title: "Terremoto: la casa sicura, un video in 3D"
-date: 2026-11-03T00:02:00+02:00
+date: 2026-11-03T00:02:00+01:00
 description: "Un video mostra che cosa cade in casa con il terremoto e come rendere la casa più sicura."
 badge: "Prevenzione"
 priorita: "normale"

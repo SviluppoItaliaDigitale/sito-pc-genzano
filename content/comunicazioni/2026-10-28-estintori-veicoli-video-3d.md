@@ -1,6 +1,6 @@
 ---
 title: "Fuoco a bordo di un veicolo: un video in 3D su cosa fare e come usare l'estintore"
-date: 2026-10-28T00:04:00+02:00
+date: 2026-10-28T00:04:00+01:00
 description: "Auto, camion, scuolabus, auto elettriche e a gas: un video di meno di tre minuti, con voce e sottotitoli, su cosa fare se a bordo c'è fuoco."
 badge: "Prevenzione"
 priorita: "normale"

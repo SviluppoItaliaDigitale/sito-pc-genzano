@@ -185,7 +185,7 @@ La guardiania **non sostituisce** le Forze dell'Ordine: in caso di reati o situa
 | **Mensa — tavoli ospiti** | Dopo ogni pasto | Detergente sanificante |
 | **Tende alloggi — spazi comuni** | 1 volta al giorno | Detergente neutro |
 | **Infopoint / segreteria** | 1 volta al giorno | Detergente neutro |
-| **Servizi igienici per disabili** | 3 volte al giorno | Detergente clorato + verifica accessibilità |
+| **Servizi igienici accessibili** | 3 volte al giorno | Detergente clorato + verifica accessibilità |
 
 ### Disinfezione straordinaria
 

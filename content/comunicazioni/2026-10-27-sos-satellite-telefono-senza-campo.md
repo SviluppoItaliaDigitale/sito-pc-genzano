@@ -1,6 +1,6 @@
 ---
 title: "SOS via satellite dal telefono: come chiedere aiuto quando non c'è campo"
-date: 2026-10-27T00:02:00+02:00
+date: 2026-10-27T00:02:00+01:00
 description: "iPhone dal 14 in poi e Google Pixel dal 9 in poi possono inviare un SOS via satellite anche in Italia. Come prepararlo, come provarlo e i suoi limiti."
 badge: "Prevenzione"
 priorita: "normale"

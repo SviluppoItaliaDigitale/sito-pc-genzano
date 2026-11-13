@@ -1,6 +1,6 @@
 ---
 title: "Albero caduto in viale Fratelli Rosselli: colpite due auto in sosta"
-date: 2026-11-01T00:02:00+02:00
+date: 2026-11-01T00:02:00+01:00
 description: "Domenica sera un grande albero è caduto in viale Fratelli Rosselli, ha bloccato la strada e danneggiato due auto. Sul posto Gruppo e Vigili del Fuoco."
 badge: "Attività"
 priorita: "normale"

@@ -108,7 +108,7 @@ Dotazione dettagliata: vedi [Capitolo 2 — Check-list 4](/formazione/manuale-ca
 - **Moduli TLC-Segreteria-Comando** adiacenti
 - **InfoPoint** in posizione visibile e accessibile
 - **Cucina-mensa** lontano dai servizi igienici
-- **Servizi igienici** distribuiti su almeno due lati, 1 per disabili, 1 dedicato cucina, 1 dedicato area sanitaria
+- **Servizi igienici** distribuiti su almeno due lati, 1 accessibile alle persone con disabilità, 1 dedicato cucina, 1 dedicato area sanitaria
 - **Separazione** servizi soccorritori / ospiti
 
 ### Standard UNHCR (riferimento internazionale)

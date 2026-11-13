@@ -1,6 +1,6 @@
 ---
 title: "Neve e catene: preparati a casa"
-date: 2026-11-04T00:04:00+02:00
+date: 2026-11-04T00:04:00+01:00
 draft: false
 description: "Un video di 1 minuto su neve e catene. Prova le catene a casa, prima dell'inverno."
 badge: "Prevenzione"

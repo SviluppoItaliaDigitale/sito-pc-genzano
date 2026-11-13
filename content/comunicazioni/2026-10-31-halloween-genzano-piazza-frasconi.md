@@ -1,6 +1,6 @@
 ---
 title: "Halloween a Genzano: il Gruppo in piazza Frasconi con la Misericordia"
-date: 2026-10-31T00:02:00+02:00
+date: 2026-10-31T00:02:00+01:00
 description: "Sabato 31 ottobre i volontari in piazza Frasconi per la festa di Halloween, con la Misericordia di Ariccia, la Pro Loco e le forze dell'ordine."
 badge: "Attività"
 priorita: "normale"

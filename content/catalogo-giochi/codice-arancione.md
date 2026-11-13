@@ -41,7 +41,7 @@ sitemap:
 3. Alluvione: niente fiamme libere, generatore obbligatorio (no candele).
 4. Sisma: priorità presidio sanitario rinforzato + sicurezza struttura.
 5. AIB (estate): priorità acqua potabile + climatizzazione (anziani a rischio).
-6. Accessibilità per disabili sempre dovuta per legge.
+6. Accessibilità per le persone con disabilità sempre dovuta per legge.
 
 ## Apri il gioco interattivo
 

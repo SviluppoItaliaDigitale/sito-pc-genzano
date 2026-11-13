@@ -1,6 +1,6 @@
 ---
 title: "L'aria in inverno: cosa è il PM10 e cosa fare"
-date: 2026-11-09T00:01:00+02:00
+date: 2026-11-09T00:01:00+01:00
 description: "In inverno l'aria è più inquinata. Cosa sono le polveri sottili PM10 e cosa puoi fare."
 badge: "Prevenzione"
 priorita: "normale"

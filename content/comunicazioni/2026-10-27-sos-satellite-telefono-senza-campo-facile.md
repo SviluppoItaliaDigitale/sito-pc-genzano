@@ -1,6 +1,6 @@
 ---
 title: "Chiedere aiuto con il satellite quando non c'è campo"
-date: 2026-10-27T00:02:00+02:00
+date: 2026-10-27T00:02:00+01:00
 description: "Alcuni telefoni possono chiedere aiuto con un satellite. Funziona quando non c'è campo. Ecco come."
 badge: "Prevenzione"
 priorita: "normale"
