@@ -5,8 +5,8 @@ description: "Fonti verificate, rispetto per vittime e minori, notizie false: co
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-26-raccontare-un-emergenza.webp"
+image_alt: "Cover dell'articolo: Raccontare un'emergenza senza fare danni: lo sguardo del giornalista"
 scadenza: ""
 area: ""
 allegati: []

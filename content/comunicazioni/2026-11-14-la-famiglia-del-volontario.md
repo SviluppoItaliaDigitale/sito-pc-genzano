@@ -16,7 +16,7 @@ social_punti:
   - "Chi resta a casa vive l'attesa e si fa carico della vita di tutti i giorni"
   - "Ai figli si spiega con parole semplici dove va il genitore, senza promettere orari di rientro"
   - "Il piano familiare deve prevedere anche l'assenza di chi è in servizio"
-  - "Il volontario attivato ufficialmente conserva il posto di lavoro ed è assicurato (D.Lgs. 1/2018, art. 39)"
+  - "Nel soccorso autorizzato il volontario conserva posto e trattamento economico ed è assicurato (D.Lgs. 1/2018, art. 39)"
 draft: false
 ---
 
@@ -28,7 +28,7 @@ Le situazioni che descriviamo sono **esempi tipici**, non storie di persone real
 
 Immagina le due di notte. Il telefono vibra sul comodino. Chi è reperibile si alza, si veste al buio e prende lo zaino già pronto vicino alla porta. Chi resta nel letto sa poco: forse un albero caduto, forse un allagamento. Non sa quando l'altro tornerà.
 
-Durante un'allerta i nostri volontari si presentano in sede a turni, che durano di solito dalle 4 alle 6 ore. Lo scenario può durare anche tutta la notte, come spieghiamo nella pagina [Diventa volontario](/diventa-volontario/). La mattina dopo, però, la vita di casa riprende. Qualcuno deve accompagnare i bambini a scuola, andare al lavoro, preparare il pranzo. L'imprevisto pesa anche su chi non è uscito.
+Durante un'allerta i volontari reperibili si presentano in sede a turni di 4-6 ore. Lo scenario può durare tutta la notte, come spieghiamo nella pagina [Diventa volontario](/diventa-volontario/). La mattina la vita di casa riprende comunque. Qualcuno deve accompagnare i bambini a scuola, andare al lavoro, preparare il pranzo. L'imprevisto pesa anche su chi non è uscito.
 
 ## Giorni fuori casa con la colonna mobile
 
@@ -41,12 +41,13 @@ Per chi resta cambia l'organizzazione della settimana. La spesa, gli orari dei f
 I bambini notano l'assenza e percepiscono la preoccupazione degli adulti. Qualche attenzione semplice aiuta:
 
 - spiega con parole adatte all'età dove va il genitore e che cosa fa: aiuta le persone e lavora in squadra, con attrezzatura e regole pensate per la sicurezza;
-- non promettere un giorno o un'ora di rientro che non puoi garantire;
+- non promettere un giorno o un'ora di rientro che non puoi garantire: di' che cosa sai e quando avrai notizie, anche se la risposta è «non lo so ancora»;
 - mantieni gli orari e le abitudini di casa, come consigliamo nella pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/);
-- lascia spazio alle domande e limita le immagini forti dei notiziari;
+- lascia spazio alle domande e rispondi con sincerità, in modo semplice;
+- evita che i bambini vedano da soli le immagini forti dei notiziari. Se le vedono, commentatele insieme;
 - se il genitore può, una breve telefonata o un messaggio vocale vale più di molte spiegazioni.
 
-Al rientro un bambino può cercare di più il genitore, oppure fare finta di niente. Dagli tempo e riprendete insieme le abitudini di casa. Se un cambiamento dura o ti preoccupa, parlane con il pediatra o con un professionista.
+Durante l'assenza un bambino può essere più agitato, dormire peggio o fare le stesse domande più volte. Sono reazioni comuni. Al rientro può cercare di più il genitore, oppure fare finta di niente: anche questo capita. Dagli tempo e riprendete insieme le abitudini di casa. Se un cambiamento dura o ti preoccupa, parlane con il pediatra o con il medico di famiglia.
 
 ## Organizzarsi prima, non durante
 
@@ -64,20 +65,22 @@ Il sostegno alle famiglie è anche compito dell'organizzazione. Nel nostro Grupp
 
 Altre pratiche aiutano chi resta a casa:
 
-- **turni chiari**: chi parte deve sapere quanto durerà l'attività e quando è previsto il rientro, come richiede il nostro [manuale di campo](/formazione/manuale-campo/). Così può dirlo anche alla famiglia;
+- **turni chiari**: chi parte deve sapere quanto durerà l'attività e quando è previsto il rientro, come ricorda il nostro [manuale di campo](/formazione/manuale-campo/struttura-organizzativa/). Così può dirlo alla famiglia come una previsione, che può cambiare, non come una promessa;
 - **comunicazione**: notizie generali sull'andamento della missione aiutano a vivere meglio l'attesa, senza dettagli sulle persone soccorse;
 - **rientro**: dopo un servizio lungo servono riposo e un momento per scaricare la tensione. Il nostro [kit per i volontari](/formazione/kit-calamita-volontari-pc/) contiene schede sulla decompressione di fine turno e sui segnali di stanchezza.
 
-La stanchezza e lo stress dei soccorritori ricadono spesso sulla vita di casa. Ne abbiamo scritto in [Salute mentale dei volontari: gestire lo stress delle emergenze](/comunicazioni/2026-07-27-salute-mentale-volontari-stress-emergenze/) e ne parleremo ancora il 17 novembre.
+Stanchezza e tensione dopo un servizio sono normali e si fanno sentire anche a casa. Ne abbiamo scritto in [Salute mentale dei volontari: gestire lo stress delle emergenze](/comunicazioni/2026-07-27-salute-mentale-volontari-stress-emergenze/) e ne parleremo ancora il 17 novembre.
 
 ## Le tutele che riguardano anche la famiglia
 
-Due garanzie di legge danno tranquillità anche a chi resta a casa. Il Codice della protezione civile (decreto legislativo 2 gennaio 2018, n. 1, articolo 39) le prevede per il volontario attivato ufficialmente dal Dipartimento della Protezione Civile o dalla Regione:
+Alcune garanzie di legge danno tranquillità anche a chi resta a casa. Valgono per il periodo di soccorso e assistenza autorizzato dal Dipartimento della Protezione Civile o dalla Regione, non per ogni uscita. Il Codice della protezione civile (decreto legislativo 2 gennaio 2018, n. 1, articolo 39) prevede:
 
-- il **mantenimento del posto di lavoro** pubblico o privato e dello stipendio, entro limiti di giorni fissati dalla legge;
+- il **mantenimento del posto di lavoro**, pubblico o privato, e del **trattamento economico e previdenziale** da parte del datore di lavoro: di regola fino a 30 giorni continuativi e 90 nell'anno. Per addestramento, formazione e pianificazione i limiti sono 10 giorni continuativi e 30 nell'anno;
 - la **copertura assicurativa** prevista dal Codice del Terzo settore (decreto legislativo 117/2017, articolo 18), contro infortuni e malattie legati all'attività di volontariato e per la responsabilità civile verso terzi.
 
-L'articolo 40 regola i rimborsi delle spese. Limiti e procedure sono spiegati in [Volontariato di PC e lavoro](/comunicazioni/2026-10-12-volontariato-diritto-lavoratore-assenza/). Il punto di vista del datore di lavoro avrà un articolo dedicato il 16 novembre.
+Il Gruppo comunale non si attiva su richiesta dei cittadini: lo attivano il Sindaco e le autorità competenti. Se hai dubbi su un singolo servizio, chiedi prima al Direttivo.
+
+Gli articoli 39 e 40 regolano anche i rimborsi. Il datore di lavoro può chiedere il rimborso di quanto ha versato al volontario, e l'organizzazione quello delle spese autorizzate, nei limiti delle risorse disponibili. Il dettaglio è nella pagina [Volontariato di PC e lavoro](/comunicazioni/2026-10-12-volontariato-diritto-lavoratore-assenza/). Il punto di vista del datore di lavoro avrà un articolo dedicato il 16 novembre.
 
 ## Che cosa puoi fare tu
 

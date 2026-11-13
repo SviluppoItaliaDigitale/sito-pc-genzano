@@ -5,8 +5,8 @@ description: "Un piano in una pagina, copie dei dati, merce al sicuro dall'acqua
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-11-23-negozi-e-imprese-dopo-l-emergenza.webp"
+image_alt: "Cover dell'articolo: Negozi e piccole imprese: prepararsi all'emergenza e ripartire dopo"
 scadenza: ""
 area: ""
 allegati: []

@@ -1,0 +1,100 @@
+---
+title: "Chi non può uscire da solo: la sicurezza in ospedali, residenze e carceri"
+date: 2026-11-21
+description: "Come si pianifica la sicurezza di chi vive in ospedali, residenze per anziani, strutture per persone con disabilità e carceri, e che cosa può fare un familiare."
+badge: "Prevenzione"
+priorita: "normale"
+autore: "Gruppo Comunale Volontari PC Genzano"
+image: "/images/2026-11-21-evacuare-chi-non-puo-muoversi.webp"
+image_alt: "Cover dell'articolo: Chi non può uscire da solo: la sicurezza in ospedali, residenze e carceri"
+scadenza: ""
+area: ""
+allegati: []
+tts: true
+versione_facile: "2026-11-21-evacuare-chi-non-puo-muoversi-facile"
+social_citazione: "Per chi non può uscire da solo, la sicurezza si decide prima: nei piani, nei turni, nelle prove."
+social_punti:
+  - "Nei luoghi di lavoro con almeno dieci lavoratori il piano di emergenza è obbligatorio e deve prevedere misure per chi ha esigenze speciali"
+  - "Nei reparti e nelle residenze sanitarie si sposta prima la persona nel compartimento accanto, protetto dal fuoco"
+  - "Il piano comunale di protezione civile indica dove sono ospedali, case di cura e carceri"
+  - "Chi ha un familiare in struttura può chiedere del piano e tenere aggiornati contatti, terapie e ausili"
+draft: false
+---
+
+Se a casa suona l'allarme antincendio, quasi tutti possiamo alzarci e uscire. In un reparto di ospedale, in una residenza per anziani o in una cella le cose vanno diversamente. Chi vive lì dipende da altre persone per lasciare la stanza: per una malattia, per un letto da cui non si alza, per un ausilio, oppure perché le porte si aprono solo dall'esterno. Per queste persone la sicurezza non si improvvisa. Si decide prima, nei piani, nei turni e nelle prove.
+
+In questa serie raccontiamo la protezione civile da punti di vista diversi. Oggi guardiamo a chi abita in luoghi da cui non si esce da soli.
+
+## Di chi parliamo
+
+Le strutture sono diverse fra loro. Ci sono gli ospedali e le case di cura, le residenze sanitarie assistenziali (RSA) e le case di riposo, le strutture per persone con disabilità e gli istituti penitenziari. In tutte convivono due gruppi: chi ci lavora e chi ci vive. Le norme sulla sicurezza partono dai primi, che hanno il compito di proteggere anche i secondi.
+
+## Il piano di emergenza interno
+
+Il Testo unico sulla sicurezza sul lavoro, il [decreto legislativo 81/2008](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81), chiede al datore di lavoro di organizzare la gestione delle emergenze e i rapporti con i servizi pubblici di soccorso (articolo 43). Ne abbiamo parlato nell'articolo sul [Testo unico 81/2008](/comunicazioni/2026-10-21-sicurezza-lavoro-81-2008/).
+
+I dettagli li fissa il [decreto del Ministro dell'interno 2 settembre 2021](https://www.gazzettaufficiale.it/eli/id/2021/10/04/21A05748/sg), in vigore dall'ottobre 2022. Il piano di emergenza scritto è obbligatorio in tre casi:
+
+- quando lavorano almeno dieci persone;
+- quando il luogo è aperto al pubblico con più di cinquanta presenti;
+- quando l'attività è soggetta ai controlli dei Vigili del fuoco.
+
+Fra le attività soggette ai controlli ci sono le strutture sanitarie con ricovero e le case di riposo per anziani con oltre 25 posti letto (attività 68 del [DPR 151/2011](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151)).
+
+Il piano deve contenere anche «le specifiche misure per assistere le persone con esigenze speciali». Il decreto chiede di individuare le loro necessità e di prevederle nelle procedure di evacuazione. Indica anche come dare l'allarme a chi non sente o non vede bene: luci, scritte luminose, dispositivi a vibrazione, messaggi da altoparlante. Gli ascensori non si usano per uscire, salvo quelli costruiti apposta.
+
+C'è un dettaglio che conta molto di notte. Il numero di addetti all'emergenza deve essere adeguato «alle turnazioni e alle assenze ordinariamente prevedibili». Un piano pensato per il turno del mattino non basta per le ore in cui in reparto ci sono pochi operatori.
+
+## Ospedali e residenze: prima nel compartimento accanto
+
+Per le strutture sanitarie esiste una regola tecnica antincendio dedicata. È il [decreto del Ministro dell'interno 18 settembre 2002](https://www.gazzettaufficiale.it/eli/gu/2002/09/27/227/sg/pdf), aggiornato dal [decreto 19 marzo 2015](https://www.gazzettaufficiale.it/eli/gu/2015/03/25/70/sg/pdf). In alternativa si può applicare la regola del [decreto 29 marzo 2021](https://www.gazzettaufficiale.it/eli/gu/2021/04/09/85/sg/pdf), che riguarda ospedali e RSA con più di 25 posti letto.
+
+Entrambe chiedono che le aree di degenza consentano l'**esodo orizzontale progressivo**. Vuol dire spostare le persone ricoverate in un compartimento vicino, sullo stesso piano, separato dal fuoco da muri e porte resistenti. Lì restano protette finché l'incendio è spento, o finché serve portarle in un luogo sicuro all'esterno. Per chi è a letto, collegato a un apparecchio o in terapia intensiva, è spesso la strada più sicura.
+
+## Le carceri
+
+Il decreto 81/2008 vale anche negli istituti penitenziari. Lì si applica «tenendo conto delle effettive particolari esigenze connesse al servizio» (articolo 3). Le procedure di sicurezza interne non sono pubbliche, per ragioni comprensibili. Per il territorio conta un dato: le carceri sono fra le strutture che il piano comunale di protezione civile deve indicare sulla mappa.
+
+## Il collegamento con il piano comunale
+
+Il piano interno dice che cosa fare dentro l'edificio. Il piano comunale dice che cosa succede fuori. La [direttiva del Presidente del Consiglio dei ministri 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf) chiede ai Comuni di indicare dove sono ospedali, case di cura, ambulatori e carceri. Chiede anche di stimare quante persone con disabilità o in condizioni di fragilità vivono sul territorio, con i dati del Servizio sanitario regionale.
+
+Gli obiettivi sono due: conoscere le specifiche necessità assistenziali di queste persone e sapere quali risorse ci sono per loro. La direttiva fa tre esempi: alloggi, mezzi di trasporto speciali, personale specializzato. Se una residenza deve essere sgomberata, il Comune deve già sapere dove possono andare gli ospiti e con quali mezzi. Puoi leggere come è organizzato il [Piano di emergenza comunale di Genzano](/piano-emergenza/).
+
+## Le esercitazioni
+
+Un piano mai provato è solo carta. Il decreto del 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega i piani comunali alle esercitazioni (articolo 18). Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
+
+## Che cosa puoi fare tu, se hai un familiare in struttura
+
+- **Chiedi del piano.** Domanda come è organizzata l'evacuazione e come è considerato il tuo familiare, per esempio se usa la carrozzina o ha un apparecchio acustico.
+- **Lascia più di un contatto.** Indica almeno due numeri di telefono e aggiornali quando cambiano.
+- **Tieni aggiornate terapie e ausili.** Segnala alla struttura ogni cambio di farmaci, ausili e allergie. Conserva anche tu un elenco aggiornato.
+- **Concorda chi ti chiamerà.** Chiedi il nome della persona che ti darà notizie in caso di trasferimento.
+- **Preparati alla telefonata.** La scheda [Cosa chiedere alla RSA dopo un evento](/formazione/kit-calamita-strutture-sanitarie/14-cosa-chiedere-rsa.html) mette in ordine le domande utili, senza intasare il centralino.
+
+Se il tuo familiare vive a casa e ha bisogno di aiuto per uscire, trovi indicazioni nella pagina sulle [persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/). In caso di pericolo chiama sempre il **112**, il numero unico di emergenza.
+
+## Per approfondire
+
+### Sul nostro sito
+
+- Dossier: [Lo stesso temporale, molti sguardi](/dossier/lo-stesso-temporale-molti-sguardi/)
+- Articolo della serie: [L'emergenza vista da chi viene soccorso](/comunicazioni/2026-11-15-chi-viene-soccorso/)
+- Articolo della serie: [Chi non vuole andarsene](/comunicazioni/2026-11-13-chi-non-vuole-lasciare-casa/)
+- Articolo: [Disabilità in emergenza: piani accessibili e inclusivi](/comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili/)
+- [Kit calamità per strutture sanitarie](/formazione/kit-calamita-strutture-sanitarie/)
+- [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/)
+
+### Fonti istituzionali
+
+- [Decreto legislativo 9 aprile 2008, n. 81 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81)
+- [Decreto del Ministro dell'interno 2 settembre 2021 (Gazzetta Ufficiale n. 237 del 4 ottobre 2021)](https://www.gazzettaufficiale.it/eli/id/2021/10/04/21A05748/sg)
+- [Decreto del Ministro dell'interno 18 settembre 2002 (Gazzetta Ufficiale n. 227 del 27 settembre 2002)](https://www.gazzettaufficiale.it/eli/gu/2002/09/27/227/sg/pdf)
+- [Decreto del Ministro dell'interno 19 marzo 2015 (Gazzetta Ufficiale n. 70 del 25 marzo 2015)](https://www.gazzettaufficiale.it/eli/gu/2015/03/25/70/sg/pdf)
+- [Decreto del Ministro dell'interno 29 marzo 2021 (Gazzetta Ufficiale n. 85 del 9 aprile 2021)](https://www.gazzettaufficiale.it/eli/gu/2021/04/09/85/sg/pdf)
+- [Decreto del Presidente della Repubblica 1° agosto 2011, n. 151 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151)
+- [Direttiva del Presidente del Consiglio dei ministri 30 aprile 2021 (Gazzetta Ufficiale n. 160 del 6 luglio 2021)](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf)
+- [Codice della protezione civile, articolo 18 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18)
+
+*Fonti verificate il 13 novembre 2026.*
