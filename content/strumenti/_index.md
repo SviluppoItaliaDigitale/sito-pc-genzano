@@ -108,7 +108,7 @@ Il modo più rapido per vedere tutto in un colpo d'occhio è il nostro **cruscot
     fonte="GFS, ECMWF, ICON"
     icona="bi-layers-fill"
     tipoFonte="consultazione"
-    descrizione="Carte meteorologiche professionali per l'Italia, aggiornate automaticamente, da consultare, scaricare e condividere."
+    descrizione="Carte di previsione per l'Italia e l'Europa: temperatura, vento, pioggia, neve e nuvole con i valori sulle città, più le carte sinottiche. Aggiornate a ogni corsa dei modelli."
     tipoAccesso="sito"
     url="/mappe-meteo-professionali/" >}}
 

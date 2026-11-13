@@ -195,9 +195,47 @@ MODELLI: dict[str, dict[str, Any]] = {
     },
 }
 
+# Carte «per tutti» in stile WXCharts: campo a colori pieni su terra e mare,
+# valori stampati sulle città, poche grandezze che chiunque legge. Vengono
+# prima delle carte da meteorologo (ordine più basso) e hanno gruppo «tutti».
 # Prodotti in stile Albany (Alicia Bentley). "richiede" elenca i campi
 # normalizzati indispensabili; "richiede_3d" i campi con dimensione verticale.
 PRODOTTI: dict[str, dict[str, Any]] = {
+    "temperatura_2m": {
+        "titolo": "Temperatura a 2 metri",
+        "sottotitolo": "Temperatura dell'aria vicino al suolo, con i valori sulle città",
+        "ordine": 1,
+        "gruppo": "tutti",
+        "richiede": ("t2m",),
+    },
+    "raffiche": {
+        "titolo": "Raffiche di vento",
+        "sottotitolo": "Raffica di vento a 10 metri dal suolo, in chilometri orari",
+        "ordine": 2,
+        "gruppo": "tutti",
+        "richiede": ("raffica",),
+    },
+    "pioggia_totale": {
+        "titolo": "Pioggia totale dall'inizio della previsione",
+        "sottotitolo": "Precipitazione accumulata dall'ora di inizializzazione (pioggia e neve fusa), in millimetri",
+        "ordine": 3,
+        "gruppo": "tutti",
+        "richiede": ("tp_tot",),
+    },
+    "neve_al_suolo": {
+        "titolo": "Neve al suolo",
+        "sottotitolo": "Altezza del manto nevoso prevista dal modello, in centimetri",
+        "ordine": 4,
+        "gruppo": "tutti",
+        "richiede": ("neve_cm",),
+    },
+    "nuvolosita": {
+        "titolo": "Nuvolosità totale",
+        "sottotitolo": "Parte di cielo coperta da nubi a qualunque quota, in percentuale",
+        "ordine": 5,
+        "gruppo": "tutti",
+        "richiede": ("nubi",),
+    },
     "mslp_precip": {
         "titolo": "Pressione al suolo e pioggia in 6 ore",
         "sottotitolo": "Pressione al livello del mare (isobare) e precipitazione accumulata in 6 ore",

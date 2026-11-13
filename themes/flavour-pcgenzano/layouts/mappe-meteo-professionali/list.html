@@ -41,7 +41,16 @@
       <section class="mmp-sezione" id="mmp-miniature-sezione" aria-labelledby="mmp-miniature-titolo" hidden>
         <h2 id="mmp-miniature-titolo">Le carte disponibili</h2>
         <p>Scegli una grandezza per aprirla nel visualizzatore. La miniatura è un fotogramma della corsa più recente.</p>
-        <ul class="mmp-griglia" id="mmp-griglia"></ul>
+        <div id="mmp-gruppo-tutti" hidden>
+          <h3 id="mmp-tutti-titolo">Carte per tutti</h3>
+          <p>Temperatura, vento, pioggia, neve e nuvole, con i valori sulle città.</p>
+          <ul class="mmp-griglia" id="mmp-griglia-tutti" aria-labelledby="mmp-tutti-titolo"></ul>
+        </div>
+        <div id="mmp-gruppo-esperti" hidden>
+          <h3 id="mmp-esperti-titolo">Carte per esperti</h3>
+          <p>Carte sinottiche in quota e indici per chi studia la meteorologia.</p>
+          <ul class="mmp-griglia" id="mmp-griglia" aria-labelledby="mmp-esperti-titolo"></ul>
+        </div>
       </section>
 
       <section class="mmp-sezione mmp-visualizzatore" id="mmp-visualizzatore" aria-labelledby="mmp-vista-titolo" hidden>

@@ -1,6 +1,6 @@
 ---
 title: "Mappe meteo professionali per l'Italia"
-description: "Carte di previsione in stile sinottico per l'Italia e l'Europa, aggiornate a ogni corsa dei modelli, con animazione e file scaricabili."
+description: "Carte di previsione per l'Italia e l'Europa: temperatura, vento, pioggia, neve e nuvole per tutti, più le carte sinottiche, aggiornate a ogni corsa dei modelli."
 date: 2026-11-10
 layout: "list"
 tts: false
@@ -10,6 +10,8 @@ image_alt: "Intestazione della pagina Mappe meteo professionali per l'Italia del
 ---
 
 Questa pagina raccoglie le **carte di previsione** elaborate dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma a partire dai dati aperti dei modelli numerici. Puoi scegliere il modello, il dominio e la grandezza, scorrere le ore di previsione, avviare l'animazione e scaricare la GIF oppure un singolo fotogramma.
+
+Le carte sono divise in due gruppi. Le **carte per tutti** mostrano temperatura a 2 metri, raffiche di vento, pioggia totale, neve al suolo e nuvolosità, a colori pieni e con i valori sulle città. Le **carte per esperti** sono carte sinottiche: pressione, correnti in quota, instabilità e masse d'aria. Il modello AIFS non pubblica raffiche e neve al suolo: per quel modello le due carte non ci sono.
 
 Le carte servono a **inquadrare la situazione** su scala nazionale ed europea. Non sostituiscono i bollettini ufficiali del [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti) né lo stato di allerta pubblicato nella pagina [Allerte meteo](/allerte-meteo/). In emergenza chiama il **112**.
 

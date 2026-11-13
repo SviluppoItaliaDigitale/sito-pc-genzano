@@ -92,6 +92,10 @@ _GFS_FILTRO = {
     "CAPE": ("surface",),
     "PWAT": ("entire_atmosphere_(considered_as_a_single_layer)",),
     "APCP": ("surface",),
+    # carte «per tutti»: raffica, nuvolosità totale, altezza della neve
+    "GUST": ("surface",),
+    "TCDC": ("entire_atmosphere",),
+    "SNOD": ("surface",),
 }
 
 # Chiavi da cercare nell'idx AWS (sottostringhe sul 4° e 5° campo).
@@ -103,6 +107,9 @@ _GFS_IDX_CERCA = (
     ("CAPE", "surface"),
     ("PWAT", "entire atmosphere"),
     ("APCP", "surface"),
+    ("GUST", "surface"),
+    ("TCDC", "entire atmosphere"),
+    ("SNOD", "surface"),
 ) + tuple(
     (nome, f"{lv} mb")
     for nome in ("TMP", "UGRD", "VGRD", "HGT", "VVEL", "SPFH", "RH", "ABSV")
@@ -247,9 +254,18 @@ def trova_corsa_ecmwf(modello: str = "ecmwf") -> datetime:
     raise ScaricoErrore(f"Nessuna corsa ECMWF ({modello}) recente risulta disponibile.")
 
 
-_ECMWF_SFC = ["msl", "2t", "10u", "10v", "tp", "tcwv", "mucape"]
+_ECMWF_SFC = ["msl", "2t", "10u", "10v", "tp", "tcwv", "mucape", "tcc", "sd", "rsn"]
+
+
+def _ecmwf_raffica(step: int) -> str:
+    """Raffica dell'IFS: `10fg` (ultima ora) fino a +90, poi `10fg3` (ultime 3 ore).
+
+    Verificato sugli indici di Open Data il 13/11/2026: a +96 `10fg` non esiste,
+    e chiederlo farebbe fallire tutto il prelievo al suolo di quello step.
+    """
+    return "10fg" if step <= 90 else "10fg3"
 _ECMWF_PL = ["gh", "t", "u", "v", "w", "q", "r", "vo"]
-_ECMWF_AIFS_SFC = ["msl", "2t", "10u", "10v", "tp", "tcw"]
+_ECMWF_AIFS_SFC = ["msl", "2t", "10u", "10v", "tp", "tcw", "tcc"]
 _ECMWF_AIFS_PL = ["gh", "t", "u", "v", "w", "q"]
 
 
@@ -299,7 +315,7 @@ def scarica_ecmwf_step(corsa: datetime, step: int, cache: Path, modello: str = "
     sfc = cartella / f"f{step:03d}.sfc.grib2"
     pl = cartella / f"f{step:03d}.pl.grib2"
     if not file_pronto(sfc, 5_000):
-        _ecmwf_retrieve(client, dict(base, param=_ECMWF_AIFS_SFC if aifs else _ECMWF_SFC), sfc)
+        _ecmwf_retrieve(client, dict(base, param=_ECMWF_AIFS_SFC if aifs else _ECMWF_SFC + [_ecmwf_raffica(step)]), sfc)
     if not file_pronto(pl, 5_000):
         _ecmwf_retrieve(client, dict(base, param=_ECMWF_AIFS_PL if aifs else _ECMWF_PL,
                                      levelist=list(LIVELLI_HPA)), pl)
@@ -336,6 +352,10 @@ ICON_SFC = {
     "tqv": "TQV",
     "u_10m": "U_10M",
     "v_10m": "V_10M",
+    "t_2m": "T_2M",
+    "vmax_10m": "VMAX_10M",
+    "clct": "CLCT",
+    "h_snow": "H_SNOW",
 }
 # Livelli ICON-EU tipicamente pubblicati (alcuni possono mancare: si ignora il 404).
 ICON_LIVELLI = (1000, 925, 850, 700, 600, 500, 400, 300, 250, 200, 150, 100)
@@ -436,6 +456,10 @@ ICON2I_SFC = (
     ("TQV", "surface-0"),
     ("U_10M", "heightAboveGround-10"),
     ("V_10M", "heightAboveGround-10"),
+    ("T_2M", "heightAboveGround-2"),
+    ("VMAX_10M", "heightAboveGround-10"),
+    ("CLCT", "surface-0"),
+    ("H_SNOW", "surface-0"),
 )
 ICON2I_PL = ("T", "U", "V", "FI", "QV")
 # OMEGA serve solo a 500 hPa (campo opzionale della carta h500).

@@ -11,6 +11,9 @@
   var infoModello = document.getElementById('mmp-modello-info');
   var sezMini = document.getElementById('mmp-miniature-sezione');
   var griglia = document.getElementById('mmp-griglia');
+  var grigliaTutti = document.getElementById('mmp-griglia-tutti');
+  var gruppoTutti = document.getElementById('mmp-gruppo-tutti');
+  var gruppoEsperti = document.getElementById('mmp-gruppo-esperti');
   var sezVista = document.getElementById('mmp-visualizzatore');
   var titoloVista = document.getElementById('mmp-vista-titolo');
   var sottoVista = document.getElementById('mmp-vista-sotto');
@@ -32,6 +35,11 @@
   var manifesto = null;
   var prodottoAttivo = null;
   var SPIEGAZIONI = {
+    temperatura_2m: 'Il colore dice quanto farà caldo o freddo all\'aria aperta, a due metri dal suolo, dove viviamo. Nei riquadri trovi il valore previsto nelle città. La linea blu scura segna lo zero: oltre quella linea può gelare.',
+    raffiche: 'Le raffiche sono i colpi di vento più forti, più intensi del vento medio. Per ECMWF IFS, ICON-EU e ICON-2I è la raffica più forte dell\'ora che precede l\'orario della carta (per ECMWF IFS, oltre le 90 ore, delle tre ore che lo precedono); per GFS è la raffica in quell\'istante. Oltre 60 km/h rami e oggetti lasciati fuori possono volare via.',
+    pioggia_totale: 'Questa carta somma tutta la pioggia prevista dall\'inizio della corsa del modello fino all\'orario scelto. La neve è contata come acqua di fusione. Scorrendo le ore, i valori possono solo crescere.',
+    neve_al_suolo: 'Mostra quanti centimetri di neve il modello prevede sul terreno, compresa quella già caduta. Sulle montagne più alte e sui ghiacciai il modello segna valori molto alti: è normale.',
+    nuvolosita: 'Indica quanta parte del cielo sarà coperta da nubi, a qualunque altezza. Il grigio più scuro vuol dire cielo coperto; dove non c\'è colore il cielo è sereno o quasi.',
     mslp_precip: 'Questa carta mostra le linee della pressione dell\'aria e, con i colori, dove cadrà la pioggia nelle sei ore. Ti aiuta a capire se si avvicina un\'area di maltempo e quanto potrà piovere.',
     t850_vento10: 'Il colore dice se l\'aria a circa 1.500 metri è calda o fredda. Le linee del vento mostrano come tira il vento vicino al suolo, quello che sentiamo noi.',
     h500: 'Questa è una carta dell\'aria molto in alto, a circa 5.500 metri. Mostra le grandi onde che guidano il tempo, dove l\'aria è più fredda e dove sta salendo, cioè dove possono formarsi le nubi.',
@@ -132,6 +140,9 @@
       return (prodotti[a].ordine || 99) - (prodotti[b].ordine || 99);
     });
     griglia.innerHTML = '';
+    if (grigliaTutti) grigliaTutti.innerHTML = '';
+    var nTutti = 0;
+    var nEsperti = 0;
     chiavi.forEach(function (id) {
       var p = prodotti[id];
       var li = document.createElement('li');
@@ -158,9 +169,19 @@
       btn.appendChild(corpo);
       btn.addEventListener('click', function () { apriProdotto(id); });
       li.appendChild(btn);
-      griglia.appendChild(li);
+      // Le carte «per tutti» (gruppo nel manifesto) stanno in una griglia propria;
+      // i manifesti più vecchi, senza gruppo, finiscono fra le carte per esperti.
+      if (p.gruppo === 'tutti' && grigliaTutti) {
+        grigliaTutti.appendChild(li);
+        nTutti++;
+      } else {
+        griglia.appendChild(li);
+        nEsperti++;
+      }
     });
     sezMini.hidden = chiavi.length === 0;
+    if (gruppoTutti) gruppoTutti.hidden = nTutti === 0;
+    if (gruppoEsperti) gruppoEsperti.hidden = nEsperti === 0;
     if (chiavi.length && (!prodottoAttivo || !prodotti[prodottoAttivo])) {
       apriProdotto(chiavi[0]);
     } else if (prodottoAttivo && prodotti[prodottoAttivo]) {
@@ -202,7 +223,7 @@
     } else {
       aMp4.hidden = true;
     }
-    Array.prototype.forEach.call(griglia.querySelectorAll('.mmp-scheda'), function (b) {
+    Array.prototype.forEach.call(sezMini.querySelectorAll('.mmp-scheda'), function (b) {
       var attiva = b.querySelector('strong') && b.querySelector('strong').textContent === p.titolo;
       b.classList.toggle('is-attiva', !!attiva);
       b.setAttribute('aria-pressed', attiva ? 'true' : 'false');

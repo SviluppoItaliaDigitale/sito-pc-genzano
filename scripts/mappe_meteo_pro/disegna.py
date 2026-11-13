@@ -374,3 +374,110 @@ def salva(fig, dest: Path, dpi: int = 112) -> Path:
         im = im.convert("RGB").quantize(colors=256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
         im.save(dest, "PNG", optimize=True)
     return dest
+
+
+# ---------------------------------------------------------------------------
+# Carte «per tutti» (stile WXCharts): campo pieno, fasce strette, valori sulle città
+# ---------------------------------------------------------------------------
+
+# Temperatura: viola e blu per il freddo, verde attorno ai 10 °C, giallo, arancio
+# e rosso per il caldo. Fasce di 1 °C, come nelle carte divulgative più usate.
+LIV_T2M = list(range(-30, 43, 1))
+CMAP_T2M = cmap_da(
+    [
+        "#3d0a5c", "#5b2a9b", "#3b4fd0", "#2f86e8", "#5ec2f2", "#b8ecfb",
+        "#e9fbf3", "#a9e6a0", "#5cc85a", "#2e9e3a", "#c9e04a", "#fbe34a",
+        "#fbb43c", "#f57c25", "#e2401c", "#b81414", "#7c0a2c", "#c2187a",
+    ],
+    "t2m",
+)
+
+LIV_RAFFICHE = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 150, 170]
+CMAP_RAFFICHE = ListedColormap(
+    [
+        "#eef6fb", "#cfe8f6", "#9fd3ee", "#62b6e0", "#3fbf8f", "#8fd14f",
+        "#e3e046", "#f6b53a", "#f27f2c", "#e44a26", "#c8202b", "#a3135a",
+        "#7d1a8c", "#5a1a9c", "#3a0f6e", "#1f0640",
+    ]
+)
+
+LIV_PIOGGIA_TOT = [1, 2, 5, 10, 15, 20, 30, 40, 50, 75, 100, 150, 200, 300]
+CMAP_PIOGGIA_TOT = ListedColormap(
+    [
+        "#c6e9fb", "#8ccff4", "#4ea8e6", "#2a6fd1", "#22a34a", "#7cc941",
+        "#e6e03e", "#f7a531", "#ef6427", "#d42324", "#a5124e", "#7a1a8c",
+        "#4b0f6b", "#2b0640",
+    ]
+)
+
+LIV_NEVE = [1, 2, 5, 10, 20, 30, 50, 75, 100, 150, 200]
+CMAP_NEVE = ListedColormap(
+    [
+        "#e3f1fb", "#bcdcf4", "#8fc1ea", "#5d9fdc", "#3a78c9", "#2a52a8",
+        "#4b3a9e", "#7a3fa6", "#a54aa8", "#d06fbf", "#f0a8dc",
+    ]
+)
+
+LIV_NUBI = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+CMAP_NUBI = ListedColormap(
+    ["#eef1f4", "#dde3e9", "#c9d1d9", "#b3bdc7", "#9ba7b3", "#84909d", "#6d7987", "#576270", "#434c58"]
+)
+
+
+SPOSTAMENTI_ITALIA = {"Roma": (-0.75, 0.30), "Genzano": (0.70, -0.30)}
+
+
+def valore_nel_punto(lon, lat, dati, lo, la):
+    """Valore del punto di griglia più vicino (griglia regolare lon/lat 1D)."""
+    if lon.size == 0 or lat.size == 0:
+        return None
+    i = int(np.argmin(np.abs(lat - la)))
+    j = int(np.argmin(np.abs(lon - lo)))
+    v = dati[i, j]
+    if np.ma.is_masked(v):
+        v = np.ma.getdata(v)
+    v = float(v)
+    return v if np.isfinite(v) else None
+
+
+def citta_valori(ax, dominio: str, pc, lon, lat, dati, fmt="{:.0f}", minimo=None):
+    """Valore sulle città in un riquadro bianco, nome sotto: leggibile su qualunque colore."""
+    elenco = CITTA_ITALIA if dominio == "italia" else CITTA_EUROPA
+    font = _font_sans()
+    for nome, lo, la, evidenza in elenco:
+        v = valore_nel_punto(lon, lat, dati, lo, la)
+        # Roma e Genzano distano 25 km: sulla carta d'Italia i riquadri si
+        # coprirebbero. Si spostano ai lati, con un punto sulla posizione vera.
+        dx, dy = SPOSTAMENTI_ITALIA.get(nome, (0.0, 0.0)) if dominio == "italia" else (0.0, 0.0)
+        if dx or dy:
+            ax.plot([lo, lo + dx], [la, la + dy], color=TESTO, linewidth=0.5, transform=pc, zorder=8)
+            ax.plot(lo, la, marker="o", markersize=2.6, color=TESTO, transform=pc, zorder=9)
+            lo, la = lo + dx, la + dy
+        testo = "–" if v is None or (minimo is not None and v < minimo) else fmt.format(v)
+        if testo == "-0":
+            testo = "0"
+        genz = nome == "Genzano"
+        ax.text(
+            lo, la, testo, transform=pc, ha="center", va="center",
+            fontsize=7.6 if (evidenza or genz) else 6.8, fontweight="bold",
+            color="#c0392b" if genz else TESTO, fontfamily=font, zorder=8,
+            bbox=dict(boxstyle="square,pad=0.22", facecolor="white",
+                      edgecolor="#c0392b" if genz else BLU, linewidth=0.6, alpha=0.92),
+        )
+        ax.text(
+            lo, la - (0.30 if dominio == "italia" else 0.75), nome, transform=pc,
+            ha="center", va="top", fontsize=5.6, color=TESTO, fontfamily=font,
+            path_effects=_HALO_SOTTILE, zorder=8,
+        )
+
+
+def bordi_sopra(ax):
+    """Costa e confini sopra il campo pieno (lo strato fisico è già sotto, a zorder 4)."""
+    ax.add_feature(
+        _elemento("physical", "land", facecolor="none", edgecolor="#1c2833"),
+        linewidth=0.75, zorder=5,
+    )
+    ax.add_feature(
+        _elemento("cultural", "admin_0_boundary_lines_land", facecolor="none", edgecolor="#1c2833"),
+        linewidth=0.55, zorder=5,
+    )

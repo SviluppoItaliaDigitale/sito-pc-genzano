@@ -136,6 +136,89 @@ def _gfs_prec_6h(path: Path, step: int) -> np.ndarray | None:
     return None
 
 
+def _unita_tp(sfc: dict) -> str:
+    for da in sfc.values():
+        if str(da.attrs.get("GRIB_shortName", "")).lower() == "tp" or da.name == "tp":
+            return str(da.attrs.get("GRIB_units", da.attrs.get("units", ""))).strip()
+    return ""
+
+
+def _gfs_campo(path: Path, chiavi: dict) -> np.ndarray | None:
+    """Un solo messaggio GFS scelto per chiavi GRIB (es. nuvolosità istantanea, accumulo 0-N)."""
+    try:
+        ds = xr.open_dataset(
+            str(path), engine="cfgrib",
+            backend_kwargs={"indexpath": "", "filter_by_keys": chiavi},
+        )
+    except Exception:
+        return None
+    for da in ds.data_vars.values():
+        v = _arr(da)
+        while v.ndim > 2:
+            v = v[0]
+        return v
+    return None
+
+
+def _carte_per_tutti(modello: str, step: int, path: Path, prendi_sfc, campi: dict) -> None:
+    """Campi delle carte «per tutti»: temperatura a 2 m, raffica, pioggia totale, neve, nubi.
+
+    Unità d'uscita: °C, km/h, mm, cm, %. I nomi GRIB e le unità sono quelli
+    letti nei file dei cinque modelli il 13/11/2026.
+    """
+    t2 = prendi_sfc("t2m", "2t", "t_2m")
+    if t2 is not None:
+        campi["t2m"] = t2 - 273.15 if np.nanmean(t2) > 150 else t2
+
+    # Raffica: GFS istantanea all'ora di validità; ECMWF IFS (10fg) e ICON
+    # (VMAX_10M) massimo dell'ora precedente; ECMWF IFS oltre +90 (10fg3)
+    # massimo delle tre ore precedenti. Allo step 0 ECMWF e ICON non
+    # hanno un periodo su cui calcolarla: niente carta.
+    if modello == "gfs":
+        raffica = _gfs_campo(path, {"shortName": "gust", "typeOfLevel": "surface"})
+    elif step > 0:
+        raffica = prendi_sfc("fg10", "10fg", "fg310", "10fg3", "i10fg", "max_i10fg", "vmax_10m")
+    else:
+        raffica = None
+    if raffica is not None:
+        campi["raffica"] = np.clip(raffica, 0, None) * 3.6  # m/s → km/h
+
+    # Pioggia totale dall'inizializzazione.
+    if step == 0 and "mslp" in campi:
+        campi["tp_tot"] = np.zeros_like(campi["mslp"])
+    elif modello == "gfs":
+        tot = _gfs_campo(path, {"shortName": "tp", "stepRange": f"0-{step}"})
+        if tot is not None:
+            campi["tp_tot"] = np.clip(tot, 0, None)
+    elif "tp_acc" in campi:
+        campi["tp_tot"] = np.clip(campi["tp_acc"], 0, None)
+
+    # Neve al suolo in cm. ECMWF dà l'equivalente in acqua (m) e la densità
+    # del manto (kg/m3): altezza = sd * 1000 / densità.
+    if modello == "ecmwf":
+        sd = prendi_sfc("sd")
+        rsn = prendi_sfc("rsn")
+        if sd is not None and rsn is not None:
+            with np.errstate(divide="ignore", invalid="ignore"):
+                h = np.where(rsn > 50, sd * 1000.0 / rsn, 0.0)
+            campi["neve_cm"] = np.clip(h, 0, None) * 100.0
+    elif modello != "ecmwf-aifs":
+        h = _gfs_campo(path, {"shortName": "sde", "typeOfLevel": "surface"}) if modello == "gfs" else prendi_sfc("sde", "h_snow")
+        if h is not None:
+            campi["neve_cm"] = np.clip(h, 0, None) * 100.0
+
+    # Nuvolosità totale in %. ECMWF IFS la dà fra 0 e 1; GFS ha anche la media
+    # sulle 6 ore precedenti: si prende il valore istantaneo.
+    if modello == "gfs":
+        nubi = _gfs_campo(path, {"shortName": "tcc", "typeOfLevel": "atmosphere", "stepType": "instant"})
+    else:
+        nubi = prendi_sfc("tcc", "clct")
+    if nubi is not None:
+        if np.nanmax(nubi) <= 1.0001:
+            nubi = nubi * 100.0
+        campi["nubi"] = np.clip(nubi, 0, 100)
+
+
 # ---------------------------------------------------------------------------
 # Lettura e normalizzazione
 # ---------------------------------------------------------------------------
@@ -263,8 +346,10 @@ def carica_stato(modello: str, corsa: datetime, step: int, path: Path,
     tp = prendi_sfc("apcp", "tp", "tot_prec", "prate")
     tp_6h_diretto = _gfs_prec_6h(path, step) if modello == "gfs" else None
     if tp is not None:
-        # ECMWF tp è in metri; ICON e GFS in kg/m2 (mm) o kg/m2
-        if np.nanmax(tp) < 1.5 and modello.startswith("ecmwf"):
+        # ECMWF IFS dà tp in metri; AIFS, ICON e GFS in kg/m2 (= mm). Si
+        # decide dall'unità scritta nel GRIB: a occhio (massimo sotto 1,5)
+        # una corsa AIFS quasi asciutta sarebbe stata moltiplicata per mille.
+        if modello == "ecmwf" and _unita_tp(sfc) in ("m", ""):
             tp_mm = tp * 1000.0
         else:
             tp_mm = tp
@@ -288,6 +373,8 @@ def carica_stato(modello: str, corsa: datetime, step: int, path: Path,
 
     if "tp_6h" not in campi and step == 0 and "mslp" in campi:
         campi["tp_6h"] = np.zeros_like(campi["mslp"])
+
+    _carte_per_tutti(modello, step, path, prendi_sfc, campi)
 
     # --- livelli isobarici, nomi corti t850, z500, ... ---
     alias_t = ("t", "tmp", "temperature")
@@ -699,6 +786,7 @@ CAMPI_DISEGNO = {
     "ivt", "ivt_u", "ivt_v", "cape", "pwat", "thetae850",
     "pv_300_200", "theta_dt", "p_dt", "u_dt", "v_dt", "coupling",
     "pv_330", "p_330", "u_330", "v_330", "pv_310", "u_310", "v_310", "p_350",
+    "t2m", "raffica", "tp_tot", "neve_cm", "nubi",
 }
 
 # Campi rumorosi (derivate spaziali): si leviga con una gaussiana di circa 0,35°.
