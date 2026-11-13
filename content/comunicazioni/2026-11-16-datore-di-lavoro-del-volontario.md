@@ -80,8 +80,6 @@ Il nostro corso di accesso comprende sicurezza personale, dispositivi di protezi
 
 La formazione da volontario **non sostituisce** i corsi obbligatori per gli addetti all'emergenza. Un collega che sa leggere un'allerta e conosce il piano di emergenza comunale, però, è una persona in più che sa come comportarsi. Ne parliamo anche nell'articolo sul [D.Lgs. 81/2008](/comunicazioni/2026-10-21-sicurezza-lavoro-81-2008/).
 
-C'è poi un fatto semplice. Quando il territorio dove lavori ha un'emergenza, i volontari che intervengono sono anche dipendenti di aziende come la tua.
-
 ## Che cosa puoi fare tu
 
 Se sei un datore di lavoro e un tuo dipendente è volontario:

@@ -104,4 +104,5 @@ Fonti istituzionali:
 - [Ordine dei giornalisti: Testo unico dei doveri del giornalista, in vigore fino al 31 maggio 2025](https://www.odg.it/testo-unico-dei-doveri-del-giornalista/24288)
 - [Normattiva: legge 7 giugno 2000, n. 150, articolo 9 (uffici stampa)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000-06-07;150~art9)
 - [Normattiva: decreto legislativo 2 gennaio 2018, n. 1, articolo 31](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art31)
+- [Dipartimento della Protezione Civile: il rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
