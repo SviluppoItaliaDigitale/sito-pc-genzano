@@ -903,7 +903,7 @@ Da adattare con intestazione della scuola:
 >
 > **Come possiamo collaborare in famiglia:**
 > - Compilate insieme ai bambini il [Piano di Emergenza Familiare](/piano-familiare/) che trovate sul sito del Gruppo Volontari. È un'attività che si fa in mezz'ora, da aggiornare ogni 6 mesi.
-> - Verificate insieme che il vostro telefono abbia il 112 nei numeri rapidi (Italia, dal 2015 **il 112 è il numero unico** per ogni emergenza).
+> - Verificate insieme che il vostro telefono abbia il 112 nei numeri rapidi (Italia, dal {{< valore "nue112_lazio_anno" >}} **il 112 è il numero unico** per ogni emergenza).
 > - Individuate la **Area di Attesa** più vicina a casa vostra consultando la [Cartografia Operativa](/cartografia/) del Comune.
 > - Preparate un piccolo **zainetto di emergenza** domestico con torcia, acqua, coperta termica, fischietto, copia dei documenti.
 >

@@ -74,7 +74,7 @@ Acqua, ombra e fresco. In emergenza chiama il 112.
 
 {{< illustrazione-udl src="/formazione/illustrazioni-udl/ondate-di-calore-gesti.svg" alt="Quattro comportamenti illustrati contro il caldo: una persona beve acqua, una casa tiene le tapparelle abbassate, una persona cammina all'ombra con cappello e abiti chiari, un'automobile vuota al sole è contrassegnata dal divieto di lasciarvi persone o animali." caption="Quattro gesti da ricordare durante il caldo intenso. Le immagini aiutano a riconoscere i comportamenti corretti, mentre le indicazioni qui sotto li spiegano nel dettaglio." >}}
 - **Bevi molta acqua** anche se non senti sete, evita alcolici e bevande zuccherate
-- Non uscire nelle ore più calde (dalle 11 alle 18)
+- Non uscire nelle ore più calde ({{< valore "caldo_ore" >}})
 - Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole
 - Rinfresca gli ambienti e abbassa le tapparelle nelle ore di sole diretto
 - Fai pasti leggeri privilegiando frutta e verdura
@@ -87,7 +87,7 @@ Acqua, ombra e fresco. In emergenza chiama il 112.
 
 {{< cosa-non-fare titolo="Cosa NON fare durante un'ondata di calore" >}}
 - **Non sottovalutare i primi sintomi** di malessere da calore (sete intensa, stanchezza, mal di testa)
-- **Non fare sforzi fisici intensi** nelle ore più calde (dalle 11 alle 18)
+- **Non fare sforzi fisici intensi** nelle ore più calde ({{< valore "caldo_ore" >}})
 - **Non bere bevande gelate in grandi quantità a stomaco pieno**: lo shock termico può causare malesseri digestivi. Bevi acqua fresca (non ghiacciata) a piccoli sorsi e spesso.
 - **Non lasciare farmaci esposti al calore** (alterano la loro efficacia)
 {{< /cosa-non-fare >}}

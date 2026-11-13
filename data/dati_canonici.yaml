@@ -17,6 +17,10 @@
 #   4. "stessa_frase: true" chiede che il contesto stia nella stessa frase
 #      della variante, invece che entro "finestra" caratteri.
 #
+#   5. dal 13/11/2026 i valori più ripetuti si scrivono anche in data/valori.yaml
+#      e le pagine li richiamano con {{< valore "chiave" >}}: il valore è uno,
+#      la voce qui resta per le copie scritte per esteso (articoli, static/).
+#
 # Nasce il 01/10/2026: lo stesso dato sui Colli Albani compariva sul sito con
 # tre valori diversi (36.000, 19.000 e «5.000 anni» di attività recente) e
 # l'Osservatorio Vesuviano indicato come ente di sorveglianza.
@@ -1132,3 +1136,91 @@ dati:
       # («Federazione Associazioni Nazionali Disabili») restano liberi.
       - regex: '(?i:\b(?:i|ai|dei|dai|coi|per|il|al|del|dal|un|uno|ogni)\s+)disabil[ei]\b|,\s*disabili\b(?!\s*:)|\(\s*disabili\b|\bdisabili\s*[,)]'
         perche: "Si scrive «persone con disabilità» (o «accessibile» per bagni, moduli, percorsi): d.lgs. 62/2024, art. 4, e regola comunicazione-social.md."
+
+  # --- Voci aggiunte il 13/11/2026 dagli errori trovati scrivendo la serie
+  # «Gli sguardi della protezione civile»: ciascuna era scritta sbagliata in
+  # più file e nessun controllo la vedeva.
+
+  - id: coc-funzioni-supporto
+    dato: "Funzioni di supporto del Centro Operativo Comunale"
+    valore: "sedici funzioni senza numero (Direttiva PCM 30 aprile 2021), che il Comune sceglie, accorpa o riduce nel proprio Piano; il Metodo Augustus (1997, nove funzioni comunali numerate) è l'origine storica, superata"
+    fonti:
+      - nome: "Direttiva PCM 30 aprile 2021, Gazzetta Ufficiale n. 160 del 6 luglio 2021"
+        url: "https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf"
+    escludi:
+      # Gioco con uno schema semplificato di nove funzioni, dichiarato come tale.
+      - "static/giochi/ragazzi/simulatore-coc/index.html"
+      - "static/giochi/assets/js/coach.js"
+    vietati:
+      - regex: '\b[Ff]unzione\s+(?:[1-9]|1[0-6])\b(?!\s*[,.]?\s*(?:del|della)\s+(?:Metodo|metodo))'
+        perche: "La Direttiva 2021 non numera le funzioni: si usa il nome («Volontariato», «Logistica», «Stampa e comunicazione»)."
+        contesto: 'COC|C\.O\.C|supporto|Centro Operativo'
+        finestra: 300
+
+  - id: direttiva-9-novembre-2012
+    dato: "Oggetto della Direttiva PCM 9 novembre 2012"
+    valore: "indirizzi operativi per l'unitaria partecipazione delle organizzazioni di volontariato all'attività di protezione civile (Gazzetta Ufficiale n. 27 del 1° febbraio 2013); non riguarda il Metodo Augustus né la catena di comando"
+    fonti:
+      - nome: "Gazzetta Ufficiale, atto 13A00827"
+        url: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.dataPubblicazioneGazzetta=2013-02-01&atto.codiceRedazionale=13A00827"
+    vietati:
+      - regex: '9 novembre 2012'
+        perche: "La Direttiva 9 novembre 2012 riguarda il volontariato organizzato, non Augustus, i piani comunali o il DICOMAC."
+        contesto: 'Augustus|DICOMAC|catena di comando|piani comunali'
+        finestra: 200
+
+  - id: lazio-zona-sismica-4
+    dato: "Zona sismica 4 nel Lazio"
+    valore: "nel Lazio la zona 4 non esiste dal 2009: tre zone (1, 2A/2B, 3A/3B)"
+    fonti:
+      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1, tabelle 3 e 5"
+        url: "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
+    vietati:
+      - regex: '(?i)\|\s*\*?\*?4\*?\*?\s*\|\s*(?:Bassa|Molto bassa)'
+        perche: "Nel Lazio la zona 4 non c'è più dal 2009 (DGR 387/2009)."
+        contesto: 'Lazio'
+        finestra: 800
+
+  - id: bonus-disagio-fisico-tutela
+    dato: "Che cosa garantisce il bonus elettrico per disagio fisico"
+    valore: "il cliente con apparecchi salvavita e bonus per disagio fisico non può essere sospeso per morosità (ARERA, TIMOE art. 23); non esiste una lista che gli dia la corrente per prima durante un guasto"
+    fonti:
+      - nome: "ARERA, «Come si ottiene il bonus per disagio fisico» e TIMOE, art. 23"
+        url: "https://www.arera.it/consumatori/bonus-sociale"
+    vietati:
+      - regex: '(?i)utenze\s+prioritarie|lista\s+(?:delle\s+)?(?:utenze|priorit)|registro\s+(?:degli\s+)?elettromedicali|lista\s+priorità\s+Terna'
+        perche: "Il bonus protegge dal distacco per morosità, non dà priorità durante un guasto (ARERA, TIMOE art. 23)."
+
+  - id: grandi-rischi-processo-esito
+    dato: "Esito del processo alla Commissione Grandi Rischi (L'Aquila 2009)"
+    valore: "primo grado 22/10/2012: sei anni a tutti e sette; appello 10/11/2014: sei assolti, il vicecapo del settore tecnico operativo del Dipartimento condannato a due anni con pena sospesa; Cassazione, sezione IV penale, udienza 19/11/2015, sentenza n. 12478/2016"
+    fonti:
+      - nome: "Brocardi, massima della sentenza Cass. pen. n. 12478/2016; Notaro, Criminalia 2016"
+        url: "https://brocardi.it/massimario/60200.html"
+    vietati:
+      - regex: '(?i)\b5\s+scienziati|\bcinque\s+scienziati|\bIII\s+[Pp]en|sezione\s+III\s+penale'
+        perche: "In appello gli assolti sono sei; la Cassazione che ha deciso è la sezione IV penale."
+        contesto: 'Aquila|Grandi Rischi|CGR'
+        finestra: 400
+
+  - id: aquila-2009-ora
+    dato: "Ora della scossa principale dell'Aquila, 6 aprile 2009"
+    valore: "3:32"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Abruzzo 2009 earthquake»"
+        url: "https://emergenze.protezionecivile.gov.it/en/seismic/abruzzo-2009-earthquake/"
+    vietati:
+      - regex: '\b0?3[:.]33\b'
+        perche: "La scossa principale dell'Aquila è delle 3:32."
+        contesto: 'Aquila|6 aprile 2009'
+        finestra: 120
+
+  - id: volontariato-strade-chiuse
+    dato: "Compiti del Gruppo presso le strade pericolose"
+    valore: "il Gruppo segnala al COC le strade pericolose e informa sui provvedimenti decisi dalle autorità; chiusure, cancelli e regolazione del traffico spettano a Polizia Locale e Forze dell'ordine"
+    fonti:
+      - nome: "Circolare DPC del 6 agosto 2018, § 2.2"
+        url: "https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/"
+    vietati:
+      - regex: '(?i)cancelli\s+su\s+(?:strade|vie)|supporto\s+alla\s+viabilità'
+        perche: "Il volontariato non presidia chiusure né regola il traffico (Circolare DPC 6/8/2018, artt. 11-12 del Codice della strada)."

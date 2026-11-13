@@ -28,7 +28,7 @@ A Genzano di Roma fa molto caldo da giugno ad agosto. A volte ci sono 38-40 grad
 
 - Bevi molta acqua. Bevi anche se non hai sete.
 - Non bere alcolici e bevande con zucchero.
-- Non uscire dalle 11 alle 18. Sono le ore più calde.
+- Non uscire {{< valore "caldo_ore" >}}. Sono le ore più calde.
 - Metti vestiti leggeri, chiari e di cotone. Metti cappello e occhiali da sole.
 - Abbassa le tapparelle quando c'è il sole forte.
 - Mangia poco. Mangia frutta e verdura.
@@ -46,7 +46,7 @@ Per informazioni sul caldo puoi chiamare il 1500, il numero del Ministero della 
 
 {{< cosa-non-fare titolo="Cosa NON fare" >}}
 - **Non pensare che i primi sintomi siano poco importanti.** Sete forte, stanchezza e mal di testa sono segnali.
-- **Non fare sforzi** dalle 11 alle 18.
+- **Non fare sforzi** {{< valore "caldo_ore" >}}.
 - **Non bere tante bevande gelate** a stomaco pieno. Bevi acqua fresca a piccoli sorsi, spesso.
 - **Non lasciare le medicine al caldo.** Il caldo cambia l'effetto delle medicine.
 {{< /cosa-non-fare >}}

@@ -1,0 +1,6 @@
+{{- /* Valore ripetuto in più pagine, scritto una volta sola in data/valori.yaml.
+       Uso: {{< valore "nue112_lazio_anno" >}}. Una chiave che non esiste ferma
+       la build, così un errore di battitura non pubblica una pagina vuota. */ -}}
+{{- $chiave := .Get 0 -}}
+{{- $pos := .Position -}}
+{{- with index site.Data.valori $chiave -}}{{ . }}{{- else -}}{{ errorf "valore %q non trovato in data/valori.yaml (%s)" $chiave $pos }}{{- end -}}

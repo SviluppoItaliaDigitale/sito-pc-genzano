@@ -1,0 +1,23 @@
+# Valori ripetuti in più pagine: si scrivono qui una volta sola e le pagine li
+# richiamano con lo shortcode {{< valore "chiave" >}}. Cambiando il valore qui
+# cambia in tutte le pagine che lo usano.
+#
+# Ogni valore ha la sua voce, con la fonte, in data/dati_canonici.yaml, che
+# controlla anche le pagine dove lo shortcode non si può usare (articoli di
+# comunicazioni/, i cui sorgenti alimentano social e braille; pagine statiche,
+# giochi, quiz e schede in static/).
+#
+# Nasce il 13/11/2026: correggere l'anno del 112 ha richiesto di toccare
+# venti file a mano.
+
+# Anno di avvio del NUE 112 nel Lazio (voce numero-emergenza-112)
+nue112_lazio_anno: "2015"
+nue112_lazio_data: "18 novembre 2015"
+
+# Tetto giornaliero del rimborso per il mancato guadagno dei volontari
+# lavoratori autonomi, art. 39 c. 5 D.Lgs. 1/2018, aggiornato dal decreto
+# 22/09/2023 (voce volontari-autonomi-tetto-mancato-guadagno)
+volontari_autonomi_tetto: "120,55 euro"
+
+# Ore più calde della giornata (voce caldo-ore-piu-calde)
+caldo_ore: "dalle 11 alle 18"

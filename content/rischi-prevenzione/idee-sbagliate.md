@@ -186,7 +186,7 @@ No. Chiami il 112 e dici dove sei e da che parte va il fumo. Il tubo lo usi, se 
 
 {{< pittogramma src="/pittogrammi/arasaac/112.png" alt="Pittogramma: il numero 112" caption="Nel Lazio il numero da chiamare per ogni emergenza è il 112" size="medium" >}}
 
-**Perché è sbagliata.** Nel Lazio dal 2015 l'unico numero di emergenza per il cittadino è il **112**, Numero Unico Europeo: la centrale raccoglie la chiamata e manda vigili del fuoco, ambulanza, forze dell'ordine o squadre antincendio. Ricordare un numero solo è più facile, soprattutto con la paura addosso. Per le segnalazioni non urgenti c'è la Sala Operativa della Protezione Civile del Lazio, 803 555.
+**Perché è sbagliata.** Nel Lazio dal {{< valore "nue112_lazio_anno" >}} l'unico numero di emergenza per il cittadino è il **112**, Numero Unico Europeo: la centrale raccoglie la chiamata e manda vigili del fuoco, ambulanza, forze dell'ordine o squadre antincendio. Ricordare un numero solo è più facile, soprattutto con la paura addosso. Per le segnalazioni non urgenti c'è la Sala Operativa della Protezione Civile del Lazio, 803 555.
 
 **Fonte:** [Numeri utili](/numeri-utili/) e [Segnalare un'emergenza al 112: come fare](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/).
 

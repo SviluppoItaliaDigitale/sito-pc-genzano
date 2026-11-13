@@ -243,6 +243,14 @@ python3 scripts/check-dati-canonici.py <file>             # varianti già regist
 
 Lo scanner conosce le famiglie di dati che si ripetono (ore del caldo, litri a persona, autonomia del kit, giorni di farmaci, RCP, ustioni, Sala Operativa, distanza dai cavi). Per **ogni altro dato** del testo che il sito dice anche altrove (un orario, una quantità, una distanza, un numero di telefono, un bilancio, una data di un evento, un termine di legge) cerca con `grep -rn` in `content/`, `static/`, `data/`, `themes/` e `scripts/` come lo scrivono le altre pagine. Se il nuovo valore è diverso da quello già pubblicato: **blocca**, verifica sulla fonte canonica quale è giusto e passa a `pc-coerenza-trasversale`, che allinea tutte le pagine e registra il dato in `data/dati_canonici.yaml` (e, se è una famiglia nuova, la aggiunge allo scanner). Non si pubblica un dato che contraddice il sito, nemmeno quando è il dato nuovo a essere giusto: in quel caso si correggono anche le pagine vecchie, nello stesso lavoro.
 
+🔴 **Il dato verificato si registra anche quando oggi coincide** (dal 13/11/2026). Scrivendo la serie «Gli sguardi della protezione civile», i redattori hanno verificato sulle fonti dati che il sito ripeteva sbagliati da mesi in 10-30 file: il 112 nel Lazio «dal 2017» invece del 2015, le funzioni del COC numerate secondo il Metodo Augustus, una «lista delle utenze prioritarie» che non esiste, un numero di pronto intervento gas non verificato. Nessun controllo li vedeva, perché non erano nel registro, e correggerli dopo è costato una giornata. Per questo, per **ogni dato dell'articolo verificato su una fonte primaria che compare anche in altre pagine o che è probabile si ripeta** (anni di avvio di servizi, numeri, soglie, estremi di norme, ruoli degli enti, sequenze di autoprotezione, bilanci di eventi):
+
+1. cerca con `grep -rn` come lo scrivono `content/`, `static/`, `data/`, `themes/` e `scripts/`, comprese traduzioni, quiz, giochi e schede;
+2. se una copia è diversa dalla fonte, è un errore del sito anche se è fuori dall'articolo: correggila nello stesso lavoro, o affidala a `pc-coerenza-trasversale`;
+3. in ogni caso aggiungi la voce a `data/dati_canonici.yaml` con valore, fonte e le varianti sbagliate prevedibili, e lancia `python3 scripts/check-dati-canonici.py`. Un dato registrato non può più divergere: la PR si ferma da sola.
+
+Nel resoconto scrivi quali voci hai registrato, o «nessun dato ripetuto da registrare» con il motivo.
+
 ### 13. 🔴 GATE DEL CALENDARIO — data di uscita coerente
 
 **Su ogni articolo con `date` futura** (programmato) e su ogni articolo in cui è cambiata una data, un termine o una scadenza, esegui:
