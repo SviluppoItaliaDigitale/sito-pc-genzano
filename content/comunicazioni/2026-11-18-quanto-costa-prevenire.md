@@ -1,6 +1,6 @@
 ---
 title: "Prevenire o riparare? La protezione civile vista da un economista"
-date: 2026-11-18
+date: 2026-11-18T00:02:00+01:00
 description: "Chi paga i danni di terremoti e alluvioni, perché pochi sono assicurati, l'obbligo di polizza per le imprese e quanto rende la prevenzione."
 badge: "Informazione"
 priorita: "normale"
@@ -14,8 +14,8 @@ tts: true
 social_citazione: "Il rischio ha un prezzo anche quando nessuno lo paga in anticipo: lo paghiamo dopo, tutti insieme."
 social_punti:
   - "Nel mondo i danni diretti dei disastri valgono circa 200 miliardi di dollari l'anno (stima ONU, 2025)"
-  - "In Italia solo il 5% circa delle abitazioni è assicurato contro alluvioni o terremoti (stima IVASS, 2026)"
-  - "Dalla legge di bilancio 2024 le imprese devono assicurare i propri beni contro le catastrofi naturali"
+  - "In Italia circa il 5% delle abitazioni è assicurato contro inondazioni o terremoto (stima IVASS, fine 2024)"
+  - "Dalla legge di bilancio 2024 le imprese non agricole devono assicurare i beni contro le catastrofi naturali"
   - "Nei Paesi a reddito medio e basso ogni dollaro speso in infrastrutture più resistenti ne rende circa 4 (Banca mondiale, 2019)"
 draft: false
 ---
@@ -28,7 +28,7 @@ Tutte le cifre che seguono sono **stime** pubblicate da enti nazionali e interna
 
 Nel rapporto mondiale del 2025 sulla riduzione del rischio, l'ufficio delle Nazioni Unite per la riduzione del rischio di disastri (UNDRR) stima i **danni diretti** dei disastri in circa **200 miliardi di dollari l'anno**. Se si contano anche gli effetti su salute, scuola, lavoro ed ecosistemi, il costo supera i **2.300 miliardi di dollari l'anno**.
 
-In Europa, l'Agenzia europea dell'ambiente stima che gli eventi meteorologici e climatici estremi abbiano causato, fra il 1980 e il 2024, perdite per **822 miliardi di euro** nell'Unione europea. Meno del 20% era coperto da un'assicurazione privata. L'Italia è fra i Paesi con le perdite più alte in valore assoluto. La stima non comprende i terremoti.
+In Europa, l'Agenzia europea dell'ambiente stima perdite per **822 miliardi di euro** nell'Unione europea, fra il 1980 e il 2024, causate da eventi meteorologici e climatici estremi. Meno del 20% era coperto da un'assicurazione privata. L'Italia è fra i Paesi con le perdite più alte in valore assoluto. La stima non comprende i terremoti.
 
 In Italia una parte del conto si vede nei bilanci delle compagnie. Secondo l'Istituto per la vigilanza sulle assicurazioni (IVASS), nel 2023 gli eventi climatici estremi hanno generato **oltre 7 miliardi di euro** di sinistri da pagare. Sono però solo i danni assicurati, che in Italia sono una piccola parte del totale.
 
@@ -55,7 +55,7 @@ La legge fissa anche alcune garanzie:
 - le compagnie non possono rifiutarsi di assicurare: rischiano una sanzione da 100.000 a 500.000 euro;
 - la società pubblica SACE può riassicurare fino al 50% degli indennizzi, con la garanzia dello Stato.
 
-Chi non si assicura ne risente quando chiede contributi pubblici, anche quelli dati dopo una calamità. Gli immobili costruiti senza un titolo edilizio valido, e senza una sanatoria o un condono anche solo in corso, non sono assicurabili. Per loro non spetta alcun contributo pubblico.
+Chi non si assicura ne risente quando chiede contributi pubblici, anche quelli dati dopo una calamità. Non sono assicurabili gli immobili costruiti senza un titolo edilizio valido, a meno che sia in corso una sanatoria o un condono. Per loro non spetta alcun contributo pubblico.
 
 La scadenza è stata rinviata più volte. Questi sono i termini in vigore, verificati su Normattiva il 13 novembre 2026:
 
@@ -69,7 +69,7 @@ Le dimensioni dell'impresa seguono la definizione europea. Per l'economista il p
 
 ## Quanto rende prevenire
 
-Le stime più citate sul rapporto fra costi e benefici vengono da studi internazionali. Nel rapporto «Lifelines» del 2019, la Banca mondiale ha calcolato che nei Paesi a reddito medio e basso rendere le infrastrutture più resistenti costa circa il **3%** in più degli investimenti necessari. Nello scenario centrale, ogni dollaro investito porta circa **4 dollari di benefici**, grazie a meno interruzioni e meno danni. L'investimento conviene nel 96% delle migliaia di scenari studiati.
+Le stime più citate sul rapporto fra costi e benefici vengono da studi internazionali. Nel rapporto «Lifelines» del 2019 la Banca mondiale ha fatto un calcolo per i Paesi a reddito medio e basso. Rendere le infrastrutture più resistenti costa circa il **3%** in più degli investimenti necessari. Nello scenario centrale, ogni dollaro investito porta circa **4 dollari di benefici**, grazie a meno interruzioni e meno danni. L'investimento conviene nel 96% delle migliaia di scenari studiati.
 
 Sono numeri riferiti ai Paesi in via di sviluppo, non all'Italia. Il rapporto fra costi e benefici cambia da opera a opera e da territorio a territorio. Il principio però regge: spendere prima costa meno che riparare dopo.
 
