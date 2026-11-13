@@ -64,7 +64,7 @@ I reati contestati erano **omicidio colposo** e **lesioni personali colpose**. �
 
 **Cassazione.** La quarta sezione penale della Corte di cassazione decide dopo l'udienza del 19 novembre 2015 e conferma la sentenza d'appello. Le motivazioni sono depositate il 24 marzo 2016, con la **sentenza n. 12478/2016**. Le sei assoluzioni e la condanna a due anni, con pena sospesa, diventano definitive.
 
-Nella sentenza la Cassazione afferma questo principio. Un dirigente della protezione civile può rispondere di omicidio colposo se diffonde dichiarazioni rassicuranti su uno sciame sismico in corso, senza adeguati riscontri scientifici. È così se quelle parole inducono i cittadini ad abbandonare i comportamenti di autoprotezione. Il processo si chiude con sei assoluzioni e una sola condanna, per le dichiarazioni rassicuranti rese al pubblico.
+Nella sentenza la Cassazione afferma questo principio. Un dirigente della protezione civile può rispondere di omicidio colposo se diffonde dichiarazioni rassicuranti su uno sciame sismico in corso, senza adeguati riscontri scientifici. È così se quelle parole inducono i cittadini ad abbandonare i comportamenti di autoprotezione.
 
 ## Che cosa è cambiato per il sistema
 
@@ -84,7 +84,7 @@ Il messaggio che resta è semplice. Un terremoto non si può prevedere. Il risch
 
 - **Conosci il rischio del tuo territorio.** Genzano di Roma è in zona sismica 2, sottozona 2B: trovi tutto nella pagina sul [rischio sismico](/rischi-prevenzione/rischio-sismico/).
 - **Diffida di chi annuncia un terremoto** con data e ora. Nessuno può farlo.
-- **Durante una sequenza di scosse**, segui le indicazioni ufficiali del Comune, della Regione e del Dipartimento della protezione civile. Anche quando le scosse sono deboli, valgono i comportamenti di autoprotezione: durante la scossa ripàrati vicino a un muro portante o sotto un tavolo robusto, senza correre fuori.
+- **Durante una sequenza di scosse**, segui le indicazioni ufficiali del Comune, della Regione e del Dipartimento della protezione civile. Anche quando le scosse sono deboli, valgono i comportamenti di autoprotezione: durante la scossa riparati vicino a un muro portante o sotto un tavolo robusto, senza correre fuori.
 - **Prepara la tua famiglia** con il [piano familiare di emergenza](/piano-familiare/).
 - In emergenza chiama il **112**, il numero unico di emergenza.
 
