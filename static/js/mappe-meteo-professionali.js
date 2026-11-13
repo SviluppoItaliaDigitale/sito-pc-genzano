@@ -16,6 +16,8 @@
   var gruppoEsperti = document.getElementById('mmp-gruppo-esperti');
   var sezVista = document.getElementById('mmp-visualizzatore');
   var titoloVista = document.getElementById('mmp-vista-titolo');
+  var vai = document.getElementById('mmp-vai');
+  var vaiLink = document.getElementById('mmp-vai-link');
   var sottoVista = document.getElementById('mmp-vista-sotto');
   var btnPlay = document.getElementById('mmp-play');
   var playEtichetta = document.getElementById('mmp-play-etichetta');
@@ -163,11 +165,14 @@
       t.textContent = p.titolo;
       var s = document.createElement('span');
       var n = p.fotogrammi ? p.fotogrammi.length : 0;
-      s.textContent = n + (n === 1 ? ' fotogramma' : ' fotogrammi');
+      s.textContent = n > 1 ? n + ' fotogrammi · apri l\'animazione' : n + ' fotogramma · apri la carta';
       corpo.appendChild(t);
       corpo.appendChild(s);
       btn.appendChild(corpo);
-      btn.addEventListener('click', function () { apriProdotto(id); });
+      btn.addEventListener('click', function () {
+        apriProdotto(id);
+        portaAlVisualizzatore();
+      });
       li.appendChild(btn);
       // Le carte «per tutti» (gruppo nel manifesto) stanno in una griglia propria;
       // i manifesti più vecchi, senza gruppo, finiscono fra le carte per esperti.
@@ -180,6 +185,7 @@
       }
     });
     sezMini.hidden = chiavi.length === 0;
+    if (vai) vai.hidden = chiavi.length === 0;
     if (gruppoTutti) gruppoTutti.hidden = nTutti === 0;
     if (gruppoEsperti) gruppoEsperti.hidden = nEsperti === 0;
     if (chiavi.length && (!prodottoAttivo || !prodotti[prodottoAttivo])) {
@@ -231,6 +237,47 @@
     mostraFotogramma(indice);
     centraTela();
     precacheVicini();
+  }
+
+  // Il visualizzatore sta sotto l'elenco delle carte: sul telefono, toccata una
+  // carta, non si vedeva cambiare nulla (segnalazione del 13/11/2026). Si scende
+  // fino al visualizzatore e il fuoco va sul suo titolo, così anche chi usa la
+  // tastiera o un lettore di schermo arriva alla carta aperta.
+  function portaAlVisualizzatore() {
+    if (!sezVista || sezVista.hidden) return;
+    var ridotto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try {
+      sezVista.scrollIntoView({ behavior: ridotto ? 'auto' : 'smooth', block: 'start' });
+    } catch (e) {
+      sezVista.scrollIntoView();
+    }
+    if (titoloVista && titoloVista.focus) {
+      try { titoloVista.focus({ preventScroll: true }); } catch (e2) { titoloVista.focus(); }
+    }
+  }
+
+  var tornaLink = document.getElementById('mmp-torna-link');
+  if (tornaLink) {
+    tornaLink.addEventListener('click', function (ev) {
+      var titolo = document.getElementById('mmp-miniature-titolo');
+      if (!titolo) return;
+      ev.preventDefault();
+      var ridotto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      try {
+        titolo.scrollIntoView({ behavior: ridotto ? 'auto' : 'smooth', block: 'start' });
+      } catch (e) {
+        titolo.scrollIntoView();
+      }
+      try { titolo.focus({ preventScroll: true }); } catch (e2) { titolo.focus(); }
+    });
+  }
+
+  if (vaiLink) {
+    vaiLink.addEventListener('click', function (ev) {
+      if (!sezVista || sezVista.hidden) return;
+      ev.preventDefault();
+      portaAlVisualizzatore();
+    });
   }
 
   // Sul telefono la carta è più larga del riquadro: si porta al centro la parte
