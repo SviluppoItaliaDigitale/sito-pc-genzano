@@ -38,8 +38,16 @@
         </div>
       </form>
 
+      <p class="mmp-vai" id="mmp-vai" hidden>
+        <a class="btn btn-primary" href="#mmp-visualizzatore" id="mmp-vai-link">
+          <i class="bi bi-play-circle-fill" aria-hidden="true"></i> Guarda la carta animata
+          <i class="bi bi-arrow-down" aria-hidden="true"></i>
+        </a>
+        <span class="mmp-vai-nota">Il visualizzatore con l'animazione è più in basso, dopo l'elenco delle carte. Tocca una carta per aprirla lì.</span>
+      </p>
+
       <section class="mmp-sezione" id="mmp-miniature-sezione" aria-labelledby="mmp-miniature-titolo" hidden>
-        <h2 id="mmp-miniature-titolo">Le carte disponibili</h2>
+        <h2 id="mmp-miniature-titolo" tabindex="-1">Le carte disponibili</h2>
         <p>Scegli una grandezza per aprirla nel visualizzatore. La miniatura è un fotogramma della corsa più recente.</p>
         <div id="mmp-gruppo-tutti" hidden>
           <h3 id="mmp-tutti-titolo">Carte per tutti</h3>
@@ -55,9 +63,11 @@
 
       <section class="mmp-sezione mmp-visualizzatore" id="mmp-visualizzatore" aria-labelledby="mmp-vista-titolo" hidden>
         <div class="mmp-vista-testata">
-          <h2 id="mmp-vista-titolo">Visualizzatore</h2>
+          <h2 id="mmp-vista-titolo" tabindex="-1">Visualizzatore</h2>
           <p class="mmp-vista-sotto" id="mmp-vista-sotto"></p>
         </div>
+
+        <p class="mmp-torna"><a href="#mmp-miniature-titolo" id="mmp-torna-link"><i class="bi bi-arrow-up" aria-hidden="true"></i> Torna all'elenco delle carte</a></p>
 
         <aside class="mmp-spiegazione" id="mmp-spiegazione" aria-live="polite">
           <p class="mmp-spiegazione-etichetta">Cosa mostra questa carta</p>

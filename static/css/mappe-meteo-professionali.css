@@ -168,6 +168,24 @@
   margin-bottom: 0.8rem;
 }
 
+.mmp-vai {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1.5rem;
+}
+.mmp-vai[hidden] { display: none; }
+.mmp-vai .btn { font-weight: 600; }
+.mmp-vai-nota { font-size: 0.9rem; color: #42515c; }
+.mmp-torna { margin: -0.4rem 0 1rem; font-size: 0.9rem; }
+.mmp-torna a { color: #003366; }
+#mmp-vista-titolo:focus { outline: 3px solid #FF6600; outline-offset: 3px; }
+#mmp-vista-titolo:focus:not(:focus-visible) { outline: none; }
+#mmp-visualizzatore, #mmp-miniature-titolo { scroll-margin-top: 1rem; }
+#mmp-miniature-titolo:focus { outline: 3px solid #FF6600; outline-offset: 3px; }
+#mmp-miniature-titolo:focus:not(:focus-visible) { outline: none; }
+
 .mmp-scorri { display: none; font-size: 0.85rem; color: #42515c; margin: -0.5rem 0 1rem; }
 
 .mmp-tastiera { font-size: 0.85rem; color: #42515c; margin: 0; }
