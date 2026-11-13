@@ -1,6 +1,6 @@
 ---
 title: "Prevenire o riparare? La protezione civile vista da un economista"
-date: 2026-11-18T00:02:00+01:00
+date: 2026-11-18
 description: "Chi paga i danni di terremoti e alluvioni, perché pochi sono assicurati, l'obbligo di polizza per le imprese e quanto rende la prevenzione."
 badge: "Informazione"
 priorita: "normale"
@@ -38,7 +38,7 @@ Quando un evento è troppo grande per il Comune e la Regione, il Consiglio dei m
 
 Con le **ordinanze di protezione civile** si organizzano il soccorso e il ripristino dei servizi. Si danno anche le **prime misure economiche di immediato sostegno** alle famiglie e alle attività colpite. Poi si fa la **ricognizione dei danni** a case, imprese, beni culturali e infrastrutture (articolo 25).
 
-I contributi per riparare o ricostruire seguono regole fissate dal Consiglio dei ministri (articolo 28). Ci sono massimali e metodi uguali in tutta Italia. Se l'assicurazione ha già pagato, il contributo pubblico copre solo la differenza. A questa si aggiunge una somma pari ai premi versati nei cinque anni prima dell'evento. Gli edifici abusivi sono esclusi.
+I contributi per riparare o ricostruire seguono regole fissate dal Consiglio dei ministri (articolo 28). Ci sono massimali e metodi uguali in tutta Italia. Se l'assicurazione ha già pagato, il contributo pubblico copre solo la differenza. Al contributo si aggiunge una somma pari ai premi versati nei cinque anni prima dell'evento. Gli edifici abusivi sono esclusi.
 
 Chi sostiene quindi la spesa? In gran parte lo Stato, cioè tutti i contribuenti, e le famiglie colpite per la parte non coperta. L'IVASS stima che alla fine del 2024 fosse assicurato contro le inondazioni circa il **5,1%** delle abitazioni italiane, e contro il terremoto circa il **5,6%**. Il rischio ha un prezzo anche quando nessuno lo paga in anticipo: lo paghiamo dopo, tutti insieme.
 

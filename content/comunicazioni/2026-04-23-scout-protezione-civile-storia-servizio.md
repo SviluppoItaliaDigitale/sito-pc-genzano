@@ -121,7 +121,7 @@ In ognuna di queste situazioni gli scout hanno fatto **gli stessi servizi**: ten
 
 ## L'Aquila 2009: turni in tendopoli
 
-**6 aprile 2009**, ore 03:33. L'Aquila trema. Magnitudo 6,3. 309 morti e oltre 1.500 feriti, secondo il Dipartimento della Protezione Civile; decine di migliaia di persone senza casa. Già nella prima settimana, i volontari del **Settore Protezione Civile AGESCI** sono in turno principalmente nell'**allestimento delle tendopoli**, in un'emergenza che si protrarrà per anni.
+**6 aprile 2009**, ore 3:32. L'Aquila trema. Magnitudo 6,3. 309 morti e oltre 1.500 feriti, secondo il Dipartimento della Protezione Civile; decine di migliaia di persone senza casa. Già nella prima settimana, i volontari del **Settore Protezione Civile AGESCI** sono in turno principalmente nell'**allestimento delle tendopoli**, in un'emergenza che si protrarrà per anni.
 
 {{< foto src="/images/2026-04-23-aquila-2009-terremoto.webp"
          alt="L'Aquila dopo il terremoto del 6 aprile 2009: edifici lesionati e centro storico inaccessibile"
