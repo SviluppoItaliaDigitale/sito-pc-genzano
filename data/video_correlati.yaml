@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 345 / Video unici usati: 282 /
-# Link totali: 1192 (max 5 per pagina,
+# Pagine coperte: 358 / Video unici usati: 283 /
+# Link totali: 1235 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -19,7 +19,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 636
+    video_count: 637
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -29,7 +29,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 967
+    video_count: 974
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -49,12 +49,12 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1363
+    video_count: 1366
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 164
+    video_count: 165
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1232
+    video_count: 1234
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 650
+    video_count: 651
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2033
+    video_count: 2048
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -101,6 +101,21 @@ canali:
     url: https://www.youtube.com/@WiredItalia/videos
     video_count: 802
 pagine:
+  aree-attesa:
+    title: Aree di attesa di Genzano di Roma
+    url: /aree-attesa/
+    video:
+    - anchored:
+      - evacuazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - disabilità
+      - evacuazione
+      score: 2.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
   cartografia:
     title: Cartografia operativa del Piano di emergenza
     url: /cartografia/
@@ -3392,7 +3407,7 @@ pagine:
       - dall
       - fenomeno
       - uragano
-      score: 7.8
+      score: 8.2
       titolo: Come si forma un uragano? Il fenomeno visto dall'interno e la differenza con cicloni e tifoni
       url: https://youtu.be/Fio-Z7Urt7s
     - anchored:
@@ -3416,7 +3431,7 @@ pagine:
       - fenomeno
       - terra
       - uragani
-      score: 7.2
+      score: 7.6
       titolo: Gli uragani sono tra i fenomeni naturali più potenti della Terra
       url: https://youtu.be/m67wFL0Yj6U
     - anchored:
@@ -9589,6 +9604,272 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
+  comunicazioni/2026-11-11-allarme-bomba-scuole-esercitazione:
+    title: 'Scuole evacuate per un allarme bomba: la stessa risposta che proviamo nelle esercitazioni'
+    url: /comunicazioni/2026-11-11-allarme-bomba-scuole-esercitazione/
+    video:
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - dagli
+      - esercitazione
+      - evacuazione
+      score: 7.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - esercitazione
+      - evacuazione
+      score: 6.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: OkEoPVutZr4
+      is_lis: false
+      overlap:
+      - esercitazione
+      - verso
+      score: 6.6
+      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
+      url: https://youtu.be/OkEoPVutZr4
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
+  comunicazioni/2026-11-12-decreto-legge-205-campi-flegrei-protezione-civile:
+    title: 'Campi Flegrei: un decreto-legge nomina un Commissario e stanzia 100 milioni l''anno'
+    url: /comunicazioni/2026-11-12-decreto-legge-205-campi-flegrei-protezione-civile/
+    video:
+    - anchored:
+      - bradisismo
+      - campi
+      - flegrei
+      canale: dpc-gov
+      id: f1yJjfoUsv4
+      is_lis: false
+      overlap:
+      - bradisismo
+      - campi
+      - flegrei
+      - vulcanico
+      score: 15.0
+      titolo: 'Eruzioni vulcaniche e bradisismo: la risposta di protezione civile – Bradisismo Campi Flegrei 2024'
+      url: https://youtu.be/f1yJjfoUsv4
+    - anchored:
+      - bradisismo
+      - campi
+      - flegrei
+      canale: dpc-gov
+      id: qfyfnlKbs_I
+      is_lis: false
+      overlap:
+      - bradisismo
+      - campi
+      - flegrei
+      score: 14.0
+      titolo: Il bradisismo ai Campi Flegrei. Sei preparato? – Bradisismo Campi Flegrei 2024
+      url: https://youtu.be/qfyfnlKbs_I
+    - anchored:
+      - bradisismo
+      - campi
+      - flegrei
+      canale: geopop
+      id: e3gBmoEu47M
+      is_lis: false
+      overlap:
+      - bradisismo
+      - campi
+      - flegrei
+      score: 14.0
+      titolo: 'BRADISISMO: IL RESPIRO DEL SUPERVULCANO CAMPI FLEGREI - Documentario - Sub-Eng'
+      url: https://youtu.be/e3gBmoEu47M
+    - anchored:
+      - bradisismo
+      canale: abili-a-proteggere
+      id: dXY08iwaj0k
+      is_lis: true
+      overlap:
+      - bradisismo
+      score: 2.0
+      titolo: 'Glossario in LIS: Bradisismo'
+      url: https://youtu.be/dXY08iwaj0k
+  comunicazioni/2026-11-12-frane-video-3d:
+    title: 'Frane: un video in 3D per riconoscerle e mettersi al sicuro'
+    url: /comunicazioni/2026-11-12-frane-video-3d/
+    video:
+    - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dati
+      - frana
+      - rischio
+      score: 6.8
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
+      url: https://youtu.be/L98tBMJZn0k
+  comunicazioni/2026-11-12-frane-video-3d-facile:
+    title: 'Frane: come metterti al sicuro'
+    url: /comunicazioni/2026-11-12-frane-video-3d-facile/
+    video:
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
+      url: https://youtu.be/L98tBMJZn0k
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: YKzuDqox1qE
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: La mensa allestita presso il palazzetto dello sport Pio La Torre – Frana Niscemi 2026
+      url: https://youtu.be/YKzuDqox1qE
+  comunicazioni/2026-11-12-temporali-fulmini-video-3d:
+    title: 'Temporali e fulmini: un video in 3D per sapere dove ripararsi'
+    url: /comunicazioni/2026-11-12-temporali-fulmini-video-3d/
+    video:
+    - anchored:
+      - temporali
+      canale: io-non-rischio
+      id: kT-m1l4haIQ
+      is_lis: false
+      overlap:
+      - temporali
+      score: 6.0
+      titolo: Chi ha paura dei temporali?
+      url: https://youtu.be/kT-m1l4haIQ
+    - anchored:
+      - temporale
+      canale: ingv-terremoti
+      id: bIM2mW9y_Ik
+      is_lis: false
+      overlap:
+      - temporale
+      score: 2.0
+      titolo: Animazione spazio temporale sequenza sismica in Italia Centrale
+      url: https://youtu.be/bIM2mW9y_Ik
+  comunicazioni/2026-11-12-temporali-fulmini-video-3d-facile:
+    title: 'Temporali e fulmini: dove ripararsi'
+    url: /comunicazioni/2026-11-12-temporali-fulmini-video-3d-facile/
+    video:
+    - anchored:
+      - temporali
+      canale: io-non-rischio
+      id: kT-m1l4haIQ
+      is_lis: false
+      overlap:
+      - temporali
+      score: 6.0
+      titolo: Chi ha paura dei temporali?
+      url: https://youtu.be/kT-m1l4haIQ
   comunicazioni/2026-11-15-polesine-1951-alluvione-del-po:
     title: 'Polesine, 14 novembre 1951: la grande alluvione del Po'
     url: /comunicazioni/2026-11-15-polesine-1951-alluvione-del-po/
@@ -9617,6 +9898,35 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
+  comunicazioni/2026-11-18-quanto-costa-prevenire:
+    title: Prevenire o riparare? La protezione civile vista da un economista
+    url: /comunicazioni/2026-11-18-quanto-costa-prevenire/
+    video:
+    - anchored:
+      - alluvione
+      - vista
+      canale: geopop
+      id: KZyAISKzqVc
+      is_lis: false
+      overlap:
+      - alluvione
+      - dell
+      - vista
+      score: 7.4
+      titolo: Cosa è successo realmente in Emilia-Romagna? Le cause dell'alluvione dal punto di vista scientifico
+      url: https://youtu.be/KZyAISKzqVc
+    - anchored:
+      - alluvione
+      canale: io-non-rischio
+      id: OnGj0IaLePA
+      is_lis: true
+      overlap:
+      - alluvione
+      - domande
+      - rischio
+      score: 2.4
+      titolo: Io non rischio Alluvione – Domande e risposte
+      url: https://youtu.be/OnGj0IaLePA
   comunicazioni/2026-11-19-animali-domestici-emergenze:
     title: 'Animali domestici in emergenza: piani, kit, responsabilità'
     url: /comunicazioni/2026-11-19-animali-domestici-emergenze/
@@ -9641,6 +9951,127 @@ pagine:
       score: 2.0
       titolo: Islanda, nuova eruzione vulcanica. Evacuati gli abitanti di Grindavik
       url: https://youtu.be/eYZMSEKA-Ro
+  comunicazioni/2026-11-19-scienza-e-giustizia-grandi-rischi:
+    title: 'La protezione civile vista dal giudice: il processo Grandi Rischi dopo il terremoto dell''Aquila'
+    url: /comunicazioni/2026-11-19-scienza-e-giustizia-grandi-rischi/
+    video:
+    - anchored:
+      - aquila
+      - processo
+      canale: ingv-terremoti
+      id: pDYHRR9DpY4
+      is_lis: false
+      overlap:
+      - aquila
+      - dell
+      - processo
+      - vicenda
+      score: 13.6
+      titolo: Raccolta di scritti sulla vicenda del processo dell’Aquila e successive riflessioni
+      url: https://youtu.be/pDYHRR9DpY4
+    - anchored:
+      - aquila
+      canale: ingv-terremoti
+      id: sVBcGFxnIC8
+      is_lis: false
+      overlap:
+      - aquila
+      - ingv
+      score: 7.0
+      titolo: Inaugurazione a L'Aquila della nuova sede INGV
+      url: https://youtu.be/sVBcGFxnIC8
+    - anchored:
+      - aquila
+      canale: ingv-terremoti
+      id: GoDxS5h2BHI
+      is_lis: false
+      overlap:
+      - aquila
+      - terremoto
+      score: 6.6
+      titolo: 'Il terremoto de L''Aquila: propagazione delle onde sulla superficie'
+      url: https://youtu.be/GoDxS5h2BHI
+    - anchored:
+      - aquila
+      canale: ingv-terremoti
+      id: JrhWeWmFvJQ
+      is_lis: false
+      overlap:
+      - aquila
+      - terremoto
+      score: 6.6
+      titolo: 'Il terremoto de L''Aquila: i satelliti individuano la faglia'
+      url: https://youtu.be/JrhWeWmFvJQ
+    - anchored:
+      - aquila
+      canale: ingv-terremoti
+      id: UjMcwyDMnDw
+      is_lis: false
+      overlap:
+      - aquila
+      - terremoto
+      score: 6.6
+      titolo: 'Terremoto a L''Aquila: il sismologo Selvaggi commenta la condanna (da Oggiscienza)'
+      url: https://youtu.be/UjMcwyDMnDw
+  comunicazioni/2026-11-21-evacuare-chi-non-puo-muoversi:
+    title: 'Chi non può uscire da solo: la sicurezza in ospedali, residenze e carceri'
+    url: /comunicazioni/2026-11-21-evacuare-chi-non-puo-muoversi/
+    video:
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - disabilità
+      - esercitazione
+      - evacuazione
+      - procedure
+      score: 4.6
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: 2oZHTrIAXi0
+      is_lis: false
+      overlap:
+      - disabilità
+      - presidente
+      score: 3.0
+      titolo: 'Presidente Mattarella: "rimuovere ogni barriera che limiti i diritti delle persone con disabilità'
+      url: https://youtu.be/2oZHTrIAXi0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: tWBLKYes5B8
+      is_lis: false
+      overlap:
+      - disabilità
+      - presidente
+      score: 3.0
+      titolo: '#NienteDiSpeciale: Intervista a Nazaro Pagano presidente Fand - protezione civile e disabilità'
+      url: https://youtu.be/tWBLKYes5B8
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: 88NyIgS1PbE
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: '#NienteDiSpeciale: Intervista a Carmine Lizza su Anpas e disabilità'
+      url: https://youtu.be/88NyIgS1PbE
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: b5W1-Cj7eu0
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: Giornata internazionale delle persone con disabilità
+      url: https://youtu.be/b5W1-Cj7eu0
   comunicazioni/2026-11-23-irpinia-1980-anniversario-46:
     title: '23 novembre 1980: 46 anni dal terremoto dell''Irpinia'
     url: /comunicazioni/2026-11-23-irpinia-1980-anniversario-46/
@@ -9658,6 +10089,65 @@ pagine:
       score: 8.6
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
+  comunicazioni/2026-11-24-dove-costruiamo-urbanistica-e-rischio:
+    title: 'Dove e come costruiamo: il rischio visto dall''urbanista'
+    url: /comunicazioni/2026-11-24-dove-costruiamo-urbanistica-e-rischio/
+    video:
+    - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dissesto
+      - frana
+      - idrogeologico
+      - rischio
+      score: 4.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
+      canale: geopop
+      id: fpeEmFI5G8s
+      is_lis: false
+      overlap:
+      - alluvione
+      - frana
+      score: 2.6
+      titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
+      url: https://youtu.be/fpeEmFI5G8s
+    - anchored:
+      - frana
+      canale: rai-news
+      id: XqAePTXBEWg
+      is_lis: false
+      overlap:
+      - altri
+      - frana
+      score: 2.2
+      titolo: 'Frana Niscemi: chi sono i 13 indagati. La Procura: "Presto altri"'
+      url: https://youtu.be/XqAePTXBEWg
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
   comunicazioni/2026-11-26-friuli-1976-memoria-terremoto:
     title: 'Friuli 1976: la ricostruzione che divenne modello nazionale'
     url: /comunicazioni/2026-11-26-friuli-1976-memoria-terremoto/
@@ -11415,6 +11905,20 @@ pagine:
       score: 2.0
       titolo: Frana di Arenzano 2016
       url: https://youtu.be/gsBgcnO6qfc
+  dossier/lo-stesso-temporale-molti-sguardi:
+    title: Lo stesso temporale, molti sguardi
+    url: /dossier/lo-stesso-temporale-molti-sguardi/
+    video:
+    - anchored:
+      - temporale
+      canale: ingv-terremoti
+      id: bIM2mW9y_Ik
+      is_lis: false
+      overlap:
+      - temporale
+      score: 6.0
+      titolo: Animazione spazio temporale sequenza sismica in Italia Centrale
+      url: https://youtu.be/bIM2mW9y_Ik
   dossier/messina-1908-il-minuto:
     title: Il minuto che cancellò una città
     url: /dossier/messina-1908-il-minuto/
@@ -11808,7 +12312,7 @@ pagine:
       - forma
       - uragano
       - visto
-      score: 6.8
+      score: 7.2
       titolo: Come si forma un uragano? Il fenomeno visto dall'interno e la differenza con cicloni e tifoni
       url: https://youtu.be/Fio-Z7Urt7s
   dossier/quando-l-industria-fa-paura:
@@ -13807,6 +14311,30 @@ pagine:
       score: 6.0
       titolo: 'Kit siccità: gestori di strutture turistiche IT'
       url: https://youtu.be/d3PnplO-uGI
+  mappe-meteo-professionali:
+    title: Mappe meteo professionali per l'Italia
+    url: /mappe-meteo-professionali/
+    video:
+    - anchored:
+      - neve
+      canale: cnsas
+      id: CyIq3dZGscc
+      is_lis: false
+      overlap:
+      - neve
+      score: 2.0
+      titolo: 'Covid-19: “Sì allo sport in montagna, ma quest’anno prima la prudenza”. Sicuri sulla Neve 2021'
+      url: https://youtu.be/CyIq3dZGscc
+    - anchored:
+      - neve
+      canale: cnsas
+      id: _eRFm4JSkYs
+      is_lis: false
+      overlap:
+      - neve
+      score: 2.0
+      titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
+      url: https://youtu.be/_eRFm4JSkYs
   pittogrammi:
     title: Catalogo dei pittogrammi del sito
     url: /pittogrammi/
@@ -13959,17 +14487,6 @@ pagine:
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
       - disabilità
-      canale: dpc-gov
-      id: ZTDrRHbiR3M
-      is_lis: false
-      overlap:
-      - disabilità
-      - messaggio
-      score: 3.0
-      titolo: 'Giornata internazionale delle persone con disabilità: il messaggio di Borrelli'
-      url: https://youtu.be/ZTDrRHbiR3M
-    - anchored:
-      - disabilità
       canale: abili-a-proteggere
       id: 2oZHTrIAXi0
       is_lis: false
@@ -13998,6 +14515,16 @@ pagine:
       score: 2.0
       titolo: Giornata internazionale delle persone con disabilità
       url: https://youtu.be/b5W1-Cj7eu0
+    - anchored:
+      - disabilità
+      canale: abili-a-proteggere
+      id: e_bwJY-3fh8
+      is_lis: false
+      overlap:
+      - disabilità
+      score: 2.0
+      titolo: Disabilità e campi scuola "Anch'io sono la protezione civile"
+      url: https://youtu.be/e_bwJY-3fh8
   rischi-prevenzione/rischi-in-parole-semplici:
     title: Rischi principali in parole semplici
     url: /rischi-prevenzione/rischi-in-parole-semplici/

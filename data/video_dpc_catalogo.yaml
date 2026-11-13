@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 9125 video (18 canali).
+# Totale: 9155 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -15,7 +15,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 636
+    video_count: 637
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 967
+    video_count: 974
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -45,12 +45,12 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1363
+    video_count: 1366
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 164
+    video_count: 165
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -70,12 +70,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1232
+    video_count: 1234
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 650
+    video_count: 651
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2033
+    video_count: 2048
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -1387,6 +1387,11 @@ video:
     id: CM7oBQUFvH8
     titolo: '"I segreti dei fantasmi"- rassegna "Autopsie di fantasmi"'
     url: https://youtu.be/CM7oBQUFvH8
+  cicap-CPsfoweeslo:
+    canale: cicap
+    id: CPsfoweeslo
+    titolo: Psicologia e Social - con Sara Garofalo
+    url: https://youtu.be/CPsfoweeslo
   cicap-CQHiZJLC9c4:
     canale: cicap
     id: CQHiZJLC9c4
@@ -4982,6 +4987,11 @@ video:
     id: 697MBjthHAs
     titolo: 'Smarter adaptation: Improve knowledge and manage uncertainty'
     url: https://youtu.be/697MBjthHAs
+  cmcc-6C1VrhTe3aE:
+    canale: cmcc
+    id: 6C1VrhTe3aE
+    titolo: Adapting a network when the budget can only cover part of it
+    url: https://youtu.be/6C1VrhTe3aE
   cmcc-6EzO0Pe2yew:
     canale: cmcc
     id: 6EzO0Pe2yew
@@ -5742,6 +5752,11 @@ video:
     id: FNP5q98Q6mU
     titolo: 'Coastal Resilience School: Enabling Technologies for Coastal Resilience'
     url: https://youtu.be/FNP5q98Q6mU
+  cmcc-FRLcK28d7Os:
+    canale: cmcc
+    id: FRLcK28d7Os
+    titolo: Who benefits from a heat plan and how much are these benefits worth?
+    url: https://youtu.be/FRLcK28d7Os
   cmcc-FSW3MZh4qAU:
     canale: cmcc
     id: FSW3MZh4qAU
@@ -6267,6 +6282,11 @@ video:
     id: Mc0r-07qv3c
     titolo: Sustainable bioenergy crops and beneficial land-use change under changing climates
     url: https://youtu.be/Mc0r-07qv3c
+  cmcc-MfQU7XUX3cQ:
+    canale: cmcc
+    id: MfQU7XUX3cQ
+    titolo: How regions and forest owners decide on wildfire prevention
+    url: https://youtu.be/MfQU7XUX3cQ
   cmcc-Mgoi6lPWDYw:
     canale: cmcc
     id: Mgoi6lPWDYw
@@ -6487,6 +6507,11 @@ video:
     id: Psrvduk8k1U
     titolo: 180731 - Managing data in a large-scale climate modelling project
     url: https://youtu.be/Psrvduk8k1U
+  cmcc-PxbiK_MWSLA:
+    canale: cmcc
+    id: PxbiK_MWSLA
+    titolo: How to plan coastal protection when sea-level rise is uncertain
+    url: https://youtu.be/PxbiK_MWSLA
   cmcc-PxiT7uHIvmM:
     canale: cmcc
     id: PxiT7uHIvmM
@@ -7977,6 +8002,11 @@ video:
     id: j1wbOATZC30
     titolo: 'Making the Just Transition Work: Institutional Voices and Regional Solutions from Romania'
     url: https://youtu.be/j1wbOATZC30
+  cmcc-j2LEygkUm8U:
+    canale: cmcc
+    id: j2LEygkUm8U
+    titolo: How flood risk affects banks, and which instruments can reduce it
+    url: https://youtu.be/j2LEygkUm8U
   cmcc-j3Ll9CF2Lxk:
     canale: cmcc
     id: j3Ll9CF2Lxk
@@ -8252,6 +8282,11 @@ video:
     id: muCWb29EcLI
     titolo: 'Viktor Rözer: From theory to practice | Naturace'
     url: https://youtu.be/muCWb29EcLI
+  cmcc-mz-7wz5sC2M:
+    canale: cmcc
+    id: mz-7wz5sC2M
+    titolo: What national adaptation plans cost, and who pays for them
+    url: https://youtu.be/mz-7wz5sC2M
   cmcc-mziTvfd7qYA:
     canale: cmcc
     id: mziTvfd7qYA
@@ -9162,6 +9197,11 @@ video:
     id: y_nC6QG7YqE
     titolo: 'Conoscere il mare: presente e futuro - Impero Delle Donne, Ass.ne I Corsari'
     url: https://youtu.be/y_nC6QG7YqE
+  cmcc-yg9svMdpuCA:
+    canale: cmcc
+    id: yg9svMdpuCA
+    titolo: Managing a basin when there is less water to share
+    url: https://youtu.be/yg9svMdpuCA
   cmcc-yghHmDQfrNM:
     canale: cmcc
     id: yghHmDQfrNM
@@ -12687,6 +12727,11 @@ video:
     id: 3PO_OyNMfVI
     titolo: It wasn't an aurora borealis seen in Italy, but a SAR. We explain why it's hard to tell them apart
     url: https://youtu.be/3PO_OyNMfVI
+  geopop-3PmgmIPj6JM:
+    canale: geopop
+    id: 3PmgmIPj6JM
+    titolo: 'Oltre i soliti stereotipi: l''Italia è un gigante delle esportazioni. Vediamo i dati.'
+    url: https://youtu.be/3PmgmIPj6JM
   geopop-3RiQ05xqWwY:
     canale: geopop
     id: 3RiQ05xqWwY
@@ -16652,6 +16697,11 @@ video:
     id: dhQYqA-96cg
     titolo: California Gold Rush, l’incredibile storia della corsa all’oro negli USA di metà ‘800
     url: https://youtu.be/dhQYqA-96cg
+  geopop-dm0HED18JEQ:
+    canale: geopop
+    id: dm0HED18JEQ
+    titolo: 'È vero che il mondo finirà il 13 novembre? No, si tratta di una bufala: ecco da dove arriva'
+    url: https://youtu.be/dm0HED18JEQ
   geopop-dtikahfhEzY:
     canale: geopop
     id: dtikahfhEzY
@@ -18692,6 +18742,11 @@ video:
     id: x-7g0VrlPQ0
     titolo: Why does sodium explode when it comes into contact with water? The chemical reaction is explained...
     url: https://youtu.be/x-7g0VrlPQ0
+  geopop-x2XUabji-6U:
+    canale: geopop
+    id: x2XUabji-6U
+    titolo: Perché tutti parlano di GTA VI? È costato più di un miliardo di dollari
+    url: https://youtu.be/x2XUabji-6U
   geopop-x2hmjU9a62o:
     canale: geopop
     id: x2hmjU9a62o
@@ -19257,6 +19312,11 @@ video:
     id: E81hGeLHDg4
     titolo: Haisentitoilterremoto
     url: https://youtu.be/E81hGeLHDg4
+  ingv-terremoti-FLn9JNIR5Cc:
+    canale: ingv-terremoti
+    id: FLn9JNIR5Cc
+    titolo: EP. 2 - INSIDE Speciale 10 anni sequenza sismica in Italia centrale | La risposta dell’INGV
+    url: https://youtu.be/FLn9JNIR5Cc
   ingv-terremoti-FSHUUui2A68:
     canale: ingv-terremoti
     id: FSHUUui2A68
@@ -24792,6 +24852,11 @@ video:
     id: We7wOvOg9x4
     titolo: Buco nero mangia una stella e ne lancia un'altra fuori dalla nostra galassia
     url: https://youtu.be/We7wOvOg9x4
+  link4universe-WgJLwDrqJOQ:
+    canale: link4universe
+    id: WgJLwDrqJOQ
+    titolo: LIVE - STARSHIP / SPACEX - Lancio 15 - Recupero Booster B22
+    url: https://youtu.be/WgJLwDrqJOQ
   link4universe-WheIy9dcP30:
     canale: link4universe
     id: WheIy9dcP30
@@ -25777,6 +25842,11 @@ video:
     id: g0c0wL4iJPU
     titolo: '2I/Borisov: the new mysterious interstellar object'
     url: https://youtu.be/g0c0wL4iJPU
+  link4universe-g2_FLX6J0sw:
+    canale: link4universe
+    id: g2_FLX6J0sw
+    titolo: LIVE - Lancio VULCAN (ULA) con satelliti LEO
+    url: https://youtu.be/g2_FLX6J0sw
   link4universe-g3-63kBbBYQ:
     canale: link4universe
     id: g3-63kBbBYQ
@@ -30522,6 +30592,11 @@ video:
     id: tRnGAtcc3rg
     titolo: Ecco l'animale più grande che sia mai vissuto
     url: https://youtu.be/tRnGAtcc3rg
+  natgeo-italia-tT2OzHIdR7w:
+    canale: natgeo-italia
+    id: tT2OzHIdR7w
+    titolo: 'National Geographic Traveler: la magia dell’inverno tra montagne, deserti e isole lontane'
+    url: https://youtu.be/tT2OzHIdR7w
   natgeo-italia-tVQpj7ywZ6I:
     canale: natgeo-italia
     id: tVQpj7ywZ6I
@@ -32787,6 +32862,11 @@ video:
     id: AyLzfddOiPM
     titolo: Le indagini su giallo di villa Pamphili tracciano il profilo di Francis Kaufmann
     url: https://youtu.be/AyLzfddOiPM
+  rai-news-AyVcRYZ_uYI:
+    canale: rai-news
+    id: AyVcRYZ_uYI
+    titolo: Viaggio nel carcere di massima sicurezza della mafia brasiliana
+    url: https://youtu.be/AyVcRYZ_uYI
   rai-news-Az8VFJx5xAU:
     canale: rai-news
     id: Az8VFJx5xAU
@@ -34527,6 +34607,11 @@ video:
     id: LHzfLxGP0Bs
     titolo: Sinner sets his return, date at the millionaire Six Kings in late December
     url: https://youtu.be/LHzfLxGP0Bs
+  rai-news-LPPi5JgxR3c:
+    canale: rai-news
+    id: LPPi5JgxR3c
+    titolo: Caccia alle carte nascoste sulla strage Borsellino, perquisizioni per De Gennaro e Contorno
+    url: https://youtu.be/LPPi5JgxR3c
   rai-news-LXALOpW0O8U:
     canale: rai-news
     id: LXALOpW0O8U
@@ -36097,6 +36182,11 @@ video:
     id: VH0HDwUSTe0
     titolo: Interview with Nobel Prize winner in Chemistry Omar Yaghi
     url: https://youtu.be/VH0HDwUSTe0
+  rai-news-VIJpNA1yjgU:
+    canale: rai-news
+    id: VIJpNA1yjgU
+    titolo: 'A Paestum il campionato mondiale della Pizza Doc: vincono due napoletani'
+    url: https://youtu.be/VIJpNA1yjgU
   rai-news-VIOYB0fJxSU:
     canale: rai-news
     id: VIOYB0fJxSU
@@ -37257,6 +37347,11 @@ video:
     id: bkrKnwFUADU
     titolo: 'Summer sales start July 4th, except in Trento and Bolzano: 3 billion in business'
     url: https://youtu.be/bkrKnwFUADU
+  rai-news-bky7e-9WyK8:
+    canale: rai-news
+    id: bky7e-9WyK8
+    titolo: Terremoto a Wall Street, Jensen Huang lascia Nvidia travolto dagli scandali
+    url: https://youtu.be/bky7e-9WyK8
   rai-news-boYcljMQtus:
     canale: rai-news
     id: boYcljMQtus
@@ -37437,6 +37532,11 @@ video:
     id: cpDJXta6J8g
     titolo: Bucha, 4 years after the massacre
     url: https://youtu.be/cpDJXta6J8g
+  rai-news-cqq1yNYcGEQ:
+    canale: rai-news
+    id: cqq1yNYcGEQ
+    titolo: 'Scintille tra Governo e banche: "Misure sudamericane". La replica di Giorgetti: "Linea asburgica"'
+    url: https://youtu.be/cqq1yNYcGEQ
   rai-news-crqdDGFfvKo:
     canale: rai-news
     id: crqdDGFfvKo
@@ -37682,6 +37782,11 @@ video:
     id: eLotjHcY6qQ
     titolo: L'autostrada dei dinosauri
     url: https://youtu.be/eLotjHcY6qQ
+  rai-news-ePXpEGMII9I:
+    canale: rai-news
+    id: ePXpEGMII9I
+    titolo: 'Meloni incontra Zelensky a Dublino: “Da quanto tempo non ci vediamo”. Lui: “Tu non volevi”'
+    url: https://youtu.be/ePXpEGMII9I
   rai-news-eQjgZEsAc-E:
     canale: rai-news
     id: eQjgZEsAc-E
@@ -38167,6 +38272,11 @@ video:
     id: hRyZSrzycRs
     titolo: Iranian hacker group Handala targets FBI, targeting Kash Patel
     url: https://youtu.be/hRyZSrzycRs
+  rai-news-hSVPeOg38w4:
+    canale: rai-news
+    id: hSVPeOg38w4
+    titolo: Papa Leone XIV canta l’inno nazionale del Perù e si emoziona
+    url: https://youtu.be/hSVPeOg38w4
   rai-news-hVrZufqbUs0:
     canale: rai-news
     id: hVrZufqbUs0
@@ -38217,6 +38327,11 @@ video:
     id: hjK_MVfHJuA
     titolo: Inside the village of Castel del Monte, among the streets buried by snow
     url: https://youtu.be/hjK_MVfHJuA
+  rai-news-hjoWjaqn6DA:
+    canale: rai-news
+    id: hjoWjaqn6DA
+    titolo: 'Risate davanti al Milite Ignoto, la sentinella gela il gruppo di Hegseth: "Silenzio e rispetto!"'
+    url: https://youtu.be/hjoWjaqn6DA
   rai-news-hqfMBlovFRI:
     canale: rai-news
     id: hqfMBlovFRI
@@ -38702,6 +38817,11 @@ video:
     id: l4wdejBnmPk
     titolo: Ai bambini di Kharkiv hanno rubato il cielo
     url: https://youtu.be/l4wdejBnmPk
+  rai-news-l5WG0s1cU3M:
+    canale: rai-news
+    id: l5WG0s1cU3M
+    titolo: 'Kimi Antonelli: "Ho ancora più fame di prima"'
+    url: https://youtu.be/l5WG0s1cU3M
   rai-news-l67_kEwwowM:
     canale: rai-news
     id: l67_kEwwowM
@@ -39112,6 +39232,11 @@ video:
     id: nZof8SsMASI
     titolo: The 20 Israeli hostages held by Hamas for two years
     url: https://youtu.be/nZof8SsMASI
+  rai-news-naOlTakNRy0:
+    canale: rai-news
+    id: naOlTakNRy0
+    titolo: Caccia alle carte nascoste sulla strage Borsellino, perquisizioni per De Gennaro e Contorno
+    url: https://youtu.be/naOlTakNRy0
   rai-news-nayP_pMtaFM:
     canale: rai-news
     id: nayP_pMtaFM
@@ -39192,6 +39317,11 @@ video:
     id: nssLnkNoDFY
     titolo: Briciola parades for its last June 2nd
     url: https://youtu.be/nssLnkNoDFY
+  rai-news-ntY0weKnP88:
+    canale: rai-news
+    id: ntY0weKnP88
+    titolo: Maltempo in Italia, vento forte e tempo instabile
+    url: https://youtu.be/ntY0weKnP88
   rai-news-ny5jBbVa0pI:
     canale: rai-news
     id: ny5jBbVa0pI
@@ -40142,6 +40272,11 @@ video:
     id: tIm_-IlVqis
     titolo: Altri Mondi. Tutto, ma proprio tutto, su Switch 2
     url: https://youtu.be/tIm_-IlVqis
+  rai-news-tJ8_xdAvIhs:
+    canale: rai-news
+    id: tJ8_xdAvIhs
+    titolo: Australia, disperso a 17 anni durante un campeggio, ritrovato vivo dopo 6 giorni
+    url: https://youtu.be/tJ8_xdAvIhs
   rai-news-tNOzd9vw2Es:
     canale: rai-news
     id: tNOzd9vw2Es
@@ -40337,6 +40472,11 @@ video:
     id: uTfDuZcjqIQ
     titolo: Roberto Bolle dances among Caravaggio's paintings at Palazzo Barberini in Rome
     url: https://youtu.be/uTfDuZcjqIQ
+  rai-news-uXrRt_CUoDE:
+    canale: rai-news
+    id: uXrRt_CUoDE
+    titolo: 'Scintille tra Governo e banche: "Misure sudamericane". La replica di Giorgetti: "Linea asburgica"'
+    url: https://youtu.be/uXrRt_CUoDE
   rai-news-uaRomUA7AKg:
     canale: rai-news
     id: uaRomUA7AKg
@@ -40652,6 +40792,11 @@ video:
     id: wo2gtBTBMHw
     titolo: 'Sanremo 2025: All the Red Carpet Looks'
     url: https://youtu.be/wo2gtBTBMHw
+  rai-news-wwkpg-7hGFo:
+    canale: rai-news
+    id: wwkpg-7hGFo
+    titolo: Terremoto a Wall Street, Jensen Huang lascia Nvidia travolto dagli scandali
+    url: https://youtu.be/wwkpg-7hGFo
   rai-news-wzr4nKZhc6Q:
     canale: rai-news
     id: wzr4nKZhc6Q
@@ -40797,6 +40942,11 @@ video:
     id: xpyPRRHx-mE
     titolo: Naples, robbers enter the bank
     url: https://youtu.be/xpyPRRHx-mE
+  rai-news-xquI57Mdmxg:
+    canale: rai-news
+    id: xquI57Mdmxg
+    titolo: 'Allarmi bomba, Palazzo Chigi: "Nessuna evacuazione in assenza di pericolo concreto"'
+    url: https://youtu.be/xquI57Mdmxg
   rai-news-xrQR0dbbq9w:
     canale: rai-news
     id: xrQR0dbbq9w
