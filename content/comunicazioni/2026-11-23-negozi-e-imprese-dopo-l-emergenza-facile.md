@@ -48,7 +48,7 @@ Una volta all'anno fai le foto del negozio, delle macchine e della merce. Dopo u
 
 ## Prima: proteggi la merce dall'acqua
 
-Il piano terra e la cantina sono i posti più pericolosi quando c'è un'alluvione.
+Quando c'è un'alluvione, il piano terra e la cantina sono posti pericolosi.
 
 - Metti la merce importante sugli scaffali alti.
 - Non tenere a terra i documenti.

@@ -12,7 +12,7 @@ area: ""
 allegati: []
 tts: true
 versione_facile: "2026-11-21-evacuare-chi-non-puo-muoversi-facile"
-social_citazione: "Per chi non può uscire da solo, la sicurezza si decide prima: nei piani, nei turni, nelle prove."
+social_citazione: "Per queste persone la sicurezza non si improvvisa: si prepara prima, con i piani e con le prove."
 social_punti:
   - "Nei luoghi di lavoro con almeno dieci lavoratori il piano di emergenza è obbligatorio e deve prevedere misure per chi ha esigenze speciali"
   - "Nei reparti e nelle residenze sanitarie si sposta prima la persona nel compartimento accanto, protetto dal fuoco"
@@ -21,7 +21,7 @@ social_punti:
 draft: false
 ---
 
-Se a casa suona l'allarme antincendio, quasi tutti possiamo alzarci e uscire. In un reparto di ospedale, in una residenza per anziani o in una cella le cose vanno diversamente. Chi vive lì dipende da altre persone per lasciare la stanza. Può essere per una malattia, per un letto da cui non si alza o per un ausilio. Oppure perché le porte si aprono solo dall'esterno. Per queste persone la sicurezza non si improvvisa. Si decide prima, nei piani, nei turni e nelle prove.
+Se a casa suona l'allarme antincendio, quasi tutti possiamo alzarci e uscire. In un reparto di ospedale, in una residenza per anziani o in una cella le cose vanno diversamente. Chi vive lì dipende da altre persone per lasciare la stanza. Può essere per una malattia, per un letto da cui non si alza o per un ausilio. Oppure perché le porte si aprono solo dall'esterno. Per queste persone la sicurezza non si improvvisa: si prepara prima, con i piani e con le prove.
 
 In questa serie raccontiamo la protezione civile da punti di vista diversi. Oggi guardiamo a chi abita in luoghi da cui non si esce da soli.
 
@@ -39,7 +39,7 @@ I dettagli li fissa il [decreto del Ministro dell'interno 2 settembre 2021](http
 - quando il luogo è aperto al pubblico con più di cinquanta presenti;
 - quando l'attività è soggetta ai controlli dei Vigili del fuoco.
 
-Fra queste attività ci sono le strutture sanitarie con ricovero e le case di riposo per anziani con oltre 25 posti letto. Lo dice l'attività 68 del [DPR 151/2011](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151).
+Fra le attività soggette ai controlli ci sono le strutture sanitarie con ricovero e le case di riposo per anziani con oltre 25 posti letto. Lo stabilisce l'attività 68 del [DPR 151/2011](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2011-08-01;151).
 
 Il piano deve contenere anche «le specifiche misure per assistere le persone con esigenze speciali». Il decreto chiede di individuare le loro necessità e di prevederle nelle procedure di evacuazione. Indica anche come dare l'allarme a chi non sente o non vede bene: luci, scritte luminose, dispositivi a vibrazione, messaggi da altoparlante. Gli ascensori non si usano per uscire, salvo quelli costruiti apposta.
 
@@ -49,7 +49,7 @@ C'è un dettaglio che conta molto di notte. Il numero di addetti all'emergenza d
 
 Per le strutture sanitarie esiste una regola tecnica antincendio dedicata. È il [decreto del Ministro dell'interno 18 settembre 2002](https://www.gazzettaufficiale.it/eli/gu/2002/09/27/227/sg/pdf), aggiornato dal [decreto 19 marzo 2015](https://www.gazzettaufficiale.it/eli/gu/2015/03/25/70/sg/pdf). In alternativa si può applicare la regola del [decreto 29 marzo 2021](https://www.gazzettaufficiale.it/eli/gu/2021/04/09/85/sg/pdf), che riguarda ospedali e RSA con più di 25 posti letto.
 
-Entrambe chiedono che le aree di degenza consentano l'**esodo orizzontale progressivo**. Vuol dire spostare le persone ricoverate in un compartimento vicino, sullo stesso piano, separato dal fuoco da muri e porte resistenti. Lì restano protette finché l'incendio è spento, o finché serve portarle in un luogo sicuro all'esterno. Per chi è a letto, collegato a un apparecchio o in terapia intensiva, è spesso la strada più sicura.
+Entrambe chiedono che le aree di degenza consentano l'**esodo orizzontale progressivo**. Vuol dire spostare le persone ricoverate in un compartimento vicino, sullo stesso piano, separato dal fuoco da muri e porte resistenti. Lì restano protette finché l'incendio è spento, o finché serve portarle in un luogo sicuro all'esterno.
 
 ## Le carceri
 
@@ -57,13 +57,13 @@ Il decreto 81/2008 vale anche negli istituti penitenziari. Lì si applica «tene
 
 ## Il collegamento con il piano comunale
 
-Il piano interno dice che cosa fare dentro l'edificio. Il piano comunale dice che cosa succede fuori. Lo regola la [direttiva del Presidente del Consiglio dei ministri 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf). Il piano deve indicare dove sono ospedali, case di cura, ambulatori e carceri. Chiede anche di stimare quante persone con disabilità o in condizioni di fragilità vivono sul territorio, con i dati del Servizio sanitario regionale.
+Il piano interno dice che cosa fare dentro l'edificio. Il piano comunale dice che cosa succede fuori. Lo regola la [direttiva del Presidente del Consiglio dei ministri 30 aprile 2021](https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf). La direttiva chiede di indicare dove sono ospedali, case di cura, ambulatori e carceri. Chiede anche di stimare quante persone con disabilità o in condizioni di fragilità vivono sul territorio, con i dati del Servizio sanitario regionale.
 
 Gli obiettivi sono due: conoscere le specifiche necessità assistenziali di queste persone e sapere quali risorse ci sono per loro. La direttiva fa tre esempi: alloggi, mezzi di trasporto speciali, personale specializzato. Il Dipartimento della protezione civile entra nel dettaglio con le sue [indicazioni operative per le persone con specifiche necessità](https://www.protezionecivile.gov.it/static/2ea242ef9eb8c7f7198774ac828934ad/indicazioni-operative-la-pianificazione-degli-interventi-di-protezione-civile-favore-di-persone-con-specifiche-necessita.pdf). Per ogni struttura sociosanitaria del territorio chiede di conoscere la posizione, il numero massimo di ospiti e quante persone con bisogno di sostegno elevato può accogliere. Chiede anche di censire i mezzi adatti al trasporto di persone con disabilità motoria. Così, se una residenza deve essere sgomberata, il Comune sa già dove possono andare gli ospiti e con quali mezzi. Puoi leggere come è organizzato il [Piano di emergenza comunale di Genzano](/piano-emergenza/).
 
 ## Le esercitazioni
 
-Un piano mai provato è solo carta. Il decreto del 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega la pianificazione alle esercitazioni (articolo 18). Le indicazioni del Dipartimento chiedono che le esercitazioni di protezione civile coinvolgano anche le persone con specifiche necessità, le loro famiglie e chi le assiste. Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
+Un piano mai provato è solo carta. Il decreto del 2 settembre 2021 prevede esercitazioni antincendio almeno una volta l'anno. Devono tenere conto delle persone con specifiche esigenze e vanno documentate. Si ripetono quando cambiano le vie di uscita o crescono le presenze. Anche il [Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art18) lega la pianificazione alle esercitazioni (articolo 18). Le indicazioni del Dipartimento chiedono che le esercitazioni di protezione civile coinvolgano anche le persone con specifiche necessità, le loro famiglie e chi le assiste. Abbiamo spiegato [a che cosa servono le esercitazioni](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/).
 
 ## Che cosa puoi fare tu, se hai un familiare in struttura
 

@@ -27,7 +27,7 @@ Definisce le **forme** del volontariato organizzato di protezione civile, raccor
 
 ## Articolo 34 — Elenco nazionale del volontariato di protezione civile
 
-Istituisce l'**Elenco nazionale** del volontariato di protezione civile, articolato negli **elenchi territoriali** delle Regioni e delle Province autonome e in un **elenco centrale** presso il Dipartimento. Solo le organizzazioni **iscritte** possono essere attivate ufficialmente e beneficiare delle **tutele** previste dal Codice. Per la Regione Lazio l'iscrizione è gestita dall'**Agenzia Regionale di Protezione Civile**.
+Istituisce l'**Elenco nazionale** del volontariato di protezione civile, articolato negli **elenchi territoriali** delle Regioni e delle Province autonome e in un **elenco centrale** presso il Dipartimento. Le organizzazioni che intendono partecipare alle attività di protezione civile **devono essere iscritte** (comma 2), e le **tutele** dell'art. 39 spettano ai volontari dei soggetti iscritti. Per la Regione Lazio l'iscrizione è gestita dall'**Agenzia Regionale di Protezione Civile**.
 
 ## Articolo 35 — Gruppi comunali di protezione civile
 
