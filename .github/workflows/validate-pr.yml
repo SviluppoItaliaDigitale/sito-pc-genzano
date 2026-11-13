@@ -511,14 +511,12 @@ jobs:
       # 12/11/2026: a novembre `T00:02:00+02:00` cade alle 23:02 del giorno prima
       # e l'articolo finiva sotto quelli a data semplice della stessa giornata.
       # Lo scarto deve essere quello dell'ora italiana di quel giorno (+01:00 d'inverno).
+      # 13/11/2026: il controllo guardava solo gli articoli toccati dalla PR e in
+      # due giorni si erano accumulati 53 articoli invernali con `+02:00`, scritti
+      # prima della regola. Ora controlla tutti gli articoli: è veloce e il
+      # repository è pulito, quindi un errore nuovo si vede sulla prima PR.
       - name: "🕐 Scarto orario della data coerente con l'ora italiana"
-        run: |
-          changed=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD -- 'content/comunicazioni/*.md' 2>/dev/null || true)
-          if [ -z "$changed" ]; then
-            echo "Nessun articolo modificato"
-            exit 0
-          fi
-          python3 scripts/check-scarto-orario.py $changed
+        run: python3 scripts/check-scarto-orario.py
 
       # 13/10/2026: il post sul soccorso alpino è uscito su Instagram e Facebook
       # con tre punti della sintesi tagliati a metà frase (e altri otto prima).
