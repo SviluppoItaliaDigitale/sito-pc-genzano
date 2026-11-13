@@ -5,16 +5,94 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-13T01:22:11+00:00",
+  "generato": "2026-11-13T08:33:47+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-12T23:25:57+00:00",
+   "data": "2026-11-13T08:29:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ingerenze in elezioni Paesi membri al centro del dibattito 'Danger zone: dai media alle urne'",
+   "url": "https://www.adnkronos.com/cronaca/ingerenze-in-elezioni-paesi-membri-al-centro-del-dibattito-danger-zone-dai-media-alle-urne_4wkCVnleFYYseFYekGPBa6"
+  },
+  {
+   "data": "2026-11-13T08:28:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morta a 27 anni Beau Jessup, figlia dell'attrice britannica Lisa Maxwell: ignote le cause del decesso",
+   "url": "https://www.adnkronos.com/spettacoli/beau-jessup-morta-figlia-lisa-maxwell_4QyIpwYWktjSDzcMeUhUdl"
+  },
+  {
+   "data": "2026-11-13T08:24:52+00:00",
    "fonte": "ANSA",
-   "titolo": "A Dublino è gelo sull'inviato Ue ma nasce il formato E5 con l'Italia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/a-dublino-e-gelo-sullinviato-ue-ma-nasce-il-formato-e5-con-litalia_3b13b03e-1348-4fd1-9b1f-f2a129c504cd.html"
+   "titolo": "Outlook down: 'le misure per risolvere le falle non stanno andando come era previsto'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/outlook-down-le-misure-per-risolvere-le-falle-non-stanno-andando-come_820a9d7d-9b9d-4214-8537-0834b1378b3d.html"
+  },
+  {
+   "data": "2026-11-13T08:02:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto Campi Flegrei, scossa di magnitudo 2.6 a Pozzuoli: avvertita anche in quartieri ovest Napoli",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-campi-flegrei-13-novembre-epicentro-magnitudo_4l3vtxFLhH28o93GjjyojC"
+  },
+  {
+   "data": "2026-11-13T07:52:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Allarmi bomba nelle scuole, oggi tavolo tecnico a Palazzo Chigi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/allarme-bomba-oggi-misure-governo-ultime-notizie_7otbBP3JBvJyXUhyV2hFGb"
+  },
+  {
+   "data": "2026-11-13T07:50:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli 007 americani non sono sicuri che Alice Huang sia una spia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/gli-007-americani-non-sono-sicuri-che-alice-huang-sia_4d7049c8-ca5c-4c4e-b34a-a6d5007a4fd6.html"
+  },
+  {
+   "data": "2026-11-13T07:00:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Huang getta la spugna, il titolo di Nvidia crolla a Wall Street",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/13/prime-pagine-huang-getta-la-spugna-il-titolo-di-nvidia-crolla-a-wall-street_545643d5-48e1-463c-8ed5-fc1f965f49fd.html"
+  },
+  {
+   "data": "2026-11-13T06:44:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro termosifoni? Ecco come leggere i contacalorie mettendosi al riparo da sorprese",
+   "url": "https://www.adnkronos.com/economia/caro-termosifone-come-leggere-contacalorie_3atlsb7E5sv1DdQRU0UBZQ"
+  },
+  {
+   "data": "2026-11-13T06:40:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nations League, chi gioca oggi? Le partite in programma e dove vederle",
+   "url": "https://www.adnkronos.com/sport/natiions-league-germania-olanda_7aXrXSgX5N4voTr9HDpgjI"
+  },
+  {
+   "data": "2026-11-13T06:37:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Outlook, Teams e Copilot in down. Microsoft assicura: \"Nessun segno di attacco informatico\"",
+   "url": "https://www.adnkronos.com/economia/outlook-down-oggi-cosa-succede-news_2VNlVPeAqgNb3AvnFv66qf"
+  },
+  {
+   "data": "2026-11-13T06:30:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'inviato speciale americano Kushner: 'Progressi significativi nei negoziati Ucraina-Russia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/linviato-speciale-americano-kushner-progressi-significativi-nei-negoziati-ucraina-russia_44817c41-c94b-49c5-82d4-c2480ddd3563.html"
+  },
+  {
+   "data": "2026-11-13T06:21:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Persistono i disservizi Microsoft, ma in via di risoluzione",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/persistono-i-disservizi-microsoft-ma-in-via-di-risoluzione_5a79e3ac-8079-48c2-9000-3be74c314bb0.html"
+  },
+  {
+   "data": "2026-11-13T06:09:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia sotto assedio del maltempo: arriva una lunga fase di piogge e temporali. Le date da segnare",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-dal-16-novembre-maltempo-pioggia-e-neve_38g237q8uyLphYJBqYclcT"
+  },
+  {
+   "data": "2026-11-13T05:56:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Ue (a piccoli passi) verso voce unica ai negoziati: leader divisi ma \"sulla buona strada\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-negoziati-ue_JxivnUKoNwUKzW97Oda3k"
   },
   {
    "data": "2026-11-12T23:17:43+00:00",
@@ -29,34 +107,16 @@
    "url": "https://www.adnkronos.com/cronaca/sciopero-13-novembre-oggi-milano-venezia-orari-fasce-garanzia_1cvVBLhzcA27hhk2F8nCeL"
   },
   {
-   "data": "2026-11-12T23:09:23+00:00",
+   "data": "2026-11-12T23:09:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Nvidia, Huang lascia: le dimissioni del Ceo e le ombre su Trump",
    "url": "https://www.adnkronos.com/internazionale/esteri/nvidia-huang-trump_4SYG7JpfJp4omyt5LuyolJ"
-  },
-  {
-   "data": "2026-11-12T23:05:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allarmi bomba, Meloni incontra le opposizioni: \"Quando è il momento sappiamo mettere le divisioni da parte\"",
-   "url": "https://www.adnkronos.com/politica/allarmi-bomba-meloni-opposizioni_1L7zkmdK41bok9BsexdOk6"
-  },
-  {
-   "data": "2026-11-12T23:04:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Zelensky incontra Witkoff e Kushner: \"Europa parteciperà a negoziati con la Russia\"",
-   "url": "https://www.adnkronos.com/cronaca/zelensky-meloni-incontro-ucraina-russia_7rq7ZtlGs9EvMnmr7poyZg"
   },
   {
    "data": "2026-11-12T22:43:36+00:00",
    "fonte": "ANSA",
    "titolo": "Una grande Italia ribalta la Francia e ora è prima in Nations League. Mancini: 'C'è voglia di riscatto'",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/12/una-grande-italia-ribalta-la-francia-e-ora-e-prima-in-nations-league.-mancini_9abbe0f2-e908-4b0b-820e-37f829bbca46.html"
-  },
-  {
-   "data": "2026-11-12T21:57:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, Fratelli d'Italia cresce e centrodestra vince anche senza Vannacci",
-   "url": "https://www.adnkronos.com/politica/sondaggio-elezioni-meloni-conte-schlein-di-battista_4b407oSlhcoTihdagDfvQ2"
   },
   {
    "data": "2026-11-12T21:53:54+00:00",
@@ -71,12 +131,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/cyber-team-e-sistemi-anti-buco-asl-allertate-su-cybersecurity_82350fa7-36c4-4dea-8347-1da8e9bb25e5.html"
   },
   {
-   "data": "2026-11-12T21:50:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia, Mancini: \"Tutti qui vogliono riscattarsi. Errore di Donnarumma? Non dovrebbe succedere\"",
-   "url": "https://www.adnkronos.com/sport/mancini-italia-francia-errore-donnarumma_65FxmSPeHkv9JLuYr3qULh"
-  },
-  {
    "data": "2026-11-12T21:50:28+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "I presidi, 'serve un canale di allerta centralizzato'",
@@ -89,34 +143,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/ancora-andropov-firma-nuovo-mail-bombing-piu-account-usati_2fc3c4dd-91b2-42f6-b08b-b7ed8596753e.html"
   },
   {
-   "data": "2026-11-12T21:45:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Campo largo, Renzi: \"Centrosinistra senza Italia viva non vince\"",
-   "url": "https://www.adnkronos.com/politica/renzi-conte-elezioni-m5s-italia-viva_2cIN3C9cfn5wxKCsXYPzbg"
-  },
-  {
    "data": "2026-11-12T21:39:28+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Nuovi allarmi bomba nelle scuole, palazzo Chigi: 'Coinvolti 3.788 istituti, solo 77 evacuati' - LIVEBLOG",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/nuovo-allarme-bomba-nelle-scuole-indagano-i-pm-dellantiterrorismo-liveblog_97a3c6b7-93f4-44a2-940b-dd33198f2f91.html"
-  },
-  {
-   "data": "2026-11-12T21:32:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Huang getta la spugna, l'amante cinese legata a Huawei",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/huang-getta-la-spugna-lamante-cinese-legata-a-huawei_0b01f8ad-f5ea-4fd2-a7a4-7ccfc68be774.html"
-  },
-  {
-   "data": "2026-11-12T21:28:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gf Vip, rissa sfiorata tra Alex Belli e Roncaccia: \"Devi stare zitto\"",
-   "url": "https://www.adnkronos.com/spettacoli/gf-vip-alex-belli-roncaccia-rissa-insulti_3Rp1RwzQ4Somkhv5euqT5N"
-  },
-  {
-   "data": "2026-11-12T21:14:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ieg: nei primi 9 mesi ricavi a 222,6 milioni (+16,7%), utile a 24,5 milioni (+53,3%)",
-   "url": "https://www.adnkronos.com/economia/ieg-nei-primi-9-mesi-ricavi-a-222-6-milioni-16-7-utile-a-24-5-milioni-53-3_60sQqLIGznoDlkXHJ7C2H1"
   },
   {
    "data": "2026-11-12T20:59:58+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Da gennaio molestava una 15enne sulla metro di Roma, arrestato",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/da-gennaio-molestava-15enne-sulla-metro-di-roma-arrestato_07d3769d-ccaf-494e-b6fd-6516347be53e.html"
-  },
-  {
-   "data": "2026-11-12T20:19:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, numeri combinazione vincente oggi 12 novembre",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-12-novembre_55rMl6iC9Sik7H7nsQT7Qi"
-  },
-  {
-   "data": "2026-11-12T20:18:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia, Donnarumma regala gol alla Francia e piovono critiche: \"È tornato Paperumma\"",
-   "url": "https://www.adnkronos.com/sport/donnarumma-errore-italia-francia-critiche_3mkEa3j0wjoiGLizuYt9KP"
-  },
-  {
-   "data": "2026-11-12T20:14:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Dal governo norme sudamericane', è scontro Messina-Meloni",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/12/dal-governo-norme-sudamericane-e-scontro-messina-meloni_66cb92ca-cf90-4cae-a644-923b05b820c5.html"
-  },
-  {
-   "data": "2026-11-12T20:13:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Maltempo al centronord, piena travolge migranti a Ventimiglia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/maltempo-al-centronord-piena-travolge-migranti-a-ventimiglia_fd1325d7-6a5a-4bce-9871-a73474015925.html"
-  },
-  {
-   "data": "2026-11-12T20:10:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Caritas: \"Persiste la povertà in Italia, in particolare quella sanitaria\"",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/caritas-persiste-la-poverta-in-italia-in-particolare-quella-sanitaria_d0c36f21-99e5-45b2-b837-857b63f94f26.html"
   }
  ]
 }

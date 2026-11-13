@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-11-13T01:22:21+00:00",
+  "generato": "2026-11-13T08:33:57+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 33,
-  "scaduti_scartati": 42,
+  "avvisi": 28,
+  "scaduti_scartati": 47,
   "in_corso": 21,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -76,32 +76,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Friuli Venezia Giulia",
-   "fenomeno": "Temporali",
-   "livello": "arancione",
-   "evento_originale": "Orange Thunderstorm Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-13T00:00:00+00:00",
-   "fine": "2026-11-13T05:59:00+00:00",
-   "emesso": "2026-11-12T10:29:48+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.154"
-  },
-  {
-   "in_corso": true,
-   "regione": "Friuli Venezia Giulia",
-   "fenomeno": "Pioggia",
-   "livello": "arancione",
-   "evento_originale": "Orange Rain Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-13T00:00:00+00:00",
-   "fine": "2026-11-13T05:59:00+00:00",
-   "emesso": "2026-11-12T10:29:48+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.153"
-  },
-  {
-   "in_corso": true,
    "regione": "Lazio",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -127,7 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.169"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -192,7 +166,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.162"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -205,7 +179,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.166"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -309,7 +283,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.160"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -350,19 +324,6 @@
   {
    "in_corso": true,
    "regione": "Liguria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-13T00:00:00+00:00",
-   "fine": "2026-11-13T05:59:00+00:00",
-   "emesso": "2026-11-12T10:29:49+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.165"
-  },
-  {
-   "in_corso": true,
-   "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
@@ -387,7 +348,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261112112948.178"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -411,32 +372,6 @@
    "fine": "2026-11-13T23:59:00+00:00",
    "emesso": "2026-11-12T10:29:48+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261112112948.156"
-  },
-  {
-   "in_corso": true,
-   "regione": "Veneto",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-13T00:00:00+00:00",
-   "fine": "2026-11-13T05:59:00+00:00",
-   "emesso": "2026-11-12T10:29:48+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.158"
-  },
-  {
-   "in_corso": true,
-   "regione": "Veneto",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-13T00:00:00+00:00",
-   "fine": "2026-11-13T05:59:00+00:00",
-   "emesso": "2026-11-12T10:29:48+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261112112948.157"
   }
  ]
 }
