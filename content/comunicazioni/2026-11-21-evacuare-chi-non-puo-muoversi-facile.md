@@ -65,11 +65,11 @@ Il piano del Comune dice dove sono gli ospedali, le case di cura e le carceri.
 
 Dice anche quante persone hanno bisogno di aiuto speciale.
 
-Così il Comune sa dove portare le persone e con quali mezzi.
+Così il Comune sa quali posti e quali mezzi ci sono per aiutare queste persone.
 
 ## Le prove
 
-Una volta all'anno la struttura deve fare una prova di evacuazione.
+Una volta all'anno la struttura deve fare una prova antincendio.
 
 La prova serve a vedere se il piano funziona.
 

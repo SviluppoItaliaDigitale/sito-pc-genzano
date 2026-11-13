@@ -13,7 +13,7 @@ tts: true
 social_citazione: "Prendersi cura di chi soccorre è un compito dell'organizzazione. Non si lascia alla buona volontà del singolo."
 social_punti:
   - "Tre fatiche diverse: la stanchezza che si accumula, lo stress da evento critico, il trauma vicario"
-  - "Segnali da osservare in te e nei compagni: sonno e appetito che cambiano, irritabilità, scatti di rabbia, isolamento, più alcol"
+  - "Segnali da osservare in te e nei compagni: appetito che cambia, riposo difficile, irritabilità, scatti di rabbia, isolamento, più alcol"
   - "Turni, pause regolari e riposo prima di tornare al lavoro sono indicazioni dell'Organizzazione Mondiale della Sanità"
   - "Se il disagio dura, peggiora o ostacola la vita di tutti i giorni, parlane con il medico o con uno psicologo"
 allegati: []
@@ -22,7 +22,7 @@ draft: false
 
 Immagina un volontario che rientra a casa all'alba. Ha passato la notte sotto la pioggia, a controllare i punti dove l'acqua si raccoglie. Si toglie gli stivali, mette il telefono in carica, prova a dormire. Il sonno non arriva. Nella testa tornano la strada allagata e la voce di una persona anziana che non voleva uscire di casa. E il pensiero di aver dimenticato qualcosa.
 
-Può succedere a chiunque presti aiuto. Chi soccorre porta a casa la fatica del corpo. A volte anche quella di ciò che ha visto e sentito. In questo articolo guardiamo l'emergenza con gli occhi di chi presta aiuto. Non è un testo clinico: se qualcosa ti riguarda da vicino, il riferimento resta un professionista.
+Può succedere a chiunque presti aiuto, e sono reazioni comuni, non un segno di debolezza. Chi soccorre porta a casa la fatica del corpo. A volte anche quella di ciò che ha visto e sentito. In questo articolo guardiamo l'emergenza con gli occhi di chi presta aiuto. Non è un testo clinico: se qualcosa ti riguarda da vicino, il riferimento resta un professionista. Il Gruppo non offre supporto psicologico.
 
 ## Tre fatiche diverse
 
@@ -34,7 +34,7 @@ La terza ha un nome meno noto: **trauma vicario**, chiamato anche stress traumat
 
 In Italia lo dice in modo chiaro una direttiva del Presidente del Consiglio dei Ministri, del 13 giugno 2006. Riguarda gli interventi psicosociali nelle catastrofi. Fra i destinatari dell'assistenza psicologica mette anche i soccorritori, «volontari e professionisti», e intere squadre di soccorso.
 
-Quanto è diffuso il problema? Una revisione ha riunito 28 studi su oltre 20.000 soccorritori, soprattutto vigili del fuoco, personale delle ambulanze e forze dell'ordine. Circa uno su dieci presentava, al momento dello studio, un disturbo da stress post-traumatico. È molto più che nella popolazione generale. Il dato non riguarda direttamente il volontariato e non è una previsione per il singolo. Dice che il rischio esiste e che va gestito.
+Quanto è diffuso il problema? Una revisione ha riunito 28 studi su oltre 20.000 soccorritori, soprattutto vigili del fuoco, personale delle ambulanze e forze dell'ordine. Circa uno su dieci presentava, al momento dello studio, un disturbo da stress post-traumatico. È una media fra studi diversi, e gli autori la giudicano molto più alta che nella popolazione generale. Il dato non riguarda direttamente il volontariato e non è una previsione per il singolo: la maggior parte dei soccorritori non lo presenta. Dice che il rischio esiste e che va tenuto presente.
 
 ## I segnali, in te e nei compagni
 
@@ -43,7 +43,7 @@ Molte reazioni allo stress sono normali in situazioni fuori dal normale. Il CDC 
 - **nel corpo**: stanchezza, mal di testa, nausea, mascella serrata;
 - **nel pensiero**: confusione, difficoltà a concentrarsi, vuoti di memoria, incubi;
 - **nelle emozioni**: ansia, senso di colpa, tristezza, paura, irritabilità, sensazione di essere sopraffatti;
-- **nel comportamento**: chiudersi, scatti di rabbia, bere troppo, sonno e appetito che cambiano.
+- **nel comportamento**: chiudersi, scatti di rabbia, bere troppo, appetito che cambia, difficoltà a riposare.
 
 Un segnale passeggero, nelle ore dopo un intervento, è atteso. Anche i pensieri e i ricordi che tornano, scrive il CDC, sono normali e di solito si attenuano col tempo. Conta quando dura, peggiora o pesa sulla vita di tutti i giorni. Dolore al petto, fatica a respirare o segni di shock sono invece un'urgenza medica: si chiama subito il **112**.
 
@@ -59,7 +59,7 @@ Il CDC aggiunge che il recupero non è lineare: ci sono giorni buoni e giorni me
 
 Prendersi cura di chi soccorre è un compito dell'organizzazione. Non si lascia alla buona volontà del singolo.
 
-Il primo strumento sono **i turni**. L'OMS raccomanda orari ragionevoli, carico di lavoro diviso, turni nella fase acuta e pause regolari. Il CDC chiede ai capisquadra di rispettare la rotazione e di osservare chi è esausto o distratto. Un soccorritore stremato rischia di ferire sé stesso e gli altri.
+Il primo strumento sono **i turni**. L'OMS raccomanda orari ragionevoli, carico di lavoro diviso, turni nella fase acuta e pause regolari. Un soccorritore stanco ha meno attenzione per i pericoli intorno a sé: per questo riposo e rotazione fanno parte della sicurezza, e chi coordina li rispetta e osserva chi è esausto.
 
 Il secondo è **la prevenzione**. La direttiva del 2006 chiede di valutare in anticipo i fattori di rischio di ogni scenario. Lo scopo è prevenire disagi psicofisici nei soccorritori. Per gli operatori sanitari sul posto prevede un monitoraggio dei segni di stress.
 
@@ -75,9 +75,11 @@ Il quarto è **il supporto professionale**. La direttiva del 2006 affida alle Re
 - limita alcol, caffeina e nicotina, come suggerisce l'OMS;
 - chiedi ai compagni come stanno e lascia che lo chiedano a te;
 - parla di ciò che hai vissuto quando lo scegli tu, con chi scegli tu;
-- se il disagio dura, peggiora o ti ostacola, parlane con il medico o con uno psicologo. L'OMS indica di farlo se le difficoltà continuano oltre un mese, ma non serve aspettare se ti preoccupano.
+- se il disagio dura, peggiora o ti ostacola, parlane con il medico o con uno psicologo. Non serve aspettare che peggiori: puoi farlo anche solo perché ti preoccupa.
 
-**Se sei un familiare o un amico**, ascolta senza fare domande a raffica e senza pretendere racconti. Il CDC suggerisce alle famiglie pazienza, comprensione e dialogo.
+**Se sei un familiare o un amico**, ascolta senza fare domande a raffica e senza pretendere racconti. Il CDC ricorda che anche la famiglia ha vissuto l'esperienza e che ci si sostiene a vicenda.
+
+Il Gruppo non offre supporto psicologico e non sostituisce medico, servizi sanitari o psicologi.
 
 In caso di pericolo immediato, anche se pensi di farti del male, chiama il **112**.
 
