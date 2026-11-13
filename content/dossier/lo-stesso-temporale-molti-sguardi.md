@@ -70,7 +70,7 @@ Lo sguardo di chi risponde: [dentro la sala operativa](/comunicazioni/2026-11-20
 {{< dossier-scena id="lina" image="/images/dossier/temporali-autoprotezione.webp" alt="Gocce di pioggia su un vetro che sfocano i palazzi sullo sfondo, viste dall'interno di una casa" align="left" kicker="Mezzanotte · La signora Lina" title="«Io da qui<br>non mi muovo»" credito="Pioggia sul vetro (immagine illustrativa) · foto Pongola · CC BY 4.0, via Wikimedia Commons" >}}
 La signora Lina abita da sola al piano terra, in una strada dove l'acqua scende veloce. La Polizia Locale e due volontari le chiedono di salire dalla vicina del primo piano finché la pioggia non cala.
 
-Lei dice di no. Ha il gatto, ha paura dei ladri, e «tanto non è mai successo niente». I volontari non alzano la voce. La ascoltano, le spiegano perché, le dicono che il gatto può venire con lei, le portano su i farmaci della sera. Dopo venti minuti la signora Lina sale, quando decide lei.
+Lei dice di no. Ha il gatto, ha paura dei ladri, e «tanto non è mai successo niente». I volontari non alzano la voce. La ascoltano, le spiegano perché, le dicono che il gatto può venire con lei, le portano su i farmaci della sera. Dopo venti minuti è lei a decidere di salire.
 
 Lo sguardo di chi esita: [chi non vuole andarsene](/comunicazioni/2026-11-13-chi-non-vuole-lasciare-casa/). E di chi da solo non può uscire: [evacuare chi non può muoversi](/comunicazioni/2026-11-21-evacuare-chi-non-puo-muoversi/).
 {{< /dossier-scena >}}
