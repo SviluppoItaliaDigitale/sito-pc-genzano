@@ -661,3 +661,7 @@ Contenuto in ordine di priorità: banner emergenza (se attivo), 112 grande, stat
 _[Indice manuale](README.md)_
 
 [← Parte 03 — Immagini per gli articoli](parte-03-immagini-per-gli-articoli.md) · [↑ Indice](README.md) · [Parte 05 — Checklist pre-pubblicazione →](parte-05-checklist-pre-pubblicazione.md)
+
+## Dati che si ripetono in più pagine (dal 13/11/2026)
+
+Alcuni dati compaiono in molte pagine: l'anno di avvio del 112 nel Lazio, il tetto per i volontari autonomi, le ore più calde della giornata. Nelle pagine (non negli articoli di `comunicazioni/`) non si scrivono a mano: si richiamano con `{{< valore "chiave" >}}`, e il valore sta una volta sola in `data/valori.yaml`. Per aggiornarlo si cambia quel file. Ogni dato ha anche la sua voce in `data/dati_canonici.yaml`, che blocca la pull request se qualcuno lo scrive in modo diverso negli articoli, nelle traduzioni, nei giochi o nelle schede. Quando una verifica sulle fonti conferma un dato che il sito ripete, lo si aggiunge al registro anche se oggi è scritto giusto ovunque.

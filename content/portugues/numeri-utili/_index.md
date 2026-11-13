@@ -18,7 +18,7 @@ tts: false
 
 ## Números de emergência e socorro
 
-Na região do Lácio, desde 2015, **o único número para ligar em caso de emergência é o 112**. Todas as chamadas chegam à Central Única do NUE, que encaminha a intervenção ao serviço competente (Bombeiros, emergência sanitária, Carabinieri, Polícia, incêndios florestais).
+Na região do Lácio, desde {{< valore "nue112_lazio_anno" >}}, **o único número para ligar em caso de emergência é o 112**. Todas as chamadas chegam à Central Única do NUE, que encaminha a intervenção ao serviço competente (Bombeiros, emergência sanitária, Carabinieri, Polícia, incêndios florestais).
 
 | Número | Serviço | Quando ligar |
 |---|---|---|

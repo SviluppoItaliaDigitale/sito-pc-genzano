@@ -18,7 +18,7 @@ tts: false
 
 ## Emergency and rescue numbers
 
-In the Lazio region, since 2015, **the only number to call in case of emergency is 112**. All calls reach the NUE Single Operations Centre, which dispatches the appropriate service (Fire Brigade, medical emergency, Carabinieri, Police, wildfires).
+In the Lazio region, since {{< valore "nue112_lazio_anno" >}}, **the only number to call in case of emergency is 112**. All calls reach the NUE Single Operations Centre, which dispatches the appropriate service (Fire Brigade, medical emergency, Carabinieri, Police, wildfires).
 
 | Number | Service | When to call |
 |---|---|---|

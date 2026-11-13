@@ -315,7 +315,7 @@ In un'emergenza le reti telefoniche possono essere sovraccariche, le strade bloc
 
 **4. Numeri utili**
 
-Nel Lazio, dal 2015, **l'unico numero di emergenza per il cittadino è il 112** (NUE). Tutte le chiamate arrivano alla Centrale Unica che smista l'intervento all'ente competente.
+Nel Lazio, dal {{< valore "nue112_lazio_anno" >}}, **l'unico numero di emergenza per il cittadino è il 112** (NUE). Tutte le chiamate arrivano alla Centrale Unica che smista l'intervento all'ente competente.
 
 | Numero | Servizio |
 |---|---|

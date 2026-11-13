@@ -90,6 +90,10 @@ CSS scoped sezione **CHI CHIAMARE BOX v1.0** in `custom.css`. In stampa il numer
 
 **Struttura uniforme finale delle pagine rischio**: dopo l'introduzione "Perché è rilevante sul nostro territorio" e gli eventuali "Segnali e situazioni tipiche", ogni pagina ha l'ordine fisso **Cosa fare PRIMA → Cosa fare DURANTE → Cosa fare DOPO → `cosa-non-fare` → `chi-chiamare`**. Modello di riferimento per nuovi rischi che dovessero essere aggiunti in futuro.
 
+## Shortcode `valore` — dati ripetuti scritti una volta sola (13/11/2026)
+
+`{{< valore "chiave" >}}` stampa il valore scritto in `data/valori.yaml` (anno del 112 nel Lazio, tetto per i volontari autonomi, ore più calde…). Cambiando il file cambia in tutte le pagine che lo usano; una chiave inesistente ferma la build. Si usa nel **corpo** delle pagine di `content/` fuori da `comunicazioni/`: non nel frontmatter (gli shortcode lì non funzionano) e non negli articoli, perché i loro sorgenti alimentano i testi social e il braille, che lo stamperebbero com'è. Dove non si può usare (articoli, `static/`, giochi, quiz, JavaScript) il dato resta scritto per esteso e lo sorveglia `data/dati_canonici.yaml`: ogni chiave di `valori.yaml` ha lì la sua voce con fonte e varianti vietate. Nato dopo la correzione del 112 «dal 2017», che ha richiesto di toccare una ventina di file a mano.
+
 ## Shortcode `link-card` (griglia di card link nei contenuti)
 
 Card link visibile (icona + titolo + descrizione) per griglie di consultazione dentro le pagine markdown, in alternativa all'elenco puntato anonimo. Nato per la sezione "Pagine di consultazione rapida" dell'hub `/rischi-prevenzione/` (la scheda scuolabus non si trovava in un bullet — maggio 2026).
