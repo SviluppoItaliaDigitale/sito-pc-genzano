@@ -5,27 +5,69 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-13T22:13:16+00:00",
+  "generato": "2026-11-14T02:27:56+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-13T21:57:39+00:00",
+   "data": "2026-11-14T02:20:24+00:00",
    "fonte": "ANSA",
-   "titolo": "S&P conferma i rating BBB+/A-2 sull'Italia, outlook positivo. La crescita supererà le stime",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/13/sp-conferma-i-rating-bbba-2-sullitalia-outlook-positivo_968a7f83-4609-47b6-b8c7-0b1ab287d3a7.html"
+   "titolo": "Tennis: Sabalenka eliminata nella fase a gironi delle WTA Finals Indian Wells da Svitolina",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/14/tennis-sabalenka-eliminata-nella-fase-a-gironi-delle-wta-finals-indian_aa915780-925d-4002-9654-6f679f765731.html"
   },
   {
-   "data": "2026-11-13T21:52:02+00:00",
+   "data": "2026-11-14T02:12:46+00:00",
    "fonte": "ANSA",
-   "titolo": "Traffico aereo bloccato in tutti gli Stati Uniti: “Ragioni di sicurezza”",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/traffico-aereo-bloccato-in-tutti-gli-stati-uniti-ragioni-di-sicurezza_b5ee5d87-e55e-4312-9c02-6297ce3e99d9.html"
+   "titolo": "Revocato il blocco dei voli negli Stati Uniti, 'decine di migliaia di passeggeri bloccati'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/revocato-il-blocco-dei-voli-negli-stati-uniti-decine-di-migliaia-di-passeggeri_d2a6ded1-a075-4399-8855-8bc69e436c24.html"
+  },
+  {
+   "data": "2026-11-14T00:41:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump, Xi e Putin terranno colloqui trilaterali a Shenzhen",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/trump-xi-e-putin-terranno-colloqui-trilaterali-a-shenzhen_5cbbf8a4-fed1-4d94-826a-eb8148cd6b4e.html"
+  },
+  {
+   "data": "2026-11-13T23:12:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Europa ha scelto i rappresentanti al tavolo di pace: 5 Paesi più Commissione e Consiglio Ue. C'è anche l'Italia",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-tavolo-pace-europa-italia_3bbGRTvLBqnm9O6YYU6KLA"
+  },
+  {
+   "data": "2026-11-13T23:08:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, governo apre a modifiche: via tagli scuola e caccia a risorse su sanità. Ma la Cgil conferma sciopero generale di novembre",
+   "url": "https://www.adnkronos.com/economia/manovra-governo-sindacati-incontro-modifiche-sciopero_6Asdsd35RP6LACPHJF6NTZ"
+  },
+  {
+   "data": "2026-11-13T23:03:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cortei, oggi a Milano torna 'Italia in piazza': \"Repressione non ci ferma\"",
+   "url": "https://www.adnkronos.com/cronaca/corteo-oggi-milano-14-novembre_44mVchVKhZ5FJNd3RFB6Eg"
+  },
+  {
+   "data": "2026-11-13T22:43:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-11-13T22:34:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sanremo 2027, De Martino: \"I nomi dei Big saranno svelati l'11 dicembre\"",
+   "url": "https://www.adnkronos.com/spettacoli/sanremo-2027-big-gara-nomi-quando_2eu0HiitOJE9b7lebrSqGv"
+  },
+  {
+   "data": "2026-11-13T22:32:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "S&P conferma il rating sull'Italia: 'La crescita supererà le stime'. Giorgetti: 'È la strada giusta'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/13/sp-conferma-il-rating-sullitalia-la-crescita-superera-le-stime.-giorgetti-e-la-strada-giusta_968a7f83-4609-47b6-b8c7-0b1ab287d3a7.html"
   },
   {
    "data": "2026-11-13T21:31:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Stop a tutti gli aerei negli Usa, voli bloccati per motivi di sicurezza",
+   "titolo": "Stop a tutti gli aerei negli Usa per 4 ore, voli bloccati per motivi di sicurezza",
    "url": "https://www.adnkronos.com/internazionale/esteri/stop-voli-usa-oggi-sicurezza_10e7RF5gereJoJkK2RVyIm"
   },
   {
@@ -39,12 +81,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Superenalotto, numeri combinazione vincente oggi 13 novembre",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-numeri-combinazione-venerdi-13-novembre_6vQo7IqLLF3a0vAoOtNf8v"
-  },
-  {
-   "data": "2026-11-13T20:35:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Caccia al successore in Nvidia, contattato il ceo della rivale Arm, Rene Haas",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/caccia-al-successore-in-nvidia-contattato-il-ceo-della-rivale-arm-rene-haas_687fc1cb-f5ec-40c5-b754-207e9c93270f.html"
   },
   {
    "data": "2026-11-13T20:21:27+00:00",
@@ -72,7 +108,7 @@
   },
   {
    "data": "2026-11-13T19:55:28+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Infermiera condannata a 25 anni torna libera, non uccise lei la vicina",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/monica-busetto-linfermiera-condannata-a-25-anni-torna-libera-non-uccise-lei_8746d202-203b-435f-ac8d-c7ce3495b6fa.html"
   },
@@ -153,42 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Nordio, 'tutela penale per nuovi reati tecnologici sarà tema del futuro'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/nordio-tutela-penale-per-nuovi-reati-tecnologici-sara-tema-del_1fd5f5c9-d457-43de-ab53-813bca3d2863.html"
-  },
-  {
-   "data": "2026-11-13T18:46:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dipendenza tecnologica e rischio truffe, i nodi del caso Microsoft",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/11/13/dipendenza-tecnologica-e-rischio-truffe-i-nodi-del-caso-microsoft_d66d6be9-e87e-4070-9b69-0dc9ca7bf0ec.html"
-  },
-  {
-   "data": "2026-11-13T18:43:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Re Carlo III balla alle Bahamas durante una sfilata tradizionale",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/13/re-carlo-iii-balla-alle-bahamas-durante-una-sfilata-tradizionale_b16126ac-d202-4a6a-88f1-fc63e5b95bd2.html"
-  },
-  {
-   "data": "2026-11-13T18:43:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Microsoft down in tutto il mondo, 'ma non è un cyberattacco'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/microsoft-down-in-tutto-il-mondo-ma-non-e-un-cyberattacco_820a9d7d-9b9d-4214-8537-0834b1378b3d.html"
-  },
-  {
-   "data": "2026-11-13T18:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, Margiotta (Confsal). \"Bene incontro a Chigi, via i tagli sulla scuola\"",
-   "url": "https://www.adnkronos.com/economia/manovra-margiotta-confsal-bene-incontro-a-chigi-via-i-tagli-sulla-scuola_7yezZAzVvCHP1ZnHRbSmBw"
-  },
-  {
-   "data": "2026-11-13T18:38:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "I bimbi del bosco per ora non tornano a casa, rigettato il ricorso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/pillon-rigettato-il-ricorso-della-famiglia-del-bosco.-no-al-rientro-definitivo-dei_796a5aab-263b-44ce-aa32-966d9dec0e04.html"
-  },
-  {
-   "data": "2026-11-13T18:35:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Reddito di cittadinanza, per M5S c'è accordo nel centrosinistra",
-   "url": "https://www.adnkronos.com/politica/reddito-cittadinanza-m5s-pd-campo-largo_2G0xiBxS5aA0KEyDbOziHV"
   }
  ]
 }
