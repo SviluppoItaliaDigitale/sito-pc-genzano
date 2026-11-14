@@ -27,7 +27,7 @@ sezioni:
 
 {{< dossier-dati id="prima" image="/images/dossier/storia-longarone-1963.webp" alt="La valle del Vajont devastata, 1963" >}}
 {{< dossier-dato to="1908" label="Il terremoto di **Messina e Reggio**: circa ottantamila morti. I soccorsi arrivano dall'esercito e dalla Marina, ma in ordine sparso, senza un piano" >}}
-{{< dossier-dato to="1951" label="L'alluvione del **Polesine**: il Po rompe gli argini — circa cento vittime, centinaia di migliaia di sfollati. Ancora una volta si improvvisa" >}}
+{{< dossier-dato to="1951" label="L'alluvione del **Polesine**: il Po rompe gli argini — 101 vittime, sette dispersi, circa 180.000 sfollati. Ancora una volta si improvvisa" >}}
 {{< dossier-dato to="1963" label="Il **Vajont**: una frana nel bacino della diga genera un'onda che cancella Longarone. Quasi **duemila morti**" >}}
 {{< dossier-dato to="0" label="I sistemi **permanenti** di protezione civile in Italia, prima degli anni Ottanta: ogni emergenza si affrontava da capo, caso per caso" >}}
 {{< /dossier-dati >}}
