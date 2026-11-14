@@ -23,6 +23,12 @@
 # (Versilia l'8 novembre, Friuli il 26 novembre, Livorno il 20 settembre).
 
 ricorrenze:
+  - giorni: ["01-11"]
+    evento: "Terremoto del Val di Noto"
+    anno: 1693
+    chiave: "val-di-noto-1693"
+    fonte: "https://emidius.mi.ingv.it/CPTI15-DBMI15/eq/16930111_1330_000"
+    nota: "Scossa principale dell'11 gennaio; la prima forte scossa fu il 9."
   - giorni: ["01-12"]
     evento: "Terremoto di Haiti"
     anno: 2010
@@ -37,7 +43,6 @@ ricorrenze:
     chiave: "concordia-2012"
     fonte: "https://www.protezionecivile.gov.it/en/notizia/13-january-2012--the-wreck-of-the-concordia-ship/"
     nota: "Stato di emergenza nazionale, capo del Dipartimento commissario delegato."
-    articolo_da_scrivere: true
   - giorni: ["01-14", "01-15"]
     evento: "Terremoto del Belice"
     anno: 1968
@@ -51,7 +56,6 @@ ricorrenze:
     anno: 2020
     chiave: "(covid|stato-di-emergenza)-2020"
     fonte: "https://www.gazzettaufficiale.it/eli/id/2020/02/01/20A00737/sg"
-    articolo_da_scrivere: true
   - giorni: ["02-06"]
     evento: "Terremoto in Turchia e Siria"
     anno: 2023
@@ -64,6 +68,11 @@ ricorrenze:
     evento: "Terremoto e tsunami del Tōhoku, Fukushima"
     anno: 2011
     chiave: "tohoku"
+  - giorni: ["03-18"]
+    evento: "Eruzione del Vesuvio"
+    anno: 1944
+    chiave: "vesuvio-1944"
+    fonte: "https://www.ov.ingv.it/index.php/storia-vesuvio/1944"
   - giorni: ["04-06"]
     evento: "Terremoto dell'Aquila"
     anno: 2009
@@ -76,6 +85,11 @@ ricorrenze:
     evento: "Incidente nucleare di Chernobyl"
     anno: 1986
     chiave: "chernobyl"
+  - giorni: ["05-03"]
+    evento: "Alluvione di Senigallia (Misa)"
+    anno: 2014
+    chiave: "senigallia-2014"
+    fonte: "https://www.protezionecivile.gov.it/it/normativa/deliberazione-del-consiglio-dei-ministri-del-30-giugno-2014--dichiarato-lo-stato-di-emergenza-per-il-maltempo-di-maggio-2014-nelle-marche/"
   - giorni: ["05-05"]
     evento: "Frane di Sarno e Quindici"
     anno: 1998
@@ -109,6 +123,11 @@ ricorrenze:
     evento: "Disastro ferroviario di Viareggio"
     anno: 2009
     chiave: "viareggio-2009"
+  - giorni: ["07-03"]
+    evento: "Crollo del seracco della Marmolada"
+    anno: 2022
+    chiave: "marmolada-2022"
+    fonte: "https://www.ufficiostampa.provincia.tn.it/content/view/pdf/211949"
   - giorni: ["07-10"]
     evento: "Disastro di Seveso"
     anno: 1976
@@ -135,7 +154,6 @@ ricorrenze:
     chiave: "raganello"
     fonte: "https://polaris.irpi.cnr.it/event/piena-improvvisa-del-torrente-raganello-civita-cs-2/"
     nota: "Pomeriggio del 20 agosto secondo la scheda dell'evento del CNR-IRPI e il rapporto ARPACAL; l'elenco riassuntivo 1951-2018 dello stesso istituto riporta per errore il 19."
-    articolo_da_scrivere: true
   - giorni: ["08-21"]
     evento: "Terremoto di Ischia"
     anno: 2017
@@ -192,7 +210,6 @@ ricorrenze:
     anno: 2000
     chiave: "(piemonte|valle-d-aosta|nord-ovest)-2000"
     fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
-    articolo_da_scrivere: true
   - giorni: ["10-15"]
     evento: "Alluvione del Sannio"
     anno: 2015
@@ -206,13 +223,11 @@ ricorrenze:
     anno: 1954
     chiave: "salerno-1954"
     fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
-    articolo_da_scrivere: true
   - giorni: ["10-25", "10-26"]
     evento: "Alluvione delle Cinque Terre e della Lunigiana"
     anno: 2011
     chiave: "(cinque-terre|lunigiana)-2011"
     fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
-    articolo_da_scrivere: true
   - giorni: ["10-26"]
     evento: "Sequenza sismica del Pollino, scossa di Mormanno"
     anno: 2012
@@ -225,6 +240,11 @@ ricorrenze:
     evento: "Tempesta Vaia"
     anno: 2018
     chiave: "vaia-2018"
+  - giorni: ["10-29"]
+    evento: "Terremoto di Santa Venerina (Etna)"
+    anno: 2002
+    chiave: "santa-venerina-2002"
+    fonte: "https://emergenze.protezionecivile.gov.it/it/vulcaniche/eruzione-etna-2002-2003/"
   - giorni: ["10-30"]
     evento: "Terremoto di Norcia"
     anno: 2016
@@ -233,18 +253,21 @@ ricorrenze:
     evento: "Terremoto di San Giuliano di Puglia"
     anno: 2002
     chiave: "san-giuliano-puglia"
+  - giorni: ["11-02", "11-03"]
+    evento: "Alluvione in Toscana (Campi Bisenzio, Prato)"
+    anno: 2023
+    chiave: "toscana-2023"
+    fonte: "https://www.appenninosettentrionale.it/itc/?page_id=17676"
   - giorni: ["11-03"]
     evento: "Alluvione del Biellese"
     anno: 1968
     chiave: "biellese-1968"
     fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
-    articolo_da_scrivere: true
   - giorni: ["11-03"]
     evento: "Alluvione di Casteldaccia e della provincia di Palermo"
     anno: 2018
     chiave: "(casteldaccia|palermo)-2018"
     fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
-    articolo_da_scrivere: true
   - giorni: ["11-04"]
     evento: "Alluvione di Firenze"
     anno: 1966
@@ -258,6 +281,11 @@ ricorrenze:
     anno: 1994
     chiave: "piemonte-1994"
     nota: "Nel 2026 l'articolo è uscito il 7 novembre."
+  - giorni: ["11-12"]
+    evento: "Acqua alta eccezionale a Venezia"
+    anno: 2019
+    chiave: "venezia-2019"
+    fonte: "https://www.isprambiente.gov.it/files2020/notizie/ispra_cpsm_cnr_novembre_2019_maree_eccezionali.pdf"
   - giorni: ["11-14"]
     evento: "Alluvione del Polesine"
     anno: 1951
@@ -269,7 +297,6 @@ ricorrenze:
     chiave: "sardegna-2013"
     fonte: "https://polaris.irpi.cnr.it/sardegna-2013-la-furia-del-ciclone-cleopatra/"
     nota: "Bilancio discordante nelle pagine del CNR-IRPI (16 morti e un disperso nel 2013, 18 nell'elenco 1951-2018): da verificare prima di scrivere."
-    articolo_da_scrivere: true
   - giorni: ["11-23"]
     evento: "Terremoto dell'Irpinia"
     anno: 1980
@@ -284,7 +311,12 @@ ricorrenze:
     chiave: "(santa-lucia|sicilia-orientale|carlentini)-1990"
     fonte: "https://webservices.ingv.it/fdsnws/event/1/query?eventid=363529&format=text"
     nota: "Ora 01:24 italiane. Non è l'articolo sulla festa di Santa Lucia del 13/12."
-    articolo_da_scrivere: true
+  - giorni: ["12-13"]
+    evento: "Frana di Ancona (Posatora)"
+    anno: 1982
+    chiave: "ancona-1982"
+    fonte: "https://www.normattiva.it/eli/id/1983/05/07/083U0156/CONSOLIDATED/19860302"
+    nota: "Legge 156/1983: «movimento franoso del 13 dicembre 1982»."
   - giorni: ["12-26"]
     evento: "Tsunami dell'Oceano Indiano"
     anno: 2004
@@ -293,3 +325,8 @@ ricorrenze:
     evento: "Terremoto di Messina e Reggio Calabria"
     anno: 1908
     chiave: "messina-reggio-calabria-1908"
+  - giorni: ["12-30"]
+    evento: "Maremoto di Stromboli (Sciara del Fuoco)"
+    anno: 2002
+    chiave: "stromboli-2002"
+    fonte: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-maremoto-di-stromboli/"
