@@ -66,7 +66,7 @@ Le frane non sono solo natura. Depositi mal collocati, sbancamenti e suolo reso 
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="cinque-terre" image="/images/dossier/frane-cinque-terre.webp" alt="Terrazzamenti a secco coltivati a vigneto su un ripido versante delle Cinque Terre, a Manarola, percorsi da un sentiero" align="top" kicker="25 ottobre 2011 · Liguria" title="La pioggia che<br>scava i versanti" credito="Foto: Tangopaso · pubblico dominio, via Wikimedia Commons" >}}
-Il 25 ottobre 2011, in poche ore, le province di La Spezia e Massa-Carrara ricevettero **oltre 500 mm di pioggia**. Colate e frane sommersero Vernazza e Monterosso: **13 vittime** e oltre **1.180 evacuati**. Vernazza fu ricostruita in più di due anni.
+Il 25 ottobre 2011, in poche ore, le province di La Spezia e Massa-Carrara ricevettero **oltre 500 mm di pioggia**. Colate e frane sommersero Vernazza e Monterosso: **13 vittime** e circa **mille sfollati**, secondo il CNR-IRPI.
 
 I **terrazzamenti** a secco, come questi, trattengono il versante. Quando vengono abbandonati, i muri cedono e la pioggia scava. Terrazzi non curati e piogge brevi ma violentissime sono il mix tipico del rischio che ci aspetta.
 {{< /dossier-scena >}}

@@ -73,7 +73,7 @@ Tra terremoto e onde le vittime furono **circa 80.000**, secondo gli studi più 
 {{< dossier-scena id="stromboli" image="/images/dossier/maremoto-stromboli.webp" alt="Lo Stromboli visto dal mare: il pendio grigio della Sciara del Fuoco scende fino all'acqua e un lieve pennacchio sale dalla cima sotto un cielo sereno" align="top" kicker="30 dicembre 2002 · Isole Eolie" title="Non serve<br>un terremoto" credito="Foto: Ghost-in-the-Shell · CC BY 2.0, via Wikimedia Commons" >}}
 Il **30 dicembre 2002** due frane lungo la **Sciara del Fuoco** di Stromboli scaricarono in mare milioni di metri cubi di roccia. Bastò: si formò un maremoto con onde fino a **10-11 metri** sulla costa dell'isola.
 
-Ci furono feriti lievi, nessun morto. È la prova che in Italia un'onda può nascere anche da una **frana vulcanica**, non solo da un terremoto.
+Secondo l'INGV ci furono tre feriti. È la prova che in Italia un'onda può nascere anche da una **frana vulcanica**, non solo da un terremoto.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="mediterraneo" image="/images/dossier/maremoto-lazio.webp" alt="Fotografia notturna dallo spazio: la penisola italiana disegnata dalle luci delle città, con la Pianura Padana e le coste illuminate, sotto un cielo stellato" align="right" kicker="Il Mediterraneo" title="Un mare piccolo,<br>tempi brevissimi" credito="Foto: l'Italia di notte dalla Stazione Spaziale Internazionale · NASA · pubblico dominio" >}}
