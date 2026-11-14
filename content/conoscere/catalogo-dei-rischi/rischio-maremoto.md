@@ -44,7 +44,7 @@ Negli ultimi mille anni, lungo le coste italiane, sono state documentate **varie
 
 Il caso più drammatico è il **terremoto di Messina e Reggio Calabria del 28 dicembre 1908**: la scossa e il maremoto che ne seguì causarono circa **80.000 vittime**, il più grave disastro naturale della storia italiana. Fu proprio dopo quell'evento che l'Italia introdusse la prima classificazione sismica del territorio.
 
-Un maremoto più recente ha colpito le **isole Eolie nel 2002**, generato da una frana lungo il fianco dello Stromboli durante una forte eruzione: l'onda raggiunse i **10 metri** di altezza. Non provocò vittime solo perché avvenne d'inverno, in una giornata di pioggia, con le spiagge deserte. È utile ricordare che le coste italiane possono essere raggiunte anche da maremoti generati lontano, ad esempio da un forte terremoto lungo la costa algerina o nel Mediterraneo orientale.
+Un maremoto più recente ha colpito le **isole Eolie nel 2002**, generato da una frana lungo il fianco dello Stromboli durante una forte eruzione: l'onda raggiunse i **10 metri** di altezza. Secondo l'INGV ci furono tre feriti. È utile ricordare che le coste italiane possono essere raggiunte anche da maremoti generati lontano, ad esempio da un forte terremoto lungo la costa algerina o nel Mediterraneo orientale.
 
 A scala globale, l'evento di **Tōhoku in Giappone del 2011** ha mostrato come un maremoto possa innescare emergenze multiple, fino all'incidente della centrale nucleare di Fukushima: ne parliamo nella scheda [Tōhoku-Fukushima 2011](/comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple/).
 
