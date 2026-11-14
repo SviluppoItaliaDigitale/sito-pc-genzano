@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-14T02:28:05+00:00",
+  "generato": "2026-11-14T09:16:59+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 18,
-  "scaduti_scartati": 47,
-  "in_corso": 3,
+  "avvisi": 17,
+  "scaduti_scartati": 48,
+  "in_corso": 2,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -99,19 +99,6 @@
    "fine": "2026-11-15T22:59:00+00:00",
    "emesso": "2026-11-13T09:25:08+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261113102507.120"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-14T00:00:00+00:00",
-   "fine": "2026-11-14T07:59:00+00:00",
-   "emesso": "2026-11-13T09:25:08+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261113102507.118"
   },
   {
    "in_corso": false,

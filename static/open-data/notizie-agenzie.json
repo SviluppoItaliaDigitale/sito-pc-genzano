@@ -5,46 +5,154 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-14T02:27:56+00:00",
+  "generato": "2026-11-14T09:16:48+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-14T02:20:24+00:00",
+   "data": "2026-11-14T09:07:19+00:00",
    "fonte": "ANSA",
-   "titolo": "Tennis: Sabalenka eliminata nella fase a gironi delle WTA Finals Indian Wells da Svitolina",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/14/tennis-sabalenka-eliminata-nella-fase-a-gironi-delle-wta-finals-indian_aa915780-925d-4002-9654-6f679f765731.html"
+   "titolo": "Come funziona il bonus mamme",
+   "url": "https://www.ansa.it/donne/notizie/2026/11/11/come-funziona-il-bonus-mamme_4375a31e-07de-438c-ae16-43a604a22ef0.html"
   },
   {
-   "data": "2026-11-14T02:12:46+00:00",
+   "data": "2026-11-14T08:48:42+00:00",
    "fonte": "ANSA",
-   "titolo": "Revocato il blocco dei voli negli Stati Uniti, 'decine di migliaia di passeggeri bloccati'",
+   "titolo": "Revocato dopo 4 ore il blocco dei voli negli Stati Uniti, 'decine di migliaia di passeggeri bloccati'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/revocato-il-blocco-dei-voli-negli-stati-uniti-decine-di-migliaia-di-passeggeri_d2a6ded1-a075-4399-8855-8bc69e436c24.html"
   },
   {
-   "data": "2026-11-14T00:41:48+00:00",
+   "data": "2026-11-14T08:47:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Carburanti, prezzo medio self benzina scende a 1,961 euro al litro",
+   "url": "https://www.adnkronos.com/economia/carburanti-prezzi-benzina-diesel-oggi-ultime-news_7zmIhXtdEUlslAT9FeBUAu"
+  },
+  {
+   "data": "2026-11-14T08:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pedopornografia, sequestrati oltre 3mila file tra foto e video: 6 arresti e 18 indagati",
+   "url": "https://www.adnkronos.com/cronaca/pedopornografia-sequestrati-file-foto-video-arresti-indagati_3IwbZf6bEUdO9tnSE0ISaG"
+  },
+  {
+   "data": "2026-11-14T08:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tregua dal maltempo ma non dura, in arrivo nuova perturbazione",
+   "url": "https://www.adnkronos.com/cronaca/meteo-previsioni-prossimi-giorni_2SbGdBdbwKSorq2fVrrI4P"
+  },
+  {
+   "data": "2026-11-14T07:53:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Allarmi bomba, la circolare del Viminale: 'Inattendibili le minacce con mail bombing'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/allarmi-bomba-la-circolare-del-viminale-inattendibili-le-minacce-con-mail-bombing_ca1d2b9c-c7e2-4e00-afb9-6dccb59191fb.html"
+  },
+  {
+   "data": "2026-11-14T07:51:40+00:00",
    "fonte": "ANSA",
    "titolo": "Trump, Xi e Putin terranno colloqui trilaterali a Shenzhen",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/trump-xi-e-putin-terranno-colloqui-trilaterali-a-shenzhen_5cbbf8a4-fed1-4d94-826a-eb8148cd6b4e.html"
   },
   {
-   "data": "2026-11-13T23:12:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Europa ha scelto i rappresentanti al tavolo di pace: 5 Paesi più Commissione e Consiglio Ue. C'è anche l'Italia",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-tavolo-pace-europa-italia_3bbGRTvLBqnm9O6YYU6KLA"
+   "data": "2026-11-14T07:50:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Putin vuole Helsinki fuori dalla Nato'. Merz agli Usa: 'Basta sorprese'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/putin-vuole-helsinki-fuori-dalla-nato.-merz-agli-usa-basta_44817c41-c94b-49c5-82d4-c2480ddd3563.html"
   },
   {
-   "data": "2026-11-13T23:08:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, governo apre a modifiche: via tagli scuola e caccia a risorse su sanità. Ma la Cgil conferma sciopero generale di novembre",
-   "url": "https://www.adnkronos.com/economia/manovra-governo-sindacati-incontro-modifiche-sciopero_6Asdsd35RP6LACPHJF6NTZ"
+   "data": "2026-11-14T07:47:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ciro Grillo: 'nessuna concessione, piuttosto in galera da innocente'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/ciro-grillo-nessuna-concessione-piuttosto-in-galera-da-innocente-_493a185c-4b7b-4e27-b548-0e8ddd2c6acf.html"
   },
   {
-   "data": "2026-11-13T23:03:53+00:00",
+   "data": "2026-11-14T07:36:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Cortei, oggi a Milano torna 'Italia in piazza': \"Repressione non ci ferma\"",
-   "url": "https://www.adnkronos.com/cronaca/corteo-oggi-milano-14-novembre_44mVchVKhZ5FJNd3RFB6Eg"
+   "titolo": "Lecce, 16enne con disturbi psichici colpisce il padre con un martello: l'uomo è in prognosi riservata",
+   "url": "https://www.adnkronos.com/cronaca/lecce-16enne-colpisce-padre-con-martello_h9vc6ggxCnpIu32mwD8be"
+  },
+  {
+   "data": "2026-11-14T07:29:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Racchette in classe', numeri record per la festa finale a Torino",
+   "url": "https://www.adnkronos.com/sport/racchette-in-classe-numeri-record-per-la-festa-finale-a-torino_1XDdCBFa3BjnfuLsaKO8DN"
+  },
+  {
+   "data": "2026-11-14T07:24:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Microsoft, ripristinati tutti i servizi dopo il blackout globale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/microsoft-ripristinati-tutti-i-servizi-dopo-il-blackout-globale-_fcbd3697-9a41-4805-9a00-5c1a6949b294.html"
+  },
+  {
+   "data": "2026-11-14T07:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Microsoft, ripristinati tutti i servizi: ecco cosa è successo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/microsoft-outlook-ripristinati-servizi-ultime-news_6Q94rH1EbRLPWEm1CQw1pY"
+  },
+  {
+   "data": "2026-11-14T07:07:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "La casa di Brigitte Bardot a Saint-Tropez sarà aperta al pubblico in estate",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/la-casa-di-brigitte-bardot-a-saint-tropez-sara-aperta-al-pubblico-in-estate_4638a300-abdc-42b5-8ad0-46b70f4f314f.html"
+  },
+  {
+   "data": "2026-11-14T07:01:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sfida",
+   "url": "https://www.ansa.it/sito/podcast/la_parola_della_settimana/2026/11/14/sfida_aa55c71c-4368-4120-b3a7-6cb67e850710.html"
+  },
+  {
+   "data": "2026-11-14T06:38:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Storie al bivio weekend', sabato 14 novembre: gli ospiti di oggi di Monica Setta",
+   "url": "https://www.adnkronos.com/spettacoli/monica-setta-storie-al-bivio-ospiti-oggi-sabato_1HUQwfyJscm9vYV0RnzbF1"
+  },
+  {
+   "data": "2026-11-14T06:37:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Tu si que vales', oggi sabato 14 novembre: le anticipazioni e gli ospiti",
+   "url": "https://www.adnkronos.com/spettacoli/tu-si-que-vales-anticipazioni-ospiti-oggi_1dDKdmAGqWxIXap62JokOn"
+  },
+  {
+   "data": "2026-11-14T06:36:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le stelle, stasera nuovo appuntamento: ospiti e anticipazioni",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-stasera-cast-ballerini-milly-carlucci-rai-1_4fTRQ8kemfP9pMVhXGkhie"
+  },
+  {
+   "data": "2026-11-14T06:34:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, sabato 14 novembre: gli ospiti e le interviste di oggi",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-ospiti-interviste_34nYLa5cJcsSN4i4LaaA1l"
+  },
+  {
+   "data": "2026-11-14T06:33:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Amici, cambia programmazione: oggi sabato 14 novembre la sesta puntata",
+   "url": "https://www.adnkronos.com/spettacoli/amici-oggi-quando-va-in-onda_3vbAmMOyGoY8e3Ha07ngtg"
+  },
+  {
+   "data": "2026-11-14T06:32:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando con le stelle, la scelta di Monica Guerritore: \"In pista senza bandane e parrucche\"",
+   "url": "https://www.adnkronos.com/spettacoli/monica-guerritore-ballando-bandane-parrucche_5cbIeY1x6SjpnxopgyUsgu"
+  },
+  {
+   "data": "2026-11-14T06:16:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa torna Padre Rob nella sua ex diocesi, bagno di folla a Chiclayo",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/13/il-papa-a-chiclayo-una-benedizione-per-me-essere-di-nuovo-qui_989723f9-9cc6-414d-b526-71f5586301fc.html"
+  },
+  {
+   "data": "2026-11-14T06:15:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Russa agli studenti: 'La volontà del popolo può essere imperfetta, ha voluto il fascismo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/la-russa-agli-studenti-la-volonta-del-popolo-puo-essere-imperfetta-ha-voluto_c0fc433c-6015-4673-b0c0-2e56d7f0306a.html"
+  },
+  {
+   "data": "2026-11-14T06:14:55+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Nel frigorifero un supermarket della droga, arrestato a Bergamo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/nel-frigorifero-un-supermarket-della-droga-arrestato-a-bergamo_2486edd9-5d9a-477c-a1f4-ee59a5665917.html"
   },
   {
    "data": "2026-11-13T22:43:48+00:00",
@@ -53,40 +161,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-11-13T22:34:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanremo 2027, De Martino: \"I nomi dei Big saranno svelati l'11 dicembre\"",
-   "url": "https://www.adnkronos.com/spettacoli/sanremo-2027-big-gara-nomi-quando_2eu0HiitOJE9b7lebrSqGv"
-  },
-  {
    "data": "2026-11-13T22:32:12+00:00",
    "fonte": "ANSA",
    "titolo": "S&P conferma il rating sull'Italia: 'La crescita supererà le stime'. Giorgetti: 'È la strada giusta'",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/11/13/sp-conferma-il-rating-sullitalia-la-crescita-superera-le-stime.-giorgetti-e-la-strada-giusta_968a7f83-4609-47b6-b8c7-0b1ab287d3a7.html"
-  },
-  {
-   "data": "2026-11-13T21:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Stop a tutti gli aerei negli Usa per 4 ore, voli bloccati per motivi di sicurezza",
-   "url": "https://www.adnkronos.com/internazionale/esteri/stop-voli-usa-oggi-sicurezza_10e7RF5gereJoJkK2RVyIm"
-  },
-  {
-   "data": "2026-11-13T21:17:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "AfD sceglie il candidato alla presidenza della Germania: in pole Berthold, ex difensore della Roma",
-   "url": "https://www.adnkronos.com/internazionale/esteri/berthold-roma-afd-presidente-germania_2MYr7r61pWFdxseBPGRLz0"
-  },
-  {
-   "data": "2026-11-13T20:49:39+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, numeri combinazione vincente oggi 13 novembre",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-numeri-combinazione-venerdi-13-novembre_6vQo7IqLLF3a0vAoOtNf8v"
-  },
-  {
-   "data": "2026-11-13T20:21:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Russa agli studenti: 'La volontà del popolo può essere imperfetta, ha voluto il fascismo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/la-russa-agli-studenti-la-volonta-del-popolo-puo-essere-imperfetta-ha-voluto_c0fc433c-6015-4673-b0c0-2e56d7f0306a.html"
   },
   {
    "data": "2026-11-13T20:21:04+00:00",
@@ -95,16 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/manovra-il-governo-apre-alle-modifiche-saltano-i-tagli-alla-scuola-piu_a9e7d8e3-ebe1-4229-a908-26b2f2a973d6.html"
   },
   {
-   "data": "2026-11-13T20:18:14+00:00",
+   "data": "2026-11-13T20:00:48+00:00",
    "fonte": "ANSA",
-   "titolo": "'Putin vuole Helsinki fuori dalla Nato'. Merz agli Usa: 'Basta sorprese'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/putin-vuole-helsinki-fuori-dalla-nato.-merz-agli-usa-basta_44817c41-c94b-49c5-82d4-c2480ddd3563.html"
-  },
-  {
-   "data": "2026-11-13T20:07:46+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pino Insegno: \"Non mi pento delle mie amicizie politiche, ma ho una carriera di oltre 40 anni\"",
-   "url": "https://www.adnkronos.com/spettacoli/pino-insegno-polemiche-amicizie-politiche_N6AWRDzXE5g5LteovHtu3"
+   "titolo": "In Italia 5 milioni con il diabete ma un milione non sa di averlo",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/diabete/2026/11/13/in-italia-il-75-degli-adulti-convive-con-il-diabete_0729d1e7-f75c-4f0a-9e55-e8bb8d47cb1d.html"
   },
   {
    "data": "2026-11-13T19:55:28+00:00",
@@ -117,78 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Antonelli al Quirinale, invita Mattarella a Monza e gli dona un suo casco",
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/13/antonelli-al-quirinale-invita-mattarella-a-monza-e-gli-dona-un-suo-casco_e240f7c1-3a0f-4292-8546-ccb1b8d23199.html"
-  },
-  {
-   "data": "2026-11-13T19:35:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Allarmi bomba, la circolare del Viminale: 'Inattendibili le minacce con mail bombing'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/allarmi-bomba-la-circolare-del-viminale-inattendibili-le-minacce-con-mail-bombing_ca1d2b9c-c7e2-4e00-afb9-6dccb59191fb.html"
-  },
-  {
-   "data": "2026-11-13T19:32:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cioccolato fondente amico del cuore e del cervello, ecco la dose ideale per la scienza",
-   "url": "https://www.adnkronos.com/salute/cioccolato-fondente-effetto-cuore-cervello_5WDsXbw9yOAGeBH0HTIzGC"
-  },
-  {
-   "data": "2026-11-13T19:25:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "La casa di Brigitte Bardot a Saint-Tropez sarà aperta al pubblico in estate",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/13/la-casa-di-brigitte-bardot-a-saint-tropez-sara-aperta-al-pubblico-in-estate_4638a300-abdc-42b5-8ad0-46b70f4f314f.html"
-  },
-  {
-   "data": "2026-11-13T19:15:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sinner sbarca su TikTok, l'azzurro posta il suo primo video",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/13/sinner-sbarca-su-tiktok-lazzurro-posta-il-suo-primo-video_31ce64a5-3f49-4af9-8dd0-9a2cef71f8c1.html"
-  },
-  {
-   "data": "2026-11-13T19:15:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "I genitori del 15enne suicida: 'La colpa non è dei ragazzini'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/i-genitori-del-15enne-suicida-la-colpa-non-e-dei-ragazzini_e60b3704-3b39-4e4e-8d5c-7e76c4c96a30.html"
-  },
-  {
-   "data": "2026-11-13T19:13:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa torna Padre Rob nella sua ex diocesi, bagno di folla a Chiclayo",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/13/il-papa-a-chiclayo-una-benedizione-per-me-essere-di-nuovo-qui_989723f9-9cc6-414d-b526-71f5586301fc.html"
-  },
-  {
-   "data": "2026-11-13T19:06:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alcaraz: \"Antonelli e Marquez incredibili, strano rivedere Ferrero in un altro team\"",
-   "url": "https://www.adnkronos.com/sport/alcaraz-atp-finals-antonelli-incredibile-ferrero-shelton_7536hFTepku2vhELhKE9Vx"
-  },
-  {
-   "data": "2026-11-13T19:04:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Treviso, madre dà fuoco al figlio mentre dorme: lui ricoverato per le ustioni, lei intossicata dal fumo",
-   "url": "https://www.adnkronos.com/cronaca/madre-da-fuoco-figlio-nel-sonno-ricoverati_1kOE7WQ4wCP2unbEhuRPz2"
-  },
-  {
-   "data": "2026-11-13T18:55:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, Confintesa: \"Agevolazioni fiscali riservate a contratti che garantiscono retribuzioni adeguate\"",
-   "url": "https://www.adnkronos.com/economia/manovra-confintesa-agevolazioni-fiscali-riservate-a-contratti-che-garantiscono-retribuzioni-adeguate_Kh8zH3lZedpEbvsfdHY8m"
-  },
-  {
-   "data": "2026-11-13T18:51:31+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, gli atti dei pm in '24 punti' nella richiesta di processo per Sempio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/garlasco-gli-atti-dei-pm-in-24-punti-nella-richiesta-di-processo-per-sempio_751c2c13-f333-4ba5-b242-4e38e3f308ee.html"
-  },
-  {
-   "data": "2026-11-13T18:50:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Black Friday, tra sirene di sconto e il nuovo alleato: l'intelligenza artificiale",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/societa_diritti/2026/11/13/black-friday-tra-sirene-di-sconto-e-il-nuovo-alleato-lintelligenza-artificiale_7c53d525-e74b-4ba4-94ed-3a98105a897d.html"
-  },
-  {
-   "data": "2026-11-13T18:47:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Nordio, 'tutela penale per nuovi reati tecnologici sarà tema del futuro'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/nordio-tutela-penale-per-nuovi-reati-tecnologici-sara-tema-del_1fd5f5c9-d457-43de-ab53-813bca3d2863.html"
   }
  ]
 }
