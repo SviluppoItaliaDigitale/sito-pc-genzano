@@ -14,7 +14,7 @@
 # entro 60 giorni: oltre quella soglia lo shortcode le marca "verifica da rinnovare"
 # (una data di verifica vecchia accanto a un'affermazione sul presente non vale nulla).
 
-aggiornamento: "2026-09-14"
+aggiornamento: "2026-11-14"
 
 righe:
   - id: "meteo-idro"
@@ -31,7 +31,7 @@ righe:
     dinamico: "incendi"
     fase: "prevenzione"
     stato: "Prevenzione stagionale: nel periodo di massima pericolosità il Centro Funzionale regionale pubblica ogni giorno il bollettino di pericolosità per la Zona 9 (Castelli Romani); quando indica un livello diverso da BASSO questa riga lo riporta da sola."
-    verificato: "2026-09-14"
+    verificato: "2026-11-14"
     fonte_label: "Rischio incendi boschivi"
     fonte_url: "/rischi-prevenzione/rischio-incendio/"
 
@@ -40,7 +40,7 @@ righe:
     icona: "bi-activity"
     fase: "prevenzione"
     stato: "Prevenzione permanente: il momento di un terremoto non si può prevedere; si lavora su edifici, piani di emergenza e preparazione delle persone."
-    verificato: "2026-09-14"
+    verificato: "2026-11-14"
     fonte_label: "Rischio sismico"
     fonte_url: "/rischi-prevenzione/rischio-sismico/"
 
@@ -48,8 +48,8 @@ righe:
     rischio: "Vulcanico (Colli Albani)"
     icona: "bi-triangle"
     fase: "prevenzione"
-    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente, non spento, e l'INGV lo monitora in continuo. Lo stato di attività aggiornato si legge sui comunicati dell'INGV."
-    verificato: "2026-09-14"
+    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente, non spento, e l'INGV lo sorveglia con stazioni GPS permanenti e misure dei gas del suolo e del Lago Albano. Lo stato di attività aggiornato si legge sui comunicati dell'INGV."
+    verificato: "2026-11-14"
     fonte_label: "Il vulcanismo dei Colli Albani"
     fonte_url: "/conoscere/rischio-vulcanico-colli-albani/"
 
@@ -57,8 +57,8 @@ righe:
     rischio: "Ondate di calore"
     icona: "bi-thermometer-sun"
     fase: "prevenzione"
-    stato: "Prevenzione stagionale: le misure estive di protezione dal caldo coprono il periodo giugno–settembre; l'attenzione alle persone fragili resta tutto l'anno, con caldo e con freddo."
-    verificato: "2026-09-14"
+    stato: "Prevenzione stagionale: le misure di protezione dal caldo valgono nella stagione estiva, nel periodo che il Ministero della Salute fissa ogni anno per i bollettini sulle ondate di calore; l'attenzione alle persone fragili resta tutto l'anno, con caldo e con freddo."
+    verificato: "2026-11-14"
     fonte_label: "Ondate di calore"
     fonte_url: "/rischi-prevenzione/ondate-di-calore/"
 
@@ -67,6 +67,6 @@ righe:
     icona: "bi-lightning-charge"
     fase: "prevenzione"
     stato: "Prevenzione permanente: preparazione delle famiglie e continuità dei servizi essenziali. Un'interruzione in corso non si legge qui: se riguarda il territorio compare nel banner di emergenza e nelle comunicazioni."
-    verificato: "2026-09-14"
+    verificato: "2026-11-14"
     fonte_label: "Blackout"
     fonte_url: "/rischi-prevenzione/blackout/"

@@ -1368,6 +1368,19 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
+          section "50. Stato del territorio: righe statiche verificate di recente"
+          # 14/11/2026: quattro righe di /stato-del-territorio/ mostravano
+          # «verifica da rinnovare» (ferme al 14/09) e l'ha visto l'utente.
+          # Avvisa a 50 giorni, prima dei 60 dello shortcode.
+          OUT50=$(python3 scripts/check-stato-territorio.py --giorni 50 2>&1); RC50=$?
+          if [ "$RC50" -ne 0 ]; then
+            err "Righe di /stato-del-territorio/ da riverificare sulle fonti e ridatare in data/stato_territorio.yaml ($RC50):"
+            echo '```' >> "$REPORT"; echo "$OUT50" >> "$REPORT"; echo '```' >> "$REPORT"
+          else
+            ok "Righe statiche dello stato del territorio verificate negli ultimi 50 giorni."
+          fi
+
+          # ----------------------------------------------------------------
           # Output
           # Garantisce default "false" se la variabile non è stata mai
           # toccata (improbabile con set +u ma difensivo per sicurezza).
