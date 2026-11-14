@@ -1,11 +1,11 @@
 ---
 title: "Polesine, 14 novembre 1951: la grande alluvione del Po"
-date: 2026-11-15T00:01:00+01:00
-description: "Settantacinque anni fa il Po ruppe gli argini a Occhiobello e allagò il Polesine per settimane: oltre 113.000 ettari sott'acqua, 101 vittime, 180.000 sfollati."
+date: 2026-11-14T09:15:00+01:00
+description: "Settantacinque anni fa il Po ruppe gli argini a Canaro e Occhiobello e sommerse il Polesine: 113.000 ettari di campi allagati, 101 vittime, 180.000 sfollati."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-11-15-polesine-1951-alluvione-del-po.webp"
+image: "/images/2026-11-14-polesine-1951-alluvione-del-po.webp"
 image_alt: "Cover dell'articolo: Polesine, 14 novembre 1951: la grande alluvione del Po"
 scadenza: ""
 area: ""
@@ -13,25 +13,25 @@ allegati: []
 draft: false
 tts: true
 lis_section: "rischio-idrogeologico"
-social_citazione: "Quando l'acqua se ne andò, dopo settimane, molti polesani non tornarono: l'alluvione del 1951 svuotò un'intera provincia."
+social_citazione: "Dei 180.000 polesani che nel 1951 dovettero lasciare la casa, 80.000 non vi tornarono più."
 social_punti:
-  - "Il 14 novembre 1951 il Po in piena ruppe gli argini nel Polesine, tra Occhiobello e Paviole, e allagò la pianura fino al mare."
-  - "Oltre 113.000 ettari restarono sott'acqua per settimane; le vittime furono 101, più sette dispersi, e gli sfollati circa 180.000."
+  - "Il 14 novembre 1951 il Po in piena ruppe gli argini nel Polesine in tre punti, a Paviole di Canaro e a Bosco e Malcantone di Occhiobello."
+  - "L'acqua sommerse oltre 1.100 chilometri quadrati per undici giorni; le vittime furono 101, più sette dispersi, e gli sfollati circa 180.000."
   - "Nel 1951 non esisteva ancora la protezione civile: da quell'esperienza nacque l'idea di un sistema nazionale di soccorso."
   - "Le alluvioni di pianura danno tempo: usalo per mettere in salvo persone e animali, non per salvare i beni."
 ---
 
-Il **14 novembre 1951**, dopo giorni di pioggia su tutto il bacino, il **Po** in piena ruppe gli argini nel **Polesine**. È la striscia di pianura tra Po e Adige, nella provincia di Rovigo. Le rotte si aprirono nel tratto di Occhiobello, tra Paviole e Malcantone. L'acqua dilagò verso est e in pochi giorni raggiunse il mare. Restò sulla terra per settimane.
+Il **14 novembre 1951**, dopo giorni di pioggia su tutto il bacino, il **Po** in piena ruppe gli argini nel **Polesine**. È la pianura tra Po e Adige, nella provincia di Rovigo. Le rotte furono tre: a Paviole, nel comune di Canaro, e a Bosco e Malcantone, nel comune di Occhiobello. L'acqua dilagò verso est e dopo circa una settimana raggiunse il mare.
 
 ## Una provincia sott'acqua
 
-Furono allagati oltre **113.000 ettari** di terreno, gran parte della provincia. Le vittime furono **101**, più sette dispersi: di queste, 84 morirono in un solo episodio, l'affondamento di un camion carico di sfollati travolto dall'acqua nella notte tra il 14 e il 15 novembre a Frassinelle. Gli sfollati furono circa **180.000**. Molti non tornarono: l'alluvione accelerò un'emigrazione che negli anni successivi svuotò il Polesine.
+Per undici giorni l'acqua coprì almeno **1.170 chilometri quadrati**, fino a sei metri di profondità in alcuni punti. Furono allagati **113.000 ettari** di campi. Adria fu allagata e oltre ventimila abitanti furono evacuati. Le vittime furono **101**, più sette dispersi. Di queste, 84 morirono a Frassinelle nella notte tra il 14 e il 15 novembre: il camion che trasportava gli sfollati si impantanò e fu sommerso dall'acqua. Gli sfollati furono circa **180.000**: **80.000** non tornarono più a casa.
 
-Le acque si ritirarono solo a dicembre. Le case, i campi e le strade emersero coperti di limo, con le colture distrutte e il bestiame perduto.
+Tra il 24 e il 26 novembre si fecero saltare gli argini della Fossa Polesella, che trattenevano l'acqua. Le rotte furono chiuse poco più di un mese dopo e per prosciugare i campi servirono circa sei mesi. Sui campi restarono depositi di sabbia e andarono perduti oltre 16.000 capi di bestiame.
 
 ## I soccorsi di allora
 
-Nel 1951 non esisteva la protezione civile come la conosciamo. Intervennero l'esercito, i vigili del fuoco, la Croce Rossa, le parrocchie, i partiti, i sindacati e migliaia di volontari. Le famiglie polesane furono ospitate in tutta Italia. La macchina dei soccorsi fu improvvisata, generosa e lenta. Da quell'esperienza, e da quelle di Firenze 1966 e del Friuli 1976, nacque l'idea di un sistema nazionale. È arrivato con la legge del 1992 ed è oggi nel Codice della protezione civile.
+Nel 1951 non esisteva la protezione civile come la conosciamo. I soccorsi furono insufficienti e partì la prima grande mobilitazione solidale del dopoguerra: volontari, medicinali, cibo e vestiti arrivarono da tutta Italia e dall'estero. Da quell'esperienza, e da quelle di Firenze 1966 e del Friuli 1976, nacque l'idea di un sistema nazionale. È arrivato con la legge del 1992 ed è oggi nel Codice della protezione civile.
 
 ## Cosa insegna
 
@@ -59,3 +59,4 @@ Le regole del Dipartimento della Protezione Civile:
 - [Dipartimento della Protezione Civile — Rischio meteo-idro: sei preparato?](https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato)
 - [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico)
 - [CNR-IRPI — Polaris: 14 novembre 1951, l'alluvione del Polesine](https://polaris.irpi.cnr.it/14-novembre-1951-lalluvione-del-polesine/)
+- [Dipartimento della Protezione Civile — The Polesine flood](https://servizio-nazionale.protezionecivile.gov.it/en/pagina-base/polesine-flood/)

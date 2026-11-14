@@ -266,6 +266,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 ### Novembre
 - **4 novembre** — Anniversario alluvione di Firenze 1966 (badge: Informazione)
 - **13 novembre** — Giornata mondiale della gentilezza: relazione d'aiuto (badge: Volontariato)
+- **14 novembre** — Anniversario alluvione del Polesine 1951 (badge: Informazione)
 - **23 novembre** — Anniversario terremoto Irpinia 1980 (badge: Informazione)
 - **25 novembre** — Contrasto alla violenza contro le donne (anche in emergenza) (badge: Informazione)
 - Rischio piogge intense e allagamenti (badge: Prevenzione)
@@ -330,6 +331,7 @@ Lunghezza: **1300-1500 parole**. Badge: `Informazione`. Formato data nel frontma
 | 29 ott | Tempesta Vaia | 2018 | rischio vento estremo, gestione foreste |
 | 31 ott | San Giuliano di Puglia | 2002 | OPCM 3274, classificazione sismica nazionale, scuole sicure |
 | 8 nov | Versilia alluvione | 1996 | rischio idrogeologico costiero |
+| 14 nov | Polesine alluvione | 1951 | prima grande mobilitazione solidale del dopoguerra, alluvioni di pianura con preavviso |
 | 23 nov | Irpinia | 1980 | ricostruzione, Cossiga commissario, antesignano L. 225/1992 |
 | 26 nov | Friuli memoria | 1976 | replica seconda scossa, ricostruzione |
 | 26 dic | Tsunami Oceano Indiano | 2004 | sistema globale UNESCO-IOC, NEAMTWS, SiAM |
@@ -338,7 +340,6 @@ Lunghezza: **1300-1500 parole**. Badge: `Informazione`. Formato data nel frontma
 **Eventi candidati a futura inclusione** (esempi non esaustivi — chiunque tenga viva questa linea editoriale aggiunge ciò che ritiene rilevante):
 
 - Frana di Agrigento, Campania 1998 e altre frane storiche italiane
-- Alluvione del Polesine 1951 (ricorrenza 14 novembre)
 - Alluvione di Firenze 1966 (4 novembre — già ricorrenza nazionale)
 - Vajont anniversari decennali (9 ottobre, già a calendario)
 - Belice 1968 (15 gennaio, terremoto Sicilia)
