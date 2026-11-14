@@ -33,7 +33,7 @@ Secondo la sintesi pubblicata dal Dipartimento, nei primi 30 minuti dall'ordine 
 
 A Porto Santo Stefano fu attivato un punto di prima accoglienza. Lì la Croce Rossa e il **volontariato di protezione civile** distribuirono coperte e pasti caldi e prestarono assistenza sanitaria. I passeggeri furono poi sistemati in albergo. Il Prefetto di Grosseto affidò la direzione tecnica delle ricerche a bordo al Comandante dei Vigili del fuoco di Grosseto.
 
-La prima fase di ricerca dei dispersi durò oltre due mesi. Vi lavorarono anche i sommozzatori della Marina militare e i volontari esperti del Corpo nazionale soccorso alpino e speleologico e della Federazione italiana attività subacquee. La ricerca proseguì per tutta l'emergenza: l'ultima vittima fu ritrovata a ottobre 2014, durante lo smantellamento della nave a Genova.
+La prima fase di ricerca dei dispersi durò oltre due mesi. Vi lavorarono anche i sommozzatori della Marina militare e i volontari esperti del Corpo nazionale soccorso alpino e speleologico e della Federazione italiana attività subacquee. La ricerca proseguì per tutta l'emergenza: l'ultima vittima fu ritrovata il 3 novembre 2014, durante lo smantellamento della nave a Genova.
 
 ## Lo stato di emergenza e il ruolo del Dipartimento
 
@@ -86,3 +86,4 @@ Le indicazioni complete sono nella pagina [Dopo l'emergenza](/rischi-prevenzione
 - [Dipartimento della Protezione Civile — 13 gennaio 2012, il naufragio della nave Concordia](https://www.protezionecivile.gov.it/it/notizia/13-gennaio-2012-il-naufragio-della-nave-concordia/)
 - [Dipartimento della Protezione Civile — Il naufragio della Concordia 2012-2014: le tappe dell'emergenza](https://emergenze.protezionecivile.gov.it/it/ambientali/il-naufragio-della-concordia-2012-2014/le-tappe-dellemergenza/)
 - [Dipartimento della Protezione Civile — Il naufragio della Costa Concordia, sintesi di aspetti di gestione dell'emergenza (PDF)](https://www.protezionecivile.gov.it/static/c089e8a24f1ab971decd4ef7ea4f1772/Pubblicazione_Concordia_ITA_web.pdf)
+- [Dipartimento della Protezione Civile — Magazine n. 15, intervista sullo smantellamento della Concordia (PDF)](https://www.protezionecivile.gov.it/static/10ce4e04bdf655149537496d70f3f5d3/magazine_15.pdf)
