@@ -1,7 +1,7 @@
 {
  "titolo": "Interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
  "fonte": "Registro interventi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, dati aggregati e anonimi",
- "aggiornato": "2026-11-12",
+ "aggiornato": "2026-11-13",
  "testi": {
   "tutto": "tutto il periodo",
   "rivivi": "Rivivi l'attività del Gruppo giorno per giorno"
@@ -1121,6 +1121,11 @@
    "d": "2026-11-12",
    "n": 3,
    "ore": 1.4
+  },
+  {
+   "d": "2026-11-13",
+   "n": 3,
+   "ore": 2.8
   }
  ],
  "serie": {
@@ -1133,7 +1138,7 @@
     "Agosto",
     "Settembre",
     "Ottobre",
-    "Novembre (fino al 12)"
+    "Novembre (fino al 13)"
    ],
    "chiavi": [
     "2026-04",
@@ -1158,7 +1163,7 @@
       52,
       46,
       48,
-      9
+      12
      ]
     },
     {
@@ -1173,7 +1178,7 @@
       227.2,
       133.6,
       94.9,
-      16.6
+      19.5
      ]
     },
     {
@@ -1188,7 +1193,7 @@
       1495,
       977,
       355,
-      47
+      53
      ]
     }
    ]
@@ -1218,9 +1223,9 @@
      "unita1": "intervento",
      "valori": [
       87,
-      64,
+      66,
       19,
-      15,
+      16,
       13,
       11,
       5,
@@ -1357,9 +1362,9 @@
     ],
     "2026-11": [
      0,
-     7,
+     9,
      0,
-     1,
+     2,
      0,
      0,
      1,
@@ -1389,9 +1394,9 @@
      "unita": "interventi",
      "unita1": "intervento",
      "valori": [
-      74,
-      21,
-      45,
+      75,
+      22,
+      46,
       53,
       25,
       11
@@ -1456,9 +1461,9 @@
      7
     ],
     "2026-11": [
+     2,
      1,
-     0,
-     0,
+     1,
      7,
      0,
      1
@@ -1468,8 +1473,8 @@
   "mezzi": {
    "etichette": [
     "AB01 Atego (Mezzo speciale)",
-    "M02 Defender 130 (Pickup)",
     "M04 Evo (Pickup)",
+    "M02 Defender 130 (Pickup)",
     "M05 Doblò (Autovettura)",
     "AB02 Actros (Autobotte)",
     "PA01 Cestello (Mezzo speciale)",
@@ -1484,11 +1489,11 @@
      "unita1": "intervento",
      "valori": [
       71,
+      65,
       64,
-      63,
       51,
       11,
-      10,
+      11,
       6,
       4,
       1
@@ -1498,8 +1503,8 @@
    "per_mese": {
     "2026-04": [
      0,
-     1,
      6,
+     1,
      8,
      0,
      0,
@@ -1520,8 +1525,8 @@
     ],
     "2026-06": [
      9,
-     8,
      3,
+     8,
      4,
      0,
      0,
@@ -1531,8 +1536,8 @@
     ],
     "2026-07": [
      15,
-     14,
      4,
+     14,
      4,
      5,
      1,
@@ -1542,8 +1547,8 @@
     ],
     "2026-08": [
      26,
-     26,
      12,
+     26,
      14,
      5,
      4,
@@ -1553,8 +1558,8 @@
     ],
     "2026-09": [
      17,
-     10,
      9,
+     10,
      9,
      1,
      3,
@@ -1564,8 +1569,8 @@
     ],
     "2026-10": [
      3,
-     3,
      22,
+     3,
      9,
      0,
      1,
@@ -1575,11 +1580,11 @@
     ],
     "2026-11": [
      0,
+     7,
      0,
-     5,
      2,
      0,
-     1,
+     2,
      2,
      0,
      0
