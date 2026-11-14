@@ -14,27 +14,19 @@ versione_facile: "2026-11-05-ondate-freddo-prevenzione-anziani-facile"
 draft: false
 ---
 
-Le **ondate di freddo** non sono solo un disagio climatico: sono un **rischio concreto** per la salute pubblica, specialmente per **anziani**, **persone fragili** e **senza dimora**. Secondo l'**ISS**, ogni anno in Italia l'ondata di freddo contribuisce a migliaia di decessi "in eccesso" tra la popolazione più vulnerabile.
+Le **ondate di freddo** sono un rischio per la salute, soprattutto per **anziani**, **persone con malattie croniche** e **persone senza dimora**. L'Istituto Superiore di Sanità ricorda che le forti ondate di freddo possono aggravare le malattie croniche, respiratorie e del cuore e, nei casi più gravi, portare a ipotermia e assideramento. Fra i più esposti indica anziani, bambini, malati cronici e persone immunodepresse.
 
 ## Cosa si intende per ondata di freddo
 
-Un'**ondata di freddo** è definita come:
+Si parla di ondata di freddo quando, per più giorni di seguito, le temperature restano molto più basse di quelle normali per il periodo. Il **vento** aumenta la sensazione di freddo e fa perdere calore più in fretta, soprattutto a chi resta all'aperto. Anche le notti serene, senza nuvole, sono di solito più fredde.
 
-- **temperatura** significativamente inferiore alla media stagionale;
-- **persistenza** di almeno **3 giorni**;
-- **ampiezza territoriale** estesa;
-- **vento** che amplifica la sensazione di freddo (wind-chill);
-- **umidità** alta che accelera la dispersione di calore corporeo.
-
-Nel Lazio e a Genzano di Roma, un'ondata di freddo tipica porta temperature sotto i **-5 °C** durante la notte.
+Non conta solo quanto scende il termometro: conta quanto dura il freddo e quanto una persona riesce a proteggersi, in casa e fuori.
 
 ## I rischi sanitari
 
 ### Ipotermia
 - **abbassamento** pericoloso della temperatura corporea sotto i **35 °C**;
 - **sintomi**: tremori, confusione mentale, lentezza, sonnolenza;
-- **grave** se la persona sembra stare meglio quando in realtà peggiora (fase apparente);
-- **emergenza** da 32 °C in giù;
 - **chiamare il 112** al primo sospetto.
 
 ### Congelamento
@@ -85,7 +77,7 @@ Nel Lazio e a Genzano di Roma, un'ondata di freddo tipica porta temperature sott
 
 ### Abbigliamento
 - **a strati** (più efficace di un solo capo pesante);
-- **testa coperta** (da lì si disperde molto calore);
+- **testa** coperta con berretto o cappuccio;
 - **mani e piedi** protetti;
 - **scarpe** asciutte (piedi bagnati = rischio ipotermia).
 
@@ -107,18 +99,13 @@ In periodi di freddo intenso il **Comune**, attraverso i servizi sociali, è il 
 
 ## L'allerta ondata di freddo
 
-Il **Centro Funzionale Regionale Lazio** emette avvisi di condizioni meteorologiche avverse anche per **neve, gelate e temperature rigide**: quando ne esce uno per il nostro territorio, questo sito lo riporta nella pagina [Allerte meteo](/allerte-meteo/). Per le ondate di freddo non esiste un sistema a livelli come quello del caldo estivo: contano l'avviso regionale e il buon senso.
+Il Dipartimento della Protezione Civile e la Regione Lazio emettono avvisi di condizioni meteorologiche avverse, per esempio per la **neve**: quando ne esce uno per il nostro territorio, questo sito lo riporta nella pagina [Allerte meteo](/allerte-meteo/). Per il freddo non esiste un bollettino a livelli come quello delle ondate di calore estive: contano gli avvisi ufficiali e le previsioni.
 
 ## Persone senza dimora
 
-Nelle notti più fredde:
+Per chi dorme all'aperto le notti più fredde sono le più pericolose. A Genzano di Roma il riferimento per le persone in difficoltà è il **Comune**, con i servizi sociali: il centralino è il **06 937111**. Le misure per il freddo, quando il Comune le attiva, sono pubblicate sul [sito del Comune](https://www.comune.genzanodiroma.roma.it/).
 
-- **Caritas** e **associazioni** attivano posti letto di emergenza;
-- **Comune** coordina con Centro Accoglienza Notturno;
-- **volontariato** distribuisce coperte e pasti caldi;
-- **numero** verde dedicato (consultare sito comunale).
-
-Se vedete una persona senza dimora in difficoltà, **chiamare il 112**: la segnalazione è un **dovere civile**.
+Se una persona che vive per strada non risponde, è confusa, trema forte o è bagnata in una notte gelida, **chiama il 112**: è in pericolo.
 
 ## In sintesi
 
@@ -132,8 +119,15 @@ Se vedete una persona senza dimora in difficoltà, **chiamare il 112**: la segna
 
 ## Per approfondire
 
+**Sul nostro sito**
+
 - [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
 - [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 - [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
+- [Kit Calamità per persone senza fissa dimora](/formazione/kit-calamita-senza-fissa-dimora/)
+
+**Fonti istituzionali**
+
+- [Freddo: informazioni generali](https://www.epicentro.iss.it/focus/freddo/freddo), EpiCentro, Istituto Superiore di Sanità
 
 In emergenza: **112**.

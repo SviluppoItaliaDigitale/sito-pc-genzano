@@ -1224,3 +1224,16 @@ dati:
     vietati:
       - regex: '(?i)cancelli\s+su\s+(?:strade|vie)|supporto\s+alla\s+viabilità'
         perche: "Il volontariato non presidia chiusure né regola il traffico (Circolare DPC 6/8/2018, artt. 11-12 del Codice della strada)."
+
+  - id: giornata-zone-umide
+    dato: "Data della Giornata mondiale delle zone umide"
+    valore: "2 febbraio (celebrata dal 1997, riconosciuta dall'Assemblea generale delle Nazioni Unite nel 2021, risoluzione 75/317)"
+    fonti:
+      - nome: "Segretariato della Convenzione sulle zone umide, «About World Wetlands Day» (verificata il 14/11/2026)"
+        url: "https://www.worldwetlandsday.org/about"
+    # Nato il 14/11/2026: il PIANO-EDITORIALE indicava il 1° febbraio.
+    vietati:
+      - regex: '\b1(?:°|º)?\s+febbraio\b'
+        perche: "La Giornata mondiale delle zone umide è il 2 febbraio."
+        contesto: '[Zz]one umide|Ramsar|[Ww]etlands'
+        finestra: 120

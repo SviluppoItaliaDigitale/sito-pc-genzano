@@ -23,7 +23,7 @@ Il grande freddo è pericoloso per la salute. Gli anziani rischiano di più. Leg
 
 ## Quando fa molto freddo
 
-A volte il freddo dura molti giorni. Le temperature scendono molto. A Genzano di Roma può fare sotto i -5 °C di notte. Questo si chiama "ondata di freddo".
+A volte il freddo dura molti giorni. Le temperature sono molto più basse del solito. Questo si chiama "ondata di freddo".
 
 ## I pericoli del freddo
 
@@ -86,23 +86,17 @@ Quando fa molto freddo, il Comune aiuta le persone sole e le persone senza casa.
 
 ## L'allerta freddo
 
-La Regione Lazio pubblica bollettini di allerta freddo. Ci sono 3 livelli:
+Per il freddo non ci sono livelli di allerta come per il caldo.
 
-- **Soglia 1:** fa freddo ma non è critico.
-- **Soglia 2:** rischio alto per anziani e persone fragili.
-- **Soglia 3:** rischio alto per tutti.
-
-Controlla il sito della Regione Lazio per sapere il livello di allerta.
+A volte arriva un avviso per la neve. Lo trovi sul nostro sito, nella pagina [Allerte meteo](/allerte-meteo/).
 
 ## Persone senza casa
 
-Nelle notti più fredde:
+Dormire fuori quando fa molto freddo è pericoloso.
 
-- La Caritas e altre associazioni aprono posti letto.
-- Il Comune coordina i centri di accoglienza.
-- I volontari distribuiscono coperte e cibo caldo.
+Una persona senza casa ha bisogno di aiuto? Chiama il Comune di Genzano. Il numero è **06 937111**.
 
-Se vedi una persona senza casa in difficoltà, chiama il 112. Non è disturbo. È un atto di civiltà.
+La persona non risponde? È confusa? Trema forte? Chiama subito il 112.
 
 ## Cosa ricordare
 
