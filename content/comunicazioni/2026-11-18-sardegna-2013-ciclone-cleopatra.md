@@ -23,7 +23,7 @@ social_punti:
 
 Il **18 novembre 2013** il ciclone **Cleopatra** si abbatté sulla **Sardegna** con piogge eccezionali e raffiche di scirocco fino a 100 km/h. In alcune zone caddero **oltre 450 millimetri di pioggia in dodici ore**, secondo il CNR-IRPI. Tra i centri più colpiti c'è **Olbia**.
 
-## Un'isola sott'acqua in una notte
+## Un'isola sott'acqua
 
 Le zone più colpite furono la Gallura, l'Ogliastra, l'Oristanese e il Medio Campidano. A Olbia morirono sei persone, fra cui due bambini. Ad Arzachena perse la vita un'intera famiglia; vittime anche a Torpè e a Terralba.
 
