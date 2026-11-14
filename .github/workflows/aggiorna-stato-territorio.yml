@@ -1,0 +1,91 @@
+# Tiene aggiornata da sola la pagina /stato-del-territorio/, ogni giorno.
+# scripts/aggiorna-stato-territorio.py rilegge le fonti ufficiali di ogni riga
+# statica (campo `verifica:` di data/stato_territorio.yaml): se dicono ancora
+# ciò che la riga afferma, la data «Verificato» diventa quella del giorno.
+# Scrive anche data/sismicita_genzano.json (terremoti INGV degli ultimi 7 giorni
+# entro 30 km da Genzano) per la riga «Sismico».
+# Fonte che non risponde o che non dice più la stessa cosa: la data resta, si
+# apre/aggiorna una issue `automazione` + `fonte-rotta` (si chiude da sola al
+# primo giro pulito) e il run diventa rosso (regola guasti.md, punto 1).
+# Il deploy lo fa deploy-coalescer.yml (commit di sfondo).
+# Nasce il 14/11/2026 su richiesta dell'utente: «Fai in modo che sia sempre aggiornato».
+name: "🗺️ Stato del territorio: riverifica quotidiana delle fonti"
+
+on:
+  schedule:
+    - cron: "37 4 * * *"   # 05:37 italiane d'inverno, 06:37 d'estate
+  workflow_dispatch:
+
+concurrency:
+  group: aggiorna-stato-territorio
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: "🔎 Rileggi le fonti e aggiorna i dati"
+        id: verifica
+        shell: bash
+        run: |
+          python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
+          python3 scripts/aggiorna-stato-territorio.py --guasti /tmp/guasti.md
+          if [ -s /tmp/guasti.md ]; then echo "guasti=1" >> "$GITHUB_OUTPUT"; else echo "guasti=0" >> "$GITHUB_OUTPUT"; fi
+          cat /tmp/guasti.md || true
+
+      - name: "💾 Commit dei dati aggiornati"
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/stato_territorio.yaml data/sismicita_genzano.json
+          if git diff --cached --quiet; then echo "Nessuna modifica."; exit 0; fi
+          git commit -m "[skip-stato-territorio] Stato del territorio: fonti riverificate e sismicità INGV aggiornata"
+          for try in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              echo "Pubblicato (tentativo $try)."; exit 0
+            fi
+            echo "Push fallito, ritento ($try)..."; sleep 6
+          done
+          echo "::error::Push non riuscito dopo 3 tentativi"; exit 1
+
+      - name: "🚨 Apri, aggiorna o chiudi l'issue delle fonti"
+        if: always()
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const fs = require('fs');
+            const guasti = fs.existsSync('/tmp/guasti.md') ? fs.readFileSync('/tmp/guasti.md', 'utf-8').trim() : null;
+            const title = 'Stato del territorio: una o più fonti non confermano la pagina';
+            const { owner, repo } = context.repo;
+            const aperte = await github.rest.issues.listForRepo({ owner, repo, state: 'open', labels: 'fonte-rotta', per_page: 100 });
+            const issue = aperte.data.find(i => i.title === title);
+            if (guasti === null) {
+              core.setFailed('Lo script non è arrivato in fondo: nessun rapporto dei guasti.');
+              return;
+            }
+            if (guasti) {
+              const body = [
+                'La riverifica quotidiana di `/stato-del-territorio/` non ha potuto confermare queste righe. La loro data «Verificato» resta quella dell\'ultimo controllo riuscito; oltre 60 giorni la pagina le marca «verifica da rinnovare».',
+                '',
+                guasti,
+                '',
+                '**Come si lavora:** se la fonte è irraggiungibile si rilancia il workflow e, se il guasto resta, si cerca la pagina attuale sul sito dell\'ente (mai un indirizzo indovinato). Se la fonte ha cambiato testo, si rilegge: se la riga è ancora vera si aggiorna il campo `verifica` in `data/stato_territorio.yaml`, altrimenti si corregge la riga.',
+                '',
+                '---', '*Issue generata da `aggiorna-stato-territorio.yml`; si chiude da sola al primo giro pulito.*'
+              ].join('\n');
+              if (issue) await github.rest.issues.update({ owner, repo, issue_number: issue.number, body });
+              else await github.rest.issues.create({ owner, repo, title, body, labels: ['automazione', 'fonte-rotta'] });
+              core.setFailed('Una o più fonti non confermano le righe della pagina.');
+            } else if (issue) {
+              await github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: 'Tutte le fonti confermano di nuovo le righe della pagina: chiudo automaticamente.' });
+              await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+            }

@@ -2,7 +2,7 @@
   Shortcode matrice-territorio — la "matrice di stato del territorio":
   una tabella accessibile rischio × fase alimentata da data/stato_territorio.yaml.
   Le righe `dinamico: "allerta"` / `dinamico: "incendi"` leggono data/allerta.json
-  al build, così la matrice riflette lo stato reale senza doppia manutenzione.
+  e `dinamico: "sismico"` data/sismicita_genzano.json al build, così la matrice riflette lo stato reale senza doppia manutenzione.
   Concetto: /conoscere/oltre-il-ciclo/ § "Terza estensione".
 */ -}}
 {{- $dati := site.Data.stato_territorio -}}
@@ -52,6 +52,28 @@
       {{- $faseLabel = printf "Previsione — pericolosità %s" $livAib -}}
       {{- with .descrizione }}{{ $stato = . }}{{ end -}}
       {{- with .data }}{{ $verificato = . }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if eq .dinamico "sismico" -}}
+  {{- /* Terremoti INGV degli ultimi 7 giorni entro 30 km (data/sismicita_genzano.json,
+         scripts/aggiorna-stato-territorio.py). Mostrati solo se il dato ha meno di
+         3 giorni: un conteggio vecchio non si presenta come attuale (rule 06). */ -}}
+  {{- with site.Data.sismicita_genzano -}}
+    {{- $agg := try (time.AsTime .aggiornato) -}}
+    {{- if and (not $agg.Err) (gt $agg.Value (now.AddDate 0 0 -3)) -}}
+      {{- $quando := printf "Negli ultimi %v giorni, entro %v km da Genzano," .giorni .raggio_km -}}
+      {{- if eq (int .numero) 0 -}}
+        {{- $stato = printf "%s %s l'INGV non ha registrato terremoti." $stato $quando -}}
+      {{- else -}}
+        {{- $pf := .piu_forte -}}
+        {{- $dataPf := time.Format "2 January" $pf.data -}}
+        {{- $mag := replace (printf "%.1f" $pf.magnitudo) "." "," -}}
+        {{- if eq (int .numero) 1 -}}
+          {{- $stato = printf "%s %s l'INGV ha registrato 1 terremoto (magnitudo %s, %s) a %s." $stato $quando $mag $dataPf $pf.luogo -}}
+        {{- else -}}
+          {{- $stato = printf "%s %s l'INGV ha registrato %v terremoti; il più forte (magnitudo %s, %s) a %s." $stato $quando .numero $mag $dataPf $pf.luogo -}}
+        {{- end -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end }}

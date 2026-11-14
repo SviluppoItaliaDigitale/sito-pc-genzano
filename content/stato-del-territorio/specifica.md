@@ -31,7 +31,8 @@ La matrice vive in un file dati (`stato_territorio.yaml`). Ogni riga è un risch
 | `verificato` | sì* | Data dell'ultima verifica redazionale, formato `AAAA-MM-GG`. |
 | `fonte_label` | sì | Etichetta della fonte (es. "Rischio sismico"). |
 | `fonte_url` | sì | Collegamento alla pagina che spiega il rischio e cosa fare. |
-| `dinamico` | no | Se presente (`allerta` o `incendi`), fase e situazione derivano automaticamente dai dati live del sistema di allertamento; i campi con * diventano il valore di riserva. |
+| `dinamico` | no | Se presente (`allerta` o `incendi`), fase e situazione derivano automaticamente dai dati live del sistema di allertamento; con `sismico` la situazione aggiunge i terremoti registrati dall'INGV negli ultimi 7 giorni entro 30 km (campo `sismicita` dell'endpoint JSON, presente solo se il dato ha meno di 3 giorni); i campi con * diventano il valore di riserva. |
+| `verifica` | no | Elenco delle fonti che sostengono la riga: per ciascuna l'indirizzo (`url`) o il file (`file`) e il testo (`testo`) che deve ancora contenere. Un controllo automatico quotidiano le rilegge e aggiorna `verificato` solo se tutte confermano. Non compare nell'endpoint JSON. |
 | `stato_verde` | no | Solo per righe `dinamico: allerta`: la frase mostrata quando non c'è allerta. |
 | `icona` | no | Icona decorativa (nel nostro caso Bootstrap Icons). |
 

@@ -10,11 +10,20 @@
 #     Se ≠ verde la fase diventa "previsione" e la situazione è il titolo dell'allerta.
 #   - "incendi": data/allerta.json blocco rischio_incendi (bollettino AIB Zona 9),
 #     se presente; altrimenti valgono i campi statici della riga.
+#   - "sismico": data/sismicita_genzano.json (terremoti INGV degli ultimi 7 giorni
+#     entro 30 km da Genzano), scritto ogni giorno da scripts/aggiorna-stato-territorio.py.
+#     La frase sui terremoti si mostra solo se il file ha meno di 3 giorni.
 # Le righe statiche vanno riverificate e ridatate quando lo stato cambia, e comunque
 # entro 60 giorni: oltre quella soglia lo shortcode le marca "verifica da rinnovare"
 # (una data di verifica vecchia accanto a un'affermazione sul presente non vale nulla).
+# Dal 14/11/2026 la riverifica è automatica e quotidiana (workflow
+# aggiorna-stato-territorio.yml): per ogni riga, `verifica:` elenca le fonti
+# ufficiali e il testo che ciascuna deve ancora contenere perché la riga resti vera.
+# Se tutte lo contengono, `verificato` prende la data del giorno; se una fonte non
+# risponde o non dice più quella cosa, la data resta e si apre una issue fonte-rotta.
+# Chi cambia il testo di una riga controlla che le sue `verifica` lo sostengano.
 
-aggiornamento: "2026-09-14"
+aggiornamento: "2026-11-14"
 
 righe:
   - id: "meteo-idro"
@@ -31,7 +40,10 @@ righe:
     dinamico: "incendi"
     fase: "prevenzione"
     stato: "Prevenzione stagionale: nel periodo di massima pericolosità il Centro Funzionale regionale pubblica ogni giorno il bollettino di pericolosità per la Zona 9 (Castelli Romani); quando indica un livello diverso da BASSO questa riga lo riporta da sola."
-    verificato: "2026-09-14"
+    verifica:
+      - url: "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi"
+        testo: "Bollettini di Pericolosità incendi Boschivi"
+    verificato: "2026-11-14"
     fonte_label: "Rischio incendi boschivi"
     fonte_url: "/rischi-prevenzione/rischio-incendio/"
 
@@ -40,7 +52,11 @@ righe:
     icona: "bi-activity"
     fase: "prevenzione"
     stato: "Prevenzione permanente: il momento di un terremoto non si può prevedere; si lavora su edifici, piani di emergenza e preparazione delle persone."
-    verificato: "2026-09-14"
+    dinamico: "sismico"
+    verifica:
+      - url: "https://rischi.protezionecivile.gov.it/it/sismico/"
+        testo: "Non è ancora possibile prevedere con certezza quando"
+    verificato: "2026-11-14"
     fonte_label: "Rischio sismico"
     fonte_url: "/rischi-prevenzione/rischio-sismico/"
 
@@ -48,8 +64,15 @@ righe:
     rischio: "Vulcanico (Colli Albani)"
     icona: "bi-triangle"
     fase: "prevenzione"
-    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente, non spento, e l'INGV lo monitora in continuo. Lo stato di attività aggiornato si legge sui comunicati dell'INGV."
-    verificato: "2026-09-14"
+    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente, non spento, e l'INGV lo sorveglia con stazioni GPS permanenti e misure dei gas del suolo e del Lago Albano. Lo stato di attività aggiornato si legge sui comunicati dell'INGV."
+    verifica:
+      - url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
+        testo: "considerato quiescente"
+      - url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
+        testo: "GPS"
+      - url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
+        testo: "Lago Albano"
+    verificato: "2026-11-14"
     fonte_label: "Il vulcanismo dei Colli Albani"
     fonte_url: "/conoscere/rischio-vulcanico-colli-albani/"
 
@@ -57,8 +80,13 @@ righe:
     rischio: "Ondate di calore"
     icona: "bi-thermometer-sun"
     fase: "prevenzione"
-    stato: "Prevenzione stagionale: le misure estive di protezione dal caldo coprono il periodo giugno–settembre; l'attenzione alle persone fragili resta tutto l'anno, con caldo e con freddo."
-    verificato: "2026-09-14"
+    stato: "Prevenzione stagionale: le misure di protezione dal caldo valgono nella stagione estiva, nel periodo che il Ministero della Salute fissa ogni anno per i bollettini sulle ondate di calore; l'attenzione alle persone fragili resta tutto l'anno, con caldo e con freddo."
+    # Il portale del Ministero della Salute non si legge da un programma (verifica
+    # anti-bot): si usa la pagina EpiCentro dell'ISS, che rimanda ai bollettini.
+    verifica:
+      - url: "https://www.epicentro.iss.it/caldo/aggiornamenti"
+        testo: "bollettini sulle ondate di calore"
+    verificato: "2026-11-14"
     fonte_label: "Ondate di calore"
     fonte_url: "/rischi-prevenzione/ondate-di-calore/"
 
@@ -67,6 +95,12 @@ righe:
     icona: "bi-lightning-charge"
     fase: "prevenzione"
     stato: "Prevenzione permanente: preparazione delle famiglie e continuità dei servizi essenziali. Un'interruzione in corso non si legge qui: se riguarda il territorio compare nel banner di emergenza e nelle comunicazioni."
-    verificato: "2026-09-14"
+    # Riga sul funzionamento del sito: si verificano i file da cui dipende.
+    verifica:
+      - file: "data/emergenza.json"
+        testo: "attiva"
+      - file: "content/rischi-prevenzione/blackout.md"
+        testo: "{#cosa-fare-prima}"
+    verificato: "2026-11-14"
     fonte_label: "Blackout"
     fonte_url: "/rischi-prevenzione/blackout/"
