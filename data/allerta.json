@@ -3,5 +3,14 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-11-14T00:02:17+01:00",
-  "ultimo_controllo": "2026-11-14T09:41:39+01:00"
+  "ultimo_controllo": "2026-11-14T12:41:38+01:00",
+  "domani": {
+    "livello": "gialla",
+    "titolo": "Previsto giallo",
+    "rischi": [
+      "rischio idrogeologico",
+      "rischio idraulico"
+    ],
+    "data": "2026-11-15"
+  }
 }
