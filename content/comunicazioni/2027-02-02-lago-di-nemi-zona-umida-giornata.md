@@ -1,7 +1,7 @@
 ---
 title: "2 febbraio, Giornata mondiale delle zone umide: il lago di Nemi visto da vicino"
 date: 2027-02-02
-description: "Il lago di Nemi è una zona umida chiusa nel suo cratere, sotto Genzano. Che cosa lo rende fragile, perché d'inverno l'emissario resta chiuso e che cosa puoi fare tu."
+description: "Il lago di Nemi è una zona umida chiusa nel suo cratere, sotto Genzano. Che cosa lo rende fragile, perché d'inverno il Parco chiude l'emissario e che cosa puoi fare tu."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -15,7 +15,7 @@ social_citazione: "Il lago di Nemi riceve acqua solo dalla pioggia e dalle sorge
 social_punti:
   - "Il 2 febbraio è la Giornata mondiale delle zone umide, riconosciuta dalle Nazioni Unite nel 2021."
   - "Il lago di Nemi occupa un cratere dei Colli Albani: profondità massima 33 metri."
-  - "Fino al 31 marzo l'emissario romano è chiuso dal Parco per proteggere i pipistrelli in letargo."
+  - "D'inverno il Parco può chiudere l'emissario romano per proteggere i pipistrelli in letargo: controlla i divieti in vigore."
   - "Rifiuti e scarichi abusivi vicino al lago si segnalano al Comune o ai Carabinieri forestali."
 draft: false
 ---
