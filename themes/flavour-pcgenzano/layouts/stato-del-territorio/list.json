@@ -2,7 +2,8 @@
        (/stato-del-territorio/index.json). Espone data/stato_territorio.yaml
        con la stessa logica dinamica dello shortcode matrice-territorio.html:
        le righe "allerta"/"incendi" derivano fase e situazione da data/allerta.json
-       al build. Specifica aperta v1.0: /stato-del-territorio/specifica/. */ -}}
+       al build; la riga "sismico" aggiunge il campo "sismicita" da
+       data/sismicita_genzano.json (solo se ha meno di 3 giorni). Specifica aperta v1.0: /stato-del-territorio/specifica/. */ -}}
 {{- $d := .Site.Data.stato_territorio -}}
 {{- $a := .Site.Data.allerta -}}
 {{- $e := .Site.Data.emergenza -}}
@@ -12,6 +13,7 @@
   {{- $stato := .stato | default "" -}}
   {{- $verificato := .verificato | default "" -}}
   {{- $livello := "" -}}
+  {{- $sism := dict -}}
   {{- if eq .dinamico "allerta" -}}
     {{- $liv := $a.livello | default "verde" -}}
     {{- $livello = $liv -}}
@@ -33,8 +35,15 @@
         {{- with .data }}{{ $verificato = . }}{{ end -}}
       {{- end -}}
     {{- end -}}
+  {{- else if eq .dinamico "sismico" -}}
+    {{- with site.Data.sismicita_genzano -}}
+      {{- $agg := try (time.AsTime .aggiornato) -}}
+      {{- if and (not $agg.Err) (gt $agg.Value (now.AddDate 0 0 -3)) -}}
+        {{- $sism = dict "aggiornato" .aggiornato "giorni" .giorni "raggio_km" .raggio_km "numero" .numero "piu_forte" .piu_forte "fonte" .fonte -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
-  {{- $righe = $righe | append (dict
+  {{- $riga := dict
         "id" .id
         "rischio" .rischio
         "fase" $fase
@@ -43,7 +52,9 @@
         "verificato" $verificato
         "dinamico" (.dinamico | default "")
         "fonte" (dict "titolo" (.fonte_label | default "") "url" (.fonte_url | strings.TrimPrefix "/" | absURL))
-      ) -}}
+      -}}
+  {{- if $sism }}{{ $riga = merge $riga (dict "sismicita" $sism) }}{{ end -}}
+  {{- $righe = $righe | append $riga -}}
 {{- end -}}
 {{- dict
       "specifica" "matrice-stato-del-territorio"

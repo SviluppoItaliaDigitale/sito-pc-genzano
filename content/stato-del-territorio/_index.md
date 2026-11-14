@@ -36,7 +36,8 @@ La colonna «Verificato» dice quando quello stato è stato controllato l'ultima
 ## Come viene aggiornata
 
 - Le righe **meteo-idrogeologico** e **incendi boschivi** si aggiornano **automaticamente** dai dati del sistema di allertamento del sito (gli stessi che alimentano la barra allerta in homepage e il [feed CAP](/allerte-meteo/), sigla di *Common Alerting Protocol*, lo standard internazionale per la diffusione delle allerte).
-- Le altre righe sono verificate dalla redazione e **ridatate a ogni controllo**: la data di verifica è parte dell'informazione.
+- La riga **sismico** riporta anche i terremoti che l'INGV ha registrato negli ultimi 7 giorni entro 30 km da Genzano, aggiornati ogni giorno.
+- Ogni mattina un controllo automatico **rilegge le fonti ufficiali** di ogni riga (Dipartimento della Protezione Civile, INGV, Regione Lazio, Istituto Superiore di Sanità). Se confermano ancora ciò che la riga dice, la data di verifica diventa quella del giorno; se una fonte non risponde o è cambiata, la data resta quella dell'ultimo controllo riuscito e la redazione la ricontrolla. La data di verifica è parte dell'informazione.
 
 Se noti uno stato non aggiornato, segnalacelo dai [contatti](/contatti/): la trasparenza di questa pagina è la sua ragione d'essere.
 
