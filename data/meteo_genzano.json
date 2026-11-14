@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-14T11:22",
+  "aggiornato": "2026-11-14T12:04",
   "data_lunga": "sabato 14 novembre 2026",
-  "aggiornato_label": "sabato 14 novembre 2026, ore 11:22",
+  "aggiornato_label": "sabato 14 novembre 2026, ore 12:04",
   "alba": "06:56",
   "tramonto": "16:49",
   "corrente": {
-    "temp": 14.5,
+    "temp": 14.4,
     "percepita": 14.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 89,
+    "umidita": 90,
     "vento": 6,
-    "raffiche": 23
+    "raffiche": 25
   },
   "giorni": [
     {
@@ -30,10 +30,10 @@
       "label": "Dom 15",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
       "cielo": "Temporale",
-      "tmax": 15,
+      "tmax": 16,
       "tmin": 13,
       "pioggia": 95,
-      "pioggia_mm": 8.6,
+      "pioggia_mm": 9.7,
       "raffiche": 49,
       "uv": 3,
       "uv_label": "moderato"
@@ -42,23 +42,23 @@
       "label": "Lun 16",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
       "cielo": "Temporale",
-      "tmax": 15,
+      "tmax": 16,
       "tmin": 11,
       "pioggia": 100,
-      "pioggia_mm": 11.9,
-      "raffiche": 74,
+      "pioggia_mm": 18.5,
+      "raffiche": 80,
       "uv": 3,
       "uv_label": "moderato"
     },
     {
       "label": "Mar 17",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"11.0\" y1=\"26.3\" x2=\"9.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"16.0\" y1=\"26.3\" x2=\"14.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"21.0\" y1=\"26.3\" x2=\"19.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></g>",
-      "cielo": "Pioggia debole",
+      "cielo": "Pioggia",
       "tmax": 15,
       "tmin": 11,
       "pioggia": 45,
-      "pioggia_mm": 3.0,
-      "raffiche": 68,
+      "pioggia_mm": 3.5,
+      "raffiche": 61,
       "uv": 2,
       "uv_label": "basso"
     }
