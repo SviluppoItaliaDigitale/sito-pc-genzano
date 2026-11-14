@@ -176,10 +176,10 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 - Revisione del kit di emergenza di famiglia (badge: Informazione)
 
 ### Febbraio
-- **1 febbraio** — Giornata mondiale delle zone umide (lago di Nemi) (badge: Informazione)
+- **2 febbraio** — Giornata mondiale delle zone umide (lago di Nemi) (badge: Informazione)
 - **11 febbraio** — Giornata del 112 (NUE) (badge: Comunicazione)
 - Preparazione del piano familiare di emergenza (badge: Prevenzione)
-- **Ultima domenica di febbraio** — Giornata malattie rare: PC e persone fragili (badge: Informazione)
+- **Ultimo giorno di febbraio** — Giornata malattie rare: PC e persone con specifiche necessità (badge: Informazione)
 - Esercitazioni invernali del Gruppo se programmate (badge: Esercitazione)
 
 ### Marzo
