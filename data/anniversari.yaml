@@ -1,0 +1,295 @@
+# Calendario delle ricorrenze di protezione civile: la fonte unica.
+#
+# Una voce per ogni evento storico che il sito ricorda nel suo giorno
+# anniversario. Lo legge scripts/check-anniversari.py, che segnala:
+#   - le ricorrenze dei prossimi giorni senza un articolo in uscita proprio quel giorno;
+#   - gli articoli di ricorrenza usciti o programmati in un giorno diverso da quello dell'evento;
+#   - gli articoli con un evento storico nel titolo che qui non sono registrati.
+#
+# Campi:
+#   giorni   giorno o giorni della ricorrenza, "MM-GG" (più giorni per gli eventi
+#            a cavallo della notte o in due scosse ravvicinate);
+#   evento   nome breve;
+#   anno     anno dell'evento;
+#   chiave   espressione regolare cercata nel nome del file dell'articolo
+#            (senza la data davanti): riconosce l'articolo anche negli anni successivi;
+#   fonte    pagina della fonte primaria su cui è verificata la data;
+#   nota     facoltativa.
+# Una voce senza articolo (ricorrenza da scrivere) ha comunque la «chiave» che
+# avrà il suo nome file: il controllo la segnala finché l'articolo non c'è.
+#
+# Nato il 14/11/2026: l'articolo sul Polesine era programmato per il giorno dopo
+# l'anniversario, e la tabella del piano editoriale aveva date sbagliate
+# (Versilia l'8 novembre, Friuli il 26 novembre, Livorno il 20 settembre).
+
+ricorrenze:
+  - giorni: ["01-12"]
+    evento: "Terremoto di Haiti"
+    anno: 2010
+    chiave: "haiti-2010"
+  - giorni: ["01-13"]
+    evento: "Terremoto della Marsica (Avezzano)"
+    anno: 1915
+    chiave: "avezzano-1915"
+  - giorni: ["01-13"]
+    evento: "Naufragio della Costa Concordia all'Isola del Giglio"
+    anno: 2012
+    chiave: "concordia-2012"
+    fonte: "https://www.protezionecivile.gov.it/en/notizia/13-january-2012--the-wreck-of-the-concordia-ship/"
+    nota: "Stato di emergenza nazionale, capo del Dipartimento commissario delegato."
+    articolo_da_scrivere: true
+  - giorni: ["01-14", "01-15"]
+    evento: "Terremoto del Belice"
+    anno: 1968
+    chiave: "belice-1968"
+  - giorni: ["01-18"]
+    evento: "Valanga di Rigopiano"
+    anno: 2017
+    chiave: "rigopiano-2017"
+  - giorni: ["01-31"]
+    evento: "Stato di emergenza nazionale per il COVID-19"
+    anno: 2020
+    chiave: "(covid|stato-di-emergenza)-2020"
+    fonte: "https://www.gazzettaufficiale.it/eli/id/2020/02/01/20A00737/sg"
+    articolo_da_scrivere: true
+  - giorni: ["02-06"]
+    evento: "Terremoto in Turchia e Siria"
+    anno: 2023
+    chiave: "turchia-siria-2023"
+  - giorni: ["02-24"]
+    evento: "Legge 225 del 1992, Servizio nazionale della protezione civile"
+    anno: 1992
+    chiave: "legge-225"
+  - giorni: ["03-11"]
+    evento: "Terremoto e tsunami del Tōhoku, Fukushima"
+    anno: 2011
+    chiave: "tohoku"
+  - giorni: ["04-06"]
+    evento: "Terremoto dell'Aquila"
+    anno: 2009
+    chiave: "(aquila|abruzzo)-2009"
+  - giorni: ["04-25"]
+    evento: "Terremoto del Nepal (Gorkha)"
+    anno: 2015
+    chiave: "nepal-2015"
+  - giorni: ["04-26"]
+    evento: "Incidente nucleare di Chernobyl"
+    anno: 1986
+    chiave: "chernobyl"
+  - giorni: ["05-05"]
+    evento: "Frane di Sarno e Quindici"
+    anno: 1998
+    chiave: "sarno"
+  - giorni: ["05-06"]
+    evento: "Terremoto del Friuli"
+    anno: 1976
+    chiave: "friuli-1976-(cinquant|anniversario|\\d+-anni)"
+    nota: "L'articolo sulla ricostruzione del Friuli (26/11) non è una ricorrenza e non ha questa chiave."
+  - giorni: ["05-16", "05-17"]
+    evento: "Alluvione dell'Emilia-Romagna"
+    anno: 2023
+    chiave: "emilia-romagna-2023"
+  - giorni: ["05-20"]
+    evento: "Terremoto dell'Emilia, prima scossa"
+    anno: 2012
+    chiave: "terremoto-emilia-2012"
+  - giorni: ["05-29"]
+    evento: "Terremoto dell'Emilia, seconda scossa"
+    anno: 2012
+    chiave: "emilia-2012-seconda-scossa"
+  - giorni: ["06-10"]
+    evento: "Vermicino, Alfredino Rampi"
+    anno: 1981
+    chiave: "vermicino"
+  - giorni: ["06-19"]
+    evento: "Alluvione della Versilia"
+    anno: 1996
+    chiave: "versilia-1996"
+  - giorni: ["06-29"]
+    evento: "Disastro ferroviario di Viareggio"
+    anno: 2009
+    chiave: "viareggio-2009"
+  - giorni: ["07-10"]
+    evento: "Disastro di Seveso"
+    anno: 1976
+    chiave: "seveso-1976"
+  - giorni: ["07-19"]
+    evento: "Val di Stava"
+    anno: 1985
+    chiave: "stava-1985"
+  - giorni: ["07-28"]
+    evento: "Frana della Val Pola"
+    anno: 1987
+    chiave: "val-pola"
+  - giorni: ["08-12"]
+    evento: "Strage di Sant'Anna di Stazzema"
+    anno: 1944
+    chiave: "stazzema-1944"
+  - giorni: ["08-14"]
+    evento: "Crollo del ponte Morandi"
+    anno: 2018
+    chiave: "morandi"
+  - giorni: ["08-19"]
+    evento: "Piena del torrente Raganello (Civita)"
+    anno: 2018
+    chiave: "raganello"
+    fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
+    nota: "Alcune cronache danno il 20 agosto: fa fede il CNR-IRPI."
+    articolo_da_scrivere: true
+  - giorni: ["08-21"]
+    evento: "Terremoto di Ischia"
+    anno: 2017
+    chiave: "ischia-2017"
+  - giorni: ["08-23"]
+    evento: "Frana del Pizzo Cengalo (Bondo)"
+    anno: 2017
+    chiave: "pizzo-cengalo"
+  - giorni: ["08-24"]
+    evento: "Terremoto di Amatrice, Centro Italia"
+    anno: 2016
+    chiave: "amatrice-2016"
+  - giorni: ["08-26"]
+    evento: "Terremoto dei Colli Albani"
+    anno: 1806
+    chiave: "colli-albani-1806"
+  - giorni: ["09-09", "09-10"]
+    evento: "Alluvione di Livorno"
+    anno: 2017
+    chiave: "livorno-2017"
+    nota: "Nel 2026 l'articolo è uscito il 20 settembre, dieci giorni dopo."
+  - giorni: ["09-10"]
+    evento: "Alluvione di Soverato"
+    anno: 2000
+    chiave: "soverato-2000"
+  - giorni: ["09-15", "09-16"]
+    evento: "Alluvione delle Marche"
+    anno: 2022
+    chiave: "marche-2022"
+  - giorni: ["09-26"]
+    evento: "Terremoto di Umbria e Marche"
+    anno: 1997
+    chiave: "marche-umbria-1997"
+  - giorni: ["10-01"]
+    evento: "Colate di fango di Giampilieri"
+    anno: 2009
+    chiave: "giampilieri-2009"
+    nota: "Nel 2026 l'articolo è uscito il 4 ottobre."
+  - giorni: ["10-07", "10-08"]
+    evento: "Alluvione di Genova"
+    anno: 1970
+    chiave: "genova-1970"
+  - giorni: ["10-09"]
+    evento: "Disastro del Vajont"
+    anno: 1963
+    chiave: "vajont"
+  - giorni: ["10-09"]
+    evento: "Alluvione di Genova (Bisagno)"
+    anno: 2014
+    chiave: "genova-2014"
+    nota: "Nel 2026 l'articolo è uscito l'11 ottobre."
+  - giorni: ["10-13", "10-14", "10-15", "10-16"]
+    evento: "Alluvione dell'Italia nord-occidentale (Piemonte, Valle d'Aosta, Lombardia)"
+    anno: 2000
+    chiave: "(piemonte|valle-d-aosta|nord-ovest)-2000"
+    fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
+    articolo_da_scrivere: true
+  - giorni: ["10-15"]
+    evento: "Alluvione del Sannio"
+    anno: 2015
+    chiave: "sannio-2015"
+  - giorni: ["10-15"]
+    evento: "Terremoto di Reggio Emilia (Correggio)"
+    anno: 1996
+    chiave: "reggio-emilia-1996"
+  - giorni: ["10-25", "10-26"]
+    evento: "Alluvione di Salerno (Vietri, Molina)"
+    anno: 1954
+    chiave: "salerno-1954"
+    fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
+    articolo_da_scrivere: true
+  - giorni: ["10-25", "10-26"]
+    evento: "Alluvione delle Cinque Terre e della Lunigiana"
+    anno: 2011
+    chiave: "(cinque-terre|lunigiana)-2011"
+    fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
+    articolo_da_scrivere: true
+  - giorni: ["10-26"]
+    evento: "Sequenza sismica del Pollino, scossa di Mormanno"
+    anno: 2012
+    chiave: "pollino"
+  - giorni: ["10-26"]
+    evento: "Terremoto di Visso e Camerino"
+    anno: 2016
+    chiave: "marche-2016-visso"
+  - giorni: ["10-29"]
+    evento: "Tempesta Vaia"
+    anno: 2018
+    chiave: "vaia-2018"
+  - giorni: ["10-30"]
+    evento: "Terremoto di Norcia"
+    anno: 2016
+    chiave: "norcia-2016"
+  - giorni: ["10-31"]
+    evento: "Terremoto di San Giuliano di Puglia"
+    anno: 2002
+    chiave: "san-giuliano-puglia"
+  - giorni: ["11-03"]
+    evento: "Alluvione del Biellese"
+    anno: 1968
+    chiave: "biellese-1968"
+    fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
+    articolo_da_scrivere: true
+  - giorni: ["11-03"]
+    evento: "Alluvione di Casteldaccia e della provincia di Palermo"
+    anno: 2018
+    chiave: "(casteldaccia|palermo)-2018"
+    fonte: "https://polaris.irpi.cnr.it/una-storia-di-alluvioni-in-italia-1951-2018/"
+    articolo_da_scrivere: true
+  - giorni: ["11-04"]
+    evento: "Alluvione di Firenze"
+    anno: 1966
+    chiave: "firenze-1966"
+  - giorni: ["11-04"]
+    evento: "Alluvione di Genova (Fereggiano)"
+    anno: 2011
+    chiave: "genova-2011"
+  - giorni: ["11-05", "11-06"]
+    evento: "Alluvione del Piemonte (Tanaro)"
+    anno: 1994
+    chiave: "piemonte-1994"
+    nota: "Nel 2026 l'articolo è uscito il 7 novembre."
+  - giorni: ["11-14"]
+    evento: "Alluvione del Polesine"
+    anno: 1951
+    chiave: "polesine-1951"
+    fonte: "https://polaris.irpi.cnr.it/14-novembre-1951-lalluvione-del-polesine/"
+  - giorni: ["11-18"]
+    evento: "Ciclone Cleopatra in Sardegna"
+    anno: 2013
+    chiave: "sardegna-2013"
+    fonte: "https://polaris.irpi.cnr.it/sardegna-2013-la-furia-del-ciclone-cleopatra/"
+    nota: "Bilancio discordante nelle pagine del CNR-IRPI (16 morti e un disperso nel 2013, 18 nell'elenco 1951-2018): da verificare prima di scrivere."
+    articolo_da_scrivere: true
+  - giorni: ["11-23"]
+    evento: "Terremoto dell'Irpinia"
+    anno: 1980
+    chiave: "irpinia-1980"
+  - giorni: ["11-26"]
+    evento: "Frana di Casamicciola"
+    anno: 2022
+    chiave: "ischia-2022-frana"
+  - giorni: ["12-13"]
+    evento: "Terremoto di Santa Lucia in Sicilia orientale"
+    anno: 1990
+    chiave: "(santa-lucia|sicilia-orientale|carlentini)-1990"
+    fonte: "https://webservices.ingv.it/fdsnws/event/1/query?eventid=363529&format=text"
+    nota: "Ora 01:24 italiane. Non è l'articolo sulla festa di Santa Lucia del 13/12."
+    articolo_da_scrivere: true
+  - giorni: ["12-26"]
+    evento: "Tsunami dell'Oceano Indiano"
+    anno: 2004
+    chiave: "tsunami-indiano-2004"
+  - giorni: ["12-28"]
+    evento: "Terremoto di Messina e Reggio Calabria"
+    anno: 1908
+    chiave: "messina-reggio-calabria-1908"

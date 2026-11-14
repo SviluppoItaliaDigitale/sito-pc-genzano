@@ -1,11 +1,11 @@
 ---
 title: "Casamicciola, 26 novembre 2022: la frana all'alba sull'isola d'Ischia"
-date: 2026-11-30
+date: 2026-11-26T00:03:00+01:00
 description: "Poco prima dell'alba una colata di fango scese dal monte Epomeo su Casamicciola Terme: 12 vittime. Quattro anni dopo, cosa resta di quella lezione."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-11-30-ischia-2022-frana-casamicciola.webp"
+image: "/images/2026-11-26-ischia-2022-frana-casamicciola.webp"
 image_alt: "Cover dell'articolo: Casamicciola, 26 novembre 2022: la frana all'alba sull'isola d'Ischia"
 scadenza: ""
 area: ""

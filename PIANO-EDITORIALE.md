@@ -303,6 +303,8 @@ Una **linea editoriale ricorrente** del sito è quella degli **anniversari di ev
 
 Lunghezza: **1300-1500 parole**. Badge: `Informazione`. Formato data nel frontmatter: `AAAA-MM-GG`.
 
+🔴 **Dal 14/11/2026 la fonte unica delle ricorrenze è `data/anniversari.yaml`** (giorno, evento, fonte su cui è verificata la data, chiave del nome file dell'articolo). Ogni lunedì `controllo-anniversari.yml` (`scripts/check-anniversari.py`) apre una issue con le ricorrenze dei prossimi 45 giorni senza articolo e con gli articoli programmati in un giorno diverso da quello dell'evento. **L'articolo esce il giorno della ricorrenza**, non quello dopo. Una ricorrenza nuova si aggiunge prima al file, con la fonte; la tabella qui sotto è un riassunto e, se non coincide, vale il file.
+
 **Calendario degli anniversari** (selezione, non esaustiva — il calendario è in continua espansione e nuove ricorrenze vanno aggiunte ogni volta che l'evento incontra i criteri sopra):
 
 | Data | Evento | Anno | Rilevanza PC |
@@ -316,6 +318,7 @@ Lunghezza: **1300-1500 parole**. Badge: `Informazione`. Formato data nel frontma
 | 20 mag + 29 mag | Emilia 2012 (due scosse) | 2012 | ricostruzione partecipata, riedizione CTR/CRO |
 | 23 mag | Strage di Capaci | 1992 | legalità e servizio pubblico |
 | 10 giu | Vermicino / Alfredino Rampi | 1981 | accelerazione PC, nuclei SAF VVF, Centro Rampi |
+| 19 giu | Versilia alluvione | 1996 | rischio idrogeologico costiero |
 | 10 lug | Seveso ICMESA | 1976 | direttive europee Seveso I/II/III, D.Lgs. 105/2015 |
 | 19 lug | Val di Stava | 1985 | sicurezza dighe minerarie, Direttive PC, ICOLD |
 | 28 lug | Val Pola Valtellina | 1987 | evacuazione preventiva, IFFI ISPRA, monitoraggio versanti |
@@ -323,17 +326,16 @@ Lunghezza: **1300-1500 parole**. Badge: `Informazione`. Formato data nel frontma
 | 23 ago | Pizzo Cengalo Bondo | 2017 | rischio permafrost, frane alpine cambiamento climatico |
 | 24 ago | Amatrice (Centro Italia 1) | 2016 | sequenza Centro Italia, SAE, microzonazione |
 | 11 set | 11 settembre 2001 | 2001 | comunicazione di crisi, USAR INSARAG |
-| 20 set | Livorno alluvione | 2017 | rischio bombe d'acqua tirreno |
+| 10 set | Livorno alluvione (notte 9-10) | 2017 | rischio bombe d'acqua tirreno |
 | 9 ott | Vajont | 1963 | studio frane catastrofiche, prima vera presa coscienza |
 | 20 ott | Rischio Seveso (campagna) | — | direttiva industriale UE |
 | 26 ott | Visso/Camerino (Centro Italia 2) | 2016 | sequenza marchigiana, Sismabonus |
-| 28 ott | Norcia / Centro Italia memoria | 2016 | ricostruzione lunga, tutela patrimonio storico |
+| 30 ott | Norcia (Centro Italia 3) | 2016 | ricostruzione lunga, tutela patrimonio storico |
 | 29 ott | Tempesta Vaia | 2018 | rischio vento estremo, gestione foreste |
 | 31 ott | San Giuliano di Puglia | 2002 | OPCM 3274, classificazione sismica nazionale, scuole sicure |
-| 8 nov | Versilia alluvione | 1996 | rischio idrogeologico costiero |
 | 14 nov | Polesine alluvione | 1951 | prima grande mobilitazione solidale del dopoguerra, alluvioni di pianura con preavviso |
-| 23 nov | Irpinia | 1980 | ricostruzione, Cossiga commissario, antesignano L. 225/1992 |
-| 26 nov | Friuli memoria | 1976 | replica seconda scossa, ricostruzione |
+| 23 nov | Irpinia | 1980 | ricostruzione, Zamberletti commissario straordinario, antesignano L. 225/1992 |
+| 26 nov | Casamicciola frana | 2022 | colate rapide su versanti vulcanici, abusivismo e rischio residuo |
 | 26 dic | Tsunami Oceano Indiano | 2004 | sistema globale UNESCO-IOC, NEAMTWS, SiAM |
 | 28 dic | Messina-Reggio Calabria | 1908 | RD 193/1909 prima legge antisismica, soccorso pubblico moderno |
 

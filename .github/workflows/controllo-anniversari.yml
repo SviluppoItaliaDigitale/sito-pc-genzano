@@ -1,0 +1,81 @@
+name: "🕯️ Ricorrenze di protezione civile senza articolo"
+
+# Ogni lunedì controlla il calendario delle ricorrenze (data/anniversari.yaml):
+# segnala le ricorrenze dei prossimi 45 giorni senza un articolo in uscita
+# proprio quel giorno e gli articoli di ricorrenza programmati in un giorno
+# diverso da quello dell'evento. Apre un'issue che si aggiorna a ogni giro e si
+# chiude da sola quando è tutto a posto. Logica in scripts/check-anniversari.py.
+#
+# Nasce il 14/11/2026: l'articolo sul Polesine era programmato per il giorno
+# dopo l'anniversario e alcune ricorrenze importanti non avevano articolo.
+# Quarantacinque giorni bastano per scrivere, verificare e programmare.
+
+on:
+  schedule:
+    - cron: "29 6 * * 1"   # lunedì 07:29 italiane (ora solare)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: controllo-anniversari
+  cancel-in-progress: false
+
+jobs:
+  controllo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: "🕯️ Controlla le ricorrenze dei prossimi 45 giorni"
+        id: controllo
+        shell: bash
+        run: |
+          set +e
+          python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
+          python3 scripts/check-anniversari.py --giorni 45 --markdown > /tmp/anniversari.md
+          n=$?
+          cat /tmp/anniversari.md
+          # 100 = errore dello script (file mancante, YAML rotto): il run diventa rosso.
+          if [ "$n" -ge 100 ] || ! grep -q "Controllo del" /tmp/anniversari.md; then
+            echo "::error::Il controllo delle ricorrenze non è arrivato in fondo"
+            exit 1
+          fi
+          echo "segnalati=$n" >> "$GITHUB_OUTPUT"
+
+      - name: "🚨 Apri, aggiorna o chiudi l'issue"
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/anniversari.md', 'utf-8');
+            const segnalati = parseInt('${{ steps.controllo.outputs.segnalati }}', 10) || 0;
+            const title = '[Automatico] Ricorrenze di protezione civile da preparare';
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'automazione', per_page: 100
+            });
+            const issue = existing.data.find(i => i.title === title);
+            const body = [
+              'Queste ricorrenze del calendario `data/anniversari.yaml` cadono nei prossimi 45 giorni senza un articolo in uscita proprio quel giorno, oppure hanno un articolo programmato in un giorno sbagliato.',
+              '',
+              '**Come si lavora:** per ogni MANCA si scrive l\'articolo con data di uscita uguale al giorno della ricorrenza (fatti verificati sulla fonte primaria, gate `pc-fact-checker`, `pc-desk-giornalistico`, `pc-article-reviewer`); per ogni FUORI DATA si sposta `date:` al giorno giusto (`pc-calendario-editoriale`). Se una ricorrenza non va più ricordata, si toglie dal calendario scrivendo il motivo nel commento.',
+              '',
+              report.trim(),
+              '',
+              '---', '*Issue generata dal workflow `controllo-anniversari.yml`; si chiude da sola quando tutto è a posto.*'
+            ].join('\n');
+            if (segnalati > 0) {
+              if (issue) {
+                await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, body });
+              } else {
+                await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['automazione'] });
+              }
+            } else if (issue) {
+              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, body: 'Ogni ricorrenza dei prossimi 45 giorni ha il suo articolo nel suo giorno: chiudo automaticamente.' });
+              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+            }
