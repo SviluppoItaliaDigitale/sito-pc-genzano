@@ -1,12 +1,8 @@
 {
-  "aggiornato": "2026-11-14",
+  "aggiornato": "2026-11-15",
   "giorni": 7,
   "raggio_km": 30,
-  "numero": 1,
-  "piu_forte": {
-    "magnitudo": 1.4,
-    "luogo": "5 km N Colonna (RM)",
-    "data": "2026-11-08"
-  },
+  "numero": 0,
+  "piu_forte": null,
   "fonte": "INGV, servizio FDSN webservices.ingv.it"
 }
