@@ -617,7 +617,11 @@ def chiama_revisore(api_key: str, art: dict, bozze: dict) -> list[str] | None:
             f"# ARTICOLO\n{art.get('testo', '')[:12000]}\n\n# POST DA CONTROLLARE\n{testi}"}]}],
         "generationConfig": {"responseMimeType": "application/json",
                              "responseSchema": REVISORE_SCHEMA, "temperature": 0,
-                             "maxOutputTokens": 2048},
+                             # Il ragionamento del modello conta nel limite: con
+                             # 2048 la risposta usciva troncata (prova del
+                             # 15/11/2026, JSON non chiuso). Stesso tetto della
+                             # stesura dei testi.
+                             "maxOutputTokens": 8192},
     }
     req = urllib.request.Request(
         GEMINI_ENDPOINT, data=json.dumps(payload).encode("utf-8"),
@@ -626,7 +630,11 @@ def chiama_revisore(api_key: str, art: dict, bozze: dict) -> list[str] | None:
         try:
             with urllib.request.urlopen(req, timeout=60) as resp:
                 risposta = json.loads(resp.read().decode("utf-8"))
-            esito = json.loads(risposta["candidates"][0]["content"]["parts"][0]["text"])
+            cand = risposta["candidates"][0]
+            if cand.get("finishReason") == "MAX_TOKENS":
+                stampa_err("Revisore: risposta troncata (MAX_TOKENS)")
+                return None
+            esito = json.loads(cand["content"]["parts"][0]["text"])
             if esito.get("ok"):
                 return []
             return [str(p) for p in esito.get("problemi") or ["il revisore non ha approvato i testi"]]
