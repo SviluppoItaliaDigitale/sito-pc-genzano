@@ -15,7 +15,7 @@ versione_facile: "2026-11-12-frane-video-3d-facile"
 tts: true
 lis_section: "allerte-meteo"
 social_video: "/video/2026-11-12-frane-video-3d.mp4"
-social_crediti: "Musica: «On My Way» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (coqui.ai/cpml)."
+social_crediti: "Musica: «On My Way» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
 social_citazione: "Nessun muro e nessuna casa possono fermare una frana. Se la terra si muove, allontanati subito."
 social_punti:
   - "I segnali: crepe nel terreno o nei muri, alberi e pali che si inclinano, piccoli smottamenti."

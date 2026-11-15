@@ -15,7 +15,7 @@ versione_facile: "2026-11-12-vento-forte-video-3d-facile"
 tts: true
 lis_section: "allerte-meteo"
 social_video: "/video/2026-11-12-vento-forte-video-3d.mp4"
-social_crediti: "Musica: «Easy Lemon» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (coqui.ai/cpml)."
+social_crediti: "Musica: «Easy Lemon» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
 social_citazione: "Se sei fuori, evita i parchi e le strade alberate: i rami che si spezzano sono il pericolo più frequente."
 social_punti:
   - "Prima del vento: metti al riparo o fissa vasi, sedie e oggetti di balconi e davanzali."
