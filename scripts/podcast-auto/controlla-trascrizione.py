@@ -4,7 +4,7 @@
 Blocca subito gli errori già visti nelle puntate scartate del 15/11/2026 (rischio
 sismico): numeri e numeri di telefono che le fonti non contengono, riferimenti al
 lavoro sulle fonti («i documenti», «i manuali»), parole assolute o intensificazioni.
-Non sostituisce il controllo frase per frase (README, passo 4): lo precede.
+Non sostituisce il controllo frase per frase (README, passo 5): lo precede.
 Uso: controlla-trascrizione.py ID   → esce con 1 se trova anche un solo problema.
 """
 from __future__ import annotations
