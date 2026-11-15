@@ -49,7 +49,10 @@ def main() -> int:
             print(f"ERRORE: fonte mancante {rel}", file=sys.stderr)
             return 1
         parti.append(pulisci(p.read_text(encoding="utf-8")))
-    (dest / "fonte.md").write_text("\n\n".join(parti) + "\n", encoding="utf-8")
+    # fonte.md lo scrive trova-fonti.py con TUTTE le fonti della puntata; qui si
+    # scrive solo se manca, per non sostituirlo con le sole pagine principali.
+    if not (dest / "fonte.md").exists():
+        (dest / "fonte.md").write_text("\n\n".join(parti) + "\n", encoding="utf-8")
     (dest / "istruzioni.txt").write_text(ISTRUZIONI.format(titolo=voce["titolo"]), encoding="utf-8")
     print(f"ID={voce['id']}")
     print(f"CARTELLA={dest}")
