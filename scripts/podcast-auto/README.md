@@ -36,7 +36,7 @@ in calendario prima di cominciare la successiva.
    richiesta reale (mai indirizzi indovinati); se ce ne sono di fuori tema, si mettono in `escludi`.
 2. **NotebookLM** (Chrome, scheda nuova): «Nuovo notebook» → «Aggiungi fonte» → «Siti web»
    → tutti gli indirizzi di `fonti.txt` separati da uno spazio → «Inserisci». Poi «Overview audio» → formato Approfondimento, lingua Italiano, lunghezza
-   **Più breve** (dal 15/11/2026: con la predefinita, 20 minuti, le voci riempiono il tempo con spiegazioni e
+   **Breve** (dal 15/11/2026: con la predefinita, 20 minuti, le voci riempiono il tempo con spiegazioni e
    esempi che le fonti non contengono; due puntate scartate) → nel campo «Su cosa dovrebbero concentrarsi…» il testo di `istruzioni.txt`
    → «Genera ora». Attendere (5-20 minuti). Cercare i pulsanti per nome (strumento `find`),
    non per coordinate: la posizione dei riquadri cambia.
