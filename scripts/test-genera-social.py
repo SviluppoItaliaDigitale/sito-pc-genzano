@@ -127,6 +127,18 @@ class ControlloreDeiTesti(unittest.TestCase):
            "crediti": "", "testo": "Settantacinque anni fa. Il 14 novembre 1951 le vittime furono 101, più sette dispersi; "
                                    "gli sfollati circa 180.000. Chiama il 112."}
 
+    def test_dati_canonici_sbagliati_fermati(self):
+        # Errori veri trovati nelle bozze il 15/11/2026.
+        b = {"facebook": "Nel Lazio dal 2017 il 112 è l'unico numero di emergenza.",
+             "instagram": "Nelle ore più calde, tra le 12 e le 17, resta al riparo dal caldo.",
+             "telegram": "Le chiamate dalla Sala Operativa Unica Permanente della Regione Lazio."}
+        problemi = S.dati_canonici_sbagliati(b)
+        self.assertEqual({p.split(":")[0] for p in problemi}, {"facebook", "instagram", "telegram"})
+
+    def test_dati_canonici_giusti_passano(self):
+        b = {"facebook": "Nel Lazio dal 2015 il 112 è l'unico numero. Ore più calde: dalle 11 alle 18."}
+        self.assertEqual(S.dati_canonici_sbagliati(b), [])
+
     def test_numeri_dell_articolo_passano(self):
         b = {"facebook": "Il 14/11/1951 101 vittime, 7 dispersi, 180 000 sfollati, 75 anni fa. 112."}
         self.assertEqual(S.numeri_non_nell_articolo(b, self.ART), [])

@@ -33,7 +33,7 @@ sezioni:
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="friuli" image="/images/dossier/storia-friuli-1976.webp" alt="Chiesa in rovina dopo il terremoto del Friuli del 1976: l'abside affrescata resta in piedi tra cumuli di macerie, le pareti squarciate" align="bottom" kicker="Friuli · 6 maggio 1976" title="Il terremoto<br>e il riscatto" credito="Foto: Alberto Rizzi · pubblico dominio · chiesa di Ognissanti, Gemona" >}}
-La sera del **6 maggio 1976** un terremoto di magnitudo 6,4 devasta il **Friuli**: quasi mille morti, decine di paesi rasi al suolo. Ma qui accade qualcosa di nuovo.
+La sera del **6 maggio 1976** un terremoto di magnitudo 6,5 devasta il **Friuli**: quasi mille morti, decine di paesi rasi al suolo. Ma qui accade qualcosa di nuovo.
 
 Il Governo affida la guida dei soccorsi a un **commissario straordinario**, un giovane sottosegretario di nome **Giuseppe Zamberletti**. Per la prima volta c'è una regia unica, che coordina esercito, vigili del fuoco, Regione e volontari.
 

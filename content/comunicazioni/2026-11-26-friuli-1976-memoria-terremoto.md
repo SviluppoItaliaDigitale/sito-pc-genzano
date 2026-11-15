@@ -18,7 +18,7 @@ Nel **1976** il **Friuli** fu colpito da una sequenza sismica devastante che pro
 ## Gli eventi
 
 ### 6 maggio 1976 — "Orcolat"
-- **ore 21:00**: scossa di **magnitudo 6.4**;
+- **ore 21:00**: scossa di **magnitudo 6.5**;
 - **epicentro** nelle Alpi Carniche;
 - **965 vittime** in tutta la sequenza;
 - **interi paesi** distrutti (Gemona, Venzone, Osoppo);

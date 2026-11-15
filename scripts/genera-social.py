@@ -650,10 +650,29 @@ def chiama_revisore(api_key: str, art: dict, bozze: dict) -> list[str] | None:
     return None
 
 
+def dati_canonici_sbagliati(bozze: dict) -> list[str]:
+    """Dati che il registro data/dati_canonici.yaml dà per sbagliati (anno del
+    112 nel Lazio, ore più calde, bilanci delle tragedie, nomi di enti…). Aggiunto il
+    15/11/2026: sette bozze avevano dati diversi da quelli del sito."""
+    import importlib.util
+    percorso = Path(__file__).resolve().parent / "check-dati-canonici.py"
+    spec = importlib.util.spec_from_file_location("check_dati_canonici", percorso)
+    modulo = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(modulo)
+    problemi = []
+    for piattaforma, testo in bozze.items():
+        if not isinstance(testo, str) or not testo:
+            continue
+        for dato, regola, m in modulo.varianti(testo, f"social-bozze/{piattaforma}.txt"):
+            problemi.append(f"{piattaforma}: «{m.group(0)}» — {regola['perche']}")
+    return problemi
+
+
 def controlla_bozze(api_key: str | None, art: dict, bozze: dict) -> tuple[list[str], bool]:
     """Esame completo dei testi: (problemi, revisore_ha_risposto)."""
     bozze = {k: correggi_link(v, art["url"]) for k, v in bozze.items()}
     problemi = numeri_non_nell_articolo(bozze, art)
+    problemi += dati_canonici_sbagliati(bozze)
     revisore = chiama_revisore(api_key, art, bozze) if api_key else None
     if revisore:
         problemi += revisore

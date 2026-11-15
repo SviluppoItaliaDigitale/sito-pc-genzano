@@ -72,6 +72,8 @@ ESCLUSI = [
     "themes/flavour-pcgenzano/static/vendor/*",
     "scripts/cerca-incongruenze.py",
     "scripts/check-dati-canonici.py",
+    # Le prove del controllore dei testi social contengono apposta i dati sbagliati.
+    "scripts/test-genera-social.py",
     # Articoli del 2025 e anniversari raccontano altri anni: i loro dati
     # possono essere legittimamente diversi.
     "content/comunicazioni/2025-*",
