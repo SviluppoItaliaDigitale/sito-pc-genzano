@@ -16,15 +16,15 @@ social_citazione: "La protezione civile non lavora solo nelle emergenze: affianc
 social_punti:
   - "Sabato 14 novembre 2026 si è svolta la 30ª Giornata nazionale della Colletta Alimentare del Banco Alimentare."
   - "Nove volontari del Gruppo hanno lavorato nei supermercati di Genzano dalla tarda mattinata fino a sera."
-  - "Con loro il Mercedes Atego e il Fiat Doblò del Gruppo."
+  - "Con il Mercedes Atego e il Fiat Doblò hanno portato le scatole di cibo raccolte al magazzino del Banco Alimentare."
   - "Vuoi dare una mano anche tu? Scopri come diventare volontario."
 ---
 
-**Sabato 14 novembre 2026** si è svolta la **30ª Giornata nazionale della Colletta Alimentare**, organizzata dal **Banco Alimentare**. A Genzano di Roma, su richiesta del Banco Alimentare, **nove volontari** del Gruppo hanno affiancato la raccolta nei supermercati della città, dalle 11 fino a sera.
+**Sabato 14 novembre 2026** si è svolta la **30ª Giornata nazionale della Colletta Alimentare**, organizzata dal **Banco Alimentare**. A Genzano di Roma, su richiesta del Banco Alimentare, **nove volontari** del Gruppo hanno raccolto e trasportato il cibo donato nei supermercati della città, dalle 11 fino a sera.
 
-## Una giornata di lavoro con due mezzi
+## Dai supermercati al magazzino
 
-Per la raccolta il Gruppo ha impiegato due mezzi: il **Mercedes Atego** e il **Fiat Doblò**. Il servizio è iniziato in tarda mattinata e si è concluso a sera.
+Con due mezzi del Gruppo, il **Mercedes Atego** e il **Fiat Doblò**, i volontari hanno fatto il **giro dei supermercati di Genzano** che aderivano alla Colletta e in ognuno hanno ritirato le **scatole piene di cibo** donate durante la giornata. Le hanno poi trasportate in un **magazzino della zona** che il Banco Alimentare ha allestito apposta per la Colletta. Il servizio è iniziato in tarda mattinata e si è concluso a sera.
 
 {{< foto src="/images/2026-11-14-colletta-alimentare-volontari-camion.webp"
          alt="Sei volontari in divisa di protezione civile, in un autoscatto notturno, davanti al rimorchio aperto di un camion; in primo piano alcuni bancali di legno."
