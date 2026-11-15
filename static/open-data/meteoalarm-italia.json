@@ -1,16 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-11-15T00:08:12+00:00",
+  "generato": "2026-11-15T06:34:27+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 25,
-  "scaduti_scartati": 3,
-  "in_corso": 9,
+  "avvisi": 24,
+  "scaduti_scartati": 4,
+  "in_corso": 12,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -23,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261114104409.049"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Temporali",
    "livello": "arancione",
@@ -62,7 +62,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261114104409.060"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -179,7 +179,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261114104409.048"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -242,19 +242,6 @@
    "fine": "2026-11-16T22:59:00+00:00",
    "emesso": "2026-11-14T09:44:10+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261114104409.057"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-14T18:00:00+00:00",
-   "fine": "2026-11-15T00:59:00+00:00",
-   "emesso": "2026-11-14T09:44:10+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261114104409.059"
   },
   {
    "in_corso": true,

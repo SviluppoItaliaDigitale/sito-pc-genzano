@@ -5,16 +5,46 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-15T00:07:58+00:00",
+  "generato": "2026-11-15T06:34:16+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-14T23:09:02+00:00",
+   "data": "2026-11-15T05:26:13+00:00",
    "fonte": "ANSA",
-   "titolo": "Dopo il caos nei cieli, Usa verso la 'piena operatività'. Ma si contano i danni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/dopo-il-caos-nei-cieli-usa-verso-la-piena-operativita.-ma-si-contano-i-danni_9772e753-260a-465a-b775-0399c068f3c9.html"
+   "titolo": "Wta Finals: Errani e Paolini volano in finale, battute Guo e Mladenovic",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/11/15/wta-finals-errani-e-paolini-volano-in-finale-battute-guo-e-mladenovic_a6a4dc9e-0d3c-40e8-9cb9-1d71a585294e.html"
+  },
+  {
+   "data": "2026-11-15T03:58:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cancellati sabato negli Usa 6.500 voli, oggi almeno altri 760",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/cancellati-sabato-negli-usa-6.500-voli-oggi-almeno-altri-760_cbe40d91-464e-4ab8-99c1-80fe5bc20559.html"
+  },
+  {
+   "data": "2026-11-15T01:32:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, Monica Guerritore vince la puntata e Jimmy Ghione eliminato: la classifica",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-classifica-settima-puntata-ieri_2dmiYgWvKh7T3JsNgB18rx"
+  },
+  {
+   "data": "2026-11-15T00:15:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, Monica Guerritore scende in pista senza bandana e commuove Carolyn Smith",
+   "url": "https://www.adnkronos.com/spettacoli/monica-guerritore-capelli-bandana-ballando-con-le-stelle_6T54Xvp6ekCBVrqWWm4tdV"
+  },
+  {
+   "data": "2026-11-15T00:14:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, il (primo) confronto tra d'Urso e Muti degenera: cosa è successo in giuria",
+   "url": "https://www.adnkronos.com/spettacoli/ornella-muti-barbara-durso-guillermo-mariotto-ballando-con-le-stelle_41fgmwi5Ae1KXcYAIOkcld"
+  },
+  {
+   "data": "2026-11-14T23:26:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa dalle Ande: 'Mai cedere alla violenza, non è la via per il progresso'&nbsp;",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/15/il-papa-dalle-ande-mai-cedere-alla-violenza-non-e-la-via-per_deb338cd-5c66-46be-b986-297fe0877dca.html"
   },
   {
    "data": "2026-11-14T23:07:13+00:00",
@@ -113,12 +143,6 @@
    "url": "https://www.adnkronos.com/cronaca/ministra-roccella-ricorda-luigi-cavallari-storie-al-bivio_5YtwdHe2uGvFVVLX4d8V4D"
   },
   {
-   "data": "2026-11-14T19:46:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa dalle Ande: 'Mai cedere alla violenza, non è la via per il progresso'&nbsp;",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/14/il-papa-dalle-ande-mai-cedere-alla-violenza-non-e-la-via-per_deb338cd-5c66-46be-b986-297fe0877dca.html"
-  },
-  {
    "data": "2026-11-14T19:43:56+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Atp Finals, per Shelton inizia l'era Ferrero (di fronte ad Alcaraz)",
@@ -137,28 +161,10 @@
    "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/14/alle-atp-finals-riflettori-sui-maestri-tutto-pronto-per-lo-show_e6a4b465-fac6-4d5f-a0c5-6b724ce2d0a3.html"
   },
   {
-   "data": "2026-11-14T18:57:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, rapina a mano armata nel negozio di Andreas Muller: rubate carte Pokémon",
-   "url": "https://www.adnkronos.com/cronaca/rapina-furto-carte-pokemon-andreas-muller_1fwVlHlXNJj2dkhfmTNKQE"
-  },
-  {
-   "data": "2026-11-14T18:56:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Veronica Peparini vittima di una truffa telefonica: \"Mi hanno svuotato il conto\"",
-   "url": "https://www.adnkronos.com/spettacoli/veronica-peparini-vittima-truffa-telefonica-verissimo_3IciO4Orc2BtYRc3w0TdS3"
-  },
-  {
    "data": "2026-11-14T18:53:25+00:00",
    "fonte": "ANSA",
    "titolo": "Scontro tra due auto in galleria, cinque morti nel Cosentino",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-cinque-morti-nel-cosentino_8ec108df-8b0d-4769-b193-6ad64658d5fa.html"
-  },
-  {
-   "data": "2026-11-14T18:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giornata vittime della strada, Sin: \"Conseguenze neurologiche segnano il futuro\"",
-   "url": "https://www.adnkronos.com/cronaca/giornata-vittime-della-strada-sin-conseguenze-neurologiche-segnano-il-futuro_2jAewMtlvs3mOAqAYtnGZ8"
   },
   {
    "data": "2026-11-14T18:37:44+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Perquisizioni in 13 città per le violenze durante i cortei, anche a minorenni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/perquisizioni-in-13-citta-per-violenze-in-cortei-anche-a-minorenni_5916b95b-3017-4a53-8a4b-ea4d7c985d8e.html"
-  },
-  {
-   "data": "2026-11-14T17:38:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio a Gangi, fermato un uomo di 35 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/omicidio-a-gangi-fermato-un-uomo-di-35-anni_1f61f8e5-2058-41c9-84c0-a68ac5ac1655.html"
   }
  ]
 }
