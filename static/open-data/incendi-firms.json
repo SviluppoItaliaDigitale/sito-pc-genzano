@@ -1,6 +1,6 @@
 {
  "_snapshot": {
-  "generato": "2026-11-15T06:34:36+00:00",
+  "generato": "2026-11-15T14:20:54+00:00",
   "fonte": "NASA FIRMS — VIIRS (Suomi-NPP, NOAA-20 e NOAA-21), dati near real-time",
   "fonte_url": "https://firms.modaps.eosdis.nasa.gov/",
   "sensori": [
@@ -9,7 +9,7 @@
    "VIIRS_NOAA21_NRT"
   ],
   "finestra_ore": 24,
-  "punti": 28,
+  "punti": 33,
   "avvertenza": "Un punto caldo non è un incendio confermato: è un'anomalia termica vista dal satellite, che può essere anche una fiaccola industriale, una bruciatura agricola o un falso positivo. La segnalazione al 112 vale su ciò che si vede a terra, non su questa mappa."
  },
  "punti": [
@@ -298,6 +298,61 @@
    "affidabilita": "n",
    "potenza_radiativa_mw": 1.07,
    "giorno_notte": "N"
+  },
+  {
+   "lat": 36.8215,
+   "lon": 9.1099,
+   "data": "2026-11-15",
+   "ora_utc": "1136",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 5.79,
+   "giorno_notte": "D"
+  },
+  {
+   "lat": 36.823,
+   "lon": 9.1097,
+   "data": "2026-11-15",
+   "ora_utc": "1136",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 4.14,
+   "giorno_notte": "D"
+  },
+  {
+   "lat": 36.8705,
+   "lon": 6.9841,
+   "data": "2026-11-15",
+   "ora_utc": "1136",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 9.48,
+   "giorno_notte": "D"
+  },
+  {
+   "lat": 36.8706,
+   "lon": 6.9851,
+   "data": "2026-11-15",
+   "ora_utc": "1136",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 5.38,
+   "giorno_notte": "D"
+  },
+  {
+   "lat": 37.5817,
+   "lon": 14.1579,
+   "data": "2026-11-15",
+   "ora_utc": "1136",
+   "sensore": "VIIRS",
+   "satellite": "N20",
+   "affidabilita": "n",
+   "potenza_radiativa_mw": 8.2,
+   "giorno_notte": "D"
   },
   {
    "lat": 46.0709,
