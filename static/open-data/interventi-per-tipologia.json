@@ -4,11 +4,11 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-11-13",
-    "ultimo_numero": "233/2026"
+    "al": "2026-11-14",
+    "ultimo_numero": "234/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-11-14",
+  "generato_il": "2026-11-15",
   "dati": [
     {
       "tipologia": "Antincendio",
@@ -20,7 +20,7 @@
     },
     {
       "tipologia": "Evento Locale",
-      "numero_interventi": 19
+      "numero_interventi": 20
     },
     {
       "tipologia": "Oggetti su sede stradale",
