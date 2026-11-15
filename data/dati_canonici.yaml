@@ -242,6 +242,7 @@ dati:
     # Gli articoli del 2025 raccontano la campagna di quell'anno.
     escludi:
       - "content/comunicazioni/2025-*"
+      - "social-bozze/2025/*"
     vietati:
       - regex: '(?:\bal|\bfino\s+al|\bentro\s+il|[-–])\s*30\s+settembre'
         perche: "Nel 2026 lo stato di grave pericolosità e i divieti valgono fino al 15 ottobre: il 30 settembre chiude solo la configurazione SOUP della sala regionale."
@@ -826,6 +827,35 @@ dati:
         perche: "Per i Vigili del Fuoco i senzatetto furono oltre 45.000; il Dipartimento della Protezione Civile non dà un numero."
         contesto: 'Friuli|Gemona|Venzone|Osoppo|Tagliamento|Orcolat'
         finestra: 300
+
+  - id: friuli-1976-magnitudo
+    dato: "Magnitudo della scossa del 6 maggio 1976 in Friuli"
+    valore: "6.5 per il Dipartimento della Protezione Civile; Mw 6.45 nel catalogo INGV CPTI15 (magnitudo locale ML 6.4)"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Il terremoto del Friuli»: «un terremoto di magnitudo 6.5»"
+        url: "https://servizio-nazionale.protezionecivile.gov.it/it/pagina-base/il-terremoto-del-friuli/"
+      - nome: "INGV, ASMI / CPTI15, evento 19760506_2000_000: Mw 6.45"
+        url: "https://emidius.mi.ingv.it/ASMI/event/19760506_2000_000"
+    # Il 15/11/2026 il sito diceva 6.4 in otto punti e 6.5 in altri, e due schede
+    # per la secondaria invertivano le scale (Mw 6.4, «6.5 nella vecchia scala Richter»).
+    # Nei testi per il pubblico si scrive 6.5; dove si parla di scale, Mw 6.45 e ML 6.4.
+    vietati:
+      - regex: '(?:[Mm]agnitudo|Mw)\s*(?:\*\*|<strong>)?\s*(?:momento\s+)?(?:Mw\s+)?6[.,]4(?![\d])'
+        perche: "Per il Dipartimento la magnitudo è 6.5 (Mw 6.45 nel catalogo INGV); 6.4 è la sola magnitudo locale ML, da scrivere come tale."
+        contesto: 'Friuli|Gemona|Venzone|Osoppo|Orcolat'
+        finestra: 200
+
+  - id: gruppo-anno-istituzione
+    dato: "Anno di istituzione del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+    valore: "1991, con delibera del Consiglio Comunale"
+    fonti:
+      - nome: "Pagina «Chi siamo» del sito: «Il Gruppo Comunale è stato istituito nel 1991 dal Consiglio Comunale»"
+        url: "/chi-siamo/"
+    vietati:
+      - regex: '(?i)istitu\w*\s+(?:ufficial\w*\s+)?(?:nel\s+)?(?:19(?:8\d|9[02-9]))\b'
+        perche: "Il Gruppo Comunale è stato istituito nel 1991 (pagina Chi siamo)."
+        contesto: 'Gruppo|radio CB|nostra storia'
+        stessa_frase: true
 
   - id: irpinia-1980-bilancio
     dato: "Vittime e comuni colpiti del terremoto dell'Irpinia, 23 novembre 1980"

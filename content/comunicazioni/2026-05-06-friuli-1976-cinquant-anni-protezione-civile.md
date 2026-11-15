@@ -1,7 +1,7 @@
 ---
 title: "Friuli 1976, cinquant'anni dopo: il terremoto che ha fatto nascere la protezione civile italiana"
 date: 2026-05-06T00:02:00+02:00
-description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.4 devastò il Friuli: in tutta la sequenza 965 morti e oltre 45.000 senza tetto."
+description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.5 devastò il Friuli: in tutta la sequenza 965 morti e oltre 45.000 senza tetto."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **cinquant'anni esatti**. Alle **ore 21:00 del 6 maggio 1976**, per cinquantanove interminabili secondi, una scossa di **magnitudo 6.4 della scala Richter** investì la media valle del Tagliamento. Il Friuli — un territorio fatto di paesi medievali, campanili in pietra, case di sasso a due piani — venne sconvolto in modo brutale. Quando alle 21:01 le luci si spensero per la rottura della rete elettrica, sotto le macerie c'erano già centinaia di vittime: alla fine della sequenza i morti saranno **965**, secondo il Dipartimento della Protezione Civile, e i senza tetto **oltre 45.000**.
+Sono passati **cinquant'anni esatti**. Alle **ore 21:00 del 6 maggio 1976**, per cinquantanove interminabili secondi, una scossa di **magnitudo 6.5** investì la media valle del Tagliamento. Il Friuli — un territorio fatto di paesi medievali, campanili in pietra, case di sasso a due piani — venne sconvolto in modo brutale. Quando alle 21:01 le luci si spensero per la rottura della rete elettrica, sotto le macerie c'erano già centinaia di vittime: alla fine della sequenza i morti saranno **965**, secondo il Dipartimento della Protezione Civile, e i senza tetto **oltre 45.000**.
 
 {{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
          alt="Mappa ShakeMap USGS del terremoto del Friuli del 6 maggio 1976, magnitudo 6.5, con l'area di scuotimento più severo (in rosso) centrata sulle Alpi Carniche presso Gemona"

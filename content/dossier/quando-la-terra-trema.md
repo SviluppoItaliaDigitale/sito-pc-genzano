@@ -51,7 +51,7 @@ Le vittime furono **circa 80.000**, secondo gli studi più recenti: il disastro 
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="friuli-1976" image="/images/dossier/sisma-friuli-1976.webp" alt="Foto in bianco e nero: le rovine del Duomo di Venzone dopo il terremoto del Friuli del 1976, con archi in pietra ancora in piedi, una montagna innevata sullo sfondo e una staccionata con cartello «Pericolo»" align="top" kicker="6 maggio 1976 · Friuli" title="Dov'era,<br>com'era" credito="Foto: Duomo di Venzone (UD) dopo il terremoto del Friuli, settembre 1976 · YukioSanjo · CC BY-SA 3.0, via Wikimedia Commons" >}}
-Il **6 maggio 1976**, alle 21:00, una scossa di magnitudo **Mw 6.4-6.5** colpì il Friuli. Le vittime furono **965** in tutta la sequenza, i senzatetto oltre 45.000. Centri come Gemona, Osoppo e **Venzone** furono rasi al suolo.
+Il **6 maggio 1976**, alle 21:00, una scossa di magnitudo **Mw 6,45** (catalogo INGV CPTI15) colpì il Friuli. Le vittime furono **965** in tutta la sequenza, i senzatetto oltre 45.000. Centri come Gemona, Osoppo e **Venzone** furono rasi al suolo.
 
 La ricostruzione divenne un modello: ricostruire **"dov'era e com'era"**, con i sindaci e le comunità protagoniste. Venzone, oggi, è di nuovo in piedi.
 {{< /dossier-scena >}}

@@ -48,6 +48,10 @@ PERIMETRO = [
     # indicazioni sbagliate proprio lì (ore del caldo, telefoni e gas).
     ("themes/flavour-pcgenzano/static/js", "*.js"),
     ("scripts", "*.py"),
+    # Testi dei post social (social-bozze/): dal 20/09/2026 escono da soli su
+    # Instagram e Facebook. Aggiunti il 15/11/2026, quando sette bozze avevano
+    # dati diversi dagli articoli (112 «dal 2017», Sarno 161, Friuli 989).
+    ("social-bozze", "*.txt"),
 ]
 
 # File rigenerati da altri sorgenti (si correggono alla fonte), librerie di
@@ -56,6 +60,8 @@ ESCLUSI = [
     "data/dati_canonici.yaml",
     "scripts/check-dati-canonici.py",
     "scripts/cerca-incongruenze.py",
+    # Le prove del controllore dei testi social contengono apposta i dati sbagliati.
+    "scripts/test-genera-social.py",
     "data/video_dpc_catalogo.yaml",
     "data/video_correlati.yaml",
     "static/formazione/schede-stampabili/pacchetti/*",
@@ -110,6 +116,44 @@ def escluso(rel: str, extra: list[str]) -> bool:
     return any(fnmatch(rel, schema) for schema in ESCLUSI + extra)
 
 
+def varianti(testo: str, rel: str, dati: list | None = None):
+    """Varianti sbagliate dei dati canonici in un testo: (dato, regola, match).
+    `rel` è il percorso relativo usato per le esclusioni. Usata anche da
+    genera-social.py per controllare i testi dei post prima di salvarli."""
+    if dati is None:
+        dati = yaml.safe_load(REGISTRO.read_text(encoding="utf-8")).get("dati") or []
+    for dato in dati:
+        if escluso(rel, dato.get("escludi") or []):
+            continue
+        for regola in dato.get("vietati") or []:
+            contesto = regola.get("contesto")
+            finestra = int(regola.get("finestra", 200))
+            for m in re.finditer(regola["regex"], testo):
+                if contesto:
+                    if regola.get("stessa_frase"):
+                        intorno = frase_intorno(testo, m.start(), m.end())
+                    elif regola.get("stesso_paragrafo"):
+                        a, b = tratto_intorno(testo, m.start(), m.end(), RE_FINE_PARAGRAFO)
+                        intorno = testo[a:b]
+                    else:
+                        intorno = testo[max(0, m.start() - finestra): m.end() + finestra]
+                    if not re.search(contesto, intorno, re.I):
+                        continue
+                salvo = regola.get("salvo_se_frase")
+                if salvo:
+                    a, b = tratto_intorno(testo, m.start(), m.end(), RE_FINE_FRASE)
+                    # La variante stessa non conta: «Osservatorio Vesuviano»
+                    # contiene già la parola che renderebbe legittima la frase.
+                    if re.search(salvo, testo[a: m.start()] + " " + testo[m.end(): b]):
+                        continue
+                prima = regola.get("salvo_se_prima")
+                if prima:
+                    a, _ = tratto_intorno(testo, m.start(), m.end(), RE_FINE_FRASE)
+                    if re.search(prima, testo[a: m.start()], re.I):
+                        continue
+                yield dato, regola, m
+
+
 def main(argv: list[str]) -> int:
     registro = yaml.safe_load(REGISTRO.read_text(encoding="utf-8"))
     dati = registro.get("dati") or []
@@ -127,41 +171,13 @@ def main(argv: list[str]) -> int:
             continue
         sorgente = percorso.read_text(encoding="utf-8", errors="replace")
         testo = testo_confrontabile(sorgente)
-        for dato in dati:
-            if escluso(rel, dato.get("escludi") or []):
-                continue
-            for regola in dato.get("vietati") or []:
-                contesto = regola.get("contesto")
-                finestra = int(regola.get("finestra", 200))
-                for m in re.finditer(regola["regex"], testo):
-                    if contesto:
-                        if regola.get("stessa_frase"):
-                            intorno = frase_intorno(testo, m.start(), m.end())
-                        elif regola.get("stesso_paragrafo"):
-                            a, b = tratto_intorno(testo, m.start(), m.end(), RE_FINE_PARAGRAFO)
-                            intorno = testo[a:b]
-                        else:
-                            intorno = testo[max(0, m.start() - finestra): m.end() + finestra]
-                        if not re.search(contesto, intorno, re.I):
-                            continue
-                    salvo = regola.get("salvo_se_frase")
-                    if salvo:
-                        a, b = tratto_intorno(testo, m.start(), m.end(), RE_FINE_FRASE)
-                        # La variante stessa non conta: «Osservatorio Vesuviano»
-                        # contiene già la parola che renderebbe legittima la frase.
-                        if re.search(salvo, testo[a: m.start()] + " " + testo[m.end(): b]):
-                            continue
-                    prima = regola.get("salvo_se_prima")
-                    if prima:
-                        a, _ = tratto_intorno(testo, m.start(), m.end(), RE_FINE_FRASE)
-                        if re.search(prima, testo[a: m.start()], re.I):
-                            continue
-                    riga = testo.count("\n", 0, m.start()) + 1
-                    estratto = " ".join(testo[max(0, m.start() - 60): m.end() + 60].split())
-                    print(f"{rel}:{riga}: [{dato['id']}] «{m.group(0)}» — {regola['perche']}")
-                    print(f"    … {estratto} …")
-                    print(f"    valore canonico: {dato['valore']} (fonte: {dato['fonti'][0]['nome']})")
-                    trovate += 1
+        for dato, regola, m in varianti(testo, rel, dati):
+            riga = testo.count("\n", 0, m.start()) + 1
+            estratto = " ".join(testo[max(0, m.start() - 60): m.end() + 60].split())
+            print(f"{rel}:{riga}: [{dato['id']}] «{m.group(0)}» — {regola['perche']}")
+            print(f"    … {estratto} …")
+            print(f"    valore canonico: {dato['valore']} (fonte: {dato['fonti'][0]['nome']})")
+            trovate += 1
 
     if trovate:
         print(f"\n{trovate} variante/i non allineate ai dati canonici di data/dati_canonici.yaml.")
