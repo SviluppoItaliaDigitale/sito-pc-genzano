@@ -99,6 +99,10 @@ class LinkDelSito(unittest.TestCase):
                   "[Leggi sul sito](" + self.U + ")"):
             self.assertEqual(S.correggi_link(t, self.U), t)
 
+    def test_ancora_dei_link_esterni_intatta(self):
+        corpo = "Fonte: https://example.org/manuale#sezione_2 e https://example.org/x#Genzano."
+        self.assertEqual(S.correggi_link(corpo, self.U), corpo)
+
     def test_salva_bozze_corregge(self):
         art = {"url": self.U}
         out, err = io.StringIO(), io.StringIO()

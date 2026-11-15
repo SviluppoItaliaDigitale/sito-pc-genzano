@@ -481,17 +481,22 @@ def correggi_link(testo: str, url: str) -> str:
         while link and link[-1] in ".,;:!?":
             coda = link[-1] + coda
             link = link[:-1]
+        host = urlsplit(link).netloc.lower()
+        sito = host in (_HOST_SITO, _HOST_SITO[4:])
+        simile = (not sito and "genzano" in host
+                  and SequenceMatcher(None, host, _HOST_SITO).ratio() >= 0.8)
+        if not (sito or simile):
+            return m.group(0)  # link esterno: resta intero, ancora compresa
         hashtag = ""
         h = re.search(r"#([A-Za-zÀ-ÿ]\w*)$", link)
         if h:
             hashtag = " #" + h.group(1)
             link = link[:h.start()]
         parti = urlsplit(link)
-        host = parti.netloc.lower()
-        if host in (_HOST_SITO, _HOST_SITO[4:]):
+        if sito:
             if parti.path.startswith("/comunicazioni/") and link.rstrip("/") + "/" != url:
                 link = url
-        elif "genzano" in host and SequenceMatcher(None, host, _HOST_SITO).ratio() >= 0.8:
+        else:
             link = url
         return link + coda + hashtag
 
