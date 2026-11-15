@@ -488,13 +488,16 @@ def correggi_link(testo: str, url: str) -> str:
         if not (sito or simile):
             return m.group(0)  # link esterno: resta intero, ancora compresa
         hashtag = ""
-        h = re.search(r"#([A-Za-zÀ-ÿ]\w*)$", link)
+        # Solo gli hashtag (iniziale maiuscola: #PCGenzano): le ancore delle
+        # pagine del sito (#indice, #cosa-fare-prima) restano attaccate.
+        h = re.search(r"#([A-ZÀ-Ý][A-Za-zÀ-ÿ0-9]*)$", link)
         if h:
             hashtag = " #" + h.group(1)
             link = link[:h.start()]
         parti = urlsplit(link)
         if sito:
-            if parti.path.startswith("/comunicazioni/") and link.rstrip("/") + "/" != url:
+            if (parti.path.startswith("/comunicazioni/")
+                    and parti.path.rstrip("/") != urlsplit(url).path.rstrip("/")):
                 link = url
         else:
             link = url
