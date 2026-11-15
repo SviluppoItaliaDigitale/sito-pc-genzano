@@ -603,7 +603,7 @@ Confronta i testi dei post con l'ARTICOLO e segnala SOLO errori reali:
 - un'allerta o un'emergenza presentate come in corso quando l'articolo non lo dice;
 - indirizzi web diversi da quello dell'articolo ({url}) per indicare l'articolo;
 - nomi di programmi o di intelligenze artificiali nel testo.
-Non segnalare scelte di stile, sintesi legittime, hashtag o l'invito a leggere sul sito.
+Non segnalare informazioni omesse (un post è una sintesi: può non dire l'anno, l'ora o un dettaglio), scelte di stile, hashtag o l'invito a leggere sul sito: segnala solo ciò che è sbagliato o inventato.
 Rispondi in JSON: ok=true se non ci sono errori, altrimenti ok=false e un elenco breve di problemi in italiano,
 ognuno con la rete (x, facebook, instagram, telegram) e che cosa è sbagliato."""
 
