@@ -1,0 +1,65 @@
+name: "🎙️ Magazzino del podcast"
+
+# Ogni mattina conta le puntate del podcast in calendario (content/podcast/
+# con data futura). Se ne resta meno di una settimana o se un martedì o un
+# venerdì è saltato, apre una issue: arriva per email ad Alessandro e dice che
+# il PC va acceso con la sessione di lavoro aperta, perché le puntate nuove si
+# producono solo lì (NotebookLM nel Chrome del PC). Si chiude da sola quando il
+# magazzino torna sufficiente. Gira su GitHub, quindi anche a PC spento.
+#
+# Le puntate già in calendario escono da sole: pubblica-programmata.yml
+# ricostruisce il sito ogni mattina e Hugo le mette online alla loro data.
+# Label «tracking»: la routine delle issue automatiche non deve provare a
+# risolverla dal cloud, dove NotebookLM non c'è. Nasce il 15/11/2026.
+
+on:
+  schedule:
+    - cron: "41 6 * * *"   # dopo la pubblicazione programmata del mattino
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: controllo-podcast
+  cancel-in-progress: false
+
+jobs:
+  controllo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+
+      - name: "🎙️ Conta le puntate in calendario"
+        id: controllo
+        shell: bash
+        run: |
+          set +e
+          TZ=Europe/Rome python3 scripts/podcast-auto/controlla-magazzino.py --minimo 2 --corpo /tmp/podcast.txt
+          echo "problema=$?" >> "$GITHUB_OUTPUT"
+
+      - name: "📨 Apri, aggiorna o chiudi la issue"
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/podcast.txt', 'utf-8');
+            const problema = '${{ steps.controllo.outputs.problema }}' === '1';
+            const title = '🎙️ Podcast: poche puntate in calendario, accendi il PC';
+            const { owner, repo } = context.repo;
+            const aperte = await github.rest.issues.listForRepo({ owner, repo, state: 'open', labels: 'podcast', per_page: 100 });
+            const issue = aperte.data.find(i => i.title === title);
+            const body = report.trim() + '\n\n---\n*Issue generata da `controllo-podcast.yml`; si chiude da sola quando il magazzino torna sufficiente.*';
+            if (problema) {
+              if (issue) {
+                await github.rest.issues.update({ owner, repo, issue_number: issue.number, body });
+              } else {
+                await github.rest.issues.create({ owner, repo, title, body, labels: ['podcast', 'tracking'] });
+              }
+            } else if (issue) {
+              await github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: 'Il magazzino del podcast è di nuovo sufficiente: chiudo automaticamente.' });
+              await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+            }

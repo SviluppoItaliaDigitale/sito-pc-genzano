@@ -1,0 +1,140 @@
+# Coda delle puntate del podcast automatico (dal 15/11/2026).
+# Una puntata per giro, due giri a settimana (martedì e venerdì). Si prende
+# la prima voce con stato «da-fare». Le fonti sono SOLO pagine verificate del
+# sito: la puntata non può dire niente che queste pagine non dicano.
+# «escludi»: pezzi di percorso da non usare come fonte (fuori tema).
+# «ufficiali»: pagine di fonti istituzionali (indirizzi verificati, mai
+# indovinati), aggiunte quando il sito ha poco materiale su quel tema.
+# Stati: da-fare | scartata (con motivo) | programmata (con file e data di uscita).
+# Ordine: si rifanno i temi sospesi il 05/11/2026, poi la stagione.
+
+puntate:
+  - id: rischio-sismico
+    titolo: "Il terremoto: cosa fare prima, durante e dopo"
+    fonti:
+      - content/rischi-prevenzione/rischio-sismico.md
+    parole: ["terremot", "sism", "scossa", "INGV", "Io non rischio"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-sapere/
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
+    stato: da-fare
+
+  - id: allerta-meteo
+    titolo: "Allerta meteo: che cosa vogliono dire i colori"
+    fonti:
+      - content/allerte-meteo/_index.md
+      - content/cosa-succede-quando-scatta-allerta/_index.md
+    parole: ["allert", "codice colore", "bollettin", "criticità"]
+    # Fuori tema o con lo stato di oggi (la puntata non deve dire l'allerta del momento).
+    escludi: ["allerta-stato", "sismometri", "mtg-i2", "ari-pozzuoli", "vulcani-colli-albani", "ondate-calore", "caldo-salute"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/approfondimento/il-roll-sullallerta-meteo-idro/
+    stato: da-fare
+
+  - id: numero-112
+    titolo: "Il 112: un solo numero per ogni emergenza"
+    fonti:
+      - content/numeri-utili/_index.md
+      - content/dossier/112-tre-cifre-per-salvarsi.md
+    parole: ["112", "NUE", "numero unico", "Where Are U"]
+    stato: da-fare
+
+  - id: rischio-idrogeologico
+    titolo: "Piogge forti e allagamenti: come difendersi"
+    fonti:
+      - content/rischi-prevenzione/rischio-idrogeologico.md
+    parole: ["idrogeolog", "alluvion", "allagament", "frana", "frane", "esondazion"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
+    stato: da-fare
+
+  - id: piano-familiare
+    titolo: "Il piano di emergenza della famiglia"
+    fonti:
+      - content/piano-familiare/_index.md
+    parole: ["piano familiare", "piano di famiglia", "piano di emergenza famil"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
+    stato: da-fare
+
+  - id: kit-emergenza
+    titolo: "Lo zaino di emergenza: che cosa metterci"
+    fonti:
+      - content/rischi-prevenzione/kit-emergenza/_index.md
+    parole: ["kit", "zaino", "scorta"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/video/kit-di-emergenza/
+    stato: da-fare
+
+  - id: aree-emergenza
+    titolo: "Le aree di attesa di Genzano di Roma"
+    fonti:
+      - content/aree-attesa/_index.md
+      - content/piano-emergenza/_index.md
+    parole: ["aree di attesa", "area di attesa", "aree di emergenza", "piano di emergenza comunale", "area di raccolta"]
+    stato: da-fare
+
+  - id: dopo-emergenza
+    titolo: "Dopo l'emergenza: tornare a casa in sicurezza"
+    fonti:
+      - content/rischi-prevenzione/dopo-emergenza.md
+    parole: ["dopo l.emergenza", "rientro", "danni", "ricostruzion"]
+    stato: da-fare
+
+  - id: blackout
+    titolo: "Blackout: come affrontare la mancanza di corrente"
+    fonti:
+      - content/rischi-prevenzione/blackout.md
+    parole: ["blackout", "corrente elettrica", "interruzione di energia"]
+    stato: da-fare
+
+  - id: vento-forte
+    titolo: "Vento forte: i pericoli e come proteggersi"
+    fonti:
+      - content/rischi-prevenzione/vento-forte.md
+    parole: ["vento", "raffiche", "tromba d.aria", "downburst"]
+    stato: da-fare
+
+  - id: temporali-intensi
+    titolo: "Temporali intensi: fulmini, grandine e allagamenti"
+    fonti:
+      - content/rischi-prevenzione/temporali-intensi.md
+    parole: ["temporal", "fulmin", "grandin", "nubifragi"]
+    stato: da-fare
+
+  - id: rischio-vulcanico
+    titolo: "I Colli Albani: il vulcano sotto i Castelli Romani"
+    fonti:
+      - content/rischi-prevenzione/rischio-vulcanico.md
+    parole: ["vulcan", "Colli Albani", "eruzion", "Campi Flegrei", "Vesuvio"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/vulcani/
+    stato: da-fare
+
+  - id: it-alert
+    titolo: "IT-alert: il messaggio che arriva sul telefono"
+    # Il tema che ha fatto sospendere il podcast: fonti solo le pagine
+    # riviste dopo il 05/11/2026; controllo dei fatti più severo.
+    fonti:
+      - content/dossier/il-messaggio-che-salva.md
+    parole: ["IT-alert"]
+    stato: da-fare
+
+  - id: ondate-di-calore
+    titolo: "Il caldo estremo: proteggere sé e gli altri"
+    fonti:
+      - content/rischi-prevenzione/ondate-di-calore.md
+    parole: ["caldo", "calore", "afa", "colpo di calore"]
+    stato: da-fare
+
+  - id: rischio-incendio
+    titolo: "Incendi boschivi: prevenzione e comportamenti"
+    fonti:
+      - content/rischi-prevenzione/rischio-incendio.md
+    parole: ["incendi", "AIB", "antincendio", "fuoco"]
+    ufficiali:
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-sapere/
+      - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/
+    stato: da-fare
