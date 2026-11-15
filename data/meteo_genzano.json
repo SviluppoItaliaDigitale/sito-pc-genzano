@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-15T12:05",
+  "aggiornato": "2026-11-15T13:03",
   "data_lunga": "domenica 15 novembre 2026",
-  "aggiornato_label": "domenica 15 novembre 2026, ore 12:05",
+  "aggiornato_label": "domenica 15 novembre 2026, ore 13:03",
   "alba": "06:58",
   "tramonto": "16:48",
   "corrente": {
     "temp": 14.4,
-    "percepita": 14.3,
+    "percepita": 14.2,
     "cielo": "Rovesci",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
     "umidita": 92,
     "vento": 8,
-    "raffiche": 38
+    "raffiche": 40
   },
   "giorni": [
     {
@@ -21,7 +21,7 @@
       "tmax": 15,
       "tmin": 12,
       "pioggia": 100,
-      "pioggia_mm": 10.4,
+      "pioggia_mm": 10.2,
       "raffiche": 47,
       "uv": 3,
       "uv_label": "moderato"
@@ -33,8 +33,8 @@
       "tmax": 16,
       "tmin": 11,
       "pioggia": 100,
-      "pioggia_mm": 26.6,
-      "raffiche": 70,
+      "pioggia_mm": 28.5,
+      "raffiche": 62,
       "uv": 3,
       "uv_label": "moderato"
     },
@@ -47,8 +47,8 @@
       "pioggia": 43,
       "pioggia_mm": 0.9,
       "raffiche": 57,
-      "uv": 2,
-      "uv_label": "basso"
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Mer 18",
@@ -69,7 +69,7 @@
       "nome": "Viterbo",
       "tmax": 16,
       "tmin": 11,
-      "cielo": "Temporale"
+      "cielo": "Rovesci"
     },
     {
       "nome": "Rieti",
