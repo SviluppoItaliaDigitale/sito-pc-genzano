@@ -17,7 +17,8 @@ puntate:
     ufficiali:
       - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-sapere/
       - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
-    stato: da-fare
+    stato: scartata
+    motivo: "15/11/2026, due tentativi (1 e 37 fonti, formato Approfondimento, lunghezza predefinita): spiegazioni tecniche aggiunte, scosse dei Colli Albani rese più gravi; Norcia 2016 raccontata con un salvataggio del centro storico che le fonti non dicono. Da rifare con lunghezza «Breve» e le istruzioni nuove."
 
   - id: allerta-meteo
     titolo: "Allerta meteo: che cosa vogliono dire i colori"

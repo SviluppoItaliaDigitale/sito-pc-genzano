@@ -11,6 +11,7 @@ Uso: trova-fonti.py ID [--max 30]
 from __future__ import annotations
 
 import argparse
+from html import unescape
 import re
 import sys
 import urllib.request
@@ -105,22 +106,21 @@ def main() -> int:
     dest = Path.home() / "podcast-lavoro" / a.id
     dest.mkdir(parents=True, exist_ok=True)
     (dest / "fonti.txt").write_text("\n".join([url(p) for p in scelte] + ufficiali) + "\n", encoding="utf-8")
+    # Il testo per il controllo dei fatti è quello delle pagine PUBBLICATE, cioè
+    # esattamente ciò che legge NotebookLM: i file .md perdono i riquadri inseriti
+    # dai componenti del sito (per esempio i numeri utili). Errore del 15/11/2026:
+    # l'803 555 della pagina sul rischio sismico risultava «assente dalle fonti».
     testo = []
-    for p in scelte:
-        corpo = re.sub(r"\A---\n.*?\n---\n", "", p.read_text(encoding="utf-8", errors="ignore"), flags=re.S)
-        if p.suffix == ".html":
-            corpo = re.sub(r"<script.*?</script>|<style.*?</style>", " ", corpo, flags=re.S | re.I)
-            corpo = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", corpo))
-        testo.append(f"===== {url(p)}\n{corpo.strip()}")
-    for u in ufficiali:
+    for u in [url(p) for p in scelte] + ufficiali:
         req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"})
         try:
             html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
         except OSError as e:
-            print(f"ERRORE: fonte ufficiale non raggiungibile {u}: {e}", file=sys.stderr)
+            print(f"ERRORE: fonte non raggiungibile {u}: {e}", file=sys.stderr)
             return 1
         html = re.sub(r"(?is)<script.*?</script>|<style.*?</style>", " ", html)
-        testo.append(f"===== {u}\n" + re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html)).strip())
+        corpo = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html)).strip()
+        testo.append(f"===== {u}\n" + unescape(corpo).replace("\xa0", " "))
     (dest / "fonte.md").write_text("\n\n".join(testo) + "\n", encoding="utf-8")
     for u in [url(p) for p in scelte] + ufficiali:
         print(u)

@@ -36,7 +36,8 @@ in calendario prima di cominciare la successiva.
    richiesta reale (mai indirizzi indovinati); se ce ne sono di fuori tema, si mettono in `escludi`.
 2. **NotebookLM** (Chrome, scheda nuova): «Nuovo notebook» → «Aggiungi fonte» → «Siti web»
    → tutti gli indirizzi di `fonti.txt` separati da uno spazio → «Inserisci». Poi «Overview audio» → formato Approfondimento, lingua Italiano, lunghezza
-   Predefinita → nel campo «Su cosa dovrebbero concentrarsi…» il testo di `istruzioni.txt`
+   **Breve** (dal 15/11/2026: con la predefinita, 20 minuti, le voci riempiono il tempo con spiegazioni e
+   esempi che le fonti non contengono; due puntate scartate) → nel campo «Su cosa dovrebbero concentrarsi…» il testo di `istruzioni.txt`
    → «Genera ora». Attendere (5-20 minuti). Cercare i pulsanti per nome (strumento `find`),
    non per coordinate: la posizione dei riquadri cambia.
    **Scaricare senza «Scarica»**: Chrome chiede dove salvare e quella finestra di sistema non
@@ -54,22 +55,26 @@ in calendario prima di cominciare la successiva.
    Se `u` è vuoto (scheda aperta da molto), si ricarica la pagina e si preme di nuovo
    «Riproduci». Il file arriva in `~/podcast-lavoro/<id>/audio.m4a`.
 3. **Trascrizione**: `~/.podcast-venv/bin/python scripts/podcast-auto/trascrivi.py ~/podcast-lavoro/<id>/audio.m4a`.
-4. **Controllo dei fatti** (agente `pc-materiali-publisher` § «Niente si pubblica senza
+4. **Filtro automatico**: `python3 scripts/podcast-auto/controlla-trascrizione.py <id>`. Se esce con 1
+   (numeri o telefoni assenti dalle fonti, «i documenti», «i manuali», parole assolute o
+   intensificazioni), la puntata non passa: si rigenera o si scarta come al passo 5.
+5. **Controllo dei fatti** (agente `pc-materiali-publisher` § «Niente si pubblica senza
    verifica», più `pc-fact-checker`): leggere tutta la trascrizione e confrontarla frase per
    frase con le pagine fonte e con `data/dati_canonici.yaml`. Errore = un'affermazione che le
    fonti non contengono o contraddicono, un numero diverso, un «sempre/mai» non nelle fonti,
    un nome di strumento o di intelligenza artificiale, il Gruppo indicato come chiamabile in
-   emergenza. Se c'è anche un solo errore la puntata **non si pubblica**: si rigenera una volta
+   emergenza, le spiegazioni del «perché» e le conclusioni tratte dagli esempi storici che le fonti
+   non danno. Se c'è anche un solo errore la puntata **non si pubblica**: si rigenera una volta
    (stesse fonti, istruzioni rafforzate sul punto sbagliato); al secondo errore la voce va in
    `stato: scartata` con il motivo e si passa alla successiva al giro dopo.
-5. **Trascrizione pulita**: correggere solo gli errori di riconoscimento (non il contenuto),
+6. **Trascrizione pulita**: correggere solo gli errori di riconoscimento (non il contenuto),
    dare paragrafi leggibili, in `~/podcast-lavoro/<id>/trascrizione.md`.
-6. **Pubblicazione**: `~/.podcast-venv/bin/python scripts/podcast-auto/pubblica-puntata.py <id> AUDIO TRASCRIZIONE --descrizione "…"`
+7. **Pubblicazione**: `~/.podcast-venv/bin/python scripts/podcast-auto/pubblica-puntata.py <id> AUDIO TRASCRIZIONE --descrizione "…"`
    (≤160 caratteri, dice di che cosa parla, niente «verificato» o «interviste»). Poi
    `python3 scripts/check-dati-canonici.py`, `python3 scripts/check-refusi.py content/podcast/<file>`,
    build Hugo, ramo `claude/podcast-<id>`, PR, squash merge, verifica del deploy e
    ascolto della pagina pubblicata (il player carica l'audio).
-7. **Resoconto** ad Alessandro con notifica: puntata uscita (link) o scartata (motivo).
+8. **Resoconto** ad Alessandro con notifica: puntata uscita (link) o scartata (motivo).
 
 ## Regole fisse
 
