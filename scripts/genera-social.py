@@ -453,6 +453,51 @@ def con_crediti(testo: str, crediti: str) -> str:
     return corpo + ("\n" + "\n".join(coda) if coda else "")
 
 
+# Link del sito nei testi generati (dal 15/11/2026). Gemini a volte riscrive
+# l'indirizzo dell'articolo invece di copiarlo: il post del 14/11/2026 sul
+# Polesine è uscito su Facebook con «www.rotezionecivilegenzano.it», quello di
+# Giampilieri con «www.tectionecivilegenzano.it», e due bozze di luglio avevano
+# il nome dell'articolo cambiato (pagine inesistenti). Altre volte attacca il
+# primo hashtag all'indirizzo («.../#PCGenzano»). Qui ogni link che sembra del
+# sito torna all'indirizzo canonico dell'articolo, scritto dallo script.
+_RE_URL = re.compile(r"https?://[^\s<>()\[\]*]+")
+_HOST_SITO = "www.protezionecivilegenzano.it"
+
+
+def correggi_link(testo: str, url: str) -> str:
+    """Rimette l'indirizzo canonico `url` al posto dei link del sito sbagliati.
+
+    - dominio quasi uguale a quello del sito (refuso) -> `url`;
+    - pagina /comunicazioni/ diversa da quella dell'articolo -> `url`;
+    - hashtag attaccato in coda (`.../#PCGenzano`) -> staccato con uno spazio.
+    Gli altri link (fonti esterne, altre pagine del sito) restano com'erano.
+    """
+    from difflib import SequenceMatcher
+    from urllib.parse import urlsplit
+
+    def sostituisci(m: re.Match) -> str:
+        link = m.group(0)
+        coda = ""
+        while link and link[-1] in ".,;:!?":
+            coda = link[-1] + coda
+            link = link[:-1]
+        hashtag = ""
+        h = re.search(r"#([A-Za-zÀ-ÿ]\w*)$", link)
+        if h:
+            hashtag = " #" + h.group(1)
+            link = link[:h.start()]
+        parti = urlsplit(link)
+        host = parti.netloc.lower()
+        if host in (_HOST_SITO, _HOST_SITO[4:]):
+            if parti.path.startswith("/comunicazioni/") and link.rstrip("/") + "/" != url:
+                link = url
+        elif "genzano" in host and SequenceMatcher(None, host, _HOST_SITO).ratio() >= 0.8:
+            link = url
+        return link + coda + hashtag
+
+    return _RE_URL.sub(sostituisci, testo or "")
+
+
 def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Path:
     """Scrive 4 file .txt + un README.md in social-bozze/<slug>/."""
     out_dir = SOCIAL_BOZZE / slug_to_path(slug)
@@ -461,6 +506,8 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         for piattaforma in ("facebook", "instagram"):
             if bozze.get(piattaforma):
                 bozze[piattaforma] = con_crediti(bozze[piattaforma], art["crediti"])
+    bozze = {k: (correggi_link(v, art["url"]) if isinstance(v, str) else v)
+             for k, v in bozze.items()}
     if dry_run:
         stampa_info(f"\n=== DRY-RUN: {out_dir} ===")
         for piattaforma in ("x", "facebook", "instagram", "telegram"):

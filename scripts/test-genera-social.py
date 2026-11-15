@@ -74,5 +74,41 @@ class CreditiDeiVideo(unittest.TestCase):
         self.assertEqual(S.con_crediti("Testo.\n\n#Uno", ""), "Testo.\n\n#Uno")
 
 
+class LinkDelSito(unittest.TestCase):
+    """Dal 15/11/2026: i link del sito scritti da Gemini tornano all'indirizzo
+    canonico (post del Polesine e di Giampilieri usciti con il dominio sbagliato)."""
+    U = "https://www.protezionecivilegenzano.it/comunicazioni/2026-11-14-polesine-1951-alluvione-del-po/"
+
+    def test_dominio_con_refuso(self):
+        for sbagliato in ("www.rotezionecivilegenzano.it", "www.tectionecivilegenzano.it"):
+            t = S.correggi_link(f"Leggi: https://{sbagliato}/comunicazioni/2026-11-14-polesine-1951-alluvione-del-po/", self.U)
+            self.assertEqual(t, "Leggi: " + self.U)
+
+    def test_articolo_sbagliato(self):
+        t = S.correggi_link("Vedi https://www.protezionecivilegenzano.it/comunicazioni/2026-07-10-altro/.", self.U)
+        self.assertEqual(t, "Vedi " + self.U + ".")
+
+    def test_hashtag_attaccato(self):
+        t = S.correggi_link(self.U + "#PCGenzano #Genzano", self.U)
+        self.assertEqual(t, self.U + " #PCGenzano #Genzano")
+
+    def test_altri_link_restano(self):
+        for t in ("https://www.protezionecivilegenzano.it/allerte-meteo/",
+                  "https://www.comune.genzanodiroma.roma.it/notizie/",
+                  "https://www.protezionecivile.gov.it/it/",
+                  "[Leggi sul sito](" + self.U + ")"):
+            self.assertEqual(S.correggi_link(t, self.U), t)
+
+    def test_salva_bozze_corregge(self):
+        art = {"url": self.U}
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            S.salva_bozze("2026-11-14-polesine-1951-alluvione-del-po",
+                          {"facebook": "Leggi https://www.rotezionecivilegenzano.it/x/"}, art, dry_run=True)
+        stampato = out.getvalue() + err.getvalue()
+        self.assertIn("Leggi " + self.U, stampato)
+        self.assertNotIn("www.rotezione", stampato)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
