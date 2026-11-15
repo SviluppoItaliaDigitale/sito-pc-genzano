@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-15T06:03",
+  "aggiornato": "2026-11-15T07:03",
   "data_lunga": "domenica 15 novembre 2026",
-  "aggiornato_label": "domenica 15 novembre 2026, ore 06:03",
+  "aggiornato_label": "domenica 15 novembre 2026, ore 07:03",
   "alba": "06:58",
   "tramonto": "16:48",
   "corrente": {
-    "temp": 12.8,
-    "percepita": 12.5,
-    "cielo": "Temporale",
-    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"26.4,42.4 36.0,42.4 28.8,58.4 32.8,45.6 24.8,45.6\" fill=\"#f6a800\"/></g>",
-    "umidita": 93,
-    "vento": 6,
-    "raffiche": 45
+    "temp": 12.5,
+    "percepita": 11.9,
+    "cielo": "Rovesci",
+    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
+    "umidita": 95,
+    "vento": 8,
+    "raffiche": 32
   },
   "giorni": [
     {
@@ -21,8 +21,8 @@
       "tmax": 15,
       "tmin": 12,
       "pioggia": 100,
-      "pioggia_mm": 17.6,
-      "raffiche": 48,
+      "pioggia_mm": 12.2,
+      "raffiche": 47,
       "uv": 3,
       "uv_label": "moderato"
     },
@@ -33,10 +33,10 @@
       "tmax": 15,
       "tmin": 12,
       "pioggia": 100,
-      "pioggia_mm": 34.2,
-      "raffiche": 63,
-      "uv": 2,
-      "uv_label": "basso"
+      "pioggia_mm": 31.0,
+      "raffiche": 57,
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Mar 17",
@@ -87,7 +87,7 @@
       "nome": "Latina",
       "tmax": 18,
       "tmin": 14,
-      "cielo": "Temporale"
+      "cielo": "Rovesci"
     },
     {
       "nome": "Frosinone",
