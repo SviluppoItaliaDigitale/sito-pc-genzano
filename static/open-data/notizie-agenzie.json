@@ -5,11 +5,101 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-14T20:30:02+00:00",
+  "generato": "2026-11-15T00:07:58+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-14T23:09:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dopo il caos nei cieli, Usa verso la 'piena operatività'. Ma si contano i danni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/dopo-il-caos-nei-cieli-usa-verso-la-piena-operativita.-ma-si-contano-i-danni_9772e753-260a-465a-b775-0399c068f3c9.html"
+  },
+  {
+   "data": "2026-11-14T23:07:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "SpaceX recupera per la prima volta nella storia un veicolo spaziale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/spacex-recupera-per-la-prima-volta-nella-storia-un-veicolo-spaziale_d061a5b5-9f2d-4539-9b90-45189df72084.html"
+  },
+  {
+   "data": "2026-11-14T23:05:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tensione a Ballando, Mariotto 'boccia' Bocchi e attacca Erra: \"Il tuo parere non conta\"",
+   "url": "https://www.adnkronos.com/spettacoli/mariotto-bocchi-erra-ballando-con-le-stelle_1xw55o8JCUwbE2pVn8ooGD"
+  },
+  {
+   "data": "2026-11-14T23:02:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Zelensky svela la proposta di Trump: \"Nato in cambio del Donbass. Putin? Vuole cambiare i confini d'Europa\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-zelensky-trump-putin-news-negoziati_5wdKzfSsLKkrynF8VBP7fU"
+  },
+  {
+   "data": "2026-11-14T22:33:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alberto Ravagnani, la confessione: \"Ho accusato il colpo, faccio fatica a dormire\"",
+   "url": "https://www.adnkronos.com/spettacoli/alberto-ravagnani-diaco-ballando-con-le-stelle_2FLfV2jZWNb1iJPJFVZhUT"
+  },
+  {
+   "data": "2026-11-14T21:54:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "I bot si ribellano ai politici, 'colpa' di Microsoft down",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/lega-eserciti-di-bot-inquinano-confronto-democratico-anche-sui-social-di-salvini_3b12b190-cf89-4c45-96d5-1d1ed0c1b93c.html"
+  },
+  {
+   "data": "2026-11-14T21:53:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ramazzotti, la bulimia e il confronto con mamma Michelle: \"L'unica soluzione era farmi del male fisico\"",
+   "url": "https://www.adnkronos.com/spettacoli/aurora-ramazzotti-ballando-con-le-stelle-bulimia-michelle-hunziker_17KviOGKisrneOCz3rmneP"
+  },
+  {
+   "data": "2026-11-14T21:36:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina, Zelensky: 'Gli Usa ci propongono la Nato in cambio del Donbass'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/ucraina-zelensky-gli-usa-ci-propongono-la-nato-in-cambio-del-donbass_48c4f0d9-c61c-4d79-8523-64805b2f303f.html"
+  },
+  {
+   "data": "2026-11-14T21:35:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Maxi-multa del Garante per Meta, l'azienda prepara il ricorso",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/garante-805-milioni-di-multa-a-meta-per-luso-di-foto-su-fb-senza-consenso_c28909e5-4d3b-4ec6-9d7c-e23ea349b64d.html"
+  },
+  {
+   "data": "2026-11-14T21:21:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caos a Ballando, Jimmy Ghione inciampa tra i cavi e lancia volantini tra il pubblico: cosa è successo",
+   "url": "https://www.adnkronos.com/spettacoli/jimmy-ghione-caduta-ballando-con-le-stelle-video_4gtosXoKIUmMNzs9x3qdnd"
+  },
+  {
+   "data": "2026-11-14T21:03:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sondaggio, 'Le Pen nettamente in testa, Mélenchon secondo, Riner al 4,5%'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/sondaggio-le-pen-nettamente-in-testa-melenchon-secondo-riner-al-45_88849a84-afd4-4973-a14b-8f760dafb9dc.html"
+  },
+  {
+   "data": "2026-11-14T21:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Francia, attacco hacker a gruppo La Poste: rubati i dati di 22 milioni di persone",
+   "url": "https://www.adnkronos.com/internazionale/esteri/francia-furto-milioni-dati-la-poste_4KlZxH4B9iHNKkI9rCiEYS"
+  },
+  {
+   "data": "2026-11-14T20:37:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Uomo di 92 anni ucciso durante una truffa del falso carabiniere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/anziano-ucciso-durante-la-truffa-del-falso-carabiniere-due-fermi_5d3e1a2d-d519-4fe8-b10b-e866c55fbb82.html"
+  },
+  {
+   "data": "2026-11-14T20:31:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Finito l'incubo per l'italiano Echenagucia, in cella in Venezuela dal 2024",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/finito-lincubo-per-litaliano-echenagucia-in-cella-in-venezuela-dal-2024_3cdb41d6-1cf2-48a2-8886-6aa81c1a9943.html"
+  },
+  {
+   "data": "2026-11-14T20:27:14+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
   {
    "data": "2026-11-14T20:10:37+00:00",
    "fonte": "ADNKRONOS",
@@ -23,34 +113,16 @@
    "url": "https://www.adnkronos.com/cronaca/ministra-roccella-ricorda-luigi-cavallari-storie-al-bivio_5YtwdHe2uGvFVVLX4d8V4D"
   },
   {
+   "data": "2026-11-14T19:46:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa dalle Ande: 'Mai cedere alla violenza, non è la via per il progresso'&nbsp;",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/11/14/il-papa-dalle-ande-mai-cedere-alla-violenza-non-e-la-via-per_deb338cd-5c66-46be-b986-297fe0877dca.html"
+  },
+  {
    "data": "2026-11-14T19:43:56+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Atp Finals, per Shelton inizia l'era Ferrero (di fronte ad Alcaraz)",
    "url": "https://www.adnkronos.com/sport/alcaraz-ferrero-abbraccio-atp-finals-shelton_3xXtH2PbY7O7cgDfE792vs"
-  },
-  {
-   "data": "2026-11-14T19:40:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Uomo di 92 anni ucciso durante una truffa del falso carabiniere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/anziano-ucciso-durante-la-truffa-del-falso-carabiniere-due-fermi_5d3e1a2d-d519-4fe8-b10b-e866c55fbb82.html"
-  },
-  {
-   "data": "2026-11-14T19:35:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dopo il caos nei cieli, Usa verso la 'piena operatività'. Ma si contano i danni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/dopo-il-caos-nei-cieli-usa-verso-la-piena-operativita.-ma-si-contano-i-danni_9772e753-260a-465a-b775-0399c068f3c9.html"
-  },
-  {
-   "data": "2026-11-14T19:15:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa: 'Ci sentiamo minacciati da incertezza, violenza e sofferenze'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/14/il-papa-ci-sentiamo-minacciati-da-incertezza-violenza-e-sofferenze-_deb338cd-5c66-46be-b986-297fe0877dca.html"
-  },
-  {
-   "data": "2026-11-14T19:08:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Zelensky: 'Gli Usa ci propongono la Nato in cambio del Donbass'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/ucraina-zelensky-gli-usa-ci-propongono-la-nato-in-cambio-del-donbass_48c4f0d9-c61c-4d79-8523-64805b2f303f.html"
   },
   {
    "data": "2026-11-14T19:05:35+00:00",
@@ -63,12 +135,6 @@
    "fonte": "ANSA",
    "titolo": "Alle Atp Finals riflettori sui maestri, tutto pronto per lo show",
    "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/14/alle-atp-finals-riflettori-sui-maestri-tutto-pronto-per-lo-show_e6a4b465-fac6-4d5f-a0c5-6b724ce2d0a3.html"
-  },
-  {
-   "data": "2026-11-14T18:59:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "I bot si ribellano ai politici, 'colpa' di Microsoft down",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/lega-eserciti-di-bot-inquinano-confronto-democratico-anche-sui-social-di-salvini_3b12b190-cf89-4c45-96d5-1d1ed0c1b93c.html"
   },
   {
    "data": "2026-11-14T18:57:00+00:00",
@@ -119,76 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/perquisizioni-in-13-citta-per-violenze-in-cortei-anche-a-minorenni_5916b95b-3017-4a53-8a4b-ea4d7c985d8e.html"
   },
   {
-   "data": "2026-11-14T18:24:08+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sport, Galanda (legend Sport e Salute): ''Nuovi playground Illumina spazi di comunità e scintilla per nuove generazioni''",
-   "url": "https://www.adnkronos.com/sport/sport-galanda-legend-sport-e-salute-nuovi-playground-illumina-spazi-di-comunita-e-scintilla-per-nuove-generazioni_7JJQnkINgJxqVcHfCsEELc"
-  },
-  {
-   "data": "2026-11-14T18:20:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sport, Savrayuk (legend Sport e Salute): ''Nuovo playground a Torino bellissimo, l'avessi avuto io da piccola...''",
-   "url": "https://www.adnkronos.com/sport/sport-savrayuk-legend-sport-e-salute-nuovo-playground-a-torino-bellissimo-lavessi-avuto-io-da-piccola_6ACSHudtwGovU9NynyBRWm"
-  },
-  {
-   "data": "2026-11-14T18:19:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Farnesina: 'Scarcerato in Venezuela il cittadino italiano Echenagucía'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/farnesina-scarcerato-in-venezuela-il-cittadino-italiano-echenagucia_3cdb41d6-1cf2-48a2-8886-6aa81c1a9943.html"
-  },
-  {
-   "data": "2026-11-14T18:16:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Maxi-multa del Garante per Meta, l'azienda prepara il ricorso",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/garante-805-milioni-di-multa-a-meta-per-luso-di-foto-su-fb-senza-consenso_c28909e5-4d3b-4ec6-9d7c-e23ea349b64d.html"
-  },
-  {
-   "data": "2026-11-14T17:57:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Imprenditore ucciso a Gangi, svolta nelle indagini: fermato un 35enne, ha confessato",
-   "url": "https://www.adnkronos.com/cronaca/omicidio-gangi-indagini-fermo-confessione_3MbA8dxUC3H5pJlh13O3kL"
-  },
-  {
-   "data": "2026-11-14T17:47:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Microsoft torna a funzionare, ma la conta dei danni è milionaria",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/microsoft-ripristinati-tutti-i-servizi-dopo-il-blackout-globale-_fcbd3697-9a41-4805-9a00-5c1a6949b294.html"
-  },
-  {
-   "data": "2026-11-14T17:39:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Kreiss-Tomkins sbanca l'Alaska, primo governatore dem dal 1998",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/kreiss-tomkins-sbanca-lalaska-primo-governatore-dem-dal-1998_3cdbfc15-79fd-424a-ae76-146dba306eed.html"
-  },
-  {
    "data": "2026-11-14T17:38:55+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Omicidio a Gangi, fermato un uomo di 35 anni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/omicidio-a-gangi-fermato-un-uomo-di-35-anni_1f61f8e5-2058-41c9-84c0-a68ac5ac1655.html"
-  },
-  {
-   "data": "2026-11-14T17:37:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Toni Capuozzo, il ricordo a Verissimo: \"Ti vogliamo ricordare con un sorriso gentile\"",
-   "url": "https://www.adnkronos.com/spettacoli/toni-capuozzo-verissimo-ricordo-silvia-toffanin_6oDS0ccZegVaQf2EybKnkv"
-  },
-  {
-   "data": "2026-11-14T17:37:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allarmi bomba, l'analista German Marshall Fund: \"L'Europa è nell'era della guerra ombra\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/sicurezza-informatica-allarmi-bomba-europa-stati-uniti_5Ijihe2FgXnSq8tNO5pVmj"
-  },
-  {
-   "data": "2026-11-14T17:34:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Farage sugella la rottura con Putin: 'Mosca minaccia numero 1'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/farage-sugella-la-rottura-con-putin-mosca-minaccia-numero-1_a3bf317d-5934-4bba-89c2-bc14c666fd98.html"
-  },
-  {
-   "data": "2026-11-14T17:22:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Futuro Nazionale, scoppia il caso dirigenti nella provincia di Roma: nomine 'congelate' dal coordinatore regionale",
-   "url": "https://www.adnkronos.com/politica/futuro-nazionale-caso-dirigenti-lazio_3nak19yCyjP5UhE0YVmdqK"
   }
  ]
 }
