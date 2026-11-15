@@ -223,6 +223,13 @@ def estrai_articolo(path: Path) -> dict | None:
     corpo_pulito = re.sub(r"<[^>]+>", "", corpo_pulito)
     corpo_pulito = re.sub(r"\s+", " ", corpo_pulito).strip()
     estratto = corpo_pulito[:600]
+    # Testo intero (frontmatter compreso), per il controllo dei post: un dato
+    # del post deve stare nell'articolo, non solo nell'estratto.
+    testo_articolo = " ".join([
+        social_comune.testo_campo(fm, "title"), social_comune.testo_campo(fm, "description"),
+        " ".join(str(x) for x in (fm.get("social_punti") or []) if isinstance(fm.get("social_punti"), list)),
+        social_comune.testo_campo(fm, "social_citazione"), corpo_pulito,
+    ])
 
     punti = fm.get("social_punti") or []
     return {
@@ -237,6 +244,7 @@ def estrai_articolo(path: Path) -> dict | None:
         "estratto": estratto,
         "punti": [str(x).strip() for x in punti if str(x).strip()] if isinstance(punti, list) else [],
         "crediti": social_comune.testo_campo(fm, "social_crediti"),
+        "testo": testo_articolo,
     }
 
 
@@ -506,6 +514,144 @@ def correggi_link(testo: str, url: str) -> str:
     return _RE_URL.sub(sostituisci, testo or "")
 
 
+# Controllore dei testi social (dal 15/11/2026, richiesta di Alessandro: «Fai in
+# modo che ci sia qualche agente che controlli»). I testi escono da soli su
+# Instagram e Facebook e nessun agente li rileggeva: il post del Polesine è
+# uscito con un link sbagliato. Prima di salvare, ogni testo passa due esami:
+#   1. controllo deterministico: ogni numero del post (date, quantità,
+#      vittime, telefoni) deve comparire nell'articolo;
+#   2. revisore: una seconda chiamata al modello, a temperatura zero, confronta
+#      i testi con l'articolo intero e elenca fatti inventati o sbagliati.
+# Se uno dei due trova problemi i testi si rigenerano una volta, con i problemi
+# indicati; se restano, si usano i testi di riserva composti dal frontmatter,
+# che hanno passato il gate editoriale. Un testo sbagliato non si salva mai.
+NUMERI_AMMESSI = {"112", "1530", "803555", "1500"}
+
+
+def _numeri(testo: str) -> set[str]:
+    """Numeri del testo, senza separatori delle migliaia né spazi interni
+    («180.000» e «180 000» -> «180000»; «803 555» -> «803555»). Esclusi gli
+    indirizzi web e gli hashtag."""
+    t = _RE_URL.sub(" ", testo or "")
+    t = re.sub(r"#\w+", " ", t)
+    out = set()
+    t = re.sub(r"\b803\s555\b", "803555", t)
+    # Migliaia separate da uno spazio semplice («180 000»)
+    t = re.sub(r"\b\d{1,3}(?: \d{3})+\b", lambda m: m.group(0).replace(" ", ""), t)
+    t = re.sub(r"\b\d{3,4}\s?[x×]\s?\d{3,4}\b", " ", t)  # misure di immagini
+    for m in re.finditer(r"\d(?:[\d.\u202f\u00a0]*\d)?", t):
+        n = re.sub(r"[.\u202f\u00a0]", "", m.group(0))
+        if n:
+            out.add(n)
+    return out
+
+
+_UNITA = ["zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove",
+          "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici",
+          "diciassette", "diciotto", "diciannove"]
+_DECINE = {20: "venti", 30: "trenta", 40: "quaranta", 50: "cinquanta", 60: "sessanta",
+           70: "settanta", 80: "ottanta", 90: "novanta"}
+
+
+def _numeri_in_parole(testo: str) -> set[str]:
+    """Numeri da 0 a 100 scritti in lettere nell'articolo («cinquant'anni» -> 50,
+    «settantacinque» -> 75), più cento e mille: un post li scrive spesso in cifre."""
+    parole = {}
+    for n, w in enumerate(_UNITA):
+        parole[w] = n
+    for d, w in _DECINE.items():
+        parole[w] = d
+        parole[w[:-1]] = d  # elisione: «cinquant'anni», «vent'anni»
+        for u in range(1, 10):
+            uw = _UNITA[u]
+            radice = w[:-1] if uw[0] in "uo" else w
+            parole[radice + uw] = d + u
+            if u == 3:
+                parole[radice + "tré"] = d + u
+    parole.update({"cento": 100, "mille": 1000, "primo": 1, "prima": 1})
+    t = testo.lower()
+    return {str(n) for w, n in parole.items() if re.search(r"\b" + re.escape(w) + r"(?![a-zà-ù])", t)}
+
+
+def numeri_non_nell_articolo(bozze: dict, art: dict) -> list[str]:
+    """Problemi: numeri dei post che l'articolo non contiene."""
+    noti = _numeri(art.get("testo", "")) | _numeri_in_parole(art.get("testo", ""))
+    noti |= set(art.get("date", "").split("-"))
+    noti |= {n.lstrip("0") for n in noti}
+    problemi = []
+    for rete in ("x", "facebook", "instagram", "telegram"):
+        for n in sorted(_numeri(bozze.get(rete, ""))):
+            if n in NUMERI_AMMESSI or n in noti or n.lstrip("0") in noti:
+                continue
+            problemi.append(f"{rete}: il numero «{n}» non compare nell'articolo")
+    return problemi
+
+
+REVISORE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "ok": {"type": "boolean"},
+        "problemi": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": ["ok", "problemi"],
+}
+
+REVISORE_PROMPT = """Sei il revisore dei post social del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
+Confronta i testi dei post con l'ARTICOLO e segnala SOLO errori reali:
+- fatti, numeri, date, luoghi, nomi o enti che l'articolo non contiene o che dice in modo diverso;
+- citazioni attribuite a qualcuno che l'articolo non riporta;
+- un'allerta o un'emergenza presentate come in corso quando l'articolo non lo dice;
+- indirizzi web diversi da quello dell'articolo ({url}) per indicare l'articolo;
+- nomi di programmi o di intelligenze artificiali nel testo.
+Non segnalare scelte di stile, sintesi legittime, hashtag o l'invito a leggere sul sito.
+Rispondi in JSON: ok=true se non ci sono errori, altrimenti ok=false e un elenco breve di problemi in italiano,
+ognuno con la rete (x, facebook, instagram, telegram) e che cosa è sbagliato."""
+
+
+def chiama_revisore(api_key: str, art: dict, bozze: dict) -> list[str] | None:
+    """Problemi trovati dal revisore; None se il revisore non risponde."""
+    testi = "\n\n".join(f"## {r}\n{bozze.get(r, '')}" for r in ("x", "facebook", "instagram", "telegram"))
+    payload = {
+        "systemInstruction": {"parts": [{"text": REVISORE_PROMPT.format(url=art["url"])}]},
+        "contents": [{"role": "user", "parts": [{"text":
+            f"# ARTICOLO\n{art.get('testo', '')[:12000]}\n\n# POST DA CONTROLLARE\n{testi}"}]}],
+        "generationConfig": {"responseMimeType": "application/json",
+                             "responseSchema": REVISORE_SCHEMA, "temperature": 0,
+                             "maxOutputTokens": 2048},
+    }
+    req = urllib.request.Request(
+        GEMINI_ENDPOINT, data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json", "x-goog-api-key": api_key}, method="POST")
+    for tentativo in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                risposta = json.loads(resp.read().decode("utf-8"))
+            esito = json.loads(risposta["candidates"][0]["content"]["parts"][0]["text"])
+            if esito.get("ok"):
+                return []
+            return [str(p) for p in esito.get("problemi") or ["il revisore non ha approvato i testi"]]
+        except urllib.error.HTTPError as e:
+            if tentativo < 2 and e.code in (429, 500, 502, 503):
+                time.sleep(3)
+                continue
+            stampa_err(f"Revisore: HTTP {e.code}")
+            return None
+        except Exception as e:  # rete, JSON, struttura
+            stampa_err(f"Revisore: {e}")
+            return None
+    return None
+
+
+def controlla_bozze(api_key: str | None, art: dict, bozze: dict) -> tuple[list[str], bool]:
+    """Esame completo dei testi: (problemi, revisore_ha_risposto)."""
+    bozze = {k: correggi_link(v, art["url"]) for k, v in bozze.items()}
+    problemi = numeri_non_nell_articolo(bozze, art)
+    revisore = chiama_revisore(api_key, art, bozze) if api_key else None
+    if revisore:
+        problemi += revisore
+    return problemi, revisore is not None
+
+
 def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Path:
     """Scrive 4 file .txt + un README.md in social-bozze/<slug>/."""
     out_dir = SOCIAL_BOZZE / slug_to_path(slug)
@@ -677,6 +823,30 @@ def main() -> int:
         stampa_info(f"  → Genero: {art['slug']}")
         bozze = (chiama_gemini(api_key, system_prompt, costruisci_user_prompt(art))
                  if api_key else None)
+        if bozze:
+            problemi, revisore_ok = controlla_bozze(api_key, art, bozze)
+            if problemi:
+                stampa_info("    Controllo dei testi: " + "; ".join(problemi))
+                correzione = (costruisci_user_prompt(art)
+                              + "\n# CORREGGI\nLa versione precedente aveva questi errori: "
+                              + "; ".join(problemi)
+                              + ". Usa solo fatti, numeri e nomi dell'articolo e l'URL canonico.\n")
+                bozze = chiama_gemini(api_key, system_prompt, correzione)
+                if bozze:
+                    problemi, revisore_ok = controlla_bozze(api_key, art, bozze)
+                if not bozze or problemi:
+                    avviso = (f"Testi social di {art['slug']} non approvati dal controllo"
+                              + (f" ({'; '.join(problemi)})" if problemi else "")
+                              + ": uso i testi di riserva dal frontmatter")
+                    stampa_info(f"    {avviso}")
+                    if os.environ.get("GITHUB_ACTIONS"):
+                        print(f"::warning::{avviso}")
+                    bozze = testi_di_riserva(art)
+            elif not revisore_ok:
+                avviso = f"Revisore non disponibile per {art['slug']}: testi passati solo dal controllo dei numeri e dei link"
+                stampa_info(f"    {avviso}")
+                if os.environ.get("GITHUB_ACTIONS"):
+                    print(f"::warning::{avviso}")
         if not bozze and args.riserva:
             bozze = testi_di_riserva(art)
             avviso = f"Gemini non disponibile: testi di riserva per {art['slug']}"

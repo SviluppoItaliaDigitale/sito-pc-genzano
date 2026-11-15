@@ -118,5 +118,61 @@ class LinkDelSito(unittest.TestCase):
         self.assertNotIn("www.rotezione", stampato)
 
 
+class ControlloreDeiTesti(unittest.TestCase):
+    """Dal 15/11/2026 i testi passano dal controllore prima di essere salvati."""
+    ART = {"url": "https://www.protezionecivilegenzano.it/comunicazioni/2026-11-14-x/",
+           "slug": "2026-11-14-x", "date": "2026-11-14", "title": "Polesine 1951",
+           "description": "Settantacinque anni fa la grande alluvione del Po.",
+           "badge": "Informazione", "area": "", "estratto": "", "punti": [],
+           "crediti": "", "testo": "Settantacinque anni fa. Il 14 novembre 1951 le vittime furono 101, più sette dispersi; "
+                                   "gli sfollati circa 180.000. Chiama il 112."}
+
+    def test_numeri_dell_articolo_passano(self):
+        b = {"facebook": "Il 14/11/1951 101 vittime, 7 dispersi, 180 000 sfollati, 75 anni fa. 112."}
+        self.assertEqual(S.numeri_non_nell_articolo(b, self.ART), [])
+
+    def test_numero_inventato_bloccato(self):
+        b = {"instagram": "Le vittime furono 120."}
+        p = S.numeri_non_nell_articolo(b, self.ART)
+        self.assertEqual(len(p), 1)
+        self.assertIn("120", p[0])
+
+    def test_rigenera_poi_riserva(self):
+        sbagliati = {"x": "x", "facebook": "Le vittime furono 120.", "instagram": "i", "telegram": "t"}
+        chiamate = []
+        def finto_gemini(*a, **k):
+            chiamate.append(a[2])
+            return dict(sbagliati)
+        salvati = {}
+        with patch.object(S, "chiama_gemini", side_effect=finto_gemini), \
+             patch.object(S, "chiama_revisore", return_value=[]), \
+             patch.object(S, "estrai_articolo", return_value=dict(self.ART)), \
+             patch.object(S, "salva_bozze", side_effect=lambda slug, b, art, dry_run=False: salvati.update(b)), \
+             patch.object(S, "carica_rules", return_value=""), \
+             patch.dict("os.environ", {"GEMINI_API_KEY": "finta"}), \
+             patch.object(sys, "argv", ["genera-social.py", "content/comunicazioni/2026-11-14-x.md", "--force"]), \
+             contextlib.redirect_stderr(io.StringIO()), contextlib.redirect_stdout(io.StringIO()):
+            S.main()
+        self.assertEqual(len(chiamate), 2)            # prima stesura e una correzione
+        self.assertIn("CORREGGI", chiamate[1])
+        self.assertNotIn("120", salvati["facebook"])  # testi di riserva dal frontmatter
+        self.assertIn("Polesine 1951", salvati["facebook"])
+
+    def test_revisore_blocca(self):
+        buoni = {"x": "x", "facebook": "Il 14 novembre 1951.", "instagram": "i", "telegram": "t"}
+        problemi, risposto = None, None
+        with patch.object(S, "chiama_revisore", return_value=["facebook: luogo sbagliato"]):
+            problemi, risposto = S.controlla_bozze("finta", self.ART, buoni)
+        self.assertEqual(problemi, ["facebook: luogo sbagliato"])
+        self.assertTrue(risposto)
+
+    def test_revisore_muto_restano_i_controlli_fissi(self):
+        buoni = {"facebook": "Il 14 novembre 1951."}
+        with patch.object(S, "chiama_revisore", return_value=None):
+            problemi, risposto = S.controlla_bozze("finta", self.ART, buoni)
+        self.assertEqual(problemi, [])
+        self.assertFalse(risposto)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
