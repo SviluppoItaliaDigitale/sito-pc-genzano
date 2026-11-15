@@ -24,7 +24,7 @@ social_punti:
 
 ## Dai supermercati al magazzino
 
-Con due mezzi del Gruppo, il **Mercedes Atego** e il **Fiat Doblò**, i volontari hanno ritirato dai supermercati le **scatole piene di cibo** donate durante la giornata. Le hanno poi trasportate in un **magazzino della zona** che il Banco Alimentare ha allestito apposta per la Colletta. Il servizio è iniziato in tarda mattinata e si è concluso a sera.
+Con due mezzi del Gruppo, il **Mercedes Atego** e il **Fiat Doblò**, i volontari hanno fatto il **giro dei supermercati di Genzano** che aderivano alla Colletta e in ognuno hanno ritirato le **scatole piene di cibo** donate durante la giornata. Le hanno poi trasportate in un **magazzino della zona** che il Banco Alimentare ha allestito apposta per la Colletta. Il servizio è iniziato in tarda mattinata e si è concluso a sera.
 
 {{< foto src="/images/2026-11-14-colletta-alimentare-volontari-camion.webp"
          alt="Sei volontari in divisa di protezione civile, in un autoscatto notturno, davanti al rimorchio aperto di un camion; in primo piano alcuni bancali di legno."
