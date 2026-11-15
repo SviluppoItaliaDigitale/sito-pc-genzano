@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-15T17:03",
+  "aggiornato": "2026-11-15T18:01",
   "data_lunga": "domenica 15 novembre 2026",
-  "aggiornato_label": "domenica 15 novembre 2026, ore 17:03",
+  "aggiornato_label": "domenica 15 novembre 2026, ore 18:01",
   "alba": "06:58",
   "tramonto": "16:48",
   "corrente": {
-    "temp": 13.6,
-    "percepita": 13.7,
-    "cielo": "Temporale",
-    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"26.4,42.4 36.0,42.4 28.8,58.4 32.8,45.6 24.8,45.6\" fill=\"#f6a800\"/></g>",
-    "umidita": 95,
-    "vento": 5,
-    "raffiche": 38
+    "temp": 13.3,
+    "percepita": 13.4,
+    "cielo": "Rovesci",
+    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
+    "umidita": 98,
+    "vento": 6,
+    "raffiche": 39
   },
   "giorni": [
     {
