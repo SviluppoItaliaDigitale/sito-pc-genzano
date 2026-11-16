@@ -9,5 +9,14 @@
     "titolo": "Previsto verde",
     "rischi": [],
     "data": "2026-11-17"
+  },
+  "avviso_meteo": {
+    "tipo": "vento",
+    "livello": "gialla",
+    "validita_inizio": "2026-11-16T00:00:00+01:00",
+    "validita_fine": "2026-11-17T12:00:00+01:00",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/allertamento_16-11-2026.pdf",
+    "fonte_data": "2026-11-16",
+    "descrizione": "Venti da forti a burrasca a prevalente componente sud-occidentale"
   }
 }
