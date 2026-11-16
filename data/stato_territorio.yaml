@@ -23,7 +23,7 @@
 # risponde o non dice più quella cosa, la data resta e si apre una issue fonte-rotta.
 # Chi cambia il testo di una riga controlla che le sue `verifica` lo sostengano.
 
-aggiornamento: "2026-11-15"
+aggiornamento: "2026-11-16"
 
 righe:
   - id: "meteo-idro"
@@ -43,7 +43,7 @@ righe:
     verifica:
       - url: "https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-rischi-incendi"
         testo: "Bollettini di Pericolosità incendi Boschivi"
-    verificato: "2026-11-15"
+    verificato: "2026-11-16"
     fonte_label: "Rischio incendi boschivi"
     fonte_url: "/rischi-prevenzione/rischio-incendio/"
 
@@ -56,7 +56,7 @@ righe:
     verifica:
       - url: "https://rischi.protezionecivile.gov.it/it/sismico/"
         testo: "Non è ancora possibile prevedere con certezza quando"
-    verificato: "2026-11-15"
+    verificato: "2026-11-16"
     fonte_label: "Rischio sismico"
     fonte_url: "/rischi-prevenzione/rischio-sismico/"
 
@@ -72,7 +72,7 @@ righe:
         testo: "GPS"
       - url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
         testo: "Lago Albano"
-    verificato: "2026-11-15"
+    verificato: "2026-11-16"
     fonte_label: "Il vulcanismo dei Colli Albani"
     fonte_url: "/conoscere/rischio-vulcanico-colli-albani/"
 
@@ -86,7 +86,7 @@ righe:
     verifica:
       - url: "https://www.epicentro.iss.it/caldo/aggiornamenti"
         testo: "bollettini sulle ondate di calore"
-    verificato: "2026-11-15"
+    verificato: "2026-11-16"
     fonte_label: "Ondate di calore"
     fonte_url: "/rischi-prevenzione/ondate-di-calore/"
 
@@ -101,6 +101,6 @@ righe:
         testo: "attiva"
       - file: "content/rischi-prevenzione/blackout.md"
         testo: "{#cosa-fare-prima}"
-    verificato: "2026-11-15"
+    verificato: "2026-11-16"
     fonte_label: "Blackout"
     fonte_url: "/rischi-prevenzione/blackout/"
