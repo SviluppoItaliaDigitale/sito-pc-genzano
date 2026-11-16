@@ -17,7 +17,7 @@ Il **19 giugno 1996** un sistema temporalesco di intensità eccezionale si scari
 
 Bilancio finale: **14 morti**, molte famiglie evacuate (le fonti divergono sul numero) e danni ingenti.
 
-## La cronologia di una notte fatale
+## La cronologia di una giornata fatale
 
 Il temporale cominciò verso le 6 del mattino del 19 giugno e la pioggia durò circa dodici ore, con la massima intensità intorno alle **13:50**. Quando l'allarme arrivò, era già troppo tardi: le strade erano interrotte, le linee telefoniche cadute, i fiumi straripati.
 
