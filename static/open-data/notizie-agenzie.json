@@ -5,11 +5,29 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-15T23:50:05+00:00",
+  "generato": "2026-11-16T05:20:54+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-16T03:33:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il principe Harry partecipa agli Invictus Games dell'Ucraina a Leopoli",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/il-principe-harry-partecipa-agli-invictus-games-dellucraina-a-leopoli_4b174b7b-10a6-4890-bd72-b956d97a6b90.html"
+  },
+  {
+   "data": "2026-11-16T03:09:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Errani-Paolini ko nella finale di Indian Wells",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/16/errani-paolini-ko-nella-finale-di-indian-wells_a5557029-d8e4-45c6-8989-04ea4c29f4a7.html"
+  },
+  {
+   "data": "2026-11-16T03:08:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Pechino conferma il trilaterale tra Xi, Trump e Putin e gli Usa si blindano sull'IA contro la Cina",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/pechino-conferma-il-trilaterale-tra-xi-trump-e-putin-e-gli-usa-si-blindano-sullia_719b0e4a-833e-4411-9f49-e3bdeca194d9.html"
+  },
   {
    "data": "2026-11-15T23:02:54+00:00",
    "fonte": "ANSA",
@@ -33,12 +51,6 @@
    "fonte": "ANSA",
    "titolo": "Atp Finals,  Zverev subito travolgente, Jodar battuto senza problemi",
    "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/15/atp-finals-zverev-questanno-ho-avuto-la-stagione-migliore-di-tutti_5cf26d20-3593-479c-b770-bbdb8f0a2be9.html"
-  },
-  {
-   "data": "2026-11-15T22:21:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il principe Harry in Ucraina incontra i soldati feriti, 'vincerete la guerra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/il-principe-harry-in-ucraina-incontra-i-soldati-feriti-vincerete-la-guerra_55fd8bb0-9a72-41d8-8a0a-f931476fbc75.html"
   },
   {
    "data": "2026-11-15T22:07:12+00:00",
@@ -77,12 +89,6 @@
    "url": "https://www.adnkronos.com/cronaca/garlasco-revisione-alberto-stasi-vicina-analisi-ugo-ricci_3ZL0PCuDP5Dzu8eoC86bX8"
   },
   {
-   "data": "2026-11-15T20:03:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ultimatum di Avs sulla patrimoniale con sponda Schlein, Conte apre al confronto",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/15/fratoianni-a-conte-la-tassa-sulle-grandi-ricchezze-deve-essere-nel-programma_3c918e6b-74f7-42a0-b926-70c8340c5820.html"
-  },
-  {
    "data": "2026-11-15T19:59:40+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Paura su volo EasyJet dall'Islanda a Malpensa: ubriaco semina il panico a bordo con un coltello",
@@ -117,12 +123,6 @@
    "fonte": "ANSA",
    "titolo": "Ronaldinho mania, torna in campo a 46 anni ed è show mondiale",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/11/15/ronaldinho-torna-in-campo-titolare-ed-entra-nellazione-del-gol-del-ravenna_c5db5fb8-4ef0-4810-a737-19967e4af683.html"
-  },
-  {
-   "data": "2026-11-15T19:19:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump scarica su Biden lo stop dei voli, 'un disastro'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/cancellati-oggi-negli-usa-altri-1.400-voli-dopo-i-6.700-di-sabato_cbe40d91-464e-4ab8-99c1-80fe5bc20559.html"
   },
   {
    "data": "2026-11-15T19:11:06+00:00",
