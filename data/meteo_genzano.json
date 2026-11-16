@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-16T00:04",
+  "aggiornato": "2026-11-16T02:03",
   "data_lunga": "lunedì 16 novembre 2026",
-  "aggiornato_label": "lunedì 16 novembre 2026, ore 00:04",
+  "aggiornato_label": "lunedì 16 novembre 2026, ore 02:03",
   "alba": "06:59",
   "tramonto": "16:47",
   "corrente": {
-    "temp": 13.3,
-    "percepita": 13.5,
-    "cielo": "Coperto",
-    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
+    "temp": 12.7,
+    "percepita": 12.7,
+    "cielo": "Rovesci",
+    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
     "umidita": 95,
     "vento": 4,
-    "raffiche": 22
+    "raffiche": 39
   },
   "giorni": [
     {
@@ -21,10 +21,10 @@
       "tmax": 16,
       "tmin": 11,
       "pioggia": 100,
-      "pioggia_mm": 23.3,
-      "raffiche": 63,
-      "uv": 3,
-      "uv_label": "moderato"
+      "pioggia_mm": 22.4,
+      "raffiche": 62,
+      "uv": 2,
+      "uv_label": "basso"
     },
     {
       "label": "Mar 17",
@@ -35,8 +35,8 @@
       "pioggia": 48,
       "pioggia_mm": 0.8,
       "raffiche": 62,
-      "uv": 2,
-      "uv_label": "basso"
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Mer 18",
@@ -47,7 +47,7 @@
       "pioggia": 84,
       "pioggia_mm": 3.5,
       "raffiche": 78,
-      "uv": 1,
+      "uv": 2,
       "uv_label": "basso"
     },
     {
@@ -59,7 +59,7 @@
       "pioggia": 94,
       "pioggia_mm": 13.2,
       "raffiche": 91,
-      "uv": 2,
+      "uv": 1,
       "uv_label": "basso"
     }
   ],
@@ -68,19 +68,19 @@
     {
       "nome": "Viterbo",
       "tmax": 17,
-      "tmin": 12,
-      "cielo": "Temporale"
+      "tmin": 11,
+      "cielo": "Rovesci"
     },
     {
       "nome": "Rieti",
       "tmax": 16,
-      "tmin": 7,
+      "tmin": 8,
       "cielo": "Rovesci"
     },
     {
       "nome": "Roma",
       "tmax": 20,
-      "tmin": 13,
+      "tmin": 14,
       "cielo": "Temporale"
     },
     {
@@ -93,7 +93,7 @@
       "nome": "Frosinone",
       "tmax": 18,
       "tmin": 11,
-      "cielo": "Temporale"
+      "cielo": "Rovesci"
     }
   ]
 }
