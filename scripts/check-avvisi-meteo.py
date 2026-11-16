@@ -203,7 +203,7 @@ PARTI_DEL_GIORNO = (
     (r"primo\s+mattino", 5, 9),
     (r"prima\s+mattinata", 6, 10),
     (r"tarda\s+mattinata", 10, 13),
-    (r"mattin(?:o|ata)", 6, 12),
+    (r"mattin(?:o|ata|a)", 6, 12),
     (r"primo\s+pomeriggio", 12, 15),
     (r"tardo\s+pomeriggio", 16, 19),
     (r"pomeriggio", 12, 18),
