@@ -46,7 +46,7 @@ Le superfici delle stufe scottano. Le braci volano fuori dal camino. Fai attenzi
 
 ## La caldaia
 
-Fai controllare la caldaia 1 volta all'anno. Lo dice la legge italiana (D.P.R. 74/2013). Chiama un tecnico abilitato.
+La legge italiana obbliga a far controllare la caldaia (D.P.R. 74/2013). L'Istituto Superiore di Sanità consiglia di farlo 1 volta all'anno. Chiama un tecnico abilitato.
 
 Guarda la pressione dell'acqua. Deve essere tra 1 e 1,5 bar quando è fredda. Guarda le spie. Devono essere verdi.
 
@@ -91,9 +91,9 @@ Metti almeno 1 rilevatore per ogni piano della casa. Cambia la batteria 1 volta 
 
 ### Il rilevatore di CO (monossido di carbonio)
 
-Se hai una caldaia, un camino o una stufa, installa un rilevatore di CO. Mettilo a 1,50 metri dal soffitto.
+Se hai una caldaia, un camino o una stufa, un rilevatore di CO ti aiuta. Mettilo dove dicono le istruzioni.
 
-Questo apparecchio suona un allarme se c'è monossido di carbonio in casa. Può salvarti la vita.
+Questo apparecchio suona un allarme se c'è monossido di carbonio in casa. Ma serve sempre anche il controllo del tecnico.
 
 ## Cosa fare in emergenza
 
@@ -116,10 +116,11 @@ Questo apparecchio suona un allarme se c'è monossido di carbonio in casa. Può 
 
 ### Hai mal di testa, nausea, sonno forte (forse è il CO)
 
-1. Esci subito all'aria aperta.
-2. Chiama il 112.
-3. Non tornare in casa prima che arrivi il tecnico.
-4. Vai dal medico anche se stai meglio.
+1. Apri le finestre ed esci subito all'aria aperta, con tutti.
+2. Da fuori chiama il 112.
+3. Vai dal medico anche se stai meglio.
+4. Non tornare in casa. Aspetta i soccorritori: ti dicono loro quando è sicuro.
+5. Non accendere di nuovo la stufa o la caldaia prima del controllo del tecnico.
 
 ### Fuoco nella canna fumaria
 

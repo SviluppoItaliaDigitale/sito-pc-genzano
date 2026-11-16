@@ -1267,3 +1267,31 @@ dati:
         perche: "La Giornata mondiale delle zone umide è il 2 febbraio."
         contesto: '[Zz]one umide|Ramsar|[Ww]etlands'
         finestra: 120
+
+  - id: monossido-affinita-emoglobina
+    dato: "Affinità del monossido di carbonio per l'emoglobina rispetto all'ossigeno"
+    valore: "da 200 a 300 volte maggiore"
+    fonti:
+      - nome: "Vigili del Fuoco, «Attenti al monossido», Noi Vigili del Fuoco 02/2016 (verificata il 16/11/2026)"
+        url: "https://www.vigilfuoco.it/sites/default/files/noi-docs/14_noivvf_02_2016_attenti%20al%20monossido.pdf"
+    # Nato il 16/11/2026: il sito scriveva 200, 240 e 250 volte in tre pagine.
+    vietati:
+      - regex: '(?<!da )(?<!-)\b(?:200|210|220|230|240|250|260|270|280)\s+volte'
+        perche: "La fonte dà un intervallo, da 200 a 300 volte: un solo numero è una precisione che la fonte non ha."
+        contesto: '[Ee]moglobina'
+        finestra: 200
+
+  - id: monossido-sintomi-chi-chiamare
+    dato: "Che cosa fare con sintomi da monossido di carbonio in casa"
+    valore: "aprire le finestre, uscire tutti e chiamare il 112 da fuori; farsi visitare anche se all'aria aperta si sta meglio; il tecnico controlla l'impianto dopo, prima di riaccenderlo"
+    fonti:
+      - nome: "ISS EpiCentro, «Monossido di carbonio: informazioni generali», agg. 26/02/2026 (verificata il 16/11/2026)"
+        url: "https://www.epicentro.iss.it/ambiente/monossido-carbonio"
+      - nome: "Vigili del Fuoco, opuscolo «Casa sicura»"
+        url: "https://www.vigilfuoco.it/sites/default/files/2023-09/Casa%20sicura%20Italiano_0.pdf"
+    # Nato il 16/11/2026: l'articolo sulla caldaia metteva i sintomi fra i motivi
+    # per chiamare il tecnico, e la pagina sul monossido faceva uscire solo
+    # «se i sintomi migliorano uscendo».
+    vietati:
+      - regex: '(?i)(?:sintomi\s+di\s+intossicazione\s+CO|sintomi\s+migliorano\s+uscendo|miglioramento\*{0,2}\s+quando\s+si\s+esce)'
+        perche: "Con i sintomi da monossido si esce e si chiama il 112, senza aspettare di vedere se uscendo si sta meglio e senza chiamare prima il tecnico."
