@@ -1,77 +1,77 @@
 {
   "versione": 1,
-  "emesso_il": "2026-11-11T00:19:16+01:00",
-  "validita_da": "2026-11-11",
-  "validita_a": "2026-11-15",
+  "emesso_il": "2026-11-16T19:24:54+01:00",
+  "validita_da": "2026-11-16",
+  "validita_a": "2026-11-20",
   "autore": "Grok Bot",
   "modelli_consultati": [
     "ECMWF IFS 0,25°",
     "DWD ICON (ICON-D2/ICON-EU/ICON globale)",
     "NCEP GFS"
   ],
-  "fonte_dati": "Open-Meteo (https://open-meteo.com/), licenza CC BY 4.0. Valori letti nella notte fra il 10 e l'11 novembre 2026, orari in Europe/Rome. Avvisi di criticità: Dipartimento della Protezione Civile, bollettino del 10 novembre 2026 ore 15:42.",
-  "situazione_generale": "Emissione notturna di mercoledì 11 novembre. Oggi è una giornata di parziale tregua al Centro-Sud, mentre al Nord-Est e in Liguria la pioggia continua a tratti; il bollettino di criticità del Dipartimento della Protezione Civile indica per oggi criticità in Emilia-Romagna, Toscana settentrionale e Liguria di Levante. Giovedì 12 i tre modelli concordano su un peggioramento netto, con accumuli abbondanti in Liguria, sulla pianura padana e al Nord-Est e raffiche forti, soprattutto verso Trieste e sui rilievi del Centro, Castelli Romani compresi. Venerdì 13 il Nord-Est resta il settore più colpito e al Centro-Sud prosegue l'instabilità. Sabato 14 il tempo migliora al Nord con calo delle temperature, mentre resta vento sostenuto verso Trieste. Per domenica 15 ECMWF e ICON indicano una nuova fase piovosa su Lazio e Campania, che GFS invece quasi non vede. Il Sud estremo e la Sicilia restano in gran parte asciutti e miti. ICON è in genere il modello più severo; questi numeri sono previsioni modellistiche e non costituiscono un'allerta ufficiale.",
+  "fonte_dati": "Open-Meteo (https://open-meteo.com/), licenza CC BY 4.0. Valori letti la sera del 16 novembre 2026, orari in Europe/Rome. Avvisi: Dipartimento della Protezione Civile (bollettino di criticità del 16 novembre 2026) e Centro Funzionale della Regione Lazio (avviso di condizioni meteorologiche avverse del 16 novembre 2026).",
+  "situazione_generale": "Emissione serale di lunedì 16 novembre. Dopo una giornata piovosa al Centro e in Campania, con rovesci e locali temporali, in serata i tre modelli indicano un'attenuazione quasi ovunque. Martedì 17 e mercoledì 18 il tempo resta variabile con piogge in genere moderate, ma il vento da sud-ovest si rinforza sui rilievi del Centro, sull'Adriatico e al Sud, con raffiche forti. Giovedì 19 è la giornata più perturbata: i modelli concordano su piogge diffuse al Centro e al Nord-Est e su raffiche molto forti, soprattutto sull'Appennino; ICON è il più severo, con raffiche locali oltre 100 km/h, mentre ECMWF e GFS restano più bassi. Venerdì 20 il tempo migliora al Nord e al Centro, ma il vento resta sostenuto sull'Adriatico e al Sud. Sicilia in gran parte asciutta e mite per tutto il periodo. La Regione Lazio ha emesso un avviso di condizioni meteorologiche avverse per venti da forti a burrasca dalla mattina del 17 novembre. Questi numeri sono previsioni modellistiche e non costituiscono un'allerta ufficiale.",
   "giorni": [
     {
-      "data": "2026-11-11",
-      "titolo": "Mercoledì 11 novembre",
+      "data": "2026-11-16",
+      "titolo": "Lunedì 16 novembre",
       "aree": {
-        "nord": "Al Nord-Ovest giornata in prevalenza asciutta: a Torino e Milano al più 0,5 mm, con massime fra 11 e 14 °C. Al Nord-Est e in Liguria la pioggia continua a tratti: a Trieste fra circa 11 e 14 mm, a Venezia fra circa 4 e 7 mm, a Genova fra circa 2 e 6 mm. A Bologna fra 0 e 6 mm, con ICON il più piovoso.",
-        "centro": "Tregua parziale. A Firenze ECMWF e GFS indicano circa 7-9 mm, ICON nulla. A Perugia rovesci fra circa 2 e 5 mm, con raffiche intorno a 39-42 km/h. Su Roma pioggia scarsa, al più circa 3 mm per ECMWF, e massime fra 21 e 22 °C. Ad Ancona giornata quasi asciutta e mite, con massime intorno a 20-22 °C. All'Aquila quasi asciutto.",
-        "sud": "Su Napoli rovesci fra circa 1 e 10 mm, con ECMWF il più piovoso e raffiche fino a circa 37 km/h. Bari asciutta e mite, con massime intorno a 24-25 °C. Calabria meridionale asciutta, con massime fra 24 e 27 °C.",
-        "isole": "Giornata asciutta e mite su Sicilia e Sardegna, con massime fra 23 e 29 °C e vento in genere debole o moderato.",
-        "lazio": "Attenuazione. A Genzano di Roma al più deboli residui, fino a circa 1 mm, con massime fra 18 e 19 °C. Le raffiche restano incerte: GFS circa 19 km/h, ECMWF circa 34 km/h, ICON circa 57 km/h sui rilievi. Roma con massime fra 21 e 22 °C e pioggia scarsa. Latina con 0-2 mm."
+        "nord": "Giornata grigia con deboli piogge: a Torino, Milano e Bologna al più circa 1 mm. Al Nord-Est qualche pioggia in più, fino a circa 4-5 mm a Venezia e Trieste secondo GFS. In serata i modelli indicano al più residui deboli.",
+        "centro": "Giornata piovosa, con rovesci e locali temporali. Totali del giorno: a Firenze fra circa 4 e 21 mm (ECMWF il più piovoso), a Perugia fra circa 9 e 14 mm, all'Aquila fra circa 8 e 27 mm, ad Ancona fra 4 e 6 mm. In serata i tre modelli indicano solo residui, al più circa 1 mm.",
+        "sud": "Su Napoli rovesci e temporali in giornata, fra circa 11 e 20 mm; in serata quasi asciutto. In Basilicata raffiche forti sui rilievi, fra circa 63 e 76 km/h a Potenza. Bari e la Calabria meridionale asciutte e miti, con massime fra 21 e 24 °C.",
+        "isole": "Sicilia asciutta e mite, con massime fra 21 e 24 °C. In Sardegna qualche pioggia al Nord, a Sassari fra circa 2 e 6 mm; Cagliari quasi asciutta.",
+        "lazio": "Giornata con rovesci e temporali: a Roma fra circa 13 e 19 mm, a Genzano di Roma fra circa 9 e 29 mm (ICON il più piovoso), a Rieti fra 19 e 28 mm. In serata i tre modelli indicano tempo in prevalenza asciutto ai Castelli Romani, con raffiche fino a circa 20-33 km/h."
       }
     },
     {
-      "data": "2026-11-12",
-      "titolo": "Giovedì 12 novembre",
+      "data": "2026-11-17",
+      "titolo": "Martedì 17 novembre",
       "aree": {
-        "nord": "Peggioramento netto, sul quale i tre modelli concordano. In Liguria accumuli abbondanti: a Genova fra circa 44 e 62 mm, con temporali e raffiche fino a circa 64 km/h per ICON. Sulla pianura padana e al Nord-Est: a Milano fra circa 21 e 40 mm, a Venezia fra circa 25 e 41 mm, a Trieste fra circa 24 e 55 mm con raffiche fra 52 e 67 km/h. A Bologna fra circa 5 e 16 mm, a Torino fra 8 e 20 mm. Massime basse in pianura, in genere 10-13 °C.",
-        "centro": "Nuova fase instabile, con rovesci e temporali. A Firenze fra circa 14 e 23 mm, con raffiche fra 35 e 56 km/h. Perugia con rovesci intorno a 5 mm e raffiche fra 60 e 72 km/h. Su Roma fra circa 2 e 11 mm, con GFS il più piovoso, e raffiche fra 53 e 64 km/h. All'Aquila fra circa 2 e 11 mm, con raffiche fino a circa 62 km/h per GFS. Temperature miti, con massime fra 17 e 22 °C.",
-        "sud": "Meno pioggia che al Centro-Nord, ma vento in aumento. A Napoli fra circa 2 e 8 mm, con raffiche fra 42 e 65 km/h. Bari asciutta e ventosa, con raffiche fra 47 e 57 km/h e massime intorno a 23 °C. In Calabria meridionale poca o nessuna pioggia, con raffiche fino a circa 65 km/h per ICON.",
-        "isole": "Sicilia asciutta o quasi e mite, ma ventosa: a Palermo le raffiche vanno da circa 42 a 68 km/h secondo i modelli. In Sardegna, a Cagliari, al più qualche debole rovescio (fino a circa 3 mm) e raffiche fra 55 e 61 km/h, con massime intorno a 25 °C.",
-        "lazio": "Rovesci e temporali, più evidenti sui Castelli che sul litorale. A Genzano di Roma fra circa 6 mm per ECMWF, 9 mm per GFS e 10 mm per ICON con temporali. Le raffiche sono il punto più delicato e più incerto: GFS circa 49 km/h, ECMWF circa 83 km/h, ICON oltre 100 km/h sui rilievi. Temperature fra 14 e 19 °C a Genzano e fra 16 e 22 °C a Roma. Latina fra circa 7 e 15 mm, con raffiche fra 40 e 60 km/h. È un giorno da seguire sui bollettini ufficiali prima di spostamenti."
+        "nord": "Piogge più consistenti al Nord-Est: a Trieste fra circa 11 e 27 mm (ICON il più piovoso), a Venezia fra circa 2 e 10 mm. In Liguria fra circa 1 e 6 mm, con raffiche a Genova intorno a 40-44 km/h per ECMWF e ICON. Al Nord-Ovest al più deboli piogge, con massime intorno a 9-12 °C.",
+        "centro": "Piogge in genere deboli: a Firenze circa 4-6 mm, quasi asciutto ad Ancona e Perugia. Vento in rinforzo da sud-ovest: raffiche a Perugia fra circa 55 e 63 km/h, ad Ancona fra 34 e 57 km/h. Massime fra 15 e 20 °C.",
+        "sud": "Napoli quasi asciutta, al più circa 3 mm per GFS. Raffiche forti sui rilievi: a Potenza fra circa 62 e 75 km/h, a Campobasso fra 54 e 61 km/h. Bari asciutta, con massime intorno a 21-22 °C.",
+        "isole": "Giornata asciutta. Vento forte in Sardegna settentrionale: a Sassari raffiche fra circa 57 e 75 km/h. Sicilia mite, con massime fra 21 e 24 °C.",
+        "lazio": "Deboli piogge: a Roma circa 3 mm, a Genzano di Roma circa 3-4 mm. Vento in rinforzo: a Viterbo raffiche fra circa 53 e 67 km/h; ai Castelli Romani le stime divergono, con GFS intorno a 28 km/h, ECMWF a 49 km/h e ICON a 72 km/h. Massime a Roma fra 19 e 20 °C."
       }
     },
     {
-      "data": "2026-11-13",
-      "titolo": "Venerdì 13 novembre",
+      "data": "2026-11-18",
+      "titolo": "Mercoledì 18 novembre",
       "aree": {
-        "nord": "Il Nord-Est resta il settore più colpito. A Trieste fra circa 44 e 61 mm, con temporali e raffiche fra circa 58 e 78 km/h. A Venezia fra circa 3 e 19 mm, con ECMWF il più piovoso, e raffiche fra 49 e 61 km/h. A Bologna fra circa 13 e 15 mm. A Milano fra 0 e 15 mm, con forte divario fra i modelli. A Genova e Torino pochi millimetri, con massime in rialzo verso 15-18 °C.",
-        "centro": "Ancora una giornata instabile. A Firenze fra circa 13 e 36 mm, con ECMWF il più piovoso e raffiche fra 47 e 62 km/h. A Perugia fra circa 11 e 30 mm, con raffiche fra 56 e 63 km/h. Su Roma fra circa 2 e 16 mm, con raffiche fra 43 e 53 km/h. All'Aquila fra circa 3 e 24 mm. Ad Ancona fra 2 e 7 mm, con raffiche fra 52 e 61 km/h.",
-        "sud": "Su Napoli rovesci o temporali, fra circa 10 e 26 mm, con raffiche fra 45 e 57 km/h. Bari asciutta, mite e ventosa, con massime intorno a 24-25 °C e raffiche fra 48 e 55 km/h. In Calabria meridionale poca o nessuna pioggia.",
-        "isole": "Poca pioggia. A Palermo ECMWF indica circa 2 mm, gli altri modelli nulla, con raffiche fra 37 e 64 km/h. Cagliari asciutta o quasi, con raffiche fra 49 e 57 km/h. Catania asciutta e mite, con massime intorno a 26 °C.",
-        "lazio": "Ancora instabile, con rovesci o temporali. A Genzano di Roma gli accumuli vanno da circa 9 mm per ECMWF a circa 18 mm per GFS e 20 mm per ICON, con raffiche fra circa 38 e 76 km/h e forte incertezza fra i modelli. A Roma fra circa 2 e 16 mm e massime intorno a 20-22 °C. Latina fra circa 3 e 19 mm. È il secondo giorno consecutivo da verificare sui bollettini ufficiali."
+        "nord": "Giornata mite e in prevalenza asciutta al Nord-Ovest, con massime a Torino fra 16 e 19 °C. Al Nord-Est ancora piogge a Trieste, fra circa 4 e 14 mm. A Bologna al più circa 3 mm.",
+        "centro": "Vento forte: ad Ancona raffiche fra circa 64 e 79 km/h con tempo asciutto e massime intorno a 21 °C, a Perugia fra 57 e 70 km/h, all'Aquila fra 55 e 65 km/h. Piogge incerte: a Firenze ECMWF indica circa 12 mm, ICON e GFS al più 2 mm.",
+        "sud": "Vento forte da sud-ovest: a Potenza raffiche fra circa 64 e 80 km/h, a Bari fra 56 e 72 km/h, con tempo asciutto e massime intorno a 25 °C. Su Napoli piogge fra circa 0,5 e 7 mm.",
+        "isole": "Sicilia asciutta e mite, con massime fra 22 e 26 °C; a Catania raffiche fino a circa 56-67 km/h per ECMWF e ICON. Sardegna quasi asciutta, con raffiche fra circa 45 e 58 km/h.",
+        "lazio": "Piogge a tratti, con modelli discordi: a Genzano di Roma fra circa 2 e 11 mm, a Latina fra 2 e 16 mm, a Rieti fra 4 e 14 mm (ECMWF il più piovoso). Raffiche ai Castelli Romani fra circa 42 e 74 km/h, con ICON il più alto. Massime a Roma intorno a 21 °C."
       }
     },
     {
-      "data": "2026-11-14",
-      "titolo": "Sabato 14 novembre",
+      "data": "2026-11-19",
+      "titolo": "Giovedì 19 novembre",
       "aree": {
-        "nord": "Miglioramento al Nord, con poca o nessuna pioggia a Milano, Torino, Venezia, Genova e Bologna. Resta vento sostenuto verso Trieste, dove ECMWF indica raffiche fino a circa 88 km/h, ICON circa 57 km/h e GFS circa 54 km/h. Temperature in calo, con minime in pianura fra 3 e 9 °C e massime fra 9 e 13 °C.",
-        "centro": "Residui di instabilità soprattutto sul versante adriatico e in Umbria: ad Ancona fra circa 4 e 11 mm, a Perugia fra circa 2 e 6 mm. Firenze asciutta o quasi, con minime in calo verso 5-8 °C. Su Roma al più 0,5 mm e massime in calo verso 15-18 °C. All'Aquila fra 2 e 5 mm, con massime intorno a 11-14 °C.",
-        "sud": "A Napoli ECMWF indica ancora circa 13 mm, GFS circa 6 mm e ICON circa 2 mm. Bari quasi asciutta, con massime in calo verso 18-19 °C. Calabria meridionale asciutta, ventosa secondo ECMWF, con raffiche fino a circa 64 km/h.",
-        "isole": "Sicilia in gran parte asciutta; a Palermo ECMWF indica circa 3 mm e raffiche fino a circa 63 km/h, gli altri modelli niente pioggia e vento più debole. A Cagliari ECMWF vede circa 6 mm, gli altri modelli nulla. Massime in genere fra 21 e 25 °C.",
-        "lazio": "Pausa relativa. A Genzano di Roma circa 1 mm per tutti e tre i modelli, con massime fra 14 e 16 °C; ICON mantiene raffiche fino a circa 59 km/h sui rilievi, ECMWF e GFS intorno a 31-34 km/h. A Roma al più 0,5 mm e massime fra 15 e 18 °C. Latina fra circa 1 e 3 mm."
+        "nord": "Peggioramento diffuso. Al Nord-Est piogge abbondanti: a Trieste fra circa 22 e 43 mm, a Venezia fra 12 e 15 mm. A Bologna fra 3 e 16 mm, con raffiche fino a circa 58 km/h per ECMWF. In Liguria fra 2 e 15 mm. A Torino e Milano fra circa 3 e 9 mm.",
+        "centro": "Giornata più perturbata, con piogge diffuse e possibili temporali. A Firenze fra circa 13 e 34 mm, a Perugia fra 11 e 48 mm, all'Aquila fra 17 e 30 mm. Raffiche molto forti sull'Appennino: a Perugia fra circa 58 e 103 km/h (ICON il più alto), all'Aquila fra 67 e 88 km/h, ad Ancona fra 70 e 82 km/h.",
+        "sud": "Vento molto forte sui rilievi: a Potenza raffiche fra circa 86 e 92 km/h, a Campobasso fra 79 e 90 km/h. Su Napoli piogge fra circa 3 e 11 mm e raffiche fra 56 e 74 km/h. Bari quasi asciutta ma ventosa, con raffiche fra 51 e 73 km/h.",
+        "isole": "Sicilia asciutta e mite, con massime fra 24 e 27 °C. Sardegna ventosa: raffiche a Cagliari fra circa 60 e 71 km/h e a Sassari fra 63 e 80 km/h, con deboli piogge al Nord.",
+        "lazio": "Giornata di pioggia e vento forte. A Roma fra circa 8 e 18 mm, a Rieti fra 22 e 33 mm, a Viterbo fra 12 e 23 mm. A Genzano di Roma fra circa 10 e 18 mm, con raffiche molto forti: GFS circa 61 km/h, ECMWF 71 km/h, ICON circa 103 km/h. ICON indica anche possibili temporali."
       }
     },
     {
-      "data": "2026-11-15",
-      "titolo": "Domenica 15 novembre",
+      "data": "2026-11-20",
+      "titolo": "Venerdì 20 novembre",
       "aree": {
-        "nord": "Fenomeni sparsi e temperature basse. A Bologna fra circa 6 e 17 mm, e ECMWF indica anche possibile neve debole. Su Genova ICON vede circa 10 mm, gli altri modelli 1-2 mm. Al Nord-Ovest e a Venezia pochi millimetri. A Trieste ECMWF mantiene raffiche fino a circa 74 km/h, gli altri modelli molto meno. Massime fra 7 e 12 °C.",
-        "centro": "Nuova fase piovosa secondo ECMWF e ICON, molto più debole per GFS. A Roma ECMWF indica circa 32 mm e ICON circa 39 mm con temporali, GFS circa 3 mm. A Firenze ICON circa 30 mm, ECMWF circa 2 mm e GFS circa 7 mm. A Perugia fra circa 6 e 24 mm, all'Aquila fra 1 e 21 mm, con ICON il più piovoso. Massime fra 10 e 20 °C.",
-        "sud": "A Napoli ECMWF indica circa 29 mm e ICON circa 33 mm, con raffiche fino a circa 52 km/h, mentre GFS vede solo 1 mm. Bari asciutta, con massime intorno a 20 °C. Calabria meridionale asciutta.",
-        "isole": "Sicilia asciutta e mite, con massime fra 22 e 25 °C. A Cagliari ECMWF indica circa 8 mm, gli altri modelli quasi nulla.",
-        "lazio": "Possibile nuova fase piovosa, con forte divario fra i modelli. A Genzano di Roma ECMWF indica circa 20 mm, ICON circa 49 mm con temporali e raffiche fino a circa 84 km/h, GFS appena 4 mm. A Latina ICON circa 49 mm, ECMWF circa 8 mm e GFS circa 6 mm. Massime fra 14 e 16 °C a Genzano e fra 17 e 20 °C a Roma. A cinque giorni l'incertezza è alta: conviene seguire i prossimi aggiornamenti."
+        "nord": "Miglioramento: giornata asciutta quasi ovunque, con al più circa 1-2 mm a Trieste. Massime a Torino fra 14 e 18 °C. Raffiche a Torino fino a circa 36-37 km/h per ECMWF e ICON.",
+        "centro": "Tempo in miglioramento, con modelli discordi in Toscana: a Firenze ECMWF indica circa 9 mm, ICON e GFS al più 4 mm. Resta vento forte sull'Adriatico: ad Ancona raffiche fra circa 59 e 76 km/h con tempo asciutto. All'Aquila asciutto, raffiche fra 31 e 56 km/h.",
+        "sud": "Vento ancora sostenuto: a Potenza raffiche fra circa 63 e 78 km/h, a Reggio Calabria fra 55 e 88 km/h. Su Napoli al più circa 4 mm per GFS. Bari asciutta, massime intorno a 20-22 °C.",
+        "isole": "Sicilia asciutta, con massime fra 20 e 23 °C. Sardegna quasi asciutta, con raffiche fra circa 43 e 56 km/h a Cagliari.",
+        "lazio": "Miglioramento: a Roma e ai Castelli Romani al più circa 1 mm. A Genzano di Roma il vento resta sostenuto, con raffiche fra circa 37 e 67 km/h (ECMWF il più alto). Massime a Roma intorno a 19 °C."
       }
     }
   ],
   "avvisi_e_note": [
-    "Questo bollettino non è un'allerta ufficiale e non assegna i colori del sistema di allertamento. Per lo stato di allerta a Genzano di Roma e nel Lazio consulta la pagina [Allerte meteo](/allerte-meteo/) del sito e i bollettini del [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti). In emergenza chiama il 112.",
-    "Il bollettino di criticità del Dipartimento della Protezione Civile emesso alle 15:42 del 10 novembre indica, per oggi mercoledì 11, criticità per rischio idrogeologico, idraulico e temporali in diverse zone dell'Emilia-Romagna, della Toscana settentrionale e della Liguria di Levante. Per il Lazio non sono indicate criticità. Per i dettagli e i livelli fa fede solo il bollettino ufficiale sul [sito del Dipartimento](https://mappe.protezionecivile.gov.it/it/mappe-rischi/bollettino-di-criticita/).",
-    "I tre modelli concordano sulla tendenza fino a sabato: peggioramento deciso giovedì e venerdì in Liguria, al Nord, al Nord-Est e su parte del Centro, poi miglioramento sabato al Nord con calo termico. Divergono sugli accumuli e sulle raffiche, in particolare sui Castelli Romani giovedì e venerdì. Per domenica 15 ECMWF e ICON vedono piogge abbondanti su Lazio e Campania, GFS quasi nulla. ICON è in genere il più severo.",
-    "I valori citati sono previsioni modellistiche lette da Open-Meteo nella notte fra il 10 e l'11 novembre 2026 e vanno considerati indicativi."
+    "La Regione Lazio ha emesso il 16 novembre un avviso di condizioni meteorologiche avverse per venti da forti a burrasca, a prevalente componente sud-occidentale, dalla mattina del 17 novembre per 24-36 ore. Livelli e dettagli nella pagina Allerte meteo: https://www.protezionecivilegenzano.it/allerte-meteo/",
+    "Giovedì 19 è la giornata più critica per vento e pioggia; le raffiche più alte sono indicate da ICON, mentre ECMWF e GFS restano più bassi. Le stime potranno cambiare nei prossimi aggiornamenti.",
+    "Questo bollettino descrive previsioni modellistiche e non sostituisce le allerte ufficiali del Dipartimento della Protezione Civile e del Centro Funzionale della Regione Lazio: consulta sempre https://www.protezionecivilegenzano.it/allerte-meteo/.",
+    "In caso di emergenza chiama il 112."
   ]
 }
