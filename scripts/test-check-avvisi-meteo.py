@@ -74,6 +74,17 @@ prova("allertamento dell'11/11/2026, vento",
        "Venti da forti a burrasca sud-occidentali, con raffiche fino a burrasca forte sui crinali appenninici",
        "dal mattino", "24-36 ore"))
 
+# 1-bis. Il PDF del 16/11/2026 scrive «dalla mattina di domani» (non «dal mattino»):
+#        prima non era riconosciuto e la barra scadeva il 17/11 alle 12.
+TESTO_16_11_2026 = ("dalla mattina di domani, martedì 17.11.2026, e per le successive 24-36 ore, "
+                    "si prevedono sul Lazio: Venti da forti a burrasca a prevalente componente sud-occidentale. "
+                    "Mareggiate lungo le coste esposte. Si invitano pertanto gli Enti destinatari")
+prova("allertamento del 16/11/2026, «dalla mattina»",
+      validita(TESTO_16_11_2026, "allertamento_16-11-2026.pdf", "vento"),
+      ("2026-11-17T06:00:00+01:00", "2026-11-19T00:00:00+01:00",
+       "Venti da forti a burrasca a prevalente componente sud-occidentale",
+       "dalla mattina", "24-36 ore"))
+
 # 2. La frase sulle piogge cita le «raffiche di vento» dei temporali: non deve
 #    allungare l'avviso del vento. Per i temporali vale invece quella frase.
 prova("allertamento dell'11/11/2026, temporali",
