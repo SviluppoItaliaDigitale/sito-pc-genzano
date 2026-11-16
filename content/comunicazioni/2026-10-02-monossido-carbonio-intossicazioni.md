@@ -1,7 +1,7 @@
 ---
 title: "Monossido di carbonio: il killer silenzioso delle case italiane"
 date: 2026-10-02
-description: "Il monossido di carbonio causa decine di morti ogni anno in Italia. È inodore, incolore, invisibile. Prevenzione e riconoscimento dei sintomi."
+description: "Il monossido di carbonio è inodore, incolore e invisibile e può essere mortale. Come prevenirlo, riconoscere i sintomi e che cosa fare subito."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -14,7 +14,7 @@ draft: false
 versione_facile: "2026-10-02-monossido-carbonio-intossicazioni-facile"
 ---
 
-Ogni anno in Italia **decine di persone** muoiono per **intossicazione da monossido di carbonio (CO)** in casa. Centinaia vengono ospedalizzate. Il CO è particolarmente insidioso perché è **inodore**, **incolore**, **insapore** e **invisibile**: si accumula in un ambiente senza dare segnali percepibili prima dei sintomi clinici. L'autunno e l'inverno, con il riaccendersi di stufe, caldaie, camini, sono i mesi più pericolosi.
+Ogni inverno i Vigili del Fuoco intervengono in molte case per **intossicazioni da monossido di carbonio (CO)**, a volte mortali. Il CO è particolarmente insidioso perché è **inodore**, **incolore**, **insapore** e **invisibile**: si accumula in un ambiente senza dare segnali percepibili prima dei sintomi clinici. L'autunno e l'inverno, con il riaccendersi di stufe, caldaie, camini, sono i mesi più pericolosi.
 
 ## Cosa è il CO
 
@@ -33,7 +33,7 @@ Il monossido di carbonio è un gas prodotto dalla **combustione incompleta** di 
 
 ## Come agisce sull'organismo
 
-Il CO si lega all'**emoglobina** del sangue con affinità **240 volte superiore** a quella dell'ossigeno. Forma **carbossiemoglobina**, che **non trasporta ossigeno** ai tessuti. Anche in piccole quantità ripetute, può causare:
+Il CO si lega all'**emoglobina** del sangue con affinità **da 200 a 300 volte superiore** a quella dell'ossigeno. Forma **carbossiemoglobina**, che **non trasporta ossigeno** ai tessuti. Anche in piccole quantità ripetute, può causare:
 
 - **mal di testa** persistente;
 - **nausea** e **vertigini**;
@@ -43,31 +43,25 @@ Il CO si lega all'**emoglobina** del sangue con affinità **240 volte superiore*
 
 ## I sintomi
 
-Ai primi sintomi spesso confusi con influenza o stanchezza:
+I primi sintomi si confondono facilmente con l'influenza o la stanchezza:
 
-- mal di testa, vertigini, nausea;
-- **più persone** nello stesso ambiente con sintomi simultanei (**campanello d'allarme forte**);
-- **miglioramento** quando si esce di casa;
-- **peggioramento** al rientro.
+- mal di testa, vertigini, debolezza, nausea e vomito;
+- dolore al petto e confusione, poi sonnolenza e stanchezza;
+- **più persone** nello stesso ambiente con sintomi insieme, a volte anche gli animali di casa (**campanello d'allarme forte**).
 
-**Se più familiari stanno male nello stesso ambiente e i sintomi migliorano uscendo**: uscire subito, aprire tutto, chiamare il 112.
+**Se più persone stanno male nello stesso ambiente**: aprite le finestre, uscite subito tutti e chiamate il 112 da fuori. Fatevi visitare anche se all'aria aperta state meglio.
 
 ## Prevenzione
 
 ### Impianti
 - **manutenzione periodica** di caldaie (libretto d'impianto aggiornato);
-- **pulizia annuale** delle canne fumarie (certificata);
+- **controllo ogni anno**, prima dell'inverno, di caldaie, stufe, camini e canne fumarie da un tecnico abilitato;
 - **ventilazione adeguata** dei locali con apparecchi a combustione;
 - **no** a stufe a gas senza scarico all'esterno in locali piccoli;
 - **no mai** a bracieri, barbecue, generatori in locali chiusi.
 
 ### Rilevatori CO
-I **rilevatori di monossido** sono dispositivi economici (20-40 euro) che suonano quando il CO supera valori di sicurezza. Vanno installati:
-
-- **vicino** a caldaie, stufe, camini, boiler;
-- ad **altezza** intermedia sulla parete (il CO ha densità simile all'aria);
-- con **batterie** controllate periodicamente;
-- **rinnovati** ogni 5-10 anni secondo specifiche del produttore.
+I **rilevatori di monossido** suonano quando il CO raggiunge livelli pericolosi. Sono un aiuto in più, ma **non sostituiscono la manutenzione** degli impianti. Per dove installarli, quando cambiare le batterie e quando sostituirli segui le istruzioni del produttore.
 
 ### Buone abitudini
 - **arieggiare** frequentemente;
@@ -77,22 +71,24 @@ I **rilevatori di monossido** sono dispositivi economici (20-40 euro) che suonan
 
 ## Se scatta il rilevatore
 
-1. **Uscire subito** di casa.
+1. **Aprire le finestre e uscire subito** di casa, tutti.
 2. **Non accendere** luci, fiammiferi, elettrodomestici.
-3. **Chiamare il 112**.
+3. **Chiamare il 112** da fuori.
 4. **Non rientrare** finché i Vigili del Fuoco non autorizzano.
 5. **Informare** i vicini se l'impianto è condiviso.
 
 ## Se qualcuno perde coscienza
 
 1. **Chiamare subito il 112**.
-2. **Portare all'aperto** la persona.
+2. **Non entrare** in una stanza piena di fumi: chi prova ad aiutare può restare intossicato. Porta la persona all'aperto solo se puoi farlo senza rischi e segui le indicazioni dell'operatore del 112.
 3. Se non respira, iniziare **rianimazione** (BLS-D) se formati.
 4. **Attendere** i soccorsi rimanendo all'aperto.
 
 ## Per approfondire
 
-- [Ministero della Salute — CO](https://www.salute.gov.it/)
+- [Stufa accesa, finestre chiuse: il video «Tu cosa faresti?»](/comunicazioni/2026-11-16-monossido-stufa-video/)
+- [Monossido di carbonio: informazioni generali](https://www.epicentro.iss.it/ambiente/monossido-carbonio) — Istituto Superiore di Sanità, EpiCentro
+- [Attenti al monossido](https://www.vigilfuoco.it/sites/default/files/noi-docs/14_noivvf_02_2016_attenti%20al%20monossido.pdf) (PDF) — Vigili del Fuoco
 - [Prevenzione incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 - [Equinozio d'autunno](/comunicazioni/2026-09-21-equinozio-autunno-rischi-stagionali/)
 

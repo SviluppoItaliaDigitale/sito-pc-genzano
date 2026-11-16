@@ -14,17 +14,17 @@ draft: false
 versione_facile: "2026-10-27-manutenzione-caldaia-controllo-annuale-facile"
 ---
 
-Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta. È un **obbligo normativo** e, soprattutto, una questione di **sicurezza**.
+Con l'avvicinarsi dell'inverno e l'accensione degli impianti termici, ricordiamo che la **manutenzione** della **caldaia** e del **circuito di riscaldamento** non è una scelta. È un **obbligo normativo** e, soprattutto, una questione di **sicurezza**. L'Istituto Superiore di Sanità consiglia di far controllare caldaie, stufe, camini e canne fumarie **ogni anno**, prima dell'autunno e dell'inverno.
 
 ## La normativa
 
 Il riferimento è il **D.P.R. 74/2013**, che disciplina:
 
-- **manutenzione** ordinaria annuale o biennale (a seconda del tipo);
-- **controllo dei fumi** (efficienza energetica) con cadenza da 2 a 4 anni secondo potenza;
-- **libretto di impianto** (compilato e aggiornato);
-- **bollino** o **targa** di avvenuto controllo;
-- **sanzioni** per chi non effettua i controlli (multe e, in caso di incidente, responsabilità penale).
+- **controllo e manutenzione** con la cadenza indicata dall'installatore o, se mancano le sue istruzioni, dal fabbricante dell'apparecchio (articolo 7);
+- **controllo di efficienza energetica** per gli impianti di riscaldamento oltre 10 kW, con un **rapporto di controllo** firmato dal tecnico (articolo 8);
+- **libretto di impianto** (compilato e aggiornato).
+
+Chi non fa controlli e manutenzione rischia una **sanzione** da 500 a 3.000 euro (decreto legislativo 192/2005, articolo 15).
 
 Il controllo deve essere effettuato da **tecnico abilitato**, iscritto al **registro regionale installatori e manutentori**.
 
@@ -32,7 +32,7 @@ Il controllo deve essere effettuato da **tecnico abilitato**, iscritto al **regi
 
 Una caldaia **non manutenuta**:
 
-- **consuma di più** (fino al 10-15% in più di gas);
+- **consuma di più**;
 - **inquina di più** (emissioni fuori limite);
 - **si rompe prima**;
 - **aumenta** il rischio di **fughe di gas**;
@@ -51,7 +51,7 @@ Durante la **manutenzione**:
 - **analisi** combustione (efficienza energetica);
 - **verifica** dispositivi di sicurezza (valvole, termostati);
 - **controllo** dei tubi flessibili e dei raccordi;
-- **rilascio** di **dichiarazione di conformità** e aggiornamento del libretto.
+- **rapporto di controllo** e aggiornamento del libretto.
 
 ## Chi è il responsabile
 
@@ -92,19 +92,16 @@ Fermarsi e chiamare subito un tecnico se:
 - **rumori** insoliti dalla caldaia;
 - **acqua** che esce da tubature;
 - **fiamme** di colore strano (non blu pulito);
-- **puzza** di gas (non toccare interruttori né telefoni nel locale, aprire le finestre, uscire e chiamare da fuori il **112** e il numero di pronto intervento del distributore scritto in bolletta);
-- **emicrania**, nausea, sonnolenza anomala (sintomi di intossicazione CO);
 - **caldaia** che si spegne frequentemente.
 
-## Il ruolo del Comune
+In questi due casi, invece, non serve il tecnico ma il **112**:
 
-Il Comune attraverso il **Catasto Unico Regionale Impianti Termici** (CURIT in Lombardia, altre Regioni hanno nomi diversi) verifica:
+- **puzza** di gas: non toccare interruttori né telefoni nel locale, apri le finestre, esci e chiama da fuori il **112** e il numero di pronto intervento del distributore scritto in bolletta;
+- **mal di testa**, nausea, debolezza o sonnolenza in più persone della casa: può essere **monossido di carbonio**. Apri le finestre, esci subito con tutti e chiama il **112** da fuori. Fatti visitare anche se all'aria aperta stai meglio. La caldaia si riaccende solo dopo il controllo di un tecnico abilitato.
 
-- presenza del **rapporto di controllo** di efficienza energetica;
-- conformità dei **controlli** nei tempi previsti;
-- adempimenti da parte di **proprietari** e manutentori.
+## Il catasto degli impianti nel Lazio
 
-Anche il **Lazio** ha il proprio catasto regionale degli impianti termici, gestito dalla Regione: il manutentore vi registra il rapporto di controllo.
+Il **Lazio** ha istituito il **CURITEL**, il catasto unico regionale degli impianti termici degli edifici. Secondo la pagina della Regione, aggiornata al 15 febbraio 2023, il catasto non era ancora operativo. Nel frattempo le comunicazioni sugli impianti vanno all'autorità competente per territorio: per i comuni sotto i 40.000 abitanti, come Genzano di Roma, è la **Città metropolitana di Roma Capitale**.
 
 ## Stagione e buone pratiche
 
@@ -119,7 +116,10 @@ Per chi sta per accendere:
 ## Per approfondire
 
 - [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
+- [Stufa accesa, finestre chiuse: il video «Tu cosa faresti?»](/comunicazioni/2026-11-16-monossido-stufa-video/)
 - [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
-- [Regione Lazio](https://www.regione.lazio.it/) — catasto regionale degli impianti termici
+- [CURITEL, il catasto degli impianti termici](https://regione.lazio.it/cittadini/tutela-ambientale-difesa-suolo/curitel) — Regione Lazio
+- [D.P.R. 74/2013, articolo 7](https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:2013-04-16;74~art7) e [decreto legislativo 192/2005, articolo 15](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-08-19;192~art15) — Normattiva
+- [Monossido di carbonio: informazioni generali](https://www.epicentro.iss.it/ambiente/monossido-carbonio) — Istituto Superiore di Sanità, EpiCentro
 
 In emergenza: **112**.

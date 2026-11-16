@@ -23,7 +23,7 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 - **prodotto** da combustione incompleta;
 - **caldaie**, stufe, camini mal funzionanti;
 - **sintomi**: mal di testa, nausea, sonnolenza, poi incoscienza;
-- **causa** decine di morti ogni anno in Italia.
+- **più persone** che stanno male insieme: è il campanello d'allarme.
 
 ### Incendi
 - **canne fumarie** intasate;
@@ -45,10 +45,9 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 ## Caldaie
 
 ### Manutenzione
-- **annuale** obbligatoria (D.P.R. 74/2013);
+- **obbligatoria** (D.P.R. 74/2013), con la cadenza indicata dall'installatore o dal fabbricante; l'Istituto Superiore di Sanità consiglia un controllo ogni anno;
 - **tecnico abilitato** (iscritto CCIAA);
 - **libretto** di impianto sempre aggiornato;
-- **bollino** verde dopo verifica fumi;
 - **sostituzione** ogni 10-15 anni indicativamente.
 
 ### In funzione
@@ -153,11 +152,9 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 - **scadenza** totale: 10 anni circa.
 
 ### Rilevatori di CO
-- **assolutamente raccomandati** dove ci sono impianti a combustione;
-- **installazione** a 1,50 m dal soffitto (il CO ha densità simile all'aria);
-- **certificati** EN 50291;
-- **test** periodico;
-- **sostituzione** ogni 5-7 anni.
+- **utili** dove ci sono impianti a combustione, ma **non sostituiscono** la manutenzione;
+- **conformi** alla norma EN 50291;
+- **installazione**, test e sostituzione secondo le istruzioni del produttore.
 
 ### Rilevatori combinati
 - **fumo + CO** in un solo dispositivo;
@@ -190,11 +187,11 @@ Il Sindaco può modificare orari e periodi con ordinanza: fai riferimento al [si
 5. **uscire** e, da fuori, chiamare il **112** e il numero di pronto intervento gas scritto in bolletta.
 
 ### Sintomi da CO
-1. **uscire** immediatamente all'aria aperta;
-2. **chiamare 112**;
-3. **non tornare** in casa fino a verifica;
-4. **tecnico** per diagnosi causa;
-5. **monitoraggio** medico anche se sintomi lievi.
+1. **aprire** le finestre e **uscire** subito all'aria aperta, tutti;
+2. **chiamare il 112** da fuori;
+3. **farsi visitare** anche se all'aria aperta si sta meglio;
+4. **non tornare** in casa finché i soccorritori non dicono che è sicuro;
+5. **riaccendere** l'impianto solo dopo il controllo di un tecnico abilitato.
 
 ### Incendio canna fumaria
 1. **spegnere** il focolare (chiudere tiraggio);

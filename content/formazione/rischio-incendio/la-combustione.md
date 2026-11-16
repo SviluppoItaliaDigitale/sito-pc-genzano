@@ -103,7 +103,7 @@ Ogni incendio genera quattro prodotti:
 
 Prodotti che restano allo stato gassoso anche raffreddandosi. Dipendono dal tipo di combustibile, dall'ossigeno disponibile e dalla temperatura. **Sono la causa principale di mortalità per incendio** (anossia o tossicità). I più pericolosi:
 
-- **monossido di carbonio (CO)** — inodore, si lega all'emoglobina 200 volte più dell'ossigeno
+- **monossido di carbonio (CO)** — inodore, si lega all'emoglobina da 200 a 300 volte più dell'ossigeno
 - **anidride carbonica (CO₂)** — asfissiante per sostituzione dell'ossigeno
 - **acido cianidrico (HCN)** — dalla combustione di lana, seta, poliuretani
 - **acido cloridrico (HCl)** — dalla combustione del PVC

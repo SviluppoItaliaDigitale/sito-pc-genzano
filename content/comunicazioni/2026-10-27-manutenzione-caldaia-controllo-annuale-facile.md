@@ -25,11 +25,13 @@ Prima dell'inverno devi controllare la tua caldaia. Non è una scelta. È un obb
 
 Una legge italiana del 2013 obbliga tutti a:
 
-- far controllare la caldaia ogni anno da un tecnico;
+- far controllare la caldaia da un tecnico;
 - tenere un libretto con tutti i controlli fatti;
 - conservare le ricevute dei lavori.
 
-Chi non lo fa rischia una multa. In caso di incidente rischia anche il processo penale.
+Ogni quanto? Lo dice chi ha montato la caldaia. Se non lo ha scritto, lo dice chi ha fatto la caldaia. L'Istituto Superiore di Sanità consiglia un controllo **ogni anno**, prima dell'inverno.
+
+Chi non fa i controlli rischia una multa da 500 a 3.000 euro.
 
 ## Perché è importante
 
@@ -83,12 +85,11 @@ Chiama subito un tecnico se vedi o senti:
 
 - rumori strani dalla caldaia;
 - acqua che esce dai tubi;
-- fiamma di colore non blu;
-- odore di gas.
+- fiamma di colore non blu.
 
 Se senti odore di gas, non accendere luci e non usare telefoni dentro casa. Apri le finestre. Chiudi il gas solo se lo raggiungi subito e senza rischi. Esci di casa. Da fuori chiama il 112, il numero unico di emergenza. Chiama anche il numero di pronto intervento gas scritto nella bolletta.
 
-Se hai mal di testa, nausea o sonnolenza improvvisa, potrebbe essere monossido di carbonio. Esci subito di casa. Chiama il 112.
+Se in casa avete mal di testa, nausea o sonno strano, può essere monossido di carbonio. Qui non serve il tecnico. Apri le finestre. Esci subito di casa con tutti. Da fuori chiama il **112**. Vai dal medico anche se fuori stai meglio.
 
 ## Prima accensione dell'inverno
 
@@ -101,6 +102,7 @@ Quando accendi la caldaia per la prima volta:
 ## Per sapere di più
 
 - [Monossido di carbonio: cosa devi sapere](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
+- [Stufa accesa e finestre chiuse: il video](/comunicazioni/2026-11-16-monossido-stufa-video-facile/)
 - [Come evitare incendi in casa](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
 
 In caso di emergenza chiama il **112**.
