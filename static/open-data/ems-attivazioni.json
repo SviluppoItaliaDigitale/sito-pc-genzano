@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-11-17T05:06:25+00:00",
+  "generato": "2026-11-17T14:26:52+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-11-12T23:00:00",
    "gdacsId": "FL1104167",
-   "lastUpdate": "2026-11-16T23:57:23.723335",
+   "lastUpdate": "2026-11-17T09:08:49.070884",
    "n_aois": 1,
    "n_products": 1,
    "name": "Flood in Ecuador"

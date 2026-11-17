@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-17T05:06:23+00:00",
+  "generato": "2026-11-17T14:26:50+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-17T03:52:55+00:00",
+   "data": "2026-11-17T14:18:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maxi inchiesta su Deutsche Bank: \"Ha fatto prevalere propri interessi commerciali sul rispetto delle norme\"",
+   "url": "https://www.adnkronos.com/economia/deutsche-bank-maxi-inchiesta-cosa-sappiamo_1jucwH5TEDNgfOJSzSWn7G"
+  },
+  {
+   "data": "2026-11-17T14:18:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Novello (Walce), 'da studio Astrid risultati che possono cambiare pratica clinica in cancro polmone a piccole cellule'",
+   "url": "https://www.adnkronos.com/cronaca/novello-walce-da-studio-astrid-risultati-che-possono-cambiare-pratica-clinica-in-cancro-polmone-a-piccole-cellule_2K5gooAm3HzYxGCn5ePa3u"
+  },
+  {
+   "data": "2026-11-17T14:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Rischio cardiovascolare, De Luca (San Matteo): \"Serve alleanza specialisti-medici di famiglia\"",
+   "url": "https://www.adnkronos.com/cronaca/rischio-cardiovascolare-de-luca-san-matteo-serve-alleanza-specialisti-medici-di-famiglia_5kpFH7oeAkZynEZOXMCxmw"
+  },
+  {
+   "data": "2026-11-17T14:06:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Rossella Erra, insulti sui social dopo la dieta: \"I nomi sono tutti in mano al mio avvocato\"",
+   "url": "https://www.adnkronos.com/spettacoli/rossella-erra-chili-persi-dieta-commenti-haters_54DFEODKXDUhLM1UNvLJIQ"
+  },
+  {
+   "data": "2026-11-17T14:05:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cancro seno, oncologo De Angelis: \"Test multigenici nei Lea, ora garantire accesso a tutte le pazienti\"",
+   "url": "https://www.adnkronos.com/cronaca/cancro-seno-oncologo-de-angelis-test-multigenici-nei-lea-ora-garantire-accesso-a-tutte-le-pazienti_dkvpevebVH4r93ANPdPmw"
+  },
+  {
+   "data": "2026-11-17T14:04:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Gli 007 americani avvertono: 'L'Iran sta sviluppando piani per una bomba sporca a Washington'",
+   "titolo": "Bufera su Deutsche Bank, svelati milioni di file segreti",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/berlino-deutsche-bank-deve-spiegare-in-modo-trasparente_411981b3-1c96-43d1-bfce-a2156ca0d793.html"
+  },
+  {
+   "data": "2026-11-17T14:03:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Haters contro 14enne uccisa dall'ex, avvocato annuncia azioni legali",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/haters-contro-14enne-uccisa-dallex-avvocato-annuncia-azioni-legali_6480ca30-5518-4b5a-843f-e56c99b6860a.html"
+  },
+  {
+   "data": "2026-11-17T13:52:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Festival del cinema russo a Roma è annullato, il Barberini revoca le sale",
+   "url": "https://www.adnkronos.com/cultura/festival-cinema-russo-roma-annullato_2I1TD3tpiW6CklhUUnlAU0"
+  },
+  {
+   "data": "2026-11-17T13:51:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Jodar, la 'solitudine' del papà-coach anche alle Atp Finals: il motivo",
+   "url": "https://www.adnkronos.com/sport/rafa-jodar-papa-coach-atp-finals-solo-angolo_1bmYQppq9GDkX2ENZvVRyC"
+  },
+  {
+   "data": "2026-11-17T13:51:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Valentino Rossi, Márquez e Stoner: all’asta in Messico le moto dei campioni sequestrate a un narcotrafficante",
+   "url": "https://www.adnkronos.com/sport/motogp-rossi-stoner-marquez_1wnXPWsqnluSdA0qDCAv6K"
+  },
+  {
+   "data": "2026-11-17T13:50:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Baglio (Roma Capitale), \"I bar sono presidi dei quartieri, bisogna investire per non farli chiudere\"",
+   "url": "https://www.adnkronos.com/economia/baglio-roma-capitale-i-bar-sono-presidi-dei-quartieri-bisogna-investire-per-non-farli-chiudere_4jmIUwMYyCosuPkXBMfRZC"
+  },
+  {
+   "data": "2026-11-17T13:49:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diabete e colesterolo Ldl, Pintaudi (Amd): \"Rischio cardiovascolare più alto, fondamentale monitorare lipidi\"",
+   "url": "https://www.adnkronos.com/cronaca/diabete-e-colesterolo-ldl-pintaudi-amd-rischio-cardiovascolare-piu-alto-fondamentale-monitorare-lipidi_174YByydFuusun2upjyWVO"
+  },
+  {
+   "data": "2026-11-17T13:48:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Luni (Fipe), \"La qualità del bar non è solo il prodotto ma tutta l'esperienza\"",
+   "url": "https://www.adnkronos.com/economia/luni-fipe-la-qualita-del-bar-non-e-solo-il-prodotto-ma-tutta-lesperienza_7euzpBSspETMwIXD5NbOu4"
+  },
+  {
+   "data": "2026-11-17T13:47:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: \"I giovani non sono contenitori da riempire ma protagonisti\"",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/mattarella-giovani-non-sono-contenitori-da-riempire-ma-protagonisti_76ec7d5f-c374-4318-8df9-a34429d333c9.html"
+  },
+  {
+   "data": "2026-11-17T13:44:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Omicidio Bergamini, appello conferma la condanna a 16 anni per Internò",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/omicidio-bergamini-appello-conferma-condanna-a-16-anni-per-interno_d5b78214-b3c5-485e-baca-1ab65c0bf425.html"
+  },
+  {
+   "data": "2026-11-17T13:38:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giallo di Pietracatella, sentiti i parenti in Questura. \"E' omicidio, presto novità\"",
+   "url": "https://www.adnkronos.com/cronaca/giallo-di-pietracatella-oggi-ultime-notizie_2THYEyuVpwXquiozH6wSwC"
+  },
+  {
+   "data": "2026-11-17T13:34:29+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Microsoft, un 'bug' nascosto da luglio ha causato il grande disservizio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/microsoft-un-bug-nascosto-da-luglio-ha-causato-il-grande-disservizio_c2d8bd3d-9309-4842-894f-117b780a5f14.html"
+  },
+  {
+   "data": "2026-11-17T13:34:07+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morte avvelenate, in corso interrogatori di parenti di Antonella Di Ielsi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/morte-avvelenate-in-corso-interrogatori-di-parenti-di-antonella-di-ielsi_ec0271ed-e840-4700-98cc-cd6d210d79e1.html"
+  },
+  {
+   "data": "2026-11-17T13:28:15+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Problema soffitti', Procura Torino accende faro su ospedale Molinette",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/problema-soffitti-procura-torino-accende-faro-su-ospedale-molinette_1278eb07-a9c3-4b9b-a001-5cdf08ef8efa.html"
+  },
+  {
+   "data": "2026-11-17T13:23:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra, vertice tra i leader di maggioranza. Fonti: 'Tra le le priorità l'adeguamento delle pensioni e la sanità'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/in-corso-il-vertice-in-videoconferenza-tra-i-leader-di-maggioranza-sulla-manovra_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html"
+  },
+  {
+   "data": "2026-11-17T13:14:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Insegnante morta a 36 anni dopo farmaco abortivo, attesa l'autopsia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/insegnante-morta-a-36-anni-dopo-farmaco-abortivo-attesa-lautopsia_4a77b7d6-92a2-4643-a6bd-4f5e6277c78d.html"
+  },
+  {
+   "data": "2026-11-17T13:08:00+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sostenibilità ambientale, bene l'Italia nella classifica Qs 2027",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/sostenibilita-ambientale-bene-litalia-nella-classifica-qs-2027_20761a78-052b-4001-b4f0-2c98d840761f.html"
+  },
+  {
+   "data": "2026-11-17T13:05:40+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Nuovo furto di fentalyn a Roma, si cercano connessioni con il colpo di luglio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/nuovo-furto-di-fentalyn-a-roma-si-cercano-connessioni-con-il-colpo-di-luglio_813e302c-e819-46c6-a28f-f5b66f6ca869.html"
+  },
+  {
+   "data": "2026-11-17T13:04:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Caso Revolut, i giudici 'I conti milionari subito svuotati e i cambi di valuta'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/caso-revolut-i-giudici-i-conti-milionari-subito-svuotati-e-i-cambi-di-valuta_93f6dafc-fb11-48ad-8e78-b46397a9b908.html"
+  },
+  {
+   "data": "2026-11-17T13:02:26+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Nuovo furto di fentalyn a Roma, si cercano connessioni con il colpo di luglio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/nuovo-furto-di-fentalyn-a-roma-si-cercano-connessioni-con-il-colpo-di-luglio_21745d3d-7349-4371-a512-3c30f0577949.html"
+  },
+  {
+   "data": "2026-11-17T12:56:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Colpito il Ponte di Crimea, 'crollata un'arcata, parte della carreggiata in mare'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/riunione-a-mosca-per-ripristinare-il-ponte-di-crimea-immagini-di-crollo-parziale_1d2d82cc-8d9f-4071-aba5-69cc3ae5273a.html"
+  },
+  {
+   "data": "2026-11-17T12:36:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli 007 americani: 'L'Iran sta sviluppando una bomba sporca'. Teheran smentisce",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html"
   },
   {
-   "data": "2026-11-17T03:44:20+00:00",
+   "data": "2026-11-17T12:19:02+00:00",
    "fonte": "ANSA",
-   "titolo": "Guerra agli snodi cruciali, colpiti due ponti a Kiev, gli ucraini attaccano il ponte di Crimea",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/guerra-agli-snodi-cruciali-colpiti-due-ponti-a-kiev-gli-ucraini_1d2d82cc-8d9f-4071-aba5-69cc3ae5273a.html"
+   "titolo": "Trump a Manila per il vertice con i premier di India, Giappone e Australia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/trump-a-manila-per-un-vertice-con-i-premier-di-india-giappone-e-australia_eb409fc3-0041-4e11-984a-6f48490ab800.html"
   },
   {
-   "data": "2026-11-17T00:32:51+00:00",
+   "data": "2026-11-17T12:08:39+00:00",
    "fonte": "ANSA",
-   "titolo": "La carovana di migranti 'Dios con nosotros' avanza nel Chiapas verso gli Stati Uniti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/11/17/messico-oltre-mille-migranti-avanzano-nel-chiapas-verso-gli-usa_59019b36-e9ea-4923-ad32-2e30a2d67d33.html"
+   "titolo": "Carbone: \"Dal 2021 bloccati 9 miliardi di crediti edilizi illegittimi\"",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/carbone-dal-2021-bloccati-9-miliardi-di-crediti-edilizi-illegittimi-_60c9c19b-fcef-4891-9414-b38765a21726.html"
   },
   {
-   "data": "2026-11-16T23:26:27+00:00",
+   "data": "2026-11-17T12:04:05+00:00",
    "fonte": "ANSA",
-   "titolo": "In tilt app e siti delle principali banche Usa. Guasto ai sistemi di United Airlines, poi risolto",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/app-e-siti-delle-banche-usa-in-tilt-dopo-il-caos-di-microsoft-e-dei_83dcdcf2-04de-4161-8b52-cd5eddce321d.html"
-  },
-  {
-   "data": "2026-11-16T23:09:00+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Presidi, 'email farneticanti, nessuna evacuazione, protocolli funzionano'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/presidi-email-farneticanti-nessuna-evacuazione-protocolli-funzionano_a668bf83-a4c9-4018-ae72-61a612ebd709.html"
-  },
-  {
-   "data": "2026-11-16T23:05:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Trump: \"Putin sta cedendo\". Zelensky: \"Russia prepara nuovo attacco\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-incontro-ucraina-russia-news-17-novembre_5sEgMCruvME7sCya96g904"
-  },
-  {
-   "data": "2026-11-16T22:59:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa colpito da un rosario al volto, ma nessuna conseguenza",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/16/il-papa-colpito-da-un-rosario-al-volto-ma-nessuna-conseguenza_1eb1e6fb-927d-442f-930b-da535d2608d2.html"
-  },
-  {
-   "data": "2026-11-16T22:48:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Atp Finals: Cobolli stecca la prima, con Medvedev una sconfitta che brucia: il russo vince in due set",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/16/atp-finals-cobolli-stecca-la-prima-con-medvedev-una-sconfitta-che_76b3d219-b65a-44b1-8bfa-44aa29029416.html"
-  },
-  {
-   "data": "2026-11-16T22:48:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cobolli: \"L'assenza di Sinner alle Atp Finals pesa anche per me\"",
-   "url": "https://www.adnkronos.com/sport/cobolli-atp-finals-assenza-sinner-pesa-anche-per-me_5JnTzQyvS3XbrPp9JBimpy"
-  },
-  {
-   "data": "2026-11-16T22:41:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gf Vip, Valeria Marini minaccia di lasciare la Casa: cosa è successo in diretta",
-   "url": "https://www.adnkronos.com/spettacoli/grande-fratello-vip-valeria-marini-lascia-casa_6z39Xfk4OtEu53ZB8jYsJ2"
-  },
-  {
-   "data": "2026-11-16T22:18:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sanchez e Lula 'uniti in difesa delle istituzioni contro la minaccia ultradestra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/sanchez-e-lula-uniti-in-difesa-delle-istituzioni-contro-la-minaccia-ultradestra_0af3654a-dfd4-4720-81ab-f44a7acbd51e.html"
-  },
-  {
-   "data": "2026-11-16T21:59:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, botta e risposta tra Zazzaroni e Lucarelli: \"Dai Ivan, una spruzzata di autoironia\"",
-   "url": "https://www.adnkronos.com/spettacoli/zazzaroni-mariotto-lucarelli-ballando-con-le-stelle_3lONCjKGwC31ZVCTrDcxD2"
-  },
-  {
-   "data": "2026-11-16T21:55:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa lascia il suo Perù, ultima tappa di una visita storica",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/11/16/il-papa-lascia-il-suo-peru-ultima-tappa-di-una-visita-storica_0b44c651-3815-40b4-8ddd-75d5bc576fc1.html"
-  },
-  {
-   "data": "2026-11-16T21:43:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "The Donald sostiene Mr. Nvidia, 'una buona idea il suo rientro'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/the-donald-sostiene-mr.-nvidia-una-buona-idea-il-suo-rientro_df084f26-8996-46a2-927f-645ecc3fe8fe.html"
-  },
-  {
-   "data": "2026-11-16T21:35:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Rapina in villa a Trieste, sequestrata e poi rilasciata una donna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/rapina-in-villa-a-trieste-sequestrata-e-poi-rilasciata-una-donna_fecc58e8-512b-4a20-9f47-0ccfba8e113c.html"
-  },
-  {
-   "data": "2026-11-16T21:32:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Revolut Italia commissariata, cosa succede ai conti: i consigli per clienti",
-   "url": "https://www.adnkronos.com/economia/revolut-italia-banca-commissariata-conti_EPT7HMUyy91EJd9ENY5Ti"
-  },
-  {
-   "data": "2026-11-16T21:16:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Commissariata la banca Revolut, 'rapporti con indagati per mafia'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/commissariata-la-banca-revolut-rapporti-con-indagati-per-mafia_826ace80-1187-47af-9cab-866fe3539d56.html"
-  },
-  {
-   "data": "2026-11-16T20:46:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gerard Depardieu ritira ricorso e accetta condanna per aggressione sessuale: \"Chiedo scusa\"",
-   "url": "https://www.adnkronos.com/spettacoli/gerard-depardieu-accetta-condanna-violenza-sessuale_4FmsFCJKZsfopnF1feBgeI"
-  },
-  {
-   "data": "2026-11-16T20:08:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Passo indietro della Lega su quota 64. Nuovo vertice sulla manovra",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/16/passo-indietro-della-lega-su-quota-64.-nuovo-vertice-sulla-manovra_3cb9d552-f79d-44b5-abd8-55c8263b801b.html"
-  },
-  {
-   "data": "2026-11-16T20:05:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Chiesto l'arresto dell'ex capo della Polizia De Gennaro, il gip dice no",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/la-strage-di-via-damelio-gianni-de-gennaro-indagato-per-depistaggio_f194921d-4c33-4bf6-99bc-f4bae25314ce.html"
-  },
-  {
-   "data": "2026-11-16T20:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Finals, Zverev premiato come numero uno: \"L'anno scorso non ci avrei mai creduto\"",
-   "url": "https://www.adnkronos.com/sport/atp-finals-zverev-numero-uno-2026-premio-foto-famiglia-cani_7bybvpPjk6Qp1hkC5zVjZe"
-  },
-  {
-   "data": "2026-11-16T19:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando, Carlucci al Tg1: \"D'Urso? Non so se resterà a Ballando, ha diritto di scegliere\"",
-   "url": "https://www.adnkronos.com/spettacoli/milly-carlucci-durso-mariotto-ballando_4zaXUKPzvn3womQcpoGaBW"
-  },
-  {
-   "data": "2026-11-16T19:38:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stefano De Martino: \"Il mio Sanremo punk con tanti indipendenti\"",
-   "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/16/stefano-de-martino-il-mio-sanremo-punk-con-tanti-indipendenti_cb4a77de-0135-4933-a0f8-db9c501090b8.html"
-  },
-  {
-   "data": "2026-11-16T19:31:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tre donne uccise in poche ore, si allunga la scia di sangue",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/tre-donne-uccise-in-poche-ore-si-allunga-la-scia-di-sangue_99664bd9-d740-4a43-8c76-4fa6e93fe7ca.html"
-  },
-  {
-   "data": "2026-11-16T19:30:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ragazzina partorisce in casa di nascosto, la bimba muore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/ragazzina-partorisce-in-casa-di-nascosto-bimba-che-muore-oggi-lautopsia_659bcde1-092f-4c50-acd7-c1c5a50c33aa.html"
-  },
-  {
-   "data": "2026-11-16T19:27:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico: calano Fratelli d'Italia, Pd e M5S",
-   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-elezioni-voto_33UlMSrc13Go9HmDE5dQsE"
-  },
-  {
-   "data": "2026-11-16T19:17:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "La svolta dei return hub, accordo del Ruanda con cinque paesi Ue",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/vienna-ufficializza-primo-centro-di-rimpatrio-di-5-paesi-ue-in-ruanda-nel-2027_34aad0c9-e340-4983-85e8-8063402f1b4d.html"
-  },
-  {
-   "data": "2026-11-16T19:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Banche Usa in tilt, problemi per accessi ai conti online: \"Non è un cyberattacco\"",
-   "url": "https://www.adnkronos.com/economia/banche-usa-problemi-conti-online_eV66vz2hMYssRGYhI577y"
-  },
-  {
-   "data": "2026-11-16T18:52:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Finals, Cobolli lotta ma perde contro Medvedev all'esordio - Rivivi il match",
-   "url": "https://www.adnkronos.com/sport/diretta-cobolli-medvedev-oggi-atp-finals-live-torino_6AW93Kyze7XF4qY16qoffG"
-  },
-  {
-   "data": "2026-11-16T18:51:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Burnham ripudia la Brexit: 'Abbiamo perso più di quanto guadagnato'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/16/burnham-ripudia-la-brexit-abbiamo-perso-piu-di-quanto-guadagnato_b7d0544f-e8fc-4610-9ada-72617437db5f.html"
+   "titolo": "Polizia turca nella sede di una tv di opposizione, arrestati i dirigenti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/polizia-turca-nella-sede-di-una-tv-di-opposizione-arrestati-i-dirigenti_c0dfd062-24b1-462a-bfe6-e39844e44c88.html"
   }
  ]
 }
