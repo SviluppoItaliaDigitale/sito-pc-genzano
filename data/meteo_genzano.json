@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-17T01:04",
+  "aggiornato": "2026-11-17T02:04",
   "data_lunga": "martedì 17 novembre 2026",
-  "aggiornato_label": "martedì 17 novembre 2026, ore 01:04",
+  "aggiornato_label": "martedì 17 novembre 2026, ore 02:04",
   "alba": "07:00",
   "tramonto": "16:47",
   "corrente": {
     "temp": 11.3,
-    "percepita": 11.0,
+    "percepita": 11.1,
     "cielo": "Nebbia",
     "icona": "<g><line x1=\"8.8\" y1=\"24.8\" x2=\"47.2\" y2=\"24.8\" stroke=\"#9aa7b4\" stroke-width=\"4.8\" stroke-linecap=\"round\"/><line x1=\"8.8\" y1=\"32.0\" x2=\"47.2\" y2=\"32.0\" stroke=\"#9aa7b4\" stroke-width=\"4.8\" stroke-linecap=\"round\"/><line x1=\"8.8\" y1=\"39.2\" x2=\"47.2\" y2=\"39.2\" stroke=\"#9aa7b4\" stroke-width=\"4.8\" stroke-linecap=\"round\"/></g>",
-    "umidita": 98,
-    "vento": 4,
-    "raffiche": 23
+    "umidita": 96,
+    "vento": 3,
+    "raffiche": 24
   },
   "giorni": [
     {
