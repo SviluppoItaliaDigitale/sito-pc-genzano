@@ -55,7 +55,7 @@ L'atto stabilisce alcune condizioni:
 - l'integrazione vale come aggiunta alle convenzioni già firmate; ogni organizzazione deve comunicare la presa d'atto alla Regione;
 - l'acconto sarà erogato con le modalità indicate nella nota di trasmissione che la Regione invierà alle organizzazioni;
 - il pagamento dipende dalla rendicontazione dei contributi già ricevuti dalla Direzione regionale a qualunque titolo, quando il termine di rendicontazione è scaduto, e dalla verifica della regolarità dell'organizzazione;
-- le somme vanno impegnate entro l'esercizio finanziario 2026.
+- sul piano contabile, le obbligazioni della Regione hanno scadenza nell'esercizio finanziario 2026: è un dato del bilancio regionale, non una scadenza per le organizzazioni.
 
 ## Perché è utile saperlo
 
