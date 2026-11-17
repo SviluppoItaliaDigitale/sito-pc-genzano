@@ -1,10 +1,10 @@
 ultimo_audit: '2026-11-17'
-totale: 79
+totale: 80
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 42
+  TERZO: 43
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -303,6 +303,20 @@ documenti:
   text_chars_sample: 4274
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/ordinanza-dpc-1207-2026-maltempo-gennaio-febbraio-frosinone-roma.pdf
+  file: ordinanza-dpc-1207-2026-maltempo-gennaio-febbraio-frosinone-roma.pdf
+  size_kb: 132.6
+  sha256: 5f93e2473473a7704a426613eb5d0adf59e53b2dd232578ceb33d8955444f872
+  searchable: true
+  tagged: false
+  language: it
+  title: '*** ATTO COMPLETO ***'
+  pages: 13
+  errors: []
+  text_chars_sample: 11529
+  origine: TERZO
+  origine_descrizione: DPC / Dipartimento Protezione Civile
   verdict: TERZO
 - path: /allegati/2026/ordinanza-sindacale-12-2026-coc-infiorata.pdf
   file: ordinanza-sindacale-12-2026-coc-infiorata.pdf
