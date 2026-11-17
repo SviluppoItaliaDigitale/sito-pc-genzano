@@ -1,10 +1,10 @@
-ultimo_audit: '2026-11-13'
-totale: 78
+ultimo_audit: '2026-11-17'
+totale: 79
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 41
+  TERZO: 42
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -172,6 +172,20 @@ documenti:
   pages: 17
   errors: []
   text_chars_sample: 7314
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /allegati/2026/determinazione-g15889-2026-integrazione-contributo-gruppi-comunali-pc.pdf
+  file: determinazione-g15889-2026-integrazione-contributo-gruppi-comunali-pc.pdf
+  size_kb: 406.5
+  sha256: 0d041c37cd635d721c161e56c36c41f622613684e2e1965ed1bb6e43ab171f02
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 23
+  errors: []
+  text_chars_sample: 7990
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
