@@ -78,4 +78,4 @@ Per il cittadino, conoscere il Meccanismo significa sapere che la protezione non
 - [Centro di Coordinamento della Risposta alle Emergenze (ERCC)](https://erccportal.jrc.ec.europa.eu/)
 - [Dipartimento della Protezione Civile — Cooperazione internazionale](https://relazioni-internazionali.protezionecivile.gov.it/it/)
 - [Decisione n. 1313/2013/UE — base giuridica del Meccanismo](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32013D1313)
-- [Regolamento UE 2019/420 — istituzione di rescEU](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32019R0420)
+- [Regolamento UE 2019/420 — istituzione di rescEU](https://eur-lex.europa.eu/eli/reg/2019/420/oj?locale=it)

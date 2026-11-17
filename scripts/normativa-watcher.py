@@ -1729,7 +1729,11 @@ def main():
     if args.fonti in ('news', 'tutte'):
         fonti_lette.append(f'Google News ({len(QUERIES_GOOGLE_NEWS)} query)')
         errori_gn = []
-        for query in QUERIES_GOOGLE_NEWS:
+        for i, query in enumerate(QUERIES_GOOGLE_NEWS):
+            # Google News risponde 429 se le query arrivano a raffica dallo
+            # stesso indirizzo (17/11/2026: 18 su 48): una pausa fra l'una e l'altra.
+            if i:
+                time.sleep(3)
             url = GOOGLE_NEWS_BASE.format(q=quote_plus(query))
             aggiungi(parse_feed(url, f"Google News: {query}", args.days, errori_gn), query)
         if errori_gn:

@@ -7,7 +7,7 @@ priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-03-pneumatici-invernali-catene-novembre.webp"
 image_alt: "Pneumatico invernale con marcatura M+S e simbolo del fiocco di neve montato su cerchio di auto"
-scadenza: "2026-11-15"
+scadenza: "2027-04-15"
 area: "Lazio"
 allegati: []
 versione_facile: "2026-11-03-pneumatici-invernali-catene-novembre-facile"

@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-01-ognissanti-cimiteri-viabilita.webp"
 image_alt: "Ingresso del cimitero comunale di Genzano con fila di persone con fiori e auto in parcheggio durante Ognissanti"
 scadenza: "2026-11-03"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza dirigenziale n. 150/2026 — disciplina della circolazione per la Commemorazione dei Defunti"
