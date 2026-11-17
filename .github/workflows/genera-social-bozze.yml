@@ -153,9 +153,12 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-liberation
-          pip install --quiet Pillow
+          # pyyaml: genera-social.py importa check-dati-canonici.py (dal 15/11/2026);
+          # senza, ogni articolo restava senza testi (guasto trovato il 17/11/2026).
+          pip install --quiet Pillow pyyaml
 
       - name: "🤖 Genera i testi (Gemini)"
+        id: testi
         if: steps.lista.outputs.modalita != 'nessuno'
         env:
           IN_FORCE: ${{ github.event.inputs.force }}
@@ -188,7 +191,13 @@ jobs:
                 echo "=== $f ==="
                 RISERVA=""
                 [ "$riserva" = "1" ] && RISERVA="--riserva"
-                python3 scripts/genera-social.py $FORCE $RISERVA "$f" || echo "  (errore non fatale, continuo)"
+                # Un rifiuto o un errore di rete non ferma gli altri articoli; un
+                # errore di programma (Traceback) sì rende rosso il giro alla fine,
+                # dopo immagini e commit, perché nessuno lo vedeva (17/11/2026).
+                if ! python3 scripts/genera-social.py $FORCE $RISERVA "$f" 2> >(tee /tmp/err-testi.txt >&2); then
+                  echo "  (errore non fatale, continuo)"
+                  if grep -q "Traceback" /tmp/err-testi.txt; then echo "crash=1" >> "$GITHUB_OUTPUT"; fi
+                fi
               done <<< "${S_LISTA_FILES}"
               ;;
           esac
@@ -320,4 +329,13 @@ jobs:
         if: steps.immagini.outputs.falliti == '1'
         run: |
           echo "::error::Per almeno un articolo il testo non entrerebbe intero nelle grafiche social: per quell'articolo non è stata scritta nessuna immagine e il post non uscirà finché il frontmatter (titolo, social_citazione, social_punti o description) non viene accorciato. Il motivo è negli avvisi del passo «Genera le immagini»; la stessa verifica si fa con python3 scripts/check-grafiche-social.py <articolo>."
+          exit 1
+
+      - name: "🛑 Testi social non generati per un errore del programma"
+        # Ultimo passo, come quello sopra: prima si salva il materiale degli
+        # altri articoli. Nato il 17/11/2026: dal 15/11 mancava pyyaml e ogni
+        # articolo restava senza testi, con il giro verde.
+        if: always() && steps.testi.outputs.crash == '1'
+        run: |
+          echo "::error::genera-social.py si è interrotto con un errore del programma (Traceback nel passo «Genera i testi»): gli articoli elencati lì sono rimasti senza testi e non usciranno sui social finché l'errore non è corretto."
           exit 1
