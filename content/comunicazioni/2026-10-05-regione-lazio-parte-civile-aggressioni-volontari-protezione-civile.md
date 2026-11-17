@@ -1,7 +1,8 @@
 ---
 title: "Aggressioni ai volontari di protezione civile: proposta di legge regionale sulla parte civile della Regione"
 date: 2026-10-05T00:02:00+02:00
-description: "Non è ancora legge: la proposta n. 281 vuole la Regione Lazio parte civile nei processi per aggressioni a sanitari, trasportatori e volontari di PC."
+lastmod: 2026-11-17
+description: "Non è ancora legge: la proposta n. 281, sulla Regione Lazio parte civile nei processi per aggressioni ai volontari di PC, ha superato la I Commissione."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -17,17 +18,18 @@ social_punti:
   - "Se diventasse legge, la Regione Lazio si costituirebbe parte civile nei processi per violenza fisica contro di loro, in servizio."
   - "Il 1° ottobre 2026 la I Commissione del Consiglio regionale ha ascoltato aziende e sindacati: le aziende hanno espresso parere favorevole, i sindacati sostegno con alcune proposte di modifica."
   - "Il 27 ottobre 2026 la Commissione ha ascoltato l'assessore Ciacciarelli: emendamenti entro il 4 novembre, subemendamenti entro il 9 novembre."
-  - "Non è ancora legge: servono la fase degli emendamenti, il voto dell'Aula e la pubblicazione sul Bollettino ufficiale."
+  - "Il 17 novembre 2026 la I Commissione ha concluso l'esame degli articoli: ora il testo passa alla commissione Bilancio per le norme finanziarie."
+  - "Non è ancora legge: servono il parere della commissione Bilancio, il voto dell'Aula e la pubblicazione sul Bollettino ufficiale."
 draft: false
 ---
 
 Una proposta di legge regionale vuole che la **Regione Lazio si costituisca parte civile** nei processi per aggressioni fisiche. Riguarda il personale sanitario, i lavoratori del trasporto pubblico locale e i **volontari di protezione civile** aggrediti in servizio. È la **proposta di legge n. 281 del 12 giugno 2026**, presentata dalla consigliera regionale Emanuela Mari.
 
-**Non è ancora una legge.** Il **1° ottobre 2026** la I Commissione del Consiglio regionale ha ascoltato in audizione aziende e sindacati. Ora le loro proposte di modifica passano alla fase degli emendamenti. La raccontiamo perché riguarda chi fa volontariato di protezione civile, a Genzano come nel resto del Lazio.
+**Non è ancora una legge.** Il **1° ottobre 2026** la I Commissione del Consiglio regionale ha ascoltato in audizione aziende e sindacati. Le loro proposte sono confluite nella fase degli emendamenti. Il **17 novembre 2026** la commissione ha concluso l'esame del testo. La raccontiamo perché riguarda chi fa volontariato di protezione civile, a Genzano come nel resto del Lazio.
 
 ## Che cosa prevede la proposta
 
-Il testo è breve: tre articoli.
+Il **testo originario** è breve: tre articoli. Le modifiche approvate in commissione il 17 novembre sono descritte più sotto.
 
 - **Articolo 1.** La Regione si costituisce parte civile nei procedimenti penali per reati commessi nel suo territorio. Vale per episodi di **violenza fisica** contro lavoratori del Servizio sanitario nazionale e del trasporto pubblico locale e contro volontari di protezione civile, aggrediti mentre svolgono le loro funzioni.
 - **Articolo 2.** Dall'attuazione della legge non derivano nuovi o maggiori oneri per il bilancio regionale.
@@ -60,7 +62,19 @@ Il **27 ottobre 2026** la stessa I Commissione, presieduta da Eleonora Berni, ha
 
 La consigliera Mari, prima firmataria, ha spiegato che la costituzione di parte civile della Regione si aggiungerebbe a quella eventuale delle aziende sanitarie e delle associazioni, che restano possibili.
 
-A conclusione dell'audizione la commissione ha fissato i termini per modificare il testo: gli **emendamenti** vanno presentati entro il **4 novembre 2026 alle 13**, i subemendamenti entro il **9 novembre alle 13**. Il testo non è ancora stato votato dall'Aula.
+A conclusione dell'audizione la commissione ha fissato i termini per modificare il testo: gli **emendamenti** andavano presentati entro il **4 novembre 2026 alle 13**, i subemendamenti entro il **9 novembre alle 13**. Il testo non è ancora stato votato dall'Aula.
+
+## Il 17 novembre: concluso l'esame in commissione
+
+Il **17 novembre 2026** la I Commissione del Consiglio regionale, presieduta da Flavio Cera, ha concluso l'esame degli articoli di sua competenza. Secondo il resoconto dell'Ufficio stampa del Consiglio regionale ha approvato **cinque emendamenti**, in gran parte della prima firmataria Emanuela Mari, che cambiano il testo originario. I punti principali sono questi:
+
+- **Parte civile, con precisazioni.** La costituzione di parte civile della Regione resta, ma è subordinata ai presupposti previsti dall'articolo 74 del codice di procedura penale. Il testo non parla più di sola «violenza fisica»: si riferisce ai delitti commessi nel territorio regionale a seguito di aggressioni durante il servizio. Per la protezione civile la previsione comprende **sia i volontari sia gli operatori del sistema regionale**.
+- **Cinque giorni per trasmettere gli atti.** Le aziende sanitarie, quelle del trasporto pubblico locale e gli enti della protezione civile devono mandare all'Avvocatura regionale la documentazione necessaria entro cinque giorni lavorativi da quando conoscono l'avvio del procedimento.
+- **Risarcimenti per la formazione.** Le somme eventualmente riconosciute alla Regione sarebbero destinate a percorsi formativi: riconoscere in tempo le situazioni di rischio, gestire i conflitti, conoscere le procedure da attivare dopo un'aggressione.
+- **Le altre parti restano libere di agire.** L'iniziativa della Regione non esclude né sostituisce quella di aziende ed enti, che possono costituirsi parte civile per il proprio interesse e il danno subito. Il coordinamento sarebbe favorito dall'Avvocatura regionale.
+- **Registro e Osservatorio.** Il testo prevede un registro degli episodi di aggressione nelle aziende sanitarie regionali e, su proposta della consigliera Eleonora Berni, un **Osservatorio regionale** triennale sugli episodi di aggressione nei tre settori. Monitorerebbe e coordinerebbe le politiche di prevenzione e redigerebbe un rapporto annuale. Un altro emendamento affida alla Giunta regionale, entro novanta giorni dall'entrata in vigore della legge, le procedure interne per la costituzione di parte civile.
+
+Il testo cambia quindi rispetto a quello presentato in origine. Il passaggio successivo è l'esame della commissione Bilancio sulle norme finanziarie.
 
 ## Perché ci riguarda
 
@@ -70,7 +84,7 @@ Il volontario impiegato in attività autorizzate ha già alcune tutele previste 
 
 ## I prossimi passi
 
-La proposta è assegnata alla I Commissione. Sono coinvolte anche la IV, la VI, la VII e la IX. Dopo la fase degli emendamenti il testo andrà all'esame dell'Aula del Consiglio regionale. Diventa legge solo dopo l'approvazione e la pubblicazione sul Bollettino ufficiale, e può ancora cambiare. Seguiremo l'iter e aggiorneremo questa pagina.
+La I Commissione ha concluso l'esame degli articoli di sua competenza il 17 novembre 2026. Ora il testo passa alla commissione Bilancio, per le norme finanziarie, e poi all'esame dell'Aula del Consiglio regionale. Diventa legge solo dopo l'approvazione e la pubblicazione sul Bollettino ufficiale, e può ancora cambiare. Seguiremo l'iter e aggiorneremo questa pagina.
 
 ## Per approfondire
 
@@ -85,4 +99,5 @@ La proposta è assegnata alla I Commissione. Sono coinvolte anche la IV, la VI, 
 - [Consiglio regionale del Lazio — Proposta di legge n. 281 del 12 giugno 2026 (testo e relazione, PDF)](https://www.consiglio.regione.lazio.it/binary/consiglio_regionale/tbl_commissioni_documenti/PL_281_12062026.pdf)
 - [Consiglio regionale del Lazio, I Commissione — Tutela di sanitari, trasportatori e volontari: in prima Commissione ascoltate aziende e sindacati sulla proposta di legge (1° ottobre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=commissioniNewsDettaglio&cid=1&id=4182)
 - [Consiglio regionale del Lazio, I Commissione — Tutela di sanitari, trasportatori e volontari: ascoltato l'assessore Ciacciarelli (27 ottobre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=newsDettaglio&id=comm-4209)
+- [Consiglio regionale del Lazio, I Commissione — Aggressioni operatori di sanità, trasporto pubblico e protezione civile, terminato l'esame in commissione Affari istituzionali (17 novembre 2026)](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=newsDettaglio&id=comm-4224)
 - [Normattiva — Legge 14 agosto 2020, n. 113, disposizioni in materia di sicurezza per gli esercenti le professioni sanitarie e socio-sanitarie nell'esercizio delle loro funzioni](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2020-08-14;113)
