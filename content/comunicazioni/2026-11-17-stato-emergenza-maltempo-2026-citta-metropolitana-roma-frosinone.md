@@ -70,7 +70,7 @@ Questi contributi coprono solo la parte non rimborsata da eventuali **polizze as
 
 ### Mutui: si possono sospendere le rate
 
-L'ordinanza considera gli eventi **causa di forza maggiore**. Chi ha un mutuo su un edificio **sgomberato o inagibile**, o su un'attività commerciale, economica o agricola colpita, può chiedere alla banca la **sospensione delle rate**, a scelta dell'intera rata o della sola quota capitale. Serve un'autocertificazione del danno. La sospensione dura fino all'agibilità o abitabilità dell'immobile e comunque non oltre la fine dello stato di emergenza. Le banche devono informare i clienti entro trenta giorni dall'entrata in vigore dell'ordinanza. Se non lo fanno, le rate in scadenza fino al **14 luglio 2027** sono sospese senza costi aggiuntivi.
+L'ordinanza considera gli eventi **causa di forza maggiore**. Chi ha un mutuo su un edificio **sgomberato o inagibile**, o sull'attività commerciale o economica, anche agricola, svolta **in quegli stessi edifici** (per l'agricoltura, sui terreni colpiti), può chiedere alla banca la **sospensione delle rate**, a scelta dell'intera rata o della sola quota capitale. Serve un'autocertificazione del danno. La sospensione dura fino all'agibilità o abitabilità dell'immobile e comunque non oltre la fine dello stato di emergenza. Le banche devono informare i clienti entro trenta giorni dall'entrata in vigore dell'ordinanza. Se non lo fanno, le rate in scadenza fino al **14 luglio 2027** sono sospese senza costi aggiuntivi.
 
 ### Volontariato di protezione civile
 

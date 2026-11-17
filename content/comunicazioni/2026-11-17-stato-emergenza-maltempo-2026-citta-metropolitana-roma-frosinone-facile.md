@@ -56,7 +56,7 @@ Alcune famiglie hanno la casa distrutta o sgomberata. Il Comune ha ordinato lo s
 
 In famiglia c'è una persona con più di 65 anni? Oppure una persona con disabilità almeno al 67%? Si aggiungono 200 € al mese per ogni persona.
 
-Il contributo vale fino al rientro a casa. Non vale oltre la fine dello stato di emergenza.
+Il contributo finisce quando rientri a casa. Finisce anche se trovi un'altra sistemazione stabile. Non vale oltre la fine dello stato di emergenza.
 
 Il contributo non c'è se Regione, Provincia o Comune danno una casa gratis.
 
@@ -75,7 +75,7 @@ Gli enti mandano le segnalazioni dei danni al Dipartimento entro 120 giorni. Cio
 
 ## Mutuo
 
-Hai un mutuo su una casa sgomberata o inagibile? Oppure su un'attività colpita dal maltempo? Puoi chiedere alla banca di sospendere le rate.
+Hai un mutuo su un edificio sgomberato o inagibile? Oppure su un'attività che si svolge in quell'edificio? Per i campi agricoli: su un terreno colpito dal maltempo. Puoi chiedere alla banca di sospendere le rate.
 
 - Puoi scegliere di sospendere tutta la rata.
 - Puoi scegliere di sospendere solo la quota capitale.
