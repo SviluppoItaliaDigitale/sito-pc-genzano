@@ -13,6 +13,7 @@ allegati:
   - titolo: "Ordinanza del Capo del Dipartimento della Protezione Civile n. 1207 dell'11 agosto 2026 (Gazzetta Ufficiale n. 195 del 24 agosto 2026)"
     url: "/allegati/2026/ordinanza-dpc-1207-2026-maltempo-gennaio-febbraio-frosinone-roma.pdf"
     dimensione: "133 KB"
+versione_facile: "2026-11-17-stato-emergenza-maltempo-2026-citta-metropolitana-roma-frosinone-facile"
 tts: true
 social_citazione: "Stato di emergenza fino al 14 luglio 2027 per il maltempo di gennaio e febbraio 2026 nella provincia di Frosinone e nella Città metropolitana di Roma."
 social_punti:
@@ -77,7 +78,7 @@ L'articolo 8 riguarda direttamente chi fa volontariato. Per l'impiego nelle atti
 
 ## E adesso?
 
-Lo stato di emergenza è in corso e l'attuazione spetta al Commissario delegato. Il Bollettino ufficiale della Regione Lazio del 17 novembre 2026 ha pubblicato un decreto del Commissario delegato che richiama l'ordinanza 1207: il suo contenuto non è riassunto in questa pagina. Aggiorneremo questa pagina se le fonti ufficiali pubblicano moduli e scadenze per i cittadini.
+Lo stato di emergenza è in corso e l'attuazione spetta al Commissario delegato. Aggiorneremo questa pagina se le fonti ufficiali pubblicano moduli e scadenze per i cittadini.
 
 In caso di pericolo chiama il **112**. Per i numeri di emergenza e i comportamenti da seguire in caso di maltempo consulta [i numeri utili](/numeri-utili/) e le pagine sul [rischio idrogeologico](/rischi-prevenzione/).
 
