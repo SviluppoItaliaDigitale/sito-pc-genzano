@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-16T23:17:19+00:00",
+  "generato": "2026-11-17T05:08:35+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 35,
   "scaduti_scartati": 7,
-  "in_corso": 0,
+  "in_corso": 8,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -257,7 +257,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.102"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -270,7 +270,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.101"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -322,7 +322,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.130"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -348,7 +348,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.128"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -361,7 +361,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.109"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -374,7 +374,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.108"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -426,7 +426,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.116"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Valle d'Aosta",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -452,7 +452,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261116113433.099"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Valle d'Aosta",
    "fenomeno": "Temporali",
    "livello": "gialla",

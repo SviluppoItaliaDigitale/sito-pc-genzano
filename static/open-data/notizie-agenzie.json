@@ -5,11 +5,35 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-16T23:15:21+00:00",
+  "generato": "2026-11-17T05:06:23+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-17T03:52:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli 007 americani avvertono: 'L'Iran sta sviluppando piani per una bomba sporca a Washington'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html"
+  },
+  {
+   "data": "2026-11-17T03:44:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Guerra agli snodi cruciali, colpiti due ponti a Kiev, gli ucraini attaccano il ponte di Crimea",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/guerra-agli-snodi-cruciali-colpiti-due-ponti-a-kiev-gli-ucraini_1d2d82cc-8d9f-4071-aba5-69cc3ae5273a.html"
+  },
+  {
+   "data": "2026-11-17T00:32:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "La carovana di migranti 'Dios con nosotros' avanza nel Chiapas verso gli Stati Uniti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/11/17/messico-oltre-mille-migranti-avanzano-nel-chiapas-verso-gli-usa_59019b36-e9ea-4923-ad32-2e30a2d67d33.html"
+  },
+  {
+   "data": "2026-11-16T23:26:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "In tilt app e siti delle principali banche Usa. Guasto ai sistemi di United Airlines, poi risolto",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/app-e-siti-delle-banche-usa-in-tilt-dopo-il-caos-di-microsoft-e-dei_83dcdcf2-04de-4161-8b52-cd5eddce321d.html"
+  },
   {
    "data": "2026-11-16T23:09:00+00:00",
    "fonte": "ANSA CRONACA",
@@ -21,12 +45,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Ucraina, Trump: \"Putin sta cedendo\". Zelensky: \"Russia prepara nuovo attacco\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-incontro-ucraina-russia-news-17-novembre_5sEgMCruvME7sCya96g904"
-  },
-  {
-   "data": "2026-11-16T23:00:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "In tilt app e siti delle principali banche Usa. United Airlines: 'Interruzione dei nostri sistemi'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/app-e-siti-delle-banche-usa-in-tilt-dopo-il-caos-di-microsoft-e-dei_83dcdcf2-04de-4161-8b52-cd5eddce321d.html"
   },
   {
    "data": "2026-11-16T22:59:25+00:00",
@@ -132,7 +150,7 @@
   },
   {
    "data": "2026-11-16T19:31:48+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Tre donne uccise in poche ore, si allunga la scia di sangue",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/tre-donne-uccise-in-poche-ore-si-allunga-la-scia-di-sangue_99664bd9-d740-4a43-8c76-4fa6e93fe7ca.html"
   },
@@ -155,15 +173,9 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/vienna-ufficializza-primo-centro-di-rimpatrio-di-5-paesi-ue-in-ruanda-nel-2027_34aad0c9-e340-4983-85e8-8063402f1b4d.html"
   },
   {
-   "data": "2026-11-16T19:12:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Putin non va all'affondo, vuole la fine della guerra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/trump-putin-non-va-allaffondo-vuole-la-fine-della-guerra_719b0e4a-833e-4411-9f49-e3bdeca194d9.html"
-  },
-  {
    "data": "2026-11-16T19:06:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Banche Usa in tilt, problemi per accessi ai conti online. United Airlines ferma aerei: \"Sistemi ko\"",
+   "titolo": "Banche Usa in tilt, problemi per accessi ai conti online: \"Non è un cyberattacco\"",
    "url": "https://www.adnkronos.com/economia/banche-usa-problemi-conti-online_eV66vz2hMYssRGYhI577y"
   },
   {
@@ -177,18 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Burnham ripudia la Brexit: 'Abbiamo perso più di quanto guadagnato'",
    "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/16/burnham-ripudia-la-brexit-abbiamo-perso-piu-di-quanto-guadagnato_b7d0544f-e8fc-4610-9ada-72617437db5f.html"
-  },
-  {
-   "data": "2026-11-16T18:34:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dopo 15 anni riecco Fiorito, 'Batman' torna e sbarca in Futuro Nazionale: \"Lavoro con Vannacci per portare consenso\"",
-   "url": "https://www.adnkronos.com/politica/vannacci-fiorito-futuro-nazionale_ux3qqielV2uhcl4XqROl8"
-  },
-  {
-   "data": "2026-11-16T18:28:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Uno studente Erasmus precipita dalle mura all'Aquila, è grave",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/studente-erasmus-di-20-anni-precipita-dalle-mura-allaquila-e-grave_3d5efc0f-a537-46c0-ad4e-4c8c0bc0f685.html"
   }
  ]
 }
