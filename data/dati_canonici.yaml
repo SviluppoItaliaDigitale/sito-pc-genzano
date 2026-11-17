@@ -1295,3 +1295,17 @@ dati:
     vietati:
       - regex: '(?i)(?:sintomi\s+di\s+intossicazione\s+CO|sintomi\s+migliorano\s+uscendo|miglioramento\*{0,2}\s+quando\s+si\s+esce)'
         perche: "Con i sintomi da monossido si esce e si chiama il 112, senza aspettare di vedere se uscendo si sta meglio e senza chiamare prima il tecnico."
+
+  - id: ansei-nankai-1854-data
+    dato: "Data del terremoto e maremoto di Ansei-Nankai (Inamura no hi, Hamaguchi Goryō)"
+    valore: "24 dicembre 1854 nel calendario gregoriano; 5 novembre è la data nel calendario giapponese dell'epoca, da cui viene la Giornata mondiale degli tsunami"
+    fonti:
+      - nome: "Japan Meteorological Agency, scheda «安政南海地震» (verificata il 17/11/2026)"
+        url: "https://www.data.jma.go.jp/hiroshima/jishin/ansei_nankai.pdf"
+      - nome: "UNDRR, World Tsunami Awareness Day (verificata il 17/11/2026)"
+        url: "https://www.undrr.org/quick/105500"
+    # Nato il 17/11/2026: il dossier «Pionieri» datava il terremoto al
+    # 5 novembre 1854, confondendo la data giapponese con quella gregoriana.
+    vietati:
+      - regex: '\b5\s+novembre\s+(?:del\s+)?1854\b'
+        perche: "Il 5 novembre è la data nel calendario giapponese dell'epoca: nel calendario gregoriano il terremoto è del 24 dicembre 1854."

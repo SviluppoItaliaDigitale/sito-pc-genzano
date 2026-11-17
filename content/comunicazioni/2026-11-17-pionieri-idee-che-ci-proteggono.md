@@ -34,7 +34,7 @@ A Roma, dopo l'incendio del 64 d.C., le nuove regole chiedono strade larghe, edi
 
 ## Misurare per avvisare
 
-Nel 1643 **Evangelista Torricelli** inventa il barometro. Nel 1654 il granduca **Ferdinando II de' Medici** manda strumenti uguali a osservatori di diverse città: nasce la prima rete meteorologica. Dal 1861 l'inglese **Robert FitzRoy** fa issare segnali di burrasca nei porti e pubblica le prime previsioni del tempo.
+Nel 1644 **Evangelista Torricelli** fa l'esperimento da cui nasce il barometro. Nel 1654 il granduca **Ferdinando II de' Medici** manda strumenti uguali a osservatori di diverse città: nasce la prima rete meteorologica. Dal 1861 l'inglese **Robert FitzRoy** fa issare segnali di burrasca nei porti e pubblica le prime previsioni del tempo.
 
 Sul Vesuvio, nel 1841, nasce l'**Osservatorio Vesuviano**, il più antico osservatorio vulcanologico del mondo. Dopo il terremoto della Basilicata del 1857 l'ingegnere **Robert Mallet** studia per mesi i crolli sul posto. È l'inizio della sismologia moderna.
 
@@ -48,9 +48,9 @@ Nel 1854 **Florence Nightingale** porta igiene e ordine in un ospedale militare 
 
 ## Il fuoco dei covoni di riso
 
-Il 5 novembre 1854 un terremoto colpisce il Giappone. Nel villaggio di Hiro il capo **Hamaguchi Goryō** capisce che sta per arrivare un maremoto. Dà fuoco ai covoni di riso appena raccolti sulla collina, e le fiamme guidano gli abitanti in alto, in salvo.
+Il 24 dicembre 1854 un terremoto colpisce il Giappone. Nel villaggio di Hiro il capo **Hamaguchi Goryō** capisce che sta per arrivare un maremoto. Dà fuoco ai covoni di riso appena raccolti sulla collina, e le fiamme guidano gli abitanti in alto, in salvo.
 
-Da questa storia viene la data della **Giornata mondiale della consapevolezza sugli tsunami**, il 5 novembre, istituita dalle Nazioni Unite nel 2015. Il consiglio è ancora quello: se il mare si ritira o senti una forte scossa sulla costa, sali subito in un posto alto.
+Da questa storia viene la data della **Giornata mondiale della consapevolezza sugli tsunami**, istituita dalle Nazioni Unite nel 2015: il 5 novembre, che è il giorno del terremoto nel calendario giapponese di allora. Il consiglio è ancora quello: se il mare si ritira o senti una forte scossa sulla costa, sali subito in un posto alto.
 
 ## Che cosa ci resta
 
