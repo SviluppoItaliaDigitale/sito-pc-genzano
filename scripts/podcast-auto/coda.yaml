@@ -31,6 +31,9 @@ puntate:
     ufficiali:
       - https://iononrischio.protezionecivile.gov.it/it/approfondimento/il-roll-sullallerta-meteo-idro/
     stato: da-fare
+    tentativi: 1
+    nota: "17/11/2026, primo tentativo (audio del 15/11, lunghezza Breve) non superato: apertura con una scena inventata (pioggia leggera e allerta rossa, «reazione comunissima»), «seguendo sempre» le indicazioni (la fonte non dice sempre), «importantissima», «salvavita», «fondamentale», motivo del consiglio sul verde non nelle fonti. Al prossimo errore la puntata va in scartata."
+    istruzioni_extra: "ATTENZIONE, regole aggiuntive: non aprire con scene o situazioni immaginate (niente \"immagina\", niente pioggia leggera con allerta rossa) e non dire come reagisce la gente. Non dire \"sempre\" né \"mai\" se non sono nella frase della fonte: \"segui le indicazioni delle autorità\", senza \"sempre\". Non usare \"importantissimo\", \"fondamentale\", \"salvavita\". Non spiegare il motivo dei consigli e non chiudere con riflessioni: riporta per ogni colore quello che le fonti dicono, nell'ordine verde, giallo, arancione, rosso. Non usare la parola \"fonti\": di' \"canali non ufficiali\"."
 
   - id: numero-112
     titolo: "Il 112: un solo numero per ogni emergenza"

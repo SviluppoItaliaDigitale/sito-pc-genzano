@@ -65,7 +65,9 @@ in calendario prima di cominciare la successiva.
    un nome di strumento o di intelligenza artificiale, il Gruppo indicato come chiamabile in
    emergenza, le spiegazioni del «perché» e le conclusioni tratte dagli esempi storici che le fonti
    non danno. Se c'è anche un solo errore la puntata **non si pubblica**: si rigenera una volta
-   (stesse fonti, istruzioni rafforzate sul punto sbagliato); al secondo errore la voce va in
+   (stesse fonti, istruzioni rafforzate sul punto sbagliato, scritte in `coda.yaml` come
+   `istruzioni_extra` con `tentativi: 1` e una `nota` sul motivo: `prepara-fonte.py` le mette
+   in testa a `istruzioni.txt`, anche se il secondo tentativo cade in un altro giro); al secondo errore la voce va in
    `stato: scartata` con il motivo e si passa alla successiva al giro dopo.
 6. **Trascrizione pulita**: correggere solo gli errori di riconoscimento (non il contenuto),
    dare paragrafi leggibili, in `~/podcast-lavoro/<id>/trascrizione.md`.
