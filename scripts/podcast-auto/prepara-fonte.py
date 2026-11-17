@@ -53,7 +53,11 @@ def main() -> int:
     # scrive solo se manca, per non sostituirlo con le sole pagine principali.
     if not (dest / "fonte.md").exists():
         (dest / "fonte.md").write_text("\n\n".join(parti) + "\n", encoding="utf-8")
-    (dest / "istruzioni.txt").write_text(ISTRUZIONI.format(titolo=voce["titolo"]), encoding="utf-8")
+    # «istruzioni_extra» in coda.yaml: regole rafforzate dopo un tentativo non
+    # superato (README, passo 5), messe in testa per il secondo tentativo.
+    extra = (voce.get("istruzioni_extra") or "").strip()
+    testo = ISTRUZIONI.format(titolo=voce["titolo"])
+    (dest / "istruzioni.txt").write_text((extra + " " + testo) if extra else testo, encoding="utf-8")
     print(f"ID={voce['id']}")
     print(f"CARTELLA={dest}")
     return 0
