@@ -303,7 +303,7 @@ puntate:
   - fulmin
   - grandin
   - nubifragi
-  stato: da-fare
+  stato: programmata
   escludi:
   - dossier/
   - colorare-temporale
@@ -313,8 +313,19 @@ puntate:
   - temporali-pomeridiani
   - temporali-settembre
   - grandine-estiva
+  file: content/podcast/2026-12-08-temporali-intensi.md
+  data: '2026-12-08'
 - id: rischio-vulcanico
   titolo: 'I Colli Albani: il vulcano sotto i Castelli Romani'
+  escludi:
+  - etiopia
+  - ari-pozzuoli
+  - colombia
+  - decreto-legge
+  - carta-naturalistica
+  - campi-flegrei
+  - terremoto-colli-albani-1806
+  - caso-vulcani-italia-secondaria
   fonti:
   - content/rischi-prevenzione/rischio-vulcanico.md
   parole:
