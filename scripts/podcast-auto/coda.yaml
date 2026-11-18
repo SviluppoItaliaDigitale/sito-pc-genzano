@@ -107,7 +107,50 @@ puntate:
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/
   - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-  stato: da-fare
+  stato: scartata
+  escludi:
+  - sarno
+  - emilia-romagna-2023
+  - versilia
+  - niscemi
+  - decreto-legge
+  - piemonte-1994
+  - val-pola
+  - pizzo-cengalo
+  - soverato
+  - marche-2022
+  - genova-1970
+  - genova-2011
+  - firenze-1966
+  - nisar
+  - iso-22327
+  - standard-iso
+  - exe-po
+  - vincolo-idrogeologico
+  - zone-umide
+  - frana-costone-nemi
+  - colorare-frana
+  - rischio-idrogeologico-estivo
+  - polesine-1951
+  - sardegna-2013
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (15 fonti, Breve, audio 2:53) non superato: «in
+    pochissimi minuti» (le pagine dicono «pochi»), chiusura «le cantine e i piani
+    interrati sono i primi luoghi ad allagarsi» (non nelle pagine, che li chiamano
+    «i punti più pericolosi»), enfasi «da seguire alla lettera». Il resto combaciava
+    con le pagine. Al prossimo errore la puntata va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: ripeti i numeri e i tempi esattamente
+    come sono scritti ("anche di uno o due metri in pochi minuti", non "pochissimi";
+    "15 cm", "30-50 cm"). Non chiudere con un "ultimo pensiero" o con frasi riassuntive:
+    l''ultima frase è l''invito al sito. Non dire quali luoghi si allagano per primi:
+    di'' solo che cantine, seminterrati e piani terra sono i punti più pericolosi.
+    Non usare "alla lettera", "pochissimo", "chiarissimo" né altri rafforzativi.'
+  motivo: '18/11/2026, secondo tentativo (15 fonti, Breve, istruzioni rafforzate;
+    audio 2:49) non superato: «proprio a causa di questa rapidità [...] cantine, seminterrati
+    e piani terra sono i punti più pericolosi» (nesso di causa che le pagine non fanno),
+    commenti aggiunti («da non sottovalutare affatto», «la situazione possa mutare
+    drasticamente», «dinamica naturale complessa»). Comportamenti e numeri combaciavano
+    con le pagine.'
 - id: piano-familiare
   titolo: Il piano di emergenza della famiglia
   fonti:
@@ -119,7 +162,13 @@ puntate:
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
   - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-11-24-piano-familiare.md
+  data: '2026-11-24'
+  nota: '18/11/2026, primo tentativo (9 fonti, Breve) superato. Nell''audio una battuta
+    era ripetuta per errore subito dopo la domanda sull''alluvione («Sì, esatto, si
+    evita l''ascensore»): tolta con un taglio nelle pause (da 121,45 a 123,80 s dell''originale),
+    ricontrollato con una nuova trascrizione.'
 - id: kit-emergenza
   titolo: 'Lo zaino di emergenza: che cosa metterci'
   fonti:
