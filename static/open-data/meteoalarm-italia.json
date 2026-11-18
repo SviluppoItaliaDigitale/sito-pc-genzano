@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-18T12:44:52+00:00",
+  "generato": "2026-11-18T20:55:41+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 56,
-  "scaduti_scartati": 0,
-  "in_corso": 14,
+  "avvisi": 51,
+  "scaduti_scartati": 5,
+  "in_corso": 9,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -257,19 +257,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261118113703.106"
   },
   {
-   "in_corso": true,
-   "regione": "Campania",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T09:00:00+00:00",
-   "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-18T10:37:04+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261118113703.091"
-  },
-  {
    "in_corso": false,
    "regione": "Emilia e Romagna",
    "fenomeno": "Pioggia",
@@ -372,19 +359,6 @@
    "fine": "2026-11-19T18:59:00+00:00",
    "emesso": "2026-11-18T10:37:04+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261118113703.101"
-  },
-  {
-   "in_corso": true,
-   "regione": "Lazio",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T09:00:00+00:00",
-   "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-18T10:37:04+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261118113703.090"
   },
   {
    "in_corso": false,
@@ -556,19 +530,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261118113703.131"
   },
   {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T09:00:00+00:00",
-   "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-18T10:37:04+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261118113703.093"
-  },
-  {
    "in_corso": false,
    "regione": "Sicilia",
    "fenomeno": "Vento",
@@ -580,19 +541,6 @@
    "fine": "2026-11-20T00:59:00+00:00",
    "emesso": "2026-11-18T10:37:05+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261118113703.130"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T09:00:00+00:00",
-   "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-18T10:37:04+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261118113703.092"
   },
   {
    "in_corso": false,
@@ -619,19 +567,6 @@
    "fine": "2026-11-19T18:59:00+00:00",
    "emesso": "2026-11-18T10:37:04+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261118113703.097"
-  },
-  {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T09:00:00+00:00",
-   "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-18T10:37:04+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261118113703.089"
   },
   {
    "in_corso": false,

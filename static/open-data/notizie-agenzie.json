@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-18T12:44:43+00:00",
+  "generato": "2026-11-18T20:55:32+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-18T12:38:18+00:00",
+   "data": "2026-11-18T20:31:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Xi rinsalda l'asse con Putin, poi l'abbraccio con Trump",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/xi-rinsalda-lasse-con-putin-poi-labbraccio-con-trump_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
+  },
+  {
+   "data": "2026-11-18T20:15:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Miguel Gotor vince il Premio Strega Saggistica e lo dedica ai giovani di oggi",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/11/18/miguel-gotor-e-il-vincitore-della-seconda-edizione-del-premio-strega-saggistica_d93d5b92-33ea-4ead-8385-49f016878a0c.html"
+  },
+  {
+   "data": "2026-11-18T20:14:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: emendamento FI cancella il taglio alle pensioni ma solo per il 2027",
+   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/11/18/manovra-emendamento-fi-cancella-il-taglio-alle-pensioni-ma-solo-per-il-2027_92e99b6c-49d8-4f68-9bee-71fff3bdc40a.html"
+  },
+  {
+   "data": "2026-11-18T20:00:11+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Antonella Elia dopo l'intervento: \"Sono felice ma ho paura, mi viene da piangere\"",
-   "url": "https://www.adnkronos.com/spettacoli/antonella-elia-operazione-malattia_4qLg6EZ4pQJ2COiuDl6NeM"
+   "titolo": "Israele lancia operazione di terra a Gaza, Hamas denuncia: \"Violato il cessate il fuoco\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/gaza-israele-operazione-terra-hamas-news_3xdTl0c5MkjYTZXMqEy8LS"
   },
   {
-   "data": "2026-11-18T12:29:36+00:00",
+   "data": "2026-11-18T19:55:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "I dem della Camera rieleggono Jeffries leader, sarà il primo speaker afroamericano",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/i-dem-della-camera-rieleggono-jeffries-leader-sara-primo-speaker-afroamericano_cfc90312-4555-4996-ba6c-3406dd68f9ba.html"
+  },
+  {
+   "data": "2026-11-18T19:53:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'accusa della Cpi: 'Almasri in Libia è libero'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/cpi-almasri-in-libia-e-libero-non-affronta-la-giustizia_4938ae4f-ee9a-4804-98a4-e5d7ef7f0d92.html"
+  },
+  {
+   "data": "2026-11-18T19:47:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "La nuova Knesset cancella le leggi di Netanyahu, incombe lo spettro della guerra",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/la-nuova-knesset-cancella-le-leggi-di-netanyahu-incombe-lo-spettro-della-guerra_c716c063-4ad1-4fdb-96b8-256f5a3a08ec.html"
+  },
+  {
+   "data": "2026-11-18T19:36:02+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Istat: 'Aumentano gli incidenti stradali e i feriti ma calano i morti'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/istat-aumentano-gli-incidenti-stradali-e-i-feriti-ma-calano-i-morti_1c3251fa-29d5-466e-b7c7-859b2cbbc524.html"
+   "titolo": "Procure della Dda contro Vinci, 'sul caso Rossi indagini a rischio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/melillo-a-commissione-sulla-morte-di-david-rossi-rischio-di-interferenze-e-esposizione-ai-media_8e00e028-5213-4339-b8a1-5c5a6c2b9095.html"
   },
   {
-   "data": "2026-11-18T12:28:37+00:00",
+   "data": "2026-11-18T19:31:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Neurologo Shneider: \"Sla è trattabile, nuove terapie personalizzate in sviluppo\"",
+   "url": "https://www.adnkronos.com/cronaca/neurologo-shneider-sla-e-trattabile-nuove-terapie-personalizzate-in-sviluppo_N1Xg1kfzEyTHZdIcU5muA"
+  },
+  {
+   "data": "2026-11-18T19:29:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sentiti per ore in Procura l'ex legale di Sempio e l'ex carabiniere Spoto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/ex-legale-di-sempio-grassi-sentito-per-tre-ore-in-procura-a-pavia_65e731af-5840-48c4-bb3f-6a145e438c46.html"
+  },
+  {
+   "data": "2026-11-18T19:26:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, Lunetta (Maugeri): \"Italia protagonista nella ricerca sulle mutazioni genetiche\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-lunetta-maugeri-italia-protagonista-nella-ricerca-sulle-mutazioni-genetiche_2sFKniuav4kCMbnjPeRT0A"
+  },
+  {
+   "data": "2026-11-18T19:24:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Soffoca la moglie, 'me l'ha chiesto lei perché soffriva'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/donna-soffocata-dal-marito-in-casa-in-provincia-di-bergamo_1d91a6f5-fbe7-4824-8b0d-e1d5cf6de88b.html"
+  },
+  {
+   "data": "2026-11-18T19:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, ricercatrice Pasinelli: \"Stiamo sviluppando trattamenti molecolari mirati\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-ricercatrice-pasinelli-stiamo-sviluppando-trattamenti-molecolari-mirati_4Qck5HYp31QWJH7UwoKqFO"
+  },
+  {
+   "data": "2026-11-18T19:23:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Strage di Castel D'Azzano, in aula i video dell'esplosione",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/strage-di-castel-dazzano-in-aula-i-video-dellesplosione_7e89b4e4-a6ba-4c3f-800b-1d23423db900.html"
+  },
+  {
+   "data": "2026-11-18T19:17:59+00:00",
    "fonte": "ANSA",
    "titolo": "Fiano lascia il Pd per il no alla legge sull'antisemitismo",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/ddl-antisemitismo-le-lacrime-di-fiano-lascio-il-pd-_ad0d5ec9-32e1-477a-8239-fc0659fef573.html"
   },
   {
-   "data": "2026-11-18T12:27:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "James Bond, Jeff Bezos svela il retroscena: \"Sono stato coinvolto nella scelta di Robert Pattinson\"",
-   "url": "https://www.adnkronos.com/spettacoli/james-bond-robert-pattinson-bezos-scelta_3h2v4ANq2lEqFXBmUHpsfu"
-  },
-  {
-   "data": "2026-11-18T12:24:06+00:00",
+   "data": "2026-11-18T19:17:09+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Capolarato nel Napoletano, 4 aziende sequestrate e 4 indagati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/capolarato-nel-napoletano-4-aziende-sequestrate-e-4-indagati_0161c45f-636b-41a2-9cb1-68d2cb7fb94a.html"
+   "titolo": "Ragazzina partorisce bimba che muore, era viva alla nascita",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/ragazzina-partorisce-bimba-che-muore-era-viva-alla-nascita_276b5a93-295f-48a1-9ba8-1440d830a20d.html"
   },
   {
-   "data": "2026-11-18T12:18:37+00:00",
+   "data": "2026-11-18T19:16:17+00:00",
    "fonte": "ANSA",
-   "titolo": "Identificato il nickname Mikhail Andropov: 'Non ha mandato lui le mail nelle scuole'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/identificato-nickname-mikhail-andropov-non-ha-mandato-lui-le-mail-nelle-scuole_d4f1795b-c0ab-4f23-b2fc-2a3050b7fd28.html"
+   "titolo": "Alle Atp Finals: in campo Cobolli-Tiafoe, 'come una finale' DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/alle-atp-finals-in-campo-cobolli-tiafoe-come-una-finale-diretta_e8d16eb9-9af9-429a-a084-310b0d445171.html"
   },
   {
-   "data": "2026-11-18T12:18:28+00:00",
+   "data": "2026-11-18T19:05:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Spazio: al 4° Forum Space & Blue i primi 5 progetti finanziati dall’Asi",
-   "url": "https://www.adnkronos.com/economia/spazio-al-4-forum-space-e-blue-i-primi-5-progetti-finanziati-dallasi_4dXfTcPcFdPZUX20Flf4Yo"
+   "titolo": "I musulmani nel mondo supereranno i cristiani nel 2035. Islam triplicherà la 'quota' in Italia entro 2070",
+   "url": "https://www.adnkronos.com/internazionale/esteri/islam-europa-aumento-report_2CC2SONIHIUrcSDTOqZSas"
   },
   {
-   "data": "2026-11-18T12:16:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Finals, oggi Alcaraz-Medvedev - Diretta",
-   "url": "https://www.adnkronos.com/sport/atp-finals-alcaraz-medvedev_6mgyjldX4CyOehQM73Cg8o"
-  },
-  {
-   "data": "2026-11-18T12:16:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Space&Blue Economy vale 46,3 mld valore aggiunto, presentato 1° Rapporto Nazionale",
-   "url": "https://www.adnkronos.com/economia/space-e-blue-economy-vale-46-3-mld-valore-aggiunto-presentato-1-rapporto-nazionale_7qsy0d0CmFpLfzFgZYb54k"
-  },
-  {
-   "data": "2026-11-18T12:13:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Acampora (Assonautica): \"Space&Blue vale 45 miliardi, 168mila occupati e 35.900 imprese\"",
-   "url": "https://www.adnkronos.com/economia/acampora-assonautica-space-e-blue-vale-45-miliardi-168mila-occupati-e-35900-imprese_2zKIFAQkYPgdpoXoKxmlF6"
-  },
-  {
-   "data": "2026-11-18T12:11:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Urso: \"Spazio e mare filiere integrate, strategiche per crescita e sicurezza\"",
-   "url": "https://www.adnkronos.com/economia/urso-spazio-e-mare-filiere-integrate-strategiche-per-crescita-e-sicurezza_5RqxoWzPYT1xVkG6SHvlvq"
-  },
-  {
-   "data": "2026-11-18T12:10:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "4° Forum Space&Blue, Esa: \"Da dialogo spazio e mare a progetti concreti e misurazione valore\"",
-   "url": "https://www.adnkronos.com/economia/4-forum-space-e-blue-esa-da-dialogo-spazio-e-mare-a-progetti-concreti-e-misurazione-valore_7EaklblmJYnT4wTT2wjuas"
-  },
-  {
-   "data": "2026-11-18T12:06:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Testa (Informare): \"Space&Blue vale 46,3 miliardi, 2,4% del Pil\"",
-   "url": "https://www.adnkronos.com/economia/testa-informare-space-e-blue-vale-46-3-miliardi-2-4-del-pil_2baAsSgHTfWApzhhj4Mkgo"
-  },
-  {
-   "data": "2026-11-18T12:06:45+00:00",
+   "data": "2026-11-18T19:00:41+00:00",
    "fonte": "ANSA",
-   "titolo": "Crosetto: 'Contro la guerra ibrida risorse per 6 miliardi nei prossimi anni'",
+   "titolo": "'Futuro Nazionale viola la legge Scelba', la Procura di Roma apre un fascicolo",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/futuro-nazionale-viola-la-legge-scelba-la-procura-di-roma-apre-un-fascicolo_a3af0102-2a85-40ca-9ff0-e03b981a65b6.html"
+  },
+  {
+   "data": "2026-11-18T18:55:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "De Gennaro raccomandò il fratello alla guida della Guardia di Finanza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/i-pm-di-caltanissetta-de-gennaro-raccomando-il-fratello-con-letta-per-la-nomina-a-comandante-della_82bb3024-e2ec-4e48-a758-11a6337ac28f.html"
+  },
+  {
+   "data": "2026-11-18T18:53:26+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ronde anti migranti alla periferia di Roma, 'vergogna'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/ronde-anti-migranti-alla-periferia-di-roma-vergogna_059ebe98-44b9-4cb8-9550-031b69c3a9ed.html"
+  },
+  {
+   "data": "2026-11-18T18:53:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Identificato nickname Mikhail Andropov, a Napoli un fascicolo in Procura",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/identificato-nickname-mikhail-andropov-a-napoli-un-fascicolo-in-procura_1c07aef8-81cd-4a38-93c3-7e2b5971a7f1.html"
+  },
+  {
+   "data": "2026-11-18T18:48:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Xi accoglie Trump all'aeroporto di Shenzhen e lo abbraccia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/xi-accoglie-trump-allaeroporto-di-shenzhen-e-lo-abbraccia_17e71e32-b3bf-40a2-8db8-97caa2c1d4c1.html"
+  },
+  {
+   "data": "2026-11-18T18:44:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Anthropic alla prova della borsa, dopo Nvidia è test per l'IA",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/18/anthropic-pronta-alla-maxi-quotazione-test-per-lia-dopo-nvidia_dfa59b00-bf9f-4c12-a1dd-94aa8fa3e1f1.html"
+  },
+  {
+   "data": "2026-11-18T18:43:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, Sabatelli (Aisla): \"Terapie mirate all'Rna aprono nuove prospettive di cura\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-sabatelli-aisla-terapie-mirate-allrna-aprono-nuove-prospettive-di-cura_5vY3WGAtjHXTIbhblIaSOk"
+  },
+  {
+   "data": "2026-11-18T18:39:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crosetto: 'Servono 5mila specialisti cyber'. Investimenti per 6 miliardi",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/crosetto-contro-la-guerra-ibrida-risorse-per-6-miliardi-nei-prossimi-anni_c8b81495-423d-42a6-aab7-030b0af8f27d.html"
   },
   {
-   "data": "2026-11-18T12:04:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Atp Finals: nuova sconfitta per Bolelli-Vavassori, si allontanano le semifinali",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/atp-finals-nuova-sconfitta-per-bolelli-vavassori-si-allontanano-semifinali_694f088c-a8cd-4b51-8693-7b7aaa20aa8a.html"
-  },
-  {
-   "data": "2026-11-18T12:03:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "La sorella di Andrea Pazienza al sindaco di Napoli: \"Un museo custodisca il suo murale\"",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/18/la-sorella-di-andrea-pazienza-al-sindaco-di-napoli-un-museo-custodisca-il-suo-murale_dcb51390-fa82-4dec-a752-28578a5daf4a.html"
-  },
-  {
-   "data": "2026-11-18T12:03:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tragedia nei boschi di Savona, morti due cacciatori",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/tragedia-nei-boschi-di-savona-morti-due-cacciatori_8509b6f6-86fb-446c-b57a-b2ed962cb70d.html"
-  },
-  {
-   "data": "2026-11-18T12:02:17+00:00",
+   "data": "2026-11-18T18:34:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "La Russa: \"Spazio e mare centrali per sviluppo economico del Paese\"",
-   "url": "https://www.adnkronos.com/economia/la-russa-spazio-e-mare-centrali-per-sviluppo-economico-del-paese_78U2U2ncEVhdfwXL3TrFGw"
+   "titolo": "Atp Finals, oggi Cobolli-Tiafoe 6-7 - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-cobolli-tiafoe-oggi-atp-finals-live-risultato-classifica_45cL80ty2x3Ny1aCgO06Qo"
   },
   {
-   "data": "2026-11-18T11:59:52+00:00",
+   "data": "2026-11-18T18:33:35+00:00",
    "fonte": "ANSA",
-   "titolo": "Arriva la pensione dedicata per le forze dell'ordine, calcolo con fino a 4 anni in più",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/arriva-la-pensione-dedicata-per-le-forze-dellordine-calcolo-con-fino-a-4-anni_04c9d0a1-c7bc-4d02-831f-24ffa707b69a.html"
+   "titolo": "Morì di tumore a 14 anni, i genitori condannati per omicidio colposo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/figlio-morto-di-tumore-2-anni-ai-genitori-per-omicidio-colposo_e6ab1ae9-2375-4d75-9ce8-450798d81e79.html"
   },
   {
-   "data": "2026-11-18T11:57:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Domani torna maltempo al Centro-Nord, poi miglioramento generale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/domani-torna-maltempo-al-centro-nord-poi-miglioramento-generale_1dc9492e-53fb-404a-a466-38c9986f6967.html"
-  },
-  {
-   "data": "2026-11-18T11:57:04+00:00",
+   "data": "2026-11-18T18:29:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Gf Vip, salta la puntata di venerdì 20 novembre: l'annuncio",
-   "url": "https://www.adnkronos.com/spettacoli/gf-vip-salta-puntata-venerdi-20-novembre-quando-semifinale_6wYA7dvZl2L2M1ttux4oUU"
+   "titolo": "Sla, Massimelli (Aisla): \"Nessuna persona e nessuna famiglia devono essere lasciate sole\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-massimelli-aisla-nessuna-persona-e-nessuna-famiglia-devono-essere-lasciate-sole_1Mwwhh5AANqSVKzzSCwm7K"
   },
   {
-   "data": "2026-11-18T11:54:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Poste, accordo con Bancomat per scambio denaro fra privati",
-   "url": "https://www.adnkronos.com/economia/poste-accordo-con-bancomat-per-scambio-denaro-fra-privati_5JW6VUNSwMFZif6iI8cfRS"
-  },
-  {
-   "data": "2026-11-18T11:53:19+00:00",
+   "data": "2026-11-18T18:24:29+00:00",
    "fonte": "ANSA",
-   "titolo": "Putin e Trump si stringono la mano a Shenzhen",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/putin-e-trump-si-stringono-la-mano-a-shenzhen_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
-  },
-  {
-   "data": "2026-11-18T11:39:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Comandante Centcom vede il capo Idf per fare il punto in caso di ripresa della guerra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/comandante-centcom-vede-capo-idf-per-fare-il-punto-in-caso-ripresa_c716c063-4ad1-4fdb-96b8-256f5a3a08ec.html"
-  },
-  {
-   "data": "2026-11-18T11:33:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Per sette anni hanno maltrattato i figli minorenni, arrestata coppia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/per-sette-anni-hanno-maltrattato-i-figli-minorenni-arrestata-coppia_908b4bc2-3835-49d3-beb5-ea59c43158fd.html"
-  },
-  {
-   "data": "2026-11-18T11:24:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lega, Attilio Fontana: sfiducia a Romeo un errore che crea disagio, trovare uno sfogo per malumori",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/lega-a.fontana-sfiducia-a-romeo-un-errore-che-crea-disagio-trovare-uno_c5ba7698-b7a5-4f0f-845e-a908a6599142.html"
-  },
-  {
-   "data": "2026-11-18T11:15:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Media, con Mary Peltola i dem vincono anche in Alaska",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/media-con-mary-peltola-i-dem-vincono-anche-in-alaska_dda72782-aa77-4765-ae43-56acdbee572d.html"
-  },
-  {
-   "data": "2026-11-18T11:12:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Melillo alla Commissione sulla morte di David Rossi: 'Rischio di interferenze e esposizione ai media'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/melillo-a-commissione-sulla-morte-di-david-rossi-rischio-di-interferenze-e-esposizione-ai-media_8e00e028-5213-4339-b8a1-5c5a6c2b9095.html"
-  },
-  {
-   "data": "2026-11-18T11:06:35+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Angela Merkel tra i 'Testimoni del Tempo' dell'Acqui Storia 2027",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/angela-merkel-tra-i-testimoni-del-tempo-dellacqui-storia-2027_5c451f40-c146-4fae-988f-52499bd419b5.html"
-  },
-  {
-   "data": "2026-11-18T11:01:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ddl Antisemitismo, le lacrime di Fiano: \"Lascio il Pd\"",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/11/18/ddl-antisemitismo-le-lacrime-di-fiano-lascio-il-pd_cb296302-d64a-4829-b5f2-cd21691007c9.html"
+   "titolo": "ANSA Newsroom | Fuori tutti: allarme bomba nelle scuole, caos e evacuazioni",
+   "url": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/18/ansa-newsroom-fuori-tutti-allarme-bomba-nelle-scuole-caos-e-evacuazioni_732f890a-dda9-4cbc-9dca-a464e6d7c70b.html"
   }
  ]
 }
