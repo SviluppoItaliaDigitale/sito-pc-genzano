@@ -103,11 +103,25 @@ Leggi di più qui:
 - [Le regole sul volontariato nel Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-5-volontariato/)
 - [Il datore di lavoro del volontario](/comunicazioni/2026-11-16-datore-di-lavoro-del-volontario/)
 
+## Novità del 18 novembre 2026: i danni
+
+Il 17 novembre 2026 il Commissario ha deciso di raccogliere le richieste per i danni.
+
+- Le richieste le raccolgono i comuni.
+- Il comune di Genzano di Roma **non è** nell'elenco.
+- Nell'elenco ci sono Marino, Nemi, Rocca Priora, Roma e altri comuni.
+- Ci sono due moduli: uno per le case e i beni delle persone, uno per le attività economiche.
+- I comuni devono mandare i dati entro il **14 dicembre 2026**.
+- Fare la richiesta **non dà** subito i soldi.
+- I soldi coprono solo i danni non pagati dall'assicurazione.
+
+Se abiti in uno di questi comuni e hai avuto danni, parla con il tuo comune.
+
 ## E adesso?
 
 Lo stato di emergenza è in corso. Il Commissario fa gli interventi.
 
-Se escono moduli e scadenze per i cittadini, aggiorniamo questa pagina.
+Se escono altre scadenze per i cittadini, aggiorniamo questa pagina.
 
 In caso di pericolo chiama il **112**. Il 112 è il numero unico di emergenza.
 
@@ -120,5 +134,6 @@ Altre informazioni:
 
 - [Gazzetta Ufficiale: delibera del 14 luglio 2026, stato di emergenza](https://www.gazzettaufficiale.it/eli/id/2026/07/24/26A03705/sg)
 - [Gazzetta Ufficiale: ordinanza n. 1207 dell'11 agosto 2026](https://www.gazzettaufficiale.it/eli/id/2026/08/24/26A04285/sg)
+- [Bollettino Ufficiale della Regione Lazio n. 92: decreto del Commissario del 17 novembre 2026](https://www.regione.lazio.it/bur?vw=ultimibur)
 - [Regione Lazio: documenti sull'ordinanza n. 1207](https://www.regione.lazio.it/documenti/91333)
 - [Normattiva: Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1)

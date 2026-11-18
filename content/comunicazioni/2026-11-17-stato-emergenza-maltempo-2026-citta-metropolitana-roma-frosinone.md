@@ -27,7 +27,7 @@ draft: false
 
 Il maltempo dei mesi di **gennaio e febbraio 2026** ha una conseguenza ufficiale anche per il nostro territorio: lo **stato di emergenza** per la **provincia di Frosinone** e la **Città metropolitana di Roma Capitale**, di cui fa parte anche Genzano di Roma. Lo ha dichiarato il Consiglio dei ministri. Una successiva ordinanza del Dipartimento della Protezione Civile ha stabilito i primi interventi. Li raccontiamo perché contengono misure concrete per famiglie e attività colpite e per le organizzazioni di volontariato.
 
-I testi **non elencano i comuni** danneggiati. Questa pagina non dice quindi che Genzano sia fra quelli colpiti. Spiega che cosa prevedono gli atti per chi è stato danneggiato nell'area indicata.
+La delibera e l'ordinanza **non elencano i comuni** danneggiati. Un decreto del Commissario delegato del 17 novembre 2026 elenca invece i comuni dove parte la ricognizione dei danni (vedi più sotto): **Genzano di Roma non è nell'elenco**. Questa pagina spiega che cosa prevedono gli atti per chi è stato danneggiato nell'area indicata.
 
 ## Che cosa è successo, secondo gli atti
 
@@ -76,9 +76,20 @@ L'ordinanza considera gli eventi **causa di forza maggiore**. Chi ha un mutuo su
 
 L'articolo 8 riguarda direttamente chi fa volontariato. Per l'impiego nelle attività previste dall'ordinanza delle **organizzazioni di volontariato iscritte nell'elenco territoriale della Regione Lazio** valgono i benefici degli **articoli 39 e 40 del decreto legislativo 1/2018**. Sono il mantenimento del posto di lavoro e del trattamento economico per i volontari, e il rimborso delle spese autorizzate. Il tutto nei limiti delle risorse disponibili. Le richieste di rimborso le esamina il Commissario delegato, secondo la direttiva del Presidente del Consiglio dei ministri del 24 febbraio 2020. Per approfondire come funzionano queste tutele leggi il [commentario al Capo V del Codice](/normativa/testo-unico-protezione-civile/capo-5-volontariato/) e l'articolo sul [datore di lavoro del volontario](/comunicazioni/2026-11-16-datore-di-lavoro-del-volontario/).
 
+## Aggiornamento del 18 novembre 2026: parte la ricognizione dei danni
+
+Con il **decreto n. O00001 del 17 novembre 2026**, pubblicato nel Bollettino Ufficiale della Regione Lazio n. 92 (supplemento 3) il giorno stesso, il Commissario delegato ha avviato la **ricognizione dei fabbisogni** e l'attivazione dei **primi contributi economici** per cittadini e imprese. Il decreto si fonda sull'articolo 4 dell'ordinanza 1207/2026 e sull'articolo 25, comma 2, lettere c) ed e) del decreto legislativo 1/2018.
+
+- **Chi raccoglie le segnalazioni.** Sono i **sindaci** dei comuni elencati, nominati soggetti attuatori. Lavorano a titolo gratuito. Per la provincia di Roma i comuni sono: Bellegra, Bracciano, Capena, Ciciliano, Formello, Gavignano, Genazzano, Gerano, Licenza, Magliano Romano, Marano Equo, Marino, Montelibretti, Morlupo, Nemi, Palestrina, Poli, Ponzano Romano, Rocca Priora, Rocca Santo Stefano, Roccagiovine, Roma Capitale, Sacrofano, San Vito Romano, Saracinesco e Tivoli. Per la provincia di Frosinone: Alvito, Amaseno, Atina, Castelnuovo Parano, Castro dei Volsci, Ceccano, Esperia, Frosinone, Isola del Liri, Picinisco, Rocca d'Arce, Sant'Ambrogio sul Garigliano, Santopadre, Terelle e Veroli. Fra i comuni dei Castelli Romani ci sono **Marino, Nemi e Rocca Priora**.
+- **Come.** I comuni usano un avviso pubblico con due moduli: il **modulo B1** per i danni ai beni dei privati e la domanda di contributo per l'immediato sostegno alla popolazione, il **modulo C1** per i danni alle attività economiche e produttive. Ogni comune pubblica l'avviso e dice come consegnare i moduli.
+- **Scadenza.** I comuni devono trasmettere al Commissario i risultati della ricognizione entro il **14 dicembre 2026**.
+- **Che cosa non significa.** La segnalazione **non dà un diritto automatico** al ristoro. I danni devono avere un nesso diretto con gli eventi di gennaio e febbraio 2026. I contributi coprono solo la parte non rimborsata dalle **assicurazioni**. Le richieste presentate in modo diverso da quello stabilito dal decreto non vengono prese in considerazione.
+
+Se abiti in uno dei comuni elencati e hai subito danni, rivolgiti al tuo comune. Se vivi a Genzano di Roma, il decreto non ti coinvolge direttamente.
+
 ## E adesso?
 
-Lo stato di emergenza è in corso e l'attuazione spetta al Commissario delegato. Aggiorneremo questa pagina se le fonti ufficiali pubblicano moduli e scadenze per i cittadini.
+Lo stato di emergenza è in corso e l'attuazione spetta al Commissario delegato. Aggiorneremo questa pagina se le fonti ufficiali pubblicano altre scadenze per i cittadini.
 
 In caso di pericolo chiama il **112**. Per i numeri di emergenza e i comportamenti da seguire in caso di maltempo consulta [i numeri utili](/numeri-utili/) e le pagine sul [rischio idrogeologico](/rischi-prevenzione/).
 
@@ -93,5 +104,6 @@ In caso di pericolo chiama il **112**. Per i numeri di emergenza e i comportamen
 
 - [Gazzetta Ufficiale — Delibera del Consiglio dei ministri 14 luglio 2026: dichiarazione dello stato di emergenza (GU n. 170 del 24 luglio 2026)](https://www.gazzettaufficiale.it/eli/id/2026/07/24/26A03705/sg)
 - [Gazzetta Ufficiale — Ordinanza n. 1207 dell'11 agosto 2026 (GU n. 195 del 24 agosto 2026)](https://www.gazzettaufficiale.it/eli/id/2026/08/24/26A04285/sg)
+- [Bollettino Ufficiale della Regione Lazio n. 92 del 17 novembre 2026 — Decreto del Commissario delegato n. O00001 del 17 novembre 2026](https://www.regione.lazio.it/bur?vw=ultimibur)
 - [Regione Lazio — Documentazione: ordinanza del Capo del Dipartimento della Protezione Civile n. 1207](https://www.regione.lazio.it/documenti/91333)
 - [Normattiva — Decreto legislativo 2 gennaio 2018, n. 1, Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1)
