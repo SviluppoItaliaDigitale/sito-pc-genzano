@@ -187,7 +187,7 @@ Istituto di Ricerca per la Protezione Idrogeologica del CNR. È l'autorità scie
 Corpo Nazionale Soccorso Alpino e Speleologico. Struttura del Club Alpino Italiano (CAI) specializzata nel soccorso in montagna, in grotta e negli ambienti impervi. È una struttura operativa del Servizio nazionale di protezione civile.
 
 ### COC — Centro Operativo Comunale
-Struttura che il Sindaco attiva per coordinare un'emergenza sul territorio comunale. Riunisce le funzioni necessarie, come tecnica, volontariato, sanità, assistenza alla popolazione, comunicazione e viabilità.
+Struttura che il Sindaco attiva per coordinare un'emergenza sul territorio comunale. È organizzato in funzioni di supporto (per esempio assistenza alla popolazione, sanità, volontariato, telecomunicazioni), ognuna con un referente; il Piano comunale stabilisce quali.
 *Approfondisci: [Il modello di intervento: dal COC alla DiComaC](/conoscere/le-quattro-fasi/modello-di-intervento/).*
 
 ### COI — Centro Operativo Intercomunale

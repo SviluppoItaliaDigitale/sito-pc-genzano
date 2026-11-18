@@ -37,7 +37,7 @@ Il primo anello, e il più vicino al cittadino, è il **Centro Operativo Comunal
 
 ## Le funzioni di supporto
 
-Dentro ogni centro di coordinamento il lavoro è organizzato **per funzioni di supporto**. L'elenco attuale, con sedici funzioni, è nella Direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021; il Comune sceglie nel Piano quali attivare. Lo schema nasce con il Metodo Augustus (1997), oggi superato. Ogni funzione raggruppa attività omogenee e ha un responsabile, così che in emergenza si sappia subito «chi fa cosa». Tra le funzioni tipiche:
+Dentro ogni centro di coordinamento il lavoro è organizzato **per funzioni di supporto**. L'elenco attuale, con sedici funzioni, è nella Direttiva del Presidente del Consiglio dei ministri del 30 aprile 2021; il Comune sceglie nel Piano quali attivare. Lo schema nasce con il Metodo Augustus (1997); la Direttiva del 2021 ne ha aggiornato i nomi e l'elenco. Molti piani comunali, compreso quello di Genzano di Roma, usano ancora i nomi precedenti. Ogni funzione raggruppa attività omogenee e ha un responsabile, così che in emergenza si sappia subito «chi fa cosa». Tra le funzioni tipiche:
 
 - **sanità e assistenza sociale**;
 - **volontariato**;

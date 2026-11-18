@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-Genzano di Roma è a 435 metri di altezza. Può nevicare tra gennaio e marzo. Quando nevica, le strade diventano pericolose. Prepararsi è importante.
+Genzano di Roma è a circa 458 metri di altezza. Può nevicare tra gennaio e marzo. Quando nevica, le strade diventano pericolose. Prepararsi è importante.
 
 ## Quando arriva la neve
 

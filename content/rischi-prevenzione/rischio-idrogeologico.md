@@ -11,7 +11,7 @@ toc: true
 # Aggiunto 12 maggio 2026.
 howto_prima: "Informati sullo stato di allerta consultando la pagina Allerte Meteo. Verifica che tombini e caditoie vicino casa siano liberi da foglie e detriti. Metti in sicurezza auto e beni che si trovano in locali interrati o a rischio allagamento. Non lasciare oggetti di valore in cantine o garage a rischio. Tieni pronto il kit di emergenza. Individua le zone più sicure dell'abitazione (i piani alti)."
 howto_durante: "Se sei in casa, chiudi immediatamente il contatore del gas e dell'elettricità se l'acqua raggiunge gli impianti. Spostati ai piani alti della casa. NON scendere mai in cantine, garage o locali interrati. Tieni chiuse le porte che danno verso i locali più bassi per rallentare l'ingresso dell'acqua. Se sei all'aperto, allontanati dai corsi d'acqua, dai fossi, dai ponti e dalle zone depresse. Non attraversare mai strade allagate, né a piedi né in auto."
-howto_dopo: "Non rientrare in casa finché le autorità non lo autorizzano. Non entrare in locali allagati dove sono presenti impianti elettrici. Bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano. Fai attenzione alle strade che potrebbero essere state danneggiate o rese scivolose dal fango. Segnala al 112 situazioni di pericolo (smottamenti, strade interrotte, persone in difficoltà). Documenta i danni con foto per le eventuali richieste di risarcimento."
+howto_dopo: "Non rientrare in casa finché le autorità non lo autorizzano. Non entrare in locali allagati dove sono presenti impianti elettrici. Bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano. Fai attenzione alle strade che potrebbero essere state danneggiate o rese scivolose dal fango. Segnala al 112 situazioni di pericolo (smottamenti, strade interrotte, persone in difficoltà). Fotografa i danni prima di pulire: le foto possono servire per la segnalazione dei danni al Comune. Non mangiare cibi che sono stati a contatto con l'acqua dell'alluvione. Prima di riattivare gas e impianto elettrico, se necessario chiedi il parere di un tecnico."
 versione_facile: "rischio-idrogeologico-facile"
 ---
 Il rischio idrogeologico riguarda alluvioni, allagamenti, frane e smottamenti. Piogge intense e persistenti possono innescarli anche in poche ore.
@@ -163,7 +163,7 @@ Come riconoscere i segnali di una frana e che cosa fare se la terra si muove: lo
 - **Non attraversare mai** un sottopassaggio o una strada allagata.
 - Pochi centimetri d'acqua bastano a far perdere aderenza o a spegnere il motore.
 - Se l'acqua blocca l'auto e puoi uscire senza entrare nella corrente, **abbandonala** e raggiungi a piedi un punto più elevato.
-- Se l'auto è ferma in una corrente forte, resta dentro e chiama il 112; se l'acqua sale nell'abitacolo, sali sul tetto.
+- Se l'auto è bloccata in una corrente forte e non puoi uscire senza entrare nell'acqua, chiama il 112; se l'acqua entra nell'abitacolo, sali sul tetto.
 
 ## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO l'evento {#cosa-fare-dopo}
 - Non rientrare in casa finché le autorità non lo autorizzano.
@@ -171,11 +171,13 @@ Come riconoscere i segnali di una frana e che cosa fare se la terra si muove: lo
 - Bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano.
 - Evita le strade danneggiate o rese scivolose dal fango.
 - Segnala al **112** situazioni di pericolo: smottamenti, strade interrotte, persone in difficoltà.
-- Documenta i danni con foto per le eventuali richieste di risarcimento.
+- Non mangiare cibi che sono stati a contatto con l'acqua dell'alluvione: possono essere contaminati.
+- Prima di riattivare gas e impianto elettrico, verifica se puoi farlo; se necessario, chiedi il parere di un tecnico.
+- Fotografa i danni prima di pulire: le foto possono servire per la segnalazione dei danni al Comune.
 
 {{< cosa-non-fare titolo="Cosa NON fare in caso di alluvione/allagamento" >}}
-- **Non scendere mai in cantina o al piano interrato** durante un allagamento: è la causa di morte più frequente
-- **Non attraversare mai strade allagate**, né a piedi né in auto (anche pochi cm di acqua corrente possono trascinarti via)
+- **Non scendere mai in cantina, in garage o nei seminterrati** durante un allagamento: rischi la vita
+- **Non attraversare mai strade allagate**, né a piedi né in auto (anche pochi centimetri d'acqua possono farti cadere o far perdere il controllo dell'auto)
 - **Non avvicinarti a fiumi, fossi o canali in piena**
 - **Non sottovalutare le allerte gialle**: anche piogge moderate possono causare allagamenti localizzati
 - **Non ostruire tombini e caditoie** con rifiuti o foglie

@@ -83,9 +83,12 @@ Quando l'emergenza finisce, si torna alla normalità.
 
 ## Dove si trova il COC a Genzano di Roma
 
-A Genzano di Roma il COC si trova **al Comando di Polizia Locale**.
+Il Piano del Comune indica **due posti** per il COC:
 
-Questa è la sede principale. In alcuni casi si può usare un'altra sede.
+- il **Palazzetto dello sport Gino Cesaroni**;
+- la sede della **Polizia Locale**, in via Roma 31.
+
+Il Piano non dice quale dei due è il principale.
 
 ## Cosa devi fare tu quando il COC è aperto
 

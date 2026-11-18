@@ -1173,7 +1173,7 @@ dati:
 
   - id: coc-funzioni-supporto
     dato: "Funzioni di supporto del Centro Operativo Comunale"
-    valore: "sedici funzioni senza numero (Direttiva PCM 30 aprile 2021), che il Comune sceglie, accorpa o riduce nel proprio Piano; il Metodo Augustus (1997, nove funzioni comunali numerate) è l'origine storica, superata"
+    valore: "sedici funzioni senza numero (Direttiva PCM 30 aprile 2021), che il Comune sceglie, accorpa o riduce nel proprio Piano; il Metodo Augustus (1997, nove funzioni comunali numerate) è l'origine storica, aggiornata dalla Direttiva del 2021"
     fonti:
       - nome: "Direttiva PCM 30 aprile 2021, Gazzetta Ufficiale n. 160 del 6 luglio 2021"
         url: "https://www.gazzettaufficiale.it/eli/gu/2021/07/06/160/sg/pdf"
@@ -1309,3 +1309,29 @@ dati:
     vietati:
       - regex: '\b5\s+novembre\s+(?:del\s+)?1854\b'
         perche: "Il 5 novembre è la data nel calendario giapponese dell'epoca: nel calendario gregoriano il terremoto è del 24 dicembre 1854."
+
+  # --- Voci aggiunte il 18/11/2026 dalla verifica dei video su COC e freddo.
+
+  - id: genzano-altitudine
+    dato: "Altitudine di Genzano di Roma"
+    valore: "458 m s.l.m. il centro del comune; territorio da 102 a 496 m, media 273 m (ISTAT, Altimetria dei Comuni al 31/12/2021)"
+    fonti:
+      - nome: "ISTAT, Altimetria dei Comuni al 31/12/2021"
+        url: "https://www.istat.it/it/archivio/156224"
+    vietati:
+      - regex: '\b4[23]5\s*(?:m\b|metri|m\s*s\.?l\.?m)'
+        perche: "Il dato ISTAT 2021 del centro del comune è 458 m; 430 e 435 m non hanno fonte aggiornata."
+        contesto: 'Genzano'
+        finestra: 200
+
+  - id: coc-sede-genzano
+    dato: "Sede del Centro Operativo Comunale di Genzano di Roma"
+    valore: "il Piano comunale indica due sedi (Palazzetto dello sport Gino Cesaroni e Polizia Locale, via Roma 31) senza indicarne una principale"
+    fonti:
+      - nome: "Comune di Genzano di Roma, Piano di Protezione Civile Comunale, cap. 11"
+        url: "https://www.comune.genzanodiroma.roma.it/sites/comune.genzanodiroma.roma.it/files/2024-12/Piano%20di%20Protezione%20Civile%20Comunale%20-%20Genzano%20di%20Roma.pdf"
+    vietati:
+      - regex: '\bsede\s+(?:primaria|principale)\b'
+        perche: "Il Piano comunale non indica una sede principale del COC: va chiesto al Comune prima di scriverlo."
+        contesto: 'COC|Centro Operativo'
+        finestra: 300

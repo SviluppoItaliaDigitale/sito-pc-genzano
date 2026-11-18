@@ -31,6 +31,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 | Documento | Formato |
 |---|---|
 | [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf) | PDF · 5,6 MB |
+| [Piano di Protezione Civile Comunale, versione pubblicata dal Comune](https://www.comune.genzanodiroma.roma.it/sites/comune.genzanodiroma.roma.it/files/2024-12/Piano%20di%20Protezione%20Civile%20Comunale%20-%20Genzano%20di%20Roma.pdf) | PDF · sito del Comune |
 | [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf) | PDF · 5,7 MB |
 | [Carta di Inquadramento Territoriale](https://www.protezionecivilegenzano.it/area-download/normativa/Inquadramento_Territoriale_PC_Genzano.pdf) | PDF · 5,7 MB |
 | [Carta Rischio Idrogeologico](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Idrogeologico_PC_Genzano.pdf) | PDF · 5,4 MB |

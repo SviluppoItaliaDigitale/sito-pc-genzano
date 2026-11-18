@@ -7,7 +7,7 @@ badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-24-sicurezza-cucina-festivita.webp"
-image_alt: "Cucina domestica ordinata in preparazione di pranzo festivo con pentole accese, estintore visibile e ambiente aerato"
+image_alt: "Cover dell'articolo: Cucina sicura durante le feste"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-La cucina è pericolosa. Durante le feste il rischio è più alto. Ci sono molte pentole accese. Ci sono i bambini vicino ai fornelli. È facile distrarsi.
+In cucina succedono molti incidenti. Durante le feste il rischio è più alto. Ci sono molte pentole accese. Ci sono i bambini vicino ai fornelli. È facile distrarsi.
 
 Segui questi consigli. Puoi evitare molti incidenti.
 
@@ -40,7 +40,7 @@ Fai queste cose prima di iniziare:
 - Pulisci il forno dai residui di grasso.
 - Tieni il piano di lavoro libero e pulito.
 - Metti un coperchio vicino ai fornelli. Serve per spegnere le fiamme.
-- Tieni le presine asciutte. Le presine bagnate bruciano.
+- Tieni le presine asciutte. Le presine bagnate scottano.
 
 ## Mentre cucini
 
@@ -54,26 +54,34 @@ Tieni i canovacci lontani dalla fiamma. Bruciano facilmente.
 
 I bambini non devono stare vicino ai fornelli. Decidi una zona sicura per loro. La zona deve essere lontana dal calore.
 
+Gira i manici delle pentole verso il muro. Usa i fuochi più interni.
+
 Spiega ai bambini cosa non devono toccare. Usa parole semplici e un tono calmo.
 
 Puoi far fare ai bambini cose sicure. Per esempio: apparecchiare la tavola o mescolare ingredienti freddi.
+
+## Se senti odore di gas
+
+1. Non accendere e non spegnere le luci. Non usare il campanello e il telefono in casa. Basta una scintilla.
+2. Apri le finestre e le porte.
+3. Chiudi il gas, solo se lo raggiungi subito.
+4. Esci. Da fuori chiama il 112 e il pronto intervento gas. Il numero è nella bolletta.
 
 ## Se si accende un fuoco
 
 ### Pentola di olio in fiamme
 
-1. Non buttare acqua sull'olio. L'acqua fa esplodere le fiamme.
-2. Spegni il fornello.
-3. Copri la pentola con il coperchio.
-4. Aspetta che si raffreddi.
-5. Se le fiamme sono grandi: esci dalla cucina. Chiama il 112, il numero unico di emergenza.
+1. Non buttare acqua sull'olio. L'acqua fa schizzare l'olio. Il fuoco diventa più grande.
+2. Non spostare la padella.
+3. Spegni il fornello.
+4. Copri la pentola con il coperchio. Non sollevarlo. Aspetta che si raffreddi.
+5. Se il fuoco non si spegne subito: esci. Chiudi la porta. Chiama il 112, il numero unico di emergenza.
 
 ### Forno in fiamme
 
 1. Spegni il forno.
 2. Non aprirlo. L'aria alimenta il fuoco.
-3. Aspetta 1-2 minuti. Di solito il fuoco si spegne da solo.
-4. Se dura di più: chiama il 112, il numero unico di emergenza.
+3. Se il fuoco non si spegne o esce fumo: esci. Chiudi la porta. Chiama il 112, il numero unico di emergenza.
 
 ### Vestiti che bruciano
 
@@ -92,14 +100,14 @@ Puoi far fare ai bambini cose sicure. Per esempio: apparecchiare la tavola o mes
 
 ### Il frigorifero
 
-- Il frigorifero deve stare tra 0 e 4 gradi.
-- Non lasciare il cibo fuori dal frigorifero per più di 2 ore.
+- Il frigorifero deve essere freddo. Leggi il libretto per la temperatura giusta.
+- Non lasciare il cibo cotto fuori dal frigorifero per ore.
 - Non ricongelare il cibo già scongelato.
 
 ### Preparare in anticipo
 
 - Fai raffreddare il cibo cotto prima di metterlo in frigo.
-- Riscalda bene il cibo prima di servirlo.
+- Riscalda bene il cibo prima di servirlo. Deve essere caldo anche al centro.
 - Scrivi la data sul contenitore.
 
 ### Taglieri separati
@@ -125,7 +133,7 @@ Non bere alcolici mentre cucini con i fornelli accesi. Non guidare dopo aver bev
 
 - Non lasciare mai le candele accese senza guardarle.
 - Tieni l'albero di Natale lontano da fonti di calore.
-- Le luci di Natale devono avere il marchio CE. Non lasciarle accese tutta la notte.
+- Le luci di Natale devono avere il marchio CE e le istruzioni in italiano. Spegnile di notte.
 - Attenzione ai tappi dello spumante: possono colpire gli occhi.
 - I fuochi d'artificio sono pericolosi. Stai lontano se non sei esperto.
 

@@ -154,7 +154,7 @@ Durante l'**emergenza Ucraina (2022)** il Gruppo ha operato con un **minibus Mer
 
 ## Emergenze neve: quando l'Atego diventa spazzaneve
 
-Genzano è a circa 435 metri di altitudine: le nevicate sono rare ma non eccezionali. Quando arrivano, il **Mercedes Atego** del Gruppo viene allestito in configurazione invernale:
+Genzano è a circa 458 metri di altitudine: le nevicate sono rare ma non eccezionali. Quando arrivano, il **Mercedes Atego** del Gruppo viene allestito in configurazione invernale:
 
 - il **cassone** sostituisce la cisterna
 - si monta uno **spargisale da 1 m³** con comando da cabina

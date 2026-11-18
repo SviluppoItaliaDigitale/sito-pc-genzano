@@ -46,7 +46,7 @@ Il COC è organizzato per **funzioni di supporto**: settori di attività, ciascu
 
 La Direttiva non numera le funzioni e lascia a ogni Comune la scelta: il Piano comunale definisce quali attivare, e può accorparle o ridurle in base al personale formato disponibile. Quali funzioni attivi il COC di Genzano di Roma lo stabilisce quindi il [Piano](/piano-emergenza/). Non tutte sono sempre attive: dipende dalla natura e dalla dimensione dell'evento.
 
-Le sigle «F1–F9» e il Metodo Augustus (1997) sono lo schema precedente. Si trovano ancora in molti testi e piani, ma la Direttiva del 2021 lo ha superato.
+Le sigle «F1–F9» vengono dal Metodo Augustus (1997), lo schema precedente. La Direttiva del 2021 ne ha aggiornato i nomi e l'elenco. Molti piani comunali, compreso quello di Genzano di Roma, usano ancora i nomi precedenti.
 
 ## Chi partecipa al COC
 
@@ -84,7 +84,7 @@ La discesa di livello è altrettanto importante: quando l'evento finisce, si rit
 
 ## Dove si trova il COC a Genzano di Roma
 
-A Genzano di Roma il **COC, quando attivato, ha sede presso il Comando di Polizia Locale**. È la sede primaria individuata dal Piano di Protezione Civile del Comune. Possono essere usate **sedi alternative** in caso di esigenze motivate (sede primaria non agibile, evento che la coinvolge direttamente, scelta operativa del Sindaco). Il dettaglio organizzativo è contenuto nel [Piano di Protezione Civile del Comune di Genzano di Roma](/piano-emergenza/).
+Il Piano di Protezione Civile del Comune indica **due sedi** per il centro operativo: il **Palazzetto dello sport Gino Cesaroni** e la sede della **Polizia Locale**, in via Roma 31. Il Piano non indica quale delle due sia la principale. Per l'Infiorata 2026, per esempio, l'ordinanza n. 12 del 3 giugno 2026 ha collocato il COC al Comando della Polizia Locale, in via Roma 31/A. Il dettaglio organizzativo è contenuto nel [Piano di Protezione Civile del Comune di Genzano di Roma](/piano-emergenza/).
 
 ## Cosa significa per i cittadini
 

@@ -66,7 +66,7 @@ Le città scaldano più della campagna. Asfalto, cemento e tetti accumulano calo
 
 Secondo l'**ISPRA**, in una grande città la temperatura può salire **fino a 3 gradi** più che nelle zone rurali vicine. Cresce così il numero di **notti tropicali** — quando la minima non scende sotto i 20 gradi — e il corpo non recupera.
 
-Genzano è diversa: è un comune collinare dei Castelli, a circa **435 metri**, di norma **più fresco** del centro di Roma. Ma anche da noi, nelle ondate più intense, può capitare qualche notte tropicale.
+Genzano è diversa: è un comune collinare dei Castelli, a circa **458 metri**, di norma **più fresco** del centro di Roma. Ma anche da noi, nelle ondate più intense, può capitare qualche notte tropicale.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="piano-caldo" image="/images/dossier/heat-piano-caldo.webp" alt="Mappa dell'Europa colorata dall'arancione al rosso scuro che mostra l'anomalia della temperatura dell'aria in superficie nel 2022, con legenda da meno di 0 a oltre 2 gradi e loghi Unione Europea, Copernicus e Climate Change Service" align="top" kicker="Dal dato al bollettino" title="Prevedere<br>per proteggere" credito="© Unione Europea · Copernicus Climate Change Service · anomalia di temperatura 2022 · CC BY" >}}

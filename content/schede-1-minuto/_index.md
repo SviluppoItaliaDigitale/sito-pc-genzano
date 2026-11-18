@@ -99,7 +99,7 @@ Puoi anche **condividerle sui social** come immagini singole, oppure inviarle co
 </header>
 <ol class="scheda-1-min-passi">
   <li>Usa parole semplici: "Se la casa balla, ti chini sotto un tavolo robusto. Aspetta che finisca."</li>
-  <li>Mostra il vano della porta portante o l'angolo di un muro maestro: "Anche qui sei al sicuro".</li>
+  <li>Mostra il vano di una porta in un muro portante o una parete portante: "Anche qui puoi ripararti".</li>
   <li>NO ascensore. NO correre fuori durante la scossa. NO ripararti sotto una libreria o un mobile alto.</li>
   <li>Dopo la scossa: uscire ordinati, senza spingere, raggiungere il punto di ritrovo.</li>
   <li>Esercitati: ogni 2-3 mesi fai una mini-prova in casa, alla mattina. 30 secondi, niente di traumatico.</li>

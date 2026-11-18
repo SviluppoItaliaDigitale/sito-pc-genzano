@@ -15,7 +15,7 @@ versione_facile: "2026-01-31-neve-castelli-romani-organizzazione-facile"
 tts: true
 ---
 
-Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. Genzano è a circa 435 m s.l.m. Le correnti fredde da nord rendono possibili nevicate **tra gennaio e inizio marzo**. Quando arrivano — spesso inattese — possono causare **disagi seri**: strade bloccate, scuole chiuse, difficoltà per persone fragili e servizi essenziali.
+Nei **Castelli Romani** la neve non è la regola, ma nemmeno un'eccezione. Genzano è a circa 458 m s.l.m. Le correnti fredde da nord rendono possibili nevicate **tra gennaio e inizio marzo**. Quando arrivano — spesso inattese — possono causare **disagi seri**: strade bloccate, scuole chiuse, difficoltà per persone con fragilità e servizi essenziali.
 
 Vediamo come il territorio si prepara e cosa può fare ogni famiglia per affrontare una nevicata in serenità.
 
@@ -47,7 +47,7 @@ L'informazione ufficiale arriva dai **canali del Comune** e dai **bollettini reg
 
 In caso di **nevicata significativa**, il Gruppo Comunale di Protezione Civile può essere attivato per:
 
-- **Supporto alle persone fragili**: segnalazioni di anziani soli, persone con disabilità, case isolate.
+- **Supporto alle persone con fragilità**: segnalazioni di anziani soli, persone con disabilità, case isolate.
 - **Apertura del Centro Operativo Comunale (COC)** se il Sindaco lo richiede.
 - **Assistenza logistica**: distribuzione sale, segnalazione punti critici, supporto a Vigili del Fuoco e Polizia Locale.
 - **Pulizia** di marciapiedi davanti a scuole, presidi sanitari, aree sensibili.
@@ -111,6 +111,6 @@ La Protezione Civile civile — con la c minuscola — è fatta di questi gesti.
 
 - Articolo: [Gelate e ghiaccio sulle strade](/comunicazioni/2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali/)
 - Articolo: [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- Articolo: [Persone fragili: aiutare i vicini anziani](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
+- Articolo: [Persone con fragilità: aiutare i vicini anziani](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
 
 Una città che si prende cura dei più deboli sotto la neve è una città sicura tutto l'anno.

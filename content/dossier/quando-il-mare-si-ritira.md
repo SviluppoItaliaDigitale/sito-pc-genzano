@@ -83,7 +83,7 @@ Ma il Mediterraneo è **piccolo**: l'onda può arrivare in **pochi minuti**. Spe
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="costa-lazio" image="/images/dossier/maremoto-costa-calma.webp" alt="Spiaggia sabbiosa del litorale pontino al tramonto, con il promontorio del Monte Circeo sullo sfondo a destra, mare calmo e cielo sereno" align="top" kicker="E noi dei Castelli?" title="Genzano è lontana dal mare.<br>Ma il mare è vicino a noi" credito="Spiaggia di Sabaudia con il Monte Circeo (Lazio). Foto: Egnoka · pubblico dominio" >}}
-Genzano di Roma sorge a circa **435 metri**, all'interno dei Castelli Romani: **non è esposta al rischio maremoto**. Sarebbe sbagliato dire il contrario.
+Genzano di Roma sorge a circa **458 metri**, all'interno dei Castelli Romani: **non è esposta al rischio maremoto**. Sarebbe sbagliato dire il contrario.
 
 Ma d'estate andiamo tutti al mare: sul litorale del Lazio — da Ostia a Sabaudia, al Circeo — e altrove in Italia. Conoscere i segnali serve **lì, in spiaggia**, dove un giorno può fare la differenza.
 {{< /dossier-scena >}}

@@ -172,7 +172,7 @@ L'**[ISTAT](https://www.istat.it/dati/open-data/)** pubblica le statistiche uffi
 <tbody>
 <tr><td>Popolazione residente</td><td>22.865 abitanti</td><td>ISTAT, 1° gennaio 2023</td></tr>
 <tr><td>Superficie comunale</td><td>17,9 km²</td><td>ISTAT</td></tr>
-<tr><td>Altitudine del centro</td><td>435 m s.l.m.</td><td>—</td></tr>
+<tr><td>Altitudine del centro</td><td>458 m s.l.m.</td><td>ISTAT, Altimetria dei Comuni al 31/12/2021</td></tr>
 </tbody>
 </table>
 </div>

@@ -51,7 +51,7 @@ I sistemi **GIS** (Geographic Information System) permettono di **sovrapporre** 
 
 Senza pretesa di essere esaustivi, alcuni dati utili sul nostro territorio:
 
-- **Altitudine media**: circa **435 m s.l.m.** (il centro storico).
+- **Altitudine**: da 102 a 496 m s.l.m.; il centro del comune è a **458 m** (ISTAT, 2021).
 - **Superficie comunale**: circa **18 km²**.
 - **Popolazione residente**: circa **24.000 abitanti** (dati ISTAT).
 - **Classificazione sismica**: zona **2B**, con un'accelerazione attesa fra 0,15 e 0,20 g.

@@ -6,7 +6,7 @@ badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-30-capodanno-petardi-sicurezza.webp"
-image_alt: "Segnale di divieto di botti e fuochi d'artificio in piazza italiana con cartello ordinanza comunale affisso vicino all'ingresso del comune"
+image_alt: "Cover dell'articolo: Capodanno e petardi: sicurezza e rispetto"
 scadenza: "2027-01-02"
 area: "Genzano di Roma"
 allegati: []
@@ -20,25 +20,19 @@ draft: false
 
 ### Incidenti italiani
 Ogni Capodanno in Italia:
-- **centinaia** di feriti da botti ogni anno;
+- **feriti** da botti, soprattutto alle mani e agli occhi;
 - **tra cui** bambini e adolescenti;
-- **mani** e **occhi** le parti più colpite;
-- **amputazioni** in alcuni casi gravi;
 - **incendi** di balconi e veicoli;
 - **animali** domestici traumatizzati o fuggiti;
 - **fauna selvatica** disturbata.
 
 ### A Genzano di Roma
-Nessun territorio è esente: anche qui la notte di Capodanno porta con sé il rischio di ustioni, principi d'incendio su balconi e terrazzi, animali spaventati che scappano, vetri infranti;
-- **danni** a veicoli.
+Nessun territorio è esente: anche qui la notte di Capodanno porta con sé il rischio di ustioni, principi d'incendio su balconi e terrazzi, animali spaventati che scappano, vetri infranti e danni ai veicoli.
 
 ## Ordinanze comunali
 
-### Probabili limitazioni
-Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
-- **orari** di sparo (es. solo dalle 23:00 del 31 alle 02:00 del 1 gennaio);
-- **zone** vietate (centro storico, parchi, aree boscate);
-- **tipologie** proibite (botti illegali).
+### Possibili limitazioni
+Molti Comuni limitano o vietano i fuochi d'artificio con un'**ordinanza** del Sindaco. Controlla sul sito del Comune di Genzano di Roma se per questo Capodanno ne è stata pubblicata una e che cosa prevede (orari, zone, divieti).
 
 ### Verifica
 - **consulta** il [sito del Comune](https://www.comune.genzanodiroma.roma.it/);
@@ -47,24 +41,32 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 - **informa** familiari e vicini.
 
 ### Sanzioni
-- **multe** da 50 a 500 euro a seconda dell'ordinanza;
+- chi non rispetta un'ordinanza del Sindaco rischia una **sanzione amministrativa** da 25 a 500 euro, salvo che la legge preveda altro (art. 7-bis del D.Lgs. 267/2000);
 - **sequestro** del materiale;
-- **denunce** penali in casi gravi (materiale illegale).
+- vendere o fabbricare fuochi non riconosciuti o senza marcatura CE è un **reato**.
 
 ## Categorie di petardi
 
-### Legali (Cat. F1 e F2)
-- **vendibili** anche ai minori di 14 anni solo F1;
-- **minori di 18** solo F1 e F2 con adulto;
-- **da 14-18 anni**: solo con consenso adulto;
-- **scintille**, piccoli botti, trottole;
-- **confezione** con marchio CE e istruzioni in italiano.
+Le età minime le fissa il D.Lgs. 123/2015 (art. 5):
 
-### Legali (Cat. F3)
-- **vendibili solo a maggiorenni**;
+### Categoria F1
+- **non si vendono** a chi non ha compiuto 14 anni;
+- **scintille**, piccoli botti, trottole;
+- **confezione** con marcatura CE ed etichetta in italiano.
+
+### Categoria F2
+- **si vendono** solo ai maggiorenni che mostrano un documento d'identità valido.
+
+### Categoria F3
+- **si vendono** solo ai maggiorenni con nulla osta del questore o licenza di porto d'armi;
 - **fuochi** d'artificio più potenti;
-- **solo** in aree ampie all'aperto;
-- **distanza** di sicurezza obbligatoria.
+- **distanza** di sicurezza scritta sull'etichetta.
+
+### Categoria F4
+- **solo** per persone con conoscenze specialistiche e licenza.
+
+### Petardi
+- **non si vendono** né si cedono ai minori di 18 anni.
 
 ### Illegali
 **Mai comprare** né usare:
@@ -72,7 +74,7 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 - **cipolle**, **cherry bomb**, **M80** (potenza illegale);
 - **mortaretti** non marcati;
 - **materiale** senza etichetta CE;
-- **importazioni** da paesi non UE senza omologazione italiana.
+- **prodotti** senza marcatura CE o senza etichetta e istruzioni in italiano.
 
 **Le vendite illegali** si trovano:
 - **mercati** abusivi;
@@ -84,21 +86,21 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 ## Regole d'uso
 
 ### Dove
-- **spazi aperti**, lontani da edifici (almeno 10 metri per F1-F2, 25 per F3);
+- **all'aperto**, lontano da case, auto e persone, alla distanza minima di sicurezza scritta sull'etichetta;
 - **lontani** da alberi (incendi boschivi!);
 - **lontani** da auto, garage, finestre;
 - **mai** da balconi o terrazzi con altre costruzioni vicine;
 - **mai** verso persone o animali.
 
 ### Quando
-- **rispetta** orari dell'ordinanza comunale;
-- **non** sparare dopo le 3-4 di notte (rispetto per chi dorme);
-- **non** sparare prima del 31 sera (divieto diffuso).
+- **rispetta** orari e divieti dell'eventuale ordinanza del Comune;
+- **non** accendere i fuochi quando c'è vento.
 
 ### Come
 - **leggi istruzioni** sull'etichetta;
 - **non** modificare i petardi;
-- **accendi** al primo tentativo (se non si accende, non riavvicinarti subito — attendi 15 minuti almeno);
+- **appoggia** il fuoco su una superficie piana, accendi e allontanati subito;
+- **se non si accende** o non esplode, non toccarlo e non riaccenderlo, neanche dopo ore: segnalalo al 112;
 - **usa** accendino a distanza, torcia;
 - **tieni** pronti secchio d'acqua o estintore;
 - **niente** alcol (rallenta riflessi, toglie giudizio).
@@ -106,7 +108,7 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 ### Mai
 - **in mano** (mai!);
 - **in tasca** (mai!);
-- **in luoghi chiusi** (mai!);
+- **al chiuso**, se l'etichetta dice «da usarsi soltanto in spazi aperti»: segui sempre l'etichetta;
 - **sparati uno dietro l'altro velocemente**;
 - **verso** persone;
 - **bambini** senza supervisione adulta diretta;
@@ -123,8 +125,8 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 
 ### Bambini e adolescenti
 - **MAI** da soli con petardi;
-- **solo F1** con supervisione;
-- **età** legale rispettata rigorosamente;
+- **sotto i 14 anni** nessun fuoco d'artificio si può comprare; i petardi solo dai 18 anni;
+- **mai lasciarli soli** vicino ai fuochi;
 - **spiega** i rischi concreti;
 - **mostra** come si usano correttamente;
 - **niente accensioni** competitive.
@@ -138,7 +140,7 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 ## Animali domestici
 
 ### Trauma reale
-I **botti** sono per cani e gatti una **tortura acustica**:
+I **botti** spaventano molto cani e gatti:
 - **udito** molto più sensibile del nostro;
 - **traumi** che durano per ore o giorni;
 - **fughe** per paura (cani che scappano);
@@ -146,18 +148,17 @@ I **botti** sono per cani e gatti una **tortura acustica**:
 - **malattie** da stress (cardiache, gastriche).
 
 ### Protezione
-- **chiudili** in casa prima delle 22;
+- **tienili** in casa e non lasciarli soli;
 - **chiudi** finestre e tapparelle;
 - **rumore** di fondo (TV, musica) per coprire botti;
 - **presenza** umana rassicurante;
 - **non punirli** se si agitano;
 - **farmaci** calmanti solo se prescritti da veterinario;
-- **feromoni** in diffusore (Adaptil, Feliway): aiutano;
+- **altri rimedi**: chiedi consiglio al veterinario;
 - **cani** a passeggio solo prima del buio o molto dopo.
 
 ### Animali persi
 Se il tuo cane/gatto **scappa** per paura:
-- **sporgi denuncia** ai carabinieri;
 - **contatta** canile municipale;
 - **microchip**: controlla sia registrato e aggiornato;
 - **social locali**: gruppi "animali persi Genzano";
@@ -182,8 +183,9 @@ Se il tuo cane/gatto **scappa** per paura:
 
 ### Primo soccorso
 **Ustione da petardo**:
-- **acqua** fresca (non ghiacciata) per almeno 20 minuti;
-- **no** olio, dentifricio, rimedi casalinghi;
+- **acqua** corrente fresca (non ghiacciata) per almeno 20 minuti;
+- **no** burro né ghiaccio;
+- **no** olio, dentifricio, altri rimedi casalinghi;
 - **coprire** con garza sterile o panno pulito;
 - **no** bucare eventuali bolle.
 
@@ -240,7 +242,7 @@ La notte di Capodanno il **112** smista le chiamate a Vigili del Fuoco, soccorso
 
 ### Luci al posto dei botti
 - **luminarie** sicure;
-- **bengala** artigianali a scintille (in luogo aperto);
+- **bengala** e fontane a scintille in regola (in luogo aperto, seguendo l'etichetta);
 - **lanterne volanti** (attenzione: vietate in molti comuni per rischio incendi);
 - **proiezioni** luminose sulla casa.
 
@@ -255,9 +257,9 @@ La notte di Capodanno il **112** smista le chiamate a Vigili del Fuoco, soccorso
 
 ## Un messaggio
 
-Il **Capodanno** è **festa di tutti**. Anche di chi **non vuole** o **non può** stare tra i botti: **anziani**, **malati**, **bambini piccoli**, **animali**, **reduci** con PTSD, **persone fragili psicologicamente**.
+Il **Capodanno** è **festa di tutti**. Anche di chi **non vuole** o **non può** stare tra i botti: **anziani**, **malati**, **bambini piccoli**, **animali**, **persone con fragilità** e **persone con specifiche necessità**.
 
-**Festeggiare con prudenza** è possibile. **Rispetto** e **responsabilità** sono il regalo migliore al **2027** che sta arrivando.
+**Festeggiare con prudenza** è possibile. In emergenza chiama il **112**.
 
 ## Per approfondire
 
@@ -274,8 +276,8 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
-- [Polizia di Stato](https://www.poliziadistato.it/).
+- [Polizia di Stato — Festeggia in sicurezza con i consigli degli artificieri](https://www.poliziadistato.it/articolo/15658bf4f035daa354248427).
+- [D.Lgs. 123/2015 sugli articoli pirotecnici — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2015-07-29;123).
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
-- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
 
 In emergenza: **112**.
