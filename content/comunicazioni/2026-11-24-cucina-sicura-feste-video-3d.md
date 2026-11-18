@@ -1,7 +1,7 @@
 ---
 title: "Cucina delle feste: cinque gesti per evitare gli incidenti"
 date: 2026-11-24T00:03:00+01:00
-description: "Un video di circa un minuto e mezzo con voce e sottotitoli: olio che prende fuoco, odore di gas, bambini vicino ai fornelli e ustioni. Che cosa fare."
+description: "Un video in 3D di poco più di un minuto con voce e sottotitoli: olio che prende fuoco, odore di gas, bambini vicino ai fornelli e ustioni. Che cosa fare."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -24,7 +24,7 @@ social_crediti: "Musica: «Jul» di Scott Buckley (scottbuckley.com.au), licenza
 social: false
 ---
 
-Pranzi lunghi, tanti piatti insieme, fornelli accesi per ore e bambini che girano per casa: durante le feste in cucina si corrono più rischi del solito. In un **video di circa un minuto e mezzo** abbiamo raccolto cinque gesti che evitano gli incidenti più comuni, dall'olio che prende fuoco all'odore di gas.
+Pranzi lunghi, tanti piatti insieme, fornelli accesi per ore e bambini che girano per casa: durante le feste in cucina si corrono più rischi del solito. In un **video in 3D di poco più di un minuto** abbiamo raccolto cinque gesti che evitano gli incidenti più comuni, dall'olio che prende fuoco all'odore di gas.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 

@@ -21,11 +21,11 @@ social_punti:
   - "Il COC lavora per funzioni di supporto, come assistenza alla popolazione, sanità e volontariato."
   - "Il Gruppo comunale di volontari opera coordinato dal Comune: non si chiama direttamente e non regola il traffico."
   - "Conosci la tua area di attesa: a Genzano sono 10. In pericolo chiama il 112."
-social_crediti: "Musica: «Inspired» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
+social_crediti: "Musica: «Inspired» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
 social: false
 ---
 
-In un'emergenza a Genzano tante persone si muovono insieme: tecnici del Comune, Polizia Locale, soccorsi sanitari, Vigili del Fuoco, volontari. Qualcuno deve tenere le fila. È il tema di un **video di poco più di un minuto**, «Chi coordina?»: spiega chi decide, dove si organizza il lavoro e che cosa tocca a te.
+In un'emergenza a Genzano tante persone si muovono insieme: tecnici del Comune, Polizia Locale, soccorsi sanitari, Vigili del Fuoco, volontari. Qualcuno deve tenere le fila. È il tema di un **video in 3D di poco più di un minuto**, «Chi coordina?»: spiega chi decide, dove si organizza il lavoro e che cosa tocca a te.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le informazioni che dà sono scritte anche in questa pagina.
 
@@ -95,6 +95,8 @@ Ci sono anche cose che i volontari **non fanno**:
 In emergenza chiama il **112**.
 
 Musica: «Inspired» di Kevin MacLeod ([incompetech.com](https://incompetech.com/)), con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), adattata per il video.
+
+I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Data. Per l'Europa usano i dati EU-DEM, prodotti con dati e informazioni del programma Copernicus finanziato dall'Unione europea. Usano anche i dati ETOPO1 della NOAA, e SRTM e GMTED2010 dello U.S. Geological Survey.
 
 Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)).
 

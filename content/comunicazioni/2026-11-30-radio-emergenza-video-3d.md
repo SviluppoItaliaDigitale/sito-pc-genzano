@@ -24,7 +24,7 @@ social_crediti: "Musica: «Clean Soul» di Kevin MacLeod (incompetech.com), lice
 social: false
 ---
 
-Dopo un terremoto, un'alluvione o un blackout lungo, il telefono può non bastare: troppe persone chiamano nello stesso momento, oppure i collegamenti si interrompono. È il tema di un **video di poco più di un minuto**, «Quando i telefoni non funzionano». Qui trovi come lavorano le reti radio in emergenza e che cosa puoi fare tu.
+Dopo un terremoto, un'alluvione o un blackout lungo, il telefono può non bastare: troppe persone chiamano nello stesso momento, oppure i collegamenti si interrompono. È il tema di un **video in 3D di poco più di un minuto**, «Quando i telefoni non funzionano». Qui trovi come lavorano le reti radio in emergenza e che cosa puoi fare tu.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 

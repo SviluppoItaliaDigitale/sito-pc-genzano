@@ -1,7 +1,7 @@
 ---
 title: "Fuochi di Capodanno: come arrivare al primo gennaio senza farti male"
 date: 2026-12-27T00:01:00+01:00
-description: "Un video di circa un minuto e mezzo sui fuochi di Capodanno: quali comprare, come leggere l'etichetta, dove accenderli e cosa fare se qualcuno si ferisce."
+description: "Un video in 3D di poco più di un minuto sui fuochi di Capodanno: quali comprare, come leggere l'etichetta, dove accenderli e cosa fare se qualcuno si ferisce."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -24,7 +24,7 @@ social_crediti: "Musica: «Born Of The Sky» di Scott Buckley (scottbuckley.com.
 social: false
 ---
 
-Ultima sera dell'anno ai Castelli. Sul lago di Nemi si accendono i primi fuochi e in molte case c'è una confezione di petardi pronta sul tavolo. È la scena di un **video di circa un minuto e mezzo**: in poche mosse, come arrivare al primo gennaio senza farti male e senza far male agli altri, animali compresi.
+Ultima sera dell'anno ai Castelli: in piazza si aspetta la mezzanotte e in molte case c'è una confezione di petardi pronta sul tavolo. È la scena di un **video in 3D di circa un minuto e venti secondi**: in poche mosse, come arrivare al primo gennaio senza farti male e senza far male agli altri, animali compresi.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 

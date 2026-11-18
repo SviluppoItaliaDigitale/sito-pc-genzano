@@ -24,7 +24,7 @@ social_crediti: "Musica: «Hymn to the Dawn» di Scott Buckley (scottbuckley.com
 social: false
 ---
 
-Notte serena sui Castelli: il termometro scende sotto zero e al mattino marciapiedi e strade sono lucidi di ghiaccio. Il freddo intenso non riguarda solo chi esce. Tocca i tubi dell'acqua, le case che si scaldano con stufa e camino, le persone che vivono da sole, chi dorme all'aperto e gli animali. È il tema di un **video di poco più di un minuto**, «Notte sotto zero»: qui trovi le stesse indicazioni, con qualche dettaglio in più.
+Notte serena sui Castelli: il termometro scende sotto zero e al mattino marciapiedi e strade sono lucidi di ghiaccio. Il freddo intenso non riguarda solo chi esce. Tocca i tubi dell'acqua, le case che si scaldano con stufa e camino, le persone che vivono da sole, chi dorme all'aperto e gli animali. È il tema di un **video in 3D di poco più di un minuto**, «Notte sotto zero»: qui trovi le stesse indicazioni, con qualche dettaglio in più.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 

@@ -20,11 +20,11 @@ social_punti:
   - "Durante la scossa riparati sotto un tavolo resistente o vicino a un muro portante, e aspetta la fine."
   - "Con l'acqua in strada evita i sottopassi: pochi centimetri bastano a spegnere il motore."
   - "Non scendere in cantina o in garage per salvare l'auto: sali ai piani alti."
-social_crediti: "Musica: «Wallpaper» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
+social_crediti: "Musica: «Wallpaper» di Kevin MacLeod (incompetech.com), licenza CC BY 4.0. Rilievo: Mapzen Terrain Tiles, con dati EU-DEM (programma Copernicus dell'Unione europea), ETOPO1 (NOAA), SRTM e GMTED2010 (USGS). Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
 social: false
 ---
 
-«Tanto qui non succede», «corro fuori», «prendo l'ascensore che faccio prima». Sono frasi che sentiamo dire spesso, anche ai Castelli, e sembrano buon senso. In un **video di poco più di un minuto** ne mettiamo in fila cinque. Accanto a ognuna c'è il gesto giusto, indicato dal Dipartimento della Protezione Civile e dalla campagna «Io non rischio».
+«Tanto qui non succede», «corro fuori», «prendo l'ascensore che faccio prima». Sono frasi che sentiamo dire spesso, anche ai Castelli, e sembrano buon senso. In un **video in 3D di poco più di un minuto** ne mettiamo in fila cinque. Accanto a ognuna c'è il gesto giusto, indicato dal Dipartimento della Protezione Civile e dalla campagna «Io non rischio».
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
@@ -92,6 +92,8 @@ Non scendere in cantina, nei seminterrati o in garage per mettere al sicuro le t
 In emergenza chiama il **112**.
 
 Musica: «Wallpaper» di Kevin MacLeod ([incompetech.com](https://incompetech.com/)), con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), adattata per il video.
+
+I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Data. Per l'Europa usano i dati EU-DEM, prodotti con dati e informazioni del programma Copernicus finanziato dall'Unione europea. Usano anche i dati ETOPO1 della NOAA, e SRTM e GMTED2010 dello U.S. Geological Survey.
 
 Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)).
 

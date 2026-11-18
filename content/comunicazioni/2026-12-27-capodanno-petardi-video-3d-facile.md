@@ -2,7 +2,7 @@
 title: "Fuochi di Capodanno: come non farti male"
 date: 2026-12-27T00:01:00+01:00
 draft: false
-description: "Un video di circa 1 minuto e mezzo sui fuochi di Capodanno. Quali comprare, dove accenderli e cosa fare se qualcuno si fa male."
+description: "Un video di circa 1 minuto e 20 secondi sui fuochi di Capodanno. Quali comprare, dove accenderli e cosa fare se qualcuno si fa male."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-Questo è un **video di circa 1 minuto e mezzo**. Parla dei fuochi d'artificio e dei petardi di Capodanno. Il video ha una voce e le scritte. Lo capisci anche senza audio.
+Questo è un **video di circa 1 minuto e 20 secondi**. Parla dei fuochi d'artificio e dei petardi di Capodanno. Il video ha una voce e le scritte. Lo capisci anche senza audio.
 
 {{< video src="/video/2026-12-27-capodanno-petardi-video-3d.mp4"
           poster="/video/2026-12-27-capodanno-petardi-video-3d-poster.webp"

@@ -2,7 +2,7 @@
 title: "Cucina delle feste: 5 gesti per stare sicuri"
 date: 2026-11-24T00:03:00+01:00
 draft: false
-description: "Un video di circa 1 minuto e mezzo sulla cucina delle feste. Olio che prende fuoco, odore di gas, bambini e scottature: cosa fare."
+description: "Un video di poco più di 1 minuto sulla cucina delle feste. Olio che prende fuoco, odore di gas, bambini e scottature: cosa fare."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-Questo è un **video di circa 1 minuto e mezzo**. Parla della cucina nei giorni di festa. Il video ha una voce e le scritte. Lo capisci anche senza audio.
+Questo è un **video di poco più di 1 minuto**. Parla della cucina nei giorni di festa. Il video ha una voce e le scritte. Lo capisci anche senza audio.
 
 {{< video src="/video/2026-11-24-cucina-sicura-feste-video-3d.mp4"
           poster="/video/2026-11-24-cucina-sicura-feste-video-3d-poster.webp"

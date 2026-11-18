@@ -24,7 +24,7 @@ social_crediti: "Musica: «Reawakening» di Kevin MacLeod (incompetech.com), lic
 social: false
 ---
 
-L'acqua si è ritirata o la scossa è finita, e la prima cosa che vuoi è tornare a casa. È il momento in cui serve ancora prudenza: impianti bagnati, gas, cibo e acqua che possono essere contaminati, danni da documentare. In un **video di poco più di un minuto** una casa disegnata in sezione si riaccende stanza dopo stanza, un controllo alla volta.
+L'acqua si è ritirata o la scossa è finita, e la prima cosa che vuoi è tornare a casa. È il momento in cui serve ancora prudenza: impianti bagnati, gas, cibo e acqua che possono essere contaminati, danni da documentare. In un **video in 3D di poco più di un minuto** una casa vista in sezione si riaccende stanza dopo stanza, un controllo alla volta.
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
