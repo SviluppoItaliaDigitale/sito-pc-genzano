@@ -17,7 +17,7 @@ social_citazione: "Davanti a una strada allagata, l'auto non va avanti. Si torna
 social_punti:
   - "Non entrare con l'auto in sottopassi, guadi o strade coperte dall'acqua."
   - "Con un'allerta in corso, valuta il percorso prima di partire ed evita le zone allagabili."
-  - "Auto bloccata nella corrente: resta dentro, chiama il 112 e, se l'acqua entra, sali sul tetto."
+  - "Auto bloccata nella corrente: resta dentro e chiama il 112."
   - "Se vedi persone o auto in difficoltà, chiama il 112."
 draft: false
 ---
@@ -49,7 +49,7 @@ Il Dipartimento della Protezione Civile, nella campagna «Io non rischio», è n
 1. Fermati prima dell'acqua, accendi le luci di emergenza e non seguire chi passa davanti a te.
 2. Torna indietro con calma e scegli un percorso più alto, anche se è più lungo.
 3. Se non puoi muoverti, aspetta in un punto sicuro lontano da fossi, sottopassi e argini.
-4. Se l'auto si ferma nell'acqua: se l'acqua è ferma o lenta e puoi raggiungere un punto più alto senza entrare nella corrente, slaccia la cintura, esci e allontanati. Se intorno l'acqua corre forte, resta nell'auto e chiama il **112**; se l'acqua sale dentro l'abitacolo, sali sul tetto.
+4. Se l'auto si ferma nell'acqua: se l'acqua è ferma o lenta e puoi raggiungere un punto più alto senza entrare nella corrente, slaccia la cintura, esci e allontanati. Se intorno l'acqua corre forte, resta nell'auto e chiama il **112** e segui le indicazioni dell'operatore.
 5. Se vedi persone o auto in difficoltà, chiama il **112** e dai la posizione precisa.
 {{< /passi >}}
 

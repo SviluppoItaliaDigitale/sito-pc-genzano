@@ -45,7 +45,7 @@ Il coordinamento del PCA è generalmente dei **Vigili del Fuoco**. Il PCA suppor
 
 ### Centro Operativo Comunale (COC)
 
-Il **COC** è il luogo dove il Sindaco organizza le attività di soccorso e assistenza alla popolazione. A Genzano di Roma la sede principale è individuata dal **Piano Comunale di Protezione Civile**: di norma **Palazzo Municipale** o la sede dell'Ufficio di Protezione Civile comunale.
+Il **COC** è il luogo dove il Sindaco organizza le attività di soccorso e assistenza alla popolazione. A Genzano di Roma il **Piano Comunale di Protezione Civile** indica due sedi: il **Palazzetto dello sport Gino Cesaroni** e la sede della **Polizia Locale** in via Roma 31. Il Piano non indica quale delle due sia la principale.
 
 Il COC deve essere dotato in permanenza di:
 - telefono/fax e linea internet
@@ -117,7 +117,7 @@ Il **flusso informativo** è bidirezionale: le richieste di supporto salgono, le
 
 ## 1.5 Funzioni di supporto
 
-I centri di coordinamento lavorano per **funzioni di supporto**: ciascuna corrisponde a un ambito tematico e a un referente con competenze specifiche. Lo schema nasce con il **Metodo Augustus** (Dipartimento della Protezione Civile, 1997), oggi superato: l'elenco attuale è nella **Direttiva PCM 30 aprile 2021**, che ne indica **sedici**, senza numerarle:
+I centri di coordinamento lavorano per **funzioni di supporto**: ciascuna corrisponde a un ambito tematico e a un referente con competenze specifiche. Lo schema nasce con il **Metodo Augustus** (Dipartimento della Protezione Civile, 1997); la **Direttiva PCM 30 aprile 2021** ne ha aggiornato i nomi e l'elenco, che oggi comprende **sedici** funzioni, senza numerarle:
 
 - Unità di coordinamento.
 - Rappresentanze delle strutture operative.

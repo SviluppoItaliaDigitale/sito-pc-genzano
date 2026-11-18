@@ -43,13 +43,13 @@ Il Gruppo Comunale di Genzano non sostituisce né duplica queste organizzazioni:
 
 ## Non sostituisce la formazione ARI né l'esame di licenza
 
-Questa area tematica è **divulgativa e operativa**, non abilitante: non sostituisce il corso e l'esame per l'ottenimento della **patente di operatore di stazione di radioamatore** (decreto 12 agosto 2002 e s.m.i., D.Lgs. 1° agosto 2003 n. 259 Codice delle comunicazioni elettroniche) né i corsi ARI-RE ufficiali. Per trasmettere su frequenze amatoriali occorre:
+Questa area tematica è **divulgativa e operativa**, non abilitante: non sostituisce il corso e l'esame per l'ottenimento della **patente di operatore di stazione di radioamatore** (decreto 12 agosto 2002 e s.m.i., D.Lgs. 1° agosto 2003 n. 259 Codice delle comunicazioni elettroniche, nel testo sostituito dal D.Lgs. 207/2021) né i corsi ARI-RE ufficiali. Per trasmettere su frequenze amatoriali occorre:
 
 1. Superare l'esame MIMIT per la **patente** (HAREC europea)
 2. Ottenere l'**autorizzazione generale** (ex licenza) dal MIMIT — Ispettorato Territoriale
-3. Essere **maggiorenne**
+3. Avere almeno **14 anni** (art. 137 del Codice delle comunicazioni elettroniche)
 
-Per collaborare come volontario TLC senza patente si può operare su **apparati del Comune** (PMR 446, canali istituzionali assegnati) oppure come operatore ausiliario sotto la guida di un radioamatore licenziato.
+Per collaborare come volontario TLC senza patente si può operare su **apparati del Comune** (PMR 446, canali istituzionali assegnati), secondo le procedure dell'ente.
 
 ## Integrazione con il Manuale da Campo
 

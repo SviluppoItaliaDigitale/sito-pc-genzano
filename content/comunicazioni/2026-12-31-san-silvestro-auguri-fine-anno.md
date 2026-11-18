@@ -148,12 +148,8 @@ Se poi si deve **guidare**:
 
 ## La nostra serata
 
-### Reperibilità
-La **PC di Genzano** è in **servizio rinforzato**:
-- **coordinatore** attivo;
-- **squadre** disponibili;
-- **coordinamento** con Polizia Locale e VVF;
-- **monitoraggio** 112.
+### Chi interviene
+La notte di Capodanno il **112** smista le chiamate a Vigili del Fuoco, soccorso sanitario e forze dell'ordine. Il Gruppo Comunale interviene se attivato dal Comune.
 
 ### Cosa può capitare
 - **incendi** da botti;

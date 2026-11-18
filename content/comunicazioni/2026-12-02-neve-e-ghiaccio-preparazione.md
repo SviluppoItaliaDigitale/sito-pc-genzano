@@ -14,12 +14,12 @@ draft: false
 versione_facile: "2026-12-02-neve-e-ghiaccio-preparazione-facile"
 ---
 
-A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma non impossibile. Negli ultimi decenni ricordiamo febbraio 2012 e febbraio 2018 con nevicate significative. Il **ghiaccio** notturno è invece **più frequente**. Come prepararsi e cosa fare.
+A **Genzano di Roma**, **458 metri** s.l.m., la **neve** in inverno è **rara** ma non impossibile. Negli ultimi decenni ricordiamo febbraio 2012 e febbraio 2018 con nevicate significative. Il **ghiaccio** notturno è invece **più frequente**. Come prepararsi e cosa fare.
 
 ## Il contesto climatologico
 
 ### Genzano e neve
-- **quota**: 430 m slm;
+- **quota**: 458 m s.l.m. (centro del comune, ISTAT 2021);
 - **media** giorni di neve all'anno: 1-3;
 - **accumulo** medio: 5-15 cm per evento;
 - **tendenza** attuale: nevicate più rare ma più intense quando avvengono.
@@ -177,7 +177,7 @@ In caso di nevicata significativa:
 
 ## PC e emergenze neve
 
-In caso di nevicata il Comune può attivare il Gruppo Comunale. Tra i [mezzi del Gruppo](/chi-siamo/) c'è un Mercedes Atego attrezzato con spazzaneve e spargisale. I volontari, quando attivati, possono supportare le persone fragili (sole, anziane, con disabilità). Per le emergenze si chiama il **112**.
+In caso di nevicata il Comune può attivare il Gruppo Comunale. Tra i [mezzi del Gruppo](/chi-siamo/) c'è un Mercedes Atego attrezzato con spazzaneve e spargisale. I volontari, quando attivati, possono supportare le persone con fragilità (sole, anziane, con disabilità). Per le emergenze si chiama il **112**.
 
 ## Cose da non fare
 

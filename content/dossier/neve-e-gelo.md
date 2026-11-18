@@ -73,11 +73,11 @@ Il bilancio: **34 morti**, circa **3,5 milioni** di persone al buio in Québec, 
 {{< dossier-scena id="vigilanza" image="/images/dossier/neve-sistema-allerta.webp" alt="Mappa fisica dell'Italia con il rilievo di Alpi e Appennini, le coste e le isole" align="top" kicker="Chi vigila sulla neve in Italia" title="Una rete<br>che osserva il freddo" credito="Mappa di rilievo dell'Italia di Eric Gaba (Sting) e NordNordWest · CC BY-SA 3.0, via Wikimedia Commons" >}}
 In montagna il **servizio Meteomont** dei Carabinieri pubblica ogni giorno alle **14:00** il bollettino valanghe, con previsione a 24-72 ore su 13 settori. È lo strumento di chi va a sciare o in escursione, **non** una minaccia per i Colli Albani.
 
-Per neve e ghiaccio in pianura e collina conta invece l'**allertamento della Protezione Civile** a codici colore (verde, giallo, arancione, rosso) e i **Centri Funzionali regionali**. Per i Castelli, l'allerta utile è quella **neve-gelo** del Centro Funzionale del Lazio, non il bollettino valanghe.
+Per neve e ghiaccio in pianura e collina contano invece gli **avvisi di condizioni meteo avverse** per neve e gelate e i **Centri Funzionali regionali**. Per i Castelli si seguono gli avvisi del Centro Funzionale del Lazio e le comunicazioni del Comune, non il bollettino valanghe.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="fragili" image="/images/dossier/neve-fragili-freddo.webp" alt="Piazza di un centro storico coperta di neve di notte, con luci accese, un albero di Natale a sinistra e selciato imbiancato in primo piano" align="top" kicker="Il rischio che non fa rumore" title="Il freddo<br>silenzioso" credito="Foto Andy Armstrong · CC BY-SA 2.0, via Wikimedia Commons" >}}
-Il gelo colpisce in silenzio. Nell'ondata del febbraio 2012, tra le almeno **57 vittime** in Italia ci furono diverse **persone senza fissa dimora**. Anziani soli, bambini e persone fragili sono i più esposti a ipotermia e malori.
+Il gelo colpisce in silenzio. Nell'ondata del febbraio 2012, tra le almeno **57 vittime** in Italia ci furono diverse **persone senza dimora**. Anziani soli, bambini e persone con fragilità sono i più esposti a ipotermia e malori.
 
 A Genzano la prevenzione è anche **sociale**: controlla i vicini anziani quando arriva il gelo, tieni d'occhio chi vive solo, segnala chi è in difficoltà. Un gesto di comunità può salvare una vita.
 {{< /dossier-scena >}}
@@ -85,7 +85,7 @@ A Genzano la prevenzione è anche **sociale**: controlla i vicini anziani quando
 {{< dossier-scena id="cosa-fare" image="/images/dossier/neve-cosa-fare.webp" alt="Una persona in tuta gialla monta le catene da neve sulla ruota di un'auto su una strada innevata" align="left" kicker="Prepararsi" title="Pochi gesti,<br>prima del freddo" credito="Foto Oregon Department of Transportation · CC BY 2.0, via Wikimedia Commons" >}}
 **In auto:** monta pneumatici invernali o tieni a bordo le catene; sui Colli Albani anche pochi centimetri di neve creano disagi su salite e discese. **A casa:** tieni una scorta di **sale** e una **pala**.
 
-**Attenzione al ghiaccio** su strade e marciapiedi, soprattutto di notte e all'alba. **Informati** sui bollettini e sui codici colore prima di metterti in strada. E non sottovalutare il rischio per le persone fragili.
+**Attenzione al ghiaccio** su strade e marciapiedi, soprattutto di notte e all'alba. **Informati** sugli avvisi meteo e sulle comunicazioni del Comune prima di metterti in strada. E non sottovalutare il rischio per le persone con fragilità.
 {{< /dossier-scena >}}
 
 {{< dossier-chiusura id="fine" titolo="Capire il gelo per non subirlo" cta1="Il rischio da neve e gelo: cosa fare" cta1url="/conoscere/catalogo-dei-rischi/rischio-neve-gelo/" cta2="Le allerte di oggi" cta2url="/allerte-meteo/" >}}
@@ -94,7 +94,7 @@ A Genzano la prevenzione è anche **sociale**: controlla i vicini anziani quando
 
 {{< dossier-fonti >}}
 - **Immagini:** Alpi dallo spazio (NASA Terra MODIS, 7 gennaio 2019, pubblico dominio) · nevicata "Bestia dall'Est" 2018 (Stephen Craven/Geograph, CC BY-SA 2.0) · Pantheon innevato 26 febbraio 2018 (Bradley Weber, CC BY 2.0) · Vittoriano con e senza neve (Barbaking, CC BY-SA 3.0; Fred Romero, CC BY 2.0) · Hotel Rigopiano (TVSEI, CC BY 3.0) · rami ghiacciati (U.S. Air Force, pubblico dominio) · mappa di rilievo dell'Italia (Eric Gaba e NordNordWest, CC BY-SA 3.0) · piazza innevata di notte (Andy Armstrong, CC BY-SA 2.0) · catene da neve (Oregon Department of Transportation, CC BY 2.0). Via Wikimedia Commons.
-- **Fonti:** [Dipartimento della Protezione Civile — rischio neve e gelo](https://rischi.protezionecivile.gov.it/it/meteo-idro/allertamento/tabella-allerte-e-scenari-di-criticita/) · [Meteomont — Carabinieri](https://meteomont.carabinieri.it/) · [AINEVA — Scala europea del pericolo di valanghe](https://aineva.it/pubblicazioni/scala-europea-del-pericolo-di-valanghe/). Bilanci delle ondate di freddo del 2012 e del 2018 e dati su Rigopiano e sulla tempesta di ghiaccio del Quebec 1998 da fonti enciclopediche e giornalistiche: cifre da trattare come stime.
+- **Fonti:** [Dipartimento della Protezione Civile — Neve e gelo, sei preparato?](https://www.protezionecivile.gov.it/it/approfondimento/neve-e-gelo---sei-preparato-/) · [DPC — Tabella delle allerte e degli scenari di criticità](https://rischi.protezionecivile.gov.it/it/meteo-idro/allertamento/tabella-allerte-e-scenari-di-criticita/) · [Meteomont — Carabinieri](https://meteomont.carabinieri.it/) · [AINEVA — Scala europea del pericolo di valanghe](https://aineva.it/pubblicazioni/scala-europea-del-pericolo-di-valanghe/). Bilanci delle ondate di freddo del 2012 e del 2018 e dati su Rigopiano e sulla tempesta di ghiaccio del Quebec 1998 da fonti enciclopediche e giornalistiche: cifre da trattare come stime.
 - **Sul nostro sito:** [Quando salta la corrente](/dossier/quando-salta-la-corrente/) · [Il clima che cambia i rischi](/dossier/il-clima-che-cambia-i-rischi/) · [La catena dell'allerta](/dossier/la-catena-dell-allerta/) · [Il rischio da neve e gelo](/conoscere/catalogo-dei-rischi/rischio-neve-gelo/) · [Allerte meteo](/allerte-meteo/) · [Numeri utili](/numeri-utili/) · [Piano di emergenza comunale](/piano-emergenza/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

@@ -62,7 +62,7 @@ Nel volontariato di Protezione Civile i **radioamatori** hanno un ruolo specific
 Diventare volontario radioamatore di Protezione Civile richiede:
 
 1. La **patente di radioamatore** rilasciata dal Ministero (esame tecnico).
-2. Il **nominativo individuale** associato alla patente.
+2. Il **nominativo**, che il Ministero assegna alla stazione insieme all'autorizzazione generale.
 3. **Iscrizione a un gruppo di volontariato** riconosciuto.
 4. **Formazione specifica** sulle procedure di emergenza.
 

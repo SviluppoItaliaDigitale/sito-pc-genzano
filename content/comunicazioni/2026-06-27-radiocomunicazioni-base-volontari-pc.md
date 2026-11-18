@@ -39,7 +39,7 @@ Il Dipartimento di Protezione Civile e le Regioni assegnano **frequenze** specif
 - **UHF (Ultra High Frequency)** — 430-440 MHz. Portata minore ma migliore in edifici.
 - **HF (High Frequency)** — 3-30 MHz. Portata continentale, usata per collegamenti a lunga distanza in emergenza.
 
-Alcuni Gruppi operano anche su **banda radioamatoriale** (con patentino IK0/IZ0 dei singoli volontari) per collegamenti emergenziali di backup.
+Alcuni Gruppi operano anche su **banda radioamatoriale** (con la patente di radioamatore dei singoli volontari) per collegamenti emergenziali di backup.
 
 ## La RNRE — Rete Nazionale di Radiocomunicazioni in Emergenza
 
@@ -118,11 +118,11 @@ I Gruppi mantengono efficienza con:
 
 Un volontario che non ha mai usato la radio in esercitazione difficilmente sarà efficace in vera emergenza.
 
-## La patente di radiooperatore
+## La patente di radioamatore
 
-Per operare su **bande amatoriali** serve il **patentino di radiooperatore** rilasciato dal Ministero dello Sviluppo Economico dopo esame.
+Per operare su **bande amatoriali** serve la **patente di operatore di stazione di radioamatore**, che si ottiene superando un esame (Ministero delle Imprese e del Made in Italy).
 
-Per operare sulle **frequenze della PC** non serve un patentino personale: la **licenza è del Gruppo** e il volontario è autorizzato come operatore dell'ente.
+Le **frequenze della PC** non sono bande amatoriali: si usano solo con gli apparati dell'ente a cui sono assegnate, quando l'ente lo autorizza e secondo le sue procedure.
 
 ## Il Gruppo radio di Genzano di Roma
 

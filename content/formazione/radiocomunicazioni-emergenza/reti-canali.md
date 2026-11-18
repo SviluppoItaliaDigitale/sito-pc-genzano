@@ -80,7 +80,7 @@ Ora vediamo i canali disponibili in Italia al volontario di protezione civile, c
 **Debolezza**:
 
 - dipende dalla **rete cellulare** — spesso prima infrastruttura a cadere
-- in eventi estesi si **satura** fortemente (design pensato per 6-10 % di utenti in simultanea)
+- in eventi estesi si **satura** fortemente
 - SMS possono avere **ritardi elevati** anche con rete formalmente attiva
 - non c'è **fallback** a simplex
 

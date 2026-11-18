@@ -110,7 +110,7 @@ Il **piano** riflette questi elementi.
 ## Per rischio terremoto
 
 ### Durante
-- **Riparati** sotto un tavolo robusto, l'architrave di una porta portante o vicino a un muro maestro (indicazione DPC).
+- **Riparati** nel vano di una porta inserita in un muro portante, vicino a una parete portante o sotto una trave, oppure sotto un letto o un tavolo resistente (indicazione DPC).
 - **Stai lontano** da mobili pesanti, scaffali, vetrate.
 - **Proteggi** testa e collo con le braccia.
 - **Resta fermo** fino alla fine della scossa.

@@ -251,7 +251,7 @@ Scaricate un bollettino di allerta reale dal sito dell'[Agenzia di Protezione Ci
 **Durante**:
 - Non scendere in cantine, garage o piani interrati
 - Non attraversare strade o sottopassi allagati, né a piedi né in auto
-- Se sei in auto e l'acqua è ferma, esci e raggiungi un punto più alto; se la corrente è forte, resta dentro, chiama il 112 e, se l'acqua entra, sali sul tetto
+- Se sei in auto e l'acqua è ferma, esci e raggiungi un punto più alto; se la corrente è forte, resta dentro e chiama il 112
 - Raggiungi i piani alti dell'edificio in cui ti trovi
 
 **Dopo**: bevi l'acqua del rubinetto solo se ordinanze o avvisi del Comune non lo vietano. Non toccare impianti elettrici bagnati.

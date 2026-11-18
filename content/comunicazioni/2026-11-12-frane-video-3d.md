@@ -97,7 +97,7 @@ I dati del terreno vengono dalle Mapzen Terrain Tiles, pubblicate su AWS Open Da
 
 Musica: «On My Way» di Kevin MacLeod ([incompetech.com](https://incompetech.com/)), con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), adattata per il video.
 
-Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v1/raw/main/LICENSE)).
+Voce sintetica: modello distribuito con licenza Coqui Public Model License ([testo della licenza](https://huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)).
 
 ## Per approfondire
 

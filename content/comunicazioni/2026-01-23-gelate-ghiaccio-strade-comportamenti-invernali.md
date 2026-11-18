@@ -15,7 +15,7 @@ versione_facile: "2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali-faci
 tts: true
 ---
 
-Nei Castelli Romani, tra fine gennaio e inizio febbraio, le **gelate notturne** sono frequenti. Le temperature scendono sotto zero durante la notte e risalgono lentamente al mattino. In queste ore il **ghiaccio sulle strade** — anche poco visibile — è una delle prime cause di incidenti stradali e cadute.
+Nei Castelli Romani, tra fine gennaio e inizio febbraio, le **gelate notturne** sono frequenti. Le temperature scendono sotto zero durante la notte e risalgono lentamente al mattino. In queste ore il **ghiaccio sulle strade**, anche poco visibile, aumenta il rischio di incidenti stradali e di cadute.
 
 Qui trovi un riepilogo pratico per muoverti in sicurezza, a piedi e in auto, quando arrivano le giornate fredde.
 
@@ -51,7 +51,7 @@ Se sei un **anziano solo** o conosci qualcuno che lo è: esci solo nelle ore cen
 - **Verifica il parabrezza**: il ghiaccio va rimosso completamente. Non basta una finestrella sul lato guida.
 - **Luci di posizione pulite**: una targa coperta da brina è sanzionabile e poco visibile.
 - **Verifica specchietti e vetri laterali** prima di partire: la brina può coprirli anche con il motore già avviato.
-- **Gomme invernali**: nei Castelli sono spesso consigliate in base all'ordinanza locale.
+- **Gomme invernali o catene a bordo**: dal 15 novembre al 15 aprile sono obbligatorie sulle strade dove lo indicano i cartelli, per ordinanza dell'ente proprietario o gestore della strada.
 
 ### Durante la guida
 
@@ -78,7 +78,7 @@ Se l'auto slitta, la regola è **"niente panico, volante morbido, aspetta che ri
 
 ## In caso di ghiacciate estese
 
-Quando la Regione Lazio e il Centro Funzionale emettono **allerte per ghiaccio** o **neve**:
+Quando sono emessi **avvisi di condizioni meteo avverse** per neve o gelate:
 
 - **Evita spostamenti** non necessari, soprattutto di notte e al mattino presto.
 - **Lavora da casa** se possibile.

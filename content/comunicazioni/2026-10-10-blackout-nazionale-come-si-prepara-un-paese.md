@@ -80,7 +80,7 @@ I piani del gestore della rete non bastano. Ogni Stato dell'Unione deve avere an
 
 ## E la protezione civile?
 
-Un blackout esteso non è solo un problema di centrali. Quando la corrente manca a lungo si fermano le pompe dell'acqua. Le antenne dei telefoni vanno a batteria e poi si spengono, gli ascensori si bloccano. Le persone che usano apparecchi elettromedicali sono in pericolo. Sono le conseguenze che il **sindaco**, autorità di protezione civile sul territorio comunale, deve gestire. Può attivare il Centro Operativo Comunale insieme ai gestori dei servizi essenziali.
+Un blackout esteso non è solo un problema di centrali. Quando la corrente manca a lungo si fermano le pompe dell'acqua. Anche la rete dei telefoni può smettere di funzionare, gli ascensori si bloccano. Le persone che usano apparecchi elettromedicali sono in pericolo. Sono le conseguenze che il **sindaco**, autorità di protezione civile sul territorio comunale, deve gestire. Può attivare il Centro Operativo Comunale insieme ai gestori dei servizi essenziali.
 
 Ai Castelli Romani un blackout nazionale resta un evento raro. Le interruzioni locali per vento forte, temporali o guasti alle cabine sono invece più frequenti. La preparazione in casa è la stessa per entrambi i casi.
 

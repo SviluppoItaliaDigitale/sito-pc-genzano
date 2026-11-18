@@ -42,15 +42,15 @@ Quando le autorità dicono che si può rientrare:
 - Entra con calma e guarda soffitti, pareti e scale prima di muoverti dentro casa.
 - Apri porte e finestre per arieggiare.
 - Controlla che non ci siano perdite, crepe nuove o odore di gas.
-- Fotografa eventuali danni: serviranno per le segnalazioni.
+- Fotografa eventuali danni prima di pulire: possono servire per le segnalazioni al Comune.
 
 ## Verifica gas, luce e acqua
 
 Controlla gli impianti con prudenza, uno alla volta.
 
-- **Gas**: se senti odore di gas, non accendere luci o fiamme, non usare interruttori né telefoni nel locale. Apri finestre e porte verso l'esterno, chiudi il rubinetto del gas solo se lo raggiungi subito e senza rischi, ed esci. Chiama il 112 dall'esterno.
-- **Elettricità**: se vedi fili scoperti, prese annerite o hai avuto allagamenti, non toccare gli interruttori con le mani bagnate. Stacca il contatore se puoi farlo in sicurezza.
-- **Acqua**: dopo un'alluvione, prima di bere l'acqua del rubinetto assicurati che ordinanze o avvisi del Comune non lo vietino. Dopo un guasto alla rete idrica, segui le indicazioni del gestore. Se l'uso è vietato, per bere e cucinare usa acqua in bottiglia.
+- **Gas**: se senti odore di gas, non accendere luci o fiamme, non usare interruttori né telefoni nel locale. Apri finestre e porte verso l'esterno, chiudi il rubinetto principale del gas, vicino al contatore, o quello della bombola solo se lo raggiungi subito e senza rischi, ed esci. Chiama il 112 dall'esterno.
+- **Elettricità**: se vedi fili scoperti, prese annerite o hai avuto allagamenti, non toccare gli interruttori con le mani bagnate. Stacca l'interruttore generale se puoi farlo in sicurezza e senza toccare l'acqua. Prima di riaccendere luce e gas dopo un allagamento, se necessario chiedi il parere di un tecnico.
+- **Acqua**: dopo un'alluvione, prima di bere l'acqua del rubinetto assicurati che ordinanze o avvisi del Comune non lo vietino. Dopo un guasto alla rete idrica, segui le indicazioni del gestore. Se l'uso è vietato, per bere e cucinare usa acqua in bottiglia. Non mangiare cibi che sono stati a contatto con l'acqua dell'alluvione: possono essere contaminati.
 
 ## Ritrovarsi e comunicare
 
@@ -100,6 +100,7 @@ Dopo un evento difficile è normale sentirsi scossi, stanchi o irritabili. Anche
 - **Non rientrare** in edifici lesionati prima del via libera dei tecnici.
 - **Non accendere** luci, fiamme o interruttori e non usare telefoni nel locale se senti odore di gas: esci e chiama dall'esterno.
 - **Non bere** l'acqua del rubinetto dopo un'alluvione prima di aver controllato che il Comune non lo vieti.
+- **Non mangiare** cibi che sono stati a contatto con l'acqua dell'alluvione.
 - **Non diffondere** notizie non verificate o messaggi di origine sconosciuta.
 - **Non intasare** il 112 con richieste non urgenti: lascialo libero per le emergenze.
 {{< /cosa-non-fare >}}
@@ -119,4 +120,4 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) — comportamenti di autoprotezione e campagna "Io non rischio".
-- [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/) — allerte e bollettini ufficiali.
+- [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale) — allerte e bollettini ufficiali.

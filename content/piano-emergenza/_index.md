@@ -33,9 +33,9 @@ Il Piano di Emergenza è un documento tecnico. Per il cittadino, però, le infor
 Non serve leggere subito tutto il documento. Inizia dalle aree di emergenza più vicine a casa tua e al tuo luogo di lavoro. Puoi consultarle nella pagina [Cartografia operativa](/cartografia/).
 
 ## <i class="bi bi-person-badge-fill text-primary me-2" aria-hidden="true"></i>Chi coordina l'emergenza {#chi-coordina}
-In ambito comunale, la prima autorità di protezione civile è il **Sindaco**. Quando la situazione lo richiede, il Sindaco può attivare il **Centro Operativo Comunale (COC)**. Il COC coordina le funzioni operative sul territorio: assistenza alla popolazione, volontariato, viabilità, comunicazione, servizi essenziali, censimento danni e supporto tecnico.
+In ambito comunale, la prima autorità di protezione civile è il **Sindaco**. Quando la situazione lo richiede, il Sindaco può attivare il **Centro Operativo Comunale (COC)**. Il COC coordina le funzioni di supporto previste dal Piano comunale: tecnica e pianificazione, sanità e assistenza sociale, volontariato, materiali e mezzi, telecomunicazioni, servizi essenziali, censimento danni, strutture operative locali e viabilità, assistenza alla popolazione.
 
-A Genzano di Roma, quando attivato, il **COC ha sede primaria presso il Comando di Polizia Locale**. Salvo diverse esigenze motivate (sede non agibile, evento che coinvolga direttamente la sede primaria, scelta operativa del Sindaco), quello è l'indirizzo di riferimento per il coordinamento operativo.
+Il Piano di protezione civile del Comune indica **due sedi** per il centro operativo: il **Palazzetto dello sport Gino Cesaroni** e la sede della **Polizia Locale**, in via Roma 31. Il Piano non indica quale delle due sia la principale. Per l'Infiorata 2026, per esempio, l'ordinanza n. 12 del 3 giugno 2026 ha collocato il COC al Comando della Polizia Locale, in via Roma 31/A.
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** opera dentro questa catena di coordinamento. I volontari non vengono attivati direttamente dai cittadini, ma dagli enti competenti, secondo le procedure previste dal Piano e dal sistema regionale di protezione civile.
 
@@ -92,6 +92,7 @@ Sono le sedi operative da cui viene coordinata l'emergenza: Municipio, sede dell
 
 ## <i class="bi bi-download text-primary me-2" aria-hidden="true"></i>Documenti scaricabili {#documenti}
 - [Piano di Emergenza Comunale di PC](https://www.protezionecivilegenzano.it/area-download/normativa/Piano_Emergenza_Comunale_PC_Genzano.pdf)
+- [Piano di Protezione Civile Comunale pubblicato dal Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/sites/comune.genzanodiroma.roma.it/files/2024-12/Piano%20di%20Protezione%20Civile%20Comunale%20-%20Genzano%20di%20Roma.pdf) (PDF, sito del Comune)
 - [Carta delle Aree di Emergenza e degli Edifici Strategici](https://www.protezionecivilegenzano.it/area-download/normativa/Aree_Emergenza_Edifici_Strategici_PC_Genzano.pdf)
 
 Per gli indirizzi delle aree di emergenza fanno fede i cartelli installati sul territorio, riportati nelle pagine [Aree di attesa](/aree-attesa/) e [Cartografia](/cartografia/): in alcuni punti il testo del Piano in PDF riporta indirizzi diversi o non aggiornati.

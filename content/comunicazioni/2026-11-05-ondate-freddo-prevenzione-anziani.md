@@ -1,7 +1,7 @@
 ---
 title: "Ondate di freddo: come prepararsi e proteggere gli anziani"
 date: 2026-11-05T00:01:00+01:00
-description: "Le ondate di freddo non sono solo disagio: sono un rischio concreto per salute, specialmente per anziani e persone fragili. Come prepararsi."
+description: "Le ondate di freddo non sono solo disagio: sono un rischio concreto per salute, specialmente per anziani e persone con fragilità. Come prepararsi."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -57,8 +57,7 @@ Non conta solo quanto scende il termometro: conta quanto dura il freddo e quanto
 ## Prevenzione in casa
 
 ### Riscaldamento
-- **temperatura** ambiente: 19-20 °C;
-- **camera da letto**: 17-18 °C;
+- **temperatura** ambiente: tra 18 e 22 °C; per le persone anziane non sotto i 18-19 °C;
 - **stanze non usate**: chiudere termosifoni (risparmio);
 - **umidificare** per evitare aria troppo secca;
 - **monitorare** funzionamento caldaia (vedi articolo specifico).
@@ -124,7 +123,7 @@ Se una persona che vive per strada non risponde, è confusa, trema forte o è ba
 - [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
 - [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 - [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
-- [Kit Calamità per persone senza fissa dimora](/formazione/kit-calamita-senza-fissa-dimora/)
+- [Kit Calamità per persone senza dimora](/formazione/kit-calamita-senza-fissa-dimora/)
 
 **Fonti istituzionali**
 

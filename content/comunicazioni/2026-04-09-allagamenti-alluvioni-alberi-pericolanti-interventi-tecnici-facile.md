@@ -109,7 +109,7 @@ Nel **2022** abbiamo aiutato i profughi dall'Ucraina. Li portavamo con un pulmin
 
 ## Cosa facciamo con la neve
 
-Genzano è a circa 435 metri di altitudine. A volte nevica.
+Genzano è a circa 458 metri di altitudine. A volte nevica.
 
 Il nostro camion grande, il **Mercedes Atego**, può spargere sale sulla strada. Lo controlla il conducente dall'interno. Può anche montare una lama davanti per spostare la neve.
 

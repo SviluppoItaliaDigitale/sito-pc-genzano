@@ -71,7 +71,7 @@ Per gli edifici esistenti la sicurezza dipende da come e quando sono stati costr
 
 ## Se arriva una scossa
 
-- **se in casa**: rifugio sotto un tavolo solido o in vano di porta portante; non uscire durante la scossa;
+- **se in casa**: rifugio sotto un tavolo solido o nel vano di una porta inserita in un muro portante; non uscire durante la scossa;
 - **se in strada**: spazi aperti, lontano da edifici, pali, cornicioni;
 - **se in auto**: fermarsi in luogo sicuro, non sotto ponti;
 - **dopo la scossa**: uscire con cautela, chiudere gas ed elettricità, seguire istruzioni ufficiali.

@@ -24,7 +24,7 @@ Diversi passaggi fondamentali hanno riscritto il quadro:
 
 | Anno | Cambiamento | Impatto |
 |---|---|---|
-| **1997** | Introduzione del **Metodo Augustus** per la pianificazione comunale | Prime funzioni di supporto numerate (schema poi superato dalla Direttiva 2021) |
+| **1997** | Introduzione del **Metodo Augustus** per la pianificazione comunale | Prime funzioni di supporto numerate (schema poi aggiornato dalla Direttiva 2021) |
 | **2001** | Riforma del Titolo V della Costituzione | La protezione civile diventa materia di **legislazione concorrente** |
 | **2008** | Direttiva 3 dicembre 2008 "Indirizzi operativi" | Prima modernizzazione sistematica post-225/92 |
 | **2012** | Direttiva PCM 9 novembre 2012 «Indirizzi operativi volti ad assicurare l'unitaria partecipazione delle organizzazioni di volontariato all'attività di protezione civile» (GU n. 27 del 1° febbraio 2013) | Regola l'impiego del volontariato organizzato nelle emergenze |

@@ -1,12 +1,12 @@
 ---
 title: "Cucina di festa: sicurezza domestica durante le feste"
 date: 2026-11-24T00:01:00+01:00
-description: "La cucina è il luogo più pericoloso della casa, soprattutto durante le feste. Consigli pratici per evitare incidenti."
+description: "In cucina succedono molti incidenti domestici, e durante le feste i rischi crescono. Che cosa fare con olio, gas, bambini e ustioni."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-24-sicurezza-cucina-festivita.webp"
-image_alt: "Cucina domestica ordinata in preparazione di pranzo festivo con pentole accese, estintore visibile e ambiente aerato"
+image_alt: "Cover dell'articolo: Cucina di festa: sicurezza domestica durante le feste"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -14,7 +14,7 @@ versione_facile: "2026-11-24-sicurezza-cucina-festivita-facile"
 draft: false
 ---
 
-La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — **Natale**, **Capodanno**, pranzi di famiglia allargata — il rischio aumenta per **quantità** di pietanze cucinate, **fornelli accesi a lungo**, **bambini** attorno, **stress** del cuoco. Qualche pratica semplice fa la differenza.
+La **cucina** è uno dei luoghi della casa dove succedono **più incidenti**. Durante le feste — **Natale**, **Capodanno**, pranzi di famiglia allargata — il rischio aumenta per **quantità** di pietanze cucinate, **fornelli accesi a lungo**, **bambini** attorno, **stress** del cuoco. Qualche pratica semplice fa la differenza.
 
 ## I rischi principali
 
@@ -68,7 +68,7 @@ La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — *
 - **non** appoggiare sulla fiamma;
 - **sempre** a portata ma lontani dai fornelli;
 - **sostituire** se bruciacchiati;
-- **asciutte** (bagnate conducono ustione da vapore).
+- **asciutte**: una presina bagnata fa passare il calore e scotta.
 
 ### Coltelli
 - **affilati** (meno scivolano);
@@ -81,6 +81,7 @@ La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — *
 La cucina NON è un parco giochi. Se i bambini sono presenti:
 
 - **zona sicura** definita (lontana da fornelli e piani caldi);
+- **manici** delle pentole girati verso il muro e, quando puoi, **fuochi più interni**;
 - **rubinetto** di acqua fredda raggiungibile (per emergenze ustioni);
 - **spiegare** calmo ma chiaro il "non toccare";
 - **ingresso** controllato;
@@ -91,34 +92,41 @@ La cucina NON è un parco giochi. Se i bambini sono presenti:
 
 In una cucina "sicura" dovrebbero esserci:
 
-- **estintore** a polvere o idrico (classe A-B-C) a portata di mano;
-- **coperta antifiamma** (utile per soffocare piccoli fuochi);
+- **coperchio** sempre vicino ai fornelli e **coperta antifiamma** (utile per soffocare piccoli fuochi);
+- per l'olio da cucina, solo un **estintore** con la lettera **F** sull'etichetta: polvere, anidride carbonica e acqua sull'olio in fiamme sono pericolose;
 - **kit primo soccorso** vicino;
 - **rilevatore fumo** nella cucina o in sala adiacente;
 - **numeri emergenza** scritti (112, Centro Antiveleni Gemelli 06 3054343);
 - **prese** e cavi controllati.
 
+## Odore di gas
+
+Se in casa senti odore di gas:
+
+1. **non accendere né spegnere** luci e interruttori, non usare campanelli, telefoni o apparecchi elettrici nel locale: basta una scintilla;
+2. **apri** finestre e porte;
+3. **chiudi** il gas, solo se raggiungi subito il rubinetto o il contatore;
+4. **esci** e chiama **da fuori** il **112** e il **pronto intervento gas** (il numero è scritto in bolletta).
+
 ## In caso di fuoco
 
 ### Pentola di olio in fiamme
-1. **non buttare acqua** (esplode vapore con fiamme fino al soffitto);
-2. **spegnere** il fornello;
-3. **coprire** con coperchio o coperta antifiamma;
-4. **attendere** che si raffreddi;
-5. **ventilare** la stanza;
-6. **se le fiamme** sono estese: **uscire e chiamare 112**.
+1. **non buttare acqua**: fa schizzare l'olio e allarga il fuoco;
+2. **non spostare** la padella;
+3. **spegnere** il fornello;
+4. **coprire** con il coperchio o la coperta antifiamma e lasciar raffreddare senza sollevarlo;
+5. **arieggiare** la stanza solo a fiamma spenta;
+6. **se il fuoco** non si spegne subito: **uscire, chiudere la porta e chiamare il 112**.
 
 ### Forno in fiamme
-1. **spegnere** il forno;
-2. **NON aprirlo** (l'aria alimenta il fuoco);
-3. **attendere** che si estingua da solo;
-4. **se dura** più di 1-2 minuti: **chiamare 112**.
+1. **spegnere** il forno e, se puoi, staccare la corrente o chiudere il gas del forno;
+2. **non aprirlo**: tieni lo sportello chiuso (l'aria alimenta il fuoco);
+3. **se il fuoco** non si spegne o esce fumo: **uscire, chiudere la porta e chiamare il 112**.
 
 ### Vestiti che prendono fuoco
 1. **fermarsi** (non correre, alimenta le fiamme);
 2. **sdraiarsi** a terra;
-3. **rotolare** per soffocare le fiamme;
-4. **"stop-drop-roll"** è la sequenza standardizzata.
+3. **rotolare** per soffocare le fiamme.
 
 ### Ustione
 1. **raffreddare** sotto acqua corrente fresca per almeno 20 minuti;
@@ -129,14 +137,13 @@ In una cucina "sicura" dovrebbero esserci:
 ## Sicurezza alimentare
 
 ### Catena del freddo
-- **frigorifero**: tra 0 e 4 °C;
-- **freezer**: -18 °C o meno;
-- **non lasciare** alimenti fuori frigorifero più di 2 ore;
+- **frigorifero** e **freezer** alla temperatura indicata nel libretto dell'apparecchio, senza riempirli troppo;
+- **non lasciare** per ore fuori dal frigorifero gli alimenti cotti o deperibili;
 - **non ricongelare** alimenti scongelati (eccetto per cottura completa).
 
 ### Preparazioni in anticipo
 - **raffreddare** rapidamente dopo cottura (in contenitori bassi, in frigo veloce);
-- **riscaldare** bene prima di servire (sopra 70 °C al cuore);
+- **riscaldare** bene prima di servire, finché il cibo è caldo anche al centro;
 - **non lasciare** tiepido per ore;
 - **etichettare** con data di preparazione.
 
@@ -158,7 +165,7 @@ In una cucina "sicura" dovrebbero esserci:
 Nelle feste l'alcol scorre. Ma:
 
 - **mai bere** mentre si cucina con fuochi accesi;
-- **mai bere** e guidare (0.0 per neopatentati e altri);
+- **mai bere** e guidare: chi ha meno di 21 anni, chi ha la patente B da meno di 3 anni e chi guida per lavoro non può guidare dopo aver bevuto alcolici (art. 186-bis del Codice della strada);
 - **offrire** alternative analcoliche agli ospiti;
 - **non insistere** con chi rifiuta (rispetto sempre);
 - **cena** adeguata se alcol offerto (riduce l'assorbimento).
@@ -166,9 +173,8 @@ Nelle feste l'alcol scorre. Ma:
 ## Dopo il pasto
 
 ### Ordine
-- **spegnere** tutto (fornelli, forno, caldaia);
+- **spegnere** fornelli e forno;
 - **non lasciare** avanzi al caldo (riporli in frigorifero);
-- **svuotare** lavastoviglie non immediatamente (per evitare accumuli umidi);
 - **controllare** gas chiuso prima di andare a dormire.
 
 ### Rifiuti
@@ -182,7 +188,7 @@ Nelle due feste storiche, in aggiunta:
 
 - **candele accese**: mai incustodite;
 - **alberi** di Natale: lontano da fonti di calore;
-- **luminarie**: certificate CE, non surriscaldate;
+- **luminarie** con marcatura CE e istruzioni in italiano, spente di notte;
 - **brindisi** con spumante: attenzione ai tappi (rischio occhi);
 - **fuochi** e petardi: **grande attenzione** il 31 dicembre;
 - **anziani e bambini**: protezione acustica.
