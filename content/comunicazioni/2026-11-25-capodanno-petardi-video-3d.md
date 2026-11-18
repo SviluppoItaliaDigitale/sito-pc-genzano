@@ -1,19 +1,19 @@
 ---
 title: "Fuochi di Capodanno: come arrivare al primo gennaio senza farti male"
-date: 2026-12-27T00:01:00+01:00
+date: 2026-11-25T00:03:00+01:00
 description: "Un video in 3D di poco più di un minuto sui fuochi di Capodanno: quali comprare, come leggere l'etichetta, dove accenderli e cosa fare se qualcuno si ferisce."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-12-27-capodanno-petardi-video-3d.webp"
+image: "/images/2026-11-25-capodanno-petardi-video-3d.webp"
 image_alt: "Cover dell'articolo: Fuochi di Capodanno: come arrivare al primo gennaio senza farti male"
 scadenza: ""
 area: ""
 allegati: []
 draft: false
 tts: true
-versione_facile: "2026-12-27-capodanno-petardi-video-3d-facile"
-social_video: "/video/2026-12-27-capodanno-petardi-video-3d.mp4"
+versione_facile: "2026-11-25-capodanno-petardi-video-3d-facile"
+social_video: "/video/2026-11-25-capodanno-petardi-video-3d.mp4"
 social_citazione: "Se un fuoco non esplode, non toccarlo e non riaccenderlo: segnalalo al 112."
 social_punti:
   - "Compra solo da rivenditori autorizzati, con il marchio CE e le istruzioni in italiano."
@@ -28,13 +28,13 @@ Ultima sera dell'anno ai Castelli: in piazza si aspetta la mezzanotte e in molte
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
-{{< video src="/video/2026-12-27-capodanno-petardi-video-3d.mp4"
-          poster="/video/2026-12-27-capodanno-petardi-video-3d-poster.webp"
+{{< video src="/video/2026-11-25-capodanno-petardi-video-3d.mp4"
+          poster="/video/2026-11-25-capodanno-petardi-video-3d-poster.webp"
           verticale="true"
           titolo="Video con voce e sottotitoli: fuochi di Capodanno, come arrivare al primo gennaio senza farti male"
           caption="Fuochi di Capodanno: come arrivare al primo gennaio senza farti male. Le scene sono illustrazioni, non riprese reali. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-Lo stesso video in formato orizzontale, per il computer, la televisione o la proiezione: [scarica il video orizzontale (MP4)](/video/2026-12-27-capodanno-petardi-video-3d-16x9.mp4).
+Lo stesso video in formato orizzontale, per il computer, la televisione o la proiezione: [scarica il video orizzontale (MP4)](/video/2026-11-25-capodanno-petardi-video-3d-16x9.mp4).
 
 <details class="faq-item">
 <summary><strong>Trascrizione del video</strong></summary>

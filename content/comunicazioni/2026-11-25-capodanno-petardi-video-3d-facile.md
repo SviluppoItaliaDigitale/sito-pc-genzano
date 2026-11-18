@@ -1,18 +1,18 @@
 ---
 title: "Fuochi di Capodanno: come non farti male"
-date: 2026-12-27T00:01:00+01:00
+date: 2026-11-25T00:03:00+01:00
 draft: false
 description: "Un video di circa 1 minuto e 20 secondi sui fuochi di Capodanno. Quali comprare, dove accenderli e cosa fare se qualcuno si fa male."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-12-27-capodanno-petardi-video-3d.webp"
+image: "/images/2026-11-25-capodanno-petardi-video-3d.webp"
 image_alt: "Cover dell'articolo: Fuochi di Capodanno: come arrivare al primo gennaio senza farti male"
 scadenza: ""
 area: ""
 allegati: []
 tts: true
-versione_facile_di: "2026-12-27-capodanno-petardi-video-3d"
+versione_facile_di: "2026-11-25-capodanno-petardi-video-3d"
 build:
   list: never
   render: always
@@ -21,8 +21,8 @@ build:
 
 Questo è un **video di circa 1 minuto e 20 secondi**. Parla dei fuochi d'artificio e dei petardi di Capodanno. Il video ha una voce e le scritte. Lo capisci anche senza audio.
 
-{{< video src="/video/2026-12-27-capodanno-petardi-video-3d.mp4"
-          poster="/video/2026-12-27-capodanno-petardi-video-3d-poster.webp"
+{{< video src="/video/2026-11-25-capodanno-petardi-video-3d.mp4"
+          poster="/video/2026-11-25-capodanno-petardi-video-3d-poster.webp"
           verticale="true"
           titolo="Video con voce e scritte: fuochi di Capodanno, come arrivare al primo gennaio senza farti male"
           caption="Fuochi di Capodanno. Le scene sono disegni, non riprese vere. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -60,5 +60,5 @@ Il fuoco non esplode? **Non toccarlo.** Non accenderlo di nuovo. Chiama il **112
 
 ## Per saperne di più
 
-- [Fuochi di Capodanno: la versione completa](/comunicazioni/2026-12-27-capodanno-petardi-video-3d/)
+- [Fuochi di Capodanno: la versione completa](/comunicazioni/2026-11-25-capodanno-petardi-video-3d/)
 - [Capodanno: petardi e sicurezza, la versione facile](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza-facile/)
