@@ -1,18 +1,18 @@
 ---
 title: "Notte sotto zero: cosa fare con il gelo"
-date: 2026-12-01T00:01:00+01:00
+date: 2026-11-30T00:02:00+01:00
 draft: false
 description: "Un video di poco più di 1 minuto. Di notte fa molto freddo: ghiaccio, tubi dell'acqua, persone sole e animali."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-12-01-freddo-gelo-video-3d.webp"
+image: "/images/2026-11-30-freddo-gelo-video-3d.webp"
 image_alt: "Cover dell'articolo: Notte sotto zero: chi e che cosa proteggere dal gelo"
 scadenza: ""
 area: ""
 allegati: []
 tts: true
-versione_facile_di: "2026-12-01-freddo-gelo-video-3d"
+versione_facile_di: "2026-11-30-freddo-gelo-video-3d"
 build:
   list: never
   render: always
@@ -21,8 +21,8 @@ build:
 
 Questo è un **video di poco più di 1 minuto**. Parla delle notti molto fredde, sotto zero. Il video ha una voce e le scritte. Lo capisci anche senza audio.
 
-{{< video src="/video/2026-12-01-freddo-gelo-video-3d.mp4"
-          poster="/video/2026-12-01-freddo-gelo-video-3d-poster.webp"
+{{< video src="/video/2026-11-30-freddo-gelo-video-3d.mp4"
+          poster="/video/2026-11-30-freddo-gelo-video-3d-poster.webp"
           verticale="true"
           titolo="Video con voce e scritte: notte sotto zero, chi e che cosa proteggere dal gelo"
           caption="Notte sotto zero. Le scene sono disegni, non riprese vere. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
@@ -67,5 +67,5 @@ Il **112** è il numero unico di emergenza.
 
 ## Per saperne di più
 
-- [Notte sotto zero: la versione completa](/comunicazioni/2026-12-01-freddo-gelo-video-3d/)
+- [Notte sotto zero: la versione completa](/comunicazioni/2026-11-30-freddo-gelo-video-3d/)
 - [Ondate di freddo: come prepararsi e proteggere gli anziani](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/)

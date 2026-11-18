@@ -1,6 +1,6 @@
 ---
 title: "Quando i telefoni non funzionano: la radio"
-date: 2026-11-30
+date: 2026-11-30T00:01:00+01:00
 draft: false
 description: "Un video di poco più di 1 minuto. Nelle emergenze il telefono può non funzionare. Cosa fanno le radio e cosa fai tu."
 badge: "Radiocomunicazioni"

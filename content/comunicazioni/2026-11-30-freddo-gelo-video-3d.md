@@ -1,19 +1,19 @@
 ---
 title: "Notte sotto zero: chi e che cosa proteggere dal gelo"
-date: 2026-12-01T00:01:00+01:00
+date: 2026-11-30T00:02:00+01:00
 description: "Un video di poco più di un minuto su ghiaccio, contatori dell'acqua, persone sole e animali: che cosa fare quando di notte si scende sotto zero."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-12-01-freddo-gelo-video-3d.webp"
+image: "/images/2026-11-30-freddo-gelo-video-3d.webp"
 image_alt: "Cover dell'articolo: Notte sotto zero: chi e che cosa proteggere dal gelo"
 scadenza: ""
 area: ""
 allegati: []
 draft: false
 tts: true
-versione_facile: "2026-12-01-freddo-gelo-video-3d-facile"
-social_video: "/video/2026-12-01-freddo-gelo-video-3d.mp4"
+versione_facile: "2026-11-30-freddo-gelo-video-3d-facile"
+social_video: "/video/2026-11-30-freddo-gelo-video-3d.mp4"
 social_citazione: "Quando di notte si scende sotto zero, telefona a chi vive da solo."
 social_punti:
   - "All'alba e la sera esci con scarpe antiscivolo e cammina con cautela: strade e marciapiedi possono ghiacciare."
@@ -28,13 +28,13 @@ Notte serena sui Castelli: il termometro scende sotto zero e al mattino marciapi
 
 Il video ha una voce che legge e i sottotitoli sempre visibili, così si capisce anche senza audio. Le indicazioni che dà sono scritte anche in questa pagina.
 
-{{< video src="/video/2026-12-01-freddo-gelo-video-3d.mp4"
-          poster="/video/2026-12-01-freddo-gelo-video-3d-poster.webp"
+{{< video src="/video/2026-11-30-freddo-gelo-video-3d.mp4"
+          poster="/video/2026-11-30-freddo-gelo-video-3d-poster.webp"
           verticale="true"
           titolo="Video con voce e sottotitoli: notte sotto zero, chi e che cosa proteggere dal gelo"
           caption="Notte sotto zero: chi e che cosa proteggere dal gelo. Le scene sono illustrazioni, non riprese reali. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-Lo stesso video in formato orizzontale, per il computer, la televisione o la proiezione: [scarica il video orizzontale (MP4)](/video/2026-12-01-freddo-gelo-video-3d-16x9.mp4).
+Lo stesso video in formato orizzontale, per il computer, la televisione o la proiezione: [scarica il video orizzontale (MP4)](/video/2026-11-30-freddo-gelo-video-3d-16x9.mp4).
 
 <details class="faq-item">
 <summary><strong>Trascrizione del video</strong></summary>

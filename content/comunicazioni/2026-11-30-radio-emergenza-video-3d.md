@@ -1,6 +1,6 @@
 ---
 title: "Quando i telefoni non funzionano: le radio in emergenza"
-date: 2026-11-30
+date: 2026-11-30T00:01:00+01:00
 description: "Un video di poco più di un minuto: perché in emergenza le reti telefoniche si bloccano, come lavorano le reti radio e che cosa puoi fare tu."
 badge: "Radiocomunicazioni"
 priorita: "normale"
