@@ -7,7 +7,7 @@ aliases:
   - /diventavolontario.html
   - /diventavolontario/
 tts: true
-dataUltimaRevisione: "2026-06-25"
+dataUltimaRevisione: "2026-11-18"
 risorse_tema: "kit-emergenza"
 ---
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
@@ -168,7 +168,7 @@ Molti pensano che il volontariato di protezione civile sia solo per chi è giova
 | **Supporto eventi** | Presenza fisica regolare, contatto con il pubblico, gestione code |
 | **Cucina da campo** | Igiene alimentare, organizzazione, lavoro di squadra (vedi articoli HACCP) |
 | **Antincendio boschivo** | Forma fisica buona, formazione specifica AIB, disponibilità stagionale |
-| **Guida mezzi** | Patente B/C/E in base al mezzo, calma sotto pressione |
+| **Guida mezzi** | Patente B, C, D o E (BE, CE, DE) in base al mezzo, calma sotto pressione |
 | **Comunicazione e social** | Scrittura chiara, conoscenza norme privacy, sensibilità istituzionale |
 
 C'è spazio per **profili diversi**: chi può sollevare carichi pesanti, chi non può; chi guida, chi non guida; chi parla in pubblico, chi preferisce stare dietro. Il Gruppo si organizza in funzione delle competenze disponibili.
@@ -176,6 +176,8 @@ C'è spazio per **profili diversi**: chi può sollevare carichi pesanti, chi non
 ## Come iscriversi
 
 Il primo passo è un colloquio conoscitivo. Serve a capire cosa fa il Gruppo, quali sono gli impegni richiesti e quale contributo puoi portare.
+
+{{< assistente-volontari >}}
 
 <div class="row mt-3 mb-4">
 <div class="col-md-4 mb-3">
