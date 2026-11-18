@@ -78,7 +78,7 @@ L'allerta della Regione Lazio è emessa per zone: aree in cui si attendono fenom
 - **Quando c'è l'allerta** non dormire nei seminterrati.
 - **Se l'acqua sale in casa** vai ai piani alti senza usare l'ascensore, che si può bloccare. Se puoi farlo senza rischi, chiudi il gas e disattiva l'impianto elettrico. Non bere l'acqua del rubinetto: potrebbe essere contaminata.
 - **Se sei fuori** allontanati dall'acqua, perché anche pochi centimetri possono farti cadere. Raggiungi un punto più alto, lontano da sottopassi, argini, ponti e pendii che possono franare.
-- **Se sei in auto** e l'acqua ti blocca, lasciala solo se puoi uscire senza entrare nella corrente. Poi sali a piedi in un punto più alto. Se la corrente è forte, resta dentro e chiama il **112**; se l'acqua entra, sali sul tetto.
+- **Se sei in auto** e l'acqua ti blocca, lasciala solo se puoi uscire senza entrare nella corrente. Poi sali a piedi in un punto più alto. Se la corrente è forte, resta dentro e chiama il **112**.
 - **Dopo** rientra solo quando lo dicono le autorità: le strade allagate possono nascondere buche, tombini aperti e cavi elettrici. L'acqua del rubinetto si beve solo se il Comune non lo vieta.
 
 In emergenza chiama il **112** e segui solo le fonti ufficiali. Le indicazioni complete sono nella pagina [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).

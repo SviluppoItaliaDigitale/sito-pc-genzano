@@ -101,7 +101,7 @@ Se l'acqua sale, vai ai piani alti senza usare l'ascensore e, se puoi farlo senz
 
 Se sei fuori, allontanati dall'acqua e raggiungi un punto più alto, lontano da sottopassi, ponti e pendii che possono franare.
 
-In auto, se l'acqua ti blocca e puoi uscire senza entrare nella corrente, lasciala e sali a piedi in un punto più alto. Se la corrente è forte, resta dentro e chiama il numero 112; se l'acqua entra, sali sul tetto.
+In auto, se l'acqua ti blocca e puoi uscire senza entrare nella corrente, lasciala e sali a piedi in un punto più alto. Se la corrente è forte, resta dentro e chiama il numero 112.
 
 Dopo, rientra solo quando lo dicono le autorità: le strade allagate possono nascondere buche, tombini aperti e cavi elettrici. L'acqua del rubinetto si beve solo se il Comune non lo vieta.
 
@@ -163,7 +163,7 @@ Come riconoscere i segnali di una frana e che cosa fare se la terra si muove: lo
 - **Non attraversare mai** un sottopassaggio o una strada allagata.
 - Pochi centimetri d'acqua bastano a far perdere aderenza o a spegnere il motore.
 - Se l'acqua blocca l'auto e puoi uscire senza entrare nella corrente, **abbandonala** e raggiungi a piedi un punto più elevato.
-- Se l'auto è bloccata in una corrente forte e non puoi uscire senza entrare nell'acqua, chiama il 112; se l'acqua entra nell'abitacolo, sali sul tetto.
+- Se l'auto è bloccata in una corrente forte e non puoi uscire senza entrare nell'acqua, chiama il 112.
 
 ## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO l'evento {#cosa-fare-dopo}
 - Non rientrare in casa finché le autorità non lo autorizzano.

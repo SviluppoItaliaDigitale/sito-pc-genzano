@@ -73,7 +73,7 @@ Se l'auto resta ferma nell'acqua:
 
 - Se l'acqua è ferma, esci dall'auto. Vai verso un posto asciutto.
 - Se l'acqua corre forte, resta nell'auto. Chiama il 112.
-- Se l'acqua sale dentro l'auto, sali sul tetto. Rompi un finestrino se la porta non si apre.
+- Se l'auto resta bloccata nell'acqua, chiama il 112.
 
 Ricorda: bastano 30 centimetri d'acqua per muovere un'auto.
 

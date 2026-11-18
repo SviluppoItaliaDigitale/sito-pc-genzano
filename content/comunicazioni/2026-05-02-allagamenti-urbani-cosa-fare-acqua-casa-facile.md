@@ -59,7 +59,7 @@ Il **CFR Lazio** (il Centro Funzionale Regionale del Lazio) pubblica le allerte 
 
 - Se l'acqua è ferma, esci dall'auto. Vai a piedi in un posto alto.
 - Se l'acqua corre forte, resta nell'auto. Chiama il 112.
-- Se l'acqua entra nell'auto, sali sul tetto. Se la porta non si apre, rompi il vetro con il martelletto.
+- Se l'auto resta bloccata nell'acqua, chiama il 112.
 
 ## Quando chiamare il 112
 

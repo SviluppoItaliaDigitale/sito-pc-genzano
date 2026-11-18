@@ -83,8 +83,8 @@ Può piovere in una zona e alluvionare in un'altra se il bacino è impermeabile.
 2. Se rimani **bloccato nell'acqua**:
    - **Esci** e spostati verso una zona non sommersa se l'acqua è ferma o lenta e puoi farlo senza entrare nella corrente.
    - **Resta nell'auto** e chiama il **112** se intorno l'acqua corre forte.
-   - **Sali sul tetto** se l'acqua sale dentro l'abitacolo; se le porte non si aprono, rompi un finestrino.
-3. **Ricorda**: bastano 30 cm di acqua in movimento per portare via un'automobile.
+   - Se l'auto resta bloccata nell'acqua, chiama subito il **112** e segui le indicazioni dell'operatore.
+3. **Ricorda**: anche pochi centimetri d'acqua possono far perdere il controllo dell'auto o spegnerne il motore.
 
 ### A piedi
 1. **Evita** di attraversare acque in movimento.

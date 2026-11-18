@@ -47,7 +47,7 @@ Bastano pochi centimetri d'acqua. L'auto si può spegnere. Puoi perdere il contr
 1. Fermati prima dell'acqua. Accendi le luci di emergenza.
 2. Torna indietro. Cerca un'altra strada, più in alto.
 3. L'auto si ferma nell'acqua? Se l'acqua è ferma, esci. Vai a piedi in un posto più alto.
-4. Se l'acqua intorno corre forte, resta nell'auto. Chiama il **112**. Se l'acqua entra nell'auto, sali sul tetto.
+4. Se l'acqua intorno corre forte, resta nell'auto. Chiama il **112** e segui le indicazioni dell'operatore.
 5. Se vedi persone in pericolo, chiama il **112**. Il 112 è il numero unico per le emergenze.
 
 ## Cosa non fare
