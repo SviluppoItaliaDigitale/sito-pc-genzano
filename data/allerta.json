@@ -3,13 +3,7 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-11-16T11:42:02+01:00",
-  "ultimo_controllo": "2026-11-17T21:11:53+01:00",
-  "domani": {
-    "livello": "verde",
-    "titolo": "Previsto verde",
-    "rischi": [],
-    "data": "2026-11-18"
-  },
+  "ultimo_controllo": "2026-11-18T02:03:42+01:00",
   "avviso_meteo": {
     "tipo": "vento",
     "livello": "gialla",
