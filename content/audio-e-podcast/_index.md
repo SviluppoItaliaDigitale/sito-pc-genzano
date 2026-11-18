@@ -1,10 +1,10 @@
 ---
 title: "Audio e podcast"
-description: "Ascolta i contenuti della PC di Genzano di Roma: ogni pagina del sito si legge ad alta voce dal browser. Il podcast del Gruppo è sospeso e in rifacimento."
+description: "Ascolta i contenuti della PC di Genzano di Roma: ogni pagina del sito si legge ad alta voce dal browser. Il podcast del Gruppo è in rifacimento: le puntate tornano una per volta."
 layout: "single"
 toc: false
 tts: true
-dataUltimaRevisione: "2026-11-05"
+dataUltimaRevisione: "2026-11-18"
 sitemap:
   priority: 0.6
   changefreq: monthly
@@ -20,11 +20,11 @@ Utile per chi non sente bene, per chi preferisce ascoltare mentre fa altro, per 
 
 - [Vai agli articoli da ascoltare](/articoli-da-ascoltare/) — elenco completo con durata stimata
 
-## Podcast del Gruppo — sospeso
+## Podcast del Gruppo — in rifacimento
 
-Le puntate di **Voci dalla Protezione Civile di Genzano di Roma** sono sospese dal 5 novembre 2026. Riascoltando la puntata su IT-alert vi abbiamo trovato informazioni non corrette: le rifaremo tutte, e ognuna tornerà solo dopo la verifica sulle fonti ufficiali, con la trascrizione completa in pagina.
+Il 5 novembre 2026 abbiamo tolto dal sito le puntate di **Voci dalla Protezione Civile di Genzano di Roma**: riascoltando quella su IT-alert vi abbiamo trovato informazioni non corrette. Le stiamo rifacendo una per volta, e ognuna esce solo dopo il confronto, frase per frase, con le pagine del sito da cui nasce, con la trascrizione completa in pagina.
 
-- [Pagina del podcast](/podcast/) — perché è sospeso
+- [Pagina del podcast](/podcast/) — le puntate rifatte
 
 ## Podcast del Sistema nazionale di Protezione Civile
 

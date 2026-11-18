@@ -9,136 +9,219 @@
 # Ordine: si rifanno i temi sospesi il 05/11/2026, poi la stagione.
 
 puntate:
-  - id: rischio-sismico
-    titolo: "Il terremoto: cosa fare prima, durante e dopo"
-    fonti:
-      - content/rischi-prevenzione/rischio-sismico.md
-    parole: ["terremot", "sism", "scossa", "INGV", "Io non rischio"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-sapere/
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
-    stato: scartata
-    motivo: "15/11/2026, due tentativi (1 e 37 fonti, formato Approfondimento, lunghezza predefinita): spiegazioni tecniche aggiunte, scosse dei Colli Albani rese più gravi; Norcia 2016 raccontata con un salvataggio del centro storico che le fonti non dicono. Da rifare con lunghezza «Breve» e le istruzioni nuove."
-
-  - id: allerta-meteo
-    titolo: "Allerta meteo: che cosa vogliono dire i colori"
-    fonti:
-      - content/allerte-meteo/_index.md
-      - content/cosa-succede-quando-scatta-allerta/_index.md
-    parole: ["allert", "codice colore", "bollettin", "criticità"]
-    # Fuori tema o con lo stato di oggi (la puntata non deve dire l'allerta del momento).
-    escludi: ["allerta-stato", "sismometri", "mtg-i2", "ari-pozzuoli", "vulcani-colli-albani", "ondate-calore", "caldo-salute"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/approfondimento/il-roll-sullallerta-meteo-idro/
-    stato: da-fare
-    tentativi: 1
-    nota: "17/11/2026, primo tentativo (audio del 15/11, lunghezza Breve) non superato: apertura con una scena inventata (pioggia leggera e allerta rossa, «reazione comunissima»), «seguendo sempre» le indicazioni (la fonte non dice sempre), «importantissima», «salvavita», «fondamentale», motivo del consiglio sul verde non nelle fonti. Al prossimo errore la puntata va in scartata."
-    istruzioni_extra: "ATTENZIONE, regole aggiuntive: non aprire con scene o situazioni immaginate (niente \"immagina\", niente pioggia leggera con allerta rossa) e non dire come reagisce la gente. Non dire \"sempre\" né \"mai\" se non sono nella frase della fonte: \"segui le indicazioni delle autorità\", senza \"sempre\". Non usare \"importantissimo\", \"fondamentale\", \"salvavita\". Non spiegare il motivo dei consigli e non chiudere con riflessioni: riporta per ogni colore quello che le fonti dicono, nell'ordine verde, giallo, arancione, rosso. Non usare la parola \"fonti\": di' \"canali non ufficiali\"."
-
-  - id: numero-112
-    titolo: "Il 112: un solo numero per ogni emergenza"
-    fonti:
-      - content/numeri-utili/_index.md
-      - content/dossier/112-tre-cifre-per-salvarsi.md
-    parole: ["112", "NUE", "numero unico", "Where Are U"]
-    stato: da-fare
-
-  - id: rischio-idrogeologico
-    titolo: "Piogge forti e allagamenti: come difendersi"
-    fonti:
-      - content/rischi-prevenzione/rischio-idrogeologico.md
-    parole: ["idrogeolog", "alluvion", "allagament", "frana", "frane", "esondazion"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-    stato: da-fare
-
-  - id: piano-familiare
-    titolo: "Il piano di emergenza della famiglia"
-    fonti:
-      - content/piano-familiare/_index.md
-    parole: ["piano familiare", "piano di famiglia", "piano di emergenza famil"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-    stato: da-fare
-
-  - id: kit-emergenza
-    titolo: "Lo zaino di emergenza: che cosa metterci"
-    fonti:
-      - content/rischi-prevenzione/kit-emergenza/_index.md
-    parole: ["kit", "zaino", "scorta"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/video/kit-di-emergenza/
-    stato: da-fare
-
-  - id: aree-emergenza
-    titolo: "Le aree di attesa di Genzano di Roma"
-    fonti:
-      - content/aree-attesa/_index.md
-      - content/piano-emergenza/_index.md
-    parole: ["aree di attesa", "area di attesa", "aree di emergenza", "piano di emergenza comunale", "area di raccolta"]
-    stato: da-fare
-
-  - id: dopo-emergenza
-    titolo: "Dopo l'emergenza: tornare a casa in sicurezza"
-    fonti:
-      - content/rischi-prevenzione/dopo-emergenza.md
-    parole: ["dopo l.emergenza", "rientro", "danni", "ricostruzion"]
-    stato: da-fare
-
-  - id: blackout
-    titolo: "Blackout: come affrontare la mancanza di corrente"
-    fonti:
-      - content/rischi-prevenzione/blackout.md
-    parole: ["blackout", "corrente elettrica", "interruzione di energia"]
-    stato: da-fare
-
-  - id: vento-forte
-    titolo: "Vento forte: i pericoli e come proteggersi"
-    fonti:
-      - content/rischi-prevenzione/vento-forte.md
-    parole: ["vento", "raffiche", "tromba d.aria", "downburst"]
-    stato: da-fare
-
-  - id: temporali-intensi
-    titolo: "Temporali intensi: fulmini, grandine e allagamenti"
-    fonti:
-      - content/rischi-prevenzione/temporali-intensi.md
-    parole: ["temporal", "fulmin", "grandin", "nubifragi"]
-    stato: da-fare
-
-  - id: rischio-vulcanico
-    titolo: "I Colli Albani: il vulcano sotto i Castelli Romani"
-    fonti:
-      - content/rischi-prevenzione/rischio-vulcanico.md
-    parole: ["vulcan", "Colli Albani", "eruzion", "Campi Flegrei", "Vesuvio"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/vulcani/
-    stato: da-fare
-
-  - id: it-alert
-    titolo: "IT-alert: il messaggio che arriva sul telefono"
-    # Il tema che ha fatto sospendere il podcast: fonti solo le pagine
-    # riviste dopo il 05/11/2026; controllo dei fatti più severo.
-    fonti:
-      - content/dossier/il-messaggio-che-salva.md
-    parole: ["IT-alert"]
-    stato: da-fare
-
-  - id: ondate-di-calore
-    titolo: "Il caldo estremo: proteggere sé e gli altri"
-    fonti:
-      - content/rischi-prevenzione/ondate-di-calore.md
-    parole: ["caldo", "calore", "afa", "colpo di calore"]
-    stato: da-fare
-
-  - id: rischio-incendio
-    titolo: "Incendi boschivi: prevenzione e comportamenti"
-    fonti:
-      - content/rischi-prevenzione/rischio-incendio.md
-    parole: ["incendi", "AIB", "antincendio", "fuoco"]
-    ufficiali:
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-sapere/
-      - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/
-    stato: da-fare
+- id: rischio-sismico
+  titolo: 'Il terremoto: cosa fare prima, durante e dopo'
+  fonti:
+  - content/rischi-prevenzione/rischio-sismico.md
+  parole:
+  - terremot
+  - sism
+  - scossa
+  - INGV
+  - Io non rischio
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-sapere/
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
+  stato: scartata
+  motivo: '15/11/2026, due tentativi (1 e 37 fonti, formato Approfondimento, lunghezza
+    predefinita): spiegazioni tecniche aggiunte, scosse dei Colli Albani rese più
+    gravi; Norcia 2016 raccontata con un salvataggio del centro storico che le fonti
+    non dicono. Da rifare con lunghezza «Breve» e le istruzioni nuove.'
+- id: allerta-meteo
+  titolo: 'Allerta meteo: che cosa vogliono dire i colori'
+  fonti:
+  - content/allerte-meteo/_index.md
+  - content/cosa-succede-quando-scatta-allerta/_index.md
+  parole:
+  - allert
+  - codice colore
+  - bollettin
+  - criticità
+  escludi:
+  - allerta-stato
+  - sismometri
+  - mtg-i2
+  - ari-pozzuoli
+  - vulcani-colli-albani
+  - ondate-calore
+  - caldo-salute
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/approfondimento/il-roll-sullallerta-meteo-idro/
+  stato: scartata
+  tentativi: 2
+  nota: '17/11/2026, primo tentativo (audio del 15/11, lunghezza Breve) non superato:
+    apertura con una scena inventata (pioggia leggera e allerta rossa, «reazione comunissima»),
+    «seguendo sempre» le indicazioni (la fonte non dice sempre), «importantissima»,
+    «salvavita», «fondamentale», motivo del consiglio sul verde non nelle fonti. Al
+    prossimo errore la puntata va in scartata.'
+  motivo: '18/11/2026, secondo tentativo (stesse 30 fonti, Breve, istruzioni rafforzate;
+    audio 2:52) non superato: per l''allerta arancione dice «allagamenti di aree più
+    ampie» e «piccole esondazioni dei fiumi e dei canali», che le fonti non contengono
+    (le pagine parlano di allagamenti rapidi nelle zone basse e lungo i fossi, ruscellamento
+    e possibili smottamenti). Il resto combaciava con le fonti.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non aprire con scene o situazioni
+    immaginate (niente "immagina", niente pioggia leggera con allerta rossa) e non
+    dire come reagisce la gente. Non dire "sempre" né "mai" se non sono nella frase
+    della fonte: "segui le indicazioni delle autorità", senza "sempre". Non usare
+    "importantissimo", "fondamentale", "salvavita". Non spiegare il motivo dei consigli
+    e non chiudere con riflessioni: riporta per ogni colore quello che le fonti dicono,
+    nell''ordine verde, giallo, arancione, rosso. Non usare la parola "fonti": di''
+    "canali non ufficiali".'
+- id: numero-112
+  titolo: 'Il 112: un solo numero per ogni emergenza'
+  fonti:
+  - content/numeri-utili/_index.md
+  - content/dossier/112-tre-cifre-per-salvarsi.md
+  parole:
+  - '112'
+  - NUE
+  - numero unico
+  - Where Are U
+  stato: programmata
+  tentativi: 1
+  nota: '18/11/2026, primo tentativo (17 fonti, Breve, audio 3:07) non superato: «fondamentale»
+    due volte, «serve per non creare confusione» (motivo non nelle fonti), «non si
+    chiama direttamente. Mai» (assoluto aggiunto), esempio del telefono partito dalla
+    tasca o dalla borsa (non nelle fonti). Il resto combaciava con le fonti. Al prossimo
+    errore la puntata va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non usare "fondamentale", "molto
+    importante", "assolutamente". Non dire a che cosa serve una regola (niente "serve
+    per non creare confusione"). Sul Gruppo comunale di'' solo: "in emergenza non
+    si chiama il Gruppo comunale: si chiama il 112", senza "mai". Per la chiamata
+    partita per errore di'' solo quello che dicono le fonti (non riagganciare, spiegalo
+    all''operatore), senza esempi su come succede. Non aggiungere esempi o situazioni
+    che non sono nelle fonti.'
+  file: content/podcast/2026-11-20-numero-112.md
+  data: '2026-11-20'
+- id: rischio-idrogeologico
+  titolo: 'Piogge forti e allagamenti: come difendersi'
+  fonti:
+  - content/rischi-prevenzione/rischio-idrogeologico.md
+  parole:
+  - idrogeolog
+  - alluvion
+  - allagament
+  - frana
+  - frane
+  - esondazion
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
+  stato: da-fare
+- id: piano-familiare
+  titolo: Il piano di emergenza della famiglia
+  fonti:
+  - content/piano-familiare/_index.md
+  parole:
+  - piano familiare
+  - piano di famiglia
+  - piano di emergenza famil
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
+  stato: da-fare
+- id: kit-emergenza
+  titolo: 'Lo zaino di emergenza: che cosa metterci'
+  fonti:
+  - content/rischi-prevenzione/kit-emergenza/_index.md
+  parole:
+  - kit
+  - zaino
+  - scorta
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/video/kit-di-emergenza/
+  stato: da-fare
+- id: aree-emergenza
+  titolo: Le aree di attesa di Genzano di Roma
+  fonti:
+  - content/aree-attesa/_index.md
+  - content/piano-emergenza/_index.md
+  parole:
+  - aree di attesa
+  - area di attesa
+  - aree di emergenza
+  - piano di emergenza comunale
+  - area di raccolta
+  stato: da-fare
+- id: dopo-emergenza
+  titolo: 'Dopo l''emergenza: tornare a casa in sicurezza'
+  fonti:
+  - content/rischi-prevenzione/dopo-emergenza.md
+  parole:
+  - dopo l.emergenza
+  - rientro
+  - danni
+  - ricostruzion
+  stato: da-fare
+- id: blackout
+  titolo: 'Blackout: come affrontare la mancanza di corrente'
+  fonti:
+  - content/rischi-prevenzione/blackout.md
+  parole:
+  - blackout
+  - corrente elettrica
+  - interruzione di energia
+  stato: da-fare
+- id: vento-forte
+  titolo: 'Vento forte: i pericoli e come proteggersi'
+  fonti:
+  - content/rischi-prevenzione/vento-forte.md
+  parole:
+  - vento
+  - raffiche
+  - tromba d.aria
+  - downburst
+  stato: da-fare
+- id: temporali-intensi
+  titolo: 'Temporali intensi: fulmini, grandine e allagamenti'
+  fonti:
+  - content/rischi-prevenzione/temporali-intensi.md
+  parole:
+  - temporal
+  - fulmin
+  - grandin
+  - nubifragi
+  stato: da-fare
+- id: rischio-vulcanico
+  titolo: 'I Colli Albani: il vulcano sotto i Castelli Romani'
+  fonti:
+  - content/rischi-prevenzione/rischio-vulcanico.md
+  parole:
+  - vulcan
+  - Colli Albani
+  - eruzion
+  - Campi Flegrei
+  - Vesuvio
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/vulcani/
+  stato: da-fare
+- id: it-alert
+  titolo: 'IT-alert: il messaggio che arriva sul telefono'
+  fonti:
+  - content/dossier/il-messaggio-che-salva.md
+  parole:
+  - IT-alert
+  stato: da-fare
+- id: ondate-di-calore
+  titolo: 'Il caldo estremo: proteggere sé e gli altri'
+  fonti:
+  - content/rischi-prevenzione/ondate-di-calore.md
+  parole:
+  - caldo
+  - calore
+  - afa
+  - colpo di calore
+  stato: da-fare
+- id: rischio-incendio
+  titolo: 'Incendi boschivi: prevenzione e comportamenti'
+  fonti:
+  - content/rischi-prevenzione/rischio-incendio.md
+  parole:
+  - incendi
+  - AIB
+  - antincendio
+  - fuoco
+  ufficiali:
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-sapere/
+  - https://iononrischio.protezionecivile.gov.it/it/preparati/incendi-boschivi/cosa-fare/
+  stato: da-fare

@@ -588,12 +588,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/audio-e-podcast/">
   <div class="ms-card-icon"><i class="bi bi-headphones"></i></div>
   <p class="ms-card-title">Audio e podcast</p>
-  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: gli articoli letti ad alta voce dal browser e i podcast del Dipartimento della Protezione Civile. Il podcast del Gruppo è sospeso.</p>
+  <p class="ms-card-desc">Punto d'ingresso unico per i contenuti audio: gli articoli letti ad alta voce dal browser e i podcast del Dipartimento della Protezione Civile. Il podcast del Gruppo è in rifacimento.</p>
 </a>
 <a class="ms-card ms-edu" href="/podcast/">
   <div class="ms-card-icon"><i class="bi bi-mic-fill"></i></div>
   <p class="ms-card-title">Podcast</p>
-  <p class="ms-card-desc">Il podcast del Gruppo Comunale: le puntate sono sospese dal 5 novembre 2026 e torneranno solo dopo la verifica sulle fonti, con la trascrizione.</p>
+  <p class="ms-card-desc">Il podcast del Gruppo Comunale: le puntate, tolte il 5 novembre 2026, tornano una per volta, rifatte e confrontate con le pagine del sito, con la trascrizione.</p>
 </a>
 <a class="ms-card ms-edu" href="/articoli-da-ascoltare/">
   <div class="ms-card-icon"><i class="bi bi-volume-up-fill"></i></div>

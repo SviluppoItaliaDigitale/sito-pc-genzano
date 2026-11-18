@@ -21,9 +21,11 @@ VIETATE = [
     r"\bnotebook", r"intelligenza artificiale", r"\bgarantit", r"in assoluto",
     r"per nessun motivo", r"caratteri cubitali", r"\bmateriali che\b",
     r"esplorazione profonda", r"\bdeep dive\b", r"\bpodcast generat",
+    # Intensificazioni trovate nelle puntate scartate (17-18/11/2026).
+    r"\bfondamental", r"\bimportantissim",
 ]
 # Parole assolute: ammesse solo se presenti anche nelle fonti.
-ASSOLUTE = [r"\bsempre\b", r"\bmai\b", r"\bcertamente\b", r"\binevitabilmente\b"]
+ASSOLUTE = [r"\bsempre\b", r"\bmai\b", r"\bcertamente\b", r"\binevitabilmente\b", r"\bsalvavit"]
 
 
 def norm(s: str) -> str:
