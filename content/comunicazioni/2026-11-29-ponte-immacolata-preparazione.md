@@ -142,7 +142,7 @@ Se ci si sposta con animali:
 - **soste** per acqua e bisogni;
 - **strutture** pet-friendly prenotate in anticipo.
 
-Se si restano in casa:
+Se si resta in casa:
 
 - **dog sitter** di fiducia;
 - **istruzioni** scritte per dosaggi farmaci;

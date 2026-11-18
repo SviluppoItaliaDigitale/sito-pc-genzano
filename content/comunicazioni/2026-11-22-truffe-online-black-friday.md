@@ -99,7 +99,7 @@ Il **phishing** (*letteralmente "pesca"*) è l'invio di comunicazioni che:
 
 È una delle **forme più comuni** di frode online.
 
-## Come riconoscere phishing
+## Come riconoscere il phishing
 
 ### Email sospette
 - **mittente** con dominio strano (es. @poste-italiane-info.it);

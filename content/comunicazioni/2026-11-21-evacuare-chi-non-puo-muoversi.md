@@ -49,7 +49,7 @@ C'è un dettaglio che conta molto di notte. Il numero di addetti all'emergenza d
 
 Per le strutture sanitarie esiste una regola tecnica antincendio dedicata. È il [decreto del Ministro dell'interno 18 settembre 2002](https://www.gazzettaufficiale.it/eli/gu/2002/09/27/227/sg/pdf), aggiornato dal [decreto 19 marzo 2015](https://www.gazzettaufficiale.it/eli/gu/2015/03/25/70/sg/pdf). In alternativa si può applicare la regola del [decreto 29 marzo 2021](https://www.gazzettaufficiale.it/eli/gu/2021/04/09/85/sg/pdf), che riguarda ospedali e RSA con più di 25 posti letto.
 
-Entrambe chiedono che le aree di degenza consentano l'**esodo orizzontale progressivo**. Vuol dire spostare le persone ricoverate in un compartimento vicino, sullo stesso piano, separato dal fuoco da muri e porte resistenti. Lì restano protette finché l'incendio è spento, o finché serve portarle in un luogo sicuro all'esterno.
+Entrambe chiedono che le aree di degenza consentano l'**esodo orizzontale progressivo**. Vuol dire spostare le persone ricoverate in un compartimento vicino, sullo stesso piano, separato dal fuoco da muri e porte resistenti. Lì restano protette finché l'incendio non è spento, o finché serve portarle in un luogo sicuro all'esterno.
 
 ## Le carceri
 
