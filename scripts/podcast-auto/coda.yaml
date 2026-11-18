@@ -179,7 +179,35 @@ puntate:
   - scorta
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/video/kit-di-emergenza/
-  stato: da-fare
+  stato: scartata
+  escludi:
+  - kit-calamita
+  - kit-scuola
+  - kit-organizzazioni
+  - open-kit
+  - catalogo-giochi
+  - flavio-libro-popup
+  - kit-fragilita
+  - zaino-volontario
+  - kit-emergenza-ufficio
+  - kit-emergenza-auto
+  - kit-emergenza-vacanze
+  - giornata-mondiale-radio
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (9 fonti, Breve, audio 3:01) non superato: una
+    voce chiede «Cosa dicono le fonti?» e l''apertura parla di «un tema legato all''esplorazione».
+    Contenuti e quantità combaciavano con le pagine. Al prossimo errore la puntata
+    va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire mai la parola "fonti"
+    e non chiedere "cosa dicono" le pagine: chiedi direttamente "cosa si mette nello
+    zaino?". Apri dicendo che la puntata parla dello zaino di emergenza, senza parlare
+    di esplorazione e senza "spunti da esplorare". Riporta le quantità esattamente
+    come sono scritte ("circa 4 litri a persona al giorno per 3 giorni", "farmaci
+    per almeno 7 giorni").'
+  motivo: '18/11/2026, secondo tentativo (9 fonti, Breve, istruzioni rafforzate; audio
+    2:31) non superato: «Mai chiamare direttamente» (assoluto aggiunto) e una voce
+    legge ad alta voce le istruzioni («Il numero di emergenza si pronuncia uno, uno,
+    due»). Quantità e contenuti dello zaino combaciavano con le pagine.'
 - id: aree-emergenza
   titolo: Le aree di attesa di Genzano di Roma
   fonti:
@@ -191,7 +219,23 @@ puntate:
   - aree di emergenza
   - piano di emergenza comunale
   - area di raccolta
-  stato: da-fare
+  stato: scartata
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (3 fonti, Breve, audio 3:17) non superato: «Passando
+    all''incendio in casa, le fonti dicono di uscire» (riferimento al materiale letto).
+    Tutto il resto combaciava parola per parola con le pagine. Al prossimo errore
+    la puntata va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire "le fonti dicono", "leggo",
+    "si legge", "le indicazioni dicono": di'' direttamente che cosa fare ("in caso
+    di incendio in casa: esci, chiudi la porta dietro di te, chiama il 112"). L''unico
+    uso ammesso della parola "fonti" è nel consiglio "segui solo fonti ufficiali:
+    Comune, Protezione Civile, 112". I codici delle aree si dicono "da AA1 ad AA10".'
+  motivo: '18/11/2026, secondo tentativo (3 fonti, Breve, istruzioni rafforzate; audio
+    2:56) non superato: alla domanda «E se non si può uscire?» sul fuoco in casa risponde
+    con l''indicazione che le pagine danno per l''incendio di vegetazione che minaccia
+    la casa (chiudere porte, finestre e prese d''aria); chiusura con uno scenario
+    non presente nelle pagine (famiglia separata). Il resto combaciava con le pagine.
+    Da rifare forse con una sola pagina fonte e la richiesta di non mescolare i rischi.'
 - id: dopo-emergenza
   titolo: 'Dopo l''emergenza: tornare a casa in sicurezza'
   fonti:
@@ -201,7 +245,22 @@ puntate:
   - rientro
   - danni
   - ricostruzion
-  stato: da-fare
+  stato: programmata
+  escludi:
+  - le-quattro-fasi/prevenzione
+  - colli-albani-1806
+  - proroga-ricostruzione
+  - tohoku
+  - grandine-estiva
+  - chi-viene-soccorso
+  file: content/podcast/2026-11-27-dopo-emergenza.md
+  data: '2026-11-27'
+  nota: '18/11/2026, primo tentativo (2 fonti, Breve) superato dopo un taglio: tolta
+    dall''audio la frase d''apertura «È una fase in cui c''è molta concitazione, ma
+    che richiede comportamenti precisi e attenzione» (giudizio non presente nelle
+    pagine), da 9,27 a 15,36 s dell''originale, nelle pause; ricontrollato con una
+    nuova trascrizione. «Usiamo acqua in bottiglia per bere e cucinare» segue la frase
+    sul divieto del Comune: la pagina dice «se l''uso è vietato».'
 - id: blackout
   titolo: 'Blackout: come affrontare la mancanza di corrente'
   fonti:

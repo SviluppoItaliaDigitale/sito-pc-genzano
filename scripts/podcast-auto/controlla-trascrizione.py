@@ -23,6 +23,8 @@ VIETATE = [
     r"esplorazione profonda", r"\bdeep dive\b", r"\bpodcast generat",
     # Intensificazioni trovate nelle puntate scartate (17-18/11/2026).
     r"\bfondamental", r"\bimportantissim", r"\bpochissim", r"alla lettera", r"\baffatto\b", r"\bdrasticament",
+    # Istruzioni lette ad alta voce (18/11/2026).
+    r"si pronuncia", r"regole obbligatorie", r"le istruzioni",
 ]
 # Parole assolute: ammesse solo se presenti anche nelle fonti.
 ASSOLUTE = [r"\bsempre\b", r"\bmai\b", r"\bcertamente\b", r"\binevitabilmente\b", r"\bsalvavit"]
@@ -47,8 +49,18 @@ def main() -> int:
 
     for pat in VIETATE:
         for m in re.finditer(pat, testo):
-            # La «copia dei documenti» del kit di emergenza è un consiglio, non il processo.
-            if "document" in pat and re.search(r"cop(ia|ie) de(i|gli) $", testo[max(0, m.start() - 12):m.start()]):
+            # I documenti e l'apriscatole del kit di emergenza sono consigli, non il
+            # lavoro sulle fonti: «copie dei documenti», «documenti di identità»,
+            # «documenti e vestiti», «apriscatole manuale» (18/11/2026).
+            if "document" in pat and (
+                re.search(r"cop(ia|ie) de(i|gli) $", testo[max(0, m.start() - 12):m.start()])
+                or re.match(r"[ ,]*(d'|di |e (dei |i |le )?)?(identit|tessere|contant|vestit|carta|denaro|soldi)",
+                            testo[m.end():m.end() + 30])):
+                continue
+            # «Segui solo fonti ufficiali» è un consiglio delle pagine, non il processo.
+            if "font" in pat and testo[m.end():m.end() + 10].startswith(" ufficial"):
+                continue
+            if "manual" in pat and testo[max(0, m.start() - 12):m.start()].endswith("apriscatole "):
                 continue
             problemi.append(f"parola vietata «{m.group(0)}»: …{contesto(m)}…")
     for pat in ASSOLUTE:
