@@ -45,6 +45,9 @@ def prossimo_episodio() -> int:
 
 
 GIORNI_USCITA = (1, 4)  # martedì e venerdì
+# Uscite saltate per le feste (scelta di Alessandro del 18/11/2026); stesso elenco
+# in controlla-magazzino.py.
+DATE_SALTATE = {date(2026, 12, 25), date(2027, 1, 1)}
 
 
 def date_programmate() -> list[date]:
@@ -63,7 +66,7 @@ def date_programmate() -> list[date]:
 def prossima_uscita() -> date:
     """Primo martedì o venerdì libero dopo oggi e dopo l'ultima in calendario."""
     giorno = max([date.today()] + date_programmate()) + timedelta(days=1)
-    while giorno.weekday() not in GIORNI_USCITA:
+    while giorno.weekday() not in GIORNI_USCITA or giorno in DATE_SALTATE:
         giorno += timedelta(days=1)
     return giorno
 
