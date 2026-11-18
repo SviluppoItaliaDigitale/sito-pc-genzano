@@ -56,7 +56,7 @@ Il territorio dei **Castelli Romani** mantiene una significativa **attività agr
 - **stress** e malattie successive.
 
 ### Black-out
-- **mungitura** impossibilita (sofferenza mastite);
+- **mungitura** impossibilitata (sofferenza mastite);
 - **ventilazione** stalle interrotta;
 - **riscaldamento** pulcini/suinetti interrotto;
 - **frigoriferi** per latte fuori servizio.
@@ -139,7 +139,7 @@ Ogni azienda con animali dovrebbe avere:
 ## In caso di black-out prolungato
 
 - **generatore** di emergenza se disponibile;
-- **priorità**: mungitura (bovini lattifere), ventilazione, riscaldamento neonati;
+- **priorità**: mungitura (bovini lattiferi), ventilazione, riscaldamento neonati;
 - **contatti** con colleghi per condivisione attrezzature;
 - **latte** non più commercializzabile va smaltito correttamente;
 - **assicurazione** per eventuali danni.

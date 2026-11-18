@@ -47,7 +47,7 @@ A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma 
 - **abbigliamento** termico disponibile.
 
 ### In auto
-- **pneumatici invernali** obbligatori da 15 novembre;
+- **pneumatici invernali** obbligatori dal 15 novembre;
 - **catene** a bordo (montaggio provato in condizioni non emergenziali);
 - **liquido antigelo** al massimo;
 - **raschietto** e spazzola per parabrezza;
