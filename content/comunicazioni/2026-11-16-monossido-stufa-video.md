@@ -21,7 +21,6 @@ social_punti:
   - "Fatti visitare anche se all'aria aperta stai meglio."
   - "Ogni anno fai controllare stufa, camino, caldaia e canna fumaria."
 social_crediti: "Musica: «Snowfall» di Scott Buckley (scottbuckley.com.au), licenza CC BY 4.0. Voce sintetica: modello distribuito con licenza Coqui Public Model License (huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt)."
-social: false
 ---
 
 Sera d'inverno ai Castelli. Fuori gela, la stufa è accesa e le finestre sono chiuse. Marco ha mal di testa, Anna ha sonno, la nonna si sente debole e anche il cane non si alza. «Sarà l'influenza». È la scena di un **video di poco più di un minuto**, «Tu cosa faresti?». Può succedere in qualunque casa scaldata con stufa, camino o caldaia: qui trovi che cosa fare subito e come evitarlo.
