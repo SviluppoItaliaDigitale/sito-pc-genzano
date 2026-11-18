@@ -1319,7 +1319,7 @@ dati:
       - nome: "ISTAT, Altimetria dei Comuni al 31/12/2021"
         url: "https://www.istat.it/it/archivio/156224"
     vietati:
-      - regex: '\b4[23]5\s*(?:m\b|metri|m\s*s\.?l\.?m)'
+      - regex: '\b4(?:25|30|35)\s*(?:m\b|metri|m\s*s\.?l\.?m)'
         perche: "Il dato ISTAT 2021 del centro del comune è 458 m; 430 e 435 m non hanno fonte aggiornata."
         contesto: 'Genzano'
         finestra: 200

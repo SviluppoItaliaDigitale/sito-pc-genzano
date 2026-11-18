@@ -19,7 +19,7 @@ A **Genzano di Roma**, **458 metri** s.l.m., la **neve** in inverno è **rara** 
 ## Il contesto climatologico
 
 ### Genzano e neve
-- **quota**: 430 m slm;
+- **quota**: 458 m s.l.m. (centro del comune, ISTAT 2021);
 - **media** giorni di neve all'anno: 1-3;
 - **accumulo** medio: 5-15 cm per evento;
 - **tendenza** attuale: nevicate più rare ma più intense quando avvengono.
