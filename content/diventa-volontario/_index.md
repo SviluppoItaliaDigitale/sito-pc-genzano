@@ -14,6 +14,8 @@ risorse_tema: "kit-emergenza"
 
 Diventare volontario di Protezione Civile significa mettere tempo, competenze e disponibilità al servizio della comunità. Non servono esperienze precedenti: il Gruppo ti affianca e ti forma prima dell'impiego operativo.
 
+<div class="av-invito d-print-none"><p>Vuoi entrare nel Gruppo? Rispondi alle domande dell'assistente e invia la richiesta di colloquio.</p><a href="#av-titolo">Rispondi alle domande</a></div>
+
 <div class="card border-primary mb-4">
 <div class="card-body bg-primary bg-opacity-10 p-4">
 <h2 class="h4 text-primary"><i class="bi bi-heart-fill me-2" aria-hidden="true"></i>In breve</h2>

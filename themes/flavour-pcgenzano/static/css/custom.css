@@ -8617,26 +8617,47 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
   .illustrazione-comandi { display: none !important; }
 }
 
-/* ===== ASSISTENTE VOLONTARI v1.0 (shortcode assistente-volontari, pagina /diventa-volontario/) ===== */
-.assistente-volontari .av-chat { display: flex; flex-direction: column; gap: .6rem; padding-bottom: .75rem; }
+/* ===== ASSISTENTE VOLONTARI v1.1 (shortcode assistente-volontari, pagina /diventa-volontario/) =====
+   Riquadri nei colori del Gruppo: testata blu istituzionale con filo giallo #ffbe2e, corpo azzurro
+   chiaro, scelte a riquadro; invito in cima alla pagina (.av-invito). Nessuna foto (decisione del 18/11/2026). */
+.assistente-volontari { background: #e8f0f8; border: 2px solid var(--pc-primary); border-radius: 8px; overflow: hidden; }
+#av-titolo { scroll-margin-top: 8rem; }
+.assistente-volontari .av-testata { background: var(--pc-primary); color: #fff; padding: 1.1rem 1.25rem 1rem; border-bottom: 6px solid #ffbe2e; }
+.assistente-volontari .av-testata h3 { color: #fff; margin-bottom: .4rem; }
+.assistente-volontari .av-testata p { color: #fff; }
+.assistente-volontari .av-corpo { padding: 1rem 1.25rem 1.1rem; }
+.av-invito {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  background: #ffbe2e; color: #1a1a1a; border-left: 8px solid var(--pc-primary);
+  border-radius: 6px; padding: 1rem 1.25rem; margin: 1.5rem 0;
+}
+.av-invito p { margin: 0; flex: 1 1 16rem; font-weight: 600; hyphens: manual; -webkit-hyphens: manual; }
+.av-invito a, .article-body .av-invito a, .article-body .av-invito a:visited {
+  display: inline-block; background: var(--pc-primary); color: #fff; font-weight: 700; text-decoration: none;
+  border-radius: 6px; padding: .6rem 1.2rem; min-height: 44px;
+}
+.av-invito a:hover, .av-invito a:focus-visible, .article-body .av-invito a:hover, .article-body .av-invito a:focus-visible { background: var(--pc-primary-dark); color: #fff; text-decoration: underline; }
+.av-invito a:focus-visible { outline: 3px solid #1a1a1a; outline-offset: 3px; }
 .assistente-volontari .av-msg, .assistente-volontari .av-anteprima { hyphens: manual; -webkit-hyphens: manual; }
+.assistente-volontari .av-chat { display: flex; flex-direction: column; gap: .6rem; padding-bottom: .75rem; }
 .assistente-volontari .av-msg { max-width: 88%; padding: .65rem .9rem; border-radius: 12px; overflow-wrap: anywhere; white-space: pre-line; }
-.assistente-volontari .av-bot { align-self: flex-start; background: #fff; color: #1a1a1a; border: 1px solid #c5d1dc; border-bottom-left-radius: 4px; }
+.assistente-volontari .av-bot { align-self: flex-start; background: #fff; color: #1a1a1a; border: 1px solid #b7c8da; border-bottom-left-radius: 4px; }
 .assistente-volontari .av-io { align-self: flex-end; background: var(--pc-primary); color: #fff; border-bottom-right-radius: 4px; }
 .assistente-volontari .av-scelte { display: flex; flex-wrap: wrap; gap: .5rem; }
 .assistente-volontari .av-scelta {
-  min-height: 44px; padding: .45rem .9rem; border-radius: 6px; font: inherit; cursor: pointer;
-  background: #fff; color: var(--pc-primary); border: 2px solid var(--pc-primary);
+  min-height: 44px; padding: .45rem .9rem; border-radius: 6px; font: inherit; font-weight: 600; cursor: pointer;
+  background: #fff; color: var(--pc-primary); border: 2px solid var(--pc-primary); border-left-width: 6px;
 }
-.assistente-volontari .av-scelta:hover { background: #e6eef6; }
-.assistente-volontari .av-scelta[aria-pressed="true"] { background: var(--pc-primary); color: #fff; }
+.assistente-volontari .av-scelta:hover { background: #fff3d6; }
+.assistente-volontari .av-scelta[aria-pressed="true"] { background: var(--pc-primary); color: #fff; border-left-color: #ffbe2e; }
 .assistente-volontari .av-scelta[aria-pressed="true"]::before { content: "\2713\00a0"; }
 .assistente-volontari .av-scelte .btn { min-height: 44px; }
+.assistente-volontari .av-scelte .btn-outline-primary { background: #fff; }
 .assistente-volontari .av-scelta:focus-visible, .assistente-volontari .av-barra input:focus, .assistente-volontari .av-anteprima:focus { outline: 3px solid #f5a623; outline-offset: 2px; }
 .assistente-volontari .av-barra { display: flex; gap: .5rem; margin-top: .5rem; }
 .assistente-volontari .av-barra[hidden] { display: none; }
-.assistente-volontari .av-barra input { flex: 1; min-width: 0; min-height: 44px; padding: .5rem .75rem; border: 2px solid var(--pc-primary); border-radius: 6px; font: inherit; }
+.assistente-volontari .av-barra input { flex: 1; min-width: 0; min-height: 44px; padding: .5rem .75rem; border: 2px solid var(--pc-primary); border-radius: 6px; font: inherit; background: #fff; }
 .assistente-volontari .av-anteprima {
   white-space: pre-wrap; overflow-wrap: anywhere; font-family: inherit; font-size: .95rem; color: #1a1a1a;
-  background: #f5f8fb; border: 1px dashed var(--pc-primary); border-radius: 6px; padding: .75rem; margin: 0;
+  background: #fff; border: 2px dashed var(--pc-primary); border-radius: 6px; padding: .75rem; margin: 0;
 }

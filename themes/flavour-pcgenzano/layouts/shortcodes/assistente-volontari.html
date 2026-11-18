@@ -5,11 +5,13 @@
   Motore in static/js/assistente-volontari.js, domande in static/js/assistente-volontari-dati.js.
   Uso: {{< assistente-volontari >}}
 */ -}}
-<section class="card border-primary shadow-sm p-4 mb-4 assistente-volontari d-print-none" aria-labelledby="av-titolo">
-  <h3 id="av-titolo" class="h5 text-primary mt-0">Rispondi alle domande dell'assistente</h3>
-  <p class="small mb-3">L'assistente ti fa alcune domande a scelta, sempre le stesse per tutti. Alla fine prepara un'email con le tue risposte, che controlli e invii tu alla segreteria. Il sito non riceve e non salva nulla.</p>
-  <div data-assistente-volontari></div>
-  <noscript><p class="mb-0">Per usare l'assistente serve JavaScript attivo. Puoi scrivere a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a> o chiamare la sede al <a href="tel:+39069362600">06 9362600</a>.</p></noscript>
+<section class="assistente-volontari mb-4 d-print-none" aria-labelledby="av-titolo">
+  <div class="av-testata">
+    <h3 id="av-titolo" class="h5 mt-0">Rispondi alle domande dell'assistente</h3>
+    <p class="mb-0">L'assistente ti fa alcune domande a scelta, sempre le stesse per tutti. Alla fine prepara un'email con le tue risposte, che controlli e invii tu alla segreteria. Il sito non riceve e non salva nulla.</p>
+  </div>
+  <div class="av-corpo" data-assistente-volontari></div>
+  <noscript><p class="av-corpo mb-0">Per usare l'assistente serve JavaScript attivo. Puoi scrivere a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a> o chiamare la sede al <a href="tel:+39069362600">06 9362600</a>.</p></noscript>
 </section>
 {{- $m := readFile "themes/flavour-pcgenzano/static/js/assistente-volontari.js" | hash.FNV32a }}
 {{- $d := readFile "themes/flavour-pcgenzano/static/js/assistente-volontari-dati.js" | hash.FNV32a }}
