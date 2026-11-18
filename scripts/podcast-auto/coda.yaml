@@ -317,6 +317,22 @@ puntate:
   data: '2026-12-08'
 - id: rischio-vulcanico
   titolo: 'I Colli Albani: il vulcano sotto i Castelli Romani'
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (7 fonti, Breve, audio 2:47) non superato: «se
+    c''è una persona priva di sensi, l''istinto magari è di aiutarla» (come reagisce
+    la gente: non nelle fonti), commenti «un tema centrale per il territorio» e «una
+    specifica sul soccorso, che è rilevante», «si chiama sempre il 112». Il resto
+    combaciava con le fonti. Al prossimo errore la puntata va in scartata. Secondo
+    tentativo (stesse fonti, Breve, audio 2:10) superato; tolta dall''audio la frase
+    «l''area va mantenuta isolata», letta in modo incerto (area o aria).'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire come reagisce la gente
+    e che cosa verrebbe istintivo fare (niente "l''istinto è di aiutarla"): di'' solo
+    "non entrare a soccorrere chi ha perso i sensi in uno spazio chiuso, chiama il
+    112 dicendo che si sospetta un accumulo di gas: arrivano i Vigili del Fuoco con
+    gli autorespiratori". Non commentare l''importanza dei temi o delle regole (niente
+    "tema centrale", "che è rilevante", "regole chiare"). Di'' "in emergenza si chiama
+    il 112", senza "sempre". Non aggiungere esempi o situazioni che non sono nelle
+    fonti.'
   escludi:
   - etiopia
   - ari-pozzuoli
@@ -336,7 +352,9 @@ puntate:
   - Vesuvio
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/vulcani/
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-12-11-rischio-vulcanico.md
+  data: '2026-12-11'
 - id: it-alert
   titolo: 'IT-alert: il messaggio che arriva sul telefono'
   fonti:
