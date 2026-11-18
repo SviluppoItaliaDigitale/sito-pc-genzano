@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-18T06:04",
+  "aggiornato": "2026-11-18T07:05",
   "data_lunga": "mercoledì 18 novembre 2026",
-  "aggiornato_label": "mercoledì 18 novembre 2026, ore 06:04",
+  "aggiornato_label": "mercoledì 18 novembre 2026, ore 07:05",
   "alba": "07:01",
   "tramonto": "16:46",
   "corrente": {
-    "temp": 14.6,
-    "percepita": 15.2,
+    "temp": 14.4,
+    "percepita": 15.0,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 98,
-    "vento": 6,
-    "raffiche": 44
+    "umidita": 99,
+    "vento": 5,
+    "raffiche": 33
   },
   "giorni": [
     {
@@ -19,10 +19,10 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"11.0\" y1=\"26.3\" x2=\"9.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"16.0\" y1=\"26.3\" x2=\"14.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"21.0\" y1=\"26.3\" x2=\"19.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></g>",
       "cielo": "Rovesci",
       "tmax": 17,
-      "tmin": 13,
+      "tmin": 14,
       "pioggia": 95,
-      "pioggia_mm": 4.1,
-      "raffiche": 60,
+      "pioggia_mm": 4.0,
+      "raffiche": 62,
       "uv": 2,
       "uv_label": "basso"
     },
@@ -33,9 +33,9 @@
       "tmax": 17,
       "tmin": 13,
       "pioggia": 100,
-      "pioggia_mm": 33.0,
+      "pioggia_mm": 32.5,
       "raffiche": 108,
-      "uv": 2,
+      "uv": 1,
       "uv_label": "basso"
     },
     {
@@ -44,11 +44,11 @@
       "cielo": "Coperto",
       "tmax": 16,
       "tmin": 12,
-      "pioggia": 41,
+      "pioggia": 23,
       "pioggia_mm": 0.2,
       "raffiche": 46,
-      "uv": 3,
-      "uv_label": "moderato"
+      "uv": 2,
+      "uv_label": "basso"
     },
     {
       "label": "Sab 21",
@@ -56,11 +56,11 @@
       "cielo": "Coperto",
       "tmax": 15,
       "tmin": 10,
-      "pioggia": 43,
+      "pioggia": 16,
       "pioggia_mm": 0,
       "raffiche": 28,
-      "uv": 3,
-      "uv_label": "moderato"
+      "uv": 2,
+      "uv_label": "basso"
     }
   ],
   "fonte": "Open-Meteo",
@@ -73,8 +73,8 @@
     },
     {
       "nome": "Rieti",
-      "tmax": 19,
-      "tmin": 13,
+      "tmax": 18,
+      "tmin": 14,
       "cielo": "Rovesci"
     },
     {
@@ -86,12 +86,12 @@
     {
       "nome": "Latina",
       "tmax": 21,
-      "tmin": 16,
+      "tmin": 15,
       "cielo": "Rovesci"
     },
     {
       "nome": "Frosinone",
-      "tmax": 21,
+      "tmax": 20,
       "tmin": 13,
       "cielo": "Pioggia debole"
     }
