@@ -1,6 +1,6 @@
 ---
 title: "Podcast — Voci dalla Protezione Civile di Genzano di Roma"
-description: "Il podcast del Gruppo è sospeso: stiamo rifacendo le puntate, che torneranno solo dopo la verifica sulle fonti ufficiali, con la trascrizione."
+description: "Il podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma: puntate brevi sull'autoprotezione, con la trascrizione in pagina."
 type: "podcast"
 layout: "list"
 outputs:
@@ -10,12 +10,13 @@ sitemap:
   priority: 0.6
   changefreq: monthly
 tts: false
-# Podcast sospeso dal 5 novembre 2026: la puntata su IT-alert conteneva
+# Podcast sospeso dal 5 novembre 2026 (ripreso il 18 novembre con le
+# puntate rifatte, in calendario dal 20): la puntata su IT-alert conteneva
 # informazioni non corrette e le puntate sono state tolte tutte, in attesa
 # di rifarle e verificarle. `sospeso: true` nasconde iscrizione ed elenco
 # (themes/flavour-pcgenzano/layouts/podcast/list.html); gli indirizzi delle
 # puntate rimandano qui.
-sospeso: true
+sospeso: false
 aliases:
   - /podcast/2026-03-21-rischio-sismico/
   - /podcast/2026-03-25-allerta-meteo/
@@ -54,11 +55,11 @@ params:
   podcast_apple: ""
 ---
 
-**Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo Comunale Volontari. **Dal 5 novembre 2026 le puntate sono sospese.**
+**Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo Comunale Volontari: puntate brevi sui comportamenti di autoprotezione, ognuna con la trascrizione completa in pagina.
 
-Riascoltando la puntata su IT-alert vi abbiamo trovato informazioni non corrette. Per sicurezza abbiamo tolto dal sito tutte le puntate: le rifaremo, e ognuna tornerà solo dopo la verifica sulle fonti ufficiali, con la trascrizione completa in pagina.
+Il 5 novembre 2026 abbiamo tolto dal sito tutte le puntate precedenti, perché in quella su IT-alert avevamo trovato informazioni non corrette. Le stiamo rifacendo una per volta: ogni puntata esce solo dopo il confronto, frase per frase, con le pagine del sito da cui nasce.
 
-## Intanto puoi ascoltare
+## Puoi ascoltare anche
 
 - [Articoli da ascoltare](/articoli-da-ascoltare/): ogni pagina del sito si può ascoltare ad alta voce dal browser, senza app.
 - [Podcast del Dipartimento della Protezione Civile](/audio-e-podcast/#podcast-del-sistema-nazionale-di-protezione-civile): le produzioni nazionali sul clima e sulla memoria delle emergenze.
