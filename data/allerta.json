@@ -7,12 +7,12 @@
   "avviso_meteo": {
     "tipo": "vento",
     "livello": "gialla",
-    "validita_inizio": "2026-11-17T06:00:00+01:00",
-    "validita_fine": "2026-11-19T00:00:00+01:00",
-    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/allertamento_16-11-2026.pdf",
-    "fonte_data": "2026-11-16",
-    "validita_dal": "dalla mattina",
+    "validita_inizio": "2026-11-19T00:00:00+01:00",
+    "validita_fine": "2026-11-20T18:00:00+01:00",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/r_lazio.AC8A585.REGISTRO%20UFFICIALE%28U%29.1164727.18-11-2026.pdf",
+    "fonte_data": "2026-11-18",
+    "validita_dal": "dalle prime ore",
     "validita_durata": "24-36 ore",
-    "descrizione": "Venti da forti a burrasca a prevalente componente sud-occidentale"
+    "descrizione": "Venti da forti a burrasca dai quadranti occidentali specie sui settori costieri e montuosi, con raffiche fino a burrasca forte sui crinali appenninici"
   }
 }
