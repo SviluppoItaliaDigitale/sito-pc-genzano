@@ -107,7 +107,50 @@ puntate:
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-sapere/
   - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-  stato: da-fare
+  stato: scartata
+  escludi:
+  - sarno
+  - emilia-romagna-2023
+  - versilia
+  - niscemi
+  - decreto-legge
+  - piemonte-1994
+  - val-pola
+  - pizzo-cengalo
+  - soverato
+  - marche-2022
+  - genova-1970
+  - genova-2011
+  - firenze-1966
+  - nisar
+  - iso-22327
+  - standard-iso
+  - exe-po
+  - vincolo-idrogeologico
+  - zone-umide
+  - frana-costone-nemi
+  - colorare-frana
+  - rischio-idrogeologico-estivo
+  - polesine-1951
+  - sardegna-2013
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (15 fonti, Breve, audio 2:53) non superato: «in
+    pochissimi minuti» (le pagine dicono «pochi»), chiusura «le cantine e i piani
+    interrati sono i primi luoghi ad allagarsi» (non nelle pagine, che li chiamano
+    «i punti più pericolosi»), enfasi «da seguire alla lettera». Il resto combaciava
+    con le pagine. Al prossimo errore la puntata va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: ripeti i numeri e i tempi esattamente
+    come sono scritti ("anche di uno o due metri in pochi minuti", non "pochissimi";
+    "15 cm", "30-50 cm"). Non chiudere con un "ultimo pensiero" o con frasi riassuntive:
+    l''ultima frase è l''invito al sito. Non dire quali luoghi si allagano per primi:
+    di'' solo che cantine, seminterrati e piani terra sono i punti più pericolosi.
+    Non usare "alla lettera", "pochissimo", "chiarissimo" né altri rafforzativi.'
+  motivo: '18/11/2026, secondo tentativo (15 fonti, Breve, istruzioni rafforzate;
+    audio 2:49) non superato: «proprio a causa di questa rapidità [...] cantine, seminterrati
+    e piani terra sono i punti più pericolosi» (nesso di causa che le pagine non fanno),
+    commenti aggiunti («da non sottovalutare affatto», «la situazione possa mutare
+    drasticamente», «dinamica naturale complessa»). Comportamenti e numeri combaciavano
+    con le pagine.'
 - id: piano-familiare
   titolo: Il piano di emergenza della famiglia
   fonti:
@@ -119,7 +162,13 @@ puntate:
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/terremoto/cosa-fare/
   - https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/cosa-fare/
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-11-24-piano-familiare.md
+  data: '2026-11-24'
+  nota: '18/11/2026, primo tentativo (9 fonti, Breve) superato. Nell''audio una battuta
+    era ripetuta per errore subito dopo la domanda sull''alluvione («Sì, esatto, si
+    evita l''ascensore»): tolta con un taglio nelle pause (da 121,45 a 123,80 s dell''originale),
+    ricontrollato con una nuova trascrizione.'
 - id: kit-emergenza
   titolo: 'Lo zaino di emergenza: che cosa metterci'
   fonti:
@@ -130,7 +179,35 @@ puntate:
   - scorta
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/video/kit-di-emergenza/
-  stato: da-fare
+  stato: scartata
+  escludi:
+  - kit-calamita
+  - kit-scuola
+  - kit-organizzazioni
+  - open-kit
+  - catalogo-giochi
+  - flavio-libro-popup
+  - kit-fragilita
+  - zaino-volontario
+  - kit-emergenza-ufficio
+  - kit-emergenza-auto
+  - kit-emergenza-vacanze
+  - giornata-mondiale-radio
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (9 fonti, Breve, audio 3:01) non superato: una
+    voce chiede «Cosa dicono le fonti?» e l''apertura parla di «un tema legato all''esplorazione».
+    Contenuti e quantità combaciavano con le pagine. Al prossimo errore la puntata
+    va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire mai la parola "fonti"
+    e non chiedere "cosa dicono" le pagine: chiedi direttamente "cosa si mette nello
+    zaino?". Apri dicendo che la puntata parla dello zaino di emergenza, senza parlare
+    di esplorazione e senza "spunti da esplorare". Riporta le quantità esattamente
+    come sono scritte ("circa 4 litri a persona al giorno per 3 giorni", "farmaci
+    per almeno 7 giorni").'
+  motivo: '18/11/2026, secondo tentativo (9 fonti, Breve, istruzioni rafforzate; audio
+    2:31) non superato: «Mai chiamare direttamente» (assoluto aggiunto) e una voce
+    legge ad alta voce le istruzioni («Il numero di emergenza si pronuncia uno, uno,
+    due»). Quantità e contenuti dello zaino combaciavano con le pagine.'
 - id: aree-emergenza
   titolo: Le aree di attesa di Genzano di Roma
   fonti:
@@ -142,7 +219,23 @@ puntate:
   - aree di emergenza
   - piano di emergenza comunale
   - area di raccolta
-  stato: da-fare
+  stato: scartata
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (3 fonti, Breve, audio 3:17) non superato: «Passando
+    all''incendio in casa, le fonti dicono di uscire» (riferimento al materiale letto).
+    Tutto il resto combaciava parola per parola con le pagine. Al prossimo errore
+    la puntata va in scartata.'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire "le fonti dicono", "leggo",
+    "si legge", "le indicazioni dicono": di'' direttamente che cosa fare ("in caso
+    di incendio in casa: esci, chiudi la porta dietro di te, chiama il 112"). L''unico
+    uso ammesso della parola "fonti" è nel consiglio "segui solo fonti ufficiali:
+    Comune, Protezione Civile, 112". I codici delle aree si dicono "da AA1 ad AA10".'
+  motivo: '18/11/2026, secondo tentativo (3 fonti, Breve, istruzioni rafforzate; audio
+    2:56) non superato: alla domanda «E se non si può uscire?» sul fuoco in casa risponde
+    con l''indicazione che le pagine danno per l''incendio di vegetazione che minaccia
+    la casa (chiudere porte, finestre e prese d''aria); chiusura con uno scenario
+    non presente nelle pagine (famiglia separata). Il resto combaciava con le pagine.
+    Da rifare forse con una sola pagina fonte e la richiesta di non mescolare i rischi.'
 - id: dopo-emergenza
   titolo: 'Dopo l''emergenza: tornare a casa in sicurezza'
   fonti:
@@ -152,7 +245,22 @@ puntate:
   - rientro
   - danni
   - ricostruzion
-  stato: da-fare
+  stato: programmata
+  escludi:
+  - le-quattro-fasi/prevenzione
+  - colli-albani-1806
+  - proroga-ricostruzione
+  - tohoku
+  - grandine-estiva
+  - chi-viene-soccorso
+  file: content/podcast/2026-11-27-dopo-emergenza.md
+  data: '2026-11-27'
+  nota: '18/11/2026, primo tentativo (2 fonti, Breve) superato dopo un taglio: tolta
+    dall''audio la frase d''apertura «È una fase in cui c''è molta concitazione, ma
+    che richiede comportamenti precisi e attenzione» (giudizio non presente nelle
+    pagine), da 9,27 a 15,36 s dell''originale, nelle pause; ricontrollato con una
+    nuova trascrizione. «Usiamo acqua in bottiglia per bere e cucinare» segue la frase
+    sul divieto del Comune: la pagina dice «se l''uso è vietato».'
 - id: blackout
   titolo: 'Blackout: come affrontare la mancanza di corrente'
   fonti:
@@ -161,7 +269,12 @@ puntate:
   - blackout
   - corrente elettrica
   - interruzione di energia
-  stato: da-fare
+  stato: programmata
+  escludi:
+  - storie-e-racconti
+  - blackout-nazionale
+  file: content/podcast/2026-12-01-blackout.md
+  data: '2026-12-01'
 - id: vento-forte
   titolo: 'Vento forte: i pericoli e come proteggersi'
   fonti:
@@ -171,7 +284,16 @@ puntate:
   - raffiche
   - tromba d.aria
   - downburst
-  stato: da-fare
+  stato: programmata
+  escludi:
+  - dossier/
+  - colorare-vento
+  - storie-e-racconti
+  - tromba-aria-roma
+  - tempesta-vaia
+  - maltempo-albero
+  file: content/podcast/2026-12-04-vento-forte.md
+  data: '2026-12-04'
 - id: temporali-intensi
   titolo: 'Temporali intensi: fulmini, grandine e allagamenti'
   fonti:
@@ -181,9 +303,45 @@ puntate:
   - fulmin
   - grandin
   - nubifragi
-  stato: da-fare
+  stato: programmata
+  escludi:
+  - dossier/
+  - colorare-temporale
+  - storie-e-racconti
+  - mtg-i2
+  - temporali-estivi
+  - temporali-pomeridiani
+  - temporali-settembre
+  - grandine-estiva
+  file: content/podcast/2026-12-08-temporali-intensi.md
+  data: '2026-12-08'
 - id: rischio-vulcanico
   titolo: 'I Colli Albani: il vulcano sotto i Castelli Romani'
+  tentativi: 2
+  nota: '18/11/2026, primo tentativo (7 fonti, Breve, audio 2:47) non superato: «se
+    c''è una persona priva di sensi, l''istinto magari è di aiutarla» (come reagisce
+    la gente: non nelle fonti), commenti «un tema centrale per il territorio» e «una
+    specifica sul soccorso, che è rilevante», «si chiama sempre il 112». Il resto
+    combaciava con le fonti. Al prossimo errore la puntata va in scartata. Secondo
+    tentativo (stesse fonti, Breve, audio 2:10) superato; tolta dall''audio la frase
+    «l''area va mantenuta isolata», letta in modo incerto (area o aria).'
+  istruzioni_extra: 'ATTENZIONE, regole aggiuntive: non dire come reagisce la gente
+    e che cosa verrebbe istintivo fare (niente "l''istinto è di aiutarla"): di'' solo
+    "non entrare a soccorrere chi ha perso i sensi in uno spazio chiuso, chiama il
+    112 dicendo che si sospetta un accumulo di gas: arrivano i Vigili del Fuoco con
+    gli autorespiratori". Non commentare l''importanza dei temi o delle regole (niente
+    "tema centrale", "che è rilevante", "regole chiare"). Di'' "in emergenza si chiama
+    il 112", senza "sempre". Non aggiungere esempi o situazioni che non sono nelle
+    fonti.'
+  escludi:
+  - etiopia
+  - ari-pozzuoli
+  - colombia
+  - decreto-legge
+  - carta-naturalistica
+  - campi-flegrei
+  - terremoto-colli-albani-1806
+  - caso-vulcani-italia-secondaria
   fonti:
   - content/rischi-prevenzione/rischio-vulcanico.md
   parole:
@@ -194,14 +352,25 @@ puntate:
   - Vesuvio
   ufficiali:
   - https://iononrischio.protezionecivile.gov.it/it/preparati/vulcani/
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-12-11-rischio-vulcanico.md
+  data: '2026-12-11'
 - id: it-alert
   titolo: 'IT-alert: il messaggio che arriva sul telefono'
+  escludi:
+  - documentario-storia
+  - iso-22322
+  - diga-castreccioni
+  - proroga-sperimentazione
+  - test-settembre
+  - app-it-alert-test-nazionale
   fonti:
   - content/dossier/il-messaggio-che-salva.md
   parole:
   - IT-alert
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-12-15-it-alert.md
+  data: '2026-12-15'
 - id: ondate-di-calore
   titolo: 'Il caldo estremo: proteggere sé e gli altri'
   fonti:

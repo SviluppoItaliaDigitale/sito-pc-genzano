@@ -505,7 +505,8 @@ html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-con
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn, .av-testata, .av-invito, .av-io,
+  .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -519,7 +520,8 @@ html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-con
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn, .av-testata, .av-invito, .av-io,
+  .av-scelta, .av-bot, .av-anteprima
   ) *
 ) { background: #fdf6e3 !important; background-color: #fdf6e3 !important; }
 html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-contrast-yellow-black, .a11y-contrast-blue-cream) :is(.article-body, .list-intro-content) { background: #fdf6e3 !important; color: #1a1a1a !important; }
@@ -554,7 +556,8 @@ html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-con
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn, .av-testata, .av-invito, .av-io,
+  .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -568,7 +571,8 @@ html.a11y-reading-mode:not(.a11y-contrast-high, .a11y-contrast-invert, .a11y-con
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn, .av-testata, .av-invito, .av-io,
+  .av-scelta, .av-bot, .av-anteprima
   ) *
 ) { color: var(--a11y-testo) !important; }
 
@@ -593,7 +597,7 @@ html.a11y-contrast-high :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .text-white
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima, .text-white
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -607,7 +611,7 @@ html.a11y-contrast-high :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .text-white
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima, .text-white
   ) *
 ) { color: var(--a11y-testo) !important; }
 html.a11y-contrast-high :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
@@ -640,7 +644,7 @@ html.a11y-contrast-invert :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -654,7 +658,7 @@ html.a11y-contrast-invert :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ) *
 ) { color: var(--a11y-testo) !important; }
 html.a11y-contrast-invert :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
@@ -690,7 +694,7 @@ html.a11y-contrast-invert :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -704,7 +708,7 @@ html.a11y-contrast-invert :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ) *
 ):not(.gi *) { background: #1a1a1a !important; color: #fff !important; box-shadow: none !important; }
 html.a11y-contrast-invert :where(main, .utility-bar) :is(.card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card, .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item) { border-color: #555 !important; }
@@ -745,7 +749,7 @@ html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -759,7 +763,7 @@ html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ) *
 ) { color: var(--a11y-testo) !important; }
 html.a11y-contrast-yellow-black :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
@@ -796,7 +800,7 @@ html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -810,7 +814,7 @@ html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ) *
 ):not(.gi *) { background: #000 !important; color: #ffff00 !important; box-shadow: none !important; }
 html.a11y-contrast-yellow-black :where(main, .utility-bar) :is(.card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card, .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item) { border-color: #ffff00 !important; }
@@ -850,7 +854,7 @@ html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -864,7 +868,7 @@ html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ) *
 ) { color: var(--a11y-testo) !important; }
 html.a11y-contrast-blue-cream :where(main, .utility-bar) a:not(.btn, [class*="card"], [style*="background"], .tel-grande, .en-tel, [class*="badge"], .notizia-categoria, .filter-pill):not(.dossier *, .leaflet-container *) { text-decoration: underline !important; }
@@ -885,7 +889,7 @@ html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -899,7 +903,7 @@ html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .av-testata, .av-invito, .av-io, .av-scelta, .av-bot, .av-anteprima
   ) *
 ):not(.gi *) { background: #fdf6e3 !important; color: #003a78 !important; }
 html.a11y-contrast-blue-cream :where(main, .utility-bar) :is(.card, .alert, .servizi-section, .notizie-section, .card-body, .quick-action-card, .card-servizio, .card-numero-utile, .card-rischio, .link-card, .stat-hero-item) { border-color: #003a78 !important; }
@@ -955,7 +959,8 @@ html.a11y-reading-mode .list-intro-content li {
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn, .av-testata, .av-invito, .av-io,
+  .av-scelta, .av-bot, .av-anteprima
   ),
   :where(
   .hero-section, .page-hero, .app-page-hero, .arena-hero, .emergency-banner,
@@ -969,7 +974,8 @@ html.a11y-reading-mode .list-intro-content li {
   [style*="background"], thead, .btn-primary, .btn-secondary, .btn-success, .btn-danger,
   .btn-warning, .btn-info, .btn-light, .btn-dark, .leaflet-container, .dossier, dialog, .modal,
   .dropdown-menu, .cal-prev-ora, .mt-fase, .dossier-card__tag, .manuale-cover, .arena-card-ico,
-  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn
+  .arena-card-stato, .storie-hero, .mappa-aree-filter, .btn, .av-testata, .av-invito, .av-io,
+  .av-scelta, .av-bot, .av-anteprima
   ) *
 ) {
     background: #fff !important;
