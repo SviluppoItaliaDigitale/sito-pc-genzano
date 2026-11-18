@@ -22,7 +22,7 @@ VIETATE = [
     r"per nessun motivo", r"caratteri cubitali", r"\bmateriali che\b",
     r"esplorazione profonda", r"\bdeep dive\b", r"\bpodcast generat",
     # Intensificazioni trovate nelle puntate scartate (17-18/11/2026).
-    r"\bfondamental", r"\bimportantissim",
+    r"\bfondamental", r"\bimportantissim", r"\bpochissim", r"alla lettera", r"\baffatto\b", r"\bdrasticament",
 ]
 # Parole assolute: ammesse solo se presenti anche nelle fonti.
 ASSOLUTE = [r"\bsempre\b", r"\bmai\b", r"\bcertamente\b", r"\binevitabilmente\b", r"\bsalvavit"]
