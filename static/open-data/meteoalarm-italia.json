@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-11-18T03:54:37+00:00",
+  "generato": "2026-11-18T12:44:52+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 46,
-  "scaduti_scartati": 14,
+  "avvisi": 56,
+  "scaduti_scartati": 0,
   "in_corso": 14,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -17,36 +17,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.122"
-  },
-  {
-   "in_corso": false,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.136"
-  },
-  {
-   "in_corso": false,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.140"
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.110"
   },
   {
    "in_corso": false,
@@ -56,10 +30,23 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.130"
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.112"
+  },
+  {
+   "in_corso": false,
+   "regione": "Emilia e Romagna",
+   "fenomeno": "Vento",
+   "livello": "arancione",
+   "evento_originale": "Orange Wind Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T01:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.114"
   },
   {
    "in_corso": false,
@@ -69,23 +56,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.118"
-  },
-  {
-   "in_corso": false,
-   "regione": "Marche",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.104"
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.109"
   },
   {
    "in_corso": false,
@@ -95,10 +69,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.126"
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.111"
   },
   {
    "in_corso": false,
@@ -108,10 +82,10 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.132"
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.113"
   },
   {
    "in_corso": false,
@@ -121,23 +95,23 @@
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.145"
+   "inizio": "2026-11-19T01:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.115"
   },
   {
    "in_corso": false,
-   "regione": "Umbria",
+   "regione": "Toscana",
    "fenomeno": "Vento",
    "livello": "arancione",
    "evento_originale": "Orange Wind Warning",
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.112"
+   "fine": "2026-11-19T22:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.123"
   },
   {
    "in_corso": false,
@@ -147,10 +121,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
+   "inizio": "2026-11-19T07:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.121"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.108"
   },
   {
    "in_corso": false,
@@ -160,10 +134,10 @@
    "evento_originale": "Yellow Rain Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
+   "inizio": "2026-11-19T07:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.120"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.107"
   },
   {
    "in_corso": true,
@@ -173,27 +147,131 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-17T09:00:00+00:00",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.083"
+  },
+  {
+   "in_corso": false,
+   "regione": "Basilicata",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T13:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.127"
+  },
+  {
+   "in_corso": false,
+   "regione": "Basilicata",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T14:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.126"
+  },
+  {
+   "in_corso": true,
+   "regione": "Basilicata",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.086"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T13:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.128"
+  },
+  {
+   "in_corso": false,
+   "regione": "Calabria",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T13:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.129"
+  },
+  {
+   "in_corso": true,
+   "regione": "Calabria",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.088"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.105"
+  },
+  {
+   "in_corso": false,
+   "regione": "Campania",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.106"
+  },
+  {
+   "in_corso": true,
+   "regione": "Campania",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
    "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.119"
-  },
-  {
-   "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.134"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.091"
   },
   {
    "in_corso": false,
-   "regione": "Basilicata",
+   "regione": "Emilia e Romagna",
    "fenomeno": "Pioggia",
    "livello": "gialla",
    "evento_originale": "Yellow Rain Warning",
@@ -201,86 +279,21 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.135"
-  },
-  {
-   "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-17T19:00:00+00:00",
-   "fine": "2026-11-19T00:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.133"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.118"
   },
   {
    "in_corso": false,
-   "regione": "Calabria",
-   "fenomeno": "Pioggia",
+   "regione": "Emilia e Romagna",
+   "fenomeno": "Temporali",
    "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
+   "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.139"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.138"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-17T19:00:00+00:00",
-   "fine": "2026-11-19T00:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.137"
-  },
-  {
-   "in_corso": false,
-   "regione": "Campania",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.129"
-  },
-  {
-   "in_corso": false,
-   "regione": "Campania",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.128"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.119"
   },
   {
    "in_corso": true,
@@ -290,10 +303,49 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-17T09:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.091"
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.081"
+  },
+  {
+   "in_corso": false,
+   "regione": "Friuli Venezia Giulia",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.145"
+  },
+  {
+   "in_corso": false,
+   "regione": "Friuli Venezia Giulia",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.144"
+  },
+  {
+   "in_corso": false,
+   "regione": "Friuli Venezia Giulia",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T13:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.095"
   },
   {
    "in_corso": false,
@@ -305,8 +357,8 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.117"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.102"
   },
   {
    "in_corso": false,
@@ -318,138 +370,151 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.116"
-  },
-  {
-   "in_corso": false,
-   "regione": "Liguria",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.094"
-  },
-  {
-   "in_corso": false,
-   "regione": "Liguria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.096"
-  },
-  {
-   "in_corso": false,
-   "regione": "Marche",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.105"
-  },
-  {
-   "in_corso": false,
-   "regione": "Marche",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.106"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.101"
   },
   {
    "in_corso": true,
-   "regione": "Marche",
+   "regione": "Lazio",
    "fenomeno": "Vento",
    "livello": "gialla",
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-17T09:00:00+00:00",
-   "fine": "2026-11-19T00:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.103"
-  },
-  {
-   "in_corso": false,
-   "regione": "Molise",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.125"
-  },
-  {
-   "in_corso": false,
-   "regione": "Molise",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.124"
-  },
-  {
-   "in_corso": true,
-   "regione": "Molise",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-17T19:00:00+00:00",
-   "fine": "2026-11-19T00:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.123"
-  },
-  {
-   "in_corso": false,
-   "regione": "Piemonte",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T22:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.088"
-  },
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-18T01:00:00+00:00",
+   "inizio": "2026-11-18T09:00:00+00:00",
    "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.087"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.090"
+  },
+  {
+   "in_corso": false,
+   "regione": "Liguria",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T01:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.122"
+  },
+  {
+   "in_corso": false,
+   "regione": "Liguria",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T01:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.121"
+  },
+  {
+   "in_corso": false,
+   "regione": "Liguria",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T01:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.120"
+  },
+  {
+   "in_corso": false,
+   "regione": "Marche",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.104"
+  },
+  {
+   "in_corso": false,
+   "regione": "Marche",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.103"
+  },
+  {
+   "in_corso": true,
+   "regione": "Marche",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.082"
+  },
+  {
+   "in_corso": false,
+   "regione": "Molise",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T13:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.125"
+  },
+  {
+   "in_corso": false,
+   "regione": "Molise",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T14:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.124"
+  },
+  {
+   "in_corso": true,
+   "regione": "Molise",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.084"
+  },
+  {
+   "in_corso": false,
+   "regione": "Piemonte",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T01:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.117"
   },
   {
    "in_corso": true,
@@ -459,23 +524,10 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-17T19:00:00+00:00",
+   "inizio": "2026-11-18T09:00:00+00:00",
    "fine": "2026-11-19T00:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.131"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-17T09:00:00+00:00",
-   "fine": "2026-11-19T00:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.142"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.085"
   },
   {
    "in_corso": false,
@@ -487,8 +539,8 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T07:00:00+00:00",
    "fine": "2026-11-19T12:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.144"
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.132"
   },
   {
    "in_corso": false,
@@ -500,8 +552,34 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T07:00:00+00:00",
    "fine": "2026-11-19T12:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.143"
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.131"
+  },
+  {
+   "in_corso": true,
+   "regione": "Sardegna",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-18T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.093"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sicilia",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.130"
   },
   {
    "in_corso": true,
@@ -511,10 +589,10 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-18T01:00:00+00:00",
+   "inizio": "2026-11-18T09:00:00+00:00",
    "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:27+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.141"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.092"
   },
   {
    "in_corso": false,
@@ -524,10 +602,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
+   "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.102"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.098"
   },
   {
    "in_corso": false,
@@ -537,10 +615,10 @@
    "evento_originale": "Yellow Rain Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
+   "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.101"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.097"
   },
   {
    "in_corso": true,
@@ -550,10 +628,10 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-17T09:00:00+00:00",
+   "inizio": "2026-11-18T09:00:00+00:00",
    "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.099"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.089"
   },
   {
    "in_corso": false,
@@ -565,8 +643,8 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.111"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.100"
   },
   {
    "in_corso": false,
@@ -578,8 +656,21 @@
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
    "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.110"
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.099"
+  },
+  {
+   "in_corso": true,
+   "regione": "Umbria",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.094"
   },
   {
    "in_corso": false,
@@ -590,9 +681,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-11-19T01:00:00+00:00",
-   "fine": "2026-11-19T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.086"
+   "fine": "2026-11-20T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.116"
   },
   {
    "in_corso": true,
@@ -602,10 +693,49 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-11-18T01:00:00+00:00",
-   "fine": "2026-11-18T18:59:00+00:00",
-   "emesso": "2026-11-17T09:56:26+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261117105625.085"
+   "inizio": "2026-11-18T09:00:00+00:00",
+   "fine": "2026-11-19T00:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.087"
+  },
+  {
+   "in_corso": false,
+   "regione": "Veneto",
+   "fenomeno": "Pioggia",
+   "livello": "gialla",
+   "evento_originale": "Yellow Rain Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T12:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.148"
+  },
+  {
+   "in_corso": false,
+   "regione": "Veneto",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T07:00:00+00:00",
+   "fine": "2026-11-19T12:59:00+00:00",
+   "emesso": "2026-11-18T10:37:05+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.149"
+  },
+  {
+   "in_corso": false,
+   "regione": "Veneto",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-19T13:00:00+00:00",
+   "fine": "2026-11-19T18:59:00+00:00",
+   "emesso": "2026-11-18T10:37:04+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261118113703.096"
   }
  ]
 }
