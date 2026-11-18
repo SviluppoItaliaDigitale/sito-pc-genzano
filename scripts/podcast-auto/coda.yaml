@@ -357,11 +357,20 @@ puntate:
   data: '2026-12-11'
 - id: it-alert
   titolo: 'IT-alert: il messaggio che arriva sul telefono'
+  escludi:
+  - documentario-storia
+  - iso-22322
+  - diga-castreccioni
+  - proroga-sperimentazione
+  - test-settembre
+  - app-it-alert-test-nazionale
   fonti:
   - content/dossier/il-messaggio-che-salva.md
   parole:
   - IT-alert
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-12-15-it-alert.md
+  data: '2026-12-15'
 - id: ondate-di-calore
   titolo: 'Il caldo estremo: proteggere sé e gli altri'
   fonti:
