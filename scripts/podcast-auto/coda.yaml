@@ -269,7 +269,12 @@ puntate:
   - blackout
   - corrente elettrica
   - interruzione di energia
-  stato: da-fare
+  stato: programmata
+  escludi:
+  - storie-e-racconti
+  - blackout-nazionale
+  file: content/podcast/2026-12-01-blackout.md
+  data: '2026-12-01'
 - id: vento-forte
   titolo: 'Vento forte: i pericoli e come proteggersi'
   fonti:
@@ -280,6 +285,13 @@ puntate:
   - tromba d.aria
   - downburst
   stato: da-fare
+  escludi:
+  - dossier/
+  - colorare-vento
+  - storie-e-racconti
+  - tromba-aria-roma
+  - tempesta-vaia
+  - maltempo-albero
 - id: temporali-intensi
   titolo: 'Temporali intensi: fulmini, grandine e allagamenti'
   fonti:
