@@ -284,7 +284,7 @@ puntate:
   - raffiche
   - tromba d.aria
   - downburst
-  stato: da-fare
+  stato: programmata
   escludi:
   - dossier/
   - colorare-vento
@@ -292,6 +292,8 @@ puntate:
   - tromba-aria-roma
   - tempesta-vaia
   - maltempo-albero
+  file: content/podcast/2026-12-04-vento-forte.md
+  data: '2026-12-04'
 - id: temporali-intensi
   titolo: 'Temporali intensi: fulmini, grandine e allagamenti'
   fonti:
@@ -302,6 +304,15 @@ puntate:
   - grandin
   - nubifragi
   stato: da-fare
+  escludi:
+  - dossier/
+  - colorare-temporale
+  - storie-e-racconti
+  - mtg-i2
+  - temporali-estivi
+  - temporali-pomeridiani
+  - temporali-settembre
+  - grandine-estiva
 - id: rischio-vulcanico
   titolo: 'I Colli Albani: il vulcano sotto i Castelli Romani'
   fonti:
