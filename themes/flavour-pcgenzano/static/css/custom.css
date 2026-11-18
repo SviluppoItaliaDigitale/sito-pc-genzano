@@ -8652,7 +8652,7 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
 .assistente-volontari .av-scelta[aria-pressed="true"] { background: var(--pc-primary); color: #fff; border-left-color: #ffbe2e; }
 .assistente-volontari .av-scelta[aria-pressed="true"]::before { content: "\2713\00a0"; }
 .assistente-volontari .av-scelte .btn { min-height: 44px; }
-.assistente-volontari .av-scelte .btn-outline-primary { background: #fff; }
+.assistente-volontari .av-scelte .btn-outline-primary:not(:hover):not(:focus-visible):not(:active) { background: #fff; }
 .assistente-volontari .av-scelta:focus-visible, .assistente-volontari .av-barra input:focus, .assistente-volontari .av-anteprima:focus { outline: 3px solid #f5a623; outline-offset: 2px; }
 .assistente-volontari .av-barra { display: flex; gap: .5rem; margin-top: .5rem; }
 .assistente-volontari .av-barra[hidden] { display: none; }
