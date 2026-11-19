@@ -36,6 +36,7 @@ SIGLE_BLACKLIST = {
     "NON", "TUTTI", "FARE", "BENE", "MALE", "PRIMA", "DOPO", "DURANTE",
     "ATTENZIONE", "STOP", "AIUTO", "VIETATO", "OBBLIGO", "AVVISO",
     "EMERGENZA", "ALLERTA", "ALLARME",  # parole frequenti nei titoli sito
+    "TEST",  # parola «TEST» con cui iniziano i messaggi di prova di IT-alert, non una sigla
     # parole inglesi maiuscole comuni
     "AND", "FOR", "WITH", "FROM", "INTO", "OVER", "UNDER", "THE", "OUR", "YOUR",
     "ALL", "NEW", "NOW", "ONE", "TWO", "TOP", "GET", "SET", "USE",
