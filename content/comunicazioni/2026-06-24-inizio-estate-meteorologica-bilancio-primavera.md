@@ -12,6 +12,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# Falso positivo del controllo sulla data di uscita: «l'estate meteorologica inizia il 1° giugno» è una definizione, non un annuncio datato.
+controllo_data_uscita: false
 ---
 
 Quando si parla di **stagioni** esiste un doppio calendario: quello **astronomico** (solstizi ed equinozi) e quello **meteorologico** (trimestri fissi). Dal **1° giugno** è iniziata ufficialmente l'**estate meteorologica**, che dura fino al **31 agosto**. Questa convenzione facilita i confronti tra anni e la costruzione di serie storiche climatiche.
