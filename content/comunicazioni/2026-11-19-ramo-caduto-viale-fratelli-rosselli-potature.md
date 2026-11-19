@@ -43,4 +43,4 @@ Sul tema abbiamo già scritto della [caduta di un albero nello stesso viale](/co
 - [Allerte meteo e comportamenti da seguire](/allerte-meteo/)
 - [Numeri utili](/numeri-utili/)
 
-Fonte: cronaca locale di Castelli Notizie del 18 novembre 2026.
+Cronaca locale: [Genzano, potature in viale Fratelli Rosselli: continuano le operazioni di potatura sul territorio](https://www.castellinotizie.it/2026/11/18/genzano-potature-in-viale-fratelli-rosselli-continuano-le-operazioni-di-potatura-sul-territorio/), Castelli Notizie, 18 novembre 2026.
