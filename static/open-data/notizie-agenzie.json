@@ -5,34 +5,130 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-18T20:55:32+00:00",
+  "generato": "2026-11-19T02:20:21+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-18T20:31:28+00:00",
+   "data": "2026-11-19T00:17:43+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bayesian, ente governativo inglese 'scagiona' l'equipaggio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/bayesian-ente-governativo-inglese-scagiona-lequipaggio_052f3026-e9d5-44af-ad04-9fd95dc469d2.html"
+  },
+  {
+   "data": "2026-11-18T23:29:03+00:00",
    "fonte": "ANSA",
    "titolo": "Xi rinsalda l'asse con Putin, poi l'abbraccio con Trump",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/xi-rinsalda-lasse-con-putin-poi-labbraccio-con-trump_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
+  },
+  {
+   "data": "2026-11-18T23:24:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Anthropic fissa il prezzo a 83 dollari, verso l'Ipo più grande della storia",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/18/anthropic-pronta-alla-maxi-quotazione-test-per-lia-dopo-nvidia_dfa59b00-bf9f-4c12-a1dd-94aa8fa3e1f1.html"
+  },
+  {
+   "data": "2026-11-18T23:07:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "James Bond, da Kristen Stewart a Timothée Chalamet: parte il toto-cattivo di 007",
+   "url": "https://www.adnkronos.com/spettacoli/james-bond-toto-cattivi_6aESInujmaBBLvKSW1K5mw"
+  },
+  {
+   "data": "2026-11-18T23:06:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Incontro Trump-Xi, poi trilaterale con Putin: dalla tregua commerciale all'Ucraina, cosa c'è sul tavolo dei leader",
+   "url": "https://www.adnkronos.com/internazionale/esteri/vertice-shenzhen-cina-trump-xi-putin_nNPpsnEelfsY3Dcju5Wqc"
+  },
+  {
+   "data": "2026-11-18T23:05:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, è contesa sulle risorse: restano i nodi pensioni e sanità. Salvini insiste su 'Quota 64'",
+   "url": "https://www.adnkronos.com/economia/manovra-pensioni-quota-64-sanita-governo_5sVXZc1sGAEDRNu8AFd5vG"
+  },
+  {
+   "data": "2026-11-18T23:04:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fiano lascia il Pd dopo il no dem al ddl Antisemitismo. Il dispiacere di Schlein, il monito dei riformisti: \"Perdita grave, non sottovalutarla\"",
+   "url": "https://www.adnkronos.com/politica/pd-addio-fiano-ddl-antisemitismo_75MeimtIOM1gU2JeJabvSM"
+  },
+  {
+   "data": "2026-11-18T23:03:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maltempo, in arrivo venti fino a burrasca da Nord a Sud. La Protezione civile: \"Allerta gialla in undici regioni\"",
+   "url": "https://www.adnkronos.com/cronaca/allerta-meteo-maltempo-protezione-civile-19-novembere_2vmAPfrGgWZCy33dIa46y4"
+  },
+  {
+   "data": "2026-11-18T22:56:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Finals, Cobolli in lacrime: \"La partita più triste della mia carriera\"",
+   "url": "https://www.adnkronos.com/sport/cobolli-eliminazione-lacrime-atp-finals-cosa-ha-detto-flavio_6yPECYdir4yztxA07XYGjS"
+  },
+  {
+   "data": "2026-11-18T22:28:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, Stragliotto (Mediolanum): \"Con Estate insieme i bimbi tornano alla normalità\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-stragliotto-mediolanum-con-estate-insieme-i-bimbi-tornano-alla-normalita_4q2lMja67magQjXGsF3JXy"
+  },
+  {
+   "data": "2026-11-18T22:13:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il lusso sta cambiando, addio logomania, è la Legitimacy Era",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/lusso/2026/11/17/il-lusso-sta-cambiando-addio-logomania-e-la-legitimacy-era_bed062ea-3f50-409f-aaee-41ff2ca73731.html"
+  },
+  {
+   "data": "2026-11-18T22:09:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, Esposito (Aisla): \"Con ministro Disabilità per presa in carico tempestiva\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-esposito-aisla-con-ministro-disabilita-per-presa-in-carico-tempestiva_757muvzKM2gTgAYoB4d53i"
+  },
+  {
+   "data": "2026-11-18T22:03:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alcaraz e l'incontro con Cahill alle Atp Finals",
+   "url": "https://www.adnkronos.com/sport/sinner-alcaraz-atp-finals-incontra-cahill-video_ohHkISVkJZOsF1YUxS4qI"
+  },
+  {
+   "data": "2026-11-18T21:35:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Torna il ReWriters Fest, Romanelli: 'Evento trasversale tra istituzioni e cultura pop'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/11/15/torna-il-rewriters-fest.-romanelli-evento-trasversale-tra-istituzioni-e-cultura-pop_b720220f-28ad-4df1-9202-0b235f06fb1d.html"
+  },
+  {
+   "data": "2026-11-18T21:18:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, De Girolamo: \"Ricerca fondamentale, non gireremo la testa dall’altra parte\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-de-girolamo-ricerca-fondamentale-non-gireremo-la-testa-dallaltra-parte_5rrcFMtoOpHvOAAVjGvDwQ"
+  },
+  {
+   "data": "2026-11-18T21:18:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, Fontana (Aisla): \"Dialogo costante con istituzioni per risposte in tempi rapidi\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-fontana-aisla-dialogo-costante-con-istituzioni-per-risposte-in-tempi-rapidi_36jwtw3UdHFSLBjkZKq78s"
+  },
+  {
+   "data": "2026-11-18T21:17:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Atp Finals: Cobolli crolla con Tiafoe, sfumano le semifinali",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/atp-finals-cobolli-crolla-con-tiafoe-sfumano-le-semifinali-_e8d16eb9-9af9-429a-a084-310b0d445171.html"
+  },
+  {
+   "data": "2026-11-18T21:15:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sla, Lucchini (Lombardia): \"Ascolto e sostegno alle famiglie, fondamentale fare rete\"",
+   "url": "https://www.adnkronos.com/cronaca/sla-lucchini-lombardia-ascolto-e-sostegno-alle-famiglie-fondamentale-fare-rete_13mPt53XLGMG8DqDeZAYPu"
+  },
+  {
+   "data": "2026-11-18T20:51:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Manovra: spuntano 800 milioni per la sanità, ipotesi card anziani più mirata",
+   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/11/18/manovra-spuntano-800-milioni-per-la-sanita-ipotesi-card-anziani-piu_92e99b6c-49d8-4f68-9bee-71fff3bdc40a.html"
   },
   {
    "data": "2026-11-18T20:15:42+00:00",
    "fonte": "ANSA",
    "titolo": "Miguel Gotor vince il Premio Strega Saggistica e lo dedica ai giovani di oggi",
    "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/11/18/miguel-gotor-e-il-vincitore-della-seconda-edizione-del-premio-strega-saggistica_d93d5b92-33ea-4ead-8385-49f016878a0c.html"
-  },
-  {
-   "data": "2026-11-18T20:14:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Manovra: emendamento FI cancella il taglio alle pensioni ma solo per il 2027",
-   "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/11/18/manovra-emendamento-fi-cancella-il-taglio-alle-pensioni-ma-solo-per-il-2027_92e99b6c-49d8-4f68-9bee-71fff3bdc40a.html"
-  },
-  {
-   "data": "2026-11-18T20:00:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Israele lancia operazione di terra a Gaza, Hamas denuncia: \"Violato il cessate il fuoco\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/gaza-israele-operazione-terra-hamas-news_3xdTl0c5MkjYTZXMqEy8LS"
   },
   {
    "data": "2026-11-18T19:55:44+00:00",
@@ -59,34 +155,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/melillo-a-commissione-sulla-morte-di-david-rossi-rischio-di-interferenze-e-esposizione-ai-media_8e00e028-5213-4339-b8a1-5c5a6c2b9095.html"
   },
   {
-   "data": "2026-11-18T19:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Neurologo Shneider: \"Sla è trattabile, nuove terapie personalizzate in sviluppo\"",
-   "url": "https://www.adnkronos.com/cronaca/neurologo-shneider-sla-e-trattabile-nuove-terapie-personalizzate-in-sviluppo_N1Xg1kfzEyTHZdIcU5muA"
-  },
-  {
    "data": "2026-11-18T19:29:16+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Sentiti per ore in Procura l'ex legale di Sempio e l'ex carabiniere Spoto",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/ex-legale-di-sempio-grassi-sentito-per-tre-ore-in-procura-a-pavia_65e731af-5840-48c4-bb3f-6a145e438c46.html"
   },
   {
-   "data": "2026-11-18T19:26:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sla, Lunetta (Maugeri): \"Italia protagonista nella ricerca sulle mutazioni genetiche\"",
-   "url": "https://www.adnkronos.com/cronaca/sla-lunetta-maugeri-italia-protagonista-nella-ricerca-sulle-mutazioni-genetiche_2sFKniuav4kCMbnjPeRT0A"
-  },
-  {
    "data": "2026-11-18T19:24:36+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Soffoca la moglie, 'me l'ha chiesto lei perché soffriva'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/donna-soffocata-dal-marito-in-casa-in-provincia-di-bergamo_1d91a6f5-fbe7-4824-8b0d-e1d5cf6de88b.html"
-  },
-  {
-   "data": "2026-11-18T19:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sla, ricercatrice Pasinelli: \"Stiamo sviluppando trattamenti molecolari mirati\"",
-   "url": "https://www.adnkronos.com/cronaca/sla-ricercatrice-pasinelli-stiamo-sviluppando-trattamenti-molecolari-mirati_4Qck5HYp31QWJH7UwoKqFO"
   },
   {
    "data": "2026-11-18T19:23:44+00:00",
@@ -107,88 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/ragazzina-partorisce-bimba-che-muore-era-viva-alla-nascita_276b5a93-295f-48a1-9ba8-1440d830a20d.html"
   },
   {
-   "data": "2026-11-18T19:16:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alle Atp Finals: in campo Cobolli-Tiafoe, 'come una finale' DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/alle-atp-finals-in-campo-cobolli-tiafoe-come-una-finale-diretta_e8d16eb9-9af9-429a-a084-310b0d445171.html"
-  },
-  {
-   "data": "2026-11-18T19:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "I musulmani nel mondo supereranno i cristiani nel 2035. Islam triplicherà la 'quota' in Italia entro 2070",
-   "url": "https://www.adnkronos.com/internazionale/esteri/islam-europa-aumento-report_2CC2SONIHIUrcSDTOqZSas"
-  },
-  {
    "data": "2026-11-18T19:00:41+00:00",
    "fonte": "ANSA",
    "titolo": "'Futuro Nazionale viola la legge Scelba', la Procura di Roma apre un fascicolo",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/futuro-nazionale-viola-la-legge-scelba-la-procura-di-roma-apre-un-fascicolo_a3af0102-2a85-40ca-9ff0-e03b981a65b6.html"
-  },
-  {
-   "data": "2026-11-18T18:55:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "De Gennaro raccomandò il fratello alla guida della Guardia di Finanza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/i-pm-di-caltanissetta-de-gennaro-raccomando-il-fratello-con-letta-per-la-nomina-a-comandante-della_82bb3024-e2ec-4e48-a758-11a6337ac28f.html"
-  },
-  {
-   "data": "2026-11-18T18:53:26+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ronde anti migranti alla periferia di Roma, 'vergogna'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/ronde-anti-migranti-alla-periferia-di-roma-vergogna_059ebe98-44b9-4cb8-9550-031b69c3a9ed.html"
-  },
-  {
-   "data": "2026-11-18T18:53:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Identificato nickname Mikhail Andropov, a Napoli un fascicolo in Procura",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/identificato-nickname-mikhail-andropov-a-napoli-un-fascicolo-in-procura_1c07aef8-81cd-4a38-93c3-7e2b5971a7f1.html"
-  },
-  {
-   "data": "2026-11-18T18:48:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Xi accoglie Trump all'aeroporto di Shenzhen e lo abbraccia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/xi-accoglie-trump-allaeroporto-di-shenzhen-e-lo-abbraccia_17e71e32-b3bf-40a2-8db8-97caa2c1d4c1.html"
-  },
-  {
-   "data": "2026-11-18T18:44:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Anthropic alla prova della borsa, dopo Nvidia è test per l'IA",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/18/anthropic-pronta-alla-maxi-quotazione-test-per-lia-dopo-nvidia_dfa59b00-bf9f-4c12-a1dd-94aa8fa3e1f1.html"
-  },
-  {
-   "data": "2026-11-18T18:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sla, Sabatelli (Aisla): \"Terapie mirate all'Rna aprono nuove prospettive di cura\"",
-   "url": "https://www.adnkronos.com/cronaca/sla-sabatelli-aisla-terapie-mirate-allrna-aprono-nuove-prospettive-di-cura_5vY3WGAtjHXTIbhblIaSOk"
-  },
-  {
-   "data": "2026-11-18T18:39:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Crosetto: 'Servono 5mila specialisti cyber'. Investimenti per 6 miliardi",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/crosetto-contro-la-guerra-ibrida-risorse-per-6-miliardi-nei-prossimi-anni_c8b81495-423d-42a6-aab7-030b0af8f27d.html"
-  },
-  {
-   "data": "2026-11-18T18:34:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Finals, oggi Cobolli-Tiafoe 6-7 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-cobolli-tiafoe-oggi-atp-finals-live-risultato-classifica_45cL80ty2x3Ny1aCgO06Qo"
-  },
-  {
-   "data": "2026-11-18T18:33:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morì di tumore a 14 anni, i genitori condannati per omicidio colposo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/figlio-morto-di-tumore-2-anni-ai-genitori-per-omicidio-colposo_e6ab1ae9-2375-4d75-9ce8-450798d81e79.html"
-  },
-  {
-   "data": "2026-11-18T18:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sla, Massimelli (Aisla): \"Nessuna persona e nessuna famiglia devono essere lasciate sole\"",
-   "url": "https://www.adnkronos.com/cronaca/sla-massimelli-aisla-nessuna-persona-e-nessuna-famiglia-devono-essere-lasciate-sole_1Mwwhh5AANqSVKzzSCwm7K"
-  },
-  {
-   "data": "2026-11-18T18:24:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "ANSA Newsroom | Fuori tutti: allarme bomba nelle scuole, caos e evacuazioni",
-   "url": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/18/ansa-newsroom-fuori-tutti-allarme-bomba-nelle-scuole-caos-e-evacuazioni_732f890a-dda9-4cbc-9dca-a464e6d7c70b.html"
   }
  ]
 }
