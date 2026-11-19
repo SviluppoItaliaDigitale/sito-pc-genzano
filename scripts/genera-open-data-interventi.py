@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Genera dataset OPEN DATA AGGREGATI dagli export del gestionale interventi.
 
-Legge l'export .xlsx del gestionale (fogli: Interventi, Interventi membri,
-Risposte Selettive) e produce SOLO statistiche aggregate e anonime in
-static/open-data/. NON pubblica MAI dati personali o sensibili: nessun nome,
+Legge l'export .xlsx del gestionale (fogli: Interventi o, da novembre 2026,
+Rapporti di intervento; Interventi membri; Risposte alle selettive) e produce
+SOLO statistiche aggregate e anonime in static/open-data/. NON pubblica MAI dati personali o sensibili: nessun nome,
 nessun richiedente, nessuna descrizione, nessun luogo/indirizzo specifico.
 
 Il file .xlsx NON va committato (contiene nomi dei volontari): resta sul PC.
@@ -49,6 +49,42 @@ OUT = "static/open-data"
 # (aggiorna-open-data-delta.py). Da correggere anche alla fonte, nel
 # vocabolario del gestionale, appena possibile.
 TIPOLOGIE_NORMALIZZATE = {"Allagamaneto": "Allagamento"}
+
+
+# Nomi del foglio interventi nelle versioni dell'export: fino a ottobre 2026
+# «Interventi», da novembre 2026 «Rapporti di intervento» (con le intestazioni
+# «Data inizio», «Ora inizio» in minuscolo). Gli script cercano entrambi.
+FOGLI_INTERVENTI = ("Interventi", "Rapporti di intervento")
+COLONNE = ("Numero", "Data Inizio", "Data Fine", "Ora Inizio", "Durata",
+           "Km iniziali", "Km finali", "Motivo", "Tipologia evento",
+           "Utenti", "Veicoli")
+
+
+def foglio_interventi(wb):
+    """Il foglio degli interventi, qualunque nome abbia nell'export."""
+    for nome in FOGLI_INTERVENTI:
+        if nome in wb.sheetnames:
+            return wb[nome]
+    sys.exit("Foglio degli interventi non trovato nell'export (cercati: "
+             + ", ".join(FOGLI_INTERVENTI) + "; presenti: "
+             + ", ".join(wb.sheetnames) + "). Nessun file scritto.")
+
+
+def indice_colonne(hdr):
+    """Intestazione -> posizione, con i nomi canonici di COLONNE a prescindere
+    da maiuscole e spazi. Si ferma se manca una colonna che gli script usano:
+    un export cambiato non deve produrre dati sbagliati in silenzio."""
+    canon = {c.lower(): c for c in COLONNE}
+    idx = {}
+    for i, h in enumerate(hdr):
+        if h:
+            h = str(h).strip()
+            idx.setdefault(canon.get(h.lower(), h), i)
+    mancanti = [c for c in COLONNE if c not in idx]
+    if mancanti:
+        sys.exit("Colonne mancanti nell'export: " + ", ".join(mancanti)
+                 + ". Nessun file scritto.")
+    return idx
 
 
 def trova_export():
@@ -422,10 +458,9 @@ def main():
     wb = openpyxl.load_workbook(src, read_only=True, data_only=True)
 
     # ---------- INTERVENTI ----------
-    ws = wb["Interventi"]
+    ws = foglio_interventi(wb)
     rows = list(ws.iter_rows(values_only=True))
-    hdr = rows[0]
-    idx = {h: i for i, h in enumerate(hdr) if h}
+    idx = indice_colonne(rows[0])
 
     def col(r, name):
         i = idx.get(name)
