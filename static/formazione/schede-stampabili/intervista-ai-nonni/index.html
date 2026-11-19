@@ -22,13 +22,13 @@
     .in-ascolto .in-senza-img { width: 44px; flex-shrink: 0; }
     .in-domanda { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.6rem 0.2rem; margin: 0.35rem 0; break-inside: avoid; }
     .in-domanda p { margin: 0 0 0.15rem; font-weight: 700; color: var(--scheda-blu); }
-    .in-righe { display: block; height: 2.6rem; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 1.25rem, var(--scheda-bordo) 1.25rem, var(--scheda-bordo) calc(1.25rem + 1px)); }
+    .in-righe { display: block; height: 2.5rem; border-bottom: 1.5px solid var(--scheda-bordo); background: linear-gradient(to bottom, transparent calc(50% - 1px), var(--scheda-bordo) calc(50% - 1px), var(--scheda-bordo) 50%, transparent 50%); }
     .in-annota { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
     .in-annota ul { margin: 0.2rem 0; padding-left: 1.1rem; }
     .in-tabella { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.35rem 0; }
     .in-tabella th, .in-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.3rem 0.45rem; vertical-align: top; text-align: left; }
     .in-tabella th { background: #e7f0fa; color: var(--scheda-blu); }
-    .in-tabella td.in-vuota { height: 2.4rem; }
+    .in-tabella td.in-vuota { height: 1.9rem; }
     .in-fonti { margin: 0.3rem 0; padding-left: 1.1rem; }
     .in-fonti li { margin: 0.15rem 0; }
     .in .avvertenza { margin-top: 0.45rem; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
@@ -39,7 +39,7 @@
     @media print {
       .in-ascolto img { width: 36px; height: 36px; }
       .in-ascolto .in-senza-img { width: 36px; }
-      .in-ascolto li { padding: 0.18rem 0; }
+      .in-ascolto li { padding: 0.12rem 0; }
       .in .scheda-docente, .in .avvertenza, .in-annota { break-inside: avoid; }
       .scheda-page { padding: 1cm 1.4cm 0.6cm; }
       .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
@@ -47,6 +47,11 @@
       .in .scheda-h2 { margin: 0.45rem 0 0.2rem; }
       .scheda-footer { padding-top: 2mm; }
     }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    /* Controllo fogli di stampa: scala del testo all'88% in stampa, così ogni
+       foglio regge anche i caratteri più larghi senza mandare la fascia delle
+       affiliazioni su un foglio in più. */
+    @media print { html { font-size: 88%; } }
   </style>
 </head>
 <body>
@@ -81,15 +86,13 @@
         I nonni ricordano cose che sui libri non ci sono: com'era la strada coperta di neve, chi ha bussato alla porta dopo una scossa, che cosa si è salvato dall'acqua. In questa scheda prepari un'intervista a un nonno, a una nonna o a una persona anziana che la tua famiglia conosce. Poi confronti il suo racconto con le fonti.
       </p>
 
-      <h2 class="scheda-h2">Di che cosa parlare</h2>
-      <p>Scegliete insieme un'emergenza che la persona ha vissuto davvero. Per esempio:</p>
+      <h2 class="scheda-h2">Di che cosa parlare: un'emergenza vissuta davvero</h2>
       <ul class="in-temi">
         <li><strong>Una nevicata forte</strong>Strade chiuse, scuole ferme, la corrente che manca.</li>
         <li><strong>Un terremoto</strong>Anche una scossa sentita da lontano, o vissuta in un altro paese.</li>
         <li><strong>Un'alluvione o una frana</strong>L'acqua in strada o in cantina, una via chiusa per giorni.</li>
         <li><strong>Un'altra emergenza</strong>Un incendio vicino, un blackout lungo, un temporale che nessuno ha dimenticato.</li>
       </ul>
-      <p>Questa intervista non parla di guerra: è un altro tema, con un altro peso, e chiede un lavoro diverso.</p>
 
       <h2 class="scheda-h2">Come ascoltare con rispetto</h2>
       <ul class="in-ascolto">
@@ -102,7 +105,7 @@
       </ul>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> La scheda lavora sulla memoria orale e sul confronto con le fonti. La scheda <a href="/formazione/schede-stampabili/intervista-volontario-primaria/">«Intervista al volontario»</a> fa un'altra cosa: chiede a chi fa protezione civile oggi che cosa fa. Le due possono stare nello stesso percorso.</p>
+        <p><strong>Per il docente.</strong> La scheda lavora sulla memoria orale e sul confronto con le fonti. Non riguarda la guerra, che ha un altro peso e chiede un lavoro diverso. La scheda <a href="/formazione/schede-stampabili/intervista-volontario-primaria/">«Intervista al volontario»</a> fa un'altra cosa: chiede a chi fa protezione civile oggi che cosa fa. Le due possono stare nello stesso percorso.</p>
         <p><strong>Prima ora:</strong> si legge il foglio 1 e si preparano le domande del foglio 2, aggiungendone di proprie. <strong>A casa:</strong> l'intervista, con un adulto della famiglia presente se l'intervistato non è un familiare. <strong>Seconda ora:</strong> il confronto con le fonti del foglio 3, in piccoli gruppi.</p>
         <p><strong>Se un alunno non può intervistare un anziano</strong> (non ci sono nonni vicini, la famiglia preferisce di no, un lutto recente), può intervistare un altro adulto che conosce, lavorare in coppia con un compagno o partire dal racconto di una scheda «caso» del sito, come <a href="/formazione/schede-stampabili/caso-friuli-primaria/">il terremoto del Friuli</a>. Nessuno deve spiegare perché sceglie un'altra strada.</p>
       </div>
@@ -189,10 +192,10 @@
 
       <h2 class="scheda-h2">Dove cercare</h2>
       <ul class="in-fonti">
-        <li><strong>Per un terremoto:</strong> i cataloghi dell'Istituto Nazionale di Geofisica e Vulcanologia (INGV), che raccolgono gli effetti dei terremoti paese per paese: emidius.mi.ingv.it/CPTI15-DBMI15/ e storing.ingv.it/cfti/cfti5/. Si cerca per nome del Comune.</li>
+        <li><strong>Per un terremoto:</strong> i cataloghi dell'Istituto Nazionale di Geofisica e Vulcanologia (INGV), che raccolgono gli effetti dei terremoti paese per paese: il database macrosismico DBMI15 (emidius.mi.ingv.it) e il Catalogo dei forti terremoti in Italia, CFTI5Med (storing.ingv.it). Si cerca per nome del Comune.</li>
         <li><strong>Per i grandi eventi italiani:</strong> la scheda del sito <a href="/formazione/schede-stampabili/eventi-pc-italiani-primaria/">«Eventi che hanno fatto la protezione civile italiana»</a> e le schede «caso» delle singole emergenze.</li>
         <li><strong>Per una nevicata, un'alluvione o un evento locale:</strong> i giornali dell'epoca, che si consultano in biblioteca, e l'archivio del Comune.</li>
-        <li><strong>In casa:</strong> fotografie con la data sul retro, lettere, cartoline, un diario.</li>
+        <li><strong>In casa:</strong> fotografie con la data sul retro, lettere, un diario.</li>
       </ul>
 
       <h2 class="scheda-h2">Ieri e oggi</h2>
@@ -200,12 +203,12 @@
       <span class="in-righe" aria-label="Spazio per scrivere il confronto fra ieri e oggi"></span>
 
       <div class="avvertenza">
-        <p><strong>Per le famiglie e per il docente: dati personali e consenso.</strong> Il lavoro resta in classe. Sulla scheda non vanno cognomi, indirizzi, telefoni o nomi di altre persone citate nel racconto. Se la classe vuole condividere le interviste fuori dall'aula (una mostra, il giornalino, il sito della scuola), serve prima il consenso scritto della persona intervistata, che può chiedere di togliere parti del racconto. Una foto, una voce registrata o un video si pubblicano solo con quel consenso e secondo le regole della scuola sui dati personali (Regolamento UE 2016/679). Per le foto e le voci degli alunni serve il consenso di chi esercita la responsabilità genitoriale.</p>
+        <p><strong>Per le famiglie e per il docente: dati personali e consenso.</strong> Il lavoro resta in classe e sulla scheda non vanno dati personali. Se la classe vuole condividere le interviste fuori dall'aula (una mostra, il giornalino, il sito della scuola), serve prima il consenso scritto della persona intervistata, che può chiedere di togliere parti del racconto. Una foto, una voce registrata o un video si pubblicano solo con quel consenso e secondo le regole della scuola sui dati personali (Regolamento UE 2016/679). Per le foto e le voci degli alunni serve il consenso di chi esercita la responsabilità genitoriale.</p>
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> Che cosa osservare: l'alunno prepara domande aperte, ascolta senza interrompere, distingue ciò che si può controllare dalle emozioni, trova almeno una fonte e dice se il racconto coincide. Una data che non coincide è un buon risultato: apre la discussione su memoria e documenti. Se un racconto riporta un dolore ancora vivo, se ne parla con l'alunno da soli e non lo si legge in classe.</p>
-        <p>I cataloghi INGV riportano gli effetti dei terremoti per località; per i comportamenti di autoprotezione di oggi rimandate alle pagine <a href="/rischi-prevenzione/">«Rischi e prevenzione»</a> del sito. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+        <p><strong>Per il docente.</strong> Che cosa osservare: l'alunno prepara domande aperte, ascolta senza interrompere, distingue ciò che si può controllare dalle emozioni, trova almeno una fonte e dice se il racconto coincide. Una data che non coincide apre la discussione su memoria e documenti. Un racconto con un dolore ancora vivo non si legge in classe: se ne parla con l'alunno da soli.</p>
+        <p>Per i comportamenti di autoprotezione di oggi rimandate alle pagine <a href="/rischi-prevenzione/">«Rischi e prevenzione»</a> del sito. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
       </div>
     </div>
 

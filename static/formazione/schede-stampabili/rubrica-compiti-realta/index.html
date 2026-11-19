@@ -27,7 +27,8 @@
     .rr-no { margin-top: 0.4rem; padding: 0.4rem 0.7rem; background: #fff3cd; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; }
     .rr .scheda-docente p { margin: 0.25rem 0; }
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-    .rr-scroll { overflow-x: auto; }
+    .rr-scroll { overflow-x: auto; max-width: 100%; }
+    @media screen and (max-width: 600px) { .rr-tabella { min-width: 560px; } .rr-griglia { min-width: 520px; } }
     @media print {
       .rr-tabella { font-size: 0.76rem; }
       .rr-tabella, .rr-compiti, .rr-griglia, .scheda-docente, .rr-no { break-inside: avoid; }
@@ -155,6 +156,7 @@
 
     <div class="rr">
       <h2 class="scheda-h2">Che cosa osservare in ciascun compito</h2>
+      <div class="rr-scroll">
       <table class="rr-compiti">
         <caption class="visually-hidden">Esempi di evidenze da osservare per ciascun compito di realtà</caption>
         <thead><tr><th scope="col">Compito</th><th scope="col">Evidenze da osservare</th></tr></thead>
@@ -164,8 +166,10 @@
           <tr><th scope="row">Campagna informativa</th><td>Il messaggio ha un pubblico preciso e un'azione chiara; le informazioni coincidono con le pagine ufficiali; il prodotto è stato provato con qualcuno del pubblico; c'è una seconda forma per chi non legge.</td></tr>
         </tbody>
       </table>
+      </div>
 
       <h2 class="scheda-h2">Griglia di osservazione del gruppo</h2>
+      <div class="rr-scroll">
       <table class="rr-griglia">
         <caption class="visually-hidden">Griglia vuota da compilare: un alunno per riga, un criterio per colonna</caption>
         <thead><tr><th scope="col">Alunno o gruppo</th><th scope="col">Fonti</th><th scope="col">Accuratezza</th><th scope="col">Chiarezza</th><th scope="col">Collaborazione</th><th scope="col">Accessibilità</th><th scope="col">Note sul progresso</th></tr></thead>
@@ -177,6 +181,7 @@
           <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         </tbody>
       </table>
+      </div>
       <p>Nella cella si scrive la lettera del livello (P, B, I, A) e una evidenza breve: «ha citato il piano della scuola», «ha provato il cartello con la classe seconda».</p>
 
       <h2 class="scheda-h2">Per l'alunno: mi controllo prima di consegnare</h2>

@@ -30,8 +30,23 @@
     .fs-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.35rem; }
     @media (max-width: 700px) { .fs-blocchi { grid-template-columns: minmax(0, 1fr); } }
     @media print {
-      .fs-blocco h2 img { width: 34px; height: 34px; }
+      .fs { line-height: 1.33; }
+      .fs-blocco h2 img { width: 30px; height: 30px; }
+      .fs-blocco { padding: 0.3rem 0.5rem; }
+      .fs-blocco li { margin: 0.05rem 0; }
+      .fs-blocchi { gap: 0.4rem 0.7rem; }
+      .fs-bambini, .fs-112 { margin-top: 0.35rem; padding: 0.3rem 0.6rem; }
+      .fs .scheda-docente { margin-top: 0.35rem; padding: 0.4rem 0.6rem; }
       .fs-bambini, .fs-112, .scheda-docente { break-inside: avoid; }
+    }
+    /* Stampa (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così ogni foglio regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-footer { padding-top: 2mm; }
     }
   </style>
 </head>
@@ -57,7 +72,7 @@
     </header>
 
     <div class="fs">
-      <p class="scheda-intro">Cara famiglia, a scuola abbiamo parlato di come stare bene d'estate. Qui trovate i consigli da ricordare insieme. Leggeteli con i vostri figli: bastano cinque minuti.</p>
+      <p class="scheda-intro">Cara famiglia, a scuola abbiamo parlato di come stare bene d'estate. Leggeteli insieme ai vostri figli.</p>
 
       <div class="fs-blocchi">
         <section class="fs-blocco">
@@ -65,7 +80,6 @@
           <ul>
             <li>Dalle 11 alle 18 state al fresco o all'ombra e non fate sforzi.</li>
             <li>Abiti leggeri e chiari, cappello e occhiali da sole.</li>
-            <li>Pasti leggeri, con frutta e verdura.</li>
             <li>Mai persone o animali in un'auto parcheggiata al sole, neanche per poco.</li>
             <li>Chiedete come stanno i vicini anziani e chi vive da solo.</li>
             <li>Il Ministero della Salute pubblica ogni giorno il bollettino sulle ondate di calore, anche con l'app «Caldo e Salute».</li>
@@ -78,7 +92,6 @@
             <li>Bevete acqua spesso, anche senza sete.</li>
             <li>Meglio fresca, non ghiacciata, a piccoli sorsi.</li>
             <li>Evitate alcolici e bevande zuccherate.</li>
-            <li>In casa tenete una scorta d'acqua.</li>
             <li>I farmaci si conservano al fresco: il caldo li può alterare.</li>
           </ul>
         </section>
@@ -120,7 +133,7 @@
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per chi consegna il foglio.</strong> Si distribuisce a fine anno scolastico; se c'è tempo, si legge in classe il giorno prima. Il foglio di dicembre è sul retro o in una copia a parte. Per lavorare in classe sul caldo ci sono le schede «Ondate di calore» (primaria) e «Leggere il bollettino ondate di calore» (secondaria); per luglio il calendario «Estate sicura», un gesto al giorno. Questo foglio è il promemoria da portare a casa. Fonti: pagina del sito «Ondate di calore», che segue il Ministero della Salute; «Rischio incendi boschivi»; articolo «Balneazione nei laghi di Nemi e Albano». Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+        <p><strong>Per chi consegna il foglio.</strong> Si distribuisce a fine anno scolastico. In classe si lavora con le schede «Ondate di calore» e «Leggere il bollettino ondate di calore»; per luglio c'è il calendario «Estate sicura». Fonti: pagine del sito «Ondate di calore» (Ministero della Salute) e «Rischio incendi boschivi»; articolo «Balneazione nei laghi di Nemi e Albano». Il Gruppo comunale non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
       </div>
 
       <p class="fs-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010.</p>
@@ -185,7 +198,6 @@
           <ul>
             <li>La sera prima guardate l'allerta e gli avvisi del Comune: eventuali chiusure delle scuole le comunica il Comune sui suoi canali ufficiali.</li>
             <li>Con il ghiaccio del mattino uscite con più tempo.</li>
-            <li>Controllate lo zaino e i vestiti per il freddo.</li>
             <li>Se nelle vacanze è cambiato un numero di telefono, comunicatelo alla scuola.</li>
           </ul>
         </section>
@@ -205,7 +217,7 @@
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per chi consegna il foglio.</strong> Si distribuisce prima delle vacanze di Natale. Per lavorare in classe sul monossido c'è la scheda «Monossido di carbonio» (secondaria). Fonti: catalogo dei rischi del sito, «Il rischio da neve e gelo»; articoli «Gelate e ghiaccio sulle strade» e «Ondate di freddo: come prepararsi e proteggere gli anziani»; per il monossido, Istituto Superiore di Sanità (EpiCentro) e Vigili del Fuoco. Gomme invernali e catene le impone, strada per strada, l'ente che gestisce la strada, con i cartelli. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+        <p><strong>Per chi consegna il foglio.</strong> Si distribuisce prima delle vacanze di Natale; in classe c'è la scheda «Monossido di carbonio». Fonti: catalogo dei rischi del sito, «Il rischio da neve e gelo»; articoli «Gelate e ghiaccio sulle strade» e «Ondate di freddo: come prepararsi e proteggere gli anziani»; per il monossido Istituto Superiore di Sanità e Vigili del Fuoco. Gomme invernali e catene le impone l'ente che gestisce la strada, con i cartelli. Il Gruppo comunale non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
       </div>
 
       <p class="fs-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010.</p>

@@ -14,12 +14,12 @@
     .ef p { margin: 0.3rem 0; }
     .ef .scheda-h2 { margin: 0.6rem 0 0.25rem; }
     .ef .scheda-campi-riga { margin-bottom: 0.35rem; }
-    .ef .scheda-campo-label { min-width: 0; flex: 0 1 auto; max-width: 60%; }
+    .ef .scheda-campo-label { min-width: 0; flex: 0 1 auto; max-width: 75%; }
     .ef .scheda-campo-linea { min-height: 1.4rem; min-width: 5rem; }
     .ef-passi { list-style: none; padding: 0; margin: 0.25rem 0; counter-reset: passo; }
     .ef-passi li { counter-increment: passo; display: flex; gap: 0.55rem; align-items: flex-start; padding: 0.22rem 0; border-bottom: 1px solid #e9ecef; }
     .ef-passi li::before { content: counter(passo); flex-shrink: 0; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--scheda-blu); color: #fff; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; }
-    .ef-luoghi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; margin: 0.25rem 0; }
+    .ef-luoghi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.4rem; margin: 0.25rem 0; }
     .ef-luoghi div { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.3rem 0.5rem; }
     .ef-luoghi strong { color: var(--scheda-blu); display: block; }
     .ef-scossa { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; display: flex; gap: 0.6rem; align-items: flex-start; }
@@ -52,6 +52,9 @@
       .scheda-intro { margin: 0.2rem 0 0.3rem; }
       .scheda-docente { margin-top: 0.5rem; padding: 0.5rem 0.7rem; }
       .scheda-footer { padding-top: 2mm; }
+      .scheda-campi-riga { margin-bottom: 0.22rem !important; }
+      .scheda-campo-linea { min-height: 1.3rem !important; }
+      .scheda-h2 { margin: 0.45rem 0 0.2rem !important; }
     }
   </style>
 </head>
@@ -71,47 +74,46 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Prova o emergenza in palestra: la scheda per il docente di educazione fisica</h1>
+        <h1 class="scheda-titolo-principale">Prova o emergenza in palestra</h1>
         <div class="scheda-sottotitolo">Per adulti · Primaria, secondaria di primo e di secondo grado · Foglio 1 di 2</div>
       </div>
     </header>
 
     <div class="scheda-meta">
-      <span><strong>Per chi:</strong> docenti di educazione fisica e di scienze motorie</span>
-      <span><strong>Tempo:</strong> 15 minuti per compilarla, con il referente della sicurezza</span>
+      <span><strong>Per chi:</strong> docenti di educazione fisica e scienze motorie</span>
+      <span><strong>Tempo:</strong> 15 minuti, con il referente della sicurezza</span>
     </div>
 
     <div class="ef">
       <p class="scheda-intro">
-        In palestra la lezione è diversa da quella in aula: gli alunni si muovono, sono in tuta o scalzi, qualcuno è negli spogliatoi, e il registro spesso è rimasto in classe. Il piano di emergenza della scuola vale anche qui. Questa scheda ti aiuta a scrivere ciò che serve e a tenerlo nel posto dove fai lezione.
+        In palestra gli alunni si muovono, sono in tuta o scalzi, qualcuno è negli spogliatoi e il registro spesso è rimasto in classe. Il piano di emergenza vale anche qui: scrivi ciò che serve e tieni la scheda in palestra.
       </p>
 
       <h2 class="scheda-h2">1. Le informazioni della mia palestra</h2>
       <div class="campi2">
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Uscita della palestra da usare per prima:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Prima uscita:</span><span class="scheda-campo-linea"></span></div>
         <div class="scheda-campi-riga"><span class="scheda-campo-label">Uscita alternativa:</span><span class="scheda-campo-linea"></span></div>
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Uscita dagli spogliatoi:</span><span class="scheda-campo-linea"></span></div>
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Uscita dal campo esterno:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Dagli spogliatoi:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Dal campo esterno:</span><span class="scheda-campo-linea"></span></div>
         <div class="scheda-campi-riga"><span class="scheda-campo-label">Punto di raccolta:</span><span class="scheda-campo-linea"></span></div>
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Dove tengo l'elenco della classe:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Elenco della classe:</span><span class="scheda-campo-linea"></span></div>
       </div>
-      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi controlla spogliatoi e bagni della palestra, se il piano lo assegna:</span><span class="scheda-campo-linea"></span></div>
-      <div class="scheda-campi-riga"><span class="scheda-campo-label">Dove ripararsi in palestra durante una scossa, secondo il piano:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi controlla spogliatoi e bagni, se il piano lo assegna:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Dove ripararsi in palestra durante una scossa:</span><span class="scheda-campo-linea"></span></div>
 
       <h2 class="scheda-h2">2. Quando suona il segnale di evacuazione</h2>
       <ol class="ef-passi">
-        <li><span><strong>Fermi tutti.</strong> Si interrompe il gioco, si lasciano palloni e attrezzi dove sono e ci si raduna davanti a te.</span></li>
-        <li><span><strong>Si esce come si è.</strong> Nessuno torna negli spogliatoi a prendere vestiti, scarpe o telefono. Se le scarpe sono lì accanto, si infilano senza perdere tempo; altrimenti si cammina guardando dove si mettono i piedi.</span></li>
-        <li><span><strong>Prendi l'elenco della classe</strong> e accompagna la fila all'uscita indicata. Se l'uscita è bloccata, usa quella alternativa del piano.</span></li>
+        <li><span><strong>Fermi tutti.</strong> Si lasciano palloni e attrezzi e ci si raduna davanti a te.</span></li>
+        <li><span><strong>Si esce come si è.</strong> Nessuno torna negli spogliatoi per vestiti, scarpe o telefono. Le scarpe si infilano solo se sono lì accanto; scalzi, si guarda dove si mettono i piedi.</span></li>
+        <li><span><strong>Prendi l'elenco della classe</strong> e accompagna la fila all'uscita; se è bloccata, usa quella alternativa.</span></li>
         <li><span><strong>Chi è negli spogliatoi o in bagno</strong> esce con il primo adulto che incontra, o dall'uscita più vicina indicata dai cartelli, e raggiunge il gruppo al punto di raccolta. Non tornare dentro a cercarlo: lo segnali.</span></li>
         <li><span><strong>Al punto di raccolta conta</strong> chi c'è, con l'elenco. Se in palestra c'erano due classi, ogni docente conta la sua.</span></li>
-        <li><span><strong>Riferisci a chi coordina</strong> l'emergenza: «ci siamo tutti» oppure il nome di chi manca e dove l'hai visto l'ultima volta.</span></li>
+        <li><span><strong>Riferisci a chi coordina</strong>: «ci siamo tutti», oppure chi manca e dove l'hai visto l'ultima volta.</span></li>
       </ol>
 
       <div class="ef-luoghi">
-        <div><strong>Spogliatoi</strong>Se il segnale arriva mentre si cambiano, si esce subito, anche non vestiti del tutto. Prima la sicurezza.</div>
+        <div><strong>Spogliatoi</strong>Se il segnale arriva mentre si cambiano, si esce subito, anche non vestiti del tutto.</div>
         <div><strong>Campo esterno</strong>Si resta lontani dagli edifici e si va al punto di raccolta senza rientrare in palestra.</div>
-        <div><strong>Freddo</strong>Se fuori fa freddo, il piano può prevedere coperte o un altro locale: chiedilo al referente.</div>
       </div>
 
       <h2 class="scheda-h2">3. Se arriva una scossa di terremoto</h2>
@@ -119,15 +121,14 @@
         <img src="/pittogrammi/arasaac/terremoto.png" alt="Pittogramma: una casa che trema per il terremoto">
         <div>
           <ul>
-            <li><strong>Al chiuso:</strong> non si corre verso l'uscita durante la scossa. Ci si abbassa e si proteggono testa e collo con le braccia.</li>
-            <li>Si sta lontano da ciò che può cadere o rompersi: <strong>vetrate, canestri, spalliere, attrezzi appesi, scaffali</strong> con palloni e materiali.</li>
+            <li><strong>Al chiuso:</strong> durante la scossa non si corre verso l'uscita. Ci si abbassa, si proteggono testa e collo con le braccia e si sta lontano da ciò che può cadere o rompersi: <strong>vetrate, canestri, spalliere, attrezzi appesi, scaffali</strong>.</li>
             <li><strong>All'aperto:</strong> lontano da edifici, alberi, lampioni e linee elettriche.</li>
-            <li>Quando la scossa è finita, al segnale si esce in fila come per l'evacuazione, senza ascensore.</li>
+            <li>Finita la scossa, al segnale si esce in fila come per l'evacuazione.</li>
           </ul>
         </div>
       </div>
 
-      <p class="ef-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010.</p>
+      <p class="ef-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -150,27 +151,27 @@
 
     <div class="ef">
       <div class="ef-avvertenza">
-        <strong>Prima di tutto.</strong> Questa scheda non dà indicazioni cliniche e non sostituisce il corso di primo soccorso. Gli addetti al primo soccorso li designa il dirigente scolastico e devono essere formati (D.Lgs. 81/2008, artt. 18 e 45; D.M. 388/2003). Tu fai ciò che è scritto qui e lasci il resto a chi è formato e ai soccorsi.
+        <strong>Prima di tutto.</strong> Questa scheda non dà indicazioni cliniche e non sostituisce il corso di primo soccorso. Gli addetti al primo soccorso li designa il dirigente scolastico e devono essere formati (D.Lgs. 81/2008, artt. 18 e 45; D.M. 388/2003).
       </div>
 
       <h2 class="scheda-h2">4. Chi chiamare dalla palestra</h2>
       <div class="ef-icone"><img src="/pittogrammi/iso7010/cassetta-primo-soccorso.svg" alt="Segnale di sicurezza verde: croce bianca, cassetta di primo soccorso"><img src="/pittogrammi/iso7010/defibrillatore-dae.svg" alt="Segnale di sicurezza verde: cuore con un fulmine e una croce, defibrillatore"><span>Scrivi dove sono, così li trovi subito.</span></div>
       <div class="campi2">
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Addetto al primo soccorso e come lo chiamo:</span><span class="scheda-campo-linea"></span></div>
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Collaboratore scolastico della palestra:</span><span class="scheda-campo-linea"></span></div>
-        <div class="scheda-campi-riga"><span class="scheda-campo-label">Cassetta di primo soccorso:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Addetto primo soccorso:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Collaboratore della palestra:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Cassetta primo soccorso:</span><span class="scheda-campo-linea"></span></div>
         <div class="scheda-campi-riga"><span class="scheda-campo-label">Defibrillatore, se c'è:</span><span class="scheda-campo-linea"></span></div>
       </div>
-      <div class="scheda-campi-riga"><span class="scheda-campo-label">Indirizzo da dire al 112 e ingresso più vicino alla palestra:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Indirizzo per il 112 e ingresso più vicino:</span><span class="scheda-campo-linea"></span></div>
 
       <h2 class="scheda-h2">5. Che cosa fai</h2>
       <ol class="ef-passi">
         <li><span><strong>Ferma la lezione.</strong> Gli altri alunni si siedono in un punto della palestra, lontano dal compagno, e restano lì.</span></li>
         <li><span><strong>Non spostare chi ha preso un colpo forte</strong>, alla testa, alla schiena o al collo, o chi è caduto dall'alto, per esempio dalla spalliera. Lo si muove solo se resta in un pericolo immediato.</span></li>
-        <li><span><strong>Fai avvisare l'addetto al primo soccorso</strong> e il collaboratore scolastico. Manda un adulto o, se non c'è, due alunni insieme. Tu resti con il ferito e con la classe.</span></li>
-        <li><span><strong>Se è grave, o se non sai giudicare, si chiama il 112.</strong> Chi chiama dice indirizzo e ingresso, che cosa è successo, l'età dell'alunno, se risponde. Poi segue le indicazioni dell'operatore e chiude solo quando lui lo dice.</span></li>
+        <li><span><strong>Fai avvisare l'addetto al primo soccorso</strong> e il collaboratore: manda un adulto o, se non c'è, due alunni insieme. Tu resti con il ferito e con la classe.</span></li>
+        <li><span><strong>Se è grave, o se non sai giudicare, si chiama il 112.</strong> Chi chiama dice indirizzo e ingresso, che cosa è successo, l'età dell'alunno, se risponde; segue le indicazioni dell'operatore e chiude solo quando lui lo dice.</span></li>
         <li><span><strong>Qualcuno va ad aprire</strong> il cancello o la porta più vicina e accompagna i soccorritori in palestra.</span></li>
-        <li><span><strong>La famiglia la avvisa la scuola</strong>, come prevedono le sue procedure. Poi scrivi che cosa è successo, con l'ora, sul modulo che la scuola usa per gli infortuni.</span></li>
+        <li><span><strong>La famiglia la avvisa la scuola</strong>, secondo le sue procedure. Poi scrivi che cosa è successo sul modulo della scuola per gli infortuni.</span></li>
       </ol>
 
       <div class="ef-classe">
@@ -185,9 +186,10 @@
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> Compila la scheda con il referente della sicurezza o l'RSPP e tienine una copia in palestra. Se il piano della tua scuola dice altro, vale il piano. Per sapere che cosa fanno i cittadini nei primi minuti di un infortunio, a partire dal trauma alla testa, leggi le pagine del sito sul <a href="/formazione/primo-soccorso/">primo soccorso</a> (Linee guida IRC 2025) e sui <a href="/formazione/primo-soccorso/emorragie-ustioni-traumi/">traumi</a>. Per gli alunni con bisogni specifici c'è la <a href="/formazione/schede-stampabili/evacuazione-personalizzata-pei/">scheda di evacuazione personalizzata</a>; per il personale ATA la <a href="/formazione/schede-stampabili/scheda-personale-ata/">scheda per collaboratori scolastici</a>.</p>
+        <p><strong>Per il docente.</strong> Compila la scheda con il referente della sicurezza o l'RSPP; se il piano della scuola dice altro, vale il piano. Sul sito trovi le pagine sul <a href="/formazione/primo-soccorso/">primo soccorso</a> (Linee guida IRC 2025) e sui <a href="/formazione/primo-soccorso/emorragie-ustioni-traumi/">traumi</a>, la <a href="/formazione/schede-stampabili/evacuazione-personalizzata-pei/">scheda di evacuazione personalizzata</a> e quella <a href="/formazione/schede-stampabili/scheda-personale-ata/">per i collaboratori scolastici</a>.</p>
         <p><strong>Fonti:</strong> Dipartimento della Protezione Civile, «In caso di terremoto» e «Sei preparato?» (rischio sismico); D.Lgs. 81/2008, art. 45. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
       </div>
+      <p class="ef-attribuzione">Segnali di sicurezza: ISO 7010.</p>
     </div>
 
     <footer class="scheda-footer">

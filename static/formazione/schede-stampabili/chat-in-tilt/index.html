@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: La chat in tilt — che cosa inoltro in un'emergenza</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/chat-in-tilt/">
+  <meta name="description" content="Scheda fotocopiabile per la secondaria di primo e di secondo grado. La chat di classe o dei genitori durante un'emergenza: vocali a catena, notizie non verificate, foto di persone ferite, falsi allarmi. Con una chat inventata da analizzare, il calcolo di quante persone raggiunge un messaggio inoltrato e soluzioni capovolte.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .ct { font-size: 0.95rem; line-height: 1.45; }
+    .ct p { margin: 0.35rem 0; }
+    .ct .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+    .ct-problemi { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .ct-problemi li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; }
+    .ct-problemi strong { color: var(--scheda-blu); display: block; }
+    .ct-regola { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
+    .ct-regola ol { margin: 0.2rem 0; padding-left: 1.2rem; }
+    .ct-regola li { margin: 0.1rem 0; }
+    .ct-invece { margin: 0.3rem 0; padding-left: 1.2rem; }
+    .ct-invece li { margin: 0.12rem 0; }
+    .ct-calcolo { border: 1.5px dashed var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.6rem; margin-top: 0.4rem; }
+    .ct-riga { display: inline-block; min-width: 4rem; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.1rem; vertical-align: bottom; }
+    .ct-avviso-finta { font-size: 0.85rem; font-style: italic; color: var(--scheda-grigio); margin: 0.2rem 0 0.35rem; }
+    .ct-chat { list-style: none; padding: 0; margin: 0.2rem 0; }
+    .ct-chat li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.6rem; align-items: center; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; padding: 0.3rem 0.55rem; margin-bottom: 0.3rem; }
+    .ct-msg { margin: 0; }
+    .ct-chi { font-weight: 700; color: var(--scheda-blu); }
+    .ct-ora { font-size: 0.8rem; color: var(--scheda-grigio); margin-left: 0.3rem; }
+    .ct-scelte { display: flex; flex-direction: column; gap: 0.1rem; font-size: 0.82rem; white-space: nowrap; }
+    .ct-casella { display: inline-block; width: 0.95rem; height: 0.95rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.25rem; }
+    .ct-risposta { border-bottom: 1.5px solid var(--scheda-bordo); height: 1.4rem; margin-top: 0.15rem; }
+    .ct .scheda-docente p { margin: 0.25rem 0; }
+    .ct .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+    .ct-paura { font-style: italic; margin-top: 0.35rem; }
+    @media (max-width: 600px) {
+      .ct-problemi { grid-template-columns: minmax(0, 1fr); }
+      .ct-chat li { grid-template-columns: minmax(0, 1fr); }
+      .ct-scelte { flex-direction: row; flex-wrap: wrap; gap: 0.6rem; white-space: normal; }
+    }
+    @media print {
+      .ct-chat li, .ct-regola, .ct-calcolo, .scheda-docente { break-inside: avoid; }
+    }
+    /* controllo fogli di stampa: scala e spazi per stare in due fogli A4 con tutte le serie di caratteri */
+    @media print {
+      html { font-size: 90%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .ct .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">La chat in tilt</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La chat in tilt: che cosa inoltro in un'emergenza</h1>
+        <div class="scheda-sottotitolo">Secondaria di primo e di secondo grado · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-19 anni</span>
+      <span><strong>Durata:</strong> 50 minuti</span>
+      <span><strong>Discipline:</strong> Educazione civica, Italiano, Matematica</span>
+    </div>
+
+    <div class="ct">
+      <p class="scheda-intro">
+        Durante un'emergenza le chat di classe, della squadra o dei genitori si riempiono in pochi minuti. Ognuno vuole aiutare. Ma ogni volta che inoltri un messaggio, <strong>diventi tu la sua fonte</strong> per chi lo riceve: per i tuoi amici quel messaggio arriva da te.
+      </p>
+
+      <h2 class="scheda-h2">Quattro cose che mandano in tilt una chat</h2>
+      <ul class="ct-problemi">
+        <li><strong>Vocali a catena</strong>«Mio cugino ha sentito che…». Un audio senza nome, senza data e senza luogo passa da un gruppo all'altro e nessuno sa più da dove viene.</li>
+        <li><strong>Notizie non verificate</strong>Una mappa, uno screenshot, un «chiudono tutto». Se è vecchia o di un altro posto, sposta le persone nel posto sbagliato.</li>
+        <li><strong>Foto di persone ferite o in difficoltà</strong>Non aiutano i soccorsi e fanno male alla persona e alla sua famiglia, che potrebbe vederla così prima di essere avvisata.</li>
+        <li><strong>Falsi allarmi</strong>«Evacuate la scuola!», «Arriva una scossa più forte!». Mettono paura, fanno correre e intasano i telefoni che servono a chi ha bisogno.</li>
+      </ul>
+
+      <h2 class="scheda-h2">Prima di inoltrare: fonte, data, conferma</h2>
+      <div class="ct-regola">
+        <ol>
+          <li><strong>Fonte.</strong> Chi lo dice? Un ente con nome e cognome (Comune, scuola, Protezione Civile, Prefettura) o «uno che conosce uno»?</li>
+          <li><strong>Data.</strong> È di oggi? Parla davvero di qui?</li>
+          <li><strong>Conferma.</strong> Lo trovi anche sul sito o sul canale ufficiale di quell'ente?</li>
+        </ol>
+        <p>Se manca anche una sola risposta, <strong>non inoltri</strong>. E poi una domanda in più: <strong>se lo mando, aiuto qualcuno a fare qualcosa di utile?</strong></p>
+      </div>
+
+      <h2 class="scheda-h2">Che cosa fai invece</h2>
+      <ul class="ct-invece">
+        <li>Inoltri <strong>il link della fonte ufficiale</strong>, non lo screenshot o il riassunto di qualcun altro.</li>
+        <li>Rispondi con calma: «Non lo inoltriamo finché non lo dice il Comune o la scuola». Non serve litigare.</li>
+        <li>Se un messaggio spaventa i più piccoli o mostra una persona ferita, <strong>avvisa un adulto</strong> o chi gestisce il gruppo.</li>
+        <li>Se vedi un pericolo vero, <strong>la chat non chiama i soccorsi</strong>: chiama il <strong>112</strong> o dillo subito a un adulto.</li>
+        <li>Per dire che stai bene basta un messaggio breve a chi ti aspetta. Non serve inoltrarlo a tutti.</li>
+      </ul>
+      <p class="ct-paura">Se un messaggio ti mette paura, è normale. Parlane con un adulto di cui ti fidi: insieme potete controllare se è vero.</p>
+
+      <div class="ct-calcolo">
+        <p><strong>Fai il conto.</strong> Un vocale arriva in un gruppo di 30 persone. Ognuna lo inoltra in un altro gruppo di 30 persone diverse. Quante persone lo hanno ricevuto dopo il secondo passaggio? <span class="ct-riga" aria-label="Spazio per il risultato"></span> E dopo il terzo? <span class="ct-riga" aria-label="Spazio per il risultato"></span></p>
+        <p style="font-size:0.82rem;color:var(--scheda-grigio)">Numeri inventati per l'esercizio: nella realtà i gruppi si sovrappongono, ma il messaggio corre comunque più veloce di qualunque smentita.</p>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La chat in tilt" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Prova tu: la chat della 2ªB</div>
+        <div class="scheda-sottotitolo">La chat in tilt · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="ct">
+      <p>È sera. Un temporale forte ha allagato alcune strade. Flavio apre la chat della classe e trova questi messaggi. Per ognuno segna che cosa faresti. Puoi anche dirlo a voce o indicare la casella.</p>
+      <p class="ct-avviso-finta">Chat inventata per l'esercizio: i messaggi, gli orari e la strada non sono reali.</p>
+
+      <ol class="ct-chat">
+        <li>
+          <p class="ct-msg"><span class="ct-chi">1. Marco</span><span class="ct-ora">20.14</span><br>Messaggio vocale di 2 minuti: «Mio cugino dice che domani chiudono tutte le scuole dei Castelli. Giratelo a tutti!»</p>
+          <span class="ct-scelte"><span><span class="ct-casella"></span>Inoltro</span><span><span class="ct-casella"></span>Non inoltro</span><span><span class="ct-casella"></span>Avviso un adulto o chiamo il 112</span></span>
+        </li>
+        <li>
+          <p class="ct-msg"><span class="ct-chi">2. Silvia</span><span class="ct-ora">20.16</span><br>Foto di un signore steso a terra sotto la pioggia, con il volto ben visibile: «Guardate cosa è successo vicino al bar!»</p>
+          <span class="ct-scelte"><span><span class="ct-casella"></span>Inoltro</span><span><span class="ct-casella"></span>Non inoltro</span><span><span class="ct-casella"></span>Avviso un adulto o chiamo il 112</span></span>
+        </li>
+        <li>
+          <p class="ct-msg"><span class="ct-chi">3. Elio</span><span class="ct-ora">20.21</span><br>Link alla pagina del Comune: «Avviso delle 20.00 di oggi: via dei Tigli chiusa per allagamento. Evitate la zona.»</p>
+          <span class="ct-scelte"><span><span class="ct-casella"></span>Inoltro</span><span><span class="ct-casella"></span>Non inoltro</span><span><span class="ct-casella"></span>Avviso un adulto o chiamo il 112</span></span>
+        </li>
+        <li>
+          <p class="ct-msg"><span class="ct-chi">4. Christian</span><span class="ct-ora">20.25</span><br>Screenshot di una mappa colorata, senza logo e senza data: «Queste zone stanotte vanno evacuate!!!»</p>
+          <span class="ct-scelte"><span><span class="ct-casella"></span>Inoltro</span><span><span class="ct-casella"></span>Non inoltro</span><span><span class="ct-casella"></span>Avviso un adulto o chiamo il 112</span></span>
+        </li>
+        <li>
+          <p class="ct-msg"><span class="ct-chi">5. Maria</span><span class="ct-ora">20.30</span><br>«Dalla finestra vedo l'acqua che entra nel garage dei vicini e dentro c'è una persona che chiede aiuto.»</p>
+          <span class="ct-scelte"><span><span class="ct-casella"></span>Inoltro</span><span><span class="ct-casella"></span>Non inoltro</span><span><span class="ct-casella"></span>Avviso un adulto o chiamo il 112</span></span>
+        </li>
+        <li>
+          <p class="ct-msg"><span class="ct-chi">6. Pasquale</span><span class="ct-ora">20.33</span><br>«Inoltra questo messaggio a 10 contatti entro un'ora, se no ti porta sfortuna.»</p>
+          <span class="ct-scelte"><span><span class="ct-casella"></span>Inoltro</span><span><span class="ct-casella"></span>Non inoltro</span><span><span class="ct-casella"></span>Avviso un adulto o chiamo il 112</span></span>
+        </li>
+      </ol>
+
+      <p><strong>7.</strong> Scrivi la risposta che Flavio può mandare nel gruppo dopo il messaggio 4, per fermare la catena senza offendere Christian (al massimo due righe).</p>
+      <div class="ct-risposta" aria-label="Spazio per scrivere la risposta"></div>
+      <div class="ct-risposta" aria-label="Spazio per scrivere la risposta"></div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> <strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): nucleo «Cittadinanza digitale». Questa scheda lavora sulla <strong>chat di gruppo</strong> e sulla responsabilità di chi inoltra. Per riconoscere le notizie false e allenare i tre controlli su audio, mappe e post c'è la scheda <a href="/formazione/schede-stampabili/fake-news-emergenza-secondaria/">Notizie false in emergenza</a>: si possono usare in due lezioni di fila.</p>
+        <p><strong>Tempi:</strong> 15 minuti per il foglio 1 e il conto, 20 per la chat a coppie, 15 di confronto. Nella discussione non mostrate né descrivete foto vere di persone ferite e non fate leggere messaggi di chat reali della classe. Chiedete invece quali canali ufficiali usano la vostra scuola e il Comune e annotateli alla lavagna.</p>
+        <p>Fonti: Dipartimento della Protezione Civile e pagina <a href="/rischi-prevenzione/dopo-emergenza/">Dopo l'emergenza</a> di questo sito (notizie false, linee sature, messaggi brevi). Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>Conto:</strong> dopo il secondo passaggio 30 × 30 = 900 persone; dopo il terzo 900 × 30 = 27 000 (oltre ai 30 del primo gruppo).
+        <strong>1. Non inoltro.</strong> Fonte di seconda mano, nessuna conferma: la chiusura delle scuole la comunicano il Comune e la scuola.
+        <strong>2. Non inoltro</strong> e avviso un adulto: è una persona in difficoltà. Se ha bisogno di soccorso si chiama il 112, la foto non aiuta.
+        <strong>3. Inoltro</strong> il link: fonte ufficiale, data di oggi, indicazione utile.
+        <strong>4. Non inoltro.</strong> Niente fonte e niente data: un'evacuazione la decidono le autorità e la comunicano sui canali ufficiali.
+        <strong>5. Avviso un adulto o chiamo il 112:</strong> c'è una persona in pericolo adesso, scriverlo in chat non basta.
+        <strong>6. Non inoltro.</strong> È una catena: non dà informazioni e intasa la chat.
+        <strong>7.</strong> Esempio: «Christian, non c'è la fonte né la data: aspettiamo che lo dica il Comune. Intanto ecco il link del suo avviso.»
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La chat in tilt" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

@@ -15,7 +15,7 @@
     .dl .scheda-h2 { margin: 0.7rem 0 0.3rem; }
     .dl-passi { margin: 0.3rem 0; padding-left: 1.3rem; }
     .dl-passi li { margin: 0.2rem 0; }
-    .dl-indice { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.15rem 1rem; font-size: 0.92rem; }
+    .dl-indice { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.1rem 0.8rem; font-size: 0.9rem; }
     .dl-indice span { color: var(--scheda-blu); font-weight: 700; }
     .dl-carta { border: 2.5px solid var(--scheda-blu); border-radius: 10px; padding: 0.9rem 1.1rem 0.7rem; margin: 0 0 1rem; display: flex; flex-direction: column; }
     .dl-tema { margin: 0; font-size: 1rem; font-weight: 700; color: var(--scheda-blu); text-transform: none; }
@@ -34,7 +34,7 @@
     }
     @media print {
       .dl-carta { margin: 0 0 4mm; padding: 3mm 4.5mm 2.5mm; break-inside: avoid; page-break-inside: avoid; }
-      .dl-situazione { font-size: 1.45rem; margin: 1.5mm 0 1mm; }
+      .dl-situazione { font-size: 1.38rem; margin: 1.5mm 0 1mm; }
       .dl-ese { font-size: 1.05rem; }
       .dl .soluzione-capovolta { margin-top: 2.5mm; padding: 2mm 3.5mm; font-size: 0.86rem; line-height: 1.35; }
       .dl .soluzione-capovolta .titolo { font-size: 0.86rem; margin-bottom: 1mm; }
@@ -42,8 +42,11 @@
       .scheda-page { padding: 1cm 1.4cm 0.6cm; }
       .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
       .scheda-footer { padding-top: 2mm; }
-      .dl .scheda-docente { break-inside: avoid; }
     }
+    /* Controllo fogli di stampa: scala del testo all'88% in stampa, così ogni
+       foglio regge anche i caratteri più larghi senza mandare la fascia delle
+       affiliazioni su un foglio in più. */
+    @media print { html { font-size: 88%; } }
   </style>
 </head>
 <body>
@@ -75,7 +78,7 @@
 
     <div class="dl">
       <p class="scheda-intro">
-        Fra un'ora e l'altra restano spesso cinque minuti. Bastano per una situazione da risolvere insieme: una carta, una domanda, una risposta che viene dalle indicazioni del Dipartimento della Protezione Civile. Le carte sono quindici, una per riquadro, con caratteri grandi da leggere anche dal fondo dell'aula.
+        Fra un'ora e l'altra restano spesso cinque minuti. Bastano per una situazione da risolvere insieme: una carta, una domanda, una risposta che viene dalle indicazioni del Dipartimento della Protezione Civile. Ogni carta ha caratteri grandi, da leggere anche dal fondo dell'aula.
       </p>
 
       <h2 class="scheda-h2">Come si usa una carta</h2>
@@ -85,7 +88,6 @@
         <li><strong>Un minuto per la risposta.</strong> Gira il foglio e leggi la risposta capovolta. Se le coppie hanno detto cose diverse, chiedi perché.</li>
         <li><strong>Un minuto per «E se…?».</strong> La seconda domanda cambia un dettaglio: serve a capire se la regola è stata capita o solo ricordata.</li>
       </ol>
-      <p>Sulla LIM scorri la pagina finché si vede la carta intera, oppure ingrandisci solo la parte alta con la domanda.</p>
 
       <h2 class="scheda-h2">Le quindici carte</h2>
       <ul class="dl-indice">
@@ -108,9 +110,9 @@
 
       <div class="scheda-docente">
         <p><strong>Per il docente.</strong> Ogni risposta riprende le pagine «Rischi e prevenzione» del sito, allineate alle indicazioni del Dipartimento della Protezione Civile («Io non rischio» e «Sei preparato?»): sotto ogni risposta c'è l'indirizzo della pagina da cui viene. A scuola, in caso di terremoto, incendio o evacuazione, vale il piano di emergenza dell'istituto: se il vostro piano indica un comportamento diverso, segui il piano e dillo alla classe.</p>
-        <p><strong>Perché cinque minuti.</strong> Una carta per volta, ripresa nei giorni seguenti, fa ricordare meglio di una lezione unica. Non serve un voto: osserva se l'alunno sceglie l'azione giusta, se sa dire il perché e se la applica al caso «E se…?».</p>
-        <p><strong>Se qualcuno ha vissuto un'emergenza.</strong> Una carta può richiamare un ricordo. Se un alunno si agita o si rattrista, è normale: si passa ad altro e se ne parla con lui da soli, con calma. La paura non è una risposta sbagliata; anche con la paura si possono fare i gesti giusti.</p>
-        <p><strong>Materiali vicini.</strong> Il gioco <a href="/giochi/primaria/cosa-faccio-se/">«Cosa faccio se…»</a> racconta un'emergenza a scelte successive, da giocare in un'ora; queste carte sono situazioni slegate, da usare cinque minuti alla volta. Per restare dentro la scuola quando il pericolo è fuori c'è la scheda <a href="/formazione/schede-stampabili/restare-al-chiuso/">«Restare al riparo dentro la scuola»</a>.</p>
+        <p><strong>Che cosa osservare.</strong> Non serve un voto: guarda se l'alunno sceglie l'azione giusta, se sa dire il perché e se la applica al caso «E se…?». Riprendere una carta nei giorni seguenti aiuta a ricordarla.</p>
+        <p><strong>Se qualcuno ha vissuto un'emergenza.</strong> Una carta può richiamare un ricordo. Se un alunno si agita o si rattrista, si passa ad altro e se ne parla con lui da soli. La paura non è una risposta sbagliata; anche con la paura si possono fare i gesti giusti.</p>
+        <p><strong>Materiali vicini.</strong> Il gioco <a href="/giochi/primaria/cosa-faccio-se/">«Cosa faccio se…»</a> racconta un'emergenza a scelte successive; queste carte sono situazioni slegate, cinque minuti alla volta. Per restare dentro la scuola quando il pericolo è fuori c'è la scheda <a href="/formazione/schede-stampabili/restare-al-chiuso/">«Restare al riparo dentro la scuola»</a>.</p>
         <p>In emergenza si chiama il <strong>112</strong>, l'unico numero da ricordare. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini.</p>
       </div>
     </div>

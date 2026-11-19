@@ -26,7 +26,7 @@
     .pc-tabella th { background: #f0f4f8; color: var(--scheda-blu); }
     .pc-tabella td { height: 2.6rem; }
     .pc-tabella .pc-esempio td { height: auto; color: #495057; font-style: italic; }
-    .pc-mappa { border: 2px dashed var(--scheda-bordo); border-radius: 8px; height: 7.5cm; margin: 0.4rem 0; position: relative; }
+    .pc-mappa { border: 2px dashed var(--scheda-bordo); border-radius: 8px; height: 5.5cm; margin: 0.4rem 0; position: relative; }
     .pc-mappa span { position: absolute; top: 0.4rem; left: 0.6rem; font-size: 0.8rem; color: #6c757d; }
     .pc-legenda { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.25rem 0.8rem; font-size: 0.85rem; margin: 0.2rem 0; }
     .pc-passi { counter-reset: passo; list-style: none; padding: 0; margin: 0.3rem 0; }
@@ -46,8 +46,21 @@
       .pc-tabella { font-size: 0.8rem; }
     }
     @media print {
-      .pc-regole img { width: 34px; height: 34px; }
+      .pc { line-height: 1.36; }
+      .pc-regole img { width: 32px; height: 32px; }
+      .pc-passi li { padding: 0.2rem 0 0.2rem 2.2rem; }
+      .pc-nota { margin: 0.2rem 0; padding: 0.25rem 0.55rem; }
+      .pc .scheda-docente { margin-top: 0.4rem; padding: 0.45rem 0.65rem; }
       .pc-privacy, .pc-112, .pc-nota, .scheda-docente, .soluzione-capovolta, .pc-tabella { break-inside: avoid; }
+    }
+    /* Stampa (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così ogni foglio regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-footer { padding-top: 2mm; }
     }
   </style>
 </head>
@@ -161,6 +174,11 @@
       </div>
       <div class="pc-mappa" aria-label="Spazio per disegnare la mappa del percorso"><span>Partenza (punto pubblico) → Scuola</span></div>
       <p>Hai difficoltà a scrivere o a disegnare? Puoi raccontare a voce a un compagno che prende nota, oppure indicare i punti su una carta già stampata.</p>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente. Che cosa valutare</strong>, se volete: osservazioni descritte con precisione, rispetto delle regole di sicurezza e di riservatezza, chiarezza della relazione, contributo al lavoro del gruppo. Chi non può fare il tragitto a piedi lavora sulla cartografia del sito o su un tratto vicino alla scuola, con gli adattamenti del suo piano.</p>
+        <p><strong>Materiali collegati:</strong> «Dalla carta al territorio» (uscita sui luoghi del Piano di emergenza) e «La mappa dei rischi del mio territorio» (rischi del quartiere sulle fonti ufficiali). Questa scheda guarda la sicurezza di ogni giorno lungo un solo tragitto e chiude con la segnalazione agli enti. Il Gruppo comunale non si attiva su chiamata dei cittadini; per i progetti scolastici c'è la segreteria del Gruppo (pagina Contatti). In emergenza si chiama il 112.</p>
+      </div>
     </div>
 
     <footer class="scheda-footer">
@@ -202,9 +220,8 @@
       <div class="pc-nota"><p><strong>D.</strong> «Incrocio vicino alla fermata dell'autobus: il semaforo pedonale non si accende quando si preme il pulsante.»</p><div class="pc-riga" aria-label="Spazio per la risposta"></div></div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> <strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): nuclei «Costituzione» (rispetto delle regole comuni, come il codice della strada) e «Sviluppo economico e sostenibilità» (cultura della protezione civile, rispetto dei beni pubblici). Tempi indicativi: un'ora per il foglio 1 e la preparazione, l'osservazione sul tragitto di ciascuno nei giorni seguenti (o un'uscita della classe), un'ora per mappa, relazione e confronto. L'uscita di classe segue le regole della scuola: autorizzazioni, accompagnatori, assicurazione.</p>
-        <p><strong>Che cosa valutare</strong>, se volete: osservazioni descritte con precisione, rispetto delle regole di sicurezza e di riservatezza, chiarezza della relazione, contributo al lavoro del gruppo. Chi non può fare il tragitto a piedi lavora sulla cartografia del sito o su un tratto vicino alla scuola, con gli adattamenti del suo piano.</p>
-        <p><strong>Materiali collegati:</strong> «Dalla carta al territorio» (uscita sui luoghi del Piano di emergenza, per riconoscere aree di attesa e cartelli), «La mappa dei rischi del mio territorio» (rischi del quartiere sulle fonti ufficiali) e, per la secondaria di secondo grado, «Mappa rischi e mitigazione». Questa scheda guarda invece la sicurezza di ogni giorno lungo un solo tragitto e chiude con la segnalazione agli enti. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini; per progetti scolastici si scrive alla segreteria del Gruppo (pagina Contatti). In emergenza si chiama il 112.</p>
+        <p><strong>Per il docente.</strong> <strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): nuclei «Costituzione» (rispetto delle regole comuni, come il codice della strada) e «Sviluppo economico e sostenibilità» (cultura della protezione civile, rispetto dei beni pubblici). Tempi indicativi: un'ora di preparazione, l'osservazione nei giorni seguenti, un'ora per mappa, relazione e confronto. L'uscita di classe segue le regole della scuola: autorizzazioni, accompagnatori, assicurazione.</p>
+
       </div>
 
       <div class="soluzione-capovolta">

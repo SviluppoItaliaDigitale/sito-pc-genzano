@@ -43,6 +43,21 @@
       .co-passi li { padding: 0.15rem 0; }
       .co-es, .co-chi, .co-fatti, .scheda-docente, .co-fig { break-inside: avoid; }
     }
+    /* Stampa su tre fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-footer { padding-top: 2mm; }
+      .co .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .co-es { margin: 0.3rem 0; padding: 0.3rem 0.55rem; }
+      .co .soluzione-capovolta { margin-top: 1.5mm; }
+      .co .scheda-docente { margin-top: 0.4rem; padding: 0.45rem 0.65rem; font-size: 0.86rem; }
+      .co .soluzione-capovolta { font-size: 0.8rem; padding: 2mm 3.5mm; }
+    }
   </style>
 </head>
 <body>
@@ -62,7 +77,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h1 class="scheda-titolo-principale">Il gas che resta in basso: l'anidride carbonica dei Colli Albani</h1>
-        <div class="scheda-sottotitolo">Secondaria di primo e di secondo grado · Scienze · Foglio 1 di 2</div>
+        <div class="scheda-sottotitolo">Secondaria di primo e di secondo grado · Scienze · Foglio 1 di 3</div>
       </div>
     </header>
 
@@ -116,6 +131,27 @@
         </svg>
       </div>
 
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il gas che resta in basso" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Segnali, comportamenti e a chi rivolgersi</div>
+        <div class="scheda-sottotitolo">Il gas che resta in basso · Foglio 2 di 3</div>
+      </div>
+    </header>
+
+    <div class="co">
       <h2 class="scheda-h2">Segnali da notare</h2>
       <ul class="co-lista">
         <li><strong>Animali morti</strong>, anche insetti e uccelli, nello stesso punto basso, senza una causa evidente.</li>
@@ -133,27 +169,7 @@
       </ul>
 
       <p class="co-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
-    </div>
 
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Il gas che resta in basso" · Secondaria I e II · rev. 2026</span>
-    </footer>
-
-  </article>
-
-  <article class="scheda-page">
-
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <div class="scheda-titolo-principale" role="heading" aria-level="2">A chi rivolgersi e prova tu</div>
-        <div class="scheda-sottotitolo">Il gas che resta in basso · Foglio 2 di 2</div>
-      </div>
-    </header>
-
-    <div class="co">
       <div class="co-chi">
         <p><strong>A chi rivolgersi</strong></p>
         <ul>
@@ -179,9 +195,29 @@
         <div class="co-riga"></div>
       </div>
 
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il gas che resta in basso" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Prova tu</div>
+        <div class="scheda-sottotitolo">Il gas che resta in basso · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="co">
       <div class="co-es">
         <p><span class="co-num">3</span><strong>Il fosso in campagna.</strong> Durante una passeggiata Silvia vede in fondo a un fosso tre uccellini morti e l'erba secca a chiazze. Il suo amico Marco vuole scendere a guardare. Che cosa dice Silvia? A chi lo raccontano?<span class="co-fascia">secondaria I e II</span></p>
-        <div class="co-riga"></div>
         <div class="co-riga"></div>
       </div>
 
@@ -201,16 +237,16 @@
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> Non portate la classe in cantine, pozzi o fossi a «cercare» il gas e non fate misure fai da te: la scheda si svolge in aula. Gli esercizi 4 e 5 sono per la secondaria di secondo grado. Se parlate degli episodi di Cava dei Selci, usate un tono sobrio: fra il 1999 e il 2000 il gas ha ucciso 29 mucche e 6 pecore, e il 30 dicembre 2000 un uomo è morto per asfissia. Lasciate spazio alle domande.</p>
-        <p><strong>Che cosa c'è già sul sito.</strong> La scheda «Vulcanologia dei Castelli Romani» spiega la storia del vulcano; la pagina «Rischio vulcanico» ha i comportamenti completi; la scheda «Il monossido di carbonio» tratta il CO di caldaie e stufe, un gas diverso. Questa scheda si concentra sul perché la CO₂ si accumula e su che cosa fare.</p>
+        <p><strong>Per il docente.</strong> La scheda si svolge in aula: niente visite a cantine, pozzi o fossi per «cercare» il gas, niente misure fai da te. Esercizi 4 e 5: secondaria di secondo grado. Se parlate degli episodi di Cava dei Selci, usate un tono sobrio: fra il 1999 e il 2000 il gas ha ucciso 29 mucche e 6 pecore, e il 30 dicembre 2000 un uomo è morto per asfissia. Lasciate spazio alle domande.</p>
+        <p><strong>Che cosa c'è già sul sito.</strong> «Vulcanologia dei Castelli Romani» racconta la storia del vulcano, la pagina «Rischio vulcanico» ha i comportamenti completi, «Monossido di carbonio» tratta il CO di caldaie e stufe, un altro gas. Qui si lavora sull'accumulo della CO₂ e su che cosa fare.</p>
         <p><strong>Fonti.</strong> Dipartimento della Protezione Civile, scheda «Colli Albani»; INGV, «Sorveglianza vulcani Colli Albani»; Carapezza e altri, <span lang="en">«Health impact of natural gas emission at Cava dei Selci residential zone»</span>, <em>Environmental Geochemistry and Health</em> (online dal 2022); pagina del sito «Rischio vulcanico». Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
       </div>
 
       <div class="soluzione-capovolta">
         <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
         <strong>1.</strong> a) Falso: è inodore. b) Vero. c) Falso: Genzano non è fra i punti principali; la prudenza vale comunque. d) Falso: quiescente vuol dire in riposo, con segni di attività; per questo l'INGV lo sorveglia.
-        <strong>2.</strong> Aprono porta e finestre e lasciano arieggiare prima di scendere; scende con un adulto. Se gli gira la testa esce subito all'aperto, non torna indietro, avvisa il nonno; se qualcuno si sente male là sotto, nessuno entra e si chiama il 112.
-        <strong>3.</strong> Che non si scende: in un fosso il gas può ristagnare. Si allontanano, lo raccontano a un adulto, che lo segnala al Comune e all'ARPA Lazio. Se qualcuno fosse a terra nel fosso, si chiama il 112 senza scendere.
+        <strong>2.</strong> Aprono porta e finestre e lasciano arieggiare; Flavio scende con il nonno. Se gli gira la testa esce subito e non torna indietro; se qualcuno si sente male là sotto, nessuno entra e si chiama il 112.
+        <strong>3.</strong> Che non si scende: nel fosso il gas può ristagnare. Si allontanano e lo dicono a un adulto, che lo segnala al Comune e all'ARPA Lazio.
         <strong>4.</strong> 44 : 29 ≈ 1,5 volte. Il gas più denso scende e si raccoglie in basso, se non c'è vento a mescolarlo.
         <strong>5.</strong> 1,5% = 15.000 ppm (1% = 10.000 ppm). 8 : 1,5 ≈ 5,3 volte.
         <strong>6.</strong> Si cercano le fonti ufficiali: INGV, Dipartimento della Protezione Civile, Comune. Se non lo dicono loro, non si inoltra.

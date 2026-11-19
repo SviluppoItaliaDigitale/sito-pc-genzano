@@ -22,7 +22,6 @@
     .pe-subito { margin-top: 0.5rem; padding: 0.5rem 0.7rem; background: #fdecee; border-left: 4px solid var(--scheda-rosso); border-radius: 0 6px 6px 0; }
     .pe-subito strong:first-child { color: var(--scheda-rosso); }
     .pe-subito ul { margin: 0.2rem 0; padding-left: 1.1rem; }
-    .pe-anche-tu { margin-top: 0.45rem; padding: 0.4rem 0.7rem; border-left: 4px solid var(--scheda-blu); background: #f1f5f9; border-radius: 0 6px 6px 0; }
     .pe-scenario { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.45rem 0.6rem; margin: 0.4rem 0; }
     .pe-scenario p { margin: 0 0 0.15rem; }
     .pe-righe { border-bottom: 1.5px solid var(--scheda-bordo); height: 1.4rem; margin-top: 0.15rem; }
@@ -32,8 +31,13 @@
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
     .pe-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
     @media print {
-      .pe-passi img { width: 36px; height: 36px; }
-      .pe-passi li { padding: 0.2rem 0; }
+      .pe-passi img { width: 30px; height: 30px; }
+      .pe-frasi { font-size: 0.84rem; }
+      .pe-frasi th, .pe-frasi td { padding: 0.2rem 0.4rem; }
+      .pe-righe { height: 1.2rem; }
+      .pe-passi li { padding: 0.12rem 0; }
+      .pe-subito { padding: 0.3rem 0.6rem; margin-top: 0.3rem; }
+      .pe .soluzione-capovolta { padding: 2mm 3mm; }
       .pe-scenario { margin: 0.25rem 0; padding: 0.3rem 0.55rem; }
       .pe-scenario, .pe-subito, .scheda-docente, .pe-frasi { break-inside: avoid; }
     }
@@ -41,7 +45,7 @@
        e spazi stretti, così la scheda regge anche i caratteri più larghi. */
     @media print {
       html { font-size: 88%; }
-      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-page { padding: 0.7cm 1.3cm 0.3cm; }
       .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
       .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
       .scheda-intro { margin: 0.2rem 0 0.3rem; }
@@ -66,8 +70,8 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Accanto a un compagno spaventato: il primo aiuto tra pari</h1>
-        <div class="scheda-sottotitolo">Secondaria di primo e di secondo grado · Foglio 1 di 2</div>
+        <h1 class="scheda-titolo-principale">Accanto a un compagno spaventato</h1>
+        <div class="scheda-sottotitolo">Il primo aiuto tra pari · Secondaria di primo e di secondo grado · Foglio 1 di 2</div>
       </div>
     </header>
 
@@ -79,17 +83,17 @@
 
     <div class="pe">
       <p class="scheda-intro">
-        Dopo una scossa, un incendio vicino o un'evacuazione, un compagno può tremare, piangere, restare zitto o arrabbiarsi. Sono reazioni comuni. Tu non devi curarlo: puoi stargli vicino nel modo giusto e chiamare un adulto.
+        Dopo una scossa, un incendio o un'evacuazione, un compagno può tremare, piangere, restare zitto o arrabbiarsi. Sono reazioni comuni. Non devi curarlo: puoi stargli vicino e chiamare un adulto.
       </p>
 
       <h2 class="scheda-h2">Che cosa puoi fare</h2>
       <ul class="pe-passi">
         <li><img src="/pittogrammi/arasaac/vedere.png" alt="Pittogramma: una testa che guarda in avanti"><span><strong>Guarda prima intorno.</strong> Il posto è sicuro, per te e per lui? Se c'è un pericolo, allontanatevi con l'adulto e seguite le sue indicazioni.</span></li>
-        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una persona che porta la mano all'orecchio per ascoltare"><span><strong>Avvicinati e ascolta.</strong> Chiedi «Posso stare qui con te?». Se vuole parlare, ascolti senza interrompere. Se preferisce il silenzio, va bene lo stesso: non fargli domande su quello che ha visto.</span></li>
+        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una persona che porta la mano all'orecchio per ascoltare"><span><strong>Avvicinati e ascolta.</strong> Chiedi «Posso stare qui con te?». Se vuole parlare, ascolti senza interrompere; se preferisce il silenzio, va bene. Non fargli domande su ciò che ha visto.</span></li>
         <li><img src="/pittogrammi/arasaac/aiuto.png" alt="Pittogramma: due mani che si cercano"><span><strong>Non giudicare.</strong> Paura, pianto e rabbia non sono una debolezza. Non ridere, non riprenderlo col telefono, non raccontare agli altri che cosa ti dice.</span></li>
         <li><img src="/pittogrammi/arasaac/no.png" alt="Pittogramma: il segno del no"><span><strong>Non promettere ciò che non sai.</strong> «Non succederà più» nessuno lo può dire. Di' quello che sai davvero, e se non lo sai, dillo.</span></li>
         <li><img src="/pittogrammi/arasaac/tranquillo.png" alt="Pittogramma: un viso con gli occhi chiusi e un'espressione tranquilla"><span><strong>Aiutalo a respirare con calma.</strong> Parla piano. Proponi di sentire i piedi appoggiati a terra, di respirare lentamente insieme a te, di dire tre cose che vede intorno. Se non vuole, non insistere.</span></li>
-        <li><img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: un adulto che aiuta una persona seduta a terra"><span><strong>Chiama un adulto.</strong> Insegnante, collaboratore scolastico, genitore: un adulto di cui vi fidate. Resta con il compagno finché l'adulto arriva, se il posto è sicuro.</span></li>
+        <li><img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: un adulto che aiuta una persona seduta a terra"><span><strong>Chiama un adulto.</strong> Insegnante, collaboratore scolastico, genitore. Se il posto è sicuro, resta con il compagno finché l'adulto arriva. Dopo, se ti senti scosso anche tu, parlane con un adulto.</span></li>
       </ul>
 
       <h2 class="scheda-h2">Frasi che aiutano, frasi da evitare</h2>
@@ -98,9 +102,9 @@
         <thead><tr><th scope="col">Aiutano</th><th scope="col">Meglio evitarle</th></tr></thead>
         <tbody>
           <tr><td>«Sono qui con te.»</td><td>«Non devi avere paura.» Un ordine non spegne la paura.</td></tr>
-          <tr><td>«È normale sentirsi così dopo quello che è successo.»</td><td>«Poteva andare peggio», «Sei stato fortunato.» Tolgono valore a ciò che prova.</td></tr>
-          <tr><td>«Non lo so, chiediamolo insieme all'insegnante.»</td><td>«Andrà tutto bene, te lo giuro.» È una promessa che nessuno può fare.</td></tr>
-          <tr><td>«Vuoi un po' d'acqua? Vuoi che chiami qualcuno?»</td><td>«Raccontami tutto quello che hai visto.» Non si chiede di raccontare.</td></tr>
+          <tr><td>«È normale sentirsi così dopo quello che è successo.»</td><td>«Poteva andare peggio.» Toglie valore a ciò che prova.</td></tr>
+          <tr><td>«Non lo so, chiediamolo insieme all'insegnante.»</td><td>«Andrà tutto bene, te lo giuro.» Nessuno può prometterlo.</td></tr>
+          <tr><td>«Vuoi un po' d'acqua? Vuoi che chiami qualcuno?»</td><td>«Raccontami tutto quello che hai visto.»</td></tr>
         </tbody>
       </table>
 
@@ -112,10 +116,8 @@
           <li>vuole fare del male a qualcuno;</li>
           <li>è così sconvolto che non riesce a muoversi o a badare a sé.</li>
         </ul>
-        Questo non è un segreto da tenere: anche se ti chiede di non dirlo, lo dici subito a un adulto. Il 112 è il numero unico per ogni emergenza.
+        Non è un segreto da tenere: anche se ti chiede di non dirlo, lo dici subito a un adulto.
       </div>
-
-      <div class="pe-anche-tu"><strong>E tu?</strong> Anche chi aiuta può sentirsi scosso dopo. Parlane con un adulto di fiducia: non devi portare tutto da solo.</div>
 
       <p class="pe-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
     </div>
@@ -139,10 +141,10 @@
     </header>
 
     <div class="pe">
-      <p>Leggi le situazioni. Sono esempi inventati. Scrivi che cosa faresti, oppure dillo a voce al tuo gruppo.</p>
+      <p>Situazioni inventate. Scrivi che cosa faresti, o dillo a voce al tuo gruppo.</p>
 
       <div class="pe-scenario">
-        <p><strong>A.</strong> Dopo la prova di evacuazione la classe torna in aula. Flavio è seduto in fondo, trema e non parla. Un compagno ride e dice: «Era solo una prova!».</p>
+        <p><strong>A.</strong> Dopo la prova di evacuazione Flavio è seduto in fondo all'aula, trema e non parla. Un compagno ride: «Era solo una prova!».</p>
         <div class="pe-righe" aria-label="Spazio per scrivere la risposta"></div>
       </div>
 
@@ -162,23 +164,23 @@
       </div>
 
       <div class="pe-scenario">
-        <p><strong>E.</strong> Nella tua scuola a quale adulto puoi rivolgerti se un compagno sta male? Scrivi almeno due nomi di ruolo (non serve il nome della persona).</p>
+        <p><strong>E.</strong> Nella tua scuola a quale adulto puoi rivolgerti se un compagno sta male? Scrivi almeno due ruoli, senza nomi.</p>
         <div class="pe-righe" aria-label="Spazio per scrivere la risposta"></div>
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> La scheda adatta ai ragazzi i principi del primo soccorso psicologico dell'Organizzazione mondiale della sanità («Psychological first aid: guide for field workers», OMS, War Trauma Foundation e World Vision International, 2011): guardare, ascoltare, collegare; non forzare il racconto, non giudicare, non fare false promesse; aiutare a calmarsi con la voce, l'appoggio dei piedi e il respiro lento; chiamare subito aiuto per chi è ferito, per chi può fare del male a sé o ad altri e per chi è troppo sconvolto per badare a sé. La guida OMS dice che il primo soccorso psicologico <strong>non è un intervento professionale</strong>: per i ragazzi il passo centrale resta «chiama un adulto».</p>
-        <p><strong>Che cosa aggiunge.</strong> La scheda <a href="/formazione/schede-stampabili/il-giorno-dopo-docente/">«Il giorno dopo»</a> guida il docente nei dieci minuti con la classe; il <a href="/formazione/percorsi-didattici/#percorso-13">percorso 13</a> tratta il modello in tre ore per la secondaria di secondo grado. Questa scheda è per i ragazzi: che cosa fa un compagno. Riferimento del sito: <a href="/formazione/psicologia-emergenza/">Psicologia dell'emergenza</a>.</p>
-        <p><strong>Prima della lezione</strong> concordate con il dirigente e, se c'è, con lo psicologo scolastico a chi si rivolgono i ragazzi nella vostra scuola. Lo scenario D parla di pensieri di autolesionismo: proponetelo solo se la classe è pronta, leggetelo voi e lasciate spazio alle domande. Nessun alunno è obbligato a raccontare esperienze personali. Tempi: 15 minuti per il foglio 1, 20 per gli scenari a coppie, 15 di confronto. Non si valutano emozioni né paura. Collegamento: Educazione civica (Linee guida, D.M. 183/2024).</p>
+        <p><strong>Per il docente.</strong> La scheda adatta ai ragazzi il primo soccorso psicologico dell'Organizzazione mondiale della sanità («Psychological first aid: guide for field workers», OMS, War Trauma Foundation e World Vision International, 2011): guardare, ascoltare, collegare; non forzare il racconto, non giudicare, non fare false promesse; aiutare a calmarsi con voce, piedi a terra e respiro lento; aiuto immediato per chi è ferito, può fare del male a sé o ad altri o è troppo sconvolto per badare a sé. Per l'OMS non è un intervento professionale: per i ragazzi il passo centrale resta «chiama un adulto».</p>
+        <p><strong>Che cosa aggiunge.</strong> <a href="/formazione/schede-stampabili/il-giorno-dopo-docente/">«Il giorno dopo»</a> guida il docente con la classe; il <a href="/formazione/percorsi-didattici/#percorso-13">percorso 13</a> tratta il modello in tre ore (secondaria di secondo grado). Questa scheda dice che cosa fa un compagno. Vedi anche <a href="/formazione/psicologia-emergenza/">Psicologia dell'emergenza</a>.</p>
+        <p><strong>Prima della lezione</strong> concordate con il dirigente e, se c'è, con lo psicologo scolastico a chi si rivolgono i ragazzi nella vostra scuola. Lo scenario D parla di autolesionismo: proponetelo solo se la classe è pronta e leggetelo voi. Nessuno è obbligato a raccontare esperienze personali. Tempi: 15 minuti per il foglio 1, 20 per gli scenari a coppie, 15 di confronto. Non si valutano emozioni né paura. Educazione civica: Linee guida, D.M. 183/2024.</p>
       </div>
 
       <div class="soluzione-capovolta">
         <span class="titolo">Risposte possibili per il docente (gira il foglio)</span>
-        <strong>A.</strong> Ti siedi vicino a Flavio, gli chiedi se puoi restare. Al compagno dici con calma che non si ride. Avvisi l'insegnante.
-        <strong>B.</strong> La ascolti. Le dici che nessuno può sapere quando arriva una scossa: i terremoti non si possono prevedere. Le notizie si controllano con l'insegnante, sulle fonti ufficiali (INGV e Dipartimento della Protezione Civile).
-        <strong>C.</strong> Resti con lui, parli piano, lo aiuti a sentire i piedi a terra e a respirare lentamente; chiedi a un altro compagno di chiamare l'insegnante. Se sta peggio o fa fatica a respirare, l'adulto chiama il 112.
-        <strong>D.</strong> Non è un segreto da tenere. Lo dici subito a un adulto (genitore, insegnante). Se il pericolo è immediato, si chiama il 112. Puoi rispondere a Marco che gli vuoi bene e che chiedi aiuto per lui.
-        <strong>E.</strong> Per esempio: insegnante, coordinatore di classe, psicologo scolastico, dirigente, genitore. Vale ciò che ha deciso la vostra scuola.
+        <strong>A.</strong> Ti siedi vicino a Flavio e chiedi se puoi restare; al compagno dici che non si ride; avvisi l'insegnante.
+        <strong>B.</strong> La ascolti. I terremoti non si possono prevedere: nessuno sa quando arriva una scossa. Le notizie si controllano con l'insegnante su INGV e Dipartimento della Protezione Civile.
+        <strong>C.</strong> Resti con lui, parli piano, lo aiuti a sentire i piedi a terra e a respirare lentamente; un altro compagno chiama l'insegnante. Se sta peggio o fa fatica a respirare, l'adulto chiama il 112.
+        <strong>D.</strong> Non è un segreto da tenere: lo dici subito a un adulto; se il pericolo è immediato, il 112. A Marco puoi dire che gli vuoi bene e che chiedi aiuto per lui.
+        <strong>E.</strong> Per esempio insegnante, coordinatore di classe, psicologo scolastico, dirigente, genitore: vale ciò che ha deciso la scuola.
       </div>
     </div>
 

@@ -38,6 +38,19 @@
       .mm-pitto img { width: 36px; height: 36px; }
       .mm-es, .mm-attenzione, .scheda-docente, .mm-regola, .mm-tabella { break-inside: avoid; }
     }
+    /* Stampa su tre fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-footer { padding-top: 2mm; }
+      .mm .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .mm-calcolo { min-height: 1.8rem; }
+      .mm-es { margin: 0.3rem 0; padding: 0.3rem 0.55rem; }
+    }
   </style>
 </head>
 <body>
@@ -57,7 +70,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h1 class="scheda-titolo-principale">Che cosa vuol dire «50 mm di pioggia»?</h1>
-        <div class="scheda-sottotitolo">Primaria (4ª e 5ª) · Secondaria di primo grado · Matematica · Foglio 1 di 2</div>
+        <div class="scheda-sottotitolo">Primaria (4ª e 5ª) · Secondaria di primo grado · Matematica · Foglio 1 di 3</div>
       </div>
     </header>
 
@@ -106,6 +119,27 @@
       <h2 class="scheda-h2">Stessa pioggia, tempi diversi</h2>
       <p>Il numero dei millimetri da solo non basta: conta anche <strong>in quanto tempo</strong> cadono. 50 mm in un giorno intero sono una pioggia lunga. 50 mm in un'ora sono un rovescio fortissimo: la stessa acqua arriva tutta insieme su strade, tombini e fossi.</p>
 
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Che cosa vuol dire 50 mm di pioggia" · Primaria e secondaria I · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Millimetri e allerte</div>
+        <div class="scheda-sottotitolo">Che cosa vuol dire «50 mm di pioggia» · Foglio 2 di 3</div>
+      </div>
+    </header>
+
+    <div class="mm">
       <h2 class="scheda-h2">E l'allerta?</h2>
       <p>Il Centro Funzionale della Regione Lazio confronta la pioggia prevista con delle <strong>soglie</strong>, zona per zona. Genzano è nella <strong>zona di allerta F</strong>. Per la pioggia di 24 ore le soglie indicative sono queste:</p>
       <table class="mm-tabella">
@@ -123,27 +157,8 @@
         <span><strong>Con la pioggia forte</strong> non si scende in cantina, in garage o nei sottopassi e si sta lontano da fossi e corsi d'acqua. Si seguono le indicazioni del Comune e degli adulti. In pericolo si chiama il <strong>112</strong>.</span>
       </div>
       <p class="mm-attribuzione">Pittogramma: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Soglie: Regione Lazio, prospetto delle soglie pluviometriche per zona di allerta; valori indicativi, come nella pagina del sito «Come nasce un'allerta meteo».</p>
-    </div>
 
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Che cosa vuol dire 50 mm di pioggia" · Primaria e secondaria I · rev. 2026</span>
-    </footer>
-
-  </article>
-
-  <article class="scheda-page">
-
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <div class="scheda-titolo-principale" role="heading" aria-level="2">Fai i conti con la pioggia</div>
-        <div class="scheda-sottotitolo">Che cosa vuol dire «50 mm di pioggia» · Foglio 2 di 2</div>
-      </div>
-    </header>
-
-    <div class="mm">
+      <h2 class="scheda-h2">Fai i conti</h2>
       <p>Le misure dei problemi sono <strong>esempi</strong>, non luoghi veri. Scrivi il calcolo nel riquadro e la risposta sulla riga. Puoi usare la calcolatrice se l'insegnante è d'accordo.</p>
 
       <div class="mm-es">
@@ -164,6 +179,27 @@
         <div class="mm-risposta">Risposta: <span class="mm-riga"></span> litri = <span class="mm-riga"></span> m³</div>
       </div>
 
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Che cosa vuol dire 50 mm di pioggia" · Primaria e secondaria I · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Fai i conti con la pioggia: tempo e soglie</div>
+        <div class="scheda-sottotitolo">Che cosa vuol dire «50 mm di pioggia» · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="mm">
       <div class="mm-es">
         <p><span class="mm-num">4</span><strong>Un'ora o un giorno?</strong> Sul cortile dell'esercizio 3 cadono gli stessi 50 mm. Quanti litri al minuto arrivano se cadono in <strong>1 ora</strong>? E se cadono in <strong>24 ore</strong>? Quante volte è più veloce la pioggia di un'ora?<span class="mm-fascia">secondaria</span></p>
         <div class="mm-calcolo" aria-label="Spazio per il calcolo"></div>

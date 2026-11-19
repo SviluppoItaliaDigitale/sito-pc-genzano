@@ -40,6 +40,15 @@
       .gp-regole li, .gp-controlli li { padding: 0.2rem 0; }
       .gp-scenario, .gp-112, .scheda-docente, .soluzione-capovolta { break-inside: avoid; }
     }
+    /* Stampa (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così ogni foglio regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
   </style>
 </head>
 <body>
@@ -59,7 +68,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h1 class="scheda-titolo-principale">In gita nel Parco dei Castelli Romani: prima di partire</h1>
-        <div class="scheda-sottotitolo">Primaria · Secondaria di primo grado · Foglio 1 di 2</div>
+        <div class="scheda-sottotitolo">Primaria · Secondaria di primo grado · Foglio 1 di 3</div>
       </div>
     </header>
 
@@ -122,7 +131,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <div class="scheda-titolo-principale" role="heading" aria-level="2">Nel bosco: le regole del gruppo</div>
-        <div class="scheda-sottotitolo">In gita nel Parco dei Castelli Romani · Foglio 2 di 2</div>
+        <div class="scheda-sottotitolo">In gita nel Parco dei Castelli Romani · Foglio 2 di 3</div>
       </div>
     </header>
 
@@ -157,6 +166,26 @@
         <div class="gp-riga" aria-label="Spazio per la risposta"></div>
       </div>
 
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "In gita nel Parco dei Castelli Romani" · Primaria e secondaria I · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Per il docente: preparare la gita</div>
+        <div class="scheda-sottotitolo">In gita nel Parco dei Castelli Romani · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="gp">
       <div class="scheda-docente">
         <p><strong>Per il docente.</strong> <strong>Educazione civica</strong> (Linee guida, D.M. 183/2024), nucleo «Sviluppo economico e sostenibilità»: tutela dell'ambiente e cultura della protezione civile. Primo foglio in classe nei giorni prima della gita, secondo foglio a coppie. In primaria leggi tu ad alta voce.</p>
         <p><strong>Prima della gita:</strong> autorizzazioni, accompagnatori e assicurazione sono quelli della scuola. Scegliete un sentiero adatto all'età: l'Ente Parco ricorda che chi percorre i sentieri lo fa sotto la propria responsabilità. Sapete in anticipo chi ha allergie note (per esempio al veleno degli insetti) e che cosa ha concordato la famiglia con il pediatra; tenete in rubrica il 112. Per chi si muove con fatica o con un ausilio, scegliete il percorso con la famiglia. Fonti: Ente Parco dei Castelli Romani (parcocastelliromani.it) e portale dei parchi della Regione Lazio (parchilazio.it); bollettini della Regione Lazio; Istituto Superiore di Sanità, EpiCentro, «Zecche», aggiornata il 4 giugno 2026; pagine del sito «Rischio incendi boschivi» e «Temporali intensi».</p>

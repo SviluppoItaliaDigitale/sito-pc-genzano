@@ -16,7 +16,7 @@
     .ks-passi { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem; }
     .ks-passi > li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.55rem; }
     .ks-passi img { width: 44px; height: 44px; display: block; margin-bottom: 0.2rem; }
-    .ks-passi strong { color: var(--scheda-blu); display: block; font-size: 1.05rem; }
+    .ks-passi > li > strong { color: var(--scheda-blu); display: block; font-size: 1.05rem; }
     .ks-passi ul { margin: 0.15rem 0 0; padding-left: 1rem; }
     .ks-passi ul li { margin: 0.1rem 0; }
     .ks-dae { display: flex; gap: 0.6rem; align-items: center; margin-top: 0.4rem; padding: 0.4rem 0.7rem; border-left: 4px solid var(--scheda-verde); background: #e9f5ee; border-radius: 0 6px 6px 0; }
@@ -41,14 +41,20 @@
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
     @media (max-width: 600px) { .ks-passi, .ks-ordine { grid-template-columns: minmax(0, 1fr); } }
     @media print {
-      .ks-passi img { width: 36px; height: 36px; }
+      .ks-passi img { width: 30px; height: 30px; margin-bottom: 0.1rem; }
+      .ks-dae img { width: 40px; height: 40px; }
+      .ks-eta td, .ks-eta th { padding: 0.15rem 0.4rem; }
+      .ks-tecnica, .ks-avviso, .ks-dae { padding: 0.3rem 0.6rem; margin-top: 0.3rem; }
+      .ks-scenario { margin: 0.25rem 0; padding: 0.3rem 0.55rem; }
+      .ks-righe { height: 1.2rem; }
+      .ks .soluzione-capovolta { padding: 2mm 3mm; }
       .ks-passi > li, .ks-eta, .ks-tecnica, .ks-avviso, .ks-scenario, .scheda-docente { break-inside: avoid; }
     }
     /* Stampa su due fogli A4 (controllo fogli di stampa): scala del testo all'88%
        e spazi stretti, così la scheda regge anche i caratteri più larghi. */
     @media print {
       html { font-size: 88%; }
-      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-page { padding: 0.7cm 1.3cm 0.3cm; }
       .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
       .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
       .scheda-intro { margin: 0.2rem 0 0.3rem; }
@@ -184,20 +190,19 @@
       </div>
 
       <div class="ks-scenario">
-        <p><strong>4.</strong> Nella tua scuola c'è un defibrillatore? Dove? Chiedilo all'insegnante e disegna il percorso dalla tua aula, o scrivilo.</p>
-        <div class="ks-righe" aria-label="Spazio per scrivere la risposta"></div>
+        <p><strong>4.</strong> Nella tua scuola c'è un defibrillatore? Dove? Chiedilo all'insegnante, poi scrivi o disegna il percorso dalla tua aula.</p>
         <div class="ks-righe" aria-label="Spazio per scrivere la risposta"></div>
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> Ogni indicazione viene da fonti ufficiali degli enti della rianimazione. <strong>Sequenza, DAE e compressioni:</strong> Italian Resuscitation Council, Linee guida RCP 2025, capitolo 4 «Basic Life Support adulto» (versione italiana delle Linee guida ERC 2025): i tre passaggi «controlla, chiama, comprimi», il vivavoce, l'operatore che guida chi chiama, «chiunque può usare un DAE», la profondità di 5-6 cm e la frequenza di 100-120 al minuto. <strong>Età:</strong> dichiarazione scientifica ILCOR «KIDS SAVE LIVES: Basic Life Support Education for Schoolchildren» (Circulation e Resuscitation, 2023): la sequenza «controlla, chiama, comprimi» raccomandata a tutti gli alunni, i primi anelli della catena dai 4 anni, compressioni efficaci sul manichino fra i 10 e i 12 anni, almeno due ore di allenamento l'anno. <strong>L'iniziativa:</strong> IRC, Linee guida RCP 2025, capitolo 10 «La formazione alla rianimazione»: «Kids Save Lives» è promossa da European Patient Safety Foundation, ERC, ILCOR e World Federation of Societies of Anaesthesiologists, con il patrocinio dell'Organizzazione mondiale della sanità; IRC e ERC ne sono ideatori e sostenitori.</p>
-        <p><strong>Avvertenze.</strong> La scheda non sostituisce un corso con istruttori e manichini: proponetela come preparazione a un corso o come ripasso. La sequenza riguarda una persona adulta; per bambini e lattanti vale il capitolo 9 delle Linee guida (pagina del sito <a href="/formazione/primo-soccorso/rcp-bambini-neonati/">Rianimazione nei bambini e nei neonati</a>). Prima della lezione chiedete al dirigente dove sono i DAE della scuola. Nel Lazio il numero da chiamare è il 112. Approfondimenti: <a href="/formazione/primo-soccorso/">Primo soccorso</a>, <a href="/formazione/primo-soccorso/defibrillatore-dae/">Defibrillatore (DAE)</a>, <a href="/formazione/percorsi-didattici/#percorso-9">percorso 9</a> (quattro ore per la secondaria di secondo grado). Non si valutano paura o coraggio: si osserva se l'alunno sa la sequenza.</p>
+        <p><strong>Per il docente.</strong> Le indicazioni vengono da fonti ufficiali. <strong>Sequenza, DAE e compressioni:</strong> Italian Resuscitation Council, Linee guida RCP 2025, capitolo 4 «Basic Life Support adulto», versione italiana delle Linee guida ERC 2025 (tre passaggi, vivavoce, operatore che guida, «chiunque può usare un DAE», 5-6 cm, 100-120 al minuto). <strong>Età:</strong> dichiarazione scientifica ILCOR «KIDS SAVE LIVES: Basic Life Support Education for Schoolchildren» (Circulation e Resuscitation, 2023): sequenza raccomandata a tutti gli alunni, primi anelli della catena dai 4 anni, compressioni efficaci sul manichino fra 10 e 12 anni, almeno due ore di allenamento l'anno. <strong>L'iniziativa:</strong> IRC, Linee guida RCP 2025, capitolo 10 «La formazione alla rianimazione»: «Kids Save Lives» è promossa da European Patient Safety Foundation, ERC, ILCOR e World Federation of Societies of Anaesthesiologists, con il patrocinio dell'Organizzazione mondiale della sanità.</p>
+        <p><strong>Avvertenze.</strong> La scheda non sostituisce un corso con istruttori e manichini: usatela per preparare un corso o per ripassare. La sequenza riguarda una persona adulta; per bambini e lattanti vale il capitolo 9 delle Linee guida (pagina del sito <a href="/formazione/primo-soccorso/rcp-bambini-neonati/">Rianimazione nei bambini e nei neonati</a>). Chiedete al dirigente dove sono i DAE della scuola. Nel Lazio si chiama il 112. Approfondimenti: <a href="/formazione/primo-soccorso/">Primo soccorso</a>, <a href="/formazione/primo-soccorso/defibrillatore-dae/">Defibrillatore (DAE)</a>, <a href="/formazione/percorsi-didattici/#percorso-9">percorso 9</a> (quattro ore per la secondaria di secondo grado). Non si valutano paura o coraggio.</p>
       </div>
 
       <div class="soluzione-capovolta">
         <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
-        <strong>1.</strong> Guardo se è sicuro (1); chiamo e tocco le spalle (2); chiamo il 112 (3); chiedo il DAE (4); premo al centro del petto (5); accendo il DAE e seguo la voce (6). Il 3 e il 4 possono avvenire insieme se ci sono più persone.
-        <strong>2.</strong> Per esempio: uno chiama il 112 col vivavoce e chiama un adulto, uno va a prendere il DAE, chi ha fatto un corso preme sul petto seguendo l'operatore.
+        <strong>1.</strong> sicuro (1), chiamo e tocco le spalle (2), 112 (3), chiedo il DAE (4), premo sul petto (5), accendo il DAE (6); il 3 e il 4 insieme se si è in più persone.
+        <strong>2.</strong> Uno chiama il 112 e un adulto, uno prende il DAE, chi ha fatto un corso preme sul petto seguendo l'operatore.
         <strong>3.</strong> Dove siete (indirizzo, nome del campo) e che la persona non risponde e non respira normalmente.
         <strong>4.</strong> Dipende dalla scuola: vale ciò che indica il dirigente.
       </div>

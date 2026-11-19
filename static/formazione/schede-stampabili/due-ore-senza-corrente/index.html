@@ -18,8 +18,7 @@
     .dc-ora span { display: block; font-size: 1.35rem; }
     .dc-ora small { display: block; font-weight: 400; color: var(--scheda-grigio); }
     .dc-tappa p { margin: 0.1rem 0; }
-    .dc-compito { font-weight: 700; color: #212529; }
-    .dc-compito::before { content: "Che cosa fate? "; color: var(--scheda-oro); }
+    .dc-compito { font-weight: 700; color: #7a3d06; }
     .dc-righe { display: block; height: 1.3rem; border-bottom: 1.5px solid var(--scheda-bordo); }
     .dc-tabella { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 0.3rem 0; }
     .dc-tabella th, .dc-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.25rem 0.4rem; text-align: left; vertical-align: middle; }
@@ -53,6 +52,11 @@
       .dc .scheda-h2 { margin: 0.45rem 0 0.2rem; }
       .scheda-footer { padding-top: 2mm; }
     }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    /* Controllo fogli di stampa: scala del testo all'88% in stampa, così ogni
+       foglio regge anche i caratteri più larghi senza mandare la fascia delle
+       affiliazioni su un foglio in più. */
+    @media print { html { font-size: 88%; } }
   </style>
 </head>
 <body>
@@ -230,7 +234,7 @@
       </div>
 
       <h2 class="scheda-h2">Una cosa da fare a casa</h2>
-      <p>Scegline una e falla entro una settimana, con un adulto: controllare che la torcia funzioni, mettere le pile di scorta accanto alla torcia, decidere un posto fisso per la torcia, scrivere su carta i numeri utili, chiedere a casa se l'acqua arriva anche senza corrente.</p>
+      <p>Scegline una e falla entro una settimana, con un adulto: provare la torcia, mettere le pile di scorta accanto alla torcia, scrivere su carta i numeri utili, chiedere a casa se l'acqua arriva anche senza corrente.</p>
       <span class="dc-righe" aria-label="Spazio per scrivere la cosa scelta"></span>
 
       <div class="avvertenza">
@@ -238,9 +242,9 @@
       </div>
 
       <div class="scheda-docente">
-        <p><strong>Per il docente.</strong> Come si svolge: gruppi di quattro con i ruoli del foglio 2. Leggi una tappa del foglio 1 ogni cinque minuti, i gruppi decidono e scrivono; poi tabella e conto della batteria (15 minuti), confronto finale (10 minuti). Il foglio 3 si completa in un secondo momento, dopo l'intervista al responsabile della sicurezza. Se il vostro piano di emergenza dice qualcosa di diverso, vale il piano.</p>
-        <p><strong>Che cosa la distingue dalle altre schede sul blackout.</strong> <a href="/formazione/schede-stampabili/blackout-primaria/">«Blackout: la casa senza corrente»</a> dà le regole e il kit, <a href="/formazione/schede-stampabili/blackout-infanzia/">«Quando va via la luce»</a> è per l'infanzia, <a href="/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/">«Blackout e servizi essenziali»</a> lavora sui servizi della città e su una prova di quindici minuti a casa. Questa è una simulazione in classe a tappe, con il passare del tempo e il conto della batteria. Fonte delle risposte: pagina <a href="/rischi-prevenzione/blackout/">«Blackout e interruzione servizi»</a> del sito.</p>
-        <p><strong>Che cosa osservare:</strong> il gruppo sceglie la torcia, tiene chiusi frigorifero e congelatore, risparmia la batteria, pensa a chi è solo e decide con un adulto. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini.</p>
+        <p><strong>Per il docente.</strong> Come si svolge: gruppi di quattro con i ruoli del foglio 2. Leggi una tappa del foglio 1 ogni cinque minuti; poi tabella e batteria (15 minuti) e confronto (10 minuti). Il foglio 3 si completa dopo l'intervista al responsabile della sicurezza; se il vostro piano dice altro, vale il piano.</p>
+        <p><strong>Le altre schede sul blackout.</strong> <a href="/formazione/schede-stampabili/blackout-primaria/">«Blackout: la casa senza corrente»</a> dà regole e kit, <a href="/formazione/schede-stampabili/blackout-infanzia/">«Quando va via la luce»</a> è per l'infanzia, <a href="/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/">«Blackout e servizi essenziali»</a> tratta i servizi della città e una prova di quindici minuti a casa. Questa è una simulazione in classe a tappe, con il tempo che passa e il conto della batteria. Fonte delle risposte: pagina <a href="/rischi-prevenzione/blackout/">«Blackout e interruzione servizi»</a> del sito.</p>
+        <p><strong>Che cosa osservare:</strong> il gruppo sceglie la torcia, tiene chiusi frigorifero e congelatore, risparmia la batteria, pensa a chi è solo. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini.</p>
       </div>
 
       <div class="soluzione-capovolta">
