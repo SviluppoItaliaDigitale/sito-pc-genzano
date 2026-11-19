@@ -646,7 +646,7 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 **Frasi naturali**: *"è corretto dal punto di vista sanitario?"*.
 
-**Cosa fa**: rivede primo soccorso (linee guida IRC), defibrillatori, caldo, pandemie, kit sanitari; mai consigli clinici individuali, sempre il 112; le schede sanitarie restano «da validare» finché non le firma un professionista.
+**Cosa fa**: rivede primo soccorso (linee guida IRC), defibrillatori, caldo, pandemie, kit sanitari; mai consigli clinici individuali, sempre il 112; ogni indicazione sanitaria cita il documento ufficiale da cui viene, che vale come validazione (decisione del 19/11/2026); i piani per una persona o una struttura precisa si personalizzano con il proprio sanitario.
 
 **Identità tecnica**: `pc-medico-emergenza`.
 
