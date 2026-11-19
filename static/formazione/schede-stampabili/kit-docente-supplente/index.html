@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Per il supplente — la sicurezza di questa classe in un foglio</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/kit-docente-supplente/">
+  <meta name="description" content="Foglio da compilare a cura della scuola e da lasciare sulla cattedra o nel registro, per tutti gli ordini: dov'è il piano di emergenza, aprifila e chiudifila, percorso e punto di raccolta, chi chiamare in segreteria, come aiutare gli alunni che ne hanno bisogno senza dati personali, e che cosa fa il supplente se suona l'allarme.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .ks { font-size: 0.93rem; line-height: 1.42; }
+    .ks p { margin: 0.3rem 0; }
+    .ks .scheda-h2 { margin: 0.6rem 0 0.25rem; }
+    .ks .scheda-campi-riga { margin-bottom: 0.38rem; }
+    .ks .scheda-campo-label { min-width: 0; flex: 0 1 auto; max-width: 62%; }
+    .ks .scheda-campo-linea { min-height: 1.45rem; min-width: 4.5rem; }
+    .ks-casella { display: inline-block; width: 1rem; height: 1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin: 0 0.25rem 0 0.6rem; }
+    .ks-privacy { margin: 0.4rem 0; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
+    .ks-privacy strong:first-child { color: #7a3d06; }
+    .ks-passi { list-style: none; padding: 0; margin: 0.25rem 0; counter-reset: passo; }
+    .ks-passi li { counter-increment: passo; display: flex; gap: 0.55rem; align-items: flex-start; padding: 0.24rem 0; border-bottom: 1px solid #e9ecef; }
+    .ks-passi li::before { content: counter(passo); flex-shrink: 0; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--scheda-blu); color: #fff; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+    .ks-casi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; margin: 0.25rem 0; }
+    .ks-casi div { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.3rem 0.5rem; }
+    .ks-casi strong { color: var(--scheda-blu); display: block; }
+    .ks-arrivo { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; }
+    .ks-arrivo ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+    .ks-icone { display: flex; gap: 0.5rem; align-items: center; margin: 0.2rem 0; }
+    .ks-icone img { width: 42px; height: 42px; }
+    .ks .scheda-docente p { margin: 0.2rem 0; }
+    .ks-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.3rem; }
+    .campi2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 1.2rem; }
+    @media (max-width: 600px) { .campi2 { grid-template-columns: minmax(0, 1fr); } }
+    @media (max-width: 600px) {
+      .ks-casi { grid-template-columns: minmax(0, 1fr); }
+      .ks .scheda-campi-riga { flex-wrap: wrap; }
+    }
+    @media print {
+      .ks-privacy, .ks-arrivo, .scheda-docente, .ks-passi li { break-inside: avoid; }
+    }
+    /* Stampa su fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-docente { margin-top: 0.5rem; padding: 0.5rem 0.7rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Per il supplente: la sicurezza di questa classe</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Per il supplente: la sicurezza di questa classe in un foglio</h1>
+        <div class="scheda-sottotitolo">Per adulti · Tutti gli ordini di scuola · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Chi la compila:</strong> il coordinatore di classe o il referente della sicurezza</span>
+      <span><strong>Dove si tiene:</strong> sulla cattedra o nel registro di classe</span>
+    </div>
+
+    <div class="ks">
+      <p class="scheda-intro">
+        Chi arriva in una classe per la prima volta non conosce il percorso di uscita, i nomi degli alunni né chi chiamare. Questo foglio lo compila la scuola, una volta all'anno o quando cambia qualcosa, e resta in classe per chiunque la prenda in carico.
+      </p>
+
+      <h2 class="scheda-h2">1. La classe e i segnali</h2>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Classe e sezione:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Plesso, piano e aula:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Planimetria con il percorso:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Piano di emergenza della scuola:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Segnale di evacuazione:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Segnale di fine emergenza:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Se il piano lo prevede, come si annuncia il «restare al chiuso»:</span><span class="scheda-campo-linea"></span></div>
+
+      <h2 class="scheda-h2">2. Uscire</h2>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Aprifila:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Sostituto dell'aprifila:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Chiudifila:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Sostituto del chiudifila:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Percorso (porta, corridoio, scala, uscita):</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Percorso alternativo, se il primo è bloccato:</span><span class="scheda-campo-linea"></span></div>
+      <div class="ks-icone"><img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Segnale di sicurezza verde: un gruppo di persone dentro un riquadro con quattro frecce verso il centro, punto di raccolta"><div class="scheda-campi-riga" style="flex:1;margin:0"><span class="scheda-campo-label">Punto di raccolta:</span><span class="scheda-campo-linea"></span></div></div>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Elenco della classe da portare fuori:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Modulo di evacuazione, se la scuola lo usa:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+
+      <h2 class="scheda-h2">3. Chi chiamare</h2>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Segreteria (interno o telefono):</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi coordina l'emergenza:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Collaboratore scolastico del piano:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Addetto al primo soccorso:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+
+      <h2 class="scheda-h2">4. Alunni che in emergenza hanno bisogno di aiuto</h2>
+      <p>In questa classe ci sono alunni che in un'emergenza hanno bisogno di un aiuto per spostarsi, capire o comunicare:<span class="ks-casella"></span>sì<span class="ks-casella"></span>no</p>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi li accompagna (ruolo, per esempio il docente di sostegno o un collaboratore):</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi custodisce la loro scheda di evacuazione personalizzata:</span><span class="scheda-campo-linea"></span></div>
+      <div class="ks-privacy">
+        <strong>Niente dati personali su questo foglio.</strong> Non si scrivono nomi accanto a diagnosi, farmaci o condizioni di salute: il foglio resta sulla cattedra e lo vede chiunque. Le informazioni stanno nella <a href="/formazione/schede-stampabili/evacuazione-personalizzata-pei/">scheda di evacuazione personalizzata</a>, che la scuola conserva con il fascicolo riservato e consegna a chi deve aiutare.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Per il supplente" · Tutti gli ordini · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Che cosa fai se suona l'allarme</div>
+        <div class="scheda-sottotitolo">Per il supplente · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="ks">
+      <div class="ks-arrivo">
+        <strong>Appena entri in classe, in due minuti</strong>
+        <ul>
+          <li>Leggi il foglio 1 e guarda la planimetria: dove si esce e dov'è il punto di raccolta.</li>
+          <li>Chiedi alla classe chi sono l'aprifila e il chiudifila. Di solito lo sanno.</li>
+          <li>Tieni a portata di mano l'elenco della classe e fai l'appello, così sai quanti sono.</li>
+        </ul>
+      </div>
+
+      <h2 class="scheda-h2">Al segnale di evacuazione</h2>
+      <ol class="ks-passi">
+        <li><span><strong>Interrompi la lezione.</strong> Gli alunni lasciano zaini e oggetti al loro posto.</span></li>
+        <li><span><strong>L'aprifila apre la porta</strong> e guida la fila lungo il percorso, al passo di chi è più lento.</span></li>
+        <li><span><strong>Prendi l'elenco della classe.</strong> Si esce in fila, senza correre, senza ascensore.</span></li>
+        <li><span><strong>Il chiudifila esce per ultimo</strong>, controlla che l'aula sia vuota e chiude la porta.</span></li>
+        <li><span><strong>Chi è fuori dall'aula</strong>, per esempio in bagno, esce con il primo adulto che incontra e raggiunge la classe al punto di raccolta. Tu non torni a cercarlo: lo segnali.</span></li>
+        <li><span><strong>Al punto di raccolta conta gli alunni</strong> con l'elenco e compila il modulo, se la scuola lo usa.</span></li>
+        <li><span><strong>Riferisci a chi coordina</strong> l'emergenza chi c'è e chi manca, e dove l'hai visto l'ultima volta. Non rientrare a cercare nessuno.</span></li>
+        <li><span><strong>Si rientra solo al segnale di fine emergenza</strong> o quando lo dice chi coordina.</span></li>
+      </ol>
+
+      <div class="ks-casi">
+        <div><strong>Scossa di terremoto</strong>Durante la scossa gli alunni si riparano sotto il banco, proteggono la testa e stanno lontano dalle finestre. Quando è finita, al segnale si esce.</div>
+        <div><strong>Percorso bloccato</strong>Se il fumo o un ostacolo chiudono il percorso, si usa quello alternativo scritto nel foglio 1 e lo si dice a chi coordina.</div>
+        <div><strong>Pericolo fuori</strong>Se la scuola decide di restare al chiuso, si resta in aula. Vedi la scheda <a href="/formazione/schede-stampabili/restare-al-chiuso/">Restare al riparo dentro la scuola</a>.</div>
+      </div>
+
+      <p>Se qualcuno sta male o vedi un pericolo, avvisa subito la segreteria e il collaboratore del piano. Se è grave, si chiama il <strong>112</strong>.</p>
+      <p>Gli alunni possono avere paura, ed è normale. Una voce calma e istruzioni brevi aiutano più di ogni spiegazione.</p>
+
+      <div class="scheda-docente">
+        <p><strong>Per la scuola.</strong> Compilate il foglio 1 per ogni classe a inizio anno e aggiornatelo quando cambiano aprifila, chiudifila, aula o percorso. Tenetelo dove il supplente lo trova senza chiedere: nella prima pagina del registro cartaceo o in una busta sulla cattedra. Il piano di emergenza resta il riferimento: se questo foglio dice una cosa diversa, vale il piano. Il personale ATA ha la sua <a href="/formazione/schede-stampabili/scheda-personale-ata/">scheda per collaboratori scolastici</a>; per la palestra c'è la scheda <a href="/formazione/schede-stampabili/educazione-fisica-palestra/">Prova o emergenza in palestra</a>.</p>
+        <p><strong>Fonti:</strong> Dipartimento della Protezione Civile, «In caso di terremoto»; D.M. 26 agosto 1992 (prevenzione incendi nell'edilizia scolastica); D.Lgs. 81/2008, artt. 18 e 43 (gestione delle emergenze). Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <p class="ks-attribuzione">Segnali di sicurezza: ISO 7010.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Per il supplente" · Tutti gli ordini · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>

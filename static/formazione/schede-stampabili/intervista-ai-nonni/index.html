@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Ti ricordi quella volta? Intervista a un nonno su un'emergenza vissuta</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/intervista-ai-nonni/">
+  <meta name="description" content="Scheda fotocopiabile per primaria e secondaria di primo grado: traccia per intervistare un nonno o un anziano del quartiere su un'emergenza vissuta (neve, terremoto, alluvione), con domande aperte, consigli per ascoltare con rispetto, che cosa annotare e come confrontare il racconto con le fonti. Con avvertenze su dati personali e consenso.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .in { font-size: 0.95rem; line-height: 1.45; }
+    .in p { margin: 0.35rem 0; }
+    .in .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+    .in-temi { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .in-temi li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; }
+    .in-temi strong { color: var(--scheda-blu); display: block; }
+    .in-ascolto { list-style: none; padding: 0; margin: 0.3rem 0; }
+    .in-ascolto li { display: flex; gap: 0.6rem; align-items: center; padding: 0.28rem 0; border-bottom: 1px solid #e9ecef; }
+    .in-ascolto img { width: 44px; height: 44px; flex-shrink: 0; }
+    .in-ascolto .in-senza-img { width: 44px; flex-shrink: 0; }
+    .in-domanda { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.6rem 0.2rem; margin: 0.35rem 0; break-inside: avoid; }
+    .in-domanda p { margin: 0 0 0.15rem; font-weight: 700; color: var(--scheda-blu); }
+    .in-righe { display: block; height: 2.6rem; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 1.25rem, var(--scheda-bordo) 1.25rem, var(--scheda-bordo) calc(1.25rem + 1px)); }
+    .in-annota { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
+    .in-annota ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+    .in-tabella { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.35rem 0; }
+    .in-tabella th, .in-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.3rem 0.45rem; vertical-align: top; text-align: left; }
+    .in-tabella th { background: #e7f0fa; color: var(--scheda-blu); }
+    .in-tabella td.in-vuota { height: 2.4rem; }
+    .in-fonti { margin: 0.3rem 0; padding-left: 1.1rem; }
+    .in-fonti li { margin: 0.15rem 0; }
+    .in .avvertenza { margin-top: 0.45rem; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
+    .in .avvertenza p { margin: 0.2rem 0; }
+    .in .scheda-docente p { margin: 0.25rem 0; }
+    .in-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+    @media (max-width: 600px) { .in-temi { grid-template-columns: minmax(0, 1fr); } }
+    @media print {
+      .in-ascolto img { width: 36px; height: 36px; }
+      .in-ascolto .in-senza-img { width: 36px; }
+      .in-ascolto li { padding: 0.18rem 0; }
+      .in .scheda-docente, .in .avvertenza, .in-annota { break-inside: avoid; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .in .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Intervista ai nonni</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Ti ricordi quella volta? Intervista a un nonno su un'emergenza vissuta</h1>
+        <div class="scheda-sottotitolo">Primaria (3ª-5ª) · Secondaria di primo grado · Foglio 1 di 3</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-14 anni</span>
+      <span><strong>Durata:</strong> 2 ore in classe + l'intervista a casa</span>
+      <span><strong>Discipline:</strong> Storia, Italiano, Educazione civica</span>
+    </div>
+
+    <div class="in">
+      <p class="scheda-intro">
+        I nonni ricordano cose che sui libri non ci sono: com'era la strada coperta di neve, chi ha bussato alla porta dopo una scossa, che cosa si è salvato dall'acqua. In questa scheda prepari un'intervista a un nonno, a una nonna o a una persona anziana che la tua famiglia conosce. Poi confronti il suo racconto con le fonti.
+      </p>
+
+      <h2 class="scheda-h2">Di che cosa parlare</h2>
+      <p>Scegliete insieme un'emergenza che la persona ha vissuto davvero. Per esempio:</p>
+      <ul class="in-temi">
+        <li><strong>Una nevicata forte</strong>Strade chiuse, scuole ferme, la corrente che manca.</li>
+        <li><strong>Un terremoto</strong>Anche una scossa sentita da lontano, o vissuta in un altro paese.</li>
+        <li><strong>Un'alluvione o una frana</strong>L'acqua in strada o in cantina, una via chiusa per giorni.</li>
+        <li><strong>Un'altra emergenza</strong>Un incendio vicino, un blackout lungo, un temporale che nessuno ha dimenticato.</li>
+      </ul>
+      <p>Questa intervista non parla di guerra: è un altro tema, con un altro peso, e chiede un lavoro diverso.</p>
+
+      <h2 class="scheda-h2">Come ascoltare con rispetto</h2>
+      <ul class="in-ascolto">
+        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una persona che ascolta con la mano dietro l'orecchio"><span><strong>Chiedi prima se ha voglia di raccontare.</strong> Puoi dire: «Mi racconti di quella volta che…?». Se dice di no, va bene così.</span></li>
+        <li><span class="in-senza-img" aria-hidden="true"></span><span><strong>Lascialo parlare.</strong> Non interrompere: le domande di chiarimento le fai alla fine.</span></li>
+        <li><span class="in-senza-img" aria-hidden="true"></span><span><strong>Non insistere</strong> sulle cose che non vuole dire. Non chiedere di persone ferite o morte.</span></li>
+        <li><span class="in-senza-img" aria-hidden="true"></span><span><strong>Se si commuove, fermati.</strong> Puoi dire: «Ci fermiamo un momento?». Ricordare un'emergenza può far tornare la paura di allora, anche dopo tanti anni.</span></li>
+        <li><img src="/pittogrammi/arasaac/aspettare.png" alt="Pittogramma: persone sedute che aspettano"><span><strong>Rispetta i suoi tempi.</strong> L'intervista si può fare in due volte.</span></li>
+        <li><span class="in-senza-img" aria-hidden="true"></span><span><strong>Alla fine ringrazia</strong> e chiedi se c'è qualcosa che non vuole far leggere ai compagni.</span></li>
+      </ul>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> La scheda lavora sulla memoria orale e sul confronto con le fonti. La scheda <a href="/formazione/schede-stampabili/intervista-volontario-primaria/">«Intervista al volontario»</a> fa un'altra cosa: chiede a chi fa protezione civile oggi che cosa fa. Le due possono stare nello stesso percorso.</p>
+        <p><strong>Prima ora:</strong> si legge il foglio 1 e si preparano le domande del foglio 2, aggiungendone di proprie. <strong>A casa:</strong> l'intervista, con un adulto della famiglia presente se l'intervistato non è un familiare. <strong>Seconda ora:</strong> il confronto con le fonti del foglio 3, in piccoli gruppi.</p>
+        <p><strong>Se un alunno non può intervistare un anziano</strong> (non ci sono nonni vicini, la famiglia preferisce di no, un lutto recente), può intervistare un altro adulto che conosce, lavorare in coppia con un compagno o partire dal racconto di una scheda «caso» del sito, come <a href="/formazione/schede-stampabili/caso-friuli-primaria/">il terremoto del Friuli</a>. Nessuno deve spiegare perché sceglie un'altra strada.</p>
+      </div>
+
+      <p class="in-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. La scheda eredita la stessa licenza.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Intervista ai nonni" · Primaria e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Le domande dell'intervista</div>
+        <div class="scheda-sottotitolo">Intervista ai nonni · Foglio 2 di 3</div>
+      </div>
+    </header>
+
+    <div class="in">
+      <p>Sono domande aperte: non si risponde con un sì o con un no. Puoi cambiarle, saltarne qualcuna o aggiungerne di tue. Scrivi poche parole per volta, oppure registra la voce, ma solo se la persona è d'accordo.</p>
+
+      <div class="in-domanda"><p>1. Quando è successo? Quanti anni avevi e dove abitavi?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>2. Dove eri in quel momento e che cosa stavi facendo?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>3. Che cosa hai visto e sentito? Che rumori, che odori, che tempo faceva?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>4. Come avete saputo che cosa stava succedendo? Chi vi ha avvisato?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>5. Che cosa avete fatto voi, in quelle ore? E nei giorni dopo?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>6. Chi vi ha aiutato? Avete aiutato qualcuno?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>7. Che cosa è cambiato dopo, nella tua famiglia o nel paese?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+      <div class="in-domanda"><p>8. Che cosa vorresti che sapessi io, se mi capitasse una cosa simile?</p><span class="in-righe" aria-label="Spazio per scrivere la risposta"></span></div>
+
+      <h2 class="scheda-h2">Che cosa annotare</h2>
+      <div class="in-annota">
+        <ul>
+          <li><strong>Le parole esatte</strong> di una frase che ti colpisce, fra virgolette.</li>
+          <li><strong>Le cose che si possono controllare:</strong> l'anno, il mese, la stagione, il paese, la via, che cosa diceva la radio o il giornale.</li>
+          <li><strong>Le emozioni</strong> come le racconta lui o lei, senza aggiungere le tue.</li>
+          <li><strong>Non scrivere</strong> il cognome, l'indirizzo, il numero di telefono, né i nomi di altre persone citate nel racconto.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Intervista ai nonni" · Primaria e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Il racconto e le fonti</div>
+        <div class="scheda-sottotitolo">Intervista ai nonni · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="in">
+      <p>La memoria è preziosa e, dopo tanti anni, a volte si confonde: un anno si sposta, due inverni diventano uno. Se una data non torna, non vuol dire che il racconto è falso. Vuol dire che lo storico, cioè tu, deve controllare. Le date si controllano sempre.</p>
+
+      <h2 class="scheda-h2">Controlla tre cose del racconto</h2>
+      <div class="scheda-tabella-scorrevole">
+        <table class="in-tabella">
+          <caption class="visually-hidden">Tabella da compilare: che cosa dice il racconto, che cosa controlli, dove, che cosa hai trovato</caption>
+          <thead>
+            <tr><th scope="col">Il racconto dice</th><th scope="col">Che cosa controllo</th><th scope="col">Dove lo controllo</th><th scope="col">Che cosa ho trovato</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="in-vuota"></td><td></td><td></td><td></td></tr>
+            <tr><td class="in-vuota"></td><td></td><td></td><td></td></tr>
+            <tr><td class="in-vuota"></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="scheda-h2">Dove cercare</h2>
+      <ul class="in-fonti">
+        <li><strong>Per un terremoto:</strong> i cataloghi dell'Istituto Nazionale di Geofisica e Vulcanologia (INGV), che raccolgono gli effetti dei terremoti paese per paese: emidius.mi.ingv.it/CPTI15-DBMI15/ e storing.ingv.it/cfti/cfti5/. Si cerca per nome del Comune.</li>
+        <li><strong>Per i grandi eventi italiani:</strong> la scheda del sito <a href="/formazione/schede-stampabili/eventi-pc-italiani-primaria/">«Eventi che hanno fatto la protezione civile italiana»</a> e le schede «caso» delle singole emergenze.</li>
+        <li><strong>Per una nevicata, un'alluvione o un evento locale:</strong> i giornali dell'epoca, che si consultano in biblioteca, e l'archivio del Comune.</li>
+        <li><strong>In casa:</strong> fotografie con la data sul retro, lettere, cartoline, un diario.</li>
+      </ul>
+
+      <h2 class="scheda-h2">Ieri e oggi</h2>
+      <p>Scrivi una cosa che allora si faceva in un modo e oggi si fa in un altro. Per esempio: oggi in emergenza si chiama un solo numero, il <strong>112</strong>; la Regione pubblica le allerte meteo con i codici colore; il Comune ha un piano di protezione civile con le aree di attesa.</p>
+      <span class="in-righe" aria-label="Spazio per scrivere il confronto fra ieri e oggi"></span>
+
+      <div class="avvertenza">
+        <p><strong>Per le famiglie e per il docente: dati personali e consenso.</strong> Il lavoro resta in classe. Sulla scheda non vanno cognomi, indirizzi, telefoni o nomi di altre persone citate nel racconto. Se la classe vuole condividere le interviste fuori dall'aula (una mostra, il giornalino, il sito della scuola), serve prima il consenso scritto della persona intervistata, che può chiedere di togliere parti del racconto. Una foto, una voce registrata o un video si pubblicano solo con quel consenso e secondo le regole della scuola sui dati personali (Regolamento UE 2016/679). Per le foto e le voci degli alunni serve il consenso di chi esercita la responsabilità genitoriale.</p>
+      </div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Che cosa osservare: l'alunno prepara domande aperte, ascolta senza interrompere, distingue ciò che si può controllare dalle emozioni, trova almeno una fonte e dice se il racconto coincide. Una data che non coincide è un buon risultato: apre la discussione su memoria e documenti. Se un racconto riporta un dolore ancora vivo, se ne parla con l'alunno da soli e non lo si legge in classe.</p>
+        <p>I cataloghi INGV riportano gli effetti dei terremoti per località; per i comportamenti di autoprotezione di oggi rimandate alle pagine <a href="/rischi-prevenzione/">«Rischi e prevenzione»</a> del sito. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Intervista ai nonni" · Primaria e secondaria di primo grado · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>
