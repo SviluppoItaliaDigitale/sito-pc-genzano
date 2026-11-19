@@ -36,17 +36,17 @@ In tarda mattinata la **SOUP** ci ha chiesto di intervenire per un altro **incen
 
 La bonifica serve a spegnere i focolai rimasti sotto la cenere, perché il fuoco non riparta. Il lavoro è durato circa **due ore** e si è chiuso verso le **13:30**.
 
-## Domenica 28 giugno: un ettaro in fiamme vicino alla zona industriale
+## Domenica 28 giugno: un ettaro di sterpaglie vicino alla zona industriale
 
-Poco prima delle **19** è arrivata la segnalazione di una **colonna di fumo** vicino alla **zona industriale di Genzano**, in **via del Lavoro**. Siamo usciti per verificare e abbiamo informato la SOUP.
+Poco prima delle **19** è arrivata la segnalazione di una **colonna di fumo** vicino alla **zona industriale di Genzano**, in **via del Lavoro**. Siamo usciti per verificare, con l'indicazione di informare la SOUP.
 
-Sul posto sono arrivati **cinque volontari** con il **Land Rover Defender 130**, che ha un modulo antincendio da 600 litri, e con il Mercedes Atego. Insieme ai **Vigili del fuoco** hanno spento circa **un ettaro di sterpaglie e uliveto**. L'intervento è durato circa due ore e mezza, fino a dopo le **21**.
+Sul posto sono arrivati **cinque volontari** con il **Land Rover Defender 130**, che ha un modulo antincendio da 600 litri, e con il Mercedes Atego. I volontari hanno spento circa **un ettaro di sterpaglie e uliveto**. Sul posto c'erano anche i **Vigili del fuoco**. L'intervento è durato circa due ore e mezza, fino a dopo le **21**.
 
 ## Lunedì 29 giugno: un ramo pericolante in via della Selva
 
 Poco prima delle **16** è stato segnalato un **ramo** in **via della Selva**, all'incrocio con via Pozzi Bonelli. **Due volontari** sono andati a verificare con il Land Rover Defender 130.
 
-Il ramo era **pericolante**. Su disposizione della **Polizia Locale**, presente sul posto, i volontari lo hanno rimosso e sistemato a lato della strada, sul suolo pubblico. È bastata circa mezz'ora.
+Il ramo era **pericolante**. Su disposizione della **Polizia Locale**, presente sul posto, i volontari lo hanno rimosso e sistemato su suolo pubblico. È bastata circa mezz'ora.
 
 ## Cosa impariamo
 

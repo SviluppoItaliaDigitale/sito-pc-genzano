@@ -17,25 +17,25 @@ social_citazione: "Se una pianta invade la strada o il marciapiede, non provare 
 social_punti:
   - "Sabato 4 aprile, poco dopo le 15: tagliamo una pianta vicino a un supermercato."
   - "Poco prima delle 18: un servizio tecnico in via della Selva, a Genzano."
-  - "Sono i primi due rapporti registrati con il nuovo gestionale del Gruppo."
+  - "Sono i primi due rapporti del 2026."
   - "Se c'è un pericolo immediato per le persone, chiama il 112."
 ---
 
-**Sabato 4 aprile 2026** una squadra di **due volontari** del Gruppo è intervenuta **due volte**, sempre con il pickup **EVO Cross 4**. Sono i primi due rapporti registrati con il [nuovo gestionale](/comunicazioni/2026-04-04-nuovo-gestionale/), annunciato dal Gruppo lo stesso giorno.
+**Sabato 4 aprile 2026** una squadra di **due volontari** del Gruppo è intervenuta **due volte**, sempre con il pickup **EVO Cross 4**. Sono i rapporti 1/2026 e 2/2026, i primi dell'anno, redatti nel giorno in cui il Gruppo ha annunciato il [nuovo gestionale](/comunicazioni/2026-04-04-nuovo-gestionale/).
 
 ## Poco dopo le 15: il taglio di una pianta
 
-Dopo una segnalazione, i volontari hanno raggiunto la zona di un supermercato per **tagliare una pianta**. Il lavoro è durato una decina di minuti.
+I volontari hanno raggiunto la zona di un supermercato per **tagliare una pianta**. Il lavoro è durato una decina di minuti.
 
 ## Poco prima delle 18: un servizio tecnico in via della Selva
 
-Nel tardo pomeriggio è arrivata una seconda segnalazione, da **via della Selva**, a Genzano di Roma. La squadra è intervenuta per un **servizio tecnico** e ha finito in circa un quarto d'ora.
+Nel tardo pomeriggio la squadra è stata chiamata in **via della Selva**, a Genzano di Roma. La squadra è intervenuta per un **servizio tecnico** e ha finito in circa un quarto d'ora.
 
 ## Cosa impariamo
 
 - **Ogni intervento ha il suo rapporto.** Dal 4 aprile il Gruppo registra ogni uscita nel gestionale: come funziona è spiegato nell'articolo sul [nuovo gestionale](/comunicazioni/2026-04-04-nuovo-gestionale/).
-- **Tagliare una pianta richiede attrezzatura e protezioni.** Lo fanno squadre preparate, con mezzi adatti: i mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
-- **Piante e rami cadono più facilmente con il vento.** Con il vento forte, [cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
+- **Il taglio di una pianta è lavoro per squadre attrezzate.** Il 4 aprile è bastato un pickup con due volontari; i mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
+- **Alberi e piante possono diventare un pericolo per la strada.** Con il vento forte, [cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
 
 ## Cosa puoi fare tu
 

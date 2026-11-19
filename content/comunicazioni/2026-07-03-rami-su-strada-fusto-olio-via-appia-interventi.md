@@ -40,7 +40,7 @@ Subito dopo sono andati in **via Pozzi Bonelli**, dove la Polizia Locale aveva c
 
 ## In tarda mattinata: via Roma e via Pellegrini
 
-Poco dopo le **11** **due volontari** sono intervenuti in **via Roma** e subito dopo in **via Pellegrini**. Erano due interventi per **alberi e rami su suolo pubblico**, di circa dieci minuti ciascuno. Il registro non riporta altri dettagli.
+Poco dopo le **11** **due volontari** sono intervenuti in **via Roma** e subito dopo in **via Pellegrini**. Erano due interventi per **alberi e rami su suolo pubblico**, di una decina di minuti ciascuno. Per questi due interventi non abbiamo altri dettagli.
 
 ## Venerdì 3 luglio: un ramo pericolante in via Berlinguer
 

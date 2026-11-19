@@ -17,7 +17,7 @@ social_citazione: "Se vedi una colonna di fumo, chiama il 112 e indica Comune, l
 social_punti:
   - "Mercoledì 3 giugno, verso le 17: una colonna di fumo in via di Valle Verta, a Genzano."
   - "Tre volontari partono con l'Iveco VM90 su richiesta della Sala Operativa regionale."
-  - "Bruciati circa 3.000 metri di boscaglia; sul posto Vigili del fuoco e Protezione Civile di Lanuvio."
+  - "Secondo il rapporto, bruciati circa 3.000 metri di boscaglia; sul posto Vigili del fuoco e Protezione Civile di Lanuvio."
   - "Se vedi un incendio, chiama il 112."
 ---
 
@@ -31,9 +31,9 @@ Secondo il rapporto, sono bruciati **circa 3.000 metri di boscaglia**. Il serviz
 
 ## Cosa impariamo
 
-- **Nell'interfaccia il fuoco può arrivare alle case.** Il bosco confina con strade e abitazioni. Come difendere la casa è spiegato nella pagina sul [rischio incendio](/rischi-prevenzione/rischio-incendio/).
+- **Nell'interfaccia il fuoco è vicino alle case.** È la definizione stessa di incendio di interfaccia: vegetazione accanto a strade e abitazioni. Come difendere la casa è spiegato nella pagina sul [rischio incendio](/rischi-prevenzione/rischio-incendio/).
 - **Una colonna di fumo va sempre verificata.** La Sala Operativa regionale ci ha inviato proprio per controllare il fumo. I mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
-- **Sul fuoco lavorano più squadre insieme.** In via di Valle Verta c'erano anche i Vigili del fuoco e i volontari di Lanuvio.
+- **Sul fuoco lavorano più squadre insieme.** In via di Valle Verta c'erano anche i Vigili del fuoco e la Protezione Civile di Lanuvio.
 
 ## Cosa puoi fare tu
 

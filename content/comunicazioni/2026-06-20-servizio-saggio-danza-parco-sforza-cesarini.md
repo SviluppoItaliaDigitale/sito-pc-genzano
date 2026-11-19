@@ -46,9 +46,9 @@ La presenza dei mezzi non è scenografica: garantisce che, in caso di necessità
 
 ## Una verifica durante la serata
 
-Poco dopo le 22 è arrivata la segnalazione di un possibile incendio di sterpaglie in **via delle Vigne Nuove**. Tre volontari sono partiti dal parco con il Mercedes Atego per verificare, tenendo informata la Sala Operativa Unificata Permanente (SOUP) della Regione Lazio.
+Poco dopo le 22 è arrivata la segnalazione di un possibile incendio di sterpaglie in **via delle Vigne Nuove**. Tre volontari sono partiti dal parco con il Mercedes Atego per verificare, con l'indicazione di avvisare la Sala Operativa Unificata Permanente (SOUP) della Regione Lazio.
 
-Sul posto non c'era nessun incendio. La squadra è rientrata al Parco Sforza Cesarini e ha ripreso il presidio fino alla fine della serata. Controllare una segnalazione che poi non si conferma è parte normale del lavoro: se vedi fumo, chiama sempre il **112**.
+Sul posto non c'era nessun incendio. La squadra è rientrata al Parco Sforza Cesarini per proseguire il servizio. Controllare una segnalazione che poi non si conferma è parte normale del lavoro: se vedi fumo, chiama sempre il **112**.
 
 ## Cosa fa (e cosa non fa) il volontariato durante un evento
 

@@ -25,9 +25,9 @@ Fra **sabato 6** e **lunedì 22 giugno 2026** i volontari del Gruppo sono interv
 
 ## Sabato 6 giugno: un ramo in via Ercole Imbastari
 
-Verso le 16 la Polizia Locale ci ha chiesto di intervenire in **via Ercole Imbastari**. Un **ramo pericolante** era caduto su un'auto. **Tre volontari** sono arrivati con il **Fiat Doblò** e hanno rimosso il ramo in circa mezz'ora.
+Verso le 16 la Polizia Locale ci ha chiesto di intervenire in **via Ercole Imbastari**. La caduta di un **ramo pericolante** aveva interessato un'auto. **Tre volontari** sono arrivati con il **Fiat Doblò** e hanno rimosso il ramo in circa mezz'ora.
 
-L'auto colpita era già stata spostata. Per questo i volontari hanno lavorato da soli, senza bisogno della Polizia Locale sul posto.
+L'auto interessata era già stata spostata. Per questo i volontari hanno lavorato da soli, senza bisogno della Polizia Locale sul posto.
 
 ## Mercoledì 17 giugno: tre piante in piazza Dante Alighieri
 
@@ -39,13 +39,13 @@ Poco prima delle 18 è arrivata la segnalazione di un **ramo caduto su un'auto**
 
 ## Lunedì 22 giugno: un albero sulla strada in via Appia Vecchia
 
-Verso le 17 la Polizia Locale ci ha chiesto di intervenire in **via Appia Vecchia**, nella zona di Castello San Gennaro. Un **albero** era caduto sulla carreggiata e la strada era **chiusa**. **Tre volontari** sono arrivati con il Fiat Doblò e hanno lavorato per circa tre quarti d'ora.
+Poco prima delle 17 la Polizia Locale ci ha chiesto di intervenire in **via Appia Vecchia**, nella zona di Castello San Gennaro. Un **albero** era caduto sulla carreggiata e la strada era **chiusa**. **Tre volontari** sono arrivati con il Fiat Doblò e hanno lavorato per circa tre quarti d'ora.
 
 ## Cosa impariamo
 
-- **Un ramo pericolante può cadere sulle auto in sosta.** In via Imbastari ha colpito un'auto: [cosa fare con il vento forte](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
+- **Un ramo pericolante può cadere sulle auto in sosta.** In via Imbastari la caduta di un ramo ha interessato un'auto: [cosa fare con il vento forte](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
 - **Anche le piante dei luoghi pubblici vanno messe in sicurezza.** In piazza Dante il Sindaco ci ha chiesto di intervenire su tre piante.
-- **Un albero sulla carreggiata ferma la strada.** In via Appia Vecchia la strada era chiusa mentre i volontari lavoravano; i mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
+- **Un albero sulla carreggiata ferma la strada.** In via Appia Vecchia la strada risultava chiusa quando siamo stati chiamati; i mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
 
 ## Cosa puoi fare tu
 

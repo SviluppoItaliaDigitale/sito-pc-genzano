@@ -21,7 +21,7 @@ social_punti:
   - "Verso le 15 e mezza: tagliato un ramo caduto su un parcheggio in via Napoli."
 ---
 
-**Domenica 10 maggio 2026** i volontari del Gruppo sono intervenuti **quattro volte** a Genzano di Roma. Due interventi riguardavano piante e rami in **via Napoli**, due le segnalazioni di una **voragine** sulla strada.
+**Domenica 10 maggio 2026** i volontari del Gruppo sono intervenuti **quattro volte** a Genzano di Roma. Due interventi riguardavano piante e rami in **via Napoli**, due le segnalazioni di una **voragine**, in due vie diverse.
 
 ## Dalla mattina: una pianta da tagliare in via Napoli
 
@@ -29,18 +29,18 @@ Verso le **10** la **Polizia Locale** ci ha chiesto di tagliare una pianta in **
 
 ## Nel pomeriggio: le segnalazioni di voragine in via Stati Uniti d'America e in viale delle Regioni
 
-Poco dopo le **15** è arrivata la segnalazione di una **voragine** sul manto stradale in **via Stati Uniti d'America**. Due volontari l'hanno raggiunta con il pickup **EVO Cross 4**. Insieme alla **Polizia Locale** hanno **transennato** la voragine, in circa tre quarti d'ora.
+Poco dopo le **15** è arrivata la segnalazione di una **voragine** sul manto stradale in **via Stati Uniti d'America**. Due volontari l'hanno raggiunta. Insieme alla **Polizia Locale** hanno **transennato** la voragine, in circa tre quarti d'ora.
 
 Negli stessi minuti, dopo un'altra segnalazione, altri due volontari hanno eseguito un **controllo di una voragine** in **viale delle Regioni**. Il controllo è durato poco più di dieci minuti.
 
 ## Verso le 15 e mezza: un ramo caduto su un parcheggio in via Napoli
 
-Su richiesta della **Polizia Locale**, due volontari sono tornati in **via Napoli** con l'EVO Cross 4. Un **ramo** era caduto su un parcheggio. Nessuna automobile è stata coinvolta. I volontari hanno tagliato il ramo e hanno finito verso le **16**.
+Su richiesta della **Polizia Locale**, due volontari sono andati in **via Napoli** con l'EVO Cross 4. Un **ramo** era caduto su un parcheggio. Nessuna automobile è stata coinvolta. I volontari hanno tagliato il ramo e hanno finito verso le **16**.
 
 ## Cosa impariamo
 
 - **Dopo un taglio controlliamo anche le piante vicine.** In via Napoli la verifica ha riguardato le altre piante della zona. Su alberi e rami, [cosa fare prima, durante e dopo il vento forte](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
-- **Una voragine va delimitata subito.** In via Stati Uniti d'America le transenne, messe con la Polizia Locale, tengono lontani pedoni e veicoli. I recapiti della Polizia Locale sono nei [numeri utili](/numeri-utili/).
+- **Una voragine va delimitata subito.** In via Stati Uniti d'America la voragine è stata transennata insieme alla Polizia Locale. I recapiti della Polizia Locale sono nei [numeri utili](/numeri-utili/).
 - **Lavoriamo insieme alla Polizia Locale.** In via Napoli e in via Stati Uniti d'America eravamo con loro. I mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
 
 ## Cosa puoi fare tu

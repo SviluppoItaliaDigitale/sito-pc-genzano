@@ -21,7 +21,7 @@ social_punti:
   - "Se vedi un incendio, chiama il 112."
 ---
 
-A fine maggio 2026 la **Sala Operativa regionale** ci ha attivato **tre volte** per **incendi di sterpaglie**. È successo **giovedì 21**, **sabato 23** e **sabato 30**. Ogni volta è partita una squadra con un mezzo antincendio.
+A fine maggio 2026 la **Sala Operativa regionale** ci ha attivato **tre volte** per **incendi di sterpaglie**. È successo **giovedì 21**, **sabato 23** e **sabato 30**. Ogni volta è partita una squadra con mezzi antincendio.
 
 ## Giovedì 21 maggio: via Campoleone, ad Aprilia
 
@@ -41,7 +41,7 @@ Sono partiti **tre volontari** con il Land Rover Defender 130. Il servizio è du
 
 ## Cosa impariamo
 
-- **Gli incendi di sterpaglie iniziano già a maggio.** Tre attivazioni in dieci giorni sono arrivate prima della campagna antincendio estiva. Come prevenirli è spiegato nella pagina sul [rischio incendio](/rischi-prevenzione/rischio-incendio/).
+- **Gli incendi di sterpaglie iniziano già a maggio.** Tre attivazioni in dieci giorni, ancora a maggio. Come prevenirli è spiegato nella pagina sul [rischio incendio](/rischi-prevenzione/rischio-incendio/).
 - **La Sala Operativa regionale dice che cosa serve.** A volte chiede un modulo antincendio, altre volte le foto della situazione. I mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
 - **Andiamo anche fuori dal Comune.** Il 21 maggio la squadra ha lavorato ad Aprilia, su attivazione della Sala Operativa regionale.
 

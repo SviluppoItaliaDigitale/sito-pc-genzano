@@ -17,7 +17,7 @@ social_citazione: "Se vedi un ramo a terra sulla strada, non provare a spostarlo
 social_punti:
   - "Venerdì 17 aprile, verso le 18: la Polizia Locale ci chiama in via Emilia Romagna."
   - "Due volontari tagliano un ramo a terra."
-  - "Poi assistono i Vigili del fuoco nell'abbattimento di un albero."
+  - "Assistono i Vigili del fuoco nell'abbattimento di un albero."
   - "Se c'è un pericolo immediato per le persone, chiama il 112."
 ---
 
@@ -27,7 +27,7 @@ social_punti:
 
 La **Polizia Locale** ci ha chiesto di intervenire in via Emilia Romagna. Sono arrivati **due volontari** con il pickup **EVO Cross 4**.
 
-Per prima cosa i volontari hanno **tagliato un ramo a terra**. Poi hanno **assistito i Vigili del fuoco** nell'**abbattimento di un albero**. L'intervento si è chiuso verso le 19:30.
+Il rapporto registra due attività: il **taglio di un ramo a terra** e l'**assistenza ai Vigili del fuoco** per l'**abbattimento di un albero**. L'intervento si è chiuso verso le 19:30.
 
 ## Cosa impariamo
 

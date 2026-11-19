@@ -1,7 +1,7 @@
 ---
 title: "L'Infiorata e due incendi di sterpaglie: gli interventi dal 13 al 15 giugno"
 date: 2026-06-15T00:03:00+02:00
-description: "Dal 13 al 15 giugno i volontari hanno presidiato l'Infiorata; domenica 14 l'Atego è intervenuto su due incendi di sterpaglie."
+description: "Dal 13 al 15 giugno i volontari hanno prestato servizio all'Infiorata; domenica 14 l'Atego è intervenuto su due incendi di sterpaglie."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -14,7 +14,7 @@ social: false
 tts: true
 social_citazione: "Se vedi fumo o fiamme fra le sterpaglie, allontanati e chiama subito il 112."
 social_punti:
-  - "Sabato 13 giugno: 16 volontari presidiano i varchi delle aree pedonali dell'Infiorata."
+  - "Sabato 13 giugno: 16 volontari in servizio per l'Infiorata, su richiesta della Polizia Locale."
   - "Domenica 14 giugno: 19 volontari in servizio per l'Infiorata, dal mattino fino a notte."
   - "Lo stesso giorno il Mercedes Atego interviene su due incendi di sterpaglie, uno lungo la ferrovia."
   - "Lunedì 15 giugno: 7 volontari chiudono il servizio dell'Infiorata."
@@ -23,9 +23,9 @@ draft: false
 
 Dal **13 al 15 giugno 2026** i volontari del Gruppo hanno prestato servizio per l'**Infiorata di Genzano**, su richiesta della **Polizia Locale** e del **Comune**. Domenica 14, nella stessa giornata, la squadra antincendio con il **Mercedes Atego** è uscita per **due incendi di sterpaglie**.
 
-## Sabato 13 giugno: il presidio dei varchi
+## Sabato 13 giugno: il primo giorno di Infiorata
 
-Su richiesta della Polizia Locale, **sedici volontari** hanno presidiato i **varchi di accesso alle aree pedonali dell'Infiorata**. Hanno dato anche **informazione al pubblico** su accessi e percorsi. Il servizio è iniziato verso le 9 ed è durato per tutta la giornata, fino a notte.
+Su richiesta della Polizia Locale, **sedici volontari** hanno prestato servizio per l'Infiorata, con la Polizia Locale sul posto. Accessi e viabilità restano compiti della Polizia Locale. Il servizio è iniziato verso le 9 ed è durato per tutta la giornata, fino a notte.
 
 Erano impiegati l'**Iveco VM90**, l'**EVO Cross 4**, il **Land Rover Defender 130**, il **Fiat Doblò** e il **Mercedes Atego**. Sul posto c'era la Polizia Locale.
 
@@ -37,7 +37,7 @@ Il servizio è ripreso verso le 8 con **diciannove volontari** ed è andato avan
 
 Verso le 11 è arrivata la segnalazione di un **incendio di sterpi** in **via Valle Verta**, a Genzano. Con l'autorizzazione della **Sala Operativa regionale** sono partiti **tre volontari** con il **Mercedes Atego**, il mezzo con impianto antincendio da 6.000 litri. Era in arrivo anche un modulo antincendio da Lanuvio.
 
-Poco dopo mezzogiorno la Sala Operativa regionale ha chiesto all'Atego di **lasciare quell'intervento**. Doveva raggiungere con urgenza un **incendio lungo la ferrovia**. La squadra ha lavorato prima a **Lanuvio, in via Crocette**. Poi si è spostata a **Cecchina**, nel comune di Albano Laziale, in via Friuli, vicino al passaggio a livello di via Tor Palizzi. Sul posto c'erano i **Carabinieri**. I volontari sono rientrati verso le 18, dopo quasi sei ore.
+Poco dopo mezzogiorno la Sala Operativa regionale ha chiesto all'Atego di **lasciare quell'intervento**. Doveva raggiungere con urgenza un **incendio lungo la ferrovia**. La squadra ha lavorato prima a **Lanuvio, in via Crocette**. Poi si è spostata a **Cecchina**, nel comune di Albano Laziale, in via Friuli, a ridosso del passaggio ferroviario. Sul posto c'erano i **Carabinieri**. Questo secondo intervento è durato quasi sei ore e si è chiuso verso le 18.
 
 ## Lunedì 15 giugno: l'ultimo giorno
 
@@ -58,7 +58,7 @@ Il volontariato di Protezione Civile **non può svolgere regolazione del traffic
 ## Cosa puoi fare tu
 
 - **Se vedi fumo o fiamme fra le sterpaglie**, allontanati e chiama subito il 112.
-- **Durante un evento affollato** segui le indicazioni dei volontari ai varchi e tieni d'occhio i bambini.
+- **Durante un evento affollato** segui le indicazioni della Polizia Locale e degli organizzatori e tieni d'occhio i bambini.
 - **Non accendere fuochi all'aperto** vicino a erba secca e sterpaglie. Per le segnalazioni non urgenti usa i [numeri utili](/numeri-utili/).
 
 Il Gruppo Comunale non può essere attivato direttamente dai cittadini. In emergenza chiama il **112**.

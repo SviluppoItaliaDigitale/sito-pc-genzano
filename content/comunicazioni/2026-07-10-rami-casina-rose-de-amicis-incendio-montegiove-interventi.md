@@ -31,7 +31,7 @@ Sono arrivati **tre volontari** con il **Land Rover Defender 130**. Con la Poliz
 
 ## Giovedì 9 luglio: un ramo in via De Amicis
 
-Verso le **17:30** la Polizia Locale ci ha chiesto un altro intervento in **via De Amicis**, vicino alle **scuole medie**. Anche qui c'era un **ramo penzolante**.
+Poco dopo le **17** la Polizia Locale ci ha chiesto un altro intervento in **via De Amicis**, vicino alle **scuole medie**. Anche qui c'era un **ramo penzolante**.
 
 **Tre volontari** con il Land Rover Defender 130 lo hanno rimosso con lo **sramatore**, l'attrezzo per tagliare i rami in alto. È bastata circa mezz'ora.
 
@@ -43,7 +43,7 @@ Sul posto c'erano anche i **Carabinieri**. L'intervento è durato circa **40 min
 
 ## Cosa impariamo
 
-- **Un ramo rimasto appeso può cadere in qualsiasi momento.** In via De Amicis i volontari lo hanno rimosso prima che cadesse. Con il vento forte, [cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
+- **Un ramo rimasto appeso può cadere in qualsiasi momento.** In via De Amicis i volontari lo hanno rimosso con lo sramatore. Con il vento forte, [cosa fare prima, durante e dopo](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
 - **Per i rami in alto servono gli attrezzi giusti.** In via De Amicis è servito lo sramatore; i mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
 - **A luglio le sterpaglie prendono fuoco facilmente.** In via Montegiove sono intervenuti sei volontari con due mezzi. Come prevenire e come comportarsi è nella pagina sul [rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/).
 

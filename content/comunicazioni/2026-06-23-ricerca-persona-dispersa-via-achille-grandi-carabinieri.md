@@ -25,14 +25,14 @@ draft: false
 
 ## La perlustrazione in via Achille Grandi
 
-La richiesta è arrivata poco prima delle 18. **Tre volontari** hanno controllato con attenzione la zona indicata dai Carabinieri e hanno riferito direttamente a loro. La perlustrazione è durata circa un quarto d'ora.
+La richiesta è arrivata poco prima delle 18. **Tre volontari** hanno controllato con attenzione la zona indicata dai Carabinieri. La richiesta prevedeva di inviare le informazioni in privato. La perlustrazione è durata circa un quarto d'ora.
 
-La ricerca era coordinata dai Carabinieri. Per rispetto della persona e dei suoi familiari non diamo altri dettagli.
+La richiesta è partita dai Carabinieri. Per rispetto della persona e dei suoi familiari non diamo altri dettagli.
 
 ## Cosa impariamo
 
 - **Nelle ricerche di persone il Gruppo lavora a supporto delle Forze dell'Ordine.** Il 23 giugno la squadra ha seguito le indicazioni dei Carabinieri; chi siamo e come lavoriamo è nella pagina [Chi siamo](/chi-siamo/).
-- **Le informazioni di una ricerca restano riservate.** I volontari hanno riferito solo ai Carabinieri, senza diffondere nulla.
+- **Le informazioni di una ricerca restano riservate.** La richiesta dei Carabinieri chiedeva di inviare le informazioni in privato, non di diffonderle.
 
 ## Cosa puoi fare tu
 
