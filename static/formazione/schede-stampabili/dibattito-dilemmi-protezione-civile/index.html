@@ -37,6 +37,16 @@
       .dd-dilemma { padding: 0.35rem 0.6rem; margin: 0.35rem 0; }
       .dd-dilemma, .dd .scheda-docente, .dd-metodo { break-inside: avoid; }
     }
+    /* Stampa su 4 fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .dd .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
   </style>
 </head>
 <body>
@@ -56,7 +66,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h1 class="scheda-titolo-principale">Decidere sotto incertezza: quattro dilemmi da dibattere</h1>
-        <div class="scheda-sottotitolo">Secondaria di secondo grado · Foglio 1 di 3</div>
+        <div class="scheda-sottotitolo">Secondaria di secondo grado · Foglio 1 di 4</div>
       </div>
     </header>
 
@@ -91,20 +101,6 @@
         <p class="dd-fonte">Fonte: Dipartimento della Protezione Civile, pagina «Campi Flegrei» (rischi.protezionecivile.gov.it), letta il 19/11/2026. Per approfondire: <a href="/formazione/schede-stampabili/caso-campi-flegrei-secondaria2/">scheda Campi Flegrei</a>.</p>
       </div>
 
-      <div class="dd-dilemma">
-        <h2 class="scheda-h2">Dilemma 2. Chiudere le scuole con l'allerta per temporali?</h2>
-        <div class="dd-mozione">«Con l'allerta arancione per temporali il Sindaco dovrebbe chiudere sempre le scuole.»<span>Il caso di partenza: un comune qualsiasi del Lazio, un giorno di allerta.</span></div>
-        <ul class="dd-fatti">
-          <li>I Centri funzionali valutano il rischio per ogni <strong>zona di allerta</strong>, confrontando i fenomeni previsti con soglie di riferimento. Lo stesso fenomeno può dare livelli diversi in zone diverse.</li>
-          <li>È il <strong>Sindaco</strong>, allertato dalla Regione, che decide le misure del piano comunale e informa la popolazione: per esempio la chiusura di un ponte o delle scuole.</li>
-          <li>Secondo il Dipartimento, i temporali hanno un'elevata incertezza su <strong>dove</strong>, <strong>quando</strong> e <strong>quanto</strong> colpiranno. Per i temporali il livello più alto previsto è l'arancione.</li>
-        </ul>
-        <div class="dd-valori">
-          <div><strong>Per la mozione:</strong> una regola fissa è chiara per tutti e toglie ragazzi e famiglie dalle strade durante il picco.</div>
-          <div><strong>Contro la mozione:</strong> il temporale può colpire altrove; ragazzi a casa da soli o per strada possono essere meno al sicuro che in un edificio scolastico.</div>
-        </div>
-        <p class="dd-fonte">Fonti: DPC, «Il sistema di allertamento nazionale»; DPC, Indicazioni operative del 10 febbraio 2016, allegato 1 (livelli di criticità e scenari), letti il 19/11/2026. Per approfondire: <a href="/formazione/schede-stampabili/restare-al-chiuso/">Restare al riparo dentro la scuola</a>.</p>
-      </div>
     </div>
 
     <footer class="scheda-footer">
@@ -120,12 +116,27 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <div class="scheda-titolo-principale" role="heading" aria-level="2">Altri due dilemmi</div>
-        <div class="scheda-sottotitolo">Decidere sotto incertezza · Foglio 2 di 3</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Il secondo e il terzo dilemma</div>
+        <div class="scheda-sottotitolo">Decidere sotto incertezza · Foglio 2 di 4</div>
       </div>
     </header>
 
     <div class="dd">
+      <div class="dd-dilemma">
+        <h2 class="scheda-h2">Dilemma 2. Chiudere le scuole con l'allerta per temporali?</h2>
+        <div class="dd-mozione">«Con l'allerta arancione per temporali il Sindaco dovrebbe chiudere sempre le scuole.»<span>Il caso di partenza: un comune qualsiasi del Lazio, un giorno di allerta.</span></div>
+        <ul class="dd-fatti">
+          <li>I Centri funzionali valutano il rischio per ogni <strong>zona di allerta</strong>, confrontando i fenomeni previsti con soglie di riferimento. Lo stesso fenomeno può dare livelli diversi in zone diverse.</li>
+          <li>È il <strong>Sindaco</strong>, allertato dalla Regione, che decide le misure del piano comunale e informa la popolazione: per esempio la chiusura di un ponte o delle scuole.</li>
+          <li>Secondo il Dipartimento, i temporali hanno un'elevata incertezza su <strong>dove</strong>, <strong>quando</strong> e <strong>quanto</strong> colpiranno. Per i temporali il livello più alto previsto è l'arancione.</li>
+        </ul>
+        <div class="dd-valori">
+          <div><strong>Per la mozione:</strong> una regola fissa è chiara per tutti e toglie ragazzi e famiglie dalle strade durante il picco.</div>
+          <div><strong>Contro la mozione:</strong> il temporale può colpire altrove; ragazzi a casa da soli o per strada possono essere meno al sicuro che in un edificio scolastico.</div>
+        </div>
+        <p class="dd-fonte">Fonti: DPC, «Il sistema di allertamento nazionale»; DPC, Indicazioni operative del 10 febbraio 2016, allegato 1 (livelli di criticità e scenari), letti il 19/11/2026. Per approfondire: <a href="/formazione/schede-stampabili/restare-al-chiuso/">Restare al riparo dentro la scuola</a>.</p>
+      </div>
+
       <div class="dd-dilemma">
         <h2 class="scheda-h2">Dilemma 3. Ricostruire dove c'era l'alluvione?</h2>
         <div class="dd-mozione">«Dopo un'alluvione, le case nelle aree allagabili non si ricostruiscono lì: si spostano.»<span>Il caso di partenza: i dati nazionali dell'ISPRA.</span></div>
@@ -142,6 +153,27 @@
         <p class="dd-fonte">Fonte: ISPRA, «Dissesto idrogeologico in Italia: pericolosità e indicatori di rischio», edizione 2024 (Rapporti 415/2025), sintesi, letta il 19/11/2026. Diverso dal tema della scheda per la secondaria di primo grado, che riguarda il rischio sismico.</p>
       </div>
 
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Decidere sotto incertezza" · Secondaria II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Il quarto dilemma e la preparazione</div>
+        <div class="scheda-sottotitolo">Decidere sotto incertezza · Foglio 3 di 4</div>
+      </div>
+    </header>
+
+    <div class="dd">
       <div class="dd-dilemma">
         <h2 class="scheda-h2">Dilemma 4. Comunicare un rischio incerto</h2>
         <div class="dd-mozione">«Quando la scienza non è sicura, è meglio non dare l'allerta, per non creare allarme.»<span>Il caso di partenza: come funzionano le allerte e che cosa non si può prevedere.</span></div>
@@ -187,7 +219,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <div class="scheda-titolo-principale" role="heading" aria-level="2">Dopo il dibattito</div>
-        <div class="scheda-sottotitolo">Decidere sotto incertezza · Foglio 3 di 3</div>
+        <div class="scheda-sottotitolo">Decidere sotto incertezza · Foglio 4 di 4</div>
       </div>
     </header>
 
