@@ -3,6 +3,7 @@ title: "Dal 1° giugno è estate meteorologica: il bilancio della primavera"
 date: 2026-06-24T00:01:00+02:00
 description: "In meteorologia l'estate inizia il 1° giugno, non al solstizio. Un bilancio della primavera 2026 e delle tendenze in corso."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-24-inizio-estate-meteorologica-bilancio-primavera.webp"
@@ -11,6 +12,8 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+# Falso positivo del controllo sulla data di uscita: «l'estate meteorologica inizia il 1° giugno» è una definizione, non un annuncio datato.
+controllo_data_uscita: false
 ---
 
 Quando si parla di **stagioni** esiste un doppio calendario: quello **astronomico** (solstizi ed equinozi) e quello **meteorologico** (trimestri fissi). Dal **1° giugno** è iniziata ufficialmente l'**estate meteorologica**, che dura fino al **31 agosto**. Questa convenzione facilita i confronti tra anni e la costruzione di serie storiche climatiche.

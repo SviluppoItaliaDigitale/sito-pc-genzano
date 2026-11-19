@@ -9,6 +9,7 @@ sitemap:
 aliases:
   - /emergenza-essenziale/
   - /lite/
+glossario_inline: false
 ---
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 {{< pagina-emergenza-lite >}}

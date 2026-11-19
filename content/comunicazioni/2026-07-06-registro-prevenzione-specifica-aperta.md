@@ -3,6 +3,7 @@ title: "Il registro dei disastri che non sono successi, la specifica aperta dell
 date: 2026-07-06T00:02:00+02:00
 description: "Tre novità: il registro pubblico delle allerte gestite, la matrice come formato aperto con endpoint JSON e la pagina che ti porta all'ingresso giusto."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-06-registro-prevenzione-specifica-aperta.webp"

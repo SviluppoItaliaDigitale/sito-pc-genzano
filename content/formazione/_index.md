@@ -15,7 +15,7 @@ Scegli il percorso più adatto al tuo bisogno.
 
 <div class="row g-3 mb-4">
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un cittadino</h2><p>Leggi le azioni di autoprotezione per terremoto, alluvione, incendio, temporali, vento, caldo, blackout ed evacuazione.</p><a href="/formazione/cosa-fare-in-caso-di/" class="btn btn-primary">Apri la guida per il cittadino</a></div></div></div>
-<div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un docente</h2><p>Trova kit didattici, schede stampabili, percorsi pronti, attività inclusive e materiali per educazione civica.</p><a href="/formazione/scuole-da-dove-cominciare/" class="btn btn-primary">Scegli i materiali per la scuola</a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un docente</h2><p>Trova kit didattici, schede stampabili, percorsi pronti, attività inclusive e materiali per educazione civica.</p><a href="/scuole/" class="btn btn-primary">Scegli i materiali per la scuola</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio diventare volontario</h2><p>Scopri requisiti, corso base, impegno richiesto e modalità di adesione al Gruppo Comunale.</p><a href="/diventa-volontario/" class="btn btn-primary">Leggi come diventare volontario</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Cerco materiali accessibili</h2><p>Consulta kit e schede per anziani, persone con disabilità, caregiver, bambini fragili e persone con difficoltà linguistiche.</p><a href="/formazione/kit-fragilita-vulnerabilita/" class="btn btn-primary">Vai ai kit accessibili</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio imparare giocando</h2><p>Apri giochi educativi gratuiti per infanzia, primaria, ragazzi e famiglie, senza registrazione.</p><a href="/giochi/" class="btn btn-primary">Apri i giochi della sicurezza</a> <a href="/catalogo-giochi/" class="btn btn-outline-primary mt-2 mt-md-0">Catalogo informativo</a></div></div></div>
@@ -54,7 +54,7 @@ Il sito raccoglie materiali per docenti, studenti e famiglie. Sono disponibili k
 Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai materiali già pronti.
 
 <div class="consulta-rapida">
-{{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
+{{< link-card url="/scuole/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
 {{< link-card url="/formazione/programma-dell-anno/" icon="bi-calendar3" titolo="Programma dell'anno" desc="Cinque incontri da ottobre a maggio per ogni età, con le lezioni già composte e il lavoro finale della classe." >}}
 {{< link-card url="/formazione/il-gruppo-a-scuola/" icon="bi-people" titolo="Il Gruppo nella tua scuola" desc="Incontri in classe, prove di evacuazione affiancate, giornate di plesso e uscite con i volontari." >}}
 {{< link-card url="/formazione/verifica-prima-e-dopo/" icon="bi-clipboard-data" titolo="Verifica prima e dopo" desc="Cinque domande senza voto e senza nomi per capire che cosa ha imparato la classe." >}}
@@ -137,7 +137,7 @@ Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle c
 
 ## Vedi anche
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/) — materiali per ruolo
+- [Scuole — parti da qui](/scuole/) — materiali per ruolo
 - [Educazione civica](/formazione/educazione-civica/) — moduli per docenti
 - [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per scenario
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo

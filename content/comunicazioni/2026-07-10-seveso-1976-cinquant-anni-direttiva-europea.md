@@ -4,6 +4,7 @@ date: 2026-07-10T00:02:00+02:00
 description: "A mezzogiorno di sabato 10 luglio 1976 una nube di diossina TCDD si sprigionò dallo stabilimento ICMESA di Meda, contaminando Seveso e i comuni vicini."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-10-seveso-1976-cinquant-anni-direttiva-europea.webp"

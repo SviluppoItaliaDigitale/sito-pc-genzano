@@ -3,6 +3,7 @@ title: "Buon anno scolastico: le schede di protezione civile per chi vuole parla
 date: 2026-09-14T00:02:00+02:00
 description: "Lunedì 14 settembre a Genzano si torna in classe. Auguri a studenti, docenti e famiglie: sul sito c'è materiale di protezione civile pronto da stampare."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-14-buon-anno-scolastico-schede-didattiche.webp"
@@ -39,7 +40,7 @@ Il materiale è organizzato per fascia, perché a quattro anni e a diciassette a
 
 Tutte le schede stanno anche in un unico posto, l'**[archivio delle schede stampabili](/formazione/schede-stampabili/)**, dove si cercano per parola o si filtrano per fascia. Ogni fascia ha un pacchetto «Stampa tutto» e un archivio da scaricare, che funziona anche senza collegamento: torna utile quando la rete della scuola non aiuta.
 
-Per chi insegna ci sono la pagina su [educazione civica e protezione civile](/formazione/educazione-civica/), una [checklist per preparare la lezione](/formazione/scuole-checklist-docente/) e, per chi non sa da dove partire, [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/). Per le famiglie c'è [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/): quello che si può continuare a casa, senza compiti.
+Per chi insegna ci sono la pagina su [educazione civica e protezione civile](/formazione/educazione-civica/), una [checklist per preparare la lezione](/formazione/scuole-checklist-docente/) e, per chi non sa da dove partire, [Scuole — parti da qui](/scuole/). Per le famiglie c'è [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/): quello che si può continuare a casa, senza compiti.
 
 ## Che cosa sono, e che cosa non sono
 

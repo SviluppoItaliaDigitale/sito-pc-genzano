@@ -3,6 +3,7 @@ title: "Chi non può uscire da solo: la sicurezza in ospedali, residenze e carce
 date: 2026-11-21T00:02:00+01:00
 description: "Come si pianifica la sicurezza di chi vive in ospedali, residenze per anziani, strutture per persone con disabilità e carceri, e che cosa può fare un familiare."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-21-evacuare-chi-non-puo-muoversi.webp"

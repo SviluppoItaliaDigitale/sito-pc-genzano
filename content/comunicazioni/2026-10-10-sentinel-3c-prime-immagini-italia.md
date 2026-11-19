@@ -3,6 +3,7 @@ title: "Sentinel-3C manda le prime immagini: c'è anche l'Italia"
 date: 2026-10-10T00:04:00+02:00
 description: "Due settimane dopo il lancio, il nuovo satellite europeo Sentinel-3C ha inviato le prime immagini e misure. Servirà anche per seguire incendi, siccità e mari."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-10-sentinel-3c-prime-immagini-italia.webp"

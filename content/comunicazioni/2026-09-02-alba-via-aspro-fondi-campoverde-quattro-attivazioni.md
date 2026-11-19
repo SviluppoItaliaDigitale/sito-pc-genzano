@@ -3,6 +3,7 @@ title: "Dall'alba in via dell'Aspro alla Pontina: quattro attivazioni in un gior
 date: 2026-09-02T00:03:00+02:00
 description: "Il 2 settembre il Gruppo ha rifornito d'acqua i Vigili del Fuoco a Genzano, portato una cella frigo da Fondi e bonificato due canneti a Campoverde."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-02-alba-via-aspro-fondi-campoverde-quattro-attivazioni.webp"

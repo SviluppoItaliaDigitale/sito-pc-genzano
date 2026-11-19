@@ -3,6 +3,7 @@ title: "Disabilità in emergenza: piani accessibili e inclusivi"
 date: 2026-07-23
 description: "In emergenza le persone con disabilità affrontano ostacoli aggiuntivi. Piani, strutture e procedure devono essere pensati fin dall'inizio come inclusivi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-23-disabilita-emergenza-piani-accessibili.webp"

@@ -3,6 +3,7 @@ title: "La nascita del Dipartimento della Protezione Civile: una storia italiana
 date: 2026-04-29T00:03:00+02:00
 description: "Dalla notte dell'Irpinia al Codice del 2018: come l'Italia ha costruito, in quarant'anni di leggi e di errori imparati."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-29-nascita-dipartimento-protezione-civile-italia.webp"

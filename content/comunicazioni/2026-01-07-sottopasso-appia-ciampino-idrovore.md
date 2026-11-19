@@ -3,6 +3,7 @@ title: "Intervento al sottopasso allagato dell'Appia a Ciampino"
 date: 2026-01-07
 description: "Il 7 gennaio le squadre di Genzano e Albano hanno usato le idrovore al sottopasso dell'Appia, vicino all'aeroporto di Ciampino."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-07-sottopasso-appia-ciampino-idrovore.webp"

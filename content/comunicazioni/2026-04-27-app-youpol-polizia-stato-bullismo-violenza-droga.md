@@ -3,6 +3,7 @@ title: "YouPol: l'app della Polizia di Stato per segnalare bullismo, droga e vio
 date: 2026-04-27T00:03:00+02:00
 description: "YouPol è l'app ufficiale della Polizia di Stato per segnalare in modo anonimo o registrato episodi di bullismo, spaccio di droga."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga.webp"

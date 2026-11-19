@@ -3,6 +3,7 @@ title: "28 aprile: la sicurezza sul lavoro riguarda anche i volontari"
 date: 2026-04-28T00:01:00+02:00
 description: "La Giornata mondiale sulla sicurezza del lavoro ricorda il diritto a lavorare in sicurezza."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari.webp"

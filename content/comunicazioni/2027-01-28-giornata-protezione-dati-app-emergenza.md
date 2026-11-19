@@ -3,6 +3,7 @@ title: "28 gennaio, Giornata della protezione dei dati: che cosa sanno di te IT-
 date: 2027-01-28
 description: "IT-alert non raccoglie dati personali. L'app 112 Where ARE U invia la tua posizione quando chiami. Come funzionano e come difendersi da messaggi falsi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-28-giornata-protezione-dati-app-emergenza.webp"

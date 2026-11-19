@@ -3,6 +3,7 @@ title: "Dal lago di Nemi all'incendio di Velletri: la doppia giornata delle squa
 date: 2026-08-29T00:02:00+02:00
 description: "Sabato 29 agosto: la mattina il supporto alla pulizia dei fondali del lago di Nemi, il pomeriggio quasi sei ore su un vasto incendio a Velletri."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-29-pulizia-lago-nemi-incendio-velletri.webp"

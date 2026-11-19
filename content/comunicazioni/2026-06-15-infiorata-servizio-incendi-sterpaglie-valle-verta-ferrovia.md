@@ -3,6 +3,7 @@ title: "L'Infiorata e due incendi di sterpaglie: gli interventi dal 13 al 15 giu
 date: 2026-06-15T00:03:00+02:00
 description: "Dal 13 al 15 giugno i volontari hanno prestato servizio all'Infiorata; domenica 14 l'Atego è intervenuto su due incendi di sterpaglie."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-15-infiorata-servizio-incendi-sterpaglie-valle-verta-ferrovia.webp"

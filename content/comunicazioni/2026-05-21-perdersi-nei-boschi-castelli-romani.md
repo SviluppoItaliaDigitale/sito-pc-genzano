@@ -3,6 +3,7 @@ title: "Perdersi in bosco: come evitarlo e cosa fare se succede"
 date: 2026-05-21
 description: "I boschi dei Castelli Romani sono splendidi e frequentati. Come pianificare un'escursione in sicurezza, cosa portare, cosa fare se ci si disorienta."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-21-perdersi-nei-boschi-castelli-romani.webp"

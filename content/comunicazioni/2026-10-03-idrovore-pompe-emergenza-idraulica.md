@@ -3,6 +3,7 @@ title: "Idrovore e pompe: l'attrezzatura chiave in emergenza idraulica"
 date: 2026-10-03T00:02:00+02:00
 description: "Quando l'acqua invade garage, scantinati, ambienti a rischio, le idrovore fanno la differenza. Come funzionano e come si usano in emergenza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-03-idrovore-pompe-emergenza-idraulica.webp"

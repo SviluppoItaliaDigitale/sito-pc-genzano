@@ -3,6 +3,7 @@ title: "Incendi boschivi: nel 2025 la superficie bruciata è quasi raddoppiata. 
 date: 2026-06-16T00:02:00+02:00
 description: "Nel 2025 in Italia il fuoco ha percorso 965 km², quasi il doppio del 2024 (dati ISPRA-EFFIS). Sicilia, Calabria e Campania le regioni più colpite."
 badge: "Informazione"
+canale: "italia"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-16-ispra-incendi-2025-superficie-bruciata-prevenzione.webp"
@@ -76,7 +77,7 @@ In caso di incendio boschivo chiama il **112**, il numero unico per le emergenze
 **Sul nostro sito:**
 
 - [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/) — comportamenti prima, durante e dopo, e cosa non fare.
-- [Cruscotto del territorio](/cruscotto/) — la mappa incendi EFFIS e i dati di rischio in tempo reale.
+- [Cruscotto e dati in tempo reale](/cruscotto/) — la mappa incendi EFFIS e i dati di rischio in tempo reale.
 - [Sentinel-1C: il radar che misura il suolo dallo spazio](/comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo/) — come funziona l'osservazione satellitare.
 
 **Fonti istituzionali:**

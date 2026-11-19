@@ -3,6 +3,7 @@ title: "Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-
 date: 2026-05-15T00:02:00+02:00
 description: "Il sistema italiano IT-alert è coerente con uno standard internazionale che dice come si progetta un'allerta pubblica davvero efficace."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-15-iso-22322-public-warning-it-alert.webp"

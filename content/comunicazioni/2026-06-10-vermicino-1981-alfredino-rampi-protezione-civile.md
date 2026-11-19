@@ -4,6 +4,7 @@ date: 2026-06-10T00:02:00+02:00
 description: "Quarantacinque anni fa il piccolo Alfredo Rampi, sei anni, cadeva in un pozzo artesiano lungo la via di Vermicino, nei Castelli Romani."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-10-vermicino-1981-alfredino-rampi-protezione-civile.webp"

@@ -3,6 +3,7 @@ title: "Incendi boschivi in un video: come nascono e come comportarsi"
 date: 2026-09-24T00:02:00+02:00
 description: "Un video di due minuti, con voce e sottotitoli, spiega come nasce un incendio boschivo e cosa fare, dai bambini agli adulti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-24-incendi-boschivi-video.webp"

@@ -3,6 +3,7 @@ title: "Sant'Antonio Abate: tradizione dei fuochi e rischio incendi"
 date: 2026-01-17
 description: "Il 17 gennaio molte comunità accendono i fuochi di Sant'Antonio Abate. Una tradizione viva che richiede precauzioni precise contro il rischio incendi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-17-sant-antonio-abate-fuochi-tradizione-sicurezza.webp"

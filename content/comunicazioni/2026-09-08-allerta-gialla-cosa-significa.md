@@ -3,6 +3,7 @@ title: "Allerta gialla: cosa significa davvero e cosa fare"
 date: 2026-09-08
 description: "L'allerta gialla non è un falso allarme e non è un'emergenza: è un livello di attenzione. Come leggerla e come comportarsi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-08-allerta-gialla-cosa-significa.webp"

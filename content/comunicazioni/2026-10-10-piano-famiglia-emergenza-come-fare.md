@@ -3,6 +3,7 @@ title: "Il Piano di Emergenza Familiare: scriverlo in un'ora, vale per anni"
 date: 2026-10-10T00:01:00+02:00
 description: "Un Piano di Emergenza Familiare è un documento semplice che si scrive in un'ora e può salvare vite. Cosa contiene, come si fa."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-10-piano-famiglia-emergenza-come-fare.webp"

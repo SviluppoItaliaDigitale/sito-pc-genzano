@@ -3,6 +3,7 @@ title: "IT-alert: cosa è, come funziona, come reagire al prossimo test"
 date: 2026-08-27T00:01:00+02:00
 description: "IT-alert è il sistema nazionale di allarme pubblico via cellulare. Come riconoscerlo, cosa fare al suono, perché è importante."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-27-it-alert-test-settembre-cosa-sapere.webp"

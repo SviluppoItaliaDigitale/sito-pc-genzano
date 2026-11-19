@@ -3,6 +3,7 @@ title: "La ricerca dispersi: come funziona e chi la coordina"
 date: 2026-05-25T00:01:00+02:00
 description: "Un anziano che non rientra, un escursionista non arrivato, un bambino che si allontana: la ricerca dispersi è una disciplina tecnica con protocolli precisi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-25-ricerca-dispersi-soccorso-volontariato.webp"

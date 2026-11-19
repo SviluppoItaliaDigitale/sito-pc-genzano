@@ -3,6 +3,7 @@ title: "Santa Venerina, 29 ottobre 2002: il terremoto sul fianco dell'Etna in er
 date: 2027-10-29
 description: "Venticinque anni fa una scossa colpì il versante orientale dell'Etna, già in eruzione: oltre 3.000 edifici inagibili nella sequenza e 1.120 persone assistite."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-10-29-santa-venerina-2002-terremoto-etna.webp"

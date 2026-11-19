@@ -3,6 +3,7 @@ title: "Festa del Pane 2026 e Corsa del Pane: strade chiuse, percorsi alternativ
 date: 2026-09-18T00:02:00+02:00
 description: "Festa del Pane e Corsa del Pane, 18-20 settembre: strade chiuse, percorsi alternativi e bus deviati. I volontari del Gruppo sono in piazza: vieni a trovarci."
 badge: "Evento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-18-festa-del-pane-2026-corsa-viabilita-volontari-in-piazza.webp"

@@ -3,6 +3,7 @@ title: "Tromba d'aria a Roma: cos'è successo e perché è un fenomeno raro"
 date: 2026-06-03T00:05:00+02:00
 description: "Il 3 giugno 2026 una tromba d'aria ha colpito Roma nord. Cos'è, come si forma, perché è rara in città e come proteggersi nei temporali forti."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-tromba-aria-roma-fenomeno-raro.webp"

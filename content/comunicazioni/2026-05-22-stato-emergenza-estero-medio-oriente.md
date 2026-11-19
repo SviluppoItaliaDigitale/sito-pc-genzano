@@ -3,6 +3,7 @@ title: "Medio Oriente: 12 mesi di stato di emergenza per l'intervento all'estero
 date: 2026-05-22T00:10:00+02:00
 description: "Il Consiglio dei ministri dichiara lo stato di emergenza per intervento all'estero per Gaza, Cisgiordania e Libano: 12 mesi e 2 milioni di euro."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-22-stato-emergenza-estero-medio-oriente.webp"

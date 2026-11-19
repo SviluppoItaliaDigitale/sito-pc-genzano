@@ -3,6 +3,7 @@ title: "Come si misura la pioggia: pluviometri, radar e satelliti al servizio de
 date: 2026-09-17
 description: "Un millimetro di pioggia è un litro d'acqua su un metro quadrato. Da questo numero, misurato da 238 stazioni nel Lazio, nasce il sistema di allerta."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-17-come-si-misura-la-pioggia-pluviometri-radar.webp"

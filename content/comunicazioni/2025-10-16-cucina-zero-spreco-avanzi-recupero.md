@@ -3,6 +3,7 @@ title: "Giornata mondiale dell'alimentazione: cucina a zero spreco e recupero de
 date: 2025-10-16
 description: "Bucce, gambi, foglie esterne, acqua di cottura, pane raffermo: cosa sembra scarto e invece è ingrediente."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-10-16-cucina-zero-spreco-avanzi-recupero.webp"

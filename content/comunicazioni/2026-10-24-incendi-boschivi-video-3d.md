@@ -3,6 +3,7 @@ title: "Il fuoco nei nostri boschi: un video in 3D sugli incendi boschivi"
 date: 2026-10-24T00:03:00+02:00
 description: "Un video di meno di due minuti, con voce e sottotitoli, mostra sul rilievo dei Castelli Romani come nasce e corre un incendio boschivo e cosa fare."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-24-incendi-boschivi-video-3d.webp"

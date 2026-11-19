@@ -3,6 +3,7 @@ title: "Quarantacinque anni di volontariato: la storia del Gruppo Comunale di Ge
 date: 2026-04-05
 description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1991, alla flotta moderna: la storia del Gruppo Comunale di Genzano di Roma."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni.webp"

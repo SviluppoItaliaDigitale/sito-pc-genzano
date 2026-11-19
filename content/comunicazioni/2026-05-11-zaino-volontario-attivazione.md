@@ -3,6 +3,7 @@ title: "Lo zaino del volontario: cosa portare in attivazione"
 date: 2026-05-11
 description: "Quando suona l'attivazione, non c'è tempo di preparare tutto. Lo zaino del volontario è pronto da prima: cosa contiene, come si organizza."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-11-zaino-volontario-attivazione.webp"

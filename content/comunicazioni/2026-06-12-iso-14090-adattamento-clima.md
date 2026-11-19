@@ -3,6 +3,7 @@ title: "Quando il clima cambia, cambia anche la PC: ISO 14090 e l'adattamento"
 date: 2026-06-12T00:02:00+02:00
 description: "Ondate di calore, siccità, eventi meteo estremi: il cambiamento climatico modifica i rischi della Protezione Civile."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-12-iso-14090-adattamento-clima.webp"

@@ -3,6 +3,7 @@ title: "L'emergenza vista da chi viene soccorso: aree, accoglienza e rientro a c
 date: 2026-11-15T00:02:00+01:00
 description: "Che cosa succede a chi lascia casa in emergenza: area di attesa, accoglienza, documenti, specifiche necessità, dignità e verifiche di agibilità."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-15-chi-viene-soccorso.webp"

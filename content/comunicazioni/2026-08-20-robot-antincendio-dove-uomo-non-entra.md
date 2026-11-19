@@ -3,6 +3,7 @@ title: "Robot antincendio: dove l'uomo non può entrare"
 date: 2026-08-20T00:02:00+02:00
 description: "Da Notre-Dame in fiamme ai cingolati che ventilano le gallerie: cosa fanno davvero i robot antincendio e perché non sostituiranno i soccorritori."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-20-robot-antincendio-dove-uomo-non-entra.webp"

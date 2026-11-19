@@ -3,6 +3,7 @@ title: "Il Corpo Forestale dei Carabinieri e la Protezione Civile"
 date: 2026-07-06T00:01:00+02:00
 description: "Dal 2017 il vecchio Corpo Forestale è confluito nei Carabinieri. Un ruolo centrale nella protezione del territorio e nelle indagini su incendi boschivi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-06-corpo-forestale-carabinieri-ruolo.webp"

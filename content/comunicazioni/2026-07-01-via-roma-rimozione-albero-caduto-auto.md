@@ -3,6 +3,7 @@ title: "Genzano, via Roma: rimosso un albero caduto su alcune auto in sosta"
 date: 2026-07-01T00:02:00+02:00
 description: "I volontari del Gruppo sono intervenuti in via Roma per rimuovere un albero spezzato caduto su alcune auto in sosta e mettere in sicurezza l'area."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-01-via-roma-rimozione-albero-caduto-auto.webp"

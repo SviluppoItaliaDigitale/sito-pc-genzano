@@ -3,6 +3,7 @@ title: "Regione Lazio: dopo 12 anni nasce la Scuola di Alta Formazione di Protez
 date: 2026-04-29T00:02:00+02:00
 description: "La Giunta regionale del Lazio ha approvato il regolamento della Scuola di Alta Formazione di Protezione Civile."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-29-regione-lazio-scuola-alta-formazione-protezione-civile.webp"

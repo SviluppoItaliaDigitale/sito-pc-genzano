@@ -3,6 +3,7 @@ title: "Si spengono i fornelli di Fondi: 6.800 pasti in 45 giorni, il grazie del
 date: 2026-08-19T00:03:00+02:00
 description: "Chiusa il 18 agosto la Mensa del Gemellaggio AIB di Fondi: 45 giorni, 22 associazioni, 150 volontari e 6.800 pasti. Nel bilancio anche il nostro Gruppo."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-19-mensa-gemellaggio-fondi-bilancio-finale.webp"

@@ -3,6 +3,7 @@ title: "Halloween in sicurezza: consigli per genitori e bambini"
 date: 2026-10-30T00:01:00+01:00
 description: "Halloween può essere divertente, ma porta bambini in giro la sera. Alcuni consigli di sicurezza semplici per rendere la festa serena."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-30-halloween-sicurezza-bambini.webp"

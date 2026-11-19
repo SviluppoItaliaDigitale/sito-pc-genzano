@@ -3,6 +3,7 @@ title: "Sisma Centro Italia 2016: la ricostruzione prorogata fino al 2029, anche
 date: 2026-10-07T00:03:00+02:00
 description: "La legge 174/2026 prolunga al 2029 la gestione straordinaria della ricostruzione nei territori del Lazio, Abruzzo, Marche e Umbria colpiti dal sisma del 2016."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-07-proroga-ricostruzione-sisma-centro-italia-2016.webp"

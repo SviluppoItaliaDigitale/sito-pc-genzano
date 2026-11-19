@@ -3,6 +3,7 @@ title: "Corso di Formazione Base per nuovi volontari"
 date: 2025-03-10T00:01:00+01:00
 description: "A marzo parte il nuovo ciclo di formazione per i volontari appena iscritti al Gruppo."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-03-10-formazione-base.webp"

@@ -3,6 +3,7 @@ title: "Il Gruppo al primo Angelus di Papa Leone XIV a Castel Gandolfo"
 date: 2026-07-13T00:03:00+02:00
 description: "Domenica 12 luglio una nostra squadra ha assistito la popolazione al primo Angelus estivo di Leone XIV, su richiesta della Sala Operativa regionale."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-13-assistenza-angelus-papa-castel-gandolfo.webp"

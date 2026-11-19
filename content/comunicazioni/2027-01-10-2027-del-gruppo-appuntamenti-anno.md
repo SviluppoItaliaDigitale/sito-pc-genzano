@@ -3,6 +3,7 @@ title: "Il 2027 del Gruppo: gli appuntamenti già in calendario"
 date: 2027-01-10
 description: "Controlli del kit, campagna antincendio, Settimana della protezione civile, giornate del volontariato: le date del 2027 che già conosciamo e quelle ancora da fissare."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-10-2027-del-gruppo-appuntamenti-anno.webp"

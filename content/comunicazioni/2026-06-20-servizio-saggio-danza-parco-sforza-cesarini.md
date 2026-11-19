@@ -3,6 +3,7 @@ title: "Volontari di presidio al saggio di danza nel Parco Sforza Cesarini"
 date: 2026-06-20T00:02:00+02:00
 description: "Sabato 20 giugno, i nostri volontari hanno garantito presidio di sicurezza e antincendio al saggio di danza nel Parco Sforza Cesarini di Genzano."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-20-servizio-saggio-danza-parco-sforza-cesarini.webp"

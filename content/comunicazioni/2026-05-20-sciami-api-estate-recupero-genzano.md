@@ -3,6 +3,7 @@ title: "Sciami d'api in estate: cosa fare, chi chiamare, perché non hanno bisog
 date: 2026-05-20T00:02:00+02:00
 description: "Il 20 maggio è la Giornata Mondiale delle Api: in estate il recupero degli sciami spetta a Vigili del Fuoco e apicoltori professionisti."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-20-sciami-api-estate-recupero-genzano.webp"

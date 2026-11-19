@@ -3,6 +3,7 @@ title: "Scuole chiuse per neve o maltempo: chi lo decide e dove leggerlo"
 date: 2027-02-16
 description: "La chiusura delle scuole per maltempo la decide il Sindaco con un'ordinanza. Dove trovarla, perché un'allerta non chiude da sola le scuole e come non cadere nei messaggi falsi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-16-scuole-chiuse-maltempo-chi-decide.webp"

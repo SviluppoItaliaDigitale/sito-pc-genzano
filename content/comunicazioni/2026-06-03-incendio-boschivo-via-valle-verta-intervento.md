@@ -3,6 +3,7 @@ title: "Un incendio di boscaglia in via di Valle Verta: l'intervento del 3 giugn
 date: 2026-06-03T00:06:00+02:00
 description: "Mercoledì 3 giugno tre volontari con l'Iveco VM90 hanno verificato una colonna di fumo in via di Valle Verta: un incendio vicino alle case."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-incendio-boschivo-via-valle-verta-intervento.webp"

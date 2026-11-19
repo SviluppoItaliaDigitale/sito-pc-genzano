@@ -3,6 +3,7 @@ title: "Santo Stefano: riflessione tra Natale e nuovo anno"
 date: 2026-12-26T00:01:00+01:00
 description: "Il 26 dicembre è Santo Stefano. Un giorno di pausa tra Natale e nuovo anno, per riposo e riflessione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-26-santo-stefano-protomartire.webp"

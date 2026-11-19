@@ -3,6 +3,7 @@ title: "Incendio a Velletri in via delle Noci: in campo con le squadre di Marino
 date: 2026-07-17T00:02:00+02:00
 description: "Su richiesta della SOUP regionale la nostra squadra ha supportato i Vigili del Fuoco e i gruppi di protezione civile di Marino, Ariccia e Velletri."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-17-incendio-velletri-via-delle-noci.webp"

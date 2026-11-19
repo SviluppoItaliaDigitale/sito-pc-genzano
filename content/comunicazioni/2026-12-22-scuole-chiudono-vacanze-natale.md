@@ -3,6 +3,7 @@ title: "Scuole chiuse per Natale: bambini, famiglie, attenzioni"
 date: 2026-12-22
 description: "Inizia la pausa scolastica natalizia. Consigli pratici per famiglie, gestione del tempo e attenzioni ai bambini."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-22-scuole-chiudono-vacanze-natale.webp"

@@ -3,6 +3,7 @@ title: "Il 2026 del Gruppo: un anno di interventi raccontato con i numeri"
 date: 2027-01-08
 description: "Incendi, alberi caduti, maltempo, eventi in piazza: il 2026 del Gruppo Comunale con i dati del registro interventi dal 4 aprile al 13 novembre."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-08-2026-del-gruppo-bilancio-anno.webp"

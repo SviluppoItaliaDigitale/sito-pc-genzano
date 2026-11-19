@@ -3,6 +3,7 @@ title: "Radiocomunicazioni di base per il volontariato di Protezione Civile"
 date: 2026-06-27
 description: "In emergenza la rete telefonica può saltare. La radio resta uno degli strumenti più affidabili per il coordinamento. Introduzione alle radiocomunicazioni di PC."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-27-radiocomunicazioni-base-volontari-pc.webp"

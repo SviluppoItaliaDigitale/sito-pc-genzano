@@ -3,6 +3,7 @@ title: "25 dicembre: buon Natale a Genzano di Roma"
 date: 2026-12-25
 description: "Il nostro augurio di buon Natale a tutta la cittadinanza di Genzano di Roma."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-25-natale-auguri-genzano.webp"

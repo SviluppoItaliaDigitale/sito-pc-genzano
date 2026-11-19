@@ -3,6 +3,7 @@ title: "Maltempo a Genzano: ventidue interventi del Gruppo tra la notte del 7 e 
 date: 2026-10-08T00:03:00+02:00
 description: "Dalla tarda sera del 7 ottobre alla sera dell'8: rami sulle strade, un albero colpito da un fulmine, allagamenti, un sottopasso e due chiusini divelti."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-08-maltempo-genzano-interventi-protezione-civile.webp"

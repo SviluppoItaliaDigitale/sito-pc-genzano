@@ -3,6 +3,7 @@ title: "Alluvioni lampo (flash flood): cosa sono e come proteggersi"
 date: 2026-07-11
 description: "In pochi minuti un torrente asciutto può diventare una massa travolgente. Le alluvioni lampo sono un rischio estivo sottovalutato: come riconoscerle e evitarle."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-11-alluvioni-lampo-cosa-sono-come-proteggersi.webp"

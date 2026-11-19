@@ -3,6 +3,7 @@ title: "I volontari del Gruppo in servizio alla Sala Operativa Regionale di Prot
 date: 2026-06-28T00:03:00+02:00
 description: "Una squadra del Gruppo ha prestato servizio alla Sala Operativa Regionale del Lazio: presa in carico delle segnalazioni via radio e numero 803 555."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-28-servizio-sala-operativa-regionale.webp"

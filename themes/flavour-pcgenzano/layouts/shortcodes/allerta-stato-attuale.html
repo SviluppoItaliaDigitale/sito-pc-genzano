@@ -58,6 +58,33 @@
   {{- end -}}
 {{- end -}}
 
+{{- /* Avviso meteo avverso (vento, neve, caldo, gelo, mareggiate), dal
+       19/11/2026: prima compariva solo in homepage e questa pagina diceva
+       «Nessuna allerta» senza nominarlo. È un rischio diverso dalla
+       criticità idrogeologica, quindi resta un blocco a sé, con le sue date.
+       Si mostra se non è già scaduto al momento della build; il browser lo
+       nasconde alla scadenza (data-fine) anche su HTML non ricostruito. */ -}}
+{{- $avvTipo := "" -}}{{- $avvLiv := "" -}}{{- $avvUrl := "" -}}{{- $avvFine := "" -}}
+{{- $avvDal := "" -}}{{- $avvAl := "" -}}{{- $avvInVigore := false -}}
+{{- with $allerta.avviso_meteo -}}
+  {{- $al := index $norm (lower (string (.livello | default ""))) | default (lower (string (.livello | default ""))) -}}
+  {{- if and .tipo (in (slice "gialla" "arancione" "rossa") $al) -}}
+    {{- $ri := try (time.AsTime (.validita_inizio | default "")) -}}
+    {{- $rf := try (time.AsTime (.validita_fine | default "")) -}}
+    {{- if and (not $ri.Err) (not $rf.Err) .validita_inizio .validita_fine -}}
+      {{- if gt $rf.Value.Unix now.Unix -}}
+        {{- $avvTipo = .tipo -}}{{- $avvLiv = $al -}}{{- $avvUrl = .url | default "" -}}
+        {{- $avvFine = $rf.Value.Format "2006-01-02T15:04:05-07:00" -}}
+        {{- $giorni := slice "domenica" "lunedì" "martedì" "mercoledì" "giovedì" "venerdì" "sabato" -}}
+        {{- /* Le date del data file portano già lo scarto italiano (+01:00/+02:00). */ -}}{{- $ti := $ri.Value -}}{{- $tf := $rf.Value -}}
+        {{- $avvDal = printf "%s %d %s" (index $giorni (int $ti.Weekday)) $ti.Day (index $mesi (int $ti.Month)) -}}
+        {{- $avvAl = printf "%s %d %s alle %02d:%02d" (index $giorni (int $tf.Weekday)) $tf.Day (index $mesi (int $tf.Month)) $tf.Hour $tf.Minute -}}
+        {{- $avvInVigore = le $ri.Value.Unix now.Unix -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 <div class="card mb-4 allerta-stato allerta-stato-{{ $liv }}" role="region" aria-label="Stato allerta meteo attuale">
   <div class="card-body p-4">
     <div class="d-flex flex-wrap align-items-center mb-2">
@@ -78,6 +105,15 @@
       {{ $domaniTitolo }}{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
     </div>
     {{- end }}
+    {{- if $avvTipo }}
+    <div class="allerta-stato-domani allerta-stato-domani-{{ $avvLiv }} mb-3 allerta-stato-avviso" role="status" aria-label="Avviso meteo avverso" data-fine="{{ $avvFine }}">
+      <i class="bi bi-wind me-2" aria-hidden="true"></i>
+      <strong>Avviso meteo {{ if $avvInVigore }}in vigore{{ else }}previsto{{ end }} per {{ $avvTipo }}:</strong>
+      allerta {{ $avvLiv }}, da {{ $avvDal }} fino a {{ $avvAl }}.
+      {{ if eq $liv "verde" }}Riguarda un rischio diverso da quello idrogeologico, che oggi è verde.{{ end }}
+      {{ with $avvUrl }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Avviso ufficiale (PDF)<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>{{ end }}
+    </div>
+    {{- end }}
     <div class="d-flex align-items-start mb-3 py-2 px-3 small allerta-stantia bg-warning bg-opacity-10 border border-warning rounded"
          role="note" data-controllo-unix="{{ $t.Unix }}" data-soglia-sec="{{ $sogliaSec }}"
          {{ if not $staleBuild }}hidden{{ end }}>
@@ -94,7 +130,7 @@
       Verificato: <strong>{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</strong>
       · Fonte: <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>
     </p>
-    <p class="small allerta-stato-sotto mb-2">Il livello riguarda la criticità idrogeologica, idraulica e per temporali. Gli avvisi per vento, neve, caldo, gelo e mareggiate e il rischio di incendi boschivi compaiono nelle barre in cima alla homepage.</p>
+    <p class="small allerta-stato-sotto mb-2">Il livello riguarda la criticità idrogeologica, idraulica e per temporali. Gli avvisi per vento, neve, caldo, gelo e mareggiate hanno un riquadro a parte, qui sopra quando sono in vigore o previsti; il rischio di incendi boschivi compare nelle barre in cima alla homepage.</p>
     <a href="https://www.regione.lazio.it/protezione-civile/centro-funzionale-regionale/bollettini-criticita-idrogeologica-idraulica" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
       <i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Bollettino ufficiale Regione Lazio<span class="visually-hidden"> (si apre in una nuova finestra)</span>
     </a>
@@ -104,6 +140,10 @@
 /* Rivela l'avviso "dato stantio" anche su HTML congelato (deploy fermo),
    valutando sull'orologio del visitatore. Idempotente, no dipendenze. */
 (function () {
+  document.querySelectorAll('.allerta-stato-avviso[data-fine]').forEach(function (el) {
+    var fine = Date.parse(el.getAttribute('data-fine'));
+    if (fine && Date.now() >= fine) el.hidden = true;
+  });
   document.querySelectorAll('.allerta-stantia[hidden]').forEach(function (el) {
     var unix = parseInt(el.getAttribute('data-controllo-unix'), 10);
     var soglia = parseInt(el.getAttribute('data-soglia-sec'), 10) || 43200;

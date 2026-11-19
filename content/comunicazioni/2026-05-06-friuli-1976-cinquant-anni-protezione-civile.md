@@ -3,6 +3,7 @@ title: "Friuli 1976, cinquant'anni dopo: il terremoto che ha fatto nascere la pr
 date: 2026-05-06T00:02:00+02:00
 description: "Alle 21:00 del 6 maggio 1976 una scossa di magnitudo 6.5 devastò il Friuli: in tutta la sequenza 965 morti e oltre 45.000 senza tetto."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-06-friuli-1976-cinquant-anni-protezione-civile.webp"

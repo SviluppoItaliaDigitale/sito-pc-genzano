@@ -3,6 +3,7 @@ title: "Ferragosto alla mensa di Fondi: il pranzo del campo preparato con i cuoc
 date: 2026-08-16T00:02:00+02:00
 description: "Il 15 agosto i volontari di Genzano hanno servito il pranzo alla mensa del campo del gemellaggio AIB, con i cuochi del Dipartimento Solidarietà Emergenze."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-16-ferragosto-mensa-fondi-pranzo-campo.webp"

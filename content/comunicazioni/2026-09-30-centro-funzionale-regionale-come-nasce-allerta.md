@@ -3,6 +3,7 @@ title: "Dal bollettino all'allerta: come lavora il Centro Funzionale Regionale"
 date: 2026-09-30
 description: "Ogni giorno il Centro Funzionale del Lazio valuta cosa può fare la pioggia prevista sul territorio e assegna un colore a sette zone. Ecco come."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-30-centro-funzionale-regionale-come-nasce-allerta.webp"

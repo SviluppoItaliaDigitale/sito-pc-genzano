@@ -3,6 +3,7 @@ title: "Incendio di sterpaglie ad Albano Laziale: intervento congiunto in via Pr
 date: 2026-06-25T00:02:00+02:00
 description: "I nostri volontari a un incendio di sterpaglie in via Prelatura, Albano Laziale: intervento congiunto con Albano, Ariccia e VVF Velletri."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-25-incendio-sterpaglie-albano-via-prelatura.webp"

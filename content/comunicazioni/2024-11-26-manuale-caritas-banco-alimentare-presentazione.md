@@ -3,6 +3,7 @@ title: "Recupero e distribuzione di cibo per solidarietà: il manuale Caritas-Ba
 date: 2024-11-26
 description: "Manuale Caritas-Banco Alimentare validato dal Ministero della Salute: regole igieniche per chi recupera e distribuisce alimenti per solidarietà."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2024-11-26-manuale-caritas-banco-alimentare-presentazione.webp"

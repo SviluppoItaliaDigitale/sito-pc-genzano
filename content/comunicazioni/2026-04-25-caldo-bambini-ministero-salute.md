@@ -3,6 +3,7 @@ title: "Estate in salute: come proteggere i bambini dal caldo, dai raggi UV, dag
 date: 2026-04-25T00:02:00+02:00
 description: "Un opuscolo del Ministero della Salute, DEP Lazio e ACP spiega come riconoscere i sintomi e cosa fare per proteggere i bambini da ondate di calore, raggi UV."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-25-caldo-bambini-ministero-salute.webp"

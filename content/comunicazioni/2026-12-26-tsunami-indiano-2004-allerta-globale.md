@@ -3,6 +3,7 @@ title: "Tsunami dell'Oceano Indiano, 26 dicembre 2004: il giorno che ha imposto 
 date: 2026-12-26T00:02:00+01:00
 description: "Alle 7:58 del 26 dicembre 2004, un sisma di magnitudo 9.1 al largo di Sumatra generò uno tsunami che colpì 14 Paesi affacciati sull'Oceano Indiano."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-26-tsunami-indiano-2004-allerta-globale.webp"

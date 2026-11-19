@@ -3,6 +3,7 @@ title: "Italia, 31 gennaio 2020: lo stato di emergenza nazionale per il COVID-19
 date: 2027-01-31
 description: "Sette anni fa il Consiglio dei ministri dichiarò lo stato di emergenza per il coronavirus. Durò fino al 31 marzo 2022, con il Servizio nazionale in campo."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-31-covid-2020-stato-di-emergenza.webp"

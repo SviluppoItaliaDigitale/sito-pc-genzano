@@ -1,29 +1,27 @@
 {{/* ═══════════════════════════════════════════════════
-     APPROFONDIMENTI — striscia homepage col canale magazine.
-     Introdotta il 30/08/2026 (separazione dei canali): le ultime 3
-     uscite divulgative (prevenzione, conoscenza, formazione — canale
-     "approfondimenti", vedi partial canale-articolo.html), separate
-     dalle notizie operative del Gruppo che restano in evidenza più
-     in alto. Riusa il pattern card-notizia-hero esistente (immagine
-     sopra + corpo, già coperto da reveal-on-scroll e CSS v1.0):
-     nessuna classe nuova. Solo modalità ordinaria (index.html).
+     STRISCIA DI UN CANALE IN HOMEPAGE — ultime 3 uscite di un canale
+     editoriale (partial canale-articolo.html). Nata il 30/08/2026 per
+     gli approfondimenti, generalizzata il 19/11/2026 per il canale
+     "italia". Parametri (dict): canale, id, titolo, intro, link.
      Usato in: homepage */}}
-{{ $filtered := where (where .Site.RegularPages "Section" "comunicazioni") "Params.versione_facile_di" nil }}
+{{- $canaleScelto := .canale -}}
+{{- $idSez := .id -}}
+{{ $filtered := where (where site.RegularPages "Section" "comunicazioni") "Params.versione_facile_di" nil }}
 {{ $byLastmod := sort $filtered ".Lastmod" "desc" }}
 {{ $sorted := sort $byLastmod ".Date" "desc" }}
 {{ $mag := slice }}
 {{ range $sorted }}
-  {{ if and (lt (len $mag) 3) (eq (partial "canale-articolo.html" .) "approfondimenti") }}
+  {{ if and (lt (len $mag) 3) (eq (partial "canale-articolo.html" .) $canaleScelto) }}
     {{ $mag = $mag | append . }}
   {{ end }}
 {{ end }}
 {{ if $mag }}
-<section class="notizie-section fade-in-up" aria-labelledby="approfondimenti-heading">
+<section class="notizie-section fade-in-up" aria-labelledby="{{ $idSez }}-heading">
   <div class="container">
-    <h2 id="approfondimenti-heading" class="section-title">Approfondimenti</h2>
-    <p class="text-muted mb-4">Prevenzione, conoscenza e cultura di protezione civile dal nostro archivio.</p>
+    <h2 id="{{ $idSez }}-heading" class="section-title">{{ .titolo }}</h2>
+    <p class="text-muted mb-4">{{ .intro }}</p>
     <div class="row g-4">
-      {{ range $mag }}
+      {{ $ctx := . }}{{ range $mag }}
       <div class="col-lg-4 mb-2">
         <a href="{{ .Permalink }}" class="card card-notizia-hero text-decoration-none h-100">
           <div class="card-notizia-hero-img">
@@ -40,7 +38,7 @@
       {{ end }}
     </div>
     <div class="text-center mt-3">
-      <a href="{{ "comunicazioni/" | relURL }}#canale=approfondimenti" class="btn btn-outline-primary">Tutti gli approfondimenti <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+      <a href="{{ "comunicazioni/" | relURL }}#canale={{ $canaleScelto }}" class="btn btn-outline-primary">{{ $ctx.link }} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
     </div>
   </div>
 </section>

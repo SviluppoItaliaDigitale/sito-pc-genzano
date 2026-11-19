@@ -3,6 +3,7 @@ title: "Dopo l'emergenza: come tornare a casa, un controllo alla volta"
 date: 2026-11-28T00:01:00+01:00
 description: "Un video di poco più di un minuto: quando rientrare, gas e luce, cibo e acqua dopo un'alluvione, foto dei danni e come stare dopo un evento difficile."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-28-dopo-emergenza-video-3d.webp"

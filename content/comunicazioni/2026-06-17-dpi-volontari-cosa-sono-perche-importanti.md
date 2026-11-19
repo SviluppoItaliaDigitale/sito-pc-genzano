@@ -3,6 +3,7 @@ title: "I DPI del volontario di Protezione Civile: cosa sono e perché contano"
 date: 2026-06-17T00:01:00+02:00
 description: "Ogni volontario di Protezione Civile indossa Dispositivi di Protezione Individuale specifici per l'intervento."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-17-dpi-volontari-cosa-sono-perche-importanti.webp"

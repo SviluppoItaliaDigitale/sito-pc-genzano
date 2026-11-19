@@ -3,6 +3,7 @@ title: "Nebbia e visibilità ridotta: come guidare in sicurezza"
 date: 2026-11-12T00:05:00+01:00
 description: "La nebbia è uno dei rischi più sottovalutati sulla viabilità autunnale. Ecco le regole e i comportamenti da seguire."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-nebbia-rischio-viabilita.webp"

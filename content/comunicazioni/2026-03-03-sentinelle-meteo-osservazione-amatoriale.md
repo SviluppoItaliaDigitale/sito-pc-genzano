@@ -3,6 +3,7 @@ title: "Sentinelle del tempo: l'osservazione meteo amatoriale come risorsa"
 date: 2026-03-03
 description: "Reti di osservatori meteo amatoriali contribuiscono alla conoscenza del territorio. Protezione Civile e cittadinanza attiva si incontrano anche in questo."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-03-sentinelle-meteo-osservazione-amatoriale.webp"

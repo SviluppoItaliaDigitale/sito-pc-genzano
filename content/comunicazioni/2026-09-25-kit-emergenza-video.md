@@ -3,6 +3,7 @@ title: "Il kit di emergenza in un video: cosa preparare"
 date: 2026-09-25T00:03:00+02:00
 description: "Un video di meno di un minuto, con voce e sottotitoli, spiega cosa mettere nel kit di emergenza e ogni quanto controllarlo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-25-kit-emergenza-video.webp"

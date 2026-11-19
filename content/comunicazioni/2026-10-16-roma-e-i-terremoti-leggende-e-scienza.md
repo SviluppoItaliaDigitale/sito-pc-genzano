@@ -3,6 +3,7 @@ title: "Roma e i terremoti: dicerie, profezie e che cosa dice la scienza"
 date: 2026-10-16T00:03:00+02:00
 description: "Perché Roma sente i terremoti dell'Appennino e dei Colli Albani, la falsa profezia dell'11 maggio 2011 e perché le scosse non si prevedono ma si prevengono."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-16-roma-e-i-terremoti-leggende-e-scienza.webp"

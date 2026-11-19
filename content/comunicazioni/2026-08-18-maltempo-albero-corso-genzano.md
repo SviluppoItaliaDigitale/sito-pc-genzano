@@ -3,6 +3,7 @@ title: "Vento improvviso sul centro di Genzano: albero caduto sul Corso, nessun 
 date: 2026-08-18T00:03:00+02:00
 description: "La sera del 17 agosto 2026 una raffica ha abbattuto un albero sul corso principale. Le squadre del Gruppo hanno messo in sicurezza l'area."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-18-maltempo-albero-corso-genzano.webp"

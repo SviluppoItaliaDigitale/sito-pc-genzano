@@ -3,6 +3,7 @@ title: "Regione Lazio: bando 2026 per le organizzazioni di volontariato di prote
 date: 2026-11-19T00:03:00+01:00
 description: "Un milione e 323 mila euro per attrezzature, formazione e patenti dei volontari. Le domande vanno inviate via PEC entro le 18:00 del 26 novembre 2026."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-19-regione-lazio-bando-contributi-volontariato-2026.webp"

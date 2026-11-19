@@ -3,6 +3,7 @@ title: "Dieci anni per tornare a Itaca: la parodia dell'ESA e il motivo per cui 
 date: 2026-09-05T00:03:00+02:00
 description: "L'Agenzia Spaziale Europea gioca sull'Odissea per spiegare Galileo. Dietro la battuta c'è il sistema che localizza chi chiama il 112."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-05-odissea-galileo-112-sa-dove-sei.webp"

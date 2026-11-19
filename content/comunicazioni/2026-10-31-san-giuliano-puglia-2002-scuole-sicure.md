@@ -4,6 +4,7 @@ date: 2026-10-31T00:01:00+01:00
 description: "31 ottobre 2002: magnitudo 5.7 a San Giuliano di Puglia, crollo della scuola Jovine. Da lì la classificazione sismica nazionale e l'adeguamento delle scuole."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-31-san-giuliano-puglia-2002-scuole-sicure.webp"

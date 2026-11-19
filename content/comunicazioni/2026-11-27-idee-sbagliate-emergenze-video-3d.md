@@ -3,6 +3,7 @@ title: "Cinque idee sbagliate sulle emergenze, e che cosa fare invece"
 date: 2026-11-27T00:01:00+01:00
 description: "Un video di poco più di un minuto su cinque frasi che si sentono dire su terremoto e allagamenti, e sui gesti giusti indicati dalla Protezione Civile."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-27-idee-sbagliate-emergenze-video-3d.webp"

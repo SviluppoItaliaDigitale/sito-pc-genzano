@@ -163,7 +163,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 </a>
 <a class="ms-card ms-tool" href="/cruscotto/">
   <div class="ms-card-icon"><i class="bi bi-speedometer2"></i></div>
-  <p class="ms-card-title">Cruscotto del territorio</p>
+  <p class="ms-card-title">Cruscotto e dati in tempo reale</p>
   <p class="ms-card-desc">Dati di rischio in tempo reale in un'unica pagina: terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare.</p>
   <span class="ms-card-arrow">Apri il cruscotto →</span>
 </a>
@@ -343,12 +343,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/scuole/">
   <div class="ms-card-icon"><i class="bi bi-people-fill"></i></div>
   <p class="ms-card-title">Scuole — parti da qui</p>
-  <p class="ms-card-desc">4 percorsi per ruolo: sono un/una docente, sono dirigente scolastico (RSPP/DSGA/DPO), sono un genitore, sono uno studente o studentessa. Ogni card porta in 2 click ai materiali giusti.</p>
-</a>
-<a class="ms-card ms-edu" href="/formazione/scuole-da-dove-cominciare/">
-  <div class="ms-card-icon"><i class="bi bi-compass-fill"></i></div>
-  <p class="ms-card-title">Scuole: da dove cominciare</p>
-  <p class="ms-card-desc">Cruscotto unico per ogni ruolo: scegli se sei docente di infanzia/primaria/sec I/sec II, di sostegno/BES, Dirigente/DSGA/RSPP, oppure genitore — e in 2 click arrivi ai materiali giusti.</p>
+  <p class="ms-card-desc">Pagina unica per le scuole: percorsi per docenti di ogni ordine, sostegno, dirigenti, DSGA e RSPP, genitori e studenti, con i materiali consigliati per ciascuno.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/programma-dell-anno/">
   <div class="ms-card-icon"><i class="bi bi-calendar3"></i></div>

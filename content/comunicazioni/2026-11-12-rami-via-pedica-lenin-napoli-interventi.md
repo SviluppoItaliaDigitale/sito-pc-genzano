@@ -3,6 +3,7 @@ title: "Rami in via Lenin, via Napoli e via Pedica: gli interventi del 12 novemb
 date: 2026-11-12T00:08:00+01:00
 description: "Giovedì 12 novembre una squadra di tre volontari è intervenuta per rami caduti o da tagliare in tre strade di Genzano di Roma, fra le 17 e le 18:30."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-rami-via-pedica-lenin-napoli-interventi.webp"

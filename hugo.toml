@@ -116,23 +116,16 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 2
 
+# 19/11/2026: le pagine meteo hanno due livelli. «Allerte Meteo»
+# per tutti (/allerte-meteo/); «Cruscotto e dati in tempo reale» per chi
+# vuole i dettagli (/cruscotto/), che raccoglie cartina meteo Italia, mappe
+# meteo professionali, Sala situazioni, Laboratorio meteo e stato del
+# territorio. Le due voci della cartina e delle mappe sono uscite dal menu.
 [[menus.main]]
   name = "Allerte Meteo"
   url = "/allerte-meteo/"
   parent = "per-il-cittadino"
   weight = 3
-
-[[menus.main]]
-  name = "Cartina meteo Italia"
-  url = "/cartina-meteo-italia/"
-  parent = "per-il-cittadino"
-  weight = 4
-
-[[menus.main]]
-  name = "Mappe meteo professionali"
-  url = "/mappe-meteo-professionali/"
-  parent = "per-il-cittadino"
-  weight = 5
 
 [[menus.main]]
   name = "Rischi e Prevenzione"
@@ -169,7 +162,7 @@ enableGitInfo = true
   weight = 10
 
 [[menus.main]]
-  name = "Cruscotto del territorio"
+  name = "Cruscotto e dati in tempo reale"
   url = "/cruscotto/"
   parent = "per-il-cittadino"
   weight = 11
@@ -536,16 +529,6 @@ enableGitInfo = true
 [[menus.servizi]]
   name = "Allerte Meteo"
   url = "/allerte-meteo/"
-  weight = 5
-
-[[menus.servizi]]
-  name = "Cartina meteo Italia"
-  url = "/cartina-meteo-italia/"
-  weight = 5
-
-[[menus.servizi]]
-  name = "Mappe meteo professionali"
-  url = "/mappe-meteo-professionali/"
   weight = 5
 
 # Tassonomie

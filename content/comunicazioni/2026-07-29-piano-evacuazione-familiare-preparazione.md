@@ -3,6 +3,7 @@ title: "Piano di evacuazione familiare: preparare la propria casa"
 date: 2026-07-29T00:01:00+02:00
 description: "In caso di emergenza ogni famiglia dovrebbe avere un piano chiaro. Come prepararlo, coinvolgendo tutti i membri, passo dopo passo."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-29-piano-evacuazione-familiare-preparazione.webp"

@@ -3,6 +3,7 @@ title: "LoRa, Meshtastic e le altre reti mesh: comunicare quando Internet e tele
 date: 2026-07-18T00:02:00+02:00
 description: "Cosa sono LoRa, Meshtastic, MeshCore e Reticulum, come si confrontano con APRS, Winlink e il satellite, e cosa significano per la protezione civile."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-18-lora-meshtastic-meshcore-reti-mesh-emergenza.webp"

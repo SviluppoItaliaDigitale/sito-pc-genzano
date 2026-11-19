@@ -3,6 +3,7 @@ title: "Polizia locale e 112: che cosa prevede la legge delega"
 date: 2026-10-20T00:01:00+02:00
 description: "La legge 187/2026 indica i criteri per collegare il 112 alle sale operative della polizia locale. Le nuove regole richiedono decreti legislativi."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-20-polizia-locale-112-legge-delega.webp"

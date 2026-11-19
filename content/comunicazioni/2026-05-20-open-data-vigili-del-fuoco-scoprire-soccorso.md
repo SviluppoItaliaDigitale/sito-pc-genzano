@@ -3,6 +3,7 @@ title: "Open Data dei Vigili del Fuoco: scopri il mondo del soccorso attraverso 
 date: 2026-05-20T00:04:00+02:00
 description: "Il Corpo Nazionale dei Vigili del Fuoco pubblica i dati aperti sui propri interventi di soccorso: cosa sono, cosa si trova e come usarli."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-20-open-data-vigili-del-fuoco-scoprire-soccorso.webp"

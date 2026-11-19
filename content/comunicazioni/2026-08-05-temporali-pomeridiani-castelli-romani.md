@@ -3,6 +3,7 @@ title: "Temporali pomeridiani nei Castelli Romani: cosa attendersi ad agosto"
 date: 2026-08-05T00:01:00+02:00
 description: "In agosto i Castelli Romani vedono temporali pomeridiani improvvisi, con fulmini, grandine e raffiche. Come riconoscerli e come comportarsi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-05-temporali-pomeridiani-castelli-romani.webp"

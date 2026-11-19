@@ -3,6 +3,7 @@ title: "Incendio lungo la ferrovia a Pomezia: quattro ore dei volontari di Genza
 date: 2026-08-12T00:04:00+02:00
 description: "Il 12 agosto 2026 due attivazioni della SOUP: incendio a bordo dei binari a Pomezia e bonifica di un canneto alla Falcognana. Quasi sei ore di lavoro."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-incendio-pomezia-siderurgia-ferrovia.webp"

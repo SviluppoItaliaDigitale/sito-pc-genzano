@@ -3,6 +3,7 @@ title: "116117: il numero europeo per le cure mediche non urgenti"
 date: 2026-06-03T00:03:00+02:00
 description: "Il 116117 è il numero europeo gratuito per le cure mediche non urgenti, attivo 24 ore su 24 anche a Genzano. Quando usarlo al posto del 112."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-116117-numero-europeo-cure-non-urgenti.webp"

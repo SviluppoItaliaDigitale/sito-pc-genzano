@@ -3,6 +3,7 @@ title: "Orientamenti UE sulla preparazione della popolazione: nessun obbligo per
 date: 2026-11-10T00:01:00+01:00
 description: "Orientamenti UE del 30 ottobre 2026 sulla preparazione della popolazione: non vincolanti, nessun obbligo per i cittadini."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-10-orientamenti-ue-preparazione-popolazione.webp"

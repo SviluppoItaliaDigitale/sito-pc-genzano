@@ -766,8 +766,8 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2475.0
-  sha256: 7267716c34f1a86a244920822a3ad0987ed1960a632b3495666dfe9ed61795e9
+  size_kb: 2483.0
+  sha256: cdda6f3cd67e5f49ae8c85385154356fb73f984a632ff1341652f739279575d7
   searchable: true
   tagged: true
   language: en-US

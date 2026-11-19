@@ -3,6 +3,7 @@ title: "Quattro giorni al campo base di Fondi, nel cuore del gemellaggio antince
 date: 2026-08-13T00:02:00+02:00
 description: "Dal 13 al 16 agosto 2026 una squadra del Gruppo ha prestato assistenza al campo base della campagna antincendio della Regione Lazio a Fondi."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-13-campo-fondi-gemellaggio-aib.webp"

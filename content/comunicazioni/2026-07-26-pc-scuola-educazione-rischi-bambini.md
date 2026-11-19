@@ -3,6 +3,7 @@ title: "Protezione Civile e scuola: educare ai rischi fin da piccoli"
 date: 2026-07-26
 description: "La cultura della prevenzione si costruisce a scuola. Progetti nazionali e locali di educazione alla PC, come si organizzano, perché contano."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-26-pc-scuola-educazione-rischi-bambini.webp"

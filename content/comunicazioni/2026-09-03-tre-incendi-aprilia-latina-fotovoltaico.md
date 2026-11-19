@@ -3,6 +3,7 @@ title: "Tre incendi in poche ore: dalla rotatoria di Campoverde ai campi di Lati
 date: 2026-09-03T00:02:00+02:00
 description: "Il 3 settembre tre attivazioni consecutive della SOUP. L'ultima, su un vasto fronte alle porte di Latina, ha impegnato la squadra oltre cinque ore."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-03-tre-incendi-aprilia-latina-fotovoltaico.webp"

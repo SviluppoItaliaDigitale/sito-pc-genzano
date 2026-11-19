@@ -3,6 +3,7 @@ title: "Giornata di aggiornamento per i volontari attivi"
 date: 2026-09-19
 description: "Oltre al corso base, i volontari di Protezione Civile devono aggiornarsi: BLS-D, antincendio boschivo, sicurezza, radio. Cosa prevedono le norme e perché."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-19-giornata-aggiornamento-volontari.webp"

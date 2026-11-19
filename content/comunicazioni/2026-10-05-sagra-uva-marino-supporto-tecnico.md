@@ -3,6 +3,7 @@ title: "Sagra dell'Uva di Marino: il Gruppo in supporto tecnico nell'ultima sera
 date: 2026-10-07T00:05:00+02:00
 description: "Lunedì 5 ottobre, su richiesta della protezione civile di Marino, quattro volontari e il Mercedes Atego in servizio alla Sagra dell'Uva fino a notte."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-05-sagra-uva-marino-supporto-tecnico.webp"

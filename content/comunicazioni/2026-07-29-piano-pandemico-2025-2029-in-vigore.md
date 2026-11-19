@@ -3,6 +3,7 @@ title: "Piano pandemico 2025-2029: l'Italia ha una nuova strategia contro le pan
 date: 2026-07-29T00:03:00+02:00
 description: "Il nuovo Piano pandemico nazionale è in vigore: approvato il 30 aprile 2026, è pubblicato in Gazzetta Ufficiale. Cosa prevede e cosa cambia."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-29-piano-pandemico-2025-2029-in-vigore.webp"

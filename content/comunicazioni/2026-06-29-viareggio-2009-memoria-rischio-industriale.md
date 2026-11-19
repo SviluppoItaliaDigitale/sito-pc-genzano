@@ -3,6 +3,7 @@ title: "Viareggio, 29 giugno 2009: la memoria e le lezioni sul rischio industria
 date: 2026-06-29T00:03:00+02:00
 description: "Diciassette anni fa il deragliamento di un treno con GPL devastò Viareggio: 32 vittime. Le lezioni sul rischio industriale e sul trasporto di merci pericolose."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-29-viareggio-2009-memoria-rischio-industriale.webp"

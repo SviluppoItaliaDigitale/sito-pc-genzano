@@ -3,6 +3,7 @@ title: "La Francia lascia Mercatore, l'ONU sceglie Equal Earth: perché la mappa
 date: 2026-09-05T00:02:00+02:00
 description: "Due decisioni in due giorni riaprono una questione antica: ogni mappa piana deforma qualcosa. Anche quelle che usiamo per l'emergenza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-05-proiezioni-cartografiche-mercatore-mappe-emergenza.webp"

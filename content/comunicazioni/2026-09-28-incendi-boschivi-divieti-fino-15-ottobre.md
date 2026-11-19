@@ -3,6 +3,7 @@ title: "Incendi boschivi: a Genzano i divieti restano in vigore fino al 15 ottob
 date: 2026-09-28
 description: "Settembre sta finendo, ma lo stato di grave pericolosità per gli incendi boschivi dura fino al 15 ottobre. Cosa resta vietato e chi chiamare."
 badge: "Avviso"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-28-incendi-boschivi-divieti-fino-15-ottobre.webp"

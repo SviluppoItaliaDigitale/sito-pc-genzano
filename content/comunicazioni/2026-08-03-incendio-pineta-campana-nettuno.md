@@ -3,6 +3,7 @@ title: "Incendio nella pineta della Campana a Nettuno: il Gruppo in campo per du
 date: 2026-08-03T00:02:00+02:00
 description: "Attivati dalla SOUP regionale, i volontari di Genzano hanno operato l'1 e il 2 agosto con l'autobotte sul vasto incendio della pineta della Campana."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-03-incendio-pineta-campana-nettuno.webp"

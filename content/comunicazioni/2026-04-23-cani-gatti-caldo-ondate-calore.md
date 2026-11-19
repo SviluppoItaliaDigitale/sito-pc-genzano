@@ -3,6 +3,7 @@ title: "Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salu
 date: 2026-04-23T00:02:00+02:00
 description: "Con l'avvicinarsi della stagione calda, il Ministero della Salute ricorda le regole per tutelare cani."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-23-cani-gatti-caldo-ondate-calore.webp"

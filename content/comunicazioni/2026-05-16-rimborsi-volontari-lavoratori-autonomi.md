@@ -3,6 +3,7 @@ title: "Rimborsi del mancato guadagno per i volontari lavoratori autonomi: i nuo
 date: 2026-05-16T00:02:00+02:00
 description: "Nuovi righi delle dichiarazioni fiscali per calcolare il rimborso del mancato guadagno ai volontari lavoratori autonomi: periodi d'imposta 2019-2025."
 badge: "Aggiornamento"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-16-rimborsi-volontari-lavoratori-autonomi.webp"

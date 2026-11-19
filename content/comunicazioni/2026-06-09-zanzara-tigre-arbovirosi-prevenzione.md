@@ -3,6 +3,7 @@ title: "Zanzara tigre e arbovirosi: prevenzione domestica"
 date: 2026-06-09T00:04:00+02:00
 description: "Con l'arrivo del caldo torna il problema delle zanzare tigre e delle malattie che possono trasmettere. La prevenzione inizia a casa, giardino per giardino."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-09-zanzara-tigre-arbovirosi-prevenzione.webp"

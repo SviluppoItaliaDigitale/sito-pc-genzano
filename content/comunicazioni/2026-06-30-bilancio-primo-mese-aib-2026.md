@@ -3,6 +3,7 @@ title: "Le prime settimane di campagna AIB: il punto al 30 giugno"
 date: 2026-06-30
 description: "A fine giugno, un primo bilancio della campagna antincendio boschivo 2026 e un richiamo ai comportamenti per i mesi più caldi."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-30-bilancio-primo-mese-aib-2026.webp"

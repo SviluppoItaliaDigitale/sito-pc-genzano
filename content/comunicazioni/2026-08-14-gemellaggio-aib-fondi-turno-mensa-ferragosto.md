@@ -3,6 +3,7 @@ title: "Gemellaggio AIB di Fondi: i volontari di Genzano in turno alla mensa del
 date: 2026-08-14T00:04:00+02:00
 description: "Dal cambio turno di Ferragosto il Gruppo è a Fondi, nel campo del gemellaggio antincendio boschivo della Regione Lazio, a supporto della mensa."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto.webp"

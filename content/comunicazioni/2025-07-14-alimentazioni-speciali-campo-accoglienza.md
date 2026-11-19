@@ -3,6 +3,7 @@ title: "Alimentazioni speciali nei campi di accoglienza: allergie, celiachia e s
 date: 2025-07-14
 description: "Nei campi di Protezione Civile ci sono persone allergiche, celiache, vegetariane, di religione diversa."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-07-14-alimentazioni-speciali-campo-accoglienza.webp"

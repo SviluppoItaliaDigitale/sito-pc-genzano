@@ -138,7 +138,7 @@ Quando questo accade, il tuo browser contatta direttamente l'ente che pubblica i
 <tr><th scope="col">Pagina</th><th scope="col">Fonti contattate dal tuo browser</th></tr>
 </thead>
 <tbody>
-<tr><td><a href="/cruscotto/">Cruscotto del territorio</a></td><td>INGV, Dipartimento della Protezione Civile (radar), Open-Meteo, ARPA Lazio, ItaliaMeteo, ECMWF, EUMETSAT, NASA, USGS, Copernicus, OpenStreetMap.</td></tr>
+<tr><td><a href="/cruscotto/">Cruscotto e dati in tempo reale</a></td><td>INGV, Dipartimento della Protezione Civile (radar), Open-Meteo, ARPA Lazio, ItaliaMeteo, ECMWF, EUMETSAT, NASA, USGS, Copernicus, OpenStreetMap.</td></tr>
 <tr><td><a href="/allerte-meteo/">Allerte meteo</a></td><td>Radar del Dipartimento della Protezione Civile e sfondo cartografico OpenStreetMap.</td></tr>
 <tr><td><a href="/laboratorio-meteo/">Laboratorio meteo</a></td><td>Serie storiche Open-Meteo (dati ERA5).</td></tr>
 <tr><td><a href="/cartografia/">Cartografia operativa</a></td><td>Sfondo cartografico OpenStreetMap. La posizione è richiesta solo se premi «centra sulla mia posizione» e resta sul tuo dispositivo.</td></tr>

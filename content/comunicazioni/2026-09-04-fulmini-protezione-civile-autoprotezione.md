@@ -3,6 +3,7 @@ title: "Fulmini: come comportarsi davvero per non restare feriti"
 date: 2026-09-04T00:01:00+02:00
 description: "Il fulmine colpisce, in Italia, centinaia di persone ogni anno. Le regole di autoprotezione, spiegate senza mitologie."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-04-fulmini-protezione-civile-autoprotezione.webp"

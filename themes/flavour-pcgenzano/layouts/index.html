@@ -142,7 +142,7 @@
 {{/* Meteo — cartina Lazio, dato in tempo reale (card sismica accanto a IT-alert in social-channels) */}}
 {{ partial "meteo-cartine-home.html" . }}
 
-{{/* Cruscotto del territorio — card colorata che rimanda al cruscotto multidisciplinare */}}
+{{/* Cruscotto e dati in tempo reale — card colorata che rimanda al cruscotto multidisciplinare */}}
 {{ partial "cruscotto-home.html" . }}
 
 {{/* Servizi per il cittadino */}}
@@ -155,9 +155,10 @@
 {{/* Dossier interattivi — box col dossier più recente (racconti visivi scrollytelling) */}}
 {{ if not $allertaAlta }}{{ partial "dossier-home.html" . }}{{ end }}
 
-{{/* Approfondimenti — ultime 3 uscite del canale magazine (prevenzione,
-     conoscenza, formazione), separate dalle notizie operative in alto */}}
-{{ if not $allertaAlta }}{{ partial "approfondimenti-home.html" . }}{{ end }}
+{{/* Notizie dall'Italia e Approfondimenti — ultime 3 uscite di ciascun
+     canale, separate dalle notizie di Genzano in alto (canale-home.html) */}}
+{{ if not $allertaAlta }}{{ partial "canale-home.html" (dict "canale" "italia" "id" "italia" "titolo" "Dall'Italia e dalla Regione" "intro" "Decreti, stati di emergenza e notizie di protezione civile dal Lazio e dal resto del Paese." "link" "Tutte le notizie dall'Italia") }}{{ end }}
+{{ if not $allertaAlta }}{{ partial "canale-home.html" (dict "canale" "approfondimenti" "id" "approfondimenti" "titolo" "Approfondimenti" "intro" "Prevenzione, conoscenza e cultura di protezione civile dal nostro archivio." "link" "Tutti gli approfondimenti") }}{{ end }}
 
 {{/* Comunità: canali social + IT-alert + terremoti */}}
 {{ partial "social-channels.html" . }}

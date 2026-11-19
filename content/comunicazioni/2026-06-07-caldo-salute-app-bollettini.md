@@ -3,6 +3,7 @@ title: "Caldo e Salute: l'app per i bollettini sulle ondate di calore"
 date: 2026-06-07T00:01:00+02:00
 description: "L'app gratuita Caldo e Salute mostra ogni giorno il livello di rischio caldo nella tua città, con i bollettini ufficiali del Ministero della Salute."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-07-caldo-salute-app-bollettini.webp"
@@ -69,7 +70,7 @@ Il bollettino serve a **decidere in anticipo**. Quando sale il livello:
 - [Ondate di calore: cosa fare](/rischi-prevenzione/ondate-di-calore/)
 - [Proteggere anziani e persone fragili](/rischi-prevenzione/persone-necessita-specifiche/)
 - Dossier interattivo: [Caldo che uccide](/dossier/caldo-che-uccide/)
-- [Cruscotto del territorio](/cruscotto/)
+- [Cruscotto e dati in tempo reale](/cruscotto/)
 
 **Fonti ufficiali:**
 

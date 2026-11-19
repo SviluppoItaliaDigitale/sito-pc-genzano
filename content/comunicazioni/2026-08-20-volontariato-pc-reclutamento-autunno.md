@@ -3,6 +3,7 @@ title: "Diventare volontari di Protezione Civile: iscrizioni sempre aperte ai co
 date: 2026-08-20T00:01:00+02:00
 description: "Le iscrizioni ai corsi base del Gruppo Comunale Volontari di Protezione Civile sono sempre aperte. Chi può partecipare e cosa aspettarsi."
 badge: "Volontariato"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-20-volontariato-pc-reclutamento-autunno.webp"

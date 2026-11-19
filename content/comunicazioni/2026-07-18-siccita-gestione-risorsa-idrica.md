@@ -3,6 +3,7 @@ title: "Siccità estiva: gestire la risorsa idrica come cittadini"
 date: 2026-07-18T00:01:00+02:00
 description: "La siccità non è solo un problema agricolo. Il cittadino ha un ruolo nella gestione sostenibile dell'acqua. Comportamenti utili e comprensione del fenomeno."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-18-siccita-gestione-risorsa-idrica.webp"

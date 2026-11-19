@@ -206,7 +206,7 @@ Le schede possono essere usate in lezioni da 30-45 minuti e abbinate alle attivi
 
 ## Vedi anche
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
+- [Scuole — parti da qui](/scuole/)
 - [Checklist docente](/formazione/scuole-checklist-docente/)
 - [Schede stampabili](/formazione/schede-stampabili/)
 - [Giochi della sicurezza](/giochi/)

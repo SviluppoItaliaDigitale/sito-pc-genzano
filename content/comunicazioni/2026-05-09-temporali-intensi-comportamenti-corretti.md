@@ -3,6 +3,7 @@ title: "Temporali intensi: come riconoscerli e cosa fare"
 date: 2026-05-09T00:01:00+02:00
 description: "Fulmini, grandine, raffiche: cosa fare in casa, all'aperto e in auto durante un temporale intenso. Comportamenti corretti e numeri utili."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-09-temporali-intensi-comportamenti-corretti.webp"

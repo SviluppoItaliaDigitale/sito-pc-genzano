@@ -3,6 +3,7 @@ title: "Genova, 9 ottobre 2014: il Bisagno esonda di nuovo, tre anni dopo il Fer
 date: 2026-10-11T00:01:00+02:00
 description: "Quasi 400 millimetri in 24 ore e il Bisagno torna nelle strade di Genova, tre anni dopo l'alluvione del 2011. Una vittima e un canale scolmatore da fare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-11-genova-2014-alluvione-bisagno-tre-anni-dopo.webp"

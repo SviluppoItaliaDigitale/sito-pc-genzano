@@ -3,6 +3,7 @@ title: "Nepal, 25 aprile 2015: il terremoto del Gorkha e la fragilità dei Paesi
 date: 2026-04-25T00:03:00+02:00
 description: "Una scossa di magnitudo 7.8 colpì la valle di Kathmandu uccidendo quasi 9.000 persone."
 badge: "Comunicazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-25-nepal-2015-gorkha-terremoto.webp"

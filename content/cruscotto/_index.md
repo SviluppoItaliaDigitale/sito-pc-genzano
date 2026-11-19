@@ -1,5 +1,5 @@
 ---
-title: "Cruscotto del territorio"
+title: "Cruscotto e dati in tempo reale"
 description: "Cruscotto multidisciplinare in tempo reale: terremoti e vulcani (INGV), radar pioggia, satellite, meteo, allerta, incendi, aria e mare, in un'unica pagina."
 layout: "single"
 tts: false
@@ -11,6 +11,8 @@ aliases:
 Un'unica pagina per consultare i dati di rischio del territorio, da **fonti ufficiali e aperte**. Scegli il tema con i pulsanti qui sotto. Sono dati **indicativi**: per le allerte valgono i bollettini del [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti), in emergenza chiama il **112**.
 
 Sotto ogni scheda c'è la sua **spiegazione a parole**: che cosa mostra, come si leggono i colori e i simboli, ogni quanto si aggiorna e che cosa non dice. Le spiegazioni di tutte le schede, insieme a quelle dei grafici del Laboratorio meteo, sono raccolte anche in una pagina sola, da leggere o ascoltare: [Le mappe e i grafici spiegati a parole](/cruscotto/mappe-raccontate/).
+
+<div class="cruscotto-callout" role="note"><i class="bi bi-signpost-split" aria-hidden="true"></i> <span>Ti serve solo sapere se oggi c'è un'allerta a Genzano? Vai ad <a href="/allerte-meteo/">Allerte meteo</a>. Questa pagina e gli strumenti qui sotto sono per chi vuole i dati in dettaglio: la <a href="/cartina-meteo-italia/">cartina meteo dell'Italia</a>, le <a href="/mappe-meteo-professionali/">mappe meteo professionali</a> dei modelli, la <a href="/monitor/">Sala situazioni</a> per le sale operative, <a href="/stato-del-territorio/">lo stato del territorio</a> rischio per rischio e gli <a href="/strumenti/">strumenti in tempo reale</a>.</span></div>
 
 <div class="cruscotto-callout" role="note"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> <span>Vuoi <strong>esplorare i dati nel tempo</strong>? Nel <a href="/laboratorio-meteo/">Laboratorio meteo</a> costruisci grafici di temperatura, pioggia e vento dei Castelli Romani, con tabella dei dati e download.</span></div>
 

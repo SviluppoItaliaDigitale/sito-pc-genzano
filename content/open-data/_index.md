@@ -133,7 +133,7 @@ Per chi vuole consultare i dati senza scaricare i file:
 
 - **CSV**: apribile con qualsiasi foglio elettronico (Excel, LibreOffice Calc, Numbers, Google Sheets) o editor di testo.
 - **JSON**: parsabile con qualsiasi linguaggio di programmazione moderno (Python, JavaScript, R, ecc.).
-- **Cruscotto del territorio**: per i dati di rischio in tempo reale (terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare) il sito offre il [cruscotto del territorio](/cruscotto/), che legge le fonti ufficiali e aperte direttamente nel browser.
+- **Cruscotto e dati in tempo reale**: per i dati di rischio in tempo reale (terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare) il sito offre il [cruscotto del territorio](/cruscotto/), che legge le fonti ufficiali e aperte direttamente nel browser.
 - **Visualizzazioni personali**: per elaborazioni grafiche dei file CSV/JSON scaricabili da questa pagina, puoi usare strumenti come [Datawrapper](https://www.datawrapper.de/), [Flourish](https://flourish.studio/), [Tableau Public](https://public.tableau.com/) o tool open source.
 
 ## Hai bisogno di un dataset specifico?

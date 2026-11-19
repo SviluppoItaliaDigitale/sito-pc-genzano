@@ -3,6 +3,7 @@ title: "Radio in emergenza: perché sono ancora fondamentali per la Protezione C
 date: 2026-05-03
 description: "Quando telefono e internet cadono, restano le radio. Il ruolo delle radiocomunicazioni e dei volontari radioamatori nel sistema di Protezione Civile."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-03-radiocomunicazioni-emergenza-volontari.webp"

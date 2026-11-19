@@ -3,6 +3,7 @@ title: "Case vacanze affittate: cosa controllare al momento dell'arrivo"
 date: 2026-08-13T00:01:00+02:00
 description: "Affittare un appartamento per le ferie è diffuso. Alcune verifiche di sicurezza, da fare appena arrivati, possono fare la differenza."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-13-casa-vacanze-affittate-sicurezza.webp"

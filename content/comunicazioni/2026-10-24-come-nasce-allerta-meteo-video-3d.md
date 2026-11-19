@@ -3,6 +3,7 @@ title: "Come nasce un'allerta meteo: un video in 3D"
 date: 2026-10-24T00:01:00+02:00
 description: "Un video di circa sei minuti, con voce e sottotitoli, racconta come nasce un'allerta meteo: dalla frana di Sarno alle soglie di pioggia della zona F."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-24-come-nasce-allerta-meteo-video-3d.webp"

@@ -3,6 +3,7 @@ title: "Trenta secondi che contano: come gli smartphone hanno allertato il Venez
 date: 2026-06-26T00:03:00+02:00
 description: "Il 24 giugno il sistema di Android ha avvisato milioni di persone secondi prima della scossa. Come funziona, e perché non è una previsione."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela.webp"

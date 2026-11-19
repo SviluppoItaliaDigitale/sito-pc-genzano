@@ -3,6 +3,7 @@ title: "Incendi boschivi: forte pericolo in Italia questa settimana, secondo i d
 date: 2026-06-25T00:03:00+02:00
 description: "I dati EFFIS del Centro Comune di Ricerca UE: tra il 24 giugno e il 1° luglio forte pericolo incendi su gran parte dell'Italia. Come prevenire."
 badge: "Prevenzione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-25-incendi-boschivi-pericolo-italia-dati-effis.webp"

@@ -3,6 +3,7 @@ title: "Nepal e Tibet, il ghiacciaio che crolla e la valle spazzata: cosa è suc
 date: 2026-08-27T00:03:00+02:00
 description: "Il crollo di un ghiacciaio ha generato una colata detritica nella valle del Bhote Koshi: centinaia tra vittime e dispersi. Le analogie con Chamoli e Langtang."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi.webp"

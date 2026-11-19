@@ -3,6 +3,7 @@ title: "Incendio di vegetazione a Velletri: il Gruppo di Genzano in supporto ai 
 date: 2026-07-05T00:03:00+02:00
 description: "Attivati dalla Sala Operativa regionale, i volontari di Genzano sono intervenuti a Velletri per spegnere e bonificare un incendio di vegetazione."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-05-incendio-velletri-caranella-via-del-sorbo.webp"

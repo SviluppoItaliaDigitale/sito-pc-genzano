@@ -3,6 +3,7 @@ title: "Colpo di calore: riconoscerlo e intervenire subito"
 date: 2026-07-19T00:01:00+02:00
 description: "Il colpo di calore è un'emergenza che può essere fatale. Imparare a riconoscerlo e a dare i primi soccorsi può salvare una vita. Le regole fondamentali."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-19-colpo-calore-riconoscere-primo-soccorso.webp"

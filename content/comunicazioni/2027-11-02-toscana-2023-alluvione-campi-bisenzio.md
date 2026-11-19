@@ -3,6 +3,7 @@ title: "Toscana, 2 novembre 2023: l'alluvione di Campi Bisenzio, Prato e Montemu
 date: 2027-11-02
 description: "Quattro anni fa la tempesta Ciarán portò 150-200 mm di pioggia fra Prato e Pistoia: otto vittime e oltre 18.000 ettari allagati in Toscana."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-11-02-toscana-2023-alluvione-campi-bisenzio.webp"

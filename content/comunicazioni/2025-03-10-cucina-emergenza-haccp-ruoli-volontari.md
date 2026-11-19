@@ -3,6 +3,7 @@ title: "Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obblig
 date: 2025-03-10T00:02:00+01:00
 description: "Nei campi di accoglienza la cucina è un'area a rischio regolata per legge. Ecco i ruoli dei volontari, la formazione richiesta."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-03-10-cucina-emergenza-haccp-ruoli-volontari.webp"

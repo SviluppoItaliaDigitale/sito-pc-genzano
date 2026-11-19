@@ -18,6 +18,12 @@
 */}}
 {{- $param := .Params.risorse_tema -}}
 {{- $temaCandidate := "" -}}
+{{/* Pagine da consultare in emergenza (19/11/2026): niente box di
+     materiali da scaricare, anche se qualcuno aggiunge risorse_tema.
+     Chi le apre ha fretta e spesso una rete lenta: servono numeri e
+     azioni, non file da decine di MB. */}}
+{{- $sezioniUrgenti := slice "cosa-fare-adesso" "numeri-utili" "contatti" "emergenza" -}}
+{{- if in $sezioniUrgenti .Section -}}{{- $param = false -}}{{- end -}}
 
 {{- if eq $param false -}}
   {{/* Opt-out esplicito: il partial non mostra nulla */}}

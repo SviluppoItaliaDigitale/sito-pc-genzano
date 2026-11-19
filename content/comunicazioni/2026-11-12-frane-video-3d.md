@@ -3,6 +3,7 @@ title: "Frane: un video in 3D per riconoscerle e mettersi al sicuro"
 date: 2026-11-12T00:03:00+01:00
 description: "Un video di poco più di un minuto, con voce e sottotitoli, mostra i segnali che annunciano una frana e che cosa fare se la terra si muove."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-frane-video-3d.webp"

@@ -33,7 +33,7 @@ Il caso di **Rigopiano del 2017**, in cui un'imponente nevicata si combinò con 
 
 ## La previsione e gli avvisi
 
-A differenza dei terremoti, neve e gelo si possono **prevedere** con buon anticipo. Il **Centro Funzionale Regionale del Lazio** emette **avvisi meteo per condizioni avverse** quando sono attese nevicate o gelate diffuse. Segui gli avvisi del Centro Funzionale e le comunicazioni del Comune. Il nostro sito riporta automaticamente l'avviso attivo nella barra di allerta della homepage e nel [Cruscotto del territorio](/cruscotto/); per le previsioni dettagliate c'è la pagina [Allerte meteo](/allerte-meteo/).
+A differenza dei terremoti, neve e gelo si possono **prevedere** con buon anticipo. Il **Centro Funzionale Regionale del Lazio** emette **avvisi meteo per condizioni avverse** quando sono attese nevicate o gelate diffuse. Segui gli avvisi del Centro Funzionale e le comunicazioni del Comune. Il nostro sito riporta automaticamente l'avviso attivo nella barra di allerta della homepage e nel [Cruscotto e dati in tempo reale](/cruscotto/); per le previsioni dettagliate c'è la pagina [Allerte meteo](/allerte-meteo/).
 
 ## Come ci si organizza
 
@@ -48,7 +48,7 @@ La risposta è soprattutto **organizzativa e preventiva**:
 - [Neve ai Castelli Romani: l'organizzazione del Gruppo](/comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/).
 - [Gelate e ghiaccio sulle strade: comportamenti invernali](/comunicazioni/2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali/).
 - [Rigopiano 2017: allerta neve e valanga](/comunicazioni/2027-01-18-rigopiano-2017-allerta-neve-valanga/).
-- [Allerte meteo](/allerte-meteo/) e [Cruscotto del territorio](/cruscotto/).
+- [Allerte meteo](/allerte-meteo/) e [Cruscotto e dati in tempo reale](/cruscotto/).
 
 ## Per approfondire — fonti istituzionali
 

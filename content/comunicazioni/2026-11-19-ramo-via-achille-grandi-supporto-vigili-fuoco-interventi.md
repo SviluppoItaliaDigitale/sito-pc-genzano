@@ -3,6 +3,7 @@ title: "Un ramo spezzato in via Achille Grandi e un supporto ai Vigili del fuoco
 date: 2026-11-19T00:04:00+01:00
 description: "Il 16 novembre un ramo spezzato messo in sicurezza in via Achille Grandi; il 18 la piattaforma aerea a supporto di Vigili del fuoco e 118."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-19-ramo-via-achille-grandi-supporto-vigili-fuoco-interventi.webp"

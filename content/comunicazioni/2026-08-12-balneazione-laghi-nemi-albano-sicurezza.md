@@ -3,6 +3,7 @@ title: "Balneazione nei laghi di Nemi e Albano: le regole per l'estate"
 date: 2026-08-12T00:01:00+02:00
 description: "I laghi vulcanici dei Castelli sono meta estiva amata. Balneazione consentita, rischi specifici e comportamenti corretti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-balneazione-laghi-nemi-albano-sicurezza.webp"

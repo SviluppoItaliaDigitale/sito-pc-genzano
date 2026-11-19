@@ -3,6 +3,7 @@ title: "Notte di San Lorenzo: osservare le stelle cadenti in sicurezza"
 date: 2026-08-10T00:01:00+02:00
 description: "Il 10 agosto è la notte delle Perseidi. Come godersi lo spettacolo senza rischi per sé e per l'ambiente."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-10-san-lorenzo-notte-stelle-cadenti-sicurezza.webp"

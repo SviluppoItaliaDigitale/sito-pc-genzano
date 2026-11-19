@@ -3,6 +3,7 @@ title: "Esercitazione antincendio boschivo: come ci prepariamo"
 date: 2026-04-15T00:01:00+02:00
 description: "Ogni anno in primavera il Gruppo partecipa a esercitazioni AIB. Uno sguardo a cosa si fa, come ci si prepara e perché queste prove realistiche sono essenziali."
 badge: "Esercitazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-15-esercitazione-antincendio-boschivo-preparazione.webp"

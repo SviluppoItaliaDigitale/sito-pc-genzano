@@ -3,6 +3,7 @@ title: "Oltre la manichetta: le nuove tecniche per spegnere gli incendi"
 date: 2026-08-16T00:03:00+02:00
 description: "Sfere estinguenti, acqua nebulizzata, schiuma compressa, turbine, droni e perfino il suono: come sta cambiando il modo di spegnere il fuoco."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-16-tecniche-moderne-spegnimento-incendi.webp"

@@ -3,6 +3,7 @@ title: "«Non c'è Protezione Civile senza di te»: la campagna della Regione La
 date: 2026-06-24T00:02:00+02:00
 description: "La Regione Lazio invita i cittadini, soprattutto i giovani, a entrare nel volontariato di Protezione Civile. La campagna e come unirti al nostro Gruppo."
 badge: "Volontariato"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-24-campagna-regione-lazio-diventa-volontario.webp"

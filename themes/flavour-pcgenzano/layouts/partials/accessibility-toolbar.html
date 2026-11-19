@@ -38,6 +38,14 @@
       Personalizza la lettura del sito. Le tue scelte vengono ricordate sul tuo dispositivo. Il sito è progettato secondo i principi delle Linee guida AGID sull'accessibilità e delle WCAG 2.2: questi strumenti sono un aiuto in più, e sono in corso verifiche periodiche per migliorare l'esperienza.
     </p>
 
+    {{/* Su telefono e tablet il pulsante dell'Assistente virtuale non
+         galleggia sulla pagina (19/11/2026, CSS ASSISTENTE FAB v2.2): lo si
+         raggiunge da qui e dal riquadro del 112. */}}
+    <p class="a11y-aiuto">
+      <i class="bi bi-chat-dots-fill me-2" aria-hidden="true"></i>
+      Non sai che cosa fare? Apri l'<a href="{{ "assistente/" | relURL }}">Assistente virtuale</a>: ti guida con domande semplici.
+    </p>
+
     {{/* ─────────── SEZIONE TESTO ─────────── */}}
     <fieldset class="a11y-section">
       <legend class="a11y-section-title">

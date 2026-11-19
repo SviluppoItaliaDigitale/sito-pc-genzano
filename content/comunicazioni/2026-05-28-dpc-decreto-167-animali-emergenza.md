@@ -3,6 +3,7 @@ title: "Animali in emergenza: il DPC pubblica le prime regole nazionali (DCD 167
 date: 2026-05-28T00:02:00+02:00
 description: "Il Dipartimento di Protezione Civile integra cani, gatti, animali da allevamento e fauna selvatica nei piani di emergenza con il decreto del 21 gennaio 2026."
 badge: "Prevenzione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-28-dpc-decreto-167-animali-emergenza.webp"

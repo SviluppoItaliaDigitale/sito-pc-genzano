@@ -3,6 +3,7 @@ title: "Auguri al nuovo Sindaco Fabio Papalia e ringraziamento all'Amministrazio
 date: 2026-06-09T00:05:00+02:00
 description: "Il Gruppo Comunale di Protezione Civile saluta il nuovo Sindaco Fabio Papalia e ringrazia il Sindaco uscente Carlo Zoccolotti e l'Amministrazione."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-09-auguri-sindaco-papalia-saluto-amministrazione.webp"

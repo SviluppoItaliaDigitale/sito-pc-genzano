@@ -4,6 +4,7 @@ description: "Dopo un terremoto, il rilievo del danno alle chiese: il Modello A-
 date: 2026-10-28T00:02:00+01:00
 draft: false
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-28-scheda-rilievo-danno-beni-culturali-chiese.webp"

@@ -34,22 +34,46 @@
       {{ .Content }}
 
       {{- /* Canali editoriali (30/08/2026): "gruppo" = avvisi e attività
-           del Gruppo sul territorio; "approfondimenti" = magazine
+           del Gruppo sul territorio (dal 19/11/2026 "territorio", con
+           "italia" per le notizie nazionali e regionali); "approfondimenti" = magazine
            (prevenzione, conoscenza, formazione). Derivati dal badge con
            override frontmatter `canale:` — vedi partial canale-articolo. */ -}}
-      {{- $countGruppo := 0 -}}
-      {{- $countApprof := 0 -}}
+      {{- $countTerr := 0 -}}{{- $countIta := 0 -}}{{- $countApprof := 0 -}}
+      {{- $localiRecenti := slice -}}
+      {{- $limite := now.AddDate 0 0 -30 -}}
       {{- range $pages -}}
-        {{- if eq (partial "canale-articolo.html" .) "gruppo" -}}{{- $countGruppo = add $countGruppo 1 -}}{{- else -}}{{- $countApprof = add $countApprof 1 -}}{{- end -}}
+        {{- $ch := partial "canale-articolo.html" . -}}
+        {{- if eq $ch "territorio" -}}{{- $countTerr = add $countTerr 1 -}}
+          {{- if and (ge .Date $limite) (lt (len $localiRecenti) 5) (not .Params.archiviato) -}}{{- $localiRecenti = $localiRecenti | append . -}}{{- end -}}
+        {{- else if eq $ch "italia" -}}{{- $countIta = add $countIta 1 -}}
+        {{- else -}}{{- $countApprof = add $countApprof 1 -}}{{- end -}}
       {{- end -}}
+      {{- /* Riquadro fisso «Da Genzano» (19/11/2026): le notizie del
+           territorio degli ultimi 30 giorni restano in vista anche quando
+           l'elenco completo, ordinato per data, le spinge in basso. Non
+           nasconde niente: l'elenco sotto resta intero. */ -}}
+      {{- with $localiRecenti }}
+      <section class="da-genzano-box mb-4" aria-labelledby="da-genzano-titolo">
+        <h2 id="da-genzano-titolo" class="h5"><i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>Da Genzano e dai Castelli Romani, ultimi 30 giorni</h2>
+        <ul class="list-unstyled mb-2">
+          {{- range . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="notizia-data">· {{ .Date | time.Format ":date_long" }}</span></li>
+          {{- end }}
+        </ul>
+        <a href="#canale=territorio" class="small">Tutte le notizie da Genzano e dai Castelli Romani</a>
+      </section>
+      {{- end }}
       <div class="filter-bar mb-4" role="region" aria-label="Filtri per categoria">
         <p class="filter-label mb-2"><i class="bi bi-collection" aria-hidden="true"></i> Mostra:</p>
         <div class="filter-pills d-flex flex-wrap gap-2 mb-3" role="group" aria-label="Canale">
           <button type="button" class="filter-pill filter-pill-canale active" data-canale="all" aria-pressed="true">
             Tutto <span class="filter-count">({{ len $pages }})</span>
           </button>
-          <button type="button" class="filter-pill filter-pill-canale" data-canale="gruppo" aria-pressed="false">
-            Il Gruppo e il territorio <span class="filter-count">({{ $countGruppo }})</span>
+          <button type="button" class="filter-pill filter-pill-canale" data-canale="territorio" aria-pressed="false">
+            Genzano e Castelli Romani <span class="filter-count">({{ $countTerr }})</span>
+          </button>
+          <button type="button" class="filter-pill filter-pill-canale" data-canale="italia" aria-pressed="false">
+            Dall'Italia e dalla Regione <span class="filter-count">({{ $countIta }})</span>
           </button>
           <button type="button" class="filter-pill filter-pill-canale" data-canale="approfondimenti" aria-pressed="false">
             Approfondimenti <span class="filter-count">({{ $countApprof }})</span>
@@ -302,15 +326,17 @@
     });
   });
 
-  // Hash deep-link: #canale=gruppo o #cat=allerta o #anno=2026, combinabili.
+  // Hash deep-link: #canale=territorio|italia|approfondimenti o #cat=allerta o #anno=2026, combinabili.
   // Anche su hashchange: un link con hash cliccato mentre si è già
   // sull'archivio non ricarica la pagina.
   function applyHash(){
     const hash = location.hash || '';
-    const mCanale = hash.match(/canale=(gruppo|approfondimenti|all)/);
+    const mCanale = hash.match(/canale=(territorio|italia|gruppo|approfondimenti|all)/);
     const mCat = hash.match(/cat=([a-z]+)/);
     const mAnno = hash.match(/anno=(\d{4}|all)/);
-    if (mCanale) stato.canale = mCanale[1];
+    // «gruppo» era il nome del canale locale fino al 18/11/2026: i vecchi
+    // link portano ancora lì.
+    if (mCanale) stato.canale = mCanale[1] === 'gruppo' ? 'territorio' : mCanale[1];
     if (mCat) stato.categoria = mCat[1];
     if (mAnno) stato.anno = mAnno[1];
     if (mCanale || mCat || mAnno) apply();

@@ -3,6 +3,7 @@ title: "Check-list casa prima dell'estate: cosa verificare"
 date: 2026-05-26T00:01:00+02:00
 description: "Prima dell'estate è utile controllare casa, impianti, condizionatori, scorte e vie di fuga. Una check-list semplice riduce molti rischi domestici."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-26-check-casa-prima-estate-prevenzione.webp"

@@ -3,6 +3,7 @@ title: "Volontari in allerta"
 date: 2025-08-16
 description: "Dopo l'intervento per l'incendio del Parco del Vesuvio e un vasto incendio locale, i volontari del Gruppo restano in stato di allerta."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "urgente"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-08-16-volontari-in-allerta.webp"

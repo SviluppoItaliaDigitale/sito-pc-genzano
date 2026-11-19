@@ -3,6 +3,7 @@ title: "Rami e alberi pericolanti a Genzano: gli interventi del 6, 17, 19 e 22 g
 date: 2026-06-22T00:01:00+02:00
 description: "Un ramo in via Imbastari, tre piante in piazza Dante, un ramo su un'auto in via Roma e un albero in via Appia Vecchia: i nostri interventi di giugno."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-22-rami-alberi-imbastari-piazza-dante-via-roma-appia-vecchia.webp"

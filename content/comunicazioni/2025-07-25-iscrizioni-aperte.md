@@ -3,6 +3,7 @@ title: "Iscrizioni al Gruppo"
 date: 2025-07-25
 description: "Puoi iscriverti al Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma: scopri come e cosa aspettarti."
 badge: "Avviso"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-07-25-iscrizioni-aperte.webp"

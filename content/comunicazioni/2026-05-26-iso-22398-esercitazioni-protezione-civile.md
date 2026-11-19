@@ -3,6 +3,7 @@ title: "Perché si fanno le esercitazioni di Protezione Civile? Lo standard ISO 
 date: 2026-05-26T00:02:00+02:00
 description: "Le esercitazioni non sono spettacolo: sono lo strumento principale per verificare se un piano di emergenza funziona davvero."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-26-iso-22398-esercitazioni-protezione-civile.webp"

@@ -3,6 +3,7 @@ title: "Protezione civile e incendi boschivi: via libera della XII Commissione d
 date: 2026-07-29T00:02:00+02:00
 description: "Parere favorevole al Programma regionale di previsione e prevenzione 2026-2028 e alla proroga per il 2026 del Piano antincendi boschivi del Lazio."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-29-regione-lazio-programma-protezione-civile-proroga-piano-aib.webp"

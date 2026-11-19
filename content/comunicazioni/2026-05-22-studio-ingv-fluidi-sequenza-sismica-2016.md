@@ -2,6 +2,7 @@
 title: "Terremoti, uno studio INGV svela il ruolo dei fluidi nella sequenza del Centro Italia 2016"
 date: 2026-05-22T00:06:00+02:00
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 description: "Uno studio INGV-Berkeley-USGS mostra come la migrazione di fluidi (CO₂) abbia legato fra loro le scosse del Centro Italia del 2016. Perché è importante."

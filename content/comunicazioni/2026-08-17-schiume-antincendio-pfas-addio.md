@@ -3,6 +3,7 @@ title: "Addio alle schiume con PFAS: l'Europa cambia il modo di spegnere"
 date: 2026-08-17T00:02:00+02:00
 description: "Il regolamento UE 2025/1988 mette al bando le schiume antincendio con PFAS, gli «inquinanti eterni». Cosa cambia e perché riguarda anche l'ambiente."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-17-schiume-antincendio-pfas-addio.webp"

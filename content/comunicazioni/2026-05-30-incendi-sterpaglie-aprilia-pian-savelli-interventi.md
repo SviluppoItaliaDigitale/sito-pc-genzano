@@ -3,6 +3,7 @@ title: "Tre incendi di sterpaglie, da Aprilia a via di Pian Savelli: gli interve
 date: 2026-05-30T00:03:00+02:00
 description: "Il 21, 23 e 30 maggio la Sala Operativa regionale ci ha attivato per tre incendi di sterpaglie, ad Aprilia, in via dell'Unica e in via di Pian Savelli."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-30-incendi-sterpaglie-aprilia-pian-savelli-interventi.webp"

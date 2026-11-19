@@ -3,6 +3,7 @@ title: "5 dicembre, Giornata internazionale del volontariato: cosa dice la legge
 date: 2026-12-05
 description: "Il 5 dicembre le Nazioni Unite celebrano chi fa volontariato. In Italia il volontario di protezione civile ha diritti e doveri scritti nel Codice."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-05-giornata-internazionale-del-volontariato.webp"

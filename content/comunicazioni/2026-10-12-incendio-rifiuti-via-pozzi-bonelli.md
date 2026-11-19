@@ -3,6 +3,7 @@ title: "Sterpaglie e sfalci in fiamme in via di Pozzi Bonelli: notte di lavoro c
 date: 2026-10-12T00:03:00+02:00
 description: "La sera del 12 ottobre è stato segnalato un incendio a Montecagnoletto: bruciavano sterpaglie e sfalci. Raffreddamento fino all'una."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-12-incendio-rifiuti-via-pozzi-bonelli.webp"

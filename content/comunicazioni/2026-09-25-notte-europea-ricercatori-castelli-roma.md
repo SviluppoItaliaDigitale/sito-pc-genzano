@@ -3,6 +3,7 @@ title: "Notte europea dei ricercatori: gli appuntamenti tra Frascati e Roma"
 date: 2026-09-25T00:04:00+02:00
 description: "Venerdì 25 settembre laboratori aperti e incontri gratuiti: ESA e ARPA Lazio a Frascati, CNR a Tor Vergata, INGV a Roma. I link ai programmi ufficiali."
 badge: "Evento"
+canale: "italia"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-25-notte-europea-ricercatori-castelli-roma.webp"

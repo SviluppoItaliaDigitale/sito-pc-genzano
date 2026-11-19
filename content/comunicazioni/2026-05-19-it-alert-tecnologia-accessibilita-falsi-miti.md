@@ -3,6 +3,7 @@ title: "IT-alert: storia, tecnologia, accessibilità e cinque falsi miti smontat
 date: 2026-05-19T00:03:00+02:00
 description: "Da dove viene IT-alert, perché Cell Broadcast non è un SMS, come funziona per chi non sente o non vede, e i cinque falsi miti più diffusi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti.webp"

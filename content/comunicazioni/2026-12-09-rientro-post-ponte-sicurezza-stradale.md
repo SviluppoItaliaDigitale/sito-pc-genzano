@@ -3,6 +3,7 @@ title: "Rientro dal ponte: sicurezza stradale e stanchezza"
 date: 2026-12-09
 description: "Il 9 dicembre è giorno di rientri e ripresa della normalità dopo il ponte. Attenzione a stanchezza e condizioni stradali."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-09-rientro-post-ponte-sicurezza-stradale.webp"

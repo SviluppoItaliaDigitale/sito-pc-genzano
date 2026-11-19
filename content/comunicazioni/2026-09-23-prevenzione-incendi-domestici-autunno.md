@@ -3,6 +3,7 @@ title: "Incendi domestici: la prevenzione prima dell'accensione del riscaldament
 date: 2026-09-23T00:01:00+02:00
 description: "Stufe, camini, canne fumarie, impianti elettrici: prima di accendere il riscaldamento, controlli semplici evitano incendi domestici."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-23-prevenzione-incendi-domestici-autunno.webp"

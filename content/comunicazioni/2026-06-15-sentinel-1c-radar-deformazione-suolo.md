@@ -3,6 +3,7 @@ title: "Sentinel-1C: il nuovo radar europeo che misura il suolo che si muove"
 date: 2026-06-15T00:02:00+02:00
 description: "Il satellite Copernicus Sentinel-1C riporta a due la costellazione radar europea: misura dallo spazio le deformazioni del suolo di terremoti, frane e vulcani."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-15-sentinel-1c-radar-deformazione-suolo.webp"
@@ -48,7 +49,7 @@ I dati Sentinel-1 alimentano la sorveglianza di diversi rischi naturali:
 - **Vulcani**: registrano il sollevamento del terreno quando il magma si muove in profondità.
 - **Abbassamenti del suolo** (subsidenza): seguono le aree che sprofondano lentamente per cause naturali o umane.
 
-Le stesse immagini alimentano il **Copernicus Emergency Management Service**, che produce mappe satellitari rapide durante alluvioni, incendi e terremoti in tutta Europa. Quel servizio è una delle fonti del nostro [Cruscotto del territorio](/cruscotto/).
+Le stesse immagini alimentano il **Copernicus Emergency Management Service**, che produce mappe satellitari rapide durante alluvioni, incendi e terremoti in tutta Europa. Quel servizio è una delle fonti del nostro [Cruscotto e dati in tempo reale](/cruscotto/).
 
 ## Perché riguarda anche Genzano e i Castelli
 
@@ -63,7 +64,7 @@ C'è un ultimo motivo per cui questa notizia conta: i dati di Copernicus sono **
 **Sul nostro sito:**
 
 - [Il terremoto visto dallo spazio](/dossier/terremoto-visto-dallo-spazio/) — il dossier interattivo su come funziona l'interferometria SAR, frangia dopo frangia.
-- [Cruscotto del territorio](/cruscotto/) — i dati di rischio in tempo reale, comprese le mappe Copernicus delle emergenze.
+- [Cruscotto e dati in tempo reale](/cruscotto/) — i dati di rischio in tempo reale, comprese le mappe Copernicus delle emergenze.
 - [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) — il vulcano quiescente sotto i Castelli Romani.
 
 **Fonti istituzionali:**

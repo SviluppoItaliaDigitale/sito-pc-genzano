@@ -51,7 +51,7 @@
       {{ partial "lis-badge.html" . }}
       <div class="list-intro-content">{{ .Content }}</div>
       {{ partial "libro-3d-rimando.html" . }}
-      {{ partial "glossario-inline.html" . }}
+      {{ if ne .Params.glossario_inline false }}{{ partial "glossario-inline.html" . }}{{ end }}
       {{ partial "video-correlati.html" . }}
       {{ else }}
       {{ .Content }}

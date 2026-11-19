@@ -3,6 +3,7 @@ title: "Volontariato per studenti: perché iniziare da giovane"
 date: 2026-11-10T00:02:00+01:00
 description: "Il volontariato di Protezione Civile è aperto anche a studenti e giovani. Un'esperienza formativa, civica e di crescita, compatibile con lo studio."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-10-volontariato-giovane-studenti.webp"

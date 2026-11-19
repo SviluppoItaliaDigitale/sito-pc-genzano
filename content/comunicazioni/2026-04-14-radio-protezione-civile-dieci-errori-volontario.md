@@ -3,6 +3,7 @@ title: "Dieci errori da evitare alla radio in protezione civile"
 date: 2026-04-14
 description: "Le abitudini sbagliate che fanno perdere tempo e informazioni in emergenza: privacy, formalismi, codice Q, sequenza di chiamata, conferme."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-14-radio-protezione-civile-dieci-errori-volontario.webp"

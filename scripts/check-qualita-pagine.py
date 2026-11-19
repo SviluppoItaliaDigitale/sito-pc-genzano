@@ -13,7 +13,12 @@ e verifica le cose che un lettore nota per prime:
     - <img> senza attributo alt (WCAG 1.1.1: alt="" va bene per le immagini
       decorative, l'attributo assente no);
     - lo stesso id su due elementi (dal 31/10/2026: l'indice di pagina copiava
-      gli <span id> dei titoli del catalogo dei giochi, audit esterno A11).
+      gli <span id> dei titoli del catalogo dei giochi, audit esterno A11);
+    - un collegamento dentro un altro collegamento (dal 19/11/2026: un
+      indirizzo email scritto dentro un <a> in un paragrafo Markdown viene
+      trasformato in link una seconda volta, e il link esterno resta vuoto
+      per gli screen reader, WCAG 2.4.4 e 4.1.2). Nel Markdown si scrive
+      [indirizzo](mailto:indirizzo), non il tag <a>.
   Avvisi (non bloccano):
     - più di un <h1> nella stessa pagina (fuori dalle eccezioni dichiarate);
     - due pagine con lo stesso titolo (paginazioni escluse).
@@ -53,6 +58,8 @@ class Lettore(HTMLParser):
         self.in_title = False
         self.refresh = False
         self.id_visti: dict[str, int] = defaultdict(int)
+        self.link_aperti = 0
+        self.link_annidati: list[str] = []
 
     def handle_starttag(self, tag, attrs):
         a = {k.lower(): v for k, v in attrs}
@@ -63,6 +70,10 @@ class Lettore(HTMLParser):
             return
         if a.get("id"):
             self.id_visti[a["id"]] += 1
+        if tag == "a":
+            if self.link_aperti:
+                self.link_annidati.append(a.get("href") or "(senza href)")
+            self.link_aperti += 1
         if tag == "h1":
             self.h1 += 1
         elif tag == "img" and "alt" not in a:
@@ -82,6 +93,8 @@ class Lettore(HTMLParser):
             self.dentro_script -= 1
         elif tag == "title":
             self.in_title = False
+        elif tag == "a" and self.link_aperti:
+            self.link_aperti -= 1
 
     def handle_data(self, data):
         if self.in_title:
@@ -117,6 +130,8 @@ def main() -> int:
             avvisi.append(f"{rel}: {p.h1} titoli principali (<h1>), ne serve uno")
         for src in p.img_senza_alt:
             errori.append(f"{rel}: immagine senza testo alternativo (alt): {src[:90]}")
+        for href in p.link_annidati:
+            errori.append(f"{rel}: collegamento dentro un altro collegamento: {href[:90]}")
         doppi = sorted(k for k, n in p.id_visti.items() if n > 1)
         if doppi:
             errori.append(f"{rel}: id ripetuti ({', '.join(doppi[:6])}): un collegamento #id deve avere una sola destinazione")

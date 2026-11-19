@@ -3,6 +3,7 @@ title: "Corso base per volontari: la nostra squadra in formazione alla Sala Oper
 date: 2026-05-20T00:03:00+02:00
 description: "Una squadra del Gruppo di Genzano di Roma ha frequentato il corso base, oggi requisito obbligatorio per operare nel volontariato di Protezione Civile."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-20-corso-base-volontari-obbligatorio-sala-operativa-lazio.webp"

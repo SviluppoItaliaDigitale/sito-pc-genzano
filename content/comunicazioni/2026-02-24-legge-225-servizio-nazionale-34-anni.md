@@ -3,6 +3,7 @@ title: "Servizio nazionale della protezione civile: 34 anni dalla legge 225 del 
 date: 2026-02-24
 description: "Il 24 febbraio 1992 la legge n. 225 istituì il Servizio nazionale della protezione civile. Che cosa stabilì e che cosa ne resta nel Codice del 2018."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-24-legge-225-servizio-nazionale-34-anni.webp"

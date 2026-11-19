@@ -3,6 +3,7 @@ title: "Antincendio boschivo 2026: gli adempimenti operativi della Regione Lazio
 date: 2026-06-14T00:02:00+02:00
 description: "La Regione Lazio ha inviato alle organizzazioni di volontariato le indicazioni per la campagna antincendio boschivo 2026: radio, app, sicurezza."
 badge: "Volontariato"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-14-campagna-aib-2026-adempimenti-operativi-regione-lazio.webp"

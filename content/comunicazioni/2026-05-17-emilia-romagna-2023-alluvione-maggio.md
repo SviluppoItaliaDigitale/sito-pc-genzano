@@ -3,6 +3,7 @@ title: "Alluvione dell'Emilia-Romagna, maggio 2023: il fango che ha cambiato la 
 date: 2026-05-17T00:02:00+02:00
 description: "Maggio 2023 in Emilia-Romagna: 350 mm di pioggia in 36 ore, esondazione di 23 fiumi, 17 vittime, 36.000 sfollati. L'alluvione più grave del XXI secolo."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-17-emilia-romagna-2023-alluvione-maggio.webp"

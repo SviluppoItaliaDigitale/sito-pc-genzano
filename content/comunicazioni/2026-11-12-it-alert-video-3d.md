@@ -3,6 +3,7 @@ title: "IT-alert: un video in 3D spiega il messaggio che avvisa di un grave peri
 date: 2026-11-12T00:04:00+01:00
 description: "Un video di poco più di un minuto, con voce e sottotitoli, spiega come arriva un messaggio IT-alert, per quali emergenze si usa e che fare quando lo ricevi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-12-it-alert-video-3d.webp"

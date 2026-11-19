@@ -3,6 +3,7 @@ title: "Sarno, 5 maggio 1998: la frana che ha riscritto le mappe del rischio idr
 date: 2026-05-05T00:02:00+02:00
 description: "Le colate rapide del 5 maggio 1998 colpirono Sarno, Quindici, Siano e Bracigliano: 159 vittime, 137 nella sola Sarno."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia.webp"

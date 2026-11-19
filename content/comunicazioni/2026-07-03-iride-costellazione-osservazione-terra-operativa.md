@@ -3,6 +3,7 @@ title: "IRIDE operativa nel 2026: i nuovi occhi italiani sul territorio"
 date: 2026-07-03T00:02:00+02:00
 description: "La costellazione satellitare italiana IRIDE entra in servizio nel 2026. Come funziona e perché serve alla protezione civile: frane, incendi, alluvioni."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-03-iride-costellazione-osservazione-terra-operativa.webp"

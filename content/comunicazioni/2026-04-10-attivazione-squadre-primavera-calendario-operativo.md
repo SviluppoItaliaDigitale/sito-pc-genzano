@@ -3,6 +3,7 @@ title: "Attivazione squadre di primavera: il calendario operativo"
 date: 2026-04-10
 description: "Con la primavera riparte l'attività operativa del Gruppo. Formazione, esercitazioni, sopralluoghi: il calendario delle attività primaverili del Gruppo Comunale."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-10-attivazione-squadre-primavera-calendario-operativo.webp"

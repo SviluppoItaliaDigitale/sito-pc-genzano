@@ -3,6 +3,7 @@ title: "Tre incendi di sterpaglie e un ramo in via della Selva: gli interventi d
 date: 2026-06-29T00:04:00+02:00
 description: "Dal 24 al 29 giugno tre interventi per incendi di sterpaglie, uno vicino alla zona industriale di Genzano, e un ramo pericolante in via della Selva."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-29-sterpaglie-via-del-lavoro-ramo-via-della-selva-interventi.webp"

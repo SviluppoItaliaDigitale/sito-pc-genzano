@@ -3,6 +3,7 @@ title: "Pacchi di Natale: logistica corrieri e sicurezza consegne"
 date: 2026-12-16
 description: "A ridosso del Natale, picco di consegne. Come gestire ricezione pacchi, evitare truffe e prevenire incidenti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-16-pacchi-natalizi-logistica-corriere.webp"

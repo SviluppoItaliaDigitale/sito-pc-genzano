@@ -3,6 +3,7 @@ title: "Estintori: classi di fuoco, uso corretto e manutenzione"
 date: 2026-05-13T00:02:00+02:00
 description: "Guida pratica alle classi di fuoco, ai principali tipi di estintore e ai controlli periodici. Quando usarlo, quando uscire e chiamare il 112."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione.webp"

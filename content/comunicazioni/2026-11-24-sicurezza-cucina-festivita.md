@@ -3,6 +3,7 @@ title: "Cucina di festa: sicurezza domestica durante le feste"
 date: 2026-11-24T00:01:00+01:00
 description: "In cucina succedono molti incidenti domestici, e durante le feste i rischi crescono. Che cosa fare con olio, gas, bambini e ustioni."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-24-sicurezza-cucina-festivita.webp"

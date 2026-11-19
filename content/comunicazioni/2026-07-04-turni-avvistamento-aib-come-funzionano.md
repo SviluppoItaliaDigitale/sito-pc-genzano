@@ -3,6 +3,7 @@ title: "Turni di avvistamento AIB: come funzionano nel Lazio"
 date: 2026-07-04
 description: "L'estate del volontariato AIB nel Lazio è fatta di turni di avvistamento nei boschi. Come si organizzano, chi partecipa, perché contano così tanto."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-04-turni-avvistamento-aib-come-funzionano.webp"

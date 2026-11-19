@@ -4,6 +4,7 @@ date: 2026-09-15T00:02:00+02:00
 description: "Nella notte fra il 15 e il 16 settembre 2022 una violenta perturbazione scaricò oltre 400 millimetri di pioggia in poche ore sui Monti del Catria."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico.webp"

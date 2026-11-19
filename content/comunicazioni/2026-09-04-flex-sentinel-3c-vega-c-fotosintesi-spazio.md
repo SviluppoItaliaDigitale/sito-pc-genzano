@@ -3,6 +3,7 @@ title: "Il 15 settembre partiranno FLEX e Sentinel-3C: un satellite per misurare
 date: 2026-09-04T00:02:00+02:00
 description: "Un Vega-C porterà in orbita due satelliti europei. Uno misurerà la salute delle piante, l'altro continuerà a sorvegliare temperature e incendi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-04-flex-sentinel-3c-vega-c-fotosintesi-spazio.webp"

@@ -3,6 +3,7 @@ title: "31 maggio: Giornata senza tabacco, mozziconi e rischio incendi"
 date: 2026-05-31T00:01:00+02:00
 description: "La Giornata mondiale senza tabacco tocca un tema di Protezione Civile: mozziconi mal smaltiti sono una delle cause principali di incendi boschivi in estate."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-31-giornata-senza-tabacco-mozziconi-incendi.webp"

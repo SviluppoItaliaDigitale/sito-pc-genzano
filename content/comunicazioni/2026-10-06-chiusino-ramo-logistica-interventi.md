@@ -3,6 +3,7 @@ title: "Un chiusino divelto e un ramo sulla banchina: gli interventi dal 3 al 6 
 date: 2026-10-07T00:04:00+02:00
 description: "Un chiusino divelto in via degli Ulivi, un ramo in via Stati Uniti d'America e una giornata di logistica: gli interventi dal 3 al 6 ottobre."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-06-chiusino-ramo-logistica-interventi.webp"

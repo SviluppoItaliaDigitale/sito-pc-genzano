@@ -4,6 +4,7 @@ date: 2026-07-19T00:02:00+02:00
 description: "Alle 12:22 del 19 luglio 1985 i bacini di decantazione della miniera di Prestavel cedettero."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-19-stava-1985-frana-bacini-decantazione.webp"

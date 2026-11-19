@@ -3,6 +3,7 @@ title: "11 febbraio, Giornata europea del 112: insegnalo a chi ti sta vicino"
 date: 2027-02-11
 description: "Il 112 funziona anche con il telefono bloccato e senza credito. Come spiegarlo a un bambino o a un nonno, e che cosa dire quando si chiama."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-11-giornata-europea-112-insegnarlo-bambini-nonni.webp"

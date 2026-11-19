@@ -3,6 +3,7 @@ title: "Kit di emergenza di casa: il controllo dopo le feste"
 date: 2027-01-02
 description: "Pile usate per le luci di Natale, farmaci cambiati, bambini cresciuti: che cosa controllare nel kit di casa a inizio anno, insieme al piano di famiglia."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-02-kit-emergenza-revisione-inizio-anno.webp"

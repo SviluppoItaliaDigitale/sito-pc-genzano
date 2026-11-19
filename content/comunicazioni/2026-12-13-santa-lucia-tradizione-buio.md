@@ -3,6 +3,7 @@ title: "Santa Lucia: tradizione, vista e il giorno più buio"
 date: 2026-12-13T00:01:00+01:00
 description: "Il 13 dicembre è Santa Lucia, tradizionalmente il giorno più corto. Cultura, salute degli occhi e prevenzione nel buio."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-13-santa-lucia-tradizione-buio.webp"

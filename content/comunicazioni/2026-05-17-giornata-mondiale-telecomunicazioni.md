@@ -3,6 +3,7 @@ title: "17 maggio: Giornata mondiale delle telecomunicazioni e il ruolo in emerg
 date: 2026-05-17T00:01:00+02:00
 description: "La Giornata mondiale delle telecomunicazioni ricorda quanto la connettività sia fondamentale per la sicurezza. Reti, antenne, resilienza digitale."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-17-giornata-mondiale-telecomunicazioni.webp"

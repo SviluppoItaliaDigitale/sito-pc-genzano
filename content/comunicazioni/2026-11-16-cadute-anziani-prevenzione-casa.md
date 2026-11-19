@@ -3,6 +3,7 @@ title: "Cadute degli anziani: il primo nemico della sicurezza domestica"
 date: 2026-11-16T00:01:00+01:00
 description: "Le cadute domestiche sono la prima causa di infortunio per gli over 65. Come adattare la casa e prevenire lesioni gravi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-16-cadute-anziani-prevenzione-casa.webp"

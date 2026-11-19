@@ -3,6 +3,7 @@ title: "8 dicembre: auguri per la festa dell'Immacolata"
 date: 2026-12-08
 description: "Oggi 8 dicembre, festa dell'Immacolata. Un augurio dalla Protezione Civile di Genzano di Roma."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-08-immacolata-festa-auguri.webp"

@@ -3,6 +3,7 @@ title: "I satelliti che non guardano sempre nello stesso punto: MetOp-SG e il bo
 date: 2026-09-01T00:03:00+02:00
 description: "Il 27 agosto è entrato in servizio un nuovo strumento a bordo di MetOp-SGA1. I satelliti polari europei e il loro peso sulle previsioni a qualche giorno."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-01-metop-sg-satelliti-polari-previsioni.webp"

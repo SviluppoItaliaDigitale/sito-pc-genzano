@@ -3,6 +3,7 @@ title: "I nostri volontari all'Open Day antincendio boschivo del 9 maggio ad Apr
 date: 2026-05-08T00:02:00+02:00
 description: "Sabato 9 maggio 2026 una rappresentanza del Gruppo Comunale prende parte all'Open Day di Aprilia su tecnologie e prevenzione antincendio boschivo."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-08-open-day-antincendio-boschivo-aprilia.webp"

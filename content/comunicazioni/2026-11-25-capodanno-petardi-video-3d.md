@@ -3,6 +3,7 @@ title: "Fuochi di Capodanno: come arrivare al primo gennaio senza farti male"
 date: 2026-11-25T00:03:00+01:00
 description: "Un video in 3D di poco più di un minuto sui fuochi di Capodanno: quali comprare, come leggere l'etichetta, dove accenderli e cosa fare se qualcuno si ferisce."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-25-capodanno-petardi-video-3d.webp"

@@ -3,6 +3,7 @@ title: "Le scosse dei Colli Albani spiegate semplice"
 date: 2027-01-21
 description: "Perché ai Castelli Romani la terra trema, come leggere magnitudo e intensità, dove trovare i dati dell'INGV e perché nessuno può prevedere un terremoto."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-21-colli-albani-scosse-spiegate-semplice.webp"

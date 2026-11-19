@@ -3,6 +3,7 @@ title: "Assemblea dei Volontari"
 date: 2026-04-01
 description: "Sabato 4 aprile 2026 si tiene in sede l'assemblea dei volontari per fare il punto sull'andamento operativo del Gruppo."
 badge: "Avviso"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-01-assemblea-dei-volontari.webp"

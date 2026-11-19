@@ -3,6 +3,7 @@ title: "20 maggio 2012: il terremoto in Emilia e la memoria che diventa prevenzi
 date: 2026-05-20T00:01:00+02:00
 description: "Quattordici anni dal sisma emiliano. Cosa abbiamo imparato sulla vulnerabilità delle strutture produttive, sulla protezione del patrimonio e sul volontariato."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-20-terremoto-emilia-2012-memoria-resilienza.webp"

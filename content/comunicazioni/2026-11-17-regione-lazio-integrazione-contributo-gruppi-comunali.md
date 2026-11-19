@@ -3,6 +3,7 @@ title: "Regione Lazio: più fondi ai Gruppi comunali di protezione civile, 12.00
 date: 2026-11-17T00:04:00+01:00
 description: "La Regione integra di 1.929.000 euro i contributi 2026 al volontariato di protezione civile. Il Gruppo di Genzano è nell'elenco dei beneficiari, classe A: 12.000 euro."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-17-regione-lazio-integrazione-contributo-gruppi-comunali.webp"

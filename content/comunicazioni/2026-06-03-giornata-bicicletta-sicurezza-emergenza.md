@@ -3,6 +3,7 @@ title: "3 giugno: bicicletta, sicurezza e mobilità in emergenza"
 date: 2026-06-03T00:01:00+02:00
 description: "La Giornata mondiale della bicicletta invita a riflettere su un mezzo che, oltre alla mobilità ordinaria, può diventare decisivo in scenari di emergenza."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-giornata-bicicletta-sicurezza-emergenza.webp"

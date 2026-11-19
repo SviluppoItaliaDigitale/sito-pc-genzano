@@ -3,6 +3,7 @@ title: "Otto interventi in una settimana: alberi e rami da mettere in sicurezza"
 date: 2026-09-20T00:02:00+02:00
 description: "Dall'11 al 17 settembre il Gruppo è intervenuto otto volte su alberi e rami caduti a Genzano e a Rocca di Papa, e ha allestito la Festa del Pane."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-20-alberi-rami-settimana-interventi-genzano.webp"
