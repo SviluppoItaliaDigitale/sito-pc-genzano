@@ -41,9 +41,17 @@
     .na-lingua { display: flex; align-items: flex-end; gap: 2mm; font-size: 0.75rem; color: var(--scheda-grigio); }
     .na-lingua span.na-linea { flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); min-height: 7mm; }
     .na-credito { font-size: 0.7rem; color: var(--scheda-grigio); margin: 1.5mm 0 0 0; }
+    .na-adulto { break-inside: avoid; page-break-inside: avoid; }
     .na-adulto p, .na-adulto li { font-size: 0.88rem; line-height: 1.45; }
     @media print {
-      .scheda-page { padding: 1cm 1.3cm 0.7cm 1.3cm; }
+      html { font-size: 92%; }
+      .scheda-page { padding: 0.8cm 1.3cm 0.5cm 1.3cm; }
+      .na-riga { padding: 1.5mm 3mm; margin-bottom: 1.8mm; grid-template-columns: 9mm 24mm minmax(0, 1fr); }
+      .na-img { height: 21mm; }
+      .na-img img { max-height: 20mm; }
+      .na-lingua span.na-linea { min-height: 6mm; }
+      .scheda-docente { margin-top: 0.4rem; padding: 0.5rem 0.7rem; }
+      .scheda-docente .scheda-elenco { margin-bottom: 0; }
       .scheda-header { margin-bottom: 0.3rem; }
     }
     @media (max-width: 600px) {

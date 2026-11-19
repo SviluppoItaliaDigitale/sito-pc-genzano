@@ -37,7 +37,7 @@
       border: 2px solid var(--scheda-blu);
       border-radius: 8px;
       padding: 2.5mm 3mm 2.5mm 3mm;
-      min-height: 37mm;
+      min-height: 33mm;
       break-inside: avoid;
       page-break-inside: avoid;
     }
@@ -58,13 +58,13 @@
       justify-content: center;
     }
     .ss-img {
-      height: 30mm;
+      height: 27mm;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1mm;
     }
-    .ss-img img { max-width: 100%; max-height: 28mm; object-fit: contain; }
+    .ss-img img { max-width: 100%; max-height: 25mm; object-fit: contain; }
     .ss-img img.ss-mezza { max-width: 48%; }
     .ss-frase { font-size: 1.12rem; line-height: 1.35; font-weight: 600; color: #212529; }
     .ss-frase .ss-scrivi { display: inline-block; min-width: 26mm; border-bottom: 1.5px solid #6c757d; }
@@ -87,6 +87,7 @@
     }
     .ss-ritaglio img { max-width: 100%; max-height: 26mm; object-fit: contain; }
     @media print {
+      html { font-size: 94%; }
       .scheda-page { padding: 1cm 1.3cm 0.7cm 1.3cm; }
       .scheda-header { margin-bottom: 0.3rem; }
     }
