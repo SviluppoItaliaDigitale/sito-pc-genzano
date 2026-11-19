@@ -109,9 +109,9 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 
 ## Segnala un defibrillatore o un idrante
 
-Stiamo raccogliendo le posizioni dei defibrillatori (DAE) accessibili al pubblico e degli idranti antincendio di Genzano, per una mappa che pubblicheremo solo con dati verificati. Se ne conosci uno, in una farmacia, una scuola, una palestra, una parrocchia o un ufficio pubblico, scrivi a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a> indicando indirizzo e punto esatto. Le segnalazioni le verifichiamo con ASL Roma 6, 118, Vigili del Fuoco e Comune.
+Stiamo raccogliendo le posizioni dei defibrillatori (DAE) accessibili al pubblico e degli idranti antincendio di Genzano, per una mappa che pubblicheremo solo con dati verificati. Se ne conosci uno, in una farmacia, una scuola, una palestra, una parrocchia o un ufficio pubblico, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) indicando indirizzo e punto esatto. Le segnalazioni le verifichiamo con ASL Roma 6, 118, Vigili del Fuoco e Comune.
 
-In emergenza chiama sempre il <a href="tel:112">112</a>.
+In emergenza chiama sempre il [112](tel:112).
 
 ## Mappa della sede
 
