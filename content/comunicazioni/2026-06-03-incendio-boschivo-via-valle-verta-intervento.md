@@ -17,7 +17,7 @@ social_citazione: "Se vedi una colonna di fumo, chiama il 112 e indica Comune, l
 social_punti:
   - "Mercoledì 3 giugno, verso le 17: una colonna di fumo in via di Valle Verta, a Genzano."
   - "Tre volontari partono con l'Iveco VM90 su richiesta della Sala Operativa regionale."
-  - "Secondo il rapporto, bruciati circa 3.000 metri di boscaglia; sul posto Vigili del fuoco e Protezione Civile di Lanuvio."
+  - "Secondo il rapporto, bruciati circa 3.000 metri quadrati di boscaglia; sul posto Vigili del fuoco e Protezione Civile di Lanuvio."
   - "Se vedi un incendio, chiama il 112."
 ---
 
@@ -27,7 +27,7 @@ social_punti:
 
 Sono partiti **tre volontari** con l'**Iveco VM90**, il nostro 4x4 con modulo antincendio da 800 litri. Sul posto c'erano i **Vigili del fuoco** e la **Protezione Civile di Lanuvio**.
 
-Secondo il rapporto, sono bruciati **circa 3.000 metri di boscaglia**. Il servizio è durato quasi due ore e si è chiuso poco dopo le **19**.
+Secondo il rapporto, sono bruciati **circa 3.000 metri quadrati di boscaglia**. Il servizio è durato quasi due ore e si è chiuso poco dopo le **19**.
 
 ## Cosa impariamo
 
