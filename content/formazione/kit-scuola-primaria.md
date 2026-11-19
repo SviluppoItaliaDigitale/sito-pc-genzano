@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola primaria** che desideran
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono adatti a bambini dai 6 agli 11 anni, con attività differenziate per le classi iniziali (I-II) e per le classi finali (III-IV-V).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~1,8 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~2,3 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. I casi studio delle maxi-emergenze italiane sono adattati per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -508,6 +508,24 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Temporali intensi: cosa faccio**](/formazione/schede-stampabili/temporali-intensi-primaria/) — al riparo dentro un edificio, lontano da alberi e fili elettrici, niente telefono con filo durante i fulmini. Con quiz, vero/falso e soluzioni capovolte. *(scienze, ed. civica)*
 - 👉 [**Alluvioni e frane: cosa faccio**](/formazione/schede-stampabili/rischio-idrogeologico-primaria/) — cosa fare in caso di alluvione o frana ai Castelli Romani: piani alti, mai in cantina, mai attraversare strade allagate. Con quiz, vero/falso e soluzioni capovolte. *(scienze, geografia, ed. civica)*
 - 👉 [**Incendio boschivo: cosa faccio**](/formazione/schede-stampabili/incendio-boschivo-primaria/) — chiamare il 112, non accendere fuochi nel bosco, allontanarsi in direzione opposta al fumo. Con quiz, vero/falso e soluzioni capovolte. *(scienze, geografia, ed. civica)*
+
+**Dentro le materie, fuori dall'aula e per crescere** — altre schede per la classe e per gli adulti:
+
+- 👉 [**A caccia di strumenti: arrivano i volontari**](/formazione/schede-stampabili/caccia-strumenti-visita-gruppo/) — da fare prima della visita dei volontari del Gruppo: cartelli di sicurezza nella scuola, casco, guanti e radio, domande da preparare.
+- 👉 [**Il mio passaporto della sicurezza**](/formazione/schede-stampabili/passaporto-sicurezza/) — le tappe dell'anno, dalla prova di evacuazione al piano familiare, con la firma del docente quando sono fatte. Senza punteggi.
+- 👉 [**Prova o emergenza in palestra**](/formazione/schede-stampabili/educazione-fisica-palestra/) — per il docente di educazione fisica: palestra, spogliatoi e campo esterno, la scossa durante la lezione, un alunno che si fa male. *(per il docente)*
+- 👉 [**Per il supplente: la sicurezza della classe**](/formazione/schede-stampabili/kit-docente-supplente/) — da compilare e lasciare sulla cattedra: piano di emergenza, aprifila e chiudifila, punto di raccolta, chi chiamare. *(per il supplente)*
+- 👉 [**Che cosa vuol dire «50 mm di pioggia»?**](/formazione/schede-stampabili/matematica-50mm-pioggia/) — matematica con la pioggia: dai millimetri ai litri e ai metri cubi, e perché il colore dell'allerta lo decide il Centro Funzionale. *(matematica, scienze)*
+- 👉 [**Gli spaghetti e la magnitudo: quanto è forte un terremoto?**](/formazione/schede-stampabili/scienze-spaghetti-terremoto/) — laboratorio con gli spaghetti: energia e magnitudo, magnitudo e intensità MCS. *(scienze)*
+- 👉 [**Cinque minuti, una scelta: dilemmi da proiettare al cambio dell'ora**](/formazione/schede-stampabili/cinque-minuti-dilemmi/) — una carta al giorno da proiettare al cambio dell'ora, con risposta capovolta e la pagina del sito da cui viene.
+- 👉 [**Ti ricordi quella volta? Intervista a un nonno**](/formazione/schede-stampabili/intervista-ai-nonni/) — memoria di un'emergenza vissuta raccolta da un anziano e confrontata con le fonti. *(storia, italiano)*
+- 👉 [**Missione cameretta: la mia stanza sicura se trema la terra**](/formazione/schede-stampabili/missione-cameretta/) — la propria stanza controllata con un adulto, come chiede il Dipartimento della Protezione Civile.
+- 👉 [**Due ore senza corrente: una simulazione a tempo**](/formazione/schede-stampabili/due-ore-senza-corrente/) — simulazione a tempo con ruoli e conto della batteria, senza candele.
+- 👉 [**Il compagno-guida nella prova di evacuazione**](/formazione/schede-stampabili/compagno-guida/) — accompagnare un compagno nella prova di evacuazione, chiedendo prima che aiuto vuole.
+- 👉 [**Rubrica dei compiti di realtà di protezione civile**](/formazione/schede-stampabili/rubrica-compiti-realta/) — le stesse cinque voci per valutare prodotto e lavoro di gruppo. *(per il docente)*
+- 👉 [**Controlla, chiama, comprimi: il primo soccorso a misura di età**](/formazione/schede-stampabili/primo-soccorso-eta-kids-save-lives/) — il primo soccorso a misura di età secondo le Linee guida IRC/ERC 2025 e «Kids Save Lives»; non sostituisce un corso.
+- 👉 [**In gita nel Parco dei Castelli Romani: prima di partire**](/formazione/schede-stampabili/gita-parco-castelli-romani/) — allerta, zaino e regole del bosco prima di un'uscita della classe.
+- 👉 [**Fogli per la famiglia: giugno e dicembre**](/formazione/schede-stampabili/fogli-stagionali-giugno-dicembre/) — i consigli di stagione da portare a casa a giugno e a dicembre. *(per le famiglie)*
 
 **Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
 
