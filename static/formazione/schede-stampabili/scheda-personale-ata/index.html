@@ -19,15 +19,26 @@
     .ata-avvertenza { margin: 0.5rem 0; padding: 0.55rem 0.8rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
     .ata-avvertenza strong:first-child { color: #7a3d06; }
     .ata-compiti { list-style: none; padding: 0; margin: 0.3rem 0; }
-    .ata-compiti li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.6rem; margin-bottom: 0.4rem; }
+    .ata-compiti li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.25rem 0.5rem; margin-bottom: 0.25rem; line-height: 1.38; }
     .ata-compiti li > strong { color: var(--scheda-blu); }
     .ata-se { display: inline-block; font-size: 0.78rem; font-weight: 700; color: #fff; background: var(--scheda-blu); border-radius: 4px; padding: 0 0.35rem; margin-right: 0.3rem; }
     .ata-sempre { margin: 0.3rem 0; padding-left: 1.2rem; }
-    .ata-sempre li { margin: 0.2rem 0; }
+    .ata-sempre li { margin: 0.1rem 0; }
     .ata .scheda-docente p { margin: 0.25rem 0; }
     @media print {
-      .ata { font-size: 10pt; }
+      .ata { font-size: 0.95rem; }
       .ata-compiti li, .scheda-docente { break-inside: avoid; }
+    }
+    /* Stampa su due fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .ata .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .ata .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-footer { padding-top: 2mm; }
     }
   </style>
 </head>
@@ -118,18 +129,17 @@
         <li>Non usare l'ascensore.</li>
         <li>Non tornare indietro a prendere oggetti.</li>
         <li>Segui le indicazioni di chi coordina l'emergenza e non prendere iniziative diverse dal piano.</li>
-        <li>Se chi coordina o le autorità dispongono di restare al chiuso, chiudi porte e finestre del tuo settore; se è il tuo compito, spegni la ventilazione. Si esce solo con il segnale di fine emergenza.</li>
-        <li>Usa il telefono solo se serve: le linee servono ai soccorsi.</li>
-        <li>Dopo, rientra solo con il segnale di fine emergenza e racconta al coordinatore che cosa hai visto.</li>
+        <li>Se chi coordina o le autorità dispongono di restare al chiuso, chiudi porte e finestre del tuo settore e, se è il tuo compito, spegni la ventilazione.</li>
+        <li>Si esce dal riparo, o si rientra nell'edificio, solo con il segnale di fine emergenza.</li>
+        <li>Usa il telefono solo se serve. Dopo, racconta al coordinatore che cosa hai visto.</li>
       </ul>
 
       <h2 class="scheda-h2">4. Dopo la prova</h2>
       <p>Che cosa non ha funzionato per me (chiavi, porte, elenco, segnale, percorso):</p>
       <div class="scheda-righe"></div>
-      <div class="scheda-righe"></div>
 
       <div class="scheda-docente">
-        <p><strong>Per il dirigente, il DSGA e il referente della sicurezza.</strong> Compilate la scheda insieme a ogni persona, a inizio anno e ogni volta che cambiano il personale o il piano. Le parti 2 e 3 vanno lette insieme al piano della scuola: un compito che il piano non prevede si cancella. La formazione dei lavoratori è disciplinata dall'art. 37 del D.Lgs. 81/2008, il primo soccorso dall'art. 45: questa scheda non dà indicazioni sanitarie e non sostituisce i corsi degli addetti. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini né della singola scuola: in emergenza si chiama il 112; per segnalazioni non urgenti c'è la Sala Operativa della Protezione Civile del Lazio, 803 555.</p>
+        <p><strong>Per il dirigente, il DSGA e il referente della sicurezza.</strong> Compilate la scheda con ogni persona a inizio anno e quando cambiano personale o piano; un compito che il piano non prevede si cancella. Formazione e primo soccorso seguono il D.Lgs. 81/2008 (artt. 37 e 45): la scheda non dà indicazioni sanitarie e non sostituisce i corsi degli addetti. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini né della singola scuola: in emergenza si chiama il 112; per segnalazioni non urgenti c'è la Sala Operativa della Protezione Civile del Lazio, 803 555.</p>
       </div>
     </div>
 

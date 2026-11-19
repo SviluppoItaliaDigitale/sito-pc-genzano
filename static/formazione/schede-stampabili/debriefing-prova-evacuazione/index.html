@@ -15,7 +15,7 @@
     .db .scheda-h2 { margin: 0.7rem 0 0.3rem; }
     .db-griglia { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.3rem 0; }
     .db-griglia caption { text-align: left; font-weight: 700; color: var(--scheda-blu); padding-bottom: 0.2rem; }
-    .db-griglia th, .db-griglia td { border: 1px solid var(--scheda-bordo); padding: 0.3rem 0.4rem; vertical-align: middle; }
+    .db-griglia th, .db-griglia td { border: 1px solid var(--scheda-bordo); padding: 0.2rem 0.4rem; vertical-align: middle; }
     .db-griglia thead th { background: #e7f0fa; color: var(--scheda-blu); text-align: center; }
     .db-griglia thead th:first-child { text-align: left; }
     .db-griglia td.db-c { width: 3.6rem; text-align: center; }
@@ -24,7 +24,7 @@
     .db-tempi { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; align-items: baseline; margin: 0.4rem 0; }
     .db-linea { display: inline-block; min-width: 4rem; border-bottom: 1.5px solid var(--scheda-bordo); }
     .db-due { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.6rem; }
-    .db-box { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.45rem 0.6rem; min-height: 5.5rem; }
+    .db-box { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.45rem 0.6rem; min-height: 4.2rem; }
     .db-box strong { color: var(--scheda-blu); }
     .db-nota { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; }
     .db-domande { margin: 0.3rem 0; padding-left: 1.3rem; }
@@ -32,17 +32,30 @@
     .db-modulo { border: 2px solid var(--scheda-blu); border-radius: 8px; padding: 0.55rem 0.75rem; margin-top: 0.5rem; }
     .db-modulo .scheda-campi-riga { margin: 0.25rem 0; }
     .db-firme { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.8rem; margin-top: 0.6rem; font-size: 0.82rem; }
-    .db-firme span { display: block; border-top: 1.5px solid var(--scheda-bordo); padding-top: 0.2rem; margin-top: 1.4rem; }
+    .db-firme span { display: block; border-top: 1.5px solid var(--scheda-bordo); padding-top: 0.2rem; margin-top: 1.2rem; }
     .db-avvertenza { margin-top: 0.5rem; padding: 0.5rem 0.75rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.85rem; }
     .db .scheda-docente p { margin: 0.25rem 0; }
     .db .scheda-docente ul { margin: 0.15rem 0; padding-left: 1.1rem; }
     .db-pitto { float: none; display: inline-block; width: 34px; height: 34px; vertical-align: middle; margin-right: 0.3rem; }
     @media (max-width: 600px) { .db-due, .db-firme { grid-template-columns: minmax(0, 1fr); } }
     @media print {
-      .db { font-size: 10pt; }
-      .db-griglia { font-size: 9.5pt; }
+      .db { font-size: 0.95rem; }
+      .db-griglia { font-size: 0.88rem; }
       .db-griglia thead th { background: #e7f0fa; }
       .db-modulo, .scheda-docente { break-inside: avoid; }
+      .db .scheda-righe { min-height: 1.35rem; margin: 0.25rem 0; }
+      .db .scheda-docente { margin-top: 0.6rem; padding: 0.55rem 0.7rem; }
+    }
+    /* Stampa su due fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .db .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .db .scheda-intro { margin: 0.2rem 0 0.3rem; }
+      .scheda-footer { padding-top: 2mm; }
     }
   </style>
 </head>
@@ -104,12 +117,11 @@
       </div>
       <p>Il tempo non è un voto: serve a confrontare questa prova con la prossima.</p>
 
-      <h2 class="scheda-h2">2. Una cosa che ha funzionato, una da cambiare</h2>
+      <h2 class="scheda-h2">2. Una cosa che ha funzionato, una da cambiare (scrivete, disegnate o ditela a voce)</h2>
       <div class="db-due">
         <div class="db-box"><strong>Ha funzionato:</strong></div>
         <div class="db-box"><strong>Alla prossima prova cambiamo:</strong></div>
       </div>
-      <p>Potete scrivere, disegnare o dirlo a voce: l'insegnante annota.</p>
 
       <p class="db-nota">Durante una prova si può avere paura, agitarsi, ridere per il nervoso. È normale e non è un errore: nella griglia non entra. Se qualcosa vi ha spaventato, ditelo all'insegnante.</p>
     </div>
@@ -166,11 +178,10 @@
           <li>primaria e secondaria di primo grado: nucleo «Costituzione», traguardo n. 3 (conoscere i fattori di rischio dell'ambiente scolastico e contribuire a definire comportamenti di prevenzione);</li>
           <li>secondaria di secondo grado: nucleo «Costituzione», competenza n. 3 (partecipare alla gestione della sicurezza a scuola, nelle forme previste dall'istituto).</li>
         </ul>
-        <p><strong>Tempi:</strong> 10 minuti subito dopo la prova, più 5 per compilare il modulo. <strong>Materiali:</strong> la scheda, un orologio, la planimetria esposta in aula.</p>
-        <p>Le prove di evacuazione si fanno almeno due volte nel corso dell'anno scolastico (D.M. 26 agosto 1992, punto 12.0). La griglia è uno strumento di classe: non è una valutazione individuale né periodica. Valuta azioni che si vedono, mai le emozioni. In primaria leggi tu le righe; dove non ci sono rappresentanti degli studenti, la classe sceglie due compagni. Se un alunno ha un supporto previsto dal piano, osserva se ha funzionato senza nominarlo. Consegna il modulo al referente della sicurezza o al dirigente.</p>
+        <p><strong>Tempi:</strong> 10 minuti subito dopo la prova, più 5 per il modulo. <strong>Materiali:</strong> la scheda, un orologio, la planimetria esposta in aula.</p>
+        <p>Le prove di evacuazione si fanno almeno due volte nel corso dell'anno scolastico (D.M. 26 agosto 1992, punto 12.0). La griglia è uno strumento di classe, non una valutazione individuale né periodica: guarda azioni che si vedono, mai le emozioni. In primaria leggi tu le righe; dove non ci sono rappresentanti degli studenti, la classe sceglie due compagni. Se un alunno ha un supporto previsto dal piano, osserva se ha funzionato senza nominarlo. Consegna il modulo al referente della sicurezza o al dirigente.</p>
+        <p class="avvertenza"><strong>Avvertenza.</strong> La scheda aiuta a parlare della prova: non sostituisce il verbale né il piano di emergenza, che restano compito del dirigente e del servizio di prevenzione e protezione. Segnale «punto di raccolta» secondo ISO 7010.</p>
       </div>
-
-      <p class="db-avvertenza avvertenza"><strong>Avvertenza.</strong> Questa scheda aiuta a parlare della prova: non sostituisce il verbale della prova né il piano di emergenza della scuola, che restano compito del dirigente e del servizio di prevenzione e protezione. Il segnale di ISO 7010 è usato come rappresentazione grafica pubblica.</p>
     </div>
 
     <footer class="scheda-footer">

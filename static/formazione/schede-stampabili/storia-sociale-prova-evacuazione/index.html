@@ -75,6 +75,8 @@
     .ss-adulto p, .ss-adulto li { font-size: 0.88rem; line-height: 1.42; }
     .ss-adulto p { margin: 0.25rem 0; }
     .ss-adulto .scheda-intro { margin-bottom: 0.4rem; }
+    .ss-terremoto { display: grid; grid-template-columns: minmax(0, 1fr) 92mm; gap: 4mm; align-items: center; }
+    @media (max-width: 640px) { .ss-terremoto { grid-template-columns: minmax(0, 1fr); } }
     .ss-ritaglio {
       display: grid;
       grid-template-columns: 30mm minmax(0, 1fr);
@@ -83,8 +85,8 @@
       border: 2px dashed var(--scheda-blu);
       border-radius: 8px;
       padding: 2.5mm 3mm;
-      max-width: 95mm;
-      margin: 0.3rem 0 0.4rem 0;
+      max-width: 92mm;
+      margin: 0.2rem 0;
       break-inside: avoid;
     }
     .ss-ritaglio img { max-width: 100%; max-height: 26mm; object-fit: contain; }
@@ -212,23 +214,25 @@
     </ul>
 
     <h2 class="scheda-h2">Se la prova è per il terremoto</h2>
-    <p>Nella prova per il terremoto, prima di uscire, la classe si ripara sotto i banchi e si protegge la testa. Ritagliate questo riquadro e incollatelo fra il 3 e il 4.</p>
+    <div class="ss-terremoto">
+    <p>Nella prova per il terremoto, prima di uscire, la classe si ripara sotto i banchi e si protegge la testa. Ritagliate il riquadro qui accanto e incollatelo fra il 3 e il 4.</p>
     <div class="ss-ritaglio">
       <img src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: una persona accovacciata sotto un tavolo">
       <p class="ss-frase">Prima mi metto sotto il banco e mi proteggo la testa. Aspetto che l'insegnante dica di uscire.</p>
+    </div>
     </div>
 
     <h2 class="scheda-h2">Quando leggerla</h2>
     <p>Qualche giorno prima della prova, più volte, in un momento tranquillo; la mattina della prova, se la data è nota; dopo, per ricordare insieme come è andata. Leggete indicando ogni immagine con il dito. L'alunno può indicare, ripetere, colorare o rispondere con un gesto: vanno bene tutti i modi. Se a un certo punto vuole fermarsi, fermatevi.</p>
 
     <h2 class="scheda-h2">Le scelte si concordano prima</h2>
-    <p>Cuffie, posto nella fila, persona di riferimento e un eventuale preavviso si concordano con la famiglia, con il docente di sostegno e con chi cura il piano di emergenza della scuola (il dirigente e il responsabile della sicurezza). Scrivetele nel piano: in un'emergenza vera non c'è tempo per decidere, e quello che si prova deve valere anche allora.</p>
+    <p>Cuffie, posto nella fila, persona di riferimento e un eventuale preavviso si concordano con la famiglia, con il docente di sostegno e con chi cura il piano di emergenza della scuola (il dirigente e il responsabile della sicurezza). Scrivetele nel piano: ciò che si prova deve valere anche in un'emergenza vera.</p>
 
     <div class="scheda-docente">
       <strong>Avvertenze per l'adulto.</strong> Questa scheda non sostituisce il piano di emergenza della scuola né le indicazioni di chi segue l'alunno: in caso di differenze, vale il piano. Non promettete che il suono «non farà paura» o che «andrà tutto bene»: dite che cosa succederà e chi ci sarà vicino. Avere paura durante la prova è normale.
     </div>
 
-    <p class="ss-credito">Fonti: Carol Gray, «Social Stories» (carolgraysocialstories.com). Indicazioni sulla prova di evacuazione dal Kit scuola infanzia e primaria di protezionecivilegenzano.it. Pittogrammi ARASAAC — autore Sergio Palao, Governo d'Aragona, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010. Fonti controllate il 19/11/2026.</p>
+    <p class="ss-credito">Fonti: Carol Gray, «Social Stories» (carolgraysocialstories.com); Kit scuola infanzia e primaria di protezionecivilegenzano.it; controllate il 19/11/2026. Pittogrammi ARASAAC — autore Sergio Palao, Governo d'Aragona, licenza CC BY-NC-SA 4.0. Segnali: ISO 7010.</p>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>

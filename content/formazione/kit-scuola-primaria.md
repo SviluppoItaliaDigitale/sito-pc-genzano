@@ -509,6 +509,18 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Alluvioni e frane: cosa faccio**](/formazione/schede-stampabili/rischio-idrogeologico-primaria/) — cosa fare in caso di alluvione o frana ai Castelli Romani: piani alti, mai in cantina, mai attraversare strade allagate. Con quiz, vero/falso e soluzioni capovolte. *(scienze, geografia, ed. civica)*
 - 👉 [**Incendio boschivo: cosa faccio**](/formazione/schede-stampabili/incendio-boschivo-primaria/) — chiamare il 112, non accendere fuochi nel bosco, allontanarsi in direzione opposta al fumo. Con quiz, vero/falso e soluzioni capovolte. *(scienze, geografia, ed. civica)*
 
+**Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
+
+- 👉 [**La prova di evacuazione: la mia storia**](/formazione/schede-stampabili/storia-sociale-prova-evacuazione/) — storia sociale con pittogrammi da leggere nei giorni prima della prova, per chi è nello spettro autistico o ha altre necessità comunicative, da personalizzare con nomi, luogo e suono della propria scuola. *(con il docente di sostegno)*
+- 👉 [**La sirena a scuola è una prova**](/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/) — sei frasi in italiano semplice con pittogrammi per chi è appena arrivato in Italia, con una riga «Nella tua lingua» per il mediatore culturale.
+- 👉 [**Quando non si esce: restare al riparo dentro la scuola**](/formazione/schede-stampabili/restare-al-chiuso/) — temporale, fumo, nube o ordine delle autorità: che cosa fa la classe, chi decide, perché le famiglie non devono correre a scuola. Con quattro scenari e soluzioni capovolte.
+- 👉 [**Dopo la prova di evacuazione**](/formazione/schede-stampabili/debriefing-prova-evacuazione/) — 10 minuti per capire come è andata: griglia di osservazione per la classe, domande per il docente, modulo di segnalazione per il referente della sicurezza.
+- 👉 [**Il giorno dopo una scossa o un'allerta**](/formazione/schede-stampabili/il-giorno-dopo-docente/) — per il docente: 10 minuti per accogliere paure e voci in classe, che cosa dire e che cosa evitare, le fonti ufficiali per smontare una voce falsa. *(per il docente)*
+- 👉 [**Se a scuola scatta un'emergenza — foglio per le famiglie**](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/) — da allegare al Patto di corresponsabilità o ai documenti di inizio anno: che cosa fa la scuola, che cosa fanno i genitori, ritiro dei figli e chiusure. *(per le famiglie)*
+- 👉 [**Assemblea dei genitori: 4 schermate sulle emergenze**](/formazione/schede-stampabili/assemblea-genitori-emergenze/) — da proiettare o stampare all'assemblea di inizio anno: piano e prove, cosa succede in orario scolastico, ritiro e chiusure, piano familiare. *(per le famiglie)*
+- 👉 [**Scheda di evacuazione personalizzata**](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — modello da compilare con la famiglia, accanto al PEI, per un'alunna o un alunno con disabilità: spostamenti e ausili, chi accompagna, come comunicare, percorso e punto di raccolta. *(per il docente di sostegno)*
+- 👉 [**Prova o emergenza: la scheda per il personale**](/formazione/schede-stampabili/scheda-personale-ata/) — per collaboratori scolastici, mensa ed educatori del pre e post-scuola: il proprio compito, il sostituto, chiavi, quadri e punto di raccolta. *(per il personale)*
+
 **Schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
 
 - 👉 [**Sillabe della Protezione Civile**](/formazione/schede-stampabili/sillabe-protezione-civile-primaria/) — parole-chiave divise in sillabe (CA·SCO, SI·RE·NA, POM·PIE·RE…), esercizio di divisione, ricomposizione di puzzle sillabici e copiatura di una frase. Soluzioni per il docente.

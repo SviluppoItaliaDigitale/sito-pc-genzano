@@ -722,6 +722,15 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**La siccità e i dati del clima locale**](/formazione/schede-stampabili/siccita-dati-clima-secondaria2/) — analisi guidata della serie di pioggia annua di Genzano (rianalisi ERA5 via Open-Meteo): deficit idrico, differenza fra siccità meteorologica e idrologica, la siccità come rischio che cresce. *(scienze della Terra, geografia, statistica, ed. civica)*
 - 👉 [**Emergenza inclusiva**](/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/) — aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali", verifica inclusiva del percorso, mini quiz. *(ed. civica, scienze umane, inclusione, diritto)*
 
+**Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
+
+- 👉 [**Quando non si esce: restare al riparo dentro la scuola**](/formazione/schede-stampabili/restare-al-chiuso/) — temporale, fumo, nube o ordine delle autorità: che cosa fa la classe, chi decide, perché le famiglie non devono correre a scuola. Con quattro scenari e soluzioni capovolte.
+- 👉 [**Dopo la prova di evacuazione**](/formazione/schede-stampabili/debriefing-prova-evacuazione/) — 10 minuti per capire come è andata: griglia di osservazione per la classe, domande per il docente, modulo di segnalazione per il referente della sicurezza.
+- 👉 [**Se a scuola scatta un'emergenza — foglio per le famiglie**](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/) — da allegare al Patto di corresponsabilità o ai documenti di inizio anno: che cosa fa la scuola, che cosa fanno i genitori, ritiro dei figli e chiusure. *(per le famiglie)*
+- 👉 [**Assemblea dei genitori: 4 schermate sulle emergenze**](/formazione/schede-stampabili/assemblea-genitori-emergenze/) — da proiettare o stampare all'assemblea di inizio anno: piano e prove, cosa succede in orario scolastico, ritiro e chiusure, piano familiare. *(per le famiglie)*
+- 👉 [**Scheda di evacuazione personalizzata**](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — modello da compilare con la famiglia, accanto al PEI, per un'alunna o un alunno con disabilità: spostamenti e ausili, chi accompagna, come comunicare, percorso e punto di raccolta. *(per il docente di sostegno)*
+- 👉 [**Prova o emergenza: la scheda per il personale**](/formazione/schede-stampabili/scheda-personale-ata/) — per collaboratori scolastici, mensa ed educatori del pre e post-scuola: il proprio compito, il sostituto, chiavi, quadri e punto di raccolta. *(per il personale)*
+
 **Schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
 
 - 👉 [**Il Codice della Protezione Civile (D.Lgs. 1/2018)**](/formazione/schede-stampabili/codice-pc-secondaria2/) — analisi degli articoli chiave (artt. 1, 2, 6, 12, 18, 32-35), tabella delle autorità di PC per livello, domande di applicazione. *(diritto, ed. civica)*

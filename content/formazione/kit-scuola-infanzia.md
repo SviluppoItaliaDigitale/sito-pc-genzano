@@ -262,6 +262,16 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
 - 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
 
+**Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
+
+- 👉 [**La prova di evacuazione: la mia storia**](/formazione/schede-stampabili/storia-sociale-prova-evacuazione/) — storia sociale con pittogrammi da leggere nei giorni prima della prova, per chi è nello spettro autistico o ha altre necessità comunicative, da personalizzare con nomi, luogo e suono della propria scuola. *(con il docente di sostegno)*
+- 👉 [**La sirena a scuola è una prova**](/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/) — sei frasi in italiano semplice con pittogrammi per chi è appena arrivato in Italia, con una riga «Nella tua lingua» per il mediatore culturale.
+- 👉 [**Il giorno dopo una scossa o un'allerta**](/formazione/schede-stampabili/il-giorno-dopo-docente/) — per il docente: 10 minuti per accogliere paure e voci in classe, che cosa dire e che cosa evitare, le fonti ufficiali per smontare una voce falsa. *(per il docente)*
+- 👉 [**Se a scuola scatta un'emergenza — foglio per le famiglie**](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/) — da allegare al Patto di corresponsabilità o ai documenti di inizio anno: che cosa fa la scuola, che cosa fanno i genitori, ritiro dei figli e chiusure. *(per le famiglie)*
+- 👉 [**Assemblea dei genitori: 4 schermate sulle emergenze**](/formazione/schede-stampabili/assemblea-genitori-emergenze/) — da proiettare o stampare all'assemblea di inizio anno: piano e prove, cosa succede in orario scolastico, ritiro e chiusure, piano familiare. *(per le famiglie)*
+- 👉 [**Scheda di evacuazione personalizzata**](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — modello da compilare con la famiglia, accanto al PEI, per un'alunna o un alunno con disabilità: spostamenti e ausili, chi accompagna, come comunicare, percorso e punto di raccolta. *(per il docente di sostegno)*
+- 👉 [**Prova o emergenza: la scheda per il personale**](/formazione/schede-stampabili/scheda-personale-ata/) — per collaboratori scolastici, mensa ed educatori del pre e post-scuola: il proprio compito, il sostituto, chiavi, quadri e punto di raccolta. *(per il personale)*
+
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
 - 👉 [**ABC delle Vocali — Le parole che salvano**](/formazione/schede-stampabili/abc-vocali-infanzia/) — le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA), lettera da ricalcare e parola da ricopiare.
