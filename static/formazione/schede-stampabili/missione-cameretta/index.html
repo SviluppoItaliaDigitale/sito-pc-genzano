@@ -41,13 +41,19 @@
     @media print {
       .mc-con-img img { width: 46px; height: 46px; }
       .mc .scheda-docente, .mc-adulto { break-inside: avoid; }
-      .mc .scheda-box-disegno { min-height: 8.5cm; }
+      .mc .scheda-box-disegno { min-height: 6.2cm; }
+      .mc-coppia { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.5rem; }
+      .mc-coppia .mc-missione { margin: 0.3rem 0; }
+      .mc-coppia .mc-spunta { columns: 1; }
       .scheda-page { padding: 1cm 1.4cm 0.6cm; }
       .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
       .scheda-meta { margin-bottom: 0.45rem; padding: 0.35rem 0.7rem; }
       .mc .scheda-h2 { margin: 0.45rem 0 0.2rem; }
       .scheda-footer { padding-top: 2mm; }
     }
+    /* Controllo fogli di stampa: scala del testo all'88% e spazi stretti in
+       stampa, così la scheda resta su due fogli anche con i caratteri più larghi. */
+    @media print { html { font-size: 88%; } .scheda-page { padding: 0.8cm 1.3cm 0.5cm; } }
   </style>
 </head>
 <body>
@@ -82,6 +88,7 @@
         Nella stanza dove dormi passi molte ore, anche di notte. Se la terra trema, contano le cose che stanno sopra e intorno al letto. Flavio ha fatto questa missione con il suo papà in un pomeriggio. Ora tocca a te, con un adulto di casa: quattro missioni, una alla volta.
       </p>
 
+      <div class="mc-coppia">
       <section class="mc-missione" aria-labelledby="mc-m1">
         <h3 id="mc-m1"><span>1</span>Che cosa può cadere?</h3>
         <p>Guarda in alto e intorno al letto. Durante una scossa gli oggetti possono cadere, scivolare o aprirsi. Spunta quello che trovi:</p>
@@ -105,6 +112,7 @@
           <li>sposta gli oggetti pesanti sui ripiani bassi.</li>
         </ul>
       </section>
+      </div>
 
       <section class="mc-missione" aria-labelledby="mc-m3">
         <h3 id="mc-m3"><span>3</span>Il mio posto riparo</h3>
@@ -125,7 +133,7 @@
       <p class="mc-paura">Se pensare al terremoto ti fa un po' paura, è normale. Preparare la stanza è proprio un modo per sentirsi più tranquilli.</p>
 
       <div class="mc-adulto avvertenza">
-        <strong>Per l'adulto di casa.</strong> I lavori (forare, fissare, spostare mobili pesanti) li fa sempre un adulto: il bambino guarda, indica e decide con te. Se non sai quali sono i muri portanti o vuoi rinforzare la casa, chiedi a un tecnico o all'amministratore del condominio. Le indicazioni sono quelle del Dipartimento della Protezione Civile («Io non rischio») e della pagina «Rischio sismico» del nostro sito.
+        <strong>Per l'adulto di casa.</strong> I lavori (forare, fissare, spostare mobili pesanti) li fa sempre un adulto: il bambino guarda, indica e decide con te. Per i muri portanti o per rinforzare la casa chiedi a un tecnico. Le indicazioni sono quelle del Dipartimento della Protezione Civile («Io non rischio») e della pagina «Rischio sismico» del sito.
       </div>
 
       <p class="mc-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. La scheda eredita la stessa licenza.</p>
@@ -157,7 +165,7 @@
         <li><strong>→</strong> = la strada fino alla porta</li>
       </ul>
       <div class="scheda-box-disegno" role="img" aria-label="Riquadro vuoto per disegnare la propria stanza vista dall'alto"></div>
-      <p>Se preferisci, invece di disegnare puoi raccontarla a voce all'insegnante o fare una foto della stanza insieme all'adulto, da tenere a casa.</p>
+      <p>Se preferisci, raccontala a voce all'insegnante invece di disegnarla.</p>
 
       <h2 class="scheda-h2">Vero o falso?</h2>
       <table class="mc-vf">
