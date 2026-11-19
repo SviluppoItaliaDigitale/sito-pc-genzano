@@ -1335,3 +1335,19 @@ dati:
         perche: "Il Piano comunale non indica una sede principale del COC: va chiesto al Comune prima di scriverlo."
         contesto: 'COC|Centro Operativo'
         finestra: 300
+
+  - id: rcp-superficie-letto
+    dato: "Dove si fanno le compressioni toraciche se la persona è su un letto"
+    valore: "la superficie rigida è preferibile, ma non si sposta la persona da un letto a terra: si comincia lì e si comprime più a fondo"
+    fonti:
+      - nome: "IRC, Linee guida RCP 2025, cap. 4 «Basic Life Support adulto» (traduzione delle Linee guida ERC 2025)"
+        url: "https://www.ircouncil.it/wp-content/uploads/2026/02/CAPITOLO_4-BLS-ADULTO.pdf"
+    vietati:
+      - regex: '\bmai\s+sul\s+letto\b'
+        perche: "Le Linee guida IRC/ERC 2025 dicono di non spostare la persona dal letto a terra: si inizia sul letto premendo più a fondo."
+        contesto: 'compression|massaggio|RCP|rianimazion|superficie'
+        finestra: 200
+      - regex: '\b(?:sposta|porta|trasferisci)(?:la|lo)?\s+(?:a|sul)\s+(?:terra|pavimento)\b'
+        perche: "Spostare la persona dal letto al pavimento ritarda la prima compressione (Linee guida IRC/ERC 2025)."
+        contesto: 'compression|massaggio|RCP|rianimazion'
+        finestra: 200

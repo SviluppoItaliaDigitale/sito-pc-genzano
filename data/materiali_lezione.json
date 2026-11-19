@@ -775,6 +775,338 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "In gita o in Erasmus: chiedere aiuto in inglese",
+   "url": "/formazione/schede-stampabili/inglese-gite-erasmus/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "112"
+   ],
+   "desc": "Le frasi in inglese che servono in gita o in Erasmus all'estero: chiedere aiuto, dire dove sei, chiamare il 112 e capire un allarme o un avviso. Con esercizio, soluzioni capovolte e una tessera da ritagliare.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Prova o emergenza in palestra",
+   "url": "/formazione/schede-stampabili/educazione-fisica-palestra/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 15,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Per il docente di educazione fisica: come evacuare palestra, spogliatoi e campo esterno con alunni scalzi o in tuta, come contarli, che cosa fare durante una scossa in palestra e se un alunno si fa male. Con spazi da compilare.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Che cosa vuol dire «50 mm di pioggia»?",
+   "url": "/formazione/schede-stampabili/matematica-50mm-pioggia/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "acqua",
+    "meteo"
+   ],
+   "desc": "1 mm di pioggia è 1 litro per metro quadrato: calcoli su un tetto, un cortile e un campo, la stessa pioggia in un'ora o in un giorno e le soglie indicative della zona di allerta di Genzano.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Gli spaghetti e la magnitudo: quanto è forte un terremoto?",
+   "url": "/formazione/schede-stampabili/scienze-spaghetti-terremoto/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 60,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Con un modello fatto di spaghetti si capisce perché ogni grado di magnitudo vale circa 32 volte l'energia liberata, e perché la magnitudo non è l'intensità della scala Mercalli.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il gas che resta in basso: l'anidride carbonica dei Colli Albani",
+   "url": "/formazione/schede-stampabili/co2-cantine-colli-albani/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "vulcani",
+    "casa"
+   ],
+   "desc": "Le emissioni naturali di CO₂ dei Colli Albani: perché il gas si raccoglie in cantine, pozzi e avvallamenti, quali segnali notare, che cosa fare e a chi rivolgersi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Cinque minuti, una scelta: dilemmi da proiettare al cambio dell'ora",
+   "url": "/formazione/schede-stampabili/cinque-minuti-dilemmi/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 5,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "incendi",
+    "meteo",
+    "caldo",
+    "casa"
+   ],
+   "desc": "Quindici situazioni brevi da proiettare sulla LIM nei cinque minuti del cambio dell'ora: temporale, terremoto, allagamento, fumo, blackout, caldo, vento. Ogni carta ha la risposta capovolta e la pagina del sito da cui viene.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Ti ricordi quella volta? Intervista a un nonno",
+   "url": "/formazione/schede-stampabili/intervista-ai-nonni/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Traccia per intervistare un nonno o un anziano su un'emergenza vissuta: domande aperte, come ascoltare con rispetto, che cosa annotare e come controllare le date sulle fonti.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Missione cameretta: la mia stanza sicura se trema la terra",
+   "url": "/formazione/schede-stampabili/missione-cameretta/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "Quattro missioni da fare a casa con un adulto: che cosa può cadere, i mobili da fissare, il posto riparo, la strada libera fino alla porta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Due ore senza corrente: una simulazione a tempo",
+   "url": "/formazione/schede-stampabili/due-ore-senza-corrente/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [],
+   "desc": "Simulazione a tappe di due ore senza corrente: che cosa smette di funzionare, come ci si organizza in famiglia, il conto della batteria del telefono e le domande da fare alla propria scuola.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "A caccia di strumenti: arrivano i volontari",
+   "url": "/formazione/schede-stampabili/caccia-strumenti-visita-gruppo/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa"
+   ],
+   "minuti": 45,
+   "temi": [
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "Prima che i volontari vengano a scuola: si cercano nella scuola i cartelli di sicurezza, si riconoscono casco, guanti, radio e torcia e si scelgono le domande da fare.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il mio passaporto della sicurezza",
+   "url": "/formazione/schede-stampabili/passaporto-sicurezza/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Un passaporto che l'alunno tiene tutto l'anno: sei tappe da fare, dalla prova di evacuazione al piano familiare, firmate dal docente quando la tappa è fatta. Senza punteggi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Chi lavora sul rischio: professioni e percorsi",
+   "url": "/formazione/schede-stampabili/orientamento-professioni-rischio/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Modulo di orientamento sulle professioni che lavorano sul rischio: che cosa fanno, percorsi di studio indicativi, una giornata di allerta da ricostruire e le domande per l'E-Portfolio (D.M. 328/2022).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Decidere sotto incertezza: quattro dilemmi da dibattere",
+   "url": "/formazione/schede-stampabili/dibattito-dilemmi-protezione-civile/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Quattro dilemmi reali da dibattere con fatti e fonti ufficiali: allontanare prima dell'allarme, chiudere le scuole con l'allerta per temporali, ricostruire nelle aree allagabili, comunicare un rischio incerto.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Se il clima ti preoccupa: dalla preoccupazione alle azioni",
+   "url": "/formazione/schede-stampabili/eco-ansia-azione/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "caldo"
+   ],
+   "desc": "La preoccupazione per il clima come reazione comprensibile, senza diagnosi: che cosa dicono la psicologia e l'IPCC, piccole azioni di preparazione, quando parlarne con un adulto o con i servizi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La chat in tilt: che cosa inoltro in un'emergenza",
+   "url": "/formazione/schede-stampabili/chat-in-tilt/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "La chat di classe o dei genitori durante un'emergenza: vocali a catena, notizie non verificate, foto di persone ferite, falsi allarmi. Con una chat inventata da analizzare e il conto di quante persone raggiunge un messaggio inoltrato.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il telefono e la radio in emergenza",
+   "url": "/formazione/schede-stampabili/radio-112-telefono/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "meteo",
+    "112",
+    "informazione"
+   ],
+   "desc": "Come si chiama il 112 anche con il telefono bloccato, senza SIM o senza credito, perché dopo un evento le linee si saturano e conviene un messaggio breve, e che cosa fa la radio in emergenza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il compagno-guida nella prova di evacuazione",
+   "url": "/formazione/schede-stampabili/compagno-guida/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 40,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Il compagno che nella prova accompagna un compagno con disabilità o appena arrivato: che cosa fa, che cosa non fa, come chiedergli prima che aiuto vuole. La responsabilità resta agli adulti.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Accanto a un compagno spaventato: il primo aiuto tra pari",
+   "url": "/formazione/schede-stampabili/pronto-soccorso-emotivo-pari/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "meteo",
+    "112"
+   ],
+   "desc": "Che cosa fa un ragazzo accanto a un compagno spaventato dopo un evento: guardare, ascoltare, non giudicare, non promettere, aiutarlo a respirare con calma, chiamare un adulto, e i segnali che chiedono subito un adulto o il 112.",
+   "facilitata": false
+  },
+  {
+   "tipo": "valutazione",
+   "titolo": "Rubrica dei compiti di realtà di protezione civile",
+   "url": "/formazione/schede-stampabili/rubrica-compiti-realta/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Rubrica per piano familiare, audit del piano della scuola e campagna informativa: cinque criteri osservabili e quattro livelli descritti con azioni. Non valuta paura, emozioni o coraggio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Controlla, chiama, comprimi: il primo soccorso a misura di età",
+   "url": "/formazione/schede-stampabili/primo-soccorso-eta-kids-save-lives/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "112"
+   ],
+   "desc": "Che cosa può fare un ragazzo se una persona crolla e non risponde: controllare, chiamare il 112, cercare il defibrillatore, comprimere il torace come insegna un corso, secondo le Linee guida IRC 2025 e «Kids Save Lives».",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "In gita nel Parco dei Castelli Romani: prima di partire",
+   "url": "/formazione/schede-stampabili/gita-parco-castelli-romani/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "incendi",
+    "meteo",
+    "112",
+    "casa"
+   ],
+   "desc": "Preparare una gita nel Parco regionale dei Castelli Romani: allerta e meteo del giorno sulle fonti ufficiali, lo zaino, le regole del gruppo su fuoco, temporali, zecche e insetti, chi chiama il 112.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il percorso da casa a scuola: un'indagine civica",
+   "url": "/formazione/schede-stampabili/indagine-percorso-casa-scuola/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Indagine civica sul tragitto casa-scuola: marciapiedi, attraversamenti, punti che si allagano, alberi, segnaletica. Si mappa senza dati personali e si riporta alla scuola e al Comune con i canali ufficiali.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "Il giorno dopo una scossa o un'allerta",
    "url": "/formazione/schede-stampabili/il-giorno-dopo-docente/",
    "fasce": [

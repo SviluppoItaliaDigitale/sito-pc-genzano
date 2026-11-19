@@ -26,7 +26,7 @@ Se **non risponde in nessun modo**, è incosciente.
 
 ### 2. Apri le vie aeree e controlla il respiro
 
-- Sdraia la persona sulla schiena su una superficie rigida
+- Sdraia la persona sulla schiena; se è su un letto, non perdere tempo a spostarla a terra
 - Inclina delicatamente la testa all'indietro, sollevando il mento
 - Guarda, ascolta e senti il respiro per **non più di 10 secondi**
 

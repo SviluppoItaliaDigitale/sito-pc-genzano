@@ -508,6 +508,102 @@
 :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji img, :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji svg { width:2.8rem; height:2.8rem; display:block; object-fit:contain; }
 :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs { font-size: 0.95rem; line-height: 1.45; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs p { margin: 0.35rem 0; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carte { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.55rem; display: flex; gap: 0.55rem; align-items: flex-start; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta img { width: 64px; height: 64px; flex-shrink: 0; object-fit: contain; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta strong { color: var(--scheda-blu); display: block; font-size: 1.02rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta p { margin: 0.1rem 0 0.25rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-segni { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-casella { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.3rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-dove { display: inline-block; min-width: 6rem; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.1rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-regole { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-regole li { display: flex; gap: 0.5rem; align-items: center; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-regole img { width: 44px; height: 44px; flex-shrink: 0; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; display: flex; gap: 0.5rem; align-items: center; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande .cs-senza-img { width: 40px; flex-shrink: 0; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande img { width: 40px; height: 40px; flex-shrink: 0; object-fit: contain; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-box { border: 2px dashed var(--scheda-bordo); border-radius: 8px; min-height: 5.5rem; padding: 0.35rem 0.55rem; color: var(--scheda-grigio); font-size: 0.85rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-box-due { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-prova { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.4rem 0.6rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-prova ul { list-style: none; padding: 0; margin: 0.3rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-prova li { display: flex; gap: 0.35rem; align-items: center; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-prova img { width: 40px; height: 40px; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-paura { font-style: italic; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs .scheda-docente p { margin: 0.25rem 0; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+@media (max-width: 600px) {
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carte, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-regole, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-box-due { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta img { width: 54px; height: 54px; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta { padding: 0.3rem 0.5rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-regole img { width: 36px; height: 36px; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande img, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande .cs-senza-img { width: 34px; height: 34px; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-carta, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande li, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-prova, :where([id="scheda-caccia-strumenti-visita-gruppo"]) .scheda-docente { break-inside: avoid; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-box { min-height: 3.6rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs-domande li { padding: 0.25rem 0.5rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs .scheda-docente { margin-top: 0.5rem; padding: 0.55rem 0.7rem; }
+}
+@media print {
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) { zoom: 0.88; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .cs .scheda-intro { margin: 0.2rem 0 0.3rem; }
+:where([id="scheda-caccia-strumenti-visita-gruppo"]) .scheda-footer { padding-top: 2mm; }
+}
+
+:where([id="scheda-kit-docente-supplente"]) .ks { font-size: 0.93rem; line-height: 1.42; }
+:where([id="scheda-kit-docente-supplente"]) .ks p { margin: 0.3rem 0; }
+:where([id="scheda-kit-docente-supplente"]) .ks .scheda-h2 { margin: 0.6rem 0 0.25rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks .scheda-campi-riga { margin-bottom: 0.38rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks .scheda-campo-label { min-width: 0; flex: 0 1 auto; max-width: 75%; }
+:where([id="scheda-kit-docente-supplente"]) .ks .scheda-campo-linea { min-height: 1.45rem; min-width: 4.5rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks-casella { display: inline-block; width: 1rem; height: 1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin: 0 0.25rem 0 0.6rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks-privacy { margin: 0.4rem 0; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks-privacy strong:first-child { color: #7a3d06; }
+:where([id="scheda-kit-docente-supplente"]) .ks-passi { list-style: none; padding: 0; margin: 0.25rem 0; counter-reset: passo; }
+:where([id="scheda-kit-docente-supplente"]) .ks-passi li { counter-increment: passo; display: flex; gap: 0.55rem; align-items: flex-start; padding: 0.24rem 0; border-bottom: 1px solid #e9ecef; }
+:where([id="scheda-kit-docente-supplente"]) .ks-passi li::before { content: counter(passo); flex-shrink: 0; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--scheda-blu); color: #fff; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks-casi { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; margin: 0.25rem 0; }
+:where([id="scheda-kit-docente-supplente"]) .ks-casi div { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.3rem 0.5rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks-casi strong { color: var(--scheda-blu); display: block; }
+:where([id="scheda-kit-docente-supplente"]) .ks-arrivo { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; }
+:where([id="scheda-kit-docente-supplente"]) .ks-arrivo ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+:where([id="scheda-kit-docente-supplente"]) .ks-icone { display: flex; gap: 0.5rem; align-items: center; margin: 0.2rem 0; }
+:where([id="scheda-kit-docente-supplente"]) .ks-icone img { width: 42px; height: 42px; }
+:where([id="scheda-kit-docente-supplente"]) .ks .scheda-docente p { margin: 0.2rem 0; }
+:where([id="scheda-kit-docente-supplente"]) .ks-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.3rem; }
+:where([id="scheda-kit-docente-supplente"]) .campi2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 1.2rem; }
+@media (max-width: 600px) {
+:where([id="scheda-kit-docente-supplente"]) .campi2 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+:where([id="scheda-kit-docente-supplente"]) .ks-casi { grid-template-columns: minmax(0, 1fr); }
+:where([id="scheda-kit-docente-supplente"]) .ks .scheda-campi-riga { flex-wrap: wrap; }
+}
+@media print {
+:where([id="scheda-kit-docente-supplente"]) .ks-privacy, :where([id="scheda-kit-docente-supplente"]) .ks-arrivo, :where([id="scheda-kit-docente-supplente"]) .scheda-docente, :where([id="scheda-kit-docente-supplente"]) .ks-passi li { break-inside: avoid; }
+}
+@media print {
+:where([id="scheda-kit-docente-supplente"]) { zoom: 0.88; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-intro { margin: 0.2rem 0 0.3rem; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-docente { margin-top: 0.5rem; padding: 0.5rem 0.7rem; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-footer { padding-top: 2mm; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-campi-riga { margin-bottom: 0.22rem !important; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-campo-linea { min-height: 1.3rem !important; }
+:where([id="scheda-kit-docente-supplente"]) .scheda-h2 { margin: 0.45rem 0 0.2rem !important; }
+}
+
 :where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-nome {
       display: flex;
       align-items: flex-end;
@@ -4001,8 +4097,8 @@
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
     <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola dell'Infanzia (189 fogli A4)">
-      🖨️ Stampa tutto (189 fogli A4)
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola dell'Infanzia (193 fogli A4)">
+      🖨️ Stampa tutto (193 fogli A4)
     </button>
   </header>
 
@@ -4010,7 +4106,7 @@
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola dell'Infanzia</h1>
     <p>
       Questo pacchetto contiene tutte le <strong>schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni):
-      in stampa occupa <strong>189 fogli A4</strong>.
+      in stampa occupa <strong>193 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -4035,6 +4131,8 @@
       <li><a href="#scheda-labirinto-uscita">Il Labirinto dell'Uscita</a></li>
       <li><a href="#scheda-tartaruga-saggia-infanzia">Le Regole della Tartaruga Saggia</a></li>
       <li><a href="#scheda-trova-coppie-infanzia">Trova le Coppie</a></li>
+      <li><a href="#scheda-caccia-strumenti-visita-gruppo">A caccia di strumenti: arrivano i volontari</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-kit-docente-supplente">Per il supplente: la sicurezza della classe</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-storia-sociale-prova-evacuazione">La prova di evacuazione: la mia storia</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-sirena-scuola-nuovi-arrivati">La sirena a scuola è una prova</a></li>
       <li><a href="#scheda-il-giorno-dopo-docente">Il giorno dopo una scossa o un'allerta</a></li>
@@ -4984,6 +5082,300 @@
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Trova le Coppie" · Infanzia · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-caccia-strumenti-visita-gruppo" class="pacchetto-scheda" aria-label="Scheda: A caccia di strumenti: arrivano i volontari">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">A caccia di strumenti: arrivano i volontari</h1>
+        <div class="scheda-sottotitolo">Infanzia (5 anni) · Primaria (1ª e 2ª) · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 5-7 anni</span>
+      <span><strong>Durata:</strong> 45 minuti, prima della visita</span>
+      <span><strong>Campi e discipline:</strong> Il sé e l'altro, Educazione civica</span>
+    </div>
+
+    <div class="cs">
+      <p class="scheda-intro">
+        Presto vengono a scuola i <strong>volontari della protezione civile</strong> di Genzano. Prima di conoscerli andiamo a caccia: cerchiamo nella scuola i cartelli che ci aiutano e impariamo i nomi di alcuni strumenti.
+      </p>
+
+      <h2 class="scheda-h2">1. Cerca nella scuola, con l'insegnante</h2>
+      <p>Quando trovi il cartello, segna la casella. Poi disegna o di' dove l'hai visto.</p>
+      <ul class="cs-carte">
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="Cartello verde: un omino che corre verso una porta">
+          <div><strong>Uscita di emergenza</strong>
+            <p>Mostra la porta da cui si esce quando suona l'allarme. Si esce in fila, con l'insegnante.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello verde: quattro persone in mezzo e quattro frecce che puntano verso di loro">
+          <div><strong>Punto di raccolta</strong>
+            <p>È il posto, fuori dalla scuola, dove la classe si ritrova dopo essere uscita.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/estintore.svg" alt="Cartello rosso: un estintore accanto a delle fiamme">
+          <div><strong>Estintore</strong>
+            <p>Dice dove si trova l'estintore. Lo usano gli adulti che hanno imparato. Se vedi fumo o fuoco, chiami subito un adulto.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/iso7010/cassetta-primo-soccorso.svg" alt="Cartello verde con una croce bianca">
+          <div><strong>Primo soccorso</strong>
+            <p>Dice dove si trova la cassetta per curare le piccole ferite. La apre un adulto.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Trovato</span><span>Dove? <span class="cs-dove"></span></span></div>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="scheda-h2">2. Che cosa può mostrarci un volontario?</h2>
+      <p>Guarda gli strumenti. Pensi che i volontari li porteranno? Dopo la visita segna quelli che hai visto davvero.</p>
+      <ul class="cs-carte">
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/casco.png" alt="Pittogramma: un casco giallo da lavoro">
+          <div><strong>Casco</strong>
+            <p>Protegge la testa.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me lo portano</span><span><span class="cs-casella"></span>L'ho visto</span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/guanti.png" alt="Pittogramma: un paio di guanti rossi">
+          <div><strong>Guanti</strong>
+            <p>Proteggono le mani.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me li portano</span><span><span class="cs-casella"></span>Li ho visti</span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio portatile grigia con l'antenna">
+          <div><strong>Radio</strong>
+            <p>Serve ai volontari per parlare fra loro anche da lontano.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me la portano</span><span><span class="cs-casella"></span>L'ho vista</span></div>
+          </div>
+        </li>
+        <li class="cs-carta">
+          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: una torcia elettrica nera">
+          <div><strong>Torcia</strong>
+            <p>Fa luce quando è buio. Funziona con le pile.</p>
+            <div class="cs-segni"><span><span class="cs-casella"></span>Secondo me la portano</span><span><span class="cs-casella"></span>L'ho vista</span></div>
+          </div>
+        </li>
+      </ul>
+
+      <p class="cs-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0; questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "A caccia di strumenti" · Infanzia e primaria · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Le nostre domande per i volontari</div>
+        <div class="scheda-sottotitolo">A caccia di strumenti · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="cs">
+      <div class="cs-prova">
+        <p><strong>3. Prova tu.</strong> Fai un cerchio intorno alle due cose che proteggono il corpo del volontario. Puoi anche indicarle con il dito.</p>
+        <ul>
+          <li><img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio">Radio</li>
+          <li><img src="/pittogrammi/arasaac/casco.png" alt="Pittogramma: un casco">Casco</li>
+          <li><img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: una torcia">Torcia</li>
+          <li><img src="/pittogrammi/arasaac/guanti.png" alt="Pittogramma: dei guanti">Guanti</li>
+        </ul>
+      </div>
+
+      <h2 class="scheda-h2">4. Scegliamo le domande</h2>
+      <p>L'insegnante legge le domande. Colora la casella di quelle che vuoi fare ai volontari.</p>
+      <ul class="cs-domande">
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/casco.png" alt="Pittogramma: un casco"><span>Perché portate il casco?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: una radio"><span>Come si parla con la radio?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: una persona che aiuta un'altra ad alzarsi"><span>Chi aiutate a Genzano?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: un telefono con il numero 112"><span>Chi chiamo se c'è un pericolo?</span></li>
+        <li><span class="cs-casella"></span><img src="/pittogrammi/arasaac/aiuto.png" alt="Pittogramma: due mani che si tendono l'una verso l'altra"><span>Come si diventa volontari?</span></li>
+        <li><span class="cs-casella"></span><span class="cs-senza-img" aria-hidden="true"></span><span>Con quali mezzi andate ad aiutare?</span></li>
+      </ul>
+
+      <div class="cs-box-due">
+        <div class="cs-box">La mia domanda: la disegno o la dico all'insegnante, che la scrive qui.</div>
+        <div class="cs-box">Dopo la visita: disegno la cosa che mi è piaciuta di più.</div>
+      </div>
+
+      <h2 class="scheda-h2">5. Le regole per l'incontro</h2>
+      <ul class="cs-regole">
+        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una mano dietro l'orecchio per ascoltare"><span>Ascolto i volontari e alzo la mano per parlare.</span></li>
+        <li><img src="/pittogrammi/arasaac/stop.png" alt="Pittogramma: il cartello rosso di stop"><span>Tocco uno strumento solo quando il volontario dice che si può.</span></li>
+      </ul>
+      <p class="cs-paura">Se una cosa ti sembra strana o ti fa paura, dillo all'insegnante o ai volontari: puoi sempre chiedere.</p>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> Fate la scheda una o due settimane prima dell'incontro e leggete voi i testi; i bambini rispondono segnando, indicando, disegnando o a voce. La caccia ai cartelli si fa con l'insegnante, nei percorsi che la scuola permette: è l'occasione per ripassare il punto di raccolta del vostro piano di emergenza.</p>
+        <p><strong>Quando concordate l'incontro</strong> chiedete quali strumenti mostreranno: i volontari mostrano dispositivi di protezione, radio o altri materiali se concordato prima, e non sempre ci sono tutti. Mandate loro le domande scelte. Come chiedere l'incontro: <em>Il Gruppo nella tua scuola</em>; i mezzi del Gruppo sono nella pagina <em>Chi siamo</em>. Per la 3ª-5ª c'è <em>Intervista al volontario</em>; per i soli cartelli, <em>I cartelli della sicurezza</em>.</p>
+        <p><strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): infanzia, il bambino è attento alla propria sicurezza; primaria, traguardi n. 3 e n. 6. Il Gruppo comunale non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzione per il docente (gira il foglio)</span>
+        <strong>3.</strong> Casco e guanti proteggono il corpo. La radio serve a parlare, la torcia a fare luce. Nella parte 2 del foglio 1 non ci sono risposte giuste.
+      </div>
+
+      <p class="cs-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0; questo foglio eredita la stessa licenza.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "A caccia di strumenti" · Infanzia e primaria · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-kit-docente-supplente" class="pacchetto-scheda" aria-label="Scheda: Per il supplente: la sicurezza della classe">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Per il supplente: la sicurezza della classe</h1>
+        <div class="scheda-sottotitolo">Per adulti · Tutti gli ordini di scuola · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>La compila:</strong> il coordinatore di classe o il referente della sicurezza</span>
+      <span><strong>Dove si tiene:</strong> sulla cattedra o nel registro di classe</span>
+    </div>
+
+    <div class="ks">
+      <p class="scheda-intro">
+        Chi arriva in una classe per la prima volta non conosce il percorso di uscita, gli alunni né chi chiamare. La scuola compila questo foglio a inizio anno, lo aggiorna quando cambia qualcosa e lo lascia in classe.
+      </p>
+
+      <h2 class="scheda-h2">1. La classe e i segnali</h2>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Classe e sezione:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Plesso, piano e aula:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Planimetria del percorso:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Piano di emergenza:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Segnale di evacuazione:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Fine emergenza:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Annuncio di «restare al chiuso», se previsto:</span><span class="scheda-campo-linea"></span></div>
+
+      <h2 class="scheda-h2">2. Uscire</h2>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Aprifila:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Sostituto dell'aprifila:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Chiudifila:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Sostituto del chiudifila:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Percorso (porta, corridoio, scala, uscita):</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Percorso alternativo, se il primo è bloccato:</span><span class="scheda-campo-linea"></span></div>
+      <div class="ks-icone"><img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Segnale di sicurezza verde: un gruppo di persone dentro un riquadro con quattro frecce verso il centro, punto di raccolta"><div class="scheda-campi-riga" style="flex:1;margin:0"><span class="scheda-campo-label">Punto di raccolta:</span><span class="scheda-campo-linea"></span></div></div>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Elenco della classe:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Modulo di evacuazione:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+
+      <h2 class="scheda-h2">3. Chi chiamare</h2>
+      <div class="campi2">
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Segreteria (interno):</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Coordina l'emergenza:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Collaboratore del piano:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Addetto al primo soccorso:</span><span class="scheda-campo-linea"></span></div>
+      </div>
+
+      <h2 class="scheda-h2">4. Alunni che in emergenza hanno bisogno di aiuto</h2>
+      <p>In questa classe ci sono alunni che in un'emergenza hanno bisogno di un aiuto per spostarsi, capire o comunicare:<span class="ks-casella"></span>sì<span class="ks-casella"></span>no</p>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi li accompagna (ruolo):</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi custodisce la loro scheda personalizzata:</span><span class="scheda-campo-linea"></span></div>
+      <div class="ks-privacy">
+        <strong>Niente dati personali su questo foglio.</strong> Niente nomi accanto a diagnosi, farmaci o condizioni di salute: il foglio resta sulla cattedra e lo vede chiunque. Le informazioni stanno nella <a href="/formazione/schede-stampabili/evacuazione-personalizzata-pei/">scheda di evacuazione personalizzata</a>, che la scuola conserva fra i documenti riservati e consegna a chi deve aiutare.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Per il supplente" · Tutti gli ordini · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Che cosa fai se suona l'allarme</div>
+        <div class="scheda-sottotitolo">Per il supplente · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="ks">
+      <div class="ks-arrivo">
+        <strong>Appena entri in classe, in due minuti</strong>
+        <ul>
+          <li>Leggi il foglio 1 e guarda la planimetria: dove si esce e dov'è il punto di raccolta.</li>
+          <li>Chiedi alla classe chi sono l'aprifila e il chiudifila. Di solito lo sanno.</li>
+          <li>Tieni a portata di mano l'elenco della classe e fai l'appello, così sai quanti sono.</li>
+        </ul>
+      </div>
+
+      <h2 class="scheda-h2">Al segnale di evacuazione</h2>
+      <ol class="ks-passi">
+        <li><span><strong>Interrompi la lezione.</strong> Gli alunni lasciano zaini e oggetti al loro posto.</span></li>
+        <li><span><strong>L'aprifila apre la porta</strong> e guida la fila lungo il percorso, al passo di chi è più lento.</span></li>
+        <li><span><strong>Prendi l'elenco della classe.</strong> Si esce in fila, senza correre, senza ascensore.</span></li>
+        <li><span><strong>Il chiudifila esce per ultimo</strong>, controlla che l'aula sia vuota e chiude la porta.</span></li>
+        <li><span><strong>Chi è fuori dall'aula</strong>, per esempio in bagno, esce con il primo adulto che incontra e raggiunge la classe al punto di raccolta. Tu non torni a cercarlo: lo segnali.</span></li>
+        <li><span><strong>Al punto di raccolta conta gli alunni</strong> con l'elenco e compila il modulo, se la scuola lo usa.</span></li>
+        <li><span><strong>Riferisci a chi coordina</strong> l'emergenza chi c'è e chi manca, e dove l'hai visto l'ultima volta. Non rientrare a cercare nessuno.</span></li>
+        <li><span><strong>Si rientra solo al segnale di fine emergenza</strong> o quando lo dice chi coordina.</span></li>
+      </ol>
+
+      <div class="ks-casi">
+        <div><strong>Scossa di terremoto</strong>Durante la scossa gli alunni si riparano sotto il banco, proteggono la testa e stanno lontano dalle finestre. Quando è finita, al segnale si esce.</div>
+        <div><strong>Percorso bloccato</strong>Se il fumo o un ostacolo chiudono il percorso, si usa quello alternativo scritto nel foglio 1 e lo si dice a chi coordina.</div>
+        <div><strong>Pericolo fuori</strong>Se la scuola decide di restare al chiuso, si resta in aula. Vedi la scheda <a href="/formazione/schede-stampabili/restare-al-chiuso/">Restare al riparo dentro la scuola</a>.</div>
+      </div>
+
+      <p>Se qualcuno sta male o vedi un pericolo, avvisa subito la segreteria e il collaboratore del piano. Se è grave, si chiama il <strong>112</strong>.</p>
+      <p>Gli alunni possono avere paura, ed è normale. Una voce calma e istruzioni brevi aiutano più di ogni spiegazione.</p>
+
+      <div class="scheda-docente">
+        <p><strong>Per la scuola.</strong> Compilate il foglio 1 per ogni classe a inizio anno e aggiornatelo quando cambiano aprifila, chiudifila, aula o percorso. Tenetelo dove il supplente lo trova senza chiedere: nella prima pagina del registro cartaceo o in una busta sulla cattedra. Il piano di emergenza resta il riferimento: se questo foglio dice una cosa diversa, vale il piano. Il personale ATA ha la sua <a href="/formazione/schede-stampabili/scheda-personale-ata/">scheda per collaboratori scolastici</a>; per la palestra c'è la scheda <a href="/formazione/schede-stampabili/educazione-fisica-palestra/">Prova o emergenza in palestra</a>.</p>
+        <p><strong>Fonti:</strong> Dipartimento della Protezione Civile, «In caso di terremoto»; D.M. 26 agosto 1992 (prevenzione incendi nell'edilizia scolastica); D.Lgs. 81/2008, artt. 18 e 43 (gestione delle emergenze). Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <p class="ks-attribuzione">Segnali di sicurezza: ISO 7010.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Per il supplente" · Tutti gli ordini · rev. 2026</span>
     </footer>
 
   </article>

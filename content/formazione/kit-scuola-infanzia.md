@@ -262,6 +262,11 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
 - 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
 
+**Dentro le materie, fuori dall'aula e per crescere** — altre schede per la classe e per gli adulti:
+
+- 👉 [**A caccia di strumenti: arrivano i volontari**](/formazione/schede-stampabili/caccia-strumenti-visita-gruppo/) — da fare prima della visita dei volontari del Gruppo: cartelli di sicurezza nella scuola, casco, guanti e radio, domande da preparare.
+- 👉 [**Per il supplente: la sicurezza della classe**](/formazione/schede-stampabili/kit-docente-supplente/) — da compilare e lasciare sulla cattedra: piano di emergenza, aprifila e chiudifila, punto di raccolta, chi chiamare. *(per il supplente)*
+
 **Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
 
 - 👉 [**La prova di evacuazione: la mia storia**](/formazione/schede-stampabili/storia-sociale-prova-evacuazione/) — storia sociale con pittogrammi da leggere nei giorni prima della prova, per chi è nello spettro autistico o ha altre necessità comunicative, da personalizzare con nomi, luogo e suono della propria scuola. *(con il docente di sostegno)*

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Indagine civica sul percorso casa-scuola — Secondaria I e II grado</title>
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/indagine-percorso-casa-scuola/">
+  <meta name="description" content="Scheda fotocopiabile di educazione civica per la secondaria di primo e di secondo grado. La classe osserva il percorso da casa a scuola: marciapiedi, attraversamenti, punti che si allagano, alberi, segnaletica. Si mappa senza dati personali né foto di persone o targhe e si riportano i risultati alla scuola e al Comune con i canali ufficiali.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .pc { font-size: 0.95rem; line-height: 1.45; }
+    .pc p { margin: 0.35rem 0; }
+    .pc .scheda-h2 { margin: 0.65rem 0 0.3rem; }
+    .pc-osserva { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+    .pc-osserva li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; }
+    .pc-osserva strong { color: var(--scheda-blu); display: block; }
+    .pc-regole { list-style: none; padding: 0; margin: 0.3rem 0; }
+    .pc-regole li { display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.25rem 0; border-bottom: 1px solid #e9ecef; }
+    .pc-regole img { width: 40px; height: 40px; flex-shrink: 0; }
+    .pc-privacy { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
+    .pc-privacy ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+    .pc-tabella { width: 100%; border-collapse: collapse; margin: 0.3rem 0; font-size: 0.88rem; table-layout: fixed; }
+    .pc-tabella th, .pc-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.3rem 0.4rem; text-align: left; vertical-align: top; }
+    .pc-tabella th { background: #f0f4f8; color: var(--scheda-blu); }
+    .pc-tabella td { height: 2.3rem; }
+    .pc-tabella .pc-esempio td { height: auto; color: #495057; font-style: italic; }
+    .pc-mappa { border: 2px dashed var(--scheda-bordo); border-radius: 8px; height: 4.8cm; margin: 0.4rem 0; position: relative; }
+    .pc-mappa span { position: absolute; top: 0.4rem; left: 0.6rem; font-size: 0.8rem; color: #6c757d; }
+    .pc-legenda { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.25rem 0.8rem; font-size: 0.85rem; margin: 0.2rem 0; }
+    .pc-passi { counter-reset: passo; list-style: none; padding: 0; margin: 0.3rem 0; }
+    .pc-passi li { counter-increment: passo; position: relative; padding: 0.3rem 0 0.3rem 2.2rem; border-bottom: 1px solid #e9ecef; }
+    .pc-passi li::before { content: counter(passo); position: absolute; left: 0; top: 0.3rem; width: 1.6rem; height: 1.6rem; border-radius: 50%; border: 2px solid var(--scheda-blu); color: var(--scheda-blu); font-weight: 700; text-align: center; line-height: 1.35rem; }
+    .pc-112 { border: 2px solid #b02a37; border-radius: 8px; padding: 0.45rem 0.7rem; margin: 0.4rem 0; }
+    .pc-112 strong:first-child { color: #b02a37; }
+    .pc-nota { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.6rem; margin: 0.3rem 0; }
+    .pc-nota p { margin: 0 0 0.15rem; }
+    .pc-riga { border-bottom: 1.5px solid var(--scheda-bordo); height: 1.3rem; }
+    .pc .scheda-docente p { margin: 0.25rem 0; }
+    .pc .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+    .pc-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+    @media (max-width: 600px) {
+      .pc-osserva { grid-template-columns: minmax(0, 1fr); }
+      .pc-legenda { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+      .pc-tabella { font-size: 0.8rem; }
+    }
+    @media print {
+      .pc { line-height: 1.36; }
+      .pc-regole img { width: 32px; height: 32px; }
+      .pc-passi li { padding: 0.2rem 0 0.2rem 2.2rem; }
+      .pc-nota { margin: 0.2rem 0; padding: 0.25rem 0.55rem; }
+      .pc .scheda-docente { margin-top: 0.4rem; padding: 0.45rem 0.65rem; }
+      .pc-privacy, .pc-112, .pc-nota, .scheda-docente, .soluzione-capovolta, .pc-tabella { break-inside: avoid; }
+    }
+    /* Stampa (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così ogni foglio regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Indagine civica sul percorso casa-scuola</span>
+    <a class="scheda-lim" href="/lim/" title="Si usa col dito sulla lavagna interattiva della classe, anche a schermo intero, e funziona sui browser delle lavagne meno recenti">Pronto per la LIM</a>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il percorso da casa a scuola: un'indagine civica</h1>
+        <div class="scheda-sottotitolo">Secondaria di primo e di secondo grado · Foglio 1 di 3</div>
+      </div>
+    </header>
+
+    <div class="pc">
+      <div class="scheda-meta">
+        <span><strong>Destinatari:</strong> 11-19 anni</span>
+        <span><strong>Durata:</strong> 3 ore in più incontri</span>
+        <span><strong>Discipline:</strong> Educazione civica, Geografia, Italiano</span>
+      </div>
+
+      <p class="scheda-intro">
+        Ogni giorno fai la stessa strada e forse non la guardi più. In questa indagine la osservi come farebbe un tecnico del Comune: che cosa funziona, che cosa è rovinato, dove l'acqua si ferma quando piove. Alla fine la classe consegna le osservazioni a chi può intervenire.
+      </p>
+
+      <h2 class="scheda-h2">Che cosa osservi</h2>
+      <ul class="pc-osserva">
+        <li><strong>Marciapiedi</strong>C'è sempre? È largo abbastanza per una carrozzina o un passeggino? Ci sono buche, gradini rotti, auto parcheggiate sopra?</li>
+        <li><strong>Attraversamenti</strong>Le strisce si vedono? Il semaforo pedonale funziona? C'è lo scivolo per chi usa la carrozzina?</li>
+        <li><strong>Dove si ferma l'acqua</strong>Punti che dopo la pioggia restano allagati, caditoie coperte da foglie, sottopassi.</li>
+        <li><strong>Alberi</strong>Rami spezzati che pendono, alberi molto inclinati, radici che sollevano il marciapiede.</li>
+        <li><strong>Segnaletica</strong>Cartelli sbiaditi, girati o coperti dai rami; il cartello dell'area di attesa del Piano di emergenza, se è sul tuo percorso.</li>
+        <li><strong>Illuminazione</strong>Tratti bui la mattina d'inverno, lampioni spenti.</li>
+      </ul>
+
+      <h2 class="scheda-h2">Sicurezza durante l'uscita</h2>
+      <ul class="pc-regole">
+        <li><img src="/pittogrammi/arasaac/camminare.png" alt="Pittogramma: un adulto e un bambino camminano insieme sul marciapiede"><span>L'uscita della classe si fa con gli insegnanti, uno in testa e uno in coda. Il tragitto di casa lo osservi mentre lo percorri come ogni giorno, senza deviazioni e senza fermarti dove non è sicuro.</span></li>
+        <li><img src="/pittogrammi/arasaac/strada.png" alt="Pittogramma: una strada vista dall'alto con la linea di mezzeria"><span>Resti sul marciapiede e attraversi sulle strisce. Non ti fermi in mezzo alla strada a guardare o a misurare. Il traffico lo regolano solo la Polizia Locale e le forze dell'ordine: tu osservi e prendi nota.</span></li>
+        <li><img src="/pittogrammi/arasaac/pericolo.png" alt="Pittogramma: triangolo rosso di pericolo con un punto esclamativo"><span>Non ti avvicini a ciò che può essere pericoloso: rami che pendono, cavi, buche profonde, acqua alta, cantieri. Lo guardi da lontano e lo scrivi. Non entri in un sottopasso allagato.</span></li>
+        <li><img src="/pittogrammi/arasaac/temporale.png" alt="Pittogramma: una nuvola scura con un fulmine"><span>Con allerta arancione o rossa, o con un temporale previsto, l'uscita si rimanda. Il punto che si allaga si descrive com'è il giorno dopo, quando la strada è asciutta.</span></li>
+      </ul>
+
+      <div class="pc-privacy">
+        <strong>Una mappa senza dati personali.</strong>
+        <ul>
+          <li>Non segni dove abiti: parti da un punto pubblico, per esempio un incrocio o una piazza.</li>
+          <li>Niente nomi di persone, numeri civici di case private, cortili o finestre.</li>
+          <li>Niente foto di persone o di targhe. Se l'insegnante permette le foto, inquadri solo l'oggetto: il cartello, la caditoia, il marciapiede.</li>
+        </ul>
+      </div>
+
+      <p class="pc-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Indagine civica sul percorso casa-scuola" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Scheda di osservazione e mappa</div>
+        <div class="scheda-sottotitolo">Il percorso da casa a scuola · Foglio 2 di 3</div>
+      </div>
+    </header>
+
+    <div class="pc">
+      <p>Scrivi una riga per ogni cosa che noti. Descrivi ciò che vedi, non ciò che pensi: «la caditoia è coperta di foglie», non «qui si allaga sempre».</p>
+
+      <table class="pc-tabella">
+        <caption class="visually-hidden">Scheda di osservazione: dove, che cosa ho visto, perché può essere un problema, a chi lo segnaliamo</caption>
+        <thead>
+          <tr><th scope="col" style="width:22%">Dove (punto pubblico)</th><th scope="col" style="width:30%">Che cosa ho visto</th><th scope="col" style="width:28%">Perché può essere un problema</th><th scope="col" style="width:20%">A chi lo segnaliamo</th></tr>
+        </thead>
+        <tbody>
+          <tr class="pc-esempio"><td>Esempio: incrocio davanti alla farmacia</td><td>Strisce pedonali quasi cancellate</td><td>Chi guida le vede poco</td><td>Comune</td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="scheda-h2">Disegna il percorso</h2>
+      <p>Disegna le strade dal punto di partenza pubblico fino alla scuola. Segna con un numero ogni osservazione della tabella e usa questi simboli. Puoi anche lavorare su una carta stampata dalla cartografia del sito.</p>
+      <div class="pc-legenda">
+        <span><strong>M</strong> marciapiede</span>
+        <span><strong>S</strong> attraversamento</span>
+        <span><strong>A</strong> acqua che si ferma</span>
+        <span><strong>T</strong> albero</span>
+        <span><strong>C</strong> cartello</span>
+        <span><strong>L</strong> illuminazione</span>
+      </div>
+      <div class="pc-mappa" aria-label="Spazio per disegnare la mappa del percorso"><span>Partenza (punto pubblico) → Scuola</span></div>
+      <p>Hai difficoltà a scrivere o a disegnare? Puoi raccontare a voce a un compagno che prende nota, oppure indicare i punti su una carta già stampata.</p>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente. Che cosa valutare</strong>, se volete: osservazioni descritte con precisione, rispetto delle regole di sicurezza e di riservatezza, chiarezza della relazione, contributo al lavoro del gruppo. Chi non può fare il tragitto a piedi lavora sulla cartografia del sito, con gli adattamenti del suo piano.</p>
+        <p><strong>Materiali collegati:</strong> «Dalla carta al territorio» (uscita sui luoghi del Piano di emergenza) e «La mappa dei rischi del mio territorio» (rischi del quartiere sulle fonti ufficiali). Questa scheda guarda la sicurezza di ogni giorno lungo un solo tragitto e chiude con la segnalazione agli enti. Il Gruppo comunale non si attiva su chiamata dei cittadini; per i progetti scolastici c'è la segreteria del Gruppo (pagina Contatti). In emergenza si chiama il 112.</p>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Indagine civica sul percorso casa-scuola" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Riportare i risultati a chi può intervenire</div>
+        <div class="scheda-sottotitolo">Il percorso da casa a scuola · Foglio 3 di 3</div>
+      </div>
+    </header>
+
+    <div class="pc">
+      <ol class="pc-passi">
+        <li><strong>In classe</strong> mettete insieme le schede. Togliete ciò che è doppio e controllate che non resti nessun dato personale.</li>
+        <li><strong>Scrivete una relazione breve</strong>: dove, che cosa avete visto, quando. Una riga per punto, con il numero della mappa.</li>
+        <li><strong>La relazione va al dirigente scolastico</strong>, che decide come inviarla. Le segnalazioni sugli spazi della scuola (cortile, ingressi) le gestisce la scuola stessa.</li>
+        <li><strong>La scuola scrive al Comune di Genzano di Roma</strong> con i recapiti ufficiali indicati sul sito istituzionale (comune.genzanodiroma.roma.it). Per la segnaletica stradale e la viabilità il riferimento è la Polizia Locale.</li>
+      </ol>
+
+      <div class="pc-112">
+        <strong>Un pericolo immediato non aspetta la relazione.</strong> Un albero che sta cadendo, un cavo a terra, una strada che cede: lo dici subito all'adulto, che chiama il 112. Se sei solo e il pericolo è vero, lo chiami tu.
+      </div>
+
+      <h2 class="scheda-h2">Prova tu: questa nota va bene?</h2>
+      <p>Per ogni nota scrivi se va bene così o come la riscriveresti.</p>
+      <div class="pc-nota"><p><strong>A.</strong> «Davanti a casa di Marco, in via ..., c'è una buca.»</p><div class="pc-riga" aria-label="Spazio per la risposta"></div></div>
+      <div class="pc-nota"><p><strong>B.</strong> «Foto: la macchina parcheggiata sulle strisce, con la targa ben leggibile.»</p><div class="pc-riga" aria-label="Spazio per la risposta"></div></div>
+      <div class="pc-nota"><p><strong>C.</strong> «Siamo scesi nel sottopasso allagato per misurare l'acqua.»</p><div class="pc-riga" aria-label="Spazio per la risposta"></div></div>
+      <div class="pc-nota"><p><strong>D.</strong> «Incrocio vicino alla fermata dell'autobus: il semaforo pedonale non si accende quando si preme il pulsante.»</p><div class="pc-riga" aria-label="Spazio per la risposta"></div></div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> <strong>Educazione civica</strong> (Linee guida, D.M. 183/2024): nuclei «Costituzione» (rispetto delle regole comuni, come il codice della strada) e «Sviluppo economico e sostenibilità» (cultura della protezione civile, rispetto dei beni pubblici). Tempi indicativi: un'ora di preparazione, l'osservazione nei giorni seguenti, un'ora per mappa, relazione e confronto. L'uscita di classe segue le regole della scuola: autorizzazioni, accompagnatori, assicurazione.</p>
+
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>A.</strong> Da riscrivere: niente nomi né indirizzi di case private. «Via ..., all'altezza dell'incrocio con via ...: buca sul marciapiede.»
+        <strong>B.</strong> Da riscrivere: niente targhe né persone. Si descrive a parole («auto parcheggiate spesso sulle strisce») o si fotografano solo le strisce, con il permesso dell'insegnante.
+        <strong>C.</strong> Comportamento sbagliato: in un sottopasso allagato non si entra. Si guarda da fuori e si annota il punto; il dato si raccoglie a strada asciutta.
+        <strong>D.</strong> Va bene: luogo pubblico, fatto osservato, nessun dato personale. Si segnala al Comune.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Indagine civica sul percorso casa-scuola" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+  </main>
+
+</body>
+</html>
