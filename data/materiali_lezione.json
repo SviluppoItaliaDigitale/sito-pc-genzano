@@ -775,6 +775,89 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "Il giorno dopo una scossa o un'allerta",
+   "url": "/formazione/schede-stampabili/il-giorno-dopo-docente/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 10,
+   "temi": [
+    "terremoto",
+    "meteo"
+   ],
+   "desc": "Per il docente che il giorno dopo trova la classe spaventata: tre domande aperte, che cosa dire e che cosa evitare, come smontare una voce falsa con le fonti ufficiali.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La prova di evacuazione: la mia storia",
+   "url": "/formazione/schede-stampabili/storia-sociale-prova-evacuazione/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 5,
+   "temi": [
+    "casa",
+    "informazione"
+   ],
+   "desc": "Storia sociale con pittogrammi da leggere nei giorni prima della prova, per chi è nello spettro autistico o ha altre necessità comunicative. Con il foglio per personalizzarla.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La sirena a scuola è una prova",
+   "url": "/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Sei frasi in italiano semplice con pittogrammi per chi è appena arrivato in Italia, con una riga «Nella tua lingua» per il mediatore culturale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Quando non si esce: restare al riparo dentro la scuola",
+   "url": "/formazione/schede-stampabili/restare-al-chiuso/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 40,
+   "temi": [
+    "incendi",
+    "meteo"
+   ],
+   "desc": "Temporale, fumo, nube o ordine delle autorità: che cosa fa la classe, chi decide, perché le famiglie non devono correre a scuola. Quattro scenari con soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Dopo la prova di evacuazione",
+   "url": "/formazione/schede-stampabili/debriefing-prova-evacuazione/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 10,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Griglia di osservazione per la classe, domande guida per il docente e modulo di segnalazione per il referente della sicurezza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "La mia voce arriva anche senza parole",
    "url": "/formazione/schede-stampabili/la-mia-voce-arriva-anche-senza-parole-infanzia/",
    "fasce": [

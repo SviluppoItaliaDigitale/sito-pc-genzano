@@ -125,9 +125,12 @@ def estrai_styles_articoli_titolo(
 
     styles = re.findall(r"<style[^>]*>(.*?)</style>", html, re.IGNORECASE | re.DOTALL)
 
-    # Tre varianti di wrapper-pagina, in ordine di frequenza
+    # Tre varianti di wrapper-pagina, in ordine di frequenza. Il wrapper può
+    # portare altre classi dopo la prima (es. "scheda-page ag-schermo", per una
+    # pagina con impaginazione propria): si conservano tutte (19/11/2026, prima
+    # la pagina restava fuori dal pacchetto in silenzio).
     pattern = (
-        r'<(article|main)\s+class="(scheda-page|scheda-immagine-wrapper|foglio)"[^>]*>'
+        r'<(article|main)\s+class="((?:scheda-page|scheda-immagine-wrapper|foglio)(?:\s+[^"]*)?)"[^>]*>'
         r'(.*?)'
         r'</\1>'
     )
@@ -637,11 +640,12 @@ def costruisci_pacchetto(
         anchor = f"scheda-{slug}"
         pagine_inner_parts: list[str] = []
         for classe, inner in pagine:
-            tag = "main" if classe in ("scheda-immagine-wrapper", "foglio") else "article"
+            base = classe.split()[0]
+            tag = "main" if base in ("scheda-immagine-wrapper", "foglio") else "article"
             # Forziamo class="scheda-page" su tutti i wrapper: così la regola
             # @media print di scheda-print.css (.scheda-page { page-break-after: always })
             # si applica uniformemente. La classe originale resta come secondo nome.
-            classi_finali = f"scheda-page {classe}" if classe != "scheda-page" else "scheda-page"
+            classi_finali = f"scheda-page {classe}" if base != "scheda-page" else classe
             pagine_inner_parts.append(
                 f'  <{tag} class="{classi_finali}">{inner}</{tag}>'
             )

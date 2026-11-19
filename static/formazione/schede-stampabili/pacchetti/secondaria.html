@@ -488,6 +488,564 @@
 :where([id="scheda-it-alert-comunicazioni-secondaria"]) { zoom: 0.95; }
 }
 
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-nome {
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      margin: 0.2rem 0 0.5rem 0;
+    }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-nome span.ss-linea { flex: 1; border-bottom: 1.5px solid var(--scheda-bordo); min-height: 1.5rem; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-griglia {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 3mm;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-riquadro {
+      position: relative;
+      display: grid;
+      grid-template-columns: 25mm minmax(0, 1fr);
+      gap: 3mm;
+      align-items: center;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      padding: 2.5mm 3mm 2.5mm 3mm;
+      min-height: 30mm;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-riquadro.ss-opzione { border-style: dashed; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-num {
+      position: absolute;
+      top: 1.5mm;
+      left: 1.5mm;
+      width: 6.5mm;
+      height: 6.5mm;
+      border-radius: 50%;
+      background: var(--scheda-blu);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-img {
+      height: 25mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1mm;
+    }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-img img { max-width: 100%; max-height: 23mm; object-fit: contain; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-img img.ss-mezza { max-width: 48%; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-frase { font-size: 1.12rem; line-height: 1.35; font-weight: 600; color: #212529; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-frase .ss-scrivi { display: inline-block; min-width: 26mm; border-bottom: 1.5px solid #6c757d; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-etichetta { display: block; font-size: 0.72rem; font-weight: 600; color: var(--scheda-grigio); margin-top: 1mm; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-rimando { font-size: 0.78rem; color: var(--scheda-grigio); margin: 2mm 0 0 0; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-credito { font-size: 0.7rem; color: var(--scheda-grigio); margin: 2mm 0 0 0; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto h2.scheda-h2 { margin-top: 0.7rem; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto p, :where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto li { font-size: 0.88rem; line-height: 1.42; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto p { margin: 0.25rem 0; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto .scheda-intro { margin-bottom: 0.4rem; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-terremoto { display: grid; grid-template-columns: minmax(0, 1fr) 92mm; gap: 4mm; align-items: center; }
+@media (max-width: 640px) {
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-terremoto { grid-template-columns: minmax(0, 1fr); }
+}
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-ritaglio {
+      display: grid;
+      grid-template-columns: 30mm minmax(0, 1fr);
+      gap: 3mm;
+      align-items: center;
+      border: 2px dashed var(--scheda-blu);
+      border-radius: 8px;
+      padding: 2.5mm 3mm;
+      max-width: 92mm;
+      margin: 0.2rem 0;
+      break-inside: avoid;
+    }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-ritaglio img { max-width: 100%; max-height: 26mm; object-fit: contain; }
+@media print {
+:where([id="scheda-storia-sociale-prova-evacuazione"]) { zoom: 0.9; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .scheda-page { padding: 1cm 1.3cm 0.7cm 1.3cm; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .scheda-header { margin-bottom: 0.3rem; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto h2.scheda-h2 { margin: 0.55rem 0 0.3rem 0; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto .scheda-elenco { margin: 0.2rem 0 0.3rem 0; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto .scheda-elenco li { margin: 0.1rem 0; }
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-adulto .scheda-docente { margin-top: 0.5rem; padding: 0.6rem; }
+}
+@media (max-width: 640px) {
+:where([id="scheda-storia-sociale-prova-evacuazione"]) .ss-griglia { grid-template-columns: minmax(0, 1fr); }
+}
+
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-righe { list-style: none; padding: 0; margin: 0.2rem 0 0 0; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-riga {
+      display: grid;
+      grid-template-columns: 9mm 30mm minmax(0, 1fr);
+      gap: 3mm;
+      align-items: center;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 8px;
+      padding: 2.5mm 3mm;
+      margin-bottom: 2.5mm;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-num {
+      width: 8mm;
+      height: 8mm;
+      border-radius: 50%;
+      background: var(--scheda-blu);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-img { height: 27mm; display: flex; align-items: center; justify-content: center; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-img img { max-width: 100%; max-height: 26mm; object-fit: contain; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-frase { font-size: 1.2rem; line-height: 1.3; font-weight: 700; margin: 0 0 1.5mm 0; color: #212529; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-frase .na-scrivi { display: inline-block; min-width: 45mm; border-bottom: 1.5px solid #6c757d; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-lingua { display: flex; align-items: flex-end; gap: 2mm; font-size: 0.75rem; color: var(--scheda-grigio); }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-lingua span.na-linea { flex: 1; border-bottom: 1.5px dashed var(--scheda-bordo); min-height: 7mm; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-credito { font-size: 0.7rem; color: var(--scheda-grigio); margin: 1.5mm 0 0 0; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-adulto { break-inside: avoid; page-break-inside: avoid; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-adulto p, :where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-adulto li { font-size: 0.88rem; line-height: 1.45; }
+@media print {
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) { zoom: 0.88; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .scheda-page { padding: 0.8cm 1.3cm 0.5cm 1.3cm; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-riga { padding: 1.5mm 3mm; margin-bottom: 1.3mm; grid-template-columns: 9mm 24mm minmax(0, 1fr); }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-img { height: 17mm; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-img img { max-height: 16mm; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .scheda-docente .scheda-elenco li { margin: 0.1rem 0; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-lingua span.na-linea { min-height: 6mm; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .scheda-docente { margin-top: 0.4rem; padding: 0.5rem 0.7rem; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .scheda-docente .scheda-elenco { margin-bottom: 0; }
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .scheda-header { margin-bottom: 0.3rem; }
+}
+@media (max-width: 600px) {
+:where([id="scheda-sirena-scuola-nuovi-arrivati"]) .na-riga { grid-template-columns: 8mm 22mm minmax(0, 1fr); }
+}
+
+:where([id="scheda-restare-al-chiuso"]) .rc { font-size: 0.95rem; line-height: 1.45; }
+:where([id="scheda-restare-al-chiuso"]) .rc p { margin: 0.35rem 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-situazioni { list-style: none; padding: 0; margin: 0.3rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.35rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-situazioni li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.35rem 0.55rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-situazioni strong { color: var(--scheda-blu); display: block; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi { list-style: none; padding: 0; margin: 0.3rem 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi li { display: flex; gap: 0.6rem; align-items: center; padding: 0.3rem 0; border-bottom: 1px solid #e9ecef; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi img { width: 44px; height: 44px; flex-shrink: 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi .rc-senza-img { width: 44px; flex-shrink: 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc-chi { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.45rem 0.7rem; border-radius: 0 6px 6px 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc-chi ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-paura { font-style: italic; margin-top: 0.4rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-scenario { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.45rem 0.6rem; margin: 0.4rem 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc-scenario p { margin: 0 0 0.15rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-scelta { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; font-weight: 700; color: var(--scheda-blu); }
+:where([id="scheda-restare-al-chiuso"]) .rc-casella { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.3rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-perche { flex: 1; min-width: 8rem; border-bottom: 1.5px solid var(--scheda-bordo); height: 1.3rem; font-weight: 400; }
+:where([id="scheda-restare-al-chiuso"]) .rc-famiglie { margin-top: 0.45rem; padding: 0.45rem 0.7rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-famiglie strong:first-child { color: #7a3d06; }
+:where([id="scheda-restare-al-chiuso"]) .rc .scheda-docente p { margin: 0.25rem 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc .scheda-docente ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc .soluzione-capovolta { margin-top: 2mm; padding: 2.5mm 4mm; font-size: 0.85rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-attribuzione { font-size: 0.72rem; color: var(--scheda-grigio); margin-top: 0.4rem; }
+@media (max-width: 600px) {
+:where([id="scheda-restare-al-chiuso"]) .rc-situazioni { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+:where([id="scheda-restare-al-chiuso"]) .rc { font-size: 0.95rem; line-height: 1.4; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi img { width: 36px; height: 36px; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi .rc-senza-img { width: 36px; }
+:where([id="scheda-restare-al-chiuso"]) .rc-passi li { padding: 0.2rem 0; }
+:where([id="scheda-restare-al-chiuso"]) .rc-scenario { margin: 0.25rem 0; padding: 0.3rem 0.55rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc .scheda-docente { margin-top: 0.5rem; padding: 0.55rem 0.7rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc-scenario, :where([id="scheda-restare-al-chiuso"]) .rc-famiglie, :where([id="scheda-restare-al-chiuso"]) .scheda-docente { break-inside: avoid; }
+}
+@media print {
+:where([id="scheda-restare-al-chiuso"]) { zoom: 0.88; }
+:where([id="scheda-restare-al-chiuso"]) .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+:where([id="scheda-restare-al-chiuso"]) .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+:where([id="scheda-restare-al-chiuso"]) .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+:where([id="scheda-restare-al-chiuso"]) .rc .scheda-intro { margin: 0.2rem 0 0.3rem; }
+:where([id="scheda-restare-al-chiuso"]) .scheda-footer { padding-top: 2mm; }
+}
+
+:where([id="scheda-debriefing-prova-evacuazione"]) .db { font-size: 0.95rem; line-height: 1.45; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db p { margin: 0.35rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.3rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia caption { text-align: left; font-weight: 700; color: var(--scheda-blu); padding-bottom: 0.2rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia th, :where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia td { border: 1px solid var(--scheda-bordo); padding: 0.2rem 0.4rem; vertical-align: middle; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia thead th { background: #e7f0fa; color: var(--scheda-blu); text-align: center; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia thead th:first-child { text-align: left; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia td.db-c { width: 3.6rem; text-align: center; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia td.db-note { width: 22%; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-casella { display: inline-block; width: 1rem; height: 1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-tempi { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; align-items: baseline; margin: 0.4rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-linea { display: inline-block; min-width: 4rem; border-bottom: 1.5px solid var(--scheda-bordo); }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-due { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.6rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-box { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.45rem 0.6rem; min-height: 4.2rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-box strong { color: var(--scheda-blu); }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-nota { border-left: 4px solid var(--scheda-blu); background: #f1f5f9; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-domande { margin: 0.3rem 0; padding-left: 1.3rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-domande li { margin: 0.25rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-modulo { border: 2px solid var(--scheda-blu); border-radius: 8px; padding: 0.55rem 0.75rem; margin-top: 0.5rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-modulo .scheda-campi-riga { margin: 0.25rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-firme { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.8rem; margin-top: 0.6rem; font-size: 0.82rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-firme span { display: block; border-top: 1.5px solid var(--scheda-bordo); padding-top: 0.2rem; margin-top: 1.2rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-avvertenza { margin-top: 0.5rem; padding: 0.5rem 0.75rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.85rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-docente p { margin: 0.25rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-docente ul { margin: 0.15rem 0; padding-left: 1.1rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-pitto { float: none; display: inline-block; width: 34px; height: 34px; vertical-align: middle; margin-right: 0.3rem; }
+@media (max-width: 600px) {
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-due, :where([id="scheda-debriefing-prova-evacuazione"]) .db-firme { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+:where([id="scheda-debriefing-prova-evacuazione"]) .db { font-size: 0.95rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia { font-size: 0.88rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-griglia thead th { background: #e7f0fa; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db-modulo, :where([id="scheda-debriefing-prova-evacuazione"]) .scheda-docente { break-inside: avoid; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-righe { min-height: 1.35rem; margin: 0.25rem 0; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-docente { margin-top: 0.6rem; padding: 0.55rem 0.7rem; }
+}
+@media print {
+:where([id="scheda-debriefing-prova-evacuazione"]) { zoom: 0.88; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .db .scheda-intro { margin: 0.2rem 0 0.3rem; }
+:where([id="scheda-debriefing-prova-evacuazione"]) .scheda-footer { padding-top: 2mm; }
+}
+
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-tempi {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+      margin: 0.3rem 0 0.6rem 0;
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-tempi div {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+      padding: 0.35rem 0.5rem;
+    }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-tempi strong { display: block; color: var(--scheda-blu); }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-domande { margin: 0.3rem 0 0.4rem 0; padding-left: 1.4rem; font-size: 0.92rem; line-height: 1.45; }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-domande li { margin: 0.25rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-domande .gd-perche { display: block; font-size: 0.82rem; color: var(--scheda-grigio); }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-eta { font-size: 0.85rem; line-height: 1.45; margin: 0.2rem 0 0.4rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella { width: 100%; border-collapse: collapse; font-size: 0.85rem; line-height: 1.4; margin: 0.3rem 0 0.5rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella th, :where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella td { border: 1px solid var(--scheda-bordo); padding: 0.35rem 0.5rem; vertical-align: top; text-align: left; }
+:where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella th { background: #e7f1ff; color: var(--scheda-blu); }
+:where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella td em { color: var(--scheda-grigio); font-style: normal; font-size: 0.8rem; }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-nota { font-size: 0.85rem; line-height: 1.45; margin: 0.2rem 0 0.4rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-allarme {
+      margin: 0.5rem 0;
+      padding: 0.55rem 0.8rem;
+      background: #f8d7da;
+      border-left: 4px solid var(--scheda-rosso);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      line-height: 1.45;
+    }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-allarme strong { color: #842029; }
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-fonti { font-size: 0.72rem; line-height: 1.4; color: var(--scheda-grigio); margin-top: 0.5rem; }
+@media print {
+:where([id="scheda-il-giorno-dopo-docente"]) { zoom: 0.88; }
+:where([id="scheda-il-giorno-dopo-docente"]) .scheda-page { padding: 0.9cm 1.4cm 0.5cm 1.4cm; }
+:where([id="scheda-il-giorno-dopo-docente"]) .scheda-messaggio-chiave { margin: 0.4rem 0 0.6rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) p.scheda-intro { margin-bottom: 0.5rem; }
+:where([id="scheda-il-giorno-dopo-docente"]) h2.scheda-h2 { margin: 0.7rem 0 0.35rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella th, :where([id="scheda-il-giorno-dopo-docente"]) table.gd-tabella td { padding: 0.25rem 0.45rem; }
+:where([id="scheda-il-giorno-dopo-docente"]) .scheda-elenco { margin: 0.2rem 0 0.4rem 0; }
+:where([id="scheda-il-giorno-dopo-docente"]) .scheda-docente { margin-top: 0.6rem; padding: 0.6rem; }
+}
+@media (max-width: 600px) {
+:where([id="scheda-il-giorno-dopo-docente"]) .gd-tempi { grid-template-columns: 1fr 1fr; }
+}
+
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-due {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0.7rem;
+      margin: 0.2rem 0 0.4rem 0;
+    }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-col {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem 0.55rem 0.75rem;
+      background: #fff;
+    }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-col h2 {
+      font-size: 1rem;
+      color: var(--scheda-blu);
+      margin: 0 0 0.3rem 0;
+      padding-bottom: 0.2rem;
+      border-bottom: 2px solid var(--scheda-blu);
+    }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-col.pc-voi { background: #f0f4f8; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-col ul { margin: 0; padding-left: 1.05rem; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-col li { font-size: 0.84rem; line-height: 1.35; margin: 0.18rem 0; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-blocco { font-size: 0.84rem; line-height: 1.38; margin: 0.1rem 0 0.3rem 0; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-campi {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0.35rem 0.6rem;
+      margin: 0.2rem 0 0.2rem 0;
+    }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-campo {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 4px;
+      min-height: 2.7rem;
+      padding: 0.2rem 0.45rem;
+    }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-et { display: block; font-size: 0.78rem; font-weight: 700; color: var(--scheda-blu); line-height: 1.25; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-sub { font-weight: 400; color: #495057; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-avvertenza {
+      margin-top: 0.45rem;
+      padding: 0.5rem 0.75rem;
+      background: #fff3cd;
+      border-radius: 6px;
+      border-left: 4px solid var(--scheda-oro);
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-avvertenza strong { color: #7a3a00; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page .scheda-docente { margin-top: 0.45rem; padding: 0.5rem 0.75rem; font-size: 0.8rem; line-height: 1.4; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page .scheda-docente ul { margin: 0.2rem 0 0 1rem; padding: 0; }
+@media (max-width: 700px) {
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-due { grid-template-columns: minmax(0, 1fr); }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .pc-campi { grid-template-columns: minmax(0, 1fr); }
+}
+@media print {
+:where([id="scheda-patto-corresponsabilita-emergenze"]) { zoom: 0.88; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page { padding: 10mm 13mm 3mm 13mm; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page .scheda-header { margin-bottom: 0.5rem; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page .scheda-meta { margin-bottom: 0.45rem; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page h2.scheda-h2 { margin: 0.55rem 0 0.25rem 0; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page p.scheda-intro { font-size: 0.92rem; margin-bottom: 0.4rem; }
+:where([id="scheda-patto-corresponsabilita-emergenze"]) .scheda-page .scheda-docente { font-size: 0.76rem; }
+}
+
+:where([id="scheda-assemblea-genitori-emergenze"]) .scheda-page.ag-schermo {
+      width: 297mm;
+      min-height: 210mm;
+      padding: 12mm 16mm 8mm 16mm;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-schermo .scheda-header { margin-bottom: 0.6rem; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-schermo .scheda-header .scheda-titolo-principale { font-size: 1.2rem; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-numero {
+      flex-shrink: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--scheda-blu);
+      border: 2px solid var(--scheda-blu);
+      border-radius: 6px;
+      padding: 0.2rem 0.6rem;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-titolo {
+      font-size: 2.15rem;
+      line-height: 1.15;
+      color: var(--scheda-blu);
+      margin: 0.3rem 0 0.8rem 0;
+      padding-left: 0.7rem;
+      border-left: 6px solid var(--scheda-oro);
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-punti {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-punti li {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin: 0 0 0.7rem 0;
+      padding-left: 2.2rem;
+      position: relative;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-punti li::before {
+      content: "";
+      position: absolute;
+      left: 0.35rem;
+      top: 0.42em;
+      width: 0.85rem;
+      height: 0.85rem;
+      background: var(--scheda-blu);
+      border-radius: 2px;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-punti strong { color: var(--scheda-blu); }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-riquadro {
+      margin: 0.3rem 0 0.6rem 0;
+      padding: 0.55rem 0.9rem;
+      border: 2px solid var(--scheda-blu);
+      border-radius: 6px;
+      font-size: 1.3rem;
+      line-height: 1.35;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-riquadro strong { color: var(--scheda-blu); }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-riga {
+      display: inline-block;
+      min-width: 55%;
+      border-bottom: 2px solid var(--scheda-bordo);
+      height: 1.3rem;
+      vertical-align: bottom;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-112 {
+      display: inline-block;
+      font-weight: 700;
+      color: #fff;
+      background: var(--scheda-rosso);
+      border-radius: 6px;
+      padding: 0 0.5rem;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-note {
+      margin-top: auto;
+      padding: 0.45rem 0.8rem;
+      background: #d1e7dd;
+      border-left: 4px solid var(--scheda-verde);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-note strong { color: #0f5132; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-schermo .scheda-footer { margin-top: 0.5rem; padding-top: 3mm; padding-bottom: 2mm; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-avvertenza {
+      font-size: 0.8rem;
+      line-height: 1.35;
+      color: #495057;
+      margin: 0.4rem 0 0 0;
+    }
+@media screen and (max-width: 300mm) {
+:where([id="scheda-assemblea-genitori-emergenze"]) .scheda-page.ag-schermo { width: 100%; min-height: 0; padding: 1.2rem; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-titolo { font-size: 1.6rem; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-punti li { font-size: 1.15rem; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-riquadro { font-size: 1.05rem; }
+:where([id="scheda-assemblea-genitori-emergenze"]) .ag-riga { min-width: 80%; }
+}
+@media print {
+@media print { :where([id="scheda-assemblea-genitori-emergenze"]) { zoom: 0.697; } }
+:where([id="scheda-assemblea-genitori-emergenze"]) .scheda-page.ag-schermo {
+        width: 287mm;
+        height: 199mm;
+        min-height: 0;
+        overflow: hidden;
+        padding: 9mm 14mm 4mm 14mm;
+      }
+}
+
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-h2 {
+      color: var(--scheda-blu);
+      font-size: 0.92rem;
+      margin: 0.3rem 0 0.12rem 0;
+      border-bottom: 2px solid var(--scheda-blu);
+      padding-bottom: 0.1rem;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+      margin: 0.1rem 0 0.15rem 0;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab th, :where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.2rem 0.4rem;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.28;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab th { width: 34%; background: #f0f4f8; color: var(--scheda-blu); font-weight: 700; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-nota-h { font-weight: 400; font-size: 0.76rem; color: #495057; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab th.ep-stretta { width: 18%; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab th span { display: block; font-weight: 400; color: #495057; font-size: 0.72rem; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab td { height: 1.6rem; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab td.ep-alta { height: 2.6rem; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-scelte { font-size: 0.74rem; color: #343a40; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-box {
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 1.5px solid #495057;
+      border-radius: 2px;
+      vertical-align: -0.1rem;
+      margin: 0 0.15rem 0 0.35rem;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-due {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0.5rem;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-due table.ep-tab th { width: auto; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-due table.ep-tab td { height: 2.6rem; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-firme {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      gap: 0.2rem 0.8rem;
+      font-size: 0.76rem;
+      margin-top: 0.15rem;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-firme div { border-bottom: 1.5px solid var(--scheda-bordo); padding-top: 0.9rem; color: #495057; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-avvertenza {
+      margin-top: 0.4rem;
+      padding: 0.4rem 0.65rem;
+      background: #fff3cd;
+      border-radius: 6px;
+      border-left: 4px solid var(--scheda-oro);
+      font-size: 0.72rem;
+      line-height: 1.33;
+    }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-avvertenza strong { color: #7a3a00; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-avvertenza ul { margin: 0.15rem 0 0 1rem; padding: 0; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .scheda-page .scheda-intro { font-size: 0.82rem; line-height: 1.4; margin-bottom: 0.3rem; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .scheda-page .scheda-meta { margin-bottom: 0.45rem; padding: 0.4rem 0.8rem; }
+@media (max-width: 700px) {
+:where([id="scheda-evacuazione-personalizzata-pei"]) .ep-due, :where([id="scheda-evacuazione-personalizzata-pei"]) .ep-firme { grid-template-columns: minmax(0, 1fr); }
+:where([id="scheda-evacuazione-personalizzata-pei"]) table.ep-tab th { width: 42%; }
+}
+@media print {
+:where([id="scheda-evacuazione-personalizzata-pei"]) { zoom: 0.89; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .scheda-page { padding: 9mm 13mm 3mm 13mm; }
+:where([id="scheda-evacuazione-personalizzata-pei"]) .scheda-page .scheda-header { margin-bottom: 0.45rem; }
+}
+
+:where([id="scheda-scheda-personale-ata"]) .ata { font-size: 0.95rem; line-height: 1.45; }
+:where([id="scheda-scheda-personale-ata"]) .ata p { margin: 0.35rem 0; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-h2 { margin: 0.7rem 0 0.3rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-campi-riga { margin-bottom: 0.45rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-campo-label { min-width: 0; flex: 0 1 auto; max-width: 55%; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-campo-linea { min-height: 1.5rem; min-width: 5rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata-avvertenza { margin: 0.5rem 0; padding: 0.55rem 0.8rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid var(--scheda-oro); font-size: 0.88rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata-avvertenza strong:first-child { color: #7a3d06; }
+:where([id="scheda-scheda-personale-ata"]) .ata-compiti { list-style: none; padding: 0; margin: 0.3rem 0; }
+:where([id="scheda-scheda-personale-ata"]) .ata-compiti li { border: 1.5px solid var(--scheda-bordo); border-radius: 6px; padding: 0.25rem 0.5rem; margin-bottom: 0.25rem; line-height: 1.38; }
+:where([id="scheda-scheda-personale-ata"]) .ata-compiti li > strong { color: var(--scheda-blu); }
+:where([id="scheda-scheda-personale-ata"]) .ata-se { display: inline-block; font-size: 0.78rem; font-weight: 700; color: #fff; background: var(--scheda-blu); border-radius: 4px; padding: 0 0.35rem; margin-right: 0.3rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata-sempre { margin: 0.3rem 0; padding-left: 1.2rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata-sempre li { margin: 0.1rem 0; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-docente p { margin: 0.25rem 0; }
+@media print {
+:where([id="scheda-scheda-personale-ata"]) .ata { font-size: 0.95rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata-compiti li, :where([id="scheda-scheda-personale-ata"]) .scheda-docente { break-inside: avoid; }
+}
+@media print {
+:where([id="scheda-scheda-personale-ata"]) { zoom: 0.88; }
+:where([id="scheda-scheda-personale-ata"]) .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+:where([id="scheda-scheda-personale-ata"]) .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+:where([id="scheda-scheda-personale-ata"]) .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+:where([id="scheda-scheda-personale-ata"]) .ata .scheda-intro { margin: 0.2rem 0 0.3rem; }
+:where([id="scheda-scheda-personale-ata"]) .scheda-footer { padding-top: 2mm; }
+}
+
 :where([id="scheda-sendai-genzano-agenda2030-secondaria"]) .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
 :where([id="scheda-sendai-genzano-agenda2030-secondaria"]) .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
 :where([id="scheda-sendai-genzano-agenda2030-secondaria"]) .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
@@ -2650,8 +3208,8 @@
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
     <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di I grado · schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola Secondaria di I grado (97 fogli A4)">
-      🖨️ Stampa tutto (97 fogli A4)
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola Secondaria di I grado (113 fogli A4)">
+      🖨️ Stampa tutto (113 fogli A4)
     </button>
   </header>
 
@@ -2659,7 +3217,7 @@
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Secondaria di I grado</h1>
     <p>
       Questo pacchetto contiene tutte le <strong>schede stampabili</strong> della Scuola Secondaria di I grado (11-13 anni):
-      in stampa occupa <strong>97 fogli A4</strong>.
+      in stampa occupa <strong>113 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -2692,6 +3250,15 @@
       <li><a href="#scheda-maremoto-comportamenti-secondaria">Maremoto: la fisica e i comportamenti</a></li>
       <li><a href="#scheda-it-alert-comunicazioni-secondaria">IT-alert e comunicazioni ufficiali</a></li>
       <li><a href="#scheda-fake-news-emergenza-secondaria">Notizie false in emergenza</a></li>
+      <li><a href="#scheda-storia-sociale-prova-evacuazione">La prova di evacuazione: la mia storia</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-sirena-scuola-nuovi-arrivati">La sirena a scuola è una prova</a></li>
+      <li><a href="#scheda-restare-al-chiuso">Quando non si esce: restare al riparo dentro la scuola</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-debriefing-prova-evacuazione">Dopo la prova di evacuazione: 10 minuti per capire come è andata</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-il-giorno-dopo-docente">Il giorno dopo una scossa o un'allerta</a></li>
+      <li><a href="#scheda-patto-corresponsabilita-emergenze">Se a scuola scatta un'emergenza</a></li>
+      <li><a href="#scheda-assemblea-genitori-emergenze">Assemblea di classe di inizio anno: le emergenze a scuola</a> <span class="toc-meta">· 4 fogli</span></li>
+      <li><a href="#scheda-evacuazione-personalizzata-pei">Scheda di evacuazione personalizzata</a></li>
+      <li><a href="#scheda-scheda-personale-ata">Prova o emergenza: la scheda per collaboratori scolastici, mensa e pre/post-scuola</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-sendai-genzano-agenda2030-secondaria">Da Sendai a Genzano</a></li>
       <li><a href="#scheda-statistica-rischi-secondaria">La statistica dei rischi italiani</a></li>
       <li><a href="#scheda-scrittura-informativa-secondaria">Scrivi un testo informativo</a></li>
@@ -4875,6 +5442,993 @@ e canali ufficiali del Comune.</div>
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Notizie false in emergenza" · Secondaria · rev. 2026-08</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-storia-sociale-prova-evacuazione" class="pacchetto-scheda" aria-label="Scheda: La prova di evacuazione: la mia storia">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La prova di evacuazione: la mia storia</h1>
+        <div class="scheda-sottotitolo">Storia sociale con pittogrammi — infanzia, primaria, secondaria di primo grado</div>
+      </div>
+    </header>
+
+    <div class="ss-nome">La storia di <span class="ss-linea" aria-label="Spazio per scrivere il nome dell'alunno"></span></div>
+
+    <ol class="ss-griglia">
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">1</span>
+        <div class="ss-img"><img src="/pittogrammi/arasaac/sirena.png" alt="Pittogramma: una sirena che suona"></div>
+        <p class="ss-frase">Un giorno, a scuola, suonerà un segnale forte.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">2</span>
+        <div class="ss-img"><img src="/pittogrammi/arasaac/si.png" alt="Pittogramma: segno di spunta verde, va bene"></div>
+        <p class="ss-frase">È una prova. Serve a imparare la strada per uscire.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">3</span>
+        <div class="ss-img"><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una persona con la mano all'orecchio che ascolta"></div>
+        <p class="ss-frase">Quando sento il segnale, mi fermo e ascolto l'insegnante.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">4</span>
+        <div class="ss-img"><img class="ss-mezza" src="/pittogrammi/arasaac/zaino.png" alt="Pittogramma: uno zaino"><img class="ss-mezza" src="/pittogrammi/arasaac/no.png" alt="Pittogramma: una croce rossa, no"></div>
+        <p class="ss-frase">Lascio le mie cose in classe. Le ritrovo dopo.</p>
+      </li>
+      <li class="ss-riquadro ss-opzione">
+        <span class="ss-num" aria-hidden="true">5</span>
+        <div class="ss-img"><img src="/pittogrammi/iso7010/protezione-udito.svg" alt="Segnale: una testa con le cuffie sulle orecchie"></div>
+        <p class="ss-frase">Se lo abbiamo deciso insieme, posso mettere le mie cuffie.<span class="ss-etichetta">Riquadro da usare solo se concordato</span></p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">6</span>
+        <div class="ss-img"><img src="/pittogrammi/arasaac/camminare.png" alt="Pittogramma: un adulto e un bambino che camminano insieme"></div>
+        <p class="ss-frase">Cammino con <span class="ss-scrivi" aria-label="spazio per scrivere il nome della persona di riferimento"></span>. Andiamo in fila, piano.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">7</span>
+        <div class="ss-img"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="Segnale verde di uscita di emergenza: una persona che corre verso una porta"></div>
+        <p class="ss-frase">Seguiamo i cartelli verdi e usciamo.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">8</span>
+        <div class="ss-img"><img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Segnale verde del punto di raccolta: quattro persone e due frecce"></div>
+        <p class="ss-frase">Andiamo al punto di raccolta, <span class="ss-scrivi" aria-label="spazio per scrivere dove si trova il punto di raccolta"></span>.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">9</span>
+        <div class="ss-img"><img src="/pittogrammi/arasaac/aspettare.png" alt="Pittogramma: tre persone sedute che aspettano, un orologio alla parete"></div>
+        <p class="ss-frase">Aspettiamo insieme. Se ho paura, lo posso dire a <span class="ss-scrivi" aria-label="spazio per scrivere il nome della persona a cui dirlo"></span>.</p>
+      </li>
+      <li class="ss-riquadro">
+        <span class="ss-num" aria-hidden="true">10</span>
+        <div class="ss-img"><img src="/pittogrammi/arasaac/scuola.png" alt="Pittogramma: un'aula con la lavagna e un banco"></div>
+        <p class="ss-frase">Poi torniamo in classe. La prova è finita.</p>
+      </li>
+    </ol>
+
+    <p class="ss-rimando"><strong>Per l'adulto:</strong> prima di leggerla, personalizzate la storia con le indicazioni del secondo foglio.</p>
+    <p class="ss-credito">Pittogrammi ARASAAC — autore Sergio Palao, Governo d'Aragona, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010. Scheda distribuita con licenza CC BY-NC-SA 4.0.</p>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La prova di evacuazione: la mia storia" · Foglio 1 di 2 · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page ss-adulto">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Per l'adulto: come preparare e usare la storia</h2>
+        <div class="scheda-sottotitolo">Per docenti, docenti di sostegno, educatori e famiglie · 5 minuti a lettura</div>
+      </div>
+    </header>
+
+    <p class="scheda-intro">
+      Una storia sociale descrive con frasi brevi in prima persona e con immagini una situazione nuova, così l'alunno sa prima che cosa succederà. Il formato è stato ideato da Carol Gray. Questa storia è pensata per alunni nello spettro autistico o con altre necessità comunicative, dall'infanzia alla secondaria di primo grado. Qui prepara a una prova che arriva con un suono forte e cambia la routine. La storia non è una terapia e non sostituisce il lavoro di chi segue l'alunno.
+    </p>
+
+    <h2 class="scheda-h2">Come personalizzarla</h2>
+    <ul class="scheda-elenco">
+      <li><strong>La persona di riferimento.</strong> Scrivete il suo nome nei riquadri 6 e 9: l'insegnante, il docente di sostegno o un compagno, secondo il piano della scuola.</li>
+      <li><strong>Il luogo.</strong> Scrivete nel riquadro 8 dove si trova il punto di raccolta. Potete incollare sopra il segnale una foto del cortile o della porta da cui si esce.</li>
+      <li><strong>Il suono.</strong> Il segnale cambia da scuola a scuola: sirena, campanella a tratti, voce. Descrivetelo com'è. Se la scuola è d'accordo, fatelo ascoltare prima a volume basso.</li>
+      <li><strong>Le cuffie.</strong> Usate il riquadro 5 solo se cuffie o altri aiuti sono già stati decisi. Altrimenti copritelo o tagliatelo.</li>
+      <li><strong>Le parole.</strong> Cambiate le frasi perché siano vere per quella scuola e per quell'alunno.</li>
+    </ul>
+
+    <h2 class="scheda-h2">Se la prova è per il terremoto</h2>
+    <div class="ss-terremoto">
+    <p>Nella prova per il terremoto, prima di uscire, la classe si ripara sotto i banchi e si protegge la testa. Ritagliate il riquadro qui accanto e incollatelo fra il 3 e il 4.</p>
+    <div class="ss-ritaglio">
+      <img src="/pittogrammi/arasaac/nascondersi-tavolo.png" alt="Pittogramma: una persona accovacciata sotto un tavolo">
+      <p class="ss-frase">Prima mi metto sotto il banco e mi proteggo la testa. Aspetto che l'insegnante dica di uscire.</p>
+    </div>
+    </div>
+
+    <h2 class="scheda-h2">Quando leggerla</h2>
+    <p>Qualche giorno prima della prova, più volte, in un momento tranquillo; la mattina della prova, se la data è nota; dopo, per ricordare insieme come è andata. Leggete indicando ogni immagine con il dito. L'alunno può indicare, ripetere, colorare o rispondere con un gesto: vanno bene tutti i modi. Se a un certo punto vuole fermarsi, fermatevi.</p>
+
+    <h2 class="scheda-h2">Le scelte si concordano prima</h2>
+    <p>Cuffie, posto nella fila, persona di riferimento e un eventuale preavviso si concordano con la famiglia, con il docente di sostegno e con chi cura il piano di emergenza della scuola (il dirigente e il responsabile della sicurezza). Scrivetele nel piano: ciò che si prova deve valere anche in un'emergenza vera.</p>
+
+    <div class="scheda-docente">
+      <strong>Avvertenze per l'adulto.</strong> Questa scheda non sostituisce il piano di emergenza della scuola né le indicazioni di chi segue l'alunno: in caso di differenze, vale il piano. Non promettete che il suono «non farà paura» o che «andrà tutto bene»: dite che cosa succederà e chi ci sarà vicino. Avere paura durante la prova è normale.
+    </div>
+
+    <p class="ss-credito">Fonti: Carol Gray, «Social Stories» (carolgraysocialstories.com); Kit scuola infanzia e primaria di protezionecivilegenzano.it; controllate il 19/11/2026. Pittogrammi ARASAAC — autore Sergio Palao, Governo d'Aragona, licenza CC BY-NC-SA 4.0. Segnali: ISO 7010.</p>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La prova di evacuazione: la mia storia" · Foglio 2 di 2 · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-sirena-scuola-nuovi-arrivati" class="pacchetto-scheda" aria-label="Scheda: La sirena a scuola è una prova">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La sirena a scuola è una prova</h1>
+        <div class="scheda-sottotitolo">Per chi è appena arrivato a scuola — infanzia, primaria, secondaria di primo grado</div>
+      </div>
+    </header>
+
+    <ol class="na-righe">
+      <li class="na-riga">
+        <span class="na-num" aria-hidden="true">1</span>
+        <div class="na-img"><img src="/pittogrammi/arasaac/sirena.png" alt="Pittogramma: una sirena che suona"></div>
+        <div>
+          <p class="na-frase">A scuola, a volte, suona un allarme forte.</p>
+          <div class="na-lingua">Nella tua lingua: <span class="na-linea"></span></div>
+        </div>
+      </li>
+      <li class="na-riga">
+        <span class="na-num" aria-hidden="true">2</span>
+        <div class="na-img"><img src="/pittogrammi/arasaac/si.png" alt="Pittogramma: segno di spunta verde, va bene"></div>
+        <div>
+          <p class="na-frase">È una prova. È un esercizio. Lo facciamo tutti insieme.</p>
+          <div class="na-lingua">Nella tua lingua: <span class="na-linea"></span></div>
+        </div>
+      </li>
+      <li class="na-riga">
+        <span class="na-num" aria-hidden="true">3</span>
+        <div class="na-img"><img src="/pittogrammi/arasaac/camminare.png" alt="Pittogramma: un adulto e un bambino che camminano insieme"></div>
+        <div>
+          <p class="na-frase">Seguo l'insegnante: <span class="na-scrivi" aria-label="spazio per scrivere il nome dell'insegnante"></span></p>
+          <div class="na-lingua">Nella tua lingua: <span class="na-linea"></span></div>
+        </div>
+      </li>
+      <li class="na-riga">
+        <span class="na-num" aria-hidden="true">4</span>
+        <div class="na-img"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="Segnale verde di uscita di emergenza: una persona che corre verso una porta"></div>
+        <div>
+          <p class="na-frase">Cammino in fila, piano. Lascio lo zaino in classe.</p>
+          <div class="na-lingua">Nella tua lingua: <span class="na-linea"></span></div>
+        </div>
+      </li>
+      <li class="na-riga">
+        <span class="na-num" aria-hidden="true">5</span>
+        <div class="na-img"><img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Segnale verde del punto di raccolta: quattro persone e due frecce"></div>
+        <div>
+          <p class="na-frase">Il punto di raccolta è: <span class="na-scrivi" aria-label="spazio per scrivere dove si trova il punto di raccolta"></span></p>
+          <div class="na-lingua">Nella tua lingua: <span class="na-linea"></span></div>
+        </div>
+      </li>
+      <li class="na-riga">
+        <span class="na-num" aria-hidden="true">6</span>
+        <div class="na-img"><img src="/pittogrammi/arasaac/scuola.png" alt="Pittogramma: un'aula con la lavagna e un banco"></div>
+        <div>
+          <p class="na-frase">Poi torniamo in classe.</p>
+          <div class="na-lingua">Nella tua lingua: <span class="na-linea"></span></div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="scheda-docente na-adulto">
+      <strong>Per l'adulto: come usare la scheda.</strong>
+      <ul class="scheda-elenco">
+        <li>Usatela prima della prima prova di evacuazione, con calma, insieme al mediatore culturale o a un familiare. Mostrate il percorso e il punto di raccolta camminando insieme; affiancate all'alunno un compagno.</li>
+        <li><strong>La traduzione non la fa la scheda.</strong> Le righe «Nella tua lingua» le scrive o le rivede un madrelingua o il mediatore culturale. Un traduttore automatico senza revisione può sbagliare proprio le parole che contano.</li>
+        <li>Alcuni bambini e ragazzi possono reagire con forte paura a un suono improvviso. Non vale per tutti: non date per scontato che un alunno abbia vissuto esperienze difficili. Preparatelo prima, con delicatezza: ditegli che cosa succederà e chi gli starà vicino. Non chiedete racconti sul passato e non fate domande sul suo paese.</li>
+        <li>Se dopo la prova l'alunno resta molto spaventato, parlatene con la famiglia, con l'aiuto del mediatore, e con il dirigente scolastico.</li>
+      </ul>
+    </div>
+
+    <p class="na-credito">Pittogrammi ARASAAC — autore Sergio Palao, Governo d'Aragona, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010. Indicazioni per l'adulto: National Child Traumatic Stress Network, «Understanding Refugee Trauma: For School Personnel» (nctsn.org). Fonti controllate il 19/11/2026.</p>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La sirena a scuola è una prova" · Infanzia, primaria, secondaria I grado · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-restare-al-chiuso" class="pacchetto-scheda" aria-label="Scheda: Quando non si esce: restare al riparo dentro la scuola">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Quando non si esce: restare al riparo dentro la scuola</h1>
+        <div class="scheda-sottotitolo">Primaria (4ª e 5ª) · Secondaria di primo e di secondo grado · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 9-19 anni</span>
+      <span><strong>Durata:</strong> 40 minuti</span>
+      <span><strong>Discipline:</strong> Educazione civica, Scienze, Italiano</span>
+    </div>
+
+    <div class="rc">
+      <p class="scheda-intro">
+        Quando c'è un pericolo pensiamo subito a uscire. A volte però il pericolo è <strong>fuori</strong>, e la cosa più sicura è <strong>restare dentro</strong>. In questa scheda scopri quando succede, che cosa fai tu e chi lo decide.
+      </p>
+
+      <h2 class="scheda-h2">Quando il pericolo è fuori</h2>
+      <ul class="rc-situazioni">
+        <li><strong>Temporale forte, fulmini, grandine</strong>All'aperto, con i fulmini, nessun posto è sicuro. Un edificio sì. Tettoie, pensiline e gazebo non sono un riparo.</li>
+        <li><strong>Fumo di un incendio vicino</strong>La scuola, con le indicazioni dei vigili del fuoco, decide se restare dentro o uscire.</li>
+        <li><strong>Una nube o un odore forte da fuori</strong>Per esempio dopo un incidente in una fabbrica. Al chiuso si respirano meno le sostanze nocive.</li>
+        <li><strong>Un ordine delle autorità</strong>Chi gestisce l'emergenza può chiedere a tutti di restare al chiuso. La scuola lo riceve dai canali ufficiali.</li>
+      </ul>
+
+      <h2 class="scheda-h2">Che cosa fa la classe</h2>
+      <ul class="rc-passi">
+        <li><img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: una persona che ascolta"><span><strong>Resti con la tua classe</strong> e ascolti l'insegnante. Se sei fuori dall'aula, vai dall'adulto più vicino.</span></li>
+        <li><img src="/pittogrammi/arasaac/chiudere-finestra.png" alt="Pittogramma: una finestra che si chiude"><span>Con <strong>fulmini, vento forte o grandine</strong> stai lontano da finestre e porte a vetri, che restano chiuse.</span></li>
+        <li><img src="/pittogrammi/arasaac/chiudere-porta.png" alt="Pittogramma: una porta che si chiude"><span>Con una <strong>nube</strong> o un ordine di restare al chiuso si chiudono porte e finestre. Gli adulti spengono ventilazione e condizionatori. Se senti un odore pungente o ti bruciano gli occhi, dillo subito all'insegnante.</span></li>
+        <li><img src="/pittogrammi/arasaac/aspettare.png" alt="Pittogramma: persone sedute che aspettano"><span><strong>Aspetti il segnale di fine emergenza.</strong> Si esce solo quando lo dice chi coordina l'emergenza.</span></li>
+        <li><span class="rc-senza-img" aria-hidden="true"></span><span>Non mandi messaggi con notizie non verificate: le famiglie le avvisa la scuola.</span></li>
+      </ul>
+      <p class="rc-paura">Se hai paura, è normale. Dillo all'insegnante: anche con la paura puoi seguire questi passi.</p>
+
+      <h2 class="scheda-h2">Chi decide</h2>
+      <div class="rc-chi">
+        <ul>
+          <li><strong>Dentro la scuola</strong> decide chi coordina l'emergenza, come scrive il piano di emergenza: spesso il dirigente scolastico o una persona incaricata.</li>
+          <li><strong>Fuori</strong> decidono le autorità che gestiscono l'emergenza, per esempio il Sindaco o il Prefetto. Possono chiedere di restare al chiuso oppure di allontanarsi.</li>
+          <li><strong>Tu</strong> segui le indicazioni dell'adulto che è con te.</li>
+        </ul>
+      </div>
+
+      <p class="rc-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Restare al riparo dentro la scuola" · Primaria e secondaria · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Prova tu: esco o resto?</div>
+        <div class="scheda-sottotitolo">Restare al riparo dentro la scuola · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="rc">
+      <p>Segna <strong>Esco</strong> o <strong>Resto</strong> e scrivi perché. Puoi anche dirlo a voce o indicare la casella.</p>
+
+      <div class="rc-scenario">
+        <p><strong>A.</strong> Sono le 13.20: fra dieci minuti si esce. Il cielo è nero, si sentono tuoni forti e comincia a grandinare. Alcuni compagni vogliono aspettare i genitori sotto la pensilina del cortile.</p>
+        <div class="rc-scelta"><span><span class="rc-casella"></span>Esco</span><span><span class="rc-casella"></span>Resto</span><span class="rc-perche" aria-label="Spazio per scrivere perché"></span></div>
+      </div>
+
+      <div class="rc-scenario">
+        <p><strong>B.</strong> Suona il segnale di evacuazione della scuola. In corridoio si sente odore di bruciato.</p>
+        <div class="rc-scelta"><span><span class="rc-casella"></span>Esco</span><span><span class="rc-casella"></span>Resto</span><span class="rc-perche" aria-label="Spazio per scrivere perché"></span></div>
+      </div>
+
+      <div class="rc-scenario">
+        <p><strong>C.</strong> Dalla finestra vedi del fumo lontano, verso la campagna. Non suona nessun allarme. L'insegnante dice che il dirigente ha deciso di restare in classe.</p>
+        <div class="rc-scelta"><span><span class="rc-casella"></span>Esco</span><span><span class="rc-casella"></span>Resto</span><span class="rc-perche" aria-label="Spazio per scrivere perché"></span></div>
+      </div>
+
+      <div class="rc-scenario">
+        <p><strong>D.</strong> Da fuori arriva un odore forte e strano. Il dirigente annuncia che le autorità chiedono di restare al chiuso.</p>
+        <div class="rc-scelta"><span><span class="rc-casella"></span>Esco</span><span><span class="rc-casella"></span>Resto</span><span class="rc-perche" aria-label="Spazio per scrivere perché"></span></div>
+      </div>
+
+      <div class="rc-scenario rc-scelta">
+        <span style="font-weight:400;color:#212529"><strong>E.</strong> Nella tua scuola chi decide se restare dentro? Chiedilo all'insegnante.</span><span class="rc-perche" aria-label="Spazio per scrivere la risposta"></span>
+      </div>
+
+      <div class="rc-famiglie avvertenza">
+        <strong>Per le famiglie.</strong> Se la scuola tiene i ragazzi al riparo, non correre a prenderli in auto. Con il temporale l'asfalto è scivoloso e si vede poco, con una nube stare in strada vuol dire respirarla, e le strade servono ai soccorsi. I ragazzi sono al chiuso con i loro insegnanti. Aspetta le comunicazioni della scuola o delle autorità, che diranno quando e dove riprenderli, e non telefonare alla scuola. Se vedi un pericolo, chiama il <strong>112</strong>.
+      </div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> <strong>Educazione civica</strong> (Linee guida, D.M. 183/2024). Primaria e secondaria di primo grado: nucleo «Costituzione», traguardo n. 3; nucleo «Sviluppo economico e sostenibilità», traguardo n. 6. Secondaria di secondo grado: nucleo «Costituzione», competenza n. 3; nucleo «Sviluppo economico e sostenibilità», competenza n. 6.</p>
+        <p><strong>Tempi:</strong> 10 minuti per il foglio 1, 15 per gli scenari a coppie, 15 di confronto. <strong>Materiali:</strong> la scheda e, se c'è, la parte del piano della scuola sui pericoli esterni.</p>
+        <p><strong>Prima della lezione</strong> chiedi al dirigente o al responsabile della sicurezza che cosa prevede il vostro piano per restare al chiuso: se è diverso, vale il piano. In primaria leggi tu ad alta voce. Fonti: Dipartimento della Protezione Civile, «Sei preparato?» (rischio meteo-idro e industriale) e «Io non rischio». Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini: in emergenza si chiama il 112.</p>
+      </div>
+
+      <div class="soluzione-capovolta">
+        <span class="titolo">Soluzioni per il docente (gira il foglio)</span>
+        <strong>A. Resto.</strong> Con fulmini e grandine si sta dentro, lontano dalle finestre: la pensilina non è un riparo. Si esce quando lo decide la scuola; la Protezione Civile consiglia di aspettare almeno 30 minuti dopo l'ultimo tuono.
+        <strong>B. Esco.</strong> Il pericolo è dentro: si segue il piano di evacuazione, in fila con l'insegnante.
+        <strong>C. Resto.</strong> Decide la scuola, con le indicazioni dei vigili del fuoco; se la situazione cambia, l'insegnante lo dice.
+        <strong>D. Resto.</strong> Porte e finestre chiuse, ventilazione spenta dagli adulti; si esce solo dopo il segnale di fine emergenza.
+        <strong>E.</strong> Lo indica il piano di emergenza. Le soluzioni valgono per questi esempi: nella vostra scuola conta il piano.
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Restare al riparo dentro la scuola" · Primaria e secondaria · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-debriefing-prova-evacuazione" class="pacchetto-scheda" aria-label="Scheda: Dopo la prova di evacuazione: 10 minuti per capire come è andata">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Dopo la prova di evacuazione: 10 minuti per capire come è andata</h1>
+        <div class="scheda-sottotitolo">Primaria · Secondaria di primo e di secondo grado · Foglio 1 di 2 (per la classe)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Classe:</strong> <span class="db-linea"></span></span>
+      <span><strong>Data della prova:</strong> <span class="db-linea"></span></span>
+      <span><strong>Durata:</strong> 10 minuti, più 5 per il modulo</span>
+    </div>
+
+    <div class="db">
+      <p class="scheda-intro">
+        La prova è finita e siete di nuovo in classe. Adesso, finché il ricordo è fresco, guardate insieme che cosa ha fatto la classe. <strong>Non è un voto a nessuno:</strong> serve a preparare meglio la prossima prova. Le norme sulle scuole ne chiedono almeno due l'anno.
+      </p>
+
+      <table class="db-griglia">
+        <caption>1. La griglia della classe: segnate una casella per ogni riga</caption>
+        <thead>
+          <tr><th scope="col">Che cosa abbiamo fatto</th><th scope="col">Sì</th><th scope="col">In parte</th><th scope="col">No</th><th scope="col">Note</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Abbiamo sentito tutti il segnale, anche chi era in fondo all'aula?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Abbiamo lasciato zaini e oggetti in classe?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Aprifila e chiudifila hanno fatto il loro compito?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Siamo usciti in fila, senza correre e senza spingere?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Il percorso e l'uscita erano liberi da ostacoli?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Chi era fuori dall'aula (bagno, laboratorio, corridoio) ha fatto ciò che prevede il piano della scuola? Lo sapevamo?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Chi aveva bisogno di aiuto lo ha ricevuto, come previsto?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td><img class="db-pitto" src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Segnale di sicurezza: punto di raccolta">Siamo arrivati al nostro punto di raccolta?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>All'appello c'erano tutti i presenti di oggi?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+          <tr><td>Abbiamo aspettato il segnale di fine prova prima di rientrare?</td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-c"><span class="db-casella"></span></td><td class="db-note"></td></tr>
+        </tbody>
+      </table>
+
+      <div class="db-tempi">
+        <span><strong>Ora del segnale:</strong> <span class="db-linea"></span></span>
+        <span><strong>Ora di arrivo al punto di raccolta:</strong> <span class="db-linea"></span></span>
+        <span><strong>Minuti:</strong> <span class="db-linea"></span></span>
+      </div>
+      <p>Il tempo non è un voto: serve a confrontare questa prova con la prossima.</p>
+
+      <h2 class="scheda-h2">2. Una cosa che ha funzionato, una da cambiare (scrivete, disegnate o ditela a voce)</h2>
+      <div class="db-due">
+        <div class="db-box"><strong>Ha funzionato:</strong></div>
+        <div class="db-box"><strong>Alla prossima prova cambiamo:</strong></div>
+      </div>
+
+      <p class="db-nota">Durante una prova si può avere paura, agitarsi, ridere per il nervoso. È normale e non è un errore: nella griglia non entra. Se qualcosa vi ha spaventato, ditelo all'insegnante.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Dopo la prova di evacuazione" · Primaria e secondaria · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Per il docente e per il referente della sicurezza</div>
+        <div class="scheda-sottotitolo">Dopo la prova di evacuazione · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="db">
+      <h2 class="scheda-h2">Domande guida (10 minuti)</h2>
+      <ol class="db-domande">
+        <li><strong>1 minuto.</strong> «Com'è andata? Una parola a testa, per chi vuole.» Si ascolta, non si commenta.</li>
+        <li><strong>4 minuti.</strong> Leggete la griglia riga per riga. La classe risponde per alzata di mano o con il pollice: su, a metà, giù.</li>
+        <li><strong>3 minuti.</strong> «Che cosa abbiamo fatto senza pensarci? In che punto ci siamo fermati, e perché?»</li>
+        <li><strong>2 minuti.</strong> «Che cosa cambieremmo? A chi lo diciamo?» Da qui nasce il modulo qui sotto.</li>
+      </ol>
+      <p>Parla di ciò che la classe ha fatto, non di singoli alunni. Se qualcuno si è spaventato, riconosci l'emozione e ricorda che cosa si può fare anche con la paura. Non chiedere di raccontare esperienze personali di emergenze vere.</p>
+
+      <div class="db-modulo">
+        <h2 class="scheda-h2" style="margin-top:0">Segnalazione per il referente della sicurezza (RSPP o ASPP)</h2>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Scuola e plesso:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Classe e data della prova:</span><span class="scheda-campo-linea"></span></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Che cosa abbiamo notato (luoghi, porte, segnale, cartelli, percorso):</span></div>
+        <div class="scheda-righe"></div>
+        <div class="scheda-righe"></div>
+        <div class="scheda-campi-riga"><span class="scheda-campo-label">Che cosa proponiamo:</span></div>
+        <div class="scheda-righe"></div>
+        <div class="scheda-righe"></div>
+        <p style="font-size:0.82rem">Non scrivete nomi di compagni né informazioni sulla salute di nessuno.</p>
+        <div class="db-firme">
+          <div><span>Rappresentante della classe</span></div>
+          <div><span>Rappresentante della classe</span></div>
+          <div><span>Docente che consegna</span></div>
+        </div>
+      </div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il docente.</strong> <strong>Obiettivi di Educazione civica</strong> (Linee guida, D.M. 183/2024):</p>
+        <ul>
+          <li>primaria e secondaria di primo grado: nucleo «Costituzione», traguardo n. 3 (conoscere i fattori di rischio dell'ambiente scolastico e contribuire a definire comportamenti di prevenzione);</li>
+          <li>secondaria di secondo grado: nucleo «Costituzione», competenza n. 3 (partecipare alla gestione della sicurezza a scuola, nelle forme previste dall'istituto).</li>
+        </ul>
+        <p><strong>Tempi:</strong> 10 minuti subito dopo la prova, più 5 per il modulo. <strong>Materiali:</strong> la scheda, un orologio, la planimetria esposta in aula.</p>
+        <p>Le prove di evacuazione si fanno almeno due volte nel corso dell'anno scolastico (D.M. 26 agosto 1992, punto 12.0). La griglia è uno strumento di classe, non una valutazione individuale né periodica: guarda azioni che si vedono, mai le emozioni. In primaria leggi tu le righe; dove non ci sono rappresentanti degli studenti, la classe sceglie due compagni. Se un alunno ha un supporto previsto dal piano, osserva se ha funzionato senza nominarlo. Consegna il modulo al referente della sicurezza o al dirigente.</p>
+        <p class="avvertenza"><strong>Avvertenza.</strong> La scheda aiuta a parlare della prova: non sostituisce il verbale né il piano di emergenza, che restano compito del dirigente e del servizio di prevenzione e protezione. Segnale «punto di raccolta» secondo ISO 7010.</p>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Dopo la prova di evacuazione" · Primaria e secondaria · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-il-giorno-dopo-docente" class="pacchetto-scheda" aria-label="Scheda: Il giorno dopo una scossa o un'allerta">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il giorno dopo una scossa o un'allerta</h1>
+        <div class="scheda-sottotitolo">10 minuti per la classe — scheda per il docente</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Per:</strong> docenti di infanzia, primaria e secondaria di primo grado</span>
+      <span><strong>Durata:</strong> 10 minuti, a inizio giornata</span>
+    </div>
+
+    <p class="scheda-intro">
+      Di notte c'è stata una scossa che si è sentita, oppure un temporale forte con un'allerta. La mattina la classe arriva agitata e piena di voci. Bastano dieci minuti per dare spazio a domande ed emozioni, dire cose vere e poi tornare alle attività di sempre. Non serve essere psicologi: serve ascoltare, non promettere ciò che nessuno può garantire e indicare dove si trovano le notizie giuste.
+    </p>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Il punto di partenza.</strong> Paura, agitazione, domande ripetute, mal di pancia o sonno disturbato sono reazioni comuni dopo un evento che spaventa. Non sono un capriccio e non vanno corrette: si accolgono. Di solito diminuiscono con la routine, il riposo e la vicinanza di adulti di fiducia.
+    </div>
+
+    <div class="gd-tempi" aria-label="Come dividere i dieci minuti">
+      <div><strong>2 minuti</strong>Dite che cosa è successo, con parole semplici.</div>
+      <div><strong>4 minuti</strong>Tre domande aperte: chi vuole parla.</div>
+      <div><strong>2 minuti</strong>Le voci sentite: dove si controllano.</div>
+      <div><strong>2 minuti</strong>Un minuto di respiro, poi si riparte.</div>
+    </div>
+
+    <h2 class="scheda-h2">1. Tre domande aperte</h2>
+    <ol class="gd-domande">
+      <li>«Che cosa avete sentito dire su quello che è successo?»
+        <span class="gd-perche">Fa emergere le voci da controllare insieme al punto 3.</span></li>
+      <li>«Che cosa vorreste sapere? Che domande avete?»
+        <span class="gd-perche">Rispondete solo con ciò che sapete. Se non sapete, ditelo e cercate la risposta con la classe.</span></li>
+      <li>«Che cosa vi aiuta quando siete preoccupati?»
+        <span class="gd-perche">Sposta l'attenzione su ciò che ciascuno può fare: parlare con un adulto, stare vicino a qualcuno, un gioco tranquillo.</span></li>
+    </ol>
+    <p class="gd-eta">
+      <strong>Regola per tutti:</strong> chi vuole parla, chi vuole ascolta. Nessuno è obbligato a raccontare e non si chiedono dettagli su ciò che ha visto o provato. Lasciate spazio anche al silenzio.<br>
+      <strong>Infanzia:</strong> una domanda sola, in cerchio; si può rispondere con un disegno o indicando un'immagine.
+      <strong>Secondaria:</strong> aggiungete «Dove avete letto o visto queste notizie?».
+    </p>
+
+    <h2 class="scheda-h2">2. Che cosa dire, che cosa evitare</h2>
+    <table class="gd-tabella">
+      <caption class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Frasi da usare e frasi da evitare con la classe</caption>
+      <thead>
+        <tr><th scope="col">Da dire</th><th scope="col">Da evitare, e perché</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>«È normale essere spaventati dopo una scossa. Succede anche a tanti adulti.»</td>
+          <td>«Non devi avere paura», «Devi essere forte». <em>La paura non si spegne con un ordine: chi la prova si sente sbagliato.</em></td>
+        </tr>
+        <tr>
+          <td>«Non sappiamo quando ci sarà un'altra scossa. Sappiamo che cosa fare, e a scuola lo proviamo.»</td>
+          <td>«Non succederà più», «Qui non succede niente». <em>Nessuno può prometterlo: i terremoti non si possono prevedere.</em></td>
+        </tr>
+        <tr>
+          <td>«L'allerta serve a prepararsi. Gli adulti la seguono e sanno che cosa fare.»</td>
+          <td>«Poteva andare peggio». <em>Non consola: toglie valore a ciò che il bambino ha provato.</em></td>
+        </tr>
+        <tr>
+          <td>«Se la paura torna, puoi dirlo a me o a un adulto di cui ti fidi.»</td>
+          <td>Particolari spaventosi, video o foto dell'evento in classe. <em>Aumentano la paura, soprattutto nei più piccoli.</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="scheda-h2">3. Una voce falsa? Si controlla alla fonte</h2>
+    <p class="gd-nota">
+      Una voce non si ripete e non si deride: si ascolta per intero e poi ci si chiede chi l'ha detta e dove si può controllare. Con la secondaria il controllo si può fare insieme, alla LIM. Un esempio frequente: «Stanotte arriva una scossa più forte». Nessuno può saperlo: per il Dipartimento della Protezione Civile non è possibile prevedere i terremoti, e chi annuncia giorno e ora non ha una fonte.
+    </p>
+    <table class="gd-tabella">
+      <caption class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Dove si controllano le notizie</caption>
+      <thead>
+        <tr><th scope="col">Che cosa si vuole sapere</th><th scope="col">Dove si controlla</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Se c'è stata una scossa, dove e di che magnitudo</td>
+          <td>Istituto Nazionale di Geofisica e Vulcanologia (INGV): <strong>terremoti.ingv.it</strong></td>
+        </tr>
+        <tr>
+          <td>Se c'è un'allerta meteo, di che colore, fino a quando</td>
+          <td>Centro Funzionale Regionale del Lazio: <strong>regione.lazio.it/protezione-civile/bollettini-allertamenti</strong></td>
+        </tr>
+        <tr>
+          <td>Se le scuole sono aperte o chiuse</td>
+          <td>Comune di Genzano di Roma, ordinanze: <strong>comune.genzanodiroma.roma.it</strong>, e le comunicazioni ufficiali della vostra scuola</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="scheda-h2">4. Un minuto di respiro</h2>
+    <p class="gd-nota">
+      <strong>Infanzia — il palloncino.</strong> Una mano sulla pancia. Aria dentro dal naso: la pancia si gonfia come un palloncino. Poi si soffia piano dalla bocca, come per spegnere una candela lontana. Tre volte.<br>
+      <strong>Primaria e secondaria.</strong> Seduti, piedi a terra. Aria dentro dal naso contando fino a 4, fuori dalla bocca contando fino a 6. Cinque volte, senza fretta.<br>
+      È una proposta, non un obbligo: chi non vuole resta fermo. Se a qualcuno gira la testa, smette e respira come sempre. Provatelo prima voi. È un'attività di calma, non una terapia (versione per i bambini: scheda 57 del Kit calamità bambini).
+    </p>
+
+    <h2 class="scheda-h2">5. Quando parlarne con la famiglia e con il dirigente</h2>
+    <p class="gd-nota">
+      Nei giorni seguenti osservate. Parlatene con la famiglia, in privato, e informate il dirigente scolastico se un alunno:
+    </p>
+    <ul class="scheda-elenco">
+      <li>resta molto spaventato per settimane, senza miglioramenti;</li>
+      <li>non riesce più a stare in classe, a concentrarsi o a separarsi dai genitori;</li>
+      <li>ha incubi o problemi di sonno che la famiglia vi riferisce, o evita in continuazione luoghi e situazioni;</li>
+      <li>si isola, o ha scatti di rabbia nuovi e forti.</li>
+    </ul>
+    <p class="gd-nota">
+      Il docente osserva e segnala, non fa diagnosi. Alla famiglia si indicano il pediatra o il medico di famiglia, lo psicologo scolastico dove c'è e i servizi della ASL Roma 6.
+    </p>
+    <div class="gd-allarme">
+      <strong>Pericolo immediato.</strong> Se un alunno dice di volersi fare del male, o è in pericolo, chiamate subito il <strong>112</strong> e avvisate il dirigente.
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Avvertenze per il docente.</strong> Queste indicazioni non sostituiscono psicologi, medici e servizi sanitari. Il Gruppo Comunale Volontari di Protezione Civile non offre supporto psicologico. Se in classe c'è un alunno la cui famiglia ha avuto danni, feriti o lutti, non usate la scheda con tutta la classe prima di averne parlato con la famiglia e con il dirigente. Dopo i dieci minuti tornate alle attività previste: anche la routine aiuta.
+    </div>
+
+    <p class="gd-fonti">
+      Fonti: Organizzazione Mondiale della Sanità, <em>Psychological first aid: guide for field workers</em> (2011): non insistere perché una persona racconti, niente false promesse o rassicurazioni. Dipartimento della Protezione Civile, «Rischio sismico. Le attività» (rischi.protezionecivile.gov.it): non è possibile prevedere i terremoti. Pagina «Psicologia dell'emergenza» di protezionecivilegenzano.it (reazioni comuni, quando chiedere aiuto, a scuola). Esercizio di respiro dalla scheda 57 del Kit calamità bambini. Fonti controllate il 19/11/2026.
+    </p>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Il giorno dopo" · Docenti infanzia, primaria, secondaria I grado · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-patto-corresponsabilita-emergenze" class="pacchetto-scheda" aria-label="Scheda: Se a scuola scatta un'emergenza">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Se a scuola scatta un'emergenza</h1>
+        <div class="scheda-sottotitolo">Cosa fa la scuola, cosa fate voi: foglio da allegare al Patto di corresponsabilità</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Per:</strong> le famiglie, dall'infanzia alla secondaria</span>
+      <span><strong>Lettura:</strong> 5 minuti</span>
+      <span><strong>Gli spazi bianchi:</strong> li compila la scuola</span>
+    </div>
+
+    <p class="scheda-intro">
+      Un'emergenza a scuola spaventa, i genitori per primi. Qui trovate che cosa succede e che cosa vi chiediamo di fare. Tenete il foglio a casa, vicino ai numeri utili.
+    </p>
+
+    <div class="pc-due">
+      <section class="pc-col" aria-labelledby="pc-scuola">
+        <h2 id="pc-scuola">Cosa fa la scuola</h2>
+        <ul>
+          <li>Ha un <strong>piano di emergenza</strong>: chi coordina, da dove escono le classi, dove si ritrovano, come si avvisano le famiglie.</li>
+          <li>Fa le <strong>prove di evacuazione</strong> almeno due volte nel corso dell'anno scolastico.</li>
+          <li>In emergenza i vostri figli <strong>restano con i docenti</strong>, al punto di raccolta, finché la scuola o le autorità danno indicazioni.</li>
+          <li>Riconsegna i figli <strong>solo ai genitori o alle persone delegate</strong>, secondo le regole della scuola.</li>
+          <li>Vi avvisa con il <strong>canale ufficiale</strong> scritto in fondo al foglio.</li>
+        </ul>
+      </section>
+      <section class="pc-col pc-voi" aria-labelledby="pc-voi">
+        <h2 id="pc-voi">Cosa fate voi</h2>
+        <ul>
+          <li>Tenete aggiornati in segreteria i <strong>numeri di telefono</strong> e i nomi delle <strong>persone delegate</strong>.</li>
+          <li><strong>Non correte a scuola in auto.</strong> Le auto davanti ai cancelli bloccano la strada ai mezzi di soccorso.</li>
+          <li><strong>Non telefonate alla scuola</strong>: le linee servono a chi coordina l'emergenza.</li>
+          <li><strong>Aspettate il messaggio della scuola</strong>: vi dirà dove e quando riprendere i figli. Al ritiro portate il documento che la scuola vi chiede.</li>
+          <li>Se vedete un pericolo, chiamate il <strong>112</strong>.</li>
+        </ul>
+      </section>
+    </div>
+
+    <h2 class="scheda-h2">Scuole chiuse per neve o maltempo</h2>
+    <p class="pc-blocco">
+      Le decide il <strong>Sindaco</strong>, con un'<strong>ordinanza</strong>: un'allerta meteo, da sola, non chiude le scuole. A Genzano di Roma l'ordinanza si legge sul sito istituzionale del Comune (comune.genzanodiroma.roma.it); anche la scuola avvisa con i suoi canali. Per un messaggio girato in chat, controllate data e Comune sul sito del Comune.
+    </p>
+    <p class="pc-blocco">
+      <strong>IT-alert</strong>, il sistema nazionale di allarme pubblico, manda un messaggio ai telefoni della zona per alcuni pericoli gravi, senza app né iscrizione. Non si usa per le allerte meteo né per le chiusure delle scuole. Se lo ricevete, seguite le indicazioni.
+    </p>
+
+    <h2 class="scheda-h2">Da compilare a cura della scuola</h2>
+    <div class="pc-campi">
+      <div class="pc-campo"><span class="pc-et">Scuola e plesso</span></div>
+      <div class="pc-campo"><span class="pc-et">Punto di raccolta della classe</span></div>
+      <div class="pc-campo"><span class="pc-et">Dove e come avviene il ritiro in emergenza</span></div>
+      <div class="pc-campo"><span class="pc-et">Canale ufficiale delle comunicazioni <span class="pc-sub">(registro elettronico, sito della scuola…)</span></span></div>
+      <div class="pc-campo"><span class="pc-et">Recapito della segreteria <span class="pc-sub">(per le domande, non durante l'emergenza)</span></span></div>
+      <div class="pc-campo"><span class="pc-et">Data di consegna alle famiglie</span></div>
+    </div>
+
+    <div class="pc-avvertenza">
+      <strong>Da sapere:</strong> questo foglio non sostituisce il piano di emergenza della scuola: se qualcosa non coincide, vale il piano. In pericolo chiamate il <strong>112</strong>.
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la scuola:</strong>
+      <ul>
+        <li>Compilate gli spazi bianchi con i dati del piano di emergenza, d'accordo con il dirigente e l'RSPP. Ricontrollateli a ogni inizio d'anno.</li>
+        <li>Il Patto educativo di corresponsabilità è previsto per la secondaria dal D.P.R. 249/1998, art. 5-bis (inserito dal D.P.R. 235/2007); nell'infanzia e nella primaria il foglio si consegna con i documenti di inizio anno. Le due prove l'anno sono previste dal D.M. 26 agosto 1992, punto 12.0.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Se a scuola scatta un'emergenza" · Famiglie, tutti gli ordini · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-assemblea-genitori-emergenze" class="pacchetto-scheda" aria-label="Scheda: Assemblea di classe di inizio anno: le emergenze a scuola">
+  <article class="scheda-page ag-schermo">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Assemblea di classe di inizio anno: le emergenze a scuola</h1>
+      </div>
+      <div class="ag-numero">1 di 4</div>
+    </header>
+
+    <h2 class="ag-titolo">La scuola ha un piano e fa le prove</h2>
+    <ul class="ag-punti">
+      <li>Il <strong>piano di emergenza</strong> dice chi coordina, da dove escono le classi e dove si ritrovano.</li>
+      <li>Le <strong>prove di evacuazione</strong> si fanno almeno due volte nel corso dell'anno scolastico.</li>
+      <li>Dopo una prova, chiedete ai vostri figli com'è andata: raccontarla aiuta a ricordarla.</li>
+    </ul>
+    <div class="ag-riquadro"><strong>Punto di raccolta della nostra classe:</strong> <span class="ag-riga"></span></div>
+
+    <div class="ag-note">
+      <strong>Per chi presenta:</strong> scrivete prima il punto di raccolta, preso dal piano della scuola. Le prove «almeno due volte nel corso dell'anno scolastico» sono previste dal D.M. 26 agosto 1992, punto 12.0. Tempo: circa 3 minuti.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Assemblea di classe: le emergenze" · Famiglie, tutti gli ordini · rev. 2026</span>
+    </footer>
+  </article>
+  <article class="scheda-page ag-schermo">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale">Assemblea di classe: le emergenze a scuola</div>
+      </div>
+      <div class="ag-numero">2 di 4</div>
+    </header>
+
+    <h2 class="ag-titolo">Se succede qualcosa durante l'orario</h2>
+    <ul class="ag-punti">
+      <li>I vostri figli <strong>restano con i docenti</strong>, che sanno cosa fare.</li>
+      <li><strong>Non correte a scuola in auto.</strong> Le auto davanti ai cancelli bloccano la strada ai soccorsi.</li>
+      <li><strong>Non telefonate alla scuola</strong>: le linee servono a chi coordina.</li>
+      <li><strong>Aspettate il messaggio della scuola</strong>: vi dirà dove e quando riprendere i figli.</li>
+      <li>Se vedete un pericolo, chiamate il <span class="ag-112">112</span>.</li>
+    </ul>
+
+    <div class="ag-note">
+      <strong>Per chi presenta:</strong> è la schermata più importante. Il primo impulso di tutti è correre a scuola: spiegate che i figli sono più al sicuro con i docenti, al punto di raccolta, che in mezzo al traffico. Tempo: circa 4 minuti.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Assemblea di classe: le emergenze" · Famiglie, tutti gli ordini · rev. 2026</span>
+    </footer>
+  </article>
+  <article class="scheda-page ag-schermo">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale">Assemblea di classe: le emergenze a scuola</div>
+      </div>
+      <div class="ag-numero">3 di 4</div>
+    </header>
+
+    <h2 class="ag-titolo">Il ritiro dei figli e le chiusure</h2>
+    <ul class="ag-punti">
+      <li>La scuola riconsegna i figli <strong>solo ai genitori o alle persone delegate</strong>, secondo le sue regole.</li>
+      <li>Tenete aggiornati in segreteria <strong>numeri di telefono</strong> e <strong>deleghe</strong>.</li>
+      <li>Le scuole chiuse per neve o maltempo le decide il <strong>Sindaco</strong>, con un'ordinanza. Si legge sul <strong>sito del Comune</strong>.</li>
+      <li>Un messaggio in chat non basta: controllate data e Comune.</li>
+    </ul>
+    <div class="ag-riquadro"><strong>Canale ufficiale della scuola per le famiglie:</strong> <span class="ag-riga"></span></div>
+
+    <div class="ag-note">
+      <strong>Per chi presenta:</strong> scrivete prima il canale ufficiale della scuola (registro elettronico, sito). A Genzano di Roma l'ordinanza è sul sito istituzionale del Comune (comune.genzanodiroma.roma.it). Un'allerta meteo, da sola, non chiude le scuole. Tempo: circa 4 minuti.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Assemblea di classe: le emergenze" · Famiglie, tutti gli ordini · rev. 2026</span>
+    </footer>
+  </article>
+  <article class="scheda-page ag-schermo">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale">Assemblea di classe: le emergenze a scuola</div>
+      </div>
+      <div class="ag-numero">4 di 4</div>
+    </header>
+
+    <h2 class="ag-titolo">A casa: il piano di emergenza familiare</h2>
+    <ul class="ag-punti">
+      <li><strong>Dove ci troviamo?</strong> Un punto di ritrovo vicino casa e uno più lontano.</li>
+      <li><strong>Chi chiamiamo?</strong> Un contatto che vive fuori zona.</li>
+      <li><strong>Cosa portiamo?</strong> Il kit di emergenza, i documenti, i farmaci.</li>
+      <li><strong>Chi ha bisogno di aiuto?</strong> Bambini, anziani, persone con disabilità, animali.</li>
+      <li><strong>Cosa facciamo prima di uscire?</strong> Gas, acqua e corrente, solo se si può fare in sicurezza.</li>
+    </ul>
+    <div class="ag-riquadro">Si compila insieme in famiglia: <strong>protezionecivilegenzano.it/piano-familiare/</strong> · In emergenza: <span class="ag-112">112</span></div>
+
+    <div class="ag-note">
+      <strong>Per chi presenta:</strong> chiudete invitando a compilare il piano a casa e ad aggiornarlo almeno una volta l'anno, o quando cambiano scuola, numeri o bisogni. Il 112 è l'unico numero da ricordare. Tempo: circa 3 minuti.
+    </div>
+    <p class="ag-avvertenza">Queste schermate riassumono indicazioni generali e non sostituiscono il piano di emergenza della scuola: se qualcosa non coincide, vale il piano della scuola.</p>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Assemblea di classe: le emergenze" · Famiglie, tutti gli ordini · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-evacuazione-personalizzata-pei" class="pacchetto-scheda" aria-label="Scheda: Scheda di evacuazione personalizzata">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Scheda di evacuazione personalizzata</h1>
+        <div class="scheda-sottotitolo">Da compilare insieme: docente di sostegno, famiglia e, se possibile, l'alunna o l'alunno</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Per:</strong> tutti gli ordini</span>
+      <span><strong>Tempo:</strong> 30-45 minuti</span>
+      <span><strong>Revisione:</strong> almeno una volta l'anno</span>
+    </div>
+
+    <p class="scheda-intro">
+      Chi aiuta deve capire in pochi secondi come muoversi e come parlarsi. Scrivete solo ciò che serve per uscire in sicurezza, con parole semplici, e chiedete all'alunna o all'alunno che cosa preferisce.
+    </p>
+
+    <table class="ep-tab">
+      <tr><th scope="row">Nome, classe e plesso</th><td></td></tr>
+    </table>
+
+    <h2 class="ep-h2">1. Come si sposta</h2>
+    <table class="ep-tab">
+      <tr><th scope="row">Ausili che usa</th><td class="ep-scelte"><span class="ep-box"></span>nessuno <span class="ep-box"></span>carrozzina <span class="ep-box"></span>deambulatore o bastone <span class="ep-box"></span>altro: ______________</td></tr>
+      <tr><th scope="row">Le scale<span>in caso di incendio o terremoto non si usa l'ascensore</span></th><td class="ep-scelte"><span class="ep-box"></span>le fa da solo/a <span class="ep-box"></span>con aiuto <span class="ep-box"></span>non le può fare: dove attende e chi resta con lui/lei, come prevede il piano della scuola: ______________</td></tr>
+    </table>
+
+    <h2 class="ep-h2">2. Chi accompagna</h2>
+    <table class="ep-tab">
+      <tr><th scope="row" class="ep-stretta">Chi lo/la accompagna fuori</th><td></td><th scope="row" class="ep-stretta">Chi lo/la sostituisce se è assente</th><td></td></tr>
+    </table>
+
+    <h2 class="ep-h2">3. Come comunicare</h2>
+    <table class="ep-tab">
+      <tr><th scope="row">Come capisce che c'è l'allarme<span>se non sente la sirena: chi lo/la avvisa e come</span></th><td></td></tr>
+      <tr><th scope="row">Modo di comunicare</th><td class="ep-scelte"><span class="ep-box"></span>parole semplici <span class="ep-box"></span>segnale concordato: __________ <span class="ep-box"></span>pittogrammi o tabella di comunicazione <span class="ep-box"></span>lingua dei segni (LIS) <span class="ep-box"></span>altro: __________</td></tr>
+    </table>
+
+    <div class="ep-due">
+      <table class="ep-tab">
+        <tr><th scope="col">4. Cosa lo/la può mettere in difficoltà<span>per esempio il rumore della sirena, la folla, un contatto improvviso</span></th></tr>
+        <tr><td></td></tr>
+      </table>
+      <table class="ep-tab">
+        <tr><th scope="col">Cosa lo/la aiuta<span>per esempio cuffie, una persona nota, un oggetto, sapere prima cosa succede</span></th></tr>
+        <tr><td></td></tr>
+      </table>
+    </div>
+
+    <h2 class="ep-h2">5. Farmaci da portare fuori <span class="ep-nota-h">(promemoria di ciò che famiglia, scuola e medico hanno già concordato)</span></h2>
+    <table class="ep-tab">
+      <tr><th scope="row" class="ep-stretta">Quale farmaco e dove si trova</th><td></td><th scope="row" class="ep-stretta">Chi lo prende e lo porta fuori</th><td></td></tr>
+    </table>
+
+    <h2 class="ep-h2">6. Percorso e punto di raccolta</h2>
+    <table class="ep-tab">
+      <tr><th scope="row" class="ep-stretta">Uscita da usare e percorso</th><td></td><th scope="row" class="ep-stretta">Punto di raccolta</th><td></td></tr>
+    </table>
+
+    <h2 class="ep-h2">7. Firme e revisione</h2>
+    <div class="ep-firme">
+      <div>Docente di sostegno</div>
+      <div>Genitori o tutore</div>
+      <div>Coordinatore dell'emergenza (presa visione)</div>
+      <div>Alunna o alunno, se lo desidera</div>
+      <div>Data di compilazione</div>
+      <div>Prossima revisione entro il</div>
+    </div>
+
+    <div class="ep-avvertenza">
+      <strong>Per l'adulto che compila:</strong>
+      <ul>
+        <li>Non sostituisce il piano di emergenza della scuola né il PEI (D.Lgs. 66/2017, art. 7; modelli nazionali del D.I. 182/2020, modificato dal D.I. 153/2023). Va condivisa con il coordinatore dell'emergenza e provata nelle esercitazioni.</li>
+        <li>Contiene dati relativi alla salute, «categorie particolari» per il Regolamento (UE) 2016/679, art. 9: conservatela con la documentazione riservata e mostratela solo a chi deve aiutare in emergenza.</li>
+        <li>Non dà indicazioni cliniche: per farmaci e terapie valgono le decisioni del medico e gli accordi già presi con la scuola.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Evacuazione personalizzata" · Tutti gli ordini · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-scheda-personale-ata" class="pacchetto-scheda" aria-label="Scheda: Prova o emergenza: la scheda per collaboratori scolastici, mensa e pre/post-scuola">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Prova o emergenza: la scheda per collaboratori scolastici, mensa e pre/post-scuola</h1>
+        <div class="scheda-sottotitolo">Per adulti · Tutti gli ordini di scuola · Foglio 1 di 2</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Per chi:</strong> collaboratori scolastici, personale della mensa, educatori del pre e post-scuola</span>
+      <span><strong>Tempo:</strong> 15 minuti per compilarla, con il referente della sicurezza</span>
+    </div>
+
+    <div class="ata">
+      <p class="scheda-intro">
+        In una prova o in un'emergenza vera anche chi non sta in classe ha un ruolo. <strong>I compiti li stabilisce il piano di emergenza della tua scuola, non questa scheda.</strong> Qui scrivi i tuoi, così li hai sotto mano, e trovi i compiti che il piano può darti.
+      </p>
+
+      <div class="ata-avvertenza avvertenza">
+        <strong>Prima di tutto.</strong> Questa scheda non sostituisce il piano di emergenza né la formazione. Gli addetti all'emergenza li designa il dirigente scolastico e devono essere formati (D.Lgs. 81/2008, artt. 18 e 43). Se un compito non ti è stato assegnato, non improvvisarlo: chiedi al referente della sicurezza.
+      </div>
+
+      <h2 class="scheda-h2">1. Le mie informazioni</h2>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Plesso e piano dove lavoro:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Il mio compito in caso di emergenza:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-righe"></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi mi sostituisce quando sono assente:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Chi coordina l'emergenza:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Come lo avviso (interno o telefono):</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Come suona il segnale di evacuazione:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Come suona il segnale di fine emergenza:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Se il piano lo prevede, come si annuncia il «restare al chiuso»:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Dove sono le chiavi di cancelli e uscite:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Dove sono il quadro elettrico generale e la valvola del gas:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Dove sta l'elenco dei presenti in mensa e nel pre/post-scuola:</span><span class="scheda-campo-linea"></span></div>
+      <div class="scheda-campi-riga"><span class="scheda-campo-label">Il mio punto di raccolta:</span><span class="scheda-campo-linea"></span></div>
+      <p style="font-size:0.85rem">Non scrivere qui dati sulla salute di alunni o colleghi: chi ha bisogno di aiuto e come aiutarlo lo indica il piano, che è riservato.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda per il personale ATA · Tutti gli ordini · rev. 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">I compiti che il piano può darti</div>
+        <div class="scheda-sottotitolo">Scheda per il personale ATA · Foglio 2 di 2</div>
+      </div>
+    </header>
+
+    <div class="ata">
+      <h2 class="scheda-h2">2. Solo se il piano te lo assegna</h2>
+      <ul class="ata-compiti">
+        <li><span class="ata-se">Se è il tuo compito</span><strong>Cancelli e accessi.</strong> Apri i cancelli e tieni libero il passaggio per i mezzi di soccorso.</li>
+        <li><span class="ata-se">Se è il tuo compito</span><strong>Bagni e spazi comuni.</strong> Controlli bagni, corridoi, palestra e spogliatoi del tuo settore, lungo la tua via di uscita, e fai uscire chi trovi. Non entri dove c'è fumo e non torni indietro.</li>
+        <li><span class="ata-se">Se è il tuo compito</span><strong>Alunni in mensa o nel pre e post-scuola.</strong> In quel momento sono la tua classe: li accompagni al punto di raccolta, li conti con l'elenco e dici al coordinatore chi manca.</li>
+        <li><span class="ata-se">Se è il tuo compito</span><strong>Accoglienza dei soccorritori.</strong> Li aspetti all'ingresso e dici che cosa è successo, dove, se manca qualcuno, dove sono chiavi e quadri.</li>
+        <li><span class="ata-se">Se è il tuo compito</span><strong>Chiamata al 112.</strong> Di' l'indirizzo del plesso, che cosa è successo, se ci sono feriti, se ci sono fumo, gas o cavi elettrici. Non chiudere finché l'operatore non te lo dice.</li>
+        <li><span class="ata-se">Solo se sei incaricato e formato</span><strong>Luce e gas.</strong> Il distacco delle utenze lo fa chi è stato incaricato e formato. La valvola del gas si chiude solo se la raggiungi subito e senza rischi.</li>
+        <li><span class="ata-se">Se è il tuo compito</span><strong>Persone che hanno bisogno di aiuto.</strong> Segui quello che il piano prevede per ciascuna di loro.</li>
+      </ul>
+
+      <h2 class="scheda-h2">3. In ogni caso</h2>
+      <ul class="ata-sempre">
+        <li>Non usare l'ascensore.</li>
+        <li>Non tornare indietro a prendere oggetti.</li>
+        <li>Segui le indicazioni di chi coordina l'emergenza e non prendere iniziative diverse dal piano.</li>
+        <li>Se chi coordina o le autorità dispongono di restare al chiuso, chiudi porte e finestre del tuo settore e, se è il tuo compito, spegni la ventilazione.</li>
+        <li>Si esce dal riparo, o si rientra nell'edificio, solo con il segnale di fine emergenza.</li>
+        <li>Usa il telefono solo se serve. Dopo, racconta al coordinatore che cosa hai visto.</li>
+      </ul>
+
+      <h2 class="scheda-h2">4. Dopo la prova</h2>
+      <p>Che cosa non ha funzionato per me (chiavi, porte, elenco, segnale, percorso):</p>
+      <div class="scheda-righe"></div>
+
+      <div class="scheda-docente">
+        <p><strong>Per il dirigente, il DSGA e il referente della sicurezza.</strong> Compilate la scheda con ogni persona a inizio anno e quando cambiano personale o piano; un compito che il piano non prevede si cancella. Formazione e primo soccorso seguono il D.Lgs. 81/2008 (artt. 37 e 45): la scheda non dà indicazioni sanitarie e non sostituisce i corsi degli addetti. Il Gruppo comunale di protezione civile non si attiva su chiamata dei cittadini né della singola scuola: in emergenza si chiama il 112; per segnalazioni non urgenti c'è la Sala Operativa della Protezione Civile del Lazio, 803 555.</p>
+      </div>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda per il personale ATA · Tutti gli ordini · rev. 2026</span>
     </footer>
 
   </article>
