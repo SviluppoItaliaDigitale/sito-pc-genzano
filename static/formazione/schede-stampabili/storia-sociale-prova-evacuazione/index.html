@@ -31,13 +31,13 @@
     .ss-riquadro {
       position: relative;
       display: grid;
-      grid-template-columns: 30mm minmax(0, 1fr);
+      grid-template-columns: 25mm minmax(0, 1fr);
       gap: 3mm;
       align-items: center;
       border: 2px solid var(--scheda-blu);
       border-radius: 8px;
       padding: 2.5mm 3mm 2.5mm 3mm;
-      min-height: 33mm;
+      min-height: 30mm;
       break-inside: avoid;
       page-break-inside: avoid;
     }
@@ -58,13 +58,13 @@
       justify-content: center;
     }
     .ss-img {
-      height: 27mm;
+      height: 25mm;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1mm;
     }
-    .ss-img img { max-width: 100%; max-height: 25mm; object-fit: contain; }
+    .ss-img img { max-width: 100%; max-height: 23mm; object-fit: contain; }
     .ss-img img.ss-mezza { max-width: 48%; }
     .ss-frase { font-size: 1.12rem; line-height: 1.35; font-weight: 600; color: #212529; }
     .ss-frase .ss-scrivi { display: inline-block; min-width: 26mm; border-bottom: 1.5px solid #6c757d; }
@@ -72,7 +72,9 @@
     .ss-rimando { font-size: 0.78rem; color: var(--scheda-grigio); margin: 2mm 0 0 0; }
     .ss-credito { font-size: 0.7rem; color: var(--scheda-grigio); margin: 2mm 0 0 0; }
     .ss-adulto h2.scheda-h2 { margin-top: 0.7rem; }
-    .ss-adulto p, .ss-adulto li { font-size: 0.88rem; line-height: 1.45; }
+    .ss-adulto p, .ss-adulto li { font-size: 0.88rem; line-height: 1.42; }
+    .ss-adulto p { margin: 0.25rem 0; }
+    .ss-adulto .scheda-intro { margin-bottom: 0.4rem; }
     .ss-ritaglio {
       display: grid;
       grid-template-columns: 30mm minmax(0, 1fr);
@@ -87,9 +89,13 @@
     }
     .ss-ritaglio img { max-width: 100%; max-height: 26mm; object-fit: contain; }
     @media print {
-      html { font-size: 94%; }
+      html { font-size: 90%; }
       .scheda-page { padding: 1cm 1.3cm 0.7cm 1.3cm; }
       .scheda-header { margin-bottom: 0.3rem; }
+      .ss-adulto h2.scheda-h2 { margin: 0.55rem 0 0.3rem 0; }
+      .ss-adulto .scheda-elenco { margin: 0.2rem 0 0.3rem 0; }
+      .ss-adulto .scheda-elenco li { margin: 0.1rem 0; }
+      .ss-adulto .scheda-docente { margin-top: 0.5rem; padding: 0.6rem; }
     }
     @media (max-width: 640px) {
       .ss-griglia { grid-template-columns: minmax(0, 1fr); }
@@ -188,18 +194,12 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h2 class="scheda-titolo-principale">Per l'adulto: come preparare e usare la storia</h2>
-        <div class="scheda-sottotitolo">Docenti, docenti di sostegno, educatori e famiglie</div>
+        <div class="scheda-sottotitolo">Per docenti, docenti di sostegno, educatori e famiglie · 5 minuti a lettura</div>
       </div>
     </header>
 
-    <div class="scheda-meta">
-      <span><strong>Per:</strong> alunni nello spettro autistico o con altre necessità comunicative</span>
-      <span><strong>Fasce:</strong> infanzia, primaria, secondaria I grado</span>
-      <span><strong>Durata:</strong> 5 minuti a lettura</span>
-    </div>
-
     <p class="scheda-intro">
-      Una storia sociale descrive con frasi brevi in prima persona e con immagini una situazione nuova, così l'alunno sa prima che cosa succederà. Il formato è stato ideato da Carol Gray. Per la prova di evacuazione aiuta perché la prova arriva con un suono forte, cambia la routine e chiede di muoversi in gruppo. La storia non è una terapia e non sostituisce il lavoro di chi segue l'alunno.
+      Una storia sociale descrive con frasi brevi in prima persona e con immagini una situazione nuova, così l'alunno sa prima che cosa succederà. Il formato è stato ideato da Carol Gray. Questa storia è pensata per alunni nello spettro autistico o con altre necessità comunicative, dall'infanzia alla secondaria di primo grado. Qui prepara a una prova che arriva con un suono forte e cambia la routine. La storia non è una terapia e non sostituisce il lavoro di chi segue l'alunno.
     </p>
 
     <h2 class="scheda-h2">Come personalizzarla</h2>
@@ -208,7 +208,7 @@
       <li><strong>Il luogo.</strong> Scrivete nel riquadro 8 dove si trova il punto di raccolta. Potete incollare sopra il segnale una foto del cortile o della porta da cui si esce.</li>
       <li><strong>Il suono.</strong> Il segnale cambia da scuola a scuola: sirena, campanella a tratti, voce. Descrivetelo com'è. Se la scuola è d'accordo, fatelo ascoltare prima a volume basso.</li>
       <li><strong>Le cuffie.</strong> Usate il riquadro 5 solo se cuffie o altri aiuti sono già stati decisi. Altrimenti copritelo o tagliatelo.</li>
-      <li><strong>Le parole.</strong> Cambiate pure le frasi perché siano vere per quella scuola e per quell'alunno: la storia deve dire solo ciò che succederà davvero.</li>
+      <li><strong>Le parole.</strong> Cambiate le frasi perché siano vere per quella scuola e per quell'alunno.</li>
     </ul>
 
     <h2 class="scheda-h2">Se la prova è per il terremoto</h2>
@@ -219,18 +219,13 @@
     </div>
 
     <h2 class="scheda-h2">Quando leggerla</h2>
-    <ul class="scheda-elenco">
-      <li>Qualche giorno prima della prova, più volte, in un momento tranquillo.</li>
-      <li>La mattina della prova, se la data è nota.</li>
-      <li>Dopo la prova, per ricordare insieme come è andata.</li>
-    </ul>
-    <p>Leggete indicando ogni immagine con il dito. L'alunno può indicare, ripetere, colorare o rispondere con un gesto: vanno bene tutti i modi. Se a un certo punto vuole fermarsi, fermatevi.</p>
+    <p>Qualche giorno prima della prova, più volte, in un momento tranquillo; la mattina della prova, se la data è nota; dopo, per ricordare insieme come è andata. Leggete indicando ogni immagine con il dito. L'alunno può indicare, ripetere, colorare o rispondere con un gesto: vanno bene tutti i modi. Se a un certo punto vuole fermarsi, fermatevi.</p>
 
     <h2 class="scheda-h2">Le scelte si concordano prima</h2>
     <p>Cuffie, posto nella fila, persona di riferimento e un eventuale preavviso si concordano con la famiglia, con il docente di sostegno e con chi cura il piano di emergenza della scuola (il dirigente e il responsabile della sicurezza). Scrivetele nel piano: in un'emergenza vera non c'è tempo per decidere, e quello che si prova deve valere anche allora.</p>
 
     <div class="scheda-docente">
-      <strong>Avvertenze per l'adulto.</strong> Questa scheda non sostituisce il piano di emergenza della scuola né le indicazioni di chi segue l'alunno: in caso di differenze, vale il piano. Non promettete che il suono «non farà paura» o che «andrà tutto bene»: dite che cosa succederà e chi ci sarà vicino. La paura durante la prova è normale; quello che conta è che l'alunno sappia che cosa fare e a chi rivolgersi.
+      <strong>Avvertenze per l'adulto.</strong> Questa scheda non sostituisce il piano di emergenza della scuola né le indicazioni di chi segue l'alunno: in caso di differenze, vale il piano. Non promettete che il suono «non farà paura» o che «andrà tutto bene»: dite che cosa succederà e chi ci sarà vicino. Avere paura durante la prova è normale.
     </div>
 
     <p class="ss-credito">Fonti: Carol Gray, «Social Stories» (carolgraysocialstories.com). Indicazioni sulla prova di evacuazione dal Kit scuola infanzia e primaria di protezionecivilegenzano.it. Pittogrammi ARASAAC — autore Sergio Palao, Governo d'Aragona, licenza CC BY-NC-SA 4.0. Segnali di sicurezza: ISO 7010. Fonti controllate il 19/11/2026.</p>
