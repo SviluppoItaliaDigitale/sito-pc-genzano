@@ -15,6 +15,7 @@ social_punti:
   - "Saggio di danza al Parco Sforza Cesarini, sabato 20 giugno 2026, sera."
   - "Presidio di sicurezza, antincendio e primo soccorso per tutta la serata."
   - "In campo Land Rover Defender 130 e Mercedes Atego, mezzo polivalente."
+  - "In serata una verifica in via delle Vigne Nuove: nessun incendio, rientro al parco."
   - "Per qualsiasi emergenza il numero è uno solo: 112."
 draft: false
 ---
@@ -42,6 +43,12 @@ Per il servizio sono stati impiegati il **Land Rover Defender 130**, fuoristrada
          caption="La postazione con il gazebo dei volontari, il fuoristrada e il mezzo polivalente, pronti per la serata. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 La presenza dei mezzi non è scenografica: garantisce che, in caso di necessità, l'intervento parta in pochi istanti, senza tempi di trasferimento.
+
+## Una verifica durante la serata
+
+Poco dopo le 22 è arrivata la segnalazione di un possibile incendio di sterpaglie in **via delle Vigne Nuove**. Tre volontari sono partiti dal parco con il Mercedes Atego per verificare, tenendo informata la Sala Operativa Unificata Permanente (SOUP) della Regione Lazio.
+
+Sul posto non c'era nessun incendio. La squadra è rientrata al Parco Sforza Cesarini e ha ripreso il presidio fino alla fine della serata. Controllare una segnalazione che poi non si conferma è parte normale del lavoro: se vedi fumo, chiama sempre il **112**.
 
 ## Cosa fa (e cosa non fa) il volontariato durante un evento
 
