@@ -12,10 +12,14 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-11-19"
 risorse_tema: "aree-emergenza"
 ---
 Il Piano di Emergenza Comunale stabilisce come organizzare i soccorsi in caso di calamità. Indica i rischi del territorio, le aree di emergenza, le procedure operative e i soggetti che coordinano gli interventi.
+
+{{< callout tipo="info" titolo="Il documento in vigore" >}}
+Il testo del Piano è quello [pubblicato dal Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/sites/comune.genzanodiroma.roma.it/files/2024-12/Piano%20di%20Protezione%20Civile%20Comunale%20-%20Genzano%20di%20Roma.pdf) (PDF, sito del Comune). Gli estremi dell'atto che lo approva non sono pubblicati online: li aggiungeremo qui appena saranno disponibili. Per gli indirizzi delle aree di emergenza fanno fede i cartelli installati sul territorio, riportati in [Aree di attesa](/aree-attesa/) e [Cartografia](/cartografia/).
+{{< /callout >}}
 
 ## <i class="bi bi-question-circle-fill text-primary me-2" aria-hidden="true"></i>A cosa serve il Piano? {#a-cosa-serve}
 Il Piano serve prima di tutto a **proteggere la popolazione**. Definisce chi fa cosa, quali risorse usare e come coordinare i soccorsi. Individua anche le **aree di emergenza**, cioè i luoghi da usare per l'attesa, il ricovero temporaneo e il supporto ai soccorritori.

@@ -24,7 +24,7 @@ L'educazione civica nelle scuole italiane è regolata principalmente da:
 - **D.M. 7 settembre 2024, n. 183** — definisce le Linee guida nazionali per l'insegnamento dell'educazione civica, applicabili dall'anno scolastico 2024/2025.
 - **Legge 17 febbraio 2025, n. 21** — aggiunge la lettera h-ter) allo stesso articolo 3. Le conoscenze di base sulla sicurezza nei luoghi di lavoro entrano fra i temi dell'educazione civica. È in vigore dal 19 marzo 2025.
 
-L'educazione civica prevede almeno **33 ore annuali** (art. 2, comma 3, L. 92/2019), con valutazione autonoma e contributo di più docenti del consiglio di classe.
+L'educazione civica prevede almeno **33 ore annuali** (art. 2, comma 3, L. 92/2019), valutate nelle valutazioni periodiche e finali: il docente coordinatore propone il voto in decimi, raccogliendo gli elementi dai docenti del consiglio di classe che insegnano la disciplina (art. 2, comma 6).
 
 Sul modulo di sicurezza sul lavoro una precisazione utile: la L. 21/2025 non distingue per ordine di scuola. Il peso maggiore nella secondaria di secondo grado e nei PCTO, dove il tema è già presente per effetto del D.Lgs. 81/2008, resta una scelta didattica dell'istituto.
 
@@ -165,7 +165,7 @@ L'attivazione di un PCTO è sempre subordinata alla valutazione del Coordinatore
 
 I materiali del Gruppo sono prodotti volontariamente e sono liberamente utilizzabili dalle scuole. Non sono testi scolastici ministeriali, non sostituiscono i libri adottati e non costituiscono documenti ufficialmente validati dal MIM o da altri enti.
 
-Sono progettati per essere coerenti con normativa scolastica, competenze chiave europee, Agenda 2030 e obiettivi di educazione civica. La scelta finale sull'uso in classe spetta al docente, in coerenza con il PTOF e con la programmazione del consiglio di classe.
+Sono progettati per essere coerenti con normativa scolastica, competenze chiave europee, Agenda 2030 e obiettivi di educazione civica. La scelta finale sull'uso in classe spetta al docente, in coerenza con il PTOF e con la programmazione del consiglio di classe. Per scrivere il curricolo di istituto c'è il [curricolo verticale](/formazione/curricolo-verticale/), con i traguardi per ogni età dai 3 ai 19 anni.
 
 ## Contatti
 
