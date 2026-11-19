@@ -724,7 +724,7 @@ documenti:
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
   size_kb: 705.3
-  sha256: 0540d76b9c5e8b4a2e6e592372ae8413f7fb3f44762f0b2b959ce468c84d03c7
+  sha256: 850070a275b6c46ecae6980c1eafc3964adc1fbddc32d950d454c15849d5d2b9
   searchable: true
   tagged: false
   language: it
