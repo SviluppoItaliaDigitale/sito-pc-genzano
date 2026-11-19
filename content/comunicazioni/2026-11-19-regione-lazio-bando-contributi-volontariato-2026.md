@@ -34,7 +34,7 @@ La Regione vuole rafforzare la capacità operativa del sistema regionale di prot
 |---|---|---|
 | 1 | Nuovi dispositivi di protezione individuale e attrezzature per le principali emergenze, con attenzione al rischio idrogeologico | D ed E |
 | 2 | Miglioramento della preparazione tecnica dei volontari | D ed E |
-| 3 | Abilitazione dei volontari alle patenti e ai patentini per attrezzature da lavoro, diversi dalle patenti A e B, necessari per i mezzi che l'organizzazione ha a disposizione | A, B, C, D ed E |
+| 3 | Abilitazione dei volontari alle patenti e ai patentini per attrezzature da lavoro, diversi dalle patenti A e B, necessari per i mezzi dell'organizzazione o dei coordinamenti a cui aderisce, disponibili su MGO alla pubblicazione del bando | A, B, C, D ed E |
 
 Sono ammesse anche le spese per pasti, ricariche telefoniche e beni di prima necessità sostenute per l'attività di protezione civile. Chi ottiene il contributo non può cedere a terzi per tre anni le attrezzature e i dispositivi acquistati, anche solo in parte, con quei fondi.
 
@@ -77,7 +77,7 @@ Il contributo viene pagato in due volte: **50% di acconto** e **50% di saldo**, 
 
 ## Che cosa cambia per Genzano
 
-Il Gruppo di Genzano è iscritto in classe A, come risulta dall'[elenco dei beneficiari delle convenzioni 2026](/comunicazioni/2026-11-17-regione-lazio-integrazione-contributo-gruppi-comunali/). In base al testo del bando, per questa classe è prevista la sola Misura 3, cioè le abilitazioni per la guida dei mezzi. Ogni altra decisione sulla partecipazione spetta al Gruppo e al Comune.
+Il Gruppo di Genzano è iscritto in classe A, come risulta dall'[elenco dei beneficiari delle convenzioni 2026](/comunicazioni/2026-11-17-regione-lazio-integrazione-contributo-gruppi-comunali/). In base al testo del bando, per questa classe è prevista la sola Misura 3, cioè le abilitazioni per la guida dei mezzi dell'organizzazione o dei coordinamenti a cui aderisce, se disponibili su MGO alla pubblicazione del bando. Ogni altra decisione sulla partecipazione spetta al Gruppo e al Comune.
 
 ## Per approfondire
 
