@@ -54,7 +54,7 @@ Avvicinati alla persona. Parla ad alta voce: "Mi sente? Come sta?". Scuoti piano
 
 Se la persona non risponde:
 
-1. Mettila sul dorso su una superficie rigida.
+1. Mettila sul dorso. Se è sul letto, lasciala sul letto.
 2. Metti una mano sulla fronte. Metti 2 dita sotto il mento. Spingi la testa indietro delicatamente. Questo apre le vie aeree.
 3. Avvicina l'orecchio alla sua bocca per 10 secondi. Guarda il petto. Ascolta il respiro. Senti l'aria sulla guancia.
 

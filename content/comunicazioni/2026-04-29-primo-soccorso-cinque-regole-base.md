@@ -52,7 +52,7 @@ Avvicinati alla persona e chiama ad alta voce: "**Mi sente? Come sta?**". Se ser
 
 Se la persona è incosciente:
 
-1. **Mettila supina** su una superficie rigida, con cautela se sospetti traumi.
+1. **Mettila supina**, con cautela se sospetti traumi. Il pavimento va bene; se è su un letto, non spostarla a terra: si comincia lì.
 2. **Iperestendi la testa** con una mano sulla fronte e due dita sotto il mento: questa manovra apre le vie aeree.
 3. **Avvicina l'orecchio alla bocca della persona**: per 10 secondi guarda il torace, ascolta il respiro, senti l'aria sulla guancia.
 
