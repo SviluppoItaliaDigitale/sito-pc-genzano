@@ -20,7 +20,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
 
 
 <div class="alert alert-info" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Hai poco tempo? Parti dal <a href="/formazione/programma-dell-anno/">programma dell'anno</a>: cinque incontri già organizzati per la tua classe, da ottobre a maggio. Vuoi i volontari in classe? Leggi <a href="/formazione/il-gruppo-a-scuola/">Il Gruppo nella tua scuola</a>.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Hai poco tempo? Parti dal <a href="/formazione/programma-dell-anno/">programma dell'anno</a>: cinque incontri già organizzati per la tua classe, da ottobre a maggio. Vuoi i volontari in classe? Leggi <a href="/formazione/il-gruppo-a-scuola/">Il Gruppo nella tua scuola</a>. Devi scrivere il PTOF? Il <a href="/formazione/curricolo-verticale/">curricolo verticale</a> dice che cosa impara ogni età, dai 3 ai 19 anni.</p>
 </div>
 
 <div class="row row-cols-1 row-cols-md-2 g-4 my-4">

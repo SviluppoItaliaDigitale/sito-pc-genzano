@@ -410,6 +410,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Quadro normativo per la scuola</p>
   <p class="ms-card-desc">Riepilogo delle norme che regolano l'uso dei materiali del Gruppo nelle scuole: Educazione Civica, PCTO, sicurezza, inclusione, privacy, accessibilità. Una pagina, una fonte unica di verità.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/curricolo-verticale/">
+  <div class="ms-card-icon"><i class="bi bi-bar-chart-steps"></i></div>
+  <p class="ms-card-title">Curricolo verticale</p>
+  <p class="ms-card-desc">Traguardi di protezione civile dall'infanzia alla quinta superiore, con i materiali per ogni età, da inserire nel PTOF e nell'educazione civica.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/educazione-civica/">
   <div class="ms-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
   <p class="ms-card-title">Per i docenti — Ed. Civica</p>

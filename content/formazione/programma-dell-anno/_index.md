@@ -127,6 +127,7 @@ Ogni estate il Dipartimento della Protezione Civile organizza i campi scuola [«
 
 ## Vedi anche
 
+- [Curricolo verticale](/formazione/curricolo-verticale/) — che cosa impara ogni età, dai 3 ai 19 anni, per il PTOF.
 - [Crea la mia lezione](/formazione/crea-la-mia-lezione/) — componi una lezione su qualunque tema.
 - [Il Gruppo nella tua scuola](/formazione/il-gruppo-a-scuola/) — incontri, prove affiancate, uscite.
 - [Verifica prima e dopo](/formazione/verifica-prima-e-dopo/) — cinque domande per capire che cosa è cambiato.

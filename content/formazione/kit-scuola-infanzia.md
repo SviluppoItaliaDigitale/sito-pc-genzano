@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desi
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per le attività di divulgazione nelle scuole del territorio.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~17,1 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~17,3 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — non spaventare i bambini.** Le attività di questo kit **non devono mai generare paura**. I bambini di 3-6 anni hanno una percezione del rischio molto diversa da quella dell'adulto: parlare di terremoti, incendi o allagamenti in modo enfatico o con immagini drammatiche può produrre **ansia, incubi, regressioni**. La regola è opposta: presentare i comportamenti corretti come **un gioco rassicurante** (la tartaruga che si ripara, il numero 112 come "amico che arriva"), proporzionato all'età, sempre concluso con la rassicurazione che **gli adulti sono lì per proteggerli**. Niente video reali di disastri, niente cronaca, niente racconto di vittime. Per la dimensione emotiva si rimanda alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -261,6 +261,16 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Il Labirinto dell'Uscita**](/formazione/schede-stampabili/labirinto-uscita/) — il bambino traccia con la matita il percorso sicuro evitando gli ostacoli.
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
 - 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
+
+**Prove di evacuazione, famiglie e personale** — schede per la classe e per gli adulti della scuola:
+
+- 👉 [**La prova di evacuazione: la mia storia**](/formazione/schede-stampabili/storia-sociale-prova-evacuazione/) — storia sociale con pittogrammi da leggere nei giorni prima della prova, per chi è nello spettro autistico o ha altre necessità comunicative, da personalizzare con nomi, luogo e suono della propria scuola. *(con il docente di sostegno)*
+- 👉 [**La sirena a scuola è una prova**](/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/) — sei frasi in italiano semplice con pittogrammi per chi è appena arrivato in Italia, con una riga «Nella tua lingua» per il mediatore culturale.
+- 👉 [**Il giorno dopo una scossa o un'allerta**](/formazione/schede-stampabili/il-giorno-dopo-docente/) — per il docente: 10 minuti per accogliere paure e voci in classe, che cosa dire e che cosa evitare, le fonti ufficiali per smontare una voce falsa. *(per il docente)*
+- 👉 [**Se a scuola scatta un'emergenza — foglio per le famiglie**](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/) — da allegare al Patto di corresponsabilità o ai documenti di inizio anno: che cosa fa la scuola, che cosa fanno i genitori, ritiro dei figli e chiusure. *(per le famiglie)*
+- 👉 [**Assemblea dei genitori: 4 schermate sulle emergenze**](/formazione/schede-stampabili/assemblea-genitori-emergenze/) — da proiettare o stampare all'assemblea di inizio anno: piano e prove, cosa succede in orario scolastico, ritiro e chiusure, piano familiare. *(per le famiglie)*
+- 👉 [**Scheda di evacuazione personalizzata**](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — modello da compilare con la famiglia, accanto al PEI, per un'alunna o un alunno con disabilità: spostamenti e ausili, chi accompagna, come comunicare, percorso e punto di raccolta. *(per il docente di sostegno)*
+- 👉 [**Prova o emergenza: la scheda per il personale**](/formazione/schede-stampabili/scheda-personale-ata/) — per collaboratori scolastici, mensa ed educatori del pre e post-scuola: il proprio compito, il sostituto, chiavi, quadri e punto di raccolta. *(per il personale)*
 
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
