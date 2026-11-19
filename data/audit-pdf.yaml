@@ -1,10 +1,10 @@
-ultimo_audit: '2026-11-18'
-totale: 80
+ultimo_audit: '2026-11-19'
+totale: 81
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
   NON_ACCESSIBILE: 18
-  TERZO: 43
+  TERZO: 44
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -132,6 +132,20 @@ documenti:
   text_chars_sample: 6630
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/bando-regione-lazio-2026-contributi-volontariato-pc-g16101.pdf
+  file: bando-regione-lazio-2026-contributi-volontariato-pc-g16101.pdf
+  size_kb: 453.0
+  sha256: 50a2eabfb32205c5a1569004a765e203523c2a25a5e5437a02393cdfdd647559
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 23
+  errors: []
+  text_chars_sample: 7218
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
 - path: /allegati/2026/camera-ac3076-protezione-civile-approvato-21-10-2026.pdf
   file: camera-ac3076-protezione-civile-approvato-21-10-2026.pdf
