@@ -21,7 +21,7 @@ social_punti:
   - "Se vedi un incendio, chiama il 112."
 ---
 
-**Mercoledì 3 giugno 2026** la **Sala Operativa regionale** ci ha chiesto di verificare una **colonna di fumo** in **via di Valle Verta**, a Genzano di Roma. Era un **incendio boschivo di interfaccia**, cioè un incendio di vegetazione vicino a case e strade.
+**Mercoledì 3 giugno 2026** la **Sala Operativa regionale** ci ha chiesto di verificare una **colonna di fumo**. Il fumo saliva da **via di Valle Verta**, a Genzano di Roma. Era un **incendio boschivo di interfaccia**, cioè un incendio di vegetazione vicino a case e strade.
 
 ## Verso le 17: la colonna di fumo in via di Valle Verta
 

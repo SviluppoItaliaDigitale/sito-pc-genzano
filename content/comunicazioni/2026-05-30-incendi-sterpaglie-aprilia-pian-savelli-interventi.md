@@ -21,7 +21,7 @@ social_punti:
   - "Se vedi un incendio, chiama il 112."
 ---
 
-In tre giornate di fine maggio 2026, **giovedì 21**, **sabato 23** e **sabato 30**, la **Sala Operativa regionale** ci ha attivato **tre volte** per **incendi di sterpaglie**. Ogni volta è partita una squadra con un mezzo antincendio.
+A fine maggio 2026 la **Sala Operativa regionale** ci ha attivato **tre volte** per **incendi di sterpaglie**. È successo **giovedì 21**, **sabato 23** e **sabato 30**. Ogni volta è partita una squadra con un mezzo antincendio.
 
 ## Giovedì 21 maggio: via Campoleone, ad Aprilia
 

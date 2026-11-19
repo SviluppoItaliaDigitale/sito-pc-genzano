@@ -41,7 +41,7 @@ Su richiesta della **Polizia Locale**, due volontari sono tornati in **via Napol
 
 - **Dopo un taglio controlliamo anche le piante vicine.** In via Napoli la verifica ha riguardato le altre piante della zona. Su alberi e rami, [cosa fare prima, durante e dopo il vento forte](/rischi-prevenzione/vento-forte/) è nella pagina dedicata.
 - **Una voragine va delimitata subito.** In via Stati Uniti d'America le transenne, messe con la Polizia Locale, tengono lontani pedoni e veicoli. I recapiti della Polizia Locale sono nei [numeri utili](/numeri-utili/).
-- **Lavoriamo insieme alla Polizia Locale.** In via Napoli e in via Stati Uniti d'America eravamo con loro; i mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
+- **Lavoriamo insieme alla Polizia Locale.** In via Napoli e in via Stati Uniti d'America eravamo con loro. I mezzi del Gruppo sono elencati nella pagina [Chi siamo](/chi-siamo/).
 
 ## Cosa puoi fare tu
 
