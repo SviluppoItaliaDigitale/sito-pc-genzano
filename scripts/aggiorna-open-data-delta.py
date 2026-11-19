@@ -96,9 +96,9 @@ def main():
 
     # ---------- export ----------
     wb = openpyxl.load_workbook(a.xlsx, read_only=True, data_only=True)
-    ws = wb["Interventi"]
+    ws = gen.foglio_interventi(wb)
     rows = list(ws.iter_rows(values_only=True))
-    idx = {h: i for i, h in enumerate(rows[0]) if h}
+    idx = gen.indice_colonne(rows[0])
 
     def col(r, name):
         i = idx.get(name)
