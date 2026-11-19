@@ -44,7 +44,7 @@ Il sito ha un'area di primo soccorso basata sulle Linee Guida RCP 2025 di IRC, k
 1. Confronta ogni manovra e sequenza (riconoscere l'arresto, chiamare, compressioni, DAE, disostruzione, emorragie, ustioni) con il capitolo IRC corrispondente; segnala parametri non presenti nella linea guida.
 2. Tabella dei PDF IRC in `/formazione/primo-soccorso/` allineata alla pagina IRC e alla nota sui capitoli attesi.
 3. Caldo: livelli di rischio, categorie fragili e consigli coincidono con il Ministero della Salute dell'anno in corso; nessuna soglia di temperatura inventata.
-4. Kit sanitari: ogni indicazione ha fonte, nessuna garanzia assoluta, la fonte ufficiale è citata su ogni foglio (pagina, stampa singola, Stampa tutto, ZIP: rule 09 § 15-ter); l'invito a personalizzare con il proprio sanitario resta solo sui piani per una persona o una struttura.
+4. Kit sanitari: ogni indicazione ha fonte, nessuna garanzia assoluta, la fonte ufficiale è citata su ogni foglio (pagina, stampa singola, Stampa tutto, ZIP: rule 09 § 15-ter); l'invito «da adattare con…» il proprio sanitario o la direzione sanitaria resta solo sui piani per una persona o una struttura.
 5. Linguaggio: nessun termine che spaventi o colpevolizzi; tono calmo e operativo (rule 06).
 6. Correzioni certe e documentate in tutti i file che ripetono il dato; le scelte cliniche dubbie vanno nel rapporto come «da validare con un medico identificato».
 
