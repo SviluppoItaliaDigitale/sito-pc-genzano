@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-19T06:03",
+  "aggiornato": "2026-11-19T07:03",
   "data_lunga": "giovedì 19 novembre 2026",
-  "aggiornato_label": "giovedì 19 novembre 2026, ore 06:03",
+  "aggiornato_label": "giovedì 19 novembre 2026, ore 07:03",
   "alba": "07:02",
   "tramonto": "16:45",
   "corrente": {
-    "temp": 13.3,
-    "percepita": 13.7,
+    "temp": 13.6,
+    "percepita": 13.5,
     "cielo": "Pioggia debole",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
-    "umidita": 98,
-    "vento": 4,
-    "raffiche": 28
+    "umidita": 94,
+    "vento": 7,
+    "raffiche": 32
   },
   "giorni": [
     {
@@ -21,9 +21,9 @@
       "tmax": 17,
       "tmin": 13,
       "pioggia": 100,
-      "pioggia_mm": 18.6,
-      "raffiche": 112,
-      "uv": 2,
+      "pioggia_mm": 16.3,
+      "raffiche": 117,
+      "uv": 1,
       "uv_label": "basso"
     },
     {
@@ -32,11 +32,11 @@
       "cielo": "Temporale",
       "tmax": 16,
       "tmin": 12,
-      "pioggia": 63,
+      "pioggia": 65,
       "pioggia_mm": 3.6,
       "raffiche": 52,
-      "uv": 2,
-      "uv_label": "basso"
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Sab 21",
@@ -44,11 +44,11 @@
       "cielo": "Coperto",
       "tmax": 15,
       "tmin": 11,
-      "pioggia": 24,
+      "pioggia": 13,
       "pioggia_mm": 0,
       "raffiche": 33,
-      "uv": 3,
-      "uv_label": "moderato"
+      "uv": 2,
+      "uv_label": "basso"
     },
     {
       "label": "Dom 22",
@@ -56,10 +56,10 @@
       "cielo": "Coperto",
       "tmax": 15,
       "tmin": 11,
-      "pioggia": 80,
+      "pioggia": 88,
       "pioggia_mm": 2.3,
       "raffiche": 77,
-      "uv": 1,
+      "uv": 2,
       "uv_label": "basso"
     }
   ],
@@ -79,13 +79,13 @@
     },
     {
       "nome": "Roma",
-      "tmax": 21,
-      "tmin": 14,
+      "tmax": 20,
+      "tmin": 13,
       "cielo": "Temporale"
     },
     {
       "nome": "Latina",
-      "tmax": 21,
+      "tmax": 20,
       "tmin": 15,
       "cielo": "Temporale"
     },
@@ -93,7 +93,7 @@
       "nome": "Frosinone",
       "tmax": 18,
       "tmin": 12,
-      "cielo": "Rovesci"
+      "cielo": "Pioggia forte"
     }
   ]
 }
