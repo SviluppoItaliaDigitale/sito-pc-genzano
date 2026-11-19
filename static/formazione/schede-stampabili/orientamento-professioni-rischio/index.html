@@ -23,11 +23,10 @@
     .op-nota { border-left: 4px solid var(--scheda-oro); background: #fff8e6; padding: 0.35rem 0.6rem; border-radius: 0 6px 6px 0; font-size: 0.86rem; color: #523d02; }
     .op-volontari { border: 1.5px dashed var(--scheda-blu); border-radius: 6px; padding: 0.4rem 0.6rem; margin-top: 0.4rem; }
     .op-volontari strong:first-child { color: var(--scheda-blu); }
-    .op-eventi { list-style: none; padding: 0; margin: 0.3rem 0; counter-reset: ev; }
-    .op-eventi li { counter-increment: ev; display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: 0.6rem; align-items: end; padding: 0.3rem 0; border-bottom: 1px solid #e9ecef; }
-    .op-eventi li::before { content: counter(ev, upper-alpha) ". "; font-weight: 700; color: var(--scheda-blu); position: absolute; margin-left: -1.3rem; }
-    .op-eventi { padding-left: 1.3rem; position: relative; }
-    .op-eventi li { position: relative; }
+    .op-eventi { margin: 0.3rem 0; }
+    .op-eventi li { display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: 0.6rem; align-items: end; padding: 0.3rem 0; border-bottom: 1px solid #e9ecef; }
+    .op-eventi { padding-left: 1.6rem; list-style: upper-alpha; }
+    .op-eventi li::marker { font-weight: 700; color: var(--scheda-blu); }
     .op-riga { border-bottom: 1.5px solid var(--scheda-bordo); height: 1.3rem; }
     .op-campi { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.25rem; margin: 0.25rem 0; }
     .op-campo { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 0.5rem; align-items: end; }
@@ -54,6 +53,16 @@
       .op-riquadro, .op .scheda-docente, .op-nota, .op-volontari { break-inside: avoid; }
       .op-tab tr { break-inside: avoid; }
     }
+    /* Stampa su quattro fogli A4 (controllo fogli di stampa): scala del testo all'88%
+       e spazi stretti, così la scheda regge anche i caratteri più larghi. */
+    @media print {
+      html { font-size: 88%; }
+      .scheda-page { padding: 1cm 1.4cm 0.6cm; }
+      .scheda-header { margin-bottom: 0.5rem; padding-bottom: 0.4rem; }
+      .scheda-meta { margin-bottom: 0.5rem; padding: 0.35rem 0.7rem; }
+      .op .scheda-h2 { margin: 0.45rem 0 0.2rem; }
+      .scheda-footer { padding-top: 2mm; }
+    }
   </style>
 </head>
 <body>
@@ -73,7 +82,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <h1 class="scheda-titolo-principale">Chi lavora sul rischio: professioni e percorsi</h1>
-        <div class="scheda-sottotitolo">Secondaria di primo grado (classe 3ª) · Secondaria di secondo grado · Foglio 1 di 3</div>
+        <div class="scheda-sottotitolo">Secondaria di primo grado (classe 3ª) · Secondaria di secondo grado · Foglio 1 di 4</div>
       </div>
     </header>
 
@@ -124,6 +133,37 @@
             <td>Concorso pubblico del Corpo nazionale dei vigili del fuoco. Età, titolo di studio e prove sono scritti nel bando.</td>
             <td>Comandi provinciali e distaccamenti del Corpo.</td>
           </tr>
+        </tbody>
+      </table>
+      <p class="op-nota">La tabella continua sul foglio 2.</p>
+      <p class="op-attribuzione">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Chi lavora sul rischio" · Secondaria I e II · rev. 2026</span>
+    </footer>
+
+  </article>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <div class="scheda-titolo-principale" role="heading" aria-level="2">Altri mestieri del rischio, e il volontariato</div>
+        <div class="scheda-sottotitolo">Chi lavora sul rischio · Foglio 2 di 4</div>
+      </div>
+    </header>
+
+    <div class="op">
+      <table class="op-tab">
+        <caption class="visually-hidden">Professioni che lavorano sul rischio, seconda parte: che cosa fanno, un percorso possibile, dove lavorano</caption>
+        <thead>
+          <tr><th scope="col">Chi</th><th scope="col">Che cosa fa per il rischio</th><th scope="col">Un percorso possibile (indicativo)</th><th scope="col">Dove lavora, per esempio</th></tr>
+        </thead>
+        <tbody>
           <tr>
             <td><div class="op-prof"><img src="/pittogrammi/arasaac/medico.png" alt="Pittogramma: una persona accanto a uno stetoscopio"><strong>Infermiere e medico dell'emergenza</strong></div></td>
             <td>Curano le persone sul posto, in ambulanza e in pronto soccorso. In una grande emergenza organizzano i soccorsi sanitari.</td>
@@ -168,13 +208,13 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <div class="scheda-titolo-principale" role="heading" aria-level="2">Prova tu: una giornata di allerta</div>
-        <div class="scheda-sottotitolo">Chi lavora sul rischio · Foglio 2 di 3</div>
+        <div class="scheda-sottotitolo">Chi lavora sul rischio · Foglio 3 di 4</div>
       </div>
     </header>
 
     <div class="op">
       <h2 class="scheda-h2">1. Chi fa che cosa?</h2>
-      <p>Questa è una giornata <strong>inventata</strong>, in un comune collinare. Per ogni momento scrivi quale professione della tabella sta lavorando. A volte ne servono due. Puoi anche dirlo a voce o indicarla sul foglio 1.</p>
+      <p>Questa è una giornata <strong>inventata</strong>, in un comune collinare. Per ogni momento scrivi quale professione della tabella sta lavorando. A volte ne servono due. Puoi anche dirlo a voce o indicarla nella tabella dei fogli 1 e 2.</p>
       <ol class="op-eventi">
         <li><span>Il giorno prima, al Centro funzionale della Regione, si confrontano i millimetri di pioggia attesi con le soglie della zona.</span><span class="op-riga" aria-label="Spazio per scrivere la professione"></span></li>
         <li><span>Il Comune ha un piano che dice quali strade chiudere se il torrente sale e dove si raccolgono le persone.</span><span class="op-riga" aria-label="Spazio per scrivere la professione"></span></li>
@@ -219,7 +259,7 @@
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
         <div class="scheda-titolo-principale" role="heading" aria-level="2">Per il mio portfolio</div>
-        <div class="scheda-sottotitolo">Chi lavora sul rischio · Foglio 3 di 3</div>
+        <div class="scheda-sottotitolo">Chi lavora sul rischio · Foglio 4 di 4</div>
       </div>
     </header>
 
@@ -254,7 +294,7 @@
           <li><strong>secondaria di secondo grado, classi prime e seconde</strong>: anche extracurricolari;</li>
           <li><strong>classi terze, quarte e quinte</strong>: curricolari, integrate con la formazione scuola-lavoro (ex PCTO, così chiamata dal 2025/2026, D.L. 127/2025, art. 1, c. 6), con le attività delle università e con quelle degli ITS Academy.</li>
         </ul>
-        <p>Le 30 ore non sono una materia nuova e si distribuiscono in modo flessibile. Le Linee guida prevedono il docente tutor, l'E-Portfolio con il «capolavoro», il consiglio di orientamento alla fine della secondaria di primo grado e il Curriculum dello studente, che riporta anche il volontariato svolto fuori dalla scuola. <strong>Tempi:</strong> 30 minuti per il foglio 1, 50 per il foglio 2, 20 per il foglio 3; si può dividere in due lezioni. In terza media scegli due o tre professioni e leggi tu la tabella ad alta voce.</p>
+        <p>Le 30 ore non sono una materia nuova e si distribuiscono in modo flessibile. Le Linee guida prevedono il docente tutor, l'E-Portfolio con il «capolavoro», il consiglio di orientamento alla fine della secondaria di primo grado e il Curriculum dello studente, che riporta anche il volontariato svolto fuori dalla scuola. <strong>Tempi:</strong> 30 minuti per i fogli 1 e 2, 50 per il foglio 3, 20 per il foglio 4; si può dividere in due lezioni. In terza media scegli due o tre professioni e leggi tu la tabella ad alta voce.</p>
         <p>Il Gruppo comunale può raccontare in classe il volontariato e la formazione scuola-lavoro: vedi <a href="/formazione/il-gruppo-a-scuola/">Il Gruppo a scuola</a> e la scheda <a href="/formazione/schede-stampabili/percorso-volontariato-secondaria2/">Percorso volontariato</a>. Il Gruppo non si attiva su chiamata dei cittadini: in emergenza si chiama il 112. Fonti lette il 19/11/2026: MIM, Linee guida per l'orientamento; Normattiva, D.L. 127/2025 e D.P.R. 328/2001; Regione Lazio, NUE 112; INGV, servizio di sorveglianza sismica; DPC, sistema di allertamento nazionale.</p>
       </div>
     </div>
