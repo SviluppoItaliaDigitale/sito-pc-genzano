@@ -3,6 +3,7 @@ title: "Quattro ore nel bosco di Lariano con l'autobotte"
 date: 2026-09-07T00:02:00+02:00
 description: "Lunedì 7 settembre la Sala Operativa regionale ha attivato il Gruppo per un incendio boschivo a Lariano. Sul posto l'Atego, fino a sera."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-07-lariano-incendio-bosco-quattro-ore.webp"

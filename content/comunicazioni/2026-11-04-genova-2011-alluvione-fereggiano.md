@@ -3,6 +3,7 @@ title: "Genova, 4 novembre 2011: l'alluvione del Fereggiano e la lezione dei rii
 date: 2026-11-04T00:03:00+01:00
 description: "Fino a 180 mm di pioggia in un'ora su Genova: il rio Fereggiano esondò in via Fereggiano e causò sei vittime. Cosa insegnano i rii tombati."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-04-genova-2011-alluvione-fereggiano.webp"

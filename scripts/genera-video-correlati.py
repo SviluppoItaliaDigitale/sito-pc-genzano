@@ -480,6 +480,13 @@ FORCE_MATCHES = {
 }
 
 DENY_PAGE_VIDEO = {
+    # Audit 19/11/2026: video sull'orientamento in montagna (CNSAS) sulla
+    # cartografia delle aree di emergenza di Genzano: la parola
+    # «cartografia» non basta, il tema della pagina è l'evacuazione urbana.
+    ("cartografia", "9kMOL7z3yiw"),
+    # Inaugurazione della sede INGV dell'Aquila: non parla del processo
+    # Grandi Rischi, l'aggancia solo il nome della città.
+    ("comunicazioni/2026-11-19-scienza-e-giustizia-grandi-rischi", "sVBcGFxnIC8"),
     # Tempesta SOLARE ≠ tempesta Vaia (vento)
     ("dossier/la-tempesta-solare", "cmEzpKqaTEU"),
     # Sciame di Santorini: pertinente solo per il Pollino (sequenza sismica)

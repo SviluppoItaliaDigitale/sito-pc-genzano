@@ -3,6 +3,7 @@ title: "Cosa fa la PC quando un'emergenza supera i confini comunali"
 date: 2026-07-07
 description: "Un'alluvione o un incendio spesso travalicano i confini amministrativi. Come si gestisce il coordinamento tra più comuni, la provincia e la regione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-07-protezione-civile-sconfinamenti-provinciali.webp"

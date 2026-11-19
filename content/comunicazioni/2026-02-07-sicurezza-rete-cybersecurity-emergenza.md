@@ -3,6 +3,7 @@ title: "Sicurezza in Rete: quando la cybersecurity diventa Protezione Civile"
 date: 2026-02-07
 description: "Il 7 febbraio è la Giornata nazionale Sicurezza in Rete. Un attacco informatico a ospedali o acquedotti può diventare emergenza reale: cosa fare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-07-sicurezza-rete-cybersecurity-emergenza.webp"

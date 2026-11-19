@@ -3,6 +3,7 @@ title: "1 dicembre: avvio dicembre e inverno meteorologico"
 date: 2026-12-01
 description: "Inizia dicembre e, con esso, l'inverno meteorologico. Cosa aspettarsi nel Lazio e come prepararsi in casa, in auto e per le feste."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-01-avvio-dicembre-inverno-meteorologico.webp"

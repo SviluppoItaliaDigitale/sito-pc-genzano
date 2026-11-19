@@ -3,6 +3,7 @@ title: "Da oggi il buio alle 17: il primo giorno di ora solare"
 date: 2026-10-25T00:01:00+02:00
 description: "Entra in vigore l'ora solare. Il sole tramonta prima. Come adattare la giornata e mantenere sicurezza ed efficienza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-26-ora-solare-primo-giorno-buio-alle-17.webp"

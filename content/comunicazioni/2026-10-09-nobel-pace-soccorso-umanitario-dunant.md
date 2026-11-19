@@ -3,6 +3,7 @@ title: "Nobel per la pace: da Solferino a oggi, il premio che onora il soccorso"
 date: 2026-10-09T00:02:00+02:00
 description: "Oggi a Oslo si annuncia il Nobel per la pace. Il primo, nel 1901, andò a Henry Dunant: da Solferino nacque la Croce Rossa, premiata poi tre volte."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-09-nobel-pace-soccorso-umanitario-dunant.webp"

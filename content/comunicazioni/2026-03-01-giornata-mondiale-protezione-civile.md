@@ -3,6 +3,7 @@ title: "1° marzo, Giornata Mondiale della Protezione Civile"
 date: 2026-03-01
 description: "Ogni 1° marzo l'Organizzazione Internazionale di Protezione Civile celebra la Giornata Mondiale per ricordare il valore della prevenzione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-01-giornata-mondiale-protezione-civile.webp"

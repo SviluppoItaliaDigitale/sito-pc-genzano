@@ -3,6 +3,7 @@ title: "Responsabilità penale nelle emergenze: primo sì del Senato alle tutele
 date: 2026-08-05T00:02:00+02:00
 description: "Il 21 ottobre 2026 la Camera ha approvato in via definitiva il ddl: per i volontari conterà solo la colpa grave. Qui la cronistoria dal primo sì del Senato."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-05-senato-tutele-penali-volontari-protezione-civile.webp"

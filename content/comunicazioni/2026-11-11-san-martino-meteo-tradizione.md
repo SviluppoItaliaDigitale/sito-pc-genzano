@@ -3,6 +3,7 @@ title: "San Martino: tradizione, meteo e letture del territorio"
 date: 2026-11-11T00:03:00+01:00
 description: "L'11 novembre, San Martino: proverbi meteo, tradizioni contadine, e quello che ci insegnano sulla lettura empirica del clima."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-11-san-martino-meteo-tradizione.webp"

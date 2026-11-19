@@ -3,6 +3,7 @@ title: "Raccontare un'emergenza senza fare danni: lo sguardo del giornalista"
 date: 2026-11-26T00:02:00+01:00
 description: "Fonti verificate, rispetto per vittime e minori, notizie false: come si racconta un'emergenza. E che cosa fa chi la riprende con il telefono."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-26-raccontare-un-emergenza.webp"

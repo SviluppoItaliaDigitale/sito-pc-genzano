@@ -3,6 +3,7 @@ title: "Temporali di settembre: come riconoscerli e proteggersi"
 date: 2026-09-03T00:01:00+02:00
 description: "I temporali di settembre sono tra i più intensi dell'anno. Come leggerli, che cosa fare, quando rientrare in sicurezza."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-03-temporali-settembre-prevenzione.webp"

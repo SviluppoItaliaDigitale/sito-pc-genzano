@@ -3,6 +3,7 @@ title: "Allerta meteo in due video: cosa dicono i colori e cosa fare"
 date: 2026-09-23T00:03:00+02:00
 description: "Verde, gialla, arancione, rossa: due brevi video spiegano il significato di ogni colore e le azioni da fare a Genzano di Roma."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-23-allerta-meteo-colori-cosa-fare-video.webp"

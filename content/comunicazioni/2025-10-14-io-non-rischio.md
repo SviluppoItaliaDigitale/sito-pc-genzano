@@ -3,6 +3,7 @@ title: "Io Non Rischio 2025 - Genzano di Roma in piazza"
 date: 2025-10-14
 description: "I volontari del Gruppo in Piazza Tommaso Frasconi per la campagna nazionale Io Non Rischio."
 badge: "Evento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-10-14-io-non-rischio.webp"

@@ -3,6 +3,7 @@ title: "Esodo natalizio: traffico e sicurezza sulle autostrade"
 date: 2026-12-19
 description: "Il weekend 19-21 dicembre è il picco dell'esodo natalizio. Arterie più trafficate dal Lazio e consigli di sicurezza per il viaggio."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-19-esodo-natalizio-traffico-autostrade.webp"

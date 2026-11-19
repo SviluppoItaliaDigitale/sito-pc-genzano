@@ -3,6 +3,7 @@ title: "EXE PO 2026: la grande esercitazione nazionale di protezione civile sul 
 date: 2026-06-26T00:05:00+02:00
 description: "Dal 25 al 27 giugno il sistema nazionale di protezione civile si esercita sull'intero bacino del Po per il rischio alluvionale. Cosa si prova e perché conta."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-exe-po-2026-esercitazione-nazionale-rischio-alluvione.webp"

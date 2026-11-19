@@ -3,6 +3,7 @@ title: "Gelate e ghiaccio sulle strade: come comportarsi in inverno"
 date: 2026-01-23
 description: "Ghiaccio e gelate nei Castelli Romani: come muoversi a piedi e in auto in sicurezza nei giorni più freddi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-23-gelate-ghiaccio-strade-comportamenti-invernali.webp"

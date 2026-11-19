@@ -3,6 +3,7 @@ title: "La catena delle comunicazioni in protezione civile: DPC, COR, COM, COI, 
 date: 2026-04-16
 description: "Come le informazioni viaggiano dall'evento fino alla decisione operativa: dal Dipartimento della Protezione Civile al Centro Operativo Comunale."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc.webp"

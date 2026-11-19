@@ -77,5 +77,5 @@ Ogni rischio ha la sua pagina-materia dedicata, ancorata alle fonti istituzional
 
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — il ciclo del rischio e il modello R = P × V × E.
 - [Rischi e prevenzione](/rischi-prevenzione/) — la parte operativa, rischio per rischio: cosa fare prima, durante e dopo.
-- [Strumenti in tempo reale](/strumenti/) e [Cruscotto del territorio](/cruscotto/) — radar, mappe e dati live da fonti ufficiali.
+- [Strumenti in tempo reale](/strumenti/) e [Cruscotto e dati in tempo reale](/cruscotto/) — radar, mappe e dati live da fonti ufficiali.
 - [Glossario](/glossario/) e [Normativa](/normativa/) — sigle, termini e norme di riferimento.

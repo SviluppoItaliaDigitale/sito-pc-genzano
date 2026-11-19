@@ -4,6 +4,7 @@ date: 2026-10-21T00:03:00+02:00
 lastmod: 2026-10-25
 description: "Il resoconto del 21 e 22 ottobre: quattro interventi per alberi e rami a Genzano e il supporto a Latina, con foto e video già pubblicati."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-21-maltempo-rami-genzano-volontari-alluvione-latina.webp"

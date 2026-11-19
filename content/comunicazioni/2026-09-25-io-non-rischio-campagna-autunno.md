@@ -3,6 +3,7 @@ title: "Io Non Rischio: torna la campagna nazionale di volontariato per il risch
 date: 2026-09-25T00:01:00+02:00
 description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piazze italiane per parlare di rischi e autoprotezione. Come funziona e cosa può fare ognuno."
 badge: "Volontariato"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-25-io-non-rischio-campagna-autunno.webp"

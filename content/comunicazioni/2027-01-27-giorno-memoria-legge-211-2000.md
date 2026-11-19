@@ -3,6 +3,7 @@ title: "27 gennaio, Giorno della Memoria: che cosa chiede la legge che lo ha ist
 date: 2027-01-27
 description: "La legge 211 del 2000 istituisce il Giorno della Memoria: ricordare la Shoah, le leggi razziali, i deportati e chi ha salvato vite a rischio della propria."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-27-giorno-memoria-legge-211-2000.webp"

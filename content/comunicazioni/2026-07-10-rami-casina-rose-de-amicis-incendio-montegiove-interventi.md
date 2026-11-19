@@ -3,6 +3,7 @@ title: "Due rami pericolanti e un incendio di sterpaglie in via Montegiove: gli 
 date: 2026-07-10T00:03:00+02:00
 description: "L'8 luglio un ramo appeso alla Casina delle Rose, il 9 un ramo rimosso in via De Amicis, il 10 un incendio di sterpaglie in via Montegiove."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-10-rami-casina-rose-de-amicis-incendio-montegiove-interventi.webp"

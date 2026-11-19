@@ -3,6 +3,7 @@ title: "Capodanno e petardi: sicurezza e rispetto"
 date: 2026-12-30T00:01:00+01:00
 description: "Capodanno si avvicina: regole, rischi e buone pratiche per petardi e fuochi d'artificio. Ordinanze comunali e 112."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-30-capodanno-petardi-sicurezza.webp"

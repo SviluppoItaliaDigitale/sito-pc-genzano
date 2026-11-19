@@ -3,6 +3,7 @@ title: "Carnevale in sicurezza: eventi pubblici, assembramenti, comportamenti"
 date: 2026-02-21
 description: "Il Carnevale porta nei nostri paesi feste, cortei, assembramenti. La Protezione Civile partecipa a molti eventi. Ecco cosa sapere per viverli in serenità."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-21-carnevale-sicurezza-eventi-assembramenti.webp"

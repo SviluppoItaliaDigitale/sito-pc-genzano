@@ -3,6 +3,7 @@ title: "L'ozono in ripresa e il clima previsto: i Nobel che leggono l'atmosfera"
 date: 2026-10-11T00:02:00+02:00
 description: "Il Nobel per la chimica 1995 spiegò come si distrugge l'ozono; quello per la fisica 2021 premiò i modelli del clima. Due scoperte per la prevenzione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-11-nobel-ozono-clima-atmosfera.webp"

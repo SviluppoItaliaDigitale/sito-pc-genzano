@@ -3,6 +3,7 @@ title: "Abbigliamento del volontario: la divisa tecnica e i DPI"
 date: 2026-10-22
 description: "La divisa del volontario di PC non è un'uniforme estetica. È un insieme di DPI normati che proteggono e identificano."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-22-abbigliamento-tecnico-volontario.webp"

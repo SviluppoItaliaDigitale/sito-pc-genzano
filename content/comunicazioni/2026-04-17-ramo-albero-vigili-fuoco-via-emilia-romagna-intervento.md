@@ -3,6 +3,7 @@ title: "Un ramo a terra e un albero abbattuto con i Vigili del fuoco in via Emil
 date: 2026-04-17T00:03:00+02:00
 description: "Venerdì 17 aprile, su richiesta della Polizia Locale, due volontari hanno tagliato un ramo a terra e assistito i Vigili del fuoco in via Emilia Romagna."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-17-ramo-albero-vigili-fuoco-via-emilia-romagna-intervento.webp"

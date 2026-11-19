@@ -3,6 +3,7 @@ title: "Tre attivazioni in un giorno: le bonifiche ad Albano e sette ore a Velle
 date: 2026-08-31T00:03:00+02:00
 description: "Lunedì 31 agosto: due bonifiche ad Albano Laziale e un intervento lungo a Velletri, con l'autobotte a rifornire d'acqua l'elicottero."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-31-tre-attivazioni-albano-velletri.webp"

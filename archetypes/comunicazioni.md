@@ -9,6 +9,17 @@ description: ""
 # Radiocomunicazioni | Prevenzione | Esercitazione | Aggiornamento | Informazione | Emergenza
 badge: "Comunicazione"
 
+# ── CANALE (obbligatorio dal 19/11/2026) ──
+# Dove compare l'articolo in homepage e nell'archivio. Si sceglie leggendo
+# il contenuto, non dal badge:
+#   territorio      = Genzano e Castelli Romani: interventi e vita del Gruppo,
+#                     atti del Comune, lavori, eventi in città
+#   italia          = Dall'Italia e dalla Regione: decreti, stati di emergenza,
+#                     notizie regionali e nazionali di protezione civile
+#   approfondimenti = storia, anniversari, scienza, prevenzione
+# Lo controlla scripts/check-canale-articoli.py, bloccante sulle PR.
+canale: "territorio"
+
 # ── PRIORITÀ ──
 # urgente = bordo rosso e posizione in evidenza | normale = aspetto standard
 priorita: "normale"

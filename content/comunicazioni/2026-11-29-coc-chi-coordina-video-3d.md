@@ -3,6 +3,7 @@ title: "Chi coordina in un'emergenza a Genzano: il COC del Comune"
 date: 2026-11-29T00:01:00+01:00
 description: "Un video di poco più di un minuto: chi decide in emergenza, che cos'è il Centro Operativo Comunale, che cosa fanno i volontari e che cosa fai tu."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-29-coc-chi-coordina-video-3d.webp"

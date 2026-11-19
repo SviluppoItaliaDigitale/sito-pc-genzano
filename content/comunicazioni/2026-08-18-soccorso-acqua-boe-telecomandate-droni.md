@@ -3,6 +3,7 @@ title: "Il soccorso in acqua cambia: boe telecomandate, droni e sagome rosa"
 date: 2026-08-18T00:02:00+02:00
 description: "Boe a motore guidate da riva, droni acquatici e boe pubbliche di emergenza: le nuove tecnologie del salvataggio e cosa insegnano a chi frequenta i laghi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-18-soccorso-acqua-boe-telecomandate-droni.webp"

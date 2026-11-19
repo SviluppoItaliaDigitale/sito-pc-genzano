@@ -3,6 +3,7 @@ title: "Vigilia dell'Immacolata: servizio e sicurezza serale"
 date: 2026-12-07
 description: "La sera del 7 dicembre, vigilia dell'Immacolata, è tradizionalmente occasione di manifestazioni religiose. Qualche nota."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-07-vigilia-immacolata-servizio-sicurezza.webp"

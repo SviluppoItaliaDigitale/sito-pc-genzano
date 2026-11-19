@@ -3,6 +3,7 @@ title: "Vivi da solo? Il piano di emergenza si fa lo stesso, con i vicini"
 date: 2027-02-09
 description: "Chi vive da solo non ha nessuno in casa che dia l'allarme. Quattro cose da preparare per un'emergenza: le persone di riferimento, i numeri, il kit, le informazioni sulla salute."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-09-piano-emergenza-chi-vive-da-solo.webp"

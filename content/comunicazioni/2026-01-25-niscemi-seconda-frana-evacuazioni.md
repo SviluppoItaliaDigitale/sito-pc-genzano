@@ -3,6 +3,7 @@ title: "Niscemi, una seconda frana colpisce il sud del paese"
 date: 2026-01-25
 description: "Domenica 25 gennaio si riattiva il fronte della frana del 1997 a Niscemi, in provincia di Caltanissetta. Il 27 gennaio le persone evacuate sono 1.500."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-25-niscemi-seconda-frana-evacuazioni.webp"

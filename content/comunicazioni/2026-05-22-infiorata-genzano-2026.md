@@ -3,6 +3,7 @@ title: "Infiorata di Genzano di Roma 2026: cosa sapere prima di venire"
 date: 2026-05-22T00:09:00+02:00
 description: "Infiorata di Genzano 2026, 248ª edizione dal 13 al 15 giugno: programma completo degli eventi giorno per giorno e indicazioni pratiche per il visitatore."
 badge: "Evento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-22-infiorata-genzano-2026.webp"

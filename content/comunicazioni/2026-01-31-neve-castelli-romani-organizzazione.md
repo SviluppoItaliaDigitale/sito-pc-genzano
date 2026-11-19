@@ -3,6 +3,7 @@ title: "Neve nei Castelli Romani: come ci organizziamo"
 date: 2026-01-31
 description: "La neve ai Castelli Romani è meno frequente che in montagna, ma può arrivare e creare disagi seri. Ecco come il territorio si prepara e cosa fare da cittadini."
 badge: "Prevenzione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-01-31-neve-castelli-romani-organizzazione.webp"

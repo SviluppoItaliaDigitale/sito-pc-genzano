@@ -3,6 +3,7 @@ title: "Una nuova bandiera tricolore sul Monumento ai Caduti di piazza Frasconi"
 date: 2026-06-11T00:02:00+02:00
 description: "I volontari del Gruppo hanno sostituito la bandiera tricolore del Monumento ai Caduti in piazza Frasconi, con il supporto della Protezione Civile di Lanuvio."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-11-nuova-bandiera-monumento-caduti-piazza-frasconi.webp"

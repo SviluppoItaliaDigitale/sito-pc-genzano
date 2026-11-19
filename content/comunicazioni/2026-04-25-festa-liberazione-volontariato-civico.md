@@ -3,6 +3,7 @@ title: "25 aprile: il volontariato di Protezione Civile come impegno civico"
 date: 2026-04-25T00:01:00+02:00
 description: "La Festa della Liberazione ricorda i valori della Costituzione: solidarietà, partecipazione, cura della comunità."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-25-festa-liberazione-volontariato-civico.webp"

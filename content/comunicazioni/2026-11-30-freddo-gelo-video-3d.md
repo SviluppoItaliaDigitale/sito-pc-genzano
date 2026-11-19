@@ -3,6 +3,7 @@ title: "Notte sotto zero: chi e che cosa proteggere dal gelo"
 date: 2026-11-30T00:02:00+01:00
 description: "Un video di poco più di un minuto su ghiaccio, contatori dell'acqua, persone sole e animali: che cosa fare quando di notte si scende sotto zero."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-30-freddo-gelo-video-3d.webp"

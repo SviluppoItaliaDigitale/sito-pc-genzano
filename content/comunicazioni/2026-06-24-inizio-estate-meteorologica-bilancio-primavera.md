@@ -3,6 +3,7 @@ title: "Dal 1° giugno è estate meteorologica: il bilancio della primavera"
 date: 2026-06-24T00:01:00+02:00
 description: "In meteorologia l'estate inizia il 1° giugno, non al solstizio. Un bilancio della primavera 2026 e delle tendenze in corso."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-24-inizio-estate-meteorologica-bilancio-primavera.webp"

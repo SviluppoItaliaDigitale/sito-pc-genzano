@@ -3,6 +3,7 @@ title: "Due rami e un cornicione pericolante in corso Gramsci: gli interventi de
 date: 2026-11-13T00:03:00+01:00
 description: "Venerdì 13 novembre due volontari sono intervenuti tre volte: rami in via Montecagnoletto II e in via Lenin, un cornicione pericolante in corso Gramsci."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-13-rami-montecagnoletto-lenin-cornicione-corso-gramsci-interventi.webp"

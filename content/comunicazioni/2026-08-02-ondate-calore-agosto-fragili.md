@@ -3,6 +3,7 @@ title: "Ondate di calore di agosto: come proteggere anziani, bambini e persone f
 date: 2026-08-02
 description: "Nei giorni più caldi dell'anno, le ondate di calore rappresentano un rischio sanitario serio. Cosa fare e cosa evitare per proteggere chi ci sta vicino."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-02-ondate-calore-agosto-fragili.webp"

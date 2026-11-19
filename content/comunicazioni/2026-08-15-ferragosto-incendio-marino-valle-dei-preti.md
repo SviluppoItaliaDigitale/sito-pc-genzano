@@ -3,6 +3,7 @@ title: "Un Ferragosto col mezzo antincendio: sterpaglie e canneto in fiamme a Ma
 date: 2026-08-15T00:02:00+02:00
 description: "Il pomeriggio del 15 agosto 2026 la SOUP ha attivato il Gruppo su un incendio di sterpaglie e canneto in via Valle dei Preti, a Marino."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-15-ferragosto-incendio-marino-valle-dei-preti.webp"

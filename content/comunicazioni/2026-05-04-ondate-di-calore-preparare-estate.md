@@ -3,6 +3,7 @@ title: "Ondate di calore: prepararsi ora, prima che arrivi l'estate"
 date: 2026-05-04
 description: "Le ondate di calore sono il rischio meteorologico con più impatto sanitario in Italia. Un promemoria per persone fragili, famiglie e volontari."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-04-ondate-di-calore-preparare-estate.webp"

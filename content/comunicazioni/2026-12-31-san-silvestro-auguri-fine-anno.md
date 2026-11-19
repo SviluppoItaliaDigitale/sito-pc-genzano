@@ -3,6 +3,7 @@ title: "San Silvestro: auguri di fine anno a Genzano di Roma"
 date: 2026-12-31
 description: "31 dicembre 2026. Gli auguri di fine anno del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-31-san-silvestro-auguri-fine-anno.webp"

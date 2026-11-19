@@ -3,6 +3,7 @@ title: "Incendi boschivi 2026: in Italia bruciati oltre 1.200 km². I dati ISPRA
 date: 2026-10-17T00:03:00+02:00
 description: "Dal 1° gennaio al 15 settembre 2026 in Italia oltre 1.200 km² percorsi dal fuoco, quasi 200 di boschi. I dati ISPRA, il quadro del Lazio e cosa fare ora."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-17-ispra-incendi-boschivi-2026-dati.webp"
@@ -75,7 +76,7 @@ La campagna antincendio si è chiusa il 15 ottobre. In autunno, però, sterpagli
 - [Campagna antincendio 2026 chiusa: 86 interventi in quattro mesi](/comunicazioni/2026-10-16-chiusura-campagna-aib-2026-bilancio/) — il bilancio del nostro Gruppo.
 - [Incendi boschivi: nel 2025 la superficie bruciata è quasi raddoppiata](/comunicazioni/2026-06-16-ispra-incendi-2025-superficie-bruciata-prevenzione/) — i dati ISPRA dell'anno scorso.
 - [Il fuoco visto dallo spazio](/dossier/fuoco-dallo-spazio/) — come i satelliti seguono gli incendi.
-- [Cruscotto del territorio](/cruscotto/) — la mappa EFFIS dei focolai attivi.
+- [Cruscotto e dati in tempo reale](/cruscotto/) — la mappa EFFIS dei focolai attivi.
 
 **Fonti istituzionali:**
 

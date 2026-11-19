@@ -32,7 +32,7 @@ Domande guida:
 Materiali utili:
 
 - [Programma dell'anno per la classe](/formazione/programma-dell-anno/) — cinque incontri già organizzati
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
+- [Scuole — parti da qui](/scuole/)
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/)
 - [Cosa fare in caso di emergenza](/formazione/cosa-fare-in-caso-di/)
 - [Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/)
@@ -202,7 +202,7 @@ Per organizzare un incontro o proporre un'attività nelle scuole del territorio 
 
 - [Programma dell'anno per la classe](/formazione/programma-dell-anno/) — cinque incontri da ottobre a maggio
 - [Verifica prima e dopo](/formazione/verifica-prima-e-dopo/) — che cosa ha imparato la classe
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/) — materiali per ruolo
+- [Scuole — parti da qui](/scuole/) — materiali per ruolo
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) — unità già strutturate
 - [Easy-to-Read per le scuole](/formazione/easy-to-read-scuola/) — schede semplificate
 - [Giochi della sicurezza](/giochi/) — attività interattive

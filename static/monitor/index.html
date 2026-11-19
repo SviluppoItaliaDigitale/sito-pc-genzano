@@ -1987,7 +1987,7 @@ function errCard(msg){const e=document.createElement("div");e.className="err";e.
 function noteEl(extra){
   const n=document.createElement("div");n.className="note";
   n.innerHTML=`Strumento sperimentale del Gruppo, dati indicativi. Fanno fede il
-  <a href="${BASE}cruscotto/">Cruscotto del territorio</a>,
+  <a href="${BASE}cruscotto/">Cruscotto e dati in tempo reale</a>,
   il <a href="https://mappe.protezionecivile.gov.it/it/mappe-rischi/bollettino-di-criticita/" target="_blank" rel="noopener">bollettino DPC</a>
   e <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener">INGV</a>.
   In emergenza chiama il <a href="tel:112">112</a>. ${extra||""}
@@ -2513,7 +2513,7 @@ function viewEms(){
       <p>L'elenco delle attivazioni non è al momento leggibile (né dallo snapshot del sito
       né dall'API, che non espone più le intestazioni CORS). Le attivazioni aperte restano
       consultabili sul <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">portale
-      Copernicus EMS</a> e nel <a href="${BASE}cruscotto/">Cruscotto del territorio</a>.</p>`;
+      Copernicus EMS</a> e nel <a href="${BASE}cruscotto/">Cruscotto e dati in tempo reale</a>.</p>`;
     feed.appendChild(el);
   } else if(S.errs.ems)feed.appendChild(errCard(S.errs.ems));
   const psPronto=S.ps&&S.ps.ospedali&&S.ps.ospedali.length;
@@ -4690,6 +4690,6 @@ setInterval(()=>{updZona();buildZoneLayer();rendSe("all");tickUpd()},60e3); // r
 setInterval(loadDPC,60*60e3);
 setInterval(()=>{if(S.obs)loadObs()},15*60e3); // stazioni: solo dopo il primo uso
 </script>
-<noscript><p style="padding:80px 20px;font-family:monospace">Questo monitor richiede JavaScript. Consulta il <a href="../cruscotto/">Cruscotto del territorio</a>, il bollettino su mappe.protezionecivile.gov.it e terremoti.ingv.it. In emergenza chiama il 112.</p></noscript>
+<noscript><p style="padding:80px 20px;font-family:monospace">Questo monitor richiede JavaScript. Consulta il <a href="../cruscotto/">Cruscotto e dati in tempo reale</a>, il bollettino su mappe.protezionecivile.gov.it e terremoti.ingv.it. In emergenza chiama il 112.</p></noscript>
 </body>
 </html>

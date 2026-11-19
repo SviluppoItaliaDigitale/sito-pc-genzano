@@ -3,6 +3,7 @@ title: "Incendio boschivo a Rocca di Papa: il Gruppo in via dei Principi fino a 
 date: 2026-08-10T00:03:00+02:00
 description: "La sera del 10 agosto 2026 la SOUP ha attivato il Gruppo sull'incendio boschivo di via dei Principi, a Rocca di Papa. Oltre due ore di lavoro."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-10-incendio-rocca-di-papa-via-dei-principi.webp"

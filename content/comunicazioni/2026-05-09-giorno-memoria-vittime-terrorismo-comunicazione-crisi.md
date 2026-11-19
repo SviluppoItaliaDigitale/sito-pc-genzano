@@ -4,6 +4,7 @@ date: 2026-05-09T00:02:00+02:00
 description: "Il 9 maggio 1978 ritrovamento del corpo di Aldo Moro: da quei 55 giorni nasce la consapevolezza italiana sulla gestione comunicativa di una crisi nazionale."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-09-giorno-memoria-vittime-terrorismo-comunicazione-crisi.webp"

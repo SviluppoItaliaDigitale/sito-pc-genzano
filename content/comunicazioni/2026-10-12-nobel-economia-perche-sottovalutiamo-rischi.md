@@ -3,6 +3,7 @@ title: "Perché sottovalutiamo i rischi: le lezioni dei Nobel per l'economia"
 date: 2026-10-12T00:02:00+02:00
 description: "Oggi si annuncia il Nobel per l'economia. Kahneman, Thaler e Ostrom: perché trascuriamo i rischi e come le comunità si organizzano per affrontarli."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-12-nobel-economia-perche-sottovalutiamo-rischi.webp"

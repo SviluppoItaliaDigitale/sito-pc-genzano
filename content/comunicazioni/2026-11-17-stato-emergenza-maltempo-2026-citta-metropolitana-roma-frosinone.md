@@ -3,6 +3,7 @@ title: "Maltempo di gennaio e febbraio 2026: stato di emergenza nella Città met
 date: 2026-11-17T00:05:00+01:00
 description: "Stato di emergenza fino al 14 luglio 2027 per il maltempo di inizio 2026 a Frosinone e nella Città metropolitana di Roma: contributi, mutui, volontariato."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-17-stato-emergenza-maltempo-2026-citta-metropolitana-roma-frosinone.webp"

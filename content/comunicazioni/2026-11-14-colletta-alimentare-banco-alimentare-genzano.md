@@ -3,6 +3,7 @@ title: "Colletta Alimentare: nove volontari con il Banco Alimentare nei supermer
 date: 2026-11-14T09:16:00+01:00
 description: "Sabato 14 novembre, per la 30ª Colletta Alimentare, nove volontari del Gruppo hanno affiancato il Banco Alimentare nei supermercati di Genzano."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-14-colletta-alimentare-banco-alimentare-genzano.webp"

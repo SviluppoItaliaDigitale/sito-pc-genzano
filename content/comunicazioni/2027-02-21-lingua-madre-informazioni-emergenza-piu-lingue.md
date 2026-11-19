@@ -3,6 +3,7 @@ title: "21 febbraio, Giornata della lingua madre: le informazioni di emergenza i
 date: 2027-02-21
 description: "Chi non parla bene l'italiano deve poter capire che cosa fare in un'emergenza. Le pagine del sito in sette lingue, i testi facili da leggere, le tabelle con i simboli e il 112."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-21-lingua-madre-informazioni-emergenza-piu-lingue.webp"

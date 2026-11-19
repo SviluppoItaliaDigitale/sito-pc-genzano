@@ -3,6 +3,7 @@ title: "La nuova Carta geologica d'Italia: i fogli che descrivono Genzano"
 date: 2026-10-01T00:02:00+02:00
 description: "L'ISPRA rifà la Carta geologica d'Italia in scala 1:50.000. Genzano è nel foglio 388 «Velletri»; i 4 fogli dei Castelli si scaricano gratis, anche da noi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-01-carta-geologica-italia-carg-fogli-genzano.webp"

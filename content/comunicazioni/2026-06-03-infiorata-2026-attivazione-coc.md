@@ -3,6 +3,7 @@ title: "Infiorata 2026: il Sindaco attiva il Centro Operativo Comunale"
 date: 2026-06-03T00:04:00+02:00
 description: "Con l'ordinanza n. 12 del 3 giugno 2026 il Sindaco attiva il Centro Operativo Comunale (COC) per l'Infiorata, dal 12 al 15 giugno."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-infiorata-2026-attivazione-coc.webp"

@@ -3,6 +3,7 @@ title: "Conservare bene per sprecare meno: come congelare, gestire il frigo e le
 date: 2025-06-10
 description: "Il primo capitolo del Libro del Risparmio di Fondazione Barilla è dedicato alla conservazione."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-06-10-conservazione-alimenti-casa-spreco.webp"

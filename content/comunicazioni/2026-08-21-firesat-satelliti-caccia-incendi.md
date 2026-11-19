@@ -3,6 +3,7 @@ title: "FireSat: la costellazione di satelliti nata per dare la caccia agli ince
 date: 2026-08-21T00:03:00+02:00
 description: "In orbita i primi satelliti costruiti solo per trovare incendi: focolai di 5 metri visti dallo spazio, con aggiornamenti ogni 20 minuti."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-21-firesat-satelliti-caccia-incendi.webp"

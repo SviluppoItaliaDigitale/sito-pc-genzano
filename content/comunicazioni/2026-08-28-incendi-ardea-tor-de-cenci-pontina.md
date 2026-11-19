@@ -3,6 +3,7 @@ title: "Due incendi in un pomeriggio: da Ardea a Tor de' Cenci, con il fumo sull
 date: 2026-08-28T00:03:00+02:00
 description: "Doppia attivazione antincendio venerdì 28 agosto: prima in via Bergamo ad Ardea, poi a Tor de' Cenci, dove il fumo ha invaso la via Pontina."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-28-incendi-ardea-tor-de-cenci-pontina.webp"

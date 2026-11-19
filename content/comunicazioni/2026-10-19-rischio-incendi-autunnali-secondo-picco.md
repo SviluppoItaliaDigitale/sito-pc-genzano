@@ -3,6 +3,7 @@ title: "Incendi autunnali: perché anche in ottobre serve attenzione"
 date: 2026-10-19
 description: "Gli incendi non si limitano all'estate. L'autunno può presentare un secondo picco legato a sterpaglie secche, vento e bruciature abusive."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-19-rischio-incendi-autunnali-secondo-picco.webp"

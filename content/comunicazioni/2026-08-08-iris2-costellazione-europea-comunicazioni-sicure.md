@@ -3,6 +3,7 @@ title: "IRIS², la costellazione satellitare europea cresce: comunicazioni sicur
 date: 2026-08-08T00:02:00+02:00
 description: "Firmato l'accordo UE-SpaceRISE: IRIS² sale a 414 satelliti, primi lanci nel 2029. Garantirà connettività ai soccorritori quando le reti terrestri cadono."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-08-iris2-costellazione-europea-comunicazioni-sicure.webp"

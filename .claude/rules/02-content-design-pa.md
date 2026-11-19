@@ -450,22 +450,23 @@ Ogni articolo deve avere tutti i campi previsti dall'archetipo:
 
 Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi `.notizia-categoria.<categoria>` (badge nelle card) e i selettori `.filter-pill[data-filter="<categoria>"]` (pulsanti filtro nell'archivio). Qualsiasi modifica alla palette va replicata in **entrambi** i gruppi per mantenere la coerenza visiva.
 
-### Canali editoriali dell'archivio — "Il Gruppo e il territorio" vs "Approfondimenti" (dal 30/08/2026)
+### Canali editoriali dell'archivio — tre canali dichiarati nel frontmatter (dal 19/11/2026)
 
-L'archivio `/comunicazioni/` e la homepage separano due **canali** di lettura (esito dell'audit esterno del 30/08/2026: il 69% dell'archivio è divulgativo e non deve competere in evidenza con gli avvisi operativi):
+L'archivio `/comunicazioni/` e la homepage dividono gli articoli in **tre canali**. Fino al 18/11/2026 erano due e si ricavavano dal badge («Il Gruppo e il territorio» vs «Approfondimenti», dal 30/08/2026), ma il badge sbagliava: una proroga nazionale con badge `Aggiornamento` finiva fra le notizie del territorio, e le notizie di Genzano scivolavano sotto quelle nazionali. Decisione di Alessandro del 19/11/2026: **nessun limite al numero di articoli** (una o più notizie al giorno), ma le notizie locali devono restare in vista.
 
-| Canale | Contenuto | Badge che ci ricadono di default |
+| Canale (`canale:`) | Etichetta | Contenuto |
 |---|---|---|
-| **Il Gruppo e il territorio** (`gruppo`) | Avvisi, interventi, attività e vita del Gruppo a Genzano e nei Castelli | Allerta, Emergenza, Avviso, Aggiornamento, Attività, Esercitazione, Volontariato, Evento, Comunicazione, Radiocomunicazioni |
-| **Approfondimenti** (`approfondimenti`) | Magazine: prevenzione, conoscenza, formazione, cultura di PC | Informazione, Prevenzione, Formazione |
+| `territorio` | **Genzano e Castelli Romani** | interventi e vita del Gruppo, atti del Comune, lavori, eventi in città, anche le attività del Gruppo fuori comune |
+| `italia` | **Dall'Italia e dalla Regione** | decreti, stati di emergenza, notizie della Regione Lazio e nazionali di protezione civile, eventi in corso altrove |
+| `approfondimenti` | **Approfondimenti** | storia e anniversari, scienza, prevenzione, guide, video spiegati |
 
 **Regole operative:**
 
-1. Il canale è **derivato automaticamente dal badge** dal partial `themes/flavour-pcgenzano/layouts/partials/canale-articolo.html`: di norma **non si scrive nulla** nel frontmatter e nessun articolo esistente va modificato.
-2. **Override** solo dove il default sbaglia: `canale: "gruppo"` o `canale: "approfondimenti"` nel frontmatter del singolo articolo (es. un'`Informazione` che è in realtà un avviso di servizio locale → `gruppo`; un'`Attività` che è un reportage divulgativo → `approfondimenti`). Valori non riconosciuti ricadono nel default.
-3. **Superfici**: homepage — sezione "Il Gruppo e il territorio" (solo canale operativo, partial `latest-news.html`) + striscia "Approfondimenti" (ultime 3 uscite magazine, partial `approfondimenti-home.html`); archivio — pill di canale sopra i filtri per categoria (deep-link `#canale=gruppo` / `#canale=approfondimenti`).
-4. **Gli URL non cambiano mai**: la separazione è di sola presentazione. Niente sezioni Hugo nuove, niente spostamenti di file (QR, braille, social e sitemap restano validi; Aruba non ha redirect automatici, rule 05).
-5. Se si aggiunge un **nuovo badge**, assegnarlo esplicitamente a un canale nella slice `$magazine` del partial (o lasciarlo cadere nel canale operativo, che è il default).
+1. 🔴 **Il canale si scrive sempre nel frontmatter**, scelto leggendo l'articolo (non dal badge). Lo controlla `scripts/check-canale-articoli.py`, **bloccante** in `validate-pr.yml`; l'archetipo lo porta già. Le versioni `-facile` sono escluse (non stanno nelle liste).
+2. Il partial `canale-articolo.html` restituisce `territorio`, `italia` o `approfondimenti`; il vecchio valore `gruppo` vale `territorio`, e senza campo vale ancora il vecchio criterio del badge, solo come ripiego.
+3. **Superfici**: homepage — «Da Genzano e dai Castelli Romani» (canale `territorio`, partial `latest-news.html`), poi le strisce «Dall'Italia e dalla Regione» e «Approfondimenti» (ultime 3 uscite ciascuna, partial `canale-home.html`); archivio — riquadro fisso **«Da Genzano e dai Castelli Romani, ultimi 30 giorni»** in cima (fino a 5 notizie, sopra l'elenco completo, che resta intero) e pulsanti per canale con deep-link `#canale=territorio|italia|approfondimenti` (`#canale=gruppo` porta ancora al territorio).
+4. **Gli URL non cambiano mai**: la separazione è di sola presentazione (rule 05).
+5. Prima classificazione: 687 articoli letti uno per uno il 19/11/2026 (157 territorio, 75 italia, 455 approfondimenti).
 
 **Criterio d'uso `Allerta` vs `Emergenza`:** i due badge non sono sinonimi e hanno colori distinti perché coprono fasi diverse del ciclo del rischio (previsione vs evento in corso). I criteri operativi e gli esempi sono definiti in `.claude/rules/06-protezione-civile-scientifica.md`, sezione "Quando usare il badge 'Allerta' e quando 'Emergenza'". Non scegliere tra i due per varietà editoriale: il badge `Emergenza` è intenzionalmente raro.
 - `priorita`: normale | urgente

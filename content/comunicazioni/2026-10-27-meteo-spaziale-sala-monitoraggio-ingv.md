@@ -4,6 +4,7 @@ date: 2026-10-27T00:03:00+01:00
 lastmod: 2026-10-27
 description: "Il monitoraggio dell'attività solare aiuta a valutare gli effetti su satelliti, comunicazioni radio e servizi essenziali."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-27-meteo-spaziale-sala-monitoraggio-ingv.webp"

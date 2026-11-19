@@ -3,6 +3,7 @@ title: "Terremoto in Venezuela: come si attiva il soccorso internazionale, e cos
 date: 2026-06-26T00:04:00+02:00
 description: "Dopo i forti terremoti in Venezuela si è mosso il sistema di protezione civile europeo e internazionale. L'Italia invia un team. Come funziona."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-terremoto-venezuela-soccorso-internazionale-italia.webp"

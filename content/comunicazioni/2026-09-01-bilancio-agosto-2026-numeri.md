@@ -3,6 +3,7 @@ title: "Agosto in numeri: 52 attivazioni, 227 ore, 28 giornate su 31"
 date: 2026-09-01T00:02:00+02:00
 description: "Il mese più impegnativo dell'anno per il Gruppo: 52 uscite, tre su quattro per incendi, e l'ultimo giorno chiuso con l'elicottero regionale a Velletri."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-01-bilancio-agosto-2026-numeri.webp"

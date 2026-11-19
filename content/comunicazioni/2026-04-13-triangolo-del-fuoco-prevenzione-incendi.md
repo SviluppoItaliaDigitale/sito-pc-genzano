@@ -3,6 +3,7 @@ title: "Triangolo del fuoco: capire come nasce un incendio per prevenirlo in tem
 date: 2026-04-13T00:02:00+02:00
 description: "Il triangolo del fuoco spiega come nasce e si mantiene un incendio. Conoscere i suoi tre elementi aiuta a prevenire rischi in casa e all'aperto."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-triangolo-del-fuoco-prevenzione-incendi.webp"

@@ -3,6 +3,7 @@ title: "Magnitudo 7.4 in Colombia e 4.7 ai Campi Flegrei: perché la profondità
 date: 2026-08-11T00:02:00+02:00
 description: "Il forte terremoto colombiano del 10 agosto e la sismicità italiana delle ultime settimane, letti insieme: cosa dicono i dati di INGV e USGS."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-11-terremoti-colombia-italia-profondita-magnitudo.webp"

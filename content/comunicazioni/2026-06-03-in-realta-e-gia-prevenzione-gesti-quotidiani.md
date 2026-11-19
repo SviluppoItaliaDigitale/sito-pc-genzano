@@ -3,6 +3,7 @@ title: "In realtà è già prevenzione: i piccoli gesti che ti tengono al sicuro
 date: 2026-06-03T00:02:00+02:00
 description: "La prevenzione non è roba da esperti. Sette gesti di tutti i giorni che già fai — o puoi iniziare oggi — ti proteggono davvero."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-in-realta-e-gia-prevenzione-gesti-quotidiani.webp"

@@ -3,6 +3,7 @@ title: "Val di Noto, 11 gennaio 1693: il terremoto che cambiò la Sicilia orient
 date: 2027-01-11
 description: "334 anni fa due scosse, il 9 e l'11 gennaio 1693, distrussero la Sicilia sud-orientale. La statistica del tempo contò circa 54.000 morti."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-11-val-di-noto-1693-terremoto-sicilia.webp"

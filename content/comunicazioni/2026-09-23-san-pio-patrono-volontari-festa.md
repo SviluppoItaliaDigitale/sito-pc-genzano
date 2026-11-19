@@ -3,6 +3,7 @@ title: "23 settembre: la festa di San Pio, patrono dei Volontari di Protezione C
 date: 2026-09-23T00:02:00+02:00
 description: "San Pio da Pietrelcina, patrono dei Volontari di Protezione Civile italiana: una ricorrenza nata dal basso con la petizione di 160 associazioni."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-23-san-pio-patrono-volontari-festa.webp"

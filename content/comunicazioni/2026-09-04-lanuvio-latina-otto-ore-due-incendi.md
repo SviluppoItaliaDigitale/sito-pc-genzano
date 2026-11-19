@@ -3,6 +3,7 @@ title: "Otto ore senza rientrare: da Lanuvio alle serre di Latina"
 date: 2026-09-04T00:03:00+02:00
 description: "Il 4 settembre le fiamme hanno lambito due fabbricati a Lanuvio. Due minuti dopo la chiusura, la squadra era già diretta a Latina."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-04-lanuvio-latina-otto-ore-due-incendi.webp"

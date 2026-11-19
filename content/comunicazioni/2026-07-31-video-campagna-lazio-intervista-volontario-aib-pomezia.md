@@ -3,6 +3,7 @@ title: "Il nostro volontario nel video della Regione Lazio: intervista durante u
 date: 2026-07-31T00:02:00+02:00
 description: "Il presidente della Regione Lazio ha pubblicato un video girato durante un intervento antincendio a Pomezia. Protagonista un volontario del nostro Gruppo."
 badge: "Volontariato"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-31-video-campagna-lazio-intervista-volontario-aib-pomezia.webp"

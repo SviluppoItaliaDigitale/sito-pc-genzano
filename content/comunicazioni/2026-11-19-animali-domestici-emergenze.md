@@ -3,6 +3,7 @@ title: "Animali domestici in emergenza: piani, kit, responsabilità"
 date: 2026-11-19T00:01:00+01:00
 description: "Anche gli animali domestici fanno parte della famiglia. In emergenza vanno protetti, evacuati e accolti in modo adeguato."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-19-animali-domestici-emergenze.webp"

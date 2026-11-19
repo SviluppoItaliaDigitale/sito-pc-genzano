@@ -128,7 +128,7 @@ L'Italia si è dotata di strumenti precisi per conoscere e governare il dissesto
 
 **Il Piano di Gestione del Rischio di Alluvioni (PGRA).** Recepisce la **Direttiva europea Alluvioni (2007/60/CE)** attraverso il **decreto legislativo 49 del 2010**. Aggiorna le mappe del rischio e definisce le misure di prevenzione e protezione, e viene rivisto ogni sei anni.
 
-**L'allertamento.** Mentre i terremoti non si possono prevedere, le piene e gli allagamenti spesso sì, almeno con qualche ora di anticipo. Il **Centro Funzionale Regionale del Lazio** emette ogni giorno i bollettini di **criticità idrogeologica** (frane e allagamenti diffusi) e **idraulica** (piene dei fiumi maggiori), con i quattro codici colore — verde, giallo, arancione, rosso. Il sistema poggia su reti di **monitoraggio** (pluviometri e idrometri) che misurano in tempo reale pioggia e livello dei corsi d'acqua, confrontandoli con soglie di attenzione. Tutto questo lo trovi aggiornato nella pagina [Allerte meteo](/allerte-meteo/) e nel [Cruscotto del territorio](/cruscotto/).
+**L'allertamento.** Mentre i terremoti non si possono prevedere, le piene e gli allagamenti spesso sì, almeno con qualche ora di anticipo. Il **Centro Funzionale Regionale del Lazio** emette ogni giorno i bollettini di **criticità idrogeologica** (frane e allagamenti diffusi) e **idraulica** (piene dei fiumi maggiori), con i quattro codici colore — verde, giallo, arancione, rosso. Il sistema poggia su reti di **monitoraggio** (pluviometri e idrometri) che misurano in tempo reale pioggia e livello dei corsi d'acqua, confrontandoli con soglie di attenzione. Tutto questo lo trovi aggiornato nella pagina [Allerte meteo](/allerte-meteo/) e nel [Cruscotto e dati in tempo reale](/cruscotto/).
 
 Fonte: Autorità di Bacino Distrettuale dell'Appennino Centrale; DPC; Centro Funzionale Regionale Lazio.
 
@@ -150,7 +150,7 @@ Il volontariato di protezione civile, come il nostro Gruppo, contribuisce soprat
 - [Frane e movimenti del terreno ai Castelli Romani](/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/) e [la frana del costone di Nemi](/comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense/).
 - [Sarno 1998: la frana che cambiò la prevenzione in Italia](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/).
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — il modello R = Pericolosità × Vulnerabilità × Esposizione.
-- [Allerte meteo](/allerte-meteo/) e [Cruscotto del territorio](/cruscotto/) — bollettini, radar e dati in tempo reale.
+- [Allerte meteo](/allerte-meteo/) e [Cruscotto e dati in tempo reale](/cruscotto/) — bollettini, radar e dati in tempo reale.
 
 ## Per approfondire — fonti istituzionali
 

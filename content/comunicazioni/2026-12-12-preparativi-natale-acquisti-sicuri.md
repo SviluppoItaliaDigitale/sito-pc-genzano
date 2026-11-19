@@ -3,6 +3,7 @@ title: "Preparativi Natale: acquisti sicuri e gestione del tempo"
 date: 2026-12-12
 description: "Dodici giorni a Natale. Come pianificare acquisti, gestire stress e prevenire incidenti durante i preparativi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-12-preparativi-natale-acquisti-sicuri.webp"

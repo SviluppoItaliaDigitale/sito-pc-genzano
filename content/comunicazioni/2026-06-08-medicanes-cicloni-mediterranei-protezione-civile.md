@@ -3,6 +3,7 @@ title: "Medicanes: i cicloni mediterranei simili agli uragani"
 date: 2026-06-08T00:02:00+02:00
 description: "Cosa sono i medicanes, perché possono essere pericolosi e come seguire il rischio meteo senza allarmismi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-08-medicanes-cicloni-mediterranei-protezione-civile.webp"

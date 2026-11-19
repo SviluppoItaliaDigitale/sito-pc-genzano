@@ -3,6 +3,7 @@ title: "La rete di vicinato attivo: resilienza di quartiere"
 date: 2026-06-28T00:01:00+02:00
 description: "In emergenza i primi soccorsi arrivano dai vicini, non dalle squadre ufficiali. Una rete di vicinato attivo è una delle forme più efficaci di prevenzione."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-28-rete-vicinato-attivo-resilienza-quartiere.webp"

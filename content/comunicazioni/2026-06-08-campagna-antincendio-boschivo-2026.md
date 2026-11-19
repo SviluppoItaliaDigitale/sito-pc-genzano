@@ -3,6 +3,7 @@ title: "Campagna antincendio boschivo 2026: dal 15 giugno al 15 ottobre la lotta
 date: 2026-06-08T00:03:00+02:00
 description: "Il Ministro per la Protezione Civile fissa i tempi della campagna AIB 2026 e invia le raccomandazioni: le date, la flotta aerea e cosa fare a Genzano."
 badge: "Prevenzione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-08-campagna-antincendio-boschivo-2026.webp"

@@ -3,6 +3,7 @@ title: "Spesa consapevole, ristorante, bambini: come evitare lo spreco fuori cas
 date: 2026-02-05
 description: "L'ultimo capitolo del Libro del Risparmio di Fondazione Barilla riguarda la spesa, i pasti fuori casa, i bambini e le feste."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-05-nuovi-acquisti-fuori-casa-bambini-spreco.webp"

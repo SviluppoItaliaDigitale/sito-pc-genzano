@@ -2,6 +2,7 @@
 title: "Esposizione dei grandi mezzi di soccorso a Marino: c'è anche Genzano di Roma"
 date: 2026-05-22T00:08:00+02:00
 badge: "Evento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 description: "Domenica 24 maggio 2026 a Cava dei Selci (Marino) l'esposizione dei grandi mezzi di soccorso. Tra le squadre presenti anche la Protezione Civile di Genzano."

@@ -1,27 +1,27 @@
 {{- /* ═══════════════════════════════════════════════════
-     CANALE EDITORIALE DI UN ARTICOLO — restituisce la stringa
-     "gruppo" (operativo/locale: avvisi, attività, vita del Gruppo)
-     oppure "approfondimenti" (magazine: prevenzione, conoscenza,
-     formazione). Introdotto il 30/08/2026 (separazione dei canali,
-     audit esterno): il 69% dell'archivio è divulgativo e non deve
-     competere in evidenza con gli avvisi operativi.
+     CANALE EDITORIALE DI UN ARTICOLO — restituisce uno di tre valori:
+       "territorio"      Genzano e Castelli Romani: avvisi, interventi e
+                         vita del Gruppo, atti del Comune, eventi in città
+       "italia"          Dall'Italia e dalla Regione: decreti, stati di
+                         emergenza, notizie regionali e nazionali di PC
+       "approfondimenti" storia, anniversari, scienza, prevenzione
 
-     Default derivato dal badge — NESSUNA modifica retroattiva sui
-     ~480 articoli esistenti:
-       Informazione, Prevenzione, Formazione  → approfondimenti
-       tutti gli altri badge                  → gruppo
-     Override per singolo articolo con `canale: "gruppo"` oppure
-     `canale: "approfondimenti"` nel frontmatter (facoltativo, solo
-     dove il default sbaglia). Un valore non riconosciuto ricade nel
-     default: mai un canale vuoto.
+     Dal 19/11/2026 ogni articolo dichiara il canale nel frontmatter
+     (`canale:`), scelto leggendo il contenuto: il badge da solo
+     sbagliava (una proroga nazionale con badge Aggiornamento finiva fra
+     le notizie del territorio). Lo controlla scripts/check-canale-articoli.py,
+     bloccante sulle PR. Se il campo manca vale il vecchio criterio del
+     badge, solo come ripiego. "gruppo" (valore fino al 18/11/2026) vale
+     "territorio".
 
      Uso: {{ $canale := partial "canale-articolo.html" . }}
-     Consumatori: latest-news.html, approfondimenti-home.html,
-     comunicazioni/list.html. */ -}}
+     Consumatori: latest-news.html, canale-home.html,
+     comunicazioni/list.html, shortcode ultime-comunicazioni. */ -}}
 {{- $canale := "" -}}
 {{- with .Params.canale -}}{{- $canale = . | lower -}}{{- end -}}
-{{- if not (in (slice "gruppo" "approfondimenti") $canale) -}}
+{{- if eq $canale "gruppo" -}}{{- $canale = "territorio" -}}{{- end -}}
+{{- if not (in (slice "territorio" "italia" "approfondimenti") $canale) -}}
   {{- $magazine := slice "Informazione" "Prevenzione" "Formazione" -}}
-  {{- $canale = cond (in $magazine (.Params.badge | default "")) "approfondimenti" "gruppo" -}}
+  {{- $canale = cond (in $magazine (.Params.badge | default "")) "approfondimenti" "territorio" -}}
 {{- end -}}
 {{- return $canale -}}

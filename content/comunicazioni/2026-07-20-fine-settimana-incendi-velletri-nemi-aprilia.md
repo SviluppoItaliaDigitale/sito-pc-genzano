@@ -3,6 +3,7 @@ title: "Un fine settimana di fuoco: quattro interventi tra Velletri, Nemi e Apri
 date: 2026-07-20T00:02:00+02:00
 description: "Nel weekend del 18-19 luglio quattro attivazioni della SOUP per il Gruppo: a Velletri e Nemi un rogo che ha mobilitato sette gruppi di protezione civile."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-20-fine-settimana-incendi-velletri-nemi-aprilia.webp"

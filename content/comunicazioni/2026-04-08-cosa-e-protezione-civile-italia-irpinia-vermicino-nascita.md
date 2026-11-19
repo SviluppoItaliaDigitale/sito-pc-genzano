@@ -3,6 +3,7 @@ title: "Che cos'è la protezione civile in Italia: da Irpinia e Vermicino al Ser
 date: 2026-04-08
 description: "Come è nato il sistema nazionale di protezione civile italiano, quali enti ne fanno parte, cosa prevede l'articolo 39 del Codice per il volontario."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita.webp"

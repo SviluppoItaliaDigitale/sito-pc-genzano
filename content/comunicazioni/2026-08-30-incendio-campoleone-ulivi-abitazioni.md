@@ -3,6 +3,7 @@ title: "Ulivi e canneto in fiamme a Campoleone, con il fuoco vicino alle case"
 date: 2026-08-30T00:02:00+02:00
 description: "Domenica 30 agosto, poco dopo le 13, l'attivazione per un incendio a Campoleone: bruciati sterpaglie, canneto e decine di ulivi, fiamme a ridosso delle case."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-30-incendio-campoleone-ulivi-abitazioni.webp"

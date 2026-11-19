@@ -3,6 +3,7 @@ title: "Biellese, 2-3 novembre 1968: l'alluvione della Valle Strona e di Valle M
 date: 2027-11-03T00:01:00+01:00
 description: "Cinquantanove anni fa acqua, fango e detriti travolsero il Biellese orientale: 58 vittime per la Regione Piemonte, 83 secondo il CNR-IRPI."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-11-03-biellese-1968-alluvione.webp"

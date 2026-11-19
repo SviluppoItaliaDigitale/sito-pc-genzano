@@ -3,6 +3,7 @@ title: "Frane e movimenti del terreno: cosa succede sotto i Castelli Romani"
 date: 2026-04-24
 description: "Il territorio dei Castelli Romani ha caratteristiche geologiche particolari che possono favorire frane e dissesti. Come riconoscere i segnali e cosa fare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-24-frane-movimenti-terreno-castelli-romani.webp"

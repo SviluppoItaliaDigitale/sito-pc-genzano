@@ -3,6 +3,7 @@ title: "Terzo giorno sulla pineta della Campana e un ramo pericolante in via Rom
 date: 2026-08-03T00:03:00+02:00
 description: "Il 3 agosto 2026 il mezzo polivalente del Gruppo è tornato a Nettuno per il rifornimento idrico. Nel pomeriggio la rimozione di un ramo a Genzano."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-03-terzo-giorno-nettuno-ramo-via-roma.webp"

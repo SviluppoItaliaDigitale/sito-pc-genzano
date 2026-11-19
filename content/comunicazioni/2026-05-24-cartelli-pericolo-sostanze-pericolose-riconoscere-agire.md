@@ -3,6 +3,7 @@ title: "Cartelli di pericolo delle sostanze pericolose: come riconoscerli"
 date: 2026-05-24T00:02:00+02:00
 description: "Guida pratica per riconoscere pittogrammi CLP, etichette ADR e segnaletica di sicurezza. Cosa osservare, cosa comunicare al 112 e cosa evitare."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire.webp"

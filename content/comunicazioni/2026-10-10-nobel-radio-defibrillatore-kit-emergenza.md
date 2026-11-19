@@ -3,6 +3,7 @@ title: "Dalla radio di Marconi al defibrillatore: i Nobel dentro il soccorso"
 date: 2026-10-10T00:03:00+02:00
 description: "La radio dei soccorsi, l'elettrocardiogramma del defibrillatore, i gruppi sanguigni, la torcia a LED, le batterie al litio: scoperte premiate con il Nobel."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-10-nobel-radio-defibrillatore-kit-emergenza.webp"

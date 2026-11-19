@@ -3,6 +3,7 @@ title: "Un albero pericolante all'asilo nido di via Tevere e due rami sulle stra
 date: 2026-11-12T00:01:00+01:00
 description: "Un ramo sopra via Stati Uniti d'America, un albero abbattuto all'asilo nido di via Tevere, rami in viale Fratelli Rosselli e una giornata di logistica."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-10-albero-asilo-via-tevere-rami-interventi.webp"

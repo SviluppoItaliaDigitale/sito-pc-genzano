@@ -3,6 +3,7 @@ title: "Temporali estivi nei Castelli Romani: come riconoscerli e cosa fare"
 date: 2026-06-13
 description: "I temporali estivi dei Castelli sono violenti, rapidi, localizzati. Saperli riconoscere e comportarsi bene fa la differenza tra disagio e incidente."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-13-temporali-estivi-castelli-romani.webp"

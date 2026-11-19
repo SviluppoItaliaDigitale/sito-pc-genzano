@@ -3,6 +3,7 @@ title: "Un giorno di pioggia: otto interventi tra alberi caduti, tombini e una v
 date: 2026-09-11T00:02:00+02:00
 description: "Allerta gialla e temporali il 10 settembre: otto interventi del Gruppo a Genzano, dall'albero su via Diana ai tombini ostruiti e a una voragine."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi.webp"

@@ -3,6 +3,7 @@ title: "4 giugno: tutela dei minori in emergenza"
 date: 2026-06-04
 description: "La Giornata internazionale dei bambini vittime di aggressione: tutela dei minori negli scenari emergenziali di Protezione Civile."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-04-tutela-minori-emergenze-bambini-vittime.webp"

@@ -518,6 +518,13 @@ jobs:
       - name: "🕐 Scarto orario della data coerente con l'ora italiana"
         run: python3 scripts/check-scarto-orario.py
 
+      # 19/11/2026: tre canali (Genzano e Castelli Romani, Dall'Italia e dalla
+      # Regione, Approfondimenti). Il canale si sceglie leggendo l'articolo e
+      # si scrive nel frontmatter: senza, le notizie locali tornerebbero a
+      # confondersi con quelle nazionali.
+      - name: "🗂️ Canale dichiarato in ogni articolo"
+        run: python3 scripts/check-canale-articoli.py
+
       # 13/10/2026: il post sul soccorso alpino è uscito su Instagram e Facebook
       # con tre punti della sintesi tagliati a metà frase (e altri otto prima).
       # Il generatore non taglia più e si ferma se il testo non entra: qui il

@@ -3,6 +3,7 @@ title: "IT-alert: prorogata la sperimentazione per maremoto e Stromboli"
 date: 2026-02-12
 description: "Una direttiva proroga al 31 dicembre 2026 la sperimentazione di IT-alert per maremoto e Stromboli. Per le piogge intense si sceglie un'app dedicata."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-12-it-alert-proroga-sperimentazione.webp"

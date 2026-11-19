@@ -3,6 +3,7 @@ title: "Chernobyl, 40 anni dopo: cosa ha insegnato alla protezione civile italia
 date: 2026-04-26T00:02:00+02:00
 description: "Il 26 aprile 1986 esplodeva Chernobyl: come quel disastro ha cambiato la protezione civile italiana, il monitoraggio radiologico e la comunicazione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-26-chernobyl-40-anni-protezione-civile.webp"

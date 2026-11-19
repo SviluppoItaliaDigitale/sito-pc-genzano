@@ -3,6 +3,7 @@ title: "La Regione Lazio apre un fondo per i Comuni con strade danneggiate da ev
 date: 2026-10-14T00:02:00+02:00
 description: "Due fondi regionali, 2,5 milioni in tre anni, per riparare strade danneggiate dal maltempo. Domanda entro il 12 novembre per i danni di gennaio-febbraio 2026."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-14-fondo-regionale-viabilita-comuni-eventi-calamitosi.webp"

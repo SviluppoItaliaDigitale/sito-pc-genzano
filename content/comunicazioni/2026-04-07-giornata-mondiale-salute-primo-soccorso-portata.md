@@ -3,6 +3,7 @@ title: "Giornata mondiale della salute: primo soccorso a portata di tutti"
 date: 2026-04-07
 description: "Il 7 aprile è la Giornata mondiale della salute. Conoscere almeno le basi del primo soccorso non è un optional: è un atto civile alla portata di ogni cittadino."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-07-giornata-mondiale-salute-primo-soccorso-portata.webp"

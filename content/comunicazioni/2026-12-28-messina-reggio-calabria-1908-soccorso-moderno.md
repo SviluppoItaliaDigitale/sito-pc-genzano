@@ -3,6 +3,7 @@ title: "Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece circa
 date: 2026-12-28
 description: "Alle 5:20 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrusse Messina e Reggio Calabria."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno.webp"

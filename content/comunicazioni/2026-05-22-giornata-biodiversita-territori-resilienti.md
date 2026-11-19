@@ -3,6 +3,7 @@ title: "22 maggio: Giornata della Biodiversità e territori più resilienti"
 date: 2026-05-22T00:01:00+02:00
 description: "La biodiversità non è solo tutela della natura: è infrastruttura di Protezione Civile. Boschi sani, fiumi curati, suoli fertili riducono il rischio."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-22-giornata-biodiversita-territori-resilienti.webp"

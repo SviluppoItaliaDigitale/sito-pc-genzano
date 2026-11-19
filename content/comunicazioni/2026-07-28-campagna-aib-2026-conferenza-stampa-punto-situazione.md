@@ -3,6 +3,7 @@ title: "Campagna AIB 2026, il punto della Regione Lazio: incendi in calo e 230 o
 date: 2026-07-28T00:03:00+02:00
 description: "La conferenza stampa del 27 luglio alla Protezione Civile regionale: il dispositivo 2026, i dati al 26 luglio e il bilancio 2025 con incendi in calo del 39%."
 badge: "Aggiornamento"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-28-campagna-aib-2026-conferenza-stampa-punto-situazione.webp"

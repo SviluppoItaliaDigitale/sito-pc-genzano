@@ -116,21 +116,6 @@ pagine:
       score: 2.2
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
-  cartografia:
-    title: Cartografia operativa del Piano di emergenza
-    url: /cartografia/
-    video:
-    - anchored:
-      - cartografia
-      canale: cnsas
-      id: 9kMOL7z3yiw
-      is_lis: false
-      overlap:
-      - cartografia
-      - sicuri
-      score: 7.0
-      titolo: 'Sicuri in Montagna: cartografia, sai dove andare?'
-      url: https://youtu.be/9kMOL7z3yiw
   catalogo-giochi/codice-arancione:
     title: 'Gioco: Codice Arancione'
     url: /catalogo-giochi/codice-arancione/
@@ -10093,17 +10078,6 @@ pagine:
       score: 13.6
       titolo: Raccolta di scritti sulla vicenda del processo dell’Aquila e successive riflessioni
       url: https://youtu.be/pDYHRR9DpY4
-    - anchored:
-      - aquila
-      canale: ingv-terremoti
-      id: sVBcGFxnIC8
-      is_lis: false
-      overlap:
-      - aquila
-      - ingv
-      score: 7.0
-      titolo: Inaugurazione a L'Aquila della nuova sede INGV
-      url: https://youtu.be/sVBcGFxnIC8
     - anchored:
       - aquila
       canale: ingv-terremoti

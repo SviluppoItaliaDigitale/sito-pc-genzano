@@ -3,6 +3,7 @@ title: "Adozione nuovo gestionale"
 date: 2026-04-04
 description: "Il Gruppo adotta ActivePager, una piattaforma digitale per il coordinamento delle emergenze e la gestione operativa."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-04-nuovo-gestionale.webp"

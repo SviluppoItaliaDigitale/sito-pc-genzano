@@ -3,6 +3,7 @@ title: "Cartografia e orientamento: perché la mappa resta uno strumento vitale"
 date: 2026-09-13
 description: "Nell'era del GPS, saper leggere una mappa e orientarsi con carta e bussola è ancora una competenza fondamentale per ogni volontario di PC."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-13-cartografia-orientamento-esercitazione.webp"

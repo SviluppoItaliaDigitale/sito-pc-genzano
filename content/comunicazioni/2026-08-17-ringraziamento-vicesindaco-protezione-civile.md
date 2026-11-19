@@ -3,6 +3,7 @@ title: "Il vicesindaco ringrazia i volontari: «Sempre in prima linea, un orgogl
 date: 2026-08-17T00:04:00+02:00
 description: "Il vicesindaco di Genzano Massimo Bevilacqua ringrazia pubblicamente il Gruppo per gli interventi di agosto. Il grazie va anche alla Polizia Locale."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-17-ringraziamento-vicesindaco-protezione-civile.webp"

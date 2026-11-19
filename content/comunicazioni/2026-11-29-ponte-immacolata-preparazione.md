@@ -3,6 +3,7 @@ title: "Ponte dell'Immacolata: viabilità, meteo e sicurezza"
 date: 2026-11-29
 description: "L'8 dicembre 2026 cade di martedì. Ponte lungo: come prepararsi con attenzione a traffico, meteo invernale e mercatini."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-29-ponte-immacolata-preparazione.webp"

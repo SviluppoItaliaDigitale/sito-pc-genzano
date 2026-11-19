@@ -152,7 +152,7 @@
       {{/* Stesso opt-out del TTS: tts:false esclude anche il glossario.
            Si carica dopo il contenuto per scansionare l'.article-body
            già renderizzato. */}}
-      {{ if and $ttsEnabled (gt .WordCount 30) }}
+      {{ if and $ttsEnabled (gt .WordCount 30) (ne .Params.glossario_inline false) }}
       {{ partial "glossario-inline.html" . }}
       {{ end }}
 

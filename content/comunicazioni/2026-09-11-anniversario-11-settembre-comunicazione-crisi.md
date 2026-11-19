@@ -3,6 +3,7 @@ title: "11 settembre: cosa la Protezione Civile ha imparato sulla comunicazione 
 date: 2026-09-11T00:01:00+02:00
 description: "A 25 anni dall'attacco alle Torri Gemelle, una riflessione sulla comunicazione di emergenza e sulle lezioni che ancora oggi guidano i piani di PC."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-11-anniversario-11-settembre-comunicazione-crisi.webp"

@@ -3,6 +3,7 @@ title: "Solidarietà natalizia: mense, Caritas e sostegno ai fragili"
 date: 2026-12-20
 description: "Il Natale è anche tempo di solidarietà concreta. Iniziative locali: mense, pacchi alimentari, sostegno a chi è in difficoltà."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-20-solidarieta-natalizia-caritas-mense.webp"

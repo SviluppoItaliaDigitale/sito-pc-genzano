@@ -53,6 +53,6 @@ I volontari non pubblicano immagini in cui si riconoscono dei minori senza il co
 
 ## Vedi anche
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
+- [Scuole — parti da qui](/scuole/)
 - [Strumenti per le scuole](/formazione/scuole-strumenti/) — tutti i moduli
 - [Dirigenti scolastici, DSGA, RSPP e ASPP](/formazione/dirigenti-e-rspp/)

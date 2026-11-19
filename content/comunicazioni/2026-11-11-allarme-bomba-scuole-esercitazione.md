@@ -3,6 +3,7 @@ title: "Scuole evacuate per un allarme bomba: la stessa risposta che proviamo ne
 date: 2026-11-11T00:01:00+01:00
 description: "Anche a Genzano scuole evacuate per una mail con minacce arrivata a migliaia di istituti italiani. Come funziona la risposta e che cosa cambia con un terremoto."
 badge: "Avviso"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-11-allarme-bomba-scuole-esercitazione.webp"

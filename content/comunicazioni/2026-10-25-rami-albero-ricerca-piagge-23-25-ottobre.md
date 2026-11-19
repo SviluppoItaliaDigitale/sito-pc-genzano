@@ -3,6 +3,7 @@ title: "Dal 23 al 25 ottobre: rami pericolanti e una ricerca alle Piagge"
 date: 2026-10-25T00:02:00+02:00
 description: "Il resoconto dal 23 al 25 ottobre: rami e un albero pericolanti a Genzano e il supporto ai Vigili del Fuoco in una ricerca alle Piagge."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-25-rami-albero-ricerca-piagge-23-25-ottobre.webp"

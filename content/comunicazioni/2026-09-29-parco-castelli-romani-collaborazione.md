@@ -3,6 +3,7 @@ title: "Il Parco dei Castelli Romani: un alleato della Protezione Civile"
 date: 2026-09-29
 description: "Il Parco Regionale dei Castelli Romani è un interlocutore della Protezione Civile del territorio: funzioni, antincendio, dissesto, educazione ambientale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-29-parco-castelli-romani-collaborazione.webp"

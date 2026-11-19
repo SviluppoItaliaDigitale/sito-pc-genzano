@@ -3,6 +3,7 @@ title: "Vigilia di Ferragosto: massima attenzione sul territorio"
 date: 2026-08-14T00:01:00+02:00
 description: "Il 14 agosto apre il fine settimana più intenso dell'estate. Allerte, sagre, traffico, incendi: lo stato del sistema di Protezione Civile."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-vigilia-ferragosto-stato-allerta.webp"

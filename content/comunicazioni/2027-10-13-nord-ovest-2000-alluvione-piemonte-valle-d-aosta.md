@@ -3,6 +3,7 @@ title: "Nord-Ovest, 13-16 ottobre 2000: l'alluvione di Piemonte e Valle d'Aosta"
 date: 2027-10-13
 description: "Ventisette anni fa quattro giorni di pioggia, fino a 740 mm, colpirono Piemonte e Valle d'Aosta: 23 vittime secondo il CNR-IRPI, 25 per l'ANPA."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-10-13-nord-ovest-2000-alluvione-piemonte-valle-d-aosta.webp"

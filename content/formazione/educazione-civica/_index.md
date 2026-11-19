@@ -12,7 +12,7 @@ dataUltimaRevisione: "2026-09-23"
 Questa pagina aiuta dirigenti, docenti coordinatori di educazione civica e insegnanti a usare i materiali di protezione civile nei percorsi scolastici. I contenuti sono gratuiti e pensati per attività in classe, educazione civica, formazione scuola-lavoro (ex PCTO), incontri con i volontari e percorsi interdisciplinari.
 
 <div class="alert alert-info" role="note">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Non sai da dove partire? Vai a <a href="/formazione/scuole-da-dove-cominciare/">Scuole: da dove cominciare</a> oppure apri i <a href="/formazione/percorsi-didattici/">percorsi didattici pronti</a>.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Non sai da dove partire? Vai a <a href="/scuole/">Scuole — parti da qui</a> oppure apri i <a href="/formazione/percorsi-didattici/">percorsi didattici pronti</a>.</p>
 </div>
 
 ## Quadro normativo di riferimento
@@ -173,7 +173,7 @@ Per proporre un'attività o chiedere informazioni scrivi a [segreteria@protezion
 
 ## Vedi anche
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
+- [Scuole — parti da qui](/scuole/)
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/)
 - [Checklist docente](/formazione/scuole-checklist-docente/)
 - [Quadro normativo per la scuola](/formazione/quadro-normativo-scuola/)

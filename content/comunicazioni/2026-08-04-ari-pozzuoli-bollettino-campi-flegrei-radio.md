@@ -3,6 +3,7 @@ title: "Campi Flegrei: il bollettino di sorveglianza ora si ascolta via radio"
 date: 2026-08-04T00:02:00+02:00
 description: "La Sezione ARI di Pozzuoli trasmette in automatico il bollettino dei Campi Flegrei sul ripetitore IR8AC. Un esempio del valore dei radioamatori nella PC."
 badge: "Radiocomunicazioni"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-04-ari-pozzuoli-bollettino-campi-flegrei-radio.webp"

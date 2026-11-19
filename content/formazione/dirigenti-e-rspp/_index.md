@@ -140,7 +140,7 @@ Per il quadro completo consulta la pagina [Quadro normativo per la scuola](/form
 
 ## Vedi anche
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/)
+- [Scuole — parti da qui](/scuole/)
 - [Educazione civica](/formazione/educazione-civica/)
 - [Strumenti per le scuole](/formazione/scuole-strumenti/)
 - [Psicologia dell'emergenza](/formazione/psicologia-emergenza/)

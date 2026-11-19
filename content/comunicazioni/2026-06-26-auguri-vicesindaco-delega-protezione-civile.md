@@ -3,6 +3,7 @@ title: "Auguri di buon lavoro al nuovo Vicesindaco con delega alla Protezione Ci
 date: 2026-06-26T00:02:00+02:00
 description: "Il Gruppo Comunale Volontari augura buon lavoro a Massimo Bevilacqua, Vicesindaco di Genzano con delega alla Protezione Civile, e conferma la collaborazione."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-26-auguri-vicesindaco-delega-protezione-civile.webp"

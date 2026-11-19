@@ -3,6 +3,7 @@ title: "Stromboli, 30 dicembre 2002: le frane della Sciara del Fuoco e il maremo
 date: 2026-12-30T00:02:00+01:00
 description: "Ventiquattro anni fa due frane sul fianco dello Stromboli generarono un maremoto: onde fino a quasi 11 metri sull'isola, tre feriti, gravi danni."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-30-stromboli-2002-maremoto-sciara-del-fuoco.webp"

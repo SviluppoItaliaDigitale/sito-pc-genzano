@@ -3,6 +3,7 @@ title: "Fossi, caditoie, grondaie: la manutenzione invisibile che evita l'allaga
 date: 2026-08-28T00:01:00+02:00
 description: "Prima delle piogge autunnali, verificare la pulizia di fossi, caditoie e grondaie è il primo gesto di prevenzione contro gli allagamenti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno.webp"

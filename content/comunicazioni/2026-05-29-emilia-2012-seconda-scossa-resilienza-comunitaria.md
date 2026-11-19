@@ -3,6 +3,7 @@ title: "29 maggio 2012: la seconda scossa in Emilia e la resilienza comunitaria"
 date: 2026-05-29T00:01:00+02:00
 description: "A 14 anni dalla seconda scossa in Emilia (29 maggio 2012): cosa significa resilienza comunitaria nelle emergenze sismiche prolungate."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-29-emilia-2012-seconda-scossa-resilienza-comunitaria.webp"

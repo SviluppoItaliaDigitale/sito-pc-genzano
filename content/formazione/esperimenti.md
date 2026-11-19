@@ -62,7 +62,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Che cosa aspettarsi:** Sulla carta compare una linea quasi dritta quando la scatola è ferma, e zig-zag tanto più ampi quanto più forte si scuote.
 **Cosa si impara:** Il pennarello resta fermo per inerzia mentre il foglio si muove con la terra: così si registra un terremoto. Il tracciato dice quanto e per quanto ha tremato: racconta un terremoto già avvenuto. Nessuno strumento prevede quando arriverà il prossimo.
 **Dove il modello si ferma:** Un sismografo vero registra frazioni di millimetro in tre direzioni; questo vede solo gli scossoni grossi, in un verso solo.
-**In chiave protezione civile:** L'INGV registra così i terremoti italiani e li pubblica in pochi minuti: li trovi nel cruscotto del sito, scheda «Terremoti». Vedi [Cruscotto del territorio](/cruscotto/) [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).
+**In chiave protezione civile:** L'INGV registra così i terremoti italiani e li pubblica in pochi minuti: li trovi nel cruscotto del sito, scheda «Terremoti». Vedi [Cruscotto e dati in tempo reale](/cruscotto/) [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).
 **Sicurezza:** Il buco nel bicchiere lo fa un adulto. La scatola si scuote appoggiata al tavolo, non sollevata.
 
 ### 5. Il ritmo che fa oscillare una torre 🟠
@@ -358,7 +358,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 **Che cosa aspettarsi:** Il LED si accende quando il galleggiante arriva alla soglia. Con l'acqua mossa lampeggia anche se il livello medio non è cambiato: è un falso allarme.
 **Cosa si impara:** Un sensore misura, ma è la soglia decisa da qualcuno a trasformare la misura in allarme. Troppo bassa: allarmi continui, e la gente smette di dar retta. Troppo alta: l'allarme arriva tardi. Le onde spiegano perché i sistemi veri mediano le misure prima di decidere.
 **Dove il modello si ferma:** È un prototipo didattico a pile, non un dispositivo di sicurezza: non si usa per sorvegliare niente davvero.
-**In chiave protezione civile:** Gli idrometri sui fiumi funzionano così, con soglie ufficiali: superata una soglia scatta una fase di allerta e si avvisano i Comuni. Vedi [Allerte meteo](/allerte-meteo/) [Cruscotto del territorio](/cruscotto/).
+**In chiave protezione civile:** Gli idrometri sui fiumi funzionano così, con soglie ufficiali: superata una soglia scatta una fase di allerta e si avvisano i Comuni. Vedi [Allerte meteo](/allerte-meteo/) [Cruscotto e dati in tempo reale](/cruscotto/).
 **Sicurezza:** Solo pila da 4,5 volt e LED: mai la corrente di casa vicino all'acqua. Il circuito lo controlla un adulto prima di versare l'acqua.
 
 ## Approfondimenti sul nostro sito

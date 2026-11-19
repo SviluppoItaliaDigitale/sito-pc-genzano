@@ -3,6 +3,7 @@ title: "Maxi emergenze e colonne mobili: come si organizza l'intervento fuori da
 date: 2026-04-12
 description: "Cos'è una colonna mobile, come si forma entro 6 ore dall'evento, quali attrezzature porta."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-12-maxi-emergenze-colonne-mobili-coordinamenti-fepivol-lazio.webp"

@@ -3,6 +3,7 @@ title: "Giornata mondiale zone umide: rischio idrogeologico e territorio"
 date: 2026-02-02
 description: "Il 2 febbraio è la Giornata mondiale delle zone umide. Zone umide intatte riducono alluvioni, frane e siccità: perché contano per la Protezione Civile."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-02-giornata-zone-umide-rischio-idrogeologico.webp"

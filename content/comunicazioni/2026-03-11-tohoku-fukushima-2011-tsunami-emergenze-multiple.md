@@ -4,6 +4,7 @@ date: 2026-03-11
 description: "Alle 14:46 dell'11 marzo 2011 una scossa di magnitudo 9.0 colpì la costa nord-est del Giappone."
 
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple.webp"

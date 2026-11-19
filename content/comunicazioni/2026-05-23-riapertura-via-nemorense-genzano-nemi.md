@@ -3,6 +3,7 @@ title: "Riaperta via Nemorense tra Genzano di Roma e Nemi: strada percorribile n
 date: 2026-05-23T00:02:00+02:00
 description: "Da venerdì 22 maggio via Nemorense, tra Genzano di Roma e Nemi, è di nuovo aperta al traffico nei due sensi dopo la chiusura per la frana del costone."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-23-riapertura-via-nemorense-genzano-nemi.webp"

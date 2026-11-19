@@ -3,6 +3,7 @@ title: "24 gennaio, Giornata internazionale dell'educazione: imparare il rischio
 date: 2027-01-24
 description: "Il 24 gennaio è la Giornata internazionale dell'educazione delle Nazioni Unite. A scuola la protezione civile è materia di educazione civica; da adulti si continua a imparare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-24-giornata-educazione-rischio.webp"
@@ -37,7 +38,7 @@ Per insegnanti e dirigenti il nostro sito ha materiali gratuiti, pensati per le 
 - i **kit per le scuole**, dall'infanzia alla secondaria, raccolti nella sezione [Formazione](/formazione/);
 - la pagina [Educazione civica e protezione civile](/formazione/educazione-civica/), con esempi di attività legate alla legge 92;
 - il [programma per la Settimana della protezione civile](/formazione/settimana-protezione-civile/), che cade ogni anno intorno al 13 ottobre;
-- la pagina [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/) per chi parte da zero.
+- la pagina [Scuole — parti da qui](/scuole/) per chi parte da zero.
 
 Come parlarne con i bambini senza spaventarli lo abbiamo spiegato nell'articolo per la [Giornata dell'Infanzia](/comunicazioni/2026-11-20-educazione-al-rischio-bambini/).
 

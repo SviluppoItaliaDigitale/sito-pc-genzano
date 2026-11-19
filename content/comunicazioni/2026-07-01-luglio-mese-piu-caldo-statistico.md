@@ -3,6 +3,7 @@ title: "Luglio: storicamente il mese più caldo dell'anno"
 date: 2026-07-01T00:01:00+02:00
 description: "Luglio è in media il mese più caldo dell'anno nel Lazio centrale. Cosa ci aspettiamo e come prepararsi alla stagione calda piena."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-01-luglio-mese-piu-caldo-statistico.webp"

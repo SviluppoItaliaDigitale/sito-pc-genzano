@@ -3,6 +3,7 @@ title: "Frane e allerta locale: ISO 22327 e il ruolo della comunità"
 date: 2026-06-05T00:02:00+02:00
 description: "Lo standard ISO 22327 spiega come si costruisce un sistema di allerta frane che funziona davvero a livello locale."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-05-iso-22327-allerta-frane-comunita.webp"

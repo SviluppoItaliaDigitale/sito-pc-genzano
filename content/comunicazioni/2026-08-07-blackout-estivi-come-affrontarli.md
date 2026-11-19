@@ -3,6 +3,7 @@ title: "Blackout elettrici estivi: perché accadono e come affrontarli"
 date: 2026-08-07
 description: "D'estate la rete elettrica è sotto stress per i condizionatori. Perché si verificano blackout e come prepararsi a interruzioni di corrente prolungate."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-07-blackout-estivi-come-affrontarli.webp"

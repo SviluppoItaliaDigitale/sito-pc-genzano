@@ -3,6 +3,7 @@ title: "Ancona, 13 dicembre 1982: la grande frana di Posatora"
 date: 2026-12-13T00:03:00+01:00
 description: "Quarantaquattro anni fa un versante di circa 340 ettari si mise in moto a ovest di Ancona: 3.661 persone evacuate dai quartieri di Posatora e Borghetto."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-13-ancona-1982-frana-posatora.webp"

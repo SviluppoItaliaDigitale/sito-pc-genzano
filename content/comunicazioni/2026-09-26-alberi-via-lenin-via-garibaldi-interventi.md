@@ -3,6 +3,7 @@ title: "Alberi e rami in via Lenin e via Garibaldi: gli interventi del 24 e 25 s
 date: 2026-10-01T00:03:00+02:00
 description: "Rami sulla strada in via Lenin, un albero divelto da un'autovettura e un grosso albero pericolante in via Garibaldi: gli interventi dal 24 al 26 settembre."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-26-alberi-via-lenin-via-garibaldi-interventi.webp"

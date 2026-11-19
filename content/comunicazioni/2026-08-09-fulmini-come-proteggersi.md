@@ -3,6 +3,7 @@ title: "Fulmini in estate: come proteggersi all'aperto e in casa"
 date: 2026-08-09
 description: "I temporali estivi nei Castelli portano fulmini. Regole semplici per ridurre il rischio a persone e cose."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-09-fulmini-come-proteggersi.webp"

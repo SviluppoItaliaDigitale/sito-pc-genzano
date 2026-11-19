@@ -3,6 +3,7 @@ title: "Esercitazioni di Protezione Civile: il calendario dell'autunno"
 date: 2026-08-25
 description: "A settembre riprendono le esercitazioni periodiche del Gruppo. Perché servono, cosa prevedono e come la cittadinanza è coinvolta."
 badge: "Esercitazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-25-esercitazioni-autunnali-calendario.webp"

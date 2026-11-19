@@ -3,6 +3,7 @@ title: "Lazio: approvato il programma 2026 della Campagna di comunicazione pubbl
 date: 2026-05-08T00:04:00+02:00
 description: "Pubblicata sul BURL n. 36 del 5 maggio 2026 la determinazione regionale che definisce il programma 2026: campagna social per i giovani volontari."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-08-campagna-comunicazione-protezione-civile-lazio-2026.webp"

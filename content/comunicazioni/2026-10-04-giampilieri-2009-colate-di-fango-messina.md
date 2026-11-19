@@ -3,6 +3,7 @@ title: "Giampilieri, 1° ottobre 2009: le colate di fango che travolsero i borgh
 date: 2026-10-04
 description: "In poche ore di pioggia i versanti sopra Giampilieri e Scaletta Zanclea si trasformarono in colate di fango: 37 morti. Cosa insegna quell'alluvione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-04-giampilieri-2009-colate-di-fango-messina.webp"

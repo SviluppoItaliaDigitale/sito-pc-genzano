@@ -3,6 +3,7 @@ title: "Neve e ghiaccio: prepararsi per l'inverno rigido"
 date: 2026-12-02
 description: "A Genzano di Roma nevica raramente ma non è impossibile. Come comportarsi se arriva neve o ghiaccio su strade e tetti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-02-neve-e-ghiaccio-preparazione.webp"

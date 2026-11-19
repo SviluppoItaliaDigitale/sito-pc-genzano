@@ -3,6 +3,7 @@ title: "Settimana nazionale della Protezione Civile: cosa possono fare le scuole
 date: 2026-10-18T00:01:00+02:00
 description: "Ogni ottobre la Settimana nazionale della Protezione Civile invita anche le scuole a parlare di rischi. Materiali pronti per ogni età e come usarli."
 badge: "Formazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-18-settimana-protezione-civile-scuole.webp"

@@ -3,6 +3,7 @@ title: "Rischio industriale: la direttiva Seveso e i piani di emergenza"
 date: 2026-10-20T00:02:00+02:00
 description: "Il rischio industriale è regolato dalla direttiva europea Seveso. Come si preparano i piani di emergenza per gli stabilimenti a rischio."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-20-rischio-industriale-seveso.webp"

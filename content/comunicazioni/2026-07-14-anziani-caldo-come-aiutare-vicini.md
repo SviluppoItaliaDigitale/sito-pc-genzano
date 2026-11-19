@@ -3,6 +3,7 @@ title: "Aiutare un anziano vicino in caldo estremo: cosa fare"
 date: 2026-07-14
 description: "Un anziano solo nel caldo estremo è una situazione di rischio concreto. Cosa fare se ne conosci uno, con la semplicità di chi sa cosa contano i piccoli gesti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-14-anziani-caldo-come-aiutare-vicini.webp"

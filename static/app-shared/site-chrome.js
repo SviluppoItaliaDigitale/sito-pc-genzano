@@ -85,14 +85,12 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/da-dove-comincio/" role="menuitem"><span>Da dove comincio?</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" role="menuitem"><span>Cosa Fare Adesso</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartina-meteo-italia/" role="menuitem"><span>Cartina meteo Italia</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/mappe-meteo-professionali/" role="menuitem"><span>Mappe meteo professionali</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/rischi-prevenzione/" role="menuitem"><span>Rischi e Prevenzione</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cartografia/" role="menuitem"><span>Cartografia</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto del territorio</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto e dati in tempo reale</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item dropdown" role="none">' +
@@ -201,8 +199,6 @@
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-emergenza/" style="color:rgba(255,255,255,0.85);">Piano di Emergenza</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" style="color:rgba(255,255,255,0.85);">Piano Familiare</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" style="color:rgba(255,255,255,0.85);">Allerte Meteo</a></li>' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartina-meteo-italia/" style="color:rgba(255,255,255,0.85);">Cartina meteo Italia</a></li>' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/mappe-meteo-professionali/" style="color:rgba(255,255,255,0.85);">Mappe meteo professionali</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/area-download/" style="color:rgba(255,255,255,0.85);">Area Download</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cartografia/" style="color:rgba(255,255,255,0.85);">Cartografia Operativa</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" style="color:rgba(255,255,255,0.85);">Cosa Fare Adesso</a></li>' +
@@ -308,6 +304,7 @@
       '</header>' +
       '<div class="a11y-dialog-body">' +
         '<p class="a11y-intro">Personalizza la lettura del sito. Le tue scelte vengono ricordate sul tuo dispositivo.</p>' +
+        '<p class="a11y-aiuto"><i class="bi bi-chat-dots-fill me-2" aria-hidden="true"></i>Non sai che cosa fare? Apri l\'<a href="' + SITE_URL + '/assistente/">Assistente virtuale</a>: ti guida con domande semplici.</p>' +
         '<fieldset class="a11y-section">' +
           '<legend class="a11y-section-title"><i class="bi bi-fonts me-2" aria-hidden="true"></i>Testo</legend>' +
           '<div class="a11y-control"><span class="a11y-control-label" id="a11yLblTextSize">Dimensione del testo</span>' +

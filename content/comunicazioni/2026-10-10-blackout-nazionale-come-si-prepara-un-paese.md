@@ -3,6 +3,7 @@ title: "Blackout nazionale: come si prepara un Paese a restare senza corrente"
 date: 2026-10-10T00:05:00+02:00
 description: "Dal blackout italiano del 2003 a quello di Spagna e Portogallo del 2025: piani di difesa, distacchi programmati e riaccensione della rete."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-10-blackout-nazionale-come-si-prepara-un-paese.webp"

@@ -4,6 +4,7 @@ date: 2026-10-21T00:02:00+02:00
 lastmod: 2026-11-12
 description: "Approvata in via definitiva e promulgata la legge che limita alla colpa grave la responsabilità penale colposa dei volontari di protezione civile."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-21-legge-protezione-civile-responsabilita-volontari.webp"

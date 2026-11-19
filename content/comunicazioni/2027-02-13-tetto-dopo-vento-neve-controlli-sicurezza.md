@@ -3,6 +3,7 @@ title: "Tegole, antenne e neve sul tetto: i controlli di fine inverno, restando 
 date: 2027-02-13
 description: "Dopo le raffiche e le nevicate dell'inverno conviene guardare il tetto. Che cosa osservare dal basso, perché non salire e chi chiamare se qualcosa può cadere sulla strada."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-13-tetto-dopo-vento-neve-controlli-sicurezza.webp"

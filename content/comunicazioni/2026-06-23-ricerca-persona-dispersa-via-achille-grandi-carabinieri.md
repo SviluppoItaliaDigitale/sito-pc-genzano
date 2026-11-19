@@ -3,6 +3,7 @@ title: "Una ricerca in via Achille Grandi con i Carabinieri: l'intervento del 23
 date: 2026-06-23T00:03:00+02:00
 description: "Martedì 23 giugno, su richiesta dei Carabinieri di Genzano, tre volontari hanno perlustrato la zona di via Achille Grandi per cercare una persona dispersa."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-23-ricerca-persona-dispersa-via-achille-grandi-carabinieri.webp"

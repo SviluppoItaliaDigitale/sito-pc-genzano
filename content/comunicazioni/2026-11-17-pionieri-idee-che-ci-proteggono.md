@@ -3,6 +3,7 @@ title: "Da Leonardo a Hamaguchi: i pionieri che hanno anticipato la protezione c
 date: 2026-11-17T00:03:00+01:00
 description: "Un paracadute disegnato nel Quattrocento, un fuoco di covoni di riso, le prime ambulanze: idee del passato che oggi ritroviamo nella protezione civile."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-17-pionieri-idee-che-ci-proteggono.webp"

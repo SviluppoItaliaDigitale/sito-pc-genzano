@@ -3,6 +3,7 @@ title: "Riscaldamento sicuro: stufe, camini e caldaie a dicembre"
 date: 2026-12-04
 description: "Dicembre è il mese di picco del riscaldamento. Ricapitoliamo le regole per stufe, camini, caldaie e impianti alternativi."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-04-riscaldamento-sicuro-dicembre.webp"

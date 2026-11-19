@@ -3,6 +3,7 @@ title: "Versilia, 19 giugno 1996: la notte che cancellò Cardoso"
 date: 2026-06-19T00:02:00+02:00
 description: "Un nubifragio di intensità mai registrata in Versilia: circa 480 mm di pioggia in una giornata tra Stazzema, Cardoso e Pietrasanta."
 badge: "Comunicazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema.webp"

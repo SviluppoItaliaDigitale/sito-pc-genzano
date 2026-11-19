@@ -3,6 +3,7 @@ title: "Fuoco prescritto: audizione in Consiglio regionale sulla reintroduzione 
 date: 2026-10-14T00:03:00+02:00
 description: "La XII Commissione ha ascoltato enti parco e associazioni sul ripristino della norma sul fuoco prescritto. Nessuna decisione formale: si attendono proposte."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-14-fuoco-prescritto-audizione-consiglio-regionale.webp"

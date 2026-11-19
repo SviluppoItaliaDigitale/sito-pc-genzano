@@ -3,6 +3,7 @@ title: "Alberi a terra, piante secche e un muro caduto: gli interventi del 13 ap
 date: 2026-04-13T00:04:00+02:00
 description: "Lunedì 13 aprile sette interventi a Genzano su richiesta del Sindaco e della Polizia Locale: alberi a terra e pericolanti, piante secche, un muro caduto."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-alberi-piante-secche-muro-caduto-interventi.webp"

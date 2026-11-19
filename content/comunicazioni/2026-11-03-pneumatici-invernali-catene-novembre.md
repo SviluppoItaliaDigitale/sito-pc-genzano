@@ -3,6 +3,7 @@ title: "Pneumatici invernali e catene: le regole dal 15 novembre"
 date: 2026-11-03T00:01:00+01:00
 description: "Dal 15 novembre al 15 aprile scattano gli obblighi invernali sui pneumatici. Cosa prevede il Codice della Strada."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-03-pneumatici-invernali-catene-novembre.webp"

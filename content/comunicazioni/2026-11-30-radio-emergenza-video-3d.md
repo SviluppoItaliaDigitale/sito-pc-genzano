@@ -3,6 +3,7 @@ title: "Quando i telefoni non funzionano: le radio in emergenza"
 date: 2026-11-30T00:01:00+01:00
 description: "Un video di poco più di un minuto: perché in emergenza le reti telefoniche si bloccano, come lavorano le reti radio e che cosa puoi fare tu."
 badge: "Radiocomunicazioni"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-30-radio-emergenza-video-3d.webp"

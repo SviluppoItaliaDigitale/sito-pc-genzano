@@ -3,6 +3,7 @@ title: "Rischio idrogeologico estivo: siccità e piogge brevi intense"
 date: 2026-06-22
 description: "L'estate non è una stagione tranquilla per il rischio idrogeologico. Siccità prolungata e temporali violenti sono una combinazione che crea frane e allagamenti."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge.webp"

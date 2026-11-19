@@ -3,6 +3,7 @@ title: "Sterpi, un boschetto e cumuli di rifiuti in fiamme ad Aprilia"
 date: 2026-09-22T00:02:00+02:00
 description: "Il 22 settembre la SOUP ha attivato il Gruppo per un incendio di vegetazione e rifiuti ad Aprilia: quattro ore di lavoro con i Vigili del Fuoco."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-22-incendio-sterpaglie-rifiuti-carano.webp"

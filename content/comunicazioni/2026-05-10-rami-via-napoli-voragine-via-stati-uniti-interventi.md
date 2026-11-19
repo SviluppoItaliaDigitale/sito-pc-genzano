@@ -3,6 +3,7 @@ title: "Rami in via Napoli e una voragine in via Stati Uniti d'America: gli inte
 date: 2026-05-10T00:01:00+02:00
 description: "Domenica 10 maggio quattro interventi a Genzano: il taglio di una pianta e di un ramo caduto in via Napoli, le segnalazioni di voragine in due vie."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-10-rami-via-napoli-voragine-via-stati-uniti-interventi.webp"

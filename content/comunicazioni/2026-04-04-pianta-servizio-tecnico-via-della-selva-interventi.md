@@ -3,6 +3,7 @@ title: "Una pianta da tagliare e un servizio tecnico in via della Selva: gli int
 date: 2026-04-04T00:01:00+02:00
 description: "Sabato 4 aprile due volontari sono intervenuti due volte: il taglio di una pianta vicino a un supermercato e un servizio tecnico in via della Selva."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-04-pianta-servizio-tecnico-via-della-selva-interventi.webp"

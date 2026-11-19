@@ -3,6 +3,7 @@ title: "Chi lavora con chi: le convenzioni del sistema di PC a Genzano di Roma"
 date: 2026-09-18T00:01:00+02:00
 description: "La Protezione Civile è un sistema: Vigili del Fuoco, Carabinieri Forestali, Croce Rossa, ASL, Polizia Locale, radioamatori, Parco. Cosa sono le convenzioni."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-18-convenzioni-associazioni-cooperazione-pc.webp"

@@ -3,6 +3,7 @@ title: "Campagna antincendio 2026 chiusa: 86 interventi in quattro mesi"
 date: 2026-10-16T00:02:00+02:00
 description: "Dal 15 giugno al 12 ottobre 86 uscite per incendi in 16 comuni. Il bilancio della campagna antincendio 2026, con il racconto del coordinatore."
 badge: "Aggiornamento"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-16-chiusura-campagna-aib-2026-bilancio.webp"

@@ -3,6 +3,7 @@ title: "Bambini in estate: sicurezza e sorveglianza nei mesi caldi"
 date: 2026-07-08
 description: "Vacanze, campi estivi, piscine, sagre: l'estate dei bambini moltiplica ambienti e rischi. Come prepararsi e stare attenti ai pericoli tipici della stagione."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-08-bambini-in-estate-sicurezza-sorveglianza.webp"

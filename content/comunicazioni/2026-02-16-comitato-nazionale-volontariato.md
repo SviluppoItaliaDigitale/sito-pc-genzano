@@ -3,6 +3,7 @@ title: "Nominati i componenti del Comitato nazionale del volontariato di protezi
 date: 2026-02-16
 description: "Con il decreto n. 511 il Capo del Dipartimento rinnova il Comitato nazionale del volontariato di protezione civile. Le designazioni valgono tre anni."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-02-16-comitato-nazionale-volontariato.webp"

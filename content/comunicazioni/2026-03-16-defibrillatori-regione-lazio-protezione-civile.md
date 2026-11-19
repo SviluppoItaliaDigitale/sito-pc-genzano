@@ -3,6 +3,7 @@ title: "Il nostro Gruppo riceve un defibrillatore dalla Regione Lazio"
 date: 2026-03-16
 description: "La Regione Lazio ha consegnato 100 defibrillatori alle associazioni di Protezione Civile. Anche il nostro Gruppo è tra i destinatari."
 badge: "Formazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-16-defibrillatori-regione-lazio-protezione-civile.webp"

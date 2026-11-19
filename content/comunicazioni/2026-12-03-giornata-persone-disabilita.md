@@ -3,6 +3,7 @@ title: "3 dicembre: Giornata internazionale delle persone con disabilità"
 date: 2026-12-03
 description: "Giornata ONU dedicata ai diritti e inclusione delle persone con disabilità. La PC e l'accessibilità in emergenza."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-03-giornata-persone-disabilita.webp"

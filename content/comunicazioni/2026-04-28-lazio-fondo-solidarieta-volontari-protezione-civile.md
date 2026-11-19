@@ -3,6 +3,7 @@ title: "Lazio: il fondo che tutela i volontari di protezione civile infortunati 
 date: 2026-04-28T00:02:00+02:00
 description: "La Regione Lazio rimborsa spese mediche, riabilitazione e sostegno psicologico ai volontari di protezione civile infortunati durante le attività."
 badge: "Volontariato"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-28-lazio-fondo-solidarieta-volontari-protezione-civile.webp"

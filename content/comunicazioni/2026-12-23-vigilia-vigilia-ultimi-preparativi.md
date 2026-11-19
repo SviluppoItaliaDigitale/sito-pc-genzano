@@ -3,6 +3,7 @@ title: "Vigilia della vigilia: gli ultimi preparativi natalizi"
 date: 2026-12-23
 description: "Il 23 dicembre è giornata di ultimi preparativi, spesa finale e organizzazione. Consigli per arrivare sereni al 25."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-23-vigilia-vigilia-ultimi-preparativi.webp"

@@ -3,6 +3,7 @@ title: "Allerte terremoti di Android, da oggi anche in Italia: cosa sono e cosa 
 date: 2026-11-19T00:05:00+01:00
 description: "Dal 19 novembre gli smartphone Android possono avvisare di una scossa in arrivo. Come funziona, come si attiva e perché non sostituisce le fonti ufficiali."
 badge: "Informazione"
+canale: "italia"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-19-allerte-terremoti-android-italia.webp"

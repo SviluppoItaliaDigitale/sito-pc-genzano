@@ -3,6 +3,7 @@ title: "Vedere il calore: i droni con termocamera nella lotta agli incendi"
 date: 2026-08-19T00:02:00+02:00
 description: "Dai velivoli NASA ai droni dei Vigili del Fuoco: come le termocamere trovano i punti caldi nascosti sotto la cenere e cambiano la bonifica."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-19-droni-termocamera-bonifica-incendi.webp"

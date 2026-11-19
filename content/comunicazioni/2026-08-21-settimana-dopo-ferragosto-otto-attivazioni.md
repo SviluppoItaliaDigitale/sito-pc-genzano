@@ -3,6 +3,7 @@ title: "La settimana dopo Ferragosto: otto attivazioni tra incendi, alberi e la 
 date: 2026-08-21T00:04:00+02:00
 description: "Dal 17 al 21 agosto le squadre del Gruppo hanno risposto a otto attivazioni: sei incendi di vegetazione, i rami pericolanti e lo smontaggio del campo di Fondi."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-21-settimana-dopo-ferragosto-otto-attivazioni.webp"

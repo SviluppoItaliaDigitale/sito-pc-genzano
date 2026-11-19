@@ -3,6 +3,7 @@ title: "Alluvione e forti piogge in un video: come comportarsi"
 date: 2026-09-25T00:02:00+02:00
 description: "Un video di due minuti, con voce e sottotitoli, spiega cosa fare prima, durante e dopo un'alluvione: in casa, all'aperto e in auto."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-25-alluvione-forti-piogge-video.webp"

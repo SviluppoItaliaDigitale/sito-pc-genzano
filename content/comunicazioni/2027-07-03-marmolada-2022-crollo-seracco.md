@@ -3,6 +3,7 @@ title: "Marmolada, 3 luglio 2022: il crollo del seracco di Punta Rocca"
 date: 2027-07-03
 description: "Cinque anni fa una massa di ghiaccio si staccò dalla Marmolada e travolse le cordate sulla via normale: undici vittime."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-07-03-marmolada-2022-crollo-seracco.webp"

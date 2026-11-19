@@ -3,6 +3,7 @@ title: "Pi Day: numeri e statistiche dei rischi territoriali"
 date: 2026-03-14
 description: "Il 14 marzo è il Pi Day, giornata internazionale della matematica. Anche la Protezione Civile vive di numeri: statistiche, probabilità."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-14-pi-day-numeri-statistiche-rischio.webp"

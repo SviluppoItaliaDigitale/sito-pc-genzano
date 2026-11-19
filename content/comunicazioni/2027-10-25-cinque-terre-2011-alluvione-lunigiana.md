@@ -3,6 +3,7 @@ title: "Cinque Terre e Lunigiana, 25 ottobre 2011: l'alluvione di Vernazza, Mont
 date: 2027-10-25T00:02:00+02:00
 description: "Sedici anni fa un temporale fermo per ore sullo Spezzino e sulla Lunigiana scaricò oltre 500 mm di pioggia: frane, piene e 13 morti per il CNR-IRPI."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-10-25-cinque-terre-2011-alluvione-lunigiana.webp"

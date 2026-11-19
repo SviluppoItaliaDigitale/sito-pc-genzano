@@ -3,6 +3,7 @@ title: "Cassinum Exe 2026: a Cassino l'esercitazione regionale con il Coordiname
 date: 2026-10-15T00:04:00+02:00
 description: "Dal 16 al 18 ottobre a Cassino l'esercitazione regionale di protezione civile su un terremoto simulato. Tra gli attivati c'è il nostro Coordinamento."
 badge: "Esercitazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-15-cassinum-exe-2026-esercitazione-regionale-cassino.webp"

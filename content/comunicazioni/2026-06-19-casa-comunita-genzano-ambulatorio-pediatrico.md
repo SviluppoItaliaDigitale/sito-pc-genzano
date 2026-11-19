@@ -3,6 +3,7 @@ title: "Alla Casa della Comunità di Genzano un ambulatorio pediatrico per tutte
 date: 2026-06-19T00:03:00+02:00
 description: "La ASL Roma 6 attiva un ambulatorio pediatrico alla Casa della Comunità di Genzano: visite per i bambini, con accesso anche ai minori senza tessera sanitaria."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-19-casa-comunita-genzano-ambulatorio-pediatrico.webp"

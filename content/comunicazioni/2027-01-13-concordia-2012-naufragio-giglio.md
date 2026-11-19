@@ -3,6 +3,7 @@ title: "Isola del Giglio, 13 gennaio 2012: il naufragio della Costa Concordia"
 date: 2027-01-13T00:02:00+01:00
 description: "Quindici anni fa la Costa Concordia naufragò davanti al Giglio: 32 vittime, oltre 4.000 persone assistite e un'emergenza durata fino al luglio 2014."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-13-concordia-2012-naufragio-giglio.webp"

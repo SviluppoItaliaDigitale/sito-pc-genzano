@@ -4591,6 +4591,11 @@ html.a11y-hide-sos-fab .sos-button { display: none !important; }
 html.a11y-hide-translate-button .lang-toggle,
 html.a11y-hide-translate-button #lang-modal { display: none !important; }
 /* ==========================================================================
+ * v2.2 (19/11/2026): sotto i 992 px (stessa soglia della barra in basso e
+ * del SOS 112) il pulsante non si mostra. Sul telefono i pulsanti
+ * flottanti erano sei e coprivano il testo: l'Assistente resta raggiungibile
+ * dal pannello degli strumenti di accessibilità (riquadro in cima) e dal
+ * riquadro di conferma del 112 («Cosa devo fare?»).
  * fine ASSISTENTE FAB v2.1
  * ==========================================================================
  */
@@ -8661,3 +8666,28 @@ html.a11y-contrast-invert .gi-play, html.a11y-contrast-yellow-black .gi-play { b
   white-space: pre-wrap; overflow-wrap: anywhere; font-family: inherit; font-size: .95rem; color: #1a1a1a;
   background: #fff; border: 2px dashed var(--pc-primary); border-radius: 6px; padding: .75rem; margin: 0;
 }
+
+/* =====================================================================
+   DA GENZANO — riquadro fisso nell'archivio v1.0 (19/11/2026)
+   Le notizie del territorio degli ultimi 30 giorni in cima a
+   /comunicazioni/, sopra l'elenco completo. Stessa famiglia visiva del
+   box strumenti (fondo azzurro, filetto blu a sinistra). Testo #1a1a1a
+   su #e7f0fa = 15,4:1; link #003366 su #e7f0fa = 11,6:1.
+   ===================================================================== */
+.da-genzano-box{background:#e7f0fa;border-left:4px solid #003366;border-radius:6px;padding:1rem 1.25rem}
+.da-genzano-box h2{color:#003366;margin:0 0 .6rem}
+.da-genzano-box li{margin-bottom:.35rem;line-height:1.45}
+.da-genzano-box li a{color:#003366;font-weight:600}
+.da-genzano-box .notizia-data{color:#3d4a57;font-size:.85rem}
+@media print{.da-genzano-box{background:#fff;border-left-color:#000}}
+
+@media (max-width: 991.98px) {
+  .assistente-fab { display: none !important; }
+}
+
+/* Avviso «dato da confermare» dello stato allerta (19/11/2026): il
+   riquadro porta `hidden` finché il controllo è recente, ma la classe
+   d-flex di Bootstrap (display:flex !important) lo mostrava sempre, e la
+   pagina Allerte meteo diceva «potrebbe non rispecchiare il bollettino»
+   anche con una verifica di pochi minuti prima. */
+.allerta-stantia[hidden] { display: none !important; }

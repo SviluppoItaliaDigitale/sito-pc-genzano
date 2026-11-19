@@ -3,6 +3,7 @@ title: "Le donne nel volontariato di Protezione Civile"
 date: 2026-11-13T00:01:00+01:00
 description: "Le donne nel volontariato di Protezione Civile: ruoli, competenze, ostacoli ancora presenti e un invito a chi pensa di iscriversi."
 badge: "Volontariato"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-13-volontarie-donne-protezione-civile.webp"

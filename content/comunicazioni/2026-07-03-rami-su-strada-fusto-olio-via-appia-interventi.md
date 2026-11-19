@@ -3,6 +3,7 @@ title: "Rami su strada e un fusto d'olio sulla via Appia: gli interventi del 2 e
 date: 2026-07-03T00:03:00+02:00
 description: "Giovedì 2 luglio sei interventi in una mattina per rami su strada e un fusto d'olio sulla via Appia; il 3 luglio un ramo pericolante in via Berlinguer."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-03-rami-su-strada-fusto-olio-via-appia-interventi.webp"

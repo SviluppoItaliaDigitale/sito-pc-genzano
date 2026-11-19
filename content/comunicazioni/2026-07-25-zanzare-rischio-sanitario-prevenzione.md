@@ -3,6 +3,7 @@ title: "Zanzare e rischio sanitario: prevenzione e malattie emergenti"
 date: 2026-07-25
 description: "Le zanzare non sono solo un fastidio estivo: vettori di malattie come West Nile e Dengue. Come proteggersi e perché la lotta integrata è essenziale."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-25-zanzare-rischio-sanitario-prevenzione.webp"

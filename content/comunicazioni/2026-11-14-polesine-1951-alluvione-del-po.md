@@ -3,6 +3,7 @@ title: "Polesine, 14 novembre 1951: la grande alluvione del Po"
 date: 2026-11-14T09:15:00+01:00
 description: "Settantacinque anni fa il Po ruppe gli argini a Canaro e Occhiobello e sommerse il Polesine: 113.000 ettari di campi allagati, 101 vittime, 180.000 sfollati."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-14-polesine-1951-alluvione-del-po.webp"

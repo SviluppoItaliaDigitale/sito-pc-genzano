@@ -3,6 +3,7 @@ title: "Vesuvio, 18 marzo 1944: l'ultima eruzione e la lezione della cenere"
 date: 2027-03-18
 description: "83 anni fa cominciava l'ultima eruzione del Vesuvio: lava su San Sebastiano e Massa di Somma, migliaia di evacuati, vittime per i tetti crollati."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-03-18-vesuvio-1944-ultima-eruzione.webp"

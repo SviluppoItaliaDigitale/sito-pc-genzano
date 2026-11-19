@@ -3,6 +3,7 @@ title: "Giornata per la consapevolezza sull'autismo: emergenze inclusive"
 date: 2026-04-02
 description: "Il 2 aprile è la Giornata mondiale per la consapevolezza dell'autismo. Una Protezione Civile davvero inclusiva pensa anche alle persone neurodivergenti."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-02-consapevolezza-autismo-emergenze-inclusive.webp"

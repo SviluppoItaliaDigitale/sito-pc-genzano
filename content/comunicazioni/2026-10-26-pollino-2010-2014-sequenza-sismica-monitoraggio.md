@@ -3,6 +3,7 @@ title: "Pollino 2010-2014: la sequenza sismica che ha cambiato il monitoraggio i
 date: 2026-10-26T00:03:00+01:00
 description: "Tra il 2010 e il 2014 una sequenza sismica di oltre 4.000 scosse colpì il massiccio del Pollino, al confine fra Calabria e Basilicata."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio.webp"

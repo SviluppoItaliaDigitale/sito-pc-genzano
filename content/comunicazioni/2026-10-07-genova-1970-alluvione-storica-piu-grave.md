@@ -3,6 +3,7 @@ title: "Genova, 7 ottobre 1970: l'alluvione storica più grave del Novecento lig
 date: 2026-10-07T00:02:00+02:00
 description: "Tra il 7 e l'8 ottobre 1970 piogge eccezionali colpirono Genova: esondarono Bisagno, Fereggiano e Leira. 35 morti e 8 dispersi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-07-genova-1970-alluvione-storica-piu-grave.webp"

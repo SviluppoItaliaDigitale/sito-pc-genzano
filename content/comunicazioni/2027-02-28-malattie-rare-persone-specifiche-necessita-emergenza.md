@@ -3,6 +3,7 @@ title: "28 febbraio, Giornata delle malattie rare: prepararsi a un'emergenza qua
 date: 2027-02-28
 description: "Per chi ha una malattia rara un'emergenza può interrompere terapie, forniture e assistenza. Come prepararsi con il medico, la rete di supporto e il piano familiare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-28-malattie-rare-persone-specifiche-necessita-emergenza.webp"

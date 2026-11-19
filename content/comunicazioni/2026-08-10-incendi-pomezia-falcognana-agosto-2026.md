@@ -3,6 +3,7 @@ title: "Due incendi in quattro giorni: i volontari tra Pomezia e la Falcognana"
 date: 2026-08-10T00:02:00+02:00
 description: "Il 6 e il 9 agosto 2026 la SOUP regionale ha attivato il Gruppo su due incendi di vegetazione. Alla Falcognana il fuoco ha percorso dieci ettari."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-10-incendi-pomezia-falcognana-agosto-2026.webp"

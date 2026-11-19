@@ -3,6 +3,7 @@ title: "Cucina delle feste: cinque gesti per evitare gli incidenti"
 date: 2026-11-24T00:03:00+01:00
 description: "Un video in 3D di poco più di un minuto con voce e sottotitoli: olio che prende fuoco, odore di gas, bambini vicino ai fornelli e ustioni. Che cosa fare."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-24-cucina-sicura-feste-video-3d.webp"

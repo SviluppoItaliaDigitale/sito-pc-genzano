@@ -3,6 +3,7 @@ title: "Giro d'Italia 2026 a Formia: il nostro Gruppo a supporto del dispositivo
 date: 2026-05-15T00:03:00+02:00
 description: "Il 15 maggio 2026 una squadra del nostro Gruppo è stata a Formia, a supporto della Protezione Civile per la partenza della 7ª tappa del Giro d'Italia."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-15-giro-italia-formia-blockhaus-sicurezza.webp"

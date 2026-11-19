@@ -3,6 +3,7 @@ title: "Salerno, 25-26 ottobre 1954: l'alluvione di Vietri, Maiori e Cava de' Ti
 date: 2027-10-25T00:01:00+02:00
 description: "Settantatré anni fa oltre 500 mm di pioggia in meno di 24 ore colpirono il Salernitano: torrenti in piena, frane e 325 morti secondo il CNR-IRPI."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-10-25-salerno-1954-alluvione-costiera-amalfitana.webp"

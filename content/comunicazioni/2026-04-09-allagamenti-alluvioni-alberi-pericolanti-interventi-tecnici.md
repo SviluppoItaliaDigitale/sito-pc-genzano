@@ -3,6 +3,7 @@ title: "Allagamenti, alluvioni e alberi pericolanti: gli interventi tecnici del 
 date: 2026-04-09
 description: "Come si gestiscono caditoie tappate, garage allagati, strade invase dal fango e alberi caduti: attrezzature, procedure e sicurezza degli operatori."
 badge: "Informazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici.webp"

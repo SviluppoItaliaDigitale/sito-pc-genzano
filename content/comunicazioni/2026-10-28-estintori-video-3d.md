@@ -3,6 +3,7 @@ title: "Dentro l'estintore: un video in 3D su come funziona e quale usare"
 date: 2026-10-28T00:03:00+01:00
 description: "Un video di circa tre minuti, con voce e sottotitoli, apre l'estintore in 3D: valvola, pescante, manometro, classi di fuoco e uso corretto."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-28-estintori-video-3d.webp"

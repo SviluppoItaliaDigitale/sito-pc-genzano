@@ -3,6 +3,7 @@ title: "Giornata nazionale contro lo spreco alimentare: Fondazione Barilla prese
 date: 2025-02-05
 description: "120 azioni pratiche contro lo spreco di cibo, per risparmiare fino a 500 euro l'anno."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2025-02-05-libro-risparmio-fondazione-barilla-presentazione.webp"

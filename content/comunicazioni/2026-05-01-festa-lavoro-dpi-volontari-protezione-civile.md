@@ -3,6 +3,7 @@ title: "Primo maggio: dignità del lavoro e sicurezza anche in emergenza"
 date: 2026-05-01T00:01:00+02:00
 description: "La Festa dei Lavoratori ricorda il diritto a un lavoro dignitoso e sicuro. Nel volontariato di Protezione Civile la cultura della sicurezza protegge tutti."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile.webp"

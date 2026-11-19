@@ -3,6 +3,7 @@ title: "Dopo un'emergenza attenti ai falsi tecnici e alle false raccolte di sold
 date: 2027-02-26
 description: "Dopo un maltempo o una scossa qualcuno può bussare fingendosi tecnico, funzionario o volontario. Come riconoscere i segnali, che cosa verificare e quando chiamare il 112."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-26-truffe-dopo-emergenza-falsi-tecnici-raccolte.webp"

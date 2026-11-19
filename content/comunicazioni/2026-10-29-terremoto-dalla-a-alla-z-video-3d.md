@@ -3,6 +3,7 @@ title: "Il terremoto dalla A alla Z: un video in 3D, da Messina 1908 a oggi"
 date: 2026-10-29T00:02:00+01:00
 description: "Un video di 14 minuti, con voce e sottotitoli, spiega il terremoto: la storia dal 1908, le faglie, le onde, le scale e la prevenzione."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-29-terremoto-dalla-a-alla-z-video-3d.webp"

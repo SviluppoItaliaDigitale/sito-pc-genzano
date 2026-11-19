@@ -3,6 +3,7 @@ title: "Il Comune in Protezione Civile: il ruolo chiave del Sindaco"
 date: 2026-07-24
 description: "Il Sindaco è autorità comunale di Protezione Civile. Ruoli, responsabilità e competenze. Conoscerle serve a capire come funziona davvero il sistema locale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-24-comune-protezione-civile-ruolo-sindaco.webp"

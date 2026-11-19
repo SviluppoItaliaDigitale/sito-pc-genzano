@@ -3,6 +3,7 @@ title: "Giornata nazionale degli alberi: boschi, prevenzione, rischio idrogeolog
 date: 2026-11-21T00:01:00+01:00
 description: "Il 21 novembre è la Giornata nazionale degli alberi. Il ruolo dei boschi nella prevenzione del rischio idrogeologico."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-21-giornata-nazionale-alberi.webp"

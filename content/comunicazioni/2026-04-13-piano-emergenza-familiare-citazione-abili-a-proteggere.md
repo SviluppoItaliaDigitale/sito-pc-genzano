@@ -3,6 +3,7 @@ title: "Il nostro Piano di Emergenza Familiare citato da Abili a proteggere, il 
 date: 2026-04-13T00:03:00+02:00
 description: "Il portale Abili a proteggere del Dipartimento della Protezione Civile cita il Piano di Emergenza Familiare digitale del nostro Gruppo."
 badge: "Comunicazione"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-13-piano-emergenza-familiare-citazione-abili-a-proteggere.webp"

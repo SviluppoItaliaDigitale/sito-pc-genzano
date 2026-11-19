@@ -3,6 +3,7 @@ title: "Cinema all'aperto in via Toscana: i volontari a supporto della serata"
 date: 2026-08-14T00:03:00+02:00
 description: "Il 13 agosto 2026 il Gruppo è stato di supporto alla proiezione all'aperto in via Toscana, su richiesta dell'amministrazione comunale."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-supporto-cinema-aperto-estate-genzanese.webp"

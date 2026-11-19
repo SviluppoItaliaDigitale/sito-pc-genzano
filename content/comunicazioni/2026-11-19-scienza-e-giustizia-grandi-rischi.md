@@ -3,6 +3,7 @@ title: "La protezione civile vista dal giudice: il processo Grandi Rischi dopo i
 date: 2026-11-19T00:02:00+01:00
 description: "Tre gradi di giudizio, dal 2012 al 2016, sulla riunione del 31 marzo 2009. Al centro la valutazione e la comunicazione del rischio, non la mancata previsione."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-19-scienza-e-giustizia-grandi-rischi.webp"

@@ -3,6 +3,7 @@ title: "Chi risponde all'803 555: la Sala Operativa Regionale della Protezione C
 date: 2026-09-27
 description: "Dietro il numero verde 803 555 c'è la Sala Operativa Regionale, attiva 24 ore su 24. D'estate diventa SOUP e coordina anche gli incendi boschivi."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-27-sala-operativa-regionale-soup-803555.webp"

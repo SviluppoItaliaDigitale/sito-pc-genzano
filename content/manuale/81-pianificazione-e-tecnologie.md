@@ -40,7 +40,7 @@ La capacità di comunicare è una funzione di supporto a sé (Parte V): senza co
 
 ## 8.4 Cartografia, GIS e telerilevamento
 
-La conoscenza del territorio si fonda su strumenti tecnici: la **cartografia** di rischio, i **sistemi informativi geografici (GIS)** che sovrappongono dati su mappe, il **telerilevamento** da satellite e da drone per osservare le aree colpite e stimare i danni. Il programma europeo **Copernicus** e il suo servizio di mappatura rapida delle emergenze (Copernicus EMS) forniscono mappe satellitari nelle ore successive a un grande evento. Sul sito, questi strumenti sono accessibili dalla [Cartografia](/cartografia/) e dal [Cruscotto del territorio](/cruscotto/).
+La conoscenza del territorio si fonda su strumenti tecnici: la **cartografia** di rischio, i **sistemi informativi geografici (GIS)** che sovrappongono dati su mappe, il **telerilevamento** da satellite e da drone per osservare le aree colpite e stimare i danni. Il programma europeo **Copernicus** e il suo servizio di mappatura rapida delle emergenze (Copernicus EMS) forniscono mappe satellitari nelle ore successive a un grande evento. Sul sito, questi strumenti sono accessibili dalla [Cartografia](/cartografia/) e dal [Cruscotto e dati in tempo reale](/cruscotto/).
 
 <div class="manuale-fonti">
 

@@ -3,6 +3,7 @@ title: "Stufa accesa, finestre chiuse: la mossa giusta si fa prima"
 date: 2026-11-16T00:03:00+01:00
 description: "Un video di poco più di un minuto: stufa accesa, finestre chiuse, una famiglia che sta male. Tu cosa faresti? Che cosa fare con il monossido di carbonio."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-11-16-monossido-stufa-video.webp"

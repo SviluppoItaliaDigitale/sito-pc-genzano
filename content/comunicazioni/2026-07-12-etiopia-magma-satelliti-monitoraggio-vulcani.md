@@ -3,6 +3,7 @@ title: "Un fiume di magma senza eruzione: i satelliti lo hanno seguito dallo spa
 date: 2026-07-12T00:02:00+02:00
 description: "In Etiopia 1,4 km³ di magma si sono spostati per 50 km senza eruzione. Lo studio guidato dall'Università di Pisa e cosa insegna sul monitoraggio dei vulcani."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-12-etiopia-magma-satelliti-monitoraggio-vulcani.webp"
@@ -50,7 +51,7 @@ Sul nostro [cruscotto del territorio](/cruscotto/) trovi la scheda con la sismic
 
 - [Rischio vulcanico (Colli Albani): cosa fare](/rischi-prevenzione/rischio-vulcanico/) — il quadro del nostro vulcano quiescente e i comportamenti corretti.
 - [Il vulcanismo dei Colli Albani: capire il Vulcano Laziale](/conoscere/rischio-vulcanico-colli-albani/) — come si è formato, i laghi di Albano e Nemi come antichi crateri, come lo monitora l'INGV.
-- [Cruscotto del territorio](/cruscotto/) — la scheda "Vulcani" con la sismicità del distretto in tempo reale.
+- [Cruscotto e dati in tempo reale](/cruscotto/) — la scheda "Vulcani" con la sismicità del distretto in tempo reale.
 
 **Fonti istituzionali:**
 

@@ -3,6 +3,7 @@ title: "Diciassette anni fa il terremoto dell'Aquila: quando i volontari di Genz
 date: 2026-04-06
 description: "Nel 17° anniversario del sisma del 6 aprile 2009, ricordiamo l'impegno dei volontari di Genzano di Roma nel comune di Fossa con la Fepivol."
 badge: "Volontariato"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa.webp"

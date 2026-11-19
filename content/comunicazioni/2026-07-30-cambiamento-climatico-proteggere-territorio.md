@@ -3,6 +3,7 @@ title: "Cambiamento climatico e Protezione Civile: un territorio da proteggere"
 date: 2026-07-30
 description: "Il cambiamento climatico modifica i rischi del nostro territorio. Eventi estremi più frequenti, nuove sfide per la PC. Cosa sta cambiando e cosa possiamo fare."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-30-cambiamento-climatico-proteggere-territorio.webp"

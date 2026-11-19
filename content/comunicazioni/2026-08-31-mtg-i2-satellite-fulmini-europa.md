@@ -3,6 +3,7 @@ title: "Il satellite che vede i fulmini: cosa cambia per le allerte con MTG-I2"
 date: 2026-08-31T00:02:00+02:00
 description: "Il 27 agosto è partito da Kourou MTG-I2, terzo satellite Meteosat di terza generazione. A bordo lo strumento che sorveglia i fulmini in tempo reale."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-31-mtg-i2-satellite-fulmini-europa.webp"

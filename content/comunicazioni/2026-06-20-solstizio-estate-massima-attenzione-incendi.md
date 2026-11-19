@@ -3,6 +3,7 @@ title: "Solstizio d'estate: massima attenzione agli incendi boschivi"
 date: 2026-06-20T00:01:00+02:00
 description: "Il solstizio cade domenica 21 giugno, a campagna antincendio già partita. I dati del Lazio, i divieti a Genzano e cosa fare se vedi un incendio."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-20-solstizio-estate-massima-attenzione-incendi.webp"

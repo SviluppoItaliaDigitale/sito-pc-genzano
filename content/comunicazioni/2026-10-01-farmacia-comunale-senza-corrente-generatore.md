@@ -3,6 +3,7 @@ title: "Farmacia comunale senza corrente: un generatore per il frigorifero dei f
 date: 2026-10-01T00:04:00+02:00
 description: "La Farmacia comunale n. 3 è rimasta senza corrente. Due volontari sono intervenuti con un generatore che alimenta il frigorifero dei farmaci salvavita."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-01-farmacia-comunale-senza-corrente-generatore.webp"

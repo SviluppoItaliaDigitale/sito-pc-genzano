@@ -3,6 +3,7 @@ title: "Giornata mondiale dell'acqua: rete idrica e sicurezza"
 date: 2026-03-22
 description: "Il 22 marzo è la Giornata mondiale dell'acqua. Una risorsa preziosa che richiede manutenzione, preparazione alle emergenze."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza.webp"

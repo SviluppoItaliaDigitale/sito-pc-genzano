@@ -3,6 +3,7 @@ title: "Due incendi in un giorno: sterpaglie in via dell'Aspro a Genzano e canne
 date: 2026-07-15T00:02:00+02:00
 description: "La mattina il Defender 130 sulle sterpaglie di via dell'Aspro a Genzano; il pomeriggio anche l'autobotte Actros a Lanuvio, con i Vigili del Fuoco."
 badge: "Attività"
+canale: "territorio"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-15-due-incendi-via-aspro-canneti-kiwi.webp"

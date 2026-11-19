@@ -3,6 +3,7 @@ title: "Nebbia: vedere ed essere visti, le regole per chi guida"
 date: 2026-12-15
 description: "Dicembre porta la nebbia anche nelle conche dei Castelli. Velocità, luci giuste, distanza e niente sorpassi: le regole del Dipartimento della PC."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-15-nebbia-guidare-in-sicurezza.webp"

@@ -3,6 +3,7 @@ title: "Ottobre: il mese del rischio idrogeologico"
 date: 2026-10-01T00:01:00+02:00
 description: "Con ottobre si apre il periodo di maggiore attenzione per il rischio idrogeologico nel Lazio. Cosa aspettarsi, cosa preparare."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-01-ottobre-mese-rischio-idrogeologico.webp"

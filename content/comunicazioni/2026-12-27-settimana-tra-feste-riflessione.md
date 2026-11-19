@@ -3,6 +3,7 @@ title: "Settimana tra feste: riflessione e preparazione al nuovo anno"
 date: 2026-12-27
 description: "La settimana tra Natale e Capodanno è spesso sospesa. Come usarla bene per riflessione, riordino, prospettive."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-27-settimana-tra-feste-riflessione.webp"

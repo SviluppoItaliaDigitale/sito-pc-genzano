@@ -3,6 +3,7 @@ title: "San Nicola: tradizione e sicurezza per i bambini"
 date: 2026-12-06
 description: "Il 6 dicembre è tradizionalmente legato a San Nicola e ai bambini. Cogliamo l'occasione per parlare di sicurezza dei piccoli."
 badge: "Informazione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-06-san-nicola-tradizione-bambini.webp"

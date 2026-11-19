@@ -3,6 +3,7 @@ title: "Vacanze sulla neve: il bollettino valanghe e le regole per chi va in mon
 date: 2026-12-29
 description: "Tra Natale e l'Epifania molti partono per la montagna. Bollettino valanghe, attrezzatura di autosoccorso e regole del Dipartimento della Protezione Civile."
 badge: "Prevenzione"
+canale: "approfondimenti"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-12-29-vacanze-in-montagna-valanghe-sicurezza.webp"
