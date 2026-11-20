@@ -452,7 +452,7 @@ TEMI = {
             "Chiamata muta: se non puoi parlare, l'operatore lo capisce (silenzio + ascolto rumori) e invia comunque aiuti",
             "112 da estero: in tutta l'Unione Europea (più Regno Unito, Norvegia, Islanda, Svizzera) funziona uguale",
             "Falsi miti: \"costa\" (è gratuito), \"se sbaglio numero mi multano\" (no, ma chiamate a vuoto sì), \"posso chiamare per info\" (no — info al 1500 o al Comune)",
-            "Numeri NON di emergenza utili: 803 555 Sala Operativa PC Lazio, 1530 Guardia Costiera (mare e laghi)",
+            "Numeri NON di emergenza utili: 803 555 Sala Operativa PC Lazio, 1530 Guardia Costiera (emergenze in mare)",
         ],
         "icona_emoji": "📞🆘",
     },

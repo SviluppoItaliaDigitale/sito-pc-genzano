@@ -124,7 +124,7 @@ Nel Lazio, dal 2015, **l'unico numero di emergenza per il cittadino è il 112** 
 |---|---|
 | 112 | Numero Unico Emergenze (NUE) — qualsiasi emergenza |
 | 803 555 | Sala Operativa Protezione Civile Lazio — segnalazioni non urgenti |
-| 1530 | Guardia Costiera — emergenze in mare e sui laghi |
+| 1530 | Guardia Costiera — emergenze in mare |
 
 Non citare numeri di emergenza non verificati. Non presentare più 115/118/1515 come numeri da chiamare: il cittadino deve memorizzare un solo numero, il 112. I numeri del gruppo di volontari non sostituiscono il 112.
 

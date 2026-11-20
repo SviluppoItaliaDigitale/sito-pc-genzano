@@ -4,7 +4,7 @@ description: "Traguardi di protezione civile dall'infanzia alla quinta superiore
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-11-19"
+dataUltimaRevisione: "2026-11-20"
 ---
 
 Questa pagina serve al dirigente scolastico, alla commissione PTOF, al referente di educazione civica e al collegio dei docenti. In una sola tabella mostra che cosa impara ogni età, dalla scuola dell'infanzia alla quinta superiore. Ogni anno parte da ciò che la classe sa già e aggiunge un passo: il gesto imparato a quattro anni non si rispiega a quindici, si usa per insegnarlo a qualcun altro.
@@ -62,6 +62,8 @@ Le simulazioni sono sempre annunciate. I traguardi descrivono azioni, non emozio
 - [Le prime frasi della sicurezza](/formazione/schede-stampabili/prime-frasi-sicurezza-primaria/) — lettura e scrittura delle regole.
 - [I codici colore di allerta meteo](/formazione/schede-stampabili/codici-allerta-numeri-primaria/) — scheda per la seconda e la terza.
 - [Il semaforo del rischio](/giochi/primaria/semaforo-rischio/) — gioco per classificare le situazioni.
+- [A caccia di strumenti](/formazione/schede-stampabili/caccia-strumenti-visita-gruppo/) — da fare prima della visita dei volontari, anche all'ultimo anno dell'infanzia.
+- [Missione cameretta](/formazione/schede-stampabili/missione-cameretta/) — la propria stanza controllata con un adulto.
 
 ### Primaria, classi 3ª-5ª
 
@@ -70,6 +72,11 @@ Le simulazioni sono sempre annunciate. I traguardi descrivono azioni, non emozio
 - [Mappa cieca del quartiere](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/) — punti sicuri e luoghi da evitare.
 - [Piano di emergenza familiare](/formazione/schede-stampabili/piano-familiare-primaria/) — da completare a casa.
 - [IT-alert, il messaggio che ti avvisa del pericolo](/formazione/schede-stampabili/it-alert-primaria/) — scheda sul sistema di allarme pubblico.
+- [Che cosa vuol dire «50 mm di pioggia»?](/formazione/schede-stampabili/matematica-50mm-pioggia/) — matematica con la pioggia, in quarta e quinta.
+- [Intervista a un nonno](/formazione/schede-stampabili/intervista-ai-nonni/) — un'emergenza vissuta, confrontata con le fonti.
+- [Cinque minuti, una scelta](/formazione/schede-stampabili/cinque-minuti-dilemmi/) — dilemmi da proiettare al cambio dell'ora.
+- [Il mio passaporto della sicurezza](/formazione/schede-stampabili/passaporto-sicurezza/) — le tappe dell'anno firmate dal docente.
+- [Il compagno-guida](/formazione/schede-stampabili/compagno-guida/) — accompagnare un compagno nella prova di evacuazione.
 
 ### Secondaria di primo grado
 
@@ -78,6 +85,11 @@ Le simulazioni sono sempre annunciate. I traguardi descrivono azioni, non emozio
 - [La mappa dei rischi del mio territorio](/formazione/schede-stampabili/mappa-rischi-secondaria/) e [Vulcanologia dei Castelli Romani](/formazione/schede-stampabili/vulcanologia-castelli-secondaria/).
 - [Notizie false in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — uso delle fonti ufficiali.
 - [Dalla carta al territorio](/formazione/dalla-carta-al-territorio/) — l'uscita sui luoghi del Piano di Genzano di Roma.
+- [Gli spaghetti e la magnitudo](/formazione/schede-stampabili/scienze-spaghetti-terremoto/) — energia, magnitudo e intensità.
+- [Due ore senza corrente](/formazione/schede-stampabili/due-ore-senza-corrente/) — simulazione a tempo.
+- [La chat in tilt](/formazione/schede-stampabili/chat-in-tilt/) — che cosa inoltrare in un'emergenza.
+- [Quando non si esce](/formazione/schede-stampabili/restare-al-chiuso/) — restare al riparo dentro la scuola.
+- [In gita nel Parco dei Castelli Romani](/formazione/schede-stampabili/gita-parco-castelli-romani/) — prima di un'uscita della classe.
 
 ### Secondaria di secondo grado, biennio
 
@@ -86,6 +98,11 @@ Le simulazioni sono sempre annunciate. I traguardi descrivono azioni, non emozio
 - [Analisi critica dei bollettini](/formazione/schede-stampabili/decodifica-bollettino-secondaria2/) — confronto fra bollettini e notizie.
 - [Percorso «Notizie false e comunicazione di crisi»](/formazione/percorsi-didattici/#percorso-5) e il gioco [Vero o bufala?](/giochi/ragazzi/vero-o-bufala/).
 - [Mappa rischi e mitigazione](/formazione/schede-stampabili/mappa-rischi-secondaria2/) — lettura del territorio con strumenti cartografici.
+- [Il gas che resta in basso](/formazione/schede-stampabili/co2-cantine-colli-albani/) — l'anidride carbonica dei Colli Albani.
+- [In gita o in Erasmus](/formazione/schede-stampabili/inglese-gite-erasmus/) — chiedere aiuto in inglese.
+- [Il telefono e la radio in emergenza](/formazione/schede-stampabili/radio-112-telefono/) — 112 e linee sature.
+- [Accanto a un compagno spaventato](/formazione/schede-stampabili/pronto-soccorso-emotivo-pari/) — il primo aiuto tra pari.
+- [Il percorso da casa a scuola](/formazione/schede-stampabili/indagine-percorso-casa-scuola/) — un'indagine civica.
 
 ### Secondaria di secondo grado, triennio
 
@@ -94,6 +111,19 @@ Le simulazioni sono sempre annunciate. I traguardi descrivono azioni, non emozio
 - [Io e i più piccoli](/formazione/schede-stampabili/casa-io-e-i-piu-piccoli-secondaria2/) e [Emergenza inclusiva](/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/) — insegnare ad altri e tenere conto di tutti.
 - [Percorso «Sicurezza nei luoghi di lavoro»](/formazione/percorsi-didattici/#percorso-6) e [percorso «Primo soccorso e cuore»](/formazione/percorsi-didattici/#percorso-9).
 - [Diventare volontario di protezione civile](/formazione/schede-stampabili/percorso-volontariato-secondaria2/) e il [percorso «Volontariato e cittadinanza attiva»](/formazione/percorsi-didattici/#percorso-10).
+- [Chi lavora sul rischio](/formazione/schede-stampabili/orientamento-professioni-rischio/) — orientamento sulle professioni (D.M. 328/2022).
+- [Decidere sotto incertezza](/formazione/schede-stampabili/dibattito-dilemmi-protezione-civile/) — quattro dilemmi da dibattere.
+- [Se il clima ti preoccupa](/formazione/schede-stampabili/eco-ansia-azione/) — dalla preoccupazione alle azioni.
+- [Controlla, chiama, comprimi](/formazione/schede-stampabili/primo-soccorso-eta-kids-save-lives/) — il primo soccorso a misura di età.
+
+### Per tutte le fasce: prove, famiglie e personale
+
+- [La prova di evacuazione: la mia storia](/formazione/schede-stampabili/storia-sociale-prova-evacuazione/) e [La sirena a scuola: che cosa faccio](/formazione/schede-stampabili/sirena-scuola-nuovi-arrivati/) — per chi ha bisogno di più tempo o di un'altra lingua.
+- [Dopo la prova di evacuazione](/formazione/schede-stampabili/debriefing-prova-evacuazione/) — dieci minuti per capire come è andata.
+- [Scheda di evacuazione personalizzata](/formazione/schede-stampabili/evacuazione-personalizzata-pei/) — da compilare con la famiglia, accanto al PEI.
+- [Se a scuola scatta un'emergenza](/formazione/schede-stampabili/patto-corresponsabilita-emergenze/), [Assemblea dei genitori](/formazione/schede-stampabili/assemblea-genitori-emergenze/) e [Fogli per la famiglia di giugno e dicembre](/formazione/schede-stampabili/fogli-stagionali-giugno-dicembre/) — per le famiglie.
+- [Per il supplente](/formazione/schede-stampabili/kit-docente-supplente/), [Prova o emergenza in palestra](/formazione/schede-stampabili/educazione-fisica-palestra/) e [la scheda per il personale](/formazione/schede-stampabili/scheda-personale-ata/) — per chi lavora nella scuola.
+- [Il giorno dopo una scossa o un'allerta](/formazione/schede-stampabili/il-giorno-dopo-docente/) e la [rubrica dei compiti di realtà](/formazione/schede-stampabili/rubrica-compiti-realta/) — per il docente.
 
 ## Come inserirlo nel PTOF e nell'educazione civica {#ptof}
 

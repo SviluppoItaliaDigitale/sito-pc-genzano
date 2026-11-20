@@ -1351,3 +1351,15 @@ dati:
         perche: "Spostare la persona dal letto al pavimento ritarda la prima compressione (Linee guida IRC/ERC 2025)."
         contesto: 'compression|massaggio|RCP|rianimazion'
         finestra: 200
+
+  - id: numero-1530-mare
+    dato: "Ambito del numero 1530 della Guardia Costiera"
+    valore: "emergenze in mare; per ogni emergenza il numero da chiamare resta il 112"
+    fonti:
+      - nome: "Guardia Costiera, comunicato «Mare e Laghi Sicuri 2026»"
+        url: "https://www.guardiacostiera.gov.it/portale/w/al-via-l-operazione-estiva-mare-e-laghi-sicuri-2026-"
+    vietati:
+      - regex: '1530[^.\n]{0,80}\blaghi\b'
+        perche: "Le fonti ufficiali della Guardia Costiera indicano il 1530 per le emergenze in mare; nessuna lo estende ai laghi (19/11/2026)."
+        contesto: '1530'
+        finestra: 120
