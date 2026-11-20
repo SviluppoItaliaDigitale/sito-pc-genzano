@@ -172,7 +172,7 @@ Le presentazioni di Risorse pronte nascono dai testi in `data/presentazioni/<tem
 - 🔴 **I testi vengono solo dalle pagine del sito indicate in `fonte`**: chi cambia una di quelle pagine aggiorna anche la presentazione e la rigenera (regola `qualita.md`, punto 2). Gate: `pc-didattica-reviewer`.
 - Il testo si misura con il carattere vero: se non entra al corpo minimo lo script si ferma (`TestoTroppoLungo`), non lo taglia.
 - Forme decorative e cornice di microtesto stanno nello **sfondo** della slide, così nel PDF restano solo testo e immagini con descrizione; il PDF dichiara l'italiano (`it-IT`), metadati senza nomi di programmi.
-- Nasce perché le presentazioni di maggio 2026 erano immagini 1376×768 senza testo modificabile, in un solo formato, con la scritta di uno strumento in ogni slide (tolte dall'elenco il 20/11/2026 e rifatte lo stesso giorno). Quella su IT-alert resta fuori finché non si rifanno i materiali su IT-alert.
+- Nasce perché le presentazioni di maggio 2026 erano immagini 1376×768 senza testo modificabile, in un solo formato, con la scritta di uno strumento in ogni slide (tolte dall'elenco il 20/11/2026 e rifatte lo stesso giorno). Quella su IT-alert è stata rifatta lo stesso giorno (`data/presentazioni/it-alert.yaml`, fonti: le due guide IT-alert del sito), con gli stessi nomi di file della vecchia, così i collegamenti esistenti tornano validi.
 
 ## Sala stampa e comunicati stampa — `/sala-stampa/` e `/sala-stampa/comunicati/` (24/10/2026)
 
