@@ -55,7 +55,7 @@ L'articolo 5 elenca i requisiti che ogni organizzazione deve avere:
 - i contributi regionali ricevuti rendicontati in regola;
 - attività di protezione civile svolte nei tre anni precedenti, salvo alla prima iscrizione.
 
-Le organizzazioni di volontariato devono essere iscritte anche al registro regionale previsto dalla legge regionale 29/1993. Per i Gruppi comunali la nota del Ministero del Lavoro n. 9663 del 30 giugno 2022 indica la sezione «Altri enti del Terzo settore» del Registro unico nazionale del Terzo settore (RUNTS), e collega l'iscrizione all'Elenco nazionale di protezione civile.
+Il testo coordinato del regolamento chiede alle organizzazioni di volontariato anche l'iscrizione al registro regionale previsto dalla legge regionale 29/1993. Quel registro però non accoglie più nuove iscrizioni: dal 23 novembre 2021 il Registro unico nazionale del Terzo settore (RUNTS) ha sostituito i registri delle organizzazioni di volontariato, come spiega il Ministero del Lavoro. Oggi un'organizzazione nuova si iscrive al RUNTS. Per i Gruppi comunali la nota del Ministero del Lavoro n. 9663 del 30 giugno 2022 indica la sezione «Altri enti del Terzo settore» del Registro unico nazionale del Terzo settore (RUNTS), e collega l'iscrizione all'Elenco nazionale di protezione civile.
 
 ## Chi sono i volontari operativi
 
@@ -101,5 +101,6 @@ Una volta iscritta, l'organizzazione presenta ogni anno, entro il 31 maggio, la 
 - [Regione Lazio — Regolamento regionale 14 ottobre 2019, n. 18, testo coordinato al 14 maggio 2021](https://regione.lazio.it/regolamenti-regionali-testo-coordinato/regolamento-regionale-14-ottobre-2019-n-18/14052021).
 - [Regione Lazio — Elenco territoriale delle organizzazioni di volontariato di protezione civile](https://www.regione.lazio.it/protezione-civile/elenco-territoriale-MGO).
 - [Regione Lazio — Legge regionale 26 febbraio 2014, n. 2, testo coordinato (PDF)](https://www.regione.lazio.it/sites/default/files/documentazione/2025/PRC-LR-02-26-02-2014.pdf).
+- [Ministero del Lavoro — Registro unico nazionale del Terzo settore](https://www.lavoro.gov.it/temi-e-priorita/terzo-settore-e-responsabilita-sociale-imprese/focus-on/riforma-terzo-settore/pagine/registro-unico-nazionale-terzo-settore).
 - [Ministero del Lavoro — Nota n. 9663 del 30 giugno 2022 sull'iscrizione al RUNTS degli enti di protezione civile (PDF)](https://regione.lazio.it/sites/default/files/documentazione/Nota-9663-del-30062022-iscrivibilita-RUNTS-enti-protezione-civile.pdf).
 - [Normattiva — D.Lgs. 2 gennaio 2018, n. 1, Codice della protezione civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1), articoli 34 e 35.

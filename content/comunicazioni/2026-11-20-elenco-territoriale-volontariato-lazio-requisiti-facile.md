@@ -51,6 +51,8 @@ Il gruppo deve avere:
 - un'assicurazione per tutti i volontari;
 - i controlli medici dei volontari.
 
+Le associazioni nuove si iscrivono anche al **RUNTS**. Il RUNTS è il registro nazionale del Terzo settore.
+
 I volontari che vanno sul campo devono:
 
 - avere 18 anni;
