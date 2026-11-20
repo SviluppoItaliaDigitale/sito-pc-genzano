@@ -423,6 +423,180 @@ materiali:
   dimensione: 4.1 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
+- id: allerta-meteo-presentazione
+  tema: allerta-meteo
+  tema_titolo: 'Allerta meteo'
+  tipo: presentazione
+  titolo: 'L''allerta meteo e i suoi colori'
+  descrizione: 'Per un''ora di Educazione Civica: 14 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
+  dimensione: 986 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
+    dimensione: 986 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf-16x10.pdf
+    dimensione: 986 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf-4x3.pdf
+    dimensione: 909 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-03-25-allerta-meteo-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-03-25-allerta-meteo-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-03-25-allerta-meteo-presentazione-4x3.pptx
+    dimensione: 1.1 MB
+- id: animali-emergenza-presentazione
+  tema: animali-emergenza
+  tema_titolo: 'Animali in emergenza'
+  tipo: presentazione
+  titolo: 'Gli animali di casa in emergenza'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
+  dimensione: 1.0 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf-16x10.pdf
+    dimensione: 789 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf-4x3.pdf
+    dimensione: 839 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-29-animali-emergenza-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-29-animali-emergenza-presentazione-16x10.pptx
+    dimensione: 934 KB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-29-animali-emergenza-presentazione-4x3.pptx
+    dimensione: 1021 KB
+- id: aree-emergenza-presentazione
+  tema: aree-emergenza
+  tema_titolo: 'Aree di emergenza'
+  tipo: presentazione
+  titolo: 'Le aree di emergenza di Genzano'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
+  dimensione: 1.1 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf-16x10.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf-4x3.pdf
+    dimensione: 1020 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-30-aree-emergenza-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-30-aree-emergenza-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-30-aree-emergenza-presentazione-4x3.pptx
+    dimensione: 1.2 MB
+- id: blackout-presentazione
+  tema: blackout
+  tema_titolo: 'Blackout'
+  tipo: presentazione
+  titolo: 'Blackout: che cosa fare quando manca la corrente'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
+  dimensione: 1.1 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-30-blackout-presentazione-pdf-16x10.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-30-blackout-presentazione-pdf-4x3.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-30-blackout-presentazione.pptx
+    dimensione: 1.2 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-30-blackout-presentazione-16x10.pptx
+    dimensione: 1.2 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-30-blackout-presentazione-4x3.pptx
+    dimensione: 1.2 MB
+- id: dopo-emergenza-presentazione
+  tema: dopo-emergenza
+  tema_titolo: 'Dopo l''emergenza'
+  tipo: presentazione
+  titolo: 'Dopo l''emergenza: che cosa fare quando è passata'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
+  dimensione: 1.0 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf-16x10.pdf
+    dimensione: 884 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf-4x3.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-30-dopo-emergenza-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-16x10.pptx
+    dimensione: 1021 KB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-4x3.pptx
+    dimensione: 1.2 MB
+- id: kit-emergenza-presentazione
+  tema: kit-emergenza
+  tema_titolo: 'Kit emergenza famiglia'
+  tipo: presentazione
+  titolo: 'Il kit di emergenza della famiglia'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
+  dimensione: 926 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
+    dimensione: 926 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf-16x10.pdf
+    dimensione: 934 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf-4x3.pdf
+    dimensione: 967 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-04-17-kit-emergenza-presentazione.pptx
+    dimensione: 1013 KB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-04-17-kit-emergenza-presentazione-16x10.pptx
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-04-17-kit-emergenza-presentazione-4x3.pptx
+    dimensione: 1.1 MB
 - id: nue-112-presentazione
   tema: nue-112
   tema_titolo: 'NUE 112'
@@ -452,3 +626,235 @@ materiali:
   - etichetta: 'Da modificare, 4:3, con le note'
     url: /presentazioni/2026-05-29-nue-112-presentazione-4x3.pptx
     dimensione: 1.1 MB
+- id: ondate-di-calore-presentazione
+  tema: ondate-di-calore
+  tema_titolo: 'Ondate di calore'
+  tipo: presentazione
+  titolo: 'Il caldo intenso: come proteggersi'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf.pdf
+  dimensione: 1.1 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf-16x10.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf-4x3.pdf
+    dimensione: 1002 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-14-ondate-di-calore-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-4x3.pptx
+    dimensione: 1.2 MB
+- id: piano-familiare-presentazione
+  tema: piano-familiare
+  tema_titolo: 'Piano familiare di emergenza'
+  tipo: presentazione
+  titolo: 'Il piano di emergenza della mia famiglia'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
+  dimensione: 1.2 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
+    dimensione: 1.2 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf-16x10.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf-4x3.pdf
+    dimensione: 976 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-29-piano-familiare-presentazione.pptx
+    dimensione: 1.2 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-29-piano-familiare-presentazione-16x10.pptx
+    dimensione: 1.2 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-29-piano-familiare-presentazione-4x3.pptx
+    dimensione: 1.1 MB
+- id: rischio-idrogeologico-presentazione
+  tema: rischio-idrogeologico
+  tema_titolo: 'Rischio idrogeologico'
+  tipo: presentazione
+  titolo: 'Alluvioni e frane: come proteggersi'
+  descrizione: 'Per un''ora di Educazione Civica: 14 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
+  dimensione: 995 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
+    dimensione: 995 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf-16x10.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf-4x3.pdf
+    dimensione: 853 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione.pptx
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-4x3.pptx
+    dimensione: 1.0 MB
+- id: rischio-sismico-presentazione
+  tema: rischio-sismico
+  tema_titolo: 'Rischio sismico'
+  tipo: presentazione
+  titolo: 'Il terremoto: che cosa fare prima, durante e dopo'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
+  dimensione: 1.1 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf-16x10.pdf
+    dimensione: 994 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf-4x3.pdf
+    dimensione: 969 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-03-21-rischio-sismico-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-03-21-rischio-sismico-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-03-21-rischio-sismico-presentazione-4x3.pptx
+    dimensione: 1.1 MB
+- id: rischio-vulcanico-presentazione
+  tema: rischio-vulcanico
+  tema_titolo: 'Rischio vulcanico'
+  tipo: presentazione
+  titolo: 'Il vulcano dei Colli Albani'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
+  dimensione: 977 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
+    dimensione: 977 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf-16x10.pdf
+    dimensione: 978 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf-4x3.pdf
+    dimensione: 951 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione.pptx
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-4x3.pptx
+    dimensione: 1.1 MB
+- id: temporali-intensi-presentazione
+  tema: temporali-intensi
+  tema_titolo: 'Temporali intensi'
+  tipo: presentazione
+  titolo: 'Temporali e fulmini: come stare al sicuro'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
+  dimensione: 1.1 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf-16x10.pdf
+    dimensione: 1011 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf-4x3.pdf
+    dimensione: 939 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-29-temporali-intensi-presentazione.pptx
+    dimensione: 1.2 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-29-temporali-intensi-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-29-temporali-intensi-presentazione-4x3.pptx
+    dimensione: 1.1 MB
+- id: vento-forte-presentazione
+  tema: vento-forte
+  tema_titolo: 'Vento forte'
+  tipo: presentazione
+  titolo: 'Vento forte: che cosa fare prima, durante e dopo'
+  descrizione: 'Per un''ora di Educazione Civica: 14 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
+  dimensione: 943 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
+    dimensione: 943 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-30-vento-forte-presentazione-pdf-16x10.pdf
+    dimensione: 884 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-30-vento-forte-presentazione-pdf-4x3.pdf
+    dimensione: 815 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-30-vento-forte-presentazione.pptx
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-30-vento-forte-presentazione-16x10.pptx
+    dimensione: 1023 KB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-30-vento-forte-presentazione-4x3.pptx
+    dimensione: 1011 KB
+- id: rischio-incendio-presentazione
+  tema: rischio-incendio
+  tema_titolo: 'Rischio incendi boschivi'
+  tipo: presentazione
+  titolo: 'Gli incendi boschivi: prevenirli e proteggersi'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
+  dimensione: 1007 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
+    dimensione: 1007 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf-16x10.pdf
+    dimensione: 830 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf-4x3.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-18-rischio-incendio-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-18-rischio-incendio-presentazione-16x10.pptx
+    dimensione: 1023 KB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-18-rischio-incendio-presentazione-4x3.pptx
+    dimensione: 1.2 MB
