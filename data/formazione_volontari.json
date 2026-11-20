@@ -440,6 +440,153 @@
           "dimensione": "1.2 MB"
         }
       ]
+    },
+    {
+      "tema": "volontari-10-rischio-allertamento",
+      "ordine": 10,
+      "corso": "Riferimenti per la formazione regionale",
+      "titolo": "Rischio, previsione e allertamento",
+      "sottotitolo": "Riferimenti per la formazione regionale",
+      "fascia": "Volontari del Gruppo (corso base e aggiornamento)",
+      "durata": "60-75 minuti",
+      "slide": 14,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf-4x3.pdf",
+          "dimensione": "1018 KB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-11-volontariato-organizzato",
+      "ordine": 11,
+      "corso": "Riferimenti per la formazione regionale",
+      "titolo": "Il volontariato organizzato di protezione civile",
+      "sottotitolo": "Riferimenti per la formazione regionale",
+      "fascia": "Volontari del Gruppo (corso base e aggiornamento)",
+      "durata": "60 minuti",
+      "slide": 13,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf.pdf",
+          "dimensione": "1.0 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione.pptx",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-12-gestione-emergenza",
+      "ordine": 12,
+      "corso": "Riferimenti per la formazione regionale",
+      "titolo": "La gestione dell'emergenza e l'assistenza alla popolazione",
+      "sottotitolo": "Riferimenti per la formazione regionale",
+      "fascia": "Volontari del Gruppo (corso base e aggiornamento)",
+      "durata": "60-75 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione.pptx",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-16x10.pptx",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-4x3.pptx",
+          "dimensione": "1.3 MB"
+        }
+      ]
     }
   ]
 }

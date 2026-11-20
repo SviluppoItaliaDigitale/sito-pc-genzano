@@ -34,7 +34,7 @@ Le presentazioni seguono i moduli del corso base del Gruppo, gli stessi descritt
 Il PowerPoint si può modificare per adattarlo al proprio gruppo. Il PDF si proietta così com'è e resta nitido anche su schermi grandi. Scegli il formato del tuo schermo: 16:9 per la maggior parte dei proiettori e dei televisori, 16:10 per molti portatili, 4:3 per i proiettori più vecchi.
 
 {{< callout tipo="info" titolo="La formazione della Regione Lazio" >}}
-La Regione Lazio organizza corsi per i volontari del sistema regionale e, dal 2025, una formazione «a cascata»: i nuovi volontari imparano da docenti che sono a loro volta volontari esperti, formati dalla Regione, e alla fine del percorso vengono valutati. La Regione non pubblica il programma a moduli dei corsi. Le due presentazioni dei riferimenti regionali trattano il ruolo del volontario nel Codice della protezione civile e il sistema regionale. Per i programmi ufficiali scrivi all'ufficio formazione della Regione: [formazione.protezionecivile@regione.lazio.it](mailto:formazione.protezionecivile@regione.lazio.it). Fonti: [Regione Lazio, «Formazione»](https://regione.lazio.it/protezione-civile/formazione) e [«La cascata formativa per i nuovi volontari»](https://www.regione.lazio.it/notizie/protezione-civile/cascata-formativa-nuovi-Volontari-Protezione-Civile-ponte-esperienza-nuovi-Volontari).
+La Regione Lazio organizza corsi per i volontari del sistema regionale e, dal 2025, una formazione «a cascata»: i nuovi volontari imparano da docenti che sono a loro volta volontari esperti, formati dalla Regione, e alla fine del percorso vengono valutati. La Regione non pubblica il programma a moduli dei corsi. Le presentazioni dei riferimenti regionali trattano i temi dei corsi base per volontari: il volontario nel Codice della protezione civile, il sistema regionale, rischio e allertamento, il volontariato organizzato, la gestione dell'emergenza e l'assistenza alla popolazione. Per i programmi ufficiali scrivi all'ufficio formazione della Regione: [formazione.protezionecivile@regione.lazio.it](mailto:formazione.protezionecivile@regione.lazio.it). Fonti: [Regione Lazio, «Formazione»](https://regione.lazio.it/protezione-civile/formazione) e [«La cascata formativa per i nuovi volontari»](https://www.regione.lazio.it/notizie/protezione-civile/cascata-formativa-nuovi-Volontari-Protezione-Civile-ponte-esperienza-nuovi-Volontari).
 {{< /callout >}}
 
 {{< presentazioni-volontari >}}
@@ -49,6 +49,8 @@ Testi delle presentazioni con licenza [CC BY-NC-SA 4.0](/note-legali/#licenza-de
 - [Kit per i volontari di protezione civile](/formazione/kit-calamita-volontari-pc/): schede da stampare per chi opera sul campo.
 - [Manuale di Protezione Civile](/manuale/): il manuale completo, da leggere online o in PDF.
 - [Il volontariato nel Codice della protezione civile](/normativa/testo-unico-protezione-civile/capo-5-volontariato/): il Capo V del D.Lgs. 1/2018 commentato.
+- [Eventi a rilevante impatto locale](/comunicazioni/2026-11-20-eventi-rilevante-impatto-locale-volontariato/): quando il Comune attiva la protezione civile per una festa, e che cosa può fare il volontario.
+- [Elenco territoriale del Lazio](/comunicazioni/2026-11-20-elenco-territoriale-volontariato-lazio-requisiti/): che cosa serve a un'organizzazione di volontariato di protezione civile.
 - [Addestramento e buone pratiche](/esercitazioni/): come si allena il Gruppo.
 
 ## Vedi anche
