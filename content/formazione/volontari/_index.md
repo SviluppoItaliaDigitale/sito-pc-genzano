@@ -11,7 +11,7 @@ Questa pagina raccoglie gli strumenti per formare i volontari del Gruppo Comunal
 <div class="card border-primary border-2 shadow-sm my-4">
 <div class="card-body p-4">
 <h2 class="h3 text-primary mt-0"><i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>Simulatore d'esame</h2>
-<p>Una prova a tempo con domande estratte a caso dagli argomenti che scegli: principi e organizzazione del sistema, rischio sismico, rischio alluvione, incendi boschivi, operatività e logistica, piano comunale di Genzano.</p>
+<p>Una prova a tempo con domande estratte a caso dagli argomenti che scegli: principi e organizzazione del sistema, rischio sismico, rischio alluvione, incendi boschivi, altri rischi del territorio, operatività e logistica, primo soccorso e sicurezza, radiocomunicazioni, volontariato e sistema regionale, piano comunale di Genzano.</p>
 <ul>
 <li>al massimo 60 domande e 45 minuti di tempo;</li>
 <li>la prova è superata con almeno il 75% di risposte giuste;</li>
