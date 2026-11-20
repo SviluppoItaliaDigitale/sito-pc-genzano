@@ -1,4 +1,4 @@
-ultimo_audit: '2026-11-19'
+ultimo_audit: '2026-11-20'
 totale: 81
 riepilogo:
   ACCESSIBILE: 2
@@ -724,7 +724,7 @@ documenti:
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
   size_kb: 705.3
-  sha256: 850070a275b6c46ecae6980c1eafc3964adc1fbddc32d950d454c15849d5d2b9
+  sha256: 84e36434a9a0b54c5416adc4723fd65d0eebdb66cd90f0338edd6e8a654c66cb
   searchable: true
   tagged: false
   language: it
