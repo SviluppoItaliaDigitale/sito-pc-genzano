@@ -858,3 +858,32 @@ materiali:
   - etichetta: 'Da modificare, 4:3, con le note'
     url: /presentazioni/2026-05-18-rischio-incendio-presentazione-4x3.pptx
     dimensione: 1.2 MB
+- id: it-alert-presentazione
+  tema: it-alert
+  tema_titolo: 'IT-alert'
+  tipo: presentazione
+  titolo: 'IT-alert, il messaggio di allarme sul telefono'
+  descrizione: 'Per un''ora di Educazione Civica: 15 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
+  dimensione: 986 KB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
+    dimensione: 986 KB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-29-it-alert-presentazione-pdf-16x10.pdf
+    dimensione: 941 KB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-29-it-alert-presentazione-pdf-4x3.pdf
+    dimensione: 992 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-29-it-alert-presentazione.pptx
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-29-it-alert-presentazione-16x10.pptx
+    dimensione: 1.0 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-29-it-alert-presentazione-4x3.pptx
+    dimensione: 1.1 MB
