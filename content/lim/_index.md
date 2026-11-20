@@ -43,9 +43,7 @@ Se un controllo non va a buon fine, il problema viene segnalato e corretto prima
 
 ## Le presentazioni da scaricare
 
-In [Risorse pronte](/risorse-pronte/) ci sono anche presentazioni sui rischi, in PowerPoint e in PDF, per un'ora di Educazione Civica. Sono in formato 16:9, quello dei monitor interattivi e dei proiettori più recenti. Su una lavagna più vecchia, con il proiettore in 4:3, compaiono due bande nere sopra e sotto, ma la slide si vede intera.
-
-Ogni slide è un'immagine: si proietta così com'è e il testo non si modifica.
+Le presentazioni sui rischi per un'ora di Educazione Civica sono in aggiornamento e per ora non si scaricano da [Risorse pronte](/risorse-pronte/). Intanto, per proiettare una pagina del sito con il testo grande, usa «Modalità Aula».
 
 ## Domande frequenti
 

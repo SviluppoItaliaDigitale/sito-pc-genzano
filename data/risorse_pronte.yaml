@@ -128,30 +128,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-03-25-allerta-meteo-infografica.png
-  dimensione: 4.1 MB
-  data_pubblicazione: '2026-03-25'
-  licenza: CC BY-NC-SA 4.0
-- id: allerta-meteo-presentazione-2026-03-25
-  tema: allerta-meteo
-  tema_titolo: Allerta meteo
-  tipo: presentazione
-  titolo: 'Presentazione: Allerta meteo'
-  descrizione: 'Presentazione PowerPoint per docenti: 13 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-03-25-allerta-meteo-presentazione.pptx
-  dimensione: 20.3 MB
-  data_pubblicazione: '2026-03-25'
-  licenza: CC BY-NC-SA 4.0
-- id: allerta-meteo-presentazione-pdf-2026-03-25
-  tema: allerta-meteo
-  tema_titolo: Allerta meteo
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Allerta meteo'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
-  dimensione: 16.0 MB
+  dimensione: 3.8 MB
   data_pubblicazione: '2026-03-25'
   licenza: CC BY-NC-SA 4.0
 - id: kit-emergenza-video-2026-09-25
@@ -176,29 +153,6 @@ materiali:
   dimensione: 1.9 MB
   data_pubblicazione: '2026-09-25'
   licenza: CC BY-NC-SA 4.0
-- id: kit-emergenza-presentazione-pdf-2026-04-17
-  tema: kit-emergenza
-  tema_titolo: Kit emergenza famiglia
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Kit emergenza famiglia'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
-  dimensione: 17.8 MB
-  data_pubblicazione: '2026-04-17'
-  licenza: CC BY-NC-SA 4.0
-- id: kit-emergenza-presentazione-2026-04-17
-  tema: kit-emergenza
-  tema_titolo: Kit emergenza famiglia
-  tipo: presentazione
-  titolo: 'Presentazione: Kit emergenza famiglia'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-04-17-kit-emergenza-presentazione.pptx
-  dimensione: 22.8 MB
-  data_pubblicazione: '2026-04-17'
-  licenza: CC BY-NC-SA 4.0
 - id: kit-emergenza-infografica-2026-04-17
   tema: kit-emergenza
   tema_titolo: Kit emergenza famiglia
@@ -207,7 +161,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-04-17-kit-emergenza-infografica.png
-  dimensione: 5.0 MB
+  dimensione: 4.8 MB
   data_pubblicazione: '2026-04-17'
   licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-video-3d-estintori-2026-10-28
@@ -268,29 +222,6 @@ materiali:
   dimensione: 4.3 MB
   data_pubblicazione: '2026-09-24'
   licenza: CC BY-NC-SA 4.0
-- id: rischio-incendio-presentazione-pdf-2026-05-18
-  tema: rischio-incendio
-  tema_titolo: Rischio incendi boschivi
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Rischio incendi boschivi'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
-  dimensione: 13.7 MB
-  data_pubblicazione: '2026-05-18'
-  licenza: CC BY-NC-SA 4.0
-- id: rischio-incendio-presentazione-2026-05-18
-  tema: rischio-incendio
-  tema_titolo: Rischio incendi boschivi
-  tipo: presentazione
-  titolo: 'Presentazione: Rischio incendi boschivi'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-18-rischio-incendio-presentazione.pptx
-  dimensione: 16.1 MB
-  data_pubblicazione: '2026-05-18'
-  licenza: CC BY-NC-SA 4.0
 - id: rischio-incendio-infografica-2026-05-18
   tema: rischio-incendio
   tema_titolo: Rischio incendi boschivi
@@ -299,7 +230,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-18-rischio-incendio-infografica.png
-  dimensione: 4.7 MB
+  dimensione: 4.5 MB
   data_pubblicazione: '2026-05-18'
   licenza: CC BY-NC-SA 4.0
 - id: rischio-sismico-video-3d-casa-2026-11-03
@@ -325,29 +256,6 @@ materiali:
   dimensione: 94.9 MB
   data_pubblicazione: '2026-10-29'
   licenza: CC BY-NC-SA 4.0
-- id: rischio-sismico-presentazione-pdf-2026-03-21
-  tema: rischio-sismico
-  tema_titolo: Rischio sismico
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Rischio sismico'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
-  dimensione: 16.3 MB
-  data_pubblicazione: '2026-03-21'
-  licenza: CC BY-NC-SA 4.0
-- id: rischio-sismico-presentazione-2026-03-21
-  tema: rischio-sismico
-  tema_titolo: Rischio sismico
-  tipo: presentazione
-  titolo: 'Presentazione: Rischio sismico'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-03-21-rischio-sismico-presentazione.pptx
-  dimensione: 18.9 MB
-  data_pubblicazione: '2026-03-21'
-  licenza: CC BY-NC-SA 4.0
 - id: rischio-sismico-infografica-2026-03-21
   tema: rischio-sismico
   tema_titolo: Rischio sismico
@@ -356,7 +264,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-03-21-rischio-sismico-infografica.png
-  dimensione: 4.5 MB
+  dimensione: 4.3 MB
   data_pubblicazione: '2026-03-21'
   licenza: CC BY-NC-SA 4.0
 - id: rischio-idrogeologico-video-3d-2026-10-24
@@ -394,29 +302,6 @@ materiali:
   dimensione: 4.6 MB
   data_pubblicazione: '2026-09-25'
   licenza: CC BY-NC-SA 4.0
-- id: rischio-idrogeologico-presentazione-pdf-2026-04-08
-  tema: rischio-idrogeologico
-  tema_titolo: Rischio idrogeologico
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Rischio idrogeologico'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
-  dimensione: 19.1 MB
-  data_pubblicazione: '2026-04-08'
-  licenza: CC BY-NC-SA 4.0
-- id: rischio-idrogeologico-presentazione-2026-04-08
-  tema: rischio-idrogeologico
-  tema_titolo: Rischio idrogeologico
-  tipo: presentazione
-  titolo: 'Presentazione: Rischio idrogeologico'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione.pptx
-  dimensione: 24.2 MB
-  data_pubblicazione: '2026-04-08'
-  licenza: CC BY-NC-SA 4.0
 - id: rischio-idrogeologico-infografica-2026-04-08
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico
@@ -425,31 +310,8 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-04-08-rischio-idrogeologico-infografica.png
-  dimensione: 4.6 MB
+  dimensione: 4.4 MB
   data_pubblicazione: '2026-04-08'
-  licenza: CC BY-NC-SA 4.0
-- id: rischio-vulcanico-presentazione-pdf-2026-05-23
-  tema: rischio-vulcanico
-  tema_titolo: Rischio vulcanico
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Rischio vulcanico'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
-  dimensione: 9.1 MB
-  data_pubblicazione: '2026-05-23'
-  licenza: CC BY-NC-SA 4.0
-- id: rischio-vulcanico-presentazione-2026-05-23
-  tema: rischio-vulcanico
-  tema_titolo: Rischio vulcanico
-  tipo: presentazione
-  titolo: 'Presentazione: Rischio vulcanico'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione.pptx
-  dimensione: 10.3 MB
-  data_pubblicazione: '2026-05-23'
   licenza: CC BY-NC-SA 4.0
 - id: rischio-vulcanico-infografica-2026-05-23
   tema: rischio-vulcanico
@@ -459,31 +321,8 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-23-rischio-vulcanico-infografica.png
-  dimensione: 3.6 MB
+  dimensione: 3.3 MB
   data_pubblicazione: '2026-05-23'
-  licenza: CC BY-NC-SA 4.0
-- id: ondate-di-calore-presentazione-pdf-2026-05-14
-  tema: ondate-di-calore
-  tema_titolo: Ondate di calore
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Ondate di calore'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf.pdf
-  dimensione: 13.3 MB
-  data_pubblicazione: '2026-05-14'
-  licenza: CC BY-NC-SA 4.0
-- id: ondate-di-calore-presentazione-2026-05-14
-  tema: ondate-di-calore
-  tema_titolo: Ondate di calore
-  tipo: presentazione
-  titolo: 'Presentazione: Ondate di calore'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-14-ondate-di-calore-presentazione.pptx
-  dimensione: 16.3 MB
-  data_pubblicazione: '2026-05-14'
   licenza: CC BY-NC-SA 4.0
 - id: ondate-di-calore-infografica-2026-05-14
   tema: ondate-di-calore
@@ -493,31 +332,8 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-14-ondate-di-calore-infografica.png
-  dimensione: 4.3 MB
+  dimensione: 4.1 MB
   data_pubblicazione: '2026-05-14'
-  licenza: CC BY-NC-SA 4.0
-- id: animali-emergenza-presentazione-pdf-2026-05-29
-  tema: animali-emergenza
-  tema_titolo: Animali in emergenza
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Animali in emergenza'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
-  dimensione: 13.2 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: animali-emergenza-presentazione-2026-05-29
-  tema: animali-emergenza
-  tema_titolo: Animali in emergenza
-  tipo: presentazione
-  titolo: 'Presentazione: Animali in emergenza'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-29-animali-emergenza-presentazione.pptx
-  dimensione: 15.6 MB
-  data_pubblicazione: '2026-05-29'
   licenza: CC BY-NC-SA 4.0
 - id: animali-emergenza-infografica-2026-05-29
   tema: animali-emergenza
@@ -527,30 +343,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-29-animali-emergenza-infografica.png
-  dimensione: 4.2 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: nue-112-presentazione-pdf-2026-05-29
-  tema: nue-112
-  tema_titolo: NUE 112
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): NUE 112'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
-  dimensione: 10.8 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: nue-112-presentazione-2026-05-29
-  tema: nue-112
-  tema_titolo: NUE 112
-  tipo: presentazione
-  titolo: 'Presentazione: NUE 112'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-29-nue-112-presentazione.pptx
-  dimensione: 12.4 MB
+  dimensione: 4.0 MB
   data_pubblicazione: '2026-05-29'
   licenza: CC BY-NC-SA 4.0
 - id: nue-112-infografica-2026-05-29
@@ -561,30 +354,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-29-nue-112-infografica.png
-  dimensione: 4.1 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: piano-familiare-presentazione-pdf-2026-05-29
-  tema: piano-familiare
-  tema_titolo: Piano familiare di emergenza
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Piano familiare di emergenza'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
-  dimensione: 16.2 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: piano-familiare-presentazione-2026-05-29
-  tema: piano-familiare
-  tema_titolo: Piano familiare di emergenza
-  tipo: presentazione
-  titolo: 'Presentazione: Piano familiare di emergenza'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-29-piano-familiare-presentazione.pptx
-  dimensione: 19.8 MB
+  dimensione: 3.9 MB
   data_pubblicazione: '2026-05-29'
   licenza: CC BY-NC-SA 4.0
 - id: piano-familiare-infografica-2026-05-29
@@ -595,7 +365,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-29-piano-familiare-infografica.png
-  dimensione: 4.2 MB
+  dimensione: 4.0 MB
   data_pubblicazione: '2026-05-29'
   licenza: CC BY-NC-SA 4.0
 - id: temporali-intensi-infografica-2026-05-29
@@ -606,54 +376,8 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-29-temporali-intensi-infografica.png
-  dimensione: 4.1 MB
+  dimensione: 3.9 MB
   data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: temporali-intensi-presentazione-pdf-2026-05-29
-  tema: temporali-intensi
-  tema_titolo: Temporali intensi
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Temporali intensi'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
-  dimensione: 13.4 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: temporali-intensi-presentazione-2026-05-29
-  tema: temporali-intensi
-  tema_titolo: Temporali intensi
-  tipo: presentazione
-  titolo: 'Presentazione: Temporali intensi'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-29-temporali-intensi-presentazione.pptx
-  dimensione: 16.5 MB
-  data_pubblicazione: '2026-05-29'
-  licenza: CC BY-NC-SA 4.0
-- id: blackout-presentazione-pdf-2026-05-30
-  tema: blackout
-  tema_titolo: Blackout
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Blackout'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
-  dimensione: 13.7 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: blackout-presentazione-2026-05-30
-  tema: blackout
-  tema_titolo: Blackout
-  tipo: presentazione
-  titolo: 'Presentazione: Blackout'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-30-blackout-presentazione.pptx
-  dimensione: 16.6 MB
-  data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
 - id: blackout-infografica-2026-05-30
   tema: blackout
@@ -663,30 +387,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-30-blackout-infografica.png
-  dimensione: 4.3 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: vento-forte-presentazione-pdf-2026-05-30
-  tema: vento-forte
-  tema_titolo: Vento forte
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Vento forte'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
-  dimensione: 10.7 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: vento-forte-presentazione-2026-05-30
-  tema: vento-forte
-  tema_titolo: Vento forte
-  tipo: presentazione
-  titolo: 'Presentazione: Vento forte'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-30-vento-forte-presentazione.pptx
-  dimensione: 12.4 MB
+  dimensione: 4.1 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
 - id: vento-forte-infografica-2026-05-30
@@ -697,30 +398,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-30-vento-forte-infografica.png
-  dimensione: 4.3 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: aree-emergenza-presentazione-pdf-2026-05-30
-  tema: aree-emergenza
-  tema_titolo: Aree di emergenza
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Aree di emergenza'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
-  dimensione: 14.1 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: aree-emergenza-presentazione-2026-05-30
-  tema: aree-emergenza
-  tema_titolo: Aree di emergenza
-  tipo: presentazione
-  titolo: 'Presentazione: Aree di emergenza'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-30-aree-emergenza-presentazione.pptx
-  dimensione: 17.1 MB
+  dimensione: 4.1 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
 - id: aree-emergenza-infografica-2026-05-30
@@ -731,7 +409,7 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-30-aree-emergenza-infografica.png
-  dimensione: 3.8 MB
+  dimensione: 3.6 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
 - id: dopo-emergenza-infografica-2026-05-30
@@ -742,29 +420,6 @@ materiali:
   descrizione: Infografica formato quadrato pronta per condivisione social, stampa
     A4 e affissione in bacheca.
   file_url: /infografiche/2026-05-30-dopo-emergenza-infografica.png
-  dimensione: 4.3 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: dopo-emergenza-presentazione-pdf-2026-05-30
-  tema: dopo-emergenza
-  tema_titolo: Dopo l'emergenza
-  tipo: presentazione-pdf
-  titolo: 'Presentazione (PDF): Dopo l''emergenza'
-  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
-    senza PowerPoint.'
-  file_url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
-  dimensione: 15.3 MB
-  data_pubblicazione: '2026-05-30'
-  licenza: CC BY-NC-SA 4.0
-- id: dopo-emergenza-presentazione-2026-05-30
-  tema: dopo-emergenza
-  tema_titolo: Dopo l'emergenza
-  tipo: presentazione
-  titolo: 'Presentazione: Dopo l''emergenza'
-  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
-    Civica in classe. Ogni slide è un''immagine in formato 16:9, da proiettare così
-    com''è: il testo non si modifica.'
-  file_url: /presentazioni/2026-05-30-dopo-emergenza-presentazione.pptx
-  dimensione: 19.1 MB
+  dimensione: 4.1 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
