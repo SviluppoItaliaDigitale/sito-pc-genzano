@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-20T17:19:15+00:00",
+  "generato": "2026-11-20T23:17:09+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-20T17:15:15+00:00",
+   "data": "2026-11-20T23:02:42+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Metstrade 2026, Confindustria nautica e Ice presentano eccellenza 'made in Italy' con collettiva 77 aziende",
-   "url": "https://www.adnkronos.com/economia/metstrade-2026-confindustria-nautica-e-ice-presentano-eccellenza-made-in-italy-con-collettiva-77-aziende_cjTACfygMiheYQMZvDgkU"
+   "titolo": "Manovra, mobilitazione per lo sciopero in tutto il Paese. Landini: \"Un milione in 100 piazze\"",
+   "url": "https://www.adnkronos.com/cronaca/sciopero-generale-cgil-landini-opposizione_7Lhh3FCFkZBurFkwglhvBK"
   },
   {
-   "data": "2026-11-20T17:12:12+00:00",
+   "data": "2026-11-20T22:42:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lite tra famiglie finisce nel sangue, donna muore accoltellata a Roma",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/lite-tra-famiglie-finisce-nel-sangue-donna-muore-accoltellata-a-roma_b697d876-126b-4a93-bc8e-04447c149d0a.html"
+  },
+  {
+   "data": "2026-11-20T22:39:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Muse, a Milano il rock è un kolossal fantascientifico",
+   "url": "https://www.adnkronos.com/spettacoli/muse-concerto-milano-unipol-dome-the-wow-signal_6wU9ltBTFg9AzozEiMi5Xa"
+  },
+  {
+   "data": "2026-11-20T22:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, lite tra donne in famiglia rom a Tor Vergata: 52enne muore accoltellata",
+   "url": "https://www.adnkronos.com/cronaca/roma-tor-vergata-lite-donne-famiglia-morta_P1cNYgS8s3RzVNORkMNLU"
+  },
+  {
+   "data": "2026-11-20T21:46:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nebbia a Parma, la Roma atterra a Bologna e raggiunge la città in pullman",
+   "url": "https://www.adnkronos.com/sport/nebbia-parma-roma-atterra-bologna-cosa-e-successo_7ngoNsUx3Jmq5WBKlIV2Bi"
+  },
+  {
+   "data": "2026-11-20T21:40:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gf Vip, Guendalina Tavassi lascia momentaneamente la Casa \"per motivi personali\": cosa è successo",
+   "url": "https://www.adnkronos.com/spettacoli/guendalina-tavassi-lascia-casa-gf-vip-caduta_3iCX0tf6n4156xd7ogJKbK"
+  },
+  {
+   "data": "2026-11-20T21:23:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Finals, Medvedev è l'ultimo semifinalista: Tiafoe ko, ora c'è Zverev",
+   "url": "https://www.adnkronos.com/sport/medvedev-qualificato-semifinale-atp-finals-domani-zverev_7a8ecwUNYnPusxWSKsEACk"
+  },
+  {
+   "data": "2026-11-20T21:22:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Esecuzione choc in Texas, oltre un'ora di agonia per Reinaldo Dennes dopo l'iniezione letale: \"Urlava per il dolore\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/texas-agonia-iniezione-letale-reinaldo-dennes_54AfAh5eaRJN74nvfoXtAQ"
+  },
+  {
+   "data": "2026-11-20T21:21:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "La bolla IA gela i mercati, l'Europa brucia 370 miliardi. Anthropic e Wall Street giù",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/la-bolla-ia-gela-i-mercati-leuropa-brucia-370-miliardi.-anthropic-e-wall-street_0ba615f0-de7d-440c-a699-c689e255c19e.html"
+  },
+  {
+   "data": "2026-11-20T21:07:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cgil in 100 piazze: 'Siamo un milione e mezzo, il Governo confuso'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/cgil-in-100-piazze-siamo-un-milione-e-mezzo-il-governo-confuso_86e7ce84-b2a8-45ce-9c08-87380ca1759d.html"
+  },
+  {
+   "data": "2026-11-20T20:57:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Al ReWriters Fest si parla di donne pioniere e inventrici, linguaggio e mascolinità tossica",
+   "url": "https://www.ansa.it/donne/notizie/2026/11/20/al-rewriters-fest-donne-pioniere-e-inventrici-linguaggio-e-mascolinita-tossica_d628dd3d-8409-4158-8962-16e79c4a6ed1.html"
+  },
+  {
+   "data": "2026-11-20T20:57:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Vertice del reset tra l'Ue e Londra, si punta a superare la Brexit",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/von-der-leyen-con-londra-un-punto-di-svolta-rafforziamo-relazioni_5b953d39-9a7b-42ee-ac7c-68f1e0f99a6a.html"
+  },
+  {
+   "data": "2026-11-20T20:49:26+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Agenzia cyber, ad ottobre rilevati 473 account di istituzioni compromessi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/agenzia-cyber-ad-ottobre-rilevati-473-account-di-istituzioni-compromessi_cf5ebefa-c41a-43c7-9d2d-b1441db9abaa.html"
-  },
-  {
-   "data": "2026-11-20T17:07:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ucciso a colpi di forbici a Roma, diffusa la foto del presunto killer",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/ucciso-a-colpi-di-forbici-a-roma-diffusa-la-foto-del-presunto-killer_a3a1eeac-10b3-4f05-a576-d7989ffe27b8.html"
-  },
-  {
-   "data": "2026-11-20T17:03:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Processo presunto femminicidio, confermata condanna a 21 anni a imputato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/processo-presunto-femminicidio-confermata-condanna-a-21-anni-a-imputato_59a4224e-e545-48dc-ab0c-ad4e41db6041.html"
-  },
-  {
-   "data": "2026-11-20T17:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ue-Gb, ex ministro Giustizia Gauke: \"Relazione più collaborativa ma serve che Londra discuta le regole non le subisca\"",
-   "url": "https://www.adnkronos.com/cronaca/ue-gb-ex-ministro-giustizia-gauke_7cArK6wDAoZUJZsQfN78VO"
-  },
-  {
-   "data": "2026-11-20T16:58:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dolomiti, montagne già innevate oltre i 1.000 metri di quota",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/11/20/dolomiti-montagne-gia-innevate-oltre-i-1.000-metri-di-quota_2d45632f-f302-457b-8dcc-b157a18b44d7.html"
-  },
-  {
-   "data": "2026-11-20T16:58:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pattinaggio, il 23 dicembre il galà dei Campionati italiani di figura alla Fiera Ice Arena",
-   "url": "https://www.adnkronos.com/economia/pattinaggio-il-23-dicembre-il-gala-dei-campionati-italiani-di-figura-alla-fiera-ice-arena_1BctUEs56f7xnYQkYgOrRS"
-  },
-  {
-   "data": "2026-11-20T16:58:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, domani terze libere e qualifiche del Gp di Las Vegas. Orario e dove vederle",
-   "url": "https://www.adnkronos.com/sport/f1-terze-libere-qualifiche-gp-las-vegas_Olu6amZTzWe95UXvLb1kk"
-  },
-  {
-   "data": "2026-11-20T16:57:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Urla di dolore per un'iniezione letale, agonia di oltre un'ora per un detenuto in Texas",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/urla-di-dolore-per-uniniezione-letale-agonia-di-oltre-unora-per-un-detenuto_c450d3b1-a5a1-41ec-babf-1a19f9985b45.html"
-  },
-  {
-   "data": "2026-11-20T16:57:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giuliano Sangiorgi e il dolore per la morte della sua guardia del corpo: \"È stato un mese durissimo\"",
-   "url": "https://www.adnkronos.com/spettacoli/giuliano-sangiorgi-video-social-antonio-boccuni_5ujEm1V3vPHVdqXcaTcz2g"
-  },
-  {
-   "data": "2026-11-20T16:55:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Roma petardi e bottiglie contro il ministero dell'Istruzione. Tensione polizia-attivisti a Bologna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/petardi-contro-il-ministero-due-studenti-in-dissenso-tra-i-poliziotti_81ec06b5-2dba-4b72-b8d1-f0341d4535cb.html"
-  },
-  {
-   "data": "2026-11-20T16:54:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sciopero generale a Bologna la polizia blocca i manifestanti a manganellate. I video dalle piazze",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/sciopero-generale-le-piazze-da-milano-a-napoli_6e8664c2-d3b8-454f-b25f-4d6839031630.html"
-  },
-  {
-   "data": "2026-11-20T16:51:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Due missili e un drone cadono in Polonia. Tusk: 'Una provocazione intenzionale russa'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/due-missili-e-un-drone-cadono-in-polonia.-tusk-una-provocazione-intenzionale-russa_6104402c-305d-441e-a983-2c8dfb41bd5e.html"
-  },
-  {
-   "data": "2026-11-20T16:47:57+00:00",
-   "fonte": "ANSA",
    "titolo": "Sciopero generale, la Cgil: 'Un milione e mezzo in oltre 100 piazze'. Landini: Non ci fermeremo, siamo la maggioranza nel Paese'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/oggi-lo-sciopero-generale.-in-piazza-lavoratori-e-studenti.-landini-ascoltare-le-piazze-non_599c502c-b0d3-44aa-8e7b-cdf04b274aeb.html"
   },
   {
-   "data": "2026-11-20T16:45:18+00:00",
+   "data": "2026-11-20T20:41:50+00:00",
    "fonte": "ANSA",
-   "titolo": "Dominique de Villepin annuncia la sua candidatura per l'Eliseo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/dominique-de-villepin-annuncia-la-sua-candidatura-per-leliseo_e8e6fd68-ad2a-48bd-8bc1-0e1a67295bc7.html"
+   "titolo": "L'omaggio del Senato Usa all'ippopotamo Fiona, morta dopo aver ingerito un cappello: 'Era un raggio di sole'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/lomaggio-del-senato-usa-allippopotamo-fiona-morta-dopo-aver-ingerito_f93e615f-39f2-48da-ad0f-a2fae8076765.html"
   },
   {
-   "data": "2026-11-20T16:39:38+00:00",
+   "data": "2026-11-20T20:37:22+00:00",
    "fonte": "ANSA",
-   "titolo": "L'omicidio di Willy Monteiro Duarte, confermato l'ergastolo per Gabriele Bianchi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/lomicidio-di-willy-confermato-lergastolo-per-gabriele-bianchi_d10c83fa-5929-47b2-85b5-9b6ddbdfbd67.html"
+   "titolo": "Pasotti: 'La mia Traviata, tradizione e modernità'. Stasera Meloni alla prima all'Aquila",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/20/pasotti-la-mia-traviata-tradizione-e-modernita.-stasera-meloni-alla-prima-allaquila_733cd792-8817-46a4-a80a-fe4056cfcbae.html"
   },
   {
-   "data": "2026-11-20T16:36:25+00:00",
+   "data": "2026-11-20T20:28:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il ceo di Anthropic in Puglia, riserbo sui motivi della visita",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/il-ceo-di-anthropic-a-brindisi-riserbo-sui-motivi-della-visita_8b3f301a-488d-4f23-8905-6951fcc78aa2.html"
+  },
+  {
+   "data": "2026-11-20T20:21:53+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Caso Siher, Tribunale chiede di verificare se serve tutela per gip",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/caso-siher-tribunale-chiede-di-verificare-se-serve-tutela-per-gip_e375234e-1d2f-4fc1-aeb3-902d29c454fa.html"
+   "titolo": "Idranti e lacrimogeni sul corteo a Torino davanti alla Gran Madre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/idranti-e-lacrimogeni-sul-corteo-a-torino-davanti-alla-gran-madre_e02568e6-29d9-4ad9-8e93-d35f43b6b7ab.html"
   },
   {
-   "data": "2026-11-20T16:31:58+00:00",
+   "data": "2026-11-20T20:18:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Yara, Bossetti: \"Fiducioso in revisione processo, bisogna lottare e lo farò\"",
+   "url": "https://www.adnkronos.com/cronaca/caso-yara-bossetti-revisione-processo_1x82dvt6wR8e5r8HZ8db72"
+  },
+  {
+   "data": "2026-11-20T20:16:30+00:00",
    "fonte": "ANSA",
-   "titolo": "Scontro sugli ebook, FI presenta un emendamento soppressivo alla Camera",
+   "titolo": "Gli studenti con i poliziotti: 'La violenza non ha senso'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/petardi-contro-il-ministero-due-studenti-in-dissenso-tra-i-poliziotti_81ec06b5-2dba-4b72-b8d1-f0341d4535cb.html"
+  },
+  {
+   "data": "2026-11-20T20:14:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "FI rilancia la battaglia, tre emendamenti anti e-book alla Camera",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/11/20/scontro-sugli-ebook-fi-presenta-un-emendamento-soppressivo-alla-camera-_a676fb83-bb34-4ed1-bb51-a0428ece696b.html"
   },
   {
-   "data": "2026-11-20T16:25:49+00:00",
+   "data": "2026-11-20T20:00:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Bicarbonato e aceto nel lavandino: efficacia reale e soluzioni per sturare lo scarico",
-   "url": "https://www.adnkronos.com/cronaca/lavandino-intasato-aceto-bicarbonato_2JefmREZRBXfmoCl5WNmkM"
+   "titolo": "Torino, nuova manifestazione nel pomeriggio. Manifestanti tentano ingresso in piazza Vittorio lanciando oggetti: respinti con idrante",
+   "url": "https://www.adnkronos.com/cronaca/corteo-torino-scontri-idrante_3xiAtKJPBB54UeygDTmqxU"
   },
   {
-   "data": "2026-11-20T16:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Addio a Martina Sollazzo, morta la tiktoker napoletana di 22 anni che raccontava la malattia sui social",
-   "url": "https://www.adnkronos.com/cronaca/morta-martina-sollazzo-malattia-tiktok-napoli_6QRVBPyLaS02GJHY5k7idi"
-  },
-  {
-   "data": "2026-11-20T16:23:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"In quel momento ha fatto le ultime due spinte, ho preso il suo bimbo che ha pianto subito\", parla Niurka Roman l'autista che aiutò una donna a partorire sull'autobus",
-   "url": "https://www.adnkronos.com/cronaca/in-quel-momento-ha-fatto-le-ultime-due-spinte-niurka-roman-medaglia-al-merito_6mSDaxaz8it1R3dys678j6"
-  },
-  {
-   "data": "2026-11-20T16:16:38+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alcaraz 'scherza' sull'infortunio: \"Non dirò cosa sta succedendo, fate voi...\"",
-   "url": "https://www.adnkronos.com/sport/alcaraz-infortunio-atp-finals-cosa-ha-detto_q7RzOOoW6GauMm73xvx5S"
-  },
-  {
-   "data": "2026-11-20T16:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Forum Nordest: in vista del tunnel Brennero mancano investimenti da 7,8 miliardi",
-   "url": "https://www.adnkronos.com/economia/tunnel-brennero-investimenti_5oOhIXnYioN9LmEYGFNDVS"
-  },
-  {
-   "data": "2026-11-20T16:15:12+00:00",
+   "data": "2026-11-20T19:56:45+00:00",
    "fonte": "ANSA",
-   "titolo": "Intesa Ue-Regno Unito sul reset, Von der Leyen: 'Rafforziamo le relazioni'. Burnham: 'Accordo storico'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/von-der-leyen-con-londra-un-punto-di-svolta-rafforziamo-relazioni_5b953d39-9a7b-42ee-ac7c-68f1e0f99a6a.html"
+   "titolo": "Orrore in Texas, urla di dolore per l'iniezione durante un'esecuzione",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/urla-di-dolore-per-uniniezione-letale-agonia-di-oltre-unora-per-un-detenuto_c450d3b1-a5a1-41ec-babf-1a19f9985b45.html"
   },
   {
-   "data": "2026-11-20T16:13:51+00:00",
+   "data": "2026-11-20T19:43:58+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Vendita San Siro, la Cassazione restituisce cellulare e pc al dg del Comune",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/vendita-san-siro-la-cassazione-restituisce-cellulare-e-pc-al-dg-del-comune_eda15ba1-fc2f-4ad1-a60a-bb6a8b84bc25.html"
+   "titolo": "Bossetti: 'L'omicidio di Yara maturato nell'ambito della palestra'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/bossetti-lomicidio-di-yara-maturato-nellambito-della-palestra_7dc43cac-ef8c-4843-8244-06fdefa81e85.html"
   },
   {
-   "data": "2026-11-20T16:07:54+00:00",
+   "data": "2026-11-20T19:40:51+00:00",
    "fonte": "ANSA",
-   "titolo": "Lufthansa verso il taglio di 1.000 posti di lavoro",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/lufthansa-verso-il-taglio-di-1.000-posti-di-lavoro_061e5719-4ac8-4315-b186-2d542184c82c.html"
+   "titolo": "Israele: Eisenkot pronto a un governo di emergenza da premier, nessuna rotazione con Bibi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/israele-eisenkot-pronto-a-un-governo-di-emergenza-da-premier-nessuna-rotazione-con-bibi_1ef68397-dd2b-49c1-953f-30bf696a465b.html"
   },
   {
-   "data": "2026-11-20T16:01:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mostro di Firenze, criminologo Cannella: \"Il caso non è mai stato chiuso, dal Dna può arrivare la verità\"",
-   "url": "https://www.adnkronos.com/cronaca/mostro-firenze-intervista-criminologo-cannella-dna_3Q0CLzuE0Kfs2Gs7uJVnrG"
-  },
-  {
-   "data": "2026-11-20T15:57:19+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Putin invita gli europei a Mosca: messaggio a Gran Bretagna, Francia e Germania",
-   "url": "https://www.adnkronos.com/internazionale/esteri/putin-ucraina-russia-negoziati-europa_TPj6YC2zNYS5vJQPztMKs"
-  },
-  {
-   "data": "2026-11-20T15:51:43+00:00",
+   "data": "2026-11-20T19:35:51+00:00",
    "fonte": "ANSA",
-   "titolo": "L'attrice Anna Foglietta in piazza con gli studenti: 'Abbiamo tolto i loro sogni'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/lattrice-foglietta-in-piazza-con-gli-studenti-abbiamo-tolto-i-loro-sogni_5c6410bd-2a3a-4cc8-9b52-a11e914f449b.html"
+   "titolo": "Trump difende il trilaterale di Shenzhen, ma alza il muro sui data center",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/trump-difende-il-trilaterale-di-shenzhen-ma-alza-il-muro-sui-data-center_09f505ad-f8ba-4714-9f43-d1df034bfc2a.html"
   },
   {
-   "data": "2026-11-20T15:36:22+00:00",
+   "data": "2026-11-20T19:30:23+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Cittadinanzattiva, da settembre già 18 crolli nelle scuole",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/cittadinanzattiva-da-settembre-gia-18-crolli-nelle-scuole_0bc3c97f-2cf5-4968-9074-4a19af16d661.html"
+   "titolo": "Sovraffollamento e porte bloccate, il questore chiude un locale a Pescara",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/sovraffollamento-e-porte-bloccate-il-questore-chiude-un-locale-a-pescara_39d45418-e6ef-4931-9f48-85d56feea93b.html"
+  },
+  {
+   "data": "2026-11-20T19:29:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "De Villepin scende in campo: 'La Francia marcisce, mi candido all'Eliseo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/dominique-de-villepin-annuncia-la-sua-candidatura-per-leliseo_e8e6fd68-ad2a-48bd-8bc1-0e1a67295bc7.html"
+  },
+  {
+   "data": "2026-11-20T19:16:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, numeri e combinazione vincente di oggi 20 novembre: nessun 6, 5+1 e 5",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-20-novembre-numeri-combinazione-quote_4FXrAfQK97db546Htzhkq4"
+  },
+  {
+   "data": "2026-11-20T19:11:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tensioni in centro a Torino con il corteo contro guerra e carovita",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/tensioni-in-centro-a-torino-con-il-corteo-contro-guerra-e-carovita_80940078-13b7-4f9e-bac7-18a62a9ec130.html"
+  },
+  {
+   "data": "2026-11-20T19:10:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Simona uccisa 34 anni fa, confermata la condanna a 21 anni per l'amico",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/simona-uccisa-34-anni-fa-confermata-la-condanna-a-21-anni-per-lamico_55efad21-05ba-4079-ad72-45f42cebb406.html"
   }
  ]
 }
