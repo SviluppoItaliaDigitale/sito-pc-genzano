@@ -33,7 +33,7 @@ Il [curricolo verticale](/formazione/curricolo-verticale/) è una tabella con i 
 La scuola deve fare almeno due prove di evacuazione all'anno (D.M. 26 agosto 1992). Per prepararle e per parlarne dopo ci sono nuove schede:
 
 - una **storia sociale** con pittogrammi, da leggere nei giorni prima della prova a chi è nello spettro autistico o ha altre necessità comunicative;
-- **«La sirena a scuola è una prova»**, in italiano semplice, per gli alunni appena arrivati in Italia, con lo spazio per la traduzione del mediatore;
+- **«La sirena a scuola: che cosa faccio»**, in italiano semplice, per gli alunni appena arrivati in Italia, con lo spazio per la traduzione del mediatore;
 - il **compagno-guida**, che accompagna un compagno con disabilità sapendo che la responsabilità resta agli adulti;
 - la scheda di **evacuazione personalizzata**, da compilare con la famiglia accanto al Piano educativo individualizzato;
 - **«Quando non si esce»**, per i casi in cui il pericolo è fuori e la classe resta al riparo dentro la scuola;
