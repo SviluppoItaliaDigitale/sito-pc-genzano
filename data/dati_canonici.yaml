@@ -1363,3 +1363,19 @@ dati:
         perche: "Le fonti ufficiali della Guardia Costiera indicano il 1530 per le emergenze in mare; nessuna lo estende ai laghi (19/11/2026)."
         contesto: '1530'
         finestra: 120
+
+  - id: nuclei-educazione-civica
+    dato: "Nuclei concettuali dell'educazione civica"
+    valore: "tre nuclei: Costituzione; Sviluppo economico e sostenibilità; Cittadinanza digitale (Linee guida allegate al D.M. 183/2024)"
+    fonti:
+      - nome: "Ministero dell'Istruzione e del Merito, Linee guida per l'insegnamento dell'educazione civica (D.M. 183 del 7 settembre 2024)"
+        url: "https://www.istruzione.it/educazione_civica/norme.html"
+    vietati:
+      - regex: '\bCittadinanza\s+(?:scientifica|solidale)\b'
+        perche: "Il D.M. 183/2024 non ha nuclei con questi nomi: i nuclei sono Costituzione, Sviluppo economico e sostenibilità, Cittadinanza digitale."
+        contesto: '183/2024|educazione civica|nucle'
+        finestra: 200
+      - regex: '183/2024\s+—\s+Sostenibilità\b'
+        perche: "Il nome ufficiale del nucleo è «Sviluppo economico e sostenibilità»."
+        contesto: '183/2024'
+        finestra: 40
