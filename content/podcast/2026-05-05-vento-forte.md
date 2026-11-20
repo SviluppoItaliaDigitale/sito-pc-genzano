@@ -30,7 +30,7 @@ Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi asco
 
 ## Sul sito
 
-- [Tutti i materiali multimediali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni divisi per tema
+- [Tutti i materiali multimediali pronti](/risorse-pronte/) — video e infografiche divisi per tema
 - [Vento forte](/risorse-pronte/#tema-vento-forte) — gli altri materiali su questo tema
 
 ## Nota sulla produzione
