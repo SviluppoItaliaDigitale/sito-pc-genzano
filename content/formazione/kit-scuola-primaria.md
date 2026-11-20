@@ -241,7 +241,7 @@ Portate in classe un esempio di bollettino di allerta meteo (scaricabile dal sit
 
 ### Spiegazione
 
-Un **incendio boschivo** è un fuoco che si propaga in un'area naturale (bosco, macchia, prato). Il periodo più pericoloso è l'**estate**, da giugno a settembre, quando il caldo e il vento facilitano la propagazione delle fiamme.
+Un **incendio boschivo** è un fuoco che si propaga in un'area naturale (bosco, macchia, prato). Il periodo più pericoloso è l'**estate** (nel 2026 dal 15 giugno al 15 ottobre), quando il caldo e il vento facilitano la propagazione delle fiamme.
 
 Il territorio dei Castelli Romani è ricco di vegetazione e comprende un Parco Regionale: il rischio incendi è presente e concreto.
 

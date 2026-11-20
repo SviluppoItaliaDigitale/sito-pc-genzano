@@ -33,7 +33,7 @@ I mozziconi buttati fuori dal finestrino di un'auto in corsa, che sembrano "spen
 
 ## I mesi critici
 
-Nei Castelli Romani il periodo di massima pericolosità è **giugno-settembre**. Le condizioni che aumentano il rischio:
+Nei Castelli Romani il periodo di massima pericolosità è l'estate: nel 2026 la campagna antincendio va **dal 15 giugno al 15 ottobre**. Le condizioni che aumentano il rischio:
 
 - **Temperature elevate** (>30 °C) prolungate.
 - **Bassa umidità** dell'aria e del suolo.

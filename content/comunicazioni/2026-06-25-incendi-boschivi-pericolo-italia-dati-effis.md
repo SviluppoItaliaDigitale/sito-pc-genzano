@@ -36,7 +36,7 @@ I dati provengono da EFFIS, parte del Copernicus Emergency Management Service. E
 
 ## Cosa significa per i Castelli Romani
 
-Genzano di Roma rientra nella **Zona AIB 9** del Lazio. Il segnale europeo va nella stessa direzione della nostra stagione a rischio, che va da giugno a settembre. Tanto caldo, vegetazione secca e vento sono la combinazione che fa nascere e correre il fuoco.
+Genzano di Roma rientra nella **Zona AIB 9** del Lazio. Il segnale europeo va nella stessa direzione della nostra stagione a rischio, che nel 2026 va dal 15 giugno al 15 ottobre. Tanto caldo, vegetazione secca e vento sono la combinazione che fa nascere e correre il fuoco.
 
 Per il **livello di pericolo locale**, il riferimento è il **bollettino di pericolosità da incendi boschivi della Regione Lazio**. Lo trovi sempre aggiornato nella nostra pagina [Allerte meteo](/allerte-meteo/).
 

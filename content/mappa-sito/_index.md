@@ -253,7 +253,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-incendio/">
   <div class="ms-card-icon"><i class="bi bi-fire"></i></div>
   <p class="ms-card-title">Incendi boschivi</p>
-  <p class="ms-card-desc">Periodo AIB giugno-settembre, prevenzione, segnalazione tramite 112.</p>
+  <p class="ms-card-desc">Campagna AIB 2026 dal 15 giugno al 15 ottobre, prevenzione, segnalazione tramite 112.</p>
 </a>
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/temporali-intensi/">
   <div class="ms-card-icon"><i class="bi bi-lightning-charge-fill"></i></div>

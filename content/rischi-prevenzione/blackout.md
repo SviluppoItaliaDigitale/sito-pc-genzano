@@ -7,8 +7,8 @@ tts: true
 weight: 7
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
-howto_prima: "Tieni sempre a portata di mano una torcia elettrica con pile di scorta. Disponi di una radio a pile per ricevere comunicazioni ufficiali. Carica preventivamente telefono e power bank quando sono previste allerte. Tieni in casa una scorta minima di acqua potabile (almeno 4 litri a persona). Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il bonus per disagio fisico: protegge dalla sospensione per morosità, ma non dà priorità durante un guasto. Concorda con il medico un piano per le ore senza corrente."
-howto_durante: "Non farti prendere dal panico: i blackout sono generalmente temporanei. Scollega gli elettrodomestici per evitare danni da sbalzi al ritorno della corrente (lascia accesa una luce per sapere quando torna). Non aprire frigorifero e congelatore se non strettamente necessario (il cibo si conserva per ore). Usa torce elettriche, non candele (rischio incendio). Se sei bloccato in ascensore, premi il pulsante di allarme e attendi i soccorsi. Non usare generatori a combustibile all'interno di locali chiusi (rischio monossido di carbonio)."
+howto_prima: "Tieni sempre a portata di mano una torcia elettrica con pile di scorta. Disponi di una radio a pile per ricevere comunicazioni ufficiali. Carica preventivamente telefono e power bank quando sono previste allerte. Tieni in casa una scorta di acqua potabile (circa 4 litri a persona al giorno, per 3 giorni). Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il bonus per disagio fisico: protegge dalla sospensione per morosità, ma non dà priorità durante un guasto. Concorda con il medico un piano per le ore senza corrente."
+howto_durante: "Di solito i blackout durano poco. Scollega gli elettrodomestici per evitare danni da sbalzi al ritorno della corrente (lascia accesa una luce per sapere quando torna). Non aprire frigorifero e congelatore se non strettamente necessario (il cibo si conserva per ore). Usa torce elettriche, non candele (rischio incendio). Se sei bloccato in ascensore, premi il pulsante di allarme e attendi i soccorsi. Non usare generatori a combustibile all'interno di locali chiusi (rischio monossido di carbonio)."
 howto_dopo: "Riaccendi gli elettrodomestici uno alla volta per evitare sovraccarichi. Verifica lo stato degli alimenti nel congelatore: se lo hai tenuto chiuso, il cibo può resistere anche 24 ore. Controlla eventuali danni all'impianto elettrico. Segnala al fornitore eventuali ritardi nel ripristino del servizio. Se hai usato apparecchiature elettromedicali, verifica che funzionino correttamente."
 ---
 Un blackout può durare ore. Gli eventi meteorologici estremi, i guasti alla rete e i sovraccarichi ne sono le cause più frequenti. Chi usa apparecchiature elettromedicali è esposto a rischi aggiuntivi: prepararsi in anticipo riduce i danni.
@@ -65,7 +65,7 @@ Prepararsi prima fa la differenza. In emergenza chiama il 112.
 - Tieni sempre a portata di mano una **torcia elettrica** con pile di scorta.
 - Disponi di una **radio a pile** per ricevere comunicazioni ufficiali.
 - Carica telefono e power bank quando sono previste allerte.
-- Tieni in casa almeno 4 litri di acqua potabile a persona.
+- Tieni in casa circa 4 litri di acqua potabile a persona al giorno, per 3 giorni.
 - Se usi apparecchiature elettromedicali, chiedi alla ASL il certificato per il bonus per disagio fisico (domanda al Comune o a un CAF): la fornitura non si può sospendere per morosità, ma il bonus non protegge da un guasto. Prepara con il medico un piano per le ore senza corrente e una batteria di riserva.
 
 ## <i class="bi bi-exclamation-triangle-fill text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE il blackout {#cosa-fare-durante}
@@ -91,7 +91,7 @@ Prepararsi prima fa la differenza. In emergenza chiama il 112.
 - **Non usare mai candele incustodite** come illuminazione di emergenza
 - **Non usare barbecue, fornelli da campeggio o generatori in locali chiusi** (rischio monossido di carbonio)
 - **Non forzare le porte dell'ascensore** se sei bloccato: aspetta i soccorsi
-- **Non dare per scontato che il blackout sia breve**: preparati sempre al peggio
+- **Non dare per scontato che il blackout sia breve**: tieni pronta la scorta di casa per almeno 3 giorni
 {{< /cosa-non-fare >}}
 
 ## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}

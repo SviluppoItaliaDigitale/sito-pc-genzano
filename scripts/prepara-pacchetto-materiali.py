@@ -215,7 +215,7 @@ TEMI = {
             "Cosa è un incendio boschivo: definizione legale (L. 353/2000)",
             "Perché i Castelli Romani sono a rischio (macchia mediterranea, vento, ricreazione boschiva)",
             "Zona AIB di Genzano = 9 (Castelli Romani): cosa significa nella scala BASSO-MEDIO-MODERATO-ELEVATO",
-            "Periodo a rischio (giugno-settembre) e ordinanze comunali tipiche",
+            "Periodo a rischio (campagna AIB 2026: dal 15 giugno al 15 ottobre) e ordinanze comunali tipiche",
             "Cosa NON fare: niente fuochi, niente sigarette nei boschi, niente barbecue improvvisati, mai gettare vetro",
             "Cosa fare se vedi fumo: 112 SUBITO, non avvicinarsi, dare indicazioni precise",
             "Cosa fare se sei intrappolato in un incendio in arrivo: zone di sicurezza, mai correre in salita",

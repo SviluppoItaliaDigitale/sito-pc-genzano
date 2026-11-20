@@ -19,7 +19,7 @@ draft: false
 
 ## Perché ci andiamo
 
-L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di Protezione Civile, con periodo di massima pericolosità tra **giugno e settembre**. La stagione 2026 è alle porte: l'Open Day è un'occasione per i volontari di:
+L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di Protezione Civile, con la campagna estiva che nel 2026 va **dal 15 giugno al 15 ottobre**. La stagione 2026 è alle porte: l'Open Day è un'occasione per i volontari di:
 
 - toccare con mano le **nuove tecnologie** disponibili sul mercato per lo spegnimento e la prevenzione;
 - aggiornarsi sui **dispositivi di protezione individuale** (DPI) di nuova generazione, che migliorano la sicurezza degli operatori durante gli interventi;

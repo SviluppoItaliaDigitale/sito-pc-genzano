@@ -41,7 +41,7 @@ Perché conta il territorio: Genzano sorge sul bordo di un antico cratere del Vu
 |---|---|
 | **Cosa significa a Genzano** | Fenomeni diffusi e potenzialmente pericolosi. Rischio di allagamenti rapidi nelle zone basse e lungo i fossi, ruscellamento e possibili smottamenti sui versanti ripidi del cratere e verso il lago di Nemi. |
 | **Zone più delicate** | Versanti del cratere e affaccio sul lago di Nemi, fossi e zone depresse, sottopassi, locali interrati. |
-| **Cosa fai tu** | Limita gli spostamenti allo stretto necessario. Metti in sicurezza i beni nei locali interrati e non scendere in cantine o garage. Controlla i familiari fragili. Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/). |
+| **Cosa fai tu** | Limita gli spostamenti allo stretto necessario. Metti in sicurezza i beni nei locali interrati e non scendere in cantine o garage. Chiedi come stanno i familiari anziani o con fragilità. Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/). |
 | **Cosa fa il Comune e il Gruppo** | Il Comune può attivare il COC. Con il COC attivo, il Gruppo può essere convocato per turni di presidio e supporto. |
 
 ## 🔴 Rosso — Criticità elevata (almeno preallarme)

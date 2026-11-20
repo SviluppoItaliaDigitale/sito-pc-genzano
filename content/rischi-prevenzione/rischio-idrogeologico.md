@@ -39,7 +39,7 @@ Con l'allerta, non dormire nei seminterrati. Se devi spostarti, scegli un percor
 
 Se l'acqua arriva, non scendere in cantina o in garage per salvare le tue cose: rischi la vita. Sali ai piani alti, senza ascensore.
 
-Chiudi il gas e stacca la corrente, ma non toccare gli impianti con mani o piedi bagnati. Non bere l'acqua del rubinetto: potrebbe essere contaminata.
+Se l'acqua entra in casa e puoi farlo senza rischi, chiudi il gas e stacca la corrente, ma non toccare gli impianti con mani o piedi bagnati. Non bere l'acqua del rubinetto: potrebbe essere contaminata.
 
 Se sei all'aperto, allontanati dall'acqua: per la velocità con cui scorre, anche pochi centimetri possono farti cadere. Raggiungi un punto più alto, lontano da pendii e scarpate che possono franare.
 

@@ -1,6 +1,6 @@
 ---
 title: "Materiali pronti da scaricare"
-description: "Video e infografiche sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
+description: "Video, infografiche e presentazioni per la classe sui rischi del territorio. Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione."
 layout: "list"
 tts: true
 toc: true
@@ -9,12 +9,13 @@ dataUltimaRevisione: "2026-11-05"
 
 In questa pagina trovi **materiali multimediali pronti da scaricare e condividere**, organizzati per tema di Protezione Civile.
 
-Li prepara il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma partendo da fonti istituzionali (Dipartimento della Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale del Lazio, standard ISO). Li ricontrolliamo sulle fonti: quando troviamo un errore, togliamo il materiale dalla pagina finché non è corretto. Per questo, dal 5 novembre 2026, i podcast e i materiali su IT-alert non sono più in elenco: li stiamo rifacendo. Dal 20 novembre 2026 non sono in elenco nemmeno le presentazioni per i docenti: le stiamo rifacendo con il testo modificabile, le note per chi insegna e più formati per le diverse lavagne.
+Li prepara il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma partendo da fonti istituzionali (Dipartimento della Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale del Lazio, standard ISO). Li ricontrolliamo sulle fonti: quando troviamo un errore, togliamo il materiale dalla pagina finché non è corretto. Per questo, dal 5 novembre 2026, i podcast e i materiali su IT-alert non sono più in elenco: li stiamo rifacendo.
 
 ## Cosa puoi fare con questi materiali
 
 - **Guarda i video** sul telefono o proiettali in classe.
 - **Scarica le infografiche** e condividile su WhatsApp, in classe, in famiglia.
+- **Usa le presentazioni** se sei un docente: un'ora di Educazione Civica, con il testo che puoi modificare e le note per chi insegna sotto ogni slide. Scegli il formato della tua lavagna: la pagina [Protezione civile sulla LIM](/lim/#le-presentazioni-da-scaricare) spiega quale.
 
 ## Licenza di uso
 

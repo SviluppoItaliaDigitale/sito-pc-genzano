@@ -33,7 +33,7 @@ I volontari hanno allestito una **postazione fissa** ai margini dell'area dello 
          alt="Un fuoristrada verde del Gruppo Comunale con la scritta Protezione Civile, parcheggiato su un prato secco del parco; sullo sfondo il palco illuminato del saggio di danza al tramonto, tra i pini."
          caption="La nostra postazione a ridosso dell'area dello spettacolo, al tramonto, prima dell'inizio del saggio. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-Con il caldo dell'estate e la vegetazione secca, un evento serale all'aperto richiede anche **attenzione al rischio incendio**. Siamo nel pieno della campagna antincendio boschivo (giugno-settembre) e Genzano rientra nella [Zona AIB 9 dei Castelli Romani](/rischi-prevenzione/rischio-incendio/): per questo il presidio ha incluso la sorveglianza dell'area e la disponibilità immediata dei mezzi di spegnimento.
+Con il caldo dell'estate e la vegetazione secca, un evento serale all'aperto richiede anche **attenzione al rischio incendio**. Siamo nel pieno della campagna antincendio boschivo (nel 2026 dal 15 giugno al 15 ottobre) e Genzano rientra nella [Zona AIB 9 dei Castelli Romani](/rischi-prevenzione/rischio-incendio/): per questo il presidio ha incluso la sorveglianza dell'area e la disponibilità immediata dei mezzi di spegnimento.
 
 ## I mezzi in campo
 

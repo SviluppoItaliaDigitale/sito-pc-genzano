@@ -21,7 +21,7 @@
     casa: 'margine',
     intro: [
       'Abiti con tuo figlio Flavio e la nonna Lina in una casa con giardino, al margine del bosco a ovest del paese.',
-      'È luglio: non piove da settimane e soffia un vento caldo. Da giugno a settembre una piccola fiamma può diventare un grande incendio.',
+      'È luglio: non piove da settimane e soffia un vento caldo. In questa stagione una piccola fiamma può diventare un grande incendio.',
       'Il bollettino della Regione Lazio dà per oggi una pericolosità elevata sulla Zona 9, quella dei Castelli Romani e di Genzano.'
     ],
     allerta: {

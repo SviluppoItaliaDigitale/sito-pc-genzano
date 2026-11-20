@@ -1,9 +1,9 @@
 ultimo_audit: '2026-11-20'
-totale: 81
+totale: 110
 riepilogo:
-  ACCESSIBILE: 2
-  PARZIALE: 17
-  NON_ACCESSIBILE: 18
+  ACCESSIBILE: 47
+  PARZIALE: 10
+  NON_ACCESSIBILE: 9
   TERZO: 44
   ERRORE: 0
 documenti:
@@ -932,227 +932,633 @@ documenti:
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf-16x10.pdf
+  file: 2026-03-21-rischio-sismico-presentazione-pdf-16x10.pdf
+  size_kb: 993.9
+  sha256: 71f808ee1dde5270a051f7f5453a1139686be8ed199fb89918487615f06002c6
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il terremoto: che cosa fare prima, durante e dopo'
+  pages: 15
+  errors: []
+  text_chars_sample: 791
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf-4x3.pdf
+  file: 2026-03-21-rischio-sismico-presentazione-pdf-4x3.pdf
+  size_kb: 968.7
+  sha256: 9e80daa6ff40f05fffd5748b8bd0f78f637db3bb7ffb3917d38fad1bf80838f9
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il terremoto: che cosa fare prima, durante e dopo'
+  pages: 15
+  errors: []
+  text_chars_sample: 794
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
   file: 2026-03-21-rischio-sismico-presentazione-pdf.pdf
-  size_kb: 16740.1
-  sha256: 868339bec5569b62f8361bdafb6929401be144e8edb0e7d8a0c35a72f2f9db05
+  size_kb: 1123.1
+  sha256: b8bf8be84ea415de91a12903d0e8b472ff9f3451ec0606eebe7c394461678cda
   searchable: true
-  tagged: false
-  language: it
-  title: null
+  tagged: true
+  language: it-IT
+  title: 'Il terremoto: che cosa fare prima, durante e dopo'
   pages: 15
   errors: []
-  text_chars_sample: 2188
+  text_chars_sample: 789
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf-16x10.pdf
+  file: 2026-03-25-allerta-meteo-presentazione-pdf-16x10.pdf
+  size_kb: 985.7
+  sha256: 579343ed469774dfabd10aaafd345331ab52217278cf3cfc615136ec231b1468
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: L'allerta meteo e i suoi colori
+  pages: 14
+  errors: []
+  text_chars_sample: 771
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf-4x3.pdf
+  file: 2026-03-25-allerta-meteo-presentazione-pdf-4x3.pdf
+  size_kb: 908.6
+  sha256: 2b452c83297f1df11a885837cc8ae1f83279f3c6bf4e1427eaf6950d13fb402e
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: L'allerta meteo e i suoi colori
+  pages: 14
+  errors: []
+  text_chars_sample: 775
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
   file: 2026-03-25-allerta-meteo-presentazione-pdf.pdf
-  size_kb: 16440.9
-  sha256: f49e8d80514713ff57225b9fe1978903044c16d1fc1ae4baca28b571772a61dc
+  size_kb: 986.5
+  sha256: 58585e28d6ccf9b6f23191f8a737b541266303faa7d7e1ab6198e5130aac49e6
   searchable: true
-  tagged: false
-  language: it
-  title: null
-  pages: 13
+  tagged: true
+  language: it-IT
+  title: L'allerta meteo e i suoi colori
+  pages: 14
   errors: []
-  text_chars_sample: 1517
+  text_chars_sample: 769
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf-16x10.pdf
+  file: 2026-04-08-rischio-idrogeologico-presentazione-pdf-16x10.pdf
+  size_kb: 1048.4
+  sha256: 8250682994f299daf790671f3e0817e9a6b5dd60b7e45d842154fde24c5b08d7
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Alluvioni e frane: come proteggersi'
+  pages: 14
+  errors: []
+  text_chars_sample: 810
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf-4x3.pdf
+  file: 2026-04-08-rischio-idrogeologico-presentazione-pdf-4x3.pdf
+  size_kb: 853.1
+  sha256: 9c0aa38317ff2d0462eff3ce3bce056d50653db216addb2085753a1469c45681
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Alluvioni e frane: come proteggersi'
+  pages: 14
+  errors: []
+  text_chars_sample: 813
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
   file: 2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
-  size_kb: 19577.5
-  sha256: ee9ed7b3e8f41b4dc82eb8d7edddf70c515c4ddeabdd7f2837eaa81bd9a01dca
+  size_kb: 995.3
+  sha256: cb24ea354b847cd1927d6836979e55ca490a7a477aea8d5e9609dcbee411a75f
   searchable: true
-  tagged: false
-  language: it
-  title: null
-  pages: 15
+  tagged: true
+  language: it-IT
+  title: 'Alluvioni e frane: come proteggersi'
+  pages: 14
   errors: []
-  text_chars_sample: 1522
+  text_chars_sample: 808
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf-16x10.pdf
+  file: 2026-04-17-kit-emergenza-presentazione-pdf-16x10.pdf
+  size_kb: 933.6
+  sha256: c92eac813a34f02a6f41238754d205437ed55fe9488022b39e22ed5afa80712b
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il kit di emergenza della famiglia
+  pages: 15
+  errors: []
+  text_chars_sample: 781
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf-4x3.pdf
+  file: 2026-04-17-kit-emergenza-presentazione-pdf-4x3.pdf
+  size_kb: 966.8
+  sha256: 29e117041168029a9a2565abdb77166f7583ddbb9fdece2dd66a661bb5b25fed
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il kit di emergenza della famiglia
+  pages: 15
+  errors: []
+  text_chars_sample: 784
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
   file: 2026-04-17-kit-emergenza-presentazione-pdf.pdf
-  size_kb: 18216.8
-  sha256: ee79327e76ee7d00388be9320534c6abb0f89a69eab55a811cff3f46727b354a
+  size_kb: 926.4
+  sha256: 8f5cb40ffdfdb0e01e8617f08ff9abced3218d0cd42e13ef9dd162a568ca203c
   searchable: true
-  tagged: false
-  language: it
-  title: null
+  tagged: true
+  language: it-IT
+  title: Il kit di emergenza della famiglia
   pages: 15
   errors: []
-  text_chars_sample: 1338
+  text_chars_sample: 779
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf-16x10.pdf
+  file: 2026-05-14-ondate-di-calore-presentazione-pdf-16x10.pdf
+  size_kb: 1026.6
+  sha256: e9169523ae9213287970d6a58ac04fe771408d36a608159a71e98f3486529f9f
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il caldo intenso: come proteggersi'
+  pages: 15
+  errors: []
+  text_chars_sample: 794
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf-4x3.pdf
+  file: 2026-05-14-ondate-di-calore-presentazione-pdf-4x3.pdf
+  size_kb: 1001.6
+  sha256: 0019873c94db4976914e0b74bdb1f8c0504fe3b01a3cd4eb1f608db1deb9be86
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il caldo intenso: come proteggersi'
+  pages: 15
+  errors: []
+  text_chars_sample: 796
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf.pdf
   file: 2026-05-14-ondate-di-calore-presentazione-pdf.pdf
-  size_kb: 13651.1
-  sha256: 56b718574ea1e20483e84baf6ce8ad64b0f382f3fa7c9cf8eccf04dc5e817e56
+  size_kb: 1091.7
+  sha256: 57ef2ce877acbb25c63bdfbcd65ee57c7b201de9a3057d47777bf55831e4b959
   searchable: true
-  tagged: false
-  language: it
-  title: null
+  tagged: true
+  language: it-IT
+  title: 'Il caldo intenso: come proteggersi'
   pages: 15
   errors: []
-  text_chars_sample: 1343
+  text_chars_sample: 791
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf-16x10.pdf
+  file: 2026-05-18-rischio-incendio-presentazione-pdf-16x10.pdf
+  size_kb: 829.7
+  sha256: 4dfacaa97b56380276974624feac96c477da5b30d8fa91df5150feac6e93c84e
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Gli incendi boschivi: prevenirli e proteggersi'
+  pages: 15
+  errors: []
+  text_chars_sample: 745
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf-4x3.pdf
+  file: 2026-05-18-rischio-incendio-presentazione-pdf-4x3.pdf
+  size_kb: 1031.8
+  sha256: a3cb2e667576c09b49d0a59f5697967710bc8649b71a4050b87e5365753b4b41
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Gli incendi boschivi: prevenirli e proteggersi'
+  pages: 15
+  errors: []
+  text_chars_sample: 749
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
   file: 2026-05-18-rischio-incendio-presentazione-pdf.pdf
-  size_kb: 14084.6
-  sha256: fdb9528ab7d679e2957234af557df83151c0ff738c2cb16a3f4dc61a90c8f4fa
+  size_kb: 1006.9
+  sha256: c52a80f5e9cd2ad19546b165071a5dd57cf35adf58f6ba363d057e5a67222156
   searchable: true
-  tagged: false
-  language: it
-  title: null
+  tagged: true
+  language: it-IT
+  title: 'Gli incendi boschivi: prevenirli e proteggersi'
   pages: 15
   errors: []
-  text_chars_sample: 1112
+  text_chars_sample: 745
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf-16x10.pdf
+  file: 2026-05-23-rischio-vulcanico-presentazione-pdf-16x10.pdf
+  size_kb: 977.6
+  sha256: b6037213d7e2cf4138a81c51af96c08de4a791fbcfb120d2b2657a28e6ba6c6b
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il vulcano dei Colli Albani
+  pages: 15
+  errors: []
+  text_chars_sample: 778
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf-4x3.pdf
+  file: 2026-05-23-rischio-vulcanico-presentazione-pdf-4x3.pdf
+  size_kb: 950.7
+  sha256: b6ca8409350de80b17931f74a84e3ba461373288e25cc4b54f0dcb7bd283adf9
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il vulcano dei Colli Albani
+  pages: 15
+  errors: []
+  text_chars_sample: 782
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
   file: 2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
-  size_kb: 9338.9
-  sha256: 23362415692381e0c9437ec247ee3964d59a887793c3eaffb02090423bf86859
+  size_kb: 976.6
+  sha256: 4e22e00a88c9b01cb900ffd980aa4119823a8bf9cdf40212a7c365a4d98d88b8
   searchable: true
-  tagged: false
-  language: it
-  title: null
+  tagged: true
+  language: it-IT
+  title: Il vulcano dei Colli Albani
   pages: 15
   errors: []
-  text_chars_sample: 1097
+  text_chars_sample: 778
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: PARZIALE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf-16x10.pdf
+  file: 2026-05-29-animali-emergenza-presentazione-pdf-16x10.pdf
+  size_kb: 788.7
+  sha256: 2e27a8f7825e4ed9bec5bb242f2093e70e57bfe5059e49aac8463222fbe69c63
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Gli animali di casa in emergenza
+  pages: 15
+  errors: []
+  text_chars_sample: 771
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf-4x3.pdf
+  file: 2026-05-29-animali-emergenza-presentazione-pdf-4x3.pdf
+  size_kb: 839.2
+  sha256: 96afc72229e977a7dbd0938e65b51759bb4d29933a7874c24c72a4a135ba2efd
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Gli animali di casa in emergenza
+  pages: 15
+  errors: []
+  text_chars_sample: 774
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
   file: 2026-05-29-animali-emergenza-presentazione-pdf.pdf
-  size_kb: 13545.5
-  sha256: 9e466d053ed3942e92c2aed787f62e879b6bc72aa887cee683ca52a701325881
-  searchable: false
-  tagged: false
-  language: null
-  title: null
+  size_kb: 1032.0
+  sha256: 008e3e2c15b120d9aa8fe4e2e45903abbf3079bfad89c980af59b21b7f07e641
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Gli animali di casa in emergenza
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 769
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
-- path: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
-  file: 2026-05-29-it-alert-presentazione-pdf.pdf
-  size_kb: 12616.4
-  sha256: 4ceb06ee166deb9aeef0342018734dd4a0403d90171ba9b4e7fabea7a08544ad
-  searchable: false
-  tagged: false
-  language: null
-  title: null
-  pages: 15
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-nue-112-presentazione-pdf-16x10.pdf
+  file: 2026-05-29-nue-112-presentazione-pdf-16x10.pdf
+  size_kb: 1049.7
+  sha256: 593b6e5075d14c46e6a47683a349c381ab5c0b32a2b222ec7b4b3daf82d8a238
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il 112, il numero unico per le emergenze
+  pages: 14
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 758
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-nue-112-presentazione-pdf-4x3.pdf
+  file: 2026-05-29-nue-112-presentazione-pdf-4x3.pdf
+  size_kb: 927.4
+  sha256: f186c77bc689716de7c74ca7d4972cad3111f5817fdbd408c1ad044daf87fd1b
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il 112, il numero unico per le emergenze
+  pages: 14
+  errors: []
+  text_chars_sample: 758
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
   file: 2026-05-29-nue-112-presentazione-pdf.pdf
-  size_kb: 11036.1
-  sha256: 5a770482e1424224d20bb887e3f9934cfa0a54ba5e4f82926c4d9871ab7ac434
-  searchable: false
-  tagged: false
-  language: null
-  title: null
-  pages: 15
+  size_kb: 1106.6
+  sha256: 9b1caa07502b7b25c31e3b64ffac37dd195aa5c7cd24c4b00f92d3c95fb91e92
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il 112, il numero unico per le emergenze
+  pages: 14
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 753
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf-16x10.pdf
+  file: 2026-05-29-piano-familiare-presentazione-pdf-16x10.pdf
+  size_kb: 1158.3
+  sha256: 12e65e586b0e4bb1c174ddde252d8c9edb83775da32ce0348b0e7d6d090151b0
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il piano di emergenza della mia famiglia
+  pages: 15
+  errors: []
+  text_chars_sample: 732
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf-4x3.pdf
+  file: 2026-05-29-piano-familiare-presentazione-pdf-4x3.pdf
+  size_kb: 975.8
+  sha256: edb00f54d7ea3467825f4e13c26ee3a74c082232b3bd76bab0c9a20851d9d746
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il piano di emergenza della mia famiglia
+  pages: 15
+  errors: []
+  text_chars_sample: 733
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
   file: 2026-05-29-piano-familiare-presentazione-pdf.pdf
-  size_kb: 16565.4
-  sha256: 0e101277b1f561a86cb5285efb013f904f1af48bd33fb0f92ce46c42ca9e6f8d
-  searchable: false
-  tagged: false
-  language: null
-  title: null
+  size_kb: 1221.3
+  sha256: 31d7bb3463d1cd9ea4d9dbb0e747d78a97bd5da715c8679c24d35b436b4564e1
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il piano di emergenza della mia famiglia
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 730
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf-16x10.pdf
+  file: 2026-05-29-temporali-intensi-presentazione-pdf-16x10.pdf
+  size_kb: 1010.6
+  sha256: c2314b99b24061417551fe4c65b3ce0c3b236bbd36257db2a72e4e855c77820a
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Temporali e fulmini: come stare al sicuro'
+  pages: 15
+  errors: []
+  text_chars_sample: 801
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf-4x3.pdf
+  file: 2026-05-29-temporali-intensi-presentazione-pdf-4x3.pdf
+  size_kb: 939.2
+  sha256: 0144fdb029e0d6aef560828decb5d9dc6d0016fc0a68d49cc1cfe315b0835615
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Temporali e fulmini: come stare al sicuro'
+  pages: 15
+  errors: []
+  text_chars_sample: 804
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
   file: 2026-05-29-temporali-intensi-presentazione-pdf.pdf
-  size_kb: 13765.1
-  sha256: 6c6cbb7d716dc8260663eaa2b9759c48c9475eb0e45f89197f84635758af6382
-  searchable: false
-  tagged: false
-  language: null
-  title: null
+  size_kb: 1133.8
+  sha256: 183a8e5ba908df66f59c5dabaa3bbc6c619ada12b17d0322716b7e07b9568d6a
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Temporali e fulmini: come stare al sicuro'
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 800
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf-16x10.pdf
+  file: 2026-05-30-aree-emergenza-presentazione-pdf-16x10.pdf
+  size_kb: 1045.0
+  sha256: 986d06e58d554b9ba51bd72128790e711554e5e3e7d28eb062ab0ebf3df6837c
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Le aree di emergenza di Genzano
+  pages: 15
+  errors: []
+  text_chars_sample: 765
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf-4x3.pdf
+  file: 2026-05-30-aree-emergenza-presentazione-pdf-4x3.pdf
+  size_kb: 1019.8
+  sha256: 09df71c6e8153ec1eee51dfd80921845825322e13e1592a296d99ffde572c431
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Le aree di emergenza di Genzano
+  pages: 15
+  errors: []
+  text_chars_sample: 769
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
   file: 2026-05-30-aree-emergenza-presentazione-pdf.pdf
-  size_kb: 14408.6
-  sha256: 2cec91681d4d920978779e6b6abcec5229109075eece81f71be4a7dadfa7213a
-  searchable: false
-  tagged: false
-  language: null
-  title: null
+  size_kb: 1110.1
+  sha256: 96099b739247a5110cd27026121d5430567efc86397a8848373f3d104164f824
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Le aree di emergenza di Genzano
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 763
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-blackout-presentazione-pdf-16x10.pdf
+  file: 2026-05-30-blackout-presentazione-pdf-16x10.pdf
+  size_kb: 1057.2
+  sha256: bce18fbd62bbf23e5134f58cbbf2fa4a89231771c5810a924fc3913a03f858ad
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Blackout: che cosa fare quando manca la corrente'
+  pages: 15
+  errors: []
+  text_chars_sample: 748
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-blackout-presentazione-pdf-4x3.pdf
+  file: 2026-05-30-blackout-presentazione-pdf-4x3.pdf
+  size_kb: 1084.4
+  sha256: 32b7bae395fe9d22ffab3cfaced171cf07c761d8d6cca68c488f15a7ec5c71dc
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Blackout: che cosa fare quando manca la corrente'
+  pages: 15
+  errors: []
+  text_chars_sample: 750
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
   file: 2026-05-30-blackout-presentazione-pdf.pdf
-  size_kb: 13986.5
-  sha256: 2ebbcddb507c408c539eef4ff3be013ef7dd5219e2113d7ef8e3a64c15f75682
-  searchable: false
-  tagged: false
-  language: null
-  title: null
+  size_kb: 1122.2
+  sha256: 763024c999aac8093a2a39f2196f2934691eb1e24662ccec2ccbcbfeb528aba1
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Blackout: che cosa fare quando manca la corrente'
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 745
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf-16x10.pdf
+  file: 2026-05-30-dopo-emergenza-presentazione-pdf-16x10.pdf
+  size_kb: 883.7
+  sha256: 7632bd0c9d0c2159e441c160ea78c175eb12b35809bd2bd3bdcd8b017d8cd4ff
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Dopo l''emergenza: che cosa fare quando è passata'
+  pages: 15
+  errors: []
+  text_chars_sample: 820
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf-4x3.pdf
+  file: 2026-05-30-dopo-emergenza-presentazione-pdf-4x3.pdf
+  size_kb: 1089.3
+  sha256: 052abfea174eb08d43a8e05a511344da4644821f4fcbf94239115c139e87b627
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Dopo l''emergenza: che cosa fare quando è passata'
+  pages: 15
+  errors: []
+  text_chars_sample: 824
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
   file: 2026-05-30-dopo-emergenza-presentazione-pdf.pdf
-  size_kb: 15661.4
-  sha256: 2cf566402e241e65be638882e0c1d74a9d798e49924f68bf379f0da29fd41b9d
-  searchable: false
-  tagged: false
-  language: null
-  title: null
+  size_kb: 1061.0
+  sha256: af67e7f6d102cd0bc3319666b21e79f9ead3bdbec61bfa438c25203917119361
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Dopo l''emergenza: che cosa fare quando è passata'
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 819
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-vento-forte-presentazione-pdf-16x10.pdf
+  file: 2026-05-30-vento-forte-presentazione-pdf-16x10.pdf
+  size_kb: 884.3
+  sha256: 0361f73bafa920a5df71493364a706998120805ecbdbeb46bf5a332d818c325e
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Vento forte: che cosa fare prima, durante e dopo'
+  pages: 14
+  errors: []
+  text_chars_sample: 774
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-05-30-vento-forte-presentazione-pdf-4x3.pdf
+  file: 2026-05-30-vento-forte-presentazione-pdf-4x3.pdf
+  size_kb: 814.9
+  sha256: 70aa5ecb09aa1a3f2021e940a6cfd84769e4f8a4fde8a499bcf9c41c3e64500d
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Vento forte: che cosa fare prima, durante e dopo'
+  pages: 14
+  errors: []
+  text_chars_sample: 776
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
   file: 2026-05-30-vento-forte-presentazione-pdf.pdf
-  size_kb: 10927.5
-  sha256: ca1be865b9d29ffeeb6561defa319a10604a7d3ea99122e713f7565abbf63baa
-  searchable: false
-  tagged: false
-  language: null
-  title: null
-  pages: 15
+  size_kb: 943.3
+  sha256: 270a79b8023da46375a55901f38b62b12ac3bb314390f436a92c988c62724908
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Vento forte: che cosa fare prima, durante e dopo'
+  pages: 14
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 771
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: ACCESSIBILE
