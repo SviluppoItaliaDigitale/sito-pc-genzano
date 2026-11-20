@@ -292,29 +292,37 @@ enableGitInfo = true
   parent = "volontariato"
   weight = 1
 
+# Aggiunto il 20/11/2026: simulatore d'esame, quiz, scenari e presentazioni
+# per gli istruttori del corso base.
+[[menus.main]]
+  name = "Formazione dei volontari"
+  url = "/formazione/volontari/"
+  parent = "volontariato"
+  weight = 2
+
 [[menus.main]]
   name = "La campagna social"
   url = "/campagna-volontari/"
   parent = "volontariato"
-  weight = 3
+  weight = 4
 
 [[menus.main]]
   name = "Chi Siamo"
   url = "/chi-siamo/"
   parent = "volontariato"
-  weight = 2
+  weight = 3
 
 [[menus.main]]
   name = "Per gli enti e le scuole"
   url = "/per-gli-enti/"
   parent = "volontariato"
-  weight = 4
+  weight = 5
 
 [[menus.main]]
   name = "Il nostro patrono"
   url = "/san-pio-da-pietrelcina/"
   parent = "volontariato"
-  weight = 5
+  weight = 6
 
 # Aggiunto il 16/05/2026: hub addestramento e buone pratiche del Gruppo.
 # Racconta come ci alleniamo (turni operativi + esercitazioni programmate),
@@ -324,7 +332,7 @@ enableGitInfo = true
   name = "Addestramento e buone pratiche"
   url = "/esercitazioni/"
   parent = "volontariato"
-  weight = 6
+  weight = 7
 
 # --- Dropdown: Risorse (6 voci, riorganizzato maggio 2026) ---
 # Riorganizzazione maggio 2026: il dropdown era cresciuto a 13 voci, oltre

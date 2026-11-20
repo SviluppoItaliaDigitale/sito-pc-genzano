@@ -10,20 +10,21 @@ Il **Capo V** del Codice della Protezione Civile (articoli da 31 a 42) è dedica
 
 ## Articolo 31 — Partecipazione dei cittadini alle attività di protezione civile
 
-Richiama il **principio costituzionale di sussidiarietà orizzontale** (art. 118 Cost.): le autorità pubbliche **favoriscono** l'iniziativa autonoma dei cittadini, singoli o associati, nelle attività di protezione civile. Da questo articolo discendono due facce dello stesso rapporto:
+Il Servizio nazionale promuove la **resilienza delle comunità**: favorisce la partecipazione dei cittadini, singoli o associati, alla **pianificazione di protezione civile** (art. 18) e la diffusione della cultura di protezione civile. L'articolo regola il rapporto con i cittadini in tre punti:
 
-- il **diritto del cittadino a essere informato** sui rischi del proprio territorio, sulla pianificazione di emergenza e sulle norme di autoprotezione, e a **partecipare** alle attività di protezione civile;
-- il **dovere** di adottare comportamenti di autoprotezione, di non ostacolare i soccorsi e di seguire le indicazioni delle autorità in situazioni di pericolo.
-
-Le attività di volontariato sono **gratuite** e **personali**: nessun volontario può ricevere compenso per l'attività svolta (diverso è il **rimborso spese**, trattato all'art. 40).
+- le componenti del Servizio nazionale **informano** i cittadini sugli scenari di rischio e sull'organizzazione dei servizi di protezione civile del territorio, anche perché possano adottare **misure di autoprotezione**;
+- nelle emergenze i cittadini hanno il **dovere** di seguire le disposizioni delle autorità di protezione civile, coerenti con la pianificazione;
+- i cittadini possono **concorrere** alle attività aderendo al **volontariato organizzato** oppure, in forma occasionale e dove possibile, con primi interventi immediati nel proprio ambito personale, familiare o di prossimità, coordinandosi con le organizzazioni (comma 3). Le Regioni possono disciplinare altre forme di partecipazione occasionale (comma 4).
 
 ## Articolo 32 — Integrazione del volontariato organizzato nel Servizio nazionale
 
-Riconosce il **volontariato organizzato** come **componente** del Servizio nazionale e ne disciplina l'integrazione nelle attività di protezione civile, valorizzandone l'apporto in tutte le fasi (previsione, prevenzione, gestione e superamento dell'emergenza).
+Il comma 1 definisce il **volontario di protezione civile**: chi, per libera scelta, mette a disposizione tempo e capacità per la comunità nelle attività di protezione civile, dentro le organizzazioni o le altre forme di volontariato organizzato, acquisendo la formazione necessaria. L'attività si svolge **in modo personale, spontaneo e gratuito**, senza fini di lucro, neanche indiretti (diverso è il **rimborso spese**, trattato agli artt. 39 e 40).
+
+Il Servizio nazionale promuove la più ampia partecipazione del volontariato organizzato e ne assicura il coordinamento (comma 2). La partecipazione avviene tramite **enti del Terzo settore, compresi i Gruppi comunali**, e altre forme di volontariato organizzato (comma 3). Il volontariato organizzato è una delle **strutture operative** del Servizio nazionale (art. 13, comma 1, lettera e).
 
 ## Articolo 33 — Disciplina delle organizzazioni di volontariato e delle reti associative
 
-Definisce le **forme** del volontariato organizzato di protezione civile, raccordandosi con il **Codice del Terzo Settore** (D.Lgs. 117/2017). Vi rientrano le **organizzazioni di volontariato (ODV)**, le **reti associative** e gli altri enti del Terzo Settore che svolgono attività di protezione civile, oltre alle forme specifiche disciplinate dagli articoli successivi.
+Per operare nella protezione civile, le **organizzazioni di volontariato**, le **reti associative** e gli altri **enti del Terzo settore** iscritti nel Registro unico nazionale (RUNTS) che svolgono attività di protezione civile, insieme alle altre forme di volontariato organizzato, hanno l'**obbligo di iscriversi nell'Elenco nazionale** (comma 1). Elenco che tengono e aggiornano il Dipartimento della Protezione Civile e le strutture di protezione civile delle Regioni e delle Province autonome (comma 2).
 
 ## Articolo 34 — Elenco nazionale del volontariato di protezione civile
 
