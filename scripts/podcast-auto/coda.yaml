@@ -380,6 +380,20 @@ puntate:
   - calore
   - afa
   - colpo di calore
+  escludi:
+  - dossier/
+  - abili-a-proteggere
+  - schede-stampabili
+  - piano-nazionale-prevenzione
+  - gravidanza
+  - primo-soccorso-estivo
+  - luglio-mese-piu-caldo
+  - animali
+  - cani-gatti
+  - attivita-chiuso
+  - agosto-fragili
+  - sannio
+  - droni-termocamera
   stato: da-fare
 - id: rischio-incendio
   titolo: 'Incendi boschivi: prevenzione e comportamenti'

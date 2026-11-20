@@ -19,6 +19,24 @@ export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin"
 export DISPLAY="${DISPLAY:-:0}"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 export DBUS_SESSION_BUS_ADDRESS="${DBUS_SESSION_BUS_ADDRESS:-unix:path=$XDG_RUNTIME_DIR/bus}"
+# Sotto GNOME con Wayland il permesso per lo schermo :0 sta nel file di Xwayland
+# più recente: senza, Chrome non parte («Missing X server or $DISPLAY»).
+if [ -z "${XAUTHORITY:-}" ]; then
+  XA=$(ls -t "$XDG_RUNTIME_DIR"/.mutter-Xwaylandauth.* 2>/dev/null | head -1 || true)
+  [ -n "$XA" ] && export XAUTHORITY="$XA"
+fi
+
+# Chrome deve essere aperto con l'estensione collegata, o il giro non può
+# usare NotebookLM. Lo si apre se è chiuso, poi si prova il collegamento.
+chrome_collegato() {
+  pgrep -x chrome >/dev/null || pgrep -f '/opt/google/chrome/chrome' >/dev/null || {
+    (setsid google-chrome --no-first-run >/dev/null 2>&1 &)
+    sleep 40
+  }
+  echo "Usa tabs_context_mcp di Claude in Chrome (caricalo con ToolSearch) e rispondi solo «CHROME OK» se risponde, altrimenti «CHROME NO»." \
+    | timeout 300 claude -p --chrome --allowedTools "ToolSearch,mcp__claude-in-chrome__tabs_context_mcp" 2>&1 \
+    | grep -q "CHROME OK"
+}
 
 exec 9>"$LAVORO/.giro.lock"
 flock -n 9 || { echo "Un giro è già in corso." >>"$LOG"; exit 0; }
@@ -44,6 +62,12 @@ if true; then
     rm -rf "$TMPD"; touch "$FATTO"; exit 0
   fi
   rm -rf "$TMPD"
+fi
+# Senza Chrome collegato il giro non parte e non si segna come fatto:
+# riprova all'ora successiva (20/11/2026: Chrome chiuso, giro perso per il giorno).
+if ! chrome_collegato; then
+  echo "Chrome non collegato $(date): giro rimandato all'ora successiva." >>"$LOG"
+  exit 0
 fi
 echo "Giro avviato $(date)" >>"$LOG"
 
