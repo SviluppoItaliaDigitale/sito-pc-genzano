@@ -1,0 +1,13 @@
+{{- /* Pulsante con collegamento interno, valido su Aruba e sull'anteprima GitHub Pages.
+       Uso:
+         {{< pulsante url="/quizpc/start_quiz.html" testo="Inizia il simulatore d'esame" icona="bi-stopwatch" stile="primary" >}}
+       `url` e `testo` obbligatori; `icona` (classe Bootstrap Icons) facoltativa;
+       `stile` = primary (predefinito) oppure outline. Il percorso passa per
+       relURL senza la barra iniziale, come in link-card e nel render-link hook,
+       perché un href="/…" scritto a mano perde il sottopercorso /sito-pc-genzano/. */ -}}
+{{- $url := .Get "url" -}}
+{{- $testo := .Get "testo" -}}
+{{- if or (not $url) (not $testo) -}}{{- errorf "pulsante: servono url e testo (%s)" .Position -}}{{- end -}}
+{{- $classe := cond (eq (.Get "stile") "outline") "btn-outline-primary" "btn-primary" -}}
+<a href="{{ $url | strings.TrimPrefix "/" | relURL }}" class="btn {{ $classe }} btn-lg me-2 mb-2">{{ with .Get "icona" }}<i class="bi {{ . }} me-2" aria-hidden="true"></i>{{ end }}{{ $testo }}</a>
+{{- /* fine */ -}}

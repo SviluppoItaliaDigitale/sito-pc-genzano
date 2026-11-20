@@ -18,7 +18,7 @@ Questa pagina raccoglie gli strumenti per formare i volontari del Gruppo Comunal
 <li>alla fine ricevi un attestato di partecipazione, creato dal tuo browser.</li>
 </ul>
 <p>Il nome e le risposte restano sul tuo dispositivo: nessun dato viene inviato. L'attestato ha valore solo formativo e non sostituisce l'esame del corso.</p>
-<p class="mb-0"><a href="/quizpc/start_quiz.html" class="btn btn-primary btn-lg me-2 mb-2"><i class="bi bi-stopwatch me-2" aria-hidden="true"></i>Inizia il simulatore d'esame</a><a href="/quizpc/start_training.html" class="btn btn-outline-primary btn-lg mb-2"><i class="bi bi-journal-check me-2" aria-hidden="true"></i>Allenati con le spiegazioni</a></p>
+<p class="mb-0">{{< pulsante url="/quizpc/start_quiz.html" testo="Inizia il simulatore d'esame" icona="bi-stopwatch" >}}{{< pulsante url="/quizpc/start_training.html" testo="Allenati con le spiegazioni" icona="bi-journal-check" stile="outline" >}}</p>
 </div>
 </div>
 

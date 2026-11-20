@@ -94,6 +94,10 @@ CSS scoped sezione **CHI CHIAMARE BOX v1.0** in `custom.css`. In stampa il numer
 
 `{{< valore "chiave" >}}` stampa il valore scritto in `data/valori.yaml` (anno del 112 nel Lazio, tetto per i volontari autonomi, ore più calde…). Cambiando il file cambia in tutte le pagine che lo usano; una chiave inesistente ferma la build. Si usa nel **corpo** delle pagine di `content/` fuori da `comunicazioni/`: non nel frontmatter (gli shortcode lì non funzionano) e non negli articoli, perché i loro sorgenti alimentano i testi social e il braille, che lo stamperebbero com'è. Dove non si può usare (articoli, `static/`, giochi, quiz, JavaScript) il dato resta scritto per esteso e lo sorveglia `data/dati_canonici.yaml`: ogni chiave di `valori.yaml` ha lì la sua voce con fonte e varianti vietate. Nato dopo la correzione del 112 «dal 2017», che ha richiesto di toccare una ventina di file a mano.
 
+## Shortcode `pulsante` (pulsante con collegamento interno, 20/11/2026)
+
+`{{</* pulsante url="/quizpc/start_quiz.html" testo="Inizia il simulatore d'esame" icona="bi-stopwatch" stile="primary|outline" */>}}`: pulsante Bootstrap Italia con il percorso passato per `relURL` senza la barra iniziale. 🔴 Nei contenuti non si scrive a mano `<a href="/…" class="btn …">`: su GitHub Pages perde il sottopercorso `/sito-pc-genzano/` (rilievo di revisione della PR #1990). `url` e `testo` obbligatori, altrimenti la build si ferma.
+
 ## Shortcode `link-card` (griglia di card link nei contenuti)
 
 Card link visibile (icona + titolo + descrizione) per griglie di consultazione dentro le pagine markdown, in alternativa all'elenco puntato anonimo. Nato per la sezione "Pagine di consultazione rapida" dell'hub `/rischi-prevenzione/` (la scheda scuolabus non si trovava in un bullet — maggio 2026).
