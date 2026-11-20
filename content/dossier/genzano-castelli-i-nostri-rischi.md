@@ -69,7 +69,7 @@ Il Lago Albano, il più profondo, custodisce parte di questa storia: i geologi n
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="incendi" image="/images/dossier/siccita-castelli.webp" alt="Versante boscato dei Castelli Romani che scende verso un lago, con la vegetazione fitta e secca tipica dell'estate, sotto un cielo nuvoloso" align="right" kicker="Estate · zona AIB 9" title="L'estate<br>e il fuoco" credito="Foto: Nicholas Gemini · CC BY-SA 3.0, via Wikimedia Commons" >}}
-Da giugno a settembre i **boschi** dei Castelli sono vulnerabili agli **incendi**. I versanti coperti di vegetazione, il caldo e il vento possono trasformare una sterpaglia accesa in un fronte di fiamme che minaccia case e strade.
+D'estate (nel 2026 dal 15 giugno al 15 ottobre) i **boschi** dei Castelli sono vulnerabili agli **incendi**. I versanti coperti di vegetazione, il caldo e il vento possono trasformare una sterpaglia accesa in un fronte di fiamme che minaccia case e strade.
 
 Genzano è in **zona AIB 9** (Castelli Romani) per il rischio incendi boschivi: durante la campagna estiva la Regione Lazio pubblica ogni giorno il **bollettino di pericolosità**.
 

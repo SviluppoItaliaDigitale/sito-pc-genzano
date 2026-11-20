@@ -32,7 +32,7 @@ Non occorrono titoli specifici né esperienze pregresse: tutte le competenze si 
 
 Le attività di un volontario del Gruppo, in condizioni ordinarie, sono:
 
-- **turni** di avvistamento antincendio durante la campagna AIB (giugno-settembre);
+- **turni** di avvistamento antincendio durante la campagna AIB (nel 2026 dal 15 giugno al 15 ottobre);
 - **presidio** di eventi pubblici comunali e sovracomunali;
 - **esercitazioni** periodiche (mensili o a chiamata);
 - **formazione** continua (radiocomunicazioni, primo soccorso, cartografia, sicurezza);

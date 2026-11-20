@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-Gli incendi nel Lazio avvengono tra **giugno e settembre**. Ma devi agire adesso, in primavera. In primavera l'erba è ancora verde. È più facile pulire il terreno. Se aspetti giugno, l'erba è secca. Il rischio di incendio è molto più alto.
+Nel Lazio il periodo degli incendi è l'estate. Nel 2026 va **dal 15 giugno al 15 ottobre**. Ma devi agire adesso, in primavera. In primavera l'erba è ancora verde. È più facile pulire il terreno. Se aspetti giugno, l'erba è secca. Il rischio di incendio è molto più alto.
 
 ## Perché agire in primavera
 

@@ -14,7 +14,7 @@ allegati: []
 draft: false
 ---
 
-La **primavera** è tradizionalmente il periodo in cui i gruppi di Protezione Civile partecipano alle **esercitazioni AIB** (Antincendio Boschivo). Prima dell'inizio della **campagna estiva** — giugno-settembre — i volontari mettono in pratica procedure, mezzi e coordinamento in **scenari realistici**.
+La **primavera** è tradizionalmente il periodo in cui i gruppi di Protezione Civile partecipano alle **esercitazioni AIB** (Antincendio Boschivo). Prima dell'inizio della **campagna estiva** (nel 2026 dal 15 giugno al 15 ottobre) i volontari mettono in pratica procedure, mezzi e coordinamento in **scenari realistici**.
 
 L'esercitazione è uno strumento insostituibile: non è sufficiente **leggere un manuale** o **ripassare le radio**. Serve mettere le mani sulle cose, vedere come funziona la squadra, capire chi fa cosa in condizioni reali.
 

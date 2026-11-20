@@ -183,7 +183,7 @@ Il fuoco nel bosco: come nasce e che cosa fare. Quasi sempre un incendio nasce d
 
 </details>
 
-Per approfondire: [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
+Per approfondire: [Rischio incendio](/rischi-prevenzione/rischio-incendio/), con le date ufficiali della campagna antincendio 2026 (dal 15 giugno al 15 ottobre).
 
 ## Il caldo: come proteggersi
 

@@ -184,7 +184,7 @@
       { id: 'coc', icon: 'bi-gear-fill', label: 'COC (Centro Operativo Comunale)', zona: 'residenziale', motivo: 'Il COC si attiva di solito presso il Comune o sede attigua: deve essere raggiungibile e operativa anche durante l\'evento.' },
       { id: 'cisterna-acqua', icon: 'bi-droplet-fill', label: 'Cisterna acqua potabile', zona: 'parco', motivo: 'In emergenza idrica le cisterne mobili si dispiegano in spazi aperti per la distribuzione ai cittadini.' },
       { id: 'caserma-vvff', icon: 'bi-fire', label: 'Caserma Vigili del Fuoco', zona: 'residenziale', motivo: 'Le caserme operative si collocano vicino a strade primarie per uscite rapide.' },
-      { id: 'rischio-incendio-bosco', icon: 'bi-tree-fill', label: 'Rischio incendio bosco', zona: 'parco', motivo: 'Le aree verdi periurbane sono a rischio AIB nei mesi giugno-settembre nel Lazio.' },
+      { id: 'rischio-incendio-bosco', icon: 'bi-tree-fill', label: 'Rischio incendio bosco', zona: 'parco', motivo: 'Le aree verdi periurbane sono a rischio AIB d\'estate: nel Lazio la campagna 2026 va dal 15 giugno al 15 ottobre.' },
       { id: 'rischio-vento', icon: 'bi-wind', label: 'Rischio caduta alberi (vento)', zona: 'parco', motivo: 'In allerta vento gli alberi alti dei parchi possono cadere su strade e marciapiedi.' },
       { id: 'edificio-storico-fragile', icon: 'bi-building-exclamation', label: 'Edificio storico fragile', zona: 'centro', motivo: 'Nel centro storico molti edifici antichi richiedono interventi di consolidamento anti-sismico.' },
       { id: 'via-fuga-principale', icon: 'bi-signpost-2-fill', label: 'Via di fuga principale', zona: 'centro', motivo: 'Le vie di fuga del centro storico portano verso spazi aperti (piazze, parco).' },
@@ -358,7 +358,7 @@
         if (ok === ELEMENTI.length && window.GameCoach.clearHint) {
           window.GameCoach.clearHint();
         } else if (ok < ELEMENTI.length && window.GameCoach.hint) {
-          window.GameCoach.hint('Castelli Romani: rischio idrogeologico (versanti) e sismico. Costa: mareggiate. Aree industriali: rischio chimico (Seveso). Boschi: incendio (giugno-settembre). Centro storico: sismico amplificato.', '/rischi-prevenzione/');
+          window.GameCoach.hint('Castelli Romani: rischio idrogeologico (versanti) e sismico. Costa: mareggiate. Aree industriali: rischio chimico (Seveso). Boschi: incendio (d\'estate). Centro storico: sismico amplificato.', '/rischi-prevenzione/');
         }
       }
       setTimeout(function(){ finish(ok); }, 1000);

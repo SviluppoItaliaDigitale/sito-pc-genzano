@@ -728,7 +728,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Incendi boschivi', correct: true },
                 { text: 'Nevicate intense', correct: false }
             ],
-            explanation: 'Da giugno a settembre la vegetazione dei boschi dei Castelli Romani può prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
+            explanation: 'D\'estate (nel 2026 dal 15 giugno al 15 ottobre) la vegetazione dei boschi dei Castelli Romani può prendere fuoco molto facilmente. Nel Lazio per segnalare un incendio boschivo si chiama il 112, il numero unico di emergenza.'
         },
 
         // ═══════════════════════════════════════

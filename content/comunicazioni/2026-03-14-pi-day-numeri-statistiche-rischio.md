@@ -57,7 +57,7 @@ Senza pretesa di essere esaustivi, alcuni dati utili sul nostro territorio:
 - **Popolazione residente**: circa **24.000 abitanti** (dati ISTAT).
 - **Classificazione sismica**: zona **2B**, con un'accelerazione attesa fra 0,15 e 0,20 g.
 - **Rischio idrogeologico**: versanti con classi di pericolosità variabili nel PAI (Piano di Assetto Idrogeologico).
-- **Rischio incendi AIB**: elevato nei mesi di **giugno-settembre**.
+- **Rischio incendi AIB**: elevato d'estate (campagna AIB 2026: **dal 15 giugno al 15 ottobre**).
 - **Lago di Nemi**: quota circa **316 m**, massima profondità circa **33 m**.
 
 Questi numeri non sono curiosità: sono la **base** su cui si costruiscono scenari, piani, interventi.

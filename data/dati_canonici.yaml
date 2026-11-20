@@ -253,6 +253,14 @@ dati:
         perche: "Nessuna fonte fissa al 1° giugno l'inizio del periodo AIB nel Lazio: la campagna 2026 parte il 15 giugno, l'ordinanza di Genzano il 17 giugno."
         contesto: 'incendi|AIB|boschi|fuochi'
         finestra: 200
+      # Aggiunta il 20/11/2026: 35 pagine scrivevano «giugno-settembre» per la
+      # stagione degli incendi. Restano ammesse solo le trascrizioni dei due video,
+      # che devono coincidere con l'audio (le date esatte stanno subito sotto).
+      - regex: '(?i)\bgiugno\s*(?:a|al|e|[-–])\s*settembre\b'
+        perche: "Per gli incendi si usano le date ufficiali: nel 2026 la campagna AIB del Lazio va dal 15 giugno al 15 ottobre e l'ordinanza di Genzano vieta i fuochi dal 17 giugno al 15 ottobre."
+        contesto: 'incend|AIB|boschi|fuoc'
+        finestra: 200
+        salvo_se_frase: 'quando fa caldo e piove poco|il pericolo è più alto|consigli caldo'
 
   - id: ustione-raffreddamento
     dato: "Quanto raffreddare un'ustione termica con acqua"

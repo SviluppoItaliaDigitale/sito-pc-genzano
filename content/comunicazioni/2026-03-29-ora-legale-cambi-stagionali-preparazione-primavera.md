@@ -57,7 +57,7 @@ In questo periodo dell'anno il Gruppo Comunale si attiva su diversi fronti:
 
 ### Ripasso formativo
 
-Prima della stagione calda (giugno-settembre), il Gruppo **ripassa** le tecniche antincendio, le radiocomunicazioni, il primo soccorso. Esercitazioni pratiche brevi mantengono l'efficienza operativa.
+Prima della campagna antincendio estiva (nel 2026 dal 15 giugno al 15 ottobre), il Gruppo **ripassa** le tecniche antincendio, le radiocomunicazioni, il primo soccorso. Esercitazioni pratiche brevi mantengono l'efficienza operativa.
 
 ### Sopralluoghi sul territorio
 

@@ -165,7 +165,7 @@ Genzano di Roma sorge sui **Colli Albani**, un complesso vulcanico quiescente si
 |---|---|---|
 | **Sismico** | Medio | Zona sismica 2B — possibili scosse avvertite dalla popolazione |
 | **Idrogeologico** | Medio-alto in alcune zone | Fossi, impluvi e versanti collinari soggetti a frane e allagamenti localizzati |
-| **Incendio boschivo** | Alto in estate | Vasta copertura boschiva, periodo critico giugno-settembre |
+| **Incendio boschivo** | Alto in estate | Vasta copertura boschiva, periodo critico d'estate (nel 2026 dal 15 giugno al 15 ottobre) |
 | **Meteorologico** | Variabile | Temporali intensi, grandinate, vento forte, ondate di calore |
 | **Vulcanico** | Vulcano quiescente (non spento), monitorato | Colli Albani quiescenti, sorvegliati dall'INGV; per il DPC il pericolo concreto oggi sono le emissioni di gas dal suolo, non l'eruzione |
 

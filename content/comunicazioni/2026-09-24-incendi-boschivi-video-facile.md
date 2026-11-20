@@ -35,7 +35,7 @@ Quasi tutti gli incendi boschivi nascono per colpa di una persona. Un mozzicone.
 
 Il fuoco cresce con l'erba secca, il caldo e il vento. Il vento porta le scintille lontano. Il fuoco corre più veloce in salita.
 
-Da noi il periodo più pericoloso va da giugno a settembre.
+Da noi il periodo più pericoloso è l'estate. Nel 2026 va dal 15 giugno al 15 ottobre.
 
 ## Come evitarlo
 
