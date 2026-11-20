@@ -69,7 +69,8 @@
           Materiali pronti su questo tema
         </h2>
         <p class="materiali-correlati-intro text-muted">
-          Video da guardare e infografiche da condividere. Liberamente scaricabili: la licenza è indicata su
+          Video da guardare, infografiche da condividere, presentazioni
+          per la classe. Liberamente scaricabili: la licenza è indicata su
           ogni materiale.
         </p>
         <div class="row g-3">
@@ -82,7 +83,7 @@
                 <div class="risorsa-tipo mb-2">
                   {{ if eq .tipo "podcast" }}<i class="bi bi-headphones me-1" aria-hidden="true"></i>Podcast
                   {{ else if eq .tipo "infografica" }}<i class="bi bi-image me-1" aria-hidden="true"></i>Infografica
-                  {{ else if eq .tipo "presentazione" }}<i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Presentazione PPTX
+                  {{ else if eq .tipo "presentazione" }}<i class="bi bi-easel me-1" aria-hidden="true"></i>Presentazione per la classe
                   {{ else if eq .tipo "presentazione-pdf" }}<i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Presentazione PDF
                   {{ else if eq .tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
                   {{ else if eq .tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard

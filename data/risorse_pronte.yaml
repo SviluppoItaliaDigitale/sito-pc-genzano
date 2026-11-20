@@ -423,3 +423,32 @@ materiali:
   dimensione: 4.1 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
+- id: nue-112-presentazione
+  tema: nue-112
+  tema_titolo: 'NUE 112'
+  tipo: presentazione
+  titolo: 'Il 112, il numero unico per le emergenze'
+  descrizione: 'Per un''ora di Educazione Civica: 14 slide con il testo modificabile e, sotto ogni slide, le note per il docente.'
+  file_url: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
+  dimensione: 1.1 MB
+  data_pubblicazione: '2026-11-20'
+  licenza: CC BY-NC-SA 4.0
+  formati:
+  - etichetta: 'Schermo 16:9 — monitor interattivi e TV, anche 4K'
+    url: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
+    dimensione: 1.1 MB
+  - etichetta: 'Schermo 16:10 — alcune lavagne e i portatili'
+    url: /presentazioni/2026-05-29-nue-112-presentazione-pdf-16x10.pdf
+    dimensione: 1.0 MB
+  - etichetta: 'Schermo 4:3 — LIM con il proiettore'
+    url: /presentazioni/2026-05-29-nue-112-presentazione-pdf-4x3.pdf
+    dimensione: 927 KB
+  - etichetta: 'Da modificare, 16:9, con le note'
+    url: /presentazioni/2026-05-29-nue-112-presentazione.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 16:10, con le note'
+    url: /presentazioni/2026-05-29-nue-112-presentazione-16x10.pptx
+    dimensione: 1.1 MB
+  - etichetta: 'Da modificare, 4:3, con le note'
+    url: /presentazioni/2026-05-29-nue-112-presentazione-4x3.pptx
+    dimensione: 1.1 MB

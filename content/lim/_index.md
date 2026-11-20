@@ -43,7 +43,13 @@ Se un controllo non va a buon fine, il problema viene segnalato e corretto prima
 
 ## Le presentazioni da scaricare
 
-Le presentazioni sui rischi per un'ora di Educazione Civica sono in aggiornamento e per ora non si scaricano da [Risorse pronte](/risorse-pronte/). Intanto, per proiettare una pagina del sito con il testo grande, usa «Modalità Aula».
+In [Risorse pronte](/risorse-pronte/) ci sono presentazioni sui rischi per un'ora di Educazione Civica. Ogni presentazione ha un pulsante per ogni formato di schermo:
+
+- **16:9**: i monitor interattivi e le TV più diffusi oggi, anche quelli 4K. Il PDF è vettoriale e resta nitido a ogni risoluzione;
+- **16:10**: alcune lavagne e molti portatili collegati al proiettore;
+- **4:3**: le LIM più vecchie con il proiettore sopra la lavagna.
+
+Nel dubbio scarica il 16:9: se sulla lavagna compaiono due bande nere sopra e sotto, prova il 4:3. Il PDF si apre su qualsiasi computer. Il PowerPoint si apre con PowerPoint, LibreOffice Impress e con i programmi delle lavagne: il testo si può modificare e sotto ogni slide, nelle note, trovi che cosa dire e quali domande fare alla classe.
 
 ## Domande frequenti
 
