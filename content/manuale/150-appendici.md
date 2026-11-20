@@ -68,7 +68,7 @@ Norme tecniche volontarie rilevanti per la materia. Il manuale ne riporta titolo
 
 - **112** — Numero Unico Emergenze (NUE): qualsiasi emergenza, attivo nel Lazio.
 - **803 555** — Sala Operativa della Protezione Civile della Regione Lazio: segnalazioni non urgenti e informazioni.
-- **1530** — Guardia Costiera: emergenze in mare e sui laghi.
+- **1530** — Guardia Costiera: emergenze in mare.
 - **06 9362600** — Segreteria del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma (informazioni, **non** per emergenze).
 
 In emergenza il riferimento è sempre il **112**. Il dettaglio aggiornato è alla pagina [Numeri utili](/numeri-utili/).
