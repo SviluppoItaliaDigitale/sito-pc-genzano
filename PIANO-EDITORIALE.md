@@ -627,6 +627,58 @@ Questi articoli non dipendono da eventi e possono essere scritti in anticipo. Or
 - Come preservare alimenti senza corrente
 - Pronto soccorso per animali domestici
 
+### 3.21 Corso base per volontari: argomenti di riferimento
+
+Argomenti del corso base per nuovi volontari di protezione civile nel Lazio, presi il 20/11/2026 dall'agenda di un corso regionale che ci è stata girata. L'agenda **non si pubblica e non si cita**: questo elenco serve solo per scegliere gli argomenti di slide, articoli e domande del quiz. Prima di scrivere, ogni fatto si verifica sulle fonti ufficiali (`qualita.md`).
+
+**Modulo 1 — Il sistema di protezione civile**
+- Chi è il volontario di protezione civile.
+- Servizio nazionale e sue componenti; ruoli di Stato, Regioni, Prefetture, Comuni.
+- Pianificazione di protezione civile; strutture di coordinamento in emergenza.
+- Pericolosità, vulnerabilità, danno e rischio; tipi di rischio; rischi italiani e del Lazio.
+- Disastri naturali, tecnologici e sociali, comprese le forme moderne di terrorismo.
+- Previsione e prevenzione; comunicazione del rischio; sistemi di allertamento.
+
+**Modulo 2 — Il volontariato e la gestione dell'emergenza**
+- Storia del volontariato e delle emergenze in Italia.
+- Organizzazioni di volontariato ed enti del Terzo settore; Gruppi comunali.
+- Volontariato organizzato come struttura operativa; Capo V del D.Lgs. 1/2018; Elenco nazionale ed elenchi territoriali.
+- Requisiti delle organizzazioni nel Lazio (regolamento regionale 18/2019); indirizzi operativi per l'impiego del volontariato.
+- Eventi a rilevante impatto locale.
+- Gestione di un'emergenza; logistica; dotazioni e mezzi; materiali, attrezzature e colonna mobile.
+- Emergenze nazionali recenti e assistenza alla popolazione.
+
+**Modulo 3 — La sicurezza del volontario**
+- Storia della sicurezza; rischio, pericolo, danno; prevenzione e protezione.
+- Prevenzione degli infortuni nelle organizzazioni; scenari di rischio e compiti del volontario; sicurezza dello scenario.
+- D.Lgs. 81/2008 applicato al volontariato; informazione, formazione e addestramento.
+- Controllo sanitario e sorveglianza sanitaria.
+- Soccorrere in emergenza; rischi generici; dispositivi di protezione individuale; attrezzature.
+
+**Già coperto sul sito (al 20/11/2026)**
+- Presentazioni per gli istruttori in `/formazione/volontari/`, 12 moduli in `data/presentazioni-volontari/`.
+- Domande del simulatore d'esame in `static/quizpc/`.
+- Manuale (capitoli 4 e 5; sicurezza del volontario, capitolo 31).
+- Commentario al Capo V del Codice.
+- Articoli:
+  - colonne mobili (12/04/2026);
+  - D.Lgs. 81/2008 (21/10/2026);
+  - IT-alert;
+  - eventi a rilevante impatto locale ed elenco territoriale del Lazio (20/11/2026).
+
+**Da sviluppare in futuro** (titoli possibili, fonti da verificare prima):
+- I rischi generici del volontario in servizio: scivolamenti, carichi da sollevare, rumore, rischio elettrico, caldo e freddo.
+- Le attrezzature usate in sicurezza: motopompe, generatori, motoseghe, torri faro.
+- Gli scenari di rischio e i compiti del volontario (allegato 1 del decreto del Capo Dipartimento del 12/01/2012).
+- La sorveglianza sanitaria dei volontari, spiegata passo per passo.
+- La sicurezza dello scenario: che cosa guardare prima di entrare in un'area.
+- Rischi tecnologici e minacce intenzionali: che cosa fa il cittadino, che cosa compete alla sicurezza pubblica.
+- Come si parla alla popolazione in piazza: la comunicazione del rischio fatta dai volontari.
+- Un campo di accoglienza dall'interno: logistica, turni, rifornimenti.
+- Organizzazione di volontariato, associazione di promozione sociale, Gruppo comunale: differenze in parole semplici.
+- Storia del volontariato di protezione civile, da Firenze 1966 a oggi.
+- Nuove domande del quiz e presentazioni sul modulo 3 (rischi generici, attrezzature).
+
 ---
 
 ## 4. Trasformare una fonte in un articolo
