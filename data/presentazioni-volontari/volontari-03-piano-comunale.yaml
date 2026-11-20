@@ -68,7 +68,7 @@ slide:
     punti:
       - "Il Centro Funzionale Regionale del Lazio emette il bollettino."
       - "Genzano è nella Zona di allerta F, Bacini Costieri Sud."
-      - "Il bollettino esce ogni giorno, di norma entro le 14."
+      - "Il bollettino esce ogni giorno."
     pittogramma: "arasaac/calendario"
     nota: "Né il Comune né il Gruppo emettono allerte: il Gruppo le comunica ai cittadini. Mostra la barra in cima alla homepage del sito, che legge il bollettino regionale. Apri insieme la pagina dei bollettini della Regione Lazio."
     fonte: "/allerte-meteo/"
@@ -77,9 +77,9 @@ slide:
       - "Attenzione, preallarme e allarme: le decide il Sindaco."
       - "Con allerta gialla o arancione, almeno la fase di attenzione."
       - "Con allerta rossa, almeno la fase di preallarme."
-      - "L'allarme si attiva quando l'evento è già in corso."
+      - "Il Sindaco può passare a una fase superiore anche senza un'allerta più alta."
     pittogramma: "arasaac/allarme"
-    nota: "Il colore dice che cosa può succedere, la fase dice che cosa fa l'amministrazione. La corrispondenza è solo minima e viene dalle indicazioni operative del Dipartimento del 10 febbraio 2016. Ricorda anche la discesa: rientro e ritorno alla normalità, con verifica e documentazione."
+    nota: "Il colore dice che cosa può succedere, la fase dice che cosa fa l'amministrazione. La corrispondenza è solo minima e viene dalle indicazioni operative del Dipartimento del 10 febbraio 2016."
     fonte: "/allerte-meteo/cosa-significa-a-genzano/"
   - titolo: "Quando scatta un'allerta"
     punti:

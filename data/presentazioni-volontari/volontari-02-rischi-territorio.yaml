@@ -29,7 +29,7 @@ slide:
       - "Per il Dipartimento, in zona 2 forti terremoti sono possibili."
       - "Il terremoto non si può prevedere: ci si prepara prima."
     pittogramma: "arasaac/terremoto"
-    nota: "La classificazione viene dalla DGR Lazio 387/2009. Esempio storico: nel terremoto dei Colli Albani del 26 agosto 1806, magnitudo stimata 5,6, Genzano ebbe intensità VIII e gravi danni. Esercizio: ognuno indica il punto più sicuro della stanza in cui ci troviamo."
+    nota: "La classificazione viene dalla DGR Lazio 387/2009. Esempio storico: nel terremoto dei Colli Albani del 26 agosto 1806, magnitudo 5,6 nel catalogo INGV CPTI15, Genzano ebbe gravi danni. Uno studio del 2024 propone valori più bassi. Esercizio: ognuno indica il punto più sicuro della stanza in cui ci troviamo."
     fonte: "/rischi-prevenzione/rischio-sismico/"
   - titolo: "Il vulcano dei Colli Albani"
     punti:
@@ -37,7 +37,7 @@ slide:
       - "Lo sorveglia l'Istituto nazionale di geofisica e vulcanologia."
       - "Oggi si osservano piccoli terremoti e emissioni di gas dal sottosuolo."
     pittogramma: "arasaac/vulcano"
-    nota: "Quiescente significa in pausa: il sistema profondo dà ancora segnali, con sciami sismici, lente deformazioni del suolo e attività idrotermale. Per i Colli Albani il Dipartimento non ha definito livelli di allerta vulcanica, come invece per il Vesuvio. Domanda: perché i laghi di Albano e di Nemi sono crateri?"
+    nota: "Quiescente significa in pausa: il sistema profondo dà ancora segnali, con sciami sismici, lente deformazioni del suolo e attività idrotermale. Domanda: perché i laghi di Albano e di Nemi sono crateri?"
     fonte: "/conoscere/rischio-vulcanico-colli-albani/"
   - titolo: "Il gas dal sottosuolo"
     punti:
