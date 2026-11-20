@@ -43,11 +43,11 @@ slide:
     fonte: "/rischi-prevenzione/dopo-emergenza/"
   - titolo: "Se senti odore di gas"
     punti:
-      - "Non accendere luci o fiamme, non usare interruttori né telefoni."
+      - "Niente luci, fiamme, interruttori né telefoni nel locale."
       - "Apri porte e finestre; chiudi il gas solo se lo raggiungi senza rischi."
       - "Esci e chiama il 112 da fuori."
     pittogramma: "arasaac/gas"
-    nota: "Fai ripetere la sequenza nell'ordine giusto: prima niente luci né telefoni, poi aria, poi fuori. Solo da fuori si chiama il 112."
+    nota: "Fai ripetere la sequenza nell'ordine giusto: prima niente luci né telefoni, poi aria, poi fuori. Solo da fuori si chiama il 112. I bambini escono subito e avvisano un adulto."
     fonte: "/rischi-prevenzione/dopo-emergenza/"
   - titolo: "Corrente e acqua"
     punti:
@@ -86,7 +86,7 @@ slide:
       - "Parlane con le persone vicine: condividere aiuta."
       - "Torna appena puoi alle abitudini: pasti, sonno, scuola."
     pittogramma: "arasaac/calma"
-    nota: "I bambini a volte reagiscono qualche giorno dopo. Se il malessere è forte o dura nel tempo, se ne parla con il medico o con i servizi della ASL Roma 6."
+    nota: "I bambini a volte reagiscono qualche giorno dopo. Se il malessere è forte o dura nel tempo, o se se ne sente il bisogno, se ne parla con il medico o con i servizi della ASL Roma 6."
     fonte: "/rischi-prevenzione/dopo-emergenza/"
   - tipo: "domanda"
     domanda: "Senti odore di gas in casa. Che cosa fai?"
@@ -94,7 +94,7 @@ slide:
       - "Accendo la luce per vedere meglio."
       - "Apro le finestre, esco e chiamo il 112 da fuori."
       - "Telefono subito dalla cucina."
-    nota: "La risposta giusta è la B. Con odore di gas non si accendono luci e non si usano telefoni nel locale: si chiama solo dopo essere usciti."
+    nota: "La risposta giusta è la seconda. Con odore di gas non si accendono luci e non si usano telefoni nel locale: si chiama solo dopo essere usciti."
     fonte: "/rischi-prevenzione/dopo-emergenza/"
 ricorda:
   - "Per un pericolo immediato chiama il 112."

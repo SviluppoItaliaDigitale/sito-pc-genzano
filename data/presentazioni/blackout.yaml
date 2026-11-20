@@ -51,11 +51,11 @@ slide:
     fonte: "/rischi-prevenzione/blackout/"
   - titolo: "Durante: le prime cose da fare"
     punti:
-      - "Mantieni la calma: di solito i blackout sono temporanei."
+      - "Di solito i blackout sono temporanei: resta con un adulto."
       - "Scollega gli elettrodomestici."
       - "Lascia accesa una sola lampada per capire quando torna la corrente."
     pittogramma: "arasaac/calma"
-    nota: "Spiega gli sbalzi di tensione: quando la corrente torna, gli apparecchi lasciati collegati possono rovinarsi."
+    nota: "Se il buio fa un po' di paura è normale: la torcia e un adulto vicino aiutano. Spiega gli sbalzi di tensione: quando la corrente torna, gli apparecchi lasciati collegati possono rovinarsi."
     fonte: "/rischi-prevenzione/blackout/"
   - titolo: "Frigorifero e congelatore chiusi"
     punti:
@@ -94,7 +94,7 @@ slide:
       - "Una candela accesa."
       - "Una torcia elettrica."
       - "Un fornello da campeggio acceso in casa."
-    nota: "La risposta giusta è la B. La candela può causare un incendio; un fornello a combustibile in casa produce monossido di carbonio."
+    nota: "La risposta giusta è la seconda. La candela può causare un incendio; un fornello a combustibile in casa produce monossido di carbonio."
     fonte: "/rischi-prevenzione/blackout/"
 ricorda:
   - "Se c'è un pericolo reale, chiama il 112."
