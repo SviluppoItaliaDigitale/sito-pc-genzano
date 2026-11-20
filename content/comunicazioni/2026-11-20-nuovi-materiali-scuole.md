@@ -20,17 +20,17 @@ social_punti:
 draft: false
 ---
 
-Da oggi le scuole di Genzano e dei Castelli Romani trovano sul nostro sito un **curricolo verticale di protezione civile** e nuove **schede da stampare**. Il curricolo dice che cosa impara ogni età, dai 3 ai 19 anni. Le schede servono alla classe, ma anche alle famiglie, ai supplenti e a chi lavora nella scuola senza insegnare.
+Dal 19 novembre le scuole di Genzano e dei Castelli Romani trovano sul nostro sito un **curricolo verticale di protezione civile** e nuove **schede da stampare**. Il curricolo dice che cosa impara ogni età, dai 3 ai 19 anni. Le schede servono alla classe, ma anche alle famiglie, ai supplenti e a chi lavora nella scuola senza insegnare.
 
 ## Il curricolo verticale
 
 Il [curricolo verticale](/formazione/curricolo-verticale/) è una tabella con i traguardi di protezione civile per ogni fascia d'età, scritti come azioni che il docente può osservare. Accanto a ogni fascia ci sono i materiali del sito da cui partire.
 
-È pensato per chi scrive il Piano triennale dell'offerta formativa e per il referente di educazione civica. Ogni anno parte da ciò che la classe sa già e aggiunge un passo: il gesto imparato a quattro anni, a quindici si usa per insegnarlo a qualcun altro.
+È pensato per chi scrive il Piano triennale dell'offerta formativa e per il referente di educazione civica. Ogni anno parte da ciò che la classe sa già e aggiunge un passo: il gesto imparato a quattro anni non si rispiega a quindici, si usa per insegnarlo a qualcun altro.
 
 ## Prima e dopo la prova di evacuazione
 
-La scuola deve fare almeno due prove di evacuazione all'anno. Per prepararle e per parlarne dopo ci sono nuove schede:
+La scuola deve fare almeno due prove di evacuazione all'anno (D.M. 26 agosto 1992). Per prepararle e per parlarne dopo ci sono nuove schede:
 
 - una **storia sociale** con pittogrammi, da leggere nei giorni prima della prova a chi è nello spettro autistico o ha altre necessità comunicative;
 - **«La sirena a scuola è una prova»**, in italiano semplice, per gli alunni appena arrivati in Italia, con lo spazio per la traduzione del mediatore;
