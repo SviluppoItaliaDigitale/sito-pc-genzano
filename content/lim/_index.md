@@ -3,7 +3,7 @@ title: "Protezione civile sulla LIM: giochi, schede e lezioni per la lavagna int
 description: "Giochi, storie, schede, quiz e lezioni di protezione civile pronti per la LIM: si usano col dito, a schermo intero, anche sulle lavagne con browser non aggiornato."
 layout: "list"
 faq_schema: true
-dataUltimaRevisione: "2026-11-01"
+dataUltimaRevisione: "2026-11-20"
 ---
 
 I materiali del sito per le scuole sono pensati per essere usati **sulla lavagna interattiva multimediale (LIM)** della classe: giochi, storie, schede, quiz, il libro che si esplora, gli esperimenti e lo strumento che compone una lezione. Le pagine che lo sono portano il riquadro **«Pronto per la LIM»**.
@@ -40,6 +40,12 @@ Se un controllo non va a buon fine, il problema viene segnalato e corretto prima
 - [Esperimenti e attività](/formazione/esperimenti/), [Laboratorio meteo](/laboratorio-meteo/) e [Quanto sei preparato?](/quiz-preparazione/).
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) e i kit per [infanzia](/formazione/kit-scuola-infanzia/), [primaria](/formazione/kit-scuola-primaria/), [secondaria di primo grado](/formazione/kit-scuola-secondaria-primo-grado/) e [secondaria di secondo grado](/formazione/kit-scuola-secondaria-secondo-grado/).
 - [Abili a proteggere](/abili-a-proteggere/) e le [tabelle di comunicazione](/tabelle-comunicazione/), per la classe inclusiva.
+
+## Le presentazioni da scaricare
+
+In [Risorse pronte](/risorse-pronte/) ci sono anche presentazioni sui rischi, in PowerPoint e in PDF, per un'ora di Educazione Civica. Sono in formato 16:9, quello dei monitor interattivi e dei proiettori più recenti. Su una lavagna più vecchia, con il proiettore in 4:3, compaiono due bande nere sopra e sotto, ma la slide si vede intera.
+
+Ogni slide è un'immagine: si proietta così com'è e il testo non si modifica.
 
 ## Domande frequenti
 
