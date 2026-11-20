@@ -13,26 +13,26 @@
 {{- range $voci }}{{ if not (in $corsi .corso) }}{{ $corsi = $corsi | append .corso }}{{ end }}{{ end -}}
 {{- range $corsi }}
 {{- $corso := . }}
-<section class="pres-vol-gruppo mb-4" aria-labelledby="pres-vol-{{ $corso | urlize }}">
+<section class="pres-vol-gruppo no-gloss mb-4" aria-labelledby="pres-vol-{{ $corso | urlize }}">
 <h3 id="pres-vol-{{ $corso | urlize }}" class="h4">{{ $corso }}</h3>
 <div class="row g-3">
 {{- range where $voci "corso" $corso }}
 {{- $titolo := .titolo }}
-<div class="col-md-6 col-xl-4">
+<div class="col-md-6">
 <div class="card h-100 shadow-sm pres-vol-card">
 <div class="card-body d-flex flex-column">
 <p class="small text-uppercase fw-semibold mb-1 pres-vol-occhio">{{ .sottotitolo }}</p>
 <h4 class="h5 card-title">{{ $titolo }}</h4>
 <p class="small mb-3">{{ .fascia }} · {{ .durata }} · {{ .slide }} slide con le note per l'istruttore</p>
 {{- $tutti := .formati }}
-<ul class="list-unstyled mb-2 mt-auto">
+<div class="d-grid gap-2 mb-2 mt-auto">
 {{- range where (where $tutti "formato" "16:9") "tipo" "PDF" }}
-<li class="mb-1"><a href="{{ strings.TrimPrefix "/" .url | relURL }}" class="btn btn-sm btn-primary w-100 text-start" download><i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Scarica il PDF<span class="visually-hidden">: {{ $titolo }}</span> <span class="small">({{ .formato }}, {{ .dimensione }})</span></a></li>
+<a href="{{ strings.TrimPrefix "/" .url | relURL }}" class="btn btn-sm btn-primary text-start" download><i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Scarica il PDF<span class="visually-hidden">: {{ $titolo }}</span> <span class="small">({{ .formato }}, {{ .dimensione }})</span></a>
 {{- end }}
 {{- range where (where $tutti "formato" "16:9") "tipo" "PowerPoint" }}
-<li class="mb-1"><a href="{{ strings.TrimPrefix "/" .url | relURL }}" class="btn btn-sm btn-outline-primary w-100 text-start" download><i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Scarica il PowerPoint modificabile<span class="visually-hidden">: {{ $titolo }}</span> <span class="small">({{ .formato }}, {{ .dimensione }})</span></a></li>
+<a href="{{ strings.TrimPrefix "/" .url | relURL }}" class="btn btn-sm btn-outline-primary text-start" download><i class="bi bi-file-earmark-slides me-1" aria-hidden="true"></i>Scarica il PowerPoint modificabile<span class="visually-hidden">: {{ $titolo }}</span> <span class="small">({{ .formato }}, {{ .dimensione }})</span></a>
 {{- end }}
-</ul>
+</div>
 <details class="pres-vol-formati small">
 <summary>Altri formati di schermo<span class="visually-hidden">: {{ $titolo }}</span></summary>
 <ul class="list-unstyled mt-2 mb-0">

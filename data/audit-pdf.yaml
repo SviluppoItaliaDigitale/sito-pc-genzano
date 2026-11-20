@@ -1,7 +1,7 @@
 ultimo_audit: '2026-11-20'
-totale: 113
+totale: 140
 riepilogo:
-  ACCESSIBILE: 50
+  ACCESSIBILE: 77
   PARZIALE: 10
   NON_ACCESSIBILE: 9
   TERZO: 44
@@ -1601,6 +1601,384 @@ documenti:
   pages: 14
   errors: []
   text_chars_sample: 771
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-01-sistema-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-01-sistema-presentazione-pdf-16x10.pdf
+  size_kb: 1022.2
+  sha256: 64faebb2818d42aebad903ec318fdfa80f0ac642d661cdee13dd15841f96037b
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il Servizio nazionale della protezione civile
+  pages: 15
+  errors: []
+  text_chars_sample: 881
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-01-sistema-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-01-sistema-presentazione-pdf-4x3.pdf
+  size_kb: 1109.3
+  sha256: 2c806d4959eed996ec0d188bd2888038216feef9dd8258ba97b54f704f81d793
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il Servizio nazionale della protezione civile
+  pages: 15
+  errors: []
+  text_chars_sample: 882
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-01-sistema-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-01-sistema-presentazione-pdf.pdf
+  size_kb: 1079.2
+  sha256: 3372d71dce47d077f4d1ab5b4f7bec0911fb999fdacf6c4b12db10fd6687bd4c
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il Servizio nazionale della protezione civile
+  pages: 15
+  errors: []
+  text_chars_sample: 878
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-02-rischi-territorio-presentazione-pdf-16x10.pdf
+  size_kb: 1218.3
+  sha256: 9111f5af54a844642052ed0f87cfdb2ca6cd7f894ff98c2b2978106d8046f841
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: I rischi del territorio di Genzano di Roma
+  pages: 15
+  errors: []
+  text_chars_sample: 884
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-02-rischi-territorio-presentazione-pdf-4x3.pdf
+  size_kb: 1080.0
+  sha256: 75b84d2bef021a58fbc40e0c2b0b8fcbaea719d9e4baf6b245408d16afe4a1ac
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: I rischi del territorio di Genzano di Roma
+  pages: 15
+  errors: []
+  text_chars_sample: 888
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-02-rischi-territorio-presentazione-pdf.pdf
+  size_kb: 1420.4
+  sha256: ff38c43175f6a2689a65bbd13191f084c7215a535d53fbe4f42665348e7ca910
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: I rischi del territorio di Genzano di Roma
+  pages: 15
+  errors: []
+  text_chars_sample: 883
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-03-piano-comunale-presentazione-pdf-16x10.pdf
+  size_kb: 1057.3
+  sha256: 6bd83ef78d326c2af27a9a06c9ecc9439a974e6d61b87ea2fea269e67b9770d6
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il Piano di emergenza comunale e le procedure
+  pages: 15
+  errors: []
+  text_chars_sample: 838
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-03-piano-comunale-presentazione-pdf-4x3.pdf
+  size_kb: 1091.8
+  sha256: af95e5451f9ebeac25329f1e8b47061e29de2cd39d4876ca2b3113d56f810200
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il Piano di emergenza comunale e le procedure
+  pages: 15
+  errors: []
+  text_chars_sample: 841
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-03-piano-comunale-presentazione-pdf.pdf
+  size_kb: 1180.6
+  sha256: 925ffd15e09229db31b1586cebcc7dcc09330eb3f1078c8f94a43e80445ca175
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il Piano di emergenza comunale e le procedure
+  pages: 15
+  errors: []
+  text_chars_sample: 838
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-04-sicurezza-presentazione-pdf-16x10.pdf
+  size_kb: 1086.7
+  sha256: 2e17e49bb846d7123824a79130e1e62463cedba6aec1dad45b45eed6f9e72016
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Sicurezza personale e dotazioni del volontario
+  pages: 15
+  errors: []
+  text_chars_sample: 873
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-04-sicurezza-presentazione-pdf-4x3.pdf
+  size_kb: 1061.2
+  sha256: 8189e40bf400235c6690676836914f6d9cbe05cafe5bed721eeacd002164392c
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Sicurezza personale e dotazioni del volontario
+  pages: 15
+  errors: []
+  text_chars_sample: 876
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-04-sicurezza-presentazione-pdf.pdf
+  size_kb: 1216.1
+  sha256: 6a864c79d4804de50d83b1c7c48772c18f18731f82cdabe2333ebddee716597a
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Sicurezza personale e dotazioni del volontario
+  pages: 15
+  errors: []
+  text_chars_sample: 872
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-05-primo-soccorso-presentazione-pdf-16x10.pdf
+  size_kb: 1103.3
+  sha256: f85f1e53bf6aa28164db60cb7b3fb5b595d786d1170f5cb0ff5e6f1d8edca569
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Nozioni di primo soccorso per il volontario
+  pages: 15
+  errors: []
+  text_chars_sample: 862
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-05-primo-soccorso-presentazione-pdf-4x3.pdf
+  size_kb: 1064.3
+  sha256: 36203caee7373ea911582efba2256cd6cecb67fffa49fed1e564c4b384d98787
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Nozioni di primo soccorso per il volontario
+  pages: 15
+  errors: []
+  text_chars_sample: 864
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-05-primo-soccorso-presentazione-pdf.pdf
+  size_kb: 1244.6
+  sha256: 0a774885eef997412bc2544b99362288c59dd051c722304e9d647a6c4e66be9c
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Nozioni di primo soccorso per il volontario
+  pages: 15
+  errors: []
+  text_chars_sample: 861
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-06-radio-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-06-radio-presentazione-pdf-16x10.pdf
+  size_kb: 1193.7
+  sha256: 7bdd4fa2c3d797004f3dcdca0e33717cd5184a7ce513a34ba315792e26a59eac
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Le comunicazioni radio in emergenza
+  pages: 15
+  errors: []
+  text_chars_sample: 850
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-06-radio-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-06-radio-presentazione-pdf-4x3.pdf
+  size_kb: 1143.6
+  sha256: d7717f7316af6bcdaf388adfeaa337ba2b52b897a223d8bee7716b6c4a17c94e
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Le comunicazioni radio in emergenza
+  pages: 15
+  errors: []
+  text_chars_sample: 853
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-06-radio-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-06-radio-presentazione-pdf.pdf
+  size_kb: 1208.9
+  sha256: c06e0eb70ed77f341cbe03790d7d53d19bb58b973317f636a77867b84bb4b291
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Le comunicazioni radio in emergenza
+  pages: 15
+  errors: []
+  text_chars_sample: 849
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-07-scenario-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-07-scenario-presentazione-pdf-16x10.pdf
+  size_kb: 1129.0
+  sha256: 0489ece918296eec871ac98511256bcfd72b0ada94f5dac11883bb7281d23b3a
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il comportamento in scenario
+  pages: 15
+  errors: []
+  text_chars_sample: 913
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-07-scenario-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-07-scenario-presentazione-pdf-4x3.pdf
+  size_kb: 990.8
+  sha256: 6e5d78c1653f136f22f4e97db6158b9067ff196f11150f82cea96fb697d27f4f
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il comportamento in scenario
+  pages: 15
+  errors: []
+  text_chars_sample: 917
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-07-scenario-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-07-scenario-presentazione-pdf.pdf
+  size_kb: 1264.4
+  sha256: a55f05bbeaa18ac597530829d4f7af432984364a5cb86d28516b2f89f9098aa5
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il comportamento in scenario
+  pages: 15
+  errors: []
+  text_chars_sample: 912
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf-16x10.pdf
+  size_kb: 1327.4
+  sha256: ecefc40c60c4ec8426e026d5350b4567a4ee8bb41e9538859a69481c6ad40496
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il volontario nel Codice della protezione civile: diritti, doveri, tutele'
+  pages: 15
+  errors: []
+  text_chars_sample: 921
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf-4x3.pdf
+  size_kb: 1113.8
+  sha256: e4e101a59ec65602a3f6ef571efdd02db252a7f69c2ca9e53e3e367949588295
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il volontario nel Codice della protezione civile: diritti, doveri, tutele'
+  pages: 15
+  errors: []
+  text_chars_sample: 924
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf.pdf
+  size_kb: 1282.8
+  sha256: 2f1a50f9ecdc937424103498be2de065400580b03e834b95b385eb9a22c5baa5
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: 'Il volontario nel Codice della protezione civile: diritti, doveri, tutele'
+  pages: 15
+  errors: []
+  text_chars_sample: 919
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-09-sistema-lazio-presentazione-pdf-16x10.pdf
+  size_kb: 1091.8
+  sha256: 734bdfbaf7028bad8e7aa138e3e88e669765b64a319702697882bf4de6941e95
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il sistema di protezione civile della Regione Lazio
+  pages: 15
+  errors: []
+  text_chars_sample: 898
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-09-sistema-lazio-presentazione-pdf-4x3.pdf
+  size_kb: 1119.0
+  sha256: fb066ac6ebb24cc4fb9a7e9edf45c4a5f5c8e2261e78bb3a79dd54ab73d438d5
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il sistema di protezione civile della Regione Lazio
+  pages: 15
+  errors: []
+  text_chars_sample: 902
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-09-sistema-lazio-presentazione-pdf.pdf
+  size_kb: 1287.7
+  sha256: 95019d9f7e6cbba2097d1d1212b34dfe306ae556a6b14e0428c21c758c601799
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il sistema di protezione civile della Regione Lazio
+  pages: 15
+  errors: []
+  text_chars_sample: 897
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
