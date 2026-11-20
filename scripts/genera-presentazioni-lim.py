@@ -33,6 +33,10 @@ from pptx.util import Emu, Inches, Pt
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATI = os.path.join(REPO, "data", "presentazioni")
+# Presentazioni per la formazione dei volontari: stesso motore, note per
+# l'istruttore, elenco in data/formazione_volontari.json invece di Risorse pronte.
+DATI_VOLONTARI = os.path.join(REPO, "data", "presentazioni-volontari")
+ELENCO_VOLONTARI = os.path.join(REPO, "data", "formazione_volontari.json")
 OUT = os.path.join(REPO, "static", "presentazioni")
 IMG = os.path.join(REPO, "static", "images")
 PITTO = os.path.join(REPO, "static", "pittogrammi")
@@ -235,6 +239,7 @@ def alt(pic, testo):
 
 class Deck:
     def __init__(self, dati, formato, larghezza):
+        self.vol = dati.get("pubblico") == "volontari"
         self.d = dati
         self.fmt = formato
         self.W = larghezza
@@ -274,7 +279,7 @@ class Deck:
         tf = s.notes_slide.notes_text_frame
         tf.text = ""
         p = tf.paragraphs[0]
-        scrivi(p.add_run(), "Per il docente: " + testo.strip(), 12, TESTO)
+        scrivi(p.add_run(), ("Per l'istruttore: " if self.vol else "Per il docente: ") + testo.strip(), 12, TESTO)
         if fonte:
             p = tf.add_paragraph()
             url = fonte if fonte.startswith("http") else SITO + fonte
@@ -319,9 +324,15 @@ class Deck:
         tf = casella(s, self.margine, self.H - 0.38, self.W - 2 * self.margine, 0.3, MSO_ANCHOR.MIDDLE)
         scrivi(tf.paragraphs[0].add_run(), "protezionecivilegenzano.it  ·  In emergenza chiama il 112",
                12, RGBColor(0xD6, 0xE2, 0xEE))
-        self.note(s, "Presenta l'argomento e spiega che la lezione parla di azioni concrete. "
-                     "Le note sotto ogni slide dicono che cosa raccontare e quali domande fare. "
-                     "Testi aggiornati al %s." % self.data_estesa())
+        if self.vol:
+            self.note(s, "Presenta il modulo e i suoi obiettivi. Le note sotto ogni slide dicono che "
+                         "cosa approfondire e quali domande fare al gruppo. Alla fine i volontari "
+                         "possono allenarsi con il quiz formativo del sito, modalità Allenamento o "
+                         "Esame. Testi aggiornati al %s." % self.data_estesa())
+        else:
+            self.note(s, "Presenta l'argomento e spiega che la lezione parla di azioni concrete. "
+                         "Le note sotto ogni slide dicono che cosa raccontare e quali domande fare. "
+                         "Testi aggiornati al %s." % self.data_estesa())
 
     def data_estesa(self):
         mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
@@ -363,7 +374,8 @@ class Deck:
         self.testata(s)
         w = self.W - 2 * self.margine
         tf = casella(s, self.margine, 1.15, w, 0.5)
-        scrivi(tf.paragraphs[0].add_run(), "DOMANDA PER LA CLASSE", 16, ROSSO, grassetto=True)
+        scrivi(tf.paragraphs[0].add_run(), "DOMANDA PER IL GRUPPO" if self.vol else "DOMANDA PER LA CLASSE",
+               16, ROSSO, grassetto=True)
         c = scegli_corpo([sl["domanda"]], w, 1.35, [38, 34, 30, 28], grassetto=True, interlinea=1.05)
         tf = casella(s, self.margine, 1.65, w, 1.35)
         paragrafi(tf, [sl["domanda"]], c, BLU, interlinea=1.05, grassetto=True)
@@ -403,7 +415,9 @@ class Deck:
         p.alignment = PP_ALIGN.CENTER
         scrivi(p.add_run(), "In emergenza chiama il ", 28, TESTO, grassetto=True)
         scrivi(p.add_run(), "112", 36, ROSSO, grassetto=True)
-        self.note(s, "Ripeti insieme alla classe i punti da ricordare. Chiedi a ognuno di dirne uno con parole sue.")
+        self.note(s, ("Ripeti con il gruppo i punti da ricordare. Chiedi a ognuno di dirne uno con parole sue."
+                      if self.vol else
+                      "Ripeti insieme alla classe i punti da ricordare. Chiedi a ognuno di dirne uno con parole sue."))
 
     def fonti(self):
         s = self.nuova()
@@ -425,8 +439,8 @@ class Deck:
         c = scegli_corpo([lic], w, 1.5, [16, 15, 14, 13])
         tf = casella(s, self.margine, self.H - 2.15, w, 1.5)
         paragrafi(tf, [lic], c, GRIGIO)
-        self.note(s, "Le pagine del sito indicate qui sono quelle da cui vengono i testi: "
-                     "aprile se vuoi approfondire un punto con la classe.")
+        self.note(s, "Le pagine indicate qui sono quelle da cui vengono i testi: "
+                     "aprile se vuoi approfondire un punto con %s." % ("il gruppo" if self.vol else "la classe"))
 
     def affiliazioni(self):
         s = self.nuova()
@@ -464,9 +478,14 @@ class Deck:
         p = tf.paragraphs[0]
         p.alignment = PP_ALIGN.CENTER
         scrivi(p.add_run(), "protezionecivilegenzano.it  ·  In emergenza chiama il 112", 14, GRIGIO)
-        self.note(s, "Il Gruppo è accreditato dal Corpo europeo di solidarietà (codice E10435833) "
-                     "e fa parte del Coordinamento FE.PI.VOL. Per portare i volontari in classe: "
-                     "pagina «Il Gruppo nella tua scuola» sul sito.")
+        if self.vol:
+            self.note(s, "Il Gruppo è accreditato dal Corpo europeo di solidarietà (codice E10435833) "
+                         "e fa parte del Coordinamento FE.PI.VOL. Gli altri moduli e il quiz formativo "
+                         "sono nella pagina «Formazione dei volontari» del sito.")
+        else:
+            self.note(s, "Il Gruppo è accreditato dal Corpo europeo di solidarietà (codice E10435833) "
+                         "e fa parte del Coordinamento FE.PI.VOL. Per portare i volontari in classe: "
+                         "pagina «Il Gruppo nella tua scuola» sul sito.")
 
     def costruisci(self):
         self.copertina()
@@ -494,10 +513,10 @@ class Deck:
         cp.subject = self.d["sottotitolo"]
         cp.author = ENTE
         cp.last_modified_by = ENTE
-        cp.keywords = "protezione civile, scuola, " + self.d["tema"]
+        cp.keywords = ("protezione civile, volontariato, formazione, " if self.vol else "protezione civile, scuola, ") + self.d["tema"]
         cp.language = "it-IT"
         cp.comments = "Licenza CC BY-NC-SA 4.0 — " + SITO
-        cp.category = "Presentazione per la classe"
+        cp.category = "Presentazione per la formazione dei volontari" if self.vol else "Presentazione per la classe"
         return self.prs
 
 
@@ -573,13 +592,38 @@ def aggiorna_risorse(d, n_slide):
     yaml.safe_load(open(RISORSE, encoding="utf-8"))
 
 
+def aggiorna_volontari(d, n_slide):
+    """Scrive in data/formazione_volontari.json la voce della presentazione (una per tema).
+    L'ordine delle voci è quello del campo «ordine» del file di dati."""
+    import json
+    elenco = {"presentazioni": []}
+    if os.path.exists(ELENCO_VOLONTARI):
+        elenco = json.load(open(ELENCO_VOLONTARI, encoding="utf-8"))
+    voci = [v for v in elenco["presentazioni"] if v["tema"] != d["tema"]]
+    formati = []
+    for formato, etichetta in (("16x9", "16:9"), ("16x10", "16:10"), ("4x3", "4:3")):
+        for pdf, tipo in ((True, "PDF"), (False, "PowerPoint")):
+            nome = nome_file(d, formato, pdf)
+            formati.append({"tipo": tipo, "formato": etichetta, "url": "/presentazioni/" + nome,
+                            "dimensione": peso(os.path.join(OUT, nome))})
+    voci.append({"tema": d["tema"], "ordine": d.get("ordine", 99), "corso": d.get("corso", ""),
+                 "titolo": d["titolo"], "sottotitolo": d["sottotitolo"], "fascia": d["fascia"],
+                 "durata": d["durata"], "slide": n_slide, "aggiornato": d["aggiornato"],
+                 "formati": formati})
+    voci.sort(key=lambda v: (v["ordine"], v["tema"]))
+    elenco["presentazioni"] = voci
+    with open(ELENCO_VOLONTARI, "w", encoding="utf-8") as f:
+        json.dump(elenco, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("temi", nargs="*")
     ap.add_argument("--senza-pdf", action="store_true")
     ap.add_argument("--png", metavar="DIR")
     a = ap.parse_args()
-    files = sorted(glob.glob(os.path.join(DATI, "*.yaml")))
+    files = sorted(glob.glob(os.path.join(DATI, "*.yaml"))) + sorted(glob.glob(os.path.join(DATI_VOLONTARI, "*.yaml")))
     if a.temi:
         files = [f for f in files if os.path.basename(f)[:-5] in a.temi]
     if not files:
@@ -601,7 +645,10 @@ def main():
                                     os.path.join(a.png, "%s-%s" % (d["tema"], formato))], check=True)
             print("ok", d["tema"], formato)
         if not a.senza_pdf:
-            aggiorna_risorse(d, len(prs.slides))
+            if d.get("pubblico") == "volontari":
+                aggiorna_volontari(d, len(prs.slides))
+            else:
+                aggiorna_risorse(d, len(prs.slides))
 
 
 if __name__ == "__main__":

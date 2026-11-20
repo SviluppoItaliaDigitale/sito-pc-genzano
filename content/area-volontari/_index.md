@@ -113,6 +113,7 @@ Activepager dichiara di trattare i dati nel rispetto del GDPR. Per dettagli sui 
 ## Vedi anche
 
 - [Diventa Volontario](/diventa-volontario/) — come si entra nel Gruppo
+- [Formazione dei volontari](/formazione/volontari/) — simulatore d'esame, quiz e presentazioni del corso base
 - [Chi Siamo](/chi-siamo/) — struttura del Gruppo, referenti, sede
 - [Privacy Policy](/privacy/) — trattamento dei dati
 - [Contatti](/contatti/) — come contattare la segreteria

@@ -1,0 +1,445 @@
+{
+  "presentazioni": [
+    {
+      "tema": "volontari-01-sistema",
+      "ordine": 1,
+      "corso": "Corso base del Gruppo",
+      "titolo": "Il Servizio nazionale della protezione civile",
+      "sottotitolo": "Corso base per i volontari — modulo 1",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-90 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-01-sistema-presentazione-pdf.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-01-sistema-presentazione.pptx",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-01-sistema-presentazione-pdf-16x10.pdf",
+          "dimensione": "1022 KB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-01-sistema-presentazione-16x10.pptx",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-01-sistema-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-01-sistema-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-02-rischi-territorio",
+      "ordine": 2,
+      "corso": "Corso base del Gruppo",
+      "titolo": "I rischi del territorio di Genzano di Roma",
+      "sottotitolo": "Corso base per i volontari — modulo 2",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-90 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-pdf.pdf",
+          "dimensione": "1.4 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione.pptx",
+          "dimensione": "1.4 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-16x10.pptx",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-02-rischi-territorio-presentazione-4x3.pptx",
+          "dimensione": "1.3 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-03-piano-comunale",
+      "ordine": 3,
+      "corso": "Corso base del Gruppo",
+      "titolo": "Il Piano di emergenza comunale e le procedure",
+      "sottotitolo": "Corso base per i volontari — modulo 3",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-90 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-pdf.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.0 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-16x10.pptx",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-03-piano-comunale-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-04-sicurezza",
+      "ordine": 4,
+      "corso": "Corso base del Gruppo",
+      "titolo": "Sicurezza personale e dotazioni del volontario",
+      "sottotitolo": "Corso base per i volontari — modulo 4",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-90 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-pdf.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-04-sicurezza-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.0 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-04-sicurezza-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-05-primo-soccorso",
+      "ordine": 5,
+      "corso": "Corso base del Gruppo",
+      "titolo": "Nozioni di primo soccorso per il volontario",
+      "sottotitolo": "Corso base per i volontari — modulo 5",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-75 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-pdf.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.0 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-05-primo-soccorso-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-06-radio",
+      "ordine": 6,
+      "corso": "Corso base del Gruppo",
+      "titolo": "Le comunicazioni radio in emergenza",
+      "sottotitolo": "Corso base per i volontari — modulo 6",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-75 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-06-radio-presentazione-pdf.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-06-radio-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-06-radio-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-06-radio-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-06-radio-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-06-radio-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-07-scenario",
+      "ordine": 7,
+      "corso": "Corso base del Gruppo",
+      "titolo": "Il comportamento in scenario",
+      "sottotitolo": "Corso base per i volontari — modulo 7",
+      "fascia": "Nuovi volontari del Gruppo (corso base)",
+      "durata": "60-75 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-07-scenario-presentazione-pdf.pdf",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-07-scenario-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-07-scenario-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-07-scenario-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-07-scenario-presentazione-pdf-4x3.pdf",
+          "dimensione": "991 KB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-07-scenario-presentazione-4x3.pptx",
+          "dimensione": "1.1 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-08-volontario-nel-codice",
+      "ordine": 8,
+      "corso": "Riferimenti per la formazione regionale",
+      "titolo": "Il volontario nel Codice della protezione civile: diritti, doveri, tutele",
+      "sottotitolo": "Riferimenti per la formazione regionale",
+      "fascia": "Volontari del Gruppo (corso base e aggiornamento)",
+      "durata": "60 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf.pdf",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione.pptx",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-16x10.pptx",
+          "dimensione": "1.4 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-08-volontario-nel-codice-presentazione-4x3.pptx",
+          "dimensione": "1.3 MB"
+        }
+      ]
+    },
+    {
+      "tema": "volontari-09-sistema-lazio",
+      "ordine": 9,
+      "corso": "Riferimenti per la formazione regionale",
+      "titolo": "Il sistema di protezione civile della Regione Lazio",
+      "sottotitolo": "Riferimenti per la formazione regionale",
+      "fascia": "Volontari del Gruppo (corso base e aggiornamento)",
+      "durata": "60-75 minuti",
+      "slide": 15,
+      "aggiornato": "2026-11-20",
+      "formati": [
+        {
+          "tipo": "PDF",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-pdf.pdf",
+          "dimensione": "1.3 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:9",
+          "url": "/presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-pdf-16x10.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "16:10",
+          "url": "/presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-16x10.pptx",
+          "dimensione": "1.2 MB"
+        },
+        {
+          "tipo": "PDF",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-pdf-4x3.pdf",
+          "dimensione": "1.1 MB"
+        },
+        {
+          "tipo": "PowerPoint",
+          "formato": "4:3",
+          "url": "/presentazioni/2026-11-20-volontari-09-sistema-lazio-presentazione-4x3.pptx",
+          "dimensione": "1.2 MB"
+        }
+      ]
+    }
+  ]
+}

@@ -104,6 +104,8 @@ Prima dell'impiego operativo è previsto un percorso di formazione. Il corso di 
 7. comportamento corretto in scenario.
 {{< /passi >}}
 
+Per prepararti puoi usare il [simulatore d'esame e le presentazioni del corso](/formazione/volontari/), nella pagina Formazione dei volontari.
+
 Dopo il corso base è possibile approfondire settori specifici, come antincendio boschivo, logistica, radiocomunicazioni, supporto alla popolazione, comunicazione, divulgazione e altre attività coerenti con le necessità del Gruppo.
 
 ## Impegno richiesto

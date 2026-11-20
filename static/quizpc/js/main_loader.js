@@ -11,7 +11,11 @@ const CATEGORIES = [
     "Rischio Alluvione",
     "Incendi Boschivi",
     "Operatività e Logistica",
-    "Piano Comunale Genzano"
+    "Piano Comunale Genzano",
+    "Altri Rischi del Territorio",
+    "Primo Soccorso e Sicurezza",
+    "Radiocomunicazioni",
+    "Volontariato e Sistema Regionale"
 ];
 
 // Unisce tutti gli array di domande in un unico grande banco dati.
@@ -22,5 +26,9 @@ const FULL_QUESTION_BANK = [
     ...DOMANDE_RISCHIO_ALLUVIONE,
     ...DOMANDE_INCENDI_BOSCHIVI,
     ...DOMANDE_OPERATIVITA,
-    ...DOMANDE_PIANO_COMUNALE
+    ...DOMANDE_PIANO_COMUNALE,
+    ...DOMANDE_ALTRI_RISCHI,
+    ...DOMANDE_PRIMO_SOCCORSO_SICUREZZA,
+    ...DOMANDE_RADIOCOMUNICAZIONI,
+    ...DOMANDE_VOLONTARIATO_REGIONE
 ];

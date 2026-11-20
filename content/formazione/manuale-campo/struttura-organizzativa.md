@@ -140,7 +140,7 @@ Le funzioni sono definite nel piano di protezione civile sulla base delle attivi
 
 ## 1.6 Dove si colloca il Gruppo Comunale di Genzano
 
-Il **Gruppo Comunale Volontari PC Genzano di Roma** è una **componente del Servizio Nazionale** (art. 3 e Capo VI Codice PC). In emergenza:
+Il **Gruppo Comunale Volontari PC Genzano di Roma** fa parte del **volontariato organizzato**, struttura operativa del Servizio Nazionale (art. 13 e Capo V del Codice della protezione civile). In emergenza:
 
 - **è attivato** dal Sindaco (emergenza Tipo A), dal Prefetto di Roma (Tipo B) o dalla Regione Lazio (Tipo B/C)
 - **opera sotto il coordinamento** del Centro Operativo che sta dirigendo l'intervento (COC, COM, CCS, SOUR)

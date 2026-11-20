@@ -4,7 +4,7 @@ description: "Corsi per volontari, materiali per le scuole, giochi educativi e r
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-11-20"
 ---
 
 La formazione aiuta volontari, cittadini e scuole a riconoscere i rischi e ad agire con più sicurezza. In questa pagina trovi i percorsi principali e i materiali più utili.
@@ -42,6 +42,12 @@ I volontari già operativi partecipano ad aggiornamenti ed esercitazioni periodi
 - formazione dei divulgatori per gli incontri nelle scuole;
 - simulazioni coordinate con il sistema regionale;
 - incontri con altri enti del sistema di protezione civile.
+
+Simulatore d'esame, quiz di allenamento, scenari guidati e presentazioni dei moduli per gli istruttori sono raccolti in una pagina sola.
+
+<div class="consulta-rapida">
+{{< link-card url="/formazione/volontari/" icon="bi-mortarboard" titolo="Formazione dei volontari" desc="Simulatore d'esame a tempo con attestato, allenamento con le spiegazioni e presentazioni del corso base." >}}
+</div>
 
 ## Materiale didattico per le scuole
 
@@ -122,8 +128,8 @@ Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza 
 
 - [La Protezione Civile nella scuola](https://www.protezionecivilegenzano.it/documenti/download/PC_scuola.pdf) — manuale DPC e Ministero dell'Istruzione.
 - [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) — buone pratiche da adottare in famiglia.
-- [Quiz di Protezione Civile](/quizpc/) — verifica le tue conoscenze.
-- [Piattaforma e-learning](/formazionepc/) — formazione a distanza per volontari.
+- [Quiz di Protezione Civile](/quizpc/) — simulatore d'esame e allenamento, raccolti in [Formazione dei volontari](/formazione/volontari/).
+- [Piattaforma a scenari](/formazionepc/) — esercitazioni a scelte guidate per i volontari.
 
 ## Approfondimenti dall'archivio
 

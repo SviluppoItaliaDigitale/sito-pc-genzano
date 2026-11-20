@@ -535,6 +535,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Schede "1 minuto per proteggerti"</p>
   <p class="ms-card-desc">Sei micro-schede A5 stampabili con azioni concrete di autoprotezione in un minuto: torcia, 112, punto di ritrovo, kit auto, terremoto per bambini, documenti essenziali. Per casa, bacheca, sede.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/volontari/">
+  <div class="ms-card-icon"><i class="bi bi-mortarboard"></i></div>
+  <p class="ms-card-title">Formazione dei volontari</p>
+  <p class="ms-card-desc">Simulatore d'esame a tempo con attestato, quiz di allenamento con le spiegazioni, scenari guidati e presentazioni del corso base per gli istruttori, in PDF e PowerPoint.</p>
+</a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
   <p class="ms-card-title">Addestramento e buone pratiche</p>
