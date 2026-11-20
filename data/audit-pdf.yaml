@@ -1271,42 +1271,42 @@ documenti:
 - path: /presentazioni/2026-05-29-it-alert-presentazione-pdf-16x10.pdf
   file: 2026-05-29-it-alert-presentazione-pdf-16x10.pdf
   size_kb: 941.5
-  sha256: 7f14c1c2f4e7053171a0102b41f3ecd135b8eb7b0bcd0751ffb8af0d2f1c1029
+  sha256: 8754bf66534c7709510aaa59d631100e366f2cc76808315ad2bd7bb469c3e2f8
   searchable: true
   tagged: true
   language: it-IT
   title: IT-alert, il messaggio di allarme sul telefono
   pages: 15
   errors: []
-  text_chars_sample: 781
+  text_chars_sample: 791
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-29-it-alert-presentazione-pdf-4x3.pdf
   file: 2026-05-29-it-alert-presentazione-pdf-4x3.pdf
-  size_kb: 991.8
-  sha256: 3d6bf3607eaf10876f7fe434c8875e03a827c40639af99eb1d6a9ceffbcf13ee
+  size_kb: 991.9
+  sha256: 6b09e86f33503f4fd2791e9d7b30af5b41684d72e93e98f8ffc46d121c86116b
   searchable: true
   tagged: true
   language: it-IT
   title: IT-alert, il messaggio di allarme sul telefono
   pages: 15
   errors: []
-  text_chars_sample: 783
+  text_chars_sample: 793
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
   file: 2026-05-29-it-alert-presentazione-pdf.pdf
   size_kb: 986.3
-  sha256: f7252e2dc72610bc0e2ae097f69c694df71b9d874eefd110784eeb157300493c
+  sha256: 7527f27661262a2eace112bc7a4fa40353d9835a4c9fa8ff1ae874ae29da8228
   searchable: true
   tagged: true
   language: it-IT
   title: IT-alert, il messaggio di allarme sul telefono
   pages: 15
   errors: []
-  text_chars_sample: 780
+  text_chars_sample: 790
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
