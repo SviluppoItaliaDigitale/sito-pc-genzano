@@ -1387,3 +1387,15 @@ dati:
         perche: "Il nome ufficiale del nucleo è «Sviluppo economico e sostenibilità»."
         contesto: '183/2024'
         finestra: 40
+
+  - id: emilia-romagna-2023-sfollati
+    dato: "Sfollati dell'alluvione dell'Emilia-Romagna di maggio 2023"
+    valore: "picco di 36.600 sfollati il 20 maggio 2023"
+    fonti:
+      - nome: "Regione Emilia-Romagna, scheda «Maggio 2023: numeri dell'emergenza» (cartella stampa del 2024): «Il 20 maggio si è toccato il picco massimo di 36.600 sfollati»"
+        url: "https://notizie.regione.emilia-romagna.it/comunicati/2024/giugno/201cuna-giornata-per-dire-grazie-alluvione-un-anno-dopo201d-oggi-al-palacattani-di-faenza-un-grande-evento-per-ringraziare-tutti-coloro-che-sono-intervenuti-nella-fase-di-emergenza-e-successivamente-il-ricordo-delle-vittime-bonaccini-e-priolo-201cnon/cartella-stampa/scheda_maggio-2023_numeri-emergenza.pdf"
+    vietati:
+      - regex: '\b50(?:\.000|mila| 000)\s+(?:persone\s+)?sfollat'
+        perche: "La Regione Emilia-Romagna indica un picco di 36.600 sfollati il 20 maggio 2023 (verificato il 20/11/2026)."
+        contesto: 'Emilia|Romagna|2023'
+        finestra: 300
