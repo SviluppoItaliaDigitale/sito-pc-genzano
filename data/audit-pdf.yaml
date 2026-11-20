@@ -1,7 +1,7 @@
 ultimo_audit: '2026-11-20'
-totale: 140
+totale: 149
 riepilogo:
-  ACCESSIBILE: 77
+  ACCESSIBILE: 86
   PARZIALE: 10
   NON_ACCESSIBILE: 9
   TERZO: 44
@@ -1979,6 +1979,132 @@ documenti:
   pages: 15
   errors: []
   text_chars_sample: 897
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf-16x10.pdf
+  size_kb: 1164.2
+  sha256: efb61debbfb649d9a5e67e161e37b187c350d25a9c7b0fcccaddf621bfadee57
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Rischio, previsione e allertamento
+  pages: 14
+  errors: []
+  text_chars_sample: 941
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf-4x3.pdf
+  size_kb: 1018.3
+  sha256: a56e12fb5a9db50b03dce501729344f9a1541e914554e4dc0d052016048de770
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Rischio, previsione e allertamento
+  pages: 14
+  errors: []
+  text_chars_sample: 944
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-10-rischio-allertamento-presentazione-pdf.pdf
+  size_kb: 1173.4
+  sha256: 6ec58a47dbe9e7b64452b7584da7eb6887667bce8e8986f1888df275c1f1a491
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Rischio, previsione e allertamento
+  pages: 14
+  errors: []
+  text_chars_sample: 941
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf-16x10.pdf
+  size_kb: 1196.7
+  sha256: 982b6bf5794e7eb3fc1ebad6a54db74d02ce459bd53dbb548160831c647664d6
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il volontariato organizzato di protezione civile
+  pages: 13
+  errors: []
+  text_chars_sample: 902
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf-4x3.pdf
+  size_kb: 1155.5
+  sha256: 2ba12dd11b53b3a6515ccb530294b7585861ec5361965ce9d1c6719036abb830
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il volontariato organizzato di protezione civile
+  pages: 13
+  errors: []
+  text_chars_sample: 905
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-11-volontariato-organizzato-presentazione-pdf.pdf
+  size_kb: 1073.3
+  sha256: 7445d33690346a3cf7154a9f64f39331425c0bd4f8a62923ec04bcc66d972e94
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: Il volontariato organizzato di protezione civile
+  pages: 13
+  errors: []
+  text_chars_sample: 900
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf-16x10.pdf
+  file: 2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf-16x10.pdf
+  size_kb: 1241.9
+  sha256: 3cfd9d137438227699224703c4e59e7eebcc0f7fde7b466440be38bd2856a189
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: La gestione dell'emergenza e l'assistenza alla popolazione
+  pages: 15
+  errors: []
+  text_chars_sample: 914
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf-4x3.pdf
+  file: 2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf-4x3.pdf
+  size_kb: 1095.9
+  sha256: 1235575d820d869d81adb8c8f81aa4e9a54f5cb2e69fd937eb9f69f8f269aa58
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: La gestione dell'emergenza e l'assistenza alla popolazione
+  pages: 15
+  errors: []
+  text_chars_sample: 917
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf.pdf
+  file: 2026-11-20-volontari-12-gestione-emergenza-presentazione-pdf.pdf
+  size_kb: 1250.7
+  sha256: 721b6f9bb917abda643cdd332b92cab6fb9e2c206f64895c2edfe803e47b3e76
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: La gestione dell'emergenza e l'assistenza alla popolazione
+  pages: 15
+  errors: []
+  text_chars_sample: 914
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
