@@ -24,7 +24,7 @@ slide:
       - "L'allerta dice che cosa può succedere al suolo."
       - "Per esempio allagamenti, frane o piene."
     pittogramma: "arasaac/temporale"
-    nota: "Il colore dipende dagli effetti attesi, non solo dalla quantità di pioggia: la stessa pioggia può fare danni in un posto e non in un altro."
+    nota: "Il colore dipende dagli effetti attesi sul territorio, non solo dalla quantità di pioggia prevista."
     fonte: "/allerte-meteo/"
   - titolo: "Chi decide il colore"
     punti:
@@ -62,7 +62,7 @@ slide:
       - "Non uscire se non è strettamente necessario."
       - "Stai lontano da piani interrati e strade allagate."
     pittogramma: "arasaac/casa"
-    nota: "Con il rosso si seguono solo le indicazioni delle autorità e si tiene il telefono carico. Si esce solo per un'evacuazione disposta dall'autorità."
+    nota: "Con il rosso si seguono le indicazioni delle autorità e si tiene il telefono carico. Se l'autorità dispone un'evacuazione, si raggiunge l'area di attesa."
     fonte: "/allerte-meteo/"
   - tipo: "domanda"
     domanda: "Con l'allerta gialla devi restare a casa?"

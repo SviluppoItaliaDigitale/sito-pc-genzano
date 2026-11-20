@@ -45,10 +45,10 @@ slide:
   - titolo: "Durante: se sei in casa"
     punti:
       - "Sali ai piani alti, senza usare l'ascensore."
-      - "Non scendere mai in cantina o in garage."
+      - "Se l'acqua arriva, non scendere in cantina o in garage."
       - "Se puoi farlo senza rischi, chiudi il gas e stacca la corrente."
     pittogramma: "arasaac/salire-scale"
-    nota: "Gli impianti non si toccano con mani o piedi bagnati. Aiuta familiari e vicini, come gli anziani e le persone con disabilità del palazzo, solo se puoi farlo senza esporti a pericoli."
+    nota: "Gli impianti non si toccano con mani o piedi bagnati: i bambini avvisano un adulto. Chi può aiuta familiari e vicini, come gli anziani e le persone con disabilità del palazzo, solo senza esporsi a pericoli."
     fonte: "/rischi-prevenzione/rischio-idrogeologico/"
   - titolo: "Durante: se sei all'aperto"
     punti:
