@@ -5,28 +5,172 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-20T01:17:26+00:00",
+  "generato": "2026-11-20T08:39:50+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-11-19T23:25:28+00:00",
+   "data": "2026-11-20T08:30:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: \"I ragazzi hanno diritto di contare su un'interlocuzione con le istituzioni\"",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/20/mattarella-i-ragazzi-hanno-diritto-di-contare-su-uninterlocuzione-con-le-istituzioni_d2d45227-5c4e-4325-a375-834ca49d35eb.html"
+  },
+  {
+   "data": "2026-11-20T08:30:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Al via lo sciopero generale, in piazza lavoratori e studenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/al-via-lo-sciopero-generale-in-piazza-lavoratori-e-studenti_599c502c-b0d3-44aa-8e7b-cdf04b274aeb.html"
+  },
+  {
+   "data": "2026-11-20T08:25:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Omicidio Maria Rita Valerio, svolta nelle indagini dopo 23 anni: arrestato un sospettato",
+   "url": "https://www.adnkronos.com/cronaca/omicidio-maria-rita-valerio-arresto-capurso_3acOob98BdrpkWZtNs6MPu"
+  },
+  {
+   "data": "2026-11-20T08:21:25+00:00",
    "fonte": "ANSA CRONACA",
+   "titolo": "Un milione di under 18 poveri, 'il terzo mondo lo abbiamo in casa'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/istat-unicef-nel-2025-oltre-un-milione-di-under-18-in-poverta-assoluta_1d410d59-e4f7-4a7e-b2a6-1c6914e8545a.html"
+  },
+  {
+   "data": "2026-11-20T08:15:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Valore futuro, assemblea nazionale della Cna",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/11/19/valore-futuro-assemblea-nazionale-della-cna_123c1b6f-f280-4b54-a897-b4f3d17a3830.html"
+  },
+  {
+   "data": "2026-11-20T08:05:33+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Rete studenti, 50 cortei in tutta Italia, in piazza per il nostro futuro",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/rete-studenti-50-cortei-in-tutta-italia-in-piazza-per-il-nostro-futuro_a2cfbc17-c63c-4be8-b7c0-726e966bf68b.html"
+  },
+  {
+   "data": "2026-11-20T08:03:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Forze armate polacche, verifiche su una possibile violazione dello spazio aereo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/forze-armate-polacche-verifiche-su-una-possibile-violazione-dello-spazio-aereo_6104402c-305d-441e-a983-2c8dfb41bd5e.html"
+  },
+  {
+   "data": "2026-11-20T07:57:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Fincantieri costruirà 2 navi per circa 3 miliardi per Carnival",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/-fincantieri-costruira-2-navi-per-circa-3-miliardi-per-carnival-_20e790ec-cbf9-4654-87cf-3a092302fe05.html"
+  },
+  {
+   "data": "2026-11-20T07:56:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Torna il ReWriters Fest, Romanelli: 'Evento trasversale tra istituzioni e cultura pop'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/2026/11/15/torna-il-rewriters-fest.-romanelli-evento-trasversale-tra-istituzioni-e-cultura-pop_b720220f-28ad-4df1-9202-0b235f06fb1d.html"
+  },
+  {
+   "data": "2026-11-20T07:50:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, weekend a due facce: sole fino a sabato, ma domenica arriva il ribaltone",
+   "url": "https://www.adnkronos.com/cronaca/meteo-italia-previsioni-weekend-maltempo_2JhBQuD4JOkiZmsvbmyUVa"
+  },
+  {
+   "data": "2026-11-20T07:29:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da una tempesta geomagnetica fasce extra di radiazione intorno alla Terra",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/20/da-una-tempesta-geomagnetica-fasce-extra-di-radiazione-intorno-alla-terra_666d8571-f0ff-41ed-94b9-7fb4a7d9d016.html"
+  },
+  {
+   "data": "2026-11-20T07:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero generale oggi, Italia in piazza: disagi per trasporti, scuola e servizi. La diretta",
+   "url": "https://www.adnkronos.com/cronaca/sciopero-generale-20-novembre-2026-diretta_3u6CoOImHMPXfKkNV4xx2g"
+  },
+  {
+   "data": "2026-11-20T07:11:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Xi, Trump e Putin siglano un patto per la pace, 'abbiamo fatto la storia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
+  },
+  {
+   "data": "2026-11-20T07:09:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crollo di oltre il 5% alla Borsa di Tokyo per i timori sull'intelligenza artificiale",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/crollo-di-oltre-il-5-alla-borsa-di-tokyo-per-i-timori-sullintelligenza-artificiale_4d6646d7-d589-4024-926a-7e80db3e09c1.html"
+  },
+  {
+   "data": "2026-11-20T07:09:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cdp e Poste approvano i principali termini del nuovo accordo sul risparmio postale",
+   "url": "https://www.adnkronos.com/economia/cdp-e-poste-approvano-i-principali-termini-del-nuovo-accordo-sul-risparmio-postale_4aObBK2iNURetNxamUTO6A"
+  },
+  {
+   "data": "2026-11-20T06:57:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Donna uccisa nel Barese nel 2003, arrestato il presunto assassino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/donna-uccisa-nel-barese-nel-2003-arrestato-il-presunto-assassino_59d3a6d1-e523-49c2-930d-52fa58284da1.html"
+  },
+  {
+   "data": "2026-11-20T06:51:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Le sciarpe di seta e la villa di famiglia, lo show di Xi",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/20/prime-pagine-le-sciarpe-di-seta-e-la-villa-di-famiglia-lo-show-di-xi_f00d51d4-b1fb-4123-b621-83e971037e2c.html"
+  },
+  {
+   "data": "2026-11-20T06:47:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Finals, oggi Alcaraz-Cobolli: orario, precedenti e dove vederla",
+   "url": "https://www.adnkronos.com/sport/atp-finals-alcaraz-cobolli_16XnYwKdl8Z0dzD8Z2EOg0"
+  },
+  {
+   "data": "2026-11-20T06:35:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Trump: \"Putin vuole porre fine alla guerra\". Nuovi raid su Kiev e Leopoli: almeno 5 morti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-20-novembre-2026_2CuwrKnJrgjVSA8chjDTXq"
+  },
+  {
+   "data": "2026-11-20T06:31:07+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Calci e pugni a due giovani, denunciati 4 minorenni nel Foggiano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/calci-e-pugni-a-due-giovani-denunciati-4-minorenni-nel-foggiano_360b7dfa-23b5-4b99-aace-fa8ec97dc75c.html"
+  },
+  {
+   "data": "2026-11-20T06:27:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Finals, oggi Medvedev-Tiafoe: orario, precedenti e dove vederla",
+   "url": "https://www.adnkronos.com/sport/atp-finals-medvedev-tiafoe_WbvovtDfhJJVljXu4Hrvi"
+  },
+  {
+   "data": "2026-11-20T06:20:46+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tre cortei oggi a Roma per lo sciopero, pronto il piano sicurezza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/tre-cortei-domani-a-roma-per-lo-sciopero-pronto-il-piano-sicurezza_97e312f2-e87d-415e-9c60-e0adc23bfd3b.html"
+  },
+  {
+   "data": "2026-11-20T06:14:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Volenterosi a Berlino. Meloni: \"Cina spinga Putin alla pace\". Trump: \"Perché altri soldi a Kiev?\"",
+   "url": "https://www.adnkronos.com/politica/ucraina-volenterosi-meloni_3elpVqdupzh0hY2w3eszgc"
+  },
+  {
+   "data": "2026-11-20T06:12:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, oggi libere e pre-qualifiche Gp Portogallo: orario e dove vederle",
+   "url": "https://www.adnkronos.com/sport/motogp-gp-portogallo-portimao-marquez_3ut5s0wV8NcoQVoeMZlpK"
+  },
+  {
+   "data": "2026-11-20T06:01:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dl Scuola, partita centrodestra su libri digitali si sposta alla Camera: Forza Italia pronta a tenere il punto e valuta un suo emendamento",
+   "url": "https://www.adnkronos.com/politica/dl-scuola-emendamento-libri-centrodestra-camera_19tuBaJUDRuUw4RScr6F60"
+  },
+  {
+   "data": "2026-11-19T23:25:28+00:00",
+   "fonte": "ANSA",
    "titolo": "Droni sull'aeroporto di Genova, scalo chiuso per due ore",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/droni-sullaeroporto-di-genova-scalo-chiuso-per-due-ore_f4850479-e0b3-4d34-9876-12ffb077b587.html"
   },
   {
    "data": "2026-11-19T23:24:40+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Uccise moglie e suocera, ergastolo definitivo per Amato",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/uccise-moglie-e-suocera-ergastolo-definitivo-per-amato_fa0b4588-a25a-4f0a-99d5-b54084bab2cf.html"
-  },
-  {
-   "data": "2026-11-19T23:24:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lo sciopero Cgil, 'basta propaganda, la manovra va cambiata'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/19/sciopero-generale-da-scuola-a-bus.-treni-dalla-sera-niente-stop-aerei_01d5c5ed-72b4-4546-acc1-472847a25848.html"
   },
   {
    "data": "2026-11-19T23:20:42+00:00",
@@ -45,150 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Trump: \"Vertice storico con gli amici Putin e Xi\". Russia e Cina hanno altri piani: l'analisi",
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-xi-amici-analisi_6SQ3WJw8zpDrGZd5mc3mic"
-  },
-  {
-   "data": "2026-11-19T23:06:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore al pancreas, daraxonrasib farmaco della speranza: con chemio riduce cancro in casi metastatici, lo studio",
-   "url": "https://www.adnkronos.com/cronaca/tumore-pancreas-daraxonrasib-farmaco_1lbWrUW0qVvWzlXiFStEcU"
-  },
-  {
-   "data": "2026-11-19T23:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Zverev: \"Problemi alla caviglia? Dovrò conviverci per tutta la carriera\"",
-   "url": "https://www.adnkronos.com/sport/atp-finals-alcaraz-infortunio-zverev-situazione_4Yr9Md5P9zHfKdBnjCnmtO"
-  },
-  {
-   "data": "2026-11-19T22:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiona è morta, l'ippopotamo star dei social aveva ingoiato un cappello di lana",
-   "url": "https://www.adnkronos.com/internazionale/esteri/fiona-ippopotamo-star-morta_3zLWSlikrNV2NLlAyp5R7W"
-  },
-  {
-   "data": "2026-11-19T22:35:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Focus su pensioni e sanità al vertice di maggioranza, Meloni chiede 'basta divisioni'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/focus-su-pensioni-e-sanita-al-vertice-di-maggioranza-meloni-chiede-basta-divisioni_f14af22e-5fa1-4851-b2a1-60f52ce6bb6e.html"
-  },
-  {
-   "data": "2026-11-19T22:18:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Segregata e abusata da marito e parenti, 25enne pakistana si lancia dall'auto per salvarsi: è accaduto nello stesso paese di Saman",
-   "url": "https://www.adnkronos.com/cronaca/pakistana-segregata-abusta-novellara_6zZvclXdiE74ybRFDY30B0"
-  },
-  {
-   "data": "2026-11-19T21:56:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Anthropic vola all'esordio a Wall Street, sale del 17%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/19/anthropic-sale-fino-a-11510-dollari-per-azione-poi-scende-a-11022_f4eebc5e-1ae4-4922-8a55-eaee32ab7ab8.html"
-  },
-  {
-   "data": "2026-11-19T21:44:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Atp Finals: terza vittoria per Zverev, anche Fils deve arrendersi",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/19/atp-finals-zverev-terza-vittoria-anche-fils-deve-arrendersi_0bbe09e0-038a-4ba0-8075-406d8fcd6b58.html"
-  },
-  {
-   "data": "2026-11-19T21:24:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Xi, Trump e Putin siglano un patto per la pace, 'abbiamo fatto la storia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
-  },
-  {
-   "data": "2026-11-19T21:06:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Salvini: \"Se Kiev mi mette in lista proscrizione, perché mandare aiuti?\"",
-   "url": "https://www.adnkronos.com/politica/ucraina-salvini-lista-nemici-kiev_6QTinLkMBCRHVncrQZKUkg"
-  },
-  {
-   "data": "2026-11-19T20:43:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bibi nel mirino, Eisenkot vuole una legge per sbarrargli la strada",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/bibi-nel-mirino-eisenkot-vuole-una-legge-per-sbarrargli-la-strada_4b6f96e4-8fd1-4a4f-915a-bcab3614234a.html"
-  },
-  {
-   "data": "2026-11-19T20:39:01+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uccise moglie e suocera, ergastolo definitivo per Amato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/uccise-moglie-e-suocera-ergastolo-definitivo-per-amato_5bdddf85-3bab-430d-83c6-9b035e84d5d5.html"
-  },
-  {
-   "data": "2026-11-19T20:34:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Putin apre il tavolo agli europei. Trump li chiama, 'basta soldi a Kiev'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-ai-volenterosi-kiev-nella-nato.-meloni-mandato-chiaro-al-formato-e5_63e4f927-d622-4c44-a03d-1000e20ff862.html"
-  },
-  {
-   "data": "2026-11-19T20:21:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Musk si pente: 'Sono stato sciocco, ho dato milioni ai Maga'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/musk-si-pente-sono-stato-sciocco-ho-dato-milioni-ai-maga_67a6215f-7c3d-411b-b39c-96f11d6cfa75.html"
-  },
-  {
-   "data": "2026-11-19T20:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giampaolo Amato, uccise moglie e suocera: Cassazione conferma ergastolo",
-   "url": "https://www.adnkronos.com/cronaca/giampaolo-amato-cassazione-ergastolo_2Z61pzBDjRaTH4yAYXb1ng"
-  },
-  {
-   "data": "2026-11-19T19:58:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Arrestata la moglie di Bertulazzi, 'complice nella fuga'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/arrestata-la-moglie-di-bertulazzi-complice-nella-fuga_6c4117b0-cebb-45f6-b70f-9d7374ea9b5b.html"
-  },
-  {
-   "data": "2026-11-19T19:56:41+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'inchiesta su De Gennaro, il nodo della competenza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/linchiesta-su-de-gennaro-il-nodo-della-competenza_53de09fa-e7bf-4d69-a0a9-48b784832ce2.html"
-  },
-  {
-   "data": "2026-11-19T19:55:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Segregata e abusata da marito e familiari nel paese di Saman",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/segregata-e-abusata-da-marito-e-familiari-nel-paese-di-saman_02f92024-3a3e-4944-bb88-db840c7cb5ce.html"
-  },
-  {
-   "data": "2026-11-19T19:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, numeri combinazione vincente oggi 19 novembre",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-numeri-fortunati_2qlo7SMf66xqPwCP4yNL6g"
-  },
-  {
-   "data": "2026-11-19T19:43:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cipollini e il processo per stalking e maltrattamenti: reati prescritti",
-   "url": "https://www.adnkronos.com/sport/mario-cipollini-processo-stalking-maltrattamenti-reati-prescritti_5KCY5xrKCB2SrrUu9DC8KQ"
-  },
-  {
-   "data": "2026-11-19T19:24:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il principe Harry: 'Mi riarruolerei per combattere contro la Russia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/il-principe-harry-mi-riarruolerei-per-combattere-contro-la-russia_ed4b6357-3f8b-4697-99c8-48a6690a5719.html"
-  },
-  {
-   "data": "2026-11-19T19:22:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cop31: nella bozza sì all'elettrificazione, ma niente sulle fonti fossili",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/cop31-nella-bozza-si-allelettrificazione-ma-niente-sulle-fonti-fossili_932cb245-527d-48a1-9535-d18aaf4af70b.html"
-  },
-  {
-   "data": "2026-11-19T19:09:00+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Riparte l'indagine sul mostro Firenze, chiesto Dna a parenti vittime",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/ripartono-le-indagini-sul-mostro-di-firenze-i-legali-eredi-di-vanni-abbiamo-2-nuovi_3c89743c-61fa-4e3b-81f5-633063b09aed.html"
-  },
-  {
-   "data": "2026-11-19T19:07:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Altra inchiesta sull'urbanistica a Milano, in 27 rischiano il processo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/urbanistica-chiusa-indagine-per-27-su-un-complesso-residenziale-a-san-siro_7002edcb-9d5e-471d-916e-1fc7249b372a.html"
-  },
-  {
-   "data": "2026-11-19T19:04:35+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Morte avvelenate, a accertamenti irripetibili su reperti a Berlino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/morte-avvelenate-al-via-accertamenti-irripetibili-su-reperti-a-berlino_8fe964b6-ee10-43f0-98ea-dc7696e559f0.html"
   }
  ]
 }
