@@ -1,9 +1,9 @@
 ultimo_audit: '2026-11-20'
-totale: 81
+totale: 80
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 17
-  NON_ACCESSIBILE: 18
+  NON_ACCESSIBILE: 17
   TERZO: 44
   ERRORE: 0
 documenti:
@@ -1034,20 +1034,6 @@ documenti:
   file: 2026-05-29-animali-emergenza-presentazione-pdf.pdf
   size_kb: 13545.5
   sha256: 9e466d053ed3942e92c2aed787f62e879b6bc72aa887cee683ca52a701325881
-  searchable: false
-  tagged: false
-  language: null
-  title: null
-  pages: 15
-  errors: []
-  text_chars_sample: 0
-  origine: GRUPPO
-  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
-- path: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
-  file: 2026-05-29-it-alert-presentazione-pdf.pdf
-  size_kb: 12616.4
-  sha256: 4ceb06ee166deb9aeef0342018734dd4a0403d90171ba9b4e7fabea7a08544ad
   searchable: false
   tagged: false
   language: null
