@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-19T19:10:43+00:00",
+  "generato": "2026-11-20T01:17:26+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-11-19T23:25:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Droni sull'aeroporto di Genova, scalo chiuso per due ore",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/droni-sullaeroporto-di-genova-scalo-chiuso-per-due-ore_f4850479-e0b3-4d34-9876-12ffb077b587.html"
+  },
+  {
+   "data": "2026-11-19T23:24:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Uccise moglie e suocera, ergastolo definitivo per Amato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/uccise-moglie-e-suocera-ergastolo-definitivo-per-amato_fa0b4588-a25a-4f0a-99d5-b54084bab2cf.html"
+  },
+  {
+   "data": "2026-11-19T23:24:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lo sciopero Cgil, 'basta propaganda, la manovra va cambiata'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/19/sciopero-generale-da-scuola-a-bus.-treni-dalla-sera-niente-stop-aerei_01d5c5ed-72b4-4546-acc1-472847a25848.html"
+  },
+  {
+   "data": "2026-11-19T23:20:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Stazi (Consob), indipendenza economica è la base della parità di genere",
+   "url": "https://www.ansa.it/sito/notizie/speciali/le-donne-della-repubblica-2026/2026/11/19/stazi-consob-indipendenza-economica-e-la-base-della-parita-di-genere_63b8fb6d-45b7-450f-9a67-3c57f77ae4ae.html"
+  },
+  {
+   "data": "2026-11-19T23:10:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero 20 novembre 2026, dai trasporti a scuola e sanità: chi si ferma oggi",
+   "url": "https://www.adnkronos.com/cronaca/sciopero-20-novembre-2026-chi-aderisce_7oMc0klkMbOLXsplrnrTYc"
+  },
+  {
+   "data": "2026-11-19T23:08:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump: \"Vertice storico con gli amici Putin e Xi\". Russia e Cina hanno altri piani: l'analisi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-xi-amici-analisi_6SQ3WJw8zpDrGZd5mc3mic"
+  },
+  {
+   "data": "2026-11-19T23:06:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tumore al pancreas, daraxonrasib farmaco della speranza: con chemio riduce cancro in casi metastatici, lo studio",
+   "url": "https://www.adnkronos.com/cronaca/tumore-pancreas-daraxonrasib-farmaco_1lbWrUW0qVvWzlXiFStEcU"
+  },
+  {
+   "data": "2026-11-19T23:03:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zverev: \"Problemi alla caviglia? Dovrò conviverci per tutta la carriera\"",
+   "url": "https://www.adnkronos.com/sport/atp-finals-alcaraz-infortunio-zverev-situazione_4Yr9Md5P9zHfKdBnjCnmtO"
+  },
+  {
+   "data": "2026-11-19T22:44:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fiona è morta, l'ippopotamo star dei social aveva ingoiato un cappello di lana",
+   "url": "https://www.adnkronos.com/internazionale/esteri/fiona-ippopotamo-star-morta_3zLWSlikrNV2NLlAyp5R7W"
+  },
+  {
+   "data": "2026-11-19T22:35:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Focus su pensioni e sanità al vertice di maggioranza, Meloni chiede 'basta divisioni'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/focus-su-pensioni-e-sanita-al-vertice-di-maggioranza-meloni-chiede-basta-divisioni_f14af22e-5fa1-4851-b2a1-60f52ce6bb6e.html"
+  },
+  {
+   "data": "2026-11-19T22:18:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Segregata e abusata da marito e parenti, 25enne pakistana si lancia dall'auto per salvarsi: è accaduto nello stesso paese di Saman",
+   "url": "https://www.adnkronos.com/cronaca/pakistana-segregata-abusta-novellara_6zZvclXdiE74ybRFDY30B0"
+  },
+  {
+   "data": "2026-11-19T21:56:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Anthropic vola all'esordio a Wall Street, sale del 17%",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/19/anthropic-sale-fino-a-11510-dollari-per-azione-poi-scende-a-11022_f4eebc5e-1ae4-4922-8a55-eaee32ab7ab8.html"
+  },
+  {
+   "data": "2026-11-19T21:44:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Atp Finals: terza vittoria per Zverev, anche Fils deve arrendersi",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/19/atp-finals-zverev-terza-vittoria-anche-fils-deve-arrendersi_0bbe09e0-038a-4ba0-8075-406d8fcd6b58.html"
+  },
+  {
+   "data": "2026-11-19T21:24:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Xi, Trump e Putin siglano un patto per la pace, 'abbiamo fatto la storia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
+  },
+  {
+   "data": "2026-11-19T21:06:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Salvini: \"Se Kiev mi mette in lista proscrizione, perché mandare aiuti?\"",
+   "url": "https://www.adnkronos.com/politica/ucraina-salvini-lista-nemici-kiev_6QTinLkMBCRHVncrQZKUkg"
+  },
+  {
+   "data": "2026-11-19T20:43:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bibi nel mirino, Eisenkot vuole una legge per sbarrargli la strada",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/bibi-nel-mirino-eisenkot-vuole-una-legge-per-sbarrargli-la-strada_4b6f96e4-8fd1-4a4f-915a-bcab3614234a.html"
+  },
+  {
+   "data": "2026-11-19T20:39:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Uccise moglie e suocera, ergastolo definitivo per Amato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/uccise-moglie-e-suocera-ergastolo-definitivo-per-amato_5bdddf85-3bab-430d-83c6-9b035e84d5d5.html"
+  },
+  {
+   "data": "2026-11-19T20:34:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Putin apre il tavolo agli europei. Trump li chiama, 'basta soldi a Kiev'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-ai-volenterosi-kiev-nella-nato.-meloni-mandato-chiaro-al-formato-e5_63e4f927-d622-4c44-a03d-1000e20ff862.html"
+  },
+  {
+   "data": "2026-11-19T20:21:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Musk si pente: 'Sono stato sciocco, ho dato milioni ai Maga'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/musk-si-pente-sono-stato-sciocco-ho-dato-milioni-ai-maga_67a6215f-7c3d-411b-b39c-96f11d6cfa75.html"
+  },
+  {
+   "data": "2026-11-19T20:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giampaolo Amato, uccise moglie e suocera: Cassazione conferma ergastolo",
+   "url": "https://www.adnkronos.com/cronaca/giampaolo-amato-cassazione-ergastolo_2Z61pzBDjRaTH4yAYXb1ng"
+  },
+  {
+   "data": "2026-11-19T19:58:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Arrestata la moglie di Bertulazzi, 'complice nella fuga'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/arrestata-la-moglie-di-bertulazzi-complice-nella-fuga_6c4117b0-cebb-45f6-b70f-9d7374ea9b5b.html"
+  },
+  {
+   "data": "2026-11-19T19:56:41+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "L'inchiesta su De Gennaro, il nodo della competenza",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/linchiesta-su-de-gennaro-il-nodo-della-competenza_53de09fa-e7bf-4d69-a0a9-48b784832ce2.html"
+  },
+  {
+   "data": "2026-11-19T19:55:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Segregata e abusata da marito e familiari nel paese di Saman",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/segregata-e-abusata-da-marito-e-familiari-nel-paese-di-saman_02f92024-3a3e-4944-bb88-db840c7cb5ce.html"
+  },
+  {
+   "data": "2026-11-19T19:53:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, numeri combinazione vincente oggi 19 novembre",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-numeri-fortunati_2qlo7SMf66xqPwCP4yNL6g"
+  },
+  {
+   "data": "2026-11-19T19:43:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cipollini e il processo per stalking e maltrattamenti: reati prescritti",
+   "url": "https://www.adnkronos.com/sport/mario-cipollini-processo-stalking-maltrattamenti-reati-prescritti_5KCY5xrKCB2SrrUu9DC8KQ"
+  },
+  {
+   "data": "2026-11-19T19:24:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il principe Harry: 'Mi riarruolerei per combattere contro la Russia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/il-principe-harry-mi-riarruolerei-per-combattere-contro-la-russia_ed4b6357-3f8b-4697-99c8-48a6690a5719.html"
+  },
+  {
+   "data": "2026-11-19T19:22:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cop31: nella bozza sì all'elettrificazione, ma niente sulle fonti fossili",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/cop31-nella-bozza-si-allelettrificazione-ma-niente-sulle-fonti-fossili_932cb245-527d-48a1-9535-d18aaf4af70b.html"
+  },
+  {
+   "data": "2026-11-19T19:09:00+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Riparte l'indagine sul mostro Firenze, chiesto Dna a parenti vittime",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/ripartono-le-indagini-sul-mostro-di-firenze-i-legali-eredi-di-vanni-abbiamo-2-nuovi_3c89743c-61fa-4e3b-81f5-633063b09aed.html"
+  },
+  {
+   "data": "2026-11-19T19:07:49+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Altra inchiesta sull'urbanistica a Milano, in 27 rischiano il processo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/urbanistica-chiusa-indagine-per-27-su-un-complesso-residenziale-a-san-siro_7002edcb-9d5e-471d-916e-1fc7249b372a.html"
+  },
+  {
    "data": "2026-11-19T19:04:35+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Morte avvelenate, a accertamenti irripetibili su reperti a Berlino",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/morte-avvelenate-al-via-accertamenti-irripetibili-su-reperti-a-berlino_8fe964b6-ee10-43f0-98ea-dc7696e559f0.html"
-  },
-  {
-   "data": "2026-11-19T19:03:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco, Lovati: 'Stasi verrà riabilitato e Sempio sarà prosciolto'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/garlasco-lovati-stasi-verra-riabilitato-e-sempio-sara-prosciolto_e89c0496-1f75-4da4-836f-1fdc12cfdff7.html"
-  },
-  {
-   "data": "2026-11-19T19:03:01+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ragazzini imitano Gta, rubano un bus e finiscono in un fosso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/due-ragazzini-imitano-gta-rubano-un-bus-e-finiscono-in-un-fosso_b2641334-25ec-41b6-94f8-e517dcbb4742.html"
-  },
-  {
-   "data": "2026-11-19T18:49:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Finals, oggi Zverev-Fils - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-zverev-fils-oggi-atp-finals-live-risultato-torino_4Uk6wvGg3T861BK1YIJnM4"
-  },
-  {
-   "data": "2026-11-19T18:37:22+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Un milione di under 18 poveri, 'il terzo mondo lo abbiamo in casa'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/istat-unicef-nel-2025-oltre-un-milione-di-under-18-in-poverta-assoluta_1d410d59-e4f7-4a7e-b2a6-1c6914e8545a.html"
-  },
-  {
-   "data": "2026-11-19T18:35:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Attendere la legge', Tribunale Milano rinvia la causa a Meta e TikTok",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/causa-contro-meta-e-tiktok-tribunale-rinvia-in-attesa-di-una-legge_908afd06-517e-429f-b0af-d314d850359e.html"
-  },
-  {
-   "data": "2026-11-19T18:30:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Starbucks apre nuovo store a Vicolungo, quinto punto vendita del brand in Piemonte",
-   "url": "https://www.adnkronos.com/cronaca/starbucks-apre-nuovo-store-a-vicolungo-quinto-punto-vendita-del-brand-in-piemonte_7mw4SpwucUHQnHpBU8pEuc"
-  },
-  {
-   "data": "2026-11-19T18:29:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Atp Finals: Allarme Alcaraz, salta allenamento dopo risonanza",
-   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/19/atp-finals-media-spagnoli-alcaraz-vuole-continuare-a-giocare_95a721b2-945c-43f5-9d8c-73c84f0acc7d.html"
-  },
-  {
-   "data": "2026-11-19T18:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Meloni al vertice di Berlino: \"La Cina spinga la Russia verso una pace reale\"",
-   "url": "https://www.adnkronos.com/politica/meloni-vertice-volenterosi-oggi_7z5zNjC21iBNsjXbiFaGiA"
-  },
-  {
-   "data": "2026-11-19T18:23:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malattie respiratorie, Selvi (Fondazione Longevitas): \"Un Manifesto per cure più accessibili\"",
-   "url": "https://www.adnkronos.com/cronaca/malattie-respiratorie-selvi-fondazione-longevitas-un-manifesto-per-cure-piu-accessibili_3eg0k7wdVg9W0Muxnu5a3u"
-  },
-  {
-   "data": "2026-11-19T18:22:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Asma grave, Scichilone (Sip-Irs): \"Facilitare accesso ai centri e alle terapie innovative\"",
-   "url": "https://www.adnkronos.com/cronaca/asma-grave-scichilone-sip-irs-facilitare-accesso-ai-centri-e-alle-terapie-innovative_3PDNBlW8Q2AsqHFwPUtGE8"
-  },
-  {
-   "data": "2026-11-19T18:17:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Rete conoscenza, Link e Uds 'domani studenti e giovani in piazza'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/rete-conoscenza-link-e-uds-domani-studenti-e-giovani-in-piazza_0a74c089-c24a-455a-97ca-a41b7d1a899e.html"
-  },
-  {
-   "data": "2026-11-19T18:17:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cina, Usa e Russia adottano una dichiarazione di pace, 'Ue e Ucraina non sono pronte'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/cina-usa-e-russia-adottano-una-dichiarazione-di-pace_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html"
-  },
-  {
-   "data": "2026-11-19T18:17:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Loizzo (Lega): \"Biologici long-acting svolta per asma grave e poliposi nasale\"",
-   "url": "https://www.adnkronos.com/cronaca/loizzo-lega-biologici-long-acting-svolta-per-asma-grave-e-poliposi-nasale_40YjPKCziuSvN3IQQ1oTK"
-  },
-  {
-   "data": "2026-11-19T18:15:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Si ribalta il barcone di migranti, bimba di 6 anni dispersa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/si-ribalta-barca-con-migranti-a-lampedusa-dispersa-bimba-di-6-anni_51f568ca-d4cd-48b4-ab1b-8a71222fe119.html"
-  },
-  {
-   "data": "2026-11-19T18:15:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Asma grave e poliposi nasale, un Manifesto per migliorare aderenza e percorsi di cura",
-   "url": "https://www.adnkronos.com/cronaca/asma-grave-e-poliposi-nasale-un-manifesto-per-migliorare-aderenza-e-percorsi-di-cura_7cpu81X6olnqh4LYU75lkA"
-  },
-  {
-   "data": "2026-11-19T18:13:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Coppa Davis, Berrettini convocato per le Finals: i cambi di Volandri per Bologna",
-   "url": "https://www.adnkronos.com/sport/coppa-davis-ufficiali-convocati-italia-berrettini-cambi-azzurri_4PkzH4cEmEYT1nwEHGQLEc"
-  },
-  {
-   "data": "2026-11-19T18:09:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Esordio col botto in borsa, Anthropic vale 2mila miliardi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/19/anthropic-sale-fino-a-11510-dollari-per-azione-poi-scende-a-11022_f4eebc5e-1ae4-4922-8a55-eaee32ab7ab8.html"
-  },
-  {
-   "data": "2026-11-19T18:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dl Ambiente, Barbaro (Mase): \"Proteggere verde urbano'\"",
-   "url": "https://www.adnkronos.com/economia/dl-ambiente-barbaro-mase-proteggere-verde-urbano_4Kdc6klWrRpuk1yJHGP1tC"
-  },
-  {
-   "data": "2026-11-19T18:06:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Zelensky ai Volenterosi: 'Kiev nella Nato'. Meloni: 'Mandato chiaro al formato E5'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/19/zelensky-ai-volenterosi-kiev-nella-nato.-meloni-mandato-chiaro-al-formato-e5_63e4f927-d622-4c44-a03d-1000e20ff862.html"
-  },
-  {
-   "data": "2026-11-19T18:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trovata priva di sensi nel letto dei genitori, muore bimba di 14 giorni in provincia di Torino",
-   "url": "https://www.adnkronos.com/cronaca/torino-bimba-14-giorni-morta-ospedale_2rdSVY181OZCstKBVRL4iq"
-  },
-  {
-   "data": "2026-11-19T18:00:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Febbre globale per il videogioco 'Gta VI', record spettatori e preordini",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/11/19/debutto-mondiale-per-gioco-gta-vi-potrebbe-generare-32-miliardi-dollari-di-vendite_ce3c4705-aa36-4807-9e6c-19832c65af7f.html"
-  },
-  {
-   "data": "2026-11-19T18:00:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "La riflessione di Corrado Augias, che cita Calvino nell’ultima puntata de ‘La Torre di Babele’",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/11/19/la-riflessione-di-corrado-augias-che-cita-calvino-nellultima-puntata-de-la-torre-di-babele_6f31f10d-3333-41d1-b95b-d9326b28d2d9.html"
-  },
-  {
-   "data": "2026-11-19T18:00:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sicurezza e economia, le sfide Med nei dialoghi di Napoli",
-   "url": "https://www.ansa.it/sito/notizie/mondo/news_dalle_ambasciate/2026/11/19/tajani-apre-i-med-dialogues-al-centro-sicurezza-e-cooperazione-nella-regione_91084760-9377-4402-9ca2-c3066a04d511.html"
-  },
-  {
-   "data": "2026-11-19T17:45:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Napoli, frattura a una vertebra per Meret: torna nel 2027",
-   "url": "https://www.adnkronos.com/sport/napolli-meret-milinkovic-savic_3fHSRdlJdiY1pA295LSGAE"
-  },
-  {
-   "data": "2026-11-19T17:41:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nuovi attacchi Usa all'Iran? Wechsler (Atlantic Council): \"Trump non vuole passare alla storia da perdente\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/nuovi-attacchi-usa-alliran-wechsler-atlantic-council-trump-non-vuole-passare-alla-storia-da-perdente_hL9F63ALyw4R3N2N6cSvK"
-  },
-  {
-   "data": "2026-11-19T17:38:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Imprenditore indagato per truffa a danno della Provincia di Savona",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/imprenditore-indagato-per-truffa-a-danno-della-provincia-di-savona_ffd010c2-c4b9-43b0-948c-24c50261ddde.html"
-  },
-  {
-   "data": "2026-11-19T17:22:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Addio a Piero Vigorelli, pioniere del racconto popolare in televisione",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/e-morto-a-82-anni-il-giornalista-piero-vigorelli_eab3dde3-646c-481e-b1b5-4bf2632e897e.html"
-  },
-  {
-   "data": "2026-11-19T17:20:57+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fermato un camionista in A23, guidava alla soglia del coma etilico",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/19/fermato-un-camionista-in-a23-guidava-alla-soglia-del-coma-etilico_72f69ac3-9799-4500-bafb-e1075092d579.html"
-  },
-  {
-   "data": "2026-11-19T17:19:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mamdani firma la 'Romanch's Law', addio alle carozze a Central Park",
-   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/19/mamdani-firma-la-romanchs-law-addio-alle-carozze-a-central-park_a2202225-acba-48cc-a92f-04389f4aa350.html"
   }
  ]
 }

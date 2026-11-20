@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-19T19:10:53+00:00",
+  "generato": "2026-11-20T01:17:34+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 23,
-  "scaduti_scartati": 10,
-  "in_corso": 13,
+  "avvisi": 19,
+  "scaduti_scartati": 16,
+  "in_corso": 11,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -24,19 +24,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T23:59:00+00:00",
-   "emesso": "2026-11-19T10:05:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261119110556.118"
-  },
-  {
-   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -47,19 +34,6 @@
    "fine": "2026-11-20T17:59:00+00:00",
    "emesso": "2026-11-19T10:05:57+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261119110556.121"
-  },
-  {
-   "in_corso": true,
-   "regione": "Campania",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T23:59:00+00:00",
-   "emesso": "2026-11-19T10:05:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261119110556.113"
   },
   {
    "in_corso": true,
@@ -76,45 +50,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Molise",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T00:00:00+00:00",
-   "fine": "2026-11-19T23:59:00+00:00",
-   "emesso": "2026-11-19T10:05:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261119110556.109"
-  },
-  {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T09:00:00+00:00",
-   "fine": "2026-11-19T23:59:00+00:00",
-   "emesso": "2026-11-19T10:05:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261119110556.115"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T10:00:00+00:00",
-   "fine": "2026-11-19T23:59:00+00:00",
-   "emesso": "2026-11-19T10:05:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261119110556.124"
-  },
-  {
-   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -128,6 +63,19 @@
   },
   {
    "in_corso": false,
+   "regione": "Abruzzo",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-21T00:00:00+00:00",
+   "fine": "2026-11-21T11:59:00+00:00",
+   "emesso": "2026-11-19T10:05:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261119110556.107"
+  },
+  {
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -138,19 +86,6 @@
    "fine": "2026-11-21T17:59:00+00:00",
    "emesso": "2026-11-19T10:05:57+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261119110556.119"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-19T10:00:00+00:00",
-   "fine": "2026-11-19T23:59:00+00:00",
-   "emesso": "2026-11-19T10:05:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261119110556.120"
   },
   {
    "in_corso": false,
@@ -179,7 +114,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261119110556.114"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -244,7 +179,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261119110556.092"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -257,7 +192,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261119110556.116"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -281,6 +216,19 @@
    "fine": "2026-11-20T17:59:00+00:00",
    "emesso": "2026-11-19T10:05:57+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261119110556.123"
+  },
+  {
+   "in_corso": false,
+   "regione": "Toscana",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-11-21T00:00:00+00:00",
+   "fine": "2026-11-21T11:59:00+00:00",
+   "emesso": "2026-11-19T10:05:56+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261119110556.097"
   },
   {
    "in_corso": false,
