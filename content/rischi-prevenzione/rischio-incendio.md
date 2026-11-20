@@ -54,8 +54,12 @@ Il bosco è di tutti: proteggerlo dipende anche da te. In emergenza chiama il 11
 
 </details>
 
+{{< callout tipo="info" titolo="Le date del 2026" >}}
+Nel 2026 la campagna antincendio boschivo della Regione Lazio va dal 15 giugno al 15 ottobre. A Genzano l'[ordinanza sindacale n. 14 del 17 giugno 2026 (PDF, 183 KB)](https://www.protezionecivilegenzano.it/area-download/normativa/Ordinanza_Sindacale_AIB_2026.pdf) vieta dal 17 giugno al 15 ottobre di accendere fuochi di ogni genere nei boschi e nelle aree vicine: si possono accendere solo nelle aree attrezzate individuate dagli enti.
+{{< /callout >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani, con ampie aree boschive e di macchia mediterranea. Il periodo di massimo rischio va da giugno a settembre: siccità prolungata e venti caldi possono trasformare una piccola fiamma in un incendio devastante. Il nostro Gruppo partecipa attivamente alle campagne antincendio boschivo (AIB).
+Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani, con ampie aree boschive e di macchia mediterranea. Il periodo di massimo rischio è l'estate (nel 2026 la campagna antincendio regionale va dal 15 giugno al 15 ottobre): siccità prolungata e venti caldi possono trasformare una piccola fiamma in un incendio devastante. Il nostro Gruppo partecipa attivamente alle campagne antincendio boschivo (AIB).
 
 {{< foto src="/images/incendio-boschivo-monte-tuscolo-castelli-romani.webp"
          alt="Incendio boschivo su versante collinare con vegetazione arborea: densa colonna di fumo grigio in ascesa e fiamme arancioni visibili al centro del rogo, con abitazioni rurali nel fondovalle dei Castelli Romani."
@@ -152,7 +156,7 @@ Prevenire gli incendi è compito di tutti. In caso di incendio chiama il 112.
 - **Non tentare mai di spegnere un incendio da solo** con mezzi di fortuna
 - **Non gettare acqua su fiamme alimentate dal vento**: il fuoco può cambiare direzione improvvisamente
 - **Non fuggire in salita davanti a un fronte di fuoco**: le fiamme salgono più velocemente di quanto tu possa correre
-- **Non sottovalutare il fumo**: l'inalazione è la prima causa di morte negli incendi
+- **Non sottovalutare il fumo**: contiene gas tossici. Allontanati e, come indicano i Vigili del Fuoco, respira attraverso un fazzoletto, meglio se bagnato
 - **Non lasciare rifiuti o materiali infiammabili** nelle aree boschive
 {{< /cosa-non-fare >}}
 

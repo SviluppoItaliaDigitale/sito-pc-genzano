@@ -1144,8 +1144,8 @@ documenti:
   verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf-16x10.pdf
   file: 2026-05-18-rischio-incendio-presentazione-pdf-16x10.pdf
-  size_kb: 829.6
-  sha256: 18e1f777264df0677cc62e21dd0fc5f98ee248f63bd33d0d3ed0360e2a6a6db9
+  size_kb: 829.7
+  sha256: 4dfacaa97b56380276974624feac96c477da5b30d8fa91df5150feac6e93c84e
   searchable: true
   tagged: true
   language: it-IT
@@ -1158,8 +1158,8 @@ documenti:
   verdict: ACCESSIBILE
 - path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf-4x3.pdf
   file: 2026-05-18-rischio-incendio-presentazione-pdf-4x3.pdf
-  size_kb: 1031.7
-  sha256: acc660766dbcf48c7769f893e5cc059beed702ff59d45ffade31814c08166487
+  size_kb: 1031.8
+  sha256: a3cb2e667576c09b49d0a59f5697967710bc8649b71a4050b87e5365753b4b41
   searchable: true
   tagged: true
   language: it-IT
@@ -1173,7 +1173,7 @@ documenti:
 - path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
   file: 2026-05-18-rischio-incendio-presentazione-pdf.pdf
   size_kb: 1006.9
-  sha256: 65b5288d25be32a874e9619ee36ffe5644434dd1dd2cc0881580cbf3a0c2e732
+  sha256: c52a80f5e9cd2ad19546b165071a5dd57cf35adf58f6ba363d057e5a67222156
   searchable: true
   tagged: true
   language: it-IT
@@ -1271,7 +1271,7 @@ documenti:
 - path: /presentazioni/2026-05-29-nue-112-presentazione-pdf-16x10.pdf
   file: 2026-05-29-nue-112-presentazione-pdf-16x10.pdf
   size_kb: 1049.7
-  sha256: 184b53f90dcbfc653b3a24e56fe299545a0ac093bbecbf38b79e32c7f7704e2e
+  sha256: 593b6e5075d14c46e6a47683a349c381ab5c0b32a2b222ec7b4b3daf82d8a238
   searchable: true
   tagged: true
   language: it-IT
@@ -1285,7 +1285,7 @@ documenti:
 - path: /presentazioni/2026-05-29-nue-112-presentazione-pdf-4x3.pdf
   file: 2026-05-29-nue-112-presentazione-pdf-4x3.pdf
   size_kb: 927.4
-  sha256: a002f0994dc1f1b7ef493a057f28799db0ed713d0af48359a62f5c404e597398
+  sha256: f186c77bc689716de7c74ca7d4972cad3111f5817fdbd408c1ad044daf87fd1b
   searchable: true
   tagged: true
   language: it-IT
@@ -1299,7 +1299,7 @@ documenti:
 - path: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
   file: 2026-05-29-nue-112-presentazione-pdf.pdf
   size_kb: 1106.6
-  sha256: 7a39337923a260357114ae360690b4b2216b502e8fdb3ba68a3edec96a7d6469
+  sha256: 9b1caa07502b7b25c31e3b64ffac37dd195aa5c7cd24c4b00f92d3c95fb91e92
   searchable: true
   tagged: true
   language: it-IT
