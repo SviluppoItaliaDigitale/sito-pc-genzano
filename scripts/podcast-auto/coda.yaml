@@ -394,7 +394,12 @@ puntate:
   - agosto-fragili
   - sannio
   - droni-termocamera
-  stato: da-fare
+  stato: programmata
+  file: content/podcast/2026-12-18-ondate-di-calore.md
+  nota: '21/11/2026, primo tentativo (8 fonti, Breve, audio 2:57) superato: ogni affermazione
+    confrontata con le pagine fonte (bevande, casa, ore 11-18, anziani, bambini, crema SPF
+    50+, segni e intervento sul colpo di calore, 112).'
+  data: '2026-12-18'
 - id: rischio-incendio
   titolo: 'Incendi boschivi: prevenzione e comportamenti'
   fonti:
