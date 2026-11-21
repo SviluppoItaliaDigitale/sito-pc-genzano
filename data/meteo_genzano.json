@@ -1,16 +1,16 @@
 {
-  "aggiornato": "2026-11-21T10:41",
+  "aggiornato": "2026-11-21T11:03",
   "data_lunga": "sabato 21 novembre 2026",
-  "aggiornato_label": "sabato 21 novembre 2026, ore 10:41",
+  "aggiornato_label": "sabato 21 novembre 2026, ore 11:03",
   "alba": "07:05",
   "tramonto": "16:44",
   "corrente": {
-    "temp": 14.0,
-    "percepita": 13.0,
+    "temp": 14.2,
+    "percepita": 13.1,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 70,
-    "vento": 5,
+    "vento": 6,
     "raffiche": 18
   },
   "giorni": [
