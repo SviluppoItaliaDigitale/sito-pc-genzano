@@ -3,5 +3,22 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-11-16T11:42:02+01:00",
-  "ultimo_controllo": "2026-11-21T11:56:27+01:00"
+  "ultimo_controllo": "2026-11-21T16:42:03+01:00",
+  "domani": {
+    "livello": "verde",
+    "titolo": "Previsto verde",
+    "rischi": [],
+    "data": "2026-11-22"
+  },
+  "avviso_meteo": {
+    "tipo": "vento",
+    "livello": "gialla",
+    "validita_inizio": "2026-11-22T10:00:00+01:00",
+    "validita_fine": "2026-11-23T13:00:00+01:00",
+    "url": "https://www.regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/allertamento_21_11_2026.pdf",
+    "fonte_data": "2026-11-21",
+    "validita_dal": "dalla tarda mattinata",
+    "validita_durata": "18-24 ore",
+    "descrizione": "VENTI da forti a burrasca dai quadranti occidentali, con particolare riferimento ai settori costieri e montuosi esposti, con raffiche fino a burrasca forte specie lungo la dorsale appenninica"
+  }
 }
