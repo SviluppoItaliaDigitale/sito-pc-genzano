@@ -5,11 +5,29 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-11-20T23:17:09+00:00",
+  "generato": "2026-11-21T04:01:31+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-11-21T02:25:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "007 Usa hanno allertato le compagnie aeree, 'Al Qaeda pronta a compiere attacchi'",
+   "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/007-usa-hanno-allertato-le-compagnie-aeree-al-qaeda-pronta-a-compiere-attacchi_ef44c206-b623-4395-af92-e81c190d1e63.html"
+  },
+  {
+   "data": "2026-11-21T02:21:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Media, 'droni avvistati su Sigonella, a voli militari indicato cambio rotta'",
+   "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/media-droni-avvistati-su-sigonella-a-voli-militari-indicato-cambio-rotta_f2d335b7-be89-4930-bb82-a4ab490d0a88.html"
+  },
+  {
+   "data": "2026-11-20T23:10:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, Centrodestra sempre a caccia di risorse sulla sanità: Salvini rilancia su condono",
+   "url": "https://www.adnkronos.com/economia/manovra-sanita-salvini-condono_36rOPq7Pt5pgVOhIfEywAw"
+  },
   {
    "data": "2026-11-20T23:02:42+00:00",
    "fonte": "ADNKRONOS",
@@ -17,7 +35,7 @@
    "url": "https://www.adnkronos.com/cronaca/sciopero-generale-cgil-landini-opposizione_7Lhh3FCFkZBurFkwglhvBK"
   },
   {
-   "data": "2026-11-20T22:42:59+00:00",
+   "data": "2026-11-20T22:47:06+00:00",
    "fonte": "ANSA",
    "titolo": "Lite tra famiglie finisce nel sangue, donna muore accoltellata a Roma",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/lite-tra-famiglie-finisce-nel-sangue-donna-muore-accoltellata-a-roma_b697d876-126b-4a93-bc8e-04447c149d0a.html"
@@ -45,6 +63,12 @@
    "fonte": "ADNKRONOS",
    "titolo": "Gf Vip, Guendalina Tavassi lascia momentaneamente la Casa \"per motivi personali\": cosa è successo",
    "url": "https://www.adnkronos.com/spettacoli/guendalina-tavassi-lascia-casa-gf-vip-caduta_3iCX0tf6n4156xd7ogJKbK"
+  },
+  {
+   "data": "2026-11-20T21:26:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Atp Finals: battuto Tiafoe, per Medvedev è semifinale con Zverev",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/20/atp-finals-battuto-tiafoe-per-medvedev-e-semifinale-con-zverev_32caa09f-d475-4396-8f68-c81805828049.html"
   },
   {
    "data": "2026-11-20T21:23:55+00:00",
@@ -125,22 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/petardi-contro-il-ministero-due-studenti-in-dissenso-tra-i-poliziotti_81ec06b5-2dba-4b72-b8d1-f0341d4535cb.html"
   },
   {
-   "data": "2026-11-20T20:14:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "FI rilancia la battaglia, tre emendamenti anti e-book alla Camera",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/11/20/scontro-sugli-ebook-fi-presenta-un-emendamento-soppressivo-alla-camera-_a676fb83-bb34-4ed1-bb51-a0428ece696b.html"
-  },
-  {
    "data": "2026-11-20T20:00:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Torino, nuova manifestazione nel pomeriggio. Manifestanti tentano ingresso in piazza Vittorio lanciando oggetti: respinti con idrante",
    "url": "https://www.adnkronos.com/cronaca/corteo-torino-scontri-idrante_3xiAtKJPBB54UeygDTmqxU"
-  },
-  {
-   "data": "2026-11-20T19:56:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Orrore in Texas, urla di dolore per l'iniezione durante un'esecuzione",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/urla-di-dolore-per-uniniezione-letale-agonia-di-oltre-unora-per-un-detenuto_c450d3b1-a5a1-41ec-babf-1a19f9985b45.html"
   },
   {
    "data": "2026-11-20T19:43:58+00:00",
@@ -177,18 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "SuperEnalotto, numeri e combinazione vincente di oggi 20 novembre: nessun 6, 5+1 e 5",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-20-novembre-numeri-combinazione-quote_4FXrAfQK97db546Htzhkq4"
-  },
-  {
-   "data": "2026-11-20T19:11:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tensioni in centro a Torino con il corteo contro guerra e carovita",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/tensioni-in-centro-a-torino-con-il-corteo-contro-guerra-e-carovita_80940078-13b7-4f9e-bac7-18a62a9ec130.html"
-  },
-  {
-   "data": "2026-11-20T19:10:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Simona uccisa 34 anni fa, confermata la condanna a 21 anni per l'amico",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/simona-uccisa-34-anni-fa-confermata-la-condanna-a-21-anni-per-lamico_55efad21-05ba-4079-ad72-45f42cebb406.html"
   }
  ]
 }
