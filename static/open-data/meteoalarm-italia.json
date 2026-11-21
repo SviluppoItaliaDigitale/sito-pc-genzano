@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-11-21T12:23:21+00:00",
+  "generato": "2026-11-21T19:40:18+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 37,
-  "scaduti_scartati": 2,
+  "avvisi": 34,
+  "scaduti_scartati": 5,
   "in_corso": 4,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -101,19 +101,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.080"
   },
   {
-   "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-21T09:00:00+00:00",
-   "fine": "2026-11-21T17:59:00+00:00",
-   "emesso": "2026-11-21T10:15:55+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261121111555.050"
-  },
-  {
    "in_corso": false,
    "regione": "Calabria",
    "fenomeno": "Vento",
@@ -125,19 +112,6 @@
    "fine": "2026-11-23T00:59:00+00:00",
    "emesso": "2026-11-21T10:15:56+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261121111555.081"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-21T09:00:00+00:00",
-   "fine": "2026-11-21T17:59:00+00:00",
-   "emesso": "2026-11-21T10:15:55+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261121111555.051"
   },
   {
    "in_corso": false,
@@ -192,7 +166,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.064"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -270,7 +244,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.068"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lombardia",
    "fenomeno": "Nebbia",
    "livello": "gialla",
@@ -387,19 +361,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.071"
   },
   {
-   "in_corso": true,
-   "regione": "Toscana",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-11-21T09:00:00+00:00",
-   "fine": "2026-11-21T17:59:00+00:00",
-   "emesso": "2026-11-21T10:15:55+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261121111555.049"
-  },
-  {
    "in_corso": false,
    "regione": "Umbria",
    "fenomeno": "Vento",
@@ -478,7 +439,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.061"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Nebbia",
    "livello": "gialla",
