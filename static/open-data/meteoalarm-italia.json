@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-11-21T23:56:59+00:00",
+  "generato": "2026-11-22T05:37:44+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 47,
   "scaduti_scartati": 4,
-  "in_corso": 4,
+  "in_corso": 16,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -23,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.067"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -36,7 +36,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.058"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sardegna",
    "fenomeno": "Vento",
    "livello": "arancione",
@@ -192,7 +192,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.066"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -205,7 +205,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.065"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -283,7 +283,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.075"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Liguria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -296,7 +296,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.069"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Liguria",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -387,7 +387,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.096"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -400,7 +400,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.056"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Piemonte",
    "fenomeno": "Neve e ghiaccio",
    "livello": "gialla",
@@ -452,7 +452,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.094"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -478,7 +478,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.084"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -543,7 +543,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.095"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Valle d'Aosta",
    "fenomeno": "Neve e ghiaccio",
    "livello": "gialla",
@@ -556,7 +556,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261121111555.054"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Valle d'Aosta",
    "fenomeno": "Pioggia",
    "livello": "gialla",
