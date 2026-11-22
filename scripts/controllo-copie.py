@@ -132,7 +132,9 @@ TESTATE = (
     {"nome": "Il Mamilio", "feed": "https://www.ilmamilio.it/wp/feed/", "zona": "Castelli Romani", "wp": True},
     {"nome": "Il Caffè", "feed": "https://www.ilcaffe.tv/feed/", "zona": "Castelli Romani e litorale", "wp": True},
     {"nome": "Controluce", "feed": "https://www.controluce.it/feed/", "zona": "Castelli Romani e Monti Prenestini", "wp": True},
-    {"nome": "Terzo Binario", "feed": "https://www.terzobinario.it/feed/", "zona": "Roma sud-est e Castelli", "wp": True},
+    # Terzo Binario tolto il 22/11/2026: dal 16/11 il dominio non si risolve
+    # (name server in delegazione difettosa, REFUSED), nessun nuovo indirizzo.
+    # Da riprovare solo se il sito torna online.
     # Roma
     {"nome": "RomaToday", "feed": "https://www.romatoday.it/rss", "zona": "Roma", "wp": False},
     {"nome": "RomaDailyNews", "feed": "https://www.romadailynews.it/feed/", "zona": "Roma", "wp": True},
