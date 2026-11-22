@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-11-21T23:56:52+00:00",
+  "generato": "2026-11-22T13:38:27+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-11-18T00:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-11-20T19:51:53.304205",
+   "lastUpdate": "2026-11-22T11:05:14.773591",
    "n_aois": 1,
    "n_products": 0,
    "name": "Mass Movement in Manteigas, Portugal"
