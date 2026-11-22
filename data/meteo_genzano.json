@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-11-22T06:03",
+  "aggiornato": "2026-11-22T07:03",
   "data_lunga": "domenica 22 novembre 2026",
-  "aggiornato_label": "domenica 22 novembre 2026, ore 06:03",
+  "aggiornato_label": "domenica 22 novembre 2026, ore 07:03",
   "alba": "07:06",
   "tramonto": "16:43",
   "corrente": {
-    "temp": 11.8,
+    "temp": 12.2,
     "percepita": 10.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 83,
-    "vento": 8,
-    "raffiche": 35
+    "vento": 11,
+    "raffiche": 46
   },
   "giorni": [
     {
@@ -20,9 +20,9 @@
       "cielo": "Temporale",
       "tmax": 14,
       "tmin": 11,
-      "pioggia": 88,
-      "pioggia_mm": 8.0,
-      "raffiche": 95,
+      "pioggia": 98,
+      "pioggia_mm": 8.7,
+      "raffiche": 103,
       "uv": 2,
       "uv_label": "basso"
     },
@@ -32,11 +32,11 @@
       "cielo": "Rovesci",
       "tmax": 14,
       "tmin": 9,
-      "pioggia": 48,
-      "pioggia_mm": 0.5,
-      "raffiche": 74,
-      "uv": 2,
-      "uv_label": "basso"
+      "pioggia": 63,
+      "pioggia_mm": 0.3,
+      "raffiche": 71,
+      "uv": 3,
+      "uv_label": "moderato"
     },
     {
       "label": "Mar 24",
@@ -44,7 +44,7 @@
       "cielo": "Coperto",
       "tmax": 14,
       "tmin": 8,
-      "pioggia": 3,
+      "pioggia": 5,
       "pioggia_mm": 0,
       "raffiche": 45,
       "uv": 3,
@@ -56,10 +56,10 @@
       "cielo": "Temporale",
       "tmax": 14,
       "tmin": 11,
-      "pioggia": 82,
+      "pioggia": 91,
       "pioggia_mm": 38.9,
       "raffiche": 73,
-      "uv": 0,
+      "uv": 1,
       "uv_label": "basso"
     }
   ],
@@ -73,9 +73,9 @@
     },
     {
       "nome": "Rieti",
-      "tmax": 15,
+      "tmax": 16,
       "tmin": 6,
-      "cielo": "Temporale"
+      "cielo": "Rovesci"
     },
     {
       "nome": "Roma",
