@@ -173,20 +173,22 @@ html.a11y-pause-anim .btn-livello { transition: none; }
   animation: matchPulse 0.5s ease;
 }
 .card.matched .card-back {
-  border: 3px solid #2e7d32;
-  box-shadow: 0 0 12px rgba(46, 125, 50, 0.5);
+  /* Bordo verde senza rubare spazio al testo (con 3 px le frasi lunghe uscivano
+     dalla carta a 375 px) e segno di spunta sull'angolo, fuori dal testo. */
+  border: 2px solid #2e7d32;
+  box-shadow: 0 0 0 1px #2e7d32, 0 0 12px rgba(46, 125, 50, 0.5);
 }
 .card.matched .card-back::after {
   content: '\2713';
   position: absolute;
-  bottom: 2px;
-  right: 6px;
+  top: -9px;
+  right: -9px;
   background: #2e7d32;
   color: white;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -242,7 +244,7 @@ html.a11y-pause-anim .btn-livello { transition: none; }
   font-weight: 600;
   color: var(--pc-blue);
   text-align: center;
-  padding: .25rem;
+  padding: .1rem;
   hyphens: auto;
   word-break: break-word;
 }

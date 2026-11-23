@@ -1384,7 +1384,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const box = document.getElementById('attestato-box');
         if (!box) return;
         if (percentuale < 80) {
-            box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Per ottenere l’attestato devi rispondere correttamente almeno all’80% delle domande.</p>';
+            box.innerHTML = '<p class="text-muted small mb-0"><i class="bi bi-info-circle me-1" aria-hidden="true"></i> Con almeno l’80% di risposte giuste ottieni il badge e l’attestato: riprova quando vuoi!</p>';
             return;
         }
         box.innerHTML = ''

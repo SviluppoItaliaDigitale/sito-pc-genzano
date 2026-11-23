@@ -36,6 +36,7 @@
   // su «Aiuto» non consuma due aiuti.
   var finito = false;
   var aiutoInCorso = false;
+  var spostamentoInterno = false;
 
   function suono(giusta) {
     if (!window.AudioSintetico) return;
@@ -190,7 +191,7 @@
     activeWord = w;
     var key = w.row + ',' + w.col;
     var c = cellMap[key];
-    if (c && c.input) c.input.focus();
+    if (c && c.input) { spostamentoInterno = true; c.input.focus(); spostamentoInterno = false; }
     highlightActiveWord();
     currentClue.textContent = w.n + (w.dir === 'A' ? ' orizzontale' : ' verticale') + ': ' + w.clue;
     refreshCluesList();
@@ -212,8 +213,15 @@
     var cell = cellMap[r + ',' + c];
     if (!cell) return;
     if (cell.words.length > 0) {
-      var pref = cell.words.find(function (ww) { return ww.word.dir === 'A'; }) || cell.words[0];
-      activeWord = pref.word;
+      // Spostamento fatto dal gioco (definizione toccata o parola che si sta
+      // scrivendo): la direzione resta quella, altrimenti a un incrocio la scrittura
+      // passava sull'orizzontale a metà di una verticale. Casella toccata col dito:
+      // vale la parola che comincia lì (prima l'orizzontale), poi l'orizzontale.
+      var resta = spostamentoInterno && activeWord && cell.words.some(function (ww) { return ww.word === activeWord; });
+      var pref = cell.words.find(function (ww) { return ww.pos === 0 && ww.word.dir === 'A'; }) ||
+        cell.words.find(function (ww) { return ww.pos === 0; }) ||
+        cell.words.find(function (ww) { return ww.word.dir === 'A'; }) || cell.words[0];
+      if (!resta) activeWord = pref.word;
       currentClue.textContent = activeWord.n + (activeWord.dir === 'A' ? ' orizzontale' : ' verticale') + ': ' + activeWord.clue;
       highlightActiveWord();
       refreshCluesList();
@@ -248,7 +256,7 @@
 
   function moveTo(r, c) {
     var cell = cellMap[r + ',' + c];
-    if (cell && cell.input) cell.input.focus();
+    if (cell && cell.input) { spostamentoInterno = true; cell.input.focus(); spostamentoInterno = false; }
   }
 
   function moveInWord(delta) {
@@ -381,11 +389,13 @@
     finito = true;
     gameScreen.classList.add('hide');
     resultsScreen.classList.remove('hide');
+    // Schermata finale in vista: sul telefono restava sotto la barra in alto.
+    if (resultsScreen.scrollIntoView) resultsScreen.scrollIntoView({ block: 'start' });
     finalSolved.textContent = solvedCount;
     finalHints.textContent = 3 - hintsLeft;
     var msg;
     if (hintsLeft === 3) msg = 'Perfetto! Hai risolto tutto senza nessun aiuto.';
-    else if (hintsLeft >= 1) msg = 'Molto bene! Hai usato solo ' + (3 - hintsLeft) + ' aiuti.';
+    else if (hintsLeft >= 1) msg = 'Molto bene! Hai usato solo ' + (3 - hintsLeft) + (3 - hintsLeft === 1 ? ' aiuto.' : ' aiuti.');
     else msg = 'Ottimo! Hai completato lo schema.';
     feedbackMessage.textContent = msg;
     var punti = Math.max(solvedCount * 10 - (3 - hintsLeft) * 5, solvedCount);

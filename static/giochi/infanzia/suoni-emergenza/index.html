@@ -244,7 +244,8 @@
     function show(){
       if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
       var target = queue[idx];
-      var roundN = idx < 4 ? 1 : 2;
+      // Due round della stessa lunghezza (prima: 4 suoni nel primo e 8 nel secondo).
+      var roundN = idx < Math.ceil(queue.length / 2) ? 1 : 2;
       levelBadge.textContent = 'Round ' + roundN + ' di 2';
       scelta.innerHTML = '';
       feedback.textContent = '';

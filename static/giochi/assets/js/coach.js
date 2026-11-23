@@ -780,7 +780,32 @@
       speakBtn.classList.add('coach-speak-btn-mini');
       hintEl.appendChild(speakBtn);
     }
+    var rif = seguente(trigger);
+    var prima = misuraTop(rif);
     trigger.parentNode.insertBefore(hintEl, trigger.nextSibling);
+    tieniFermo(rif, prima);
+  }
+
+  // Il suggerimento sta sopra il gioco: inserito o tolto, spostava tutto il gioco
+  // in giù o in su proprio mentre il bambino tocca la LIM, e il tocco successivo
+  // finiva su un'altra carta o su un link (prova del 23/11/2026). Si compensa lo
+  // scorrimento, così ciò che è sotto il dito resta fermo.
+  function seguente(el) {
+    while (el && !el.nextElementSibling) el = el.parentElement;
+    return el ? el.nextElementSibling : null;
+  }
+  function misuraTop(el) {
+    return el && el.getBoundingClientRect ? el.getBoundingClientRect().top : null;
+  }
+  function tieniFermo(el, prima) {
+    if (prima === null || !el || !el.isConnected) return;
+    var delta = el.getBoundingClientRect().top - prima;
+    if (Math.abs(delta) < 1 || prima > window.innerHeight) return;
+    var html = document.documentElement;
+    var prec = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollBy(0, delta);
+    html.style.scrollBehavior = prec;
   }
 
   function clearHint() {
@@ -789,7 +814,10 @@
       if (currentSpeakBtn && hintEl.contains(currentSpeakBtn)) {
         stopSpeaking();
       }
+      var rif = seguente(hintEl);
+      var prima = misuraTop(rif);
       hintEl.parentNode.removeChild(hintEl);
+      tieniFermo(rif, prima);
     }
     hintEl = null;
   }

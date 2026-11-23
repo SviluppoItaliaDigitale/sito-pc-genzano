@@ -894,6 +894,8 @@
     function fineGioco(){
       game.classList.add('hide');
       end.classList.remove('hide');
+      // Schermata finale in vista: sulla LIM restava sopra lo schermo (si vedeva il piè di pagina).
+      if (end.scrollIntoView) end.scrollIntoView({ block: 'start' });
       endScen.textContent = scenariOk;
       endErr.textContent = erroriTotali;
       // punteggio: max 10 per scenario, -1 per errore, -0.5 per ogni mossa oltre

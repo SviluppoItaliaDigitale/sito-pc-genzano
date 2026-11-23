@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (errors === 0) {
                         winMessage.textContent = 'Perfetto! Hai preparato lo zaino senza nessun errore!';
                     } else if (errors <= 3) {
-                        winMessage.textContent = 'Bravo! Zaino pronto con solo ' + errors + ' errore' + (errors > 1 ? 'i' : '') + '.';
+                        winMessage.textContent = 'Bravo! Zaino pronto con solo ' + errors + ' error' + (errors > 1 ? 'i' : 'e') + '.';
                     } else {
                         winMessage.textContent = 'Hai fatto ' + errors + ' errori. Riprova per migliorare!';
                     }

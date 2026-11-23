@@ -367,6 +367,8 @@
       if (completed >= SCENARI.length){
         gameScreen.classList.add('hide');
         endScreen.classList.remove('hide');
+        // Schermata finale in vista: sulla LIM restava sopra lo schermo.
+        if (endScreen.scrollIntoView) endScreen.scrollIntoView({ block: 'start' });
         doneCount.textContent = completed;
         endMsg.textContent = 'Hai completato tutti gli scenari! Sei un vero volontario in erba.';
         if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('puzzle-scenari', totalScore, totalMax, '#end-screen');

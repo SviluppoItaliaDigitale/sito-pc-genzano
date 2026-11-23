@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameScreen.classList.add('hide');
         endScreen.classList.remove('hide');
         if (errors === 0) { endMsg.textContent = 'Perfetto! Tutti abbinati senza errori!'; }
-        else if (errors <= 3) { endMsg.textContent = 'Bravo! Solo ' + errors + ' errore' + (errors > 1 ? 'i' : '') + '.'; }
+        else if (errors <= 3) { endMsg.textContent = 'Bravo! Solo ' + errors + ' error' + (errors > 1 ? 'i' : 'e') + '.'; }
         else { endMsg.textContent = 'Fatto! Hai commesso ' + errors + ' errori. Riprova per migliorare!'; }
         var punti = Math.max(0, total - errors);
         if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('abbina-impara', punti, total, '#end-screen');

@@ -920,6 +920,8 @@
     function finish() {
       gameScreen.classList.add('hide');
       endScreen.classList.remove('hide');
+      // Schermata finale in vista: sulla LIM restava sopra lo schermo.
+      if (endScreen.scrollIntoView) endScreen.scrollIntoView({ block: 'start' });
       endScore.textContent = current.cartelli.length;
       endMax.textContent = current.cartelli.length;
       endMsg.textContent = 'Tutti i cartelli sono al posto giusto!';
