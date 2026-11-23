@@ -687,6 +687,10 @@
     if (main && main.parentNode) main.parentNode.insertBefore(barra, main);
     else document.body.insertBefore(barra, document.body.firstChild);
     if (document.body.classList) document.body.classList.add('con-barra-gioco');
+    // Ciò che il gioco porta in vista (scrollIntoView, ancore) non finisce sotto la barra.
+    var spazioBarra = function () { document.documentElement.style.scrollPaddingTop = (barra.offsetHeight + 12) + 'px'; };
+    spazioBarra();
+    window.addEventListener('resize', spazioBarra);
     avviaScorrimentoAlGioco(barra);
   }
 

@@ -22,8 +22,8 @@
       regola: 'Tocca SOLO le cose pericolose. Lascia stare le cose sicure.',
       come: [
         'Guarda bene ogni immagine prima di toccare.',
-        'Se è un fuoco, una presa, un coltello: è pericoloso.',
-        'Se è un libro, un peluche, l\'acqua da bere: è sicuro.'
+        'Se è un fuoco, una presa elettrica, un petardo: è pericoloso.',
+        'Se è un libro, un peluche, la frutta: è sicuro.'
       ],
       teoria: [
         { titolo: 'Cosa fare in emergenza', url: '/cosa-fare-adesso/' }
@@ -87,15 +87,14 @@
     'rifugio-tina': {
       fascia: 'infanzia',
       titolo: 'Consigli per il Rifugio di Tina',
-      regola: 'In emergenza Tina cerca un riparo sicuro: aiutala!',
+      regola: 'Quando trema la terra Tina cerca un riparo sicuro: aiutala!',
       come: [
-        'Sotto al tavolo se trema la terra.',
-        'Lontano dalle finestre se piove forte.',
-        'In un posto basso se c\'è vento o tornado.'
+        'In casa: sotto un tavolo robusto o vicino a un muro portante.',
+        'Lontano da finestre, vetri, specchi e mobili pesanti.',
+        'All\'aperto: lontano da case, alberi, lampioni e fili elettrici.'
       ],
       teoria: [
-        { titolo: 'Cosa fare se trema la terra', url: '/rischi-prevenzione/rischio-sismico/' },
-        { titolo: 'Vento forte', url: '/rischi-prevenzione/vento-forte/' }
+        { titolo: 'Cosa fare se trema la terra', url: '/rischi-prevenzione/rischio-sismico-facile/' }
       ]
     },
     'suoni-emergenza': {
