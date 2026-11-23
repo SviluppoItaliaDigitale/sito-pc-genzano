@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 9183 video (18 canali).
+# Totale: 9210 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -15,7 +15,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 637
+    video_count: 638
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 975
+    video_count: 976
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -45,12 +45,12 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1362
+    video_count: 1368
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
     url: https://www.youtube.com/@INGVterremoti/videos
-    video_count: 165
+    video_count: 166
   ingv-vulcani:
     nome: INGVvulcani — Osservatorio Vesuviano e Vulcani INGV
     tematico_pc: true
@@ -85,12 +85,12 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 2084
+    video_count: 2099
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 121
+    video_count: 124
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
@@ -3442,6 +3442,11 @@ video:
     id: pdOWVrGUcfI
     titolo: 'Maurizio Codogno: "Quando i numeri li danno i matematici" CICAP FEST 2018'
     url: https://youtu.be/pdOWVrGUcfI
+  cicap-pr3JE1OI84o:
+    canale: cicap
+    id: pr3JE1OI84o
+    titolo: Storie d'innovazione - con Massimiano Bucchi
+    url: https://youtu.be/pr3JE1OI84o
   cicap-ptkOK8u97OU:
     canale: cicap
     id: ptkOK8u97OU
@@ -7537,6 +7542,11 @@ video:
     id: dAeUzAo1ytY
     titolo: 'Conoscere il mare: presente e futuro - Donato Mendolia, Capitano di navi da diporto'
     url: https://youtu.be/dAeUzAo1ytY
+  cmcc-dBO5lYSNV54:
+    canale: cmcc
+    id: dBO5lYSNV54
+    titolo: Anchoring overshoot in reality
+    url: https://youtu.be/dBO5lYSNV54
   cmcc-dEqkw9wZkUA:
     canale: cmcc
     id: dEqkw9wZkUA
@@ -14577,6 +14587,11 @@ video:
     id: LEN55dyOKw8
     titolo: TOOTHPASTE DEF 16X9 SUB Francesco Cerbini 1 rev1
     url: https://youtu.be/LEN55dyOKw8
+  geopop-LHOSP6nlp1E:
+    canale: geopop
+    id: LHOSP6nlp1E
+    titolo: Il Cifrario di Cesare è uno dei più antichi sistemi crittografici conosciuti. Vediamo come funziona!
+    url: https://youtu.be/LHOSP6nlp1E
   geopop-LIkD2FnEt8g:
     canale: geopop
     id: LIkD2FnEt8g
@@ -16027,6 +16042,11 @@ video:
     id: XZWM_SZUhsk
     titolo: Prima o Dopo? EP. 3 - Cucinare Stanca e Piuttosto Che
     url: https://youtu.be/XZWM_SZUhsk
+  geopop-XfkhKCEHvzI:
+    canale: geopop
+    id: XfkhKCEHvzI
+    titolo: Una pietra che si scalda da sola…? Questa è la zeolite, usata… perfino in cucina. Scopri come!
+    url: https://youtu.be/XfkhKCEHvzI
   geopop-XuXND7c9ZN8:
     canale: geopop
     id: XuXND7c9ZN8
@@ -16652,6 +16672,11 @@ video:
     id: dJJCinSP7Vk
     titolo: La spiegazione delle rotte migratorie dall’Africa all’Italia attraverso una mappa e i dati ufficiali
     url: https://youtu.be/dJJCinSP7Vk
+  geopop-dZ93XLolung:
+    canale: geopop
+    id: dZ93XLolung
+    titolo: La sonda Voyager 1 è l'oggetto realizzato dall'Uomo più lontano dalla Terra. Qual è il suo scopo?
+    url: https://youtu.be/dZ93XLolung
   geopop-dZ_D6gmy6FY:
     canale: geopop
     id: dZ_D6gmy6FY
@@ -16752,6 +16777,11 @@ video:
     id: eXkVgJpemLk
     titolo: '#6 FREE WEBINAR - Le aziende dell''oil & gas e principali profili professionali'
     url: https://youtu.be/eXkVgJpemLk
+  geopop-eb-AAsaeo8E:
+    canale: geopop
+    id: eb-AAsaeo8E
+    titolo: 'Dal sesso con cui nasciamo all''identità di genere: come si sviluppa l''identità sessuale?'
+    url: https://youtu.be/eb-AAsaeo8E
   geopop-eboMivSORiA:
     canale: geopop
     id: eboMivSORiA
@@ -17007,6 +17037,11 @@ video:
     id: gsZ-We120mw
     titolo: The history of the death penalty in Italy and the world, from its origins to the countries where ...
     url: https://youtu.be/gsZ-We120mw
+  geopop-gscflckGzJU:
+    canale: geopop
+    id: gscflckGzJU
+    titolo: 'Strumenti musicali vs AI: dentro lo studio di registrazione di Lucio Corsi'
+    url: https://youtu.be/gscflckGzJU
   geopop-gt62HVw8o1A:
     canale: geopop
     id: gt62HVw8o1A
@@ -18172,6 +18207,11 @@ video:
     id: rcac5hRB4Gw
     titolo: 'From a small mistake to a major discovery: how does scientific research work? with @Metamostri'
     url: https://youtu.be/rcac5hRB4Gw
+  geopop-rgZYMR9N_wg:
+    canale: geopop
+    id: rgZYMR9N_wg
+    titolo: 'Assassinio di J. F. Kennedy del 1963 in 3D: l’analisi balistica e le teorie del complotto'
+    url: https://youtu.be/rgZYMR9N_wg
   geopop-rlIsga8D2rk:
     canale: geopop
     id: rlIsga8D2rk
@@ -19397,6 +19437,11 @@ video:
     id: NAwg_J6-dno
     titolo: Le Radici Spezzate, Marsica 1915 – 2015 (Parte 3)
     url: https://youtu.be/NAwg_J6-dno
+  ingv-terremoti-NNl61pTtmkI:
+    canale: ingv-terremoti
+    id: NNl61pTtmkI
+    titolo: 'Quella domenica sera: il terremoto in Irpinia e Basilicata del 23 novembre 1980'
+    url: https://youtu.be/NNl61pTtmkI
   ingv-terremoti-NeG7TE6IihU:
     canale: ingv-terremoti
     id: NeG7TE6IihU
@@ -32472,6 +32517,11 @@ video:
     id: 8MjAWLhRIWk
     titolo: 'L’aurora boreale vista dallo spazio durante la tempesta solare: “Era come navigare dentro la luce”'
     url: https://youtu.be/8MjAWLhRIWk
+  rai-news-8PtaWm8gY1w:
+    canale: rai-news
+    id: 8PtaWm8gY1w
+    titolo: 'Il Cristo Redentore avvolto dalle nuvole: lo spettacolo nei cieli di Rio'
+    url: https://youtu.be/8PtaWm8gY1w
   rai-news-8QJjT0l3RQU:
     canale: rai-news
     id: 8QJjT0l3RQU
@@ -34132,6 +34182,11 @@ video:
     id: I9cw8sGzmmQ
     titolo: 'Red and white balloons for Lorena’s final farewell, the homily: "A ''no'' must be respected"'
     url: https://youtu.be/I9cw8sGzmmQ
+  rai-news-IBZmu9OvEiU:
+    canale: rai-news
+    id: IBZmu9OvEiU
+    titolo: Sarà Sanremo 2026, ecco i nomi dei sei giovani finalisti
+    url: https://youtu.be/IBZmu9OvEiU
   rai-news-IC6leAjNyg4:
     canale: rai-news
     id: IC6leAjNyg4
@@ -34407,6 +34462,11 @@ video:
     id: K0xMGL1-4Q8
     titolo: 'Trapani: 11-year-old attempts to stab teacher at school live on social media'
     url: https://youtu.be/K0xMGL1-4Q8
+  rai-news-K1TPbV6Yq7k:
+    canale: rai-news
+    id: K1TPbV6Yq7k
+    titolo: Lirio Abbate "Il suicidio di De Gennaro gesto inatteso"
+    url: https://youtu.be/K1TPbV6Yq7k
   rai-news-K35V1XakbNI:
     canale: rai-news
     id: K35V1XakbNI
@@ -34552,6 +34612,11 @@ video:
     id: KzzVOVgkgOE
     titolo: 'Salario giusto, lotta a contratti pirata e caporalato digitale: ecco il nuovo dl lavoro'
     url: https://youtu.be/KzzVOVgkgOE
+  rai-news-L-ZPaT8tY70:
+    canale: rai-news
+    id: L-ZPaT8tY70
+    titolo: I Vigili del Fuoco hanno soccorso un cane e il suo proprietario caduto in un dirupo
+    url: https://youtu.be/L-ZPaT8tY70
   rai-news-L-bhkNsZgM8:
     canale: rai-news
     id: L-bhkNsZgM8
@@ -35437,6 +35502,11 @@ video:
     id: PvyfyStVGww
     titolo: Physicist Cervellati dies after being struck by an e-scooter
     url: https://youtu.be/PvyfyStVGww
+  rai-news-Q0WBWBX-5uU:
+    canale: rai-news
+    id: Q0WBWBX-5uU
+    titolo: Italian News in English - 23/11/2026
+    url: https://youtu.be/Q0WBWBX-5uU
   rai-news-Q0ZJuFl29T0:
     canale: rai-news
     id: Q0ZJuFl29T0
@@ -35857,6 +35927,11 @@ video:
     id: Se1hogNcpzM
     titolo: 'A robot even delivers babies: in China, even pregnancy is entrusted to machines.'
     url: https://youtu.be/Se1hogNcpzM
+  rai-news-SgK075b5CaY:
+    canale: rai-news
+    id: SgK075b5CaY
+    titolo: Una raffica di esplosioni e il viadotto viene giù
+    url: https://youtu.be/SgK075b5CaY
   rai-news-SipsWjIInAg:
     canale: rai-news
     id: SipsWjIInAg
@@ -36412,6 +36487,11 @@ video:
     id: WE0O1RMIfy8
     titolo: 'L''Italia nello spazio: lanciati altri sette satelliti della costellazione Iride'
     url: https://youtu.be/WE0O1RMIfy8
+  rai-news-WGkorI5m1d8:
+    canale: rai-news
+    id: WGkorI5m1d8
+    titolo: 'L''abbraccio a Paolo Belli: l''inedito dal vivo e il valzer con Anastasia Kuzmina'
+    url: https://youtu.be/WGkorI5m1d8
   rai-news-WI8vlkoGqMo:
     canale: rai-news
     id: WI8vlkoGqMo
@@ -37992,6 +38072,11 @@ video:
     id: fFcFNl5S3TE
     titolo: Girl dies of diphtheria, parents sue hospitals
     url: https://youtu.be/fFcFNl5S3TE
+  rai-news-fHtgBLx-C9c:
+    canale: rai-news
+    id: fHtgBLx-C9c
+    titolo: 'Marquez campione del mondo di Motogp, la festa dei tifosi: "Marc is on fire"'
+    url: https://youtu.be/fHtgBLx-C9c
   rai-news-fJk52tI9lfY:
     canale: rai-news
     id: fJk52tI9lfY
@@ -38102,6 +38187,11 @@ video:
     id: fxVJ858tNJ4
     titolo: 'Does AI decide how beautiful we are? The face becomes an algorithm: from the boom in requests to ...'
     url: https://youtu.be/fxVJ858tNJ4
+  rai-news-fxZVGZorm20:
+    canale: rai-news
+    id: fxZVGZorm20
+    titolo: 'Jensen Huang torna al comando di Nvidia: la decisione inattesa del cda'
+    url: https://youtu.be/fxZVGZorm20
   rai-news-fyQlyQcadmw:
     canale: rai-news
     id: fyQlyQcadmw
@@ -38972,6 +39062,11 @@ video:
     id: lgWz3KsXCqM
     titolo: 'Il videomessaggio del romanista Dovbyk al piccolo eroe di Kyiv: "Artur, vieni all’Olimpico":'
     url: https://youtu.be/lgWz3KsXCqM
+  rai-news-lh1SSg43oUY:
+    canale: rai-news
+    id: lh1SSg43oUY
+    titolo: 'Il fallimento della Cop31: il punto nodale delle emissioni fossili, non menzionate nel documento'
+    url: https://youtu.be/lh1SSg43oUY
   rai-news-lk3o4VGKAU4:
     canale: rai-news
     id: lk3o4VGKAU4
@@ -39212,6 +39307,11 @@ video:
     id: n6ZUMK5yf5g
     titolo: Sanremo 2026 -  Fulminacci alle prove con l'orchestra
     url: https://youtu.be/n6ZUMK5yf5g
+  rai-news-n7PNNUT01e4:
+    canale: rai-news
+    id: n7PNNUT01e4
+    titolo: Luca Parmitano, prove generali per il ritorno sulla Luna
+    url: https://youtu.be/n7PNNUT01e4
   rai-news-n81u3pP5V30:
     canale: rai-news
     id: n81u3pP5V30
@@ -39807,6 +39907,11 @@ video:
     id: qHVDJQqlXA8
     titolo: 'Cecilia Sala arrested in Iran. Calabresi (Chora Media): "She had a regular journalist visa"'
     url: https://youtu.be/qHVDJQqlXA8
+  rai-news-qL-woRoTstc:
+    canale: rai-news
+    id: qL-woRoTstc
+    titolo: 'Sostanza sconosciuta nell''aria: gli spettatori fuggono dal concerto del rapper Don Toliver'
+    url: https://youtu.be/qL-woRoTstc
   rai-news-qMx34tsQKPQ:
     canale: rai-news
     id: qMx34tsQKPQ
@@ -39912,6 +40017,11 @@ video:
     id: qtcE1Gc53PQ
     titolo: TOSCA - "I have loved everything"
     url: https://youtu.be/qtcE1Gc53PQ
+  rai-news-qteJcrZzC-k:
+    canale: rai-news
+    id: qteJcrZzC-k
+    titolo: La marcia degli studenti per avere edifici scolastici più sicuri
+    url: https://youtu.be/qteJcrZzC-k
   rai-news-quP5lH5yW4w:
     canale: rai-news
     id: quP5lH5yW4w
@@ -40742,6 +40852,11 @@ video:
     id: vYdVsbv6jys
     titolo: Cuba, vista a sorpresa del capo della Cia
     url: https://youtu.be/vYdVsbv6jys
+  rai-news-vaMeAk9YWGY:
+    canale: rai-news
+    id: vaMeAk9YWGY
+    titolo: 'Sinner vola in Finlandia per operarsi al ginocchio: salta gli Australian Open'
+    url: https://youtu.be/vaMeAk9YWGY
   rai-news-vbEqbjALfbM:
     canale: rai-news
     id: vbEqbjALfbM
@@ -41122,6 +41237,11 @@ video:
     id: y-td3YmvvYQ
     titolo: Diete detox, sì ma occhio alle bufale
     url: https://youtu.be/y-td3YmvvYQ
+  rai-news-y3HiE700SsU:
+    canale: rai-news
+    id: y3HiE700SsU
+    titolo: 'Mattarella sul fisco: "Per pagare di meno bisogna contribuire tutti"'
+    url: https://youtu.be/y3HiE700SsU
   rai-news-y3wgRfYmDNU:
     canale: rai-news
     id: y3wgRfYmDNU
@@ -41532,6 +41652,11 @@ video:
     id: Bmv-4kjPWZ8
     titolo: Il messaggio segreto dei terremoti
     url: https://youtu.be/Bmv-4kjPWZ8
+  solarino-sismologo-Ckh22ULpsMw:
+    canale: solarino-sismologo
+    id: Ckh22ULpsMw
+    titolo: Allerta Terremoti su Google Android. Parte seconda
+    url: https://youtu.be/Ckh22ULpsMw
   solarino-sismologo-CrcEzj2IFTU:
     canale: solarino-sismologo
     id: CrcEzj2IFTU
@@ -41557,6 +41682,11 @@ video:
     id: DkvPu_GEPRg
     titolo: Terremoti in pillole 4. Dove sono i terremoti ?
     url: https://youtu.be/DkvPu_GEPRg
+  solarino-sismologo-ELskek7_PGI:
+    canale: solarino-sismologo
+    id: ELskek7_PGI
+    titolo: Allerta Terremoti su Google Android. Parte terza
+    url: https://youtu.be/ELskek7_PGI
   solarino-sismologo-EkPoraRnqYA:
     canale: solarino-sismologo
     id: EkPoraRnqYA
@@ -41627,6 +41757,11 @@ video:
     id: K9bx7G5jc7k
     titolo: 'Un terremoto al giorno: 16 gennaio'
     url: https://youtu.be/K9bx7G5jc7k
+  solarino-sismologo-KIIZ-D9gpmE:
+    canale: solarino-sismologo
+    id: KIIZ-D9gpmE
+    titolo: Allerta Terremoti su Google Android. Parte prima
+    url: https://youtu.be/KIIZ-D9gpmE
   solarino-sismologo-KXzZ5LJvsX8:
     canale: solarino-sismologo
     id: KXzZ5LJvsX8
