@@ -149,7 +149,9 @@ body.inf-body {
   padding: 1.5rem;
 }
 .inf-end .bravi {
-  font-size: 2.5rem;
+  /* Interlinea stretta: su telefono «Sei un campione!» va su due righe molto distanti. */
+  font-size: clamp(1.9rem, 8vw, 2.5rem);
+  line-height: 1.15;
   color: var(--inf-verde);
   font-weight: 900;
   margin-bottom: .5rem;
