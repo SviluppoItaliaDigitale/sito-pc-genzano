@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'SOCCORSO', cat: 'Aiuto in emergenza', hint: 'Chi corre ad aiutare i feriti',
         explain: 'Il primo gesto di soccorso è chiamare il 112. Gli adulti formati sanno fare anche il massaggio cardiaco in attesa dell\'ambulanza.' },
       { w: 'ESTINTORE', cat: 'Antincendio', hint: 'Spegne piccole fiamme',
-        explain: 'L\'estintore deve essere a portata di mano e controllato da un tecnico ogni sei mesi. Solo gli adulti formati lo usano.' },
+        explain: 'L\'estintore deve essere a portata di mano e controllato regolarmente da un tecnico qualificato, con la cadenza indicata dalla norma UNI 9994-1. Solo gli adulti formati lo usano.' },
       { w: 'ASCENSORE', cat: 'Da evitare', hint: 'Mai durante un\'evacuazione',
         explain: 'In sisma o incendio, l\'ascensore può bloccarsi tra i piani. Sempre le scale, mai l\'ascensore.' },
       { w: 'CAPOFILA', cat: 'Evacuazione', hint: 'Guida la fila della classe',
