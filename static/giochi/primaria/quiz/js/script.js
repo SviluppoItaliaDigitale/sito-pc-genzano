@@ -1036,14 +1036,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'protezione-civile',
-            question: 'Di che colore è la divisa operativa dei volontari di Protezione Civile?',
+            question: 'Perché le divise dei volontari di Protezione Civile hanno colori vivaci e bande che riflettono la luce?',
             answers: [
-                { text: 'Rosso', correct: false },
-                { text: 'Giallo ad alta visibilità, con bande che riflettono la luce', correct: true },
-                { text: 'Verde', correct: false },
-                { text: 'Viola', correct: false }
+                { text: 'Per farsi vedere bene, anche di notte o con poca luce', correct: true },
+                { text: 'Per fare più caldo', correct: false },
+                { text: 'Per sembrare più alti', correct: false },
+                { text: 'Solo per bellezza', correct: false }
             ],
-            explanation: 'La divisa operativa dei volontari è gialla ad alta visibilità, con bande che riflettono la luce: così si vedono bene anche di notte o con poca luce.'
+            explanation: 'I colori vivaci e le bande riflettenti servono a farsi vedere bene, anche di notte o con poca luce, durante i servizi.'
         },
         {
             category: 'protezione-civile',
