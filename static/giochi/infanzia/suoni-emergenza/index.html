@@ -30,6 +30,9 @@
       width: 100%; min-height: 120px; flex-direction: column;
       background: #fff; color: var(--inf-testo); border: 3px solid var(--inf-blu);
     }
+    /* Risposta giusta: fondo verde, testo bianco (4,8:1; il blu scuro sul verde era 2,7:1). */
+    .scelta .inf-big-btn.correct { color: #fff; border-color: var(--inf-verde); }
+    .scelta .inf-big-btn.wrong { border-color: var(--inf-rosso); }
     .scelta .inf-big-btn .emo { font-size: 3rem; line-height: 1; }
     .scelta .inf-big-btn .lbl { font-size: 1rem; }
     .ascolta {
@@ -41,6 +44,8 @@
     }
     .ascolta:hover { transform: translateY(-2px); }
     .wave { display:inline-block; width: 80px; }
+    /* Link dei crediti dei suoni alti almeno 44 px anche con il dito (erano 20 px). */
+    details li a, details p a { display: inline-block; padding: .7rem 0; }
     /* Tip didattico: cosa fare quando si sente quel suono. */
     .azione-tip {
       display: block;
@@ -112,12 +117,13 @@
         <li>Campanella della scuola: «<span lang="en">School Bell</span>» di civvy (<a href="https://freesound.org/s/620392/" rel="noopener noreferrer" target="_blank">freesound.org/s/620392<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
         <li>Rilevatore di fumo: «<span lang="en">Smoke detector alarm, close perspective</span>» di SpliceSound (<a href="https://freesound.org/s/369848/" rel="noopener noreferrer" target="_blank">freesound.org/s/369848<span class="visually-hidden"> (si apre in una nuova finestra)</span></a>)</li>
       </ul>
-      <p>La sirena di ambulanza e pompieri è costruita nel browser con le note e i tempi del decreto del Ministero dei Trasporti del 17 ottobre 1980 (392 e 660 Hz, ciclo di 3 secondi). Polizia, allarme di casa, radio e IT-alert sono suoni di esempio costruiti nel browser: quello vero di IT-alert è diverso. Se una registrazione non si carica, il gioco usa un suono costruito nel browser.</p>
+      <p>La sirena di ambulanza e pompieri è costruita nel browser con le note e i tempi del decreto del Ministero dei Trasporti del 17 ottobre 1980 (392 e 660 Hz, ciclo di circa 3 secondi). Polizia, allarme di casa, radio e IT-alert sono suoni di esempio costruiti nel browser: quello vero di IT-alert è diverso. Se una registrazione non si carica, il gioco usa un suono costruito nel browser.</p>
     </details>
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -216,7 +222,15 @@
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
+    var inPassaggio = false;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
     function start(){
+      // Doppio tocco su «Iniziamo» o «Ancora»: la partita parte una volta sola.
+      if (!game.classList.contains('hide')) return;
+      inPassaggio = false;
+      sbloccoAl = Date.now() + 500;
       if (window.AudioSintetico) window.AudioSintetico.init();
       queue = shuffle(SUONI.slice());
       idx = 0; stars = 0;
@@ -230,7 +244,8 @@
     function show(){
       if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
       var target = queue[idx];
-      var roundN = idx < 4 ? 1 : 2;
+      // Due round della stessa lunghezza (prima: 4 suoni nel primo e 8 nel secondo).
+      var roundN = idx < Math.ceil(queue.length / 2) ? 1 : 2;
       levelBadge.textContent = 'Round ' + roundN + ' di 2';
       scelta.innerHTML = '';
       feedback.textContent = '';
@@ -252,6 +267,8 @@
     }
 
     function scegli(scelto, target, btn){
+      if (inPassaggio || Date.now() < sbloccoAl) return;
+      inPassaggio = true;
       var btns = scelta.querySelectorAll('.inf-big-btn');
       btns.forEach(function(b){ b.disabled = true; });
       if (window.AudioSintetico && window.AudioSintetico.ferma) window.AudioSintetico.ferma();
@@ -264,12 +281,14 @@
         // sente quel suono. Crea il legame "suono -> reazione" (livello 2
         // implicito: non solo identifica, ma sai cosa fare).
         feedback.innerHTML = '✅ Bravo! ' + target.era + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
         feedback.innerHTML = '🐢 ' + target.era + '.<br><span class="azione-tip">💡 ' + target.azione + '</span>';
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         if (window.GameCoach && window.GameCoach.hint) {
           if (target.consiglio) {
@@ -280,6 +299,7 @@
         }
       }
       setTimeout(function(){
+        inPassaggio = false;
         idx++;
         if (idx >= queue.length) finish();
         else show();

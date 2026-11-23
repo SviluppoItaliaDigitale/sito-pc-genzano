@@ -4,7 +4,7 @@ description: "Corsi per volontari, materiali per le scuole, giochi educativi e r
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-11-20"
+dataUltimaRevisione: "2026-11-23"
 ---
 
 La formazione aiuta volontari, cittadini e scuole a riconoscere i rischi e ad agire con più sicurezza. In questa pagina trovi i percorsi principali e i materiali più utili.
@@ -54,6 +54,8 @@ Simulatore d'esame, quiz di allenamento, scenari guidati e presentazioni dei mod
 Le illustrazioni didattiche sono affiancate da **testo esplicativo**, descrizioni alternative e indicazioni stampabili. Un'immagine aiuta a comprendere un passaggio, ma non deve essere l'unico modo per ottenere un'informazione importante.
 
 Il sito raccoglie materiali per docenti, studenti e famiglie. Sono disponibili kit per fasce d'età, schede stampabili, attività inclusive, giochi educativi, storie e percorsi pronti.
+
+**Grazie a docenti ed educatori.** Molti di questi materiali sono nati o migliorati grazie ai suggerimenti che docenti ed educatori ci mandano con costanza: segnalazioni dalle classi, idee per temi nuovi, richieste di adattamento alle diverse età. Per mandarne uno scrivi dalla pagina [Contatti](/contatti/).
 
 ### Percorso guidato per scuole e famiglie
 

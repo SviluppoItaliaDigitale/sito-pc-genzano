@@ -21,13 +21,14 @@
     border-color: #2e7d32; background: #e8f5e9; pointer-events: none;
     animation: popIn 0.4s ease;
 }
-.item-card.correct .item-icon::after { content: ' \2713'; color: #2e7d32; font-size: 1rem; }
+.item-card.correct .item-icon::after { content: ' \2713'; color: #1b5e20; font-size: 1.1rem; font-weight: 700; }
 .item-card.wrong {
     border-color: #c62828; background: #ffebee; pointer-events: none;
     animation: shake 0.4s ease;
 }
 .item-card.wrong .item-icon { opacity: 0.4; }
-.item-card.wrong .item-name { text-decoration: line-through; color: #999; }
+.item-card.wrong .item-name { text-decoration: line-through; color: #842029; } /* 7:1 sul rosa; il grigio di prima era 2,5:1 */
+.item-card.wrong::after { content: '\2717'; display: block; color: #b02a37; font-weight: 700; line-height: 1; margin-top: 4px; }
 @keyframes popIn {
     0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); }
 }
@@ -45,7 +46,7 @@
 }
 .zaino-fill {
     position: absolute; bottom: 0; left: 0; right: 0; height: 0;
-    background: linear-gradient(to top, #2e7d32, #66bb6a);
+    background: #2e7d32;
     transition: height 0.5s ease; border-radius: 0 0 9px 9px;
 }
 .feedback-toast {
@@ -94,4 +95,26 @@
   border-color: #003366;
   background: #e7f1ff;
 }
-.mod-zaino input { margin-right: .5rem; vertical-align: middle; }
+.mod-zaino input { margin-right: .5rem; vertical-align: middle; width: 1.25rem; height: 1.25rem; }
+
+/* Meno movimento: niente scatti sulle carte e il messaggio resta fermo
+   finché lo script non lo toglie (con l'animazione azzerata sparirebbe). */
+@media (prefers-reduced-motion: reduce) {
+  .item-card, .zaino-fill, .mod-zaino { transition: none; }
+  .item-card:hover { transform: none; }
+  .item-card.correct, .item-card.wrong, .feedback-toast { animation: none; }
+}
+html.a11y-pause-anim .item-card.correct,
+html.a11y-pause-anim .item-card.wrong,
+html.a11y-pause-anim .feedback-toast { animation: none; }
+/* Sotto i 992 px c'è la barra fissa del sito in basso: il messaggio sale sopra */
+@media (max-width: 991.98px) {
+  .feedback-toast { bottom: 96px; max-width: calc(100% - 32px); text-align: center; }
+}
+
+/* Bootstrap Italia, dopo un tocco, impone "border-color: inherit !important"
+   (attributo data-focus-mouse) e il bordo rosso o verde diventava nero:
+   qui si rimettono i colori che dicono giusto/sbagliato. */
+.items-grid .item-card[data-focus-mouse] { border-color: #dee2e6 !important; }
+.items-grid .item-card.correct { border-color: #2e7d32 !important; }
+.items-grid .item-card.wrong { border-color: #c62828 !important; }

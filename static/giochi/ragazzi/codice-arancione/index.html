@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Codice Arancione — Giochi Ragazzi</title>
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/ragazzi/codice-arancione/">
-  <meta name="description" content="Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli logistici e di sicurezza.">
+  <meta name="description" content="Allestisci un'area di accoglienza per gli sfollati rispettando i vincoli logistici e di sicurezza.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/giochi/ragazzi/assets/ragazzi.css">
   <link rel="stylesheet" href="/giochi/assets/css/coach.css">
   <style>
-    .coa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .coa-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 1rem; }
     @media (max-width: 800px) { .coa-grid { grid-template-columns: 1fr; } }
     .risorse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .5rem; }
     .risorsa {
@@ -26,6 +26,9 @@
       font-size: .88rem;
     }
     .risorsa:hover { border-color: var(--rag-blu); }
+    .risorsa { min-height: 48px; text-align: left; }
+    .risorsa small { flex-shrink: 0; font-weight: 700; }
+    #verifica { min-height: 44px; }
     .risorsa.attiva { background: var(--rag-blu); color: #fff; border-color: var(--rag-blu); }
     .risorsa .q {
       position: absolute; top: -8px; right: -8px;
@@ -69,6 +72,11 @@
     @media (prefers-reduced-motion: reduce) {
       .scenario-icon { transition: none; }
     }
+
+    /* Revisione grafica: bordo delle risorse visibile (3:1 sul bianco) e
+       bordo di stato conservato dopo il tocco (vedi giochi.css, --giochi-bordo). */
+    .risorsa { border-color: #7d8ea3; --giochi-bordo: #7d8ea3; }
+    .risorsa:hover, .risorsa.attiva { --giochi-bordo: var(--rag-blu); }
   </style>
 </head>
 <body class="rag-body" data-coach-game="codice-arancione">
@@ -85,7 +93,7 @@
           </ol>
         </nav>
         <h1>Codice Arancione</h1>
-        <p class="lead">Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli.</p>
+        <p class="lead">Allestisci un'area di accoglienza per gli sfollati rispettando i vincoli.</p>
       </div>
     </div>
 
@@ -95,7 +103,7 @@
 
           <div id="intro" class="rag-panel">
             <h2>Riunione informativa</h2>
-            <p>Sei <strong>Funzionario di sala operativa</strong> al COC. È stato dichiarato un <strong>Codice Arancione</strong>: devi allestire un'area di accoglienza per gli sfollati nel palazzetto comunale rispettando i vincoli logistici, sanitari e di sicurezza.</p>
+            <p>Sei <strong>Funzionario di sala operativa</strong> al COC, che il Sindaco ha attivato dopo un'emergenza: devi allestire un'area di accoglienza per gli sfollati nel palazzetto comunale rispettando i vincoli logistici, sanitari e di sicurezza.</p>
             <p>Ogni partita propone uno scenario diverso (frana, alluvione, sisma, incendio boschivo) con popolazione, budget e priorità specifiche. <strong>Attento agli eventi sopravvenuti</strong>: durante l'allestimento la situazione può cambiare.</p>
             <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-bounding-box me-1"></i> Apri il campo</button>
           </div>
@@ -124,7 +132,7 @@
             <div class="coa-grid">
               <div class="rag-panel">
                 <h3 class="h6">Risorse da allestire</h3>
-                <p class="small text-muted">Clicca per aggiungere/rimuovere.</p>
+                <p class="small text-muted">Tocca una risorsa per aggiungerla, toccala di nuovo per toglierla. Il numero a destra è il costo.</p>
                 <div id="risorse" class="risorse-grid"></div>
               </div>
               <div class="rag-panel">
@@ -161,6 +169,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -181,13 +190,13 @@
       { id: 'ludoteca', label: 'Area bambini protetta', costo: 15, bambini: true, icon: 'bi-balloon-heart-fill' },
       { id: 'generatore', label: 'Generatore elettrico + illuminazione', costo: 20, essenziale: 'elettricita', icon: 'bi-lightning-charge' },
       { id: 'telecom', label: 'Ponte radio + wifi emergenza', costo: 15, essenziale: 'telecom', icon: 'bi-broadcast' },
-      { id: 'sicurezza', label: 'Servizio d\'ordine (VVUU + volontari)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' },
+      { id: 'sicurezza', label: 'Vigilanza dell\'area (Polizia locale)', costo: 15, essenziale: 'sicurezza', icon: 'bi-shield-fill' },
       { id: 'acqua', label: 'Cisterna acqua potabile (1500 L)', costo: 15, essenziale: 'acqua', icon: 'bi-droplet-half' },
       { id: 'riscaldamento', label: 'Riscaldatori d\'aria + coperte', costo: 20, essenziale: 'caldo', icon: 'bi-thermometer-sun' },
-      { id: 'climatizzazione', label: 'Ventilatori + ombrari', costo: 18, essenziale: 'fresco', icon: 'bi-wind' }
+      { id: 'climatizzazione', label: 'Ventilatori + gazebo ombreggianti', costo: 18, essenziale: 'fresco', icon: 'bi-wind' }
     ];
 
-    /* 3 scenari con popolazione, vincoli e priorita' diverse. Random a inizio
+    /* 4 scenari con popolazione, vincoli e priorita' diverse. Random a inizio
        partita. Le priorita' specifiche (es. "fresco" in incendio AIB estivo)
        diventano essenziali nella checklist finale. */
     var SCENARI = [
@@ -212,7 +221,7 @@
         titolo: 'Codice Arancione — Alluvione zona Lago',
         icon: 'bi-water',
         coloreScenario: '#0369a1',
-        briefing: 'Esondazione del lago di Nemi dopo 48h di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 con disabilità, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
+        briefing: 'Frane e allagamenti sui versanti del lago di Nemi dopo 48 ore di pioggia: <strong>150 persone</strong> evacuate (25 anziani, 10 con disabilità, 35 bambini). Strade principali interrotte. Budget <strong>180 unità</strong>.',
         popolazione: 150, anziani: 25, disabili: 10, bambini: 35,
         budget: 180,
         priorita: ['elettricita', 'acqua', 'telecom'],
@@ -259,8 +268,19 @@
 
     /* Stato di partita */
     var scenario = null;
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
     var selezione = {};
     var sopravvenutoFatto = false;
+    // Doppio tocco (LIM): un secondo tocco entro 350 ms e' la coda del primo e non
+    // cambia le risorse; «Allestimento pronto» vale una volta.
+    var ultimoTocco = { id: null, t: 0 }, finito = false;
 
     var intro = document.getElementById('intro'),
         game = document.getElementById('game'),
@@ -286,6 +306,8 @@
       scenario = JSON.parse(JSON.stringify(SCENARI[Math.floor(Math.random() * SCENARI.length)]));
       selezione = {};
       sopravvenutoFatto = false;
+      finito = false;
+      bloccaTocchi();
       intro.classList.add('hide'); end.classList.add('hide'); game.classList.remove('hide');
       sopravBox.classList.add('hide');
       // Aggiorna intestazione e briefing
@@ -307,8 +329,14 @@
         var b = document.createElement('button');
         b.className = 'risorsa' + (attiva ? ' attiva' : '');
         b.type = 'button';
-        b.innerHTML = '<i class="bi ' + r.icon + '"></i> <span>' + r.label + '</span><small class="ms-auto">' + r.costo + '</small>' + (attiva ? '<span class="q">✓</span>' : '');
+        b.innerHTML = '<i class="bi ' + r.icon + '"></i> <span>' + r.label + '</span><small class="ms-auto">' + r.costo + '<span class="visually-hidden"> unità di budget</span></small>' + (attiva ? '<span class="q" aria-hidden="true"><i class="bi bi-check-lg"></i></span>' : '');
+        b.setAttribute('aria-pressed', attiva ? 'true' : 'false');
         b.addEventListener('click', function(){
+          var ora = Date.now();
+          // vale per qualsiasi risorsa: quando compare l'evento sopravvenuto la
+          // griglia scende e il secondo tocco cadrebbe su un'altra risorsa
+          if (ora - ultimoTocco.t < 350) return;
+          ultimoTocco = { id: r.id, t: ora };
           if (attiva) delete selezione[r.id];
           else selezione[r.id] = r;
           render();
@@ -360,16 +388,21 @@
         });
       }
       // Mostra il box sopravvenuto
-      sopravTit.textContent = '🔔 ' + scenario.sopravvenuto.titolo;
+      sopravTit.innerHTML = '<i class="bi bi-bell-fill me-1" aria-hidden="true"></i>';
+      sopravTit.appendChild(document.createTextNode(scenario.sopravvenuto.titolo));
+      if (window.AudioSintetico && window.AudioSintetico.campanello) window.AudioSintetico.campanello();
       sopravTxt.innerHTML = scenario.sopravvenuto.testo + '<br><small class="text-muted">Budget aggiornato: ' + scenario.budget + ' unità · Posti letto target: ' + scenario.popolazione + '</small>';
       sopravBox.classList.remove('hide');
       targetPosti.textContent = scenario.popolazione;
       aggiornaDashboard();
-      // Auto-nasconde il box dopo 8 secondi (ma resta lo stato aggiornato)
-      setTimeout(function(){ sopravBox.classList.add('hide'); }, 8000);
+      // Il riquadro resta visibile fino alla fine dell'allestimento: sparire
+      // dopo pochi secondi toglieva l'informazione a chi legge piu' lentamente
+      // (WCAG 2.2.1, tempi regolabili).
     }
 
     document.getElementById('verifica').addEventListener('click', function(){
+      if (finito) return;
+      finito = true;
       var tot = 0, posti = 0, ig = 0, pasti = 0;
       var san = false, access = false, bambini = false;
       var prioCoperte = {};
@@ -386,12 +419,12 @@
       });
 
       var pop = scenario.popolazione;
-      var bagniMin = Math.ceil(pop / 25);
+      var bagniMin = Math.ceil(pop / 20); // standard Sphere 2018: almeno 1 bagno condiviso ogni 20 persone
       var pastiMin = pop;
 
       var check = [];
       check.push({ ok: posti >= pop, msg: 'Posti letto ≥ ' + pop + ' (hai ' + posti + ')', punti: 20 });
-      check.push({ ok: ig >= bagniMin, msg: 'Bagni ≥ ' + bagniMin + ' (hai ' + ig + ') — minimo 1 ogni 25 persone', punti: 15 });
+      check.push({ ok: ig >= bagniMin, msg: 'Bagni ≥ ' + bagniMin + ' (hai ' + ig + ') — almeno 1 ogni 20 persone (standard Sphere)', punti: 15 });
       check.push({ ok: pasti >= pastiMin, msg: 'Pasti ≥ ' + pastiMin + '/giorno (hai ' + pasti + ')', punti: 15 });
       check.push({ ok: san, msg: 'Copertura sanitaria presente', punti: 10 });
       check.push({ ok: access, msg: 'Soluzioni accessibili alle persone con disabilità', punti: 10 });
@@ -401,7 +434,7 @@
         var label = ({
           elettricita: 'Alimentazione elettrica e illuminazione',
           telecom: 'Telecomunicazioni di emergenza',
-          sicurezza: 'Servizio d\'ordine',
+          sicurezza: 'Vigilanza dell\'area (Polizia locale)',
           acqua: 'Cisterna acqua potabile',
           fresco: 'Climatizzazione (ondata calore)',
           caldo: 'Riscaldamento (freddo)',
@@ -417,6 +450,7 @@
     });
 
     function finish(score, maxPunti, check){
+      bloccaTocchi();
       game.classList.add('hide');
       end.classList.remove('hide');
       document.getElementById('final-punti').textContent = score;

@@ -20,29 +20,53 @@
   }
 }
 .btn-grid .btn {
+  /* Le risposte sono pulsanti veri: bordo e fondo bianco. Prima avevano
+     solo la classe .btn, senza colore, e sembravano link sparsi. */
   padding: 1rem;
   font-size: 1.05rem;
   font-weight: 600;
+  line-height: 1.35;
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 56px;
+  background: #fff;
+  border: 2px solid #003366;
+  color: #003366;
+  white-space: normal;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color .2s ease;
 }
-.btn-grid .btn:hover:not(:disabled) {
+.btn-grid .btn:hover:not(:disabled),
+.btn-grid .btn:focus-visible {
+  background: #e7f1ff;
+  color: #003366;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
+.btn-grid .btn:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+/* Dopo la risposta: verde la giusta, rosso quella scelta se sbagliata,
+   le altre restano bianche. Colori scuri per il testo bianco (5,1:1 e
+   6,5:1) e un segno ✓ / ✗ davanti, così non conta solo il colore. */
 .btn-grid .btn.correct {
-  background-color: #28a745 !important;
-  border-color: #28a745 !important;
+  background-color: #1b7a34 !important;
+  border-color: #1b7a34 !important;
   color: #fff !important;
 }
 .btn-grid .btn.wrong {
-  background-color: #dc3545 !important;
-  border-color: #dc3545 !important;
+  background-color: #b02a37 !important;
+  border-color: #b02a37 !important;
   color: #fff !important;
 }
+.btn-grid .btn.correct::before { content: '\2713\00a0'; }
+.btn-grid .btn.wrong::before { content: '\2717\00a0'; }
 .btn-grid .btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
+  cursor: default;
+  opacity: 1;
+}
+.btn-grid .btn:disabled:not(.correct):not(.wrong) {
+  border-color: #ced4da;
+  color: #495057;
 }
 .hide {
   display: none;
@@ -105,8 +129,9 @@
   border: 2px solid #004d99;
   color: #004d99;
   background: #fff;
-  border-radius: 20px;
-  padding: 0.35rem 0.85rem;
+  border-radius: 22px;
+  min-height: 44px;
+  padding: 0.35rem 0.95rem;
   font-weight: 600;
   transition: all 0.2s ease;
 }
@@ -133,3 +158,10 @@
   border-color: #004d99;
   color: #fff;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-grid .btn, .quiz-progress-bar-fill, .category-toggle-btn { transition: none; }
+  .btn-grid .btn:hover:not(:disabled), .btn-grid .btn:focus-visible { transform: none; }
+  .quiz-feedback { animation: none; }
+}
+html.a11y-pause-anim .quiz-feedback { animation: none; }

@@ -21,6 +21,7 @@
   text-decoration: none;
   transition: background .15s, color .15s, transform .15s;
   box-shadow: 0 2px 8px rgba(0, 102, 204, .15);
+  min-height: 44px;
 }
 .coach-trigger:hover,
 .coach-trigger:focus-visible {
@@ -184,6 +185,7 @@ body.rag-body .coach-trigger:focus-visible {
   font-weight: 700;
   cursor: pointer;
   font-size: 1rem;
+  min-height: 44px;
 }
 .coach-btn-close:hover,
 .coach-btn-close:focus-visible {
@@ -205,6 +207,8 @@ body.rag-body .coach-trigger:focus-visible {
   cursor: pointer;
   padding: .25rem .5rem;
   border-radius: 4px;
+  min-width: 44px;
+  min-height: 44px;
 }
 .coach-btn-x:hover,
 .coach-btn-x:focus-visible {
@@ -227,8 +231,11 @@ body.rag-body .coach-trigger:focus-visible {
 }
 .coach-hint strong { color: #6c3e00; }
 .coach-hint a {
-  display: inline-block;
-  margin-top: .3rem;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: .1rem;
   color: #003366;
   font-weight: 700;
   text-decoration: underline;
@@ -270,6 +277,7 @@ body.rag-body .coach-trigger:focus-visible {
   cursor: pointer;
   transition: background .15s, color .15s, transform .12s;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+  min-height: 44px;
 }
 .coach-speak-btn:hover,
 .coach-speak-btn:focus-visible {
@@ -314,10 +322,13 @@ body.inf-body .coach-speak-btn:focus-visible {
   background: #F4B700;
   color: #17324D;
 }
+/* Ragazzi: il pulsante "Ascolta" sta sempre su fondo chiaro (finestra dei
+   consigli o riquadro del suggerimento): testo scuro, mai bianco. Prima era
+   bianco su bianco/giallo chiaro e il testo non si leggeva. */
 body.rag-body .coach-speak-btn {
-  background: rgba(255, 255, 255, .12);
-  border-color: #ffbe2e;
-  color: #fff;
+  background: #fff;
+  border-color: #003366;
+  color: #003366;
 }
 body.rag-body .coach-speak-btn:hover,
 body.rag-body .coach-speak-btn:focus-visible {
@@ -325,11 +336,55 @@ body.rag-body .coach-speak-btn:focus-visible {
   color: #17324D;
 }
 
+/* Pulsante "Ascolta" dentro il suggerimento: largo quanto il testo (il
+   riquadro e' una colonna flex e lo stirava a tutta larghezza), alto 44 px
+   per il tocco sulla LIM, colori leggibili sul giallo chiaro in ogni fascia. */
+.coach-hint .coach-speak-btn,
+body.rag-body .coach-hint .coach-speak-btn,
+body.inf-body .coach-hint .coach-speak-btn {
+  align-self: flex-start;
+  min-height: 44px;
+  background: #fff;
+  border-color: #6c3e00;
+  color: #6c3e00;
+}
+.coach-hint .coach-speak-btn:hover,
+.coach-hint .coach-speak-btn:focus-visible,
+body.rag-body .coach-hint .coach-speak-btn:hover,
+body.rag-body .coach-hint .coach-speak-btn:focus-visible,
+body.inf-body .coach-hint .coach-speak-btn:hover,
+body.inf-body .coach-hint .coach-speak-btn:focus-visible {
+  background: #6c3e00;
+  color: #fff;
+}
+.coach-hint .coach-speak-btn.speaking {
+  background: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .coach-speak-btn,
   .coach-speak-btn.speaking { animation: none !important; transition: none !important; }
 }
+
+/* "Pausa animazioni" del pannello di accessibilita' (le due classi su <html>) */
+html.a11y-pause-anim .coach-backdrop,
+html.a11y-pause-anim .coach-dialog,
+html.a11y-pause-anim .coach-hint,
+html.a11y-pause-anim .coach-trigger,
+html.a11y-pause-anim .coach-speak-btn,
+html.a11y-pause-animations .coach-backdrop,
+html.a11y-pause-animations .coach-dialog,
+html.a11y-pause-animations .coach-hint,
+html.a11y-pause-animations .coach-trigger,
+html.a11y-pause-animations .coach-speak-btn {
+  animation: none !important;
+  transition: none !important;
+}
+html.a11y-pause-anim .coach-trigger:hover,
+html.a11y-pause-animations .coach-trigger:hover { transform: none; }
 
 /* Stampa: nascondi tutto il coach */
 @media print {

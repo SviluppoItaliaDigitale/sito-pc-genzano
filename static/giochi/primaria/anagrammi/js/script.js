@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'ACQUA', cat: 'Scorta fondamentale', hint: 'Si beve e spegne le fiamme',
         explain: 'In emergenza idrica si parla di almeno 4 litri al giorno per persona, per bere e per l\'igiene minima.' },
       { w: 'CASCO', cat: 'Dispositivo di protezione', hint: 'Protegge la testa del volontario',
-        explain: 'I caschi dei volontari (tipo cantiere o AIB) proteggono da oggetti fino a 5 kg che cadono dall\'alto.' },
+        explain: 'Il casco protegge la testa da sassi, rami e oggetti che cadono dall\'alto: i volontari lo indossano nei servizi dove serve.' },
       { w: 'RADIO', cat: 'Comunicazione', hint: 'Trasmette voci anche senza rete cellulare',
         explain: 'Le radio dei volontari (UHF/VHF) funzionano dove la rete telefonica è satura o assente: indispensabili in emergenza.' },
       { w: 'FRANA', cat: 'Rischio del territorio', hint: 'Terreno che scivola a valle',
-        explain: 'I Castelli Romani sono a rischio frana medio: i versanti del cratere possono cedere con piogge intense.' },
+        explain: 'Nei Castelli Romani i versanti ripidi dei crateri, come quello del lago di Nemi, possono franare con le piogge intense.' },
       { w: 'FUOCO', cat: 'Pericolo', hint: 'Brucia e fa salire fumo',
         explain: 'Mai usare l\'ascensore in caso d\'incendio: usa le scale, copri naso e bocca con un panno bagnato.' },
       { w: 'PIOGGIA', cat: 'Fenomeno meteo', hint: 'Cade dal cielo: se intensa diventa allerta',
-        explain: 'Pioggia persistente per molte ore = rischio idrogeologico. Il bollettino del CFR Lazio lo prevede 24h prima.' },
+        explain: 'Pioggia forte per molte ore = rischio di allagamenti e frane. Il bollettino del Centro Funzionale Regionale del Lazio avvisa prima, con i codici colore.' },
       { w: 'NEVE', cat: 'Fenomeno meteo', hint: 'Bianca, fredda, copre i Castelli d\'inverno',
         explain: 'Allerta neve: il Comune attiva il piano neve, sale antighiaccio in strada, talvolta chiusura scuole.' },
       { w: 'VENTO', cat: 'Fenomeno meteo', hint: 'Quando è forte fa cadere alberi',
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'NEMI', cat: 'Castelli Romani', hint: 'Lago di Genzano dentro un cratere',
         explain: 'Il lago di Nemi è in un cratere vulcanico dei Colli Albani, un vulcano quiescente (in pausa, non spento): zona di rischio frana per i versanti ripidi.' },
       { w: 'ELMETTO', cat: 'Dispositivo di protezione', hint: 'Copre la testa in cantiere',
-        explain: 'L\'elmetto giallo dei volontari di PC è certificato CE: protegge da scarpe, mattoni e calcinacci.' },
+        explain: 'L\'elmetto è un dispositivo di protezione certificato: protegge la testa da sassi, mattoni e calcinacci che cadono.' },
       { w: 'USCITA', cat: 'Via di fuga', hint: 'Dove si va quando suona l\'allarme',
         explain: 'Le uscite di emergenza sono indicate dai cartelli verdi ISO 7010: porta la tua classe lì in fila ordinata.' },
       { w: 'GUANTI', cat: 'Protezione personale', hint: 'Proteggono le mani dei volontari',
@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'BUSSOLA', cat: 'Orientamento', hint: 'Indica sempre il nord',
         explain: 'Senza GPS, una bussola e una mappa cartacea sono ancora oggi i metodi più affidabili in montagna.' },
       { w: 'BATTERIA', cat: 'Kit di emergenza', hint: 'Serve a far funzionare radio e torcia',
-        explain: 'Tieni nello zaino batterie di scorta: in blackout esteso le ricariche cellulare possono volare via in 1 giorno.' },
+        explain: 'Tieni nello zaino pile di scorta: in un blackout lungo radio e torcia restano accese, anche quando il telefono è scarico.' },
       { w: 'CORDA', cat: 'Soccorso', hint: 'Si usa per legare e per calarsi in sicurezza',
-        explain: 'I volontari del soccorso alpino o speleo hanno corde dinamiche certificate UIAA: 60-100 metri tipici.' },
+        explain: 'Nel soccorso si usano solo corde certificate, controllate prima di ogni servizio: le usano soccorritori formati.' },
       { w: 'COPERTA', cat: 'Kit di emergenza', hint: 'Tiene caldo se fa freddo fuori',
         explain: 'La coperta termica isotermica (oro/argento) riduce la dispersione di calore: leggera, occupa pochissimo spazio.' },
       { w: 'VERDE', cat: 'Codice colore', hint: 'Nessun rischio previsto',
@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'TUFO', cat: 'Castelli Romani', hint: 'Roccia vulcanica con cui sono fatte molte case di Genzano',
         explain: 'Il tufo di Genzano è una piroclastite dei Colli Albani: poroso, tenero, ha condizionato l\'architettura locale.' },
       { w: 'BOSCO', cat: 'Ambiente', hint: 'D\'estate è a rischio incendio',
-        explain: 'Nei boschi del Lazio luglio-settembre è il periodo di massima pericolosità AIB: mai accendere fuochi.' }
+        explain: 'D\'estate i boschi sono secchi e il rischio di incendio è alto: a Genzano, nel 2026, il periodo di grave pericolosità va dal 17 giugno al 15 ottobre. Mai accendere fuochi.' }
     ],
     medio: [
       { w: 'VOLONTARIO', cat: 'Protezione Civile', hint: 'Offre tempo e competenze gratis',
-        explain: 'Il volontariato di PC è regolato dal Codice del Terzo Settore (D.Lgs. 117/2017) e iscritto all\'Albo Regionale.' },
+        explain: 'Il volontariato di protezione civile fa parte del Servizio nazionale: lo regola il Codice della protezione civile (D.Lgs. 1/2018).' },
       { w: 'EMERGENZA', cat: 'Situazione urgente', hint: 'Richiede interventi immediati',
         explain: 'Emergenza = evento in corso. Diversa dall\'allerta (previsione). Sono fasi distinte del ciclo del rischio.' },
       { w: 'TERREMOTO', cat: 'Rischio sismico', hint: 'La terra trema',
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'ALLUVIONE', cat: 'Rischio idrogeologico', hint: 'Acqua che invade strade ed edifici',
         explain: 'In alluvione: sali ai piani alti, mai negli scantinati. Mai attraversare sottopassi allagati in macchina.' },
       { w: 'SICUREZZA', cat: 'Obiettivo PC', hint: 'Stare lontani dai pericoli',
-        explain: 'La sicurezza è un risultato: deriva da prevenzione + preparazione + risposta + ricostruzione (4 fasi DPC).' },
+        explain: 'La sicurezza si costruisce insieme: le attività della protezione civile sono previsione, prevenzione, gestione dell\'emergenza e superamento (D.Lgs. 1/2018).' },
       { w: 'PREVENZIONE', cat: 'Protezione Civile', hint: 'Evitare che il pericolo diventi danno',
         explain: 'La prevenzione è la prima missione della PC (D.Lgs. 1/2018, Codice). Costa meno di ricostruire.' },
       { w: 'BOLLETTINO', cat: 'Comunicazione', hint: 'Previsioni e avvisi ufficiali del CFR',
@@ -85,25 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'SEGNALE', cat: 'Comunicazione', hint: 'Serve ad avvisare di un pericolo',
         explain: 'I segnali ISO 7010 sono internazionali: codice colore + forma indicano la natura del pericolo.' },
       { w: 'RIFUGIO', cat: 'Luogo sicuro', hint: 'Posto strutturato per ripararsi in emergenza',
-        explain: 'I rifugi antiaerei della WWII oggi sono dismessi. Per emergenze attuali si usano edifici scolastici antisismici.' },
+        explain: 'In emergenza il Comune indica le aree e le strutture dove trovare riparo e assistenza: sono scritte nel piano di protezione civile comunale.' },
       { w: 'MASCHERINA', cat: 'Protezione', hint: 'Copre naso e bocca, utile in caso di fumo',
-        explain: 'In incendio o smog post-eruzione: una mascherina FFP2 trattiene il particolato fine PM2.5.' },
+        explain: 'Con fumo o polvere nell\'aria una mascherina FFP2 trattiene le particelle più fini. Non protegge dai gas.' },
       { w: 'IDRANTE', cat: 'Antincendio', hint: 'Da qui i pompieri prendono l\'acqua',
         explain: 'Gli idranti antincendio in strada vanno tenuti liberi: chi parcheggia davanti rischia una multa.' },
       { w: 'SOCCORSO', cat: 'Aiuto in emergenza', hint: 'Chi corre ad aiutare i feriti',
-        explain: 'Il primo soccorso si chiama BLS (Basic Life Support): massaggio cardiaco e ventilazioni in attesa del 112.' },
+        explain: 'Il primo gesto di soccorso è chiamare il 112. Gli adulti formati sanno fare anche il massaggio cardiaco in attesa dell\'ambulanza.' },
       { w: 'ESTINTORE', cat: 'Antincendio', hint: 'Spegne piccole fiamme',
-        explain: 'L\'estintore deve essere a portata di mano e ricaricato ogni anno. Solo gli adulti formati lo usano.' },
+        explain: 'L\'estintore deve essere a portata di mano e controllato regolarmente da un tecnico qualificato, con la cadenza indicata dalla norma UNI 9994-1. Solo gli adulti formati lo usano.' },
       { w: 'ASCENSORE', cat: 'Da evitare', hint: 'Mai durante un\'evacuazione',
         explain: 'In sisma o incendio, l\'ascensore può bloccarsi tra i piani. Sempre le scale, mai l\'ascensore.' },
       { w: 'CAPOFILA', cat: 'Evacuazione', hint: 'Guida la fila della classe',
-        explain: 'Il capofila è scelto dall\'insegnante e ha un giubbino visibile. La maestra in fondo controlla che non manchi nessuno.' },
+        explain: 'Il capofila (apri-fila) è scelto dall\'insegnante e guida la classe; l\'ultimo (chiudi-fila) controlla che nessuno resti indietro.' },
       { w: 'DOCUMENTI', cat: 'Evacuazione', hint: 'Carta d\'identità e tessera sanitaria',
         explain: 'In evacuazione veloce porta solo documenti + cellulare + medicine personali. Tutto il resto si recupera dopo.' },
       { w: 'VIGILANZA', cat: 'Controllo', hint: 'Osservare per prevenire pericoli',
         explain: 'In allerta arancione/rossa, i volontari fanno turni di vigilanza ai punti critici (sottopassi, argini, versanti).' },
       { w: 'PRESIDIO', cat: 'Postazione operativa', hint: 'Posto dove si presta servizio',
-        explain: 'Il presidio sanitario in emergenza è gestito da CRI o ASL: triage, primo soccorso, smistamento agli ospedali.' },
+        explain: 'Un presidio è un posto dove soccorritori o volontari restano in servizio per controllare una zona o aiutare le persone.' },
       { w: 'CENTRALE', cat: 'Coordinamento', hint: 'Da qui si dirigono gli interventi',
         explain: 'La Sala Operativa di PC (Comune o Regione) coordina mezzi, volontari, comunicazioni in emergenza.' },
       { w: 'BINOCOLO', cat: 'Osservazione', hint: 'Serve a vedere lontano',
@@ -121,17 +121,17 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'EVACUAZIONE', cat: 'Azione di emergenza', hint: 'Tutti fuori in fila e con calma',
         explain: 'L\'evacuazione segue il Piano di Emergenza Scolastico: fila ordinata, capofila con giubbino, conta dei presenti al punto di raccolta.' },
       { w: 'AUTOPROTEZIONE', cat: 'Comportamento', hint: 'Difendere se stessi con i gesti giusti',
-        explain: 'L\'autoprotezione è la prima difesa: conoscere i rischi del proprio territorio + sapere cosa fare nei primi 30 minuti.' },
+        explain: 'L\'autoprotezione è la prima difesa: conoscere i rischi del proprio territorio e sapere che cosa fare prima, durante e dopo un\'emergenza.' },
       { w: 'IDROGEOLOGICO', cat: 'Rischio', hint: 'Acqua + terreno che frana',
-        explain: 'Il rischio idrogeologico (frane + alluvioni) è il più diffuso in Italia. CNR-IRPI lo monitora con database storici dal 1900.' },
+        explain: 'Il rischio idrogeologico riguarda frane e alluvioni. Le mappe ufficiali delle zone a rischio sono sulla piattaforma IdroGEO dell\'ISPRA.' },
       { w: 'COMUNICAZIONE', cat: 'Informazione', hint: 'Avvisare e coordinare in emergenza',
         explain: 'In emergenza la comunicazione usa solo fonti ufficiali: Comune, Centro Funzionale Regionale, Dipartimento della Protezione Civile.' },
       { w: 'TEMPORALE', cat: 'Fenomeno meteo', hint: 'Tuoni, fulmini e pioggia intensa',
         explain: 'In temporale: dentro casa, lontano da finestre, doccia, oggetti elettrici. Niente telefono fisso.' },
       { w: 'BOSCHIVO', cat: 'Rischio AIB', hint: 'Incendio che colpisce i boschi',
-        explain: 'Il rischio incendio boschivo è regolato dalla Legge 353/2000: chi causa un AIB rischia carcere fino a 7 anni.' },
+        explain: 'Gli incendi boschivi sono regolati dalla Legge 353/2000. Appiccare un incendio a un bosco è un reato grave: per l\'incendio doloso il Codice penale prevede fino a 10 anni di carcere.' },
       { w: 'ANTINCENDIO', cat: 'Prevenzione', hint: 'Tutto ciò che serve a contrastare il fuoco',
-        explain: 'Le squadre AIB regionali del Lazio operano da terra e da aria (Canadair). Il volontariato è una componente fondamentale.' },
+        explain: 'Contro gli incendi boschivi lavorano insieme Vigili del Fuoco, squadre regionali, mezzi aerei e volontari antincendio boschivo.' },
       { w: 'COORDINAMENTO', cat: 'Organizzazione', hint: 'Lavorare insieme senza confusione',
         explain: 'Il coordinamento PC ha più livelli: COC (Comune), COM (intercomunale), CCS (Provinciale), DI.COMA.C (nazionale).' },
       { w: 'RADIO COMUNICAZIONE', cat: 'Strumento PC', hint: 'Messaggi via radio tra le squadre',
@@ -139,19 +139,19 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'SORVEGLIANZA', cat: 'Controllo', hint: 'Tenere d\'occhio una zona a rischio',
         explain: 'In allerta rossa, i volontari sorvegliano argini, sottopassi, scarpate frana. Turni 24/7 fino a fine evento.' },
       { w: 'ESONDAZIONE', cat: 'Rischio idrogeologico', hint: 'Il fiume esce dal letto',
-        explain: 'In esondazione: sali ai piani alti, mai attraversare in macchina. Bastano 30 cm d\'acqua per far galleggiare un\'auto.' },
+        explain: 'In esondazione: sali ai piani alti, mai attraversare in macchina. Circa 30 cm d\'acqua che scorre portano via la maggior parte delle auto.' },
       { w: 'PROTEZIONE CIVILE', cat: 'Sistema nazionale', hint: 'Tutti gli enti che gestiscono le emergenze',
-        explain: 'Il Servizio Nazionale di PC è regolato dal D.Lgs. 1/2018 (Codice). Articulato su Stato, Regioni, Comuni, volontariato.' },
+        explain: 'Il Servizio nazionale della protezione civile è regolato dal D.Lgs. 1/2018 (Codice): ne fanno parte Stato, Regioni, Comuni e volontariato.' },
       { w: 'VOLONTARIATO', cat: 'Donare tempo', hint: 'Aiuto gratuito alla comunità',
         explain: 'Il volontariato di PC nel Lazio è coordinato dalla Regione Lazio - Direzione Protezione Civile, con Albo Regionale.' },
       { w: 'AUTOMEZZO', cat: 'Mezzo operativo', hint: 'Veicolo dei volontari',
-        explain: 'Il Gruppo Comunale di Genzano ha automezzi 4x4 attrezzati per AIB e logistica, con marchio "Protezione Civile".' },
+        explain: 'I volontari usano automezzi attrezzati per portare persone, materiali e attrezzature dove servono.' },
       { w: 'CARTOGRAFIA', cat: 'Mappe del territorio', hint: 'Disegno scientifico del territorio',
         explain: 'La cartografia dei rischi è consultabile sulla piattaforma IdroGEO di ISPRA e sul Geoportale della Regione Lazio.' },
       { w: 'SICUREZZA SCOLASTICA', cat: 'Piano d\'emergenza', hint: 'Regole per evacuare le scuole',
         explain: 'Il Piano di Emergenza Scolastico è obbligatorio per ogni istituto: 2 prove di evacuazione l\'anno + addestramento docenti.' },
       { w: 'SISMOGRAFO', cat: 'Strumento scientifico', hint: 'Registra i movimenti della terra',
-        explain: 'L\'INGV ha una rete di oltre 600 sismografi in Italia: registrano in tempo reale magnitudo, profondità, epicentro.' },
+        explain: 'L\'INGV ha in Italia la Rete Sismica Nazionale, con circa 500 stazioni: dai loro dati calcola magnitudo, profondità ed epicentro.' },
       { w: 'METEOROLOGIA', cat: 'Scienza del tempo', hint: 'Studia e prevede il tempo atmosferico',
         explain: 'In Italia la fonte ufficiale meteo per la PC è il Centro Funzionale Regionale (CFR) di ogni Regione, integrato con Aeronautica.' },
       { w: 'IT ALERT', cat: 'Allarme pubblico', hint: 'Sistema italiano che manda allarmi ai cellulari',
@@ -171,6 +171,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let answerSequence = [];    // storia delle lettere inserite (per undo)
   let currentWord = '';       // parola target (con spazi conservati)
   let solvedThisWord = false;
+  let hintsUsedThisWord = 0;  // la penalità degli aiuti vale solo per la parola in cui li usi
+  // Doppio tocco: dopo una parola sbagliata i tasti restano fermi finché le
+  // caselle non si svuotano; dopo «Prossima parola» un secondo tocco non salta parole.
+  let inPassaggio = false;
+  let partita = 0;
+
+  const suono = (giusta) => {
+    if (!window.AudioSintetico) return;
+    if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+  };
 
   // ─── Elementi DOM ──────────────────────────────────────────────
   const startScreen   = document.getElementById('start-screen');
@@ -251,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── Avvio / riavvio ───────────────────────────────────────────
   const startGame = () => {
+    partita++;
     roundWords = pickWords(selectedLevel, selectedCount);
     currentIndex = 0;
     score = 0;
@@ -265,6 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const loadWord = () => {
     solvedThisWord = false;
+    inPassaggio = false;
+    hintsUsedThisWord = 0;
     answerSequence = [];
     feedbackBox.classList.add('hide');
     feedbackBox.classList.remove('correct', 'wrong');
@@ -298,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slot.setAttribute('aria-label', 'Casella vuota');
         slot.addEventListener('click', () => {
           // permette di rimuovere la lettera cliccando lo slot pieno
-          if (slot.classList.contains('filled') && !solvedThisWord) {
+          if (slot.classList.contains('filled') && !solvedThisWord && !inPassaggio) {
             const idx = [...answerSlots.children].filter(c => !c.classList.contains('space')).indexOf(slot);
             removeLetterAt(idx);
           }
@@ -325,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inserisci la lettera nel primo slot disponibile
   const placeLetter = (tile) => {
-    if (solvedThisWord) return;
+    if (solvedThisWord || inPassaggio || tile.disabled) return;
     const slots = [...answerSlots.children].filter(c => !c.classList.contains('space'));
     const target = slots.find(s => !s.classList.contains('filled'));
     if (!target) return;
@@ -356,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const undoLast = () => {
-    if (!answerSequence.length || solvedThisWord) return;
+    if (!answerSequence.length || solvedThisWord || inPassaggio) return;
     const entry = answerSequence.pop();
     entry.slot.textContent = '';
     entry.slot.classList.remove('filled', 'correct', 'wrong');
@@ -366,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const resetWord = () => {
-    if (solvedThisWord) return;
+    if (solvedThisWord || inPassaggio) return;
     answerSequence = [];
     [...answerSlots.children].forEach(s => {
       if (!s.classList.contains('space')) {
@@ -384,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Aiuto: riempie la prossima casella con la lettera giusta
   const useHint = () => {
-    if (hintsLeft <= 0 || solvedThisWord) return;
+    if (hintsLeft <= 0 || solvedThisWord || inPassaggio) return;
     const slots = [...answerSlots.children].filter(c => !c.classList.contains('space'));
     const wordLetters = currentWord.replace(/\s+/g, '').split('');
     // trova il primo slot vuoto
@@ -396,6 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tile = [...letterPool.children].find(t => !t.classList.contains('used') && t.textContent === neededLetter);
     if (!tile) return;
     hintsLeft -= 1;
+    hintsUsedThisWord += 1;
     hintsLeftSpan.textContent = hintsLeft;
     placeLetter(tile);
   };
@@ -409,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
         solvedThisWord = true;
         slots.forEach(s => s.classList.add('correct'));
         const pointsBase = currentWord.replace(/\s+/g, '').length * 10;
-        const hintPenalty = (3 - hintsLeft) * 5;
+        const hintPenalty = hintsUsedThisWord * 5;
         const earned = Math.max(pointsBase - hintPenalty, 10);
         score += earned;
         scoreLive.textContent = 'Punti: ' + score;
@@ -423,6 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
           html += `<p class="feedback-explain"><strong>${entry.w}:</strong> ${entry.explain}</p>`;
         }
         feedbackBox.innerHTML = html;
+        suono(true);
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
         nextBtn.classList.remove('hide');
         nextBtn.focus();
@@ -431,11 +446,16 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackBox.classList.remove('hide', 'correct');
         feedbackBox.classList.add('wrong');
         feedbackBox.innerHTML = '<i class="bi bi-x-circle-fill" aria-hidden="true"></i> Non è corretto. Riprova!';
+        suono(false);
+        inPassaggio = true;
+        const questa = partita;
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Le parole sono tutte legate alla Protezione Civile. Conta le lettere e pensa alla definizione: il glossario del sito ha quasi tutte le parole.', '/glossario/');
         }
         // sblocca le tile per farle riposizionare
         setTimeout(() => {
+          if (questa !== partita || solvedThisWord) return;
+          inPassaggio = false;
           resetWord();
         }, 900);
       }
@@ -443,6 +463,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const nextWord = () => {
+    // Un secondo tocco su «Prossima parola» (o Invio ripetuto) non salta parole.
+    if (!solvedThisWord || nextBtn.classList.contains('hide')) return;
+    nextBtn.classList.add('hide');
     currentIndex += 1;
     if (currentIndex >= roundWords.length) {
       showResults();
@@ -471,6 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Listener ──────────────────────────────────────────────────
   startBtn.addEventListener('click', startGame);
   restartBtn.addEventListener('click', () => {
+    partita++;
     resultsScreen.classList.add('hide');
     startScreen.classList.remove('hide');
   });
@@ -481,9 +505,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Tastiera: lettere fisiche digitate inseriscono la prima tile disponibile
   document.addEventListener('keydown', (e) => {
-    if (gameScreen.classList.contains('hide') || solvedThisWord) return;
-    if (e.key === 'Backspace') { e.preventDefault(); undoLast(); return; }
+    if (gameScreen.classList.contains('hide')) return;
     if (e.key === 'Enter' && !nextBtn.classList.contains('hide')) { e.preventDefault(); nextWord(); return; }
+    if (solvedThisWord) return;
+    if (e.key === 'Backspace') { e.preventDefault(); undoLast(); return; }
     const key = (e.key || '').toUpperCase();
     if (!/^[A-Z]$/.test(key)) return;
     const tile = [...letterPool.children].find(t => !t.classList.contains('used') && t.textContent === key);

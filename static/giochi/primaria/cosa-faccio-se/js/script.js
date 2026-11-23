@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scenarios = [
         {
-            id: 'terremoto', title: 'Terremoto a scuola', icon: '\uD83C\uDFEB',
+            id: 'terremoto', title: 'Terremoto a scuola', icon: 'bi-building-exclamation',
             steps: [
                 {
                     text: 'Sei in classe durante la lezione di italiano. All\'improvviso senti il pavimento tremare e i vetri vibrare. La scossa è forte. Cosa fai?',
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endMsg: 'Hai gestito il terremoto a scuola come un vero esperto! Ricorda: abbassati, riparati, aspetta.'
         },
         {
-            id: 'temporale', title: 'Temporale al parco', icon: '\u26C8\uFE0F',
+            id: 'temporale', title: 'Temporale al parco', icon: 'bi-cloud-lightning-rain-fill',
             steps: [
                 {
                     text: 'Sei al parco con gli amici. Il cielo diventa scuro all\'improvviso, senti un tuono in lontananza e il vento aumenta. Cosa fai?',
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'State correndo verso casa, ma il temporale vi raggiunge. Piove fortissimo, ci sono fulmini. Vedete un gazebo in metallo e un bar con le porte aperte. Dove andate?',
                     choices: [
-                        { text: 'Sotto il gazebo in metallo, è più vicino', correct: false, tip: 'Le strutture metalliche attirano i fulmini. Meglio un edificio chiuso!' },
+                        { text: 'Sotto il gazebo in metallo, è più vicino', correct: false, tip: 'Un gazebo è una struttura leggera e di metallo: non protegge dai fulmini. Meglio un edificio chiuso!' },
                         { text: 'Dentro il bar, al riparo dalle intemperie', correct: true, tip: 'Perfetto! Un edificio chiuso è il riparo migliore durante un temporale.' }
                     ]
                 },
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endMsg: 'Hai superato il temporale senza un graffio! Ricorda: durante i fulmini, mai sotto gli alberi, cerca un edificio chiuso.'
         },
         {
-            id: 'fumo', title: 'Fumo in casa', icon: '\uD83D\uDD25',
+            id: 'fumo', title: 'Fumo in casa', icon: 'bi-fire',
             steps: [
                 {
                     text: 'Sei nella tua camera e senti un odore strano. Vai in corridoio e vedi del fumo uscire dalla porta della cucina. Cosa fai?',
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'Siete usciti dal palazzo. La mamma chiama i soccorsi. Quale numero compone?',
                     choices: [
-                        { text: '118', correct: false, tip: 'Nel Lazio non si chiama più il 118 per le emergenze. L\'unico numero da chiamare è il 112!' },
+                        { text: '118', correct: false, tip: 'Nel Lazio il numero da chiamare per ogni emergenza è il 112: risponde la centrale unica, che manda i soccorsi giusti.' },
                         { text: '112', correct: true, tip: 'Esatto! Il 112 è l\'unico numero di emergenza nel Lazio. La centrale invia subito i Vigili del Fuoco.' }
                     ]
                 },
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endMsg: 'Hai gestito l\'incendio in modo perfetto! Ricorda: abbassati nel fumo, non rientrare mai, chiama il 112.'
         },
         {
-            id: 'alluvione', title: 'Pioggia fortissima', icon: '\uD83C\uDF0A',
+            id: 'alluvione', title: 'Pioggia fortissima', icon: 'bi-water',
             steps: [
                 {
                     text: 'È pomeriggio e piove molto forte da ore. La mamma guarda il telefono e dice che c\'è un\'allerta arancione per rischio alluvione. Cosa fai?',
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endMsg: 'Hai protetto la tua famiglia durante l\'alluvione! Ricorda: mai scendere ai piani bassi e, durante l\'alluvione, non bere l\'acqua del rubinetto. Prima di uscire, aspetta il via libera.'
         },
         {
-            id: 'incendio-bosco', title: 'Fumo nel bosco', icon: '\uD83C\uDF32',
+            id: 'incendio-bosco', title: 'Fumo nel bosco', icon: 'bi-tree-fill',
             steps: [
                 {
                     text: 'Sei in gita scolastica al parco dei Castelli Romani. Senti puzza di bruciato e vedi una colonna di fumo bianco dietro gli alberi, a circa 200 metri. Cosa fai per primo?',
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endMsg: 'Hai segnalato un possibile incendio boschivo come un volontario esperto! Ricorda: non avvicinarti, chiama il 112, allontanati dal fumo.'
         },
         {
-            id: 'blackout', title: 'Va via la corrente', icon: '\uD83D\uDCA1',
+            id: 'blackout', title: 'Va via la corrente', icon: 'bi-lightbulb-off-fill',
             steps: [
                 {
                     text: 'È sera e stai facendo i compiti. Improvvisamente si spengono le luci e il Wi-Fi. Tutto il quartiere è al buio. Cosa fai?',
@@ -221,13 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
             endMsg: 'Hai gestito il blackout con calma e buon senso! Ricorda: torce a batteria (no candele), frigo chiuso, mai fornelletti in casa.'
         },
         {
-            id: 'neve-ghiaccio', title: 'Neve e ghiaccio', icon: '\u2744\uFE0F',
+            id: 'neve-ghiaccio', title: 'Neve e ghiaccio', icon: 'bi-snow',
             steps: [
                 {
                     text: 'Al mattino ti alzi e vedi tutto bianco: è nevicato. La mamma deve andare al lavoro in auto. Cosa le suggerisci?',
                     choices: [
                         { text: '"Prendi subito la macchina, vai piano"', correct: false, tip: 'Prima bisogna pulire i vetri, controllare le gomme e vedere se davvero serve uscire. Piano non basta.' },
-                        { text: '"Controlla i vetri, le gomme da neve o le catene, e se proprio devi uscire, parti pulita"', correct: true, tip: 'Bravo! Con la neve l’auto va preparata. Se non serve davvero, meglio rimandare o usare mezzi pubblici.' }
+                        { text: '"Se proprio devi uscire, prima pulisci bene i vetri e controlla di avere gomme da neve o catene"', correct: true, tip: 'Bravo! Con la neve l’auto va preparata. Se non serve davvero, meglio rimandare o usare mezzi pubblici.' }
                     ]
                 },
                 {
@@ -248,20 +248,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'A scuola vi dicono che la neve continuerà e l’uscita potrebbe essere anticipata. La maestra chiede alla classe cosa è utile fare. Cosa proponi?',
                     choices: [
                         { text: 'Niente, tanto ci pensano i grandi', correct: false, tip: 'Anche tu puoi contribuire, con piccoli gesti utili e responsabili.' },
-                        { text: 'Aiuto a tenere pulite le vie di fuga, avviso i compagni e mi vesto pronto', correct: true, tip: 'Perfetto! Ordine, comunicazione e attrezzatura sono i tre pilastri della protezione civile.' }
+                        { text: 'Aiuto a tenere pulite le vie di fuga, avviso i compagni e mi vesto pronto', correct: true, tip: 'Perfetto! Tenere libere le vie di uscita, avvisare gli altri ed essere pronti aiuta tutta la classe.' }
                     ]
                 }
             ],
             endMsg: 'Hai affrontato neve e ghiaccio con la testa giusta! Ricorda: passi corti, auto preparata, avvisare gli altri.'
         },
         {
-            id: 'persona-smarrita', title: 'Un nonno si è perso', icon: '\uD83E\uDDD3',
+            id: 'persona-smarrita', title: 'Un nonno si è perso', icon: 'bi-signpost-split-fill',
             steps: [
                 {
                     text: 'In pizzeria con i genitori vedi un signore anziano da solo, confuso, che chiede "Dov’è casa mia?". Cosa fai?',
                     choices: [
                         { text: 'Lo ignoro, non sono affari miei', correct: false, tip: 'Un anziano confuso può essere in pericolo. Non ignorare mai chi chiede aiuto.' },
-                        { text: 'Lo dico subito ai miei genitori e al gestore del locale', correct: true, tip: 'Bravo! La prima cosa è coinvolgere gli adulti. Il gestore può controllare le telecamere e chiamare aiuto.' }
+                        { text: 'Lo dico subito ai miei genitori e al gestore del locale', correct: true, tip: 'Bravo! La prima cosa è coinvolgere gli adulti: possono restare con lui e chiamare il 112.' }
                     ]
                 },
                 {
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scenarios.forEach(sc => {
             const col = document.createElement('div');
             col.className = 'col-6 col-md-3';
-            col.innerHTML = '<div class="scenario-card" role="button" tabindex="0" aria-label="' + sc.title + '"><span class="sc-icon">' + sc.icon + '</span><span class="sc-title">' + sc.title + '</span></div>';
+            col.innerHTML = '<div class="scenario-card" role="button" tabindex="0" aria-label="' + sc.title + '"><span class="sc-icon" aria-hidden="true"><i class="bi ' + sc.icon + '"></i></span><span class="sc-title">' + sc.title + '</span></div>';
             const card = col.querySelector('.scenario-card');
             card.addEventListener('click', () => startScenario(sc));
             card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startScenario(sc); } });
@@ -364,7 +364,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function handleChoice(btn, choice, step) {
+        // Doppio tocco: un tasto già spento non risponde e non conta due volte.
+        if (btn.disabled) return;
         const allBtns = choicesContainer.querySelectorAll('.choice-btn');
+        if (window.AudioSintetico) {
+            if (choice.correct) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+        }
         allBtns.forEach(b => { b.disabled = true; });
         if (choice.correct) {
             btn.classList.add('right');
@@ -412,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const overlay = document.createElement('div');
         overlay.className = 'pausa-overlay';
         overlay.innerHTML = '<div class="pausa-box">' +
-          '<h3>🌿 Pausa per riflettere</h3>' +
+          '<h3><i class="bi bi-pause-circle-fill me-1" aria-hidden="true"></i> Pausa per riflettere</h3>' +
           '<p>Stai sbagliando un po\' di scelte. Fermati e ripensa a queste regole:</p>' +
           '<ul>' + punti.map(p => '<li>' + p + '</li>').join('') + '</ul>' +
           '<button type="button" class="btn btn-primary">Riprendo!</button>' +

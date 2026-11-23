@@ -38,7 +38,7 @@
       box-shadow: 0 4px 14px rgba(0,51,102,.18);
     }
     .scenario-card h3 { color: #003366; font-size: 1.05rem; margin-top: .5rem; margin-bottom: .3rem; }
-    .scenario-card .sc-icon { font-size: 2.4rem; }
+    .scenario-card .sc-icon { font-size: 2.4rem; color: #003366; }
     .scenario-card p { margin: 0; color: #5b6b7c; font-size: .92rem; }
 
     .call-top {
@@ -98,7 +98,7 @@
       border-color: #003366; background: #eef4fb;
       outline: 2px solid #003366; outline-offset: 2px;
     }
-    .opt-btn:disabled { cursor: default; opacity: .8; }
+    .opt-btn:disabled { cursor: default; }
     .opt-btn.ok {
       background: #d1e7dd; border-color: #198754; color: #0f5132;
     }
@@ -108,6 +108,19 @@
     .opt-btn.meh {
       background: #fff3cd; border-color: #b45309; color: #664d03;
     }
+    /* Il segno davanti alla risposta scelta: non conta solo il colore */
+    .opt-btn.ok::before  { content: "\2713\00a0"; font-weight: 700; }
+    .opt-btn.ko::before  { content: "\2717\00a0"; font-weight: 700; }
+    .opt-btn.meh::before { content: "!\00a0"; font-weight: 700; }
+    .opt-btn:disabled:not(.ok):not(.ko):not(.meh) { opacity: 1; color: #343a40; }
+    .opt-btn { min-height: 48px; }
+    /* Bootstrap Italia, dopo un tocco, impone "border-color: inherit !important"
+       (data-focus-mouse): si rimettono i colori di stato delle risposte. */
+    #options button.opt-btn { border-color: #cfd6df !important; }
+    #options button.opt-btn:hover:not(:disabled) { border-color: #003366 !important; }
+    #options button.opt-btn.ok { border-color: #198754 !important; }
+    #options button.opt-btn.ko { border-color: #dc3545 !important; }
+    #options button.opt-btn.meh { border-color: #b45309 !important; }
 
     .feedback-box {
       background: #eef4fb; border-left: 4px solid #003366;
@@ -142,6 +155,7 @@
     @media (prefers-reduced-motion: reduce) {
       .scenario-card, .opt-btn { transition: none; }
     }
+    html.a11y-pause-anim .scenario-card, html.a11y-pause-anim .opt-btn { transition: none; }
   </style>
 </head>
 <body data-coach-game="chiamata-112">
@@ -245,6 +259,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/comune.js"></script>
@@ -255,7 +270,7 @@
     var SCENARI = [
       {
         id: 'incendio-cucina',
-        icon: '\uD83D\uDD25',
+        icon: 'bi-fire',
         titolo: 'Fumo dalla cucina',
         intro: 'Sei a casa con la nonna. Dalla cucina esce fumo nero e si sente un odore forte di bruciato. La nonna ti chiede di chiamare aiuto. Componi il 112.',
         steps: [
@@ -317,7 +332,7 @@
       },
       {
         id: 'bimbo-caduto',
-        icon: '\uD83D\uDEB2',
+        icon: 'bi-bicycle',
         titolo: 'Caduta al parco',
         intro: 'Sei al parco con il tuo amico Elio. Cadendo dalla bicicletta si fa male a una gamba e non riesce a rialzarsi. Non ci sono adulti vicino. Componi il 112.',
         steps: [
@@ -379,7 +394,7 @@
       },
       {
         id: 'nonno-male',
-        icon: '\u2764\uFE0F',
+        icon: 'bi-heart-pulse-fill',
         titolo: 'Il nonno sta male',
         intro: 'Sei a casa con il nonno. All\'improvviso si lamenta di un forte dolore al petto e fatica a respirare. Non riesci a chiamare i tuoi genitori. Componi il 112.',
         steps: [
@@ -387,7 +402,7 @@
             op: 'Numero Unico Emergenze, buongiorno. Cosa succede?',
             opCtx: 'Apertura della chiamata',
             options: [
-              { text: 'Mio nonno ha un forte dolore al petto e fatica a respirare.', kind: 'ok', fb: 'Ottimo: sintomo principale (dolore al petto) e difficoltà di respiro. L\'operatore attiva subito un\'ambulanza con medico.' },
+              { text: 'Mio nonno ha un forte dolore al petto e fatica a respirare.', kind: 'ok', fb: 'Ottimo: sintomo principale (dolore al petto) e difficoltà di respiro. L\'operatore capisce che è una cosa seria e fa partire i soccorsi sanitari.' },
               { text: 'Il nonno è stanco e si è seduto.', kind: 'meh', fb: 'Così sembra una stanchezza normale. Descrivi i sintomi veri: dolore, fiato corto, pallore, sudore freddo.' },
               { text: 'Ha solo un po\' di tosse.', kind: 'ko', fb: 'Non sottovalutare. Se il nonno ha dolore al petto e non riesce a respirare, dillo subito all\'operatore. Ogni minuto conta.' }
             ]
@@ -407,7 +422,7 @@
             options: [
               { text: 'Ha 78 anni. Prende medicine per la pressione e per il cuore.', kind: 'ok', fb: 'Molto utile. Età e medicine aiutano il medico a capire subito cosa potrebbe essere successo.' },
               { text: 'Non lo so proprio.', kind: 'meh', fb: 'Se non ricordi, guarda sul tavolo o sul comodino se ci sono medicine: le scatole parlano più di noi. Almeno di’ un\'età approssimativa.' },
-              { text: 'Ha 30 anni.', kind: 'ko', fb: 'L\'età sbagliata fa partire un\'ambulanza meno attrezzata. Meglio dire "non so di preciso, ma ha più di 70 anni".' }
+              { text: 'Ha 30 anni.', kind: 'ko', fb: 'Un\'età sbagliata dà all\'operatore un\'idea sbagliata di chi sta male. Se non la sai di preciso, dillo: "Non so, ma ha più di 70 anni".' }
             ]
           },
           {
@@ -425,7 +440,7 @@
             options: [
               { text: 'Apro la porta di casa e resto vicino al nonno.', kind: 'ok', fb: 'Perfetto. Aprire la porta fa risparmiare minuti preziosi: i soccorritori entrano subito senza dover suonare e aspettare.' },
               { text: 'Lo carico in macchina per portarlo in ospedale.', kind: 'ko', fb: 'Mai spostare una persona con dolore al petto. L\'ambulanza ha i medici e le medicine giuste: è più veloce e più sicuro.' },
-              { text: 'Lo faccio bere un bicchiere d\'acqua e due pillole di zucchero.', kind: 'ko', fb: 'Non dare mai acqua, cibo o medicine a una persona che sta male al petto. Aspetta il medico.' }
+              { text: 'Gli do un bicchiere d\'acqua e delle caramelle.', kind: 'ko', fb: 'Non dare acqua, cibo o medicine a una persona che sta male al petto, se non te lo dice l\'operatore. Aspetta il medico.' }
             ]
           },
           {
@@ -441,7 +456,7 @@
       },
       {
         id: 'terremoto-scuola',
-        icon: '\uD83C\uDF0D',
+        icon: 'bi-house-exclamation-fill',
         titolo: 'Dopo un terremoto',
         intro: 'Hai appena sentito una forte scossa di terremoto. Sei rimasto a casa con il fratellino. Un mobile è caduto sul suo piede. I tuoi genitori sono fuori. Componi il 112.',
         steps: [
@@ -467,7 +482,7 @@
             op: 'Quanti anni hanno lei e suo fratello?',
             opCtx: 'Identità e soggetti coinvolti',
             options: [
-              { text: 'Io ho 11 anni. Mio fratello 4.', kind: 'ok', fb: 'Informazione importantissima: un bambino di 4 anni ferito richiede un\'ambulanza con personale pediatrico.' },
+              { text: 'Io ho 11 anni. Mio fratello 4.', kind: 'ok', fb: 'Informazione importantissima: sapere che il ferito è un bambino piccolo aiuta l\'operatore a mandare l\'aiuto giusto e a darti le istruzioni adatte.' },
               { text: 'Non mi va di dirlo.', kind: 'ko', fb: 'Al 112 si risponde sempre: età e dati aiutano a mandare i soccorsi giusti.' },
               { text: 'Abbiamo quella solita età dei bambini.', kind: 'meh', fb: 'Anche un\'età approssimativa aiuta. "Ho più o meno 10 anni, mio fratello è piccolo": meglio di niente.' }
             ]
@@ -494,7 +509,7 @@
             op: 'Resti al telefono. L\'ambulanza e i Vigili del Fuoco stanno arrivando.',
             opCtx: 'Chiusura della chiamata',
             options: [
-              { text: 'Va bene. Resto con mio fratello e parlo con lei fino al loro arrivo.', kind: 'ok', fb: 'Perfetto. In emergenze da terremoto, le squadre arrivano più tardi perché le strade possono essere danneggiate: l\'operatore resta con te tutto il tempo.' },
+              { text: 'Va bene. Resto con mio fratello e parlo con lei fino al loro arrivo.', kind: 'ok', fb: 'Perfetto. Dopo un terremoto i soccorsi possono metterci più tempo, perché le strade possono essere danneggiate: resta in linea e segui le istruzioni dell\'operatore.' },
               { text: 'Esco di casa a cercare aiuto da solo.', kind: 'ko', fb: 'Dopo un terremoto non uscire se non devi: potresti trovare macerie, vetri o cornicioni pericolosi. Meglio restare al sicuro.' },
               { text: 'Accendo il gas così mi scaldo mentre aspetto.', kind: 'ko', fb: 'Mai toccare gas, interruttori o fiamme dopo un terremoto. Potrebbero esserci perdite di gas.' }
             ]
@@ -537,7 +552,7 @@
         card.setAttribute('role', 'button');
         card.setAttribute('tabindex', '0');
         card.innerHTML =
-          '<span class="sc-icon" aria-hidden="true">' + s.icon + '</span>' +
+          '<span class="sc-icon" aria-hidden="true"><i class="bi ' + s.icon + '"></i></span>' +
           '<h3>' + s.titolo + '</h3>' +
           '<p>' + s.intro + '</p>';
         card.addEventListener('click', function () { startScenario(s); });
@@ -597,6 +612,7 @@
     }
 
     function showStep() {
+      rispostaData = false;
       feedbackEl.classList.add('hide');
       nextBtn.classList.add('hide');
       hudStep.textContent = 'Passo ' + (stepIdx + 1) + ' di ' + scenario.steps.length;
@@ -614,7 +630,16 @@
       });
     }
 
+    // Doppio tocco: una sola risposta per passo e un solo «Avanti» per volta.
+    var rispostaData = false;
+    function suono(giusta) {
+      if (!window.AudioSintetico) return;
+      if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+    }
+
     function chooseOption(btn, opt, step, shuffled) {
+      if (rispostaData) return;
+      rispostaData = true;
       optionsEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
       btn.classList.add(opt.kind);
       addBubble('me', opt.text, 'La tua risposta');
@@ -624,13 +649,18 @@
       var label = opt.kind === 'ok' ? 'Risposta giusta' : (opt.kind === 'ko' ? 'Risposta sbagliata' : 'Risposta poco utile');
       feedbackEl.innerHTML = '<strong>' + label + '.</strong>' + opt.fb;
       feedbackEl.classList.remove('hide');
+      suono(opt.kind === 'ok');
       if (opt.kind === 'ok') {
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else if (window.GameCoach && window.GameCoach.hint) {
         window.GameCoach.hint('Al 112 dici sempre tre cose: COSA succede, DOVE sei, QUANTI siete. Resta calmo, non riagganciare per primo.', '/numeri-utili/');
       }
       nextBtn.classList.remove('hide');
+      nextBtn.disabled = false;
       nextBtn.onclick = function () {
+        if (nextBtn.disabled || !rispostaData) return;
+        nextBtn.disabled = true;
+        nextBtn.onclick = null;
         stepIdx++;
         if (stepIdx >= scenario.steps.length) finish();
         else showStep();

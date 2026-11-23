@@ -85,6 +85,8 @@
       .oggetto-btn.giusto { animation: none; opacity: 0; }
       .oggetto-btn.sbagliato { animation: none; border-color: var(--inf-rosso); }
     }
+    /* Con «Ferma le animazioni» l'oggetto messo nello zaino sparisce subito, come sopra. */
+    html.a11y-pause-anim .oggetto-btn.giusto, html.a11y-pause-animations .oggetto-btn.giusto { opacity: 0; }
   </style>
 </head>
 <body class="inf-body" data-coach-game="vesti-tina">
@@ -167,6 +169,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -225,6 +228,9 @@
     var livello = 0;
     var idx = 0;
     var errori = 0;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -233,6 +239,7 @@
       // (prima erano sempre nella stessa sequenza prevedibile).
       ROUNDS = shuffle(LIVELLI[livello].slice());
       idx = 0;
+      sbloccoAl = Date.now() + 500;
       levelBadge.textContent = 'Livello ' + (livello + 1) + ' di ' + LIVELLI.length;
       progressBolli.forEach(function(b,i){
         b.classList.remove('on');
@@ -240,8 +247,8 @@
       });
       levelUp.classList.add('hide');
       endScreen.classList.add('hide');
-      var cartaNascosta = document.querySelector('.inf-card.hide');
-      if (cartaNascosta) cartaNascosta.classList.remove('hide');
+      // (prima qui si mostrava la prima scheda nascosta, cioè «Livello superato»,
+      // che restava visibile sotto il gioco: il secondo tocco saltava un livello)
       var card = document.querySelector('.inf-card:not(#level-up):not(#end)');
       if (card) card.classList.remove('hide');
       mostraRound();
@@ -269,7 +276,7 @@
 
     var inPassaggio = false; // dopo la risposta giusta: un secondo tocco non salta il turno
     function scegli(btn, it, r){
-      if (inPassaggio) return;
+      if (inPassaggio || Date.now() < sbloccoAl) return;
       if (window.AudioSintetico) window.AudioSintetico.init();
       if (it.ok){
         inPassaggio = true;
@@ -277,6 +284,7 @@
         btn.classList.add('giusto');
         feedback.style.color = '#0f5132';
         feedback.textContent = '✅ ' + r.tip;
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         progressBolli[idx].classList.add('on');
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
@@ -290,6 +298,7 @@
         btn.classList.add('sbagliato');
         feedback.style.color = '#8B1F2E';
         feedback.textContent = '🐢 Questo non serve in emergenza. Riprova!';
+        if (window.InfInVista) window.InfInVista(feedback);
         errori++;
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function(){ btn.classList.remove('sbagliato'); }, 500);

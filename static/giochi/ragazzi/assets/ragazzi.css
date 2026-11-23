@@ -44,3 +44,10 @@ body.rag-body { background: var(--rag-bg); }
 .hide { display: none !important; }
 .screen { display: block; }
 .screen.hide { display: none !important; }
+
+/* Link con aspetto di pulsante: testo centrato in verticale anche quando il
+   pulsante è portato a 44 px per il tocco (prima il testo restava in alto). */
+body.rag-body a.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px;
+}

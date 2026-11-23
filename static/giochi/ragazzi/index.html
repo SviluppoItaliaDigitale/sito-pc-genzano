@@ -15,9 +15,22 @@
   <link rel="stylesheet" href="/app-shared/app-common.css">
   <link rel="stylesheet" href="/giochi/assets/css/giochi.css">
   <style>
-    .stelle-difficoltà { color: #E5A13A; letter-spacing: 1px; }
-    .stelle-difficoltà .vuota { color: #ddd; }
-    .tempo-stimato { font-size: 0.85rem; color: #5b6b7c; display: inline-flex; align-items: center; gap: 0.3rem; }
+    /* Stelle piene ambra scura (6,3:1 su bianco), stelle vuote disegnate
+       come contorno: la differenza si vede dalla forma, non solo dal colore. */
+    .stelle-difficoltà { color: #8a5300; letter-spacing: 1px; font-size: 1.05rem; }
+    .stelle-difficoltà .vuota { color: #6b7785; }
+    .tempo-stimato { font-size: 0.85rem; color: #4a5866; display: inline-flex; align-items: center; gap: 0.3rem; }
+    /* Card dei giochi: icona accanto al titolo, descrizione sotto, difficolta'
+       e durata in fondo allineate fra le card della stessa riga. */
+    .rag-hub .gioco-card {
+      display: grid; grid-template-columns: 48px minmax(0, 1fr);
+      grid-template-rows: auto 1fr auto; column-gap: .9rem; row-gap: .55rem;
+      align-items: center; border-top: 4px solid #003366; padding: 1.25rem 1.3rem;
+    }
+    .rag-hub .gioco-card-icon { width: 48px; height: 48px; margin: 0; font-size: 1.35rem; border-radius: 10px; }
+    .rag-hub .gioco-card h2 { margin: 0; font-size: 1.12rem; line-height: 1.25; }
+    .rag-hub .gioco-card p { grid-column: 1 / -1; align-self: start; color: #4a5866; }
+    .rag-hub .gioco-card > div:last-child { grid-column: 1 / -1; margin-top: .2rem !important; padding-top: .6rem; border-top: 1px solid #e3e8ef; }
   </style>
 </head>
 <body>
@@ -33,7 +46,7 @@
           </ol>
         </nav>
         <h1>Giochi per Ragazzi</h1>
-        <p class="lead">Nove esperienze avanzate per ragazzi dagli 11 ai 19 anni: simulazioni, narrativa interattiva, pianificazione operativa, verifica fonti, triage sanitario, cartelli di pericolo e storia della protezione civile.</p>
+        <p class="lead">Esperienze avanzate per ragazzi dagli 11 ai 19 anni: simulazioni, narrativa interattiva, pianificazione operativa, verifica fonti, triage sanitario, cartelli di pericolo e storia della protezione civile.</p>
       </div>
     </div>
 
@@ -42,7 +55,7 @@
         <a href="../index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna alla scelta della fascia</a>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 rag-hub">
         <div class="col-md-6 col-lg-4">
           <a href="simulatore-coc/index.html" class="gioco-card">
             <div class="gioco-card-icon icon-ragazzi"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i></div>
@@ -61,7 +74,7 @@
             <h2>Soccorritore in emergenza</h2>
             <p>Avventura narrativa: terremoto nella notte ai Colli Albani. Ogni scelta ha conseguenze, finali multipli.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9733;</span></span>
+              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9734;</span></span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 15 min</span>
             </div>
           </a>
@@ -73,7 +86,7 @@
             <h2>La Mappa del Rischio</h2>
             <p>Sulla mappa stilizzata di Genzano, posiziona rischi, aree di emergenza e strutture strategiche.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9733;</span></span>
+              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9734;</span></span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 10 min</span>
             </div>
           </a>
@@ -85,7 +98,7 @@
             <h2>Radio Emergency</h2>
             <p>Alfabeto fonetico NATO, formato messaggio radio, dettato: impara a comunicare in emergenza.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9733;</span></span>
+              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9734;</span></span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 12 min</span>
             </div>
           </a>
@@ -95,7 +108,7 @@
           <a href="codice-arancione/index.html" class="gioco-card">
             <div class="gioco-card-icon icon-ragazzi"><i class="bi bi-bounding-box" aria-hidden="true"></i></div>
             <h2>Codice Arancione</h2>
-            <p>Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli logistici e di sicurezza.</p>
+            <p>Allestisci un'area di accoglienza per gli sfollati rispettando i vincoli logistici e di sicurezza.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
               <span class="stelle-difficoltà" aria-label="Difficoltà: 3 su 3">&#9733;&#9733;&#9733;</span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 15 min</span>
@@ -109,7 +122,7 @@
             <h2>Vero o bufala?</h2>
             <p>Riconosci le notizie di protezione civile affidabili: fonti ufficiali, catene WhatsApp, post social, email sospette.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9733;</span></span>
+              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9734;</span></span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 10 min</span>
             </div>
           </a>
@@ -145,7 +158,7 @@
             <h2>Linea del tempo</h2>
             <p>Riordina gli eventi che hanno segnato la nascita della Protezione Civile italiana: dal Vajont al Codice del 2018.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9733;</span></span>
+              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9734;</span></span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 10 min</span>
             </div>
           </a>
@@ -155,9 +168,9 @@
           <a href="scelte-difficili/index.html" class="gioco-card">
             <div class="gioco-card-icon icon-ragazzi"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i></div>
             <h2>Scelte Difficili</h2>
-            <p>Tre scenari di emergenza (terremoto a scuola, alluvione di notte, incendio nel bosco) con decisioni multiple. Le tue scelte cambiano la storia.</p>
+            <p>Scenari di emergenza (terremoto a scuola, alluvione di notte, sciame sismico, blackout, incendio nel bosco) con decisioni multiple. Le tue scelte cambiano la storia.</p>
             <div class="d-flex justify-content-between align-items-center mt-2">
-              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9733;</span></span>
+              <span class="stelle-difficoltà" aria-label="Difficoltà: 2 su 3">&#9733;&#9733;<span class="vuota">&#9734;</span></span>
               <span class="tempo-stimato"><i class="bi bi-clock" aria-hidden="true"></i> 12-15 min</span>
             </div>
           </a>

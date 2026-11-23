@@ -54,9 +54,19 @@
     }
     .bandiera-btn.verde { background: var(--inf-verde); }
     .bandiera-btn.giallo { background: var(--inf-giallo); color: #17324D; text-shadow: none; }
-    .bandiera-btn.arancione { background: #EA9A3E; }
+    /* Testo scuro sull'arancione: il bianco arrivava a 2,3:1, il blu scuro e' 5,8:1. */
+    .bandiera-btn.arancione { background: #EA9A3E; color: #17324D; text-shadow: none; }
     .bandiera-btn.rosso { background: var(--inf-rosso); }
-    .bandiera-btn .flag-icon { font-size: 1.8rem; margin-bottom: .2rem; }
+    /* La classe si chiamava flag-icon e prendeva lo stile delle bandiere nazionali di
+       Bootstrap Italia (un riquadro blu dietro il pallino): ora e' una bandierina. */
+    .bandiera-btn .bandiera-segno { font-size: 1.9rem; line-height: 1; margin-bottom: .3rem; }
+    @media (min-width: 700px) {
+      .bandiere-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 640px; }
+    }
+    /* LIM a 768 px di altezza: la scena si accorcia, cosi' scena e bandiere si vedono insieme. */
+    @media (min-width: 700px) and (max-height: 900px) {
+      .meteo-box svg { height: 30vh; max-height: 230px; }
+    }
     .bandiera-btn.correct { outline: 4px solid #0f5132; animation: flash-g 0.5s 2; }
     .bandiera-btn.wrong { animation: shake-h 0.4s; }
     @keyframes flash-g {
@@ -117,7 +127,7 @@
     </nav>
     <div class="inf-home">
       <h1>Il Cielo di Oggi</h1>
-      <p>Guarda che tempo fa e tocca la <strong>bandiera giusta</strong>. 15 scene meteo in 3 round.</p>
+      <p>Guarda che tempo fa e tocca la <strong>bandiera giusta</strong>: più il colore è forte, più attenzione serve. 15 scene meteo in 3 round.</p>
     </div>
 
     <div class="inf-card" id="game-card">
@@ -140,21 +150,21 @@
         <button type="button" class="tts-bambini-btn" data-tts-target="#meteo-nome" aria-label="Ascolta che meteo c'e'">Ascolta</button>
       </div>
 
-      <div class="bandiere-grid" role="group" aria-label="Bandiere di allerta">
+      <div class="bandiere-grid" role="group" aria-label="Bandiere: quanta attenzione serve">
         <button class="bandiera-btn verde" data-col="verde" aria-label="Bandiera verde, nessun pericolo">
-          <span class="flag-icon" aria-hidden="true">🟢</span>
+          <i class="bi bi-flag-fill bandiera-segno" aria-hidden="true"></i>
           VERDE
         </button>
         <button class="bandiera-btn giallo" data-col="giallo" aria-label="Bandiera gialla, attenzione">
-          <span class="flag-icon" aria-hidden="true">🟡</span>
+          <i class="bi bi-flag-fill bandiera-segno" aria-hidden="true"></i>
           GIALLO
         </button>
         <button class="bandiera-btn arancione" data-col="arancione" aria-label="Bandiera arancione, pericolo">
-          <span class="flag-icon" aria-hidden="true">🟠</span>
+          <i class="bi bi-flag-fill bandiera-segno" aria-hidden="true"></i>
           ARANCIONE
         </button>
         <button class="bandiera-btn rosso" data-col="rosso" aria-label="Bandiera rossa, pericolo alto">
-          <span class="flag-icon" aria-hidden="true">🔴</span>
+          <i class="bi bi-flag-fill bandiera-segno" aria-hidden="true"></i>
           ROSSO
         </button>
       </div>
@@ -173,8 +183,9 @@
 
     <div id="end" class="inf-card inf-end hide">
       <div class="bravi">Bravissimo!</div>
-      <p class="h5 mb-3">Hai superato 3 round di allerta meteo!</p>
+      <p class="h5 mb-3">Hai superato i 3 round del cielo!</p>
       <p class="small text-muted">Ricorda: più il colore è forte, più bisogna fare attenzione. Chiedi sempre a un grande.</p>
+      <p class="small text-muted">Per gli adulti: le bandiere del gioco dicono quanta prudenza serve con il tempo che si vede. L'allerta meteo vera la emette la Regione Lazio sulle previsioni, non sul cielo di oggi: la trovi nella pagina <a href="/allerte-meteo/">Allerte meteo</a>.</p>
       <div class="attestato-inject my-3"></div>
       <div class="d-flex flex-wrap justify-content-center gap-2">
         <button id="restart" class="inf-big-btn" style="background:var(--inf-blu);"><i class="bi bi-arrow-repeat"></i> Ancora</button>
@@ -185,6 +196,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/audio-sintetico.js"></script>
@@ -212,9 +224,11 @@
 
     var SVG_PIOGGIA_LEGGERA = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Pioggia leggera">\
-        <ellipse cx="120" cy="70" rx="70" ry="30" fill="#b5c4d6" stroke="#6a7d95" stroke-width="3"/>\
-        <ellipse cx="80" cy="60" rx="25" ry="20" fill="#d5dfec"/>\
-        <ellipse cx="150" cy="62" rx="30" ry="22" fill="#d5dfec"/>\
+        <g class="nuvola">\
+          <g fill="#6a7d95" stroke="#6a7d95" stroke-width="6" stroke-linejoin="round"><ellipse cx="120" cy="76" rx="70" ry="21.6"/><circle cx="88.5" cy="68.5" r="24"/><circle cx="116.5" cy="56.5" r="32.4"/><circle cx="149.4" cy="66.4" r="26.4"/></g>\
+          <g fill="#b5c4d6"><ellipse cx="120" cy="76" rx="70" ry="21.6"/><circle cx="88.5" cy="68.5" r="24"/><circle cx="116.5" cy="56.5" r="32.4"/><circle cx="149.4" cy="66.4" r="26.4"/></g>\
+          <ellipse cx="111.6" cy="51.4" rx="16.5" ry="9.6" fill="#d5dfec" opacity=".85"/>\
+        </g>\
         <g fill="#3E7BC8">\
           <ellipse class="goccia" cx="90" cy="110" rx="4" ry="8"/>\
           <ellipse class="goccia" cx="130" cy="110" rx="4" ry="8"/>\
@@ -224,9 +238,11 @@
 
     var SVG_PIOGGIA_FORTE = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Pioggia forte">\
-        <ellipse cx="120" cy="60" rx="80" ry="32" fill="#7a8a9f" stroke="#465568" stroke-width="3"/>\
-        <ellipse cx="80" cy="50" rx="28" ry="22" fill="#8b9bad"/>\
-        <ellipse cx="160" cy="52" rx="32" ry="24" fill="#8b9bad"/>\
+        <g class="nuvola">\
+          <g fill="#465568" stroke="#465568" stroke-width="6" stroke-linejoin="round"><ellipse cx="120" cy="66.4" rx="80" ry="23"/><circle cx="84" cy="58.4" r="25.6"/><circle cx="116" cy="45.6" r="34.6"/><circle cx="153.6" cy="56.2" r="28.2"/></g>\
+          <g fill="#7a8a9f"><ellipse cx="120" cy="66.4" rx="80" ry="23"/><circle cx="84" cy="58.4" r="25.6"/><circle cx="116" cy="45.6" r="34.6"/><circle cx="153.6" cy="56.2" r="28.2"/></g>\
+          <ellipse cx="110.4" cy="40.2" rx="17.6" ry="10.2" fill="#8b9bad" opacity=".85"/>\
+        </g>\
         <g fill="#3E7BC8">\
           <ellipse class="goccia" cx="70" cy="110" rx="5" ry="10"/>\
           <ellipse class="goccia" cx="95" cy="115" rx="5" ry="10"/>\
@@ -238,9 +254,11 @@
 
     var SVG_TEMPORALE = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Temporale con fulmini">\
-        <ellipse cx="120" cy="60" rx="85" ry="34" fill="#4a5568" stroke="#2d3748" stroke-width="3"/>\
-        <ellipse cx="75" cy="48" rx="28" ry="22" fill="#606b80"/>\
-        <ellipse cx="165" cy="50" rx="32" ry="24" fill="#606b80"/>\
+        <g class="nuvola">\
+          <g fill="#2d3748" stroke="#2d3748" stroke-width="6" stroke-linejoin="round"><ellipse cx="120" cy="67.8" rx="85" ry="24.5"/><circle cx="81.8" cy="59.3" r="27.2"/><circle cx="115.8" cy="45.7" r="36.7"/><circle cx="155.7" cy="56.9" r="29.9"/></g>\
+          <g fill="#4a5568"><ellipse cx="120" cy="67.8" rx="85" ry="24.5"/><circle cx="81.8" cy="59.3" r="27.2"/><circle cx="115.8" cy="45.7" r="36.7"/><circle cx="155.7" cy="56.9" r="29.9"/></g>\
+          <ellipse cx="109.8" cy="39.9" rx="18.7" ry="10.9" fill="#606b80" opacity=".85"/>\
+        </g>\
         <polygon class="fulmine" points="110,100 130,100 118,130 135,130 105,170 115,140 100,140" fill="#F4B700" stroke="#a67a00" stroke-width="2"/>\
         <g fill="#3E7BC8">\
           <ellipse class="goccia" cx="60" cy="115" rx="5" ry="10"/>\
@@ -265,7 +283,10 @@
 
     var SVG_NEVE = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Neve abbondante">\
-        <ellipse cx="120" cy="55" rx="78" ry="30" fill="#d5dfec" stroke="#8a99af" stroke-width="3"/>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="6" stroke-linejoin="round"><ellipse cx="120" cy="61" rx="78" ry="21.6"/><circle cx="84.9" cy="53.5" r="24"/><circle cx="116.1" cy="41.5" r="32.4"/><circle cx="152.8" cy="51.4" r="26.4"/></g>\
+          <g fill="#d5dfec"><ellipse cx="120" cy="61" rx="78" ry="21.6"/><circle cx="84.9" cy="53.5" r="24"/><circle cx="116.1" cy="41.5" r="32.4"/><circle cx="152.8" cy="51.4" r="26.4"/></g>\
+        </g>\
         <g fill="#fff" stroke="#3E7BC8" stroke-width="1.5">\
           <circle class="fiocco" cx="55" cy="105" r="7"/>\
           <circle class="fiocco" cx="90" cy="120" r="7"/>\
@@ -281,8 +302,11 @@
     var SVG_SOLE_NUVOLE = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Sole con qualche nuvola">\
         <circle cx="80" cy="60" r="28" fill="#F4B700" stroke="#a67a00" stroke-width="3"/>\
-        <ellipse cx="155" cy="80" rx="48" ry="24" fill="#d5dfec" stroke="#8a99af" stroke-width="2"/>\
-        <ellipse cx="135" cy="72" rx="20" ry="14" fill="#eaf0f6"/>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="4" stroke-linejoin="round"><ellipse cx="155" cy="84.8" rx="48" ry="17.3"/><circle cx="133.4" cy="78.8" r="19.2"/><circle cx="152.6" cy="69.2" r="25.9"/><circle cx="175.2" cy="77.1" r="21.1"/></g>\
+          <g fill="#d5dfec"><ellipse cx="155" cy="84.8" rx="48" ry="17.3"/><circle cx="133.4" cy="78.8" r="19.2"/><circle cx="152.6" cy="69.2" r="25.9"/><circle cx="175.2" cy="77.1" r="21.1"/></g>\
+          <ellipse cx="149.2" cy="65.1" rx="13.2" ry="7.7" fill="#eaf0f6" opacity=".85"/>\
+        </g>\
       </svg>';
 
     var SVG_NEBBIA = '\
@@ -296,9 +320,11 @@
 
     var SVG_GRANDINE = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Grandine">\
-        <ellipse cx="120" cy="55" rx="80" ry="32" fill="#7a8a9f" stroke="#465568" stroke-width="3"/>\
-        <ellipse cx="80" cy="48" rx="28" ry="22" fill="#8b9bad"/>\
-        <ellipse cx="160" cy="50" rx="32" ry="24" fill="#8b9bad"/>\
+        <g class="nuvola">\
+          <g fill="#465568" stroke="#465568" stroke-width="6" stroke-linejoin="round"><ellipse cx="120" cy="64.4" rx="80" ry="23"/><circle cx="84" cy="56.4" r="25.6"/><circle cx="116" cy="43.6" r="34.6"/><circle cx="153.6" cy="54.1" r="28.2"/></g>\
+          <g fill="#7a8a9f"><ellipse cx="120" cy="64.4" rx="80" ry="23"/><circle cx="84" cy="56.4" r="25.6"/><circle cx="116" cy="43.6" r="34.6"/><circle cx="153.6" cy="54.1" r="28.2"/></g>\
+          <ellipse cx="110.4" cy="38.1" rx="17.6" ry="10.2" fill="#8b9bad" opacity=".85"/>\
+        </g>\
         <g fill="#fff" stroke="#465568" stroke-width="1.5">\
           <circle class="goccia" cx="70" cy="115" r="6"/>\
           <circle class="goccia" cx="100" cy="125" r="6"/>\
@@ -329,11 +355,26 @@
 
     var SVG_COPERTO = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Cielo coperto">\
-        <ellipse cx="60" cy="55" rx="40" ry="20" fill="#cfd8e3" stroke="#8a99af" stroke-width="2"/>\
-        <ellipse cx="120" cy="48" rx="48" ry="22" fill="#bcc7d5" stroke="#8a99af" stroke-width="2"/>\
-        <ellipse cx="190" cy="58" rx="42" ry="20" fill="#cfd8e3" stroke="#8a99af" stroke-width="2"/>\
-        <ellipse cx="80" cy="100" rx="50" ry="22" fill="#d5dfec" stroke="#8a99af" stroke-width="2"/>\
-        <ellipse cx="170" cy="105" rx="55" ry="22" fill="#d5dfec" stroke="#8a99af" stroke-width="2"/>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="4" stroke-linejoin="round"><ellipse cx="60" cy="59" rx="40" ry="14.4"/><circle cx="42" cy="54" r="16"/><circle cx="58" cy="46" r="21.6"/><circle cx="76.8" cy="52.6" r="17.6"/></g>\
+          <g fill="#cfd8e3"><ellipse cx="60" cy="59" rx="40" ry="14.4"/><circle cx="42" cy="54" r="16"/><circle cx="58" cy="46" r="21.6"/><circle cx="76.8" cy="52.6" r="17.6"/></g>\
+        </g>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="4" stroke-linejoin="round"><ellipse cx="120" cy="52.4" rx="48" ry="15.8"/><circle cx="98.4" cy="46.9" r="17.6"/><circle cx="117.6" cy="38.1" r="23.8"/><circle cx="140.2" cy="45.4" r="19.4"/></g>\
+          <g fill="#bcc7d5"><ellipse cx="120" cy="52.4" rx="48" ry="15.8"/><circle cx="98.4" cy="46.9" r="17.6"/><circle cx="117.6" cy="38.1" r="23.8"/><circle cx="140.2" cy="45.4" r="19.4"/></g>\
+        </g>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="4" stroke-linejoin="round"><ellipse cx="190" cy="62" rx="42" ry="14.4"/><circle cx="171.1" cy="57" r="16"/><circle cx="187.9" cy="49" r="21.6"/><circle cx="207.6" cy="55.6" r="17.6"/></g>\
+          <g fill="#cfd8e3"><ellipse cx="190" cy="62" rx="42" ry="14.4"/><circle cx="171.1" cy="57" r="16"/><circle cx="187.9" cy="49" r="21.6"/><circle cx="207.6" cy="55.6" r="17.6"/></g>\
+        </g>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="4" stroke-linejoin="round"><ellipse cx="80" cy="104.4" rx="50" ry="15.8"/><circle cx="57.5" cy="98.9" r="17.6"/><circle cx="77.5" cy="90.1" r="23.8"/><circle cx="101" cy="97.4" r="19.4"/></g>\
+          <g fill="#d5dfec"><ellipse cx="80" cy="104.4" rx="50" ry="15.8"/><circle cx="57.5" cy="98.9" r="17.6"/><circle cx="77.5" cy="90.1" r="23.8"/><circle cx="101" cy="97.4" r="19.4"/></g>\
+        </g>\
+        <g class="nuvola">\
+          <g fill="#8a99af" stroke="#8a99af" stroke-width="4" stroke-linejoin="round"><ellipse cx="170" cy="109.4" rx="55" ry="15.8"/><circle cx="145.2" cy="103.9" r="17.6"/><circle cx="167.2" cy="95.1" r="23.8"/><circle cx="193.1" cy="102.4" r="19.4"/></g>\
+          <g fill="#d5dfec"><ellipse cx="170" cy="109.4" rx="55" ry="15.8"/><circle cx="145.2" cy="103.9" r="17.6"/><circle cx="167.2" cy="95.1" r="23.8"/><circle cx="193.1" cy="102.4" r="19.4"/></g>\
+        </g>\
       </svg>';
     var SVG_GELO = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Gelo notturno">\
@@ -382,9 +423,11 @@
       </svg>';
     var SVG_NUBIFRAGIO = '\
       <svg viewBox="0 0 240 180" role="img" aria-label="Nubifragio">\
-        <ellipse cx="120" cy="50" rx="95" ry="34" fill="#3a4456" stroke="#1d2738" stroke-width="3"/>\
-        <ellipse cx="60" cy="40" rx="32" ry="22" fill="#4a5568"/>\
-        <ellipse cx="170" cy="42" rx="36" ry="24" fill="#4a5568"/>\
+        <g class="nuvola">\
+          <g fill="#1d2738" stroke="#1d2738" stroke-width="6" stroke-linejoin="round"><ellipse cx="120" cy="60.9" rx="95" ry="21.6"/><circle cx="77.2" cy="53.4" r="24"/><circle cx="115.2" cy="41.4" r="32.4"/><circle cx="159.9" cy="51.3" r="26.4"/></g>\
+          <g fill="#3a4456"><ellipse cx="120" cy="60.9" rx="95" ry="21.6"/><circle cx="77.2" cy="53.4" r="24"/><circle cx="115.2" cy="41.4" r="32.4"/><circle cx="159.9" cy="51.3" r="26.4"/></g>\
+          <ellipse cx="108.6" cy="36.3" rx="16.5" ry="9.6" fill="#4a5568" opacity=".85"/>\
+        </g>\
         <g fill="#3E7BC8">\
           <rect x="40" y="90" width="3" height="20"/>\
           <rect x="60" y="95" width="3" height="22"/>\
@@ -452,6 +495,15 @@
     var progressBolli = document.querySelectorAll('#progress .bollino');
     var queue = [], idx = 0, errori = 0, locked = false, roundIdx = 0;
     var stelleTotali = 0;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
+
+    // Quando il riquadro del gioco si chiude, la scheda che compare poteva finire sotto
+    // la barra blu in alto: la si porta al centro dello schermo.
+    function mostraInVista(el){
+      try { el.scrollIntoView({ block: 'center' }); } catch (err) { el.scrollIntoView(); }
+    }
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -467,7 +519,7 @@
     }
 
     function scegli(btn){
-      if (locked) return;
+      if (locked || Date.now() < sbloccoAl) return;
       if (window.AudioSintetico) window.AudioSintetico.init();
       var col = btn.getAttribute('data-col');
       var s = queue[idx];
@@ -477,6 +529,7 @@
         btn.classList.add('correct');
         feedback.style.color = '#0f5132';
         feedback.textContent = '✅ ' + s.tip;
+        if (window.InfInVista) window.InfInVista(feedback);
         if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
         progressBolli[idx].classList.add('on');
         progressBolli[idx].innerHTML = '<i class="bi bi-check-lg"></i>';
@@ -489,6 +542,7 @@
         btn.classList.add('wrong');
         feedback.style.color = '#8B1F2E';
         feedback.textContent = '🐢 Non è questa, riprova!';
+        if (window.InfInVista) window.InfInVista(feedback);
         errori++;
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function(){ btn.classList.remove('wrong'); }, 500);
@@ -501,6 +555,7 @@
     function avviaRound(){
       queue = shuffle(ROUNDS[roundIdx].slice());
       idx = 0;
+      sbloccoAl = Date.now() + 500;
       gameCard.classList.remove('hide');
       roundUp.classList.add('hide');
       endScreen.classList.add('hide');
@@ -516,6 +571,7 @@
       if (roundIdx < ROUNDS.length - 1) {
         gameCard.classList.add('hide');
         roundUp.classList.remove('hide');
+        mostraInVista(roundUp);
         if (window.AudioSintetico){
           window.AudioSintetico.tono({freq:523,durata:.15});
           setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.15}); },180);
@@ -529,6 +585,7 @@
       endScreen.classList.remove('hide');
       gameCard.classList.add('hide');
       roundUp.classList.add('hide');
+      mostraInVista(endScreen);
       if (window.AudioSintetico){
         window.AudioSintetico.tono({freq:523,durata:.2});
         setTimeout(function(){ window.AudioSintetico.tono({freq:659,durata:.2}); },200);
@@ -542,11 +599,14 @@
     bandiere.forEach(function(b){ b.addEventListener('click', function(){ scegli(b); }); });
 
     document.getElementById('next-round').addEventListener('click', function(){
+      // Doppio tocco: il secondo tocco non deve saltare un round né cercarne uno che non esiste.
+      if (roundUp.classList.contains('hide') || roundIdx >= ROUNDS.length - 1) return;
       roundIdx++;
       avviaRound();
     });
 
     document.getElementById('restart').addEventListener('click', function(){
+      if (endScreen.classList.contains('hide')) return;
       roundIdx = 0; errori = 0;
       avviaRound();
     });

@@ -49,6 +49,8 @@
       background: var(--rag-blu); color: #fff; outline: 0;
     }
     .btn-azione:disabled { opacity: .55; cursor: not-allowed; }
+    .btn-azione.scelta-tua:disabled { opacity: 1; }
+    #next-btn { min-height: 44px; }
     .esito-box {
       margin-top: 1rem; padding: .9rem 1.1rem; border-radius: 8px;
       font-size: .95rem; line-height: 1.55;
@@ -107,7 +109,7 @@
 
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">Come si gioca</h2>
-        <p>Sei al centro di un'emergenza. Ti vengono presentati <strong>5 scenari</strong> (terremoto a scuola, alluvione di notte, sciame sismico ai Castelli, blackout esteso, incendio nel bosco). In ciascuno fai <strong>3-4 scelte</strong> con conseguenze diverse. Alcune scelte salvano vite, altre le mettono a rischio: i punti riflettono la qualità delle tue decisioni.</p>
+        <p>Sei al centro di un'emergenza. Ti vengono presentati <strong>5 scenari</strong> (terremoto a scuola, alluvione di notte, sciame sismico ai Castelli, blackout esteso, incendio nel bosco). In ciascuno fai <strong>3 scelte</strong> con conseguenze diverse. Alcune scelte salvano vite, altre le mettono a rischio: i punti riflettono la qualità delle tue decisioni.</p>
         <p class="text-muted small">Non c'è una risposta sempre "giusta": le emergenze reali sono incerte. L'obiettivo è imparare il <strong>ragionamento</strong> giusto in situazioni di pressione.</p>
         <div class="d-flex flex-wrap gap-2">
           <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
@@ -157,21 +159,30 @@
   </main>
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script>
   (function () {
     'use strict';
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
 
     // 3 scenari, ognuno 3 decisioni con punti per scelta
     const SCENARI = [
       {
-        titolo: '🏫 Terremoto a scuola',
+        titolo: 'Terremoto a scuola', icona: 'bi-building',
         decisioni: [
           {
             testo: 'Sei in classe in seconda media. La scossa inizia: dura circa 8 secondi. Cosa fai per primo?',
             scelte: [
-              { txt: 'Mi metto subito sotto il banco e proteggo la testa con le mani', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Drop, Cover, Hold On</strong> è la procedura corretta. Sotto il banco sei al riparo da oggetti che cadono.' },
-              { txt: 'Corro fuori dall\'aula verso le scale', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. <strong>Mai correre durante la scossa.</strong> Le scale e le porte sono fra i punti più pericolosi: vetri, lampadari, calcinacci.' },
+              { txt: 'Mi metto subito sotto il banco e proteggo la testa con le mani', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Abbassati, riparati, tieniti</strong>: sotto il banco, tenendoti alla gamba, sei al riparo da ciò che cade.' },
+              { txt: 'Corro fuori dall\'aula verso le scale', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. <strong>Mai correre durante la scossa.</strong> Le scale sono fra le parti più fragili dell\'edificio e nei corridoi possono cadere vetri, lampade e calcinacci. Si esce solo quando la scossa è finita, seguendo il piano di evacuazione.' },
               { txt: 'Resto in piedi in mezzo all\'aula a guardare cosa succede', pt: 1, esito: 'medio', fb: 'INSUFFICIENTE. Sei esposto a oggetti in caduta. Sotto un banco saresti più protetto.' }
             ]
           },
@@ -187,14 +198,14 @@
             testo: 'Al punto di raccolta, un compagno è scomparso. Cosa fai?',
             scelte: [
               { txt: 'Lo cerco da solo nell\'edificio', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSO. Mai rientrare nell\'edificio. Aggiungeresti una persona dispersa al problema.' },
-              { txt: 'Avviso subito la docente o il responsabile dell\'evacuazione', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La gestione di una persona mancante spetta all\'autorità (RSPP, vigili del fuoco). Tu hai segnalato e questo basta.' },
+              { txt: 'Avviso subito la docente o il responsabile dell\'evacuazione', pt: 3, esito: 'ottimo', fb: 'PERFETTO. Una persona che manca all\'appello la cercano i soccorritori: il coordinatore dell\'emergenza della scuola lo comunica ai Vigili del Fuoco. Tu hai segnalato e questo basta.' },
               { txt: 'Lo cerco con altri compagni', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Si moltiplicano le persone disperse. La ricerca la fanno gli operatori formati.' }
             ]
           }
         ]
       },
       {
-        titolo: '🌊 Alluvione di notte',
+        titolo: 'Alluvione di notte', icona: 'bi-water',
         decisioni: [
           {
             testo: 'È mezzanotte. Tua madre ti sveglia: sta entrando acqua dalla porta del piano terra. La pioggia è violenta, c\'è allerta arancione. Cosa fate per prima cosa?',
@@ -223,14 +234,14 @@
         ]
       },
       {
-        titolo: '🌋 Sciame sismico ai Castelli',
+        titolo: 'Sciame sismico ai Castelli', icona: 'bi-activity',
         decisioni: [
           {
             testo: 'Una scossa M 4.8 ha colpito i Castelli Romani. Casa tua è agibile a vista. INGV annuncia probabili repliche fino a M 4.0 nelle prossime 48h. Cosa fai stanotte?',
             scelte: [
               { txt: 'Dormo a casa: M 4 non fa danni gravi a edifici recenti', pt: 1, esito: 'medio', fb: 'POTENZIALMENTE OK ma rischioso. La struttura va prima verificata da un tecnico. Dormi vestito, con scarpe e zaino pronti vicino al letto.' },
-              { txt: 'Vado dalla nonna in campagna in una casetta di tufo del 1920', pt: 0, esito: 'sbagliato', fb: 'PESSIMA SCELTA. Le case storiche di tufo non antisismiche sono <strong>più</strong> a rischio nelle repliche. Le costruzioni post-1981 sono più sicure.' },
-              { txt: 'Vado al palazzetto comunale dove il COC ha allestito un\'area di attesa, anche solo per la notte', pt: 3, esito: 'ottimo', fb: 'PERFETTO. Il <strong>COC ha aree di attesa</strong> proprio per questo: edificio antisismico verificato, presidio sanitario, informazioni in tempo reale.' }
+              { txt: 'Vado dalla nonna in campagna in una casetta di tufo del 1920', pt: 0, esito: 'sbagliato', fb: 'PESSIMA SCELTA. Le case vecchie in muratura, costruite senza criteri antisismici, sono <strong>più</strong> a rischio nelle repliche. Gli edifici progettati con le norme antisismiche sono in genere più sicuri.' },
+              { txt: 'Vado al palazzetto comunale dove il Comune ha aperto una struttura di accoglienza, anche solo per la notte', pt: 3, esito: 'ottimo', fb: 'PERFETTO. Le <strong>strutture di accoglienza</strong> del piano comunale servono proprio a questo: edificio verificato, assistenza, informazioni aggiornate. Le aree di attesa, invece, sono gli spazi all\'aperto dove ritrovarsi subito dopo la scossa.' }
             ]
           },
           {
@@ -244,7 +255,7 @@
           {
             testo: 'Dopo 48h le repliche si sono ridotte. Sui social girano video di "tecnici amatoriali" che dicono "sta arrivando il Big One a Roma!". Tu sei al COC come supporto. Cosa fai?',
             scelte: [
-              { txt: 'Rilancio i video con un commento "verifichiamo" per correttezza', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai amplificato la fake news. La regola del DPC è <strong>"non amplificare", mai citare il post falso</strong>. Risposta solo con fonte ufficiale, senza riferimento all\'originale.' },
+              { txt: 'Rilancio i video con un commento "verifichiamo" per correttezza', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai amplificato la fake news: anche con un commento critico, rilanciarla la fa arrivare a più persone. <strong>Non si rilancia il contenuto falso</strong>: si diffonde l\'informazione ufficiale.' },
               { txt: 'Mi limito a indicare le fonti ufficiali (INGV, DPC) sui canali del Comune e ignoro i video', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La PC <strong>contrasta le fake news producendo informazione verificata</strong>, non rispondendo direttamente alle bufale.' },
               { txt: 'Contesto i video commentando uno per uno', pt: 0, esito: 'sbagliato', fb: 'CONTROPRODUCENTE. Discutere amplifica. Ogni commento moltiplica la visibilità del post falso. Mai entrare nella conversazione.' }
             ]
@@ -252,7 +263,7 @@
         ]
       },
       {
-        titolo: '⚡ Blackout esteso 24 ore',
+        titolo: 'Blackout esteso 24 ore', icona: 'bi-lightning-charge-fill',
         decisioni: [
           {
             testo: 'Una tempesta ha causato un blackout su tutto il Comune. Sono passate già 6 ore, fa freddo. La cucina è elettrica. Hai 14 anni, sei a casa con tuo fratello di 6 anni. I genitori sono al lavoro fuori città. Come ti scaldi?',
@@ -275,13 +286,13 @@
             scelte: [
               { txt: 'Resto a casa: i miei genitori non sanno dove sono', pt: 0, esito: 'sbagliato', fb: 'INSUFFICIENTE. Non hai modo di comunicare e fa freddo. <strong>Vai al palazzetto</strong> con tuo fratello: là chiamerai i genitori e starai al caldo.' },
               { txt: 'Andiamo al palazzetto, lasciando un biglietto e con la coperta termica', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Comunicare al Comune</strong> dov\'è la famiglia è esattamente perché esistono le aree di accoglienza. Il biglietto a casa permette ai genitori di trovarti.' },
-              { txt: 'Provo da solo a riavviare il quadro elettrico in cantina', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSISSIMO. Mai toccare il quadro elettrico in blackout: potrebbe esserci tensione di ritorno. <strong>Solo i tecnici del gestore elettrico</strong> ripristinano la rete.' }
+              { txt: 'Provo da solo a riavviare il quadro elettrico in cantina', pt: 0, esito: 'sbagliato', fb: 'INUTILE E RISCHIOSO. Il guasto è sulla rete di tutto il Comune: dal quadro di casa non si ripristina. Scendere da solo in cantina al buio espone a cadute. <strong>Solo i tecnici del gestore elettrico</strong> ripristinano la rete.' }
             ]
           }
         ]
       },
       {
-        titolo: '🔥 Incendio nel bosco',
+        titolo: 'Incendio nel bosco', icona: 'bi-fire',
         decisioni: [
           {
             testo: 'Sei in escursione con la classe sui Castelli Romani. Vedi una colonna di fumo nero a circa 200 metri sul versante. Cosa fai?',
@@ -294,8 +305,8 @@
           {
             testo: 'Il fumo si avvicina. Il vento spinge le fiamme verso la zona dove siete. Cosa fa la classe?',
             scelte: [
-              { txt: 'Ci allontaniamo in direzione opposta al vento e al fumo, in modo ordinato', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La regola d\'oro è <strong>allontanarsi controvento</strong>. Ordinato perché correre disperde la classe.' },
-              { txt: 'Saliamo più in alto sul versante per vedere meglio', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Il fuoco <strong>sale di pendio velocemente</strong>: l\'aria calda risale, e il fronte si propaga in salita. Bisogna scendere o muoversi in piano controvento.' },
+              { txt: 'Ci allontaniamo in modo ordinato verso una strada o una zona senza vegetazione, lontano dalla direzione verso cui soffia il vento', pt: 3, esito: 'ottimo', fb: 'PERFETTO. Si cerca una <strong>via di fuga sicura</strong> (una strada, una zona senza vegetazione) e non ci si ferma dove soffia il vento: lì arrivano fiamme e fumo. In ordine, perché correre disperde la classe.' },
+              { txt: 'Saliamo più in alto sul versante per vedere meglio', pt: 0, esito: 'sbagliato', fb: 'SBAGLIATO. Il fuoco <strong>sale di pendio velocemente</strong>: l\'aria calda risale, e il fronte si propaga in salita. Non si fugge mai verso l\'alto.' },
               { txt: 'Ci stendiamo a terra per evitare il fumo', pt: 1, esito: 'medio', fb: 'PARZIALMENTE GIUSTO. Stare in basso aiuta a evitare il fumo se non si può uscire, ma <strong>se si può fuggire, si fugge</strong> in direzione sicura. Stendersi serve solo se intrappolati.' }
             ]
           },
@@ -304,7 +315,7 @@
             scelte: [
               { txt: 'Va bene, è importante documentare', pt: 0, esito: 'sbagliato', fb: 'NON IDEALE. Filmare un\'emergenza per i social spesso espone chi è in difficoltà, alimenta speculazioni, e <strong>distoglie dall\'aiuto reale</strong>. La cronaca è dei giornalisti.' },
               { txt: 'Gli dico di smettere e di mettere via il telefono finché non sono arrivati i soccorsi', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La <strong>priorità</strong> è la sicurezza, non i social. Il telefono serve per il 112 o per essere reperibili dai soccorsi. Le foto si fanno dopo, se proprio.' },
-              { txt: 'Chiedo di poter comparire nel video per la mia popolarità', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai banalizzato un\'emergenza per cercare visibilità. È esattamente il comportamento che la <strong>Social Media Policy</strong> della PC condanna.' }
+              { txt: 'Chiedo di poter comparire nel video per la mia popolarità', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai banalizzato un\'emergenza per cercare visibilità. In emergenza <strong>non si cerca visibilità</strong>: si lascia spazio ai soccorsi.' }
             ]
           }
         ]
@@ -320,6 +331,9 @@
 
     let scenarioIdx = 0, decisioneIdx = 0, totale = 0, sceltaCorrente = null;
     let storia = []; // {scenario, decisione, esito, pt}
+    // Doppio tocco (LIM): una scelta per decisione e un solo «Continua»; un tocco
+    // che arriva entro 400 ms dal cambio di decisione non conta.
+    let risposto = false, prontoDa = 0;
 
     const intro = document.getElementById('intro');
     const game = document.getElementById('game');
@@ -348,13 +362,15 @@
       const dec = sc.decisioni[decisioneIdx];
       document.getElementById('scena-cur').textContent = scenarioIdx + 1;
       document.getElementById('dec-cur').textContent = decisioneIdx + 1;
-      document.getElementById('scena-titolo').textContent = sc.titolo;
+      var tit = document.getElementById('scena-titolo');
+      tit.innerHTML = '<i class="bi ' + (sc.icona || 'bi-exclamation-triangle') + ' me-2" aria-hidden="true"></i>';
+      tit.appendChild(document.createTextNode(sc.titolo));
       document.getElementById('scena-testo').textContent = dec.testo;
       document.getElementById('punti-tot').textContent = totale;
       // progress
-      const totDec = SCENARI.reduce((a, s) => a + s.decisioni.length, 0);
+      const totDec = SCENARI_PARTITA.reduce((a, s) => a + s.decisioni.length, 0);
       let done = 0;
-      for (let i = 0; i < scenarioIdx; i++) done += SCENARI[i].decisioni.length;
+      for (let i = 0; i < scenarioIdx; i++) done += SCENARI_PARTITA[i].decisioni.length;
       done += decisioneIdx;
       document.getElementById('progress-bar').style.width = (100 * done / totDec) + '%';
       // azioni
@@ -370,11 +386,18 @@
       });
       document.getElementById('esito-scelta').classList.add('hide');
       document.getElementById('next-row').classList.add('hide');
+      risposto = false;
+      prontoDa = Date.now() + 400;
+      bloccaTocchi();
     }
 
     function onScelta(btn, scelta) {
+      if (risposto || Date.now() < prontoDa) return;
+      risposto = true;
+      if (window.AudioSintetico) { if (scelta.esito === 'ottimo') window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       // Disable all buttons
       document.querySelectorAll('.btn-azione').forEach(b => b.disabled = true);
+      btn.classList.add('scelta-tua');
       btn.style.background = scelta.esito === 'ottimo' ? '#15803d' : scelta.esito === 'medio' ? '#b45309' : '#c92a2a';
       btn.style.color = '#fff';
       btn.style.borderColor = btn.style.background;
@@ -400,6 +423,8 @@
     }
 
     function avanti() {
+      if (!risposto || Date.now() < prontoDa) return;
+      risposto = false;
       // Avanza alla prossima decisione/scenario
       if (decisioneIdx + 1 < SCENARI_PARTITA[scenarioIdx].decisioni.length) {
         decisioneIdx++;
@@ -415,6 +440,7 @@
     }
 
     function showResults() {
+      bloccaTocchi();
       game.classList.add('hide');
       results.classList.remove('hide');
       const totDec = SCENARI_PARTITA.reduce((a, s) => a + s.decisioni.length, 0);

@@ -64,13 +64,23 @@
       background: #f3f6fa;
       border: 2px dashed #cfd6df;
       border-radius: 12px;
-      min-height: 340px;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       margin-bottom: 1rem;
       overflow: hidden;
+      /* Tutte le scene hanno sei posti su due file di tre (x 5/32/59 %,
+         y 8/55 %, nell'ordine a-f): la griglia li distribuisce su tutta la
+         larghezza. Con le coordinate in percentuale il terzo di destra
+         restava vuoto su LIM e computer. Le coordinate dei dati restano
+         come riferimento e vengono ignorate da qui sotto. */
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      row-gap: 2rem;
+      justify-items: center;
+      align-items: center;
     }
     .slot {
-      position: absolute;
+      position: relative;
+      left: auto !important; top: auto !important;
       border: 2px dashed #adb5bd;
       border-radius: 10px;
       background: rgba(255,255,255,.6);
@@ -78,8 +88,9 @@
       font-size: .85rem;
       display: flex; align-items: center; justify-content: center;
       text-align: center; padding: .3rem;
-      width: 90px; height: 90px;
+      width: 104px; height: 104px;
     }
+    .slot .sign { width: 88px; height: 88px; }
     .slot.filled { border-style: solid; }
     .slot.filled.correct { border-color: #198754; background: #d1e7dd; }
     .slot.filled.wrong { border-color: #dc3545; background: #f8d7da; }
@@ -122,7 +133,7 @@
       border-color: #003366;
       background: #e7f1ff;
     }
-    .mod-opt input { margin-right: .5rem; vertical-align: top; }
+    .mod-opt input { margin-right: .5rem; vertical-align: top; width: 1.25rem; height: 1.25rem; }
     .mod-opt span { display: inline-block; vertical-align: top; }
     .mod-opt small { display: block; color: #5b6b7c; font-weight: 400; margin-top: .15rem; }
 
@@ -133,8 +144,9 @@
       /* Gap verticale piu' grande del orizzontale: la label sotto ogni
          pittogramma ha bisogno di respiro verticale per evitare
          sovrapposizione fra una riga e l'altra. */
-      gap: 1.8rem 1rem;
+      gap: 1.2rem 1rem;
       justify-content: center;
+      align-items: flex-start;
       min-height: 130px;
     }
 
@@ -184,11 +196,13 @@
       user-select: none;
     }
 
+    /* Etichetta sotto il cartello, nel flusso della pagina: prima era in
+       posizione assoluta 28 px sotto il contenitore e finiva fuori dal
+       vassoio, staccata dal suo cartello (23/11/2026). */
     .sign-label {
-      position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%);
-      font-size: .75rem; font-weight: 600; color: #003366;
-      background: rgba(255,255,255,.92);
-      padding: 2px 8px; border-radius: 10px;
+      display: block; margin-top: .45rem;
+      font-size: .8rem; font-weight: 600; color: #003366;
+      padding: 0 4px;
       /* Permetto wrapping su 2 righe e larghezza maggiore: prima la label
          "Primo soccorso" veniva troncata a "Primo soccors" perche' non
          entrava in 140px nowrap. Ora si adatta al testo. */
@@ -198,7 +212,7 @@
       line-height: 1.2;
     }
 
-    .sign-wrap { position: relative; padding-bottom: 36px; }
+    .sign-wrap { position: relative; display: flex; flex-direction: column; align-items: center; width: 96px; }
 
     .drop-highlight { background: rgba(0,51,102,.15); border-color: #003366 !important; }
 
@@ -230,21 +244,17 @@
 
     @media (max-width: 576px) {
       .sign { width: 64px; height: 64px; font-size: 1.8rem; }
-      .slot { width: 72px; height: 72px; font-size: .75rem; }
-      .sign-label {
-        font-size: .68rem;
-        max-width: 100px;
-        line-height: 1.15;
-        padding: 1px 5px;
-      }
-      /* Più spazio verticale fra le righe di sign su mobile: la label
-         "Primo soccorso" o "Punto di raccolta" puo' andare su 2 righe. */
-      .tray { gap: 2.4rem 1rem; padding: 1rem .5rem; }
-      .sign-wrap { padding-bottom: 36px; }
+      .slot { width: 80px; height: 80px; font-size: .75rem; }
+      .slot .sign { width: 68px; height: 68px; }
+      .scene { padding: 1rem .4rem; row-gap: 1.2rem; }
+      .sign-label { font-size: .72rem; line-height: 1.15; }
+      .tray { gap: 1rem .6rem; padding: 1rem .5rem; }
+      .sign-wrap { width: 76px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .sign, .level-card { transition: none; }
     }
+    html.a11y-pause-anim .sign, html.a11y-pause-anim .level-card { transition: none; }
   </style>
 </head>
 <body data-coach-game="posiziona-cartelli">
@@ -362,6 +372,7 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/comune.js"></script>
@@ -383,7 +394,7 @@
     var CART = {
       fuoco:      { id: 'fuoco',      kind: 'danger', iso: ISO_BASE + 'materiale-infiammabile.svg', label: 'Pericolo incendio' },
       elettrico:  { id: 'elettrico',  kind: 'danger', iso: ISO_BASE + 'pericolo-elettrico.svg',     label: 'Alta tensione' },
-      caduta:     { id: 'caduta',     kind: 'danger', iso: ISO_BASE + 'pericolo-generico.svg',      label: 'Rischio di caduta' },
+      caduta:     { id: 'caduta',     kind: 'danger', iso: ISO_BASE + 'pericolo-caduta.svg',        label: 'Rischio di caduta' },
       chimico:    { id: 'chimico',    kind: 'danger', iso: ISO_BASE + 'pericolo-tossico.svg',       label: 'Sostanze pericolose' },
       vietatofumare:    { id: 'vietatofumare',    kind: 'ban', iso: ISO_BASE + 'vietato-fumare.svg',    label: 'Vietato fumare' },
       vietatoingresso:  { id: 'vietatoingresso',  kind: 'ban', iso: ISO_BASE + 'vietato-pedoni.svg',    label: 'Vietato entrare' },
@@ -509,6 +520,13 @@
     var current = null;   // scena corrente
     var placement = {};   // { segnoId: slotId | null }
     var selected = null;  // sign selezionato con tastiera o col tocco
+    // Doppio tocco: dopo la verifica riuscita i cartelli e «Verifica» restano
+    // fermi fino alla schermata finale, che parte (e salva) una volta sola.
+    var inPassaggio = false;
+    function suono(giusta) {
+      if (!window.AudioSintetico) return;
+      if (giusta) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro();
+    }
     // toccando il vassoio con un cartello scelto, il cartello torna lì
     trayEl.addEventListener('click', function () {
       if (!selected) return;
@@ -544,6 +562,8 @@
 
     function startScene(s) {
       current = s;
+      inPassaggio = false;
+      checkBtn.disabled = false;
       placement = {};
       selected = null;
       selectScreen.classList.add('hide');
@@ -700,6 +720,7 @@
     }
 
     function placeSign(cid, slotId) {
+      if (inPassaggio) return;
       // se lo slot è occupato, scambia o rimuovi l'altro
       if (slotId) {
         var other = slotOccupiedBy(slotId);
@@ -852,6 +873,7 @@
     }
 
     function verify() {
+      if (inPassaggio || !current) return;
       var ok = 0, ko = 0, unplaced = 0;
       current.cartelli.forEach(function (cid) {
         var slotId = placement[cid];
@@ -878,10 +900,15 @@
         return;
       }
       if (ok === current.cartelli.length) {
-        setTimeout(finish, 700);
+        inPassaggio = true;
+        checkBtn.disabled = true;
+        suono(true);
+        var scena = current;
+        setTimeout(function () { if (current === scena && inPassaggio) finish(); }, 700);
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         feedbackMsg.className = 'alert alert-warning mt-3';
+        suono(false);
         feedbackMsg.textContent = 'Hai ' + ko + ' cartell' + (ko === 1 ? 'o' : 'i') + ' da spostare. Sposta quelli sbagliati e riprova.';
         feedbackMsg.classList.remove('hide');
         if (window.GameCoach && window.GameCoach.hint) {
@@ -893,6 +920,8 @@
     function finish() {
       gameScreen.classList.add('hide');
       endScreen.classList.remove('hide');
+      // Schermata finale in vista: sulla LIM restava sopra lo schermo.
+      if (endScreen.scrollIntoView) endScreen.scrollIntoView({ block: 'start' });
       endScore.textContent = current.cartelli.length;
       endMax.textContent = current.cartelli.length;
       endMsg.textContent = 'Tutti i cartelli sono al posto giusto!';
@@ -908,11 +937,13 @@
 
     checkBtn.addEventListener('click', verify);
     resetBtn.addEventListener('click', function () {
+      if (inPassaggio) return;
       placement = {};
       feedbackMsg.classList.add('hide');
       buildScene(); buildTray(); updateHud();
     });
     backBtn.addEventListener('click', function () {
+      inPassaggio = false;
       gameScreen.classList.add('hide');
       selectScreen.classList.remove('hide');
     });

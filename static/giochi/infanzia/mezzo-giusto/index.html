@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Il Mezzo Giusto — Giochi Piccoli Esploratori</title>
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/giochi/infanzia/mezzo-giusto/">
-  <meta name="description" content="Tina ha bisogno di aiuto: sceglie il mezzo giusto per ogni emergenza. Pompiere, ambulanza o volontari? 5 round per i bambini dai 4 ai 6 anni.">
+  <meta name="description" content="Tina ha bisogno di aiuto: sceglie il mezzo giusto per ogni emergenza. Pompiere, ambulanza o volontari? 6 emergenze per i bambini dai 4 ai 6 anni.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -46,7 +46,7 @@
       .tina-perche { animation: none; }
     }
     .mezzi-griglia {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7rem;
       max-width: 540px; margin: 0 auto;
     }
     .mezzo-btn {
@@ -54,12 +54,23 @@
       border-radius: 22px; border: 4px solid;
       background: #fff;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 0.4rem; font-size: 3.2rem; line-height: 1;
+      gap: 0.4rem; font-size: clamp(2.2rem, 9vw, 3.2rem); line-height: 1; min-width: 0;
       box-shadow: 0 6px 0 rgba(0,0,0,.15);
       cursor: pointer; user-select: none;
       transition: transform .15s;
     }
-    .mezzo-btn .nome { font-size: 0.85rem; font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+    .mezzo-btn .nome { font-size: clamp(.7rem, 2.9vw, .85rem); font-weight: 700; line-height: 1.2; text-transform: uppercase; overflow-wrap: anywhere; }
+    /* Telefono: «AMBULANZA» andava a capo a meta' parola (AMBULANZ-A). */
+    @media (max-width: 420px) {
+      .mezzo-btn { padding: .6rem .15rem; border-width: 3px; }
+      .mezzo-btn .nome { font-size: .68rem; overflow-wrap: normal; }
+    }
+    /* LIM e computer: figure e nomi piu' grandi (prima 51 px e 13,6 px in pulsanti da 190 px). */
+    @media (min-width: 700px) {
+      .mezzi-griglia { max-width: 600px; gap: 1rem; }
+      .mezzo-btn { font-size: 4.2rem; aspect-ratio: auto; min-height: 175px; }
+      .mezzo-btn .nome { font-size: 1.05rem; }
+    }
     .mezzo-btn.pompiere { border-color: #dc3545; background: #fff5f5; }
     .mezzo-btn.ambulanza { border-color: #6c757d; background: #f8f9fa; }
     .mezzo-btn.volontari { border-color: #fd7e14; background: #fff8f0; }
@@ -67,6 +78,8 @@
     .mezzo-btn:hover { transform: translateY(-2px); }
     .mezzo-btn.correct { animation: inf-pulse-green .6s ease; box-shadow: 0 0 0 6px #198754; }
     .mezzo-btn.wrong { animation: inf-shake .4s ease; box-shadow: 0 0 0 6px #dc3545; }
+    .mezzo-btn:disabled { color: inherit; cursor: default; }
+    .mezzo-btn:disabled:hover { transform: none; }
     .mezzo-btn.dim { opacity: .5; }
     .progress-dots { display: flex; justify-content: center; gap: .4rem; margin-bottom: .8rem; }
     .progress-dots .dot { width: 14px; height: 14px; border-radius: 50%; background: #cfd6df; }
@@ -96,10 +109,10 @@
       <div id="start-screen" class="text-center">
         <div style="font-size: 5rem;" aria-hidden="true">🚒🚑🚐</div>
         <p class="h5 mt-2">3 mezzi: <strong>pompiere</strong>, <strong>ambulanza</strong>, <strong>volontari</strong>.</p>
-        <p class="text-muted">5 emergenze, scegli il mezzo giusto!</p>
+        <p class="text-muted">6 emergenze, scegli il mezzo giusto!</p>
         <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-          <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1" aria-hidden="true"></i> Inizia</button>
-          <a href="../index.html" class="btn btn-outline-secondary btn-lg"><i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna ai giochi</a>
+          <button id="start-btn" class="inf-big-btn"><i class="bi bi-play-fill" aria-hidden="true"></i> Inizia</button>
+          <a href="../index.html" class="inf-back inf-back-grande"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
         </div>
       </div>
 
@@ -131,11 +144,11 @@
         <div class="round-up">
           <div class="stelle" id="stelle">⭐⭐⭐</div>
           <div class="titolo">Squadra forte!</div>
-          <p class="mb-3">Hai mandato il mezzo giusto <strong><span id="punti">0</span></strong> volte su 5.</p>
+          <p class="mb-3">Hai mandato il mezzo giusto <strong><span id="punti">0</span></strong> volte su 6.</p>
           <p class="text-muted small mb-3">Ricorda: in ogni caso si chiama il <strong>112</strong>, e loro mandano il mezzo giusto!</p>
           <div class="d-flex flex-wrap justify-content-center gap-2">
-            <button id="restart-btn" class="btn btn-primary"><i class="bi bi-arrow-repeat me-1"></i> Rigioca</button>
-            <a href="../index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Torna ai giochi</a>
+            <button id="restart-btn" class="inf-big-btn"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Rigioca</button>
+            <a href="../index.html" class="inf-back inf-back-grande"><i class="bi bi-arrow-left" aria-hidden="true"></i> Torna ai giochi</a>
           </div>
         </div>
       </div>
@@ -144,6 +157,8 @@
 
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
+  <script src="/giochi/infanzia/assets/infanzia.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script>
   (function () {
     'use strict';
@@ -155,43 +170,41 @@
       { emo: '🔥', testo: 'Una casa va a fuoco!', giusto: 'pompiere',
         perche: 'I pompieri spengono il fuoco e portano fuori le persone.' },
       { emo: '🤕', testo: 'Una persona si è fatta male!', giusto: 'ambulanza',
-        perche: "L'ambulanza ha medici e infermieri: aiuta chi sta male." },
+        perche: "Sull'ambulanza ci sono soccorritori preparati: aiutano chi sta male." },
       { emo: '🌊', testo: "C'è stata un'alluvione: serve acqua e cibo!", giusto: 'volontari',
         perche: 'I volontari portano acqua e cibo a chi non ha più la casa.' },
       { emo: '🚗💥', testo: 'Un incidente in strada con feriti!', giusto: 'ambulanza',
-        perche: "Per i feriti chiama subito l'ambulanza con il 112." },
-      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'volontari',
-        perche: 'I volontari liberano la strada con motoseghe e trattori.' },
+        perche: "Per i feriti chiama subito il 112: arriva l'ambulanza." },
+      { emo: '🌳', testo: 'Un albero è caduto sulla strada e blocca tutto!', giusto: 'pompiere',
+        perche: 'I pompieri tagliano l\'albero e rendono sicura la strada.' },
       { emo: '😵', testo: "Un signore anziano si è sentito male per il caldo!", giusto: 'ambulanza',
-        perche: 'Quando una persona si sente male, chiama il 112 e arriva l\'ambulanza.' },
+        perche: 'Quando una persona si sente male, chiama il 112: la centrale manda l\'ambulanza.' },
       { emo: '💨', testo: "C'è fumo dalla cucina dei vicini!", giusto: 'pompiere',
         perche: 'Il fumo significa fuoco. Avvisa subito un adulto e chiama i pompieri.' },
       { emo: '🐱', testo: "Un gatto è bloccato sull'albero più alto!", giusto: 'pompiere',
         perche: 'I pompieri hanno la scala alta per salvare anche gli animali.' },
-      { emo: '🚧', testo: "Una frana ha bloccato la strada del paese!", giusto: 'volontari',
-        perche: 'I volontari aiutano a liberare la strada e a portare aiuti dove serve.' },
-      { emo: '🩹', testo: "La nonna è caduta e si è fatta una bua al ginocchio!", giusto: 'ambulanza',
+      { emo: '🚧', testo: "Una frana ha bloccato la strada del paese!", giusto: 'pompiere',
+        perche: 'I pompieri controllano che la zona sia sicura e aiutano chi è rimasto bloccato.' },
+      { emo: '🩹', testo: "La nonna è caduta e non riesce ad alzarsi!", giusto: 'ambulanza',
         perche: 'Per chi non riesce a camminare arriva l\'ambulanza con la barella.' },
       { emo: '⛑️', testo: "Dopo il terremoto serve allestire le tende!", giusto: 'volontari',
         perche: 'I volontari montano le tende per chi non può tornare a casa.' },
       { emo: '🚒', testo: "Un piccolo incendio nel bosco vicino casa!", giusto: 'pompiere',
         perche: 'I pompieri hanno i mezzi giusti per spegnere il fuoco nei boschi.' },
-      { emo: '💧', testo: "Una grossa perdita d'acqua allaga la cantina!", giusto: 'volontari',
-        perche: 'I volontari arrivano con le pompe per togliere l\'acqua.' },
+      { emo: '💧', testo: "Una grossa perdita d'acqua allaga la cantina!", giusto: 'pompiere',
+        perche: 'I pompieri arrivano con le pompe per togliere l\'acqua.' },
       { emo: '😷', testo: "Un bambino non riesce a respirare bene!", giusto: 'ambulanza',
         perche: 'Quando manca il respiro è un\'emergenza: ambulanza subito col 112.' },
       { emo: '⚡', testo: "Tanta gente senza luce dopo il temporale!", giusto: 'volontari',
-        perche: 'I volontari accendono i generatori e aiutano gli anziani a casa.' },
-      { emo: '🚸', testo: "Un bambino si è perso al supermercato!", giusto: 'volontari',
-        perche: 'I volontari aiutano a cercare il bambino e a ritrovare la mamma.' },
+        perche: 'I volontari aiutano gli anziani rimasti a casa senza luce.' },
       { emo: '🐶', testo: "Un cane è chiuso in macchina al sole d\'estate!", giusto: 'pompiere',
         perche: 'I pompieri possono aprire la macchina senza fare male al cagnolino.' },
       { emo: '🩸', testo: "Una persona si è tagliata e perde sangue!", giusto: 'ambulanza',
-        perche: 'L\'ambulanza arriva e medica la ferita prima che peggiori.' },
+        perche: 'Chiama il 112: arriva l\'ambulanza e i soccorritori si occupano della ferita.' },
       { emo: '🏚️', testo: "Una casa è stata danneggiata dal terremoto!", giusto: 'volontari',
-        perche: 'I volontari aiutano la famiglia a salvare le cose e a trovare un posto sicuro.' },
+        perche: 'I volontari aiutano la famiglia a trovare un posto sicuro dove stare.' },
       { emo: '🚨', testo: "Sento un fortissimo allarme antincendio a scuola!", giusto: 'pompiere',
-        perche: 'L\'allarme avvisa i pompieri. Tu segui la maestra al punto di raccolta.' }
+        perche: 'Se c\'è un incendio arrivano i pompieri. Tu segui la maestra al punto di raccolta.' }
     ];
     function pescaScene(){
       const arr = POOL.slice();
@@ -204,6 +217,9 @@
     let ROUNDS = pescaScene();
 
     let cur = 0, score = 0, locked = false;
+    // Doppio tocco sul pulsante che avvia una partita, un livello o un round: il secondo tocco
+    // non deve finire sulla risposta che compare sotto il dito. Per mezzo secondo si ignora.
+    var sbloccoAl = 0;
     const startScr = document.getElementById('start-screen');
     const gameScr = document.getElementById('game-screen');
     const endScr = document.getElementById('end-screen');
@@ -220,6 +236,7 @@
       // Estrae nuove 6 scene a ogni partita: pool di 14 random
       ROUNDS = pescaScene();
       cur = 0; score = 0; locked = false;
+      sbloccoAl = Date.now() + 500;
       startScr.classList.add('hide');
       endScr.classList.add('hide');
       gameScr.classList.remove('hide');
@@ -240,7 +257,7 @@
       const r = ROUNDS[cur];
       emoEl.textContent = r.emo;
       testoEl.textContent = r.testo;
-      buttons.forEach(b => { b.classList.remove('correct', 'wrong', 'dim'); });
+      buttons.forEach(b => { b.classList.remove('correct', 'wrong', 'dim'); b.disabled = false; });
       const perEl = document.getElementById('perche');
       if (perEl) { perEl.classList.add('hide'); perEl.textContent = ''; }
       locked = false;
@@ -249,8 +266,11 @@
     }
 
     function onPick(btn) {
-      if (locked) return;
+      if (locked || Date.now() < sbloccoAl) return;
+      // Doppio tocco: fino all'emergenza successiva i pulsanti restano bloccati.
       locked = true;
+      buttons.forEach(b => { b.disabled = true; });
+      if (window.AudioSintetico) window.AudioSintetico.init();
       const tipo = btn.getAttribute('data-tipo');
       const giusto = ROUNDS[cur].giusto;
       const perche = ROUNDS[cur].perche;
@@ -258,12 +278,16 @@
       if (perEl && perche) {
         perEl.textContent = '💡 ' + perche;
         perEl.classList.remove('hide');
+        // Sul telefono la spiegazione cade sotto le scelte: la si porta in vista.
+        if (window.InfInVista) window.InfInVista(perEl);
       }
       if (tipo === giusto) {
         btn.classList.add('correct');
         score++;
+        if (window.AudioSintetico) window.AudioSintetico.dingPositivo();
       } else {
         btn.classList.add('wrong');
+        if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         buttons.forEach(b => {
           if (b.getAttribute('data-tipo') === giusto) b.classList.add('correct');
           else if (b !== btn) b.classList.add('dim');
@@ -272,7 +296,7 @@
           var TIPS = {
             pompiere: 'Pompieri = fuoco, gas, persone bloccate.',
             ambulanza: 'Ambulanza = qualcuno è ferito o sta male.',
-            volontari: 'Volontari = aiuti dopo l\'emergenza (acqua, cibo, alberi caduti).'
+            volontari: 'Volontari = aiuti dopo l\'emergenza (acqua, cibo, tende).'
           };
           window.GameCoach.hint(TIPS[giusto] || 'In Italia chiami sempre il 1-1-2.', '/numeri-utili/');
         }
@@ -281,14 +305,14 @@
         cur++;
         if (cur >= ROUNDS.length) finish();
         else render();
-      }, 1300);
+      }, 2600); // tempo per leggere o ascoltare il perché
     }
 
     function finish() {
       gameScr.classList.add('hide');
       endScr.classList.remove('hide');
       document.getElementById('punti').textContent = score;
-      const stars = score >= 5 ? '⭐⭐⭐' : score >= 3 ? '⭐⭐' : score >= 1 ? '⭐' : '👍';
+      const stars = score >= 6 ? '⭐⭐⭐' : score >= 4 ? '⭐⭐' : score >= 2 ? '⭐' : '👍';
       document.getElementById('stelle').textContent = stars;
     }
   })();

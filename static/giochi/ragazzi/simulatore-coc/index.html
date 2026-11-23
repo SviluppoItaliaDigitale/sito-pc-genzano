@@ -33,6 +33,10 @@
       font-weight: 700; font-size: .8rem; flex-shrink: 0;
     }
     .funzione.selected .n { background: #fff; }
+    .funzione { min-height: 44px; }
+    .funzione:disabled { cursor: default; opacity: .6; }
+    .funzione.selected:disabled { opacity: 1; }
+    #assegna { min-height: 44px; }
     .evento-card {
       border-left: 5px solid var(--rag-arancio); background: #fffbf0;
       padding: .8rem 1rem; border-radius: 6px; margin-bottom: .8rem;
@@ -54,6 +58,12 @@
       height: 8px; background: #e9ecef; border-radius: 999px; overflow: hidden; margin: .2rem 0 .6rem;
     }
     .kpi-bar > div { height: 100%; background: var(--rag-verde); transition: width .3s; }
+
+    /* Revisione grafica: bordo delle funzioni visibile (3:1 sul bianco) e
+       bordo di stato conservato dopo il tocco (vedi giochi.css, --giochi-bordo). */
+    .funzione { border-color: #7d8ea3; --giochi-bordo: #7d8ea3; }
+    .funzione:hover, .funzione:focus { --giochi-bordo: var(--rag-blu); }
+    .funzione.selected { --giochi-bordo: var(--rag-blu); }
   </style>
 </head>
 <body class="rag-body" data-coach-game="simulatore-coc">
@@ -77,7 +87,7 @@
     <div class="container py-4">
 
       <div id="intro" class="rag-panel">
-        <h2>Riunione informativa operativo</h2>
+        <h2>Riunione operativa</h2>
         <p>Sei funzionario di sala al <strong>Centro Operativo Comunale (COC)</strong> di Genzano di Roma. La Regione Lazio ha diramato un'<strong>allerta arancione</strong> per rischio idrogeologico e temporali forti.</p>
         <p>Il tuo compito: per ogni evento che arriva, assegnare la <strong>funzione di supporto</strong> giusta tra le nove del gioco, uno schema semplificato derivato dal Metodo Augustus (1997). La Direttiva PCM 30 aprile 2021 ne elenca sedici e ogni Comune sceglie nel Piano quali attivare. Hai 8 eventi da gestire, estratti a sorte a ogni partita.</p>
         <details class="mb-3">
@@ -149,6 +159,7 @@
     </div>
   </main>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
+  <script src="/giochi/assets/js/audio-sintetico.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
@@ -205,7 +216,18 @@
         finalMsg = document.getElementById('final-msg');
 
     var selezione = null, idx = 0, ok = 0, ko = 0;
-    var EVENTI_PARTITA = []; // popolato a inizio partita: 8 random dal pool di 10
+    // Dopo un cambio di schermata, per 400 ms nessun tocco arriva a pulsanti o
+    // link: il secondo tocco di un doppio tocco cadrebbe su cio' che e' comparso
+    // sotto il dito (la scena nuova, la schermata finale, i link a fondo pagina).
+    var bloccoTocchi = 0;
+    document.addEventListener('click', function (e) {
+      if (Date.now() < bloccoTocchi) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+    function bloccaTocchi() { bloccoTocchi = Date.now() + 400; }
+    // Doppio tocco (LIM): dopo «Assegna» funzioni e pulsante restano fermi
+    // finche' non arriva l'evento successivo.
+    var inPassaggio = false, finito = false;
+    var EVENTI_PARTITA = []; // popolato a inizio partita: 8 random dal pool di 16
 
     function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
 
@@ -218,6 +240,7 @@
         b.innerHTML = '<span class="n">' + f.n + '</span> <i class="bi ' + f.icona + '"></i> ' + f.nome;
         b.dataset.n = f.n;
         b.addEventListener('click', function(){
+          if (inPassaggio) return;
           funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
           b.classList.add('selected');
           selezione = f.n;
@@ -231,12 +254,12 @@
       intro.classList.add('hide');
       end.classList.add('hide');
       game.classList.remove('hide');
-      // Estrae 8 eventi random dal pool di 10. Mantiene l'ordine
+      // Estrae 8 eventi random dal pool di 16. Mantiene l'ordine
       // cronologico originale ma cambia quali eventi appaiono in ogni
       // partita: il giocatore non puo' memorizzare la sequenza.
       EVENTI_PARTITA = shuffle(EVENTI.slice()).slice(0, 8);
       EVENTI_PARTITA.sort(function(a, b){ return a.ora.localeCompare(b.ora); });
-      idx = 0; ok = 0; ko = 0;
+      idx = 0; ok = 0; ko = 0; inPassaggio = false; finito = false;
       corretteEl.textContent = '0'; errateEl.textContent = '0';
       timeline.innerHTML = '';
       evTotEl.textContent = EVENTI_PARTITA.length;
@@ -246,9 +269,11 @@
 
     function mostraEvento(){
       selezione = null;
+      inPassaggio = false;
+      bloccaTocchi();
       assegnaBtn.disabled = true;
       feedback.innerHTML = '';
-      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); });
+      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.classList.remove('selected'); x.disabled = false; });
       var ev = EVENTI_PARTITA[idx];
       evNEl.textContent = idx+1;
       oreEl.textContent = ev.ora;
@@ -256,20 +281,26 @@
     }
 
     assegnaBtn.addEventListener('click', function(){
-      if (selezione == null) return;
+      if (selezione == null || inPassaggio) return;
+      inPassaggio = true;
+      assegnaBtn.disabled = true;
+      funzioniList.querySelectorAll('.funzione').forEach(function(x){ x.disabled = true; });
       var ev = EVENTI_PARTITA[idx];
       var corretto = (selezione === ev.corretta);
       var tl = document.createElement('div');
       tl.className = 'tl-item ' + (corretto ? 'ok' : 'ko');
-      tl.innerHTML = '<strong>' + ev.ora + '</strong> &middot; F' + selezione + (corretto ? ' ✓' : ' ✗ (giusta: F' + ev.corretta + ')');
+      tl.innerHTML = '<strong>' + ev.ora + '</strong> &middot; F' + selezione + (corretto
+        ? ' <i class="bi bi-check-lg text-success" aria-hidden="true"></i><span class="visually-hidden">giusta</span>'
+        : ' <i class="bi bi-x-lg text-danger" aria-hidden="true"></i> (giusta: F' + ev.corretta + ')');
+      if (window.AudioSintetico) { if (corretto) window.AudioSintetico.dingPositivo(); else window.AudioSintetico.tonoNeutro(); }
       timeline.appendChild(tl);
       if (corretto){
         ok++; corretteEl.textContent = ok;
-        feedback.innerHTML = '<div class="alert alert-success py-2 mb-0 small"><i class="bi bi-check-circle-fill me-1"></i> Corretto! ' + ev.spiega + '</div>';
+        feedback.innerHTML = '<div class="alert alert-success mb-0 small">Corretto! ' + ev.spiega + '</div>';
         if (window.GameCoach && window.GameCoach.clearHint) { window.GameCoach.clearHint(); }
       } else {
         ko++; errateEl.textContent = ko;
-        feedback.innerHTML = '<div class="alert alert-warning py-2 mb-0 small"><i class="bi bi-exclamation-triangle-fill me-1"></i> Era <strong>F' + ev.corretta + '</strong>. ' + ev.spiega + '</div>';
+        feedback.innerHTML = '<div class="alert alert-warning mb-0 small">Era <strong>F' + ev.corretta + '</strong>. ' + ev.spiega + '</div>';
         if (window.GameCoach && window.GameCoach.hint) {
           window.GameCoach.hint('Le 9 funzioni del gioco (schema semplificato): F1=tecnica/cartografia, F2=sanità, F3=volontariato, F4=materiali/mezzi, F5=servizi essenziali, F6=danni, F7=strutture/viabilità, F8=telecomunicazioni, F9=accoglienza popolazione.', '/normativa/');
         }
@@ -284,6 +315,9 @@
     });
 
     function finish(){
+      if (finito) return;
+      finito = true;
+      bloccaTocchi();
       game.classList.add('hide');
       end.classList.remove('hide');
       finalScore.textContent = ok;
