@@ -616,6 +616,14 @@
         + '#gioco-barra .gioco-barra-titolo { font-weight: 700; font-size: 1.05rem; margin: 0 0.75rem 0 0; min-width: 0;'
         + '  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #ffffff; }'
         + '#gioco-barra .gioco-barra-titolo i { color: #ffbe2e; margin-right: 0.5rem; }'
+        + '#gioco-barra .gioco-barra-sinistra { display: flex; align-items: center; min-width: 0; }'
+        + '#gioco-barra .gioco-barra-lim { display: inline-flex; align-items: center; flex-shrink: 0; min-height: 44px;'
+        + '  padding: 0 0.8rem; margin-right: 0.5rem; border-radius: 24px; background: #15803d; color: #ffffff;'
+        + '  font-size: 0.85rem; font-weight: 700; text-decoration: none; white-space: nowrap; }'
+        + '#gioco-barra .gioco-barra-lim i { margin-right: 0.4rem; }'
+        + '#gioco-barra .gioco-barra-lim:hover, #gioco-barra .gioco-barra-lim:focus { background: #116b32; color: #ffffff;'
+        + '  outline: 3px solid #ffbe2e; outline-offset: 2px; }'
+        + '@media (max-width: 767.98px) { #gioco-barra .gioco-barra-lim { display: none; } }'
         + '#gioco-comandi { display: flex; flex-wrap: nowrap; justify-content: flex-end; flex-shrink: 0; }'
         + '#gioco-comandi > * { margin-left: 0.5rem; min-height: 44px; }'
         + '#gioco-comandi > a, #gioco-comandi > button { display: inline-flex; align-items: center; padding: 0.45rem 0.95rem;'
@@ -658,7 +666,18 @@
     icona.setAttribute('aria-hidden', 'true');
     titolo.appendChild(icona);
     titolo.appendChild(document.createTextNode(titoloGioco));
-    interno.appendChild(titolo);
+    // Etichetta «Pronto per la LIM» sempre in vista durante la partita (23/11/2026):
+    // stessa promessa del riquadro nella pagina, verificata da scripts/check-lim.py.
+    var sinistra = document.createElement('div');
+    sinistra.className = 'gioco-barra-sinistra';
+    sinistra.appendChild(titolo);
+    var lim = document.createElement('a');
+    lim.className = 'gioco-barra-lim';
+    lim.href = SITE_URL + '/lim/';
+    lim.innerHTML = '<i class="bi bi-easel" aria-hidden="true"></i>Pronto per la LIM';
+    lim.title = 'Come usare i giochi sulla lavagna interattiva';
+    sinistra.appendChild(lim);
+    interno.appendChild(sinistra);
     interno.appendChild(comandi);
     barra.appendChild(interno);
     var main = document.querySelector('main') || document.getElementById('main-content');
