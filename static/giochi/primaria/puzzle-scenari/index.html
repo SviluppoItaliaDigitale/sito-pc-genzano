@@ -342,7 +342,7 @@
       } else {
         suono(false);
         feedback.className = 'feedback-msg ko';
-        feedback.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-1"></i> ' + right + ' passi giusti su ' + items.length + '. Riprova a sistemare i rossi!';
+        feedback.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-1"></i> ' + right + (right === 1 ? ' passo giusto' : ' passi giusti') + ' su ' + items.length + '. Riprova a sistemare quelli in rosso!';
         feedback.classList.remove('hide');
       }
     });
