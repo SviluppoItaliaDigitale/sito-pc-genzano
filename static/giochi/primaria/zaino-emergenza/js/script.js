@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else if (errors <= 3) {
                         winMessage.textContent = 'Bravo! Zaino pronto con solo ' + errors + ' errore' + (errors > 1 ? 'i' : '') + '.';
                     } else {
-                        winMessage.textContent = 'Zaino pronto! Hai fatto ' + errors + ' errori. Riprova per migliorare!';
+                        winMessage.textContent = 'Hai fatto ' + errors + ' errori. Riprova per migliorare!';
                     }
                     winScreen.classList.remove('hide');
                     var punti = Math.max(0, correctTotal - errors);
