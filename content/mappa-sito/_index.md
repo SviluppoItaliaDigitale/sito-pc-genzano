@@ -540,6 +540,16 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Formazione dei volontari</p>
   <p class="ms-card-desc">Simulatore d'esame a tempo con attestato, quiz di allenamento con le spiegazioni, scenari guidati e presentazioni del corso base per gli istruttori, in PDF e PowerPoint.</p>
 </a>
+<a class="ms-card ms-edu" href="/stampa-3d/">
+  <div class="ms-card-icon"><i class="bi bi-printer"></i></div>
+  <p class="ms-card-title">Stampa 3D</p>
+  <p class="ms-card-desc">Oggetti progettati dal Gruppo da stampare in 3D, con vista in 3D e istruzioni per ordinarli online.</p>
+</a>
+<a class="ms-card ms-edu" href="/stampa-3d/nominativi/">
+  <div class="ms-card-icon"><i class="bi bi-person-badge"></i></div>
+  <p class="ms-card-title">Oggetti con il tuo nominativo</p>
+  <p class="ms-card-desc">Per i volontari: targhetta da petto, portachiavi, etichetta per lo zaino, ganci e porta radio con il nominativo ALFA, da scaricare o ordinare online.</p>
+</a>
 <a class="ms-card ms-edu" href="/esercitazioni/">
   <div class="ms-card-icon"><i class="bi bi-list-task"></i></div>
   <p class="ms-card-title">Addestramento e buone pratiche</p>

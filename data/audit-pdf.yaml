@@ -1,4 +1,4 @@
-ultimo_audit: '2026-11-20'
+ultimo_audit: '2026-11-23'
 totale: 149
 riepilogo:
   ACCESSIBILE: 86
@@ -766,8 +766,8 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2483.0
-  sha256: cdda6f3cd67e5f49ae8c85385154356fb73f984a632ff1341652f739279575d7
+  size_kb: 2475.0
+  sha256: 6a47fae2583f54048ddf63c2b914e9bb00dc60e8c769b25151717cce46bb5c19
   searchable: true
   tagged: true
   language: en-US

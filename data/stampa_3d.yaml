@@ -1,0 +1,188 @@
+# Oggetti da stampare in 3D con il nominativo dei volontari (pagina /stampa-3d/nominativi/).
+# Per un oggetto nuovo: aggiungi una voce in «oggetti» (se serve un tipo nuovo, anche nel modello in
+# static/stampa-3d/sorgenti/) e crea i file con «python3 scripts/genera-stampa-3d.py». La pagina li mostra da sola.
+# Regole dei file: quelle di Craftcloud per la stampa FDM (un pezzo per file, millimetri,
+# pareti e tratti delle lettere dentro i minimi), controllate dallo script.
+# «bandiera» = riquadro del tricolore nel modello [x0, y0, x1, y1], per colorarlo nelle anteprime.
+# Materiale consigliato: PETG, più resistente agli urti e al caldo del PLA (in auto d'estate il PLA si deforma).
+
+nominativi:
+  prefisso: "ALFA"
+  primo: 1
+  ultimo: 100
+
+servizio:
+  nome: "Craftcloud"
+  indirizzo: "https://craftcloud3d.com/"
+  verificato: "2026-11-23"
+
+oggetti:
+  - id: "targhetta-petto"
+    nome: "Targhetta da petto"
+    articolo: "la targhetta"
+    descrizione: "Targhetta blu con la bandiera italiana, il nominativo in grande e, sotto, «Protezione Civile Genzano di Roma». Si appunta sulla divisa con una spilla da balia."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+    parametri:
+      tipo: "petto"
+      parte: "tutto"
+      fissaggio: "balia"
+    misure: "8 × 3 cm, spessa 3,4 mm"
+    lunghezza_mm: 80
+    peso_g: 8
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "una spilla da balia di metallo lunga 4,5 cm (si trova in merceria)"
+      - "colla istantanea in gel per plastica e metallo"
+    montaggio:
+      - "Gira la targhetta: sul retro c'è una scanalatura con due incavi quadrati alle estremità."
+      - "Chiudi la spilla da balia e appoggiala nella scanalatura: la molla e la testa entrano nei due incavi, la punta resta verso l'esterno."
+      - "Apri la spilla e metti due gocce di colla nella scanalatura, sotto la parte che non si apre."
+      - "Premi per un minuto, poi lascia asciugare per un'ora prima di usarla."
+    retro: "Retro della targhetta da petto: una scanalatura orizzontale nella parte alta, con un incavo quadrato a ciascuna estremità."
+    didascalia_retro: "Il retro: nella scanalatura va la spilla, negli incavi quadrati la molla e la testa."
+
+  - id: "portachiavi"
+    nome: "Portachiavi"
+    articolo: "il portachiavi"
+    descrizione: "Portachiavi blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con un occhiello rinforzato per l'anello. Utile per le chiavi dei mezzi e della sede."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-29.0, 2.45, -19.25, 8.95]
+    parametri:
+      tipo: "portachiavi"
+      parte: "tutto"
+    misure: "7,7 × 2,6 cm, spesso 5 mm"
+    lunghezza_mm: 77
+    peso_g: 10
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi da 25 mm (si trova in ferramenta)"
+    montaggio:
+      - "Apri l'anello con l'unghia o con la punta di un cacciavite."
+      - "Infila l'occhiello del portachiavi nell'anello e fallo girare finché esce dall'altra parte."
+      - "Aggiungi le chiavi allo stesso modo."
+
+  - id: "etichetta-zaino"
+    nome: "Etichetta per lo zaino"
+    articolo: "l'etichetta"
+    descrizione: "Etichetta blu con la bandiera italiana, il nominativo e «Protezione Civile Genzano di Roma», con una fessura in alto per un laccio o una cinghia. Serve a riconoscere subito lo zaino o la borsa."
+    sorgente: "targhetta-nominativo.scad"
+    anteprima:
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, -2.25, -23.75, 6.25]
+    parametri:
+      tipo: "zaino"
+      parte: "tutto"
+    misure: "8 × 4,2 cm, spessa 5 mm"
+    lunghezza_mm: 80
+    peso_g: 17
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un laccio, una fascetta riutilizzabile o un piccolo moschettone"
+    montaggio:
+      - "Passa il laccio nella fessura in alto dell'etichetta."
+      - "Lega il laccio a una cinghia o a una maniglia dello zaino, in un punto dove l'etichetta si vede."
+      - "Stringi bene il nodo: l'etichetta deve restare ferma anche quando corri."
+
+  - id: "appendiabiti"
+    nome: "Appendiabiti da armadietto"
+    articolo: "l'appendiabiti"
+    descrizione: "Gancio robusto per giacca e zaino, con la piastra del nominativo, la bandiera italiana e «Protezione Civile Genzano di Roma». Si fissa nell'armadietto con due viti o con nastro biadesivo."
+    sorgente: "ganci-nominativo.scad"
+    anteprima: &gancio
+      base: "#1d4f9a"
+      rilievo: "#f07d00"
+      rilievo_mm: 1.0
+      bandiera: [-36.5, 1.75, -23.75, 10.25]
+      vista_3d: true
+    parametri:
+      tipo: "appendiabiti"
+      parte: "tutto"
+    misure: "8 × 6,3 cm, sporge 3,3 cm"
+    lunghezza_mm: 80
+    peso_g: 34
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "due viti a testa svasata da 4 mm e i tasselli adatti alla parete, oppure nastro biadesivo di montaggio per esterni"
+    montaggio:
+      - "Pulisci e asciuga il punto dell'armadietto dove vuoi metterlo."
+      - "Con le viti: appoggia l'appendiabiti, segna i due fori, fora, metti i tasselli e avvita senza stringere troppo."
+      - "Con il biadesivo: incolla due strisce sul retro, premi forte per 30 secondi e aspetta un giorno prima di appendere oggetti pesanti."
+
+  - id: "gancio-anta"
+    nome: "Gancio per l'anta"
+    articolo: "il gancio"
+    descrizione: "Gancio che si appoggia sopra l'anta dell'armadietto o della porta, senza viti né colla, con la piastra del nominativo, la bandiera italiana e un gancio per appendere."
+    sorgente: "ganci-nominativo.scad"
+    anteprima: *gancio
+    parametri:
+      tipo: "anta"
+      parte: "tutto"
+    misure: "8 × 6,3 cm, per ante spesse fino a 2 cm"
+    lunghezza_mm: 80
+    peso_g: 43
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "niente: si appoggia e basta"
+    montaggio:
+      - "Apri l'anta e appoggia il gancio sul bordo in alto, con la scritta verso l'esterno."
+      - "La parte dietro scende all'interno dell'anta e tiene fermo il gancio."
+      - "Prima di chiudere controlla che l'anta non sbatta contro il gancio. Va bene per ante spesse fino a 2 cm."
+
+  - id: "gancio-cintura"
+    nome: "Gancio portachiavi da cintura"
+    articolo: "il gancio"
+    descrizione: "Clip da infilare sulla cintura, con il nominativo, la bandiera italiana e un occhiello rinforzato dove agganci le chiavi."
+    sorgente: "ganci-nominativo.scad"
+    anteprima: *gancio
+    parametri:
+      tipo: "cintura"
+      parte: "tutto"
+    misure: "9,5 × 4,7 cm, per cinture spesse fino a 5 mm"
+    lunghezza_mm: 95
+    peso_g: 31
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "un anello portachiavi o un piccolo moschettone"
+    montaggio:
+      - "Infila la clip sulla cintura dall'alto: la cintura passa fra la piastra e la linguetta dietro."
+      - "Spingi finché il dentino in fondo alla linguetta supera il bordo della cintura."
+      - "Aggancia le chiavi all'occhiello a destra, con l'anello o con un moschettone per staccarle al volo."
+
+  - id: "porta-radio"
+    nome: "Porta radio portatile"
+    articolo: "il porta radio"
+    descrizione: "Supporto da parete per la radio portatile, con il nominativo e la bandiera italiana: la clip da cintura della radio si aggancia alla linguetta. Utile in sede o vicino ai caricabatterie."
+    sorgente: "ganci-nominativo.scad"
+    anteprima: *gancio
+    parametri:
+      tipo: "radio"
+      parte: "tutto"
+    misure: "8 × 9,3 cm, linguetta larga 5,2 cm"
+    lunghezza_mm: 80
+    peso_g: 65
+    materiale: "PETG"
+    colore: "blu"
+    occorrente:
+      - "quattro viti a testa svasata da 4 mm e i tasselli adatti alla parete"
+    montaggio:
+      - "Appoggia il porta radio al muro con la linguetta in basso, segna i quattro fori, fora e metti i tasselli."
+      - "Avvita senza stringere troppo: la plastica non deve incrinarsi."
+      - "Aggancia la radio dall'alto, facendo scorrere la sua clip da cintura sulla linguetta, come su una cintura."
+      - "Prima prova con la tua radio: la linguetta è spessa 4 mm e larga 5,2 cm, come una cintura."

@@ -1,0 +1,101 @@
+{{- /*
+  Shortcode stampa3d-nominativo — il volontario scrive il suo numero, vede l'oggetto in 3D
+  (si gira da ogni lato con il dito, il mouse o i pulsanti), scarica il file STL e lo ordina
+  a un servizio di stampa online seguendo i passi.
+  Dati: data/stampa_3d.yaml (nominativi, servizio, oggetti); file e anteprime da
+  scripts/genera-stampa-3d.py in static/stampa-3d/nominativi/<id>/.
+  Script: static/js/stampa3d-nominativo.js (modulo), visore con three.js in static/vendor/three/.
+  Senza JavaScript o WebGL restano l'anteprima in immagine e l'elenco di tutti i file.
+  Uso: {{< stampa3d-nominativo >}}
+*/ -}}
+{{- $d := site.Data.stampa_3d -}}
+{{- if not $d }}{{ errorf "stampa3d-nominativo: manca data/stampa_3d.yaml" }}{{ end -}}
+{{- $n := $d.nominativi -}}
+{{- $vj := readFile "themes/flavour-pcgenzano/static/js/stampa3d-nominativo.js" | hash.FNV32a -}}
+{{- /* Sulla copia di anteprima di GitHub Pages i file STL non ci sono (scripts/alleggerisci-copia-pages.py): file e anteprime si prendono dal sito su Aruba. */ -}}
+{{- $base := "stampa-3d/nominativi/" | relURL -}}
+{{- if in site.BaseURL "github.io" }}{{ $base = printf "%sstampa-3d/nominativi/" site.Params.productionBaseURL }}{{ end -}}
+<script type="application/json" id="s3d-dati">{{ dict "base" $base "prefisso" $n.prefisso "primo" $n.primo "ultimo" $n.ultimo "oggetti" $d.oggetti | jsonify | safeJS }}</script>
+
+<div class="card border-primary shadow-sm p-3 p-md-4 mb-4 s3d d-print-none">
+<form id="s3d-form" novalidate>
+  <label for="s3d-numero" class="form-label s3d-etichetta">Scrivi il numero del tuo nominativo</label>
+  <p id="s3d-aiuto" class="s3d-aiuto">Solo il numero: per {{ $n.prefisso }} 57 scrivi 57. Va bene un numero da {{ $n.primo }} a {{ $n.ultimo }}.</p>
+  <div class="s3d-riga">
+    <span class="s3d-prefisso" aria-hidden="true">{{ $n.prefisso }}</span>
+    <input type="text" class="form-control form-control-lg s3d-campo" id="s3d-numero" name="numero" inputmode="numeric" autocomplete="off" maxlength="12" aria-describedby="s3d-aiuto s3d-errore">
+    <button type="submit" class="btn btn-primary btn-lg s3d-cerca"><i class="bi bi-search me-1" aria-hidden="true"></i> Cerca</button>
+  </div>
+  <p id="s3d-errore" class="s3d-errore" role="alert"></p>
+</form>
+</div>
+
+<div id="s3d-esito" class="s3d-esito" hidden tabindex="-1" aria-labelledby="s3d-titolo">
+  <h2 id="s3d-titolo">Gli oggetti con il nominativo <span data-s3d="nominativo"></span></h2>
+  {{- range $i, $o := $d.oggetti }}
+  <section class="s3d-oggetto" data-oggetto="{{ $o.id }}" aria-labelledby="s3d-nome-{{ $o.id }}">
+    <h3 id="s3d-nome-{{ $o.id }}">{{ $o.nome }} <span data-s3d="nominativo"></span></h3>
+    <p>{{ $o.descrizione }} Misura {{ $o.misure }} e pesa circa {{ $o.peso_g }} grammi.</p>
+
+    <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">1</span> Guarda se è giusta</h4>
+    <p>Per girarla trascina con il dito o con il mouse, oppure usa i pulsanti sotto la vista.</p>
+    <div class="s3d-visore" role="group" aria-label="{{ $o.nome }} in 3D. Trascina con il dito o con il mouse per girarla da ogni lato, oppure usa i pulsanti qui sotto.">
+      <img class="s3d-immagine" data-s3d="immagine" alt="" width="1100" height="500">
+      <p class="s3d-caricamento" data-s3d="caricamento">Sto preparando la vista in 3D…</p>
+    </div>
+    <div class="s3d-comandi" role="group" aria-label="Gira l'oggetto" hidden data-s3d="comandi">
+      <button type="button" class="btn btn-outline-primary" data-ruota="sinistra"><span aria-hidden="true">◀</span> Sinistra</button>
+      <button type="button" class="btn btn-outline-primary" data-ruota="su"><span aria-hidden="true">▲</span> Sopra</button>
+      <button type="button" class="btn btn-outline-primary" data-ruota="giu"><span aria-hidden="true">▼</span> Sotto</button>
+      <button type="button" class="btn btn-outline-primary" data-ruota="destra">Destra <span aria-hidden="true">▶</span></button>
+      <button type="button" class="btn btn-outline-primary" data-vista="davanti">Davanti</button>
+      <button type="button" class="btn btn-outline-primary" data-vista="retro">Retro</button>
+    </div>
+    <p class="small">Nella vista le scritte sono arancioni per farle vedere bene. Il servizio online stampa in un solo colore: {{ $o.articolo }} arriva blu, con le scritte in rilievo.</p>
+
+    <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">2</span> Scarica il file</h4>
+    <p><a class="btn btn-primary btn-lg" data-s3d="scarica" href="#" download><i class="bi bi-download me-1" aria-hidden="true"></i> Scarica il file <span data-s3d="file"></span></a></p>
+    <p>Il file si salva nella cartella «Download» del telefono o del computer. Ti serve nel passo 3.</p>
+
+    <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">3</span> Ordina la stampa online</h4>
+    <p><a class="btn btn-outline-primary btn-lg" href="{{ $d.servizio.indirizzo }}" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i> Apri {{ $d.servizio.nome }}<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
+    <ol class="s3d-elenco">
+      <li>{{ $d.servizio.nome }} si apre in una nuova scheda. Il sito è in inglese: se vuoi, usa la funzione «Traduci» del browser.</li>
+      <li>Carica il file <strong data-s3d="file"></strong>: trascinalo nel riquadro di caricamento oppure premi il pulsante per sceglierlo e cercalo nella cartella «Download».</li>
+      <li>Se il sito chiede l'unità di misura, scegli <strong>millimetri (mm)</strong>. Controlla che la lunghezza indicata sia di <strong>{{ $o.lunghezza_mm }} mm</strong>: se il numero è diverso, l'unità è sbagliata.</li>
+      <li>Come materiale scegli <strong>{{ $o.materiale }}</strong>, più resistente della plastica normale, e come colore <strong>{{ $o.colore }}</strong>. Se il sito chiede il riempimento («infill»), scegli il 100%: l'oggetto è piccolo e così diventa pieno e robusto. Lascia 1 come quantità.</li>
+      <li>Scegli l'offerta che preferisci per prezzo e tempi di consegna, scrivi il tuo indirizzo e paga. I metodi di pagamento dipendono dal paese e di solito comprendono carta e PayPal.</li>
+    </ol>
+
+    <h4 class="s3d-passo"><span class="s3d-num" aria-hidden="true">4</span> Montala quando arriva</h4>
+    <p>Ti servono:</p>
+    <ul>{{ range $o.occorrente }}<li>{{ . }}.</li>{{ end }}</ul>
+    <ol class="s3d-elenco">{{ range $o.montaggio }}<li>{{ . }}</li>{{ end }}</ol>
+    {{- with $o.retro }}
+    <figure class="s3d-retro">
+      <img src="{{ printf "stampa-3d/nominativi/%s/retro.webp" $o.id | relURL }}" alt="{{ . }}" loading="lazy">
+      <figcaption>{{ $o.didascalia_retro }}</figcaption>
+    </figure>
+    {{- end }}
+    {{ with $o.colorare }}<p>{{ . }}</p>{{ end }}
+  </section>
+  {{- end }}
+  <p><button type="button" class="btn btn-outline-secondary" id="s3d-altro"><i class="bi bi-arrow-up me-1" aria-hidden="true"></i> Cerca un altro numero</button></p>
+</div>
+
+<details class="s3d-tutti">
+  <summary>Elenco di tutti i file, se non trovi il tuo o la ricerca non funziona</summary>
+  {{- range $d.oggetti }}
+  {{- $id := .id }}
+  <p class="mt-2 mb-1"><strong>{{ .nome }}</strong></p>
+  <ul class="s3d-griglia">
+  {{- range seq $n.primo $n.ultimo }}
+    {{- $f := printf "%s-%03d.stl" (lower $n.prefisso) . }}
+    <li><a href="{{ printf "stampa-3d/nominativi/%s/%s" $id $f | relURL }}" download>{{ $n.prefisso }} {{ . }}</a></li>
+  {{- end }}
+  </ul>
+  {{- end }}
+</details>
+
+<noscript><p>Per la ricerca e la vista in 3D serve JavaScript attivo. Puoi comunque scaricare il tuo file dall'elenco qui sopra e seguire i passi di questa pagina.</p></noscript>
+<script type="module" src="{{ "js/stampa3d-nominativo.js" | relURL }}?v={{ $vj }}"></script>
